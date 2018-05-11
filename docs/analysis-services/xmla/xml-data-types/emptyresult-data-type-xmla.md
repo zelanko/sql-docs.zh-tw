@@ -1,38 +1,19 @@
 ---
 title: EmptyResult 資料類型 (XMLA) |Microsoft 文件
-ms.custom: ''
-ms.date: 03/03/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services, azure-analysis-services
-ms.component: ''
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
+ms.date: 05/08/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: xmla
 ms.topic: reference
-apiname:
-- EmptyResult Data Type
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
-apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
-f1_keywords:
-- http://schemas.microsoft.com/analysisservices/2003/engine#EmptyResult
-- olapxmla_EmptyResult
-- urn:schemas-microsoft-com:xml-analysis#EmptyResult
-helpviewer_keywords:
-- EmptyResult data type
-ms.assetid: 63818123-acbb-4220-9d60-1aa20a7326a1
-caps.latest.revision: 28
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.openlocfilehash: d8ec757c69b86838d44016e8113306c99067f1a7
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 514f1fd3b42ab65d4d05f91acd8d53674ee0c0ab
+ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="emptyresult-data-type-xmla"></a>EmptyResult 資料類型 (XMLA)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]

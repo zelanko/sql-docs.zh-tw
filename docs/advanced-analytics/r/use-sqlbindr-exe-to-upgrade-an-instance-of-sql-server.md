@@ -8,11 +8,11 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 140d84717f7343f52b1c553964cce8f0c40e2c7c
-ms.sourcegitcommit: 1aedef909f91dc88dc741748f36eabce3a04b2b1
+ms.openlocfilehash: 716fbd8a105164d40bfa6b3e67d126067174dc5a
+ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="upgrade-machine-learning-r-and-python-components-in-sql-server-instances"></a>升級 SQL Server 執行個體中的機器學習 （R 和 Python） 元件
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -34,7 +34,9 @@ SQL Server 2017 機器學習服務，您可以在 Microsoft Machine Learning 伺
 
 SQL Server 2016 R 服務的客戶，有兩個路徑來取得新的和更新的 R 封裝。 其中一種升級至 SQL Server 2017;第二個，繫結至 Microsoft Machine Learning 伺服器。
 
-升級至 SQL Server 2017 取得您的 R 封裝包含在該版本中，再加上 Python 功能的版本。 或者，繫結取得您已更新進一步在每個新的主要和次要版本的 Microsoft Machine Learning 伺服器重新整理的 R 封裝。 繫結並不會提供 Python 支援，這是 SQL Server 2017 功能。 
+升級至 SQL Server 2017 取得您的 R 封裝包含在該版本中，再加上 Python 功能的版本。 或者，繫結取得您已更新進一步在每個新的主要和次要版本的 Microsoft Machine Learning 伺服器重新整理的 R 封裝。 
+
+繫結並不會提供 Python 支援，這是 SQL Server 2017 功能。 
 
 **可透過 Microsoft Machine Learning 伺服器元件升級**
 
@@ -47,7 +49,7 @@ SQL Server 2016 R 服務的客戶，有兩個路徑來取得新的和更新的 R
 元件 |初版 | R 伺服器 9.0.1 | R 伺服器 9.1 | MLS 9.2.1 | MLS 9.3 |
 ----------|----------------|----------------|--------------|---------|-------|
 Microsoft R Open (MRO) 透過 R | R 3.2.2     | R 3.3.2   |3.3.3 R   | R 3.4.1  | R 3.4.3 |
-[RevoScaleR](https://docs.microsoft.com/achine-learning-server/r-reference/revoscaler/revoscaler) | 9.0 | 9.0.1 |  9.1 |  9.2.1 |  9.3 |
+[RevoScaleR](https://docs.microsoft.com/achine-learning-server/r-reference/revoscaler/revoscaler) | 8.0.3  | 9.0.1 |  9.1 |  9.2.1 |  9.3 |
 [MicrosoftML](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/microsoftml-package)| n.a. | 9.0.1 |  9.1 |  9.2.1 |  9.3 |
 [預先定型的模型](https://docs.microsoft.com/machine-learning-server/install/microsoftml-install-pretrained-models)| n.a. | 9.0.1 |  9.1 |  9.2.1 |  9.3 |
 [sqlrutils](https://docs.microsoft.com/machine-learning-server/r-reference/sqlrutils/sqlrutils)| n.a. | 1.0 |  1.0 |  1.0 |  1.0 |
@@ -58,24 +60,26 @@ Microsoft R Open (MRO) 透過 R | R 3.2.2     | R 3.3.2   |3.3.3 R   | R 3.4.1  
 
 元件 |初版 | MLS 9.3 | | | |
 ----------|----------------|---------|-|-|-|-|
-Microsoft R Open (MRO) 透過 R | R 3.4.1 | R 3.4.3 | | | |
-[RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) |   9.3 |  9.3 | | | |
-[MicrosoftML](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/microsoftml-package) | 9.3  | 9.3| | | |
+Microsoft R Open (MRO) 透過 R | 3.3.3 R | R 3.4.3 | | | |
+[RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) |   9.2 |  9.3 | | | |
+[MicrosoftML](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/microsoftml-package) | 9.2  | 9.3| | | |
 [sqlrutils](https://docs.microsoft.com/machine-learning-server/r-reference/sqlrutils/sqlrutils)| 1.0 |  1.0 | | | |
 [olapR](https://docs.microsoft.com/machine-learning-server/r-reference/olapr/olapr) | 1.0 |  1.0 | | | |
 透過 Python 3.5 anaconda 4.2  | 4.2/3.5.2 | 4.2/3.5.2 | | | |
-[revoscalepy](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/revoscalepy-package) | 9.3  | 9.3| | | |
- [microsoftml](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/microsoftml-package) | 9.3  | 9.3| | | |
-[預先定型的模型](https://docs.microsoft.com/machine-learning-server/install/microsoftml-install-pretrained-models) | 9.3 | 9.3| | | |
+[revoscalepy](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/revoscalepy-package) | 9.2  | 9.3| | | |
+ [microsoftml](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/microsoftml-package) | 9.2  | 9.3| | | |
+[預先定型的模型](https://docs.microsoft.com/machine-learning-server/install/microsoftml-install-pretrained-models) | 9.2 | 9.3| | | |
 
 ## <a name="how-component-upgrade-works"></a>元件升級的運作方式
 
-元件升級是透過*繫結*Microsoft 機器學習 server 的 SQL Server 2016 R 服務執行個體 （或 SQL Server 2017 機器學習服務執行個體）。 [Microsoft Machine Learning 伺服器](https://docs.microsoft.com/machine-learning-server/index)是在內部部署伺服器產品分隔來自 SQL Server，但具有相同的解譯器和封裝。 交換出 SQL Server 服務的更新機制，讓您可以使用 R 和 Python 封裝傳送與 Microsoft Machine Learning 伺服器，而這通常是新的 SQL Server 服務所提供的繫結。 切換支援原則會需要較新的層代 R 資料科學小組的理想選擇和 Python 模組及其解決方案。 
+元件升級是透過*繫結*的 SQL Server 2016 R 服務執行個體 （或 SQL Server 2017 機器學習服務執行個體） 到[Microsoft Machine Learning 伺服器](https://docs.microsoft.com/machine-learning-server/index)。 
+
+Microsoft Machine Learning 伺服器是在內部部署伺服器產品分隔來自 SQL Server，但具有相同的解譯器和封裝。 繫結交換出 SQL Server 服務的更新機制，以便您可以使用 R 和 Python 封裝傳送與 Microsoft Machine Learning 伺服器，而這通常是新的 SQL Server 安裝的。 切換支援原則會需要較新的層代 R 資料科學小組的理想選擇和 Python 模組及其解決方案。 
 
 繫結的執行方式[MLS installer](https://docs.microsoft.com/machine-learning-server/install/machine-learning-server-windows-install)。 安裝程式會更新特定的 R，並將 Python 封裝，但不會取代您的 SQL Server 資料庫中執行個體與獨立，中斷連接的伺服器安裝。
 
 + 沒有繫結，R 和 Python 封裝會修補個 bug 修正，當您安裝 SQL Server service pack 或累積更新 (CU)。 
-+ 使用繫結，較新的封裝版本可套用至您的執行個體，獨立的 CU 發行排程，底下[現代的生命週期原則](https://support.microsoft.com/help/30881/modern-lifecycle-policy)和版本的 Microsoft Machine Learning 伺服器。 現代的生命週期支援原則會提供更頻繁的更新，比短、 一年的使用期限。 
++ 使用繫結，較新的封裝版本可套用至您的執行個體，獨立的 CU 發行排程，底下[現代的生命週期原則](https://support.microsoft.com/help/30881/modern-lifecycle-policy)和版本的 Microsoft Machine Learning 伺服器。 現代的生命週期支援原則會提供更頻繁的更新，比短、 一年的使用期限。 後置繫結，您會繼續使用 R，並將 Python 未來更新在 Microsoft Machine Learning 伺服器可用時 MLS 安裝程式。
 
 繫結適用於 R，並將 Python 功能。 也就是開放原始碼套件的 R，並將 Python 功能 （Microsoft R Open、 Anaconda） 及專屬封裝 RevoScaleR、 revoscalepy，等等。 繫結不會變更支援模型的資料庫引擎執行個體，並不會變更的 SQL Server 版本。
 
@@ -90,25 +94,31 @@ Microsoft R Open (MRO) 透過 R | R 3.4.1 | R 3.4.3 | | | |
 
 根據使用者體驗、 技術及如何使用它不會變更。 唯一的差別在於較新版本的封裝和可能的其他封裝原本可透過 SQL Server （例如 SQL Server 2016 R 服務客戶 MicrosoftML)。
 
-## <a name="bkmk_BindWizard"></a>使用安裝程式升級
+## <a name="bkmk_BindWizard"></a>繫結至 MLS 使用安裝程式
 
-Microsoft Machine Learning 安裝程式偵測到現有的功能和 SQL Server 版本，並叫用稱為 SqlBindR.exe 變更繫結的公用程式。 就內部而言，安裝程式進行鏈結 SqlBindR 且間接使用。 稍後，您可以執行 SqlBindR 直接從命令列，以執行特定的選項。
+Microsoft Machine Learning 安裝程式偵測到現有的功能和 SQL Server 版本，並叫用稱為 SqlBindR.exe 變更繫結的公用程式。 就內部而言，安裝程式進行鏈結 SqlBindR 且間接使用。 稍後，您可以呼叫 SqlBindR 直接從命令列，以執行特定的選項。
 
-1. 檢查版本的 R 和 RevoScaleR 確認現有的版本低於您打算將其取代。 如需詳細資訊，請參閱[取得 R，並將 Python 封裝資訊](determine-which-packages-are-installed-on-sql-server.md)。
+1. 請確認您的伺服器符合最低的組建需求。 最小值是 SQL Server 2016 R services [Service Pack 1](https://www.microsoft.com/download/details.aspx?id=54276)和[CU3](https://support.microsoft.com/help/4019916/cumulative-update-3-for-sql-server-2016-sp1)。 在 SSMS 中，執行`SELECT @@version`傳回伺服器版本資訊。 
 
-1. [下載 Microsoft Machine Learning 伺服器](https://docs.microsoft.com/machine-learning-server/install/machine-learning-server-windows-install#download-machine-learning-server-installer)到具有您想要升級的執行個體的電腦上。 
+1. 檢查版本的 R 和 RevoScaleR 確認現有的版本低於您打算將其取代。 SQL Server 2016 R services R 基底套件是 3.2.2 而 RevoScaleR 8.0.3。
 
-1. 解壓縮的資料夾，並啟動安裝程式。
+    + 移至 \Program Files\Microsoft SQL Server\MSSQL13。MSSQLSERVER\R_SERVICES\bin
+    + 按兩下**R**開啟主控台。
+    + 若要取得封裝版本，請使用`library(help="base")`和`library(help="RevoScaleR")`。 
 
-    ![Microsoft Machine Learning 伺服器安裝精靈](media/mls-921-installer-start.PNG)
+1. 下載 Microsoft Machine Learning 伺服器到具有您想要升級的執行個體的電腦上。 我們建議[最新版本](https://docs.microsoft.com/machine-learning-server/install/machine-learning-server-windows-install#download-machine-learning-server-installer)。
+
+1. 解壓縮的資料夾，並啟動 ServerSetup.exe，位於 MLSWIN93。
+
+   ![Microsoft Machine Learning 伺服器安裝精靈](media/mls-921-installer-start.PNG)
 
 1. 在**設定安裝**，確認要升級，元件，然後檢閱相容的執行個體的清單。 
 
-   在左邊，選擇您想要保留或升級的每一項功能。 您無法升級某些功能並不是其他人。 空的核取方塊，指出您想要移除假設目前已安裝該功能。 在 螢幕擷取畫面，會選取 SQL Server 2017 機器學習服務 (MSSQL14) 與 R 和 Python 的執行個體。 因為 SQL Server 2017 R，並將 Python 支援此組態。
+   在左邊，選擇您想要保留或升級的每一項功能。 您無法升級某些功能並不是其他人。 空的核取方塊中移除該功能，假設目前已安裝的功能。 在螢幕擷取畫面、 執行個體的 SQL Server 2016 R 服務 (MSSQL13)，會選取 R 和預先定型的模型的 R 版本。 此設定是有效的因為 SQL Server 2016 支援 R，但不是 Python 支援。
 
-   在右側，選取執行個體名稱旁的核取方塊。 如果沒有列出任何執行個體，您會有不相容的組合。 如果您未選取執行個體，建立新的獨立安裝的機器學習伺服器時，與 SQL Server 程式庫並不會變更。
+   在右側，選取執行個體名稱旁的核取方塊。 如果沒有列出任何執行個體，您會有不相容的組合。 如果您未選取執行個體，建立新的獨立安裝的機器學習伺服器時，與 SQL Server 程式庫並不會變更。 如果您無法選取執行個體，它可能無法在[SP1 CU3](https://support.microsoft.com/help/4019916/cumulative-update-3-for-sql-server-2016-sp1)。 
 
-    ![Microsoft Machine Learning 伺服器安裝精靈](media/configure-the-installation.PNG)
+    ![Microsoft Machine Learning 伺服器安裝精靈](media/mls-931-installer-mssql13.png)
 
 1. 在**授權合約**頁面上，選取**我接受這些條款**機器學習伺服器接受授權條款。 
 
@@ -118,15 +128,51 @@ Microsoft Machine Learning 安裝程式偵測到現有的功能和 SQL Server �
 
     如果您想要變更安裝資料夾，按一下**進階**返回精靈的第一頁。 不過，您必須重複先前的所有選項。
 
-1. 如果您是[安裝元件離線](https://docs.microsoft.com/machine-learning-server/install/machine-learning-server-windows-offline)，您可能會提示您需要的機器學習元件，例如 Microsoft R Open、 Python 伺服器和 Python 開啟的位置。
-
-在安裝過程中，會取代任何 SQL Server 所使用的 R 或 Python 程式庫，並啟動控制板會更新以使用較新的元件。 如此一來，執行個體之前會使用預設 R_SERVICES 資料夾中的程式庫，升級之後移除這些程式庫，並變更為 Launchpad 服務的屬性，以使用新的位置中的程式庫。
+在安裝過程中，會取代任何 SQL Server 所使用的 R 或 Python 程式庫，並啟動控制板會更新以使用較新的元件。 如此一來，如果執行個體之前會使用預設 R_SERVICES 資料夾中的程式庫，升級之後移除這些程式庫，並啟動控制板服務的屬性都會變更為使用新的位置中的程式庫。
 
 繫結會影響這些資料夾的內容： C:\Program Files\Microsoft SQL Server\MSSQL13。MSSQLSERVER\R_SERVICES\library 會取代 C:\Program Files\Microsoft\ML Server\R_SERVER 的內容。 Microsoft Machine Learning Server 安裝程式會建立第二個資料夾及其內容。 
 
+如果升級失敗，請檢查[SqlBindR 錯誤碼](#sqlbindr-error-codes)如需詳細資訊。
+
 ## <a name="confirm-binding"></a>確認繫結
 
-重新檢查以確認您有較新版本的 R 與 RevoScaleR 的版本。 如需詳細資訊，請參閱[取得 R，並將 Python 封裝資訊](determine-which-packages-are-installed-on-sql-server.md)。 SQL Server 2016 R 服務的客戶也應具有 MicrosoftML。
+重新檢查以確認您有較新版本的 R 與 RevoScaleR 的版本。 您可以使用 R 主控台與您的資料庫引擎執行個體中的 R 封裝一起散發，取得封裝資訊：
+
++ 移至 \Program Files\Microsoft SQL Server\MSSQL13。MSSQLSERVER\R_SERVICES\bin
++ 按兩下**R**開啟主控台。
++ 若要取得封裝版本，請使用`library(help="base")`和`library(help="RevoScaleR")`。 
+
+繫結至機器學習伺服器 9.3 SQL Server 2016 R 服務，如 R 基底套件能 3.4.1、 RevoScaleR 應 9.3，而且您也應該擁有 MicrosoftML 9.3。 
+
+如果您加入預先定型的模型，模型會內嵌在 MicrosoftML 程式庫，而且您可以透過 MicrosoftML 函式呼叫它們。 如需詳細資訊，請參閱[MicrosoftML R 範例](https://docs.microsoft.com/machine-learning-server/r/sample-microsoftml)。
+
+## <a name="offline-no-internet-access"></a>離線 （沒有網際網路存取）
+
+沒有網際網路連線的系統，可以將安裝程式和.cab 檔案下載到連接網際網路的電腦上，並再將檔案傳輸到隔離的伺服器。 
+
+安裝程式 (ServerSetup.exe) 包含 RevoScaleR、 MicrosoftML、 olapR （sqlRUtils） 的 Microsoft 套件。 .Cab 檔案提供其他核心元件。 例如，"SRO"封包提供 R Open，Microsoft 發佈的開放原始碼。
+
+下列指示說明如何進行離線安裝檔案。
+
+1. 下載 MLS 安裝程式。 它會下載成單一的壓縮檔案。 我們建議[最新版本](https://docs.microsoft.com/machine-learning-server/install/machine-learning-server-windows-install#download-machine-learning-server-installer)，但您也可以安裝[舊版](https://docs.microsoft.com/machine-learning-server/install/r-server-install-windows-offline#download-required-components)。
+
+1. 下載的.cab 檔。 下列連結是 9.3 的版本。 如果您需要更早版本，其他連結位於[R 伺服器 9.1](https://docs.microsoft.com/machine-learning-server/install/r-server-install-windows-offline#download-required-components)。 前文提過 Python/Anaconda 只能加入至 SQL Server 2017 機器學習服務執行個體。 預先定型的模型存在 R 和 Python;.cab 會提供您使用的語言中的模型。
+
+    | 功能 | 下載 |
+    |---------|----------|
+    | R       | [SRO_3.4.3.0_1033.cab](https://go.microsoft.com/fwlink/?LinkId=867186&clcid=1033) |
+    | Python  | [SPO_9.3.0.0_1033.cab](https://go.microsoft.com/fwlink/?LinkId=859054) | 
+    | 預先定型的模型 | [MLM_9.3.0.0_1033.cab](https://go.microsoft.com/fwlink/?LinkId=859053) |
+
+1. .Zip 和.cab 檔案傳送給目標伺服器。
+
+1. 在伺服器上，輸入`%temp%`[執行] 命令，以取得暫存目錄的實體位置中。 實體路徑會因電腦而異，但它通常是`C:\Users\<your-user-name>\AppData\Local\Temp`。
+
+1. 在 %temp%資料夾中的 Place.cab 檔案。
+
+1. 解壓縮安裝程式。
+
+1. 執行 ServerSetup.exe 並遵循螢幕上的提示完成安裝。
 
 ## <a name="bkmk_BindCmd"></a>命令列作業
 
@@ -239,21 +285,25 @@ Microsoft 的機器學習 Server 9.2.1 和 9.3 並沒有此問題。
 |*bind*| 將指定的 SQL 資料庫執行個體升級到最新版 R Server，並確保執行個體自動取得 R Server 的未來升級|
 |*unbind*|從指定的 SQL 資料庫執行個體解除安裝最新版的 R Server，並防止未來的 R Server 升級影響執行個體|
 
+< a name ="sqlbinder-錯誤代碼的 」<a/>
+
 ### <a name="errors"></a>錯誤
 
 工具會傳回下列錯誤訊息：
 
-|錯誤|解決方案|
-|------|------|
-|繫結執行個體時發生錯誤| 找不到執行個體。 請連絡支援部門以尋求協助。|
-|執行個體已經繫結| 您執行了 *bind* 命令，但指定的執行個體已經繫結。 請選擇不同的執行個體。|
-|執行個體尚未繫結| 您執行了 *unbind* 命令，但您指定的執行個體並未繫結。 請選擇另一個相容的執行個體。|
-|不是有效的 SQL 執行個體識別碼| 您可能輸入了錯誤的執行個體名稱。 請使用 *list* 引數再次執行命令，查看可用的執行個體識別碼。|
-|找不到任何執行個體| 這部電腦沒有 SQL Server R Services 的執行個體。|
-|執行個體必須安裝相容版本的 SQL R Services (資料庫內)。| 請參閱本主題中的相容性需求以取得詳細資料。|
-|解除繫結執行個體時發生錯誤| 無法解除繫結執行個體。 請連絡支援部門以尋求協助。|
-|發生意外的錯誤| 其他錯誤。 請連絡支援部門以尋求協助。  |
-|找不到任何 SQL 執行個體| 這部電腦沒有 SQL Server 的執行個體。 |
+|錯誤碼  | 訊息           | 詳細資料               |
+|------------|-------------------|-----------------------|
+|繫結錯誤 0 | 沒問題 （成功） | 繫結傳遞未發生任何錯誤。 |
+|繫結錯誤 1 | 無效的引數 | 語法錯誤。 |
+|繫結錯誤 2 | 無效的動作 | 語法錯誤。 |
+|繫結錯誤 3 | 無效的執行個體 | 執行個體存在，但不是有效的繫結。 |
+|繫結錯誤 4 | 不繫結 | |
+|繫結錯誤 5 | 已繫結 | 您執行了 *bind* 命令，但指定的執行個體已經繫結。 |
+|繫結錯誤 6 | 繫結失敗 | 解除繫結執行個體時發生錯誤。 |
+|繫結錯誤 7 | 未繫結 | 資料庫引擎執行個體有 R Services 或 SQL Server 機器學習服務。 執行個體未繫結到 Microsoft 機器學習服務伺服器。 |
+|繫結錯誤 8 | 解除繫結失敗 | 解除繫結執行個體時發生錯誤。 |
+|繫結錯誤 9 | 找不到任何執行個體 | 在此電腦上找不到任何執行個體。 |
+
 
 ## <a name="see-also"></a>另請參閱
 

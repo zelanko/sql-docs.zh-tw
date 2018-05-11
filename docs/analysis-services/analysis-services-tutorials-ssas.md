@@ -1,27 +1,18 @@
 ---
 title: Analysis Services 教學課程 |Microsoft 文件
-ms.date: 02/20/2018
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.component: ''
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.custom: ''
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: get-started-article
-applies_to:
-- SQL Server 2016
-ms.assetid: b378c3bb-eead-46eb-b213-70d994f2d562
-caps.latest.revision: 17
-author: Minewiskan
+ms.date: 05/08/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.topic: tutorial
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.openlocfilehash: 7a32867f84771fb2ee1c70098affeb4ae4e88d00
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 26b6b2ee5a8f1ae139252bda61df4b2c53f5d9ac
+ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="analysis-services-tutorials"></a>Analysis Services 教學課程
 [!INCLUDE[ssas-appliesto-sqlas-all-aas](../includes/ssas-appliesto-sqlas-all-aas.md)]

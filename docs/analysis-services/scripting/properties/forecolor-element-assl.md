@@ -1,36 +1,19 @@
 ---
 title: ForeColor 元素 (ASSL) |Microsoft 文件
-ms.custom: ''
-ms.date: 03/06/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.component: ''
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
+ms.date: 5/8/2018
+ms.prod: sql
+ms.component: assl
+ms.reviewer: owend
+ms.technology: analysis-services
 ms.topic: reference
-apiname:
-- ForeColor Element
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
-apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
-f1_keywords:
-- ForeColor
-helpviewer_keywords:
-- ForeColor element
-ms.assetid: 5125520c-3bce-40e6-a722-8d4d47306fed
-caps.latest.revision: 35
-author: Minewiskan
+author: minewiskan
 ms.author: owend
 manager: kfile
-ms.openlocfilehash: 49235881310e0193b575e984e9e84cb49a991ab4
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 35ee05a74dc833f3f2785d7933323eeb1ce3042d
+ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="forecolor-element-assl"></a>ForeColor 元素 (ASSL)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]

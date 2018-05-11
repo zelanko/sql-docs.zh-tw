@@ -1,36 +1,19 @@
 ---
 title: EventID 元素 (ASSL) |Microsoft 文件
-ms.custom: ''
-ms.date: 03/06/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.component: ''
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
+ms.date: 5/8/2018
+ms.prod: sql
+ms.component: assl
+ms.reviewer: owend
+ms.technology: analysis-services
 ms.topic: reference
-apiname:
-- EventID Element
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
-apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
-f1_keywords:
-- EventID
-helpviewer_keywords:
-- EventID element
-ms.assetid: a6b2ee50-1753-496c-af5c-206d63f2542b
-caps.latest.revision: 37
-author: Minewiskan
+author: minewiskan
 ms.author: owend
 manager: kfile
-ms.openlocfilehash: a22181941c8bb2776c641870fd6c602c68651a41
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: bd00f73399d4eb3711f5783060c26003cfc667c2
+ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="eventid-element-assl"></a>EventID 元素 (ASSL)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]

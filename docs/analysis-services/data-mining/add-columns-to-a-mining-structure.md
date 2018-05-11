@@ -4,16 +4,16 @@ ms.date: 05/01/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.component: data-mining
-ms.topic: article
+ms.topic: conceptual
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 53b88835bc2efbc009c6d4e667ae585568a7f2d2
-ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
-ms.translationtype: MT
+ms.openlocfilehash: c5d68b5442320bbd48123a3f8335154b7153b260
+ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="add-columns-to-a-mining-structure"></a>將資料行加入至採礦結構
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]

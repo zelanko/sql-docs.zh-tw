@@ -1,36 +1,19 @@
 ---
 title: ConnectionString 元素 (ASSL) |Microsoft 文件
-ms.custom: ''
-ms.date: 03/06/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.component: ''
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
+ms.date: 05/08/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: assl
 ms.topic: reference
-apiname:
-- ConnectionString Element
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
-apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
-f1_keywords:
-- ConnectionString
-helpviewer_keywords:
-- ConnectionString element
-ms.assetid: f74181c4-7df7-4fbd-94dd-e4ad03dffe14
-caps.latest.revision: 34
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.openlocfilehash: d08ec61a6e86a133023668496988326f218efbf1
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: d535c4a203089eadf3c734c5b6fbf8b869dc187e
+ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="connectionstring-element-assl"></a>ConnectionString 元素 (ASSL)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]

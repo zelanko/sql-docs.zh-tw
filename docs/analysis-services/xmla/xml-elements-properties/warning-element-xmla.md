@@ -1,38 +1,19 @@
 ---
 title: Warning 元素 (XMLA) |Microsoft 文件
-ms.custom: ''
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services, azure-analysis-services
-ms.component: ''
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
+ms.date: 05/08/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: xmla
 ms.topic: reference
-apiname:
-- Warning Element
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
-apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
-f1_keywords:
-- urn:schemas-microsoft-com:xml-analysis#Warning
-- microsoft.xml.analysis.warning
-- http://schemas.microsoft.com/analysisservices/2003/engine#Warning
-helpviewer_keywords:
-- Warning element
-ms.assetid: a34a6caa-4b68-486b-8f50-cdc124c65888
-caps.latest.revision: 11
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.openlocfilehash: b2d345c41f4c89f72a7ba382ddf4e6609c0cc50d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: bb485e7f8c3df9d1b90ac157940b6c34c0584a5e
+ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="warning-element-xmla"></a>Warning 元素 (XMLA)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]

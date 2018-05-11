@@ -1,27 +1,19 @@
 ---
 title: Analysis Services 教學課程，補充課程： 不完全階層 |Microsoft 文件
-description: 描述如何在 Analysis Services 教學課程中修正不完全的階層。
-ms.prod_service: analysis-services, azure-analysis-services
-services: analysis-services
-ms.suite: pro-bi
-documentationcenter: ''
-author: Minewiskan
-manager: kfile
-editor: ''
-tags: ''
-ms.assetid: ''
-ms.service: analysis-services
-ms.devlang: NA
-ms.topic: get-started-article
-ms.tgt_pltfrm: NA
-ms.date: 02/20/2018
+ms.date: 05/08/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: tabular-models
+ms.topic: tutorial
 ms.author: owend
-monikerRange: '>= sql-analysis-services-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 0ab9620add67094ac4115ea670c08328d7c075de
-ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
-ms.translationtype: MT
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: e38e1e2b888ce92fad826fda43624e19a75c2110
+ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="supplemental-lesson---ragged-hierarchies"></a>補充課程-不完全階層
 

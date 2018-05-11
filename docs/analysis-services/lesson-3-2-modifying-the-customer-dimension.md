@@ -1,27 +1,19 @@
 ---
 title: 修改 [客戶] 維度 |Microsoft 文件
-ms.custom: ''
-ms.date: 03/04/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.component: ''
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: get-started-article
-applies_to:
-- SQL Server 2016
-ms.assetid: 5b5aed99-1760-4bc7-b248-52ecb0b97ebc
-caps.latest.revision: 22
-author: Minewiskan
+ms.date: 05/08/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: multidimensional-models
+ms.topic: tutorial
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.openlocfilehash: 433b29dd4480d9d368a61279eeda346bce512205
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: b36b18fd963b5a606843e58d90f4c0d9ff816b81
+ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="lesson-3-2---modifying-the-customer-dimension"></a>課程 3-2-修改 [客戶] 維度
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]

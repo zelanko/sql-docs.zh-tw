@@ -13,11 +13,11 @@ ms.suite: sql
 ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: 82737f18-f5d6-4dce-a255-688889fdde69
-ms.openlocfilehash: 247f9dc783b697984c0711ef9de2aa32e8998723
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: b2786f766dfa48f1754b340aadfec44ae1d93816
+ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="quickstart-run-the-sql-server-2017-container-image-with-docker"></a>快速入門： 執行 SQL Server 2017 容器映像使用 Docker
 
@@ -56,13 +56,13 @@ ms.lasthandoff: 05/03/2018
 1. 若要以 Docker 執行容器映像，您可以從 Bash 殼層 (Linux/macOS) 或提高權限的 PowerShell 命令提示字元使用下列命令。
 
    ```bash
-   sudo docker run -e 'ACCEPT_EULA=Y' -e 'MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>' \
+   sudo docker run -e 'ACCEPT_EULA=Y' -e 'SA_PASSWORD=<YourStrong!Passw0rd>' \
       -p 1433:1433 --name sql1 \
       -d microsoft/mssql-server-linux:2017-latest
    ```
 
    ```PowerShell
-   docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" `
+   docker run -e "ACCEPT_EULA=Y" -e "SA_PASSWORD=<YourStrong!Passw0rd>" `
       -p 1433:1433 --name sql1 `
       -d microsoft/mssql-server-linux:2017-latest
    ```
@@ -78,7 +78,7 @@ ms.lasthandoff: 05/03/2018
    | 매개 변수 | Description |
    |-----|-----|
    | **-e 'ACCEPT_EULA=Y'** |  將 **ACCEPT_EULA** 變數設為任意值可確認您接受[終端使用者授權合約](http://go.microsoft.com/fwlink/?LinkId=746388)。 此為 SQL Server 映像的必要設定。 |
-   | **-e 'MSSQL_SA_PASSWORD=\<YourStrong!Passw0rd\>'** | 指定您自己的強式密碼，該密碼長度至少需為 8 個字元且符合 [SQL Server 密碼需求](../relational-databases/security/password-policy.md)。 此為 SQL Server 映像的必要設定。 |
+   | **-e ' SA_PASSWORD =\<YourStrong ！Passw0rd\>'** | 指定您自己的強式密碼，該密碼長度至少需為 8 個字元且符合 [SQL Server 密碼需求](../relational-databases/security/password-policy.md)。 此為 SQL Server 映像的必要設定。 |
    | **-p 1433:1433** | 將主機環境上的 TCP 通訊埠 (第一個值) 對應至容器中的 TCP 連接埠 (第二個值)。 在此範例中，SQL Server 接聽 TCP 1433 容器中，此公開到連接埠 1433，主機上。 |
    | **--name sql1** | 指定容器名稱，而不隨機產生名稱。 執行多個容器時無法重複使用此相同名稱。 |
    | **microsoft/mssql-server-linux:2017-latest** | SQL Server 2017 Linux 容器映像。 |

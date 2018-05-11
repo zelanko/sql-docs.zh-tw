@@ -1,33 +1,18 @@
 ---
 title: Analysis Services 的全球化案例 |Microsoft 文件
-ms.custom: ''
-ms.date: 03/01/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services, azure-analysis-services
-ms.component: ''
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-helpviewer_keywords:
-- multiple language support [Analysis Services]
-- languages [Analysis Services]
-- SSAS, international considerations
-- international considerations [Analysis Services]
-- global considerations [Analysis Services]
-- SQL Server Analysis Services, international considerations
-- Analysis Services, international considerations
-ms.assetid: e8af85ff-ef33-4659-a003-bb34578eb2a2
-caps.latest.revision: 40
-author: Minewiskan
+ms.date: 05/08/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.topic: conceptual
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.openlocfilehash: 23e578f770182e53b66e32833b8eaa8e5268bc17
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 258439b08dc5de9e5c1dfb1a3270d3f06071f415
+ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="globalization-scenarios-for-analysis-services"></a>Analysis Services 的全球化案例
 [!INCLUDE[ssas-appliesto-sqlas-aas](../includes/ssas-appliesto-sqlas-aas.md)]

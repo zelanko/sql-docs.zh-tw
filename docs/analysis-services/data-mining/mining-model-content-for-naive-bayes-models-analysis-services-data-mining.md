@@ -1,30 +1,19 @@
 ---
 title: 貝氏機率分類模型的採礦模型內容 (Analysis Services-資料採礦) |Microsoft 文件
-ms.custom: ''
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
+ms.date: 05/08/2018
+ms.prod: sql
+ms.technology: analysis-services
 ms.component: data-mining
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
-helpviewer_keywords:
-- naive bayes model [Analysis Services]
-- Bayesian classifiers
-- naive bayes algorithms [Analysis Services]
-- mining model content, naive bayes models
-ms.assetid: 63fa15b0-e00c-4aa3-aa49-335f5572ff7e
-caps.latest.revision: 16
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.openlocfilehash: 6908a91c26bfe9051dd1a111c9ea592aa17dd4d8
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 0e93dc6489c6f1f7b5192775ddfe67c15d06c365
+ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="mining-model-content-for-naive-bayes-models-analysis-services---data-mining"></a>貝氏機率分類模型的採礦模型內容 (Analysis Services - 資料採礦)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]

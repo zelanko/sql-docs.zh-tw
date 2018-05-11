@@ -4,16 +4,16 @@ ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.component: tabular-models
-ms.topic: article
+ms.topic: conceptual
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 7ba29f6beba076049a097ad4b0d3057d75f7846b
-ms.sourcegitcommit: 1aedef909f91dc88dc741748f36eabce3a04b2b1
+ms.openlocfilehash: 3186b6804d69b2b644bd6208abba1aaf52a254bb
+ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="create-and-manage-partitions-in-the-workspace-database"></a>建立及管理工作空間資料庫中的資料分割 
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]

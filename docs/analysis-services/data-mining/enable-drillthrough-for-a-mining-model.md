@@ -1,28 +1,19 @@
 ---
 title: 針對採礦模型啟用鑽研 |Microsoft 文件
-ms.custom: ''
-ms.date: 03/06/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
+ms.date: 05/08/2018
+ms.prod: sql
+ms.technology: analysis-services
 ms.component: data-mining
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
-helpviewer_keywords:
-- data mining [Analysis Services], how-to topics
-- drillthrough [Analysis Services]
-ms.assetid: 4fa44f60-ef9a-4b59-98c0-c0baf1195c8e
-caps.latest.revision: 28
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.openlocfilehash: 34666ecda18c3821c3685f2417f8a777c065dcc9
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 5a05fbb6554c594ba2e37e57ac554de88ea02ed6
+ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="enable-drillthrough-for-a-mining-model"></a>針對採礦模型啟用鑽研
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]

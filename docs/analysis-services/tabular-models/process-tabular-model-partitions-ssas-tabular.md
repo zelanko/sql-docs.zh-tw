@@ -4,16 +4,16 @@ ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.component: tabular-models
-ms.topic: article
+ms.topic: conceptual
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 4722bd1c6aecb32f448b3c8d1628205d728f318f
-ms.sourcegitcommit: 1aedef909f91dc88dc741748f36eabce3a04b2b1
+ms.openlocfilehash: 5366f3b74d1cbb533b6e5611d0e17d6b8e67e84d
+ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="process-tabular-model-partitions"></a>處理表格式模型資料分割 
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]

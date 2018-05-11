@@ -1,27 +1,19 @@
 ---
 title: 第 7 課： 建立量值 |Microsoft 文件
-ms.custom: ''
-ms.date: 03/27/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services, azure-analysis-services
-ms.component: ''
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: get-started-article
-applies_to:
-- SQL Server 2016
-ms.assetid: 01bd2ad7-09b7-49ae-ad80-83f25da301aa
-caps.latest.revision: 29
-author: Minewiskan
+ms.date: 05/08/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: tabular-models
+ms.topic: tutorial
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.openlocfilehash: e3729aa2c15bf633ce76af5395175dfd07b3e9ac
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 78f9b0938cd3b43758152ea5bc8ee46312b35073
+ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="lesson-6-create-measures"></a>第 6 課： 建立量值
 [!INCLUDE[ssas-appliesto-sql2016-later-aas](../includes/ssas-appliesto-sql2016-later-aas.md)]

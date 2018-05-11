@@ -4,16 +4,16 @@ ms.date: 05/01/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.component: data-mining
-ms.topic: article
+ms.topic: conceptual
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 351b45ba30b58373101fdd3afd85964cb39889ed
-ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
-ms.translationtype: MT
+ms.openlocfilehash: 573c1e00df217840cb66444e51495b3e26362e6d
+ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="add-a-nested-table-to-a-mining-structure"></a>將巢狀資料表加入至採礦結構
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]

@@ -1,29 +1,19 @@
 ---
 title: Microsoft 線性迴歸演算法技術參考 |Microsoft 文件
-ms.custom: ''
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
+ms.date: 05/08/2018
+ms.prod: sql
+ms.technology: analysis-services
 ms.component: data-mining
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
-helpviewer_keywords:
-- AUTO_DETECT_PERIODICITY parameter
-- linear regression algorithms [Analysis Services]
-- regression algorithms [Analysis Services]
-ms.assetid: 7807b5ff-8e0d-418d-a05b-b1a9644536d2
-caps.latest.revision: 25
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.openlocfilehash: 1e32633dfa798ea53a2c30c12d211a07e7233f79
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: faa34df0183635128a778a3866c1cbaf89ff58be
+ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="microsoft-linear-regression-algorithm-technical-reference"></a>Microsoft 線性迴歸演算法技術參考
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]

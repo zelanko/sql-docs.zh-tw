@@ -4,16 +4,16 @@ ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.component: tabular-models
-ms.topic: article
+ms.topic: conceptual
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 1b632cebe8df962c3d66ec0c40d4939a408cd70c
-ms.sourcegitcommit: 1aedef909f91dc88dc741748f36eabce3a04b2b1
+ms.openlocfilehash: ad7ff3ee1b3d3f9366a6dcab983ae70f9ea83c12
+ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="test-a-model-in-directquery-mode"></a>在 DirectQuery 模式中測試模型
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]

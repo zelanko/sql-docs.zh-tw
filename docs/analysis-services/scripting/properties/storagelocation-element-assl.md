@@ -1,36 +1,19 @@
 ---
 title: StorageLocation 元素 (ASSL) |Microsoft 文件
-ms.custom: ''
-ms.date: 03/06/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.component: ''
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
+ms.date: 5/8/2018
+ms.prod: sql
+ms.component: assl
+ms.reviewer: owend
+ms.technology: analysis-services
 ms.topic: reference
-apiname:
-- StorageLocation Element
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
-apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
-f1_keywords:
-- StorageLocation
-helpviewer_keywords:
-- StorageLocation element
-ms.assetid: ecf8852f-56a1-4fcf-b0d8-d7eebb75e4ed
-caps.latest.revision: 33
-author: Minewiskan
+author: minewiskan
 ms.author: owend
 manager: kfile
-ms.openlocfilehash: eb0946ac970755d3c82f57285fed8ce1112400be
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 99e079a02814cb054a528bf34142a15bc3e0664d
+ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="storagelocation-element-assl"></a>StorageLocation 元素 (ASSL)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]

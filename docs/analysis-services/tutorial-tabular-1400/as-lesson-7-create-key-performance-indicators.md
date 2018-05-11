@@ -1,27 +1,19 @@
 ---
 title: Analysis Services 教學課程第 7 課： 建立關鍵效能指標 |Microsoft 文件
-description: 描述如何在 Analysis Services 教學課程專案中建立關鍵效能指標。
-ms.prod_service: analysis-services, azure-analysis-services
-services: analysis-services
-ms.suite: pro-bi
-documentationcenter: ''
-author: Minewiskan
-manager: kfile
-editor: ''
-tags: ''
-ms.assetid: ''
-ms.service: analysis-services
-ms.devlang: NA
-ms.topic: get-started-article
-ms.tgt_pltfrm: NA
-ms.date: 02/20/2018
+ms.date: 05/08/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: tabular-models
+ms.topic: tutorial
 ms.author: owend
-monikerRange: '>= sql-analysis-services-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: b5baa301f8e9162205b4995e557f3178107a0fcc
-ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
-ms.translationtype: MT
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: 679b333fd20ede86751a928720484d260e132877
+ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="create-key-performance-indicators"></a>建立關鍵效能指標
 

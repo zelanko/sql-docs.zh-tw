@@ -4,16 +4,16 @@ ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.component: adomd
-ms.topic: article
+ms.topic: conceptual
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: b6a22f0878a31ae944c2c3a8df25c867d9e27c6e
-ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
-ms.translationtype: MT
+ms.openlocfilehash: d9f9f72698d51174a249afcbb924a63dc8ec12ed
+ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="retrieving-metadata-from-an-analytical-data-source"></a>從分析資料來源擷取中繼資料
   中繼資料對於擷取和使用分析資料的應用程式很重要。 當從關聯式資料來源擷取資料時，這種資料的維度性是可預測的，甚至是具有巢狀資料集的。 關聯式資料庫的結果集在結構上通常是二維或是純量。 不過，從分析資料來源擷取的資料有可能是可變的維度性、有組織且可能有很深的階層。  

@@ -1,33 +1,19 @@
 ---
 title: 方法 (XMLA) |Microsoft 文件
-ms.custom: ''
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services, azure-analysis-services
-ms.component: ''
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
+ms.date: 05/08/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: xmla
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
-f1_keywords:
-- http://schemas.microsoft.com/analysisservices/2003/engine#
-helpviewer_keywords:
-- methods [XML for Analysis]
-- XML for Analysis, methods
-- XMLA, methods
-ms.assetid: c6768dd4-ca06-4a85-93b7-5fd5700886ad
-caps.latest.revision: 30
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.openlocfilehash: fa01f9740a7396749933efb11bb92b320d1a13fc
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: a479bd17bfd0c7a617baea4cbabffaa08fa68936
+ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="xml-elements---methods"></a>XML 項目-方法
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]

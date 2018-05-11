@@ -1,28 +1,19 @@
 ---
 title: 時序群集模型的採礦模型內容 |Microsoft 文件
-ms.custom: ''
-ms.date: 03/07/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
+ms.date: 05/08/2018
+ms.prod: sql
+ms.technology: analysis-services
 ms.component: data-mining
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
-helpviewer_keywords:
-- mining model content, sequence clustering models
-- sequence clustering algorithms [Analysis Services]
-ms.assetid: 68e1934a-e147-4d53-b122-fa15e3fd5485
-caps.latest.revision: 23
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.openlocfilehash: 989fe80b2914870110b37dd4cd12fc61681a9ec7
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 063829ab944e1d7490cf1256b5a609d41c4c963e
+ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="mining-model-content-for-sequence-clustering-models"></a>群集模型的時序採礦模型內容
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]

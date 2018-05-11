@@ -1,27 +1,19 @@
 ---
 title: Analysis Services Adventure Works 教學課程 (1400) |Microsoft 文件
-description: Adventure Works 教學課程介紹 Analysis services
-ms.prod_service: analysis-services, azure-analysis-services
-services: analysis-services
-ms.suite: pro-bi
-documentationcenter: ''
-author: Minewiskan
-manager: kfile
-editor: ''
-tags: ''
-ms.assetid: ''
-ms.service: analysis-services
-ms.devlang: NA
-ms.topic: get-started-article
-ms.tgt_pltfrm: NA
-ms.date: 02/20/2018
+ms.date: 05/08/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: tabular-models
+ms.topic: tutorial
 ms.author: owend
-monikerRange: '>= sql-analysis-services-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: a8de5c5fc59de248e53f4c80e81c4dd32e0ce732
-ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
-ms.translationtype: MT
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: 40d6132a6384bd5ef91811992b52e20d86f27dc2
+ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="tabular-modeling-1400-compatibility-level"></a>表格式模型化 （1400年相容性層級）
 

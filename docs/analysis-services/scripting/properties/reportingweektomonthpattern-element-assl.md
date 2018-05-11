@@ -1,36 +1,19 @@
 ---
 title: ReportingWeekToMonthPattern 元素 (ASSL) |Microsoft 文件
-ms.custom: ''
-ms.date: 03/06/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.component: ''
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
+ms.date: 5/8/2018
+ms.prod: sql
+ms.component: assl
+ms.reviewer: owend
+ms.technology: analysis-services
 ms.topic: reference
-apiname:
-- ReportingWeekToMonthPattern Element
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
-apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
-f1_keywords:
-- ReportingWeekToMonthPattern
-helpviewer_keywords:
-- ReportingWeekToMonthPattern element
-ms.assetid: 8d7c694d-d5c5-4faa-af78-155779e84fe9
-caps.latest.revision: 31
-author: Minewiskan
+author: minewiskan
 ms.author: owend
 manager: kfile
-ms.openlocfilehash: 51e258295ed4658b6dbb53b5eb35f6e2958e7228
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 627a662686d5f05c86b64638f0307c54415fbc5a
+ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="reportingweektomonthpattern-element-assl"></a>ReportingWeekToMonthPattern 元素 (ASSL)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]

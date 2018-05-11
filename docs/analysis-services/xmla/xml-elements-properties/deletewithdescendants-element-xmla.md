@@ -1,38 +1,19 @@
 ---
 title: DeleteWithDescendants 元素 (XMLA) |Microsoft 文件
-ms.custom: ''
-ms.date: 03/03/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services, azure-analysis-services
-ms.component: ''
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
+ms.date: 05/08/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: xmla
 ms.topic: reference
-apiname:
-- DeleteWithDescendants Element
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
-apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
-f1_keywords:
-- http://schemas.microsoft.com/analysisservices/2003/engine#DeleteWithDescendants
-- microsoft.xml.analysis.deletewithdescendants
-- urn:schemas-microsoft-com:xml-analysis#DeleteWithDescendants
-helpviewer_keywords:
-- DeleteWithDescendants element
-ms.assetid: adfc9437-aaa7-4364-bcdb-128fcc9a410d
-caps.latest.revision: 12
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.openlocfilehash: 9844e13de56dddae48afc59d0e44fc5203cfdd40
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 16731018ec2f8414f2431ff4a3c04f4f554ff592
+ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="deletewithdescendants-element-xmla"></a>DeleteWithDescendants 元素 (XMLA)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]

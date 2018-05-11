@@ -1,27 +1,19 @@
 ---
 title: 第 7 課： 定義關鍵效能指標 (Kpi) |Microsoft 文件
-ms.custom: ''
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.component: ''
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: get-started-article
-applies_to:
-- SQL Server 2016
-ms.assetid: 36d53770-294f-43ab-8850-15d5351ff60c
-caps.latest.revision: 15
-author: Minewiskan
+ms.date: 05/08/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: multidimensional-models
+ms.topic: tutorial
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.openlocfilehash: a573414648573702871f50893268f04ce2e89112
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 8bbffcb92f2c3d18c53a40838a78bcb3a506316b
+ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="lesson-7-defining-key-performance-indicators-kpis"></a>第 7 課：定義關鍵效能指標 (KPI)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]

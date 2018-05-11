@@ -1,31 +1,19 @@
 ---
 title: 移動資料採礦物件 |Microsoft 文件
-ms.custom: ''
-ms.date: 03/06/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
+ms.date: 05/08/2018
+ms.prod: sql
+ms.technology: analysis-services
 ms.component: data-mining
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
-helpviewer_keywords:
-- data mining [Analysis Services], models
-- data mining editor [Analysis Services]
-- mining models [Analysis Services], managing
-- Data Mining Designer
-- mining models [Analysis Services], modifying
-ms.assetid: bc108407-2603-4387-b930-b5bb9df78069
-caps.latest.revision: 45
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.openlocfilehash: af5fab1c549b2a4bcc8ed3bc9f670ac80444856e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 91fed9a27477e82ed2be1fbb59585a9f5d8f93d3
+ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="moving-data-mining-objects"></a>移動資料採礦物件
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]

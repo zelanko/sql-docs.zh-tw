@@ -1,36 +1,19 @@
 ---
 title: NullKeyConvertedToUnknown 元素 (ASSL) |Microsoft 文件
-ms.custom: ''
-ms.date: 03/06/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.component: ''
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
+ms.date: 5/8/2018
+ms.prod: sql
+ms.component: assl
+ms.reviewer: owend
+ms.technology: analysis-services
 ms.topic: reference
-apiname:
-- NullKeyConvertedToUnknown Element
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
-apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
-f1_keywords:
-- NullKeyConvertedToUnknown
-helpviewer_keywords:
-- NullKeyConvertedToUnknown element
-ms.assetid: 1a6cde33-01ba-4095-b464-16d1ad3c6905
-caps.latest.revision: 36
-author: Minewiskan
+author: minewiskan
 ms.author: owend
 manager: kfile
-ms.openlocfilehash: 4f417e1bb882fb8aa97e071799e2526b5b43b7f1
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: c3d101e2577a7e691aae685bcf821979b5640182
+ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="nullkeyconvertedtounknown-element-assl"></a>NullKeyConvertedToUnknown 元素 (ASSL)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]

@@ -1,33 +1,18 @@
 ---
 title: SQL Server 2016 Analysis Services 回溯相容性 |Microsoft 文件
-ms.custom: ''
-ms.date: 07/11/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.component: ''
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-helpviewer_keywords:
-- installing Analysis Services, backward compatibility
-- backward compatibility [Analysis Services]
-- compatibility [Analysis Services]
-- Analysis Services, backward compatibility
-- upgrading Analysis Services
-- SSAS, backward compatibility
-- SQL Server Analysis Services, backward compatibility
-ms.assetid: 618b6c3a-e20d-47a9-b2c6-6d848dfba05a
-caps.latest.revision: 38
-author: Minewiskan
+ms.date: 05/08/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.topic: conceptual
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.openlocfilehash: bbd33812f2fe78fe50dfddc85c23bd24852b1035
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 4906f3aec097b0bbdf63187cd760aa17a450316a
+ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="analysis-services-backward-compatibility-sql-server-2016"></a>Analysis Services 回溯相容性 (SQL Server 2016)
 [!INCLUDE[ssas-appliesto-sql2016](../includes/ssas-appliesto-sql2016.md)]

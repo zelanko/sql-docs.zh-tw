@@ -1,30 +1,19 @@
 ---
 title: 使用巢狀的資料表資料做為輸入，精確度圖表 |Microsoft 文件
-ms.custom: ''
-ms.date: 03/01/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
+ms.date: 05/08/2018
+ms.prod: sql
+ms.technology: analysis-services
 ms.component: data-mining
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
-helpviewer_keywords:
-- Mining Accuracy Chart [Analysis Services], nested tables
-- Mining Accuracy Chart [Analysis Services], input tables
-- nested tables
-- adding nested tables
-ms.assetid: 162e0686-ada3-4dd3-9151-9589926e6613
-caps.latest.revision: 24
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.openlocfilehash: 32220402e68a25d790c7f26455561a1e391290ec
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 173e847793c5e57a09b5bbbf40fff2994d01fefa
+ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="using-nested-table-data-as-an-input-for-an-accuracy-chart"></a>使用巢狀資料表當做精確度圖表的輸入
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]

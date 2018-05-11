@@ -1,25 +1,19 @@
 ---
 title: 雙向交叉篩選在表格式模型 |Microsoft 文件
-ms.custom: ''
-ms.date: 02/21/2018
-ms.prod: analysis-services
-ms.prod_service: analysis-services, azure-analysis-services
-ms.component: multidimensional-tabular
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
+ms.date: 05/07/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: tabular-models
 ms.topic: conceptual
-ms.assetid: 5e810707-f58d-4581-8f99-7371fa75b6ac
-caps.latest.revision: 14
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.openlocfilehash: 72a14c23993a3e18c4ca804fab04247090f10596
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 9a7161683e718ac11b32ac929c3652b17f4f47df
+ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="bi-directional-cross-filters-in-tabular-models"></a>在表格式模型中的雙向交叉篩選
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]

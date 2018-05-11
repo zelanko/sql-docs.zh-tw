@@ -1,38 +1,19 @@
 ---
 title: Microsoft 類神經網路演算法 |Microsoft 文件
-ms.custom: ''
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
+ms.date: 05/08/2018
+ms.prod: sql
+ms.technology: analysis-services
 ms.component: data-mining
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
-helpviewer_keywords:
-- training neural networks
-- output neurons [Analysis Services]
-- algorithms [data mining]
-- neural network algorithms [Analysis Services]
-- neurons [Analysis Services]
-- classification algorithms [Analysis Services]
-- neural networks
-- multilayer perceptron network of neurons [Analysis Services]
-- hidden neurons
-- Back-Propagated Delta Rule network
-- input neurons [Analysis Services]
-- regression algorithms [Analysis Services]
-ms.assetid: 61eb4861-8a6a-4214-a4b8-1dd278ad7a68
-caps.latest.revision: 46
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.openlocfilehash: 359807ec110635df193ee1b2b1c69e1243cbb226
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 948e025dfbda7212ad4a1ba6d83b22de4b2eff9d
+ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="microsoft-neural-network-algorithm"></a>Microsoft 類神經網路演算法
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]

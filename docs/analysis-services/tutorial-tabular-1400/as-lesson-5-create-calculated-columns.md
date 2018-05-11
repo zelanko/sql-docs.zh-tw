@@ -1,27 +1,19 @@
 ---
 title: Analysis Services 教學課程第 5 課： 建立導出資料行 |Microsoft 文件
-description: 描述如何在 Analysis Services 教學課程專案中建立導出資料行。
-ms.prod_service: analysis-services, azure-analysis-services
-services: analysis-services
-ms.suite: pro-bi
-documentationcenter: ''
-author: Minewiskan
-manager: kfile
-editor: ''
-tags: ''
-ms.assetid: ''
-ms.service: analysis-services
-ms.devlang: NA
-ms.topic: get-started-article
-ms.tgt_pltfrm: NA
-ms.date: 02/20/2018
+ms.date: 05/08/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: tabular-models
+ms.topic: tutorial
 ms.author: owend
-monikerRange: '>= sql-analysis-services-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 0efa20ef203cbcd31177e4ac194ca2bd4efedc69
-ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
-ms.translationtype: MT
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: 8406ff8e3bf6981dedea21f6916101aa42b1061a
+ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="create-calculated-columns"></a>建立導出資料行
 

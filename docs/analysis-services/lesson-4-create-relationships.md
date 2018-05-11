@@ -1,27 +1,19 @@
 ---
 title: 第 5 課： 建立關聯性 |Microsoft 文件
-ms.custom: ''
-ms.date: 03/27/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services, azure-analysis-services
-ms.component: ''
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: get-started-article
-applies_to:
-- SQL Server 2016
-ms.assetid: abac1a00-f827-4c3e-a473-6db5c8a3a66f
-caps.latest.revision: 29
-author: Minewiskan
+ms.date: 05/08/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: tabular-models
+ms.topic: tutorial
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.openlocfilehash: b2d80999c474fceeb199d812cd2f2112e9c4f360
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 706c5b30b0bb95b9a3c71c87974ab4707f420184
+ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="lesson-4-create-relationships"></a>第 4 課： 建立關聯性
 [!INCLUDE[ssas-appliesto-sql2016-later-aas](../includes/ssas-appliesto-sql2016-later-aas.md)]

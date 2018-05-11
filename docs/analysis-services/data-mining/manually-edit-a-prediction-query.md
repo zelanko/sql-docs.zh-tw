@@ -1,29 +1,19 @@
 ---
 title: 手動編輯預測查詢 |Microsoft 文件
-ms.custom: ''
-ms.date: 03/01/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
+ms.date: 05/08/2018
+ms.prod: sql
+ms.technology: analysis-services
 ms.component: data-mining
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
-helpviewer_keywords:
-- modifying prediction queries
-- Mining Model Prediction [Analysis Services], modifying prediction queries
-- manual prediction query modification [Analysis Services]
-ms.assetid: 9f6a9298-49d5-4675-ad49-977a47dff5a6
-caps.latest.revision: 17
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.openlocfilehash: 3fac2127ebab9e06a043d11f1b901a29f3a46ad9
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: ee2e4c7c216840737e3fea93c16c28c77532fc7a
+ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="manually-edit-a-prediction-query"></a>手動編輯預測查詢
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]

@@ -1,36 +1,19 @@
 ---
 title: Microsoft 決策樹演算法 |Microsoft 文件
-ms.custom: ''
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
+ms.date: 05/08/2018
+ms.prod: sql
+ms.technology: analysis-services
 ms.component: data-mining
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
-helpviewer_keywords:
-- predictions [Analysis Services], discrete attributes
-- predictions [Analysis Services], continuous attributes
-- algorithms [data mining]
-- discrete attributes [Analysis Services]
-- classification algorithms [Analysis Services]
-- discrete columns [Analysis Services]
-- decision tree algorithms [Analysis Services]
-- decision trees [Analysis Services]
-- continuous columns
-- regression algorithms [Analysis Services]
-ms.assetid: 95ffe66f-c261-4dc5-ad57-14d2d73205ff
-caps.latest.revision: 72
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.openlocfilehash: 8fe2f592a481f734215000b7ab07a74d57b07966
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: b93a99fbb8bbe7f2050c5d6e7bef370f46634211
+ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="microsoft-decision-trees-algorithm"></a>Microsoft 決策樹演算法
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]

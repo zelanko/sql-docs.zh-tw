@@ -1,38 +1,19 @@
 ---
 title: CellOrdinal 元素 (XMLA) |Microsoft 文件
-ms.custom: ''
-ms.date: 03/03/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services, azure-analysis-services
-ms.component: ''
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
+ms.date: 05/08/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: xmla
 ms.topic: reference
-apiname:
-- CellOrdinal Element
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
-apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
-f1_keywords:
-- microsoft.xml.analysis.cellordinal
-- urn:schemas-microsoft-com:xml-analysis#CellOrdinal
-- http://schemas.microsoft.com/analysisservices/2003/engine#CellOrdinal
-helpviewer_keywords:
-- CellOrdinal element
-ms.assetid: 1808c498-e3b4-4e5c-9e22-7f8662d32874
-caps.latest.revision: 11
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.openlocfilehash: 75cda851fcf1d6af599d8297269f296590304fff
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: d10b59424490885861ce1a976d94bfa54f677fdf
+ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="cellordinal-element-xmla"></a>CellOrdinal 元素 (XMLA)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]

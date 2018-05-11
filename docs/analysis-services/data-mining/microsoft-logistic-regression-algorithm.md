@@ -1,30 +1,19 @@
 ---
 title: Microsoft 羅吉斯迴歸演算法 |Microsoft 文件
-ms.custom: ''
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
+ms.date: 05/08/2018
+ms.prod: sql
+ms.technology: analysis-services
 ms.component: data-mining
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
-helpviewer_keywords:
-- logical regression algorithms [Analysis Services]
-- algorithms [data mining]
-- neural network algorithms [Analysis Services]
-- regression algorithms [Analysis Services]
-ms.assetid: 3dd54d07-1c3b-4b87-b7f0-b962ed8cf844
-caps.latest.revision: 22
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.openlocfilehash: d45c56f76e37a56ebfce58f7ac62bce705bb4c53
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: e1fb25b087aa50afc711daa69272c774fd6e5eae
+ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="microsoft-logistic-regression-algorithm"></a>Microsoft 羅吉斯迴歸演算法
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]

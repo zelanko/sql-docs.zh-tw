@@ -1,42 +1,19 @@
 ---
 title: Microsoft 時間序列演算法技術參考 |Microsoft 文件
-ms.custom: ''
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
+ms.date: 05/08/2018
+ms.prod: sql
+ms.technology: analysis-services
 ms.component: data-mining
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
-helpviewer_keywords:
-- ARTXP
-- HISTORICAL_MODEL_GAP parameter
-- AUTO_DETECT_PERIODICITY parameter
-- time series algorithms [Analysis Services]
-- ARIMA
-- INSTABILITY_SENSITIVITY parameter
-- PERIODICITY_HINT parameter
-- MAXIMUM_SERIES_VALUE parameter
-- time series [Analysis Services]
-- MINIMUM_SUPPORT parameter
-- HISTORIC_MODEL_COUNT parameter
-- FORECAST_METHOD parameter
-- MISSING_VALUE_SUBSTITUTION parameter
-- MINIMUM_SERIES_VALUE parameter
-- COMPLEXITY_PENALTY parameter
-- PREDICTION_SMOOTHING parameter
-ms.assetid: 7ab203fa-b044-47e8-b485-c8e59c091271
-caps.latest.revision: 37
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.openlocfilehash: d600580312e9880f47b57d4d1da80688aea5d37e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 9594bb272e423942b71a2e9977bee356bd2aca98
+ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="microsoft-time-series-algorithm-technical-reference"></a>Microsoft 時間序列演算法技術參考
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]

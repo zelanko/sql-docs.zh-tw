@@ -1,38 +1,19 @@
 ---
 title: MeasureGroupID 元素 (XMLA) |Microsoft 文件
-ms.custom: ''
-ms.date: 03/06/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services, azure-analysis-services
-ms.component: ''
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
+ms.date: 05/08/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: xmla
 ms.topic: reference
-apiname:
-- MeasureGroupID Element
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
-apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
-f1_keywords:
-- urn:schemas-microsoft-com:xml-analysis#MeasureGroupID
-- http://schemas.microsoft.com/analysisservices/2003/engine#MeasureGroupID
-- microsoft.xml.analysis.measuregroupid
-helpviewer_keywords:
-- MeasureGroupID element
-ms.assetid: ff55777e-54ea-42b9-a084-2e12e0a10988
-caps.latest.revision: 12
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.openlocfilehash: 231a59e7d2adbf6beae63f56a9a9aa8a7b9d6300
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 52778135cdce5732792d6dd4ba3cef0d9649a74f
+ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="measuregroupid-element-xmla"></a>MeasureGroupID 元素 (XMLA)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]

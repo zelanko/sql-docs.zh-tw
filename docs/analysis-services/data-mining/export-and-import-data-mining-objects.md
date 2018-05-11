@@ -1,32 +1,19 @@
 ---
 title: 匯出和匯入資料採礦物件 |Microsoft 文件
-ms.custom: ''
-ms.date: 03/06/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
+ms.date: 05/08/2018
+ms.prod: sql
+ms.technology: analysis-services
 ms.component: data-mining
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
-helpviewer_keywords:
-- backing up databases [Analysis Services]
-- exporting mining models
-- exporting mining structures
-- mining structures [Analysis Services], creating
-- mining structures [DMX], exporting
-- mining models [Analysis Services], migration
-ms.assetid: 10a83b13-2640-4ff5-80c8-a35e1d692908
-caps.latest.revision: 23
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.openlocfilehash: 85c025031d61e124354deceab9f396f6f43f7126
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 27e1c1cb56de1d1c304e154b6eab980bf7172d91
+ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="export-and-import-data-mining-objects"></a>匯出及匯入資料採礦物件
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]

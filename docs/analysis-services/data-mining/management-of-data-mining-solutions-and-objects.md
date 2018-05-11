@@ -1,28 +1,19 @@
 ---
 title: 資料採礦方案與物件的管理 |Microsoft 文件
-ms.custom: ''
-ms.date: 03/03/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
+ms.date: 05/08/2018
+ms.prod: sql
+ms.technology: analysis-services
 ms.component: data-mining
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
-helpviewer_keywords:
-- data mining [Analysis Services], managing
-- managing mining models
-ms.assetid: 06fc61dd-925c-4347-8677-7046ee5d2f6f
-caps.latest.revision: 26
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.openlocfilehash: c6ad8afad6f7836498a77682a26d4c1b77736654
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 0293ed35f9f93e1edfb4ccfccb03f63afdab2093
+ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="management-of-data-mining-solutions-and-objects"></a>資料採礦方案與物件的管理
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]

@@ -1,30 +1,19 @@
 ---
 title: 從採礦結構移除資料行 |Microsoft 文件
-ms.custom: ''
-ms.date: 03/13/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
+ms.date: 05/08/2018
+ms.prod: sql
+ms.technology: analysis-services
 ms.component: data-mining
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
-helpviewer_keywords:
-- mining structures [Analysis Services], columns
-- removing columns
-- deleting columns
-- columns [data mining], mining structure columns
-ms.assetid: 41073ffe-9351-416b-9f0c-62634bc213f9
-caps.latest.revision: 27
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.openlocfilehash: 315a969689c7c751e948f4ee82328f96ce507886
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: df3e6998e4cf3b741c5181fb0c554c40abb21a32
+ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="remove-columns-from-a-mining-structure"></a>從採礦結構中移除資料行
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]

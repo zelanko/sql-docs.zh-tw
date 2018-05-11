@@ -1,37 +1,19 @@
 ---
 title: 模型旗標 （資料採礦） |Microsoft 文件
-ms.custom: ''
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
+ms.date: 05/08/2018
+ms.prod: sql
+ms.technology: analysis-services
 ms.component: data-mining
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
-helpviewer_keywords:
-- attributes [data mining]
-- data types [data mining]
-- REGRESSOR flag
-- MODEL_EXISTENCE_ONLY flag
-- REGRESSOR column
-- columns [data mining], modeling flags
-- NOT NULL modeling flag
-- modeling flags [data mining]
-- null values [Analysis Services]
-- MODEL_EXISTENCE_ONLY column
-- coding [Data Mining]
-ms.assetid: 8826d5ce-9ba8-4490-981b-39690ace40a4
-caps.latest.revision: 48
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.openlocfilehash: 0d3a03026bc08535db7f2dc64ef9a7fda5844650
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 63d5d69bfe5233e105235a0746b746a92fecbe7c
+ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="modeling-flags-data-mining"></a>模型旗標 (資料採礦)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]

@@ -1,38 +1,19 @@
 ---
 title: MDDataSet 資料類型 (XMLA) |Microsoft 文件
-ms.custom: ''
-ms.date: 03/16/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services, azure-analysis-services
-ms.component: ''
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
+ms.date: 05/08/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: xmla
 ms.topic: reference
-apiname:
-- MDDataSet Data Type
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
-apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
-f1_keywords:
-- http://schemas.microsoft.com/analysisservices/2003/engine#MDDataSet
-- MDDataSet
-- urn:schemas-microsoft-com:xml-analysis#MDDataSet
-helpviewer_keywords:
-- MDDataSet data type
-ms.assetid: 1a7e0092-f9f0-4ae5-ba27-ad1d8ebe8cb9
-caps.latest.revision: 27
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.openlocfilehash: 6b3fb82c79fd352df012a5fb5f800139f67a43be
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: bd82c473b768d8359c82bd2cf55c1cf27e76ae3f
+ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="mddataset-data-type-xmla"></a>MDDataSet 資料類型 (XMLA)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]

@@ -1,25 +1,18 @@
 ---
 title: Analysis Services 的新功能 |Microsoft 文件
-ms.custom: ''
-ms.date: 03/24/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.component: ''
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: get-started-article
-ms.assetid: aa69c299-b8f4-4969-86d8-b3292fe13f08
-caps.latest.revision: 97
-author: Minewiskan
+ms.date: 05/08/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.topic: conceptual
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.openlocfilehash: 2aeaed0a4a105d48e8dde01d1bb87245c30a3068
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 355308661c7a1d7e6ef8a67f89b5a247223688ea
+ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="what39s-new-in-analysis-services"></a>Analysis Services 的新功能
 [!INCLUDE[ssas-appliesto-sql2016](../includes/ssas-appliesto-sql2016.md)]

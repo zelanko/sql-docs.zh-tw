@@ -1,31 +1,19 @@
 ---
 title: Microsoft 貝氏機率分類演算法 |Microsoft 文件
-ms.custom: ''
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
+ms.date: 05/08/2018
+ms.prod: sql
+ms.technology: analysis-services
 ms.component: data-mining
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
-helpviewer_keywords:
-- Bayesian classifiers
-- algorithms [data mining]
-- predictive modeling [Analysis Services]
-- classification algorithms [Analysis Services]
-- naive bayes algorithms [Analysis Services]
-ms.assetid: 3b53e011-3b1a-4cd1-bdc2-456768ba31b5
-caps.latest.revision: 57
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.openlocfilehash: b35be52a820d3bb6bbf9ea2f0d60e5d2481bfaf9
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 247e9d500dce9bc9b94dbd91fcbf5c71d75f35dc
+ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="microsoft-naive-bayes-algorithm"></a>Microsoft 貝氏機率分類演算法
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]

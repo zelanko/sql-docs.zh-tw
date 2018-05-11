@@ -1,35 +1,19 @@
 ---
 title: Microsoft 關聯分析演算法技術參考 |Microsoft 文件
-ms.custom: ''
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
+ms.date: 05/08/2018
+ms.prod: sql
+ms.technology: analysis-services
 ms.component: data-mining
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
-helpviewer_keywords:
-- MINIMUM_ITEMSET_SIZE parameter
-- MAXIMUM_SUPPORT parameter
-- association algorithms [Analysis Services]
-- MINIMUM_SUPPORT parameter
-- OPTIMIZED_PREDICTION_COUNT parameter
-- associations [Analysis Services]
-- MAXIMUM_ITEMSET_COUNT parameter
-- MAXIMUM_ITEMSET_SIZE parameter
-- MINIMUM_PROBABILITY parameter
-ms.assetid: 50a22202-e936-4995-ae1d-4ff974002e88
-caps.latest.revision: 24
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.openlocfilehash: fb0f074871ee4c6f1e24eb02664a66fb512aeba4
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: dfc939956a4c79b2b7c0fb45ce70499b7121937f
+ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="microsoft-association-algorithm-technical-reference"></a>Microsoft 關聯分析演算法技術參考
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]

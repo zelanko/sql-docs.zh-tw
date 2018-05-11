@@ -1,22 +1,23 @@
 ---
-title: 安裝及管理 SQL Server 中的機器學習封裝 |Microsoft 文件
+title: R 和 Python 封裝在 SQL Server 機器學習中的管理 |Microsoft 文件
+description: 取得 R，並將 Python 封裝資訊、 加入新的封裝和用戶端上啟用存取設定機器學習的 SQL Server 執行個體。
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 04/15/2018
+ms.date: 05/15/2018
 ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: cbab4687dd0d5a8cb250fa38fc4c4c7dbb9d68a6
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: abc77eee8d803fd94a58abfdab6f1c3cbe6621dd
+ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/10/2018
 ---
-# <a name="install-and-manage-machine-learning-packages-in-sql-server"></a>安裝及管理 SQL Server 中的機器學習封裝
+# <a name="r-and-python-package-management-in-sql-server-machine-learning"></a>在 SQL Server 機器學習中的 R，並將 Python 封裝管理
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-本文說明如何安裝新的 R 或 Python 封裝，在 SQL Server 2017 和 SQL Server 2016 中。 它也會描述您可以在 SQL Server 安裝的封裝上的限制。
+本文介紹 R 和 Python 封裝在 SQL Server 2017 機器學習和 SQL Server 2016 R Services 管理。 它也會描述您可以在 SQL Server 安裝的封裝上的限制。
 
 ## <a name="overview-of-package-management-methods-and-requirements"></a>封裝管理方法 」 和 「 需求概觀
 
@@ -28,7 +29,7 @@ ms.lasthandoff: 04/16/2018
 
 不過，這些限制一定會表示某些變更的資料科學家和分析師運作的方式：
 
-+ 一般而言，系統管理伺服器的存取權是必要的。 在 SQL Server 2017，資料庫管理員可以使用角色來授與特定使用者能夠安裝套件的私用，但系統管理員仍必須啟用此功能。
++ 一般而言，在 SQL Server 上的套件安裝需要系統管理權限。 在 SQL Server 2017，資料庫管理員可以使用角色來授與特定使用者能夠安裝套件的私用，但系統管理員仍必須啟用此功能。
 + 許多伺服器沒有網際網路存取。 封裝安裝至這些電腦需要一些額外的準備工作。
 + 封裝會安裝至執行個體文件庫。 封裝無法執行個體之間共用。
 + 使用者無法執行任何已安裝在使用者程式庫中的封裝。
@@ -37,7 +38,7 @@ ms.lasthandoff: 04/16/2018
 
 有關如何安裝新的 R 或 Python 封裝，請參閱下列文章以取得詳細的步驟。 
 
-### <a name="install-new-r-packages"></a>安裝新的 R 封裝
+### <a name="r-packages"></a>R 封裝
 
 + [SQL Server 上安裝其他的 R 封裝](install-additional-r-packages-on-sql-server.md)
 
@@ -47,7 +48,7 @@ ms.lasthandoff: 04/16/2018
 
     您也可以使用 DDL 陳述式的 SQL Server 2017 中安裝 R 封裝。
 
-### <a name="install-new-python-packages"></a>安裝新的 Python 封裝
+### <a name="python-packages"></a>Python 封裝
 
 + [在 SQL Server 上安裝新的 Python 套件](../python/install-additional-python-packages-on-sql-server.md)
 
@@ -55,7 +56,7 @@ ms.lasthandoff: 04/16/2018
 
 您嘗試下載或安裝任何新的封裝之前，先檢閱需求：
 
-+ 請確定 Windows 版本的套件：[取得正確的封裝版本和格式](#packageVersion)
++ 請確定 Windows 版本的套件。
 
 + 找出所有套件相依性，並確定其與 SQL Server 環境的相容性。
 
@@ -84,4 +85,4 @@ ms.lasthandoff: 04/16/2018
 
 識別所有相依性可能很複雜。 ，我們建議您使用[miniCRAN](create-a-local-package-repository-using-minicran.md)準備離線封裝儲存機制。
 
-Python，您必須同樣地準備所有相依性，並將它們儲存在本機。 請務必使用 Windows 相容的二進位檔案，並使用 WHL 格式。
+Python，您必須同樣地準備所有相依性，並將它們儲存在本機。 請務必使用 Windows 相容的二進位檔和 WHL 格式。

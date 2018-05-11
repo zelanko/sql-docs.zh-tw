@@ -1,38 +1,19 @@
 ---
 title: Microsoft 群集演算法技術參考 |Microsoft 文件
-ms.custom: ''
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
+ms.date: 05/08/2018
+ms.prod: sql
+ms.technology: analysis-services
 ms.component: data-mining
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
-helpviewer_keywords:
-- clustering [Data Mining]
-- MAXIMUM_INPUT_ATTRIBUTES parameter
-- CLUSTER_SEED parameter
-- MODELLING_CARDINALITY parameter
-- MINIMUM_SUPPORT parameter
-- STOPPING_TOLERANCE parameter
-- MAXIMUM_STATES parameter
-- SAMPLE_SIZE parameter
-- CLUSTERING_METHOD parameter
-- soft clustering [Data Mining]
-- clustering algorithms [Analysis Services]
-- CLUSTER_COUNT parameter
-ms.assetid: ec40868a-6dc7-4dfa-aadc-dedf69e555eb
-caps.latest.revision: 21
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.openlocfilehash: defdcd737ca885a3f558e7b8aafe3b19aaf2fc1a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: a11e274834c5816046257971e6ea03660eafe66c
+ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="microsoft-clustering-algorithm-technical-reference"></a>Microsoft 群集演算法技術參考
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]

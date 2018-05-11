@@ -1,31 +1,19 @@
 ---
 title: 採礦模型屬性 |Microsoft 文件
-ms.custom: ''
-ms.date: 03/13/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
+ms.date: 05/08/2018
+ms.prod: sql
+ms.technology: analysis-services
 ms.component: data-mining
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
-helpviewer_keywords:
-- mining models [Analysis Services], properties
-- data mining [Analysis Services], properties
-- columns [data mining], properties
-- Data Mining Designer
-- properties [data mining]
-ms.assetid: c5194619-8b31-42be-a95f-585711462945
-caps.latest.revision: 32
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.openlocfilehash: c64dde1c061927d15e603abd4f1f0319507b80b2
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 899d405c86b67ed658280b545b492e5275f74a41
+ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="mining-model-properties"></a>採礦模型屬性
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]

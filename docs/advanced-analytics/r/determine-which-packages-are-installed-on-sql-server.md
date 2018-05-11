@@ -9,16 +9,16 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 3295bbdbb00c73c9aaa37dcb15d35121b82454bb
-ms.sourcegitcommit: 1aedef909f91dc88dc741748f36eabce3a04b2b1
+ms.openlocfilehash: e19217fb00cba1f9369bf79a09790f58f9dc2e66
+ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 05/10/2018
 ---
 #  <a name="get-r-and-python-package-information-on-sql-server-machine-learning"></a>取得 SQL Server 機器學習的 R，並將 Python 封裝資訊
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-如果您已安裝多個 Python 環境，或使用 R 的多個工具，很容易將套件安裝到錯誤的媒體櫃或環境，則無法日後尋找它。 本文章提供查詢和指導方針適用於 determininga 封裝版本，以及列出已安裝目前的 SQL Server 環境中的封裝。
+如果您已安裝多個 Python 環境，或使用 R 的多個工具，很容易將套件安裝到錯誤的媒體櫃或環境，則無法日後尋找它。 本文章提供查詢和指導方針適用於 determinin ga 封裝版本，以及列出已安裝目前的 SQL Server 環境中的封裝。
 
 ## <a name="verify-the-current-default-library"></a>確認目前的預設程式庫
 

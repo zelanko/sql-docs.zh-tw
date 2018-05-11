@@ -1,32 +1,19 @@
 ---
 title: 增益圖 (Analysis Services-資料採礦) |Microsoft 文件
-ms.custom: ''
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
+ms.date: 05/08/2018
+ms.prod: sql
+ms.technology: analysis-services
 ms.component: data-mining
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
-helpviewer_keywords:
-- testing data mining models
-- accuracy, charting
-- viewing mining accuracy
-- lift charts [Analysis Services]
-- profit charts [Analysis Services]
-- accuracy testing [data mining]
-ms.assetid: ab77eca1-bd48-4fef-b27f-ff5b648e0501
-caps.latest.revision: 55
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.openlocfilehash: 46bf1bb6fa5ee2e21a58095c1b705d692fa31a45
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: bd44c391b71b88cf96b1325bbeaa081bf6ce1856
+ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="lift-chart-analysis-services---data-mining"></a>增益圖 (Analysis Services - 資料採礦)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]

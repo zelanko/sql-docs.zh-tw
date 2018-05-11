@@ -1,38 +1,19 @@
 ---
 title: Restrictions 元素 (XMLA) |Microsoft 文件
-ms.custom: ''
-ms.date: 03/04/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services, azure-analysis-services
-ms.component: ''
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
+ms.date: 05/08/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: xmla
 ms.topic: reference
-apiname:
-- Restrictions Element
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
-apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
-f1_keywords:
-- urn:schemas-microsoft-com:xml-analysis#Restrictions
-- http://schemas.microsoft.com/analysisservices/2003/engine#Restrictions
-- microsoft.xml.analysis.restrictions
-helpviewer_keywords:
-- Restrictions element
-ms.assetid: e745ce13-b468-4372-a6f0-0da3d772dda3
-caps.latest.revision: 11
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.openlocfilehash: ad91fbc14880ffcae19239650228c0aa9f6635e5
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: d79e3b88fd428005d1939a90b80b2753137eaf05
+ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="restrictions-element-xmla"></a>Restrictions 元素 (XMLA)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]

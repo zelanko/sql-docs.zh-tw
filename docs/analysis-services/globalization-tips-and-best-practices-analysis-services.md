@@ -1,31 +1,18 @@
 ---
 title: 全球化秘訣和最佳作法 (Analysis Services) |Microsoft 文件
-ms.custom: ''
-ms.date: 03/01/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services, azure-analysis-services
-ms.component: ''
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-helpviewer_keywords:
-- translations [Analysis Services], client applications
-- date comparisons
-- day-of-week comparisons [Analysis Services]
-- time [Analysis Services]
-- month comparisons [Analysis Services]
-ms.assetid: 71a8c438-1370-4c69-961e-d067ee4e47c2
-caps.latest.revision: 33
-author: Minewiskan
+ms.date: 05/08/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.topic: conceptual
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.openlocfilehash: 8d5a756c6db3e5b3997e159c29ffb1b2c8533135
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: e1cbd0aff52503a5c44ce3f52ce8a58d50f7aea8
+ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="globalization-tips-and-best-practices-analysis-services"></a>全球化秘訣和最佳作法 (Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../includes/ssas-appliesto-sqlas-aas.md)]

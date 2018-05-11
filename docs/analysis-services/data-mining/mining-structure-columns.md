@@ -1,30 +1,19 @@
 ---
 title: 採礦結構資料行 |Microsoft 文件
-ms.custom: ''
-ms.date: 03/13/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
+ms.date: 05/08/2018
+ms.prod: sql
+ms.technology: analysis-services
 ms.component: data-mining
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
-helpviewer_keywords:
-- data mining [Analysis Services], structure
-- mining structures [Analysis Services], columns
-- data sources [Analysis Services], mining structure columns
-- columns [data mining], mining structure columns
-ms.assetid: 20cbf433-70d1-4b61-a462-41a8435b27b4
-caps.latest.revision: 41
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.openlocfilehash: 980b2ccc66a18c547b668d5d9d30a319e2c5d5a3
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 9022f4620efb51cff04caafcdc03d3b257c4587b
+ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="mining-structure-columns"></a>採礦結構資料行
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]

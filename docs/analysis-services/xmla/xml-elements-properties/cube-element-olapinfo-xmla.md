@@ -1,38 +1,19 @@
 ---
 title: Cube 元素 (OlapInfo) (XMLA) |Microsoft 文件
-ms.custom: ''
-ms.date: 03/06/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services, azure-analysis-services
-ms.component: ''
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
+ms.date: 05/08/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: xmla
 ms.topic: reference
-apiname:
-- Cube Element (OlapInfo)
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
-apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
-f1_keywords:
-- microsoft.xml.analysis.cube
-- urn:schemas-microsoft-com:xml-analysis#Cube
-- http://schemas.microsoft.com/analysisservices/2003/engine#Cube
-helpviewer_keywords:
-- Cube element
-ms.assetid: c2b6fe41-6ad4-4181-98a9-3a2517f0b7cc
-caps.latest.revision: 11
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.openlocfilehash: 468beba16c9e19644532e20b7cae72d74c9692de
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: ca76940b819466357ce860428bbbddae81961758
+ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="cube-element-olapinfo-xmla"></a>Cube 元素 (OlapInfo) (XMLA)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]

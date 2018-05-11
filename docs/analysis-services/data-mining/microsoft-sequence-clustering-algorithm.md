@@ -1,30 +1,19 @@
 ---
 title: Microsoft 時序群集演算法 |Microsoft 文件
-ms.custom: ''
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
+ms.date: 05/08/2018
+ms.prod: sql
+ms.technology: analysis-services
 ms.component: data-mining
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
-helpviewer_keywords:
-- clusters [Analysis Services]
-- algorithms [data mining]
-- sequence clustering algorithms [Analysis Services]
-- sequence [Analysis Services]
-ms.assetid: ae779a1f-0adb-4857-afbd-a15543dff299
-caps.latest.revision: 49
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.openlocfilehash: 235347cd727627c8db54c8787d10388bc802c90a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 273d1271d63ae8f4d40d604745cbe8c3f5eda6ee
+ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="microsoft-sequence-clustering-algorithm"></a>Microsoft 時序群集演算法
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]

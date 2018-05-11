@@ -8,11 +8,11 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: ee2c8124cf3487ca300c0b08ea113c8e66b114f4
-ms.sourcegitcommit: 1aedef909f91dc88dc741748f36eabce3a04b2b1
+ms.openlocfilehash: 48fb451e35f58cf606c47cd64cf5f9093069c274
+ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="default-r-and-python-packages-in-sql-server"></a>在 SQL Server 中的預設 R，並將 Python 封裝
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -61,17 +61,17 @@ ms.lasthandoff: 05/08/2018
 
 ### <a name="r-components"></a>R 元件
 
-元件包括 Microsoft 的開放原始碼 R 為分佈[Microsoft R Open](https://mran.microsoft.com/open)。 基底 R 封裝包括核心功能，例如**stats**和**utils**。 您可以執行`installed.packages(priority = "base")`傳回封裝清單。 R 的基底安裝也包含許多的範例資料集，以及標準的 R 工具，例如 RGui （輕量型互動式編輯器） 和 RTerm （R 命令提示字元）。
+開放原始碼 R 是 Microsoft 的分佈[Microsoft R Open (MRO)](https://mran.microsoft.com/open)。 基底 R 封裝包括核心功能，例如**stats**和**utils**。 您可以執行`installed.packages(priority = "base")`傳回封裝清單。 R 的基底安裝也包含許多的範例資料集，以及標準的 R 工具，例如 RGui （輕量型互動式編輯器） 和 RTerm （R 命令提示字元）。
 
-Microsoft 封裝包含[RevoScaleR](https://docs.microsoft.com/r-server/r-reference/revoscaler/revoscaler)遠端計算內容資料流中，平行資料匯入和轉換 rx 函數的執行，如模型、 視覺化和分析。 [MicrosoftML](https://docs.microsoft.com/r-server/r-reference/microsoftml/microsoftml-package)新增機器學習模型其他封裝包含[olapR](https://docs.microsoft.com/machine-learning-server/r-reference/olapr/olapr)在 R 中撰寫 MDX 陳述式和[sqlrutils](https://docs.microsoft.com/machine-learning-server/r-reference/sqlrutils/sqlrutils)在預存程序中包含 R 指令碼。
+專屬 R 封裝包含[RevoScaleR](https://docs.microsoft.com/r-server/r-reference/revoscaler/revoscaler)遠端計算內容資料流中，平行資料匯入和轉換 rx 函數的執行，如模型、 視覺化和分析。 [MicrosoftML](https://docs.microsoft.com/r-server/r-reference/microsoftml/microsoftml-package)新增機器學習模型其他 Microsoft 封裝包含[olapR](https://docs.microsoft.com/machine-learning-server/r-reference/olapr/olapr)在 R 中撰寫 MDX 陳述式和[sqlrutils](https://docs.microsoft.com/machine-learning-server/r-reference/sqlrutils/sqlrutils)在預存程序中包含 R 指令碼。
 
 
 |版本             | R 版本       | Microsoft 封裝    |
 |--------------------|-----------------|-----------------------|
 | SQL Server 2016 R Services | 3.2.2   | RevoScaleR sqlrutil  |
-| SQL Server 2017 Machine Learning 服務| 3.4.3 | RevoScaleR，MicrosoftML，olapR sqlrutil|
+| SQL Server 2017 Machine Learning 服務| 3.3.3 | RevoScaleR，MicrosoftML，olapR sqlrutil|
 
-您可以將封裝和預先安裝的模型加入 SQL Server 2016 R 服務的現代的生命週期支援原則的繫結。 繫結變更服務模型。 根據預設，初始安裝之後，R 封裝會重新整理透過 service pack 和累計更新。 其他封裝及核心 R 元件的完整版本升級僅能透過產品升級 （從 SQL Server 2016 到 SQL Server 2017) 或透過繫結 R 支援 Microsoft 機器學習服務伺服器。 如需詳細資訊，請參閱[中 SQL Server 升級 R 和 Python 元件](use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md)。
+您可以升級 R 元件封裝，將新的 R 封裝和預先安裝的模型繫結加入至現代的生命週期支援原則。 繫結變更服務模型。 根據預設，初始安裝之後，R 封裝會重新整理透過 service pack 和累計更新。 其他封裝及核心 R 元件的完整版本升級僅能透過產品升級 （從 SQL Server 2016 到 SQL Server 2017) 或透過繫結 R 支援 Microsoft 機器學習服務伺服器。 如需詳細資訊，請參閱[中 SQL Server 升級 R 和 Python 元件](use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md)。
 
 ### <a name="python-components"></a>Python 元件
 
@@ -89,9 +89,9 @@ SQL Server 2017 機器學習為 R 和 Python 支援第一次的釋放。
 
 ## <a name="administrative-permissions-for-package-installation"></a>封裝安裝的系統管理權限
 
-封裝安裝所需的權限已變更 SQL Server 2016 和 SQL Server 2017 之間。
+在資料庫執行個體所使用的封裝程式庫實際位於 Program Files 資料夾，您的 SQL Server 執行個體。 寫入此位置需要系統管理員權限。 不過，SQL Server 2017 提供某些額外的方法，可讓非系統管理員加入封裝的封裝安裝。
 
-+ 在 SQL Server 2016 中，系統管理存取權，才能安裝新的 R 封裝。
++ 在 SQL Server 2016 中，系統管理存取權都需要新的套件安裝。
 + 在 SQL Server 2017，系統管理員身分安裝封裝，R 和 Python，您可以繼續，這可能是最簡單的方法。 
 
     DDL 陳述式，建立外部程式庫可讓資料庫管理員，而不使用的 R 工具安裝封裝。 

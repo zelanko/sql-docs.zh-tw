@@ -4,16 +4,16 @@ ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.component: adomd
-ms.topic: article
+ms.topic: conceptual
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 91976fcd4f3922041152fe41c0e03f89e05483b2
-ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
-ms.translationtype: MT
+ms.openlocfilehash: 36d17c0e902b5853f6b2d550c34ba96a94e02886
+ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="retrieving-data-from-an-analytical-data-source"></a>從分析資料來源擷取資料
   一旦您建立連接和查詢，就可以擷取任何資料。 在 ADOMD.NET 中，您可以擷取使用三個不同物件的資料 (<xref:Microsoft.AnalysisServices.AdomdClient.CellSet>， <xref:Microsoft.AnalysisServices.AdomdClient.AdomdDataReader>，和<xref:System.Xml.XmlReader>) 透過呼叫其中一個**Execute**方法<xref:Microsoft.AnalysisServices.AdomdClient.AdomdCommand>物件。  

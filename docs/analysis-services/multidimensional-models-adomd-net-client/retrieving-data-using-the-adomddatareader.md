@@ -4,16 +4,16 @@ ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.component: adomd
-ms.topic: article
+ms.topic: conceptual
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: d5661d2a35a7f2d13c342fd2daadbf1c1bbc4a4d
-ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
-ms.translationtype: MT
+ms.openlocfilehash: 9c52978621631f263011d0340f8d9b67b971ea10
+ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="retrieving-data-using-the-adomddatareader"></a>使用 AdomdDataReader 擷取資料
   擷取分析資料時，<xref:Microsoft.AnalysisServices.AdomdClient.AdomdDataReader> 物件可提供負擔與互動性的良好平衡。 <xref:Microsoft.AnalysisServices.AdomdClient.AdomdDataReader> 物件會從分析資料來源擷取唯讀、順向且扁平化的資料流。 這個未緩衝的資料流可讓程序邏輯有效且循序地處理來自分析資料來源的結果。 當擷取大量資料以供顯示之用時，<xref:Microsoft.AnalysisServices.AdomdClient.AdomdDataReader> 是不錯的選擇，因為資料不會快取至記憶體。  

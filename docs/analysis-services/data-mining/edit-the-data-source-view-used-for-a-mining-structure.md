@@ -1,29 +1,19 @@
 ---
 title: 編輯用於採礦結構的資料來源檢視 |Microsoft 文件
-ms.custom: ''
-ms.date: 03/13/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
+ms.date: 05/08/2018
+ms.prod: sql
+ms.technology: analysis-services
 ms.component: data-mining
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
-helpviewer_keywords:
-- modifying data source views
-- mining structures [Analysis Services], data source views
-- data source views [Analysis Services], modifying
-ms.assetid: f790df70-ff21-42ce-b38c-a360e8e01bcd
-caps.latest.revision: 29
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.openlocfilehash: 5b3922ccc4c166bdd7d8ec39e0ef920d663811e5
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 29d3562e9ad3edf4b67910d6dd38906c0ce00c34
+ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="edit-the-data-source-view-used-for-a-mining-structure"></a>編輯用於採礦結構的資料來源檢視
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]

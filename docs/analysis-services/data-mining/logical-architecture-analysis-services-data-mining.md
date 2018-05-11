@@ -1,31 +1,19 @@
 ---
 title: 邏輯架構 (Analysis Services-資料採礦) |Microsoft 文件
-ms.custom: ''
-ms.date: 03/13/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
+ms.date: 05/08/2018
+ms.prod: sql
+ms.technology: analysis-services
 ms.component: data-mining
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
-helpviewer_keywords:
-- mining structures [Analysis Services], about mining structures
-- logical architecture [Data Mining]
-- architecture [Analysis Services], mining models
-- mining models [Analysis Services], about data mining models
-- architecture [Analysis Services]
-ms.assetid: 4e0cbf46-cc60-4e91-a292-9a69f29746f0
-caps.latest.revision: 25
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.openlocfilehash: 2ff8521531c470ed485e20b71d1d0b0dbfbbd9a2
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 40bcdfcdeb935cb6ef79d65eea41b973df44dcb4
+ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="logical-architecture-analysis-services---data-mining"></a>邏輯架構 (Analysis Services – 資料採礦)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]

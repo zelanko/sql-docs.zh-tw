@@ -4,16 +4,16 @@ ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.component: xmla
-ms.topic: article
+ms.topic: conceptual
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 2fbc606d5eb93796ef03e62d07be0f70b5d3f807
-ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
-ms.translationtype: MT
+ms.openlocfilehash: 1a5e765befc755820c927252d25ddb8b0edb0706
+ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="locking-and-unlocking-databases-xmla"></a>鎖定和解除鎖定資料庫 (XMLA)
   您可以鎖定與解除鎖定資料庫分別使用、[鎖定](../../analysis-services/xmla/xml-elements-commands/lock-element-xmla.md)和[解除鎖定](../../analysis-services/xmla/xml-elements-commands/unlock-element-xmla.md)XML for Analysis (XMLA) 中的命令。 一般而言，其他 XMLA 命令會視需要自動鎖定和解除鎖定物件，以便在執行期間完成命令。 您可以明確地鎖定或解除鎖定資料庫，執行單一交易內的多個命令，例如[批次](../../analysis-services/xmla/xml-elements-commands/batch-element-xmla.md)命令，以防止其他應用程式資料庫將寫入交易認可。  

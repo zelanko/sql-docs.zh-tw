@@ -1,32 +1,19 @@
 ---
 title: 測試及驗證工作與操作方法 （資料採礦） |Microsoft 文件
-ms.custom: ''
-ms.date: 03/01/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
+ms.date: 05/08/2018
+ms.prod: sql
+ms.technology: analysis-services
 ms.component: data-mining
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
-helpviewer_keywords:
-- Mining Accuracy Chart [Analysis Services]
-- predictive modeling [Analysis Services]
-- mining structures [Analysis Services], predictive modeling
-- Mining Accuracy Chart [Analysis Services], how-to topics
-- mining models [Analysis Services], predictive modeling
-- predictive accuracy [data mining]
-ms.assetid: 3a0b4dc9-5b64-4be1-aa5f-6ff26f43dbf8
-caps.latest.revision: 41
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.openlocfilehash: 18b2af1dd2e684feb86e5a21989f3707852b6ff3
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: e3aa733ec9b8e9dc2c02ed1e65626c3603cfdb54
+ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="testing-and-validation-tasks-and-how-tos-data-mining"></a>測試及驗證工作與操作方法 (資料採礦)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]

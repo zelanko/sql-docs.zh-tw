@@ -4,16 +4,16 @@ ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.component: amo
-ms.topic: article
+ms.topic: conceptual
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: c07ee6b4289c015b0c42a1bc9981bec29cd49483
-ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
-ms.translationtype: MT
+ms.openlocfilehash: 6abaf5503f77f1a4aac8f6341509f31f7e020e61
+ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="programming-amo-olap-advanced-objects"></a>設計 AMO OLAP 進階物件的程式
   本主題說明 OLAP 進階物件的分析管理物件 (AMO) 程式設計詳細資料。 本主題包含下列幾節：  

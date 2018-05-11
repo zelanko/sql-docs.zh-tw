@@ -4,16 +4,16 @@ ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.component: adomd
-ms.topic: article
+ms.topic: conceptual
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: ce743be620db6f70b87b1f4f0e537c16f7388c13
-ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
-ms.translationtype: MT
+ms.openlocfilehash: bc5162230c47692c22e0fdedef9133c000948e19
+ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="retrieving-metadata---working-with-adomdnet-object-model"></a>擷取中繼資料-使用 ADOMD.NET 物件模型
   ADOMD.NET 提供的物件模型，可檢視分析資料來源所包含的 Cube 與從屬物件。 不過，並非指定的分析資料來源之所有中繼資料，都可透過物件模型取得。 物件模型只能存取對用戶端應用程式而言最為實用並加以顯示的資訊，以允許使用者以互動方式建構命令。 因為要顯示的中繼資料之複雜性已降低，所以 ADOMD.NET 物件模型使用起來較容易。  

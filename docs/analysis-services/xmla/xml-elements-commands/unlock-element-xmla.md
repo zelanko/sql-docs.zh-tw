@@ -1,38 +1,19 @@
 ---
 title: Unlock 元素 (XMLA) |Microsoft 文件
-ms.custom: ''
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services, azure-analysis-services
-ms.component: ''
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
+ms.date: 05/08/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: xmla
 ms.topic: reference
-apiname:
-- Unlock Element
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
-apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
-f1_keywords:
-- http://schemas.microsoft.com/analysisservices/2003/engine#Unlock
-- urn:schemas-microsoft-com:xml-analysis#Unlock
-- microsoft.xml.analysis.unlock
-helpviewer_keywords:
-- Unlock command
-ms.assetid: 46425b33-baa2-41ad-803a-34d2fb4b2cab
-caps.latest.revision: 14
-author: Minewiskan
 ms.author: owend
-manager: kfile
-ms.openlocfilehash: 37fb814e22796dd807207015d6927ff9e4dc7498
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.reviewer: owend
+author: minewiskan
+manager: kfilee"
+ms.openlocfilehash: 0a8d08bec542b88720385512aec9f828a124379f
+ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="unlock-element-xmla"></a>Unlock 元素 (XMLA)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]

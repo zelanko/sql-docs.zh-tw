@@ -1,33 +1,18 @@
 ---
 title: 關於 SQL Server Analysis Services |Microsoft 文件
-ms.date: 02/21/2018
-ms.prod: analysis-services
-ms.prod_service: analysis-services, azure-analysis-services
-ms.component: ''
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.custom: ''
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: get-started-article
-helpviewer_keywords:
-- Analysis Services, about Analysis Services - Multidimensional Data
-- SSAS
-- Analysis Services
-- SQL Server Analysis Services, about Analysis Services - Multidimensional Data
-- SQL Server Analysis Services
-- multidimensional data [Analysis Services]
-- SSAS, about Analysis Services - Multidimensional Data
-ms.assetid: 49d186f4-4b4d-4a5a-bb1a-e2699c64a731
-caps.latest.revision: 60
-author: Minewiskan
+ms.date: 05/08/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.topic: overview
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.openlocfilehash: 82d61442dd2a5b204689edcc5d447fbbf16d3021
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 0821fc19f90ac52dba0cef06ed48ec0a3a51b9bd
+ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="about-sql-server-analysis-services"></a>關於 SQL Server Analysis Services
 

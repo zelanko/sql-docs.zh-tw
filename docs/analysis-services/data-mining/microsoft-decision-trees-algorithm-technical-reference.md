@@ -1,35 +1,19 @@
 ---
 title: Microsoft 決策樹演算法技術參考 |Microsoft 文件
-ms.custom: ''
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
+ms.date: 05/08/2018
+ms.prod: sql
+ms.technology: analysis-services
 ms.component: data-mining
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
-helpviewer_keywords:
-- MAXIMUM_INPUT_ATTRIBUTES parameter
-- SPLIT_METHOD parameter
-- MINIMUM_SUPPORT parameter
-- MAXIMUM_OUTPUT_ATTRIBUTES parameter
-- FORCED_REGRESSOR parameter
-- decision tree algorithms [Analysis Services]
-- decision trees [Analysis Services]
-- COMPLEXITY_PENALTY parameter
-- SCORE_METHOD parameter
-ms.assetid: 1e9f7969-0aa6-465a-b3ea-57b8d1c7a1fd
-caps.latest.revision: 31
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.openlocfilehash: 6a7cc31df33ae8af7a57db1a8842bb182b69117c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: d58dc61fe2488699adce90108a05e8430b09000d
+ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="microsoft-decision-trees-algorithm-technical-reference"></a>Microsoft 決策樹演算法技術參考
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]

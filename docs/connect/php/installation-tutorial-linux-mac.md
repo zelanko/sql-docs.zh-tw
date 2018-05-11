@@ -1,6 +1,6 @@
 ---
 title: Linux 及 macOS Microsoft Drivers for PHP for SQL Server 安裝教學課程 |Microsoft 文件
-ms.date: 04/11/2018
+ms.date: 05/08/2018
 ms.prod: sql
 ms.prod_service: connectivity
 ms.component: php
@@ -11,11 +11,11 @@ ms.topic: conceptual
 author: ulvii
 ms.author: v-ulibra
 manager: v-mabarw
-ms.openlocfilehash: 0874b2aa4d526f8a283e8e54b5c7f101ac1f1c45
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: c1115eaf304fa360cf446b67fe98157d324c2347
+ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="linux-and-macos-installation-tutorial-for-the-microsoft-drivers-for-php-for-sql-server"></a>Linux 及 macOS Microsoft Drivers for PHP for SQL Server 安裝教學課程
 下列指示假設乾淨的環境，並示範如何安裝 PHP 7.x、 Microsoft ODBC 驅動程式、 Apache 和 Microsoft Drivers for PHP for Ubuntu 16.04 和 17.10，RedHat 7 上的 SQL Server、 Debian 8 和 9、 Suse 12 及 macOS X 10.11 和 10.12。 這些指示建議安裝的驅動程式使用 PECL，但您也可以下載預先建置的二進位檔案從[Microsoft Drivers for PHP for SQL Server](https://github.com/Microsoft/msphpsql/releases) Github 頁面的專案，並將其中的指示安裝[載入 Microsoft Drivers for PHP for SQL Server](../../connect/php/loading-the-php-sql-driver.md)。 載入擴充功能，以及為什麼我們不會將擴充功能加入 php.ini 的說明，請參閱上節[載入驅動程式](../../connect/php/loading-the-php-sql-driver.md##loading-the-driver-at-php-startup)。
@@ -47,12 +47,12 @@ Ubuntu 的安裝 ODBC 驅動程式的指示[Linux 及 macOS 安裝 頁面上](..
 
 ### <a name="step-3-install-the-php-drivers-for-microsoft-sql-server"></a>步驟 3： Microsoft SQL server 安裝的 PHP 驅動程式
 ```
+sudo pecl install sqlsrv
+sudo pecl install pdo_sqlsrv
 sudo su
 echo extension=pdo_sqlsrv.so >> `php --ini | grep "Scan for additional .ini files" | sed -e "s|.*:\s*||"`/30-pdo_sqlsrv.ini
 echo extension=sqlsrv.so >> `php --ini | grep "Scan for additional .ini files" | sed -e "s|.*:\s*||"`/20-sqlsrv.ini
 exit
-sudo pecl install sqlsrv
-sudo pecl install pdo_sqlsrv
 ```
 ### <a name="step-4-install-apache-and-configure-driver-loading"></a>步驟 4： 安裝 Apache 和設定 載入驅動程式
 ```
@@ -61,8 +61,9 @@ apt-get install libapache2-mod-php7.2 apache2
 a2dismod mpm_event
 a2enmod mpm_prefork
 a2enmod php7.2
-echo "extension=sqlsrv.so" >> /etc/php/7.2/apache2/php.ini
-echo "extension=pdo_sqlsrv.so" >> /etc/php/7.2/apache2/php.ini
+echo "extension=pdo_sqlsrv.so" >> /etc/php/7.2/apache2/conf.d/30-pdo_sqlsrv.ini
+echo "extension=sqlsrv.so" >> /etc/php/7.2/apache2/conf.d/20-sqlsrv.ini
+exit
 ```
 ### <a name="step-5-restart-apache-and-test-the-sample-script"></a>步驟 5： 重新啟動 Apache 和測試的範例指令碼
 ```
@@ -98,12 +99,12 @@ scl enable devtoolset-7 bash
 ```
 ### <a name="step-3-install-the-php-drivers-for-microsoft-sql-server"></a>步驟 3： Microsoft SQL server 安裝的 PHP 驅動程式
 ```
+sudo pecl install sqlsrv
+sudo pecl install pdo_sqlsrv
 sudo su
 echo extension=pdo_sqlsrv.so >> `php --ini | grep "Scan for additional .ini files" | sed -e "s|.*:\s*||"`/30-pdo_sqlsrv.ini
 echo extension=sqlsrv.so >> `php --ini | grep "Scan for additional .ini files" | sed -e "s|.*:\s*||"`/20-sqlsrv.ini
 exit
-sudo pecl install sqlsrv
-sudo pecl install pdo_sqlsrv
 ```
 即使您已升級 GCC PECL 的問題可能會阻礙正常安裝最新版本的驅動程式。 若要安裝、 下載的套件，並手動編譯：
 ```
@@ -145,7 +146,7 @@ apt-get install curl apt-transport-https
 wget -O /etc/apt/trusted.gpg.d/php.gpg https://packages.sury.org/php/apt.gpg
 echo "deb https://packages.sury.org/php/ $(lsb_release -sc) main" > /etc/apt/sources.list.d/php.list
 apt-get update
-apt-get install –y php7.2 php7.2-dev php7.2-xml
+apt-get install -y php7.2 php7.2-dev php7.2-xml
 ```
 ### <a name="step-2-install-prerequisites"></a>步驟 2： 安裝必要條件
 安裝 ODBC 驅動程式遵循指示 Debian [Linux 及 macOS 安裝 頁面上](../../connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md)。 
@@ -159,12 +160,12 @@ locale-gen
 
 ### <a name="step-3-install-the-php-drivers-for-microsoft-sql-server"></a>步驟 3： Microsoft SQL server 安裝的 PHP 驅動程式
 ```
+sudo pecl install sqlsrv
+sudo pecl install pdo_sqlsrv
 sudo su
 echo extension=pdo_sqlsrv.so >> `php --ini | grep "Scan for additional .ini files" | sed -e "s|.*:\s*||"`/30-pdo_sqlsrv.ini
 echo extension=sqlsrv.so >> `php --ini | grep "Scan for additional .ini files" | sed -e "s|.*:\s*||"`/20-sqlsrv.ini
 exit
-sudo pecl install sqlsrv
-sudo pecl install pdo_sqlsrv
 ```
 ### <a name="step-4-install-apache-and-configure-driver-loading"></a>步驟 4： 安裝 Apache 和設定 載入驅動程式
 ```
@@ -173,8 +174,8 @@ apt-get install libapache2-mod-php7.2 apache2
 a2dismod mpm_event
 a2enmod mpm_prefork
 a2enmod php7.2
-echo "extension=sqlsrv.so" >> /etc/php/7.2/apache2/php.ini
-echo "extension=pdo_sqlsrv.so" >> /etc/php/7.2/apache2/php.ini
+echo "extension=pdo_sqlsrv.so" >> /etc/php/7.2/apache2/conf.d/30-pdo_sqlsrv.ini
+echo "extension=sqlsrv.so" >> /etc/php/7.2/apache2/conf.d/20-sqlsrv.ini
 ```
 ### <a name="step-5-restart-apache-and-test-the-sample-script"></a>步驟 5： 重新啟動 Apache 和測試的範例指令碼
 ```
@@ -200,12 +201,12 @@ zypper -n install php7 php7-pear php7-devel
 
 ### <a name="step-3-install-the-php-drivers-for-microsoft-sql-server"></a>步驟 3： Microsoft SQL server 安裝的 PHP 驅動程式
 ```
+sudo pecl install sqlsrv
+sudo pecl install pdo_sqlsrv
 sudo su
 echo extension=pdo_sqlsrv.so >> `php --ini | grep "Scan for additional .ini files" | sed -e "s|.*:\s*||"`/pdo_sqlsrv.ini
 echo extension=sqlsrv.so >> `php --ini | grep "Scan for additional .ini files" | sed -e "s|.*:\s*||"`/sqlsrv.ini
 exit
-sudo pecl install sqlsrv
-sudo pecl install pdo_sqlsrv
 ```
 ### <a name="step-4-install-apache-and-configure-driver-loading"></a>步驟 4： 安裝 Apache 和設定 載入驅動程式
 ```

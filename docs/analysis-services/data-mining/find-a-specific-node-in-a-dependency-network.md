@@ -1,29 +1,19 @@
 ---
 title: 相依性網路中尋找特定節點 |Microsoft 文件
-ms.custom: ''
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
+ms.date: 05/08/2018
+ms.prod: sql
+ms.technology: analysis-services
 ms.component: data-mining
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
-helpviewer_keywords:
-- nodes [Analysis Services]
-- dependency network nodes [Analysis Services]
-- Mining Model Viewer [Analysis Services], dependency network nodes
-ms.assetid: 37c54602-ab25-48be-ae7a-59819deea8ed
-caps.latest.revision: 26
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.openlocfilehash: b647be1fb90f6c7090b079f7aecd76ce7040d272
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: a050843cf3df4f77a1cb5e3519aa2241dc527019
+ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="find-a-specific-node-in-a-dependency-network"></a>在相依性網路中尋找特定節點
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]

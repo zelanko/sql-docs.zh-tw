@@ -1,29 +1,19 @@
 ---
 title: 篩選條件的規則，關聯規則模型 |Microsoft 文件
-ms.custom: ''
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
+ms.date: 05/08/2018
+ms.prod: sql
+ms.technology: analysis-services
 ms.component: data-mining
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
-helpviewer_keywords:
-- filtering rules [Analysis Services]
-- Mining Model Viewer [Analysis Services], rules
-- Rules Viewer
-ms.assetid: 26cdba5b-5bf1-439e-80a3-8759774e918b
-caps.latest.revision: 28
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.openlocfilehash: 0607c02563babab34f62f784245492fde2e63385
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 0073dbbf9b1db5e40ab1c121c3832b1e85281253
+ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="filter-a-rule-in-an-association-rules-model"></a>篩選關聯規則模型中的規則
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]

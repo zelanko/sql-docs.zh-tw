@@ -1,32 +1,19 @@
 ---
 title: 處理資料採礦物件 |Microsoft 文件
-ms.custom: ''
-ms.date: 03/13/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
+ms.date: 05/08/2018
+ms.prod: sql
+ms.technology: analysis-services
 ms.component: data-mining
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
-helpviewer_keywords:
-- processing objects [Analysis Services]
-- mining structures [Analysis Services]
-- process [Analysis Services]
-- mining structures [Analysis Services], creating
-- mining structures [Analysis Services], how-to topics
-- mining structures [Analysis Services], processing
-ms.assetid: 0f6993c0-0917-4935-82f9-7b8a8a7cc627
-caps.latest.revision: 20
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.openlocfilehash: 73b88832b2cf7aa2eb419c9cbc6231ee34dc90e1
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 038b0fb8c3bbf5820a5d481d97a01de23a71d05b
+ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="processing-data-mining-objects"></a>處理資料採礦物件
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]

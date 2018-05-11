@@ -1,6 +1,6 @@
 ---
-title: Introduction to 中分析表格式物件模型 (TOM) 服務 AMO |Microsoft 文件
-ms.date: 05/07/2018
+title: 了解表格式物件模型 (TOM) 中 Analysis Services AMO |Microsoft 文件
+ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.component: tabular-models
@@ -9,13 +9,13 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 03171e57bc57e3caa3d6cc475fd1fee4910cdf4d
-ms.sourcegitcommit: 1aedef909f91dc88dc741748f36eabce3a04b2b1
+ms.openlocfilehash: 6c5f4a9e8c7190801bc6f0ef7b19833f1921ade5
+ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 05/10/2018
 ---
-# <a name="introduction-to-the-tabular-object-model-tom-in-analysis-services-amo"></a>Analysis Services AMO 中表格式物件模型 (TOM) 簡介
+# <a name="understanding-tabular-object-model-tom-in-analysis-services-amo"></a>了解 Analysis Services AMO 中的表格式物件模型 (TOM)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
   表格式物件模型 (TOM) 是 Analysis Services 管理物件 (AMO) 用戶端程式庫，以支援建置在相容性層級 1200年 （含） 以上的表格式模型程式設計案例建立擴充功能。 如同 AMO，TOM 提供程式設計的方式來處理管理功能，例如建立模型、 匯入和重新整理資料，及指派角色和權限。  
   

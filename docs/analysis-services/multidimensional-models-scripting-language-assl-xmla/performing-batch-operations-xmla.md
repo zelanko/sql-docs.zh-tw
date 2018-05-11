@@ -4,16 +4,16 @@ ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.component: xmla
-ms.topic: article
+ms.topic: conceptual
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 7fcf1074de0d233c3df24ddf1696e26a8d3bd84a
-ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
-ms.translationtype: MT
+ms.openlocfilehash: 6d8fc92672858886a3c770d485bc21f6eb9f8eaa
+ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="performing-batch-operations-xmla"></a>執行批次作業 (XMLA)
   您可以使用[批次](../../analysis-services/xmla/xml-elements-commands/batch-element-xmla.md)XML for Analysis (XMLA) 執行多個 XMLA 命令使用的單一 XMLA 命令[Execute](../../analysis-services/xmla/xml-elements-methods-execute.md)方法。 您可以執行多個命令中包含**批次**命令視為單一交易或個別的交易，每個命令中、 以序列或是平行。 您也可以指定-單行繫結和其他內容**批次**命令處理多個[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]物件。  

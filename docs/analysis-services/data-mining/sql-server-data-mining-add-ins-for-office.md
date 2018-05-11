@@ -1,25 +1,19 @@
 ---
 title: SQL Server 資料採礦增益集，適用於 Office |Microsoft 文件
-ms.custom: ''
-ms.date: 12/18/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
+ms.date: 05/08/2018
+ms.prod: sql
+ms.technology: analysis-services
 ms.component: data-mining
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
-ms.assetid: c9021a19-2c19-4f0a-a293-5f7e0ac2524c
-caps.latest.revision: 11
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.openlocfilehash: 2852d573a665566e048afca18be259d2b00b2203
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 71717e002c55cea94f46e62643c74f4773e0a51d
+ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="sql-server-data-mining-add-ins-for-office"></a>適用於 Office 的 SQL Server 資料採礦增益集
 

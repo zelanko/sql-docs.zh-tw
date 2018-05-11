@@ -4,16 +4,16 @@ ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.component: adomd
-ms.topic: article
+ms.topic: conceptual
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: dc5c88301ac6d777372c66a3e702710ae45b7177
-ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
-ms.translationtype: MT
+ms.openlocfilehash: 99f3c52ae7a1cc5c68c426cf4a8cd319659d3fb1
+ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="migrating-from-ado-md-to-adomdnet"></a>從 ADO MD 移轉至 ADOMD.NET
   ADOMD.NET 程式庫類似於 ActiveX Data Objects Multidimensional (ADO MD) 程式庫，這個 ActiveX Data Objects (ADO) 程式庫的延伸模組是用來存取以元件物件模型 (COM) 為基礎的用戶端應用程式中的多維度資料。 ADO MD 可輕鬆地從 Unmanaged 語言 (例如 C++ 與 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Basic) 存取多維度資料。 ADOMD.NET 可輕鬆地從 Managed 語言 (例如 [!INCLUDE[msCoName](../../includes/msconame-md.md)] C# 與 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Basic .NET) 存取分析資料 (多維度與資料採礦)。 此外，ADOMD.NET 提供增強型中繼資料物件模型。  

@@ -1,36 +1,19 @@
 ---
 title: 特徵選取 （資料採礦） |Microsoft 文件
-ms.custom: ''
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
+ms.date: 05/08/2018
+ms.prod: sql
+ms.technology: analysis-services
 ms.component: data-mining
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
-helpviewer_keywords:
-- mining models [Analysis Services], feature selections
-- attributes [data mining]
-- feature selection algorithms [Analysis Services]
-- data mining [Analysis Services], feature selections
-- neural network algorithms [Analysis Services]
-- naive bayes algorithms [Analysis Services]
-- decision tree algorithms [Analysis Services]
-- datasets [Analysis Services]
-- clustering algorithms [Analysis Services]
-- coding [Data Mining]
-ms.assetid: b044e785-4875-45ab-8ae4-cd3b4e3033bb
-caps.latest.revision: 39
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.openlocfilehash: 0a860da215808e9a687e95524bc704c7fedbc4c1
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 6f6dba7151045b0a693448c83f31fb1d56f08b8b
+ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="feature-selection-data-mining"></a>特徵選取 (資料採礦)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]

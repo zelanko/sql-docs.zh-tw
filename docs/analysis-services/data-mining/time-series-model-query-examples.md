@@ -1,35 +1,19 @@
 ---
 title: 時間序列模型查詢範例 |Microsoft 文件
-ms.custom: ''
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
+ms.date: 05/08/2018
+ms.prod: sql
+ms.technology: analysis-services
 ms.component: data-mining
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
-helpviewer_keywords:
-- time series algorithms [Analysis Services]
-- MISSING_VALUE_SUBSTITUTION
-- time series [Analysis Services]
-- predictions [Analysis Services], time series
-- EXTEND_MODEL_CASES parameter
-- REPLACE_MODEL_CASES parameter
-- prediction queries [DMX]
-- PREDICTION_SMOOTHING
-- content queries [DMX]
-ms.assetid: 9a1c527e-2997-493b-ad6a-aaa71260b018
-caps.latest.revision: 35
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.openlocfilehash: 65e55ee5a68aa81fabd1fb5405229a187008d8cd
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 5e86a39d78006acb9e22d1a50410eb57228b0620
+ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="time-series-model-query-examples"></a>時間序列模型查詢範例
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]

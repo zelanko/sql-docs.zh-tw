@@ -1,29 +1,19 @@
 ---
 title: 工作階段事件類別目錄 |Microsoft 文件
-ms.custom: ''
-ms.date: 03/01/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.component: ''
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
+ms.date: 05/07/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: trace-events
 ms.topic: reference
-helpviewer_keywords:
-- event classes [Analysis Services], session events
-- Session Events event category
-- session events [Analysis Services]
-ms.assetid: 9d42e4e4-26ed-4719-9c80-8cf9189451d1
-caps.latest.revision: 20
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.openlocfilehash: 37a539d047ce5f7e7dcb9f82a21f85178d97c652
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: a7fe132fad37b947d3894397eeae98140cbd2e02
+ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="session-events-event-category"></a>工作階段事件的事件類別目錄
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]

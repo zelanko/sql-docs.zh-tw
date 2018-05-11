@@ -8,28 +8,26 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 2db7792c8c7a69647c0525c3d34bf94b090dd524
-ms.sourcegitcommit: 1aedef909f91dc88dc741748f36eabce3a04b2b1
-ms.translationtype: HT
+ms.openlocfilehash: 77cc91c4d0a9fbe339e92705a71a3a8642de5563
+ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="install-new-python-packages-on-sql-server"></a>SQL Server 上安裝新的 Python 封裝
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-本文說明如何在 SQL Server 2017 機器學習服務的執行個體上安裝新的 Python 封裝。
+本文說明如何在 SQL Server 2017 機器學習服務的執行個體上安裝新的 Python 封裝。 一般情況下，安裝新套件的程序是類似於標準的 Python 環境。 不過，一些額外的步驟所需，如果伺服器沒有網際網路連線。
 
-一般情況下，安裝新套件的程序是類似於標準的 Python 環境。 不過，一些額外的步驟所需，如果伺服器沒有網際網路連線。
-
-如需了解封裝的安裝位置，或者哪些封裝已安裝的說明，請參閱[檢視安裝的 R 或 Python 封裝](../r/determine-which-packages-are-installed-on-sql-server.md)。
+如需了解封裝的安裝位置，或者哪些封裝已安裝的說明，請參閱[取得 R 或 Python 封裝資訊](../r/determine-which-packages-are-installed-on-sql-server.md)。
 
 ## <a name="prerequisites"></a>필수 구성 요소
 
-+ 您必須安裝機器學習服務 （資料庫） 與 Python 語言選項。 如需指示，請參閱[安裝 SQL Server 2017 機器學習服務 （資料庫）](../install/sql-machine-learning-services-windows-install.md)。
++ 您必須安裝 SQL Server 2017 機器學習服務 （資料庫） 與 Python 語言選項。 如需指示，請參閱[安裝 SQL Server 2017 機器學習服務 （資料庫）](../install/sql-machine-learning-services-windows-install.md)。
 
 + 每個伺服器執行個體中，您必須安裝個別封裝的副本。 封裝無法執行個體之間共用。
 
-+ 決定使用 Python 3.5 和 Windows 環境中，您想要使用的封裝是否會運作。 
++ 套件必須放在 Windows 上符合規定及執行的 Python 3.5。 
 
 + 評估封裝是否適合用來在 SQL Server 環境中使用。 通常資料庫伺服器支援多個服務和應用程式，而且檔案系統上的資源可能會限制，以及連線到伺服器。 在許多情況下是完全封鎖網際網路存取。
 
@@ -82,11 +80,11 @@ ms.lasthandoff: 05/08/2018
 
 + 如果您習慣使用 Python 命令列，使用 PIP.exe 來安裝新的封裝。 您可以找到**pip**安裝程式中的`Scripts`子資料夾。 
 
-    如果您收到錯誤，`pip`無法辨識為內部或外部命令，您可以加入的 PATH 變數中 Windows 的 Python 可執行檔和 Python 指令碼資料夾的路徑。
+  SQL Server 安裝程式不會新增指令碼至系統路徑。 如果您收到錯誤，`pip`無法辨識為內部或外部命令，您可以將指令碼 資料夾加入 PATH 變數視窗中。
 
-    完整路徑**指令碼**預設安裝中的資料夾如下所示：
+  完整路徑**指令碼**預設安裝中的資料夾如下所示：
 
-    `C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\PYTHON_SERVICES\Scripts`
+    C:\Program Files\Microsoft SQL Server\MSSQL14。MSSQLSERVER\PYTHON_SERVICES\Scripts
 
 + 如果您正在使用 Visual Studio 2017 或 Visual Studio 2015 的 Python 擴充功能，您可以執行`pip install`從**Python 環境**視窗。 按一下**封裝**，並在文字方塊中，提供的名稱或要安裝之封裝的位置。 您不需要輸入`pip install`; 它會為您自動填入。 
 
@@ -131,7 +129,7 @@ cntk._version_
 
 如果您使用 Python 命令列，您可以使用**conda**封裝管理員，就會包含與 SQL Server 安裝程式新增 Anaconda Python 環境。
 
-若要檢視已安裝目前的環境中的 Python 封裝，請從命令提示字元執行這個命令：
+假設您將指令碼 資料夾加入 PATH 環境變數，列出 Python 環境中的封裝管理員命令提示字元中執行此命令。
 
 ```python
 conda list

@@ -1,43 +1,19 @@
 ---
 title: Microsoft 類神經網路演算法技術參考 |Microsoft 文件
-ms.custom: ''
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
+ms.date: 05/08/2018
+ms.prod: sql
+ms.technology: analysis-services
 ms.component: data-mining
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
-helpviewer_keywords:
-- HIDDEN_NODE_RATIO parameter
-- MAXIMUM_INPUT_ATTRIBUTES parameter
-- HOLDOUT_PERCENTAGE parameter
-- neural network algorithms [Analysis Services]
-- output layer [Data Mining]
-- neural networks
-- MAXIMUM_OUTPUT_ATTRIBUTES parameter
-- MAXIMUM_STATES parameter
-- SAMPLE_SIZE parameter
-- hidden layer
-- hidden neurons
-- input layer [Data Mining]
-- activation function [Data Mining]
-- Back-Propagated Delta Rule network
-- neural network model [Analysis Services]
-- coding [Data Mining]
-- HOLDOUT_SEED parameter
-ms.assetid: b8fac409-e3c0-4216-b032-364f8ea51095
-caps.latest.revision: 26
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.openlocfilehash: 19ec21f8f56eb7ea9c06b69c626db690b88ecca0
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 1e11579c4613b79af9b7c20887eecae1ee90cd93
+ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="microsoft-neural-network-algorithm-technical-reference"></a>Microsoft Neural Network Algorithm Technical Reference
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]

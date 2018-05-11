@@ -1,35 +1,18 @@
 ---
 title: 語言和定序 (Analysis Services) |Microsoft 文件
-ms.custom: ''
-ms.date: 04/20/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services, azure-analysis-services
-ms.component: ''
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-keywords:
-- 測試 Analysis Services
-helpviewer_keywords:
-- Windows collations [Analysis Services]
-- default collations
-- languages [Analysis Services]
-- sort orders [Analysis Services]
-- language identifiers [Analysis Services]
-- default languages
-- collations [Analysis Services]
-ms.assetid: 666cf8a7-223b-4be5-86c0-7fe2bcca0d09
-caps.latest.revision: 26
-author: Minewiskan
+ms.date: 05/08/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.topic: conceptual
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.openlocfilehash: dbe4ad71a5cf5819e62c39d8b70e0b230b58c19d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: b70a75981599b234c6a2e0b6cd66aea7f3a58024
+ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="languages-and-collations-analysis-services"></a>語言和定序 (Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../includes/ssas-appliesto-sqlas-aas.md)]

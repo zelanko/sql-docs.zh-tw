@@ -1,45 +1,19 @@
 ---
 title: Microsoft 關聯分析演算法 |Microsoft 文件
-ms.custom: ''
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
+ms.date: 05/08/2018
+ms.prod: sql
+ms.technology: analysis-services
 ms.component: data-mining
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
-helpviewer_keywords:
-- MinimumProbability property
-- itemsets [Analysis Services]
-- MaximumItemsetCount property
-- MinimumSupport property
-- OPTIMIZED_PREDICTION_COUNT
-- OptimizedPredictionCount property
-- MaximumSupport property
-- MINIMUM_PROBABILITY
-- algorithms [data mining]
-- association algorithms [Analysis Services]
-- rules [Data Mining]
-- association rules
-- MinimumItemsetSize property
-- market basket analysis [Analysis Services]
-- associations [Analysis Services]
-- MINIMUM_SUPPORT
-- MAXIMUM_SUPPORT
-- MINIMUM_ITEMSET_SIZE
-- MaximumItemsetSize property
-ms.assetid: 8b6b8247-62f9-4f6f-b1af-d01dab290e4c
-caps.latest.revision: 55
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.openlocfilehash: c4ae2e61ceddb479b0b4378885996a1332b8449f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: ff81653ae88076ed67a61610ae07805a42657010
+ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="microsoft-association-algorithm"></a>Microsoft 關聯分析演算法
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]

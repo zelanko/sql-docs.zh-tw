@@ -1,32 +1,18 @@
 ---
 title: Analysis Services 中的翻譯支援 |Microsoft 文件
-ms.custom: ''
-ms.date: 03/01/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services, azure-analysis-services
-ms.component: ''
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-helpviewer_keywords:
-- Business Intelligence Development Studio, translations [Analysis Services]
-- translations [Analysis Services], about translations
-- object translations [Analysis Services]
-- language identifiers [Analysis Services]
-- attribute translations [Analysis Services]
-- translations [Analysis Services]
-ms.assetid: 018471e0-3c82-49ec-aa16-467fb58a6d5f
-caps.latest.revision: 34
-author: Minewiskan
+ms.date: 05/08/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.topic: conceptual
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.openlocfilehash: 8b1428374e50b2f6aa13a8f8da412e1f1e782b6e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 5f6928a7822621f95a482fd281294a7aebfab075
+ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="translation-support-in-analysis-services"></a>Analysis Services 中的翻譯支援
 [!INCLUDE[ssas-appliesto-sqlas-aas](../includes/ssas-appliesto-sqlas-aas.md)]

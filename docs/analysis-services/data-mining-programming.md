@@ -1,29 +1,19 @@
 ---
 title: 資料採礦程式設計 |Microsoft 文件
-ms.custom: ''
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
+ms.date: 05/08/2018
+ms.prod: sql
+ms.technology: analysis-services
 ms.component: data-mining
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- data mining [Analysis Services], developer's guide
-ms.assetid: 9fd77b16-0b89-44ce-bcf1-7c04b62499da
-caps.latest.revision: 20
-author: Minewiskan
+ms.topic: conceptual
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.openlocfilehash: e16641bf77362128b0c00f8a5ae2127503b875b5
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 6f6c22896d7f0b9c9f834e60e8478a668100f23a
+ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="data-mining-programming"></a>資料採礦程式設計
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]

@@ -1,25 +1,18 @@
 ---
 title: 比較表格式和多維度解決方案 (SSAS) |Microsoft 文件
-ms.custom: ''
-ms.date: 06/15/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.component: multidimensional-tabular
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: get-started-article
-ms.assetid: 76ee5e96-6a04-49af-a88e-cb5fe29f2e9a
-caps.latest.revision: 49
-author: Minewiskan
+ms.date: 05/08/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.topic: conceptual
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.openlocfilehash: 630cd3fe8ee4bf06e8e1f13c3bfab129d1c98cc5
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: f665300e4b0ffc49264d237c62c59e4a2f3343da
+ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="comparing-tabular-and-multidimensional-solutions"></a>比較表格式和多維度解決方案
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]

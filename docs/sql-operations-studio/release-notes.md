@@ -2,9 +2,9 @@
 title: Microsoft SQL Operations Studio (preview) 版本資訊 |Microsoft 文件
 description: Microsoft SQL Operations Studio (preview) 版本資訊
 ms.custom: tools|sos
-ms.date: 04/25/2018
+ms.date: 05/08/2018
 ms.prod: sql
-ms.reviewer: alayu; erickang; sstein
+ms.reviewer: alayu; sstein
 ms.suite: sql
 ms.prod_service: sql-tools
 ms.component: sos
@@ -13,15 +13,42 @@ ms.topic: conceptual
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 3e13f0604ebbfc616a70768d7382b0e044055ec6
-ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.openlocfilehash: 47c5e129ca6c77f9116b6be928f202341d457041
+ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="sql-operations-studio-preview-release-notes"></a>SQL Operations Studio (preview) 版本資訊
 
-**[下載 4 月公開預覽版](download.md)**
+**[下載可能公開預覽](download.md)**
+
+
+## <a name="may-2018-may-public-preview"></a>可能 2018年 （可能公開預覽）
+
+發行日期： 2018 年 7，  
+版本： 0.29.3
+
+*可能公開預覽*著重於穩定性及 bug 修正。 此版本包含下列重點：  
+
+- 發表 Redgate SQL 搜尋 」 擴充功能可用在擴充管理員。
+- 適用於 10 種語言的社群當地語系化： 德文、 西班牙文、 法文、 義大利文、 日文、 韓文、 葡萄牙文、 俄文、 簡體中文和繁體中文。
+- GDPR 相容的組建已經隱私權聲明降低遙測收集、 改善的退出體驗以及產品中的連結。
+- 擴充管理員已改善的 Marketplace 經驗，輕鬆地探索社群的延伸。
+- SQL Agent 擴充功能作業和作業歷程記錄檢視改進。
+- Whoisactive 和伺服器報表的擴充功能的更新。
+- 改善管理儀表板內容捲動。
+- 修正 GitHub 問題：
+   - 修正[發出 703](https://github.com/Microsoft/sqlopsstudio/issues/703)： 中編輯資料輸入類似 HTML 的文字會導致無法正確顯示，直到重新整理之前的值
+   - 修正[發出 821](https://github.com/Microsoft/sqlopsstudio/issues/821): sqlopsstudio.deb 封裝相依性
+   - 修正[發出 1260年](https://github.com/Microsoft/sqlopsstudio/issues/1260)： 關鍵字 'distinct' 非反白顯示
+   - 修正[發出 1332年](https://github.com/Microsoft/sqlopsstudio/issues/1332)： 編輯資料還原不適用於資料列
+   - 修正[發出 1215年](https://github.com/Microsoft/sqlopsstudio/issues/1215): SQL 代理程式擴充功能和狀態列
+   - 修正[發出 1316年](https://github.com/Microsoft/sqlopsstudio/issues/1316): SQL 代理程式不要調整大小之後變更視窗大小
+
+
+如需詳細資訊，請參閱[變更記錄](https://github.com/Microsoft/sqlopsstudio/blob/master/CHANGELOG.md)，和[版本](https://github.com/Microsoft/sqlopsstudio/releases)。
+
 
 
 ## <a name="april-2018-april-public-preview"></a>2018 年 4 月版 （ 4 月公用預覽）

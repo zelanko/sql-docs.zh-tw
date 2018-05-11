@@ -1,38 +1,19 @@
 ---
 title: UnaryOperator 元素 (XMLA) |Microsoft 文件
-ms.custom: ''
-ms.date: 03/17/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services, azure-analysis-services
-ms.component: ''
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
+ms.date: 05/08/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: xmla
 ms.topic: reference
-apiname:
-- UnaryOperator Element
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
-apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
-f1_keywords:
-- http://schemas.microsoft.com/analysisservices/2003/engine#UnaryOperator
-- urn:schemas-microsoft-com:xml-analysis#UnaryOperator
-- microsoft.xml.analysis.unaryoperator
-helpviewer_keywords:
-- UnaryOperator element
-ms.assetid: 4dc9cfbe-6f8b-42bc-8d3a-42f48ca5d299
-caps.latest.revision: 11
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.openlocfilehash: 125f56ea405828aea8a89bd6a7d882991b16d752
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 3f7235c39c480c5a700db6c17deb31196ac10daf
+ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="unaryoperator-element-xmla"></a>UnaryOperator 元素 (XMLA)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]

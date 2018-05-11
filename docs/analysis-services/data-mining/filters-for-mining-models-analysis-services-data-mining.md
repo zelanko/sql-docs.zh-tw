@@ -1,31 +1,19 @@
 ---
 title: 採礦模型的篩選 (Analysis Services-資料採礦) |Microsoft 文件
-ms.custom: ''
-ms.date: 03/20/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
+ms.date: 05/08/2018
+ms.prod: sql
+ms.technology: analysis-services
 ms.component: data-mining
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
-helpviewer_keywords:
-- attributes [data mining]
-- filter syntax [data mining]
-- models [Analysis Services], filtering
-- filters [data mining]
-- filtering data [Analysis Services]
-ms.assetid: 0f29c19c-4be3-4bc7-ab60-f4130a10d59c
-caps.latest.revision: 27
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.openlocfilehash: 83f507f3839a7ca0f40b820ded0e1d0f30da0ffc
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 4df471d273472e3e17afaaa60deaf3eb66c822d3
+ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="filters-for-mining-models-analysis-services---data-mining"></a>採礦模型的篩選 (Analysis Services - 資料採礦)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
