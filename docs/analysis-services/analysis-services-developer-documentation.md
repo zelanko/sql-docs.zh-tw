@@ -3,14 +3,15 @@ title: Analysis Services 開發人員文件 |Microsoft 文件
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
+ms.custom: ''
 ms.topic: conceptual
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: c1df14f33036bc030b7fce7fbc1d64ecc8f58239
-ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
-ms.translationtype: HT
+ms.openlocfilehash: 978819f3b8af369942dde2c3c18d6ca117489633
+ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/10/2018
 ---

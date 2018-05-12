@@ -5,16 +5,15 @@ manager: craigg
 author: MightyPen
 ms.author: genemi
 ms.topic: conceptual
-ms.custom: UpdArt.exe
+ms.custom: analysis-services
 ms.suite: sql
 ms.technology: release-landing
 ms.prod: sql
 ms.prod_service: sql-non-specified
-ms.component: analysis-services
 ms.date: 04/28/2018
-ms.openlocfilehash: a41ae049a0aab30e8a5761fc2612ccf0e05d6a09
-ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
-ms.translationtype: HT
+ms.openlocfilehash: b499ead7affe952df0f0eaaaebf5d7533636cce1
+ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/10/2018
 ---

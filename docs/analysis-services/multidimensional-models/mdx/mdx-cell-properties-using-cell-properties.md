@@ -3,15 +3,15 @@ title: 使用資料格屬性 (MDX) |Microsoft 文件
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
-ms.component: mdx
+ms.custom: mdx
 ms.topic: conceptual
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: c8b004c7be19d54887b279fe53d42c1b6927696c
-ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
-ms.translationtype: HT
+ms.openlocfilehash: 481d89abac98dee1095e55a9890cea100f6c4db6
+ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/10/2018
 ---

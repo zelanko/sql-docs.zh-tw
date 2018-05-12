@@ -3,15 +3,15 @@ title: 設定屬性類型 |Microsoft 文件
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
-ms.component: multidimensional-models
+ms.custom: multidimensional-models
 ms.topic: conceptual
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 4bd6f06badcb302bdf7d545091240326c5ce5a54
-ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
-ms.translationtype: HT
+ms.openlocfilehash: 8e7be9da1b7405aa522dc29057764e7351924b41
+ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/10/2018
 ---

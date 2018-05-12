@@ -3,15 +3,15 @@ title: Analysis Services 教學課程案例 |Microsoft 文件
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
-ms.component: multidimensional-models
+ms.custom: multidimensional-models
 ms.topic: tutorial
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: f4f686a807b0d3a57b78f47cc4a854044554d84c
-ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
-ms.translationtype: HT
+ms.openlocfilehash: 9a564052f268120fb02baefdf7991978bf24bfaa
+ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/10/2018
 ---

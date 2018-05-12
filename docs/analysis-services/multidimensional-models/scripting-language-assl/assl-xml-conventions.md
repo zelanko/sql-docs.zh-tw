@@ -3,15 +3,15 @@ title: ASSL XML 慣例 |Microsoft 文件
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
-ms.component: xmla
+ms.custom: xmla
 ms.topic: conceptual
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: f4a1fee0f0ad96f17bc5c5c4c2d6fd1a61d524bc
-ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
-ms.translationtype: HT
+ms.openlocfilehash: e7bdc53ee4e85ee0ad782985744b3722ade6fd14
+ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/10/2018
 ---

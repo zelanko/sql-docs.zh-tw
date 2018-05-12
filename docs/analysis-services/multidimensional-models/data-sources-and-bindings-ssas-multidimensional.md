@@ -3,15 +3,15 @@ title: 資料來源和繫結 (SSAS 多維度) |Microsoft 文件
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
-ms.component: multidimensional-models
+ms.custom: multidimensional-models
 ms.topic: conceptual
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 3be627deb5ee5e76c8917aa233637b92ef92175b
-ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
-ms.translationtype: HT
+ms.openlocfilehash: 2461bbdc3707ed30e130aaa32e117f24f9fe379d
+ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/10/2018
 ---

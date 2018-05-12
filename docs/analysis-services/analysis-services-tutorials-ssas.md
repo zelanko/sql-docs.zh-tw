@@ -3,14 +3,15 @@ title: Analysis Services 教學課程 |Microsoft 文件
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
+ms.custom: ''
 ms.topic: tutorial
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 26b6b2ee5a8f1ae139252bda61df4b2c53f5d9ac
-ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
-ms.translationtype: HT
+ms.openlocfilehash: 0b92410b6c078d83158b64db69716e23204745db
+ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/10/2018
 ---

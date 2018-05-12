@@ -3,15 +3,15 @@ title: 建立增益圖、 收益圖或分類矩陣 |Microsoft 文件
 ms.date: 05/01/2018
 ms.prod: sql
 ms.technology: analysis-services
-ms.component: data-mining
+ms.custom: data-mining
 ms.topic: conceptual
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: f8c98b313fe84df5dae51205f037253a0973d330
-ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
-ms.translationtype: HT
+ms.openlocfilehash: 57d8dac4999f5b788b1114e6e7aa4156b6cd6419
+ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/10/2018
 ---

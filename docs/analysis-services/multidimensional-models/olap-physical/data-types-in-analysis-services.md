@@ -3,15 +3,15 @@ title: Analysis Services 中的資料類型 |Microsoft 文件
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
-ms.component: olap
+ms.custom: olap
 ms.topic: conceptual
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 2268165e7e64665e28b5fabfe28be865556ee268
-ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
-ms.translationtype: HT
+ms.openlocfilehash: 3b7ac934afdc086a50020e9ba22ca2d236ee091b
+ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/10/2018
 ---

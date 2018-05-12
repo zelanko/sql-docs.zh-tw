@@ -3,15 +3,15 @@ title: 加入巢狀的資料表至採礦結構 |Microsoft 文件
 ms.date: 05/01/2018
 ms.prod: sql
 ms.technology: analysis-services
-ms.component: data-mining
+ms.custom: data-mining
 ms.topic: conceptual
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 573c1e00df217840cb66444e51495b3e26362e6d
-ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
-ms.translationtype: HT
+ms.openlocfilehash: 0c65762dc69ee1a5f84a22984995fac5e909629c
+ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/10/2018
 ---

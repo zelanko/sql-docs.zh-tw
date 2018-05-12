@@ -3,15 +3,15 @@ title: 建立資料採礦維度 |Microsoft 文件
 ms.date: 05/01/2018
 ms.prod: sql
 ms.technology: analysis-services
-ms.component: data-mining
+ms.custom: data-mining
 ms.topic: conceptual
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: cd49dd7173f912e32bdb09e315a539f35a45794c
-ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
-ms.translationtype: HT
+ms.openlocfilehash: 2455ccc283af429cb314aa2e5182f8b2ee58c18e
+ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/10/2018
 ---

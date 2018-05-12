@@ -3,15 +3,15 @@ title: 資料採礦的 OLE DB |Microsoft 文件
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
-ms.component: data-mining
+ms.custom: data-mining
 ms.topic: conceptual
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 66b1ff8795fadd4d40b1263ea8776946de93479e
-ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
-ms.translationtype: HT
+ms.openlocfilehash: 7bf9f49fbfe0caf4a057c789b4a8de3c889398b4
+ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/10/2018
 ---

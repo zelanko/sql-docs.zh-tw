@@ -3,15 +3,15 @@ title: 設定使用量資料收集 (Powerpivot for SharePoint |Microsoft 文件
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
-ms.component: ppvt-sharepoint
+ms.custom: ppvt-sharepoint
 ms.topic: conceptual
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 2ba9e90c7423ed5fc32621030e885a93fa6f5081
-ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
-ms.translationtype: HT
+ms.openlocfilehash: bafa3d8b45dc2ad59314218f34959120b50e6bfe
+ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/10/2018
 ---

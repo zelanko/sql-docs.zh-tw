@@ -3,15 +3,15 @@ title: 多維度模型資料存取 (Analysis Services-多維度資料) |Microsof
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
-ms.component: mdx
+ms.custom: mdx
 ms.topic: conceptual
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: a79e5e085508683429817f6dad4f284a4b42b80e
-ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
-ms.translationtype: HT
+ms.openlocfilehash: 5bbf66795c7ac21b0c638aadffaa7bd2ab0a5974
+ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/10/2018
 ---

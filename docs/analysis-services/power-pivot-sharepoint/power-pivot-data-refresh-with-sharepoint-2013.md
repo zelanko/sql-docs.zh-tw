@@ -3,15 +3,15 @@ title: Power Pivot 資料重新整理與 SharePoint 2013 |Microsoft 文件
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
-ms.component: ppvt-sharepoint
+ms.custom: ppvt-sharepoint
 ms.topic: conceptual
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: c94cc398a78b88c50d469e3a7e04457067ee28e8
-ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
-ms.translationtype: HT
+ms.openlocfilehash: 34208a7b3e3f782bcb93d46ab29099fe609f9925
+ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/10/2018
 ---

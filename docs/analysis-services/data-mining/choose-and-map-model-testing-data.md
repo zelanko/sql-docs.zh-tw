@@ -3,15 +3,15 @@ title: 選擇和對應模型測試資料 |Microsoft 文件
 ms.date: 05/01/2018
 ms.prod: sql
 ms.technology: analysis-services
-ms.component: data-mining
+ms.custom: data-mining
 ms.topic: conceptual
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: aa87a4cd5c902e5a4d8e383b882ff6b921854b85
-ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
-ms.translationtype: HT
+ms.openlocfilehash: 3c731f1a439a817abd133e14815b85a8f6d0077b
+ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/10/2018
 ---

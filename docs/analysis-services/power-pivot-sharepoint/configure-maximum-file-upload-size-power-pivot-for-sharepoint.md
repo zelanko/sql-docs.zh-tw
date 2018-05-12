@@ -3,15 +3,15 @@ title: 設定檔案上傳大小上限 (Power Pivot for SharePoint) |Microsoft �
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
-ms.component: ppvt-sharepoint
+ms.custom: ppvt-sharepoint
 ms.topic: conceptual
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: ca5c9cfd9c71b61fdd117f73050bd3dfb4c65619
-ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
-ms.translationtype: HT
+ms.openlocfilehash: 15ce366acc4244db16f0b58bbdc8226e9327416c
+ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/10/2018
 ---

@@ -3,15 +3,15 @@ title: 啟用網站集合，在 CA 中的 Power Pivot 整合 |Microsoft 文件
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
-ms.component: ppvt-sharepoint
+ms.custom: ppvt-sharepoint
 ms.topic: conceptual
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 0322da0c2fb3a35f66e1ea2b7d1ea12d24d158f4
-ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
-ms.translationtype: HT
+ms.openlocfilehash: 77c8cb0d9e9617bfa0560ae1e9bc6389a297a5c2
+ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/10/2018
 ---
