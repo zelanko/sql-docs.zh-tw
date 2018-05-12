@@ -8,9 +8,9 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 716fbd8a105164d40bfa6b3e67d126067174dc5a
-ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
-ms.translationtype: HT
+ms.openlocfilehash: f58eb498843c259c4bc9ac9a5d453456dac21b54
+ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/10/2018
 ---
@@ -98,13 +98,23 @@ Microsoft Machine Learning 伺服器是在內部部署伺服器產品分隔來�
 
 Microsoft Machine Learning 安裝程式偵測到現有的功能和 SQL Server 版本，並叫用稱為 SqlBindR.exe 變更繫結的公用程式。 就內部而言，安裝程式進行鏈結 SqlBindR 且間接使用。 稍後，您可以呼叫 SqlBindR 直接從命令列，以執行特定的選項。
 
-1. 請確認您的伺服器符合最低的組建需求。 最小值是 SQL Server 2016 R services [Service Pack 1](https://www.microsoft.com/download/details.aspx?id=54276)和[CU3](https://support.microsoft.com/help/4019916/cumulative-update-3-for-sql-server-2016-sp1)。 在 SSMS 中，執行`SELECT @@version`傳回伺服器版本資訊。 
+1. 在 SSMS 中，執行`SELECT @@version`，確認伺服器符合最低的組建需求。 
 
-1. 檢查版本的 R 和 RevoScaleR 確認現有的版本低於您打算將其取代。 SQL Server 2016 R services R 基底套件是 3.2.2 而 RevoScaleR 8.0.3。
+   最小值是 SQL Server 2016 R services [Service Pack 1](https://www.microsoft.com/download/details.aspx?id=54276)和[CU3](https://support.microsoft.com/help/4019916/cumulative-update-3-for-sql-server-2016-sp1)。
 
-    + 移至 \Program Files\Microsoft SQL Server\MSSQL13。MSSQLSERVER\R_SERVICES\bin
-    + 按兩下**R**開啟主控台。
-    + 若要取得封裝版本，請使用`library(help="base")`和`library(help="RevoScaleR")`。 
+1. 請檢查確認現有的版本低於您打算將其取代為 R 基底和 RevoScaleR 封裝版本。 SQL Server 2016 R services R 基底套件是 3.2.2 而 RevoScaleR 8.0.3。
+
+    ```SQL
+    EXECUTE sp_execute_external_script
+    @language=N'R'
+    ,@script = N'str(OutputDataSet);
+    packagematrix <- installed.packages();
+    Name <- packagematrix[,1];
+    Version <- packagematrix[,3];
+    OutputDataSet <- data.frame(Name, Version);'
+    , @input_data_1 = N''
+    WITH RESULT SETS ((PackageName nvarchar(250), PackageVersion nvarchar(max) ))
+    ```
 
 1. 下載 Microsoft Machine Learning 伺服器到具有您想要升級的執行個體的電腦上。 我們建議[最新版本](https://docs.microsoft.com/machine-learning-server/install/machine-learning-server-windows-install#download-machine-learning-server-installer)。
 
@@ -138,15 +148,23 @@ Microsoft Machine Learning 安裝程式偵測到現有的功能和 SQL Server �
 
 重新檢查以確認您有較新版本的 R 與 RevoScaleR 的版本。 您可以使用 R 主控台與您的資料庫引擎執行個體中的 R 封裝一起散發，取得封裝資訊：
 
-+ 移至 \Program Files\Microsoft SQL Server\MSSQL13。MSSQLSERVER\R_SERVICES\bin
-+ 按兩下**R**開啟主控台。
-+ 若要取得封裝版本，請使用`library(help="base")`和`library(help="RevoScaleR")`。 
+```SQL
+EXECUTE sp_execute_external_script
+@language=N'R'
+,@script = N'str(OutputDataSet);
+packagematrix <- installed.packages();
+Name <- packagematrix[,1];
+Version <- packagematrix[,3];
+OutputDataSet <- data.frame(Name, Version);'
+, @input_data_1 = N''
+WITH RESULT SETS ((PackageName nvarchar(250), PackageVersion nvarchar(max) ))
+```
 
 繫結至機器學習伺服器 9.3 SQL Server 2016 R 服務，如 R 基底套件能 3.4.1、 RevoScaleR 應 9.3，而且您也應該擁有 MicrosoftML 9.3。 
 
 如果您加入預先定型的模型，模型會內嵌在 MicrosoftML 程式庫，而且您可以透過 MicrosoftML 函式呼叫它們。 如需詳細資訊，請參閱[MicrosoftML R 範例](https://docs.microsoft.com/machine-learning-server/r/sample-microsoftml)。
 
-## <a name="offline-no-internet-access"></a>離線 （沒有網際網路存取）
+## <a name="offline-binding-no-internet-access"></a>離線的繫結 （沒有網際網路存取）
 
 沒有網際網路連線的系統，可以將安裝程式和.cab 檔案下載到連接網際網路的電腦上，並再將檔案傳輸到隔離的伺服器。 
 
@@ -168,7 +186,7 @@ Microsoft Machine Learning 安裝程式偵測到現有的功能和 SQL Server �
 
 1. 在伺服器上，輸入`%temp%`[執行] 命令，以取得暫存目錄的實體位置中。 實體路徑會因電腦而異，但它通常是`C:\Users\<your-user-name>\AppData\Local\Temp`。
 
-1. 在 %temp%資料夾中的 Place.cab 檔案。
+1. 將.cab 檔放在 %temp%資料夾中。
 
 1. 解壓縮安裝程式。
 
@@ -285,7 +303,7 @@ Microsoft 的機器學習 Server 9.2.1 和 9.3 並沒有此問題。
 |*bind*| 將指定的 SQL 資料庫執行個體升級到最新版 R Server，並確保執行個體自動取得 R Server 的未來升級|
 |*unbind*|從指定的 SQL 資料庫執行個體解除安裝最新版的 R Server，並防止未來的 R Server 升級影響執行個體|
 
-< a name ="sqlbinder-錯誤代碼的 」<a/>
+<a name="sqlbinder-error-codes"><a/>
 
 ### <a name="errors"></a>錯誤
 
@@ -299,10 +317,10 @@ Microsoft 的機器學習 Server 9.2.1 和 9.3 並沒有此問題。
 |繫結錯誤 3 | 無效的執行個體 | 執行個體存在，但不是有效的繫結。 |
 |繫結錯誤 4 | 不繫結 | |
 |繫結錯誤 5 | 已繫結 | 您執行了 *bind* 命令，但指定的執行個體已經繫結。 |
-|繫結錯誤 6 | 繫結失敗 | 解除繫結執行個體時發生錯誤。 |
+|繫結錯誤 6 | 繫結失敗 | 解除繫結執行個體時發生錯誤。 如果您執行 MLS 安裝程式，而不選取任何功能，就會發生此錯誤。|
 |繫結錯誤 7 | 未繫結 | 資料庫引擎執行個體有 R Services 或 SQL Server 機器學習服務。 執行個體未繫結到 Microsoft 機器學習服務伺服器。 |
 |繫結錯誤 8 | 解除繫結失敗 | 解除繫結執行個體時發生錯誤。 |
-|繫結錯誤 9 | 找不到任何執行個體 | 在此電腦上找不到任何執行個體。 |
+|繫結錯誤 9 | 找不到任何執行個體 | 找不到此電腦上的任何 database engine 執行個體。 |
 
 
 ## <a name="see-also"></a>另請參閱
