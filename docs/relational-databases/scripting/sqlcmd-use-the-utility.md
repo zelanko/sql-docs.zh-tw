@@ -4,14 +4,12 @@ ms.custom: ''
 ms.date: 06/06/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: ''
-ms.component: ssms-scripting
-ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
+ms.reviewer: ''
+ms.suite: sql
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - TSQL
 helpviewer_keywords:
@@ -21,16 +19,15 @@ helpviewer_keywords:
 - sqlcmd utility, about sqlcmd utility
 ms.assetid: 3ec89119-7314-43ef-9e91-12e72bb63d62
 caps.latest.revision: 50
-author: mightypen
+author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Active
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: e11152d3dc2342bbad99be13742155422c929158
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 337a2514870c7d9121d58e61eab1b347eeffa600
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sqlcmd---use-the-utility"></a>sqlcmd - 使用公用程式
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -113,7 +110,7 @@ ms.lasthandoff: 04/16/2018
   
  在 **sqlcmd** 提示字元中，您可以輸入 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式及 **sqlcmd** 命令 (例如 **GO** 及 **EXIT**)。 每個 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式會放在稱為陳述式快取的緩衝區中。 這些陳述式會在您輸入 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 命令並按 ENTER 後，傳送至 **GO** 。 若要結束 **sqlcmd**，在新的一行的開頭輸入 **EXIT** 或 **QUIT** 。  
   
- 若要清除陳述式快取，請輸入 **:RESET**。 輸入 **^C** 會導致 **sqlcmd** 結束。 在發出**^C** 命令後，也可以使用 **^C** 來停止執行陳述式快取。  
+ 若要清除陳述式快取，請輸入 **:RESET**。 輸入 **^C** 會導致 **sqlcmd** 結束。 在發出 **^C** 命令後，也可以使用 **^C** 來停止執行陳述式快取。  
   
  [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式可藉由輸入 **:ED** 命令及 **sqlcmd** 提示字元。 此時會開啟編輯器，而在編輯過 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式並關閉編輯器之後，修訂的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式即顯示於命令視窗。 請輸入 **GO** 執行修訂的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式。  
   

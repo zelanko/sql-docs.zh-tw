@@ -4,14 +4,13 @@ ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.service: ''
 ms.component: replication
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - merge replication data validation [SQL Server replication], partitions
 - parameterized filters [SQL Server replication], validating partition information
@@ -21,19 +20,18 @@ caps.latest.revision: 36
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 6b752a6938683c4750c46f12d0739b13f8fd5655
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: b41eee8ffd704c6a34736dedeff87c6a84e73d83
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="validate-partition-information-for-a-merge-subscriber"></a>驗證合併訂閱者的資料分割資訊
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   在為合併式發行集定義參數化資料列篩選器時，可以使用參考「訂閱者」資訊的功能，例如「訂閱者」的登入名稱。 依預設，複寫將在每次同步處理和在「訂閱者」端套用快照集之前，根據該功能驗證「訂閱者」資訊。 驗證處理可確保為每個「訂閱者」正確分割資料。 驗證行為由 **validate_subscriber_info** 發行集屬性控制，該發行集屬性可使用 [sp_changemergepublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql.md) 或在 [發行集屬性] 對話方塊的 [訂閱選項] 頁面中變更。 如需有關變更發行集屬性的詳細資訊，請參閱＜ [View and Modify Publication Properties](../../relational-databases/replication/publish/view-and-modify-publication-properties.md)＞。  
   
 ## <a name="how-partition-validation-works"></a>資料分割驗證的運作方式  
- 例如，使用函數 **SUSER_SNAME()**對某發行集進行篩選後，「合併代理程式」便會根據有效的 **SUSER_SNAME()** 運算式資料，將初始快照套用到每個「訂閱者」。  
+ 例如，使用函數 **SUSER_SNAME()** 對某發行集進行篩選後，「合併代理程式」便會根據有效的 **SUSER_SNAME()** 運算式資料，將初始快照套用到每個「訂閱者」。  
   
  如果在「訂閱者」重新連接到「發行者」以進行下一次同步處理時已啟用驗證，「合併代理程式」便會在「訂閱者」端驗證資訊，並確定每個「訂閱者」的資料分割與初始快照集中接收的資料分割相同。 對於每個後續合併或快照集應用程式，「合併代理程式」會驗證每個「訂閱者」的資料分割。  
   

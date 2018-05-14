@@ -3,7 +3,6 @@ title: 將 SQL Server Database 部署到 Microsoft Azure 虛擬機器 | Microsof
 ms.date: 07/29/2016
 ms.prod: sql
 ms.prod_service: database-engine
-ms.service: ''
 ms.component: databases
 ms.reviewer: ''
 ms.suite: sql
@@ -11,7 +10,7 @@ ms.custom: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql13.swb.deploymentwizard.deploymentsettings.f1
 - sql13.swb.deploymentwizard.sourcesettings.f1
@@ -41,12 +40,11 @@ caps.latest.revision: 30
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: f1bc6b5581f7744b983d558ee0cb6ca8f9f46c9a
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 3ad29084eda4f085e090ec9f436a5dd3f170429f
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="deploy-a-sql-server-database-to-a-microsoft-azure-virtual-machine"></a>將 SQL Server Database 部署到 Microsoft Azure 虛擬機器
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -210,7 +208,7 @@ ms.lasthandoff: 04/16/2018
   
 1.  使用 SQL Server Management Studio 連接到具有您想要部署之資料庫的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體。  
   
-2.  在 **[物件總管]**中，展開執行個體名稱，然後展開 **[資料庫]** 節點。  
+2.  在 **[物件總管]** 中，展開執行個體名稱，然後展開 **[資料庫]** 節點。  
   
 3.  以滑鼠右鍵按一下您要部署的資料庫，選取 [工作]，然後選取 [將資料庫部署到 Microsoft Azure VM]  
   

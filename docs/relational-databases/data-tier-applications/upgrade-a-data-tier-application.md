@@ -4,14 +4,13 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.service: ''
 ms.component: data-tier-applications
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-data-tier-apps
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql13.swb.upgradedacwizard.summary.f1
 - sql13.swb.upgradedacwizard.reviewplan.f1
@@ -31,12 +30,11 @@ caps.latest.revision: 35
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 6bb7f23bb655ca08286a291d92bbdfd111b4fc28
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: fe2d3027feada8c7140822dde49fe6d1b4dcbf46
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="upgrade-a-data-tier-application"></a>升級資料層應用程式
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -87,7 +85,7 @@ ms.lasthandoff: 04/16/2018
 ##  <a name="UsingDACUpgradeWizard"></a> 使用升級資料層應用程式精靈  
  **使用精靈升級 DAC**  
   
-1.  在 **[物件總管]**中，展開含有要升級 DAC 之執行個體的節點。  
+1.  在 **[物件總管]** 中，展開含有要升級 DAC 之執行個體的節點。  
   
 2.  展開 [管理] 節點，然後展開 [資料層應用程式] 節點。  
   

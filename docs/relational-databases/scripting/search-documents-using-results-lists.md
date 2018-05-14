@@ -4,14 +4,12 @@ ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: ''
-ms.component: ssms-scripting
-ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
+ms.reviewer: ''
+ms.suite: sql
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - searches [SQL Server Management Studio], result lists
 - result list searches [SQL Server Management Studio]
@@ -22,13 +20,12 @@ caps.latest.revision: 22
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 9f6352e99a18f02976a3b992e3ae77aade117ad0
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 59c4169259ca091def5483dfe266d7ae58ead51f
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="search-documents-using-results-lists"></a>使用結果清單搜尋文件
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -40,7 +37,7 @@ ms.lasthandoff: 04/16/2018
   
 2.  在 **[尋找目標]** 文字方塊中，輸入要搜尋的文字。  
   
-3.  在 **[查詢]** 清單中，按一下 **[所有開啟的文件]**、 **[目前的專案]**或 **[整個方案]**，或輸入目錄路徑。  
+3.  在 **[查詢]** 清單中，按一下 **[所有開啟的文件]**、 **[目前的專案]** 或 **[整個方案]**，或輸入目錄路徑。  
   
 4.  在 **[檔案類型]** 清單中，選取列出的各組副檔名之一，或用分號分隔來輸入要搜尋之檔案類型的副檔名。 請利用 \*.\* 來搜尋 [查詢] 下拉式清單列出之目錄中的所有檔案。  
   
@@ -58,16 +55,16 @@ ms.lasthandoff: 04/16/2018
   
 3.  在 **[取代成]** 方塊中，輸入用來取代搜尋文字的文字。  
   
-4.  在 **[查詢]** 清單中，按一下 **[所有開啟的文件]**、 **[目前的專案]**或 **[整個方案]**，或輸入目錄路徑。  
+4.  在 **[查詢]** 清單中，按一下 **[所有開啟的文件]**、 **[目前的專案]** 或 **[整個方案]**，或輸入目錄路徑。  
   
-5.  按一下 **[取代]** 來利用 **[取代成]** 方塊中的文字取代目前的搜尋相符項目。 您可以按一下 **[尋找下一個]** 來略過單一相符項目，或按一下 **[略過檔案]**來略過整個檔案。  
+5.  按一下 **[取代]** 來利用 **[取代成]** 方塊中的文字取代目前的搜尋相符項目。 您可以按一下 **[尋找下一個]** 來略過單一相符項目，或按一下 **[略過檔案]** 來略過整個檔案。  
   
      \- 或 -  
   
      選擇 **[取代全部]** 來利用 **[取代成]** 方塊中的文字取代所有搜尋相符項目。 如果您要在其他時候恢復某些取代作業的結果，請選取 **[全部取代後保持已修改檔案為開啟狀態]** 。  
   
     > [!NOTE]  
-    >  **[取代全部]** 會取代所有搜尋相符項目，其中包括您已在檔案中，利用 **[略過檔案]** 或 **[尋找下一個]**來略過的項目。 您只能利用 **[恢復]** 來處理在取代作業之後保持開啟狀態之檔案中的取代項目。  
+    >  **[取代全部]** 會取代所有搜尋相符項目，其中包括您已在檔案中，利用 **[略過檔案]** 或 **[尋找下一個]** 來略過的項目。 您只能利用 **[恢復]** 來處理在取代作業之後保持開啟狀態之檔案中的取代項目。  
   
  依預設，取代資訊會出現在 [尋找結果 1] 視窗中。 您可以在 [尋找結果 1] 視窗中，按兩下各個項目來瀏覽取代項目。  
   

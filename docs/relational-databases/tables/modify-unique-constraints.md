@@ -4,14 +4,11 @@ ms.custom: ''
 ms.date: 10/12/2016
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: ''
-ms.component: tables
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- dbe-tables
+ms.technology: table-view-index
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - modifying constraints
 - UNIQUE constraints [SQL Server], modifying
@@ -22,13 +19,12 @@ caps.latest.revision: 16
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: On Demand
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 39a75f519aa5e31aecd6a976110665fa79ec212f
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 89786f2ed3a729408e18f8b77b4b1169794e42ea
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="modify-unique-constraints"></a>修改唯一的條件約束
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -69,9 +65,9 @@ ms.lasthandoff: 04/16/2018
     |若要|請依照下列步驟：|  
     |--------|------------------------|  
     |變更與條件約束有關的資料行|1) 在 [(一般)] 底下的方格中，按一下 [資料行]，然後按一下屬性右邊的省略符號 **(…)**。<br /><br /> 2) 在 [索引資料行] 對話方塊中，指定索引的新資料行或排序次序，同時指定這兩者。|  
-    |重新命名條件約束|在 **[識別]**底下的方格中，於 **[名稱]** 方塊中輸入新的名稱。 確定新名稱不會與 [選取的主/唯一索引鍵或索引] 清單中的名稱重複。|  
+    |重新命名條件約束|在 **[識別]** 底下的方格中，於 **[名稱]** 方塊中輸入新的名稱。 確定新名稱不會與 [選取的主/唯一索引鍵或索引] 清單中的名稱重複。|  
     |設定叢集選項|在 [資料表設計工具] 底下的方格中，選取 [建立成 CLUSTERED]，然後從下拉式清單中，選擇 [是] 建立叢集索引，或選擇 [否] 建立非叢集索引。 每個資料表只能存在一個叢集索引。 如果叢集索引已經存在這個資料表中，您就必須清除原始索引的這項設定。|  
-    |定義填滿因數|在 **[資料表設計工具]**底下的方格中，展開 **[填滿規格]** 類別目錄，然後在 **[填滿因數]** 方塊中輸入 0 到 100 之間的整數。|  
+    |定義填滿因數|在 **[資料表設計工具]** 底下的方格中，展開 **[填滿規格]** 類別目錄，然後在 **[填滿因數]** 方塊中輸入 0 到 100 之間的整數。|  
   
 5.  在 [檔案]  功能表上，按一下 [儲存 <資料表名稱>]。  
   

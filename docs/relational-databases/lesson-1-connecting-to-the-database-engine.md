@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 02/05/2018
 ms.prod: sql
 ms.prod_service: database-engine
-ms.service: ''
 ms.component: tutorial
 ms.reviewer: ''
 ms.suite: sql
@@ -17,12 +16,11 @@ caps.latest.revision: 26
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.workload: Active
-ms.openlocfilehash: ee4e7f2092b2d023a07d3e6519639ed63b679c67
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 1795e19eb13aaac59009ea610b0d261d3dc4d649
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="lesson-1-connecting-to-the-database-engine"></a>第 1 課：連接到 Database Engine
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -66,7 +64,7 @@ ms.lasthandoff: 04/16/2018
 1.  以系統管理員群組的成員身分登入 Windows，然後開啟 [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]。  
 2.  在 [連接到伺服器] 對話方塊中，按一下 [取消]。  
 3.  如果未顯示 [已註冊的伺服器]，請在 [檢視] 功能表上按一下 [已註冊的伺服器]。
-4.  在 [已註冊的伺服器] 工具列上選取 [Database Engine] 之後，展開 [Database Engine]、以滑鼠右鍵按一下 [本機伺服器群組]、指向 [工作]，然後按一下 [註冊本機伺服器]。 此時會顯示電腦上已安裝的所有 [!INCLUDE[ssDE](../includes/ssde-md.md)] 執行個體。 預設的執行個體未命名，而是以電腦名稱顯示。 具名執行個體是顯示為電腦名稱，後面接著反斜線 (\\) 和執行個體名稱。 若為 [!INCLUDE[ssExpress](../includes/ssexpress-md.md)]，除非在安裝期間變更名稱，否則執行個體是命名為 *<computer_name>*\sqlexpress。  
+4.  在 [已註冊的伺服器] 工具列上選取 [Database Engine] 之後，展開 [Database Engine]、以滑鼠右鍵按一下 [本機伺服器群組]、指向 [工作]，然後按一下 [註冊本機伺服器]。 此時會顯示電腦上已安裝的所有 [!INCLUDE[ssDE](../includes/ssde-md.md)] 執行個體。 預設的執行個體未命名，而是以電腦名稱顯示。 具名執行個體是顯示為電腦名稱，後面接著反斜線 (\\) 和執行個體名稱。 若為 [!INCLUDE[ssExpress](../includes/ssexpress-md.md)]，除非在安裝期間變更名稱，否則執行個體是命名為 *<computer_name>* \sqlexpress。  
 
 ##### <a name="to-verify-that-the-database-engine-is-running"></a>確認 Database Engine 是否在執行中
 

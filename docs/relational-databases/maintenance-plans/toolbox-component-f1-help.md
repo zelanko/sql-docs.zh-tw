@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.service: ''
 ms.component: maintenance-plans
 ms.reviewer: ''
 ms.suite: sql
@@ -21,12 +20,11 @@ caps.latest.revision: 22
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 3b4a0a7f0aa62e57968fac4d2ca94d50c8ac5218
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 3c2e4f0eb18863a51fc7fa1b81870ff74ed47ca7
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="toolbox-component-f1-help"></a>工具箱元件 F1 說明
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -40,7 +38,7 @@ ms.lasthandoff: 04/16/2018
  每當您回到編輯器或設計師時， **[工具箱]** 會自動捲動到所選之最近使用的索引標籤和項目。 當您轉移焦點至不同的編輯器或設計師時， **[工具箱]** 中目前的選取項目也會隨著您轉移。  
   
 ## <a name="customize-the-toolbox"></a>自訂工具箱  
- 重新排列索引標籤內的項目以及將自訂的索引標籤和項目加入 **[工具箱]**都很容易。  
+ 重新排列索引標籤內的項目以及將自訂的索引標籤和項目加入 **[工具箱]** 都很容易。  
   
  若要加入或移除 **[工具箱]** 項目，請在 **[工具]** 功能表上按一下 **[選擇工具箱項目]**。 只有 **[維護工作]** 可以作為 **[工具箱]** 圖示使用。 並非所有元件永遠都可以使用。 例如，維護工作只有在建立維護計畫時才可以使用。  
   

@@ -4,14 +4,13 @@ ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.service: ''
 ms.component: performance-monitor
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Policy-Based Management, evaluate policy
 ms.assetid: bea09522-ff47-4037-ab55-a98ea7c10099
@@ -19,12 +18,11 @@ caps.latest.revision: 6
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: af93d3f46e6fdff0bb11287e210500072b70d11c
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: c4fea2377f0d7abc610834216c2b9f295da384ea
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="evaluate-a-policy-based-management-policy-on-a-schedule"></a>依照排程評估原則式管理原則
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -51,7 +49,7 @@ ms.lasthandoff: 04/16/2018
   
 #### <a name="to-evaluate-a-policy-on-a-schedule"></a>若要依照排程評估原則  
   
-1.  在 **[物件總管]**中，按一下加號，展開包含您想要評估之原則排程的伺服器。  
+1.  在 **[物件總管]** 中，按一下加號，展開包含您想要評估之原則排程的伺服器。  
   
 2.  按一下加號展開 **[管理]** 資料夾。  
   
@@ -63,7 +61,7 @@ ms.lasthandoff: 04/16/2018
   
 6.  在 [開啟原則 - <原則名稱>] 對話方塊的 [評估模式] 清單中，選取 [按排程時間]。  
   
-7.  在 **[排程]**底下，按一下 **[挑選]** 指定現有的排程，或按一下 **[新增]** 建立新的排程。  
+7.  在 **[排程]** 底下，按一下 **[挑選]** 指定現有的排程，或按一下 **[新增]** 建立新的排程。  
   
 8.  完成後，請按一下 **[確定]**。  
   

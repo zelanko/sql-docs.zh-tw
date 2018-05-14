@@ -4,14 +4,12 @@ ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: ''
-ms.component: ssms-scripting
-ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
+ms.reviewer: ''
+ms.suite: sql
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vs.findreplace.quickfind
 - vs.find
@@ -23,13 +21,12 @@ caps.latest.revision: 24
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 9a123b056ae3e568bac5e4bf6ab7bb3dbff31066
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 2f9ae5990fb55bb716fcd9368b80a56099a527be
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="find-and-replace"></a>尋找和取代
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -56,7 +53,7 @@ ms.lasthandoff: 04/16/2018
  這些控制項可以讓您指定要插入的字串，以取代相符的字串或運算式。  
   
  **Replace with**  
- 若要以另一個字串來取代 [尋找目標] 中所指定之字串的執行個體，請在此欄位中輸入取代字串。 若要刪除 **[尋找目標]**中所指定之文字的執行個體，請保留此欄位空白。 選取下拉式清單，即可顯示最後輸入的 20 個項目。 若要將規則運算式包含在 **[取代成]** 方塊裡所指定的字串中，請按一下 **[使用]** 核取方塊，然後按一下 **[規則運算式]**。 只有透過按一下 **[快速取代]**的方式開啟此對話方塊，才會出現此方塊。  
+ 若要以另一個字串來取代 [尋找目標] 中所指定之字串的執行個體，請在此欄位中輸入取代字串。 若要刪除 **[尋找目標]** 中所指定之文字的執行個體，請保留此欄位空白。 選取下拉式清單，即可顯示最後輸入的 20 個項目。 若要將規則運算式包含在 **[取代成]** 方塊裡所指定的字串中，請按一下 **[使用]** 核取方塊，然後按一下 **[規則運算式]**。 只有透過按一下 **[快速取代]** 的方式開啟此對話方塊，才會出現此方塊。  
   
  **Replace with**  
  若要以另一個字串來取代 [尋找目標] 方塊中所指定之字串的執行個體，請在此欄位中輸入取代字串。 若要刪除 **[尋找目標]** 方塊中所指定之字串的執行個體，請保留此欄位空白。 選取下拉式清單，即可顯示最後輸入的 20 個項目。 若要將規則運算式包含在 **[取代成]** 方塊裡所指定的字串中，請按一下 **[使用]** 核取方塊，然後按一下 **[規則運算式]**。  
@@ -76,7 +73,7 @@ ms.lasthandoff: 04/16/2018
  顯示的提醒會包含 **[保持已修改的檔案開啟]** 選項。 若要保留 **[恢復]** 選項，您必須選取此選項。 **[恢復]** 功能僅適用於檔案在修改之後仍保持開啟可供編輯的檔案。  
   
  **略過檔案**  
- 當 [查詢] 所指定的值包含多個檔案時，即可使用。 如果不要搜尋或修改目前的檔案，請按一下此按鈕。 搜尋會繼續在 **[查詢]**清單中的下一個檔案進行。  
+ 當 [查詢] 所指定的值包含多個檔案時，即可使用。 如果不要搜尋或修改目前的檔案，請按一下此按鈕。 搜尋會繼續在 **[查詢]** 清單中的下一個檔案進行。  
   
 ## <a name="look-in"></a>查詢  
  **Look in**  
@@ -86,7 +83,7 @@ ms.lasthandoff: 04/16/2018
  您可以展開或摺疊 **[尋找選項]** 區段。 您可以選取或清除下列選項。  
   
  **大小寫須相符**  
- 如果選取此核取方塊，則 [尋找結果] 視窗僅會顯示內容和大小寫均與 [尋找目標] 中所指定之字串相符的執行個體。 例如，選取**[大小寫須相符]**核取方塊來搜尋「 **MyObject** 」，將會傳回「MyObject」，但不會傳回「myobject」或「MYOBJECT」。  
+ 如果選取此核取方塊，則 [尋找結果] 視窗僅會顯示內容和大小寫均與 [尋找目標] 中所指定之字串相符的執行個體。 例如，選取 **[大小寫須相符]** 核取方塊來搜尋「 **MyObject** 」，將會傳回「MyObject」，但不會傳回「myobject」或「MYOBJECT」。  
   
  **全字拼寫須相符**  
  如果選取此核取方塊，則 [尋找結果] 視窗僅會顯示整個字串與 [尋找目標] 中所指定之字串相符的執行個體。 例如，搜尋 **MyObject** ，將會傳回「MyObject」，但不會傳回「CMyObject」或「MyObjectC」。  

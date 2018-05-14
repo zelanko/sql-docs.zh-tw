@@ -4,14 +4,13 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.service: ''
 ms.component: replication
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - IIS server configuration [SQL Server replication]
 - websync.log
@@ -21,12 +20,11 @@ caps.latest.revision: 88
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 58937e416603bdbaa2ee33923dd783c1e1d7c228
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 2d4bc5f866ac5cfe9cb29212bd2cf1a30c0b8e3e
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="configure-iis-for-web-synchronization"></a>針對 Web 同步處理設定 IIS
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -80,7 +78,7 @@ ms.lasthandoff: 04/16/2018
   
 3.  執行 IIS 憑證精靈：  
   
-    1.  在 **[Internet Information Services (IIS) 管理員]**中，展開 **[本機電腦]** 節點，然後展開 **[網站]** 資料夾。  
+    1.  在 **[Internet Information Services (IIS) 管理員]** 中，展開 **[本機電腦]** 節點，然後展開 **[網站]** 資料夾。  
   
     2.  以滑鼠右鍵按一下 **[預設網站]**，然後按一下 **[屬性]**。  
   
@@ -242,7 +240,7 @@ ms.lasthandoff: 04/16/2018
   
     1.  以滑鼠右鍵按一下 **[我的電腦]**，然後按一下 **[管理]**。  
   
-    2.  在 **[電腦管理]**中，展開 **[本機使用者和群組]**。  
+    2.  在 **[電腦管理]** 中，展開 **[本機使用者和群組]**。  
   
     3.  以滑鼠右鍵按一下 **[使用者]**，然後按一下 **[新增使用者]**。  
   
@@ -252,7 +250,7 @@ ms.lasthandoff: 04/16/2018
   
 2.  將帳戶加入 IIS_WPG 群組：  
   
-    1.  在 **[電腦管理]**中展開 **[本機使用者和群組]**，然後按一下 **[群組]**。  
+    1.  在 **[電腦管理]** 中展開 **[本機使用者和群組]**，然後按一下 **[群組]**。  
   
     2.  以滑鼠右鍵按一下 **[IIS_WPG]**，然後按一下 **[加入群組]**。  
   
@@ -280,13 +278,13 @@ ms.lasthandoff: 04/16/2018
   
     7.  按一下 [確定] 。  
   
-4.  在 **[Internet Information Services (IIS) 管理員]**中建立應用程式集區：  
+4.  在 **[Internet Information Services (IIS) 管理員]** 中建立應用程式集區：  
   
     1.  按一下 **[開始]**，然後按一下 **[執行]**。  
   
     2.  在 **[開啟]** 方塊中，輸入 **inetmgr**，然後按一下 **[確定]**。  
   
-    3.  在 **[Internet Information Services (IIS) 管理員]**中，展開 **[本機電腦]** 節點。  
+    3.  在 **[Internet Information Services (IIS) 管理員]** 中，展開 **[本機電腦]** 節點。  
   
     4.  以滑鼠右鍵按一下 **[應用程式集區]**，指向 **[新增]** ，然後按一下 **[應用程式集區]**。  
   
@@ -294,7 +292,7 @@ ms.lasthandoff: 04/16/2018
   
 5.  將帳戶與應用程式集區相關聯：  
   
-    1.  在 **[Internet Information Services (IIS) 管理員]**中展開 **[本機電腦]** 節點，然後展開 **[應用程式集區]**。  
+    1.  在 **[Internet Information Services (IIS) 管理員]** 中展開 **[本機電腦]** 節點，然後展開 **[應用程式集區]**。  
   
     2.  以滑鼠右鍵按一下您先前建立的應用程式集區，然後按一下 **[屬性]**。  
   
@@ -306,7 +304,7 @@ ms.lasthandoff: 04/16/2018
   
 6.  將應用程式集區與 Web 同步處理所使用的虛擬目錄相關聯：  
   
-    1.  在 **[Internet Information Services (IIS) 管理員]**中展開 **[本機電腦]** 節點，然後展開 **[網站]**。  
+    1.  在 **[Internet Information Services (IIS) 管理員]** 中展開 **[本機電腦]** 節點，然後展開 **[網站]**。  
   
     2.  展開您用於 Web 同步處理的網站，以滑鼠右鍵按一下您為 Web 同步處理建立的虛擬目錄，然後按一下 **[屬性]**。  
   
@@ -357,7 +355,7 @@ ms.lasthandoff: 04/16/2018
   
 4.  在 [連接到 \<伺服器名稱>] 對話方塊中，指定合併代理程式要用來連接 IIS 的登入和密碼。 也可以在「新增訂閱精靈」中指定這些認證。  
   
-5.  在稱為 **[SQL Websync 診斷資訊]**的 Internet Explorer 視窗中，確認頁面中每個 **[狀態]** 資料行中的值都是 **[SUCCESS]**。  
+5.  在稱為 **[SQL Websync 診斷資訊]** 的 Internet Explorer 視窗中，確認頁面中每個 **[狀態]** 資料行中的值都是 **[SUCCESS]**。  
   
 6.  確定憑證已正確安裝於訂閱者端：  
   

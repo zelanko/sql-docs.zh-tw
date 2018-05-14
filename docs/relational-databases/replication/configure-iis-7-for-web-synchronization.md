@@ -4,14 +4,13 @@ ms.custom: ''
 ms.date: 09/12/2016
 ms.prod: sql
 ms.prod_service: database-engine
-ms.service: ''
 ms.component: replication
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - IIS 7 server configuration [SQL Server replication]
 - Web synchronization, IIS 7 servers
@@ -20,12 +19,11 @@ caps.latest.revision: 11
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 9458cfe599a240719ad4f04c27c0bc13fb2a04a6
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: ebf8cefa129638c36fa37b081ffcb345a2c49f54
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="configure-iis-7-for-web-synchronization"></a>針對 Web 同步處理設定 IIS 7
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -73,7 +71,7 @@ IIS 5.0 版開始支援 Web 同步處理。 IIS 7.0 版或更新版本不提供 
   
 6.  在 IIS 中建立虛擬目錄。 虛擬目錄應該在步驟 4 所建立的網站之下建立，而且應該對應至步驟 1 所建立的目錄。 在指派此目錄的權限時愈嚴格愈好。 您至少必須選取 **[讀取]** 和 **[執行]** 權限。  
   
-    1.  在 **[Internet Information Services (IIS) 管理員]**的 **[連線]** 窗格中，以滑鼠右鍵按一下 **[預設的網站]**，然後選取 **[新增虛擬目錄]**。  
+    1.  在 **[Internet Information Services (IIS) 管理員]** 的 **[連線]** 窗格中，以滑鼠右鍵按一下 **[預設的網站]**，然後選取 **[新增虛擬目錄]**。  
   
     2.  針對 [別名] ，輸入 **SQLReplication**。  
   
@@ -81,7 +79,7 @@ IIS 5.0 版開始支援 Web 同步處理。 IIS 7.0 版或更新版本不提供 
   
 7.  設定 IIS，使 replisapi.dll 能夠執行。  
   
-    1.  在 **[Internet Information Services (IIS) 管理員]**中，按一下 **[預設的網站]**。  
+    1.  在 **[Internet Information Services (IIS) 管理員]** 中，按一下 **[預設的網站]**。  
   
     2.  在中央窗格中，按一下 **[處理常式對應]**。  
   
@@ -110,7 +108,7 @@ IIS 5.0 版開始支援 Web 同步處理。 IIS 7.0 版或更新版本不提供 
   
 #### <a name="to-configure-iis-authentication"></a>若要設定 IIS 驗證  
   
-1.  在 **[Internet Information Services (IIS) 管理員]**中，按一下 **[預設的網站]**。  
+1.  在 **[Internet Information Services (IIS) 管理員]** 中，按一下 **[預設的網站]**。  
   
 2.  在中間窗格中，按兩下 **[驗證]**。  
   
@@ -138,15 +136,15 @@ IIS 5.0 版開始支援 Web 同步處理。 IIS 7.0 版或更新版本不提供 
   
 #### <a name="to-require-ssl-security-for-a-web-site"></a>若要要求網站的 SSL 安全性  
   
-1.  在 **[Internet Information Services (IIS) 管理員]**中，展開本機伺服器節點，然後按一下 **[預設的網站]** (或是您的 Web 同步處理網站，如果它與預設的網站不同的話)。  
+1.  在 **[Internet Information Services (IIS) 管理員]** 中，展開本機伺服器節點，然後按一下 **[預設的網站]** (或是您的 Web 同步處理網站，如果它與預設的網站不同的話)。  
   
 2.  在中間窗格中，按兩下 **[SSL 設定]**。  
   
-3.  核取 **[必須使用 SSL]** 選項。 在 **[用戶端憑證]**底下，確認已選取 **[略過]** 按鈕。  
+3.  核取 **[必須使用 SSL]** 選項。 在 **[用戶端憑證]** 底下，確認已選取 **[略過]** 按鈕。  
   
 #### <a name="to-create-a-self-signed-certificate-for-testing"></a>若要針對測試建立自我簽署憑證  
   
-1.  在 **[Internet Information Services (IIS) 管理員]**中，按一下本機伺服器節點，然後在中央窗格中，按兩下 **[伺服器憑證]**。  
+1.  在 **[Internet Information Services (IIS) 管理員]** 中，按一下本機伺服器節點，然後在中央窗格中，按兩下 **[伺服器憑證]**。  
   
 2.  在 **[動作]** 窗格中，按一下 **[建立自我簽署憑證]**。  
   
@@ -158,7 +156,7 @@ IIS 5.0 版開始支援 Web 同步處理。 IIS 7.0 版或更新版本不提供 
   
 2.  在 **[動作]** 窗格中，按一下 **[繫結]**，然後按一下 **[新增]**。 **[新增站台繫結]** 對話方塊將會出現。  
   
-3.  從 **[類型]** 下拉式清單中選取 **[https]**。 保留 **[IP 位址]** 和 **[連接埠]**的預設設定。  
+3.  從 **[類型]** 下拉式清單中選取 **[https]**。 保留 **[IP 位址]** 和 **[連接埠]** 的預設設定。  
   
 4.  從 **[SSL 憑證]** 下拉式清單中，選取您在＜若要針對測試建立自我簽署憑證＞中建立的憑證、按一下 **[確定]**，然後按一下 **[關閉]**。  
   
@@ -199,7 +197,7 @@ IIS 5.0 版開始支援 Web 同步處理。 IIS 7.0 版或更新版本不提供 
   
     1.  開啟 **[伺服器管理員]**。 在 [開始] 功能表中，以滑鼠右鍵按一下 **[電腦]**，然後按一下 **[管理]**。  
   
-    2.  在 **[伺服器管理員]**中，展開 **[設定]**，然後展開 **[本機使用者和群組]**。  
+    2.  在 **[伺服器管理員]** 中，展開 **[設定]**，然後展開 **[本機使用者和群組]**。  
   
     3.  以滑鼠右鍵按一下 **[使用者]**，然後按一下 **[新增使用者]**。  
   
@@ -209,7 +207,7 @@ IIS 5.0 版開始支援 Web 同步處理。 IIS 7.0 版或更新版本不提供 
   
 2.  將此帳戶加入至 IIS_IUSRS 群組：  
   
-    1.  在 **[伺服器管理員]**中，展開 **[設定]**、展開 **[本機使用者和群組]**，然後按一下 **[群組]**。  
+    1.  在 **[伺服器管理員]** 中，展開 **[設定]**、展開 **[本機使用者和群組]**，然後按一下 **[群組]**。  
   
     2.  以滑鼠右鍵按一下 **[IIS_IUSRS]**，然後按一下 **[加入群組]**。  
   
@@ -235,9 +233,9 @@ IIS 5.0 版開始支援 Web 同步處理。 IIS 7.0 版或更新版本不提供 
   
     6.  選取任何不需要存取目錄的使用者或群組、按一下 **[移除]**，然後按一下 **[確定]**。  
   
-4.  在 **[Internet Information Services (IIS) 管理員]**中建立應用程式集區：  
+4.  在 **[Internet Information Services (IIS) 管理員]** 中建立應用程式集區：  
   
-    1.  在 **[Internet Information Services (IIS) 管理員]**的 **[連線]** 窗格中，展開本機伺服器節點。  
+    1.  在 **[Internet Information Services (IIS) 管理員]** 的 **[連線]** 窗格中，展開本機伺服器節點。  
   
     2.  以滑鼠右鍵按一下 **[應用程式集區]**，然後按一下 **[新增應用程式集區]**。  
   
@@ -248,7 +246,7 @@ IIS 5.0 版開始支援 Web 同步處理。 IIS 7.0 版或更新版本不提供 
   
 5.  將帳戶與應用程式集區相關聯：  
   
-    1.  在 **[Internet Information Services (IIS) 管理員]**中，展開本機伺服器節點，然後按一下 **[應用程式集區]**。  
+    1.  在 **[Internet Information Services (IIS) 管理員]** 中，展開本機伺服器節點，然後按一下 **[應用程式集區]**。  
   
     2.  以滑鼠右鍵按一下您先前建立的應用程式集區，然後按一下 **[設定應用程式集區預設值]**。  
   
@@ -264,11 +262,11 @@ IIS 5.0 版開始支援 Web 同步處理。 IIS 7.0 版或更新版本不提供 
   
 6.  讓應用程式集區與複寫網站產生關聯：  
   
-    1.  在 **[Internet Information Services (IIS) 管理員]**中，展開本機伺服器節點，然後按一下 **[預設的網站]** (或是您的 Web 同步處理網站，如果它與預設的網站不同的話)。  
+    1.  在 **[Internet Information Services (IIS) 管理員]** 中，展開本機伺服器節點，然後按一下 **[預設的網站]** (或是您的 Web 同步處理網站，如果它與預設的網站不同的話)。  
   
-    2.  在 **[動作]** 窗格的 **[管理網站]**底下，按一下 **[進階設定]**。  
+    2.  在 **[動作]** 窗格的 **[管理網站]** 底下，按一下 **[進階設定]**。  
   
-    3.  在 **[進階設定]** 對話方塊中，按一下 **[應用程式集區]**右側的省略符號按鈕。  
+    3.  在 **[進階設定]** 對話方塊中，按一下 **[應用程式集區]** 右側的省略符號按鈕。  
   
     4.  從 **[應用程式集區]** 下拉式清單中，選取您在步驟 4 中建立的應用程式集區，然後按一下 **[確定]**。  
   
@@ -318,7 +316,7 @@ IIS 5.0 版開始支援 Web 同步處理。 IIS 7.0 版或更新版本不提供 
   
 4.  在 [連接到 \<伺服器名稱>] 對話方塊中，指定合併代理程式要用來連接 IIS 的登入和密碼。 也可以在「新增訂閱精靈」中指定這些認證。  
   
-5.  在稱為 **[SQL Websync 診斷資訊]**的 Internet Explorer 視窗中，確認頁面中每個 **[狀態]** 資料行中的值都是 **[SUCCESS]**。  
+5.  在稱為 **[SQL Websync 診斷資訊]** 的 Internet Explorer 視窗中，確認頁面中每個 **[狀態]** 資料行中的值都是 **[SUCCESS]**。  
   
 6.  確定憑證已正確安裝於訂閱者端：  
   

@@ -4,14 +4,11 @@ ms.custom: ''
 ms.date: 06/28/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: ''
-ms.component: tables
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- dbe-tables
+ms.technology: table-view-index
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - removing constraints
 - CHECK constraints, deleting
@@ -23,13 +20,12 @@ caps.latest.revision: 14
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: On Demand
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: d6200c5f628e0dc4f9bc153f9f77d9a0a3d7b569
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 643dab8125fa028eb89148575aea9dd6077c5bba
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="delete-check-constraints"></a>刪除檢查條件約束
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -59,7 +55,7 @@ ms.lasthandoff: 04/16/2018
   
 #### <a name="to-delete-a-check-constraint"></a>若要刪除檢查條件約束  
   
-1.  在 **[物件總管]**中，展開含有檢查條件約束的資料表。  
+1.  在 **[物件總管]** 中，展開含有檢查條件約束的資料表。  
   
 2.  展開  **[條件約束]**。  
   
@@ -71,7 +67,7 @@ ms.lasthandoff: 04/16/2018
   
 #### <a name="to-delete-a-check-constraint"></a>若要刪除檢查條件約束  
   
-1.  在 **[物件總管]**中，連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的執行個體。  
+1.  在 **[物件總管]** 中，連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的執行個體。  
   
 2.  在標準列上，按一下 **[新增查詢]**。  
   

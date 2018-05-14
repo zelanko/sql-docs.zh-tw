@@ -4,14 +4,13 @@ ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.service: ''
 ms.component: replication
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql13.rep.configdistwizard.distproperties.general.f1
 helpviewer_keywords:
@@ -21,12 +20,11 @@ caps.latest.revision: 22
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 72a19533f68de783317fbea0b8305d9f474b50bb
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: e06ffa4473bf9f92509252b851e3e93a6b16beae
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="distributor-properties-general"></a>散發者屬性，一般
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -38,7 +36,7 @@ ms.lasthandoff: 04/16/2018
  **資料庫**  
  **[資料庫]** 屬性方格會顯示散發者上之散發資料庫的名稱與保留屬性。 **[交易保留]** 是為異動複寫儲存交易的時間長度 (交易保留也稱為散發保留)。 **[記錄保留]** 是為所有的複寫類型儲存記錄中繼資料的時間長度。 如需散發保留的詳細資訊，請參閱[訂閱逾期與停用](../../relational-databases/replication/subscription-expiration-and-deactivation.md)。  
   
- 按一下**[資料庫]**屬性方格中的屬性按鈕 ( **...** )，即可啟動 **[散發資料庫屬性]** 對話方塊。  
+ 按一下 **[資料庫]** 屬性方格中的屬性按鈕 ( **...** )，即可啟動 **[散發資料庫屬性]** 對話方塊。  
   
  **新增**  
  按一下即可建立新的散發資料庫。  

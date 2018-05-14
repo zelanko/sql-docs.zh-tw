@@ -4,14 +4,13 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.service: ''
 ms.component: maintenance-plans
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Maintenance Plan Design Surface
 ms.assetid: 2ef803ee-a9f8-454a-ad63-fedcbe6838d1
@@ -19,12 +18,11 @@ caps.latest.revision: 10
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 738e4846e7dcead475b8c8b5924e7b8fb359f97a
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: c05923ff7be5c1264f5801c1190c7297ea793b55
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="create-a-maintenance-plan-maintenance-plan-design-surface"></a>建立維護計畫 (維護計畫設計介面)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -100,7 +98,7 @@ ms.lasthandoff: 04/16/2018
      **設計師介面**  
      設計維護計畫並予以維護。 使用設計師介面即可將維護工作加入計畫、從計畫中移除工作、指定工作間的優先順序連結以及指出工作分支和平行處理原則。  
   
-     兩個工作間的優先順序連結會建立工作間的關聯性。 只有在第一個工作 (「前導工作」) 的執行結果符合指定的準則時，才會執行第二個工作 (「相依工作」)。 一般而言，指定的執行結果會是 **[成功]**、 **[失敗]**或 **[完成]**。 如需詳細資訊，請參閱以下的步驟 **8** 。  
+     兩個工作間的優先順序連結會建立工作間的關聯性。 只有在第一個工作 (「前導工作」) 的執行結果符合指定的準則時，才會執行第二個工作 (「相依工作」)。 一般而言，指定的執行結果會是 **[成功]**、 **[失敗]** 或 **[完成]**。 如需詳細資訊，請參閱以下的步驟 **8** 。  
   
 5.  在設計空間的標頭中，按兩下 [子計畫_1]，然後在 [子計畫屬性] 對話方塊中輸入子計畫的名稱和描述。  
   
@@ -122,7 +120,7 @@ ms.lasthandoff: 04/16/2018
   
 7.  若要建立子計畫，請從 **[工具箱]** 將工作流程元素拖放至計畫設計介面。 按兩下工作以開啟要設定工作選項的對話方塊。  
   
-     **[工具箱]**中有下列維護計畫工作：  
+     **[工具箱]** 中有下列維護計畫工作：  
   
     -   **備份資料庫工作**  
   
@@ -146,13 +144,13 @@ ms.lasthandoff: 04/16/2018
   
     -   **更新統計資料工作**  
   
-     若要將工作加入 **[工具箱]**中：  
+     若要將工作加入 **[工具箱]** 中：  
   
     1.  在 **[工具]** 功能表中按一下 **[選擇工具箱項目]**。  
   
-    2.  選取您要顯示在 **[工具箱]**中的工具，然後按一下 **[確定]**。  
+    2.  選取您要顯示在 **[工具箱]** 中的工具，然後按一下 **[確定]**。  
   
-     將維護計畫工作加入 **[工具箱]** 之後，這些工作也會出現在 **[維護計畫精靈]**中。 如需上述個別工作的詳細資訊，請參閱 [啟動維護計畫精靈](../../relational-databases/maintenance-plans/use-the-maintenance-plan-wizard.md#SSMSProcedure) 下的 **使用維護計畫精靈**。  
+     將維護計畫工作加入 **[工具箱]** 之後，這些工作也會出現在 **[維護計畫精靈]** 中。 如需上述個別工作的詳細資訊，請參閱 [啟動維護計畫精靈](../../relational-databases/maintenance-plans/use-the-maintenance-plan-wizard.md#SSMSProcedure) 下的 **使用維護計畫精靈**。  
   
 8.  若要定義工作之間的工作流程：  
   
@@ -209,7 +207,7 @@ ms.lasthandoff: 04/16/2018
   
     4.  在 [指定下列內容以連接到 SQL Server 資料] 底下的 [選取或輸入伺服器名稱] 方塊中，輸入要使用之 SQL Server 的名稱，或按一下省略符號 **(…)**，然後在 [SQL Server] 對話方塊中選取伺服器。 如果您從 **[SQL Server]** 對話方塊中選取伺服器，請按一下 **[確定]**。  
   
-    5.  在 **[輸入登入伺服器的資訊]**底下，選取 **[使用 Windows NT 整合式安全性]** 或 **[使用特定的使用者名稱和密碼]**。 如果您選擇使用特定的使用者名稱和密碼，請在 **[使用者名稱]** 和 **[密碼]** 方塊中分別輸入該資訊。  
+    5.  在 **[輸入登入伺服器的資訊]** 底下，選取 **[使用 Windows NT 整合式安全性]** 或 **[使用特定的使用者名稱和密碼]**。 如果您選擇使用特定的使用者名稱和密碼，請在 **[使用者名稱]** 和 **[密碼]** 方塊中分別輸入該資訊。  
   
     6.  在 **[連接屬性]** 對話方塊中，按一下 **[確定]**。  
   
@@ -219,7 +217,7 @@ ms.lasthandoff: 04/16/2018
   
     1.  在設計空間的工具列中，按一下 **[報表與記錄]**。  
   
-    2.  在 **[報表與記錄]** 對話方塊中的 **[報表]**底下，選取 **[產生文字檔報表]** 、 **[傳送報表至電子郵件收件者]** 或兩者。  
+    2.  在 **[報表與記錄]** 對話方塊中的 **[報表]** 底下，選取 **[產生文字檔報表]** 、 **[傳送報表至電子郵件收件者]** 或兩者。  
   
         1.  如果您選取 **[產生文字檔報表]**，請選取 **[建立新檔案]** 或 **[附加至檔案]**。  
   
@@ -230,7 +228,7 @@ ms.lasthandoff: 04/16/2018
             > [!NOTE]  
             >  SQL Server Agent 必須設定為使用 Database Mail，才能傳送郵件。 如需相關資訊，請參閱 [Configure SQL Server Agent Mail to Use Database Mail](../../relational-databases/database-mail/configure-sql-server-agent-mail-to-use-database-mail.md)  
   
-    3.  若要儲存更詳細的資訊，請在 **[記錄]**底下選取 **[記錄擴充資訊]**。  
+    3.  若要儲存更詳細的資訊，請在 **[記錄]** 底下選取 **[記錄擴充資訊]**。  
   
     4.  若要將維護計畫結果資訊寫入其他伺服器，請選取 **[記錄到遠端伺服器]** ，然後從 **[連接]** 清單中選取伺服器連接，或按一下 **[新增]** 並在 **[連接屬性]** 對話方塊中輸入連接資訊。  
   

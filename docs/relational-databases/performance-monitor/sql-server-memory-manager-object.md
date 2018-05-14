@@ -4,14 +4,13 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.service: ''
 ms.component: performance-monitor
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SQLServer:Memory Manager
 - Memory Manager object
@@ -20,12 +19,11 @@ caps.latest.revision: 29
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 2abe6f643c448be8411dfc4894b827eaedeb927d
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 89b69f14e131453519bbaae77f16d629444eb169
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sql-server-memory-manager-object"></a>SQL Server 的 Memory Manager 物件
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -55,7 +53,7 @@ ms.lasthandoff: 04/16/2018
 |**Memory Grants Outstanding**|指定成功取得工作空間記憶體授權的處理序總數。|  
 |**Memory Grants Pending**|指定等候工作空間記憶體授權的處理序總數。|  
 |**Optimizer Memory (KB)**|指定伺服器用於查詢最佳化的動態記憶體總數。|  
-|**Reserved Server Memory (KB)**|表示伺服器已保留供未來使用的記憶體數量。 這個計數器會顯示最初授與之記憶體 ( **Granted Workspace Memory (KB)**中所示) 的目前未使用數量。|  
+|**Reserved Server Memory (KB)**|表示伺服器已保留供未來使用的記憶體數量。 這個計數器會顯示最初授與之記憶體 ( **Granted Workspace Memory (KB)** 中所示) 的目前未使用數量。|  
 |**SQL Cache Memory (KB)**|指定伺服器用於動態 SQL 快取的動態記憶體總數。|  
 |**Stolen Server Memory (KB)**|指定伺服器用於資料庫頁面以外用途的記憶體數量。|  
 |**Target Server Memory (KB)**|指出伺服器可用的理想記憶體數量。|  

@@ -4,14 +4,13 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.service: ''
 ms.component: replication
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql13.rep.newpubwizard.generatefilters.f1
 ms.assetid: be28515c-5d6d-467b-b933-d7c8d97a45b4
@@ -19,12 +18,11 @@ caps.latest.revision: 26
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 358cb2414e93590789ac4f248d9e9718f9a08b3d
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 5dba7ad5bc651e279ad23a7876d196ef9316bb56
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="generate-filters"></a>產生篩選
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -39,7 +37,7 @@ ms.lasthandoff: 04/16/2018
   
 2.  **完成篩選陳述式來識別訂閱者將接收哪些資料表資料列。**  
   
-     定義新的篩選陳述式。 **[資料行]** 清單方塊會列出您要從 **[請選取要篩選的資料表]**中選取之資料表發行的所有資料行。 **[篩選陳述式]** 文字區域包括預設文字，其格式為：  
+     定義新的篩選陳述式。 **[資料行]** 清單方塊會列出您要從 **[請選取要篩選的資料表]** 中選取之資料表發行的所有資料行。 **[篩選陳述式]** 文字區域包括預設文字，其格式為：  
   
      `SELECT <published_columns> FROM [tableowner].[tablename] WHERE`  
   

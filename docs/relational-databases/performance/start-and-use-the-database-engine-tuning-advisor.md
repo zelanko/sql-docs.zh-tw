@@ -4,14 +4,13 @@ ms.custom: ''
 ms.date: 01/09/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.service: ''
 ms.component: performance
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql13.dta.workload.f1
 - sql13.dta.general.f1
@@ -26,12 +25,11 @@ caps.latest.revision: 33
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 8decab3a7a2bece72e381a2c1efc579e914df82c
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: b23898d9d14b75608d86518fa25ef750a9192d0c
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="start-and-use-the-database-engine-tuning-advisor"></a>啟動及使用 Database Engine Tuning Advisor
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -105,7 +103,7 @@ ms.lasthandoff: 04/16/2018
   
 1.  使用下列其中一種方法啟動 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] ：  
   
-    -   在 **[開始]** 功能表中，依序指向 **[所有程式]**、 **[Microsoft SQL Server]**與 **[效能工具]**，然後按一下 **[SQL Server Profiler]**。  
+    -   在 **[開始]** 功能表中，依序指向 **[所有程式]**、 **[Microsoft SQL Server]** 與 **[效能工具]**，然後按一下 **[SQL Server Profiler]**。  
   
     -   在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中，按一下 **[工具]** 功能表，然後按一下 **[SQL Server Profiler]**。  
   
@@ -168,7 +166,7 @@ ms.lasthandoff: 04/16/2018
   
 3.  選取 **[計畫快取]** 做為工作負載選項。 Database Engine Tuning Advisor 會選取計畫快取中前 1,000 個用於分析的事件。  
   
-4.  選取一個或多個想要微調的資料庫，並選擇性地從 **[選取的資料表]**中選擇每個資料庫中的一個或多個資料表。 若要包含所有資料庫的快取項目，請按一下 **[微調選項]**中的 **[進階選項]** ，然後核取 **[包含來自所有資料庫的計畫快取事件]**。  
+4.  選取一個或多個想要微調的資料庫，並選擇性地從 **[選取的資料表]** 中選擇每個資料庫中的一個或多個資料表。 若要包含所有資料庫的快取項目，請按一下 **[微調選項]** 中的 **[進階選項]** ，然後核取 **[包含來自所有資料庫的計畫快取事件]**。  
   
 5.  核取 **[儲存微調記錄]** ，以儲存微調記錄的副本。 若您不想儲存微調記錄的副本，請清除核取方塊。  
   
@@ -461,7 +459,7 @@ database_name.owner_name.table_name
  只包含加入索引檢視的建議。 不建議叢集與非叢集索引。  
   
  **包含篩選的索引**  
- 包含加入篩選之索引的建議。 如果您選取下列其中一個實體設計結構，將可以使用這個選項： **[索引與索引檢視]**、 **[索引]**或 **[非叢集索引]**。  
+ 包含加入篩選之索引的建議。 如果您選取下列其中一個實體設計結構，將可以使用這個選項： **[索引與索引檢視]**、 **[索引]** 或 **[非叢集索引]**。  
   
  **[索引]**  
  只包含加入叢集與非叢集索引的建議。 不建議索引檢視。  

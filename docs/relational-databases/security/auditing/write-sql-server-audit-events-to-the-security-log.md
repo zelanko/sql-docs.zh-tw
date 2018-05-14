@@ -4,14 +4,13 @@ ms.custom: ''
 ms.date: 09/21/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.service: ''
 ms.component: security
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - logs [SQL Server], Security Log
 - server audit [SQL Server]
@@ -22,12 +21,11 @@ caps.latest.revision: 19
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 2741717a635f0c92aceca76668a76a52bf5aacd4
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 401da6b1db47b518aa0bbf2f715e6044cf891c59
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="write-sql-server-audit-events-to-the-security-log"></a>將 SQL Server Audit 事件寫入安全性記錄檔  
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -80,7 +78,7 @@ ms.lasthandoff: 04/16/2018
   
 2.  輸入 **secpol.msc** ，然後按一下 **[確定]**。 如果出現 **[使用者存取控制]** 對話方塊，請按一下 **[繼續]**。  
   
-3.  在本機安全性原則工具中，依序展開 **[安全性設定]**和 **[本機原則]**，然後按一下 **[使用者權限指派]**。  
+3.  在本機安全性原則工具中，依序展開 **[安全性設定]** 和 **[本機原則]**，然後按一下 **[使用者權限指派]**。  
   
 4.  在結果窗格中，按兩下 [產生安全性稽核]。  
   
@@ -100,7 +98,7 @@ ms.lasthandoff: 04/16/2018
   
 2.  輸入 **secpol.msc** ，然後按一下 **[確定]**。 如果出現 **[使用者存取控制]** 對話方塊，請按一下 **[繼續]**。  
   
-3.  在本機安全性原則工具中，依序展開 **[安全性設定]**和 **[本機原則]**，然後按一下 **[稽核原則]**。  
+3.  在本機安全性原則工具中，依序展開 **[安全性設定]** 和 **[本機原則]**，然後按一下 **[稽核原則]**。  
   
 4.  在結果窗格中，按兩下 [稽核物件存取]。  
   

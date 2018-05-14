@@ -4,14 +4,12 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: ''
-ms.component: ssms-scripting
-ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
+ms.reviewer: ''
+ms.suite: sql
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - VS.TextEditor
 helpviewer_keywords:
@@ -34,13 +32,12 @@ caps.latest.revision: 53
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: On Demand
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 75cb4e91ef8d83db92db23b732786e4a3db7220b
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 2c221ac9d0c29ba7abfb6e5fa139a082db36e38d
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="query-and-text-editors-sql-server-management-studio"></a>查詢與文字編輯器 (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -67,7 +64,7 @@ ms.lasthandoff: 04/16/2018
  在「編輯器」中的文字或程式碼左側顯示行號。 您可以瀏覽至特定行號。  
   
  **自動換行**  
- 將很長的文字行或程式碼行分成數行來顯示，您便可以看到該文字行或程式碼行中的所有文字。 自動換行不會影響文字執行或列印時所呈現的方式。 請在 **[工具]**的 **[選項]** 對話方塊之 [文字編輯器]、[所有語言]、[一般] 頁面上，或在特定編輯器頁面上，開啟 [自動換行]。  
+ 將很長的文字行或程式碼行分成數行來顯示，您便可以看到該文字行或程式碼行中的所有文字。 自動換行不會影響文字執行或列印時所呈現的方式。 請在 **[工具]** 的 **[選項]** 對話方塊之 [文字編輯器]、[所有語言]、[一般] 頁面上，或在特定編輯器頁面上，開啟 [自動換行]。  
   
 ## <a name="code-editor-components"></a>程式碼編輯器元件  
  程式碼編輯器除了包含與文字和 XML 編輯器共用的功能之外，還包含下列功能：  

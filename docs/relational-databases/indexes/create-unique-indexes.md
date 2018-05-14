@@ -3,15 +3,12 @@ title: 建立唯一索引 | Microsoft Docs
 ms.custom: ''
 ms.date: 02/17/2017
 ms.prod: sql
-ms.prod_service: database-engine, sql-database
-ms.service: ''
-ms.component: indexes
+ms.prod_service: table-view-index, sql-database
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- dbe-indexes
+ms.technology: table-view-index
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - unique indexes
 - designing indexes [SQL Server], unique
@@ -21,16 +18,15 @@ helpviewer_keywords:
 - unique indexes, design guidelines
 ms.assetid: 56b5982e-cb94-46c0-8fbb-772fc275354a
 caps.latest.revision: 29
-author: barbkess
-ms.author: barbkess
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
-ms.workload: Active
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 652c81c2236ee63ba5ee3a61bef2026d0c9a8f49
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 55978e2d4501470c3ddddfd830fe9ca391ef7151
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="create-unique-indexes"></a>建立唯一索引
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -124,13 +120,13 @@ ms.lasthandoff: 04/16/2018
   
 8.  選取 [資料行]，然後按一下省略符號 **(…)**。  
   
-9. 在 **[索引資料行]** 對話方塊中的 **[資料行名稱]**底下，選取要進行索引的資料行。 您最多可以選取 16 個資料行。 為了獲得最佳效能，每個索引最好只選取一或兩個資料行。 針對每個選取的資料行，指示索引是要以遞增或遞減順序排列此資料行的值。  
+9. 在 **[索引資料行]** 對話方塊中的 **[資料行名稱]** 底下，選取要進行索引的資料行。 您最多可以選取 16 個資料行。 為了獲得最佳效能，每個索引最好只選取一或兩個資料行。 針對每個選取的資料行，指示索引是要以遞增或遞減順序排列此資料行的值。  
   
 10. 選取索引的所有資料行時，請按一下 **[確定]**。  
   
 11. 在方格的 [(一般)] 底下，選取 [是唯一的]，然後從清單中選擇 [是]。  
   
-12. 選擇性：在主要方格中的 **[資料表設計工具]**底下，選取 **[忽略重複的索引鍵]** ，然後從清單選擇 **[是]** 。 如果您要忽略會在唯一的索引中建立重複索引鍵的加入資料嘗試，請執行這個動作。  
+12. 選擇性：在主要方格中的 **[資料表設計工具]** 底下，選取 **[忽略重複的索引鍵]** ，然後從清單選擇 **[是]** 。 如果您要忽略會在唯一的索引中建立重複索引鍵的加入資料嘗試，請執行這個動作。  
   
 13. 按一下 [ **關閉**]。  
   
@@ -150,7 +146,7 @@ ms.lasthandoff: 04/16/2018
   
 6.  選取 **[唯一]** 核取方塊。  
   
-7.  按一下 **[索引鍵資料行]**底下的 **[加入]**。  
+7.  按一下 **[索引鍵資料行]** 底下的 **[加入]**。  
   
 8.  在 [從 <資料表名稱> 選取資料行] 對話方塊中，選取要新增至唯一索引之一或多個資料表資料行的核取方塊。  
   
@@ -162,7 +158,7 @@ ms.lasthandoff: 04/16/2018
   
 #### <a name="to-create-a-unique-index-on-a-table"></a>在資料表上建立唯一索引  
   
-1.  在 **[物件總管]**中，連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的執行個體。  
+1.  在 **[物件總管]** 中，連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的執行個體。  
   
 2.  在標準列上，按一下 **[新增查詢]**。  
   

@@ -3,15 +3,12 @@ title: 停用 INSERT 與 UPDATE 陳述式的檢查條件約束 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
-ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: ''
-ms.component: tables
+ms.prod_service: table-view-index, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- dbe-tables
+ms.technology: table-view-index
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - CHECK constraints, disabling
 - constraints [SQL Server], disabling
@@ -22,13 +19,12 @@ caps.latest.revision: 17
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: On Demand
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 0021a418c6ad0d4145b497468575dd19da26d634
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: b744df6bf76be6a5d393c865acc9ee7f0fc693be
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="disable-check-constraints-with-insert-and-update-statements"></a>使用 INSERT 與 UPDATE 陳述式停用檢查條件約束
 [!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
@@ -58,11 +54,11 @@ ms.lasthandoff: 04/16/2018
   
 #### <a name="to-disable-a-check-constraint-for-insert-and-update-statements"></a>若要停用 INSERT 和 UPDATE 陳述式的檢查條件約束  
   
-1.  在 **[物件總管]**中，展開含有條件約束的資料表，然後展開 **[條件約束]** 資料夾。  
+1.  在 **[物件總管]** 中，展開含有條件約束的資料表，然後展開 **[條件約束]** 資料夾。  
   
 2.  以滑鼠右鍵按一下條件約束，然後選取 **[修改]**。  
   
-3.  在 **[資料表設計工具]**底下的方格中，按一下 **[於 INSERT 及 UPDATE 時強制套用]** ，然後從下拉式功能表中選取 **[否]** 。  
+3.  在 **[資料表設計工具]** 底下的方格中，按一下 **[於 INSERT 及 UPDATE 時強制套用]** ，然後從下拉式功能表中選取 **[否]** 。  
   
 4.  按一下 [ **關閉**]。  
   
@@ -70,7 +66,7 @@ ms.lasthandoff: 04/16/2018
   
 #### <a name="to-disable-a-check-constraint-for-insert-and-update-statements"></a>若要停用 INSERT 和 UPDATE 陳述式的檢查條件約束  
   
-1.  在 **[物件總管]**中，連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的執行個體。  
+1.  在 **[物件總管]** 中，連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的執行個體。  
   
 2.  在標準列上，按一下 **[新增查詢]**。  
   
