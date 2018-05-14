@@ -3,15 +3,15 @@ title: 一般屬性 |Microsoft 文件
 ms.date: 05/03/2018
 ms.prod: sql
 ms.technology: analysis-services
-ms.component: ''
+ms.custom: ''
 ms.topic: conceptual
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 15f7d1651663a70ba3eb429c6c4ba52c4a4e9154
-ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
-ms.translationtype: HT
+ms.openlocfilehash: 822e55d7609a4e71bf01efc0bad4e486377783b2
+ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/10/2018
 ---

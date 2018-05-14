@@ -5,18 +5,16 @@ author: annashres
 ms.author: anshrest
 manager: craigg
 ms.date: 10/02/2017
-ms.topic: article
+ms.topic: conceptual
 ms.prod: sql
-ms.prod_service: database-engine
-ms.component: ''
 ms.suite: sql
 ms.custom: sql-linux
-ms.technology: database-engine
-ms.openlocfilehash: 278b53003fd04ccc8692b205124c85ca366f96f7
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.technology: linux
+ms.openlocfilehash: 66275b164e1d6514d04e0c8a6f1a666de0a02425
+ms.sourcegitcommit: df382099ef1562b5f2d1cd506c1170d1db64de41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/12/2018
 ---
 # <a name="customer-feedback-for-sql-server-on-linux"></a>SQL Server on Linux 的客戶意見反應
 

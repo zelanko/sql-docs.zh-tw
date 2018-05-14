@@ -2,16 +2,16 @@
 title: StatusGraphic 元素 (ASSL) |Microsoft 文件
 ms.date: 5/8/2018
 ms.prod: sql
-ms.component: assl
+ms.custom: assl
 ms.reviewer: owend
 ms.technology: analysis-services
 ms.topic: reference
 author: minewiskan
 ms.author: owend
 manager: kfile
-ms.openlocfilehash: 0caf023d5405b6b97b24f733a59624d0d7dea9bd
-ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
-ms.translationtype: HT
+ms.openlocfilehash: 0824eb04dc7d9558c4f5c8ff9531014e007a7a64
+ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/10/2018
 ---

@@ -2,16 +2,16 @@
 title: ImpersonationInfoSecurity 元素 (ASSL) |Microsoft 文件
 ms.date: 5/8/2018
 ms.prod: sql
-ms.component: assl
+ms.custom: assl
 ms.reviewer: owend
 ms.technology: analysis-services
 ms.topic: reference
 author: minewiskan
 ms.author: owend
 manager: kfile
-ms.openlocfilehash: 1ef6ba6b96e734ec536d3089e86fc6f8fb54e7a7
-ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
-ms.translationtype: HT
+ms.openlocfilehash: 757f96c00ab9041a8d85950e7603ec49bf21b1a8
+ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/10/2018
 ---

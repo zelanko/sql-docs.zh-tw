@@ -2,16 +2,16 @@
 title: 處理元素 (ASSL) |Microsoft 文件
 ms.date: 5/8/2018
 ms.prod: sql
-ms.component: assl
+ms.custom: assl
 ms.reviewer: owend
 ms.technology: analysis-services
 ms.topic: reference
 author: minewiskan
 ms.author: owend
 manager: kfile
-ms.openlocfilehash: af17ac3156cbfb1e0adb14a9195832b500350d3e
-ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
-ms.translationtype: HT
+ms.openlocfilehash: e646858624a00765b0a954019542599d1a69492e
+ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/10/2018
 ---

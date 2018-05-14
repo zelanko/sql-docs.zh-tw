@@ -2,16 +2,16 @@
 title: 值元素 (ASSL) |Microsoft 文件
 ms.date: 5/8/2018
 ms.prod: sql
-ms.component: assl
+ms.custom: assl
 ms.reviewer: owend
 ms.technology: analysis-services
 ms.topic: reference
 author: minewiskan
 ms.author: owend
 manager: kfile
-ms.openlocfilehash: 262bdf0348f3270c88eed90c31524626502e4a87
-ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
-ms.translationtype: HT
+ms.openlocfilehash: 9acc8856dfaaa250d1addc8bd1df72325a5d86c7
+ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/10/2018
 ---

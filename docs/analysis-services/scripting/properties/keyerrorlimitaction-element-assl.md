@@ -2,16 +2,16 @@
 title: KeyErrorLimitAction 元素 (ASSL) |Microsoft 文件
 ms.date: 5/8/2018
 ms.prod: sql
-ms.component: assl
+ms.custom: assl
 ms.reviewer: owend
 ms.technology: analysis-services
 ms.topic: reference
 author: minewiskan
 ms.author: owend
 manager: kfile
-ms.openlocfilehash: 7b78301e9fab54f4770d781d49ebded8dab10ba4
-ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
-ms.translationtype: HT
+ms.openlocfilehash: b154c9724ab96cea713437d3fe8ccecb9d0913b5
+ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/10/2018
 ---

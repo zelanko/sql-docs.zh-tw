@@ -8,11 +8,11 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 77cc91c4d0a9fbe339e92705a71a3a8642de5563
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: fa1ed2612fb88653a7259af0675b496fac4a6723
+ms.sourcegitcommit: df382099ef1562b5f2d1cd506c1170d1db64de41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 05/12/2018
 ---
 # <a name="install-new-python-packages-on-sql-server"></a>SQL Server 上安裝新的 Python 封裝
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -123,13 +123,13 @@ import cntk as cntk
 cntk._version_
 ```
 
-##  <a name="how-to-view-installed-packages-using-conda"></a>如何檢視已安裝的封裝使用 conda
+## <a name="list-installed-packages-using-conda"></a>列出已安裝的封裝使用 conda
 
 有不同的方式，您可以取得已安裝的封裝清單。 例如，您可以檢視已安裝的封裝中**Python 環境**的 Visual Studio 視窗。
 
-如果您使用 Python 命令列，您可以使用**conda**封裝管理員，就會包含與 SQL Server 安裝程式新增 Anaconda Python 環境。
+如果您使用 Python 命令列，您可以使用**Pip**或**conda**封裝管理員 中，隨附於 SQL Server 安裝程式新增 Anaconda Python 環境。
 
-假設您將指令碼 資料夾加入 PATH 環境變數，列出 Python 環境中的封裝管理員命令提示字元中執行此命令。
+假設您將指令碼 資料夾加入 PATH 環境變數，列出 Python 環境中的封裝管理員命令提示字元中執行此命令。 否則，請參閱[取得 R，並將 Python 封裝資訊](../r/determine-which-packages-are-installed-on-sql-server.md#pip-conda)如何在 SQL Server 中執行的 Python 工具上的指標。
 
 ```python
 conda list

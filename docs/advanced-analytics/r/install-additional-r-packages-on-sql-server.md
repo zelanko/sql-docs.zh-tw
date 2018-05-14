@@ -3,82 +3,48 @@ title: SQL Server 機器學習服務上安裝新的 R 封裝 |Microsoft 文件
 description: 將新的 R 封裝加入至 SQL Server 2016 R Services 或 SQL Server 2017 機器學習服務 （資料庫）
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 05/08/2018
+ms.date: 05/10/2018
 ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 57c5d4b9c3584a4aa556b1f4b6f7541a14f91a00
-ms.sourcegitcommit: 1aedef909f91dc88dc741748f36eabce3a04b2b1
-ms.translationtype: HT
+ms.openlocfilehash: 1106d0f1505f29a3b54f9fc036fcaf28b8715b75
+ms.sourcegitcommit: feff98b3094a42f345a0dc8a31598b578c312b38
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 05/11/2018
 ---
 # <a name="install-new-r-packages-on-sql-server"></a>SQL Server 上安裝新的 R 封裝
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-本文說明如何安裝新的 R 封裝在已啟用機器學習的 SQL Server 執行個體。
+本文說明如何安裝新的 R 封裝在已啟用機器學習的 SQL Server 執行個體。 有多種方法，如安裝新的 R 封裝，根據您擁有 SQL server 版本，以及伺服器是否有網際網路連線。
 
-有多種方法，如安裝新的 R 封裝，根據您擁有 SQL server 版本，以及伺服器是否有網際網路存取。
+## <a name="bkmk_rInstall"></a> 安裝 R 封裝，透過網際網路連接
 
-+ [安裝新的封裝，使用具有網際網路存取權的 R 工具](#bkmk_rInstall)
-
-    若要從網際網路安裝封裝中使用傳統的 R 命令。 這是最簡單的方法，但是需要系統管理權限。
-
-    **適用於：**[!INCLUDE[sssql15-md](../../includes/sssql15-md.md)][!INCLUDE[rsql-productname-md](../../includes/rsql-productname-md.md)]。 也所需的執行個體[!INCLUDE[sssql17-md](../../includes/sssql17-md.md)][!INCLUDE[rsql-productnamenew-md](../../includes/rsql-productnamenew-md.md)]封裝管理透過 Ddl 其中尚未啟用。
-
-+ [伺服器上安裝新的 R 封裝**沒有**網際網路存取](#bkmk_offlineInstall)
-
-    如果伺服器沒有網際網路存取，一些額外的步驟準備所需的封裝。 本章節描述如何準備安裝封裝及其相依性所需的檔案。
-
-+ [使用建立外部程式庫陳述式安裝封裝](#bkmk_createlibrary) 
-
-    [建立外部程式庫](https://docs.microsoft.com/sql/t-sql/statements/create-external-library-transact-sql)陳述式所提供的 SQL Server 2017，使建立但不執行 R 封裝程式庫，或直接 Python 程式碼。 不過，此方法需要您事先準備所有必要的封裝，且需要額外的資料庫權限。
-
-    **適用於：** [!INCLUDE[sssql17-md](../../includes/sssql17-md.md)] [!INCLUDE[rsql-productnamenew-md](../../includes/rsql-productnamenew-md.md)]; 其他限制也適用
-
-## <a name="bkmk_rInstall"></a> 安裝新的 R 封裝，使用網際網路
-
-您可以使用標準的 R 工具來安裝新的封裝上的 SQL Server 2016 或 SQL Server 2017 執行個體。 此程序，您都必須在電腦上的系統管理員。
+您可以使用標準的 R 工具來安裝新的封裝上的 SQL Server 2016 執行個體或 SQL Server 2017，提供在電腦已開啟的連接埠 80，並可讓系統管理員權限。
 
 > [!IMPORTANT] 
 > 請務必要與目前的執行個體相關聯的預設文件庫安裝封裝。 永遠不會安裝到使用者目錄的封裝。
 
-此程序描述如何安裝封裝使用 RGui;不過，您可以使用 RTerm 或任何其他 R 命令列工具，可支援高的存取權限。
+此程序使用 RGui，但您可以使用 RTerm 或任何其他 R 命令列工具，可支援高的存取權限。
 
-### <a name="install-a-package-using-rgui-or-rterm"></a>使用 RGui 或 RTerm 安裝封裝
+### <a name="install-a-package-using-rgui"></a>使用 RGui 安裝封裝
 
-1. 瀏覽至伺服器上安裝的執行個體的 R 程式庫的資料夾。
+1. [判斷執行個體文件庫的位置](installing-and-managing-r-packages.md)。 瀏覽至安裝 R 工具的資料夾。 例如，SQL Server 2017 預設執行個體的預設路徑如下所示： `C:\Program Files\MSSQL14.MSSQLSERVER\R_SERVICES\bin\x64`
 
-  **預設執行個體**
+1. 以滑鼠右鍵按一下 RGui.exe，然後選取**系統管理員身分執行**。 如果您沒有必要的權限，請連絡資料庫管理員，並提供您需要的套件清單。
 
-    SQL Server 2017: `C:\Program Files\MSSQL14.MSSQLSERVER\R_SERVICES\bin\x64`
-    
-    SQL Server 2016: `C:\Program Files\MSSQL13.MSSQLSERVER\R_SERVICES\bin\x64`
+1. 從命令列中，如果您知道封裝名稱，您可以輸入：`install.packages("the_package-name")`雙引號所需的封裝名稱。
 
-  **具名執行個體**
+1. 當系統要求您的鏡像網站，選取對您位置而言方便的任何網站。
 
-    SQL Server 2017: `C:\Program files\MSSQL14.<instanceName>\R_SERVICES\bin\x64`
-    
-    SQL Server 2016: `C:\Program files\MSSQL13.<instanceName>\R_SERVICES\bin\x64`
+如果目標封裝相依於其他封裝，R 安裝程式會自動下載相依性，並讓您將進行安裝。
 
-  如果您已使用繫結，若要升級的機器學習服務元件，可能已變更路徑。 安裝新的封裝之前，務必檢查執行個體路徑。 
-
-2. 以滑鼠右鍵按一下 RGui.exe，然後選取**系統管理員身分執行**。
-
-    如果您沒有必要的權限，請連絡資料庫管理員，並提供您需要的套件清單。
-
-3. 從命令列中，如果您知道封裝名稱，您可以輸入：`install.packages("the_package-name")`雙引號所需的封裝名稱。
-
-4. 當系統要求您的鏡像網站，選取對您位置而言方便的任何網站。
-
-5. 如果目標封裝相依於其他封裝，R 安裝程式會自動下載相依性，並讓您將進行安裝。
-
-6. 每個執行個體是在您要使用的封裝，請分別執行安裝。 封裝無法執行個體之間共用。
+如果您有多個執行個體的 SQL Server，並存的執行個體的 SQL Server 2016 R 服務和 SQL Server 2017 機器學習服務，例如執行分別為每個執行個體的安裝，如果您想要使用這兩種內容中的封裝。 封裝無法執行個體之間共用。
 
 ## <a name = "bkmk_offlineInstall"></a> 使用的 R 工具的離線安裝
 
-若要在沒有網際網路存取的伺服器上安裝 R 封裝，您必須：
+如果伺服器沒有網際網路存取，不需要其他步驟以準備封裝。 若要在沒有網際網路存取的伺服器上安裝 R 封裝，您必須：
 
 + 事先分析相依性。
 + 目標套件下載至具有網際網路存取的電腦。
@@ -96,21 +62,9 @@ ms.lasthandoff: 05/08/2018
 
 1. 複製封裝壓縮檔案，或多個封裝，完整的儲存機制包含中的所有封裝壓縮格式，伺服器可以存取的位置。
 
-2. 開啟伺服器上安裝的執行個體的 R 程式庫的資料夾。 例如，如果您使用 Windows 命令提示字元，瀏覽至 RTerm.Exe 或 RGui.exe 的所在位置的目錄中。
+2. 開啟伺服器上安裝 R 工具的執行個體所在的資料夾。 例如，如果您使用 SQL Server 2016 R Services 的系統上的 Windows 命令提示字元，切換至`C:\Program Files\MSSQL13.MSSQLSERVER\R_SERVICES\bin\x64`。
 
-  **預設執行個體**
-
-    SQL Server 2017: `C:\Program Files\MSSQL14.MSSQLSERVER\R_SERVICES\bin\x64`
-    
-    SQL Server 2016: `C:\Program Files\MSSQL13.MSSQLSERVER\R_SERVICES\bin\x64`
-
-  **具名執行個體**
-
-    SQL Server 2017: `C:\Program files\MSSQL14.<instanceName>\R_SERVICES\bin\x64`
-    
-    SQL Server 2016: `C:\Program files\MSSQL13.<instanceName>\R_SERVICES\bin\x64`
-
-3. RGui 或命令提示字元上按一下滑鼠右鍵，然後選取**系統管理員身分執行**。
+3. 以滑鼠右鍵按一下 RGui 或 RTerm，然後選取**系統管理員身分執行**。
 
 4. 執行 R 指令`install.packages`並指定封裝或儲存機制名稱和壓縮檔案的位置。
 
@@ -122,17 +76,17 @@ ms.lasthandoff: 05/08/2018
 
     如果任何必要的封裝不會出現在執行個體文件庫，zip 檔案中找不到目標套件的安裝將會失敗。
 
-## <a name="bkmk_createlibrary"></a> 若要安裝封裝中使用 DDL 陳述式 
+## <a name="bkmk_createlibrary"></a> 使用建立的外部文件庫
 
-在 SQL Server 2017，您可以使用[建立外部程式庫](https://docs.microsoft.com/sql/t-sql/statements/create-external-library-transact-sql)陳述式來加入執行個體或特定資料庫的封裝的集合。 此 DDL 陳述式和支援的資料庫角色被為了促進安裝和管理封裝的資料庫擁有者而不需要使用 R 或 Python 工具。
+**適用於：**  [!INCLUDE[sssql17-md](../../includes/sssql17-md.md)] [!INCLUDE[rsql-productnamenew-md](../../includes/rsql-productnamenew-md.md)]
 
-此程序需要一些準備工作，相較於安裝封裝使用傳統的 R 或 Python 方法。
+[建立外部程式庫](https://docs.microsoft.com/sql/t-sql/statements/create-external-library-transact-sql)陳述式會讓您能夠加入封裝一組特定資料庫或執行個體而不需執行 R 或直接 Python 程式碼。 不過，此方法需要封裝準備和其他資料庫的權限。
 
-+ 必須是所有的封裝，可做為壓縮檔案，在本機，而不是從網際網路下載。
++ 所有封裝必須是可當做本機的 zip 檔案，而不是視需要從網際網路下載。
 
     如果您在伺服器上沒有存取檔案系統，您也可以傳遞完整的封裝為變數，使用一種二進位格式。 如需詳細資訊，請參閱[建立外部程式庫](../../t-sql/statements/create-external-library-transact-sql.md)。
 
-+ 如果沒有套件所需，陳述式將會失敗。 您必須分析您想要安裝並確定封裝會上載到伺服器和資料庫的封裝的相依性。 我們建議您使用**miniCRAN**或**igraph**分析封裝相依性。
++ 必須由名稱和版本，所有相依性，並將其併入 zip 檔案。 如果封裝未提供，包括下游封裝相依性所需，陳述式將會失敗。 我們建議您使用**miniCRAN**或**igraph**分析封裝相依性。 安裝的封裝或封裝的相依性版本錯誤也可能導致陳述式失敗。 
 
 + 您必須在資料庫上的必要權限。 如需詳細資訊，請參閱[建立外部程式庫](https://docs.microsoft.com/sql/t-sql/statements/create-external-library-transact-sql)。
 
@@ -167,19 +121,7 @@ ms.lasthandoff: 05/08/2018
     library(randomForest)'
     ```
 
-### <a name="known-issues-with-create-external-library"></a>建立外部程式庫的已知的問題
-
-在這些情況下支援建立外部程式庫：
-
-+ 您正在安裝單一封裝不含相依性。
-+ 您要安裝封裝的相依性，並已經事先備妥所有封裝。 
-
-如果遺漏任何封裝相依性，就會失敗的 DDL 陳述式。 例如，已知安裝程序無法在這些情況下：
-
-+ 安裝第二個層級相依性的封裝，您的分析未延伸到第二個層級的封裝。 例如，您要安裝**gglot2**，和識別資訊清單中列出的所有封裝; 不過，這些封裝未安裝其他相依性。
-+ 您已安裝一組需要不同版本的支援封裝的封裝，而且您的伺服器有錯誤的版本。
-
-## <a name="package-installation-tips"></a>封裝安裝秘訣
+## <a name="tips-for-package-installation"></a>封裝安裝的秘訣
 
 本節提供各種的秘訣和 SQL Server 上的 R 封裝安裝相關的常見問題。
 
@@ -219,18 +161,14 @@ R 封裝經常會相依於其他的多個封裝，其中有些可能無法使用
 如果您需要安裝多個封裝，或想要確保您的組織中每個人都取得正確的封裝類型和版本，我們建議您使用[miniCRAN](https://mran.microsoft.com/package/miniCRAN)封裝来分析的完整相依性鏈結。 minicRAN 建立可以在多個使用者或電腦間共用的本機儲存機制。 如需詳細資訊，請參閱[建立本機封裝儲存機制使用 miniCRAN](create-a-local-package-repository-using-minicran.md)。
 
 
-### <a name="know-which-library-you-are-using-for-installation"></a>知道您要用於安裝的程式庫
+### <a name="know-which-library-you-are-installing-to-and-which-packages-are-already-installed"></a>知道您要安裝哪一個程式庫，以及已安裝的封裝。
 
 如果您先前已修改 R 環境的電腦上，安裝任何項目之前，暫停時間，並確保 R 環境變數`.libPath`會使用單一路徑。
 
-這個路徑應該指向 R_SERVICES 資料夾執行個體。 如需詳細資訊，請參閱[與 SQL Server 一起安裝的 R 封裝](installing-and-managing-r-packages.md)。
+這個路徑應該指向 R_SERVICES 資料夾執行個體。 如需詳細資訊，包括如何判斷已安裝的封裝，請參閱[與 SQL Server 一起安裝的 R 封裝](installing-and-managing-r-packages.md)。
 
-### <a name="side-by-side-installation-with-r-server"></a>使用 R Server-並存安裝
+### <a name="side-by-side-installation-with-standalone-r-or-python-servers"></a>與獨立 R 或 Python 伺服器-並存安裝
 
-如果您已安裝 Microsoft 機器學習伺服器 （獨立） 以及 SQL Server 機器學習服務，您的電腦應該有重複項目，所有的 R 工具和程式庫的每個個別安裝的 R。
+如果您已安裝 SQL Server 2017 Microsoft Machine Learning 伺服器 （獨立） 或 SQL Server 2016 R 伺服器 （獨立），除了資料庫中的分析 （SQL Server 2017 機器學習服務和 SQL Server 2016 R Services），您的電腦具有分隔重複項目，所有的 R 工具和程式庫的每個安裝的 R。
 
-僅供 Microsoft R Server R_SERVER 程式庫安裝套件，並無法透過 SQL Server 存取。 務必使用`R_SERVICES`安裝您想要使用 SQL Server 中的封裝時，程式庫。
-
-### <a name="how-to-determine-which-packages-are-already-installed"></a>如何判斷已安裝哪個封裝？
-
- 請參閱[與 SQL Server 一起安裝的 R 封裝](installing-and-managing-r-packages.md)
+封裝安裝至 R_SERVER 文件庫只由獨立伺服器，並無法存取 SQL Server （資料庫） 執行個體。 一律使用`R_SERVICES`安裝您想要使用 SQL Server 上的資料庫中的封裝時，程式庫。

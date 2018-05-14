@@ -3,17 +3,17 @@ title: DMSCHEMA_MINING_SERVICES 資料列集 |Microsoft 文件
 ms.date: 05/03/2018
 ms.prod: sql
 ms.technology: analysis-services
-ms.component: schema-rowsets
+ms.custom: schema-rowsets
 ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 5e01e9a31c182ffc68800b1c159f88d26c9611ac
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 0cf94fa4fb22e38ac52513d2dba52500df3bb9d5
+ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="dmschemaminingservices-rowset"></a>DMSCHEMA_MINING_SERVICES 資料列集
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]

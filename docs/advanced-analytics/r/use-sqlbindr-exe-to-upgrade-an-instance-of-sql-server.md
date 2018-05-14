@@ -8,11 +8,11 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: f58eb498843c259c4bc9ac9a5d453456dac21b54
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: aa67fbf2480de093ffe2f919e9c50ee2d5082b83
+ms.sourcegitcommit: df382099ef1562b5f2d1cd506c1170d1db64de41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 05/12/2018
 ---
 # <a name="upgrade-machine-learning-r-and-python-components-in-sql-server-instances"></a>升級 SQL Server 執行個體中的機器學習 （R 和 Python） 元件
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -305,9 +305,9 @@ Microsoft 的機器學習 Server 9.2.1 和 9.3 並沒有此問題。
 
 <a name="sqlbinder-error-codes"><a/>
 
-### <a name="errors"></a>錯誤
+## <a name="binding-errors"></a>繫結錯誤
 
-工具會傳回下列錯誤訊息：
+MLS Installer 和 SqlBindR 會傳回下列錯誤碼和訊息。
 
 |錯誤碼  | 訊息           | 詳細資料               |
 |------------|-------------------|-----------------------|
@@ -317,7 +317,7 @@ Microsoft 的機器學習 Server 9.2.1 和 9.3 並沒有此問題。
 |繫結錯誤 3 | 無效的執行個體 | 執行個體存在，但不是有效的繫結。 |
 |繫結錯誤 4 | 不繫結 | |
 |繫結錯誤 5 | 已繫結 | 您執行了 *bind* 命令，但指定的執行個體已經繫結。 |
-|繫結錯誤 6 | 繫結失敗 | 解除繫結執行個體時發生錯誤。 如果您執行 MLS 安裝程式，而不選取任何功能，就會發生此錯誤。|
+|繫結錯誤 6 | 繫結失敗 | 解除繫結執行個體時發生錯誤。 如果您執行 MLS 安裝程式，而不選取任何功能，就會發生此錯誤。 繫結會要求您選取 MSSQL 執行個體和 R 和 Python，假定執行個體是 SQL Server 2017。|
 |繫結錯誤 7 | 未繫結 | 資料庫引擎執行個體有 R Services 或 SQL Server 機器學習服務。 執行個體未繫結到 Microsoft 機器學習服務伺服器。 |
 |繫結錯誤 8 | 解除繫結失敗 | 解除繫結執行個體時發生錯誤。 |
 |繫結錯誤 9 | 找不到任何執行個體 | 找不到此電腦上的任何 database engine 執行個體。 |

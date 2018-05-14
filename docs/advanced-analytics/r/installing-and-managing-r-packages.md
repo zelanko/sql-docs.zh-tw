@@ -8,11 +8,11 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 48fb451e35f58cf606c47cd64cf5f9093069c274
-ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
-ms.translationtype: HT
+ms.openlocfilehash: 9df4ec00d1800ebfbe8725d26d4bf220eda49566
+ms.sourcegitcommit: feff98b3094a42f345a0dc8a31598b578c312b38
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 05/11/2018
 ---
 # <a name="default-r-and-python-packages-in-sql-server"></a>在 SQL Server 中的預設 R，並將 Python 封裝
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -31,23 +31,23 @@ ms.lasthandoff: 05/10/2018
 
 ### <a name="in-database-engine-instance-file-paths"></a>在 Database engine 執行個體的檔案路徑
 
-下表顯示的檔案位置的 R，並將 Python 版本和資料庫引擎執行個體組合。 
+下表顯示的檔案位置的 R，並將 Python 版本和資料庫引擎執行個體組合。 MSSQL13 表示 SQL Server 2016，並且僅 R。 MSSQL14 指出 SQL Server 2017，而且 R 和 Python 的資料夾。 
 
-|版本 | 執行個體名稱|預設路徑|
-|--------|--------------|------------|
-| SQL Server 2016 |預設執行個體| C:\Program Files\Microsoft SQL Server\MSSQL13。MSSQLSERVER\R_SERVICES\library|
-| SQL Server 2016 |具名執行個體 (named instance) | C:\Program Files\Microsoft SQL Server\MSSQL13。 < instance_name > \R_SERVICES\library|
-| R 與 SQL Server 2017|預設執行個體 | C:\Program Files\Microsoft SQL Server\MSSQL14。MSSQLSERVER\R_SERVICES\library |
-| R 與 SQL Server 2017|具名執行個體 (named instance)| C:\Program Files\Microsoft SQL Server\MSSQL14。MyNamedInstance\R_SERVICES\library |
-| SQL Server 2017 使用 Python |預設執行個體 | C:\Program Files\Microsoft SQL Server\MSSQL14。MSSQLSERVER\PYTHON_SERVICES\library |
-| SQL Server 2017 使用 Python|具名執行個體 (named instance)| C:\Program Files\Microsoft SQL Server\MSSQL14。 < instance_name > \PYTHON_SERVICES\library |
+檔案路徑也會包含執行個體名稱。 SQL Server 安裝[資料庫引擎執行個體](../../database-engine/configure-windows/database-engine-instances-sql-server.md)當做預設執行個體 (MSSQLSERVER) 或使用者定義的具名執行個體。 如果 SQL Server 安裝為具名執行個體，您會看到該名稱後面附加，如下所示： `MSSQL13.<instance_name>`。
+
+|版本和語言  | 預設路徑|
+|----------------------|------------|
+| SQL Server 2016 |C:\Program Files\Microsoft SQL Server\MSSQL13。MSSQLSERVER\R_SERVICES\library|
+| R 與 SQL Server 2017|C:\Program Files\Microsoft SQL Server\MSSQL14。MSSQLSERVER\R_SERVICES\library |
+| SQL Server 2017 使用 Python |C:\Program Files\Microsoft SQL Server\MSSQL14。MSSQLSERVER\PYTHON_SERVICES\Lib\site 封裝 |
+
 
 ### <a name="standalone-server-file-paths"></a>獨立伺服器的檔案路徑 
 
 安裝 SQL Server 2016 R 伺服器 （獨立） 或 SQL Server 2017 機器學習伺服器 （獨立） 伺服器時下, 表列出的二進位檔的預設路徑。 
 
 |版本| 安裝|預設路徑|
-|------|------|------|
+|-------|-------------|------------|
 | SQL Server 2016|R Server (Standalone)| C:\Program Files\Microsoft SQL Server\130\R_SERVER|
 |SQL Server 2017|機器學習服務伺服器，以 R |C:\Program Files\Microsoft SQL Server\140\R_SERVER|
 |SQL Server 2017|機器學習服務伺服器，使用 Python |C:\Program Files\Microsoft SQL Server\140\PYTHON_SERVER|
@@ -61,17 +61,23 @@ ms.lasthandoff: 05/10/2018
 
 ### <a name="r-components"></a>R 元件
 
-開放原始碼 R 是 Microsoft 的分佈[Microsoft R Open (MRO)](https://mran.microsoft.com/open)。 基底 R 封裝包括核心功能，例如**stats**和**utils**。 您可以執行`installed.packages(priority = "base")`傳回封裝清單。 R 的基底安裝也包含許多的範例資料集，以及標準的 R 工具，例如 RGui （輕量型互動式編輯器） 和 RTerm （R 命令提示字元）。
+開放原始碼 R 是 Microsoft 的分佈[Microsoft R Open (MRO)](https://mran.microsoft.com/open)。 R 語言支援包含核心功能，例如**基底**， **stats**， **utils**，和其他人。 R 的基底安裝也包含許多的範例資料集，以及標準的 R 工具，像是**RGui** （輕量型互動式編輯器） 和**RTerm** （R 命令提示字元）。 MRO 將值加入至基底 R 所包括的其他開放原始碼套件，例如[Intel Math Kernel Library](https://en.wikipedia.org/wiki/Math_Kernel_Library)。
 
-專屬 R 封裝包含[RevoScaleR](https://docs.microsoft.com/r-server/r-reference/revoscaler/revoscaler)遠端計算內容資料流中，平行資料匯入和轉換 rx 函數的執行，如模型、 視覺化和分析。 [MicrosoftML](https://docs.microsoft.com/r-server/r-reference/microsoftml/microsoftml-package)新增機器學習模型其他 Microsoft 封裝包含[olapR](https://docs.microsoft.com/machine-learning-server/r-reference/olapr/olapr)在 R 中撰寫 MDX 陳述式和[sqlrutils](https://docs.microsoft.com/machine-learning-server/r-reference/sqlrutils/sqlrutils)在預存程序中包含 R 指令碼。
+在您安裝的專屬 R 封裝包括：
 
++ [RevoScaleR](https://docs.microsoft.com/r-server/r-reference/revoscaler/revoscaler)遠端計算內容資料流中，平行資料匯入和轉換 rx 函數的執行，如模型、 視覺化和分析。 
++ [MicrosoftML](https://docs.microsoft.com/r-server/r-reference/microsoftml/microsoftml-package)新增機器學習模型
++ [olapR](https://docs.microsoft.com/machine-learning-server/r-reference/olapr/olapr)在 r 中撰寫 MDX 陳述式
++ [sqlrutils](https://docs.microsoft.com/machine-learning-server/r-reference/sqlrutils/sqlrutils)在預存程序中包含 R 指令碼。
+
+下表摘要說明 R MRO 和與特定資料庫中分析引擎安裝的 Microsoft 套件所提供的版本。
 
 |版本             | R 版本       | Microsoft 封裝    |
 |--------------------|-----------------|-----------------------|
-| SQL Server 2016 R Services | 3.2.2   | RevoScaleR sqlrutil  |
-| SQL Server 2017 Machine Learning 服務| 3.3.3 | RevoScaleR，MicrosoftML，olapR sqlrutil|
+| [SQL Server 2016 R Services](../install/sql-r-services-windows-install.md) | 3.2.2   | RevoScaleR sqlrutil  |
+| [SQL Server 2017 機器學習服務](../install/sql-machine-learning-services-windows-install.md) | 3.3.3 | RevoScaleR，MicrosoftML，olapR sqlrutil|
 
-您可以升級 R 元件封裝，將新的 R 封裝和預先安裝的模型繫結加入至現代的生命週期支援原則。 繫結變更服務模型。 根據預設，初始安裝之後，R 封裝會重新整理透過 service pack 和累計更新。 其他封裝及核心 R 元件的完整版本升級僅能透過產品升級 （從 SQL Server 2016 到 SQL Server 2017) 或透過繫結 R 支援 Microsoft 機器學習服務伺服器。 如需詳細資訊，請參閱[中 SQL Server 升級 R 和 Python 元件](use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md)。
+您可以升級 R 元件封裝，加入新的 R 封裝，並預先安裝的模型來*繫結*現代的生命週期支援原則。 繫結變更服務模型。 根據預設，初始安裝之後，R 封裝會重新整理透過 service pack 和累計更新。 其他封裝及核心 R 元件的完整版本升級僅能透過產品升級 （從 SQL Server 2016 到 SQL Server 2017) 或透過繫結 R 支援 Microsoft 機器學習服務伺服器。 如需詳細資訊，請參閱[中 SQL Server 升級 R 和 Python 元件](use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md)。
 
 ### <a name="python-components"></a>Python 元件
 
