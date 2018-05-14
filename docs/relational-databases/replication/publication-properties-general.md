@@ -4,14 +4,13 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.service: ''
 ms.component: replication
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql13.rep.newpubwizard.pubproperties.general.f1
 ms.assetid: 7912362f-c4d6-4f60-bd39-dee1f656ed18
@@ -19,12 +18,11 @@ caps.latest.revision: 25
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 75cec882089e5bd485f8004871c27abe3a4311f2
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 31e04769dc8f7b6443a544505399c4f76ff6f43a
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="publication-properties-general"></a>發行集屬性，一般
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -46,9 +44,9 @@ ms.lasthandoff: 04/16/2018
  **訂閱過期**  
  選取訂閱過期的選項之一： **[訂閱永遠不會過期]** 或 **[訂閱會過期]**，並提供明確的時間週期 (**[間隔]**)。  
   
- 針對快照式發行集和交易式發行集， [!INCLUDE[msCoName](../../includes/msconame-md.md)] 建議您接受預設的 **[訂閱永遠不會過期]**設定。  
+ 針對快照式發行集和交易式發行集， [!INCLUDE[msCoName](../../includes/msconame-md.md)] 建議您接受預設的 **[訂閱永遠不會過期]** 設定。  
   
- 針對合併式複寫， [!INCLUDE[msCoName](../../includes/msconame-md.md)] 建議您接受預設的 **[訂閱會過期]** 設定，並將 **[間隔]**儘可能設成較低的值。 隨著訂閱過期週期長度的增加，儲存的中繼資料量也會跟著增加，因而可能影響效能。 請在中斷訂閱者的連接或長時間不進行同步處理，以及儲存和處理大量中繼資料可能造成的效能問題之間，進行評估以取得平衡點。  
+ 針對合併式複寫， [!INCLUDE[msCoName](../../includes/msconame-md.md)] 建議您接受預設的 **[訂閱會過期]** 設定，並將 **[間隔]** 儘可能設成較低的值。 隨著訂閱過期週期長度的增加，儲存的中繼資料量也會跟著增加，因而可能影響效能。 請在中斷訂閱者的連接或長時間不進行同步處理，以及儲存和處理大量中繼資料可能造成的效能問題之間，進行評估以取得平衡點。  
   
  如需詳細資訊，請參閱 [Subscription Expiration and Deactivation](../../relational-databases/replication/subscription-expiration-and-deactivation.md)。  
   

@@ -4,14 +4,13 @@ ms.custom: ''
 ms.date: 06/14/2016
 ms.prod: sql
 ms.prod_service: database-engine
-ms.service: ''
 ms.component: stretch-database
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-stretch
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Stretch Database, backing up
 - backups (Stretch Database)
@@ -20,12 +19,11 @@ caps.latest.revision: 41
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: b6adec5954ed06a8bd745aab37e2cdefd67ed8b7
-ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
+ms.openlocfilehash: 879244bc84d92d5aaf740f841161bd3e5aea329d
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="backup-stretch-enabled-databases-stretch-database"></a>備份已啟用延展功能的資料庫(Stretch Database)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly.md)]

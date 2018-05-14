@@ -4,14 +4,12 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: ''
-ms.component: ssms-scripting
-ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
+ms.reviewer: ''
+ms.suite: sql
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql13.swb.tsqlquery.f1
 dev_langs:
@@ -29,13 +27,12 @@ caps.latest.revision: 47
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: On Demand
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: aba0786e713acd4ec90c958e21cbe22ff421ed32
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 848faca088e9ddf0ddf1efa2f48a84df042471c1
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="database-engine-query-editor-sql-server-management-studio"></a>Database Engine 查詢編輯器 (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -111,7 +108,7 @@ ms.lasthandoff: 04/16/2018
  在 [結果] 視窗中以一或多個方格傳回查詢結果。  
   
  **將結果存檔**  
- 執行查詢時，會開啟 [儲存結果] 對話方塊。 在 **[儲存於]**中，選取您想要用來儲存檔案的資料夾。 在 **[檔案名稱]**中輸入檔案的名稱，然後按一下 **[儲存]** ，將查詢結果另存為使用 .rpt 副檔名的 **[報表]** 檔案。 若要使用進階選項，請按一下 [儲存] 按鈕上的向下箭頭，然後按一下 [使用編碼方式儲存]。  
+ 執行查詢時，會開啟 [儲存結果] 對話方塊。 在 **[儲存於]** 中，選取您想要用來儲存檔案的資料夾。 在 **[檔案名稱]** 中輸入檔案的名稱，然後按一下 **[儲存]** ，將查詢結果另存為使用 .rpt 副檔名的 **[報表]** 檔案。 若要使用進階選項，請按一下 [儲存] 按鈕上的向下箭頭，然後按一下 [使用編碼方式儲存]。  
   
  **註解選取範圍**  
  在行頭加入註解運算子 (--)，將目前的行標示為註解。  

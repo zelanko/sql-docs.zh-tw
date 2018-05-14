@@ -4,14 +4,12 @@ ms.custom: ''
 ms.date: 04/10/2018
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: ''
 ms.component: ssdt
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- tools-ssdt
+ms.technology: ssdt
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 keywords:
 - 安裝 SSDT, 下載 SSDT, 最新的 SSDT
 ms.assetid: b0fc4987-d260-4d0a-9dd1-98099835b361
@@ -19,13 +17,12 @@ caps.latest.revision: 113
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: Active
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: ebe0c889fc2f1b6b307a3e551a59c2737505af25
-ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
+ms.openlocfilehash: 2fad2e2a85608e6e621e019648880e3ba7f274c2
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="download-sql-server-data-tools-ssdt"></a>下載 SQL Server Data Tools (SSDT)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md.md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

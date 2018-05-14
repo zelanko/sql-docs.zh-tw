@@ -1,30 +1,24 @@
 ---
 title: 對 PolyBase Kerberos 的連線問題進行疑難排解 | Microsoft Docs
-description: ''
-services: ''
-documentationcenter: ''
 author: alazad-msft
-manager: ''
-editor: ''
-tags: ''
+ms.author: alazad
+manager: craigg
 ms.assetid: ''
-ms.service: ''
 ms.component: polybase
+ms.technology: database
 ms.suite: sql
 ms.custom: ''
-ms.workload: ''
 ms.tgt_pltfrm: na
 ms.devlang: ''
 ms.topic: article
 ms.date: 07/19/2017"
 ms.prod: sql
 ms.prod_service: database-engine, sql-data-warehouse, pdw
-ms.author: alazad
-ms.openlocfilehash: d41adcd958af3c5bc87c03b83a4d1330fdf1c779
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: dce5bc3018cb223a8d3c9f0f85aa56c8aba1e4f3
+ms.sourcegitcommit: d2573a8dec2d4102ce8882ee232cdba080d39628
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="troubleshoot-polybase-kerberos-connectivity"></a>對 PolyBase Kerberos 的連線問題進行疑難排解
 [!INCLUDE[appliesto-ss-xxxx-asdw-pdw-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

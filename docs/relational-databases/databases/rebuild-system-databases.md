@@ -4,14 +4,13 @@ ms.custom: ''
 ms.date: 06/06/2016
 ms.prod: sql
 ms.prod_service: database-engine
-ms.service: ''
 ms.component: databases
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - master database [SQL Server], rebuilding
 - REBUILDDATABASE parameter
@@ -22,12 +21,11 @@ caps.latest.revision: 39
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: Active
-ms.openlocfilehash: 3291ec725dac23a1a6d9b95f94a4f7f4035f4a36
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 5bc4b141721417b3097dc9142e2f47404021f159
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="rebuild-system-databases"></a>重建系統資料庫
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -114,7 +112,7 @@ ms.lasthandoff: 04/16/2018
     |/INSTANCENAME=*InstanceName*|這是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體的名稱。 若為預設執行個體，請輸入 MSSQLSERVER。|  
     |/SQLSYSADMINACCOUNTS=*accounts*|指定要加入至系統管理員 ( **sysadmin** ) 固定伺服器角色的 Windows 群組或個別帳戶。 指定多個帳戶時，請以空格隔開這些帳戶。 例如，您可以輸入 **BUILTIN\Administrators MyDomain\MyUser**。 當您要指定的帳戶在帳戶名稱中包含空白時，請以雙引號括住該帳戶。 例如，輸入 **NT AUTHORITY\SYSTEM**。|  
     |[ /SAPWD=*StrongPassword* ]|指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **sa** 帳戶的密碼。 如果執行個體使用混合驗證 ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 Windows 驗證) 模式，這就是必要的參數。<br /><br /> **\*\* 安全性注意事項 \*\*****sa** 帳戶是已知的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 帳戶，而且經常是惡意使用者的攻擊目標。 請務必針對 **sa** 登入使用一個增強式密碼。<br /><br /> 請勿針對 Windows 驗證模式指定此參數。|  
-    |[ /SQLCOLLATION=*CollationName* ]|指定新的伺服器層級定序。 這個參數是選擇性的。 如果沒有指定，就會使用伺服器的目前定序。<br /><br /> **\*\* 重要事項 \*\***變更伺服器層級定序並不會變更現有使用者資料庫的定序。 所有新建立的使用者資料庫預設都會使用新的定序。<br /><br /> 如需詳細資訊，請參閱 [設定或變更伺服器定序](../../relational-databases/collations/set-or-change-the-server-collation.md)。|  
+    |[ /SQLCOLLATION=*CollationName* ]|指定新的伺服器層級定序。 這個參數是選擇性的。 如果沒有指定，就會使用伺服器的目前定序。<br /><br /> **\*\* 重要事項 \*\*** 變更伺服器層級定序並不會變更現有使用者資料庫的定序。 所有新建立的使用者資料庫預設都會使用新的定序。<br /><br /> 如需詳細資訊，請參閱 [設定或變更伺服器定序](../../relational-databases/collations/set-or-change-the-server-collation.md)。|  
     |[ /SQLTEMPDBFILECOUNT=NumberOfFiles ]|指定 tempdb 資料檔案數目。 此值可以增加為 8 個或與核心數目相同 (兩者取其較高者)。<br /><br /> 預設值：8 個或核心數目 (兩者取其較低者)。|  
     |[ /SQLTEMPDBFILESIZE=FileSizeInMB ]|指定每個 tempdb 資料檔案的初始大小 (MB)。 安裝程式允許的大小上限為 1024 MB。<br /><br /> 預設值：8|  
     |[ /SQLTEMPDBFILEGROWTH=FileSizeInMB ]|指定每個 tempdb 資料檔案的檔案成長增量 (MB)。 0 值指出自動成長是關閉的，且不允許其他空間。 安裝程式允許的大小上限為 1024 MB。<br /><br /> 預設值：64|  

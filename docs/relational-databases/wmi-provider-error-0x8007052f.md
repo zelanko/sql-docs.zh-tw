@@ -20,10 +20,10 @@ ms.author: carlrab
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: 06f5b8000dcd43b12ed5d25ddc733fb892d385f3
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.sourcegitcommit: d2573a8dec2d4102ce8882ee232cdba080d39628
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="wmi-provider-error-0x8007052f"></a>WMI 提供者錯誤 0x8007052f
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

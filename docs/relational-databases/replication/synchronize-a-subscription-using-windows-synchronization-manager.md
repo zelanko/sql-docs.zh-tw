@@ -4,14 +4,13 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.service: ''
 ms.component: replication
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - synchronization [SQL Server replication], Windows Synchronization Manager
 - Windows Synchronization Manager
@@ -20,12 +19,11 @@ caps.latest.revision: 44
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 86b77769f244b80e5ff3fec3ce894400a1ef0bd3
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 9c9342e00a22d508c0f154c34679e2d73552c263
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="synchronize-a-subscription-using-windows-synchronization-manager"></a>使用 Windows Synchronization Manager 同步處理訂閱
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -83,7 +81,7 @@ ms.lasthandoff: 04/16/2018
   
     -   **識別**  
   
-    -   **[訂閱者登入]**、 **[散發者登入]**和 **[發行者登入]** (僅用於合併式複寫)  
+    -   **[訂閱者登入]**、 **[散發者登入]** 和 **[發行者登入]** (僅用於合併式複寫)  
   
     -   **[Web 伺服器資訊]** (用於執行 SQL Server 2005 或更新版本之「訂閱者」端的合併訂閱)  
   
@@ -122,7 +120,7 @@ ms.lasthandoff: 04/16/2018
      選取的資料列然後會被套用到「發行者」和 (或)「訂閱者」；在後續同步處理期間，它會傳播到其他節點。  
   
 > [!NOTE]  
->  僅當編輯為針對解決方案所選取之資料列的一部分時，才會被套用。 例如，如果您在 **[發行者]**下進行了編輯，然後按一下 **[接受訂閱者]**，則編輯會被捨棄。  
+>  僅當編輯為針對解決方案所選取之資料列的一部分時，才會被套用。 例如，如果您在 **[發行者]** 下進行了編輯，然後按一下 **[接受訂閱者]**，則編輯會被捨棄。  
   
 ## <a name="see-also"></a>另請參閱  
  [互動式衝突解決方法](../../relational-databases/replication/merge/advanced-merge-replication-conflict-interactive-resolution.md)  

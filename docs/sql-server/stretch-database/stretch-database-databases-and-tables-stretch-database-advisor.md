@@ -4,14 +4,13 @@ ms.custom: ''
 ms.date: 10/30/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.service: ''
 ms.component: stretch-database
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-stretch
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Stretch Database, identifying databases
 - Stretch Database, identifying tables
@@ -22,12 +21,11 @@ caps.latest.revision: 29
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 4d7db19e7ffec2c7d7792e77e4311b5e90630d78
-ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
+ms.openlocfilehash: 9543168fcebbc4ee48921bdcf9efd92f6438ed8f
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="identify-databases-and-tables-for-stretch-database-with-data-migration-assistant"></a>使用 Data Migration Assistant 識別適用於 Stretch Database 的資料庫和資料表
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly.md)]

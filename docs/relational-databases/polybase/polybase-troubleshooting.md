@@ -4,14 +4,12 @@ ms.custom: ''
 ms.date: 8/29/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-data-warehouse, pdw
-ms.service: ''
 ms.component: polybase
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine-polybase
+ms.technology: database
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - PolyBase, monitoring
 - PolyBase, performance monitoring
@@ -19,15 +17,14 @@ helpviewer_keywords:
 - PolyBase, troubleshooting
 ms.assetid: f119e819-c3ae-4e0b-a955-3948388a9cfe
 caps.latest.revision: 22
-author: barbkess
-ms.author: barbkess
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 7f75c81eb0b2cdcf8fdc68ba5ac1a21ba62481eb
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: d7e8013d3c450f6a0846ad5d33a4a26715f12458
+ms.sourcegitcommit: d2573a8dec2d4102ce8882ee232cdba080d39628
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="polybase-troubleshooting"></a>PolyBase, 疑難排解
 [!INCLUDE[appliesto-ss-xxxx-asdw-pdw-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

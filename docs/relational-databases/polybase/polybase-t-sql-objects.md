@@ -4,28 +4,25 @@ ms.custom: ''
 ms.date: 08/15/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-data-warehouse, pdw
-ms.service: ''
 ms.component: polybase
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine-polybase
+ms.technology: database
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - PolyBase, fundamentals
 - PolyBase, SQL statements
 - PolyBase, SQL objects
 caps.latest.revision: 20
-author: barbkess
-ms.author: barbkess
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 56339954a2ae2cf0f2bb69acfeaec787621fd20e
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: f8b9f0199664f1c348dfa140270ce51ebc5afeb7
+ms.sourcegitcommit: d2573a8dec2d4102ce8882ee232cdba080d39628
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="polybase-t-sql-objects"></a>PolyBase T-SQL 物件
 [!INCLUDE[appliesto-ss-xxxx-asdw-pdw-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

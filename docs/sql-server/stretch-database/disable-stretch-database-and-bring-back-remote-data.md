@@ -4,14 +4,13 @@ ms.custom: ''
 ms.date: 08/05/2016
 ms.prod: sql
 ms.prod_service: database-engine
-ms.service: ''
 ms.component: stretch-database
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-stretch
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Stretch Database, disabling
 - disabling Stretch Database
@@ -20,12 +19,11 @@ caps.latest.revision: 33
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 791ead536a9e5582ddb06886b8003e598507b273
-ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
+ms.openlocfilehash: 110c605f425a92cc05b76cb6a1214a226169d0ad
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="disable-stretch-database-and-bring-back-remote-data"></a>停用 Stretch Database 並帶回遠端資料
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly.md)]

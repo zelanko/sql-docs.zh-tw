@@ -8,24 +8,22 @@ ms.reviewer: ''
 ms.service: sql-data-warehouse
 ms.component: t-sql|statements
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: t-sql
 ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - TSQL
 ms.assetid: ea21c73c-40e8-4c54-83d4-46ca36b2cf73
 caps.latest.revision: 59
-author: barbkess
-ms.author: barbkess
+author: edmacauley
+ms.author: edmaca
 manager: craigg
-ms.workload: On Demand
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 8ec342637bfea8b611fb79800da9f04f58a621bc
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 237c0a53319d7b4c0478cdd8527737401ab5b5f1
+ms.sourcegitcommit: d2573a8dec2d4102ce8882ee232cdba080d39628
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="create-table-azure-sql-data-warehouse"></a>CREATE TABLE (Azure SQL 資料倉儲)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -255,13 +253,13 @@ CREATE TABLE [ database_name . [ schema_name ] . | schema_name. ] table_name
  `bit`  
  一種整數資料類型，其值有 `1`、`0` 或 NULL 幾種。 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 可將 bit 資料行的儲存體最佳化。 如果資料表中的 bit 資料行小於或等於 8 個，這些資料行會儲存為 1 個位元組。 如果有 9 到 16 個 bit 資料行，則儲存為 2 個位元組，依此類推。  
   
- `nvarchar` [ ( *n* | `max` ) ] -- `max` 僅適用於 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]。  
+ `nvarchar` [ ( *n* | `max` ) ] -- `max` 僅適用於 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)].  
  可變長度的 Unicode 字元資料。 *n* 可以是從 1 到 4000 之間的值。 `max` 表示儲存體大小上限是 2^31-1 個位元組 (2 GB)。 儲存體大小 (以位元組為單位) 是輸入字元數的兩倍再加上 2 位元組。 輸入的資料長度可以是 0 個字元。  
   
  `nchar` [ ( *n* ) ]  
  長度為 *n* 個字元的固定長度 Unicode 字元資料。 *n* 必須是從 `1` 到 `4000` 之間的值。 儲存體大小是 *n* 個位元組的兩倍。  
   
- `varchar` [ ( *n*  | `max` ) ] -- `max` 僅適用於 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]。   
+ `varchar` [ ( *n*  | `max` ) ] -- `max` 僅適用於 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)].   
  長度為 *n* 位元組的可變長度非 Unicode 字元資料。 *n* 必須是從 `1` 到 `8000` 之間的值。 `max` 表示儲存體大小上限是 2^31-1 個位元組 (2 GB)。儲存體大小是輸入資料的實際長度再加上 2 位元組。  
   
  `char` [ ( *n* ) ]  

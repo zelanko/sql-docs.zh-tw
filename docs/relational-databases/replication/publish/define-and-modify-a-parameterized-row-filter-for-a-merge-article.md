@@ -4,14 +4,13 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.service: ''
 ms.component: replication
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - parameterized filters [SQL Server replication], defining
 - parameterized filters [SQL Server replication], modifying
@@ -25,12 +24,11 @@ caps.latest.revision: 44
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: f459ae77584f5598ce5c71b3040f8bb2ecaa223d
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: d713aa24a604657615a1118e69e49c5e2e6fa879
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="define-and-modify-a-parameterized-row-filter-for-a-merge-article"></a>針對合併發行項定義及修改參數化資料列篩選
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -77,7 +75,7 @@ ms.lasthandoff: 04/16/2018
         SELECT <published_columns> FROM [tableowner].[tablename] WHERE  
         ```  
   
-    -   預設的文字無法變更；使用標準 SQL 語法，在 WHERE 關鍵字後面輸入篩選子句。 參數化篩選包括對系統函數 **HOST_NAME()** 與/或 **SUSER_SNAME()**的呼叫，或參考上述一或兩個函數的使用者定義函數。 下列為參數化資料列篩選器的完整篩選子句範例：  
+    -   預設的文字無法變更；使用標準 SQL 語法，在 WHERE 關鍵字後面輸入篩選子句。 參數化篩選包括對系統函數 **HOST_NAME()** 與/或 **SUSER_SNAME()** 的呼叫，或參考上述一或兩個函數的使用者定義函數。 下列為參數化資料列篩選器的完整篩選子句範例：  
   
         ```  
         SELECT <published_columns> FROM [HumanResources].[Employee] WHERE LoginID = SUSER_SNAME()  

@@ -8,18 +8,16 @@ ms.date: 07/12/2017
 ms.topic: article
 ms.prod: sql
 ms.prod_service: sql
-ms.service: ''
 ms.component: sql-non-specified
 ms.suite: sql
 ms.custom: ''
 ms.technology: database-engine
 ms.assetid: ''
-ms.workload: Inactive
-ms.openlocfilehash: e8cf92af285ccd9da0e83ff7739e70d44c2aa310
-ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
+ms.openlocfilehash: 8941a2e2e542a33f08a1c30f71a7745072a9c495
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="configure-sql-server-to-send-feedback-to-microsoft"></a>設定 SQL Server 以將意見反應傳送給 Microsoft
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

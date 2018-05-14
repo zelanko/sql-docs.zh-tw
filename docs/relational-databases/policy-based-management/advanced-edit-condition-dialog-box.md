@@ -4,14 +4,13 @@ ms.custom: ''
 ms.date: 08/12/2016
 ms.prod: sql
 ms.prod_service: database-engine
-ms.service: ''
 ms.component: performance-monitor
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql13.swb.dmf.condition.advancededit.f1
 ms.assetid: a0bbe501-78c5-45ad-9087-965d04855663
@@ -19,12 +18,11 @@ caps.latest.revision: 44
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 34d57610273cd1496c0cfb7be8e79f3ba674d671
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 375d21441757d274dbd62bcd94638b03a0ded57f
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="advanced-edit-condition-dialog-box"></a>進階編輯 (條件) 對話方塊
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -32,7 +30,7 @@ ms.lasthandoff: 04/16/2018
   
 ## <a name="options"></a>選項。  
  **資料格值**  
- 顯示在您建立時將用於資料格值的函數或運算式。 當您按一下 **[確定]**時，資料格值將會出現在 **[一般]** 頁面上 **[建立新條件]** 或 **[開啟條件]** 對話方塊之條件運算式方塊內的 **[欄位]** 或 **[值]** 資料格中。  
+ 顯示在您建立時將用於資料格值的函數或運算式。 當您按一下 **[確定]** 時，資料格值將會出現在 **[一般]** 頁面上 **[建立新條件]** 或 **[開啟條件]** 對話方塊之條件運算式方塊內的 **[欄位]** 或 **[值]** 資料格中。  
   
  **函數和屬性**  
  顯示可用的函數和屬性。  
@@ -91,15 +89,15 @@ ms.lasthandoff: 04/16/2018
 |**Guid()**|Guid Guid(String *guidString*)|從字串中傳回 GUID。|*guidString* - 這是要建立之 GUID 的字串表示法。|傳回從字串建立的 GUID。|`Guid('12340000-0000-3455-0000-000000000454')`|  
 |**IsNull()**|Variant IsNull (Variant *check_expression*, Variant *replacement_value*)|如果它不是 NULL，就會傳回 *check_expression* 的值，否則會傳回 *replacement_value* 。 如果類型不同， *replacement_value* 會隱含地轉換成 *check_expression*的類型。|*check_expression* - 這是要檢查 NULL 的運算式。 *check_expression* 可以是任何以原則為基礎之管理支援的類型：Numeric、String、Bool、DateTime、Array 和 Guid。<br /><br /> *replacement_value* - 這是 *check_expression* 為 NULL 時所傳回的運算式。 *replacement_value* 必須是能夠隱含地轉換成 *check_expression*類型的類型。|如果 *check_expression* 不是 NULL，則傳回類型是 *check_expression* 的類型，否則會傳回 *replacement_value* 的類型。||  
 |**Len()**|Numeric Len (*string_expression*)|傳回指定字串運算式的字元數，但不包括尾端空白。|*string_expression* - 這是要評估的字串運算式。|傳回整數資料類型類別目錄的值。|`Len('Hello')` 會傳回 `5` 。|  
-|**Lower()**|String Lower (String*_expression*)|傳回將所有大寫字元轉換成小寫後的字串。|*expression* - 這是來源字串運算式。|傳回將所有大寫字元轉換成小寫後，表示來源字串運算式的字串。|`Len('HeLlO')` 會傳回 `'hello'` 。|  
+|**Lower()**|String Lower (String *_expression*)|傳回將所有大寫字元轉換成小寫後的字串。|*expression* - 這是來源字串運算式。|傳回將所有大寫字元轉換成小寫後，表示來源字串運算式的字串。|`Len('HeLlO')` 會傳回 `'hello'` 。|  
 |**Mod()**|Numeric Mod (Numeric *expression_dividend*, Numeric *expression_divisor*)|提供第一個數值運算式除以第二個數值運算式之後的整數餘數。|*expression_dividend* - 這是要除的數值運算式。 *expression_dividend* 必須是整數或數值資料類型類別目錄中，任何一個資料類型的有效運算式。<br /><br /> *expression_divisor* - 這是要除以被除數的數值運算式。 *expression_divisor* 必須是整數或數值資料類型類別目錄中，任何一個資料類型的有效運算式。|傳回整數資料類型類別目錄的值。|`Mod(Property1, 3)`|  
 |**Multiply()**|Numeric Multiply (Numeric *expression1*, Numeric *expression2*)|將兩個運算式相乘。|*expression1* 和 *expression2* - numeric 類別目錄中任何一種資料類型的任何有效運算式 ( **datetime** 資料類型除外)。|傳回具有較高優先順序之引數的資料類型。|`Multiply(Property1, .20)`|  
 |**Power()**|Numeric Power (Numeric *numeric_expression*, Numeric *expression_power*)|傳回指定乘冪之指定運算式的值。|*numeric_expression* - 這是精確數值或近似數值資料類型類別目錄的運算式，但是 bit 資料類型除外。<br /><br /> *expression_power* - 這是 *numeric_expression*相乘的乘冪。 *expression_power* 可以是精確數值或近似數值資料類型類別目錄的運算式，但是 **bit** 資料類型除外。|傳回類型與 *numeric_expression*相同。|`Power(Property1, 3)`|  
 |**Round()**|Numeric Round (Numeric *expression*, Numeric *expression_precision*)|傳回已經進位到指定長度或有效位數的數值運算式。|*expression* - 這是精確數值或近似數值資料類型類別目錄的運算式，但是 **bit** 資料類型除外。<br /><br /> *expression_precision* - 這是進位到的有效位數。 當 *expression_precision* 是正數時， *numeric_expression* 會捨入到長度所指定的十進位數。 當 *expression_precision* 是負數時， *numeric_expression* 會依照 *expression_precision*所指定的方式，在小數點左側捨入。|傳回與 *numeric_expression*相同的類型。|`Round(5.333, 0)`|  
-|**String()**|String String (Variant*_expression*)|將 variant 轉換成字串。|*expression* - 這是要轉換成字串的 variant 運算式。|傳回 variant 運算式的字串值。|`String(4)`|  
+|**String()**|String String (Variant *_expression*)|將 variant 轉換成字串。|*expression* - 這是要轉換成字串的 variant 運算式。|傳回 variant 運算式的字串值。|`String(4)`|  
 |**Sum()**|Numeric Sum (*VarArgs*)|傳回引數清單中所有值的總和。 總和可以搭配數值使用。|*VarArgs*- 這是精確數值或相近數值資料類型類別目錄的 Variant 運算式清單 ( **bit** 資料類型除外)。|以最精確的運算式資料類型傳回所有運算式值的總和。<br /><br /> 如果運算式結果為 **integer**、 **numeric**、 **money** 及 **small money**、 **float** 和 **real** 類別目錄，傳回的類型分別會是 **int**、 **numeric**、 **money**和 **float**。|`Sum(1.0, 2.0, 3.0, 4.0, 5.0)` 會傳回 `15` 。|  
 |**True()**|Bool TRUE()|傳回布林值 TRUE。||傳回布林值 TRUE。|`IsDatabaseMailEnabled = True()`|  
-|**Upper()**|String Upper (String*_expression*)|傳回將所有小寫字元轉換成大寫後的字串。|*expression* - 這是來源字串運算式。|傳回將所有小寫字元轉換成大寫後，表示來源字串運算式的字串。|`Upper('HeLlO')` 會傳回 `'HELLO'` 。|  
+|**Upper()**|String Upper (String *_expression*)|傳回將所有小寫字元轉換成大寫後的字串。|*expression* - 這是來源字串運算式。|傳回將所有小寫字元轉換成大寫後，表示來源字串運算式的字串。|`Upper('HeLlO')` 會傳回 `'HELLO'` 。|  
   
 ## <a name="see-also"></a>另請參閱  
  [建立新條件或開啟條件對話方塊，一般頁面](../../relational-databases/policy-based-management/create-new-condition-or-open-condition-dialog-box-general-page.md)   

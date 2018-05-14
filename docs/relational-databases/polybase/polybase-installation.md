@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 02/23/2018
 ms.prod: sql
 ms.prod_service: database-engine
-ms.service: ''
 ms.component: polybase
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine-polybase
+ms.technology: database
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - PolyBase, installation
-author: barbkess
-ms.author: barbkess
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: fbb861dda4b837bc3f3003edf357c89efaa4eb88
-ms.sourcegitcommit: f3aa02a0f27cc1d3d5450f65cc114d6228dd9d49
+ms.openlocfilehash: ebb1794c1fcefcab24c5c60f4fcceff42dacc6e0
+ms.sourcegitcommit: d2573a8dec2d4102ce8882ee232cdba080d39628
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="polybase-installation"></a>安裝 PolyBase
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

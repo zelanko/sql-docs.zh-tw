@@ -4,14 +4,12 @@ ms.custom: ''
 ms.date: 12/08/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.service: ''
 ms.component: polybase
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine-polybase
+ms.technology: database
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 keywords:
 - PolyBase
 helpviewer_keywords:
@@ -22,15 +20,14 @@ helpviewer_keywords:
 - Azure blob storage, export with PolyBase
 ms.assetid: 2c5aa2bd-af7d-4f57-9a28-9673c2a4c07e
 caps.latest.revision: 18
-author: barbkess
-ms.author: barbkess
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: b6544e06a8b0d07e4a2eda1f8371cd0440c172f9
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: cc94681164ea07dac5ebc52afdfb7ebb273f6bb1
+ms.sourcegitcommit: d2573a8dec2d4102ce8882ee232cdba080d39628
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="polybase-queries"></a>PolyBase Queries
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

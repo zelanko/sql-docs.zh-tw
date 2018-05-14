@@ -4,14 +4,13 @@ ms.custom: ''
 ms.date: 08/05/2016
 ms.prod: sql
 ms.prod_service: database-engine
-ms.service: ''
 ms.component: database-mail
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Database Mail [SQL Server], SQL Server Agent Mail
 - SQL Server Agent Mail
@@ -20,12 +19,11 @@ caps.latest.revision: 31
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: Active
-ms.openlocfilehash: dd0b4ebffd6d2a87044994bcbb35936d1a198575
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 3a49117cfe2bb24b4a5f47f22c9bff9e1afb9910
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="configure-sql-server-agent-mail-to-use-database-mail"></a>設定 SQL Server Agent Mail 使用 Database Mail
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -71,7 +69,7 @@ ms.lasthandoff: 04/16/2018
   
 -   在 **[郵件系統]** 清單中，選取 **[Database Mail]**。  
   
--   在 **[郵件設定檔]**清單中，選取 Database Mail 的郵件設定檔。  
+-   在 **[郵件設定檔]** 清單中，選取 Database Mail 的郵件設定檔。  
   
 -   重新啟動 SQL Server Agent。  
   

@@ -4,14 +4,13 @@ ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.service: ''
 ms.component: replication
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql13.rep.monitor.publicationinfo.warningsandagents.tran.f1
 ms.assetid: 4d4baf1d-d0a1-4d09-bec7-137811f43f09
@@ -19,12 +18,11 @@ caps.latest.revision: 30
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: bb1506f10220219d5f6129f78f9fc4c057dc8ba6
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 30a0cc9b3ca8215fe5266f9c02d557d0224c54ed
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="publication-information-warnings-transactional-publication"></a>發行集資訊，警告 (交易式發行集)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -41,11 +39,11 @@ ms.lasthandoff: 04/16/2018
   
 -   即將發生訂閱過期。  
   
-     這會對應至 **[若訂閱將在臨界值內過期，就發出警告]**選項。 如果達到或超出指定的臨界值，訂閱狀態會顯示為 **[即將過期/已過期]** (除非必須顯示具有更高優先權的問題)。  
+     這會對應至 **[若訂閱將在臨界值內過期，就發出警告]** 選項。 如果達到或超出指定的臨界值，訂閱狀態會顯示為 **[即將過期/已過期]** (除非必須顯示具有更高優先權的問題)。  
   
 -   超過指定的延遲。 這是正在發行者端認可的交易與正在訂閱者端認可的對應交易之間經過的時間量。  
   
-     這會對應至 **[若延遲超過臨界值，就發出警告]**選項。 如果達到或超出指定的臨界值，訂閱狀態會顯示為 **[效能嚴重不足]** (除非必須顯示更高優先權的問題)。 臨界值顯示在包含訂閱資訊之頁面的 **[效能]** 資料行中，也可以用來提供效能評比。 效能評比是下列其中一個值：  
+     這會對應至 **[若延遲超過臨界值，就發出警告]** 選項。 如果達到或超出指定的臨界值，訂閱狀態會顯示為 **[效能嚴重不足]** (除非必須顯示更高優先權的問題)。 臨界值顯示在包含訂閱資訊之頁面的 **[效能]** 資料行中，也可以用來提供效能評比。 效能評比是下列其中一個值：  
   
     -   非常好  
   

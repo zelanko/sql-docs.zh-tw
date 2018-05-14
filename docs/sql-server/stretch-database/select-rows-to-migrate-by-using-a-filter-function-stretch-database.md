@@ -4,14 +4,13 @@ ms.custom: ''
 ms.date: 06/27/2016
 ms.prod: sql
 ms.prod_service: database-engine
-ms.service: ''
 ms.component: stretch-database
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-stretch
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Stretch Database, predicates
 - predicates for Stretch Database
@@ -22,12 +21,11 @@ caps.latest.revision: 43
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: bb13564b0e065325bb9a18c084baacec3e6cdfbc
-ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
+ms.openlocfilehash: fece0ae561d4dbb615b885ce639a30bf61be4c41
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="select-rows-to-migrate-by-using-a-filter-function-stretch-database"></a>使用篩選函數選取要移轉的資料列 (Stretch Database)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly.md)]

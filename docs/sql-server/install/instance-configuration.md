@@ -4,14 +4,13 @@ ms.custom: ''
 ms.date: 2017-04-21
 ms.prod: sql
 ms.prod_service: database-engine
-ms.service: ''
 ms.component: install
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - setup-install
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - instance configuration, Setup
 helpviewer_keywords:
@@ -22,12 +21,11 @@ caps.latest.revision: 62
 ms.author: mikeray
 manager: craigg
 robots: noindex,nofollow
-ms.workload: On Demand
-ms.openlocfilehash: 83510ac86914e6079f5bc52262ac475c6585c630
-ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
+ms.openlocfilehash: 0366b0613623960afd56a2877ad9462fded60bf5
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="installation-wizard-help"></a>安裝精靈說明
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

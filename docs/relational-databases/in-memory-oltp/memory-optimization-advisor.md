@@ -4,14 +4,13 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: ''
 ms.component: in-memory-oltp
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine-imoltp
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - swb.memoryoptimizationwizard.f1
 - sql13.swb.memoryoptimizationwizard.f1
@@ -20,13 +19,12 @@ caps.latest.revision: 17
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: c5312d1c7b3814165f59bbbff6eaaf85fcc5e36d
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 451db2e715c07f79d617e4688fec862f197195fc
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="memory-optimization-advisor"></a>記憶體最佳化 Advisor
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -42,10 +40,10 @@ ms.lasthandoff: 04/16/2018
  如需移轉方法的資訊，請參閱 [記憶體內部 OLTP - 一般工作負載模式和移轉考量](http://msdn.microsoft.com/library/dn673538.aspx)。  
   
 ## <a name="walkthrough-using-the-memory-optimization-advisor"></a>使用記憶體最佳化 Advisor 的逐步解說  
- 在 **[物件總管]**中，以滑鼠右鍵按一下您想要轉換的資料表，然後選取 **[記憶體最佳化 Advisor]**。 隨即顯示 **[資料表記憶體最佳化 Advisor]**的歡迎頁面。  
+ 在 **[物件總管]** 中，以滑鼠右鍵按一下您想要轉換的資料表，然後選取 **[記憶體最佳化 Advisor]**。 隨即顯示 **[資料表記憶體最佳化 Advisor]** 的歡迎頁面。  
   
 ### <a name="memory-optimization-checklist"></a>記憶體最佳化檢查清單  
- 按一下 **[資料表記憶體最佳化 Advisor]** 歡迎頁面中的 **[下一步]**時，即會看到記憶體最佳化檢查清單。 記憶體最佳化的資料表不支援磁碟資料表的全部功能。 記憶體最佳化檢查清單會報告磁碟資料表是否使用任何與記憶體最佳化資料表不相容的功能。 **資料表記憶體最佳化 Advisor** 並不會修改磁碟資料表，以便將其移轉為使用 In-Memory OLTP。 您必須先進行變更才能繼續移轉。 針對每個發現的不相容狀況， **資料表記憶體最佳化 Advisor** 會顯示有助於修改以磁碟為基礎的資料表之相關資訊的連結。  
+ 按一下 **[資料表記憶體最佳化 Advisor]** 歡迎頁面中的 **[下一步]** 時，即會看到記憶體最佳化檢查清單。 記憶體最佳化的資料表不支援磁碟資料表的全部功能。 記憶體最佳化檢查清單會報告磁碟資料表是否使用任何與記憶體最佳化資料表不相容的功能。 **資料表記憶體最佳化 Advisor** 並不會修改磁碟資料表，以便將其移轉為使用 In-Memory OLTP。 您必須先進行變更才能繼續移轉。 針對每個發現的不相容狀況， **資料表記憶體最佳化 Advisor** 會顯示有助於修改以磁碟為基礎的資料表之相關資訊的連結。  
   
  如果您想要保留這些不相容狀況的清單以便規劃移轉，請按一下 **[產生報告]** ，即可產生 HTML 清單。  
   
