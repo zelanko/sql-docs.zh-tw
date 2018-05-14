@@ -4,12 +4,10 @@ ms.custom: ''
 ms.date: 07/12/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: ''
 ms.component: t-sql|functions
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: t-sql
 ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
@@ -28,12 +26,11 @@ caps.latest.revision: 39
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 40ebf07e5da8286923cf9b49e0f528f3751c4746
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: eacacfe4ae5ec32a97ec0ed9f1a9ee33a08d6b52
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="formatmessage-transact-sql"></a>FORMATMESSAGE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -66,9 +63,9 @@ FORMATMESSAGE ( { msg_number  | ' msg_string ' } , [ param_value [ ,...n ] ] )
 ## <a name="remarks"></a>Remarks  
  如同 RAISERROR 陳述式，FORMATMESSAGE 會用所提供的參數值來替代訊息中的預留位置變數，以編輯訊息。 如需有關錯誤訊息所允許之預留位置及編輯處理的詳細資訊，請參閱 [RAISERROR &#40;Transact-SQL&#41;](../../t-sql/language-elements/raiserror-transact-sql.md)。  
   
- FORMATMESSAGE 會用使用者目前的語言來查閱訊息。 如果沒有當地語系化版本的訊息，就會使用 U.S.English 版本。  
+ FORMATMESSAGE 會用使用者目前的語言來查閱訊息。 如果沒有當地語系化版本的訊息，就會使用 U.S. English 版本。  
   
- 如果是當地語系化的訊息，提供的參數值必須對應於 U.S. English 版本中的參數預留位置。 也就是說，當地語系化版本中的參數 1 必須對應於 U.S. English 版本中的參數 1，參數 2 必須對應於參數 2，依此類推。  
+ 如果是當地語系化的訊息，提供的參數值必須對應於 U.S. English 版本中的參數預留位置。。 也就是說，當地語系化版本中的參數 1 必須對應於 U.S. English 版本中的參數 1，參數 2 必須對應於參數 2，依此類推。  
   
 ## <a name="examples"></a>範例  
   

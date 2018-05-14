@@ -4,14 +4,13 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.service: ''
 ms.component: security
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Transparent Data Encryption, moving
 - TDE, moving a database
@@ -20,12 +19,11 @@ caps.latest.revision: 18
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: c7cf3c269522f35f2ba64bb7e81c9910bdd95869
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 34f7225842dd6dcc789cbd6d09fa6cfee70b60f9
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="move-a-tde-protected-database-to-another-sql-server"></a>將 TDE 保護的資料庫移至另一個 SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -197,7 +195,7 @@ ms.lasthandoff: 04/16/2018
   
 8.  在 **[附加資料庫]** 對話方塊中，按一下 **[要附加的資料庫]** 底下的 **[加入]**。  
   
-9. 在 [尋找資料庫檔案 –*server_name*]**** 對話方塊中，選取要附加至新伺服器的資料庫檔案，然後按一下 [確定]。  
+9. 在 [*尋找資料庫檔案 –*server_name*]*** 對話方塊中，選取要附加至新伺服器的資料庫檔案，然後按一下 [**確定**]。  
   
      **[附加資料庫]** 對話方塊有下列選項。  
   

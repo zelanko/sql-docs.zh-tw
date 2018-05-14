@@ -46,7 +46,7 @@ ms.lasthandoff: 05/03/2018
 |屬性|ReplTest1|  
 |---|---|
 |語法|**datetime**|  
-|使用方式|DECLARE @MyDatetime **datetime**<br /><br /> CREATE TABLE Table1 ( Column1 **datetime** )|  
+|使用方式|DECLARE @MyDatetime **datetime**<br /><br /> 建立資料表 Table1 (Column1 **datetime** )|  
 |預設的字串常值格式<br /><br /> (用於下層用戶端)|不適用|  
 |日期範圍|1753 年 1 月 1 日到 9999 年 12 月 31 日|  
 |時間範圍|00:00:00 到 23:59:59.997|  
