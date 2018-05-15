@@ -4,14 +4,13 @@ ms.custom: ''
 ms.date: 07/14/2016
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: ''
 ms.component: security
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - SQL13.SWB.DATABASEUSER.MEMBERSHIP.F1
 helpviewer_keywords:
@@ -22,13 +21,12 @@ caps.latest.revision: 13
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: On Demand
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 1a422023129646f855b29ec5a6eb1587a54c0ed3
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: c7e223fe95d2e541ead02b819ede070a0ed554de
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="join-a-role"></a>加入角色
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -85,9 +83,9 @@ ms.lasthandoff: 04/16/2018
   
 4.  以滑鼠右鍵按一下要編輯的角色，並且選取 [屬性]。  
   
-5.  在 [伺服器角色屬性 –*server_role_name*]**** 對話方塊的 [成員] 頁面上，按一下 [新增]。  
+5.  在 [伺服器角色屬性] – *server_role_name* 對話方塊的 [成員] 頁面上，按一下 [新增]。  
   
-6.  在 [選取伺服器登入或角色] 對話方塊中，於 [輸入要選取的物件名稱 (範例)] 底下輸入要加入至此伺服器角色的登入或伺服器角色。 或者，按一下 **[瀏覽]** 並選取 **[瀏覽物件]** 對話方塊中任何或所有可用的物件。 按一下 [確定]，返回 [伺服器角色屬性 –*server_role_name*]**** 對話方塊。  
+6.  在 [選取伺服器登入或角色] 對話方塊中，於 [輸入要選取的物件名稱 (範例)] 底下輸入要加入至此伺服器角色的登入或伺服器角色。 或者，按一下 **[瀏覽]** 並選取 **[瀏覽物件]** 對話方塊中任何或所有可用的物件。 按一下 [確定]，返回 [伺服器角色屬性] – *server_role_name* 對話方塊。  
   
 7.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
@@ -107,9 +105,9 @@ ms.lasthandoff: 04/16/2018
   
 7.  以滑鼠右鍵按一下要編輯的角色，並且選取 [屬性]。  
   
-8.  在 [資料庫角色屬性 –*database_role_name*]**** 對話方塊的 [一般] 頁面中，按一下 [新增]。  
+8.  在 [資料庫角色屬性] – *database_role_name* 對話方塊的 [一般] 頁面中，按一下 [新增]。  
   
-9. 在 [選取資料庫使用者或角色] 對話方塊中，於 [輸入要選取的物件名稱 (範例)] 底下輸入要加入至此資料庫角色的登入或資料庫角色。 或者，按一下 **[瀏覽]** 並選取 **[瀏覽物件]** 對話方塊中任何或所有可用的物件。 按一下 [確定]，返回 [資料庫角色屬性 –*database_role_name*]**** 對話方塊。  
+9. 在 [選取資料庫使用者或角色] 對話方塊中，於 [輸入要選取的物件名稱 (範例)] 底下輸入要加入至此資料庫角色的登入或資料庫角色。 或者，按一下 **[瀏覽]** 並選取 **[瀏覽物件]** 對話方塊中任何或所有可用的物件。 按一下 [確定]，返回 [資料庫角色屬性] – *database_role_name* 對話方塊。  
   
 10. [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   

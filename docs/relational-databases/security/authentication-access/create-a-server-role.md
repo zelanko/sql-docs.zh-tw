@@ -4,14 +4,13 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, pdw
-ms.service: ''
 ms.component: security
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - SQL13.SWB.SERVERROLE.GENERAL.F1
 - sql13.swb.serverrole.memberships.f1
@@ -23,13 +22,12 @@ caps.latest.revision: 13
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
 monikerRange: '>= aps-pdw-2016 || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 8e74d591eff94f3a4f4fb9b58944573d976e4342
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 20712a5c126d359eaf6bdbf4ea05c3dd79423c25
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="create-a-server-role"></a>建立伺服器角色
 [!INCLUDE[appliesto-ss-xxxx-xxxx-pdw-md](../../../includes/appliesto-ss-xxxx-xxxx-pdw-md.md)]
@@ -78,7 +76,7 @@ ms.lasthandoff: 04/16/2018
   
 3.  以滑鼠右鍵按一下 [伺服器角色] 資料夾，然後選取 [新增伺服器角色]。  
   
-4.  在 [新增伺服器角色 –***server_role_name*]**** 對話方塊中，於 [一般] 頁面的 [伺服器角色名稱] 方塊中輸入新伺服器角色的名稱。  
+4.  在 [新增伺服器角色] – *server_role_name* 對話方塊中，於 [一般] 頁面的 [伺服器角色名稱] 方塊中輸入新伺服器角色的名稱。  
   
 5.  在 **[擁有者]** 方塊中，輸入將擁有新角色之伺服器主體的名稱。 或者，按一下省略符號 **(...)**，開啟 [選取伺服器登入或角色] 對話方塊。  
   

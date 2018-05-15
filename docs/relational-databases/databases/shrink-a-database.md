@@ -67,7 +67,7 @@ ms.lasthandoff: 05/03/2018
   
 ###  <a name="Recommendations"></a> 建議  
   
--   檢視資料庫中目前的可用 (未配置) 空間量。 如需相關資訊，請參閱 [Display Data and Log Space Information for a Database](../../relational-databases/databases/display-data-and-log-space-information-for-a-database.md)  
+-   檢視資料庫中目前的可用 (未配置) 空間量。 如需相關資訊，請參閱 [顯示資料庫的資料和記錄空間資訊](../../relational-databases/databases/display-data-and-log-space-information-for-a-database.md)  
   
 -   當您計畫壓縮資料庫時，請考量下列資訊：  
   

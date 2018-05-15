@@ -4,14 +4,13 @@ ms.custom: ''
 ms.date: 08/01/2016
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: ''
 ms.component: security
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql13.swb.login.status.f1
 - sql13.swb.login.effectivepermissions.f1
@@ -29,13 +28,12 @@ caps.latest.revision: 29
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Active
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 03a4f993deace5c4714e17667b00eee99b4811a3
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 40163a185516fc5d101baedf6632b46112dda52e
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="create-a-login"></a>建立登入
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -171,9 +169,9 @@ ms.lasthandoff: 04/16/2018
   
 1.  按一下 **[搜尋]**。  
   
-2.  在 [新增物件] 對話方塊中，選取下列其中一個選項：[特定物件…]、[下列類型的所有物件…] 或 [伺服器*server_name*]****。 [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
+2.  在 [新增物件] 對話方塊中，選取下列其中一個選項：[特定物件…]、[下列類型的所有物件…] 或 [伺服器] *server_name*。 [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
-    > **注意**：選取 [伺服器*server_name*]**** 會使用該伺服器的所有安全物件自動填滿上層方格。  
+    > **注意**：選取 [伺服器] *server_name* 會使用該伺服器的所有安全物件自動填滿上層方格。  
   
 3.  如果您選取 **[特定物件]**：  
   

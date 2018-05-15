@@ -3,15 +3,13 @@ title: 使用搜索屬性清單搜索文件屬性 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
-ms.prod_service: database-engine, sql-database
-ms.service: ''
+ms.prod_service: search, sql-database
 ms.component: search
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- dbe-search
+ms.technology: search
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - full-text search [SQL Server], search property lists
 - full-text search [SQL Server], properties
@@ -25,13 +23,12 @@ caps.latest.revision: 49
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: Inactive
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 57decf1f39f5cca3f25d4aabb1941d06295a5378
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 69cb29bc9129de76fce04e9ef6d6fa644c3f3f12
+ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="search-document-properties-with-search-property-lists"></a>使用搜索屬性清單搜索文件屬性
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -59,7 +56,7 @@ ms.lasthandoff: 04/16/2018
   
  ![使用搜尋屬性清單的全文檢索索引](../../relational-databases/search/media/ifts-spl-and-fti.gif "使用搜尋屬性清單的全文檢索索引")  
   
- Title 屬性中的搜尋詞彙 ("Favorite"、"Biking" 和 "Trails") 會與針對此索引指派給 Title 的內部屬性識別碼 1 相關聯。 Keywords 屬性中的搜尋詞彙 ("biking" 和 "mountain") 會與針對此索引指派給 Tags 的內部屬性識別碼 2 相關聯。 若為 Author 屬性中的搜尋詞彙 ("Jane" 和 "Doe") 以及文件本文中的搜尋詞彙，其內部屬性識別碼為 0。 詞彙 "biking" 出現在 [標題] 屬性、[關鍵字](標籤) 屬性和文件本文中。 Title 或 Keywords (Tags) 屬性中 "biking" 的屬性搜尋會在結果中傳回這份文件。 "biking" 的一般全文檢索查詢也會傳回這份文件，就像是沒有對屬性搜尋設定索引一樣。 Author 屬性中 "biking" 的屬性搜尋則不會傳回這份文件。  
+ Title 屬性中的搜尋詞彙 ("Favorite"、"Biking" 和 "Trails") 會與針對此索引指派給 Title 的內部屬性識別碼 1 相關聯。 Keywords 屬性中的搜尋詞彙 ("biking" 和 "mountain") 會與針對此索引指派給 Tags 的內部屬性識別碼 2 相關聯。 若為 Author 屬性中的搜尋詞彙 ("Jane" 和 "Doe") 以及文件本文中的搜尋詞彙，其內部屬性識別碼為 0。 詞彙 "biking" 出現在 [標題] 屬性、[關鍵字]\(標籤) 屬性和文件本文中。 Title 或 Keywords (Tags) 屬性中 "biking" 的屬性搜尋會在結果中傳回這份文件。 "biking" 的一般全文檢索查詢也會傳回這份文件，就像是沒有對屬性搜尋設定索引一樣。 Author 屬性中 "biking" 的屬性搜尋則不會傳回這份文件。  
   
  屬性範圍的全文檢索查詢會使用針對全文檢索索引之目前搜尋屬性清單註冊的內部屬性識別碼。  
   
