@@ -29,9 +29,9 @@
 ## SQL Server 2016
 ### [R Services (資料庫內)](install/sql-r-services-windows-install.md)
 ### [R Server (獨立式)](install/sql-r-standalone-windows-install.md)
-### [繫結到 Microsoft ML 伺服器](r/use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md)
 ## [命令提示字元安裝程式](install/sql-ml-component-commandline-install.md)
 ## [離線安裝程式 (不連線到網際網路)](install/sql-ml-component-install-without-internet-access.md)
+## [升級 R 與 Python](r/use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md)
 ## [設定 R 工具](r/set-up-a-data-science-client.md)
 ## [設定 Python 工具](python/setup-python-client-tools-sql.md)
 
@@ -95,15 +95,16 @@
 # [操作說明](r/sql-server-machine-learning-tasks.md)
 
 ## [套件管理](r/r-package-management-for-sql-server-r-services.md)
-### [在 SQL Server 上安裝新的 R 套件](r/install-additional-r-packages-on-sql-server.md)
-### [在 SQL Server 上安裝新的 Python 套件](python/install-additional-python-packages-on-sql-server.md)
-### [啟用 SQL Server 執行個體的 R 套件管理](r/r-package-how-to-enable-or-disable.md)
-### [決定要安裝在 SQL Server 上的套件](r/determine-which-packages-are-installed-on-sql-server.md)
-### [使用 RevoScaleR 函式，在 SQL Server 上尋找或安裝 R 套件](r/use-revoscaler-to-manage-r-packages.md)
-### [同步處理安裝在 SQL Server 上的 R 套件](r/package-install-uninstall-and-sync.md)
-### [與 SQL Server 一起安裝的 R 套件](r/installing-and-managing-r-packages.md)
-### [使用 miniCRAN 建立本機套件存放庫](r/create-a-local-package-repository-using-minicran.md)
-### [避免 R 使用者套件程式庫的錯誤](r/packages-installed-in-user-libraries.md)
+### [預設封裝](r/installing-and-managing-r-packages.md)
+### [取得封裝資訊](r/determine-which-packages-are-installed-on-sql-server.md)
+### [安裝新的 R 封裝](r/install-additional-r-packages-on-sql-server.md)
+### [安裝新的 Python 封裝](python/install-additional-python-packages-on-sql-server.md)
+### 僅限 R
+#### [啟用遠端 R 封裝管理](r/r-package-how-to-enable-or-disable.md)
+#### [適用於 R 封裝管理的 RevoScaleR 函式](r/use-revoscaler-to-manage-r-packages.md)
+#### [R 封裝同步處理](r/package-install-uninstall-and-sync.md)
+#### [本機 R 封裝存放庫的 miniCRAN](r/create-a-local-package-repository-using-minicran.md)
+#### [R「使用者程式庫」的因應措施](r/packages-installed-in-user-libraries.md)
 
 ## 資料探索及模型化
 ### [R 程式庫和資料類型](r/r-libraries-and-data-types.md)
@@ -154,8 +155,7 @@
 
 ## [已知問題](known-issues-for-sql-server-machine-learning-services.md)
 ## [版本資訊](https://docs.microsoft.com/sql/sql-server/sql-server-2017-release-notes)
-## [新增及更新的發行項](new-updated-advanced-analytics.md)
-## [在 Azure SQL Database 中使用 R](r/using-r-in-azure-sql-database.md)
+## [新文章及更新的文章](new-updated-advanced-analytics.md)
 
 ## [安裝和疑難排解提示](machine-learning-troubleshooting-faq.md)
 ### [設定虛擬機器](r/installing-sql-server-r-services-on-an-azure-virtual-machine.md)
