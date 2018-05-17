@@ -58,12 +58,12 @@ ms.lasthandoff: 05/03/2018
   
 -   [透過原生模式報表伺服器使用 PowerShell 建立 Azure VM](http://msdn.microsoft.com/library/azure/dn449661.aspx)。  
   
--   請參閱 [Access the Reporting Services WMI Provider](../../reporting-services/tools/access-the-reporting-services-wmi-provider.md)中的「使用 PowerShell 存取 WMI 類別」一節。  
+-   請參閱 [存取 Reporting Services WMI 提供者](../../reporting-services/tools/access-the-reporting-services-wmi-provider.md)中的「使用 PowerShell 存取 WMI 類別」一節。  
   
 
 ## <a name="rsexe-scripting-samples"></a>RS.exe 指令碼範例  
   
--   [Sample Reporting Services rs.exe Script to Copy Content between Report Servers](../../reporting-services/tools/sample-reporting-services-rs-exe-script-to-copy-content-between-report-servers.md)。  
+-   [在報表伺服器之間複製內容的範例 Reporting Services rs.exe 指令碼](../../reporting-services/tools/sample-reporting-services-rs-exe-script-to-copy-content-between-report-servers.md)。  
   
 -   如需其他指令碼、應用程式及延伸模組範例，請參閱 [SQL Server Reporting Services 產品範例](http://go.microsoft.com/fwlink/?LinkId=177889)。  
   

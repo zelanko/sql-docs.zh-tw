@@ -50,7 +50,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="tasks"></a>工作  
  啟用遠端報表伺服器組態的工作包括以下項目：  
   
--   在 Windows 防火牆中啟用通訊埠，以允許報表伺服器和 SQL Server Database Engine 執行個體所使用的通訊埠要求。  請參閱＜ [Configure a Firewall for Report Server Access](../../reporting-services/report-server/configure-a-firewall-for-report-server-access.md) ＞和＜ [Configure a Windows Firewall for Database Engine Access](../../database-engine/configure-windows/configure-a-windows-firewall-for-database-engine-access.md)＞。  
+-   在 Windows 防火牆中啟用通訊埠，以允許報表伺服器和 SQL Server Database Engine 執行個體所使用的通訊埠要求。  請參閱＜ [設定供報表伺服器存取的防火牆](../../reporting-services/report-server/configure-a-firewall-for-report-server-access.md) ＞和＜ [設定用於 Database Engine 存取的 Windows 防火牆](../../database-engine/configure-windows/configure-a-windows-firewall-for-database-engine-access.md)＞。  
   
 -   啟用與主控報表伺服器資料庫之 Database Engine 執行個體之間的遠端連接。 如果要設定報表伺服器資料庫連接及管理加密金鑰，必須要有遠端連接；  
   

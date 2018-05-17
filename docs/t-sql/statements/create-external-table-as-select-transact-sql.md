@@ -26,28 +26,16 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: e727b05f4b57e00694c2bf12aa60a972838a9af2
-ms.sourcegitcommit: d2573a8dec2d4102ce8882ee232cdba080d39628
+ms.openlocfilehash: 3d61d87f1e19088d7f667029bdaaf935d150dc88
+ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="create-external-table-as-select-transact-sql"></a>CREATE EXTERNAL TABLE AS SELECT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
   建立外部資料表，然後將 [!INCLUDE[tsql](../../includes/tsql-md.md)] SELECT 陳述式的結果以平行方式匯出至 Hadoop 或「Azure 儲存體 Blob」。  
-  
- 使用 CREATE EXTERNAL TABLE AS SELECT (CETAS) 陳述式來：  
-  
--   將資料褲資料表匯出至 Hadoop 或 Azure Blob 儲存體。  
-  
--   從 Hadoop 或 Azure Blob 儲存體匯入資料，然後儲存在資料庫中。  
-  
--   從 Hadoop 或 Azure Blob 儲存體查詢資料、將該資料與資料庫關聯式資料表聯結，然後將結果寫回至 Hadoop 或 Azure Blob 儲存體。  
-  
--   從 Hadoop 或 Azure Blob 儲存體查詢資料、使用資料庫的快速處理功能來轉換該資料，然後將其寫回至 Hadoop 或 Azure Blob 儲存體。  
-  
- 如需詳細資訊，請參閱 [開始使用 PolyBase](../../relational-databases/polybase/get-started-with-polybase.md)。  
   
  ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例 &#40;Transact-SQL&#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   

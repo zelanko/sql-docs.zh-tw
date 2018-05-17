@@ -1,27 +1,25 @@
 ---
-title: "將 Reporting Services 內容類型新增至 SharePoint 文件庫 | Microsoft Docs"
-ms.custom: 
+title: 將 Reporting Services 內容類型新增至 SharePoint 文件庫 | Microsoft Docs
+ms.custom: ''
 ms.date: 09/25/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: report-server-sharepoint
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: ac9136c8-9ef4-484c-8e9d-05008a186db5
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 2fe50a939544eb7f3d58bbd38ad98e9ffcc82733
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 26f53f76d18900158ff0e9d439839c376a991d73
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="add-reporting-services-content-types-to-a-sharepoint-library"></a>將 Reporting Services 內容類型新增至 SharePoint 文件庫
 
@@ -29,7 +27,7 @@ ms.lasthandoff: 01/09/2018
 
 [!INCLUDE [ssrs-previous-versions](../../includes/ssrs-previous-versions.md)]
 
-[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 會提供預先定義的 SharePoint 內容類型，可用來管理共用資料來源檔案 (.rsds)、報表模型檔案 (.smdl)，以及報表產生器的報表定義檔案 (.rdl)。 將 **[報表產生器報表]**、 **[報表模型]**和 **[報表資料來源]** 內容類型加入至文件庫會啟用 **[新增]** 命令，讓您能夠建立該類型的新文件。
+[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 會提供預先定義的 SharePoint 內容類型，可用來管理共用資料來源檔案 (.rsds)、報表模型檔案 (.smdl)，以及報表產生器的報表定義檔案 (.rdl)。 將 **[報表產生器報表]**、 **[報表模型]** 和 **[報表資料來源]** 內容類型加入至文件庫會啟用 **[新增]** 命令，讓您能夠建立該類型的新文件。
 
 > [!NOTE]
 > SQL Server 2016 後即不再提供 Reporting Services 與 SharePoint 的整合。
@@ -45,7 +43,7 @@ ms.lasthandoff: 01/09/2018
 > [!TIP]  
 >  如果您先前 **沒有** 設定文件庫的內容類型，請先啟用內容類型的管理，然後再啟用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 內容類型。 請參閱在單一文件庫中啟用內容類型管理的程序。  
   
- **短片** [(SSRS) Enabling Content Types in SharePoint2010.wmv](http://www.youtube.com/watch?v=yqhm3DrtT1w) (http://www.youtube.com/watch?v=yqhm3DrtT1w)。  
+ **短片：** [(SSRS) 啟用 SharePoint2010.wmv 中的內容類型](http://www.youtube.com/watch?v=yqhm3DrtT1w) (http://www.youtube.com/watch?v=yqhm3DrtT1w)。  
   
  **本主題內容：**  
   
@@ -109,7 +107,7 @@ ms.lasthandoff: 01/09/2018
   
 3.  按一下 **[文件庫設定]**。  
   
-4.  在 **[內容類型]**底下，按一下 **[從現有的網站內容類型新增]**。  
+4.  在 **[內容類型]** 底下，按一下 **[從現有的網站內容類型新增]**。  
   
 5.  在 **[從下列位置選取網站內容類型]**，選取 **[SQL Server Reporting Services 內容類型]**。  
   
@@ -130,7 +128,7 @@ ms.lasthandoff: 01/09/2018
   
 ##  <a name="bkmk_enable_content_management_2010"></a> 啟用單一文件庫的內容類型管理 (SharePoint 2010)  
   
-1.  開啟要啟用多個內容類型的文件庫。 在文件庫功能表列上，您應該會看見下列功能表： **[新增]**、 **[上傳]**、 **[動作]**及 **[設定]**。 如果您看不到 **[設定]**，表示您沒有加入內容類型的權限。  
+1.  開啟要啟用多個內容類型的文件庫。 在文件庫功能表列上，您應該會看見下列功能表： **[新增]**、 **[上傳]**、 **[動作]** 及 **[設定]**。 如果您看不到 **[設定]**，表示您沒有加入內容類型的權限。  
   
 2.  在 **[文件庫工具]** 功能區中，按一下 **[文件庫]**。  
   
@@ -138,7 +136,7 @@ ms.lasthandoff: 01/09/2018
   
 3.  按一下 **[設定]** 功能區群組的 **[文件庫設定]**。  
   
-4.  在 **[一般設定]**底下，按一下 **[進階設定]**。  
+4.  在 **[一般設定]** 底下，按一下 **[進階設定]**。  
   
 5.  在 **[內容類型]** 區段中，選取 **[是]** 允許內容類型的管理。  
   
@@ -148,13 +146,13 @@ ms.lasthandoff: 01/09/2018
   
 1.  開啟要加入 Reporting Services 內容類型的程式庫。  
   
-2.  按一下 **[文件庫工具]** 功能區索引標籤的 **[文件庫]**索引標籤。  
+2.  按一下 **[文件庫工具]** 功能區索引標籤的 **[文件庫]** 索引標籤。  
   
 3.  按一下 **[設定]** 功能區群組的 **[文件庫設定]**。  
   
-4.  在 **[內容類型]**底下，按一下 **[從現有的網站內容類型新增]**。  
+4.  在 **[內容類型]** 底下，按一下 **[從現有的網站內容類型新增]**。  
   
-5.  在 **[選取內容類型]** 區段的 **[從下列位置選取網站內容類型]**中，按一下箭號選取 **[SQL Server Reporting Services 內容類型]**。  
+5.  在 **[選取內容類型]** 區段的 **[從下列位置選取網站內容類型]** 中，按一下箭號選取 **[SQL Server Reporting Services 內容類型]**。  
   
 6.  在 **[可用的網站內容類型]** 清單中，按一下 **[報表產生器]**，然後按一下 **[加入]** 將選取的內容類型移至 **[要新增的內容類型]** 清單。  
   

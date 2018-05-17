@@ -1,31 +1,29 @@
 ---
-title: "將報表發行至 SharePoint 文件庫 | Microsoft Docs"
-ms.custom: 
+title: 將報表發行至 SharePoint 文件庫 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: reports
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - deploying [Reporting Services], reports in SharePoint integrated mode
 - SharePoint integration [Reporting Services], publishing to a library
 - publishing reports [Reporting Services], to a SharePoint library
 ms.assetid: 3f6dfc28-50d8-4231-bd25-871b5f77cce6
-caps.latest.revision: "15"
+caps.latest.revision: 15
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: cb63f117cdf9b174b09f52adf66bdc4324cf7ca8
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: b741eb4091c44341495fb218ea7ae618098ca02b
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="publish-a-report-to-a-sharepoint-library"></a>將報表發行到 SharePoint 文件庫
   若要將報表發行至有設定 SharePoint 整合的 SharePoint 網站，您必須在報表設計師中設定專案屬性。 在專案屬性中，伺服器、報表和共用資料來源的所有參考都必須是完整 URL。 在報表定義中，子報表、鑽研報表和資源 (如網路架構影像) 的所有參考都必須是完整 URLS。  
@@ -36,7 +34,7 @@ ms.lasthandoff: 01/09/2018
   
 1.  在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中，開啟現有或新的報表伺服器專案。  
   
-2.  在 **[專案]** 功能表按一下 **[屬性]**。 \<專案> [屬性頁] 對話方塊隨即開啟。  
+2.  在 **[專案]** 功能表按一下 **[屬性]**。 [*\<專案>***屬性頁**] 對話方塊隨即開啟。  
   
 3.  在 **[組態]** 清單中，選取用來建立及發行報表的方案組建組態的名稱。 目前的設定列為 [使用中](\<設定>)。  
   
@@ -52,7 +50,7 @@ ms.lasthandoff: 01/09/2018
   
 8.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-9. 在方案總管中，以滑鼠右鍵按一下要發行的報表，然後按一下 [部署]。 報表便會發行至 **[TargetReportFolder]**中所指定的位置。 此時，部署錯誤會出現在 [輸出] 視窗中。  
+9. 在方案總管中，以滑鼠右鍵按一下要發行的報表，然後按一下 [部署]。 報表便會發行至 **[TargetReportFolder]** 中所指定的位置。 此時，部署錯誤會出現在 [輸出] 視窗中。  
   
 ## <a name="see-also"></a>另請參閱  
  [專案屬性頁對話方塊](../../reporting-services/tools/project-property-pages-dialog-box.md)   

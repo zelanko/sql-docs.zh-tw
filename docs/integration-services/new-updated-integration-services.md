@@ -7,14 +7,16 @@ ms.author: genemi
 ms.topic: article
 ms.custom: UpdArt.exe
 ms.suite: sql
-ms.prod_service: sql
+ms.technology: release-landing
+ms.prod: sql
+ms.prod_service: sql-non-specified
 ms.component: ssis
-ms.date: 02/03/2018
-ms.openlocfilehash: ff4632e6e26c702ab85ef70955e0b3eed3a281c7
-ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
+ms.date: 04/28/2018
+ms.openlocfilehash: f1d0c96c7ee0a835c1fc1cf6db6e3cf1e03ca9d6
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="new-and-recently-updated-integration-services-for-sql-server"></a>新增和最近更新：Integration Services for SQL Server
 
@@ -28,7 +30,7 @@ Microsoft 幾乎每天都會在其 [Docs.Microsoft.com](http://docs.microsoft.co
 
 
 
-- 更新日期範圍：&nbsp;**2017 年 12 月 3 日**&nbsp;-至-&nbsp;**2018 年 2 月 3 日**
+- *更新日期範圍：* &nbsp; **2018-02-03** &nbsp; 至 &nbsp; **2018-04-28**
 - *主旨區域：*&nbsp;**Integration Services for SQL Server**.
 
 
@@ -41,18 +43,9 @@ Microsoft 幾乎每天都會在其 [Docs.Microsoft.com](http://docs.microsoft.co
 下列連結會跳至最近新增的新文章。
 
 
-1. [瀏覽所有主體對話方塊](catalog/browse-all-principals-dialog-box.md)
-2. [設定對話方塊](catalog/configure-dialog-box.md)
-3. [資料夾屬性對話方塊](catalog/folder-properties-dialog-box.md)
-4. [Integration Services (SSIS) 目錄 Transact-SQL 參考](catalog/integration-services-ssis-catalog-transact-sql-reference.md)
-5. [Integration Services (SSIS) 伺服器與目錄](catalog/integration-services-ssis-server-and-catalog.md)
-6. [套件屬性對話方塊](catalog/package-properties-dialog-box.md)
-7. [專案屬性對話方塊](catalog/project-properties-dialog-box.md)
-8. [專案版本對話方塊](catalog/project-versions-dialog-box.md)
-9. [設定參數值對話方塊](catalog/set-parameter-value-dialog-box.md)
-10. [SSIS 目錄](catalog/ssis-catalog.md)
-11. [驗證對話方塊](catalog/validate-dialog-box.md)
-12. [檢視 Integration Services 伺服器上的套件清單](catalog/view-the-list-of-packages-on-the-integration-services-server.md)
+1. [使用 SQL Server Integration Services (SSIS) 將資料從 Excel 載入或載入至 Excel](load-data-to-from-excel-with-ssis.md)
+2. [使用 SQL Server Integration Services (SSIS) 將資料從 SQL Server 載入 Azure SQL 資料倉儲](load-data-to-sql-data-warehouse.md)
+3. [Scale Out 透過 SQL Server 容錯移轉叢集執行個體支援高可用性](scale-out/scale-out-failover-cluster-instance.md)
 
 
 
@@ -78,7 +71,8 @@ Microsoft 幾乎每天都會在其 [Docs.Microsoft.com](http://docs.microsoft.co
 
 此壓縮清單提供＜摘要＞一節中所有更新文章的連結。
 
-1. [排程 Azure 上的 SSIS 套件執行](#TitleNum_1)
+1. [安裝 Integration Services](#TitleNum_1)
+2. [部署、執行和監視 Azure 上的 SSIS 套件](#TitleNum_2)
 
 
 
@@ -89,53 +83,113 @@ Microsoft 幾乎每天都會在其 [Docs.Microsoft.com](http://docs.microsoft.co
 
 <a name="TitleNum_1"/>
 
-### <a name="1-nbsp-schedule-the-execution-of-an-ssis-package-on-azurelift-shiftssis-azure-schedule-packagesmd"></a>1.&nbsp; [排程 Azure 上的 SSIS 套件執行](lift-shift/ssis-azure-schedule-packages.md)
+### <a name="1-nbsp-install-integration-servicesinstall-windowsinstall-integration-servicesmd"></a>1.&nbsp; [安裝 Integration Services](install-windows/install-integration-services.md)
 
-更新日期：2018 年 1 月 18 日 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+*更新日期：2018-04-25* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  ([下一個](#TitleNum_2))
 
-<!-- Source markdown line 28.  ms.author= "douglasl".  -->
+<!-- Source markdown line 75.  ms.author= "douglasl".  -->
 
 &nbsp;
 
 
-<!-- git diff --ignore-all-space --unified=0 be778f8096559da9b84670382deb11f56c129971 640dd3cb59a88ccbc4cf6eab363a45e284f6b873  (PR=4662  ,  Filename=ssis-azure-schedule-packages.md  ,  Dirpath=docs\integration-services\lift-shift\  ,  MergeCommitSha40=6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f) -->
+<!-- git diff --ignore-all-space --unified=0 49551f3b1138f805e6d5e0f6099a100e2f3b3e7a 97caaafc1587b2326f4c357dd5eb21f2de7d358f  (PR=5676  ,  Filename=install-integration-services.md  ,  Dirpath=docs\integration-services\install-windows\  ,  MergeCommitSha40=a85a46312acf8b5a59a8a900310cf088369c4150) -->
 
 
 
-您必須先將 SQL Database 伺服器新增至內部部署 SQL Server 作為連結的伺服器，才能在內部部署環境中使用 SQL Server Agent 來排程執行 Azure SQL Database 伺服器上所儲存的套件。
+**Integration Services 的完整安裝**
 
-1.  **設定連結的伺服器**
 
-    ```
-    -- Add the SSISDB database on your Azure SQL Database as a linked server to your SQL Server on premises
-    EXEC sp_addlinkedserver
-        @server='myLinkedServer', -- Name your linked server
-        @srvproduct='',
-        @provider='sqlncli', -- Use SQL Server native client
-        @datasrc='<server_name>.database.windows.net', -- Add your Azure SQL Database server endpoint
-        @location='',
-        @provstr='',
-        @catalog='SSISDB'  -- Add SSISDB as the initial catalog
-    ```
+如需 *{Included-Content-Goes-Here}* 的完整安裝，請從下列清單中選取您需要的元件：
 
-2.  **設定連結的伺服器認證**
+-   **Integration Services (SSIS)**： 使用 [SQL Server 安裝精靈] 來安裝 SSIS。 選取 SSIS 時，會安裝下列項目：
+    -   SQL Server 資料庫引擎上的 SSIS 目錄支援。
+    -   (選擇性) SSIS Scale Out 功能，其中包含一個 Master 與若干 Worker。
+    -   32 位元和 64 位元 SSIS 元件。
+    -   安裝 SSIS 時，**不會**安裝設計和開發 SSIS 套件所需的工具。
+-   **SQL Server 資料庫引擎**： 使用 [SQL Server 安裝精靈] 安裝資料庫引擎。 選取資料庫引擎時，可讓您建立並裝載 SSIS 目錄資料庫 (`SSISDB`)，以儲存、管理、執行及監視 SSIS 套件。
+-   **SQL Server Data Tools (SSDT)**。 若要下載並安裝 SSDT，請參閱[下載 SQL Server Data Tools (SSDT)]。 安裝 SSDT 時，可讓您設計和部署 SSIS 套件。 SSDT 會安裝下列項目：
+    -   SSIS 套件的設計和開發工具，包括 SSIS 設計工具。
+    -   僅 32 位元 SSIS 元件。
+    -   Visual Studio 的限制版本 (如果尚未安裝 Visual Studio 的話)。
+    -   Visual Studio Tools for Applications (VSTA)，其為用於 SSIS 指令碼工作和指令碼元件的指令碼編輯器。
+    -   SSIS 精靈，包括 [部署精靈] 和 [套件升級精靈]。
+    -   SQL Server 匯入和匯出精靈。
+-   **Integration Services Feature Pack for Azure**： 若要下載並安裝 Feature Pack，請參閱 [Microsoft SQL Server 2017 Integration Services Feature Pack for Azure](https://www.microsoft.com/download/details.aspx?id=54798)。 安裝 Feature Pack 時，可讓您的套件連線到 Azure 雲端中的儲存體和分析服務，包括下列服務：
 
-    ```
-    -- Add your Azure SQL DB server admin credentials
-    EXEC sp_addlinkedsrvlogin
-        @rmtsrvname = 'myLinkedServer',
-        @useself = 'false',
-        @rmtuser = 'myUsername', -- Add your server admin username
-        @rmtpassword = 'myPassword' -- Add your server admin password
-    ```
 
-3.  **設定連結的伺服器選項**
 
-    ```
-    EXEC sp_serveroption 'myLinkedServer', 'rpc out', true;
-    ```
+&nbsp;
 
-如需詳細資訊，請參閱[建立連結的伺服器](lift-shift/../../relational-databases/linked-servers/create-linked-servers-sql-server-database-engine.md)和[連結的伺服器](lift-shift/../../relational-databases/linked-servers/linked-servers-database-engine.md)。
+&nbsp;
+
+---
+
+<a name="TitleNum_2"/>
+
+### <a name="2-nbsp-deploy-run-and-monitor-an-ssis-package-on-azurelift-shiftssis-azure-deploy-run-monitor-tutorialmd"></a>2.&nbsp; [部署、執行和監視 Azure 上的 SSIS 套件](lift-shift/ssis-azure-deploy-run-monitor-tutorial.md)
+
+*更新日期：2018-04-25* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  ([上一個](#TitleNum_1))
+
+<!-- Source markdown line 99.  ms.author= "douglasl".  -->
+
+&nbsp;
+
+
+<!-- git diff --ignore-all-space --unified=0 07f2b752818f2e786c4380fb822099190c59f302 54de9497353bac2d6a8a87e546fc6ab9e444a734  (PR=5676  ,  Filename=ssis-azure-deploy-run-monitor-tutorial.md  ,  Dirpath=docs\integration-services\lift-shift\  ,  MergeCommitSha40=a85a46312acf8b5a59a8a900310cf088369c4150) -->
+
+
+
+**使用 PowerShell 部署專案**
+
+
+若要使用 PowerShell 將專案部署到 Azure SQL Database 上的 SSISDB，請根據您的需求調整下列指令碼。 指令碼會列舉 `$ProjectFilePath` 下的子資料夾及各個子資料夾中的專案，然後在 SSISDB 中建立相同資料夾，並將專案部署到這些資料夾。
+
+此指令碼要求在您執行指令碼的電腦上，安裝 SQL Server Data Tools 17.x 版或 SQL Server Management Studio。
+
+```
+**Variables**
+
+$ProjectFilePath = "C:\<folder>"
+$SSISDBServerEndpoint = "<servername>.database.windows.net"
+$SSISDBServerAdminUserName = "<username>"
+$SSISDBServerAdminPassword = "<password>"
+
+**Load the IntegrationServices Assembly**
+
+[System.Reflection.Assembly]::LoadWithPartialName("Microsoft.SqlServer.Management.IntegrationServices") | Out-Null;
+
+**Store the IntegrationServices Assembly namespace to avoid typing it every time**
+
+$ISNamespace = "Microsoft.SqlServer.Management.IntegrationServices"
+
+Write-Host "Connecting to server ..."
+
+**Create a connection to the server**
+
+$sqlConnectionString = "Data Source=" + $SSISDBServerEndpoint + ";User ID="+ $SSISDBServerAdminUserName +";Password="+ $SSISDBServerAdminPassword + ";Initial Catalog=SSISDB"
+$sqlConnection = New-Object System.Data.SqlClient.SqlConnection $sqlConnectionString
+
+**Create the Integration Services object**
+
+$integrationServices = New-Object $ISNamespace".IntegrationServices" $sqlConnection
+
+**Get the catalog**
+
+$catalog = $integrationServices.Catalogs['SSISDB']
+
+write-host "Enumerating all folders..."
+
+$folders = ls -Path $ProjectFilePath -Directory
+
+if ($folders.Count -gt 0)
+{
+    foreach ($filefolder in $folders)
+    {
+        Write-Host "Creating Folder " $filefolder.Name " ..."
+
+        # Create a new folder
+        $folder = New-Object $ISNamespace".CatalogFolder" ($catalog, $filefolder.Name, "Folder description")
+```
 
 
 
@@ -148,40 +202,36 @@ Microsoft 幾乎每天都會在其 [Docs.Microsoft.com](http://docs.microsoft.co
 本節會在我們的公開 GitHub 存放庫中，列出與其他主題區中最近更新的文章十分相似的文章：[MicrosoftDocs/sql-docs](https://github.com/MicrosoftDocs/sql-docs/)。
 
 
+
 #### <a name="subject-areas-that-do-have-new-or-recently-updated-articles"></a>具有新文章或最近更新文章的主題區
 
-
-- [新文章 + 更新文章 (1+3)：&nbsp;**Advanced Analytics for SQL** 文件](../advanced-analytics/new-updated-advanced-analytics.md)
-- [新文章 + 更新文章 (0+1)：&nbsp;**Analytics Platform System for SQL** 文件](../analytics-platform-system/new-updated-analytics-platform-system.md)
-- [新文章 + 更新文章 (0+1)：&nbsp;**連線到 SQL** 文件](../connect/new-updated-connect.md)
-- [新文章 + 更新文章 (0+1)：&nbsp;**Database Engine for SQL** 文件](../database-engine/new-updated-database-engine.md)
-- [新文章 + 更新文章 (12+1)：**Integration Services for SQL**  文件](../integration-services/new-updated-integration-services.md)
-- [新文章 + 更新文章 (6+2)：&nbsp;**Linux for SQL** 文件](../linux/new-updated-linux.md)
-- [新文章 + 更新文章 (15+0)：**PowerShell for SQL** 文件](../powershell/new-updated-powershell.md)
-- [新文章 + 更新文章 (2+9)：&nbsp;**Relational Databases for SQL** 文件](../relational-databases/new-updated-relational-databases.md)
-- [新文章 + 更新文章 (1+0)：&nbsp;**Reporting Services for SQL** 文件](../reporting-services/new-updated-reporting-services.md)
-- [新文章 + 更新文章 (1+1)：&nbsp;**SQL Operations Studio** 文件](../sql-operations-studio/new-updated-sql-operations-studio.md)
-- [新文章 + 更新文章 (1+1)：&nbsp;**Microsoft SQL Server** 文件](../sql-server/new-updated-sql-server.md)
-- [新文章 + 更新文章 (0+1)：&nbsp;**SQL Server Data Tools (SSDT)** 文件](../ssdt/new-updated-ssdt.md)
-- [新文章 + 更新文章 (1+2)：&nbsp;**SQL Server Management Studio (SSMS)** 文件](../ssms/new-updated-ssms.md)
-- [新文章 + 更新文章 (0+2)：&nbsp;**Transact-SQL** 文件](../t-sql/new-updated-t-sql.md)
+- [新文章 + 更新文章 (11+6)：&nbsp; &nbsp;**Advanced Analytics for SQL** 文件](../advanced-analytics/new-updated-advanced-analytics.md)
+- [新文章 + 更新文章 (18+0)：&nbsp; &nbsp;**Analysis Services for SQL** 文件](../analysis-services/new-updated-analysis-services.md)
+- [新文章 + 更新文章 (218+14)：**連線到 SQL** 文件](../connect/new-updated-connect.md)
+- [新文章 + 更新文章 (14+0)：&nbsp; &nbsp;**SQL 資料庫引擎**文件](../database-engine/new-updated-database-engine.md)
+- [新文章 + 更新文章 (3+2)：&nbsp; &nbsp; **Integration Services for SQL** 文件](../integration-services/new-updated-integration-services.md)
+- [新文章 + 更新文章 (3+3)：&nbsp; &nbsp; **Linux for SQL** 文件](../linux/new-updated-linux.md)
+- [新文章 + 更新文章 (7+10)：&nbsp; &nbsp;**SQL 的關聯式資料庫**文件](../relational-databases/new-updated-relational-databases.md)
+- [新文章 + 更新文章 (0+2)：&nbsp; &nbsp; **Reporting Services for SQL** 文件](../reporting-services/new-updated-reporting-services.md)
+- [新文章 + 更新文章 (1+3)：&nbsp; &nbsp; **SQL Operations Studio** 文件](../sql-operations-studio/new-updated-sql-operations-studio.md)
+- [新文章 + 更新文章 (2+3)：&nbsp; &nbsp; **Microsoft SQL Server** 文件](../sql-server/new-updated-sql-server.md)
+- [新文章 + 更新文章 (1+1)：&nbsp; &nbsp; **SQL Server Data Tools (SSDT)** 文件](../ssdt/new-updated-ssdt.md)
+- [新文章 + 更新文章 (5+2)：&nbsp; &nbsp; **SQL Server Management Studio (SSMS)** 文件](../ssms/new-updated-ssms.md)
+- [新文章 + 更新文章 (0+2)：&nbsp; &nbsp; **Transact-SQL** 文件](../t-sql/new-updated-t-sql.md)
+- [新文章 + 更新文章 (1+1)：&nbsp; &nbsp; **SQL 工具**文件](../tools/new-updated-tools.md)
 
 
 
 #### <a name="subject-areas-that-do-not-have-any-new-or-recently-updated-articles"></a>沒有新文章或最近更新文章的主題區
 
-
-- [新文章 + 更新文章 (0+0)：**SQL 資料移轉小幫手 (DMA)** 文件](../dma/new-updated-dma.md)
-- [新文章 + 更新文章 (0+0)：**ActiveX Data Objects (ADO) for SQL** 文件](../ado/new-updated-ado.md)
-- [新文章 + 更新文章 (0+0)：**SQL Analysis Services** 文件](../analysis-services/new-updated-analysis-services.md)
+- [新文章 + 更新文章 (0+0)：**SQL 的分析平台系統**文件](../analytics-platform-system/new-updated-analytics-platform-system.md)
 - [新文章 + 更新文章 (0+0)：**Data Quality Services for SQL** 文件](../data-quality-services/new-updated-data-quality-services.md)
 - [新文章 + 更新文章 (0+0)：**SQL 資料採礦延伸模組 (DMX)** 文件](../dmx/new-updated-dmx.md)
 - [新文章 + 更新文章 (0+0)：**SQL Master Data Services (MDS)** 文件](../master-data-services/new-updated-master-data-services.md)
 - [新文章 + 更新文章 (0+0)：**SQL 多維度運算式 (MDX)** 文件](../mdx/new-updated-mdx.md)
 - [新文章 + 更新文章 (0+0)：**SQL ODBC (開放式資料庫連接)** 文件](../odbc/new-updated-odbc.md)
+- [新文章 + 更新文章 (0+0)：**PowerShell for SQL** 文件](../powershell/new-updated-powershell.md)
 - [新文章 + 更新文章 (0+0)：**SQL 範例**文件](../samples/new-updated-samples.md)
 - [新文章 + 更新文章 (0+0)：**SQL Server 移轉小幫手 (SSMA)** 文件](../ssma/new-updated-ssma.md)
-- [新文章 + 更新文章 (0+0)：**SQL 的工具** 文件](../tools/new-updated-tools.md)
 - [新文章 + 更新文章 (0+0)：**XQuery for SQL** 文件](../xquery/new-updated-xquery.md)
-
 

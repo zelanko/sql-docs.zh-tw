@@ -1,16 +1,15 @@
 ---
-title: "rskeymgmt 公用程式 (SSRS) | Microsoft Docs"
-ms.custom: 
+title: rskeymgmt 公用程式 (SSRS) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/20/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: tools
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - report servers [Reporting Services], encryption
 - joining report server instances [SQL Server]
@@ -23,16 +22,15 @@ helpviewer_keywords:
 - rskeymgmt utility
 - scale-out deployments [Reporting Services]
 ms.assetid: 53f1318d-bd2d-4c08-b19f-c8b698b5b3d3
-caps.latest.revision: "56"
+caps.latest.revision: 56
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 3e78a5b9e393dc24c1bfdb1ccc72cd05a0675bfd
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: c2bdcd2610eb4a4c6d351868a8fbb7aac9a44bf7
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="rskeymgmt-utility-ssrs"></a>rskeymgmt 公用程式 (SSRS)
   擷取、還原、建立和刪除「用來保護機密報表伺服器資料，以免遭到未獲授權的存取」之對稱金鑰。 另外，這個公用程式也用來將報表伺服器執行個體聯結在向外延展部署中。 「報表伺服器向外延展部署」是指共用單一報表伺服器資料庫的多個報表伺服器執行個體。  
@@ -65,12 +63,12 @@ rskeymgmt {-?}
  **-e**  
  擷取「用來加密和解密報表伺服器執行個體的資料，以便將它複製到檔案中」之對稱金鑰。  
   
- 此引數沒有取得值。 不過，命令列必須包括其他引數，才能完成擷取作業。 您必須指定的引數包括 **-f** 和**-p**。  
+ 此引數沒有取得值。 不過，命令列必須包括其他引數，才能完成擷取作業。 您必須指定的引數包括 **-f** 和 **-p**。  
   
  **-a**  
  利用密碼保護的備份檔所提供之副本來取代現有的對稱金鑰。 這會更新對稱金鑰的所有執行個體。  
   
- 此引數沒有取得值。 不過，命令列必須包括其他引數，才能選取要套用的金鑰所在的檔案。 您可以指定的引數包括 **-f** 和**-p**。  
+ 此引數沒有取得值。 不過，命令列必須包括其他引數，才能選取要套用的金鑰所在的檔案。 您可以指定的引數包括 **-f** 和 **-p**。  
   
  **-d**  
  刪除所有對稱金鑰執行個體及報表伺服器資庫中所有已加密的資料。 此引數沒有取得值。  
@@ -101,7 +99,7 @@ rskeymgmt {-?}
  指定要聯結至報表伺服器向外延展部署中，主控報表伺服器執行個體的遠端電腦名稱。 請使用在網路中用來識別這部電腦的名稱。  
   
  **-n**  
- 指定遠端電腦中之報表伺服器執行個體的名稱。 如果您將報表伺服器安裝在預設的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體上，這個引數即為選擇性 ( **-n** 的預設值是 MSSQLSERVER)。 若您將報表伺服器安裝成具名執行個體，就需要 **-n** 。  
+ 指定遠端電腦中之報表伺服器執行個體的名稱。 如果您將報表伺服器安裝在預設的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體上，這個引數即為選擇性 ( **-n** 的預設值是 MSSQLSERVER)。 若您將報表伺服器安裝成具名執行個體，則需要 **-n**。  
   
  **-u**  <使用者帳戶>  
  指定要聯結至向外延展部署中之遠端電腦的管理員帳戶。 如果未指定帳戶，就會使用目前使用者的認證。  
@@ -171,7 +169,7 @@ rskeymgmt -r <installationID>
 ```  
   
 ## <a name="file-location"></a>檔案位置  
- Rskeymgmt.exe 位於 **\<磁碟機**>:\Program Files\Microsoft SQL Server\110\Tools\Binn** 或 **\<磁碟機**>:\Program Files (x86)\Microsoft SQL Server\110\Tools\Binn**。 您可以從檔案系統上的任何資料夾執行此公用程式。  
+ Rskeymgmt.exe 位於 **\<*磁碟機*>:\Program Files\Microsoft SQL Server\110\Tools\Binn** 或 **\<*磁碟機*>:\Program Files (x86)\Microsoft SQL Server\110\Tools\Binn**。 您可以從檔案系統上的任何資料夾執行此公用程式。  
   
 ## <a name="remarks"></a>Remarks  
  報表伺服器會加密預存的認證和連接資訊。 資料的加密使用公開金鑰和對稱金鑰。 報表伺服器資料庫必須具備有效的金鑰，報表伺服器才能夠執行。 您可以使用 **rskeymgmt** 來備份、刪除或還原金鑰。 如果金鑰無法還原，這個工具可用來刪除已無法使用的加密內容。  

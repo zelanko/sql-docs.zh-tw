@@ -23,14 +23,14 @@
 ### [使用 PowerShell 執行](ssis-quickstart-run-powershell.md)
 ### [使用 C# 執行](./ssis-quickstart-run-dotnet.md) 
 
-# [將 SSIS 套件隨即轉移至 Azure](lift-shift/ssis-azure-lift-shift-ssis-packages-overview.md)
-## [教學課程 - 部署、執行和監視 Azure 上的套件](lift-shift/ssis-azure-deploy-run-monitor-tutorial.md)
-## [使用 Windows 驗證連線到資料來源](lift-shift/ssis-azure-connect-with-windows-auth.md)
+# [在 Azure 中部署和執行套件](lift-shift/ssis-azure-lift-shift-ssis-packages-overview.md)
+## [教學課程 - 在 Azure 中部署和執行套件](lift-shift/ssis-azure-deploy-run-monitor-tutorial.md)
+## [使用 Windows 驗證連線到資料](lift-shift/ssis-azure-connect-with-windows-auth.md)
 ## [連接到檔案及檔案共用](lift-shift/ssis-azure-files-file-shares.md)
+## [在 Azure 中連線到 SSISDB](lift-shift/ssis-azure-connect-to-catalog-database.md)
 ## [驗證部署到 Azure 的套件](lift-shift/ssis-azure-validate-packages.md)
-## [連線到 Azure 上的 SSIS 目錄](lift-shift/ssis-azure-connect-to-catalog-database.md)
-## [在 Azure 上排程套件執行](lift-shift/ssis-azure-schedule-packages.md)
-## [利用 SSMS 在 Azure 上排程套件執行](lift-shift/ssis-azure-schedule-packages-ssms.md)
+## [在 Azure 中排程套件](lift-shift/ssis-azure-schedule-packages.md)
+## [在 Azure 中以 SSMS 排程套件](lift-shift/ssis-azure-schedule-packages-ssms.md)
 
 # [安裝或升級](../integration-services/install-windows/install-integration-services.md)
 

@@ -4,12 +4,10 @@ ms.custom: ''
 ms.date: 07/24/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: ''
 ms.component: t-sql|functions
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: t-sql
 ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
@@ -26,17 +24,16 @@ caps.latest.revision: 16
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 823f6fd583be606672905acf3908e1854a873e75
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: bd25f4a498c11bc3eec36f21877f5a0204b7617f
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="cryptographic-functions-transact-sql"></a>密碼編譯函式 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-下列函數支援加密、解密、數位簽章，以及數位簽章的驗證。
+這些函數支援數字簽章、數字簽章驗證、加密和解密。
   
 ## <a name="symmetric-encryption-and-decryption"></a>對稱式加密和解密
   
@@ -64,7 +61,7 @@ ms.lasthandoff: 04/16/2018
 |[SIGNBYCERT](../../t-sql/functions/signbycert-transact-sql.md)|[VERIGYSIGNEDBYCERT](../../t-sql/functions/verifysignedbycert-transact-sql.md)|  
 |[IS_OBJECTSIGNED](../../t-sql/functions/is-objectsigned-transact-sql.md)||  
   
-## <a name="symmetric-decryption-with-automatic-key-handling"></a>自動金鑰處理的對稱式解密
+## <a name="symmetric-decryption-with-automatic-key-handling"></a>對稱式解密，利用自動金鑰處理
   
 |||  
 |-|-|  
@@ -76,7 +73,7 @@ ms.lasthandoff: 04/16/2018
 |-|-|  
 |[HASHBYTES](../../t-sql/functions/hashbytes-transact-sql.md)||  
   
-## <a name="copying-certificates"></a>複製憑證
+## <a name="certificate-copying"></a>憑證複製
   
 |||  
 |-|-|  

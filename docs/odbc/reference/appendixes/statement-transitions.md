@@ -3,13 +3,10 @@ title: 陳述式轉換 |Microsoft 文件
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
-ms.component: odbc
+ms.prod_service: connectivity
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -21,9 +18,9 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 94696a2975436669567db926b3d66020dd29ab5b
-ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
-ms.translationtype: HT
+ms.openlocfilehash: 5f20ec0efb42e877695c44f4d62c4ffc1ae79806
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
 ---
@@ -494,9 +491,9 @@ ODBC 陳述式具有下列狀態。
 |------------------------|----------------------|------------------------|---------------------|----------------------|--------------------------|-----------------------|  
 |(KARTRIS)|S2 [s] 和 [編號] S3 [s] 和 [r2] S11 [x]|-[s] 或 ([e] 和 [1]) S1 [e] 和 [2] S11 [x]|S1 [e] [3] S2 和 [s]，[編號]，[3] S3 和 [s]，[r] 和 [3] S11 [x] 和 [3] 24000 [4]|請參閱下一個資料表|HY010|NS [c] HY010 [o]|  
   
- [1] 的準備工作失敗，由於驗證陳述式以外的原因 (SQLSTATE 已 HY009 [無效的引數的值] 或 [HY090 [無效的字串或緩衝區長度])。  
+ [1] 的準備工作失敗，由於驗證陳述式以外的原因 (SQLSTATE 已 HY009 [無效的引數的值] 或 HY090 [無效的字串或緩衝區長度])。  
   
- [2] 的準備工作失敗時驗證該陳述式 (SQLSTATE 未 HY009 [無效的引數的值] 或 [HY090 [無效的字串或緩衝區長度])。  
+ [2] 的準備工作失敗時驗證該陳述式 (SQLSTATE 未 HY009 [無效的引數的值] 或 HY090 [無效的字串或緩衝區長度])。  
   
  [3] 的目前結果的最後一個或只有結果，或沒有目前的結果。 如需多個結果的詳細資訊，請參閱[多個結果](../../../odbc/reference/develop-app/multiple-results.md)。  
   

@@ -1,27 +1,25 @@
 ---
-title: "檢視及瀏覽原生模式報表使用 SharePoint Web 組件 (SSRS) |Microsoft 文件"
-ms.custom: 
+title: 檢視及瀏覽原生模式報表使用 SharePoint Web 組件 (SSRS) |Microsoft 文件
+ms.custom: ''
 ms.date: 05/30/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: reports
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: dee8ee42-156b-43b6-b202-02dfb9404284
-caps.latest.revision: "9"
+caps.latest.revision: 9
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 6dd79986579847f890ec4387602c833b4f48d7cb
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 1072350a30a5f28ac16cda48f72720a383012d02
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="view-and-explore-native-mode-reports-using-sharepoint-web-parts-ssrs"></a>View and Explore Native Mode Reports Using SharePoint Web Parts (SSRS)
 
@@ -106,7 +104,7 @@ ms.lasthandoff: 01/09/2018
   
     > rswebparts.cab    00000000-0000-0000-0000-000000000000     True  
   
-     如需使用 PowerShell 的詳細資訊，請參閱 [Install-SPWebPartPack](http://technet.microsoft.com/library/ff607840.aspx)(http://technet.microsoft.com/library/ff607840.aspx)。  
+     如需深入了解 PowerShell 的應用，請參閱 [Install-SPWebPartPack (http://technet.microsoft.com/library/ff607840.aspx)](http://technet.microsoft.com/library/ff607840.aspx)。  
   
 #### <a name="install-web-parts-using-stsadmexe"></a>使用 STSADM.exe 安裝 Web 組件  
   
@@ -148,9 +146,9 @@ ms.lasthandoff: 01/09/2018
   
 6.  當頁面處於編輯模式時，在報表檢視 Web 組件中按一下 **[編輯網頁組件]** 。  
   
-7.  在 **[報表管理員 URL]**中，輸入指向報表管理員執行個體的 URL，該執行個體與您要存取的原生模式報表伺服器相關聯。 根據預設，報表管理員 URL 具有下列語法： **http://\<伺服器名稱 > /**。  
+7.  在 **[報表管理員 URL]** 中，輸入指向報表管理員執行個體的 URL，該執行個體與您要存取的原生模式報表伺服器相關聯。 根據預設，報表管理員 URL 具有下列語法： **http://\<伺服器名稱 > /**。  
   
-8.  在 **[報表路徑]**中，指定正斜線，後面緊跟著資料夾路徑與報表名稱。 請 **勿** 加入伺服器名稱或報表管理員虛擬目錄。 例如，若要開啟 Adventure Works 資料夾中的 ‘Company Sales’ 報表，請指定 **/Adventure Works/Company Sales**。 以下是 ‘Products’ 報表位於報表伺服器根資料夾 **/Products**的另一個範例。  
+8.  在 **[報表路徑]** 中，指定正斜線，後面緊跟著資料夾路徑與報表名稱。 請 **勿** 加入伺服器名稱或報表管理員虛擬目錄。 例如，若要開啟 Adventure Works 資料夾中的 ‘Company Sales’ 報表，請指定 **/Adventure Works/Company Sales**。 以下是 ‘Products’ 報表位於報表伺服器根資料夾 **/Products**的另一個範例。  
   
 9. 按一下 [確定] 。  
   
@@ -160,7 +158,7 @@ ms.lasthandoff: 01/09/2018
   
 2.  在報表總管 Web 組件內容功能表中，按一下 **[編輯網頁組件]**。  
   
-3.  在 **[報表管理員 URL]**中，輸入指向報表管理員執行個體的 URL，該執行個體與您要存取的原生模式報表伺服器相關聯。  
+3.  在 **[報表管理員 URL]** 中，輸入指向報表管理員執行個體的 URL，該執行個體與您要存取的原生模式報表伺服器相關聯。  
   
 4.  您可以選擇性地設定 **[起始路徑]**。 起始路徑是報表伺服器資料夾階層中的資料夾。 如果您要讓預設頁面成為比資料夾階層以下的資料夾，您可以指定起始路徑。 路徑開頭必須是正斜線。 您必須指定以報表伺服器資料夾階層之根節點開始的完整路徑，但是不包含伺服器名稱或報表管理員虛擬目錄。 例如，若要開啟根節點正下方，名稱為 Adventure Works 的資料夾，請在 [起始路徑] 中指定 **/Adventure Works** 。  
   

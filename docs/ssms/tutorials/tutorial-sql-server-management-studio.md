@@ -26,11 +26,11 @@ caps.latest.revision: 22
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 8bc9af7ef49cfcb86b286e8ce090cad1be57e49e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: fa41bd4f5cbae85af4ad7cf93fa0690b5cca9421
+ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="tutorials-for-sql-server-management-studio-ssms"></a>SQL Server Management Studio (SSMS) 教學課程
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -80,7 +80,7 @@ SQL Server Management Studio (SSMS) 教學課程將為您介紹用來管理 [!IN
 
   -   下載最新版的 [SQL Server Management Studio (SSMS)](../download-sql-server-management-studio-ssms.md)。  
 
-第一節將引導您建立資料庫，但也可以在此處找到其他範例資料庫：[AdventureWorks Sample Databases](https://github.com/Microsoft/sql-server-samples/releases) (AdventureWorks 範例資料庫)。 此處可以找到在 SSMS 中還原資料庫的說明：[還原資料庫](https://docs.microsoft.com/en-us/sql/relational-databases/backup-restore/restore-a-database-backup-using-ssms)。 
+第一節將引導您建立資料庫，但也可以在此處找到其他範例資料庫：[AdventureWorks Sample Databases](https://github.com/Microsoft/sql-server-samples/releases) (AdventureWorks 範例資料庫)。 此處可以找到在 SSMS 中還原資料庫的說明：[還原資料庫](https://docs.microsoft.com/sql/relational-databases/backup-restore/restore-a-database-backup-using-ssms)。 
 
 
   

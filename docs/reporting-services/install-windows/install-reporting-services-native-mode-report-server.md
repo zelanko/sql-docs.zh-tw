@@ -1,31 +1,29 @@
 ---
-title: "安裝 Reporting Services 2016 原生模式報表伺服器 | Microsoft Docs"
-ms.custom: 
+title: 安裝 Reporting Services 2016 原生模式報表伺服器 | Microsoft Docs
+ms.custom: ''
 ms.date: 12/20/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
-ms.service: 
 ms.component: install-windows
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: get-started-article
 helpviewer_keywords:
 - default configuration [Reporting Services]
 - report servers [Reporting Services], default configurations
 - installation options [Reporting Services]
 ms.assetid: 8f25e6dc-b753-400e-9e9a-50f4f35bf6c4
-caps.latest.revision: "68"
+caps.latest.revision: 68
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: Active
-ms.openlocfilehash: 23104fa56aeb157b19d43b332c2d570613ed5a62
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 6f5209c2e5017e208110886521f74cfa37ab388e
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="install-reporting-services-2016-native-mode-report-server"></a>安裝 Reporting Services 2016 原生模式報表伺服器
 
@@ -79,7 +77,7 @@ ms.lasthandoff: 01/09/2018
   
 -   用來執行安裝程式的使用者帳戶必須是本機管理員群組的成員，而且擁有在主控報表伺服器資料庫之 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 執行個體上存取和建立資料庫的權限。  
   
--   安裝程式必須能夠使用預設值，以保留可提供存取報表伺服器和 [!INCLUDE[ssRSWebPortal-Non-Markdown](../../includes/ssrswebportal-non-markdown-md.md)]的 URL。 這些值包括連接埠 80、一個強式萬用字元，以及採用 **ReportServer_\<**執行個體名稱**>** 和 **Reports_\<**執行個體名稱**>** 格式的虛擬目錄名稱。  
+-   安裝程式必須能夠使用預設值，以保留可提供存取報表伺服器和 [!INCLUDE[ssRSWebPortal-Non-Markdown](../../includes/ssrswebportal-non-markdown-md.md)]的 URL。 這些值包括連接埠 80、一個強式萬用字元，以及採用 **ReportServer_\<***instance_name***>** 和 **Reports_\<***instance_name***>** 格式的虛擬目錄名稱。  
   
 -   安裝程式必須能夠使用預設值，以建立報表伺服器資料庫。 這些值為 **ReportServer** 和 **ReportServerTempDB**。 如果您現有的資料庫是來自之前的安裝，安裝程式將會被封鎖，因為它無法在原生模式的預設組態中設定報表伺服器。 您必須重新命名、移動或刪除這些資料庫，才能解除封鎖安裝程式。  
   

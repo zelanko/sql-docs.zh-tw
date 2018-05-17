@@ -1,25 +1,23 @@
 ---
-title: "將 SQL Server Reporting Services 報表檢視器網頁組件新增至 SharePoint 頁面 | Microsoft Docs"
-ms.custom: 
+title: 將 SQL Server Reporting Services 報表檢視器網頁組件新增至 SharePoint 頁面 | Microsoft Docs
+ms.custom: ''
 ms.date: 09/26/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: report-server-sharepoint
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 93137662ea40589495e692ca021c693920786185
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 3d63f40c62c1997be2d4944c8b67f328d2b64c2d
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="add-sql-server-reporting-services-report-viewer-web-part-to-a-sharepoint-page"></a>將 SQL Server Reporting Services 報表檢視器網頁組件新增至 SharePoint 頁面
 
@@ -53,7 +51,7 @@ ms.lasthandoff: 01/09/2018
 
     ![新增報表檢視器網頁組件。](media/sharepoint-report-viewer-web-part.png)
 
-    一開始可能會出現錯誤。 會出現錯誤是因為預設報表伺服器的 URL 設定為 *http://localhost*，而該位置可能無法取得報表伺服器。
+    一開始可能會出現錯誤。 之所以會出現錯誤，是因為預設報表伺服器的 URL 設定為 *http://localhost*，而該位置可能無法取得報表伺服器。
 
 ## <a name="configure-the-report-viewer-web-part"></a>設定報表檢視器網頁組件
 
@@ -63,7 +61,7 @@ ms.lasthandoff: 01/09/2018
 
     ![從 [網頁組件] 下拉式清單編輯網頁。](media/sharepoint-edit-web-part.png)
 
-2. 請輸入裝載報表之報表伺服器的**報表伺服器 URL**。 它看起來應該類似 *http://myrsserver/reportserver*。
+2. 請輸入裝載報表之報表伺服器的**報表伺服器 URL**。 看起來應該類似於 *http://myrsserver/reportserver*。
 
 3. 輸入您想要在網頁組件內顯示的報表名稱與路徑。 它看起來會類似 */AdventureWorks Sample Reports/Company Sales*。 在此範例中，報表 *Company Sales* 位在 *AdventureWorks 範例報表*資料夾中。
 

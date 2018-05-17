@@ -4,12 +4,10 @@ ms.custom: ''
 ms.date: 05/01/2017
 ms.prod: sql
 ms.prod_service: sql-database
-ms.service: ''
 ms.component: t-sql|statements
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: t-sql
 ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
@@ -27,12 +25,11 @@ caps.latest.revision: 72
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: e21a2e591b9bd5c38d4abf458c938b17563cc89c
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: fb2dd1c54653b825d135e9ca3fb1b478212f70f3
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="alter-server-configuration-transact-sql"></a>ALTER SERVER CONFIGURATION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -193,19 +190,22 @@ SQLDUMPEREDUMPFLAGS
 **適用於**： [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。  
   
  HADR CLUSTER CONTEXT **=** { **'***remote_windows_cluster***'** | LOCAL }  
- 將伺服器執行個體的 HADR 叢集內容切換至指定的 Windows Server 容錯移轉叢集 (WSFC) 叢集。 「HADR 叢集內容」可決定由哪個 Windows Server 容錯移轉叢集 (WSFC) 叢集來管理可用性複本 (由伺服器執行個體所裝載) 的中繼資料。 僅在跨叢集移轉 [!INCLUDE[ssHADR](../../includes/sshadr-md.md)]至新 WSFC 叢集上的 [!INCLUDE[ssSQL11SP1](../../includes/sssql11sp1-md.md)] 或更新版本執行個體時，才使用 SET HADR CLUSTER CONTEXT 選項。  
+ 將伺服器執行個體的 HADR 叢集內容切換至指定的 Windows Server 容錯移轉叢集 (WSFC)。 「HADR 叢集內容」可決定由哪個 WSFC 管理可用性複本 (由伺服器執行個體所裝載) 的中繼資料。 僅在跨叢集移轉 [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] 至新 WSFC 上的 [!INCLUDE[ssSQL11SP1](../../includes/sssql11sp1-md.md)] 或更新版本執行個體時，才使用 SET HADR CLUSTER CONTEXT 選項。  
   
- 您只能將 HADR 叢集內容從本機 WSFC 叢集切換至遠端叢集，然後從遠端叢集切換回本機叢集。 HADR 叢集內容只有在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體未裝載任何可用性複本時，才能切換至遠端叢集。  
+ 您只能將 HADR 叢集內容從本機 WSFC 切換至遠端 WSFC，然後從遠端 WSFC 切換回本機 WSFC。 HADR 叢集內容只有在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體未裝載任何可用性複本時，才能切換至遠端叢集。  
   
  遠端 HADR 叢集內容隨時可以切換回本機叢集。 不過，只要伺服器執行個體裝載任何可用性複本，內容就不能再次切換。  
   
  若要識別目的地叢集，請指定下列其中一個值：  
   
  *windows_cluster*  
- WSFC 叢集的叢集物件名稱 (CON)。 您可以指定簡短名稱或完整網域名稱。 為了尋找簡短名稱的目標 IP 位址，ALTER SERVER CONFIGURATION 會使用 DNS 解析。 在某些情況下，簡短名稱可能會產生混淆，而且 DNS 可能會傳回錯誤的 IP 位址。 因此，我們建議您指定完整網域名稱。  
+ WSFC 的 netwirj 名稱。 您可以指定簡短名稱或完整網域名稱。 為了尋找簡短名稱的目標 IP 位址，ALTER SERVER CONFIGURATION 會使用 DNS 解析。 在某些情況下，簡短名稱可能會產生混淆，而且 DNS 可能會傳回錯誤的 IP 位址。 因此，我們建議您指定完整網域名稱。  
+  
+  > [!NOTE] 
+  > 不再支援使用這項設定來進行跨叢集移轉。 若要執行跨叢集移轉，請使用分散式可用性群組或透過其他方法，例如，記錄傳送。 
   
  LOCAL  
- 本機 WSFC 叢集。  
+ 本機 WSFC。  
   
  如需詳細資訊，請參閱[變更伺服器執行個體的 HADR 叢集內容 &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/change-the-hadr-cluster-context-of-server-instance-sql-server.md)。  
   
@@ -247,7 +247,7 @@ SQLDUMPEREDUMPFLAGS
 > 3) 重新啟動 SQL Server 執行個體。  
 > 4) 啟動 SQL Server Agent 的執行個體。  
   
-**詳細資訊：**如果您在重新啟動 SQL Server 服務之前執行 ALTER SERVER CONFIGURATION 與 SET SOFTNUMA 命令，當停止 SQL Server Agent 服務時，它會執行 T-SQL RECONFIGURE 命令，並將 SOFTNUMA 設定還原回 ALTER SERVER CONFIGURATION 之前的情況。 
+**詳細資訊：** 如果您在重新啟動 SQL Server 服務之前執行 ALTER SERVER CONFIGURATION 與 SET SOFTNUMA 命令，當停止 SQL Server Agent 服務時，它會執行 T-SQL RECONFIGURE 命令，並將 SOFTNUMA 設定還原回 ALTER SERVER CONFIGURATION 之前的情況。 
   
 ## <a name="general-remarks"></a>一般備註  
  除非有明確指定，否則這個陳述式不需要重新啟動 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 如果是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 容錯移轉叢集執行個體，則不需要重新啟動 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 叢集資源。  

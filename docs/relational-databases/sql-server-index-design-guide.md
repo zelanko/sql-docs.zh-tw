@@ -28,11 +28,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 92aa59127e07e684c6325a811e17469689e403ed
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 6307d2bd9f7af779e37fbcc37bc5b1b743dbd83a
+ms.sourcegitcommit: bac61a04d11fdf61deeb03060e66621c0606c074
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/14/2018
 ---
 # <a name="sql-server-index-architecture-and-design-guide"></a>SQL Server 索引架構和設計指南
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -851,9 +851,9 @@ Bw 型樹狀結構中的索引頁可視需要從儲存單一資料列成長，�
 
 ![hekaton_tables_23f](../relational-databases/in-memory-oltp/media/HKNCI_Split.gif "分割頁面")
 
-**步驟 1：**配置兩個新的頁面 P1 和 P2，並將資料列從舊的 P1 頁面分割到這些新的頁面，包括新插入的資料列。 頁面對應表中新的位置是用來儲存頁面 P2 的實體位址。 P1 和 P2 這些頁面目前還無法存取任何並行作業。 此外，已設定從 P1 到 P2 的邏輯指標。 接著，在一個不可部分完成的步驟中更新頁面對應表，將指標從舊的 P1 變更為新的 P1。 
+**步驟 1：** 配置兩個新的頁面 P1 和 P2，並將資料列從舊的 P1 頁面分割到這些新的頁面，包括新插入的資料列。 頁面對應表中新的位置是用來儲存頁面 P2 的實體位址。 P1 和 P2 這些頁面目前還無法存取任何並行作業。 此外，已設定從 P1 到 P2 的邏輯指標。 接著，在一個不可部分完成的步驟中更新頁面對應表，將指標從舊的 P1 變更為新的 P1。 
 
-**步驟 2：**非分葉頁面指向 P1，但是沒有從非分葉頁面指向 P2 的直接指標。 只能透過 P1 連線到 P2。 若要從非分葉頁面建立 P2 的指標，請配置新的非分葉頁面 (內部索引頁)、複製所有舊的非分葉頁面的資料列，再新增新的資料列指向 P2。 完成後，在一個不可部分完成的步驟中更新頁面對應表，將指標從舊的非分葉頁面變更為新的非分葉頁面。
+**步驟 2：** 非分葉頁面指向 P1，但是沒有從非分葉頁面指向 P2 的直接指標。 只能透過 P1 連線到 P2。 若要從非分葉頁面建立 P2 的指標，請配置新的非分葉頁面 (內部索引頁)、複製所有舊的非分葉頁面的資料列，再新增新的資料列指向 P2。 完成後，在一個不可部分完成的步驟中更新頁面對應表，將指標從舊的非分葉頁面變更為新的非分葉頁面。
 
 #### <a name="merge-page"></a>合併頁面
 當 `DELETE` 作業產生的頁面小於頁面大小上限 (目前為 8 KB) 的 10%，或只有單一資料列時，該頁面就會合併到接續的頁面中。
@@ -864,11 +864,11 @@ Bw 型樹狀結構中的索引頁可視需要從儲存單一資料列成長，�
 
 ![hekaton_tables_23g](../relational-databases/in-memory-oltp/media/HKNCI_Merge.gif "合併頁面")
 
-**步驟 1：**建立代表索引鍵值 10 (藍色三角形) 的差異頁面，它在非分葉頁面 Pp1 中的指標設定為新的差異頁面。 另建立特殊的合併差異頁面 (綠色三角形)，連結指向差異頁面。 在這個階段，任何並行交易都看不到這兩種頁面 (差異頁面和合併差異頁面)。 在某個不可部分完成的步驟中，頁面對應表中的分葉層級頁 P1 的指標會更新指向合併差異頁面。 這個步驟之後，Pp1 中的索引鍵值 10 項目現在會指向合併差異頁面。 
+**步驟 1：** 建立代表索引鍵值 10 (藍色三角形) 的差異頁面，它在非分葉頁面 Pp1 中的指標設定為新的差異頁面。 另建立特殊的合併差異頁面 (綠色三角形)，連結指向差異頁面。 在這個階段，任何並行交易都看不到這兩種頁面 (差異頁面和合併差異頁面)。 在某個不可部分完成的步驟中，頁面對應表中的分葉層級頁 P1 的指標會更新指向合併差異頁面。 這個步驟之後，Pp1 中的索引鍵值 10 項目現在會指向合併差異頁面。 
 
-**步驟 2：**必須移除非分葉頁面 Pp1 中代表索引鍵值 7 的資料列，並更新索引鍵值 10 項目指向 P1。 若要這樣做，要配置新的非分葉頁面 Pp2，並複製 Pp1 中除代表索引鍵值 7 以外的所有資料列，然後更新索引鍵值 10 的資料列指向頁面 P1。 完成之後，在一個不可部分完成的步驟中，更新指向 Pp1 的頁面對應表項目指向 Pp2。 無法再連線到 Pp1。 
+**步驟 2：** 必須移除非分葉頁面 Pp1 中代表索引鍵值 7 的資料列，並更新索引鍵值 10 項目指向 P1。 若要這樣做，要配置新的非分葉頁面 Pp2，並複製 Pp1 中除代表索引鍵值 7 以外的所有資料列，然後更新索引鍵值 10 的資料列指向頁面 P1。 完成之後，在一個不可部分完成的步驟中，更新指向 Pp1 的頁面對應表項目指向 Pp2。 無法再連線到 Pp1。 
 
-**步驟 3：**合併分葉層級頁面 P2 和 P1，並移除差異頁面。 若要這樣做，要配置新的頁面 P3，合併 P1 和 P2 的資料列，在新的 P3 中包含差異頁面變更。 然後，在一個不可部分完成的步驟中，更新指向 P1 頁面的頁面對應表項目指向頁面 P3。 
+**步驟 3：** 合併分葉層級頁面 P2 和 P1，並移除差異頁面。 若要這樣做，要配置新的頁面 P3，合併 P1 和 P2 的資料列，在新的 P3 中包含差異頁面變更。 然後，在一個不可部分完成的步驟中，更新指向 P1 頁面的頁面對應表項目指向頁面 P3。 
 
 ### <a name="performance-considerations"></a>效能考量
 
@@ -881,6 +881,11 @@ Bw 型樹狀結構中的索引頁可視需要從儲存單一資料列成長，�
 > 當非叢集索引索引鍵資料行中的某個資料行有許多重複的值時，效能會因為更新、插入及刪除而降低。 在此情況下，改善效能的其中一種方法就是在非叢集索引中加入其他資料行。
 
 ##  <a name="Additional_Reading"></a> 其他閱讀資料  
+[CREATE INDEX &#40;Transact-SQL&#41;](../t-sql/statements/create-index-transact-sql.md)    
+[ALTER INDEX &#40;Transact-SQL&#41;](../t-sql/statements/alter-index-transact-sql.md)   
+[CREATE XML INDEX &#40;Transact-SQL&#41;](../t-sql/statements/create-xml-index-transact-sql.md)  
+[CREATE SPATIAL INDEX &#40;Transact-SQL&#41;](../t-sql/statements/create-spatial-index-transact-sql.md)     
+[重新組織與重建索引](../relational-databases/indexes/reorganize-and-rebuild-indexes.md)         
 [＜使用 SQL Server 2008 索引檢視提升效能＞](http://msdn.microsoft.com/library/dd171921(v=sql.100).aspx)  
 [Partitioned Tables and Indexes](../relational-databases/partitions/partitioned-tables-and-indexes.md)  
 [建立主索引鍵](../relational-databases/tables/create-primary-keys.md)    
@@ -890,8 +895,5 @@ Bw 型樹狀結構中的索引頁可視需要從儲存單一資料列成長，�
 [記憶體最佳化的資料表動態管理檢視 &#40;Transact-SQL&#41;](../relational-databases/system-dynamic-management-views/memory-optimized-table-dynamic-management-views-transact-sql.md)   
 [索引相關的動態管理檢視和函式 &#40;Transact-SQL&#41;](../relational-databases/system-dynamic-management-views/index-related-dynamic-management-views-and-functions-transact-sql.md)       
 [計算資料行的索引](../relational-databases/indexes/indexes-on-computed-columns.md)   
-[索引和 ALTER TABLE](../t-sql/statements/alter-table-transact-sql.md#indexes-and-alter-table)   
-[CREATE INDEX &#40;Transact-SQL&#41;](../t-sql/statements/create-index-transact-sql.md)    
-[ALTER INDEX &#40;Transact-SQL&#41;](../t-sql/statements/alter-index-transact-sql.md)   
-[CREATE XML INDEX &#40;Transact-SQL&#41;](../t-sql/statements/create-xml-index-transact-sql.md)  
-[CREATE SPATIAL INDEX &#40;Transact-SQL&#41;](../t-sql/statements/create-spatial-index-transact-sql.md)  
+[索引和 ALTER TABLE](../t-sql/statements/alter-table-transact-sql.md#indexes-and-alter-table)      
+[自適性索引重組](http://github.com/Microsoft/tigertoolbox/tree/master/AdaptiveIndexDefrag)      
