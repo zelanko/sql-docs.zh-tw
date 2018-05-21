@@ -1,27 +1,24 @@
 ---
 title: SQL Server Data Tools (SSDT) 中的 Azure Active Directory 支援 | Microsoft Docs
 ms.custom: ''
-ms.date: 03/05/2018
-ms.prod: sql
+ms.date: 04/09/2018
+ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: ''
 ms.component: ssdt
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- tools-ssdt
+ms.technology: ssdt
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: Active
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 1e8f19c1dcc629ec6e97aa02cd23be1c101ad596
-ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
+ms.openlocfilehash: 62ed13f6bb3eb5859976b5a5d970f3297c42304e
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="azure-active-directory-support-in-sql-server-data-tools-ssdt"></a>SQL Server Data Tools (SSDT) 中的 Azure Active Directory 支援
 
@@ -39,13 +36,13 @@ Active Directory 密碼驗證是使用 Azure Active Directory (Azure AD) 中的�
 
 Active Directory 整合式驗證是使用 Azure Active Directory (Azure AD) 中的身分識別連線至 Azure SQL Database 的機制。 如果您使用來自同盟網域的 Azure Active Directory 認證登入 Windows，請使用此方法連線。 如需詳細資訊，請參閱 [使用 Azure Active Directory 驗證連線到 SQL 資料庫](https://docs.microsoft.com/azure/sql-database/sql-database-aad-authentication)。
 
-## <a name="active-directory-interactive-authentication-preview"></a>Active Directory 互動式驗證 (預覽)
+## <a name="active-directory-interactive-authentication"></a>Active Directory 互動式驗證
 
 SSDT 提供連線到 Azure SQL 資料庫的新驗證方法 - **Active Directory 互動式驗證**。
 
 
 > [!NOTE]
-> 在 [Visual Studio 2017 preview](https://www.visualstudio.com/vs/preview/) 中與 SSDT 連線時，便可以使用 Active Directory 互動式驗證，且執行 SSDT 的電腦上必須已經安裝 [.NET 4.7.2 預覽 (KB4038188)](https://go.microsoft.com/fwlink/?linkid=867317)。 如果未安裝 .NET 4.7.2 預覽 (KB4038188)，將無法使用 Active Directory 互動式驗證選項。
+> 在 [Visual Studio 2017 15.6 版](https://docs.microsoft.com/visualstudio/releasenotes/vs2017-relnotes)中與 SSDT 連線時，便可以使用 Active Directory 互動式驗證，且執行 SSDT 的電腦上必須[下載並安裝 .NET Framework 4.7.2](https://www.microsoft.com/net/download/all)。 如果未安裝 [.NET Framework 4.7.2](https://docs.microsoft.com/dotnet/api/?view=netframework-4.7.2)，將無法使用 Active Directory 互動式驗證選項。
 
 
 Active Directory 互動式驗證支援互動式驗證，允許使用 Azure Active Directory (AD) 多重要素驗證 (MFA) 向 Azure SQL Database 驗證。 這個方法支援原生和同盟的 Azure AD 使用者和來自其他帳戶的來賓使用者 (包括 B2B 使用者、Microsoft 和非 Microsoft 帳戶，例如 @outlook.com、@hotmail.com、@live.com，及 @gmail.com)。 如果指定此方法，就必須指定 [使用者名稱]，而 [密碼] 欄位會被停用。 

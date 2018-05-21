@@ -4,7 +4,7 @@ description: 深入了解 SQL Operations Studio （預覽） 中的伺服器群�
 ms.custom: tools|sos
 ms.date: 11/15/2017
 ms.prod: sql
-ms.reviewer: alayu; erickang; sstein
+ms.reviewer: alayu; sstein
 ms.suite: sql
 ms.prod_service: sql-tools
 ms.component: sos
@@ -13,11 +13,11 @@ ms.topic: conceptual
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 07144aff1008499dcfba99a8afd58c535777e0da
-ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.openlocfilehash: 48c29ec2ce21da9e461a712ebaada21760c2de6a
+ms.sourcegitcommit: b3bb41424249de198f22d9c6d40df4996f083aa6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/18/2018
 ---
 # <a name="server-groups-in-includename-sosincludesname-sos-shortmd"></a>中的伺服器群組 [!INCLUDE[name-sos](../includes/name-sos-short.md)]
 

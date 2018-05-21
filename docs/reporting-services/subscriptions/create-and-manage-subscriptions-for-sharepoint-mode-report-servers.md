@@ -59,7 +59,7 @@ ms.lasthandoff: 05/03/2018
   
  當您建立訂閱時，可以選取輸出檔案格式。 並非每份報表都適用於每種格式。 在您選取訂閱的格式之前，請開啟報表並將它匯出成不同的格式，以便確認它是否如預期方式顯示。  
   
- 若要能夠建立 **訂閱，使用者需要 SharePoint 中的** [編輯項目] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 清單權限。 如需相關資訊，請參閱 [SharePoint Site and List Permission Reference for Report Server Items](../../reporting-services/security/sharepoint-site-and-list-permission-reference-for-report-server-items.md)  
+ 若要能夠建立 **訂閱，使用者需要 SharePoint 中的** [編輯項目] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 清單權限。 如需相關資訊，請參閱 [報表伺服器項目的 SharePoint 網站和清單權限參考](../../reporting-services/security/sharepoint-site-and-list-permission-reference-for-report-server-items.md)  
   
 > [!IMPORTANT]  
 >  將報表傳遞至文件庫或共用資料夾的訂閱會建立以原始報表為基礎的新靜態檔案，但是此檔案並非在報表檢視器 Web 組件中執行的真正報表定義。 如果原始報表具有互動式功能 (例如，鑽研連結) 或動態內容，這些功能將無法在傳遞至目標位置的靜態檔案中使用。 如果您選取「網頁」，就可以保留某些互動性，但是因為文件不是在報表檢視器中執行的 .rdl 檔，所以按一下連結報表將會在瀏覽器工作階段中建立新頁面，導致您必須捲動才能回到網站。  

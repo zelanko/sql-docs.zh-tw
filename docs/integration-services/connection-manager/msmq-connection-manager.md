@@ -62,7 +62,7 @@ ms.lasthandoff: 05/03/2018
  若要深入了解 MSMQ 連線管理員，請參閱＜ [MSMQ Connection Manager](../../integration-services/connection-manager/msmq-connection-manager.md)＞。  
   
 > [!NOTE]  
->  MSMQ 連線管理員支援本機的共用和私用佇列，以及遠端的公用佇列。 但不支援遠端私用佇列。 如需使用指令碼工作的解決方案，請參閱＜ [Sending to a Remote Private Message Queue with the Script Task](../../integration-services/extending-packages-scripting-task-examples/sending-to-a-remote-private-message-queue-with-the-script-task.md)＞。  
+>  MSMQ 連線管理員支援本機的共用和私用佇列，以及遠端的公用佇列。 但不支援遠端私用佇列。 如需使用指令碼工作的解決方案，請參閱＜ [以指令碼工作傳送至遠端私用訊息佇列](../../integration-services/extending-packages-scripting-task-examples/sending-to-a-remote-private-message-queue-with-the-script-task.md)＞。  
   
 ### <a name="options"></a>選項。  
  **名稱**  

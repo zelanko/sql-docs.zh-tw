@@ -38,7 +38,7 @@ ms.lasthandoff: 05/03/2018
   
  依預設，異動複寫會透過每個訂閱者上所安裝的一組預存程序，將變更傳播到訂閱者。 在「發行者」端的資料表中進行插入、更新或刪除操作時，作業會翻譯為對「訂閱者」端預存程序的呼叫。 預存程序接受對應至資料表中資料行的參數，允許在「訂閱者」端變更這些資料行。  
   
- 若要設定對交易式發行項之資料變更的傳播方法，請參閱＜ [Set the Propagation Method for Data Changes to Transactional Articles](../../../relational-databases/replication/publish/set-the-propagation-method-for-data-changes-to-transactional-articles.md)＞。  
+ 若要設定對交易式發行項之資料變更的傳播方法，請參閱＜ [設定對交易式發行項之資料變更的傳播方法](../../../relational-databases/replication/publish/set-the-propagation-method-for-data-changes-to-transactional-articles.md)＞。  
   
 ## <a name="default-and-custom-stored-procedures"></a>預設與自訂預存程序  
  依預設，複寫為每個資料表發行項建立的三個程序為：  

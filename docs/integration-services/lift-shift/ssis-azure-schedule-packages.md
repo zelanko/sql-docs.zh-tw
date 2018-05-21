@@ -1,10 +1,9 @@
 ---
 title: 排程 Azure 上的 SSIS 套件執行 | Microsoft Docs
-ms.date: 04/17/2018
-ms.topic: article
+ms.date: 05/07/2018
+ms.topic: conceptual
 ms.prod: sql
 ms.prod_service: integration-services
-ms.service: ''
 ms.component: lift-shift
 ms.suite: sql
 ms.custom: ''
@@ -13,19 +12,79 @@ ms.technology:
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: c946055e7579478d65de31f737b1c265b2a38eba
-ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
+ms.openlocfilehash: 946fb9c302057844eed3c1e14aed1243e0d4c7f7
+ms.sourcegitcommit: 1aedef909f91dc88dc741748f36eabce3a04b2b1
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="schedule-the-execution-of-an-ssis-package-on-azure"></a>排程 Azure 上的 SSIS 套件執行
 您可以選擇下列其中一個排程選項，來排程執行 Azure SQL Database 伺服器的 SSISDB 目錄資料庫上所儲存的套件：
--   [SQL Server Agent](#agent)
+-   [SQL Server Management Studio (SSMS) 中的排程選項](#ssms)
+-   [Azure Data Factory 執行 SSIS 套件活動](#execute)
+-   [Azure Data Factory SQL Server 預存程序活動](#stored proc)
 -   [SQL Database 彈性作業](#elastic)
--   [Azure Data Factory 執行 SSIS 套件活動](#activities)
--   [Azure Data Factory SQL Server 預存程序活動](#activities)
+-   [SQL Server Agent](#agent)
+
+## <a name="ssms"></a> 使用 SSMS 排程套件
+
+在 SQL Server Management Studio (SSMS) 中，您可以在部署到 SSIS 目錄資料庫 (SSISDB) 的套件上按一下滑鼠右鍵，然後選取 [排程] 以開啟 [新增排程] 對話方塊。
+
+## <a name="execute"></a> 使用執行 SSIS 套件活動排程套件
+
+如需如何使用 Azure Data Factory 中的執行 SSIS 套件活動來排程 SSIS 套件的資訊，請參閱[在 Azure Data Factory 中使用 SSIS 活動執行 SSIS 套件](https://docs.microsoft.com/azure/data-factory/how-to-invoke-ssis-package-ssis-activity)。
+
+## <a name="storedproc"></a> 使用預存程序活動排程套件
+
+如需如何使用 Azure Data Factory 中的預存程序活動來排程 SSIS 套件的資訊，請參閱[在 Azure Data Factory 中使用預存程序活動執行 SSIS 套件](https://docs.microsoft.com/azure/data-factory/how-to-invoke-ssis-package-stored-procedure-activity)。
+
+針對 Data Factory 第 1 版，請參閱[在 Azure Data Factory 中使用預存程序活動執行 SSIS 套件](https://docs.microsoft.com/azure/data-factory/v1/how-to-invoke-ssis-package-stored-procedure-activity)。
+
+## <a name="elastic"></a> 使用 SQL Database 彈性作業排程套件
+
+如需在 SQL Database 上彈性作業的詳細資訊，請參閱[管理相應放大的雲端資料庫](https://docs.microsoft.com/azure/sql-database/sql-database-elastic-jobs-overview)。
+
+### <a name="prerequisites"></a>Prerequisites
+
+您必須執行下列動作，才能使用彈性作業來排程 Azure SQL Database 伺服器的 SSISDB 目錄資料庫上所儲存的 SSIS 套件：
+
+1.  安裝和設定彈性資料庫作業元件。 如需詳細資訊，請參閱[安裝彈性資料庫作業概觀](https://docs.microsoft.com/azure/sql-database/sql-database-elastic-jobs-service-installation)。
+
+2. 建立作業可用來將命令傳送至 SSIS 目錄資料庫的資料庫範圍認證。 如需詳細資訊，請參閱 [CREATE DATABASE SCOPED CREDENTIAL (Transact-SQL)](../../t-sql/statements/create-database-scoped-credential-transact-sql.md)。
+
+### <a name="create-an-elastic-job"></a>建立彈性作業
+
+使用與下列範例中所示指令碼類似的 Transact-SQL 指令碼，來建立作業：
+
+```sql
+-- Create Elastic Jobs target group 
+EXEC jobs.sp_add_target_group 'TargetGroup' 
+
+-- Add Elastic Jobs target group member 
+EXEC jobs.sp_add_target_group_member @target_group_name='TargetGroup', 
+    @target_type='SqlDatabase', @server_name='YourSQLDBServer.database.windows.net',
+    @database_name='SSISDB' 
+
+-- Add a job to schedule SSIS package execution
+EXEC jobs.sp_add_job @job_name='ExecutePackageJob', @description='Description', 
+    @schedule_interval_type='Minutes', @schedule_interval_count=60
+
+-- Add a job step to create/start SSIS package execution using SSISDB catalog stored procedures
+EXEC jobs.sp_add_jobstep @job_name='ExecutePackageJob', 
+    @command=N'DECLARE @exe_id bigint 
+        EXEC [SSISDB].[catalog].[create_execution]
+            @folder_name=N''folderName'', @project_name=N''projectName'',
+            @package_name=N''packageName'', @use32bitruntime=0,
+            @runinscaleout=1, @useanyworker=1, 
+            @execution_id=@exe_id OUTPUT         
+        EXEC [SSISDB].[catalog].[start_execution] @exe_id, @retry_count=0', 
+    @credential_name='YourDBScopedCredentials', 
+    @target_group_name='TargetGroup' 
+
+-- Enable the job schedule 
+EXEC jobs.sp_update_job @job_name='ExecutePackageJob', @enabled=1, 
+    @schedule_interval_type='Minutes', @schedule_interval_count=60 
+```
 
 ## <a name="agent"></a> 使用 SQL Server Agent 排程套件
 
@@ -96,62 +155,6 @@ ms.lasthandoff: 04/26/2018
     ```
 
 6.  完成設定和排程作業。
-
-## <a name="elastic"></a> 使用 SQL Database 彈性作業排程套件
-
-如需在 SQL Database 上彈性作業的詳細資訊，請參閱[管理相應放大的雲端資料庫](https://docs.microsoft.com/azure/sql-database/sql-database-elastic-jobs-overview)。
-
-### <a name="prerequisites"></a>Prerequisites
-
-您必須執行下列動作，才能使用彈性作業來排程 Azure SQL Database 伺服器的 SSISDB 目錄資料庫上所儲存的 SSIS 套件：
-
-1.  安裝和設定彈性資料庫作業元件。 如需詳細資訊，請參閱[安裝彈性資料庫作業概觀](https://docs.microsoft.com/azure/sql-database/sql-database-elastic-jobs-service-installation)。
-
-2. 建立作業可用來將命令傳送至 SSIS 目錄資料庫的資料庫範圍認證。 如需詳細資訊，請參閱 [CREATE DATABASE SCOPED CREDENTIAL (Transact-SQL)](../../t-sql/statements/create-database-scoped-credential-transact-sql.md)。
-
-### <a name="create-an-elastic-job"></a>建立彈性作業
-
-使用與下列範例中所示指令碼類似的 Transact-SQL 指令碼，來建立作業：
-
-```sql
--- Create Elastic Jobs target group 
-EXEC jobs.sp_add_target_group 'TargetGroup' 
-
--- Add Elastic Jobs target group member 
-EXEC jobs.sp_add_target_group_member @target_group_name='TargetGroup', 
-    @target_type='SqlDatabase', @server_name='YourSQLDBServer.database.windows.net',
-    @database_name='SSISDB' 
-
--- Add a job to schedule SSIS package execution
-EXEC jobs.sp_add_job @job_name='ExecutePackageJob', @description='Description', 
-    @schedule_interval_type='Minutes', @schedule_interval_count=60
-
--- Add a job step to create/start SSIS package execution using SSISDB catalog stored procedures
-EXEC jobs.sp_add_jobstep @job_name='ExecutePackageJob', 
-    @command=N'DECLARE @exe_id bigint 
-        EXEC [SSISDB].[catalog].[create_execution]
-            @folder_name=N''folderName'', @project_name=N''projectName'',
-            @package_name=N''packageName'', @use32bitruntime=0,
-            @runinscaleout=1, @useanyworker=1, 
-            @execution_id=@exe_id OUTPUT         
-        EXEC [SSISDB].[catalog].[start_execution] @exe_id, @retry_count=0', 
-    @credential_name='YourDBScopedCredentials', 
-    @target_group_name='TargetGroup' 
-
--- Enable the job schedule 
-EXEC jobs.sp_update_job @job_name='ExecutePackageJob', @enabled=1, 
-    @schedule_interval_type='Minutes', @schedule_interval_count=60 
-```
-
-## <a name="activities"></a> 使用 Azure Data Factory 排定套件
-
-如需如何使用 Azure Data Factory 活動排定 SSIS 套件的資訊，請參閱下列文章：
-
--   針對 Data Factory 第 2 版：[在 Azure Data Factory 中使用 SSIS 活動執行 SSIS 套件](https://docs.microsoft.com/azure/data-factory/how-to-invoke-ssis-package-ssis-activity)
-
--   針對 Data Factory 第 2 版：[在 Azure Data Factory 中使用預存程序活動執行 SSIS 套件](https://docs.microsoft.com/azure/data-factory/how-to-invoke-ssis-package-stored-procedure-activity)
-
--   針對 Data Factory 第 1 版：[在 Azure Data Factory 中使用預存程序活動執行 SSIS 套件](https://docs.microsoft.com/azure/data-factory/v1/how-to-invoke-ssis-package-stored-procedure-activity)
 
 ## <a name="next-steps"></a>後續步驟
 如需 SQL Server Agent 的詳細資訊，請參閱[套件的 SQL Server Agent 作業](../packages/sql-server-agent-jobs-for-packages.md)。

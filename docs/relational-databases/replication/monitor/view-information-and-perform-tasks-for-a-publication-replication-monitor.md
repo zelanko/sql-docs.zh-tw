@@ -68,7 +68,7 @@ ms.lasthandoff: 05/03/2018
   
 5.  若要檢視有關代理程式警告與臨界值的詳細資訊，請按一下 **[警告]** 索引標籤。如需詳細資訊，請參閱＜ [Set Thresholds and Warnings in Replication Monitor](../../../relational-databases/replication/monitor/set-thresholds-and-warnings-in-replication-monitor.md)＞。  
   
-6.  若要檢視追蹤 Token 的資訊，請按一下 **[追蹤 Token]** 索引標籤。如需如何使用追蹤 Token 的詳細資訊，請參閱＜ [Measure Latency and Validate Connections for Transactional Replication](../../../relational-databases/replication/monitor/measure-latency-and-validate-connections-for-transactional-replication.md)＞。  
+6.  若要檢視追蹤 Token 的資訊，請按一下 **[追蹤 Token]** 索引標籤。如需如何使用追蹤 Token 的詳細資訊，請參閱＜ [針對異動複寫測量延遲及驗證連接](../../../relational-databases/replication/monitor/measure-latency-and-validate-connections-for-transactional-replication.md)＞。  
   
 ## <a name="see-also"></a>另請參閱  
  [檢視及修改發行集屬性](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md)   

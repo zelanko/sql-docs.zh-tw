@@ -4,7 +4,7 @@ description: 本快速入門示範如何使用 SQL Operations Studio （預覽�
 ms.custom: tools|sos
 ms.date: 03/08/2018
 ms.prod: sql
-ms.reviewer: alayu; erickang; sstein
+ms.reviewer: alayu; sstein
 ms.suite: sql
 ms.prod_service: sql-tools
 ms.component: sos
@@ -13,11 +13,11 @@ ms.topic: quickstart
 author: yualan
 ms.author: alayu
 manager: craigg
-ms.openlocfilehash: 287cd20b7db0a1b816211d48bc7a19c8f5066e8c
-ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.openlocfilehash: 94a760c815b9933ff4d8d7da3dd24c292fcdc641
+ms.sourcegitcommit: 6fd8a193728abc0a00075f3e4766a7e2e2859139
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/17/2018
 ---
 # <a name="quickstart-connect-and-query-sql-server-using-includename-sosincludesname-sos-shortmd"></a>快速入門： 使用 [!INCLUDE[name-sos](../includes/name-sos-short.md)] 連接及查詢 SQL Server 
 本快速入門示範如何使用[!INCLUDE[name-sos](../includes/name-sos-short.md)]連接到 SQL Server，然後使用 TRANSACT-SQL (T-SQL) 陳述式來建立*TutorialDB*，並用於[!INCLUDE[name-sos](../includes/name-sos-short.md)]教學課程。
@@ -48,7 +48,7 @@ ms.lasthandoff: 05/03/2018
     - **驗證類型：** SQL 登入  
     - **使用者名稱：** for SQL Server 的使用者名稱  
     - **密碼：** for SQL Server 密碼  
-    - **資料庫名稱：**這個欄位保留空白 
+    - **資料庫名稱：** 這個欄位保留空白 
     - **伺服器群組：** \<預設\>  
 
    ![新的 [連接] 畫面](media/quickstart-sql-server/new-connection-screen.png)

@@ -24,7 +24,7 @@ ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
 ---
 # <a name="lesson-2-specifying-connection-information-reporting-services"></a>第 2 課：指定連接資訊 (Reporting Services)
-將  分頁報表報表新增至教學課程專案第 1 課之後，您需要定義*「資料來源」*[!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)]，這是讓報表從關聯式資料庫、多維度資料庫或其他來源存取資料所用的連線資訊。  
+將  分頁報表報表新增至教學課程專案第 1 課之後，您需要定義 *「資料來源」*[!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)]，這是讓報表從關聯式資料庫、多維度資料庫或其他來源存取資料所用的連線資訊。  
   
 在這一課，您將使用 [!INCLUDE[ssSampleDBAdventureworks2014_md](../includes/sssampledbadventureworks2014-md.md)] 範例資料庫作為您的資料來源。 本教學課程假設這個資料庫是位於安裝在本機電腦的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../includes/ssde-md.md)] 預設執行個體中。  
   
@@ -54,7 +54,7 @@ ms.lasthandoff: 05/03/2018
     >  
     >`Data source=localhost\SQLEXPRESS; initial catalog=AdventureWorks2014`  
     >  
-    >如需連接字串的詳細資訊，請參閱： [Data Connections, Data Sources, and Connection Strings in Reporting Services](../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)。  
+    >如需連接字串的詳細資訊，請參閱： [報表產生器中的資料連接、資料來源及連接字串](../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)。  
      
   
 6.  按一下左窗格中的 [認證]，然後按一下 [使用 Windows 驗證 (整合式安全性)]。  
@@ -65,7 +65,7 @@ ms.lasthandoff: 05/03/2018
 您已順利定義 [!INCLUDE[ssSampleDBAdventureworks2014_md](../includes/sssampledbadventureworks2014-md.md)] 範例資料庫的連接。 下一步，您將建立報表。 請參閱[第 3 課：定義資料表報表的資料集 &#40;Reporting Services&#41;](../reporting-services/lesson-3-defining-a-dataset-for-the-table-report-reporting-services.md)。  
   
 ## <a name="see-also"></a>另請參閱  
-[Data Connections, Data Sources, and Connection Strings in Reporting Services](../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)  
+[報表產生器中的資料連接、資料來源及連接字串](../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)  
   
   
   

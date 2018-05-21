@@ -4,7 +4,7 @@ description: 了解 SQL Operations Studio（預覽）中的 Insight 小工具。
 ms.custom: tools|sos
 ms.date: 11/15/2017
 ms.prod: sql
-ms.reviewer: alayu; erickang; sstein
+ms.reviewer: alayu; sstein
 ms.suite: sql
 ms.prod_service: sql-tools
 ms.component: sos
@@ -13,11 +13,11 @@ ms.topic: article"
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 590fc4002e051eea1f7e9e0c9ef41e9ff342b3d3
-ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.openlocfilehash: 77f34ceebb4f02c829b2df3efcae5e64c2eaa1bf
+ms.sourcegitcommit: 6fd8a193728abc0a00075f3e4766a7e2e2859139
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/17/2018
 ---
 # <a name="manage-servers-and-databases-with-insight-widgets-in-includename-sosincludesname-sos-shortmd"></a>在[!INCLUDE[name-sos](../includes/name-sos-short.md)]中管理伺服器和資料庫的 Insight 小工具
 

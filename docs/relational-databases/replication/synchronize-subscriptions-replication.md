@@ -59,7 +59,7 @@ ms.lasthandoff: 05/03/2018
   
 -   [使用 Windows Synchronization Manager 同步處理訂閱 &#40;Windows Synchronization Manager&#41;](../../relational-databases/replication/synchronize-a-subscription-using-windows-synchronization-manager.md)  
   
--   [Implement a Business Logic Handler for a Merge Article](../../relational-databases/replication/implement-a-business-logic-handler-for-a-merge-article.md)  
+-   [為合併發行項實作商務邏輯處理常式](../../relational-databases/replication/implement-a-business-logic-handler-for-a-merge-article.md)  
   
 -   [偵錯商務邏輯處理常式 &#40;複寫程式設計&#41;](../../relational-databases/replication/debug-a-business-logic-handler-replication-programming.md)  
   

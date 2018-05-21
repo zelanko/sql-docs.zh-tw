@@ -211,7 +211,7 @@ ms.lasthandoff: 05/03/2018
 |檢視報表伺服器屬性|檢視套用至報表伺服器的屬性，例如應用程式名稱、是否啟用「我的報表」，以及報表記錄預設值。<br /><br /> 如果您從 **系統使用者** 角色移除此工作，將無法使用 [站台設定] 頁面。 另外，應用程式標題不會在每一個頁面的頂端顯示。 根據預設，報表管理員的標題是 "[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]"。|  
 |檢視共用排程|檢視用來執行報表或重新整理報表的共用排程。<br /><br /> 如果您從 **系統使用者** 角色移除此工作，使用者就無法選取共用排程，以搭配訂閱和其他已排程的作業使用。|  
   
- 可以使用 **系統使用者** 角色來補充預設安全性。 您可以將角色包括在新的角色指派中，這會擴充報表伺服器存取權給報表使用者。 如需詳細資訊，請參閱 [Granting Permissions on a Native Mode Report Server](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)。  
+ 可以使用 **系統使用者** 角色來補充預設安全性。 您可以將角色包括在新的角色指派中，這會擴充報表伺服器存取權給報表使用者。 如需詳細資訊，請參閱 [在原生模式報表伺服器上授與權限](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)。  
   
 ## <a name="see-also"></a>另請參閱  
  [建立、刪除或修改角色 &#40;Management Studio&#41;](../../reporting-services/security/role-definitions-create-delete-or-modify.md)   

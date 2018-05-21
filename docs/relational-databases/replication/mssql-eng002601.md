@@ -66,7 +66,7 @@ ms.lasthandoff: 05/03/2018
   
 -   在插入系統資料表 **MSmerge_contents**期間會發生此錯誤。  
   
-     發生此錯誤是因為聯結篩選屬性 **join_unique_key**的值不正確。 只有在父資料表中的聯結資料行為唯一時，此屬性才應設定為 TRUE。 如果屬性設定為 TRUE，但是資料行不是唯一的，則會引發此錯誤。 如需有關設定此屬性的詳細資訊，請參閱＜ [Define and Modify a Join Filter Between Merge Articles](../../relational-databases/replication/publish/define-and-modify-a-join-filter-between-merge-articles.md)＞。  
+     發生此錯誤是因為聯結篩選屬性 **join_unique_key**的值不正確。 只有在父資料表中的聯結資料行為唯一時，此屬性才應設定為 TRUE。 如果屬性設定為 TRUE，但是資料行不是唯一的，則會引發此錯誤。 如需有關設定此屬性的詳細資訊，請參閱＜ [定義和修改合併發行項之間的聯結篩選](../../relational-databases/replication/publish/define-and-modify-a-join-filter-between-merge-articles.md)＞。  
   
 ## <a name="see-also"></a>另請參閱  
  [錯誤和事件參考 &#40;複寫&#41;](../../relational-databases/replication/errors-and-events-reference-replication.md)  

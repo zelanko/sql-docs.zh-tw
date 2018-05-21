@@ -13,11 +13,11 @@ ms.suite: sql
 ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: 7b93d0d7-7946-4b78-b33a-57d6307cdfa9
-ms.openlocfilehash: 2c9e65193ad481d3e4d6f8256918616e08e4a709
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 53f1381285d8b42c59cde57eb47ce9628f0868ad
+ms.sourcegitcommit: b3bb41424249de198f22d9c6d40df4996f083aa6
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/17/2018
 ---
 # <a name="bulk-copy-data-with-bcp-to-sql-server-on-linux"></a>SQL Server on Linux 的 bcp 大量複製資料
 
@@ -120,7 +120,7 @@ Id          Name                Location
 
 在此教學課程中，您可以使用`bcp`從我們稍早建立的新資料檔的範例資料表匯出資料。
 
-複製並貼到終端機視窗 followikng 命令。 這些命令會使用`bcp`命令列公用程式將資料從資料表匯出**TestEmployees**資料庫中**BcpSampleDB**到新的資料檔案，稱為 **~/test_export.txt**.  請記得要取代的使用者名稱和`<your_password>`在必要時，才能執行此命令。
+複製並貼到終端機視窗中的下列命令。 這些命令會使用`bcp`命令列公用程式將資料從資料表匯出**TestEmployees**資料庫中**BcpSampleDB**到新的資料檔案，稱為 **~/test_export.txt**.  請記得要取代的使用者名稱和`<your_password>`在必要時，才能執行此命令。
 
 ```bash 
 bcp TestEmployees out ~/test_export.txt -S localhost -U sa -P <your_password> -d BcpSampleDB -c -t ','

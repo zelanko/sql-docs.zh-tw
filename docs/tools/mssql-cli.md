@@ -4,7 +4,7 @@ description: mssql cli 是在 Windows、 macOS 或 Lunix 上執行的 SQL Server
 ms.custom: tools|mssql-cli
 ms.date: 02/22/2018
 ms.prod: sql
-ms.reviewer: alayu; erickang; sstein
+ms.reviewer: alayu; sstein
 ms.suite: sql
 ms.prod_service: sql-tools
 ms.component: mssql-cli
@@ -14,11 +14,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 0052995692d9ceb15f444b2b849086b8215fcbad
-ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.openlocfilehash: bf49d6676b64386985a8af46676bab4e9c9c134d
+ms.sourcegitcommit: 6fd8a193728abc0a00075f3e4766a7e2e2859139
 ms.translationtype: MTE
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/17/2018
 ---
 # <a name="mssql-cli-command-line-query-tool-for-sql-server"></a>SQL Server 的 mssql cli 命令列的查詢工具
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../includes/appliesto-ss-asdb-asdw-xxx-md.md)]

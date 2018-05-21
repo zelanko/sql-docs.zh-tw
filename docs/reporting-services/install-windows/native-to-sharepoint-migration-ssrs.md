@@ -39,7 +39,7 @@ ms.lasthandoff: 05/03/2018
   
 2.  **[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] RSS 指令碼：** 撰寫呼叫報表伺服器 Web 服務 SOAP 方法的 Visual Basic 指令碼，以便在資料庫之間複製資料。 使用 **RS.exe** 公用程式來執行指令碼。 Rs.exe 會與 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]一起安裝。  
   
-    -   [Sample Reporting Services rs.exe Script to Copy Content between Report Servers](../../reporting-services/tools/sample-reporting-services-rs-exe-script-to-copy-content-between-report-servers.md)。 本主題說明如何使用您可以從 CodePlex 下載的範例指令碼。  
+    -   [在報表伺服器之間複製內容的範例 Reporting Services rs.exe 指令碼](../../reporting-services/tools/sample-reporting-services-rs-exe-script-to-copy-content-between-report-servers.md)。 本主題說明如何使用您可以從 CodePlex 下載的範例指令碼。  
   
     -   CodePlex 上的 rss 指令碼範例， [可將內容從一個報表伺服器移轉至另一個報表伺服器的 Reporting Services RS.exe 指令碼](http://azuresql.codeplex.com/releases/view/115207)。  
   

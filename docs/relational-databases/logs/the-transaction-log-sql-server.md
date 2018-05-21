@@ -93,7 +93,7 @@ ms.lasthandoff: 05/03/2018
  如需詳細資訊，請參閱本主題稍後的[可能會延遲記錄截斷的因素](#FactorsThatDelayTruncation)。  
   
 > [!NOTE]
-> 記錄截斷並不會讓實體記錄檔變小。 若要減少實體記錄檔的實體大小，則必須壓縮記錄檔。 如需有關壓縮實體記錄檔大小的詳細資訊，請參閱＜ [Manage the Size of the Transaction Log File](../../relational-databases/logs/manage-the-size-of-the-transaction-log-file.md)＞。  
+> 記錄截斷並不會讓實體記錄檔變小。 若要減少實體記錄檔的實體大小，則必須壓縮記錄檔。 如需有關壓縮實體記錄檔大小的詳細資訊，請參閱＜ [管理交易記錄檔的大小](../../relational-databases/logs/manage-the-size-of-the-transaction-log-file.md)＞。  
 > 不過，請記住[可能會延遲記錄截斷的因素](#FactorsThatDelayTruncation)。 如果壓縮記錄檔之後再次需要儲存空間，交易記錄檔將再次成長，並且會因此在記錄檔成長作業期間，導入效能額外負荷。
   
 ##  <a name="FactorsThatDelayTruncation"></a> Factors that can delay log truncation  

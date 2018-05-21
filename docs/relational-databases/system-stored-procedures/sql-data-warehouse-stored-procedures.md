@@ -2,7 +2,6 @@
 title: SQL 資料倉儲預存程序 |Microsoft 文件
 ms.custom: ''
 ms.date: 03/15/2017
-ms.prod: ''
 ms.prod_service: sql-data-warehouse
 ms.service: sql-data-warehouse
 ms.component: system-stored-procedures
@@ -19,11 +18,11 @@ author: ronortloff
 ms.author: rortloff
 manager: craigg
 monikerRange: = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: 504597ce85568476721694ae4d1585f74375d26b
-ms.sourcegitcommit: d2573a8dec2d4102ce8882ee232cdba080d39628
+ms.openlocfilehash: 4b2949d4f5d75de5a35a69ad895a6d270e9b5c60
+ms.sourcegitcommit: 02c889a1544b0859c8049827878d66b2301315f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 05/17/2018
 ---
 # <a name="sql-data-warehouse-stored-procedures"></a>SQL 資料倉儲預存程序
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md.md)]

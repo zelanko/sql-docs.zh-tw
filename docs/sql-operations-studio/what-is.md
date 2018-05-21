@@ -4,7 +4,7 @@ description: SQL 作業 Studio （預覽） 是免費的輕量型工具，來管
 ms.custom: tools|sos
 ms.date: 11/17/2017
 ms.prod: sql
-ms.reviewer: alayu; erickang; sstein
+ms.reviewer: alayu; sstein
 ms.suite: sql
 ms.prod_service: sql-tools
 ms.component: sos
@@ -13,11 +13,11 @@ ms.topic: overview
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 0a488cec7d92113241933a1492283f1c04004119
-ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.openlocfilehash: 57304b146d6c4a197104fb6ca607e701fa88550b
+ms.sourcegitcommit: 6fd8a193728abc0a00075f3e4766a7e2e2859139
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/17/2018
 ---
 # <a name="what-is-includename-sosincludesname-sosmd"></a>什麼是[!INCLUDE[name-sos](../includes/name-sos.md)]？
 

@@ -70,7 +70,7 @@ ms.lasthandoff: 05/03/2018
   
      隨即啟動 SQL Server [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] 精靈。  
   
-3.  完成 [To install Report Builder from the download site](#download)的其餘步驟。  
+3.  完成 [若要從下載網站安裝報表產生器](#download)的其餘步驟。  
   
 ## <a name="to-install-includessrbnoversionincludesssrbnoversion-mdmd-from-the-command-line"></a>若要從命令列安裝 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] 
 
