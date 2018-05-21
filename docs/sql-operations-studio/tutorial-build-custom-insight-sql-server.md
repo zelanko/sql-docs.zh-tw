@@ -43,7 +43,7 @@ ms.lasthandoff: 05/03/2018
 
 1. 若要開啟新的編輯器，請按**Ctrl + N**。 
 
-2. 變更的連接內容為**TutorialDB**。
+2. 變更連接內容為 **TutorialDB**。
 
 3. 下列查詢貼入查詢編輯器中：
 
@@ -53,7 +53,7 @@ ms.lasthandoff: 05/03/2018
    WHERE status = 'running'
    ```
 
-4. 在查詢編輯器中儲存查詢為 \*.sql 檔案。 此教學課程中，儲存為指令碼*activeSession.sql*。
+4. 在查詢編輯器中儲存查詢為 \*.sql 檔案。 此教學課程中，請將指令碼儲存為 *activeSession.sql*。
 
 5. 若要執行查詢時，請按**F5**。
 
@@ -113,7 +113,7 @@ ms.lasthandoff: 05/03/2018
 
 1. 若要開啟新的編輯器，請按**Ctrl + N**。
 
-2. 變更的連接內容為**TutorialDB**。
+2. 變更連接內容為 **TutorialDB**。
 
 3. 下列查詢貼入查詢編輯器中：
 
