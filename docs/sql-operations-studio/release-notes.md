@@ -39,12 +39,12 @@ ms.lasthandoff: 05/10/2018
 - Whoisactive 和伺服器報表的擴充功能的更新。
 - 改善管理儀表板內容捲動。
 - 修正 GitHub 問題：
-   - 修正[發出 703](https://github.com/Microsoft/sqlopsstudio/issues/703)： 中編輯資料輸入類似 HTML 的文字會導致無法正確顯示，直到重新整理之前的值
-   - 修正[發出 821](https://github.com/Microsoft/sqlopsstudio/issues/821): sqlopsstudio.deb 封裝相依性
-   - 修正[發出 1260年](https://github.com/Microsoft/sqlopsstudio/issues/1260)： 關鍵字 'distinct' 非反白顯示
-   - 修正[發出 1332年](https://github.com/Microsoft/sqlopsstudio/issues/1332)： 編輯資料還原不適用於資料列
-   - 修正[發出 1215年](https://github.com/Microsoft/sqlopsstudio/issues/1215): SQL 代理程式擴充功能和狀態列
-   - 修正[發出 1316年](https://github.com/Microsoft/sqlopsstudio/issues/1316): SQL 代理程式不要調整大小之後變更視窗大小
+   - 修正[問題 703](https://github.com/Microsoft/sqlopsstudio/issues/703)： 中編輯資料輸入類似 HTML 的文字會導致無法正確顯示，直到重新整理之前的值
+   - 修正[問題 821](https://github.com/Microsoft/sqlopsstudio/issues/821): sqlopsstudio.deb 封裝相依性
+   - 修正[問題 1260](https://github.com/Microsoft/sqlopsstudio/issues/1260)： 關鍵字 'distinct' 非反白顯示
+   - 修正[問題 1332](https://github.com/Microsoft/sqlopsstudio/issues/1332)： 編輯資料還原不適用於資料列
+   - 修正[問題 1215](https://github.com/Microsoft/sqlopsstudio/issues/1215): SQL 代理程式擴充功能和狀態列
+   - 修正[問題 1316](https://github.com/Microsoft/sqlopsstudio/issues/1316): SQL 代理程式不要調整大小之後變更視窗大小
 
 
 如需詳細資訊，請參閱[變更記錄](https://github.com/Microsoft/sqlopsstudio/blob/master/CHANGELOG.md)，和[版本](https://github.com/Microsoft/sqlopsstudio/releases)。
@@ -63,22 +63,22 @@ ms.lasthandoff: 05/10/2018
 - 若要同時使用多個開啟的終端機分割整合式的終端機。
 - 降低的安裝磁碟上檔案計數呎列印更快的安裝和啟動時間。
 - 繼續以修正 GitHub 問題：
-   - 修正[發出 37](https://github.com/Microsoft/sqlopsstudio/issues/37)： 當圖表檢視器擲回錯誤時，就會發生未預期的行為。
-   - 修正[發出 462](https://github.com/Microsoft/sqlopsstudio/issues/462)： 功能要求： 根據預設展開伺服器群組的選項。
-   - 修正[發出 606](https://github.com/Microsoft/sqlopsstudio/issues/606): intellisense-'update' 命令的錯誤提供建議。
-   - 修正[發出 967](https://github.com/Microsoft/sqlopsstudio/issues/967)： 預期的查詢計劃當結果方格中選取 XML 顯示計畫。
-   - 修正[發出 1023年](https://github.com/Microsoft/sqlopsstudio/issues/1023)： 從 flyfishingdba 新增 ms_foreachdb 呼叫的方括號。
-   - 修正[發出 1048年](https://github.com/Microsoft/sqlopsstudio/issues/1048)： 登入前 SSL/TLS 信號交換時發生錯誤。
-   - 修正[發出 1050年](https://github.com/Microsoft/sqlopsstudio/issues/1050)： 清除 insights 檢視之前顯示錯誤。
-   - 修正[發出 1057年](https://github.com/Microsoft/sqlopsstudio/issues/1057)： 還原和檔案總管 widget 中的新查詢動作已中斷。
-   - 修正[發出 1068年](https://github.com/Microsoft/sqlopsstudio/issues/1068)： 儀表板輸出 windows 快顯上使用 Azure SQL Database 的錯誤訊息。
-   - 修正[發出 1069年](https://github.com/Microsoft/sqlopsstudio/issues/1069)： 連接對話方塊顯示時最初顯示的所需的伺服器錯誤。
-   - 修正[發出 1070年](https://github.com/Microsoft/sqlopsstudio/issues/1070)： 伺服器群組現在需要按兩下以展開。
-   - 修正[發出 1072年](https://github.com/Microsoft/sqlopsstudio/issues/1072)： 選取控制項的背景是半透明效果。
-   - 修正[發出 1115年](https://github.com/Microsoft/sqlopsstudio/issues/1115)： 修正所有的高對比 SQL 作業 Studio 中的協助工具問題。
-   - 修正[發出 1101年](https://github.com/Microsoft/sqlopsstudio/issues/1101)： 擴充功能無法升級 」 下載手動"連結會移至錯誤的位置。
-   - 修正[發出 1103年](https://github.com/Microsoft/sqlopsstudio/issues/1103)： 無法在 [首頁] 索引標籤上運作的 V 捲軸。
-   - 修正[發出 1104年](https://github.com/Microsoft/sqlopsstudio/issues/1104): SQL 延伸模組索引標籤停止運作。
+   - 修正[問題 37](https://github.com/Microsoft/sqlopsstudio/issues/37)： 當圖表檢視器擲回錯誤時，就會發生未預期的行為。
+   - 修正[問題 462](https://github.com/Microsoft/sqlopsstudio/issues/462)： 功能要求： 根據預設展開伺服器群組的選項。
+   - 修正[問題 606](https://github.com/Microsoft/sqlopsstudio/issues/606): intellisense-'update' 命令的錯誤提供建議。
+   - 修正[問題 967](https://github.com/Microsoft/sqlopsstudio/issues/967)： 預期的查詢計劃當結果方格中選取 XML 顯示計畫。
+   - 修正[問題 1023](https://github.com/Microsoft/sqlopsstudio/issues/1023)： 從 flyfishingdba 新增 ms_foreachdb 呼叫的方括號。
+   - 修正[問題 1048](https://github.com/Microsoft/sqlopsstudio/issues/1048)： 登入前 SSL/TLS 信號交換時發生錯誤。
+   - 修正[問題 1050](https://github.com/Microsoft/sqlopsstudio/issues/1050)： 清除 insights 檢視之前顯示錯誤。
+   - 修正[問題 1057](https://github.com/Microsoft/sqlopsstudio/issues/1057)： 還原和檔案總管 widget 中的新查詢動作已中斷。
+   - 修正[問題 1068](https://github.com/Microsoft/sqlopsstudio/issues/1068)： 儀表板輸出 windows 快顯上使用 Azure SQL Database 的錯誤訊息。
+   - 修正[問題 1069](https://github.com/Microsoft/sqlopsstudio/issues/1069)： 連接對話方塊顯示時最初顯示的所需的伺服器錯誤。
+   - 修正[問題 1070](https://github.com/Microsoft/sqlopsstudio/issues/1070)： 伺服器群組現在需要按兩下以展開。
+   - 修正[問題 1072](https://github.com/Microsoft/sqlopsstudio/issues/1072)： 選取控制項的背景是半透明效果。
+   - 修正[問題 1115](https://github.com/Microsoft/sqlopsstudio/issues/1115)： 修正所有的高對比 SQL 作業 Studio 中的協助工具問題。
+   - 修正[問題 1101](https://github.com/Microsoft/sqlopsstudio/issues/1101)： 擴充功能無法升級 」 下載手動"連結會移至錯誤的位置。
+   - 修正[問題 1103](https://github.com/Microsoft/sqlopsstudio/issues/1103)： 無法在 [首頁] 索引標籤上運作的 V 捲軸。
+   - 修正[問題 1104](https://github.com/Microsoft/sqlopsstudio/issues/1104): SQL 延伸模組索引標籤停止運作。
 
 
 4 月公開預覽的重點為 Visual Studio Code 1.21 平台來源程式碼重新整理。 這會從先前的 1.19 同步處理點帶入多項更新至核心編輯器和工作臺。 以下為部分範例：
@@ -125,16 +125,16 @@ ms.lasthandoff: 05/10/2018
 
 - 簡介安裝自動更新，這樣會提供通知可用於下載新版本時 
 - 連接對話方塊 'Database' 欄位現在是以動態方式填入的下拉式清單將包含從指定的伺服器填入資料庫清單。
-- 修正[發出 6](https://github.com/Microsoft/sqlopsstudio/issues/6)： 使連接與選取的資料庫開啟新查詢索引標籤。
-- 修正[發出 22](https://github.com/Microsoft/sqlopsstudio/issues/22): ' Server Name' 和資料庫名稱-可以這些是下拉式清單而不是文字方塊？
-- 修正[發出 549](https://github.com/Microsoft/sqlopsstudio/issues/549)： 無訊息/非常無訊息安裝會導致在安裝之後開啟應用程式。
-- 修正[發出 481](https://github.com/Microsoft/sqlopsstudio/issues/481)： 加入 「 檢查更新 」 選項。
+- 修正[問題 6](https://github.com/Microsoft/sqlopsstudio/issues/6)： 使連接與選取的資料庫開啟新查詢索引標籤。
+- 修正[問題 22](https://github.com/Microsoft/sqlopsstudio/issues/22): ' Server Name' 和資料庫名稱-可以這些是下拉式清單而不是文字方塊？
+- 修正[問題 549](https://github.com/Microsoft/sqlopsstudio/issues/549)： 無訊息/非常無訊息安裝會導致在安裝之後開啟應用程式。
+- 修正[問題 481](https://github.com/Microsoft/sqlopsstudio/issues/481)： 加入 「 檢查更新 」 選項。
 - SQL 編輯器顏色標示和自動完成修正：
-   - 修正[發出 584](https://github.com/Microsoft/sqlopsstudio/issues/584): 「 完整 」 不反白顯示的 intellisense 的關鍵字。
-   - 修正[發出 345](https://github.com/Microsoft/sqlopsstudio/issues/345)： 以色彩標示 SQL 函式，在編輯器中的。
-   - 修正[發出 300](https://github.com/Microsoft/sqlopsstudio/issues/300): [#tempData] 最新"]"將會顯示綠色。
-   - 修正[發出 225](https://github.com/Microsoft/sqlopsstudio/issues/225)： 關鍵字色彩不相符。
-   - 修正[發出 60](https://github.com/Microsoft/sqlopsstudio/issues/60)： 無效的 sql 語法色彩反白顯示時使用 from 子句中的暫存資料表。
+   - 修正[問題 584](https://github.com/Microsoft/sqlopsstudio/issues/584): 「 完整 」 不反白顯示的 intellisense 的關鍵字。
+   - 修正[問題 345](https://github.com/Microsoft/sqlopsstudio/issues/345)： 以色彩標示 SQL 函式，在編輯器中的。
+   - 修正[問題 300](https://github.com/Microsoft/sqlopsstudio/issues/300): [#tempData] 最新"]"將會顯示綠色。
+   - 修正[問題 225](https://github.com/Microsoft/sqlopsstudio/issues/225)： 關鍵字色彩不相符。
+   - 修正[問題 60](https://github.com/Microsoft/sqlopsstudio/issues/60)： 無效的 sql 語法色彩反白顯示時使用 from 子句中的暫存資料表。
 - 導入連線擴充性 API。
 - VS Code 編輯器 1.19 整合。
 - 更新拾取幾項查詢計劃檢視器改良 JustinPealing/html-查詢計劃元件。
