@@ -71,7 +71,7 @@ ms.lasthandoff: 05/03/2018
   
 11. 若要將此原則限制為目標類型的子集，請在 **[伺服器限制]** 方塊中，選取限制條件或建立新的條件。  
   
-     如需有關 **[建立新原則]** 對話方塊可用之選項的詳細資訊，請參閱＜ [Create New Policy or Open Policy Dialog Box, General Page](../../relational-databases/policy-based-management/create-new-policy-or-open-policy-dialog-box-general-page.md) ＞或＜ [Create New Policy or Open Policy Dialog Box, Description Page](../../relational-databases/policy-based-management/create-new-policy-or-open-policy-dialog-box-description-page.md)＞。  
+     如需有關 **[建立新原則]** 對話方塊可用之選項的詳細資訊，請參閱＜ [建立新原則或開啟原則對話方塊，一般頁面](../../relational-databases/policy-based-management/create-new-policy-or-open-policy-dialog-box-general-page.md) ＞或＜ [建立新原則或開啟原則對話方塊，描述頁面](../../relational-databases/policy-based-management/create-new-policy-or-open-policy-dialog-box-description-page.md)＞。  
   
 12. 完成後，請按一下 **[確定]**。  
   

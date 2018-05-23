@@ -28,7 +28,7 @@ ms.lasthandoff: 05/03/2018
 # <a name="stored-procedures"></a>預存程序
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  預存程序 ([預存程序 & #40; Database engine& #41;](../../../relational-databases/stored-procedures/stored-procedures-database-engine.md)) 是儲存在資料庫中的可執行物件。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 支援：  
+  預存程序 ([預存程序 &#40;Database engine&#41;](../../../relational-databases/stored-procedures/stored-procedures-database-engine.md)) 是儲存在資料庫中的可執行物件。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 支援：  
   
 -   預存程序  
   

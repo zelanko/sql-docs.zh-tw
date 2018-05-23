@@ -74,14 +74,14 @@ ms.lasthandoff: 05/03/2018
   
 -   **AdventureWorks2014** 範例資料庫，它會將資料提供給範例報表。  
   
--   包括範例報表之「管理所有訂閱」工作的 [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] 角色指派。 定義資料驅動訂閱需要這項工作。 如果您是電腦的管理員，本機管理員的預設角色指派提供必要權限來建立資料驅動訂閱。 如需詳細資訊，請參閱 [Granting Permissions on a Native Mode Report Server](../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)。  
+-   包括範例報表之「管理所有訂閱」工作的 [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] 角色指派。 定義資料驅動訂閱需要這項工作。 如果您是電腦的管理員，本機管理員的預設角色指派提供必要權限來建立資料驅動訂閱。 如需詳細資訊，請參閱 [在原生模式報表伺服器上授與權限](../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)。  
   
 -   您有寫入權的共用資料夾。 共用資料夾必須可透過網路連接存取。  
   
 **完成這個教學課程的估計時間：** 30 分鐘。 如果您尚未完成基本報表教學課程，還需額外 30 分鐘。  
   
 ## <a name="see-also"></a>另請參閱  
-[Data-Driven Subscriptions](../reporting-services/subscriptions/data-driven-subscriptions.md)  
+[資料驅動訂閱](../reporting-services/subscriptions/data-driven-subscriptions.md)  
 [建立基本資料表報表 &#40;SSRS 教學課程&#41;](../reporting-services/create-a-basic-table-report-ssrs-tutorial.md)
  
 

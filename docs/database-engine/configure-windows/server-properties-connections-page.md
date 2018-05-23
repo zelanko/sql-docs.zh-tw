@@ -65,7 +65,7 @@ ms.lasthandoff: 05/03/2018
  指定在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 逾時之前，遠端作業可以執行多久 (以秒為單位)。預設值是 600 秒，也就是允許等候十分鐘。  
   
  **需要伺服器對伺服器通訊的分散式交易**  
- 透過 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 分散式交易協調器 (MS DTC) 交易，保護伺服器對伺服器程序的動作。 如需詳細資訊，請參閱 [Configure the remote proc trans Server Configuration Option](../../database-engine/configure-windows/configure-the-remote-proc-trans-server-configuration-option.md)。  
+ 透過 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 分散式交易協調器 (MS DTC) 交易，保護伺服器對伺服器程序的動作。 如需詳細資訊，請參閱 [設定 remote proc trans 伺服器組態選項](../../database-engine/configure-windows/configure-the-remote-proc-trans-server-configuration-option.md)。  
   
 ## <a name="property-page-display-options"></a>屬性頁面顯示選項  
  **設定的值**  

@@ -114,7 +114,7 @@ ms.lasthandoff: 05/03/2018
   
 1.  針對聯結的發行項定義篩選，此發行項也稱為父發行項。  
   
-    -   如需使用參數化資料列篩選器篩選的發行項，請參閱＜ [Define and Modify a Parameterized Row Filter for a Merge Article](../../../relational-databases/replication/publish/define-and-modify-a-parameterized-row-filter-for-a-merge-article.md)＞。  
+    -   如需使用參數化資料列篩選器篩選的發行項，請參閱＜ [針對合併發行項定義及修改參數化資料列篩選](../../../relational-databases/replication/publish/define-and-modify-a-parameterized-row-filter-for-a-merge-article.md)＞。  
   
     -   如需使用靜態資料列篩選進行篩選的發行項，請參閱＜ [Define and Modify a Static Row Filter](../../../relational-databases/replication/publish/define-and-modify-a-static-row-filter.md)＞。  
   
@@ -136,7 +136,7 @@ ms.lasthandoff: 05/03/2018
   
  [!code-sql[HowTo#sp_AddMergeArticle](../../../relational-databases/replication/codesnippet/tsql/define-and-modify-a-join_1.sql)]  
   
- 此範例會在合併式發行集中定義一組發行項，其中的發行項會使用一系列的聯結篩選來針對 `Employee` 資料表進行篩選 (此資料表本身是使用 [LoginID](../../../t-sql/functions/host-name-transact-sql.md) 資料行中 **HOST_NAME** 值上的參數化資料列篩選來進行篩選)。 如需詳細資訊，請參閱 [Define and Modify a Parameterized Row Filter for a Merge Article](../../../relational-databases/replication/publish/define-and-modify-a-parameterized-row-filter-for-a-merge-article.md)。  
+ 此範例會在合併式發行集中定義一組發行項，其中的發行項會使用一系列的聯結篩選來針對 `Employee` 資料表進行篩選 (此資料表本身是使用 [LoginID](../../../t-sql/functions/host-name-transact-sql.md) 資料行中 **HOST_NAME** 值上的參數化資料列篩選來進行篩選)。 如需詳細資訊，請參閱 [針對合併發行項定義及修改參數化資料列篩選](../../../relational-databases/replication/publish/define-and-modify-a-parameterized-row-filter-for-a-merge-article.md)。  
   
  [!code-sql[HowTo#sp_MergeDynamicPub1](../../../relational-databases/replication/codesnippet/tsql/define-and-modify-a-join_2.sql)]  
   

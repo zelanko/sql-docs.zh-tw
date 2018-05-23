@@ -116,7 +116,7 @@ ms.lasthandoff: 05/03/2018
   
     -   **@host_name** - 當參數化篩選是由 [HOST_NAME &#40;Transact-SQL&#41;](../../../t-sql/functions/host-name-transact-sql.md) 所傳回的值定義時。  
   
-2.  建立並初始化這個新資料分割的參數化快照集。 如需詳細資訊，請參閱 [Create a Snapshot for a Merge Publication with Parameterized Filters](../../../relational-databases/replication/create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md)。  
+2.  建立並初始化這個新資料分割的參數化快照集。 如需詳細資訊，請參閱 [使用參數化篩選建立合併式發行集的快照集](../../../relational-databases/replication/create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md)。  
   
 #### <a name="to-delete-a-partition"></a>若要刪除資料分割  
   
@@ -129,7 +129,7 @@ ms.lasthandoff: 05/03/2018
      這也會移除資料分割的快照集作業和快照集檔案。  
   
 ##  <a name="RMOProcedure"></a> 使用 Replication Management Objects (RMO)  
- 若要使用參數化篩選以更好的方式管理發行集，可以使用 Replication Management Objects (RMO)，以程式設計的方式建立新的「訂閱者」資料分割、列舉現有的「訂閱者」資料分割，以及刪除「訂閱者」資料分割。 如需有關如何建立「訂閱者」資料分割的詳細資訊，請參閱＜ [Create a Snapshot for a Merge Publication with Parameterized Filters](../../../relational-databases/replication/create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md)＞。 您可取得下列有關現有資料分割的資訊：  
+ 若要使用參數化篩選以更好的方式管理發行集，可以使用 Replication Management Objects (RMO)，以程式設計的方式建立新的「訂閱者」資料分割、列舉現有的「訂閱者」資料分割，以及刪除「訂閱者」資料分割。 如需有關如何建立「訂閱者」資料分割的詳細資訊，請參閱＜ [使用參數化篩選建立合併式發行集的快照集](../../../relational-databases/replication/create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md)＞。 您可取得下列有關現有資料分割的資訊：  
   
 -   資料分割所根據的值和篩選函數。  
   

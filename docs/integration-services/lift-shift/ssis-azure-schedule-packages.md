@@ -1,6 +1,6 @@
 ---
-title: 排程 Azure 上的 SSIS 套件執行 | Microsoft Docs
-ms.date: 05/07/2018
+title: 排程 Azure 中的 SSIS 套件 | Microsoft Docs
+ms.date: 05/09/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.prod_service: integration-services
@@ -12,23 +12,25 @@ ms.technology:
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 946fb9c302057844eed3c1e14aed1243e0d4c7f7
-ms.sourcegitcommit: 1aedef909f91dc88dc741748f36eabce3a04b2b1
+ms.openlocfilehash: 4bfad00425848189d88bd780296db00ec810b37c
+ms.sourcegitcommit: 0cc2cb281e467a13a76174e0d9afbdcf4ccddc29
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 05/15/2018
 ---
-# <a name="schedule-the-execution-of-an-ssis-package-on-azure"></a>排程 Azure 上的 SSIS 套件執行
+# <a name="schedule-the-execution-of-an-ssis-package-in-azure"></a>排程 Azure 中的 SSIS 套件執行
 您可以選擇下列其中一個排程選項，來排程執行 Azure SQL Database 伺服器的 SSISDB 目錄資料庫上所儲存的套件：
 -   [SQL Server Management Studio (SSMS) 中的排程選項](#ssms)
 -   [Azure Data Factory 執行 SSIS 套件活動](#execute)
--   [Azure Data Factory SQL Server 預存程序活動](#stored proc)
+-   [Azure Data Factory SQL Server 預存程序活動](#storedproc)
 -   [SQL Database 彈性作業](#elastic)
 -   [SQL Server Agent](#agent)
 
 ## <a name="ssms"></a> 使用 SSMS 排程套件
 
-在 SQL Server Management Studio (SSMS) 中，您可以在部署到 SSIS 目錄資料庫 (SSISDB) 的套件上按一下滑鼠右鍵，然後選取 [排程] 以開啟 [新增排程] 對話方塊。
+在 SQL Server Management Studio (SSMS) 中，您可以在部署到 SSIS 目錄資料庫 (SSISDB) 的套件上按一下滑鼠右鍵，然後選取 [排程] 以開啟 [新增排程] 對話方塊。 如需詳細資訊，請參閱[使用 SSMS 排程 Azure 上的 SSIS 套件執行](ssis-azure-schedule-packages-ssms.md)。
+
+此功能需要 SQL Server Management Studio 17.7 版或更高版本。 若要取得最新版的 SSMS，請參閱[下載 SQL Server Management Studio (SSMS)](../../ssms/download-sql-server-management-studio-ssms.md)。
 
 ## <a name="execute"></a> 使用執行 SSIS 套件活動排程套件
 

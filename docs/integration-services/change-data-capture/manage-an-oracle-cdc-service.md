@@ -33,7 +33,7 @@ ms.lasthandoff: 05/03/2018
   
 2.  選取您想要使用的 CDC 服務。  
   
-     您也可以用滑鼠右鍵按一下您想要使用的 CDC 服務，並選取所要的動作。 請參閱 [What can you do with a CDC Service](../../integration-services/change-data-capture/manage-an-oracle-cdc-service.md#BKMK_WhatcandowithCDCService)。  
+     您也可以用滑鼠右鍵按一下您想要使用的 CDC 服務，並選取所要的動作。 請參閱 [您可以使用 CDC 服務做什麼事](../../integration-services/change-data-capture/manage-an-oracle-cdc-service.md#BKMK_WhatcandowithCDCService)。  
   
  **OR**  
   
@@ -41,9 +41,9 @@ ms.lasthandoff: 05/03/2018
   
 2.  從 CDC 服務組態主控台的中間區段選取您想要使用的服務。  
   
-     您也可以用滑鼠右鍵按一下您想要使用的 CDC 服務，並選取所要的動作。 請參閱 [What can you do with a CDC Service](../../integration-services/change-data-capture/manage-an-oracle-cdc-service.md#BKMK_WhatcandowithCDCService)。  
+     您也可以用滑鼠右鍵按一下您想要使用的 CDC 服務，並選取所要的動作。 請參閱 [您可以使用 CDC 服務做什麼事](../../integration-services/change-data-capture/manage-an-oracle-cdc-service.md#BKMK_WhatcandowithCDCService)。  
   
-##  <a name="BKMK_WhatcandowithCDCService"></a> What can you do with a CDC Service  
+##  <a name="BKMK_WhatcandowithCDCService"></a> 您可以使用 CDC 服務做什麼事  
  當您使用 CDC 服務時，可以執行以下動作。  
   
 ### <a name="delete-the-service"></a>刪除服務  

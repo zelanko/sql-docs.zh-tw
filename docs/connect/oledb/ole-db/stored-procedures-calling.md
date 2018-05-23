@@ -38,7 +38,7 @@ ms.lasthandoff: 05/03/2018
 -   使用參數標記 (?) 來指定參數、將程式變數繫結至參數標記，然後將資料值放在程式變數中。  
   
 > [!NOTE]  
->  搭配 OLE DB 使用具名參數呼叫 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 預存程序時，參數名稱開頭必須是 '@' 字元。 這是一個 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 特定的限制。 SQL Server OLE DB 驅動程式會比 MDAC 更嚴格地強制執行這項限制。  
+>  搭配 OLE DB 使用具名參數呼叫 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 預存程序時，參數名稱開頭必須是 '\@' 字元。 這是一個 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 特定的限制。 SQL Server OLE DB 驅動程式會比 MDAC 更嚴格地強制執行這項限制。  
   
  若要支援的參數， **ICommandWithParameters** command 物件上公開介面。 若要使用參數，取用者會先描述提供者的參數呼叫**icommandwithparameters:: Setparameterinfo**方法 (或選擇性地準備呼叫的呼叫陳述式**GetParameterInfo**方法)。 接著，取用者會建立指定緩衝區結構的存取子，並將參數值放在此緩衝區中。 最後，它會存取子和一個指標的控制代碼傳遞至緩衝區**Execute**。 稍後呼叫**Execute**，取用者會將新的參數值放在緩衝區中，並呼叫**Execute**存取子控制代碼和緩衝區指標。  
   
@@ -119,7 +119,7 @@ ms.lasthandoff: 05/03/2018
 {rpc SalesByCategory}  
 ```  
   
- 示範 RPC 逸出序列的範例應用程式，請參閱[執行預存程序 & #40;使用 RPC 語法 & #41;和處理傳回碼和輸出參數 & #40; OLE DB & #41;](../../oledb/ole-db-how-to/results/execute-stored-procedure-with-rpc-and-process-output.md).  
+ 示範 RPC 逸出序列的範例應用程式，請參閱[執行預存程序 &#40;使用 RPC 語法&#41; 和處理傳回碼和輸出參數 &#40;OLE DB&#41;](../../oledb/ole-db-how-to/results/execute-stored-procedure-with-rpc-and-process-output.md).  
   
 ### <a name="transact-sql-execute-statement"></a>Transact-SQL EXECUTE 陳述式  
  ODBC CALL 逸出序列和 RPC 逸出序列是慣用的方法，可以呼叫預存程序而非[EXECUTE](../../../t-sql/language-elements/execute-transact-sql.md)陳述式。 SQL Server OLE DB 驅動程式會使用的 RPC 機制[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]來最佳化命令處理。 此 RPC 通訊協定會排除在伺服器上完成的許多參數處理與陳述式剖析，藉以增加效能。  

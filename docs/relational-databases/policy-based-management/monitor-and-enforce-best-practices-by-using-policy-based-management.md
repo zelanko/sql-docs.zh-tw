@@ -44,7 +44,7 @@ ms.lasthandoff: 05/03/2018
 |Guest 權限|[使用者資料庫的 Guest 權限](../../relational-databases/policy-based-management/guest-permissions-on-user-databases.md)|  
 |上次成功備份日期|[過期的備份](../../relational-databases/policy-based-management/outdated-backup.md)|  
 |未對外授予伺服器權限|[伺服器 public 權限](../../relational-databases/policy-based-management/server-public-permissions.md)|  
-|SQL Server 64 位元 Affinity Mask 重疊|[Correct Affinity Mask and Affinity Input and Output Mask Overlap](../../relational-databases/policy-based-management/correct-affinity-mask-and-affinity-input-and-output-mask-overlap.md)|  
+|SQL Server 64 位元 Affinity Mask 重疊|[正確的親和性遮罩和親和性輸入與輸出遮罩重疊](../../relational-databases/policy-based-management/correct-affinity-mask-and-affinity-input-and-output-mask-overlap.md)|  
 |SQL Server Affinity Mask|[保留 Affinity Mask 預設值](../../relational-databases/policy-based-management/keep-the-affinity-mask-default-value.md)|  
 |SQL Server 已封鎖的處理序臨界值|[增加或停用 Blocked Process Threshold](../../relational-databases/policy-based-management/increase-or-disable-blocked-process-threshold.md)|  
 |SQL Server 預設追蹤|[預設追蹤記錄檔已停用](../../relational-databases/policy-based-management/default-trace-log-files-disabled.md)|  
@@ -66,7 +66,7 @@ ms.lasthandoff: 05/03/2018
 |Windows 事件記錄檔裝置驅動程式控制項錯誤|[裝置驅動程式控制項錯誤](../../relational-databases/policy-based-management/device-driver-control-error.md)|  
 |Windows 事件記錄檔裝置未就緒錯誤|[裝置未就緒錯誤](../../relational-databases/policy-based-management/device-not-ready-error.md)|  
 |Windows 事件記錄檔失敗的 I/O 要求錯誤|[偵測失敗的輸入和輸出要求](../../relational-databases/policy-based-management/detect-failed-input-and-output-requests.md)|  
-|Windows 事件記錄檔 I/O 延遲警告|[Check Disk Input and Output Subsystem for IO Delay Problems](../../relational-databases/policy-based-management/check-disk-input-and-output-subsystem-for-io-delay-problems.md)|  
+|Windows 事件記錄檔 I/O 延遲警告|[檢查磁碟輸入輸出子系統的 IO 延遲問題](../../relational-databases/policy-based-management/check-disk-input-and-output-subsystem-for-io-delay-problems.md)|  
 |Windows 事件記錄檔硬分頁錯誤期間的 I/O 錯誤|[硬性分頁錯誤期間的輸入和輸出錯誤](../../relational-databases/policy-based-management/input-and-output-error-during-hard-page-fault.md)|  
 |Windows 事件記錄檔讀取重試錯誤|[檢查磁碟輸入輸出子系統的讀取重試問題](../../relational-databases/policy-based-management/check-disk-input-output-subsystem-for-read-retry-problems.md)|  
 |Windows 事件記錄檔儲存系統 I/O 逾時錯誤|[儲存體系統輸入輸出逾時](../../relational-databases/policy-based-management/storage-system-input-output-time-out.md)|  

@@ -108,7 +108,7 @@ ms.lasthandoff: 05/03/2018
   
 -   使用預存程序對所有未來發行項的預設值進行全域變更 (不變更現有發行項的預設值)。  
   
- 若要指定替代資料類型對應，請參閱＜ [Specify Data Type Mappings for an Oracle Publisher](../../../relational-databases/replication/publish/specify-data-type-mappings-for-an-oracle-publisher.md)＞。  
+ 若要指定替代資料類型對應，請參閱＜ [指定 Oracle 發行者的資料類型對應](../../../relational-databases/replication/publish/specify-data-type-mappings-for-an-oracle-publisher.md)＞。  
   
 ## <a name="see-also"></a>另請參閱  
  [設定 Oracle 發行者](../../../relational-databases/replication/non-sql/configure-an-oracle-publisher.md)   

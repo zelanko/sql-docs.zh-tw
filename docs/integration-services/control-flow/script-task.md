@@ -97,7 +97,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="script-task-editor-general-page"></a>指令碼工作編輯器 (一般頁面)
   使用 **[指令碼工作編輯器]** 對話方塊的 **[一般]** 頁面，即可命名和描述指令碼工作。  
   
- 若要深入了解指令碼工作，請參閱＜ [Script Task](../../integration-services/control-flow/script-task.md) ＞和＜ [Configuring the Script Task in the Script Task Editor](../../integration-services/extending-packages-scripting/task/configuring-the-script-task-in-the-script-task-editor.md)＞。 若要了解如何以程式設計方式編寫指令碼工作，請參閱＜ [Extending the Package with the Script Task](../../integration-services/extending-packages-scripting/task/extending-the-package-with-the-script-task.md)＞。  
+ 若要深入了解指令碼工作，請參閱＜ [Script Task](../../integration-services/control-flow/script-task.md) ＞和＜ [在指令碼工作編輯器設定指令碼工作](../../integration-services/extending-packages-scripting/task/configuring-the-script-task-in-the-script-task-editor.md)＞。 若要了解如何以程式設計方式編寫指令碼工作，請參閱＜ [Extending the Package with the Script Task](../../integration-services/extending-packages-scripting/task/extending-the-package-with-the-script-task.md)＞。  
   
 ### <a name="options"></a>選項。  
  **名稱**  
@@ -115,7 +115,7 @@ ms.lasthandoff: 05/03/2018
 > [!NOTE]  
 >  在 [!INCLUDE[ssISversion10](../../includes/ssisversion10-md.md)] 和更新的版本中，所有指令碼都是先行編譯。 在舊版中，您會設定 **[PrecompileScriptIntoBinaryCode]** 屬性來指定指令碼已先行編譯。  
   
- 若要深入了解指令碼工作，請參閱＜ [Script Task](../../integration-services/control-flow/script-task.md) ＞和＜ [Configuring the Script Task in the Script Task Editor](../../integration-services/extending-packages-scripting/task/configuring-the-script-task-in-the-script-task-editor.md)＞。 若要了解如何以程式設計方式編寫指令碼工作，請參閱＜ [Extending the Package with the Script Task](../../integration-services/extending-packages-scripting/task/extending-the-package-with-the-script-task.md)＞。  
+ 若要深入了解指令碼工作，請參閱＜ [Script Task](../../integration-services/control-flow/script-task.md) ＞和＜ [在指令碼工作編輯器設定指令碼工作](../../integration-services/extending-packages-scripting/task/configuring-the-script-task-in-the-script-task-editor.md)＞。 若要了解如何以程式設計方式編寫指令碼工作，請參閱＜ [Extending the Package with the Script Task](../../integration-services/extending-packages-scripting/task/extending-the-package-with-the-script-task.md)＞。  
   
 ### <a name="options"></a>選項。  
  **ScriptLanguage**  
