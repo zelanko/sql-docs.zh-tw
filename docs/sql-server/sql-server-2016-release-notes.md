@@ -17,11 +17,11 @@ author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 monikerRange: = sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: bc83f2e17c82ca074fe07f6312fd5c3c864c9e74
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 2568e2d57cb05164153fa5a9b2a22a49bcb31dac
+ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="sql-server-2016-release-notes"></a>SQL Server 2016 版本資訊
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -48,7 +48,7 @@ SQL Server 2016 SP2 中包含有關效能和規模調整的改善。
 |使用 CPU 逾時來取消 Resource Governor 要求   |   藉由實際取消要求來改善查詢要求的處理 (如果針對要求達到 CPU 閾值)。 此行為會在追蹤旗標 2422 下啟用。 |   [KB4038419](https://support.microsoft.com/help/4038419/add-cpu-timeout-to-resource-governor-request-max-cpu-time-sec) \(英文\)   |
 |使用 SELECT INTO 來在檔案群組中建立目標資料表    |   從 SQL Server 2016 SP2 開始，SELECT INTO T-SQL 語法開始支援將資料表載入其他檔案群組，而不是使用 T-SQL 語法中 ON <Filegroup name> 關鍵字使用者的預設檔案群組。 |       |
 |改善 TempDB 的間接檢查點    |   已改善 TempDB 的間接檢查點，以最小化 DPLists 上的執行緒同步鎖定競爭。 此改善可讓 SQL Server 2016 上的 TempDB 工作負載，在 TempDB 的間接檢查點為 ON 的情況下，預設便能進行相應放大。    |   [KB4040276](https://support.microsoft.com/en-us/help/4040276) \(機器翻譯\)   |
-|已改善大型記憶體機器上的資料庫備份效能  |   SQL Server 2016 SP2 將於備份期間清空進行中 I/O 的方式最佳化，進而大幅提升小型至中型資料庫的備份效能。 我們已在對 2TB 的機器進行系統資料庫備份時，觀察到超過 100x 的改善。 針對各種不同資料庫大小的詳細效能測試結果，已於下方提供。 效能提升會隨著資料庫大小增加而減少，因為要備份的分頁和備份 I/O 與反覆運算緩衝集區相較之下需要更多時間。 針對在配備大量記憶體的大型高級伺服器上裝載多個小型資料庫的客戶，此改善有助於改進備份效能。 |       |
+|已改善大型記憶體機器上的資料庫備份效能  |   SQL Server 2016 SP2 將於備份期間清空進行中 I/O 的方式最佳化，進而大幅提升小型至中型資料庫的備份效能。 我們已在對 2TB 的機器進行系統資料庫備份時，觀察到超過 100x 的改善。 效能提升會隨著資料庫大小增加而減少，因為要備份的分頁和備份 I/O 與反覆運算緩衝集區相較之下需要更多時間。 針對在配備大量記憶體的大型高階伺服器上裝載多個小型資料庫的客戶，此變更有助於提升備份效能。    |       |
 |針對啟用 TDE 之資料庫的 VDI 備份壓縮支援   |   SQL Server 2016 SP2 新增了 VDI 支援，可讓 VDI 備份解決方案針對啟用 TDE 的資料庫利用壓縮功能。 此改善引入新的備份格式，以針對啟用 TDE 的資料庫支援備份壓縮。 SQL Server 引擎會透明地處理新的和舊的備份格式以還原備份。   |       |
 |複寫代理程式設定檔參數的動態載入    |   這個新的增強功能能以動態方式載入複寫代理程式參數，而不需要重新啟動代理程式。 這個變更僅適用於最常使用的代理程式設定檔參數。 |       |
 |針對統計資料建立/更新支援 MAXDOP 選項 |    這個增強功能允許針對 CREATE/UPDATE 統計資料陳述式指定 MAXDOP 選項，也會在建立或重建所有索引類型而更新統計資料時，確保使用的是正確的 MAXDOP 設定 (如果 MAXDOP 選項存在)   |   [KB4041809](https://support.microsoft.com/en-us/help/4041809) \(機器翻譯\)   |
@@ -64,6 +64,7 @@ SQL Server 2016 SP2 中已包含支援能力和診斷相關的改善。
 |新的 DMV 以監視 TempDB 版本存放空間使用量    |   SQL Server 2016 SP2 中已推出新的 sys.dm_tran_version_store_space_usage DMV，以允許監視 TempDB 的版本存放空間使用量。 在生產環境伺服器上執行時，DBA 現在可以根據每個資料庫的版本存放空間使用量需求，主動規劃 TempDB 大小，而不會產生任何效能負擔。 |       |
 |針對複寫代理程式的完整傾印支援 | 目前，如果複寫代理程式遇到未處理的例外狀況，預設會建立例外狀況徵兆的小型傾印。 這會使對未處理的例外狀況進行疑難排解變得非常困難。 我們透過此變更推出新的登錄機碼，它將允許針對複寫代理程式建立完整傾印。  |       |
 |針對讀取可用性群組路由失敗的擴充事件增強功能 |   在之前，read_only_rout_fail xEvent 會在路由清單存在，但路由清單中的伺服器沒有任何一個可供連線的情況下觸發。 SQL Server 2016 SP2 包含可協助進行疑難排解的額外資訊，並且也會針對觸發此 xEvent 的程式碼項目提供額外資訊。  |       |
+|新的 DMV 以監視交易記錄 |   新增 DMV sys.dm_db_log_stats，可傳回摘要層級屬性，以及資料庫交易記錄檔的相關資訊。 |       |
 |新的 DMV 以監視 VLF 資訊 |   新的 DMV sys.dm_db_log_info 已在 SQL Server 2016 SP2 中推出，以將類似 DBCC LOGINFO 的 VLF 資訊公開，以監視、警示和防止客戶會遇到的可能 T-Log 問題。    |       |
 |sys.dm_os_sys_info 中的處理器資訊|   已新增資料行至 sys.dm_os_sys_info DMV，以公開處理器的相關資訊，如 socket_count 和 cores_per_numa。  |       |
 |sys.dm_db_file_space_usage 中的範圍修改資訊| 已新增資料行至 sys.dm_db_file_space_usage，以追蹤自上次完整備份之後的已修改範圍數目。  |       |
@@ -144,7 +145,7 @@ SQL Server 2016 SP1 安裝可能需要在安裝後重新開機。 最佳做法�
 ### ![repl_icon_warn](../database-engine/availability-groups/windows/media/repl-icon-warn.gif) <a name="bkmk_ga_instalpatch"></a> Install Patch Requirement (GA) 
 Microsoft 發現影響 Microsoft VC++ 2013 Runtime 二進位檔的問題，SQL Server 2016 必須安裝這些二進位檔。 已提供修正此問題的更新。 如果不安裝 VC Runtime 二進位檔的這項更新，SQL Server 2016 就可能在特定情況下遇到穩定性問題。 安裝 SQL Server 2016 之前，請先檢查電腦是否需要 [KB 3164398](http://support.microsoft.com/kb/3164398)中所述的填補。 修補程式也包含在 [SQL Server 2016 RTM 的累計更新套件 1 (CU1)](https://www.microsoft.com/download/details.aspx?id=53338)。 
 
-**解決方式：**請使用下列其中一種解決方案：
+**解決方式：** 請使用下列其中一種解決方案：
 
 - 安裝 [KB 3138367 - Visual C++ 2013 年和 Visual C++ 的可轉散發套件的更新](http://support.microsoft.com/kb/3138367)。 此 KB 是慣用的解決方式。 您可以在安裝 SQL Server 2016 之前或之後安裝此更新。 
 
@@ -160,7 +161,7 @@ Microsoft 發現影響 Microsoft VC++ 2013 Runtime 二進位檔的問題，SQL S
  
     如果使用 **KB 3164398**，就可以在 SQL Server 安裝期間，透過 Microsoft Update 或從 Microsoft 下載中心安裝。 
 
-    - **在 SQL Server 2016 安裝期間︰**如果執行 SQL Server 安裝程式的電腦可以存取網際網路，SQL Server 安裝程式會檢查更新是否為完整 SQL Server 安裝的一部分。 如果您接受更新，安裝程式會在安裝期間下載並更新二進位檔案。
+    - **在 SQL Server 2016 安裝期間︰** 如果執行 SQL Server 安裝程式的電腦可以存取網際網路，SQL Server 安裝程式會檢查更新是否為完整 SQL Server 安裝的一部分。 如果您接受更新，安裝程式會在安裝期間下載並更新二進位檔案。
 
     - **Microsoft Update：** Microsoft Update 現提供更新作為重要的非安全性 SQL Server 2016 更新。 透過 Microsoft Update 安裝，SQL Server 2016 會在更新後要求重新啟動伺服器。 
 
@@ -171,7 +172,7 @@ Microsoft 發現影響 Microsoft VC++ 2013 Runtime 二進位檔的問題，SQL S
 
 #### <a name="problem-with-a-specific-character-in-a-database-or-table-name"></a>資料庫或資料表名稱中的特定字元問題
 
-**問題和客戶影響：**嘗試在資料庫或資料表上啟用 Stretch Database 會失敗，並發生錯誤。 如果物件的名稱包含從小寫轉換為大寫時視為不同字元的字元，則會發生此問題。 導致此問題的字元範例是字元 "ƒ" (鍵入 ALT+159 所建立)。
+**問題和客戶影響：** 嘗試在資料庫或資料表上啟用 Stretch Database 會失敗，並發生錯誤。 如果物件的名稱包含從小寫轉換為大寫時視為不同字元的字元，則會發生此問題。 導致此問題的字元範例是字元 "ƒ" (鍵入 ALT+159 所建立)。
 
 **因應措施︰** 如果您想要啟用資料庫或資料表的 Stretch Database，重新命名物件並移除問題字元，是唯一的選項。
 
@@ -207,7 +208,7 @@ Microsoft 發現影響 Microsoft VC++ 2013 Runtime 二進位檔的問題，SQL S
 ###  <a name="bkmk_ga_docs"></a> 產品文件 (GA) 
  **問題和客戶的影響：** SQL Server 2016 文件的可下載版本尚未提供。 當您嘗試使用 Help Library 管理員 **從線上安裝內容**時，您會看到 SQL Server 2012 及 SQL Server 2014 文件，但沒有 SQL Server 2016 文件的選項。    
     
- **因應措施：**使用下列其中一項因應措施：    
+ **因應措施：** 使用下列其中一項因應措施：    
     
  ![管理適用於 SQL Server 的說明設定](../sql-server/media/docs-sql2016-managehelpsettings.png "管理適用於 SQL Server 的說明設定")    
     
@@ -215,18 +216,19 @@ Microsoft 發現影響 Microsoft VC++ 2013 Runtime 二進位檔的問題，SQL S
     
 -   使用選項 [從線上安裝內容]  ，並下載 SQL Server 2014 內容。    
 
- **F1 說明︰**依設計，當您在 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 中按下 F1 時，瀏覽器即會顯示 F1 說明文章的線上版本。 此問題是以瀏覽器為基礎的說明，即使您已設定並安裝本機說明也是一樣。 
+ **F1 說明︰** 依設計，當您在 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 中按下 F1 時，瀏覽器即會顯示 F1 說明文章的線上版本。 此問題是以瀏覽器為基礎的說明，即使您已設定並安裝本機說明也是一樣。 
 
-**更新內容︰**在 SQL Server Management Studio 和 Visual Studio 中，新增文件程序期間可能會凍結 (擱置) 說明檢視器應用程式。 若要解決此問題，請完成下列步驟。 如需此問題的詳細資訊，請參閱 [Visual Studio 說明檢視器凍結在啟動顯示畫面上](https://msdn.microsoft.com/library/mt654096.aspx)。    
+**更新內容︰** 在 SQL Server Management Studio 和 Visual Studio 中，新增文件程序期間可能會凍結 (擱置) 說明檢視器應用程式。 若要解決此問題，請完成下列步驟。 如需此問題的詳細資訊，請參閱 [Visual Studio 說明檢視器凍結在啟動顯示畫面上](https://msdn.microsoft.com/library/mt654096.aspx)。    
     
 * 以 [記事本] 開啟 %LOCALAPPDATA%\Microsoft\HelpViewer2.2\HlpViewer_SSMS16_en-US.settings | HlpViewer_VisualStudio14_en-US.settings 檔案，將下列程式碼中的日期變更為未來的日期。
 
+```
      Cache LastRefreshed="12/31/2017 00:00:00"    
 ```
 
-## Additional Information
-+ [SQL Server 2016 installation](../database-engine/install-windows/installation-for-sql-server-2016.md)
-+ [SQL Server Update Center - links and information for all supported versions](https://msdn.microsoft.com/library/ff803383.aspx)
+## <a name="additional-information"></a>其他資訊
++ [SQL Server 2016 安裝](../database-engine/install-windows/installation-for-sql-server-2016.md)
++ [SQL Server 更新中心 - 所有已支援版本的連結和資訊](https://msdn.microsoft.com/library/ff803383.aspx)
 
 [!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]
 

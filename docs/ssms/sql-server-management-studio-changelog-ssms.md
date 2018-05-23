@@ -1,7 +1,7 @@
 ---
 title: SQL Server Management Studio - 變更記錄 (SSMS) | Microsoft Docs
 ms.custom: ''
-ms.date: 04/17/2018
+ms.date: 05/09/2018
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.component: ssms
@@ -15,22 +15,91 @@ caps.latest.revision: 72
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 8b53c720b6f08583dc94fd45c270ee07bff399a6
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: e5190c4bbd8e0ade4f32831f5d696cc6f26296e5
+ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="sql-server-management-studio---changelog-ssms"></a>SQL Server Management Studio - Changelog (SSMS)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 本文提供目前版本和舊版本之 SSMS 的更新、改善和 Bug 修正詳細資料。 下載[下面的舊版 SSMS](#previous-ssms-releases)。
 
 
-## <a name="ssms-176download-sql-server-management-studio-ssmsmd"></a>[SSMS 17.6](download-sql-server-management-studio-ssms.md)
+## <a name="ssms-177download-sql-server-management-studio-ssmsmd"></a>[SSMS 17.7](download-sql-server-management-studio-ssms.md)
 
-版本號碼：17.6<br>
+版本號碼：17.7<br>
+組建編號：14.0.17254.0<br>
+發行日期：2018 年 5 月 9 日
+
+### <a name="whats-new"></a>新功能
+
+**一般 SSMS**
+
+複寫監視器：   
+- 針對發行者資料庫及/或散發者資料庫是可用性群組一部分的情況，複寫監視器現在支援註冊接聽程式。 您現在可以監視發行者資料庫及/或散發資料庫是 AlwaysOn 一部分的複寫環境。 
+ 
+Azure SQL 資料倉儲： 
+- 針對 Azure SQL 資料倉儲中的外部資料表，新增「拒絕的資料列位置」支援。 
+
+**Integration Services (IS)**
+
+- 針對部署到 Azure SQL Database 的 SSIS 套件，新增排程功能。 不同於內部部署 SQL Server 和 SQL Database 受控執行個體 (預覽) 有 SQL Server Agent 作為首要工作排程器，SQL Database 並沒有內建排程器。 此新的 SSMS 功能提供類似於 SQL Server Agent 的熟悉使用者介面，來排程部署到 SQL Database 的套件。 如果您使用 SQL Database 裝載 SSIS 目錄資料庫 SSISDB，您可以使用此 SSMS 功能，產生排程 SSIS 套件所需的 Data Factory 管線、活動和觸發程序。 您可以接著編輯並擴充 Data Factory 中的這些物件。 如需詳細資訊，請參閱[使用 SSMS 排程 Azure SQL Database 上的 SSIS 套件執行](../integration-services/lift-shift/ssis-azure-schedule-packages-ssms.md)。 若要深入了解 Azure Data Factory 管線、活動和觸發程序，請參閱 [Azure Data Factory 中的管道及活動](https://docs.microsoft.com/azure/data-factory/concepts-pipelines-activities)和 [Azure Data Factory 中的管道執行和觸發程序](https://docs.microsoft.com/azure/data-factory/concepts-pipeline-execution-triggers)。
+- 支援在 SQL 受控執行個體上的 SQL Agent 中排程 SSIS 套件。 您現在可以建立 SQL Agent 工作，在受控執行個體上執行 SSIS 套件。 
+
+### <a name="bug-fixes"></a>錯誤修正
+
+**一般 SSMS** 
+
+維護計畫：   
+- 已修正嘗試變更現有維護計畫的排程會擲回例外狀況的問題。 如需詳細資料，請參閱 [SSMS 17.6 crashes when clicking on a schedule in a maintenance plan](https://feedback.azure.com/forums/908035-sql-server/suggestions/33712924) (按一下維護計畫中的排程時 SSMS 17.6 損毀)。
+
+一律開啟： 
+- 已修正 AlwaysOn 延遲儀表板無法搭配 SQL Server 2012 使用的問題。
+ 
+指令碼： 
+- 已修正對 Azure SQL 資料倉儲編寫預存程序指令碼不適用於非管理使用者的問題。
+- 已修正對 Azure SQL Database 編寫資料庫指令碼無法編寫 *SCOPED CONFIGURATION* 屬性指令碼的問題。
+ 
+遙測： 
+- 已修正退出傳送遙測之後，嘗試連線到伺服器時 SSMS 損毀的問題。
+ 
+Azure SQL Database： 
+- 已修正使用者無法設定或變更相容性層級 (從空白下拉) 的問題。 注意：若要將相容性層級設定為 150，使用者仍需要使用 [指令碼] 按鈕並手動編輯指令碼。 
+ 
+SMO： 
+- 在 SMO 中公開錯誤記錄檔大小設定。 如需詳細資料，請參閱 [Set the Maximum Size of the SQL Server Error Logs](https://feedback.azure.com/forums/908035-sql-server/suggestions/33624115) (設定 SQL Server 錯誤記錄檔大小上限)。  
+- 修正 Linux 上 SMO 的換行字元指令碼處理。
+- 擷取不常使用之屬性時的其他效能提升。  
+
+IntelliSense： 
+- 效能提升：減少 IntelliSense 查詢的資料行資料量。 這在使用具有大量資料行的資料表時特別有幫助。 
+
+SSMS 使用者設定：
+- 已修正 [選項] 畫面未正確調整大小的問題。
+
+其他：  
+- 已改善「統計資料詳細資料」頁面上的文字顯示方式。 
+
+**Integration Services (IS)**
+
+- 改善 Azure SQL Database 受控執行個體的支援。
+- 已修正使用者無法為 SQL Server 2014 或舊版建立目錄的問題。
+- 已修正報表的兩個問題：
+   - 已移除 Azure 伺服器的電腦名稱。
+   - 已改善當地語系化物件名稱的處理方式。
+
+
+### <a name="known-issues"></a>已知問題
+
+使用新的「一般目的」或「商務關鍵性」Azure SQL Database 版本時，某些對話方塊顯示版本無效錯誤。
+
+## <a name="downloadssdtmediadownloadpng-ssms-176httpsgomicrosoftcomfwlinklinkid870039"></a>![下載](../ssdt/media/download.png) [SSMS 17.6](https://go.microsoft.com/fwlink/?linkid=870039)
+
 組建編號：14.0.17230.0<br>
 發行日期：2018 年 3 月 20 日
+
+[中文 (中華人民共和國)](https://go.microsoft.com/fwlink/?linkid=870039&clcid=0x804) | [中文 (台灣)](https://go.microsoft.com/fwlink/?linkid=870039&clcid=0x404) | [英文 (美國)](https://go.microsoft.com/fwlink/?linkid=870039&clcid=0x409) | [法文](https://go.microsoft.com/fwlink/?linkid=870039&clcid=0x40c) | [德文](https://go.microsoft.com/fwlink/?linkid=870039&clcid=0x407) | [義大利文](https://go.microsoft.com/fwlink/?linkid=870039&clcid=0x410) | [日文](https://go.microsoft.com/fwlink/?linkid=870039&clcid=0x411) | [韓文](https://go.microsoft.com/fwlink/?linkid=870039&clcid=0x412) | [葡萄牙文 (巴西)](https://go.microsoft.com/fwlink/?linkid=870039&clcid=0x416) | [俄文](https://go.microsoft.com/fwlink/?linkid=870039&clcid=0x419) | [西班牙文](https://go.microsoft.com/fwlink/?linkid=870039&clcid=0x40a)
 
 ### <a name="whats-new"></a>新功能
 

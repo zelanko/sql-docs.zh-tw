@@ -5,19 +5,18 @@ author: annashres
 ms.author: anshrest
 manager: craigg
 ms.date: 07/12/2017
-ms.topic: article
+ms.topic: conceptual
 ms.prod: sql
 ms.prod_service: sql
 ms.component: sql-non-specified
 ms.suite: sql
 ms.custom: ''
-ms.technology: database-engine
-ms.assetid: ''
-ms.openlocfilehash: 8941a2e2e542a33f08a1c30f71a7745072a9c495
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.technology: configuration
+ms.openlocfilehash: 6684d58710b8be2cf96e06029792836cab9c69a3
+ms.sourcegitcommit: df382099ef1562b5f2d1cd506c1170d1db64de41
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/12/2018
 ---
 # <a name="configure-sql-server-to-send-feedback-to-microsoft"></a>設定 SQL Server 以將意見反應傳送給 Microsoft
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -52,7 +51,7 @@ AND instance_name = '_Total'
 - 透過使用 [錯誤和使用方式報表] 應用程式
 - 透過在伺服器上設定登錄子機碼
 
-針對 Linux 上的 SQL Server，請參閱 [Linux 上的 SQL Server 客戶意見反應](https://docs.microsoft.com/en-us/sql/linux/sql-server-linux-customer-feedback.md) \(英文\)
+針對 Linux 上的 SQL Server，請參閱 [Linux 上的 SQL Server 客戶意見反應](https://docs.microsoft.com/sql/linux/sql-server-linux-customer-feedback) \(英文\)
 
 > [!NOTE]
 > 您僅可在付費版本的 SQL Server 中停用將資訊傳送給 Microsoft 的功能。
@@ -107,15 +106,15 @@ AND instance_name = '_Total'
 
     項目類型 DWORD：0 為選擇退出，1 為選擇加入
 
-此外，若要在 Visual Studio 層級關閉使用狀況與錯誤報告，請設定下列登錄子機碼和設定：
+    此外，SSMS 17.x 是以 Visual Studio 2015 Shell 為基礎，而 Visual Studio 安裝預設會啟用客戶回函。  
 
--    子機碼 = HKEY_CURRENT_USER\Software\Microsoft\VisualStudio\Telemetry
+    若要在個別電腦上設定 Visual Studio 停用客戶回函，請將下列登錄子機碼值變更為字串 "0"：  
+    HKEY_LOCAL_MACHINE\Software\Policies\Microsoft\VisualStudio\SQM OptIn
 
--    RegEntry 名稱 = TurnOffSwitch
+    例如，將此子機碼變更如下：  
+    HKEY_LOCAL_MACHINE\Software\Policies\Microsoft\VisualStudio\SQM OptIn="0")
 
--    項目類型 DWORD：0 為選擇退出，1 為選擇加入
- 
-SQL Server 2017 使用量資料收集會接受這些登錄子機碼上以登錄為基礎的群組原則。
+    SQL Server 2017 使用量資料收集會接受這些登錄子機碼上以登錄為基礎的群組原則。
 
 ## <a name="set-registry-subkeys-for-crash-dump-collection"></a>設定損毀傾印收集的登錄子機碼
 

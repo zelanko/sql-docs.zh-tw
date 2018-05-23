@@ -27,16 +27,16 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 346b5aada1a16e84aa3e74019e83dd7a74d9914a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: e1d3b1e73a1e353fb87dcb7cd5782f551e9508a2
+ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="datalength-transact-sql"></a>DATALENGTH (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-傳回用來代表任何運算式的位元組數目。
+此函式會傳回用來代表任何運算式的位元組數目。
   
 ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -48,21 +48,33 @@ DATALENGTH ( expression )
   
 ## <a name="arguments"></a>引數  
 *expression*  
-這是任何資料類型的[運算式](../../t-sql/language-elements/expressions-transact-sql.md)。
+任何資料類型的[運算式](../../t-sql/language-elements/expressions-transact-sql.md)。
   
-## <a name="return-types"></a>傳回型別
-若 *expression* 的資料類型為 **varchar(max)**、**nvarchar(max)**，或 **varbinary(max)**，則為 **bigint**否則為 **int**。
+## <a name="return-types"></a>傳回類型
+如果 *expression* 具有 **nvarchar(max)**、**varbinary(max)** 或 **varchar(max)** 資料類型，則為 **bigint**；否則為 **int**。
   
 ## <a name="remarks"></a>Remarks  
-DATALENGTH 對 **varchar**、**varbinary**、**text**、**image**、**nvarchar** 和 **ntext** 等資料類型尤其有用，因為這些資料類型可以儲存可變長度的資料。
+`DATALENGTH` 與
+
+- **image**
+- **ntext**
+- **nvarchar**
+- **text**
+- **varbinary**
+
+及
+
+- **varchar**
+
+資料類型搭配使用時尤其有用，因為這些資料類型可以儲存可變長度的資料。
   
-NULL 的 DATALENGTH 是 NULL。
+針對 NULL 值，`DATALENGTH` 會傳回 NULL。
   
 > [!NOTE]  
 >  相容性層級可能會影響傳回值。 如需相容性層級的詳細資訊，請參閱 [ALTER DATABASE 相容性層級 &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)。  
   
 ## <a name="examples"></a>範例  
-下列範例會尋找 `Name` 資料表中 `Product` 資料行的長度。
+此範例會尋找 `Product` 資料表中 `Name` 資料行的長度：
   
 ```sql
 -- Uses AdventureWorks  

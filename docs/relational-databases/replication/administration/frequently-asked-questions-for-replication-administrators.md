@@ -19,11 +19,11 @@ caps.latest.revision: 59
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: ce21bef20a2fa73ca0a9acee22e2eeddefd5fce1
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: fd85694c8b2678d85b66db6c84b89a409fa0fc4a
+ms.sourcegitcommit: df382099ef1562b5f2d1cd506c1170d1db64de41
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/12/2018
 ---
 # <a name="frequently-asked-questions-for-replication-administrators"></a>複寫管理員的常見問題集
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -164,7 +164,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="database-maintenance"></a>資料庫維護  
   
 ### <a name="why-cant-i-run-truncate-table-on-a-published-table"></a>為何我無法在已發行的資料表中執行 TRUNCATE TABLE？  
- TRUNCATE TABLE 是不會引發觸發程序的非記錄式作業。 因為複寫無法追蹤由此作業導致的變更，所以不允許執行此作業：異動複寫透過交易記錄追蹤變更；合併式複寫透過已發行資料表上的觸發程序追蹤變更。  
+ TRUNCATE TABLE 是不會記錄個別資料列刪除，也不會引發 DML 觸發程序的 DDL 陳述式。 因為複寫無法追蹤由此作業導致的變更，所以不允許執行此作業：異動複寫透過交易記錄追蹤變更；合併式複寫透過已發行資料表上的 DML 觸發程序追蹤變更。  
   
 ### <a name="what-is-the-effect-of-running-a-bulk-insert-command-on-a-replicated-database"></a>在已複寫資料庫中執行大量插入命令有什麼效果？  
  對於異動複寫，大量插入將被追蹤並同其他插入一樣進行複寫。 對於合併式複寫，您必須確定正確更新變更追蹤中繼資料。  

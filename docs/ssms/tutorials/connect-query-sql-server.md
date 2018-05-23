@@ -12,11 +12,11 @@ ms.reviewer: sstein
 manager: craigg
 ms.prod: sql
 ms.technology: ssms
-ms.openlocfilehash: e663bf07fb724e5b65a47573f26702a6b1ccae14
-ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.openlocfilehash: 5ccc024b8589efa95af2503a8ea5bdba0c47147b
+ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="tutorial-connect-to-and-query-a-sql-server-instance-by-using-sql-server-management-studio"></a>教學課程：透過使用 SQL Server Management Studio 來連線至及查詢 SQL Server 執行個體
 本教學課程將教導您如何使用 SQL Server Management Studio (SSMS) 連線到 SQL Server 執行個體，並執行一些基本的 Transact-SQL (T-SQL) 命令。 本文會示範如何執行下列操作：
@@ -33,17 +33,16 @@ ms.lasthandoff: 05/03/2018
 ## <a name="prerequisites"></a>Prerequisites
 若要完成本教學課程，您需要 SQL Server Management Studio 和 SQL Server 執行個體存取權。 
 
-- 安裝 [SQL Server Management Studio](https://docs.microsoft.com/en-us/sql/ssms/download-sql-server-management-studio-ssms)。
+- 安裝 [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms)。
 
 若您沒有 SQL Server 執行個體存取權，請從下列連結選取您的平台。 若您選擇 SQL 驗證，請使用您的 SQL Server 登入認證。
-- **Windows**: [下載 SQL Server 2017 Developer Edition](https://www.microsoft.com/en-us/sql-server/sql-server-downloads).
-- **macOS**: [下載 Docker 上的 SQL Server 2017](https://docs.microsoft.com/en-us/sql/linux/quickstart-install-connect-docker).
+- **Windows**: [下載 SQL Server 2017 Developer Edition](https://www.microsoft.com/sql-server/sql-server-downloads).
+- **macOS**: [下載 Docker 上的 SQL Server 2017](https://docs.microsoft.com/sql/linux/quickstart-install-connect-docker).
 
 
 ## <a name="connect-to-a-sql-server-instance"></a>連接到 SQL Server 執行個體
 
-1. 啟動 SQL Server Management Studio。  
-    首次執行 SSMS 時，會開啟 [連線至伺服器] 視窗。 若該視窗未開啟，您可透過選取 [物件總管] > [連線] > [資料庫引擎] 手動加以開啟。
+1. 啟動 SQL Server Management Studio。 首次執行 SSMS 時，會開啟 [連線至伺服器] 視窗。 若該視窗未開啟，您可透過選取 [物件總管] > [連線] > [資料庫引擎] 手動加以開啟。
 
     ![物件總管中的連線連結](media/connect-query-sql-server/connectobjexp.png)
 
@@ -54,15 +53,21 @@ ms.lasthandoff: 05/03/2018
 
     ![[伺服器名稱] 欄位與使用 SQL Server 執行個體的選項](media/connect-query-sql-server/connection2.png)
 
-    - 針對**驗證**，請選取 [Windows 驗證]。 本文使用 Windows 驗證，但 SQL Server 登入亦受支援。 若您選取 [SQL 登入]，系統會提示您提供使用者名稱與密碼。 如需有關驗證類型的詳細資訊，請參閱[連線至伺服器 (資料庫引擎)](https://docs.microsoft.com/en-us/sql/ssms/f1-help/connect-to-server-database-engine)。
+    - 針對**驗證**，請選取 [Windows 驗證]。 本文使用 Windows 驗證，但 SQL Server 登入亦受支援。 若您選取 [SQL 登入]，系統會提示您提供使用者名稱與密碼。 如需有關驗證類型的詳細資訊，請參閱[連線至伺服器 (資料庫引擎)](https://docs.microsoft.com/sql/ssms/f1-help/connect-to-server-database-engine)。
 
     您也可透過選取 [選項] 修改其他連線設定。 連線選項的範例為您所連線的資料庫、連線逾時值以及網路通訊協定。 本文會為所有選項使用預設值。 
 
 3. 當您填完所有欄位後，請選取 [連線]。 
 
-4. 請在物件總管中瀏覽物件，以驗證您對 SQL Server 執行個體的連線成功，如此處所示： 
+### <a name="examples-of-successful-connections"></a>成功連線的範例
+若要驗證您的 SQL Server 連線成功，請展開並瀏覽 [物件總管] 中的物件。 這些物件會根據您所連線的伺服器類型而有所不同。 
 
-   ![連線成功](media/connect-query-sql-server/successfulconnection.png)
+- 連線到內部部署 SQL Server - 在此案例中為 NODE5\SQL2016ST：![連線到內部部署伺服器](media/connect-query-sql-server/connect-on-prem.png)
+
+- 連線到 SQL Azure 資料庫 - 在此案例中為 msftestserver.database.windows.net：![連線到 SQL Azure 資料庫](media/connect-query-sql-server/connect-sql-azure.png)
+
+  >[!NOTE]
+  > 在本教學課程中，您之前使用「Windows 驗證」連線到您的內部部署 SQL Server，但 SQL Azure 資料庫不支援這個方法。 因此，此影像顯示使用 SQL 驗證連線到 SQL Azure 資料庫。 如需詳細資訊，請參閱 [SQL 內部部署驗證](../../relational-databases/security/choose-an-authentication-mode.md)和 [SQL Azure 驗證](https://docs.microsoft.com/azure/sql-database/sql-database-security-overview#control-access)。 
 
 ## <a name="create-a-database"></a>建立資料庫
 請執行下列動作來建立名為 TutorialDB 的資料庫： 
@@ -170,8 +175,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="change-the-server-that-the-query-window-is-connected-to"></a>變更查詢視窗所連線的伺服器
 您可以透過執行下列步驟，變更目前查詢視窗所連線的伺服器：
 
-1. 以滑鼠右鍵按一下查詢視窗，然後選取 [連線] > [變更連線]。  
-    [連線至伺服器] 視窗會再次開啟。
+1. 以滑鼠右鍵按一下查詢視窗，然後選取 [連線] > [變更連線]。 [連線至伺服器] 視窗會再次開啟。
 2. 變更您查詢所連線的伺服器。 
  
    ![變更連線命令](media/connect-query-sql-server/changeconnection.png)

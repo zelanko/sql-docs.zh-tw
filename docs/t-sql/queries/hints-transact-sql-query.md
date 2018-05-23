@@ -1,7 +1,7 @@
 ---
 title: 查詢提示 (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 03/11/2018
+ms.date: 05/14/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.component: t-sql|queries
@@ -59,11 +59,11 @@ caps.latest.revision: 136
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 6b7db0c558788f168324b121237181237dcb98e6
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 1a5246b1d7d6a00e4500c95bae20fb2975bbebc9
+ms.sourcegitcommit: bac61a04d11fdf61deeb03060e66621c0606c074
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/14/2018
 ---
 # <a name="hints-transact-sql---query"></a>提示 (Transact-SQL) - 查詢
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -279,6 +279,9 @@ ms.lasthandoff: 05/03/2018
  在 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 或更新版本的查詢最佳化工具[基數估計](../../relational-databases/performance/cardinality-estimation-sql-server.md)模型下，導致 SQL Server 使用簡易內含項目假設產生計畫，而不使用預設的基底內含項目假設。 這與[追蹤旗標](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 9476 相同。 
 *  'FORCE_DEFAULT_CARDINALITY_ESTIMATION'  
  強制查詢最佳化工具使用對應至目前資料庫相容性層級的[基數估計](../../relational-databases/performance/cardinality-estimation-sql-server.md)模型。 使用此提示可覆寫[資料庫範圍設定](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md) LEGACY_CARDINALITY_ESTIMATION=ON 設定或[追蹤旗標](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 9481。
+* 'DISABLE_INTERLEAVED_EXECUTION_TVF' 會停用多重陳述式資料表值函式的交錯式執行。
+* 'DISABLE_BATCH_MODE_MEMORY_GRANT_FEEDBACK' 會停用批次模式記憶體授與意見反應。
+* 'DISABLE_BATCH_MODE_ADAPTIVE_JOINS' 會停用批次模式自適性聯結。
  
 > [!TIP]
 > 提示名稱不區分大小寫。

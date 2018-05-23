@@ -2,10 +2,9 @@
 title: Microsoft SQL 資料庫中的彈性查詢處理 | Microsoft Docs | Microsoft Docs
 description: 可改善 SQL Server (2017 和更新版本) 和 Azure SQL Database 查詢效能的彈性查詢處理功能。
 ms.custom: ''
-ms.date: 11/13/2017
+ms.date: 05/08/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.component: performance
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: ''
@@ -17,11 +16,11 @@ author: joesackmsft
 ms.author: josack
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 2874e8bb59a47b5732d716924ec3d49a9f80992d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 092f623dff8bd240bdc5349a3e6973d5c139b23f
+ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="adaptive-query-processing-in-sql-databases"></a>SQL 資料庫中的彈性查詢處理
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -82,6 +81,31 @@ ORDER BY MAX(max_elapsed_time_microsec) DESC;
 
 ### <a name="memory-grant-feedback-resource-governor-and-query-hints"></a>記憶體授與意見反應、資源管理員和查詢提示
 實際的記憶體授與會接受由資源管理員或查詢提示所決定的查詢記憶體限制。
+
+### <a name="disabling-memory-grant-feedback-without-changing-the-compatibility-level"></a>停用記憶體授與意見反應而不變更相容性層級
+您可以在資料庫或陳述式的範圍停用記憶體授與意見反應，同時仍將資料庫相容性層級維持在 140 以上。 若要針對源自資料庫的所有查詢執行停用批次模式的記憶體授與意見反應，請在適用資料庫的內容中執行下列程式碼：
+
+```sql
+ALTER DATABASE SCOPED CONFIGURATION SET DISABLE_BATCH_MODE_MEMORY_GRANT_FEEDBACK = ON;
+```
+
+啟用時，此設定在 sys.database_scoped_configurations 中會顯示為已啟用。
+
+若要針對源自資料庫的所有查詢執行重新啟用批次模式的記憶體授與意見反應，請在適用資料庫的內容中執行下列程式碼：
+
+```sql
+ALTER DATABASE SCOPED CONFIGURATION SET DISABLE_BATCH_MODE_MEMORY_GRANT_FEEDBACK = OFF;
+```
+
+您也可以將 DISABLE_BATCH_MODE_MEMORY_GRANT_FEEDBACK 指定為 USE HINT 查詢提示，以針對特定查詢停用批次模式的記憶體授與意見反應。  例如：
+
+```sql
+SELECT * FROM Person.Address  
+WHERE City = 'SEATTLE' AND PostalCode = 98104
+OPTION (USE HINT ('DISABLE_BATCH_MODE_MEMORY_GRANT_FEEDBACK')); 
+```
+
+USE HINT　查詢提示的優先順序高於資料庫範圍設定或追蹤旗標設定。
 
 ## <a name="batch-mode-adaptive-joins"></a>批次模式自適性聯結
 批次模式自適性聯結功能可讓選擇的[雜湊聯結或巢狀迴圈聯結](../../relational-databases/performance/joins.md)方法，延後到已掃描的第一個輸入**之後**。 自適性聯結運算子定義的閾值是用於決定何時要切換至巢狀迴圈計劃。 因此，您的計劃可在執行期間動態切換至較佳的聯結策略。
@@ -166,6 +190,36 @@ WHERE [fo].[Quantity] = 361;
 
 ![聯結閾值](./media/6_AQPJoinThreshold.png)
 
+### <a name="disabling-adaptive-joins-without-changing-the-compatibility-level"></a>停用自適性聯結而不變更相容性層級
+
+您可以在資料庫或陳述式的範圍停用自適性聯結，同時仍將資料庫相容性層級維持在 140 以上。  
+若要針對源自資料庫的所有查詢執行停用自適性聯結，請在適用資料庫的內容中執行下列程式碼：
+
+```sql
+ALTER DATABASE SCOPED CONFIGURATION SET DISABLE_BATCH_MODE_ADAPTIVE_JOINS = ON;
+```
+
+啟用時，此設定在 sys.database_scoped_configurations 中會顯示為已啟用。
+若要針對源自資料庫的所有查詢執行重新啟用自適性聯結，請在適用資料庫的內容中執行下列程式碼：
+
+```sql
+ALTER DATABASE SCOPED CONFIGURATION SET DISABLE_BATCH_MODE_ADAPTIVE_JOINS = OFF;
+```
+
+您也可以將 DISABLE_BATCH_MODE_ADAPTIVE_JOINS 指定為 USE HINT 查詢提示，以針對特定查詢停用自適性聯結。  例如：
+
+```sql
+SELECT s.CustomerID,
+       s.CustomerName,
+       sc.CustomerCategoryName
+FROM Sales.Customers AS s
+LEFT OUTER JOIN Sales.CustomerCategories AS sc
+ON s.CustomerCategoryID = sc.CustomerCategoryID
+OPTION (USE HINT('DISABLE_BATCH_MODE_ADAPTIVE_JOINS')); 
+```
+
+USE HINT　查詢提示的優先順序高於資料庫範圍設定或追蹤旗標設定。
+
 ## <a name="interleaved-execution-for-multi-statement-table-valued-functions"></a>交錯執行多重陳述式資料表值函式
 交錯執行會變更單次查詢執行的最佳化和執行階段之間的單向界限，並讓計劃根據修改過的基數估計值調整。 在最佳化期間，如果我們遇到交錯執行的候選項目，目前是**多重陳述式資料表值函式 (MSTVF)**，我們會暫停最佳化、執行適用的樹狀子目錄、擷取精確的基數估計值，再繼續下游作業的最佳化。
 MSTVF 在 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 和 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 中具有固定的基數估計值 100，在舊版中則為 1。 交錯執行有利處理因為這些與多重陳述式資料表值函式建立關聯之固定基數估計值引起的工作負載效能問題。
@@ -226,6 +280,41 @@ MSTVF 在 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 和 [!INCLUDE[ssSQL1
 
 ### <a name="interleaved-execution-and-query-store-interoperability"></a>交錯執行和查詢存放區互通性
 使用交錯執行的計劃可以強制執行。 此計劃是根據初始執行更正基數估計值的版本。    
+
+### <a name="disabling-interleaved-execution-without-changing-the-compatibility-level"></a>停用交錯執行而不變更相容性層級
+
+您可以在資料庫或陳述式的範圍停用交錯執行，同時仍將資料庫相容性層級維持在 140 以上。  若要針對源自資料庫的所有查詢執行停用交錯執行，請在適用資料庫的內容中執行下列程式碼：
+
+```sql
+ALTER DATABASE SCOPED CONFIGURATION SET DISABLE_INTERLEAVED_EXECUTION_TVF = ON;
+```
+
+啟用時，此設定在 sys.database_scoped_configurations 中會顯示為已啟用。
+若要針對源自資料庫的所有查詢執行重新啟用交錯執行，請在適用資料庫的內容中執行下列程式碼：
+
+```sql
+ALTER DATABASE SCOPED CONFIGURATION SET DISABLE_INTERLEAVED_EXECUTION_TVF = OFF;
+```
+
+您也可以將 DISABLE_INTERLEAVED_EXECUTION_TVF 指定為 USE HINT 查詢提示，以針對特定查詢停用交錯執行。  例如：
+
+```sql
+SELECT  [fo].[Order Key], [fo].[Quantity], [foo].[OutlierEventQuantity]
+FROM    [Fact].[Order] AS [fo]
+INNER JOIN [Fact].[WhatIfOutlierEventQuantity]('Mild Recession',
+                            '1-01-2013',
+                            '10-15-2014') AS [foo] ON [fo].[Order Key] = [foo].[Order Key]
+                            AND [fo].[City Key] = [foo].[City Key]
+                            AND [fo].[Customer Key] = [foo].[Customer Key]
+                            AND [fo].[Stock Item Key] = [foo].[Stock Item Key]
+                            AND [fo].[Order Date Key] = [foo].[Order Date Key]
+                            AND [fo].[Picked Date Key] = [foo].[Picked Date Key]
+                            AND [fo].[Salesperson Key] = [foo].[Salesperson Key]
+                            AND [fo].[Picker Key] = [foo].[Picker Key]
+OPTION (USE HINT('DISABLE_INTERLEAVED_EXECUTION_TVF'));
+```
+
+USE HINT　查詢提示的優先順序高於資料庫範圍設定或追蹤旗標設定。
 
 ## <a name="see-also"></a>另請參閱
 [SQL Server 資料庫引擎和 Azure SQL Database 的效能中心](../../relational-databases/performance/performance-center-for-sql-server-database-engine-and-azure-sql-database.md)     

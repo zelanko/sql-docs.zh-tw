@@ -27,16 +27,16 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 5387cd3acba6a6d4dab83213fbb44ef7c9e8c3e5
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 29765164d6eb5e677c307091cf37aa8623674f00
+ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="currentuser-transact-sql"></a>CURRENT_USER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-傳回目前使用者的名稱。 這個函數相當於 USER_NAME()。
+此函式會傳回目前使用者的名稱。 此函式相當於 `USER_NAME()`。
   
 ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -50,14 +50,14 @@ CURRENT_USER
 **sysname**
   
 ## <a name="remarks"></a>Remarks  
-CURRENT_USER 會傳回目前安全性內容的名稱。 如果 CURRENT_USER 是在呼叫 EXECUTE AS 參數內容之後執行，CURRENT_USER 就會傳回模擬內容的名稱。 如果 Windows 主體利用群組中的成員資格來存取資料庫，則會傳回 Windows 主體的名稱，而不是群組名稱。
+`CURRENT_USER` 會傳回目前安全性內容的名稱。 如果 `CURRENT_USER` 是在呼叫 `EXECUTE AS` 參數內容之後執行，`CURRENT_USER` 就會傳回模擬內容的名稱。 如果 Windows 主體利用群組中的成員資格來存取資料庫，則 `CURRENT_USER` 會傳回 Windows 主體名稱而非群組名稱。
   
-若要傳回目前使用者的登入，請參閱 [SUSER_NAME &#40;Transact-SQL&#41;](../../t-sql/functions/suser-name-transact-sql.md) 與 [SYSTEM_USER &#40;Transact-SQL&#41;](../../t-sql/functions/system-user-transact-sql.md)。
+請參閱 [SUSER_NAME &#40;Transact-SQL&#41;](../../t-sql/functions/suser-name-transact-sql.md) 和 [SYSTEM_USER &#40;Transact-SQL&#41;](../../t-sql/functions/system-user-transact-sql.md) 以了解如何傳回目前使用者的登入。
   
 ## <a name="examples"></a>範例  
   
 ### <a name="a-using-currentuser-to-return-the-current-user-name"></a>A. 使用 CURRENT_USER 傳回目前使用者的名稱  
-下列範例會傳回目前使用者的名稱。
+此範例會傳回目前使用者的名稱。
   
 ```sql
 SELECT CURRENT_USER;  
@@ -65,7 +65,7 @@ GO
 ```  
   
 ### <a name="b-using-currentuser-as-a-default-constraint"></a>B. 使用 CURRENT_USER 做為 DEFAULT 條件約束  
-下列範例會建立一份資料表，利用 `CURRENT_USER` 做為銷售資料列之 `DEFAULT` 資料行的 `order_person` 條件約束。
+此範例會建立一份資料表，利用 `CURRENT_USER` 作為銷售資料列之 `order_person` 資料行的 `DEFAULT` 條件約束。
   
 ```sql
 USE AdventureWorks2012;  
@@ -86,7 +86,7 @@ order_person char(30) NOT NULL DEFAULT CURRENT_USER
 GO  
 ```  
   
-下列程式碼會在資料表中插入一筆記錄。 執行這些陳述式的使用者，名叫 `Wanida`。
+此範例會在資料表中插入一筆記錄。 名為 `Wanida` 的使用者會執行這些陳述式。
   
 ```sql
 INSERT orders22 (cust_id, order_amt)  
@@ -96,7 +96,7 @@ SET NOCOUNT OFF;
 GO  
 ```  
   
-下列查詢會選取 `orders22` 資料表中的所有資訊。
+此查詢會選取 `orders22` 資料表中的所有資訊。
   
 ```sql
 SELECT * FROM orders22;  
@@ -114,12 +114,12 @@ order_id    cust_id     order_date           order_amt    order_person
 ```
   
 ### <a name="c-using-currentuser-from-an-impersonated-context"></a>C. 使用模擬內容的 CURRENT_USER  
-在下列範例中，`Wanida` 使用者會執行下列 [!INCLUDE[tsql](../../includes/tsql-md.md)] 程式碼。
+在此範例中，`Wanida` 使用者會執行下列 [!INCLUDE[tsql](../../includes/tsql-md.md)] 程式碼。
   
 ```sql
 SELECT CURRENT_USER;  
 GO  
-EXECUTE AS USER = 'Arnalfo';  
+EXECUTE AS USER = 'Wanida';  
 GO  
 SELECT CURRENT_USER;  
 GO  

@@ -27,11 +27,11 @@ caps.latest.revision: 152
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: b00b6e36b24dbe000a3651841ca347b8539e690c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 0791b05bdb2526da5d744c067b2f221f6cf4e1be
+ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="alter-availability-group-transact-sql"></a>ALTER AVAILABILITY GROUP (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -429,7 +429,7 @@ ALTER AVAILABILITY GROUP group_name
  如需詳細資訊，請參閱 [將次要複本聯結至可用性群組 &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/join-a-secondary-replica-to-an-availability-group-sql-server.md)。  
   
  FAILOVER  
- 起始可用性群組的手動容錯移轉，而不會讓連接的次要複本遺失資料。 您輸入容錯移轉目標容錯移轉命令所在的複本稱為容錯移轉目標。  容錯移轉目標將會接管主要角色，並復原每個資料庫的副本，然後讓這兩個資料庫連線，做為新的主要資料庫。 之前的主要複本會同時轉換到次要角色，且其資料庫會變成次要資料庫，並立即遭到暫停。 您可能可以透過一連串的失敗，來回切換這些角色。  
+起始可用性群組的手動容錯移轉，而不會讓連接的次要複本遺失資料。 將裝載主要複本的複本是「容錯移轉目標」。  容錯移轉目標將會接管主要角色，並復原每個資料庫的副本，然後讓這兩個資料庫連線，做為新的主要資料庫。 之前的主要複本會同時轉換到次要角色，且其資料庫會變成次要資料庫，並立即遭到暫停。 您可能可以透過一連串的失敗，來回切換這些角色。  
   
  只有在目前與主要複本同步處理的同步認可次要複本上支援。 請注意，次要複本也必須與主要複本同步處理，才能在同步認可模式下執行。  
   
@@ -574,7 +574,7 @@ ALTER AVAILABILITY GROUP group_name
  \<modify_listener_option>  
  MODIFY LISTENER 可接受下列其中一個選項：  
   
- ADD IP { **(‘***four_part_ipv4_address***’,‘***four_part_ipv4_mask***’)** | **(‘**dns_name*ipv6_address***’)** }  
+ ADD IP { **(‘***four_part_ipv4_address***’,‘***four_part_ipv4_mask***’)** | **(‘** dns_name*ipv6_address***’)** }  
  將指定的 IP 位址加入至由 *dns_name* 所指定的可用性群組接聽程式。  
   
  PORT **=** *listener_port*  

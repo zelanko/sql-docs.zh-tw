@@ -33,11 +33,11 @@ caps.latest.revision: 98
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 3c7254b34f1664953d92723371f26c3c58fdd168
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d77629ddd1ebd711d9ec026c0b1a7a4ae9001f1b
+ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="database-detach-and-attach-sql-server"></a>資料庫卸離與附加 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -109,7 +109,10 @@ ms.lasthandoff: 05/03/2018
 ###  <a name="Metadata"></a> 附加資料庫時的中繼資料變更  
  卸離後再重新附加唯讀資料庫時，會遺失目前差異基底的備份資訊。 *「差異基底」* (Differential Base) 是資料庫或資料庫之檔案或檔案群組子集中所有資料的最新完整備份。 如果沒有基底備份資訊， **master** 資料庫就會變成無法與唯讀資料庫同步處理，而之後所採用的差異備份可能會提供非預期的結果。 因此，如果搭配唯讀資料庫使用差異備份，重新附加資料庫後，應該利用完整備份來建立新的差異基底。 如需差異備份的相關資訊，請參閱[差異備份 &#40;SQL Server&#41;](../../relational-databases/backup-restore/differential-backups-sql-server.md)。  
   
- 附加時會啟動資料庫。 一般來說，附加資料庫時，會將資料庫設定為先前卸離或複製時的相同狀態。 不過，附加與卸離作業會停用資料庫的跨資料庫擁有權鏈結。 如需如何啟用鏈結的相關資訊，請參閱 [跨資料庫擁有權鏈結伺服器組態選項](../../database-engine/configure-windows/cross-db-ownership-chaining-server-configuration-option.md)。 同時，每當附加資料庫時，TRUSTWORTHY 都會設為 OFF。 如需如何將 TRUSTWORTHY 設成 ON 的資訊，請參閱 [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)。  
+ 附加時會啟動資料庫。 一般來說，附加資料庫時，會將資料庫設定為先前卸離或複製時的相同狀態。 不過，附加與卸離作業會停用資料庫的跨資料庫擁有權鏈結。 如需如何啟用鏈結的相關資訊，請參閱 [跨資料庫擁有權鏈結伺服器組態選項](../../database-engine/configure-windows/cross-db-ownership-chaining-server-configuration-option.md)。 
+
+ >[!IMPORTANT]
+ > 根據預設且為了安全起見，每當附加資料庫時，*is_broker_enabled*、*is_honor_broker_priority_on* 和 *is_trustworthy_on* 的選項都會設定為 OFF。 如需如何將這些選項設定為 ON 的資訊，請參閱 [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)。  如需中繼資料的詳細資訊，請參閱[管理在另一部伺服器上提供資料庫時所需的中繼資料](../../relational-databases/databases/manage-metadata-when-making-a-database-available-on-another-server.md)。
   
 ### <a name="backup-and-restore-and-attach"></a>備份和還原與附加  
  就像任何完全或部分離線的資料庫一樣，內含還原中檔案的資料庫是無法附加的。 如果停止還原順序，則可以附加資料庫。 然後，還是可以重新啟動還原順序。  
@@ -119,7 +122,7 @@ ms.lasthandoff: 05/03/2018
 > [!IMPORTANT]  
 >  由較新版本 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 所建立的資料庫無法附加在舊版本中。  
   
- 將資料庫附加至另一個伺服器執行個體時，為了提供一致的經驗給使用者和應用程式，您可能會需要在其他伺服器執行個體上為資料庫重新建立部分或所有中繼資料，例如登入和作業。 如需詳細資訊，請參閱[在另一個伺服器執行個體上提供可用的資料庫時，管理中繼資料 &#40;SQL Server&#41;](../../relational-databases/databases/manage-metadata-when-making-a-database-available-on-another-server.md)。  
+ 將資料庫附加至另一個伺服器執行個體時，為了提供一致的經驗給使用者和應用程式，您可能會需要在其他伺服器執行個體上為資料庫重新建立部分或所有中繼資料，例如登入和作業。 如需詳細資訊，請參閱[管理在另一個伺服器執行個體上提供資料庫時所需的中繼資料 &#40;SQL Server&#41;](../../relational-databases/databases/manage-metadata-when-making-a-database-available-on-another-server.md)。  
   
 ##  <a name="RelatedTasks"></a> 相關工作  
  **若要卸離資料庫**  

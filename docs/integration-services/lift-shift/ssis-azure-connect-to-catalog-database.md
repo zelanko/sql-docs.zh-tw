@@ -1,5 +1,5 @@
 ---
-title: 連線至 Azure 上的 SSISDB 目錄資料庫 | Microsoft Docs
+title: 連線至 Azure 中的 SSIS 目錄資料庫 (SSISDB) | Microsoft Docs
 ms.date: 09/25/2017
 ms.topic: conceptual
 ms.prod: sql
@@ -12,13 +12,13 @@ ms.technology:
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: b34e28dca32da44b60f65f92934373d1f7a42f12
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: ef69dc52b041541b89052038cadad94b9fa2f45c
+ms.sourcegitcommit: b5ab9f3a55800b0ccd7e16997f4cd6184b4995f9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/23/2018
 ---
-# <a name="connect-to-the-ssisdb-catalog-database-on-azure"></a>連線至 Azure 上的 SSISDB 目錄資料庫
+# <a name="connect-to-the-ssis-catalog-database-ssisdb-in-azure"></a>連線至 Azure 中的 SSIS 目錄資料庫 (SSISDB)
 
 取得連線至 Azure SQL Database 伺服器上裝載之 SSIS 目錄資料庫 (SSISDB) 所需的連線資訊。 您需要下列項目來進行連線：
 - 完整伺服器名稱
@@ -49,7 +49,7 @@ ms.lasthandoff: 05/03/2018
    | ------------ | ------------------ | ------------------------------------------------- | 
    | **伺服器類型** | Database Engine | 這是必要的值。 |
    | **伺服器名稱** | 完整伺服器名稱 | 名稱的格式應如下所示：**mysqldbserver.database.windows.net**。 |
-   | **驗證** | SQL Server 驗證 | 本快速入門使用 SQL 驗證。 |
+   | **驗證** | SQL Server 驗證 | |
    | **登入** | 伺服器系統管理員帳戶 | 這是您在建立伺服器時指定的帳戶。 |
    | **密碼** | 伺服器系統管理員帳戶的密碼 | 這是您在建立伺服器時指定的密碼。 |
 

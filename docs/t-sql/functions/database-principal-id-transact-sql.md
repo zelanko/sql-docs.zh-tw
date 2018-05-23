@@ -25,16 +25,16 @@ caps.latest.revision: 28
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.openlocfilehash: e0583570ce9a4d11b2e4aa6c019c8f4ccc753239
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: e297fd93c5e91eac02008fab13d7c66c71ce0e90
+ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="databaseprincipalid-transact-sql"></a>DATABASE_PRINCIPAL_ID (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-包傳回目前資料庫中的主體識別碼。 如需主體的詳細資訊，請參閱[主體 &#40;Database Engine&#41;](../../relational-databases/security/authentication-access/principals-database-engine.md)。
+此函式會傳回目前資料庫中的主體識別碼。 如需主體的詳細資訊，請參閱[主體 &#40;Database Engine&#41;](../../relational-databases/security/authentication-access/principals-database-engine.md)。
   
 ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -46,20 +46,19 @@ DATABASE_PRINCIPAL_ID ( 'principal_name' )
   
 ## <a name="arguments"></a>引數  
 *principal_name*  
-為代表主體，類型為 **sysname** 的運算式。  
-若省略 *principal_name*，則會傳回目前使用者的識別碼。 它必須用括號括住。
+代表主體，類型為 **sysname** 的運算式。 若省略 *principal_name*，`DATABASE_PRINCIPAL_ID` 會傳回目前使用者的識別碼。 `DATABASE_PRINCIPAL_ID` 需要括弧。
   
 ## <a name="return-types"></a>傳回類型
 **int**  
-當資料庫主體不存在時為 NULL。
+如果資料庫主體不存在，則為 NULL。
   
 ## <a name="remarks"></a>Remarks  
-DATABASE_PRINCIPAL_ID 可以用在選取清單、WHERE 子句或運算式所允許的任何位置。 如需詳細資訊，請參閱[運算式 &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)。
+您可以在 SELECT 清單、WHERE 子句或允許運算式的任何位置使用 `DATABASE_PRINCIPAL_ID`。 如需詳細資訊，請參閱[運算式 &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)。
   
 ## <a name="examples"></a>範例  
   
 ### <a name="a-retrieving-the-id-of-the-current-user"></a>A. 擷取目前使用者的識別碼  
-下列範例會傳回目前使用者的資料庫主體識別碼。
+此範例會傳回目前使用者的資料庫主體識別碼。
   
 ```sql
 SELECT DATABASE_PRINCIPAL_ID();  
@@ -67,7 +66,7 @@ GO
 ```  
   
 ### <a name="b-retrieving-the-id-of-a-specified-database-principal"></a>B. 擷取指定資料庫主體的識別碼  
-下列範例會傳回資料庫角色 `db_owner` 的資料庫主體識別碼。
+此範例會傳回資料庫角色 `db_owner` 的資料庫主體識別碼。
   
 ```sql
 SELECT DATABASE_PRINCIPAL_ID('db_owner');  

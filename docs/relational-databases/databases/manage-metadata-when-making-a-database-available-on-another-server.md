@@ -40,15 +40,15 @@ caps.latest.revision: 84
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 0eb4e0cb4da6395d0c48da787b0e21b6f27dcae4
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: a0b300bc3f204af062eac1e151933659216dd921
+ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="manage-metadata-when-making-a-database-available-on-another-server"></a>管理在另一部伺服器上提供資料庫時所需的中繼資料
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  此主題與下列情況有關：  
+  本文與下列情況有關：  
   
 -   設定 [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] 可用性群組的可用性複本。  
   
@@ -65,7 +65,7 @@ ms.lasthandoff: 05/03/2018
  當您將應用程式的資料庫移動到其他伺服器執行個體時，您必須在目的地伺服器執行個體上重新建立 **master** 和 **msdb** 中的相依實體及物件的所有中繼資料。 例如，如果資料庫應用程式使用伺服器層級觸發程序，僅在新系統上附加或還原資料庫是不夠的。 除非您以手動方式為 **master** 資料庫中的那些觸發程序重新建立中繼資料，否則資料庫無法如預期一般運作。  
   
 ##  <a name="information_entities_and_objects"></a> 儲存在使用者資料庫外部的資訊、實體和物件  
- 本主題剩下的篇幅將摘要說明在其他伺服器執行個體上提供資料庫時，可能對該資料庫造成影響的潛在問題。 您可能需要重新建立下列清單列出的其中一個或多個資訊、實體或物件類型。 若要查看摘要，請按一下各項目的連結。  
+ 本文其餘的篇幅將摘要說明在其他伺服器執行個體上提供資料庫時，可能對該資料庫造成影響的潛在問題。 您可能需要重新建立下列清單列出的其中一個或多個資訊、實體或物件類型。 若要查看摘要，請按一下各項目的連結。  
   
 -   [伺服器組態設定](#server_configuration_settings)  
   
@@ -188,7 +188,8 @@ ms.lasthandoff: 05/03/2018
   
  擴充預存程序會直接在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體的位址空間中執行，而且它們可能會產生降低伺服器效能和可靠性的記憶體遺漏或其他問題。 您應考慮將擴充預存程序與參考資料儲存在不同的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體中。 同時應考慮使用分散式查詢來存取資料庫。  
   
-> **重要！！** 將擴充預存程序加入伺服器並將 EXECUTE 權限授與其他使用者之前，系統管理員應徹底檢閱每個擴充預存程序，確定其中不含任何有害或惡意的程式碼。  
+  > [!IMPORTANT]
+  > 將擴充預存程序加入伺服器並將 EXECUTE 權限授與其他使用者之前，系統管理員應徹底檢閱每個擴充預存程序，確定其中不含任何有害或惡意的程式碼。  
   
  如需詳細資訊，請參閱 [GRANT 物件權限 &#40;Transact-SQL&#41;](../../t-sql/statements/grant-object-permissions-transact-sql.md)、[DENY 物件權限 &#40;Transact-SQL&#41;](../../t-sql/statements/deny-object-permissions-transact-sql.md) 和 [REVOKE 物件權限 &#40;Transact-SQL&#41;](../../t-sql/statements/revoke-object-permissions-transact-sql.md)。  
   
@@ -258,7 +259,7 @@ ms.lasthandoff: 05/03/2018
 -   [建立作業](http://msdn.microsoft.com/library/b35af2b6-6594-40d1-9861-4d5dd906048c)  
   
 #### <a name="best-practices-for-using-a-script-to-re-create-a-job"></a>使用指令碼來重新建立作業的最佳作法  
- 我們建議您先編寫簡單作業的指令碼、在其他 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 服務上重新建立作業，然後執行該作業，看看是否如預期方式運作。 這項作法可讓您識別不相容性並嘗試加以解決。 如果以指令碼編寫的作業無法如預期方式在新環境中運作，建議您建立可在該環境下正確運作的對等作業。  
+ 我們建議您先編寫簡單作業的指令碼、在其他 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 服務上重新建立作業，然後執行該作業，看看是否如預期方式運作。 這項做法可讓您識別不相容性並嘗試加以解決。 如果以指令碼編寫的作業無法如預期方式在新環境中運作，建議您建立可在該環境下正確運作的對等作業。  
   
 
 ##  <a name="logins"></a> 登入  
@@ -266,7 +267,7 @@ ms.lasthandoff: 05/03/2018
   
  若要在原始資料庫副本中產生部分或所有物件的指令碼，您可以使用「產生指令碼精靈」，然後在 **[選擇指令碼選項]** 對話方塊中，將 **[編寫登入的指令碼]** 選項設定為 **[True]**。  
   
-> **注意：**如需如何設定鏡像資料庫登入的資訊，請參閱[設定資料庫鏡像或 AlwaysOn 可用性群組的登入帳戶 (SQL Server)](../../database-engine/database-mirroring/set-up-login-accounts-database-mirroring-always-on-availability.md) 和[角色切換後針對登入和作業進行管理 &#40;SQL Server&#41;](../../sql-server/failover-clusters/management-of-logins-and-jobs-after-role-switching-sql-server.md)。  
+> **注意：** 如需如何設定鏡像資料庫登入的資訊，請參閱[設定資料庫鏡像或 AlwaysOn 可用性群組的登入帳戶 (SQL Server)](../../database-engine/database-mirroring/set-up-login-accounts-database-mirroring-always-on-availability.md) 和[角色切換後針對登入和作業進行管理 &#40;SQL Server&#41;](../../sql-server/failover-clusters/management-of-logins-and-jobs-after-role-switching-sql-server.md)。  
   
   
 ##  <a name="permissions"></a> 權限  
@@ -279,9 +280,10 @@ ms.lasthandoff: 05/03/2018
 ### <a name="grant-revoke-and-deny-permissions-on-system-objects"></a>系統物件的 GRANT、REVOKE 及 DENY 權限  
  系統物件 (例如，預存程序、擴充預存程序、函數和檢視) 的權限會存放在 **master** 資料庫中，而且您必須在目的地伺服器執行個體上設定這些權限。  
   
- 若要在原始資料庫副本中產生部分或所有物件的指令碼，您可以使用「產生指令碼精靈」，然後在 [選擇指令碼選項] 對話方塊中，將 [編寫物件層級權限的指令碼] 選項設定為 [True]。  
+ 若要在原始資料庫副本中產生部分或所有物件的指令碼，您可以使用「產生指令碼精靈」，然後在 **[選擇指令碼選項]** 對話方塊中，將 **[編寫物件層級權限的指令碼]** 選項設定為 **[True]**。  
   
-> **重要！！** 當您在編寫登入的指令碼時，密碼並不會編寫在指令碼中。 如果您具有使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證的登入，就必須修改目的地上的指令碼。  
+   > [!IMPORTANT]
+   > 當您在編寫登入的指令碼時，密碼並不會編寫在指令碼中。 如果您具有使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證的登入，就必須修改目的地上的指令碼。  
   
  您可以在 [sys.system_objects](../../relational-databases/system-catalog-views/sys-system-objects-transact-sql.md) 目錄檢視中看到系統物件。 您可以在 **master** 資料庫的 [sys.database_permissions](../../relational-databases/system-catalog-views/sys-database-permissions-transact-sql.md) 目錄檢視中，看到系統物件的權限。 如需查詢這些目錄檢視和授與系統物件權限的詳細資訊，請參閱 [GRANT 系統物件權限 &#40;Transact-SQL&#41;](../../t-sql/statements/grant-system-object-permissions-transact-sql.md)。 如需詳細資訊，請參閱 [REVOKE 系統物件權限 &#40;Transact-SQL&#41;](../../t-sql/statements/revoke-system-object-permissions-transact-sql.md) 和 [DENY 系統物件權限 &#40;Transact-SQL&#41;](../../t-sql/statements/deny-system-object-permissions-transact-sql.md)。  
   
@@ -313,7 +315,10 @@ ms.lasthandoff: 05/03/2018
   
  如需憑證和非對稱金鑰的詳細資訊，請參閱＜ [Encryption Hierarchy](../../relational-databases/security/encryption/encryption-hierarchy.md)＞。  
   
-  
+## <a name="trustworthy-property"></a>TRUSTWORHTY 屬性
+TRUSTWORHTY 資料庫屬性是用來指定 SQL Server 執行個體是否信任資料庫及其中的內容。 附加資料庫時，根據預設且為了安全起見，此選項會設定為 OFF，即使此選項在原始伺服器上設定為 ON 也一樣。 如需這個屬性的詳細資訊，請參閱 [TRUSTWORTHY 資料庫屬性](../security/trustworthy-database-property.md)；如需開啟這個選項的資訊，請參閱 [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)。  
+
+
 ##  <a name="replication_settings"></a> Replication Settings  
  如果您將複寫資料庫的備份還原到另一個伺服器或資料庫，將無法保留複寫設定。 在此情況下，您必須在還原備份之後，重新建立所有發行集和訂閱。 若要讓此程序更簡單，請針對目前的複寫設定和啟用及停用複寫，建立指令碼。 若要協助重新建立複寫設定，請複製這些指令碼並變更伺服器名稱參考，以便針對目的地伺服器執行個體運作。  
   
@@ -321,7 +326,7 @@ ms.lasthandoff: 05/03/2018
   
   
 ##  <a name="sb_applications"></a> Service Broker Applications  
- [!INCLUDE[ssSB](../../includes/sssb-md.md)] 應用程式的許多部分都會隨資料庫移動。 不過，此應用程式的某些部分則必須在新位置中重新建立或重新設定。  
+ [!INCLUDE[ssSB](../../includes/sssb-md.md)] 應用程式的許多部分都會隨資料庫移動。 不過，此應用程式的某些部分則必須在新位置中重新建立或重新設定。  根據預設且為了安全起見，從其他伺服器附加資料庫時，*is_broker_enabled* 和 *is_honoor_broker_priority_on* 的選項都會設定為 OFF。 如需如何將這些選項設定為 ON 的資訊，請參閱 [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)。  
   
   
 ##  <a name="startup_procedures"></a> Startup Procedures  

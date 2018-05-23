@@ -2,7 +2,7 @@
 title: 針對 SQL Server Integration Services (SSIS) Scale Out 進行疑難排解 | Microsoft Docs
 ms.description: This article describes how to troubleshoot common issues with SSIS Scale Out
 ms.custom: ''
-ms.date: 12/19/2017
+ms.date: 05/09/2018
 ms.prod: sql
 ms.prod_service: integration-services
 ms.component: scale-out
@@ -16,11 +16,11 @@ caps.latest.revision: 1
 author: haoqian
 ms.author: haoqian
 manager: craigg
-ms.openlocfilehash: 5baceaa51a0e4f4b1059bce5e19a0fd79fa3a71d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 6d1fa967fa5e755a8072a6837df44c327b39087c
+ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="troubleshoot-scale-out"></a>針對 Scale Out 進行疑難排解
 
@@ -141,7 +141,15 @@ winhttpcertcfg.exe -g -c LOCAL_MACHINE\My -s {CN of the worker certificate} -a {
 
     值資料：**0 (False)**
 
-4.  如果不可能在步驟 2 中清除所有非自我簽署的憑證。 在步驟 3 中將登錄機碼值設定為 2。
+4.  如果無法如步驟 2 中所述清除所有非自我簽署憑證，請將下列登錄機碼值設定為 2。
+
+    `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL`
+
+    值名稱：**ClientAuthTrustMode** 
+
+    值類型：**REG_DWORD** 
+
+    值資料：**2**
 
 ## <a name="http-request-error"></a>HTTP 要求錯誤
 

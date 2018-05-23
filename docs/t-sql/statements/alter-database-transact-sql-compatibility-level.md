@@ -1,7 +1,7 @@
 ---
 title: ALTER DATABASE 相容性層級 (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 04/18/2018
+ms.date: 05/09/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.component: t-sql|statements
@@ -28,11 +28,11 @@ caps.latest.revision: 89
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.openlocfilehash: 3bdc0c85068e4933b0c97cb508bd819ee1cc481d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 3a59000dabcaddbcb096fd715d1f6168dfbb7930
+ms.sourcegitcommit: df382099ef1562b5f2d1cd506c1170d1db64de41
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/12/2018
 ---
 # <a name="alter-database-transact-sql-compatibility-level"></a>ALTER DATABASE (Transact-SQL) 相容性層級
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -70,21 +70,20 @@ SET COMPATIBILITY_LEVEL = { 140 | 130 | 120 | 110 | 100 | 90 }
 |SQL Server 2000|8|80|80|  
   
 > [!NOTE]  
-> 從 **2018 年 1 月**開始，在 SQL Database 中，新建資料庫的預設相容性層級是 140。 我們不會更新現有資料庫的資料庫相容性層級。 這是由客戶自己決定。 不過，強烈建議客戶規劃移至最新相容性層級，以利用最新的增強功能。
+> 從 **2018 年 1 月**開始，在 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 中，新建資料庫的預設相容性層級是 140。 我們不會更新現有資料庫的資料庫相容性層級。 這是由客戶自己決定。 不過，強烈建議客戶規劃移至最新相容性層級，以利用最新的增強功能。
 > 
-> 如果您一般想要讓資料庫具有層級 140，則有理由偏好使用層級 110 **基數估計**演算法，請參閱 [ALTER DATABASE SCOPED CONFIGURATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)，特別是它的關鍵字 `LEGACY_CARDINALITY_ESTIMATION = ON`。
+> 如果您想要針對整個資料庫使用資料庫相容性層級 140，但有偏好 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 之**基數估計**模型 (對應至資料庫相容性層級 110) 的理由，請參閱 [ALTER DATABASE SCOPED CONFIGURATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)，特別是其關鍵字 `LEGACY_CARDINALITY_ESTIMATION = ON`。
 >  
->  如需有關如何評估您 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]最重要查詢的效能差異，請參閱[在 Azure SQL Database 中使用相容性層級 130 改善查詢效能](http://azure.microsoft.com/documentation/articles/sql-database-compatibility-level-query-performance-130/)。 請注意，本文是指相容性層級 130 和 SQL Server，但 SQL Server 和 Azure SQL DB 使用相同的方法移至 140。
+> 如需有關如何評估您 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]最重要查詢的效能差異，請參閱[在 Azure SQL Database 中使用相容性層級 130 改善查詢效能](http://azure.microsoft.com/documentation/articles/sql-database-compatibility-level-query-performance-130/)。 請注意，本文是指相容性層級 130 和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，但 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 使用相同的方法移至 140。
 
-
- 請執行以下查詢已判斷您所連線的 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 版本。  
+請執行以下查詢已判斷您所連線的 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 版本。  
   
 ```sql  
 SELECT SERVERPROPERTY('ProductVersion');  
 ```  
   
 > [!NOTE]  
-> [!INCLUDE[ssSDS](../../includes/sssds-md.md)].上並未支援依相容性層級而改變的所有功能。  
+> [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].上並未支援依相容性層級而改變的所有功能。  
 
  若要判斷目前的相容性層級，請查詢 [sys.databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) 的 **compatibility_level** 資料行。  
   
@@ -93,24 +92,60 @@ SELECT name, compatibility_level FROM sys.databases;
 ```  
   
 ## <a name="remarks"></a>Remarks  
-針對 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的所有安裝，預設相容性層級設定為 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的版本。 資料庫會設定為這個層級，除非 **model** 資料庫具有更低的相容性層級。 當資料庫從任何舊版 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 升級時，資料庫會保留其現有的相容性層級 (如果它至少為 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的執行個體所允許的最低層級)。 升級相容性層級低於所允許層級的資料庫時，請將資料庫設定為允許的最低相容性層級。 這同樣適用於系統和使用者資料庫。 使用 **ALTER DATABASE** 可變更資料庫的相容性層級。 若要檢視資料庫目前的相容性層級，請查詢 [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) 目錄檢視中的 **compatibility_level** 資料行。  
+針對 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的所有安裝，預設相容性層級設定為 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的版本。 資料庫會設定為這個層級，除非 **model** 資料庫具有更低的相容性層級。 當資料庫從任何舊版 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 升級時，資料庫會保留其現有的相容性層級 (如果它至少為 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 之執行個體所允許的最低層級)。 升級相容性層級低於所允許層級的資料庫時，自動將資料庫設定為允許的最低相容性層級。 這同樣適用於系統和使用者資料庫。   
+
+附加或還原資料庫以及就地升級之後，[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 預期會有下列行為： 
+- 如果使用者資料庫的相容性層級在升級前為 100 或更高層級，則在升級後仍會保持相同。    
+- 如果使用者資料庫在升級前的相容性層級為 90，則在升級後的資料庫中，相容性層級會設定為 100，這是 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 支援的最低相容性層級)。    
+- tempdb、model、msdb 和 Resource 資料庫的相容性層級在升級之後會設定為目前相容性層級。  
+- master 系統資料庫會繼續保有升級前的相容性層級。
+
+使用 `ALTER DATABASE` 變更資料庫的相容性層級。 資料庫的新相容性層級設定會在兩個情況下生效：發出 `USE <database>` 命令時，或使用該資料庫作為預設資料庫內容來處理新登入時。     
+若要檢視資料庫目前的相容性層級，請查詢 [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) 目錄檢視中的 **compatibility_level** 資料行。  
 
 > [!NOTE]  
-> 舊版 SQL Server 所建立並升級至 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] RTM 或 Service Pack 1 的[散發資料庫](../../relational-databases/replication/distribution-database.md)具有相容性層級 90，其他資料庫則不予支援。 這不會影響複寫功能。 升級至更新版本的 Service Pack 和 SQL Server 版本會增加散發資料庫的相容性層級，以符合 **master** 資料庫的相容性層級。
-  
+> 舊版 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 所建立並升級至 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] RTM 或 Service Pack 1 的[散發資料庫](../../relational-databases/replication/distribution-database.md)具有相容性層級 90，其他資料庫則不予支援。 這不會影響複寫功能。 升級至更新版本的 Service Pack 和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本會增加散發資料庫的相容性層級，以符合 **master** 資料庫的相容性層級。
+
+## <a name="compatibility-levels-and-sql-server-upgrades"></a>相容性層級和 SQL Server 升級  
+資料庫相容性層級是協助資料庫現代化的重要工具，它允許升級 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]，同時透過維護升級前的相同資料庫相容性層級，來讓連線的應用程式保持在運作狀態。 只要應用程式不需要使用僅限較高資料庫相容性層級的增強功能，即為升級 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 並維護先前資料庫相容性層級的有效方法。 如需使用相容性層級來提供回溯相容性的詳細資訊，請參閱本文稍後的[使用相容性層級來提供回溯相容性](#using-compatibility-level-for-backward-compatibility)。    
+
+若要進行新的開發工作，或是現有的應用程式需要使用新功能，以及在查詢最佳化工具空間中完成的效能提升，請規劃將資料庫相容性層級升級至 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中可用的最新層級，並確認您的應用程式適用於該相容性層級。 如需升級資料庫相容性層級的詳細資料，請參閱本文稍後的[升級資料庫相容性層級的最佳做法](#best-practices-for-upgrading-database-compatibility-level)。     
+
+> [!TIP] 
+> 如果應用程式已在指定的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本上經過測試和認證，則已隱含在該 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本的原生資料庫相容性層級上經過測試和認證。
+> 
+> 因此，使用對應至經過測試之 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本的資料庫相容性層級時，資料庫相容性層級會為現有的應用程式提供簡單的憑證路徑。
+>
+> 如需相容性層級之間差異的詳細資訊，請參閱本文稍後的適當章節。 
+
+若要將 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 升級至最新版本，同時維護升級前已存在的資料庫相容性層級及其可支援性狀態，建議使用 [Microsoft Data Migration Assistant](http://www.microsoft.com/download/details.aspx?id=53595) 工具 (DMA)，執行資料庫中應用程式程式碼的靜態功能介面區驗證。 在 DMA 工具輸出中，由於沒有關於遺失或不相容功能的錯誤，因此可防止應用程式在新的目標版本上出現任何功能迴歸的情況。 如需 DMA 工具的詳細資訊，請參閱[這裡](http://blogs.msdn.microsoft.com/datamigration/dma)。
+
+> [!NOTE] 
+> DMA 支援資料庫相容性層級 100 (含) 以上。 已排除 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 作為來源版本。 
+
+> [!IMPORTANT] 
+> Microsoft 建議執行一些基本測試，以驗證升級是否成功，同時維護先前的資料庫相容性層級。 您應該決定基本測試對您自己的應用程式和情節所代表的意義。 
+
+> [!NOTE] 
+> Microsoft 會在下列情況下提供查詢計劃圖形保護：
+> - 新版 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (目標) 執行所在的硬體，相當於舊版 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (來源) 執行所在的硬體。 
+> - 目標 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和來源 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 上使用相同的[受支援資料庫相容性層級](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md#remarks)。 
+> 
+> 上述情況中所發生的任何查詢計劃圖形迴歸 (相較於來源 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]) 都會予以解決。 如果發生這種情況，請連絡 Microsoft 客戶支援。
+
 ## <a name="using-compatibility-level-for-backward-compatibility"></a>使用相容性層級來提供回溯相容性  
- 相容性層級只會影響指定之資料庫的行為，而不會影響整個伺服器的行為。 相容性層級只會提供與舊版 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 之間的部分回溯相容性。 從相容性模式 130 開始，任何會影響功能的新查詢計畫都只新增到新的相容性模式。 這種作法是為了將升級期間因查詢計畫變更導致效能降低而產生的風險降到最低。 從應用程式觀點而言，目標仍是使用最新的相容性層級，以繼承一些新功能，以及在查詢最佳化工具空間中完成的效能改進，但以受控制的方式進行。 請使用相容性層級做為暫時移轉協助，協助您解決相關相容性層級設定所控制之行為的版本差異。 如需詳細資訊，請參閱位於文章中較後面位置的升級最佳作法。  
+「資料庫相容性層級」設定只會影響指定之資料庫的行為，而不會影響整個伺服器的行為。 資料庫相容性層級只會提供與舊版 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 之間的部分回溯相容性。   
+從相容性模式 130 開始，任何會影響功能的新查詢計劃只會刻意新增至新的相容性層級。 這種作法是為了將升級期間因查詢計畫變更導致效能降低而產生的風險降到最低。   
+從應用程式觀點而言，目標仍然應該在某個時間點升級為最新的相容性層級，以繼承一些新功能，以及在查詢最佳化工具空間中完成的效能提升，但以受控制的方式進行。 請使用較低的相容性層級作為更安全的移轉協助，協助您解決相關相容性層級設定所控制之行為的版本差異。 如需詳細資料，包括升級資料庫相容性層級的建議工作流程，請參閱本文稍後的[升級資料庫相容性層級的最佳做法](#best-practices-for-upgrading-database-compatibility-evel)。  
   
- 如果現有的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 應用程式受到您 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本中的行為差異影響，請轉換應用程式以便與新的相容性模式緊密搭配運作。 然後使用 `ALTER DATABASE` 將相容性層級變更為 130。 資料庫的新相容性設定會在兩個情況下生效：發出 `USE <database>` 時或使用該資料庫作為預設資料庫來處理新登入時。  
- 
 > [!IMPORTANT]
-> 在指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本中導入的已停用功能不會受到相容性層級保護。
+> 在指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本中導入的已停用功能不會受到相容性層級保護。 這是指 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 中已移除的功能。
 > 
 > 例如，`FASTFIRSTROW` 提示已在 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 中停用，並以 `OPTION (FAST n )` 提示取代。 將資料庫相容性層級設定為 110 不會還原已停用的提示。
 > 如需已停用功能的詳細資訊，請參閱 [SQL Server 2016 中已停用的資料庫引擎功能](../../database-engine/discontinued-database-engine-functionality-in-sql-server-2016.md)、[SQL Server 2014 中已停用的資料庫引擎功能](http://msdn.microsoft.com/library/ms144262(v=sql.120))、[SQL Server 2012 中已停用的資料庫引擎功能](http://msdn.microsoft.com/library/ms144262(v=sql.110))，以及 [SQL Server 2008 中已停用的資料庫引擎功能](http://msdn.microsoft.com/library/ms144262(v=sql.100))。
 
 > [!IMPORTANT]
-> 指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本中導入的重大變更**可能**不會受到相容性層級保護。 [!INCLUDE[tsql](../../includes/tsql-md.md)] 行為通常會受到相容性層級保護。 但是，已變更或已移除的系統物件**不會**受到相容性層級保護。
+> 指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本中導入的重大變更**可能**不會受到相容性層級保護。 這是指 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 版本之間的行為變更。 [!INCLUDE[tsql](../../includes/tsql-md.md)] 行為通常會受到相容性層級保護。 但是，已變更或已移除的系統物件**不會**受到相容性層級保護。
 >
 > 一個受相容性層級**保護**的重大變更範例為從日期時間轉換成日期時間 2 資料類型的隱含轉換。 在資料庫相容性層級 130 之下，這些會顯示藉由考量小數部分的毫秒而改善的精確度，會導致不同的轉換值。 若要還原先前的轉換行為，請將資料庫相容性層級設定為 120 或更低。
 >
@@ -120,9 +155,9 @@ SELECT name, compatibility_level FROM sys.databases;
 >
 > 如需重大變更的詳細資訊，請參閱 [SQL Server 2017 中資料庫引擎功能的重大變更](../../database-engine/breaking-changes-to-database-engine-features-in-sql-server-2017.md)、[SQL Server 2016 中資料庫引擎功能的重大變更](../../database-engine/breaking-changes-to-database-engine-features-in-sql-server-2016.md)、[SQL Server 2014 中資料庫引擎功能的重大變更](http://msdn.microsoft.com/library/ms143179(v=sql.120))、[SQL Server 2012 中資料庫引擎功能的重大變更](http://msdn.microsoft.com/library/ms143179(v=sql.110))，以及 [SQL Server 2008 中資料庫引擎功能的重大變更](http://msdn.microsoft.com/library/ms143179(v=sql.100))。
   
-## <a name="best-practices"></a>最佳作法  
+## <a name="best-practices-for-upgrading-database-compatibility-level"></a>升級資料庫相容性層級的最佳做法 
 如需升級相容性層級的建議工作流程，請參閱[變更資料庫相容性模式並使用查詢存放區](../../database-engine/install-windows/change-the-database-compatibility-mode-and-use-the-query-store.md)。  
-  
+
 ## <a name="compatibility-levels-and-stored-procedures"></a>相容性層級和預存程序  
  當執行預存程序時，它會使用定義所在之資料庫的目前相容性層級。 當資料庫的相容性設定改變時，也會同時自動重新編譯它的所有預存程序。  
 
@@ -184,7 +219,7 @@ SQL Server 2017 之前的 SQL Server 較早版本中，追蹤旗標 4199 之下�
 |只有 RC4 演算法支援回溯相容性。 只有在資料庫相容性層級為 90 或 100 時，才能使用 RC4 或 RC4_128 加密新資料  (不建議使用)。在 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 中使用 RC4 或 RC4_128 加密的資料，可以在任何相容性層級進行解密。|不可使用 RC4 或 RC4_128 加密新資料。 請改用較新的演算法，例如其中一個 AES 演算法。 在 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 中使用 RC4 或 RC4_128 加密的資料，可以在任何相容性層級進行解密。|  
 |除非用於計算資料行運算式，否則 **time** 和 **datetime2**資料類型之 `CAST` 和 `CONVERT` 作業的預設樣式為 121。 若為計算資料行，預設樣式為 0。 當您建立計算資料行、將它們用於包含自動參數化的查詢或用於條件約束定義時，這種行為就會影響計算資料行。<br /><br /> 下方＜範例＞一節中的範例 D 會顯示樣式 0 與 121 之間的差異。 此範例不會示範上述的行為。 如需日期和時間樣式的詳細資訊，請參閱 [CAST 和 CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)。|在相容性層級 110 底下，**time** 和 **datetime2** 資料類型之 `CAST` 和 `CONVERT` 作業的預設樣式一律為 121。 如果您的查詢仰賴舊的行為，請使用低於 110 的相容性層級，或在受影響的查詢中明確指定 0 樣式。<br /><br /> 將資料庫升級為相容性層級 110 不會變更已經儲存至磁碟的使用者資料。 您必須依適當情況手動更正這項資料。 例如，如果您使用了 `SELECT INTO`，根據包含上述計算資料行運算式的來源建立資料表，系統就會儲存資料 (使用樣式 0) 而非計算資料行定義本身。 您必須手動將這項資料更新為符合樣式 121。|  
 |分割區檢視所參考之 **smalldatetime** 類型的遠端資料表中的任何資料行都會對應為 **datetime**。 本機資料表中對應的資料行 (在選取清單的相同序數位置中) 必須為 **datetime** 類型。|分割區檢視所參考之 **smalldatetime** 類型的遠端資料表中的任何資料行都會對應為 **smalldatetime**。 本機資料表中對應的資料行 (在選取清單的相同序數位置中) 必須為 **smalldatetime** 類型。<br /><br /> 在升級到 110 後，分散式分割區檢視會因為資料類型不符合而失敗。 若要解決此問題，您可以將遠端資料表的資料類型變更為 **datetime** 或是將本機資料庫的相容性層級設定為 100 或更低層級。|  
-|`SOUNDEX` 函數會實作以下規則：<br /><br /> 1)如果大寫 H 或大寫 W 分隔擁有相同 `SOUNDEX` 代碼數字的兩個子音，則會忽略它們。<br /><br /> 2) 如果 *character_expression* 的前 2 個字元都有相同的 `SOUNDEX` 代碼數字，這兩個字元會包含在內。 否則，如果一組並存子音有相同的 `SOUNDEX` 代碼數字，除了第一個子音，所有子音都會被排除在外。|`SOUNDEX` 函數會實作以下規則：<br /><br /> 1) 如果大寫 H 或大寫 W 分隔擁有相同 `SOUNDEX` 代碼數字的兩個子音，則會忽略右邊的子音<br /><br /> 2) 如果一組並存子音有相同的 `SOUNDEX` 代碼數字，除了第一個子音，所有子音都會被排除在外。<br /><br /> <br /><br /> 其他規則可能會使 `SOUNDEX` 函數計算的值不同於在舊版相容性層級下計算的值。 升級到相容性層級 110 之後，您可能需要重建使用 `SOUNDEX` 函數的索引、堆積或 CHECK 條件約束。 如需詳細資訊，請參閱 [SOUNDEX &#40;Transact-SQL&#41;](../../t-sql/functions/soundex-transact-sql.md)|  
+|`SOUNDEX` 函數會實作以下規則：<br /><br /> 1)如果大寫 H 或大寫 W 分隔擁有相同 `SOUNDEX` 代碼數字的兩個子音，則會忽略它們。<br /><br /> 2) 如果 *character_expression* 的前 2 個字元都有相同的 `SOUNDEX` 代碼數字，這兩個字元會包含在內。 否則，如果一組並存子音有相同的 `SOUNDEX` 代碼數字，除了第一個子音，所有子音都會被排除在外。|`SOUNDEX` 函數會實作以下規則：<br /><br /> 1) 如果大寫 H 或大寫 W 分隔擁有相同 `SOUNDEX` 代碼數字的兩個子音，則會忽略右邊的子音<br /><br /> 2) 如果一組並存子音有相同的 `SOUNDEX` 代碼數字，除了第一個子音，所有子音都會被排除在外。<br /><br /> <br /><br /> 其他規則可能會使 `SOUNDEX` 函數計算的值不同於在舊版相容性層級下計算的值。 升級到相容性層級 110 之後，您可能需要重建使用 `SOUNDEX` 函數的索引、堆積或 CHECK 條件約束。 如需詳細資訊，請參閱 [SOUNDEX &#40;Transact-SQL&#41;](../../t-sql/functions/soundex-transact-sql.md)。|  
   
 ## <a name="differences-between-compatibility-level-90-and-level-100"></a>相容性層級 90 和 100 之間的差異  
  本章節描述相容性層級 100 所導入的新行為。  

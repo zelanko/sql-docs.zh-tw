@@ -36,19 +36,19 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 465567e7b115b0ce92f2154a2e6047de4000a831
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 6a5dd72c23867d45fa015ebd8c055f7e8758c188
+ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="currenttimestamp-transact-sql"></a>CURRENT_TIMESTAMP (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-將目前資料庫的系統時間戳記以 **datetime** 值傳回 (不含資料庫時區位移)。 這個值衍生自正在執行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體之電腦的作業系統。
+此函式將目前資料庫的系統時間戳記以 **datetime** 值傳回 (不含資料庫時區位移)。 `CURRENT_TIMESTAMP` 會從執行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體之電腦的作業系統衍生這個值。
   
 > [!NOTE]  
->  SYSDATETIME 和 SYSUTCDATE 比 GETDATE 和 GETUTCDATE 具有更多小數秒數有效位數。 SYSDATETIMEOFFSET 包含系統時區位移。 SYSDATETIME、SYSUTCDATE 和 SYSDATETIMEOFFSET 可指派給任何日期和時間類型的變數。  
+>  `SYSDATETIME` 和 `SYSUTCDATE` 比 `GETDATE` 和 `GETUTCDATE` 具有更高的精確度，以小數秒數有效位數來度量。 `SYSDATETIMEOFFSET` 函式包含系統時區位移。 您可以將 `SYSDATETIME`、`SYSUTCDATE` 和 `SYSDATETIMEOFFSET` 指派給任何日期和時間類型的變數。  
   
 這個函式是相當於 [GETDATE](../../t-sql/functions/getdate-transact-sql.md) 的 ANSI SQL。
   
@@ -63,18 +63,18 @@ CURRENT_TIMESTAMP
 ```  
   
 ## <a name="arguments"></a>引數  
-不需要任何引數。
+這個函數沒有引數。
   
 ## <a name="return-type"></a>傳回類型  
 **datetime**
   
 ## <a name="remarks"></a>Remarks  
-只要是 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式可以參考 **datetime** 運算式的任何位置，它們就可以參考 CURRENT_TIMESTAMP。
+只要是 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式可以參考 **datetime** 運算式的任何位置，它們就可以參考 `CURRENT_TIMESTAMP`。
   
-CURRENT_TIMESTAMP 是不具決定性的函數。 參考這個資料行的檢視和運算式，是無法編製索引的。
+`CURRENT_TIMESTAMP` 是非決定性函數。 參考這個資料行的檢視和運算式，是無法編製索引的。
   
 ## <a name="examples"></a>範例  
-下列範例會使用六個可傳回目前日期和時間的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 系統函數來傳回日期、時間或這兩者。 由於這些值會依序傳回，因此其小數秒數可能會不同。
+這些範例會使用六個可傳回目前日期和時間值的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 系統函數來傳回日期、時間或這兩者。 由於這些範例會依序傳回值，因此其小數秒數可能會不同。 請注意，傳回的實際值會反映實際執行日期/時間。
   
 ### <a name="a-get-the-current-system-date-and-time"></a>A. 取得目前的系統日期和時間  
   
@@ -92,6 +92,7 @@ SYSUTCDATETIME()   2007-04-30 20:10:02.0474381
 CURRENT_TIMESTAMP  2007-04-30 13:10:02.047  
 GETDATE()          2007-04-30 13:10:02.047  
 GETUTCDATE()       2007-04-30 20:10:02.047  
+*/
 ```  
   
 ### <a name="b-get-the-current-system-date"></a>B. 取得目前的系統日期  

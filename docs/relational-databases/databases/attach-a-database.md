@@ -21,11 +21,11 @@ caps.latest.revision: 52
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 9536b898df7a0f232d81dc85be3f3d6526f0741d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 331d5dc6a7f570e626edb541e14da57b3370858e
+ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="attach-a-database"></a>附加資料庫
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -125,7 +125,7 @@ ms.lasthandoff: 05/03/2018
      顯示選取之資料庫檔案的路徑。 路徑可以用手動的方式編輯。  
   
      **訊息**  
-     顯示空白訊息或**「找不到檔案」**超連結。  
+     顯示空白訊息或 **「找不到檔案」** 超連結。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
@@ -163,7 +163,8 @@ ms.lasthandoff: 05/03/2018
   ``` 
   
 ## <a name="see-also"></a>另請參閱  
- [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md)   
+ [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md) 
+ <br>[管理在另一部伺服器上提供資料庫時所需的中繼資料](/manage-metadata-when-making-a-database-available-on-another-server.md)  
  [卸離資料庫](../../relational-databases/databases/detach-a-database.md)  
   
   

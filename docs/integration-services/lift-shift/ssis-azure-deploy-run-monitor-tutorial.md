@@ -1,5 +1,5 @@
 ---
-title: 部署、執行和監視 Azure 上的 SSIS 套件 | Microsoft Docs
+title: 在 Azure 中部署和執行 SSIS 套件 | Microsoft Docs
 ms.date: 02/05/2018
 ms.topic: conceptual
 ms.prod: sql
@@ -12,13 +12,13 @@ ms.technology:
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: a15194b18efb21c7a7947e23b8bc673021606b31
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 27c7e77b5143bca56b7ded2233c01e11ad088d5f
+ms.sourcegitcommit: 0cc2cb281e467a13a76174e0d9afbdcf4ccddc29
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/15/2018
 ---
-# <a name="deploy-run-and-monitor-an-ssis-package-on-azure"></a>部署、執行和監視 Azure 上的 SSIS 套件
+# <a name="deploy-and-run-an-ssis-package-in-azure"></a>在 Azure 中部署和執行 SSIS 套件
 本教學課程示範如何將 SQL Server Integration Services 專案部署至 Azure SQL Database 上的 SSISDB 目錄資料庫、在 Azure SSIS Integration Runtime 中執行套件，以及監視執行中的套件。
 
 ## <a name="prerequisites"></a>Prerequisites
