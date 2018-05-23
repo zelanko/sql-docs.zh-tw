@@ -3,12 +3,9 @@ title: Database Engine Tuning Advisor (DTA) 中的資料行存放區索引建議
 ms.custom: ''
 ms.date: 01/09/2017
 ms.prod: sql
-ms.prod_service: database-engine
-ms.component: performance
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: performance
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -19,11 +16,11 @@ caps.latest.revision: 9
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 324a851c3377ce62d3200bd0f935a7144a4c710a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d4796adbefa6e4e2f89cee36c9ddee2fe05db00d
+ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="columnstore-index-recommendations-in-database-engine-tuning-advisor-dta"></a>Database Engine Tuning Advisor (DTA) 中的資料行存放區索引建議
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

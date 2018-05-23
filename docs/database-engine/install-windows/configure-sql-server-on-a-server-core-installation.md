@@ -3,7 +3,6 @@ title: 在 Server Core 安裝上設定 SQL Server | Microsoft Docs
 ms.custom: ''
 ms.date: 09/05/2017
 ms.prod: sql
-ms.prod_service: install
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: install
@@ -17,11 +16,11 @@ caps.latest.revision: 14
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 3a78a1d69cf27d0909d8300676b5e03e3169f4b8
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 4df6353f66138b1339cd8a31a1c933a4c929a462
+ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="configure-sql-server-on-a-server-core-installation"></a>在 Server Core 安裝上設定 SQL Server
 

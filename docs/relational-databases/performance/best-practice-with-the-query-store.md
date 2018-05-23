@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 11/24/2016
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.component: performance
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: database-engine
@@ -18,11 +17,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 4bd586a75b2980d527e030e68501a36c32457637
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: c6b667bf8be87561461c1ceec2543dcce051b93e
+ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="best-practice-with-the-query-store"></a>使用查詢存放區的最佳作法
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

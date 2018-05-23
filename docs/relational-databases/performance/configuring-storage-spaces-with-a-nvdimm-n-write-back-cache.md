@@ -3,12 +3,9 @@ title: 設定具有 NVDIMM-N 回寫式快取的儲存空間 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql
-ms.prod_service: database-engine
-ms.component: performance
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: performance
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 861862fa-9900-4ec0-9494-9874ef52ce65
@@ -16,11 +13,11 @@ caps.latest.revision: 8
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 139cb43e8a5905f3b608149e1f228f6baed659ce
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 5c82af7b6d4daee215f0e532fc35666bf9cba42f
+ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="configuring-storage-spaces-with-a-nvdimm-n-write-back-cache"></a>設定具有 NVDIMM-N 回寫式快取的儲存空間
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
