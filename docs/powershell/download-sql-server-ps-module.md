@@ -3,12 +3,9 @@ title: 下載 SQL Server PowerShell 模組 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/05/2018
 ms.prod: sql
-ms.prod_service: powershell
-ms.component: powershell
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: scripting
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 keywords:
@@ -18,11 +15,11 @@ caps.latest.revision: 113
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 6790f25062e7d3bfaaae970f1ce4a42135c8ce6e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 35969e26d8ca363acd3ada589c4c594553e9a507
+ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="install-sql-server-powershell-module"></a>安裝 SQL Server PowerShell 模組
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

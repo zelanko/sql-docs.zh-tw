@@ -6,7 +6,6 @@ ms.prod: sql
 ms.reviewer: ''
 ms.suite: SQL
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: data-compression
 ms.technology: performance
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
@@ -18,11 +17,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 1079f9c04bed6bff12e5b67a5003a84a95daf3c7
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: f49f2a3f3201b732d3bf9b291f5940218c05ad0c
+ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="disable-compression-on-a-table-or-index"></a>停用資料表或索引的壓縮
 

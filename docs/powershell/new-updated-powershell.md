@@ -9,14 +9,12 @@ ms.custom: UpdArt.exe
 ms.suite: sql
 ms.technology: release-landing
 ms.prod: sql
-ms.prod_service: sql-non-specified
-ms.component: powershell
 ms.date: 04/28/2018
-ms.openlocfilehash: ae6668466d54ab2da18568b38664110a40898ec0
-ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.openlocfilehash: 161fb8ef7cfedb0a2483af36d4e539a212c9e67f
+ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="new-and-recently-updated-powershell-docs"></a>新文章和最近更新的文章：PowerShell 文件
 

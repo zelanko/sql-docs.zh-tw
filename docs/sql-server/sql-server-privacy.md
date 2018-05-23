@@ -1,9 +1,7 @@
 ---
 title: SQL Server 隱私權補充 | Microsoft Docs
 ms.date: 4/24/2018
-ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
-ms.component: sql-non-specified
+ms.prod: sql
 ms.reviewer: ''
 ms.suite: sql
 ms.custom: ''
@@ -15,11 +13,11 @@ helpviewer_keywords: ''
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: 022092c593d5e17ea62e80fe07cc07411f94c4d3
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 4842d7749f41864697e0a6a24f522f1f8e9ca4f8
+ms.sourcegitcommit: 6fd8a193728abc0a00075f3e4766a7e2e2859139
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/17/2018
 ---
 # <a name="sql-server-privacy-supplement"></a>SQL Server 隱私權補充
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

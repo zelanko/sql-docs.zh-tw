@@ -47,7 +47,6 @@
 ## [開發](sql-server-linux-develop-overview.md)
 ### [連線程式庫](sql-server-linux-develop-connectivity-libraries.md)
 ### [使用 Visual Studio Code](sql-server-linux-develop-use-vscode.md)
-### [使用 SSMS](sql-server-linux-develop-use-ssms.md)
 ### [使用 SSDT](sql-server-linux-develop-use-ssdt.md)
 
 ## [管理](sql-server-linux-management-overview.md)
