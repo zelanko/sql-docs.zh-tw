@@ -7,8 +7,7 @@ ms.prod_service: database-engine, sql-database
 ms.component: in-memory-oltp
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine-imoltp
+ms.technology: in-memory-oltp
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: ef1cc7de-63be-4fa3-a622-6d93b440e3ac
@@ -17,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: e9f652b23295e47842981035348771125b627bd7
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: e3edda9ebc4f356302c1e6a01c87d026bdb8f5e9
+ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="introduction-to-memory-optimized-tables"></a>記憶體最佳化的資料表簡介
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -74,7 +73,7 @@ ms.lasthandoff: 05/03/2018
 
 下列因素會影響記憶體中 OLTP 可達到的效能提升：  
   
-*通訊：*相較於具有較少呼叫而且每個預存程序中實作更多功能的應用程式，具有簡短預存程序的許多呼叫的應用程式可能會看到較少的效能增益。  
+*通訊：* 相較於具有較少呼叫而且每個預存程序中實作更多功能的應用程式，具有簡短預存程序的許多呼叫的應用程式可能會看到較少的效能增益。  
   
 「[!INCLUDE[tsql](../../includes/tsql-md.md)]執行」：記憶體內部 OLTP 使用原生編譯的預存程序時可達到最佳效能，而不是使用解譯的預存程序或查詢執行時。 從這樣的預存程序存取記憶體最佳化資料表頗有助益。  
   

@@ -22,11 +22,11 @@ caps.latest.revision: 21
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 50569b63d34534472e4db8d0afc9dd48e1160f96
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 0f67623539244916e430976d46f07f4a1e73baf4
+ms.sourcegitcommit: b5ab9f3a55800b0ccd7e16997f4cd6184b4995f9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/23/2018
 ---
 # <a name="tutorial-configure-replication-between-two-fully-connected-servers-transactional"></a>教學課程：設定兩個完全連線的伺服器之間的複寫 (異動)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -61,8 +61,8 @@ ms.lasthandoff: 05/03/2018
 - 下載 [AdventureWorks 範例資料庫](https://github.com/Microsoft/sql-server-samples/releases)。 如需在 SSMS 中還原資料庫的指示，請參閱[還原資料庫](https://docs.microsoft.com/en-us/sql/relational-databases/backup-restore/restore-a-database-backup-using-ssms)。 
  
 >[!NOTE]
-> - 不支援相差兩個以上版本的 SQL Server 執行個體複寫。 如需詳細資訊，請參閱 [Supported SQL Server Versions in Replication Topology](https://blogs.msdn.microsoft.com/repltalk/2016/08/12/suppported-sql-server-versions-in-replication-topology/)(複寫拓撲中支援的 SQL Server 版本)。
-> - 在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中，您必須使用具**系統管理員**固定伺服器角色成員身分的登入，連線到發行者和訂閱者。 如需此角色的詳細資訊，請參閱[伺服器層級角色](https://docs.microsoft.com/en-us/sql/relational-databases/security/authentication-access/server-level-roles)。  
+> - 不支援相差兩個以上版本的 SQL Server 執行個體複寫。 如需詳細資訊，請參閱 [Supported SQL Server Versions in Replication Topology](https://blogs.msdn.microsoft.com/repltalk/2016/08/12/suppported-sql-server-versions-in-replication-topology/) (複寫拓撲中支援的 SQL Server 版本)。
+> - 在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中，您必須使用具**系統管理員**固定伺服器角色成員身分的登入，連線到發行者和訂閱者。 如需此角色的詳細資訊，請參閱[伺服器層級角色](https://docs.microsoft.com/en-us/sql/relational-databases/security/authentication-access/server-level-roles)。  
   
   
 **完成本教學課程的估計時間：60 分鐘**  
@@ -119,7 +119,7 @@ ms.lasthandoff: 05/03/2018
   
 13. 在 [完成精靈] 頁面的 [發行集名稱] 方塊中鍵入 **AdvWorksProductTrans**，然後選取 [完成]：  
 
-    ![「完成精靈」頁面與發行集名稱](media/tutorial-replicating-data-between-continuously-connected-servers/advworksproducttrans.png)
+    ![[完成精靈] 頁面與發行集名稱](media/tutorial-replicating-data-between-continuously-connected-servers/advworksproducttrans.png)
   
 14. 建立發行集之後，選取 [關閉] 以完成精靈。 
 
@@ -130,7 +130,7 @@ ms.lasthandoff: 05/03/2018
   
 ### <a name="view-the-status-of-snapshot-generation"></a>檢視快照集產生的狀態  
   
-1. 連線至 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中的發行者並展開伺服器節點，然後展開 [複寫] 資料夾。  
+1. 連線到 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中的發行者，展開伺服器節點，然後展開 [複寫] 資料夾。  
   
 2. 在 [本機發行集] 資料夾中，以滑鼠右鍵按一下 [AdvWorksProductTrans]，然後選取 [檢視快照集代理程式狀態]：  
    ![快顯功能表上用於檢視快照集代理程式狀態的命令](media/tutorial-replicating-data-between-continuously-connected-servers/viewsnapshot.png)
@@ -141,12 +141,12 @@ ms.lasthandoff: 05/03/2018
 
 ![[啟動] 按鈕，以及狀態訊息中表示快照集代理程式有執行的狀態訊息](media/tutorial-replicating-data-between-continuously-connected-servers/startsnapshotagent.png)
      
-若您在此處看到錯誤，請參閱[針對快照集代理程式錯誤進行疑難排解](../../troubleshooters/replication/troubleshoot-tran-repl-errors.md#troubleshoot-errors-with-snapshot-agent)。 
+若您在此處看到錯誤，請參閱[針對快照集代理程式錯誤進行疑難排解](../../troubleshooters/replication/troubleshoot-tran-repl-errors.md#find-errors-with-snapshot-agent)。 
 
   
 ### <a name="add-the-distribution-agent-login-to-the-pal"></a>將散發代理程式新增至 PAL  
   
-1. 連線至 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中的發行者並展開伺服器節點，然後展開 [複寫] 資料夾。  
+1. 連線到 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中的發行者，展開伺服器節點，然後展開 [複寫] 資料夾。  
   
 2. 在 [本機發行集] 資料夾中，以滑鼠右鍵按一下 [AdvWorksProductTrans]，然後選取 [屬性]。  [發行集屬性] 對話方塊會隨即顯示。    
   
@@ -163,7 +163,7 @@ ms.lasthandoff: 05/03/2018
 
 ### <a name="create-the-subscription"></a>建立訂閱  
   
-1. 連線至 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中的發行者並展開伺服器節點，然後展開 [複寫] 資料夾。  
+1. 連線到 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中的發行者，展開伺服器節點，然後展開 [複寫] 資料夾。  
   
 2. 在 [本機發行集] 資料夾中，以滑鼠右鍵按一下 **AdvWorksProductTrans** 發行集，然後選取 [新增訂閱]。 [新增訂閱精靈] 會隨即啟動： 
  
@@ -216,7 +216,7 @@ ms.lasthandoff: 05/03/2018
 3. 若在 [AdvWorksProductTrans] 下看不到訂閱，請選取 F5 鍵重新整理清單。  
   
 如需詳細資訊，請參閱：  
-- [利用快照集將訂閱初始化](../../relational-databases/replication/initialize-a-subscription-with-a-snapshot.md)  
+- [使用快照集初始化訂閱](../../relational-databases/replication/initialize-a-subscription-with-a-snapshot.md)  
 - [建立發送訂閱](../../relational-databases/replication/create-a-push-subscription.md)  
 - [訂閱發行集](../../relational-databases/replication/subscribe-to-publications.md)  
 

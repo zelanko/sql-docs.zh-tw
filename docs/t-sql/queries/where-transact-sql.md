@@ -27,11 +27,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 677597abf936b882ae5a23510d78120ccb9d9f1d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: feda063599618b4156f4a151c67b58ebf31c47ad
+ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="where-transact-sql"></a>WHERE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -55,7 +55,7 @@ ms.lasthandoff: 05/03/2018
 ### <a name="a-finding-a-row-by-using-a-simple-equality"></a>A. 使用簡單的等式尋找資料列  
   
 ```  
--- Uses AdventureWorks  
+-- Uses AdventureWorksDW  
   
 SELECT EmployeeKey, LastName  
 FROM DimEmployee  
@@ -65,7 +65,7 @@ WHERE LastName = 'Smith' ;
 ### <a name="b-finding-rows-that-contain-a-value-as-part-of-a-string"></a>B. 尋找所含值為字串之一部分的資料列  
   
 ```  
--- Uses AdventureWorks  
+-- Uses AdventureWorksDW  
   
 SELECT EmployeeKey, LastName  
 FROM DimEmployee  
@@ -75,7 +75,7 @@ WHERE LastName LIKE ('%Smi%');
 ### <a name="c-finding-rows-by-using-a-comparison-operator"></a>C. 使用比較運算子尋找資料列  
   
 ```  
--- Uses AdventureWorks  
+-- Uses AdventureWorksDW  
   
 SELECT EmployeeKey, LastName  
 FROM DimEmployee  
@@ -85,7 +85,7 @@ WHERE EmployeeKey  <= 500;
 ### <a name="d-finding-rows-that-meet-any-of-three-conditions"></a>D. 尋找符合三個條件中任何一個條件的資料列  
   
 ```  
--- Uses AdventureWorks  
+-- Uses AdventureWorksDW  
   
 SELECT EmployeeKey, LastName  
 FROM DimEmployee  
@@ -95,7 +95,7 @@ WHERE EmployeeKey = 1 OR EmployeeKey = 8 OR EmployeeKey = 12;
 ### <a name="e-finding-rows-that-must-meet-several-conditions"></a>E. 尋找必須符合數個條件的資料列  
   
 ```  
--- Uses AdventureWorks  
+-- Uses AdventureWorksDW  
   
 SELECT EmployeeKey, LastName  
 FROM DimEmployee  
@@ -105,7 +105,7 @@ WHERE EmployeeKey <= 500 AND LastName LIKE '%Smi%' AND FirstName LIKE '%A%';
 ### <a name="f-finding-rows-that-are-in-a-list-of-values"></a>F. 尋找位於值清單中的資料列  
   
 ```  
--- Uses AdventureWorks  
+-- Uses AdventureWorksDW  
   
 SELECT EmployeeKey, LastName  
 FROM DimEmployee  
@@ -115,7 +115,7 @@ WHERE LastName IN ('Smith', 'Godfrey', 'Johnson');
 ### <a name="g-finding-rows-that-have-a-value-between-two-values"></a>G. 尋找兩個值之間有一個值的資料列  
   
 ```  
--- Uses AdventureWorks  
+-- Uses AdventureWorksDW  
   
 SELECT EmployeeKey, LastName  
 FROM DimEmployee  

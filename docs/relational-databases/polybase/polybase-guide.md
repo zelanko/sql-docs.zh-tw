@@ -7,7 +7,7 @@ ms.component: polybase
 ms.reviewer: ''
 ms.suite: sql
 ms.custom: ''
-ms.technology: database
+ms.technology: polybase
 ms.tgt_pltfrm: ''
 ms.topic: get-started-article
 f1_keywords:
@@ -21,14 +21,14 @@ helpviewer_keywords:
 - Hadoop export, PolyBase overview
 - Hadoop import, PolyBase overview
 caps.latest.revision: 26
-author: MashaMSFT
-ms.author: mathoma
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 24ddcaa7ea682b0afb5f76f6d45ca89b9bbd1896
-ms.sourcegitcommit: d2573a8dec2d4102ce8882ee232cdba080d39628
+ms.openlocfilehash: f671dbae59d7187366a337a93336cbf3aae944cb
+ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="polybase-guide"></a>PolyBase 指南
 [!INCLUDE[appliesto-ss-xxxx-asdw-pdw-md](../../includes/appliesto-ss-xxxx-asdw-pdw-md.md)]
@@ -58,7 +58,7 @@ ms.lasthandoff: 05/07/2018
   
 ## <a name="performance"></a>效能  
   
--   **將計算推送到 Hadoop。**查詢最佳化工具會做出成本型決策，以將計算推送到 Hadoop，而這麼做可以改善查詢效能。  它使用外部資料表上的統計資料來做出成本型決策。 推送計算會建立 MapReduce 工作，並利用 Hadoop 的分散式運算資源。  
+-   **將計算推送到 Hadoop。** 查詢最佳化工具會做出成本型決策，以將計算推送到 Hadoop，而這麼做可以改善查詢效能。  它使用外部資料表上的統計資料來做出成本型決策。 推送計算會建立 MapReduce 工作，並利用 Hadoop 的分散式運算資源。  
   
 -   **調整計算資源。** 若要改善查詢效能，您可以使用 SQL Server [PolyBase 向外延展群組](../../relational-databases/polybase/polybase-scale-out-groups.md)。 這可啟用 SQL Server 執行個體與 Hadoop 節點之間的平行資料傳輸，而且會加入在外部資料上運作的計算資源。  
   
