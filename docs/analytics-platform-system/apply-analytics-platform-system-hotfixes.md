@@ -31,7 +31,7 @@ ms.lasthandoff: 04/19/2018
   
 -   具有權限存取管理主控台來監視的應用裝置狀態 Analytics Platform System 登入。 <!-- MISSING LINKS See [Grant Permissions to Use the Admin Console &#40;SQL Server PDW&#41;](../sqlpdw/grant-permissions-to-use-the-admin-console-sql-server-pdw.md).  -->  
   
--   網狀架構網域系統管理員帳戶連接到的知識*< 網域名稱 > * * *-HST01** 節點。  
+-   網狀架構網域系統管理員帳戶連接到的知識 *< 網域名稱 > * * *-HST01** 節點。  
   
 ## <a name="HowToInstallPDW"></a>若要套用 Analytics Platform System hotfix  
 不同於 Microsoft 更新，Analytics Platform System 軟體 hotfix 不會處理透過 WSUS。 它們有不同的工作流程，而且會安裝執行 hotfix 封裝。  
@@ -52,7 +52,7 @@ ms.lasthandoff: 04/19/2018
   
     2.  使用**系統管理員身分執行**選項來開啟命令提示字元。  
   
-    3.  執行下列命令，取代*<HotfixPackageName>* hotfix 可執行檔封裝，並取代的預留位置項目名稱取代*< >*適當的資訊。  
+    3.  執行下列命令，取代*<HotfixPackageName>* hotfix 可執行檔封裝，並取代的預留位置項目名稱取代 *< >* 適當的資訊。  
   
         ```  
         <HotfixPackageName> /DomainAdminPassword="<password>"  

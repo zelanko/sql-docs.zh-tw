@@ -133,7 +133,7 @@ SQLRETURN SQLBindCol(
 |IM001|驅動程式不支援此函式|(DM) 驅動程式相關聯*StatementHandle*不支援此函式。|  
   
 ## <a name="comments"></a>註解  
- **SQLBindCol**來建立關聯，或*繫結，*結果中的資料行設定為資料緩衝區和應用程式的長度/指標緩衝區。 當應用程式呼叫**SQLFetch**， **SQLFetchScroll**，或**SQLSetPos**來提取資料，此驅動程式傳回的資料繫結的資料行中指定的緩衝區詳細資訊，請參閱[SQLFetch 函數](../../../odbc/reference/syntax/sqlfetch-function.md)。 當應用程式呼叫**SQLBulkOperations**更新或插入資料列或**SQLSetPos**更新的資料列，驅動程式會擷取資料繫結的資料行，從指定的緩衝區; 如需詳細資訊請參閱[SQLBulkOperations 函式](../../../odbc/reference/syntax/sqlbulkoperations-function.md)或[SQLSetPos 函數](../../../odbc/reference/syntax/sqlsetpos-function.md)。 如需繫結的詳細資訊，請參閱[擷取結果 （基本）](../../../odbc/reference/develop-app/retrieving-results-basic.md)。  
+ **SQLBindCol**來建立關聯，或*繫結，* 結果中的資料行設定為資料緩衝區和應用程式的長度/指標緩衝區。 當應用程式呼叫**SQLFetch**， **SQLFetchScroll**，或**SQLSetPos**來提取資料，此驅動程式傳回的資料繫結的資料行中指定的緩衝區詳細資訊，請參閱[SQLFetch 函數](../../../odbc/reference/syntax/sqlfetch-function.md)。 當應用程式呼叫**SQLBulkOperations**更新或插入資料列或**SQLSetPos**更新的資料列，驅動程式會擷取資料繫結的資料行，從指定的緩衝區; 如需詳細資訊請參閱[SQLBulkOperations 函式](../../../odbc/reference/syntax/sqlbulkoperations-function.md)或[SQLSetPos 函數](../../../odbc/reference/syntax/sqlsetpos-function.md)。 如需繫結的詳細資訊，請參閱[擷取結果 （基本）](../../../odbc/reference/develop-app/retrieving-results-basic.md)。  
   
  請注意，資料行不需要繫結至從中擷取資料。 應用程式也可以呼叫**SQLGetData**來擷取資料行的資料。 雖然可以在資料列和呼叫某些資料行繫結**SQLGetData**代表其他項目，這受限於一些限制。 如需詳細資訊，請參閱[SQLGetData](../../../odbc/reference/syntax/sqlgetdata-function.md)。  
   

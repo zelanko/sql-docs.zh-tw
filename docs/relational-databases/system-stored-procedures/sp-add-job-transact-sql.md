@@ -123,7 +123,7 @@ sp_add_job [ @job_name = ] 'job_name'
  無  
   
 ## <a name="remarks"></a>備註  
- **@originating_server** 存在於**sp_add_job，**但未列在引數。 **@originating_server** 已保留供內部使用。  
+ **@originating_server** 存在於**sp_add_job，** 但未列在引數。 **@originating_server** 已保留供內部使用。  
   
  之後**sp_add_job**來加入作業，已經執行**sp_add_jobstep**可以用來加入執行活動之作業的步驟。 **sp_add_jobschedule**可以用來建立排程[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Agent 服務用來執行作業。 使用**sp_add_jobserver**設定[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行作業，執行個體和**sp_delete_jobserver**移除從工作[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體。  
   

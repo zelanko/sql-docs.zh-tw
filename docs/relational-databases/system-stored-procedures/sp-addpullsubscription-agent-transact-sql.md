@@ -108,7 +108,7 @@ sp_addpullsubscription_agent [ @publisher = ] 'publisher'
 >  這個參數已被取代，維護它的目的，只是為了與舊版的指令碼相容。  
   
  [  **@subscriber_security_mode=**] *subscriber_security_mode*  
- 這是進行同步處理時，連接到訂閱者時使用的安全性模式。 *subscriber_security_mode*是**int、**預設值是 NULL。 **0**指定[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]驗證。 **1**指定 Windows 驗證。  
+ 這是進行同步處理時，連接到訂閱者時使用的安全性模式。 *subscriber_security_mode*是**int、** 預設值是 NULL。 **0**指定[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]驗證。 **1**指定 Windows 驗證。  
   
 > [!NOTE]  
 >  這個參數已被取代，維護它的目的，只是為了與舊版的指令碼相容。 散發代理程式一律是利用 Windows 驗證來連接到本機訂閱者。 如果 NULL 以外的值或**1**指定這個參數，就會傳回一則警告訊息。  

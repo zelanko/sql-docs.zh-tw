@@ -56,7 +56,7 @@ sp_column_privileges [ @table_name = ] 'table_name'
  如果目前使用者擁有一份含指定名稱的資料表，就會傳回這份資料表的資料行。 如果*table_owner*未指定目前使用者並未擁有含有指定的資料表和*table_name*，sp_column 權限與指定的資料表*table_name*資料庫擁有者所擁有。 如果資料表存在，就會傳回它的資料行。  
   
  [ @table_qualifier=] '*table_qualifier*'  
- 這是資料表限定詞的名稱。 *table_qualifier*是*sysname*，預設值是 NULL。 各種 DBMS 產品都支援三部分的資料表命名 (*限定詞***。***擁有者***。***名稱*)。 在[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，這個資料行代表資料庫名稱。 在某些產品中，它代表資料表之資料庫環境的伺服器名稱。  
+ 這是資料表限定詞的名稱。 *table_qualifier*是*sysname*，預設值是 NULL。 各種 DBMS 產品都支援三部分的資料表命名 (*限定詞 ***。*** 擁有者 ***。*** 名稱*)。 在[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，這個資料行代表資料庫名稱。 在某些產品中，它代表資料表之資料庫環境的伺服器名稱。  
   
  [ @column_name=] '*資料行*'  
  這是個單一資料行，當只取得一個目錄資訊資料行時，便使用這個單一資料行。 *資料行*是**nvarchar (** 384 **)**，預設值是 NULL。 如果*資料行*是未指定，會傳回所有資料行。 在[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，*資料行*代表 sys.columns 資料表所列出的資料行名稱。 *資料行*可以包括使用萬用字元相符模式的基礎 DBMS 萬用字元。 若要有最大交互操作能力，閘道用戶端應該只採用 ISO 標準模式比對 (% 和 _ 萬用字元)。  

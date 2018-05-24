@@ -83,7 +83,7 @@ sp_addpushsubscription_agent [ @publication= ] 'publication'
  這是訂閱者的名稱。 *訂閱者*是**sysname**，預設值是 NULL。  
   
  [  **@subscriber_db =**] **'***subscriber_db***'**  
- 這是訂閱資料庫的名稱。 *subscriber_db*是**sysname**，預設值是 NULL。 針對非 SQL Server 訂閱者，指定其值為**（預設目的地）**如*subscriber_db*。  
+ 這是訂閱資料庫的名稱。 *subscriber_db*是**sysname**，預設值是 NULL。 針對非 SQL Server 訂閱者，指定其值為 **（預設目的地）** 如*subscriber_db*。  
   
  [  **@subscriber_security_mode =**] *subscriber_security_mode*  
  這是進行同步處理時，連接到訂閱者時使用的安全性模式。 *subscriber_security_mode*是**int**，預設值是 1。 **0**指定[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]驗證。 **1**指定 Windows 驗證。  

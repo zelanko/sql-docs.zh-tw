@@ -47,7 +47,7 @@ sp_grantdbaccess [ @loginame = ] 'login'
 ```  
   
 ## <a name="arguments"></a>引數  
- [  **@loginame =** ]  **'* * * 登入* **'** 是 Windows 群組、 Windows 登入的名稱或[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]登入對應到新的資料庫使用者。Windows 群組和 Windows 登入的名稱必須以在表單中的 Windows 網域名稱限定*網域*\\* 登入 *; 例如， **LONDON\Joeb**。 登入不能已對應至資料庫中的使用者。 *登入*是**sysname**，沒有預設值。  
+ [  **@loginame =** ]  **'* * * 登入* **'** 是 Windows 群組、 Windows 登入的名稱或[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]登入對應到新的資料庫使用者。Windows 群組和 Windows 登入的名稱必須以在表單中的 Windows 網域名稱限定*網域*\\*登入 *; 例如， **LONDON\Joeb**。 登入不能已對應至資料庫中的使用者。 *登入*是**sysname**，沒有預設值。  
   
  [  **@name_in_db=**] **'***name_in_db***'** [**輸出**]  
  這是新資料庫使用者的名稱。 *name_in_db*是 OUTPUT 變數資料類型為**sysname**，預設值為 NULL。 如果未指定，*登入*用。 如果指定為輸出變數的值是 NULL， **@name_in_db**設*登入*。 *name_in_db*必須存在目前資料庫中。  

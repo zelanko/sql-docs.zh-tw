@@ -25,7 +25,7 @@ Analytics Platform System 具有選擇性的遙測功能，系統管理員主控
 若要提供的最大隱私權保護，AP 隨附不啟用遙測。 再啟用這個功能，先檢閱[Microsoft Analytics Platform System 隱私權聲明](http://go.microsoft.com/fwlink/?LinkId=400902)。 若要選擇加入，執行如下所述的 PowerShell 指令碼。  
   
 ## <a name="enable"></a>啟用遙測  
-**DNS 轉寄：**遙測資料傳送給 Microsoft 需要 Analytics Platform System，DNS 轉寄站透過網際網路連線。 若要啟用這項功能，您必須啟用轉送上的所有主機和工作負載 Vm 的 DNS。 叫用`Enable-RemoteMonitoring`命令搭配`SetupDnsForwarder`正確設定 DNS 轉送，並啟用遙測的選項。 叫用`Enable-RemoteMonitoring`命令，而`SetupDnsForwarder`選項時已設定 DNS 轉送，而且您只想要啟用活動訊號監視。  
+**DNS 轉寄：** 遙測資料傳送給 Microsoft 需要 Analytics Platform System，DNS 轉寄站透過網際網路連線。 若要啟用這項功能，您必須啟用轉送上的所有主機和工作負載 Vm 的 DNS。 叫用`Enable-RemoteMonitoring`命令搭配`SetupDnsForwarder`正確設定 DNS 轉送，並啟用遙測的選項。 叫用`Enable-RemoteMonitoring`命令，而`SetupDnsForwarder`選項時已設定 DNS 轉送，而且您只想要啟用活動訊號監視。  
   
 > [!IMPORTANT]  
 > 啟用 DNS 轉寄，便會開啟所有主機和工作負載 Vm 的網際網路連線。  

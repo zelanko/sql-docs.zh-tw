@@ -37,7 +37,7 @@ ms.lasthandoff: 05/03/2018
   
 -   在明確或隱含的交易中，並不允許使用 BACKUP 陳述式。  
   
--   在簡單復原模式下，必須將所有的讀取/寫入檔案備份在一起。 這有助於確保資料庫還原到一致的時間點。 不要個別指定每一個讀取/寫入檔案或檔案群組，請改用 READ_WRITE_FILEGROUPS 選項。 這個選項會備份資料庫中的所有讀取/寫入檔案群組。 指定 READ_WRITE_FILEGROUPS 所建立的備份即稱為*「部分備份」*(Partial Backup)。 如需詳細資訊，請參閱[部分備份 &#40;SQL Server&#41;](../../relational-databases/backup-restore/partial-backups-sql-server.md)。  
+-   在簡單復原模式下，必須將所有的讀取/寫入檔案備份在一起。 這有助於確保資料庫還原到一致的時間點。 不要個別指定每一個讀取/寫入檔案或檔案群組，請改用 READ_WRITE_FILEGROUPS 選項。 這個選項會備份資料庫中的所有讀取/寫入檔案群組。 指定 READ_WRITE_FILEGROUPS 所建立的備份即稱為 *「部分備份」*(Partial Backup)。 如需詳細資訊，請參閱[部分備份 &#40;SQL Server&#41;](../../relational-databases/backup-restore/partial-backups-sql-server.md)。  
   
 -   如需基本備份概念的詳細資訊，請參閱 [備份概觀 &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-overview-sql-server.md)。  
   

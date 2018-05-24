@@ -35,7 +35,7 @@ ms.lasthandoff: 05/03/2018
  傳回**字串**值，指出物件或應用程式的名稱。  
   
 ## <a name="remarks"></a>備註  
- 使用**來源**屬性[錯誤](../../../ado/reference/ado-api/error-object.md)物件，以判斷原始產生錯誤的應用程式之物件的名稱。 這可能是物件的類別名稱或程式設計識別碼。 屬性值將會在 ADO 中的錯誤，**ADODB。 * * * ObjectName*，其中*ObjectName*觸發錯誤之物件的名稱。 ADOX 和 ADO MD 中，值會是 **ADOX。 * * * ObjectName*和 **ADOMD。 * * * ObjectName，*分別。  
+ 使用**來源**屬性[錯誤](../../../ado/reference/ado-api/error-object.md)物件，以判斷原始產生錯誤的應用程式之物件的名稱。 這可能是物件的類別名稱或程式設計識別碼。 屬性值將會在 ADO 中的錯誤，**ADODB。 * * * ObjectName*，其中*ObjectName*觸發錯誤之物件的名稱。 ADOX 和 ADO MD 中，值會是 **ADOX。 * * * ObjectName*和 **ADOMD。 * * * ObjectName，* 分別。  
   
  根據的錯誤說明文件**來源**，[數目](../../../ado/reference/ado-api/number-property-ado.md)，和[描述](../../../ado/reference/ado-api/description-property.md)屬性**錯誤**物件，您可以撰寫程式碼會適當地處理錯誤。  
   

@@ -20,13 +20,13 @@ ms.lasthandoff: 04/19/2018
   
 ## <a name="HowToDSRM"></a>若要重設管理員密碼  
   
-1.  開啟命令提示字元視窗上的 AD 應用裝置節點***appliance_domain*– AD*xx***虛擬機器。  
+1.  開啟命令提示字元視窗上的 AD 應用裝置節點***appliance_domain *– AD*xx***虛擬機器。  
   
 2.  在命令提示字元中，輸入`ntdsutil`。  
   
 3.  在**ntdsutil**提示中，輸入`set dsrm password`。  
   
-4.  在**重設管理員密碼：**提示中，輸入`reset password on server null`。  
+4.  在**重設管理員密碼：** 提示中，輸入`reset password on server null`。  
   
 5.  在提示字元中輸入新密碼。  
   

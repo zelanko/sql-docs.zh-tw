@@ -31,7 +31,7 @@ ms.lasthandoff: 04/19/2018
   
 1.  登入 *<Fabric Domain>* * *-HST01** 節點做為網狀架構網域系統管理員。  
   
-2.  若要解除安裝所有的 WSUS，以解除安裝核准的更新，請開啟 [命令提示字元] 視窗並輸入下列命令。 取代的預留位置項目*< >*適當的資訊。  
+2.  若要解除安裝所有的 WSUS，以解除安裝核准的更新，請開啟 [命令提示字元] 視窗並輸入下列命令。 取代的預留位置項目 *< >* 適當的資訊。  
   
     ```  
     C:\pdwinst\media\setup.exe /action="RemoveMicrosoftUpdate" /DomainAdminPasswords="<password>"  

@@ -166,7 +166,7 @@ GO
 ```  
   
 > [!NOTE]  
->  語言*language_term* paramete*r*不需要使用*top_n_by_rank*參數*。*  
+>  語言*language_term* paramete*r*不需要使用*top_n_by_rank*參數 *。*  
   
 ## <a name="see-also"></a>另請參閱  
  [全文檢索搜尋使用者入門](../../relational-databases/search/get-started-with-full-text-search.md)   

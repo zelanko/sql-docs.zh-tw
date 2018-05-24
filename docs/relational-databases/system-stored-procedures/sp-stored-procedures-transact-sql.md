@@ -61,7 +61,7 @@ sp_stored_procedures [ [ @sp_name = ] 'name' ]
 -   目前資料庫中的 **dbo** 結構描述。  
   
  [  **@qualifier =** ] **'***限定詞***'**  
- 這是程序限定詞的名稱。 *限定詞*是**sysname**，預設值是 NULL。 各種 DBMS 產品都支援三部分的表單中的資料表命名 (*限定詞***。***結構描述***。***名稱*。 在[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，*限定詞*代表資料庫名稱。 在某些產品中，它代表資料表之資料庫環境的伺服器名稱。  
+ 這是程序限定詞的名稱。 *限定詞*是**sysname**，預設值是 NULL。 各種 DBMS 產品都支援三部分的表單中的資料表命名 (*限定詞 ***。*** 結構描述 ***。*** 名稱*。 在[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，*限定詞*代表資料庫名稱。 在某些產品中，它代表資料表之資料庫環境的伺服器名稱。  
   
  [  **@fUsePattern =** ] **'***fUsePattern***'**  
  決定是否將底線 (_)、百分比 (%) 或方括號 ([ ]) 視為萬用字元。 *fUsePattern*是**元**，預設值是 1。  

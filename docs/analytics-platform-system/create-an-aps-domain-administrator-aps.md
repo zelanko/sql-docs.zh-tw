@@ -23,7 +23,7 @@ ms.lasthandoff: 04/19/2018
   
 #### <a name="to-add-a-user-to-the-domain-admins-group"></a>將使用者新增至 Domain Admins 群組  
   
-1.  登入作用中的 AD 節點**(*appliance_domain*-AD01**或 ***appliance_domain *-ad02 移**) 使用現有的應用裝置網域系統管理員帳戶。  
+1.  登入作用中的 AD 節點 **(*appliance_domain*-AD01**或 ***appliance_domain *-ad02 移**) 使用現有的應用裝置網域系統管理員帳戶。  
   
 2.  在 [開始] 功能表上，按一下 [執行]。 在**開啟**方塊中，輸入**dsa.msc**。 按一下 **[確定]**。  
   

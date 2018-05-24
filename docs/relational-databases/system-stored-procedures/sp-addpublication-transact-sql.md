@@ -179,7 +179,7 @@ sp_addpublication [ @publication = ] 'publication'
  指定快照集替代資料夾的位置。 *alternate_snapshot_folder*是**nvarchar （255)** 預設值是 NULL。  
   
  [  **@pre_snapshot_script=** ] **'***pre_snapshot_script***'**  
- 指定指向 **.sql**檔案位置。 *pre_snapshot_script*是**nvarchar （255)，**預設值是 NULL。 在訂閱者端套用快照集時，散發代理程式會在執行任何複寫的物件指令碼之前，先執行前快照集 (pre-snapshot) 指令碼。 這個指令碼是在連接到訂閱資料庫時，在散發代理程式所用的安全性內容中執行。  
+ 指定指向 **.sql**檔案位置。 *pre_snapshot_script*是**nvarchar （255)，** 預設值是 NULL。 在訂閱者端套用快照集時，散發代理程式會在執行任何複寫的物件指令碼之前，先執行前快照集 (pre-snapshot) 指令碼。 這個指令碼是在連接到訂閱資料庫時，在散發代理程式所用的安全性內容中執行。  
   
  [  **@post_snapshot_script=** ] **'***post_snapshot_script***'**  
  指定指向 **.sql**檔案位置。 *post_snapshot_script*是**nvarchar （255)**，預設值是 NULL。 在初始同步處理期間，散發代理程式會先套用所有其他複寫的物件指令碼和資料，然後才執行後快照集 (post-snapshot) 指令碼。 這個指令碼是在連接到訂閱資料庫時，在散發代理程式所用的安全性內容中執行。  

@@ -32,7 +32,7 @@ ms.lasthandoff: 05/03/2018
 
   若要支援[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]分散式查詢中，SQL Server OLE DB 驅動程式**IDBSchemaRowset**介面會傳回連結伺服器上的中繼資料。  
   
- 如果 DBPROPSET_SQLSERVERSESSION 屬性 SSPROP_QUOTEDCATALOGNAMES 是 VARIANT_TRUE，您就可以針對目錄名稱指定引號識別碼 (例如 "my.catalog")。 當限制結構描述資料列集輸出目錄，SQL Server OLE DB 驅動程式會辨識包含連結的伺服器和目錄名稱的兩部分名稱。 下表中的結構描述資料列集指定兩部分目錄名稱為*linked_server***。***目錄*將輸出限制為具名連結伺服器的適用目錄。  
+ 如果 DBPROPSET_SQLSERVERSESSION 屬性 SSPROP_QUOTEDCATALOGNAMES 是 VARIANT_TRUE，您就可以針對目錄名稱指定引號識別碼 (例如 "my.catalog")。 當限制結構描述資料列集輸出目錄，SQL Server OLE DB 驅動程式會辨識包含連結的伺服器和目錄名稱的兩部分名稱。 下表中的結構描述資料列集指定兩部分目錄名稱為*linked_server ***。*** 目錄*將輸出限制為具名連結伺服器的適用目錄。  
   
 |結構描述資料列集|目錄限制|  
 |-------------------|-------------------------|  
