@@ -1,4 +1,4 @@
----
+﻿---
 title: Microsoft SQL Operations Studio (preview) 版本資訊 |Microsoft 文件
 description: Microsoft SQL Operations Studio (preview) 版本資訊
 ms.custom: tools|sos
@@ -26,7 +26,7 @@ ms.lasthandoff: 05/10/2018
 
 ## <a name="may-2018-may-public-preview"></a>2018 年 5 月版（ 5 月公開預覽）
 
-發行日期： 2018 年 7，  
+發行日期： 2018 年 5 月 7 日，  
 版本： 0.29.3
 
 *5月公開預覽版*著重於穩定性及 bug 修正。 此版本包含下列重點：  
