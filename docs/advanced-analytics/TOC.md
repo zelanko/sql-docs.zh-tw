@@ -97,13 +97,14 @@
 ## [套件管理](r/r-package-management-for-sql-server-r-services.md)
 ### [預設封裝](r/installing-and-managing-r-packages.md)
 ### [取得封裝資訊](r/determine-which-packages-are-installed-on-sql-server.md)
-### [安裝新的 R 封裝](r/install-additional-r-packages-on-sql-server.md)
 ### [安裝新的 Python 封裝](python/install-additional-python-packages-on-sql-server.md)
-### 僅限 R
+### [安裝新的 R 封裝](r/install-additional-r-packages-on-sql-server.md)
+#### [使用 R 套件管理員](r/install-additional-r-packages-on-sql-server.md)
+#### [使用 RevoScaleR](r/use-revoscaler-to-manage-r-packages.md)
+#### [使用 T-SQL](r/install-r-packages-tsql.md)
+#### [使用 miniCRAN 存放庫](r/create-a-local-package-repository-using-minicran.md)
 #### [啟用遠端 R 封裝管理](r/r-package-how-to-enable-or-disable.md)
-#### [適用於 R 封裝管理的 RevoScaleR 函式](r/use-revoscaler-to-manage-r-packages.md)
-#### [R 封裝同步處理](r/package-install-uninstall-and-sync.md)
-#### [本機 R 封裝存放庫的 miniCRAN](r/create-a-local-package-repository-using-minicran.md)
+#### [同步 R 套件](r/package-install-uninstall-and-sync.md)
 #### [R「使用者程式庫」的因應措施](r/packages-installed-in-user-libraries.md)
 
 ## 資料探索及模型化
