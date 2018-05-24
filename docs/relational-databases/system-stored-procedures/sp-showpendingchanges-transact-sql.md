@@ -86,7 +86,7 @@ sp_showpendingchanges [ [ @destination_server = ] 'destination_server' ]
   
  sp_showpendingchanges 的結果並不包含層代 0 的資料列。  
   
- 針對指定的發行項*文章*不屬於指定的發行集*發行集，*對 pending_deletes 和 pending_ins_and_upd 傳回計數 0。  
+ 針對指定的發行項*文章*不屬於指定的發行集*發行集，* 對 pending_deletes 和 pending_ins_and_upd 傳回計數 0。  
   
 ## <a name="permissions"></a>Permissions  
  只有系統管理員 (sysadmin) 固定伺服器角色或 db_owner 固定資料庫角色的成員，才能夠執行 sp_showpendingchanges。  

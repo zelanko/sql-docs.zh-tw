@@ -81,7 +81,7 @@ ms.lasthandoff: 05/03/2018
   
      \*欄位長度、前置長度及結束字元的互動，可決定在資料檔案中配置給非字元資料的儲存空間數量，而此資料將匯出為 **char** 檔案儲存類型。  
   
-     \*\***的未來版本將會移除**ntext **、**text **及** image [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]資料類型。 請避免在新的開發工作中使用這些資料類型，並規劃修改目前使用這些資料類型的應用程式。 請改用 **nvarchar(max)**、 **varchar(max)** 和 **varbinary(max)** 。  
+     \*\***的未來版本將會移除**ntext **、** text **及** image [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]資料類型。 請避免在新的開發工作中使用這些資料類型，並規劃修改目前使用這些資料類型的應用程式。 請改用 **nvarchar(max)**、 **varchar(max)** 和 **varbinary(max)** 。  
   
 ## <a name="native-file-storage-types"></a>原生檔案儲存類型  
  每個原生檔案儲存類型都記錄於格式檔案內，做為對應的主機檔案資料類型。  

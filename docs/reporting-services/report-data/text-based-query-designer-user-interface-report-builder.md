@@ -89,7 +89,7 @@ SELECT Name FROM Person.ContactType
 uspGetWhereUsedProductID  
 ```  
   
- 按一下 [執行] (**!**) 按鈕。 提示輸入查詢參數時，請使用下表來輸入值。  
+ 按一下 [執行] \(**!**) 按鈕。 提示輸入查詢參數時，請使用下表來輸入值。  
   
 |||  
 |-|-|  
