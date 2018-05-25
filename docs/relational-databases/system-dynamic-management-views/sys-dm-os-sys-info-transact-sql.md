@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 04/24/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-data-warehouse, pdw
-ms.component: dmv's
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: system-objects
@@ -27,18 +26,18 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 53467f6dfcab26fa4fded8a9b32086417c8c0af6
-ms.sourcegitcommit: d2573a8dec2d4102ce8882ee232cdba080d39628
+ms.openlocfilehash: 45adf233cb8e5ee4e5046fd922426d7d087e5b2f
+ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 05/23/2018
 ---
 # <a name="sysdmossysinfo-transact-sql"></a>sys.dm_os_sys_info (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
 
   傳回有關電腦以及有關 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 可用和耗用資源的其他有用資訊。  
   
-> **注意：**呼叫從[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]或[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]，使用名稱**sys.dm_pdw_nodes_os_sys_info**。  
+> **注意：** 呼叫從[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]或[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]，使用名稱**sys.dm_pdw_nodes_os_sys_info**。  
   
 |資料行名稱|資料類型|描述與特定版本資訊 |  
 |-----------------|---------------|-----------------|  
@@ -76,7 +75,7 @@ ms.lasthandoff: 05/07/2018
 |**virtual_machine_type_desc**|**nvarchar(60)**|**適用於：**[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。<br /><br /> 描述**virtual_machine_type**資料行。 不可為 Null。<br /><br /> NONE =[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]並未在虛擬機器內執行。<br /><br /> HYPERVISOR = [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行於 Hypervisor 內部，也就是硬體輔助虛擬化。 安裝 Hyper_V 角色時，Hypervisor 會裝載作業系統，以便在主機作業系統上執行的執行個體會在 Hypervisor 中執行。<br /><br /> OTHER = [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行於沒有採用硬體助理的虛擬機器內部，例如 Microsoft Virtual PC。|  
 |**softnuma_configuration**|**int**|**適用於：**[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。<br /><br /> 指定已設定的方式 NUMA 節點。 不可為 Null。<br /><br /> 0 = OFF 指出硬體預設值<br /><br /> 1 = 自動軟體 NUMA<br /><br /> 2 = 透過登錄的手動軟體 NUMA|  
 |**softnuma_configuration_desc**|**nvarchar(60)**|**適用於：**[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。<br /><br /> OFF = NUMA 功能是關閉<br /><br /> 在 = [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] NUMA 會自動決定 NUMA 節點大小<br /><br /> 手動 = 手動設定的軟體 NUMA|
-|**process_physical_affinity**|**nvarchar(3072)** |**適用於：**開頭[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]。<br /><br />尚未將於提供的資訊。 |
+|**process_physical_affinity**|**nvarchar(3072)** |**適用於：** 開頭[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]。<br /><br />尚未將於提供的資訊。 |
 |**sql_memory_model**|**int**|**適用於：** [!INCLUDE[sssql11](../../includes/sssql11-md.md)] SP4、 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 透過[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。<br /><br />指定所使用的記憶體模型[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]配置記憶體。 不可為 Null。<br /><br />1 = 傳統記憶體模型<br />2 = 鎖定記憶體分頁<br /> 3 = 記憶體中的大型分頁|
 |**sql_memory_model_desc**|**nvarchar(120)**|**適用於：** [!INCLUDE[sssql11](../../includes/sssql11-md.md)] SP4、 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 透過[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。<br /><br />指定所使用的記憶體模型[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]配置記憶體。 不可為 Null。<br /><br />**傳統** =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]配置的記憶體使用傳統記憶體模式。 這是預設 sql 記憶體模型時[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]服務帳戶中並沒有鎖定的分頁記憶體的權限在啟動期間。<br />**LOCK_PAGES**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]使用鎖定分頁記憶體中配置記憶體。 SQL Server 服務帳戶在 SQL Server 啟動期間記憶體的權限擁有鎖定的分頁時，這是預設 sql 記憶體管理員。<br /> **LARGE_PAGES**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]使用大型分頁記憶體中配置記憶體。 SQL Server 會使用大型分頁配置器配置記憶體，只能使用 Enterprise edition 時 SQL Server 服務帳戶會持有記憶體的權限鎖定分頁在伺服器啟動期間與追蹤旗標 834 已開啟。|
 |**pdw_node_id**|**int**|**適用於：** [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]， [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 此發行版本上的節點識別碼。|  

@@ -7,17 +7,16 @@ manager: craigg
 ms.date: 02/26/2018
 ms.topic: article
 ms.prod: sql
-ms.prod_service: database-engine
 ms.component: ''
 ms.suite: sql
-ms.technology: database-engine
+ms.technology: linux
 ms.assetid: 82737f18-f5d6-4dce-a255-688889fdde69
 ms.custom: sql-linux
-ms.openlocfilehash: 28eb0b3ed04e76df86b65a44e954af9822128533
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: aaca3ddf90b6002f259279c5b8f51980f2964996
+ms.sourcegitcommit: b5ab9f3a55800b0ccd7e16997f4cd6184b4995f9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/23/2018
 ---
 # <a name="configure-sql-server-2017-container-images-on-docker"></a>設定 SQL Server 2017 容器映像 docker
 
@@ -86,7 +85,7 @@ ms.lasthandoff: 05/03/2018
 
 - [sqlcmd](sql-server-linux-setup-tools.md)
 - [Visual Studio Code](sql-server-linux-develop-use-vscode.md)
-- [Windows 上的 SQL Server Management Studio (SSMS)](sql-server-linux-develop-use-ssms.md)
+- [Windows 上的 SQL Server Management Studio (SSMS)](sql-server-linux-manage-ssms.md)
 
 下列範例會使用**sqlcmd**連接到 SQL Server 在 Docker 容器中執行。 連接字串中的 IP 位址是主機電腦正在執行容器的 IP 位址。
 

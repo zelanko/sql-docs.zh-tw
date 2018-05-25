@@ -3,8 +3,6 @@ title: sys.dm_io_backup_tapes (TRANSACT-SQL) |Microsoft 文件
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
-ms.prod_service: database-engine
-ms.component: dmv's
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: system-objects
@@ -24,11 +22,11 @@ caps.latest.revision: 25
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 330d0d76891271cc7dce210ff8021ba98e62c73f
-ms.sourcegitcommit: d2573a8dec2d4102ce8882ee232cdba080d39628
+ms.openlocfilehash: 93a8e8d5c0d123bd8d226e43926f727bf2cc81e4
+ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 05/23/2018
 ---
 # <a name="sysdmiobackuptapes-transact-sql"></a>sys.dm_io_backup_tapes (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -39,7 +37,7 @@ ms.lasthandoff: 05/07/2018
 |-----------------|---------------|-----------------|  
 |**physical_device_name**|**nvarchar(520)**|可以從中取出備份的實際實體裝置名稱。 不可為 Null。|  
 |**logical_device_name**|**nvarchar(256)**|使用者指定的磁碟機的名稱 (從**sys.backup_devices**)。 如果沒有使用者指定名稱可用，便是 NULL。 可為 Null。|  
-|**status**|**int**|磁帶的狀態：<br /><br /> 1 = 已開啟，可供使用<br /><br /> 2 = 掛載暫止<br /><br /> 3 = 使用中<br /><br /> 4 = 載入中<br /><br /> **注意：**載入磁帶時 (**狀態 = 4**)，尚未讀取媒體標籤。 這類複製媒體標籤值的資料行**media_sequence_number**，顯示預期的值，它們在磁帶上的實際值可能不同。 已讀取標籤之後，**狀態**變為**3** （使用中），以及媒體標籤資料行會反映所載入的實際磁帶。<br /><br /> 不可為 Null。|  
+|**status**|**int**|磁帶的狀態：<br /><br /> 1 = 已開啟，可供使用<br /><br /> 2 = 掛載暫止<br /><br /> 3 = 使用中<br /><br /> 4 = 載入中<br /><br /> **注意：** 載入磁帶時 (**狀態 = 4**)，尚未讀取媒體標籤。 這類複製媒體標籤值的資料行**media_sequence_number**，顯示預期的值，它們在磁帶上的實際值可能不同。 已讀取標籤之後，**狀態**變為**3** （使用中），以及媒體標籤資料行會反映所載入的實際磁帶。<br /><br /> 不可為 Null。|  
 |**status_desc**|**nvarchar(520)**|磁帶狀態的描述：<br /><br /> AVAILABLE <br /><br /> MOUNT PENDING <br /><br /> IN USE <br /><br /> LOADING MEDIA<br /><br /> 不可為 Null。|  
 |**mount_request_time**|**datetime**|要求掛載的時間。 如果沒有掛接已暫止，則為 NULL (**狀態 ！ = 2**)。 可為 Null。|  
 |**mount_expiration_time**|**datetime**|掛載要求將到期 (逾時) 的時間。 如果沒有掛接已暫止，則為 NULL (**狀態 ！ = 2**)。 可為 Null。|  

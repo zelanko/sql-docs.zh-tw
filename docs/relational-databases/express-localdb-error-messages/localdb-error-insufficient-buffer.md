@@ -3,11 +3,9 @@ title: LOCALDB_ERROR_INSUFFICIENT_BUFFER |Microsoft 文件
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
-ms.prod_service: database-engine
-ms.component: localdb
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: performance
 ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: ff67bda8-7e5c-4b06-8d7b-9985b6059a98
@@ -15,11 +13,11 @@ caps.latest.revision: 8
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7237a511cd4fa85a02e3ee77a212e52c7a3b9f5b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: fc501bc6b399091b5d07792b2462bbf257a78499
+ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="localdberrorinsufficientbuffer"></a>LOCALDB_ERROR_INSUFFICIENT_BUFFER
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

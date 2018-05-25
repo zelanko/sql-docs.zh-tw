@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 08/29/2016
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.component: dmv's
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: system-objects
@@ -26,11 +25,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: eb3d77252999029756c89d146b432fb6962f065f
-ms.sourcegitcommit: d2573a8dec2d4102ce8882ee232cdba080d39628
-ms.translationtype: HT
+ms.openlocfilehash: bea396c2625b282b0b63d9be240ed932c640749b
+ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 05/23/2018
 ---
 # <a name="sysdmdbxtptablememorystats-transact-sql"></a>sys.dm_db_xtp_table_memory_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]

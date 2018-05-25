@@ -5,7 +5,6 @@ ms.date: 11/24/2015
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
-ms.component: dmv's
 ms.suite: sql
 ms.technology: system-objects
 ms.tgt_pltfrm: ''
@@ -23,11 +22,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 32566f288d67753302f5f1fce7b91fbfd4835679
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 76e405d57c5cc47b15af7a8943c506b04c09c19c
+ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/23/2018
 ---
 # <a name="geo-replication-dynamic-management-views-and-functions-azure-sql-database"></a>地理複寫動態管理檢視和函數 (Azure SQL Database)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]

@@ -5,7 +5,6 @@ ms.date: 03/07/2017
 ms.prod: sql
 ms.prod_service: pdw
 ms.reviewer: ''
-ms.component: dmv's
 ms.suite: sql
 ms.technology: system-objects
 ms.tgt_pltfrm: ''
@@ -18,11 +17,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: f782d832dc5f3d962fcfc7aa72b1fa196159312d
-ms.sourcegitcommit: d2573a8dec2d4102ce8882ee232cdba080d39628
+ms.openlocfilehash: e7b4534410eabf1186b115c07fef8a8d79960938
+ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 05/23/2018
 ---
 # <a name="sysdmpdwnetworkcredentials-transact-sql"></a>sys.dm_pdw_network_credentials (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]

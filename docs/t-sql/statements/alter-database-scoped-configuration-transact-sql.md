@@ -26,11 +26,11 @@ caps.latest.revision: 32
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: b164097dd08b5b428797319a7152974ac626b84b
-ms.sourcegitcommit: 0cc2cb281e467a13a76174e0d9afbdcf4ccddc29
+ms.openlocfilehash: 1fc2b483ff3a3b4a60d02c281041bb403485aaa2
+ms.sourcegitcommit: 6fd8a193728abc0a00075f3e4766a7e2e2859139
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/15/2018
+ms.lasthandoff: 05/17/2018
 ---
 # <a name="alter-database-scoped-configuration-transact-sql"></a>ALTER DATABASE SCOPED CONFIGURATION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -45,9 +45,9 @@ ms.lasthandoff: 05/15/2018
 - 在資料庫層級啟用或停用識別快取。
 - 允許或不允許在第一次編譯批次時，將已編譯的計劃虛設常式儲存在快取中。  
 - 啟用或停用原生編譯 T-SQL 模組的執行統計資料收集。
-- 為支援 ONLINE= syntax 的 DDL 陳述式啟用或停用預設會線上進行的設定
-- 為支援 RESUMABLE= syntax 的 DDL 陳述式啟用或停用預設可繼續的設定 
-  
+- 為支援 ONLINE= syntax 的 DDL 陳述式啟用或停用預設為連線的選項。
+- 為支援 RESUMABLE= syntax 的 DDL 陳述式啟用或停用預設可繼續的選項。 
+
  ![連結圖示](../../database-engine/configure-windows/media/topic-link.gif "連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>語法  
@@ -246,11 +246,11 @@ WHEN_SUPPORTED
 
 **ELEVATE_ONLINE** 
 
-此選項僅適用於支援 WITH(ONLINE= syntax 的 DDL 陳述式。 不會影響 XML 索引 
+此選項僅適用於支援 WITH(ONLINE= syntax) 的 DDL 陳述式。 不會影響 XML 索引 
 
 **ELEVATE_RESUMABLE**
 
-此選項僅適用於支援 WITH(ONLINE= syntax 的 DDL 陳述式。 不會影響 XML 索引 
+此選項僅適用於支援 WITH(ONLINE= syntax) 的 DDL 陳述式。 不會影響 XML 索引 
 
   
 ## <a name="metadata"></a>中繼資料  
@@ -373,43 +373,6 @@ ALTER DATABASE SCOPED CONFIGURATION SET ELEVATE_ONLINE=FAIL_UNSUPPORTED ;
 ```sql
 ALTER DATABASE SCOPED CONFIGURATION SET ELEVATE_RESUMABLE=WHEN_SUPPORTED ;  
 ``` 
-
-### <a name="k-query-state-of-alter-database-scoped-configuration-based-on-different-statements"></a>K. 根據不同陳述式來查詢 ALTER DATABASE SCOPED CONFIGURATION 的狀態
-
-**適用於**：[!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)] (功能處於公開預覽階段)
-
-```sql 
-ALTER DATABASE SCOPED CONFIGURATION SET ELEVATE_ONLINE = OFF;
-ALTER DATABASE SCOPED CONFIGURATION SET ELEVATE_RESUMABLE = OFF;
-SELECT * FROM sys.database_scoped_configurations WHERE NAME LIKE '%ELEVATE%'
-GO
-
-|configuration_id|name|value|value_for_secondary|is_value_default|
-|----------------|:---|:----|:------------------|:---------------|
-|11|ELEVATE_ONLINE|OFF|NULL|1|
-|12|ELEVATE_RESUMABLE|OFF|NULL|1|
-
-ALTER DATABASE SCOPED CONFIGURATION SET ELEVATE_ONLINE = WHEN_SUPPORTED;
-ALTER DATABASE SCOPED CONFIGURATION SET ELEVATE_RESUMABLE = WHEN_SUPPORTED;
-SELECT * FROM sys.database_scoped_configurations WHERE NAME LIKE '%ELEVATE%'
-GO
-
-|configuration_id|name|value|value_for_secondary|is_value_default|
-|----------------|:---|:----|:------------------|:---------------|
-|11|ELEVATE_ONLINE|WHEN_SUPPORTED|NULL|0|
-|12|ELEVATE_RESUMABLE|WHEN_SUPPORTED|NULL|0|
-
-ALTER DATABASE SCOPED CONFIGURATION SET ELEVATE_ONLINE = FAIL_UNSUPPORTED;
-ALTER DATABASE SCOPED CONFIGURATION SET ELEVATE_RESUMABLE = FAIL_UNSUPPORTED;
-SELECT * FROM sys.database_scoped_configurations WHERE NAME LIKE '%ELEVATE%'
-GO
-
-|configuration_id|name|value|value_for_secondary|is_value_default|
-|----------------|:---|:----|:------------------|:---------------|
-|11|ELEVATE_ONLINE|FAIL_UNSUPPORTED|NULL|0|
-|12|ELEVATE_RESUMABLE|FAIL_UNSUPPORTED|NULL|0|
-
-```
 
 ## <a name="additional-resources"></a>其他資源
 

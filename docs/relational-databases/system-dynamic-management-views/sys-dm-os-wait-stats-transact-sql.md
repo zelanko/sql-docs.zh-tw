@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 04/23/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: dmv's
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: system-objects
@@ -25,11 +24,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 85961f9956c93c3bbd2e37393c6f3d0ad3e57e95
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: e2ae34c5ffd67712e925d8dda26dbc79680e3520
+ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/23/2018
 ---
 # <a name="sysdmoswaitstats-transact-sql"></a>sys.dm_os_wait_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -172,7 +171,7 @@ GO
 |COUNTRECOVERYMGR |TBD <br /> **適用於**： [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。| 
 |CREATE_DATINISERVICE |TBD <br /> **適用於**： [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。| 
 |CXCONSUMER |當取用者執行緒在等候傳送的資料列產生者執行緒發生平行查詢計畫。 這是平行查詢執行的一部分。 <br /> **適用於**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (開頭為[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]SP2 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3)， [!INCLUDE[ssSDS](../../includes/sssds-md.md)]|
-|CXPACKET  |當同步處理查詢處理器交換重複，以及產生及取用資料列會發生平行查詢計畫。 如果等候時間過長，而且無法透過微調查詢 (例如加入索引) 來縮短，請考慮調整平行處理原則的成本臨界值，或降低平行處理原則的程度。<br /> **注意：**開頭[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]SP2 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3，和[!INCLUDE[ssSDS](../../includes/sssds-md.md)]，CXPACKET 只適用於同步處理查詢處理器交換重複，並產生資料列的取用者執行緒。 取用者執行緒都會個別追蹤中 CXCONSUMER 等候類型。| 
+|CXPACKET  |當同步處理查詢處理器交換重複，以及產生及取用資料列會發生平行查詢計畫。 如果等候時間過長，而且無法透過微調查詢 (例如加入索引) 來縮短，請考慮調整平行處理原則的成本臨界值，或降低平行處理原則的程度。<br /> **注意：** 開頭[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]SP2 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3，和[!INCLUDE[ssSDS](../../includes/sssds-md.md)]，CXPACKET 只適用於同步處理查詢處理器交換重複，並產生資料列的取用者執行緒。 取用者執行緒都會個別追蹤中 CXCONSUMER 等候類型。| 
 |CXROWSET_SYNC |在平行範圍掃描期間發生。| 
 |DAC_INIT |當專用管理員連接正在初始化時發生。| 
 |DBCC_SCALE_OUT_EXPR_CACHE |TBD <br /> **適用於**： [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。| 

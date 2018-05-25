@@ -7,16 +7,15 @@ manager: craigg
 ms.date: 12/11/2017
 ms.topic: article
 ms.prod: sql
-ms.prod_service: database-engine
 ms.component: ''
 ms.suite: sql
 ms.custom: sql-linux
-ms.technology: database-engine
-ms.openlocfilehash: a04383c5e12acb0c8bf652ba345af6487176c2ad
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.technology: linux
+ms.openlocfilehash: 549b34aa918f65da20c3398e1d38491841b5c6fc
+ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="create-and-configure-an-availability-group-for-sql-server-on-linux"></a>建立及設定可用性群組的 SQL Server on Linux
 

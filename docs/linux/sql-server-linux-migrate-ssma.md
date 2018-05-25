@@ -7,17 +7,16 @@ manager: craigg
 ms.date: 01/30/2018
 ms.topic: article
 ms.prod: sql
-ms.prod_service: database-engine
 ms.component: ''
 ms.suite: sql
-ms.technology: database-engine
+ms.technology: linux
 ms.assetid: 251bc3af-ebce-4d97-adec-afc0e7fab6cc
 ms.custom: sql-linux
-ms.openlocfilehash: e3706b3862f7a768df9b039be89e2f873fa2ff63
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: b40518b0f79ca35f33ada56fdc974331f24934a2
+ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="automate-database-migration-to-linux-with-the-sql-server-migration-assistant"></a>自動化與 SQL Server 移轉小幫手的資料庫移轉至 Linux
 

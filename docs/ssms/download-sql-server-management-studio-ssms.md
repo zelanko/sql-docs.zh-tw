@@ -1,7 +1,7 @@
 ---
 title: 下載 SQL Server Management Studio (SSMS) | Microsoft Docs
 ms.custom: ''
-ms.date: 05/09/2018
+ms.date: 05/14/2018
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.component: ssms
@@ -28,11 +28,11 @@ caps.latest.revision: 145
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 83dfecad826aea459a842b1eb908801bb469c5e8
-ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
+ms.openlocfilehash: 8075a2ac4eaeb7b37d828eeee255f2a4e141968e
+ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="download-sql-server-management-studio-ssms"></a>下載 SQL Server Management Studio (SSMS)
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
@@ -130,7 +130,7 @@ Azure SQL 資料倉儲：
   * 請確認電腦上的 .NET Framework 版本是 4.6.1 (或更新版本)。
   * 關閉電腦上開啟的所有其他 Visual Studio 執行個體。
   * 請確定電腦上安裝了所有最新的作業系統更新。
-  * 所述的動作通常只需要執行一次。 只有極少數的情況，需要在另外升級至相同主要版本的 SSMS 時重新開機。 針對次要升級，電腦上會安裝好所有的 SSMS 先決條件。
+  * 所述的動作通常只需要執行一次。 只有極少數的情況，需要在另外升級至相同主要版本的 SSMS 時重新開機。 若是次要升級，電腦上已安裝好所有 SSMS 必要條件。
 
 
 ## <a name="release-notes"></a>版本資訊
@@ -138,6 +138,33 @@ Azure SQL 資料倉儲：
 以下是這個 17.7 版本的問題和限制：
 
 使用新的「一般目的」或「商務關鍵性」Azure SQL Database 版本時，某些對話方塊顯示版本無效錯誤。
+
+
+## <a name="uninstall-and-reinstall-ssms"></a>解除並重新安裝 SSMS
+
+如果您的 SSMS 安裝遇到問題，而且無法經由標準的解除並重新安裝來解決，您可以先嘗試[修復](https://support.microsoft.com/help/4028054/windows-10-repair-or-remove-programs) Visual Studio 2015 IsoShell。 若修復 Visual Studio 2015 IsoShell 未解決問題，下列幾個步驟可以修正許多非特定的問題：
+
+1.  以您解除安裝任何應用程式的相同方式，解除安裝 SSMS (使用 [應用程式與功能]、[程式與功能] 等，取決於您的 Windows 版本)。
+
+2.  **從提升權限的命令提示字元**解除安裝 Visual Studio 2015 IsoShell：
+   
+    ```PUSHD "C:\ProgramData\Package Cache\FE948F0DAB52EB8CB5A740A77D8934B9E1A8E301\redist"```
+
+    ```vs_isoshell.exe /Uninstall /Force /PromptRestart```
+
+3.  以您解除安裝任何應用程式的相同方式，解除安裝 Microsoft Visual C++ 2015 可轉散發套件。 若電腦上有 x86 及 x64，則兩者都解除安裝。
+
+4.  **從提升權限的命令提示字元**重新安裝 Visual Studio 2015 IsoShell：  
+
+    ```PUSHD "C:\ProgramData\Package Cache\FE948F0DAB52EB8CB5A740A77D8934B9E1A8E301\redist"```  
+ 
+    ```vs_isoshell.exe /PromptRestart```
+
+5.  重新安裝 SSMS。
+
+6.  若您目前不是最新狀態，請升級為[最新版的 Visual C++ 2015 可轉散發套件](https://support.microsoft.com/help/2977003/the-latest-supported-visual-c-downloads)。
+
+
 
 
 ## <a name="previous-releases"></a>舊版

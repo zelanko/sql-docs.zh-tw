@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/13/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: dmv's
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: system-objects
@@ -25,11 +24,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: a02ce91a67a8df3970428ad63e3abc61565bdb64
-ms.sourcegitcommit: d2573a8dec2d4102ce8882ee232cdba080d39628
+ms.openlocfilehash: 7ecf29c32131972d2802eae9cf735582252cf145
+ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 05/23/2018
 ---
 # <a name="sysdmosschedulers-transact-sql"></a>sys.dm_os_schedulers (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -49,7 +48,7 @@ ms.lasthandoff: 05/07/2018
 |is_online|**bit**|如果 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 設定成只使用伺服器上部分可用的處理器，這個組態可能表示部分排程器對應到不在相似性遮罩中的處理器。 如果是這種情況，這個資料行會傳回 0。 這個值表示排程器目前未用於處理查詢或批次。<br /><br /> 不可為 Null。|  
 |is_idle|**bit**|1 = 排程器閒置。 目前沒有任何工作者正在執行。 不可為 Null。|  
 |preemptive_switches_count|**int**|排程器的工作者切換到先佔式模式的次數。<br /><br /> 若要執行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 外部的程式碼 (例如，擴充預存程序和分散式查詢)，執行緒必須在非先佔式排程器的控制之外執行。 若要這麼做，工作者必須切換到先佔式模式。|  
-|context_switches_count|**int**|這個排程器上發生的內容切換次數。 不可為 Null。<br /><br /> 若要讓其他的工作者能夠執行，目前正在執行的工作者必須讓出排程器的控制權或切換內容。<br /><br /> **注意：**如果工作者產生排程器並將本身置於可執行佇列，然後尋找沒有背景工作的背景工作將會選取其本身。 在這個情況下，不會更新 context_switches_count，但會更新 yield_count。|  
+|context_switches_count|**int**|這個排程器上發生的內容切換次數。 不可為 Null。<br /><br /> 若要讓其他的工作者能夠執行，目前正在執行的工作者必須讓出排程器的控制權或切換內容。<br /><br /> **注意：** 如果工作者產生排程器並將本身置於可執行佇列，然後尋找沒有背景工作的背景工作將會選取其本身。 在這個情況下，不會更新 context_switches_count，但會更新 yield_count。|  
 |idle_switches_count|**int**|排程器於閒置時等候事件的次數。 這個資料行與 context_switches_count 相似。 不可為 Null。|  
 |current_tasks_count|**int**|與這個排程器關聯的目前工作數目。 這個計數包含下列項目：<br /><br /> -正在等候工作者執行的工作。<br />-工作目前正在等候或執行 （處於 SUSPENDED 或 RUNNABLE 狀態）。<br /><br /> 工作完成時，這個計數會遞減。 不可為 Null。|  
 |runnable_tasks_count|**int**|已擁有指派工作且正在等候排程到可執行佇列上的工作者數目。 不可為 Null。|  

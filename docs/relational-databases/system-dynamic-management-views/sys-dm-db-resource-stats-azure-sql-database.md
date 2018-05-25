@@ -6,7 +6,6 @@ ms.prod: ''
 ms.prod_service: sql-database
 ms.reviewer: ''
 ms.service: sql-database
-ms.component: dmv's
 ms.suite: sql
 ms.technology: system-objects
 ms.tgt_pltfrm: ''
@@ -27,11 +26,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 105bb0005720861604bbda1542d0c0b2abb439ad
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: a91988c36604ce38c7022e6bc111cc1941e43a03
+ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/23/2018
 ---
 # <a name="sysdmdbresourcestats-azure-sql-database"></a>sys.resource_stats (Azure SQL Database)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]

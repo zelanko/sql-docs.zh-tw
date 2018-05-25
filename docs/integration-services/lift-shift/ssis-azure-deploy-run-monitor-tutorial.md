@@ -1,6 +1,6 @@
 ---
 title: 在 Azure 中部署和執行 SSIS 套件 | Microsoft Docs
-ms.date: 02/05/2018
+ms.date: 5/22/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.prod_service: integration-services
@@ -12,11 +12,11 @@ ms.technology:
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 27c7e77b5143bca56b7ded2233c01e11ad088d5f
-ms.sourcegitcommit: 0cc2cb281e467a13a76174e0d9afbdcf4ccddc29
+ms.openlocfilehash: 42041134b027d9a9f274a31d0b6a7276dcc23ef8
+ms.sourcegitcommit: b5ab9f3a55800b0ccd7e16997f4cd6184b4995f9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/15/2018
+ms.lasthandoff: 05/23/2018
 ---
 # <a name="deploy-and-run-an-ssis-package-in-azure"></a>在 Azure 中部署和執行 SSIS 套件
 本教學課程示範如何將 SQL Server Integration Services 專案部署至 Azure SQL Database 上的 SSISDB 目錄資料庫、在 Azure SSIS Integration Runtime 中執行套件，以及監視執行中的套件。
@@ -25,10 +25,16 @@ ms.lasthandoff: 05/15/2018
 
 開始之前，請確定您有 17.2 版或更新版本的 SQL Server Management Studio。 若要下載最新版的 SSMS，請參閱[下載 SQL Server Management Studio (SSMS)](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms)。
 
-也請確定您已設定 SSISDB 資料庫和佈建 Azure SSIS Integration Runtime。 如需如何在 Azure 上佈建 SSIS 的相關資訊，請參閱[將 SSIS 套件部署到 Azure](https://docs.microsoft.com/azure/data-factory/tutorial-create-azure-ssis-runtime-portal)。
+也請確定您已在 Azure 中設定 SSISDB 資料庫和佈建 Azure SSIS Integration Runtime。 如需在 Azure 上佈建 SSIS 的資訊，請參閱[將 SQL Server Integration Services 套件部署至 Azure](https://docs.microsoft.com/azure/data-factory/tutorial-deploy-ssis-packages-azure)。
 
-> [!NOTE]
-> 部署至 Azure 只支援專案部署模型。
+## <a name="for-azure-sql-database-get-the-connection-info"></a>若是 Azure SQL Database，請取得連線資訊
+
+若要在 Azure SQL Database 執行套件，請取得連線至 SSIS 目錄資料庫 (SSISDB) 所需的連線資訊。 在下列程序中，您需要完整伺服器名稱和登入資訊。
+
+1. 登入 [Azure 入口網站](https://portal.azure.com/)。
+2. 從左側功能表中選取 [SQL 資料庫]，然後選取 [SQL 資料庫] 頁面上的 SSISDB 資料庫。 
+3. 在您資料庫的 [概觀] 頁面上，檢閱完整伺服器名稱。 若要顯示 [按一下以複製] 選項，請將滑鼠指標暫留在伺服器名稱上。 
+4. 如果您忘記 Azure SQL Database 伺服器登入資訊，請巡覽至 [SQL Database 伺服器] 頁面來檢視伺服器管理員名稱。 如有需要，您可以重設密碼。
 
 ## <a name="connect-to-the-ssisdb-database"></a>連線至 SSISDB 資料庫
 
@@ -49,7 +55,7 @@ ms.lasthandoff: 05/15/2018
    | ------------ | ------------------ | ------------------------------------------------- | 
    | **伺服器類型** | Database Engine | 這是必要的值。 |
    | **伺服器名稱** | 完整伺服器名稱 | 名稱的格式應如下所示：**mysqldbserver.database.windows.net**。 如果您需要伺服器名稱，請參閱[連線至 Azure 上的 SSISDB 目錄資料庫](ssis-azure-connect-to-catalog-database.md)。 |
-   | **驗證** | SQL Server 驗證 | 本快速入門使用 SQL 驗證。 |
+   | **驗證** | SQL Server 驗證 | 您無法使用 Windows 驗證連線到 Azure SQL Database。 |
    | **登入** | 伺服器系統管理員帳戶 | 其為您在建立伺服器時指定的帳戶。 |
    | **密碼** | 伺服器系統管理員帳戶的密碼 | 其為您在建立伺服器時指定的密碼。 |
 
@@ -62,6 +68,9 @@ ms.lasthandoff: 05/15/2018
 ## <a name="deploy-a-project-with-the-deployment-wizard"></a>使用部署精靈部署專案
 
 若要進一步了解有關部署套件和部署精靈，請參閱[部署 Integration Services (SSIS) 專案和套件](../packages/deploy-integration-services-ssis-projects-and-packages.md)和 [Integration Services 部署精靈](../packages/deploy-integration-services-ssis-projects-and-packages.md#integration-services-deployment-wizard)。
+
+> [!NOTE]
+> 部署至 Azure 只支援專案部署模型。
 
 ### <a name="start-the-integration-services-deployment-wizard"></a>啟動 [Integration Services 部署精靈]
 1. 在 SSMS 的 [物件總管] 中，展開 [Integration Services 目錄] 節點和 [SSISDB] 節點之後，請展開專案資料夾。
@@ -84,8 +93,9 @@ ms.lasthandoff: 05/15/2018
   
 3.  在 [選取目的地] 頁面上，選取專案目的地。
     -   輸入完整伺服器名稱，格式如下：`<server_name>.database.windows.net`。
+    -   提供驗證資訊，然後選取 [連線]。
     -   然後選取 [瀏覽] 在 SSISDB 中選取目標資料夾。
-    -   選取 [下一步] 開啟 [檢閱] 頁面。  
+    -   然後選取 [下一步] 開啟 [檢閱] 頁面。 (只有在您選取 [連線] 之後，才會啟用 [下一步] 按鈕。)
   
 4.  在 [檢閱] 頁面上，檢閱您選取的設定。
     -   您可以選取 **[上一步]**，或選取左窗格中的任何步驟來變更您的選取項目。
@@ -182,7 +192,7 @@ Write-Host "All done."
 
 ## <a name="monitor-the-azure-ssis-integration-runtime"></a>監視 Azure SSIS Integration Runtime
 
-若要取得套件執行所在之 Azure SSIS Integration Runtime 的相關狀態資訊，請使用下列 PowerShell 命令：針對每個命令，提供資料處理站、Azure SSIS IR 和資源群組的名稱。
+若要取得執行套件的 SSIS Integration Services 相關狀態資訊，請使用下列 PowerShell 命令。 請為各個命令提供 Data Factory 名稱、Azure SSIS IR 及資源群組。 如需詳細資訊，請參閱[監視 Azure SSIS 整合執行階段](https://docs.microsoft.com/azure/data-factory/monitor-integration-runtime#azure-ssis-integration-runtime)。
 
 ### <a name="get-metadata-about-the-azure-ssis-integration-runtime"></a>取得 Azure SSIS Integration Runtime 的相關中繼資料
 

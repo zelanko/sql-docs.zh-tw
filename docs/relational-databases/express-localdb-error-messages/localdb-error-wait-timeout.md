@@ -3,11 +3,9 @@ title: LOCALDB_ERROR_WAIT_TIMEOUT |Microsoft 文件
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
-ms.prod_service: database-engine
-ms.component: localdb
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: performance
 ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: e5b55efa-daa1-4c39-aa71-eeb7707ed601
@@ -15,11 +13,11 @@ caps.latest.revision: 9
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7f4786c72dade7566aa5fc486264347906d3766f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: ce9a092056fe8b1fd83d2be97efd5b827269d619
+ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="localdberrorwaittimeout"></a>LOCALDB_ERROR_WAIT_TIMEOUT
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

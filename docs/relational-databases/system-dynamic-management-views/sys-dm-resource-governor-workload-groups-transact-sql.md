@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 04/24/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-data-warehouse, pdw
-ms.component: dmv's
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: system-objects
@@ -25,11 +24,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: dce7ea713a3be7f97d1156d9598a95d10b16de6e
-ms.sourcegitcommit: d2573a8dec2d4102ce8882ee232cdba080d39628
+ms.openlocfilehash: 023dc1559ade2a14be43750acd783fefd000e7b0
+ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 05/23/2018
 ---
 # <a name="sysdmresourcegovernorworkloadgroups-transact-sql"></a>sys.dm_resource_governor_workload_groups (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-pdw-md.md)]
@@ -52,7 +51,7 @@ ms.lasthandoff: 05/07/2018
 |queued_request_count|**int**|目前佇列的要求計數。 不可為 Null。|  
 |total_cpu_limit_violation_count|**bigint**|超過 CPU 限制之要求的累計計數。 不可為 Null。|  
 |total_cpu_usage_ms|**bigint**|此工作負載群組的累計 CPU 使用量 (以毫秒為單位)。 不可為 Null。|  
-|max_request_cpu_time_ms|**bigint**|單一要求的最大 CPU 使用量 (以毫秒為單位)。 不可為 Null。<br /><br /> **注意：**這是一個測量的值，不像 request_max_cpu_time_sec，後者是可設定的值。 如需詳細資訊，請參閱[超過 CPU 閾值事件類別](../../relational-databases/event-classes/cpu-threshold-exceeded-event-class.md)。|  
+|max_request_cpu_time_ms|**bigint**|單一要求的最大 CPU 使用量 (以毫秒為單位)。 不可為 Null。<br /><br /> **注意：** 這是一個測量的值，不像 request_max_cpu_time_sec，後者是可設定的值。 如需詳細資訊，請參閱[超過 CPU 閾值事件類別](../../relational-databases/event-classes/cpu-threshold-exceeded-event-class.md)。|  
 |blocked_task_count|**int**|封鎖之工作的目前計數。 不可為 Null。|  
 |total_lock_wait_count|**bigint**|發生之鎖定等候的累計計數。 不可為 Null。|  
 |total_lock_wait_time_ms|**bigint**|保留鎖定之經過時間的累計總和 (以毫秒為單位)。 不可為 Null。|  

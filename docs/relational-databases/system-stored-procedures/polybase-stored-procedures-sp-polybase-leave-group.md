@@ -3,12 +3,9 @@ title: sp_polybase_leave_group (TRANSACT-SQL) |Microsoft 文件
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
-ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine-polybase
+ms.technology: polybase
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -18,14 +15,14 @@ helpviewer_keywords:
 - sp_polybase_leave_group
 ms.assetid: ef87a8f1-5407-47b5-b8bf-bd7d08c0f0fe
 caps.latest.revision: 11
-author: stevestein
-ms.author: sstein
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 807b90e460910c7175a867d2c2cc0ecf73549f69
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 8ad3a202ff910d19ea70192eb9cc5e114a8a4cb9
+ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="sppolybaseleavegroup-transact-sql"></a>sp_polybase_leave_group (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]

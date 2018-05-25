@@ -1,4 +1,4 @@
-﻿---
+---
 title: Microsoft SQL Operations Studio (preview) 版本資訊 |Microsoft 文件
 description: Microsoft SQL Operations Studio (preview) 版本資訊
 ms.custom: tools|sos
@@ -13,11 +13,11 @@ ms.topic: conceptual
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 47c5e129ca6c77f9116b6be928f202341d457041
-ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
+ms.openlocfilehash: 3f461b78c3d76f7e6b848b83d8a2333dffe5de3c
+ms.sourcegitcommit: a9da0abd3e17fbcd6339980d7331d0418cdada53
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 05/24/2018
 ---
 # <a name="sql-operations-studio-preview-release-notes"></a>SQL Operations Studio (preview) 版本資訊
 
@@ -26,14 +26,14 @@ ms.lasthandoff: 05/10/2018
 
 ## <a name="may-2018-may-public-preview"></a>2018 年 5 月版（ 5 月公開預覽）
 
-發行日期： 2018 年 5 月 7 日，  
+發行日期： 2018 年 7，  
 版本： 0.29.3
 
 *5月公開預覽版*著重於穩定性及 bug 修正。 此版本包含下列重點：  
 
 - 發表 Redgate SQL 搜尋 」 擴充功能可用在擴充管理員。
 - 適用於 10 種語言的社群當地語系化： 德文、 西班牙文、 法文、 義大利文、 日文、 韓文、 葡萄牙文、 俄文、 簡體中文和繁體中文。
-- GDPR 相容的組建已經隱私權聲明降低遙測收集、 改善的退出體驗以及產品中的連結。
+- 降低的遙測收集、 改善的退出體驗和產品中的隱私權聲明連結。
 - 擴充管理員已改善的 Marketplace 經驗，輕鬆地探索社群的延伸。
 - SQL Agent 擴充功能作業和作業歷程記錄檢視改進。
 - Whoisactive 和伺服器報表的擴充功能的更新。

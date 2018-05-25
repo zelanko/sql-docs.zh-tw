@@ -3,7 +3,6 @@ title: sys.dm_db_xtp_checkpoint_files (TRANSACT-SQL) |Microsoft 文件
 ms.date: 03/20/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.component: dmv's
 ms.reviewer: ''
 ms.suite: sql
 ms.custom: ''
@@ -26,18 +25,18 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: cae0fb4ca29959382ac64307ea52851557d0174f
-ms.sourcegitcommit: d2573a8dec2d4102ce8882ee232cdba080d39628
+ms.openlocfilehash: c4ad13459024604d748c1dac8a6649c09a53f10f
+ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 05/23/2018
 ---
 # <a name="sysdmdbxtpcheckpointfiles-transact-sql"></a>sys.dm_db_xtp_checkpoint_files (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
 
   顯示有關檢查點檔案的資訊，包括檔案大小、實體位置及交易識別碼。  
   
-> **注意：**目前有未封閉、 s 的狀態資料行的檢查點`ys.dm_db_xtp_checkpoint_files`會是 「 建構中的新檔案。 檢查點會自動關閉沒有足夠的交易記錄成長，因為最後一個檢查點，或者如果您發出`CHECKPOINT`命令 ([檢查點&#40;TRANSACT-SQL&#41;](../../t-sql/language-elements/checkpoint-transact-sql.md))。  
+> **注意：** 目前有未封閉、 s 的狀態資料行的檢查點`ys.dm_db_xtp_checkpoint_files`會是 「 建構中的新檔案。 檢查點會自動關閉沒有足夠的交易記錄成長，因為最後一個檢查點，或者如果您發出`CHECKPOINT`命令 ([檢查點&#40;TRANSACT-SQL&#41;](../../t-sql/language-elements/checkpoint-transact-sql.md))。  
   
  記憶體最佳化檔案群組在內部使用僅附加檔案來儲存記憶體中資料表的插入和刪除資料列。 有兩種檔案類型： 資料檔案包含插入的資料列，而差異檔案包含已刪除的資料列的參考。 
   

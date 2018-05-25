@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 05/11/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse
-ms.component: dmv's
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: system-objects
@@ -25,11 +24,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: a3db34b928d5d6d7e25fb8139cbc89aa91010e94
-ms.sourcegitcommit: d2573a8dec2d4102ce8882ee232cdba080d39628
+ms.openlocfilehash: 2720aba7dc9b3d8c1a6e34db5a588829245ed97a
+ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 05/23/2018
 ---
 # <a name="sysdmiovirtualfilestats-transact-sql"></a>sys.dm_io_virtual_file_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
@@ -61,7 +60,7 @@ sys.dm_pdw_nodes_io_virtual_file_stats
 
  *database_id* |NULL
 
- **適用於：**SQL Server (從 2008 開始)、Azure SQL Database
+ **適用於：** SQL Server (從 2008 開始)、Azure SQL Database
 
  資料庫的識別碼。 *database_id*是 int，沒有預設值。 資料庫的識別碼或 NULL 都是有效的輸入。 如果指定 NULL，則會傳回 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體中所有的資料庫。  
   
@@ -69,7 +68,7 @@ sys.dm_pdw_nodes_io_virtual_file_stats
   
 *file_id* |NULL
 
-**適用於：**SQL Server (從 2008 開始)、Azure SQL Database
+**適用於：** SQL Server (從 2008 開始)、Azure SQL Database
  
 檔案識別碼。 *file_id*是 int，沒有預設值。 有效輸入是檔案的識別碼或 NULL。 如果指定 NULL，則會傳回資料庫中所有的檔案。  
   

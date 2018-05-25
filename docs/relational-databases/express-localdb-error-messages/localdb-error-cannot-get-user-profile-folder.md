@@ -3,11 +3,9 @@ title: LOCALDB_ERROR_CANNOT_GET_USER_PROFILE_FOLDER |Microsoft 文件
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
-ms.prod_service: database-engine
-ms.component: localdb
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: performance
 ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 3625c9cb-579c-4b4b-be74-0d4de7b64bb6
@@ -15,11 +13,11 @@ caps.latest.revision: 9
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 504c0d0d12dde0db7d3496776498673cb0b9cf25
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 12c48502529b1555711bf4a99233581407ccd811
+ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="localdberrorcannotgetuserprofilefolder"></a>LOCALDB_ERROR_CANNOT_GET_USER_PROFILE_FOLDER
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

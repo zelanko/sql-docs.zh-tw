@@ -7,17 +7,16 @@ manager: craigg
 ms.date: 01/30/2018
 ms.topic: article
 ms.prod: sql
-ms.prod_service: database-engine
 ms.component: ''
 ms.suite: sql
 ms.custom: sql-linux
-ms.technology: database-engine
+ms.technology: linux
 ms.assetid: 7b93d0d7-7946-4b78-b33a-57d6307cdfa9
-ms.openlocfilehash: 53f1381285d8b42c59cde57eb47ce9628f0868ad
-ms.sourcegitcommit: b3bb41424249de198f22d9c6d40df4996f083aa6
-ms.translationtype: HT
+ms.openlocfilehash: d792a7dfd4481d5c5cce3e2517559dcb0b3e22be
+ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/17/2018
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="bulk-copy-data-with-bcp-to-sql-server-on-linux"></a>SQL Server on Linux 的 bcp 大量複製資料
 

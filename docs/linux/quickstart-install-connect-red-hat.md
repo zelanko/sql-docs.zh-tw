@@ -7,17 +7,16 @@ manager: craigg
 ms.date: 02/22/2018
 ms.topic: article
 ms.prod: sql
-ms.prod_service: database-engine
+ms.technology: linux
 ms.component: ''
 ms.suite: sql
 ms.custom: sql-linux
-ms.technology: database-engine
 ms.assetid: 92503f59-96dc-4f6a-b1b0-d135c43e935e
-ms.openlocfilehash: 9d23843466886a70d18038988d00c7152075ff07
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: de149b0a75a550101e761baa109bc07dac062fcd
+ms.sourcegitcommit: b5ab9f3a55800b0ccd7e16997f4cd6184b4995f9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/23/2018
 ---
 # <a name="quickstart-install-sql-server-and-create-a-database-on-red-hat"></a>快速入門： 安裝 SQL Server 和 Red Hat 上建立資料庫
 
@@ -118,7 +117,7 @@ ms.lasthandoff: 05/03/2018
 > **Sqlcmd**是一個工具連接到 SQL Server 來執行查詢，並執行管理和開發工作。 其他工具包括：
 >
 > * [SQL Server Operations Studio (預覽)](../sql-operations-studio/what-is.md)
-> * [SQL Server Management Studio](sql-server-linux-develop-use-ssms.md)
+> * [SQL Server Management Studio](sql-server-linux-manage-ssms.md)
 > * [Visual Studio 程式碼](sql-server-linux-develop-use-vscode.md)。
 > * [mssql-cli (預覽)](https://blogs.technet.microsoft.com/dataplatforminsider/2017/12/12/try-mssql-cli-a-new-interactive-command-line-tool-for-sql-server/)
 

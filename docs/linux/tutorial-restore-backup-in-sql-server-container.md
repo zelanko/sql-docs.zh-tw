@@ -7,16 +7,15 @@ manager: craigg
 ms.date: 10/02/2017
 ms.topic: article
 ms.prod: sql
-ms.prod_service: database-engine
 ms.component: ''
 ms.suite: sql
 ms.custom: sql-linux
-ms.technology: database-engine
-ms.openlocfilehash: 0e86081f681c87e09b5cfde1fec85f20967de1a1
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.technology: linux
+ms.openlocfilehash: dbab0dd07db4859c83a827285e810ee818c3aeb8
+ms.sourcegitcommit: b5ab9f3a55800b0ccd7e16997f4cd6184b4995f9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/23/2018
 ---
 # <a name="restore-a-sql-server-database-in-a-linux-docker-container"></a>Linux Docker 容器中的 SQL Server 資料庫還原
 
@@ -139,7 +138,7 @@ ms.lasthandoff: 05/03/2018
 備份檔案現在位於容器內。 還原之前備份，請務必知道的邏輯檔案名稱及備份內的檔案類型。 下列 TRANSACT-SQL 命令檢查備份及還原使用執行**sqlcmd**容器中。
 
 > [!TIP]
-> 本教學課程使用**sqlcmd**的容器，因為容器會隨附預先安裝此工具。 不過，您也可以執行 TRANSACT-SQL 陳述式與其他用戶端工具以外的容器，例如[Visual Studio Code](sql-server-linux-develop-use-vscode.md)或[SQL Server Management Studio](sql-server-linux-develop-use-ssms.md)。 若要連接，請使用主機連接埠對應至容器中的通訊埠 1433年。 在此範例中，這就是**localhost，1401年**主機電腦上和**Host_IP_Address，1401年**遠端。
+> 本教學課程使用**sqlcmd**的容器，因為容器會隨附預先安裝此工具。 不過，您也可以執行 TRANSACT-SQL 陳述式與其他用戶端工具以外的容器，例如[Visual Studio Code](sql-server-linux-develop-use-vscode.md)或[SQL Server Management Studio](sql-server-linux-manage-ssms.md)。 若要連接，請使用主機連接埠對應至容器中的通訊埠 1433年。 在此範例中，這就是**localhost，1401年**主機電腦上和**Host_IP_Address，1401年**遠端。
 
 1. 執行**sqlcmd**列出邏輯檔案名稱和路徑，在備份的容器。 做法是使用**RESTORE FILELISTONLY** TRANSACT-SQL 陳述式。
 

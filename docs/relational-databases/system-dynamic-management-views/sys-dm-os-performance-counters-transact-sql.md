@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/13/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: dmv's
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: system-objects
@@ -25,11 +24,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 8613e6acb933cdf6d898799950649023d075b91c
-ms.sourcegitcommit: d2573a8dec2d4102ce8882ee232cdba080d39628
+ms.openlocfilehash: 1bdbd9ea7029aaf8b18631a2303fdd1228ff0198
+ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 05/23/2018
 ---
 # <a name="sysdmosperformancecounters-transact-sql"></a>sys.dm_os_performance_counters (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-pdw-md.md)]
@@ -44,7 +43,7 @@ ms.lasthandoff: 05/07/2018
 |**object_name**|**nchar(128)**|這個計數器所屬的類別目錄。|  
 |**counter_name**|**nchar(128)**|計數器的名稱。 若要取得計數器的詳細資訊，這是要從中計數器的清單中選取之標題的名稱[使用 SQL Server 物件](../../relational-databases/performance-monitor/use-sql-server-objects.md)。 |  
 |**instance_name**|**nchar(128)**|計數器的特定執行個體名稱。 通常包含資料庫名稱。|  
-|**cntr_value**|**bigint**|計數器的目前值。<br /><br /> **注意：**每秒計數器，這個值會累計。 必須以不連續時間間隔取樣值來計算該速率值。 任何兩個連續取樣值之間的差等於所使用的時間間隔速率。|  
+|**cntr_value**|**bigint**|計數器的目前值。<br /><br /> **注意：** 每秒計數器，這個值會累計。 必須以不連續時間間隔取樣值來計算該速率值。 任何兩個連續取樣值之間的差等於所使用的時間間隔速率。|  
 |**cntr_type**|**int**|Windows 效能架構所定義的計數器類型。 請參閱[WMI 效能計數器型別](http://msdn2.microsoft.com/library/aa394569.aspx)MSDN 或您的 Windows Server 文件，如需有關效能計數器型別上。|  
 |**pdw_node_id**|**int**|**適用於**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]， [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 此發行版本上的節點識別碼。|  
   

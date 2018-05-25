@@ -7,17 +7,16 @@ manager: craigg
 ms.date: 02/20/2018
 ms.topic: article
 ms.prod: sql
-ms.prod_service: database-engine
 ms.component: ''
 ms.suite: sql
 ms.custom: sql-linux
-ms.technology: database-engine
+ms.technology: linux
 ms.assetid: ''
-ms.openlocfilehash: 09d75b1505594397b619e71d78f9a32f5e293426
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 602ec7d9beca11e2baa963bdf5b8e59df2f194d5
+ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="configure-sql-server-settings-with-environment-variables-on-linux"></a>使用 Linux 上的環境變數設定 SQL Server 設定
 

@@ -6,7 +6,6 @@ ms.prod: ''
 ms.prod_service: sql-database
 ms.reviewer: ''
 ms.service: sql-database
-ms.component: dmv's
 ms.suite: sql
 ms.technology: system-objects
 ms.tgt_pltfrm: ''
@@ -27,11 +26,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 03a54b1ebebaaca66628fd7ad9817d90787c45be
-ms.sourcegitcommit: d2573a8dec2d4102ce8882ee232cdba080d39628
+ms.openlocfilehash: 478e5ed025fb371d7b615e39580865346413d4b6
+ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 05/23/2018
 ---
 # <a name="sysdmcontinuouscopystatus-azure-sql-database"></a>sys.dm_continuous_copy_status (Azure SQL Database)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]

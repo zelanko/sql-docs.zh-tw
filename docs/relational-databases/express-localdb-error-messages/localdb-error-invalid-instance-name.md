@@ -3,11 +3,9 @@ title: LOCALDB_ERROR_INVALID_INSTANCE_NAME |Microsoft 文件
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
-ms.prod_service: database-engine
-ms.component: localdb
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: performance
 ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 709ac713-aadd-4d5b-a0f9-d859a79dd24c
@@ -15,11 +13,11 @@ caps.latest.revision: 8
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 54f92f9f73068e0cfb64e822239bed0d5b7b3dcf
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 8844d103c0b10092fa34b04973140b606d8b3336
+ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="localdberrorinvalidinstancename"></a>LOCALDB_ERROR_INVALID_INSTANCE_NAME
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

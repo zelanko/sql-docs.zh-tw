@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 11/16/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.component: dmv's
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: system-objects
@@ -25,11 +24,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 70d026334af957d7d3644e1bc790f367e967f4bb
-ms.sourcegitcommit: d2573a8dec2d4102ce8882ee232cdba080d39628
+ms.openlocfilehash: 27499bf31561addd909d92a81222662e4470b8b5
+ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 05/23/2018
 ---
 # <a name="sysdmexecconnections-transact-sql"></a>sys.dm_exec_connections (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -44,7 +43,7 @@ ms.lasthandoff: 05/07/2018
 |session_id|**int**|識別這項連接的相關工作階段。 可為 Null。|  
 |most_recent_session_id|**int**|代表這項連接最近的相關要求的工作階段識別碼 (SOAP 連接可由其他工作階段重複使用)可為 Null。|  
 |connect_time|**datetime**|建立連接的時間戳記。 不可為 Null。|  
-|net_transport|**nvarchar(40)**|一律傳回**工作階段**當連接已啟用 multiple active result set (MARS)。<br /><br /> **注意：**描述這個連接所用的實體傳輸通訊協定。 不可為 Null。|  
+|net_transport|**nvarchar(40)**|一律傳回**工作階段**當連接已啟用 multiple active result set (MARS)。<br /><br /> **注意：** 描述這個連接所用的實體傳輸通訊協定。 不可為 Null。|  
 |protocol_type|**nvarchar(40)**|指定裝載的通訊協定類型。 它目前會區分 TDS (TSQL) 和 SOAP。 可為 Null。|  
 |protocol_version|**int**|這項連接的相關資料存取通訊協定的版本。 可為 Null。|  
 |endpoint_id|**int**|描述其為何種連接類型的識別碼。 這個 endpoint_id 可用來查詢 sys.endpoints 檢視。 可為 Null。|  

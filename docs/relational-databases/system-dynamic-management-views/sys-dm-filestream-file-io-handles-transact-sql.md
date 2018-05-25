@@ -3,8 +3,6 @@ title: sys.dm_filestream_file_io_handles (TRANSACT-SQL) |Microsoft 文件
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
-ms.prod_service: database-engine
-ms.component: dmv's
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: system-objects
@@ -24,11 +22,11 @@ caps.latest.revision: 10
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e0ab584a398b3b03b5597e3033079de9558575bc
-ms.sourcegitcommit: d2573a8dec2d4102ce8882ee232cdba080d39628
+ms.openlocfilehash: 87dc96a297933b6981e1e2ada432d355287b4ce2
+ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 05/23/2018
 ---
 # <a name="sysdmfilestreamfileiohandles-transact-sql"></a>sys.dm_filestream_file_io_handles (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,8 +43,8 @@ ms.lasthandoff: 05/07/2018
 |**creation_client_process_id**|**varbinary(8)**|從用來建立此控制代碼的 REQ_PRE_CREATE I/O 要求顯示欄位。 可為 Null。|  
 |**filestream_transaction_id**|**varbinary(128)**|顯示與給定控制代碼相關聯之交易的識別碼。 這是所傳回的值**get_filestream_transaction_context**函式。 使用此欄位來加入**sys.dm_filestream_file_io_requests**檢視。 可為 Null。|  
 |**access_type**|**nvarchar(60)**|不可為 Null。|  
-|**logical_path**|**nvarchar(256)**|顯示此控制代碼開啟之檔案的邏輯路徑名稱。 這是所傳回的相同路徑名稱**。PathName**方法**varbinary**(**max**) filestream。 可為 Null。|  
-|**physical_path**|**nvarchar(256)**|顯示檔案的實際 NTFS 路徑名稱。 這是所傳回的相同路徑名稱**。PhysicalPathName**方法**varbinary**(**max**) filestream。 它是透過追蹤旗標 5556 啟用。 可為 Null。|  
+|**logical_path**|**nvarchar(256)**|顯示此控制代碼開啟之檔案的邏輯路徑名稱。 這是所傳回的相同路徑名稱 **。PathName**方法**varbinary**(**max**) filestream。 可為 Null。|  
+|**physical_path**|**nvarchar(256)**|顯示檔案的實際 NTFS 路徑名稱。 這是所傳回的相同路徑名稱 **。PhysicalPathName**方法**varbinary**(**max**) filestream。 它是透過追蹤旗標 5556 啟用。 可為 Null。|  
   
 ## <a name="permissions"></a>Permissions  
  需要伺服器的 VIEW SERVER STATE 權限。  

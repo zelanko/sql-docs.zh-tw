@@ -3,11 +3,9 @@ title: LOCALDB_ERROR_UNKNOWN_LANGUAGE_ID |Microsoft 文件
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
-ms.prod_service: database-engine
-ms.component: localdb
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: performance
 ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: fa082dca-bf88-46e7-b61e-7ac8835a3493
@@ -15,11 +13,11 @@ caps.latest.revision: 8
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 3c0d09e24c3df0aa34866bfe0b6f7a8e9d7f0724
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 7233b624053c2c707e8576ccf4cb23edcec1baa8
+ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="localdberrorunknownlanguageid"></a>LOCALDB_ERROR_UNKNOWN_LANGUAGE_ID
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

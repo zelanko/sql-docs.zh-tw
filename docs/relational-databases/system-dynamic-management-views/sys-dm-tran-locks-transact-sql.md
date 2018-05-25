@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: dmv's
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: system-objects
@@ -25,11 +24,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: b2e8adf59403318df0fc46bd817fc6ff12bcef0f
-ms.sourcegitcommit: d2573a8dec2d4102ce8882ee232cdba080d39628
+ms.openlocfilehash: fbc8bb6eb7dc1a178a44e67b9e23b7ec98c75dce
+ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 05/23/2018
 ---
 # <a name="sysdmtranlocks-transact-sql"></a>sys.dm_tran_locks (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -57,7 +56,7 @@ ms.lasthandoff: 05/07/2018
 |**request_session_id**|**int**|目前擁有這項要求的工作階段識別碼。 主控工作階段識別碼會隨著分散式和繫結式交易而改變。 -2 值表示要求屬於被遺棄的分散式交易。 -3 值表示該要求是屬於延遲的復原交易，例如，由於回復作業無法順利完成，因而在復原時延遲的交易。|  
 |**request_exec_context_id**|**int**|目前擁有這項要求之處理序的工作階段內容識別碼。|  
 |**request_request_id**|**int**|目前擁有這項要求之處理序的要求識別碼 (批次識別碼)。 只要交易的使用中 Multiple Active Result Set (MARS) 連接一改變，這個值就會隨之改變。|  
-|**request_owner_type**|**nvarchar(60)**|擁有要求的實體類型。 鎖定管理員要求可以由各種實體所擁有。 可能的值為：<br /><br /> TRANSACTION = 要求是由交易所擁有。<br /><br /> CURSOR = 要求是由資料指標所擁有。<br /><br /> SESSION = 要求是由使用者工作階段所擁有。<br /><br /> SHARED_TRANSACTION_WORKSPACE = 要求是由交易工作空間的共用部分所擁有。<br /><br /> EXCLUSIVE_TRANSACTION_WORKSPACE = 要求是由交易工作空間的獨佔部分所擁有。<br /><br /> NOTIFICATION_OBJECT = 要求是由內部 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 元件所擁有。 這個元件已要求鎖定管理員在另一個元件等候取得鎖定時通知它。 FileTable 功能是使用此值的元件。<br /><br /> **注意：**工作空間會在內部使用，為編列的工作階段保留鎖定。|  
+|**request_owner_type**|**nvarchar(60)**|擁有要求的實體類型。 鎖定管理員要求可以由各種實體所擁有。 可能的值為：<br /><br /> TRANSACTION = 要求是由交易所擁有。<br /><br /> CURSOR = 要求是由資料指標所擁有。<br /><br /> SESSION = 要求是由使用者工作階段所擁有。<br /><br /> SHARED_TRANSACTION_WORKSPACE = 要求是由交易工作空間的共用部分所擁有。<br /><br /> EXCLUSIVE_TRANSACTION_WORKSPACE = 要求是由交易工作空間的獨佔部分所擁有。<br /><br /> NOTIFICATION_OBJECT = 要求是由內部 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 元件所擁有。 這個元件已要求鎖定管理員在另一個元件等候取得鎖定時通知它。 FileTable 功能是使用此值的元件。<br /><br /> **注意：** 工作空間會在內部使用，為編列的工作階段保留鎖定。|  
 |**request_owner_id**|**bigint**|這項要求的特定擁有者識別碼。<br /><br /> 當交易是要求的擁有者時，這個值包含交易識別碼。<br /><br /> 當 FileTable 是要求的擁有者**request_owner_id**具有下列值之一。<br /><br /> <br /><br /> -4： 已取得資料庫鎖定的 FileTable。<br /><br /> -3： 已取得資料表鎖定的 FileTable。<br /><br /> 其他值： 的值代表檔案控制代碼。 這個值也會顯示為**fcb_id**動態管理檢視中[sys.dm_filestream_non_transacted_handles &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-filestream-non-transacted-handles-transact-sql.md)。|  
 |**request_owner_guid**|**uniqueidentifier**|此要求之特定擁有者的 GUID。 只有值對應於該交易之 MS DTC GUID 的分散式交易才會使用這個值。|  
 |**request_owner_lockspace_id**|**nvarchar(32)**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)] 這個值代表要求器的鎖定空間識別碼。 鎖定空間識別碼可以判斷兩個要求器是否彼此相容，如果其模式會彼此衝突，是否可被授與鎖定。|  

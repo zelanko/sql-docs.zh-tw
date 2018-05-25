@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.component: dmv's
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: system-objects
@@ -26,11 +25,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 230833a06bfdfdfdc237b1f446d63b91eb7a71db
-ms.sourcegitcommit: d2573a8dec2d4102ce8882ee232cdba080d39628
+ms.openlocfilehash: 1853bdbf62701cfbaa5302615eac61684089ac5a
+ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 05/23/2018
 ---
 # <a name="sysdmdbindexphysicalstats-transact-sql"></a>sys.dm_db_index_physical_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -106,7 +105,7 @@ sys.dm_db_index_physical_stats (
 |avg_fragment_size_in_pages|**float**|IN_ROW_DATA 配置單位的分葉層級中，一個片段的平均頁數。<br /><br /> 如果是索引的非分葉層級，以及 LOB_DATA 或 ROW_OVERFLOW_DATA 配置單位，則為 NULL。<br /><br /> NULL 堆積，則*模式*= SAMPLED。|  
 |page_count|**bigint**|索引或資料頁總數。<br /><br /> 如果是索引，則為 IN_ROW_DATA 配置單位中，B 型樹狀目錄目前層級的總索引頁數。<br /><br /> 如果是堆積，則為 IN_ROW_DATA 配置單位中的總資料頁數。<br /><br /> 如果是 LOB_DATA 或 ROW_OVERFLOW_DATA 配置單位，則為配置單位中的總頁數。|  
 |avg_page_space_used_in_percent|**float**|所有頁面所用之可用資料儲存空間的平均百分比。<br /><br /> 如果是索引，則為 IN_ROW_DATA 配置單位中 B 型樹狀目錄目前層級的平均數。<br /><br /> 如果是堆積，則為 IN_ROW_DATA 配置單位中所有資料頁的平均數。<br /><br /> 如果是 LOB_DATA 或 ROW_OVERFLOW DATA 配置單位，則為配置單位中所有頁面的平均數。<br /><br /> NULL*模式*= LIMITED。|  
-|record_count|**bigint**|總記錄數。<br /><br /> 如果是索引，則為 IN_ROW_DATA 配置單位中，B 型樹狀目錄目前層級的總記錄數。<br /><br /> 如果是堆積，則為 IN_ROW_DATA 配置單位中的總記錄數。<br /><br /> **注意：**是堆積，從此函數傳回的記錄數目可能不符合執行選取的計數所傳回的資料列數目 (\*) 針對該堆積。 這是因為一個資料列可能包含數筆記錄。 例如，在某些更新情況下，單一的堆積資料列可能有一筆轉送記錄以及一筆當做更新作業結果的轉送記錄。 同時，在 LOB_DATA 儲存體中，會將多數大型的 LOB 資料列分割為多筆記錄。<br /><br /> 如果是 LOB_DATA 或 ROW_OVERFLOW_DATA 配置單位，則為完整配置單位中的總記錄數。<br /><br /> NULL*模式*= LIMITED。|  
+|record_count|**bigint**|總記錄數。<br /><br /> 如果是索引，則為 IN_ROW_DATA 配置單位中，B 型樹狀目錄目前層級的總記錄數。<br /><br /> 如果是堆積，則為 IN_ROW_DATA 配置單位中的總記錄數。<br /><br /> **注意：** 是堆積，從此函數傳回的記錄數目可能不符合執行選取的計數所傳回的資料列數目 (\*) 針對該堆積。 這是因為一個資料列可能包含數筆記錄。 例如，在某些更新情況下，單一的堆積資料列可能有一筆轉送記錄以及一筆當做更新作業結果的轉送記錄。 同時，在 LOB_DATA 儲存體中，會將多數大型的 LOB 資料列分割為多筆記錄。<br /><br /> 如果是 LOB_DATA 或 ROW_OVERFLOW_DATA 配置單位，則為完整配置單位中的總記錄數。<br /><br /> NULL*模式*= LIMITED。|  
 |ghost_record_count|**bigint**|配置單位中，準刪除清除工作準備要移除的準刪除記錄數。<br /><br /> 如果是 IN_ROW_DATA 配置單位中索引的非分葉層級，則為 0。<br /><br /> NULL*模式*= LIMITED。|  
 |version_ghost_record_count|**bigint**|配置單位中未完成之快照集隔離交易所保留的準刪除記錄數。<br /><br /> 如果是 IN_ROW_DATA 配置單位中索引的非分葉層級，則為 0。<br /><br /> NULL*模式*= LIMITED。|  
 |min_record_size_in_bytes|**int**|記錄大小下限 (以位元組為單位)。<br /><br /> 如果是索引，則為 IN_ROW_DATA 配置單位中 B 型樹狀目錄目前層級的記錄大小下限。<br /><br /> 如果是堆積，則為 IN_ROW_DATA 配置單位中的記錄大小下限。<br /><br /> 如果是 LOB_DATA 或 ROW_OVERFLOW_DATA 配置單位，則為完整配置單位中的記錄大小下限。<br /><br /> NULL*模式*= LIMITED。|  

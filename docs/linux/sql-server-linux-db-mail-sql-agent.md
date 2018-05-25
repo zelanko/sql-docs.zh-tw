@@ -7,17 +7,16 @@ manager: craigg
 ms.date: 02/20/2018
 ms.topic: article
 ms.prod: sql
-ms.prod_service: database-engine
 ms.component: ''
 ms.suite: sql
 ms.custom: sql-linux
-ms.technology: database-engine
+ms.technology: linux
 ms.assetid: tbd
-ms.openlocfilehash: b492f0418ab96ce0a93b50f1b0dd7bb1b18c0ae7
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: b09362bd4c274e975f116b8e143b6a7b5a01f97d
+ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="db-mail-and-email-alerts-with-sql-agent-on-linux"></a>DB 郵件和電子郵件警示，在 Linux 上的 SQL 代理程式
 

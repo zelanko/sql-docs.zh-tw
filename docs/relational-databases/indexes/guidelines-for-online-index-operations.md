@@ -22,11 +22,11 @@ manager: craigg
 ms.suite: sql
 ms.prod_service: table-view-index, sql-database
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 97a125f6de05f5a17a5b1015c247f6d84cf8d434
-ms.sourcegitcommit: 0cc2cb281e467a13a76174e0d9afbdcf4ccddc29
+ms.openlocfilehash: 7762c5e00dde9e317cc1a1521385faad4c7d1d49
+ms.sourcegitcommit: 6fd8a193728abc0a00075f3e4766a7e2e2859139
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/15/2018
+ms.lasthandoff: 05/17/2018
 ---
 # <a name="guidelines-for-online-index-operations"></a>線上索引作業的指導方針
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -114,8 +114,11 @@ ms.lasthandoff: 05/15/2018
 
 ## <a name="online-default-options"></a>線上預設選項 
 
-您可以透過設定 ELEVATE_ONLINE 或 ELEVATE_RESUMABLE 資料庫範圍設定選項，在資料庫層級設定線上或可繼續的預設選項。 使用這些預設選項，您可以避免不小心執行讓資料庫離線的作業。 這兩個選項都會使引擎自動將某些作業提升為線上或可繼續執行。  
-您可以將任一選項設定為 FAIL_UNSUPPORTED、WHEN_SUPPORTED 或 NEVER。 您可以為線上和可繼續設定不同的值。 
+> [!IMPORTANT]
+> 這些選項處於公開預覽狀態。
+
+您可以透過設定 ELEVATE_ONLINE 或 ELEVATE_RESUMABLE 資料庫範圍設定選項，在資料庫層級設定線上或可繼續的預設選項。 使用這些預設選項，您可以避免不小心執行讓資料庫資料表離線的作業。 這兩個選項都會使引擎自動將某些作業提升為線上或可繼續執行。  
+您可以使用 [ALTER DATABASE SCOPED CONFIGURATION](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md) 命令，將選項設為 FAIL_UNSUPPORTED、WHEN_SUPPORTED 或 OFF。 您可以為線上和可繼續設定不同的值。 
 
 ELEVATE_ONLINE 和 ELEVATE_RESUMABLE 僅適用於分別支援線上和可繼續語法的 DDL 陳述式。 例如，如果您嘗試建立 ELEVATE_ONLINE=FAIL_UNSUPORTED 的 XML 索引，由於 XML 索引不支援 ONLINE= 語法，因此會離線執行作業。 該選項只會影響未指定 ONLINE 或 RESUMABLE 選項所送出的 DDL 陳述式。 例如，藉由送出 ONLINE=OFF 或 RESUMABLE=OFF 的陳述式，使用者可以覆寫 FAIL_UNSUPPORTED 設定，並離線及/或以不可繼續的方式執行陳述式。 
  

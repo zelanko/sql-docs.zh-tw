@@ -22,11 +22,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: d222a06a64d53ab26d19206f846edadf69e613ba
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: a63c3142cdc5ca670117ef7d14c4d6079b575972
+ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="sysdatabaseserviceobjectives-azure-sql-database"></a>sys.database_service_objectives (Azure SQL Database)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-asdw-xxx-md.md)]
@@ -43,8 +43,8 @@ ms.lasthandoff: 05/04/2018
 |資料行名稱|資料類型|Description|  
 |-----------------|---------------|-----------------|  
 |database_id|int|資料庫中的 Azure SQL Database 伺服器執行個體的唯一識別碼。 可加入與[sys.databases &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)。|  
-|版本|sysname|資料庫或資料倉儲的服務層：**基本**，**標準**， **Premium**，**一般用途**， **重要商務資料**，或**資料倉儲**。|  
-|service_objective|sysname|資料庫的定價層。 如果資料庫是彈性集區中，會傳回**ElasticPool**。<br /><br /> 在**基本**層，傳回**基本**。<br /><br /> Standard 服務層中的單一資料庫傳回此階層的目前有效值。<br /><br /> Premium 層中的單一資料庫傳回針對此服務層目前有效的值。<br /><br />一般用途的服務層中的單一資料庫傳回針對此服務層目前有效的值。<br /><br />商務關鍵性的服務層中的單一資料庫傳回針對此服務層目前有效的值。<br /><br /> SQL 資料倉儲的 SQL 資料倉儲，傳回目前有效的值。|  
+|版本|sysname|資料庫或資料倉儲的服務層：**基本**，**標準**， **Premium**或**資料倉儲**。|  
+|service_objective|sysname|資料庫的定價層。 如果資料庫是彈性集區中，會傳回**ElasticPool**。<br /><br /> 在**基本**層，傳回**基本**。<br /><br /> **Standard 服務層中的單一資料庫**傳回下列其中之一： S0、 S1、 S2 或 S3。<br /><br /> **Premium 層中的單一資料庫**傳回下列動作： P1、 P2、 P4、 P6/P3 或 P11。<br /><br /> **SQL 資料倉儲**傳回透過 DW10000c DW100。|  
 |elastic_pool_name|sysname|名稱[彈性集區](https://azure.microsoft.com/documentation/articles/sql-database-elastic-pool/)所屬的資料庫。 傳回**NULL**如果資料庫是單一資料庫或資料 warehoue。|  
   
 ## <a name="permissions"></a>Permissions  

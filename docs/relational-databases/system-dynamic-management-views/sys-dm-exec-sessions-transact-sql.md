@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 08/21/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.component: dmv's
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: system-objects
@@ -25,11 +24,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 8f5670a83fc6510f7c31966075fce911814ee7e5
-ms.sourcegitcommit: d2573a8dec2d4102ce8882ee232cdba080d39628
+ms.openlocfilehash: cc1293a87ddfb743964a40377ba126a2f745d59d
+ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 05/23/2018
 ---
 # <a name="sysdmexecsessions-transact-sql"></a>sys.dm_exec_sessions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -38,13 +37,13 @@ ms.lasthandoff: 05/07/2018
   
  Sys.dm_exec_connections、 sys.dm_exec_sessions 和 sys.dm_exec_requests 動態管理檢視會對應到[sys.sysprocesses](../../relational-databases/system-compatibility-views/sys-sysprocesses-transact-sql.md)系統資料表。  
   
-> **注意：**呼叫從[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]或[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]，使用名稱**sys.dm_pdw_nodes_exec_sessions**。  
+> **注意：** 呼叫從[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]或[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]，使用名稱**sys.dm_pdw_nodes_exec_sessions**。  
   
 |資料行名稱|資料類型|描述與特定版本資訊|  
 |-----------------|---------------|-----------------|  
 |session_id|**smallint**|識別每個使用中的主要連接所關聯的工作階段。 不可為 Null。|  
 |login_time|**datetime**|建立工作階段的時間。 不可為 Null。|  
-|host_name|**nvarchar(128)**|工作階段的特定用戶端工作站名稱。 內部工作階段的值為 NULL。 可為 Null。<br /><br /> **安全性注意事項：**用戶端應用程式提供工作站名稱，而且可以提供不正確的資料。 請勿依賴 HOST_NAME 當做安全性功能。|  
+|host_name|**nvarchar(128)**|工作階段的特定用戶端工作站名稱。 內部工作階段的值為 NULL。 可為 Null。<br /><br /> **安全性注意事項：** 用戶端應用程式提供工作站名稱，而且可以提供不正確的資料。 請勿依賴 HOST_NAME 當做安全性功能。|  
 |program_name|**nvarchar(128)**|起始工作階段的用戶端程式名稱。 內部工作階段的值為 NULL。 可為 Null。|  
 |host_process_id|**int**|起始工作階段之用戶端程式的處理序識別碼。 內部工作階段的值為 NULL。 可為 Null。|  
 |client_version|**int**|用戶端連接伺服器所用介面的 TDS 通訊協定版本。 內部工作階段的值為 NULL。 可為 Null。|  

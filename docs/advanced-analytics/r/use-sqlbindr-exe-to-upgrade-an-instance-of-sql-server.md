@@ -8,11 +8,11 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: aa67fbf2480de093ffe2f919e9c50ee2d5082b83
-ms.sourcegitcommit: df382099ef1562b5f2d1cd506c1170d1db64de41
+ms.openlocfilehash: 694cbb2a6addc89f40dd6d9670768ad13a84ef3f
+ms.sourcegitcommit: b5ab9f3a55800b0ccd7e16997f4cd6184b4995f9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/12/2018
+ms.lasthandoff: 05/23/2018
 ---
 # <a name="upgrade-machine-learning-r-and-python-components-in-sql-server-instances"></a>升級 SQL Server 執行個體中的機器學習 （R 和 Python） 元件
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -258,37 +258,6 @@ WITH RESULT SETS ((PackageName nvarchar(250), PackageVersion nvarchar(max) ))
 
 您可能已經將其他開放原始碼或協力廠商封裝加入您的封裝程式庫。 因為反轉繫結參數的預設套件程式庫的位置，您必須重新安裝現在使用 R，並將 Python 的文件庫的封裝。 如需詳細資訊，請參閱[預設封裝](installing-and-managing-r-packages.md)，[安裝新的 R 封裝](install-additional-r-packages-on-sql-server.md)，和[安裝新的 Python 封裝](../python/install-additional-python-packages-on-sql-server.md)。
 
-## <a name="known-issues"></a>已知問題
-
-此區段會列出特有使用 SqlBindR.exe 公用程式，或升級的機器學習伺服器可能會影響 SQL Server 執行個體的已知的問題。
-
-### <a name="restoring-packages-that-were-previously-installed"></a>還原先前安裝的封裝
-
-如果您升級到 Microsoft R Server 9.0.1，該版本 SqlBindR.exe 版本無法還原原始封裝或 R 元件完整地要求使用者執行個體上，執行 SQL Server 修復套用所有的服務版本，然後再重新啟動執行個體。
-
-新版 SqlBindR 自動還原原始的 R 功能，因而不須重新安裝的 R 元件，或重新修補程式的伺服器。 不過，您必須安裝任何可能在初始安裝後加入的 R 封裝更新。
-
-如果您已經使用封裝管理角色來安裝及共用封裝，這項工作就能輕鬆： 您可以使用 R 命令來同步處理已安裝的封裝，在資料庫中，使用記錄在檔案系統，反之亦然。 如需詳細資訊，請參閱[for SQL Server 的 R 封裝管理](r-package-management-for-sql-server-r-services.md)。
-
-### <a name="problems-with-multiple-upgrades-from-sql-server"></a>從 SQL Server 的多個升級的問題
-
-如果 SQL Server 2016 R Services 的執行個體先前已升級 9.0.1，當您執行 Microsoft R Server 9.1.0 的新安裝程式時，它會顯示一份所有有效的執行個體，並接著依預設會選取先前繫結的執行個體。 如果您繼續時，先前繫結的執行個體將會解除繫結。 如此一來，較早 9.0.1 會移除安裝，包括任何相關的封裝，但不是安裝 Microsoft R Server (9.1.0) 的新版本。
-
-因應措施，您可以修改現有的 R 伺服器安裝，如下所示：
-1. 在控制台中開啟**新增或移除程式**。
-2. 找出 Microsoft R Server，然後按一下**變更/修改**。
-3. 安裝程式啟動時，選取您想要繫結至 9.1.0 的執行個體。
-
-Microsoft 的機器學習 Server 9.2.1 和 9.3 並沒有此問題。
-
-### <a name="binding-or-unbinding-leaves-multiple-temporary-folders"></a>繫結或解除繫結會保留多個暫存資料夾
-
-有時繫結和解除繫結作業無法清除暫存資料夾。
-如果您發現具有類似名稱的資料夾，您可以將它移除安裝完成之後： R_SERVICES_<guid>
-
-> [!NOTE]
-> 請務必等候安裝完成。 可能需要很長的時間，若要移除與版本相關聯的 R 程式庫，然後再加入新的 R 程式庫。 當作業完成時，會移除暫存資料夾。
-
 ## <a name="sqlbindrexe-command-syntax"></a>SqlBindR.exe 命令語法
 
 ### <a name="usage"></a>使用方式
@@ -322,6 +291,36 @@ MLS Installer 和 SqlBindR 會傳回下列錯誤碼和訊息。
 |繫結錯誤 8 | 解除繫結失敗 | 解除繫結執行個體時發生錯誤。 |
 |繫結錯誤 9 | 找不到任何執行個體 | 找不到此電腦上的任何 database engine 執行個體。 |
 
+## <a name="known-issues"></a>已知問題
+
+此區段會列出特有使用 SqlBindR.exe 公用程式，或升級的機器學習伺服器可能會影響 SQL Server 執行個體的已知的問題。
+
+### <a name="restoring-packages-that-were-previously-installed"></a>還原先前安裝的封裝
+
+如果您升級到 Microsoft R Server 9.0.1，該版本 SqlBindR.exe 版本無法還原原始封裝或 R 元件完整地要求使用者執行個體上，執行 SQL Server 修復套用所有的服務版本，然後再重新啟動執行個體。
+
+新版 SqlBindR 自動還原原始的 R 功能，因而不須重新安裝的 R 元件，或重新修補程式的伺服器。 不過，您必須安裝任何可能在初始安裝後加入的 R 封裝更新。
+
+如果您已經使用封裝管理角色來安裝及共用封裝，這項工作就能輕鬆： 您可以使用 R 命令來同步處理已安裝的封裝，在資料庫中，使用記錄在檔案系統，反之亦然。 如需詳細資訊，請參閱[for SQL Server 的 R 封裝管理](r-package-management-for-sql-server-r-services.md)。
+
+### <a name="problems-with-multiple-upgrades-from-sql-server"></a>從 SQL Server 的多個升級的問題
+
+如果 SQL Server 2016 R Services 的執行個體先前已升級 9.0.1，當您執行 Microsoft R Server 9.1.0 的新安裝程式時，它會顯示一份所有有效的執行個體，並接著依預設會選取先前繫結的執行個體。 如果您繼續時，先前繫結的執行個體將會解除繫結。 如此一來，較早 9.0.1 會移除安裝，包括任何相關的封裝，但不是安裝 Microsoft R Server (9.1.0) 的新版本。
+
+因應措施，您可以修改現有的 R 伺服器安裝，如下所示：
+1. 在控制台中開啟**新增或移除程式**。
+2. 找出 Microsoft R Server，然後按一下**變更/修改**。
+3. 安裝程式啟動時，選取您想要繫結至 9.1.0 的執行個體。
+
+Microsoft 的機器學習 Server 9.2.1 和 9.3 並沒有此問題。
+
+### <a name="binding-or-unbinding-leaves-multiple-temporary-folders"></a>繫結或解除繫結會保留多個暫存資料夾
+
+有時繫結和解除繫結作業無法清除暫存資料夾。
+如果您發現具有類似名稱的資料夾，您可以將它移除安裝完成之後： R_SERVICES_<guid>
+
+> [!NOTE]
+> 請務必等候安裝完成。 可能需要很長的時間，若要移除與版本相關聯的 R 程式庫，然後再加入新的 R 程式庫。 當作業完成時，會移除暫存資料夾。
 
 ## <a name="see-also"></a>另請參閱
 

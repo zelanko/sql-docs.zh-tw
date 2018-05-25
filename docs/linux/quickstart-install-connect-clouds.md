@@ -7,16 +7,15 @@ manager: craigg
 ms.date: 10/25/2017
 ms.topic: article
 ms.prod: sql
-ms.prod_service: database-engine
 ms.component: ''
 ms.custom: sql-linux
-ms.technology: database-engine
+ms.technology: linux
 ms.assetid: ''
-ms.openlocfilehash: 29ed2b218f4d9c746f9356a2a57bbacd845b4df6
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: f5d67ff25cb5d2816672fafe0602d56921c034bb
+ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="quickstart-run-the-sql-server-2017-in-the-cloud"></a>快速入門： 在雲端中執行 SQL Server 2017
 

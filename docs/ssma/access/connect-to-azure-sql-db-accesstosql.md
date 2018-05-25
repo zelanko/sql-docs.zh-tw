@@ -5,7 +5,7 @@ ms.prod_service: sql-tools
 ms.date: 01/19/2017
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
+ms.technology: ssma
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 applies_to:
@@ -18,11 +18,11 @@ caps.latest.revision: 17
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 91b23e9b9fff61b03f30606d9d698330c00713a8
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: a789b00930a68280a314072725a5d902d9dfe240
+ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="connect-to-azure-sql-db-accesstosql"></a>連接到 Azure SQL DB (AccessToSQL)
 使用 [連線到 SQL Azure] 對話方塊中，連接到您想要移轉 SQL Azure 資料庫。  
@@ -60,13 +60,13 @@ SSMA 會建議加密的連接到 SQL Azure。
   
 2.  如果有任何資料庫，會出現兩個功能表項目  
   
-    1.  **（找不到資料庫）**是停用，隨時都呈現灰色  
+    1.  **（找不到資料庫）** 是停用，隨時都呈現灰色  
   
     2.  **建立新的資料庫**其永遠啟用，讓使用者能夠在 SQL Azure 帳戶上建立新的 azure 資料庫。 按一下這個功能表項目後, 建立 azure 資料庫對話方塊就會出現以資料庫名稱和大小。  
   
 3.  在建立資料庫時，這兩個參數是指定為輸入。  
   
-    1.  **資料庫名稱：**輸入資料庫名稱。  
+    1.  **資料庫名稱：** 輸入資料庫名稱。  
   
-    2.  **資料庫大小：**選取您要在 SQL Azure 帳戶中建立的資料庫大小。  
+    2.  **資料庫大小：** 選取您要在 SQL Azure 帳戶中建立的資料庫大小。  
   

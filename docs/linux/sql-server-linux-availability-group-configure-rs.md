@@ -7,17 +7,16 @@ manager: craigg
 ms.date: 02/14/2018
 ms.topic: article
 ms.prod: sql
-ms.prod_service: database-engine
 ms.component: ''
 ms.suite: sql
 ms.custom: sql-linux
-ms.technology: database-engine
+ms.technology: linux
 ms.assetid: ''
-ms.openlocfilehash: dfe38445a76606543b184b60c3b1d37fbde64547
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: e406248118933eb60e95e101c6812d61b72ad7a7
+ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="configure-a-sql-server-availability-group-for-read-scale-on-linux"></a>SQL Server 可用性群組設定為向外延展讀取 on Linux
 

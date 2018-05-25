@@ -7,17 +7,16 @@ manager: craigg
 ms.date: 11/14/2017
 ms.topic: article
 ms.prod: sql
-ms.prod_service: database-engine
 ms.component: ''
 ms.suite: sql
 ms.custom: sql-linux
-ms.technology: database-engine
+ms.technology: linux
 ms.assetid: d30090fb-889f-466e-b793-5f284fccc4e6
-ms.openlocfilehash: 60614c5dc56a83373cfd1b70ec80968be0a30aee
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 6e4699fb2ffadc3aaad73c4032073ff8567c856c
+ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="backup-and-restore-sql-server-databases-on-linux"></a>在 Linux 上的備份和還原 SQL Server 資料庫
 
@@ -102,7 +101,7 @@ SQL Server 完成資料庫備份。
 
 1. 在 SSMS 中以滑鼠右鍵按一下**資料庫**按一下**還原資料庫...**. 
 
-1. 在下**來源**按一下**裝置：**然後按一下省略符號 （...）。
+1. 在下**來源**按一下**裝置：** 然後按一下省略符號 （...）。
 
 1. 找出您的資料庫備份檔案並按一下**確定**。 
 

@@ -12,67 +12,59 @@ ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: dae49099f938baa071149072b277411b99e63dc5
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 36638c4cc2bda58ac277822d5c4a4ce5421ab8b4
+ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/23/2018
 ---
 # <a name="wideworldimportersdw-etl-workflow"></a>WideWorldImportersDW ETL 工作流程
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-ETL 封裝 WWI_Integration 用來將資料從 WideWorldImporters 資料庫移轉到 WideWorldImportersDW 資料庫，當資料變更。 封裝會定期執行 （通常每日）。
+使用*WWI_Integration* ETL 封裝，將資料從 WideWorldImporters 資料庫移轉到 WideWorldImportersDW 資料庫，當資料變更時。 封裝會定期執行 （通常是每日）。
 
-## <a name="overview"></a>概觀
+封裝可高效能確保使用 SQL Server Integration Services 來協調大量 T-SQL 作業 （而不是在 Integration Services 中的個別轉換）。
 
-設計的封裝會使用 SQL Server Integration Services (SSIS) 來協調大量 T-SQL 作業 （而不是當做個別轉換 SSIS 中） 以確保高效能。
+首先，載入維度和事實資料表的載入然後。 您可以隨時在失敗後重新執行封裝。
 
-維度會載入第一次，然後再按照事實資料表。 在失敗後的任何時間，可以重新執行封裝。
-
-工作流程如下所示：
+工作流程看起來像這樣：
 
  ![WideWorldImporters ETL 工作流程](media/wide-world-importers/wideworldimporters-etl-workflow.png)
 
-開始運作的 「 運算式 」 工作與適當的時間點。 此時間是目前的時間較少幾分鐘的時間。 （這是要求資料的權限到目前的時間比更健全）。 然後，它會截斷任何時間 （毫秒）。
+使用 「 運算式 」 工作會決定適當的時間點開始工作流程。 時間點是目前時間減去幾分鐘的時間。 （這種方法是要求資料的權限到目前的時間比更健全的）。任何 （毫秒） 會被截斷的時間。
 
-主要處理一開始會填入日期維度資料表。 它會確保資料表中，已填入目前年度的所有日期。
+主要處理一開始會填入日期維度資料表。 處理可確保資料表中，已填入目前年度的所有日期。
 
-在此之後，一系列的資料流程工作會載入每個維度，則每一個事實。
+接下來，一系列的資料流程工作載入的每個維度。 然後，它們會載入每個事實。
 
 ## <a name="prerequisites"></a>필수 구성 요소
 
-- SQL Server 2016 （或更新版本） 與 WideWorldImporters 和 WideWorldImportersDW 資料庫。 這些可以在相同或不同 SQL Server 執行個體上。
-- SQL Server Management Studio (SSMS)
-- SQL Server 2016 Integration Services (SSIS)。
-  - 請確定您已建立 SSIS 目錄。 如果沒有，請以滑鼠右鍵按一下**Integration Services**在 SSMS 物件總管] 中，選擇 [**加入目錄**。 遵循的預設值。 它會要求您啟用 sqlclr 及提供密碼。
+- SQL Server 2016 （或更新版本），與 WideWorldImporters 和 WideWorldImportersDW 資料庫 （在相同或不同的執行個體的 SQL Server）
+- Transact-SQL
+- SQL Server 2016 Integration Services
+  - 請確定您建立的 Integration Services 目錄。 若要建立的 Integration Services 目錄中，SQL Server Management Studio 物件總管 中，以滑鼠右鍵按一下**Integration Services**，然後選取**加入目錄**。 保留預設選項。 系統會提示您啟用 SQLCLR 並提供的密碼。
 
 
 ## <a name="download"></a>下載
 
-最新版的範例：
+如範例的最新版本，請參閱[wide world-匯入工具版本](http://go.microsoft.com/fwlink/?LinkID=800630)。 下載*每日 ETL.ispac* Integration Services 封裝檔案。
 
-[wide-world-importers-release](http://go.microsoft.com/fwlink/?LinkID=800630)
-
-SSIS 封裝檔案下載**每日 ETL.ispac**。
-
-重新建立範例資料庫的原始程式碼可從下列位置。
-
-[wide-world-importers](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/wide-world-importers/wwi-integration-etl)
+若要重新建立範例資料庫的原始程式碼，請參閱[匯入 world wide 工具](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/wide-world-importers/wwi-integration-etl)。
 
 ## <a name="install"></a>安裝
 
-1. 部署 SSIS 封裝。
-   - 從 Windows 檔案總管中開啟 「 每日 ETL.ispac"封裝。 這會啟動 Integration Services 部署精靈。
-   - 在 [選取來源] 之後，預設專案的部署，指向 「 每日 ETL.ispac 」 封裝的路徑。
-   - 在 [選取目的地] 下輸入主控 SSIS 目錄的伺服器名稱。
-   - 選取 SSIS 目錄中，例如在新的資料夾"WideWorldImporters"下的路徑。
-   - 完成精靈，即可部署程序。
+1. 部署 Integration Services 封裝：
+   1. 在 Windows 檔案總管 中，開啟*每日 ETL.ispac*封裝。 這會啟動 SQL Server Integration Services 部署精靈。
+   2. 在下**選取來源**，遵循專案部署的預設值，具有指向路徑*每日 ETL.ispac*封裝。
+   3. 在下**選取目的地**，輸入主控 Integration Services 目錄的伺服器名稱。
+   4. 例如，選取名為新資料夾中的下的 Integration Services 類別目錄中的路徑*WideWorldImporters*。
+   5. 選取**部署**以完成精靈。
 
-2. 建立 ETL 程序的 SQL Server Agent 作業。
-   - 在 SSMS 中，以滑鼠右鍵按一下 「 SQL Server 代理程式 」，然後選擇 新增-> 作業。
-   - 挑選的名稱，例如"WideWorldImporters ETL"。
-   - 新增作業步驟的型別"SQL Server Integration Services 封裝。
-   - 選取 SSIS 目錄中，伺服器並選取 「 每日 ETL"封裝。
-   - 設定 下-> 連接管理員確認已正確設定通往來源和目標。 預設為連接到本機執行個體。
-   - 按一下 [確定] 來建立作業。
+2. 建立 SQL Server Agent 作業的 ETL 程序：
+   1. 在 Management Studio 中，以滑鼠右鍵按一下**SQL Server Agent**，然後選取**新增** > **作業**。
+   2. 例如，輸入名稱， *WideWorldImporters ETL*。
+   3. 新增**作業步驟**型別的**SQL Server Integration Services 封裝**。
+   4. 選取的 Integration Services 類別目錄中的伺服器，然後選取*每日 ETL*封裝。
+   5. 在下**組態** > **連接管理員**，確認已正確設定通往來源和目標。 預設為連接到本機執行個體。
+   6. 選取**確定**建立作業。
 
 3. 執行或排程作業。

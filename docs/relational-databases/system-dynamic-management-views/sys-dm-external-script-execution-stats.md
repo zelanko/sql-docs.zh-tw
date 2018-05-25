@@ -3,8 +3,6 @@ title: sys.dm_external_script_execution_stats |Microsoft 文件
 ms.custom: ''
 ms.date: 09/16/2016
 ms.prod: sql
-ms.prod_service: database-engine
-ms.component: dmv's
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: ''
@@ -24,11 +22,11 @@ caps.latest.revision: 5
 author: jeannt
 ms.author: jeannt
 manager: craigg
-ms.openlocfilehash: d3b8ff8bf463c7f03d370d681f0efbd86830e688
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 01380a29665d848fff1620787a97aabbcdac4033
+ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/23/2018
 ---
 # <a name="sysdmexternalscriptexecutionstats"></a>sys.dm_external_script_execution_stats
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]

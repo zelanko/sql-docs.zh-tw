@@ -8,16 +8,23 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 1106d0f1505f29a3b54f9fc036fcaf28b8715b75
-ms.sourcegitcommit: feff98b3094a42f345a0dc8a31598b578c312b38
+ms.openlocfilehash: 20ef7181c5ab8c0494f73b205dddcdf1ac0a620e
+ms.sourcegitcommit: b5ab9f3a55800b0ccd7e16997f4cd6184b4995f9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/11/2018
+ms.lasthandoff: 05/23/2018
 ---
 # <a name="install-new-r-packages-on-sql-server"></a>SQL Server 上安裝新的 R 封裝
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-本文說明如何安裝新的 R 封裝在已啟用機器學習的 SQL Server 執行個體。 有多種方法，如安裝新的 R 封裝，根據您擁有 SQL server 版本，以及伺服器是否有網際網路連線。
+本文說明如何安裝新的 R 封裝在已啟用機器學習的 SQL Server 執行個體。 有多種方法，如安裝新的 R 封裝，根據您擁有 SQL server 版本，以及伺服器是否有網際網路連線。 適用於新的封裝安裝下列方法也有可能的。
+
+| 方法                           | Permissions  | 遠端/本機 |
+|------------------------------------|---------------------------|-------|
+| [使用傳統的 R 封裝管理員](#bkmk_rInstall)  | 管理 | 本機 |
+| [使用 RevoScaleR](use-revoscaler-to-manage-r-packages.md) | 管理 | 本機 |
+| [使用 T-SQL （建立外部程式庫）](install-r-packages-tsql.md) | 安裝程式，資料庫角色之後的系統管理員 | both 
+| [若要建立本機儲存機制使用 miniCRAN](create-a-local-package-repository-using-minicran.md) | 安裝程式，資料庫角色之後的系統管理員 | both |
 
 ## <a name="bkmk_rInstall"></a> 安裝 R 封裝，透過網際網路連接
 
@@ -75,51 +82,6 @@ ms.lasthandoff: 05/11/2018
     此命令會擷取 R 封裝`mynewpackage`從其本機的 zip 檔案，假設您的複本儲存在目錄中`C:\Temp\Downloaded packages`，並在本機電腦上安裝封裝。 如果封裝有任何相依性，安裝程式會檢查文件庫中現有的封裝。 如果您已經建立包含相依性的儲存機制，安裝程式會安裝必要的封裝。
 
     如果任何必要的封裝不會出現在執行個體文件庫，zip 檔案中找不到目標套件的安裝將會失敗。
-
-## <a name="bkmk_createlibrary"></a> 使用建立的外部文件庫
-
-**適用於：**  [!INCLUDE[sssql17-md](../../includes/sssql17-md.md)] [!INCLUDE[rsql-productnamenew-md](../../includes/rsql-productnamenew-md.md)]
-
-[建立外部程式庫](https://docs.microsoft.com/sql/t-sql/statements/create-external-library-transact-sql)陳述式會讓您能夠加入封裝一組特定資料庫或執行個體而不需執行 R 或直接 Python 程式碼。 不過，此方法需要封裝準備和其他資料庫的權限。
-
-+ 所有封裝必須是可當做本機的 zip 檔案，而不是視需要從網際網路下載。
-
-    如果您在伺服器上沒有存取檔案系統，您也可以傳遞完整的封裝為變數，使用一種二進位格式。 如需詳細資訊，請參閱[建立外部程式庫](../../t-sql/statements/create-external-library-transact-sql.md)。
-
-+ 必須由名稱和版本，所有相依性，並將其併入 zip 檔案。 如果封裝未提供，包括下游封裝相依性所需，陳述式將會失敗。 我們建議您使用**miniCRAN**或**igraph**分析封裝相依性。 安裝的封裝或封裝的相依性版本錯誤也可能導致陳述式失敗。 
-
-+ 您必須在資料庫上的必要權限。 如需詳細資訊，請參閱[建立外部程式庫](https://docs.microsoft.com/sql/t-sql/statements/create-external-library-transact-sql)。
-
-### <a name="prepare-the-packages-in-archive-format"></a>準備封裝封存格式
-
-1. 如果您要安裝在單一封裝，請下載 zip 格式的封裝。 
-
-2. 如果封裝需要任何其他封裝，您必須驗證所需的封裝是否可用。 您可以使用 miniCRAN 來分析目標的封裝，並識別所有相依性。 
-
-3. 複製壓縮的檔案或 miniCRAN 儲存機制包含所有的封裝，以在伺服器上的本機資料夾。
-
-4. 開啟**查詢**視窗中，使用具有系統管理權限的帳戶。
-
-5. 執行 T-SQL 陳述式`CREATE EXTERNAL LIBRARY`上傳到資料庫的 zip 壓縮的封裝集合。
-
-    例如，下列陳述式做為封裝來源 miniCRAN 儲存機制含有名稱**randomForest**封裝，以及其相依性。 
-
-    ```R
-    CREATE EXTERNAL LIBRARY randomForest
-    FROM (CONTENT = 'C:\Temp\Rpackages\randomForest_4.6-12.zip')
-    WITH (LANGUAGE = 'R');
-    ```
-
-    您無法使用任意名稱。外部程式庫名稱都必須具有您預期時載入，或呼叫封裝所使用的相同名稱。
-
-6. 如果已成功建立文件庫，您可以在 SQL Server 中，執行封裝，藉由呼叫預存程序。
-    
-    ```SQL
-    EXEC sp_execute_external_script
-    @language =N'R',
-    @script=N'
-    library(randomForest)'
-    ```
 
 ## <a name="tips-for-package-installation"></a>封裝安裝的秘訣
 

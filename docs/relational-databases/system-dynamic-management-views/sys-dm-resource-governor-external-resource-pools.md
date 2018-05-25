@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 05/02/2018
 ms.suite: sql
 ms.prod: sql
-ms.prod_service: database-engine
 ms.technology: machine-learning
-ms.component: dmv's
 ms.reviewer: ''
 ms.tgt_pltfrm: ''
 ms.topic: language-reference
@@ -23,11 +21,11 @@ helpviewer_keywords:
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 7a499aaa0c1377d1f64df4a5aed645c31ca3ebbf
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 9e28e848c7a95e8c29558cb6ee77056d47a955e7
+ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/23/2018
 ---
 # <a name="sysdmresourcegovernorexternalresourcepools-transact-sql"></a>sys.dm_resource_governor_external_resource_pools (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
