@@ -11,11 +11,11 @@ ms.component: ''
 ms.suite: sql
 ms.custom: sql-linux
 ms.technology: linux
-ms.openlocfilehash: 95bafbaef9b88fe2154a18e3c8bd9a9b5c4e16c5
-ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
+ms.openlocfilehash: 239d4418c5e7d59a980d9028e2533dd9d7a2c566
+ms.sourcegitcommit: fc3cd23685c6b9b6972d6a7bab2cc2fc5ebab5f2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/19/2018
+ms.lasthandoff: 05/25/2018
 ---
 # <a name="deploy-a-pacemaker-cluster-for-sql-server-on-linux"></a>Pacemaker 叢集部署的 SQL Server on Linux
 
@@ -48,7 +48,9 @@ ms.lasthandoff: 05/19/2018
     
     ```bash
     sudo subscription-manager list --available
-3.  Run the following command to associate RHEL high availability with the subscription
+    ```
+
+3.  執行下列命令，以將 RHEL 高可用性與訂用帳戶產生關聯
     
     ```bash
     sudo subscription-manager attach --pool=<PoolID>

@@ -9,11 +9,11 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 37d07fe45768d40b74e3b48739590648867efd94
-ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
+ms.openlocfilehash: 17099af36994f24d182c7465bcbdc3f82e670328
+ms.sourcegitcommit: fc3cd23685c6b9b6972d6a7bab2cc2fc5ebab5f2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 05/25/2018
 ---
 # <a name="appliance-configuration-checklists-for-analytics-platform-system"></a>Analytics Platform System 應用裝置組態檢查清單
 檢查清單提供您自己的環境設定 Analytics Platform System 所需的工作。 您可以使用此應用裝置之前，會需要這些組態工作。  
@@ -29,7 +29,7 @@ ms.lasthandoff: 04/19/2018
   
 2.  請確定您已由您 IHV 提供下列資訊：  
   
-    -   PDW 控制節點的外部 IP 位址 (*PDW_region-*CTL01)  
+    -   PDW 控制節點的外部 IP 位址 (*PDW_region-* CTL01)  
   
     -   應用裝置的網域名稱  
   
@@ -56,7 +56,8 @@ SQL Server PDW**Configuration Manager** (PDWCM) 是 SQL Server PDW 系統管理�
 |變更密碼**sa**登入|SQL Server PDW 具有系統管理員登入名為**sa**。 **Sa**登入擁有的所有權限。 它可以授與、 拒絕或撤銷權限。 它也可以查看所有的系統檢視表。<br /><br />如需詳細資訊，請參閱[密碼重設&#40;Analytics Platform System&#41;](password-reset.md)。|  
 |設定應用裝置時區|設定所有的應用裝置節點的時間 （本機或其他所需時間）。<br /><br />如需詳細資訊，請參閱[應用裝置的時區設定&#40;Analytics Platform System&#41;](appliance-time-zone-configuration.md)。|  
 |指定 SQL Server PDW 應用裝置的對外網路設定|[應用裝置網路組態&#40;Analytics Platform System&#41;](appliance-network-configuration.md)|  
-|匯入的安全性憑證管理主控台|憑證可以透過 HTTPS 來提供安全通訊端層 (SSL) 連線[使用管理主控台來監視設備&#40;Analytics Platform System&#41;](monitor-the-appliance-by-using-the-admin-console.md)。 根據預設，**管理主控台**包含自我簽署的憑證所提供的隱私權，但不是伺服器驗證。 此憑證也會傳回錯誤，指出 Internet Explorer: 「 有 」 這個網站的安全性憑證有問題時在使用者連接。 雖然此連線進行加密用戶端與伺服器之間傳遞資料，連線仍然是遭受攻擊的風險。<br /><br />SQL Server PDW 系統管理員應該立即取得憑證，以辨識用戶端，才能有安全的連線，並移除 Internet Explorer 會報告此錯誤的受信任的憑證授權單位鏈結。 這需要對應的控制節點的虛擬 IP 位址 （建議選項） 的完整的網域名稱或使用者輸入其瀏覽器位址的值相符的憑證名稱列來存取管理主控台。<br /><br />使用**Configuration Manager**新增或移除受信任的憑證。 直接使用 Microsoft Windows HTTP 服務的憑證組態工具 (`winHttpCertCfg.exe`) 管理的憑證不受支援。<br /><br />如需詳細資訊，請參閱[PDW 憑證佈建&#40;Analytics Platform System&#41;](pdw-certificate-provisioning.md)。|  
+|匯入的安全性憑證管理主控台|憑證可以透過 HTTPS 來提供安全通訊端層 (SSL) 連線[使用管理主控台來監視設備&#40;Analytics Platform System&#41;](monitor-the-appliance-by-using-the-admin-console.md)。 根據預設，**管理主控台**包含自我簽署的憑證所提供的隱私權，但不是伺服器驗證。 此憑證也會傳回錯誤，指出 Internet Explorer: 「 有 」 這個網站的安全性憑證有問題時在使用者連接。 雖然此連線進行加密用戶端與伺服器之間傳遞資料，連線仍然是遭受攻擊的風險。<br /><br />SQL Server PDW 系統管理員應該立即取得憑證，以辨識用戶端，才能有安全的連線，並移除 Internet Explorer 會報告此錯誤的受信任的憑證授權單位鏈結。 這需要對應的控制節點的虛擬 IP 位址 （建議選項） 的完整的網域名稱或使用者輸入其瀏覽器位址的值相符的憑證名稱列來存取管理主控台。<br /><br />使用**Configuration Manager**新增或移除受信任的憑證。 直接使用 Microsoft Windows HTTP 服務的憑證組態工具 (`winHttpCertCfg.exe`) 管理的憑證不受支援。<br /><br />如需詳細資訊，請參閱[PDW 憑證佈建&#40;Analytics Platform System&#41;](pdw-certificate-provisioning.md)。|
+|功能參數|顯示有關 Analytics Platform System AU7 中引進的功能參數資訊。 若要更新或啟用/停用功能與 Analytics Platform System 設定使用此頁面。 功能參數值的變更需要重新啟動服務。<br /><br />如需詳細資訊，請參閱[PDW 功能切換&#40;Analytics Platform System&#41;](appliance-feature-switch.md)。|
 |啟用或停用 Windows 防火牆規則來允許或防止存取 SQL Server PDW 應用裝置上的特定連接埠。|您 IHV 會設定，並啟用防火牆規則所需的設備，才能正確運作。 在大部分情況下將不會啟用或停用防火牆規則。<br /><br />如需詳細資訊，請參閱[PDW 防火牆組態&#40;Analytics Platform System&#41;](pdw-firewall-configuration.md)。|  
 |啟動及停止 SQL Server PDW 應用裝置|停止或啟動 SQL Server PDW 應用裝置。 如需詳細資訊，請參閱[PDW 服務狀態&#40;Analytics Platform System&#41;](pdw-services-status.md)。|  
 |檢閱使用立即檔案初始化選項**權限**對話方塊|立即檔案初始化是 SQL Server 功能，可讓資料檔案作業更快速地執行。 只有當網路服務帳戶授與 SE_MANAGE_VOLUME_NAME 特殊權限，它會啟用 SQL Server PDW 上。 它是預設關閉。<br /><br />如需詳細資訊，請參閱[立即檔案初始化設定&#40;Analytics Platform System&#41;](instant-file-initialization-configuration.md)。|  
