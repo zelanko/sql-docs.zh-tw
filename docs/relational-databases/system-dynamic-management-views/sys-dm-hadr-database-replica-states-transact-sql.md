@@ -3,8 +3,6 @@ title: sys.dm_hadr_database_replica_states (TRANSACT-SQL) |Microsoft 文件
 ms.custom: ''
 ms.date: 02/11/2018
 ms.prod: sql
-ms.prod_service: database-engine
-ms.component: dmv's
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: system-objects
@@ -25,11 +23,11 @@ caps.latest.revision: 84
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 6b9d3677268ccf0dbaecf226711734315d68ff75
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: f90bf8e9d7a22b8100de48af6ec6562e893b6e89
+ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/23/2018
 ---
 # <a name="sysdmhadrdatabasereplicastates-transact-sql"></a>sys.dm_hadr_database_replica_states (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -47,13 +45,13 @@ ms.lasthandoff: 05/04/2018
 |**group_database_id**|**uniqueidentifier**|可用性群組中資料庫的識別碼。 這個識別碼在此資料庫聯結的每個複本上都相同。|  
 |**is_local**|**bit**|可用性資料庫是否為本機，下列其中一個值：<br /><br /> 0 = 資料庫不在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的本機。<br /><br /> 1 = 資料庫在伺服器執行個體的本機。|  
 |**is_primary_replica**|**bit**|如果複本是主要，則會傳回 1，或者如果它是次要複本，則會傳回 0。<br /><br />**適用於：**[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。|  
-|**synchronization_state**|**tinyint**|資料移動狀態，下列值之一。<br /><br /> 0 = 未同步處理。 如果是主要資料庫，表示資料庫尚未準備好要將其交易記錄與對應的次要資料庫同步處理。 如果是次要資料庫，表示資料庫尚未開始記錄同步處理，原因是因為連接問題、處於暫停狀態，或在啟動或角色切換期間正在移轉狀態。<br /><br /> 1 = 正在同步處理。 如果是主要資料庫，表示此資料庫準備好接受次要資料庫的掃描要求。 如果是次要資料庫，表示資料庫正在進行資料移動作業。<br /><br /> 2 = 已同步處理。 主要資料庫會顯示 SYNCHRONIZED 而非 SYNCHRONIZING。 當本機快取表示資料庫已做好容錯移轉的準備而且正在同步處理時，同步認可次要資料庫就會顯示已同步處理。<br /><br /> 3 = 正在還原。 表示當次要資料庫積極取得主要資料庫的頁面時，復原程序中的階段。<br />**注意：**當次要複本上的資料庫處於 REVERTING 狀態時，強制容錯移轉至次要複本會將資料庫保留在其中它無法啟動為主要資料庫的狀態。 資料庫需要當做次要資料庫重新連接，或者您需要從記錄備份套用新的記錄檔記錄。<br /><br /> 4 = 正在初始化。 表示次要資料庫跟上復原 LSN 所需的交易記錄正在傳送而且在次要複本上強行寫入時的復原階段。<br />**注意：**當次要複本上的資料庫處於 INITIALIZING 狀態時，強制容錯移轉至次要複本保留狀態中的資料庫中啟動做為主要資料庫。 資料庫需要當做次要資料庫重新連接，或者您需要從記錄備份套用新的記錄檔記錄。|  
+|**synchronization_state**|**tinyint**|資料移動狀態，下列值之一。<br /><br /> 0 = 未同步處理。 如果是主要資料庫，表示資料庫尚未準備好要將其交易記錄與對應的次要資料庫同步處理。 如果是次要資料庫，表示資料庫尚未開始記錄同步處理，原因是因為連接問題、處於暫停狀態，或在啟動或角色切換期間正在移轉狀態。<br /><br /> 1 = 正在同步處理。 如果是主要資料庫，表示此資料庫準備好接受次要資料庫的掃描要求。 如果是次要資料庫，表示資料庫正在進行資料移動作業。<br /><br /> 2 = 已同步處理。 主要資料庫會顯示 SYNCHRONIZED 而非 SYNCHRONIZING。 當本機快取表示資料庫已做好容錯移轉的準備而且正在同步處理時，同步認可次要資料庫就會顯示已同步處理。<br /><br /> 3 = 正在還原。 表示當次要資料庫積極取得主要資料庫的頁面時，復原程序中的階段。<br />**注意：** 當次要複本上的資料庫處於 REVERTING 狀態時，強制容錯移轉至次要複本會將資料庫保留在其中它無法啟動為主要資料庫的狀態。 資料庫需要當做次要資料庫重新連接，或者您需要從記錄備份套用新的記錄檔記錄。<br /><br /> 4 = 正在初始化。 表示次要資料庫跟上復原 LSN 所需的交易記錄正在傳送而且在次要複本上強行寫入時的復原階段。<br />**注意：** 當次要複本上的資料庫處於 INITIALIZING 狀態時，強制容錯移轉至次要複本保留狀態中的資料庫中啟動做為主要資料庫。 資料庫需要當做次要資料庫重新連接，或者您需要從記錄備份套用新的記錄檔記錄。|  
 |**synchronization_state_desc**|**nvarchar(60)**|資料移動狀態的描述，下列其中一個值：<br /><br /> NOT SYNCHRONIZING<br /><br /> SYNCHRONIZING<br /><br /> SYNCHRONIZED<br /><br /> REVERTING<br /><br /> INITIALIZING|  
 |**is_commit_participant**|**bit**|0 = 未根據此資料庫同步處理交易認可。<br /><br /> 1 = 根據此資料庫同步處理交易認可。<br /><br /> 如果是非同步認可可用性複本上的資料庫，這個值一定是 0。<br /><br /> 如果是同步認可可用性複本上的資料庫，這個值僅在主要資料庫上才正確。|  
 |**synchronization_health**|**tinyint**|反映聯結至可用性群組之可用性複本上資料庫的同步處理狀態和可用性複本 （同步認可或非同步認可模式） 的其中一個的可用性模式的交集下列的值。<br /><br /> 0 = 狀況不好。 **Synchronization_state**資料庫是 0 (NOT SYNCHRONIZING)。<br /><br /> 1 = 部分狀況良好。 同步認可可用性複本上的資料庫會被視為部分狀況良好如果**synchronization_state**為 1 (SYNCHRONIZING)。<br /><br /> 2 = Healthy。 同步認可可用性複本上的資料庫會被視為狀況良好如果**synchronization_state**為 2 (SYNCHRONIZED)，而非同步認可可用性複本上的資料庫會被視為狀況良好如果**synchronization_state**為 1 (SYNCHRONIZING)。|  
 |**synchronization_health_desc**|**nvarchar(60)**|描述**synchronization_health**可用性資料庫。<br /><br /> NOT_HEALTHY<br /><br /> PARTIALLY_HEALTHY<br /><br /> HEALTHY|  
-|**database_state**|**tinyint**|0 = 線上<br /><br /> 1 = 還原中<br /><br /> 2 = 復原中<br /><br /> 3 = 復原暫止<br /><br /> 4 = 可疑<br /><br /> 5 = 緊急<br /><br /> 6 = 離線<br /><br /> **注意：**相同**狀態**sys.databases 中的資料行。|  
-|**database_state_desc**|**nvarchar(60)**|描述**database_state**可用性複本。<br /><br /> ONLINE<br /><br /> RESTORING<br /><br /> RECOVERING<br /><br /> RECOVERY_PENDING<br /><br /> SUSPECT<br /><br /> EMERGENCY<br /><br /> OFFLINE<br /><br /> **注意：**相同**state_desc** sys.databases 中的資料行。|  
+|**database_state**|**tinyint**|0 = 線上<br /><br /> 1 = 還原中<br /><br /> 2 = 復原中<br /><br /> 3 = 復原暫止<br /><br /> 4 = 可疑<br /><br /> 5 = 緊急<br /><br /> 6 = 離線<br /><br /> **注意：** 相同**狀態**sys.databases 中的資料行。|  
+|**database_state_desc**|**nvarchar(60)**|描述**database_state**可用性複本。<br /><br /> ONLINE<br /><br /> RESTORING<br /><br /> RECOVERING<br /><br /> RECOVERY_PENDING<br /><br /> SUSPECT<br /><br /> EMERGENCY<br /><br /> OFFLINE<br /><br /> **注意：** 相同**state_desc** sys.databases 中的資料行。|  
 |**is_suspended**|**bit**|資料庫狀態，下列其中一個值：<br /><br /> 0 = 已繼續<br /><br /> 1 = 已暫停|  
 |**suspend_reason**|**tinyint**|如果資料庫已暫停，則為已暫停狀態的原因，由下列其中一個值表示：<br /><br /> 0 = 使用者動作<br /><br /> 1 = 暫停協力廠商<br /><br /> 2 = 重做<br /><br /> 3 = 擷取<br /><br /> 4 = 套用<br /><br /> 5 = 重新啟動<br /><br /> 6 = 恢復<br /><br /> 7 = 重新驗證<br /><br /> 8 = 計算次要複本同步處理點時發生錯誤|  
 |**suspend_reason_desc**|**nvarchar(60)**|資料庫暫停狀態原因的描述，由下列其中一個值表示：<br /><br /> SUSPEND_FROM_USER = 使用者手動暫停資料移動<br /><br /> SUSPEND_FROM_PARTNER = 資料庫複本在強制容錯移轉之後暫停<br /><br /> SUSPEND_FROM_REDO = 取消復原階段發生錯誤<br /><br /> SUSPEND_FROM_APPLY = 將記錄寫入檔案時發生錯誤 (請查看錯誤記錄檔)<br /><br /> SUSPEND_FROM_CAPTURE = 在主要複本上擷取記錄時發生錯誤<br /><br /> SUSPEND_FROM_RESTART = 資料庫複本在資料庫重新啟動之前已暫停 (請查看錯誤記錄檔)<br /><br /> SUSPEND_FROM_UNDO = 復原階段發生錯誤 (請查看錯誤記錄檔)<br /><br /> SUSPEND_FROM_REVALIDATION = 重新連接時偵測到記錄變更不一致 (請查看錯誤記錄檔)<br /><br /> SUSPEND_FROM_XRF_UPDATE = 找不到通用記錄點 (請查看錯誤記錄檔)|  
