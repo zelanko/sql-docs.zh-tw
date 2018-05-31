@@ -24,6 +24,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32855333"
 ---
 # <a name="stored-procedures"></a>預存程序
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -40,9 +41,9 @@ ms.lasthandoff: 05/03/2018
   
 ## <a name="in-this-section"></a>本節內容  
   
--   [執行預存程序 & #40; OLE DB & #41;](../../oledb/ole-db/stored-procedures-running.md)  
+-   [執行預存程序 &#40; OLE DB &#41;](../../oledb/ole-db/stored-procedures-running.md)  
   
--   [呼叫預存程序 & #40; OLE DB & #41;](../../oledb/ole-db/stored-procedures-calling.md)  
+-   [呼叫預存程序 &#40; OLE DB &#41;](../../oledb/ole-db/stored-procedures-calling.md)  
   
 ## <a name="see-also"></a>另請參閱  
  [OLE DB Driver for SQL Server 程式設計](../../oledb/ole-db/oledb-driver-for-sql-server-programming.md)  
