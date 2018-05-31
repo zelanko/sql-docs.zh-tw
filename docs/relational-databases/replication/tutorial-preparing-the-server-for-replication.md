@@ -25,6 +25,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32964723"
 ---
 # <a name="tutorial-prepare-sql-server-for-replication-publisher-distributor-subscriber"></a>教學課程：準備 SQL Server 進行複寫 (發行者、散發者、訂閱者)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -42,25 +43,25 @@ ms.lasthandoff: 05/03/2018
 > * 準備快照集資料夾。
 > * 設定散發。
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>必要條件
 本教學課程是特別提供給熟悉基本資料庫作業但只稍微涉獵複寫作業的使用者。 
 
 若要完成本教學課程，您需要 SQL Server、SQL Server Management Studio (SSMS) 以及 AdventureWorks 資料庫：  
   
 - 在發行者伺服器 (來源) 安裝：  
   
-   - 任何版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，SQL Server Express 或 SQL Server Compact 除外。 這兩種版本無法作為複寫發行者。   
+   - 任何版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，除了 SQL Server Express 或 SQL Server Compact 以外， 因為這兩種版本無法充任複寫發行者。   
    - [!INCLUDE[ssSampleDBUserInputNonLocal](../../includes/sssampledbuserinputnonlocal-md.md)] 範例資料庫。 為了加強安全性，依預設，不會安裝範例資料庫。  
   
-- 在訂閱者伺服器 (目的地) 安裝任何版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，[!INCLUDE[ssEW](../../includes/ssew-md.md)] 除外。 [!INCLUDE[ssEW](../../includes/ssew-md.md)] 在異動複寫中不能是訂閱者。  
+- 在訂閱者伺服器 (目的地) 安裝任何版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，除了 [!INCLUDE[ssEW](../../includes/ssew-md.md)] 以外， 因為 [!INCLUDE[ssEW](../../includes/ssew-md.md)] 無法在異動複寫中充任訂閱者。  
   
 - 安裝 [SQL Server Management Studio](https://docs.microsoft.com/en-us/sql/ssms/download-sql-server-management-studio-ssms)。
 - 安裝 [SQL Server 2017 Developer Edition](https://www.microsoft.com/en-us/sql-server/sql-server-downloads)。
-- 下載 [AdventureWorks 範例資料庫](https://github.com/Microsoft/sql-server-samples/releases)。 如需在 SSMS 中還原資料庫的指示，請參閱[還原資料庫](https://docs.microsoft.com/en-us/sql/relational-databases/backup-restore/restore-a-database-backup-using-ssms)。 
+- 下載 [AdventureWorks 範例資料庫](https://github.com/Microsoft/sql-server-samples/releases)。 有關在 SSMS 中還原資料庫的指示，請參閱[還原資料庫](https://docs.microsoft.com/en-us/sql/relational-databases/backup-restore/restore-a-database-backup-using-ssms)。 
     
 >[!NOTE]
-> - 不支援相差兩個以上版本的 SQL Server 執行個體複寫。 如需詳細資訊，請參閱 [Supported SQL Server Versions in Replication Topology](https://blogs.msdn.microsoft.com/repltalk/2016/08/12/suppported-sql-server-versions-in-replication-topology/) (複寫拓撲中支援的 SQL Server 版本)。
-> - 在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中，您必須使用具**系統管理員**固定伺服器角色成員身分的登入，連線到發行者和訂閱者。 如需此角色的詳細資訊，請參閱[伺服器層級角色](https://docs.microsoft.com/en-us/sql/relational-databases/security/authentication-access/server-level-roles)。  
+> - 相差兩個版本以上的 SQL Server 執行個體不支援複寫。 如需詳細資訊，請參閱 [Supported SQL Server Versions in Replication Topology](https://blogs.msdn.microsoft.com/repltalk/2016/08/12/suppported-sql-server-versions-in-replication-topology/) (複寫拓撲中支援的 SQL Server 版本)。
+> - 在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中，您用來與發行者和訂閱者連線的登入資料，必須是**系統管理員**固定伺服器角色的一員。 如需此角色的詳細資訊，請參閱[伺服器層級角色](https://docs.microsoft.com/en-us/sql/relational-databases/security/authentication-access/server-level-roles)。  
 
 
 **完成本教學課程的估計時間：30 分鐘**
@@ -76,7 +77,7 @@ ms.lasthandoff: 05/03/2018
 |[合併代理程式]|發行者和訂閱者|<*電腦名稱*>\repl_merge|  
   
 > [!NOTE]  
-> 在複寫教學課程中，發行者和散發者會共用相同的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體 (NODE1\SQL2016)。 訂閱者執行個體 (NODE2\SQL2016) 為遠端物件。 發行者和訂閱者可以共用相同的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體，但這不是必要條件。 如果發行者和訂閱者共用相同的執行個體，則不需要在訂閱者上建立帳戶的步驟。  
+> 在複寫教學課程中，發行者和散發者會共用相同的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體 (NODE1\SQL2016)。 訂閱者執行個體 (NODE2\SQL2016) 為遠端物件。 發行者和訂閱者可以共用相同的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體，但這不是必要條件。 如果發行者和訂閱者共用相同的執行個體，則可略過在訂閱者上建立帳戶的步驟。  
 
 ### <a name="create-local-windows-accounts-for-replication-agents-at-the-publisher"></a>在發行者端建立複寫代理程式的本機 Windows 帳戶
   
@@ -176,7 +177,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="configure-distribution"></a>設定散發
 在這一節中，您會在發行者端設定散發，並在發行集和散發資料庫上設定所需權限。 如果您已經設定散發者，則必須停用發行和散發，再開始進行本節。 如果您必須保留現有的複寫拓撲，請勿執行上述動作，特別是在生產環境中。   
   
-利用遠端散發者設定發行者已超出本教學課程的範圍之外。  
+利用遠端散發者來設定發行者已超出本教學課程的範圍。  
 
 ### <a name="configure-distribution-at-the-publisher"></a>在發行者端設定散發  
   
@@ -189,11 +190,11 @@ ms.lasthandoff: 05/03/2018
    > [!NOTE]  
    > 如果您使用 **localhost** 而非實際伺服器名稱連線到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，系統會以警告提示您 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 無法連線到 **localhost**。 在警告對話方塊中選取 [確定]。 在 [連線到伺服器] 對話方塊中，將 [伺服器名稱] 從 **localhost** 變更為伺服器的名稱。 然後選取 [連線]。  
   
-   [散發組態精靈] 會隨即啟動。  
+   [散發設定精靈] 會隨即啟動。  
   
 3. 在 [散發者] 頁面上，選取 [<'伺服器名稱'> 將扮演本身的散發者; SQL Server 將建立散發資料庫和記錄]。 然後選取 [下一步]。  
 
-   ![讓伺服器扮演本身之散發者的選項](media/tutorial-preparing-the-server-for-replication/serverdistributor.png)
+   ![讓伺服器扮演自身散發者的選項](media/tutorial-preparing-the-server-for-replication/serverdistributor.png)
   
 4. 如果 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理程式未執行，請在 [[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 啟動] 頁面上選取 [是，將 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 服務設定為自動啟動]。 選取 **[下一步]**。  
 

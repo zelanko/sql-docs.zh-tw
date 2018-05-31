@@ -33,11 +33,12 @@ caps.latest.revision: 87
 author: uc-msft
 ms.author: umajay
 manager: craigg
-ms.openlocfilehash: 70ac1b9a973aff7f15309d29a85e3fddd6f2954f
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: a771f30b82a81fa05ea65409bce9a132cbb42dad
+ms.sourcegitcommit: b3bb41424249de198f22d9c6d40df4996f083aa6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/17/2018
+ms.locfileid: "34300336"
 ---
 # <a name="dbcc-shrinkfile-transact-sql"></a>DBCC SHRINKFILE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -77,7 +78,8 @@ FILESTREAM 檔案群組容器不支援此選項。
 如果指定了 *target_size*，DBCC SHRINKFILE 會嘗試將檔案壓縮成指定的大小。 檔案將釋出之部分所用的頁面，重新放置到檔案保留部分的可用空間中。 例如，如果有 10 MB 的資料檔案，將 *target_size* 設為 8 的 DBCC SHRINKFILE 作業會使檔案最後 2 MB 所用的所有頁面，都重新配置到檔案前 8 MB 的任何未配置頁面中。 DBCC SHRINKFILE 不會將檔案壓縮到小於將資料儲存在檔案中所需要的大小。 例如，如果使用了 10 MB 資料檔案中的 7 MB，將 *target_size* 設為 6 的 DBCC SHRINKFILE 陳述式，只會將檔案壓縮成 7 MB，而不是 6 MB。
   
 EMPTYFILE  
-將指定檔案中的所有資料移轉到「相同檔案群組」的其他檔案中。 換言之，EmptyFile 會將指定檔案中的資料移轉至同一檔案群組中的其他檔案。 Emptyfile 可確保沒有任何新資料將加入檔案。使用 [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md) 陳述式可移除檔案。
+將指定檔案中的所有資料移轉到「相同檔案群組」的其他檔案中。 換言之，EmptyFile 會將指定檔案中的資料移轉至同一檔案群組中的其他檔案。 Emptyfile 可確保沒有任何新資料將新增至檔案，而不論這個檔案是否標示為唯讀。使用 [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md) 陳述式可移除檔案。 如果使用 [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md) 陳述式更改檔案大小，則唯讀旗標會重設，並且可以新增資料。
+
 對於 FILESTREAM 檔案群組容器來說，在 FILESTREAM 記憶體回收行程已執行並刪除所有由 EMPTYFILE 複製至其他容器且已不需要的檔案群組容器檔案之前，檔案將無法使用 ALTER DATABASE 移除。 如需詳細資訊，請參閱 [sp_filestream_force_garbage_collection &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/filestream-and-filetable-sp-filestream-force-garbage-collection.md)
   
 > [!NOTE]  

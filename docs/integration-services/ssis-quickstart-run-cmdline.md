@@ -1,6 +1,6 @@
 ---
 title: 從命令提示字元中執行 SSIS 套件 | Microsoft Docs
-ms.date: 09/25/2017
+ms.date: 05/21/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.prod_service: integration-services
@@ -12,19 +12,30 @@ ms.technology:
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 0dec4f11b797cc138f11f20a521e1c304efa0463
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 018a1b6e8e75ce89a1c1679262d185381f432b39
+ms.sourcegitcommit: b5ab9f3a55800b0ccd7e16997f4cd6184b4995f9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/23/2018
+ms.locfileid: "34454861"
 ---
 # <a name="run-an-ssis-package-from-the-command-prompt-with-dtexecexe"></a>從命令提示字元使用 DTExec.exe 執行 SSIS 套件
-本快速入門教學課程會示範如何以適當的參數執行 `DTExec.exe`，從命令提示字元執行 SSIS 套件。
+本快速入門會示範如何以適當的參數執行 `DTExec.exe`，從命令提示字元執行 SSIS 套件。
 
 > [!NOTE]
 > 本文中描述的方法尚未以部署到 Azure SQL Database 伺服器的套件測試。
 
 如需 `DTExec.exe` 的詳細資訊，請參閱 [dtexec 公用程式](https://docs.microsoft.com/sql/integration-services/packages/dtexec-utility)。
+
+## <a name="supported-platforms"></a>支援的平台
+
+您可以使用本快速入門中的資訊，在下列平台上執行 SSIS 套件：
+
+-   Windows 上的 SQL Server。
+
+本文中描述的方法尚未以部署到 Azure SQL Database 伺服器的套件測試。 如需在 Azure 部署和執行套件的詳細資訊，請參閱[將 SQL Server Integration Services 工作負載隨即轉移至雲端](lift-shift/ssis-azure-lift-shift-ssis-packages-overview.md)。
+
+您不能使用本快速入門中的資訊在 Linux 上執行 SSIS 套件。 如需在 Linux 上執行套件的詳細資訊，請參閱[使用 SSIS 在 Linux 上擷取、轉換和載入資料](../linux/sql-server-linux-migrate-ssis.md)。
 
 ## <a name="run-a-package-with-dtexec"></a>使用 dtexec 執行套件
 

@@ -15,18 +15,19 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: c39296fd2ea72e8107c9c1dc558e636810726848
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: cfdb035f176c2fcdb9e71b5621b76e4ecb72c2b4
+ms.sourcegitcommit: b3bb41424249de198f22d9c6d40df4996f083aa6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/17/2018
+ms.locfileid: "34300166"
 ---
 # <a name="querying-data-in-a-system-versioned-temporal-table"></a>查詢系統建立版本時態表中的資料
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   當您想要取得時態表中資料的最新 (實際) 狀態，您能夠以您查詢非時態表完全一樣的方式查詢。 如果 PERIOD 資料行未隱藏，其值會出現在 SELECT \* 查詢中。 如果您將 **PERIOD** 資料行指定為隱藏，其值不會出現在 SELECT \* 查詢中。 當 **PERIOD** 資料行隱藏時，請特別參考 SELECT 子句中的 **PERIOD** 資料行，以傳回這些資料行的值。  
   
- 若要執行任何以時間為基礎之類型的分析，請搭配四個特定時態次子句使用新的  **FOR SYSTEM_TIME** 子句來查詢在目前和歷程記錄資料表之間的資料。 如需這些子句的詳細資訊，請參閱[時態表](../../relational-databases/tables/temporal-tables.md)和 [FROM &#40;Transact-SQL&#41;](../../t-sql/queries/from-transact-sql.md)  
+ 若要執行任何以時間為基礎之類型的分析，請搭配四個特定時態次子句使用新的 **FOR SYSTEM_TIME** 子句來查詢在目前和歷程記錄資料表之間的資料。 如需這些子句的詳細資訊，請參閱[時態表](../../relational-databases/tables/temporal-tables.md)和 [FROM &#40;Transact-SQL&#41;](../../t-sql/queries/from-transact-sql.md)  
   
 -   AS OF <date_time>  
   
@@ -41,7 +42,7 @@ ms.lasthandoff: 05/03/2018
  在查詢中，可以針對每個資料表個別指定**FOR SYSTEM_TIME** 。 它可以在通用資料表運算式、資料表值函式和預存程序內使用。  
   
 ## <a name="query-for-a-specific-time-using-the-as-of-sub-clause"></a>使用 AS OF 次子句查詢特定的時間  
- 當您需要重新建構資料於過去特定時間的狀態，請使用**AS OF** 次子句。  您可以使用 **PERIOD** 資料行定義中指定之 datetime2 類型的有效位數，重新建構資料。    
+ 當您需要重新建構資料於過去特定時間的狀態，請使用 **AS OF** 次子句。 您可以使用 **PERIOD** 資料行定義中指定之 datetime2 類型的有效位數，重新建構資料。    
 **AS OF** 次子句可以搭配常數常值或變數使用，這可讓您以動態方式指定時間的情況。 提供的值會解譯為 UTC 時間。  
   
  第一個範例傳回 dbo.Department 資料表 AS OF 過去特定時間的狀態。  

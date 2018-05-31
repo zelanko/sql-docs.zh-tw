@@ -31,11 +31,12 @@ caps.latest.revision: 62
 author: uc-msft
 ms.author: umajay
 manager: craigg
-ms.openlocfilehash: b6fe7fcf315849e6779b66087e8a87d2953d96d0
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: e6022b5609c2d4b4d362f90088bee4e84ad874c7
+ms.sourcegitcommit: 6fd8a193728abc0a00075f3e4766a7e2e2859139
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/17/2018
+ms.locfileid: "34236409"
 ---
 # <a name="dbcc-shrinkdatabase-transact-sql"></a>DBCC SHRINKDATABASE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -93,6 +94,10 @@ DBCC SHRINKDATABASE
 > [!INCLUDE[ssDE](../../includes/ssde-md.md)] 不會顯示未壓縮之檔案的資料列。  
   
 ## <a name="remarks"></a>Remarks  
+
+>[!NOTE]
+> Azure SQL 資料倉儲目前不支援 DBCC SHRINKDATABASE。 不建議執行此命令，因為這是 I/O 密集作業，而且可以讓您的資料倉儲離線。 此外，執行此命令之後將會對您的資料倉儲快照集成本有所影響。 
+
 若要壓縮特定資料庫的所有資料和記錄檔，請執行 DBCC SHRINKDATABASE 命令。 若要一次壓縮特定資料庫的一個資料或記錄檔，請執行 [DBCC SHRINKFILE](../../t-sql/database-console-commands/dbcc-shrinkfile-transact-sql.md) 命令。
   
 若要檢視資料庫中目前的可用 (未配置) 空間量，請執行 [sp_spaceused](../../relational-databases/system-stored-procedures/sp-spaceused-transact-sql.md)。
@@ -106,9 +111,6 @@ DBCC SHRINKDATABASE
 壓縮的資料庫不必是單一使用者模式；在資料庫壓縮之後，其他使用者也可以在這個資料庫中工作。 其中包括系統資料庫。
   
 資料庫在備份時不能進行壓縮。 相反地，當資料庫上正在進行壓縮作業時，也不能對其進行備份。
-
->[!NOTE]
-> Azure SQL 資料倉儲目前不支援啟用 TDE 的 DBCC SHRINKDATABASE。
   
 ## <a name="how-dbcc-shrinkdatabase-works"></a>DBCC SHRINKDATABASE 的運作方式  
 DBCC SHRINKDATABASE 會以個別檔案為基礎來壓縮資料檔案，但會依照所有記錄檔都是在單一連續記錄集區的方式來壓縮記錄檔。 檔案必定從結尾處進行壓縮。

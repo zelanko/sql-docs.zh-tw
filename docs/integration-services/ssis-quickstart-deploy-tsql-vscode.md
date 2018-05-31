@@ -1,6 +1,6 @@
 ---
 title: 使用 Transact-SQL 部署 SSIS 專案 (VS Code) | Microsoft Docs
-ms.date: 09/25/2017
+ms.date: 05/21/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.prod_service: integration-services
@@ -12,17 +12,15 @@ ms.technology:
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 6c32302d499f1c8dc450d6e10451f080b30249d6
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: b4611b711b9f220af26a7f629480fa9f7b4c071c
+ms.sourcegitcommit: b5ab9f3a55800b0ccd7e16997f4cd6184b4995f9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/23/2018
+ms.locfileid: "34455441"
 ---
 # <a name="deploy-an-ssis-project-from-visual-studio-code-with-transact-sql"></a>使用 Transact-SQL 從 Visual Studio Code 部署 SSIS 專案
 此快速入門示範如何使用 Visual Studio Code 連線至 SSIS 目錄資料庫，然後使用 Transact-SQL 陳述式將 SSIS 專案部署至 SSIS 目錄。
-
-> [!NOTE]
-> 使用 VS Code 連線至 Azure SQL Database 伺服器時，無法使用本文中所述的方法。 `catalog.deploy_project` 預存程序必須有本機 (內部部署) 檔案系統中 `.ispac` 檔案的路徑。
 
 Visual Studio Code 是 Windows、macOS 和 Linux 中支援延伸模組的程式碼編輯器，包含連線至 Microsoft SQL Server、Azure SQL Database 或 Azure SQL Data Warehouse 的 `mssql` 延伸模組。 如需 VS Code 的詳細資訊，請參閱 [Visual Studio Code](https://code.visualstudio.com/)。
 
@@ -31,6 +29,16 @@ Visual Studio Code 是 Windows、macOS 和 Linux 中支援延伸模組的程式�
 開始之前，請確定您已安裝最新版 Visual Studio Code 並載入 `mssql` 延伸模組。 若要下載這些工具，請參閱下列頁面：
 -   [下載 Visual Studio Code](https://code.visualstudio.com/Download)
 -   [mssql 延伸模組](https://marketplace.visualstudio.com/items?itemName=ms-mssql.mssql)
+
+## <a name="supported-platforms"></a>支援的平台
+
+您可以使用本快速入門中的資訊，將 SSIS 套件部署到下列平台：
+
+-   Windows 上的 SQL Server。
+
+您無法使用本快速入門中的資訊，將 SSIS 套件部署到 Azure SQL Database。 `catalog.deploy_project` 預存程序必須有本機 (內部部署) 檔案系統中 `.ispac` 檔案的路徑。 如需在 Azure 中部署和執行套件的詳細資訊，請參閱[將 SQL Server Integration Services 工作負載隨即轉移至雲端](lift-shift/ssis-azure-lift-shift-ssis-packages-overview.md)。
+
+您無法使用本快速入門中的資訊，將 SSIS 套件部署到 Linux 上的 SQL Server。 如需在 Linux 上執行套件詳細資訊，請參閱[使用 SSIS 在 Linux 上擷取、轉換和載入資料](../linux/sql-server-linux-migrate-ssis.md)。
 
 ## <a name="set-language-mode-to-sql-in-vs-code"></a>在 VS Code 中將語言模式設定為 SQL
 
@@ -46,9 +54,6 @@ Visual Studio Code 是 Windows、macOS 和 Linux 中支援延伸模組的程式�
 
 使用 Visual Studio Code，以建立與 SSIS 目錄的連線。
 
-> [!IMPORTANT]
-> 繼續之前，請確定您已準備好伺服器、資料庫和登入資訊。 如果您在開始輸入連線設定檔資訊之後變更 Visual Studio Code 的焦點，則必須重新開始建立連線設定檔。
-
 1. 在 VS Code 中，按 **CTRL+SHIFT+P** (或 **F1**) 開啟 [命令選擇區]。
 
 2. 鍵入 **sqlcon**，並按 **ENTER**。
@@ -61,9 +66,9 @@ Visual Studio Code 是 Windows、macOS 和 Linux 中支援延伸模組的程式�
    | ------------ | ------------------ | ------------------------------------------------- | 
    | **伺服器名稱** | 完整伺服器名稱 |  |
    | **資料庫名稱** | **SSISDB** | 要連線之資料庫的名稱。 |
-   | **驗證** | SQL 登入| 本快速入門使用 SQL 驗證。 |
-   | **User name** | 伺服器系統管理員帳戶 | 這是您在建立伺服器時指定的帳戶。 |
-   | **密碼 (SQL 登入)** | 伺服器系統管理員帳戶的密碼 | 這是您在建立伺服器時指定的密碼。 |
+   | **驗證** | SQL 登入 | |
+   | **User name** | 伺服器系統管理員帳戶 | 這個帳戶是您在建立伺服器時指定的帳戶。 |
+   | **密碼 (SQL 登入)** | 伺服器系統管理員帳戶的密碼 | 這個密碼是您在建立伺服器時指定的密碼。 |
    | **儲存密碼嗎？** | [是] 或 [否] | 如果您不想要每次都輸入密碼，請選取 [是]。 |
    | **輸入此設定檔的名稱** | 設定檔名稱，例如 **mySSISServer** | 儲存的設定檔名稱可在後續的登入中加速您的連線。 | 
 

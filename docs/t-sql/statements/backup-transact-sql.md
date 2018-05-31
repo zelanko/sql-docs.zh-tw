@@ -51,11 +51,12 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 81267bd94920ba0398a9ed6e3ca8192eaa3cdaa4
-ms.sourcegitcommit: d2573a8dec2d4102ce8882ee232cdba080d39628
+ms.openlocfilehash: 3c7d97d9c8ee56af89807f07cd335b16c50fbcc1
+ms.sourcegitcommit: 02c889a1544b0859c8049827878d66b2301315f8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 05/17/2018
+ms.locfileid: "34225338"
 ---
 # <a name="backup-transact-sql"></a>BACKUP (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md )]
@@ -179,7 +180,7 @@ DATABASE
 > [!NOTE]  
 > **master** 資料庫上只能執行完整資料庫備份。  
   
-LOG **適用於：**SQL Server
+LOG **適用於：** SQL Server
 
  指定只備份交易記錄。 記錄的備份是從最後執行成功的記錄備份至目前的記錄結尾。 您必須先建立完整備份，才能建立第一個記錄備份。  
   
@@ -229,11 +230,11 @@ LOG **適用於：**SQL Server
   
 TO \<backup_device> [ **,**...*n* ] 指出隨附的[備份裝置](../../relational-databases/backup-restore/backup-devices-sql-server.md)集是未鏡像的媒體集，或是鏡像媒體集內的前幾個鏡像 (已針對其宣告了一或多個 MIRROR TO 子句)。  
   
-\<backup_device> **適用於：**SQL Server 指定要針對備份作業使用的邏輯或實體備份裝置。  
+\<backup_device> **適用於：** SQL Server 指定要針對備份作業使用的邏輯或實體備份裝置。  
   
- { *logical_device_name* | **@***logical_device_name_var* } **適用於：**SQL Server 是用來備份資料庫之備份裝置的邏輯名稱。邏輯名稱必須遵照識別碼的規則。如果備份裝置名稱是以變數 (@* logical_device_name_var *) 提供，就可將它指定為字串常數 (@* logical_device_name_var***=**) 或任何字元字串資料類型的變數，但 **ntext** 或 **text** 資料類型除外。  
+ { *logical_device_name* | **@***logical_device_name_var* } **適用於：** SQL Server 是用來備份資料庫之備份裝置的邏輯名稱。邏輯名稱必須遵照識別碼的規則。如果備份裝置名稱是以變數 (@* logical_device_name_var *) 提供，就可將它指定為字串常數 (@* logical_device_name_var***=**) 或任何字元字串資料類型的變數，但 **ntext** 或 **text** 資料類型除外。  
   
- { DISK | TAPE | URL} **=** { **'***physical_device_name***'** | **@***physical_device_name_var* | 'NUL' } **適用於：**磁碟、磁帶和 URL 適用於 SQL Server。 只有 URL 適用於 SQL Database 受控執行個體。指定磁碟檔案或磁帶裝置，或是 Windows Azure Blob 儲存體服務。 URL 格式可用來建立備份至 Windows Azure 儲存體服務。 如需詳細資訊和範例，請參閱[使用 Microsoft Azure Blob 儲存體服務進行 SQL Server 備份及還原](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)。 如需教學課程，請參閱[教學課程：SQL Server 備份及還原至 Windows Azure Blob 儲存體服務](~/relational-databases/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md)。 
+ { DISK | TAPE | URL} **=** { **'***physical_device_name***'** | **@***physical_device_name_var* | 'NUL' } **適用於：** 磁碟、磁帶和 URL 適用於 SQL Server。 只有 URL 適用於 SQL Database 受控執行個體。指定磁碟檔案或磁帶裝置，或是 Windows Azure Blob 儲存體服務。 URL 格式可用來建立備份至 Windows Azure 儲存體服務。 如需詳細資訊和範例，請參閱[使用 Microsoft Azure Blob 儲存體服務進行 SQL Server 備份及還原](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)。 如需教學課程，請參閱[教學課程：SQL Server 備份及還原至 Windows Azure Blob 儲存體服務](~/relational-databases/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md)。 
 
 > [!NOTE] 
 > NUL 磁碟裝置將捨棄傳送給它的所有資訊，而且只應用於測試。 這不適用於生產環境。
@@ -285,7 +286,7 @@ MIRROR TO \<backup_device> [ **,**...*n* ] 指定一組最多三個的次要備�
  使用 Azure Blob 儲存體服務來儲存所有 SQL Server 資料庫檔案時，用來建立資料庫檔案的 Azure 快照集。 如需詳細資訊，請參閱 [Microsoft Azure 中的 SQL Server 資料檔案](../../relational-databases/databases/sql-server-data-files-in-microsoft-azure.md)。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 快照集備份會以一致的狀態建立資料庫檔案 (資料和記錄檔) 的 Azure 快照集。 一組一致的 Azure 快照集會組成一個備份，並記錄於備份檔案中。 `BACKUP DATABASE TO URL WITH FILE_SNAPSHOT` 和 `BACKUP LOG TO URL WITH FILE_SNAPSHOT` 之間的唯一差異是，後者也會截斷交易記錄，但前者不會。 使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 快照集備份，在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 建立備份鏈結所需的初始完整備份之後，只需使用單一交易記錄備份就能將資料庫還原至交易記錄備份的時間點。 此外，只需要兩個交易記錄備份，就能將資料庫還原至這兩個交易記錄備份時間之間的時間點。  
     
  DIFFERENTIAL  
-**適用於：**只能搭配 BACKUP DATABASE 使用，可用來指定資料庫或檔案備份應該只含有資料庫或檔案在前次完整備份之後又變更過的部分。 差異備份所用的空間通常會比完整備份少。 使用這個選項，便不需要套用自前次完整備份之後所執行的所有個別記錄備份。  
+**適用於：** 只能搭配 BACKUP DATABASE 使用，可用來指定資料庫或檔案備份應該只含有資料庫或檔案在前次完整備份之後又變更過的部分。 差異備份所用的空間通常會比完整備份少。 使用這個選項，便不需要套用自前次完整備份之後所執行的所有個別記錄備份。  
   
 > [!NOTE]  
 > 根據預設，`BACKUP DATABASE` 會建立完整備份。  
@@ -316,7 +317,7 @@ MIRROR TO \<backup_device> [ **,**...*n* ] 指定一組最多三個的次要備�
 > [!NOTE]  
 > 若要指定還原作業的備份組，請使用 `FILE = <backup_set_file_number>` 選項。 如需如何指定備份組的詳細資訊，請參閱 [RESTORE 引數 &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-arguments-transact-sql.md) 中的＜指定備份組＞。
   
- COPY_ONLY **適用於：**SQL Server 和 SQL Server 受控執行個體。指定備份為「僅複製備份」，這不會影響正常的備份順序。 僅複製備份的建立與定期排程的傳統備份無關。 僅複製備份並不會影響資料庫的整體備份和還原程序。  
+ COPY_ONLY **適用於：** SQL Server 和 SQL Server 受控執行個體。指定備份為「僅複製備份」，這不會影響正常的備份順序。 僅複製備份的建立與定期排程的傳統備份無關。 僅複製備份並不會影響資料庫的整體備份和還原程序。  
   
  僅複製備份應該用於需要執行備份來達成特定用途的情況 (例如，在線上檔案還原之前備份記錄檔)。 通常，僅複製記錄備份用過一次後便會刪除。  
   
@@ -503,13 +504,13 @@ STATS [ **=** *percentage* ]
 STATS 選項報告到達下一個間隔之報告臨界值的完成百分比。 大約會以指定的百分比為間隔；例如，當 STATS=10，如果完成的量是 40%，這個選項可能顯示 43%。 對大型備份組而言，這不成問題，因為在已完成的 I/O 呼叫之間，百分比完成的移動非常緩慢。  
   
 **磁帶選項**  
-**適用於：**SQL Server  
+**適用於：** SQL Server  
 這些選項僅適用於「磁帶」裝置。 如果所使用的不是磁帶裝置，將忽略這些選項。  
   
 { **REWIND** | NOREWIND }  
-REWIND **適用於：**SQL Server。指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會釋放和倒轉磁帶。 REWIND 是預設值。  
+REWIND **適用於：** SQL Server。指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會釋放和倒轉磁帶。 REWIND 是預設值。  
   
-NOREWIND **適用於：**SQL Server。指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 將會在備份作業之後，讓磁帶維持在開啟狀態。 對磁帶執行多次備份作業時，可以使用這個選項來改善效能。  
+NOREWIND **適用於：** SQL Server。指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 將會在備份作業之後，讓磁帶維持在開啟狀態。 對磁帶執行多次備份作業時，可以使用這個選項來改善效能。  
   
 NOREWIND 隱含 NOUNLOAD，而這些選項在單一的 BACKUP 陳述式內不相容。  
   
@@ -517,33 +518,33 @@ NOREWIND 隱含 NOUNLOAD，而這些選項在單一的 BACKUP 陳述式內不相
 > 如果您使用 `NOREWIND`，則 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的執行個體會保有磁帶機的擁有權，直到在相同處理序中執行的 BACKUP 或 RESTORE 陳述式使用 `REWIND` 或 `UNLOAD` 選項，或是伺服器執行個體關閉為止。 保留磁帶的開啟狀態可以防止其他處理序存取這個磁帶。 如需如何顯示開啟的磁帶清單及關閉開啟的磁帶之詳細資訊，請參閱[備份裝置 &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-devices-sql-server.md)。  
   
 { **UNLOAD** | NOUNLOAD }    
-**適用於：**SQL Server 
+**適用於：** SQL Server 
 > [!NOTE]  
 > `UNLOAD` 和 `NOUNLOAD` 是工作階段設定，會在工作階段的存留期間保持不變，直到指定其他設定進行重設為止。  
   
-UNLOAD **適用於：**SQL Server   
+UNLOAD **適用於：** SQL Server   
  指定在備份完成之後，便自動倒轉和卸載磁帶。 UNLOAD 是在工作階段開始時的預設值。 
   
-NOUNLOAD **適用於：**SQL Server。指定在 BACKUP 作業之後，磁帶仍會在磁帶機上保持載入。  
+NOUNLOAD **適用於：** SQL Server。指定在 BACKUP 作業之後，磁帶仍會在磁帶機上保持載入。  
   
 > [!NOTE]  
 > 如果要備份到磁帶備份裝置，`BLOCKSIZE` 選項會影響備份作業的效能。 一般而言，只有在寫入磁帶裝置時，這個選項才會對效能造成影響。  
   
 **記錄特定選項**  
-**適用於：**SQL Server  
+**適用於：** SQL Server  
 這些選項只能搭配 `BACKUP LOG` 使用。  
   
 > [!NOTE]  
 > 如果您不想要取得記錄備份，請使用簡單復原模式。 如需詳細資訊，請參閱[復原模式 &#40;SQL Server &#41;](../../relational-databases/backup-restore/recovery-models-sql-server.md)。  
   
 { NORECOVERY | STANDBY **=** *undo_file_name* }  
-  NORECOVERY **適用於：**SQL Server   
+  NORECOVERY **適用於：** SQL Server   
   它會備份記錄的結尾，並將資料庫保留在 RESTORING 狀態。 當進行容錯移轉，將工作交給次要資料庫時，或在 RESTORE 作業之前儲存記錄結尾時，NORECOVERY 非常有用。  
   
   若要執行略過記錄截斷的最大速率記錄備份，然後使資料庫自動進入 RESTORING 狀態，請同時使用 `NO_TRUNCATE` 和 `NORECOVERY` 選項。  
   
   STANDBY **=** *standby_file_name* 
-**適用於：**SQL Server   
+**適用於：** SQL Server   
   備份記錄的結尾，並將資料庫保留在唯讀和 STANDBY 狀態。 STANDBY 子句會寫入待命資料 (執行回復，但使用進一步還原的選項)。 使用 STANDBY 選項相當於使用 BACKUP LOG WITH NORECOVERY，後面接著 RESTORE WITH STANDBY。  
   
   使用待命模式需要 *standby_file_name* 所指定的待命資料庫檔案，它的位置儲存在資料庫記錄中。 如果指定的檔案已存在，[!INCLUDE[ssDE](../../includes/ssde-md.md)] 會覆寫它；如果檔案不存在，[!INCLUDE[ssDE](../../includes/ssde-md.md)] 會建立它。 待命檔案會成為資料庫的一部分。  
@@ -551,7 +552,7 @@ NOUNLOAD **適用於：**SQL Server。指定在 BACKUP 作業之後，磁帶仍�
   這個檔案會保留已回復的變更，如果之後要套用 RESTORE LOG 作業，就必須保留這些變更。 您必須有足以供待命檔案成長的磁碟空間，它才能夠包含資料庫中，因回復未認可的交易而修改過的所有相異頁面。  
   
 NO_TRUNCATE  
-**適用於：**SQL Server  
+**適用於：** SQL Server  
 指定不截斷記錄，並使 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 嘗試進行備份，而不論資料庫狀態為何。 因此，利用 `NO_TRUNCATE` 建立的備份可能會有不完整的中繼資料。 在資料庫已損毀的情況下，您可以利用這個選項來進行記錄的備份。  
   
 BACKUP LOG 的 NO_TRUNCATE 選項相當於同時指定 COPY_ONLY 和 CONTINUE_AFTER_ERROR。  
@@ -700,10 +701,11 @@ BACKUP 支援 `RESTART` 選項，以提供與舊版 [!INCLUDE[ssNoVersion](../..
 從 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 開始，這會針對 TDE 加密的資料庫啟用最佳化壓縮演算法，此演算法會先將頁面解密、將其壓縮，然後再次加密。 如果使用 `MAXTRANSFERSIZE = 65536` (64 KB)，搭配 TDE 加密資料庫的備份壓縮就會直接壓縮加密的頁面，可能不會產生良好的壓縮率。 如需詳細資訊，請參閱[適用於已啟用 TDE 之資料庫的備份壓縮](http://blogs.msdn.microsoft.com/sqlcat/2016/06/20/sqlsweet16-episode-1-backup-compression-for-tde-enabled-databases/) \(英文\)。
 
 > [!NOTE]  
-> 適用於 TDE 加密資料庫的最佳化壓縮演算法會在下列時機自動使用：
-> * 
->  已使用，在此情況下，預設的 `MAXTRANSFERSIZE` 會變更為 1048576 (1 MB)，而且不會強制設為較低的值。
-> * 資料庫具有多個資料檔案，在此情況下，預設的 `MAXTRANSFERSIZE` 會變更為 65536 (64 KB) 的倍數，不會變更為較低的值 (例如 `MAXTRANSFERSIZE = 65536`)。 
+> 某些情況下，預設值 `MAXTRANSFERSIZE` 大於 64K：
+> * 當資料庫已建立多個資料檔案時，它會使用 `MAXTRANSFERSIZE` > 64K
+> * 執行備份至 URL 時，預設 `MAXTRANSFERSIZE = 1048576` (1MB)
+>   
+> 即使其中一個條件適用，您也必須在備份命令中明確設定 `MAXTRANSFERSIZE` 大於 64K，以取得新的備份壓縮演算法。
   
 根據預設，每項成功的備份作業都會在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 錯誤記錄檔與系統事件記錄檔中，加入一個項目。 如果您經常備份記錄檔，這些成功訊息可能會快速累積，因而產生龐大的錯誤記錄檔，讓您難以尋找其他訊息。 在這類情況下，如果沒有任何指令碼相依於這些記錄項目，您就可以使用追蹤旗標 3226 來隱藏這些記錄項目。 如需詳細資訊，請參閱[追蹤旗標 &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)。  
   

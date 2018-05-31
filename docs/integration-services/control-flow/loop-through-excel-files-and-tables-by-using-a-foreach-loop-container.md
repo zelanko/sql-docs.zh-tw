@@ -1,7 +1,7 @@
 ---
 title: 使用 Foreach 迴圈容器執行 Excel 檔案和資料表迴圈 | Microsoft Docs
 ms.custom: ''
-ms.date: 04/02/2018
+ms.date: 05/15/2018
 ms.prod: sql
 ms.prod_service: integration-services
 ms.component: control-flow
@@ -20,11 +20,12 @@ caps.latest.revision: 35
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 6d151fd801483bd39188ad3474f95ae9ce0036af
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 52daa47d99e6b9dab35f12280a7c89c710e1aa17
+ms.sourcegitcommit: 6fd8a193728abc0a00075f3e4766a7e2e2859139
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/17/2018
+ms.locfileid: "34235662"
 ---
 # <a name="loop-through-excel-files-and-tables-by-using-a-foreach-loop-container"></a>使用 Foreach 迴圈容器來循環使用 Excel 檔案和資料表
   此主題的程序描述如何使用「Foreach 迴圈」容器搭配適當列舉值，循環使用資料夾中的 Excel 活頁簿，或循環使用 Excel 活頁簿中的資料表。  
@@ -36,13 +37,13 @@ ms.lasthandoff: 05/03/2018
   
 1.  建立字串變數，用以在迴圈的每個反覆運算上接收目前的 Excel 路徑和檔案名稱 為了避免驗證問題，請指派有效的 Excel 路徑和檔案名稱當做變數的初始值 (此程序後面顯示的範例運算式會使用 `ExcelFile`變數名稱)。  
   
-2.  (選擇性) 建立另一個字串變數，用以保存 Excel 連接字串之 [擴充屬性] 引數的值。 這個引數包含一系列的值，這些值指定 Excel 版本並決定第一個資料列是否包含資料行名稱，以及是否使用匯入模式。 (此程序後面顯示的範例運算式會使用變數名稱 `ExtProperties`，以及 "`Excel 8.0;HDR=Yes`" 的初始值)。  
+2.  (選擇性) 建立另一個字串變數，用以保存 Excel 連接字串之 [擴充屬性] 引數的值。 這個引數包含一系列的值，這些值指定 Excel 版本並決定第一個資料列是否包含資料行名稱，以及是否使用匯入模式。 (此程序後面顯示的範例運算式會使用變數名稱 `ExtProperties`，以及 "`Excel 12.0;HDR=Yes`" 的初始值)。  
   
      如果您沒有針對 [擴充屬性] 引數使用變數，就必須手動將它加入至包含連接字串的運算式。  
   
 3.  將 Foreach 迴圈容器加入 [控制流程] 索引標籤。如需如何設定 Foreach 迴圈容器的資訊，請參閱[設定 Foreach 迴圈容器](http://msdn.microsoft.com/library/519c6f96-5e1f-47d2-b96a-d49946948c25)。  
   
-4.  在 [Foreach 迴圈編輯器] 的 [集合] 頁面上，選取 Foreach 檔案列舉值、指定 Excel 活頁簿所在位置的資料夾，並指定檔案篩選 (通常是 *.xls)。  
+4.  在 [Foreach 迴圈編輯器] 的 [集合] 頁面上，選取 Foreach 檔案列舉值、指定 Excel 活頁簿所在位置的資料夾，並指定檔案篩選 (通常是 *.xlsx)。  
   
 5.  在 [變數對應] 頁面上，將 [索引 0] 對應至使用者自訂的字串變數，該變數將接收迴圈每個反覆運算上目前的 Excel 路徑和檔案名稱。 (此程序後面顯示的範例運算式會使用 `ExcelFile` 變數名稱)。  
   
@@ -62,22 +63,22 @@ ms.lasthandoff: 05/03/2018
 10. 在「運算式產生器」中，輸入下列運算式：  
   
     ```  
-    "Provider=Microsoft.Jet.OLEDB.4.0;Data Source=" +  @[User::ExcelFile] + ";Extended Properties=\"" + @[User::ExtProperties] + "\""  
+    "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=" +  @[User::ExcelFile] + ";Extended Properties=\"" + @[User::ExtProperties] + "\""  
     ```  
   
      請注意，逸出字元 "\\" 是用來逸出括住 [擴充屬性] 引數之值的內部雙引號。  
   
-     [擴充屬性] 引數不是選擇性的。 如果您沒有使用變數來包含其值，就必須手動將它加入至運算式，如 Excel 2003 檔案的下列範例所示。  
+     [擴充屬性] 引數不是選擇性的。 如果您沒有使用變數來包含其值，就必須手動將它新增至運算式，如下列範例所示：  
   
     ```  
-    "Provider=Microsoft.Jet.OLEDB.4.0;Data Source=" +  @[User::ExcelFile] + ";Extended Properties=Excel 8.0"  
+    "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=" +  @[User::ExcelFile] + ";Extended Properties=Excel 12.0"  
     ```  
   
 11. 在「Foreach 迴圈」容器中建立工作，以便使用 Excel 連接管理員在符合指定之檔案位置和模式的每個 Excel 活頁簿上執行相同的作業。  
   
 ## <a name="to-loop-through-excel-tables-by-using-the-foreach-adonet-schema-rowset-enumerator"></a>使用 Foreach ADO.NET 結構描述資料列集列舉值來循環使用 Excel 資料表  
   
-1.  建立會使用 Microsoft Jet OLE DB 提供者連接到 Excel 活頁簿之 ADO.NET 連接管理員。 在 [連線管理員] 對話方塊的 [全部] 頁面上，確定您輸入 Excel 8.0 做為 Extended Properties 屬性的值。 如需詳細資訊，請參閱 [加入、刪除或共用封裝中的連線管理員](http://msdn.microsoft.com/library/6f2ba4ea-10be-4c40-9e80-7efcf6ee9655)。  
+1.  建立會使用 Microsoft ACE OLE DB 提供者來連線到 Excel 活頁簿的 ADO.NET 連線管理員。 在 [連線管理員] 對話方塊的 [全部] 頁面上，確定您輸入 Excel 版本 - 在本案例中為 Excel 12.0 - 作為 Extended Properties 屬性的值。 如需詳細資訊，請參閱 [加入、刪除或共用封裝中的連線管理員](http://msdn.microsoft.com/library/6f2ba4ea-10be-4c40-9e80-7efcf6ee9655)。  
   
 2.  建立會接收迴圈每個反覆運算上目前資料表名稱的字串變數。  
   

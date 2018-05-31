@@ -1,5 +1,5 @@
 ---
-Title: 'Tutorial: SQL Server Management Studio Components and Configuration'
+Title: 'Tutorial: SQL Server Management Studio components and configuration'
 description: 描述 SQL Server Management Studio 環境之元件和基本設定選項的教學課程。
 keywords: SQL Server, SSMS, SQL Server Management Studio
 author: MashaMSFT
@@ -12,22 +12,23 @@ ms.technology: ssms
 ms.prod_service: sql-tools
 ms.reviewer: sstein
 manager: craigg
-ms.openlocfilehash: 51fb197c3b5177c699134a48fc4888cd134e1711
-ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
+ms.openlocfilehash: 645f52265cbb8e80c7265bcae111300f03e0bc7a
+ms.sourcegitcommit: b5ab9f3a55800b0ccd7e16997f4cd6184b4995f9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 05/23/2018
+ms.locfileid: "34455284"
 ---
 # <a name="tutorial-sql-server-management-studio-components-and-configuration"></a>教學課程：SQL Server Management Studio 元件和設定
-本教學課程介紹 SQL Server Management Studio (SSMS) 中不同視窗元件以及工作區中的一些基本設定選項。 在本文中，您將學習關於： 
+本教學課程介紹 SQL Server Management Studio (SSMS) 中的各種視窗元件，以及工作區中的一些基本設定選項。 在本文中，您將學會如何： 
 
 > [!div class="checklist"]
-> * 組成 SSMS 環境的不同元件
-> * 變更環境配置並將其重設為預設值
+> * 識別組成 SSMS 環境的元件
+> * 變更環境配置，並將它重設為預設值
 > * 將查詢編輯器最大化
 > * 變更字型 
 > * 設定啟動選項 
-> * 將設定重設回預設值 
+> * 將設定重設為預設值 
 
 ## <a name="prerequisites"></a>Prerequisites
 若要完成本教學課程，您需要 SQL Server Management Studio。  
@@ -35,107 +36,108 @@ ms.lasthandoff: 05/10/2018
 - 安裝 [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms)。
 
 ## <a name="sql-server-management-studio-components"></a>SQL Server Management Studio 元件
-本節涵蓋工作區中可用的不同視窗元件及其用途。 
+本節描述工作區中可用的各種視窗元件，以及如何使用它們。 
 
-- 可透過在標題列的角落點擊 X 來關閉每個視窗元件，然後從主功能表中的 [檢視] 下拉式清單重新開啟。 
+- 若要關閉視窗，請選取標題列右上角的 **X**。 
+- 若要重新開啟視窗，請選取 [檢視] 功能表中的視窗。 
 
-    ![檢視功能表](media/ssms-configuration/viewmenu.png)
+    ![[檢視] 功能表](media/ssms-configuration/viewmenu.png)
 
-- **物件總管** (F8)：物件總管是含有伺服器中所有資料庫物件的樹狀檢視。 這可以包括 SQL Server Database Engine、Analysis Services、Reporting Services 和 Integration Services 的資料庫。 物件總管含有它所連接的所有伺服器的資訊。 
+- **物件總管** (F8)：物件總管是含有伺服器中所有資料庫物件的樹狀檢視。 該檢視包含 SQL Server 資料庫引擎、SQL Server Analysis Services、SQL Server Reporting Services 和 SQL Server Integration Services 的資料庫。 [物件總管] 含有它所連線之所有伺服器的資訊。 
     
     ![物件總管](media/ssms-configuration/objectexplorer.png)
-- **查詢視窗** (Ctrl + N)：按一下 [新增查詢] 後，您將在此視窗中鍵入 Transact-SQL (T-SQL) 查詢。 您的查詢結果也會顯示在這裡。
+- **查詢視窗** (Ctrl + N)：選取 [新增查詢] 之後，在這個視窗中輸入 Transact-SQL (T-SQL) 查詢。 此處也會顯示您的查詢結果。
     
     ![新增查詢視窗](media/ssms-configuration/newquery.png)
 
-- **屬性** (F4)：在開啟 [查詢視窗] 後即可見，並會顯示查詢的基本屬性。 例如，會顯示查詢開始的時間、傳回的資料列數目和連線詳細資料。  
+- **屬性** (F4)：查詢視窗開啟時，您會看到 [屬性] 檢視。 該檢視會顯示查詢的基本屬性。 例如，會顯示查詢開始的時間、傳回的資料列數目和連線詳細資料。  
 
     ![屬性](media/ssms-configuration/properties.png)
 
-- **範本瀏覽器** (Ctrl + Alt + T)：在範本瀏覽器中可以找到許多預先建立的 T-SQL 範本。 這些範本可讓您執行各種功能，例如建立或備份資料庫。 
+- **範本瀏覽器** (Ctrl+Alt+T)：範本瀏覽器具有各種預先建立之 T-SQL 的範本。 您可以使用這些範本來執行各種功能，例如建立或備份資料庫。 
 
     ![範本瀏覽器](media/ssms-configuration/templates.png)
 
-- **物件總管詳細資料** (F7)：這是物件總管中可見內容的更細微檢視，並可讓您一次管理多個物件。 例如，物件總管詳細資料視窗可讓您同時選取多個資料庫，並將其刪除或撰寫指令碼。 
+- **物件總管詳細資料** (F7)：此檢視會比使用 [物件總管] 中的檢視更細微。 您可以使用 [物件總管詳細資料]，同時管理多個物件。 例如，在這個視窗中，您可以選取多個資料庫，然後同時加以刪除或編寫其指令碼。 
 
     ![物件總管詳細資料](media/ssms-configuration/objectexplorerdetails.PNG) 
  
-
     
 
-## <a name="change-the-environmental-layout"></a>變更環境配置 
-本節討論如何管理環境配置，如移動各種視窗。 
+## <a name="change-the-environment-layout"></a>變更環境配置 
+本節描述如何變更環境配置，例如如何移動各種視窗。 
 
--  透過按住標題並拖曳視窗，可以移動每個視窗元件。 
-- 透過在標題列中選取圖釘圖示，可以釘選和取消釘選每個視窗元件：
+- 若要移動視窗，請按住標題，然後拖曳視窗。 
+- 若要釘選或取消釘選視窗，請選取標題列中的圖釘圖示：
     
     ![釘選物件](media/ssms-configuration/pushpin.png)
 
-- 每個視窗元件都有一個下拉式箭頭，允許以各種方式操作視窗： 
+- 每個視窗元件都具有您可以用各種方式操作視窗的下拉式功能表： 
 
     ![視窗選項](media/ssms-configuration/windowoptions.png)
 
-- 一旦您有兩個或更多個查詢視窗開啟時，可以垂直或水平將其索引標籤，以使兩個查詢視窗立即可見。 若要實現這一點，請以滑鼠右鍵按一下查詢標題，並選取所需的索引標籤選項。 
+- 當您有兩個或更多個開啟的查詢視窗時，可以垂直或水平使視窗成為索引標籤，讓兩個查詢視窗均為可見。 若要檢視索引標籤式視窗，請在查詢的標題上按一下滑鼠右鍵，然後選取您想要的索引標籤式選項： 
  
     ![查詢索引標籤選項](media/ssms-configuration/querytabbedoptions.png)
 
-    - 這是**水平索引標籤群組**：![水平索引標籤群組](media/ssms-configuration/horizontaltab.png)     
+    - 以下是水平索引標籤群組：
+
+      ![水平索引標籤群組的範例](media/ssms-configuration/horizontaltab.png)     
     
-    - 這是**垂直索引標籤群組**：  
-        ![垂直索引標籤群組](media/ssms-configuration/verticaltabgroup.png)
+    - 以下是垂直索引標籤群組：
+
+      ![垂直索引標籤群組的範例](media/ssms-configuration/verticaltabgroup.png)
         
-
-    - 若要再次合併索引標籤，請以滑鼠右鍵按一下查詢標題，並 [移至下一個索引標籤群組] 或 [移至上一個索引標籤群組]：
+    - 若要合併索引標籤，請以滑鼠右鍵按一下查詢標題，然後選取 [移至上一個索引標籤群組] 或 [移至下一個索引標籤群組]：
     
-        ![合併查詢索引標籤](media/ssms-configuration/mergetabgroups.png)
+      ![合併查詢索引標籤](media/ssms-configuration/mergetabgroups.png)
 
-- 若要還原預設環境配置，請按一下 [視窗] 功能表 > [重設視窗配置]：
+- 若要還原預設環境配置，請在 [視窗] 功能表中選取 [重設視窗配置]：
  
     ![還原視窗配置](media/ssms-configuration/resetwindowlayout.png)
     
 ## <a name="maximize-query-editor"></a>將查詢編輯器最大化
-查詢編輯器可以最大化為全螢幕模式。
+您可以將查詢編輯器最大化為全螢幕模式：
 
-1. 按一下查詢編輯器視窗中的任何位置。
-2. 按 SHIFT + ALT + ENTER 鍵來切換全螢幕模式和一般模式。 
+1. 按一下 [查詢編輯器] 視窗中的任何位置。
+2. 按 Shift+Alt+Enter 鍵來切換全螢幕模式和一般模式。 
 
 這個鍵盤快速鍵適用於任何文件視窗。 
 
 
 
 ## <a name="change-basic-settings"></a>變更基本設定
-本節討論如何修改 SSMS 中的一些基本設定。 這些選項可在 [工具] 功能表選項中找到：
+本節描述如何從 [工具] 功能表中修改 SSMS 的某些基本設定。
 
   ![工具功能表](media/ssms-configuration/tools.png)
 
 
-- 醒目標示的工具列可以透過功能表進行修改：[工具] > [自訂]：
+- 若要修改反白顯示的工具列，請選取 [工具] > [自訂]：
 
     ![自訂工具列](media/ssms-configuration/toolbar.png)
 
 ### <a name="change-the-font"></a>變更字型
-- 字型可從功能表進行變更：[工具] > [選項] > [字型和色彩]：
+- 若要變更字型，請選取 [工具] > [選項] > [字型和色彩]：
 
-     ![字型和色彩](media/ssms-configuration/fontsandcolors.png)
+     ![變更字型和色彩](media/ssms-configuration/fontsandcolors.png)
 
-### <a name="change-the-startup-options"></a>變更啟動選項
-- 啟動選項會決定您首次啟動 SSMS 時的工作區外觀。 這些可以從功能表設定：[工具] > [選項] > [啟動]：
+### <a name="change-startup-options"></a>變更啟動選項
+- 啟動選項會決定您首次開啟 SSMS 時的工作區外觀。 若要變更啟動選項，請選取 [工具] > [選項] > [啟動]：
  
-    ![啟動選項](media/ssms-configuration/startup.png)
+    ![變更啟動選項](media/ssms-configuration/startup.png)
 
-### <a name="reset-settings-to-default"></a>將設定重設為預設
-- 所有這些設定可以從功能表匯出和匯入：[工具] > [匯入和匯出設定] 
+### <a name="reset-settings-to-the-default"></a>將設定重設為預設值
+- 您可以從功能表中匯出並匯入所有的這些設定。 若要匯入或匯出設定，或還原預設設定，請選取 [工具] > [匯入和匯出設定] 
 
     ![匯入和匯出設定](media/ssms-configuration/settings.png)
-    - 這也是您可以將所有設定重設為預設的地方。 
+
 
 
 ## <a name="next-steps"></a>後續步驟
-下一篇文章會告訴您使用 SSMS 時的幾個額外秘訣和訣竅，例如尋找您的 SQL Server 錯誤記錄檔和 SQL 執行個體名稱。 
+下一篇文章會告訴您使用 SSMS 時的幾個其他祕訣和訣竅，例如尋找您的 SQL Server 錯誤記錄檔和 SQL 執行個體名稱。 
 
-請前往下一篇文章來進一步了解
 > [!div class="nextstepaction"]
-> [按鈕](ssms-tricks.md)
+> [使用 SSMS 的其他祕訣與訣竅](ssms-tricks.md)
  
  
 

@@ -28,6 +28,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32923153"
 ---
 # <a name="sqldriverconnect-function"></a>SQLDriverConnect 函數
 **一致性**  
@@ -149,7 +150,7 @@ SQLRETURN SQLDriverConnect(
   
  *連接字串*:: =*空白字串*[;]&#124; *屬性*[;]&#124; *屬性*;*連接字串*  
   
- *空白字串*:: =*屬性*:: =*屬性關鍵字*=*屬性值*& #124;驅動程式 = [{]*屬性值*[}]  
+ *空白字串*:: =*屬性*:: =*屬性關鍵字*=*屬性值*&#124;驅動程式 = [{]*屬性值*[}]  
   
  *屬性關鍵字*:: = DSN &#124; UID &#124; PWD &#124; *驅動程式-定義-屬性-關鍵字*  
   
