@@ -125,7 +125,7 @@ ms.lasthandoff: 05/10/2018
 
 [!INCLUDE[name-sos](../includes/name-sos-short.md)] 在 Windows、 macOS 和 Linux 上執行，並支援下列平台：
 
-### <a name="windows"></a>視窗
+### <a name="windows"></a>Windows
 - Windows 10 (64 位元)
 - Windows 8.1 (64 位元)
 - Windows 8 (64 位元)
