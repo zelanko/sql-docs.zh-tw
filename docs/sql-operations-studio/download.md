@@ -23,13 +23,13 @@ ms.lasthandoff: 05/10/2018
 
 [!INCLUDE[name-sos](../includes/name-sos.md)] 在 Windows、 macOS 和 Linux 上執行。
 
-下載並安裝最新版本中，*可能公開預覽*:
+下載並安裝最新版本中，*5 月公開預覽版*:
 
 |平台|下載|發行日期| 版本 |
 |:---|:---|:---|:---|
-|Windows|[安裝程式](https://go.microsoft.com/fwlink/?linkid=873386)<br>[.zip](https://go.microsoft.com/fwlink/?linkid=873387)|2018 年 7， |0.29.3|
-|macOS|[.zip](https://go.microsoft.com/fwlink/?linkid=873388)|2018 年 7， |0.29.3|
-|Linux|[.deb](https://go.microsoft.com/fwlink/?linkid=873391)<br>[.rpm](https://go.microsoft.com/fwlink/?linkid=873390)<br>[.tar.gz](https://go.microsoft.com/fwlink/?linkid=873389)|2018 年 7， |0.29.3|
+|Windows|[安裝程式](https://go.microsoft.com/fwlink/?linkid=873386)<br>[.zip](https://go.microsoft.com/fwlink/?linkid=873387)|2018 年 5 月 7 日 |0.29.3|
+|macOS|[.zip](https://go.microsoft.com/fwlink/?linkid=873388)|2018 年 5 月 7 日 |0.29.3|
+|Linux|[.deb](https://go.microsoft.com/fwlink/?linkid=873391)<br>[.rpm](https://go.microsoft.com/fwlink/?linkid=873390)<br>[.tar.gz](https://go.microsoft.com/fwlink/?linkid=873389)|2018 年 5 月 7 日 |0.29.3|
 
 如需最新版本的詳細資訊，請參閱[版本資訊](release-notes.md)。
 
