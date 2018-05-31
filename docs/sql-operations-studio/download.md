@@ -119,7 +119,7 @@ ms.lasthandoff: 05/10/2018
 
 如果您已安裝[!INCLUDE[name-sos-short](../includes/name-sos-short.md)]使用 Windows installer，然後解除安裝移除所有 Windows 應用程式的方式相同。
 
-如果您已安裝[!INCLUDE[name-sos-short](../includes/name-sos-short.md)].zip 或其他封存，然後只要刪除檔案。
+如果您使用.zip 或其他封存安裝[!INCLUDE[name-sos-short](../includes/name-sos-short.md)]，只要刪除檔案即可。
 
 ## <a name="supported-operating-systems"></a>支援的作業系統
 
