@@ -21,9 +21,9 @@ ms.lasthandoff: 05/17/2018
 ---
 # <a name="user-and-workspace-settings"></a>使用者和工作區設定
 
-所以可以輕鬆地設定[!INCLUDE[name-sos](../includes/name-sos-short.md)]透過設定您自己的需要。 幾乎所有屬於[!INCLUDE[name-sos](../includes/name-sos-short.md)]的編輯器、 使用者介面和功能的行為有選項可修改。
+透過設定功能可以輕鬆配置 [!INCLUDE[name-sos](../includes/name-sos-short.md)] 以滿足您的喜好。 幾乎所有屬於[!INCLUDE[name-sos](../includes/name-sos-short.md)]編輯器、 使用者介面和功能行為的每個部份都有可修改的選項。
 
-[!INCLUDE[name-sos](../includes/name-sos-short.md)] 提供兩個不同的範圍的設定：
+[!INCLUDE[name-sos](../includes/name-sos-short.md)] 提供兩個不同範圍的設定：
 
 * **使用者**這些設定會全域套用至任何執行個體[!INCLUDE[name-sos](../includes/name-sos-short.md)]開啟。
 * **工作區**工作地區設定是您的電腦上的資料夾特有的設定，只能用於在檔案總管 [資訊看板] 中開啟資料夾時。 定義領域上設定覆寫使用者領域。
@@ -50,13 +50,13 @@ ms.lasthandoff: 05/17/2018
 * **Mac** `$HOME/Library/Application Support/sqlops/User/settings.json`
 * **Linux** `$HOME/.config/sqlops/User/settings.json`
 
-工作區設定檔案位於`.[!INCLUDE[name-sos](../includes/name-sos-short.md)]`專案資料夾中的。
+工作區設定檔案位於您專案內[!INCLUDE[name-sos](../includes/name-sos-short.md)]資料夾下。
 
 ## <a name="hot-exit"></a>熱結束
 
-SQL 作業 Studio 將檔案記住未儲存的變更，當您結束預設。 這是在 Visual Studio 程式碼中的熱結束功能相同。
+SQL Operations Studio 將檔案記住未儲存的變更，當您結束預設。 這是在 Visual Studio Code 中的熱結束功能相同。
 
-根據預設，熱結束已關閉。 啟用作用結束藉由編輯`files.hotExit`設定。 如需詳細資訊，請參閱[（在 Visual Studio 程式碼文件中） 的熱結束](https://code.visualstudio.com/docs/editor/codebasics#_hot-exit)。
+根據預設，熱結束已關閉。 啟用作用結束藉由編輯`files.hotExit`設定。 如需詳細資訊，請參閱[（在 Visual Studio Code文件中） 的熱結束](https://code.visualstudio.com/docs/editor/codebasics#_hot-exit)。
 
 
 ## <a name="tab-color"></a>索引標籤色彩
@@ -65,4 +65,4 @@ SQL 作業 Studio 將檔案記住未儲存的變更，當您結束預設。 這�
 
 ## <a name="additional-resources"></a>其他資源
 
-因為[!INCLUDE[name-sos](../includes/name-sos-short.md)]繼承功能，從 Visual Studio 程式碼，設定的詳細資訊是在使用者和工作區設定[設定 Visual Studio Code](https://code.visualstudio.com/docs/getstarted/settings)發行項。
+因為[!INCLUDE[name-sos](../includes/name-sos-short.md)] 從 Visual Studio Code 繼承使用者和工作區設定功能，詳細的設定資訊可以參考[設定 Visual Studio Code](https://code.visualstudio.com/docs/getstarted/settings)文章。
