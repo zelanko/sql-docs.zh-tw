@@ -54,9 +54,9 @@ ms.lasthandoff: 05/17/2018
 
 ## <a name="hot-exit"></a>熱結束
 
-SQL Operations Studio 將檔案記住未儲存的變更，當您結束預設。 這是在 Visual Studio Code 中的熱結束功能相同。
+當您離開時，SQL Operations Studio 預設記住未儲存檔案的變更。 這與 Visual Studio Code 熱結束功能相同。
 
-根據預設，熱結束已關閉。 啟用作用結束藉由編輯`files.hotExit`設定。 如需詳細資訊，請參閱[（在 Visual Studio Code文件中） 的熱結束](https://code.visualstudio.com/docs/editor/codebasics#_hot-exit)。
+根據預設，熱結束為關閉。 您可以藉由編輯`files.hotExit`設定啟用熱結束。 如需詳細資訊，請參閱[（在 Visual Studio Code文件中） 的熱結束](https://code.visualstudio.com/docs/editor/codebasics#_hot-exit)。
 
 
 ## <a name="tab-color"></a>索引標籤色彩
