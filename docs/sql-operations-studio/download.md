@@ -1,4 +1,4 @@
----
+﻿---
 title: 下載並安裝 Microsoft SQL Operations Studio (preview) |Microsoft 文件
 description: 下載和安裝 Microsoft SQL Operations Studio (preview) for Windows、 macOS 或 Linux
 ms.custom: tools|sos
@@ -125,7 +125,7 @@ ms.lasthandoff: 05/10/2018
 
 [!INCLUDE[name-sos](../includes/name-sos-short.md)] 在 Windows、 macOS 和 Linux 上執行，並支援下列平台：
 
-### <a name="windows"></a>視窗
+### <a name="windows"></a>Windows
 - Windows 10 (64 位元)
 - Windows 8.1 (64 位元)
 - Windows 8 (64 位元)
