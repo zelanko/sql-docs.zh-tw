@@ -20,10 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 46af14e62769073be33f891bc11a7bf012c8924b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: 2d93cd115f52bf3eff3069f28ea866232b4f9f9e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "32802580"
 ---
 # <a name="procedures-append-method-example-vb"></a>程序附加方法範例 (VB)
 下列程式碼示範如何使用[命令](../../../ado/reference/ado-api/command-object-ado.md)物件和[程序](../../../ado/reference/adox-api/procedures-collection-adox.md)集合[附加](../../../ado/reference/adox-api/append-method-adox-procedures.md)基礎資料來源中建立新的程序的方法。  

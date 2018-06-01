@@ -25,17 +25,18 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: 90fbd2b92ccfcf01da2c2742a3b5a083f30f1e03
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: 2d93cd115f52bf3eff3069f28ea866232b4f9f9e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "33221949"
 ---
 # <a name="sysxmlschemacomponents-transact-sql"></a>sys.xml_schema_components (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   針對 XML 結構描述的每個元件，各傳回一個資料列。 配對 (**collection_id**， **namespace_id**) 是包含命名空間的複合外部索引鍵。 具名的值，元件**symbol_space**，**名稱**， **scoping_xml_component_id**， **is_qualified**， **xml_namespace_id**， **xml_collection_id**是唯一的。  
   
-|資料行名稱|資料類型|Description|  
+|資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |**xml_component_id**|**int**|資料庫中 XML 結構描述元件的唯一識別碼。|  
 |**xml_collection_id**|**int**|包含這個元件之命名空間的 XML 結構描述集合識別碼。|  

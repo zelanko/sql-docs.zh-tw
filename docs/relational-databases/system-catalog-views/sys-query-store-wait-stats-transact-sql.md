@@ -25,17 +25,18 @@ ms.author: AndrejsAnt
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2017 || = sqlallproducts-allversions
 ms.openlocfilehash: d4a7afdca88de97188577e726d203040e33c8c71
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: 2d93cd115f52bf3eff3069f28ea866232b4f9f9e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "33182014"
 ---
 # <a name="sysquerystorewaitstats-transact-sql"></a>sys.query_store_wait_stats (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
 
   包含有關查詢等候資訊的詳細資訊。  
   
-|資料行名稱|資料類型|Description|  
+|資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |**wait_stats_id**|**bigint**|代表 plan_id、 runtime_stats_interval_id、 execution_type 和 wait_category 等待統計資料的資料列的識別項。 它是唯一的只會針對過去的執行階段統計資料間隔。 對於目前有效間隔可能代表 execution_type wait_category 所表示在等候類別所表示的執行類型與參考 plan_id，計劃的等待統計資料的多個資料列。 一般而言，一個資料列都代表等待統計資料會排清至磁碟，而其他 (s) 代表記憶體中狀態。 因此，以取得每個間隔的實際狀態您要彙總的度量資訊，透過 plan_id、 runtime_stats_interval_id、 execution_type 和 wait_category 分組。 |  
 |**plan_id**|**bigint**|外部索引鍵。 加入[sys.query_store_plan &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-plan-transact-sql.md)。|  

@@ -4,27 +4,26 @@ ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
 ms.prod_service: pdw
-ms.service: ''
 ms.component: system-catalog-views
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: system-objects
 ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - TSQL
 ms.assetid: 255681e9-323c-42c0-a63c-1f05536efdd5
 caps.latest.revision: 8
-author: barbkess
-ms.author: barbkess
+author: ronortloff
+ms.author: rortloff
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 78ef5ef914c308d86e2fa7b78ca302705482d28e
-ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
-ms.translationtype: HT
+ms.openlocfilehash: 5521b046d49fe27c7dd1a174f960caec54e8626e
+ms.sourcegitcommit: 2d93cd115f52bf3eff3069f28ea866232b4f9f9e
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "33180544"
 ---
 # <a name="syspdwloaderrunstages-transact-sql"></a>sys.pdw_loader_run_stages (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
@@ -33,7 +32,7 @@ ms.lasthandoff: 05/03/2018
   
 |||||  
 |-|-|-|-|  
-|資料行名稱|資料類型|Description|範圍|  
+|資料行名稱|資料類型|描述|範圍|  
 |run_id|**int**|執行載入器的唯一識別碼。||  
 |stage (階段)|**nvarchar(30)**|目前的執行階段。|'CREATE_STAGING'、 'DMS_LOAD'、 'LOAD_INSERT'、 'LOAD_CLEANUP'|  
 |request_id|**nvarchar(32)**|執行這個階段的要求識別碼。||  

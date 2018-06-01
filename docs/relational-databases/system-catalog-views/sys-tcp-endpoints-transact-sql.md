@@ -4,12 +4,10 @@ ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
 ms.prod_service: database-engine
-ms.service: ''
 ms.component: system-catalog-views
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: system-objects
 ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
@@ -26,11 +24,12 @@ caps.latest.revision: 28
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.openlocfilehash: bdf7545cdf39f3df37c3a6a6f1c3c83220addc1d
-ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
-ms.translationtype: HT
+ms.openlocfilehash: 1c04be5f76337422601486d08ff41316c7c98192
+ms.sourcegitcommit: 2d93cd115f52bf3eff3069f28ea866232b4f9f9e
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "33221289"
 ---
 # <a name="systcpendpoints-transact-sql"></a>sys.tcp_endpoints (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -38,10 +37,10 @@ ms.lasthandoff: 05/03/2018
   針對系統中每個 TCP 端點，各包含一個資料列。 所描述的端點**sys.tcp_endpoints**提供要授與及撤銷連接權限的物件。 顯示的通訊埠及 IP 位址相關資訊不會用來設定通訊協定，而且可能與實際的通訊協定組態不相符。 若要檢視及設定通訊協定，請使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 組態管理員。  
   
   
-|資料行名稱|資料類型|Description|  
+|資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |**< 繼承的資料行 >**||繼承資料行從[sys.endpoints](../../relational-databases/system-catalog-views/sys-endpoints-transact-sql.md)。|  
-|**port**|int|端點正在接聽的通訊埠編號。 不可為 Null。|  
+|**port**|ssNoversion|端點正在接聽的通訊埠編號。 不可為 Null。|  
 |**is_dynamic_port**|bit|1 = 通訊埠編號是以動態方式指派。<br /><br /> 不可為 Null。|  
 |**ip_address**|**nvarchar(45)**|由 LISTENER_IP 子句指定的接聽程式 IP 位址。 可為 Null。|  
   

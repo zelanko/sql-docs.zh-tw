@@ -26,10 +26,11 @@ ms.author: edmaca
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: 5fb74ca331e580ffa71111f987bf3a93450f2b56
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: 2d93cd115f52bf3eff3069f28ea866232b4f9f9e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "33178334"
 ---
 # <a name="schemas-catalog-views---sysschemas"></a>結構描述目錄檢視-sys.schemas
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
@@ -39,7 +40,7 @@ ms.lasthandoff: 05/04/2018
 > [!NOTE]  
 >  資料庫結構描述與 XML 結構描述不同，它是用來定義 XML 文件的內容模型。  
   
-|資料行名稱|資料類型|Description|  
+|資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |**name**|**sysname**|結構描述的名稱。 在資料庫中，這是唯一的。|  
 |**schema_id**|**int**|結構描述的識別碼。 在資料庫中，這是唯一的。|  
@@ -49,7 +50,7 @@ ms.lasthandoff: 05/04/2018
  資料庫結構描述做為命名空間或容器使用的物件，例如資料表、 檢視、 程序和函式，可以在中找到**sys.objects**目錄檢視。  
   
 ## <a name="permissions"></a>Permissions  
- 需要 **public** 角色中的成員資格。 如需相關資訊，請參閱 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)。  
+ 需要 **public** 角色的成員資格。 如需相關資訊，請參閱 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)。  
   
 ## <a name="see-also"></a>另請參閱  
  [目錄檢視 &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
