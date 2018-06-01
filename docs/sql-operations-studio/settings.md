@@ -21,7 +21,7 @@ ms.lasthandoff: 05/17/2018
 ---
 # <a name="user-and-workspace-settings"></a>使用者和工作區設定
 
-透過設定功能可以輕鬆配置 [!INCLUDE[name-sos](../includes/name-sos-short.md)] 以滿足您的喜好。 幾乎所有屬於[!INCLUDE[name-sos](../includes/name-sos-short.md)]編輯器、 使用者介面和功能行為的每個部份都有可修改的選項。
+透過設定功能可以輕鬆配置 [!INCLUDE[name-sos](../includes/name-sos-short.md)] 以滿足您的喜好。[!INCLUDE[name-sos](../includes/name-sos-short.md)] 的編輯器、使用者介面和功能行為，幾乎都有可修改的選項。
 
 [!INCLUDE[name-sos](../includes/name-sos-short.md)] 提供兩個不同範圍的設定：
 
@@ -56,8 +56,7 @@ ms.lasthandoff: 05/17/2018
 
 當您離開時，SQL Operations Studio 預設記住未儲存檔案的變更。 這與 Visual Studio Code 熱結束功能相同。
 
-根據預設，熱結束為關閉。 您可以藉由編輯`files.hotExit`設定啟用熱結束。 如需詳細資訊，請參閱[（在 Visual Studio Code文件中） 的熱結束](https://code.visualstudio.com/docs/editor/codebasics#_hot-exit)。
-
+根據預設，熱結束為關閉。 您可以藉由編輯 `files.hotExit` 設定以啟用熱結束。 如需詳細資訊，請參閱 Visual Studio Code 文件中的[熱結束](https://code.visualstudio.com/docs/editor/codebasics#_hot-exit)。
 
 ## <a name="tab-color"></a>索引標籤色彩
 
@@ -65,4 +64,4 @@ ms.lasthandoff: 05/17/2018
 
 ## <a name="additional-resources"></a>其他資源
 
-因為[!INCLUDE[name-sos](../includes/name-sos-short.md)] 從 Visual Studio Code 繼承使用者和工作區設定功能，詳細的設定資訊可以參考[設定 Visual Studio Code](https://code.visualstudio.com/docs/getstarted/settings)文章。
+因為 [!INCLUDE[name-sos](../includes/name-sos-short.md)] 從 Visual Studio Code 繼承使用者和工作區設定功能，詳細的設定資訊可以參考[設定 Visual Studio Code](https://code.visualstudio.com/docs/getstarted/settings) 文章。
