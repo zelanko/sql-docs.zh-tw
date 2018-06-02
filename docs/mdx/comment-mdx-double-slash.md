@@ -1,32 +1,20 @@
 ---
 title: （註解）(MDX) |Microsoft 文件
-ms.custom: ''
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.component: ''
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: language-reference
-f1_keywords:
-- //
-dev_langs:
-- kbMDX
-helpviewer_keywords:
-- commenting characters
-- // (comment)
-ms.assetid: 9a3ee822-4689-41a8-9997-8b307850cd68
-caps.latest.revision: 37
-author: Minewiskan
+ms.date: 05/30/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: mdx
+ms.topic: reference
 ms.author: owend
-manager: erikre
-ms.openlocfilehash: b0023d45617aefa6143ca6a68b5fe311a6466b3c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: 7d6e981e279d8ab9fc9239ed7be56528d2f2018b
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34577410"
 ---
 # <a name="comment-mdx-double-slash"></a>註解 MDX 雙斜線
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -68,8 +56,8 @@ WHERE
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [註解 & #40;MDX & #41;](../mdx/comment-mdx.md)   
- [-& #40;註解 & #41;& #40;MDX & #41;](../mdx/comment-mdx-operator-reference.md)   
+ [註解 &#40;MDX&#41;](../mdx/comment-mdx.md)   
+ [-- &#40;註解&#41; &#40;MDX&#41;](../mdx/comment-mdx-operator-reference.md)   
  [MDX 運算子參考&#40;MDX&#41;](../mdx/mdx-operator-reference-mdx.md)  
   
   

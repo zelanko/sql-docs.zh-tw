@@ -9,11 +9,12 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: efc077bda6d05642107a6e8694d53418401ff12c
-ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
+ms.openlocfilehash: 718a076822a4304e0ba951f3ca1903bb7c009e17
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34586060"
 ---
 # <a name="load-data-with-integration-services-to-parallel-data-warehouse"></a>載入資料到 Parallel Data Warehouse 的 Integration services
 提供使用 SQL Server Integration Services (SSIS) 封裝將資料載入 SQL Server Parallel Data Warehouse 的參考和部署資訊。  
@@ -28,7 +29,7 @@ Before you can start loading data, use the following topics to install the Integ
   
 -   [Connect With Integration Services for loading](connect-with-ssis-for-loading.md)  
   
-For general information about developing Integration Services packages, see [Designing and Implementing Packages (Integration Services)](http://msdn.microsoft.com/library/ms141091&#40;v=sql11&#40;.aspx) on MSDN.  
+For general information about developing Integration Services packages, see [Designing and Implementing Packages (Integration Services)](http://msdn.microsoft.com/library/ms141091\(v=sql11\).aspx) on MSDN.  
 
 -->
   
@@ -55,7 +56,7 @@ Integration Services 的完整文件，請參閱[SQL Server Integration Services
 ### <a name="run-from-powershell"></a>從 PowerShell 執行  
 若要從 Windows PowerShell 中執行封裝使用**dtexec**公用程式： `dtexec /FILE <packagePath>`  
   
-例如， `dtexec /FILE "C:\Users\User1\Desktop\Package.dtsx"`  
+例如，使用 IPv4 位址的 `dtexec /FILE "C:\Users\User1\Desktop\Package.dtsx"`  
   
 ### <a name="run-from-a-windows-command-prompt"></a>執行從 Windows 命令提示字元 
 若要從 Windows 命令提示字元中，執行封裝使用**dtexec**公用程式： `dtexec /FILE <packagePath>`  
@@ -83,7 +84,7 @@ Integration Services 的完整文件，請參閱[SQL Server Integration Services
 |NCHAR|DT_WSTR|  
 |NUMERIC|DT_DECIMAL、DT_I1、DT_I2、DT_I4、DT_I8、DT_NUMERIC、DT_UI1、DT_UI2、DT_UI4、DT_UI8|  
 |NVARCHAR|DT_WSTR、DT_STR|  
-|REAL|DT_R4|  
+|real|DT_R4|  
 |SMALLDATETIME|DT_DBTIMESTAMP2|  
 |SMALLINT|DT_I1、DT_I2、DT_UI1|  
 |SMALLMONEY|DT_R4|  
@@ -247,16 +248,16 @@ Integration Services 的電腦上執行封裝。
   
 ## <a name="see-also"></a>另請參閱  
 [建立使用 SSIS PDW 目的地配接器的指令碼工作](create-ssis-script-task-using-pdw-destination-adapter.md)  
-[SQL Server Integration Services](http://msdn.microsoft.com/library/ms141026&#40;v=sql11&#40;.aspx)  
-[設計和實作封裝 (Integration Services)](http://msdn.microsoft.com/library/ms141091&#40;v=sql11&#40;.aspx)  
-[教學課程： 建立基本封裝，使用精靈](http://technet.microsoft.com/library/ms365330&#40;v=sql11&#40;.aspx)  
+[SQL Server Integration Services](http://msdn.microsoft.com/library/ms141026\(v=sql11\).aspx)  
+[設計和實作封裝 (Integration Services)](http://msdn.microsoft.com/library/ms141091\(v=sql11\).aspx)  
+[教學課程： 建立基本封裝，使用精靈](http://technet.microsoft.com/library/ms365330\(v=sql11\).aspx)  
 [使用者入門 (Integration Services)](http://go.microsoft.com/fwlink/?LinkId=202412)  
 [動態封裝產生範例](http://go.microsoft.com/fwlink/?LinkId=202413)  
 [SSIS 封裝設計平行處理原則 （SQL Server 影片）](http://msdn.microsoft.com/library/dd795221.aspx)  
 [Microsoft SQL Server 社群範例： Integration Services](http://go.microsoft.com/fwlink/?LinkId=202415)  
-[與異動資料擷取改善累加式載入](http://msdn.microsoft.com/library/bb895315&#40;v=sql11&#40;.aspx)  
-[緩時變維度轉換](http://msdn.microsoft.com/library/ms141715&#40;v=sql11&#40;.aspx)  
-[大量插入工作](http://msdn.microsoft.com/library/ms141239&#40;v=sql11&#40;.aspx)  
+[與異動資料擷取改善累加式載入](http://msdn.microsoft.com/library/bb895315\(v=sql11\).aspx)  
+[緩時變維度轉換](http://msdn.microsoft.com/library/ms141715\(v=sql11\).aspx)  
+[大量插入工作](http://msdn.microsoft.com/library/ms141239\(v=sql11\).aspx)  
   
 <!-- MISSING LINKS
 [Grant permissions to load data](grant-permissions-to-load-data.md)  

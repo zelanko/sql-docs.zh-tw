@@ -13,11 +13,12 @@ ms.topic: tutorial
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: df4eca076f18ce5b75a36d05c8ee26965d6a3bae
-ms.sourcegitcommit: b3bb41424249de198f22d9c6d40df4996f083aa6
+ms.openlocfilehash: 22a453caa9d29432381da6861a0f0c4e3e61d77e
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/18/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34582450"
 ---
 # <a name="backup-and-restore-using-includename-sosincludesname-sos-shortmd"></a>使用[!INCLUDE[name-sos](../includes/name-sos-short.md)]備份及還原
 
@@ -76,7 +77,7 @@ ms.lasthandoff: 05/18/2018
 
 4. 按一下**還原**
 
-5. 若要檢視還原作業的狀態，請按一下**CTRL + T**開啟**工作歷程記錄**[資訊看板]。
+5. 若要檢視的還原作業的狀態，請按**CTRL + T**開啟**工作歷程記錄**[資訊看板]。
 
    ![還原](./media/tutorial-backup-restore-sql-server/task-history-restore.png)
 

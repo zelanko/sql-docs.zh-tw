@@ -7,11 +7,12 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 56a3bc495fa6541208a094f82ede9a43b4021c23
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: d06f34210f5ec4aee741d3f3a70a01f60f10fb98
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34586040"
 ---
 # <a name="r-libraries-and-r-data-types"></a>R 程式庫和 R 資料類型
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -34,7 +35,7 @@ R 服務和機器學習服務使用 R，這兩種產品與特定版本的 Micros
 
 若要尋找包含特定版本的 Microsoft R Server 中的 R 版本，請參閱[R 伺服器-What's New](https://msdn.microsoft.com/microsoft-r/rserver-whats-new#new-and-updated-packages)。
 
-請注意，SQL Server 中的封裝管理系統表示多個版本的 R 封裝可以安裝在相同的電腦上，具有多個使用者共用相同的封裝，或使用不同版本的相同的封裝。 如需詳細資訊，請參閱[SQL Server 中的 R 封裝管理](../r/r-package-management-for-sql-server-r-services.md)。
+請注意，SQL Server 中的封裝管理系統表示多個版本的 R 封裝可以安裝在相同的電腦上，具有多個使用者共用相同的封裝，或使用不同版本的相同的封裝。 如需詳細資訊，請參閱[SQL Server 中的 R 封裝管理](../r/install-additional-r-packages-on-sql-server.md)。
 
 ## <a name="r-and-sql-data-types"></a>R 和 SQL 資料類型
 
@@ -147,8 +148,8 @@ outputDataSet <- inputDataSet'
 ||||||
 |-|-|-|-|-|
 ||C1|C2|C3|C4|
-|1|1|Hello|6e225611-4b58-4995-a0a5-554d19012ef1|4|
-|1|-11|world|6732ea46-2d5d-430b-8ao1-86e7f3351c3e|2|
+|@shouldalert|@shouldalert|Hello|6e225611-4b58-4995-a0a5-554d19012ef1|4|
+|@shouldalert|-11|world|6732ea46-2d5d-430b-8ao1-86e7f3351c3e|2|
 
 請注意，在 R 中使用 `str` 函數可取得輸出資料的結構描述。 此函數傳回下列資訊：
 
@@ -166,7 +167,7 @@ outputDataSet <- inputDataSet'
   
 -   **資料行 C2**。 資料行在 **ssNoversion** 中會表示為 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，在 R 中會表示為 `factor` 而在輸出結果集中則為 **varchar(max)** 。  
   
-     請注意輸出的變更方式；來自 R 的任何字串 (因素或一般字串) 不管字串的長度為何，皆會以 **varchar(max)**表示。  
+     請注意輸出的變更方式；來自 R 的任何字串 (因素或一般字串) 不管字串的長度為何，皆會以 **varchar(max)** 表示。  
   
 -   **資料行 C3**。  資料行在 **ssNoversion** 中會表示為 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，在 R 中會表示為 `character` 而在輸出結果集中則為 **varchar(max)** 。
   

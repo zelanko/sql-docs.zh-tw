@@ -9,11 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 6af1143891fff7bc5ddc8fd25d4908fae5246bba
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 1ba73a6ea5926de6f445c5ca5cec8142b3e196bd
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34576270"
 ---
 # <a name="cell-element-mddataset-xmla"></a>Cell 元素 (MDDataSet) (XMLA)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -34,7 +35,7 @@ ms.lasthandoff: 05/10/2018
   
 ## <a name="element-characteristics"></a>元素特性  
   
-|特性|說明|  
+|特性|描述|  
 |--------------------|-----------------|  
 |資料類型和長度|無|  
 |預設值|無|  
@@ -49,7 +50,7 @@ ms.lasthandoff: 05/10/2018
   
 ## <a name="attributes"></a>屬性  
   
-|Attribute|說明|  
+|attribute|描述|  
 |---------------|-----------------|  
 |CellOrdinal|需要**unsignedInt**屬性。 資料格在多維度資料集中的序數位置。|  
   
@@ -65,7 +66,7 @@ ms.lasthandoff: 05/10/2018
  資料格屬性值的資料類型僅針對 VALUE 資料格屬性指定。 資料類型的其他資料格屬性由包含在資料格屬性定義**CellInfo**項目。 資料格屬性值項目可能會排除在指定的預設值 (包含**預設**資料格屬性定義中所包含的項目**CellInfo**項目) 為資料格的屬性，或如果已指定沒有預設值，而且資料格屬性的值為 null。  
   
 ## <a name="cell-property-errors"></a>資料格屬性錯誤  
- 如果資料格屬性不能傳回的執行個體發生的錯誤，因為[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]，例如防止針對給定的資料格，傳回值的計算錯誤**錯誤**項目會取代所討論的資料格屬性的內容。 下列 XML 範例將描述資料格屬性錯誤：  
+ 如果無法傳回資料格屬性，例如防止針對給定的資料格，傳回值的計算錯誤的 Analysis Services 執行個體發生的錯誤，因為**錯誤**元素取代的內容資料格屬性有問題。 下列 XML 範例將描述資料格屬性錯誤：  
   
 ```  
 <Cell CellOrdinal="0">  
@@ -125,8 +126,8 @@ ms.lasthandoff: 05/10/2018
 </CellData>  
 ```  
   
-## <a name="see-also"></a>另請參閱  
- [MDDataSet 資料類型 & #40;XMLA & #41;](../../../analysis-services/xmla/xml-data-types/mddataset-data-type-xmla.md)   
- [屬性 & #40;XMLA & #41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
+## <a name="see-also"></a>另請參閱
+ [MDDataSet 資料類型&#40;XMLA&#41;](../../../analysis-services/xmla/xml-data-types/mddataset-data-type-xmla.md)   
+ [屬性&#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
   
   

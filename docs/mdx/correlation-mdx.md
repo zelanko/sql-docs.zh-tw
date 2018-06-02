@@ -1,31 +1,20 @@
 ---
 title: 相互關聯 (MDX) |Microsoft 文件
-ms.custom: ''
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.component: ''
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: language-reference
-f1_keywords:
-- CORRELATION
-dev_langs:
-- kbMDX
-helpviewer_keywords:
-- Correlation function
-ms.assetid: 9b3662c9-95a1-4644-b952-9460fe0cf160
-caps.latest.revision: 38
-author: Minewiskan
+ms.date: 05/30/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: mdx
+ms.topic: reference
 ms.author: owend
-manager: erikre
-ms.openlocfilehash: f60c0b119f84698a3047f9c14a9a714d10ae2751
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: e4b53ff01dc6cf0d62b334e95ac8a474f969f5f9
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34577450"
 ---
 # <a name="correlation-mdx"></a>Correlation (MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -56,6 +45,6 @@ Correlation( Set_Expression, Numeric_Expression_y [ ,Numeric_Expression_x ] )
 >  **相互關聯**函式會忽略空白資料格包含文字或邏輯值。 不過，此函數包括值為零的資料格。  
   
 ## <a name="see-also"></a>另請參閱  
- [MDX 函數參考 & #40;MDX & #41;](../mdx/mdx-function-reference-mdx.md)  
+ [MDX 函數參考&#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

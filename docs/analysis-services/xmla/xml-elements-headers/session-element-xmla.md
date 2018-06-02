@@ -9,15 +9,16 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 6be7e6cde72908273261e09020305441d6a42738
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 02b4c93919e6354a59aad9b42a4f6dc8373c880f
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34577500"
 ---
 # <a name="session-element-xmla"></a>Session 元素 (XMLA)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
-  在 SOAP 要求訊息中使用 SOAP 標頭，來識別現有的明確工作階段的執行個體上[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]。  
+  在 SOAP 要求訊息中使用 SOAP 標頭，來識別現有的明確工作階段上的 Analysis Services 執行個體。  
   
  **命名空間**描述 urn:-microsoft-schemas-microsoft-com:-分析  
   
@@ -41,7 +42,7 @@ ms.lasthandoff: 05/10/2018
   
 ## <a name="element-characteristics"></a>元素特性  
   
-|特性|說明|  
+|特性|描述|  
 |--------------------|-----------------|  
 |資料類型和長度|無|  
 |預設值|無|  
@@ -56,7 +57,7 @@ ms.lasthandoff: 05/10/2018
   
 ## <a name="attributes"></a>屬性  
   
-|Attribute|Description|  
+|attribute|描述|  
 |---------------|-----------------|  
 |SessionId|需要**字串**屬性，可識別要使用工作階段。 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 會使用全域唯一識別碼 (GUID) 來識別工作階段。|  
   
@@ -71,9 +72,9 @@ ms.lasthandoff: 05/10/2018
   
  如果**工作階段**項目不會傳送 SOAP 要求，一部分[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]執行個體會以隱含方式開始的工作階段的持續時間**探索**或**Execute**方法呼叫中，然後再結束方法呼叫完成該工作階段。  
   
-## <a name="see-also"></a>另請參閱  
- [EndSession 元素 & #40;XMLA & #41;](../../../analysis-services/xmla/xml-elements-headers/endsession-element-xmla.md)   
- [管理連接和工作階段 & #40;XMLA & #41;](../../../analysis-services/multidimensional-models-scripting-language-assl-xmla/managing-connections-and-sessions-xmla.md)   
- [標頭 & #40;XMLA & #41;](../../../analysis-services/xmla/xml-elements-headers/xml-elements-headers.md)  
+## <a name="see-also"></a>另請參閱
+ [EndSession 元素&#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-headers/endsession-element-xmla.md)   
+ [管理連接與工作階段&#40;XMLA&#41;](../../../analysis-services/multidimensional-models-scripting-language-assl-xmla/managing-connections-and-sessions-xmla.md)   
+ [標頭&#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-headers/xml-elements-headers.md)  
   
   

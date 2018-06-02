@@ -7,11 +7,12 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 0b524e7e9fb24ff0296fc0e70c8bb8a462f3d199
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: b24832c8debe12c11aaa337e9558d99e7fae5ae0
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34585500"
 ---
 # <a name="configure-and-manage-machine-learning-components-in-sql-server"></a>設定及管理 SQL Server 中的機器學習服務元件
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -33,7 +34,7 @@ ms.lasthandoff: 04/16/2018
 
 這些文章說明如何在 SQL Server 執行個體上安裝新的 R 封裝、 管理 R 封裝程式庫，以及資料庫還原後還原封裝程式庫。
 
-+ [安裝和管理 R 封裝](installing-and-managing-r-packages.md)
++ [在 SQL Server 中的預設 R，並將 Python 封裝](installing-and-managing-r-packages.md)
 + [安裝新的 R 封裝](install-additional-r-packages-on-sql-server.md)
 + [使用資料庫角色執行個體啟用封裝管理](r-package-how-to-enable-or-disable.md)
 + [建立本機封裝儲存機制使用 miniCRAN](create-a-local-package-repository-using-minicran.md)

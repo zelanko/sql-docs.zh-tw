@@ -3,8 +3,6 @@ title: 如何： 使用 SQLSRV 驅動程式擷取輸出參數 |Microsoft 文件
 ms.custom: ''
 ms.date: 04/11/2018
 ms.prod: sql
-ms.prod_service: connectivity
-ms.component: php
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: connectivity
@@ -17,11 +15,12 @@ caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 8699d76ace19555c57ff3bcd8992f60a5cef526a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 81a94f68d7198285125236337a0025e41f1bf8ef
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34563886"
 ---
 # <a name="how-to-retrieve-output-parameters-using-the-sqlsrv-driver"></a>如何：使用 SQLSRV 驅動程式擷取輸出參數
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -33,7 +32,7 @@ ms.lasthandoff: 05/03/2018
   
 以 SQLSRV_SQLTYPE_VARCHAR('max') 之類的資料流類型做為輸出參數時，可能會發生資料截斷。 目前不支援以資料流類型做為輸出參數。 就非資料流類型而言，如果未指定輸出參數的長度，或指定的長度不足以用於輸出參數，則可能會發生資料截斷。  
   
-## <a name="example"></a>範例  
+## <a name="example-1"></a>範例 1
 下列範例會呼叫一個預存程序，傳回指定員工的年度迄今銷售量。 PHP 變數 *$lastName* 是輸入參數， *$salesYTD* 則是輸出參數。  
   
 > [!NOTE]  
@@ -125,9 +124,9 @@ sqlsrv_close( $conn);
 ```  
 
 > [!NOTE]
-> 當繫結 output 參數至 bigint 值，如果此值可能最後範圍之外的[整數](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md)，您必須指定為 SQLSRV_SQLTYPE_BIGINT 它 SQL 的欄位類型。 否則，它可能會導致 「 超出範圍的值 」 例外狀況。
+> Bigint 型別，繫結 output 參數，如果值可能會超出範圍時[整數](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md)，您必須指定為 SQLSRV_SQLTYPE_BIGINT 它 SQL 的欄位類型。 否則，它可能會導致 「 超出範圍的值 」 例外狀況。
 
-## <a name="example"></a>範例  
+## <a name="example-2"></a>範例 2
 此程式碼範例示範如何將大型的 bigint 值做為輸出參數繫結。  
 
 ```

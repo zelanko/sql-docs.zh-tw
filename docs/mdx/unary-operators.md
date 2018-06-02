@@ -1,29 +1,20 @@
 ---
 title: 一元運算子 |Microsoft 文件
-ms.custom: ''
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.component: ''
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: language-reference
-dev_langs:
-- kbMDX
-helpviewer_keywords:
-- unary operators
-ms.assetid: bf1b5518-6040-4484-9ce8-79c0eb4373a9
-caps.latest.revision: 27
-author: Minewiskan
+ms.date: 05/30/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: mdx
+ms.topic: reference
 ms.author: owend
-manager: erikre
-ms.openlocfilehash: 4ee37e10238e0c06b72ae4b188ffbbc740be8335
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: 8d90a8380c29fd6d77126cd6ca8a0ec93634db39
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34581400"
 ---
 # <a name="unary-operators"></a>一元運算子
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -32,7 +23,7 @@ ms.lasthandoff: 05/03/2018
   
  MDX 支援下表中列出的一元運算子。  
   
-|運算子|Description|  
+|運算子|描述|  
 |--------------|-----------------|  
 |[- (負)](../mdx/negative-mdx.md)|傳回數值運算式的負值。|  
 |[+ (正)](../mdx/positive-mdx.md)|傳回數值運算式的正值。|  

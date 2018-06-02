@@ -7,11 +7,12 @@ ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: c97f45375464561e8080e5de24201c80fa213c7e
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 4f0e6130882ea5af6dd0827ed2d5e798d3c11c5f
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34585490"
 ---
 # <a name="prerequisites-for-the-data-science-walkthrough-for-sql-server-and-r"></a>SQL Server R 的資料科學逐步解說的必要條件
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -64,4 +65,4 @@ ms.lasthandoff: 04/16/2018
 
 ## <a name="next-lesson"></a>下一課
 
-[準備要使用 PowerShell 的資料](/walkthrough-prepare-the-data.md)
+[準備要使用 PowerShell 的資料](walkthrough-prepare-the-data.md)
