@@ -9,15 +9,16 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: eb6a4e848b35a31feeef31bb8e304ba43a8577f3
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 78cdf8b38828e8b9f96a89ffc026ec39ae40366b
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34574570"
 ---
 # <a name="create-element-xmla"></a>Create 元素 (XMLA)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
-  包含所使用的 Analysis Services 指令碼語言 (ASSL) 元素**Execute**上建立物件的方法[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]執行個體。  
+  包含所使用的 Analysis Services 指令碼語言 (ASSL) 元素**Execute** Analysis Services 執行個體上建立物件的方法。  
   
 ## <a name="syntax"></a>語法  
   
@@ -33,7 +34,7 @@ ms.lasthandoff: 05/10/2018
   
 ## <a name="element-characteristics"></a>元素特性  
   
-|特性|說明|  
+|特性|描述|  
 |--------------------|-----------------|  
 |資料類型和長度|無|  
 |預設值|無|  
@@ -48,10 +49,10 @@ ms.lasthandoff: 05/10/2018
   
 ## <a name="attributes"></a>屬性  
   
-|Attribute|Description|  
+|attribute|描述|  
 |---------------|-----------------|  
 |AllowOverwrite|選擇性 **Boolean** 屬性。 如果設為 True 中, 定義的物件**ObjectDefinition**項目可以覆寫現有物件上[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]執行個體。 如果這個屬性被省略或設定為 False，現有物件的存在就會產生錯誤。|  
-|범위|選擇性**列舉**屬性。 定義中定義之物件的持續時間**ObjectDefinition**項目。 如果省略此屬性，則中定義的物件**ObjectDefinition**項目會保存[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]執行個體。 有下列值：<br /><br /> *工作階段*： 中定義的物件**ObjectDefinition**元素只存在於 XML for Analysis (XMLA) 工作階段持續時間。<br />                  請注意，當使用*工作階段*設定， **ObjectDefinition**元素只能包含[維度](../../../analysis-services/scripting/objects/dimension-element-assl.md)， [Cube](../../../analysis-services/scripting/objects/cube-element-assl.md)，或[MiningModel](../../../analysis-services/scripting/objects/miningmodel-element-assl.md) ASSL 元素。|  
+|範圍。|選擇性**列舉**屬性。 定義中定義之物件的持續時間**ObjectDefinition**項目。 如果省略此屬性，則中定義的物件**ObjectDefinition**項目會保存[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]執行個體。 有下列值：<br /><br /> *工作階段*： 中定義的物件**ObjectDefinition**元素只存在於 XML for Analysis (XMLA) 工作階段持續時間。<br />                  請注意，當使用*工作階段*設定， **ObjectDefinition**元素只能包含[維度](../../../analysis-services/scripting/objects/dimension-element-assl.md)， [Cube](../../../analysis-services/scripting/objects/cube-element-assl.md)，或[MiningModel](../../../analysis-services/scripting/objects/miningmodel-element-assl.md) ASSL 元素。|  
   
 ## <a name="remarks"></a>備註  
  每個**建立**作業會建立提供的父系底下某個主要物件**ParentObject**項目。 如果您了省略父物件，它就會被假設為目的地 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 執行個體。 如果主要物件的父系不是目的地執行個體，這樣做就會產生錯誤。  
@@ -71,7 +72,7 @@ ms.lasthandoff: 05/10/2018
 </Create>  
 ```  
   
-## <a name="see-also"></a>另請參閱  
- [命令 & #40;XMLA & #41;](../../../analysis-services/xmla/xml-elements-commands/xml-elements-commands.md)  
+## <a name="see-also"></a>另請參閱
+ [命令&#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-commands/xml-elements-commands.md)  
   
   

@@ -1,31 +1,20 @@
 ---
 title: DrilldownLevel (MDX) |Microsoft 文件
-ms.custom: ''
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.component: ''
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: language-reference
-f1_keywords:
-- DRILLDOWNLEVEL
-dev_langs:
-- kbMDX
-helpviewer_keywords:
-- DrilldownLevel function
-ms.assetid: 47531ce5-1ac0-4aa9-a85c-824fb5d21e7c
-caps.latest.revision: 43
-author: Minewiskan
+ms.date: 05/30/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: mdx
+ms.topic: reference
 ms.author: owend
-manager: erikre
-ms.openlocfilehash: 11346a0157824dc97f7f64acc447a44de2fc581c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: 99e8c47164d920ec531bf6ab51e35979b060c35d
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34578000"
 ---
 # <a name="drilldownlevel-mdx"></a>DrilldownLevel (MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -129,6 +118,6 @@ FROM [Adventure Works]
  若您只移除旗標，然後重新執行查詢，則會獲得相同的結果，但結果中不包含導出成員 [West Coast]。  
   
 ## <a name="see-also"></a>另請參閱  
- [MDX 函數參考 & #40;MDX & #41;](../mdx/mdx-function-reference-mdx.md)  
+ [MDX 函數參考&#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

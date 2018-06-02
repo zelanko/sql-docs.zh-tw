@@ -1,32 +1,20 @@
 ---
 title: '&gt; （大於）(MDX) |Microsoft 文件'
-ms.custom: ''
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.component: ''
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: language-reference
-f1_keywords:
-- '>'
-dev_langs:
-- kbMDX
-helpviewer_keywords:
-- greater than operator (>)
-- '> (greater than operator)'
-ms.assetid: 36ba6462-5517-43be-8e7d-a38b7343c5d3
-caps.latest.revision: 33
-author: Minewiskan
+ms.date: 05/30/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: mdx
+ms.topic: reference
 ms.author: owend
-manager: erikre
-ms.openlocfilehash: 6d82e6fb8d2c10c88ba8e8a7945f93b3278f9656
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: 80b452b1163e2c43b178266085febe4564e16d6f
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34578530"
 ---
 # <a name="gt-greater-than-mdx"></a>&gt; （大於）(MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]

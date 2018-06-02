@@ -7,11 +7,12 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: f9ea766dc0ada056d85398e6ce2079df6b24b34a
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 20a3742c9dfc956accd902539524724cac3f9b8c
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34563856"
 ---
 # <a name="known-issues-in-machine-learning-services"></a>機器學習服務中的已知的問題
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -96,7 +97,7 @@ SQL Server 2016 需要用戶端上的 R 程式庫會完全符合伺服器上的 
 + 用戶端電腦上安裝 R Server （獨立） 使用的安裝精靈[!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)]。
 + 您可以使用來安裝 Microsoft R Server[分隔 Windows installer](https://docs.microsoft.com/machine-learning-server/install/r-server-install-windows)。
 
-若要確保伺服器和用戶端都使用相同的版本，您可能需要使用_繫結_、 支援的 Microsoft R Server 9.0 和更新版本中，若要升級 SQL Server 2016 執行個體中的 R 元件。 若要判斷是否支援升級為可用，如 R 服務版本，請參閱[使用 SqlBindR.exe R 服務的執行個體升級](/r/use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md)。
+若要確保伺服器和用戶端都使用相同的版本，您可能需要使用_繫結_、 支援的 Microsoft R Server 9.0 和更新版本中，若要升級 SQL Server 2016 執行個體中的 R 元件。 若要判斷是否支援升級為可用，如 R 服務版本，請參閱[使用 SqlBindR.exe R 服務的執行個體升級](r/use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md)。
 
 **適用於：** SQL Server 2016 R Services 中，使用 R Server 9.0.0 版本或更早版本
 

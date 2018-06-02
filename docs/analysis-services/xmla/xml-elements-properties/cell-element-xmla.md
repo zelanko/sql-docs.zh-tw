@@ -9,11 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 014f46219ece054c292ff3a3b7a11d98c07c1547
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 38d9954c50f13a78c0c0d13d0d83989a4e31224a
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34575090"
 ---
 # <a name="cell-element-xmla"></a>Cell 元素 (XMLA)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -34,7 +35,7 @@ ms.lasthandoff: 05/10/2018
   
 ## <a name="element-characteristics"></a>元素特性  
   
-|特性|說明|  
+|特性|描述|  
 |--------------------|-----------------|  
 |資料類型和長度|無|  
 |預設值|無|  
@@ -49,14 +50,14 @@ ms.lasthandoff: 05/10/2018
   
 ## <a name="attributes"></a>屬性  
   
-|Attribute|說明|  
+|attribute|描述|  
 |---------------|-----------------|  
 |CellOrdinal|必要的 **Long** 屬性。 包含要更新之資料格的以零為基底序數位置。|  
   
 ## <a name="remarks"></a>備註  
  如需更新資料格的詳細資訊，請參閱[更新資料格 &#40;XMLA&#41;](../../../analysis-services/multidimensional-models-scripting-language-assl-xmla/updating-cells-xmla.md)。  
   
-## <a name="see-also"></a>另請參閱  
- [屬性 & #40;XMLA & #41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
+## <a name="see-also"></a>另請參閱
+ [屬性&#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
   
   

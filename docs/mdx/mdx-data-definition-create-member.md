@@ -1,35 +1,20 @@
 ---
 title: CREATE MEMBER 陳述式 (MDX) |Microsoft 文件
-ms.custom: ''
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.component: ''
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: language-reference
-f1_keywords:
-- CREATE_MEMBER
-- CREATE MEMBER
-- Member
-- CREATE
-dev_langs:
-- kbMDX
-helpviewer_keywords:
-- CREATE MEMBER statement
-- calculated members [MDX]
-ms.assetid: 49379217-be2c-4139-a206-1168078b9b76
-caps.latest.revision: 55
-author: Minewiskan
+ms.date: 05/30/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: mdx
+ms.topic: reference
 ms.author: owend
-manager: erikre
-ms.openlocfilehash: c5aa9107e834cfbd8dcdd4b5e0cd3c0828b8c4a7
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: 4458554d8b3aa6b0cb87d59629c70a18b609df44
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34579360"
 ---
 # <a name="mdx-data-definition---create-member"></a>MDX 資料定義-建立成員
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -73,7 +58,7 @@ CREATE [ SESSION ] [HIDDDEN] [ CALCULATED ] MEMBER CURRENTCUBE | Cube_Name.Membe
   
  如需 OLE DB 定義之成員屬性的詳細資訊，請參閱 OLE DB 文件集。  
   
-## <a name="scope"></a>범위  
+## <a name="scope"></a>範圍。  
  導出成員可發生在下表列出的其中一個範圍內。  
   
  查詢範圍  

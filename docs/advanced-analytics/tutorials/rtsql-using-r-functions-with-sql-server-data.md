@@ -7,11 +7,12 @@ ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 226712010118a54ac1c5350e128bf50cc261a128
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 52b03b16c55b4ae8a772c2c12861fcc4b184d1f4
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34585740"
 ---
 # <a name="using-r-functions-with-sql-server-data-r-in-sql-quickstart"></a>R 函式中使用 SQL Server 資料 (SQL 快速入門中的 R)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -71,12 +72,6 @@ AS
 ```sql
 EXEC MyRNorm @param1 = 100,@param2 = 50, @param3 = 3
 ```
-
-## <a name="related-resources"></a>相關資源
-
-+ 您想要安裝更多的 R 封裝，以取得更多進階的統計函數嗎？ 請參閱[安裝和管理的 R 封裝](../r/installing-and-managing-r-packages.md)。
-
-+ 為了協助您將您的獨立 R 程式碼轉換成的格式，可以輕鬆地參數化使用 SQL Server 預存程序，Microsoft R 團隊提供新的 R 封裝， **sqlrutils**。 如需詳細資訊，請參閱[如何建立預存程序中使用 sqlrutils](../r/how-to-create-a-stored-procedure-using-sqlrutils.md)。
 
 ## <a name="use-r-utility-functions-for-troubleshooting"></a>使用 R 公用程式函式進行疑難排解
 

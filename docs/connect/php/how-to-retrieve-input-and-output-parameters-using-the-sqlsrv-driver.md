@@ -3,8 +3,6 @@ title: 如何： 擷取使用 SQLSRV 驅動程式的 I/O 參數 |Microsoft 文�
 ms.custom: ''
 ms.date: 04/12/2018
 ms.prod: sql
-ms.prod_service: connectivity
-ms.component: php
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: connectivity
@@ -17,11 +15,12 @@ caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 5ef60cf4ef6710690d0ba63b5e159400f724268b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 57143ae8694bba2bdeae3ff552b2ebb089ce6536
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34563926"
 ---
 # <a name="how-to-retrieve-input-and-output-parameters-using-the-sqlsrv-driver"></a>How to: Retrieve Input and Output Parameters Using the SQLSRV Driver
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -31,7 +30,7 @@ ms.lasthandoff: 05/03/2018
 > [!NOTE]  
 > 初始化或更新為 **null**、 **DateTime**或資料流類型的變數，無法作為輸出參數。  
   
-## <a name="example"></a>範例  
+## <a name="example-1"></a>範例 1
 下列範例會呼叫從指定員工的可用休假時數中扣除掉已用休假時數的預存程序。 代表已用休假時數的變數 *$vacationHrs*，會傳遞至預存程序做為輸入參數。 在更新可用休假時數之後，預存程序會使用相同的參數傳回剩餘休假時數。  
   
 > [!NOTE]  
@@ -129,7 +128,7 @@ sqlsrv_close( $conn);
 > [!NOTE]
 > Bigint 型別，繫結輸入/輸出參數，如果值可能會超出範圍時[整數](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md)，您必須指定為 SQLSRV_SQLTYPE_BIGINT 它 SQL 的欄位類型。 否則，它可能會導致 「 超出範圍的值 」 例外狀況。
 
-## <a name="example"></a>範例  
+## <a name="example-2"></a>範例 2
 此程式碼範例示範如何將大型的 bigint 值做為輸入/輸出參數繫結。  
 
 ```

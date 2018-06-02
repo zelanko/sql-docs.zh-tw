@@ -1,31 +1,20 @@
 ---
 title: IsEmpty (MDX) |Microsoft 文件
-ms.custom: ''
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.component: ''
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: language-reference
-f1_keywords:
-- ISEMPTY
-dev_langs:
-- kbMDX
-helpviewer_keywords:
-- IsEmpty function
-ms.assetid: b4a50996-61d1-4e23-8003-7d530195ea72
-caps.latest.revision: 34
-author: Minewiskan
+ms.date: 05/30/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: mdx
+ms.topic: reference
 ms.author: owend
-manager: erikre
-ms.openlocfilehash: 6cc77efe9a3c7c3c1b9801f0545c785f6934e290
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: ab2f65bbc15aecec93294225435d3d2d38fff062
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34578710"
 ---
 # <a name="isempty-mdx"></a>IsEmpty (MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -71,6 +60,6 @@ IsEmpty(Value_Expression)
   
 ## <a name="see-also"></a>另請參閱  
  [使用空白值](../mdx/working-with-empty-values.md)   
- [MDX 函數參考 & #40;MDX & #41;](../mdx/mdx-function-reference-mdx.md)  
+ [MDX 函數參考&#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

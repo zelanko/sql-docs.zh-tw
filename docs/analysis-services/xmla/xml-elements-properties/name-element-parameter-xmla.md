@@ -9,11 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 5ecbe804b0e8ff4e6e5ba58907be8aeaf1849738
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 8804e354966e98fd6f7142ab0f86ccd827dd7ecc
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34575800"
 ---
 # <a name="name-element-parameter-xmla"></a>Name 元素 (Parameter) (XMLA)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -32,9 +33,9 @@ ms.lasthandoff: 05/10/2018
   
 ## <a name="element-characteristics"></a>元素特性  
   
-|特性|說明|  
+|特性|描述|  
 |--------------------|-----------------|  
-|資料類型和長度|字串|  
+|資料類型和長度|String|  
 |預設值|無|  
 |基數|1-1：只出現一次的必要元素。|  
   
@@ -47,7 +48,7 @@ ms.lasthandoff: 05/10/2018
   
 ## <a name="remarks"></a>備註  
   
-## <a name="see-also"></a>另請參閱  
- [屬性 & #40;XMLA & #41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
+## <a name="see-also"></a>另請參閱
+ [屬性&#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
   
   

@@ -9,15 +9,16 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 339c926bf4c25eb4dd1f8c7b16fdcd9009b0f504
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 71a8b5fe9e5fe1778ca941a597f86fb13249d623
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34575890"
 ---
 # <a name="objectdefinition-element-xmla"></a>ObjectDefinition 元素 (XMLA)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
-  包含一或多個 Analysis Services 指令碼語言 (ASSL) 元素，用來建立或更改物件的執行個體上[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]。  
+  包含一或多個 Analysis Services 指令碼語言 (ASSL) 元素，用來建立或更改的 Analysis Services 執行個體上的物件。  
   
 ## <a name="syntax"></a>語法  
   
@@ -34,7 +35,7 @@ ms.lasthandoff: 05/10/2018
   
 ## <a name="element-characteristics"></a>元素特性  
   
-|特性|說明|  
+|特性|描述|  
 |--------------------|-----------------|  
 |資料類型和長度|無|  
 |預設值|無|  
@@ -64,7 +65,7 @@ ms.lasthandoff: 05/10/2018
 </Create>  
 ```  
   
-## <a name="see-also"></a>另請參閱  
- [屬性 & #40;XMLA & #41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
+## <a name="see-also"></a>另請參閱
+ [屬性&#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
   
   

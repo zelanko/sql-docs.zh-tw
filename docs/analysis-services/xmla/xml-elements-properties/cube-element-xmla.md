@@ -9,11 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 587328c808dd3cbd737af2f1deedb7f102bf6fef
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 21af1af7b08f1270742ce291848128d3347d94bc
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34574810"
 ---
 # <a name="cube-element-xmla"></a>Cube 元素 (XMLA)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -32,9 +33,9 @@ ms.lasthandoff: 05/10/2018
   
 ## <a name="element-characteristics"></a>元素特性  
   
-|特性|說明|  
+|特性|描述|  
 |--------------------|-----------------|  
-|資料類型和長度|字串|  
+|資料類型和長度|String|  
 |預設值|無|  
 |基數|1-1：只出現一次的必要元素。|  
   
@@ -48,9 +49,9 @@ ms.lasthandoff: 05/10/2018
 ## <a name="remarks"></a>備註  
  **Cube**元素是物件識別碼，其中包含含有所代表之維度的 cube 名稱**物件**項目。  
   
-## <a name="see-also"></a>另請參閱  
- [Database 元素 & #40;XMLA & #41;](../../../analysis-services/xmla/xml-elements-properties/database-element-xmla.md)   
- [Dimension 元素 & #40;XMLA & #41;](../../../analysis-services/xmla/xml-elements-properties/dimension-element-xmla.md)   
- [屬性 & #40;XMLA & #41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
+## <a name="see-also"></a>另請參閱
+ [Database 元素&#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/database-element-xmla.md)   
+ [維度元素&#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/dimension-element-xmla.md)   
+ [屬性&#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
   
   

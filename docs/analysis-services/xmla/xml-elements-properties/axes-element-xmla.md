@@ -9,11 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 02b9c91f30c45e59d0f5eba00a5b76262070d711
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 3a8dfff1c8a551157661bcb1de5700bf51a7f914
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34574910"
 ---
 # <a name="axes-element-xmla"></a>Axes 元素 (XMLA)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -34,7 +35,7 @@ ms.lasthandoff: 05/10/2018
   
 ## <a name="element-characteristics"></a>元素特性  
   
-|特性|說明|  
+|特性|描述|  
 |--------------------|-----------------|  
 |資料類型和長度|任意|  
 |預設值|無|  
@@ -45,7 +46,7 @@ ms.lasthandoff: 05/10/2018
 |關聯性|元素|  
 |------------------|-------------|  
 |父元素|[根](../../../analysis-services/xmla/xml-elements-properties/root-element-xmla.md)|  
-|子元素|[軸](../../../analysis-services/xmla/xml-elements-properties/axis-element-xmla.md)|  
+|子元素|[Axis](../../../analysis-services/xmla/xml-elements-properties/axis-element-xmla.md)|  
   
 ## <a name="remarks"></a>備註  
  在下**座標軸**項目，**軸**項目會出現在資料集中，由零開始的順序列出。 **AxisFormat** XMLA 屬性設定會決定如何**軸**格式化的項目。 如需有關**AxisFormat**屬性，請參閱[支援 XMLA 屬性&#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties.md)。  
@@ -72,7 +73,7 @@ ms.lasthandoff: 05/10/2018
   
  下表將列出可用來定義和描繪軸結構與成員的作業。  
   
-|運算|Description|  
+|作業|描述|  
 |---------------|-----------------|  
 |成員|軸的最小單位，代表維度階層的成員。|  
 |成員|集合**成員**物件從相同維度階層。|  
@@ -103,8 +104,8 @@ CrossProduct (
   
  用戶端可使用**AxisFormat**屬性來要求特定表示法。  
   
-## <a name="see-also"></a>另請參閱  
- [MDDataSet 資料類型 & #40;XMLA & #41;](../../../analysis-services/xmla/xml-data-types/mddataset-data-type-xmla.md)   
- [屬性 & #40;XMLA & #41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
+## <a name="see-also"></a>另請參閱
+ [MDDataSet 資料類型&#40;XMLA&#41;](../../../analysis-services/xmla/xml-data-types/mddataset-data-type-xmla.md)   
+ [屬性&#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
   
   

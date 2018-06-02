@@ -9,21 +9,22 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: e65ba594cee3bf24679326a9d0cd75451034b9ee
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 0edfa63feef9af48290e5fe845d9c0cf02f53e29
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34574590"
 ---
 # <a name="xml-elements---commands"></a>XML 項目-命令
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
   這個參考章節包含的 XML for Analysis (XMLA) 元素，可用於**命令**項目期間**Execute**方法呼叫。  
   
-|元素|Description|  
+|元素|描述|  
 |-------------|-----------------|  
-|[Alter 元素 (XMLA)](../../../analysis-services/xmla/xml-elements-commands/alter-element-xmla.md)|包含所使用的 Analysis Services 指令碼語言 (ASSL) 元素[Execute](../../../analysis-services/xmla/xml-elements-methods-execute.md)方法來修改物件的執行個體上[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]。|  
-|[Backup 元素](../../../analysis-services/xmla/xml-elements-commands/backup-element-xmla.md)|將 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 資料庫備份到備份檔。|  
-|[批次項目](../../../analysis-services/xmla/xml-elements-commands/batch-element-xmla.md)|執行一或多個 XML for Analysis (XMLA) 命令，以批次作業，循序或平行的執行個體上[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]。|  
+|[Alter 元素 (XMLA)](../../../analysis-services/xmla/xml-elements-commands/alter-element-xmla.md)|包含所使用的 Analysis Services 指令碼語言 (ASSL) 元素[Execute](../../../analysis-services/xmla/xml-elements-methods-execute.md)方法來修改 Analysis Services 執行個體上的物件。|  
+|[Backup 元素](../../../analysis-services/xmla/xml-elements-commands/backup-element-xmla.md)|Analysis Services 資料庫備份到備份檔案。|  
+|[批次項目](../../../analysis-services/xmla/xml-elements-commands/batch-element-xmla.md)|執行一或多個 XML for Analysis (XMLA) 命令批次作業，循序或平行方式，在 Analysis Services 的執行個體上。|  
 |[BeginTransaction 元素](../../../analysis-services/xmla/xml-elements-commands/begintransaction-element-xmla.md)|在含有 Analysis Services 執行個體的目前工作階段上開始交易。|  
 |[Cancel 元素](../../../analysis-services/xmla/xml-elements-commands/cancel-element-xmla.md)|取消 Analysis Services 執行個體上的目前執行中命令。|  
 |[ClearCache 元素](../../../analysis-services/xmla/xml-elements-commands/clearcache-element-xmla.md)|針對 Analysis Services 執行個體上的指定物件清除記憶體快取。|  

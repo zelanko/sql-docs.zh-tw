@@ -9,11 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 858cb8be01a16d9ccb7d6455043d370865f1c3e6
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 52c3b114c1082a895325170fa8fbf6fef656b8ca
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34574330"
 ---
 # <a name="axisinfo-element-xmla"></a>AxisInfo 元素 (XMLA)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -34,7 +35,7 @@ ms.lasthandoff: 05/10/2018
   
 ## <a name="element-characteristics"></a>元素特性  
   
-|特性|說明|  
+|特性|描述|  
 |--------------------|-----------------|  
 |資料類型和長度|無|  
 |預設值|無|  
@@ -49,14 +50,14 @@ ms.lasthandoff: 05/10/2018
   
 ## <a name="attributes"></a>屬性  
   
-|Attribute|說明|  
+|attribute|描述|  
 |---------------|-----------------|  
-|名稱|需要**字串**屬性。 軸的名稱。|  
+|[屬性]|需要**字串**屬性。 軸的名稱。|  
   
 ## <a name="remarks"></a>備註  
  在**根**項目，會使用**MDDataSet**物件， **AxisInfo**項目包含集合**HierarchyInfo**項目，結合的值**名稱**屬性，代表多維度資料集中傳回之單一軸的定義。  
   
-## <a name="see-also"></a>另請參閱  
- [屬性 & #40;XMLA & #41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
+## <a name="see-also"></a>另請參閱
+ [屬性&#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
   
   

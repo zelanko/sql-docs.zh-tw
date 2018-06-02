@@ -9,11 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile"
-ms.openlocfilehash: 92e9fa83f19384276abd7401fd809a56187c75b7
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: dca8f668f64ab8ced157cf817be1f9f8f6390133
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34574980"
 ---
 # <a name="capability-element-xmla"></a>Capability 元素 (XMLA)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -32,9 +33,9 @@ ms.lasthandoff: 05/10/2018
   
 ## <a name="element-characteristics"></a>元素特性  
   
-|特性|說明|  
+|特性|描述|  
 |--------------------|-----------------|  
-|資料類型和長度|字串|  
+|資料類型和長度|String|  
 |預設值|無|  
 |基數|0-n：出現一次以上的選擇性元素。|  
   
@@ -46,7 +47,7 @@ ms.lasthandoff: 05/10/2018
 |子元素|無|  
   
 ## <a name="remarks"></a>備註  
- **功能**項目表示的 包含的應用程式，都支援特定功能，例如二進位或壓縮， **ProtocolCapabilities**標頭中的項目SOAP 標頭在 SOAP 要求，或執行個體[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]包含**ProtocolCapabilities** SOAP 回應的 SOAP 標頭中的標頭項目。 值**功能**項目是必須支援功能的名稱。  
+ **功能**項目表示的 包含的應用程式，都支援特定功能，例如二進位或壓縮， **ProtocolCapabilities**標頭中的項目SOAP 標頭在 SOAP 要求，或包含的 Analysis Services 執行個體**ProtocolCapabilities** SOAP 回應的 SOAP 標頭中的標頭項目。 值**功能**項目是必須支援功能的名稱。  
   
  [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 支援下表中所列的功能。  
   
@@ -55,8 +56,8 @@ ms.lasthandoff: 05/10/2018
 |sx|二進位 XML 支援|  
 |xpress|壓縮支援|  
   
-## <a name="see-also"></a>另請參閱  
- [管理連接和工作階段 & #40;XMLA & #41;](../../../analysis-services/multidimensional-models-scripting-language-assl-xmla/managing-connections-and-sessions-xmla.md)   
- [屬性 & #40;XMLA & #41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
+## <a name="see-also"></a>另請參閱
+ [管理連接與工作階段&#40;XMLA&#41;](../../../analysis-services/multidimensional-models-scripting-language-assl-xmla/managing-connections-and-sessions-xmla.md)   
+ [屬性&#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
   
   

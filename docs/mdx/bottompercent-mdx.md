@@ -1,31 +1,20 @@
 ---
 title: BottomPercent (MDX) |Microsoft 文件
-ms.custom: ''
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.component: ''
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: language-reference
-f1_keywords:
-- BOTTOMPERCENT
-dev_langs:
-- kbMDX
-helpviewer_keywords:
-- BottomPercent function
-ms.assetid: c04866e6-e6dd-4ed1-ae79-c718c194930c
-caps.latest.revision: 39
-author: Minewiskan
+ms.date: 05/30/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: mdx
+ms.topic: reference
 ms.author: owend
-manager: erikre
-ms.openlocfilehash: 116ac99ec6253020c8cce4cf3a74955ccab19e34
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: 26df73b692843cf11cc0fc0caa07ab84158ae47f
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34577270"
 ---
 # <a name="bottompercent-mdx"></a>BottomPercent (MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -71,6 +60,6 @@ WHERE ([Measures].[Reseller Sales Amount],[Date].[Fiscal].[Fiscal Year].[FY 2003
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [MDX 函數參考 & #40;MDX & #41;](../mdx/mdx-function-reference-mdx.md)  
+ [MDX 函數參考&#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

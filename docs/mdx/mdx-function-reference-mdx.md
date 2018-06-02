@@ -1,41 +1,20 @@
 ---
 title: MDX 函數參考 (MDX) |Microsoft 文件
-ms.custom: ''
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.component: ''
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: language-reference
-dev_langs:
-- kbMDX
-helpviewer_keywords:
-- member functions [MDX]
-- level functions [MDX]
-- MDX [Analysis Services], functions
-- array functions
-- string functions
-- Multidimensional Expressions [Analysis Services], functions
-- hierarchy functions [MDX]
-- numeric functions [MDX]
-- tuple functions
-- subcube functions [MDX]
-- functions [MDX]
-- logical functions [MDX]
-- set functions [MDX]
-ms.assetid: e363722a-3e5b-40a9-a0b5-399dd2d93f6d
-caps.latest.revision: 36
-author: Minewiskan
+ms.date: 05/30/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: mdx
+ms.topic: reference
 ms.author: owend
-manager: erikre
-ms.openlocfilehash: 8f0be993df9a930e175de9d33aaff92271cda329
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: 7fd5b9ee4a70ac58ab44a056f0abfb1086d24b76
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34580030"
 ---
 # <a name="mdx-function-reference-mdx"></a>MDX 函數參考 (MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -46,13 +25,13 @@ ms.lasthandoff: 05/03/2018
   
 ## <a name="array-functions"></a>陣列函數  
   
-|函數|Description|  
+|函數|描述|  
 |--------------|-----------------|  
 |[SetToArray &#40;MDX&#41;](../mdx/settoarray-mdx.md)|將一個 (含) 以上集合轉換成陣列，以便用在使用者自訂的函數中。|  
   
 ## <a name="hierarchy-functions"></a>階層函數  
   
-|函數|Description|  
+|函數|描述|  
 |--------------|-----------------|  
 |[階層&#40;MDX&#41;](../mdx/hierarchy-mdx.md)|傳回含有特定成員或層級的階層式架構。|  
 |[維度&#40;MDX&#41;](../mdx/dimension-mdx.md)|傳回含有指定成員、層級或階層式架構的維度。|  
@@ -60,14 +39,14 @@ ms.lasthandoff: 05/03/2018
   
 ## <a name="level-functions"></a>層級函數  
   
-|函數|Description|  
+|函數|描述|  
 |--------------|-----------------|  
 |[層級&#40;MDX&#41;](../mdx/level-mdx.md)|傳回成員的層級。|  
 |[層級&#40;MDX&#41;](../mdx/levels-mdx.md)|傳回層級，而其在維度或階層中的位置是由數值運算式指定，或者其名稱是由字串運算式指定。|  
   
 ## <a name="logical-functions"></a>邏輯函數  
   
-|函數|Description|  
+|函數|描述|  
 |--------------|-----------------|  
 |[IsAncestor &#40;MDX&#41;](../mdx/isancestor-mdx.md)|傳回指定的成員是否為另一個指定成員的上階。|  
 |[IsEmpty &#40;MDX&#41;](../mdx/isempty-mdx.md)|傳回評估的運算式是否為空白資料格值。|  
@@ -77,7 +56,7 @@ ms.lasthandoff: 05/03/2018
   
 ## <a name="member-functions"></a>成員函數  
   
-|函數|Description|  
+|函數|描述|  
 |--------------|-----------------|  
 |[上階&#40;MDX&#41;](../mdx/ancestor-mdx.md)|傳回某個成員在特定層級或特定距離的上階。|  
 |[ClosingPeriod &#40;MDX&#41;](../mdx/closingperiod-mdx.md)|傳回某個成員在特定層級的子系之最後一個同層級 (Sibling)。|  
@@ -105,7 +84,7 @@ ms.lasthandoff: 05/03/2018
   
 ## <a name="numeric-functions"></a>數值函數  
   
-|函數|Description|  
+|函數|描述|  
 |--------------|-----------------|  
 |[彙總&#40;MDX&#41;](../mdx/aggregate-mdx.md)|傳回純量值，此值是藉由彙總量值或指定集合的 Tuple 上選擇性指定的數值運算式而計算出。|  
 |[Avg &#40;MDX&#41;](../mdx/avg-mdx.md)|評估指定的集合，傳回量值的平均值或選擇性數值運算式的平均值。|  
@@ -148,7 +127,7 @@ ms.lasthandoff: 05/03/2018
   
 ## <a name="set-functions"></a>集合函數  
   
-|函數|Description|  
+|函數|描述|  
 |--------------|-----------------|  
 |[AddCalculatedMembers &#40;MDX&#41;](../mdx/addcalculatedmembers-mdx.md)|傳回藉由在指定集合中新增導出成員的方式所產生的集合。|  
 |[AllMembers &#40;MDX&#41;](../mdx/allmembers-mdx.md)|傳回一個集合，包含指定維度、階層或層級的所有成員，包括導出成員在內。|  
@@ -171,7 +150,7 @@ ms.lasthandoff: 05/03/2018
 |[DrilldownMemberTop &#40;MDX&#41;](../mdx/drilldownmembertop-mdx.md)|向下切入特定集合中出現在第二個特定集合的成員，所得到的集合成員限制在特定的數目內。 或者，此函數向下鑽研 Tuple 集合。|  
 |[DrillupLevel &#40;MDX&#41;](../mdx/drilluplevel-mdx.md)|向下切入集合內在特定層級底下的成員。|  
 |[DrillupMember &#40;MDX&#41;](../mdx/drillupmember-mdx.md)|向上鑽研同時存在於第二個指定集合中的指定集合成員。|  
-|[Except &#40;MDX&#41;](../mdx/except-mdx-function.md)|找出兩集合間的差異，選擇性保留重複部分。|  
+|[除了&#40;MDX&#41;](../mdx/except-mdx-function.md)|找出兩集合間的差異，選擇性保留重複部分。|  
 |[存在&#40;MDX&#41;](../mdx/exists-mdx.md)|傳回有一個或多個其他集合的一個或多個 Tuple 存在的一個集合的成員集合。|  
 |[擷取&#40;MDX&#41;](../mdx/extract-mdx.md)|從引出的維度元件傳回一個 Tuple 集合。|  
 |[篩選&#40;MDX&#41;](../mdx/filter-mdx.md)|傳回根據搜尋條件篩選指定集合後所得的集合。|  
@@ -204,7 +183,7 @@ ms.lasthandoff: 05/03/2018
   
 ## <a name="string-functions"></a>字串函數  
   
-|函數|Description|  
+|函數|描述|  
 |--------------|-----------------|  
 |[CalculationPassValue &#40;MDX&#41;](../mdx/calculationpassvalue-mdx.md)|在 Cube 指定的計算行程運算後傳回數值 MDX 運算式的值。|  
 |[CoalesceEmpty &#40;MDX&#41;](../mdx/coalesceempty-mdx.md)|將空白資料格值與數字或字串聯合，並傳回聯合的值。|  
@@ -213,7 +192,7 @@ ms.lasthandoff: 05/03/2018
 |[LookupCube &#40;MDX&#41;](../mdx/lookupcube-mdx.md)|在相同資料庫中其他指定的 Cube 運算後傳回數值 MDX 運算式的值。|  
 |[MemberToStr &#40;MDX&#41;](../mdx/membertostr-mdx.md)|傳回 MDX–對應至指定成員的格式化字串。|  
 |[名稱&#40;MDX&#41;](../mdx/name-mdx.md)|傳回維度、階層架構、層級或者成員的名稱。|  
-|[屬性 & #40;MDX & #41;](../mdx/properties-mdx.md)|傳回包含成員屬性值的字串或強型別 (strongly-typed) 值。|  
+|[屬性&#40;MDX&#41;](../mdx/properties-mdx.md)|傳回包含成員屬性值的字串或強型別 (strongly-typed) 值。|  
 |[SetToStr &#40;MDX&#41;](../mdx/settostr-mdx.md)|傳回對應至指定成員的 MDX 格式化字串。|  
 |[TupleToStr &#40;MDX&#41;](../mdx/tupletostr-mdx.md)|傳回 MDX–對應至指定 Tuple 的格式化字串。|  
 |[UniqueName &#40;MDX&#41;](../mdx/uniquename-mdx.md)|傳回指定維度、階層、層級或成員的唯一名稱。|  
@@ -221,27 +200,27 @@ ms.lasthandoff: 05/03/2018
   
 ## <a name="subcube-functions"></a>Subcube 函數  
   
-|函數|Description|  
+|函數|描述|  
 |--------------|-----------------|  
-|[這 & #40;MDX & #41;](../mdx/this-mdx.md)|傳回目前的 Subcube。|  
+|[這&#40;MDX&#41;](../mdx/this-mdx.md)|傳回目前的 Subcube。|  
 |[離開&#40;MDX&#41;](../mdx/leaves-mdx.md)|傳回指定維度、成員或 Tuple 的分葉成員集合。|  
   
 ## <a name="tuple-functions"></a>Tuple 函數  
   
-|函數|Description|  
+|函數|描述|  
 |--------------|-----------------|  
 |[目前&#40;MDX&#41;](../mdx/current-mdx.md)|反覆運算時從一個集合傳回目前的 Tuple。|  
 |[項目&#40;Tuple&#41; &#40;MDX&#41;](../mdx/item-tuple-mdx.md)|從集合傳回一個 Tuple。|  
-|[Root &#40;MDX&#41;](../mdx/root-mdx.md)|傳回 tuple 所組成，**所有**cube、 維度或 tuple 中每個屬性階層的成員。|  
+|[根&#40;MDX&#41;](../mdx/root-mdx.md)|傳回 tuple 所組成，**所有**cube、 維度或 tuple 中每個屬性階層的成員。|  
 |[StrToTuple &#40;MDX&#41;](../mdx/strtotuple-mdx.md)|傳回由 MDX 指定的 Tuple –格式化字串。|  
   
 ## <a name="other-functions"></a>其他函數  
   
-|函數|Description|  
+|函數|描述|  
 |--------------|-----------------|  
 |[錯誤&#40;MDX&#41;](../mdx/error-mdx.md)|引發錯誤，選擇性提供指定的錯誤訊息。|  
   
 ## <a name="see-also"></a>另請參閱  
- [MDX 語言參考 & #40;MDX & #41;](../mdx/mdx-language-reference-mdx.md)  
+ [MDX 語言參考&#40;MDX&#41;](../mdx/mdx-language-reference-mdx.md)  
   
   

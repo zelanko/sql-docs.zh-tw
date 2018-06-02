@@ -1,32 +1,20 @@
 ---
 title: '&lt;= （小於或等於） (MDX) |Microsoft 文件'
-ms.custom: ''
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.component: ''
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: language-reference
-f1_keywords:
-- <=
-dev_langs:
-- kbMDX
-helpviewer_keywords:
-- <= (less than or equal to operator)
-- less than or equal to operator (<=)
-ms.assetid: 6c805c68-cf9d-48ca-a00b-2ef9ade89b0a
-caps.latest.revision: 34
-author: Minewiskan
+ms.date: 05/30/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: mdx
+ms.topic: reference
 ms.author: owend
-manager: erikre
-ms.openlocfilehash: 51f027fc6ed6fa1ce48a6906c797a6219fd7385f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: 2904598ecb9019660e1751dd585714d80d874b02
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34579060"
 ---
 # <a name="lt-less-than-or-equal-to-mdx"></a>&lt;= （小於或等於） (MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]

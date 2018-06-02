@@ -9,11 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: fe96b343afe9cdf5f8f2f301c9c0c8eade9dd67f
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: d3275114e1442634a462470487bc4c5f40d8dac6
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34574790"
 ---
 # <a name="rowset-data-type-xmla"></a>Rowset 資料類型 (XMLA)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -34,7 +35,7 @@ ms.lasthandoff: 05/10/2018
   
 ## <a name="data-type-characteristics"></a>資料類型特性  
   
-|特性|說明|  
+|特性|描述|  
 |--------------------|-----------------|  
 |基底資料類型|[結果集](../../../analysis-services/xmla/xml-data-types/resultset-data-type-xmla.md)|  
 |衍生資料類型|無|  
@@ -212,7 +213,7 @@ ms.lasthandoff: 05/10/2018
 </root>  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>另請參閱
  [XML 資料型別&#40;XMLA&#41;](../../../analysis-services/xmla/xml-data-types/xml-data-types-xmla.md)  
   
   

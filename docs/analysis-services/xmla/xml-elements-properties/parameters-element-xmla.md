@@ -9,17 +9,18 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 982e589b7337297c84b8909499eba244638a7df3
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 68366f03168b7c7c434f05e88f512401248c1124
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34576060"
 ---
 # <a name="parameters-element-xmla"></a>Parameters 元素 (XMLA)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
   包含集合[參數](../../../analysis-services/xmla/xml-elements-properties/parameter-element-xmla.md)元素所使用[Execute](../../../analysis-services/xmla/xml-elements-methods-execute.md)方法。  
   
- **命名空間：**`urn:schemas-microsoft-com:xml-analysis`  
+ **命名空間：** `urn:schemas-microsoft-com:xml-analysis`  
   
 ## <a name="syntax"></a>語法  
   
@@ -36,7 +37,7 @@ ms.lasthandoff: 05/10/2018
   
 ## <a name="element-characteristics"></a>元素特性  
   
-|特性|說明|  
+|特性|描述|  
 |--------------------|-----------------|  
 |資料類型和長度|無|  
 |預設值|無|  
@@ -46,7 +47,7 @@ ms.lasthandoff: 05/10/2018
   
 |關聯性|元素|  
 |------------------|-------------|  
-|父元素|[Execute](../../../analysis-services/xmla/xml-elements-methods-execute.md)|  
+|父元素|[執行](../../../analysis-services/xmla/xml-elements-methods-execute.md)|  
 |子元素|[參數](../../../analysis-services/xmla/xml-elements-properties/parameter-element-xmla.md)|  
   
 ## <a name="remarks"></a>備註  
@@ -54,7 +55,7 @@ ms.lasthandoff: 05/10/2018
   
  如果 XMLA 命令沒有使用**參數**項目，呼叫時，就可以省略此元素**Execute**方法。  
   
-## <a name="see-also"></a>另請參閱  
- [屬性 & #40;XMLA & #41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
+## <a name="see-also"></a>另請參閱
+ [屬性&#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
   
   
