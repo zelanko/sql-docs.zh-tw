@@ -22,10 +22,11 @@ ms.author: douglasl
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 9318904e6cf1509118711db228e30a7266647610
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: 2d93cd115f52bf3eff3069f28ea866232b4f9f9e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34708716"
 ---
 # <a name="requirements-for-running-sqlxml-examples"></a>執行 SQLXML 範例的需求
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -39,6 +40,6 @@ ms.lasthandoff: 05/03/2018
   
 -   MDAC 2.6 或更新版本  
   
- 在許多範例中，這些範本用於針對對應 XSD 結構描述指定 XPath 查詢。 如需詳細資訊，請參閱[使用註解式 XSD 結構描述中的查詢 & #40;SQLXML 4.0 & #41;](../../relational-databases/sqlxml/annotated-xsd-schemas/using-annotated-xsd-schemas-in-queries-sqlxml-4-0.md).  
+ 在許多範例中，這些範本用於針對對應 XSD 結構描述指定 XPath 查詢。 如需詳細資訊，請參閱[使用註解式 XSD 結構描述在查詢中&#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml/annotated-xsd-schemas/using-annotated-xsd-schemas-in-queries-sqlxml-4-0.md)。  
   
   

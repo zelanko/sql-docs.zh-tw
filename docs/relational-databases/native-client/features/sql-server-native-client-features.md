@@ -22,10 +22,11 @@ ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: aa19218cfcb20bf4b696edfcdbffd4925d46aff8
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: 2d93cd115f52bf3eff3069f28ea866232b4f9f9e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34708396"
 ---
 # <a name="sql-server-native-client-features"></a>SQL Server Native Client 功能
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -52,7 +53,7 @@ ms.lasthandoff: 05/03/2018
  [使用使用者定義型別](../../../relational-databases/native-client/features/using-user-defined-types.md)  
  討論如何[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]原生用戶端支援使用者定義型別 (UDT)，這會擴充 SQL 類型系統，可讓您將物件和自訂資料結構中的儲存[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]資料庫。  
   
- [使用大型值型別](../../../relational-databases/native-client/features/using-large-value-types.md)  
+ [使用大型實值型別](../../../relational-databases/native-client/features/using-large-value-types.md)  
  討論 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 如何支援大數值資料類型，也就是大型物件資料類型 (LOB)。  
   
  [以程式設計方式變更密碼](../../../relational-databases/native-client/features/changing-passwords-programmatically.md)  
@@ -94,7 +95,7 @@ ms.lasthandoff: 05/03/2018
  [SQL Server Native Client 11.0 中的 UTF-16 支援](../../../relational-databases/native-client/features/utf-16-support-in-sql-server-native-client-11-0.md)  
  討論 [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] 中導入的行為變更。 如果繫結資料行結果或輸出參數時，會提供固定長度的緩衝區，而且**wchar**字元結束的字元 surrogate 字組的高 surrogate 字碼指標之前，如果寫入緩衝區的下一步**wchar**字元是低 surrogate 字碼指標，[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]原生用戶端不會將高 surrogate 字碼指標加入緩衝區。  
   
- [高可用性、 災害復原的 SQL Server Native Client 支援](../../../relational-databases/native-client/features/sql-server-native-client-support-for-high-availability-disaster-recovery.md)  
+ [高可用性/災害復原的 SQL Server Native Client 支援](../../../relational-databases/native-client/features/sql-server-native-client-support-for-high-availability-disaster-recovery.md)  
  討論如何設定您的應用程式，以利用加入功能的高可用性、 嚴重損壞修復的[!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]。  
   
  [存取擴充事件記錄檔中的診斷資訊](../../../relational-databases/native-client/features/accessing-diagnostic-information-in-the-extended-events-log.md)  

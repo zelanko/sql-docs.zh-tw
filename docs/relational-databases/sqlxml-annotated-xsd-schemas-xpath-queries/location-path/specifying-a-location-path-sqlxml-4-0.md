@@ -23,10 +23,11 @@ ms.author: douglasl
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 2c2cad3730cd0948f94adc8ad5b877fd2e921bc3
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: 2d93cd115f52bf3eff3069f28ea866232b4f9f9e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34708736"
 ---
 # <a name="specifying-a-location-path-sqlxml-40"></a>指定位置路徑 (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -49,7 +50,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="location-steps"></a>位置步驟  
  位置路徑 (絕對或相對) 是由包含三個部分的位置步驟所組成：  
   
--   **軸**  
+-   **Axis**  
   
      軸會指定位置步驟與內容節點所選取之節點間的樹狀結構關聯性。 **父**，**子**，**屬性**，和**自我**軸所支援。 如果**子**軸是在路徑中指定位置，查詢所選取的所有節點都都在內容節點的子系。 如果**父**指定軸、 選取的節點是內容節點的父節點。 如果**屬性**指定軸、 選取的節點是內容節點的屬性。  
   

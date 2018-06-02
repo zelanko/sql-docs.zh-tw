@@ -20,11 +20,12 @@ author: jovanpop-msft
 ms.author: jovanpop
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2017 || = sqlallproducts-allversions
-ms.openlocfilehash: de3984b5005114a2b8644c99706dcce48ab873e0
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 0e77a1d7e24fa2635b3e699672338e588c1f5c1c
+ms.sourcegitcommit: 2d93cd115f52bf3eff3069f28ea866232b4f9f9e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34707766"
 ---
 # <a name="automatic-tuning"></a>自動調整
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
@@ -95,7 +96,7 @@ SET AUTOMATIC_TUNING ( FORCE_LAST_GOOD_PLAN = ON );
 
 在[!INCLUDE[sssql15-md](../../includes/sssql15-md.md)]，您可以找到使用查詢存放區系統檢視的計畫選擇迴歸。 在[!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)]、[!INCLUDE[ssde_md](../../includes/ssde_md.md)]偵測，並顯示可能的計畫選擇迴歸和建議的動作應該套用在[sys.dm_db_tuning_recommendations &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-db-tuning-recommendations-transact-sql.md)檢視。 檢視會顯示問題的重要性，問題，以及詳細資料，例如識別查詢的迴歸的計劃 ID、 已做為基準進行比較，使用計畫的識別碼的相關資訊和[!INCLUDE[tsql_md](../../includes/tsql_md.md)]可以修正執行陳述式發生問題。
 
-| 型別 | description | datetime | score | 詳細資料 | … |
+| 型別 | description | DATETIME | score | 詳細資料 | … |
 | --- | --- | --- | --- | --- | --- |
 | `FORCE_LAST_GOOD_PLAN` | 從 4 毫秒變更為 14 毫秒 CPU 時間 | 3/17/2017 | 83 | `queryId` `recommendedPlanId` `regressedPlanId` `T-SQL` |   |
 | `FORCE_LAST_GOOD_PLAN` | 從 37 毫秒變更為 84 ms 的 CPU 時間 | 3/16/2017 | 26 | `queryId` `recommendedPlanId` `regressedPlanId` `T-SQL` |   |
@@ -165,7 +166,7 @@ FROM sys.dm_db_tuning_recommendations
 
 除了偵測[!INCLUDE[ssazure_md](../../includes/ssazure_md.md)]可以自動套用識別的建議。 如果您發現內建規則改善您資料庫的效能，您可能會讓[!INCLUDE[ssazure_md](../../includes/ssazure_md.md)]自動管理您的索引。
 
-若要啟用自動調整 Azure SQL Database 中，並讓完整管理您的工作負載自動調整功能，請參閱[啟用使用 Azure 入口網站的 Azure SQL Database 中的自動調整](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-automatic-tuning-enable)。
+若要啟用自動調整 Azure SQL Database 中，並讓完整管理您的工作負載自動調整功能，請參閱[啟用使用 Azure 入口網站的 Azure SQL Database 中的自動調整](https://docs.microsoft.com/azure/sql-database/sql-database-automatic-tuning-enable)。
 
 當[!INCLUDE[ssazure_md](../../includes/ssazure_md.md)]適用於建立索引或卸除索引建議事項，它會自動監視受影響的索引查詢的效能。 只有當受影響的查詢的效能已獲得改善，仍會保留新的索引。 如果有一些查詢來執行得較慢，因為索引不存在，就會自動重新建立卸除的索引。
 
@@ -177,7 +178,7 @@ FROM sys.dm_db_tuning_recommendations
 
 如果沒有自動索引管理功能，使用者必須手動查詢[sys.dm_db_missing_index_details &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-db-missing-index-details-transact-sql.md)檢視來尋找的索引，可能會改善效能，建立索引使用的詳細資料此檢視，並手動監視效能的查詢中提供。 若要尋找應該卸除的索引，使用者應該監視尋找很少使用的索引的索引作業的使用量統計資料。
 
-[!INCLUDE[ssazure_md](../../includes/ssazure_md.md)] 簡化此程序。 [!INCLUDE[ssazure_md](../../includes/ssazure_md.md)] 分析您的工作負載，會識別與新的索引，可能會更快速執行的查詢並找出未使用或重複的索引。 尋找詳細資訊的索引，應該在變更識別[在 Azure 入口網站中尋找的索引建議](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-advisor-portal)。
+[!INCLUDE[ssazure_md](../../includes/ssazure_md.md)] 簡化此程序。 [!INCLUDE[ssazure_md](../../includes/ssazure_md.md)] 分析您的工作負載，會識別與新的索引，可能會更快速執行的查詢並找出未使用或重複的索引。 尋找詳細資訊的索引，應該在變更識別[在 Azure 入口網站中尋找的索引建議](https://docs.microsoft.com/azure/sql-database/sql-database-advisor-portal)。
 
 ## <a name="see-also"></a>另請參閱  
  [ALTER DATABASE SET AUTOMATIC_TUNING &#40;Transact SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md)   

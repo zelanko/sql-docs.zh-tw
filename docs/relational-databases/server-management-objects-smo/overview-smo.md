@@ -17,10 +17,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 21d71757b4f8520e2ec2b3b7c2d1cb3c1407b420
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: 2d93cd115f52bf3eff3069f28ea866232b4f9f9e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34708006"
 ---
 # <a name="overview-smo"></a>概觀 (SMO)
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
@@ -47,7 +48,7 @@ ms.lasthandoff: 05/03/2018
   
  SMO 也將 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 所導入的許多功能和元件表示為新的物件或屬性。 這些新元件和功能包括下列各項：  
   
--   資料表和索引資料分割，可用於資料分割配置上的資料儲存。 如需詳細資訊，請參閱＜ [Partitioned Tables and Indexes](../../relational-databases/partitions/partitioned-tables-and-indexes.md)＞。  
+-   資料表和索引資料分割，可用於資料分割配置上的資料儲存。 如需詳細資訊，請參閱 [Partitioned Tables and Indexes](../../relational-databases/partitions/partitioned-tables-and-indexes.md)。  
   
 -   HTTP 端點，可用於管理 SOAP 要求。 如需詳細資訊，請參閱[實作端點](../../relational-databases/server-management-objects-smo/tasks/implementing-endpoints.md)。  
   

@@ -21,7 +21,7 @@
 <!-- ### [DMVs for Python](python/dmvs-for-python.md)-->
 <!-- ### [Resource Governance for Python](python/resource-governance-for-python.md)-->
 
-# Install 
+# 安裝 
 
 ## [資料庫內分析](install/sql-machine-learning-services-windows-install.md)
 ## [獨立伺服器](install/sql-machine-learning-standalone-windows-install.md)
@@ -94,18 +94,18 @@
 
 # [操作說明](r/sql-server-machine-learning-tasks.md)
 
-## [套件管理](r/r-package-management-for-sql-server-r-services.md)
+## 封裝管理
 ### [預設封裝](r/installing-and-managing-r-packages.md)
 ### [取得封裝資訊](r/determine-which-packages-are-installed-on-sql-server.md)
 ### [安裝新的 Python 封裝](python/install-additional-python-packages-on-sql-server.md)
 ### [安裝新的 R 封裝](r/install-additional-r-packages-on-sql-server.md)
-#### [使用 R 套件管理員](r/install-additional-r-packages-on-sql-server.md)
-#### [使用 RevoScaleR](r/use-revoscaler-to-manage-r-packages.md)
+#### [使用 R 套件管理員](r/use-r-package-managers-on-sql-server.md)
 #### [使用 T-SQL](r/install-r-packages-tsql.md)
-#### [使用 miniCRAN 存放庫](r/create-a-local-package-repository-using-minicran.md)
-#### [啟用遠端 R 封裝管理](r/r-package-how-to-enable-or-disable.md)
-#### [同步 R 套件](r/package-install-uninstall-and-sync.md)
-#### [R「使用者程式庫」的因應措施](r/packages-installed-in-user-libraries.md)
+#### [使用 RevoScaleR](r/use-revoscaler-to-manage-r-packages.md)
+##### [啟用遠端 R 封裝管理](r/r-package-how-to-enable-or-disable.md)
+##### [同步 R 套件](r/package-install-uninstall-and-sync.md)
+#### [建立 miniCRAN 儲存機制](r/create-a-local-package-repository-using-minicran.md)
+#### [使用 R 封裝的秘訣](r/packages-installed-in-user-libraries.md)
 
 ## 資料探索及模型化
 ### [R 程式庫和資料類型](r/r-libraries-and-data-types.md)
@@ -156,19 +156,18 @@
 
 ## [已知問題](known-issues-for-sql-server-machine-learning-services.md)
 ## [版本資訊](https://docs.microsoft.com/sql/sql-server/sql-server-2017-release-notes)
-## [新文章及更新的文章](new-updated-advanced-analytics.md)
-
-## [安裝和疑難排解提示](machine-learning-troubleshooting-faq.md)
-### [設定虛擬機器](r/installing-sql-server-r-services-on-an-azure-virtual-machine.md)
-### [疑難排解的資料收集](data-collection-ml-troubleshooting-process.md)
-### [升級與安裝的常見問題集](r/upgrade-and-installation-faq-sql-server-r-services.md)
-### [外部指令碼執行的常見問題](common-issues-external-script-execution.md)
+## [設定虛擬機器](r/installing-sql-server-r-services-on-an-azure-virtual-machine.md)
+## [疑難排解](machine-learning-troubleshooting-faq.md)
+### [資料收集](data-collection-ml-troubleshooting-process.md)
+### [安裝和升級的錯誤](r/upgrade-and-installation-faq-sql-server-r-services.md)
+### [啟動控制板和外部指令碼執行錯誤](common-issues-external-script-execution.md)
+### [R 指令碼錯誤](r-script-execution-errors.md)
 
 ## 部落格
 ### [[SQL Server]](https://blogs.technet.microsoft.com/dataplatforminsider/)
 ### [R Server](https://blogs.msdn.microsoft.com/microsoftrservertigerteam/)
 ### [機器學習服務](https://blogs.technet.microsoft.com/machinelearning/)
 
-## 意見反應論壇
+## 論壇
 ### [[SQL Server]](https://social.msdn.microsoft.com/Forums/sqlserver/home?category=sqlserver)
-### [Microsoft R Server](https://social.msdn.microsoft.com/Forums/home?forum=MicrosoftR)
+### [機器學習伺服器](https://social.msdn.microsoft.com/Forums/home?forum=MicrosoftR)

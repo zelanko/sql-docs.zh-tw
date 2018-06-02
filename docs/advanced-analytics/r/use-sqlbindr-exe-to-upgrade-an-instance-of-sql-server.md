@@ -8,11 +8,12 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 694cbb2a6addc89f40dd6d9670768ad13a84ef3f
-ms.sourcegitcommit: b5ab9f3a55800b0ccd7e16997f4cd6184b4995f9
+ms.openlocfilehash: 11b9e58c583712d8ee5ae70f4dbb98b6c175239c
+ms.sourcegitcommit: 2d93cd115f52bf3eff3069f28ea866232b4f9f9e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34707686"
 ---
 # <a name="upgrade-machine-learning-r-and-python-components-in-sql-server-instances"></a>升級 SQL Server 執行個體中的機器學習 （R 和 Python） 元件
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -26,30 +27,26 @@ SQL Server 中的 R，並將 Python 整合包括開放原始碼和 Microsoft 專
 > [!NOTE]
 > 繫結 （資料庫） 執行個體只會套用。 繫結 （獨立） 安裝無關。
 
-**SQL Server 2017**
+**SQL Server 2017 繫結的考量**
 
 SQL Server 2017 機器學習服務，您可以在 Microsoft Machine Learning 伺服器會開始提供額外的套件，或已經有透過您的較新版本時，才考慮繫結。
 
-**SQL Server 2016**
+**SQL Server 2016 繫結的考量**
 
-SQL Server 2016 R 服務的客戶，有兩個路徑來取得新的和更新的 R 封裝。 其中一種升級至 SQL Server 2017;第二個，繫結至 Microsoft Machine Learning 伺服器。
+SQL Server 2016 R 服務繫結的客戶提供更新的 R 封裝，新的封裝不屬於預先定型的模型，全部都是可進一步重新整理每個新的主要和次要版本的 Microsoft Machine Learning 伺服器在與原始安裝的一部分。 繫結並不會提供 Python 支援，這是 SQL Server 2017 功能。 
 
-升級至 SQL Server 2017 取得您的 R 封裝包含在該版本中，再加上 Python 功能的版本。 或者，繫結取得您已更新進一步在每個新的主要和次要版本的 Microsoft Machine Learning 伺服器重新整理的 R 封裝。 
+## <a name="version-map"></a>版本的對應
 
-繫結並不會提供 Python 支援，這是 SQL Server 2017 功能。 
+下表是版本對應，跨版本車輛顯示封裝版本，如此當您繫結至 Microsoft 機器學習 Server （先前稱為 R Server 的 Python 支援加法之前，您可以確定 potentional 升級路徑MLS 9.2.1 中起始）。 
 
-**可透過 Microsoft Machine Learning 伺服器元件升級**
-
-下表是版本對應，顯示可能的升級，當您繫結到 Microsoft （先前稱為 R Server 的 Python 支援從 MLS 9.2.1 加法之前） 的機器學習 Server 與 SQL Server 安裝的版本。 
-
-請注意繫結並不保證 R 或 Anaconda 的最新版本。 當您繫結至 Microsoft 的機器學習伺服器時，您會取得透過安裝程式，這可能或可能不是最新的版本可以從網站上安裝的 R 或 Python 版本。
+請注意繫結並不保證 R 或 Anaconda 的最新版本。 當您繫結至 Microsoft 機器學習伺服器 (MLS) 時，您會取得安裝程式可能不會在網站上可用的最新版本的 R 或 Python 版本。
 
 [**SQL Server 2016 R Services**](../install/sql-r-services-windows-install.md)
 
-元件 |初版 | R 伺服器 9.0.1 | R 伺服器 9.1 | MLS 9.2.1 | MLS 9.3 |
+元件 |初版 | [R 伺服器 9.0.1](https://docs.microsoft.com/machine-learning-server/install/r-server-install-windows) | [R 伺服器 9.1](https://docs.microsoft.com/machine-learning-server/install/r-server-install-windows) | [MLS 9.2.1](https://docs.microsoft.com/machine-learning-server/install/machine-learning-server-windows-install) | [MLS 9.3](https://docs.microsoft.com/machine-learning-server/install/machine-learning-server-windows-install) |
 ----------|----------------|----------------|--------------|---------|-------|
 Microsoft R Open (MRO) 透過 R | R 3.2.2     | R 3.3.2   |3.3.3 R   | R 3.4.1  | R 3.4.3 |
-[RevoScaleR](https://docs.microsoft.com/achine-learning-server/r-reference/revoscaler/revoscaler) | 8.0.3  | 9.0.1 |  9.1 |  9.2.1 |  9.3 |
+[RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) | 8.0.3  | 9.0.1 |  9.1 |  9.2.1 |  9.3 |
 [MicrosoftML](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/microsoftml-package)| n.a. | 9.0.1 |  9.1 |  9.2.1 |  9.3 |
 [預先定型的模型](https://docs.microsoft.com/machine-learning-server/install/microsoftml-install-pretrained-models)| n.a. | 9.0.1 |  9.1 |  9.2.1 |  9.3 |
 [sqlrutils](https://docs.microsoft.com/machine-learning-server/r-reference/sqlrutils/sqlrutils)| n.a. | 1.0 |  1.0 |  1.0 |  1.0 |
@@ -266,7 +263,7 @@ WITH RESULT SETS ((PackageName nvarchar(250), PackageVersion nvarchar(max) ))
 
 ### <a name="parameters"></a>參數
 
-|名稱|Description|
+|[屬性]|描述|
 |------|------|
 |*list*| 顯示目前電腦上所有 SQL 資料庫執行個體識別碼的清單|
 |*bind*| 將指定的 SQL 資料庫執行個體升級到最新版 R Server，並確保執行個體自動取得 R Server 的未來升級|
@@ -301,7 +298,7 @@ MLS Installer 和 SqlBindR 會傳回下列錯誤碼和訊息。
 
 新版 SqlBindR 自動還原原始的 R 功能，因而不須重新安裝的 R 元件，或重新修補程式的伺服器。 不過，您必須安裝任何可能在初始安裝後加入的 R 封裝更新。
 
-如果您已經使用封裝管理角色來安裝及共用封裝，這項工作就能輕鬆： 您可以使用 R 命令來同步處理已安裝的封裝，在資料庫中，使用記錄在檔案系統，反之亦然。 如需詳細資訊，請參閱[for SQL Server 的 R 封裝管理](r-package-management-for-sql-server-r-services.md)。
+如果您已經使用封裝管理角色來安裝及共用封裝，這項工作就能輕鬆： 您可以使用 R 命令來同步處理已安裝的封裝，在資料庫中，使用記錄在檔案系統，反之亦然。 如需詳細資訊，請參閱[for SQL Server 的 R 封裝管理](install-additional-r-packages-on-sql-server.md)。
 
 ### <a name="problems-with-multiple-upgrades-from-sql-server"></a>從 SQL Server 的多個升級的問題
 

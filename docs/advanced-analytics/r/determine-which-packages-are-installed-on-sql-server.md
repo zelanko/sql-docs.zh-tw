@@ -4,27 +4,28 @@ description: 判斷 R，並將 Python 封裝版本、 驗證安裝，並取得�
 ms.custom: ''
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 05/08/2018
+ms.date: 05/29/2018
 ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 21975b4a59cbfaf1e3a203bc732543144856633f
-ms.sourcegitcommit: df382099ef1562b5f2d1cd506c1170d1db64de41
+ms.openlocfilehash: 85ea4658ca8b60fc24d7e4f7849de1655eab6082
+ms.sourcegitcommit: 2d93cd115f52bf3eff3069f28ea866232b4f9f9e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/12/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34707886"
 ---
-#  <a name="get-r-and-python-package-information-on-sql-server"></a>取得 SQL Server 上的 R，並將 Python 封裝資訊
+#  <a name="get-r-and-python-package-information"></a>取得 R，並將 Python 封裝資訊
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-有時當您正在使用多個環境或安裝的 R 或 Python，您需要確認您正在執行的程式碼使用 Python 或 [正確] 工作區的預期的環境進行。例如，如果您已升級的機器學習使用繫結元件，R 程式庫的路徑可能比預設值的不同資料夾中。 此外，如果您安裝 R 用戶端或獨立伺服器執行個體，您可能多個 R 程式庫在您的電腦上。
+有時當您正在使用多個環境或安裝的 R 或 Python，您需要確認您正在執行的程式碼使用 Python 或 [正確] 工作區的預期的環境進行。例如，如果您已升級的機器學習元件透過[繫結](use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md)，R 程式庫的路徑可能是預設值不同的資料夾中。 此外，如果您安裝 R 用戶端或獨立伺服器執行個體，您可能多個 R 程式庫在您的電腦上。
 
-這篇文章中的範例會示範如何取得的路徑和版本的 SQL Server 正在使用的文件庫。
+本文中的 R，並將 Python 指令碼範例會示範如何取得的路徑和版本的 SQL Server 所使用的套件。
 
-## <a name="get-the-current-r-library"></a>取得目前的 R 程式庫
+## <a name="get-the-r-library-location"></a>取得的 R 程式庫位置
 
-如**R**在任何版本的 SQL Server 中，執行下列陳述式，請確認目前的執行個體的預設程式庫：
+任何版本的 SQL Server 中，執行下列陳述式來確認[預設 R 封裝程式庫](installing-and-managing-r-packages.md)目前執行個體：
 
 ```sql
 EXECUTE sp_execute_external_script  
@@ -34,7 +35,7 @@ WITH RESULT SETS (([DefaultLibraryName] VARCHAR(MAX) NOT NULL));
 GO
 ```
 
-（選擇性） 您可以使用較新版本的 SQL Server 2017 機器學習服務中的 RevoScaleR 的 rxSqlLibPaths 或[R 服務升級後 R 要在最低 RevoScaleR 9.0.1](use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md)。 這個預存程序會傳回執行個體的程式庫的路徑與 RevoScaleR SQL Server 所使用的版本：
+或者，您可以使用[rxSqlLibPaths](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxsqllibpaths)在較新版本的 SQL Server 2017 機器學習服務中的 RevoScaleR 或[R 服務升級後 R 要在最低 RevoScaleR 9.0.1](use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md)。 這個預存程序會傳回執行個體的程式庫的路徑與 RevoScaleR SQL Server 所使用的版本：
 
 ```sql
 EXECUTE sp_execute_external_script
@@ -57,7 +58,7 @@ STDOUT message(s) from external script:
 [1] '9.3.0'
 ```
 
-## <a name="get-the-current-python-library"></a>取得目前的 Python 程式庫
+## <a name="get-the-python-library-location"></a>取得的 Python 程式庫位置
 
 如**Python**中 SQL Server 2017，執行下列陳述式，請確認目前的執行個體的預設程式庫。 這個範例會傳回包含在 Python 的資料夾清單`sys.path`變數。 此清單包含目前的目錄和標準程式庫路徑。
 

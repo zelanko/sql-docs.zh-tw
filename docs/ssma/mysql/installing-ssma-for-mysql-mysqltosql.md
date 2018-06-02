@@ -20,11 +20,12 @@ caps.latest.revision: 11
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 9f16a1eeccefbcf1299bf677f337c443d0e4004a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: aeb915c231cdaef032259a83ae647a75db4e3db7
+ms.sourcegitcommit: 2d93cd115f52bf3eff3069f28ea866232b4f9f9e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34708866"
 ---
 # <a name="installing-ssma-for-mysql-mysqltosql"></a>安裝的 SSMA for MySQL (MySqlToSql)
 您用來執行從 MySQL 來移轉用戶端應用程式包含 SQL Server 移轉小幫手 (SSMA) 的 MySQL[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或 SQL Azure。 它也包含支援資料移轉和 MySQL 系統函式的使用在您移轉之資料庫中的延伸模組組件。  
@@ -40,7 +41,7 @@ ms.lasthandoff: 05/03/2018
 |-|-|  
 |**主題**|**說明**|  
 |[安裝 MySQL 用戶端的 SSMA &#40;MySQLToSQL&#41;](../../ssma/mysql/installing-ssma-for-mysql-client-mysqltosql.md)|提供有關的資訊和指示安裝 SSMA 用戶端。|  
-|[SSMA 元件安裝 SQL Server (MySQL to SQL)](http://msdn.microsoft.com/en-us/6772d0c5-258f-4d7b-afb0-b5f810e71af1)|提供相關資訊與執行個體上安裝的延伸模組組件的指示[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]。|  
+|[SSMA 元件安裝 SQL Server (MySQL to SQL)](http://msdn.microsoft.com/6772d0c5-258f-4d7b-afb0-b5f810e71af1)|提供相關資訊與執行個體上安裝的延伸模組組件的指示[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]。|  
 |[移除 SSMA for MySQL 元件&#40;MySQLToSql&#41;](../../ssma/mysql/removing-the-ssma-for-mysql-components-mysqltosql.md)|提供解除安裝用戶端程式的指示。|  
   
 ## <a name="see-also"></a>另請參閱  

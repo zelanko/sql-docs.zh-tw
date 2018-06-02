@@ -2,23 +2,24 @@
 title: SQL Server 上安裝預先定型的機器學習模型 |Microsoft 文件
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 04/15/2018
+ms.date: 05/31/2018
 ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: b21245bd74f59f4ad7fe2370ad3587053e756a03
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: e3abc1b1581216bb0207fbba2d857993b947afae
+ms.sourcegitcommit: 2d93cd115f52bf3eff3069f28ea866232b4f9f9e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34707576"
 ---
 # <a name="install-pre-trained-machine-learning-models-on-sql-server"></a>安裝預先定型的機器學習模型 SQL Server 上
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-本文說明如何將預先定型的模型加入至的 SQL Server （資料庫） 執行個體在具有 R Services 或 SQL Server 機器學習服務安裝。 
+本文說明如何將預先定型的機器學習模型情緒分析及映像功能，其潛在 （資料庫） 執行個體的 SQL Server 在具有 R Services 或 SQL Server 機器學習服務安裝。 
 
-預先定型的模型是為了協助的客戶需要以執行工作，例如情緒分析或映像功能，其潛在，但沒有取得大型資料集或複雜的模型定型的資源。 機器學習 Server 小組建立並定型這些模型，以協助您開始在文字和影像有效率地處理。 如需詳細資訊，請參閱[資源](#bkmk_resources)本文一節。
+預先定型的模型是為了協助客戶，需要執行情緒分析或映像功能，其潛在，但並沒有取得大型資料集或複雜的模型定型的資源。 機器學習 Server 小組建立並定型這些模型，以協助您開始在文字和影像有效率地處理。 如需詳細資訊，請參閱[資源](#bkmk_resources)本文一節。
 
 如需如何使用 SQL Server 資料的預先定型的模型的範例，請參閱此部落格由 SQL Server 機器學習小組：[使用 SQL Server 機器學習服務中的 Python 情緒分析](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2017/11/01/sentiment-analysis-with-python-in-sql-server-machine-learning-services/)
 
@@ -30,8 +31,8 @@ ms.lasthandoff: 04/16/2018
 
 + SQL Server 2016 R 服務 （資料庫）-R，與[MicrosoftML 程式庫](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/microsoftml-package)
 + SQL Server 2016 R 伺服器 （獨立）-R，與[MicrosoftML 程式庫](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/microsoftml-package)
-+ SQL Server 2017 機器學習服務 （資料庫）-R [MicrosoftML 程式庫] (https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/microsoftml-package)，具有 Python [microsoftml 程式庫](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/microsoftml-package)
-+ SQL Server 2017 機器學習伺服器 （獨立）-R [MicrosoftML 程式庫] (https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/microsoftml-package)，具有 Python [microsoftml 程式庫](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/microsoftml-package)
++ SQL Server 2017 機器學習服務 （資料庫）-R 與[MicrosoftML 文件庫](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/microsoftml-package)，具有 Python [microsoftml 程式庫](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/microsoftml-package)
++ SQL Server 2017 機器學習伺服器 （獨立）-R 與[MicrosoftML 文件庫](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/microsoftml-package)，具有 Python [microsoftml 程式庫](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/microsoftml-package)
 
 安裝程序稍有不同的 SQL Server 版本而定。 請參閱下列章節，以針對每個版本的指示。
 
@@ -106,12 +107,30 @@ SQL Server 2016，您必須執行一些額外的步驟，以向 SQL Server 2016 
     + ResNet\_18\_Updated.model
     + ResNet\_50\_Updated.model
 
-## <a name="install-pre-trained-models-on-sql-server-machine-learning-services-in-database"></a>安裝 SQL Server 機器學習服務 （資料庫） 上的 預先定型的模型
+## <a name="install-pre-trained-models-on-sql-server-2017-machine-learning-services-in-database"></a>安裝 SQL Server 2017 機器學習服務 （資料庫） 上的 預先定型的模型
 
 如果您已安裝 SQL Server 2017，您可以取得預先定型的模型有兩種：
 
-+ 使用繫結，來升級的 Python 和 R 元件，並同時安裝預先定型的模型
 + 安裝預先定型的模型
++ 使用繫結，來升級的 Python 和 R 元件，並同時安裝預先定型的模型
+
+### <a name="add-pre-trained-models-only"></a>加入僅限預先定型的模型
+
+若要加入預先定型的模型，您可以從命令列執行 RSetup.exe。
+
+R 模型的版本，安裝 R_SERVICES MLM 元件：
+
+```
+RSetup.exe /install /component MLM /version 9.2.0.24 /language 1033 /destdir "C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\R_SERVICES"
+```
+
+如需模型的 Python 版本，安裝 PYTHON_SERVICES MLM 元件：
+
+```
+RSetup.exe /install /component MLM /version 9.2.0.24 /language 1033 /destdir "C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\PYTHON_SERVICES"
+```
+
+### <a name="bind-and-install-pre-trained-models"></a>繫結，並安裝預先定型的模型
 
 下面的指示說明的程序來升級機器學習服務元件，並在相同的時間取得預先定型的模型。
 
@@ -146,7 +165,7 @@ SQL Server 2016，您必須執行一些額外的步驟，以向 SQL Server 2016 
 2. 選取您想要更新，然後選取的語言**Pre-trained 模型**選項。
 
     > [!TIP]
-    > 如果您先前已執行安裝程式更新 R 伺服器 （獨立），而且只想要將預先定型的模型，保留所有先前的選取項目**現狀**，然後選取剛才預先**-定型模型**選項. **不這麼做**取消選取任何先前選取的選項; 如果您這樣做時，安裝程式會移除元件。
+    > 如果您先前已執行安裝程式更新 R 伺服器 （獨立），而且只想要將預先定型的模型，保留所有先前的選取項目**現狀**，然後選取剛才預先 **-定型模型**選項. **不這麼做**取消選取任何先前選取的選項; 如果您這樣做時，安裝程式會移除元件。
 
     我們建議您接受模型位置的預設設定。
 

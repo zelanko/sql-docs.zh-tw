@@ -21,11 +21,12 @@ caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e26659de53d43f14863e0bf83d70f5f6d3dbcfd0
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: a4cd609a06e0d30e28a451a4308cfec337d47f68
+ms.sourcegitcommit: 2d93cd115f52bf3eff3069f28ea866232b4f9f9e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34707506"
 ---
 # <a name="appendix-a-data-and-service-providers"></a>附錄 a： 資料和服務提供者
 本節說明三種類型的提供者： 資料提供者、 服務提供者，以及服務元件。 提供者分為兩類： 所提供的資料以及提供服務。 A*資料提供者*擁有它自己的資料，且會公開在表格式表單，以您的應用程式。 A*服務提供者*封裝所產生及取用資料，加強功能，在 ADO 應用程式中的服務。 服務提供者也可以進一步定義為*服務元件*，這必須與其他服務提供者或元件一起工作。
@@ -57,7 +58,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="provider-specific-dynamic-properties"></a>提供者特定的動態屬性
  [屬性](../../../ado/reference/ado-api/properties-collection-ado.md)集合[連接](../../../ado/reference/ado-api/connection-object-ado.md)，[命令](../../../ado/reference/ado-api/command-object-ado.md)，和[資料錄集](../../../ado/reference/ado-api/recordset-object-ado.md)物件包含特定的動態屬性提供者。 這些屬性會提供給超出 ADO 支援的內建屬性提供者專屬功能的相關資訊。
 
- 建立連線，並建立這些物件後, 使用[重新整理](../../../ado/reference/ado-api/refresh-method-ado.md)方法**屬性**來取得提供者特定屬性之物件的集合。 請參閱提供者文件和[OLE DB 程式設計人員指南](http://msdn.microsoft.com/en-us/3c5e2dd5-35e5-4a93-ac3a-3818bb43bbf8)這些動態屬性的詳細資訊。
+ 建立連線，並建立這些物件後, 使用[重新整理](../../../ado/reference/ado-api/refresh-method-ado.md)方法**屬性**來取得提供者特定屬性之物件的集合。 請參閱提供者文件和[OLE DB 程式設計人員指南](http://msdn.microsoft.com/3c5e2dd5-35e5-4a93-ac3a-3818bb43bbf8)這些動態屬性的詳細資訊。
 
 ## <a name="service-providers"></a>服務提供者
  若要使用的服務提供者，您必須提供的關鍵字。 您也應該知道的每個服務提供者相關聯的提供者專屬動態內容。 列出目前可以從 Microsoft 取得每個服務提供者特定提供者詳細資料：

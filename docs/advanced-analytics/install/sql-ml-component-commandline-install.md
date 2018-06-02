@@ -7,11 +7,12 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 7211eda2caaf579267e4c6089be13750022f0ef8
-ms.sourcegitcommit: b5ab9f3a55800b0ccd7e16997f4cd6184b4995f9
+ms.openlocfilehash: 814e0f8172e02d9b02be95888c8dab286429e533
+ms.sourcegitcommit: 2d93cd115f52bf3eff3069f28ea866232b4f9f9e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34707956"
 ---
 # <a name="install-sql-server-machine-learning-components-from-the-command-line"></a>從命令列安裝 SQL Server 機器學習服務元件
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -44,7 +45,7 @@ ms.lasthandoff: 05/23/2018
 
 透過命令提示字元安裝時，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支援使用 /Q 參數的完整無訊息模式或使用 /QS 參數的簡單無訊息模式。 /QS 參數只會顯示進度、不接受任何輸入，而且不會顯示任何遇到的錯誤訊息。 只有當您指定 /Action=install 時，才支援 /QS 參數。
 
-| 引數 | Description |
+| 引數 | 描述 |
 |-----------|-------------|
 | / 功能 = AdvancedAnalytics | 會安裝在資料庫版本： SQL Server 2017 機器學習服務 （資料庫） 或 SQL Server 2016 R Services （資料庫）。  |
 | / 功能 = SQL_INST_MR | 適用於 SQL Server 2017 只。 與 AdvancedAnalytics 配對。 會安裝 （資料庫） R 功能，包括 Microsoft R Open 與專屬的 R 封裝。 SQL Server 2016 R 服務功能是 R 專用，因此沒有該發行參數。|
@@ -159,7 +160,7 @@ Setup.exe /q /ACTION=Install /FEATURES=SQL_SHARED_MR
 
 安裝程式完成時，您有伺服器、 Microsoft 封裝，R 和 Python，工具，範例和指令碼一部分散發的開放原始碼散發套件。 
 
-若要開啟 R 主控台視窗中，移至 \Program files\Microsoft SQL Server\140 （或 130） \R_SERVER\bin\x64 並按兩下**RGui.exe**。 不熟悉 R 嗎？ 請嘗試此教學課程：[基本 R 命令與 RevoScaleR 函式： 25 的常見範例](https://docs.microsoft.com/en-us/machine-learning-server/r/tutorial-r-to-revoscaler)。
+若要開啟 R 主控台視窗中，移至 \Program files\Microsoft SQL Server\140 （或 130） \R_SERVER\bin\x64 並按兩下**RGui.exe**。 不熟悉 R 嗎？ 請嘗試此教學課程：[基本 R 命令與 RevoScaleR 函式： 25 的常見範例](https://docs.microsoft.com/machine-learning-server/r/tutorial-r-to-revoscaler)。
 
 若要開啟 Python 命令，請移至 files\microsoft SQL Server\140\PYTHON_SERVER\bin\x64 並按兩下**python.exe**。
 

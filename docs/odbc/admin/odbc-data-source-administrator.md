@@ -17,16 +17,17 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 61b31061c3a8c75e5d96d3ac6993ce8d90dd6199
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 1e529ab5d321625f8e6bf795a70d0e0143499df7
+ms.sourcegitcommit: 2d93cd115f52bf3eff3069f28ea866232b4f9f9e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34706946"
 ---
 # <a name="odbc-data-source-administrator"></a>ODBC 資料來源管理員
 Microsoft® ODBC 資料來源管理員會管理資料庫驅動程式和資料來源。 此應用程式位於 Windows 控制台中下**系統管理工具**。 Windows 8 中從開始，圖示名為**ODBC 資料來源**，而且在 64 位元作業系統上沒有 32 位元和 64 位元版本。  
   
- 如需 ODBC 管理員的詳細程序資訊，請開啟[ODBC 資料來源管理員](http://msdn.microsoft.com/en-us/eea94d94-f53b-4289-ae75-9ccccde15333)對話方塊，按一下**協助**。  
+ 如需 ODBC 管理員的詳細程序資訊，請開啟[ODBC 資料來源管理員](http://msdn.microsoft.com/eea94d94-f53b-4289-ae75-9ccccde15333)對話方塊，按一下**協助**。  
   
  您可以使用 PowerShell 命令來管理驅動程式和資料來源。 如需下列 PowerShell 命令的詳細資訊，請參閱[Windows 資料存取元件 PowerShell 命令](https://msdn.microsoft.com/library/windows/desktop/jj134064.aspx)。  
   

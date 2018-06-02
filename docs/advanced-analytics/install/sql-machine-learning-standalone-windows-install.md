@@ -7,11 +7,12 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 1c56d3cb9420d8d0e48ec936008d0351d5d32eb4
-ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.openlocfilehash: cb906a8a05221204ec10310d652f6891861d35e2
+ms.sourcegitcommit: 2d93cd115f52bf3eff3069f28ea866232b4f9f9e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34708266"
 ---
 # <a name="install-sql-server-2017-machine-learning-server-standalone-on-windows"></a>安裝 SQL Server 2017 機器學習 Windows 上的伺服器 （獨立）
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -32,7 +33,7 @@ SQL Server 安裝程式包含安裝的機器學習 SQL Server 外部執行的伺
 
 ## <a name="run-setup"></a>執行安裝程式
 
-如果是本機安裝，您必須以管理員身分執行安裝程式。 如果您是從遠端共用位置安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，則必須使用對遠端共用位置具有讀取和執行權限的網域帳戶。
+如果是本機安裝，您必須以管理員身分執行安裝程式。 如果您是從遠端共用位置安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，則必須使用對遠端共用位置具有讀取和執行權限的網域帳戶。
 
 1. 啟動 SQL Server 2017 的安裝精靈。
 
@@ -89,7 +90,7 @@ SQL Server 安裝程式包含安裝的機器學習 SQL Server 外部執行的伺
 
 開發 IDE 不會安裝成在安裝程序。 不需要額外的工具，包含所有的標準工具時，就會提供與 R 或 Python 的分佈。
 
-我們建議您嘗試為新版本的[!INCLUDE[rsql_rtvs](../../includes/rsql-rtvs-md.md)]或[for Visual Studio 的 Python](https://docs.microsoft.com/en-us/visualstudio/python/installing-python-support-in-visual-studio)。 Visual Studio 支援同時 R 和 Python，以及資料庫開發工具與 SQL Server 的連線與 BI 工具。 不過，您可以使用任何慣用的開發環境，包括 RStudio。
+我們建議您嘗試為新版本的[!INCLUDE[rsql_rtvs](../../includes/rsql-rtvs-md.md)]或[for Visual Studio 的 Python](https://docs.microsoft.com/visualstudio/python/installing-python-support-in-visual-studio)。 Visual Studio 支援同時 R 和 Python，以及資料庫開發工具與 SQL Server 的連線與 BI 工具。 不過，您可以使用任何慣用的開發環境，包括 RStudio。
 
 ## <a name="get-help"></a>取得說明
 

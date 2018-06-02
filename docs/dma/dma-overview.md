@@ -17,18 +17,19 @@ caps.latest.revision: ''
 author: HJToland3
 ms.author: jtoland
 manager: craigg
-ms.openlocfilehash: 16550b6c195f426d914f5a4b4d521cbd739765ee
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: dd681a6445c6759b0ec17e06dc0b4dbf24b3b72f
+ms.sourcegitcommit: 2d93cd115f52bf3eff3069f28ea866232b4f9f9e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34707966"
 ---
 # <a name="overview-of-data-migration-assistant"></a>資料移轉小幫手的概觀
 
 資料移轉小幫手 (DMA) 可讓您升級至現代化資料平台，就會偵測相容性問題，可能會影響資料庫的新版本的 SQL Server 和 Azure SQL Database 的功能。 DMA 效能和可靠性的改進您的目標環境的建議，並可讓您將您的結構描述、 資料和非內含性的物件從來源伺服器移至您的目標伺服器。
 
 > [!NOTE] 
-> 為大型 （依據資料庫的大小和數量） 移轉，建議使用[Azure 資料庫移轉服務](https://docs.microsoft.com/en-us/azure/dms/dms-overview)，大規模的資料庫的移轉。
+> 為大型 （依據資料庫的大小和數量） 移轉，建議使用[Azure 資料庫移轉服務](https://docs.microsoft.com/azure/dms/dms-overview)，大規模的資料庫的移轉。
   
 ## <a name="capabilities"></a>Capabilities
 
@@ -48,7 +49,7 @@ ms.lasthandoff: 05/03/2018
 
   - 效能
   - Security
-  - 儲存空間
+  - Storage
 
 - 將內部部署 SQL Server 執行個體移轉至的現代的 SQL Server 執行個體，裝載在內部部署或在 Azure 虛擬機器 (VM) 可從您的內部部署網路存取。 可以使用 VPN 或其他技術來存取 Azure VM。 移轉工作流程可協助您移轉下列元件：
 

@@ -2,39 +2,36 @@
 title: 疑難排解與 SQL Server 中的機器學習的常見問題集 |Microsoft 文件
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 04/15/2018
+ms.date: 05/31/2018
 ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 80d153baed382c95c85793e1605b700c2719e13c
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 6ef72ae56973e695b96f0dfac7c0a3414bca5225
+ms.sourcegitcommit: 2d93cd115f52bf3eff3069f28ea866232b4f9f9e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34707356"
 ---
-# <a name="troubleshoot-machine-learning"></a>機器學習的疑難排解
+# <a name="troubleshoot-machine-learning-in-sql-server"></a>疑難排解 SQL Server 中的機器學習服務
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-這篇文章提供設定指南、 已知的問題和版本資訊的疑難排解連結。 其他文章連結至在此文件提供 SQL Server 中的機器學習解決方案的效能最佳化的相關建議。
-
-使用此頁面做為起點，尋找已知的問題、 一般安裝程式的問題和程序進行疑難排解。
+使用此頁面做為起點，來處理透過已知問題。
 
 **適用於：** SQL Server 2016 R Services、 SQL Server 2017 機器學習服務 （R 和 Python）
 
 ## <a name="known-issues"></a>已知問題
 
-下列文件清單的目前版本中，已知的問題，或說明問題之前的版本：
+下列文章描述目前和舊版本的已知的問題：
 
 + [R Services 已知的問題](../advanced-analytics/known-issues-for-sql-server-machine-learning-services.md)
 + [SQL Server 2016 版本資訊](../sql-server/sql-server-2016-release-notes.md)
 + [SQL Server 2017 版本資訊](../sql-server/sql-server-2017-release-notes.md)
 
-## <a name="troubleshooting-prerequisites"></a>疑難排解的必要條件
+## <a name="how-to-gather-system-information"></a>如何蒐集系統資訊
 
-如果您遇到錯誤，或需要了解您的環境中的問題時，務必有系統地收集相關的資訊。 此資訊包括版本、 版本、 安全性內容，以及執行內容。
-
-下列文章提供有助於進行疑難排解，進而自行排除的資訊或為要求的清單，如需技術支援。
+如果您遇到錯誤，或需要了解您的環境中的問題時，務必有系統地收集相關的資訊。 下列文章提供有助於進行疑難排解，進而自行排除的資訊或為要求的清單，如需技術支援。
 
 + [取得機器學習的疑難排解資料收集](data-collection-ml-troubleshooting-process.md)
 
@@ -45,7 +42,7 @@ ms.lasthandoff: 04/16/2018
 + [安裝 SQL Server 2017 機器學習服務 （資料庫）](install/sql-machine-learning-services-windows-install.md)
 + [安裝 SQL Server 2017 機器學習伺服器 （獨立）](install/sql-machine-learning-standalone-windows-install.md)
 + [安裝 SQL Server 2016 R Services （資料庫）](install/sql-r-services-windows-install.md)
-+ [安裝 SQL Server 2016R 伺服器 （獨立）](install/sql-r-standalone-windows-install.md)
++ [安裝 SQL Server 2016 R Server （獨立）](install/sql-r-standalone-windows-install.md)
 + [命令提示字元安裝](install/sql-ml-component-commandline-install.md)
 + [離線安裝程式 (不連線到網際網路)](install/sql-ml-component-install-without-internet-access.md)
 
