@@ -9,15 +9,16 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 5aa1305d3283c227b2924d00f7d9827cf8b7b3de
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: b92798e16b701bb7073b26823fffc4f34a570f1c
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34577750"
 ---
 # <a name="detach-element"></a>Detach 元素
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
-  從目前的伺服器執行個體中卸離 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 資料庫。  
+  卸離 Analysis Services 資料庫的目前伺服器執行個體。  
   
 ## <a name="syntax"></a>語法  
   
@@ -34,7 +35,7 @@ ms.lasthandoff: 05/10/2018
   
 ## <a name="element-characteristics"></a>元素特性  
   
-|特性|說明|  
+|特性|描述|  
 |--------------------|-----------------|  
 |資料類型和長度|無|  
 |預設值|無|  
@@ -45,9 +46,9 @@ ms.lasthandoff: 05/10/2018
 |關聯性|元素|  
 |------------------|-------------|  
 |父元素|[Command](../../../analysis-services/xmla/xml-elements-properties/command-element-xmla.md)|  
-|子元素|[物件](../../../analysis-services/xmla/xml-elements-properties/object-element-xmla.md)<br /><br /> [密碼](../../../analysis-services/xmla/xml-elements-properties/password-element-xmla.md)|  
+|子元素|[物件](../../../analysis-services/xmla/xml-elements-properties/object-element-xmla.md)<br /><br /> [[密碼]](../../../analysis-services/xmla/xml-elements-properties/password-element-xmla.md)|  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>另請參閱
  <xref:Microsoft.AnalysisServices.Database.Detach%2A>   
  [Attach 元素](../../../analysis-services/xmla/xml-elements-commands/attach-element.md)   
  [附加和卸離 Analysis Services 資料庫](../../../analysis-services/multidimensional-models/attach-and-detach-analysis-services-databases.md)   
