@@ -9,15 +9,16 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 29ad501e7a29e77c1f6b1ed04e497c2881b9a7d0
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 85ddeb22fac03e5ae7f66521ac3ca8a46e210fe7
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34574780"
 ---
 # <a name="protocolcapabilities-element-xmla"></a>ProtocolCapabilities 元素 (XMLA)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
-  在 SOAP 要求訊息中使用 SOAP 標頭，以識別執行個體之間的通訊協定功能[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]和用戶端應用程式。  
+  會使用 SOAP 標頭在 SOAP 要求訊息中識別的 Analysis Services 執行個體與用戶端應用程式之間的通訊協定功能。  
   
  **命名空間** `http://schemas.microsoft.com/analysisservices/2003/engine`  
   
@@ -41,7 +42,7 @@ ms.lasthandoff: 05/10/2018
   
 ## <a name="element-characteristics"></a>元素特性  
   
-|特性|說明|  
+|特性|描述|  
 |--------------------|-----------------|  
 |資料類型和長度|無|  
 |預設值|無|  
@@ -71,8 +72,8 @@ ms.lasthandoff: 05/10/2018
   
  通訊協定功能不需要明確交涉。 也就是說，用戶端應用程式不需要在 SOAP 要求中包含 **ProtocolCapabilities** 元素。 如果 SOAP 要求不包含**ProtocolCapabilities**項目，[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]執行個體使用相同的格式與 SOAP 要求的回應。  
   
-## <a name="see-also"></a>另請參閱  
- [管理連接和工作階段 & #40;XMLA & #41;](../../../analysis-services/multidimensional-models-scripting-language-assl-xmla/managing-connections-and-sessions-xmla.md)   
- [標頭 & #40;XMLA & #41;](../../../analysis-services/xmla/xml-elements-headers/xml-elements-headers.md)  
+## <a name="see-also"></a>另請參閱
+ [管理連接與工作階段&#40;XMLA&#41;](../../../analysis-services/multidimensional-models-scripting-language-assl-xmla/managing-connections-and-sessions-xmla.md)   
+ [標頭&#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-headers/xml-elements-headers.md)  
   
   

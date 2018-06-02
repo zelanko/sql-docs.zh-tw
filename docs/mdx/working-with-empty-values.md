@@ -1,30 +1,20 @@
 ---
 title: 使用空白值 |Microsoft 文件
-ms.custom: ''
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.component: ''
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: language-reference
-dev_langs:
-- kbMDX
-helpviewer_keywords:
-- expressions [MDX], empty values
-- empty values [MDX]
-ms.assetid: 6338fb85-f513-4c3e-a774-4fd7c6986a91
-caps.latest.revision: 36
-author: Minewiskan
+ms.date: 05/30/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: mdx
+ms.topic: reference
 ms.author: owend
-manager: erikre
-ms.openlocfilehash: 2dda44151b465d31cc6b3a88232f6843cf868eb5
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: 1018c741ff545a88a90a6e27196cfc18d6f8177a
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34581950"
 ---
 # <a name="working-with-empty-values"></a>使用空白值
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -59,7 +49,7 @@ WHERE([Date].[Calendar].[Calendar Year].&[2001])
 -   [IsEmpty](../mdx/isempty-mdx.md)函式會傳回**TRUE**如果且只有在函式中指定的 tuple 所識別的資料格是空的。 否則，函數會傳回**FALSE**。  
   
     > [!NOTE]  
-    >  **IsEmpty** 函式無法判斷成員運算式是否會傳回 null 值。 若要判斷是否要從運算式傳回 null 成員，請使用[IS](../mdx/is-mdx.md)運算子。  
+    >  **IsEmpty**函式無法判斷成員運算式是否會傳回 null 值。 若要判斷是否要從運算式傳回 null 成員，請使用[IS](../mdx/is-mdx.md)運算子。  
   
 -   當空白資料格值是任一個數值運算子 (+、-、*、/) 的運算元時，如果其他運算元不是空值，就會將空白資料格值視為零。 如果兩個運算元都是空的，則數值運算子會傳回空白資料格值。  
   
@@ -139,7 +129,7 @@ WHERE([Date].[Calendar].[Calendar Year].&[2001])
   
  這個表格會顯示將 OR 運算子套用到兩個布林運算元的結果。  
   
-|OR|TRUE|FALSE|  
+|或|TRUE|FALSE|  
 |--------|----------|-----------|  
 |**TRUE**|TRUE|TRUE|  
 |**空白**|TRUE|TRUE|  
@@ -154,7 +144,7 @@ WHERE([Date].[Calendar].[Calendar Year].&[2001])
 |FALSE|TRUE|  
   
 ## <a name="see-also"></a>另請參閱  
- [MDX 函數參考 & #40;MDX & #41;](../mdx/mdx-function-reference-mdx.md)   
+ [MDX 函數參考&#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)   
  [MDX 運算子參考&#40;MDX&#41;](../mdx/mdx-operator-reference-mdx.md)   
  [運算式&#40;MDX&#41;](../mdx/expressions-mdx.md)  
   

@@ -9,11 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: fde6410ac0f6932fe11e5486342e1d836dcc8000
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 0d528567e22c3ba19b49eefff10d886703a0d29a
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34576490"
 ---
 # <a name="readwritemode-element"></a>ReadWriteMode 元素
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -32,7 +33,7 @@ ms.lasthandoff: 05/10/2018
   
 ## <a name="element-characteristics"></a>元素特性  
   
-|特性|說明|  
+|特性|描述|  
 |--------------------|-----------------|  
 |資料類型和長度|字串 (列舉)|  
 |預設值|ReadWrite|  
@@ -42,7 +43,7 @@ ms.lasthandoff: 05/10/2018
   
 |關聯性|元素|  
 |------------------|-------------|  
-|父元素|[資料庫](../../../analysis-services/xmla/xml-elements-properties/database-element-xmla.md)|  
+|父元素|[[資料庫]](../../../analysis-services/xmla/xml-elements-properties/database-element-xmla.md)|  
 |子元素|無|  
   
 ## <a name="remarks"></a>備註  
@@ -50,12 +51,12 @@ ms.lasthandoff: 05/10/2018
   
  值**ReadWriteMode**元素僅限於一個下表所列的字串。  
   
-|Value|Description|  
+|ReplTest1|描述|  
 |-----------|-----------------|  
 |*ReadOnly*|您就無法將任何變更或更新套用至該資料庫。|  
 |*ReadWrite*|您可以將變更或更新套用至該資料庫。|  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>另請參閱
  [Attach 元素](../../../analysis-services/xmla/xml-elements-commands/attach-element.md)   
  [附加和卸離 Analysis Services 資料庫](../../../analysis-services/multidimensional-models/attach-and-detach-analysis-services-databases.md)   
  [移動 Analysis Services 資料庫](../../../analysis-services/multidimensional-models/move-an-analysis-services-database.md)   

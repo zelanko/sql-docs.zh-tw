@@ -1,31 +1,20 @@
 ---
 title: 彙總 (MDX) |Microsoft 文件
-ms.custom: ''
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.component: ''
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: language-reference
-f1_keywords:
-- AGGREGATE
-dev_langs:
-- kbMDX
-helpviewer_keywords:
-- Aggregate function
-ms.assetid: 9d5e0966-74d1-4cc8-b9f9-47e4dc65d165
-caps.latest.revision: 52
-author: Minewiskan
+ms.date: 05/30/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: mdx
+ms.topic: reference
 ms.author: owend
-manager: erikre
-ms.openlocfilehash: 2954ccb1ff3affbdd9471ec91629d31b80433faf
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: 31fc7fe749d8e14f0e18ea88128d984875cdaa31
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34578420"
 ---
 # <a name="aggregate-mdx"></a>Aggregate (MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -136,13 +125,13 @@ WHERE ([Geography].[State-Province].x,
 ## <a name="see-also"></a>另請參閱  
  [PeriodsToDate &#40;MDX&#41;](../mdx/periodstodate-mdx.md)   
  [子系&#40;MDX&#41;](../mdx/children-mdx.md)   
- [Hierarchize & #40;MDX & #41;](../mdx/hierarchize-mdx.md)   
- [計數 & #40;設定 & #41;& #40;MDX & #41;](../mdx/count-set-mdx.md)   
- [篩選 & #40;MDX & #41;](../mdx/filter-mdx.md)   
- [AddCalculatedMembers & #40;MDX & #41;](../mdx/addcalculatedmembers-mdx.md)   
- [DrilldownLevel & #40;MDX & #41;](../mdx/drilldownlevel-mdx.md)   
- [屬性 & #40;MDX & #41;](../mdx/properties-mdx.md)   
+ [Hierarchize &#40;MDX&#41;](../mdx/hierarchize-mdx.md)   
+ [計數&#40;設定&#41; &#40;MDX&#41;](../mdx/count-set-mdx.md)   
+ [篩選&#40;MDX&#41;](../mdx/filter-mdx.md)   
+ [AddCalculatedMembers &#40;MDX&#41;](../mdx/addcalculatedmembers-mdx.md)   
+ [DrilldownLevel &#40;MDX&#41;](../mdx/drilldownlevel-mdx.md)   
+ [屬性&#40;MDX&#41;](../mdx/properties-mdx.md)   
  [PrevMember &#40;MDX&#41;](../mdx/prevmember-mdx.md)   
- [MDX 函數參考 & #40;MDX & #41;](../mdx/mdx-function-reference-mdx.md)  
+ [MDX 函數參考&#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

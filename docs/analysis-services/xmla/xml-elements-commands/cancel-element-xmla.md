@@ -9,15 +9,16 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: e8c4f015d5a606d67cb4c6b5f0519875db58b416
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 7bc3cd9330261d0ec4e13a715612d73e6ecb44eb
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34574870"
 ---
 # <a name="cancel-element-xmla"></a>Cancel 元素 (XMLA)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
-  取消目前正在執行的命令[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]執行個體。  
+  取消目前執行中命令的 Analysis Services 執行個體。  
   
 ## <a name="syntax"></a>語法  
   
@@ -35,7 +36,7 @@ ms.lasthandoff: 05/10/2018
   
 ## <a name="element-characteristics"></a>元素特性  
   
-|特性|說明|  
+|特性|描述|  
 |--------------------|-----------------|  
 |資料類型和長度|無|  
 |預設值|無|  
@@ -57,8 +58,8 @@ ms.lasthandoff: 05/10/2018
   
  若要擷取目前的連接和工作階段的相關資訊[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]執行個體，**探索**方法來分別要求 DISCOVER_CONNECTIONS 和 DISCOVER_SESSIONS 結構描述資料列上執行。 針對給定資料庫擁有管理權限之角色的成員可以在 DISCOVER_SESSIONS 結構描述資料列集的 SESSION_CURRENT_DATABASE 限制資料行中指定該資料庫，以便僅針對給定資料庫傳回工作階段。 如需有關**探索**方法，請參閱[探索方法&#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-methods-discover.md)。  
   
-## <a name="see-also"></a>另請參閱  
- [批次元素 & #40;XMLA & #41;](../../../analysis-services/xmla/xml-elements-commands/batch-element-xmla.md)   
- [命令 & #40;XMLA & #41;](../../../analysis-services/xmla/xml-elements-commands/xml-elements-commands.md)  
+## <a name="see-also"></a>另請參閱
+ [批次項目&#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-commands/batch-element-xmla.md)   
+ [命令&#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-commands/xml-elements-commands.md)  
   
   

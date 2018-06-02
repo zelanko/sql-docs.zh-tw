@@ -1,33 +1,20 @@
 ---
 title: CREATE KPI 陳述式 (MDX) |Microsoft 文件
-ms.custom: ''
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.component: ''
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: language-reference
-f1_keywords:
-- CREATE KPI
-- KPI
-- CREATE_KPI
-- CREATE
-helpviewer_keywords:
-- CREATE KPI statement
-- key performance indicators [MDX]
-ms.assetid: 87618fef-95e5-4dd0-a650-aeb60ccbddcb
-caps.latest.revision: 18
-author: Minewiskan
+ms.date: 05/30/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: mdx
+ms.topic: reference
 ms.author: owend
-manager: erikre
-ms.openlocfilehash: de35f5ca3526440592d88db453e4406bc8feab40
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: 7c2322d30e4e42bebbe4537f687c349c5179d9f9
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34579320"
 ---
 # <a name="mdx-data-definition---create-kpi"></a>MDX 資料定義-建立 KPI
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -94,15 +81,15 @@ CREATE KPI CURRENTCUBE | <Cube Name>.KPI_Name AS KPI_Value
   
 |圖形的用法|KPI 圖形的名稱|狀態的數目|  
 |--------------------|-------------------------|----------------------|  
-|狀態|圖形|3|  
-|狀態|號誌燈|3|  
-|狀態|道路標誌|3|  
-|狀態|量測計|3|  
-|狀態|反向量測計|5|  
-|狀態|溫度計|3|  
-|狀態|圓柱|3|  
-|狀態|笑臉|3|  
-|狀態|變異箭頭|3|  
+|[狀態]|圖形|3|  
+|[狀態]|號誌燈|3|  
+|[狀態]|道路標誌|3|  
+|[狀態]|量測計|3|  
+|[狀態]|反向量測計|5|  
+|[狀態]|溫度計|3|  
+|[狀態]|圓柱|3|  
+|[狀態]|笑臉|3|  
+|[狀態]|變異箭頭|3|  
 |趨勢|標準箭頭|3|  
 |趨勢|狀態箭頭|3|  
 |趨勢|反向狀態箭頭|5|  

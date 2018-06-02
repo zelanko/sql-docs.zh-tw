@@ -9,11 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 977b27b7d02aeadcc6c514f457fe472537561353
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 07fa34b2e65f607b847d16ee1f2d828122902cf1
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34574000"
 ---
 # <a name="resultset-data-type-xmla"></a>Resultset 資料類型 (XMLA)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -33,7 +34,7 @@ ms.lasthandoff: 05/10/2018
   
 ## <a name="data-type-characteristics"></a>資料類型特性  
   
-|特性|說明|  
+|特性|描述|  
 |--------------------|-----------------|  
 |基底資料類型|無|  
 |衍生資料類型|[MDDataSet](../../../analysis-services/xmla/xml-data-types/mddataset-data-type-xmla.md)， [olapxmla_EmptyResult](../../../analysis-services/xmla/xml-data-types/emptyresult-data-type-xmla.md)，[資料列集](../../../analysis-services/xmla/xml-data-types/rowset-data-type-xmla.md)|  
@@ -49,7 +50,7 @@ ms.lasthandoff: 05/10/2018
 ## <a name="remarks"></a>備註  
  **Resultset**資料類型是結構描述和資料，取決於要傳回資訊的類型可以包含自我描述 XML 結果集。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>另請參閱
  [XML 資料型別&#40;XMLA&#41;](../../../analysis-services/xmla/xml-data-types/xml-data-types-xmla.md)  
   
   

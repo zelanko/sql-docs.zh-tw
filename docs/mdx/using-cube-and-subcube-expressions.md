@@ -1,33 +1,20 @@
 ---
 title: 使用 Cube 及 Subcube 運算式 |Microsoft 文件
-ms.custom: ''
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.component: ''
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: language-reference
-dev_langs:
-- kbMDX
-helpviewer_keywords:
-- subcubes [MDX]
-- cubes [Analysis Services], MDX
-- CURRENTCUBE keyword
-- expressions [MDX], subcubes
-- expressions [MDX], cubes
-ms.assetid: 95ae034d-8f88-4820-91c6-205ec424e119
-caps.latest.revision: 27
-author: Minewiskan
+ms.date: 05/30/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: mdx
+ms.topic: reference
 ms.author: owend
-manager: erikre
-ms.openlocfilehash: 6a315594676ee7439c1875675ffcd2ed95b6e03d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: 45ead923cd69361e49b3da43c52aa8941781afe3
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34582270"
 ---
 # <a name="using-cube-and-subcube-expressions"></a>使用 Cube 及 Subcube 運算式
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -83,10 +70,10 @@ ms.lasthandoff: 05/03/2018
  Subcube 識別碼會顯示為*Subcube_Name*。 的形式出現在 MDX 陳述式的標記法描述內。  
   
 ## <a name="see-also"></a>另請參閱  
- [基本 MDX 查詢 & #40;MDX & #41;](../analysis-services/multidimensional-models/mdx/mdx-query-the-basic-query.md)   
+ [基本 MDX 查詢&#40;MDX&#41;](../analysis-services/multidimensional-models/mdx/mdx-query-the-basic-query.md)   
  [建置在 MDX 中的 Subcube &#40;MDX&#41;](../analysis-services/multidimensional-models/mdx/building-subcubes-in-mdx-mdx.md)   
  [CREATE SUBCUBE 陳述式&#40;MDX&#41;](../mdx/mdx-data-definition-create-subcube.md)   
  [運算式&#40;MDX&#41;](../mdx/expressions-mdx.md)   
- [SCOPE 陳述式 & #40;MDX & #41;](../mdx/mdx-scripting-scope.md)  
+ [SCOPE 陳述式&#40;MDX&#41;](../mdx/mdx-scripting-scope.md)  
   
   
