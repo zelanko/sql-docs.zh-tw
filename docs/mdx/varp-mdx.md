@@ -1,31 +1,20 @@
 ---
 title: VarP (MDX) |Microsoft 文件
-ms.custom: ''
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.component: ''
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: language-reference
-f1_keywords:
-- VARP
-dev_langs:
-- kbMDX
-helpviewer_keywords:
-- VarP function [MDX]
-ms.assetid: feca648d-bbc8-44c8-9a0e-38f66d914c72
-caps.latest.revision: 30
-author: Minewiskan
+ms.date: 05/30/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: mdx
+ms.topic: reference
 ms.author: owend
-manager: erikre
-ms.openlocfilehash: f77997ec3b5492d63812fefb2051e847b899b0b9
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: ec2d624857bf3e7fc948188f3fd205d248290c08
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34582580"
 ---
 # <a name="varp-mdx"></a>VarP (MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -52,6 +41,6 @@ VarP(Set_Expression [ ,Numeric_Expression ] )
  **VarP**函數使用偏誤的母體公式，而[Var](../mdx/var-mdx.md)函式會使用非偏誤的母體公式。  
   
 ## <a name="see-also"></a>另請參閱  
- [MDX 函數參考 & #40;MDX & #41;](../mdx/mdx-function-reference-mdx.md)  
+ [MDX 函數參考&#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

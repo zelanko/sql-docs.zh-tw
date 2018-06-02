@@ -1,7 +1,7 @@
 ---
 title: sqlsrv_prepare |Microsoft 文件
 ms.custom: ''
-ms.date: 10/24/2017
+ms.date: 05/22/2018
 ms.prod: sql
 ms.prod_service: connectivity
 ms.component: php
@@ -22,11 +22,12 @@ caps.latest.revision: 52
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 18389f44470879eeda5f1dcc7a9891de7c3a9806
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d05dadf16e96589c2f16b7d31580cab61650b9e6
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34563916"
 ---
 # <a name="sqlsrvprepare"></a>sqlsrv_prepare
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -62,7 +63,7 @@ sqlsrv_prepare(resource $conn, string $tsql [, array $params [, array $options]]
   
     下表說明這些陣列元素：  
   
-    |元素|Description|  
+    |元素|描述|  
     |-----------|---------------|  
     |*&$value*|常值或 PHP 變數的參考。|  
     |*$direction*[選擇性]|下列其中一種**SQLSRV_PARAM_\*** 用來指出參數方向的常數： **SQLSRV_PARAM_IN**， **SQLSRV_PARAM_OUT**， **SQLSRV_PARAM_INOUT**。 預設值是**SQLSRV_PARAM_IN**。<br /><br />如需 PHP 常數的詳細資訊，請參閱[常數&#40;Microsoft Drivers for PHP for SQL Server&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md)。|  
@@ -71,7 +72,7 @@ sqlsrv_prepare(resource $conn, string $tsql [, array $params [, array $options]]
   
 *$options* [選用]: 設定查詢屬性的關聯陣列。 下表列出支援的索引鍵和對應的值：  
   
-|索引鍵|支援的值|Description|  
+|索引鍵|支援的值|描述|  
 |-------|--------------------|---------------|  
 |QueryTimeout|正整數值。|設定查詢逾時 (以秒為單位)。 根據預設，此驅動程式無限期地等候結果。|  
 |SendStreamParamsAtExec|**[True]** 或 **[False]**<br /><br />預設值為 **true**。|設定要傳送所有的資料流資料執行的驅動程式 (**true**)，或以區塊傳送資料流資料 (**false**)。 依預設，此值設定為 **true**。 如需詳細資訊，請參閱 [sqlsrv_send_stream_data](../../connect/php/sqlsrv-send-stream-data.md)。|  
@@ -222,7 +223,7 @@ sqlsrv_close($conn);
 ```  
   
 > [!NOTE]
-> 建議使用字串做為輸入，當繫結至值[十進位或數值資料行](https://docs.microsoft.com/en-us/sql/t-sql/data-types/decimal-and-numeric-transact-sql)為確保如 PHP 有限的有效位數的有效位數和精確度[浮點數](http://php.net/manual/en/language.types.float.php)。
+> 建議使用字串做為輸入，當繫結至值[十進位或數值資料行](https://docs.microsoft.com/en-us/sql/t-sql/data-types/decimal-and-numeric-transact-sql)為確保如 PHP 有限的有效位數的有效位數和精確度[浮點數](http://php.net/manual/en/language.types.float.php)。 同樣適用於 bigint 資料行，尤其是有效值的範圍外[整數](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md)。
 
 ## <a name="example"></a>範例  
 此程式碼範例示範如何將繫結十進位值做為輸入參數。  

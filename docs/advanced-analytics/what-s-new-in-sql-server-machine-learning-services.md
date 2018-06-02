@@ -7,11 +7,12 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 45cfb2f67cbd575913739b118e21626448b80866
-ms.sourcegitcommit: 1aedef909f91dc88dc741748f36eabce3a04b2b1
+ms.openlocfilehash: 092216f7bc1142125156b3658f035154d809c2e9
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34586070"
 ---
 # <a name="whats-new-in-sql-server-machine-learning-services"></a>新功能 SQL Server 機器學習服務 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -22,7 +23,7 @@ ms.lasthandoff: 05/08/2018
 
 此版本新增 Python 支援業界領先的機器學習演算法。 重新命名以反映新的範圍，SQL Server 2017 標示的簡介**SQL Server 機器學習服務 （資料庫）**，具有 Python 和 r 語言支援 
 
-此版也導入了**SQL Server 機器學習伺服器 （獨立）**完全獨立的 SQL Server R，並將 Python 您想要在專用的系統上執行的工作負載。 與獨立伺服器，您可以發佈並調整 R 或 Python 的解決方案，而不需要使用 SQL Server。
+此版也導入了**SQL Server 機器學習伺服器 （獨立）** 完全獨立的 SQL Server R，並將 Python 您想要在專用的系統上執行的工作負載。 與獨立伺服器，您可以發佈並調整 R 或 Python 的解決方案，而不需要使用 SQL Server。
 
 | 版本 | 功能更新 |
 |---------|----------------|
@@ -35,7 +36,7 @@ ms.lasthandoff: 05/08/2018
 | 最初發行 |[**Python 資料庫內分析整合**](https://blogs.technet.microsoft.com/dataplatforminsider/2017/04/19/python-in-sql-server-2017-enhanced-in-database-machine-learning/) <br/><br/>[Revoscalepy](python/what-is-revoscalepy.md)封裝是 RevoScaleR Python 等同於。 您可以建立線性和羅吉斯迴歸、 決策樹，促進式樹狀結構，以及隨機樹系中，所有可並行，並且可以在遠端計算內容中執行 Python 模型。 此套件支援使用多個資料來源和遠端計算內容。 資料科學家或開發人員可以執行遠端 SQL Server 上，瀏覽資料或建立模型，而不移動資料的 Python 程式碼。 <br/><br/>[Microsoftml](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/microsoftml-package)封裝是 MicrosoftML R 封裝的 Python 對等。<br/><br/>透過 T-SQL 和 Python 整合[sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql)。 您可以呼叫任何使用此預存程序的 Python 程式碼。 這個安全的基礎結構可讓企業級的 Python 模型和可從使用簡單的預存程序的應用程式呼叫的指令碼的部署。 額外的效能提升可達到資料流資料從 SQL Python 程序及 MPI 環形平行化作業。 <br/><br/>您可以使用 T-SQL[預測](../t-sql/queries/predict-transact-sql.md)函式來執行[原生計分](sql-native-scoring.md)上預先定型的模型之前已儲存過所需的二進位格式。|
 | 最初發行 | [**MicrosoftML (R)** ](using-the-microsoftml-package.md)包含的圖案狀態機器學習演算法和資料轉換可以縮放或執行中的遠端計算內容。 演算法包括可自訂的深度類神經網路、 快速的決策樹和決策樹、 線性迴歸和羅吉斯迴歸。 |
 | 最初發行 | [**預先定型的模型**](r/install-pretrained-models-sql-server.md)影像辨識和正負數情緒分析。 您可以使用這些模型來產生您自己的資料上的預測。 |
-| 最初發行 | [**封裝管理**](r/r-package-management-for-sql-server-r-services.md)，包括下列重點： 資料庫角色來協助管理封裝並指派權限才能安裝封裝，DBA[建立外部程式庫](https://docs.microsoft.com/sql/t-sql/statements/create-external-library-transact-sql)中 T-SQL 陳述式說明 Dba 管理封裝，而不需要知道 R，和一組豐富的 R 函數中[RevoScaleR](r/use-revoscaler-to-manage-r-packages.md)協助安裝、 移除或列出封裝，使用者所擁有。 |
+| 最初發行 | [**R 封裝管理**](r/install-additional-r-packages-on-sql-server.md)，包括下列重點： 資料庫角色來協助管理封裝並指派權限才能安裝封裝，DBA[建立外部程式庫](https://docs.microsoft.com/sql/t-sql/statements/create-external-library-transact-sql)中 T-SQL 陳述式說明 Dba 管理封裝，而不需要知道 R，和一組豐富的 R 函數中[RevoScaleR](r/use-revoscaler-to-manage-r-packages.md)協助安裝、 移除或列出封裝，使用者所擁有。 |
 | 最初發行 | [**透過 mrsdeploy 實施**](https://docs.microsoft.com/machine-learning-server/r-reference/mrsdeploy/mrsdeploy-package)用於部署和裝載為 web 服務的 R 指令碼。 適用於 R 指令碼只 （沒有 Python 對等）。 適用於 [（獨立） 伺服器] 選項，以避免與其他 SQL Server 作業的資源競爭。 |
 
 
@@ -43,7 +44,7 @@ ms.lasthandoff: 05/08/2018
 
 學習功能到 SQL Server 透過此版導入了機器**SQL Server 2016 R Services**，資料庫中分析引擎常駐的資料庫引擎執行個體資料處理 R 指令碼。
 
-此外， **SQL Server 2016 R 伺服器 （獨立）**做為 Windows server 上安裝 R Server 的方式發行。 一開始，SQL Server 安裝程式會提供安裝 R Server for Windows 的唯一方式。 在更新版本中，開發人員和想要在 Windows 上的 R 伺服器的資料科學家可以使用另一個獨立安裝程式來達到相同的目標。 SQL Server 中的獨立伺服器功能上相當於獨立的伺服器產品[Microsoft R Server for Windows](https://docs.microsoft.com/machine-learning-server/install/r-server-install-windows)。
+此外， **SQL Server 2016 R 伺服器 （獨立）** 做為 Windows server 上安裝 R Server 的方式發行。 一開始，SQL Server 安裝程式會提供安裝 R Server for Windows 的唯一方式。 在更新版本中，開發人員和想要在 Windows 上的 R 伺服器的資料科學家可以使用另一個獨立安裝程式來達到相同的目標。 SQL Server 中的獨立伺服器功能上相當於獨立的伺服器產品[Microsoft R Server for Windows](https://docs.microsoft.com/machine-learning-server/install/r-server-install-windows)。
 
 | 版本 |功能更新 |
 |---------|----------------|

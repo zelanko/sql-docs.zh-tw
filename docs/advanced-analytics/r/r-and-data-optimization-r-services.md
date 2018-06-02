@@ -7,11 +7,12 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 98605a5eb5291444e0bd46d64bd3b84ab7c1b008
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 5a30ff30651bacde42c60a1e0b265105e3c932e3
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34563756"
 ---
 # <a name="performance-for-r-services---data-optimization"></a>R Services-資料最佳化的效能
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -30,7 +31,7 @@ ms.lasthandoff: 04/16/2018
 
 ## <a name="factors"></a>因素
 
-R 語言有"因素 」，也就是特殊的變數的分類資料的概念。 資料科學家通常使用其公式中的因數變數，因為處理當做因素類別變數時，可確保資料正確地處理由機器學習服務函式。 如需詳細資訊，請參閱 [傻瓜 R： 因數變數] (http://www.dummies.com/programming/r/how-to-look-at-the-structure-of-a-factor-in-r/)。
+R 語言有"因素 」，也就是特殊的變數的分類資料的概念。 資料科學家通常使用其公式中的因數變數，因為處理當做因素類別變數時，可確保資料正確地處理由機器學習服務函式。 如需詳細資訊，請參閱[傻瓜 R： 因數變數](http://www.dummies.com/programming/r/how-to-look-at-the-structure-of-a-factor-in-r/)。
 
 根據設計，因數變數可以從轉換字串至整數一次的存放裝置或處理。 R`data.frame`函式會處理所有字串做為因數變數，除非引數*stringsAsFactors*設**False**。 這表示字串會自動轉換成整數進行處理，並且接著對應回原始的字串。
 

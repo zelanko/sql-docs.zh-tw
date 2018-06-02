@@ -7,11 +7,12 @@ ms.topic: overview
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: d52196007b5a1de4753e9846e4057295113baa7b
-ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.openlocfilehash: ecd58ee9670724a2732ce8aabc5d9f2c62042995
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34585450"
 ---
 # <a name="what-is-sql-server-machine-learning-services"></a>什麼是 SQL Server 機器學習服務？
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -31,7 +32,7 @@ SQL Server 機器學習服務是內嵌、 預測分析和資料科學引擎，�
 
 因為專屬的封裝會建立開放原始碼 R，並將 Python 發佈，指令碼或您在 SQL Server 中執行的程式碼可以同時也呼叫基底函式，並使用與 SQL Server 中提供的語言版本相容的第三方封裝 (Python 3.5 和最新版本的 R，目前 3.3.3）。
 
-| R  | Python | Description |
+| R  | Python | 描述 |
 |-----------|----------------|-------------|
 | [RevoScaleR](r/revoscaler-overview.md) | [revoscalepy](python/what-is-revoscalepy.md)   | 這些程式庫中的函式是最常使用。 這些程式庫中找到資料轉換和操作、 統計摘要、 視覺化和模型化和分析的許多種。 此外，這些程式庫中的函式自動工作負載分散到可用的核心進行平行處理，在協調，並計算引擎所管理的資料區塊上運作的能力。 |
 | [MicrosoftML](using-the-microsoftml-package.md) | [microsoftml](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/microsoftml-package) | 領先業界的機器學習演算法的映像功能，其潛在、 分類問題，以及更多。 |
@@ -101,4 +102,4 @@ SQL Server 文件的最新版本與版本無關。 SQL Server 機器學習服務
 
 **步驟 3:** 加入您最愛的 R，並將 Python 封裝，並使用它們，以及 Microsoft 所提供的封裝
 
-+ [SQL Server 的 R 封裝管理](r/r-package-management-for-sql-server-r-services.md)
++ [SQL Server 的 R 封裝管理](r/install-additional-r-packages-on-sql-server.md)

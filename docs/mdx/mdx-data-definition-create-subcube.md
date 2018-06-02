@@ -1,35 +1,20 @@
 ---
 title: CREATE SUBCUBE 陳述式 (MDX) |Microsoft 文件
-ms.custom: ''
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.component: ''
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: language-reference
-f1_keywords:
-- CREATE_SUBCUBE
-- CREATE SUBCUBE
-- CREATE
-- SUBCUBE
-dev_langs:
-- kbMDX
-helpviewer_keywords:
-- subcubes [MDX]
-- CREATE SUBCUBE statement
-ms.assetid: 15b6ac4c-b68a-4f9f-b33c-f5f7c4a74535
-caps.latest.revision: 32
-author: Minewiskan
+ms.date: 05/30/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: mdx
+ms.topic: reference
 ms.author: owend
-manager: erikre
-ms.openlocfilehash: 364bf7fe910e5073130bef1a75d88bfa560dd9f9
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: 730d6f3b1445017cc1b1988c49bda176c6ba4ced
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34580740"
 ---
 # <a name="mdx-data-definition---create-subcube"></a>MDX 資料定義-建立 SUBCUBE
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -144,9 +129,9 @@ SELECT [Geography].[Country].[Country].MEMBERS ON 0
  [All Products] 和 [All Resellers] 的資料行與資料列個別包含所有成員的總計，而不只是可見成員的總計。  
   
 ## <a name="see-also"></a>另請參閱  
- [MDX & #40; 中的重要概念Analysis Services & #41;](../analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services.md)   
+ [重要概念，在 MDX 中的&#40;Analysis Services&#41;](../analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services.md)   
  [MDX 指令碼陳述式&#40;MDX&#41;](../mdx/mdx-scripting-statements-mdx.md)   
  [DROP SUBCUBE 陳述式&#40;MDX&#41;](../mdx/mdx-data-definition-drop-subcube.md)   
- [SELECT 陳述式 & #40;MDX & #41;](../mdx/mdx-data-manipulation-select.md)  
+ [SELECT 陳述式&#40;MDX&#41;](../mdx/mdx-data-manipulation-select.md)  
   
   

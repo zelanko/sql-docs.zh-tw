@@ -9,11 +9,12 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 3230f170348f5952148894bd1fdb1ecc36a790bc
-ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
+ms.openlocfilehash: 8980259b69dfa74c2bb27c9406553a5b5810348a
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34585670"
 ---
 # <a name="monitor-loads-into-parallel-data-warehouse"></a>監視載入 Parallel Data Warehouse
 監視使用中和最近[dwloader](dwloader.md)藉由使用 Analytics Platform System (APS) 管理主控台或 Parallel Data Warehouse (PDW) 載入[系統檢視表](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-reference-tsql-system-views/)。 
@@ -25,7 +26,7 @@ ms.lasthandoff: 04/19/2018
 To monitor this type of load, see [Monitoring Active Queries](monitor-active-queries.md).  
 -->
   
-## <a name="prerequisites"></a>필수 구성 요소  
+## <a name="prerequisites"></a>必要條件  
 不論用來監視負載的方法，登入必須擁有存取基礎資料來源的權限。 
 
 <!-- MISSING LINKS
@@ -48,7 +49,7 @@ For the permissions to grant, see “Use All of the Admin Console” in [Grant P
   
 -   [sys.dm_pdw_exec_requests](../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-requests-transact-sql.md)  
   
--   [sys.pdw_loader_run_stages](https://msdn.microsoft.com/library/mt203879.aspx.md)  
+-   [sys.pdw_loader_run_stages](https://msdn.microsoft.com/library/mt203879.aspx)  
   
 -   [sys.pdw_loader_backup_runs](../relational-databases/system-catalog-views/sys-pdw-loader-backup-runs-transact-sql.md)  
   

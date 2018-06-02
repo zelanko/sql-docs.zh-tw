@@ -1,7 +1,7 @@
 ---
 title: 'Pdostatement:: Bindparam |Microsoft 文件'
 ms.custom: ''
-ms.date: 04/11/2017
+ms.date: 05/22/2018
 ms.prod: sql
 ms.prod_service: connectivity
 ms.component: php
@@ -15,11 +15,12 @@ caps.latest.revision: 17
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 082af7aa2e6bcac8c44af1660c4a797515938aef
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 476030f5a5f08b2226036b5214ebc973a8a04b3a
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34563936"
 ---
 # <a name="pdostatementbindparam"></a>PDOStatement::bindParam
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -125,7 +126,7 @@ echo $input1;
 ```  
 
 > [!NOTE]
-> 建議使用字串做為輸入，當繫結至值[十進位或數值資料行](../../t-sql/data-types/decimal-and-numeric-transact-sql.md)為確保如 PHP 有限的有效位數的有效位數和精確度[浮點數](http://php.net/manual/en/language.types.float.php)。
+> 建議使用字串做為輸入，當繫結至值[十進位或數值資料行](../../t-sql/data-types/decimal-and-numeric-transact-sql.md)為確保如 PHP 有限的有效位數的有效位數和精確度[浮點數](http://php.net/manual/en/language.types.float.php)。 同樣適用於 bigint 資料行，尤其是有效值的範圍外[整數](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md)。
 
 ## <a name="example"></a>範例  
 此程式碼範例示範如何將繫結十進位值做為輸入參數。  

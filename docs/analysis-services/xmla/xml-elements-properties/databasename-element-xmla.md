@@ -9,15 +9,16 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 9cbf32fcc67c7a9e08d45d6099bf58bf521be6e2
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: adc35002f6d5f7cb129131529359e667fb53fdb3
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34573610"
 ---
 # <a name="databasename-element-xmla"></a>DatabaseName 元素 (XMLA)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
-  識別[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]父系所要還原的資料庫[還原](../../../analysis-services/xmla/xml-elements-commands/restore-element-xmla.md)命令。  
+  識別要還原父代的 Analysis Services 資料庫[還原](../../../analysis-services/xmla/xml-elements-commands/restore-element-xmla.md)命令。  
   
 ## <a name="syntax"></a>語法  
   
@@ -32,9 +33,9 @@ ms.lasthandoff: 05/10/2018
   
 ## <a name="element-characteristics"></a>元素特性  
   
-|特性|說明|  
+|特性|描述|  
 |--------------------|-----------------|  
-|資料類型和長度|字串|  
+|資料類型和長度|String|  
 |預設值|無|  
 |基數|0-1：只能出現一次的選擇性元素。|  
   
@@ -50,8 +51,8 @@ ms.lasthandoff: 05/10/2018
   
  如果資料庫已經存在目標執行個體上，除非發生錯誤**AllowOverwrite**父項目**還原**命令設定為**True**。  
   
-## <a name="see-also"></a>另請參閱  
- [AllowOverwrite 元素 & #40;XMLA & #41;](../../../analysis-services/xmla/xml-elements-properties/allowoverwrite-element-xmla.md)   
- [屬性 & #40;XMLA & #41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
+## <a name="see-also"></a>另請參閱
+ [AllowOverwrite 元素&#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/allowoverwrite-element-xmla.md)   
+ [屬性&#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
   
   

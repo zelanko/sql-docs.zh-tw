@@ -1,7 +1,7 @@
 ---
 title: 'Pdostatement:: Execute |Microsoft 文件'
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 05/22/2018
 ms.prod: sql
 ms.prod_service: connectivity
 ms.component: php
@@ -15,11 +15,12 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 764bc5639876b2f0392174dd0f893ea28356b05d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: dabdabb4b3a4d20884004909dfaab0272f2e9c43
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34563866"
 ---
 # <a name="pdostatementexecute"></a>PDOStatement::execute
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -76,6 +77,9 @@ while ( $row = $stmt->fetch( PDO::FETCH_ASSOC ) ){
 ?>  
 ```  
   
+> [!NOTE]
+> 建議使用字串做為輸入，當繫結至值[十進位或數值資料行](../../t-sql/data-types/decimal-and-numeric-transact-sql.md)為確保如 PHP 有限的有效位數的有效位數和精確度[浮點數](http://php.net/manual/en/language.types.float.php)。 同樣適用於 bigint 資料行，尤其是有效值的範圍外[整數](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md)。
+
 ## <a name="see-also"></a>另請參閱  
 [PDOStatement 類別](../../connect/php/pdostatement-class.md)
 

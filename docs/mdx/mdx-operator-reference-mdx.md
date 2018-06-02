@@ -1,31 +1,20 @@
 ---
 title: MDX 運算子參考 (MDX) |Microsoft 文件
-ms.custom: ''
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.component: ''
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: language-reference
-dev_langs:
-- kbMDX
-helpviewer_keywords:
-- Multidimensional Expressions [Analysis Services], operators
-- operators [MDX]
-- MDX [Analysis Services], operators
-ms.assetid: 1cdb8c31-a5f6-4430-b509-f81344f4622a
-caps.latest.revision: 34
-author: Minewiskan
+ms.date: 05/30/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: mdx
+ms.topic: reference
 ms.author: owend
-manager: erikre
-ms.openlocfilehash: 05351149c5c4b7e5b639a1d3c6cb16e9894f181e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: 0b0750732af43f1d19922b0259b35d472be57b47
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34580600"
 ---
 # <a name="mdx-operator-reference-mdx"></a>MDX 運算子參考 (MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -34,9 +23,9 @@ ms.lasthandoff: 05/03/2018
   
 ## <a name="in-this-section"></a>本節內容  
   
-|主題|Description|  
+|主題|描述|  
 |-----------|-----------------|  
-|[-& #40;註解 & #41;& #40;MDX & #41;](../mdx/comment-mdx-operator-reference.md)|指出使用者提供的註解文字。|  
+|[-&#40;註解&#41; &#40;MDX&#41;](../mdx/comment-mdx-operator-reference.md)|指出使用者提供的註解文字。|  
 |[-&#40;除了&#41; &#40;MDX&#41;](../mdx/except-mdx-operator.md)|執行集合運算，傳回兩個集合間的差異、移除重複的成員。|  
 |[-&#40;負數&#41; &#40;MDX&#41;](../mdx/negative-mdx.md)|執行一元運算，這項運算會傳回數值運算式的負值。|  
 |[-&#40;減去&#41; &#40;MDX&#41;](../mdx/subtract-mdx.md)|執行算術運算，將一個數字從另一個數字減去。|  
@@ -44,8 +33,8 @@ ms.lasthandoff: 05/03/2018
 |[&#42;&#40;乘&#41; &#40;MDX&#41;](../mdx/multiply-mdx.md)|執行兩個數目相乘的算術運算。|  
 |[&#40;分割&#41; &#40;MDX&#41;](../mdx/divide-mdx-operator-reference.md)|執行算術運算，將一個數字除以另一個數字。|  
 |[^&#40;電源&#41; &#40;MDX&#41;](../mdx/power-mdx.md)|執行算術運算，將一個數字乘至另一個數字的乘冪。|  
-|[註解 & #40;MDX & #41;](../mdx/comment-mdx.md)|指出使用者提供的註解文字。|  
-|[& #40;註解 & #41;& #40;MDX & #41;](../mdx/comment-mdx-double-slash.md)|指出使用者提供的文字。|  
+|[註解&#40;MDX&#41;](../mdx/comment-mdx.md)|指出使用者提供的註解文字。|  
+|[&#40;註解&#41; &#40;MDX&#41;](../mdx/comment-mdx-double-slash.md)|指出使用者提供的文字。|  
 |[:&#40;範圍&#41; &#40;MDX&#41;](../mdx/range-mdx.md)|執行傳回一個自然順序集合的集合運算，其中會以兩個指定成員做為結束點，並將介於這兩個指定成員之間的所有成員當做集合的成員。|  
 |[+&#40;新增&#41; &#40;MDX&#41;](../mdx/add-mdx.md)|執行兩個數目相加的算術運算。|  
 |[+&#40;正數&#41; &#40;MDX&#41;](../mdx/positive-mdx.md)|執行一元運算，這項運算會傳回數值運算式的正值。|  
@@ -64,6 +53,6 @@ ms.lasthandoff: 05/03/2018
 |[XOR &AMP;#40;MDX&AMP;#41;](../mdx/xor-mdx.md)|在兩個數值運算式上執行邏輯排除。|  
   
 ## <a name="see-also"></a>另請參閱  
- [MDX 語言參考 & #40;MDX & #41;](../mdx/mdx-language-reference-mdx.md)  
+ [MDX 語言參考&#40;MDX&#41;](../mdx/mdx-language-reference-mdx.md)  
   
   

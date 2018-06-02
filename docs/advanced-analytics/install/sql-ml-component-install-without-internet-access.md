@@ -7,11 +7,12 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: a0ec6834bf3aee8a7f8176bc5fd6d6d66d367b62
-ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.openlocfilehash: 289f304cf445882981fb110e9c00a395cac90e5f
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34585610"
 ---
 # <a name="install-sql-server-machine-learning-components-without-internet-access"></a>安裝 SQL Server 機器學習服務沒有網際網路存取的元件
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -23,7 +24,7 @@ ms.lasthandoff: 05/03/2018
 [!INCLUDE[GetInstallationMedia](../../includes/getssmedia.md)]
 
 > [!NOTE]  
-> 如果是本機安裝，您必須以管理員身分執行安裝程式。 如果您是從遠端共用位置安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，則必須使用對遠端共用位置具有讀取和執行權限的網域帳戶。  
+> 如果是本機安裝，您必須以管理員身分執行安裝程式。 如果您是從遠端共用位置安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，則必須使用對遠端共用位置具有讀取和執行權限的網域帳戶。  
  
  ###  <a name="bkmk_ga_instalpatch"></a> 安裝修補程式需求 
 
@@ -71,6 +72,12 @@ Microsoft R Open     |不是變更，使用上一個|
 Microsoft R Server      |[SRS_9.2.0.600_1033.cab](https://go.microsoft.com/fwlink/?LinkId=871074&clcid=1033)|
 開啟 Microsoft Python     |不是變更，使用上一個|
 Microsoft Python 伺服器    |[SPS_9.2.0.600_1033.cab](https://go.microsoft.com/fwlink/?LinkId=871073&clcid=1033)|
+**SQL Server 2017 CU7** |
+Microsoft R Open     |不是變更，使用上一個|
+Microsoft R Server      |o 變更;使用上一個|
+開啟 Microsoft Python     |不是變更，使用上一個|
+Microsoft Python 伺服器    |不是變更，使用上一個|
+
 
 ### <a name="bkmk_2016Installers"></a>下載適用於 SQL Server 2016
 

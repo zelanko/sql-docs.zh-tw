@@ -1,31 +1,20 @@
 ---
 title: 下階 (MDX) |Microsoft 文件
-ms.custom: ''
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.component: ''
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: language-reference
-f1_keywords:
-- DESCENDANTS
-dev_langs:
-- kbMDX
-helpviewer_keywords:
-- Descendants function
-ms.assetid: d103b0f5-e794-4828-aa57-43f6918a0749
-caps.latest.revision: 38
-author: Minewiskan
+ms.date: 05/30/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: mdx
+ms.topic: reference
 ms.author: owend
-manager: erikre
-ms.openlocfilehash: f5f38c620972906ec17820ffa1bb4a7c865dba16
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: 047c9e0edc8120003cdd8a38953e33e779ab0994
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34580410"
 ---
 # <a name="descendants-mdx"></a>Descendants (MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -103,7 +92,7 @@ Descendants(Set_Expression [ , Distance [ ,Desc_Flag ] ] )
   
  無論指定的層級或距離為何，您都可以藉由變更描述旗標的值，包含或排除已指定之層級或距離的下階、已指定之層級或距離前後 (直到分葉節點) 的子系，以及所有分葉子系。 下表描述中允許的旗標*Desc_Flag*引數。  
   
-|旗標|Description|  
+|旗標|描述|  
 |----------|-----------------|  
 |SELF|只傳回指定層級或指定距離的下階成員。 如果指定的層級是指定成員的層級，此函數會包含指定成員。|  
 |AFTER|傳回從屬於指定層級或距離之所有層級的下階成員。|  
@@ -174,6 +163,6 @@ FROM [Adventure Works]
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [MDX 函數參考 & #40;MDX & #41;](../mdx/mdx-function-reference-mdx.md)  
+ [MDX 函數參考&#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

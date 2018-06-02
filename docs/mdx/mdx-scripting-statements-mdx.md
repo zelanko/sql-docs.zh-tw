@@ -1,31 +1,20 @@
 ---
 title: MDX 指令碼陳述式 (MDX) |Microsoft 文件
-ms.custom: ''
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.component: ''
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: language-reference
-dev_langs:
-- kbMDX
-helpviewer_keywords:
-- MDX [Analysis Services], scripts
-- scripts [MDX], statements
-- Multidimensional Expressions [Analysis Services], scripts
-ms.assetid: a4e5f377-6f06-4888-9663-91105b205ac1
-caps.latest.revision: 31
-author: Minewiskan
+ms.date: 05/30/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: mdx
+ms.topic: reference
 ms.author: owend
-manager: erikre
-ms.openlocfilehash: f454dea8118640c76762fb32a4fb1c67909bb484
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: b5783382ecc7b65c8019b27332900e47bf938a3a
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34580150"
 ---
 # <a name="mdx-scripting-statements-mdx"></a>MDX 指令碼陳述式 (MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -34,19 +23,19 @@ ms.lasthandoff: 05/03/2018
   
 ## <a name="in-this-section"></a>本節內容  
   
-|主題|Description|  
+|主題|描述|  
 |-----------|-----------------|  
-|[計算陳述式 & #40;MDX & #41;](../mdx/mdx-scripting-calculate.md)|計算 Subcube，選擇性地決定 Subcube 內所含維度的解決順序。|  
-|[CASE 陳述式 & #40;MDX & #41;](../mdx/case-statement-mdx.md)|讓您根據條件傳回多個比較的特定值。|  
-|[EXISTING 關鍵字 & #40;MDX & #41;](../analysis-services/multidimensional-models/mdx/mdx-query-existing-keyword.md)|強制在目前內容內評估指定的集合。|  
-|[FREEZE 陳述式 & #40;MDX & #41;](../mdx/mdx-scripting-freeze.md)|將指定的 Subcube 資料格的值鎖定為它們目前的值。|  
-|[如果陳述式 & #40;MDX & #41;](../mdx/mdx-scripting-if.md)|條件為 True 時執行陳述式。|  
-|[SCOPE 陳述式 & #40;MDX & #41;](../mdx/mdx-scripting-scope.md)|將指定的 MDX 陳述式的範圍限制為指定的 Subcube。|  
+|[CALCULATE 陳述式&#40;MDX&#41;](../mdx/mdx-scripting-calculate.md)|計算 Subcube，選擇性地決定 Subcube 內所含維度的解決順序。|  
+|[CASE 陳述式&#40;MDX&#41;](../mdx/case-statement-mdx.md)|讓您根據條件傳回多個比較的特定值。|  
+|[EXISTING 關鍵字&#40;MDX&#41;](../analysis-services/multidimensional-models/mdx/mdx-query-existing-keyword.md)|強制在目前內容內評估指定的集合。|  
+|[FREEZE 陳述式&#40;MDX&#41;](../mdx/mdx-scripting-freeze.md)|將指定的 Subcube 資料格的值鎖定為它們目前的值。|  
+|[如果陳述式&#40;MDX&#41;](../mdx/mdx-scripting-if.md)|條件為 True 時執行陳述式。|  
+|[SCOPE 陳述式&#40;MDX&#41;](../mdx/mdx-scripting-scope.md)|將指定的 MDX 陳述式的範圍限制為指定的 Subcube。|  
   
 ## <a name="see-also"></a>另請參閱  
  [MDX 陳述式參考&#40;MDX&#41;](../mdx/mdx-statement-reference-mdx.md)   
  [MDX 資料定義陳述式&#40;MDX&#41;](../mdx/mdx-data-definition-statements-mdx.md)   
  [MDX 資料操作陳述式&#40;MDX&#41;](../mdx/mdx-data-manipulation-statements-mdx.md)   
- [MDX 指令碼基礎觀念 & #40;Analysis Services & #41;](../analysis-services/multidimensional-models/mdx/mdx-scripting-fundamentals-analysis-services.md)  
+ [MDX 指令碼基礎觀念&#40;Analysis Services&#41;](../analysis-services/multidimensional-models/mdx/mdx-scripting-fundamentals-analysis-services.md)  
   
   

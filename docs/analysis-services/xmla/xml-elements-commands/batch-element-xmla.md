@@ -9,15 +9,16 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 5ce937518c243e5c9fa391892073cb324c8bc04f
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 4644b8775212eae0cb6d912df9bc415c5fc96ec7
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34573940"
 ---
 # <a name="batch-element-xmla"></a>Batch 元素 (XMLA)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
-  執行一或多個 XML for Analysis (XMLA) 命令，以批次作業，循序或平行的執行個體上[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]。  
+  執行一或多個 XML for Analysis (XMLA) 命令批次作業，循序或平行方式，在 Analysis Services 的執行個體上。  
   
 ## <a name="syntax"></a>語法  
   
@@ -37,7 +38,7 @@ ms.lasthandoff: 05/10/2018
   
 ## <a name="element-characteristics"></a>元素特性  
   
-|特性|說明|  
+|特性|描述|  
 |--------------------|-----------------|  
 |資料類型和長度|無|  
 |預設值|無|  
@@ -52,7 +53,7 @@ ms.lasthandoff: 05/10/2018
   
 ## <a name="attributes"></a>屬性  
   
-|Attribute|Description|  
+|attribute|描述|  
 |---------------|-----------------|  
 |ProcessAffectedObjects|(選擇性**布林**屬性) 指出是否將處理需要重新處理的所有物件。<br /><br /> 如果設為 true，[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]執行個體來處理任何物件，而需要重新處理物件中包含的結果。**批次**命令。<br /><br /> 如果設定為**false**、[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]中包含的物件執行個體來處理**批次**命令。|  
 |Transaction|(選擇性**布林**屬性) 指出命令是否包含在**批次**命令會被視為單一交易或個別交易。<br /><br /> 如果設定為 true 的所有命令中包含**批次**命令會被視為單一交易。 如果任何命令失敗，失敗的命令之前執行的命令會回復，而**批次**命令會停止且不執行後續的命令。<br /><br /> 如果設定為**false**、**批次**命令嘗試執行每一個命令，並認可成功完成每個命令的結果。|  
@@ -64,7 +65,7 @@ ms.lasthandoff: 05/10/2018
   
  如需有關以 XMLA 執行批次作業的詳細資訊，請參閱[執行批次作業&#40;XMLA&#41;](../../../analysis-services/multidimensional-models-scripting-language-assl-xmla/performing-batch-operations-xmla.md)。  
   
-## <a name="see-also"></a>另請參閱  
- [命令 & #40;XMLA & #41;](../../../analysis-services/xmla/xml-elements-commands/xml-elements-commands.md)  
+## <a name="see-also"></a>另請參閱
+ [命令&#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-commands/xml-elements-commands.md)  
   
   

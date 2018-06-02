@@ -1,32 +1,20 @@
 ---
 title: 運算子 （MDX 語法） |Microsoft 文件
-ms.custom: ''
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.component: ''
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: language-reference
-dev_langs:
-- kbMDX
-helpviewer_keywords:
-- Multidimensional Expressions [Analysis Services], operators
-- operators [MDX]
-- precedence [MDX]
-- MDX [Analysis Services], operators
-ms.assetid: 1ff5a529-88fd-4619-86e1-19fa214650d6
-caps.latest.revision: 29
-author: Minewiskan
+ms.date: 05/30/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: mdx
+ms.topic: reference
 ms.author: owend
-manager: erikre
-ms.openlocfilehash: 00f1b46fbb0087f41b4472f08c9861631fef7c1b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: 309311bfcef0ada531e391e99091a788715c8e2d
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34580660"
 ---
 # <a name="operators-mdx-syntax"></a>運算子 (MDX 語法)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -70,7 +58,7 @@ ms.lasthandoff: 05/03/2018
   
 -   DISTINCT  
   
--   :  
+-   所解碼的字元：  
   
 -   ^  
   
@@ -88,7 +76,7 @@ ms.lasthandoff: 05/03/2018
   
 -   XOR  
   
--   OR  
+-   或  
   
  如需 MDX 運算子的詳細資訊，請參閱[MDX 運算子參考&#40;MDX&#41;](../mdx/mdx-operator-reference-mdx.md)。  
   
@@ -104,7 +92,7 @@ ms.lasthandoff: 05/03/2018
   
 |原始類型|所需類型|轉換|  
 |-------------------|-----------------|----------------|  
-|Level|將|\<層級 >.members|  
+|層級|將|\<層級 >.members|  
 |階層|成員|\<階層 >.defaultmember|  
 |成員|Tuple|(\<成員 >)|  
 |Tuple|成員|\<tuple >.item(0)|  

@@ -7,11 +7,12 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 24ef28cd5bfb8e09e3f0ac7dbfe46b5838ce029c
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 559309a29944f20f8c006ccc92769f0b2824e3b3
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34585960"
 ---
 # <a name="sql-server-machine-learning-and-r-services-in-database"></a>SQL Server 機器學習和 R 服務 （資料庫）
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -34,7 +35,7 @@ ms.lasthandoff: 04/16/2018
 
 SQL Server 2016 只是 R。 SQL Server 2017 支援 R 和 Python。 下表描述每個版本的功能。 除了 SQL Server Launchpad 服務，此資料表是與所提供的相同[獨立 server 文章](r-server-standalone.md)。
 
-| 元件 | Description |
+| 元件 | 描述 |
 |-----------|-------------|
 | SQL Server Launchpad 服務 | 管理外部 R，並將 Python 執行階段之間通訊的服務和[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體。 |
 | R 封裝 | [RevoScaleR](revoscaler-overview.md)搭配資料操作、 轉換、 visualzation，和分析的函式的可延展為主要媒體櫃。  <br/>[MicrosoftML (R)](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/microsoftml-package)新增機器學習演算法，來建立自訂文字分析、 影像分析和情緒分析模型。 <br/>[mrsdeploy](operationalization-with-mrsdeploy.md)提供 web 服務部署 （在 SQL Server 2017 只)。 <br/>[olapR](how-to-create-mdx-queries-using-olapr.md)適用於在 r 中指定的 MDX 查詢|
@@ -124,7 +125,7 @@ SQL Server 2016 只是 R。 SQL Server 2017 支援 R 和 Python。 下表描述�
 **資源**
 
 + [資源管理針對 R](resource-governance-for-r-services.md)
-+ [SQL Server 的 R 封裝管理](r-package-management-for-sql-server-r-services.md)
++ [SQL Server 的 R 封裝管理](install-additional-r-packages-on-sql-server.md)
 
 ## <a name="see-also"></a>另請參閱
 

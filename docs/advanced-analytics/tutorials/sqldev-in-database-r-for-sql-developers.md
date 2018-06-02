@@ -7,11 +7,12 @@ ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 21bc5d6af2ad34a23bb56a589f7bcbacb6034ff3
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: e1ff2799ba37c97f5ff82c1c15cdeb986220a947
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34585270"
 ---
 # <a name="in-database-r-analytics-for-sql-developers-tutorial"></a>資料庫內部 R 分析的 SQL 開發人員 （教學課程）
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -60,7 +61,7 @@ ms.lasthandoff: 04/16/2018
 
 ### <a name="requirements"></a>需求
 
-本教學課程適用於已熟悉基本資料庫作業，例如建立資料庫和資料表、 資料匯入資料表，以及建立 SQL 查詢的使用者。 其提供所有 R 程式碼，因此不需要 R 開發環境。 有經驗的 SQL 程式設計人員應該要能夠完成此範例使用[!INCLUDE[tsql](../../includes/tsql-md.md)]中[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]，以及執行所提供的 PowerShell 指令碼。
+本教學課程適用於使用者熟悉基本資料庫作業，例如建立資料庫和資料表、 資料匯入資料表，以及撰寫 SQL 查詢。 其提供所有 R 程式碼，因此不需要 R 開發環境。 技術的 SQL 程式設計人員可以使用 [！ 包含 [tsql] (.../../ 包含/tsql md.md)] 中 [！ 包含 [s] (.../../ 包含 / s md.md) 並執行才能完成此範例中提供的 PowerShell 指令碼。 不過，在開始本教學課程之前，您應該完成下列準備工作：
 
 不過，再開始本教學課程，您必須完成下列準備工作：
 

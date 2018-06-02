@@ -1,38 +1,20 @@
 ---
 title: CLEAR CALCULATIONS 陳述式 (MDX) |Microsoft 文件
-ms.custom: ''
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.component: ''
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: language-reference
-f1_keywords:
-- CLEAR CALCULATIONS
-- clalculations
-- clear
-dev_langs:
-- kbMDX
-helpviewer_keywords:
-- clearing calculations
-- CLEAR CALCULATIONS statement
-- deleting calculations
-- removing calculations
-- calculations [Analysis Services], clearing
-- cubes [Analysis Services], calculations
-ms.assetid: aebec9a1-1d1d-4697-aa3f-cc2449625603
-caps.latest.revision: 30
-author: Minewiskan
+ms.date: 05/30/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: mdx
+ms.topic: reference
 ms.author: owend
-manager: erikre
-ms.openlocfilehash: 5f20ab25e270dbcab6331f6a66c7b136dc8404b7
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: f210f2ad8af7b0d4e71482946a496d326fe63f24
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34579780"
 ---
 # <a name="mdx-data-manipulation---clear-calculations"></a>MDX 資料操作 CLEAR CALCULATIONS
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]

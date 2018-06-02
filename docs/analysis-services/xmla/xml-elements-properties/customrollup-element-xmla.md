@@ -9,11 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 0f96d2c41e2b05fddfab1231d197d6bc67ba0093
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 769a07116e60fc080e0d9ea9dd5ad60a8ee53fb5
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34574540"
 ---
 # <a name="customrollup-element-xmla"></a>CustomRollup 元素 (XMLA)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -32,9 +33,9 @@ ms.lasthandoff: 05/10/2018
   
 ## <a name="element-characteristics"></a>元素特性  
   
-|特性|說明|  
+|特性|描述|  
 |--------------------|-----------------|  
-|資料類型和長度|字串|  
+|資料類型和長度|String|  
 |預設值|無|  
 |基數|0-1：只能出現一次的選擇性元素。|  
   
@@ -42,17 +43,17 @@ ms.lasthandoff: 05/10/2018
   
 |關聯性|元素|  
 |------------------|-------------|  
-|父元素|[屬性](../../../analysis-services/xmla/xml-elements-properties/attribute-element-xmla.md)|  
+|父元素|[Attribute](../../../analysis-services/xmla/xml-elements-properties/attribute-element-xmla.md)|  
 |子元素|無|  
   
 ## <a name="remarks"></a>備註  
  **CustomRollup**元素包含定義父代所定義之屬性成員的彙總行為的多維度運算式 (MDX) 運算式**屬性**項目。  
   
- 如需有關 MDX 運算式的詳細資訊，請參閱[運算式 & #40;MDX & #41;](../../../mdx/expressions-mdx.md).  
+ 如需有關 MDX 運算式的詳細資訊，請參閱[運算式&#40;MDX&#41;](../../../mdx/expressions-mdx.md)。  
   
-## <a name="see-also"></a>另請參閱  
- [插入項目 & #40;XMLA & #41;](../../../analysis-services/xmla/xml-elements-commands/insert-element-xmla.md)   
- [Update 元素 & #40;XMLA & #41;](../../../analysis-services/xmla/xml-elements-commands/update-element-xmla.md)   
- [屬性 & #40;XMLA & #41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
+## <a name="see-also"></a>另請參閱
+ [插入項目&#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-commands/insert-element-xmla.md)   
+ [更新項目&#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-commands/update-element-xmla.md)   
+ [屬性&#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
   
   

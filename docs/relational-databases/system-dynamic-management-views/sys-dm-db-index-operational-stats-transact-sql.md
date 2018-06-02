@@ -24,16 +24,17 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 559aea789fd19fcbbe11fea0868f77c0fdd8b90c
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.openlocfilehash: fb0db9ea7c4d58fdecf8ef4973e4d8f971ebb3d3
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34553798"
 ---
 # <a name="sysdmdbindexoperationalstats-transact-sql"></a>sys.dm_db_index_operational_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-pdw-md.md)]
 
-  針對資料庫中資料表或索引的每一個分割區，傳回目前的低階 I/O、鎖定、閂鎖和存取方法活動。    
+  傳回目前的低階 I/O、 鎖定、 閂鎖和存取方法活動每個資料分割資料表或索引的資料庫中。    
     
  記憶體最佳化的索引不會出現在這個 DMV 中。    
     
@@ -83,7 +84,7 @@ sys.dm_db_index_operational_stats (
     
 ## <a name="table-returned"></a>傳回的資料表    
     
-|資料行名稱|資料類型|Description|    
+|資料行名稱|資料類型|描述|    
 |-----------------|---------------|-----------------|    
 |**database_id**|**smallint**|資料庫識別碼。|    
 |**object_id**|**int**|資料表或檢視表的識別碼。|    
@@ -242,7 +243,7 @@ GO
  [動態管理檢視與函數 &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)     
  [索引相關的動態管理檢視和函式 &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/index-related-dynamic-management-views-and-functions-transact-sql.md)     
  [效能的監視與微調](../../relational-databases/performance/monitor-and-tune-for-performance.md)     
- [sys.dm_db_index_physical_stats &#40;TRANSACT-SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql.md)     
+ [sys.dm_db_index_physical_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql.md)     
  [sys.dm_db_index_usage_stats &#40;Transact SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-usage-stats-transact-sql.md)     
  [sys.dm_os_latch_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-latch-stats-transact-sql.md)     
  [sys.dm_db_partition_stats &#40;Transact SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-partition-stats-transact-sql.md)     

@@ -9,15 +9,16 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 98643e4b3581fa102e42aa647efeaf69974bf2ac
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: fa13ada270ffe7c7d7a1290dd3645efae5f4c6a1
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34574060"
 ---
 # <a name="attach-element"></a>Attach 元素
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
-  將先前從目前伺服器執行個體或另一個執行個體中卸離的 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 資料庫附加至目前的伺服器執行個體。  
+  將連接從目前的伺服器執行個體或另一個執行個體，到目前的伺服器執行個體先前卸離 Analysis Services 資料庫。  
   
 ## <a name="syntax"></a>語法  
   
@@ -35,7 +36,7 @@ ms.lasthandoff: 05/10/2018
   
 ## <a name="element-characteristics"></a>元素特性  
   
-|特性|說明|  
+|特性|描述|  
 |--------------------|-----------------|  
 |資料類型和長度|無|  
 |預設值|無|  
@@ -46,9 +47,9 @@ ms.lasthandoff: 05/10/2018
 |關聯性|元素|  
 |------------------|-------------|  
 |父元素|[Command](../../../analysis-services/xmla/xml-elements-properties/command-element-xmla.md)|  
-|子元素|[資料夾](../../../analysis-services/xmla/xml-elements-properties/folder-element-xmla.md)<br /><br /> [readWriteMode](../../../analysis-services/xmla/xml-elements-properties/readwritemode-element.md)<br /><br /> [密碼](../../../analysis-services/xmla/xml-elements-properties/password-element-xmla.md)|  
+|子元素|[資料夾](../../../analysis-services/xmla/xml-elements-properties/folder-element-xmla.md)<br /><br /> [readWriteMode](../../../analysis-services/xmla/xml-elements-properties/readwritemode-element.md)<br /><br /> [[密碼]](../../../analysis-services/xmla/xml-elements-properties/password-element-xmla.md)|  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>另請參閱
  <xref:Microsoft.AnalysisServices.Database.Detach%2A>   
  [Detach 元素](../../../analysis-services/xmla/xml-elements-commands/detach-element.md)   
  [附加和卸離 Analysis Services 資料庫](../../../analysis-services/multidimensional-models/attach-and-detach-analysis-services-databases.md)   

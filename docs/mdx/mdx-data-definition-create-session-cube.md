@@ -1,38 +1,20 @@
 ---
 title: CREATE SESSION CUBE 陳述式 (MDX) |Microsoft 文件
-ms.custom: ''
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.component: ''
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: language-reference
-f1_keywords:
-- CREATE_SESSION_CUBE
-- SESSION
-- CUBE
-- SESSION CUBE
-- CREATE SESSION CUBE
-- CREATE SESSION
-- CREATE
-dev_langs:
-- kbMDX
-helpviewer_keywords:
-- CREATE SESSION CUBE
-- statements [MDX], CREATE SESSION CUBE
-ms.assetid: 06b90f44-d943-4a52-b0d8-4bcbc57ed6ec
-caps.latest.revision: 17
-author: Minewiskan
+ms.date: 05/30/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: mdx
+ms.topic: reference
 ms.author: owend
-manager: erikre
-ms.openlocfilehash: 5f49f41f4a346d7a30bdfd8d95e1df5c0f2c0eb1
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: 12a450b8184f7a1d6ef8b6068d73f99e17063c5d
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34579420"
 ---
 # <a name="mdx-data-definition---create-session-cube"></a>MDX 資料定義-建立工作階段 CUBE
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
