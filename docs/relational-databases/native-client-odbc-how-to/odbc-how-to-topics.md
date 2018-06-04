@@ -17,10 +17,11 @@ ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: 8a4888eaac053f8c0f6db09f0b9c6684bc0e6e78
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: 2d93cd115f52bf3eff3069f28ea866232b4f9f9e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34707336"
 ---
 # <a name="odbc-how-to-topics"></a>ODBC 的使用說明主題
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -32,27 +33,27 @@ ms.lasthandoff: 05/03/2018
   
 -   [設定 SQL Server ODBC 驅動程式如何主題](http://msdn.microsoft.com/library/e26fbc87-9483-4a2e-99f1-bf52a58360db)  
   
--   [配置控制代碼並連接到 SQL Server & #40; ODBC & #41;](../../relational-databases/native-client-odbc-how-to/allocate-handles-and-connect-to-sql-server-odbc.md)  
+-   [配置控制代碼並連接到 SQL Server &#40;ODBC&#41;](../../relational-databases/native-client-odbc-how-to/allocate-handles-and-connect-to-sql-server-odbc.md)  
   
--   [執行查詢的如何主題 & #40; ODBC & #41;](../../relational-databases/native-client-odbc-how-to/execute-queries/executing-queries-how-to-topics-odbc.md)  
+-   [執行查詢的使用說明主題&#40;ODBC&#41;](../../relational-databases/native-client-odbc-how-to/execute-queries/executing-queries-how-to-topics-odbc.md)  
   
--   [處理結果的如何主題 & #40; ODBC & #41;](http://msdn.microsoft.com/library/772d9064-c91d-4cac-8b60-fcc16bf76e10)  
+-   [處理結果使用說明主題&#40;ODBC&#41;](http://msdn.microsoft.com/library/772d9064-c91d-4cac-8b60-fcc16bf76e10)  
   
--   [使用資料指標的如何主題 & #40; ODBC & #41;](../../relational-databases/native-client-odbc-how-to/cursors/using-cursors-how-to-topics-odbc.md)  
+-   [使用資料指標的使用說明主題&#40;ODBC&#41;](../../relational-databases/native-client-odbc-how-to/cursors/using-cursors-how-to-topics-odbc.md)  
   
--   [使用 Microsoft 分散式交易協調器 & #40; ODBC & #41;](../../relational-databases/native-client-odbc-how-to/use-microsoft-distributed-transaction-coordinator-odbc.md)  
+-   [使用 Microsoft 分散式交易協調器&#40;ODBC&#41;](../../relational-databases/native-client-odbc-how-to/use-microsoft-distributed-transaction-coordinator-odbc.md)  
   
--   [執行預存程序的如何主題 & #40; ODBC & #41;](http://msdn.microsoft.com/library/c2220182-a23d-4475-b353-77a77ab613d6)  
+-   [執行預存程序的使用說明主題&#40;ODBC&#41;](http://msdn.microsoft.com/library/c2220182-a23d-4475-b353-77a77ab613d6)  
   
--   [管理 text 和 image 資料行的如何主題 & #40; ODBC & #41;](http://msdn.microsoft.com/library/f97333ad-e2ab-4d26-9395-741ba25f2c28)  
+-   [管理 text 和 image 資料行使用說明主題&#40;ODBC&#41;](http://msdn.microsoft.com/library/f97333ad-e2ab-4d26-9395-741ba25f2c28)  
   
--   [分析 ODBC 驅動程式效能的如何主題 & #40; ODBC & #41;](../../relational-databases/native-client-odbc-how-to/profiling-odbc-driver-performance-odbc.md)  
+-   [分析 ODBC 驅動程式效能的如何主題&#40;ODBC&#41;](../../relational-databases/native-client-odbc-how-to/profiling-odbc-driver-performance-odbc.md)  
   
--   [處理 ODBC 錯誤 & #40; ODBC & #41;](../../relational-databases/native-client-odbc-how-to/process-odbc-errors-odbc.md)  
+-   [處理 ODBC 錯誤&#40;ODBC&#41;](../../relational-databases/native-client-odbc-how-to/process-odbc-errors-odbc.md)  
   
--   [大量複製與 SQL Server ODBC 驅動程式如何主題 & #40; ODBC & #41;](../../relational-databases/native-client-odbc-how-to/bulk-copy/bulk-copying-with-the-sql-server-odbc-driver-how-to-topics-odbc.md)  
+-   [大量複製與 SQL Server ODBC 驅動程式如何主題&#40;ODBC&#41;](../../relational-databases/native-client-odbc-how-to/bulk-copy/bulk-copying-with-the-sql-server-odbc-driver-how-to-topics-odbc.md)  
   
 ## <a name="see-also"></a>另請參閱  
- [SQL Server Native Client & #40; ODBC & #41;](../../relational-databases/native-client/odbc/sql-server-native-client-odbc.md)  
+ [SQL Server Native Client &#40;ODBC&#41;](../../relational-databases/native-client/odbc/sql-server-native-client-odbc.md)  
   
   
