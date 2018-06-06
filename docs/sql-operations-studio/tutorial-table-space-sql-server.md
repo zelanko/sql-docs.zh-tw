@@ -1,6 +1,6 @@
 ---
-title: 教學課程： 啟用資料表空間使用方式範例深入了解 widget 中 SQL Operations Studio （預覽） |Microsoft 文件
-description: 本教學課程會示範如何啟用的資料表空間使用方式範例深入了解 widget SQL Operations Studio （預覽） 資料庫儀表板上。
+title: 教學課程： 在SQL Operations Studio （預覽）中啟用資料表空間使用範例之 insight widget   |Microsoft 文件
+description: 本教學課程會示範如何在 SQL Operations Studio （預覽）資料庫儀表板上啟用資料表空間使用範例之 insight widget 。
 ms.custom: tools|sos
 ms.date: 03/19/2018
 ms.prod: sql
@@ -19,33 +19,33 @@ ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/17/2018
 ---
-# <a name="tutorial-enable-the-table-space-usage-sample-insight-widget-using-includename-sosincludesname-sos-shortmd"></a>教學課程： 使用情況下啟用資料表的空間使用方式範例深入了解 widget [!INCLUDE[name-sos](../includes/name-sos-short.md)]
+# <a name="tutorial-enable-the-table-space-usage-sample-insight-widget-using-includename-sosincludesname-sos-shortmd"></a>教學課程： 使用[!INCLUDE[name-sos](../includes/name-sos-short.md)] 啟用資料表使用空間範例之 insight widget 
 
-本教學課程會示範如何啟用資料庫儀表板上，提供在摘要檢視的空間使用量的相關資料庫中的所有資料表深入了解 widget。 在此教學課程中，您學到如何：
+本教學課程會示範如何在資料庫儀表板上啟用 insight widget，提供有關資料庫中所有資料表空間使用情況的概覽檢視。 在此教學課程中，您學到如何：
 
 > [!div class="checklist"]
-> * 快速開啟使用內建的深入解析 widget 範例深入了解 widget
+> * 快速地使用內建 insight widget 範例開啟 insight widget
 > * 檢視資料表空間使用量的詳細資料
-> * 篩選資料，以及檢視標籤詳細資料，深入了解圖表上
+> * 在 insight 圖表上篩選資料與檢視標籤詳細資料，
 
 ## <a name="prerequisites"></a>必要條件
 
 本教學課程需要 SQL Server 或 Azure SQL Database *TutorialDB*。 若要建立 *TutorialDB* 資料庫，請完成下列其中一項快速入門教學：
 
 - [使用 [!INCLUDE[name-sos-short](../includes/name-sos-short.md)] 連接及查詢 SQL Server](quickstart-sql-server.md)
-- [連接及查詢使用 Azure SQL Database [!INCLUDE[name-sos-short](../includes/name-sos-short.md)]](quickstart-sql-database.md)
+- [使用 [!INCLUDE[name-sos-short](../includes/name-sos-short.md)] 連接及查詢 Azure SQL Database](quickstart-sql-database.md)
 
 
-## <a name="turn-on-a-management-insight-on-includename-sosincludesname-sos-shortmds-database-dashboard"></a>開啟管理 insight 上[!INCLUDE[name-sos](../includes/name-sos-short.md)]的資料庫儀表板
-[!INCLUDE[name-sos](../includes/name-sos-short.md)] 具有內建範例小工具來監視資料庫中的資料表所使用的空間。
+## <a name="turn-on-a-management-insight-on-includename-sosincludesname-sos-shortmds-database-dashboard"></a> 在[!INCLUDE[name-sos](../includes/name-sos-short.md)] 資料庫儀表板上開啟管理 insight 
+[!INCLUDE[name-sos](../includes/name-sos-short.md)] 具有內建範例小工具來監視資料庫中資料表所使用的空間。
 
-1. 開啟*使用者設定*按**Ctrl + Shift + P**開啟*命令選擇區*。
-2. 型別*設定*搜尋方塊中選取**喜好設定： 開啟使用者設定**。
-2. 型別*儀表板*中設定搜尋輸入方塊，並找出**dashboard.database.widgets**。
+1. 開啟*使用者設定* : 藉由按下 **Ctrl + Shift + P** 開啟*命令選擇區*。
+2. 在搜尋方塊中輸入 *settings* 並選取**喜好設定： 開啟使用者設定**。
+2. 在設定搜尋輸入方塊中 *dashboard*，並找出**dashboard.database.widgets**。
 
-3. 若要自訂**dashboard.database.widgets**設定您需要編輯**dashboard.database.widgets**中的項目**使用者設定**> 一節 (中的資料行右側）。 如果沒有任何**dashboard.database.widgets**中**使用者設定**區段中，將滑鼠停留在**dashboard.database.widgets**中 預設設定資料行，然後按一下文字會顯示在左邊的文字，然後按一下鉛筆圖示**複製到設定**。 如果快顯視窗中顯示**設定中取代**，但不要按 ！ 移至**使用者設定**右邊資料行並找出**dashboard.database.widgets**區段和前進至下一個步驟。
+3. 若要自訂**dashboard.database.widgets**設定，您需要在**使用者設定**部分中(在右側資料欄)編輯**dashboard.database.widgets**項目。 如果沒有任何**dashboard.database.widgets**在**使用者設定**區段內，將滑鼠停留在預設設定**dashboard.database.widgets**文字，按一下顯示在文字左邊鉛筆圖示，然後按一下**複製到設定**。 如果快顯視窗中顯示**在設定中取代**，請不要按 ！ 移至右邊資料欄**使用者設定**並找出**dashboard.database.widgets**區段，並前進至下一個步驟。
 
-4. 在**dashboard.database.widgets**區段中，加入下列：
+4. 在**dashboard.database.widgets** 區段中，加入下列：
 
    ```json
         {
@@ -59,26 +59,26 @@ ms.lasthandoff: 05/17/2018
             }
         },
     ```
-**Dashboard.database.widgets**區段看起來應該類似以下的映像：
+**Dashboard.database.widgets**區段看起來應該與下面的圖片相似：
 
    ![搜尋設定](./media/tutorial-table-space-sql-server/insight-table-space.png)
 
 5. 按**Ctrl + S**儲存設定。
 
-6. 以滑鼠右鍵按一下資料庫開啟儀表板**TutorialDB**按一下**管理**。
+6. 以滑鼠右鍵按一下**TutorialDB**然後按一下**管理**以開啟資料庫開啟儀表板。
 
-7. 檢視*資料表空間*深入了解 widget 圖所示： 
+7. 檢視*資料表空間* insight widget 如下圖所示： 
 
    ![小工具](./media/tutorial-table-space-sql-server/insight-table-space-result.png)
 
 
 ## <a name="working-with-the-insight-chart"></a>使用深入了解圖表
 
-[!INCLUDE[name-sos](../includes/name-sos-short.md)]深入資訊圖提供篩選和滑鼠停留的詳細資料。 嘗試下列步驟：
+[!INCLUDE[name-sos](../includes/name-sos-short.md)] 的深入資訊圖表提供篩選和滑鼠停留顯示詳細資料功能。 嘗試下列步驟：
 
-1. 按一下，並切換*row_count*圖例在圖表上的。 [!INCLUDE[name-sos](../includes/name-sos-short.md)] 顯示和隱藏資料數列，如同您切換開啟或關閉圖例。
+1. 按一下並切換在圖表上的 *row_count* 圖例。 當您切換開啟或關閉圖例，[!INCLUDE[name-sos](../includes/name-sos-short.md)] 顯示和隱藏資料數列。
     
-2. 將滑鼠指標停留在圖表中。 [!INCLUDE[name-sos](../includes/name-sos-short.md)] 顯示資料數列標籤以及其值，如下列螢幕擷取畫面所示的詳細資訊。
+2. 將滑鼠指標停留在圖表上。 [!INCLUDE[name-sos](../includes/name-sos-short.md)] 顯示資料數列標籤以及其值，如下列螢幕擷取畫面所示的詳細資訊。
 
    ![圖表切換和圖例](./media/tutorial-table-space-sql-server/insight-table-space-toggle.png)
 
@@ -86,11 +86,11 @@ ms.lasthandoff: 05/17/2018
 ## <a name="next-steps"></a>後續的步驟
 在此教學課程中，您學會如何：
 > [!div class="checklist"]
-> * 快速開啟使用內建的深入解析 widget 範例深入了解 widget。
-> * 檢視資料表空間使用量的詳細資料。
-> * 篩選資料，以及檢視標籤詳細資料，深入了解圖表上
+> * 快速地使用內建 insight widget 範例開啟 insight widget
+> * 檢視資料表空間使用量的詳細資料
+> * 在 insight 圖表上篩選資料與檢視標籤詳細資料，
 
-若要深入了解如何建置自訂的見解 widget，完成下一個教學課程：
+若要深入了解如何建置自訂的 insight widget，請完成下一個教學課程：
 
 > [!div class="nextstepaction"]
-> [建置自訂的見解 widget](tutorial-build-custom-insight-sql-server.md)。
+> [建置自訂的 insight widget](tutorial-build-custom-insight-sql-server.md)。
