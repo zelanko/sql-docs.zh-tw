@@ -33,7 +33,7 @@ ms.lasthandoff: 05/10/2018
 
 如需最新版本的詳細資訊，請參閱[版本資訊](release-notes.md)。
 
-## <a name="get-sql-operations-studio-preview-for-windows"></a>取得 SQL Operations Studio (preview) for Windows
+## <a name="get-sql-operations-studio-preview-for-windows"></a>在 Windows 上取得 SQL Operations Studio (preview)
 
 這一版的[!INCLUDE[name-sos](../includes/name-sos-short.md)]包括標準的 Windows 安裝程式經驗，以及.zip: 
 
@@ -50,14 +50,14 @@ ms.lasthandoff: 05/10/2018
 3. 執行 `\sqlops-windows\sqlops.exe`
 
 
-## <a name="get-sql-operations-studio-preview-for-macos"></a>取得 macOS SQL Operations Studio (preview)
+## <a name="get-sql-operations-studio-preview-for-macos"></a>在 macOS 上取得 SQL Operations Studio (preview)
 
 1. 下載[[!INCLUDE[name-sos](../includes/name-sos-short.md)]如 macOS](https://go.microsoft.com/fwlink/?linkid=873388)。
 2. 若要展開的 zip 內容，請按兩下它。
 3. 讓[!INCLUDE[name-sos](../includes/name-sos-short.md)]用於*啟動控制板*，拖曳*sqlops.app*至*應用程式*資料夾。
 
 
-## <a name="get-sql-operations-studio-preview-for-linux"></a>取得 SQL Operations Studio (preview) for Linux
+## <a name="get-sql-operations-studio-preview-for-linux"></a>在 Linux 上取得 SQL Operations Studio (preview)
 
 1. 下載[!INCLUDE[name-sos](../includes/name-sos-short.md)]適用於 Linux 使用其中一種安裝程式或.tar.gz 封存：
     - [.deb](https://go.microsoft.com/fwlink/?linkid=873391)
@@ -117,7 +117,7 @@ ms.lasthandoff: 05/10/2018
 
 ## <a name="uninstall-sql-operations-studio-preview"></a>解除安裝 SQL Operations Studio (preview)
 
-如果您已安裝[!INCLUDE[name-sos-short](../includes/name-sos-short.md)]使用 Windows installer，然後解除安裝移除所有 Windows 應用程式的方式相同。
+如果您已使用 Windows installer 安裝[!INCLUDE[name-sos-short](../includes/name-sos-short.md)]，解除安裝方式與所有 Windows 應用程式移除方式相同。
 
 如果您使用.zip 或其他封存安裝[!INCLUDE[name-sos-short](../includes/name-sos-short.md)]，只要刪除檔案即可。
 
