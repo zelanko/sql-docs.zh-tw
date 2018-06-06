@@ -1,4 +1,4 @@
----
+﻿---
 title: Microsoft SQL Operations Studio (preview) 版本資訊 |Microsoft 文件
 description: Microsoft SQL Operations Studio (preview) 版本資訊
 ms.custom: tools|sos
@@ -45,7 +45,7 @@ ms.locfileid: "34473822"
    - 修正[問題 1260](https://github.com/Microsoft/sqlopsstudio/issues/1260)： 關鍵字 'distinct' 非反白顯示
    - 修正[問題 1332](https://github.com/Microsoft/sqlopsstudio/issues/1332)： 編輯資料還原不適用於資料列
    - 修正[問題 1215](https://github.com/Microsoft/sqlopsstudio/issues/1215): SQL Agent擴充功能和狀態列
-   - 修正[問題 1316](https://github.com/Microsoft/sqlopsstudio/issues/1316): SQL 代理程式不要調整大小之後變更視窗大小
+   - 修正[問題 1316](https://github.com/Microsoft/sqlopsstudio/issues/1316): 在視窗大小改變後，SQL Agent 不會隨之調整大小
 
 
 如需詳細資訊，請參閱[變更記錄](https://github.com/Microsoft/sqlopsstudio/blob/master/CHANGELOG.md)，和[版本](https://github.com/Microsoft/sqlopsstudio/releases)。
@@ -60,7 +60,7 @@ ms.locfileid: "34473822"
 *4 月公開預覽版*包含 bug 修正和增強功能。 
 
 - SQL 代理程式預覽擴充功能的增強功能。
-- 改善大型和受保護的檔案來儲存受保護的系統管理員的支援和 > 在 SQL 作業 Studio 256 M 檔案。
+- 為了在SQL Operations Studio儲存受管理員保護且大小大於256M的檔案，改善大型且受保護的檔案支援。
 - 若要同時使用多個開啟的終端機分割整合式的終端機。
 - 降低的安裝磁碟上檔案計數呎列印更快的安裝和啟動時間。
 - 繼續以修正 GitHub 問題：
@@ -111,7 +111,7 @@ ms.locfileid: "34473822"
 
 - 增強的支援索引標籤式的深入資訊和組態窗格的儀表板擴充性模型。
    - 擴充管理員可讓簡單擷取的延伸模組。
-   - 儀表板延伸從 sp_whoisactive [whoisactive.com](http://www.whoisactive.com)。
+   - 來自 [whoisactive.com](http://www.whoisactive.com) 的 sp_whoisactive 擴充儀表板。
    - 如需詳細資訊，請參閱[擴充功能的 SQL Operations Studio](extensions.md)。
 - 請加入更多[連線和物件總管 中的擴充性 Api](https://github.com/Microsoft/sqlopsstudio/wiki/Extensibility-API)管理。
 - 若要修正重要影響的客戶繼續[GitHub 問題](https://github.com/Microsoft/sqlopsstudio/issues)。
