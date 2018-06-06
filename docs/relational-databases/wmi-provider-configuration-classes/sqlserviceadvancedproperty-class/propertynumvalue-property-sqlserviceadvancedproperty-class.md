@@ -1,16 +1,15 @@
 ---
-title: "PropertyNumValue 屬性 （SqlServiceAdvancedProperty 類別） |Microsoft 文件"
-ms.custom: 
+title: PropertyNumValue 屬性 （SqlServiceAdvancedProperty 類別） |Microsoft 文件
+ms.custom: ''
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
 ms.component: wmi
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - PropertyNumValue Property (SqlServiceAdvancedProperty Class)
@@ -20,20 +19,19 @@ apitype: MOFDef
 helpviewer_keywords:
 - PropertyNumValue property
 ms.assetid: 2c740dee-8911-443c-981f-7f224598ad21
-caps.latest.revision: 
-author: JennieHubbard
-ms.author: jhubbard
+caps.latest.revision: 29
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: c91a2909459ddb40fe4a162d70c724cb5b8d4917
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.openlocfilehash: 324862744a882c3b570c5f0019df2200189964b6
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="propertynumvalue-property-sqlserviceadvancedproperty-class"></a>PropertyNumValue 屬性 (SqlServiceAdvancedProperty 類別)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
-取得進階屬性的數值。  
+  取得進階屬性的數值。  
   
 ## <a name="syntax"></a>語法  
   

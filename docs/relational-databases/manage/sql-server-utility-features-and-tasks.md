@@ -1,17 +1,16 @@
 ---
-title: "SQL Server 公用程式的功能與工作 | Microsoft Docs"
-ms.custom: 
+title: SQL Server 公用程式的功能與工作 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
 ms.component: maintenance-plans
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server utility [SQL Server]
 - utility control point
@@ -20,19 +19,19 @@ helpviewer_keywords:
 - UCP
 - Multi-server management [SQL Server]
 ms.assetid: 6e6cbd25-6b1c-4e21-9ade-4584e243fd8f
-caps.latest.revision: 
+caps.latest.revision: 10
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 75d12d94fb1d58242036abbc91e692414f9da3b5
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 64b7b244132621ea88696ccbc795f465b8bcf56f
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sql-server-utility-features-and-tasks"></a>SQL Server 公用程式的功能與工作
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 客戶有一項需求，也就是以整體方式管理其 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 環境，這項需求會在這一版中透過 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 公用程式內應用程式和多伺服器管理的概念來滿足。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 客戶有一項需求，也就是以整體方式管理其 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 環境，這項需求會在這一版中透過 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 公用程式內應用程式和多伺服器管理的概念來滿足。  
   
 ## <a name="benefits-of-the-sql-server-utility"></a>SQL Server 公用程式的優點  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 公用程式會將組織的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]相關實體在統一的檢視中模型化。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (SSMS) 中的公用程式總管和 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 公用程式視點會透過做為公用程式控制點 (UCP) 的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體，為系統管理員提供 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資源健全狀況的整體檢視。 UCP 中所呈現之使用量過低和使用量過高的原則以及各種索引鍵參數的摘要和詳細資料組合，將可讓您輕鬆識別資源合併機會和資源使用量過高的情形。 健全狀況原則是可以設定的，而且可加以調整來變更資源使用量的上下臨界值。 您可以變更全域監視原則，或是針對 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 公用程式中管理的每個實體來設定個別監視原則。  

@@ -1,37 +1,23 @@
 ---
-title: "Microsoft 貝氏機率分類演算法 |Microsoft 文件"
-ms.custom: 
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
-helpviewer_keywords:
-- Bayesian classifiers
-- algorithms [data mining]
-- predictive modeling [Analysis Services]
-- classification algorithms [Analysis Services]
-- naive bayes algorithms [Analysis Services]
-ms.assetid: 3b53e011-3b1a-4cd1-bdc2-456768ba31b5
-caps.latest.revision: 
-author: Minewiskan
+title: Microsoft 貝氏機率分類演算法 |Microsoft 文件
+ms.date: 05/08/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: data-mining
+ms.topic: conceptual
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 0ac78f4108cfde4efa5de2e04be3a7e2e9c7a2ff
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: b3cbe50437011bc97ba4f4e1e246ee85e89495c1
+ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="microsoft-naive-bayes-algorithm"></a>Microsoft 貝氏機率分類演算法
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-[!INCLUDE[msCoName](../../includes/msconame-md.md)] 貝氏機率分類演算法是可用於探勘和預測模型的分類演算法 (根據貝氏的定理)。 貝氏 (Naïve Bayes) 名稱中的 naïve 一字源自此演算法使用 Bayesian 技術但卻沒有考量可能存在的相依性。  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 貝氏機率分類演算法是可用於探勘和預測模型的分類演算法 (根據貝氏的定理)。 貝氏 (Naïve Bayes) 名稱中的 naïve 一字源自此演算法使用 Bayesian 技術但卻沒有考量可能存在的相依性。  
   
  此演算法比其他 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 演算法更少計算，因此對於快速產生採礦模型來探索輸入資料行和可預測資料行之間的關聯性很有用。 您可以使用此演算法來執行資料的初始瀏覽，然後您可以套用其結果，以其他更多計算和更精確的演算法來建立其他採礦模型。  
   
@@ -98,9 +84,9 @@ ms.lasthandoff: 02/15/2018
   
 ## <a name="see-also"></a>另請參閱  
  [資料採礦演算法 &#40;Analysis Services-資料採礦 &#41;](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
- [特徵選取 &#40; 資料採礦 &#41;](../../analysis-services/data-mining/feature-selection-data-mining.md)   
+ [特徵選取 & #40; 資料採礦 & #41;](../../analysis-services/data-mining/feature-selection-data-mining.md)   
  [貝氏機率分類模型查詢範例](../../analysis-services/data-mining/naive-bayes-model-query-examples.md)   
- [貝氏機率分類模型 &#40; 的採礦模型內容Analysis Services-資料採礦 &#41;](../../analysis-services/data-mining/mining-model-content-for-naive-bayes-models-analysis-services-data-mining.md)   
+ [貝氏機率分類模型 & #40; 的採礦模型內容Analysis Services-資料採礦 & #41;](../../analysis-services/data-mining/mining-model-content-for-naive-bayes-models-analysis-services-data-mining.md)   
  [Microsoft 貝氏機率分類演算法技術參考](../../analysis-services/data-mining/microsoft-naive-bayes-algorithm-technical-reference.md)  
   
   

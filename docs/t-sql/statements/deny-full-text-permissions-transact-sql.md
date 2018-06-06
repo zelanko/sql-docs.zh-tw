@@ -1,16 +1,14 @@
 ---
-title: "DENY 全文檢索權限 (Transact-SQL) | Microsoft Docs"
-ms.custom: 
+title: DENY 全文檢索權限 (Transact-SQL) | Microsoft Docs
+ms.custom: ''
 ms.date: 05/15/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
 ms.component: t-sql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: t-sql
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - TSQL
@@ -21,16 +19,15 @@ helpviewer_keywords:
 - full-text stoplist [SQL Server], permissions
 - DENY statement, full-text permissions
 ms.assetid: d86e9a1d-0938-4ec2-a169-2d0564f3642e
-caps.latest.revision: 
+caps.latest.revision: 26
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 70af6c1c5b5f23e857a989d37fb4cf99701dc1fb
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: d1418c1234e1723f0a4b662cadcf244a2aa86da3
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="deny-full-text-permissions-transact-sql"></a>DENY 全文檢索權限 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -59,10 +56,10 @@ DENY permission [ ,...n ] ON
  這是權限的名稱。 安全性實體權限的有效對應描述於本主題後面的「備註」一節中。  
   
  ON FULLTEXT CATALOG **::***full-text_catalog_name*  
- 指定正在拒絕權限的全文檢索目錄。 範圍限定詞 **::** 是必要的。  
+ 指定正在拒絕權限的全文檢索目錄。 範圍限定詞 **::** 為必要項目。  
   
  ON FULLTEXT STOPLIST **::***full-text_stoplist_name*  
- 指定正在拒絕權限的全文檢索停用字詞表。 範圍限定詞 **::** 是必要的。  
+ 指定正在拒絕權限的全文檢索停用字詞表。 範圍限定詞 **::** 為必要項目。  
   
  *database_principal*  
  指定要拒絕其權限的主體。 它有下列幾種：  

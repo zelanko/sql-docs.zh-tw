@@ -1,29 +1,22 @@
 ---
-title: "PDW 和應用裝置光纖實體元件 (Analytics Platform System)"
-author: barbkess
-ms.author: barbkess
-manager: jhubbard
-ms.prod: analytics-platform-system
-ms.prod_service: mpp-data-warehouse
-ms.service: 
-ms.component: 
-ms.technology: mpp-data-warehouse
-ms.custom: 
-ms.date: 01/05/2017
-ms.reviewer: na
-ms.suite: sql
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: 7748d3da-0b7c-4ec6-9c22-4897758ba573
-caps.latest.revision: "17"
-ms.openlocfilehash: 95e80aaa641b04391d96b55f7491e21f1a30b6d1
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+title: 應用裝置實體元件 Analytics Platform System |Microsoft 文件
+description: 名稱及描述 PDW 和應用裝置網狀架構實體元件。
+author: mzaman1
+manager: craigg
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
+ms.openlocfilehash: 0adbd92d1a29a98a80de65268c53ea63e3941d07
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/19/2018
 ---
-# <a name="pdw-and-appliance-fabric-physical-components"></a>PDW 和應用裝置網狀架構的實體元件
-名稱及描述 PDW 和應用裝置網狀架構實體元件。 PDW 區域包含所有這些元件。  
+# <a name="appliance-physical-components---analytics-platform-system"></a>應用裝置實體元件 Analytics Platform System
+名稱及描述 PDW 和應用裝置網狀架構實體元件。 
   
 <!-- MISSING LINKS See also [HDInsight Physical Components &#40;Analytics Platform System&#41;](hdinsight-physical-components.md).  -->  
   
@@ -61,7 +54,7 @@ PDW 虛擬機器是 PDW 區域的一部分。
   
 *Appliance_domain*-WDS 虛擬機器 HST01 上執行，並可以容錯移轉到 HST02。 WDS 虛擬機器和 VMM 虛擬機器，請在實體主機上部署 Windows 應用裝置安裝期間。 應用裝置生命週期期間 WDS 和 VMM 執行作業，例如取代主應用程式。  
   
-*appliance_domain*VMM  
+*appliance_domain*-VMM  
 Virtual Machine Manager (VMM) 虛擬機器中執行，並可以容錯移轉到 HST02。 VMM 會裝載 System Center 部署在實體主機上的作業系統。 VMM 也可讓 Windows Server Update Services (WSUS) 來套用或移除主機和虛擬機器的所有 Windows 更新。  
   
 *appliance_domain*-AD01， *appliance_domain*-ad02 移  
@@ -85,8 +78,8 @@ PDW 叢集名為 WFOHST01。 它會管理的所有實體主機和虛擬機器屬
 *appliance_domain*-透過 DAS01 *appliance_domain*-DAS03  
 這是連接到計算節點的直接連結存放裝置。 HP 都有一個 DAS 每兩個計算節點。 Dell 和配量有一個 DAS 每三個計算節點。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
 <!-- MISSING LINKS [Hardware Configurations &#40;Analytics Platform System&#41;](../architecture/hardware-configurations.md)  -->  
-[應用裝置組態 &#40;Analytics Platform System &#41;](appliance-configuration.md)  
-[應用裝置管理工作 &#40;Analytics Platform System &#41;](appliance-management-tasks.md)  
+[應用裝置組態&#40;Analytics Platform System&#41;](appliance-configuration.md)  
+[應用裝置管理工作&#40;Analytics Platform System&#41;](appliance-management-tasks.md)  
   

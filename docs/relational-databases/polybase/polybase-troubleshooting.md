@@ -1,37 +1,32 @@
 ---
-title: "PolyBase 疑難排解 | Microsoft Docs"
-ms.custom: 
+title: PolyBase 疑難排解 | Microsoft Docs
+ms.custom: ''
 ms.date: 8/29/2017
-ms.prod: sql-non-specified
-ms.prod_service: database-engine, sql-data-warehouse, pdw
-ms.service: 
-ms.component: polybase
-ms.reviewer: 
+ms.prod: sql
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine-polybase
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: polybase
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 f1_keywords:
 - PolyBase, monitoring
 - PolyBase, performance monitoring
 helpviewer_keywords:
 - PolyBase, troubleshooting
 ms.assetid: f119e819-c3ae-4e0b-a955-3948388a9cfe
-caps.latest.revision: 
-author: barbkess
-ms.author: barbkess
+caps.latest.revision: 22
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 94e965bdb0b407759b078e4fb75838888f9a3b37
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.openlocfilehash: cadcbeb8e0c81afb9d56df7bf03f17214e400b3c
+ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="polybase-troubleshooting"></a>PolyBase, 疑難排解
 [!INCLUDE[appliesto-ss-xxxx-asdw-pdw-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-可使用您在本主題中找到的技術，為 PolyBase 的問題疑難排解。  
+  可使用您在本主題中找到的技術，為 PolyBase 的問題疑難排解。  
   
 ## <a name="catalog-views"></a>目錄檢視  
  使用此處所列的類別目錄檢視管理 PolyBase 作業。  
@@ -243,7 +238,7 @@ PolyBase 不會與名稱節點 HA 服務互動，例如目前的 Zookeeper 或 K
 
 ## <a name="error-messages-and-possible-solutions"></a>錯誤訊息與可能的解決方案
 
-為外部資料表錯誤疑難排解時，請參閱 Murshed Zaman 的部落格 [https://blogs.msdn.microsoft.com/sqlcat/2016/06/21/polybase-setup-errors-and-possible-solutions/](https://blogs.msdn.microsoft.com/sqlcat/2016/06/21/polybase-setup-errors-and-possible-solutions/ "PolyBase setup errors and possible solutions")(PolyBase 安裝程式錯誤和可能的解決方案)。
+若要針對外部資料表錯誤進行疑難排解，請參閱 Murshed Zaman 的部落格 [https://blogs.msdn.microsoft.com/sqlcat/2016/06/21/polybase-setup-errors-and-possible-solutions/](https://blogs.msdn.microsoft.com/sqlcat/2016/06/21/polybase-setup-errors-and-possible-solutions/ "PolyBase setup errors and possible solutions") (PolyBase 安裝程式錯誤和可能的解決方案)。
 
 ## <a name="see-also"></a>另請參閱
 [對 PolyBase Kerberos 的連線問題進行疑難排解](polybase-troubleshoot-connectivity.md)

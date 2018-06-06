@@ -1,34 +1,30 @@
 ---
-title: "XQuery 靜態類型事件類別 | Microsoft Docs"
-ms.custom: 
+title: XQuery 靜態類型事件類別 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
-ms.prod_service: database-engine, sql-database
-ms.service: 
-ms.component: event-classes
-ms.reviewer: 
+ms.prod: sql
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: supportability
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - XQuery Static Type event class
 ms.assetid: 30df7ba9-1e5f-432b-b90b-4310ef0473c0
-caps.latest.revision: 
+caps.latest.revision: 20
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 77317d88000ef5e4a58f8ec47b07f97a35e5c764
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 883c337f7801446990da17994f30d6683d1780e5
+ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="xquery-static-type-event-class"></a>XQuery 靜態類型事件類別
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-當 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行 XQuery 運算式時，就會發生 XQuery 靜態類型事件類別。 這個事件類別提供 XQuery 運算式的靜態類型。  
+  當 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行 XQuery 運算式時，就會發生 XQuery 靜態類型事件類別。 這個事件類別提供 XQuery 運算式的靜態類型。  
   
 ## <a name="xquery-static-type-event-class-data-columns"></a>XQuery 靜態類型事件類別資料行  
   

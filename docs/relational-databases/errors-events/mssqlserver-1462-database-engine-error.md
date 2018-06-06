@@ -1,30 +1,25 @@
 ---
 title: MSSQLSERVER_1462 | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 04/04/2017
-ms.prod: sql-non-specified
-ms.prod_service: database-engine
-ms.service: 
-ms.component: errors-events
-ms.reviewer: 
+ms.prod: sql
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: supportability
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 helpviewer_keywords:
 - 1462 (Database Engine error)
 ms.assetid: 680e9c1c-a9d6-4765-b601-956d0a83324c
-caps.latest.revision: 
-author: edmacauley
-ms.author: edmaca
+caps.latest.revision: 12
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 9465f1c9eef03f1fc1ffa0070cc960cfa05bc657
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 72e7ce07964cf8d2d59f04b789ea5022d5381a50
+ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="mssqlserver1462"></a>MSSQLSERVER_1462
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -33,7 +28,7 @@ ms.lasthandoff: 11/21/2017
   
 |||  
 |-|-|  
-|產品名稱|SQL Server|  
+|產品名稱|[SQL Server]|  
 |事件識別碼|1462|  
 |事件來源|MSSQLSERVER|  
 |元件|SQLEngine|  

@@ -1,36 +1,23 @@
 ---
-title: "檢視及儲存預測查詢的結果 |Microsoft 文件"
-ms.custom: 
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
-helpviewer_keywords:
-- prediction queries [Analysis Services]
-- viewing prediction query results
-- displaying prediction query results
-- Mining Model Prediction [Analysis Services], viewing results
-ms.assetid: abba4d24-3619-44c1-8279-88f27ad627d3
-caps.latest.revision: 
-author: Minewiskan
+title: 檢視及儲存預測查詢的結果 |Microsoft 文件
+ms.date: 05/08/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: data-mining
+ms.topic: conceptual
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: a96b6825f5b7b5d83981f6c0ec73e8020169b2b7
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 34fed203898072ebafc183f299d58d263ae648db
+ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="view-and-save-the-results-of-a-prediction-query"></a>檢視及儲存預測查詢的結果
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 中使用預測查詢產生器定義查詢之後，您就可以切換到查詢結果檢視來執行查詢和檢視結果。  
+  在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 中使用預測查詢產生器定義查詢之後，您就可以切換到查詢結果檢視來執行查詢和檢視結果。  
   
  您可以將預測查詢的結果儲存至 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 專案中所定義之任何資料來源內的資料表。 您可以建立新的資料表，或將查詢結果儲存至現有的資料表。 如果您將結果儲存至現有的資料表，則可選擇覆寫目前儲存在資料表中的資料，否則查詢結果會附加至資料表中的現有資料。  
   

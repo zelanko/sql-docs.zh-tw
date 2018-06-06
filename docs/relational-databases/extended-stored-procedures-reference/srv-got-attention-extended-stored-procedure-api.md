@@ -1,16 +1,15 @@
 ---
-title: "srv_got_attention (擴充預存程序 API) | Microsoft Docs"
-ms.custom: 
+title: srv_got_attention (擴充預存程序 API) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/03/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
 ms.component: extended-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - srv_got_attention
@@ -22,16 +21,15 @@ dev_langs:
 helpviewer_keywords:
 - srv_got_attention
 ms.assetid: 805e68e1-d17f-41bd-8b9f-a27283bb6fbe
-caps.latest.revision: 
+caps.latest.revision: 17
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 541d9ebe6bb7752a9025f65f1570df28f253bb88
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
-ms.translationtype: MT
+ms.openlocfilehash: ccc83edc32893f01ff2a5bb2d3574d74bca78bde
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="srvgotattention-extended-stored-procedure-api"></a>srv_got_attention (擴充預存程序 API)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -57,7 +55,7 @@ srvproc
 ## <a name="return-value"></a>傳回值  
  如果連接遭到清除或批次遭到中止，則為 TRUE。 如果連接或批次作用中，則為 FALSE。  
   
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>Remarks  
  長時間執行的擴充預存程序應該透過定期呼叫 **srv_got_attention** 來檢查伺服器的注意事項，讓該程序可以在連線到終止或批次遭到中止時自行結束。  
   
 > [!IMPORTANT]  

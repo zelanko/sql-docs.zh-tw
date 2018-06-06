@@ -1,30 +1,28 @@
 ---
-title: "保護快照集資料夾 | Microsoft Docs"
-ms.custom: 
+title: 保護快照集資料夾 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
 ms.component: replication
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - snapshots [SQL Server replication], security
 ms.assetid: 3cd877d1-ffb8-48fd-a72b-98eb948aad27
-caps.latest.revision: 
+caps.latest.revision: 46
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 6a811827ab0be4c5a61c5e3b65361e8a82421f38
-ms.sourcegitcommit: ab25b08a312d35489a2c4a6a0d29a04bbd90f64d
+ms.openlocfilehash: 2884a1cd4507775e75764d632dfab50185596949
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="secure-the-snapshot-folder"></a>保護快照集資料夾
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -33,7 +31,7 @@ ms.lasthandoff: 03/08/2018
 > [!NOTE]  
 >  使用者帳戶控制 (UAC) 可協助管理員管理其較高的使用者權限 (有時也稱為「權限」) 。 在已啟用 UAC 的作業系統上執行時，管理員不會使用其管理權限。 反而會以標準 (非管理員) 使用者的身分執行大部分的動作，只有在必要時才會採用其管理權限。 UAC 可以防止以管理員權限存取快照共用。 因此，您必須針對快照集代理程式、散發代理程式和合併代理程式所使用的 Windows 帳戶，明確地授與快照集共用權限。 即使 Windows 帳戶是管理員群組的成員，也必須這麼做。  
   
- 透過 [設定散發精靈] 或 [新增發行集精靈] 設定「散發者」時，快照集資料夾預設為本機路徑：X:\Program Files\Microsoft SQL Server\\*\<執行個體>*\MSSQL\ReplData。 如果您使用的是遠端「散發者」或提取訂閱，則必須指定 UNC 網路共用 (例如 \\\\<*電腦名稱>*\snapshot) 而不是本機路徑。  
+ 透過 [設定散發精靈] 或 [新增發行集精靈] 設定「散發者」時，快照集資料夾預設為本機路徑：X:\Program Files\Microsoft SQL Server\\*\<執行個體>* \MSSQL\ReplData。 如果您使用的是遠端「散發者」或提取訂閱，則必須指定 UNC 網路共用 (例如 \\\\<*電腦名稱>* \snapshot) 而不是本機路徑。  
   
  授與快照集資料夾存取權限時，您必須依據存取資料夾的方式授與它們權限。 下列對話方塊索引標籤用於 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows 2003：  
   

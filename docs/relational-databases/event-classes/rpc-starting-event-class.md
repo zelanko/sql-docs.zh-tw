@@ -1,34 +1,30 @@
 ---
-title: "RPC:Starting 事件類別 | Microsoft 文件"
-ms.custom: 
+title: RPC:Starting 事件類別 | Microsoft 文件
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
-ms.prod_service: database-engine, sql-database
-ms.service: 
-ms.component: event-classes
-ms.reviewer: 
+ms.prod: sql
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: supportability
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - RPC:Starting event class
 ms.assetid: 1d5c3e53-0104-41f7-ab8b-732462d859f8
-caps.latest.revision: 
+caps.latest.revision: 32
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: aef42040d1ead1ac131cd30bac21b9a743342a7f
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 89611ea54b64eb02bfa92badd78f5d99370211c8
+ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="rpcstarting-event-class"></a>RPC:Starting 事件類別
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-RPC:Starting 事件類別表示已經啟動遠端程序呼叫。  
+  RPC:Starting 事件類別表示已經啟動遠端程序呼叫。  
   
 ## <a name="rpcstarting-event-class-data-columns"></a>RPC:Starting 事件類別資料行  
   

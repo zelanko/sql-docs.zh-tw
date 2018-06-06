@@ -1,16 +1,15 @@
 ---
-title: "在相同查詢中使用 HAVING 和 WHERE 子句 | Microsoft Docs"
-ms.custom: 
+title: 在相同查詢中使用 HAVING 和 WHERE 子句 | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
 ms.component: ssms-visual-db
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: tools-ssms
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ssms
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - search criteria [SQL Server], excluding rows
 - search criteria [SQL Server], WHERE clause
@@ -22,19 +21,19 @@ helpviewer_keywords:
 - WHERE clause, search criteria
 - excluding rows
 ms.assetid: 1e07cf56-b4b7-4c49-8ddd-c276812a7148
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: Active
-ms.openlocfilehash: ab0f50e4144fa734290adf39d3de11c709208ddc
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.openlocfilehash: acbc220dfc25f8e12f9e343cabfa4a063438946f
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="use-having-and-where-clauses-in-the-same-query-visual-database-tools"></a>在相同查詢中使用 HAVING 和 WHERE 子句 (Visual Database Tools)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 在某些情況下，將條件套用到整個群組 (使用 HAVING 子句) 之前，您可能會想排除群組中的個別資料列 (使用 WHERE 子句)。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+在某些情況下，將條件套用到整個群組 (使用 HAVING 子句) 之前，您可能會想排除群組中的個別資料列 (使用 WHERE 子句)。  
   
 HAVING 子句類似 WHERE 子句，但是只適用於整個群組 (也就是在結果集中表示群組的資料列)，而 WHERE 子句則適用於個別資料列。 查詢可以同時包含 WHERE 子句和 HAVING 子句。 在此情況下：  
   

@@ -1,33 +1,29 @@
 ---
-title: "支援的版本與版本升級 | Microsoft Docs"
-ms.custom: 
+title: 支援的版本與版本升級 | Microsoft Docs
+ms.custom: ''
 ms.date: 06/27/2016
-ms.prod: sql-non-specified
-ms.prod_service: database-engine
-ms.service: 
-ms.component: install-windows
-ms.reviewer: 
+ms.prod: sql
+ms.prod_service: install
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- setup-install
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: install
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - components [SQL Server], adding to existing installations
 - versions [SQL Server], upgrading
 - upgrading SQL Server, upgrades supported
 - cross-language support
 ms.assetid: 702359c4-6ca9-42a8-860c-a95a802898a1
-caps.latest.revision: 
+caps.latest.revision: 148
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.workload: Active
-ms.openlocfilehash: 7af72417c49f799dcb1aa9c36fa3bed8516e25d1
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: b83f288a50272a41d2d75264415c588b3e8f1ba2
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="supported-version-and-edition-upgrades"></a>支援的版本與版本升級
 
@@ -51,7 +47,7 @@ ms.lasthandoff: 02/09/2018
   
 -   不支援 [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] 的跨版本執行個體。 在 [!INCLUDE[ssDE](../../includes/ssde-md.md)]執行個體內， [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 和 [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)]元件的版本號碼都必須相同。  
   
--   SQL Server 2016 僅適用於 64 位元平台。 不支援跨平台升級。 您無法使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝程式，將 32 位元的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體升級到原生 64 位元。 不過，您還是可以備份或卸離 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]之 32 位元執行個體的資料庫，而且如果複寫時未發行這些資料庫，也可以將它們還原或附加至 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (64 位元) 的新執行個體。 您必須在 master、msdb 和 model 系統資料庫中重新建立任何登入及其他使用者物件。  
+-   [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] 僅適用於 64 位元平台。 不支援跨平台升級。 您無法使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝程式，將 32 位元的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體升級到原生 64 位元。 不過，您還是可以備份或卸離 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]之 32 位元執行個體的資料庫，而且如果複寫時未發行這些資料庫，也可以將它們還原或附加至 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (64 位元) 的新執行個體。 您必須在 master、msdb 和 model 系統資料庫中重新建立任何登入及其他使用者物件。  
   
 -   您無法在升級現有的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體期間加入新功能。 將 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的執行個體升級至 [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] 之後，可使用 [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] 安裝程式加入功能。 如需詳細資訊，請參閱[將功能加入至 SQL Server 2016 的執行個體 &#40;安裝程式&#41;](../../database-engine/install-windows/add-features-to-an-instance-of-sql-server-2016-setup.md)。  
  
@@ -65,17 +61,15 @@ ms.lasthandoff: 02/09/2018
  
 SQL Server 2016 支援從下列版本的 SQL Server 進行升級：
  
-- SQL Server 2008 SP4 或更新版本
-- SQL Server 2008 R2 SP3 或更新版本
-- SQL Server 2012 SP2 或更新版本
-- SQL Server 2014 或更新版本 
+- [!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)] SP4 或更新版本
+- [!INCLUDE[ssKilimanjaro](../../includes/ssKilimanjaro-md.md)] SP3 或更新版本
+- [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP2 或更新版本
+- [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 或更新版本 
  
-
-  
 > [!NOTE]  
->  若要升級 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 上的資料庫，請參閱 [2005 的支援](#SupportFor2005)。  
+> 若要升級 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 上的資料庫，請參閱 [2005 的支援](#SupportFor2005)。  
   
- 下表列出從舊版 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 升級至 [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] 的支援案例。  
+下表列出從舊版 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 升級至 [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] 的支援案例。  
   
 |升級來源|支援的升級路徑|  
 |------------------|----------------------------|  
@@ -102,7 +96,7 @@ SQL Server 2016 支援從下列版本的 SQL Server 進行升級：
 |[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP2 商業智慧|[!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Enterprise <br/> |  
 |[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP2 Evaluation|[!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Evaluation <br/> <br/> [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Enterprise <br/><br/> [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Standard <br/> <br/> [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Web <br/> <br/> [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Developer|  
 |[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Enterprise|[!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Enterprise <br/> |  
-|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Developer|[!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] 開發人員 <br/> <br/> [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Standard <br/> <br/> [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Web <br/> <br/> [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Enterprise <br/> |  
+|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Developer|[!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Developer <br/> <br/> [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Standard <br/> <br/> [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Web <br/> <br/> [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Enterprise <br/> |  
 |[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Standard|[!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Enterprise <br/><br/> [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Standard|  
 |[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Web|[!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Enterprise <br/><br/> [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Standard <br/> <br/> [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Web|  
 |[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Express |[!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Enterprise <br/><br/> [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Standard <br/> <br/> [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Web <br/> <br/> [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Express <br/> <br/> [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Developer|  
@@ -112,10 +106,9 @@ SQL Server 2016 支援從下列版本的 SQL Server 進行升級：
 |[!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] Developer |[!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Enterprise | 
 
  \* Microsoft 對於從候選版軟體升級的支援是專門針對參與 Technology Adoption Program (TAP) 的客戶。 
-
    
 ###  <a name="SupportFor2005"></a> [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] 對 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]  
- 本節將討論 [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] 對 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 的支援。 在 [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] 中，您將能夠進行下列作業：  
+本節將討論 [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] 對 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 的支援。 在 [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] 中，您將能夠進行下列作業：  
   
 -   將 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 資料庫 (mdf/ldf 檔案) 附加到 [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] 的 Database Engine 執行個體。  
   
@@ -123,9 +116,10 @@ SQL Server 2016 支援從下列版本的 SQL Server 進行升級：
   
 -   備份 [!INCLUDE[ssASversion2005](../../includes/ssasversion2005-md.md)] Cube 並在 [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)]上還原。  
   
- 當 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 資料庫升級到 [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] 時，資料庫的相容性層級將會從 90 變更為 100。 (在 [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] 中，資料庫相容性層級的有效值為 100、110、120 和 130。)[ALTER DATABASE 相容性層級 &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md) 中有討論相容性層級變更如何影響 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 應用程式的情形。  
+> [!NOTE]  
+> 當 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 資料庫升級到 [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] 時，資料庫的相容性層級將會從 90 變更為 100。 在 [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] 中，資料庫相容性層級的有效值為 100、110、120 和 130。 [ALTER DATABASE 相容性層級 &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md) 中有討論相容性層級變更如何影響 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 應用程式的情形。  
   
- 未在上面清單中指定的任何情況都不受支援，包含但不限於以下項目：  
+未在上面清單中指定的任何情況都不受支援，包含但不限於以下項目：  
   
 -   在相同電腦上安裝 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 和 [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] (並存安裝)。  
   
@@ -148,9 +142,9 @@ SQL Server 2016 支援從下列版本的 SQL Server 進行升級：
 -   對 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 協力廠商自訂 Integration Services 元件的支援，例如執行和升級。  
   
 ## <a name="includesssql15-mdincludessssql15-mdmd-edition-upgrade"></a>[!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] 版本升級  
- 下表列出 [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)]中支援的版本升級案例。  
+下表列出 [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)]中支援的版本升級案例。  
   
- 如需如何執行版本升級的逐步指示，請參閱[升級為不同的 SQL Server 2016 版本 &#40;安裝程式&#41;](../../database-engine/install-windows/upgrade-to-a-different-edition-of-sql-server-setup.md)。  
+如需如何執行版本升級的逐步指示，請參閱[升級為不同的 SQL Server 2016 版本 &#40;安裝程式&#41;](../../database-engine/install-windows/upgrade-to-a-different-edition-of-sql-server-setup.md)。  
   
 |升級來源|升級目標|  
 |------------------|----------------|  
@@ -161,7 +155,7 @@ SQL Server 2016 支援從下列版本的 SQL Server 進行升級：
 |[!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Web|[!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Enterprise (Server+CAL 或 Core 授權) <br/><br/> [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Standard|  
 |[!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Express*|[!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Enterprise (Server+CAL 或 Core 授權) <br/><br/> [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Developer <br/> <br/> [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Standard <br/> <br/> [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Web|  
   
- 此外，您也可以在 [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Enterprise (Server+CAL 授權) 和 [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Enterprise (Core 授權) 之間執行版本升級：  
+此外，您也可以在 [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Enterprise (Server+CAL 授權) 和 [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Enterprise (Core 授權) 之間執行版本升級：  
   
 |升級前版本|升級後版本|  
 |--------------------------|------------------------|  
@@ -176,16 +170,14 @@ SQL Server 2016 支援從下列版本的 SQL Server 進行升級：
   
 -   [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Developer 至 [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Standard 或 Evaluation。  
   
--   [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Standard 至 [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Evaluation。  
+-   [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Standard 變更至 [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Evaluation。  
   
--   [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Evaluation 至 [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Standard。  
+-   [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Evaluation 變更至 [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Standard。  
   
 ## <a name="see-also"></a>另請參閱  
 
- [SQL Server 2016 的版本及支援功能](../../sql-server/editions-and-supported-features-for-sql-server-2016.md)
- 
- [安裝 SQL Server 2016 的硬體與軟體需求](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)   
- 
- [升級為 SQL Server 2016](../../database-engine/install-windows/upgrade-sql-server.md)  
+[SQL Server 2016 的版本及支援功能](../../sql-server/editions-and-supported-features-for-sql-server-2016.md)     
+[安裝 SQL Server 2016 的硬體與軟體需求](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)     
+[升級為 SQL Server 2016](../../database-engine/install-windows/upgrade-sql-server.md)    
   
   

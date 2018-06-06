@@ -1,30 +1,30 @@
 ---
-title: "Microsoft Azure 中的 SQL Server 資料檔案 | Microsoft Docs"
-ms.custom: 
+title: Microsoft Azure 中的 SQL Server 資料檔案 | Microsoft Docs
+ms.custom: ''
 ms.date: 10/02/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
 ms.component: databases
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: 38ffd9c2-18a5-43d2-b674-e425addec4e4
-caps.latest.revision: 
+caps.latest.revision: 26
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 8c86ddf9555dbdac83821d7f16a7000415ec7b2d
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 8f0fb9a3b956a6ae1be07c3fc8337d83ebb4ad34
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sql-server-data-files-in-microsoft-azure"></a>Microsoft Azure 中的 SQL Server 資料檔案
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] ![Azure 上的資料檔案](../../relational-databases/databases/media/data-files-on-azure.png "Azure 上的資料檔案")  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  ![Azure 上的資料檔案](../../relational-databases/databases/media/data-files-on-azure.png "Azure 上的資料檔案")  
   
  Microsoft Azure 中的 SQL Server 資料檔案可提供將 SQL Server 資料庫檔案儲存為 Microsoft Azure Blob 的原生支援。 它可讓您在內部部署執行的 SQL Server 或 Microsoft Azure 虛擬機器執行的 SQL Server 中建立資料庫，以將您的 Microsoft Azure Blob 儲存體資料儲存在專用儲存位置。 此增強功能特別簡化了使用卸離和附加作業，在電腦之間移動資料庫的工作。 此外，它可讓您還原至 Microsoft Azure 儲存體或從中還原，為您的資料庫備份檔案提供替代儲存位置。 因此，它會針對資料虛擬化、資料移動、安全性和可用性提供許多優點，進而實現許多混合式方案，而且成本低廉、維護簡單，即可達到高可用性和彈性調整的效果。
  
@@ -132,7 +132,7 @@ ON
  從 SQL Server 2014 開始，已加入新的 SQL Server 物件，以用於 Azure 儲存體功能中的 SQL Server 資料檔案。 這個新的 SQL Server 物件稱為 [SQL Server:HTTP_STORAGE_OBJECT](../../relational-databases/performance-monitor/sql-server-http-storage-object.md) ，而且系統監視器可以在使用 Windows Azure 儲存體執行 SQL Server 時，使用此物件來監視活動。  
   
 ### <a name="sql-server-management-studio-support"></a>SQL Server Management Studio 支援  
- SQL Server Management Studio 可讓您經由許多對話方塊視窗使用此功能。 例如，您可以在幾個對話方塊視窗中，輸入儲存體容器的 URL 路徑 (例如 https://teststorageaccnt.blob.core.windows.net/testcontainer/)
+ SQL Server Management Studio 可讓您經由許多對話方塊視窗使用此功能。 例如，您可以鍵入儲存體容器的 URL 路徑，例如 https://teststorageaccnt.blob.core.windows.net/testcontainer/：
  
  作為**路徑**，例如 [新增資料庫]、[附加資料庫] 和 [還原資料庫]。 如需詳細資訊，請參閱[教學課程：搭配使用 Microsoft Azure Blob 儲存體服務和 SQL Server 2016 資料庫](../tutorial-use-azure-blob-storage-service-with-sql-server-2016.md)。  
   

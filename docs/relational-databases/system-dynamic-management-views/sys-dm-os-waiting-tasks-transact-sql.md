@@ -1,16 +1,13 @@
 ---
-title: "sys.dm_os_waiting_tasks (TRANSACT-SQL) |Microsoft 文件"
-ms.custom: 
+title: sys.dm_os_waiting_tasks (TRANSACT-SQL) |Microsoft 文件
+ms.custom: ''
 ms.date: 03/13/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
-ms.component: dmv's
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: system-objects
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - dm_os_waiting_tasks
@@ -22,16 +19,16 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_os_waiting_tasks dynamic management view
 ms.assetid: ca5e6844-368c-42e2-b187-6e5f5afc8df3
-caps.latest.revision: 
+caps.latest.revision: 30
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 5b3a3122f9f0908e063685941f58bb03281659e0
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: a0174fbe566afa6eec5c6cb208dacfed00fcd735
+ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 05/23/2018
 ---
 # <a name="sysdmoswaitingtasks-transact-sql"></a>sys.dm_os_waiting_tasks (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -60,13 +57,13 @@ ms.lasthandoff: 02/03/2018
   
  **執行緒集區資源擁有者：**  
   
--   threadpool id=scheduler\<hex-address>  
+-   執行緒集區識別碼 = 排程器\<十六進位位址 >  
   
  **平行查詢資源擁有者：**  
   
--   exchangeEvent id={Port|Pipe}\<hex-address> WaitType=\<exchange-wait-type> nodeId=\<exchange-node-id>  
+-   exchangeEvent id = {通訊埠 |管道}\<十六進位位址 > WaitType =\<exchange 等候類型 > nodeId =\<exchange 節點識別碼 >  
   
- **Exchange-wait-type:**  
+ **Exchange 等候類型：**  
   
 -   e_waitNone  
   
@@ -84,7 +81,7 @@ ms.lasthandoff: 02/03/2018
   
  **鎖定資源擁有者：**  
   
--   \<type-specific-description> id=lock\<lock-hex-address> mode=\<mode> associatedObjectId=\<associated-obj-id>  
+-   \<型別特定描述 > id = 鎖定\<鎖定 hex 位址 > 模式 =\<模式 > associatedObjectId =\<相關聯 obj 識別碼 >  
   
      **\<型別特定描述 > 可以是：**  
   
@@ -116,11 +113,11 @@ ms.lasthandoff: 02/03/2018
   
  **外部資源擁有者：**  
   
--   External ExternalResource=\<wait-type>  
+-   外部 ExternalResource =\<等候類型 >  
   
  **一般資源擁有者：**  
   
--   TransactionMutex TransactionInfo Workspace=\<workspace-id>  
+-   工作區中 TransactionInfo TransactionMutex =\<工作區識別碼 >  
   
 -   Mutex  
   
@@ -134,15 +131,16 @@ ms.lasthandoff: 02/03/2018
   
  **閂鎖資源擁有者：**  
   
--   \<db-id>:\<file-id>:\<page-in-file>  
+-   \<資料庫識別碼 >:\<檔案識別碼 >:\<分頁中檔案 >  
   
--   \<GUID>  
+-   \<GUID &GT;  
   
 -   \<閂鎖類別 > (\<閂鎖位址 >)  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permissions
+
 在[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]，需要`VIEW SERVER STATE`權限。   
-在[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]Premium 層需要`VIEW DATABASE STATE`資料庫的權限。 在[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]標準和基本層，需要**伺服器管理員**或**Azure Active Directory 系統管理員**帳戶。  
+在[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]，需要`VIEW DATABASE STATE`資料庫的權限。   
  
 ## <a name="example"></a>範例
 這個範例會識別已封鎖工作階段。  執行[!INCLUDE[tsql](../../includes/tsql-md.md)]以查詢[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]。
@@ -152,7 +150,7 @@ WHERE blocking_session_id IS NOT NULL;
 ``` 
   
 ## <a name="see-also"></a>另請參閱  
-  [SQL Server 作業系統相關的動態管理檢視 &#40;TRANSACT-SQL &#41;](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)  
+  [SQL Server 作業系統相關的動態管理檢視&#40;Transact SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)  
   
   
 

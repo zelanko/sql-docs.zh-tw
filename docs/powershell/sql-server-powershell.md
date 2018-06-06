@@ -1,27 +1,23 @@
 ---
 title: SQL Server PowerShell | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 08/04/2016
-ms.prod: sql-non-specified
-ms.prod_service: powershell
-ms.service: 
-ms.component: powershell
-ms.reviewer: 
+ms.prod: sql
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: database-engine
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: scripting
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: 89b70725-bbe7-4ffe-a27d-2a40005a97e7
-caps.latest.revision: "10"
+caps.latest.revision: 10
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: Active
-ms.openlocfilehash: ab19a8a86bba6cbdacbc0c7de1b44d42a263b692
-ms.sourcegitcommit: 779f3398e4e3f4c626d81ae8cedad153bee69540
+ms.openlocfilehash: 9eeb40333c719288af19655b61fdebeb88faa370
+ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/16/2018
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="sql-server-powershell"></a>SQL Server PowerShell
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -39,7 +35,7 @@ ms.lasthandoff: 01/16/2018
 
 **如果您的 PowerShell 指令碼匯入 SQLPS 模組，請更新指令碼。**
 
-如果您有任何執行 `Import-Module -Name SQLPS` 的 PowerShell 指令碼，並想充分利用新的提供者功能和新的 Cmdlet，您必須將其變更為 `Import-Module -Name SqlServer`。 新的模組會安裝到 `%Program Files\WindowsPowerShell\Modules\SqlServer`。 因此，您不需要更新 $env:PSModulePath 變數。 如果您有使用名為 **SqlServer** 之第三方或社群版模組的指令碼，請使用 Prefix 參數來避免發生名稱衝突。 SQL Server Agent 所使用的模組沒有任何變更。 
+如果您有任何執行 `Import-Module -Name SQLPS` 的 PowerShell 指令碼，並想充分利用新的提供者功能和新的 Cmdlet，您必須將其變更為 `Import-Module -Name SqlServer`。 新的模組會安裝到 `%ProgramFiles%\WindowsPowerShell\Modules\SqlServer` 資料夾。 因此，您不需要更新 $env:PSModulePath 變數。 如果您有使用名為 **SqlServer** 之第三方或社群版模組的指令碼，請使用 Prefix 參數來避免發生名稱衝突。 SQL Server Agent 所使用的模組沒有任何變更。 
 
   
 ## <a name="sql-server-powershell-components"></a>SQL Server PowerShell 元件  

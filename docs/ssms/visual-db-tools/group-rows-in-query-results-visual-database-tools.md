@@ -1,34 +1,33 @@
 ---
-title: "將查詢結果中的資料列分組 (Visual Database Tools) | Microsoft Docs"
-ms.custom: 
+title: 將查詢結果中的資料列分組 (Visual Database Tools) | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
 ms.component: ssms-visual-db
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: tools-ssms
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ssms
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - summarizing table subsets
 - grouping rows
 - grouping query results
 ms.assetid: b07082d5-4d55-4903-9af9-4c470554c6d3
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: f5de6f1138be5413cfc7112d697ea662b04b9d44
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.openlocfilehash: 72ef5527dd8cc1c6feae1eeb41e09b479425810c
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="group-rows-in-query-results-visual-database-tools"></a>群組查詢結果中的資料列 (Visual Database Tools)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 如果您要建立小計，或顯示資料表子集的其他摘要資訊，請使用彙總查詢 (Aggregate Query) 建立群組。 每個群組都會針對資料表中具有相同值的所有資料列摘要資料。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+如果您要建立小計，或顯示資料表子集的其他摘要資訊，請使用彙總查詢 (Aggregate Query) 建立群組。 每個群組都會針對資料表中具有相同值的所有資料列摘要資料。  
   
 例如，您可能想查看 `titles` 資料表中某本書的平均價格，但是想依照簽發者顯示結果。 若要這麼做，請依照簽發者將查詢分組 (例如， `pub_id`)。 結果查詢輸出可能如下所示：  
   

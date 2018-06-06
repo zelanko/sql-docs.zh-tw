@@ -1,35 +1,25 @@
 ---
-title: "VarP (MDX) |Microsoft 文件"
-ms.custom: 
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: language-reference
-f1_keywords: VARP
-dev_langs: kbMDX
-helpviewer_keywords: VarP function [MDX]
-ms.assetid: feca648d-bbc8-44c8-9a0e-38f66d914c72
-caps.latest.revision: "30"
-author: Minewiskan
+title: VarP (MDX) |Microsoft 文件
+ms.date: 05/30/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: mdx
+ms.topic: reference
 ms.author: owend
-manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: b149d346c3caba0c573f5e3f85ad6647b2e178b0
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: ec2d624857bf3e7fc948188f3fd205d248290c08
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34582580"
 ---
 # <a name="varp-mdx"></a>VarP (MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
-  傳回使用偏誤的母體公式，在集合評估後數值運算式的母體擴展變異數 (除以 *n* -1)。  
+  傳回使用偏誤的母體公式，在集合評估後數值運算式的母體擴展變異數 (除以*n*-1)。  
   
 ## <a name="syntax"></a>語法  
   
@@ -50,7 +40,7 @@ VarP(Set_Expression [ ,Numeric_Expression ] )
   
  **VarP**函數使用偏誤的母體公式，而[Var](../mdx/var-mdx.md)函式會使用非偏誤的母體公式。  
   
-## <a name="see-also"></a>請參閱  
- [MDX 函數參考 &#40;MDX &#41;](../mdx/mdx-function-reference-mdx.md)  
+## <a name="see-also"></a>另請參閱  
+ [MDX 函數參考&#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

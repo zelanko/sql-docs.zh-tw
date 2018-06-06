@@ -1,31 +1,28 @@
 ---
-title: "結構化查詢語言 (SQL) |Microsoft 文件"
-ms.custom: 
+title: 結構化查詢語言 (SQL) |Microsoft 文件
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
-ms.component: odbc
-ms.reviewer: 
+ms.prod: sql
+ms.prod_service: connectivity
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: connectivity
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - SQL [ODBC]
 - SQL [ODBC], about SQL
 - ODBC [ODBC], SQL
 ms.assetid: bebfd93e-0dc0-46b3-a531-518beb7ea976
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
-ms.workload: On Demand
-ms.openlocfilehash: f51c5b639649a3d21ce515a1d4082e84be4f7329
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+manager: craigg
+ms.openlocfilehash: e28770a1532d8d52ec8069d00154c4b377628d1f
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="structured-query-language-sql"></a>結構化查詢語言 (SQL) (Structured Query Language (SQL))
 一般 DBMS 可讓使用者儲存、 存取及組織且有效率的方式修改資料。 一開始的 Dbms 使用者是程式設計人員。 存取儲存的資料需要 COBOL 之類的程式設計語言中撰寫程式。 這些程式通常已寫入來向非技術性使用者容易使用的介面，同時存取資料本身所需的經驗豐富的程式設計人員的服務。 不會隨便被存取的資料不太實用。  

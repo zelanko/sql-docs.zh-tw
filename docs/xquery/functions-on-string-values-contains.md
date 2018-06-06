@@ -1,16 +1,15 @@
 ---
-title: "contains 函數 (XQuery) |Microsoft 文件"
-ms.custom: 
+title: contains 函數 (XQuery) |Microsoft 文件
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
-ms.service: 
+ms.prod: sql
+ms.prod_service: sql
 ms.component: xquery
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,21 +19,20 @@ helpviewer_keywords:
 - contains function (XQuery)
 - fn:contains function
 ms.assetid: 2c88c015-04fc-429b-84b2-835596a28b65
-caps.latest.revision: 
+caps.latest.revision: 42
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 8fb2138cf73d7904785176a2acfdc0fb3e81bf0b
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: fceddcf918a99667e8c92fadc7aeddca59bb21a8
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="functions-on-string-values---contains"></a>函式的字串值-包含
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  傳回值的類型 xs: boolean，指出是否值*$arg1*包含所指定的字串值*$arg2*。  
+  傳回值的類型 xs: boolean，指出是否值 *$arg1*包含所指定的字串值 *$arg2*。  
   
 ## <a name="syntax"></a>語法  
   
@@ -51,18 +49,18 @@ fn:contains ($arg1 as xs:string?, $arg2 as xs:string?) as xs:boolean?
  要尋找的子字串。  
   
 ## <a name="remarks"></a>備註  
- 如果值*$arg2*是零長度字串，此函數會傳回**True**。 如果值*$arg1*是零長度字串和值*$arg2*不是零長度字串，此函數會傳回**False**。  
+ 如果值 *$arg2*是零長度字串，此函數會傳回**True**。 如果值 *$arg1*是零長度字串和值 *$arg2*不是零長度字串，此函數會傳回**False**。  
   
- 如果值*$arg1*或*$arg2*是空的序列，引數會當成零長度字串。  
+ 如果值 *$arg1*或 *$arg2*是空的序列，引數會當成零長度字串。  
   
  contains() 函數會使用 XQuery 的預設 Unicode 字碼元素定序來進行字串比較。  
   
- 指定的子字串值*$arg2*必須小於或等於 4000 個字元。 如果指定的值大於 4000 個字元，就會發生動態錯誤狀況，而且 contains （） 函數會傳回空的序列，而不是布林值**True**或**False**。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 不會針對 XQuery 運算式引發動態錯誤。  
+ 指定的子字串值 *$arg2*必須小於或等於 4000 個字元。 如果指定的值大於 4000 個字元，就會發生動態錯誤狀況，而且 contains （） 函數會傳回空的序列，而不是布林值**True**或**False**。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 不會針對 XQuery 運算式引發動態錯誤。  
   
  若要取得不區分大小寫的比較，[大寫](../xquery/functions-on-string-values-upper-case.md)或 lower-case 函式可使用。  
   
 ## <a name="supplementary-characters-surrogate-pairs"></a>補充字元 (Surrogate 字組)  
- XQuery 函式中 Surrogate 字組的行為相依於資料庫相容性層級，而且在某些情況下，還相依於函式的預設命名空間 URI。 如需詳細資訊，請參閱主題中的 「 XQuery 函式是 Surrogate 感知 」 區段[SQL Server 2016 中對於 Database Engine 功能的突破性變更](../database-engine/breaking-changes-to-database-engine-features-in-sql-server-2016.md)。 另請參閱[ALTER DATABASE 相容性層級 &#40;TRANSACT-SQL &#41;](../t-sql/statements/alter-database-transact-sql-compatibility-level.md)和[Collation and Unicode Support](../relational-databases/collations/collation-and-unicode-support.md)。  
+ XQuery 函式中 Surrogate 字組的行為相依於資料庫相容性層級，而且在某些情況下，還相依於函式的預設命名空間 URI。 如需詳細資訊，請參閱主題中的 「 XQuery 函式是 Surrogate 感知 」 區段[SQL Server 2016 中對於 Database Engine 功能的突破性變更](../database-engine/breaking-changes-to-database-engine-features-in-sql-server-2016.md)。 另請參閱[ALTER DATABASE 相容性層級&#40;TRANSACT-SQL&#41; ](../t-sql/statements/alter-database-transact-sql-compatibility-level.md)和[Collation and Unicode Support](../relational-databases/collations/collation-and-unicode-support.md)。  
   
 ## <a name="examples"></a>範例  
  本主題提供 XQuery 範例，針對 AdventureWorks 資料庫中的各種 xml 類型資料行中儲存 XML 執行個體。  

@@ -1,30 +1,28 @@
 ---
-title: "緩衝集區延伸模組 | Microsoft Docs"
-ms.custom: 
+title: 緩衝集區延伸模組 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
-ms.prod_service: database-engine
-ms.service: 
-ms.component: configure-windows
-ms.reviewer: 
+ms.prod: sql
+ms.prod_service: high-availability
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: database-engine
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: configuration
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: 909ab7d2-2b29-46f5-aea1-280a5f8fedb4
-caps.latest.revision: "23"
+caps.latest.revision: 23
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: e1d856188d2266ebb7321c0f0e75ee7f23950dff
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 5aa357b9e5afaf48a99b30fd7215cf4b1dbb7b03
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="buffer-pool-extension"></a>緩衝集區擴充
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 在 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 中引進緩衝集區延伸，可將非動態隨機存取記憶體 (也就是固態硬碟) 擴充完全整合到[!INCLUDE[ssDE](../../includes/ssde-md.md)]緩衝集區，如此能大幅提升 I/O 輸送量。 並非每個 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本都有提供緩衝集區擴充。 如需詳細資訊，請參閱 [SQL Server 2016 版本支援的功能](~/sql-server/editions-and-supported-features-for-sql-server-2016.md)。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  在 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]中導入緩衝集區擴充，可將非動態隨機存取記憶體 (也就是固態硬碟) 擴充完全整合到 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 緩衝集區，如此能大幅提升 I/O 輸送量。 並非每個 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本都有提供緩衝集區擴充。 如需詳細資訊，請參閱 [SQL Server 2016 版本支援的功能](~/sql-server/editions-and-supported-features-for-sql-server-2016.md)。  
   
 ## <a name="benefits-of-the-buffer-pool-extension"></a>緩衝集區擴充的優點  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫的主要用途是為了儲存和擷取資料，因此大量磁碟 I/O 是 Database Engine 的核心特性。 因為磁碟 I/O 作業會秏用許多資源，而且相對上需要較長的時間才能完成，所以 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 非常著重提高 I/O 的效率。 緩衝集區可做為 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的主要記憶體配置來源。 緩衝區管理是達成這種效率的重要元件。 緩衝區管理元件包含兩種機制：可存取和更新資料庫頁面的緩衝區管理員，以及可減少資料庫檔案 I/O 的緩衝集區快取。  

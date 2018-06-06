@@ -1,28 +1,17 @@
 ---
-title: "資料科學案例和解決方案範本 |Microsoft 文件"
-ms.custom: 
-ms.date: 08/22/2017
-ms.reviewer: 
-ms.suite: sql
-ms.prod: machine-learning-services
-ms.prod_service: machine-learning-services
-ms.component: 
-ms.technology: 
-ms.tgt_pltfrm: 
+title: 資料科學案例和解決方案範本 （SQL Server 機器學習） |Microsoft 文件
+ms.prod: sql
+ms.technology: machine-learning
+ms.date: 04/15/2018
 ms.topic: tutorial
-applies_to:
-- SQL Server 2016
-ms.assetid: 49e54fa9-9b28-44ba-b256-06dad4e8dece
-caps.latest.revision: 
-author: jeannt
-ms.author: jeannt
-manager: cgronlund
-ms.workload: Inactive
-ms.openlocfilehash: 5317f42d3acd85f7865f79405b2daf12793a7de4
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+author: HeidiSteen
+ms.author: heidist
+manager: cgronlun
+ms.openlocfilehash: d67fd15c44d188870989f2ad6498733c5901fb9d
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="data-science-scenarios-and-solution-templates"></a>資料科學案例和方案範本
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -41,7 +30,7 @@ ms.lasthandoff: 02/11/2018
 
 ## <a name="fraud-detection"></a>詐騙偵測
 
-[線上詐騙偵測範本 (SQL Server R Services)](https://github.com/Microsoft/SQL-Server-R-Services-Samples/blob/master/FraudDetection/Introduction.md)
+[線上詐騙偵測範本 (SQL Server R Services)](https://github.com/Microsoft/r-server-fraud-detection)
 
 **項目：**偵測詐騙交易的功能，請務必針對線上企業。 若要降低費用後遺失，企業需要快速識別使用遭竊的支付工具或認證所做的交易。 發現詐騙交易時，企業通常會盡快採取措施來封鎖特定帳戶，以避免進一歩損失。 在此案例中，您會學習如何使用線上購物的交易資料來識別可能的詐騙。
 

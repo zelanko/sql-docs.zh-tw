@@ -1,30 +1,20 @@
 ---
-title: "Count （集合） (MDX) |Microsoft 文件"
-ms.custom: 
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: language-reference
-f1_keywords: COUNT
-dev_langs: kbMDX
-helpviewer_keywords: Count function [MDX]
-ms.assetid: 22f530e9-f8e1-4608-affa-9a2bc0821591
-caps.latest.revision: "39"
-author: Minewiskan
+title: Count （集合） (MDX) |Microsoft 文件
+ms.date: 05/30/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: mdx
+ms.topic: reference
 ms.author: owend
-manager: erikre
-ms.workload: On Demand
-ms.openlocfilehash: 41d5ff72346e95985b19812f194d266e8d5db165
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: 4da622ef883ed1fabba137b0d30adcbdd7e32ded
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34577600"
 ---
 # <a name="count-set-mdx"></a>Count (集合) (MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -47,12 +37,12 @@ Set_Expression.Count
  傳回集合的有效多維度運算式 (MDX) 運算式。  
   
 ## <a name="remarks"></a>備註  
- **Count （集合）**函式包含或排除空白資料格，根據使用的語法。 如果使用標準語法時，可以排除或包含使用空資料格**EXCLUDEEMPTY**或**INCLUDEEMPTY**分別旗標。 如果使用替代語法，此函數永遠會包括空資料格。  
+ **Count （集合）** 函式包含或排除空白資料格，根據使用的語法。 如果使用標準語法時，可以排除或包含使用空資料格**EXCLUDEEMPTY**或**INCLUDEEMPTY**分別旗標。 如果使用替代語法，此函數永遠會包括空資料格。  
   
  若要排除的一組計數中空白資料格，請使用標準語法與選擇性**EXCLUDEEMPTY**旗標。  
   
 > [!NOTE]  
->  **Count （集合）**函數預設會計算空白資料格。 相反地，**計數**函式在 OLE DB，它會計算一組預設排除空白資料格。  
+>  **Count （集合）** 函數預設會計算空白資料格。 相反地，**計數**函式在 OLE DB，它會計算一組預設排除空白資料格。  
   
 ## <a name="examples"></a>範例  
  下列範例會計算成員集合中的資料格數目，該成員集合由 Product 維度中 Model Name 屬性階層的子系組成。  
@@ -101,17 +91,17 @@ WHERE ([Geography].[State-Province].x,
   
 ```  
   
-## <a name="see-also"></a>請參閱  
- [計數 &#40; 維度 &#41;&#40;MDX &#41;](../mdx/count-dimension-mdx.md)   
- [計數 &#40;階層層級 &#41;&#40;MDX &#41;](../mdx/count-hierarchy-levels-mdx.md)   
- [計數 &#40;Tuple &#41;&#40;MDX &#41;](../mdx/count-tuple-mdx.md)   
- [DrilldownLevel &#40;MDX &#41;](../mdx/drilldownlevel-mdx.md)   
- [AddCalculatedMembers &#40;MDX &#41;](../mdx/addcalculatedmembers-mdx.md)   
- [Hierarchize &#40;MDX &#41;](../mdx/hierarchize-mdx.md)   
- [屬性 &#40;MDX &#41;](../mdx/properties-mdx.md)   
- [彙總 &#40;MDX &#41;](../mdx/aggregate-mdx.md)   
- [篩選 &#40;MDX &#41;](../mdx/filter-mdx.md)   
- [PrevMember &#40;MDX &#41;](../mdx/prevmember-mdx.md)   
- [MDX 函數參考 &#40;MDX &#41;](../mdx/mdx-function-reference-mdx.md)  
+## <a name="see-also"></a>另請參閱  
+ [計數&#40;維度&#41; &#40;MDX&#41;](../mdx/count-dimension-mdx.md)   
+ [計數&#40;階層層級&#41; &#40;MDX&#41;](../mdx/count-hierarchy-levels-mdx.md)   
+ [計數&#40;Tuple&#41; &#40;MDX&#41;](../mdx/count-tuple-mdx.md)   
+ [DrilldownLevel &#40;MDX&#41;](../mdx/drilldownlevel-mdx.md)   
+ [AddCalculatedMembers &#40;MDX&#41;](../mdx/addcalculatedmembers-mdx.md)   
+ [Hierarchize &#40;MDX&#41;](../mdx/hierarchize-mdx.md)   
+ [屬性&#40;MDX&#41;](../mdx/properties-mdx.md)   
+ [彙總&#40;MDX&#41;](../mdx/aggregate-mdx.md)   
+ [篩選&#40;MDX&#41;](../mdx/filter-mdx.md)   
+ [PrevMember &#40;MDX&#41;](../mdx/prevmember-mdx.md)   
+ [MDX 函數參考&#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

@@ -1,16 +1,15 @@
 ---
-title: "StartMode 屬性 （SqlService 類別） |Microsoft 文件"
-ms.custom: 
+title: StartMode 屬性 （SqlService 類別） |Microsoft 文件
+ms.custom: ''
 ms.date: 03/04/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
 ms.component: wmi
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - StartMode Property (SqlService Class)
@@ -20,20 +19,19 @@ apitype: MOFDef
 helpviewer_keywords:
 - StartMode property
 ms.assetid: c0c2c7f8-d4ae-44f2-ad8e-aecfcb7c2878
-caps.latest.revision: 
-author: JennieHubbard
-ms.author: jhubbard
+caps.latest.revision: 36
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: e2b21cd8bfa81fad84f34aa28a96f5a6b3c46e3c
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.openlocfilehash: d5f9ba82b7ef75fa9b2a6fff80dab8e0180d59f5
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="startmode-property-sqlservice-class"></a>StartMode 屬性 (SqlService 類別)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
-取得服務的啟動模式。  
+  取得服務的啟動模式。  
   
 ## <a name="syntax"></a>語法  
   

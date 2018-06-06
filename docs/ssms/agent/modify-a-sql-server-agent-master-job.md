@@ -1,36 +1,40 @@
 ---
-title: "修改 SQL Server Agent 主要作業 | Microsoft Docs"
-ms.custom: 
+title: 修改 SQL Server Agent 主要作業 | Microsoft Docs
+ms.custom: ''
 ms.date: 02/28/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
 ms.component: ssms-agent
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: tools-ssms
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ssms
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - jobs [SQL Server Agent], modifying
 - jobs [SQL Server Agent], master jobs
 - master SQL Server Agent job [SQL Server]
 ms.assetid: 4fd5e734-1a57-47d7-b3af-03a726b619a4
-caps.latest.revision: "3"
+caps.latest.revision: 3
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 1acf7887cbc193c8293a7a44ead5da9cbce7b329
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: fb4783a527c3fd9d516e6e2c560abdc9152e339e
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="modify-a-sql-server-agent-master-job"></a>修改 SQL Server Agent 主要作業
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 下列主題描述如何修改 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent 主要作業。  
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+
+> [!IMPORTANT]  
+> [Azure SQL Database 受控執行個體](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)目前支援多數 (但非全部) 的 SQL Server Agent 功能。 如需詳細資料，請參閱 [Azure SQL Database 受控執行個體與 SQL Server 之間的 T-SQL 差異](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)。
+
+下列主題描述如何修改 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent 主要作業。  
   
-[變更 SQL Server Agent 主要作業的排程詳細資料](../../ssms/agent/change-the-scheduling-details-for-a-sql-server-agent-master-job.md)  
+[Change the Scheduling Details for a SQL Server Agent Master Job](../../ssms/agent/change-the-scheduling-details-for-a-sql-server-agent-master-job.md)  
   
 [將步驟加入至 SQL Server Agent 主要作業](../../ssms/object/add-steps-to-a-sql-server-agent-master-job.md)  
   

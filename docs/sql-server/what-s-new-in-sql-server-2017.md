@@ -1,30 +1,31 @@
 ---
-title: "SQL Server 2017 的新功能 | Microsoft Docs"
-ms.custom: 
+title: SQL Server 2017 的新功能 | Microsoft Docs
+ms.custom: ''
 ms.date: 10/19/2017
-ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
-ms.service: 
+ms.prod: sql
+ms.prod_service: sql
 ms.component: sql-non-specified
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: server-general
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- server-general
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: 0b57f375-9242-4bb2-9d4b-c560d5a93524
-caps.latest.revision: "71"
+caps.latest.revision: 71
 author: craigg-msft
 ms.author: craigg
-manager: jhubbard
-ms.workload: Active
-ms.openlocfilehash: 445de7e87daf3d7e083532a06269d810f574fa96
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+manager: craigg
+monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
+ms.openlocfilehash: 3c433301c633813fb5d04f95ec5e2dd14a85bc6c
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="whats-new-in-sql-server-2017"></a>SQL Server 2017 的新功能
-[!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)] SQL Server 2017 邁出重要的一步，把 SQL Server 的強大功能整合到 Linux、以 Linux 為基礎的 Docker 容器和 Windows 中，將 SQL Server 推展成可選擇開發語言、資料類型、內部部署或雲端以及作業系統的平台。 本主題摘要說明特定功能區的新功能，並包含其他詳細資料的連結。 如需 Linux 上之 SQL Server 的詳細資訊，請參閱 [Linux 上的 SQL Server](https://docs.microsoft.com/sql/linux/) 文件
+[!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
+SQL Server 2017 將 SQL Server 的強大能力整合到 Linux、以 Linux 為基礎的 Docker 容器和 Windows 中，是讓 SQL Server 成為可選擇開發語言、資料類型、內部部署或雲端以及作業系統之平台的重要一步。 本主題摘要說明特定功能區的新功能，並包含其他詳細資料的連結。 如需 Linux 上之 SQL Server 的詳細資訊，請參閱 [Linux 上的 SQL Server](https://docs.microsoft.com/sql/linux/) 文件
 
 [![從 Evaluation Center 下載](../includes/media/download2.png)](http://go.microsoft.com/fwlink/?LinkID=829477) **試用看看：** [下載 SQL Server 2017 版 - 2017 年 10月：](http://go.microsoft.com/fwlink/?LinkID=829477)。
 
@@ -122,11 +123,13 @@ SQL Server 開發人員現在能夠存取廣大的 Python ML 及 AI 程式庫，
 
 如需詳細資訊，請參閱 [SQL Server Machine Learning 服務的新功能](~/advanced-analytics/what-s-new-in-sql-server-machine-learning-services.md)。
 
-## <a name="next-steps"></a>後續的步驟
+## <a name="next-steps"></a>後續步驟
 - 請參閱 [SQL Server 2017 版本資訊](sql-server-2017-release-notes.md)。
 - 了解 [Linux 上的 SQL Server 2017 新功能](https://docs.microsoft.com/sql/linux/sql-server-linux-whats-new)。
 - 了解 [SQL Server 2016 的新功能](what-s-new-in-sql-server-2016.md)。
 
 [!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]
+
+[!INCLUDE[contribute-to-content](../includes/paragraph-content/contribute-to-content.md)]
 
 ![MS_Logo_X-Small](../sql-server/media/ms-logo-x-small.png)

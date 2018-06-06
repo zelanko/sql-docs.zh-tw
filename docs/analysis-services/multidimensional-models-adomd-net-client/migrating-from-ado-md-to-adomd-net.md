@@ -1,33 +1,19 @@
 ---
-title: "從 ADO MD 移轉至 ADOMD.NET |Microsoft 文件"
-ms.custom: 
-ms.date: 02/14/2018
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- ADOMD.NET, migrating to
-- migrating ADO MD to ADOMD.NET
-- ADO MD migration [ADOMD.NET]
-ms.assetid: 8c760db3-c475-468e-948d-e5f599d985ad
-caps.latest.revision: 
-author: Minewiskan
+title: 從 ADO MD 移轉至 ADOMD.NET |Microsoft 文件
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: adomd
+ms.topic: conceptual
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 5cfe7226ee90f7333a5a80abcc0590212b15576e
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: e6d0e3acb77657bcac754b9e6b9392dc2971ce9c
+ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="migrating-from-ado-md-to-adomdnet"></a>從 ADO MD 移轉至 ADOMD.NET
   ADOMD.NET 程式庫類似於 ActiveX Data Objects Multidimensional (ADO MD) 程式庫，這個 ActiveX Data Objects (ADO) 程式庫的延伸模組是用來存取以元件物件模型 (COM) 為基礎的用戶端應用程式中的多維度資料。 ADO MD 可輕鬆地從 Unmanaged 語言 (例如 C++ 與 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Basic) 存取多維度資料。 ADOMD.NET 可輕鬆地從 Managed 語言 (例如 [!INCLUDE[msCoName](../../includes/msconame-md.md)] C# 與 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Basic .NET) 存取分析資料 (多維度與資料採礦)。 此外，ADOMD.NET 提供增強型中繼資料物件模型。  

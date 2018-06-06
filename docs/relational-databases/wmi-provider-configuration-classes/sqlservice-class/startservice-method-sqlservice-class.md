@@ -1,16 +1,15 @@
 ---
-title: "StartService 方法 （SqlService 類別） |Microsoft 文件"
-ms.custom: 
+title: StartService 方法 （SqlService 類別） |Microsoft 文件
+ms.custom: ''
 ms.date: 03/03/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
 ms.component: wmi
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - StartService Method (SqlService Class)
@@ -20,20 +19,19 @@ apitype: MOFDef
 helpviewer_keywords:
 - StartService method
 ms.assetid: 83dfb6bd-dbd5-45d8-aad2-a11926317f91
-caps.latest.revision: 
-author: JennieHubbard
-ms.author: jhubbard
+caps.latest.revision: 34
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 3698bd4f7b9817cf4a6bde946946723f4accc0fb
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.openlocfilehash: 0b102090d48a773c38776afb73a62f0431b9f076
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="startservice-method-sqlservice-class"></a>StartService 方法 (SqlService 類別)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
-嘗試將此服務置於它的啟動狀態。  
+  嘗試將此服務置於它的啟動狀態。  
   
 ## <a name="syntax"></a>語法  
   

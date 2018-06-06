@@ -1,30 +1,28 @@
 ---
-title: "評估 DB2 結構描述轉換 (DB2ToSQL) |Microsoft 文件"
-ms.prod: sql-non-specified
+title: 評估 DB2 結構描述轉換 (DB2ToSQL) |Microsoft 文件
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
 ms.component: ssma-db2
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ssma
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: 8892f5a4-72ba-4406-8649-7a9d67f4c1d9
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
-ms.workload: Inactive
-ms.openlocfilehash: 4ee5825c7a7df208baeccd27a463defb2c6e250c
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+manager: craigg
+ms.openlocfilehash: 03cf4d47e980c481df2353572a1c52d2868e214f
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="assessing-db2-schemas-for-conversion-db2tosql"></a>轉換 (DB2ToSQL) 評估 DB2 結構描述
 在您載入的物件，並將資料移轉至之前[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]，您應該決定如何複雜移轉，以及多少時間會移轉。 SSMA 可以建立顯示成功轉換的物件百分比的評估報告。 SSMA 也可讓您檢視特定的問題，導致轉換失敗。  
@@ -82,13 +80,13 @@ SSMA 轉換至選取的 DB2 資料庫物件時它會建立此評估報表，[!IN
   
     -   更新 SSMA 的 DB2 語法。 您可以更新程序、 函數、 觸發程序、 函式和已封裝的程序的語法。 若要更新的語法，在 DB2 中繼資料總管 窗格中選取的物件，請按一下**SQL**索引標籤，然後再修改的 SQL 程式碼。 當您離開此項目時，系統會提示您儲存更新的語法。 您可以檢視報告的錯誤物件上**報表** 索引標籤。  
   
-    -   DB2 中，您可以修改 DB2 物件以移除或修改程式碼有問題。 若要更新的程式碼載入 SSMA，您必須更新的中繼資料。 如需詳細資訊，請參閱[連接到 DB2 資料庫 &#40; DB2ToSQL &#41;](../../ssma/db2/connecting-to-db2-database-db2tosql.md)。  
+    -   DB2 中，您可以修改 DB2 物件以移除或修改程式碼有問題。 若要更新的程式碼載入 SSMA，您必須更新的中繼資料。 如需詳細資訊，請參閱[連接到 DB2 資料庫&#40;DB2ToSQL&#41;](../../ssma/db2/connecting-to-db2-database-db2tosql.md)。  
   
     -   您可以從移轉排除的物件。 在[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]中繼資料總管和 DB2 中繼資料總管，清除項目旁邊的核取方塊之前物件載入[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]從 DB2 移轉資料。  
   
 ## <a name="next-step"></a>下一個步驟  
-[轉換 DB2 結構描述 &#40; DB2ToSQL &#41;](../../ssma/db2/converting-db2-schemas-db2tosql.md)  
+[轉換 DB2 結構描述&#40;DB2ToSQL&#41;](../../ssma/db2/converting-db2-schemas-db2tosql.md)  
   
-## <a name="see-also"></a>請參閱  
-[DB2 資料庫移轉至 SQL Server &#40; DB2ToSQL &#41;](../../ssma/db2/migrating-db2-databases-to-sql-server-db2tosql.md)  
+## <a name="see-also"></a>另請參閱  
+[SQL server 資料庫移轉 DB2 &#40;DB2ToSQL&#41;](../../ssma/db2/migrating-db2-databases-to-sql-server-db2tosql.md)  
   

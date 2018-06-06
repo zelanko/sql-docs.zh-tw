@@ -1,32 +1,30 @@
 ---
-title: "檢視訂閱的資訊並執行工作 (複寫監視器) | Microsoft 文件"
-ms.custom: 
+title: 檢視訂閱的資訊並執行工作 (複寫監視器) | Microsoft 文件
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
 ms.component: replication
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - subscriptions [SQL Server replication], viewing information
 - subscriptions [SQL Server replication], Replication Monitor tasks
 - viewing subscription information
 ms.assetid: 54aac83b-6f29-40d7-8901-cf059749867f
-caps.latest.revision: 
+caps.latest.revision: 34
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 5e860780f284c6d7315045e9fd3bd04a7a4a83b8
-ms.sourcegitcommit: ab25b08a312d35489a2c4a6a0d29a04bbd90f64d
+ms.openlocfilehash: 92c405a4a6999db94a5c51a92f0914d5168d4672
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="view-information-and-perform-tasks-for-a-subscription-replication-monitor"></a>檢視訂閱的資訊並執行工作 (複寫監視器)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

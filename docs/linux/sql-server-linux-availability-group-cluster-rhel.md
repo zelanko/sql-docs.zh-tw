@@ -1,25 +1,22 @@
 ---
-title: "設定 SQL Server 可用性群組的 RHEL 叢集 |Microsoft 文件"
-description: 
+title: 設定 SQL Server 可用性群組的 RHEL 叢集 |Microsoft 文件
+description: ''
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.date: 06/14/2017
 ms.topic: article
-ms.prod: sql-non-specified
-ms.prod_service: database-engine
-ms.service: 
-ms.component: 
+ms.prod: sql
+ms.component: ''
 ms.suite: sql
 ms.custom: sql-linux
-ms.technology: database-engine
+ms.technology: linux
 ms.assetid: b7102919-878b-4c08-a8c3-8500b7b42397
-ms.workload: Inactive
-ms.openlocfilehash: c90eb7d5f11456a13dfa3d4354070bc506d030e5
-ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
+ms.openlocfilehash: 784f98acb1e8223e14d3f1e1a74e73cfdc3561bc
+ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/13/2018
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="configure-rhel-cluster-for-sql-server-availability-group"></a>設定 SQL Server 可用性群組的 RHEL 叢集
 
@@ -127,18 +124,31 @@ sudo pcs property set stonith-enabled=false
 >[!IMPORTANT]
 >停用 STONITH 只適用於測試目的。 如果您打算使用 Pacemaker 實際執行環境中，您應該規劃 STONITH 實作，根據您的環境，並保持啟用。 RHEL 不提供任何雲端環境 （包括 Azure） 或 HYPER-V 圍欄代理程式。 因此，叢集供應商不提供支援在這些環境中執行生產叢集。 我們正在將會在未來版本中提供此間隔的解決方案。
 
-## <a name="set-cluster-property-start-failure-is-fatal-to-false"></a>開始失敗-是-嚴重叢集屬性設定為 false
+## <a name="set-cluster-property-cluster-recheck-interval"></a>設定叢集屬性叢集重新檢查間隔
 
-`start-failure-is-fatal` 指出是否在節點上啟動資源失敗可防止進一步該節點上的啟動嘗試。 當設定為`false`，叢集會決定是否要嘗試再次根據資源的目前失敗計數和移轉臨界值的相同節點上啟動。 發生容錯移轉之後，Pacemaker 重試啟動可用性群組上先前的主要資源，可使用的 SQL 執行個體後。 Pacemaker 會降級至次要複本，並自動重新加入可用性群組。 
+`cluster-recheck-interval` 指出的輪詢間隔的叢集檢查有變更的資源參數、 條件約束或其他叢集的選項。 如果複本關閉，叢集會嘗試重新啟動的時間間隔是由繫結的複本`failure-timeout`值和`cluster-recheck-interval`值。 例如，如果`failure-timeout`設為 60 秒及`cluster-recheck-interval`設定為 120 秒，超過 60 秒，但小於 120 秒的間隔嘗試重新啟動。 我們建議您將失敗逾時設定為 60 秒及叢集重新檢查的間隔為大於 60 秒的值。 建議您不要將叢集重新檢查間隔設定為較小的值。
 
-若要更新的屬性值`false`執行：
+若要更新的屬性值`2 minutes`執行：
 
 ```bash
-sudo pcs property set start-failure-is-fatal=false
+sudo pcs property set cluster-recheck-interval=2min
 ```
 
->[!WARNING]
->自動容錯移轉之後，當`start-failure-is-fatal = true`資源管理員會嘗試啟動資源。 如果第一次嘗試失敗，手動執行`pcs resource cleanup <resourceName>`清除資源失敗計數和重設的設定。
+> [!IMPORTANT] 
+> 其值為 false 時，所有分佈 （包括 RHEL 7.3 和 7.4） 使用最新可用 Pacemaker 封裝 1.1.18-11.el7 導都入開始失敗-是-嚴重的叢集設定的行為變更。 這項變更會影響容錯移轉工作流程。 如果主要複本發生中斷，叢集必須容錯移轉至其中一個可用的次要複本。 相反地，使用者會發現，叢集會嘗試啟動失敗的主要複本。 如果該主永遠不會上線時 （因為在永久中斷），叢集絕不會容錯移轉至另一個可用的次要複本。 由於此項變更，先前建議的設定，來設定開始失敗-是-嚴重已不再有效，此設定需要還原為其預設值`true`。 此外，必須更新，以包含 AG 資源`failover-timeout`屬性。 
+
+若要更新的屬性值`true`執行：
+
+```bash
+sudo pcs property set start-failure-is-fatal=true
+```
+
+若要更新`ag1`資源屬性`failure-timeout`至`60s`執行：
+
+```bash
+pcs resource update ag1 meta failure-timeout=60s
+```
+
 
 如需 Pacemaker 叢集內容資訊，請參閱[Pacemaker 叢集屬性](http://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/7/html/High_Availability_Add-On_Reference/ch-clusteropts-HAAR.html)。
 
@@ -151,8 +161,8 @@ sudo pcs property set start-failure-is-fatal=false
 若要建立可用性群組資源，請使用`pcs resource create`命令，並設定資源屬性。 El comando siguiente crea`ocf:mssql:ag`主/從可用性群組名稱的型別資源`ag1`。
 
 ```bash
-sudo pcs resource create ag_cluster ocf:mssql:ag ag_name=ag1 master notify=true
-```
+sudo pcs resource create ag_cluster ocf:mssql:ag ag_name=ag1 meta failure-timeout=30s master notify=true
+``` 
 
 [!INCLUDE [required-synchronized-secondaries-default](../includes/ss-linux-cluster-required-synchronized-secondaries-default.md)]
 

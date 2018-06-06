@@ -1,16 +1,15 @@
 ---
-title: "MSrepl_identity_range (TRANSACT-SQL) |Microsoft 文件"
-ms.custom: 
+title: MSrepl_identity_range (TRANSACT-SQL) |Microsoft 文件
+ms.custom: ''
 ms.date: 03/04/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
 ms.component: system-tables
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -22,16 +21,15 @@ dev_langs:
 helpviewer_keywords:
 - MSrepl_identity_range system table
 ms.assetid: 6e92a8e8-7667-4c98-b1c4-46735bac50d8
-caps.latest.revision: 
+caps.latest.revision: 27
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: a7a70f77f93037ac958211a0dbb7abb685ac4d1a
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: a6e439f85f10242d8c11fa24ba74326f8986bdc4
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="msreplidentityrange-transact-sql"></a>MSrepl_identity_range (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,14 +43,14 @@ ms.lasthandoff: 11/21/2017
 |**tablename**|**sysname**|資料表的名稱。|  
 |**identity_support**|**int**|指定是否啟用自動識別範圍處理。 0 指定不啟用自動識別範圍處理。|  
 |**next_seed**|**bigint**|如果啟用了自動識別範圍，便指出下一個範圍的起點。|  
-|**sp_changearticle**|**bigint**|發行者識別範圍大小。|  
+|**pub_range**|**bigint**|發行者識別範圍大小。|  
 |**範圍**|**bigint**|將在調整中指派給訂閱者的連續識別值大小。|  
 |**max_identity**|**bigint**|識別範圍的上限。|  
-|**臨界值**|**int**|識別範圍臨界值百分比。|  
+|**threshold**|**int**|識別範圍臨界值百分比。|  
 |**current_max**|**bigint**|可指派但不必然指派的目前最大值。|  
   
-## <a name="see-also"></a>請參閱＜  
- [複寫資料表 &#40;TRANSACT-SQL &#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
+## <a name="see-also"></a>另請參閱  
+ [複寫資料表&#40;Transact SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [複寫檢視 &#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  
   
   

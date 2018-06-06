@@ -1,30 +1,29 @@
 ---
-title: "CREATE TABLE AS SELECT (Azure SQL 資料倉儲) | Microsoft Docs"
-ms.custom: 
+title: CREATE TABLE AS SELECT (Azure SQL 資料倉儲) | Microsoft Docs
+ms.custom: ''
 ms.date: 10/07/2016
-ms.prod: 
+ms.prod: ''
 ms.prod_service: sql-data-warehouse, pdw
-ms.reviewer: 
+ms.reviewer: ''
 ms.service: sql-data-warehouse
 ms.component: t-sql|statements
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: t-sql
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - TSQL
 ms.assetid: d1e08f88-64ef-4001-8a66-372249df2533
-caps.latest.revision: 
-author: barbkess
-ms.author: barbkess
+caps.latest.revision: 40
+author: edmacauley
+ms.author: edmaca
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 429c2dc727d844c35943fa599e6fbcb911df04ac
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
+ms.openlocfilehash: fb158bb438482f2edd0d77a0480b04390647fc55
+ms.sourcegitcommit: d2573a8dec2d4102ce8882ee232cdba080d39628
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="create-table-as-select-azure-sql-data-warehouse"></a>CREATE TABLE AS SELECT (Azure SQL 資料倉儲)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -147,7 +146,7 @@ Azure SQL 資料倉儲目前尚不支援自動建立或自動更新統計資料�
  
 <a name="performance-bk"></a>
  
- ## <a name="performance"></a>[效能] 
+ ## <a name="performance"></a>效能 
 
 至於雜湊散發的資料表，您可以使用 CTAS 來選擇不同的散發資料行，讓聯結和彙總達到更佳的效能。 如果您的目標並不是選擇不同的散發資料行，則指定相同的散發資料行，就會獲得最佳的 CTAS 效能，因為如此可避免重新散發資料列。 
 

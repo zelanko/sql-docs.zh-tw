@@ -1,16 +1,14 @@
 ---
 title: SET SHOWPLAN_TEXT (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 06/10/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
 ms.component: t-sql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: t-sql
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - SHOWPLAN_TEXT
@@ -29,16 +27,15 @@ helpviewer_keywords:
 - stopping statement execution
 - estimated execution information [SQL Server]
 ms.assetid: 2c4f3fc8-ff2c-4790-8b74-e7e8ef58f9a6
-caps.latest.revision: 
+caps.latest.revision: 26
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: e0fd12594c0b2a4c5df3a616aeaa48746f781977
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 11bdddd82efcbc4f0e97b8b33d99961caa9dcfd5
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="set-showplantext-transact-sql"></a>SET SHOWPLAN_TEXT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -74,7 +71,7 @@ SET SHOWPLAN_TEXT { ON | OFF }
 ## <a name="permissions"></a>Permissions  
  若要使用 SET SHOWPLAN_TEXT，您必須有執行 SET SHOWPLAN_TEXT 所針對的陳述式之適當權限，且您必須有包含所參考物件的所有資料庫之 SHOWPLAN 權限。  
   
- 針對 SELECT、INSERT、UPDATE、DELETE、EXEC *stored_procedure* 和 EXEC *user_defined_function* 陳述式，若要產生執行程序表，使用者必須：  
+ 對於 SELECT、INSERT、UPDATE、DELETE、EXEC *stored_procedure* 和 EXEC *user_defined_function* 陳述式，若要產生執行程序表，使用者必須：  
   
 -   有執行 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式的適當權限。  
   

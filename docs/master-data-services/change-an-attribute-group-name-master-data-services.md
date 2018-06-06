@@ -1,32 +1,33 @@
 ---
-title: "變更屬性群組名稱 (Master Data Services) | Microsoft Docs"
-ms.custom: 
+title: 變更屬性群組名稱 (Master Data Services) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/15/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: mds
-ms.service: 
 ms.component: non-specific
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - master-data-services
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - attribute groups [Master Data Services], changing name
 ms.assetid: 79510fcf-4c83-4426-bdd4-15b4170ecfbd
-caps.latest.revision: 
+caps.latest.revision: 7
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 6c6ae52ecd659ca019f98f762383c6c0632896b1
-ms.sourcegitcommit: 6ac1956307d8255dc544e1063922493b30907b80
+ms.openlocfilehash: 8958fd3c8de3faa5caf27a147cb0daae6f9a8cb2
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="change-an-attribute-group-name-master-data-services"></a>變更屬性群組名稱 (Master Data Services)
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
   在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中，您可以變更屬性群組的名稱。  
   
 ## <a name="prerequisites"></a>Prerequisites  

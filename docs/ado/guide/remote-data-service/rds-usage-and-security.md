@@ -1,31 +1,28 @@
 ---
-title: "RDS 提供使用量與安全性 |Microsoft 文件"
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
+title: RDS 提供使用量與安全性 |Microsoft 文件
+ms.prod: sql
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
-ms.custom: 
+ms.technology: connectivity
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - RDS [ADO]
 - remote data service [ADO]
 ms.assetid: b8ac3739-05d3-4818-8201-a763795fb8b4
-caps.latest.revision: 
+caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: f4bf63dba64d4c30ca29629a1a385df45a9f79b1
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: e149ec41722f22ce5b9c57592df39dd0d22b1fe9
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="rds-usage-and-security"></a>RDS 提供使用量與安全性
 使用本節中的資訊，設定您的伺服器，並使用 RDS 快速。 本節包含您可能需要實作 RDS，描述一些 RDS 和其他技術之間的索引鍵關聯性時應採取的特定設定步驟，並有助於識別設定時，可能會遇到的問題的解決方案RDS 的方案。  

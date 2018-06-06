@@ -1,30 +1,29 @@
 ---
-title: "executeUpdate 方法 （) |Microsoft 文件"
-ms.custom: 
+title: executeUpdate 方法 （) |Microsoft 文件
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
-ms.component: jdbc
-ms.reviewer: 
+ms.prod: sql
+ms.prod_service: connectivity
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
-ms.topic: article
-apiname: SQLServerPreparedStatement.executeUpdate ()
-apilocation: sqljdbc.jar
+ms.technology: connectivity
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
+apiname:
+- SQLServerPreparedStatement.executeUpdate ()
+apilocation:
+- sqljdbc.jar
 apitype: Assembly
 ms.assetid: ca534c6b-ef4d-4ae8-8cc3-514728623cff
-caps.latest.revision: "11"
+caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
-ms.workload: Inactive
-ms.openlocfilehash: 8a9c600346cca5ce0724430b098e0d42e0dd3048
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+manager: craigg
+ms.openlocfilehash: 5a4d3caaa9cad0b1e9c47edece18015e6d270f1b
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="executeupdate-method-"></a>executeUpdate 方法 ()
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -39,7 +38,7 @@ public int executeUpdate()
 ```  
   
 ## <a name="return-value"></a>傳回值  
- **Int** ，指出資料列受到影響或 0 的數目，如果使用 DDL 陳述式。  
+ **int** 會指出受影響的資料列數目，如果是使用 DDL 陳述式，則為 0。  
   
 ## <a name="exceptions"></a>例外狀況  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
@@ -47,8 +46,8 @@ public int executeUpdate()
 ## <a name="remarks"></a>備註  
  這個 executeUpdate 方法是由 java.sql.PreparedStatement 介面中的 executeUpdate 方法指定。  
   
-## <a name="see-also"></a>請參閱＜  
- [executeUpdate 方法 &#40;SQLServerPreparedStatement &#41;](../../../connect/jdbc/reference/executeupdate-method-sqlserverpreparedstatement.md)   
+## <a name="see-also"></a>另請參閱  
+ [executeUpdate 方法&#40;SQLServerPreparedStatement&#41;](../../../connect/jdbc/reference/executeupdate-method-sqlserverpreparedstatement.md)   
  [SQLServerPreparedStatement 成員](../../../connect/jdbc/reference/sqlserverpreparedstatement-members.md)   
  [SQLServerPreparedStatement 類別](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md)  
   

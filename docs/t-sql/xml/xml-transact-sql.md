@@ -1,16 +1,14 @@
 ---
 title: xml (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 07/26/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
 ms.component: t-sql|xml
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: t-sql
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - xml_TSQL
@@ -20,16 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - xml data type [SQL Server], about xml data type
 ms.assetid: 9198f671-8e61-4ca4-9c3a-859f84020e62
-caps.latest.revision: 
+caps.latest.revision: 35
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 6b9d3c8c512611ea9d8d0482acb7fd848c04629b
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: d50095449723be22ef34003b815aaa354613b4ad
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="xml-transact-sql"></a>xml (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -65,11 +62,11 @@ xml ( [ CONTENT | DOCUMENT ] xml_schema_collection )
 ## <a name="examples"></a>範例  
   
 ```  
-USE AdventureWorks2012;  
+USE AdventureWorks;  
 GO  
-DECLARE @y xml (Sales.IndividualSurveySchemaCollection);  
-SET @y =  (SELECT TOP 1 Demographics FROM Sales.Individual);  
-SELECT @y;  
+DECLARE @DemographicData xml (Person.IndividualSurveySchemaCollection);  
+SET @DemographicData =  (SELECT TOP 1 Demographics FROM Person.Person);  
+SELECT @DemographicData;  
 GO  
 ```  
   

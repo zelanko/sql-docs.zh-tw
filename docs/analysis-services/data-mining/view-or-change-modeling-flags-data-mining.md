@@ -1,31 +1,23 @@
 ---
-title: "檢視或變更模型旗標 （資料採礦） |Microsoft 文件"
-ms.custom: 
-ms.date: 03/01/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
-ms.assetid: d1169735-fb18-417b-b8d6-9a161e444020
-caps.latest.revision: 
-author: Minewiskan
+title: 檢視或變更模型旗標 （資料採礦） |Microsoft 文件
+ms.date: 05/08/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: data-mining
+ms.topic: conceptual
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 0109b4a95a81536cee4b00a5b4da05697219f769
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: e587be4fe975ee35752e668f9a5d49e0afdf4488
+ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="view-or-change-modeling-flags-data-mining"></a>檢視或變更模型旗標 (資料採礦)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-模型旗標是您針對採礦結構資料行或採礦模型資料行設定的屬性，可控制演算法如何在分析期間處理資料。  
+  模型旗標是您針對採礦結構資料行或採礦模型資料行設定的屬性，可控制演算法如何在分析期間處理資料。  
   
  在資料採礦設計師中，您可以藉由檢視結構或模型的屬性來檢視及修改與採礦結構或採礦資料行相關聯的模型旗標。 您也可以使用 DMX、AMO 或 XMLA 來設定模型旗標。  
   
@@ -59,6 +51,6 @@ ms.lasthandoff: 02/15/2018
   
 ## <a name="see-also"></a>另請參閱  
  [採礦模型的工作與操作方法](../../analysis-services/data-mining/mining-model-tasks-and-how-tos.md)   
- [模型旗標 &#40; 資料採礦 &#41;](../../analysis-services/data-mining/modeling-flags-data-mining.md)  
+ [模型旗標 & #40; 資料採礦 & #41;](../../analysis-services/data-mining/modeling-flags-data-mining.md)  
   
   

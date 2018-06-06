@@ -1,31 +1,23 @@
 ---
-title: "New-restorefolder 指令程式 |Microsoft 文件"
-ms.custom: 
-ms.date: 03/07/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+title: New-restorefolder 指令程式 |Microsoft 文件
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: powershell
 ms.topic: reference
-ms.assetid: 5938b3a9-6412-45fc-86f8-264651d01598
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 20e512bbc1ac3ba7c2a6b6604032c047f83d10cf
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: f5fded902a54a37cd91f4f283aa84252b6ae007a
+ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="new-restorefolder-cmdlet"></a>New-RestoreFolder 指令程式
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-將原始資料夾還原到新的資料夾。  
+  將原始資料夾還原到新的資料夾。  
 
 >[!NOTE] 
 >這份文件可能包含過時的資訊和範例。 使用 Get-help cmdlet 取得最新。
@@ -42,7 +34,7 @@ ms.lasthandoff: 02/15/2018
   
 ## <a name="parameters"></a>參數  
   
-### <a name="-originalfolder-string"></a>-OriginalFolder \<string>  
+### <a name="-originalfolder-string"></a>-OriginalFolder\<字串 >  
  取得原始資料夾位置。  
   
 |||  
@@ -53,7 +45,7 @@ ms.lasthandoff: 02/15/2018
 |接受管線輸入？|true|  
 |接受萬用字元？|false|  
   
-### <a name="-newfolder-string"></a>-NewFolder \<string>  
+### <a name="-newfolder-string"></a>-NewFolder\<字串 >  
  設定新資料夾的位置。  
   
 |||  
@@ -64,7 +56,7 @@ ms.lasthandoff: 02/15/2018
 |接受管線輸入？|true|  
 |接受萬用字元？|false|  
   
-### <a name="-astemplate-switchparameter"></a>-AsTemplate \<SwitchParameter>  
+### <a name="-astemplate-switchparameter"></a>-AsTemplate \<SwitchParameter >  
  指定是否應該在記憶體中建立物件並傳回物件。  
   
 |||  
@@ -87,7 +79,7 @@ ms.lasthandoff: 02/15/2018
 |接受萬用字元？|false|  
   
 ### <a name="-credential-pscredential"></a>-Credential \<PSCredential >  
- 若為您已經設定為 HTTP 存取的執行個體，這個參數是在使用 Analysis Service 執行個體的 HTTP 連接時用來傳入使用者名稱和密碼。 如需詳細資訊，請參閱[設定 HTTP 存取 Analysis Services，Internet Information Services &#40; IIS &#41; 8.0](../../analysis-services/instances/configure-http-access-to-analysis-services-on-iis-8-0.md)進行 HTTP 連線。  
+ 若為您已經設定為 HTTP 存取的執行個體，這個參數是在使用 Analysis Service 執行個體的 HTTP 連接時用來傳入使用者名稱和密碼。 如需詳細資訊，請參閱[設定 Internet Information Services 上的 Analysis Services 的 HTTP 存取&#40;IIS&#41; 8.0](../../analysis-services/instances/configure-http-access-to-analysis-services-on-iis-8-0.md)進行 HTTP 連線。  
   
  如果指定了此參數，使用者名稱和密碼將會用來連接到指定的 Analysis Server 執行個體。 如果沒有指定認證，則會使用執行此工具之使用者的預設 Windows 帳戶。  
   

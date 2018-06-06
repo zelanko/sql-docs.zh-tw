@@ -1,34 +1,30 @@
 ---
-title: "Exception 事件類別 | Microsoft Docs"
-ms.custom: 
+title: Exception 事件類別 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
-ms.prod_service: database-engine, sql-database
-ms.service: 
-ms.component: event-classes
-ms.reviewer: 
+ms.prod: sql
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: supportability
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - Exception event class
 ms.assetid: 5a45dfa7-51fc-420c-96f6-ce2a1f61b684
-caps.latest.revision: 
+caps.latest.revision: 28
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: c8ed47b3fcaea9461b1d31a2d58c499c193b9aa5
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: a7b531367ae77f282780c77458e507ba3b0ad10f
+ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="exception-event-class"></a>Exception 事件類別
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-Exception 事件類別是指 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中發生了例外狀況。  
+  Exception 事件類別是指 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中發生了例外狀況。  
   
 ## <a name="exception-event-class-data-columns"></a>Exception 事件類別資料行  
   

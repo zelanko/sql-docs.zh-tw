@@ -1,28 +1,26 @@
 ---
-title: "叢集中的 Integration Services (SSIS) | Microsoft Docs"
-ms.custom: 
+title: 叢集中的 Integration Services (SSIS) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
 ms.component: service
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: 0216266d-d866-4ea2-bbeb-955965f4d7c2
-caps.latest.revision: 
+caps.latest.revision: 11
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 15c927bf78faa7705a27dafce3517de7f05e50d4
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: dfab44cc1e7b73e7172e5195c49268b97c94857f
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="integration-services-ssis-in-a-cluster"></a>叢集中的 Integration Services (SSIS)
   不建議您以叢集方式設定 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]，因為 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服務不是叢集服務或叢集感知的服務，也不支援從一個叢集節點容錯移轉到另一個叢集節點。 因此，在叢集環境中，應該以獨立服務的形式在叢集中的每一個節點上安裝及啟動 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 。  
@@ -38,7 +36,7 @@ ms.lasthandoff: 01/25/2018
   
 -   **當容錯移轉發生時，執行中的套件不會重新啟動。**
     
-    您可以藉由從檢查點重新啟動封裝而從封裝失敗復原。 如果不將服務設定為叢集資源，就可以從檢查點重新啟動。 如需詳細資訊，請參閱 [Restart Packages by Using Checkpoints](../../integration-services/packages/restart-packages-by-using-checkpoints.md)。  
+    您可以藉由從檢查點重新啟動封裝而從封裝失敗復原。 如果不將服務設定為叢集資源，就可以從檢查點重新啟動。 如需詳細資訊，請參閱 [使用檢查點來重新啟動封裝](../../integration-services/packages/restart-packages-by-using-checkpoints.md)。  
   
 -   當您在 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 的不同資源群組中設定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]服務時，無法從用戶端電腦使用 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 來管理儲存在 msdb 資料庫中的封裝。 在這種雙躍點的狀況中， [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服務無法委派認證。  
   

@@ -1,32 +1,29 @@
 ---
-title: "保存的階層式資料錄集 |Microsoft 文件"
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
+title: 保存的階層式資料錄集 |Microsoft 文件
+ms.prod: sql
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
-ms.custom: 
+ms.technology: connectivity
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - hierarchical Recordsets [ADO], persisting
 - persisting hierarchical Recordsets [ADO]
 - data shaping [ADO], hierarchical Recordsets
 ms.assetid: 43798bb5-98a6-4ad6-9bf8-78154b3a1827
-caps.latest.revision: 
+caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 3c1248c9691838bb7834748d6e243771b4bd0bba
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 1506bd80eee82c2b93a3f3f543825efef394ef07
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="persisting-hierarchical-recordsets"></a>保存的階層式資料錄集
 您可以儲存階層式**資料錄集**藉由呼叫 ADTG 或 XML 格式檔[儲存](../../../ado/reference/ado-api/save-method.md)方法。 不過，兩個限制會套用儲存階層式時**資料錄集**s 以 XML 格式： 如果無法儲存在 XML 中階層式**資料錄集**包含擱置的更新，而且無法儲存參數化階層式**資料錄集**。  

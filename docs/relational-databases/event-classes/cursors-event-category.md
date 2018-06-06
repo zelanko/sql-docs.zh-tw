@@ -1,36 +1,32 @@
 ---
-title: "Cursors 事件類別目錄 | Microsoft Docs"
-ms.custom: 
+title: Cursors 事件類別目錄 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
-ms.prod_service: database-engine, sql-database
-ms.service: 
-ms.component: event-classes
-ms.reviewer: 
+ms.prod: sql
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: supportability
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - Cursors event category [SQL Server]
 - event classes [SQL Server], Cursors event category
 - SQL Server event classes, Cursors event category
 ms.assetid: 752e0695-b464-4720-93be-5b9b53b7ab21
-caps.latest.revision: 
+caps.latest.revision: 23
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 8f5a384535583fd7ae18329061a4f7d34d1f927e
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 5060041eef9f55f319fd528965f4872c4dfa7ad5
+ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="cursors-event-category"></a>Cursors 事件類別目錄
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-**Cursors** 事件類別目錄包含用來監視資料指標行為的事件類別。  
+  **Cursors** 事件類別目錄包含用來監視資料指標行為的事件類別。  
   
 ## <a name="in-this-section"></a>本節內容  
   

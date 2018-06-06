@@ -1,33 +1,32 @@
 ---
-title: "資料庫屬性 (查詢存放區頁面) | Microsoft 文件"
-ms.custom: 
+title: 資料庫屬性 (查詢存放區頁面) | Microsoft 文件
+ms.custom: ''
 ms.date: 11/09/2015
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
 ms.component: databases
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 f1_keywords:
 - sql13.swb.databaseproperties.querystore.f1
 ms.assetid: da47d75e-291a-4305-acef-4b0aaf5215da
-caps.latest.revision: 
+caps.latest.revision: 10
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 903eb21e82dc2b5e3a04f0b48b4f17365a0eac99
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 7e775734fbcf8fab632f3d2783f98cbe369390a1
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="database-properties-query-store-page"></a>資料庫屬性 (查詢存放區頁面)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 請從主體資料庫存取此頁面，並將其用於設定及修改資料庫查詢存放區的屬性。 這些選項也可使用 [ALTER DATABASE SET 選項](../../t-sql/statements/alter-database-transact-sql-set-options.md)加以設定。 如需查詢存放區的相關資訊，請參閱 [Monitoring Performance By Using the Query Store](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  請從主體資料庫存取此頁面，並將其用於設定及修改資料庫查詢存放區的屬性。 這些選項也可使用 [ALTER DATABASE SET 選項](../../t-sql/statements/alter-database-transact-sql-set-options.md)加以設定。 如需查詢存放區的相關資訊，請參閱 [Monitoring Performance By Using the Query Store](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)  
   
 ||  
 |-|  

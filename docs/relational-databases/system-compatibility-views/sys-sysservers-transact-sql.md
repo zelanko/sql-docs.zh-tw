@@ -1,16 +1,14 @@
 ---
-title: "sys.sysservers (TRANSACT-SQL) |Microsoft 文件"
-ms.custom: 
+title: sys.sysservers (TRANSACT-SQL) |Microsoft 文件
+ms.custom: ''
 ms.date: 03/15/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
 ms.component: system-compatibility-views
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: system-objects
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.sysservers
@@ -23,16 +21,15 @@ helpviewer_keywords:
 - sysservers system table
 - sys.sysservers compatibility view
 ms.assetid: d02f186f-c00f-44a6-b38d-dc78a3d2145b
-caps.latest.revision: 
+caps.latest.revision: 27
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 95f88c44e0501fab834bb476e0350cf48bc91757
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: a052eecd27de7767f721bc71a070eb00dad99220
+ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="syssysservers-transact-sql"></a>sys.sysservers (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -61,22 +58,22 @@ ms.lasthandoff: 02/09/2018
 |**querytimeout**|**int**|針對伺服器進行查詢的逾時值設定。|  
 |**srvnetname**|**char(30)**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**isremote**|**bit**|1 = 伺服器是遠端伺服器。<br /><br /> 0 = 伺服器是連結伺服器。|  
-|**rpc**|**bit**|1 =  **sp_serveroption@rpc** 設**true**或**上**。<br /><br /> 0 =  **sp_serveroption@rpc** 設**false**或**關閉**。|  
-|**pub**|**bit**|1 =  **sp_serveroption@pub** 設**true**或**上**。<br /><br /> 0 =  **sp_serveroption@pub** 設**false**或**關閉**。|  
-|**sub**|**bit**|1 =  **sp_serveroption@sub** 設**true**或**上**。<br /><br /> 0 =  **sp_serveroption@sub** 設**false**或**關閉**。|  
-|**dist**|**bit**|1 =  **sp_serveroption@dist** 設**true**或**上**。<br /><br /> 0 =  **sp_serveroption@dist** 設**false**或**關閉**。|  
-|**dpub**|**bit**|1 =  **sp_serveroption@dpub** 設**true**或**上**。<br /><br /> 0 =  **sp_serveroption@dpub** 設**false**或**關閉**。|  
+|**rpc**|**bit**|1 = **sp_serveroption@rpc**設**true**或**上**。<br /><br /> 0 = **sp_serveroption@rpc**設**false**或**關閉**。|  
+|**pub**|**bit**|1 = **sp_serveroption@pub**設**true**或**上**。<br /><br /> 0 = **sp_serveroption@pub**設**false**或**關閉**。|  
+|**sub**|**bit**|1 = **sp_serveroption@sub**設**true**或**上**。<br /><br /> 0 = **sp_serveroption@sub**設**false**或**關閉**。|  
+|**dist**|**bit**|1 = **sp_serveroption@dist**設**true**或**上**。<br /><br /> 0 = **sp_serveroption@dist**設**false**或**關閉**。|  
+|**dpub**|**bit**|1 = **sp_serveroption@dpub**設**true**或**上**。<br /><br /> 0 = **sp_serveroption@dpub**設**false**或**關閉**。|  
 |**rpcout**|**bit**|1 =  **sp_serveroption@rpc出**設**true**或**上**。<br /><br /> 0 =  **sp_serveroption@rpc出**設**false**或**關閉**。|  
 |**dataaccess**|**bit**|1 =  **sp_serveroption@data存取**設**true**或**上**。<br /><br /> 0 =  **sp_serveroption@data存取**設**false**或**關閉**。|  
 |**collationcompatible**|**bit**|1 =  **sp_serveroption@collation相容**設**true**或**上**。<br /><br /> 0 =  **sp_serveroption@collation相容**設**false**或**關閉**。|  
-|**system**|**bit**|1 =  **sp_serveroption@system** 設**true**或**上**。<br /><br /> 0 =  **sp_serveroption@system** 設**false**或**關閉**。|  
+|**system**|**bit**|1 = **sp_serveroption@system**設**true**或**上**。<br /><br /> 0 = **sp_serveroption@system**設**false**或**關閉**。|  
 |**useremotecollation**|**bit**|1 =  **sp_serveroption@remote定序**設**true**或**上**。<br /><br /> 0 =  **sp_serveroption@remote定序**設**false**或**關閉**。|  
 |**lazyschemavalidation**|**bit**|1 =  **sp_serveroption@lazy結構描述驗證**設**true**或**上**。<br /><br /> 0 =  **sp_serveroption@lazy結構描述驗證**設**false**或**關閉**。|  
-|**collation**|**sysname**|所設定的伺服器定序**sp_serveroption@collation名稱**。|  
-|**nonsqlsub**|bit|0 = 伺服器是執行個體 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]<br /><br /> 1 = 伺服器不是的執行個體 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|  
+|**定序**|**sysname**|所設定的伺服器定序**sp_serveroption@collation名稱**。|  
+|**nonsqlsub**|bit|0 = 伺服器是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的執行個體<br /><br /> 1 = 伺服器不是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的執行個體|  
   
 ## <a name="see-also"></a>另請參閱  
- [將系統資料表對應至系統檢視 &#40;TRANSACT-SQL &#41;](../../relational-databases/system-tables/mapping-system-tables-to-system-views-transact-sql.md)   
+ [將系統資料表對應至系統檢視表&#40;Transact SQL&#41;](../../relational-databases/system-tables/mapping-system-tables-to-system-views-transact-sql.md)   
  [相容性檢視 &#40;Transact-SQL&#41;](~/relational-databases/system-compatibility-views/system-compatibility-views-transact-sql.md)  
   
   

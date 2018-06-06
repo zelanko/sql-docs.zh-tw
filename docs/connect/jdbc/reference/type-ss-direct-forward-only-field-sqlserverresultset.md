@@ -1,30 +1,29 @@
 ---
-title: "TYPE_SS_DIRECT_FORWARD_ONLY 欄位 (SQLServerResultSet) |Microsoft 文件"
-ms.custom: 
+title: TYPE_SS_DIRECT_FORWARD_ONLY 欄位 (SQLServerResultSet) |Microsoft 文件
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
-ms.component: jdbc
-ms.reviewer: 
+ms.prod: sql
+ms.prod_service: connectivity
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
-ms.topic: article
-apiname: SQLServerResultSet.TYPE_SS_DIRECT_FORWARD_ONLY
-apilocation: sqljdbc.jar
+ms.technology: connectivity
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
+apiname:
+- SQLServerResultSet.TYPE_SS_DIRECT_FORWARD_ONLY
+apilocation:
+- sqljdbc.jar
 apitype: Assembly
 ms.assetid: f8eb2fc2-f624-4fd5-a408-ae4bb1de4913
-caps.latest.revision: "10"
+caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
-ms.workload: Inactive
-ms.openlocfilehash: 1de2c957f1385a7cd331762b686873e3973a7e03
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+manager: craigg
+ms.openlocfilehash: b13a8c7002a8e9a3fd868f4c4c7fa3fbb052347d
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="typessdirectforwardonly-field-sqlserverresultset"></a>TYPE_SS_DIRECT_FORWARD_ONLY 欄位 (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -41,7 +40,7 @@ public static final int TYPE_SS_DIRECT_FORWARD_ONLY
 ## <a name="field-value"></a>欄位值  
  **Int** 2003年的值。  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [SQLServerResultSet 成員](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
  [SQLServerResultSet 類別](../../../connect/jdbc/reference/sqlserverresultset-class.md)  
   

@@ -1,32 +1,43 @@
 ---
-title: "版本資訊 (ODBC Driver for SQL Server) |Microsoft 文件"
-ms.custom: 
-ms.date: 02/14/2018
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
-ms.component: odbc
-ms.reviewer: 
+title: 版本資訊 (ODBC Driver for SQL Server) |Microsoft 文件
+ms.custom: ''
+ms.date: 04/04/2018
+ms.prod: sql
+ms.prod_service: connectivity
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- drivers
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: connectivity
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: b8459ed8-625e-4d8b-891c-e7e78c9977cc
-caps.latest.revision: 
+caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
-ms.openlocfilehash: 2b0846781a17fdad4c8cf9e39cab743595a20e7e
-ms.sourcegitcommit: 7ed8c61fb54e3963e451bfb7f80c6a3899d93322
+manager: craigg
+ms.openlocfilehash: 21380decd228d82695c4ca9972852585a4fc3dbc
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/20/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="release-notes"></a>版本資訊
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
 
   Microsoft ODBC Driver for SQL Server on Windows 版本資訊  
+
+## <a name="whats-new-in-the-includemsconameincludesmsconamemdmd-odbc-driver-171-for-includessnoversionincludesssnoversionmdmd-on-windows"></a>新功能的[!INCLUDE[msCoName](../../../includes/msconame_md.md)]ODBC Driver for 17.1 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] Windows 上
+
+**加入功能**:
+
+支援`SQL_COPT_SS_CEKCACHETTL`和`SQL_COPT_SS_TRUSTEDCMKPATHS`連接屬性 (如需詳細資訊，請參閱[使用一律加密與 ODBC Driver for SQL Server](../using-always-encrypted-with-the-odbc-driver.md))
+- `SQL_COPT_SS_CEKCACHETTL` 允許控制本機快取的資料行加密金鑰存在的時間，以及清除它
+- `SQL_COPT_SS_TRUSTEDCMKPATHS` 允許應用程式限制為僅使用指定的清單的資料行主要金鑰的 AE 作業
+
+
+Azure Active Directory 互動式驗證支援
+
+[ug 修正](../bug-fixes.md)
+
 
 ## <a name="whats-new-in-the-includemsconameincludesmsconamemdmd-odbc-driver-17-for-includessnoversionincludesssnoversionmdmd-on-windows"></a>新功能的[!INCLUDE[msCoName](../../../includes/msconame_md.md)]ODBC Driver for 17 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] Windows 上
 

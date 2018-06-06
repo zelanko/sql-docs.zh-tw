@@ -1,30 +1,27 @@
 ---
-title: "繫結結果集資料行 |Microsoft 文件"
-ms.custom: 
+title: 繫結結果集資料行 |Microsoft 文件
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
-ms.component: odbc
-ms.reviewer: 
+ms.prod: sql
+ms.prod_service: connectivity
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: connectivity
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - result sets [ODBC], binding columns
 - binding columns [ODBC]
 ms.assetid: 4bc9c30f-83ae-4766-a746-032953c187ad
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
-ms.workload: Inactive
-ms.openlocfilehash: 156d7a4fa40e28f2526b5ab3f5fd1a5bef19c003
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+manager: craigg
+ms.openlocfilehash: 0377442c56b02ab9a93f5737a7f1f42275aba205
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="binding-result-set-columns"></a>繫結結果集資料行
 應用程式可以做為多或較少的資料行結果集選擇，包括完全沒有資料行繫結的繫結。 時擷取資料的資料列，驅動程式會傳回至應用程式的繫結的資料行的資料。 是否應用程式中的繫結的所有資料行的結果集取決於應用程式。 比方說，通常是產生報告的應用程式有固定的格式。這類應用程式建立結果集包含所有在報表中使用的資料行和再繫結，以及擷取所有這些資料行的資料。 有時候顯示螢幕的資料完整的應用程式可讓使用者決定要顯示的資料行這類應用程式會建立包含使用者可能會想，但繫結，並只為這些使用者選擇的資料行擷取資料的所有資料行的結果集。  

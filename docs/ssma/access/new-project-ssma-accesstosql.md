@@ -1,36 +1,35 @@
 ---
-title: "新的專案 (SSMA) (AccessToSQL) |Microsoft 文件"
-ms.prod: sql-non-specified
+title: 新的專案 (SSMA) (AccessToSQL) |Microsoft 文件
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
 ms.component: ssma-access
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ssma
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 applies_to:
 - Azure SQL Database
 - SQL Server
-helpviewer_keywords: New Project dialog box
+helpviewer_keywords:
+- New Project dialog box
 ms.assetid: ca294f6d-eeb5-42ca-9306-156281a3f0f3
-caps.latest.revision: "15"
+caps.latest.revision: 15
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
-ms.workload: Inactive
-ms.openlocfilehash: e1ffcacafa80c8679f2aae6cb873d1c802e84ebf
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+manager: craigg
+ms.openlocfilehash: 706c40049ce8c506b18b45c8c2fb88f7802e3d5f
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="new-project-ssma-accesstosql"></a>新的專案 (SSMA) (AccessToSQL)
-使用**新專案**對話方塊來建立新的 SSMA 專案。 若要存取**新專案**對話方塊中，於**檔案**功能表上，按一下 [**新專案**。  
+使用**新專案**對話方塊來建立新的 SSMA 專案。 若要存取**新專案**對話方塊中，於**檔案**功能表上，按一下 **新專案**。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
 **名稱**  
   
 輸入專案的名稱。 SSMA 會將附加檔案的副檔名。  

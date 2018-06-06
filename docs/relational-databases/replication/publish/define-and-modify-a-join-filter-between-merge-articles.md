@@ -1,33 +1,31 @@
 ---
-title: "定義和修改合併發行項之間的聯結篩選| Microsoft 文件"
-ms.custom: 
+title: 定義和修改合併發行項之間的聯結篩選| Microsoft 文件
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
 ms.component: replication
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - filters [SQL Server replication], join
 - merge replication join filters [SQL Server replication]
 - modifying filters, join
 - join filters
 ms.assetid: f7f23415-43ff-40f5-b3e0-0be1d148ee5b
-caps.latest.revision: 
+caps.latest.revision: 46
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: e0ad590f14e8a9c774c9108028a58fa5a7ff008e
-ms.sourcegitcommit: ab25b08a312d35489a2c4a6a0d29a04bbd90f64d
+ms.openlocfilehash: bf7d996475800dfc34e472b42e76aa86696c0345
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="define-and-modify-a-join-filter-between-merge-articles"></a>定義和修改合併發行項之間的聯結篩選
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -72,7 +70,7 @@ ms.lasthandoff: 03/08/2018
   
     -   如果選取使用產生器，請使用方格中的資料行 ([結合]、[已篩選的資料表資料行] 、[運算子] 和 [聯結的資料表資料行] ) 來建立聯結陳述式。  
   
-         方格中的每個資料行都包含下拉式方塊，可讓您選取兩個資料行和一個運算子 (**=**、[已篩選的資料表資料行] **<>**、[已篩選的資料表資料行] **<=**、[已篩選的資料表資料行] **\<**、[已篩選的資料表資料行] **>=**、[已篩選的資料表資料行] **>**和 [聯結的資料表資料行] **like**)。 結果會在 **[預覽]** 文字區域中顯示。 如果聯結涉及多對資料行，請從 **[結合]** 資料行中選取一個結合 (AND 或 OR)，然後輸入兩個或更多的資料行及一個運算子。  
+         方格中的每個資料行都包含下拉式方塊，可讓您選取兩個資料行和一個運算子 (**=**、[已篩選的資料表資料行] **<>**、[已篩選的資料表資料行] **<=**、[已篩選的資料表資料行] **\<**、[已篩選的資料表資料行] **>=**、[已篩選的資料表資料行] **>** 和 [聯結的資料表資料行] **like**)。 結果會在 **[預覽]** 文字區域中顯示。 如果聯結涉及多對資料行，請從 **[結合]** 資料行中選取一個結合 (AND 或 OR)，然後輸入兩個或更多的資料行及一個運算子。  
   
     -   如果選取手動寫入陳述式，請在 **[聯結陳述式]** 文字區域寫入聯結陳述式。 使用 **[已篩選的資料表資料行]** 清單方塊與 **[聯結的資料表資料行]** 清單方塊將資料行拖放到 **[Join 陳述式]** 文字區域。  
   
@@ -116,7 +114,7 @@ ms.lasthandoff: 03/08/2018
   
 1.  針對聯結的發行項定義篩選，此發行項也稱為父發行項。  
   
-    -   如需使用參數化資料列篩選器篩選的發行項，請參閱＜ [Define and Modify a Parameterized Row Filter for a Merge Article](../../../relational-databases/replication/publish/define-and-modify-a-parameterized-row-filter-for-a-merge-article.md)＞。  
+    -   如需使用參數化資料列篩選器篩選的發行項，請參閱＜ [針對合併發行項定義及修改參數化資料列篩選](../../../relational-databases/replication/publish/define-and-modify-a-parameterized-row-filter-for-a-merge-article.md)＞。  
   
     -   如需使用靜態資料列篩選進行篩選的發行項，請參閱＜ [Define and Modify a Static Row Filter](../../../relational-databases/replication/publish/define-and-modify-a-static-row-filter.md)＞。  
   
@@ -138,7 +136,7 @@ ms.lasthandoff: 03/08/2018
   
  [!code-sql[HowTo#sp_AddMergeArticle](../../../relational-databases/replication/codesnippet/tsql/define-and-modify-a-join_1.sql)]  
   
- 此範例會在合併式發行集中定義一組發行項，其中的發行項會使用一系列的聯結篩選來針對 `Employee` 資料表進行篩選 (此資料表本身是使用 [LoginID](../../../t-sql/functions/host-name-transact-sql.md) 資料行中 **HOST_NAME** 值上的參數化資料列篩選來進行篩選)。 如需詳細資訊，請參閱 [Define and Modify a Parameterized Row Filter for a Merge Article](../../../relational-databases/replication/publish/define-and-modify-a-parameterized-row-filter-for-a-merge-article.md)。  
+ 此範例會在合併式發行集中定義一組發行項，其中的發行項會使用一系列的聯結篩選來針對 `Employee` 資料表進行篩選 (此資料表本身是使用 [LoginID](../../../t-sql/functions/host-name-transact-sql.md) 資料行中 **HOST_NAME** 值上的參數化資料列篩選來進行篩選)。 如需詳細資訊，請參閱 [針對合併發行項定義及修改參數化資料列篩選](../../../relational-databases/replication/publish/define-and-modify-a-parameterized-row-filter-for-a-merge-article.md)。  
   
  [!code-sql[HowTo#sp_MergeDynamicPub1](../../../relational-databases/replication/codesnippet/tsql/define-and-modify-a-join_2.sql)]  
   

@@ -1,30 +1,31 @@
 ---
-title: "PredictStdev (DMX) |Microsoft 文件"
-ms.custom: 
+title: PredictStdev (DMX) |Microsoft 文件
+ms.custom: ''
 ms.date: 03/02/2016
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
 ms.component: data-mining
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
-f1_keywords: PredictStdev
-dev_langs: DMX
-helpviewer_keywords: PredictStdev function
+f1_keywords:
+- PredictStdev
+dev_langs:
+- DMX
+helpviewer_keywords:
+- PredictStdev function
 ms.assetid: 2614aad0-f3f2-4f56-9dad-9c436f11a35f
-caps.latest.revision: "36"
+caps.latest.revision: 36
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: 80972c7888cab4c64e30e346064d321715e5f2ce
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 0722045df83ce2a70d6c17ba9b55d482799b6039
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="predictstdev-dmx"></a>PredictStdev (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -64,9 +65,9 @@ NATURAL PREDICTION JOIN
   0 AS [Number Children At Home]) AS t  
 ```  
   
-## <a name="see-also"></a>請參閱  
- [資料採礦延伸模組 &#40; DMX &#41;函數參考](../dmx/data-mining-extensions-dmx-function-reference.md)   
- [函式 &#40; DMX &#41;](../dmx/functions-dmx.md)   
- [一般預測函數 &#40; DMX &#41;](../dmx/general-prediction-functions-dmx.md)  
+## <a name="see-also"></a>另請參閱  
+ [資料採礦延伸模組&#40;DMX&#41;函數參考](../dmx/data-mining-extensions-dmx-function-reference.md)   
+ [函式&#40;DMX&#41;](../dmx/functions-dmx.md)   
+ [一般預測函數&#40;DMX&#41;](../dmx/general-prediction-functions-dmx.md)  
   
   

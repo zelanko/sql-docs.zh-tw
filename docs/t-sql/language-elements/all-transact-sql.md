@@ -1,16 +1,14 @@
 ---
 title: ALL (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/15/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
 ms.component: t-sql|language-elements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: t-sql
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - Azure SQL Database
@@ -24,16 +22,15 @@ helpviewer_keywords:
 - single-column set of values [SQL Server]
 - ALL (Transact-SQL)
 ms.assetid: 4b0c002e-1ffd-4425-a980-11fdc1f24af7
-caps.latest.revision: 
+caps.latest.revision: 40
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 142fbd5b352a73e382f89a61f60fba6373902172
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 39d5d8af39a63b89d6d65468645899d090d101e9
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="all-transact-sql"></a>ALL (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -62,12 +59,12 @@ scalar_expression { = | <> | != | > | >= | !> | < | <= | !< } ALL ( subquery )
  這是一個受限制的 SELECT 陳述式，其中不允許使用 ORDER BY 子句和 INTO 關鍵字。  
   
 ## <a name="result-types"></a>結果類型  
- **布林值**  
+ **布林**  
   
 ## <a name="result-value"></a>結果值  
- 若各組 (*scalar_expression***,***x)* 的指定比較都是 TRUE，當 *x* 是單一資料行集中的值時，會傳回 TRUE；否則，會傳回 FALSE。  
+ 若各組 (*scalar_expression ***,*** x)* 的指定比較都是 TRUE，當 *x* 是單一資料行集中的值時，會傳回 TRUE；否則，會傳回 FALSE。  
   
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>Remarks  
  ALL 需要正面比較 *scalar_expression* 與子查詢所傳回的每個值。 例如，如果子查詢傳回 2 和 3 的值，*scalar_expression* <= ALL (子查詢) 會針對值為 2 的 *scalar_expression* 評估為 TRUE。 如果子查詢傳回 2 和 3 的值，*scalar_expression* = ALL (子查詢) 就會評估為 FALSE，因為子查詢 (值為 3) 的某些值不符合運算式的準則。  
   
  如需要求正面比較 *scalar_expression* 和僅由子查詢傳回之單一值的陳述式，請參閱 [SOME &#124; ANY &#40;Transact-SQL&#41;](../../t-sql/language-elements/some-any-transact-sql.md)。  
@@ -75,7 +72,7 @@ scalar_expression { = | <> | != | > | >= | !> | < | <= | !< } ALL ( subquery )
  此主題中所使用的子查詢都是指 ALL。 ALL 也可以搭配 [UNION](../../t-sql/language-elements/set-operators-union-transact-sql.md) 和 [SELECT](../../t-sql/queries/select-transact-sql.md) 使用。  
   
 ## <a name="examples"></a>範例  
- 下列範例會建立預存程序，以判斷 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 資料庫中所指定 `SalesOrderID` 的所有元件，是否都可在指定的天數內製造出來。 這個範例會使用子查詢，針對特定 `DaysToManufacture` 的所有組件建立一份 `SalesOrderID` 值數目的清單，然後確認所有 `DaysToManufacture` 都在指定的天數範圍內。  
+ 下列範例會建立預存程序，以判斷 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 資料庫中所指定 `SalesOrderID` 的所有組件，是否都可以在指定的天數內製造出來。 這個範例會使用子查詢，針對特定 `DaysToManufacture` 的所有組件建立一份 `SalesOrderID` 值數目的清單，然後確認所有 `DaysToManufacture` 都在指定的天數範圍內。  
   
 ```  
 -- Uses AdventureWorks  

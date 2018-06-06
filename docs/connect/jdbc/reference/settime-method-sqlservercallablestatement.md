@@ -1,30 +1,29 @@
 ---
-title: "setTime 方法 (SQLServerCallableStatement) |Microsoft 文件"
-ms.custom: 
+title: setTime 方法 (SQLServerCallableStatement) |Microsoft 文件
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
-ms.component: jdbc
-ms.reviewer: 
+ms.prod: sql
+ms.prod_service: connectivity
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
-ms.topic: article
-apiname: SQLServerCallableStatement.setTime
-apilocation: sqljdbc.jar
+ms.technology: connectivity
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
+apiname:
+- SQLServerCallableStatement.setTime
+apilocation:
+- sqljdbc.jar
 apitype: Assembly
 ms.assetid: 04ea83b2-db5e-4b46-b016-9e496363827e
-caps.latest.revision: "18"
+caps.latest.revision: 18
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
-ms.workload: Inactive
-ms.openlocfilehash: f987cb9ef199c8bcd1d673ae13ff13d38f21821a
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+manager: craigg
+ms.openlocfilehash: 7e9e515f4cc56d7c002f280f9214b272d1a20118
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="settime-method-sqlservercallablestatement"></a>setTime 方法 (SQLServerCallableStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -42,7 +41,7 @@ ms.lasthandoff: 11/18/2017
 |[setTime （java.lang.String，java.sql.Time）](../../../connect/jdbc/reference/settime-method-java-lang-string-java-sql-time.md)|將指定的參數設定為給定的時間值。|  
 |[setTime （java.lang.String，java.sql.Time，java.util.Calendar）](../../../connect/jdbc/reference/settime-method-java-lang-string-java-sql-time-java-util-calendar.md)|將指定的參數設定為給定的時間和行事曆值。|  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [SQLServerCallableStatement 方法](../../../connect/jdbc/reference/sqlservercallablestatement-methods.md)   
  [SQLServerCallableStatement 類別](../../../connect/jdbc/reference/sqlservercallablestatement-class.md)  
   

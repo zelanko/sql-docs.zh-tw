@@ -1,31 +1,29 @@
 ---
-title: "異動複寫 | Microsoft 文件"
-ms.custom: 
+title: 異動複寫 | Microsoft 文件
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
 ms.component: replication
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - transactional replication, about transactional replication
 - transactional replication
 ms.assetid: 3ca82fb9-81e6-4c3c-94b3-b15f852b18bd
-caps.latest.revision: 
+caps.latest.revision: 38
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 6000766d1859869bc806c54e15d72e8a7f64500f
-ms.sourcegitcommit: ab25b08a312d35489a2c4a6a0d29a04bbd90f64d
+ms.openlocfilehash: 6dc4e44f8a7f14de94347a78dce35cc13dac57e7
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="transactional-replication"></a>異動複寫
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -44,18 +42,6 @@ ms.lasthandoff: 03/08/2018
 -   發行者或訂閱者為非[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 資料庫，如 Oracle。  
   
  依預設，交易式發行集的訂閱者應當成唯讀處理，因為變更並不會傳播回發行者。 不過，異動複寫的確有提供選項讓訂閱者更新。  
-  
- **本主題內容**  
-  
- [異動複寫的運作方式](#HowWorks)  
-  
- [初始資料集](#Dataset)  
-  
- [快照集代理程式](#SnapshotAgent)  
-  
- [記錄讀取器代理程式](#LogReaderAgent)  
-  
- [散發代理程式](#DistributionAgent)  
   
 ##  <a name="HowWorks"></a> 異動複寫的運作方式  
  異動複寫是由「 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 快照集代理程式」、「記錄讀取器代理程式」及「散發代理程式」實作。 「快照集代理程式」會準備快照集檔案，內含結構描述及已發行資料表與資料庫物件的資料、將檔案儲存在快照集資料夾內，然後將同步作業記錄至散發者的散發資料庫中。  

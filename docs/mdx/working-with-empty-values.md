@@ -1,31 +1,20 @@
 ---
-title: "使用空白值 |Microsoft 文件"
-ms.custom: 
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: language-reference
-dev_langs: kbMDX
-helpviewer_keywords:
-- expressions [MDX], empty values
-- empty values [MDX]
-ms.assetid: 6338fb85-f513-4c3e-a774-4fd7c6986a91
-caps.latest.revision: "36"
-author: Minewiskan
+title: 使用空白值 |Microsoft 文件
+ms.date: 05/30/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: mdx
+ms.topic: reference
 ms.author: owend
-manager: erikre
-ms.workload: On Demand
-ms.openlocfilehash: 37b91bc83640a10c9905726fdabb49c7816d77a1
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: 1018c741ff545a88a90a6e27196cfc18d6f8177a
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34581950"
 ---
 # <a name="working-with-empty-values"></a>使用空白值
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -125,7 +114,7 @@ WHERE([Date].[Calendar].[Calendar Year].&[2001])
   
  `FROM [Adventure Works]`  
   
- 如需詳細資訊，請參閱[NonEmpty &#40;MDX &#41;](../mdx/nonempty-mdx.md).  
+ 如需詳細資訊，請參閱[NonEmpty &#40;MDX&#41;](../mdx/nonempty-mdx.md)。  
   
 ## <a name="empty-values-and-comparison-operators"></a>空白值及比較運算子  
  當資料中有空白值時，邏輯與比較運算子可能會傳回第三種結果 EMPTY，而非只有 TRUE 或 FALSE。 這種三重數值邏輯的需要是造成應用程式錯誤的來源。 下表大致說明導入空白值比較的結果。  
@@ -134,7 +123,7 @@ WHERE([Date].[Calendar].[Calendar Year].&[2001])
   
 |與|TRUE|EMPTY|FALSE|  
 |---------|----------|-----------|-----------|  
-|**為 TRUE**|TRUE|FALSE|FALSE|  
+|**TRUE**|TRUE|FALSE|FALSE|  
 |**空白**|FALSE|EMPTY|FALSE|  
 |**FALSE**|FALSE|FALSE|FALSE|  
   
@@ -142,7 +131,7 @@ WHERE([Date].[Calendar].[Calendar Year].&[2001])
   
 |或|TRUE|FALSE|  
 |--------|----------|-----------|  
-|**為 TRUE**|TRUE|TRUE|  
+|**TRUE**|TRUE|TRUE|  
 |**空白**|TRUE|TRUE|  
 |**FALSE**|TRUE|FALSE|  
   
@@ -154,9 +143,9 @@ WHERE([Date].[Calendar].[Calendar Year].&[2001])
 |EMPTY|EMPTY|  
 |FALSE|TRUE|  
   
-## <a name="see-also"></a>請參閱  
- [MDX 函數參考 &#40;MDX &#41;](../mdx/mdx-function-reference-mdx.md)   
- [MDX 運算子參考 &#40;MDX &#41;](../mdx/mdx-operator-reference-mdx.md)   
- [運算式 &#40;MDX &#41;](../mdx/expressions-mdx.md)  
+## <a name="see-also"></a>另請參閱  
+ [MDX 函數參考&#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)   
+ [MDX 運算子參考&#40;MDX&#41;](../mdx/mdx-operator-reference-mdx.md)   
+ [運算式&#40;MDX&#41;](../mdx/expressions-mdx.md)  
   
   

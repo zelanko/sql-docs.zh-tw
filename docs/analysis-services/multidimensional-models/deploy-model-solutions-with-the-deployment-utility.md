@@ -1,37 +1,28 @@
 ---
-title: "使用部署公用程式部署模型方案 |Microsoft 文件"
-ms.custom: 
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
-helpviewer_keywords:
-- deploying [Analysis Services], command prompt
-- command prompt utilities [SQL Server], Microsoft.AnalysisServices.Deployment
-- Microsoft.AnalysisServices.Deployment utility
-- Analysis Services deployments, command prompt
-ms.assetid: 584f78ac-5f18-41e0-b292-d1949ec05196
-caps.latest.revision: 
-author: Minewiskan
+title: 使用部署公用程式部署模型方案 |Microsoft 文件
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: multidimensional-models
+ms.topic: conceptual
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 1e094ee032e236d39003fe6e2f572edfea6241a5
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 76d1a3e3cfff777f610bb00f52644af3903ac615
+ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="deploy-model-solutions-with-the-deployment-utility"></a>使用部署公用程式的部署模型方案
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-**Microsoft.AnalysisServices.Deployment** 公用程式可讓您在命令提示字元之下啟動 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 部署引擎。 這個公用程式利用在 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 中建立 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]專案所產生的 XML 輸出檔來作為輸入檔。 您可以輕易地修改這些輸入檔來自訂 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 專案的部署。 產生的部署指令碼可以立即執行，或儲存供稍後進行部署使用。  
+[!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
+
+  **Microsoft.AnalysisServices.Deployment** 公用程式可讓您在命令提示字元之下啟動 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 部署引擎。 這個公用程式利用在 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 中建立 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]專案所產生的 XML 輸出檔來作為輸入檔。 您可以輕易地修改這些輸入檔來自訂 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 專案的部署。 產生的部署指令碼可以立即執行，或儲存供稍後進行部署使用。  
   
+> [!NOTE]
+> [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]部署精靈公用程式會隨[SQL Server 管理 Studio](../../ssms/download-sql-server-management-studio-ssms.md) (SSMS)。 請確定您使用最新版本。 根據預設，「 部署精靈 」 的最新版本會安裝至 C:\Program Files (x86) \Microsoft SQL Server\140\Tools\Binn\ManagementStudio。 
+
 ## <a name="syntax"></a>語法  
   
 ```  
@@ -70,7 +61,7 @@ Microsoft.AnalysisServices.Deployment [ASdatabasefile]
 ## <a name="remarks"></a>備註  
  **Microsoft.AnalysisServices.Deployment** 公用程式會使用一組提供物件定義、部署目標、部署選項和組態設定的檔案，且會嘗試利用指定的部署選項和組態設定，將物件定義部署到指定的部署目標中。 當在回應檔或輸出模式中叫用這個公用程式時，它可以提供一個使用者介面。 如需如何利用提供給這個公用程式的使用者介面來建立回應檔的詳細資訊，請參閱 [使用部署精靈來部署模型方案](../../analysis-services/multidimensional-models/deploy-model-solutions-using-the-deployment-wizard.md)。  
   
- 此公用程式位於 \Program files (x86)\Microsoft SQL Server\110\Binn\ManagementStudio 資料夾。  
+ 此公用程式位於 \Program files (x86) \Microsoft SQL Server\140\Binn\ManagementStudio 資料夾中。  
   
 ##  <a name="Modes"></a> 模式  
  可以使用下表列出的模式來執行這個公用程式。  

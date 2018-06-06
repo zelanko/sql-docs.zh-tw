@@ -1,31 +1,17 @@
 ---
-title: "建立 SQL Server 資料物件使用 RxSqlServerData （SQL 與 R 深入探討） |Microsoft 文件"
-ms.custom: 
-ms.date: 12/14/2017
-ms.reviewer: 
-ms.suite: sql
-ms.prod: machine-learning-services
-ms.prod_service: machine-learning-services
-ms.component: 
-ms.technology: 
-ms.tgt_pltfrm: 
+title: 建立 SQL Server 資料物件使用 RxSqlServerData （SQL 與 R 深入探討） |Microsoft 文件
+ms.prod: sql
+ms.technology: machine-learning
+ms.date: 04/15/2018
 ms.topic: tutorial
-applies_to:
-- SQL Server 2016
-- SQL Server 2017
-dev_langs:
-- R
-ms.assetid: bcf5f7ff-795b-4815-b163-bcddd496efce
-caps.latest.revision: 
-author: jeannt
-ms.author: jeannt
-manager: cgronlund
-ms.workload: On Demand
-ms.openlocfilehash: 4690f7bd66b17643d7d58b10663debd4becbdac7
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+author: HeidiSteen
+ms.author: heidist
+manager: cgronlun
+ms.openlocfilehash: e15c3e7c13c1be4f524c25bb1cec6da3c8e20c7e
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="create-sql-server-data-objects-using-rxsqlserverdata-sql-and-r-deep-dive"></a>建立使用 RxSqlServerData （SQL 與 R 深入探討） 的 SQL Server 資料物件
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]

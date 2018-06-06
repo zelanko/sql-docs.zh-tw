@@ -1,30 +1,20 @@
 ---
-title: "ToggleDrillState (MDX) |Microsoft 文件"
-ms.custom: 
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: language-reference
-f1_keywords: TOGGLEDRILLSTATE
-dev_langs: kbMDX
-helpviewer_keywords: ToggleDrillState function
-ms.assetid: 26fa1a0d-3ed1-45dc-955d-0591d49e4db9
-caps.latest.revision: "33"
-author: Minewiskan
+title: ToggleDrillState (MDX) |Microsoft 文件
+ms.date: 05/30/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: mdx
+ms.topic: reference
 ms.author: owend
-manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: e8564128db3f9eaa06e7eb5bfe93880c74c5b3b3
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: bcd09f9c7ea8be177112e2a70ef04380ebc00146
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34582380"
 ---
 # <a name="toggledrillstate-mdx"></a>ToggleDrillState (MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -56,7 +46,7 @@ ToggleDrillState(Set_Expression1,Set_Expression2 [, [RECURSIVE] [,INCLUDE_CALC_M
   
  如果選擇性**遞迴**旗標，則向上鑽研和向下的鑽研會遞迴地套用。 如需有關遞迴旗標的詳細資訊，請參閱[DrillupMember](../mdx/drillupmember-mdx.md)和[DrilldownMember](../mdx/drilldownmember-mdx.md)函式。  
   
- 查詢 XMLA 屬性 MdpropMdxDrillFunctions，可讓您確認伺服器為鑽研函數; 提供的支援層級請參閱[支援 XMLA 屬性 &#40;XMLA &#41;](../analysis-services/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties.md)如需詳細資訊。  
+ 查詢 XMLA 屬性 MdpropMdxDrillFunctions，可讓您確認伺服器為鑽研函數; 提供的支援層級請參閱[支援 XMLA 屬性&#40;XMLA&#41; ](../analysis-services/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties.md)如需詳細資訊。  
   
  請參閱[資料庫日誌： MDX 設定函數： Toggledrillstate （） 函數](http://go.microsoft.com/fwlink/?LinkId=517759)案例和涉及此函式的範例。  
   
@@ -74,7 +64,7 @@ SELECT ToggleDrillState
    FROM [Adventure Works]  
 ```  
   
-## <a name="see-also"></a>請參閱  
- [MDX 函數參考 &#40;MDX &#41;](../mdx/mdx-function-reference-mdx.md)  
+## <a name="see-also"></a>另請參閱  
+ [MDX 函數參考&#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

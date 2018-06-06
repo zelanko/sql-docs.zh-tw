@@ -1,16 +1,14 @@
 ---
-title: "sys.syslogins (TRANSACT-SQL) |Microsoft 文件"
-ms.custom: 
+title: sys.syslogins (TRANSACT-SQL) |Microsoft 文件
+ms.custom: ''
 ms.date: 09/08/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
 ms.component: system-compatibility-views
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: system-objects
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - syslogins_TSQL
@@ -23,16 +21,15 @@ helpviewer_keywords:
 - sys.syslogins compatibility view
 - syslogins system table
 ms.assetid: 4cb34f17-a4bb-469f-a218-71f074e6308f
-caps.latest.revision: 
+caps.latest.revision: 41
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 1b5b0d9ec9b28236816062fefdb0d022a0c9a498
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 924ae2b530c719085e21d7b045e4a872255b3009
+ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="syssyslogins-transact-sql"></a>sys.syslogins (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -59,7 +56,7 @@ ms.lasthandoff: 02/09/2018
 |**name**|**sysname**|使用者的登入名稱。|  
 |**dbname**|**sysname**|當建立連接時，使用者的預設資料庫名稱。|  
 |**password**|**nvarchar(128)**|傳回 NULL。|  
-|**language**|**sysname**|使用者的預設名稱。|  
+|**語言**|**sysname**|使用者的預設名稱。|  
 |**denylogin**|**int**|1 = 登入是 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 使用者或群組，已被拒絕存取。|  
 |**hasaccess**|**int**|1 = 登入已被授與伺服器的存取權。|  
 |**isntname**|**int**|1 = 登入是 Windows 使用者或群組。<br /><br /> 0 = 登入為 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入。|  
@@ -76,7 +73,7 @@ ms.lasthandoff: 02/09/2018
 |**loginname**|**nvarchar(128)**|使用者的登入名稱。 提供這個項目的目的，是為了與舊版相容。|  
   
 ## <a name="see-also"></a>另請參閱  
- [將系統資料表對應至系統檢視 &#40;TRANSACT-SQL &#41;](../../relational-databases/system-tables/mapping-system-tables-to-system-views-transact-sql.md)   
+ [將系統資料表對應至系統檢視表&#40;Transact SQL&#41;](../../relational-databases/system-tables/mapping-system-tables-to-system-views-transact-sql.md)   
  [相容性檢視 &#40;Transact-SQL&#41;](~/relational-databases/system-compatibility-views/system-compatibility-views-transact-sql.md)  
   
   

@@ -1,28 +1,27 @@
 ---
-title: "設計使用報表設計師 (SSRS) 報表 |Microsoft 文件"
-ms.custom: 
+title: 設計使用報表設計師 (SSRS) 報表 |Microsoft 文件
+ms.custom: ''
 ms.date: 05/30/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: tools
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
-helpviewer_keywords: Report Designer [Reporting Services], report creation
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
+helpviewer_keywords:
+- Report Designer [Reporting Services], report creation
 ms.assetid: 3a26dccc-6ad6-48f5-a882-f96c6c0dd405
-caps.latest.revision: "77"
+caps.latest.revision: 77
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 0fca00b134b3e17458933dfb6e3c14a61a1cc218
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 09311458bc7815a7a63d58ad19c8d8b0a3845da4
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="design-reporting-services-paginated-reports-with-report-designer-ssrs"></a>Reporting Services 分頁的報表與報表設計工具 (SSRS) 的設計
 
@@ -123,7 +122,7 @@ ms.lasthandoff: 01/09/2018
      如果您使用建立報表但是未部署報表的專案組態，則在目前組態之 **StartItem** 屬性中所指定的報表，會在另一個預覽視窗中開啟。  
   
     > [!NOTE]  
-    >  若要使用偵錯模式，您必須設定啟動項目。 在 [方案總管] 中，以滑鼠右鍵按一下報表專案，再按一下 **[屬性]**，然後在 **[StartItem]**中選取要顯示的報表名稱。  
+    >  若要使用偵錯模式，您必須設定啟動項目。 在 [方案總管] 中，以滑鼠右鍵按一下報表專案，再按一下 **[屬性]**，然後在 **[StartItem]** 中選取要顯示的報表名稱。  
   
      如果您想要預覽並非專案之啟動項目的特定報表，請選取建立報表但未部署報表的組態 (例如 DebugLocal 組態)，以滑鼠右鍵按一下報表，然後按一下 **[執行]**。 您必須選擇並未部署報表的組態；否則，報表將會發行至報表伺服器，而非在本機的預覽視窗中顯示。  
   

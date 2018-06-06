@@ -1,28 +1,25 @@
 ---
-title: "資料行存放區索引 - 重組 | Microsoft 文件"
-ms.custom: 
+title: 資料行存放區索引 - 重組 | Microsoft 文件
+ms.custom: ''
 ms.date: 01/27/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
-ms.component: indexes
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: table-view-index
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: d3efda1a-7bdb-47f5-80bf-f075329edee5
-caps.latest.revision: 
-author: barbkess
-ms.author: barbkess
+caps.latest.revision: 17
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 283b8e0fe5173c6527e6f3708b578eca87c80ff3
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: a0729bd3d068c7a50c7f6e9df591909465c29003
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="columnstore-indexes---defragmentation"></a>資料行存放區索引 - 重組
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -30,7 +27,7 @@ ms.lasthandoff: 02/12/2018
   重組資料行存放區索引的工作。  
   
 ## <a name="use-alter-index-reorganize-to-defragment-a-columnstore-index-online"></a>使用 ALTER INDEX REORGANIZE 線上重組資料行存放區索引  
- **適用於：** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (從 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 起)， [!INCLUDE[ssSDS](../../includes/sssds-md.md)]  
+ **適用於：** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (開頭為 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)])、[!INCLUDE[ssSDS](../../includes/sssds-md.md)]  
   
 執行任何類型的負載後，您在差異存放區中可能有多個小型的資料列群組。 您可使用 `ALTER INDEX REORGANIZE` 強制將所有資料列群組存放至資料行存放區，然後再將資料列群組合併成較少資料列的資料列群組。  重新組織作業也會移除已從資料行存放區刪除的資料列。  
   

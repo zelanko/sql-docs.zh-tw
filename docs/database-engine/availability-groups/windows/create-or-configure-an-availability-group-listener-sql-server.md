@@ -1,34 +1,33 @@
 ---
-title: "建立或設定可用性群組接聽程式 (SQL Server) | Microsoft Docs"
-ms.custom: 
+title: 建立或設定可用性群組接聽程式 (SQL Server) | Microsoft Docs
+ms.custom: ''
 ms.date: 05/17/2016
-ms.prod: sql-non-specified
-ms.prod_service: database-engine
-ms.service: 
-ms.component: availability-groups
-ms.reviewer: 
+ms.prod: sql
+ms.prod_service: high-availability
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: dbe-high-availability
-ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords: sql13.swb.availabilitygroup.newaglistener.general.f1
+ms.technology: high-availability
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
+f1_keywords:
+- sql13.swb.availabilitygroup.newaglistener.general.f1
 helpviewer_keywords:
 - Availability Groups [SQL Server], listeners
 - Availability Groups [SQL Server], client connectivity
 ms.assetid: 2bc294f6-2312-4b6b-9478-2fb8a656e645
-caps.latest.revision: "52"
+caps.latest.revision: 52
 author: MikeRayMSFT
 ms.author: mikeray
 manager: erikre
-ms.workload: Active
-ms.openlocfilehash: fae108d9d72c9ba183b7f4b37b418b6d99ed5f56
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 1b1106913af5e7b6c2e9cd4a2e8b329efa0d596a
+ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="create-or-configure-an-availability-group-listener-sql-server"></a>建立或設定可用性群組接聽程式 (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 本主題描述如何在 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 中，使用 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]、[!INCLUDE[tsql](../../../includes/tsql-md.md)] 或 PowerShell，建立或設定 AlwaysOn 可用性群組的單一「可用性群組接聽程式」。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  本主題描述如何使用 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]、[!INCLUDE[tsql](../../../includes/tsql-md.md)] 或[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 中的 PowerShell，建立或設定 AlwaysOn 可用性群組的單一「可用性群組接聽程式」(Availability Group Listener)。  
   
 > [!IMPORTANT]  
 >  若要建立可用性群組的第一個可用性群組接聽程式，強烈建議您使用 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]、[!INCLUDE[tsql](../../../includes/tsql-md.md)] 或 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] PowerShell。 除非必要 (例如建立其他接聽程式)，否則避免在 WSFC 叢集中直接建立接聽程式。  
@@ -51,7 +50,7 @@ ms.lasthandoff: 11/20/2017
   
 -   **若要建立或設定可用性群組接聽程式，使用：**  
   
-     [SQL Server Management Studio](#SSMSProcedure)  
+     [Transact-SQL](#SSMSProcedure)  
   
      [Transact-SQL](#TsqlProcedure)  
   
@@ -123,7 +122,7 @@ ms.lasthandoff: 11/20/2017
   
 |工作|Permissions|  
 |----------|-----------------|  
-|建立可用性群組接聽程式|需要系統管理員 ( **sysadmin** ) 固定伺服器角色的成員資格，以及 CREATE AVAILABILITY GROUP 伺服器權限、ALTER ANY AVAILABILITY GROUP 權限或 CONTROL SERVER 權限。|  
+|建立可用性群組接聽程式|需要 **系統管理員 (sysadmin)** 固定伺服器角色的成員資格，以及 CREATE AVAILABILITY GROUP 伺服器權限、ALTER ANY AVAILABILITY GROUP 權限或 CONTROL SERVER 權限。|  
 |修改現有的可用性群組接聽程式|需要可用性群組的 ALTER AVAILABILITY GROUP 權限、CONTROL AVAILABILITY GROUP 權限、ALTER ANY AVAILABILITY GROUP 權限或 CONTROL SERVER 權限。|  
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
@@ -149,8 +148,8 @@ ms.lasthandoff: 11/20/2017
   
  如需詳細資訊，請參閱本主題前文中的＜ [可用性群組接聽程式之 DNS 名稱的需求](#DNSnameReqs)＞。  
   
- **[通訊埠]**  
- 此接聽程式所使用的 TPC 通訊埠。  
+ **通訊埠**  
+ 此接聽程式所使用的 TCP 通訊埠。  
   
  **網路模式**  
  指出接聽程式所使用的 TCP 通訊協定，其中一個：  
@@ -164,7 +163,7 @@ ms.lasthandoff: 11/20/2017
  **靜態 IP**  
  接聽程式將使用一個或多個靜態 IP 位址。 其他 IP 位址為選擇性。 若要建立跨多個子網路的可用性群組接聽程式，您必須在接聽程式組態中，針對每個子網路指定一個靜態 IP 位址。 請連絡您的網路系統管理員以取得這些靜態 IP 位址。  
   
- 如果您選取 **[靜態 IP]** ，就會在 **[網路模式]** 欄位底下出現一個子網路方格。 此方格會顯示這個可用性群組接聽程式可存取之每個子網路的相關資訊。 在您按一下 **[加入]**來加入靜態 IP 位址之前，此方格是空的。  
+ 如果您選取 **[靜態 IP]** ，就會在 **[網路模式]** 欄位底下出現一個子網路方格。 此方格會顯示這個可用性群組接聽程式可存取之每個子網路的相關資訊。 在您按一下 **[加入]** 來加入靜態 IP 位址之前，此方格是空的。  
   
  資料行如下：  
   
@@ -202,7 +201,7 @@ ms.lasthandoff: 11/20/2017
 ##  <a name="PowerShellProcedure"></a> 使用 PowerShell  
  **建立或設定可用性群組接聽程式**  
   
-1.  將目錄 (**cd**) 變更為裝載主要複本的伺服器執行個體。  
+1.  變更目錄 (**cd**) 為裝載主要複本的伺服器執行個體。  
   
 2.  若要建立或修改可用性群組接聽程式，請使用下列其中一個指令程式：  
   
@@ -296,7 +295,7 @@ ms.lasthandoff: 11/20/2017
   
      [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 會將  **RegisterAllProvidersIP** 屬性設定為 1，以便在用戶端連接字串依建議指定 `MultiSubnetFailover = True`的用戶端容錯移轉之後，縮短重新連接的時間。 請注意，若要利用接聽程式多重子網路功能，用戶端可能需要支援 **MultiSubnetFailover** 關鍵字的資料提供者。 如需多重子網路容錯移轉之驅動程式支援的相關資訊，請參閱 [AlwaysOn 用戶端連接性 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/always-on-client-connectivity-sql-server.md)。  
   
-     如需多重子網路叢集的相關資訊，請參閱 [SQL Server 多重子網路叢集 &#40;SQL Server&#41;](../../../sql-server/failover-clusters/windows/sql-server-multi-subnet-clustering-sql-server.md)。  
+     如需多重子網路叢集的相關資訊，請參閱 [SQL Server 多重子網路叢集 &#40;SQL Server&#41;](../../../sql-server/failover-clusters/windows/sql-server-multi-subnet-clustering-sql-server.md)，您只可以為每個可用性群組建立一個接聽程式。  
   
     > [!TIP]  
     >  `RegisterAllProvidersIP = 1`時，如果您在 WSFC 叢集上執行 WSFC 驗證設定精靈，這個精靈會產生下列警告訊息：  
@@ -335,7 +334,7 @@ Start-ClusterResource yourListenerName
   
 -   將接聽程式的 DNS 主機名稱提供給應用程式開發人員，以便在要求與這個可用性群組進行用戶端連接時，用於連接字串中。  
   
--   鼓勵開發人員將用戶端連接字串更新為指定 `MultiSubnetFailover = True` (可能的話)。 如需多重子網路容錯移轉之驅動程式支援的相關資訊，請參閱 [AlwaysOn 用戶端連接性 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/always-on-client-connectivity-sql-server.md)。  
+-   鼓勵開發人員將用戶端連接字串更新為指定 `MultiSubnetFailover = True`(可能的話)。 如需多重子網路容錯移轉之驅動程式支援的相關資訊，請參閱 [AlwaysOn 用戶端連接性 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/always-on-client-connectivity-sql-server.md)。  
   
 ###  <a name="CreateAdditionalListener"></a> 為可用性群組建立其他接聽程式 (選擇性)  
  您透過 SQL Server 建立一個接聽程式之後，可以加入另一個接聽程式，如下所示：  
@@ -380,7 +379,7 @@ Start-ClusterResource yourListenerName
   
 ## <a name="see-also"></a>另請參閱  
  [AlwaysOn 可用性群組概觀 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
- [可用性群組接聽程式、用戶端連線及應用程式容錯移轉 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md)   
+ [可用性群組接聽程式、用戶端連接性及應用程式容錯移轉 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md)   
  [SQL Server 多重子網路叢集 &#40;SQL Server&#41;](../../../sql-server/failover-clusters/windows/sql-server-multi-subnet-clustering-sql-server.md)  
   
   

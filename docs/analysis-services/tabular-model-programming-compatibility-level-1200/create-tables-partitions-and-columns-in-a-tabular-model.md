@@ -1,30 +1,23 @@
 ---
-title: "表格式模型中建立資料表、 資料分割和資料行 |Microsoft 文件"
-ms.custom: 
-ms.date: 03/07/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services, azure-analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+title: 表格式模型中建立資料表、 資料分割和資料行 |Microsoft 文件
+ms.date: 05/07/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: tabular-models
 ms.topic: reference
-ms.assetid: cf0e4791-ad3b-41a8-81ce-509d4cf223f8
-caps.latest.revision: "8"
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 2017fa20a68222bf577cc68284882ac15a22f95f
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: c08fa45cbc4b77c151a002c3318dcc3dbeb2ee06
+ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="create-tables-partitions-and-columns-in-a-tabular-model"></a>表格式模型中建立資料表、 資料分割和資料行
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]在表格式模型中，資料表是由資料列和資料行所組成。 資料列會組織成資料分割，以支援累加式的資料重新整理。 表格式解決方案可支援幾種類型的資料表，根據資料來自何處：  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
+在表格式模型中，資料表是由資料列和資料行所組成。 資料列會組織成資料分割，以支援累加式的資料重新整理。 表格式解決方案可支援幾種類型的資料表，根據資料來自何處：  
 
 * 一般的資料表，從關聯式資料來源，此資料提供者透過產生資料。 
 
@@ -256,7 +249,7 @@ namespace TOMSamples
 
 當您將變更儲存至伺服器時，伺服器將傳回的清單推斷**CalculatedTableColumns** （導出資料表所組成的導出的資料表資料行），透過資料表的資料行集合中看見。 
 
-## <a name="next-steps"></a>後續步驟
+## <a name="next-steps"></a>後續的步驟
 
 檢閱用於 TOM 中處理例外狀況的類別： [TOM 中的錯誤處理](../../analysis-services/tabular-model-programming-compatibility-level-1200/handling-errors-in-the-tom-api-analysis-services-amo-tom.md)
   

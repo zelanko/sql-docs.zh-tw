@@ -1,16 +1,14 @@
 ---
-title: "sp_cursorfetch (TRANSACT-SQL) |Microsoft 文件"
-ms.custom: 
+title: sp_cursorfetch (TRANSACT-SQL) |Microsoft 文件
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: system-objects
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_cursorfetch
@@ -20,16 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_cursorfetch
 ms.assetid: 14513c5e-5774-4e4c-92e1-75cd6985b6a3
-caps.latest.revision: 
+caps.latest.revision: 10
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: b9b33361094966dc180939f0cdf92ac951922139
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 9bbffe757b6b9c76bc1eb0b95e883f3d4d30b461
+ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="spcursorfetch-transact-sql"></a>sp_cursorfetch (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -53,7 +50,7 @@ sp_cursorfetch cursor
  *fetchtype*  
  指定要提取的資料指標緩衝區。 *fetchtype*是需要下列其中一個下列整數輸入值的選擇性參數。  
   
-|值|名稱|Description|  
+|Value|名稱|Description|  
 |-----------|----------|-----------------|  
 |0x0001|FIRST|擷取的第一個緩衝區*nrows*資料列。 如果*nrows*等於 0，資料指標位於結果集之前，會傳回任何資料列。|  
 |0x0002|NEXT|擷取下一個緩衝區*nrows*資料列。|  
@@ -140,7 +137,7 @@ sp_cursorfetch cursor
   
  RPC 狀態參數會設定為下表所示的其中一個值。  
   
-|值|描述|  
+|Value|설명|  
 |-----------|-----------------|  
 |0|已成功執行程序。|  
 |0x0001|程序失敗。|  
@@ -149,7 +146,7 @@ sp_cursorfetch cursor
   
  資料列當做一般結果集傳回，也就是資料行格式 (0x2a)、資料列 (0xd1)，後面接著完成 (0xfd)。 中繼資料 Token 的傳送格式與針對 sp_cursoropen 指定的格式相同，也就是：適用於 SQL Server 7.0 使用者的 0x81、0xa5 和 0xa4，依此類推。 資料列狀態指標會當做隱藏資料行傳送，類似於 BROWSE 模式，也就是在每一個資料列結尾，包含資料行名稱 rowstat 和資料類型 INT4。 這個 rowstat 資料行具有下表所列的其中一個值。  
   
-|值|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |0x0001|FETCH_SUCCEEDED|  
 |0x0002|FETCH_MISSING|  
@@ -198,8 +195,8 @@ row2 contents
 row3 contents   
 ```  
   
-## <a name="see-also"></a>請參閱  
- [sp_cursoropen &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/sp-cursoropen-transact-sql.md)   
+## <a name="see-also"></a>另請參閱  
+ [sp_cursoropen &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-cursoropen-transact-sql.md)   
  [系統預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

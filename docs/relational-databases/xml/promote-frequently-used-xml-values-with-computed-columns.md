@@ -1,35 +1,32 @@
 ---
-title: "使用計算資料行升級常用的 XML 值 | Microsoft Docs"
-ms.custom: 
+title: 使用計算資料行升級常用的 XML 值 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
 ms.component: xml
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- dbe-xml
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: xml
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - promoting properties [XML in SQL Server]
 - property promotion [XML in SQL Server]
 ms.assetid: f5111896-c2fd-4209-b500-f2baa45489ad
-caps.latest.revision: 
+caps.latest.revision: 11
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 38efa0d9948afdd31c93442f657d7f3d68c82f0e
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.openlocfilehash: b02df9c27dfc406bec621d68936ac85b6b949406
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="promote-frequently-used-xml-values-with-computed-columns"></a>使用計算資料行升級常用的 XML 值
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
-如果查詢主要只是針對少數的元素和屬性值來執行，您可能會想要將那些量升級至關聯式資料行。 若已擷取整個 XML 執行個體，但您只是要針對小部分的 XML 資料來發出查詢要求時，這是很有幫助的。 您不需要在 XML 資料行上建立 XML 索引， 即可為升級的資料行建立索引。 您必須撰寫查詢來使用升級的資料行。 意即，查詢最佳化工具不再將 XML 資料行查詢的目標放在升級的資料行。  
+  如果查詢主要只是針對少數的元素和屬性值來執行，您可能會想要將那些量升級至關聯式資料行。 若已擷取整個 XML 執行個體，但您只是要針對小部分的 XML 資料來發出查詢要求時，這是很有幫助的。 您不需要在 XML 資料行上建立 XML 索引， 即可為升級的資料行建立索引。 您必須撰寫查詢來使用升級的資料行。 意即，查詢最佳化工具不再將 XML 資料行查詢的目標放在升級的資料行。  
   
  升級的資料行可以是同一資料表中的已計算資料行，也可以是資料表中由使用者維護的另一個資料行。 當單一值從每個 XML 執行個體升級起來時，這就足夠了。 然而，若為多重值的屬性，您就必須為屬性建立個別的資料表，請見下節說明。  
   

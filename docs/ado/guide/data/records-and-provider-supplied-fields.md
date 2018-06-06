@@ -1,31 +1,28 @@
 ---
-title: "記錄和提供者提供的欄位 |Microsoft 文件"
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
+title: 記錄和提供者提供的欄位 |Microsoft 文件
+ms.prod: sql
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
-ms.custom: 
+ms.technology: connectivity
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - records-provided fields [ADO]
 - provider-supplied fields [ADO]
 ms.assetid: 77f95e0a-0cf2-411a-a792-593f77330fbd
-caps.latest.revision: 
+caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: c5341eac5d18d222e2e0d1f97a006179ffa8927d
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: d929238274b5b92e9bdf7b89a369e7988c06b3fc
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="records-and-provider-supplied-fields"></a>記錄和提供者提供的欄位
 當[記錄](../../../ado/reference/ado-api/record-object-ado.md)開啟物件，其來源可以是目前已開啟的資料列[資料錄集](../../../ado/reference/ado-api/recordset-object-ado.md)，絕對 URL 或相對 URL 開啟搭配[連接](../../../ado/reference/ado-api/connection-object-ado.md)物件.  

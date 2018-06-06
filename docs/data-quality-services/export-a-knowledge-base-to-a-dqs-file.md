@@ -1,29 +1,31 @@
 ---
-title: "將知識庫匯出為 .dqs 檔案 | Microsoft Docs"
-ms.custom: 
+title: 將知識庫匯出為 .dqs 檔案 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: data-quality-services
-ms.service: 
 ms.component: data-quality-services
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: data-quality-services
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- data-quality-services
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: a324ead5-c8aa-4e26-abe3-ef415add00f8
-caps.latest.revision: "19"
+caps.latest.revision: 19
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.workload: Inactive
-ms.openlocfilehash: 1b7bca78f2d4538b1b4769efd3d34ba21ae019e6
-ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
+manager: craigg
+ms.openlocfilehash: 4d203ed9eb7c3bdf848eb74fa1be56dd63e27438
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="export-a-knowledge-base-to-a-dqs-file"></a>將知識庫匯出到 .dqs 檔案
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
   此主題描述如何將整個知識庫匯出到 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) 中的 .dqs 資料檔。 您可以將定義域或整個知識庫匯出到資料檔。 如需匯出定義域的資訊，請參閱[將定義域匯出為 .dqs 檔案](../data-quality-services/export-a-domain-to-a-dqs-file.md)。  
   
  將知識庫匯出到 .dqs 檔，然後將此檔案當做另一個知識庫匯入將會簡化知識產生程序，以節省時間與精力。 這樣可讓您將知識庫和其知識與其他人分享。 .dqs 檔將包含所有知識庫資訊，包括定義域和比對原則，但不包括附加的參考資料資訊。 匯入 .dqs 檔之後，如有必要，您必須將必要的定義域再次附加至適當的參考資料服務。 知識庫中已發行和未發行的資料都會匯出。  
@@ -46,7 +48,7 @@ ms.lasthandoff: 01/19/2018
   
 2.  在 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 首頁畫面中，於 [定義域管理] 活動中開啟知識庫。  
   
-3.  在 [定義域管理] 頁面中 (包含任何選取的索引標籤)，按一下定義域清單上方的 **[匯出知識庫資料]** 圖示，然後按一下 **[匯出知識庫]**。 另外，您也可以用滑鼠右鍵按一下 **[定義域]** 清單，將游標移到 **[匯出]**上方，然後按一下 **[匯出知識庫]**。  
+3.  在 [定義域管理] 頁面中 (包含任何選取的索引標籤)，按一下定義域清單上方的 **[匯出知識庫資料]** 圖示，然後按一下 **[匯出知識庫]**。 另外，您也可以用滑鼠右鍵按一下 **[定義域]** 清單，將游標移到 **[匯出]** 上方，然後按一下 **[匯出知識庫]**。  
   
 4.  在 [匯出到資料檔] 對話方塊中，移至您想要用來儲存檔案的資料夾、為檔案命名或是保留知識庫名稱、將 [DQS 資料檔 (\*.dqs)] 保留為 [另存新檔] 類型，然後按一下 [儲存]。  
   

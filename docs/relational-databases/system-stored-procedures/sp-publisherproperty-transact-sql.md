@@ -1,16 +1,15 @@
 ---
-title: "sp_publisherproperty (TRANSACT-SQL) |Microsoft 文件"
-ms.custom: 
+title: sp_publisherproperty (TRANSACT-SQL) |Microsoft 文件
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - sp_publisherproperty
 ms.assetid: 0ed1ebc1-a1bd-4aed-9f46-615c5cf07827
-caps.latest.revision: 
+caps.latest.revision: 27
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 782dada24606bdd5ece4057bb47b7df6a6a9a9db
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 647bd0de356a8a31c531a027dffeca88cd8c3083
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sppublisherproperty-transact-sql"></a>sp_publisherproperty (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,13 +46,13 @@ sp_publisherproperty [ @publisher = ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>引數  
- [ **@publisher**  =] **'***發行者***'**  
+ [**@publisher** =] **'***發行者***'**  
  這是異質性發行者的名稱。 *發行者*是**sysname**，沒有預設值。  
   
- [ **@propertyname**  =] **'***propertyname***'**  
+ [**@propertyname** =] **'***propertyname***'**  
  這是要設定之屬性的名稱。 *propertyname*是**sysname**，而且可以是下列值之一。  
   
-|值|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |**xactsetbatching**|如果發行者端的交易分組成在交易上一致的各個組 (稱為 Xactsets)，以便進行後續處理。 值為**啟用**表示 Xactsets 可以建立，預設值。 值為**停用**所建立的任何新 xactsets 的方式處理現有的 Xactsets 的方式。|  
 |**xactsetjob**|如果啟用建立 Xactsets 的 Xactsets 作業， 值為**啟用**表示定期執行 Xactset 作業： 若要在發行者端建立 Xactsets。 值為**停用**表示，才建立 Xactsets 記錄讀取器代理程式時，它會輪詢變更 「 發行者 」。|  
@@ -62,14 +60,14 @@ sp_publisherproperty [ @publisher = ] 'publisher'
   
  當*propertyname*省略會傳回所有可設定的屬性。  
   
- [ **@propertyvalue**  =] **'***propertyvalue***'**  
+ [**@propertyvalue** =] **'***propertyvalue***'**  
  這是屬性設定的新值。 *propertyvalue*是**sysname**，預設值是 NULL。 當*propertyvalue*省略，則目前的設定會傳回屬性。  
   
 ## <a name="result-sets"></a>結果集  
   
 |資料行名稱|資料類型|Description|  
 |-----------------|---------------|-----------------|  
-|**屬性名稱**|**sysname**|傳回下列可設定的發行集屬性：<br /><br /> **xactsetbatching**<br /><br /> **xactsetjob**<br /><br /> **xactsetjobinterval**|  
+|**propertyname**|**sysname**|傳回下列可設定的發行集屬性：<br /><br /> **xactsetbatching**<br /><br /> **xactsetjob**<br /><br /> **xactsetjobinterval**|  
 |**propertyvalue**|**sysname**|是中屬性的目前設定**propertyname**資料行。|  
   
 ## <a name="return-code-values"></a>傳回碼值  
@@ -89,7 +87,7 @@ sp_publisherproperty [ @publisher = ] 'publisher'
 ## <a name="permissions"></a>Permissions  
  只有成員**sysadmin**散發者端的固定的伺服器角色可以執行**sp_publisherproperty**。  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [設定 Oracle 發行者的交易集作業 &#40;複寫 Transact-SQL 程式設計&#41;](../../relational-databases/replication/administration/configure-the-transaction-set-job-for-an-oracle-publisher.md)   
  [系統預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   

@@ -1,36 +1,23 @@
 ---
-title: "定義資料來源檢視 (Analysis Services) |Microsoft 文件"
-ms.custom: 
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
-helpviewer_keywords:
-- names [Analysis Services], data source views
-- name matching criteria [Analysis Services]
-- Data Source View Wizard
-- data source views [Analysis Services], creating
-ms.assetid: 0bae4ee4-1742-40e9-bebe-17c788854484
-caps.latest.revision: 
-author: Minewiskan
+title: 定義資料來源檢視 (Analysis Services) |Microsoft 文件
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: multidimensional-models
+ms.topic: conceptual
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: a64d57676b6b9c0fb36772dfce08ed0a137df19a
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 6966a0763146c9fd787be39d5be011704c048f66
+ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="defining-a-data-source-view-analysis-services"></a>定義資料來源檢視 (Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-資料來源檢視包含 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 多維度資料庫物件 (也就是 Cube、維度和採礦結構) 所使用之結構描述的邏輯模型。 資料來源檢視就是統一維度模型 (UDM) 和採礦結構所使用之結構描述元素的中繼資料定義，並以 XML 格式儲存。 資料來源檢視：  
+  資料來源檢視包含 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 多維度資料庫物件 (也就是 Cube、維度和採礦結構) 所使用之結構描述的邏輯模型。 資料來源檢視就是統一維度模型 (UDM) 和採礦結構所使用之結構描述元素的中繼資料定義，並以 XML 格式儲存。 資料來源檢視：  
   
 -   包含代表從一個或多個基礎資料來源選取之物件的中繼資料，或用來產生基礎關聯式資料存放區的中繼資料 (如果您是遵循由上而下產生結構描述的方法)。  
   
@@ -139,13 +126,13 @@ ms.lasthandoff: 02/15/2018
   
 ## <a name="see-also"></a>另請參閱  
  [在資料來源檢視中加入或移除資料表或檢視 &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/adding-or-removing-tables-or-views-in-a-data-source-view-analysis-services.md)   
- [定義邏輯主索引鍵中的資料來源檢視 &#40;Analysis Services &#41;](../../analysis-services/multidimensional-models/define-logical-primary-keys-in-a-data-source-view-analysis-services.md)   
- [在資料來源檢視 &#40; 中定義具名的計算Analysis Services &#41;](../../analysis-services/multidimensional-models/define-named-calculations-in-a-data-source-view-analysis-services.md)   
- [在資料來源檢視 &#40; 中定義具名的查詢Analysis Services &#41;](../../analysis-services/multidimensional-models/define-named-queries-in-a-data-source-view-analysis-services.md)   
- [取代的資料表或資料來源檢視 &#40; 中的具名的查詢Analysis Services &#41;](../../analysis-services/multidimensional-models/replace-a-table-or-a-named-query-in-a-data-source-view-analysis-services.md)   
- [在資料來源檢視設計工具 &#40; 中使用圖表Analysis Services &#41;](../../analysis-services/multidimensional-models/work-with-diagrams-in-data-source-view-designer-analysis-services.md)   
- [瀏覽資料來源檢視 &#40; 中的資料Analysis Services &#41;](../../analysis-services/multidimensional-models/explore-data-in-a-data-source-view-analysis-services.md)   
- [刪除資料來源檢視 &#40;Analysis Services &#41;](../../analysis-services/multidimensional-models/delete-a-data-source-view-analysis-services.md)   
+ [資料來源檢視中定義邏輯主索引鍵&#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/define-logical-primary-keys-in-a-data-source-view-analysis-services.md)   
+ [在資料來源檢視中定義具名的計算&#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/define-named-calculations-in-a-data-source-view-analysis-services.md)   
+ [在資料來源檢視中定義具名的查詢&#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/define-named-queries-in-a-data-source-view-analysis-services.md)   
+ [取代的資料表或資料來源檢視中的具名的查詢&#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/replace-a-table-or-a-named-query-in-a-data-source-view-analysis-services.md)   
+ [在資料來源檢視設計工具 & #40; 中使用圖表Analysis Services & #41;](../../analysis-services/multidimensional-models/work-with-diagrams-in-data-source-view-designer-analysis-services.md)   
+ [瀏覽資料來源檢視中的資料&#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/explore-data-in-a-data-source-view-analysis-services.md)   
+ [刪除資料來源檢視&#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/delete-a-data-source-view-analysis-services.md)   
  [在資料來源檢視中重新整理結構描述 &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/refresh-the-schema-in-a-data-source-view-analysis-services.md)  
   
   

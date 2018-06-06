@@ -1,66 +1,57 @@
 ---
-title: "SQL Server 機器學習服務跨版本的功能可用性 |Microsoft 文件"
-ms.custom: 
-ms.date: 03/07/2018
-ms.reviewer: 
-ms.suite: sql
-ms.prod: machine-learning-services
-ms.prod_service: machine-learning-services
-ms.component: r
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
-ms.assetid: 
-caps.latest.revision: 
-author: jeannt
-ms.author: jeannt
-manager: cgronlund
-ms.workload: Inactive
-ms.openlocfilehash: 16ca6c44b15c9fb7c1983d5a04175ebbade57895
-ms.sourcegitcommit: 6b1618aa3b24bf6759b00a820e09c52c4996ca10
+title: SQL Server 機器學習服務跨版本的功能可用性 |Microsoft 文件
+ms.prod: sql
+ms.technology: machine-learning
+ms.date: 04/15/2018
+ms.topic: conceptual
+author: HeidiSteen
+ms.author: heidist
+manager: cgronlun
+ms.openlocfilehash: cdb3e54addb2137e7c0ae2d6462be9c75c542539
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="feature-availability-across-editions-of-sql-server-machine-learning-services"></a>跨版本的 SQL Server 機器學習服務的功能可用性
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
  
  機器學習功能都可在 SQL Server 2016 和 SQL Server 2017。 本文列出提供此功能的版本、 說明在特定的版本中，將套用的限制，並列出功能僅適用於特定版本。
 
+
+## <a name="sql-server-2017-features"></a>SQL Server 2017 功能
+
+Enterprise 和 Developer edition 有相同的功能涵蓋範圍，讓您可以建置方案，以便企業安裝，而不會產生相同的成本。 版本的功能相同，雖然使用 Developer Edition 不支援實際執行環境。
+
+基本和進階整合之間的差異是小數位數。 進階的 integration 可用來在您的電腦可以容納任何大小的資料集的平行處理所有可用的核心。 2 核心，以及適合在記憶體中的資料集是基本的整合。 
+
+（資料庫） 執行個體適用於基本和進階的整合。 獨立伺服器不是資料庫引擎執行個體功能，並提供作為安裝選項只在開發人員和 Enterprise 版本中。
+
+|功能|Enterprise|Standard|Web|Express with Advanced Services|Express 
+|-------------|----------------|--------------|---------|------------------------------------|------------------------|  
+|基本的 R 整合|是|是|是|是|否|   
+|進階的 R 整合|是|否|否|否|否| 
+|基本 Python 整合|是|是|是|是|否|
+|進階 Python 整合|是|否|否|否|否| 
+|Machine Learning 伺服器 (獨立式)|是|否|否|否|否|   
+
  > [!NOTE]
- > SQL Server 機器學習服務 （資料庫） 不包含的一般情況下，[實施](https://docs.microsoft.com/machine-learning-server/what-is-operationalization)獨立 R 伺服器或機器學習伺服器安裝中包含的功能。 實施包含 web 服務部署和裝載，並因此競相其他 SQL Server 作業相同的資源。
- > 
- > 基於這個理由，建議您在支援的預測模型的部署為 web 服務的不同實體伺服器上安裝 SQL Server 2016 R 伺服器 （獨立） 或 SQL Server 2017 機器學習伺服器 （獨立）。 
+ > （獨立） 伺服器提供[實施](https://docs.microsoft.com/machine-learning-server/what-is-operationalization)會包含在 Microsoft （非 SQL-品牌） R 伺服器或機器學習伺服器安裝的功能。 實施包含 web 服務部署和裝載功能。
+>
+> （資料庫） 安裝，運用解決方案的對等方法利用 database engine 功能，當您將程式碼轉換成可以在預存程序中執行的函式。
 
-## <a name="sql-server-2017-machine-learning-services-in-database-and-standalone"></a>SQL Server 2017 機器學習服務 （資料庫） 和 （獨立）
 
-Developer Edition 提供相當於 Enterprise Edition 的效能。 使用 Developer Edition 不支援實際執行環境。
+## <a name="sql-server-2016-r-features"></a>SQL Server 2016 R 功能
 
-|功能|Enterprise|Standard|Web|Express with Advanced Services|Express| 
-|-------|----------|--------|---|------------------------------|-------|
-| R 解譯器 （& s) 專屬的封裝 | 是 | 是 | 否 | 否 | 否 | 
-| Python 解譯器和用戶端程式庫 | 是 | 是 | 否 | 否 | 否 | 
-| 區塊處理的資料 <br/>（處理大量的資料，超過功能放入記憶體中） | 是 | 否 | 否 | 否 | 否 |
-| 向上延展處理 <br/>（2 個以上的處理器） | 是 | 否 | 否 | 否 | 否 |
-| 實施 | 是 | 否 | 否 | 否 | 否 |
-| [預測](../../t-sql/queries/predict-transact-sql.md)函式 <br/>(執行[原生計分](../sql-native-scoring.md)預先定型的模型，先前儲存在所需的二進位格式) | 是 | 是 | 是 | 是 | 是 |
-| R 用戶端相容性 | 是 | 是 | 否 | 否 | 否 | 
-| Microsoft R Open | 是 | 是 | 否 | 否 | 否 | 
-| Anaconda Python 3.5 | 是 | 是 | 否 | 否 | 否 | 
-
-## <a name="sql-server-2016-r-services-in-database-and-r-server-standalone"></a>SQL Server 2016 R 服務 （資料庫） 與 R Server （獨立）
-
-功能可用性等同於 2017，減去 Python 支援未先 2016年版本的一部分。
+SQL Server 2016 包含只 R 整合。 在 SQL Server 2016、 基本和進階的 R 整合相當於 SQL Server 2017。
 
 ## <a name="r-feature-availability-in-azure-sql-database"></a>Azure SQL Database 中的 R 功能可用性
   
-初始的測試版本發行後 R 服務目前是**不**Azure SQL Database 中，提供暫止的進一步開發之用。 
+初始的測試版本發行後 R 服務已從 Azure SQL Database 中，移除暫止的更進一步的開發。 
 
 ## <a name="performance-expectations-for-enterprise-edition"></a>適用於 Enterprise Edition 的效能期望
 
 中的機器學習解決方案的效能[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]卻通常超越使用傳統的 R，提供相同的硬體實作。 是因為 SQL Server 中的 R 解決方案可以使用來執行伺服器資源，而且有時候散發到使用多個處理程序**RevoScaleR**函式。 
-
-效能已不已進行評估 Python 解決方案的功能是仍在開發，但是一些相同的優點預期要套用。
 
 使用者也可以預期看到效能和延展性，以相同的機器學習解決方案，如果在 Enterprise Edition vs 中執行相當大的差異。Standard Edition 皆執行相同的 R 函數，使用者應該也可以在效能和延展性上看見顯著的差異。 原因包括支援平行處理，增加可用的機器學習的執行緒和串流處理 （或區塊），可讓 RevoScaleR 函數來處理超過可放入記憶體的資料。 
 

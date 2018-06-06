@@ -1,33 +1,32 @@
 ---
-title: "sqlsrv_get_field |Microsoft 文件"
-ms.custom: 
+title: sqlsrv_get_field | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
+ms.prod: sql
+ms.prod_service: connectivity
 ms.component: php
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
-ms.topic: article
-apiname: sqlsrv_get_field
+ms.technology: connectivity
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
+apiname:
+- sqlsrv_get_field
 apitype: NA
 helpviewer_keywords:
 - sqlsrv_get_field
 - API Reference, sqlsrv_get_field
 - retrieving data, as a single field
 ms.assetid: fa17cc56-fb38-433b-a40d-65642f04dc23
-caps.latest.revision: "28"
+caps.latest.revision: 28
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
-ms.workload: Inactive
-ms.openlocfilehash: 814a7c0052afe9bbf7b98e8e15efed0dc6dd9faf
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+manager: craigg
+ms.openlocfilehash: 8aea71596e1a977839fb7294df7324f48324e0c3
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sqlsrvgetfield"></a>sqlsrv_get_field
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -46,7 +45,7 @@ sqlsrv_get_field( resource $stmt, int $fieldIndex [, int $getAsType])
   
 *$fieldIndex*：要擷取之欄位的索引。 索引從零開始。  
   
-*$getAsType* [選用]: A **SQLSRV**常數 (**SQLSRV_PHPTYPE_\***) 可決定傳回的資料的 PHP 資料類型。 如需支援的資料類型的資訊，請參閱[常數 &#40;Microsoft Drivers for PHP for SQL Server&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md). 若未指定傳回類型，將會傳回預設 PHP 類型。 如需關於預設 PHP 類型的詳細資訊，請參閱 [Default PHP Data Types](../../connect/php/default-php-data-types.md)。 如需關於指定 PHP 資料類型的詳細資訊，請參閱 [How to: Specify PHP Data Types](../../connect/php/how-to-specify-php-data-types.md)。  
+*$getAsType* [選用]: A **SQLSRV**常數 (**SQLSRV_PHPTYPE_\***) 可決定傳回的資料的 PHP 資料類型。 如需支援的資料類型的資訊，請參閱[常數&#40;Microsoft Drivers for PHP for SQL Server&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md)。 若未指定傳回類型，將會傳回預設 PHP 類型。 如需關於預設 PHP 類型的詳細資訊，請參閱 [Default PHP Data Types](../../connect/php/default-php-data-types.md)。 如需關於指定 PHP 資料類型的詳細資訊，請參閱 [How to: Specify PHP Data Types](../../connect/php/how-to-specify-php-data-types.md)。  
   
 ## <a name="return-value"></a>傳回值  
 欄位資料。 您可以使用 *$getAsType* 參數，指定傳回資料的 PHP 資料類型。 若未指定傳回資料類型，將會傳回預設 PHP 資料類型。 如需關於預設 PHP 類型的詳細資訊，請參閱 [Default PHP Data Types](../../connect/php/default-php-data-types.md)。 如需關於指定 PHP 資料類型的詳細資訊，請參閱 [How to: Specify PHP Data Types](../../connect/php/how-to-specify-php-data-types.md)。  
@@ -57,7 +56,7 @@ sqlsrv_get_field( resource $stmt, int $fieldIndex [, int $getAsType])
 組合**sqlsrv_fetch**/**sqlsrv_get_field**會載入只能有一個欄位的結果集資料列指令碼記憶體，並允許指定 PHP 傳回類型規格。 (如需如何指定 PHP 傳回類型資訊，請參閱[How to: Specify PHP Data Types](../../connect/php/how-to-specify-php-data-types.md)。)函數的此一組合，也可讓您以串流的形式擷取資料。 (如需擷取資料當做資料流的詳細資訊，請參閱[使用 SQLSRV 驅動程式以資料流形式擷取資料](../../connect/php/retrieving-data-as-a-stream-using-the-sqlsrv-driver.md)。)  
   
 ## <a name="example"></a>範例  
-下列範例會擷取包含產品評論和評論者名稱的資料列。 若要從結果集內擷取資料，請使用 **sqlsrv_get_field** 。 此範例假設本機電腦上已安裝 SQL Server 和 [AdventureWorks](http://go.microsoft.com/fwlink/?LinkID=67739) 資料庫。 從命令列執行範例時，所有輸出都會寫入至主控台。  
+下列範例會擷取包含產品評論和評論者名稱的資料列。 若要從結果集內擷取資料，請使用 **sqlsrv_get_field** 。 此範例假設 SQL Server 和[AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works)資料庫安裝在本機電腦上。 從命令列執行範例時，所有輸出都會寫入至主控台。  
   
 ```  
 <?php  
@@ -117,6 +116,8 @@ sqlsrv_close( $conn);
   
 ## <a name="see-also"></a>另請參閱  
 [SQLSRV 驅動程式 API 參考](../../connect/php/sqlsrv-driver-api-reference.md)  
+
 [擷取資料](../../connect/php/retrieving-data.md)  
+
 [關於文件中的程式碼範例](../../connect/php/about-code-examples-in-the-documentation.md)  
   

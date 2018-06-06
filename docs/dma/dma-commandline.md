@@ -1,29 +1,27 @@
 ---
-title: "從命令列執行 （SQL Server 資料移轉小幫手） |Microsoft 文件"
-ms.custom: 
+title: 從命令列執行 （SQL Server 資料移轉小幫手） |Microsoft 文件
+ms.custom: ''
 ms.date: 09/01/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: dma
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-dma
-ms.tgt_pltfrm: 
-ms.topic: article
-keywords: 
-helpviewer_keywords: Data Migration Assistant, Command Line
-ms.assetid: 
-caps.latest.revision: 
+ms.technology: dma
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
+keywords: ''
+helpviewer_keywords:
+- Data Migration Assistant, Command Line
+ms.assetid: ''
+caps.latest.revision: ''
 author: HJToland3
 ms.author: jtoland
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 6147d01802a363082baf27d6b909e2c98f9afef2
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: df58c273c67868e894b7cba38344dc43628962ac
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="run-data-migration-assistant-from-the-command-line"></a>從命令列執行資料移轉小幫手
 2.1 版和更新版本，當您安裝資料移轉小幫手，它也會安裝在 dmacmd.exe *%programfiles%\\Microsoft 資料移轉小幫手\\*。 使用 dmacmd.exe 來評估您的資料庫，以自動模式，並輸出結果以 JSON 或 CSV 檔案。 在評估數個資料庫或大型資料庫時，這是特別有用。 
@@ -44,7 +42,7 @@ DmaCmd.exe /AssessmentName="string"
 ```
 
 
-|引數  |描述  | 必要 (Y/N)
+|引數  |Description  | 必要 (Y/N)
 |---------|---------|---------------|
 | `/help or /?`     | 如何使用 dmacmd.exe 說明文字        | N
 |`/AssessmentName`     |   評估專案的名稱   | Y

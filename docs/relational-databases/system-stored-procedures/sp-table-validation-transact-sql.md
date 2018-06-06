@@ -1,16 +1,15 @@
 ---
-title: "sp_table_validation (TRANSACT-SQL) |Microsoft 文件"
-ms.custom: 
+title: sp_table_validation (TRANSACT-SQL) |Microsoft 文件
+ms.custom: ''
 ms.date: 03/08/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_table_validation_TSQL
@@ -18,16 +17,15 @@ f1_keywords:
 helpviewer_keywords:
 - sp_table_validation
 ms.assetid: 31b25f9b-9b62-496e-a97e-441d5fd6e767
-caps.latest.revision: 
+caps.latest.revision: 33
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: bd5182a0e742db6ef535a30e94ddb2b4da5f669a
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: d82517f09ad18c7cc0b2e8d49acfdae6ab200ee9
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sptablevalidation-transact-sql"></a>sp_table_validation (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
@@ -76,7 +74,7 @@ sp_table_validation [ @table = ] 'table'
  [  **@full_or_fast=**] *full_or_fast*  
  這是用於計算資料列計數的方法。 *full_or_fast*是**tinyint**，預設值是**2**，而且可以是下列值之一。  
   
-|值|描述|  
+|Value|描述|  
 |-----------|-----------------|  
 |**0**|利用 COUNT(*) 執行完整計數。|  
 |**1**|快速計數從**sysindexes.rows**。 計算的資料列**sysindexes**比計算實際資料表中的資料列快得多。 不過，因為**sysindexes**是延遲的方式更新，資料列計數可能不正確。|  
@@ -86,9 +84,9 @@ sp_table_validation [ @table = ] 'table'
  如果散發代理程式正在執行**sp_table_validation**，指定是否散發代理程式應該立即關閉驗證完成時。 *shutdown_agent*是**元**，預設值是**0**。 如果**0**，複寫代理程式不會關機。 如果**1**、 產生 20578 錯誤和複寫代理程式收到關閉信號。 這個參數已忽略時**sp_table_validation**由使用者直接執行。  
   
  [  **@table_name =**] *table_name*  
- 這是輸出訊息所用之檢視的資料表名稱。 *table_name*是**sysname**，預設值是 **@table** 。  
+ 這是輸出訊息所用之檢視的資料表名稱。 *table_name*是**sysname**，預設值是**@table**。  
   
- [  **@column_list** =] **'***column_list***'**  
+ [ **@column_list**=] **'***column_list***'**  
  這是總和檢查碼函數所應使用之資料行的清單。 *column_list*是**nvarchar （4000)**，預設值是 NULL。 啟用合併發行項驗證來指定排除計算和時間戳記資料行的資料行清單。  
   
 ## <a name="return-code-values"></a>傳回碼值  
@@ -108,11 +106,11 @@ sp_table_validation [ @table = ] 'table'
 ## <a name="permissions"></a>Permissions  
  若要執行**sp_table_validation**，您必須有所驗證之資料表上具有 SELECT 權限。  
   
-## <a name="see-also"></a>請參閱＜  
- [總和檢查碼 &#40;TRANSACT-SQL &#41;](../../t-sql/functions/checksum-transact-sql.md)   
+## <a name="see-also"></a>另請參閱  
+ [總和檢查碼&#40;Transact SQL&#41;](../../t-sql/functions/checksum-transact-sql.md)   
  [@@ROWCOUNT &#40;Transact-SQL&#41;](../../t-sql/functions/rowcount-transact-sql.md)   
- [sp_article_validation &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/sp-article-validation-transact-sql.md)   
- [sp_publication_validation &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/sp-publication-validation-transact-sql.md)   
+ [sp_article_validation &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-article-validation-transact-sql.md)   
+ [sp_publication_validation &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-publication-validation-transact-sql.md)   
  [系統預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

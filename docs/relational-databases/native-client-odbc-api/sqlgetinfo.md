@@ -1,30 +1,29 @@
 ---
-title: SQLGetInfo | Microsoft Docs
-ms.custom: 
+title: SQLGetInfo |Microsoft 文件
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
 ms.component: native-client-odbc-api
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apitype: DLLExport
 helpviewer_keywords:
 - SQLGetInfo function
 ms.assetid: f6215bac-ed3d-4c36-86d5-d56ffbc106aa
-caps.latest.revision: 
+caps.latest.revision: 43
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 9216489cc1bb028cdf89a09339f96e1667ea9c29
-ms.sourcegitcommit: a0aa5e611a0e6ebb74ac1e2f613e8916dc7a7617
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 5279fcdb04a83508d45a77155125917206ed1ec8
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/24/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sqlgetinfo"></a>SQLGetInfo
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -57,7 +56,7 @@ ms.lasthandoff: 01/24/2018
 |SQL_COLLATION_SEQ|目前針對連接和伺服器指派的定序序列。|  
 |SQL_COLUMN_ALIAS|"Y"|  
 |SQL_CONCAT_NULL_BEHAVIOR|SQL_CB_NULL|  
-|SQL_CONVERT_BIGINT|不支援 ODBC SQL_BIGINT 資料類型的轉換。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驅動程式支援[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **decimal(19,0)**資料類型當做 ODBC 類型 SQL_DECIMAL。 請參閱底下的 SQL_CONVERT_DECIMAL。|  
+|SQL_CONVERT_BIGINT|不支援 ODBC SQL_BIGINT 資料類型的轉換。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驅動程式支援[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **decimal(19,0)** 資料類型當做 ODBC 類型 SQL_DECIMAL。 請參閱底下的 SQL_CONVERT_DECIMAL。|  
 |SQL_CONVERT_BINARY|SQL_CVT_CHAR SQL_CVT_NUMERIC SQL_CVT_DECIMAL SQL_CVT_INTEGER SQL_CVT_SMALLINT SQL_CVT_VARCHAR SQL_CVT_BINARY SQL_CVT_VARBINARY SQL_CVT_TINYINT SQL_CVT_LONGVARBINARY SQL_CVT_WCHAR SQL_CVT_WVARCHAR|  
 |SQL_CONVERT_BIT|SQL_CVT_CHAR SQL_CVT_NUMERIC SQL_CVT_DECIMAL SQL_CVT_INTEGER SQL_CVT_SMALLINT SQL_CVT_FLOAT SQL_CVT_REAL SQL_CVT_VARCHAR SQL_CVT_BINARY SQL_CVT_VARBINARY SQL_CVT_BIT SQL_CVT_TINYINT SQL_CVT_WCHAR SQL_CVT_WVARCHAR|  
 |SQL_CONVERT_CHAR|SQL_CVT_CHAR SQL_CVT_NUMERIC SQL_CVT_DECIMAL SQL_CVT_INTEGER SQL_CVT_SMALLINT SQL_CVT_FLOAT SQL_CVT_REAL SQL_CVT_VARCHAR SQL_CVT_LONGVARCHAR SQL_CVT_BINARY SQL_CVT_VARBINARY SQL_CVT_BIT SQL_CVT_TINYINT SQL_CVT_TIMESTAMP SQL_CVT_LONGVARBINARY SQL_CVT_WCHAR SQL_CVT_WLONGVARCHAR SQL_CVT_WVARCHAR|  

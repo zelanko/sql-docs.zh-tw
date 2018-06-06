@@ -1,29 +1,28 @@
 ---
-title: "SQL Server 2017 版本資訊 | Microsoft Docs"
-ms.custom: 
+title: SQL Server 2017 版本資訊 | Microsoft Docs
+ms.custom: ''
 ms.date: 10/30/2017
-ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
-ms.service: 
-ms.component: sql-non-specified
-ms.reviewer: 
+ms.prod: sql
+ms.prod_service: sql
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: server-general
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: supportability
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: 13942af8-5a40-4cef-80f5-918386767a47
 author: craigg-msft
 ms.author: craigg
-manager: jhubbard
-ms.workload: Active
-ms.openlocfilehash: 69f0db3da6a75c64aa331a0050be39274e01dad3
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+manager: craigg
+monikerRange: = sql-server-2017 || = sqlallproducts-allversions
+ms.openlocfilehash: 95a38306f1a9f5522a6f9f829613677ab4fb3b67
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sql-server-2017-release-notes"></a>SQL Server 2017 版本資訊
-[!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)] 本文說明 SQL Server 2017 的限制和問題。 如需相關資訊，請參閱：
+[!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
+本文說明 SQL Server 2017 的限制和問題。 如需相關資訊，請參閱：
 - [SQL Server 2017 的新功能](../sql-server/what-s-new-in-sql-server-2017.md)
 - [Linux 上的 SQL Server 版本資訊](https://docs.microsoft.com/sql/linux/sql-server-linux-release-notes)
 - [SQL Server 2017 累積更新](http://aka.ms/sql2017cu)，以取得最新累積更新 (CU) 版本的資訊
@@ -48,7 +47,7 @@ ms.lasthandoff: 12/05/2017
 
 - **因應措施：** 
   - 將權限授予樹狀檢視中的子節點而不是根層級。
-  - 或
+  - 中的多個
   - 執行「[在實體層級上套用權限時發生錯誤](http://sqlblog.com/blogs/mds_team/archive/2017/09/05/sql-server-2016-sp1-cu4-regression-error-while-applying-permission-on-entity-level-quick-workaround.aspx)」這個 MDS 小組部落格中說明的指令碼
 
 ### <a name="analysis-services"></a>Analysis Services
@@ -154,5 +153,7 @@ ms.lasthandoff: 12/05/2017
 - [SQL Server 更新中心 - 所有已支援版本的連結和資訊](https://msdn.microsoft.com/library/ff803383.aspx)
 
 [!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]
+
+[!INCLUDE[contribute-to-content](../includes/paragraph-content/contribute-to-content.md)]
 
 ![MS_Logo_X-Small](../sql-server/media/ms-logo-x-small.png)

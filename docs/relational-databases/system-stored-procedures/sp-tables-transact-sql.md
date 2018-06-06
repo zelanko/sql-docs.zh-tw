@@ -1,16 +1,14 @@
 ---
-title: "sp_tables (TRANSACT-SQL) |Microsoft 文件"
-ms.custom: 
+title: sp_tables (TRANSACT-SQL) |Microsoft 文件
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: system-objects
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_tables
@@ -20,16 +18,16 @@ dev_langs:
 helpviewer_keywords:
 - sp_tables
 ms.assetid: 787a2fa5-87a1-49bd-938b-6043c245f46b
-caps.latest.revision: 
+caps.latest.revision: 43
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 95a0bae2722c519cea3e1dac14c633fe582ed5a8
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: b0a4e8b4ae1b78da17beb1a5289a90782979ad3c
+ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="sptables-transact-sql"></a>sp_tables (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -54,7 +52,7 @@ sp_tables [ [ @table_name = ] 'name' ]
 ```  
   
 ## <a name="arguments"></a>引數  
- [  **@table_name=** ] **'***名稱***'**  
+ [ **@table_name=** ] **'***name***'**  
  這是用來傳回目錄資訊的資料表。 *名稱*是**nvarchar(384)**，預設值是 NULL。 支援萬用字元的模式比對。  
   
  [  **@table_owner=** ] **'***擁有者***'**  
@@ -63,9 +61,9 @@ sp_tables [ [ @table_name = ] 'name' ]
  在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，如果目前使用者擁有一份含指定之名稱的資料表，就會傳回該資料表的資料行。 如果未指定擁有者，且目前使用者並未擁有指定之名稱的資料表，這個程序就會尋找資料庫擁有者所擁有之指定名稱的資料表。 如果資料表存在，就會傳回這份資料表的資料行。  
   
  [  **@table_qualifier=** ] **'***限定詞***'**  
- 這是資料表限定詞的名稱。 *限定詞*是**sysname**，預設值是 NULL。 各種 DBMS 產品都支援三部分的資料表命名 (*限定詞***。***擁有者***。***名稱*)。 在[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，這個資料行代表資料庫名稱。 在某些產品中，它代表資料表之資料庫環境的伺服器名稱。  
+ 這是資料表限定詞的名稱。 *限定詞*是**sysname**，預設值是 NULL。 各種 DBMS 產品都支援三部分的資料表命名 (*限定詞 ***。*** 擁有者 ***。*** 名稱*)。 在[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，這個資料行代表資料庫名稱。 在某些產品中，它代表資料表之資料庫環境的伺服器名稱。  
   
- [ **，** [  **@table_type=** ] **"'***類型***'**， **'**類型**'"** ]  
+ [ **，** [  **@table_type=** ] **"'***類型***'**， **'** 類型 **'"** ]  
  這是一份值清單 (以逗號分隔)，用來提供指定之資料表類型所有資料表的相關資訊。 這些包括**資料表**， **SYSTEMTABLE**，和**檢視**。 *型別*是**varchar(100)**，預設值是 NULL。  
   
 > [!NOTE]  
@@ -118,7 +116,7 @@ EXEC sp_tables
    @table_qualifier = 'AdventureWorks2012';  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>範例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]和[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>範例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="c-returning-a-list-of-objects-that-can-be-queried-in-the-current-environment"></a>C. 傳回目前環境中所能查詢之物件的清單  
  下列範例會傳回目前環境中所能查詢之物件的清單。  
@@ -139,8 +137,8 @@ EXEC sp_tables
    @table_qualifier = 'AdventureWorksPDW2012';  
 ```  
   
-## <a name="see-also"></a>請參閱＜  
- [sys.synonyms &#40;TRANSACT-SQL &#41;](../../relational-databases/system-catalog-views/sys-synonyms-transact-sql.md)   
+## <a name="see-also"></a>另請參閱  
+ [sys.synonyms &#40;Transact SQL&#41;](../../relational-databases/system-catalog-views/sys-synonyms-transact-sql.md)   
  [系統預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

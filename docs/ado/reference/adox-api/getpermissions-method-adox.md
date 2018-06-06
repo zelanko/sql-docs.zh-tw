@@ -1,17 +1,15 @@
 ---
-title: "GetPermissions 方法 (ADOX) |Microsoft 文件"
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
+title: GetPermissions 方法 (ADOX) |Microsoft 文件
+ms.prod: sql
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
-ms.custom: 
+ms.technology: connectivity
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 apitype: COM
 f1_keywords:
 - _User25::GetPermissions
@@ -21,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - GetPermissions method [ADOX]
 ms.assetid: df201c1f-c76a-465d-98f0-83b7fc36e6e3
-caps.latest.revision: 
+caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 280a63c18cdabd173c9a8ea1d9b2bbd6db7b02a1
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 666dc7b1303162d9f65c6af7e45e825b0ef7ffd2
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="getpermissions-method-adox"></a>GetPermissions 方法 (ADOX)
 傳回的權限[群組](../../../ado/reference/adox-api/group-object-adox.md)或[使用者](../../../ado/reference/adox-api/user-object-adox.md)物件或物件容器上。  

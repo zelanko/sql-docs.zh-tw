@@ -1,34 +1,33 @@
 ---
-title: "手動聯結資料表 (Visual Database Tools) | Microsoft Docs"
-ms.custom: 
+title: 手動聯結資料表 (Visual Database Tools) | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
 ms.component: ssms-visual-db
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: tools-ssms
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ssms
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - manual joins [SQL Server]
 - joins [SQL Server], manual
 - joins [SQL Server], creating
 ms.assetid: 9c785356-646b-4c87-82d4-25efd6051d9d
-caps.latest.revision: "4"
+caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 3fea2b8cf342805937cb62eb4a32badca49a17f0
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.openlocfilehash: 905c551cd4e9aa9e58900a58b9d9399a3c662a7c
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="join-tables-manually-visual-database-tools"></a>手動聯結資料表 (Visual Database Tools)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 在新增兩個 (或更多) 資料表至查詢時，[查詢和檢視表設計工具](../../ssms/visual-db-tools/query-and-view-designer-tools-visual-database-tools.md)會根據通用資料或資料庫中所儲存有關資料表關聯方式的資訊，聯結這些資料表。 如需詳細資料，請參閱[自動聯結資料表 &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/join-tables-automatically-visual-database-tools.md)。 不過，如果 [查詢和檢視設計師] 尚未自動聯結資料表，或者想要在資料表間建立額外的聯結，則可以手動聯結資料表。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+在新增兩個 (或更多) 資料表至查詢時， [查詢和檢視表設計工具](../../ssms/visual-db-tools/query-and-view-designer-tools-visual-database-tools.md) 會根據通用資料或資料庫中所儲存有關資料表關聯方式的資訊，聯結這些資料表。 如需詳細資料，請參閱[自動聯結資料表 &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/join-tables-automatically-visual-database-tools.md)。 不過，如果 [查詢和檢視設計師] 尚未自動聯結資料表，或者想要在資料表間建立額外的聯結，則可以手動聯結資料表。  
   
 可以根據任兩個資料行間的比較來建立聯結，而不只是根據包含相同資訊的資料行。 例如，如果資料庫包含兩個資料表 `titles` 和 `roysched`，則可以比較 `ytd_sales` 資料表的 `titles` 資料行與 `lorange` 資料表的 `hirange` 和 `roysched` 資料行的值。 建立此聯結將可讓您找到年度迄今的版稅支出落於低和高範圍之間的書名。  
   

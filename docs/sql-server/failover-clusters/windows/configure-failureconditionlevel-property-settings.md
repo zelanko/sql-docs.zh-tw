@@ -1,34 +1,32 @@
 ---
-title: "設定 FailureConditionLevel 屬性設定 | Microsoft Docs"
-ms.custom: 
+title: 設定 FailureConditionLevel 屬性設定 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
-ms.prod_service: database-engine
-ms.service: 
-ms.component: failover-clusters
-ms.reviewer: 
+ms.prod: sql
+ms.prod_service: high-availability
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: dbe-high-availability
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: high-availability
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: 513dd179-9a46-46da-9fdd-7632cf6d0816
-caps.latest.revision: "29"
+caps.latest.revision: 29
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
-ms.workload: Inactive
-ms.openlocfilehash: 82cac1585f51fedbdf008be6b8ed1e0d3ae1c9f4
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+manager: craigg
+ms.openlocfilehash: b244e64ff7c648572793349839428ed4bc2b271e
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="configure-failureconditionlevel-property-settings"></a>設定 FailureConditionLeve 屬性設定
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 使用 FailureConditionLevel 屬性，即可將 AlwaysOn 容錯移轉叢集執行個體 (FCI) 的條件設定為容錯移轉或重新啟動。 對這個屬性的變更會立即套用，而不需要重新啟動 Windows Server 容錯移轉叢集 (WSFC) 服務或 FCI 資源。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  使用 FailureConditionLevel 屬性，即可將 AlwaysOn 容錯移轉叢集執行個體 (FCI) 的條件設定為容錯移轉或重新啟動。 對這個屬性的變更會立即套用，而不需要重新啟動 Windows Server 容錯移轉叢集 (WSFC) 服務或 FCI 資源。  
   
 -   **開始之前**  [FailureConditionLevel 屬性設定](#Restrictions)， [安全性](#Security)  
   
--   **使用下列項目進行 FailureConditionLevel 屬性設定** [PowerShell](#PowerShellProcedure)， [容錯移轉叢集管理員](#WSFC)， [Transact-SQL](#TsqlProcedure)  
+-   **To configure the FailureConditionLevel property settings using,** [PowerShell](#PowerShellProcedure), [Failover Cluster Manager](#WSFC), [Transact-SQL](#TsqlProcedure)  
   
 ##  <a name="BeforeYouBegin"></a> 開始之前  
   
@@ -37,14 +35,14 @@ ms.lasthandoff: 12/05/2017
   
 ###  <a name="Security"></a> 安全性  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> 權限  
  需要 ALTER SETTINGS 及 VIEW SERVER STATE 權限。  
   
 ##  <a name="PowerShellProcedure"></a> 使用 PowerShell  
   
 ##### <a name="to-configure-failureconditionlevel-settings"></a>設定 FailureConditionLevel 設定  
   
-1.  透過 **[以系統管理員身分執行]**來啟動更高權限的 Windows PowerShell。  
+1.  透過 **[以系統管理員身分執行]** 來啟動更高權限的 Windows PowerShell。  
   
 2.  匯入 **FailoverClusters** 模組來啟用叢集指令程式。  
   
@@ -88,7 +86,7 @@ Get-ClusterResource $fci | Set-ClusterParameter FailureConditionLevel 3
   
  使用 [ALTER SERVER CONFIGURATION](../../../t-sql/statements/alter-server-configuration-transact-sql.md)[!INCLUDE[tsql](../../../includes/tsql-md.md)] 陳述式，可以指定 FailureConditionLevel 屬性值。  
   
-###  <a name="TsqlExample"></a> 範例 (Transact-SQL)  
+###  <a name="TsqlExample"></a> 範例 &#40;Transact-SQL&#41;  
  下列範例會將 FailureConditionLevel 屬性設定為 0，指出任何失敗狀況都不會自動觸發容錯移轉或重新啟動。  
   
 ```  

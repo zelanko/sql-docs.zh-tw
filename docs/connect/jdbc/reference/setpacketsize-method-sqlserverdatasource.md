@@ -1,30 +1,29 @@
 ---
-title: "setPacketSize 方法 (SQLServerDataSource) |Microsoft 文件"
-ms.custom: 
+title: setPacketSize 方法 (SQLServerDataSource) |Microsoft 文件
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
-ms.component: jdbc
-ms.reviewer: 
+ms.prod: sql
+ms.prod_service: connectivity
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
-ms.topic: article
-apiname: SQLServerDataSource.setPacketSize
-apilocation: sqljdbc.jar
+ms.technology: connectivity
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
+apiname:
+- SQLServerDataSource.setPacketSize
+apilocation:
+- sqljdbc.jar
 apitype: Assembly
 ms.assetid: 5d490edc-a223-4870-a838-784952497e5f
-caps.latest.revision: "20"
+caps.latest.revision: 20
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
-ms.workload: Inactive
-ms.openlocfilehash: aca0de41e907beb56752838554bb6c752b25e96f
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+manager: craigg
+ms.openlocfilehash: 08f4f72aae10fc154b7362a83e870d85b9fb42e0
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="setpacketsize-method-sqlserverdatasource"></a>setPacketSize 方法 (SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -52,7 +51,7 @@ public void setPacketSize(int packetSize)
   
  如需有關使用 SSL 的詳細資訊，請參閱[使用 SSL 加密](../../../connect/jdbc/using-ssl-encryption.md)。  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [SQLServerDataSource 成員](../../../connect/jdbc/reference/sqlserverdatasource-members.md)   
  [SQLServerDataSource 類別](../../../connect/jdbc/reference/sqlserverdatasource-class.md)  
   

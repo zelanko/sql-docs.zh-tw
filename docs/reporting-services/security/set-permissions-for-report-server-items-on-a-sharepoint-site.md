@@ -1,30 +1,28 @@
 ---
-title: "在 SharePoint 網站上設定報表伺服器項目的權限 | Microsoft Docs"
-ms.custom: 
+title: 在 SharePoint 網站上設定報表伺服器項目的權限 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: security
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - permissions [Reporting Services], SharePoint integrated mode
 - SharePoint integration [Reporting Services], permissions
 ms.assetid: 2467c657-a3bf-4ec3-a88c-8877df19823d
-caps.latest.revision: "14"
+caps.latest.revision: 14
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 1b82638222e8fcf0a0fe6867954fc1e6f38dd071
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: fbf0ecedbc5b5b698f32f3c7d5549a604a03e1f7
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="set-permissions-for-report-server-items-on-a-sharepoint-site"></a>設定 SharePoint 網站上報表伺服器項目的權限
   如果預設安全性設定無法提供所需的存取層級，您可以建立新的權限等級，以便提供特定報表伺服器項目或作業的存取權。 如果您想要限制特定報表的存取權，自訂安全性設定就很有用。  

@@ -1,16 +1,15 @@
 ---
-title: "sp_get_redirected_publisher (TRANSACT-SQL) |Microsoft 文件"
-ms.custom: 
+title: sp_get_redirected_publisher (TRANSACT-SQL) |Microsoft 文件
+ms.custom: ''
 ms.date: 03/03/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -18,16 +17,15 @@ f1_keywords:
 - sp_get_redirected_publisher_TSQL
 - sp_get_redirected_publisher
 ms.assetid: d47a9ab5-f2cc-42a8-8be9-a33895ce44f0
-caps.latest.revision: 
+caps.latest.revision: 10
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: cdd0079a3af3ae647c66ea7106e79fb6f9a93ef9
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 28785969ea0bab2319d52461aa3e9a60f9be916d
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="spgetredirectedpublisher-transact-sql"></a>sp_get_redirected_publisher (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -47,10 +45,10 @@ sp_get_redirected_publisher
 ```  
   
 ## <a name="arguments"></a>引數  
- [  **@original_publisher**  =] **'***original_publisher***'**  
+ [ **@original_publisher** =] **'***original_publisher***'**  
  要發行的資料庫名稱。 *publisher_db*是**sysname**，沒有預設值。  
   
- [  **@publisher_db**  =] **'***publisher_db***'**  
+ [ **@publisher_db** = ] **'***publisher_db***'**  
  要發行的資料庫名稱。 *publisher_db*是**sysname**，沒有預設值。  
   
  [ **@bypass_publisher_validation** = ] [0 | 1 ]  
@@ -73,17 +71,17 @@ sp_get_redirected_publisher
   
  如果未要求驗證，或項目不存在於發行者和發行資料庫， *error_number*和*error_severity*傳回 0 和*error_message*會傳回 null。  
   
- 如果要求驗證，則驗證預存程序[sp_validate_redirected_publisher &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/sp-validate-redirected-publisher-transact-sql.md)呼叫以確認重新導向的目標是發行的資料庫適合的主機。 如果驗證成功， **sp_get_redirected_publisher**傳回重新導向的發行者名稱，而 0 代表*error_number*和*error_severity*資料行和中的 null*error_message*資料行。  
+ 如果要求驗證，則驗證預存程序[sp_validate_redirected_publisher &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-stored-procedures/sp-validate-redirected-publisher-transact-sql.md)呼叫以確認重新導向的目標是發行適合的主機資料庫。 如果驗證成功， **sp_get_redirected_publisher**傳回重新導向的發行者名稱，而 0 代表*error_number*和*error_severity*資料行和中的 null*error_message*資料行。  
   
  如果要求驗證而且失敗，則會傳回重新導向的發行者名稱以及錯誤資訊。  
   
 ## <a name="permissions"></a>Permissions  
  呼叫端必須是屬於**sysadmin**固定伺服器角色、 **db_owner**散發資料庫或定義的發行集的發行集存取清單成員的固定的資料庫角色與發行者資料庫相關聯。  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [複寫預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)   
- [sp_validate_redirected_publisher &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/sp-validate-redirected-publisher-transact-sql.md)   
- [sp_redirect_publisher &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/sp-redirect-publisher-transact-sql.md)   
- [sp_validate_replica_hosts_as_publishers &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/sp-validate-replica-hosts-as-publishers-transact-sql.md)  
+ [sp_validate_redirected_publisher &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-validate-redirected-publisher-transact-sql.md)   
+ [sp_redirect_publisher &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-redirect-publisher-transact-sql.md)   
+ [sp_validate_replica_hosts_as_publishers &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-validate-replica-hosts-as-publishers-transact-sql.md)  
   
   

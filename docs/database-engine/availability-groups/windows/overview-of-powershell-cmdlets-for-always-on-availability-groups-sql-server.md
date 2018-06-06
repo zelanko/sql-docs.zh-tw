@@ -1,31 +1,28 @@
 ---
-title: "AlwaysOn 可用性群組的 PowerShell Cmdlet 概觀 (SQL Server) | Microsoft Docs"
-ms.custom: 
+title: AlwaysOn 可用性群組的 PowerShell Cmdlet 概觀 (SQL Server) | Microsoft Docs
+ms.custom: ''
 ms.date: 08/30/2017
-ms.prod: sql-non-specified
-ms.prod_service: database-engine
-ms.service: 
-ms.component: availability-groups
-ms.reviewer: 
+ms.prod: sql
+ms.prod_service: high-availability
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: dbe-high-availability
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: high-availability
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - Availability Groups [SQL Server], PowerShell cmdlets
 - Availability Groups [SQL Server], about
 - PowerShell [SQL Server], cmdlets
 ms.assetid: b3fef0d5-b6d7-4386-a0f0-d06c165ad4de
-caps.latest.revision: "36"
+caps.latest.revision: 36
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 1a6b9e19ea916963acf28a222d5bd463bc5662d4
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 051a279a8905c232a78e366daec95bbaee2ee612
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="overview-of-powershell-cmdlets-for-always-on-availability-groups-sql-server"></a>AlwaysOn 可用性群組的 PowerShell Cmdlet 概觀 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -57,18 +54,22 @@ ms.lasthandoff: 01/18/2018
 ##  <a name="ConfiguringServerInstance"></a> Configuring a Server Instance for Always On Availability Groups  
   
 |指令程式|描述|支援的項目|  
-|-------------|-----------------|------------------|  
-|**Disable-SqlAlwaysOn**|在伺服器執行個體上停用 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 功能。|**Path**、 **InputObject**或 **Name** 參數所指定的伺服器執行個體。 (必須是支援 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]版本)。|  
-|**Enable-SqlAlwaysOn**|在支援 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 功能的 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 執行個體上啟用 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 。 如需 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 支援的相關資訊，請參閱 [AlwaysOn 可用性群組的必要條件、限制和建議 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md)。|支援 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的任何 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]版本。|  
-|**New-SqlHadrEndPoint**|在伺服器執行個體上建立新的資料庫鏡像端點。 在主要與次要資料庫之間進行資料移動時需要這個端點。|任何 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]|  
-|**Set-SqlHadrEndpoint**|變更現有資料庫鏡像端點的屬性，例如名稱、狀態或驗證屬性。|支援 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 且缺少資料庫鏡像端點的伺服器執行個體|  
+|-------------|-----------------|------------------|
+|[**Disable-SqlAlwaysOn**](/powershell/module/sqlserver/disable-sqlalwayson)|在伺服器執行個體上停用 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 功能。|**Path**、 **InputObject**或 **Name** 參數所指定的伺服器執行個體。 (必須是支援 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]版本)。|  
+|[**Enable-SqlAlwaysOn**](/powershell/module/sqlserver/enable-sqlalwayson)|在支援 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 功能的 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 執行個體上啟用 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 。 如需 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 支援的相關資訊，請參閱 [AlwaysOn 可用性群組的必要條件、限制和建議 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md)。|支援 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的任何 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]版本。|  
+|[**New-SqlHadrEndPoint**](/powershell/module/sqlserver/new-sqlhadrendpoint)|在伺服器執行個體上建立新的資料庫鏡像端點。 在主要與次要資料庫之間進行資料移動時需要這個端點。|任何 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]|  
+|[**Set-SqlHadrEndpoint**](/powershell/module/sqlserver/set-sqlhadrendpoint)|變更現有資料庫鏡像端點的屬性，例如名稱、狀態或驗證屬性。|支援 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 且缺少資料庫鏡像端點的伺服器執行個體|  
+
   
 ##  <a name="BnRcmdlets"></a> Backing Up and Restoring Databases and Transaction Logs  
   
 |指令程式|描述|支援的項目|  
 |-------------|-----------------|------------------|  
-|**Backup-SqlDatabase**|建立資料或記錄備份。|任何線上資料庫 (若為 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]，則為裝載主要複本之伺服器執行個體的資料庫)|  
-|**Restore-SqlDatabase**|還原備份。|任何 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體 (若為 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]，則為裝載次要複本的伺服器執行個體)<br /><br /> **\*\* 重要事項 \*\*** 準備次要資料庫時，您必須在每個 **Restore-SqlDatabase** 命令中使用 **-NoRecovery** 參數。|  
+|[**Backup-SqlDatabase**](/powershell/module/sqlserver/backup-sqldatabase)|建立資料或記錄備份。|任何線上資料庫 (若為 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]，則為裝載主要複本之伺服器執行個體的資料庫)|  
+|[**Restore-SqlDatabase**](/powershell/module/sqlserver/restore-sqldatabase)|還原備份。|任何 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體 (若為 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]，則為裝載次要複本的伺服器執行個體)<br /><br />
+
+  >[!Important]
+  >準備次要資料庫時，您必須在每個 **Restore-SqlDatabase** 命令中使用 **-NoRecovery** 參數。 
   
  如需使用這些 Cmdlet 來準備次要資料庫的相關資訊，請參閱[針對可用性群組手動準備次要資料庫 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/manually-prepare-a-secondary-database-for-an-availability-group-sql-server.md)。  
   
@@ -76,36 +77,36 @@ ms.lasthandoff: 01/18/2018
   
 |指令程式|描述|支援的項目|  
 |-------------|-----------------|------------------|  
-|**New-SqlAvailabilityGroup**|建立新的可用性群組。|要裝載主要複本的伺服器執行個體|  
-|**Remove-SqlAvailabilityGroup**|刪除可用性群組。|啟用 HADR 的伺服器執行個體|  
-|**Set-SqlAvailabilityGroup**|設定可用性群組的屬性；讓可用性群組上線/離線。|裝載主要複本的伺服器執行個體|  
-|**Switch-SqlAvailabilityGroup**|起始下列其中一種形式的容錯移轉：<br /><br /> 可用性群組的強制容錯移轉 (可能遺失資料)。<br /><br /> 可用性群組的手動容錯移轉。|裝載目標次要複本的伺服器執行個體|  
+|[**New-SqlAvailabilityGroup**](/powershell/module/sqlserver/new-sqlavailabilitygroup)|建立新的可用性群組。|要裝載主要複本的伺服器執行個體|  
+|[**Remove-SqlAvailabilityGroup**](/powershell/module/sqlserver/remove-sqlavailabilitygroup)|刪除可用性群組。|啟用 HADR 的伺服器執行個體|  
+|[**Set-SqlAvailabilityGroup**](/powershell/module/sqlserver/set-sqlavailabilitygroup)|設定可用性群組的屬性；讓可用性群組上線/離線。|裝載主要複本的伺服器執行個體|  
+|[**Switch-SqlAvailabilityGroup**](/powershell/module/sqlserver/switch-sqlavailabilitygroup)|起始下列其中一種形式的容錯移轉：<br /><br /> 可用性群組的強制容錯移轉 (可能遺失資料)。<br /><br /> 可用性群組的手動容錯移轉。|裝載目標次要複本的伺服器執行個體|  
   
 ##  <a name="AGlisteners"></a> Creating and Managing an Availability Group Listener  
   
 |指令程式|描述|支援的項目|  
 |------------|-----------------|------------------|  
-|**New-SqlAvailabilityGroupListener**|建立新的可用性群組接聽程式，並將其附加至現有的可用性群組。|裝載主要複本的伺服器執行個體|  
-|**Set-SqlAvailabilityGroupListener**|修改現有可用性群組接聽程式上的通訊埠設定。|裝載主要複本的伺服器執行個體|  
-|**Add-SqlAvailabilityGroupListenerStaticIp**|將靜態 IP 位址加入至現有的可用性群組接聽程式組態。 IP 位址可以是包含子網路的 IPv4 位址或 IPv6 位址。|裝載主要複本的伺服器執行個體|  
+|[**New-SqlAvailabilityGroupListener**](/powershell/module/sqlserver/new-sqlavailabilitygrouplistener)|建立新的可用性群組接聽程式，並將其附加至現有的可用性群組。|裝載主要複本的伺服器執行個體|  
+|[**Set-SqlAvailabilityGroupListener**](/powershell/module/sqlserver/set-sqlavailabilitygrouplistener)|修改現有可用性群組接聽程式上的通訊埠設定。|裝載主要複本的伺服器執行個體|  
+|[**Add-SqlAvailabilityGroupListenerStaticIp**](/powershell/module/sqlserver/add-sqlavailabilitygrouplistenerstaticip)|將靜態 IP 位址加入至現有的可用性群組接聽程式組態。 IP 位址可以是包含子網路的 IPv4 位址或 IPv6 位址。|裝載主要複本的伺服器執行個體|  
   
 ##  <a name="DeployManageARs"></a> Creating and Managing an Availability Replica  
   
 |指令程式|描述|支援的項目|  
 |-------------|-----------------|------------------|  
-|**New-SqlAvailabilityReplica**|建立新的可用性複本。 您可以使用 **-AsTemplate** 參數，針對每個新的可用性複本建立記憶體內部可用性複本物件。|裝載主要複本的伺服器執行個體|  
-|**Join-SqlAvailabilityGroup**|將次要複本聯結至可用性群組。|裝載次要複本的伺服器執行個體|  
-|**Remove-SqlAvailabilityReplica**|刪除可用性複本。|裝載主要複本的伺服器執行個體|  
-|**Set-SqlAvailabilityReplica**|設定可用性複本的屬性。|裝載主要複本的伺服器執行個體|  
+|[**New-SqlAvailabilityReplica**](/powershell/module/sqlserver/new-sqlavailabilityreplica)|建立新的可用性複本。 您可以使用 **-AsTemplate** 參數，針對每個新的可用性複本建立記憶體內部可用性複本物件。|裝載主要複本的伺服器執行個體|  
+|[**Join-SqlAvailabilityGroup**](/powershell/module/sqlserver/join-sqlavailabilitygroup)|將次要複本聯結至可用性群組。|裝載次要複本的伺服器執行個體|  
+|[**Remove-SqlAvailabilityReplica**](/powershell/module/sqlserver/remove-sqlavailabilityreplica)|刪除可用性複本。|裝載主要複本的伺服器執行個體|  
+|[**Set-SqlAvailabilityReplica**](/powershell/module/sqlserver/set-sqlavailabilityreplica)|設定可用性複本的屬性。|裝載主要複本的伺服器執行個體|  
   
 ##  <a name="DeployManageDbs"></a> Adding and Managing an Availability Database  
   
 |指令程式|描述|支援的項目|  
 |-------------|-----------------|------------------|  
-|**Add-SqlAvailabilityDatabase**|在主要複本上，將資料庫加入至可用性群組。<br /><br /> 在次要複本上，將次要資料庫聯結至可用性群組。|裝載可用性複本的任何伺服器執行個體 (主要和次要複本的行為有所不同)|  
-|**Remove-SqlAvailabilityDatabase**|在主要複本上，從可用性群組中移除資料庫。<br /><br /> 在次要複本上，從本機次要複本中移除本機次要資料庫。|裝載可用性複本的任何伺服器執行個體 (主要和次要複本的行為有所不同)|  
-|**Resume-SqlAvailabilityDatabase**|繼續進行暫停之可用性資料庫的資料移動。|已暫停資料庫的伺服器執行個體。|  
-|**Suspend-SqlAvailabilityDatabase**|暫停可用性資料庫的資料移動。|裝載可用性複本的任何伺服器執行個體。|  
+|[**Add-SqlAvailabilityDatabase**](/powershell/module/sqlserver/add-sqlavailabilitydatabase)|在主要複本上，將資料庫加入至可用性群組。<br /><br /> 在次要複本上，將次要資料庫聯結至可用性群組。|裝載可用性複本的任何伺服器執行個體 (主要和次要複本的行為有所不同)|  
+|[**Remove-SqlAvailabilityDatabase**](/powershell/module/sqlserver/remove-sqlavailabilitydatabase)|在主要複本上，從可用性群組中移除資料庫。<br /><br /> 在次要複本上，從本機次要複本中移除本機次要資料庫。|裝載可用性複本的任何伺服器執行個體 (主要和次要複本的行為有所不同)|  
+|[**Resume-SqlAvailabilityDatabase**](/powershell/module/sqlserver/resume-sqlavailabilitydatabase)|繼續進行暫停之可用性資料庫的資料移動。|已暫停資料庫的伺服器執行個體。|  
+|[**Suspend-SqlAvailabilityDatabase**](/powershell/module/sqlserver/suspend-sqlavailabilitydatabase)|暫停可用性資料庫的資料移動。|裝載可用性複本的任何伺服器執行個體。|  
   
 ##  <a name="MonitorTblshtAGs"></a> Monitoring Availability Group Health  
  下列 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 指令程式可讓您監視可用性群組及其複本和資料庫的健全狀況。  
@@ -115,9 +116,9 @@ ms.lasthandoff: 01/18/2018
   
 |指令程式|描述|支援的項目|  
 |------------|-----------------|------------------|  
-|**Test-SqlAvailabilityGroup**|透過評估 SQL Server 原則式管理 (PBM) 原則，評估可用性群組的健全狀況。|裝載可用性複本的任何伺服器執行個體。*|  
-|**Test-SqlAvailabilityReplica**|透過評估 SQL Server 原則式管理 (PBM) 原則，評估可用性複本的健全狀況。|裝載可用性複本的任何伺服器執行個體。*|  
-|**Test-SqlDatabaseReplicaState**|透過評估 SQL Server 原則式管理 (PBM) 原則，評估所有聯結可用性複本之可用性資料庫的健全狀況。|裝載可用性複本的任何伺服器執行個體。*|  
+|[**Test-SqlAvailabilityGroup**](/powershell/module/sqlserver/test-sqlavailabilitygroup)|透過評估 SQL Server 原則式管理 (PBM) 原則，評估可用性群組的健全狀況。|裝載可用性複本的任何伺服器執行個體。*|  
+|[**Test-SqlAvailabilityReplica**](/powershell/module/sqlserver/test-sqlavailabilityreplica)|透過評估 SQL Server 原則式管理 (PBM) 原則，評估可用性複本的健全狀況。|裝載可用性複本的任何伺服器執行個體。*|  
+|[**Test-SqlDatabaseReplicaState**](/powershell/module/sqlserver/test-sqldatabasereplicastate)|透過評估 SQL Server 原則式管理 (PBM) 原則，評估所有聯結可用性複本之可用性資料庫的健全狀況。|裝載可用性複本的任何伺服器執行個體。*|  
   
  *若要檢視可用性群組中所有可用性複本的相關資訊，請用於裝載主要複本的伺服器執行個體。  
   

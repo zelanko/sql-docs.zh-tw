@@ -1,17 +1,14 @@
 ---
-title: "套用異動記錄備份 (SQL Server) | Microsoft Docs"
-ms.custom: 
+title: 套用異動記錄備份 (SQL Server) | Microsoft Docs
+ms.custom: ''
 ms.date: 08/13/2016
-ms.prod: sql-non-specified
-ms.prod_service: database-engine
-ms.service: 
-ms.component: backup-restore
-ms.reviewer: 
+ms.prod: sql
+ms.prod_service: backup-restore
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- dbe-backup-restore
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: backup-restore
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - restoring [SQL Server], log backups
 - transaction log backups [SQL Server], applying backups
@@ -19,19 +16,19 @@ helpviewer_keywords:
 - transaction log backups [SQL Server], quantity needed for restore sequence
 - backups [SQL Server], log backups
 ms.assetid: 9b12be51-5469-46f9-8e86-e938e10aa3a1
-caps.latest.revision: 
+caps.latest.revision: 38
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: b4bc4c88baaccf4bf24c1145df466fefbeb88a29
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: b1b8fff95c58785e48199bd3ce4bc65d3c87f293
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="apply-transaction-log-backups-sql-server"></a>套用異動記錄備份 (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 本主題僅與完整復原模式和大量記錄復原模式有關。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  本主題僅與完整復原模式和大量記錄復原模式有關。  
   
  此主題描述如何在還原 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫的過程中套用交易記錄備份。  
  

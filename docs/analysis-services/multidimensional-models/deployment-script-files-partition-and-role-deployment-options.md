@@ -1,43 +1,24 @@
 ---
-title: "指定資料分割和角色部署選項 |Microsoft 文件"
-ms.custom: 
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
-helpviewer_keywords:
-- input files [Analysis Services]
-- partitions [Analysis Services], deployment options
-- Analysis Services deployments, roles
-- Analysis Services deployments, partitions
-- Analysis Services Deployment Wizard, roles
-- Analysis Services Deployment Wizard, partitions
-- deploying [Analysis Services], roles
-- roles [Analysis Services], deployment options
-- deploying [Analysis Services], partitions
-- modifying role deployments
-- modifying partition deployments
-ms.assetid: e9b9ca57-a5cc-4fc0-87b5-305257038d56
-caps.latest.revision: 
-author: Minewiskan
+title: 指定資料分割和角色部署選項 |Microsoft 文件
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: multidimensional-models
+ms.topic: conceptual
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 2c23117a8f5765855988480c6b018fd84e1ee0de
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 64a8eeff0447b6a62e7e1f8e21bf48ae3a6b99a3
+ms.sourcegitcommit: b3bb41424249de198f22d9c6d40df4996f083aa6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/17/2018
 ---
 # <a name="deployment-script-files---partition-and-role-deployment-options"></a>部署指令碼檔案的磁碟分割和角色部署選項
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]部署精靈會讀取的資料分割和角色部署選項，從\<*專案名稱*> 部署檔案。 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]建立此檔案，當您建置[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]專案。 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 使用資料分割和角色部署選項目前的專案時\<*專案名稱*> 會建立檔案。 如需組態設定的詳細資訊，請參閱 [了解用來建立部署指令碼的輸入檔](../../analysis-services/multidimensional-models/deployment-script-files-input-used-to-create-deployment-script.md)。  
+[!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
+
+  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]部署精靈會讀取的資料分割和角色部署選項，從\<*專案名稱*> 部署檔案。 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]建立此檔案，當您建置[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]專案。 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 使用資料分割和角色部署選項目前的專案時\<*專案名稱*> 會建立檔案。 如需組態設定的詳細資訊，請參閱 [了解用來建立部署指令碼的輸入檔](../../analysis-services/multidimensional-models/deployment-script-files-input-used-to-create-deployment-script.md)。  
   
 ## <a name="reviewing-the-partition-and-role-deployment-options"></a>檢閱資料分割和角色部署選項  
  中的部署選項\<*專案名稱*> 部署檔案包括下列：  
@@ -74,7 +55,7 @@ ms.lasthandoff: 02/15/2018
   
      – 或 –  
   
--   開啟\<*專案名稱*> 以任何文字編輯器，並手動變更選項。  
+-   開啟\<*專案名稱*> 以任何文字編輯器，並手動變更選項。 DeployPartitions，RetainPartitions PartitionDeployment 選項。 RoleDeployment 選項都 DeployRolesAndMembers、 DeployRolesRetainMembers、 RetainRoles。
   
 ## <a name="see-also"></a>另請參閱  
  [指定安裝目標](../../analysis-services/multidimensional-models/deployment-script-files-specifying-the-installation-target.md)   

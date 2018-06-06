@@ -1,30 +1,29 @@
 ---
-title: "getBytes 方法 (int) |Microsoft 文件"
-ms.custom: 
+title: getBytes 方法 (int) |Microsoft 文件
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
-ms.component: jdbc
-ms.reviewer: 
+ms.prod: sql
+ms.prod_service: connectivity
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
-ms.topic: article
-apiname: SQLServerCallableStatement.getBytes (int)
-apilocation: sqljdbc.jar
+ms.technology: connectivity
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
+apiname:
+- SQLServerCallableStatement.getBytes (int)
+apilocation:
+- sqljdbc.jar
 apitype: Assembly
 ms.assetid: 8c2973e6-d57f-4f64-b812-350ce4098ce6
-caps.latest.revision: "12"
+caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
-ms.workload: Inactive
-ms.openlocfilehash: 3256c21ba46ce61808971b7af8af2d3fedc6a045
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+manager: craigg
+ms.openlocfilehash: 21dc53c7cdbe503bf7006dbc231206ccd60068d4
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="getbytes-method-int"></a>getBytes 方法 (int)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -41,7 +40,7 @@ public byte[] getBytes(int index)
 #### <a name="parameters"></a>參數  
  *索引*  
   
- **Int** ，指出參數索引。  
+ 指出參數索引的 **int**。  
   
 ## <a name="return-value"></a>傳回值  
  陣列**位元組**值。  
@@ -54,8 +53,8 @@ public byte[] getBytes(int index)
   
  GetBytes 方法 java.sql.CallableStatement 介面中所指定這個 getBytes 方法。  
   
-## <a name="see-also"></a>請參閱＜  
- [getBytes 方法 &#40;SQLServerCallableStatement &#41;](../../../connect/jdbc/reference/getbytes-method-sqlservercallablestatement.md)   
+## <a name="see-also"></a>另請參閱  
+ [getBytes 方法&#40;SQLServerCallableStatement&#41;](../../../connect/jdbc/reference/getbytes-method-sqlservercallablestatement.md)   
  [SQLServerCallableStatement 類別](../../../connect/jdbc/reference/sqlservercallablestatement-class.md)  
   
   

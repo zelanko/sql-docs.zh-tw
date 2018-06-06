@@ -1,29 +1,27 @@
 ---
-title: "ADO 技術資料表 |Microsoft 文件"
-ms.custom: 
+title: ADO 技術資料表 |Microsoft 文件
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
+ms.tgt_pltfrm: ''
+ms.prod: sql
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology: "“drivers”"
-ms.topic: article
+ms.technology: connectivity
+ms.topic: conceptual
 helpviewer_keywords:
 - ADO, technologies
 ms.assetid: 38c8ad3c-d6f1-40f6-a394-bbba6ed861e5
-caps.latest.revision: 
+caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: d6ab214b72913118e12d1ce1a7db67e0e00dc118
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 9f343cd75bed65062975f75e9560eabb43ee9212
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="products-and-technologies-table"></a>產品和技術的資料表
 下表列出 Microsoft 產品、 工具和 ADO 程式設計人員指南中所討論的技術。 它會提供連結，可能的情況下，本指南中的相關主題。

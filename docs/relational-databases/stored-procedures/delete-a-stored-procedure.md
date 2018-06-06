@@ -1,32 +1,31 @@
 ---
-title: "刪除預存程序 | Microsoft 文件"
-ms.custom: 
+title: 刪除預存程序 | Microsoft 文件
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
 ms.component: stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-stored-Procs
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - removing stored procedures
 - stored procedures [SQL Server], deleting
 - deleting stored procedures
 ms.assetid: 232dbf4d-392a-406f-af3a-579518cd8e46
-caps.latest.revision: 
+caps.latest.revision: 26
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: Active
-ms.openlocfilehash: 41143ff91f5b3ebc5f32178f5d75af1b8cdc90b9
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: c560d4611538c3cde5d64bcb4af7fa597bc9ba71
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="delete-a-stored-procedure"></a>刪除預存程序
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -72,7 +71,7 @@ ms.lasthandoff: 02/03/2018
 ###  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
  **若要在查詢編輯器中刪除程序**  
   
-1.  在 **[物件總管]**中，連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的執行個體，然後展開該執行個體。  
+1.  在 **[物件總管]** 中，連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的執行個體，然後展開該執行個體。  
   
 2.  依序展開 **[資料庫]**、程序所屬的資料庫，或從工具列的可用資料庫清單中選取資料庫。  
   

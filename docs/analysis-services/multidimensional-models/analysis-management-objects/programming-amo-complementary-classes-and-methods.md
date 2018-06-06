@@ -1,38 +1,19 @@
 ---
-title: "程式設計 AMO 互補的類別和方法 |Microsoft 文件"
-ms.custom: 
-ms.date: 02/14/2018
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- restores [AMO]
-- assemblies [AMO]
-- AMO, backup and restore
-- capture logs [AMO]
-- programming [AMO]
-- Analysis Management Objects, backup and restore
-- traces [AMO]
-- backups [AMO]
-ms.assetid: 14aed554-d2e2-49e5-9c72-26660759bce2
-caps.latest.revision: 
-author: Minewiskan
+title: 程式設計 AMO 互補的類別和方法 |Microsoft 文件
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: amo
+ms.topic: conceptual
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: ea3f2a07cc5d6e39bec7db5faf333986a56062f9
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: db41dcbcd16d6fe9ba6166f82f2939ef284bd4ba
+ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="programming-amo-complementary-classes-and-methods"></a>程式設計 AMO 互補的類別和方法
   本主題包含下列幾節：  
@@ -45,7 +26,7 @@ ms.lasthandoff: 02/15/2018
   
 -   [CaptureLog 類別和 CaptureXML 屬性](#CL)  
   
-##  <a name="Assembly">組件類別</a>  
+##  <a name="Assembly"></a> 組件類別  
  組件可讓使用者擴充功能的[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]加入新的預存程序或多維度運算式 (MDX) 函數。 如需詳細資訊，請參閱[AMO 其他類別和方法](../../../analysis-services/multidimensional-models/analysis-management-objects/amo-other-classes-and-methods.md)。  
   
  加入和卸除組件很簡單而且可以在線上執行。 您必須是資料庫管理員才能將組件加入資料庫，或者必須是伺服器管理員才能將組件加入伺服器物件。  
@@ -79,7 +60,7 @@ static public void CreateStoredProcedures(Database db)
   
 ```  
   
-##  <a name="BU"></a> Backup 與 Restore 方法  
+##  <a name="BU"></a>Backup 與 Restore 方法  
  備份與還原方法可讓管理員備份資料庫並加以還原。  
   
  下列範例會為指定伺服器中的所有資料庫建立備份。 如果備份檔案已經存在，則會覆寫該檔案。 備份檔案會儲存在 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] Data 資料夾的 BackUp 資料夾中。  
@@ -106,7 +87,7 @@ static public void RestoreAdventureWorks(Server svr)
 }  
 ```  
   
-##  <a name="TRC">Trace 類別</a>  
+##  <a name="TRC"></a> Trace 類別  
  監視伺服器活動需要使用兩種追蹤：工作階段追蹤與伺服器追蹤。 追蹤伺服器可以告訴您目前的工作在伺服器上執行的情形 (工作階段追蹤)，或者追蹤可以告訴您伺服器中的整體活動情形，甚至不必連接到伺服器 (伺服器追蹤)。  
   
  在追蹤目前的活動時 (工作階段追蹤)，伺服器會傳送通知給目前的應用程式，以說明伺服器中由應用程式造成的發生中事件。 事件是在目前的應用程式中使用事件處理常式來擷取。 您先將事件處理常式指派到 <xref:Microsoft.AnalysisServices.SessionTrace> 物件，然後啟動工作階段追蹤。  
@@ -287,8 +268,8 @@ static public string TestCaptureLog(Server svr)
  <xref:Microsoft.AnalysisServices>   
  [AMO 類別簡介](../../../analysis-services/multidimensional-models/analysis-management-objects/amo-classes-introduction.md)   
  [AMO 其他類別和方法](../../../analysis-services/multidimensional-models/analysis-management-objects/amo-other-classes-and-methods.md)   
- [邏輯架構 &#40;Analysis Services-多維度資料 &#41;](../../../analysis-services/multidimensional-models/olap-logical/understanding-microsoft-olap-logical-architecture.md)   
- [資料庫物件 &#40;Analysis Services-多維度資料 &#41;](../../../analysis-services/multidimensional-models/olap-logical/database-objects-analysis-services-multidimensional-data.md)   
- [處理多維度模型 &#40;Analysis Services &#41;](../../../analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services.md)  
+ [邏輯架構 & #40;Analysis Services-多維度資料 & #41;](../../../analysis-services/multidimensional-models/olap-logical/understanding-microsoft-olap-logical-architecture.md)   
+ [資料庫物件 & #40;Analysis Services-多維度資料 & #41;](../../../analysis-services/multidimensional-models/olap-logical/database-objects-analysis-services-multidimensional-data.md)   
+ [處理多維度模型&#40;Analysis Services&#41;](../../../analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services.md)  
   
   

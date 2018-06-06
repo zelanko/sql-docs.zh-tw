@@ -1,34 +1,23 @@
 ---
-title: "建立及管理角色 |Microsoft 文件"
-ms.custom: 
-ms.date: 02/22/2018
-ms.prod: analysis-services
-ms.prod_service: analysis-services, azure-analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords:
-- sql13.asvs.bidtoolset.rolemanager.f1
-- sql13.asvs.bidtoolset.roledb.f1
-ms.assetid: e23d27a8-e968-4082-9dbe-963fc724b5d9
-caps.latest.revision: 
-author: Minewiskan
+title: 建立及管理角色 |Microsoft 文件
+ms.date: 05/07/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: tabular-models
+ms.topic: conceptual
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 3787b8a3ee01c11cddb302025e2370085d0c63db
-ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
+ms.openlocfilehash: 5d97cd04228b13d0f57d99b6f8808a955bba1bea
+ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="create-and-manage-roles"></a>建立及管理角色 
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
-表格式模型中的角色定義模型的成員權限。 您可以使用 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中的 [角色管理員] 對話方塊來定義模型專案的角色。 部署模型之後，資料庫管理員即可使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]管理角色。  
+  表格式模型中的角色定義模型的成員權限。 您可以使用 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中的 [角色管理員] 對話方塊來定義模型專案的角色。 部署模型之後，資料庫管理員即可使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]管理角色。  
   
  這篇文章中的工作描述如何建立及管理角色使用角色管理員 對話方塊中的模型撰寫期間[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]。 管理已部署的模型資料庫中角色的相關資訊，請參閱[表格式模型角色](../../analysis-services/tabular-models/tabular-model-roles-ssas-tabular.md)。  
   

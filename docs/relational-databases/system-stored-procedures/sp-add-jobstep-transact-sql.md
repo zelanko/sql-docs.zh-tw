@@ -1,16 +1,14 @@
 ---
-title: "sp_add_jobstep (TRANSACT-SQL) |Microsoft 文件"
-ms.custom: 
+title: sp_add_jobstep (TRANSACT-SQL) |Microsoft 文件
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: system-objects
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_add_jobstep_TSQL
@@ -20,16 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_add_jobstep
 ms.assetid: 97900032-523d-49d6-9865-2734fba1c755
-caps.latest.revision: 
+caps.latest.revision: 80
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: c757a3d30bae1e95a8bf7d862daf0e1f0cf6138b
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: fc7970a2d38786a49beed08e63068be1abab4d51
+ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="spaddjobstep-transact-sql"></a>sp_add_jobstep (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -86,7 +83,7 @@ sp_add_jobstep [ @job_id = ] job_id | [ @job_name = ] 'job_name'
   
 |Value|Description|  
 |-----------|-----------------|  
-|'**ACTIVESCRIPTING**'|Active Script<br /><br /> **\*\*重要\*\*** [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]|  
+|'**ACTIVESCRIPTING**'|Active Script<br /><br /> **\*\* 重要 \*\*** [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]|  
 |'**CMDEXEC**'|作業系統命令或可執行的程式|  
 |'**發佈**'|複寫散發代理程式作業|  
 |'**快照**'|複寫快照集代理程式作業|  
@@ -99,7 +96,7 @@ sp_add_jobstep [ @job_id = ] job_id | [ @job_name = ] 'job_name'
 |'**PowerShell**'|PowerShell 指令碼|  
 |'**TSQL**' （預設值）|[!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式|  
   
- [ **@command=** ] **'***command***'**  
+ [  **@command=** ] **'***命令***'**  
  要執行之命令**SQLServerAgent**服務透過*子系統*。 *命令*是**nvarchar （max)**，預設值是 NULL。 SQL Server Agent 所提供的 Token 替代可在您撰寫軟體程式時，提供變數所提供的同等彈性。  
   
 > [!IMPORTANT]  
@@ -114,7 +111,7 @@ sp_add_jobstep [ @job_id = ] job_id | [ @job_name = ] 'job_name'
 >   
 >  如果需要使用這些 Token，請先確定只有受信任的 Windows 安全性群組的成員 (例如 Administrators 群組) 才對 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 所在電腦的事件記錄檔具有寫入權限。 然後以滑鼠右鍵按一下物件總管中的 [SQL Server Agent]、選取 [屬性]，然後在 [警示系統] 頁面上選取 [取代回應警示之所有作業的 Token]，以啟用這些 Token。  
   
- [ **@additional_parameters=** ] **'***parameters***'**  
+ [  **@additional_parameters=** ] **'***參數***'**  
  [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)] *參數*是**ntext**，預設值是 NULL。  
   
  [ **@cmdexec_success_code =** ] *code*  
@@ -149,16 +146,16 @@ sp_add_jobstep [ @job_id = ] job_id | [ @job_name = ] 'job_name'
  [ **@server =**] **'***server***'**  
  [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)] *伺服器*是**nvarchar （30)**，預設值是 NULL。  
   
- [ **@database_name=** ] **'***database***'**  
+ [  **@database_name=** ] **'***資料庫***'**  
  [!INCLUDE[tsql](../../includes/tsql-md.md)] 步驟執行所在的資料庫名稱。 *資料庫*是**sysname**，預設值是 NULL，在此情況下**主要**會使用資料庫。 不允許以括號 ([ ]) 括住的名稱。 ActiveX 作業步驟，如*資料庫*步驟會使用的指令碼語言的名稱。  
   
  [ **@database_user_name=** ] **'***user***'**  
  執行 [!INCLUDE[tsql](../../includes/tsql-md.md)] 步驟時所用的使用者帳戶名稱。 *使用者*是**sysname**，預設值是 NULL。 當*使用者*上是 NULL，在作業擁有者的使用者內容中執行此步驟*資料庫*。  只有在作業擁有者為 SQL Server 系統管理員 (sysadmin) 時，SQL Server Agent 才會包含此參數。 在此情況下，指定的 Transact-SQL 步驟會在指定的 SQL Server 使用者名稱內容中執行。 如果作業擁有者不是 SQL Server 系統管理員，則一定會擁有這項作業的登入的內容中執行的 TRANSACT-SQL 步驟和@database_user_name參數將會被忽略。  
   
- [ **@retry_attempts=** ] *retry_attempts*  
+ [  **@retry_attempts=** ] *retry_attempts*  
  此步驟失敗時的重試次數。 *retry_attempts*是**int**，預設值是**0**，表示無重試嘗試。  
   
- [ **@retry_interval=** ] *retry_interval*  
+ [  **@retry_interval=** ] *retry_interval*  
  重試的間隔時間 (以分鐘為單位)。 *retry_interval*是**int**，預設值是**0**，表示**0**-分鐘的間隔。  
   
  [ **@os_run_priority =** ] *run_priority*  
@@ -167,7 +164,7 @@ sp_add_jobstep [ @job_id = ] job_id | [ @job_name = ] 'job_name'
  [ **@output_file_name=** ] **'***file_name***'**  
  儲存此步驟之輸出的檔案名稱。 *file_name*是**nvarchar(200)**，預設值是 NULL。 *file_name*可以包含一個或多個列在 token*命令*。 只執行的命令，此參數才有效[!INCLUDE[tsql](../../includes/tsql-md.md)]， **CmdExec**， **PowerShell**， [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]，或[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]子系統。  
   
- [ **@flags=** ] *flags*  
+ [  **@flags=** ]*旗標*  
  這是控制行為的選項。 *旗標*是**int**，而且可以是下列值之一。  
   
 |Value|Description|  
@@ -236,11 +233,11 @@ GO
 ## <a name="see-also"></a>另請參閱  
  [檢視或修改作業](http://msdn.microsoft.com/library/57f649b8-190c-4304-abd7-7ca5297deab7)   
  [sp_add_job &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-job-transact-sql.md)   
- [sp_add_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md)   
- [sp_delete_jobstep &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-jobstep-transact-sql.md)   
- [sp_help_job &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-job-transact-sql.md)   
- [sp_help_jobstep &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-jobstep-transact-sql.md)   
- [sp_update_jobstep &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-update-jobstep-transact-sql.md)   
+ [sp_add_schedule &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md)   
+ [sp_delete_jobstep &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-jobstep-transact-sql.md)   
+ [sp_help_job &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-job-transact-sql.md)   
+ [sp_help_jobstep &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-jobstep-transact-sql.md)   
+ [sp_update_jobstep &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-update-jobstep-transact-sql.md)   
  [系統預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

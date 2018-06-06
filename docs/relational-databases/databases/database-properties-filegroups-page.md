@@ -1,33 +1,32 @@
 ---
-title: "資料庫屬性 (檔案群組頁面) | Microsoft 文件"
-ms.custom: 
+title: 資料庫屬性 (檔案群組頁面) | Microsoft 文件
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
 ms.component: databases
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 f1_keywords:
 - sql13.swb.databaseproperties.filegroups.f1
 ms.assetid: 8d06e859-73dd-4019-b6e8-99c5c5297697
-caps.latest.revision: 
+caps.latest.revision: 31
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: b5059c901a9b2dc517b765a642ddbe16bb926471
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: d8902da97f015bad1f548fb3aaf3d23b7d108aec
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="database-properties-filegroups-page"></a>資料庫屬性 (檔案群組頁面)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 使用此頁面來檢視檔案群組或將新的檔案群組新增至選取的資料庫。 檔案群組類型分成「資料列」檔案群組、FILESTREAM 資料和記憶體最佳化檔案群組。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  使用此頁面來檢視檔案群組或將新的檔案群組加入選取的資料庫中。 檔案群組類型分成「資料列」檔案群組、FILESTREAM 資料和記憶體最佳化檔案群組。  
   
  資料列檔案群組包含一般的資料和記錄檔。 FILESTREAM 資料檔案群組包含 FILESTREAM 資料檔案。 當您使用 FILESTREAM 儲存體時，這些資料檔案會儲存有關二進位大型物件 (BLOB) 資料如何儲存在檔案系統上的資訊。 對於這兩種類型的檔案群組而言，選項都是相同的。  
   

@@ -1,18 +1,14 @@
 ---
-title: "解除安裝現有的 SQL Server 執行個體 (安裝程式) | Microsoft Docs"
-ms.custom: 
+title: 解除安裝現有的 SQL Server 執行個體 (安裝程式) | Microsoft Docs
+ms.custom: ''
 ms.date: 01/27/2017
-ms.prod: sql-non-specified
-ms.prod_service: database-engine
-ms.service: 
+ms.prod: sql
 ms.component: install
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- setup-install
-- setup-install
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: install
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - removing instances of SQL Server
 - uninstalling instances of SQL Server
@@ -20,16 +16,15 @@ helpviewer_keywords:
 - instances of SQL Server, uninstalling
 - uninstalling SQL Server
 ms.assetid: 3c64b29d-61d7-4b86-961c-0de62261c6a1
-caps.latest.revision: 
+caps.latest.revision: 74
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
-ms.workload: Active
-ms.openlocfilehash: f5c422a4d1a25ed210f857b9de31aaadec481847
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+manager: craigg
+ms.openlocfilehash: 5a9357b20ef28d78ceebd1df7db336235b9e34f8
+ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="uninstall-an-existing-instance-of-sql-server-setup"></a>解除安裝現有的 SQL Server 執行個體 (安裝程式)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -40,7 +35,7 @@ ms.lasthandoff: 02/09/2018
   
 >**重要！** 若要解除安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的執行個體，您必須是本機管理員，且具有以服務登入的權限。  
   
-> **注意：**若要解除安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 容錯移轉叢集，請使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝程式所提供的「移除節點」功能來分別移除每個節點。 如需詳細資訊，請參閱[在 SQL Server 容錯移轉叢集 &#40;Setup&#41; 中加入或移除節點](../../sql-server/failover-clusters/install/add-or-remove-nodes-in-a-sql-server-failover-cluster-setup.md)。  
+> **注意：** 若要解除安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 容錯移轉叢集，請使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝程式所提供的「移除節點」功能來分別移除每個節點。 如需詳細資訊，請參閱[在 SQL Server 容錯移轉叢集 &#40;Setup&#41; 中加入或移除節點](../../sql-server/failover-clusters/install/add-or-remove-nodes-in-a-sql-server-failover-cluster-setup.md)。  
   
  請注意，解除安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]之前，請先考慮下列重要狀況：  
   
@@ -104,7 +99,7 @@ ms.lasthandoff: 02/09/2018
   
 5.  在 **[準備移除]** 頁面上，檢閱即將解除安裝之元件和功能的清單。 按一下 **[移除]** 開始解除安裝  
   
-6.  解除安裝最後一個 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體之後， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [程式和功能] **的程式清單中仍會顯示與**相關聯的其他程式。 不過，如果您關閉 **[程式和功能]**，下次再開啟 **[程式和功能]**時，就會重新整理程式清單，只顯示實際上仍安裝的程式。  
+6.  解除安裝最後一個 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體之後， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [程式和功能] **的程式清單中仍會顯示與**相關聯的其他程式。 不過，如果您關閉 **[程式和功能]**，下次再開啟 **[程式和功能]** 時，就會重新整理程式清單，只顯示實際上仍安裝的程式。  
   
 ### <a name="if-the-uninstallation-fails"></a>如果解除安裝失敗  
   

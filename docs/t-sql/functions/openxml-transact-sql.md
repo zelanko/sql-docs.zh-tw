@@ -1,16 +1,14 @@
 ---
 title: OPENXML (Transact-SQL) | Microsoft Docs
-ms.custom: 
-ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.custom: ''
+ms.date: 03/20/2018
+ms.prod: sql
 ms.prod_service: sql-database
-ms.service: 
 ms.component: t-sql|functions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: t-sql
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - OPENXML_TSQL
@@ -22,19 +20,18 @@ helpviewer_keywords:
 - rowsets [SQL Server], XML documents
 - XML [SQL Server], rowset views
 ms.assetid: 8088b114-7d01-435a-8e0d-b81abacc86d6
-caps.latest.revision: 
+caps.latest.revision: 24
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: f5b32c99393bb5b7f31423df840f7f0069dd3518
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: e3ad07906a4b64281016da04ee803833e3d17542
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="openxml-transact-sql"></a>OPENXML (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   OPENXML 提供 XML 文件上的資料列集檢視。 因為 OPENXML 是資料列集提供者，所以 OPENXML 可以用在像是資料表、檢視或 OPENROWSET 函數等資料列集提供者能出現的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式中。  
   
@@ -66,7 +63,7 @@ OPENXML( idoc int [ in] , rowpattern nvarchar [ in ] , [ flags byte [ in ] ] )
 |**8**|可以和 XML_ATTRIBUTES 或 XML_ELEMENTS 合併使用 (邏輯 OR)。 在擷取的內容中，這個旗標表示耗用的資料不應複製到溢位屬性 **@mp:xmltext**。|  
   
  *SchemaDeclaration*  
- 這是表單的結構描述定義：*ColName**ColType* [*ColPattern* | *MetaProperty*] [**,***ColNameColType* [*ColPattern* | *MetaProperty*]...]  
+ 這是表單的結構描述定義：*ColName**ColType* [*ColPattern* | *MetaProperty*] [**,***ColNameColType* [* ColPattern* | *MetaProperty*]...]  
   
  *ColName*  
  這是資料列集中的資料行名稱。  

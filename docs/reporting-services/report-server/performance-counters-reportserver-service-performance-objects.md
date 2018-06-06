@@ -1,28 +1,27 @@
 ---
-title: "效能計數器 - ReportServer Service 效能物件 | Microsoft Docs"
-ms.custom: 
+title: 效能計數器 - ReportServer Service 效能物件 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: report-server
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
-helpviewer_keywords: Report Server service, performance counters
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
+helpviewer_keywords:
+- Report Server service, performance counters
 ms.assetid: 2bcacab2-3a4f-4aae-b123-19d756b9b9ed
-caps.latest.revision: "21"
+caps.latest.revision: 21
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 4f956b1f0dc970529912844681af784e2b495a5e
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 3a83e69235c79a255d1ba238b6acc24f873d5e51
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="performance-counters---reportserver-service--performance-objects"></a>效能計數器 - ReportServer Service 效能物件
   本主題說明 **ReportServer:Service** 和 **ReportServerSharePoint:Service** 效能物件的效能計數器，這些效能物件是 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 部署的一部分。  
@@ -43,7 +42,7 @@ ms.lasthandoff: 01/09/2018
  [!INCLUDE[applies](../../includes/applies-md.md)] [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]。  
   
 ##  <a name="bkmk_ReportServer"></a> ReportServer:Service 效能計數器 (原生模式報表伺服器)  
- **ReportServer:Service** 效能物件包含一組計數器集合，用來追蹤報表伺服器執行個體的 HTTP 相關事件和記憶體相關事件。 這個效能物件會針對電腦上的每個 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 執行個體顯示一次，而且您可以在每個執行個體的效能物件中加入或移除計數器。 預設執行個體的計數器會以 **ReportServer:Service**格式顯示。 具名執行個體的計數器會以 **ReportServer$\<**執行個體名稱**>:Service** 格式顯示。  
+ **ReportServer:Service** 效能物件包含一組計數器集合，用來追蹤報表伺服器執行個體的 HTTP 相關事件和記憶體相關事件。 這個效能物件會針對電腦上的每個 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 執行個體顯示一次，而且您可以在每個執行個體的效能物件中加入或移除計數器。 預設執行個體的計數器會以 **ReportServer:Service**格式顯示。 具名執行個體的計數器會以 **ReportServer$\<***instance_name***>:Service** 格式顯示。  
   
  **ReportServer:Service** 效能物件是 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]的新增物件，而且它會提供舊版 [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] 中 Internet Information Services (IIS) 和 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]隨附的計數器子集。 這些新的計數器是 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]特有的，而且它們會追蹤報表伺服器的 HTTP 相關事件，例如要求、連接和登入嘗試。 此外，這個效能物件包含可追蹤記憶體管理事件的計數器。  
   

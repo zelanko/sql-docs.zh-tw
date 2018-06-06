@@ -1,16 +1,14 @@
 ---
 title: CHECKPOINT (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 07/27/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-database
-ms.service: 
 ms.component: t-sql|language-elements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: t-sql
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - CHECKPOINT_TSQL
@@ -30,21 +28,20 @@ helpviewer_keywords:
 - manual checkpoints [SQL Server]
 - pages [SQL Server], checkpoints
 ms.assetid: ccdfc689-ad4e-44c0-83f7-0f2cfcfb6406
-caps.latest.revision: 
-author: barbkess
-ms.author: barbkess
+caps.latest.revision: 59
+author: edmacauley
+ms.author: edmaca
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 6353bd534827ff9066bd7b184a09d67b5867c3cb
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 2c7232d1494ad48987d91ffe4dfc05e5ef47e4b5
+ms.sourcegitcommit: d2573a8dec2d4102ce8882ee232cdba080d39628
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="checkpoint-transact-sql"></a>CHECKPOINT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  在您目前所連線的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫中產生手動檢查點。  
+  在您目前所連接的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫中產生手動檢查點。  
   
 > [!NOTE]  
 >  如需不同類型資料庫檢查點與一般檢查點作業的詳細資訊，請參閱[資料庫檢查點 &#40;SQL Server&#41;](../../relational-databases/logs/database-checkpoints-sql-server.md)。  
@@ -69,7 +66,7 @@ CHECKPOINT [ checkpoint_duration ]
   
 ##  <a name="Security"></a> 安全性  
   
-### <a name="permissions"></a>權限  
+### <a name="permissions"></a>Permissions  
  CHECKPOINT 權限預設會授與 **sysadmin** 固定伺服器角色及 **db_owner** 與 **db_backupoperator** 固定資料庫角色的成員，且無法轉讓。  
   
 ## <a name="see-also"></a>另請參閱  

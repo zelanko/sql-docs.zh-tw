@@ -1,27 +1,25 @@
 ---
-title: "重新整理從資料庫 (OracleToSQL) |Microsoft 文件"
-ms.prod: sql-non-specified
+title: 重新整理從資料庫 (OracleToSQL) |Microsoft 文件
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
 ms.component: ssma-oracle
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ssma
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: 84492f44-c368-4c75-954d-7307a2d2bbc0
-caps.latest.revision: "4"
+caps.latest.revision: 4
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
-ms.workload: Inactive
-ms.openlocfilehash: ad8beabee5fdcf839b63220f7063f7f9640b2531
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 4ce7ef56e02e3d9fac5aabf6251e5cfac9dd93cd
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="refresh-from-database-oracletosql"></a>從資料庫 (OracleToSQL) 重新整理
 **從資料庫重新整理** 對話方塊可讓您選取要從 Oracle 資料庫重新整理的物件。 在對話方塊中的資料列會以色彩標示在中繼資料的狀態：  
@@ -34,11 +32,11 @@ ms.lasthandoff: 12/21/2017
   
 -   如果是新的 Oracle 資料庫中的物件，該資料列是粉紅色。  
   
-您可以指定預設物件中的重新整理設定**專案設定** 對話方塊。 如需詳細資訊，請參閱[專案設定 &#40;同步處理 &#41;&#40; OracleToSQL &#41;](../../ssma/oracle/project-settings-synchronization-oracletosql.md).  
+您可以指定預設物件中的重新整理設定**專案設定** 對話方塊。 如需詳細資訊，請參閱[專案設定&#40;同步&#41; &#40;OracleToSQL&#41;](../../ssma/oracle/project-settings-synchronization-oracletosql.md)。  
   
 若要存取**從資料庫重新整理**對話方塊中，以滑鼠右鍵按一下物件中的 Oracle 中繼資料總管] 按一下 [**從資料庫重新整理**。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
 **摺疊 （-）**  
 摺疊以隱藏個別物件的所有物件群組。  
   

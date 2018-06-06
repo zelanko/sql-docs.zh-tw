@@ -1,16 +1,15 @@
 ---
-title: "Properties 屬性 （ServerNetworkProtocol 類別） |Microsoft 文件"
-ms.custom: 
+title: Properties 屬性 （ServerNetworkProtocol 類別） |Microsoft 文件
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
 ms.component: wmi
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - Properties Property (ServerNetworkProtocol Class)
@@ -20,20 +19,19 @@ apitype: MOFDef
 helpviewer_keywords:
 - Properties property
 ms.assetid: 6c971bfc-c277-4c1e-a06e-146dcc34e759
-caps.latest.revision: 
-author: JennieHubbard
-ms.author: jhubbard
+caps.latest.revision: 29
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: ab6a6ff58d40e5e1e5ee30e38dd8d958c8667f91
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.openlocfilehash: 60dd35cc16e0adb70ec96ffd50c81a96f273b5c3
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="properties-property-servernetworkprotocol-class"></a>Properties 屬性 (ServerNetworkProtocol 類別)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
-取得與伺服器網路通訊協定相關聯的屬性。  
+  取得與伺服器網路通訊協定相關聯的屬性。  
   
 ## <a name="syntax"></a>語法  
   

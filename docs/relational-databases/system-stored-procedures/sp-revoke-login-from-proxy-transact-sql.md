@@ -1,16 +1,14 @@
 ---
-title: "sp_revoke_login_from_proxy (TRANSACT-SQL) |Microsoft 文件"
-ms.custom: 
+title: sp_revoke_login_from_proxy (TRANSACT-SQL) |Microsoft 文件
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: system-objects
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_revoke_login_from_proxy_TSQL
@@ -20,16 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_revoke_login_from_proxy
 ms.assetid: e4546c13-9fba-4bab-8b42-d6f18b33ec25
-caps.latest.revision: 
+caps.latest.revision: 20
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: c4e91618e5b1eb8ec5020bdd4815e65ff5edd1bf
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 6275facb81f14269eca19979c115c5ea80844563
+ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="sprevokeloginfromproxy-transact-sql"></a>sp_revoke_login_from_proxy (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,7 +47,7 @@ sp_revoke_login_from_proxy
   
 ## <a name="arguments"></a>引數  
  [ **@name=** ] **'***name***'**  
- 名稱[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]登入、 伺服器角色或**msdb**来移除存取權的資料庫角色。 *名稱*是**nvarchar （256)**沒有預設值。  
+ 名稱[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]登入、 伺服器角色或**msdb**来移除存取權的資料庫角色。 *名稱*是**nvarchar （256)** 沒有預設值。  
   
  [ **@proxy_id=** ] *id*  
  要移除存取權之 Proxy 的識別碼。 任一*識別碼*或*proxy_name*必須指定，但不可同時指定兩者。 *識別碼*是**int**，預設值是 NULL。  
@@ -81,8 +78,8 @@ GO
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [SQL Server Agent 預存程序 &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/sql-server-agent-stored-procedures-transact-sql.md)   
+ [SQL Server Agent 預存程序&#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sql-server-agent-stored-procedures-transact-sql.md)   
  [sp_grant_login_to_proxy &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-grant-login-to-proxy-transact-sql.md)   
- [sp_help_proxy &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-proxy-transact-sql.md)  
+ [sp_help_proxy &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-proxy-transact-sql.md)  
   
   

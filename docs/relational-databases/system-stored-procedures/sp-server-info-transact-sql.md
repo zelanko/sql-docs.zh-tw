@@ -1,16 +1,14 @@
 ---
-title: "sp_server_info (TRANSACT-SQL) |Microsoft 文件"
-ms.custom: 
+title: sp_server_info (TRANSACT-SQL) |Microsoft 文件
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: system-objects
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_server_info
@@ -20,16 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_server_info
 ms.assetid: 2dc2c262-3cfa-4a84-8127-3632ba583543
-caps.latest.revision: 
+caps.latest.revision: 39
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 0261a011e7c331745494070efb5a3d38e37ffa23
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 0715ea7f2f58b8212b48e990c3e2d2f76301b373
+ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="spserverinfo-transact-sql"></a>sp_server_info (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -57,10 +54,10 @@ sp_server_info [[@attribute_id = ] 'attribute_id']
 |資料行名稱|資料類型|Description|  
 |-----------------|---------------|-----------------|  
 |**ATTRIBUTE_ID**|**int**|屬性的識別碼。|  
-|**ATTRIBUTE_NAME**|**varchar (**60**)**|屬性名稱。|  
-|**ATTRIBUTE_VALUE**|**varchar (**255**)**|屬性目前的設定。|  
+|**ATTRIBUTE_NAME**|**varchar (** 60 **)**|屬性名稱。|  
+|**ATTRIBUTE_VALUE**|**varchar (** 255 **)**|屬性目前的設定。|  
   
- 下表列出各個屬性。 [!INCLUDE[msCoName](../../includes/msconame-md.md)]ODBC 用戶端程式庫目前使用的屬性**1**， **2**， **18**， **22**，和**500**在連線時間。  
+ 下表列出各個屬性。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] ODBC 用戶端程式庫目前使用的屬性**1**， **2**， **18**， **22**，和**500**在連線時間。  
   
 |ATTRIBUTE_ID|ATTRIBUTE_NAME 描述|ATTRIBUTE_VALUE|  
 |-------------------|---------------------------------|----------------------|  
@@ -100,8 +97,8 @@ sp_server_info [[@attribute_id = ] 'attribute_id']
 ## <a name="permissions"></a>Permissions  
  需要結構描述的 SELECT 權限。  
   
-## <a name="see-also"></a>請參閱  
- [目錄預存程序 &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/catalog-stored-procedures-transact-sql.md)   
+## <a name="see-also"></a>另請參閱  
+ [目錄預存程序&#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/catalog-stored-procedures-transact-sql.md)   
  [系統預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

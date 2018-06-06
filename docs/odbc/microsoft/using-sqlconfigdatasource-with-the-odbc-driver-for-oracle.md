@@ -1,28 +1,26 @@
 ---
-title: "使用 Oracle 的 ODBC 驅動程式 SQLConfigDatasource |Microsoft 文件"
-ms.custom: 
+title: 使用 Oracle 的 ODBC 驅動程式 SQLConfigDatasource |Microsoft 文件
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
-ms.component: odbc
-ms.reviewer: 
+ms.prod: sql
+ms.prod_service: connectivity
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
-ms.topic: article
-helpviewer_keywords: SQLConfigDataSource function [ODBC], ODBC driver for Oracle
+ms.technology: connectivity
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
+helpviewer_keywords:
+- SQLConfigDataSource function [ODBC], ODBC driver for Oracle
 ms.assetid: e535d1ef-aff9-4ae7-a3ed-ef4ca2584289
-caps.latest.revision: "8"
+caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
-ms.workload: Inactive
-ms.openlocfilehash: 676ab0116fa14af4d2f29c2620a4f6e15f17cdc0
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+manager: craigg
+ms.openlocfilehash: 5859b6cc446e74c12b2fb09436246d693a3beea3
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="using-sqlconfigdatasource-with-the-odbc-driver-for-oracle"></a>使用 Oracle 的 ODBC 驅動程式 SQLConfigDatasource
 > [!IMPORTANT]  
@@ -37,12 +35,12 @@ ms.lasthandoff: 12/21/2017
   
  下表中*A/N*表示任何有效的英數字元字串，最大容許長度。 *最大長度*（最大長度） 是設定，包括字串結束字元所接受的最大可允許的字串長度。  
   
-|設定|最大長度|預設值|有效的值|描述|  
+|設定|最大長度|預設值|有效的值|Description|  
 |-------------|-------------|-------------------|------------------|-----------------|  
 |BufferSize|7|65535|1000|最小的提取緩衝區大小最多 65535 位元組上限|  
-|CatalogCap|2|@shouldalert|0 或 1|如果是 1，nonquoted 的識別項會轉換為大寫目錄中的函式。|  
+|CatalogCap|2|1|0 或 1|如果是 1，nonquoted 的識別項會轉換為大寫目錄中的函式。|  
 |ConnectString|128|""|A/N|連接字串。 指定伺服器名稱與 Msorcl10.dll 驅動程式所需的方法。|  
-|描述|256|""|A/N|描述|  
+|Description|256|""|A/N|描述|  
 |DSN|33|""|A/N|資料來源名稱。|  
 |GuessTheColDef|4|0|A/N|傳回非零值沒有 Oracle 定義小數位數的資料行。|  
 |NumberFloat|2|""|0 或 1|如果為 0，浮點數資料行視為 SQL_FLOAT。 如果是 1，浮點數資料行視為 SQL_DOUBLE。|  
@@ -50,8 +48,8 @@ ms.lasthandoff: 12/21/2017
 |RDOSupport|2|""|0 或 1|可讓 RDO 呼叫 Oracle 程序。|  
 |備註|2|0|0 或 1|目錄函式中包含註解。|  
 |RowLimit|4|""|0 到 99 之間|SELECT 陳述式所傳回的資料列的數目上限。 零長度字串，表示會套用任何限制。|  
-|[伺服器]|128|""|A/N|Oracle 伺服器名稱。|  
-|SynonymColumns|2|@shouldalert|0 或 1|納入 SQLColumns 同義字。|  
+|Server|128|""|A/N|Oracle 伺服器名稱。|  
+|SynonymColumns|2|1|0 或 1|納入 SQLColumns 同義字。|  
 |SystemTable|2|""|0 或 1|如果為 0，不會顯示系統資料表。 如果是 1，將會顯示系統資料表。|  
 |TranslationDLL|33|""|A/N|轉譯.dll 名稱。|  
 |TranslationName|33|""|A/N|翻譯的名稱。|  

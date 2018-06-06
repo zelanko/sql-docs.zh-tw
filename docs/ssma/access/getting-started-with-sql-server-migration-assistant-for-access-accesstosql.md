@@ -1,16 +1,15 @@
 ---
-title: "開始使用 SQL Server 移轉小幫手存取 |Microsoft 文件"
-ms.prod: sql-non-specified
+title: 開始使用 SQL Server 移轉小幫手存取 |Microsoft 文件
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
 ms.component: ssma-access
-ms.custom: 
+ms.custom: ''
 ms.date: 08/15/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ssma
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 applies_to:
 - Azure SQL Database
 - SQL Server
@@ -24,24 +23,23 @@ helpviewer_keywords:
 - user interface
 - user interface overview
 ms.assetid: 462a731f-08f1-44e1-9eeb-4deac6d2f6c5
-caps.latest.revision: "24"
+caps.latest.revision: 24
 author: Shamikg
 ms.author: Shamikg
 manager: murato
-ms.workload: On Demand
-ms.openlocfilehash: 92a7e496075cb7e42c09bd89a1f17e1b296b9946
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 450057d8167423b07a729a4bd05c65e67a533b37
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="getting-started-with-sql-server-migration-assistant-for-access-accesstosql"></a>開始使用 SQL Server 移轉小幫手存取 (AccessToSQL)
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]移轉小幫手 (SSMA) 的存取可讓您快速地轉換到存取資料庫物件[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或 Azure SQL DB 物件上傳到產生的物件[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或 Azure SQL DB、 從存取移轉資料和[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或 Azure SQL DB。 如果有必要，您也可以將連結來存取資料表[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或 Azure SQL DB 資料表，好讓您可以繼續使用現有的存取前端應用程式與[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或 Azure SQL DB。  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 移轉小幫手 (SSMA) 的存取可讓您快速地轉換到存取資料庫物件[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或 Azure SQL DB 物件上傳到產生的物件[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或 Azure SQL DB、 從存取移轉資料和[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或 Azure SQL DB。 如果有必要，您也可以將連結來存取資料表[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或 Azure SQL DB 資料表，好讓您可以繼續使用現有的存取前端應用程式與[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或 Azure SQL DB。  
   
 本主題介紹的安裝程序，並可協助您熟悉 SSMA 使用者介面。  
   
 ## <a name="installing-ssma"></a>安裝 SSMA  
-若要使用 SSMA，您首先必須安裝 SSMA 用戶端程式可以存取您想要移轉的這兩個資料庫的電腦和目標執行個體的[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或 Azure SQL DB。 如需安裝指示，請參閱[安裝 SQL Server 移轉小幫手存取 &#40;AccessToSQL &#41;](../../ssma/access/installing-sql-server-migration-assistant-for-access-accesstosql.md).  
+若要使用 SSMA，您首先必須安裝 SSMA 用戶端程式可以存取您想要移轉的這兩個資料庫的電腦和目標執行個體的[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或 Azure SQL DB。 如需安裝指示，請參閱[安裝 SQL Server 移轉小幫手存取&#40;AccessToSQL&#41;](../../ssma/access/installing-sql-server-migration-assistant-for-access-accesstosql.md)。  
   
 若要啟動 SSMA，按一下**啟動**，指向**所有程式**，指向**SQL Server 移轉小幫手存取**，然後選取**SQL Server 移轉小幫手存取**。  
   
@@ -90,7 +88,7 @@ SSMA 包含兩個中繼資料總管可讓您瀏覽並執行動作的存取和[!I
 -   連結和取消連結存取和[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]資料表。  
   
 #### <a name="sql-server-or-azure-sql-db-metadata-explorer"></a>SQL Server 或 Azure SQL DB 中繼資料總管  
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]Azure SQL DB 中繼資料總管 會顯示資訊的執行個體或[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或 Azure SQL DB。 當您連接到的執行個體[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或 Azure SQL DB、 SSMA 擷取有關該執行個體的中繼資料，並將它儲存在專案檔。  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Azure SQL DB 中繼資料總管 會顯示資訊的執行個體或[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或 Azure SQL DB。 當您連接到的執行個體[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或 Azure SQL DB、 SSMA 擷取有關該執行個體的中繼資料，並將它儲存在專案檔。  
   
 您可以使用 SQL Server 或 Azure SQL DB 中繼資料總管] 選取 [已轉換的存取資料庫物件及載入 （同步處理） 的執行個體將那些物件[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或 Azure SQL DB。  
   
@@ -125,11 +123,11 @@ SSMA 會有兩個工具列： 專案工具列和移轉工具列。
 ### <a name="menus"></a>功能表  
 SSMA 會包含下列功能表：  
   
-|功能表|描述|  
+|功能表|Description|  
 |--------|---------------|  
 |**檔案**|「 移轉精靈 」，使用專案中，加入和移除存取資料庫檔案，以及連接到包含指令[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或 Azure SQL DB。|  
 |**編輯**|包含用來尋找及處理的詳細資料頁面中，例如，將複製的文字命令[!INCLUDE[tsql](../../includes/tsql_md.md)]從 [SQL 詳細資料] 窗格。 若要開啟**管理書籤**對話方塊中的，編輯 功能表中，按一下 管理書籤。 在對話方塊中，您會看到一份現有書籤。 您可以使用對話方塊右側的按鈕，來管理這些書籤。|  
-|**[檢視]**|包含**同步處理中繼資料瀏覽器**命令。 這會同步處理存取中繼資料總管 之間的物件和[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或 Azure SQL DB 中繼資料總管。 還會包含命令來顯示和隱藏**輸出**和**錯誤清單**窗格和選項**配置**管理版面配置。|  
+|**檢視**|包含**同步處理中繼資料瀏覽器**命令。 這會同步處理存取中繼資料總管 之間的物件和[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或 Azure SQL DB 中繼資料總管。 還會包含命令來顯示和隱藏**輸出**和**錯誤清單**窗格和選項**配置**管理版面配置。|  
 |**工具**|包含命令來建立報表、 匯出的資料、 物件和資料移轉，連結資料表，並提供存取全域和專案設定 對話方塊。|  
 |**說明**|提供存取至 SSMA 協助和**有關** 對話方塊。|  
   

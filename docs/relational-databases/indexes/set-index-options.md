@@ -1,17 +1,14 @@
 ---
-title: "設定索引選項 | Microsoft Docs"
-ms.custom: 
+title: 設定索引選項 | Microsoft Docs
+ms.custom: ''
 ms.date: 02/17/2017
-ms.prod: sql-non-specified
-ms.prod_service: database-engine, sql-database
-ms.service: 
-ms.component: indexes
-ms.reviewer: 
+ms.prod: sql
+ms.prod_service: table-view-index, sql-database
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- dbe-indexes
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: table-view-index
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - ALLOW_ROW_LOCKS option
 - SORT_IN_TEMPDB option
@@ -26,16 +23,16 @@ helpviewer_keywords:
 - ALLOW_PAGE_LOCKS option
 - ONLINE
 ms.assetid: 7969af33-e94c-41f7-ab89-9d9a2747cd5c
-caps.latest.revision: 
-author: barbkess
-ms.author: barbkess
+caps.latest.revision: 44
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: d196c359725787681324409666eb30ae74d1cd58
-ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: cf70465f7078a80d7f11ffd0e454e4c350c3abf8
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="set-index-options"></a>設定索引選項
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -101,7 +98,7 @@ ms.lasthandoff: 02/23/2018
   
 5.  以滑鼠右鍵按一下要修改其屬性的索引，然後選取 [屬性]。  
   
-6.  在 **[選取頁面]**底下，選取 **[選項]**。  
+6.  在 **[選取頁面]** 底下，選取 **[選項]**。  
   
 7.  變更任何和所有屬性的設定，以自訂索引。  
   
@@ -111,7 +108,7 @@ ms.lasthandoff: 02/23/2018
   
 #### <a name="to-see-the-properties-of-all-the-indexes-in-a-table"></a>查看資料表中所有索引的屬性  
   
-1.  在 **[物件總管]**中，連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的執行個體。  
+1.  在 **[物件總管]** 中，連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的執行個體。  
   
 2.  在標準列上，按一下 **[新增查詢]**。  
   
@@ -145,7 +142,7 @@ ms.lasthandoff: 02/23/2018
   
 #### <a name="to-set-the-properties-of-an-index"></a>設定索引的屬性  
   
-1.  在 **[物件總管]**中，連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的執行個體。  
+1.  在 **[物件總管]** 中，連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的執行個體。  
   
 2.  在標準列上，按一下 **[新增查詢]**。  
   

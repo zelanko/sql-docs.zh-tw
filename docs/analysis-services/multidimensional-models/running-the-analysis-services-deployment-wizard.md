@@ -1,31 +1,24 @@
 ---
-title: "執行 Analysis Services 部署精靈 |Microsoft 文件"
-ms.custom: 
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
-helpviewer_keywords: Analysis Services Deployment Wizard, running
-ms.assetid: 3a38d489-4625-4878-bd18-c6f903be33df
-caps.latest.revision: "41"
-author: Minewiskan
+title: 執行 Analysis Services 部署精靈 |Microsoft 文件
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: multidimensional-models
+ms.topic: conceptual
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 2d6a1102ed83493e25e3e73a0b77d035c2e299d9
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: f7362e216213bc27efab0fd49f3ded2f15c37bdb
+ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="running-the-analysis-services-deployment-wizard"></a>執行 Analysis Services 部署精靈
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]當您使用[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]部署精靈 」 來部署[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]專案，您可以下列方式執行此精靈：  
+[!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
+
+  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]部署精靈可以執行下列的方式：  
   
 -   **以互動方式**執行時，以互動方式[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]部署精靈會產生部署指令碼，依據輸入檔中，依使用者輸入以互動方式修改。 精靈只會將使用者修改套用至部署指令碼。 精靈不會修改輸入檔。 如需關於輸入檔的詳細資訊，請參閱 [了解用來建立部署指令碼的輸入檔](../../analysis-services/multidimensional-models/deployment-script-files-input-used-to-create-deployment-script.md)。  
   
@@ -41,7 +34,7 @@ ms.lasthandoff: 01/08/2018
   
 #### <a name="to-run-the-analysis-services-deployment-wizard-interactively"></a>以互動方式執行 Analysis Services 部署精靈  
   
--   按一下 **[開始]**功能表，依序指向 **[所有程式]**、 **[Microsoft SQL Server]**和 **[Analysis Services]**，然後按一下 **[部署精靈]**。  
+-   按一下**啟動** > **Microsoft SQL Server** > **部署精靈**。  
   
      – 或 –  
   
@@ -55,17 +48,17 @@ ms.lasthandoff: 01/08/2018
  **回應檔案模式**  
  在回應檔案模式中，精靈可讓您以互動方式修改 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 專案在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中建立時原先產生的輸入檔。 精靈會儲存這些修改輸入的檔，才能產生部署指令碼。 下次執行精靈時，已修改的輸入檔會變成新的起點。  
   
- 若要在回應檔案模式中執行精靈時，使用**/a**切換。  
+ 若要在回應檔案模式中執行精靈時，使用 **/a**切換。  
   
  **無訊息模式**  
  在無訊息模式中，精靈會依據輸入檔的資訊來執行無訊息自動部署。  
   
- 若要執行精靈時以無訊息模式，使用**/s**切換。 當您在無訊息模式中執行精靈時，訊息會輸出到主控台，或是所提供的記錄檔。  
+ 若要執行精靈時以無訊息模式，使用 **/s**切換。 當您在無訊息模式中執行精靈時，訊息會輸出到主控台，或是所提供的記錄檔。  
   
  **輸出模式**  
  在輸出模式中，精靈會產生部署指令碼供稍後執行，依據輸入檔。  
   
- 若要在輸出模式下執行精靈時，使用**/o**切換，並提供輸出檔名稱。  
+ 若要在輸出模式下執行精靈時，使用 **/o**切換，並提供輸出檔名稱。  
   
  如需關於這些命令列參數的詳細資訊，請參閱 [使用部署公用程式的部署模型方案](../../analysis-services/multidimensional-models/deploy-model-solutions-with-the-deployment-utility.md)。  
   
@@ -73,12 +66,12 @@ ms.lasthandoff: 01/08/2018
   
 #### <a name="to-run-the-analysis-services-deployment-wizard-at-the-command-prompt"></a>在命令提示字元下執行 Analysis Services 部署精靈  
   
-1.  開啟命令提示字元，並巡覽至 C:\Program Files (x86)\Microsoft SQL Server\120\Tools\Binn\ManagementStudio  
+1.  開啟命令提示字元並瀏覽至 C:\Program Files (x86) \Microsoft SQL Server\140\Tools\Binn\ManagementStudio  
   
 2.  輸入 **Microsoft.AnalysisServices.Deployment.exe** ，後面接著您要用於執行精靈之模式的對應參數。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [了解 Analysis Services 部署指令碼](../../analysis-services/multidimensional-models/understanding-the-analysis-services-deployment-script.md)   
- [使用部署精靈來部署模型方案](../../analysis-services/multidimensional-models/deploy-model-solutions-using-the-deployment-wizard.md)  
+ [使用部署精靈部署模型方案](../../analysis-services/multidimensional-models/deploy-model-solutions-using-the-deployment-wizard.md)  
   
   

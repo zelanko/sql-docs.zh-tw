@@ -1,16 +1,14 @@
 ---
-title: "升級 SQL Server 容錯移轉叢集執行個體 (安裝程式) | Microsoft Docs"
-ms.custom: 
+title: 升級 SQL Server 容錯移轉叢集執行個體 (安裝程式) | Microsoft Docs
+ms.custom: ''
 ms.date: 01/22/2016
-ms.prod: sql-non-specified
-ms.prod_service: database-engine
-ms.service: 
-ms.component: failover-clusters
-ms.reviewer: 
+ms.prod: sql
+ms.prod_service: high-availability
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: dbe-high-availability
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: high-availability
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - upgrading clusters
 - clusters [SQL Server], upgrading
@@ -18,19 +16,19 @@ helpviewer_keywords:
 - clusters [SQL Server], creating
 - failover clustering [SQL Server], upgrading
 ms.assetid: ea8b7d66-e5a1-402f-9928-8f7310e84f5c
-caps.latest.revision: "63"
+caps.latest.revision: 63
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
-ms.workload: On Demand
-ms.openlocfilehash: 9e35eab411af665d7758d76fa7e9f3f1353be7ce
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+manager: craigg
+ms.openlocfilehash: 35107b894f6c6887465553f13daf585083e4730e
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="upgrade-a-sql-server-failover-cluster-instance-setup"></a>升級 SQL Server 容錯移轉叢集執行個體 (安裝程式)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 您可以使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 安裝程式 UI 或命令提示字元，將 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 容錯移轉叢集升級為 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 容錯移轉叢集。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  您可以使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 安裝程式 UI 或命令提示字元，將 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 容錯移轉叢集升級為 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 容錯移轉叢集。  
   
  若是本機安裝，您必須以管理員身分執行 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 安裝程式。 如果您是從遠端共用位置安裝 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ，則必須使用對遠端共用位置具有讀取權限的網域帳戶。  
   
@@ -46,7 +44,7 @@ ms.lasthandoff: 12/05/2017
   
 3.  如果需要 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 安裝程式支援檔案， [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 安裝程式就會安裝這些檔案。 如果系統指示您重新啟動電腦，請先重新啟動，然後再繼續進行。  
   
-4.  系統組態檢查會在電腦上執行探索作業。 若要繼續，請 [!INCLUDE[clickOK](../../../includes/clickok-md.md)]。  
+4.  系統組態檢查會在電腦上執行探索作業。 若要繼續，請[!INCLUDE[clickOK](../../../includes/clickok-md.md)]。  
   
 5.  在 [產品金鑰] 頁面上，針對符合舊產品版本的新版本輸入 PID 金鑰。 例如，若要升級 Enterprise 容錯移轉叢集，您必須提供 [!INCLUDE[ssEnterprise](../../../includes/ssenterprise-md.md)]的 PID 金鑰。 按 **[下一步]** ，繼續進行。 請注意，您針對容錯移轉叢集升級所使用的 PID 金鑰在相同 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體的所有容錯移轉叢集節點之間必須一致。  
   
@@ -102,7 +100,7 @@ ms.lasthandoff: 12/05/2017
   
 3.  使用 Windows 容錯移轉叢集管理工具，為新的子網路加入新的 IP 位址，並將 IP 位址資源相依性設定為 OR。  
   
-## <a name="next-steps"></a>後續步驟  
+## <a name="next-steps"></a>Next Steps  
  在升級為 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]之後，請完成下列工作：  
   
 -   [完成資料庫引擎升級](../../../database-engine/install-windows/complete-the-database-engine-upgrade.md)  

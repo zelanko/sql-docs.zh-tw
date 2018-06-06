@@ -1,15 +1,14 @@
 ---
-title: "從 Db-library 轉換成 ODBC 大量複製 |Microsoft 文件"
-ms.custom: 
+title: 從 Db-library 轉換成 ODBC 大量複製 |Microsoft 文件
+ms.custom: ''
 ms.date: 03/16/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
 ms.component: native-client-odbc-bulk-copy-operations
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - converting DB-Library to ODBC bulk copy
@@ -18,16 +17,16 @@ helpviewer_keywords:
 - ODBC, bulk copy operations
 - DB-Library bulk copy
 ms.assetid: 0bc15bdb-f19f-4537-ac6c-f249f42cf07f
-caps.latest.revision: 
+caps.latest.revision: 30
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: abdb8b529914a3ebb09ed0d5d933c30e0ef43f9d
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: bc8072a1bd0f0e3a097a01696c9d034e0acb33c7
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="converting-from-db-library-to-odbc-bulk-copy"></a>從 DB-Library 轉換成 ODBC 大量複製
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -56,7 +55,7 @@ ms.lasthandoff: 01/25/2018
   
      資料程式庫中*varlen*值-1 表示的可變長度資料所提供，而在 ODBC *cbData*則解譯成表示提供只有 NULL 值。 變更任何 Db-library *varlen*規格為-1 為 SQL_VARLEN_DATA 以及任何*varlen* 0 為 SQL_NULL_DATA 的規格。  
   
--   Db-library  **bcp_colfmt * * * file_collen*和 ODBC [bcp_colfmt](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-colfmt.md)*cbUserData * 有相同的問題 **bcp_bind * * * varlen*和*cbData*先前所述的參數。 變更任何 Db-library *file_collen*規格為-1 為 SQL_VARLEN_DATA 以及任何*file_collen* 0 為 SQL_NULL_DATA 的規格。  
+-   Db-library  **bcp_colfmt * * * file_collen*和 ODBC [bcp_colfmt](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-colfmt.md)* cbUserData * 有相同的問題 **bcp_bind * * * varlen*和*cbData*先前所述的參數。 變更任何 Db-library *file_collen*規格為-1 為 SQL_VARLEN_DATA 以及任何*file_collen* 0 為 SQL_NULL_DATA 的規格。  
   
 -   *IValue* ODBC 參數[bcp_control](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-control.md)函式是 void 指標。 資料程式庫中*iValue*是整數。 值轉換為 ODBC *iValue* void *。  
   
@@ -115,7 +114,7 @@ ms.lasthandoff: 01/25/2018
 -   當輸出流通時**money**字元格式、 ODBC 大量複製函數會提供四位數的精確度和沒有逗號區隔; 中的值Db-library 版本僅提供兩個位數的精確度，以及包含逗號分隔符號。  
   
 ## <a name="see-also"></a>另請參閱  
- [執行大量複製作業 &#40; ODBC &#41;](../../relational-databases/native-client-odbc-bulk-copy-operations/performing-bulk-copy-operations-odbc.md)   
+ [執行大量複製作業&#40;ODBC&#41;](../../relational-databases/native-client-odbc-bulk-copy-operations/performing-bulk-copy-operations-odbc.md)   
  [大量複製函數](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/sql-server-driver-extensions-bulk-copy-functions.md)  
   
   

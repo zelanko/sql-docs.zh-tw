@@ -1,16 +1,14 @@
 ---
-title: sys.syscolumns (Transact-SQL) | Microsoft Docs
-ms.custom: 
+title: sys.syscolumns (TRANSACT-SQL) |Microsoft 文件
+ms.custom: ''
 ms.date: 03/15/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-enginel, sql-data-warehouse, pdw
-ms.service: 
 ms.component: system-compatibility-views
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: system-objects
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.syscolumns
@@ -23,16 +21,16 @@ helpviewer_keywords:
 - syscolumns system table
 - sys.syscolumns compatibility view
 ms.assetid: 863fd87b-ff33-4ac5-9aa9-df21140681da
-caps.latest.revision: 
+caps.latest.revision: 32
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 15de1e84d8b3dcbe9d1949cb0ba745cfea671287
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: ab6fb39894c7cbe10be6d00d5fc74e782ca5650e
+ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="syssyscolumns-transact-sql"></a>sys.syscolumns (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
@@ -55,10 +53,10 @@ ms.lasthandoff: 02/09/2018
 |**colid**|**smallint**|資料行或參數識別碼。|  
 |**xoffset**|**smallint**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**bitpos**|**tinyint**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
-|**reserved**|**tinyint**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
+|**保留**|**tinyint**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**colstat**|**smallint**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**cdefault**|**int**|這個資料行之預設值的識別碼。|  
-|**domain**|**int**|這個資料行的規則或 CHECK 條件約束的識別碼。|  
+|**網域**|**int**|這個資料行的規則或 CHECK 條件約束的識別碼。|  
 |**number**|**smallint**|程序分組時的子程序號碼。<br /><br /> 0 = 非程序項目|  
 |**colorder**|**smallint**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**autoval**|**varbinary(8000)**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
@@ -73,10 +71,10 @@ ms.lasthandoff: 02/09/2018
 |**iscomputed**|**int**|這是一個旗標，指出這個資料行是否為計算資料行：<br /><br /> 0 = 非計算<br /><br /> 1 = 計算|  
 |**isoutparam**|**int**|指出程序參數是否為輸出參數：<br /><br /> 1 = True<br /><br /> 0 = False|  
 |**isnullable**|**int**|指出資料行是否允許 Null 值：<br /><br /> 1 = True<br /><br /> 0 = False|  
-|**collation**|**sysname**|資料行的定序名稱。 如果不是以字元為基礎的資料行，便是 NULL。|  
+|**定序**|**sysname**|資料行的定序名稱。 如果不是以字元為基礎的資料行，便是 NULL。|  
   
 ## <a name="see-also"></a>另請參閱  
- [將系統資料表對應至系統檢視 &#40;TRANSACT-SQL &#41;](../../relational-databases/system-tables/mapping-system-tables-to-system-views-transact-sql.md)   
+ [將系統資料表對應至系統檢視表&#40;Transact SQL&#41;](../../relational-databases/system-tables/mapping-system-tables-to-system-views-transact-sql.md)   
  [相容性檢視 &#40;Transact-SQL&#41;](~/relational-databases/system-compatibility-views/system-compatibility-views-transact-sql.md)  
   
   

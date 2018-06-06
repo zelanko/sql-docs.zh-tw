@@ -1,36 +1,23 @@
 ---
-title: "CubeDimensionPermission 資料類型 (ASSL) |Microsoft 文件"
-ms.custom: 
-ms.date: 03/06/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+title: CubeDimensionPermission 資料類型 (ASSL) |Microsoft 文件
+ms.date: 05/03/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: assl
 ms.topic: reference
-apiname: CubeDimensionPermission Data Type
-apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
-apitype: Schema
-applies_to: SQL Server 2016 Preview
-f1_keywords: CubeDimensionPermission
-helpviewer_keywords: CubeDimensionPermission data type
-ms.assetid: d9d39859-5f33-48bc-a402-0071755918de
-caps.latest.revision: "39"
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 8a8c5580e5e6f74759a5db28431de2f5636afe30
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 0623d340b1eb311ffe85520fe3cd9414834b453c
+ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="cubedimensionpermission-data-type-assl"></a>CubeDimensionPermission 資料類型 (ASSL)
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]定義代表 cube 中的特定維度上單一角色的權限的基本資料類型。  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+  定義代表在 Cube 中特定維度上單一角色之權限的基本資料類型。  
   
 ## <a name="syntax"></a>語法  
   
@@ -48,7 +35,7 @@ ms.lasthandoff: 01/08/2018
   
 ## <a name="data-type-characteristics"></a>資料類型特性  
   
-|特性|描述|  
+|特性|說明|  
 |--------------------|-----------------|  
 |基底資料類型|無|  
 |衍生資料類型|無|  
@@ -64,7 +51,7 @@ ms.lasthandoff: 01/08/2018
 ## <a name="remarks"></a>備註  
  分析管理物件 (AMO) 物件模型中的對應元素是<xref:Microsoft.AnalysisServices.CubeDimensionPermission>。  
   
-## <a name="see-also"></a>請參閱  
- [Analysis Services 指令碼語言 XML 資料類型 &#40;ASSL &#41;](../../../analysis-services/scripting/data-type/analysis-services-scripting-language-xml-data-types-assl.md)  
+## <a name="see-also"></a>另請參閱  
+ [Analysis Services 指令碼語言 XML 資料類型 & #40;ASSL & #41;](../../../analysis-services/scripting/data-type/analysis-services-scripting-language-xml-data-types-assl.md)  
   
   

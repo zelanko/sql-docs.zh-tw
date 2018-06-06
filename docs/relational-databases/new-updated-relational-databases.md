@@ -1,20 +1,22 @@
 ---
-title: "已更新 - 關聯式資料庫文件 | Microsoft Docs"
-description: "針對關聯式資料庫，顯示文件最新變更之已更新內容的程式碼片段。"
+title: 已更新 - 關聯式資料庫文件 | Microsoft Docs
+description: 針對關聯式資料庫，顯示文件最新變更之已更新內容的程式碼片段。
 manager: craigg
 author: MightyPen
 ms.author: genemi
 ms.topic: article
 ms.custom: UpdArt.exe
 ms.suite: sql
+ms.technology: release-landing
+ms.prod: sql
 ms.prod_service: sql-non-specified
 ms.component: relational-databases
-ms.date: 02/03/2018
-ms.openlocfilehash: 38f9ee55137c54adddb07fbe9f3b74dd43d51a3a
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.date: 04/28/2018
+ms.openlocfilehash: a885befe2411a76dc8c68bf2a7b543a838a52877
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="new-and-recently-updated-relational-databases-docs"></a>新的與最近更新的文章： 關聯式資料庫文件
 
@@ -28,7 +30,7 @@ Microsoft 幾乎每天都會在其 [Docs.Microsoft.com](http://docs.microsoft.co
 
 
 
-- 更新日期範圍：&nbsp;**2017 年 12 月 3 日**&nbsp;-至-&nbsp;**2018 年 2 月 3 日**
+- *更新日期範圍：* &nbsp; **2018-02-03** &nbsp; 至 &nbsp; **2018-04-28**
 - *主旨區域：* &nbsp; **關聯式資料庫**。
 
 
@@ -41,8 +43,13 @@ Microsoft 幾乎每天都會在其 [Docs.Microsoft.com](http://docs.microsoft.co
 下列連結會跳至最近新增的新文章。
 
 
-1. [將 JSON 文件儲存在 SQL Server 或 SQL Database](json/store-json-documents-in-sql-tables.md)
-2. [SQL 漏洞評量](security/sql-vulnerability-assessment.md)
+1. [聯結 (SQL Server)](performance/joins.md)
+2. [子查詢 (SQL Server)](performance/subqueries.md)
+3. [設定 Always On 可用性群組中的複寫散發資料庫](replication/configure-distribution-availability-group.md)
+4. [SQL 資料探索與分類](security/sql-data-discovery-and-classification.md)
+5. [交易鎖定與資料列版本設定指南](sql-server-transaction-locking-and-row-versioning-guide.md)
+6. [sys.dm_os_job_object (Azure SQL Database)](system-dynamic-management-views/sys-dm-os-job-object-transact-sql.md)
+7. [Filestream 和 FileTable 系統預存程序 (Transact-SQL)](system-stored-procedures/filestream-and-filetable-system-stored-procedures.md)
 
 
 
@@ -68,15 +75,16 @@ Microsoft 幾乎每天都會在其 [Docs.Microsoft.com](http://docs.microsoft.co
 
 此壓縮清單提供＜摘要＞一節中所有更新文章的連結。
 
-1. [資料庫檔案初始化](#TitleNum_1)
-2. [tempdb 資料庫](#TitleNum_2)
-3. [SQL Server 中的 JSON 資料](#TitleNum_3)
-4. [第 1 課：連接到資料庫引擎](#TitleNum_4)
-5. [管理交易記錄檔的大小](#TitleNum_5)
-6. [bcp_bind](#TitleNum_6)
-7. [SQL Server 索引設計指南](#TitleNum_7)
-8. [sp_execute_external_script (Transact-SQL)](#TitleNum_8)
-9. [建立主索引鍵](#TitleNum_9)
+1. [使用格式檔案略過資料表資料行 (SQL Server)](#TitleNum_1)
+2. [SQL Server 中的 JSON 資料](#TitleNum_2)
+3. [查詢處理架構指南](#TitleNum_3)
+4. [教學課程：準備 SQL Server 複寫 - 發行者、散發者、訂閱者](#TitleNum_4)
+5. [教學課程：設定兩個完全連線的伺服器之間的複寫 (異動)](#TitleNum_5)
+6. [教學課程：設定伺服器和行動用戶端之間的複寫 (合併)](#TitleNum_6)
+7. [使用全文檢索搜尋查詢](#TitleNum_7)
+8. [Azure SQL Database 和資料倉儲的透明資料加密與攜帶您自己的金鑰支援](#TitleNum_8)
+9. [PowerShell 與 CLI：使用 Azure Key Vault 中您自己的金鑰來啟用透明資料加密](#TitleNum_9)
+10. [關於異動資料擷取 (SQL Server)](#TitleNum_10)
 
 
 
@@ -87,32 +95,43 @@ Microsoft 幾乎每天都會在其 [Docs.Microsoft.com](http://docs.microsoft.co
 
 <a name="TitleNum_1"/>
 
-### <a name="1-nbsp-database-file-initializationdatabasesdatabase-instant-file-initializationmd"></a>1.&nbsp; [資料庫檔案初始化](databases/database-instant-file-initialization.md)
+### <a name="1-nbsp-use-a-format-file-to-skip-a-table-column-sql-serverimport-exportuse-a-format-file-to-skip-a-table-column-sql-servermd"></a>1.&nbsp; [使用格式檔案略過資料表資料行 (SQL Server)](import-export/use-a-format-file-to-skip-a-table-column-sql-server.md)
 
-*更新日期：2018 年 1 月 23 日* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  ([下一個](#TitleNum_2))
+*更新日期：2018-04-13* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  ([下一個](#TitleNum_2))
 
-<!-- Source markdown line 81.  ms.author= "sstein".  -->
+<!-- Source markdown line 221.  ms.author= "douglasl".  -->
 
 &nbsp;
 
 
-<!-- git diff --ignore-all-space --unified=0 c5f2aa53a8b43d4c43e0602cf945cb7c7028a27d 04c261c6588af1f53cda2fce3e9a86167c50b686  (PR=4702  ,  Filename=database-instant-file-initialization.md  ,  Dirpath=docs\relational-databases\databases\  ,  MergeCommitSha40=3206a31870f8febab7d1718fa59fe0590d4d45db) -->
+<!-- git diff --ignore-all-space --unified=0 167916d79c5de1e7f13990cb7acc41ceb541b9a7 cb92eb201292294e3397879c98f353fba45f1c1c  (PR=0  ,  Filename=use-a-format-file-to-skip-a-table-column-sql-server.md  ,  Dirpath=docs\relational-databases\import-export\  ,  MergeCommitSha40=f70f24bff1677b33c661abd13726f491ce32b305) -->
 
 
+
+**使用 OPENROWSET(BULK...)**
+
+
+若要透過使用 `OPENROWSET(BULK...)` 來使用 XML 格式檔案跳過資料表資料行，您必須在選取清單和目標資料表中提供明確的資料行清單，如下所示：
 
 ```
-Database Instant File Initialization: disabled. For security and performance considerations see the topic 'Database Instant File Initialization' in SQL Server Books Online. This is an informational message only. No user action is required.
+    INSERT ...<column_list> SELECT <column_list> FROM OPENROWSET(BULK...)
 ```
 
-**適用於：**SQL Server (從 SQL Server 2012 SP4、SQL Server 2014 SP2 和 SQL Server 2016 開始，到 SQL Server 2017)
+下列範例會使用 `OPENROWSET` 大量資料列集提供者和 `myTestSkipCol2.xml` 格式檔案。 此範例會將 `myTestSkipCol2.dat` 資料檔案大量匯入 `myTestSkipCol` 資料表。 此陳述式會依需要，在選取清單還有目標資料表中包含明確的資料行清單。
 
-**安全性考量**
+請在 SSMS 中執行下列程式碼。 更新您電腦上範例檔案位置的檔案系統路徑。
 
-在使用檔案立即初始化 (IFI) 時，由於刪除的磁碟內容只有在新資料寫入檔案時才會被覆寫；因此，直到其他資料寫入資料檔特定區域之前，未經授權的主體可能得以存取刪除的內容。 當資料庫檔案附加到 SQL Server 的執行個體時，檔案上的判別存取控制清單 (DACL) 可降低上述資訊洩漏風險。 此 DACL 只允許 SQL Server 服務帳戶和本機系統管理員存取檔案。 但是，當檔案卸離後，不具備 SE\_MANAGE\_VOLUME_NAME 的使用者或服務便能存取該檔案。 在備份資料庫時，也會有類似的需要考量之處：如果備份檔案未使用適當的 DACL 保護，未經授權的使用者或服務便可存取刪除的內容。
-
-另一個考量是當檔案使用 IFI 增長時，SQL Server 系統管理員可能會存取原始頁面內容，並查看先前刪除的內容。
-
-如果資料庫檔案裝載在存放區域網路上，則存放區域網路也可能會一律以預先初始化方式顯示新頁面，因此讓作業系統重新初始化頁面可能是不必要的額外負荷。
+```
+USE WideWorldImporters;
+GO
+INSERT INTO myTestSkipCol
+  (Col1,Col3)
+    SELECT Col1,Col3
+      FROM  OPENROWSET(BULK  'C:\myTestSkipCol2.Dat',
+      FORMATFILE='C:\myTestSkipCol2.Xml'
+       ) as t1 ;
+GO
+```
 
 
 
@@ -124,46 +143,53 @@ Database Instant File Initialization: disabled. For security and performance con
 
 <a name="TitleNum_2"/>
 
-### <a name="2-nbsp-tempdb-databasedatabasestempdb-databasemd"></a>2. &nbsp; [tempdb 資料庫](databases/tempdb-database.md)
+### <a name="2-nbsp-json-data-in-sql-serverjsonjson-data-sql-servermd"></a>2.&nbsp; [SQL Server 中的 JSON 資料](json/json-data-sql-server.md)
 
-*更新日期：2018 年 1 月 17 日* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  ([上一個](#TitleNum_1) | [下一個](#TitleNum_3))
+*更新日期：2018-04-13* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  ([上一個](#TitleNum_1) | [下一個](#TitleNum_3))
 
-<!-- Source markdown line 100.  ms.author= "sstein".  -->
+<!-- Source markdown line 145.  ms.author= "jovanpop".  -->
 
 &nbsp;
 
 
-<!-- git diff --ignore-all-space --unified=0 337555ea28f4c3fdd6b78f1bfb4d62607a6bf92d 3257c92d6e2a88968fc44e5f6262c02cd0624635  (PR=0  ,  Filename=tempdb-database.md  ,  Dirpath=docs\relational-databases\databases\  ,  MergeCommitSha40=45e6082acc29ba306525e7c08d2c22cc2b86eec3) -->
+<!-- git diff --ignore-all-space --unified=0 19e276637a463b412f2c29a84f9fb7d0b0f5fcc5 e2f2e8b4732779b3f24561cc0c4da3a958f4edbb  (PR=0  ,  Filename=json-data-sql-server.md  ,  Dirpath=docs\relational-databases\json\  ,  MergeCommitSha40=f70f24bff1677b33c661abd13726f491ce32b305) -->
 
 
 
- 如需這些資料庫選項的描述，請參閱 [ALTER DATABASE SET 選項 (Transact-SQL)](databases/../../t-sql/statements/alter-database-transact-sql-set-options.md)。
+JSON 文件可能會有不能直接對應到標準關聯式資料行的子項目和階層式資料。 在此情況下，您可以藉由聯結父實體和子陣列來壓平合併 JSON 階層。
 
-**SQL Database 中的 tempdb 資料庫**
+在下列範例中，陣列中的第二個物件具有代表人員技能的子陣列。 每個子物件都可以使用其他 `OPENJSON` 函式呼叫加以剖析：
 
+```
+DECLARE @json NVARCHAR(MAX)
+SET @json =
+N'[
+       { "id" : 2,"info": { "name": "John", "surname": "Smith" }, "age": 25 },
+       { "id" : 5,"info": { "name": "Jane", "surname": "Smith", "skills": ["SQL", "C#", "Azure"] }, "dob": "2005-11-04T12:00:00" }
+ ]'
 
-|SLO|Tempdb 資料檔案大小上限 (MB)|Tempdb資料檔案數|Tempdb 資料檔案大小上限 (MB)|
-|---|---:|---:|---:|
-|[基本]|14,225|@shouldalert|14,225|
-|S0|14,225|@shouldalert|14,225|
-|S1|14,225|@shouldalert|14,225|
-|S2|14,225| @shouldalert|14,225|
-|S3|32,768|@shouldalert|32,768|
-|S4|32,768|2|65,536|
-|S6|32,768|3|98,304|
-|S7|32,768|6|196,608|
-|S9|32,768|12|393,216|
-|S12|32,768|12|393,216|
-|P1|32,768|12|393,216|
-|P2|32,768|12|393,216|
-|P4|32,768|12|393,216|
-|P6|32,768|12|393,216|
-|P11|32,768|12|393,216|
-|P15|32,768|12|393,216|
-|Premium 彈性集區 (所有 DTU 設定)|14,225|12|170,700|
-|標準彈性集區 (所有 DTU 設定)|14,225|12|170,700|
-|基本彈性集區 (所有 DTU 設定)|14,225|12|170,700|
-||||
+SELECT *
+FROM OPENJSON(@json)
+  WITH (id int 'strict $.id',
+        firstName nvarchar(50) '$.info.name', lastName nvarchar(50) '$.info.surname',
+        age int, dateOfBirth datetime2 '$.dob',
+    skills nvarchar(max) '$.skills' as json)
+    outer apply openjson( a.skills )
+                     with ( skill nvarchar(8) '$' ) as b
+```
+第一個 `OPENJSON` 傳回的 **skills** 陣列作為原始的 JSON 文字片段，並使用 `APPLY` 運算子傳遞給另一個 `OPENJSON` 函式。 第二個 `OPENJSON` 函式會剖析 JSON 陣列並傳回字串值作為單一資料行資料列集，與第一個 `OPENJSON` 的結果聯結。
+下表顯示此查詢的結果：
+
+**結果**
+
+|id|firstName|lastName|age|dateOfBirth|skill|
+|--------|---------------|--------------|---------|-----------------|----------|
+|2|John|Smith|25|||
+|5|Jane|Smith||2005-11-04T12:00:00|SQL|
+|5|Jane|Smith||2005-11-04T12:00:00|C#|
+|5|Jane|Smith||2005-11-04T12:00:00|Azure|
+
+`OUTER APPLY OPENJSON` 會聯結第一個層級的實體和子陣列，並傳回壓平合併的結果集。 因為「聯結」的緣故，每個技能都會重複第二個資料列。
 
 
 
@@ -176,40 +202,54 @@ Database Instant File Initialization: disabled. For security and performance con
 
 <a name="TitleNum_3"/>
 
-### <a name="3-nbsp-json-data-in-sql-serverjsonjson-data-sql-servermd"></a>3.&nbsp; [SQL Server 中的 JSON 資料](json/json-data-sql-server.md)
+### <a name="3-nbsp-query-processing-architecture-guidequery-processing-architecture-guidemd"></a>3.&nbsp; [查詢處理架構指南](query-processing-architecture-guide.md)
 
-更新日期：2018 年 2 月 1 日 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  ([上一個](#TitleNum_2) | [下一個](#TitleNum_4))
+*更新日期：2018-04-13* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  ([上一個](#TitleNum_2) | [下一個](#TitleNum_4))
 
-<!-- Source markdown line 233.  ms.author= "douglasl".  -->
+<!-- Source markdown line 34.  ms.author= "jroth".  -->
 
 &nbsp;
 
 
-<!-- git diff --ignore-all-space --unified=0 62dd9c68d8cb72d6bf51b941a0731224514f0a7f 19e276637a463b412f2c29a84f9fb7d0b0f5fcc5  (PR=4783  ,  Filename=json-data-sql-server.md  ,  Dirpath=docs\relational-databases\json\  ,  MergeCommitSha40=73f18ae24a9a48234bf997ee9a2ef441bc4918b9) -->
+<!-- git diff --ignore-all-space --unified=0 96d91b39acdb2f32aaff323e374e92d6f229d241 2c1d2f8585632ada174388399782dc3ed2721dba  (PR=0  ,  Filename=query-processing-architecture-guide.md  ,  Dirpath=docs\relational-databases\  ,  MergeCommitSha40=f70f24bff1677b33c661abd13726f491ce32b305) -->
 
 
 
--   [將 GeoJSON 資料載入 SQL Server 2016](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/01/05/loading-geojson-data-into-sql-server/)
+**邏輯運算子優先順序**
 
-**使用 SQL 查詢分析 JSON 資料**
 
-如果您基於報表用途而必須篩選或彙總 JSON 資料，可以使用 **OPENJSON**，將 JSON 轉換為關聯式格式。 然後使用標準 Transact-SQL 和內建函式來準備報表。
+當陳述式中使用一個以上的邏輯運算子，`NOT` 會第一個計算，接下來是 `AND`，最後才是 `OR`。 先處理算術以及位元運算子，接著才處理邏輯運算子。 如需詳細資訊，請參閱[運算子優先順序]。
+
+在下列範例中，色彩條件與產品型號 21 相關，但不與產品型號 20 相關，原因是 `AND` 的優先順序高於 `OR`。
 
 ```
-SELECT Tab.Id, SalesOrderJsonData.Customer, SalesOrderJsonData.Date
-FROM   SalesOrderRecord AS Tab
-          CROSS APPLY
-     OPENJSON (Tab.json, N'$.Orders.OrdersArray')
-           WITH (
-              Number   varchar(200) N'$.Order.Number',
-              Date     datetime     N'$.Order.Date',
-              Customer varchar(200) N'$.AccountNumber',
-              Quantity int          N'$.Item.Quantity'
-           )
-  AS SalesOrderJsonData
-WHERE JSON_VALUE(Tab.json, '$.Status') = N'Closed'
-ORDER BY JSON_VALUE(Tab.json, '$.Group'), Tab.DateModified
+SELECT ProductID, ProductModelID
+FROM Production.Product
+WHERE ProductModelID = 20 OR ProductModelID = 21
+  AND Color = 'Red';
+GO
 ```
+
+您可以加上括號，強迫陳述式先執行 `OR` 來變更查詢的意義。 下列查詢只會尋找型號 20 和 21 下的紅色產品。
+
+```
+SELECT ProductID, ProductModelID
+FROM Production.Product
+WHERE (ProductModelID = 20 OR ProductModelID = 21)
+  AND Color = 'Red';
+GO
+```
+
+即使非必要，也建議您使用括號，以改善查詢的可讀性，及減少因為運算子優先順序而不知不覺失誤的機會。 使用括號對效能不會有太大的負面影響。 下面的範例與原始範例雖然在句法上並無不同，但其可讀性更高。
+
+```
+SELECT ProductID, ProductModelID
+FROM Production.Product
+WHERE ProductModelID = 20 OR (ProductModelID = 21
+  AND Color = 'Red');
+GO
+```
+
 
 
 
@@ -221,35 +261,37 @@ ORDER BY JSON_VALUE(Tab.json, '$.Group'), Tab.DateModified
 
 <a name="TitleNum_4"/>
 
-### <a name="4-nbsp-lesson-1-connecting-to-the-database-enginelesson-1-connecting-to-the-database-enginemd"></a>4.&nbsp; [第 1 課：連線到資料庫引擎](lesson-1-connecting-to-the-database-engine.md)
+### <a name="4-nbsp-tutorial-prepare-sql-server-for-replication---publisher-distributor-subscriberreplicationtutorial-preparing-the-server-for-replicationmd"></a>4.&nbsp; [教學課程：準備 SQL Server 複寫 - 發行者、散發者、訂閱者](replication/tutorial-preparing-the-server-for-replication.md)
 
-更新日期：2017 年 12 月 13 日 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  ([上一個](#TitleNum_3) | [下一個](#TitleNum_5))
+*更新日期：2018-04-13* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  ([上一個](#TitleNum_3) | [下一個](#TitleNum_5))
 
-<!-- Source markdown line 79.  ms.author= "rickbyh".  -->
+<!-- Source markdown line 56.  ms.author= "mathoma".  -->
 
 &nbsp;
 
 
-<!-- git diff --ignore-all-space --unified=0 3c070935895450fd2ea054e2be9e1c48f7dc2b6c 0c386e3d47fb7f8f1e63b9301f0cafec2bc88ab0  (PR=4282  ,  Filename=lesson-1-connecting-to-the-database-engine.md  ,  Dirpath=docs\relational-databases\  ,  MergeCommitSha40=6e016a4ffd28b09456008f40ff88aef3d911c7ba) -->
+<!-- git diff --ignore-all-space --unified=0 6e5caedacff193ce79bdd98708ae1b9dc91f0a8f 9f7af4d3f8b1cffd048db2a5b29fc9e6013f5ed2  (PR=0  ,  Filename=tutorial-preparing-the-server-for-replication.md  ,  Dirpath=docs\relational-databases\replication\  ,  MergeCommitSha40=f70f24bff1677b33c661abd13726f491ce32b305) -->
 
 
 
-2.  選取 [Database Engine]。
+- 安裝 [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms)。
+- 安裝 [SQL Server 2017 Developer Edition](https://www.microsoft.com/sql-server/sql-server-downloads)。
+- 下載 [AdventureWorks 範例資料庫](https://github.com/Microsoft/sql-server-samples/releases)。 如需在 SSMS 中還原資料庫的指示，請參閱[還原資料庫](https://docs.microsoft.com/sql/relational-databases/backup-restore/restore-a-database-backup-using-ssms)。
 
-    ![object-explorer](../relational-databases/media/object-explorer.png)
+>[!NOTE]
+> - 不支援版本相差兩個以上的 SQL Server 複寫。 如需詳細資訊，請參閱 [Supported SQL Versions in Repl Topology](https://blogs.msdn.microsoft.com/repltalk/2016/08/12/suppported-sql-server-versions-in-replication-topology/) (複寫技術支援的 SQL 版本)。
+> - 在 *{Included-Content-Goes-Here}* 中，您必須使用 **sysadmin** 固定伺服器角色成員的登入，連線到發行者和訂閱者。 如需系統管理員角色的詳細資訊，請參閱[伺服器層級角色](https://docs.microsoft.com/sql/relational-databases/security/authentication-access/server-level-roles)。
 
-3.  在 [伺服器名稱] 方塊中，鍵入資料庫引擎執行個體的名稱。 若為 SQL Server 的預設執行個體，則伺服器名稱為電腦名稱。 若為 SQL Server 的具名執行個體，則伺服器名稱為 <電腦名稱>****\\<執行個體名稱>****，例如 **ACCTG_SRVR\SQLEXPRESS**。 下列螢幕擷取畫面顯示連線至名為 'PracticeComputer' 之電腦上的預設 (未命名) SQL Server 執行個體。 登入 Windows 的使用者是來自 Contoso 網域的 Mary。 使用 Windows 驗證時，即無法變更使用者名稱。
 
-    ![connect-to-server](../relational-databases/media/connect-to-server.png)
+**完成本教學課程的估計時間：30 分鐘**
 
-4.  按一下 **[連接]**。
+**建立用於複寫的 Windows 帳戶**
 
-> [!NOTE]
-> 本教學課程假設您不熟悉 SQL Server 而且沒有特殊連線問題。 這應該適用於大部分的人，並且保持本教學課程的簡單性。 如需詳細疑難排解步驟，請參閱 [針對 SQL Server Database Engine 的連接進行疑難排解](../database-engine/configure-windows/troubleshoot-connecting-to-the-sql-server-database-engine.md)。
+在這一節中，您要建立 Windows 帳戶，以執行複寫代理程式。 您將在本機伺服器上，另外為下列代理程式建立 Windows 帳戶：
 
-**<a name="additional"></a>授權其他連線**
-
-以系統管理員的身分連線至 SQL Server 後，您的首要工作之一就是授權其他使用者連線。 您可以建立登入，並授權該登入以使用者身分存取資料庫，來達成此目的。 而登入可以是使用 Windows 認證的 Windows 驗證登入，或是 SQL Server 驗證登入，這種登入會將驗證資訊儲存在 SQL Server 中，而且與 Windows 認證無關。 可能的話，請盡量使用 Windows 驗證。
+|Agent|位置|帳戶名稱|
+|---------|------------|----------------|
+|快照集代理程式|發行者|<*電腦名稱*>\repl_snapshot|
 
 
 
@@ -261,28 +303,41 @@ ORDER BY JSON_VALUE(Tab.json, '$.Group'), Tab.DateModified
 
 <a name="TitleNum_5"/>
 
-### <a name="5-nbsp-manage-the-size-of-the-transaction-log-filelogsmanage-the-size-of-the-transaction-log-filemd"></a>5.&nbsp; [管理交易記錄檔的大小](logs/manage-the-size-of-the-transaction-log-file.md)
+### <a name="5-nbsp-tutorial-configure-replication-between-two-fully-connected-servers-transactionalreplicationtutorial-replicating-data-between-continuously-connected-serversmd"></a>5.&nbsp; [教學課程：設定兩個完全連線的伺服器之間的複寫 (交易式)](replication/tutorial-replicating-data-between-continuously-connected-servers.md)
 
-更新日期：2018 年 1 月 17 日 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  ([上一個](#TitleNum_4) | [下一個](#TitleNum_6))
+*更新日期：2018-04-13* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  ([上一個](#TitleNum_4) | [下一個](#TitleNum_6))
 
-<!-- Source markdown line 105.  ms.author= "jhubbard".  -->
+<!-- Source markdown line 162.  ms.author= "mathoma".  -->
 
 &nbsp;
 
 
-<!-- git diff --ignore-all-space --unified=0 5847b31cf8f6003a380f0c8aaa289efdc55be678 84e45320d81db218cde17fbf8b9668a9ac3805a7  (PR=0  ,  Filename=manage-the-size-of-the-transaction-log-file.md  ,  Dirpath=docs\relational-databases\logs\  ,  MergeCommitSha40=45e6082acc29ba306525e7c08d2c22cc2b86eec3) -->
+<!-- git diff --ignore-all-space --unified=0 0d74f984d0ffc01cce0376837e6d94df3c5654d7 4ecf4d724286130927dd43687d6845059af6f9b7  (PR=0  ,  Filename=tutorial-replicating-data-between-continuously-connected-servers.md  ,  Dirpath=docs\relational-databases\replication\  ,  MergeCommitSha40=f70f24bff1677b33c661abd13726f491ce32b305) -->
 
 
 
--   小型的成長增量可能會產生太多小型 [VLF](logs/../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch)，且可能會降低效能。 若要判斷指定執行個體中所有資料庫的目前交易記錄大小的最佳 VLF 分佈，以及達到所需大小的必要成長增量，請參閱此[指令碼](http://github.com/Microsoft/tigertoolbox/tree/master/Fixing-VLFs)。
+**建立交易式發行集的訂閱**
 
--   大型的成長增量可能會產生太少且大型的 [VLF](logs/../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch)，且亦可能會降低效能。 若要判斷指定執行個體中所有資料庫的目前交易記錄大小的最佳 VLF 分佈，以及達到所需大小的必要成長增量，請參閱此[指令碼](http://github.com/Microsoft/tigertoolbox/tree/master/Fixing-VLFs)。
+在本節中，您要將訂閱者新增至之前建立的發行集。 本教學課程使用遠端訂閱者 (NODE2\SQL2016)，但也可以在本機將訂閱新增至發行者。
 
--   如果無法成長得夠快速以滿足查詢的需求，即使已啟用 autogrow，您還是可能收到訊息，指出交易記錄檔已滿。 如需變更成長增量的詳細資訊，請參閱 [ALTER DATABASE &#40;Transact-SQL&#41; 檔案及檔案群組選項](logs/../../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md)
+**建立訂閱**
 
--   在資料庫中具有多個記錄檔將無法以任何方式強化效能，因為交易記錄檔不像相同檔案群組中的資料檔案那樣使用[比例填滿](logs/../../relational-databases/pages-and-extents-architecture-guide.md#ProportionalFill)。
 
--   可以將記錄檔設定為自動壓縮。 不過並**不建議**如此，且 **auto_shrink** 資料庫屬性預設會設定為 FALSE。 如果 **auto_shrink** 設定為 TRUE，只有當超過 25% 的空間未使用時，自動壓縮才會減少檔案的大小。
+1.  連線到 *{Included-Content-Goes-Here}* 中的發行者，展開伺服器節點，然後展開 [複寫] 資料夾。
+
+2.  在 [本機發行集] 資料夾中，以滑鼠右鍵按一下 **AdvWorksProductTrans** 發行集，然後選取 [新增訂閱]。  [新增訂閱精靈]隨即啟動：
+
+    [新增訂閱]
+
+3.  在 [發行集] 頁面上，選取 [AdvWorksProductTrans]，然後選取 [下一步]：
+
+    選取 Tran 發行者
+
+4.  在 [散發代理程式位置] 頁面上，選取 [在散發者端執行所有代理程式]，然後選取 [下一步]。  如需提取和推送訂閱的詳細資訊，請參閱[訂閱發行集](https://docs.microsoft.com/sql/relational-databases/replication/subscribe-to-publications)：
+
+    在 Dist 執行代理程式
+
+5.  在 [訂閱者] 頁面上，如未顯示訂閱者執行個體的名稱，請選取 [新增訂閱者]，然後從下拉式清單選取 [新增 SQL Server 訂閱者]。 這會啟動 [連線到伺服器] 對話方塊。 輸入訂閱者執行個體的名稱，然後選取 [連線]。
 
 
 
@@ -294,62 +349,39 @@ ORDER BY JSON_VALUE(Tab.json, '$.Group'), Tab.DateModified
 
 <a name="TitleNum_6"/>
 
-### <a name="6-nbsp-bcpbindnative-client-odbc-extensions-bulk-copy-functionsbcp-bindmd"></a>6. &nbsp; [bcp_bind](native-client-odbc-extensions-bulk-copy-functions/bcp-bind.md)
+### <a name="6-nbsp-tutorial-configure-replication-between-a-server-and-mobile-clients-mergereplicationtutorial-replicating-data-with-mobile-clientsmd"></a>6.&nbsp; [教學課程：設定伺服器和行動用戶端之間的複寫 (合併)](replication/tutorial-replicating-data-with-mobile-clients.md)
 
-更新日期：2018 年 1 月 30 日 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  ([上一個](#TitleNum_5) | [下一個](#TitleNum_7))
+*更新日期：2018-04-13* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  ([上一個](#TitleNum_5) | [下一個](#TitleNum_7))
 
-<!-- Source markdown line 127.  ms.author= "genemi".  -->
+<!-- Source markdown line 93.  ms.author= "mathoma".  -->
 
 &nbsp;
 
 
-<!-- git diff --ignore-all-space --unified=0 d50791cef948ce8b3066438e317ab4d34d535258 e6f70559e7237cfc86dfc5746d218c08bec52af6  (PR=4762  ,  Filename=bcp-bind.md  ,  Dirpath=docs\relational-databases\native-client-odbc-extensions-bulk-copy-functions\  ,  MergeCommitSha40=60006e90d03fdb75b282bbc0dad3d40571bacacc) -->
+<!-- git diff --ignore-all-space --unified=0 0eed78dfe83c88358c030539a2b25d11ef5ec2d3 79b2a3f32c940fede94b11ad2a3ef8a00b911a39  (PR=0  ,  Filename=tutorial-replicating-data-with-mobile-clients.md  ,  Dirpath=docs\relational-databases\replication\  ,  MergeCommitSha40=f70f24bff1677b33c661abd13726f491ce32b305) -->
 
 
 
- 下表列出有效的列舉資料類型和對應的 ODBC C 資料類型。
+Employee 資料表包含的資料行 (OrganizationNode) 具有 hierarchyid 資料類型，僅受 SQL 2017 中的複寫支援。 如果您使用的組建低於 SQL 2017，您會在畫面底部看到訊息，通知您在雙向複寫中使用此資料行可能會遺失資料。 為達到本教學課程的目的，此訊息可予以忽略。 不過，除非您使用的是受支援的組建，否則不應該在生產環境中複寫此資料類型。 如需複寫 hierarchyid 資料類型的詳細資訊，請參閱[在複寫中使用 Hierarchyid 資料行](https://docs.microsoft.com/sql/t-sql/data-types/hierarchyid-data-type-method-reference#using-hierarchyid-columns-in-replicated-tables)
 
-|eDataType|C 類型|
-|-----------------------|------------|
-|SQLTEXT|char *|
-|SQLNTEXT|wchar_t *|
-|SQLCHARACTER|char *|
-|SQLBIGCHAR|char *|
-|SQLVARCHAR|char *|
-|SQLBIGVARCHAR|char *|
-|SQLNCHAR|wchar_t *|
-|SQLNVARCHAR|wchar_t *|
-|SQLBINARY|unsigned char *|
-|SQLBIGBINARY|unsigned char *|
-|SQLVARBINARY|unsigned char *|
-|SQLBIGVARBINARY|unsigned char *|
-|SQLBIT|char|
-|SQLBITN|char|
-|SQLINT1|char|
-|SQLINT2|short int|
-|SQLINT4|ssNoversion|
-|SQLINT8|_int64|
-|SQLINTN|*cbIndicator*<br /> 1: SQLINT1<br /> 2: SQLINT2<br /> 4: SQLINT4<br /> 8: SQLINT8|
-|SQLFLT4|FLOAT|
-|SQLFLT8|FLOAT|
-|SQLFLTN|*cbIndicator*<br /> 4: SQLFLT4<br /> 8: SQLFLT8|
-|SQLDECIMALN|SQL_NUMERIC_STRUCT|
-|SQLNUMERICN|SQL_NUMERIC_STRUCT|
-|SQLMONEY|DBMONEY|
-|SQLMONEY4|DBMONEY4|
-|SQLMONEYN|*cbIndicator*<br /> 4: SQLMONEY4<br /> 8: SQLMONEY|
-|SQLTIMEN|SQL_SS_TIME2_STRUCT|
-|SQLDATEN|SQL_DATE_STRUCT|
-|SQLDATETIM4|DBDATETIM4|
-|SQLDATETIME|DBDATETIME|
-|SQLDATETIMN|*cbIndicator*<br /> 4: SQLDATETIM4<br /> 8: SQLDATETIME|
-|SQLDATETIME2N|SQL_TIMESTAMP_STRUCT|
-|SQLDATETIMEOFFSETN|SQL_SS_TIMESTAMPOFFSET_STRUCT|
-|SQLIMAGE|unsigned char *|
-|SQLUDT|unsigned char *|
-|SQLUNIQUEID|SQLGUID|
-|SQLVARIANT|*除了下列以外的任何資料類型：*<br />-   text<br />-   ntext<br />-   image<br />-   varchar(max)<br />-   varbinary(max)<br />-   nvarchar(max)<br />-   xml<br />-   timestamp|
-|SQLXML|*支援的 C 資料類型：*<br />-   char*<br />-   wchar_t *<br />-   unsigned char *|
+
+-  在 [篩選資料表的資料列] 頁面上，選取 [新增]，然後選取 [新增篩選]。
+
+-  在 [新增篩選] 對話方塊中，選取 [選取要篩選的資料表] 中的 [Employee (HumanResources)]。 選取 [LoginID] 資料行，再選取向右鍵將資料行新增至篩選查詢的 WHERE 子句中，並依照下列方式修改 WHERE 子句：
+
+    ```
+    WHERE [LoginID] = HOST_NAME()
+    ```
+
+    A. 選取 [這個資料表中的一個資料列只會提供給一個訂閱]，然後選取 [確定]：
+
+    新增篩選
+
+
+
+- 在 [篩選資料表的資料列] 頁面上，依序選取 [Employee (Human Resources)]、[新增] 和 [Add Join to Extend the Selected Filter] \(新增聯結以展開選取的篩選)。
+
+    A. 在 [新增聯結] 對話方塊中，選取 [聯結的資料表] 下的 [Sales.SalesOrderHeader]。 選取 [手動寫入聯結陳述式] 並完成聯結陳述式，如下所示：
 
 
 
@@ -361,36 +393,36 @@ ORDER BY JSON_VALUE(Tab.json, '$.Group'), Tab.DateModified
 
 <a name="TitleNum_7"/>
 
-### <a name="7-nbsp-sql-server-index-design-guidesql-server-index-design-guidemd"></a>7.&nbsp; [SQL Server 索引設計指南](sql-server-index-design-guide.md)
+### <a name="7-nbsp-query-with-full-text-searchsearchquery-with-full-text-searchmd"></a>7.&nbsp; [使用全文檢索搜尋進行查詢](search/query-with-full-text-search.md)
 
-更新日期：2018 年 1 月 2 日 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  ([上一個](#TitleNum_6) | [下一個](#TitleNum_8))
+*更新日期：2018-04-13* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  ([上一個](#TitleNum_6) | [下一個](#TitleNum_8))
 
-<!-- Source markdown line 700.  ms.author= "rickbyh".  -->
+<!-- Source markdown line 247.  ms.author= "douglasl".  -->
 
 &nbsp;
 
 
-<!-- git diff --ignore-all-space --unified=0 bd09c9e66cd3cf5f3ebebe7ffa6e937978353169 8e5cbbf0063971676a8bafefba75aa5c7c28be61  (PR=0  ,  Filename=sql-server-index-design-guide.md  ,  Dirpath=docs\relational-databases\  ,  MergeCommitSha40=74daee358fef75a25d75c69d971d08536c5bd2be) -->
+<!-- git diff --ignore-all-space --unified=0 5ec67b56aa0a6eadadbcfa8b73b6726e75eca2bb 4eb108b202d3dd035a312bac7872cf02bcf31cfa  (PR=0  ,  Filename=query-with-full-text-search.md  ,  Dirpath=docs\relational-databases\search\  ,  MergeCommitSha40=f70f24bff1677b33c661abd13726f491ce32b305) -->
 
 
 
-從 SQL Server 2016 開始，您可以**在資料列存放區資料表上建立可更新的非叢集資料行存放區索引**。 資料行存放區索引會儲存資料的複本，因此您需要額外的儲存空間。 不過，資料行存放區索引中資料的壓縮大小比資料列存放區資料表所需大小還要小。  如此一來，您就可以同時在資料行存放區索引上執行分析，並在資料列存放區索引上執行交易。 當資料列存放區資料表中的資料變更時，會更新資料行存放區，讓兩個索引會針對相同的資料執行。
-
-從 SQL Server 2016 開始，您可以**在資料行存放區索引上使用一或多個非叢集資料列存放區索引**。 如此一來，您就可以對基礎資料行存放區執行有效率的資料表搜尋。 其他選項現在也可以使用。 例如，您可以在資料列存放區資料表上使用 UNIQUE 條件約束，強制執行主索引鍵條件約束。 由於非唯一的值將無法插入資料列存放區資料表中，因此 SQL Server 無法將值插入資料行存放區中。
-
-**效能考量**
+**衍生詞彙搜尋的詳細資訊**
 
 
--   非叢集資料行存放區索引定義支援使用篩選的條件。 若要將 OLTP 資料表新增資料行存放區索引對效能的影響降到最低，請只對您作業的工作負載冷資料，使用篩選的條件建立非叢集資料行存放區索引。
+「字形變化」是指動詞的不同時態和變化或是名詞的單複數。
 
--   記憶體中的資料表可以有一個資料行存放區索引。 您可以在建立資料表時予以建立，或稍後使用 [ALTER TABLE &#40;Transact-SQL&#41;](../t-sql/statements/alter-table-transact-sql.md) 將其加入。 在 SQL Server 2016 之前，只有磁碟資料表可以使用資料行存放區索引。
+例如，搜尋 "drive" 單字的字形變化。 如果資料表的不同資料列中包括 "drive"、"drives"、"drove"、"driving" 及 "driven" 等字，因為這些單字全都從 "drive" 這個字變化而來，所以都會出現在結果集中。
 
-如需詳細資訊，請參閱[資料行存放區索引 - 查詢效能](../relational-databases/indexes/columnstore-indexes-query-performance.md)。
+[FREETEXT] 和 [FREETEXTTABLE] 預設會尋找所有指定單字的變化詞彙。 [CONTAINS] 和 [CONTAINSTABLE] 支援選擇性 `INFLECTIONAL` 引數。
 
-**設計指導**
+**搜尋特定單字的同義字**
 
 
--   資料列存放區資料表可以有一個可更新的非叢集資料行存放區索引。 在 SQL Server 2014 之前，非叢集資料行存放區索引是唯讀的。
+「同義字」會針對詞彙定義使用者指定的同義字。 如需同義字檔案的詳細資訊，請參閱[設定及管理全文檢索搜尋的同義字檔案]。
+
+例如，如果 "{car, automobile, truck, van}" 項目新增到同義字中，您就可以搜尋 "car" 這個字的同義字變化。 由於 "automobile"、"truck"、"van" 或 "car" 這些字都是屬於內含 "car" 這個字的同義字擴充集，因此所查詢的資料表中，所有包含這些字的資料列都會出現在結果集。
+
+[FREETEXT] 和 [FREETEXTTABLE] 預設會使用同義字。 [CONTAINS] 和 [CONTAINSTABLE] 支援選擇性 `THESAURUS` 引數。
 
 
 
@@ -402,63 +434,37 @@ ORDER BY JSON_VALUE(Tab.json, '$.Group'), Tab.DateModified
 
 <a name="TitleNum_8"/>
 
-### <a name="8-nbsp-spexecuteexternalscript-transact-sqlsystem-stored-proceduressp-execute-external-script-transact-sqlmd"></a>8. &nbsp; [sp_execute_external_script (Transact-SQL)](system-stored-procedures/sp-execute-external-script-transact-sql.md)
+### <a name="8-nbsp-transparent-data-encryption-with-bring-your-own-key-support-for-azure-sql-database-and-data-warehousesecurityencryptiontransparent-data-encryption-byok-azure-sqlmd"></a>8.&nbsp; [Azure SQL Database 和資料倉儲的透明資料加密與攜帶您自己的金鑰支援](security/encryption/transparent-data-encryption-byok-azure-sql.md)
 
-更新日期：2018 年 1 月 23 日 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  ([上一個](#TitleNum_7) | [下一個](#TitleNum_9))
+*更新日期：2018-04-24* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  ([上一個](#TitleNum_7) | [下一個](#TitleNum_9))
 
-<!-- Source markdown line 207.  ms.author= "edmaca".  -->
+<!-- Source markdown line 110.  ms.author= "aliceku".  -->
 
 &nbsp;
 
 
-<!-- git diff --ignore-all-space --unified=0 0ee4d591ae9d9a5c015eec98aad9ccbb86268761 ac9b439c23ffae5fcc77639de6ff955763cf5844  (PR=4696  ,  Filename=sp-execute-external-script-transact-sql.md  ,  Dirpath=docs\relational-databases\system-stored-procedures\  ,  MergeCommitSha40=d7dcbcebbf416298f838a39dd5de6a46ca9f77aa) -->
+<!-- git diff --ignore-all-space --unified=0 9527658848d430bf0148be84474a75b232cbd112 70ed2a129c580962384f808e8526673957f00d2c  (PR=5662  ,  Filename=transparent-data-encryption-byok-azure-sql.md  ,  Dirpath=docs\relational-databases\security\encryption\  ,  MergeCommitSha40=91a9c812739a1c9a6ec9e7b8cda71ee1f5adae3d) -->
 
 
 
-若要使用 Python 產生類似的模型，您需要將語言識別項從 `@language=N'R'` 變更為 `@language = N'Python'`，並對 `@script` 引數進行必要的修改。 否則，所有參數都會跟 R 的運作方式相同。
-
-**C.建立 Python 模型，並從中產生分數**
+**如何使用 Azure Key Vault 設定 Geo-DR**
 
 
-這個範例示範如何使用 sp\_execute\_external\_ 指令碼來產生簡單 Python 模型的分數。
+如需為加密的資料庫維護 TDE 保護裝置的高可用性，必須根據現有或所需的 SQL Database 容錯移轉群組或作用中的異地複寫執行個體，設定備援的 Azure Key Vault。  每個異地複寫的伺服器都需要個別的金鑰保存庫，其必須與伺服器共置於相同的 Azure 區域。 當主要資料庫因為某個區域發生中斷而無法存取，並觸發容錯移轉時，次要資料庫即可以使用次要金鑰保存庫來接管。
 
-```
-CREATE PROCEDURE [dbo].[py_generate_customer_scores]
-AS
-BEGIN
+若是異地複寫的 Azure SQL 資料庫，將需要下列 Azure Key Vault 設定：
+- 在區域中要有一個具有金鑰保存庫的主要資料庫以及一個具有金鑰保存庫的次要資料庫。
+- 至少需要一個次要資料庫，最多可支援四個次要資料庫。
+- 不支援次要資料庫的次要資料庫 (鏈結)。
 
-**Input query to generate the customer data**
+下節將更詳細地介紹安裝及設定步驟。
 
-DECLARE @input_query NVARCHAR(MAX) = N'SELECT customer, orders, items, cost FROM dbo.Sales.Orders`
+**Azure Key Vault 設定步驟**
 
-EXEC sp_execute_external_script @language = N'Python', @script = N'
-import pandas as pd
-from sklearn.cluster import KMeans
 
-**Get data from input query**
-
-customer_data = my_input_data
-
-**Define the model**
-
-n_clusters = 4
-est = KMeans(n_clusters=n_clusters, random_state=111).fit(customer_data[["orders","items","cost"]])
-clusters = est.labels_
-customer_data["cluster"] = clusters
-
-OutputDataSet = customer_data
-'
-, @input_data_1 = @input_query
-, @input_data_1_name = N'my_input_data'
-WITH RESULT SETS (("CustomerID" int, "Orders" float,"Items" float,"Cost" float,"ClusterResult" float));
-END;
-GO
-```
-
-由於系統不會將 Python 程式碼中使用的資料行標題輸出至 SQL Server，因此請使用 WITH RESULTS 陳述式指定要讓 SQL 使用的資料行名稱與資料類型。
-
-若要計分，您也可以使用原生 [PREDICT](system-stored-procedures/../../t-sql/queries/predict-transact-sql.md) 函式，其會避免呼叫 Python 或 R 執行階段，因此一般來說速度更快。
-
+- 安裝 [PowerShell](https://docs.microsoft.com/powershell/azure/install-azurerm-ps?view=azurermps-5.6.0)
+- 使用 [PowerShell 在兩個不同的區域建立兩個 Azure Key Vault，以在金鑰保存庫上啟用「虛刪除」屬性](https://docs.microsoft.com/azure/key-vault/key-vault-soft-delete-powershell) (目前從 AKV 入口網站還無法使用此選項 - 但 SQL 需要它)。
+- 這兩個 Azure Key Vault 必須位於相同 Azure 地理的兩個區域中，才能備份和還原金鑰。  如果您需要這兩個金鑰保存庫位於不同地理才能符合 SQL Geo-DR 需求，請遵循 [BYOK 程序](https://docs.microsoft.com/azure/key-vault/key-vault-hsm-protected-keys)，允許從內部部署 HSM 匯入金鑰。
 
 
 
@@ -470,42 +476,89 @@ GO
 
 <a name="TitleNum_9"/>
 
-### <a name="9-nbsp-create-primary-keystablescreate-primary-keysmd"></a>9.&nbsp; [建立主索引鍵](tables/create-primary-keys.md)
+### <a name="9-nbsp-powershell-and-cli-enable-transparent-data-encryption-using-your-own-key-from-azure-key-vaultsecurityencryptiontransparent-data-encryption-byok-azure-sql-configuremd"></a>9.&nbsp; [PowerShell 與 CLI：使用 Azure Key Vault 中您自己的金鑰來啟用透明資料加密](security/encryption/transparent-data-encryption-byok-azure-sql-configure.md)
 
-更新日期：2018 年 1 月 18 日 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  ([上一個](#TitleNum_8))
+*更新日期：2018-04-24* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  ([上一個](#TitleNum_8) | [下一個](#TitleNum_10))
 
-<!-- Source markdown line 102.  ms.author= "sstein".  -->
+<!-- Source markdown line 196.  ms.author= "aliceku".  -->
 
 &nbsp;
 
 
-<!-- git diff --ignore-all-space --unified=0 d18b485f314cc005d624cab8a51650d3b8f55f89 9bd2e9453206e8940d30b0a01c43f9d8e1aed606  (PR=4652  ,  Filename=create-primary-keys.md  ,  Dirpath=docs\relational-databases\tables\  ,  MergeCommitSha40=6b4aae3706247ce9b311682774b13ac067f60a79) -->
+<!-- git diff --ignore-all-space --unified=0 a0e00f5701d9a493f503a477c69097ce65aba174 721e8fb856a55ee1e8e9e7fc06036a03adab647b  (PR=5662  ,  Filename=transparent-data-encryption-byok-azure-sql-configure.md  ,  Dirpath=docs\relational-databases\security\encryption\  ,  MergeCommitSha40=91a9c812739a1c9a6ec9e7b8cda71ee1f5adae3d) -->
 
 
 
-**在新的資料表中建立具有非叢集索引的主索引鍵**
+**CLI 的必要條件**
 
 
-1.  在物件總管中，連線到資料庫引擎的執行個體。
+- 您必須擁有 Azure 訂用帳戶，而且是該訂用帳戶的系統管理員。
+- [建議但非必要] 備妥硬體安全性模組 (HSM) 或本機金鑰存放區，以建立 TDE 保護裝置金鑰內容的本機複本。
+- 命令列介面 2.0 版或更新版本。 若要安裝最新版本並連線至您的 Azure 訂用帳戶，請參閱[安裝及設定 Azure 跨平台命令列介面 2.0](https://docs.microsoft.com/cli/azure/install-azure-cli?view=azure-cli-latest)。
+- 建立 Azure Key Vault 和金鑰以用於 TDE。
+   - [使用 CLI 2.0 管理 Key Vault](https://docs.microsoft.com/azure/key-vault/key-vault-manage-with-cli2)
+   - [使用硬體安全性模組 (HSM) 與 Key Vault 的指示](https://docs.microsoft.com/azure/key-vault/key-vault-get-started#a-idhsmaif-you-want-to-use-a-hardware-security-module-hsm)
+ - 金鑰保存庫必須具有以下屬性才能供 TDE 使用：
+   - [虛刪除](https://docs.microsoft.com/azure/key-vault/key-vault-ovw-soft-delete)
+   - [如何透過 CLI 使用金鑰保存庫虛刪除](https://docs.microsoft.com/azure/key-vault/key-vault-soft-delete-cli)
+- 若要用於 TDE，金鑰必須具有下列屬性：
+   - 無到期日
+   - 未停用
+   - 能夠執行「取得」、「包裝金鑰」和「解除包裝金鑰」作業
 
-2.  在標準列上，按一下 **[新增查詢]**。
+**步驟：建立伺服器並將 Azure AD 身分識別指派給您的伺服器**
 
-3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]**。 此範例會建立資料表，並在 `CustomerID` 資料行上定義主索引鍵以及在 `TransactionID` 上定義叢集索引。
+      cli
+      # create server (with identity) and database
+
+
+
+&nbsp;
+
+&nbsp;
+
+---
+
+<a name="TitleNum_10"/>
+
+### <a name="10-nbsp-about-change-data-capture-sql-servertrack-changesabout-change-data-capture-sql-servermd"></a>10.&nbsp; [關於異動資料擷取 (SQL Server)](track-changes/about-change-data-capture-sql-server.md)
+
+*更新日期：2018-04-17* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  ([上一個](#TitleNum_9))
+
+<!-- Source markdown line 112.  ms.author= "jroth".  -->
+
+&nbsp;
+
+
+<!-- git diff --ignore-all-space --unified=0 588bff652adefd719e799e9777a416b70184c5f8 77ebdbb1b98b24054d5c5afbb3f1d40e94d1e6bc  (PR=5574  ,  Filename=about-change-data-capture-sql-server.md  ,  Dirpath=docs\relational-databases\track-changes\  ,  MergeCommitSha40=bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68) -->
+
+
+
+**使用資料庫和資料表定序差異**
+
+
+請務必注意，在資料庫與設定進行異動資料擷取的資料表資料行之間有不同的定序。 CDC 會使用暫時儲存體來填入側邊資料表。 如果資料表的 CHAR 或 VARCHAR 資料行具有與資料庫定序不同的定序，而且如果這些資料行儲存非 ASCII 字元 (例如雙位元組 DBCS 字元)，則 CDC 可能無法保存與基底資料表中資料一致的已變更資料。 原因是過度儲存體變數不能有與其建立關聯的定序。
+
+請考慮下列其中一種方法來確保變更擷取資料已與基底資料表一致：
+
+- 將 NCHAR 或 NVARCHAR 資料類型用於包含非 ASCII 資料的資料行。
+
+- 或者，對於資料行和資料庫使用相同的定序。
+
+例如，如果您有一個使用 SQL_Latin1_General_CP1_CI_AS 定序的資料庫，請考慮使用下表：
 
 ```
-    USE AdventureWorks2012;
-    GO
-    CREATE TABLE Production.TransactionHistoryArchive1
-    (
-       CustomerID uniqueidentifier DEFAULT NEWSEQUENTIALID(),
-       TransactionID int IDENTITY (1,1) NOT NULL,
-       CONSTRAINT PK_TransactionHistoryArchive_TransactionID PRIMARY KEY NONCLUSTERED (uniqueidentifier)
-    );
-    GO
+CREATE TABLE T1(
+     C1 INT PRIMARY KEY,
+     C2 VARCHAR(10) collate Chinese_PRC_CI_AI)
+```
 
-    -- Now add the clustered index
-    CREATE CLUSTERED INDEX CIX_TransactionID ON Production.TransactionHistoryArchive1 (TransactionID);
-    GO
+CDC 可能無法擷取資料行 C2 的二進位資料，因為其定序不同 (Chinese_PRC_CI_AI)。 使用 NVARCHAR 避免這個問題：
+
+```
+CREATE TABLE T1(
+     C1 INT PRIMARY KEY,
+     C2 NVARCHAR(10) collate Chinese_PRC_CI_AI --Unicode data type, CDC works well with this data type)
 ```
 
 
@@ -519,40 +572,36 @@ GO
 本節會在我們的公開 GitHub 存放庫中，列出與其他主題區中最近更新的文章十分相似的文章：[MicrosoftDocs/sql-docs](https://github.com/MicrosoftDocs/sql-docs/)。
 
 
+
 #### <a name="subject-areas-that-do-have-new-or-recently-updated-articles"></a>具有新文章或最近更新文章的主題區
 
-
-- [新文章 + 更新文章 (1+3)：&nbsp;**Advanced Analytics for SQL** 文件](../advanced-analytics/new-updated-advanced-analytics.md)
-- [新文章 + 更新文章 (0+1)：&nbsp;**Analytics Platform System for SQL** 文件](../analytics-platform-system/new-updated-analytics-platform-system.md)
-- [新文章 + 更新文章 (0+1)：&nbsp;**連線到 SQL** 文件](../connect/new-updated-connect.md)
-- [新文章 + 更新文章 (0+1)：&nbsp;**Database Engine for SQL** 文件](../database-engine/new-updated-database-engine.md)
-- [新文章 + 更新文章 (12+1)：**Integration Services for SQL** 文件](../integration-services/new-updated-integration-services.md)
-- [新文章 + 更新文章 (6+2)：&nbsp; **Linux for SQL** 文件](../linux/new-updated-linux.md)
-- [新文章 + 更新文章 (15+0)：**PowerShell for SQL** 文件](../powershell/new-updated-powershell.md)
-- [新文章 + 更新文章 (2+9)：&nbsp;**Relational Databases for SQL** 文件](../relational-databases/new-updated-relational-databases.md)
-- [新文章 + 更新文章 (1+0)：&nbsp;**Reporting Services for SQL** 文件](../reporting-services/new-updated-reporting-services.md)
-- [新文章 + 更新文章 (1+1)：&nbsp;**SQL Operations Studio** 文件](../sql-operations-studio/new-updated-sql-operations-studio.md)
-- [新文章 + 更新文章 (1+1)：&nbsp;**Microsoft SQL Server** 文件](../sql-server/new-updated-sql-server.md)
-- [新文章 + 更新文章 (0+1)：&nbsp;**SQL Server Data Tools (SSDT)** 文件](../ssdt/new-updated-ssdt.md)
-- [新文章 + 更新文章 (1+2)：&nbsp;**SQL Server Management Studio (SSMS)** 文件](../ssms/new-updated-ssms.md)
-- [新文章 + 更新文章 (0+2)：&nbsp;**Transact-SQL** 文件](../t-sql/new-updated-t-sql.md)
+- [新文章 + 更新文章 (11+6)：&nbsp; &nbsp;**Advanced Analytics for SQL** 文件](../advanced-analytics/new-updated-advanced-analytics.md)
+- [新文章 + 更新文章 (18+0)：&nbsp; &nbsp;**Analysis Services for SQL** 文件](../analysis-services/new-updated-analysis-services.md)
+- [新文章 + 更新文章 (218+14)：**連線到 SQL** 文件](../connect/new-updated-connect.md)
+- [新文章 + 更新文章 (14+0)：&nbsp; &nbsp;**SQL 資料庫引擎**文件](../database-engine/new-updated-database-engine.md)
+- [新文章 + 更新文章 (3+2)：&nbsp; &nbsp; **Integration Services for SQL** 文件](../integration-services/new-updated-integration-services.md)
+- [新文章 + 更新文章 (3+3)：&nbsp; &nbsp; **Linux for SQL** 文件](../linux/new-updated-linux.md)
+- [新文章 + 更新文章 (7+10)：&nbsp; &nbsp;**SQL 的關聯式資料庫**文件](../relational-databases/new-updated-relational-databases.md)
+- [新文章 + 更新文章 (0+2)：&nbsp; &nbsp; **Reporting Services for SQL** 文件](../reporting-services/new-updated-reporting-services.md)
+- [新文章 + 更新文章 (1+3)：&nbsp; &nbsp; **SQL Operations Studio** 文件](../sql-operations-studio/new-updated-sql-operations-studio.md)
+- [新文章 + 更新文章 (2+3)：&nbsp; &nbsp; **Microsoft SQL Server** 文件](../sql-server/new-updated-sql-server.md)
+- [新文章 + 更新文章 (1+1)：&nbsp; &nbsp; **SQL Server Data Tools (SSDT)** 文件](../ssdt/new-updated-ssdt.md)
+- [新文章 + 更新文章 (5+2)：&nbsp; &nbsp; **SQL Server Management Studio (SSMS)** 文件](../ssms/new-updated-ssms.md)
+- [新文章 + 更新文章 (0+2)：&nbsp; &nbsp; **Transact-SQL** 文件](../t-sql/new-updated-t-sql.md)
+- [新文章 + 更新文章 (1+1)：&nbsp; &nbsp; **SQL 工具**文件](../tools/new-updated-tools.md)
 
 
 
 #### <a name="subject-areas-that-do-not-have-any-new-or-recently-updated-articles"></a>沒有新文章或最近更新文章的主題區
 
-
-- [新文章 + 更新文章 (0+0)：**SQL 資料移轉小幫手 (DMA)** 文件](../dma/new-updated-dma.md)
-- [新文章 + 更新文章 (0+0)：**ActiveX Data Objects (ADO) for SQL** 文件](../ado/new-updated-ado.md)
-- [新文章 + 更新文章 (0+0)：**SQL Analysis Services** 文件](../analysis-services/new-updated-analysis-services.md)
+- [新文章 + 更新文章 (0+0)：**SQL 的分析平台系統**文件](../analytics-platform-system/new-updated-analytics-platform-system.md)
 - [新文章 + 更新文章 (0+0)：**Data Quality Services for SQL** 文件](../data-quality-services/new-updated-data-quality-services.md)
 - [新文章 + 更新文章 (0+0)：**SQL 資料採礦延伸模組 (DMX)** 文件](../dmx/new-updated-dmx.md)
 - [新文章 + 更新文章 (0+0)：**SQL Master Data Services (MDS)** 文件](../master-data-services/new-updated-master-data-services.md)
 - [新文章 + 更新文章 (0+0)：**SQL 多維度運算式 (MDX)** 文件](../mdx/new-updated-mdx.md)
 - [新文章 + 更新文章 (0+0)：**SQL ODBC (開放式資料庫連接)** 文件](../odbc/new-updated-odbc.md)
-- [新文章 + 更新文章 (0+0)：**SQL 範例**文件](../sample/new-updated-sample.md)
+- [新文章 + 更新文章 (0+0)：**PowerShell for SQL** 文件](../powershell/new-updated-powershell.md)
+- [新文章 + 更新文章 (0+0)：**SQL 範例**文件](../samples/new-updated-samples.md)
 - [新文章 + 更新文章 (0+0)：**SQL Server 移轉小幫手 (SSMA)** 文件](../ssma/new-updated-ssma.md)
-- [新文章 + 更新文章 (0+0)：**SQL 的工具** 文件](../tools/new-updated-tools.md)
 - [新文章 + 更新文章 (0+0)：**XQuery for SQL** 文件](../xquery/new-updated-xquery.md)
-
 

@@ -1,16 +1,14 @@
 ---
-title: "sp_add_log_shipping_primary_secondary (TRANSACT-SQL) |Microsoft 文件"
-ms.custom: 
+title: sp_add_log_shipping_primary_secondary (TRANSACT-SQL) |Microsoft 文件
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: system-objects
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_add_log_shipping_primary_secondary_TSQL
@@ -20,16 +18,16 @@ dev_langs:
 helpviewer_keywords:
 - sp_add_log_shipping_primary_secondary
 ms.assetid: 23b3e100-5318-410e-b8f3-51c89b2dd777
-caps.latest.revision: 
+caps.latest.revision: 19
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 1d1bfe5710f9fed0572f384406dfb4b9f0ac10eb
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 0598d778953e96e8247c8011c5e41cbc03380bba
+ms.sourcegitcommit: 2d93cd115f52bf3eff3069f28ea866232b4f9f9e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "33240698"
 ---
 # <a name="spaddlogshippingprimarysecondary-transact-sql"></a>sp_add_log_shipping_primary_secondary (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,13 +47,13 @@ sp_add_log_shipping_primary_secondary
 ```  
   
 ## <a name="arguments"></a>引數  
- [ **@primary_database** = ] '*primary_database*'  
+ [ **@primary_database** =] '*primary_database*'  
  這是主要伺服器的資料庫名稱。 *primary_database*是**sysname**，沒有預設值。  
   
- [ **@secondary_server** = ] '*secondary_server*',  
+ [ **@secondary_server** =] '*secondary_server*'，  
  這是次要伺服器的名稱。 *secondary_server*是**sysname**，沒有預設值。  
   
- [ **@secondary_database** = ] '*secondary_database*'  
+ [ **@secondary_database** =] '*secondary_database*'  
  這是次要資料庫的名稱。 *secondary_database*是**sysname**，沒有預設值。  
   
 ## <a name="return-code-values"></a>傳回碼值  
@@ -82,7 +80,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [關於記錄傳送 &#40;SQL Server &#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
+ [關於記錄傳送 &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
  [系統預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

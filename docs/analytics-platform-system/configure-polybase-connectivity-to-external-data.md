@@ -1,29 +1,22 @@
 ---
-title: "設定 PolyBase 連線到外部資料 (Analytics Platform System)"
-author: barbkess
-ms.author: barbkess
-manager: jhubbard
-ms.prod: analytics-platform-system
-ms.prod_service: mpp-data-warehouse
-ms.service: 
-ms.component: 
-ms.technology: mpp-data-warehouse
-ms.custom: 
-ms.date: 01/05/2017
-ms.reviewer: na
-ms.suite: sql
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: 6f14ac21-a086-4c05-861f-0a12bf278259
-caps.latest.revision: 
-ms.openlocfilehash: d9777fb2bbfd9af2598a422fc072877ff0b78959
-ms.sourcegitcommit: c77a8ac1ab372927c09bf241d486e96881b61ac9
+title: 設定 PolyBase 連線-Analytics Platform System |Microsoft 文件
+description: 說明如何連接到外部 Hadoop 或 Microsoft Azure 儲存體 blob 資料來源的平行處理資料倉儲設定 PolyBase。 使用 PolyBase 來執行用來整合多個來源資料，包括 Hadoop、 Azure blob 儲存體和平行處理資料倉儲查詢。
+author: mzaman1
+manager: craigg
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
+ms.openlocfilehash: d87ea2b126fde6bf0b18f7a777216f04d45d98f6
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/29/2018
+ms.lasthandoff: 04/19/2018
 ---
 # <a name="configure-polybase-connectivity-to-external-data"></a>設定外部資料的 PolyBase 連線組態
-說明如何在 SQL Server PDW 連接到外部 Hadoop 或 Microsoft Azure 儲存體 blob 資料來源中設定 PolyBase。 使用 PolyBase 來執行用來整合多個來源資料，包括 Hadoop、 Azure blob 儲存體，以及 SQL Server PDW 查詢。  
+說明如何連接到外部 Hadoop 或 Microsoft Azure 儲存體 blob 資料來源的平行處理資料倉儲設定 PolyBase。 使用 PolyBase 來執行用來整合多個來源資料，包括 Hadoop、 Azure blob 儲存體和平行處理資料倉儲查詢。  
   
 ### <a name="to-configure-connectivity"></a>若要設定連線  
   
@@ -121,7 +114,7 @@ ms.lasthandoff: 01/29/2018
   
     若要執行 PolyBase 針對 HDInsight 區域與外部的 Hadoop 2.0 叢集，請外部的 Hadoop 叢集上使用 yarn-site.xml 預設設定。  
   
-6.  重新啟動 PDW 區域。 若要這樣做，請使用組態管理員工具。 請參閱[啟動組態管理員 &#40;Analytics Platform System &#41;](launch-the-configuration-manager.md).  
+6.  重新啟動 PDW 區域。 若要這樣做，請使用組態管理員工具。 請參閱[啟動 Configuration Manager &#40;Analytics Platform System&#41;](launch-the-configuration-manager.md)。  
   
 7.  請確認 Hadoop 連線的安全性設定。 如果**弱的驗證**端啟用利用 Hadoop 上`dfs.permission = true`，您必須建立 Hadoop 使用者**pdw_user**授與完整讀取和寫入權限給此使用者。 SQL Server PDW 和對應的呼叫，從 SQL Server PDW 一律發出為**pdw_user**。  這是固定的使用者名稱，而且無法在此版本的 Hadoop 連接和 SQL Server PDW 版本中變更。 如果在 Hadoop 上的安全性已停用使用`dfs.permission = false`，則不需要採取任何進一步動作。  
   
@@ -129,12 +122,12 @@ ms.lasthandoff: 01/29/2018
   
 9. Hadoop 連線，您可以決定哪些使用者可以建立 Hadoop 的外部資料來源。 提供給這些使用者的 IP 位址和連接埠號碼，每個 Hadoop 名稱節點，並提供他們**ALTER ANY EXTERNAL DATA SOURCE**或者**CONTROL SERVER**權限。  
   
-10. 連接到 WASB 也需要應用裝置上設定 DNS 轉送。 若要設定 DNS 轉送，請參閱[使用 DNS 轉寄站來解析非應用裝置的 DNS 名稱 &#40;Analytics Platform System &#41;](use-a-dns-forwarder-to-resolve-non-appliance-dns-names.md).  
+10. 連接到 WASB 也需要應用裝置上設定 DNS 轉送。 若要設定 DNS 轉送，請參閱[使用 DNS 轉寄站來解析非應用裝置的 DNS 名稱&#40;Analytics Platform System&#41;](use-a-dns-forwarder-to-resolve-non-appliance-dns-names.md)。  
   
 授權的使用者現在可以建立外部資料來源、 外部檔案格式和外部資料表。 他們可以使用這些來整合多個來源資料包括 Hadoop，Microsoft Azure blob 儲存體和 SQL Server PDW。  
 
 ## <a name="kerberos-configuration"></a>Kerberos 設定  
-請注意，當 PolyBase，向 Kerberos 受保護的叢集，hadoop.rpc.protection 設定必須設為驗證。 這樣會讓未加密的 Hadoop 節點之間維持資料通訊。 
+請注意，當 PolyBase，向 Kerberos 受保護的叢集，hadoop.rpc.protection 設定必須設為驗證。 這會導致 Hadoop 節點之間的資料通訊未加密。 
 
  若要連接到 [使用 MIT KDC] 的 Kerberos 保護的 Hadoop 叢集：
    
@@ -161,9 +154,9 @@ ms.lasthandoff: 01/29/2018
   
 4. 建立資料庫範圍的認證物件，以指定每個 Hadoop 使用者的驗證資訊。 請參閱 [PolyBase T-SQL objects](../relational-databases/polybase/polybase-t-sql-objects.md)(PolyBase T-SQL 物件)。  
 
-5. 重新啟動 PDW 區域。 若要這樣做，請使用組態管理員工具。 請參閱[啟動組態管理員 &#40;Analytics Platform System &#41;](launch-the-configuration-manager.md).
+5. 重新啟動 PDW 區域。 若要這樣做，請使用組態管理員工具。 請參閱[啟動 Configuration Manager &#40;Analytics Platform System&#41;](launch-the-configuration-manager.md)。
  
 ## <a name="see-also"></a>另請參閱  
-[應用裝置組態 &#40;Analytics Platform System &#41;](appliance-configuration.md)  
+[應用裝置組態&#40;Analytics Platform System&#41;](appliance-configuration.md)  
 <!-- MISSING LINKS [PolyBase &#40;SQL Server PDW&#41;](../sqlpdw/polybase-sql-server-pdw.md)  -->  
   

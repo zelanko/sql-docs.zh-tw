@@ -1,17 +1,18 @@
 # [概觀](database-features.md)
-# [新增及更新的發行項](new-updated-relational-databases.md)
+# [新文章及更新的文章](new-updated-relational-databases.md)
 
 # [SQL Server 指南](sql-server-guides.md)
 ## Always On 可用性群組疑難排解和監視指南
-## [索引設計](sql-server-index-design-guide.md)
+## [索引架構和設計](sql-server-index-design-guide.md)
 ## [記憶體管理架構](memory-management-architecture-guide.md)
 ### [讀取分頁](reading-pages.md)  
 ### [寫入分頁](writing-pages.md)
 ## [分頁與範圍架構](pages-and-extents-architecture-guide.md)
 ## [移轉後驗證和最佳化](post-migration-validation-and-optimization-guide.md)
+## [[效能]](../relational-databases/performance/performance-center-for-sql-server-database-engine-and-azure-sql-database.md) 
 ## [查詢處理架構](query-processing-architecture-guide.md)
 ## [執行緒和工作架構](thread-and-task-architecture-guide.md)
-## [交易記錄架構與管理](sql-server-transaction-log-architecture-and-management-guide.md)
+## [交易記錄架構與管理指南](sql-server-transaction-log-architecture-and-management-guide.md)
 ## [交易鎖定與資料列版本設定指南](sql-server-transaction-locking-and-row-versioning-guide.md)
 
 # [備份與還原](../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md)
@@ -57,7 +58,6 @@
 
 # [聯結](../relational-databases/performance/joins.md)
 # [資料分割](../relational-databases/partitions/partitioned-tables-and-indexes.md)
-# [[效能]](../relational-databases/performance/performance-center-for-sql-server-database-engine-and-azure-sql-database.md)
 # [原則式管理](../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md)
 # [PolyBase](../relational-databases/polybase/polybase-guide.md)
 # [複寫](../relational-databases/replication/sql-server-replication.md)

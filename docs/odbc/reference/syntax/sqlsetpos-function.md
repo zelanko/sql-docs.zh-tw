@@ -1,32 +1,33 @@
 ---
-title: "SQLSetPos 函數 |Microsoft 文件"
-ms.custom: 
+title: SQLSetPos 函數 |Microsoft 文件
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
-ms.component: odbc
-ms.reviewer: 
+ms.prod: sql
+ms.prod_service: connectivity
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
-ms.topic: article
-apiname: SQLSetPos
-apilocation: sqlsrv32.dll
+ms.technology: connectivity
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
+apiname:
+- SQLSetPos
+apilocation:
+- sqlsrv32.dll
 apitype: dllExport
-f1_keywords: SQLSetPos
-helpviewer_keywords: SQLSetPos function [ODBC]
+f1_keywords:
+- SQLSetPos
+helpviewer_keywords:
+- SQLSetPos function [ODBC]
 ms.assetid: 80190ee7-ae3b-45e5-92a9-693eb558f322
-caps.latest.revision: "31"
+caps.latest.revision: 31
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
-ms.workload: Inactive
-ms.openlocfilehash: 310adbb9cc67ffe6982ca6838285ffe4967ab7c4
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+manager: craigg
+ms.openlocfilehash: d4b8f63f0a4891ceaa6e7904135dc06db4473eec
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sqlsetpos-function"></a>SQLSetPos 函數
 **一致性**  
@@ -61,7 +62,7 @@ SQLRETURN SQLSetPos(
  SQL_POSITION SQL_REFRESH SQL_UPDATE SQL_DELETE  
   
 > [!NOTE]  
->  SQL_ADD 值*作業*引數已被取代的 ODBC 3*.x*。 ODBC 3。*x*驅動程式需要支援 SQL_ADD 回溯相容性。 這項功能已由呼叫取代**SQLBulkOperations**與*作業*SQL_ADD。 當 ODBC 3。*x*應用程式搭配 ODBC 2。*x*驅動程式，驅動程式管理員會將對應的呼叫**SQLBulkOperations**與*作業*的 SQL_ADD 至**SQLSetPos**與*作業*SQL_ADD。  
+>  SQL_ADD 值*作業*引數已被取代的 ODBC 3 *.x*。 ODBC 3。*x*驅動程式需要支援 SQL_ADD 回溯相容性。 這項功能已由呼叫取代**SQLBulkOperations**與*作業*SQL_ADD。 當 ODBC 3。*x*應用程式搭配 ODBC 2。*x*驅動程式，驅動程式管理員會將對應的呼叫**SQLBulkOperations**與*作業*的 SQL_ADD 至**SQLSetPos**與*作業*SQL_ADD。  
   
  如需詳細資訊，請參閱 「 註解。 」  
   
@@ -81,7 +82,7 @@ SQLRETURN SQLSetPos(
   
  針對所有這些 Sqlstate 可傳回 SQL_SUCCESS_WITH_INFO 或 SQL_ERROR （除了 01xxx Sqlstate)，如果上一個或多個，但不是全部資料列的多重資料列的作業，就會發生錯誤，而且如果發生錯誤時，會傳回 SQL_ERROR，會傳回 SQL_SUCCESS_WITH_INFO單一資料列作業。  
   
-|SQLSTATE|錯誤|描述|  
+|SQLSTATE|錯誤|Description|  
 |--------------|-----------|-----------------|  
 |01000|一般警告|特定驅動程式告知性訊息。 （函式會傳回 SQL_SUCCESS_WITH_INFO）。|  
 |01001|資料指標作業衝突|*作業*引數是 SQL_DELETE 或 SQL_UPDATE，和任何資料列或多個資料列已刪除或更新。 (如需更新多個資料列的詳細資訊，請參閱 SQL_ATTR_SIMULATE_CURSOR 描述*屬性*中**SQLSetStmtAttr**。)（函式會傳回 SQL_SUCCESS_WITH_INFO）。<br /><br /> *作業*引數是 SQL_DELETE 或 SQL_UPDATE，和作業失敗，因為開放式並行存取。 （函式會傳回 SQL_SUCCESS_WITH_INFO）。|  
@@ -124,7 +125,7 @@ SQLRETURN SQLSetPos(
 ## <a name="comments"></a>註解  
   
 > [!CAUTION]  
->  針對陳述式上的資訊指出**SQLSetPos**時，才能呼叫，它必須進行相容性的 ODBC 2*.x*應用程式，請參閱[區塊資料指標，可捲動資料指標，和回溯相容性](../../../odbc/reference/appendixes/block-cursors-scrollable-cursors-and-backward-compatibility.md)。  
+>  針對陳述式上的資訊指出**SQLSetPos**時，才能呼叫，它必須進行相容性的 ODBC 2 *.x*應用程式，請參閱[區塊資料指標，可捲動資料指標，和回溯相容性](../../../odbc/reference/appendixes/block-cursors-scrollable-cursors-and-backward-compatibility.md)。  
   
 ## <a name="rownumber-argument"></a>RowNumber 引數  
  *RowNumber*引數中的資料列集在其上執行指定的作業指定的資料列數*作業*引數。 如果*RowNumber*是 0，將作業套用至資料列集中的每個資料列。 *RowNumber*必須是從 0 到資料列集中的資料列數目的值。  
@@ -147,7 +148,7 @@ SQLRETURN SQLSetPos(
 ## <a name="operation-argument"></a>運算引數  
  *作業*引數支援下列作業。 若要判斷資料來源所支援的選項，應用程式呼叫**SQLGetInfo** SQL_DYNAMIC_CURSOR_ATTRIBUTES1、 SQL_FORWARD_ONLY_CURSOR_ATTRIBUTES1、 SQL_KEYSET_CURSOR_ATTRIBUTES1，或 SQL_STATIC_CURSOR_ATTRIBUTES1 （取決於資料指標的類型） 的資訊類型。  
   
-|*運算*<br /><br /> 引數 (argument)|作業|  
+|*運算*<br /><br /> 引數 (argument)|運算|  
 |------------------------------|---------------|  
 |SQL_POSITION|驅動程式將資料指標置於指定的資料列*RowNumber*。<br /><br /> SQL_ATTR_ROW_OPERATION_PTR 陳述式屬性所指向的資料列狀態陣列的內容會被忽略 SQL_POSITION*作業*。|  
 |SQL_REFRESH|驅動程式將資料指標置於指定的資料列*RowNumber*並重新整理該資料列的資料列集緩衝區中的資料。 如需如何驅動程式會傳回資料的資料列集的緩衝區中的詳細資訊，請參閱中的資料列取向和資料行取向繫結的描述**SQLBindCol**。<br /><br /> **SQLSetPos**與*作業*SQL_REFRESH 的更新狀態和目前所提取的資料列集內的資料列的內容。 這包括重新整理這些書籤。 因為緩衝區中的資料重新整理，但是不 refetched，被固定的資料列集中的成員資格。 這是不同的呼叫所執行的重新整理**SQLFetchScroll**與*Sqlfetchscroll*的 sql_fetch_relative 但和*RowNumber*等於 0，refetches如果驅動程式和資料指標所支援的作業，從結果集，讓它可以顯示加入的資料，並移除資料列集刪除資料。<br /><br /> 成功的重新整理與**SQLSetPos**不會變更資料列狀態為 SQL_ROW_DELETED。 已刪除的資料列集中的資料列會繼續將會標示為刪除，直到下一個擷取。 如果資料指標支援封裝，將會消失在下一個擷取的資料列 (在其中後續**SQLFetch**或**SQLFetchScroll**不會傳回已刪除資料列)。<br /><br /> 加入資料列時使用的重新整理不會出現**SQLSetPos**會執行。 此行為是不同於**SQLFetchScroll**與*FetchType*的 sql_fetch_relative 但和*RowNumber*等於 0，也會重新整理但將目前的資料列集組件已刪除的記錄，如果資料指標所支援這些操作或顯示新增的記錄。<br /><br /> 成功的重新整理與**SQLSetPos**會變成資料列狀態為 SQL_ROW_ADDED SQL_ROW_SUCCESS （如果資料列狀態陣列的話）。<br /><br /> 成功的重新整理與**SQLSetPos**將資料列狀態變更 SQL_ROW_UPDATED 為資料列的新狀態 （如果資料列狀態陣列的話）。<br /><br /> 如果發生錯誤時**SQLSetPos**作業，資料列，資料列狀態設為 SQL_ROW_ERROR （如果資料列狀態陣列的話）。<br /><br /> 資料指標中，開啟具有 SQL_CONCUR_ROWVER 或 SQL_CONCUR_VALUES，以重新整理陳述式屬性 SQL_ATTR_CONCURRENCY **SQLSetPos**可能會更新用來偵測出的資料來源的開放式並行存取值資料列已經變更。 如果發生這種情況，用來確保資料指標並行的資料列版本在時候更新資料列集緩衝區會從伺服器重新整理。 這會發生重新整理每個資料列。<br /><br /> SQL_ATTR_ROW_OPERATION_PTR 陳述式屬性所指向的資料列狀態陣列的內容會被忽略 SQL_REFRESH*作業*。|  
@@ -380,6 +381,6 @@ while ((retcode == SQLFetchScroll(hstmtS, SQL_FETCH_NEXT, 0)) != SQL_ERROR) {
 |設定多個欄位的描述元|[SQLSetDescRec 函式](../../../odbc/reference/syntax/sqlsetdescrec-function.md)|  
 |設定陳述式屬性|[SQLSetStmtAttr 函式](../../../odbc/reference/syntax/sqlsetstmtattr-function.md)|  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [ODBC 應用程式開發介面參考](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [ODBC 標頭檔](../../../odbc/reference/install/odbc-header-files.md)

@@ -1,36 +1,33 @@
 ---
-title: "輸出視窗 | Microsoft 文件"
-ms.custom: 
+title: 輸出視窗 | Microsoft 文件
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
-ms.prod_service: sql-tools
-ms.service: 
-ms.component: ssms-scripting
-ms.reviewer: 
+ms.prod: sql
+ms.technology: scripting
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 f1_keywords:
 - vs.output
 helpviewer_keywords:
 - Output Window [Transact-SQL]
 - Output Window [SQL Server Management Studio]
 ms.assetid: 9808e00c-c8f6-45cc-896e-192b8420f747
-caps.latest.revision: 
+caps.latest.revision: 21
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 764c995e18349b104a3c14297fb3347d44c103c5
-ms.sourcegitcommit: a0aa5e611a0e6ebb74ac1e2f613e8916dc7a7617
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: b32b218e69b8b46e0071379cdc99d30e569d34d8
+ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/24/2018
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="transact-sql-debugger---output-window"></a>Transact-SQL 偵錯工具 - 輸出視窗
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 此視窗會顯示 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中各種功能的狀態訊息。 輸出會從 [!INCLUDE[tsql](../../includes/tsql-md.md)] 偵錯工具、外部工具功能或是偵錯工具 [命令視窗] 內執行的命令傳遞給 [輸出] 視窗內的特殊窗格。 通常從外部工具 (如 .bat 或 .com 檔案) 顯示在 [命令提示字元] 視窗內的輸出也可以使用。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+  此視窗會顯示 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中各種功能的狀態訊息。 輸出會從 [!INCLUDE[tsql](../../includes/tsql-md.md)] 偵錯工具、外部工具功能或是偵錯工具 [命令視窗] 內執行的命令傳遞給 [輸出] 視窗內的特殊窗格。 通常從外部工具 (如 .bat 或 .com 檔案) 顯示在 [命令提示字元] 視窗內的輸出也可以使用。  
   
  **若要存取輸出視窗**  
   

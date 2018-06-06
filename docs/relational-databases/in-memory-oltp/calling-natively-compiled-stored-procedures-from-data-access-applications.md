@@ -1,32 +1,30 @@
 ---
-title: "從資料存取應用程式呼叫原生編譯預存程序 | Microsoft Docs"
-ms.custom: 
+title: 從資料存取應用程式呼叫原生編譯預存程序 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
 ms.component: in-memory-oltp
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine-imoltp
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: in-memory-oltp
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: 9cf6c5ff-4548-401a-b3ec-084f47ff0eb8
-caps.latest.revision: 
-author: JennieHubbard
-ms.author: jhubbard
+caps.latest.revision: 10
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 9965ea8ab6c5b1492a57cfd20b03bd17167bd6d2
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: c293bba3ec50c22e62dad87b114766cf87b8fa73
+ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="calling-natively-compiled-stored-procedures-from-data-access-applications"></a>從資料存取應用程式呼叫原生編譯預存程序
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-本主題討論從資料存取應用程式呼叫原生編譯之預存程序的相關指引。  
+  本主題討論從資料存取應用程式呼叫原生編譯之預存程序的相關指引。  
   
  資料指標無法逐一查看原生編譯的預存程序。  
   

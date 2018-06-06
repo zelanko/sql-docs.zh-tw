@@ -1,32 +1,29 @@
 ---
-title: "提取資料列 |Microsoft 文件"
-ms.custom: 
+title: 提取資料列 |Microsoft 文件
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
-ms.component: odbc
-ms.reviewer: 
+ms.prod: sql
+ms.prod_service: connectivity
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: connectivity
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - SQLFetch function [ODBC], fetching a row of data
 - cursors [ODBC], fetching rows
 - result sets [ODBC], fetching
 - fetches [ODBC], row of data
 ms.assetid: 16d4a380-0d83-456b-aeee-f10738944e86
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
-ms.workload: Inactive
-ms.openlocfilehash: b51491fa5ab071d679c7f89990977275a4e45f1d
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+manager: craigg
+ms.openlocfilehash: 3561212552b84e702319afb1d898fa354fca68b8
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="fetching-a-row-of-data"></a>提取資料列
 若要擷取的資料列，應用程式呼叫**SQLFetch**。 **SQLFetch**可以使用任何一種資料指標，呼叫，但它只會以順向方向移動資料列集資料指標。 **SQLFetch**游標前進到下一個資料列，並傳回已繫結呼叫的任何資料行的資料**SQLBindCol**。 設定資料指標時達到結果的結尾， **SQLFetch**傳回 sql_no_data 為止。 如需呼叫的範例**SQLFetch**，請參閱[使用 SQLBindCol](../../../odbc/reference/develop-app/using-sqlbindcol.md)。  

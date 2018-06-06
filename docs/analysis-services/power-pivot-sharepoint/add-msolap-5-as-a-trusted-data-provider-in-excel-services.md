@@ -1,31 +1,23 @@
 ---
-title: "加入 MSOLAP.5 做為 Excel Services 中的受信任的資料提供者 |Microsoft 文件"
-ms.custom: 
-ms.date: 03/01/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
-ms.assetid: c1f40fa4-de6d-41ee-8124-14b4d65988f5
-caps.latest.revision: 
-author: Minewiskan
+title: 加入 MSOLAP.5 做為 Excel Services 中的受信任的資料提供者 |Microsoft 文件
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: ppvt-sharepoint
+ms.topic: conceptual
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: bbf52055cb77be6a740fc5186c69d55c352d5cc7
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: a3ba11e1242a7deb63e19221985e1e56f83acb94
+ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="add-msolap5-as-a-trusted-data-provider-in-excel-services"></a>加入 MSOLAP.5 做為 Excel Services 中受信任的資料提供者
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-MSOLAP.5 是指 Analysis Services OLE DB Provider for SQL Server 2012。 Excel Services 必須信任此提供者，才能提出連接要求，在伺服器上產生 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 資料。  
+  MSOLAP.5 是指 Analysis Services OLE DB Provider for SQL Server 2012。 Excel Services 必須信任此提供者，才能提出連接要求，在伺服器上產生 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 資料。  
   
  如果您使用 [ [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 組態工具] 設定 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint，MSOLAP.5 可能已經是受信任的提供者，因為工具包含符合此需求的動作。 不過，如果您使用 PowerShell、管理中心，或在組態工具中排除受信任的提供者動作，可能會遺失提供者，在此情況下，您應該趁設定伺服器陣列時立即將其加入，以進行 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 資料存取。  
   

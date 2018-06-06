@@ -1,32 +1,34 @@
 ---
-title: "建立複合定義域 | Microsoft Docs"
-ms.custom: 
+title: 建立複合定義域 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/22/2011
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: data-quality-services
-ms.service: 
 ms.component: data-quality-services
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: data-quality-services
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- data-quality-services
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 f1_keywords:
 - sql13.dqs.kb.createcd.f1
 - sql13.dqs.dm.cdproperties.f1
 ms.assetid: c7f0bd84-a02e-4a81-885d-985e6415c499
-caps.latest.revision: "21"
+caps.latest.revision: 21
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.workload: Inactive
-ms.openlocfilehash: 9c1676681c21b306c6df820957b07863c5db6c5a
-ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
+manager: craigg
+ms.openlocfilehash: 6a0bef49731f86f4d788884f545f944326b72357
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="create-a-composite-domain"></a>建立複合定義域
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
   此主題描述如何在 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) 中的知識庫內建立複合定義域。 複合定義域是由套用至單一資料欄位的一個或多個單一定義域所組成。 如需複合定義域的詳細資訊，請參閱[管理複合定義域](../data-quality-services/managing-a-composite-domain.md)。  
   
  建立新的複合定義域的方式有兩種。 第一種方式是在知識探索活動的對應步驟期間，當您正在分析資料取樣，將知識加入至新的知識庫或現有知識庫時。 第二種方式是在定義域管理活動期間，當您建立新的定義域，而不是變更現有定義域時。 為了建立複合定義域，您至少必須已經建立兩個單一定義域，以便將其加入至複合定義域。 當您建立新的複合定義域時，只有已經建立而且尚未加入至現有複合定義域的單一定義域才可使用。 單一定義域不能加入至一個以上的複合定義域，而且複合定義域不能加入至另一個複合定義域。  
@@ -71,7 +73,7 @@ ms.lasthandoff: 01/19/2018
   
 5.  輸入知識庫特有的名稱以及最多 256 個字元的描述。  
   
-6.  在 **[定義域清單]**中，選取將屬於複合定義域之一部分的定義域，並按一下向右箭號，將其移到 **[複合定義域中的定義域]** 資料表。  
+6.  在 **[定義域清單]** 中，選取將屬於複合定義域之一部分的定義域，並按一下向右箭號，將其移到 **[複合定義域中的定義域]** 資料表。  
   
 7.  按一下 [確定] 。  
   
@@ -79,17 +81,17 @@ ms.lasthandoff: 01/19/2018
   
 1.  在 **[建立複合定義域]** 對話方塊中，輸入知識庫特有的名稱以及最多 256 個字元的描述。  
   
-2.  在 **[定義域清單]**中，選取將屬於複合定義域之一部分的定義域，並按一下向右箭號，將其移到 **[複合定義域中的定義域]** 資料表。 這是單一定義域的清單，您可將其加入至您所建立的複合定義域。 只有已經建立而且尚未加入至現有複合定義域的單一定義域才可使用。 單一定義域不能加入至知識庫內一個以上的複合定義域，而且複合定義域不能加入至另一個複合定義域。  
+2.  在 **[定義域清單]** 中，選取將屬於複合定義域之一部分的定義域，並按一下向右箭號，將其移到 **[複合定義域中的定義域]** 資料表。 這是單一定義域的清單，您可將其加入至您所建立的複合定義域。 只有已經建立而且尚未加入至現有複合定義域的單一定義域才可使用。 單一定義域不能加入至知識庫內一個以上的複合定義域，而且複合定義域不能加入至另一個複合定義域。  
   
 3.  按一下 **[進階]**。  
   
-4.  針對 **[剖析方法]**選取下列其中一項：  
+4.  針對 **[剖析方法]** 選取下列其中一項：  
   
     -   **參考資料**：根據參考資料服務 (RDS) 設定資料格式的方式來剖析欄位的值。 Data Quality Services 會將複合定義域中的值傳送給 RDS，而 RDS 會根據複合定義域中的定義域來傳回更正及剖析的資料。  
   
     -   **依照順序**：根據複合定義域中的定義域順序來剖析欄位的值。 第一個值將會併入第一個定義域，第二個值將會併入第二個定義域，依此類推。  
   
-    -   **分隔符號**：根據選取 [分隔符號] 時從選項按鈕選取的分隔符號來剖析欄位的值。 這可以是 **[Tab 鍵]**、 **[分號]**、 **[逗號]**、 **[空格]**或 **[其他]**。 如果是 **[其他]**，請輸入將會當做分隔符號的值。  
+    -   **分隔符號**：根據選取 [分隔符號] 時從選項按鈕選取的分隔符號來剖析欄位的值。 這可以是 **[Tab 鍵]**、 **[分號]**、 **[逗號]**、 **[空格]** 或 **[其他]**。 如果是 **[其他]**，請輸入將會當做分隔符號的值。  
   
 5.  如果您選取 **[分隔符號]** 當做剖析方法，您也可以選取 **[使用知識庫剖析]**。 如需詳細資訊，請參閱 [Knowledge-Based Parsing](#KnowledgeBaseParsing)。  
   

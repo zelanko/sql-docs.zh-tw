@@ -1,30 +1,20 @@
 ---
-title: "LinRegPoint (MDX) |Microsoft 文件"
-ms.custom: 
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: language-reference
-f1_keywords: LINREGPOINT
-dev_langs: kbMDX
-helpviewer_keywords: LinRegPoint function
-ms.assetid: 28298d7c-2b8a-4423-ae52-9c2d6f0f0064
-caps.latest.revision: "32"
-author: Minewiskan
+title: LinRegPoint (MDX) |Microsoft 文件
+ms.date: 05/30/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: mdx
+ms.topic: reference
 ms.author: owend
-manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: 37c0f4b4ef73ff14d8c0f46208b94d1b96d995e7
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: 53d6c1eea47fd6585b5cab99e72c4ddf99ca4ca5
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34579080"
 ---
 # <a name="linregpoint-mdx"></a>LinRegPoint (MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -70,7 +60,7 @@ LinRegPoint(Slice_Expression_x, Set_Expression, Numeric_Expression_y [ ,Numeric_
 LinRegPoint([Measures].[Unit Sales],LastPeriods(10),[Measures].[Unit Sales],[Measures].[Store Sales])  
 ```  
   
-## <a name="see-also"></a>請參閱  
- [MDX 函數參考 &#40;MDX &#41;](../mdx/mdx-function-reference-mdx.md)  
+## <a name="see-also"></a>另請參閱  
+ [MDX 函數參考&#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

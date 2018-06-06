@@ -1,34 +1,23 @@
 ---
-title: "在簡單的範例 (MDX) 中使用查詢及 Slicer 軸 |Microsoft 文件"
-ms.custom: 
-ms.date: 03/04/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
-helpviewer_keywords:
-- slicer axis
-- query axis [MDX]
-ms.assetid: 85bcb26f-5971-4153-b334-61f8d8b475b5
-caps.latest.revision: 
-author: Minewiskan
+title: 在簡單的範例 (MDX) 中使用查詢及 Slicer 軸 |Microsoft 文件
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: mdx
+ms.topic: conceptual
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 5e3dd069c68623f9f0cc5f4fa90a06ca9a3568e1
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: fce95d7e51c17f6e8a0fedbec01eccf7bd8ec8c4
+ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="mdx-query-and-slicer-axes---using-axes-in-a-simple-example"></a>MDX 查詢及 Slicer 軸的簡單範例中使用軸
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
-本主題中的簡單範例說明指定和使用查詢及 Slicer 軸的基本知識。  
+  本主題中的簡單範例說明指定和使用查詢及 Slicer 軸的基本知識。  
   
 ## <a name="the-cube"></a>Cube  
  一個稱為 TestCube 的 Cube，有稱為 Route 與 Time 的兩個簡單維度。 每個維度都只有一個使用者階層，分別稱為 Route 與 Time。 因為 Cube 的量值是 Measures 維度的一部份，這個 Cube 總共有 3 個維度。  
@@ -55,7 +44,7 @@ WHERE ( [Measures].[Packages] )
 |2nd quarter|45|45|  
   
 ## <a name="see-also"></a>另請參閱  
- [指定查詢座標軸 &#40; 的內容MDX &#41;](../../../analysis-services/multidimensional-models/mdx/mdx-query-and-slicer-axes-specify-the-contents-of-a-query-axis.md)   
- [指定 Slicer 軸 &#40; 的內容MDX &#41;](../../../analysis-services/multidimensional-models/mdx/mdx-query-and-slicer-axes-specify-the-contents-of-a-slicer-axis.md)  
+ [指定查詢座標軸 & #40; 的內容MDX & #41;](../../../analysis-services/multidimensional-models/mdx/mdx-query-and-slicer-axes-specify-the-contents-of-a-query-axis.md)   
+ [指定 Slicer 軸 & #40; 的內容MDX & #41;](../../../analysis-services/multidimensional-models/mdx/mdx-query-and-slicer-axes-specify-the-contents-of-a-slicer-axis.md)  
   
   

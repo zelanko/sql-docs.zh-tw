@@ -1,36 +1,33 @@
 ---
-title: "ActualSize 屬性 (ADO) |Microsoft 文件"
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
+title: ActualSize 屬性 (ADO) |Microsoft 文件
+ms.prod: sql
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
-ms.custom: 
-ms.date: 01/19/2017
-ms.reviewer: 
+ms.technology: connectivity
+ms.custom: ''
+ms.date: 03/20/2018
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 apitype: COM
 f1_keywords:
 - Field20::ActualSize
 helpviewer_keywords:
 - ActualSize property [ADO]
 ms.assetid: 722803d0-cef5-4d4c-b79d-3f2f58052229
-caps.latest.revision: 
+caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 9c588dbf76996173dbc309ac30ef5413edc9cc5d
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 697202ef2c88d5fa33657c74713d884f2cbe916c
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="actualsize-property-ado"></a>ActualSize 屬性 (ADO)
-表示欄位的實際長度。s 值以位元組為單位。  
+表示欄位的值，以位元組為單位的實際長度。  
   
 ## <a name="settings-and-return-values"></a>設定和傳回值  
  傳回**長**值。  

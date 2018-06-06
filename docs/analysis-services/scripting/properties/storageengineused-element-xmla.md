@@ -1,38 +1,23 @@
 ---
-title: "StorageEngineUsed 元素 (XMLA) |Microsoft 文件"
-ms.custom: 
-ms.date: 03/04/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+title: StorageEngineUsed 元素 (XMLA) |Microsoft 文件
+ms.date: 5/8/2018
+ms.prod: sql
+ms.custom: assl
+ms.reviewer: owend
+ms.technology: analysis-services
 ms.topic: reference
-apiname:
-- StorageEngineUsed Element
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
-apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
-ms.assetid: 98895c10-f3c2-4d8a-be94-6128c828561d
-caps.latest.revision: 
-author: Minewiskan
+author: minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: bbd6a47e68c069ca9eef8c8fe8f414d4025ebeba
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 6d1dde201069dd920b9166602801d868dba9ccd6
+ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="storageengineused-element-xmla"></a>StorageEngineUsed 元素 (XMLA)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
-包含描述目前資料庫類型的唯讀值。  
+  包含描述目前資料庫類型的唯讀值。  
   
 ## <a name="syntax"></a>語法  
   

@@ -1,32 +1,29 @@
 ---
-title: "引數和屬性的空間索引預存程序 |Microsoft 文件"
-ms.custom: 
+title: 引數和屬性的空間索引預存程序 |Microsoft 文件
+ms.custom: ''
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: system-objects
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - TSQL
 helpviewer_keywords:
 - spatial indexes [SQL Server], stored procedures
 ms.assetid: ee26082b-c0ed-40ff-b5ad-f5f6b00f0475
-caps.latest.revision: 
+caps.latest.revision: 10
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: f0dda9bafb3f38648e2ab1de333d303c9b0e372c
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 20c747b51bd4fc20e21bedfed1f826005b1037a1
+ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="spatial-index-stored-procedures---arguments-and-properties"></a>空間索引預存程序的引數和屬性
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -38,13 +35,13 @@ ms.lasthandoff: 11/21/2017
 ## <a name="syntax"></a>語法  
  如需特定空間索引預存程序的語法，請參閱下列主題：  
   
--   [sp_help_spatial_geometry_index &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/sp-help-spatial-geometry-index-transact-sql.md)  
+-   [sp_help_spatial_geometry_index &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-spatial-geometry-index-transact-sql.md)  
   
--   [sp_help_spatial_geometry_index_xml &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/sp-help-spatial-geometry-index-xml-transact-sql.md)  
+-   [sp_help_spatial_geometry_index_xml &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-spatial-geometry-index-xml-transact-sql.md)  
   
--   [sp_help_spatial_geography_index &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/sp-help-spatial-geography-index-transact-sql.md)  
+-   [sp_help_spatial_geography_index &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-spatial-geography-index-transact-sql.md)  
   
--   [sp_help_spatial_geography_index_xml &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/sp-help-spatial-geography-index-xml-transact-sql.md)  
+-   [sp_help_spatial_geography_index_xml &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-spatial-geography-index-xml-transact-sql.md)  
   
 ## <a name="arguments"></a>引數  
  [  **@tabname =**] **'***tabname***'**  
@@ -71,7 +68,7 @@ ms.lasthandoff: 11/21/2017
  這是以 XML 片段傳回結果集的輸出參數。 *xml_output*是**xml**沒有預設值。  
   
 ## <a name="properties"></a>屬性  
- 設定 **@verboseoutput**  = 0 以傳回核心屬性，如顯示在下表中。 **@verboseoutput**  > 0 以傳回空間索引的所有屬性。  
+ 設定**@verboseoutput** = 0 以傳回核心屬性，如顯示在下表中。**@verboseoutput** > 0 以傳回空間索引的所有屬性。  
   
  **Base_Table_Rows**  
  基底資料表中的資料列數。 值是**bigint**。  
@@ -318,19 +315,19 @@ ms.lasthandoff: 11/21/2017
 ## <a name="examples"></a>範例  
  如需範例，請參閱下列主題：  
   
--   [sp_help_spatial_geometry_index &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/sp-help-spatial-geometry-index-transact-sql.md)  
+-   [sp_help_spatial_geometry_index &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-spatial-geometry-index-transact-sql.md)  
   
--   [sp_help_spatial_geometry_index_xml &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/sp-help-spatial-geometry-index-xml-transact-sql.md)  
+-   [sp_help_spatial_geometry_index_xml &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-spatial-geometry-index-xml-transact-sql.md)  
   
--   [sp_help_spatial_geography_index &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/sp-help-spatial-geography-index-transact-sql.md)  
+-   [sp_help_spatial_geography_index &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-spatial-geography-index-transact-sql.md)  
   
--   [sp_help_spatial_geography_index_xml &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/sp-help-spatial-geography-index-xml-transact-sql.md)  
+-   [sp_help_spatial_geography_index_xml &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-spatial-geography-index-xml-transact-sql.md)  
   
 ## <a name="requirements"></a>需求  
   
-## <a name="see-also"></a>請參閱＜  
- [空間索引預存程序 &#40;TRANSACT-SQL &#41;](http://msdn.microsoft.com/library/1be0f34e-3d5a-4a1f-9299-bd482362ec7a)   
- [sp_help_spatial_geometry_index &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/sp-help-spatial-geometry-index-transact-sql.md)   
+## <a name="see-also"></a>另請參閱  
+ [空間索引預存程序&#40;Transact SQL&#41;](http://msdn.microsoft.com/library/1be0f34e-3d5a-4a1f-9299-bd482362ec7a)   
+ [sp_help_spatial_geometry_index &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-spatial-geometry-index-transact-sql.md)   
  [空間索引概觀](../../relational-databases/spatial/spatial-indexes-overview.md)   
  [XQuery 基本概念](../../xquery/xquery-basics.md)   
  [XQuery 語言參考 &#40;SQL Server&#41;](../../xquery/xquery-language-reference-sql-server.md)  

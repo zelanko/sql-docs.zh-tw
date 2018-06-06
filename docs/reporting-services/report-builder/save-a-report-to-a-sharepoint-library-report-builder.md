@@ -1,27 +1,25 @@
 ---
-title: "將報表儲存至 SharePoint 文件庫 (報表產生器) | Microsoft Docs"
-ms.custom: 
+title: 將報表儲存至 SharePoint 文件庫 (報表產生器) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: report-builder
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: 4daa1eee-78b7-43d0-8b22-4a98e8fa66ba
-caps.latest.revision: "10"
+caps.latest.revision: 10
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: b3eb6581310d20ffb2f97bbd7f844fb0bdb47b2b
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: fc45abb3fef982e3d9b4a52cf39e6bff8ee1e5d3
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="save-a-report-to-a-sharepoint-library-report-builder"></a>將報表儲存至 SharePoint 文件庫 (報表產生器)
   若要將報表儲存至針對 SharePoint 整合所設定的報表伺服器，您必須瀏覽至 SharePoint 伺服器，然後建立報表伺服器的連接。 在報表定義中，與報表相關之項目的所有參考都必須使用 SharePoint 報表伺服器特有的值。 相關的項目包括子報表、鑽研報表和資源，例如以 Web 為基礎的影像。 如需詳細資訊，請參閱[指定外部項目的路徑 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/specifying-paths-to-external-items-report-builder-and-ssrs.md)。  
@@ -30,7 +28,7 @@ ms.lasthandoff: 01/09/2018
   
 ### <a name="to-save-a-report-to-a-sharepoint-site"></a>若要將報表儲存至 SharePoint 網站  
   
-1.  在報表產生器的按鈕中，按一下 **[儲存]**。 [另存為 \<報表項目>] 對話方塊隨即開啟。  
+1.  在報表產生器的按鈕中，按一下 **[儲存]**。 [另存為 <報表項目\<] 對話方塊隨即開啟。  
   
     > [!NOTE]  
     >  如果您重新儲存報表，報表會自動重新儲存到之前的位置。 使用 [另存新檔] 選項可變更位置。  

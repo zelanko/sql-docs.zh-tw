@@ -1,15 +1,14 @@
 ---
-title: "CLR 整合程式碼存取安全性 |Microsoft 文件"
-ms.custom: 
+title: CLR 整合程式碼存取安全性 |Microsoft 文件
+ms.custom: ''
 ms.date: 03/17/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
 ms.component: clr
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - UNSAFE assemblies
@@ -19,20 +18,19 @@ helpviewer_keywords:
 - code access security [CLR integration]
 - EXTERNAL_ACCESS assemblies
 ms.assetid: 2111cfe0-d5e0-43b1-93c3-e994ac0e9729
-caps.latest.revision: 
+caps.latest.revision: 28
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: b93a1955adb6f38eebd8de86599e1861a80ff75b
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 8b71c017161b2f696872c6d2dd2ba7843a474bdc
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="clr-integration-code-access-security"></a>CLR 整合程式碼存取安全性
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-Common Language Runtime (CLR) 支援稱為 Managed 程式碼之程式碼存取安全性的安全性模型。 在此模型中，將會根據程式碼的識別來授與權限給組件。 如需詳細資訊，請參閱 .NET Framework 軟體開發套件中的＜程式碼存取安全性＞一節。  
+  Common Language Runtime (CLR) 支援稱為 Managed 程式碼之程式碼存取安全性的安全性模型。 在此模型中，將會根據程式碼的識別來授與權限給組件。 如需詳細資訊，請參閱 .NET Framework 軟體開發套件中的＜程式碼存取安全性＞一節。  
   
  下列三個不同的位置會定義可決定授與給組件之權限的安全性原則：  
   
@@ -47,9 +45,9 @@ Common Language Runtime (CLR) 支援稱為 Managed 程式碼之程式碼存取�
  在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 內執行時授與給 Managed 程式碼的程式碼存取安全性權限集合是上述三個原則層級所授與之權限集合的交集。 即使 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 將權限集合授與給在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 中載入的組件，使用者及電腦層級原則也會進一步限制指定給使用者程式碼的最終權限集合。  
   
 ## <a name="sql-server-host-policy-level-permission-sets"></a>SQL Server 主機原則層級權限集合  
- 由 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 主機原則層級授與組件的程式碼存取安全性權限集合是由建立組件時指定的權限集合所決定。 有三個權限集合：**安全**， **EXTERNAL_ACCESS**和**UNSAFE** (使用指定**PERMISSION_SET** 選項[建立組件 &#40;TRANSACT-SQL &#41;](../../../t-sql/statements/create-assembly-transact-sql.md)).  
+ 由 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 主機原則層級授與組件的程式碼存取安全性權限集合是由建立組件時指定的權限集合所決定。 有三個權限集合：**安全**， **EXTERNAL_ACCESS**和**UNSAFE** (使用指定**PERMISSION_SET** 選項[建立組件&#40;TRANSACT-SQL&#41;](../../../t-sql/statements/create-assembly-transact-sql.md))。  
   
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 主機層級安全性原則層級提供給 CLR 裝載此原則是在永遠會實行之兩個原則層級下的其他原則層級。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]建立的每一個應用程式網域都會設定此原則。 此原則不適用於當 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 建立 CLR 執行個體時所生效的預設應用程式網域。  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 在主控 CLR 時，會將主機層級的安全性原則層級提供給該 CLR；這項原則是在永遠會實行之兩個原則層級之下的另一個原則層級。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]建立的每一個應用程式網域都會設定此原則。 此原則不適用於當 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 建立 CLR 執行個體時所生效的預設應用程式網域。  
   
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 主機層級原則，是系統組件的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 固定原則，以及使用者組件的使用者指定原則的組合。  
   
@@ -65,7 +63,7 @@ Common Language Runtime (CLR) 支援稱為 Managed 程式碼之程式碼存取�
 |權限|值/描述|  
 |----------------|-----------------------------|  
 |**SecurityPermission**|**執行：**執行 managed 程式碼的權限。|  
-|**SqlClientPermission**|**內容連接 = true**，**內容連接 = yes**： 只可以使用內容連接，連接字串只能指定值為"內容連接 = true"或"內容連接 = yes"。<br /><br /> **AllowBlankPassword = false:**不允許空白密碼。|  
+|**SqlClientPermission**|**內容連接 = true**，**內容連接 = yes**： 只可以使用內容連接，連接字串只能指定值為"內容連接 = true"或"內容連接 = yes"。<br /><br /> **AllowBlankPassword = false:** 不允許空白密碼。|  
   
 ### <a name="externalaccess"></a>EXTERNAL_ACCESS  
  EXTERNAL_ACCESS 組件具有相同的權限**安全**組件，包含要存取外部系統資源，例如檔案、 網路、 環境變數和登錄的額外功能。  
@@ -82,7 +80,7 @@ Common Language Runtime (CLR) 支援稱為 Managed 程式碼之程式碼存取�
 |**KeyContainerPermission**|**不受限制的：**完整允許對金鑰容器存取。|  
 |**NetworkInformationPermission**|**存取：** Pinging 被允許。|  
 |**RegistryPermission**|允許讀取權限**HKEY_CLASSES_ROOT**， **HKEY_LOCAL_MACHINE**， **HKEY_CURRENT_USER**， **HKEY_CURRENT_CONFIG**，和**HKEY_USERS。**|  
-|**SecurityPermission**|**判斷提示：**可判斷提示這個程式碼的所有呼叫端具有操作的必要權限的能力。<br /><br /> **ControlPrincipal:**操作主體物件的能力。<br /><br /> **執行：**執行 managed 程式碼的權限。<br /><br /> **SerializationFormatter:**能夠提供序列化服務。|  
+|**SecurityPermission**|**判斷提示：**可判斷提示這個程式碼的所有呼叫端具有操作的必要權限的能力。<br /><br /> **ControlPrincipal:** 操作主體物件的能力。<br /><br /> **執行：**執行 managed 程式碼的權限。<br /><br /> **SerializationFormatter:** 能夠提供序列化服務。|  
 |**SmtpPermission**|**存取：**允許的 SMTP 主機連接埠 25 的傳出連接。|  
 |**SocketPermission**|**連接：**允許傳輸位址上的傳出連接 （所有連接埠、 所有通訊協定）。|  
 |**SqlClientPermission**|**不受限制的：**完整允許存取資料來源。|  
@@ -112,7 +110,7 @@ Common Language Runtime (CLR) 支援稱為 Managed 程式碼之程式碼存取�
   
 |||||  
 |-|-|-|-|  
-||**SAFE**|**EXTERNAL_ACCESS**|**UNSAFE**|  
+||**安全**|**EXTERNAL_ACCESS**|**不安全**|  
 |**程式碼存取安全性權限**|僅限 Execute|對外部資源的 Execute + 存取權|不受限制 (包括 P/Invoke)|  
 |**程式設計模型限制**|是|是|無限制|  
 |**可驗證性需求**|是|是|否|  

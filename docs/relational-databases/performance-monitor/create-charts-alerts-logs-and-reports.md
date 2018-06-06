@@ -1,17 +1,16 @@
 ---
-title: "建立圖表、警示、記錄和報表 | Microsoft Docs"
-ms.custom: 
+title: 建立圖表、警示、記錄和報表 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
 ms.component: performance-monitor
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - System Monitor [SQL Server], charts and reports
 - charts [SQL Server]
@@ -22,19 +21,19 @@ helpviewer_keywords:
 - System Monitor [SQL Server], logs
 - Windows System Monitor [SQL Server], logs
 ms.assetid: c9162b37-e5dc-43d1-a3aa-1e9ebc69fecc
-caps.latest.revision: 
+caps.latest.revision: 21
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 0c84f299a27b69def3acf965f7a3cf6d4ab74017
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 02a4ab9af70761821edb91113e53df6502ea4b19
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="create-charts-alerts-logs-and-reports"></a>建立圖表、警示、記錄和報表
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 系統監視器可讓您建立圖表、警示、記錄和報表，以監視 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的執行個體。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  「系統監視器」可讓您建立圖表、警示、記錄和報表，以監視 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的執行個體。  
   
 ## <a name="charts"></a>圖表  
  圖表可以監視所選取物件和計數器目前的效能；例如 CPU 使用量或磁碟 I/O。 您可以在圖表中加入各種不同的系統監視器物件和計數器組合。 也可將 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 物件和計數器加入圖表。  

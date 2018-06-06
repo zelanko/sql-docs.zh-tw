@@ -1,27 +1,25 @@
 ---
-title: "RsReportServer.config 組態檔 | Microsoft Docs"
-ms.custom: 
+title: RsReportServer.config 組態檔 | Microsoft Docs
+ms.custom: ''
 ms.date: 06/12/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: report-server
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: 60e0a0b2-8a47-4eda-a5df-3e5e403dbdbc
-caps.latest.revision: 
+caps.latest.revision: 20
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: Active
-ms.openlocfilehash: 87efa1c9f3fd309ac6b9da150545ac7e08630cd5
-ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
+ms.openlocfilehash: 1be44e3e1f30aab2be4c446e6efd23610b9ae68b
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="rsreportserverconfig-configuration-file"></a>RsReportServer.config 組態檔
 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]**RsReportServer.config** 檔案會儲存報表伺服器 Web 服務和背景處理所使用的設定。 所有 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 應用程式都是在讀取 RSReportServer.config 檔中儲存之組態設定的單一處理序中執行。 原生模式和 SharePoint 模式的報表伺服器都使用 RSReportServer.config，不過，這兩個模式不會使用組態檔中的所有相同設定。 SharePoint 模式版本的檔案較小，因為 SharePoint 模式的許多設定是儲存在 SharePoint 組態資料庫中，而不是檔案中。 本主題描述針對原生模式和 SharePoint 模式所安裝的預設組態檔，以及由組態檔控制的部分重要設定和行為。  
@@ -45,7 +43,7 @@ RSReportServer.config 位於下列資料夾，端視報表伺服器模式而定�
 C:\Program Files\Microsoft SQL Server\MSRS13.MSSQLSERVER\Reporting Services\ReportServer  
 ```
 
-**[!INCLUDE[applies](../../includes/applies-md.md)]**SQL Server Reporting Services 中的 Power BI 報表 2017 年 1 月技術預覽
+**[!INCLUDE[applies](../../includes/applies-md.md)]** SQL Server Reporting Services 中的 Power BI 報表 2017 年 1 月技術預覽
 ```  
 C:\Program Files\Microsoft SQL Server Reporting Services\RSServer\ReportServer
 ```  
@@ -65,7 +63,7 @@ C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\15\WebServi
  下表提供有關檔案第一個部分中顯示之一般組態設定的資訊。 設定會依其出現在組態檔的順序顯示。 資料表的最後一個資料行會指出此設定適用於原生模式的報表伺服器 **(N)** 、SharePoint 模式的報表伺服器 **(S)** ，還是兩者。  
   
 > [!NOTE]  
->  在本主題中，「最大整數」是指 2147483647 的 INT_MAX 值。  如需詳細資訊，請參閱 [Integer Limits](http://msdn.microsoft.com/library/296az74e\(v=vs.110\).aspx) (整數限制) (http://msdn.microsoft.com/library/296az74e(v=vs.110).aspx)。  
+>  在本主題中，「最大整數」是指 2147483647 的 INT_MAX 值。  如需詳細資訊，請參閱[整數限制](http://msdn.microsoft.com/library/296az74e\(v=vs.110\).aspx) (http://msdn.microsoft.com/library/296az74e(v=vs.110).aspx)。  
   
 |設定|描述|[模式]|  
 |-------------|-----------------|----------|  
@@ -98,7 +96,7 @@ C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\15\WebServi
  **URLReservations** 會針對目前的執行個體，定義報表伺服器 Web 服務及入口網站的 HTTP 存取。 當您設定報表伺服器時，URL 會保留並儲存在 HTTP.SYS 中。  
   
 > [!WARNING]  
->  如果是 SharePoint 模式，便會在 SharePoint 管理中心設定 URL 保留項目。 如需詳細資訊，請參閱 [設定備用存取對應 (http://technet.microsoft.com/library/cc263208(office.12).aspx)](http://technet.microsoft.com/library/cc263208\(office.12\).aspx)。  
+>  如果是 SharePoint 模式，便會在 SharePoint 管理中心設定 URL 保留項目。 如需詳細資訊，請參閱[設定備用存取對應(http://technet.microsoft.com/library/cc263208(office.12).aspx)](http://technet.microsoft.com/library/cc263208\(office.12\).aspx)。  
   
  請勿直接修改組態檔中的 URL 保留項目。 請務必使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 組態管理員或報表伺服器 WMI 提供者建立或修改原生模式報表伺服器的 URL 保留項目。 如果您修改組態檔中的值，可能會損毀保留項目，因而導致執行階段發生伺服器錯誤，或將解除安裝本軟體時不會移除的遺棄保留項目留在 HTTP.SYS 中。 如需詳細資訊，請參閱[設定報表伺服器 URL &#40;SSRS 組態管理員&#41;](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md) 和[組態檔中的 URL &#40;SSRS 組態管理員&#41;](../../reporting-services/install-windows/urls-in-configuration-files-ssrs-configuration-manager.md)。  
   

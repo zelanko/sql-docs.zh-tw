@@ -1,31 +1,23 @@
 ---
-title: "資料來源物件 (TMSL) |Microsoft 文件"
-ms.custom: 
-ms.date: 05/30/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services, azure-analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+title: 資料來源物件 (TMSL) |Microsoft 文件
+ms.date: 05/07/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: tmsl
 ms.topic: reference
-ms.assetid: 1357ae7e-30a4-481a-831c-7b046fe15aa4
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 13f647affa03844562f479223df57e1f8a2102f8
-ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
+ms.openlocfilehash: 1dd73918ca2d52cf38dba74455cf225a8c15ac3e
+ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="datasources-object-tmsl"></a>資料來源物件 (TMSL)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
-定義模型將資料加入至模型，或傳遞透過 DirectQuery 模式查詢中的匯入期間所使用的資料來源的連接。  在 DirectQuery 模式的模型只能有一個**DataSource**物件。  
+  定義模型將資料加入至模型，或傳遞透過 DirectQuery 模式查詢中的匯入期間所使用的資料來源的連接。  在 DirectQuery 模式的模型只能有一個**DataSource**物件。  
   
  除非您要建立、 取代或改變資料來源物件本身，在您的指令碼 （例如，在資料分割的指令碼） 中參考的任何資料來源必須是現有**DataSource**模型中的物件。  
   
@@ -75,7 +67,7 @@ ms.lasthandoff: 02/23/2018
  選擇性字串，可識別關聯式資料庫中，連接上使用，如果沒有其他方式指定連接字串的 managed 的資料提供者名稱。  
   
 ## <a name="usage"></a>使用方式  
- **資料來源**物件使用於[Alter 命令 &#40;TMSL &#41;](../../analysis-services/tabular-models-scripting-language-commands/alter-command-tmsl.md)，[建立命令 &#40;TMSL &#41;](../../analysis-services/tabular-models-scripting-language-commands/create-command-tmsl.md)， [CreateOrReplace 命令 &#40;TMSL &#41;](../../analysis-services/tabular-models-scripting-language-commands/createorreplace-command-tmsl.md)，[刪除命令 &#40;TMSL &#41;](../../analysis-services/tabular-models-scripting-language-commands/delete-command-tmsl.md)，[重新整理命令 &#40;TMSL &#41;](../../analysis-services/tabular-models-scripting-language-commands/refresh-command-tmsl.md)，和[MergePartitions 命令 &#40;TMSL &#41;](../../analysis-services/tabular-models-scripting-language-commands/mergepartitions-command-tmsl.md).  
+ **資料來源**物件使用於[Alter 命令&#40;TMSL&#41;](../../analysis-services/tabular-models-scripting-language-commands/alter-command-tmsl.md)，[建立命令&#40;TMSL&#41;](../../analysis-services/tabular-models-scripting-language-commands/create-command-tmsl.md)， [CreateOrReplace 命令&#40;TMSL&#41;](../../analysis-services/tabular-models-scripting-language-commands/createorreplace-command-tmsl.md)， [Delete 命令&#40;TMSL&#41;](../../analysis-services/tabular-models-scripting-language-commands/delete-command-tmsl.md)，[重新整理命令&#40;TMSL&#41;](../../analysis-services/tabular-models-scripting-language-commands/refresh-command-tmsl.md)，和[MergePartitions 命令&#40;TMSL&#41;](../../analysis-services/tabular-models-scripting-language-commands/mergepartitions-command-tmsl.md)。  
   
  A **DataSource**物件是屬性的模型，但也可以指定為給定模型與資料庫之間的一對一對應的資料庫物件的屬性。  資料分割的 SQL 查詢也指定**DataSource**，只能使用一組縮減的屬性。  
   
@@ -94,7 +86,7 @@ ms.lasthandoff: 02/23/2018
 ]  
 ```  
   
-## <a name="full-syntax"></a>完整的語法  
+## <a name="full-syntax"></a>完整語法  
  下面是資料來源物件模型的結構描述表示法。  
   
 ```  
@@ -189,6 +181,6 @@ ms.lasthandoff: 02/23/2018
 ## <a name="see-also"></a>另請參閱  
  [表格式模型指令碼語言 &#40;TMSL&#41; 參考](../../analysis-services/tabular-model-scripting-language-tmsl-reference.md)   
  [DirectQuery 模式](../../analysis-services/tabular-models/directquery-mode-ssas-tabular.md)   
- [設定 HTTP 存取 Analysis Services 上 Internet Information Services &#40; IIS &#41;8.0](../../analysis-services/instances/configure-http-access-to-analysis-services-on-iis-8-0.md)  
+ [設定 HTTP 存取 Analysis Services 上 Internet Information Services & #40; IIS & #41;8.0](../../analysis-services/instances/configure-http-access-to-analysis-services-on-iis-8-0.md)  
   
   

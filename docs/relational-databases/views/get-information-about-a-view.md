@@ -1,17 +1,14 @@
 ---
-title: "取得檢視的資訊 | Microsoft Docs"
-ms.custom: 
+title: 取得檢視的資訊 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
-ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
-ms.component: views
-ms.reviewer: 
+ms.prod: sql
+ms.prod_service: table-view-index, sql-database, sql-data-warehouse, pdw
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- dbe-views
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: table-view-index
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 f1_keywords:
 - sql13.swb.viewproperties.general.f1
 helpviewer_keywords:
@@ -24,19 +21,20 @@ helpviewer_keywords:
 - status information [SQL Server], views
 - view dependencies
 ms.assetid: 05a73e33-8f85-4fb6-80c1-1b659e753403
-caps.latest.revision: 
-author: sstein
+caps.latest.revision: 30
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: cfbfda8cf3759f89bf2b0f8ae43257e64e82c779
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: f58da14e69a9a4d0cf01a1ecd1376cf24c6f3894
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="get-information-about-a-view"></a>取得檢視的資訊
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-pdw-md.md)]
-您可以透過使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ，取得 [!INCLUDE[tsql](../../includes/tsql-md.md)]中檢視定義或屬性的資訊。 您可能需要查看檢視的定義才能了解如何從來源資料表衍生出資料；或是查看檢視所定義的資料。  
+  您可以透過使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ，取得 [!INCLUDE[tsql](../../includes/tsql-md.md)]中檢視定義或屬性的資訊。 您可能需要查看檢視的定義才能了解如何從來源資料表衍生出資料；或是查看檢視所定義的資料。  
   
 > [!IMPORTANT]  
 >  如果變更檢視所參考的物件名稱，就必須修改檢視，使其文字反映新的名稱。 因此，在重新命名物件前，應先顯示物件的相依性，以判斷是否有任何檢視會受預期的變更所影響。  
@@ -64,7 +62,7 @@ ms.lasthandoff: 02/03/2018
   
 #### <a name="get-view-properties-by-using-object-explorer"></a>透過使用物件總管取得檢視屬性  
   
-1.  在 **[物件總管]**中，按一下資料庫旁邊的加號，此資料庫包含您要查看其屬性的檢視，然後按一下加號展開 **[檢視]** 資料夾。  
+1.  在 **[物件總管]** 中，按一下資料庫旁邊的加號，此資料庫包含您要查看其屬性的檢視，然後按一下加號展開 **[檢視]** 資料夾。  
   
 2.  以滑鼠右鍵按一下要查看其屬性的檢視，然後選取 **[屬性]**。  
   
@@ -105,7 +103,7 @@ ms.lasthandoff: 02/03/2018
   
 #### <a name="getting-view-properties-by-using-the-view-designer-tool"></a>透過使用檢視設計工具取得檢視屬性  
   
-1.  在 **[物件總管]**中，展開資料庫，此資料庫包含您要查看其屬性的檢視，然後展開 **[檢視]** 資料夾。  
+1.  在 **[物件總管]** 中，展開資料庫，此資料庫包含您要查看其屬性的檢視，然後展開 **[檢視]** 資料夾。  
   
 2.  以滑鼠右鍵按一下要查看其屬性的檢視，然後選取 **[設計]**。  
   
@@ -147,7 +145,7 @@ ms.lasthandoff: 02/03/2018
      顯示 SQL 陳述式的描述。 若要查看或編輯整個描述，請按一下 [描述]，再按屬性右邊的省略符號 **(…)** 。 您的註解中可能包含使用檢視的人及使用時間等這類資訊。  
   
      **Top 規格**  
-     展開以顯示 **[Top]**、 **[運算式]**、 **[百分比]**屬性，以及 **[WITH TIES]** 屬性。  
+     展開以顯示 **[Top]**、 **[運算式]**、 **[百分比]** 屬性，以及 **[WITH TIES]** 屬性。  
   
      **(Top)**  
      指定檢視將包含 TOP 子句，而這個子句只會傳回結果集內的前 n 個資料列，或前百分之 n 的資料列。 預設值是檢視會傳回結果集裡前 10 個資料列。 使用此選項變更傳回的資料列數目，或指定不同的百分比。  
@@ -174,7 +172,7 @@ ms.lasthandoff: 02/03/2018
   
 #### <a name="to-get-dependencies-on-the-view"></a>取得檢視的相依性  
   
-1.  在 **[物件總管]**中，展開資料庫，此資料庫包含您要查看其屬性的檢視，然後展開 **[檢視]** 資料夾。  
+1.  在 **[物件總管]** 中，展開資料庫，此資料庫包含您要查看其屬性的檢視，然後展開 **[檢視]** 資料夾。  
   
 2.  以滑鼠右鍵按一下要查看其屬性的檢視，然後選取 **[檢視相依性]**。  
   
@@ -186,7 +184,7 @@ ms.lasthandoff: 02/03/2018
   
 #### <a name="to-get-the-definition-and-properties-of-a-view"></a>取得檢視定義和屬性  
   
-1.  在 **[物件總管]**中，連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的執行個體。  
+1.  在 **[物件總管]** 中，連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的執行個體。  
   
 2.  在標準列上，按一下 **[新增查詢]**。  
   
@@ -216,7 +214,7 @@ ms.lasthandoff: 02/03/2018
   
 #### <a name="to-get-the-dependencies-of-a-view"></a>取得檢視的相依性  
   
-1.  在 **[物件總管]**中，連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的執行個體。  
+1.  在 **[物件總管]** 中，連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的執行個體。  
   
 2.  在標準列上，按一下 **[新增查詢]**。  
   

@@ -1,31 +1,28 @@
 ---
-title: "設定用於資料庫引擎存取的 Windows 防火牆 | Microsoft Docs"
-ms.custom: 
+title: 設定用於資料庫引擎存取的 Windows 防火牆 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
-ms.prod_service: database-engine
-ms.service: 
-ms.component: configure-windows
-ms.reviewer: 
+ms.prod: sql
+ms.prod_service: high-availability
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: database-engine
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: configuration
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - connections [SQL Server], firewall systems
 - firewall systems, [Database Engine]
 - security [SQL Server], firewalls
 ms.assetid: 0093b43c-c6b5-4574-9b30-3a0e91e1a1f9
-caps.latest.revision: "57"
+caps.latest.revision: 57
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.workload: Active
-ms.openlocfilehash: 49a59b9225ffff183e537025de7f503ba58429d6
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: aa4d659caca70d7ff01168d40148d35f23d25908
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="configure-a-windows-firewall-for-database-engine-access"></a>設定用於 Database Engine 存取的 Windows 防火牆
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -74,7 +71,7 @@ ms.lasthandoff: 01/18/2018
   
 1.  在 **[開始]** 功能表上、按一下 **[執行]**，輸入 **WF.msc**，然後按一下 **[確定]**。  
   
-2.  在 **[具有進階安全性的 Windows 防火牆]**的左窗格中，以滑鼠右鍵按一下 **[輸入規則]**，然後按一下動作窗格中的 **[新增規則]** 。  
+2.  在 **[具有進階安全性的 Windows 防火牆]** 的左窗格中，以滑鼠右鍵按一下 **[輸入規則]**，然後按一下動作窗格中的 **[新增規則]** 。  
   
 3.  在 **[規則類型]** 對話方塊中，選取 **[通訊埠]**，然後按 **[下一步]**。  
   
@@ -90,7 +87,7 @@ ms.lasthandoff: 01/18/2018
   
 1.  在 **[開始]** 功能表上、按一下 **[執行]**，輸入 **WF.msc**，然後按一下 **[確定]**。  
   
-2.  在 **[具有進階安全性的 Windows 防火牆]**的左窗格中，以滑鼠右鍵按一下 **[輸入規則]**，然後按一下動作窗格中的 **[新增規則]** 。  
+2.  在 **[具有進階安全性的 Windows 防火牆]** 的左窗格中，以滑鼠右鍵按一下 **[輸入規則]**，然後按一下動作窗格中的 **[新增規則]** 。  
   
 3.  在 **[規則類型]** 對話方塊中，選取 **[程式]**，然後按 **[下一步]**。  
   

@@ -1,16 +1,14 @@
 ---
-title: "資料類型轉換 (資料庫引擎) | Microsoft Docs"
-ms.custom: 
+title: 資料類型轉換 (資料庫引擎) | Microsoft Docs
+ms.custom: ''
 ms.date: 7/23/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
 ms.component: t-sql|data-types
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: t-sql
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - TSQL
@@ -23,16 +21,16 @@ helpviewer_keywords:
 - explicit data type conversions [SQL Server]
 - converting data types [SQL Server], about converting data types
 ms.assetid: ffacf45e-a488-48d0-9bb0-dcc7fd365299
-caps.latest.revision: 
+caps.latest.revision: 37
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Active
-ms.openlocfilehash: 811eacd3dc0cbbd622fc6eac6ad91a6e740554f4
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 3a293fa97d10d08ce86714af6bb8ed27b10e2f78
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="data-type-conversion-database-engine"></a>資料類型轉換 (資料庫引擎)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -96,7 +94,7 @@ CAST ( $157.27 AS VARCHAR(10) )
 |**decimal**、**numeric**|**String**|  
 |**bit**|**布林**|  
 |**binary**、**varbinary**、**image**|一維 **Byte()** 陣列|  
-|**int**|**長整數**|  
+|**int**|**Long**|  
 |**smallint**|**Integer**|  
 |**tinyint**|**位元組**|  
 |**float**|**Double**|  
@@ -105,7 +103,7 @@ CAST ( $157.27 AS VARCHAR(10) )
 |**datetime**、**smalldatetime**|**Date**|  
 |設成 NULL 的任何類型|**Variant** 設為 Null|  
   
-所有單一的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 值皆會轉換成單一的 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 值，但不包括 **binary**、**varbinary** 及 **image** 值。 這些值會在 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 中轉換成一維的 **Byte()** 陣列。 此陣列的範圍為 **Byte (**0 到 *length*1**)**，其中 *length* 是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**binary**、**varbinary** 或 **image** 值中的位元組數。
+所有單一的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 值皆會轉換成單一的 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 值，但不包括 **binary**、**varbinary** 及 **image** 值。 這些值會在 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 中轉換成一維的 **Byte()** 陣列。 此陣列的範圍為 **Byte (** 0 到 *length*1 **)**，其中 *length* 是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**binary**、**varbinary** 或 **image** 值中的位元組數。
   
 這些轉換是從 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 資料類型到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料類型。
   

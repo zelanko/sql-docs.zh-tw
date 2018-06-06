@@ -1,16 +1,15 @@
 ---
-title: "使用規則與分析資料更改多邊形、線條與點顯示 | Microsoft Docs"
-ms.custom: 
+title: 使用規則與分析資料更改多邊形、線條與點顯示 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: report-design
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 f1_keywords:
 - "10538"
 - "10537"
@@ -22,16 +21,15 @@ f1_keywords:
 - "10536"
 - sql13.rtp.rptdesigner.maplinelayerproperties.widthrules.f1
 ms.assetid: 7f1f5584-37b4-4fa2-ae44-8988c5f0c744
-caps.latest.revision: "12"
+caps.latest.revision: 12
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 428f89c51b60f1e9f33170ab03cb43a87caf6a78
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 3e78b0319639852d8bb4cac5be3f3b2157ac0703
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="vary-polygon-line-and-point-display-by-rules-and-analytical-data"></a>使用規則與分析資料更改多邊形、線條與點顯示
   地圖圖層上多邊形、線條與點的顯示選項是透過設定圖層的選項、設定圖層上地圖元素的規則，或是覆寫圖層上特定內嵌地圖元素的選項來控制。  
@@ -123,7 +121,7 @@ ms.lasthandoff: 01/09/2018
   
  若要控制圖例顯示的位置，使用 [圖例屬性] 對話方塊來指定相對於地圖檢視區的位置。 如需詳細資訊，請參閱 [變更地圖圖例、色階與相關的規則 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/change-map-legends-color-scale-and-associated-rules-report-builder-and-ssrs.md)。  
   
- 圖例會自動展開來顯示圖例標題或圖例文字。 若要格式化圖例項目的文字，使用地圖圖例關鍵字與自訂格式。 如需相關資訊，請參閱 [To change the format of content in a legend](../../reporting-services/report-design/change-map-legends-color-scale-and-associated-rules-report-builder-and-ssrs.md#ChangeFormatItems)。  
+ 圖例會自動展開來顯示圖例標題或圖例文字。 若要格式化圖例項目的文字，使用地圖圖例關鍵字與自訂格式。 如需相關資訊，請參閱 [變更圖例中的內容格式](../../reporting-services/report-design/change-map-legends-color-scale-and-associated-rules-report-builder-and-ssrs.md#ChangeFormatItems)。  
   
  下表顯示您可以使用之不同格式的範例。  
   

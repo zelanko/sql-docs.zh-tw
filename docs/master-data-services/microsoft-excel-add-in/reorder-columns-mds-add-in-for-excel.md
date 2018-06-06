@@ -1,30 +1,31 @@
 ---
-title: "重新排序資料行 (適用於 Excel 的 MDS 增益集) | Microsoft Docs"
-ms.custom: 
+title: 重新排序資料行 (適用於 Excel 的 MDS 增益集) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: mds
-ms.service: 
 ms.component: microsoft-excel-add-in
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - master-data-services
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: ac00462e-c0f7-4b8d-86f2-d9eda2598a15
-caps.latest.revision: 
+caps.latest.revision: 7
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 782958cb18c22f39968d33509d4a8366029898b1
-ms.sourcegitcommit: 6ac1956307d8255dc544e1063922493b30907b80
+ms.openlocfilehash: d7beab32f65e8d67e61d9ff08928dfcdfafbe760
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="reorder-columns-mds-add-in-for-excel"></a>重新排序資料行 (適用於 Excel 的 MDS 增益集)
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
   在 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]中，您可以在載入之前篩選清單，藉以重新排序資料行。  
   
  當您重新排序 **[篩選]** 對話方塊中的屬性時，會使用新的順序，將資料載入至 Excel。 不過，下次您篩選屬性資料時，此順序將會回復到原始設計的順序。 若要永久變更順序，管理員應該在主資料管理員的 **[系統管理]** 區域中變更順序。 如需相關資訊，請參閱 [Change the Order of Attributes](../../master-data-services/change-the-order-of-attributes.md)。  

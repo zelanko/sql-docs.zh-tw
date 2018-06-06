@@ -1,27 +1,24 @@
 ---
-title: "修復失敗的 SQL Server 安裝 | Microsoft Docs"
-ms.custom: 
+title: 修復失敗的 SQL Server 安裝 | Microsoft Docs
+ms.custom: ''
 ms.date: 09/08/2017
-ms.prod: sql-non-specified
-ms.prod_service: database-engine
-ms.service: 
-ms.component: install-windows
-ms.reviewer: 
+ms.prod: sql
+ms.prod_service: install
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- setup-install
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: install
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: 90c11b28-892b-44d6-978e-0eee48c75b7d
-caps.latest.revision: 
+caps.latest.revision: 18
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 51c0f4d73f3032497b8a428b4093c16754499b79
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: ea35103d16dec83826a467a5c437d1aeca049c19
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="repair-a-failed-sql-server-installation"></a>修復失敗的 SQL Server 安裝
 

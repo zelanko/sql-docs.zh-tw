@@ -1,16 +1,15 @@
 ---
-title: "XQuery 初構 |Microsoft 文件"
-ms.custom: 
+title: XQuery 初構 |Microsoft 文件
+ms.custom: ''
 ms.date: 08/09/2016
-ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
-ms.service: 
+ms.prod: sql
+ms.prod_service: sql
 ms.component: xquery
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -22,16 +21,15 @@ helpviewer_keywords:
 - namespaces [XQuery]
 - default namespace declarations
 ms.assetid: 03924684-c5fd-44dc-8d73-c6ab90f5e069
-caps.latest.revision: 
+caps.latest.revision: 26
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: bb14308461be8c13e8a683ae842a63647191c9e0
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: debf4aac70b13c5bb5cbb37db2b71687f33a3df1
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="modules-and-prologs---xquery-prolog"></a>模組和初構-XQuery 初構
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

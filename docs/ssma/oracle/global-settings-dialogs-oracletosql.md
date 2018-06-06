@@ -1,34 +1,32 @@
 ---
-title: "全域設定 （對話方塊） (OracleToSQL) |Microsoft 文件"
-ms.prod: sql-non-specified
+title: 全域設定 （對話方塊） (OracleToSQL) |Microsoft 文件
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
 ms.component: ssma-oracle
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ssma
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: 43989355-cebf-4d8b-ba3d-fa8546e70230
-caps.latest.revision: "3"
+caps.latest.revision: 3
 author: Shamikg
 ms.author: Shamikg
 manager: v-pelars
-ms.workload: Inactive
-ms.openlocfilehash: aa5f62dbde4489b17f2863fcbe1ebbf751e1198d
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 0c59a7e8fc766af0a68a1130e9422797396f151b
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="global-settings-dialogs--oracletosql"></a>全域設定 （對話方塊） (OracleToSQL)
 使用的對話方塊頁面**通用設定**對話方塊來指定的預設使用者動作和 SSMA 的警告設定。  
   
 若要存取對話方塊設定在**工具**功能表上，選取**通用設定**，按一下  **GUI**底部的左的窗格，然後選取**對話方塊**。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
 **覆寫物件之前，即發出警告**  
 SSMA 會將物件轉換成 SQL Server 中，當部分物件可能已存在於專案的 SQL Server 中繼資料。 這些物件可能已經轉換，或物件可能只需要在目標結構描述中相同名稱做為您要轉換的物件。  
   

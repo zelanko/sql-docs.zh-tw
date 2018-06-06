@@ -1,30 +1,29 @@
 ---
-title: "步驟 5: DataControl 已進行使用 （RDS 教學課程） |Microsoft 文件"
-ms.prod: sql-non-specified
+title: '步驟 5: DataControl 已進行使用 （RDS 教學課程） |Microsoft 文件'
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - RDS tutorial [ADO], datacontrol made usable
 ms.assetid: ed5c4a24-9804-4c85-817e-317652acb9b4
-caps.latest.revision: 
+caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: bc51b8047a4eddc007dfbb46cbc087676800d54b
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
-ms.translationtype: MT
+ms.openlocfilehash: 470e965fe84216c7c50476e1add74b3d05d561f2
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="step-5-datacontrol-is-made-usable-rds-tutorial"></a>步驟 5: DataControl 已進行使用 （RDS 教學課程）
 傳回**資料錄集**物件是可供使用。 您可以檢查、 瀏覽，或進行編輯，就像其他任何**資料錄集**。 您可以使用達成**資料錄集**取決於您的環境。 Visual Basic 和 Visual c + + 已經可以使用的視覺控制項**資料錄集**直接或間接與啟用的資料控制項的協助。  
@@ -34,7 +33,7 @@ ms.lasthandoff: 02/09/2018
   
  例如，如果您要在 Microsoft Internet Explorer 中顯示網頁，可能會想要顯示**資料錄集**物件視覺控制項中的資料。 在網頁上的視覺控制項不能存取**資料錄集**直接物件。 不過，他們可以存取**資料錄集**物件透過[.RDSDataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md)。 **.RDSDataControl**的視覺效果會變成可用時控制其[SourceRecordset](../../../ado/reference/rds-api/recordset-sourcerecordset-properties-rds.md)屬性設定為**資料錄集**物件。  
   
- 視覺控制項物件必須具有其**DATASRC**參數設定為**.RDSDataControl**，且其**DATAFLD**屬性設定為**資料錄集**物件欄位 （資料行）。  
+ 視覺控制項物件必須具有其**DATASRC**參數設定為 **.RDSDataControl**，且其**DATAFLD**屬性設定為**資料錄集**物件欄位 （資料行）。  
   
  在本教學課程中，設定**SourceRecordset**屬性：  
   

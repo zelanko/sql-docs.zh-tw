@@ -1,16 +1,14 @@
 ---
-title: "SQL 寫入器服務 | Microsoft Docs"
-ms.custom: 
+title: SQL 寫入器服務 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
-ms.prod_service: database-engine
-ms.service: 
-ms.component: configure-windows
-ms.reviewer: 
+ms.prod: sql
+ms.prod_service: high-availability
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: database-engine
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: configuration
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - VDI [SQL Server]
 - restoring [SQL Server], SQL Writer Service
@@ -23,19 +21,19 @@ helpviewer_keywords:
 - MSDE Writer
 - VSS
 ms.assetid: 0f299867-f499-4c2a-ad6f-b2ef1869381d
-caps.latest.revision: "29"
+caps.latest.revision: 29
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: ee2c7079b0ef44294585c8b8aaa4548fdf12892f
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: b6fab60401596743dc1cc38dd0c115e42ec89c71
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sql-writer-service"></a>SQL 寫入器服務
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] SQL 寫入器服務能透過「磁碟區陰影複製服務」架構，提供附加功能給 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的備份和還原。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  SQL 寫入器服務能透過「磁碟區陰影複製服務」架構，提供附加功能給 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的備份和還原。  
   
  系統會自動安裝 SQL 寫入器服務。 當磁碟區陰影複製服務 (VSS) 應用程式要求備份或還原時，此服務必須已在執行中。 若要設定此服務，請使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows Services Applet。 SQL 寫入器服務會安裝在所有作業系統上。  
   

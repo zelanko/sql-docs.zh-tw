@@ -1,30 +1,23 @@
 ---
-title: "模型物件 (TMSL) |Microsoft 文件"
-ms.custom: 
-ms.date: 05/30/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services, azure-analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+title: 模型物件 (TMSL) |Microsoft 文件
+ms.date: 05/07/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: tmsl
 ms.topic: reference
-ms.assetid: 9382d0d6-2d4b-49ad-a0eb-35970f0f3afb
-caps.latest.revision: "7"
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: dadb4807613b23449fd87dfea35acc0d6d201615
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 6f60b0998dd344cdc3151da1a1c8920495b36917
+ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="model-object-tmsl"></a>模型物件 (TMSL)
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]定義表格式模型。 沒有一個模型，每個資料庫和只有一個可以在任何指定的命令中指定的資料庫。 資料庫物件是父系物件。  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
+  定義表格式模型。 沒有一個模型，每個資料庫和只有一個可以在任何指定的命令中指定的資料庫。 資料庫物件是父系物件。  
   
  模型定義太大而無法重現整個語法中的主題。 基於這個理由，反白顯示的主要組件部分語法可以找到下，子物件的連結。  
   
@@ -53,13 +46,13 @@ ms.lasthandoff: 01/08/2018
  定序序列。 請參閱[Analysis Services 的全球化案例](../../analysis-services/globalization-scenarios-for-analysis-services.md)如需詳細資訊。  
   
  資料表  
- 完整資料表在模型中，包括資料分割、 資料行、 量值、 Kpi 和註解的集合。 請參閱[資料表物件 &#40;TMSL &#41;](../../analysis-services/tabular-models-scripting-language-objects/tables-object-tmsl.md)如需詳細資訊。  
+ 完整資料表在模型中，包括資料分割、 資料行、 量值、 Kpi 和註解的集合。 請參閱[Tables 物件&#40;TMSL&#41; ](../../analysis-services/tabular-models-scripting-language-objects/tables-object-tmsl.md)如需詳細資訊。  
   
  關聯性  
- 指定每一對資料表，其中包含設定篩選方向和安全性的屬性之間的關聯性。 請參閱[關聯性物件 &#40;TMSL &#41;](../../analysis-services/tabular-models-scripting-language-objects/relationships-object-tmsl.md)如需詳細資訊。  
+ 指定每一對資料表，其中包含設定篩選方向和安全性的屬性之間的關聯性。 請參閱[關聯性物件&#40;TMSL&#41; ](../../analysis-services/tabular-models-scripting-language-objects/relationships-object-tmsl.md)如需詳細資訊。  
   
  資料來源  
- 一或多個連接至外部資料庫提供資料給模型，或使用通過查詢。 請參閱[資料來源物件 &#40;TMSL &#41;](../../analysis-services/tabular-models-scripting-language-objects/datasources-object-tmsl.md)如需詳細資訊。  
+ 一或多個連接至外部資料庫提供資料給模型，或使用通過查詢。 請參閱[資料來源物件&#40;TMSL&#41; ](../../analysis-services/tabular-models-scripting-language-objects/datasources-object-tmsl.md)如需詳細資訊。  
   
  角色  
  將資料庫權限、 成員的帳戶，和 （選擇性） 在 DAX 中的自訂存取控制的安全性篩選相關聯的物件。  
@@ -70,7 +63,7 @@ ms.lasthandoff: 01/08/2018
  建立時，取代或改變模型的物件，指定物件定義的所有讀寫屬性。 省略的讀 / 寫屬性會被視為刪除。  
   
 ## <a name="partial-syntax"></a>部分語法  
- 因為這個物件定義是很大，則會列出只有第一個層級的屬性。 請參閱[物件定義的表格式模型指令碼語言 &#40;TMSL &#41;](../../analysis-services/tabular-models-scripting-language-objects/tmsl-reference-tabular-objects.md)子物件的清單。  
+ 因為這個物件定義是很大，則會列出只有第一個層級的屬性。 請參閱[表格式模型指令碼語言中的物件定義&#40;TMSL&#41; ](../../analysis-services/tabular-models-scripting-language-objects/tmsl-reference-tabular-objects.md)子物件的清單。  
   
 ```  
     "model": {  
@@ -95,7 +88,7 @@ ms.lasthandoff: 01/08/2018
   
 ```  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [表格式模型指令碼語言 &#40;TMSL&#41; 參考](../../analysis-services/tabular-model-scripting-language-tmsl-reference.md)   
  [Analysis Services 中表格式模型的相容性層級](../../analysis-services/tabular-models/compatibility-level-for-tabular-models-in-analysis-services.md)  
   

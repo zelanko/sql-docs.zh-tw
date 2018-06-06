@@ -1,16 +1,14 @@
 ---
-title: sys.fn_get_audit_file (Transact-SQL) | Microsoft Docs
-ms.custom: 
+title: sys.fn_get_audit_file (TRANSACT-SQL) |Microsoft 文件
+ms.custom: ''
 ms.date: 05/16/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
 ms.component: system-functions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: system-objects
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - fn_get_audit_file_TSQL
@@ -23,16 +21,16 @@ helpviewer_keywords:
 - sys.fn_get_audit_file function
 - fn_get_audit_file function
 ms.assetid: d6a78d14-bb1f-4987-b7b6-579ddd4167f5
-caps.latest.revision: 
+caps.latest.revision: 27
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 3b7a7d79b8cbaf65e803d042efd86a790e2eeb1d
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: e09491347fec046bef09dc2fca06756998055150
+ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="sysfngetauditfile-transact-sql"></a>sys.fn_get_audit_file (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -67,9 +65,9 @@ fn_get_audit_file ( file_pattern,
  
     這個引數用來指定 blob URL （包括儲存體端點和容器）。 雖然它不支援星號萬用字元，您可以使用的部分檔案 (blob) 名稱的前置詞 （而不是完整的 blob 名稱） 來收集開頭為此前置詞的多個檔案 (blob)。 例如：
  
-      - **\<Storage_endpoint\>/\<容器\>/\<ServerName\>/\<DatabaseName\> /** -會收集所有稽核檔案 (blob) 的特定資料庫。    
+      - **\<Storage_endpoint\>/\<容器\>/\<ServerName\>/\<DatabaseName\> /**  -會收集所有稽核檔案 (blob) 的特定資料庫。    
       
-      - **\<Storage_endpoint\>/\<容器\>/\<ServerName\>/\<DatabaseName\> /\<AuditName\>/\<CreationDate\>/\<FileName\>.xel** -收集指定的稽核檔案 (blob)。
+      - **\<Storage_endpoint\>/\<容器\>/\<ServerName\>/\<DatabaseName\> / \<AuditName\>/\<CreationDate\>/\<FileName\>.xel** -收集指定的稽核檔案 (blob)。
   
 > [!NOTE]  
 >  如果傳遞路徑而沒有包含檔案名稱模式，則會產生錯誤。  
@@ -119,16 +117,18 @@ fn_get_audit_file ( file_pattern,
 |additional_information|**nvarchar(4000)**|只套用到單一事件的唯一資訊會以 XML 形式傳回。 少量的可稽核動作有包含這類資訊。<br /><br /> 針對具有相關聯 TSQL 堆疊的動作，以 XML 格式顯示 TSQL 堆疊的單一層級。 此 XML 格式為：<br /><br /> `<tsql_stack><frame nest_level = '%u' database_name = '%.*s' schema_name = '%.*s' object_name = '%.*s' /></tsql_stack>`<br /><br /> Frame nest_level 表示框架的目前巢狀層級。 模組名稱會以三部分格式表示 (database_name、schema_name 和 object_name)。  模組名稱將會剖析為逸出無效的 xml 字元，例如`'\<'`， `'>'`， `'/'`， `'_x'`。 它們會逸出為`_xHHHH\_`。 HHHH 代表字元的四位數十六進位 UCS-2 碼。<br /><br /> 可為 Null。 當此事件未報告其他資訊時，則會傳回 NULL。|  
 |file_name|**varchar(260)**|記錄來自之稽核記錄檔的路徑和名稱。 不可為 Null。|  
 |audit_file_offset|**bigint**|檔案中包含稽核記錄的緩衝區位移。 不可為 Null。|  
-|user_defined_event_id|**smallint**|**適用於**： [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。<br /><br /> 做為引數傳遞使用者定義的事件識別碼**sp_audit_write**。 **NULL**系統事件 （預設值） 和非零的使用者定義的事件。 如需詳細資訊，請參閱[sp_audit_write &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/sp-audit-write-transact-sql.md).|  
+|user_defined_event_id|**smallint**|**適用於**： [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。<br /><br /> 做為引數傳遞使用者定義的事件識別碼**sp_audit_write**。 **NULL**系統事件 （預設值） 和非零的使用者定義的事件。 如需詳細資訊，請參閱[sp_audit_write &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-audit-write-transact-sql.md)。|  
 |user_defined_information|**nvarchar(4000)**|**適用於**： [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。<br /><br /> 用來記錄使用者想要記錄的任何額外資訊 |使用稽核記錄檔**sp_audit_write**預存程序。|  
 |audit_schema_version |**int** | |  
-|sequence_group_id |**varbinary** | 僅 SQL Server （從 2016年開始） |  
-|transaction_id |**bigint** | 僅 SQL Server （從 2016年開始） |  
-|client_ip |**nvarchar(128)** | Azure SQL DB + （起 2017年） 的 SQL Server |  
-|application_name |**nvarchar(128)** | Azure SQL DB + （起 2017年） 的 SQL Server |  
-|duration_milliseconds |**bigint** | 只有 azure SQL DB |  
-|response_rows |**bigint** | 只有 azure SQL DB |  
-|affected_rows |**bigint** | 只有 azure SQL DB |  
+|sequence_group_id |**varbinary** | **適用於**： 僅 SQL Server （從 2016年開始） |  
+|transaction_id |**bigint** | **適用於**： 僅 SQL Server （從 2016年開始） |  
+|client_ip |**nvarchar(128)** | **適用於**: Azure SQL DB + （起 2017年） 的 SQL Server |  
+|application_name |**nvarchar(128)** | **適用於**: Azure SQL DB + （起 2017年） 的 SQL Server |  
+|duration_milliseconds |**bigint** | **適用於**： 只有 Azure SQL DB |  
+|response_rows |**bigint** | **適用於**： 只有 Azure SQL DB |  
+|affected_rows |**bigint** | **適用於**： 只有 Azure SQL DB |  
+|connection_id |GUID | **適用於**： 只有 Azure SQL DB |
+|data_sensitivity_information |nvarchar(4000) | **適用於**： 只有 Azure SQL DB |
   
 ## <a name="remarks"></a>備註  
  如果*file_pattern*引數傳遞給**fn_get_audit_file**參考的路徑或檔案不存在，或如果檔案不是稽核檔案， **MSG_INVALID_AUDIT_FILE**會傳回錯誤訊息。  
@@ -176,21 +176,21 @@ fn_get_audit_file ( file_pattern,
   GO  
   ```
 
-如需有關如何建立稽核的完整範例，請參閱[SQL Server Audit &#40; Database engine&#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md)。
+如需如何建立稽核的完整範例，請參閱 [SQL Server Audit &#40;Database Engine&#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md) (SQL Server 稽核 &#40;資料庫引擎&#41)。
 
 如需設定 Azure SQL Database 稽核的詳細資訊，請參閱[開始使用 SQL Database 稽核](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-auditing)。
   
 ## <a name="see-also"></a>另請參閱  
- [建立伺服器稽核 &#40;TRANSACT-SQL &#41;](../../t-sql/statements/create-server-audit-transact-sql.md)   
- [ALTER SERVER AUDIT &#40;TRANSACT-SQL &#41;](../../t-sql/statements/alter-server-audit-transact-sql.md)   
- [DROP SERVER AUDIT &#40;TRANSACT-SQL &#41;](../../t-sql/statements/drop-server-audit-transact-sql.md)   
- [建立伺服器稽核規格 &#40;TRANSACT-SQL &#41;](../../t-sql/statements/create-server-audit-specification-transact-sql.md)   
- [ALTER SERVER AUDIT SPECIFICATION &#40;TRANSACT-SQL &#41;](../../t-sql/statements/alter-server-audit-specification-transact-sql.md)   
- [DROP SERVER AUDIT SPECIFICATION &#40;TRANSACT-SQL &#41;](../../t-sql/statements/drop-server-audit-specification-transact-sql.md)   
- [建立資料庫稽核規格 &#40;TRANSACT-SQL &#41;](../../t-sql/statements/create-database-audit-specification-transact-sql.md)   
- [ALTER DATABASE AUDIT SPECIFICATION &#40;TRANSACT-SQL &#41;](../../t-sql/statements/alter-database-audit-specification-transact-sql.md)   
- [卸除資料庫稽核規格 &#40;TRANSACT-SQL &#41;](../../t-sql/statements/drop-database-audit-specification-transact-sql.md)   
- [ALTER AUTHORIZATION &#40;TRANSACT-SQL &#41;](../../t-sql/statements/alter-authorization-transact-sql.md)   
+ [CREATE SERVER AUDIT &#40;Transact-SQL&#41;](../../t-sql/statements/create-server-audit-transact-sql.md)   
+ [ALTER SERVER AUDIT  &#40;Transact-SQL&#41;](../../t-sql/statements/alter-server-audit-transact-sql.md)   
+ [DROP SERVER AUDIT  &#40;Transact-SQL&#41;](../../t-sql/statements/drop-server-audit-transact-sql.md)   
+ [CREATE SERVER AUDIT SPECIFICATION &#40;Transact-SQL&#41;](../../t-sql/statements/create-server-audit-specification-transact-sql.md)   
+ [ALTER SERVER AUDIT SPECIFICATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-server-audit-specification-transact-sql.md)   
+ [DROP SERVER AUDIT SPECIFICATION &#40;Transact-SQL&#41;](../../t-sql/statements/drop-server-audit-specification-transact-sql.md)   
+ [CREATE DATABASE AUDIT SPECIFICATION &#40;Transact-SQL&#41;](../../t-sql/statements/create-database-audit-specification-transact-sql.md)   
+ [ALTER DATABASE AUDIT SPECIFICATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-audit-specification-transact-sql.md)   
+ [DROP DATABASE AUDIT SPECIFICATION &#40;Transact-SQL&#41;](../../t-sql/statements/drop-database-audit-specification-transact-sql.md)   
+ [ALTER AUTHORIZATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-authorization-transact-sql.md)   
  [sys.server_audits &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-server-audits-transact-sql.md)   
  [sys.server_file_audits &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-server-file-audits-transact-sql.md)   
  [sys.server_audit_specifications &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-server-audit-specifications-transact-sql.md)   

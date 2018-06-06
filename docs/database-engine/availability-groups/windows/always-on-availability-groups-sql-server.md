@@ -1,16 +1,14 @@
 ---
-title: "AlwaysOn 可用性群組 (SQL Server) | Microsoft Docs"
-ms.custom: 
+title: AlwaysOn 可用性群組 (SQL Server) | Microsoft Docs
+ms.custom: ''
 ms.date: 05/17/2016
-ms.prod: sql-non-specified
-ms.prod_service: database-engine
-ms.service: 
-ms.component: availability-groups
-ms.reviewer: 
+ms.prod: sql
+ms.prod_service: high-availability
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: dbe-high-availability
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: high-availability
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - Availability Groups [SQL Server], about
 - secondary replicas, see Availability Groups [SQL Server]
@@ -18,16 +16,16 @@ helpviewer_keywords:
 - AlwaysOn [SQL Server], see Availability Groups [SQL Server]
 - Availability Groups [SQL Server]
 ms.assetid: aa427606-8422-4656-b205-c9e665ddc8c1
-caps.latest.revision: "35"
+caps.latest.revision: 35
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.workload: Active
-ms.openlocfilehash: bcb310866603ad8bc36ed1c08d9dcc121eca87d9
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: d8bff088048ed6a547eae419a870d32da9ba8112
+ms.sourcegitcommit: b3bb41424249de198f22d9c6d40df4996f083aa6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 05/17/2018
+ms.locfileid: "34300576"
 ---
 # <a name="always-on-availability-groups-sql-server"></a>AlwaysOn 可用性群組 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -36,7 +34,8 @@ ms.lasthandoff: 01/18/2018
   
  可用性群組會在可用性複本層級容錯移轉。 容錯移轉不是因資料庫問題 (例如資料庫因為資料檔案遺失而變得可疑、資料庫刪除或交易記錄損毀) 而造成的。  
  
- >[注意] AlwaysOn 可用性群組是這個可用性功能的完整正式名稱。 縮寫是 AG，而不是 AOAG 或 AAG。 
+ >[!NOTE]
+ >AlwaysOn 可用性群組是這個可用性功能的完整正式名稱。 縮寫是 AG，而不是 AOAG 或 AAG。 
   
 ##  <a name="Benefits"></a> 優點  
  [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 提供了一組豐富的選項，可改善資料庫可用性並實現改善的資源使用方式。 關鍵元件如下：  

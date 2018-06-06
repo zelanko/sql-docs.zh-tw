@@ -1,16 +1,14 @@
 ---
-title: "識別索引鍵資料行使用 sql: key-fields-欄位 (SQLXML 4.0) |Microsoft 文件"
-ms.custom: 
+title: '識別索引鍵資料行使用 sql: key-fields-欄位 (SQLXML 4.0) |Microsoft 文件'
+ms.custom: ''
 ms.date: 03/16/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
 ms.component: sqlxml
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- dbe-xml
-ms.tgt_pltfrm: 
+ms.technology: xml
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - nesting XML results
@@ -24,27 +22,27 @@ helpviewer_keywords:
 - hierarchical relationships [SQLXML]
 - key-fields annotation
 ms.assetid: 1a5ad868-8602-45c4-913d-6fbb837eebb0
-caps.latest.revision: 
+caps.latest.revision: 27
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: ac42ee657dd46f070eccf5d63ae9a454c3306e95
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: a96060e6efaf0623cbc4c9fb738af3863f1010fe
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="identifying-key-columns-using-sqlkey-fields-sqlxml-40"></a>使用 sql:key-fields 來識別索引鍵資料行 (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-針對 XSD 結構描述指定 XPath 查詢時，在大部分情況下都需要索引鍵資訊，才能在結果中取得正確的巢狀結構。 指定**sql: key-fields-欄位**註解是確保會產生適當階層的方式。  
+  針對 XSD 結構描述指定 XPath 查詢時，在大部分情況下都需要索引鍵資訊，才能在結果中取得正確的巢狀結構。 指定**sql: key-fields-欄位**註解是確保會產生適當階層的方式。  
   
 > [!NOTE]  
 >  若要確保正確的巢狀，建議您指定**sql: key-fields-欄位**對於對應至資料表的項目。 產生的 XML 會區分基礎結果集的排序。 如果**sql: key-fields-欄位**未指定，則產生的 XML 可能格式不正確。  
   
  值**sql: key-fields-欄位**識別唯一識別關聯性中的資料列的資料行。 如果需要多個資料行才能唯一識別某個資料列，這些資料行值就會以空格隔開。  
   
- 您必須使用**sql: key-fields-欄位**註解，當某個元素包含 **\<sql: relationship >**的元素和子元素之間定義，但不提供主索引鍵父元素中指定的資料表。  
+ 您必須使用**sql: key-fields-欄位**註解，當某個元素包含 **\<sql: relationship >** 的元素和子元素之間定義，但不提供主索引鍵父元素中指定的資料表。  
   
 ## <a name="examples"></a>範例  
  若要使用下列範例建立工作範例，您必須符合某些需求。 如需詳細資訊，請參閱[執行 SQLXML 範例的需求](../../relational-databases/sqlxml/requirements-for-running-sqlxml-examples.md)。  
@@ -52,9 +50,9 @@ ms.lasthandoff: 02/12/2018
 ### <a name="a-producing-the-appropriate-nesting-when-sqlrelationship-does-not-provide-sufficient-information"></a>A. 產生適當巢狀結構時\<sql: relationship > 沒有提供足夠的資訊  
  此範例將示範在**sql: key-fields-欄位**必須指定。  
   
- 請考慮下列結構描述。 結構描述指定的階層之間**\<順序 >**和**\<客戶 >**所在的項目**\<順序 >**元素是父系和**\<客戶 >**元素是子系。  
+ 請考慮下列結構描述。 結構描述指定的階層之間**\<順序 >** 和**\<客戶 >** 所在的項目**\<順序 >** 元素是父系和**\<客戶 >** 元素是子系。  
   
- **\<Sql: relationship >**標記用來指定父子式關聯性。 它會將 Sales.SalesOrderHeader 資料表中的 CustomerID 識別為參考 Sales.Customer 資料表中 CustomerID 子索引鍵的父索引鍵。 中提供的資訊 **\<sql: relationship >**不足以唯一識別父資料表 (Sales.SalesOrderHeader) 中的資料列。 因此，如果沒有**sql: key-fields-欄位**註解，產生的階層是不正確。  
+ **\<Sql: relationship >** 標記用來指定父子式關聯性。 它會將 Sales.SalesOrderHeader 資料表中的 CustomerID 識別為參考 Sales.Customer 資料表中 CustomerID 子索引鍵的父索引鍵。 中提供的資訊 **\<sql: relationship >** 不足以唯一識別父資料表 (Sales.SalesOrderHeader) 中的資料列。 因此，如果沒有**sql: key-fields-欄位**註解，產生的階層是不正確。  
   
  與**sql: key-fields-欄位**上指定**\<順序 >**、 註解可唯一識別父系 （Sales.SalesOrderHeader 資料表） 中的資料列，而其子項目會出現下方其父代。  
   
@@ -160,7 +158,7 @@ ms.lasthandoff: 02/12/2018
   
 1.  複製上述的結構描述程式碼，並將其貼到文字檔中。 將檔案儲存為 KeyFields2.xml。  
   
-2.  複製下列範本，並將其貼到文字檔中。 將檔案儲存為 KeyFields2T.xml，並放在儲存 KeyFields2.xml 的相同目錄中。 範本中的 XPath 查詢會傳回所有 **\<HumanResources.Employee >**項目：  
+2.  複製下列範本，並將其貼到文字檔中。 將檔案儲存為 KeyFields2T.xml，並放在儲存 KeyFields2.xml 的相同目錄中。 範本中的 XPath 查詢會傳回所有 **\<HumanResources.Employee >** 項目：  
   
     ```  
     <ROOT xmlns:sql="urn:schemas-microsoft-com:xml-sql">  

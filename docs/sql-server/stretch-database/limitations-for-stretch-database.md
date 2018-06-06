@@ -1,33 +1,31 @@
 ---
-title: "Stretch Database 的限制 | Microsoft Docs"
-ms.custom: 
+title: Stretch Database 的限制 | Microsoft Docs
+ms.custom: ''
 ms.date: 06/14/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
 ms.component: stretch-database
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-stretch
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - Stretch Database, limitations
 - Stretch Database, blocking issues
 - limitations (Stretch Database)
 - blocking issues (Stretch Database)
 ms.assetid: 2b1fbec1-7859-44fc-8417-724fc57a59c0
-caps.latest.revision: 
+caps.latest.revision: 26
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 549e8ebe2550fabaa9992a44718b4be4929cacf0
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 3a6802b180c123f708c23ab657ce8064a0a3384b
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="limitations-for-stretch-database"></a>Stretch Database 的限制
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly.md)]

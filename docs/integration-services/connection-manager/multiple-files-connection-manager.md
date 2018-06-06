@@ -1,17 +1,16 @@
 ---
-title: "多個檔案連線管理員 | Microsoft Docs"
-ms.custom: 
+title: 多個檔案連線管理員 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/03/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
 ms.component: connection-manager
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - folders [Integration Services], connections
 - files [Integration Services], connections
@@ -20,22 +19,21 @@ helpviewer_keywords:
 - connections [Integration Services], files
 - multiple file connections
 ms.assetid: 10bdc56e-c5cd-4ddb-b2f7-375fe57fe8b2
-caps.latest.revision: 
+caps.latest.revision: 36
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 5ff3fcef1362333dc1ac2de5774d63ce025b8557
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 1b558fa9dc8e8a65cc112376c636ec7e5ad6dc06
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="multiple-files-connection-manager"></a>多個檔案連接管理員
   「多個檔案」連接管理員會啟用封裝以參考現有的檔案和資料夾，或是在執行階段建立檔案和資料夾。  
   
 > [!NOTE]  
->  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 中的內建工作和資料流程元件不會使用「多個檔案」連接管理員。 但是，您可以在指令碼工作或指令碼元件中使用這個連接管理員。 如需有關如何在指令碼工作中使用連接管理員的資訊，請參閱＜ [Connecting to Data Sources in the Script Task](../../integration-services/extending-packages-scripting/task/connecting-to-data-sources-in-the-script-task.md)＞。 如需有關如何在指令碼元件中使用連接管理員的詳細資訊，請參閱＜ [Connecting to Data Sources in the Script Component](../../integration-services/extending-packages-scripting/data-flow-script-component/connecting-to-data-sources-in-the-script-component.md)＞。  
+>  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 中的內建工作和資料流程元件不會使用「多個檔案」連接管理員。 但是，您可以在指令碼工作或指令碼元件中使用這個連接管理員。 如需有關如何在指令碼工作中使用連接管理員的資訊，請參閱＜ [連接至指令碼工作中的資料來源](../../integration-services/extending-packages-scripting/task/connecting-to-data-sources-in-the-script-task.md)＞。 如需有關如何在指令碼元件中使用連接管理員的詳細資訊，請參閱＜ [連接到指令碼元件中的資料來源](../../integration-services/extending-packages-scripting/data-flow-script-component/connecting-to-data-sources-in-the-script-component.md)＞。  
   
 ## <a name="usage-types-of-the-multiple-files-connection-manager"></a>多個檔案連接管理員的使用類型  
  「多個檔案」連接管理員的 **FileUsageType** 屬性會指定如何使用連接。 「多個檔案」連接管理員可以建立檔案、建立資料夾、使用現有的檔案，以及使用現有的資料夾。  
@@ -66,7 +64,7 @@ ms.lasthandoff: 02/15/2018
   
  \<*path*>|\<*path*>  
   
- 您也可以使用萬用字元來指定多個檔案或資料夾。 例如，若要參考 C 磁碟機上的所有文字檔， **ConnectionString** 屬性的值可以設定為 C:\\\*.txt。  
+ 您也可以使用萬用字元來指定多個檔案或資料夾。 例如，若要參考 C 磁碟機上的所有文字檔， **ConnectionString** 屬性的值可以設定為 C:\\*.txt。  
   
  您可以透過 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師或以程式設計方式設定屬性。  
   

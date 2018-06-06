@@ -1,16 +1,16 @@
 ---
-title: "tablediff 公用程式 |Microsoft 文件"
-ms.custom: 
+title: tablediff 公用程式 |Microsoft 文件
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
 ms.component: tabledif
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: database-engine
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - comparing data
 - tablediff utility
@@ -20,19 +20,20 @@ helpviewer_keywords:
 - troubleshooting [SQL Server replication], non-convergence
 - non-convergence [SQL Server]
 ms.assetid: 3c3cb865-7a4d-4d66-98f2-5935e28929fc
-caps.latest.revision: "30"
+caps.latest.revision: 30
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: b397ef06f491da3d7b74de11c21f0f64dc7f5814
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
-ms.translationtype: MT
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: daf978c77bca856ebc380c95bdca7185bcdee836
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.translationtype: MTE
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="tablediff-utility"></a>tablediff 公用程式
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]**Tablediff**公用程式用來比較兩個資料表資料的非聚合狀況，並特別適用於疑難排解複寫拓撲中的非聚合。 您可以在命令提示字元之下，或在批次檔中，利用這個公用程式來執行下列工作：  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+  **tablediff** 公用程式用來比較兩份資料表之資料的非聚合狀況，當進行複寫拓撲中之非聚合狀況的疑難排解時，它尤其有用。 您可以在命令提示字元之下，或在批次檔中，利用這個公用程式來執行下列工作：  
   
 -   在扮演複寫簽發者之 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 執行個體的來源資料表，與扮演複製訂閱者的一或多個 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 執行個體的目的地資料表之間，每個資料列做比較。  
   
@@ -85,7 +86,7 @@ tablediff
  傳回支援的參數清單。  
   
  **-sourceserver** *source_server_name*[**\\***instance_name*]  
- 這是來源伺服器的名稱。 指定 *預設執行個體的* source_server_name [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]。 指定*source_server_name***\\***instance_name*的具名執行個體[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]。  
+ 這是來源伺服器的名稱。 指定 *預設執行個體的* source_server_name [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]。 為 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的具名執行個體指定 *source_server_name***\\*** instance_name*。  
   
  **-sourcedatabase** *source_database*  
  這是來源資料庫的名稱。  
@@ -109,7 +110,7 @@ tablediff
  在比較期間，來源資料表以 TABLOCK 和 HOLDLOCK 資料表提示鎖定。  
   
  **-destinationserver** *destination_server_name*[**\\***instance_name*]  
- 這是目的地伺服器的名稱。 指定 *預設執行個體的* destination_server_name [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]。 指定*destination_server_name***\\***instance_name*的具名執行個體[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]。  
+ 這是目的地伺服器的名稱。 指定 *預設執行個體的* destination_server_name [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]。 為 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的具名執行個體指定 *destination_server_name***\\*** instance_name*。  
   
  **-destinationdatabase** *subscription_database*  
  這是目的地資料庫的名稱。  
@@ -170,13 +171,13 @@ tablediff
   
 ## <a name="return-value"></a>傳回值  
   
-|Value|描述|  
+|ReplTest1|描述|  
 |-----------|-----------------|  
 |**0**|成功|  
 |**1**|嚴重錯誤|  
 |**2**|資料表差異|  
   
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>Remarks  
  **tablediff** 公用程式不能與非[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 伺服器一起使用。  
   
  不支援具有 **sql_variant** 資料類型資料行的資料表。  

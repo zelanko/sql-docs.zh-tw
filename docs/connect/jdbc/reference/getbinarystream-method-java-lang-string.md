@@ -1,30 +1,29 @@
 ---
-title: "getBinaryStream 方法 (java.lang.String) |Microsoft 文件"
-ms.custom: 
+title: getBinaryStream 方法 (java.lang.String) |Microsoft 文件
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
-ms.component: jdbc
-ms.reviewer: 
+ms.prod: sql
+ms.prod_service: connectivity
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
-ms.topic: article
-apiname: SQLServerResultSet.getBinaryStream (java.lang.String)
-apilocation: sqljdbc.jar
+ms.technology: connectivity
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
+apiname:
+- SQLServerResultSet.getBinaryStream (java.lang.String)
+apilocation:
+- sqljdbc.jar
 apitype: Assembly
 ms.assetid: 149609b5-a6de-4e23-a440-7061775d0899
-caps.latest.revision: "10"
+caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
-ms.workload: Inactive
-ms.openlocfilehash: 3449b1dbf5f72fda0bb885973655f9fa0fa3d0de
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+manager: craigg
+ms.openlocfilehash: 3054c8af398a2158b9fd779c668593ee7dc86fde
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="getbinarystream-method-javalangstring"></a>getBinaryStream 方法 (java.lang.String)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -41,7 +40,7 @@ public java.io.InputStream getBinaryStream(java.lang.String columnName)
 #### <a name="parameters"></a>參數  
  *columnName*  
   
- A**字串**，其中包含資料行名稱。  
+ 包含資料行名稱的**字串**。  
   
 ## <a name="return-value"></a>傳回值  
  InputStream 物件。  
@@ -59,8 +58,8 @@ public java.io.InputStream getBinaryStream(java.lang.String columnName)
 > [!NOTE]  
 >  必須先讀取傳回之資料流中的所有資料，然後才可以取得其他任何資料行的值。 下一次呼叫 getter 方法時會以隱含方式關閉此資料流。 此外，資料流可以傳回 0 InputStream.available 方法呼叫時，是否有資料可用。  
   
-## <a name="see-also"></a>請參閱＜  
- [getBinaryStream 方法 &#40;SQLServerResultSet &#41;](../../../connect/jdbc/reference/getbinarystream-method-sqlserverresultset.md)   
+## <a name="see-also"></a>另請參閱  
+ [getBinaryStream 方法&#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/getbinarystream-method-sqlserverresultset.md)   
  [SQLServerResultSet 成員](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
  [SQLServerResultSet 類別](../../../connect/jdbc/reference/sqlserverresultset-class.md)  
   

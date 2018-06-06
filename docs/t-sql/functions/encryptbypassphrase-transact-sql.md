@@ -1,16 +1,14 @@
 ---
 title: ENCRYPTBYPASSPHRASE (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/03/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
 ms.component: t-sql|functions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: t-sql
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - ENCRYPTBYPASSPHRASE
@@ -22,16 +20,15 @@ helpviewer_keywords:
 - encryption [SQL Server], symmetric keys
 - symmetric keys [SQL Server], ENCRYPTBYPASSPHRASE function
 ms.assetid: f8dbb9e6-94d6-40d7-8b38-6833a409d597
-caps.latest.revision: 
+caps.latest.revision: 35
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 0fa00253d9f707e844baca9dc1baa807533ba2ed
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 28f5d5ebf1c5ca7ca7782b8849ef2fc9a282d6e5
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="encryptbypassphrase-transact-sql"></a>ENCRYPTBYPASSPHRASE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -70,7 +67,7 @@ EncryptByPassPhrase ( { 'passphrase' | @passphrase }
  指出雜湊是否要與純文字一起加密。  
   
  *authenticator*  
- 要衍生驗證器的資料。 **sysname**。  
+ 要衍生驗證器的資料。 **sysname**.  
   
  @authenticator  
  含有要衍生驗證器之資料的變數。  

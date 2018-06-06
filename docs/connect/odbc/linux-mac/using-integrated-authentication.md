@@ -1,28 +1,26 @@
 ---
-title: "使用整合式的驗證 |Microsoft 文件"
-ms.custom: 
+title: 使用整合式的驗證 |Microsoft 文件
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
-ms.component: odbc
-ms.reviewer: 
+ms.prod: sql
+ms.prod_service: connectivity
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
-ms.topic: article
-helpviewer_keywords: integrated authentication
+ms.technology: connectivity
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
+helpviewer_keywords:
+- integrated authentication
 ms.assetid: 9499ffdf-e0ee-4d3c-8bca-605371eb52d9
-caps.latest.revision: "23"
+caps.latest.revision: 23
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
-ms.workload: On Demand
-ms.openlocfilehash: 162b94d551ea8625b6b22fafec61e19038dc2051
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+manager: craigg
+ms.openlocfilehash: c70de16565cd90c3ca594fffcbbcc82bae89b90e
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="using-integrated-authentication"></a>使用整合式驗證
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -87,7 +85,7 @@ Driver='ODBC Driver 13 for SQL Server';Server=your_server;Trusted_Connection=yes
   
 -   應用程式伺服器會驗證為不同的資料庫，並連接到[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]。  
   
--   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]另一個資料庫的資料庫使用者身分進行驗證 ([!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]。  
+-   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] 另一個資料庫的資料庫使用者身分進行驗證 ([!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]。  
   
 在設定整合式驗證之後，認證將會傳遞至連結的伺服器。  
   
@@ -99,17 +97,17 @@ Driver='ODBC Driver 13 for SQL Server';Server=your_server;Trusted_Connection=yes
   
 它是使用錯誤`-T`與`-U`或`-P`選項。
   
-## <a name="supported-syntax-for-an-spn-registered-by-includessnoversionincludesssnoversionmdmd"></a>支援註冊的 SPN 語法[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]
+## <a name="supported-syntax-for-an-spn-registered-by-includessnoversionincludesssnoversionmdmd"></a>支援註冊的 SPN 語法 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]
 
 Spn 在連接字串或連接屬性中所使用的語法如下所示：  
 
-|語法|描述|  
+|語法|Description|  
 |----------|---------------|  
 |MSSQLSvc/*fqdn*:*port*|使用 TCP 時，此為提供者產生的預設 SPN。 *port* 是 TCP 通訊埠編號。 *fqdn* 是完整的網域名稱。|  
   
 ## <a name="authenticating-a-linux-or-macos-computer-with-active-directory"></a>Linux 或 macOS 電腦與 Active Directory 驗證
 
-若要設定 Kerberos，輸入資料`krb5.conf`檔案。 `krb5.conf`處於`/etc/`但您可以參考另一個檔案，例如使用語法`export KRB5_CONFIG=/home/dbapp/etc/krb5.conf`。 下列是範例`krb5.conf`檔案：  
+若要設定 Kerberos，輸入資料`krb5.conf`檔案。 `krb5.conf` 處於`/etc/`但您可以參考另一個檔案，例如使用語法`export KRB5_CONFIG=/home/dbapp/etc/krb5.conf`。 下列是範例`krb5.conf`檔案：  
   
 ```  
 [libdefaults]  
@@ -132,7 +130,7 @@ Linux 或 macOS 電腦上的時間和 Kerberos 金鑰發佈中心 (KDC) 上的�
 
 如需驗證與 Active Directory 的 Linux 或 macOS 電腦的詳細資訊，請參閱[與 Active Directory 驗證 Linux 用戶端](http://technet.microsoft.com/magazine/2008.12.linux.aspx#id0060048)和[與 Active Directory整合OSX的最佳作法](http://training.apple.com/pdf/Best_Practices_for_Integrating_OS_X_with_Active_Directory.pdf). 如需有關設定 Kerberos 的詳細資訊，請參閱[MIT Kerberos 文件](https://web.mit.edu/kerberos/krb5-1.12/doc/index.html)。
 
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
 [程式設計指導方針](../../../connect/odbc/linux-mac/programming-guidelines.md)
 
 [版本資訊](../../../connect/odbc/linux-mac/release-notes.md)

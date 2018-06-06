@@ -1,42 +1,23 @@
 ---
-title: "Microsoft 決策樹演算法 |Microsoft 文件"
-ms.custom: 
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
-helpviewer_keywords:
-- predictions [Analysis Services], discrete attributes
-- predictions [Analysis Services], continuous attributes
-- algorithms [data mining]
-- discrete attributes [Analysis Services]
-- classification algorithms [Analysis Services]
-- discrete columns [Analysis Services]
-- decision tree algorithms [Analysis Services]
-- decision trees [Analysis Services]
-- continuous columns
-- regression algorithms [Analysis Services]
-ms.assetid: 95ffe66f-c261-4dc5-ad57-14d2d73205ff
-caps.latest.revision: 
-author: Minewiskan
+title: Microsoft 決策樹演算法 |Microsoft 文件
+ms.date: 05/08/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: data-mining
+ms.topic: conceptual
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 68821f25ad1a0defca193fa2c8023f64def0da1b
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 9d4bbe16f28adf0fe3f3cf73f12a18e9d0e7f20f
+ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="microsoft-decision-trees-algorithm"></a>Microsoft 決策樹演算法
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-[!INCLUDE[msCoName](../../includes/msconame-md.md)] 決策樹演算法是一種分類和迴歸演算法，可用於離散和連續屬性的預測模型。  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 決策樹演算法是一種分類和迴歸演算法，可用於離散和連續屬性的預測模型。  
   
  針對分隔屬性，此演算法依據資料集內的輸入資料行之間的關聯性來產生預測。 它會使用這些資料行的值 (稱為狀態) 來預測您指定為可預測之資料行的狀態。 尤其，此演算法會識別與可預測資料行相互關聯的輸入資料行。 例如，在預測哪些客戶可能購買腳踏車的狀況中，如果 10 個年輕客戶當中有 9 個購買腳踏車，但 10 個年紀較大的客戶當中只有 2 個人這麼做，則演算法會推斷年齡是腳踏車購買的理想預測器。 決策樹就是依據傾向於特定結果的趨勢來產生預測。  
   
@@ -115,6 +96,6 @@ ms.lasthandoff: 02/15/2018
  [資料採礦演算法 &#40;Analysis Services-資料採礦 &#41;](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
  [Microsoft 決策樹演算法技術參考](../../analysis-services/data-mining/microsoft-decision-trees-algorithm-technical-reference.md)   
  [決策樹模型查詢範例](../../analysis-services/data-mining/decision-trees-model-query-examples.md)   
- [決策樹模型 &#40; 的採礦模型內容Analysis Services-資料採礦 &#41;](../../analysis-services/data-mining/mining-model-content-for-decision-tree-models-analysis-services-data-mining.md)  
+ [決策樹模型 & #40; 的採礦模型內容Analysis Services-資料採礦 & #41;](../../analysis-services/data-mining/mining-model-content-for-decision-tree-models-analysis-services-data-mining.md)  
   
   

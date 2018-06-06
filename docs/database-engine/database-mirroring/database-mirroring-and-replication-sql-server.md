@@ -1,35 +1,32 @@
 ---
-title: "資料庫鏡像和複寫 (SQL Server) | Microsoft Docs"
-ms.custom: 
+title: 資料庫鏡像和複寫 (SQL Server) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
-ms.prod_service: database-engine
-ms.service: 
+ms.prod: sql
+ms.prod_service: high-availability
 ms.component: database-mirroring
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- dbe-high-availability
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: high-availability
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - database mirroring [SQL Server], interoperability
 - replication [SQL Server], database mirroring and
 ms.assetid: 82796217-02e2-4bc5-9ab5-218bae11a2d6
-caps.latest.revision: 
+caps.latest.revision: 39
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.workload: Active
-ms.openlocfilehash: 31e0e930a3ebc1d81d3182de30e8cb3ae5b4d701
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 9cc2c02b5d2f8f75607ed5afe555bbffc3b77c34
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="database-mirroring-and-replication-sql-server"></a>資料庫鏡像和複寫 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-資料庫鏡像可以和複寫一起使用，以改進發行集資料庫的可用性。 資料庫鏡像是指單一資料庫的兩份副本，而且通常位在不同的電腦上。 在任何時間內，目前的用戶端都只能使用其中一份資料庫副本， 此份資料庫稱為主體資料庫。 用戶端對主體資料庫所做的更新會套用到其他份資料庫，也稱為鏡像資料庫。 鏡像作業涵蓋了針對主體資料庫上所進行的每個插入、更新或刪除動作，將其交易記錄套用至鏡像資料庫。  
+  資料庫鏡像可以和複寫一起使用，以改進發行集資料庫的可用性。 資料庫鏡像是指單一資料庫的兩份副本，而且通常位在不同的電腦上。 在任何時間內，目前的用戶端都只能使用其中一份資料庫副本， 此份資料庫稱為主體資料庫。 用戶端對主體資料庫所做的更新會套用到其他份資料庫，也稱為鏡像資料庫。 鏡像作業涵蓋了針對主體資料庫上所進行的每個插入、更新或刪除動作，將其交易記錄套用至鏡像資料庫。  
   
  發行集資料庫完全支援複寫容錯移轉到鏡像，而散發資料庫則有限支援此功能。 散發資料庫不支援資料庫鏡像。 如需復原散發資料庫或訂閱資料庫而不需要重新設定複寫的詳細資訊，請參閱 [備份及還原複寫的資料庫](../../relational-databases/replication/administration/back-up-and-restore-replicated-databases.md)。   
   

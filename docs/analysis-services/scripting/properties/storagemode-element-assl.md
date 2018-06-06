@@ -1,36 +1,23 @@
 ---
-title: "StorageMode 元素 (ASSL) |Microsoft 文件"
-ms.custom: 
-ms.date: 03/06/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+title: StorageMode 元素 (ASSL) |Microsoft 文件
+ms.date: 5/8/2018
+ms.prod: sql
+ms.custom: assl
+ms.reviewer: owend
+ms.technology: analysis-services
 ms.topic: reference
-apiname: StorageMode Element
-apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
-apitype: Schema
-applies_to: SQL Server 2016 Preview
-f1_keywords: StorageMode
-helpviewer_keywords: StorageMode element
-ms.assetid: 197e8153-1ab6-43ba-a7e9-ae9be19ac511
-caps.latest.revision: "40"
-author: Minewiskan
+author: minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 5c166d27a9047a0cf5e5aabb9b7f1b0f21713df0
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 72b2963293c6c59338ad23f8e4f4f5c0e9d19001
+ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="storagemode-element-assl"></a>StorageMode 元素 (ASSL)
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]決定父元素的儲存模式。  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+  決定父元素的儲存模式。  
   
 ## <a name="syntax"></a>語法  
   
@@ -45,7 +32,7 @@ ms.lasthandoff: 01/08/2018
   
 ## <a name="element-characteristics"></a>元素特性  
   
-|特性|描述|  
+|特性|說明|  
 |--------------------|-----------------|  
 |資料類型和長度|字串 (列舉)|  
 |預設值|*MOLAP*|  
@@ -55,13 +42,13 @@ ms.lasthandoff: 01/08/2018
   
 |關聯性|元素|  
 |------------------|-------------|  
-|父元素|[Cube 元素 &#40;ASSL &#41;](../../../analysis-services/scripting/objects/cube-element-assl.md)，[維度元素 &#40;ASSL &#41;](../../../analysis-services/scripting/objects/dimension-element-assl.md)， [MeasureGroup 元素 &#40;ASSL &#41;](../../../analysis-services/scripting/objects/measuregroup-element-assl.md)，[元素 &#40; 資料分割ASSL &#41;](../../../analysis-services/scripting/objects/partition-element-assl.md)|  
+|父元素|[Cube 元素&#40;ASSL&#41;](../../../analysis-services/scripting/objects/cube-element-assl.md)，[維度項目&#40;ASSL&#41;](../../../analysis-services/scripting/objects/dimension-element-assl.md)， [MeasureGroup 元素&#40;ASSL&#41;](../../../analysis-services/scripting/objects/measuregroup-element-assl.md)，[磁碟分割項目&#40;ASSL&#41;](../../../analysis-services/scripting/objects/partition-element-assl.md)|  
 |子元素|無|  
   
 ## <a name="remarks"></a>備註  
  這個元素的值限制為下表所列的其中一個字串。  
   
-|ReplTest1|描述|  
+|值|Description|  
 |-----------|-----------------|  
 |*MOLAP*|父系使用多維度 OLAP (MOLAP) 儲存。|  
 |*ROLAP*|父系使用關聯式 OLAP (ROLAP) 儲存。|  
@@ -72,7 +59,7 @@ ms.lasthandoff: 01/08/2018
   
  對應至父系的項目**StorageMode**在 「 分析管理物件 (AMO) 物件模型是<xref:Microsoft.AnalysisServices.Cube>， <xref:Microsoft.AnalysisServices.Dimension>， <xref:Microsoft.AnalysisServices.MeasureGroup>，和<xref:Microsoft.AnalysisServices.Partition>。  
   
-## <a name="see-also"></a>請參閱  
- [屬性 &#40;ASSL &#41;](../../../analysis-services/scripting/properties/properties-assl.md)  
+## <a name="see-also"></a>另請參閱  
+ [屬性 & #40;ASSL & #41;](../../../analysis-services/scripting/properties/properties-assl.md)  
   
   

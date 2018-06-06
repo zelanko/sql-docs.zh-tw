@@ -1,35 +1,32 @@
 ---
-title: "快速監看式對話方塊 | Microsoft 文件"
-ms.custom: 
+title: 快速監看式對話方塊 | Microsoft 文件
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
-ms.prod_service: sql-tools
-ms.service: 
-ms.component: ssms-scripting
-ms.reviewer: 
+ms.prod: sql
+ms.technology: scripting
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 f1_keywords:
 - vs.debug.quickwatch
 helpviewer_keywords:
 - QuickWatch Dialog [Transact-SQL]
 ms.assetid: d6bbb373-1452-41f2-bdc5-86ae689c3dc0
-caps.latest.revision: 
+caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: b3b655a3f433c0957b36dc639c3f1d7f309cd151
-ms.sourcegitcommit: a0aa5e611a0e6ebb74ac1e2f613e8916dc7a7617
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 85947c35a9c58726d7f65a2d166f060845205d3f
+ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/24/2018
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="transact-sql-debugger---quickwatch-dialog-box"></a>Transact-SQL 偵錯工具 - 快速監看式對話方塊
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 使用 [快速監看式] 對話方塊可在偵錯 [!INCLUDE[tsql](../../includes/tsql-md.md)] 程式碼時，快速檢視一個 [!INCLUDE[tsql](../../includes/tsql-md.md)] 運算式的資料類型和值，例如變數或參數。 若要監看多個運算式，您也可以將此運算式加入到 [監看式] 視窗。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+  使用 [快速監看式] 對話方塊可在偵錯 [!INCLUDE[tsql](../../includes/tsql-md.md)] 程式碼時，快速檢視一個 [!INCLUDE[tsql](../../includes/tsql-md.md)] 運算式的資料類型和值，例如變數或參數。 若要監看多個運算式，您也可以將此運算式加入到 [監看式] 視窗。  
   
 ## <a name="task-list"></a>工作清單  
  **存取快速監看式對話方塊**  
@@ -75,7 +72,7 @@ ms.lasthandoff: 01/24/2018
   
  如果運算式的長度超過 **[值]** 資料行的寬度，當您將指標放在該運算式的 **[值]** 資料格上方時，工具提示會顯示完整的值。  
   
- **[值]** 資料格內的放大鏡圖示表示可使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 偵錯工具視覺化檢視。 在此清單中，您可以指定 **[文字視覺化檢視]**、 **[XML 視覺化檢視]**或 **[HTML 視覺化檢視]**。 若要啟動偵錯工具視覺化檢視，請按一下放大鏡圖示。 [!INCLUDE[tsql](../../includes/tsql-md.md)] 偵錯工具會開啟一個對話方塊，其中會以對資料類型適合的格式顯示資料。  
+ **[值]** 資料格內的放大鏡圖示表示可使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 偵錯工具視覺化檢視。 在此清單中，您可以指定 **[文字視覺化檢視]**、 **[XML 視覺化檢視]** 或 **[HTML 視覺化檢視]**。 若要啟動偵錯工具視覺化檢視，請按一下放大鏡圖示。 [!INCLUDE[tsql](../../includes/tsql-md.md)] 偵錯工具會開啟一個對話方塊，其中會以對資料類型適合的格式顯示資料。  
   
  **型別**  
  顯示此運算式的資料類型。  

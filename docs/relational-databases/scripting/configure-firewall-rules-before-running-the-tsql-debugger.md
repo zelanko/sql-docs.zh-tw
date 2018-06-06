@@ -1,17 +1,14 @@
 ---
-title: "先設定防火牆規則再執行 TSQL 偵錯工具 | Microsoft Docs"
-ms.custom: 
+title: 先設定防火牆規則再執行 TSQL 偵錯工具 | Microsoft Docs
+ms.custom: ''
 ms.date: 10/20/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
-ms.component: ssms-scripting
-ms.reviewer: 
+ms.technology: scripting
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 f1_keywords:
 - vs.debug.error.sqlde_register_failed
 - vs.debug.error.sqlde_accessdenied
@@ -24,19 +21,20 @@ helpviewer_keywords:
 - ports [SQL Server], Transact-SQL debugger
 - TCP/IP [SQL Server], port numbers
 ms.assetid: f50e0b0d-eaf0-4f4a-be83-96f5be63e7ea
-caps.latest.revision: 
+caps.latest.revision: 43
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 1c1196f3195b1b54844a5420a8a9322265a1efa8
-ms.sourcegitcommit: a0aa5e611a0e6ebb74ac1e2f613e8916dc7a7617
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: db859f697a40e6ee8135335ee7c16efb29e6584a
+ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/24/2018
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="configure-firewall-rules-before-running-the-tsql-debugger"></a>先設定防火牆規則再執行 TSQL 偵錯工具
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 當連線的[!INCLUDE[ssDE](../../includes/ssde-md.md)]執行個體與[!INCLUDE[ssDE](../../includes/ssde-md.md)]查詢編輯器在不同的電腦上執行時，就必須設定 Windows 防火牆規則才能啟用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 偵錯。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+  當連接的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 執行個體與 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 查詢編輯器在不同的電腦上執行時，就必須設定 Windows 防火牆規則才能啟用 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 偵錯。  
   
 ## <a name="configuring-the-transact-sql-debugger"></a>設定 Transact-SQL 偵錯工具  
  [!INCLUDE[tsql](../../includes/tsql-md.md)] 偵錯工具同時包含伺服器端和用戶端元件。 伺服器端的偵錯工具元件會隨著 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 2 (SP2) 或更新版本中的每個 Database Engine 執行個體一起安裝。 包括用戶端偵錯工具元件的情況：  

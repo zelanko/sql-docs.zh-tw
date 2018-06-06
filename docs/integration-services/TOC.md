@@ -3,7 +3,7 @@
 # 概觀
 ## [SQL Server 2016 Integration Services 的新功能](what-s-new-in-integration-services-in-sql-server-2016.md)
 ## [SQL Server 2017 中的 Integration Services 新增功能](what-s-new-in-integration-services-in-sql-server-2017.md)
-## [新增及更新的發行項](new-updated-integration-services.md)
+## [新文章及更新的文章](new-updated-integration-services.md)
 ## [SQL Server 各版本支援的 Integration Services 功能](integration-services-features-supported-by-the-editions-of-sql-server.md)
 ## [Integration Services 回溯相容性](integration-services-backward-compatibility.md)
 
@@ -23,13 +23,14 @@
 ### [使用 PowerShell 執行](ssis-quickstart-run-powershell.md)
 ### [使用 C# 執行](./ssis-quickstart-run-dotnet.md) 
 
-# [將 SSIS 套件隨即轉移至 Azure](lift-shift/ssis-azure-lift-shift-ssis-packages-overview.md)
-## [教學課程 - 部署、執行和監視 Azure 上的套件](lift-shift/ssis-azure-deploy-run-monitor-tutorial.md)
-## [使用 Windows 驗證連線到資料來源](lift-shift/ssis-azure-connect-with-windows-auth.md)
+# [在 Azure 中部署和執行套件](lift-shift/ssis-azure-lift-shift-ssis-packages-overview.md)
+## [教學課程 - 在 Azure 中部署和執行套件](lift-shift/ssis-azure-deploy-run-monitor-tutorial.md)
+## [使用 Windows 驗證連線到資料](lift-shift/ssis-azure-connect-with-windows-auth.md)
 ## [連接到檔案及檔案共用](lift-shift/ssis-azure-files-file-shares.md)
+## [在 Azure 中連線到 SSISDB](lift-shift/ssis-azure-connect-to-catalog-database.md)
 ## [驗證部署到 Azure 的套件](lift-shift/ssis-azure-validate-packages.md)
-## [連線到 Azure 上的 SSIS 目錄](lift-shift/ssis-azure-connect-to-catalog-database.md)
-## [在 Azure 上排程套件執行](lift-shift/ssis-azure-schedule-packages.md)
+## [在 Azure 中排程套件](lift-shift/ssis-azure-schedule-packages.md)
+## [在 Azure 中以 SSMS 排程套件](lift-shift/ssis-azure-schedule-packages-ssms.md)
 
 # [安裝或升級](../integration-services/install-windows/install-integration-services.md)
 
@@ -104,7 +105,10 @@
 
 # [匯入和匯出資料](../integration-services/import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard.md)
 
-# [變更資料擷取](../integration-services/change-data-capture/change-data-capture-ssis.md)
+# [從 Excel 匯入或匯出至 Excel](load-data-to-from-excel-with-ssis.md)
+# [將資料載入 SQL 資料倉儲中](load-data-to-sql-data-warehouse.md)
+
+# [Change data capture](../integration-services/change-data-capture/change-data-capture-ssis.md)
 
 # [Microsoft Connector for SAP BW](microsoft-connector-for-sap-bw.md)
 ## [安裝 Microsoft Connector for SAP BW](installing-the-microsoft-connector-for-sap-bw.md)
@@ -177,6 +181,6 @@
 # 資源
 ## [在 SSIS 論壇中取得協助](https://social.msdn.microsoft.com/Forums/home?forum=sqlintegrationservices)
 ## [在 Stack Overflow 取得協助](http://stackoverflow.com/questions/tagged/ssis)  
-## [關注 SSIS 團隊部落格](https://blogs.msdn.microsoft.com/ssis/)
+## [關注 SSIS 小組部落格](https://blogs.msdn.microsoft.com/ssis/)
 ## [回報問題及建議功能](https://feedback.azure.com/forums/908035-sql-server)
 ## [在您的電腦上取得文件](../sql-server/sql-server-help-installation.md)

@@ -1,35 +1,19 @@
 ---
-title: "備份、 還原和同步處理資料庫 (XMLA) |Microsoft 文件"
-ms.custom: 
-ms.date: 02/14/2018
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- restoring databases [XML for Analysis]
-- backing up databases [XML for Analysis]
-- database backups [XML for Analysis]
-- synchronization [XML for Analysis]
-- database restores [XML for Analysis]
-ms.assetid: 6c021b2e-6ad0-444e-b23f-4b5f72ce084b
-caps.latest.revision: 
-author: Minewiskan
+title: 備份、 還原和同步處理資料庫 (XMLA) |Microsoft 文件
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: xmla
+ms.topic: conceptual
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 33fc95e7b34b28c4233ede68927e60eada8bf5df
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 09a1312c37cfa47a0eb7cac909b388035d6352b2
+ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="backing-up-restoring-and-synchronizing-databases-xmla"></a>備份、還原和同步處理資料庫 (XMLA)
   在 XML for Analysis 中，有三個命令分別可用來備份、還原和同步處理資料庫：  
@@ -69,7 +53,7 @@ ms.lasthandoff: 02/15/2018
   
 |Value|Description|  
 |-----------|-----------------|  
-|*SkipMembership*|在備份檔案中納入安全性定義，但是排除成員資格資訊。|  
+|*skipMembership*|在備份檔案中納入安全性定義，但是排除成員資格資訊。|  
 |*CopyAll*|在備份檔案中納入安全性定義與成員資格資訊。|  
 |*IgnoreSecurity*|從備份檔案排除安全性定義。|  
   
@@ -99,7 +83,7 @@ ms.lasthandoff: 02/15/2018
   
 |值|Description|  
 |-----------|-----------------|  
-|*SkipMembership*|在資料庫中納入安全性定義，但是排除成員資格資訊。|  
+|*skipMembership*|在資料庫中納入安全性定義，但是排除成員資格資訊。|  
 |*CopyAll*|在資料庫中納入安全性定義與成員資格資訊。|  
 |*IgnoreSecurity*|從資料庫排除安全性定義。|  
   
@@ -137,7 +121,7 @@ ms.lasthandoff: 02/15/2018
   
 |值|Description|  
 |-----------|-----------------|  
-|*SkipMembership*|在目的地資料庫中納入安全性定義，但是排除成員資格資訊。|  
+|*skipMembership*|在目的地資料庫中納入安全性定義，但是排除成員資格資訊。|  
 |*CopyAll*|在目的地資料庫中納入安全性定義與成員資格資訊。|  
 |*IgnoreSecurity*|從目的地資料庫排除安全性定義。|  
   
@@ -154,9 +138,9 @@ ms.lasthandoff: 02/15/2018
  您可以使用**位置**同步處理 ROLAP 物件的同步處理命令中的項目。 每個**位置**用來放置資料來源，項目**DataSourceType**屬性必須明確設定為*本機*。 。 您也必須設定**ConnectionString**屬性**位置**至新位置的連接字串的項目。 同步處理期間， **Synchronize**命令將會取代所識別的資料來源的連接字串**DataSourceID**屬性**位置**具有值的項目**ConnectionString**屬性**位置**項目。  
   
 ## <a name="see-also"></a>另請參閱  
- [Backup 元素 &#40;XMLA &#41;](../../analysis-services/xmla/xml-elements-commands/backup-element-xmla.md)   
- [Restore 元素 &#40;XMLA &#41;](../../analysis-services/xmla/xml-elements-commands/restore-element-xmla.md)   
- [同步處理項目 &#40;XMLA &#41;](../../analysis-services/xmla/xml-elements-commands/synchronize-element-xmla.md)   
+ [Backup 元素 & #40;XMLA & #41;](../../analysis-services/xmla/xml-elements-commands/backup-element-xmla.md)   
+ [Restore 元素 & #40;XMLA & #41;](../../analysis-services/xmla/xml-elements-commands/restore-element-xmla.md)   
+ [同步處理項目 & #40;XMLA & #41;](../../analysis-services/xmla/xml-elements-commands/synchronize-element-xmla.md)   
  [備份與還原 Analysis Services 資料庫](../../analysis-services/multidimensional-models/backup-and-restore-of-analysis-services-databases.md)  
   
   

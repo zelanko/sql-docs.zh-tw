@@ -1,16 +1,14 @@
 ---
-title: "dbo.sysdac_instances (TRANSACT-SQL) |Microsoft 文件"
-ms.custom: 
+title: dbo.sysdac_instances (TRANSACT-SQL) |Microsoft 文件
+ms.custom: ''
 ms.date: 03/04/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
 ms.component: system-catalog-views
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: system-objects
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - dbo.sysdac_instances_TSQL
@@ -23,16 +21,15 @@ helpviewer_keywords:
 - dbo.sysdac_instances
 - sysdac_instances
 ms.assetid: 28285f3d-3889-439f-8b24-3bdef08e46b4
-caps.latest.revision: 
+caps.latest.revision: 9
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 1db50ced8cdff2f69b5dd3e8541b8c76e99cdae3
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 813a786f68fe02431073033172d37ffe2c682ee0
+ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="data-tier-application-views---dbosysdacinstances"></a>資料層應用程式檢視-dbo.sysdac_instances
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -59,6 +56,6 @@ ms.lasthandoff: 02/03/2018
   
 ## <a name="see-also"></a>另請參閱  
  [資料層應用程式](../../relational-databases/data-tier-applications/data-tier-applications.md)   
- [資料層應用程式檢視 &#40;TRANSACT-SQL &#41;](http://msdn.microsoft.com/library/0de01328-d7a6-4677-b7a0-dcd3098c23d4)  
+ [資料層應用程式檢視&#40;Transact SQL&#41;](http://msdn.microsoft.com/library/0de01328-d7a6-4677-b7a0-dcd3098c23d4)  
   
   

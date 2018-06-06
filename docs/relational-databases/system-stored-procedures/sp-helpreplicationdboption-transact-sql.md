@@ -1,16 +1,15 @@
 ---
-title: "sp_helpreplicationdboption (TRANSACT-SQL) |Microsoft 文件"
-ms.custom: 
+title: sp_helpreplicationdboption (TRANSACT-SQL) |Microsoft 文件
+ms.custom: ''
 ms.date: 03/03/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - sp_helpreplicationdboption
 ms.assetid: 143ce689-108b-49d7-9892-fd3a86897f38
-caps.latest.revision: 
+caps.latest.revision: 17
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: d53bf08bf26d8682093d72e55f290701d0b3c625
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 1066644508c586fe2542d2e86bd3f67059d22663
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sphelpreplicationdboption-transact-sql"></a>sp_helpreplicationdboption (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,13 +46,13 @@ sp_helpreplicationdboption [ [ @dbname =] 'dbname' ]
 ```  
   
 ## <a name="arguments"></a>引數  
- [  **@dbname=**] **'***dbname***'**  
- 這是資料庫的名稱。 *dbname*是**sysname**，預設值是 **%** 。 如果 **%** ，則結果集包含在 「 發行者 」 的所有資料庫，否則為指定的資料庫上的唯一資訊會傳回。 如下所描述，使用者沒有適當權限的任何資料庫都不會傳回資訊。  
+ [ **@dbname=**] **'***dbname***'**  
+ 這是資料庫的名稱。 *dbname*是**sysname**，預設值是**%**。 如果**%**，則結果集包含在 「 發行者 」 的所有資料庫，否則為指定的資料庫上的唯一資訊會傳回。 如下所描述，使用者沒有適當權限的任何資料庫都不會傳回資訊。  
   
  [  **@type=**] **'***類型***'**  
  限制結果集包含只有在其上的資料庫指定的複寫選項*類型*已啟用值。 *型別*是**sysname**，而且可以是下列值之一。  
   
-|值|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |**發行**|允許異動複寫。|  
 |**合併式發行**|允許合併式複寫。|  
@@ -85,8 +83,8 @@ sp_helpreplicationdboption [ [ @dbname =] 'dbname' ]
 ## <a name="permissions"></a>Permissions  
  成員**sysadmin**固定的伺服器角色可以執行**sp_helpreplicationdboption**任何資料庫。 成員**db_owner**固定的資料庫角色可以執行**sp_helpreplicationdboption**該資料庫。  
   
-## <a name="see-also"></a>請參閱＜  
- [sp_replicationdboption &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/sp-replicationdboption-transact-sql.md)   
+## <a name="see-also"></a>另請參閱  
+ [sp_replicationdboption &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-replicationdboption-transact-sql.md)   
  [系統預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

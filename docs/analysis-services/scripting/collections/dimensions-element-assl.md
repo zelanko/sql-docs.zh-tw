@@ -1,36 +1,23 @@
 ---
-title: "Dimensions 元素 (ASSL) |Microsoft 文件"
-ms.custom: 
-ms.date: 03/07/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+title: Dimensions 元素 (ASSL) |Microsoft 文件
+ms.date: 05/03/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: assl
 ms.topic: reference
-apiname: Dimensions Element
-apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
-apitype: Schema
-applies_to: SQL Server 2016 Preview
-f1_keywords: Dimensions
-helpviewer_keywords: Dimensions element
-ms.assetid: 104e3154-92e9-4c6b-9cf3-e3f3fc712b28
-caps.latest.revision: "34"
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: d57c83d2d69100992faceb010c5dd318ac338204
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 5c13fd60f23b5501f967e35eb4d6cecb0818372f
+ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="dimensions-element-assl"></a>Dimensions 元素 (ASSL)
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]包含與父元素相關聯的維度集合。  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+  包含與父元素相關聯之維度的集合。  
   
 ## <a name="syntax"></a>語法  
   
@@ -47,7 +34,7 @@ ms.lasthandoff: 01/08/2018
   
 ## <a name="element-characteristics"></a>元素特性  
   
-|特性|描述|  
+|特性|說明|  
 |--------------------|-----------------|  
 |資料類型和長度|無|  
 |預設值|無|  
@@ -58,12 +45,12 @@ ms.lasthandoff: 01/08/2018
 |關聯性|元素|  
 |------------------|-------------|  
 |父元素|[彙總](../../../analysis-services/scripting/objects/aggregation-element-assl.md)， [AggregationDesign](../../../analysis-services/scripting/objects/aggregationdesign-element-assl.md)， [AggregationInstance](../../../analysis-services/scripting/objects/aggregationinstance-element-assl.md)， [Cube](../../../analysis-services/scripting/objects/cube-element-assl.md)，[資料庫](../../../analysis-services/scripting/objects/database-element-assl.md)， [MeasureGroup](../../../analysis-services/scripting/objects/measuregroup-element-assl.md)，[檢視方塊](../../../analysis-services/scripting/objects/perspective-element-assl.md)|  
-|子元素|[Dimension](../../../analysis-services/scripting/objects/dimension-element-assl.md)|  
+|子元素|[維度](../../../analysis-services/scripting/objects/dimension-element-assl.md)|  
   
 ## <a name="remarks"></a>備註  
  分析管理物件 (AMO) 物件模型中的對應元素是<xref:Microsoft.AnalysisServices.DimensionCollection>。  
   
-## <a name="see-also"></a>請參閱  
- [集合 &#40;ASSL &#41;](../../../analysis-services/scripting/collections/collections-assl.md)  
+## <a name="see-also"></a>另請參閱  
+ [集合 & #40;ASSL & #41;](../../../analysis-services/scripting/collections/collections-assl.md)  
   
   

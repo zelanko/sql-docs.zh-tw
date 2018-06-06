@@ -1,30 +1,20 @@
 ---
-title: "StrToSet (MDX) |Microsoft 文件"
-ms.custom: 
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: language-reference
-f1_keywords: STRTOSET
-dev_langs: kbMDX
-helpviewer_keywords: StrToSet function
-ms.assetid: 1700a563-6527-450a-8d3b-975c65bb6e51
-caps.latest.revision: "31"
-author: Minewiskan
+title: StrToSet (MDX) |Microsoft 文件
+ms.date: 05/30/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: mdx
+ms.topic: reference
 ms.author: owend
-manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: 98095d2d8910a9e69d74712b99e1ccc7954826ae
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: 30a69fa1c80c453aabea282d4e6293e28e244069
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34582180"
 ---
 # <a name="strtoset-mdx"></a>StrToSet (MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -45,7 +35,7 @@ StrToSet(Set_Specification [,CONSTRAINED] )
 ## <a name="remarks"></a>備註  
  **StrToSet**函式會傳回字串運算式中指定的集合。 **StrToSet**函式通常會搭配使用者自訂函數用來從外部函式中的集合規格傳回至 MDX 陳述式或 MDX 查詢參數化。  
   
--   使用 CONSTRAINED 旗標時，集合規格必須包含限定或未限定成員名稱，或一組包含大括號 {} 所含括之限定或未限定成員名稱的 Tuple。 這個旗標用於降低遭到由指定字串發動資料隱碼攻擊的風險。 如果所提供的字串不能直接解析成限定或未限定成員名稱，會出現下列錯誤：「違反了 STRTOSET 函數中 CONSTRAINED 旗標所加諸的限制。」  
+-   使用 CONSTRAINED 旗標時，集合規格必須包含限定或未限定成員名稱或一組包含大括弧括住的限定或未限定成員名稱的 tuple {}。 這個旗標用於降低遭到由指定字串發動資料隱碼攻擊的風險。 如果所提供的字串不能直接解析成限定或未限定成員名稱，會出現下列錯誤：「違反了 STRTOSET 函數中 CONSTRAINED 旗標所加諸的限制。」  
   
 -   沒有使用 CONSTRAINED 旗標時，指定的集合規格會解析成傳回集合的有效多維度運算式 (MDX) 運算式。  
   
@@ -78,7 +68,7 @@ ON 0
 FROM [Adventure Works]  
 ```  
   
-## <a name="see-also"></a>請參閱  
- [MDX 函數參考 &#40;MDX &#41;](../mdx/mdx-function-reference-mdx.md)  
+## <a name="see-also"></a>另請參閱  
+ [MDX 函數參考&#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

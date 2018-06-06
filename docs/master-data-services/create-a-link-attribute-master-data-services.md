@@ -1,34 +1,35 @@
 ---
-title: "建立連結屬性 (Master Data Services) | Microsoft Docs"
-ms.custom: 
+title: 建立連結屬性 (Master Data Services) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/15/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: mds
-ms.service: 
 ms.component: non-specific
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - master-data-services
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - attributes [Master Data Services], creating link attributes
 - creating link attributes [Master Data Services]
 ms.assetid: e6658e9c-5b08-4b8d-b556-17ec2dd041d2
-caps.latest.revision: 
+caps.latest.revision: 9
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 6458bdf2ad8d973c106868ca1b9debcbc8027fa6
-ms.sourcegitcommit: 6ac1956307d8255dc544e1063922493b30907b80
+ms.openlocfilehash: b1f5f9b13c93193dc0981d3e555c7346dad2c01a
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="create-a-link-attribute-master-data-services"></a>建立連結屬性 (Master Data Services)
-  當您希望使用者輸入超連結做為屬性值 (例如 http://www.contoso.com) 時，可以在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中建立連結屬性。  
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
+  當您想要讓使用者輸入超連結作為屬性值 (例如 http://www.contoso.com) 時，可以在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 中建立連結屬性。  
   
 > [!NOTE]  
 >  當使用者輸入連結屬性的值時，字串開頭必須為 **http://** ，否則將會顯示一個錯誤。  

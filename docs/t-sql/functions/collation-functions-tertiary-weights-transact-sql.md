@@ -1,16 +1,14 @@
 ---
 title: TERTIARY_WEIGHTS (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 07/24/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
 ms.component: t-sql|functions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: t-sql
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - TERTIARY_WEIGHTS_TSQL
@@ -22,16 +20,16 @@ helpviewer_keywords:
 - SQL tertiary collations
 - TERTIARY_WEIGHTS function
 ms.assetid: 7e1f5350-260b-4c61-8c84-69bb1a214f1f
-caps.latest.revision: 
+caps.latest.revision: 34
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 5edddaffd94337a1538ed00085216145f9389670
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: e4a96e71ae1222951914743ad88d229d5a1ee9b8
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="collation-functions---tertiaryweights-transact-sql"></a>定序函式 - TERTIARY_WEIGHTS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -50,7 +48,7 @@ TERTIARY_WEIGHTS( non_Unicode_character_string_expression )
 *non_Unicode_character_string_expression*  
 為第三 SQL 定序上定義之 **char**、**varchar** 或 **varchar(max)** 類型的字串[運算式](../../t-sql/language-elements/expressions-transact-sql.md)。 如需這些定序的清單，請參閱「備註」一節。
   
-## <a name="return-types"></a>傳回型別
+## <a name="return-types"></a>傳回類型
 TERTIARY_WEIGHTS 會在 *non_Unicode_character_string_expression* 為 **char** 或 **varchar** 時傳回 **varbinary**，並在 *non_Unicode_character_string_expression* 為 **varchar(max)** 時傳回 **varbinary(max)**。
   
 ## <a name="remarks"></a>Remarks  

@@ -1,16 +1,15 @@
 ---
-title: "FriendlyName 屬性 （SecurityCertificate 類別） |Microsoft 文件"
-ms.custom: 
+title: FriendlyName 屬性 （SecurityCertificate 類別） |Microsoft 文件
+ms.custom: ''
 ms.date: 03/03/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
 ms.component: wmi
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - FriendlyName Property (SecurityCertificate Class)
@@ -20,20 +19,19 @@ apitype: MOFDef
 helpviewer_keywords:
 - FriendlyName property
 ms.assetid: ae3f26f9-141c-47cf-afe4-14f99b6b9567
-caps.latest.revision: 
-author: JennieHubbard
-ms.author: jhubbard
+caps.latest.revision: 33
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 121e406bb37fd3fb3687a3adaca58a2b2249346f
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.openlocfilehash: de4eb9a077e51cfc8018b8d5b8ad2b6ecbf8b0b4
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="friendlyname-property-securitycertificate-class"></a>FriendlyName 屬性 (SecurityCertificate 類別)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
-取得或設定安全性憑證的替代易記名稱。  
+  取得或設定安全性憑證的替代易記名稱。  
   
 ## <a name="syntax"></a>語法  
   

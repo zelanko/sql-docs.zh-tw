@@ -1,32 +1,30 @@
 ---
-title: "使用資料轉換轉換資料類型 | Microsoft Docs"
-ms.custom: 
+title: 使用資料轉換轉換資料類型 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/07/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
 ms.component: data-flow
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - converting data types [Integration Services]
 - Data Conversion transformation
 - data types [Integration Services], converting
 ms.assetid: 4aabbe4f-7666-4672-865a-9627bd25fbfd
-caps.latest.revision: 
+caps.latest.revision: 41
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: ebd3fc40649e77cfb42b291132f6e1168381c427
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 4e35d69cb3a340051e8ae18ddd67a6738f60a8a2
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="convert-data-type-by-using-data-conversion-transformation"></a>使用資料轉換轉換資料類型
   若要加入及設定「資料轉換」，封裝必須已包含至少一個「資料流程」工作及一個來源。  
@@ -37,7 +35,7 @@ ms.lasthandoff: 01/25/2018
   
 2.  在 [方案總管] 中，按兩下封裝將其開啟。  
   
-3.  按一下 **[資料流程]** 索引標籤，然後將 [資料轉換] 從 **[工具箱]**拖曳到設計介面。  
+3.  按一下 **[資料流程]** 索引標籤，然後將 [資料轉換] 從 **[工具箱]** 拖曳到設計介面。  
   
 4.  將連接子從來源或前一轉換拖曳至 [資料轉換]，以便將 [資料轉換] 連接到資料流程。  
   
@@ -52,7 +50,7 @@ ms.lasthandoff: 01/25/2018
   
 8.  在 **[資料類型]** 清單中，選取資料行的新資料類型。 預設資料類型是輸入資料行的資料類型。  
   
-9. (選擇性) 視所選取資料類型而定，更新 **[長度]**、 **[有效位數]**、 **[小數位數]**及 **[字碼頁]** 資料行中的值。  
+9. (選擇性) 視所選取資料類型而定，更新 **[長度]**、 **[有效位數]**、 **[小數位數]** 及 **[字碼頁]** 資料行中的值。  
   
 10. 若要設定錯誤輸出，請按一下 **[設定錯誤輸出]**。 如需詳細資訊，請參閱 [偵錯資料流程](../../../integration-services/troubleshooting/debugging-data-flow.md)。  
   

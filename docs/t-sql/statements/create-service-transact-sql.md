@@ -1,16 +1,14 @@
 ---
 title: CREATE SERVICE (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-database
-ms.service: 
 ms.component: t-sql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: t-sql
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - CREATE_SERVICE_TSQL
@@ -24,16 +22,15 @@ helpviewer_keywords:
 - CREATE SERVICE statement
 - contracts [Service Broker], service creation
 ms.assetid: fb804fa2-48eb-4878-a12f-4e0d5f4bc9e3
-caps.latest.revision: 
+caps.latest.revision: 43
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 5298494b6c3be0685df771f6d86e11c7b788d002
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 6064e83c3546488bbe1261c5f5eacb45431608a1
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="create-service-transact-sql"></a>CREATE SERVICE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -69,7 +66,7 @@ CREATE SERVICE service_name
  *contract_name*  
  指定目標可以是這項服務的合約。 服務程式會利用指定的合約來起始與這項服務的交談。 如果未指定任何合約，服務就只能起始交談。  
   
- **[**DEFAULT**]**  
+ **[** DEFAULT **]**  
  指定這項服務可以是遵照 DEFAULT 合約的交談目標。 在這個子句的內容中，DEFAULT 不是關鍵字，必須用識別碼來分隔。 DEFAULT 合約允許交談的兩端傳送訊息類型是 DEFAULT 的訊息。 訊息類型 DEFAULT 所用的驗證是 NONE。  
   
 ## <a name="remarks"></a>Remarks  

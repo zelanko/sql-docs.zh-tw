@@ -1,28 +1,26 @@
 ---
-title: "Oracle CDC 資料庫 | Microsoft Docs"
-ms.custom: 
+title: Oracle CDC 資料庫 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
 ms.component: change-data-capture
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: a96486e9-f79b-4b24-bfaf-56203dd0e435
-caps.latest.revision: 
+caps.latest.revision: 17
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 54eb41670979c83b200060128da8564b765bcd5d
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: bf36c117d636579d0f2048b67cd903eca224cc3d
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="the-oracle-cdc-databases"></a>Oracle CDC 資料庫
   Oracle CDC 執行個體與目標 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體上同名的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫有關聯。 此資料庫稱為 Oracle CDC 資料庫 (或 CDC 資料庫)。  
@@ -104,7 +102,7 @@ ms.lasthandoff: 02/15/2018
 |項目|描述|  
 |----------|-----------------|  
 |version|這會追蹤 CDC 執行個體組態的版本。 每當更新資料表以及加入新的擷取執行個體或是移除現有的擷取執行個體時，都會更新此項目。|  
-|connect_string|Oracle 連接字串。 基本範例如下：<br /><br /> `<server>:<port>/<instance>` (例如 `erp.contoso.com:1521/orcl`)。<br /><br /> 連接字串還可以指定 Oracle Net 連接描述項，例如， `(DESCRIPTION=(ADDRESS=(PROTOCOL=tcp) (HOST=erp.contoso.com) (PORT=1521)) (CONNECT_DATA=(SERVICE_NAME=orcl)))`。<br /><br /> 如果使用目錄伺服器或 tnsnames，則連接字串可以是連接的名稱。<br /><br /> 如需 Oracle 連接字串的詳細資訊，請參閱 [http://go.microsoft.com/fwlink/?LinkId=231153](http://go.microsoft.com/fwlink/?LinkId=231153) ，以取得 Oracle CDC 服務所使用之 Oracle Instant Client 的 Oracle 資料庫連接字串詳細資訊。|  
+|connect_string|Oracle 連接字串。 基本範例如下：<br /><br /> `<server>:<port>/<instance>` (例如 `erp.contoso.com:1521/orcl`)。<br /><br /> 連接字串還可以指定 Oracle Net 連接描述項，例如， `(DESCRIPTION=(ADDRESS=(PROTOCOL=tcp) (HOST=erp.contoso.com) (PORT=1521)) (CONNECT_DATA=(SERVICE_NAME=orcl)))`。<br /><br /> 如果使用目錄伺服器或 tnsnames，則連接字串可以是連接的名稱。<br /><br /> 如需 Oracle 連接字串的詳細資訊，請參閱 [http://go.microsoft.com/fwlink/?LinkId=231153](http://go.microsoft.com/fwlink/?LinkId=231153)，以取得 Oracle CDC 服務所使用之 Oracle Instant Client 的 Oracle 資料庫連接字串詳細資訊。|  
 |use_windows_authentication|下列其中一個值的布林值：<br /><br /> **0**：提供 Oracle 使用者名稱和密碼進行驗證 (預設)<br /><br /> **1**：使用 Windows 驗證連接到 Oracle 資料庫。 只有當設定 Oracle 資料庫使用 Windows 驗證時，才可使用這個選項。|  
 |username|記錄採礦之 Oracle 資料庫使用者的名稱。 只有當 **use_windows_authentication = 0**時，才會強制這項設定。|  
 |密碼|記錄採礦之 Oracle 資料庫使用者的密碼。 只有當 **use_windows_authentication = 0**時，才會強制這項設定。|  

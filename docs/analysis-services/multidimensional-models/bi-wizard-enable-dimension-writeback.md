@@ -1,40 +1,23 @@
 ---
-title: "啟用維度回寫 |Microsoft 文件"
-ms.custom: 
-ms.date: 03/04/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
-helpviewer_keywords:
-- modifying dimensions
-- writeback [Analysis Services], setting up
-- dimensions [Analysis Services], Business Intelligence enhancements
-- Business Intelligence enhancements [Analysis Services], writeback
-- dimensions [Analysis Services], writeback
-- writeback [Analysis Services]
-- dimensions [Analysis Services], modifying
-- manual dimension structure modifications
-ms.assetid: a4b5eb5a-366d-4fc8-ad0d-5bdb8e7b4163
-caps.latest.revision: 
-author: Minewiskan
+title: 啟用維度回寫 |Microsoft 文件
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: multidimensional-models
+ms.topic: conceptual
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 69390faf39311c3b7072e06aff2b64fcafd9a62c
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 561dc878302afe7636a2660a9e194ac14a35c7f1
+ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="bi-wizard---enable-dimension-writeback"></a>BI 精靈-啟用維度回寫
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-加入維度回寫增強功能至 Cube 或維度，以允許使用者手動修改維度結構和成員。 可寫入維度的更新會直接記錄在維度資料表中。 這項增強功能會變更維度的 **WriteEnabled** 屬性設定。  
+  加入維度回寫增強功能至 Cube 或維度，以允許使用者手動修改維度結構和成員。 可寫入維度的更新會直接記錄在維度資料表中。 這項增強功能會變更維度的 **WriteEnabled** 屬性設定。  
   
  若要加入維度回寫，您可使用 [商業智慧精靈]，並於 [選擇增強功能] 頁面上選取 [啟用維度回寫] 選項。 然後，此精靈會引導您逐步完成選取要套用維度回寫的維度，並為選取的維度設定此選項。  
   

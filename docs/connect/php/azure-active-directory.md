@@ -1,23 +1,21 @@
 ---
-title: "Azure Active Directory |Microsoft 文件"
+title: Azure Active Directory |Microsoft 文件
 ms.date: 07/13/2017
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
+ms.prod: sql
+ms.prod_service: connectivity
 ms.component: php
 ms.suite: sql
-ms.custom: 
-ms.technology: drivers
-ms.topic: article
+ms.custom: ''
+ms.technology: connectivity
+ms.topic: conceptual
 author: david-puglielli
 ms.author: v-dapugl
 manager: v-hakaka
-ms.workload: Inactive
-ms.openlocfilehash: eb13c1a57c63ce013a3b546572994106b8b1ffc0
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: bfb4c78f7a32c1205256f7a0d44bd9526fabdc27
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="connect-using-azure-active-directory-authentication"></a>使用 Azure Active Directory 驗證進行連接
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -130,5 +128,5 @@ ms.lasthandoff: 11/18/2017
 
     ?>
 ```
-## <a name="see-also"></a>請參閱＜  
-[使用 Azure Active Directory 的 ODBC 驅動程式](https://docs.microsoft.com/en-us/sql/connect/odbc/using-azure-active-directory)
+## <a name="see-also"></a>另請參閱  
+[搭配 ODBC 驅動程式使用 Azure Active Directory](https://docs.microsoft.com/en-us/sql/connect/odbc/using-azure-active-directory)

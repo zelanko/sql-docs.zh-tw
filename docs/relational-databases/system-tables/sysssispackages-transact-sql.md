@@ -1,16 +1,14 @@
 ---
-title: "sysssispackages (TRANSACT-SQL) |Microsoft 文件"
-ms.custom: 
+title: sysssispackages (TRANSACT-SQL) |Microsoft 文件
+ms.custom: ''
 ms.date: 06/10/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
 ms.component: system-tables
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: system-objects
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sysdtspackages90_TSQL
@@ -20,16 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - sysssispackages system table
 ms.assetid: 66155dcd-dcdb-4e33-a242-1625828ad8d2
-caps.latest.revision: 
-author: spelluru
-ms.author: spelluru
+caps.latest.revision: 43
+author: douglasl
+ms.author: douglasl
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 067fdf60b735cc1aad15b2fbfa3b5a7361a9f734
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: dfad4f28a2349ad6f3c5212ae26841a77b78e39b
+ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="sysssispackages-transact-sql"></a>sysssispackages (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -58,6 +55,6 @@ ms.lasthandoff: 02/03/2018
 |**writerolesid**|**varbinary**|可以儲存封裝的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 角色。|  
   
 ## <a name="see-also"></a>另請參閱  
- [Integration Services &#40;SSIS &#41;封裝](../../integration-services/integration-services-ssis-packages.md)  
+ [Integration Services & #40;SSIS & #41;封裝](../../integration-services/integration-services-ssis-packages.md)  
   
   

@@ -1,16 +1,14 @@
 ---
-title: "syscollector_collection_items (TRANSACT-SQL) |Microsoft 文件"
-ms.custom: 
+title: syscollector_collection_items (TRANSACT-SQL) |Microsoft 文件
+ms.custom: ''
 ms.date: 03/03/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
 ms.component: system-catalog-views
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: system-objects
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - syscollector_collection_items_TSQL
@@ -21,16 +19,15 @@ helpviewer_keywords:
 - syscollector_collection_items view
 - add data collector view
 ms.assetid: a279ecd1-a59c-4315-9f08-bf221f00a465
-caps.latest.revision: 
+caps.latest.revision: 16
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: ca9b8aed18c716e235d1848d7130395cf4fe7875
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 9e1113453ebe83221fb8dd8b9de92113bcb346c3
+ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="syscollectorcollectionitems-transact-sql"></a>syscollector_collection_items (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,7 +41,7 @@ ms.lasthandoff: 02/03/2018
 |**collector_type_uid**|**uniqueidentifier**|用來識別收集器型別的 GUID。 不可為 Null。|  
 |**name**|**nvarchar(4000)**|收集組的名稱。 可為 Null。|  
 |**frequency**|**int**|收集項收集資料的頻率。 不可為 Null。|  
-|**parameters**|**xml**|說明與收集項相關聯之收集器型別的參數化。 此收集項的 XML 結構描述驗證與 XML 結構描述 (XSD) 儲存在**parameter_schema**特定收集器類型。 可為 Null。 如需詳細資訊，請參閱[syscollector_collector_types &#40;TRANSACT-SQL &#41;](../../relational-databases/system-catalog-views/syscollector-collector-types-transact-sql.md).|  
+|**parameters**|**xml**|說明與收集項相關聯之收集器型別的參數化。 此收集項的 XML 結構描述驗證與 XML 結構描述 (XSD) 儲存在**parameter_schema**特定收集器類型。 可為 Null。 如需詳細資訊，請參閱[syscollector_collector_types &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/syscollector-collector-types-transact-sql.md)。|  
   
 ## <a name="permissions"></a>Permissions  
  需要 SELECT **dc_operator**， **dc_proxy**。  

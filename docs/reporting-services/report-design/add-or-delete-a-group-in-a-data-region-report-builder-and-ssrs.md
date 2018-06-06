@@ -1,27 +1,25 @@
 ---
-title: "在資料區中新增或刪除群組 (報表產生器及 SSRS) | Microsoft Docs"
-ms.custom: 
+title: 在資料區中新增或刪除群組 (報表產生器及 SSRS) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: report-design
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: 4de53c3c-c6fc-49ce-b692-3609fc0b3ec5
-caps.latest.revision: "10"
+caps.latest.revision: 10
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 6462484e8665b1b124275d51e0a85790f2c27446
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: f6109f996e719784a393fa7fc7864ecbcf8e0f8d
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="add-or-delete-a-group-in-a-data-region-report-builder-and-ssrs"></a>在資料區中加入或刪除群組 (報表產生器及 SSRS)
 當您想要針對顯示和計算，依特定值或特定一組運算式組織資料時，請在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 分頁報表中，將群組加入資料區。 每個群組都有一個名稱和一個運算式，識別資料集中的哪個資料屬於群組。 如需群組的詳細資訊，請參閱 [了解群組 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/understanding-groups-report-builder-and-ssrs.md)。  
@@ -50,7 +48,7 @@ ms.lasthandoff: 01/09/2018
   
 1.  在 [群組] 窗格中，以滑鼠右鍵按一下與您想要加入之群組對等的群組。 按一下 **[加入群組]**，然後按一下 **[前方相鄰]** 或 **[後方相鄰]** 來指定要加入群組的位置。 **[Tablix 群組]** 對話方塊隨即開啟。  
   
-2.  在 **[名稱]**中，輸入群組的名稱。  
+2.  在 **[名稱]** 中，輸入群組的名稱。  
   
 3.  在 [群組運算式] 中鍵入運算式，或按一下運算式按鈕 (**fx**) 建立運算式。  
   
@@ -62,7 +60,7 @@ ms.lasthandoff: 01/09/2018
   
 1.  在 [群組] 窗格中，以滑鼠右鍵按一下屬於最內部子群組的群組，而不是 [詳細資料] 群組。 按一下 **[加入群組]**，然後按一下 **[子群組]**。 **[Tablix 群組]** 對話方塊隨即開啟。  
   
-2.  在 **[群組運算式]**中，將運算式保留空白。 詳細資料群組沒有運算式。  
+2.  在 **[群組運算式]** 中，將運算式保留空白。 詳細資料群組沒有運算式。  
   
 3.  選取 **[顯示詳細資料]**。  
   
@@ -76,7 +74,7 @@ ms.lasthandoff: 01/09/2018
   
 2.  以滑鼠右鍵按一下群組，然後按一下 [群組屬性]。  
   
-3.  在 **[名稱]**中，輸入群組的名稱。  
+3.  在 **[名稱]** 中，輸入群組的名稱。  
   
 4.  在 [群組運算式] 中鍵入或選取簡單運算式，或是按一下 [運算式]\(**fx**) 按鈕來建立群組運算式。  
   

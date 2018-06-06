@@ -1,16 +1,14 @@
 ---
-title: "sys.trusted_assemblies (TRANSACT-SQL) |Microsoft 文件"
-ms.custom: 
+title: sys.trusted_assemblies (TRANSACT-SQL) |Microsoft 文件
+ms.custom: ''
 ms.date: 06/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
 ms.component: system-catalog-views
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: system-objects
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - trusted_assemblies_TSQL
@@ -21,17 +19,17 @@ dev_langs:
 - TSQL
 helpviewer_keywords:
 - sys.trusted_assemblies
-ms.assetid: 
-caps.latest.revision: 
+ms.assetid: ''
+caps.latest.revision: ''
 author: tmullaney
-ms.author: thmullan;rickbyh
+ms.author: thmullan
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 827e0d356114bf2254ebd265ca7ee29e0a00f595
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
+ms.openlocfilehash: 80fd8a091aa04d0574da5c5a2377628b2e8c376a
+ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="systrustedassemblies-transact-sql"></a>sys.trusted_assemblies (TRANSACT-SQL)  
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
@@ -43,10 +41,10 @@ ms.lasthandoff: 02/03/2018
 
 |資料行名稱 |資料類型 |Description |
 |--- |--- |--- |
-|hash (雜湊) |varbinary(8000) |組件內容 SHA2_512 雜湊。 |
+|hash (雜湊) |varbinary （8000) |組件內容 SHA2_512 雜湊。 |
 |description |nvarchar(4000) |選擇性使用者定義描述組件。 Microsoft 建議使用的簡單名稱、 版本號碼、 文化特性、 公開金鑰和要信任的組件的架構會將編碼的正式名稱。 這個值會唯一識別組件的 common language runtime (CLR) 端上，而且是 sys.assemblies clr_name 值相同。 |
 |create_date |datetime2 |組件加入至信任的組件清單的日期。 |
-|created_by |nvarchar(128) |組件加入至清單之主體的登入名稱。 |
+|created_by |nvarchar （128) |組件加入至清單之主體的登入名稱。 |
 | | | |
 
 
@@ -55,7 +53,7 @@ ms.lasthandoff: 02/03/2018
 使用**需要加入 sp_add_trusted_assembly**和**需要加入 sys.trusted_assemblies**新增或移除組件從`sys.trusted_assemblies`。
 
 ## <a name="see-also"></a>另請參閱  
-  [sys.sp_add_trusted_assembly](../../relational-databases/system-stored-procedures/sys-sp-add-trusted-assembly-transact-sql.md) [sys.sp_drop_trusted_assembly](../../relational-databases/system-stored-procedures/sys-sp-drop-trusted-assembly-transact-sql.md) [卸除組件 &#40;TRANSACT-SQL &#41;](../../t-sql/statements/drop-assembly-transact-sql.md)  
+  [sys.sp_add_trusted_assembly](../../relational-databases/system-stored-procedures/sys-sp-add-trusted-assembly-transact-sql.md) [sys.sp_drop_trusted_assembly](../../relational-databases/system-stored-procedures/sys-sp-drop-trusted-assembly-transact-sql.md) [DROP ASSEMBLY &#40;Transact SQL&#41;](../../t-sql/statements/drop-assembly-transact-sql.md)  
   [sys.assemblies](../../relational-databases/system-catalog-views/sys-assemblies-transact-sql.md)  
   [sys.dm_clr_loaded_assemblies](../../relational-databases/system-dynamic-management-views/sys-dm-clr-loaded-assemblies-transact-sql.md)  
 

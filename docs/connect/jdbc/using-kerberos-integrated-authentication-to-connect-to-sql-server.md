@@ -1,27 +1,24 @@
 ---
-title: "使用 Kerberos 整合式驗證連接到 SQL Server |Microsoft 文件"
-ms.custom: 
+title: 使用 Kerberos 整合式驗證連接到 SQL Server |Microsoft 文件
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
-ms.component: jdbc
-ms.reviewer: 
+ms.prod: sql
+ms.prod_service: connectivity
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: connectivity
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: 687802dc-042a-4363-89aa-741685d165b3
-caps.latest.revision: "30"
+caps.latest.revision: 30
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
-ms.workload: On Demand
-ms.openlocfilehash: 4ddd65d18a4a335ac7ad5d416d87afccf1748fbb
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+manager: craigg
+ms.openlocfilehash: 6e2019cba57870cf9e22bdeb4d27f52c055fcdc8
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="using-kerberos-integrated-authentication-to-connect-to-sql-server"></a>使用 Kerberos 整合式驗證連接到 SQL Server
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -155,7 +152,7 @@ forwardable = yes
 ```  
   
 ## <a name="enabling-the-domain-configuration-file-and-the-login-module-configuration-file"></a>啟用網域組態檔和登入模組組態檔  
- 您可以使用 Djava.security.krb5.conf 來啟用網域組態檔。 您可以啟用登入模組組態檔與**-Djava.security.auth.login.config**。  
+ 您可以使用 Djava.security.krb5.conf 來啟用網域組態檔。 您可以啟用登入模組組態檔與 **-Djava.security.auth.login.config**。  
   
  例如，當您啟動應用程式時，您可以使用這個命令列：  
   
@@ -190,7 +187,7 @@ jdbc:sqlserver://servername=server_name;integratedSecurity=true;authenticationSc
 ```
 如果使用者隸屬於 default_realm krb5.conf 檔案中設定的使用者名稱屬性不需要領域。 當`userName`和`password`設定連同`integratedSecurity=true;`和`authenticationScheme=JavaKerberos;`屬性中，連接以建立使用者名稱的值做為 Kerberos 主體沿著與提供的密碼。
  
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [使用 JDBC Driver 連接到 SQL Server](../../connect/jdbc/connecting-to-sql-server-with-the-jdbc-driver.md)  
   
   

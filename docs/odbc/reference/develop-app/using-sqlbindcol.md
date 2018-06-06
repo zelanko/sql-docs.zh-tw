@@ -1,31 +1,28 @@
 ---
-title: "使用 SQLBindCol |Microsoft 文件"
-ms.custom: 
+title: 使用 SQLBindCol |Microsoft 文件
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
-ms.component: odbc
-ms.reviewer: 
+ms.prod: sql
+ms.prod_service: connectivity
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: connectivity
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - result sets [ODBC], binding columns
 - binding columns [ODBC]
 - SQLBindCol function [ODBC], using
 ms.assetid: 17277ab3-33ad-44d3-a81c-a26b5e338512
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
-ms.workload: Inactive
-ms.openlocfilehash: bd0406efdc485eadef6c90552a634099166f7b08
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+manager: craigg
+ms.openlocfilehash: d4ccd4607e16b244279e0910fe32047f19e2e6d0
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="using-sqlbindcol"></a>使用 SQLBindCol
 藉由呼叫應用程式繫結的資料行**SQLBindCol**。 此函式會將一個資料行繫結一次。 有了它，應用程式指定下列工作：  
@@ -40,7 +37,7 @@ ms.lasthandoff: 12/21/2017
   
  例如，下列程式碼會繫結變數的銷售人員和 CustID 資料行。 資料行的資料將會傳回*業務員*和*CustID*。 因為*業務員*是字元緩衝區中，應用程式指定的位元組長度 (11)，讓驅動程式可以判斷是否要截斷的資料。 傳回的位元組長度的標題，或是否為 NULL，將會傳回*SalesPersonLenOrInd*。  
   
- 因為*CustID*整數變數，且具有固定長度，不需要指定其位元組長度，則驅動程式會假設它是**sizeof (**SQLUINTEGER**)**。 傳回的客戶的位元組長度識別碼的資料，或是否為 NULL，將會傳回*CustIDInd*。 請注意，應用程式想要只薪資是否為 NULL，因為位元組長度一律為**sizeof (**SQLUINTEGER**)**。  
+ 因為*CustID*整數變數，且具有固定長度，不需要指定其位元組長度，則驅動程式會假設它是**sizeof (** SQLUINTEGER **)**。 傳回的客戶的位元組長度識別碼的資料，或是否為 NULL，將會傳回*CustIDInd*。 請注意，應用程式想要只薪資是否為 NULL，因為位元組長度一律為**sizeof (** SQLUINTEGER **)**。  
   
 ```  
 SQLCHAR       SalesPerson[11];  

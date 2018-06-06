@@ -1,16 +1,14 @@
 ---
 title: ACOS (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 07/24/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
 ms.component: t-sql|functions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: t-sql
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - ACOS
@@ -22,21 +20,21 @@ helpviewer_keywords:
 - ACOS function
 - arccosine
 ms.assetid: 4ec6b46e-9438-4f0f-8b96-461edd84280a
-caps.latest.revision: 
+caps.latest.revision: 43
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 42132bf92af16aedcd82581c1b658623da5f6df1
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 165cd76209927d223e90be73bad6fd0b383e5404
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="acos-transact-sql"></a>ACOS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-為數學函式，它會傳回其餘弦函式為指定 **float** 運算式的角度 (以弧度為單位)；也稱為反餘弦函式。
+函數，傳回以弧度為單位的角度，其餘弦值為指定的 float 運算式。 這也稱為反餘弦函數 (Arccosine)。
   
 ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -48,13 +46,13 @@ ACOS ( float_expression )
   
 ## <a name="arguments"></a>引數  
 *float_expression*  
-為 **float** 類型或能夠隱含轉換成 **float** 之類型的運算式，值的範圍從 -1 到 1。 超出這個範圍的值會傳回 NULL 並且回報網域錯誤。
+[運算式](../../t-sql/language-elements/expressions-transact-sql.md)，為 **float** 類型或是能隱含地轉換成 float 的類型。 只有範圍在 -1.00 到 1.00 之間的值為有效。 在這個範圍之外的值會傳回 NULL，且 ASIN 會報告定義域錯誤。
   
 ## <a name="return-types"></a>傳回類型  
 **float**
   
 ## <a name="examples"></a>範例  
-下列範例會傳回指定之數字的 ACOS。
+這個範例會傳回指定數字的 `ACOS` 值。
   
 ```sql
 SET NOCOUNT OFF;  
@@ -72,27 +70,8 @@ The ACOS of the number is: 3.14159
 (1 row(s) affected)  
 ```  
   
-### <a name="includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 
-
-下列範例會傳回指定之數字的 ACOS。
-  
-```sql
-DECLARE @cos float;  
-SET @cos = -1.0;  
-SELECT 'The ACOS of the number is: ' + CONVERT(varchar, ACOS(@cos));  
-```  
-  
-[!INCLUDE[ssResult](../../includes/ssresult-md.md)]
-  
-```sql
----------------------------------   
-The ACOS of the number is: 3.14159   
-  
-(1 row(s) affected)  
-```  
-  
 ## <a name="see-also"></a>另請參閱
-[數學函式 &#40;Transact-SQL&#41;](../../t-sql/functions/mathematical-functions-transact-sql.md)  
+[數學函數 &#40;Transact-SQL&#41;](../../t-sql/functions/mathematical-functions-transact-sql.md)  
 [函數](../../t-sql/functions/functions.md)
   
   

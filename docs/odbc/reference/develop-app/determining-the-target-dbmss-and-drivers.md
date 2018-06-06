@@ -1,30 +1,27 @@
 ---
-title: "判斷目標 Dbms 和驅動程式 |Microsoft 文件"
-ms.custom: 
+title: 判斷目標 Dbms 和驅動程式 |Microsoft 文件
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
-ms.component: odbc
-ms.reviewer: 
+ms.prod: sql
+ms.prod_service: connectivity
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: connectivity
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - target DBMSs and drivers in interoperability [ODBC]
 - interoperability [ODBC], target dbmss and drivers
 ms.assetid: 23bee0f6-e12a-4598-b34e-df11a8086829
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
-ms.workload: Inactive
-ms.openlocfilehash: 515b89b4b99d73584cf1f88783296e49f6ab298d
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+manager: craigg
+ms.openlocfilehash: fd4dc48994a028b2f8569da05511fa5c2b078165
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="determining-the-target-dbmss-and-drivers"></a>判斷目標 Dbms 和驅動程式
 考慮下一個問題是，為何，應用程式的目標 Dbms 哪些驅動程式是否可用，以及支援那些 Dbms？ 泛型應用程式通常是具備高度互通性，因為目標 Dbms 的問題，最適合用於自訂和垂直應用程式使用。 不過，目標驅動程式的問題適用於所有應用程式，因為驅動程式相當廣泛的速度、 品質、 功能支援和可用性。 此外，如果驅動程式與應用程式轉散發，則成本和可用性的授權計劃需要考量。  

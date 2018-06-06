@@ -1,16 +1,15 @@
 ---
-title: "sp_articleview (TRANSACT-SQL) |Microsoft 文件"
-ms.custom: 
+title: sp_articleview (TRANSACT-SQL) |Microsoft 文件
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - sp_articleview
 ms.assetid: a3d63fd6-f360-4a2f-8a82-a0dc15f650b3
-caps.latest.revision: 
+caps.latest.revision: 29
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 165f494482aaac169eef7137bd0b45c0fa8b55d7
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 68d7b62faa098eedb77bf1576020f01c090fcbd5
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sparticleview-transact-sql"></a>sp_articleview (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -55,7 +53,7 @@ sp_articleview [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>引數  
- [  **@publication=**] **'***發行集***'**  
+ [ **@publication=**] **'***publication***'**  
  這是發行項所在的發行集名稱。 *發行集*是**sysname**，沒有預設值。  
   
  [  **@article=**] **'***文章***'**  
@@ -84,37 +82,37 @@ sp_articleview [ @publication = ] 'publication'
   
  **1**指定發行項的變更會使現有的訂閱重新初始化，並提供發生訂閱重新初始化的權限。  
   
- [  **@publisher** =] **'***發行者***'**  
+ [ **@publisher**=] **'***發行者***'**  
  指定非[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]發行者。 *發行者*是**sysname**，預設值是 NULL。  
   
 > [!NOTE]  
 >  *發行者*不應從發行時[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]發行者。  
   
- [  **@refreshsynctranprocs**  =] *refreshsynctranprocs*  
+ [ **@refreshsynctranprocs** =] *refreshsynctranprocs*  
  這是指是否自動重新建立用來同步處理複寫的預存程序。 *refreshsynctranprocs*是**元**，預設值是 1。  
   
  **1**表示預存程序會重新建立。  
   
  **0**表示不重新建立預存程序。  
   
- [  **@internal** =]*內部*  
+ [ **@internal**=]*內部*  
  [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
 ## <a name="return-code-values"></a>傳回碼值  
  **0** （成功） 或**1** （失敗）  
   
 ## <a name="remarks"></a>備註  
- **sp_articleview**建立之檢視的定義已發行的發行項，並將插入的此檢視的識別碼**sync_objid**資料行[sysarticles &#40;TRANSACT-SQL &#41;](../../relational-databases/system-tables/sysarticles-transact-sql.md)資料表，並限制子句中的文字插入**filter_clause**資料行。 如果複寫所有資料行，而且沒有任何**filter_clause**、 **sync_objid**中[sysarticles &#40;TRANSACT-SQL &#41;](../../relational-databases/system-tables/sysarticles-transact-sql.md)資料表設定為基底資料表的識別碼，以及使用**sp_articleview**並非必要。  
+ **sp_articleview**建立之檢視的定義已發行的發行項，並將插入的此檢視的識別碼**sync_objid**資料行[sysarticles &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-tables/sysarticles-transact-sql.md)資料表，並限制子句中的文字插入**filter_clause**資料行。 如果複寫所有資料行，而且沒有任何**filter_clause**、 **sync_objid**中[sysarticles &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-tables/sysarticles-transact-sql.md)資料表設定的識別碼基底資料表，以及使用**sp_articleview**並非必要。  
   
- 若要發行垂直篩選的資料表 (也就是篩選資料行) 第一次執行**sp_addarticle**沒有*sync_object*參數，執行[sp_articlecolumn &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql.md)每個資料行複寫 （定義垂直篩選），然後再執行一次**sp_articleview**來建立定義已發行的發行項的檢視。  
+ 若要發行垂直篩選的資料表 (也就是篩選資料行) 第一次執行**sp_addarticle**沒有*sync_object*參數，執行[sp_articlecolumn &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql.md)每個資料行複寫 （定義垂直篩選），然後再執行一次**sp_articleview**來建立定義已發行的發行項的檢視。  
   
- 若要發行水平篩選的資料表 （也就是篩選資料列），執行[sp_addarticle &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md)沒有*篩選*參數。 執行[sp_articlefilter &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/sp-articlefilter-transact-sql.md)，提供所有參數，包括*filter_clause*。 然後執行**sp_articleview**，提供包括相同的所有參數*filter_clause*。  
+ 若要發行水平篩選的資料表 （也就是篩選資料列），執行[sp_addarticle &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md)沒有*篩選*參數。 執行[sp_articlefilter &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-articlefilter-transact-sql.md)，提供所有參數，包括*filter_clause*。 然後執行**sp_articleview**，提供包括相同的所有參數*filter_clause*。  
   
- 若要發行垂直和水平篩選的資料表，執行[sp_addarticle &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md)沒有*sync_object*或*篩選*參數。 執行[sp_articlecolumn &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql.md)一次複寫，每個資料行，然後執行[sp_articlefilter &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/sp-articlefilter-transact-sql.md)和**sp_articleview**。  
+ 若要發行垂直和水平篩選的資料表，執行[sp_addarticle &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md)沒有*sync_object*或*篩選*參數。 執行[sp_articlecolumn &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql.md)一次複寫，每個資料行，然後執行[sp_articlefilter &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-stored-procedures/sp-articlefilter-transact-sql.md)和**sp_articleview**。  
   
- 如果發行項已經有定義已發行之發行項的檢視**sp_articleview**卸除現有的檢視，並會自動建立一個新。 如果以手動方式建立檢視 (**類型**中[sysarticles &#40;TRANSACT-SQL &#41;](../../relational-databases/system-tables/sysarticles-transact-sql.md)是**5**)，不卸除現有的檢視。  
+ 如果發行項已經有定義已發行之發行項的檢視**sp_articleview**卸除現有的檢視，並會自動建立一個新。 如果以手動方式建立檢視 (**類型**中[sysarticles &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-tables/sysarticles-transact-sql.md)是**5**)，不卸除現有的檢視。  
   
- 如果您建立自訂篩選預存程序和檢視，以手動方式定義發行的項時，不會執行**sp_articleview**。 相反地，提供這些做為*篩選*和*sync_object*參數[sp_addarticle &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md)，以及適當*類型*值。  
+ 如果您建立自訂篩選預存程序和檢視，以手動方式定義發行的項時，不會執行**sp_articleview**。 相反地，提供這些做為*篩選*和*sync_object*參數[sp_addarticle &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md)，以及適當*類型*值。  
   
 ## <a name="example"></a>範例  
  [!code-sql[HowTo#sp_AddTranArticle](../../relational-databases/replication/codesnippet/tsql/sp-articleview-transact-_1.sql)]  
@@ -122,10 +120,10 @@ sp_articleview [ @publication = ] 'publication'
 ## <a name="permissions"></a>Permissions  
  只有成員**sysadmin**固定的伺服器角色或**db_owner**固定的資料庫角色可以執行**sp_articleview**。  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [Define an Article](../../relational-databases/replication/publish/define-an-article.md)   
  [定義及修改靜態資料列篩選](../../relational-databases/replication/publish/define-and-modify-a-static-row-filter.md)   
- [sp_addarticle &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md)   
+ [sp_addarticle &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md)   
  [sp_articlefilter &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-articlefilter-transact-sql.md)   
  [sp_changearticle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changearticle-transact-sql.md)   
  [sp_droparticle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-droparticle-transact-sql.md)   

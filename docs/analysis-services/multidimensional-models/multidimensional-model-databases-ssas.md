@@ -1,39 +1,23 @@
 ---
-title: "多維度模型資料庫 (SSAS) |Microsoft 文件"
-ms.custom: 
-ms.date: 03/01/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
-helpviewer_keywords:
-- SQL Server Management Studio [Analysis Services], databases
-- SQL Server Analysis Services, databases
-- SSAS, databases
-- Analysis Services, databases
-- databases [Analysis Services], designing
-- Business Intelligence Development Studio, databases [Analysis Services]
-- databases [Analysis Services]
-ms.assetid: 78b2f22a-b7bd-4a2b-b6fc-0bff4d2b3168
-caps.latest.revision: 
-author: Minewiskan
+title: 多維度模型資料庫 (SSAS) |Microsoft 文件
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: multidimensional-models
+ms.topic: conceptual
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 854371e81b8adf0ecf32c2685e64f5d136d00987
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 1ec839c9638b3baf79cba0148cc932ead7820f7b
+ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="multidimensional-model-databases-ssas"></a>多維度模型資料庫 (SSAS)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 資料庫是資料來源、資料來源檢視、Cube、維度及角色的集合。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 資料庫也可以包含資料採礦結構，以及提供您方法將使用者定義函數加入至資料庫的自訂組件。  
+  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 資料庫是資料來源、資料來源檢視、Cube、維度及角色的集合。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 資料庫也可以包含資料採礦結構，以及提供您方法將使用者定義函數加入至資料庫的自訂組件。  
   
  Cube 是 Analysis Services 的基本查詢物件。 當您透過用戶端應用程式連接至 Analysis Services 資料庫時，您可以連接至該資料庫內的 Cube。 如果跨多個內容重複使用維度、組件、角色或採礦結構，資料庫可能包含多個 Cube。  
   

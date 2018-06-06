@@ -1,33 +1,34 @@
 ---
-title: "XQuery 運算子針對 xml 資料類型 |Microsoft 文件"
-ms.custom: 
+title: XQuery 運算子針對 xml 資料類型 |Microsoft 文件
+ms.custom: ''
 ms.date: 03/16/2017
-ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
-ms.service: 
+ms.prod: sql
+ms.prod_service: sql
 ms.component: xquery
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: database-engine
-ms.tgt_pltfrm: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
-applies_to: SQL Server
-dev_langs: XML
+applies_to:
+- SQL Server
+dev_langs:
+- XML
 helpviewer_keywords:
 - XQuery, operators
 - operators [XQuery]
 - xml data type [SQL Server], XQuery
 ms.assetid: 39ca3d2e-e928-4333-872b-75c4ccde8e79
-caps.latest.revision: "23"
+caps.latest.revision: 23
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.workload: Inactive
-ms.openlocfilehash: 8fc773e1770b907b6eba5e4d09372f0654054d47
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+manager: craigg
+ms.openlocfilehash: 62c4875c74d6ff67e8d1760a29ac48672fc7765a
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="xquery-operators-against-the-xml-data-type"></a>針對 xml 資料類型的 XQuery 運算子
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -40,14 +41,14 @@ ms.lasthandoff: 12/05/2017
   
 -   用於一般比較運算子 (=、 ！ =、 \<，>， \<=、 > =)  
   
- 如需有關這些運算子的詳細資訊，請參閱[比較運算式 &#40;XQuery &#41;](../xquery/comparison-expressions-xquery.md)  
+ 如需有關這些運算子的詳細資訊，請參閱[比較運算式&#40;XQuery&#41;](../xquery/comparison-expressions-xquery.md)  
   
 ## <a name="examples"></a>範例  
   
 ### <a name="a-using-general-operators"></a>A. 使用一般運算子  
  此查詢會說明套用到序列與比較序列的一般運算子使用方式。 此查詢會擷取每個客戶的電話號碼的序列**AdditionalContactInfo**資料行**連絡人**資料表。 然後，將此序列和這兩個電話號碼的序列 ("111-111-1111", "222-2222") 比較。  
   
- 此查詢會使用 **=** 比較運算子。 每個節點的右側序列中 **=** 與左側序列中的每個節點進行比較運算子。 如果節點相符，節點比較是**TRUE**。 接著會轉換為整數並和 1 進行比較，然後查詢會傳回客戶識別碼。  
+ 此查詢會使用**=** 比較運算子。 每個節點的右側序列中**=** 與左側序列中的每個節點進行比較運算子。 如果節點相符，節點比較是**TRUE**。 接著會轉換為整數並和 1 進行比較，然後查詢會傳回客戶識別碼。  
   
 ```  
 WITH XMLNAMESPACES (  
@@ -97,9 +98,9 @@ FROM Production.ProductModel
 where ProductModelID=19  
 ```  
   
- 因為兩個運算元**eq**運算子不可部份完成值，在查詢中使用值運算子。 您可以使用一般比較運算子撰寫相同的查詢 (  **=**  )。  
+ 因為兩個運算元**eq**運算子不可部份完成值，在查詢中使用值運算子。 您可以使用一般比較運算子撰寫相同的查詢 ( **=** )。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [針對 xml 資料類型的 XQuery 函數](../xquery/xquery-functions-against-the-xml-data-type.md)   
  [XML 資料 &#40;SQL Server&#41;](../relational-databases/xml/xml-data-sql-server.md)   
  [XQuery 語言參考 &#40;SQL Server&#41;](../xquery/xquery-language-reference-sql-server.md)  

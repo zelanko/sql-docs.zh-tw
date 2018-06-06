@@ -1,30 +1,29 @@
 ---
-title: "Always Encrypted 密碼編譯 | Microsoft Docs"
-ms.custom: 
+title: Always Encrypted 密碼編譯 | Microsoft Docs
+ms.custom: ''
 ms.date: 02/29/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
 ms.component: security
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - Always Encrypted, cryptography system
 ms.assetid: ae8226ff-0853-4716-be7b-673ce77dd370
-caps.latest.revision: 
+caps.latest.revision: 11
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 6767e36da99208b872eb5872185e541e4fa902e2
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: ead5689c2edb47f4ce2699e6b94bff53957ce9fd
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="always-encrypted-cryptography"></a>永遠加密的密碼編譯
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -43,9 +42,9 @@ ms.lasthandoff: 11/21/2017
 ## <a name="data-encryption-algorithm"></a>資料加密演算法  
  「永遠加密」會使用 **AEAD_AES_256_CBC_HMAC_SHA_256** 演算法來加密資料庫中的資料。  
   
- **AEAD_AES_256_CBC_HMAC_SHA_256** 衍生自 [http://tools.ietf.org/html/draft-mcgrew-aead-aes-cbc-hmac-sha2-05](http://tools.ietf.org/html/draft-mcgrew-aead-aes-cbc-hmac-sha2-05)上的規格草稿。 它會使用「驗證的加密」配置搭配相關聯的資料，遵循「加密然後 MAC」方法。 那就是，第一次加密純文字，並根據產生的加密文字產生 MAC。  
+ **AEAD_AES_256_CBC_HMAC_SHA_256** 衍生自 [http://tools.ietf.org/html/draft-mcgrew-aead-aes-cbc-hmac-sha2-05](http://tools.ietf.org/html/draft-mcgrew-aead-aes-cbc-hmac-sha2-05) 的規格草稿。 它會使用「驗證的加密」配置搭配相關聯的資料，遵循「加密然後 MAC」方法。 那就是，第一次加密純文字，並根據產生的加密文字產生 MAC。  
   
- 為了隱藏模式， **AEAD_AES_256_CBC_HMAC_SHA_256** 會使用作業的加密區塊鏈結 (CBC) 模式，其中會將初始值送入名為初始化向量 (IV) 的系統中。 如需 CBC 模式的完整說明，請參閱 [http://csrc.nist.gov/publications/nistpubs/800-38a/sp800-38a.pdf](http://csrc.nist.gov/publications/nistpubs/800-38a/sp800-38a.pdf)。  
+ 為了隱藏模式， **AEAD_AES_256_CBC_HMAC_SHA_256** 會使用作業的加密區塊鏈結 (CBC) 模式，其中會將初始值送入名為初始化向量 (IV) 的系統中。 CBC 模式的完整描述請參閱 [http://csrc.nist.gov/publications/nistpubs/800-38a/sp800-38a.pdf](http://csrc.nist.gov/publications/nistpubs/800-38a/sp800-38a.pdf)。  
   
  **AEAD_AES_256_CBC_HMAC_SHA_256** 會使用下列步驟，來計算指定純文字值的加密文字值。  
   

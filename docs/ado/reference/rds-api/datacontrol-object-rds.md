@@ -1,17 +1,15 @@
 ---
-title: "DataControl 物件 (RDS) |Microsoft 文件"
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
+title: DataControl 物件 (RDS) |Microsoft 文件
+ms.prod: sql
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
-ms.custom: 
+ms.technology: connectivity
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 apitype: COM
 f1_keywords:
 - DataControl
@@ -19,16 +17,15 @@ f1_keywords:
 helpviewer_keywords:
 - DataControl object [ADO]
 ms.assetid: d85ea4fc-451c-436e-97b8-58f92b149dd0
-caps.latest.revision: 
+caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: d7b3e0927f902f52138cdb37091df14652845fa4
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: f8784dcbaa65a755a6469edaceb58288ab1e9c25
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="datacontrol-object-rds"></a>DataControl 物件 (RDS)
 將繫結的資料查詢[資料錄集](../../../ado/reference/ado-api/recordset-object-ado.md)至一或多個控制項 （例如，文字方塊中，方格控制項或下拉式方塊） 顯示**資料錄集**網頁上的資料。  
@@ -48,19 +45,19 @@ ms.lasthandoff: 02/09/2018
 ```  
   
 ## <a name="remarks"></a>備註  
- 類別識別碼**.RDSDataControl**物件是 BD96C556-65A3-11 D 0 983A 00C04FC29E33。  
+ 類別識別碼 **.RDSDataControl**物件是 BD96C556-65A3-11 D 0 983A 00C04FC29E33。  
   
 > [!NOTE]
->  如果您收到錯誤， [.RDSDataSpace](../../../ado/reference/rds-api/dataspace-object-rds.md)或**.RDSDataControl**物件不會載入，請確定您使用正確的類別識別碼。 類別這些物件的識別碼已從版本 1.0 和 1.1 版。 此外，請注意當您使用時，必須將甚至可為 null 的資料行**RDS DataControl**物件。  
+>  如果您收到錯誤， [.RDSDataSpace](../../../ado/reference/rds-api/dataspace-object-rds.md)或 **.RDSDataControl**物件不會載入，請確定您使用正確的類別識別碼。 類別這些物件的識別碼已從版本 1.0 和 1.1 版。 此外，請注意當您使用時，必須將甚至可為 null 的資料行**RDS DataControl**物件。  
   
- 對於基本案例中，您需要只設定**SQL**，**連接**，和**伺服器**屬性**.RDSDataControl**物件，會自動呼叫預設的商務物件， [RDSServer.DataFactory](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)。  
+ 對於基本案例中，您需要只設定**SQL**，**連接**，和**伺服器**屬性 **.RDSDataControl**物件，會自動呼叫預設的商務物件， [RDSServer.DataFactory](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)。  
   
- 中的所有屬性**.RDSDataControl**是選擇性的因為自訂商務物件可取代的功能。  
+ 中的所有屬性 **.RDSDataControl**是選擇性的因為自訂商務物件可取代的功能。  
   
 > [!NOTE]
->  如果您查詢多個結果，只有第一個[資料錄集](../../../ado/reference/ado-api/recordset-object-ado.md)傳回。 如果需要多個結果集，將每個指派到其自有**DataControl**。 針對多個結果查詢的範例可能包括：`"Select * from Authors, Select * from Topics"`  
+>  如果您查詢多個結果，只有第一個[資料錄集](../../../ado/reference/ado-api/recordset-object-ado.md)傳回。 如果需要多個結果集，將每個指派到其自有**DataControl**。 針對多個結果查詢的範例可能包括： `"Select * from Authors, Select * from Topics"`  
   
- 新增 「 DFMode = 20; 」 到您的連接字串使用時**.RDSDataControl**物件可以改善伺服器效能，當您更新資料。 使用此設定， **RDSServer.DataFactory**伺服器上的物件會使用大量的資源模式。 不過，下列功能不適用於這項設定：  
+ 新增 「 DFMode = 20; 」 到您的連接字串使用時 **.RDSDataControl**物件可以改善伺服器效能，當您更新資料。 使用此設定， **RDSServer.DataFactory**伺服器上的物件會使用大量的資源模式。 不過，下列功能不適用於這項設定：  
   
 -   使用參數化的查詢。  
   
@@ -90,21 +87,21 @@ ms.lasthandoff: 02/09/2018
 </OBJECT>  
 ```  
   
- 使用其中一個**.RDSDataControl**物件，以連結至一個或多個視覺控制項的單一查詢的結果。 例如，假設您的程式碼查詢要求客戶資料，例如名稱、 居住地、 位置的生日、 年齡和優先順序客戶狀態。 您可以使用單一**.RDSDataControl**物件，以顯示客戶的名稱、 年齡和區域中的三個個別文字。優先權客戶狀態核取方塊。和方格控制項中的所有資料。  
+ 使用其中一個 **.RDSDataControl**物件，以連結至一個或多個視覺控制項的單一查詢的結果。 例如，假設您的程式碼查詢要求客戶資料，例如名稱、 居住地、 位置的生日、 年齡和優先順序客戶狀態。 您可以使用單一 **.RDSDataControl**物件，以顯示客戶的名稱、 年齡和區域中的三個個別文字。優先權客戶狀態核取方塊。和方格控制項中的所有資料。  
   
- 使用不同**.RDSDataControl**連結多個查詢的結果不同的視覺控制項的物件。 例如，假設您使用一個查詢來取得有關客戶和第二個查詢，以便取得客戶已購買的商品的相關資訊。 您想要顯示三個文字方塊和一個核取方塊，以及方格控制項中的第二個查詢的結果中的第一個查詢的結果。 如果您使用預設的商務物件 (**RDSServer.DataFactory**)，您必須執行下列動作：  
+ 使用不同 **.RDSDataControl**連結多個查詢的結果不同的視覺控制項的物件。 例如，假設您使用一個查詢來取得有關客戶和第二個查詢，以便取得客戶已購買的商品的相關資訊。 您想要顯示三個文字方塊和一個核取方塊，以及方格控制項中的第二個查詢的結果中的第一個查詢的結果。 如果您使用預設的商務物件 (**RDSServer.DataFactory**)，您必須執行下列動作：  
   
--   加入兩個**.RDSDataControl**網頁的物件。  
+-   加入兩個 **.RDSDataControl**網頁的物件。  
   
--   寫入兩個查詢時，每一個**SQL**兩個屬性**.RDSDataControl**物件。 一個**.RDSDataControl**物件將包含要求客戶資訊的 SQL 查詢，則為第二個會包含查詢要求一份客戶已購買的商品。  
+-   寫入兩個查詢時，每一個**SQL**兩個屬性 **.RDSDataControl**物件。 一個 **.RDSDataControl**物件將包含要求客戶資訊的 SQL 查詢，則為第二個會包含查詢要求一份客戶已購買的商品。  
   
 -   在每個繫結的控制項物件標籤中，指定 DATAFLD 值來設定您想要顯示每個視覺控制項中的資料值。  
   
- 沒有任何數目的計數限制**.RDSDataControl**物件，您可以內嵌在單一網頁上使用物件標記。  
+ 沒有任何數目的計數限制 **.RDSDataControl**物件，您可以內嵌在單一網頁上使用物件標記。  
   
- 當您定義**.RDSDataControl**物件在網頁上，請使用非零**高度**和**寬度**例如 1 （以避免包含額外的空間） 的值。  
+ 當您定義 **.RDSDataControl**物件在網頁上，請使用非零**高度**和**寬度**例如 1 （以避免包含額外的空間） 的值。  
   
- 遠端資料服務用戶端元件已包含在 Internet Explorer 4.0;因此，您不需要包含中的程式碼基底參數您**.RDSDataControl**標記的物件。  
+ 遠端資料服務用戶端元件已包含在 Internet Explorer 4.0;因此，您不需要包含中的程式碼基底參數您 **.RDSDataControl**標記的物件。  
   
  Internet Explorer 4.0 或更新版本，您可以使用繫結至資料 HTML 控制項和 ActiveX® 控制項才被標示為 apartment 模型的控制項。  
   

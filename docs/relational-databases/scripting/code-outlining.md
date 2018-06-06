@@ -1,34 +1,32 @@
 ---
-title: "程式碼大綱 | Microsoft 文件"
-ms.custom: 
+title: 程式碼大綱 | Microsoft 文件
+ms.custom: ''
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
-ms.component: ssms-scripting
-ms.reviewer: 
+ms.technology: scripting
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - Query Editor [SQL Server Management Studio], outlining code
 - Query Editor [SQL Server Management Studio], hiding code
 ms.assetid: 556c7dfe-7bc8-4cab-a36f-2b753a05d3f1
-caps.latest.revision: 
+caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: a0aa528dd30f068d74f708c064fd8a8812abdae9
-ms.sourcegitcommit: a0aa5e611a0e6ebb74ac1e2f613e8916dc7a7617
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 59bc3f30f3a2fe663f15aaf8260bb3b83982022a
+ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/24/2018
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="code-outlining"></a>程式碼大綱
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 您可以使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 查詢編輯器中的大綱功能，在您編輯查詢時選擇性地隱藏程式碼。 這可讓您更輕易地檢視正在處理的程式碼，尤其是處理大型查詢檔案的情況。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+  您可以使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 查詢編輯器中的大綱功能，在您編輯查詢時選擇性地隱藏程式碼。 這可讓您更輕易地檢視正在處理的程式碼，尤其是處理大型查詢檔案的情況。  
   
 ## <a name="outlining-overview"></a>大綱概觀  
  根據預設，當您開啟查詢編輯器視窗時，所有程式碼都會顯示出來。 您可以摺疊程式碼的區域，以便隱藏這些程式碼。 編輯器視窗左邊緣的垂直線會使用含有減號 (-) 的正方形來識別每個可摺疊程式碼區域的開頭。 當您按一下減號時，程式碼區域的文字就會被取代成包含三個句號 (...) 的方塊，而且減號會變更為加號 (+)。 當您按一下加號時，摺疊的程式碼就會顯示出來，而且加號會變更為減號。 當您將指標移至具有三個句號的方塊上方時，就會出現一個工具提示，其中顯示已摺疊區段中的程式碼。  

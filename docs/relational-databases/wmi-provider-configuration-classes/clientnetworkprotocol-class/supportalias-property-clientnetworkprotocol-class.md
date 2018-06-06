@@ -1,16 +1,15 @@
 ---
-title: "SupportAlias 屬性 （ClientNetworkProtocol 類別） |Microsoft 文件"
-ms.custom: 
+title: SupportAlias 屬性 （ClientNetworkProtocol 類別） |Microsoft 文件
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
 ms.component: wmi
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - SupportAlias Property (ClientNetworkProtocol Class)
@@ -20,20 +19,19 @@ apitype: MOFDef
 helpviewer_keywords:
 - SupportAlias property
 ms.assetid: 1e7a2e87-c356-40a6-a6d9-e492467629f9
-caps.latest.revision: 
-author: JennieHubbard
-ms.author: jhubbard
+caps.latest.revision: 16
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 966638cb73a3a9877b6fbd6caf59693035cf35cb
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.openlocfilehash: f21c070d57bce0cf69dd78e1429358a3f97e1a92
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="supportalias-property-clientnetworkprotocol-class"></a>SupportAlias 屬性 (ClientNetworkProtocol 類別)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
-取得布林屬性，指定目前網路通訊協定所指定是否[SetOrderValue 方法 （ClientNetworkProtocol 類別）](../../../relational-databases/wmi-provider-configuration-classes/clientnetworkprotocol-class/setordervalue-method-clientnetworkprotocol-class.md)支援別名。  
+  取得布林屬性，指定目前網路通訊協定所指定是否[SetOrderValue 方法 （ClientNetworkProtocol 類別）](../../../relational-databases/wmi-provider-configuration-classes/clientnetworkprotocol-class/setordervalue-method-clientnetworkprotocol-class.md)支援別名。  
   
 ## <a name="syntax"></a>語法  
   

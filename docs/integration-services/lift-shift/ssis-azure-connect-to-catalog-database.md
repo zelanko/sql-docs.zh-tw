@@ -1,26 +1,24 @@
 ---
-title: "連線至 Azure 上的 SSISDB 目錄資料庫 | Microsoft Docs"
+title: 連線至 Azure 中的 SSIS 目錄資料庫 (SSISDB) | Microsoft Docs
 ms.date: 09/25/2017
-ms.topic: article
-ms.prod: sql-non-specified
+ms.topic: conceptual
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
 ms.component: lift-shift
 ms.suite: sql
-ms.custom: 
+ms.custom: ''
 ms.technology:
 - integration-services
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 218890a01c98c51c570255dce0ad2c34bc5c26db
-ms.sourcegitcommit: ab25b08a312d35489a2c4a6a0d29a04bbd90f64d
+ms.openlocfilehash: ef69dc52b041541b89052038cadad94b9fa2f45c
+ms.sourcegitcommit: b5ab9f3a55800b0ccd7e16997f4cd6184b4995f9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 05/23/2018
 ---
-# <a name="connect-to-the-ssisdb-catalog-database-on-azure"></a>連線至 Azure 上的 SSISDB 目錄資料庫
+# <a name="connect-to-the-ssis-catalog-database-ssisdb-in-azure"></a>連線至 Azure 中的 SSIS 目錄資料庫 (SSISDB)
 
 取得連線至 Azure SQL Database 伺服器上裝載之 SSIS 目錄資料庫 (SSISDB) 所需的連線資訊。 您需要下列項目來進行連線：
 - 完整伺服器名稱
@@ -31,7 +29,7 @@ ms.lasthandoff: 03/08/2018
 > 目前，需要在 Azure Data Factory 第 2 版中建立 Azure-SSIS Integration Runtime，才能在 Azure SQL Database 上建立 SSISDB 目錄資料庫。 它是在 Azure 上執行 SSIS 套件的 Azure-SSIS IR。 如需詳細資訊，請參閱[將 SSIS 套件部署到 Azure ](https://docs.microsoft.com/azure/data-factory/tutorial-create-azure-ssis-runtime-portal)。 
 
 ## <a name="prerequisites"></a>Prerequisites
-開始之前，請確定您有 17.2 版或更新版本的 SQL Server Management Studio。 若要下載最新版的 SSMS，請參閱[下載 SQL Server Management Studio (SSMS)](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms)。
+開始之前，請確定您有 17.2 版或更新版本的 SQL Server Management Studio (SSMS)。 如果 SSISDB 目錄資料庫託管在 SQL Database 受控執行個體 (預覽) 上，請確定您具有 17.6 版或更新版本的 SSMS。 若要下載最新版的 SSMS，請參閱[下載 SQL Server Management Studio (SSMS)](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms)。
 
 ## <a name="get-the-connection-info-from-the-azure-portal"></a>從 Azure 入口網站取得連線資訊
 1. 登入 [Azure 入口網站](https://portal.azure.com/)。
@@ -51,7 +49,7 @@ ms.lasthandoff: 03/08/2018
    | ------------ | ------------------ | ------------------------------------------------- | 
    | **伺服器類型** | Database Engine | 這是必要的值。 |
    | **伺服器名稱** | 完整伺服器名稱 | 名稱的格式應如下所示：**mysqldbserver.database.windows.net**。 |
-   | **驗證** | SQL Server 驗證 | 本快速入門使用 SQL 驗證。 |
+   | **驗證** | SQL Server 驗證 | |
    | **登入** | 伺服器系統管理員帳戶 | 這是您在建立伺服器時指定的帳戶。 |
    | **密碼** | 伺服器系統管理員帳戶的密碼 | 這是您在建立伺服器時指定的密碼。 |
 

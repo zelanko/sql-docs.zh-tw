@@ -1,35 +1,33 @@
 ---
-title: "設定 IntelliSense (SQL Server Management Studio) | Microsoft Docs"
-ms.custom: 
+title: 設定 IntelliSense (SQL Server Management Studio) | Microsoft Docs
+ms.custom: ''
 ms.date: 06/02/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
-ms.component: ssms-scripting
-ms.reviewer: 
+ms.technology: scripting
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - Options [SQL Server Management Studio], IntelliSense
 - modifying IntelliSense options
 - IntelliSense [SQL Server], modifying options
 ms.assetid: 3ffc9f31-4efa-4c1a-a033-ed1dc48b065f
-caps.latest.revision: 
+caps.latest.revision: 30
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Active
-ms.openlocfilehash: a459fbc5ba1c1891d3583821b64d634a44fab859
-ms.sourcegitcommit: a0aa5e611a0e6ebb74ac1e2f613e8916dc7a7617
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: e81407813db510d3a7c943e84cc35277e4068205
+ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/24/2018
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="configure-intellisense-sql-server-management-studio"></a>設定 IntelliSense (SQL Server Management Studio)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 依預設，大部分 [!INCLUDE[msCoName](../../includes/msconame-md.md)] IntelliSense 選項都是開啟的。 不過，您可以關閉 IntelliSense 選項，再利用功能表命令或按鍵組合來叫用它。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+  依預設，大部分 [!INCLUDE[msCoName](../../includes/msconame-md.md)] IntelliSense 選項都是開啟的。 不過，您可以關閉 IntelliSense 選項，再利用功能表命令或按鍵組合來叫用它。  
   
 > [!IMPORTANT]  
 >  目前編輯器工作階段中的某些變更不會生效。  您必須開啟新的 Transact-SQL 編輯器工作階段，才能看到變更。

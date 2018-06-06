@@ -1,35 +1,33 @@
 ---
-title: "範例： 使用 WMI 提供者建立 SQL Server Agent 警示 |Microsoft 文件"
-ms.custom: 
+title: 範例： 使用 WMI 提供者建立 SQL Server Agent 警示 |Microsoft 文件
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
 ms.component: wmi
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - SQL Server Agent [WMI]
 - WMI Provider for Server Events, samples
 - sample applications [WMI]
 ms.assetid: d44811c7-cd46-4017-b284-c863ca088e8f
-caps.latest.revision: 
-author: JennieHubbard
-ms.author: jhubbard
+caps.latest.revision: 16
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: e2c108a7023cb66a82c5613063c039a5f34d6470
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.openlocfilehash: 9f99fcb708788c996847161b36c138cdfa65994b
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sample-creating-a-sql-server-agent-alert-with-the-wmi-provider"></a>範例： 建立 SQL Server Agent 警示的 WMI 提供者
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
-使用 WMI 事件提供者的常見方式為建立回應特定事件的 SQL Server Agent 警示。 下列範例顯示一個簡單的警示，可將 XML 死結圖形事件儲存在資料表中，以便稍後進行分析。 SQL Server Agent 會提交 WQL 要求、接收 WMI 事件，以及執行工作來回應事件。 請注意，雖然在處理通知訊息時包含數個 Service Broker 物件，但是 WMI 事件提供者會處理建立與管理這些物件的詳細資料。  
+  使用 WMI 事件提供者的常見方式為建立回應特定事件的 SQL Server Agent 警示。 下列範例顯示一個簡單的警示，可將 XML 死結圖形事件儲存在資料表中，以便稍後進行分析。 SQL Server Agent 會提交 WQL 要求、接收 WMI 事件，以及執行工作來回應事件。 請注意，雖然在處理通知訊息時包含數個 Service Broker 物件，但是 WMI 事件提供者會處理建立與管理這些物件的詳細資料。  
   
 ## <a name="example"></a>範例  
  首先，在 `AdventureWorks` 資料庫中建立一個資料表來容納死結圖形事件。 此資料表包含兩個資料行：`AlertTime` 資料行容納警示執行的時間，而 `DeadlockGraph` 資料行容納其中包含死結圖形的 XML 文件。  

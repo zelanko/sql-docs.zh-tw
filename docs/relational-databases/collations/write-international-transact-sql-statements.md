@@ -1,17 +1,16 @@
 ---
-title: "撰寫國際通用的 Transact-SQL 陳述式 | Microsoft Docs"
-ms.custom: 
+title: 撰寫國際通用的 Transact-SQL 陳述式 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
 ms.component: collations
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - writing international statements
 - Transact-SQL international considerations
@@ -21,20 +20,20 @@ helpviewer_keywords:
 - database international considerations [SQL Server], Transact-SQL
 - dates [SQL Server], international considerations
 ms.assetid: f0b10fee-27f7-45fe-aece-ccc3f63bdcdb
-caps.latest.revision: 
+caps.latest.revision: 35
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: f6d2e5bf9dbfe8d4c40cde744ca49dcda0c1d029
-ms.sourcegitcommit: 9d0467265e052b925547aafaca51e5a5e93b7e38
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: e6a26cdde92df6b1d08a445f195e3e5f9ebc4d2b
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/02/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="write-international-transact-sql-statements"></a>撰寫國際通用的 Transact-SQL 陳述式
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-如果遵循下列的指導方針，使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式的資料庫與資料庫應用程式將更能從一個語言移植至另一個語言，或可支援多種語言：  
+  如果遵循下列的指導方針，使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式的資料庫與資料庫應用程式將更能從一個語言移植至另一個語言，或可支援多種語言：  
   
 -   使用 **nchar**、 **nvarchar**，和 **nvarchar(max)** 來取代所有 **char**、 **varchar**，和 **text**資料類型。 如此一來您就不需要考慮字碼頁轉換的問題。 如需詳細資訊，請參閱 [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md)。  
   
@@ -44,11 +43,11 @@ ms.lasthandoff: 03/02/2018
   
     -   ADO、OLE DB 和 ODBC 應用程式應該使用以下形式的 ODBC 時間戳記、日期和時間逸出子句：  
   
-         **{ ts'**yyyy**-***mm***-***dd**hh***:***mm***:***ss*[**.***fff*] **'}** 例如：**{ ts'**1998**-**09**-**24 10**:**02**:**20**' }**  
+         **{ ts'** yyyy**-***mm***-***dd**hh ***:*** mm ***:*** ss *[**.***fff*] **'}** 例如：**{ ts'** 1998**-** 09**-** 24 10 **:** 02 **:** 20 **' }**  
   
-         **{ d'** *yyyy* **-** *mm* **-** *dd* **'}** 例如： **{ d'**1998**-**09**-**24**'}**  
+         **{ d'** *yyyy* **-** *mm* **-** *dd* **'}** 例如： **{ d'** 1998**-** 09**-** 24 **'}**  
   
-         **{ t'** *hh* **:** *mm* **:** *ss* **'}** 例如： **{ t'**10:02:20**'}**  
+         **{ t'** *hh* **:** *mm* **:** *ss* **'}** 例如： **{ t'** 10:02:20 **'}**  
   
     -   使用其他 API 或 [!INCLUDE[tsql](../../includes/tsql-md.md)] 指令碼、預存程序和觸發程序的應用程式，應該使用未分隔的數值字串。 例如 *yyyymmdd* 為 19980924。  
   

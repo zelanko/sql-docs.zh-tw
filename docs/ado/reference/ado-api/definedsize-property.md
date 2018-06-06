@@ -1,33 +1,30 @@
 ---
-title: "DefinedSize 屬性 |Microsoft 文件"
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
+title: DefinedSize 屬性 |Microsoft 文件
+ms.prod: sql
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
-ms.custom: 
+ms.technology: connectivity
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 apitype: COM
 f1_keywords:
 - Field20::DefinedSize
 helpviewer_keywords:
 - DefinedSize property [ADO]
 ms.assetid: 3ee27314-a305-4fbc-8433-9ee9a909afd6
-caps.latest.revision: 
+caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 44c44b0dd7528634cc6db88b3d5bb04a8a1237e3
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: b84eb083ba442fc214d63b518c8bab0c001aa229
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="definedsize-property"></a>DefinedSize 屬性
 表示的資料容量[欄位](../../../ado/reference/ado-api/field-object.md)物件。  
@@ -35,7 +32,7 @@ ms.lasthandoff: 02/09/2018
 ## <a name="return-value"></a>傳回值  
  傳回**長**值，反映所定義的大小的欄位，這取決於資料類型的欄位物件，請參閱 <<c4> [ 類型](../../../ado/reference/ado-api/type-property-ado.md)如需詳細資訊。 使用的固定長度資料類型的欄位，傳回值會是資料類型，以位元組為單位的大小。 使用可變長度資料類型的欄位，這是下列其中一項：  
   
-1.  以字元為單位的欄位的最大長度 (如**adVarChar**和**adVarWChar**) 或以位元組為單位 (如**adVarBinary**，和**adVarNumeric**) 如果欄位有定義的長度。 例如， **adVarChar(5)**欄位的最大長度為 5。  
+1.  以字元為單位的欄位的最大長度 (如**adVarChar**和**adVarWChar**) 或以位元組為單位 (如**adVarBinary**，和**adVarNumeric**) 如果欄位有定義的長度。 例如， **adVarChar(5)** 欄位的最大長度為 5。  
   
 2.  以字元為單位的資料類型的最大長度 (如**adChar**和**adWChar**) 或以位元組為單位 (如**adBinary**和**adNumeric**) 如果欄位沒有定義的長度。  
   

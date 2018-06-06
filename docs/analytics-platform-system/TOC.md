@@ -1,6 +1,6 @@
 # 關於此版本
 ## [新功能](whats-new-analytics-platform-system.md)
-## [新增及更新的發行項](new-updated-analytics-platform-system.md)
+## [新文章及更新的文章](new-updated-analytics-platform-system.md)
 
 # Architecture
 ## [平行處理資料倉儲概觀](parallel-data-warehouse-overview.md)
@@ -18,6 +18,7 @@
 ## [InfiniBand 網路介面卡設定](configure-infiniband-network-adapters.md)
 
 # 查詢
+## [設定自動統計資料](configure-auto-statistics.md)
 ## [監視作用中的查詢](monitoring-active-queries.md)
 
 # 載入
@@ -50,7 +51,7 @@
 ## [工作負載管理](workload-management.md)
 ### [工作負載管理工作](workload-management-tasks.md)
 
-# 安全性
+# Security
 ## [透明資料加密](transparent-data-encryption.md)
 ## [佈建憑證](provision-certificate.md)
 
@@ -69,6 +70,7 @@
 ### [設備網路設定](appliance-network-configuration.md)
 ### [PDW 拓撲](pdw-topology.md)
 ### [佈建 PDW 憑證](pdw-certificate-provisioning.md)
+### [PDW 功能切換](appliance-feature-switch.md)
 ### [PDW 防火牆設定](pdw-firewall-configuration.md)
 ### [PDW 服務狀態](pdw-services-status.md)
 ### [檔案立即初始化設定](instant-file-initialization-configuration.md)

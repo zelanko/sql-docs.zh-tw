@@ -1,16 +1,14 @@
 ---
-title: "Interval 資料類型 |Microsoft 文件"
-ms.custom: 
+title: Interval 資料類型 |Microsoft 文件
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
-ms.component: odbc
-ms.reviewer: 
+ms.prod: sql
+ms.prod_service: connectivity
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: connectivity
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - second intervals [ODBC]
 - data types [ODBC], interval data types
@@ -27,16 +25,15 @@ helpviewer_keywords:
 - C data types [ODBC], interval
 - interval fields [ODBC]
 ms.assetid: fba93f65-c1db-44f4-91ba-532f87241cf7
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
-ms.workload: Inactive
-ms.openlocfilehash: 394bc2f0efdc061bdaaca1c3fbdacd13e9cbc944
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+manager: craigg
+ms.openlocfilehash: ebc6b5d2a8e2277c3bb427053f43ebed4983e0b9
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="interval-data-types"></a>Interval 資料類型
 間隔會定義為兩個日期和時間之間的差異。 間隔被以兩種不同方式的其中一個。 其中一個是*年-月*表示根據年份和月份的整數間隔的間隔。 另一個則*天時間*表達方面天、 分和秒的時間間隔的間隔。 這兩種類型的間隔相異，且不能混用，因為月份中可以擁有不同數字的天數。  
@@ -47,7 +44,7 @@ ms.lasthandoff: 12/21/2017
   
  有 13 間隔 SQL 資料類型和 13 間隔 C 資料類型。 每個間隔 C 資料類型使用相同的結構，SQL_INTERVAL_STRUCT，以包含間隔的資料。 (如需詳細資訊，請參閱下節中， [C 間隔結構](../../../odbc/reference/appendixes/c-interval-structure.md)。)如需有關 SQL 資料類型的詳細資訊，請參閱[SQL 資料型別](../../../odbc/reference/appendixes/sql-data-types.md); 若為 C 資料類型上的詳細資訊，請參閱[C 資料類型](../../../odbc/reference/appendixes/c-data-types.md)。  
   
-|類型識別碼|類別|描述|  
+|類型識別碼|類別|Description|  
 |---------------------|-----------|-----------------|  
 |MONTH|年-月|兩個日期之間的月數。|  
 |YEAR|年-月|兩個日期之間的年數。|  

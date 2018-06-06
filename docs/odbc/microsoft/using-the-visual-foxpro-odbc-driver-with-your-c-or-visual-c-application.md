@@ -1,16 +1,14 @@
 ---
-title: "Visual FoxPro ODBC 驅動程式使用 C 或 Visual c + + 應用程式 |Microsoft 文件"
-ms.custom: 
+title: Visual FoxPro ODBC 驅動程式使用 C 或 Visual c + + 應用程式 |Microsoft 文件
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
-ms.component: odbc
-ms.reviewer: 
+ms.prod: sql
+ms.prod_service: connectivity
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: connectivity
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - FoxPro ODBC driver [ODBC], C or C++ applications
 - C++ applications [ODBC]
@@ -18,16 +16,15 @@ helpviewer_keywords:
 - Visual FoxPro data [ODBC], C or C++ applications
 - C applications [ODBC]
 ms.assetid: beb11a68-849e-4fe0-b217-d3722b1b1389
-caps.latest.revision: "9"
+caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
-ms.workload: Inactive
-ms.openlocfilehash: eb3d94f0534d7c86dc4c0c8b54804d153281f29a
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+manager: craigg
+ms.openlocfilehash: 8823264d66a632a6d1252c1c484e3ccc37d44de3
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="use-the-visual-foxpro-odbc-driver-with-your-c-or-visual-c-application"></a>Visual FoxPro ODBC 驅動程式使用與您的 C 或 Visual c + + 應用程式
 C 或 c + + 應用程式與通訊 Visual FoxPro 資料傳送[SQLExecute](../../odbc/microsoft/sqlexecute-visual-foxpro-odbc-driver.md)或[SQLExecDirect](../../odbc/microsoft/sqlexecdirect-visual-foxpro-odbc-driver.md) Visual FoxPro 陳述式。 這個陳述式可以包含下列內容：  

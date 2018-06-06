@@ -1,17 +1,16 @@
 ---
-title: "時序容器 | Microsoft Docs"
-ms.custom: 
+title: 時序容器 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
 ms.component: control-flow
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 f1_keywords:
 - sql13.dts.designer.sequencecontainer.f1
 helpviewer_keywords:
@@ -20,16 +19,15 @@ helpviewer_keywords:
 - containers [Integration Services], Sequence
 - subset control flow [Integration Services]
 ms.assetid: 7731f91e-b8b3-4d96-a0d9-73f568547cb3
-caps.latest.revision: 
+caps.latest.revision: 48
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 04231fc1297aa855111c48975f6bb7ad4b03d099
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 572ef34e4ffc661312cf6c640306ae263f4e62b0
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sequence-container"></a>時序容器
   「時序」容器會定義屬於封裝控制流程子集的控制流程。 「時序」容器會將封裝納入多個不同的控制流程中，而各流程中包含在整個封裝控制流程內執行的一項或多項工作和容器。  

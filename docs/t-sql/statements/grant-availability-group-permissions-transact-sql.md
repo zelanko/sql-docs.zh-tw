@@ -1,16 +1,14 @@
 ---
-title: "授與可用性群組權限 (Transact-SQL) | Microsoft Docs"
-ms.custom: 
+title: 授與可用性群組權限 (Transact-SQL) | Microsoft Docs
+ms.custom: ''
 ms.date: 06/12/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-database
-ms.service: 
 ms.component: t-sql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: t-sql
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - TSQL
@@ -20,16 +18,15 @@ helpviewer_keywords:
 - granting permissions, [SQL Server], availability groups
 - permissions [SQL Server], availability group
 ms.assetid: 060eb839-666a-4046-9e1d-5edc9ea75a11
-caps.latest.revision: 
+caps.latest.revision: 9
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 2138d0fb0b3e6066af9452a033dcf042fa1f5ca6
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 338718d44707fb87ad8095cbaca5206e2a92b608
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="grant-availability-group-permissions-transact-sql"></a>授與可用性群組權限 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -85,7 +82,7 @@ GRANT permission  [ ,...n ] ON AVAILABILITY GROUP :: availability_group_name
 ## <a name="remarks"></a>Remarks  
  只有在目前資料庫是 **master** 的情況下，才能夠授與伺服器範圍的權限。  
   
- 可用性群組的相關資訊顯示於 [sys.availability_groups &#40;TRANSACT-SQL &#41;](../../relational-databases/system-catalog-views/sys-availability-groups-transact-sql.md) 目錄檢視。 您可以在 [sys.server_permissions](../../relational-databases/system-catalog-views/sys-server-permissions-transact-sql.md) 目錄檢視中，看到有關伺服器權限的資訊，且可以在 [sys.server_principals](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md) 目錄檢視中，看到有關伺服器主體的資訊。  
+ 可用性群組的相關資訊顯示於 [sys.availability_groups & #40;TRANSACT-SQL & #41;](../../relational-databases/system-catalog-views/sys-availability-groups-transact-sql.md) 目錄檢視。 您可以在 [sys.server_permissions](../../relational-databases/system-catalog-views/sys-server-permissions-transact-sql.md) 目錄檢視中，看到伺服器權限的資訊，並在 [sys.server_principals](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md) 目錄檢視中，看到有關伺服器主體的資訊。  
   
  可用性群組是伺服器層級的安全性實體。 下表所列的是可以授與之最特定且最有限的可用性群組權限，並列出利用隱含方式來併入這些權限的較通用權限。  
   
@@ -97,7 +94,7 @@ GRANT permission  [ ,...n ] ON AVAILABILITY GROUP :: availability_group_name
 |TAKE OWNERSHIP|CONTROL|CONTROL SERVER|  
 |VIEW DEFINITION|CONTROL|VIEW ANY DEFINITION|  
   
- 如需所有 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 權限的圖表，請參閱 [Database Engine Permission Poster](http://go.microsoft.com/fwlink/?LinkId=229142) (資料庫引擎權限海報)。  
+ 如需所有 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 權限的圖表，請參閱 [Database Engine Permission Poster](https://aka.ms/sql-permissions-poster) (資料庫引擎權限海報)。  
   
 ## <a name="permissions"></a>Permissions  
  需要可用性群組的 CONTROL 權限或伺服器的 ALTER ANY AVAILABILTIY GROUP 權限。  

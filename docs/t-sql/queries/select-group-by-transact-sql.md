@@ -1,16 +1,14 @@
 ---
 title: GROUP BY (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/03/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
 ms.component: t-sql|queries
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: t-sql
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - GROUP
@@ -34,16 +32,16 @@ helpviewer_keywords:
 - groups [SQL Server], tables divided into groups
 - summary values [SQL Server]
 ms.assetid: 40075914-6385-4692-b4a5-62fe44ae6cb6
-caps.latest.revision: 
-author: barbkess
-ms.author: barbkess
+caps.latest.revision: 80
+author: edmacauley
+ms.author: edmaca
 manager: craigg
-ms.workload: Active
-ms.openlocfilehash: 5e99efe49620003de40659dd4bfd959dacef986c
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 47f0a4be2697714c9fa41c632337c5da7863510d
+ms.sourcegitcommit: d2573a8dec2d4102ce8882ee232cdba080d39628
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="select---group-by--transact-sql"></a>SELECT - GROUP BY- Transact-SQL
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -349,7 +347,7 @@ GROUP BY 子句支援 SQL-2006 標準內包含的所有 GROUP BY 功能，但是
 |功能|SQL Server Integration Services|SQL Server 相容性層級 100 或更高層級|相容性層級 90 的 SQL Server 2008 或更新版本。|  
 |-------------|-------------------------------------|--------------------------------------------------|-----------------------------------------------------------|  
 |DISTINCT 彙總|不支援 WITH CUBE 或 WITH ROLLUP。|支援 WITH CUBE、WITH ROLLUP、GROUPING SETS、CUBE 或 ROLLUP。|與相容性層級 100 相同。|  
-|GROUP BY 子句中具有 CUBE 或 ROLLUP 名稱的使用者定義函數|允許在 GROUP BY 子句中使用使用者定義函數 **dbo.cube(***arg1***,***...argN***)** 或 **dbo.rollup(***arg1***,**...*argN***)**。<br /><br /> 例如： `SELECT SUM (x) FROM T  GROUP BY dbo.cube(y);`|不允許在 GROUP BY 子句中使用使用者定義函數 **dbo.cube (***arg1***,**...argN**)** 或 **dbo.rollup(**arg1**,***...argN***)**。<br /><br /> 例如： `SELECT SUM (x) FROM T  GROUP BY dbo.cube(y);`<br /><br /> 傳回下列錯誤訊息：「關鍵字 'cube'&#124;'rollup' 附近的語法不正確」。<br /><br /> 若要避免這個問題，請使用 `dbo.cube` 取代 `[dbo].[cube]`，或使用 `dbo.rollup` 取代 `[dbo].[rollup]`。<br /><br /> 允許使用下列範例：`SELECT SUM (x) FROM T  GROUP BY [dbo].[cube](y);`|允許在 GROUP BY 子句中使用使用者定義函數 **dbo.cube (***arg1***,***...argN*) 或 **dbo.rollup(***arg1***,***...argN***)**<br /><br /> 例如： `SELECT SUM (x) FROM T  GROUP BY dbo.cube(y);`|  
+|GROUP BY 子句中具有 CUBE 或 ROLLUP 名稱的使用者定義函數|允許在 GROUP BY 子句中使用使用者定義函數 **dbo.cube(***arg1***,***...argN***)** 或 **dbo.rollup(***arg1***,**...*argN***)**。<br /><br /> 例如： `SELECT SUM (x) FROM T  GROUP BY dbo.cube(y);`|不允許在 GROUP BY 子句中使用使用者定義函數 **dbo.cube (***arg1***,**...argN **)** 或 **dbo.rollup(** arg1 **,***...argN***)**。<br /><br /> 例如： `SELECT SUM (x) FROM T  GROUP BY dbo.cube(y);`<br /><br /> 傳回下列錯誤訊息：「關鍵字 'cube'&#124;'rollup' 附近的語法不正確」。<br /><br /> 若要避免這個問題，請使用 `dbo.cube` 取代 `[dbo].[cube]`，或使用 `dbo.rollup` 取代 `[dbo].[rollup]`。<br /><br /> 允許使用下列範例：`SELECT SUM (x) FROM T  GROUP BY [dbo].[cube](y);`|允許在 GROUP BY 子句中使用使用者定義函數 **dbo.cube (***arg1***,***...argN*) 或 **dbo.rollup(***arg1***,***...argN***)**<br /><br /> 例如： `SELECT SUM (x) FROM T  GROUP BY dbo.cube(y);`|  
 |GROUPING SETS|不支援|支援|支援|  
 |CUBE|不支援|支援|不支援|  
 |ROLLUP|不支援|支援|不支援|  

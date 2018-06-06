@@ -1,30 +1,32 @@
 ---
 title: Data Quality Services | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 10/12/2013
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: data-quality-services
-ms.service: 
 ms.component: data-quality-services
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: data-quality-services
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- data-quality-services
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: 9c6b996c-e768-4bf5-837f-5436ed9cea1d
-caps.latest.revision: "67"
+caps.latest.revision: 67
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.workload: On Demand
-ms.openlocfilehash: 5a437f93e76b78a9d335ab846c83a9765eb1b4d5
-ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
+manager: craigg
+ms.openlocfilehash: b05d903143acada9600657398a4d5b166d8cdc87
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="data-quality-services"></a>Data Quality Services
-  [!INCLUDE[ssDQSnoversionLong](../includes/ssdqsnoversionlong-md.md)] (DQS) 是一個知識驅動的資料品質專案。 DQS 可讓您建立知識庫，然後使用該知識庫執行各種重要的資料品質工作，包括更正、充實、標準化及刪除重複資料。 DQS 可讓您使用參考資料提供者所提供的雲端式 Reference Data Services，執行資料清理。 DQS 也提供您整合到其資料品質工作的分析功能，讓您分析資料的完整性。  
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
+[!INCLUDE[ssDQSnoversionLong](../includes/ssdqsnoversionlong-md.md)] (DQS) 是一個知識驅動的資料品質專案。 DQS 可讓您建立知識庫，然後使用該知識庫執行各種重要的資料品質工作，包括更正、充實、標準化及刪除重複資料。 DQS 可讓您使用參考資料提供者所提供的雲端式 Reference Data Services，執行資料清理。 DQS 也提供您整合到其資料品質工作的分析功能，讓您分析資料的完整性。  
   
  DQS 包含 [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] 和 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)]，兩者都會安裝成 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]的一部分。 [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] 是一個 SQL Server 執行個體功能，其中包含具有資料品質功能與儲存的三個 SQL Server 目錄。 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 是一個 SQL Server 共用功能，商務使用者、資訊工作者以及 IT 專業人員可以使用該功能來執行電腦輔助的資料品質分析，並以互動方式管理其資料品質。 您也可以使用 [!INCLUDE[ssDQSCleansingLong](../includes/ssdqscleansinglong-md.md)] 和 Master Data Services (MDS) 資料品質功能 (兩者皆以 DQS 為基礎) 執行資料品質程序。  
   

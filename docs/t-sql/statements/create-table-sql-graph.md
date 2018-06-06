@@ -1,16 +1,14 @@
 ---
 title: CREATE TABLE (SQL Graph) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 05/04/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-database
-ms.service: 
 ms.component: t-sql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: t-sql
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - SQL_GRAPH_TSQL
@@ -33,17 +31,17 @@ helpviewer_keywords:
 - NODE
 - EDGE
 - SQL graph, CREATE TABLE statement
-ms.assetid: 
-caps.latest.revision: 
+ms.assetid: ''
+caps.latest.revision: 1
 author: shkale-msft
 ms.author: shkale
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: fe8ace1b8f8c55c14d4807514fcb1436f6966fed
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
+ms.openlocfilehash: 12582cd78a60d141008cdb05ff3e6d559f29944e
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="create-table-sql-graph"></a>CREATE TABLE (SQL Graph)
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
@@ -128,5 +126,5 @@ CREATE TABLE
 ## <a name="see-also"></a>另請參閱  
  [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)   
  [INSERT (SQL Graph)](../../t-sql/statements/insert-sql-graph.md)]  
- [圖形處理與 SQL Server 2017](../../relational-databases/graphs/sql-graph-overview.md)
+ [SQL Server 2017 的圖表處理](../../relational-databases/graphs/sql-graph-overview.md)
 

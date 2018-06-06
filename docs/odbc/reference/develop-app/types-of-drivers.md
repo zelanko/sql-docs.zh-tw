@@ -1,32 +1,29 @@
 ---
-title: "類型的驅動程式 |Microsoft 文件"
-ms.custom: 
+title: 類型的驅動程式 |Microsoft 文件
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
-ms.component: odbc
-ms.reviewer: 
+ms.prod: sql
+ms.prod_service: connectivity
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: connectivity
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - driver compatibility issues [ODBC]
 - ODBC drivers [ODBC], backward compatibility
 - backward compatibility [ODBC], application and driver compatibility
 - compatibility [ODBC], application and driver compatibility
 ms.assetid: 864c53c1-b68a-48b6-b6bc-5ecb520bb9dc
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
-ms.workload: Inactive
-ms.openlocfilehash: c2068bb92d1aaa00debc46277c117d4134091666
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+manager: craigg
+ms.openlocfilehash: e75e5827becd5457d0e310ca5ec0cc2a13259be5
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="types-of-drivers"></a>類型的驅動程式
 ODBC 驅動程式可分類如下：  
@@ -34,7 +31,7 @@ ODBC 驅動程式可分類如下：
 -   **32 位元 ODBC 2。**  
      ***x*驅動程式**的 32 位元驅動程式的：  
   
-    -   匯出只 ODBC 2*.x*函式。  
+    -   匯出只 ODBC 2 *.x*函式。  
   
     -   表現 ODBC 2。*x*行為的行為變更。  
   

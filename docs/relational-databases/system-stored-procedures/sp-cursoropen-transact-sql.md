@@ -1,16 +1,14 @@
 ---
-title: "sp_cursoropen (TRANSACT-SQL) |Microsoft 文件"
-ms.custom: 
+title: sp_cursoropen (TRANSACT-SQL) |Microsoft 文件
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: system-objects
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_cursoropen
@@ -20,16 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_cursoropen
 ms.assetid: 16462ede-4393-4293-a598-ca88c48ca70b
-caps.latest.revision: 
+caps.latest.revision: 10
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 3752ac2db3a8687fd44fc43c2e29f24526db7ca1
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: c6dae6b21a86c6cc68ab241328c5c190580888c6
+ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="spcursoropen-transact-sql"></a>sp_cursoropen (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -53,13 +50,13 @@ sp_cursoropen cursor OUTPUT, stmt
   
  *資料指標*可讓多個資料指標單一資料庫連接上作用中。  
   
- *陳述式*  
+ *stmt*  
  這是定義資料指標結果集的必要參數。 （不論是使用 Unicode，大小等) 的任何字串類型的任何有效的查詢字串 （語法和繫結） 可做為有效*stmt*實值類型。  
   
  *scrollopt*  
  捲動選項。 *scrollopt*是需要下列其中一個選擇性參數**int**輸入值。  
   
-|值|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |0x0001|KEYSET|  
 |0x0002|DYNAMIC|  
@@ -81,7 +78,7 @@ sp_cursoropen cursor OUTPUT, stmt
  *ccopt*  
  並行控制選項。 *ccopt*是需要下列其中一個選擇性參數**int**輸入值。  
   
-|值|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |0x0001|READ_ONLY|  
 |0x0002|SCROLL_LOCKS (之前稱為 LOCKCC)|  
@@ -217,8 +214,8 @@ sp_cursoropen cursor OUTPUT, stmt
   
  後續的參數用來傳遞的值來取代*區域變數名稱*陳述式中。  
   
-## <a name="see-also"></a>請參閱  
- [sp_cursorfetch &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/sp-cursorfetch-transact-sql.md)   
+## <a name="see-also"></a>另請參閱  
+ [sp_cursorfetch &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-cursorfetch-transact-sql.md)   
  [系統預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

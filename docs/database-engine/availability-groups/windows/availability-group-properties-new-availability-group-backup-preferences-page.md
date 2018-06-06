@@ -1,32 +1,32 @@
 ---
-title: "屬性：新增可用性群組 (備份喜好設定頁面) | Microsoft Docs"
-ms.custom: 
+title: 屬性：新增可用性群組 (備份喜好設定頁面) | Microsoft Docs
+ms.custom: ''
 ms.date: 05/17/2016
-ms.prod: sql-non-specified
-ms.prod_service: database-engine
-ms.service: 
-ms.component: availability-groups
-ms.reviewer: 
+ms.prod: sql
+ms.prod_service: high-availability
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: dbe-high-availability
-ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords: sql13.swb.availabilitygroupproperties.backuppreferences.f1
-helpviewer_keywords: read-only routing
+ms.technology: high-availability
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
+f1_keywords:
+- sql13.swb.availabilitygroupproperties.backuppreferences.f1
+helpviewer_keywords:
+- read-only routing
 ms.assetid: 65fff22d-5963-4a8c-8b31-fe9ab247a03e
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 84684e7c9327cce92add49ff44aa881b3af25023
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 565157b198b57cdd50ebc3ad7b9385b15bd13409
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="availability-group-properties-new-availability-group-backup-preferences-page"></a>可用性群組屬性：新增可用性群組 (備份喜好設定頁面)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 使用此對話方塊可以檢視和變更所選可用性群組的備份喜好設定。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  使用此對話方塊可以檢視和變更所選可用性群組的備份喜好設定。  
   
  **若要檢視可用性群組屬性**  
   

@@ -1,27 +1,25 @@
 ---
-title: "升級在 Windows Server 2008/2008 R2/2012 叢集上執行的 SQL Server 執行個體 | Microsoft Docs"
+title: 升級在 Windows Server 2008/2008 R2/2012 叢集上執行的 SQL Server 執行個體 | Microsoft Docs
 ms.date: 1/25/2018
 ms.suite: sql
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database engine
 ms.component: failover-clustuers
-ms.technology:
-- dbe-high-availability
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: high-availability
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - upgrading failover clusters
 - clusters [SQL Server], upgrading
 - failover clustering [SQL Server], upgrading
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
-ms.workload: On Demand
-ms.openlocfilehash: 3337f1c438f303775d923ec12b14891c13b36c03
-ms.sourcegitcommit: 0a9c29c7576765f3b5774b2e087852af42ef4c2d
+manager: craigg
+ms.openlocfilehash: c6a9aee6826f1ec08005fa79fe96283fa284924f
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/29/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="upgrade-sql-server-instances-running-on-windows-server-20082008-r22012-clusters"></a>升級在 Windows Server 2008/2008 R2/2012 叢集上執行的 SQL Server 執行個體
 

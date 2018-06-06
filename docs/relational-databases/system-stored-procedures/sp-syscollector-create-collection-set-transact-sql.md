@@ -1,16 +1,14 @@
 ---
-title: "sp_syscollector_create_collection_set (TRANSACT-SQL) |Microsoft 文件"
-ms.custom: 
+title: sp_syscollector_create_collection_set (TRANSACT-SQL) |Microsoft 文件
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: system-objects
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_syscollector_create_collection_set_TSQL
@@ -21,16 +19,15 @@ helpviewer_keywords:
 - data collector [SQL Server], stored procedures
 - sp_syscollector_create_collection_set
 ms.assetid: 69e9ff0f-c409-43fc-89f6-40c3974e972c
-caps.latest.revision: 
+caps.latest.revision: 30
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 50e5c77d8af3ae4ab42ef74ee18f7b49db2a7c57
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 6cefec5de4c7bba8d2b184a202f5a21c4a25901c
+ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="spsyscollectorcreatecollectionset-transact-sql"></a>sp_syscollector_create_collection_set (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -67,8 +64,8 @@ sp_syscollector_create_collection_set
   
  *名稱*必須是唯一的。 如需目前的收集組名稱清單，請查詢 syscollector_collection_sets 系統檢視表。  
   
- [ **@target =** ] '*target*'  
- 保留供日後使用。 *名稱*是**nvarchar （128)**預設值是 NULL。  
+ [  **@target =** ] '*目標*'  
+ 保留供日後使用。 *名稱*是**nvarchar （128)** 預設值是 NULL。  
   
  [ **@collection_mode =** ] *collection_mode*  
  指定收集資料和儲存資料的方式。 *collection_mode*是**smallint** ，而且可以有下列值之一：  
@@ -93,7 +90,7 @@ sp_syscollector_create_collection_set
   
  當*collection_mode*設為 0， *schedule_uid*或*schedule_name*必須指定。 當*collection_mode*設為 1， *schedule_uid*或*schedule_name*如果指定，會被忽略。  
   
- [ **@schedule_name =** ] '*schedule_name*'  
+ [  **@schedule_name =** ] '*schedule_name*'  
  這是排程的名稱。 *schedule_name*是**sysname**預設值是 NULL。 如果指定， *schedule_uid*必須是 NULL。 若要取得*schedule_name*，查詢 sysschedules 系統資料表。  
   
  [ **@logging_level =** ] *logging_level*  
@@ -113,14 +110,14 @@ sp_syscollector_create_collection_set
   
 -   持續執行的收集進度  
   
--   警告事件 [!INCLUDE[ssIS](../../includes/ssis-md.md)]  
+-   [!INCLUDE[ssIS](../../includes/ssis-md.md)] 的警告事件  
   
- 2-層級 1 記錄和事件的詳細的資訊 [!INCLUDE[ssIS](../../includes/ssis-md.md)]  
+ 2 - 層級 1 記錄和 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 的詳細事件資訊  
   
  預設值為*logging_level*為 1。  
   
- [ **@description =** ] '*description*'  
- 這是收集組的描述。 *描述*是**nvarchar （4000)**預設值是 NULL。  
+ [  **@description =** ] '*描述*'  
+ 這是收集組的描述。 *描述*是**nvarchar （4000)** 預設值是 NULL。  
   
  [ **@collection_set_id =** ] *collection_set_id*  
  這是收集組的唯一本機識別碼。 *collection_set_id*是**int**與輸出，且需要。  

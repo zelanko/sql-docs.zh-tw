@@ -1,28 +1,26 @@
 ---
-title: "SET 路徑命令 |Microsoft 文件"
-ms.custom: 
+title: SET 路徑命令 |Microsoft 文件
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
-ms.component: odbc
-ms.reviewer: 
+ms.prod: sql
+ms.prod_service: connectivity
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
-ms.topic: article
-helpviewer_keywords: SET PATH command [ODBC]
+ms.technology: connectivity
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
+helpviewer_keywords:
+- SET PATH command [ODBC]
 ms.assetid: db488d1e-0963-4f45-8c76-a23b9bde9e9d
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
-ms.workload: Inactive
-ms.openlocfilehash: 553c3f464b5a14d578aa05bece939126f7251974
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+manager: craigg
+ms.openlocfilehash: 058f9f36aa3e762b27e2548fb1a1ddd4767399e8
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="set-path-command"></a>SET 路徑命令
 指定的路徑來搜尋檔案。 驅動程式特定資訊，請參閱 < 備註 >。  
@@ -54,7 +52,7 @@ SET PATH TO [Path]
   
  如果您想要建立、 選取或更新資料表以外的資料來源所指定的目錄中，指定檔案的完整路徑，與您的命令。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [ODBC Visual FoxPro 安裝程式 對話方塊](../../odbc/microsoft/odbc-visual-foxpro-setup-dialog-box.md)   
  [SQLColumns （Visual FoxPro ODBC 驅動程式）](../../odbc/microsoft/sqlcolumns-visual-foxpro-odbc-driver.md)   
  [SQLDriverConnect （Visual FoxPro ODBC 驅動程式）](../../odbc/microsoft/sqldriverconnect-visual-foxpro-odbc-driver.md)   

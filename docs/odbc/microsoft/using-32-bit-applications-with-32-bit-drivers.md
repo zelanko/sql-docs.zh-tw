@@ -1,30 +1,27 @@
 ---
-title: "32 位元驅動程式搭配使用 32 位元應用程式 |Microsoft 文件"
-ms.custom: 
+title: 32 位元驅動程式搭配使用 32 位元應用程式 |Microsoft 文件
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
-ms.component: odbc
-ms.reviewer: 
+ms.prod: sql
+ms.prod_service: connectivity
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: connectivity
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - ODBC drivers [ODBC], 32-bit applications
 - 32-bit applications with 32-bit drivers [ODBC]
 ms.assetid: 0cdd5788-5642-4280-8d53-b4ec461aafa1
-caps.latest.revision: "13"
+caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
-ms.workload: Inactive
-ms.openlocfilehash: 70b27a10dc14583a39870fc434b7b69fb674ab5b
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+manager: craigg
+ms.openlocfilehash: 7a07dae46125ce9ea04bfc36156d8855192396f3
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="using-32-bit-applications-with-32-bit-drivers"></a>32 位元應用程式使用 32 位元驅動程式
 您可以使用 32 位元驅動程式來執行 32 位元應用程式。 32 位元應用程式和 32 位元驅動程式會使用 Win32® 應用程式開發介面。  
@@ -32,7 +29,7 @@ ms.lasthandoff: 12/21/2017
 ## <a name="architecture"></a>Architecture  
  下圖顯示如何為 32 位元應用程式與 32 位元驅動程式通訊。 應用程式會呼叫 32 位元驅動程式管理員，也就會呼叫 32 位元驅動程式。  
   
- ![如何 32 &#45; 32 &#45; 與通訊的位元應用程式位元驅動程式](../../odbc/microsoft/media/sdka6.gif "sdka6")  
+ ![如何 32&#45;32 位元應用程式通訊&#45;位元驅動程式](../../odbc/microsoft/media/sdka6.gif "sdka6")  
   
 > [!IMPORTANT]  
 >  請勿 WindowsNT/windows 2000 上使用 32 位元 thunk 安裝程式 DLL。 雖然有 32 位元安裝程式 DLL 的檔案名稱相同，它是不同的 DLL。  
@@ -43,7 +40,7 @@ ms.lasthandoff: 12/21/2017
 ## <a name="components"></a>Components  
  ODBC 元件包括執行 32 位元驅動程式以 32 位元應用程式的下列檔案。 這些元件是在 \Redist 目錄中。  
   
-|[檔案名稱]|描述|  
+|檔案名稱|Description|  
 |---------------|-----------------|  
 |Odbc32.dll|32 位元驅動程式管理員|  
 |Odbccp32.dll|32 位元安裝程式 DLL|  

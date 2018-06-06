@@ -1,30 +1,25 @@
 ---
 title: MSSQLSERVER_9955 | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 04/04/2017
-ms.prod: sql-non-specified
-ms.prod_service: database-engine
-ms.service: 
-ms.component: errors-events
-ms.reviewer: 
+ms.prod: sql
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: supportability
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 helpviewer_keywords:
 - 9955 (Database Engine error)
 ms.assetid: 77f30570-7790-4747-b372-eac71c036e19
-caps.latest.revision: 
-author: edmacauley
-ms.author: edmaca
+caps.latest.revision: 26
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: b5ac734473c592a347c8c954d7815b43869d3b9c
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 6fdeffc81d697c37a39cd33ef3e12060cad40a64
+ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="mssqlserver9955"></a>MSSQLSERVER_9955
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -33,7 +28,7 @@ ms.lasthandoff: 11/21/2017
   
 |||  
 |-|-|  
-|產品名稱|SQL Server|  
+|產品名稱|[SQL Server]|  
 |事件識別碼|9955|  
 |事件來源|MSSQLSERVER|  
 |元件|SQLEngine|  

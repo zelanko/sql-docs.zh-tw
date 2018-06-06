@@ -1,27 +1,24 @@
 ---
-title: "使用結果集 |Microsoft 文件"
-ms.custom: 
+title: 使用結果集 |Microsoft 文件
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
-ms.component: jdbc
-ms.reviewer: 
+ms.prod: sql
+ms.prod_service: connectivity
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: connectivity
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: 4fc4b1c6-3075-4ad7-9244-865d9ede7ae6
-caps.latest.revision: "10"
+caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
-ms.workload: Inactive
-ms.openlocfilehash: 9d90a11fa3c617f529d4bc13e3b80f5755423310
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+manager: craigg
+ms.openlocfilehash: 1b2797c9ce000d687550ee50c27fdc51524f86c6
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="working-with-result-sets"></a>使用結果集
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -43,7 +40,7 @@ ms.lasthandoff: 11/18/2017
 |[修改結果集資料範例](../../connect/jdbc/modifying-result-set-data-sample.md)|描述如何使用結果集，插入、 擷取和修改中的資料[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]資料庫。|  
 |[快取結果集資料範例](../../connect/jdbc/caching-result-set-data-sample.md)|描述如何使用結果集要擷取大量資料從[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]資料庫，以及控制如何在用戶端快取該資料。|  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [範例 JDBC 驅動程式應用程式](../../connect/jdbc/sample-jdbc-driver-applications.md)  
   
   

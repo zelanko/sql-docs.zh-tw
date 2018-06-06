@@ -1,27 +1,24 @@
 ---
-title: "SQLAsyncNotificationCallback 函式 |Microsoft 文件"
-ms.custom: 
+title: SQLAsyncNotificationCallback 函式 |Microsoft 文件
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
-ms.component: odbc
-ms.reviewer: 
+ms.prod: sql
+ms.prod_service: connectivity
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: connectivity
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: c56aedc9-f7f7-4641-b605-f0f98ed4400c
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
-ms.workload: Inactive
-ms.openlocfilehash: 0a60a959b842c344631ed38ceba33f020e6b8800
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+manager: craigg
+ms.openlocfilehash: 3c785f8547730817c0b1723da38f7ee021aa4f00
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sqlasyncnotificationcallback-function"></a>SQLAsyncNotificationCallback 函式
 **一致性**  
@@ -59,10 +56,10 @@ typedef SQLRETURN (SQL_API *SQL_ASYNC_NOTIFICATION_CALLBACK)(
 ## <a name="diagnostics"></a>診斷  
  **SQLAsyncNotificationCallback**可以傳回 SQL_ERROR，如下列兩種情況下 （這些指示中的驅動程式或驅動程式管理員實作問題。  
   
-|錯誤|描述|  
+|錯誤|Description|  
 |-----------|-----------------|  
 |連接或陳述式沒有要求通知。||  
 |無效*處理*|驅動程式會傳入無效的控制代碼，失敗的內部驅動程式管理員驗證測試。|  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [非同步執行 (輪詢方法)](../../../odbc/reference/develop-app/asynchronous-execution-polling-method.md)

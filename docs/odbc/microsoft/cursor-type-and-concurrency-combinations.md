@@ -1,32 +1,29 @@
 ---
-title: "資料指標類型和並行組合 |Microsoft 文件"
-ms.custom: 
+title: 資料指標類型和並行組合 |Microsoft 文件
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
-ms.component: odbc
-ms.reviewer: 
+ms.prod: sql
+ms.prod_service: connectivity
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: connectivity
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - ODBC driver for Oracle [ODBC], concurrency options
 - cursors [ODBC], ODBC driver for Oracle
 - concurrency options [ODBC]
 - ODBC driver for Oracle [ODBC], cursor options
 ms.assetid: db63d610-f86f-4029-9d66-fed616c8a818
-caps.latest.revision: "9"
+caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
-ms.workload: Inactive
-ms.openlocfilehash: 8a5811471e64f2f269747906f490bde04d61d5db
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+manager: craigg
+ms.openlocfilehash: 1c932f11bbf0098b9b599394751ef98d673a995b
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="cursor-type-and-concurrency-combinations"></a>資料指標類型和並行的組合
 > [!IMPORTANT]  
@@ -44,5 +41,5 @@ ms.lasthandoff: 12/21/2017
   
  <sup>[2]</sup> SQL_CONCUR_LOCK SQL_AUTOCOMMIT 連接選項設定為 SQL_AUTOCOMMIT_OFF 時，才支援。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [連接選項](../../odbc/microsoft/connect-options.md)

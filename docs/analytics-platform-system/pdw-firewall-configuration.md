@@ -1,33 +1,26 @@
 ---
-title: "PDW 防火牆設定 (Analytics Platform System)"
-author: barbkess
-ms.author: barbkess
-manager: jhubbard
-ms.prod: analytics-platform-system
-ms.prod_service: mpp-data-warehouse
-ms.service: 
-ms.component: 
-ms.technology: mpp-data-warehouse
-ms.custom: 
-ms.date: 01/05/2017
-ms.reviewer: na
-ms.suite: sql
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: 191f292d-16bc-4166-b855-158854ad062d
-caps.latest.revision: "28"
-ms.openlocfilehash: e74ffd88f0b2c10a6120c4411e4647c2fb84f249
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+title: PDW 防火牆組態 Analytics Platform System |Microsoft 文件
+description: 防火牆 頁面的 SQL Server PDW 組態管理員可讓您啟用或停用防火牆規則來允許或防止 Analytics Platform System 應用裝置上的特定連接埠存取。
+aauthor: mzaman1
+manager: craigg
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
+ms.openlocfilehash: 8ccfd60aee7647c2421870a09ab5fa9b2653b99d
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/19/2018
 ---
-# <a name="pdw-firewall-configuration"></a>PDW 防火牆設定
+# <a name="parallel-data-warehouse-firewall-configuration-in-analytics-platform-system"></a>Analytics Platform System 中的平行資料倉儲防火牆組態
 **防火牆**頁面的 SQL Server PDW 組態管理員可讓您啟用或停用防火牆規則來允許或防止 Analytics Platform System 應用裝置上的特定連接埠存取。  
   
 ## <a name="to-manage-ports-and-firewall-rules-for-appliance-nodes"></a>若要管理的連接埠和防火牆應用裝置節點的規則  
   
-1.  啟動 Configuration Manager。 如需詳細資訊，請參閱[啟動組態管理員 &#40;Analytics Platform System &#41;](launch-the-configuration-manager.md).  
+1.  啟動 Configuration Manager。 如需詳細資訊，請參閱[啟動 Configuration Manager &#40;Analytics Platform System&#41;](launch-the-configuration-manager.md)。  
   
 2.  在左窗格中的 Configuration Manager 中，依序展開**平行資料倉儲拓樸**，然後按一下 **防火牆**。  
   

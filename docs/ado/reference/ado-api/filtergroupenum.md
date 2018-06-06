@@ -1,33 +1,30 @@
 ---
-title: FilterGroupEnum | Microsoft Docs
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
+title: FilterGroupEnum |Microsoft 文件
+ms.prod: sql
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
-ms.custom: 
+ms.technology: connectivity
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 apitype: COM
 f1_keywords:
 - FilterGroupEnum
 helpviewer_keywords:
 - FilterGroupEnum enumeration [ADO]
 ms.assetid: b22e725e-84bd-4286-a070-290c278c3783
-caps.latest.revision: 
+caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 64a9701680876231d0051789aec0fc43be4c0ad3
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 4452dceb121993655b216112a356f05c4267b1b3
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="filtergroupenum"></a>FilterGroupEnum
 指定要從篩選的記錄群組[資料錄集](../../../ado/reference/ado-api/recordset-object-ado.md)。  
@@ -41,7 +38,7 @@ ms.lasthandoff: 02/09/2018
 |**adFilterPendingRecords**|1|篩選器來檢視只記錄已變更但尚未傳送到伺服器。 僅適用於批次更新模式。|  
   
 ## <a name="adowfc-equivalent"></a>ADO/WFC 對等項目  
- Package: **com.ms.wfc.data**  
+ 封裝： **com.ms.wfc.data**  
   
 |常數|  
 |--------------|  

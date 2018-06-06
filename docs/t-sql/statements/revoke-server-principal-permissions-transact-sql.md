@@ -1,16 +1,14 @@
 ---
-title: "REVOKE 伺服器主體權限 (Transact-SQL) | Microsoft Docs"
-ms.custom: 
+title: REVOKE 伺服器主體權限 (Transact-SQL) | Microsoft Docs
+ms.custom: ''
 ms.date: 08/10/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-database
-ms.service: 
 ms.component: t-sql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: t-sql
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - TSQL
@@ -22,16 +20,15 @@ helpviewer_keywords:
 - logins [SQL Server], revoking
 - REVOKE statement, logins
 ms.assetid: 75409024-f150-4326-af16-9d60e900df18
-caps.latest.revision: 
+caps.latest.revision: 30
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 6573515d0bb50695fcde4cf94e002aa5d6be7025
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: b67c4c1dfe03dfdd3fe94ceaddd631300f259bdf
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="revoke-server-principal-permissions-transact-sql"></a>REVOKE 伺服器主體權限 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -65,10 +62,10 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ] }
  指定可以撤銷的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入權限。 如需權限清單，請參閱這個主題稍後的「備註」一節。  
   
  LOGIN **::** *SQL_Server_login*  
- 指定要撤銷其權限的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入。 範圍限定詞 (**::**) 為必要項目。  
+ 指定要撤銷其權限的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入。 範圍限定詞 (**::**) 是必要項。  
   
  SERVER ROLE **::** *server_role*  
- 指定要撤銷其權限的伺服器角色。 範圍限定詞 (**::**) 為必要項目。  
+ 指定要撤銷其權限的伺服器角色。 範圍限定詞 (**::**) 是必要項。  
   
  { FROM | TO } \<server_principal> 指定要撤銷其權限的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入或伺服器角色。  
   

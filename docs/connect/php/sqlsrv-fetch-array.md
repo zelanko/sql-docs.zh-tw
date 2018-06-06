@@ -1,33 +1,32 @@
 ---
-title: "sqlsrv_fetch_array |Microsoft 文件"
-ms.custom: 
-ms.date: 01/19/2017
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
+title: sqlsrv_fetch_array | Microsoft Docs
+ms.custom: ''
+ms.date: 03/26/2018
+ms.prod: sql
+ms.prod_service: connectivity
 ms.component: php
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
-ms.topic: article
-apiname: sqlsrv_fetch_array
+ms.technology: connectivity
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
+apiname:
+- sqlsrv_fetch_array
 apitype: NA
 helpviewer_keywords:
 - sqlsrv_fetch_array
 - retrieving data, as an array
 - API Reference, sqlsrv_fetch_array
 ms.assetid: 69270b9e-0791-42f4-856d-412da39dea63
-caps.latest.revision: "52"
+caps.latest.revision: 52
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
-ms.workload: On Demand
-ms.openlocfilehash: 63fd8fa0274ed5e83774d6d9929023fe58ad6553
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+manager: craigg
+ms.openlocfilehash: 3a6df21ff42d0394b153aa97a0b5639fe47beec9
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sqlsrvfetcharray"></a>sqlsrv_fetch_array
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -46,7 +45,7 @@ sqlsrv_fetch_array( resource $stmt[, int $fetchType [, row[, ]offset]])
   
 *$fetchType* [選用]: 預先定義的常數。 此參數可以採用下表所列的其中一個值：  
   
-|值|Description|  
+|Value|Description|  
 |---------|---------------|  
 |SQLSRV_FETCH_NUMERIC|下一個資料列會以數值陣列的形式傳回。|  
 |SQLSRV_FETCH_ASSOC|下一個資料列會以關聯陣列的形式傳回。 陣列索引鍵是結果集內的資料行名稱。|  
@@ -87,7 +86,7 @@ SELECT SCOPE_IDENTITY() AS PictureID
 如果結果集包含多個沒有名稱的資料行，則最後一個未命名資料行的值將會指派給空字串 ("") 索引鍵。  
   
 ## <a name="example"></a>範例  
-下列範例會以關聯 **陣列**的形式擷取結果集的每個資料列。 此範例假設本機電腦上已安裝 SQL Server 和 [AdventureWorks](http://go.microsoft.com/fwlink/?LinkID=67739) 資料庫。 從命令列執行範例時，所有輸出都會寫入至主控台。  
+下列範例會以關聯 **陣列**的形式擷取結果集的每個資料列。 此範例假設 SQL Server 和[AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works)資料庫安裝在本機電腦上。 從命令列執行範例時，所有輸出都會寫入至主控台。  
   
 ```  
 <?php  
@@ -130,7 +129,7 @@ sqlsrv_close( $conn);
   
 此範例會擷取產品資訊*Purchasing.PurchaseOrderDetail*適用於具有指定的日期，以及存貨的數量的產品在 AdventureWorks 資料庫的資料表 (*StockQty*)不超過指定的值。  
   
-此範例假設本機電腦上已安裝 SQL Server 和 [AdventureWorks](http://go.microsoft.com/fwlink/?LinkID=67739) 資料庫。 從命令列執行範例時，所有輸出都會寫入至主控台。  
+此範例假設 SQL Server 和[AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works)資料庫安裝在本機電腦上。 從命令列執行範例時，所有輸出都會寫入至主控台。  
   
 ```  
 <?php  
@@ -186,8 +185,11 @@ sqlsrv_close( $conn);
 如果擷取沒有名稱的欄位，則陣列元素的關聯索引鍵會是空字串 ("")。 如需詳細資訊，請參閱 [sqlsrv_fetch_array](../../connect/php/sqlsrv-fetch-array.md)。  
   
 ## <a name="see-also"></a>另請參閱  
-[SQLSRV 驅動程式 API 參考](../../connect/php/sqlsrv-driver-api-reference.md)  
-[擷取資料](../../connect/php/retrieving-data.md)  
-[關於文件中的程式碼範例](../../connect/php/about-code-examples-in-the-documentation.md)  
-[PHP SQL 驅動程式程式設計指南](../../connect/php/programming-guide-for-php-sql-driver.md)
+[SQLSRV 驅動程式 API 參考](../../connect/php/sqlsrv-driver-api-reference.md)
+
+[擷取資料](../../connect/php/retrieving-data.md)
+
+[關於文件中的程式碼範例](../../connect/php/about-code-examples-in-the-documentation.md)
+
+[程式程式設計指南 Microsoft Drivers for PHP，適用於 SQL Server](../../connect/php/programming-guide-for-php-sql-driver.md)
   

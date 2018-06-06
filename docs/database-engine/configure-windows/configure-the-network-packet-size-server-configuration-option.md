@@ -1,33 +1,29 @@
 ---
-title: "設定 network packet size 伺服器組態選項 | Microsoft Docs"
-ms.custom: 
+title: 設定 network packet size 伺服器組態選項 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/02/2017
-ms.prod: sql-non-specified
-ms.prod_service: database-engine
-ms.service: 
-ms.component: configure-windows
-ms.reviewer: 
+ms.prod: sql
+ms.prod_service: high-availability
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: configuration
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - default packet size
 - size [SQL Server], packets
 - packets [SQL Server], size
 - network packet size option
 ms.assetid: 236985bf-fc4a-4a57-98f7-a71ef977fd7b
-caps.latest.revision: 
+caps.latest.revision: 26
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 00cd3a99db3d9964e8913ca9f06b1773f0398ec3
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 831bfa31d5ca82afed2e2e4bbc131ac91911cecb
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="configure-the-network-packet-size-server-configuration-option"></a>設定 network packet size 伺服器組態選項
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -86,7 +82,7 @@ ms.lasthandoff: 02/03/2018
   
 2.  按一下 **[進階]** 節點。  
   
-3.  在 **[網路]**下，為 **[網路封包大小]** 方塊選取一個值。  
+3.  在 **[網路]** 下，為 **[網路封包大小]** 方塊選取一個值。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   

@@ -1,40 +1,23 @@
 ---
-title: "授與物件和作業 (Analysis Services) 存取權 |Microsoft 文件"
-ms.custom: 
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords:
-- sql13.asvs.roledesignerdialog.general.f1
-- sql13.asvs.roledesignerdialog.membership.f1
-helpviewer_keywords:
-- access rights [Analysis Services], users
-- permissions [Analysis Services], users
-- security [Analysis Services], user access
-- user access rights [Analysis Services]
-- granting permissions [Analysis Services], users
-ms.assetid: af28524e-5eca-4dce-a050-da4f406ee1c7
-caps.latest.revision: 
-author: Minewiskan
+title: 授與物件和作業 (Analysis Services) 存取權 |Microsoft 文件
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: multidimensional-models
+ms.topic: conceptual
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 956638a01fc1280d16bb6fd7a7ddade1978ceb2f
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 88290b9598ffdbbcfc90a738654a9485107da464
+ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="authorizing-access-to-objects-and-operations-analysis-services"></a>物件和作業的存取權授權 (Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-非系統管理使用者對 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 資料庫內的 Cube、維度和採礦模型的存取權，是透過一個或多個資料庫角色的成員資格來授與。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 系統管理員可以建立這些資料庫角色、授與這些角色對 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 物件的讀取或讀取/寫入權限，然後將 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 使用者和群組指派給每個角色。  
+  非系統管理使用者對 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 資料庫內的 Cube、維度和採礦模型的存取權，是透過一個或多個資料庫角色的成員資格來授與。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 系統管理員可以建立這些資料庫角色、授與這些角色對 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 物件的讀取或讀取/寫入權限，然後將 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 使用者和群組指派給每個角色。  
   
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 會結合與使用者或群組所屬的每一個資料庫角色相關聯的權限，來決定特定 Windows 使用者或群組的有效權限。 因此，如果某個資料庫角色沒有授與使用者或群組檢視維度、量值或屬性的權限，但另一個資料庫角色有授與該使用者或群組該權限，則該使用者或群組將具有檢視該物件的權限。  
   

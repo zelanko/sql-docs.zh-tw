@@ -1,32 +1,33 @@
 ---
-title: "開啟方式 (新增檔案) | Microsoft Docs"
-ms.custom: 
+title: 開啟方式 (新增檔案) | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
 ms.component: ssms-menu
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: tools-ssms
-ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords: vs.openwith
-helpviewer_keywords: Open With dialog box
+ms.technology: ssms
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
+f1_keywords:
+- vs.openwith
+helpviewer_keywords:
+- Open With dialog box
 ms.assetid: 9531588c-e7ec-4049-9f9c-ee000c49c5de
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: f7df416a20f8b8bae22e10e72fd35904c460808b
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.openlocfilehash: 1947ca3301de74d1837633047a86dcf4460bfdaa
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="open-with-new-file"></a>開啟方式 (新增檔案)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 按一下 [檔案] 功能表上的 [開啟]，然後按一下 [檔案]，就可以在一或多個編輯器中開啟文件。 在 [開啟檔案] 對話方塊中選取檔案，按一下 [開啟] 箭頭，然後按一下 [開啟方式]。 在 [開啟方式] 對話方塊的 [選取要開啟的程式] 清單中，按一下慣用的程式，然後按一下 [開啟]。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+按一下 [檔案] 功能表上的 [開啟]，然後按一下 [檔案]，就可以在一或多個編輯器中開啟文件。 在 [開啟檔案] 對話方塊中選取檔案，按一下 [開啟] 箭頭，然後按一下 [開啟方式]。 在 [開啟方式] 對話方塊的 [選取要開啟的程式] 清單中，按一下慣用的程式，然後按一下 [開啟]。  
   
 ## <a name="options"></a>選項。  
 **選取要開啟的程式**  

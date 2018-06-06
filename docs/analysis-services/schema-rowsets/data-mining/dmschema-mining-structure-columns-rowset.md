@@ -1,46 +1,35 @@
 ---
-title: "DMSCHEMA_MINING_STRUCTURE_COLUMNS 資料列集 |Microsoft 文件"
-ms.custom: 
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+title: DMSCHEMA_MINING_STRUCTURE_COLUMNS 資料列集 |Microsoft 文件
+ms.date: 05/03/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: schema-rowsets
 ms.topic: reference
-apiname: DMSCHEMA_MINING_STRUCTURE_COLUMNS
-apitype: NA
-applies_to: SQL Server 2016 Preview
-helpviewer_keywords: DMSCHEMA_MINING_STRUCTURE_COLUMNS rowset
-ms.assetid: 81f25502-ac90-42f1-8ddf-7b0f9752ebfd
-caps.latest.revision: "35"
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 25a6ba694cad584a0c1d6e229ab1f029d288d11e
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 722adc702e40df68c4a137fb15120c81bcdef90d
+ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="dmschemaminingstructurecolumns-rowset"></a>DMSCHEMA_MINING_STRUCTURE_COLUMNS 資料列集
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]描述正在執行的伺服器上部署的所有採礦結構的個別資料行[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]。  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+  描述正在執行的伺服器上部署的所有採礦結構的個別資料行[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]。  
   
 ## <a name="rowset-columns"></a>資料列集資料行  
  **DMSCHEMA_MINING_STRUCTURE_COLUMNS**資料列集包含下列資料行。  
   
-|資料行名稱|類型指標|長度|描述|  
+|資料行名稱|類型指標|長度|Description|  
 |-----------------|--------------------|------------|-----------------|  
 |**STRUCTURE_CATALOG**|**DBTYPE_WSTR**||目錄的名稱。|  
-|**STRUCTURE_SCHEMA**|**DBTYPE_WSTR**||不合格的結構描述名稱。 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]不支援結構描述，因此這個資料行一律是**NULL**。|  
+|**STRUCTURE_SCHEMA**|**DBTYPE_WSTR**||不合格的結構描述名稱。 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 不支援結構描述，因此這個資料行一律是**NULL**。|  
 |**STRUCTURE_NAME**|**DBTYPE_WSTR**||結構名稱。 此資料行不能包含**NULL**。|  
 |**COLUMN_NAME**|**DBTYPE_WSTR**||資料行的名稱。 只有在共用相同模式的資料行之間可保證唯一性。 例如，如果它們在相同結構中屬於兩個不同的巢狀資料表，則這兩個巢狀資料行可能會有相同的名稱。|  
 |**COLUMN_GUID**|**DBTYPE_GUID**||資料行 GUID。 不使用 Guid 來識別資料行的提供者應傳回**NULL**這個資料行中。|  
-|**COLUMN_PROPID**|**DBTYPE_UI4**||資料行屬性的識別碼。 請勿將屬性 Id 關聯的資料行的提供者應傳回**NULL**這個資料行中。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)][!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]傳回**NULL**此資料行。|  
+|**COLUMN_PROPID**|**DBTYPE_UI4**||資料行屬性的識別碼。 請勿將屬性 Id 關聯的資料行的提供者應傳回**NULL**這個資料行中。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 傳回**NULL**此資料行。|  
 |**ORDINAL_POSITION**|**DBTYPE_UI4**||資料行的序數。 資料行的編號會從 1 開始。 **NULL**如果沒有資料行沒有穩定的序數值。|  
 |**COLUMN_HASDEFAULT**|**DBTYPE_BOOL**||布林值，指出資料行是否有預設值。<br /><br /> **TRUE**資料行有預設值。<br /><br /> **FALSE**資料行沒有預設值，或者它是未知的資料行是否具有預設值。|  
 |**COLUMN_DEFAULT**|**DBTYPE_WSTR**||資料行的預設值。 提供者可能會公開**DBCOLUMN_DEFAULTVALUE**但不是**DBCOLUMN_HASDEFAULT** （適用於 ISO 資料表） 中所傳回的資料列集**icolumnsrowset:: Getcolumnsrowset**。<br /><br /> 如果預設值是**NULL**， **COLUMN_HASDEFAULT**是**TRUE**和**COLUMN_DEFAULT**資料行是**NULL**值。|  
@@ -81,7 +70,7 @@ ms.lasthandoff: 01/08/2018
 |**STRUCTURE_NAME**|**DBTYPE_WSTR**|選擇性。|  
 |**COLUMN_NAME**|**DBTYPE_WSTR**|選擇性。|  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [資料採礦結構描述資料列集](../../../analysis-services/schema-rowsets/data-mining/data-mining-schema-rowsets.md)  
   
   

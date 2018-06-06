@@ -1,16 +1,15 @@
 ---
-title: "XQuery 語言參考 (SQL Server) |Microsoft 文件"
-ms.custom: 
+title: XQuery 語言參考 (SQL Server) |Microsoft 文件
+ms.custom: ''
 ms.date: 03/16/2017
-ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
-ms.service: 
+ms.prod: sql
+ms.prod_service: sql
 ms.component: xquery
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server 2016 Preview
@@ -21,16 +20,15 @@ helpviewer_keywords:
 - XML [SQL Server], XQuery
 - queries [XML in SQL Server], XQuery
 ms.assetid: 8a69344f-2990-4357-8160-cb26aac95b91
-caps.latest.revision: 
+caps.latest.revision: 51
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 5c242348870d6b6862e02cc8d14ec1fdc184d62e
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 759904d735b754d9f51314b92c3d7763a0aa4ef2
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="xquery-language-reference-sql-server"></a>Xquery 語言參考 (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -43,7 +41,7 @@ ms.lasthandoff: 02/09/2018
   
  XQuery 是以現有的 XPath 查詢語言為基礎，加上額外支援以獲取更佳的反覆運算、更好的排序結果，以及建構必要 XML 的能力。 XQuery 可在 XQuery 資料模型上運作。 這是 XML 文件與已指定類型及不具類型之 XQuery 結果的摘要。 類型資訊是以 W3C XML 結構描述語言提供的類型為依據。 如果沒有類型資訊可用，XQuery 會將資料處理為不具類型。 這與 XPath 1.0 版處理 XML 的方式相似。  
   
- 若要查詢之變數或資料行中儲存 XML 執行個體**xml**型別，使用[xml 資料類型方法](../t-sql/xml/xml-data-type-methods.md)。 例如，您可以在此宣告的變數**xml**輸入，並查詢它使用**query （)**方法**xml**資料型別。  
+ 若要查詢之變數或資料行中儲存 XML 執行個體**xml**型別，使用[xml 資料類型方法](../t-sql/xml/xml-data-type-methods.md)。 例如，您可以在此宣告的變數**xml**輸入，並查詢它使用**query （)** 方法**xml**資料型別。  
   
 ```  
 DECLARE @x xml  
@@ -74,7 +72,7 @@ WHERE ProductModelID=7
 |||  
   
 > [!NOTE]  
->  本章節的組織是以 World Wide Web Consortium (W3C) XQuery Working Draft 規格為依據。 本章節中提供的部分圖表即採自上述規格。 本章節會比較 Microsoft XQuery 實作與 W3C 規格，描述 Microsoft XQuery 跟 W3C 的不同之處，以及指出不支援的 W3C 功能。 W3C 規格將會位於[http://www.w3.org/TR/2004/WD-xquery-20040723](http://go.microsoft.com/fwlink/?LinkId=48846)。  
+>  本章節的組織是以 World Wide Web Consortium (W3C) XQuery Working Draft 規格為依據。 本章節中提供的部分圖表即採自上述規格。 本章節會比較 Microsoft XQuery 實作與 W3C 規格，描述 Microsoft XQuery 跟 W3C 的不同之處，以及指出不支援的 W3C 功能。 W3C 規格將會位於[ http://www.w3.org/TR/2004/WD-xquery-20040723 ](http://go.microsoft.com/fwlink/?LinkId=48846)。  
   
 ## <a name="in-this-section"></a>本節內容  
   
@@ -82,7 +80,7 @@ WHERE ProductModelID=7
 |-----------|-----------------|  
 |[XQuery 基本概念](../xquery/xquery-basics.md)|提供 XQuery 概念，還有運算式評估 (靜態及動態內容)、不可部分完成、有效布林值、XQuery 類型系統、比對順序類型，以及錯誤處理的基本概觀。|  
 |[XQuery 運算式](../xquery/xquery-expressions.md)|描述 XQuery 主要運算式、路徑運算式、順序運算式、算術比較及邏輯運算式、XQuery 建構、FLWOR 運算式、條件式及量化運算式，以及順序類型的不同運算式。|  
-|[模組和初構 &#40;XQuery &#41;](../xquery/modules-and-prologs-xquery.md)|描述 XQuery 初構。|  
+|[模組和初構&#40;XQuery&#41;](../xquery/modules-and-prologs-xquery.md)|描述 XQuery 初構。|  
 |[針對 xml 資料類型的 XQuery 函式](../xquery/xquery-functions-against-the-xml-data-type.md)|描述可支援之 XQuery 函數的清單。|  
 |[針對 xml 資料類型的 XQuery 運算子](../xquery/xquery-operators-against-the-xml-data-type.md)|描述可支援的 XQuery 運算式。|  
 |[針對 xml 資料類型的其他範例 XQuery](../xquery/additional-sample-xqueries-against-the-xml-data-type.md)|提供其他 XQuery 範例。|  

@@ -1,16 +1,15 @@
 ---
-title: "將 Access 資料庫移轉至 SQL Server-Azure SQL DB |Microsoft 文件"
-ms.prod: sql-non-specified
+title: 將 Access 資料庫移轉至 SQL Server-Azure SQL DB |Microsoft 文件
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
 ms.component: ssma-access
-ms.custom: 
+ms.custom: ''
 ms.date: 08/15/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ssma
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 applies_to:
 - Azure SQL Database
 - SQL Server
@@ -21,19 +20,18 @@ helpviewer_keywords:
 - procedure, migration
 - recommended migration process
 ms.assetid: 76a3abcf-2998-4712-9490-fe8d872c89ca
-caps.latest.revision: "23"
+caps.latest.revision: 23
 author: Shamikg
 ms.author: Shamikg
 manager: murato
-ms.workload: On Demand
-ms.openlocfilehash: 92ab1b9e1bd128c57347f2f68b251fce4648bfe4
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 9b17a4e565c27d501d2e515df195c84fb5116321
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="migrating-access-databases-to-sql-server---azure-sql-db-accesstosql"></a>將 Access 資料庫移轉至 SQL Server-Azure SQL DB (AccessToSQL)
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]移轉小幫手 (SSMA) 是一種工具，提供完整的環境，可協助您快速存取資料庫移轉至[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或 SQL Azure。 您可以藉由使用 SSMA，檢閱存取和[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或 SQL Azure 資料庫物件、 評估 Access 資料庫移轉，將存取資料庫物件、 載入到[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或 SQL Azure，然後再移轉資料。  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 移轉小幫手 (SSMA) 是一種工具，提供完整的環境，可協助您快速存取資料庫移轉至[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或 SQL Azure。 您可以藉由使用 SSMA，檢閱存取和[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或 SQL Azure 資料庫物件、 評估 Access 資料庫移轉，將存取資料庫物件、 載入到[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或 SQL Azure，然後再移轉資料。  
   
 ## <a name="recommended-migration-process"></a>建議的移轉程序  
 若要成功移轉物件和資料，從存取[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或 SQL Azure，請使用下列程序：  

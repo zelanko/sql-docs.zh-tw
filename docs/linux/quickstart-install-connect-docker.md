@@ -1,25 +1,23 @@
-﻿---
-title: "開始使用 Docker 上的 SQL Server 2017 | Microsoft Docs"
-description: "本快速入門會示範如何使用 Docker 來執行 SQL Server 2017 容器映像。 您隨後便可使用 sqlcmd 來建立及查詢資料庫。"
+---
+title: 開始使用 Docker 上的 SQL Server 2017 | Microsoft Docs
+description: 本快速入門會示範如何使用 Docker 來執行 SQL Server 2017 容器映像。 您隨後便可使用 sqlcmd 來建立及查詢資料庫。
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.date: 03/07/2018
 ms.topic: article
-ms.prod: sql-non-specified
-ms.prod_service: database-engine
-ms.service: 
-ms.component: 
+ms.prod: sql
+ms.technology: linux
+ms.component: ''
 ms.suite: sql
 ms.custom: sql-linux
-ms.technology: database-engine
+ms.prod_service: linux
 ms.assetid: 82737f18-f5d6-4dce-a255-688889fdde69
-ms.workload: Active
-ms.openlocfilehash: 8c3f8bc09ef8c3b6838912027024a3feb97cea5d
-ms.sourcegitcommit: ab25b08a312d35489a2c4a6a0d29a04bbd90f64d
+ms.openlocfilehash: 6b28ac7d654d04f5e0998ecda31d16ec597f8d3d
+ms.sourcegitcommit: b5ab9f3a55800b0ccd7e16997f4cd6184b4995f9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 05/23/2018
 ---
 # <a name="quickstart-run-the-sql-server-2017-container-image-with-docker"></a>快速入門： 執行 SQL Server 2017 容器映像使用 Docker
 
@@ -58,14 +56,14 @@ ms.lasthandoff: 03/08/2018
 1. 若要以 Docker 執行容器映像，您可以從 Bash 殼層 (Linux/macOS) 或提高權限的 PowerShell 命令提示字元使用下列命令。
 
    ```bash
-   sudo docker run -e 'ACCEPT_EULA=Y' -e 'MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>' \
-      -p 1401:1433 --name sql1 \
+   sudo docker run -e 'ACCEPT_EULA=Y' -e 'SA_PASSWORD=<YourStrong!Passw0rd>' \
+      -p 1433:1433 --name sql1 \
       -d microsoft/mssql-server-linux:2017-latest
    ```
 
    ```PowerShell
-   docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" `
-      -p 1401:1433 --name sql1 `
+   docker run -e "ACCEPT_EULA=Y" -e "SA_PASSWORD=<YourStrong!Passw0rd>" `
+      -p 1433:1433 --name sql1 `
       -d microsoft/mssql-server-linux:2017-latest
    ```
 
@@ -80,8 +78,8 @@ ms.lasthandoff: 03/08/2018
    | 매개 변수 | Description |
    |-----|-----|
    | **-e 'ACCEPT_EULA=Y'** |  將 **ACCEPT_EULA** 變數設為任意值可確認您接受[終端使用者授權合約](http://go.microsoft.com/fwlink/?LinkId=746388)。 此為 SQL Server 映像的必要設定。 |
-   | **-e 'MSSQL_SA_PASSWORD=\<YourStrong!Passw0rd\>'** | 指定您自己的強式密碼，該密碼長度至少需為 8 個字元且符合 [SQL Server 密碼需求](../relational-databases/security/password-policy.md)。 此為 SQL Server 映像的必要設定。 |
-   | **-p 1401:1433** | 將主機環境上的 TCP 通訊埠 (第一個值) 對應至容器中的 TCP 連接埠 (第二個值)。 在此範例中，SQL Server 會在容器中接聽 TCP 1433 連接埠，同時向主機上 1401 連接埠公開。 |
+   | **-e ' SA_PASSWORD =\<YourStrong ！Passw0rd\>'** | 指定您自己的強式密碼，該密碼長度至少需為 8 個字元且符合 [SQL Server 密碼需求](../relational-databases/security/password-policy.md)。 此為 SQL Server 映像的必要設定。 |
+   | **-p 1433:1433** | 將主機環境上的 TCP 通訊埠 (第一個值) 對應至容器中的 TCP 連接埠 (第二個值)。 在此範例中，SQL Server 接聽 TCP 1433 容器中，此公開到連接埠 1433，主機上。 |
    | **--name sql1** | 指定容器名稱，而不隨機產生名稱。 執行多個容器時無法重複使用此相同名稱。 |
    | **microsoft/mssql-server-linux:2017-latest** | SQL Server 2017 Linux 容器映像。 |
 
@@ -99,7 +97,7 @@ ms.lasthandoff: 03/08/2018
 
    ![Docker ps 命令輸出](./media/sql-server-linux-setup-docker/docker-ps-command.png)
 
-1. 如果**STATUS** 資料行顯示狀態為 **Up**，表示 SQL Server 正在容器中執行，且正接聽著 **PORTS** 資料行中所指定的通訊埠。如果 SQL Server 容器的 **STATUS** 資料行顯示為**Exited**，請參閱[設定指南的疑難排解一節](sql-server-linux-configure-docker.md#troubleshooting)。
+1. 如果**狀態**資料行會顯示狀態為**向上**、 然後 SQL Server 正在執行中容器和接聽的通訊埠中指定**連接埠**資料行。 如果**狀態**資料行的 SQL Server 容器節目**Exited**，請參閱[疑難排解 > 一節的設定指南](sql-server-linux-configure-docker.md#troubleshooting)。
 
 `-h` (主機名稱) 參數也相當實用，但為求簡明因此未在本教學課程中使用。 此參數可將容器的內部名稱變更為自訂值。 這是您在下列 Transact-SQL 查詢中會看到的傳回名稱：
 
@@ -229,14 +227,14 @@ SELECT @@SERVERNAME,
 
 1. 找出裝載您容器之電腦的 IP 位址。 在 Linux 上，使用**ifconfig** 或 **ip addr**。在 Windows 上，使用 **ipconfig**。
 
-1. 執行 sqlcmd 來指定 IP 位址和容器中 1433 通訊埠所對應的連接埠。 在此範例中，即是指主機上的 1401 連接埠。
+1. 執行 sqlcmd 來指定 IP 位址和容器中 1433 通訊埠所對應的連接埠。 在此範例中，這是相同的通訊埠 1433，主機電腦上。 如果您在主機上指定不同的對應連接埠，您會在此使用。
 
    ```bash
-   sqlcmd -S 10.3.2.4,1401 -U SA -P '<YourNewStrong!Passw0rd>'
+   sqlcmd -S 10.3.2.4,1433 -U SA -P '<YourNewStrong!Passw0rd>'
    ```
 
    ```PowerShell
-   sqlcmd -S 10.3.2.4,1401 -U SA -P "<YourNewStrong!Passw0rd>"
+   sqlcmd -S 10.3.2.4,1433 -U SA -P "<YourNewStrong!Passw0rd>"
    ```
 
 1. 執行 Transact-SQL 命令。 完成後，鍵入 `QUIT`。
@@ -244,7 +242,7 @@ SELECT @@SERVERNAME,
 其他常用的 SQL Server 連線工具包括：
 
 - [Visual Studio Code](sql-server-linux-develop-use-vscode.md)
-- [Windows 上的 SQL Server Management Studio (SSMS)](sql-server-linux-develop-use-ssms.md)
+- [Windows 上的 SQL Server Management Studio (SSMS)](sql-server-linux-manage-ssms.md)
 - [SQL Server Operations Studio (預覽)](../sql-operations-studio/what-is.md)
 - [mssql-cli (預覽)](https://blogs.technet.microsoft.com/dataplatforminsider/2017/12/12/try-mssql-cli-a-new-interactive-command-line-tool-for-sql-server/)
 

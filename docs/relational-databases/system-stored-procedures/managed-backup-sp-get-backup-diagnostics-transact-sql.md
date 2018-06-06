@@ -1,16 +1,14 @@
 ---
-title: "managed_backup.sp_get_backup_diagnostics (TRANSACT-SQL) |Microsoft 文件"
-ms.custom: 
+title: managed_backup.sp_get_backup_diagnostics (TRANSACT-SQL) |Microsoft 文件
+ms.custom: ''
 ms.date: 06/10/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: system-objects
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_get_backup_diagnostics_TSQL
@@ -23,18 +21,17 @@ helpviewer_keywords:
 - sp_get_backup_diagnostics
 - smart_admin.sp_get_backup_diagnostics
 ms.assetid: 2266a233-6354-464b-91ec-824ca4eb9ceb
-caps.latest.revision: 
+caps.latest.revision: 12
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 088d3232ef47888c0615e7b8a7638eb26f2817a2
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: e2b2f8c78b1802ff177040352cd7342b51b035c6
+ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 05/04/2018
 ---
-# <a name="managedbackupspgetbackupdiagnostics-transact-sql"></a>managed_backup.sp_get_backup_diagnostics (Transact-SQL)
+# <a name="managedbackupspgetbackupdiagnostics-transact-sql"></a>managed_backup.sp_get_backup_diagnostics (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   傳回 Smart Admin 記錄的擴充事件。  
@@ -51,7 +48,7 @@ managed_backup.sp_get_backup_diagnostics [@xevent_channel = ] 'event type' [, [@
   
 ##  <a name="Arguments"></a> 引數  
  @xevent_channel  
- 擴充事件類型。 預設值會設定為傳回過去 30 分鐘內記錄的所有事件。 記錄的事件會視啟用的擴充事件類型而定。 您可以使用此參數篩選預存程序，僅顯示特定類型的事件。 您可以指定完整事件名稱，或指定子字串，例如： **'Admin'**， **'Analytic'**， **'Operational'**，和**'Debug'**. @event_channel是**VARCHAR (255)**。  
+ 擴充事件類型。 預設值會設定為傳回過去 30 分鐘內記錄的所有事件。 記錄的事件會視啟用的擴充事件類型而定。 您可以使用此參數篩選預存程序，僅顯示特定類型的事件。 您可以指定完整事件名稱，或指定子字串，例如： **'Admin'**， **'Analytic'**， **'Operational'**，和 **'Debug'**. @event_channel是**VARCHAR (255)**。  
   
  若要取得事件類型目前已啟用，請使用清單**managed_backup.fn_get_current_xevent_settings**函式。  
   

@@ -1,31 +1,23 @@
 ---
-title: "雙向交叉篩選在表格式模型 |Microsoft 文件"
-ms.custom: 
-ms.date: 02/21/2018
-ms.prod: analysis-services
-ms.prod_service: analysis-services, azure-analysis-services
-ms.service: 
-ms.component: multidimensional-tabular
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
-ms.assetid: 5e810707-f58d-4581-8f99-7371fa75b6ac
-caps.latest.revision: 
-author: Minewiskan
+title: 雙向交叉篩選在表格式模型 |Microsoft 文件
+ms.date: 05/07/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: tabular-models
+ms.topic: conceptual
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: b3d4854a602dc3eb7b02a50dc760409243a64313
-ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
+ms.openlocfilehash: 89c3aee1bb762a5725e3242c88284d07abdb8de7
+ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="bi-directional-cross-filters-in-tabular-models"></a>在表格式模型中的雙向交叉篩選
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
-SQL Server 2016 中有內建的新方法可以啟用表格式模型中的「雙向交叉篩選」，因此不需要透過自訂 DAX 因應措施在資料表關聯性之間散佈篩選內容。  
+  SQL Server 2016 中有內建的新方法可以啟用表格式模型中的「雙向交叉篩選」，因此不需要透過自訂 DAX 因應措施在資料表關聯性之間散佈篩選內容。  
   
  此概念可分解成以下元件組件：「交叉篩選」是指根據相關資料表中的值設定資料表篩選內容的功能，而「雙向」是指將篩選內容傳遞至資料表關聯性另一端的第二個相關資料表。 正如其名，您有兩種方向可以切入關聯性，而不是只有一種方向。  就內部而言，雙向篩選會展開篩選內容來查詢資料的超集。  
   
@@ -66,14 +58,14 @@ SQL Server 2016 中有內建的新方法可以啟用表格式模型中的「雙�
 ## <a name="walkthrough-an-example"></a>範例逐步說明  
  了解雙向交叉篩選的最佳方法是透過範例。 請考慮以下來自 [ContosoRetailDW](http://www.microsoft.com/en-us/download/details.aspx?id=18279)的資料集，其反映預設建立的基數和交叉篩選。  
   
- ![SSAS-BIDI-2-Model](../../analysis-services/tabular-models/media/ssas-bidi-2-model.PNG "SSAS-BIDI-2-Model")  
+ ![SSAS BIDI-2 模式](../../analysis-services/tabular-models/media/ssas-bidi-2-model.PNG "SSAS BIDI 2-模型")  
   
 > [!NOTE]  
 >  根據預設，在匯入資料期間，會以衍生自事實資料表和相關維度資料表之間的外部索引鍵和主索引鍵關聯性的多對一設定，來建立資料表關聯性。  
   
  請注意篩選方向是從維度資料表到事實資料表 -- 促銷、產品、日期、客戶及客戶地理位置都是有效的篩選。  
   
- ![ssas-bidi-3-defaultrelationships](../../analysis-services/tabular-models/media/ssas-bidi-3-defaultrelationships.PNG "ssas-bidi-3-defaultrelationships")  
+ ![ssas bidi 3-defaultrelationships](../../analysis-services/tabular-models/media/ssas-bidi-3-defaultrelationships.PNG "ssas bidi 3-defaultrelationships")  
   
  對於這個簡單的星型結構描述，在 Excel 中測試可確認從資料列和資料行上的維度資料表，篩選到由位在中心 **FactOnlineSales** 資料表的 **Sum of Sales** 量值所提供的彙總資料時，資料會正確地切割。  
   
@@ -110,7 +102,7 @@ SQL Server 2016 中有內建的新方法可以啟用表格式模型中的「雙�
   
 3.  在 [表格式模型設計工具] 中，將工作區資料庫設為表格式伺服器模式的 SQL Server 2016 Preview Analysis Services。  
   
-4.  請確認模型相容性層級設為**SQL Server 2016 RTM (1200)**或更高版本。  
+4.  請確認模型相容性層級設為**SQL Server 2016 RTM (1200)** 或更高版本。  
   
      按一下 **[確定]** 建立專案。  
   
@@ -147,11 +139,11 @@ SQL Server 2016 中有內建的新方法可以啟用表格式模型中的「雙�
 ### <a name="review-default-table-relationships"></a>檢閱預設資料表關聯性  
  切換至圖表檢視︰[模型] > [模型檢視] > [圖表檢視]。 基數和作用中的關聯性是以視覺化方式表示。 所有關聯性都是任兩個相關資料表之間的一對多關聯。  
   
- ![SSAS-BIDI-2-Model](../../analysis-services/tabular-models/media/ssas-bidi-2-model.PNG "SSAS-BIDI-2-Model")  
+ ![SSAS BIDI-2 模式](../../analysis-services/tabular-models/media/ssas-bidi-2-model.PNG "SSAS BIDI 2-模型")  
   
  或者，按一下 [資料表] > [管理關聯性] 以在表格配置中檢視相同的資訊。  
   
- ![ssas-bidi-3-defaultrelationships](../../analysis-services/tabular-models/media/ssas-bidi-3-defaultrelationships.PNG "ssas-bidi-3-defaultrelationships")  
+ ![ssas bidi 3-defaultrelationships](../../analysis-services/tabular-models/media/ssas-bidi-3-defaultrelationships.PNG "ssas bidi 3-defaultrelationships")  
   
 ### <a name="create-measures"></a>建立量值  
  您將需要彙總來以維度資料的不同 Facet 的加總銷售量。 在 **DimProduct** 中，您可以建立計算產品的量值，並將它用於產品推銷的分析，顯示針對指定的年份、指定的地區或客戶類型所銷售之產品的計數。  

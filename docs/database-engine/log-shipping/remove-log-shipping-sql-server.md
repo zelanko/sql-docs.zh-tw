@@ -1,34 +1,33 @@
 ---
-title: "移除記錄傳送 (SQL Server) | Microsoft Docs"
-ms.custom: 
+title: 移除記錄傳送 (SQL Server) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
-ms.prod_service: database-engine
-ms.service: 
+ms.prod: sql
+ms.prod_service: high-availability
 ms.component: log-shipping
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: dbe-high-availability
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: high-availability
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - log shipping [SQL Server], removing
 - removing log shipping
 - deleting log shipping
 ms.assetid: 859373db-c744-4a4b-8479-45163f61e8cb
-caps.latest.revision: "18"
+caps.latest.revision: 18
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 774ae9d3499d66553b926f30a590c31579541745
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: dd0f022306bb9b171165dc35bd0587522a18d78f
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="remove-log-shipping-sql-server"></a>移除記錄傳送 (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 本主題描述如何使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 或 [!INCLUDE[tsql](../../includes/tsql-md.md)] 移除 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中的記錄傳送。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  本主題描述如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 移除 [!INCLUDE[tsql](../../includes/tsql-md.md)]中的記錄傳送。  
   
  **本主題內容**  
   
@@ -59,7 +58,7 @@ ms.lasthandoff: 01/18/2018
   
 2.  展開 [資料庫]，以滑鼠右鍵按一下記錄傳送主要資料庫，然後按一下 [屬性]。  
   
-3.  在 **[選取頁面]**下，按一下 **[交易記錄傳送]**。  
+3.  在 **[選取頁面]** 下，按一下 **[交易記錄傳送]**。  
   
 4.  清除 **[將此啟用為記錄傳送組態的主要資料庫 ]** 核取方塊。  
   

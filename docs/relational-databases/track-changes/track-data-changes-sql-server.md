@@ -1,17 +1,16 @@
 ---
-title: "追蹤資料變更 (SQL Server) | Microsoft 文件"
-ms.custom: 
+title: 追蹤資料變更 (SQL Server) | Microsoft 文件
+ms.custom: ''
 ms.date: 08/08/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
 ms.component: track-changes
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - change data capture [SQL Server], compared to change tracking
 - change data capture vs. change tracking
@@ -22,16 +21,16 @@ helpviewer_keywords:
 - change data capture [SQL Server], security
 - change data capture [SQL Server], other SQL Server features and
 ms.assetid: 7a34be46-15b4-4b6b-8497-cfd8f9f14234
-caps.latest.revision: 
+caps.latest.revision: 39
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.workload: Active
-ms.openlocfilehash: d4f7c4422a192f60fec25e56553558041a579483
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 53c05afb9651f14f3d917d0d74e0b42f8cfdc056
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="track-data-changes-sql-server"></a>追蹤資料變更 (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -50,7 +49,7 @@ ms.lasthandoff: 02/09/2018
   
 -   系統提供了函數，可取得變更資訊。  
   
--   DML 作業的負擔降低。 同步的變更追蹤一定會產生一些負擔。 不過，使用變更追蹤有助於將負擔降到最低。 這項負擔通常會比使用替代方案的負擔更低，尤其是需要使用觸發程序的方案。  
+-   DML 作業的負擔降低。 同步的變更追蹤一定會產生一些負擔。 不過，使用變更追蹤有助於將負擔降到最低。 這個負擔通常會比使用替代方案的負擔更低，尤其是需要使用觸發程序的方案。  
   
 -   變更追蹤是以認可的交易為基礎。 變更的順序是根據交易認可時間而定。 當長時間執行而且重疊的交易存在時，這點將確保能夠取得可靠的結果。 使用 **timestamp** 值的自訂方案則必須經過特別設計，才能處理這些狀況。  
   
@@ -71,7 +70,7 @@ ms.lasthandoff: 02/09/2018
 ##  <a name="Capture"></a> Change Data Capture  
  異動資料擷取會透過擷取進行 DML 變更的事實以及變更的實際資料，提供使用者資料表的歷程記錄變更資訊。 這些變更是使用讀取交易記錄而且對系統影響很小的非同步處理序擷取的。  
   
- 如下圖所示，對使用者資料表所做的變更會擷取在對應的變更資料表中。 這些變更資料表會提供一段時間內變更的歷程記錄檢視。 [所提供的](../../relational-databases/system-functions/change-data-capture-functions-transact-sql.md)異動資料擷取 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 函數可讓您方便且有系統地取用變更資料。  
+ 如下圖所示，對使用者資料表所做的變更會擷取在對應的變更資料表中。 這些變更資料表會提供一段時間內變更的歷程記錄檢視。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 所提供的[異動資料擷取](../../relational-databases/system-functions/change-data-capture-functions-transact-sql.md)函數可讓您方便且有系統地取用異動資料。  
   
  ![變更資料擷取的概念圖例](../../relational-databases/track-changes/media/cdcart1.gif "變更資料擷取的概念圖例")  
   
@@ -146,7 +145,7 @@ ms.lasthandoff: 02/09/2018
 ##  <a name="Tracking"></a> Change Tracking  
  變更追蹤會擷取資料表中資料列變更的事實，但是不會擷取變更的資料。 這項功能可讓應用程式使用直接從使用者資料表中取得的最新資料列資料，判斷已經變更的資料列。 因此，與異動資料擷取相較之下，變更追蹤在它可回答的歷程記錄問題方面具有較多限制。 不過，對於不需要歷程記錄資訊的應用程式而言，由於不會擷取變更的資料，因此儲存負擔會非常低。 這項功能會使用同步追蹤機制來追蹤變更。 其設計目的是要對 DML 作業產生最低負擔。  
   
- 下圖將顯示使用變更追蹤所獲益的同步處理狀況。 在此狀況中，應用程式需要下列資訊：自從資料表上次同步處理以來已經變更的所有資料表資料列，以及只有目前的資料列資料。 由於使用了同步機制來追蹤變更，因此應用程式可以執行雙向同步處理，而且能夠可靠地偵測出可能已經發生的任何衝突。  
+ 下圖將顯示使用變更追蹤所獲益的同步處理狀況。 在此案例中，應用程式需要下列資訊：自從資料表上次同步處理以來已經變更的所有資料表資料列，以及只有目前的資料列資料。 由於使用了同步機制來追蹤變更，因此應用程式可以執行雙向同步處理，而且能夠可靠地偵測出可能已經發生的任何衝突。  
   
  ![變更追蹤的概念圖例](../../relational-databases/track-changes/media/cdcart2.gif "變更追蹤的概念圖例")  
   

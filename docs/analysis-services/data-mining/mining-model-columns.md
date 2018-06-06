@@ -1,39 +1,23 @@
 ---
-title: "採礦模型資料行 |Microsoft 文件"
-ms.custom: 
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
-helpviewer_keywords:
-- columns [data mining], mining model columns
-- columns [data mining]
-- REGRESSOR column
-- columns [data mining], modeling flags
-- modeling flags [data mining]
-- MODEL_EXISTENCE_ONLY column
-- usage property [data mining]
-ms.assetid: fab47643-5bfd-424e-a0f7-69e665db6bab
-caps.latest.revision: 
-author: Minewiskan
+title: 採礦模型資料行 |Microsoft 文件
+ms.date: 05/08/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: data-mining
+ms.topic: conceptual
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: b1c39900931c2f519fc348fb3459c742b0e0d020
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 60967ccdd9339f12f0b684c8dea1375554180617
+ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="mining-model-columns"></a>採礦模型資料行
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-資料採礦模型會將採礦模型演算法套用至以採礦結構表示的資料。 與採礦結構相同，採礦模型也會包含資料行。 採礦模型包含在採礦結構內，且繼承採礦結構所定義的所有屬性值。 此模型可以使用採礦結構包含的所有資料行或資料行子集。  
+  資料採礦模型會將採礦模型演算法套用至以採礦結構表示的資料。 與採礦結構相同，採礦模型也會包含資料行。 採礦模型包含在採礦結構內，且繼承採礦結構所定義的所有屬性值。 此模型可以使用採礦結構包含的所有資料行或資料行子集。  
   
  您可以在採礦模型資料行上定義兩項額外資訊：使用方式和模型旗標。  
   
@@ -53,7 +37,7 @@ ms.lasthandoff: 02/15/2018
   
 ## <a name="see-also"></a>另請參閱  
  [資料採礦演算法 &#40;Analysis Services-資料採礦 &#41;](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
- [採礦結構 &#40;Analysis Services-資料採礦 &#41;](../../analysis-services/data-mining/mining-structures-analysis-services-data-mining.md)   
+ [採礦結構 & #40;Analysis Services-資料採礦 & #41;](../../analysis-services/data-mining/mining-structures-analysis-services-data-mining.md)   
  [變更採礦模型的屬性](../../analysis-services/data-mining/change-the-properties-of-a-mining-model.md)   
  [從採礦模型排除資料行](../../analysis-services/data-mining/exclude-a-column-from-a-mining-model.md)   
  [採礦結構資料行](../../analysis-services/data-mining/mining-structure-columns.md)  

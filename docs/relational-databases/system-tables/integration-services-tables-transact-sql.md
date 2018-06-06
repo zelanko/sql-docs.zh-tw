@@ -1,16 +1,14 @@
 ---
-title: "Integration Services 資料表 (TRANSACT-SQL) |Microsoft 文件"
-ms.custom: 
+title: Integration Services 資料表 (TRANSACT-SQL) |Microsoft 文件
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
 ms.component: system-tables
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: system-objects
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - TSQL
@@ -20,16 +18,15 @@ helpviewer_keywords:
 - system tables [Integration Services]
 - SSIS, system tables
 ms.assetid: 683b181b-0091-4a9c-86db-bc577af43cec
-caps.latest.revision: 
-author: spelluru
-ms.author: spelluru
-manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: ca8070eaabe2c09029f41e7290ebd9fe9db06a03
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+caps.latest.revision: 21
+author: douglasl
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: fc5df46211b3de92b054fea4120d9b7c884a0ccb
+ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="integration-services-tables-transact-sql"></a>Integration Services 資料表 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]

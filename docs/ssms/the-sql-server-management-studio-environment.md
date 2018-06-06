@@ -1,32 +1,31 @@
 ---
-title: "SQL Server Management Studio 環境 | Microsoft Docs"
-ms.custom: 
+title: SQL Server Management Studio 環境 | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
 ms.component: ssms
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: tools-ssms
-ms.tgt_pltfrm: 
-ms.topic: article
-helpviewer_keywords: SQL Server Management Studio [SQL Server], about SQL Server Management Studio
+ms.technology: ssms
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
+helpviewer_keywords:
+- SQL Server Management Studio [SQL Server], about SQL Server Management Studio
 ms.assetid: 73f4db18-6b4e-4b72-9dce-449bd5de8eab
-caps.latest.revision: "3"
+caps.latest.revision: 3
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 858d968c7ac8b420fc8fe1475b06f99bd396ea4f
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.openlocfilehash: 5f6991e63b876f3a9d31b318907941e46a55d4a6
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="the-sql-server-management-studio-environment"></a>SQL Server Management Studio 環境
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull_md.md)] 提供一個非常豐富的環境，供您管理和開發 [!INCLUDE[ssNoVersion](../includes/ssnoversion_md.md)] 中的查詢。  
+[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull_md.md)] 提供一個非常豐富的環境，供您管理和開發 [!INCLUDE[ssNoVersion](../includes/ssnoversion_md.md)]中的查詢。  
   
 ## <a name="in-this-section"></a>本節內容  
 [一般使用者介面元素](../ssms/general-user-interface-elements.md)  

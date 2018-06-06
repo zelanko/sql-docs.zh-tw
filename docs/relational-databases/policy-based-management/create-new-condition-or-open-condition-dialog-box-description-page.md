@@ -1,34 +1,33 @@
 ---
-title: "建立新條件或開啟條件對話方塊，描述頁面 | Microsoft Docs"
-ms.custom: 
+title: 建立新條件或開啟條件對話方塊，描述頁面 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
 ms.component: performance-monitor
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 f1_keywords:
 - sql13.swb.dmf.condition.description.f1
 - sql13.swb.dmf.policy.description.f1
 ms.assetid: 2ef0a556-9566-4af8-849e-ab038b9279cc
-caps.latest.revision: 
+caps.latest.revision: 37
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: ef0fb11f268c5e6997f169e46d63851ba53df091
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 5b26ce83b0dfb36af67caa68e64a5e5000abb816
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="create-new-condition-or-open-condition-dialog-box-description-page"></a>建立新條件或開啟條件對話方塊，描述頁面
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 使用此對話方塊可在原則式管理條件中加入描述。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  使用此對話方塊可在以原則為基礎的管理條件中加入描述。  
   
 ## <a name="options"></a>選項。  
  **說明**  

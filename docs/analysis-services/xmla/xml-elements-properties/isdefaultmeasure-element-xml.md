@@ -1,31 +1,24 @@
 ---
-title: "IsDefaultMeasure 元素 (XML) |Microsoft 文件"
-ms.custom: 
-ms.date: 03/03/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services, azure-analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+title: IsDefaultMeasure 元素 (XML) |Microsoft 文件
+ms.date: 05/08/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: xmla
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
-ms.assetid: 523cf3d7-9df0-4f9d-8486-9109de8d3cca
-caps.latest.revision: "6"
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 735e2245f44dc627035d99eb6c898259300cc4d0
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 8bf91c689addd9aa08054c716c0ceb714769d759
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34578310"
 ---
 # <a name="isdefaultmeasure-element-xml"></a>IsDefaultMeasure 元素 (XML)
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]您可透過此關聯性導覽至另一個資料表，取得此實體的預設量值，和擷取成員具有屬性 DefaultMeasure 表示。  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
+  表示可以透過此關聯性導覽至另一個資料表以及提取具有屬性 DefaultMeasure 的成員，取得此實體的預設量值。  
   
 ## <a name="syntax"></a>語法  
   

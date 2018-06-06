@@ -1,30 +1,28 @@
 ---
-title: "完成精靈 (SQL Server 匯入和匯出精靈) | Microsoft Docs"
-ms.custom: 
+title: 完成精靈 (SQL Server 匯入和匯出精靈) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/16/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
 ms.component: import-export-data
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 f1_keywords:
 - sql13.dts.impexpwizard.completewizard.f1
 ms.assetid: fbf0aa37-fd9e-47e1-82b4-26c1359ec3da
-caps.latest.revision: 
+caps.latest.revision: 46
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 738281bcaef0bce47cfc4c54890b48fd840eb91c
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 20e28e6b02aeacb4404f8d060137b1ed8d66e234
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="complete-the-wizard-sql-server-import-and-export-wizard"></a>完成精靈 (SQL Server 匯入和匯出精靈)
 指定是否要立即執行複製作業之後，以及選擇性儲存精靈建立的套件之後，[[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 匯入和匯出精靈] 會顯示 [完成精靈]。 在此頁面上，您可以檢閱在精靈中的選擇，然後按一下 [完成]  開始複製作業。

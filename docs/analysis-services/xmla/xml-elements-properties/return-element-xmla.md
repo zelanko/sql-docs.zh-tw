@@ -1,39 +1,24 @@
 ---
-title: "return 元素 (XMLA) |Microsoft 文件"
-ms.custom: 
-ms.date: 03/06/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services, azure-analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+title: return 元素 (XMLA) |Microsoft 文件
+ms.date: 05/08/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: xmla
 ms.topic: reference
-apiname: return Element
-apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
-apitype: Schema
-applies_to: SQL Server 2016 Preview
-f1_keywords:
-- microsoft.xml.analysis.return
-- http://schemas.microsoft.com/analysisservices/2003/engine#return
-- urn:schemas-microsoft-com:xml-analysis#return
-helpviewer_keywords: return element
-ms.assetid: 3cfe8b74-fec3-4987-a74a-5f731444e024
-caps.latest.revision: "14"
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 1c4ce55f4bc63b0011d836ba6e6041f2bd72db85
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: e8746fb9f8b397ef50b1a5c66a2132e5f0cf5c87
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34576190"
 ---
 # <a name="return-element-xmla"></a>return 元素 (XMLA)
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]包含所傳回的資訊[DiscoverResponse](../../../analysis-services/xmla/xml-elements-objects-discoverresponse.md)元素為了回應[探索](../../../analysis-services/xmla/xml-elements-methods-discover.md)方法呼叫或[ExecuteResponse](../../../analysis-services/xmla/xml-elements-objects-executeresponse.md)元素為了回應[Execute](../../../analysis-services/xmla/xml-elements-methods-execute.md)方法呼叫。  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
+  包含所傳回的資訊[DiscoverResponse](../../../analysis-services/xmla/xml-elements-objects-discoverresponse.md)元素為了回應[探索](../../../analysis-services/xmla/xml-elements-methods-discover.md)方法呼叫或[ExecuteResponse](../../../analysis-services/xmla/xml-elements-objects-executeresponse.md)元素為了回應[Execute](../../../analysis-services/xmla/xml-elements-methods-execute.md)方法呼叫。  
   
 ## <a name="syntax"></a>語法  
   
@@ -71,7 +56,7 @@ ms.lasthandoff: 01/08/2018
 ## <a name="remarks"></a>備註  
  **傳回**元素包含所傳回的資料**探索**和**Execute**方法。 一般而言，**傳回**元素包含單一**根**包含成功所傳回的資料元素**探索**或**Execute**方法呼叫或 XML for Analysis (XMLA) 方法呼叫不成功所傳回的例外狀況。 如果**Execute**方法包含**批次**執行多項作業的命令**傳回**元素包含**結果**元素，其亦包含一個**根**每個命令執行成功或失敗的項目**批次**命令。  
   
-## <a name="see-also"></a>請參閱  
- [屬性 &#40;XMLA &#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
+## <a name="see-also"></a>另請參閱
+ [屬性&#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
   
   

@@ -1,16 +1,14 @@
 ---
 title: '@@CONNECTIONS (Transact-SQL) | Microsoft Docs'
-ms.custom: 
+ms.custom: ''
 ms.date: 09/18/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-database
-ms.service: 
 ms.component: t-sql|functions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: t-sql
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - '@@CONNECTIONS'
@@ -24,21 +22,20 @@ helpviewer_keywords:
 - number of connection attempts
 - attempted connections
 ms.assetid: c59836a8-443c-4b9a-8b96-8863ada97ac7
-caps.latest.revision: 
+caps.latest.revision: 32
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 8422da0d4e550c99fac6c9659f771ab98196cb4a
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 39767751186028fd5cd8b93621d7465094d99264
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="x40x40connections-transact-sql"></a>&#x40;&#x40;CONNECTIONS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-傳回 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 上次啟動之後所嘗試的連接次數，成功和失敗都包括在內。
+此函數會傳回 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 上次啟動之後所嘗試的連線次數，成功和失敗都包括在內。
   
 ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -48,18 +45,18 @@ ms.lasthandoff: 11/21/2017
 @@CONNECTIONS  
 ```  
   
-## <a name="return-types"></a>傳回型
+## <a name="return-types"></a>傳回類型
 **integer**
   
 ## <a name="remarks"></a>Remarks  
-連接次數並不等於使用者數目。 例如，當沒有觀察連接的使用者時，應用程式仍可以開啟多個通往 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的連接。
+連接次數並不等於使用者數目。 例如，當沒有觀察連線的使用者時，應用程式仍可以開啟多個通往 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的連線。
   
-若要顯示包含多項 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 統計資料的報表，其中包括連線嘗試次數，請執行 **sp_monitor**。
+執行 **sp_monitor** 來顯示一張報表，裡面有多項 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 統計資料，包含嘗試連線次數。
   
-@@MAX_CONNECTIONS 是伺服器能夠同時接受的最大連線數目。 @@CONNECTIONS 會隨著每次的登入嘗試而遞增；因此，@@CONNECTIONS 可能大於 @@MAX_CONNECTIONS。
+@@MAX_CONNECTIONS 是伺服器能夠同時接受的連線數目上限。 @@CONNECTIONS 會隨著每次的登入嘗試而遞增；因此，@@CONNECTIONS 可以超過 @@MAX_CONNECTIONS。
   
 ## <a name="examples"></a>範例  
-下列範例會顯示傳回迄今 (到目前的日期和時間為止) 的登入嘗試次數。
+這個範例會傳回到目前的日期和時間為止，所有的登入嘗試次數。
   
 ```sql
 SELECT GETDATE() AS 'Today''s Date and Time',   

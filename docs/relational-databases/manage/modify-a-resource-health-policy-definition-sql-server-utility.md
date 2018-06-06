@@ -1,33 +1,32 @@
 ---
-title: "修改資源健康狀態原則定義 (SQL Server 公用程式) | Microsoft Docs"
-ms.custom: 
+title: 修改資源健康狀態原則定義 (SQL Server 公用程式) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
 ms.component: maintenance-plans
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 f1_keywords:
 - sql13.SWB.UE.UTILITY.ADMINISTRATION.F1
 ms.assetid: 27bec0b6-92e9-448e-8c70-fe36802cf128
-caps.latest.revision: 
+caps.latest.revision: 9
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: cec210a329c442240451cce7cec04dba9fafd9c0
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 65106ce68705f630b3955865b6967cfde0aae9a8
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="modify-a-resource-health-policy-definition-sql-server-utility"></a>修改資源健康情況原則定義 (SQL Server 公用程式)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 本主題描述如何使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 來修改 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中的資源健全狀況原則定義。 在您於 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 公用程式內修改資源使用量原則之前，您必須先建立公用程式控制點 (UCP)。 如需詳細資訊，請參閱 [SQL Server 公用程式的功能與工作](../../relational-databases/manage/sql-server-utility-features-and-tasks.md)。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  此主題描述如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 來修改 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中的資源健全狀況原則定義。 在您於 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 公用程式內修改資源使用量原則之前，您必須先建立公用程式控制點 (UCP)。 如需詳細資訊，請參閱 [SQL Server 公用程式的功能與工作](../../relational-databases/manage/sql-server-utility-features-and-tasks.md)。  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 您可以針對資料層應用程式和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]受管理的執行個體設定公用程式資源使用率原則。 您可以在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 公用程式內針對所有資料層應用程式和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 受管理的執行個體以全域方式定義資源使用率原則，也可以在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 公用程式內針對每一個資料層應用程式及每一個 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 受管理的執行個體個別定義原則。 您也可以實作全域原則，並讓個別的資料層應用程式或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 受管理的執行個體設定自己的原則定義。  
   

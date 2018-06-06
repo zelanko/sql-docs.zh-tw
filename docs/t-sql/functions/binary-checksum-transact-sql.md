@@ -1,16 +1,14 @@
 ---
 title: BINARY_CHECKSUM  (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 07/24/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-data-warehouse, database-engine, sql-database
-ms.service: 
 ms.component: t-sql|functions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: t-sql
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - BINARY_CHECKSUM
@@ -21,16 +19,16 @@ helpviewer_keywords:
 - BINARY_CHECKSUM function
 - binary [SQL Server], checksum values
 ms.assetid: 07fece4d-58e3-446e-a3b5-92fe24d2d1fb
-caps.latest.revision: 
+caps.latest.revision: 21
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: c5fd777c7ce4ecc4530c47a2e8eb8bb1e14ce2d5
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+monikerRange: = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 2b493b23ef0726dbc34a2073c7a50c7d1abb1b37
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="binarychecksum--transact-sql"></a>BINARY_CHECKSUM  (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
@@ -47,24 +45,45 @@ BINARY_CHECKSUM ( * | expression [ ,...n ] )
   
 ## <a name="arguments"></a>引數  
 *\**  
-指定針對資料表的所有資料行來計算。 BINARY_CHECKSUM 忽略其計算中無法比較之資料類型的資料行。 無法比較的資料類型包括 **text**、**ntext**、**image**、**cursor**、**xml** 和無法比較的通用語言執行平台 (CLR) 使用者自訂類型。
+指定計算涵蓋所有資料表資料行。 BINARY_CHECKSUM 忽略其計算中無法比較之資料類型的資料行。 無法比較的資料類型包含  
+* **cursor**  
+* **image**  
+* **ntext**  
+* **text**  
+* **xml**  
+
+和無法比較的 Common Language Runtime (CLR) 使用者定義類型。
   
 *expression*  
-為任何類型的[運算式](../../t-sql/language-elements/expressions-transact-sql.md)。 BINARY_CHECKSUM 忽略其計算中無法比較之資料類型的運算式。
+任意類型的[運算式](../../t-sql/language-elements/expressions-transact-sql.md)。 BINARY_CHECKSUM 忽略其計算中無法比較之資料類型的運算式。
+
+## <a name="return-types"></a>傳回類型  
+ **int**
   
 ## <a name="remarks"></a>Remarks  
-只要後續未修改資料列，對資料表任何資料列執行計算的 BINARY_CHECKSUM(*)，會傳回相同值。 BINARY_CHECKSUM 會滿足雜湊函式的屬性：如果兩份清單的對應項目有相同的類型，且使用等於 (=) 運算子來比較時相等，則套用在任兩份運算式清單上的 BINARY_CHECKSUM 會傳回相同的值。 對這項定義而言，指定類型的 Null 值會被視為比較結果相等。 如果變更了運算式清單中的其中一個值，清單的總和檢查碼通常也會改變。 不過，總和檢查碼也有可能不會變更。 因此，我們不建議使用 BINARY_CHECKSUM 來偵測是否已變更值，除非應用程式可以容忍偶爾遺失變更。 請考慮改用 HashBytes。 當指定 MD5 雜湊演算法時，HashBytes 為兩個不同的輸入傳回相同結果的可能性比 BINARY_CHECKSUM 要低很多。
+只要後續未修改資料列，對資料表任何資料列執行計算的 BINARY_CHECKSUM(*)，會傳回相同值。 BINARY_CHECKSUM 會滿足雜湊函式的屬性：如果兩份清單的對應項目有相同的類型，且使用 equals (=) 運算子來比較時相等，則套用在任兩份運算式清單上的 BINARY_CHECKSUM 會傳回相同的值。 在此定義中，假設所指定類型的 Null 值比較為相等值。 如果運算式清單中至少有一個值變更，則運算式總和檢查碼也會變更。 不過，不保證一定會如此。 因此，若要偵測值是否已變更，建議只有在您的應用程式可以容忍偶而遺失的變更時才使用 BINARY_CHECKSUM。 否則，請考慮改用 HashBytes。 使用指定的 MD5 雜湊演算法時，HashBytes 為兩個不同的輸入傳回相同結果的可能性比 BINARY_CHECKSUM 要低很多。
   
-BINARY_CHECKSUM 可套用至運算式清單，並傳回指定清單的相同值。 如果兩份清單的相對應元素有相同類型和位元組表示法，則套用在任何兩份運算式清單上的 BINARY_CHECKSUM 會傳回相同的值。 對這項定義而言，指定類型的 Null 值會被視為具有相同位元組表示法。
+BINARY_CHECKSUM 可以對運算式清單進行操作，並傳回所指定清單的相同值。 如果兩份清單的相對應元素有相同類型和位元組表示法，則套用在任何兩份運算式清單上的 BINARY_CHECKSUM 會傳回相同的值。 對這項定義而言，指定類型的 Null 值會被視為具有相同位元組表示法。
   
-BINARY_CHECKSUM 和 CHECKSUM 是相似的函數：它們可用來計算運算式清單的總和檢查碼值，而運算式的順序會影響結果值。 用於 BINARY_CHECKSUM(*) 的資料行順序，是資料表或檢視定義所指定之資料行的順序。 其中包括計算資料行。
+BINARY_CHECKSUM 和 CHECKSUM 是相似的函數：它們可用來計算運算式清單的總和檢查碼值，而運算式的順序會影響結果值。 用於 BINARY_CHECKSUM(*) 的資料行順序，是資料表或檢視定義所指定之資料行的順序。 計算資料行也包括在內。
   
-CHECKSUM 和 BINARY_CHECKSUM 傳回字串資料類型的不同值，其中地區設定會造成不同表示法的字串比較之後相等。 字串資料類型為 **char**、**varchar**、**nchar**、**nvarchar**，或 **sql_variant** (若 **sql_variant** 的基底類型為字串資料類型)。 例如，"McCavity" 和 "Mccavity" 字串的 BINARY_CHECKSUM 值不同。 反之，在不區分大小寫的伺服器上，CHECKSUM 對那些字串會傳回相同的總和檢查碼值。 CHECKSUM 值不應該與 BINARY_CHECKSUM 值做比較。
+BINARY_CHECKSUM 和 CHECKSUM 所傳回的字串資料類型值不同，其中地區設定會造成不同表示法的字串比較為相等。 字串資料類型為  
+
+* **char**  
+* **nchar**  
+* **nvarchar**  
+* **varchar**  
+
+中的多個  
+
+* **sql_variant** (如果 **sql_variant** 的基底類型是字串資料類型)。  
+  
+例如，"McCavity" 和 "Mccavity" 字串的 BINARY_CHECKSUM 值不同。 反之，在不區分大小寫的伺服器中，CHECKSUM 對那些字串會傳回相同的總和檢查碼值。 您應該避免比較 CHECKSUM 值與 BINARY_CHECKSUM 值。
  
 BINARY_CHECKSUM 針對 **varbinary(max)** 類型支援最多 8,000 個字元，針對 **nvarchar(max)** 類型則支援最多 255 個字元。
   
 ## <a name="examples"></a>範例  
-下列範例會利用 `BINARY_CHECKSUM` 來偵測資料表中資料列的變更。
+此範例使用 `BINARY_CHECKSUM` 來偵測資料表資料列中的變更。
   
 ```sql
 USE AdventureWorks2012;  

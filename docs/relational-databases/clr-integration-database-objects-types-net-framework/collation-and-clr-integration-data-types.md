@@ -1,35 +1,33 @@
 ---
-title: "定序和 CLR 整合資料類型 |Microsoft 文件"
-ms.custom: 
+title: 定序和 CLR 整合資料類型 |Microsoft 文件
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
 ms.component: clr
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - data types [CLR integration]
 - parameter collation [CLR integration]
 - collations [CLR integration]
 ms.assetid: 6ebaed8e-2e2b-4f6d-bf4b-bc25452de441
-caps.latest.revision: 
+caps.latest.revision: 38
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: ab94a6397d8b070af754fa5fd8dd47f9bd553630
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: ff9f8b52d2b6b9856562a99db288a461a71e0f6b
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="collation-and-clr-integration-data-types"></a>定序和 CLR 整合資料類型
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-在[!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]、 **compareinfo 一起**物件會處理定序。 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]字串應用程式開發介面 (Api) 使用**compareinfo 一起**屬性相關聯**CultureInfo**目前的執行緒來執行字串比較的物件。 預設值為**CultureInfo**物件根據[!INCLUDE[msCoName](../../includes/msconame-md.md)]所在之電腦的 Windows 地區設定[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]正在執行。 這會決定預設的比較語意，如果任何明確**CultureInfo** ，為指定的比較**System.String**值。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]明確地變更**compareinfo 一起**為資料庫或伺服器定序屬性。 必要時，使用者必須將適當**compareinfo 一起**在其常式中的屬性。  
+  在[!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]、 **compareinfo 一起**物件會處理定序。 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]字串應用程式開發介面 (Api) 使用**compareinfo 一起**屬性相關聯**CultureInfo**目前的執行緒來執行字串比較的物件。 預設值為**CultureInfo**物件根據[!INCLUDE[msCoName](../../includes/msconame-md.md)]所在之電腦的 Windows 地區設定[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]正在執行。 這會決定預設的比較語意，如果任何明確**CultureInfo** ，為指定的比較**System.String**值。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 明確地變更**compareinfo 一起**為資料庫或伺服器定序屬性。 必要時，使用者必須將適當**compareinfo 一起**在其常式中的屬性。  
   
 ## <a name="parameter-collation"></a>參數定序  
  當您建立 common language runtime (CLR) 常式，並 CLR 方法的參數繫結至常式具型別的**SQLString**，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]建立參數的執行個體之資料庫的預設定序包含呼叫常式。 如果參數不是**SqlType** (例如，**字串**而**SQLString**)，從資料庫的定序資訊不是與參數相關聯。  

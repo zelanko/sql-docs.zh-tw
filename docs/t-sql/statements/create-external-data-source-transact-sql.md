@@ -1,16 +1,14 @@
 ---
 title: CREATE EXTERNAL DATA SOURCE (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 09/06/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
 ms.component: t-sql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: t-sql
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - CREATE EXTERNAL DATA SOURCE
@@ -21,15 +19,15 @@ helpviewer_keywords:
 - External
 - External, data source
 - PolyBase, create data source
-author: barbkess
-ms.author: barbkess
+author: edmacauley
+ms.author: edmaca
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 9d7d610008b17db9fdec1e33b1577e38a3d9f3a9
-ms.sourcegitcommit: f0c5e37c138be5fb2cbb93e9f2ded307665b54ea
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 9da6613c69319197da22b9b4cee74e8ef0b289d6
+ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/24/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="create-external-data-source-transact-sql"></a>CREATE EXTERNAL DATA SOURCE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
@@ -39,7 +37,7 @@ ms.lasthandoff: 02/24/2018
 > [!NOTE]  
 >  只有在 SQL Server 2016 (或更新版本)、Azure SQL 資料倉儲，以及平行處理資料倉儲上才支援 PolyBase。 只有在 Azure SQL Database v12 或更新版本上才支援彈性資料庫查詢。  
   
- 針對 PolyBase，外部資料來源為 Hadoop 檔案系統 (HDFS)、Azure 儲存體 Blob 容器或 Azure Data Lake Store。 如需詳細資訊，請參閱[開始使用 PolyBase](../../relational-databases/polybase/get-started-with-polybase.md)。  
+ 針對 PolyBase，外部資料來源為 Hadoop 檔案系統 (HDFS)、Azure 儲存體 Blob 容器或 Azure Data Lake Store。 如需詳細資訊，請參閱 [開始使用 PolyBase](../../relational-databases/polybase/get-started-with-polybase.md)。  
   
  針對彈性資料庫查詢，外部來源為分區對應管理員 (在 Azure SQL Database 上) 或遠端資料庫 (在 Azure SQL Database 上)。  建立外部資料來源後，請使用 [sp_execute_remote &#40;Azure SQL Database&#41;](../../relational-databases/system-stored-procedures/sp-execute-remote-azure-sql-database.md)。 如需詳細資訊，請參閱[彈性資料庫查詢](https://azure.microsoft.com/documentation/articles/sql-database-elastic-query-overview/)。  
 
@@ -276,7 +274,7 @@ CREATE EXTERNAL DATA SOURCE MyElasticDBQueryDataSrc WITH
   
 -   參考外部資料來源和外部檔案格式的外部資料表。  
   
-## <a name="permissions"></a>權限  
+## <a name="permissions"></a>Permissions  
  在 SQL DW、SQL Server、APS 2016 和 SQL DB 中，需要有對資料庫的 CONTROL 權限。
 
 > [!IMPORTANT]  
@@ -369,7 +367,7 @@ SECRET = '<azure_storage_account_key>';
 
 -- Create an external data source with CREDENTIAL option.
 CREATE EXTERNAL DATA SOURCE MyAzureStorage WITH (
-    TYPE = HADOOP, 
+    TYPE = BLOB_STORAGE, 
     LOCATION = 'wasbs://dailylogs@myaccount.blob.core.windows.net/',
     CREDENTIAL = AzureStorageCredential
 );

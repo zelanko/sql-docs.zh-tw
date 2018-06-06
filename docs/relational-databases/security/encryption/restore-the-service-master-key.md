@@ -1,34 +1,33 @@
 ---
-title: "還原服務主要金鑰 | Microsoft 文件"
-ms.custom: 
+title: 還原服務主要金鑰 | Microsoft 文件
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
 ms.component: security
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - service master key [SQL Server], importing
 - service master key [SQL Server], restoring
 ms.assetid: 14bdbbbe-d384-4692-b670-4243d2466fe1
-caps.latest.revision: 
+caps.latest.revision: 17
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 3a577b9da0c3c82cf286899641efa26a03246620
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 38c2da3d1ad701174d88bf040f9b3b9d0e2d8573
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="restore-the-service-master-key"></a>還原服務主要金鑰
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 此主題描述如何使用 [!INCLUDE[tsql](../../../includes/tsql-md.md)]，還原 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 中的服務主要金鑰。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  此主題描述如何使用 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] ，還原 [!INCLUDE[tsql](../../../includes/tsql-md.md)]中的服務主要金鑰。  
   
 > [!WARNING]  
 >  需要還原服務主要金鑰的情況不太可能發生在您身上。 萬一真的碰到了，就應該非常小心地進行。 如需詳細資訊，請參閱 [Back Up the Service Master Key](../../../relational-databases/security/encryption/back-up-the-service-master-key.md)。  
@@ -39,7 +38,7 @@ ms.lasthandoff: 11/21/2017
   
      [限制事項](#Restrictions)  
   
-     [安全性](#Security)  
+     [Security](#Security)  
   
 -   [若要使用 Transact-SQL 還原服務主要金鑰](#SSMSProcedure)  
   
@@ -58,7 +57,7 @@ ms.lasthandoff: 11/21/2017
   
 ###  <a name="Security"></a> 安全性  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> 權限  
  需要伺服器的 CONTROL SERVER 權限。  
   
 ##  <a name="SSMSProcedure"></a> 使用 Transact-SQL  
@@ -67,11 +66,11 @@ ms.lasthandoff: 11/21/2017
   
 1.  從實體備份媒體或本機檔案系統上的目錄，擷取已備份的服務主要金鑰副本。  
   
-2.  在 **[物件總管]**中，連接到 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]的執行個體。  
+2.  在 **[物件總管]** 中，連接到 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]的執行個體。  
   
 3.  在標準列上，按一下 **[新增查詢]**。  
   
-4.  將下列範例複製並貼入查詢視窗中，然後按一下 **[執行]**。  
+4.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]**。  
   
     ```  
     -- Restores the service master key from a backup file.  

@@ -1,54 +1,23 @@
 ---
-title: "資料來源和繫結 (SSAS 多維度) |Microsoft 文件"
-ms.custom: 
-ms.date: 03/01/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
-helpviewer_keywords:
-- data source views [Analysis Services], bindings
-- DSO, bindings
-- Analysis Services Scripting Language, data sources
-- cubes [Analysis Services], bindings
-- OLAP mining models [Analysis Services Scripting Language]
-- bindings [Analysis Services Scripting Language]
-- rebindings [Analysis Services Scripting Language]
-- ASSL, bindings
-- relational mining models [ASSL]
-- data sources [Analysis Services Scripting Language]
-- ASSL, data sources
-- dimensions [Analysis Services], bindings
-- measures [Analysis Services], bindings
-- relational data sources [Analysis Services Scripting Language]
-- Analysis Services Scripting Language, bindings
-- chaptered rowsets
-- granularity
-- mining models [Analysis Services], data sources
-- inline bindings [ASSL]
-- out-of-line bindings
-- measure groups [Analysis Services], bindings
-- partitions [Analysis Services], bindings
-ms.assetid: bc028030-dda2-4660-b818-c3160d79fd6d
-caps.latest.revision: 
-author: Minewiskan
+title: 資料來源和繫結 (SSAS 多維度) |Microsoft 文件
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: multidimensional-models
+ms.topic: conceptual
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 49a0e62db64a1eb0dc27df9785a90234a4b39207
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 2461bbdc3707ed30e130aaa32e117f24f9fe379d
+ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="data-sources-and-bindings-ssas-multidimensional"></a>資料來源和繫結 (SSAS 多維度)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-Cube、維度和其他 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 物件都可繫結至資料來源。 資料來源可為下列其中一個物件：  
+  Cube、維度和其他 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 物件都可繫結至資料來源。 資料來源可為下列其中一個物件：  
   
 -   關聯式資料來源。  
   

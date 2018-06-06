@@ -1,28 +1,26 @@
 ---
-title: "建立交易資料的 InfoSource | Microsoft Docs"
-ms.custom: 
+title: 建立交易資料的 InfoSource | Microsoft Docs
+ms.custom: ''
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
 ms.component: data-flow
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: ab5f23e2-cd4e-4507-83d9-ac5ef721c171
-caps.latest.revision: 
+caps.latest.revision: 10
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 140508a2b52ad86ddb7916e3ed0d5350d26aab73
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: c5784cbfda1f6eb935e864b0547db0fbe8cedbbb
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="create-infosource-for-transaction-data"></a>建立交易資料的 InfoSource
   使用 [建立交易資料的 InfoSource] 對話方塊可以在 SAP Netweaver BW 系統中建立交易資料的新 InfoSource。  
@@ -38,7 +36,7 @@ ms.lasthandoff: 01/25/2018
   
 2.  在 [資料流程] 索引標籤上，按兩下 SAP BW 目的地。  
   
-3.  在 **[SAP BW 目的地編輯器]**中，按一下 **[連接管理員]** 開啟編輯器的 **[連接管理員]** 頁面。  
+3.  在 **[SAP BW 目的地編輯器]** 中，按一下 **[連接管理員]** 開啟編輯器的 **[連接管理員]** 頁面。  
   
 4.  在 [連線管理員] 頁面的 [建立 SAP BW 物件] 群組方塊中，選取 [InfoSource]，然後按一下 [建立]。  
   

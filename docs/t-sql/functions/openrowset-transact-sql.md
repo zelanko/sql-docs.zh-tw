@@ -1,16 +1,14 @@
 ---
 title: OPENROWSET (Transact-SQL) | Microsoft Docs
-ms.custom: 
-ms.date: 03/09/2017
-ms.prod: sql-non-specified
+ms.custom: ''
+ms.date: 04/09/2018
+ms.prod: sql
 ms.prod_service: sql-database
-ms.service: 
 ms.component: t-sql|functions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: t-sql
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - OPENROWSET_TSQL
@@ -27,24 +25,26 @@ helpviewer_keywords:
 - OLE DB data sources [SQL Server]
 - ad hoc connection information
 ms.assetid: f47eda43-33aa-454d-840a-bb15a031ca17
-caps.latest.revision: 
+caps.latest.revision: 130
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Active
-ms.openlocfilehash: 68db78ede26c3e7f8c60ced655d89d0fc9a615ac
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 26b3b72cf4e3ece0624eb33032e34713695c081c
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="openrowset-transact-sql"></a>OPENROWSET (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
 
   包含所有從 OLE DB 資料來源存取遠端資料所需的連接資訊。 這個方法是存取連結伺服器資料表的另一個方法，而且是使用 OLE DB 來連接和存取遠端資料的單次特定方法。 對於更常用到的 OLE DB 資料來源參考，請改用連結的伺服器。 如需詳細資訊，請參閱 [連結的伺服器 &#40;Database Engine&#41;](../../relational-databases/linked-servers/linked-servers-database-engine.md)。 您可以依照參考資料表名稱的相同方式，在查詢的 FROM 子句中參考 `OPENROWSET` 函數。 根據 OLE DB 提供者的能力而定，`OPENROWSET` 函數也可以被當做 `INSERT``UPDATE` 或 `DELETE` 陳述式的目標資料表加以參考。 雖然查詢可能傳回多個結果集，但是 `OPENROWSET` 只能傳回第一個。  
   
  `OPENROWSET` 也支援透過內建 BULK 提供者執行大量作業，可讓檔案資料被讀取，並且當做資料列集傳回。  
-  
+
+[!INCLUDE[ssMIlimitation](../../includes/sql-db-mi-limitation.md)]
+
  ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>語法  
@@ -130,7 +130,10 @@ OPENROWSET
   
  CODEPAGE = { 'ACP'| 'OEM'| 'RAW'| '*code_page*' }  
  指定資料檔案中之資料的字碼頁。 只有當資料包含字元值大於 127 或小於 32 的 **char****varchar**或 **text** 資料行時，CODEPAGE 才會相關。  
-  
+
+> [!IMPORTANT]
+> 在 Linux 上，CODEPAGE 不是支援的選項。
+
 > [!NOTE]  
 >  除非您希望 65001 選項的優先順序高於定序/字碼頁指定值，否則建議您在格式檔案中指定每個資料行的定序名稱。  
   
@@ -150,7 +153,7 @@ OPENROWSET
 
 'errorfile_data_source_name'   
 **適用於：** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1。
-這是具名的外部資料來源，指向錯誤檔案的 Azure Blob 儲存體位置，該位置將包含匯入期間發現的錯誤。 必須使用 [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1 中新增的 `TYPE = BLOB_STORAGE` 選項來建立外部資料來源。 如需詳細資訊，請參閱 [CREATE EXTERNAL DATA SOURCE](../../t-sql/statements/create-external-data-source-transact-sql.md)。
+這是具名的外部資料來源，指向錯誤檔案的 Azure Blob 儲存體位置，該檔案將包含在匯入期間發現的錯誤。 必須使用 [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1 中新增的 `TYPE = BLOB_STORAGE` 選項來建立外部資料來源。 如需詳細資訊，請參閱 [CREATE EXTERNAL DATA SOURCE](../../t-sql/statements/create-external-data-source-transact-sql.md)。
   
  FIRSTROW =*first_row*  
  指定要載入之第一個資料列的號碼。 預設值是 1。 這表示指定之資料檔中的第一個資料列。 資料列號碼是由計算資料列結束字元所決定。 FIRSTROW 是以 1 為基底。  
@@ -223,12 +226,12 @@ FIELDQUOTE **=** 'field_quote'
 指定將用來當作 CSV 檔案中引號字元的字元。 如果未指定，則會使用引號字元 (") 當作引號字元，如 [RFC 4180](https://tools.ietf.org/html/rfc4180) 標準中所定義的。
 
   
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>Remarks  
  唯有針對指定的提供者將 **DisallowAdhocAccess** 登錄選項明確設定為 0，且已啟用 [隨選分散式查詢] 進階設定選項時，才能使用 `OPENROWSET` 來存取 OLE DB 資料來源的遠端資料。 若未設定這些選項，預設行為便不允許特定存取。  
   
  存取遠端 OLE DB 資料來源時，用戶端連接到將進行查詢之伺服器所在的伺服器上，不會自動委派信任連接的登入識別。 此時必須設定驗證委派。  
   
- 如果 OLE DB 提供者支援指定之資料來源中的多個目錄和結構描述，則需要用到目錄和結構描述名稱。 如果 OLE DB 提供者不支援 *catalog* 和 *schema* 的值，就可以將它們省略。 如果提供者只支援結構描述名稱，就必須指定 *schema***.***object* 格式的兩部分名稱。 如果提供者只支援目錄名稱，則必須指定 *catalog***.***schema***.***object* 格式的三部分名稱。 您必須為使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者的通過查詢指定三部分的名稱。 如需詳細資訊，請參閱 [Transact-SQL 語法慣例 &#40;Transact-SQL&#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)。  
+ 如果 OLE DB 提供者支援指定之資料來源中的多個目錄和結構描述，則需要用到目錄和結構描述名稱。 如果 OLE DB 提供者不支援 *catalog* 和 *schema* 的值，就可以將它們省略。 如果提供者只支援結構描述名稱，就必須指定 *schema ***.*** object* 格式的兩部分名稱。 如果提供者只支援目錄名稱，則必須指定 *catalog ***.*** schema ***.*** object* 格式的三部分名稱。 您必須為使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者的通過查詢指定三部分的名稱。 如需詳細資訊，請參閱 [Transact-SQL 語法慣例 &#40;Transact-SQL&#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)。  
   
  `OPENROWSET` 不接受變數作為其引數。  
   
@@ -401,7 +404,7 @@ SELECT * FROM OPENROWSET(
    DATA_SOURCE = 'MyAzureInvoices',
    SINGLE_CLOB) AS DataFile;
 ```   
-有關包含設定認證和外部資料來源的完整 `OPENROWSET` 範例，請參閱[大量存取 Azure Blob 儲存體資料的範例](../../relational-databases/import-export/examples-of-bulk-access-to-data-in-azure-blob-storage.md)。
+如需包含設定認證和外部資料來源的完整 `OPENROWSET` 範例，請參閱[大量存取 Azure Blob 儲存體資料的範例](../../relational-databases/import-export/examples-of-bulk-access-to-data-in-azure-blob-storage.md)。
  
 ### <a name="additional-examples"></a>其他範例  
  如需示範如何使用 `INSERT...SELECT * FROM OPENROWSET(BULK...)` 的其他範例，請參閱下列主題：  

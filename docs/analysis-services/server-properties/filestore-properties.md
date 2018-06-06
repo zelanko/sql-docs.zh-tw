@@ -1,41 +1,19 @@
 ---
-title: "Filestore 屬性 |Microsoft 文件"
-ms.custom: 
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: reference
-helpviewer_keywords:
-- Income property
-- InitialBonus property
-- PercentScanPerPrice property
-- FileStore properties
-- BackgroundTrimCost property
-- Tax property
-- PerformanceTrace property
-- MinimumBalance property
-- UnbufferedThreshold property
-- BackgroundTrimAmount property
-- MaximumBalance property
-- MemoryLimitMin property
-- MemoryLimit property
-ms.assetid: 580cf0aa-7425-4d48-aa8d-128f5b488fcd
-caps.latest.revision: 
-author: Minewiskan
+title: Filestore 屬性 |Microsoft 文件
+ms.date: 05/03/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: ''
+ms.topic: conceptual
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 24a18751c7686de2d3d3731806374fe7a6db2080
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 62db68cf9b20f0b7cb3e210f65d1f1167a4202e9
+ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="filestore-properties"></a>FileStore 屬性
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -61,7 +39,7 @@ ms.lasthandoff: 02/15/2018
   
  在高階系統上，尤其是具有大型記憶體資源和多個 NUMA 節點的系統，使用隨機檔案存取會很有幫助。 在隨機存取模式下，Windows 會略過將資料從磁碟讀入系統檔案快取的頁面對應作業，藉此降低快取的競爭情況。  
   
- 您將需要執行比較測試，判斷變更此屬性是否使查詢效能獲得改善。 如需執行比較測試的最佳作法，包括清除快取和避免常見的錯誤，請參閱 [SQL Server 2008 R2 Analysis Services 作業指南](http://go.microsoft.com/fwlink/?LinkID=225539)。 如需使用這個屬性之權衡取捨的其他資訊，請參閱 [http://support.microsoft.com/kb/2549369](http://support.microsoft.com/kb/2549369)。  
+ 您將需要執行比較測試，判斷變更此屬性是否使查詢效能獲得改善。 如需執行比較測試的最佳作法，包括清除快取和避免常見的錯誤，請參閱 [SQL Server 2008 R2 Analysis Services 作業指南](http://go.microsoft.com/fwlink/?LinkID=225539)。 使用此屬性之權衡取捨其他資訊，請參閱[ http://support.microsoft.com/kb/2549369 ](http://support.microsoft.com/kb/2549369)。  
   
  若要在 Management Studio 中檢視或修改這個屬性，請在伺服器屬性頁面中啟用進階屬性清單。 您也可以變更 msmdsrv.ini 檔案中的屬性。 設定這個屬性之後，建議重新啟動伺服器，否則會繼續在之前的模式下存取已開啟的檔案。  
   

@@ -1,33 +1,32 @@
 ---
-title: "OData 來源 | Microsoft Docs"
+title: OData 來源 | Microsoft Docs
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
 ms.component: data-flow
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.custom: 
+ms.custom: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 f1_keywords:
 - sql13.DTS.DESIGNER.ODATASOURCE.F1
 - sql13.dts.designer.odatasource.connection.f1
 - sql13.dts.designer.odatasource.columns.f1
 - sql13.dts.designer.odatasource.erroroutput.f1
 ms.assetid: cc9003c9-638e-432b-867e-e949d50cec90
-caps.latest.revision: 
+caps.latest.revision: 14
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 035483d63bdd8e28a5d0089f5a7dc783917aeacf
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 20e98a86e61ba084073022eb515d436787f6a341
+ms.sourcegitcommit: b5ab9f3a55800b0ccd7e16997f4cd6184b4995f9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 05/23/2018
+ms.locfileid: "34455412"
 ---
 # <a name="odata-source"></a>OData 來源
 使用 SSIS 封裝中的 OData 來源元件，從開放式資料通訊協定 (OData) 服務取用資料。 此元件支援 OData v3 和 v4 通訊協定。  
@@ -39,7 +38,10 @@ ms.lasthandoff: 01/25/2018
 OData 來源包含下列資料來源的支援：
 -   Microsoft Dynamics AX Online 和 Microsoft Dynamics CRM Online
 -   SharePoint 清單。 若要查看 SharePoint 伺服器上的所有清單，請使用下列 URL：http://\<伺服器>/_vti_bin/ListData.svc。 如需 SharePoint URL 慣例的詳細資訊，請參閱 [SharePoint Foundation REST 介面](http://msdn.microsoft.com/library/ff521587.aspx)。
-  
+
+> [!NOTE]
+> OData 來源元件不支援 SharePoint 清單中的複雜類型，例如多重選擇項目。
+
 ## <a name="odata-format-and-performance"></a>OData 格式和效能
  大部分的 OData 服務都會傳回多種格式的結果。 您可使用 `$format` 查詢選項來指定結果集的格式。 類似 JSON 和 JSON Light 的格式要比 ATOM 或 XML 更有效率，而且在傳輸大量資料時可能會提供更好的效能。 下表提供範例測試的結果。 如您所見，當從 ATOM 切換到 JSON 時有 30-53% 的效能提升，而且當從 ATOM 切換到新的 JSON light 格式時有 67% 的效能提升 (適用於 WCF Data Services 5.1)。  
   

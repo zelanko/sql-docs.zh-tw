@@ -1,28 +1,26 @@
 ---
-title: "OLE DB 自訂屬性 | Microsoft Docs"
-ms.custom: 
+title: OLE DB 自訂屬性 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/04/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
 ms.component: data-flow
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: 13a82d41-dd7a-4708-bc84-4407a536c877
-caps.latest.revision: 
+caps.latest.revision: 8
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: fc8a8b573062af1cf719367896e2933556cfdfae
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: a9060dfbc8a5dfd7732bdd29c6bec37c5a877069
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ole-db-custom-properties"></a>OLE DB 自訂屬性
   **來源自訂屬性**  
@@ -33,7 +31,7 @@ ms.lasthandoff: 01/25/2018
   
 |屬性名稱|資料類型|描述|  
 |-------------------|---------------|-----------------|  
-|AccessMode|Integer|用來存取資料庫的模式。 可能的值包括 **[開啟資料列集]**、 **[來自變數的開啟資料列集]**、 **[SQL 命令]**和 **[來自變數的 SQL 命令]**。 預設值為 **[開啟資料列集]**。|  
+|AccessMode|Integer|用來存取資料庫的模式。 可能的值包括 **[開啟資料列集]**、 **[來自變數的開啟資料列集]**、 **[SQL 命令]** 和 **[來自變數的 SQL 命令]**。 預設值為 **[開啟資料列集]**。|  
 |AlwaysUseDefaultCodePage|布林|一個值，指出要針對每個資料行使用 **DefaultCodePage** 屬性的值，還是嘗試從每個資料行的地區設定中衍生字碼頁。 此屬性的預設值為 **False**。|  
 |CommandTimeout|Integer|命令逾時之前的秒數。值為 0 表示無限逾時。<br /><br /> 注意：雖然您無法在 [OLE DB 來源編輯器] 中使用這個屬性，但是可以使用 [進階編輯器] 來設定這個屬性。|  
 |DefaultCodePage|Integer|無法從資料來源中取得字碼頁資訊時要使用的字碼頁。|  

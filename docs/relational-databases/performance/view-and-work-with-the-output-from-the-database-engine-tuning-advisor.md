@@ -1,17 +1,13 @@
 ---
-title: "檢視及處理 Database Engine Tuning Advisor 的輸出 | Microsoft 文件"
-ms.custom: 
+title: 檢視及處理 Database Engine Tuning Advisor 的輸出 | Microsoft 文件
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
-ms.prod_service: database-engine
-ms.service: 
-ms.component: performance
-ms.reviewer: 
+ms.prod: sql
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: performance
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 f1_keywords:
 - sql13.dta.sessionmonitor.f1
 - sql13.dta.reports.f1
@@ -29,16 +25,15 @@ helpviewer_keywords:
 - reports [SQL Server], tuning
 - viewing tuning output
 ms.assetid: 47f9d9a7-80b0-416d-9d9a-9e265bc190dc
-caps.latest.revision: 
+caps.latest.revision: 34
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: dcaa37454f30618c42c3cce8bf9f61b896303e90
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: de3d07abb1b4e422662c2283873de739c59c6f9b
+ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="view-and-work-with-the-output-from-the-database-engine-tuning-advisor"></a>檢視及處理 Database Engine Tuning Advisor 的輸出
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -182,7 +177,7 @@ ms.lasthandoff: 01/18/2018
     C:\Program Files\Microsoft SQL Server\100\Tools\Binn\schemas\sqlserver\2004\07\dta\dtaschema.xsd  
     ```  
   
-     您也可以自線上取得 Database Engine Tuning Advisor XML 結構描述： [http://schemas.microsoft.com/sqlserver/2004/07/dta](http://schemas.microsoft.com/sqlserver/2004/07/dta)。  
+     您也可以透過 [http://schemas.microsoft.com/sqlserver/2004/07/dta](http://schemas.microsoft.com/sqlserver/2004/07/dta)，線上取得 Database Engine Tuning Advisor XML 結構描述。  
   
 6.  建立工作負載及 XML 輸入檔之後，即可準備將輸入檔提交至 **dta** 命令列公用程式，以進行分析。 請確定您有指定 **-ox** 公用程式引數的 XML 輸出檔名稱。 這樣會以 **Configuration** 元素中所指定的建議組態來建立 XML 輸出檔。 若您想再執行一次 Database Engine Tuning Advisor，以檢查另一個以該輸出檔為基礎的假設組態，則您可以複製輸出檔的 **Configuration** 元素內容，並貼到新的 XML 輸入檔或原來的 XML 輸入檔中。 如需有關 XML 輸入檔與 **dta** 公用程式一起使用的資訊，請參閱 [Start and Use the Database Engine Tuning Advisor](../../relational-databases/performance/start-and-use-the-database-engine-tuning-advisor.md)中的＜使用 dta 公用程式微調資料庫＞。  
   
@@ -251,7 +246,7 @@ ms.lasthandoff: 01/18/2018
 ##  <a name="UI"></a> 使用者介面描述  
   
 ### <a name="sessions-monitor"></a>工作階段監視器  
- **[工作階段監視器]** 會顯示有關 Database Engine Tuning Advisor 中已開啟之工作階段的資訊。 若要顯示屬性視窗中有關工作階段的資訊，請在 **[工作階段監視器]**中選取工作階段名稱。  
+ **[工作階段監視器]** 會顯示有關 Database Engine Tuning Advisor 中已開啟之工作階段的資訊。 若要顯示屬性視窗中有關工作階段的資訊，請在 **[工作階段監視器]** 中選取工作階段名稱。  
   
 ### <a name="recommendations-tab"></a>建議索引標籤  
  Database Engine Tuning Advisor 完成工作負載分析後，即顯示 **[建議]** 索引標籤。 此方格包含各考量物件的建議。 如果有資料分割建議，則會出現在上方格，而索引建議會出現在下方格。 如果沒有建議就不會出現方格。  
@@ -288,7 +283,7 @@ ms.lasthandoff: 01/18/2018
  提升效能的建議動作。 可能的值為 Create 和 Drop。  
   
  **建議的目標**  
- 受建議影響的索引或檢視。 此資料行的圖示反映要卸除或加入 **[建議的目標]**的建議。  
+ 受建議影響的索引或檢視。 此資料行的圖示反映要卸除或加入 **[建議的目標]** 的建議。  
   
  **詳細資料**  
  [建議的目標] 的描述。 可能的值包括叢集、索引檢視或代表非叢集索引的空白。 此外還指出索引是否是唯一的。  

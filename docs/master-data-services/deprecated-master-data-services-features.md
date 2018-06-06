@@ -1,30 +1,31 @@
 ---
-title: "取代的 Master Data Services 功能 | Microsoft Docs"
-ms.custom: 
+title: 取代的 Master Data Services 功能 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: mds
-ms.service: 
 ms.component: non-specific
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - master-data-services
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: d8506bda-66dd-45a4-bfc9-3a10fa665acc
-caps.latest.revision: 
+caps.latest.revision: 18
 author: leolimsft
 ms.author: lle
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: d9a313ec2e9dbed17ea24a7c61714ecdc5e50c9a
-ms.sourcegitcommit: 6ac1956307d8255dc544e1063922493b30907b80
+ms.openlocfilehash: 521fe7bee8ca499c7900277b433a02669883dddd
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="deprecated-master-data-services-features"></a>取代的 Master Data Services 功能
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
   本主題描述 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 中仍然可用但已被取代的 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]功能。 這些功能將在未來的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]版本中移除。 已被取代的功能不應在新應用程式中使用。  
   
 ## <a name="explicit-hierarchies-collections-and-related-components"></a>明確階層、集合和相關元件  

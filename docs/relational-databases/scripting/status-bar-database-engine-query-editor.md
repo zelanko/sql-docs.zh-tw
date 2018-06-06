@@ -1,31 +1,28 @@
 ---
-title: "狀態列 (Database Engine 查詢編輯器) | Microsoft Docs"
-ms.custom: 
+title: 狀態列 (Database Engine 查詢編輯器) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
-ms.prod_service: sql-tools
-ms.service: 
-ms.component: ssms-scripting
-ms.reviewer: 
+ms.prod: sql
+ms.technology: scripting
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: e7f2d6f4-bb94-4cf5-a096-c34397e679af
-caps.latest.revision: 
+caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 61cce9ae4fab37c107bdeb7a66766debf83add80
-ms.sourcegitcommit: a0aa5e611a0e6ebb74ac1e2f613e8916dc7a7617
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: d892ad83519235c765192e5394cc435004c12fef
+ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/24/2018
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="status-bar-database-engine-query-editor"></a>狀態列 (Database Engine 查詢編輯器)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)]查詢編輯器視窗的狀態列可能利用彩色編碼，以便表示每個視窗所連線的[!INCLUDE[ssDE](../../includes/ssde-md.md)]執行個體。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+  [!INCLUDE[ssDE](../../includes/ssde-md.md)] 查詢編輯器視窗的狀態列可能利用彩色編碼，以便表示每個視窗所連接的 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 執行個體。  
   
 1.  **開始之前：**  [狀態列色彩](#StatusBarColors)  
   
@@ -34,14 +31,14 @@ ms.lasthandoff: 01/24/2018
 3.  **使用狀態色彩：**  [開啟使用伺服器色彩的查詢編輯器](#OpenServerColor)、 [開啟指定狀態色彩的查詢編輯器](#OpenSpecColor)  
   
 ##  <a name="StatusBarColors"></a> 狀態列色彩  
- 您可在 **[物件總管]** 或 **[已註冊的伺服器]**中讓狀態列色彩與特定伺服器節點產生關聯。 您僅能指定連接至 [!INCLUDE[ssDE](../../includes/ssde-md.md)]執行個體的伺服器節點之色彩，而不能指定其他 SQL Server 技術的伺服器節點色彩。 每當您將新的 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 查詢編輯器視窗連接至 [!INCLUDE[ssDE](../../includes/ssde-md.md)]執行個體時，便可自訂狀態列色彩。 接著您可以使用為伺服器節點所定義的狀態色彩，開啟查詢編輯器視窗；或為該編輯器視窗指定獨特的色彩。  
+ 您可在 **[物件總管]** 或 **[已註冊的伺服器]** 中讓狀態列色彩與特定伺服器節點產生關聯。 您僅能指定連接至 [!INCLUDE[ssDE](../../includes/ssde-md.md)]執行個體的伺服器節點之色彩，而不能指定其他 SQL Server 技術的伺服器節點色彩。 每當您將新的 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 查詢編輯器視窗連接至 [!INCLUDE[ssDE](../../includes/ssde-md.md)]執行個體時，便可自訂狀態列色彩。 接著您可以使用為伺服器節點所定義的狀態色彩，開啟查詢編輯器視窗；或為該編輯器視窗指定獨特的色彩。  
   
  為 [物件總管] 中伺服器節點設定自訂狀態列色彩的作業，必須在進行連接時完成。 若要變更現有伺服器節點的色彩，您必須中斷連接後重新連接，然後再指定新的色彩。  
   
 ##  <a name="SetOEServerColor"></a> 為 [物件總管] 中的伺服器設定狀態色彩  
  **設定 [物件總管] 中的伺服器狀態色彩**  
   
-1.  在 **[物件總管]**中，選取 **[連接]** 按鈕，然後選取 **[Database Engine…]**。  
+1.  在 **[物件總管]** 中，選取 **[連接]** 按鈕，然後選取 **[Database Engine…]**。  
   
 2.  在 [連接到伺服器] 對話方塊中選取 [選項 >>]。  
   
@@ -56,7 +53,7 @@ ms.lasthandoff: 01/24/2018
 ##  <a name="SetRegServerColor"></a> 為已註冊的伺服器設定狀態色彩  
  **為已註冊的伺服器設定伺服器色彩**  
   
-1.  在 **[已註冊的伺服器]**中，以滑鼠右鍵按一下伺服器節點，然後選取 **[屬性…]**。  
+1.  在 **[已註冊的伺服器]** 中，以滑鼠右鍵按一下伺服器節點，然後選取 **[屬性…]**。  
   
 2.  在 **[編輯伺服器註冊屬性]** 對話方塊上，選取 **[連接屬性]** 索引標籤。  
   

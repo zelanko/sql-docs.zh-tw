@@ -1,31 +1,30 @@
 ---
-title: "建立追蹤 (SQL Server Profiler) |Microsoft 文件"
-ms.custom: 
+title: 建立追蹤 (SQL Server Profiler) |Microsoft 文件
+ms.custom: ''
 ms.date: 08/01/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
-ms.component: sql-server-profiler
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: database-engine
-ms.tgt_pltfrm: 
-ms.topic: article
-helpviewer_keywords: traces [SQL Server], creating
+ms.technology: profiler
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
+helpviewer_keywords:
+- traces [SQL Server], creating
 ms.assetid: 0302fa6d-d2b5-43fe-ad70-7a337575b112
-caps.latest.revision: "28"
+caps.latest.revision: 28
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 9b40c4ab9616ec4d7a1271c5e3b5c1a0a36be2e7
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
-ms.translationtype: MT
+ms.openlocfilehash: 29d0fca68fa5359abffccb57806b93d6c781d0c2
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.translationtype: MTE
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="create-a-trace-sql-server-profiler"></a>建立追蹤 (SQL Server Profiler)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]本主題描述如何使用[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]來建立追蹤。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  此主題描述如何使用 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 來建立追蹤。  
   
 ### <a name="to-create-a-trace"></a>若要建立追蹤  
   
@@ -33,7 +32,7 @@ ms.lasthandoff: 01/17/2018
   
      會出現 [追蹤屬性]  對話方塊。  
   
-    > **注意**：[追蹤屬性] 對話方塊無法顯示，但若已選取 [進行連接後立即啟動追蹤]，便會開始追蹤。 若要關閉此設定，而在 **工具** 功能表上，按一下 **選項**，並清除 進行連接核取方塊後立即啟動追蹤。  
+    > **注意**：[追蹤屬性] 對話方塊無法顯示，但若已選取 [進行連接後立即啟動追蹤]，便會開始追蹤。 若要關閉這個設定，請在 [工具]** 功能表上按一下 [選項]，然後清除 [進行連線後立即啟動追蹤] 核取方塊。  
   
 2.  在 **[追蹤名稱]** 方塊中，輸入追蹤的名稱。  
   
@@ -41,7 +40,7 @@ ms.lasthandoff: 01/17/2018
   
 4.  若要儲存追蹤結果，請執行下列其中之一：  
   
-    -   按一下 [儲存至檔案]，將追蹤擷取至檔案。 在 **[設定最大檔案大小]**中指定一個值。 預設值為 5 MB。  
+    -   按一下 [儲存至檔案]，將追蹤擷取至檔案。 在 **[設定最大檔案大小]** 中指定一個值。 預設值為 5 MB。  
   
          (選擇性) 選取 **[啟用檔案換用]** ，在達到檔案大小上限時自動建立新檔案。 您也可以選取 **[伺服器處理追蹤資料]**，選取此選項後會由執行追蹤的服務處理追蹤資料，而非由用戶端應用程式來處理。 當伺服器處理追蹤資料時，即使在負擔極重情況下，也不會略過事件，但伺服器效能將受到影響。  
   
@@ -60,7 +59,7 @@ ms.lasthandoff: 01/17/2018
 ## <a name="see-also"></a>另請參閱  
  [執行 SQL Server Profiler 所需的權限](../../tools/sql-server-profiler/permissions-required-to-run-sql-server-profiler.md)   
  [SQL Server Profiler 範本和權限](../../tools/sql-server-profiler/sql-server-profiler-templates-and-permissions.md)   
- [SQL Server Profiler](../../tools/sql-server-profiler/sql-server-profiler.md)   
+ [[SQL Server Profiler]](../../tools/sql-server-profiler/sql-server-profiler.md)   
  [使追蹤與 Windows 效能記錄資料相互關聯 &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/correlate-a-trace-with-windows-performance-log-data-sql-server-profiler.md)  
   
   

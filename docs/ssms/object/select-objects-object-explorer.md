@@ -1,31 +1,31 @@
 ---
-title: "選取物件 (物件總管) | Microsoft Docs"
-ms.custom: 
+title: 選取物件 (物件總管) | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
 ms.component: ssms-objects
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: tools-ssms
-ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords: sql13.swb.common.selectobjects.f1
+ms.technology: ssms
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
+f1_keywords:
+- sql13.swb.common.selectobjects.f1
 ms.assetid: 692477fe-dd7c-403d-acd2-bb108b6077f1
-caps.latest.revision: "4"
+caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 0d0caa751a54dba0f3e6d36f1d757d440c24d3ec
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.openlocfilehash: 57d472c063bd4b2cf697186323942842f8d037c0
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="select-objects-object-explorer"></a>選取物件 (物件總管)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 使用 [選取物件] 對話方塊，即可將物件新增至另一個對話方塊中的清單。 對話方塊中可用的對話方塊標題和選項，會視其如何開啟而定。 只有可用的選項會出現；例如，當您選取新物件的擁有者時，只可以使用登入。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+使用 [選取物件] 對話方塊，即可將物件新增至另一個對話方塊中的清單。 對話方塊中可用的對話方塊標題和選項，會視其如何開啟而定。 只有可用的選項會出現；例如，當您選取新物件的擁有者時，只可以使用登入。  
   
 ## <a name="options"></a>選項。  
 **選取下列物件類型**  

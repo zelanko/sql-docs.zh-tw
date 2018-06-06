@@ -1,36 +1,36 @@
 ---
-title: "選擇加密演算法 | Microsoft Docs"
-ms.custom: 
+title: 選擇加密演算法 | Microsoft Docs
+ms.custom: ''
 ms.date: 01/08/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
 ms.component: security
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - cryptography [SQL Server], algorithms
 - encryption [SQL Server], algorithms
 - security [SQL Server], encryption
 - algorithms [SQL Server encryption]
 ms.assetid: 8227028c-a9c9-489d-bd27-fbf8242634ae
-caps.latest.revision: 
+caps.latest.revision: 36
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: b0c946ccc0547e3efadf26f78bb66fcdd3feb517
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 87a50c93d0d037063b21ac6de1dda2f8ac2a58c5
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="choose-an-encryption-algorithm"></a>選擇加密演算法
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 加密是全面防禦中的一環，可提供給想要維護 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體安全的管理員使用。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+  加密是全面防禦中的一環，可提供給想要維護 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]執行個體安全的管理員使用。  
   
  加密演算法會定義資料轉換，讓未經授權的使用者無法輕鬆地反轉資料轉換。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 可讓管理員和開發人員在數種演算法中進行選擇，包括 DES、Triple DES、TRIPLE_DES_3KEY、RC2、RC4、128 位元 RC4、DESX、128 位元 AES、192 位元 AES 和 256 位元 AES。  
   

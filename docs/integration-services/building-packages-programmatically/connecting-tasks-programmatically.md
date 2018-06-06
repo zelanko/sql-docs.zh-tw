@@ -1,15 +1,14 @@
 ---
-title: "以程式設計方式連線工作 | Microsoft Docs"
-ms.custom: 
+title: 以程式設計方式連線工作 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/04/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
 ms.component: building-packages-programmatically
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 applies_to:
 - SQL Server 2016 Preview
@@ -21,16 +20,15 @@ helpviewer_keywords:
 - precedence constraints [Integration Services], connecting tasks
 - constraints [Integration Services]
 ms.assetid: 23668e88-cef4-4009-a9cf-38e607eab7a2
-caps.latest.revision: 
+caps.latest.revision: 27
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 17a0b11519fcf438847c34291ded9e1b43edb090
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 3bfa1f25ed3dbedf92340112a806bd91de6c0158
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="connecting-tasks-programmatically"></a>以程式設計方式連接工作
   在物件模型中由 <xref:Microsoft.SqlServer.Dts.Runtime.PrecedenceConstraint> 類別表示的優先順序條件約束會建立 <xref:Microsoft.SqlServer.Dts.Runtime.Executable> 物件在封裝內執行的順序。 此優先順序條件約束可允許根據上一個工作或容器的執行結果來執行封裝中的容器和工作。 優先順序條件約束會在 <xref:Microsoft.SqlServer.Dts.Runtime.Executable> 物件配對之間建立，其方式是在容器物件上呼叫 <xref:Microsoft.SqlServer.Dts.Runtime.PrecedenceConstraints.Add%2A> 集合的 <xref:Microsoft.SqlServer.Dts.Runtime.PrecedenceConstraints> 方法。 當您在兩個可執行物件之間建立條件約束時，您會設定 <xref:Microsoft.SqlServer.Dts.Runtime.PrecedenceConstraint.Value%2A> 屬性，以建立用來執行此條件約束內定義之第二個可執行物件的準則。  

@@ -1,16 +1,15 @@
 ---
-title: bcp_gettypename | Microsoft Docs
-ms.custom: 
+title: bcp_gettypename |Microsoft 文件
+ms.custom: ''
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
 ms.component: native-client-odbc-extensions-bulk-copy-functions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - bcp_gettypename
@@ -20,16 +19,16 @@ apitype: DLLExport
 helpviewer_keywords:
 - bcp_gettypename function
 ms.assetid: 65f036d1-f60e-4b8a-97b3-76fccf0dfed4
-caps.latest.revision: 
+caps.latest.revision: 31
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: ccb5d8652421aa0d52fd941e99cbcd01a0cfb6b2
-ms.sourcegitcommit: a0aa5e611a0e6ebb74ac1e2f613e8916dc7a7617
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 3a7f4e8a8b6813eecf74fbc4e932296d3eff4631
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/24/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="bcpgettypename"></a>bcp_gettypename
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -47,7 +46,7 @@ RETCODE bcp_gettypename (
 ```  
   
 ## <a name="arguments"></a>引數  
- *token*  
+ *語彙基元*  
  指出 BCP 類型 Token 的值。  
   
  *field*  
@@ -71,7 +70,7 @@ RETCODE bcp_gettypename (
 |**SQLMONEY**|之前或之後|**money**|  
 |**SQLFLT8**|之前或之後|**float**|  
 |**SQLDATETIME**|之前或之後|**datetime**|  
-|**SQLBITN**|之前或之後|**bit-null**|  
+|**SQLBITN**|之前或之後|**位元 null**|  
 |**SQLBIT**|之前或之後|**bit**|  
 |**SQLBIGCHAR**|否|**char**|  
 |**SQLCHARACTER**|否|**char**|  
@@ -80,12 +79,12 @@ RETCODE bcp_gettypename (
 |**SQLTEXT**|之前或之後|**text**|  
 |**SQLBIGBINARY**|否|**binary**|  
 |**SQLBINARY**|否|**二進位**|  
-|**SQLBIGVARBINARY**|否|**Varbinary**|  
-|**SQLVARBINARY**|否|**Varbinary**|  
+|**SQLBIGVARBINARY**|否|**varbinary**|  
+|**SQLVARBINARY**|否|**varbinary**|  
 |**SQLIMAGE**|之前或之後|**映像**|  
 |**SQLINTN**|之前或之後|**int-null**|  
-|**SQLDATETIMN**|之前或之後|**datetime-null**|  
-|**SQLMONEYN**|之前或之後|**money-null**|  
+|**SQLDATETIMN**|之前或之後|**datetime null**|  
+|**SQLMONEYN**|之前或之後|**money null**|  
 |**SQLFLTN**|之前或之後|**float-null**|  
 |**SQLAOPSUM**|之前或之後|**Sum**|  
 |**SQLAOPAVG**|之前或之後|**Avg**|  
@@ -93,12 +92,12 @@ RETCODE bcp_gettypename (
 |**SQLAOPMIN**|之前或之後|**Min**|  
 |**SQLAOPMAX**|之前或之後|**Max**|  
 |**SQLDATETIM4**|之前或之後|**smalldatetime**|  
-|**SQLMONEY4**|之前或之後|**Smallmoney**|  
+|**SQLMONEY4**|之前或之後|**smallmoney**|  
 |**SQLFLT4**|之前或之後|**實數**|  
 |**SQLUNIQUEID**|之前或之後|**uniqueidentifier**|  
 |**SQLNCHAR**|否|**Nchar**|  
 |**SQLNVARCHAR**|否|**Nvarchar**|  
-|**SQLNTEXT**|之前或之後|**Ntext**|  
+|**SQLNTEXT**|之前或之後|**ntext**|  
 |**SQLVARIANT**|之前或之後|**sql_variant**|  
 |**SQLINT8**|之前或之後|**Bigint**|  
 |**SQLCHARACTER**|是|**varchar(max)**|  
@@ -112,12 +111,12 @@ RETCODE bcp_gettypename (
 |**SQLNCHAR**|是|**nvarchar(max)**|  
 |**SQLNVARCHAR**|是|**nvarchar(max)**|  
 |**SQLXML**|是|**XML**|  
-|**SQLUDT**|之前或之後|**Udt**|  
+|**SQLUDT**|之前或之後|**udt**|  
   
 ## <a name="bcpgettypename-support-for-enhanced-date-and-time-features"></a>bcp_gettypename 支援增強的日期和時間功能  
- 日期/時間類型的語彙基元的參數值所述的資料表中的 「 在 sqlncli.h 中的型別 」 資料行[增強型日期和時間類型 &#40; OLE DB 和 ODBC &#41; 的大量複製變更](../../relational-databases/native-client-odbc-date-time/bulk-copy-changes-for-enhanced-date-and-time-types-ole-db-and-odbc.md)。 傳回值位於 "File storage type" 資料行的對應資料列中。  
+ 日期/時間類型的語彙基元的參數值所述的資料表中的 「 在 sqlncli.h 中的型別 」 資料行[增強型日期和時間類型的大量複製變更&#40;OLE DB 和 ODBC&#41;](../../relational-databases/native-client-odbc-date-time/bulk-copy-changes-for-enhanced-date-and-time-types-ole-db-and-odbc.md)。 傳回值位於 "File storage type" 資料行的對應資料列中。  
   
- 如需詳細資訊，請參閱[日期和時間增強功能 &#40; ODBC &#41;](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)。  
+ 如需詳細資訊，請參閱[日期和時間增強功能 & #40; ODBC & #41;](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)。  
   
 ## <a name="see-also"></a>另請參閱  
  [大量複製函數](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/sql-server-driver-extensions-bulk-copy-functions.md)  

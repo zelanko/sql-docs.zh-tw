@@ -1,16 +1,14 @@
 ---
-title: "STGeomFromText (geometry 資料類型) | Microsoft Docs"
-ms.custom: 
+title: STGeomFromText (geometry 資料類型) | Microsoft Docs
+ms.custom: ''
 ms.date: 08/03/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
 ms.component: t-sql|spatial-geography
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: t-sql
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - STGeomFromText (geometry Data Type)
@@ -20,21 +18,20 @@ dev_langs:
 helpviewer_keywords:
 - STGeomFromText (geometry Data Type)
 ms.assetid: 20cace39-02e5-46c1-a9a5-841d04d0da16
-caps.latest.revision: 
+caps.latest.revision: 25
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: f7d814a8df202b0e41bd5aaa17f0b51d58491ba1
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 0db01786951325b1b98a74b3818459eb063eb812
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="stgeomfromtext-geometry-data-type"></a>STGeomFromText (geometry 資料類型)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-從「開放地理空間協會」(OGC) 的「已知文字」(WKT) 表示法傳回 **geometry** 執行個體 (以此執行個體所攜帶的任何 Z (高度) 和 M (測量) 值擴增)。
+從開放地理空間協會 (Open Geospatial Consortium，OGC) 的已知的文字 (Well-Known Text，WKT) 表示法傳回 **geometry** 執行個體，經由此執行個體夾帶的任何 Z (高度) 和 M (測量) 值來擴充。
   
 ## <a name="syntax"></a>語法  
   

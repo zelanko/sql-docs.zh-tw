@@ -1,17 +1,16 @@
 ---
-title: "偵錯商務邏輯處理常式 (複寫程式設計) | Microsoft 文件"
-ms.custom: 
+title: 偵錯商務邏輯處理常式 (複寫程式設計) | Microsoft 文件
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
 ms.component: replication
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 dev_langs:
 - VB
 - CSharp
@@ -20,16 +19,15 @@ helpviewer_keywords:
 - business logic handlers [SQL Server replication]
 - BusinessLogicModule class
 ms.assetid: edd0d17a-0e9c-4c28-8395-a7d47e8ce3d6
-caps.latest.revision: 
+caps.latest.revision: 34
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: c61a32d07bad081bc2dd5e88c38c02e14f7dae73
-ms.sourcegitcommit: ab25b08a312d35489a2c4a6a0d29a04bbd90f64d
+ms.openlocfilehash: e0cb1eb9c3b39600e486fbe4c70b9deaad580e6b
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="debug-a-business-logic-handler-replication-programming"></a>偵錯商務邏輯處理常式 (複寫程式設計)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -41,9 +39,9 @@ ms.lasthandoff: 03/08/2018
   
 1.  設定發行和散發、建立發行集，以及建立發行集的訂閱。 如需詳細資訊，請參閱[設定發行和散發](../../relational-databases/replication/configure-publishing-and-distribution.md)和[建立、修改及刪除發行集和發行項 &#40;複寫&#41;](../../relational-databases/replication/publish/create-modify-and-delete-publications-and-articles-replication.md)。  
   
-2.  建立及註冊商務邏輯處理常式。 如需相關資訊，請參閱 [Implement a Business Logic Handler for a Merge Article](../../relational-databases/replication/implement-a-business-logic-handler-for-a-merge-article.md)。  
+2.  建立及註冊商務邏輯處理常式。 如需相關資訊，請參閱 [為合併發行項實作商務邏輯處理常式](../../relational-databases/replication/implement-a-business-logic-handler-for-a-merge-article.md)。  
   
-3.  在以程式設計方式同步啟動合併代理程式的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Studio 中，建立 Replication Management Objects (RMO) 專案。 如需相關資訊，請參閱 [Synchronize a Pull Subscription](../../relational-databases/replication/synchronize-a-pull-subscription.md)。  
+3.  在以程式設計方式同步啟動合併代理程式的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Studio 中，建立 Replication Management Objects (RMO) 專案。 如需相關資訊，請參閱 [同步處理提取訂閱](../../relational-databases/replication/synchronize-a-pull-subscription.md)。  
   
 4.  在商務邏輯處理常式程式碼中設定中斷點 (在所偵錯的方法中或是類別建構函式中)。 如需有關可以在商務邏輯處理常式中實作之方法的詳細資訊，請參閱 <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport.BusinessLogicModule> 方法主題。  
   
@@ -62,7 +60,7 @@ ms.lasthandoff: 03/08/2018
   
 1.  設定發行和散發、建立發行集，以及建立發行集的提取訂閱。 此發行集必須支援 Web 同步處理或 [!INCLUDE[ssEW](../../includes/ssew-md.md)] 訂閱者。  
   
-2.  建立及註冊商務邏輯處理常式。 如需相關資訊，請參閱 [Implement a Business Logic Handler for a Merge Article](../../relational-databases/replication/implement-a-business-logic-handler-for-a-merge-article.md)。  
+2.  建立及註冊商務邏輯處理常式。 如需相關資訊，請參閱 [為合併發行項實作商務邏輯處理常式](../../relational-databases/replication/implement-a-business-logic-handler-for-a-merge-article.md)。  
   
 3.  在商務邏輯處理常式程式碼中設定中斷點 (在所偵錯的方法中或是類別建構函式中)。 如需有關可以在商務邏輯處理常式中實作之方法的詳細資訊，請參閱 <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport.BusinessLogicModule> 方法主題。  
   
@@ -90,6 +88,6 @@ ms.lasthandoff: 03/08/2018
 11. 假設未設定任何其他中斷點，而且複寫了適當的命令，則當到達商務邏輯處理常式中的中斷點時，會停止執行。  
   
 ## <a name="see-also"></a>另請參閱  
- [Implement a Business Logic Handler for a Merge Article](../../relational-databases/replication/implement-a-business-logic-handler-for-a-merge-article.md)  
+ [為合併發行項實作商務邏輯處理常式](../../relational-databases/replication/implement-a-business-logic-handler-for-a-merge-article.md)  
   
   

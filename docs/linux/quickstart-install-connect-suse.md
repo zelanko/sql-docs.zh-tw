@@ -1,25 +1,22 @@
 ---
-title: "開始使用 SUSE Linux Enterprise Server 上的 SQL Server 2017 |Microsoft 文件"
-description: "本快速入門示範如何在 SUSE Linux Enterprise Server 上安裝 SQL Server 2017 然後建立並查詢資料庫，以使用 sqlcmd。"
+title: 開始使用 SUSE Linux Enterprise Server 上的 SQL Server 2017 |Microsoft 文件
+description: 本快速入門示範如何在 SUSE Linux Enterprise Server 上安裝 SQL Server 2017 然後建立並查詢資料庫，以使用 sqlcmd。
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.date: 02/22/2018
 ms.topic: article
-ms.prod: sql-non-specified
-ms.prod_service: database-engine
-ms.service: 
-ms.component: 
+ms.prod: sql
+ms.component: ''
 ms.suite: sql
 ms.custom: sql-linux
-ms.technology: database-engine
+ms.technology: linux
 ms.assetid: 31ddfb80-f75c-4f51-8540-de6213cb68b8
-ms.workload: On Demand
-ms.openlocfilehash: e1690120790be2de70ddd19aa3c1c4893178cb08
-ms.sourcegitcommit: f0c5e37c138be5fb2cbb93e9f2ded307665b54ea
+ms.openlocfilehash: 77dd13139eba88a40cbf20094b880c5046ebfb05
+ms.sourcegitcommit: b5ab9f3a55800b0ccd7e16997f4cd6184b4995f9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/24/2018
+ms.lasthandoff: 05/23/2018
 ---
 # <a name="quickstart-install-sql-server-and-create-a-database-on-suse-linux-enterprise-server"></a>快速入門： 安裝 SQL Server 和 SUSE Linux Enterprise Server 上建立資料庫
 
@@ -34,7 +31,7 @@ ms.lasthandoff: 02/24/2018
 
 您必須具有的 SLES v12 SP2 機器**至少 2 GB**的記憶體。 檔案系統必須是**XFS**或**EXT4**。 其他檔案系統，例如**BTRFS**，不受支援。
 
-若要安裝 SUSE Linux Enterprise Server 的電腦上，請移至[https://www.suse.com/products/server](https://www.suse.com/products/server)。 您也可以在 Azure 中建立 SLES 虛擬機器。 請參閱[建立和管理 Linux Vm 與 Azure CLI](https://docs.microsoft.com/azure/virtual-machines/linux/tutorial-manage-vm)，並使用`--image SLES`呼叫`az vm create`。
+若要安裝 SUSE Linux Enterprise Server 的電腦上，請移至[ https://www.suse.com/products/server ](https://www.suse.com/products/server)。 您也可以在 Azure 中建立 SLES 虛擬機器。 請參閱[建立和管理 Linux Vm 與 Azure CLI](https://docs.microsoft.com/azure/virtual-machines/linux/tutorial-manage-vm)，並使用`--image SLES`呼叫`az vm create`。
 
 > [!NOTE]
 > 此時，[適用於 Linux 的 Windows 子系統](https://msdn.microsoft.com/commandline/wsl/about)做為安裝目標不支援 Windows 10。
@@ -87,7 +84,7 @@ ms.lasthandoff: 02/24/2018
    systemctl status mssql-server
    ```
 
-1. 如果您打算從遠端連線，您可能也需要開啟防火牆上的 SQL Server TCP 連接埠 （預設值 1433年）。 如果您使用 SuSE 防火牆，您需要編輯**/etc/sysconfig/SuSEfirewall2**組態檔。 修改**FW_SERVICES_EXT_TCP**包含 SQL Server 連接埠號碼的項目。
+1. 如果您打算從遠端連線，您可能也需要開啟防火牆上的 SQL Server TCP 連接埠 （預設值 1433年）。 如果您使用 SuSE 防火牆，您需要編輯 **/etc/sysconfig/SuSEfirewall2**組態檔。 修改**FW_SERVICES_EXT_TCP**包含 SQL Server 連接埠號碼的項目。
 
    ```
    FW_SERVICES_EXT_TCP="1433"
@@ -124,7 +121,7 @@ ms.lasthandoff: 02/24/2018
 > **Sqlcmd**是一個工具連接到 SQL Server 來執行查詢，並執行管理和開發工作。 其他工具包括：
 >
 > * [SQL Server Operations Studio (預覽)](../sql-operations-studio/what-is.md)
-> * [SQL Server Management Studio](sql-server-linux-develop-use-ssms.md)
+> * [SQL Server Management Studio](sql-server-linux-manage-ssms.md)
 > * [Visual Studio 程式碼](sql-server-linux-develop-use-vscode.md)。
 > * [mssql-cli (預覽)](https://blogs.technet.microsoft.com/dataplatforminsider/2017/12/12/try-mssql-cli-a-new-interactive-command-line-tool-for-sql-server/)
 

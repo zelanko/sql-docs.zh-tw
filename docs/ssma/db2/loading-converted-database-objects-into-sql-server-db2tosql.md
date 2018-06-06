@@ -1,30 +1,28 @@
 ---
-title: "載入已轉換成 SQL Server (DB2ToSQL) 資料庫物件 |Microsoft 文件"
-ms.prod: sql-non-specified
+title: 載入已轉換成 SQL Server (DB2ToSQL) 資料庫物件 |Microsoft 文件
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
 ms.component: ssma-db2
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ssma
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: f4ea1ced-9f9f-4a9d-88ab-81dbab64adc3
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
-ms.workload: Inactive
-ms.openlocfilehash: d662bcab0fe8c804b75f7908ca6fc04f2e96a650
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+manager: craigg
+ms.openlocfilehash: 04d7ce18baed888af7b0de96faec99b72a6b4586
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="loading-converted-database-objects-into-sql-server-db2tosql"></a>載入已轉換成 SQL Server (DB2ToSQL) 資料庫物件
 DB2 結構描述，以轉換之後[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]，您可以載入到產生的資料庫物件[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]。 您可以讓 SSMA 建立物件，或您可以編寫物件指令碼，並自行執行指令碼。 此外，SSMA 可讓您更新目標中繼資料的實際內容[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]資料庫。  
@@ -99,7 +97,7 @@ DB2 結構描述，以轉換之後[!INCLUDE[ssNoVersion](../../includes/ssnovers
   
 1.  在[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)]**檔案**功能表上，指向**開啟**，然後按一下 **檔案**。  
   
-2.  在**開啟**對話方塊方塊中，選取您的指令碼檔案，然後按一下[!INCLUDE[clickOK](../../includes/clickok_md.md)]  
+2.  在**開啟**對話方塊方塊中，選取您的指令碼檔案，然後按一下 [!INCLUDE[clickOK](../../includes/clickok_md.md)]  
   
 3.  若要執行完整的指令碼，請按**F5**索引鍵。  
   
@@ -115,6 +113,6 @@ DB2 結構描述，以轉換之後[!INCLUDE[ssNoVersion](../../includes/ssnovers
 ## <a name="next-step"></a>下一個步驟  
 移轉程序的下一個步驟是[移轉至 SQL Server 的 DB2 資料](http://msdn.microsoft.com/en-us/86cbd39f-6dac-409a-9ce1-7dd54403f84b)。  
   
-## <a name="see-also"></a>請參閱  
-[將 DB2 資料移轉到 SQL Server &#40; DB2ToSQL &#41;](../../ssma/db2/migrating-db2-data-into-sql-server-db2tosql.md)  
+## <a name="see-also"></a>另請參閱  
+[將 DB2 資料移轉至 SQL Server &#40;DB2ToSQL&#41;](../../ssma/db2/migrating-db2-data-into-sql-server-db2tosql.md)  
   

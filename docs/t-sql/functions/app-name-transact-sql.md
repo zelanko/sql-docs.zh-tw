@@ -1,16 +1,14 @@
 ---
 title: APP_NAME (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 07/24/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
 ms.component: t-sql|functions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: t-sql
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - APP_NAME_TSQL
@@ -24,24 +22,23 @@ helpviewer_keywords:
 - current session application names
 - APP_NAME function
 ms.assetid: e491e192-9b30-4243-bc19-33c133fe08a8
-caps.latest.revision: 
+caps.latest.revision: 35
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: b2b65f2380cc52c7a1d084dedad5fdb744d377bf
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 9d9652c25875fb1edb5d09e4e283fd7393b523a6
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="appname-transact-sql"></a>APP_NAME (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-傳回目前工作階段的應用程式名稱 (如果是由該應用程式所設定)。
+函數，傳回目前工作階段的應用程式名稱 (如果應用程式設定名稱值)。
   
 > [!IMPORTANT]  
->  應用程式名稱由是用戶端所提供，而且未使用任何方式驗證。 請勿在安全性檢查的任何環節中使用 **APP_NAME**。  
+>  用戶端提供應用程式名稱，且該應用程式名稱值未以任何方式驗證。 請勿在安全性檢查的任何環節中使用 **APP_NAME**。  
   
 ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -56,12 +53,12 @@ APP_NAME  ( )
 **nvarchar(128)**
   
 ## <a name="remarks"></a>Remarks  
-當您想為不同的應用程式執行不同動作時，請使用 **APP_NAME**。 例如，以不同方式為不同的應用程式格式化日期，或是將參考用訊息傳回某些應用程式。
+使用 **APP_NAME** 來區別不同的應用程式，作為針對那些應用程式執行不同動作的方法。 例如，**APP_NAME** 可以區別不同的應用程式，以允許每個應用程式使用不同的日期格式。 它也可允許傳回到特定應用程式的參考資訊。
   
-如果要在 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 中設定應用程式名稱，請在 [連線到資料庫引擎] 對話方塊中按一下 [選項]。 在 [Additional Connection Parameters] (其他連線參數) 索引標籤中，以 `;app='application_name'` 格式提供 **app** 屬性
+若要在 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 中設定應用程式名稱，請在 [連線到資料庫引擎] 對話方塊中按一下 [選項]。 在 [Additional Connection Parameters] (其他連線參數) 索引標籤中，以 `;app='application_name'` 格式提供 **app** 屬性
   
-## <a name="examples"></a>範例  
-下列範例會檢查起始此程序的用戶端應用程式是否為 `SQL Server Management Studio` 工作階段，並提供 US 或 ANSI 格式的日期。
+## <a name="example"></a>範例  
+此範例檢查起始此處理序的用戶端應用程式是否為 `SQL Server Management Studio` 工作階段，並提供 US 或 ANSI 格式的日期。
   
 ```sql
 USE AdventureWorks2012;  
@@ -74,7 +71,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>另請參閱
-[系統函式 &#40;Transact-SQL&#41;](../../relational-databases/system-functions/system-functions-for-transact-sql.md)  
+[系統函數 &#40;Transact-SQL&#41;](../../relational-databases/system-functions/system-functions-for-transact-sql.md)  
 [函數](../../t-sql/functions/functions.md)
   
   

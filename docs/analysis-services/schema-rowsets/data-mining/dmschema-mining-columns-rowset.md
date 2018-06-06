@@ -1,39 +1,28 @@
 ---
-title: "DMSCHEMA_MINING_COLUMNS 資料列集 |Microsoft 文件"
-ms.custom: 
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+title: DMSCHEMA_MINING_COLUMNS 資料列集 |Microsoft 文件
+ms.date: 05/03/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: schema-rowsets
 ms.topic: reference
-apiname: DMSCHEMA_MINING_COLUMNS
-apitype: NA
-applies_to: SQL Server 2016 Preview
-helpviewer_keywords: DMSCHEMA_MINING_COLUMNS rowset
-ms.assetid: ae35ccde-4438-46f4-8611-40b2b1a42fce
-caps.latest.revision: "36"
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: e37841617289eaa71af4d7c2c091459f32a745b6
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 1f5d5dcc4385634b24cadf9e08c2298cc7bacc26
+ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="dmschemaminingcolumns-rowset"></a>DMSCHEMA_MINING_COLUMNS 資料列集
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]描述中的所有資料採礦模型的個別資料行[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]。 這個資料列集會限定為目前的目錄。  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+  描述中的所有資料採礦模型的個別資料行[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]。 這個資料列集會限定為目前的目錄。  
   
 ## <a name="rowset-columns"></a>資料列集資料行  
  **DMSCHEMA_MINING_COLUMNS**資料列集包含下列資料行。  
   
-|資料行名稱|類型指標|描述|  
+|資料行名稱|類型指標|Description|  
 |-----------------|--------------------|-----------------|  
 |**MODEL_CATALOG**|**DBTYPE_WSTR**|目錄的名稱。 以模型所屬的資料庫名稱來擴展。|  
 |**MODEL_SCHEMA**|**DBTYPE_WSTR**|不合格的結構描述名稱。 不支援此資料行[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]; 它一律包含**NULL**。|  
@@ -87,7 +76,7 @@ ms.lasthandoff: 01/08/2018
 |**MODEL_NAME**|**DBTYPE_WSTR**|選擇性。|  
 |**COLUMN_NAME**|**DBTYPE_WSTR**|選擇性。|  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [資料採礦結構描述資料列集](../../../analysis-services/schema-rowsets/data-mining/data-mining-schema-rowsets.md)  
   
   

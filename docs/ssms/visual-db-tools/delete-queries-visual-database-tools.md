@@ -1,35 +1,34 @@
 ---
-title: "刪除查詢 (Visual Database Tools) | Microsoft Docs"
-ms.custom: 
+title: 刪除查詢 (Visual Database Tools) | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
 ms.component: ssms-visual-db
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: tools-ssms
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ssms
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - dropping queues
 - deleting queries
 - removing queries
 - queries [SQL Server], deleting
 ms.assetid: 084e1504-3d2f-4bd9-b97c-b9c8c874751c
-caps.latest.revision: "4"
+caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: e9ca26d7fd7245b1d2c3d40935becb0e8a9345ae
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.openlocfilehash: f4fb0cc527a3f1f051b4a0fb01478f33699d47ae
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="delete-queries-visual-database-tools"></a>刪除查詢 (Visual Database Tools)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 您可以刪除查詢，將它從專案中移除並從檔案系統中永久刪除。 使用下列程序刪除的查詢不會移到資源回收筒，也不能復原。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+您可以刪除查詢，將它從專案中移除並從檔案系統中永久刪除。 使用下列程序刪除的查詢不會移到資源回收筒，也不能復原。  
   
 ### <a name="to-permanently-delete-a-query"></a>若要永久刪除查詢  
   

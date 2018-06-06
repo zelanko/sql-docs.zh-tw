@@ -1,29 +1,17 @@
 ---
-title: "預測及繪圖從模型 (SQL 快速入門中的 R) |Microsoft 文件"
-ms.custom: 
-ms.date: 08/20/2017
-ms.reviewer: 
-ms.suite: sql
-ms.prod: machine-learning-services
-ms.prod_service: machine-learning-services
-ms.component: 
-ms.technology: 
-ms.tgt_pltfrm: 
+title: 預測及繪圖從模型 (SQL 快速入門中的 R) |Microsoft 文件
+ms.prod: sql
+ms.technology: machine-learning
+ms.date: 04/15/2018
 ms.topic: tutorial
-dev_langs:
-- R
-- SQL
-ms.assetid: 46babd8a-a331-44fc-bbd6-24daf58865e1
-caps.latest.revision: 
-author: jeannt
-ms.author: jeannt
-manager: cgronlund
-ms.workload: On Demand
-ms.openlocfilehash: 835e7d4901fc3d58edfedaea4474e9b523b71620
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+author: HeidiSteen
+ms.author: heidist
+manager: cgronlun
+ms.openlocfilehash: 3809b8f6dbf84de04b84c7f4a6bdd5c492e2bdcd
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="predict-and-plot-from-model-r-in-sql-quickstart"></a>預測及繪圖從模型 (SQL 快速入門中的 R)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]

@@ -1,30 +1,31 @@
 ---
-title: "產生 (MDX) |Microsoft 文件"
-ms.custom: 
+title: 產生 (MDX) |Microsoft 文件
+ms.custom: ''
 ms.date: 03/02/2016
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
-f1_keywords: GENERATE
-dev_langs: kbMDX
-helpviewer_keywords: Generate function
+f1_keywords:
+- GENERATE
+dev_langs:
+- kbMDX
+helpviewer_keywords:
+- Generate function
 ms.assetid: 696a229d-c2f1-47b7-9dca-7b0a6b547d9b
-caps.latest.revision: "32"
+caps.latest.revision: 32
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: e78dec45044cc29e375b9116886b183013c74ef1
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: be6b05c0738b2407d6d803bae471a73ead15e353
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="generate-mdx"></a>Generate (MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -115,7 +116,7 @@ ON 1
 FROM [Adventure Works]  
 ```  
   
-### <a name="string"></a>String  
+### <a name="string"></a>字串  
  下列範例示範使用**產生**傳回的字串：  
   
 ```  
@@ -135,9 +136,9 @@ FROM [Adventure Works]
 ```  
   
 > [!NOTE]  
->  這種形式的**產生**函式有助於進行偵錯計算，因為它可讓您傳回一個字串來顯示集合中所有成員的名稱。 這可能是一組的嚴格 MDX 表示比閱讀， [SetToStr &#40;MDX &#41;](../mdx/settostr-mdx.md)函式會傳回。  
+>  這種形式的**產生**函式有助於進行偵錯計算，因為它可讓您傳回一個字串來顯示集合中所有成員的名稱。 這可能是一組的嚴格 MDX 表示比閱讀， [SetToStr &#40;MDX&#41; ](../mdx/settostr-mdx.md)函式會傳回。  
   
-## <a name="see-also"></a>請參閱  
- [MDX 函數參考 &#40;MDX &#41;](../mdx/mdx-function-reference-mdx.md)  
+## <a name="see-also"></a>另請參閱  
+ [MDX 函數參考 & #40;MDX & #41;](../mdx/mdx-function-reference-mdx.md)  
   
   

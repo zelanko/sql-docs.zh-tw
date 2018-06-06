@@ -1,31 +1,30 @@
 ---
-title: "使用 Transact-SQL 預存程序來建立和執行追蹤 | Microsoft Docs"
-ms.custom: 
+title: 使用 Transact-SQL 預存程序來建立和執行追蹤 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
 ms.component: sql-trace
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: 80347417-338d-4bea-8885-91fae5181cfe
-caps.latest.revision: 
-author: MikeRayMSFT
-ms.author: mikeray
+caps.latest.revision: 8
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 0fd60011006d595a7ff771c65ba0d3bbe3b7de75
-ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
+ms.openlocfilehash: e2adc911f7eab0fa07e4d227354c0e25e9664bba
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="create-and-run-traces-using-transact-sql-stored-procedures"></a>使用 Transact-SQL 預存程序來建立和執行追蹤
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] SQL 追蹤的追蹤處理，會因您使用 Microsoft [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 或使用系統預存程序來建立和執行追蹤，而有所不同。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  SQL 追蹤的追蹤處理，會因您使用 Microsoft [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 或使用系統預存程序來建立和執行追蹤，而有所不同。  
   
  您可以使用 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]系統預存程序代替 [!INCLUDE[tsql](../../includes/tsql-md.md)] ，來建立和執行追蹤。 使用系統預存程序的追蹤處理如下：  
   

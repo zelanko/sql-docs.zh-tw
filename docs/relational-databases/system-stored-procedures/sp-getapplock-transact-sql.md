@@ -1,16 +1,14 @@
 ---
-title: "sp_getapplock (TRANSACT-SQL) |Microsoft 文件"
-ms.custom: 
+title: sp_getapplock (TRANSACT-SQL) |Microsoft 文件
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: system-objects
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_getapplock_TSQL
@@ -21,16 +19,16 @@ helpviewer_keywords:
 - application locks
 - sp_getapplock
 ms.assetid: e1e85908-9f31-47cf-8af6-88c77e6f24c9
-caps.latest.revision: 
+caps.latest.revision: 34
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 5c7b65a7330a1b87e7ee81a4f76a715038cd3d6d
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 16d750e07e8c61959e43fe15e1e3cfb47c8bf1c0
+ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="spgetapplock-transact-sql"></a>sp_getapplock (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -53,7 +51,7 @@ sp_getapplock [ @Resource = ] 'resource_name' ,
   
 ## <a name="arguments"></a>引數  
  [ @Resource=] '*resource_name*'  
- 這是一個字串，指定用來識別鎖定資源的名稱。 應用程式必須確定資源名稱是唯一的。 指定的名稱會在內部雜湊成可儲存在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 鎖定管理員中的值。 *resource_name*是**nvarchar （255)**沒有預設值。 如果資源字串長度超過**nvarchar （255)**，它會被截斷為**nvarchar （255)**。  
+ 這是一個字串，指定用來識別鎖定資源的名稱。 應用程式必須確定資源名稱是唯一的。 指定的名稱會在內部雜湊成可儲存在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 鎖定管理員中的值。 *resource_name*是**nvarchar （255)** 沒有預設值。 如果資源字串長度超過**nvarchar （255)**，它會被截斷為**nvarchar （255)**。  
   
  *resource_name*是以二進位來比較，且因此區分大小寫，不論目前資料庫的定序設定為何。  
   
@@ -61,10 +59,10 @@ sp_getapplock [ @Resource = ] 'resource_name' ,
 >  取得應用程式鎖定之後，只會擷取純文字中的前 32 個字元，其餘部分會予以雜湊。  
   
  [ @LockMode=] '*lock_mode*'  
- 這是要取得的特定資源鎖定模式。 *lock_mode*是**nvarchar （32)** ，沒有預設值。 值可以是下列任一項：**共用**，**更新**， **IntentShared**， **IntentExclusive**，或**獨佔**.  
+ 這是要取得的特定資源鎖定模式。 *lock_mode* 是沒有預設值的 **nvarchar(32)**。 值可以是下列任一項：**共用**，**更新**， **IntentShared**， **IntentExclusive**，或**獨佔**.  
   
  [ @LockOwner=] '*lock_owner*'  
- 已鎖定，這是擁有者*lock_owner*要求鎖定時的值。 *lock_owner*是**nvarchar （32)**。 這個值可以是**交易**（預設值） 或**工作階段**。 當*lock_owner*值是**交易**，依預設或明確地指定 sp_getapplock 必須從交易內執行。  
+ 為鎖定的擁有者，也就是要求鎖定時的 *lock_owner* 值。 *lock_owner* 為 **nvarchar(32)**。 這個值可以是 **Transaction**  (預設值) 或 **Session** 。 當*lock_owner*值是**交易**，依預設或明確地指定 sp_getapplock 必須從交易內執行。  
   
  [ @LockTimeout=] '*值*'  
  這是鎖定逾時值 (以毫秒為單位)。 預設值是所傳回的值相同@LOCK_TIMEOUT。 若要指出在無法立即授與要求時，鎖定要求應該傳回錯誤，而不是等待鎖定，請指定 0。  
@@ -75,7 +73,7 @@ sp_getapplock [ @Resource = ] 'resource_name' ,
 ## <a name="return-code-values"></a>傳回碼值  
  \>= 0 （成功） 或 < 0 （失敗）  
   
-|值|結果|  
+|Value|結果|  
 |-----------|------------|  
 |0|同步授與鎖定成功。|  
 |1|在等待其他不相容的鎖定釋出之後，授與鎖定成功。|  
@@ -169,9 +167,9 @@ COMMIT TRAN;
 GO  
 ```  
   
-## <a name="see-also"></a>請參閱  
- [APPLOCK_MODE &#40;TRANSACT-SQL &#41;](../../t-sql/functions/applock-mode-transact-sql.md)   
- [APPLOCK_TEST &#40;TRANSACT-SQL &#41;](../../t-sql/functions/applock-test-transact-sql.md)   
- [sp_releaseapplock &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/sp-releaseapplock-transact-sql.md)  
+## <a name="see-also"></a>另請參閱  
+ [APPLOCK_MODE &#40;Transact SQL&#41;](../../t-sql/functions/applock-mode-transact-sql.md)   
+ [APPLOCK_TEST &#40;Transact SQL&#41;](../../t-sql/functions/applock-test-transact-sql.md)   
+ [sp_releaseapplock &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-releaseapplock-transact-sql.md)  
   
   

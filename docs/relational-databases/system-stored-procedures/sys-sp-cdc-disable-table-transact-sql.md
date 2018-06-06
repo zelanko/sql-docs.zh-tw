@@ -1,16 +1,14 @@
 ---
-title: "sys.sp_cdc_disable_table (TRANSACT-SQL) |Microsoft 文件"
-ms.custom: 
+title: sys.sp_cdc_disable_table (TRANSACT-SQL) |Microsoft 文件
+ms.custom: ''
 ms.date: 03/15/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: system-objects
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.sp_cdc_disable_table
@@ -24,16 +22,15 @@ helpviewer_keywords:
 - sys.sp_cdc_disable_table
 - change data capture [SQL Server], disabling tables
 ms.assetid: da2156c0-504e-4d76-b9a0-4448becf9bda
-caps.latest.revision: 
+caps.latest.revision: 27
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 1909d0d284642166312fe4dde2f2eda4f4ebac09
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 16356cc8a5d427a9432ac8c753b1e51d915337d4
+ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="sysspcdcdisabletable-transact-sql"></a>sys.sp_cdc_disable_table (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -63,7 +60,7 @@ sys.sp_cdc_disable_table
   
  *source_name*必須存在於目前的資料庫。  
   
- [  **@capture_instance=** ] **'***capture_instance***'** | **'**所有**'**  
+ [  **@capture_instance=** ] **'***capture_instance***'** | **'** 所有 **'**  
  這是要針對指定之來源資料表停用的擷取執行個體名稱。 *capture_instance*是**sysname**不能是 NULL。  
   
  指定 'all' 時，所有擷取執行個體定義*source_name*會停用。  
@@ -92,7 +89,7 @@ EXECUTE sys.sp_cdc_disable_table
     @capture_instance = N'HumanResources_Employee';  
 ```  
   
-## <a name="see-also"></a>請參閱  
- [sys.sp_cdc_enable_table &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-enable-table-transact-sql.md)  
+## <a name="see-also"></a>另請參閱  
+ [sys.sp_cdc_enable_table &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-enable-table-transact-sql.md)  
   
   

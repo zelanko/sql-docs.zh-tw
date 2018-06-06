@@ -1,35 +1,23 @@
 ---
-title: "資料類型 （資料採礦） |Microsoft 文件"
-ms.custom: 
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
-helpviewer_keywords:
-- data types [data mining]
-- columns [data mining], data types
-- data mining [Analysis Services], data types
-ms.assetid: 4af5b7db-790b-459c-b2b4-00f0cf6b5ce4
-caps.latest.revision: 
-author: Minewiskan
+title: 資料類型 （資料採礦） |Microsoft 文件
+ms.date: 05/01/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: data-mining
+ms.topic: conceptual
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 7e5d09435546cf0605bb7b70a685021612fd2f9b
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 4b62c9a4ebc9caf9875a1e5b6aef987bf0b4fa8a
+ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="data-types-data-mining"></a>資料類型 (資料採礦)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-當您在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]中建立採礦模型或採礦結構時，您必須針對採礦結構內的每一個資料行定義資料類型。 此資料類型會告訴分析引擎，資料來源中的資料是數值還是文字，以及應該如何處理資料。 例如，如果您的來源資料包含數值資料，您可以指定數字應該視為整數還是使用小數位數。  
+  當您在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]中建立採礦模型或採礦結構時，您必須針對採礦結構內的每一個資料行定義資料類型。 此資料類型會告訴分析引擎，資料來源中的資料是數值還是文字，以及應該如何處理資料。 例如，如果您的來源資料包含數值資料，您可以指定數字應該視為整數還是使用小數位數。  
   
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 支援以下採礦結構資料行的資料類型：  
   
@@ -58,11 +46,11 @@ ms.lasthandoff: 02/15/2018
  如果您變更資料行的資料類型，一定要重新處理採礦結構及根據該結構的任何採礦模型。 有時當您變更資料類型時，該資料行就不能再用於特定的模型中。 在這種情況下，當您重新處理模型時，Analysis Services 將會引發錯誤，或是處理此模型，但是不處理該特定資料行。  
   
 ## <a name="see-also"></a>另請參閱  
- [內容類型 &#40; 資料採礦 &#41;](../../analysis-services/data-mining/content-types-data-mining.md)   
- [內容類型 &#40; DMX &#41;](../../dmx/content-types-dmx.md)   
+ [內容類型 & #40; 資料採礦 & #41;](../../analysis-services/data-mining/content-types-data-mining.md)   
+ [內容類型 & #40; DMX & #41;](../../dmx/content-types-dmx.md)   
  [資料採礦演算法 &#40;Analysis Services-資料採礦 &#41;](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
- [採礦結構 &#40;Analysis Services-資料採礦 &#41;](../../analysis-services/data-mining/mining-structures-analysis-services-data-mining.md)   
- [資料類型 &#40; DMX &#41;](../../dmx/data-types-dmx.md)   
+ [採礦結構 & #40;Analysis Services-資料採礦 & #41;](../../analysis-services/data-mining/mining-structures-analysis-services-data-mining.md)   
+ [資料類型 & #40; DMX & #41;](../../dmx/data-types-dmx.md)   
  [採礦模型資料行](../../analysis-services/data-mining/mining-model-columns.md)   
  [採礦結構資料行](../../analysis-services/data-mining/mining-structure-columns.md)  
   

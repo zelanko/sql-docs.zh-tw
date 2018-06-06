@@ -1,16 +1,13 @@
 ---
-title: sys.dm_db_index_operational_stats (Transact-SQL) | Microsoft Docs
-ms.custom: 
+title: sys.dm_db_index_operational_stats (TRANSACT-SQL) |Microsoft 文件
+ms.custom: ''
 ms.date: 06/10/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-data-warehouse, database-engine, pdw, sql-database
-ms.service: 
-ms.component: dmv's
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: system-objects
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - dm_db_index_operational_stats
@@ -22,26 +19,27 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_db_index_operational_stats dynamic management function
 ms.assetid: 13adf2e5-2150-40a6-b346-e74a33ce29c6
-caps.latest.revision: 
+caps.latest.revision: 61
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 3866f4dfbd25fc665949455969b1546bd906462a
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: fb0db9ea7c4d58fdecf8ef4973e4d8f971ebb3d3
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34553798"
 ---
 # <a name="sysdmdbindexoperationalstats-transact-sql"></a>sys.dm_db_index_operational_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-pdw-md.md)]
 
-  針對資料庫中資料表或索引的每一個分割區，傳回目前的低階 I/O、鎖定、閂鎖和存取方法活動。    
+  傳回目前的低階 I/O、 鎖定、 閂鎖和存取方法活動每個資料分割資料表或索引的資料庫中。    
     
  記憶體最佳化的索引不會出現在這個 DMV 中。    
     
 > [!NOTE]    
->  **sys.dm_db_index_operational_stats**不會傳回記憶體最佳化索引的相關資訊。 記憶體最佳化索引用法的相關資訊，請參閱[sys.dm_db_xtp_index_stats &#40;TRANSACT-SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-xtp-index-stats-transact-sql.md).    
+>  **sys.dm_db_index_operational_stats**不會傳回記憶體最佳化索引的相關資訊。 記憶體最佳化索引用法的相關資訊，請參閱[sys.dm_db_xtp_index_stats &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-xtp-index-stats-transact-sql.md)。    
         
  ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)    
     
@@ -65,19 +63,19 @@ sys.dm_db_index_operational_stats (
     
  內建函式[DB_ID](../../t-sql/functions/db-id-transact-sql.md)可以指定。    
     
- *object_id* | NULL | 0 | DEFAULT    
+ *object_id* |NULL |0 |預設值    
  索引所在之資料表或檢視表的物件識別碼。 *@object_id* 是 **int**。    
     
  有效的輸入為資料表和檢視表的識別碼、NULL、0 或 DEFAULT。 預設值是 0。 NULL、0 和 DEFAULT 是這個內容中的對等值。    
     
  請指定 NULL 來傳回指定之資料庫中所有資料表和檢視表的快取資訊。 如果您指定 NULL *object_id*，您也必須指定為 NULL *index_id*和。    
     
- *index_id* | 0 | NULL | -1 | DEFAULT    
+ *index_id* | 0 |NULL |-1 |預設值    
  索引的識別碼。 *index_id*是**int**。有效輸入如下的索引 0 的識別碼，如果*object_id*是堆積，NULL，-1 或預設值。 預設值為 -1；NULL、-1 和 DEFAULT 是這個內容中的對等值。    
     
  請指定 NULL 來傳回基底資料表或檢視表所有索引的快取資訊。 如果您指定 NULL *index_id*，您也必須指定為 NULL 。    
     
- *partition_number* | NULL | 0 | DEFAULT    
+  |NULL |0 |預設值    
  物件的分割區編號。 是**int**。有效輸入如下： *partion_number*的索引或堆積，NULL、 0 或 DEFAULT。 預設值是 0。 NULL、0 和 DEFAULT 是這個內容中的對等值。    
     
  請指定 NULL 來傳回索引或堆積之所有分割區的快取資訊。    
@@ -86,12 +84,12 @@ sys.dm_db_index_operational_stats (
     
 ## <a name="table-returned"></a>傳回的資料表    
     
-|資料行名稱|資料類型|Description|    
+|資料行名稱|資料類型|描述|    
 |-----------------|---------------|-----------------|    
 |**database_id**|**smallint**|資料庫識別碼。|    
 |**object_id**|**int**|資料表或檢視表的識別碼。|    
 |**index_id**|**int**|索引或堆積的識別碼。<br /><br /> 0 = 堆積|    
-|**hobt_id**|**bigint**|**適用於**： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 透過 [目前版本](http://go.microsoft.com/fwlink/p/?LinkId=299658))、 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。<br /><br /> 識別碼之資料堆積或 B 型樹狀目錄資料列集追蹤資料行存放區索引的內部資料。<br /><br /> NULL – 這不是內部的資料行存放區資料列集。<br /><br /> 如需詳細資訊，請參閱[sys.internal_partitions &#40;TRANSACT-SQL &#41;](../../relational-databases/system-catalog-views/sys-internal-partitions-transact-sql.md)|    
+|**hobt_id**|**bigint**|**適用於**： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 透過 [目前版本](http://go.microsoft.com/fwlink/p/?LinkId=299658))、 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。<br /><br /> 識別碼之資料堆積或 B 型樹狀目錄資料列集追蹤資料行存放區索引的內部資料。<br /><br /> NULL – 這不是內部的資料行存放區資料列集。<br /><br /> 如需詳細資訊，請參閱[sys.internal_partitions &#40;Transact SQL&#41;](../../relational-databases/system-catalog-views/sys-internal-partitions-transact-sql.md)|    
 |**partition_number**|**int**|在索引或堆積內，以 1 為基底的資料分割編號。|    
 |**leaf_insert_count**|**bigint**|分葉層級插入的累計計數。|    
 |**leaf_delete_count**|**bigint**|分葉層級刪除的累計計數。 leaf_delete_count 才會遞增的已刪除的記錄，未標示為準刪除第一次。 首先，準刪除的已刪除資料錄**leaf_ghost_count**會改為遞增。|    
@@ -181,12 +179,12 @@ sys.dm_db_index_operational_stats (
  資料行中的值**lob_fetch_in_pages**和**lob_fetch_in_bytes**可以是小於或等於零，含有一或多個 LOB 資料行成為內含資料行的非叢集索引。 如需詳細資訊，請參閱 [建立內含資料行的索引](../../relational-databases/indexes/create-indexes-with-included-columns.md)。 同樣地，資料行中的值**row_overflow_fetch_in_pages**和**row_overflow_fetch_in_bytes**可以是大於 0。 非叢集索引，如果索引包含可以排除的資料行非資料列。    
     
 ## <a name="how-the-counters-in-the-metadata-cache-are-reset"></a>如何重設中繼資料快取中的計數器    
- 所傳回的資料**sys.dm_db_index_operational_stats**存在只要代表堆積或索引中繼資料快取物件可供使用。 這項資料既不能保存，以交易來說也是不一致的。 這表示您不能使用這些計數器來判定索引是否已經使用，或者索引上次是何時使用。 如需詳細資訊，請參閱[sys.dm_db_index_usage_stats &#40;TRANSACT-SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-usage-stats-transact-sql.md).    
+ 所傳回的資料**sys.dm_db_index_operational_stats**存在只要代表堆積或索引中繼資料快取物件可供使用。 這項資料既不能保存，以交易來說也是不一致的。 這表示您不能使用這些計數器來判定索引是否已經使用，或者索引上次是何時使用。 如需詳細資訊，請參閱[sys.dm_db_index_usage_stats &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-usage-stats-transact-sql.md)。    
     
  每當堆積或索引的中繼資料被引進中繼資料快取時，每個資料行的值都會設為零，而且統計資料也會累計，直到快取物件從中繼資料快取移除為止。 因此，使用中堆積或索引的中繼資料可能會一直存放在快取中，而且累加計數也會反映自從 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體上次啟動以來的活動。 比較不使用的堆積或索引中繼資料，則會在使用時移入和移出快取。 因此，它不見得會有可用的值。 卸除索引會使對應的統計資料從記憶體移除，不會再由該函數報告。 對索引進行的其他 DDL 作業，可能會使統計資料值重設為零。    
     
 ## <a name="using-system-functions-to-specify-parameter-values"></a>使用系統函數指定參數值    
- 您可以使用[!INCLUDE[tsql](../../includes/tsql-md.md)]函式[DB_ID](../../t-sql/functions/db-id-transact-sql.md)和[OBJECT_ID](../../t-sql/functions/object-id-transact-sql.md)至指定的值*database_id*和*object_id*參數。 不過，傳遞對這些函數無效的值可能會造成意料之外的結果。 使用 DB_ID 或 OBJECT_ID 時，請務必確定傳回的是有效的識別碼。 如需詳細資訊，請參閱中的 < 備註 > 一節[sys.dm_db_index_physical_stats &#40;TRANSACT-SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql.md).    
+ 您可以使用[!INCLUDE[tsql](../../includes/tsql-md.md)]函式[DB_ID](../../t-sql/functions/db-id-transact-sql.md)和[OBJECT_ID](../../t-sql/functions/object-id-transact-sql.md)至指定的值*database_id*和*object_id*參數。 不過，傳遞對這些函數無效的值可能會造成意料之外的結果。 使用 DB_ID 或 OBJECT_ID 時，請務必確定傳回的是有效的識別碼。 如需詳細資訊，請參閱中的 < 備註 > 一節[sys.dm_db_index_physical_stats &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql.md)。    
     
 ## <a name="permissions"></a>Permissions    
  需要下列權限：    
@@ -201,7 +199,7 @@ sys.dm_db_index_operational_stats (
     
  拒絕 VIEW DATABASE STATE 會造成不允許傳回資料庫中的所有物件 (不論是否授與特定物件任何 CONTROL 權限)。 也，當資料庫萬用字元 @*database_id*= 指定 NULL，則會省略資料庫。    
     
- 如需詳細資訊，請參閱[動態管理檢視和函數 &#40;TRANSACT-SQL &#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md).    
+ 如需詳細資訊，請參閱[動態管理檢視和函數&#40;TRANSACT-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)。    
     
 ## <a name="examples"></a>範例    
     
@@ -209,7 +207,7 @@ sys.dm_db_index_operational_stats (
  下列範例會傳回 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 資料庫中 `Person.Address` 資料表所有索引和分割區的相關資訊。 若要執行這項查詢，至少必須對 `Person.Address` 資料表具備 CONTROL 權限。    
     
 > [!IMPORTANT]    
->  當您使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 函數 DB_ID 和 OBJECT_ID 傳回參數值時，請務必確定您所傳回的是有效的識別碼。 如果找不到資料庫或物件名稱 (例如，因為不存在或是拼錯了)，這兩個函數都會傳回 NULL。 **Sys.dm_db_index_operational_stats**函式會將 NULL 解譯為萬用字元值，指定所有資料庫或所有物件。 由於這不見得是刻意安排的作業，因此本節所舉的範例，只會示範決定資料庫和物件識別碼的安全方法。    
+>  當您使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 函數 DB_ID 和 OBJECT_ID 傳回參數值時，請務必確定您所傳回的是有效的識別碼。 如果找不到資料庫或物件名稱 (例如，因為不存在或是拼錯了)，這兩個函數都會傳回 NULL。 **sys.dm_db_index_operational_stats** 函數會將 NULL 解譯為指定所有資料庫或物件的萬用字元值。 由於這不見得是刻意安排的作業，因此本節所舉的範例，只會示範決定資料庫和物件識別碼的安全方法。    
     
 ```    
 DECLARE @db_id int;    
@@ -245,11 +243,11 @@ GO
  [動態管理檢視與函數 &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)     
  [索引相關的動態管理檢視和函式 &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/index-related-dynamic-management-views-and-functions-transact-sql.md)     
  [效能的監視與微調](../../relational-databases/performance/monitor-and-tune-for-performance.md)     
- [sys.dm_db_index_physical_stats &#40;TRANSACT-SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql.md)     
- [sys.dm_db_index_usage_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-usage-stats-transact-sql.md)     
+ [sys.dm_db_index_physical_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql.md)     
+ [sys.dm_db_index_usage_stats &#40;Transact SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-usage-stats-transact-sql.md)     
  [sys.dm_os_latch_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-latch-stats-transact-sql.md)     
- [sys.dm_db_partition_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-partition-stats-transact-sql.md)     
- [sys.allocation_units &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-allocation-units-transact-sql.md)     
+ [sys.dm_db_partition_stats &#40;Transact SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-partition-stats-transact-sql.md)     
+ [sys.allocation_units &#40;Transact SQL&#41;](../../relational-databases/system-catalog-views/sys-allocation-units-transact-sql.md)     
  [sys.indexes &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)    
     
   

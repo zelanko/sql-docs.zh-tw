@@ -1,33 +1,29 @@
 ---
-title: "Windows 事件追蹤目標 | Microsoft Docs"
-ms.custom: 
+title: Windows 事件追蹤目標 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
-ms.component: extended-events
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-- xevents
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: xevents
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - event tracing for windows target
 - ETW target
 - targets [SQL Server extended events], event tracing for windows target
 ms.assetid: ca2bb295-b7f6-49c3-91ed-0ad4c39f89d5
-caps.latest.revision: 
+caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 74ba5c0435a64cbeb6271967c4ca37c4a5ac1d86
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 7f3471f30347decd4a6a7f882aed43c8d1325107
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="event-tracing-for-windows-target"></a>Windows 事件追蹤目標
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -85,7 +81,7 @@ ms.lasthandoff: 02/12/2018
     > [!IMPORTANT]  
     >  當第一個工作階段啟動之後，將無法變更檔案路徑。  
   
--   受管理物件格式 (MOF) 檔案位於 *\<安裝路徑>*\Microsoft SQL Server\Shared 中。 如需詳細資訊，請參閱 MSDN 上的 [Managed Object Format (MOF)](http://go.microsoft.com/fwlink/?LinkId=92851) (管理物件格式)。  
+-   受管理物件格式 (MOF) 檔案位於 *\<安裝路徑>* \Microsoft SQL Server\Shared 中。 如需詳細資訊，請參閱 MSDN 上的 [Managed Object Format (MOF)](http://go.microsoft.com/fwlink/?LinkId=92851) (管理物件格式)。  
   
 ## <a name="adding-the-target-to-a-session"></a>將目標加入至工作階段  
  若要將 ETW 目標加入至擴充事件工作階段，您必須在建立或改變事件工作階段時，加入下列陳述式：  

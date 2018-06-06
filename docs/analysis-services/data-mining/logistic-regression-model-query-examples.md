@@ -1,34 +1,23 @@
 ---
-title: "羅吉斯迴歸模型查詢範例 |Microsoft 文件"
-ms.custom: 
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
-helpviewer_keywords:
-- logistic regression [Analysis Services]
-- content queries [DMX]
-ms.assetid: 7c8e13a3-5c67-46c2-abfa-4881e6ef9c62
-caps.latest.revision: 
-author: Minewiskan
+title: 羅吉斯迴歸模型查詢範例 |Microsoft 文件
+ms.date: 05/08/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: data-mining
+ms.topic: conceptual
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: a716193df7a74d9845cc8f70434bb525883f5936
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 78a89577c35f1effe00fe35685640c229811860d
+ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="logistic-regression-model-query-examples"></a>羅吉斯迴歸模型查詢範例
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-當您針對資料採礦模型建立查詢時，可以建立內容查詢來提供有關分析期間所發現之模式的詳細資料，也可以建立預測查詢來使用模型中的模式，透過新的資料進行預測。  
+  當您針對資料採礦模型建立查詢時，可以建立內容查詢來提供有關分析期間所發現之模式的詳細資料，也可以建立預測查詢來使用模型中的模式，透過新的資料進行預測。  
   
  本節說明如何針對以 Microsoft 羅吉斯迴歸演算法為基礎的模型建立查詢。  
   
@@ -197,13 +186,13 @@ NATURAL PREDICTION JOIN
 |||  
 |-|-|  
 |預測函數|使用方式|  
-|[IsDescendant &#40; DMX &#41;](../../dmx/isdescendant-dmx.md)|確定某個節點是否為模型中另一個節點的子系。|  
-|[PredictAdjustedProbability &#40; DMX &#41;](../../dmx/predictadjustedprobability-dmx.md)|傳回指定狀態的已調整機率。|  
-|[PredictHistogram &#40; DMX &#41;](../../dmx/predicthistogram-dmx.md)|傳回指定之資料行的一個或一組預測值。|  
-|[[Predictprobability] &#40; DMX &#41;](../../dmx/predictprobability-dmx.md)|傳回指定狀態的機率。|  
-|[PredictStdev &#40; DMX &#41;](../../dmx/predictstdev-dmx.md)|傳回預測值的標準差。|  
-|[PredictSupport &#40; DMX &#41;](../../dmx/predictsupport-dmx.md)|傳回指定狀態的支援值。|  
-|[PredictVariance &#40; DMX &#41;](../../dmx/predictvariance-dmx.md)|傳回指定之資料行的變異數。|  
+|[IsDescendant & #40; DMX & #41;](../../dmx/isdescendant-dmx.md)|確定某個節點是否為模型中另一個節點的子系。|  
+|[PredictAdjustedProbability & #40; DMX & #41;](../../dmx/predictadjustedprobability-dmx.md)|傳回指定狀態的已調整機率。|  
+|[PredictHistogram & #40; DMX & #41;](../../dmx/predicthistogram-dmx.md)|傳回指定之資料行的一個或一組預測值。|  
+|[[Predictprobability] & #40; DMX & #41;](../../dmx/predictprobability-dmx.md)|傳回指定狀態的機率。|  
+|[PredictStdev & #40; DMX & #41;](../../dmx/predictstdev-dmx.md)|傳回預測值的標準差。|  
+|[PredictSupport & #40; DMX & #41;](../../dmx/predictsupport-dmx.md)|傳回指定狀態的支援值。|  
+|[PredictVariance & #40; DMX & #41;](../../dmx/predictvariance-dmx.md)|傳回指定之資料行的變異數。|  
   
  如需所有 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 演算法通用函數的清單，請參閱[一般預測函數 &#40;DMX&#41;](../../dmx/general-prediction-functions-dmx.md)。 如需特定函數的語法，請參閱[資料採礦延伸模組 &#40;DMX&#41; 函數參考](../../dmx/data-mining-extensions-dmx-function-reference.md)。  
   
@@ -214,7 +203,7 @@ NATURAL PREDICTION JOIN
  [資料採礦查詢](../../analysis-services/data-mining/data-mining-queries.md)   
  [Microsoft 羅吉斯迴歸演算法](../../analysis-services/data-mining/microsoft-logistic-regression-algorithm.md)   
  [Microsoft 羅吉斯迴歸演算法技術參考](../../analysis-services/data-mining/microsoft-logistic-regression-algorithm-technical-reference.md)   
- [羅吉斯迴歸模型 &#40; 的採礦模型內容Analysis Services-資料採礦 &#41;](../../analysis-services/data-mining/mining-model-content-for-logistic-regression-models.md)   
- [第 5 課： 建立類神經網路和羅吉斯迴歸模型 &#40; 中繼資料採礦教學課程 &#41;](http://msdn.microsoft.com/library/42c3701a-1fd2-44ff-b7de-377345bbbd6b)  
+ [羅吉斯迴歸模型 & #40; 的採礦模型內容Analysis Services-資料採礦 & #41;](../../analysis-services/data-mining/mining-model-content-for-logistic-regression-models.md)   
+ [第 5 課： 建立類神經網路和羅吉斯迴歸模型 & #40; 中繼資料採礦教學課程 & #41;](http://msdn.microsoft.com/library/42c3701a-1fd2-44ff-b7de-377345bbbd6b)  
   
   

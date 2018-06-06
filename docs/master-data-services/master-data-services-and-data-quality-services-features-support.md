@@ -1,30 +1,31 @@
 ---
-title: "Master Data Services 和 Data Quality Services 功能支援 | Microsoft Docs"
-ms.custom: 
+title: Master Data Services 和 Data Quality Services 功能支援 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/07/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: mds
-ms.service: 
 ms.component: non-specific
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - master-data-services
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: a3e90ac3-69a6-47c9-aa18-8e9084717369
-caps.latest.revision: 
+caps.latest.revision: 3
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 22daf744a938b33eb214f90f0a379ab9ea3d808c
-ms.sourcegitcommit: 6ac1956307d8255dc544e1063922493b30907b80
+ms.openlocfilehash: ed4f73113bd5d5beebf3cd7f40e3ee3df31a57ac
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="master-data-services-and-data-quality-services-features-support"></a>Master Data Services 和 Data Quality Services 功能支援
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
 
 ## <a name="includessmdsshortmdincludesssmdsshort-mdmd-and-data-quality-services"></a>[!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] 和 Data Quality Services
 |功能|Enterprise|Standard|Web|Express with Advanced Services|Express with Tools|Express|Developer|  

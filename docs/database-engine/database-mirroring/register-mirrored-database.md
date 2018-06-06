@@ -1,34 +1,31 @@
 ---
-title: "註冊鏡像資料庫 | Microsoft Docs"
-ms.custom: 
+title: 註冊鏡像資料庫 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/07/2017
-ms.prod: sql-non-specified
-ms.prod_service: database-engine
-ms.service: 
+ms.prod: sql
+ms.prod_service: high-availability
 ms.component: database-mirroring
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- dbe-high-availability
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: high-availability
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 f1_keywords:
 - sql13.swb.dbmmonitor.registermirroreddb.f1
 ms.assetid: 6acd02b9-2311-49b0-a5f8-3852beecb4b0
-caps.latest.revision: 
+caps.latest.revision: 30
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: d670b9efc8bcbe67bb12758318fb72cf99c2218f
-ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
+ms.openlocfilehash: 5191250a1113be8bd5a613325aaceb31b176abce
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="register-mirrored-database"></a>註冊鏡像資料庫
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-使用這個對話方塊可在特定的伺服器執行個體上註冊一或多個鏡像資料庫，只要將資料庫加入至「資料庫鏡像監視器」即可。 加入資料庫之後，「資料庫鏡像監視器」就會在本機快取有關資料庫、其夥伴以及如何連接到夥伴的資訊。  
+  使用這個對話方塊可在特定的伺服器執行個體上註冊一或多個鏡像資料庫，只要將資料庫加入至「資料庫鏡像監視器」即可。 加入資料庫之後，「資料庫鏡像監視器」就會在本機快取有關資料庫、其夥伴以及如何連接到夥伴的資訊。  
   
 > [!IMPORTANT]  
 >  如果您在主體伺服器執行個體上是 **系統管理員** 固定伺服器角色的成員，但是在鏡像伺服器執行個體上不是該角色的成員，則只能在主體伺服器執行個體上查看狀態。  
@@ -57,7 +54,7 @@ ms.lasthandoff: 02/23/2018
 |**註冊**|檢查您要註冊的每一個資料庫。 如果資料庫目前受到監視，則其核取方塊為已選取和停用狀態。<br /><br /> 注意：若要取消註冊資料庫，請關閉 [註冊鏡像資料庫]  對話方塊，在導覽樹狀目錄中選取資料庫，然後選取 [動作]  功能表中的 [取消註冊]  。|  
 |**[資料庫備份]**|選取之伺服器執行個體上的鏡像資料庫名稱。|  
 |**目前的角色**|資料庫目前在選取之伺服器執行個體上的鏡像角色，可為 [主體] 或 [鏡像]。|  
-|**夥伴 (連接為)**|資料庫的容錯移轉夥伴名稱。 在括弧內會顯示 [主控台使用者的 Windows 驗證] 或 [登入 '\<登入名稱>' 的 SQL Server 驗證]。 如果之前已加入這個執行個體，則這是目前使用的驗證資訊；如果尚未將這個執行個體加入至監視器，則這是將要使用的驗證資訊。|  
+|**夥伴 (連接為)**|資料庫的容錯移轉夥伴名稱。 在括弧內會顯示 [主控台使用者的 Windows 驗證] 或 [登入 '\<登入名稱>' 的 SQL Server 驗證]****。 如果之前已加入這個執行個體，則這是目前使用的驗證資訊；如果尚未將這個執行個體加入至監視器，則這是將要使用的驗證資訊。|  
   
  **當我按一下確定時顯示管理伺服器連接對話方塊**  
  依預設，若是先前未給予認證的夥伴伺服器執行個體，「資料庫鏡像監視器」會使用「Windows 驗證」認證。 當您完成資料庫的註冊時，啟用此選項即可變更一個或多個伺服器執行個體的認證。  

@@ -1,31 +1,23 @@
 ---
-title: "表格式模型中的 DAX |Microsoft 文件"
-ms.custom: 
-ms.date: 10/21/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services, azure-analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
-ms.assetid: b2693985-1bea-4861-a100-cea4761ba809
-caps.latest.revision: 
-author: Minewiskan
+title: 表格式模型中的 DAX |Microsoft 文件
+ms.date: 05/07/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: tabular-models
+ms.topic: conceptual
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 8bf7c6895b62fb992094bb3850a90ee904b7a956
-ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
+ms.openlocfilehash: a5773f0e6c20f3ef742c7153442b5e2ffc277904
+ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="dax-in-tabular-models"></a>表格式模型中的 DAX 
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
-Data Analysis Expressions (DAX) 是一種公式語言，用來在 Analysis Services、 Power BI Desktop 和 Power Pivot，在 Excel 中建立自訂計算。 DAX 公式包含函數、運算子和值，可對資料表和資料行中的資料執行進階計算。  
+  Data Analysis Expressions (DAX) 是一種公式語言，用來在 Analysis Services、 Power BI Desktop 和 Power Pivot，在 Excel 中建立自訂計算。 DAX 公式包含函數、運算子和值，可對資料表和資料行中的資料執行進階計算。  
   
  雖然 DAX 會使用在 Analysis Services、 Power BI Desktop 和 Power Pivot，在 Excel 中，本主題適用於多撰寫在 SQL Server Data Tools (SSDT) 的 Analysis Services 表格式模型專案。  
   
@@ -400,7 +392,7 @@ Days in Current Quarter:=COUNTROWS( DATESBETWEEN( 'Date'[Date], STARTOFQUARTER( 
  [量值](../../analysis-services/tabular-models/measures-ssas-tabular.md)   
  [導出資料行](../../analysis-services/tabular-models/ssas-calculated-columns.md)   
  [角色](../../analysis-services/tabular-models/roles-ssas-tabular.md)   
- [KPIs](../../analysis-services/tabular-models/kpis-ssas-tabular.md)   
+ [Kpi](../../analysis-services/tabular-models/kpis-ssas-tabular.md)   
  [支援的資料來源](../../analysis-services/tabular-models/data-sources-supported-ssas-tabular.md)  
   
   

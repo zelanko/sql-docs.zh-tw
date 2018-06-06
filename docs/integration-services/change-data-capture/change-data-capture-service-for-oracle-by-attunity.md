@@ -1,28 +1,26 @@
 ---
-title: "Attunity Oracle 異動資料擷取服務 | Microsoft Docs"
-ms.custom: 
+title: Attunity Oracle 異動資料擷取服務 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
 ms.component: change-data-capture
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: 22ec8a5c-9550-4d38-8a4a-485ec3e53ea8
-caps.latest.revision: 
+caps.latest.revision: 21
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: e4aca9c1e62dbab4c1896c322c01fb6ec7253738
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: a17d9ba91e5d7882ff81dafc898d38bf96b4cbb1
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="change-data-capture-service-for-oracle-by-attunity"></a>Attunity Oracle 異動資料擷取服務
   Oracle CDC 服務是一種 Windows 服務，可掃描 Oracle 交易記錄，並將相關 Oracle 資料表的變更擷取到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 變更資料表中。 用來儲存從 Oracle 擷取之變更的 SQL 變更資料表與原生 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 異動資料擷取功能中所使用的變更資料表類型相同。 如此一來，取用這些變更就像取用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫變更一樣輕鬆。  
@@ -32,7 +30,7 @@ ms.lasthandoff: 01/25/2018
   
  Oracle CDC 服務可以安裝在任何支援的 Windows 電腦上，該電腦可存取正在擷取的來源 Oracle 資料庫以及目標 CDC 資料庫所在的目標 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體。 CDC 服務不需要 Oracle 資料庫或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫的本機安裝，而只需要其支援的用戶端。 如需有關要在何處安裝必要資料庫元件的詳細資訊，請參閱本主題的＜ **資料庫必要條件** ＞。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Oracle CDC 服務的安裝會將服務組態 UI 和服務程式放在選取的位置。 Oracle CDC 服務是使用 Oracle CDC 服務組態主控台所單獨設定。 如需有關設定 Oracle CDC 服務的詳細資訊，請參閱＜ [Change Data Capture Service for Oracle by Attunity F1 Help](../../integration-services/change-data-capture/change-data-capture-service-for-oracle-by-attunity-f1-help.md)＞。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Oracle CDC 服務的安裝會將服務組態 UI 和服務程式放在選取的位置。 Oracle CDC 服務是使用 Oracle CDC 服務組態主控台所單獨設定。 如需有關設定 Oracle CDC 服務的詳細資訊，請參閱＜ [Attunity 的 Oracle 變更資料擷取 (CDC) 服務 F1 說明](../../integration-services/change-data-capture/change-data-capture-service-for-oracle-by-attunity-f1-help.md)＞。  
   
  Oracle CDC 服務可以安裝在任何支援的 Windows 電腦上，該電腦上已安裝 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Native Client；此服務不需要安裝在目標 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝所在的相同電腦上。  
   
@@ -82,7 +80,7 @@ ms.lasthandoff: 01/25/2018
   
 -   [Oracle CDC 服務](../../integration-services/change-data-capture/the-oracle-cdc-service.md)  
   
--   [Change Data Capture Service for Oracle by Attunity F1 Help](../../integration-services/change-data-capture/change-data-capture-service-for-oracle-by-attunity-f1-help.md)  
+-   [Attunity 的 Oracle 變更資料擷取 (CDC) 服務 F1 說明](../../integration-services/change-data-capture/change-data-capture-service-for-oracle-by-attunity-f1-help.md)  
   
 -   [Attunity Oracle Change Data Capture (CDC) 服務使用說明指南](../../integration-services/change-data-capture/change-data-capture-service-for-oracle-by-attunity-how-to-guide.md)  
   

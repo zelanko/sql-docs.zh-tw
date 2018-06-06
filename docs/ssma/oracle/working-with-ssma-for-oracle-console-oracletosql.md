@@ -1,30 +1,28 @@
 ---
-title: "使用 SSMA for Oracle 主控台 (OracleToSQL) |Microsoft 文件"
-ms.prod: sql-non-specified
+title: 使用 SSMA for Oracle 主控台 (OracleToSQL) |Microsoft 文件
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
 ms.component: ssma-oracle
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ssma
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: 4e47bb04-cf9b-41a0-923e-bdab9ba0c51d
-caps.latest.revision: "19"
+caps.latest.revision: 19
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
-ms.workload: Inactive
-ms.openlocfilehash: 57e366ff233e744f4689cd5f3ce5ba8275692aa4
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 04701daad7fd077a0ab29c8d1a9ade3629dc2f8d
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="working-with-ssma-for-oracle-console-oracletosql"></a>使用 SSMA for Oracle 主控台 (OracleToSQL)
-[!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]現在可透過在命令列主控台應用程式存取 Oracle 的移轉小幫手 (SSMA) 版本。 指令碼檔案會形成執行命令的應用程式的輸入。 是主控台應用程式，SSMA 啟用指令碼層級互動、 減少移轉循環和縮放移轉作業。  
+[!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 現在可透過在命令列主控台應用程式存取 Oracle 的移轉小幫手 (SSMA) 版本。 指令碼檔案會形成執行命令的應用程式的輸入。 是主控台應用程式，SSMA 啟用指令碼層級互動、 減少移轉循環和縮放移轉作業。  
   
 本節會說明移轉使用 SSMA 主控台應用程式之 Oracle 資料庫的程序。  
   
@@ -33,17 +31,17 @@ ms.lasthandoff: 12/21/2017
 |||  
 |-|-|  
 |**主題**|**說明**|  
-|[開始使用 SSMA for Oracle 主控台 &#40; OracleToSQL &#41;](../../ssma/oracle/getting-started-with-ssma-for-oracle-console-oracletosql.md)|說明執行主控台應用程式的程序。|  
-|[SSMA 主控台 &#40; OracleToSQL &#41; 中的命令列選項](../../ssma/oracle/command-line-options-in-ssma-console-oracletosql.md)|描述操作 SSMA 主控台應用程式的命令列選項和參數。|  
-|[建立指令碼檔案 &#40; OracleToSQL &#41;](../../ssma/oracle/creating-script-files-oracletosql.md)|說明如何建立指令碼檔案。|  
-|[建立變數值的檔案 &#40; OracleToSQL &#41;](../../ssma/oracle/creating-variable-value-files-oracletosql.md)|說明如何建立變數值的檔案。|  
-|[建立伺服器連接檔案 &#40; OracleToSQL &#41;](../../ssma/oracle/creating-the-server-connection-files-oracletosql.md)|說明如何建立伺服器連接檔案。|  
-|[執行 SSMA 主控台 &#40; OracleToSQL &#41;](../../ssma/oracle/executing-the-ssma-console-oracletosql.md)|描述指令碼檔案的命令操作 SSMA 主控台應用程式。|  
-|[使用範例主控台指令碼檔案 &#40; OracleToSQL &#41;](../../ssma/oracle/working-with-the-sample-console-script-files-oracletosql.md)|描述的方式，輕鬆地自訂範例檔案，以及產品中已提供的指令碼|  
-|[管理密碼 &#40; OracleToSQL &#41;](../../ssma/oracle/managing-passwords-oracletosql.md)|描述有關密碼加密和解密和匯入 / 匯出的密碼資訊。|  
-|[產生報表 &#40; OracleToSQL &#41;](../../ssma/oracle/generating-reports-oracletosql.md)|列出要產生報表的命令。|  
-|[疑難排解 &#40; OracleToSQL &#41;](../../ssma/oracle/troubleshooting-oracletosql.md)|提供有關修正移轉問題的簡短資訊。|  
+|[開始使用 SSMA for Oracle 主控台&#40;OracleToSQL&#41;](../../ssma/oracle/getting-started-with-ssma-for-oracle-console-oracletosql.md)|說明執行主控台應用程式的程序。|  
+|[SSMA 主控台中的命令列選項&#40;OracleToSQL&#41;](../../ssma/oracle/command-line-options-in-ssma-console-oracletosql.md)|描述操作 SSMA 主控台應用程式的命令列選項和參數。|  
+|[建立指令碼檔案&#40;OracleToSQL&#41;](../../ssma/oracle/creating-script-files-oracletosql.md)|說明如何建立指令碼檔案。|  
+|[建立變數值的檔案&#40;OracleToSQL&#41;](../../ssma/oracle/creating-variable-value-files-oracletosql.md)|說明如何建立變數值的檔案。|  
+|[建立伺服器連接檔案&#40;OracleToSQL&#41;](../../ssma/oracle/creating-the-server-connection-files-oracletosql.md)|說明如何建立伺服器連接檔案。|  
+|[執行 SSMA 主控台&#40;OracleToSQL&#41;](../../ssma/oracle/executing-the-ssma-console-oracletosql.md)|描述指令碼檔案的命令操作 SSMA 主控台應用程式。|  
+|[使用範例主控台指令碼檔案&#40;OracleToSQL&#41;](../../ssma/oracle/working-with-the-sample-console-script-files-oracletosql.md)|描述的方式，輕鬆地自訂範例檔案，以及產品中已提供的指令碼|  
+|[管理密碼&#40;OracleToSQL&#41;](../../ssma/oracle/managing-passwords-oracletosql.md)|描述有關密碼加密和解密和匯入 / 匯出的密碼資訊。|  
+|[產生報表&#40;OracleToSQL&#41;](../../ssma/oracle/generating-reports-oracletosql.md)|列出要產生報表的命令。|  
+|[疑難排解&#40;OracleToSQL&#41;](../../ssma/oracle/troubleshooting-oracletosql.md)|提供有關修正移轉問題的簡短資訊。|  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
 [開始使用 SSMA for Oracle 主控台](http://msdn.microsoft.com/en-us/667a5e4a-6848-4973-a72d-1287f64718ac)  
   

@@ -1,36 +1,23 @@
 ---
-title: "Perspective 元素 (ASSL) |Microsoft 文件"
-ms.custom: 
-ms.date: 03/07/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+title: Perspective 元素 (ASSL) |Microsoft 文件
+ms.date: 05/03/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: assl
 ms.topic: reference
-apiname: Perspective Element
-apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
-apitype: Schema
-applies_to: SQL Server 2016 Preview
-f1_keywords: Perspective
-helpviewer_keywords: Perspective element
-ms.assetid: 0442334c-8b00-4451-ad81-02e58c735e8f
-caps.latest.revision: "35"
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 424139e88f88ee4c3e3073997bf8724c4534ba1c
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: d84b369134c55a09317ae8812f2d511e147605bf
+ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="perspective-element-assl"></a>Perspective 元素 (ASSL)
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]定義檢視方塊的詳細資料[Cube](../../../analysis-services/scripting/objects/cube-element-assl.md)項目。  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+  定義檢視方塊的詳細資料[Cube](../../../analysis-services/scripting/objects/cube-element-assl.md)項目。  
   
 ## <a name="syntax"></a>語法  
   
@@ -57,7 +44,7 @@ ms.lasthandoff: 01/08/2018
   
 ## <a name="element-characteristics"></a>元素特性  
   
-|特性|描述|  
+|特性|說明|  
 |--------------------|-----------------|  
 |資料類型和長度|無|  
 |預設值|無|  
@@ -75,7 +62,7 @@ ms.lasthandoff: 01/08/2018
   
  分析管理物件 (AMO) 物件模型中的對應元素是<xref:Microsoft.AnalysisServices.Perspective>。  
   
-## <a name="see-also"></a>請參閱  
- [物件 &#40;ASSL &#41;](../../../analysis-services/scripting/objects/objects-assl.md)  
+## <a name="see-also"></a>另請參閱  
+ [物件 & #40;ASSL & #41;](../../../analysis-services/scripting/objects/objects-assl.md)  
   
   

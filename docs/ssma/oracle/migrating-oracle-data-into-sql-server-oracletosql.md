@@ -1,30 +1,28 @@
 ---
-title: "Oracle 資料移轉至 SQL Server (OracleToSQL) |Microsoft 文件"
-ms.prod: sql-non-specified
+title: Oracle 資料移轉至 SQL Server (OracleToSQL) |Microsoft 文件
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
 ms.component: ssma-oracle
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ssma
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - Oracle Data Migration, Client-Side Migration
 - Oracle Data Migration,Server-Side Migration
 ms.assetid: e23c5268-41ed-4e55-9fe7-a11376202a13
-caps.latest.revision: "13"
+caps.latest.revision: 13
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
-ms.workload: On Demand
-ms.openlocfilehash: fee4d190885979fe55c598a542feed89a460e3d5
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: da5375ad57a2852159c8a71e08be3082f0b3f860
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="migrating-oracle-data-into-sql-server-oracletosql"></a>Oracle 資料移轉至 SQL Server (OracleToSQL)
 已成功同步處理與已轉換的物件之後[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]，您可以從 Oracle 移轉資料[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]。  
@@ -98,7 +96,7 @@ ms.lasthandoff: 12/21/2017
     > [!NOTE]  
     > 如果執行個體上未安裝的 SSMA for Oracle 延伸模組組件[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]，而且如果**伺服器端資料移轉引擎**已選取，然後同時將資料移轉到目標資料庫，發生下列錯誤: ' SSMA 資料移轉元件找不到 SQL Server 上無法進行伺服器端資料移轉。 請檢查是否已正確安裝延伸模組組件 '。 按一下**取消**終止資料移轉。  
   
-5.  在**Connect to Oracle**對話方塊中，輸入連接的認證，然後按一下**連接**。 如需有關如何連接到 Oracle 的詳細資訊，請參閱[連接至 Oracle &#40; OracleToSQL &#41;](../../ssma/oracle/connect-to-oracle-oracletosql.md)  
+5.  在**Connect to Oracle**對話方塊中，輸入連接的認證，然後按一下**連接**。 如需有關如何連接到 Oracle 的詳細資訊，請參閱[連接至 Oracle &#40;OracleToSQL&#41;](../../ssma/oracle/connect-to-oracle-oracletosql.md)  
   
     連接到目標資料庫[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]，輸入中的連接認證**連接到 SQL Server**對話方塊中，然後按一下**連接**。 如需有關連接到[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]，請參閱[連接到 SQL Server](http://msdn.microsoft.com/en-us/bb8c4bde-cfc2-4636-92ae-5dd24abe9536)  
   
@@ -107,6 +105,6 @@ ms.lasthandoff: 12/21/2017
 > [!NOTE]  
 > SQL Express edition 做為目標資料庫使用時，允許只有用戶端端資料移轉，且不支援伺服器端資料移轉。  
   
-## <a name="see-also"></a>請參閱  
-[將 Oracle 資料庫移轉至 SQL Server &#40; OracleToSQL &#41;](../../ssma/oracle/migrating-oracle-databases-to-sql-server-oracletosql.md)  
+## <a name="see-also"></a>另請參閱  
+[SQL server 資料庫移轉 Oracle &#40;OracleToSQL&#41;](../../ssma/oracle/migrating-oracle-databases-to-sql-server-oracletosql.md)  
   

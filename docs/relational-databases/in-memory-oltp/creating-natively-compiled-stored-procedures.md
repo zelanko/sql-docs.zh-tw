@@ -1,35 +1,33 @@
 ---
-title: "建立原生編譯的預存程序 | Microsoft Docs"
-ms.custom: 
+title: 建立原生編譯的預存程序 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/16/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
 ms.component: in-memory-oltp
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine-imoltp
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: in-memory-oltp
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: e6b34010-cf62-4f65-bbdf-117f291cde7b
-caps.latest.revision: 
-author: JennieHubbard
-ms.author: jhubbard
+caps.latest.revision: 15
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 108baf378ee99256bef1f3dd11aead8dac68307b
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: f81ba5079859508a3806ec33e7d91030e2e787af
+ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="creating-natively-compiled-stored-procedures"></a>建立原生編譯的預存程序
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
-  原生編譯預存程序不會實作完整 [!INCLUDE[tsql](../../includes/tsql-md.md)] 可程式性和查詢介面區。 某些 [!INCLUDE[tsql](../../includes/tsql-md.md)] 建構無法在原生編譯的預存程序內使用。 如需詳細資訊，請參閱 [原生編譯的 T-SQL 模組支援的功能](../../relational-databases/in-memory-oltp/supported-features-for-natively-compiled-t-sql-modules.md)。  
+原生編譯預存程序不會實作完整 [!INCLUDE[tsql](../../includes/tsql-md.md)] 可程式性和查詢介面區。 某些 [!INCLUDE[tsql](../../includes/tsql-md.md)] 建構無法在原生編譯的預存程序內使用。 如需詳細資訊，請參閱 [原生編譯的 T-SQL 模組支援的功能](../../relational-databases/in-memory-oltp/supported-features-for-natively-compiled-t-sql-modules.md)。  
   
- 但有幾個 [!INCLUDE[tsql](../../includes/tsql-md.md)] 功能只可供原生編譯的預存程序使用：  
+但有幾個 [!INCLUDE[tsql](../../includes/tsql-md.md)] 功能只可供原生編譯的預存程序使用：  
   
 -   不可部分完成的區塊。 如需詳細資訊，請參閱 [Atomic Blocks](../../relational-databases/in-memory-oltp/atomic-blocks-in-native-procedures.md)。  
   
@@ -43,30 +41,30 @@ ms.lasthandoff: 02/12/2018
   
 -   原生編譯預存程序的結構描述繫結。  
   
- 使用 [CREATE PROCEDURE &#40;Transact-SQL&#41;](../../t-sql/statements/create-procedure-transact-sql.md)建立原生編譯的預存程序。 下列範例會顯示記憶體最佳化的資料表以及用來將資料列插入資料表中的原生編譯預存程序。  
+使用 [CREATE PROCEDURE &#40;Transact-SQL&#41;](../../t-sql/statements/create-procedure-transact-sql.md)建立原生編譯的預存程序。 下列範例會顯示記憶體最佳化的資料表以及用來將資料列插入資料表中的原生編譯預存程序。  
   
 ```sql  
-create table dbo.Ord  
-(OrdNo integer not null primary key nonclustered,   
- OrdDate datetime not null,   
- CustCode nvarchar(5) not null)   
- with (memory_optimized=on)  
-go  
+CREATE TABLE [dbo].[T2] (  
+  [c1] [int] NOT NULL, 
+  [c2] [datetime] NOT NULL,
+  [c3] nvarchar(5) NOT NULL, 
+  CONSTRAINT [PK_T1] PRIMARY KEY NONCLUSTERED ([c1])  
+  ) WITH ( MEMORY_OPTIMIZED = ON , DURABILITY = SCHEMA_AND_DATA )  
+GO  
   
-create procedure dbo.OrderInsert(@OrdNo integer, @CustCode nvarchar(5))  
-with native_compilation, schemabinding  
-as   
-begin atomic with  
-(transaction isolation level = snapshot,  
-language = N'English')  
-  
-  declare @OrdDate datetime = getdate();  
-  insert into dbo.Ord (OrdNo, CustCode, OrdDate) values (@OrdNo, @CustCode, @OrdDate);  
-end  
-go  
+CREATE PROCEDURE [dbo].[usp_2] (@c1 int, @c3 nvarchar(5)) 
+WITH NATIVE_COMPILATION, SCHEMABINDING  
+AS BEGIN ATOMIC WITH  
+(  
+ TRANSACTION ISOLATION LEVEL = SNAPSHOT, LANGUAGE = N'us_english'  
+)  
+  DECLARE @c2 datetime = GETDATE();  
+  INSERT INTO [dbo].[T2] (c1, c2, c3) values (@c1, @c2, @c3);  
+END  
+GO  
 ```  
-  
- 在程式碼範例中， **NATIVE_COMPILATION** 表示這個 [!INCLUDE[tsql](../../includes/tsql-md.md)] 預存程序是原生編譯的預存程序。 以下是必要的選項：  
+ 
+在程式碼範例中， **NATIVE_COMPILATION** 表示這個 [!INCLUDE[tsql](../../includes/tsql-md.md)] 預存程序是原生編譯的預存程序。 以下是必要的選項：  
   
 |選項|描述|  
 |------------|-----------------|  

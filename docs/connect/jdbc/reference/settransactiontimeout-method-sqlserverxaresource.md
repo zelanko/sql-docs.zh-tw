@@ -1,30 +1,29 @@
 ---
-title: "setTransactionTimeout 方法 (SQLServerXAResource) |Microsoft 文件"
-ms.custom: 
+title: setTransactionTimeout 方法 (SQLServerXAResource) |Microsoft 文件
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
-ms.component: jdbc
-ms.reviewer: 
+ms.prod: sql
+ms.prod_service: connectivity
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
-ms.topic: article
-apiname: SQLServerXAResource.setTransactionTimeout
-apilocation: sqljdbc.jar
+ms.technology: connectivity
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
+apiname:
+- SQLServerXAResource.setTransactionTimeout
+apilocation:
+- sqljdbc.jar
 apitype: Assembly
 ms.assetid: 38bf4a1a-6ad3-437c-b9ed-8792ab6dde7e
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
-ms.workload: Inactive
-ms.openlocfilehash: 5a0f204b8042f139627b46bb63bf6a4049af9628
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+manager: craigg
+ms.openlocfilehash: 143a1102ff6ab1e3c47427ead4adaccdf114eca6
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="settransactiontimeout-method-sqlserverxaresource"></a>setTransactionTimeout 方法 (SQLServerXAResource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -52,7 +51,7 @@ public boolean setTransactionTimeout(int seconds)
 ## <a name="remarks"></a>備註  
  這個 setTransactionTimeout 方法是由 javax.transaction.xa.XAResource 介面中 setTransactionTimeout 方法指定。  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [SQLServerXAResource 方法](../../../connect/jdbc/reference/sqlserverxaresource-methods.md)   
  [SQLServerXAResource 成員](../../../connect/jdbc/reference/sqlserverxaresource-members.md)   
  [SQLServerXAResource 類別](../../../connect/jdbc/reference/sqlserverxaresource-class.md)  

@@ -1,37 +1,23 @@
 ---
-title: "交叉驗證報表中的量值 |Microsoft 文件"
-ms.custom: 
-ms.date: 03/01/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
-helpviewer_keywords:
-- root mean square error [data mining]
-- cross-validation [data mining]
-- mean absolute error [data mining]
-- log score [data mining]
-- likelihood [data mining]
-ms.assetid: a07b1665-7f72-4266-82a4-43a91ae2571d
-caps.latest.revision: 
-author: Minewiskan
+title: 交叉驗證報表中的量值 |Microsoft 文件
+ms.date: 05/08/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: data-mining
+ms.topic: conceptual
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 8a98814c3b71a8a39b1f77bdeaf1de7eb4758e54
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 00a8d7d0e05d4fa4a714011e18ec1162eb7b68e7
+ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="measures-in-the-cross-validation-report"></a>交叉驗證報表中的量值
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-在交叉驗證期間，[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 會將採礦結構中的資料分割成多個交叉區段，然後反覆地測試結構及任何相關聯的採礦模型。 根據這項分析，結果會輸出有關結構及每個模型的一組標準精確度量值。  
+  在交叉驗證期間，[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 會將採礦結構中的資料分割成多個交叉區段，然後反覆地測試結構及任何相關聯的採礦模型。 根據這項分析，結果會輸出有關結構及每個模型的一組標準精確度量值。  
   
  此報表除了包含一些有關資料中的摺疊數以及每個摺疊中的資料量等基本資訊外，也包含一組描述資料分佈的一般標準。 藉由比較針對每個交叉區段的一般標準，您可以評估結構或模型的可靠性。  
   

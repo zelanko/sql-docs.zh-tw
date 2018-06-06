@@ -1,16 +1,14 @@
 ---
 title: WAITFOR (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/15/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
 ms.component: t-sql|language-elements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: t-sql
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - WAITFOR
@@ -29,16 +27,15 @@ helpviewer_keywords:
 - WAITFOR statement
 - timing executions
 ms.assetid: 8e896e73-af27-4cae-a725-7a156733f3bd
-caps.latest.revision: 
+caps.latest.revision: 40
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: Active
-ms.openlocfilehash: 2a1453c5d7beaf9d4ab9d140a0414e730c9d651a
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: bbf4b982faa988290573368818f4d75961fd38c2
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="waitfor-transact-sql"></a>WAITFOR (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -65,13 +62,13 @@ WAITFOR
  這是在繼續執行批次、預存程序或交易之前，必須經過的指定時段，最多 24 小時。  
   
  '*time_to_pass*'  
- 這是要等待的時間週期。 您可以用 **datetime** 資料所能接受的格式來指定 *time_to_pass*，也可以將它指定成區域變數。 不能指定日期；因此，不接受 **datetime** 值的日期部分。  
+ 這是要等待的時間週期。 您可以用 **datetime** 資料所能接受的格式來指定 *time_to_pass*，也可以將它指定成區域變數。 不能指定日期；因此，不接受 **datetime** 值的日期部分。 這會格式化為 hh:mm[[:ss].mss]。
   
  TIME  
  此時執行批次、預存程序或交易時的指定時間。  
   
  '*time_to_execute*'  
- 這是 WAITFOR 陳述式完成的時間。 您可以用 **datetime** 資料所能接受的格式來指定 *time_to_execute*，也可以將它指定成區域變數。 不能指定日期；因此，不接受 **datetime** 值的日期部分。  
+ 這是 WAITFOR 陳述式完成的時間。 您可以用 **datetime** 資料所能接受的格式來指定 *time_to_execute*，也可以將它指定成區域變數。 不能指定日期；因此，不接受 **datetime** 值的日期部分。 這會格式化為 hh:mm[[:ss].mss]，而且可以選擇性的包含日期 1900-01-01。
   
  *receive_statement*  
  這是有效的 RECEIVE 陳述式。  

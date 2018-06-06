@@ -1,16 +1,15 @@
 ---
-title: "P (TRANSACT-SQL) |Microsoft 文件"
-ms.custom: 
+title: P (TRANSACT-SQL) |Microsoft 文件
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
 ms.component: system-tables
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -22,16 +21,15 @@ dev_langs:
 helpviewer_keywords:
 - MSsubscription_properties system table
 ms.assetid: f96fc1ae-b798-4b05-82a7-564ae6ef23b8
-caps.latest.revision: 
+caps.latest.revision: 29
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 0811b4b8705fda92ff57e782d04f6543b9fd1ebb
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 31ebcf6b35a6b10bd0c9c3f6f7a0bbba39898c6f
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="mssubscriptionproperties-transact-sql"></a>MSsubscription_properties (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -66,18 +64,18 @@ ms.lasthandoff: 11/21/2017
 |**offload_server**|**sysname**|指定遠端啟用所用之伺服器的網路名稱。|  
 |**dynamic_snapshot_location**|**nvarchar(255)**|指定儲存快照集檔案的資料夾路徑。|  
 |**use_web_sync**|**bit**|指定是否能夠利用 HTTP 來同步處理訂閱。 值為**1**表示啟用這項功能。|  
-|**應**|**nvarchar （260)**|代表複寫接聽程式之 Web 同步處理位置的 URL。|  
+|**應**|**nvarchar(260)**|代表複寫接聽程式之 Web 同步處理位置的 URL。|  
 |**internet_url**|**sysname**|連接到主控 Web 同步處理使用的 Web 伺服器時，會使用合併代理程式的登入[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]驗證。|  
 |**internet_login**|**nvarchar （524)**|連接到主控 Web 同步處理使用的 Web 伺服器時，合併代理程式會使用登入的密碼[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]驗證。|  
 |**internet_security_mode**|**int**|連接到主控 Web 同步處理，值為 Web 伺服器時使用的驗證模式**1**表示 Windows 驗證，而值為**0**表示[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]驗證。|  
 |**internet_timeout**|**int**|Web 同步處理要求到期之前的時間長度 (以秒為單位)。|  
 |**主機名稱**|**sysname**|指定的值**HOST_NAME**中使用此函式時**其中**子句的聯結篩選或邏輯記錄關聯性。|  
   
-## <a name="see-also"></a>請參閱＜  
- [複寫資料表 &#40;TRANSACT-SQL &#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
- [複寫檢視 &#40;TRANSACT-SQL &#41;](../../relational-databases/system-views/replication-views-transact-sql.md)   
- [sp_helppullsubscription &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/sp-helppullsubscription-transact-sql.md)   
- [sp_helpsubscription &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/sp-helpsubscription-transact-sql.md)   
+## <a name="see-also"></a>另請參閱  
+ [複寫資料表&#40;Transact SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
+ [複寫檢視&#40;Transact SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)   
+ [sp_helppullsubscription &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-helppullsubscription-transact-sql.md)   
+ [sp_helpsubscription &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpsubscription-transact-sql.md)   
  [sp_helpsubscription_properties &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpsubscription-properties-transact-sql.md)  
   
   

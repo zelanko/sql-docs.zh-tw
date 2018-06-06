@@ -1,31 +1,28 @@
 ---
-title: "引號識別項 |Microsoft 文件"
-ms.custom: 
+title: 引號識別項 |Microsoft 文件
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
-ms.component: odbc
-ms.reviewer: 
+ms.prod: sql
+ms.prod_service: connectivity
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: connectivity
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - SQL statements [ODBC], interoperability
 - interoperability of SQL statements [ODBC], quoted identifiers
 - quoted identifiers [ODBC]
 ms.assetid: 729ba55f-743b-4a04-8c39-ac0a9914211d
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
-ms.workload: Inactive
-ms.openlocfilehash: 9a530e24368339305fc510a3a3f6fc9a6193e694
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+manager: craigg
+ms.openlocfilehash: e74c39ad73357e50c1040e8a90029c0bf65f7b6e
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="quoted-identifiers"></a>引號的識別碼
 SQL 陳述式中包含特殊字元或相符的關鍵字的識別項必須括在*識別碼引號字元*; 這類字元括住的識別項稱為*引號識別項*(也稱為*分隔識別碼*以 sql-92)。 比方說，在下列引用 Accounts Payable 識別碼**選取**陳述式：  

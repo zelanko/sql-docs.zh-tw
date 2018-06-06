@@ -1,16 +1,15 @@
 ---
-title: "SetNumericalValue 方法 （ServerNetworkProtocolProperty 類別） |Microsoft 文件"
-ms.custom: 
+title: SetNumericalValue 方法 （ServerNetworkProtocolProperty 類別） |Microsoft 文件
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
 ms.component: wmi
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - SetNumericalValue Method (ServerNetworkProtocolProperty Class)
@@ -20,20 +19,19 @@ apitype: MOFDef
 helpviewer_keywords:
 - SetNumericalValue method
 ms.assetid: b3b4bce8-9d9e-4ccb-a223-0454281353b0
-caps.latest.revision: 
-author: JennieHubbard
-ms.author: jhubbard
+caps.latest.revision: 31
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 275a632994be7017dbaa88a7b36e888642e12c40
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.openlocfilehash: 2ad643d808763989262e939d8148a5e479a32b48
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="setnumericalvalue-method-servernetworkprotocolproperty-class"></a>SetNumericalValue 方法 (ServerNetworkProtocolProperty 類別)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
-設定參考之屬性的數值。  
+  設定參考之屬性的數值。  
   
 ## <a name="syntax"></a>語法  
   

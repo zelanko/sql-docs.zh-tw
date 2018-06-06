@@ -1,33 +1,29 @@
 ---
-title: "建立完整資料庫備份 (SQL Server) | Microsoft 文件"
-ms.custom: 
+title: 建立完整資料庫備份 (SQL Server) | Microsoft 文件
+ms.custom: ''
 ms.date: 06/13/2017
-ms.prod: sql-non-specified
-ms.prod_service: database-engine
-ms.service: 
-ms.component: backup-restore
-ms.reviewer: 
+ms.prod: sql
+ms.prod_service: backup-restore
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- dbe-backup-restore
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: backup-restore
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - backing up databases [SQL Server], full backups
 - backing up databases [SQL Server], SQL Server Management Studio
 - backups [SQL Server], creating
 - database backups [SQL Server], SQL Server Management Studio
 ms.assetid: 586561fc-dfbb-4842-84f8-204a9100a534
-caps.latest.revision: 
+caps.latest.revision: 63
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.workload: Active
-ms.openlocfilehash: 99efc19a0379e6e4e79a9913c3fd193c219c2666
-ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
+ms.openlocfilehash: 0cdafe9c854ccce0dd554d52afb850b39c97a7d3
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="create-a-full-database-backup-sql-server"></a>建立完整資料庫備份 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -141,7 +137,7 @@ ms.lasthandoff: 02/23/2018
   
 20. 指定備份組逾期的時間，和不需明確略過逾期資料的驗證即可覆寫的時間：  
   
-    -   若要讓備份組在特定的天數後過期，請按一下 [之後]\(預設選項)，然後輸入備份組建立之後將會過期的天數。 這個值可以介於 0 到 99999 日之間；值為 0 日意指備份組永遠不會過期。  
+    -   若要讓備份組在特定的天數後過期，請按一下 [之後] \(預設選項)，然後輸入備份組建立之後將會過期的天數。 這個值可以介於 0 到 99999 日之間；值為 0 日意指備份組永遠不會過期。  
   
          預設值會在 [伺服器屬性] 對話方塊 ([資料庫設定] 頁面) 的 [預設備份媒體保留 (以天為單位)] 選項中設定。 若要存取，請以滑鼠右鍵按一下物件總管中的伺服器名稱並選取 [屬性]，然後選取 [資料庫設定] 頁面。  
   
@@ -262,14 +258,14 @@ ms.lasthandoff: 02/23/2018
   
      BACKUP DATABASE *database*  
   
-     TO *backup_device* [ **或 PowerShell，在**...*n* ]  
+     TO *backup_device* [ **,**...*n* ]  
   
      [ WITH *with_options* [ **,**...*o* ] ] ;  
   
     |選項|[描述]|  
     |------------|-----------------|  
     |*database*|為要備份的資料庫。|  
-    |*backup_device* [ **或 PowerShell，在**...*n* ]|指定一份清單，列出備份作業可使用的 1 到 64 個備份裝置。 您可以指定實體備份裝置，或者指定對應的邏輯備份裝置 (若已經定義)。 若要指定實體備份裝置，請使用 DISK 或 TAPE 選項：<br /><br /> { DISK &#124; TAPE } **=***physical_backup_device_name*<br /><br /> 如需詳細資訊，請參閱 [備份裝置 &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-devices-sql-server.md)執行個體上建立資料庫備份，就需要這個選項。|  
+    |*backup_device* [ **,**...*n* ]|指定一份清單，列出備份作業可使用的 1 到 64 個備份裝置。 您可以指定實體備份裝置，或者指定對應的邏輯備份裝置 (若已經定義)。 若要指定實體備份裝置，請使用 DISK 或 TAPE 選項：<br /><br /> { DISK &#124; TAPE } **=***physical_backup_device_name*<br /><br /> 如需詳細資訊，請參閱 [備份裝置 &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-devices-sql-server.md)執行個體上建立資料庫備份，就需要這個選項。|  
     |WITH *with_options* [ **,**...*o* ]|或者，也可以指定一個或多個其他選項 *o*。 如需有關選項基本概念的詳細資訊，請參閱步驟 2。|  
   
 2.  選擇性地指定一或多個 WITH 選項。 這裡描述的是一些基本的 WITH 選項。 如需所有 WITH 選項的資訊，請參閱 [BACKUP &#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md)。  

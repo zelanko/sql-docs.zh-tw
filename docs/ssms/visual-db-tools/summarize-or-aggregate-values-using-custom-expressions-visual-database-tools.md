@@ -1,33 +1,32 @@
 ---
-title: "使用自訂運算式摘要或彙總值 | Microsoft Docs"
-ms.custom: 
+title: 使用自訂運算式摘要或彙總值 | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
 ms.component: ssms-visual-db
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: tools-ssms
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ssms
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - summarizing query results
 - custom expressions to aggregate values [SQL Server]
 ms.assetid: 34130ac1-0106-4766-b324-acb0b7bb6f6e
-caps.latest.revision: "3"
+caps.latest.revision: 3
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 5506c43d001a1d02e081d19696b34be2e9c1f4ba
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.openlocfilehash: 07d5e322c715f5aaec7a4fc713d87fac171c2a8c
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="summarize-or-aggregate-values-using-custom-expressions-visual-database-tools"></a>使用自訂運算式摘要或彙總值 (Visual Database Tools)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 除了使用彙總函式彙總資料以外，您也可以建立自訂運算式產生彙總值。 您可以使用自訂運算式取代彙總查詢中任何位置的彙總函式。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+除了使用彙總函式彙總資料以外，您也可以建立自訂運算式產生彙總值。 您可以使用自訂運算式取代彙總查詢中任何位置的彙總函式。  
   
 例如，在 `titles` 資料表中，您可能想要建立查詢，以同時顯示平均價格與折扣後的平均價格。  
   

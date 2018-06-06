@@ -1,32 +1,33 @@
 ---
-title: "SQLMoreResults 函數 |Microsoft 文件"
-ms.custom: 
+title: SQLMoreResults 函數 |Microsoft 文件
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
-ms.component: odbc
-ms.reviewer: 
+ms.prod: sql
+ms.prod_service: connectivity
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
-ms.topic: article
-apiname: SQLMoreResults
-apilocation: sqlsrv32.dll
+ms.technology: connectivity
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
+apiname:
+- SQLMoreResults
+apilocation:
+- sqlsrv32.dll
 apitype: dllExport
-f1_keywords: SQLMoreResults
-helpviewer_keywords: SQLMoreResults function [ODBC]
+f1_keywords:
+- SQLMoreResults
+helpviewer_keywords:
+- SQLMoreResults function [ODBC]
 ms.assetid: bf169ed5-4d55-412c-b184-12065a726e89
-caps.latest.revision: "26"
+caps.latest.revision: 26
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
-ms.workload: Inactive
-ms.openlocfilehash: b1905665f1505cd484a6d2ab5c1f83008efc2298
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+manager: craigg
+ms.openlocfilehash: d156b07358d6430ec52f000ed4bebfe1c5d19d9f
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sqlmoreresults-function"></a>SQLMoreResults 函數
 **一致性**  
@@ -53,10 +54,10 @@ SQLRETURN SQLMoreResults(
 ## <a name="diagnostics"></a>診斷  
  當**SQLMoreResults**會傳回 SQL_ERROR 或 SQL_SUCCESS_WITH_INFO，相關聯的 SQLSTATE 值可以藉由呼叫取得**SQLGetDiagRec**與*HandleType*的 SQL_HANDLE_STMT 和*處理*的*StatementHandle*。 下表列出通常所傳回的 SQLSTATE 值**SQLMoreResults** ，並說明這個函式; 每個內容中的標記法 」 (DM) 」 之前描述的驅動程式管理員傳回的 Sqlstate。 每個 SQLSTATE 值相關聯的傳回碼是 SQL_ERROR，除非有說明，否則為。  
   
-|SQLSTATE|錯誤|描述|  
+|SQLSTATE|錯誤|Description|  
 |--------------|-----------|-----------------|  
 |01000|一般警告|特定驅動程式告知性訊息。 （函式會傳回 SQL_SUCCESS_WITH_INFO）。|  
-|01S02 的警告|選項值已變更|處理變更批次陳述式屬性的值。 （函式會傳回 SQL_SUCCESS_WITH_INFO）。|  
+|01S02|選項值已變更|處理變更批次陳述式屬性的值。 （函式會傳回 SQL_SUCCESS_WITH_INFO）。|  
 |08S01|通訊連結失敗|功能已完成處理之前，驅動程式和驅動程式已連線到資料來源之間的通訊連結失敗。|  
 |40001|序列化失敗|交易已回復由於與另一個交易資源鎖死。|  
 |40003|未知的陳述式完成|此函式執行期間失敗的相關聯的連接，並無法決定交易的狀態。|  
@@ -116,7 +117,7 @@ SQLRETURN SQLMoreResults(
 |擷取單一資料列或資料區塊的順向的方向|[SQLFetch 函式](../../../odbc/reference/syntax/sqlfetch-function.md)|  
 |擷取部分或全部的資料行|[SQLGetData 函式](../../../odbc/reference/syntax/sqlgetdata-function.md)|  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [ODBC 應用程式開發介面參考](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [ODBC 標頭檔](../../../odbc/reference/install/odbc-header-files.md)   
  [使用 SQLGetData 擷取輸出參數](../../../odbc/reference/develop-app/retrieving-output-parameters-using-sqlgetdata.md)

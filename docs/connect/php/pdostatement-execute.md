@@ -1,27 +1,26 @@
 ---
-title: "Pdostatement:: Execute |Microsoft 文件"
-ms.custom: 
-ms.date: 01/19/2017
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
+title: 'Pdostatement:: Execute |Microsoft 文件'
+ms.custom: ''
+ms.date: 05/22/2018
+ms.prod: sql
+ms.prod_service: connectivity
 ms.component: php
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: connectivity
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: c2e80566-fa41-4918-8521-cf2e05374cbd
-caps.latest.revision: "12"
+caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
-ms.workload: Inactive
-ms.openlocfilehash: 3f07ac6e21c465ca04c071e70624de138e918e23
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+manager: craigg
+ms.openlocfilehash: dabdabb4b3a4d20884004909dfaab0272f2e9c43
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34563866"
 ---
 # <a name="pdostatementexecute"></a>PDOStatement::execute
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -78,7 +77,11 @@ while ( $row = $stmt->fetch( PDO::FETCH_ASSOC ) ){
 ?>  
 ```  
   
+> [!NOTE]
+> 建議使用字串做為輸入，當繫結至值[十進位或數值資料行](../../t-sql/data-types/decimal-and-numeric-transact-sql.md)為確保如 PHP 有限的有效位數的有效位數和精確度[浮點數](http://php.net/manual/en/language.types.float.php)。 同樣適用於 bigint 資料行，尤其是有效值的範圍外[整數](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md)。
+
 ## <a name="see-also"></a>另請參閱  
-[PDOStatement 類別](../../connect/php/pdostatement-class.md)  
-[PDO](http://go.microsoft.com/fwlink/?LinkID=187441)  
+[PDOStatement 類別](../../connect/php/pdostatement-class.md)
+
+[PDO](http://php.net/manual/book.pdo.php)  
   

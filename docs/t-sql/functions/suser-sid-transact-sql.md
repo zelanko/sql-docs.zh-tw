@@ -1,16 +1,14 @@
 ---
 title: SUSER_SID (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 07/29/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
 ms.component: t-sql|functions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: t-sql
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - SUSER_SID
@@ -27,16 +25,15 @@ helpviewer_keywords:
 - identification numbers [SQL Server], logins
 - SUSER_SID function
 ms.assetid: 57b42a74-94e1-4326-85f1-701b9de53c7d
-caps.latest.revision: 
+caps.latest.revision: 31
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 77c7ab84b6fe936722f0b0c18ca889922485f1fd
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 8c8bcc69ebec0eb94e48358434c11265802b93a1
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="susersid-transact-sql"></a>SUSER_SID (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -54,12 +51,12 @@ SUSER_SID ( [ 'login' ] [ , Param2 ] )
   
 ## <a name="arguments"></a>引數  
  **'** *login* **'**  
-**適用對象**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+**適用於**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
   
  這是使用者的登入名稱。 *login* 為 **sysname**。 選擇性的 *login* 可為 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入或 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 使用者或群組。 若沒有指定 *login*，則會傳回目前安全性內容的相關資訊。 如果參數包含 NULL 一詞，就會傳回 NULL。  
   
  *Param2*  
-**適用對象**：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+**適用於**：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
   
  指定是否要驗證登入名稱。 *Param2* 的類型為 **int** 且為選擇性。 當 *Param2* 為 0 時，不會驗證登入名稱。 當 *Param2* 未指定為 0 時，會驗證 Window 登入名稱與儲存在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的登入名稱完全相同。  
   
@@ -87,7 +84,7 @@ SELECT SUSER_SID('sa');
 ### <a name="b-using-susersid-with-a-specific-login"></a>B. 搭配特定登入使用 SUSER_SID  
  下列範例會傳回 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `sa` 登入的安全性識別碼。  
   
-**適用對象**：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+**適用於**：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
   
 ```  
 SELECT SUSER_SID('sa');  
@@ -97,7 +94,7 @@ GO
 ### <a name="c-using-susersid-with-a-windows-user-name"></a>C. 搭配使用 SUSER_SID 與 Windows 使用者名稱  
  下列範例會傳回 Windows 使用者 `London\Workstation1` 的安全性識別碼。  
   
-**適用對象**：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+**適用於**：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
   
 ```  
 SELECT SUSER_SID('London\Workstation1');  
@@ -125,7 +122,7 @@ GO
 ### <a name="e-comparing-the-windows-login-name-to-the-login-name-stored-in-sql-server"></a>E. 比較 Windows 登入名稱與 SQL Server 中所儲存的登入名稱  
  下列範例示範如何使用 *Param2* 從 Windows 取得 SID，並使用該 SID 作為 `SUSER_SNAME` 函式的輸入。 此範例以 Windows 中的儲存格式 (`TestComputer\User`) 提供登入，並以 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的儲存格式 (`TESTCOMPUTER\User`) 傳回登入。  
   
-**適用對象**：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+**適用於**：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
   
 ```  
 SELECT SUSER_SNAME(SUSER_SID('TestComputer\User', 0));  

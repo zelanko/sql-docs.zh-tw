@@ -1,33 +1,30 @@
 ---
-title: "NumericScale 和有效位數屬性範例 （VC + +） |Microsoft 文件"
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
+title: NumericScale 和有效位數屬性範例 （VC + +） |Microsoft 文件
+ms.prod: sql
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
-ms.custom: 
+ms.technology: connectivity
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - NumericScale property [ADO], VC++ example
 - Precision property [ADO], VC++ example
 ms.assetid: 55d91ba8-4d80-4df6-af8e-060a19ddc138
-caps.latest.revision: 
+caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: bcd1f58b172fc74220b0340b8b1b50ac6744ea64
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 09cd79d4f547dfd721ea1f04f3ca2e9faad6e1b7
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="numericscale-and-precision-properties-example-vc"></a>NumericScale 和有效位數屬性範例 （VC + +）
 這個範例會使用[NumericScale](../../../ado/reference/ado-api/numericscale-property-ado.md)和[精確度](../../../ado/reference/ado-api/precision-property-ado.md)要顯示的數值小數位數和有效位數中的欄位屬性***折扣***資料表***Pubs***資料庫。  

@@ -1,16 +1,15 @@
 ---
-title: "sp_publication_validation (TRANSACT-SQL) |Microsoft 文件"
-ms.custom: 
+title: sp_publication_validation (TRANSACT-SQL) |Microsoft 文件
+ms.custom: ''
 ms.date: 03/16/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - sp_publication_validation
 ms.assetid: 06be2363-00c0-4936-97c1-7347f294a936
-caps.latest.revision: 
+caps.latest.revision: 34
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: c08dc184475526abd962ab97f52ccfbb8c405e8f
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: f893c6a42d16c9d36d2a28a2c77c80bc62fa56bb
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sppublicationvalidation-transact-sql"></a>sp_publication_validation (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,13 +48,13 @@ sp_publication_validation [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>引數  
- [**@publication=**] **'***發行集 '*  
+ [**@publication=**] **' * * * 發行集 '*  
  這是發行集的名稱。 *發行集*是**sysname**，沒有預設值。  
   
  [**@rowcount_only=**] *rowcount_only*  
  這是指是否只傳回資料表的資料列數。 *rowcount_only*是**smallint**而且可以是下列值之一。  
   
-|值|描述|  
+|Value|描述|  
 |-----------|-----------------|  
 |**0**|執行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0 相容總和檢查碼。<br /><br /> 注意： 當水平篩選發行項時，資料列計數會執行作業，而非總和檢查碼作業。|  
 |**1** (預設值)|只執行資料列計數檢查。|  
@@ -65,7 +63,7 @@ sp_publication_validation [ @publication = ] 'publication'
  [**@full_or_fast=**] *full_or_fast*  
  這是用於計算資料列計數的方法。 *full_or_fast*是**tinyint**而且可以是下列值之一。  
   
-|值|描述|  
+|Value|描述|  
 |-----------|-----------------|  
 |**0**|利用 COUNT(*) 執行完整計數。|  
 |**1**|快速計數從**sysindexes.rows**。 計算的資料列[sys.sysindexes](../../relational-databases/system-compatibility-views/sys-sysindexes-transact-sql.md)比計算實際資料表中的資料列快得多。 不過，因為[sys.sysindexes](../../relational-databases/system-compatibility-views/sys-sysindexes-transact-sql.md)是延遲的方式更新，資料列計數可能不正確。|  
@@ -74,7 +72,7 @@ sp_publication_validation [ @publication = ] 'publication'
  [  **@shutdown_agent=**] *shutdown_agent*  
  這是指在驗證完成時，是否應該立即關閉散發代理程式。 *shutdown_agent*是**元**，預設值是**0**。 如果**0**，複寫代理程式不會關機。 如果**1**，複寫代理程式會在驗證最後一個發行項之後關閉。  
   
- [  **@publisher**  =] **'***發行者***'**  
+ [ **@publisher** = ] **'***publisher***'**  
  指定非 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 發行者。 *發行者*是**sysname**，預設值是 NULL。  
   
 > [!NOTE]  
@@ -93,10 +91,10 @@ sp_publication_validation [ @publication = ] 'publication'
 ## <a name="permissions"></a>Permissions  
  只有成員**sysadmin**固定的伺服器角色或**db_owner**固定的資料庫角色可以執行**sp_publication_validation**。  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [驗證訂閱者端的資料](../../relational-databases/replication/validate-data-at-the-subscriber.md)   
- [sp_article_validation &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/sp-article-validation-transact-sql.md)   
- [sp_table_validation &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/sp-table-validation-transact-sql.md)   
+ [sp_article_validation &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-article-validation-transact-sql.md)   
+ [sp_table_validation &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-table-validation-transact-sql.md)   
  [系統預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

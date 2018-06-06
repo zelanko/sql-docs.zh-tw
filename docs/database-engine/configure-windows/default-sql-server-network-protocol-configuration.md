@@ -1,33 +1,31 @@
 ---
-title: "預設 SQL Server 網路通訊協定組態 | Microsoft Docs"
-ms.custom: 
+title: 預設 SQL Server 網路通訊協定組態 | Microsoft Docs
+ms.custom: ''
 ms.date: 07/11/2017
-ms.prod: sql-non-specified
-ms.prod_service: database-engine
-ms.service: 
-ms.component: configure-windows
-ms.reviewer: 
+ms.prod: sql
+ms.prod_service: high-availability
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: database-engine
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: configuration
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - protocols [SQL Server], default settings
 - default protocols, after install
 ms.assetid: 635ea361-a797-4971-bd05-e3415862bc5c
-caps.latest.revision: "4"
+caps.latest.revision: 4
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 5549947b718e1303d1c6a065cb5790b7af5dabe7
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 93a6669821de69a5dff3a7ab58ff35cf3f24fee8
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="default-sql-server-network-protocol-configuration"></a>預設 SQL Server 網路通訊協定組態
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 為了加強安全性，[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 會為某些新安裝停用網路連線。 如果您正在使用 Enterprise、Standard、Evaluation 或 Workgroup Edition 或是 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 的舊版安裝仍然存在，就不會停用使用 TCP/IP 的網路連接。 所有的安裝都會啟用共用記憶體通訊協定，以允許本機連接到伺服器。 視安裝條件和安裝選項而定， [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] Browser 服務有可能會停止。
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+為了加強安全性， [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 會為新安裝停用網路連接性。 如果您正在使用 Enterprise、Standard、Evaluation 或 Workgroup Edition 或是 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 的舊版安裝仍然存在，就不會停用使用 TCP/IP 的網路連接。 所有的安裝都會啟用共用記憶體通訊協定，以允許本機連接到伺服器。 視安裝條件和安裝選項而定， [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] Browser 服務有可能會停止。
 
 使用 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 組態管理員的 [ [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 網路組態] 節點，在安裝後設定網路通訊協定。 使用 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 組態管理員的 [ [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 服務] 節點，設定 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] Browser 服務自動啟動。 如需詳細資訊，請參閱 [啟用或停用伺服器網路通訊協定](../../database-engine/configure-windows/enable-or-disable-a-server-network-protocol.md)。
 

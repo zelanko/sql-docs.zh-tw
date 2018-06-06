@@ -1,32 +1,31 @@
 ---
-title: "Reporting Services 開發人員文件 | Microsoft Docs"
-ms.custom: 
+title: Reporting Services 開發人員文件 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
-ms.service: 
 ms.component: reporting-services
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 helpviewer_keywords:
 - developer's guide [Reporting Services]
 - Reporting Services, programming
 - programming [Reporting Services]
 ms.assetid: d8afa405-1012-4349-a72d-e10d94f8453d
-caps.latest.revision: "21"
+caps.latest.revision: 21
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 508253c11026074dc19ce93f173c036ae2751786
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: d11e62a8a0a1f90d894c32c82aef938f89a61851
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="reporting-services-developer-documentation"></a>Reporting Services 開發人員文件
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 提供一些可在自己的應用程式中利用的程式設計介面。 您可以使用 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 的現有功能和能力，將自訂報表與管理工具建立到網站和 Windows 應用程式中，或是可以延伸 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 平台。  
@@ -40,9 +39,12 @@ ms.lasthandoff: 01/09/2018
  [將 Reporting Services 整合到應用程式](../reporting-services/application-integration/integrating-reporting-services-into-applications.md)  
  提供如何使用 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 將報表整合到自訂應用程式的概觀。 描述何時使用直接的 URL 存取，以及何時使用 Web 服務存取報表伺服器。  
   
- [報表伺服器 Web 服務](../reporting-services/report-server-web-service/report-server-web-service.md)  
+ [ASP.net 和傳統應用程式的報表伺服器 Web 服務](../reporting-services/report-server-web-service/report-server-web-service.md)  
  報表伺服器 Web 服務提供報表伺服器的完整功能存取。 Web 服務透過 HTTP 使用 SOAP，並設計成做為用戶端程式與報表伺服器之間的通訊介面。 Web 服務及其方法會公開報表伺服器的功能，並可讓您為任何部分的報表生命週期建立從管理到執行的自訂工具。  
-  
+ 
+ [使用現代應用程式的 REST API 進行開發](developer/rest-api.md)</br>
+ Reporting Services REST API 透過程式設計方式存取 Reporting Services 報表伺服器目錄中的物件。 使用 REST API 時，您可以巡覽至資料夾階層、探索資料夾內容，或下載報表定義。 您也可以建立、更新及刪除物件。
+
  [URL 存取 &#40;SSRS&#41;](../reporting-services/url-access-ssrs.md)  
  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 支援一組完整且以 URL 為基礎的要求，讓您得以使用快速且輕鬆的存取點來進行報表導覽和檢視。 您可以和報表伺服器 Web 服務搭配使用這項技術，將完整的報表方案整合到自訂商務應用程式。 當將報表整合為 Web 入口網站的一部分時，或是當從網頁瀏覽器檢視報表時，URL 存取將特別有用。  
   

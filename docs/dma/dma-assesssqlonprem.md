@@ -1,29 +1,27 @@
 ---
-title: "執行 SQL Server 移轉評估 （資料移轉小幫手） |Microsoft 文件"
-ms.custom: 
+title: 執行 SQL Server 移轉評估 （資料移轉小幫手） |Microsoft 文件
+ms.custom: ''
 ms.date: 10/04/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: dma
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-dma
-ms.tgt_pltfrm: 
-ms.topic: article
-keywords: 
-helpviewer_keywords: Data Migration Assistant, Assess
-ms.assetid: 
-caps.latest.revision: 
+ms.technology: dma
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
+keywords: ''
+helpviewer_keywords:
+- Data Migration Assistant, Assess
+ms.assetid: ''
+caps.latest.revision: ''
 author: HJToland3
 ms.author: jtoland
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 1c23f8d37e7af9daad2af78164a21adbe8c613a3
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 30c44a7aba2a721501996d7a1d53a6a4a83a345e
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="perform-a-sql-server-migration-assessment"></a>執行 SQL Server 移轉評估
 下列的逐步指示會協助您移轉至內部部署 SQL Server，使用資料移轉小幫手來執行在 Azure VM 或 Azure SQL Database 上的 SQL Server 的執行您的第一次評估。

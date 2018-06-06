@@ -1,33 +1,23 @@
 ---
-title: "以 Power Pivot 模式安裝 Analysis Services |Microsoft 文件"
-ms.custom: 
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology:
-- setup-install
-- setup-install
-ms.tgt_pltfrm: 
-ms.topic: article
-ms.assetid: d3310562-82c1-454f-9c48-33a241749238
-caps.latest.revision: 
-author: Minewiskan
+title: 以 Power Pivot 模式安裝 Analysis Services |Microsoft 文件
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: ppvt-sharepoint
+ms.topic: conceptual
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: f3b10fdee9956b28273553755365b9251d073964
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 59d3f4dadc2de71f8fa4438ec48a2783164a485a
+ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="install-analysis-services-in-power-pivot-mode"></a>以 Power Pivot 模式安裝 Analysis Services
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
-本主題中的程序會引導您完成 SharePoint 部署 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 模式之 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 伺服器的單一伺服器安裝。 這些步驟包含執行 [SQL Server 安裝精靈]，以及使用 SharePoint 管理中心的設定工作。  
+  本主題中的程序會引導您完成 SharePoint 部署 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 模式之 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 伺服器的單一伺服器安裝。 這些步驟包含執行 [SQL Server 安裝精靈]，以及使用 SharePoint 管理中心的設定工作。  
   
 ##  <a name="bkmk_background"></a> 背景  
  [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] for SharePoint 是中間層及後端服務的集合物件，可以在 SharePoint 2016 或 SharePoint 2013 伺服器陣列中提供 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 資料存取功能。  
@@ -98,7 +88,7 @@ ms.lasthandoff: 02/15/2018
   
      ![SQL 安裝程式-登陸頁面的執行個體組態](../../../analysis-services/instances/install-windows/media/sql2016-pp-instance-config-landing-page.png "SQL 安裝程式-登陸頁面的執行個體組態")  
   
-13. 在 **[伺服器組態]** 頁面上，將所有服務的 **[啟動類型]**設定為 [自動]。 指定 **SQL Server Analysis Services**的所需網域帳戶和密碼，即下圖中的 **(1)** 。  
+13. 在 **[伺服器組態]** 頁面上，將所有服務的 **[啟動類型]** 設定為 [自動]。 指定 **SQL Server Analysis Services**的所需網域帳戶和密碼，即下圖中的 **(1)** 。  
   
     -   針對 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]，您可以使用 **網域使用者** 帳戶或 **NetworkService** 帳戶。 請勿使用 LocalSystem 或 LocalService 帳戶。  
   
@@ -201,7 +191,7 @@ ms.lasthandoff: 02/15/2018
   
 2.  按一下您的服務應用程式名稱，預設為 **[Excel Services 應用程式]**。  
   
-3.  在 **[管理 Excel Services 應用程式]**頁面上，按一下 **[資料模型設定]**。  
+3.  在 **[管理 Excel Services 應用程式]** 頁面上，按一下 **[資料模型設定]**。  
   
 4.  按一下 **[加入伺服器]**。  
   
@@ -211,7 +201,7 @@ ms.lasthandoff: 02/15/2018
   
 6.  按一下 **[確定]**。  
   
-7.  變更在數分鐘內就會生效，您也可以 **[停止]** 和 **[啟動]** **[Excel Calculation Services]**服務。 若要  
+7.  變更在數分鐘內就會生效，您也可以 **[停止]** 和 **[啟動]** **[Excel Calculation Services]** 服務。 若要  
   
      另一個選項是使用系統管理權限來開啟命令提示字元，並輸入 `iisreset /noforce`。  
   
@@ -294,6 +284,6 @@ ms.lasthandoff: 02/15/2018
 ## <a name="see-also"></a>另請參閱  
  [將 Power Pivot 移轉至 SharePoint 2013](../../../analysis-services/instances/install-windows/migrate-power-pivot-to-sharepoint-2013.md)   
  [安裝或解除安裝 PowerPivot for SharePoint 增益集 &#40;SharePoint 2013&#41;](../../../analysis-services/instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2013.md)   
- [升級活頁簿和排程的資料重新整理 &#40;SharePoint 2013 &#41;](../../../analysis-services/instances/install-windows/upgrade-workbooks-and-scheduled-data-refresh-sharepoint-2013.md)  
+ [升級活頁簿和排程的資料重新整理 & #40;SharePoint 2013 & #41;](../../../analysis-services/instances/install-windows/upgrade-workbooks-and-scheduled-data-refresh-sharepoint-2013.md)  
   
   

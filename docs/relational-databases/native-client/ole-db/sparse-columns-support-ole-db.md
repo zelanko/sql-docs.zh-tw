@@ -1,33 +1,32 @@
 ---
-title: "疏鬆資料行支援 (OLE DB) |Microsoft 文件"
-ms.custom: 
+title: 疏鬆資料行支援 (OLE DB) |Microsoft 文件
+ms.custom: ''
 ms.date: 03/17/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
 ms.component: native-client-ole-db
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 918574b3-c62e-4937-9e5f-37310dedc8f9
-caps.latest.revision: 
+caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 83781fb2194f5ef94ea7a73a8c32017ceb25424a
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: de135d6d4e172045e7841197c79d86eea9397c9e
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sparse-columns-support-ole-db"></a>疏鬆資料行支援 (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../../includes/snac-deprecated.md)]
 
-  本主題提供 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB 對於疏鬆資料行支援的相關資訊。 如需有關疏鬆資料行的詳細資訊，請參閱[SQL Server Native Client 中的疏鬆資料行支援](../../../relational-databases/native-client/features/sparse-columns-support-in-sql-server-native-client.md)。 如需範例，請參閱[顯示資料行與疏鬆資料行 &#40; OLE DB &#41; 的目錄中繼資料](../../../relational-databases/native-client-ole-db-how-to/display-column-and-catalog-metadata-for-sparse-columns-ole-db.md)。  
+  本主題提供 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB 對於疏鬆資料行支援的相關資訊。 如需有關疏鬆資料行的詳細資訊，請參閱[SQL Server Native Client 中的疏鬆資料行支援](../../../relational-databases/native-client/features/sparse-columns-support-in-sql-server-native-client.md)。 如需範例，請參閱[顯示資料行與疏鬆資料行的目錄中繼資料&#40;OLE DB&#41;](../../../relational-databases/native-client-ole-db-how-to/display-column-and-catalog-metadata-for-sparse-columns-ole-db.md)。  
   
 ## <a name="ole-db-statement-metadata"></a>OLE DB 陳述式中繼資料  
  從 [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] 開始，提供新的 DBCOLUMNFLAGS 旗標值 DBCOLUMNFLAGS_SS_ISCOLUMNSET。 這個值應該設定的資料行**column_set**值。 DBCOLUMNFLAGS 旗標可以透過擷取*dwFlags* icolumnsinfo:: Getcolumnsinfo 和 icolumnsrowset:: Getcolumnsrowset 所傳回的資料列集的 DBCOLUMN_FLAGS 資料行的參數。  
@@ -63,7 +62,7 @@ ms.lasthandoff: 01/25/2018
 |IDBSchemaRowset::GetSchemaRowset|DBSCHEMA_COLUMNS 會傳回兩個新的資料行：SS_IS_COLUMN_SET 和 SS_IS_SPARSE。<br /><br /> DBSCHEMA_COLUMNS 會傳回不是成員的資料行**column_set**。<br /><br /> 已加入兩個新的結構描述資料列集： DBSCHEMA_COLUMNS_EXTENDED 將會傳回所有資料行的疏鬆度不論**column_set**成員資格。 DBSCHEMA_SPARSE_COLUMN_SET 傳回成員的資料行**column_set**。 這些新的資料列集與 DBSCHEMA_COLUMNS 的資料行和限制相同。|  
 |IDBSchemaRowset::GetSchemas|Idbschemarowset:: Getschemas 可用結構描述資料列集的清單中包含新的資料列集 DBSCHEMA_COLUMNS_EXTENDED 和 DBSCHEMA_SPARSE_COLUMN_SET 的 Guid。|  
 |ICommand::Execute|如果**選取\*從***資料表*是它使用，會傳回所有資料行不屬於疏鬆**column_set**，再加上包含的所有值的 XML 資料行非 null 資料行成員的疏鬆**column_set**，如果有的話。|  
-|IOpenRowset::OpenRowset|傳回與 icommand:: Execute，相同的資料行的資料列集 iopenrowset:: Openrowset**選取\***相同資料表上的查詢。|  
+|IOpenRowset::OpenRowset|傳回與 icommand:: Execute，相同的資料行的資料列集 iopenrowset:: Openrowset**選取\*** 相同資料表上的查詢。|  
 |ITableDefinition|沒有任何變更，此介面為疏鬆資料行或**column_set**資料行。 需要修改結構描述的應用程式必須直接執行適當的 [!INCLUDE[tsql](../../../includes/tsql-md.md)]。|  
   
 ## <a name="see-also"></a>另請參閱  

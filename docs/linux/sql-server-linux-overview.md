@@ -1,25 +1,22 @@
-﻿---
-title: "SQL Server on Linux 的概觀 |Microsoft 文件"
-description: "本文描述 SQL Server 如何在 Linux 上執行，並提供如何了解詳細資訊。"
+---
+title: SQL Server on Linux 的概觀 |Microsoft 文件
+description: 本文描述 SQL Server 如何在 Linux 上執行，並提供如何了解詳細資訊。
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 02/22/2018
+ms.date: 05/24/2018
 ms.topic: article
-ms.prod: sql-non-specified
-ms.prod_service: database-engine
-ms.service: 
-ms.component: 
+ms.prod: sql
+ms.component: ''
 ms.suite: sql
 ms.custom: sql-linux
-ms.technology: database-engine
+ms.technology: linux
 ms.assetid: 9dcc6a90-0add-42c2-815b-862e4e2a21ac
-ms.workload: Active
-ms.openlocfilehash: faa2898017347f59d415f7f5bf5bd6795a3f9de6
-ms.sourcegitcommit: f0c5e37c138be5fb2cbb93e9f2ded307665b54ea
+ms.openlocfilehash: 2c67e5d1563ef2420f45ec4b1d0093de888dd157
+ms.sourcegitcommit: a9da0abd3e17fbcd6339980d7331d0418cdada53
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/24/2018
+ms.lasthandoff: 05/24/2018
 ---
 # <a name="sql-server-on-linux"></a>Linux 上的 SQL Server
 
@@ -47,7 +44,7 @@ SQL Server 2017 現在會在 Linux 上執行。 它是相同的 SQL Server 資�
 | 工具 | 教學課程 |
 |-----|-----|
 | Visual Studio Code (VS Code) | [使用 VS Code 和 SQL Server on Linux](sql-server-linux-develop-use-vscode.md) |
-| SQL Server Management Studio (SSMS) | [在 Windows 上使用 SSMS 連接到 SQL Server on Linux](sql-server-linux-develop-use-ssms.md) |
+| SQL Server Management Studio (SSMS) | [在 Windows 上使用 SSMS 連接到 SQL Server on Linux](sql-server-linux-manage-ssms.md) |
 | SQL Server Data Tools (SSDT) | [使用 SSDT 搭配 SQL Server on Linux](sql-server-linux-develop-use-ssdt.md) |
 
 ## <a name="explore"></a>瀏覽
@@ -60,3 +57,5 @@ SQL Server 2017 所有支援的平台，包括 Linux 上有相同的基礎資料
 > 常見問題的解答，請參閱[Linux 常見問題集 > 的 SQL Server](sql-server-linux-faq.md)。
 
 [!INCLUDE[Get Help Options](../includes/paragraph-content/get-help-options.md)]
+
+[!INCLUDE[contribute-to-content](../includes/paragraph-content/contribute-to-content.md)]

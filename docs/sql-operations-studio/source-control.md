@@ -1,33 +1,32 @@
 ---
-title: "原始檔控制中 SQL Operations Studio （預覽） |Microsoft 文件"
-description: "了解如何設定 SQL Operations Studio （預覽） 中的原始檔控制。"
+title: 原始檔控制中 SQL Operations Studio （預覽） |Microsoft 文件
+description: 了解如何設定 SQL Operations Studio （預覽） 中的原始檔控制。
 ms.custom: tools|sos
 ms.date: 11/15/2017
-ms.prod: sql-non-specified
-ms.reviewer: alayu; erickang; sstein
+ms.prod: sql
+ms.reviewer: alayu; sstein
 ms.suite: sql
 ms.prod_service: sql-tools
 ms.component: sos
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 4f28199262b087ad5362da0ddf56827216aec748
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: e947bfbd96b5a098728ff423e3eb591544e5f453
+ms.sourcegitcommit: 6fd8a193728abc0a00075f3e4766a7e2e2859139
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/17/2018
 ---
-#  <a name="using-source-control-in-includename-sosincludesname-sos-shortmd"></a>使用原始檔控制中[!INCLUDE[name-sos](../includes/name-sos-short.md)]
+#  <a name="using-source-control-in-includename-sosincludesname-sos-shortmd"></a>使用原始檔控制中 [!INCLUDE[name-sos](../includes/name-sos-short.md)]
 
-[!INCLUDE[name-sos](../includes/name-sos-short.md)]版本/原始檔控制中支援 Git。
+[!INCLUDE[name-sos](../includes/name-sos-short.md)] 版本/原始檔控制中支援 Git。
 
 
-## <a name="git-support-in-includename-sosincludesname-sos-shortmd"></a>中的 Git 支援[!INCLUDE[name-sos](../includes/name-sos-short.md)]
+## <a name="git-support-in-includename-sosincludesname-sos-shortmd"></a>中的 Git 支援 [!INCLUDE[name-sos](../includes/name-sos-short.md)]
 
-[!INCLUDE[name-sos](../includes/name-sos-short.md)]隨附 Git 原始檔控制管理員 (SCM)，但是您仍然需要[安裝 Git (2.0.0 版或更新版本)](https://git-scm.com/download)之前可提供下列功能。 
+[!INCLUDE[name-sos](../includes/name-sos-short.md)] 隨附 Git 原始檔控制管理員 (SCM)，但是您仍然需要[安裝 Git (2.0.0 版或更新版本)](https://git-scm.com/download)之前可提供下列功能。 
 
 
 
@@ -49,7 +48,7 @@ ms.lasthandoff: 12/21/2017
 
 ## <a name="working-with-git-repositories"></a>使用 Git 儲存機制
 
-[!INCLUDE[name-sos](../includes/name-sos-short.md)]VS Code 會繼承其 Git 實作，但目前不支援其他 SCM 提供者。 如需使用 Git 之後您開啟或初始化儲存機制, 的詳細資訊，請參閱[VS 程式碼中的 Git 支援](https://code.visualstudio.com/docs/editor/versioncontrol#_git-support)。
+[!INCLUDE[name-sos](../includes/name-sos-short.md)] VS Code 會繼承其 Git 實作，但目前不支援其他 SCM 提供者。 如需使用 Git 之後您開啟或初始化儲存機制, 的詳細資訊，請參閱[VS 程式碼中的 Git 支援](https://code.visualstudio.com/docs/editor/versioncontrol#_git-support)。
 
 
 ## <a name="additional-resources"></a>其他資源

@@ -1,33 +1,32 @@
 ---
-title: "sqlsrv_send_stream_data |Microsoft 文件"
-ms.custom: 
+title: sqlsrv_send_stream_data |Microsoft 文件
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
+ms.prod: sql
+ms.prod_service: connectivity
 ms.component: php
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
-ms.topic: article
-apiname: sqlsrv_send_stream_data
+ms.technology: connectivity
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
+apiname:
+- sqlsrv_send_stream_data
 apitype: NA
 helpviewer_keywords:
 - sqlsrv_send_stream_data
 - API Reference, sqlsrv_send_stream_data
 - streaming data
 ms.assetid: 826c2d45-694f-42b8-b12b-cd4523a31883
-caps.latest.revision: "32"
+caps.latest.revision: 32
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
-ms.workload: Inactive
-ms.openlocfilehash: 0fae36ffda842365145e07b6846965cdc45b6c05
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+manager: craigg
+ms.openlocfilehash: 21cc4bf8718c781cd123c191dd560e310ba8d707
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sqlsrvsendstreamdata"></a>sqlsrv_send_stream_data
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -51,7 +50,7 @@ sqlsrv_send_stream_data( resource $stmt)
 布林值：如果還有資料要傳送，則為 **true** 。 否則為 **false**。  
   
 ## <a name="example"></a>範例  
-下列範例會以資料流的形式開啟產品評論，並將其傳送至伺服器。 在執行時傳送所有資料流資料的預設行為會停用。 此範例假設本機電腦上已安裝 SQL Server 和 [AdventureWorks](http://go.microsoft.com/fwlink/?LinkID=67739) 資料庫。 從命令列執行範例時，所有輸出都會寫入至主控台。  
+下列範例會以資料流的形式開啟產品評論，並將其傳送至伺服器。 在執行時傳送所有資料流資料的預設行為會停用。 此範例假設 SQL Server 和[AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works)資料庫安裝在本機電腦上。 從命令列執行範例時，所有輸出都會寫入至主控台。  
   
 ```  
 <?php  
@@ -101,6 +100,8 @@ sqlsrv_close( $conn);
   
 ## <a name="see-also"></a>另請參閱  
 [SQLSRV 驅動程式 API 參考](../../connect/php/sqlsrv-driver-api-reference.md)  
+
 [更新資料 &#40;Microsoft Drivers for PHP for SQL Server&#41;](../../connect/php/updating-data-microsoft-drivers-for-php-for-sql-server.md)  
+
 [關於文件中的程式碼範例](../../connect/php/about-code-examples-in-the-documentation.md)  
   

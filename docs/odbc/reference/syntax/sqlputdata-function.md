@@ -1,32 +1,33 @@
 ---
-title: "SQLPutData 函數 |Microsoft 文件"
-ms.custom: 
+title: SQLPutData 函數 |Microsoft 文件
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
-ms.component: odbc
-ms.reviewer: 
+ms.prod: sql
+ms.prod_service: connectivity
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
-ms.topic: article
-apiname: SQLPutData
-apilocation: sqlsrv32.dll
+ms.technology: connectivity
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
+apiname:
+- SQLPutData
+apilocation:
+- sqlsrv32.dll
 apitype: dllExport
-f1_keywords: SQLPutData
-helpviewer_keywords: SQLPutData function [ODBC]
+f1_keywords:
+- SQLPutData
+helpviewer_keywords:
+- SQLPutData function [ODBC]
 ms.assetid: 9a60f004-1477-4c54-a20c-7378e1116713
-caps.latest.revision: "28"
+caps.latest.revision: 28
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
-ms.workload: Inactive
-ms.openlocfilehash: 6d1a3d60c2a6cd5ed19f0183ba51a5a016ccfc36
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+manager: craigg
+ms.openlocfilehash: 0e612ac7a6df03349f7cf00eb83433a86556cf8b
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sqlputdata-function"></a>SQLPutData 函數
 **一致性**  
@@ -69,7 +70,7 @@ SQLRETURN SQLPutData(
 ## <a name="diagnostics"></a>診斷  
  當**SQLPutData**會傳回 SQL_ERROR 或 SQL_SUCCESS_WITH_INFO，相關聯的 SQLSTATE 值可以藉由呼叫取得**SQLGetDiagRec**與*HandleType* SQL_ 的HANDLE_STMT 和*處理*的*StatementHandle*。 下表列出通常所傳回的 SQLSTATE 值**SQLPutData** ，並說明這個函式; 每個內容中的標記法 」 (DM) 」 之前描述的驅動程式管理員傳回的 Sqlstate。 每個 SQLSTATE 值相關聯的傳回碼是 SQL_ERROR，除非有說明，否則為。  
   
-|SQLSTATE|錯誤|描述|  
+|SQLSTATE|錯誤|Description|  
 |--------------|-----------|-----------------|  
 |01000|一般警告|特定驅動程式告知性訊息。 （函式會傳回 SQL_SUCCESS_WITH_INFO）。|  
 |01004|字串資料，右邊遭截斷|字串或二進位資料傳回輸出參數會導致非空白的字元或二進位資料為非 NULL 的截斷。 如果是字串值，它就是向右截斷。 （函式會傳回 SQL_SUCCESS_WITH_INFO）。|  
@@ -101,7 +102,7 @@ SQLRETURN SQLPutData(
  如果**SQLPutData**呼叫時傳送的 SQL 陳述式參數的資料，它會傳回任何可執行陳述式所呼叫的函式所傳回的 SQLSTATE (**SQLExecute**或**SQLExecDirect**)。 如果傳送的資料行的資料時呼叫正在更新或加入**SQLBulkOperations**或更新**SQLSetPos**，它會傳回任何可傳回的 SQLSTATE **SQLBulkOperations**或**SQLSetPos**。  
   
 ## <a name="comments"></a>註解  
- **SQLPutData**提供兩種用途的資料在執行資料，可以呼叫： 要使用的呼叫中的參數資料**SQLExecute**或**SQLExecDirect**，或要使用的資料列時的資料行資料更新或加入呼叫**SQLBulkOperations**或更新由呼叫**SQLSetPos**。  
+ **SQLPutData**提供兩種用途的資料在執行資料，可以呼叫： 要使用的呼叫中的參數資料**SQLExecute**或**SQLExecDirect**，或在更新資料列時所要使用的資料行資料或者由呼叫加入**SQLBulkOperations**或更新由呼叫**SQLSetPos**。  
   
  當應用程式呼叫**SQLParamData**來判斷哪些資料傳送，驅動程式會傳回應用程式可以用來決定要傳送的參數資料，或可以找到資料行的資料指標。 它也會傳回 SQL_NEED_DATA，這是應用程式，則它應該呼叫的指標**SQLPutData**傳送資料。 在*DataPtr*引數**SQLPutData**，應用程式會在包含參數或資料行的實際資料的緩衝區中傳遞的指標。  
   
@@ -285,6 +286,6 @@ int main() {
 |執行已備妥的 SQL 陳述式|[SQLExecute 函式](../../../odbc/reference/syntax/sqlexecute-function.md)|  
 |傳回將資料傳送下一個參數|[SQLParamData 函式](../../../odbc/reference/syntax/sqlparamdata-function.md)|  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [ODBC 應用程式開發介面參考](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [ODBC 標頭檔](../../../odbc/reference/install/odbc-header-files.md)

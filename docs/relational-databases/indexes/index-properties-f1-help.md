@@ -1,16 +1,13 @@
 ---
-title: "索引屬性 F1 說明 | Microsoft Docs"
-ms.custom: 
+title: 索引屬性 F1 說明 | Microsoft Docs
+ms.custom: ''
 ms.date: 02/17/2017
-ms.prod: sql-non-specified
-ms.prod_service: database-engine, sql-database
-ms.service: 
-ms.component: indexes
-ms.reviewer: 
+ms.prod: sql
+ms.prod_service: table-view-index, sql-database
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- dbe-indexes
-ms.tgt_pltfrm: 
+ms.technology: table-view-index
+ms.tgt_pltfrm: ''
 ms.topic: reference
 f1_keywords:
 - sql13.swb.indexproperties.filter.f1
@@ -21,16 +18,16 @@ f1_keywords:
 - sql13.swb.indexproperties.options.f1
 - sql13.swb.indexproperties.spatial.f1
 ms.assetid: 45efd81a-3796-4b04-b0cc-f3deec94c733
-caps.latest.revision: 
-author: barbkess
-ms.author: barbkess
+caps.latest.revision: 38
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: c04983b7d37f71d7b74072b5c673fc4696ebc895
-ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: a1365d1041a9ceffe9989bb6b859cbeb9d44bd2d
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="index-properties-f1-help"></a>索引屬性 F1 說明
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -61,7 +58,7 @@ ms.lasthandoff: 02/23/2018
  顯示索引的名稱。 這個檔案對現有的索引而言是唯讀的。 建立新的索引時，請輸入索引的名稱。  
   
  **索引類型**  
- 表示索引的類型。 如果是新的索引，則表示開啟此對話方塊時所選取的索引類型。 索引可以是： **[叢集]**、 **[非叢集]**、 **[主要 XML]**、 **[次要 XML]**、 **[空間]**、 **[叢集資料行存放區]**或 **[非叢集資料行存放區]**。  
+ 表示索引的類型。 如果是新的索引，則表示開啟此對話方塊時所選取的索引類型。 索引可以是： **[叢集]**、 **[非叢集]**、 **[主要 XML]**、 **[次要 XML]**、 **[空間]**、 **[叢集資料行存放區]** 或 **[非叢集資料行存放區]**。  
   
  **注意** ：每個資料表只允許有一個叢集索引。 每個資料表只允許有一個 xVelocity 記憶體最佳化的資料行存放區索引。  
   
@@ -178,7 +175,7 @@ ms.lasthandoff: 02/23/2018
 >  此選項不適用於 XML 索引，或索引為已停用的叢集索引時亦不適用。  
   
  **設定最大平行程度**  
- 限制平行計畫執行期間要使用的處理器數目。 預設值 (0) 會使用實際可用的 CPU 數目。 將值設定為 1 會抑制平行計畫的產生；將值設定為大於 1 的數字則會限制單一查詢執行所使用的處理器最大數目。 此選項僅會在對話方塊處於 **[重建]** 或 **[重新建立]** 狀態時可用。 如需詳細資訊，請參閱 [Set the Max Degree of Parallelism Option for Optimal Performance](../../relational-databases/policy-based-management/set-the-max-degree-of-parallelism-option-for-optimal-performance.md)。  
+ 限制平行計畫執行期間要使用的處理器數目。 預設值 (0) 會使用實際可用的 CPU 數目。 將值設定為 1 會抑制平行計畫的產生；將值設定為大於 1 的數字則會限制單一查詢執行所使用的處理器最大數目。 此選項僅會在對話方塊處於 **[重建]** 或 **[重新建立]** 狀態時可用。 如需詳細資訊，請參閱 [設定平行處理原則的最大程度選項來取得最佳效能](../../relational-databases/policy-based-management/set-the-max-degree-of-parallelism-option-for-optimal-performance.md)。  
   
 > [!NOTE]  
 >  如果指定的數值大於可用的 CPU 數目，就會使用可用 CPU 的實際數目。  
@@ -227,7 +224,7 @@ ms.lasthandoff: 02/23/2018
  在最上層，如果物件涵蓋的資料格數目要比 *n*指定的數目還要多，則索引會盡量使用所需的資料格數目來提供完整的最上層鑲嵌。 在這類情況下，物件可能會收到比指定之資料格數目還要多的資料格。 在此情況下，最大數目就是最上層方格產生的資料格數目，該數目取決於 **[層級 1]** 密度。  
   
 ### <a name="grids"></a>方格  
- 此面板會顯示鑲嵌式配置之每一個層級上的方格密度。 密度會指定為 **[低]**、 **[中]**或 **[高]**。 預設值是 **[中]**。 **[低]** 代表 4x4 個方格 (16 個方格)、 **[中]** 代表 8x8 個方格 (64 個方格)，而 **[高]** 則代表 16x16 個方格 (256 個方格)。 當選擇了 **[幾何自動方格]** 或 **[地理自動方格]** 鑲嵌選項時，就無法使用這些選項。  
+ 此面板會顯示鑲嵌式配置之每一個層級上的方格密度。 密度會指定為 **[低]**、 **[中]** 或 **[高]**。 預設值是 **[中]**。 **[低]** 代表 4x4 個方格 (16 個方格)、 **[中]** 代表 8x8 個方格 (64 個方格)，而 **[高]** 則代表 16x16 個方格 (256 個方格)。 當選擇了 **[幾何自動方格]** 或 **[地理自動方格]** 鑲嵌選項時，就無法使用這些選項。  
   
  **層級 1**  
  第一層 (上層) 方格的密度。  

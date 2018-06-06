@@ -1,16 +1,14 @@
 ---
-title: "sp_add_operator (TRANSACT-SQL) |Microsoft 文件"
-ms.custom: 
+title: sp_add_operator (TRANSACT-SQL) |Microsoft 文件
+ms.custom: ''
 ms.date: 08/09/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: system-objects
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_add_operator
@@ -20,16 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_add_operator
 ms.assetid: 817cd98a-4dff-4ed8-a546-f336c144d1e0
-caps.latest.revision: 
+caps.latest.revision: 26
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 534a5b973d0d35d660a07fc85bb8c7934f13a5c5
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 3821ebe0886dd5a731e0459f3da686125c02a71c
+ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="spaddoperator-transact-sql"></a>sp_add_operator (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -62,7 +59,7 @@ sp_add_operator [ @name = ] 'name'
  [ **@name=** ] **'***name***'**  
  操作員 (通知收件者) 的名稱。 此名稱必須是唯一的而且不能包含百分比 (**%**) 字元。 *名稱*是**sysname**，沒有預設值。  
   
- [ **@enabled=** ] *enabled*  
+ [  **@enabled=** ]*啟用*  
  指出操作員目前的狀態。 *啟用*是**tinyint**，預設值是**1** （啟用）。 如果**0**，操作員未啟用，並不會收到通知。  
   
  [ **@email_address=** ] **'***email_address***'**  
@@ -96,7 +93,7 @@ sp_add_operator [ @name = ] 'name'
  [ **@sunday_pager_end_time =**] *sunday_pager_end_time*  
  之後的時間**SQLServerAgent**服務便不再將呼叫器通知給指定的操作員在星期日。 *sunday_pager_end_time*是**int**，預設值是**180000**，表示下午 6:00 必須用 HHMMSS 格式來輸入。  
   
- [ **@pager_days=** ] *pager_days*  
+ [  **@pager_days=** ] *pager_days*  
  這是一個數字，指出操作員能夠接收呼叫的天數 (遵照指定的開始/結束時間)。 *pager_days*是**tinyint**，預設值是**0**表示操作員便永遠不會收到頁面。 有效值為**0**透過**127**。 *pager_days*的計算方式是加入必要天數的個別值。 例如，從星期一到星期五是**2**+**4**+**8**+**16** + **32** = **62**。 下表列出一星期中各天的值。  
   
 |Value|描述|  
@@ -150,9 +147,9 @@ GO
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [sp_delete_operator &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-operator-transact-sql.md)   
- [sp_help_operator &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-operator-transact-sql.md)   
- [sp_update_operator &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-update-operator-transact-sql.md)   
+ [sp_delete_operator &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-operator-transact-sql.md)   
+ [sp_help_operator &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-operator-transact-sql.md)   
+ [sp_update_operator &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-update-operator-transact-sql.md)   
  [系統預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

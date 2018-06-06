@@ -1,30 +1,31 @@
 ---
-title: "BottomCount (DMX) |Microsoft 文件"
-ms.custom: 
+title: BottomCount (DMX) |Microsoft 文件
+ms.custom: ''
 ms.date: 03/02/2016
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
 ms.component: data-mining
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
-f1_keywords: BOTTOMCOUNT
-dev_langs: DMX
-helpviewer_keywords: BottomCount function
+f1_keywords:
+- BOTTOMCOUNT
+dev_langs:
+- DMX
+helpviewer_keywords:
+- BottomCount function
 ms.assetid: bbe2f1d6-c8b5-49ce-ae13-337114a50aee
-caps.latest.revision: "37"
+caps.latest.revision: 37
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: 90362587d913e70447157a353b738410122c6c38
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 6301719854c05bd6243df446a5f6f2cdfab52402
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="bottomcount-dmx"></a>BottomCount (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -65,7 +66,7 @@ SELECT (SELECT 'Women''s Mountain Shorts' as [Model]) AS [v Assoc Seq Line Items
   
  範例結果：  
   
-|[模型]|$SUPPORT|$PROBABILITY|$ADJUSTEDPROBABILITY|  
+|模型|$SUPPORT|$PROBABILITY|$ADJUSTEDPROBABILITY|  
 |-----------|--------------|------------------|--------------------------|  
 |Sport-100|4334|0.291283016|0.252695851|  
 |Water Bottle|2866|0.192620472|0.175205052|  
@@ -101,7 +102,7 @@ NATURAL PREDICTION JOIN
   
  範例結果：  
   
-|[模型]|$SUPPORT|$PROBABILITY|$ADJUSTEDPROBABILITY|  
+|模型|$SUPPORT|$PROBABILITY|$ADJUSTEDPROBABILITY|  
 |-----------|--------------|------------------|--------------------------|  
 |Road Bottle Cage|1195|0.080314537|0.077173962|  
 |Mountain Bottle Cage|1367|0.091874454|0.087780332|  
@@ -109,11 +110,11 @@ NATURAL PREDICTION JOIN
   
  **請注意**只是為了說明使用 BottomCount 提供這個範例。 根據資料集的大小而定，此查詢可能會花上很長的一段執行時間。  
   
-## <a name="see-also"></a>請參閱  
- [函式 &#40; DMX &#41;](../dmx/functions-dmx.md)   
- [一般預測函數 &#40; DMX &#41;](../dmx/general-prediction-functions-dmx.md)   
- [BottomPercent &#40; DMX &#41;](../dmx/bottompercent-dmx.md)   
- [BottomSum &#40; DMX &#41;](../dmx/bottomsum-dmx.md)   
- [TopCount &#40; DMX &#41;](../dmx/topcount-dmx.md)  
+## <a name="see-also"></a>另請參閱  
+ [函式&#40;DMX&#41;](../dmx/functions-dmx.md)   
+ [一般預測函數&#40;DMX&#41;](../dmx/general-prediction-functions-dmx.md)   
+ [BottomPercent &#40;DMX&#41;](../dmx/bottompercent-dmx.md)   
+ [BottomSum &#40;DMX&#41;](../dmx/bottomsum-dmx.md)   
+ [TopCount &#40;DMX&#41;](../dmx/topcount-dmx.md)  
   
   

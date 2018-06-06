@@ -1,16 +1,14 @@
 ---
-title: "sys.sp_cdc_get_ddl_history (TRANSACT-SQL) |Microsoft 文件"
-ms.custom: 
+title: sys.sp_cdc_get_ddl_history (TRANSACT-SQL) |Microsoft 文件
+ms.custom: ''
 ms.date: 03/15/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: system-objects
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_cdc_get_ddl_history
@@ -24,16 +22,15 @@ helpviewer_keywords:
 - sp_cdc_get_ddl_history
 - sys.sp_cdc_get_ddl_history
 ms.assetid: 4dee5e2e-d7e5-4fea-8037-a4c05c969b3a
-caps.latest.revision: 
+caps.latest.revision: 21
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 47c7d92dc4abcc05d056102e7020b61196aac068
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 2cafbdcab4ad480493181cc7b2f6b160e34ea681
+ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="sysspcdcgetddlhistory-transact-sql"></a>sys.sp_cdc_get_ddl_history (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -91,7 +88,7 @@ EXECUTE sys.sp_cdc_get_ddl_history
 GO  
 ```  
   
-## <a name="see-also"></a>請參閱  
- [sys.sp_cdc_help_change_data_capture &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-help-change-data-capture-transact-sql.md)  
+## <a name="see-also"></a>另請參閱  
+ [sys.sp_cdc_help_change_data_capture &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-help-change-data-capture-transact-sql.md)  
   
   

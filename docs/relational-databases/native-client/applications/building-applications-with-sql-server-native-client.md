@@ -1,15 +1,14 @@
 ---
-title: "SQL Server Native Client 使用建置應用程式 |Microsoft 文件"
-ms.custom: 
+title: SQL Server Native Client 使用建置應用程式 |Microsoft 文件
+ms.custom: ''
 ms.date: 03/16/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
 ms.component: native-client|applications
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - data access [SQL Server Native Client], building applications
@@ -17,16 +16,17 @@ helpviewer_keywords:
 - applications [SQL Server Native Client]
 - SQL Server Native Client, building applications
 ms.assetid: 254a2b48-f0e3-43b5-a48d-3d666c2a779f
-caps.latest.revision: 
+caps.latest.revision: 21
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 834eb3d75a973b46255d690a504c2a3d17a68c48
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 7f05a62a79bb0773563d29a053f3221b10f6d931
+ms.sourcegitcommit: 2d93cd115f52bf3eff3069f28ea866232b4f9f9e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34708236"
 ---
 # <a name="building-applications-with-sql-server-native-client"></a>使用 SQL Server Native Client 建立應用程式
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -44,13 +44,13 @@ ms.lasthandoff: 01/25/2018
  [搭配 SQL Server Native Client 使用連接字串關鍵字](../../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md)  
  討論當透過 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 連接到資料庫時，可以使用之各種類型的連接字串。  
   
- [使用 SQL Server Native Client 標頭和程式庫檔案](../../../relational-databases/native-client/applications/using-the-sql-server-native-client-header-and-library-files.md)  
+ [使用 SQL Server Native Client 標頭檔與程式庫檔案](../../../relational-databases/native-client/applications/using-the-sql-server-native-client-header-and-library-files.md)  
  討論如何在應用程式內使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 標頭檔和程式庫檔案。  
   
- [SQL Server Native Client 來從 MDAC 將應用程式更新](../../../relational-databases/native-client/applications/updating-an-application-to-sql-server-native-client-from-mdac.md)  
+ [從 MDAC 將應用程式更新至 SQL Server Native Client](../../../relational-databases/native-client/applications/updating-an-application-to-sql-server-native-client-from-mdac.md)  
  討論 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 與 MDAC 之間的差異以及從 MDAC 升級到 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 時所應該考量的問題。  
   
- [從 SQL Server 2005 Native Client 將應用程式更新](../../../relational-databases/native-client/applications/updating-an-application-from-sql-server-2005-native-client.md)  
+ [從 SQL Server 2005 Native Client 更新應用程式](../../../relational-databases/native-client/applications/updating-an-application-from-sql-server-2005-native-client.md)  
  討論從 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] Native Client 升級到 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 中的 [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] Native Client 時所應該考量的問題。  
   
  [使用 ADO 搭配 SQL Server Native Client](../../../relational-databases/native-client/applications/using-ado-with-sql-server-native-client.md)  

@@ -1,33 +1,32 @@
 ---
-title: "sqlsrv_fetch |Microsoft 文件"
-ms.custom: 
+title: sqlsrv_fetch |Microsoft 文件
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
+ms.prod: sql
+ms.prod_service: connectivity
 ms.component: php
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
-ms.topic: article
-apiname: sqlsrv_fetch
+ms.technology: connectivity
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
+apiname:
+- sqlsrv_fetch
 apitype: NA
 helpviewer_keywords:
 - sqlsrv_fetch
 - API Reference, sqlsrv_fetch
 - retrieving data, as a single field
 ms.assetid: a5a640a1-6e7d-452e-8b66-850a4dc2ce89
-caps.latest.revision: "39"
+caps.latest.revision: 39
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
-ms.workload: Inactive
-ms.openlocfilehash: f9e7e835dbc1033fc5351f6a7af161c8ca021026
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+manager: craigg
+ms.openlocfilehash: 02863009306b2ababf541163e6bfbf99c5ec60c2
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sqlsrvfetch"></a>sqlsrv_fetch
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -69,7 +68,7 @@ sqlsrv_fetch( resource $stmt[, row[, ]offset])
 如果已成功擷取結果集的下一個資料列，將會傳回 **true** 。 如果結果集內已沒有其他結果，則會傳回 **Null** 。 如果發生錯誤，將會傳回 **false** 。  
   
 ## <a name="example"></a>範例  
-下列範例會使用 **sqlsrv_fetch** 來擷取包含產品評論和評論者名稱的資料列。 若要從結果集中，擷取資料[sqlsrv_get_field](../../connect/php/sqlsrv-get-field.md)用。 此範例假設本機電腦上已安裝 SQL Server 和 [AdventureWorks](http://go.microsoft.com/fwlink/?LinkID=67739) 資料庫。 從命令列執行範例時，所有輸出都會寫入至主控台。  
+下列範例會使用 **sqlsrv_fetch** 來擷取包含產品評論和評論者名稱的資料列。 若要從結果集中，擷取資料[sqlsrv_get_field](../../connect/php/sqlsrv-get-field.md)用。 此範例假設 SQL Server 和[AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works)資料庫安裝在本機電腦上。 從命令列執行範例時，所有輸出都會寫入至主控台。  
   
 ```  
 <?php  
@@ -129,6 +128,8 @@ sqlsrv_close( $conn);
   
 ## <a name="see-also"></a>另請參閱  
 [擷取資料](../../connect/php/retrieving-data.md)  
+
 [SQLSRV 驅動程式 API 參考](../../connect/php/sqlsrv-driver-api-reference.md)  
+
 [關於文件中的程式碼範例](../../connect/php/about-code-examples-in-the-documentation.md)  
   

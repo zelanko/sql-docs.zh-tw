@@ -1,16 +1,14 @@
 ---
-title: "managed_backup.fn_backup_db_config (TRANSACT-SQL) |Microsoft 文件"
-ms.custom: 
+title: managed_backup.fn_backup_db_config (TRANSACT-SQL) |Microsoft 文件
+ms.custom: ''
 ms.date: 06/10/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
 ms.component: system-functions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: system-objects
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - smart_admin.fn_backup_db_config
@@ -23,16 +21,15 @@ helpviewer_keywords:
 - smart_admin.fn_backup_db_config
 - fn_backup_db_config
 ms.assetid: 7c755d8a-64dd-44b2-be5e-735d30758900
-caps.latest.revision: 
+caps.latest.revision: 14
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: d18a24bdf8021fd27df0ec51e4937e80ae9c0516
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 5c4e752c1d8c88a4b0f9dadc129213a6f2ac8951
+ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="managedbackupfnbackupdbconfig-transact-sql"></a>managed_backup.fn_backup_db_config (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -63,8 +60,8 @@ managed_backup.fn_backup_db_config (‘database_name’ | ‘’ | NULL)
 |is_dropped|BIT|值 1 表示這是已卸除的資料庫。|  
 |credential_name|SYSNAME|用來驗證儲存體帳戶之 SQL 認證的名稱。 NULL 值表示未設定 SQL 認證。|  
 |retention_days|INT|目前的保留期限 (以天為單位)。 NULL 值表示從未設定此資料庫的[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]。|  
-|is_smart_backup_enabled|INT|指出目前是否已啟用此資料庫的[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]。 值 1 表示目前已啟用[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]，值 0 表示已停用此資料庫的[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]。|  
-|storage_url|NVARCHAR(1024)|儲存體帳戶的 URL。|  
+|is_managed_backup_enabled|INT|指出目前是否已啟用此資料庫的[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]。 值 1 表示目前已啟用[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]，值 0 表示已停用此資料庫的[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]。|  
+|storage_url|NVARCHAR （1024)|儲存體帳戶的 URL。|  
 |Encryption_algorithm|NCHAR(20)|傳回加密備份時所使用的目前加密演算法。|  
 |Encryptor_type|NCHAR(15)|傳回加密程式設定：憑證或非對稱金鑰。|  
 |Encryptor_name|NCHAR(max_length_of_cert/asymm_key_name)|憑證或非對稱金鑰的名稱。|  

@@ -1,31 +1,23 @@
 ---
-title: Set-PowerPivotSystemService cmdlet | Microsoft Docs
-ms.custom: 
-ms.date: 03/01/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+title: Set-powerpivotsystemservice 指令程式 |Microsoft 文件
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: powershell
 ms.topic: reference
-ms.assetid: f6ef197b-3d74-4339-ae73-8a7c1eaf0e91
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: fc15f310355b3ecaab626600c14ee27905d250a5
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 2bef209b5d8f4049fa1a33050936a5ceb466cc5c
+ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="set-powerpivotsystemservice-cmdlet"></a>Set-PowerPivotSystemService 指令程式
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-在伺服器陣列層級設定 PowerPivotSystemService 物件的全域屬性。  
+  在伺服器陣列層級設定 PowerPivotSystemService 物件的全域屬性。  
 
 >[!NOTE] 
 >這份文件可能包含過時的資訊和範例。 使用 Get-help cmdlet 取得最新。
@@ -65,7 +57,7 @@ Set-PowerPivotSystemService [-Identity <PowerPivotMidTierServicePipeBind>] [-Upd
 |接受管線輸入？|false|  
 |接受萬用字元？|false|  
   
-### <a name="-workbookupgradeondatarefresh-boolean"></a>-WorkbookUpgradeOnDataRefresh \<boolean>  
+### <a name="-workbookupgradeondatarefresh-boolean"></a>-WorkbookUpgradeOnDataRefresh\<布林值 >  
  可在開始進行伺服器上排定之資料重新整理時，用來自動升級 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 活頁簿。 只有符合伺服器目前版本的活頁簿才支援資料重新整理。 如果啟用此屬性，活頁簿將自動升級，以便繼續該資料重新整理。 此屬性是在伺服器執行個體層級上設定。 您不能為特定活頁簿、文件庫、網站或使用者變更它。  
   
 |||  
@@ -76,7 +68,7 @@ Set-PowerPivotSystemService [-Identity <PowerPivotMidTierServicePipeBind>] [-Upd
 |接受管線輸入？|false|  
 |接受萬用字元？|false|  
   
-### <a name="-directtcpconnections-boolean"></a>-DirectTCPConnections \<boolean>  
+### <a name="-directtcpconnections-boolean"></a>-DirectTCPConnections\<布林值 >  
  指定 Excel Services 將所有查詢直接傳送至載入 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 資料庫的 SQL Server Analysis Services (POWERPIVOT) 執行個體，略過通常在每個查詢要求傳送至 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 資料庫時都會使用的 MSOLAP 資料提供者和通道傳輸。  
   
  設定此參數，可更有效率地連接到載入的資料庫，改進 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 查詢的效能和延展性。 請注意，此參數不會變更初始載入要求如何配置的行為。 其他參數如 -RoundRobinAllocation 和 -HealthBasedAllocation 等不受影響 (其用於在伺服器陣列中多個 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint 執行個體之間配置資料庫載入要求)，因為 -DirectTCPConnections 只套用至載入資料庫之後發出的查詢。  
@@ -91,7 +83,7 @@ Set-PowerPivotSystemService [-Identity <PowerPivotMidTierServicePipeBind>] [-Upd
 |接受管線輸入？|false|  
 |接受萬用字元？|false|  
   
-### <a name="-confirm-switch"></a>-Confirm \<switch>  
+### <a name="-confirm-switch"></a>確認\<切換 >  
  在執行命令之前提示您確認。 此值預設是啟用的。 若要在命令中略過確認回應，請在命令上指定 Confirm:$false。  
   
 |||  
@@ -102,7 +94,7 @@ Set-PowerPivotSystemService [-Identity <PowerPivotMidTierServicePipeBind>] [-Upd
 |接受管線輸入？|false|  
 |接受萬用字元？|false|  
   
-### <a name="commonparameters"></a>\<CommonParameters>  
+### <a name="commonparameters"></a>\<一般參數 >  
  這個指令程式支援一般參數：Verbose、Debug、ErrorAction、ErrorVariable、WarningAction、WarningVariable、OutBuffer 和 OutVariable。 如需詳細資訊，請參閱 [About_CommonParameters](http://go.microsoft.com/fwlink/?linkID=227825)。  
   
 ## <a name="inputs-and-outputs"></a>輸入和輸出  

@@ -1,32 +1,33 @@
 ---
-title: "SQLSetStmtAttr 函數 |Microsoft 文件"
-ms.custom: 
+title: SQLSetStmtAttr 函數 |Microsoft 文件
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
-ms.component: odbc
-ms.reviewer: 
+ms.prod: sql
+ms.prod_service: connectivity
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
-ms.topic: article
-apiname: SQLSetStmtAttr
-apilocation: sqlsrv32.dll
+ms.technology: connectivity
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
+apiname:
+- SQLSetStmtAttr
+apilocation:
+- sqlsrv32.dll
 apitype: dllExport
-f1_keywords: SQLSetStmtAttr
-helpviewer_keywords: SQLSetStmtAttr function [ODBC]
+f1_keywords:
+- SQLSetStmtAttr
+helpviewer_keywords:
+- SQLSetStmtAttr function [ODBC]
 ms.assetid: 7abc5260-733a-48d4-9974-2d1a6a9ea5f6
-caps.latest.revision: "32"
+caps.latest.revision: 32
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
-ms.workload: On Demand
-ms.openlocfilehash: be7fb7064f3e6508b481011ed2aa05068542cef9
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+manager: craigg
+ms.openlocfilehash: c41627051400b5b69573023b1bd20bf230ee2f86
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sqlsetstmtattr-function"></a>SQLSetStmtAttr 函數
 **一致性**  
@@ -36,7 +37,7 @@ ms.lasthandoff: 12/21/2017
  **SQLSetStmtAttr**設定相關的陳述式的屬性。  
   
 > [!NOTE]  
->  如需有關什麼驅動程式管理員會對應到此函式時 ODBC 3*.x*應用程式使用 ODBC 2*.x*驅動程式，請參閱[向後的對應取代函式應用程式的相容性](../../../odbc/reference/develop-app/mapping-replacement-functions-for-backward-compatibility-of-applications.md)。  
+>  如需有關什麼驅動程式管理員會對應到此函式時 ODBC 3 *.x*應用程式使用 ODBC 2 *.x*驅動程式，請參閱[向後的對應取代函式應用程式的相容性](../../../odbc/reference/develop-app/mapping-replacement-functions-for-backward-compatibility-of-applications.md)。  
   
 ## <a name="syntax"></a>語法  
   
@@ -53,7 +54,7 @@ SQLRETURN SQLSetStmtAttr(
  *StatementHandle*  
  [輸入]陳述式控制代碼。  
   
- *Attribute*  
+ *屬性*  
  [輸入]選項可用來設定，列在 [意見]。  
   
  *ValuePtr*  
@@ -77,7 +78,7 @@ SQLRETURN SQLSetStmtAttr(
   
  如果*屬性*引數是驅動程式專屬值*ValuePtr*可能是帶正負號的整數。  
   
- *StringLength*  
+ *stringLength*  
  [輸入]如果*屬性*是 ODBC 定義的屬性和*ValuePtr*指向字元字串或二進位的緩衝區，這個引數應該是長度\* *ValuePtr*. 如果*屬性*是 ODBC 定義的屬性和*ValuePtr*是整數， *StringLength*會被忽略。  
   
  如果*屬性*是驅動程式定義的屬性，應用程式設定指出屬性給驅動程式管理員性質*StringLength*引數。 *StringLength*可以是下列值：  
@@ -96,10 +97,10 @@ SQLRETURN SQLSetStmtAttr(
 ## <a name="diagnostics"></a>診斷  
  當**SQLSetStmtAttr**會傳回 SQL_ERROR 或 SQL_SUCCESS_WITH_INFO，相關聯的 SQLSTATE 值可能會取得藉由呼叫**SQLGetDiagRec**與*HandleType*的 SQL_HANDLE_STMT 和*處理*的*StatementHandle*。 下表列出通常所傳回的 SQLSTATE 值**SQLSetStmtAttr** ，並說明這個函式; 每個內容中的標記法 」 (DM) 」 之前描述的驅動程式管理員傳回的 Sqlstate。 每個 SQLSTATE 值相關聯的傳回碼是 SQL_ERROR，除非有說明，否則為。  
   
-|SQLSTATE|錯誤|描述|  
+|SQLSTATE|錯誤|Description|  
 |--------------|-----------|-----------------|  
 |01000|一般警告|特定驅動程式告知性訊息。 （函式會傳回 SQL_SUCCESS_WITH_INFO）。|  
-|01S02 的警告|選項值已變更|驅動程式不支援指定的值*ValuePtr*，或是在指定的值*ValuePtr*不實作的工作狀況，造成無效，因此驅動程式取代相似的值。 (**SQLGetStmtAttr**可以呼叫以判斷暫時替代的值。)取代值無效， *StatementHandle*直到資料指標已關閉，此時陳述式屬性會還原為先前的值。 陳述式屬性可以變更為：<br /><br /> SQL_ ATTR_CONCURRENCY SQL_ ATTR_CURSOR_TYPE SQL_ ATTR_KEYSET_SIZE SQL_ ATTR_MAX_LENGTH SQL_ ATTR_MAX_ROWS SQL_ ATTR_QUERY_TIMEOUT SQL_ATTR_ROW_ARRAY_SIZE SQL_ ATTR_SIMULATE_CURSOR<br /><br /> （函式會傳回 SQL_SUCCESS_WITH_INFO）。|  
+|01S02|選項值已變更|驅動程式不支援指定的值*ValuePtr*，或是在指定的值*ValuePtr*不實作的工作狀況，造成無效，因此驅動程式取代相似的值。 (**SQLGetStmtAttr**可以呼叫以判斷暫時替代的值。)取代值無效， *StatementHandle*直到資料指標已關閉，此時陳述式屬性會還原為先前的值。 陳述式屬性可以變更為：<br /><br /> SQL_ ATTR_CONCURRENCY SQL_ ATTR_CURSOR_TYPE SQL_ ATTR_KEYSET_SIZE SQL_ ATTR_MAX_LENGTH SQL_ ATTR_MAX_ROWS SQL_ ATTR_QUERY_TIMEOUT SQL_ATTR_ROW_ARRAY_SIZE SQL_ ATTR_SIMULATE_CURSOR<br /><br /> （函式會傳回 SQL_SUCCESS_WITH_INFO）。|  
 |08S01|通訊連結失敗|功能已完成處理之前，驅動程式和驅動程式已連線到資料來源之間的通訊連結失敗。|  
 |24000|指標狀態無效|*屬性*SQL_ATTR_CONCURRENCY、 SQL_ATTR_CURSOR_TYPE、 SQL_ATTR_SIMULATE_CURSOR 或 SQL_ATTR_USE_BOOKMARKS，且資料指標為開啟。|  
 |HY000|一般錯誤|發生錯誤，其中沒有任何特定的 SQLSTATE 和定義沒有實作特定的 SQLSTATE。 所傳回的錯誤訊息**SQLGetDiagRec**中 *\*MessageText*緩衝區描述錯誤和其原因。|  
@@ -126,10 +127,10 @@ SQLRETURN SQLSetStmtAttr(
  資訊的格式設定與*ValuePtr*取決於指定*屬性*。 **SQLSetStmtAttr**接受屬性中有兩種不同格式的資訊： 字元字串或整數值。 每個格式註屬性的描述中。 此格式適用於每個屬性中傳回的資訊**SQLGetStmtAttr**。 字元字串所指向*ValuePtr*引數的**SQLSetStmtAttr**長度為*StringLength*。  
   
 > [!NOTE]  
->  能夠在連接層級設定陳述式屬性，藉由呼叫**SQLSetConnectAttr**已被取代，在 ODBC 3*.x*。 ODBC 3*.x*應用程式應該永遠不會設定在連接層級的陳述式屬性。 ODBC 3*.x*陳述式屬性不能在連接層級，除了 SQL_ATTR_METADATA_ID 和 SQL_ATTR_ASYNC_ENABLE 」 屬性，這些連接屬性和陳述式屬性，同時也可以設定在連接層級或陳述式層級設定。  
+>  能夠在連接層級設定陳述式屬性，藉由呼叫**SQLSetConnectAttr**已被取代，在 ODBC 3 *.x*。 ODBC 3 *.x*應用程式應該永遠不會設定在連接層級的陳述式屬性。 ODBC 3 *.x*陳述式屬性不能在連接層級，除了 SQL_ATTR_METADATA_ID 和 SQL_ATTR_ASYNC_ENABLE 」 屬性，這些連接屬性和陳述式屬性，同時也可以設定在連接層級或陳述式層級設定。  
   
 > [!NOTE]  
->  ODBC 3*.x*驅動程式只需要支援這項功能，如果應使用 ODBC 2*.x*應用程式，設定 ODBC 2*.x*連接層級的陳述式選項。 如需詳細資訊，請參閱 「 設定陳述式選項在連接層級 」 下[SQLSetConnectOption 對應](../../../odbc/reference/appendixes/sqlsetconnectoption-mapping.md)中附錄 g： 驅動程式的指導方針回溯相容性。  
+>  ODBC 3 *.x*驅動程式只需要支援這項功能，如果應使用 ODBC 2 *.x*應用程式，設定 ODBC 2 *.x*連接層級的陳述式選項。 如需詳細資訊，請參閱 「 設定陳述式選項在連接層級 」 下[SQLSetConnectOption 對應](../../../odbc/reference/appendixes/sqlsetconnectoption-mapping.md)中附錄 g： 驅動程式的指導方針回溯相容性。  
   
 ## <a name="statement-attributes-that-set-descriptor-fields"></a>設定描述項欄位的陳述式屬性  
  許多陳述式屬性會對應至描述元的標頭欄位。 設定這些屬性實際上結果的描述項欄位的設定。 藉由呼叫設定欄位**SQLSetStmtAttr**而不是為**SQLSetDescField**描述項控制代碼並沒有取得函式呼叫的優點。  
@@ -161,7 +162,7 @@ SQLRETURN SQLSetStmtAttr(
 ## <a name="statement-attributes"></a>陳述式屬性  
  下列表格中會顯示目前定義的屬性和這些功能的 ODBC 版本預期更多屬性將會定義驅動程式，以善用不同的資料來源。 ODBC; 保留範圍的屬性驅動程式開發人員必須保留自己從開啟 群組的特定驅動程式使用的值。 如需詳細資訊，請參閱[驅動程式特定資料類型，描述元類型、 資訊類型、 診斷的型別，以及屬性](../../../odbc/reference/develop-app/driver-specific-data-types-descriptor-information-diagnostic.md)。  
   
-|attribute|*ValuePtr*內容|  
+|Attribute|*ValuePtr*內容|  
 |---------------|-------------------------|  
 |SQL_ATTR_APP_PARAM_DESC (ODBC 3.0)|APD 中的後續呼叫的控制代碼**SQLExecute**和**SQLExecDirect**陳述式控制代碼上。 這個屬性的初始值會是一開始會配置陳述式時，隱含地配置描述項。 如果這個屬性的值設為 SQL_NULL_DESC 或原先配置描述元的控制代碼，先前的陳述式控制代碼關聯的明確配置的 APD 控制代碼分開，而且陳述式控制代碼會還原成隱含地配置 APD 控制代碼。<br /><br /> 無法將設定這個屬性，隱含地配置給另一個陳述式的描述項控制代碼或隱含地設定相同的陳述式; 的另一個描述元控制代碼隱含地配置描述項控制代碼無法與多個陳述式或描述項控制代碼相關聯。|  
 |SQL_ATTR_APP_ROW_DESC (ODBC 3.0)|針對後續的提取陳述式控制代碼上 ARD 控制代碼。 這個屬性的初始值會是一開始會配置陳述式時，隱含地配置描述項。 如果這個屬性的值設為 SQL_NULL_DESC 或原先配置描述元的控制代碼，先前的陳述式控制代碼關聯的明確配置的 ARD 控制代碼分開，而且陳述式控制代碼會還原成隱含地配置 ARD 控制代碼。<br /><br /> 無法將設定這個屬性，隱含地配置給另一個陳述式的描述項控制代碼或隱含地設定相同的陳述式; 的另一個描述元控制代碼隱含地配置描述項控制代碼無法與多個陳述式或描述項控制代碼相關聯。|  
@@ -189,16 +190,16 @@ SQLRETURN SQLSetStmtAttr(
 |SQL_ATTR_PARAMS_PROCESSED_PTR (ODBC 3.0)|SQLULEN\*資料錄欄位指向之緩衝區中要傳回的已處理，包括錯誤集的參數集的數目。 如果這是 null 指標，將會傳回沒有數字。<br /><br /> 此陳述式屬性設定 SQL_DESC_ROWS_PROCESSED_PTR 欄位 IPD 標頭中。<br /><br /> 如果呼叫**SQLExecDirect**或**SQLExecute** ，在這個屬性所指向之緩衝區的填滿不會傳回 SQL_SUCCESS 或 SQL_SUCCESS_WITH_INFO，緩衝區的內容是未定義。<br /><br /> 如需詳細資訊，請參閱[使用參數陣列](../../../odbc/reference/develop-app/using-arrays-of-parameters.md)。|  
 |SQL_ATTR_PARAMSET_SIZE (ODBC 3.0)|指定每個參數的值數目的 SQLULEN 值。 如果則 sql_attr_paramset_size 會大於 1，SQL_DESC_DATA_PTR、 SQL_DESC_INDICATOR_PTR 和 SQL_DESC_OCTET_LENGTH_PTR APD 要的點陣列。 每個陣列之基數等於這個欄位的值。<br /><br /> 沒有任何繫結的參數時，會忽略此屬性。<br /><br /> 如需詳細資訊，請參閱[使用參數陣列](../../../odbc/reference/develop-app/using-arrays-of-parameters.md)。<br /><br /> 設定此陳述式屬性設定的 SQL_DESC_ARRAY_SIZE 欄位 APD 標頭中。|  
 |SQL_ATTR_QUERY_TIMEOUT 時 (ODBC 1.0)|對應的 SQL 陳述式執行傳回至應用程式之前等待的秒數 SQLULEN 值。 如果*ValuePtr*是等於 0 （預設值），還有不會逾時。<br /><br /> 如果指定的逾時超過資料來源中的最大逾時或小於最小的逾時， **SQLSetStmtAttr**用取代該值，並傳回 SQLSTATE 01S02 （選項值已變更）。<br /><br /> 請注意，應用程式不需要呼叫**SQLCloseCursor**重複使用陳述式，如果**選取**陳述式已逾時。<br /><br /> 此陳述式屬性中設定的查詢逾時是在同步與非同步模式中有效。|  
-|SQL_ATTR_RETRIEVE_DATA (ODBC 2.0)|SQLULEN 值：<br /><br /> SQL_RD_ON = **SQLFetchScroll**和在 ODBC 3*.x*， **SQLFetch**擷取資料之後，它會將游標放到指定的位置。 這是預設值。<br /><br /> SQL_RD_OFF = **SQLFetchScroll**和在 ODBC 3*.x*， **SQLFetch**之後將游標置於不擷取資料。<br /><br /> 設定 SQL_RD_OFF SQL_RETRIEVE_DATA，應用程式可以驗證的資料列存在，或擷取的資料列的書籤，而不會造成擷取資料列的負擔。 如需詳細資訊，請參閱[捲動和提取資料列](../../../odbc/reference/develop-app/scrolling-and-fetching-rows-odbc.md)。<br /><br /> 這個屬性的值可以設定上開啟的資料指標。不過，設定可能不會立即生效，在這種情況下，驅動程式會傳回 SQLSTATE 01S02 （選項值已變更） 和重設為其原始值的屬性。|  
+|SQL_ATTR_RETRIEVE_DATA (ODBC 2.0)|SQLULEN 值：<br /><br /> SQL_RD_ON = **SQLFetchScroll**和在 ODBC 3 *.x*， **SQLFetch**擷取資料之後，它會將游標放到指定的位置。 這是預設值。<br /><br /> SQL_RD_OFF = **SQLFetchScroll**和在 ODBC 3 *.x*， **SQLFetch**之後將游標置於不擷取資料。<br /><br /> 設定 SQL_RD_OFF SQL_RETRIEVE_DATA，應用程式可以驗證的資料列存在，或擷取的資料列的書籤，而不會造成擷取資料列的負擔。 如需詳細資訊，請參閱[捲動和提取資料列](../../../odbc/reference/develop-app/scrolling-and-fetching-rows-odbc.md)。<br /><br /> 這個屬性的值可以設定上開啟的資料指標。不過，設定可能不會立即生效，在這種情況下，驅動程式會傳回 SQLSTATE 01S02 （選項值已變更） 和重設為其原始值的屬性。|  
 |SQL_ATTR_ROW_ARRAY_SIZE (ODBC 3.0)|指定每次呼叫所傳回的資料列數目的 SQLULEN 值**SQLFetch**或**SQLFetchScroll**。 它也是陣列中的書籤中用於大量書籤作業使用的資料列數目**SQLBulkOperations**。 預設值是 1。<br /><br /> 如果指定的資料列集大小超過資料來源所支援的最大資料列集大小，此驅動程式用取代該值，並傳回 SQLSTATE 01S02 （選項值已變更）。<br /><br /> 如需詳細資訊，請參閱[資料列集大小](../../../odbc/reference/develop-app/rowset-size.md)。<br /><br /> 設定此陳述式屬性設定的 SQL_DESC_ARRAY_SIZE 欄位 ARD 標頭中。|  
 |SQL_ATTR_ROW_BIND_OFFSET_PTR (ODBC 3.0)|SQLULEN * 位移新增至變更繫結的資料行的資料指標所指向的值。 如果此欄位為非 null，此驅動程式會取值指標、 將已取值的值加入至每個延遲欄位 （SQL_DESC_DATA_PTR、 SQL_DESC_INDICATOR_PTR 和 SQL_DESC_OCTET_LENGTH_PTR） 描述項記錄中並使用新的指標值繫結時。 它會設定預設為 null。<br /><br /> 此陳述式屬性設定 SQL_DESC_BIND_OFFSET_PTR 欄位 ARD 標頭中。|  
 |SQL_ATTR_ROW_BIND_TYPE (ODBC 1.0)|SQLULEN 值，這個繫結方向設定的值時使用**SQLFetch**或**SQLFetchScroll**相關的陳述式上呼叫。 資料行取向繫結會選取此值設定為 SQL_BIND_BY_COLUMN。 資料列取向繫結會選取此值設定為結構或緩衝區，其中會繫結結果資料行的執行個體的長度。<br /><br /> 如果指定的長度，則它必須包含所有繫結的資料行以及結構或緩衝區，確保當繫結的資料行的位址會隨著指定的長度，結果將會為第的相同資料行的開頭的任何填補的空間e 的下一個資料列。 當使用**sizeof**保證具有結構或等位在 ANSI C 中的運算子，這種行為。<br /><br /> 資料行取向繫結則是預設值繫結方向**SQLFetch**和**SQLFetchScroll**。<br /><br /> 如需詳細資訊，請參閱[繫結區塊資料指標搭配使用的資料行](../../../odbc/reference/develop-app/binding-columns-for-use-with-block-cursors.md)。<br /><br /> 此陳述式屬性設定 SQL_DESC_BIND_TYPE 欄位 ARD 標頭中。|  
 |SQL_ATTR_ROW_NUMBER (ODBC 2.0)|是整個結果中的目前資料列數目 SQLULEN 值設定。 如果無法判斷目前的資料列數目，或目前沒有資料列，則驅動程式會傳回 0。<br /><br /> 這個屬性可以擷取由呼叫**SQLGetStmtAttr**但未設定呼叫**SQLSetStmtAttr**。|  
 |SQL_ATTR_ROW_OPERATION_PTR (ODBC 3.0)|SQLUSMALLINT\*值指向 SQLUSMALLINT 值的陣列，用來使用大量作業期間忽略的資料列**SQLSetPos**。 每個值設定為 SQL_ROW_PROCEED （適用於大量作業中包含的資料列） 或 SQL_ROW_IGNORE （適用於大量作業要排除的資料列）。 (不忽略資料列，藉由呼叫期間使用這個陣列**SQLBulkOperations**。)<br /><br /> 此陳述式屬性可以將 null 指標，驅動程式的情況下不會傳回資料列狀態的值。 這個屬性可以設定在任何時間，但不是會使用新的值必須等到下次**SQLSetPos**呼叫。<br /><br /> 如需詳細資訊，請參閱[更新 SQLSetPos 與資料列集中的資料列](../../../odbc/reference/develop-app/updating-rows-in-the-rowset-with-sqlsetpos.md)和[SQLSetPos 與資料列集刪除資料列](../../../odbc/reference/develop-app/deleting-rows-in-the-rowset-with-sqlsetpos.md)。<br /><br /> 此陳述式屬性設定 SQL_DESC_ARRAY_STATUS_PTR 欄位中 ARD。|  
-|SQL_ATTR_ROW_STATUS_PTR (ODBC 3.0)|SQLUSMALLINT \* SQLUSMALLINT 陣列所指向的值之後呼叫值包含資料列狀態值**SQLFetch**或**SQLFetchScroll**。 陣列中有資料列集內有資料列的元素。<br /><br /> 此陳述式屬性可以將 null 指標，驅動程式的情況下不會傳回資料列狀態的值。 這個屬性可以設定在任何時間，但不是會使用新的值必須等到下次**SQLBulkOperations**， **SQLFetch**， **SQLFetchScroll**，或**SQLSetPos**呼叫。<br /><br /> 如需詳細資訊，請參閱[編號的擷取資料列和狀態](../../../odbc/reference/develop-app/number-of-rows-fetched-and-status.md)。<br /><br /> 此陳述式屬性設定 SQL_DESC_ARRAY_STATUS_PTR 欄位 IRD 標頭中。<br /><br /> 這個屬性由 ODBC 2 對應*.x*驅動程式新增至*rgbRowStatus*的呼叫中的陣列**SQLExtendedFetch**。|  
+|SQL_ATTR_ROW_STATUS_PTR (ODBC 3.0)|SQLUSMALLINT \* SQLUSMALLINT 陣列所指向的值之後呼叫值包含資料列狀態值**SQLFetch**或**SQLFetchScroll**。 陣列中有資料列集內有資料列的元素。<br /><br /> 此陳述式屬性可以將 null 指標，驅動程式的情況下不會傳回資料列狀態的值。 這個屬性可以設定在任何時間，但不是會使用新的值必須等到下次**SQLBulkOperations**， **SQLFetch**， **SQLFetchScroll**，或**SQLSetPos**呼叫。<br /><br /> 如需詳細資訊，請參閱[編號的擷取資料列和狀態](../../../odbc/reference/develop-app/number-of-rows-fetched-and-status.md)。<br /><br /> 此陳述式屬性設定 SQL_DESC_ARRAY_STATUS_PTR 欄位 IRD 標頭中。<br /><br /> 這個屬性由 ODBC 2 對應 *.x*驅動程式新增至*rgbRowStatus*的呼叫中的陣列**SQLExtendedFetch**。|  
 |SQL_ATTR_ROWS_FETCHED_PTR (ODBC 3.0)|SQLULEN\*值指向的緩衝區中要傳回其呼叫之後擷取的資料列數目， **SQLFetch**或**SQLFetchScroll**; 執行的大量作業所影響的資料列數目藉由呼叫**SQLSetPos**與*作業*SQL_REFRESH; 或由執行大量作業所影響的資料列數目的引數**SQLBulkOperations**. 這個數目包括錯誤資料列。<br /><br /> 如需詳細資訊，請參閱[編號的擷取資料列和狀態](../../../odbc/reference/develop-app/number-of-rows-fetched-and-status.md)。<br /><br /> 此陳述式屬性設定 SQL_DESC_ROWS_PROCESSED_PTR 欄位 IRD 標頭中。<br /><br /> 如果呼叫**SQLFetch**或**SQLFetchScroll** ，在這個屬性所指向之緩衝區的填滿不會傳回 SQL_SUCCESS 或 SQL_SUCCESS_WITH_INFO，緩衝區的內容是未定義。|  
 |SQL_ATTR_SIMULATE_CURSOR (ODBC 2.0)|指定驅動程式的模擬定位的 update 和 delete 陳述式是否保證，這類陳述式會影響只有一個單一資料列的 SQLULEN 值。<br /><br /> 若要模擬定位的 update 和 delete 陳述式，大多數的驅動程式建構搜尋**更新**或**刪除**陳述式包含**其中**指定子句目前的資料列中每個資料行的值。 這些資料行組成的唯一索引鍵，除非這類陳述式可能會影響多個資料列。<br /><br /> 若要保證，這類陳述式會影響只有一個資料列，驅動程式會判斷唯一索引鍵中的資料行，並將這些資料行加入至結果集。 如果應用程式可保證結果集中的資料行組成的唯一索引鍵時，若要這樣做不需要的驅動程式。 這可能會降低執行時間。<br /><br /> SQL_SC_NON_UNIQUE = 驅動程式並不保證模擬定位更新或 delete 陳述式將會影響只有一個資料列。是應用程式的責任，若要這樣做。 如果陳述式會影響多個資料列， **SQLExecute**， **SQLExecDirect**，或**SQLSetPos**傳回 SQLSTATE 01001 （資料指標作業衝突）。<br /><br /> SQL_SC_TRY_UNIQUE = 則驅動程式會嘗試保證，模擬定位更新或刪除陳述式會影響只有一個資料列。 驅動程式一律會執行這類陳述式，即使它們可能會影響多個資料列，例如當沒有唯一索引鍵。 如果陳述式會影響多個資料列， **SQLExecute**， **SQLExecDirect**，或**SQLSetPos**傳回 SQLSTATE 01001 （資料指標作業衝突）。<br /><br /> SQL_SC_UNIQUE = 驅動程式可確保模擬定位的更新或刪除陳述式會影響只有一個資料列。 如果驅動程式指定的陳述式中，無法保證此**SQLExecDirect**或**SQLPrepare**會傳回錯誤。<br /><br /> 如果資料來源提供原生 SQL 支援定位的 update 和 delete 陳述式和驅動程式不會模擬資料指標，SQL_SC_UNIQUE 為 SQL_SIMULATE_CURSOR 要求時，會傳回 SQL_SUCCESS。 如果要求 SQL_SC_TRY_UNIQUE 或 SQL_SC_NON_UNIQUE 時，會傳回 SQL_SUCCESS_WITH_INFO。 如果資料來源提供的支援 SQL_SC_TRY_UNIQUE 層級，並在驅動程式不會傳回 SQL_SUCCESS，SQL_SC_TRY_UNIQUE 和 SQL_SUCCESS_WITH_INFO 會傳回如 SQL_SC_NON_UNIQUE。<br /><br /> 如果資料來源不支援指定的資料指標模擬類型，驅動程式會替代不同的模擬類型，並傳回 SQLSTATE 01S02 （選項值已變更）。 對於 SQL_SC_UNIQUE，驅動程式取代，在 SQL_SC_TRY_UNIQUE 或 SQL_SC_NON_UNIQUE 的順序。 對於 SQL_SC_TRY_UNIQUE，驅動程式會取代 SQL_SC_NON_UNIQUE。<br /><br /> 預設為 SQL_SC_UNIQUE。<br /><br /> 如需詳細資訊，請參閱[模擬定位的更新和刪除陳述式](../../../odbc/reference/develop-app/simulating-positioned-update-and-delete-statements.md)。|  
-|SQL_ATTR_USE_BOOKMARKS (ODBC 2.0)|指定應用程式是否會使用與資料指標的書籤 SQLULEN 值：<br /><br /> SQL_UB_OFF = Off （預設值）<br /><br /> SQL_UB_VARIABLE = 應用程式將會與資料指標中，使用書籤和驅動程式會提供可變長度的書籤，並支援。 在 ODBC 3 已被取代 SQL_UB_FIXED*.x*。 ODBC 3*.x*應用程式應該一律使用可變長度的書籤，即使在使用 ODBC 2*.x*驅動程式 （可支援只有 4 個位元組，固定長度的書籤）。 這是因為固定長度的書籤是只可變長度的書籤的特殊案例。 使用 ODBC 2 時*.x*驅動程式，驅動程式管理員就會將 SQL_UB_VARIABLE 對應至 SQL_UB_FIXED。<br /><br /> 若要使用與資料指標的書籤，應用程式必須 SQL_UB_VARIABLE 值指定此屬性之前開啟資料指標。<br /><br /> 如需詳細資訊，請參閱[擷取書籤](../../../odbc/reference/develop-app/retrieving-bookmarks.md)。|  
+|SQL_ATTR_USE_BOOKMARKS (ODBC 2.0)|指定應用程式是否會使用與資料指標的書籤 SQLULEN 值：<br /><br /> SQL_UB_OFF = Off （預設值）<br /><br /> SQL_UB_VARIABLE = 應用程式將會與資料指標中，使用書籤和驅動程式會提供可變長度的書籤，並支援。 在 ODBC 3 已被取代 SQL_UB_FIXED *.x*。 ODBC 3 *.x*應用程式應該一律使用可變長度的書籤，即使在使用 ODBC 2 *.x*驅動程式 （可支援只有 4 個位元組，固定長度的書籤）。 這是因為固定長度的書籤是只可變長度的書籤的特殊案例。 使用 ODBC 2 時 *.x*驅動程式，驅動程式管理員就會將 SQL_UB_VARIABLE 對應至 SQL_UB_FIXED。<br /><br /> 若要使用與資料指標的書籤，應用程式必須 SQL_UB_VARIABLE 值指定此屬性之前開啟資料指標。<br /><br /> 如需詳細資訊，請參閱[擷取書籤](../../../odbc/reference/develop-app/retrieving-bookmarks.md)。|  
   
  [1] 這些函式可以非同步方式呼叫，只有當描述元是實作描述項，不應用程式的描述項。  
   
@@ -214,6 +215,6 @@ SQLRETURN SQLSetStmtAttr(
 |設定連接屬性|[SQLSetConnectAttr 函式](../../../odbc/reference/syntax/sqlsetconnectattr-function.md)|  
 |設定的單一欄位的描述元|[SQLSetDescField 函式](../../../odbc/reference/syntax/sqlsetdescfield-function.md)|  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [ODBC 應用程式開發介面參考](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [ODBC 標頭檔](../../../odbc/reference/install/odbc-header-files.md)

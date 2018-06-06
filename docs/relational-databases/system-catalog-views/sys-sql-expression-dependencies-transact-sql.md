@@ -1,16 +1,14 @@
 ---
-title: "sys.sql_expression_dependencies (TRANSACT-SQL) |Microsoft 文件"
-ms.custom: 
+title: sys.sql_expression_dependencies (TRANSACT-SQL) |Microsoft 文件
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-data-warehouse, pdw
-ms.service: 
 ms.component: system-catalog-views
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: system-objects
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.sql_expression_dependencies
@@ -22,23 +20,23 @@ dev_langs:
 helpviewer_keywords:
 - sys.sql_expression_dependencies catalog view
 ms.assetid: 78a218e4-bf99-4a6a-acbf-ff82425a5946
-caps.latest.revision: 
+caps.latest.revision: 42
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 099229e10b875d738e970d8f2c4a0c9ac3e7b5e6
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: cc3d777c55d7591f880317bc0f9d701b0cb59ad0
+ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="syssqlexpressiondependencies-transact-sql"></a>sys.sql_expression_dependencies (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
 
   針對在目前資料庫中使用者自訂實體的每個依據名稱相依性，各包含一個資料列。 這包括原生編譯純量使用者定義函數和其他的之間的相依性[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]模組。 一個實體，呼叫時，會建立兩個實體之間的相依性*受參考實體*，會出現在另一個實體，稱為的保存 SQL 運算式中依名稱*參考實體*。 例如，在某個檢視的定義中參考資料表時，該檢視 (參考實體) 就會相依於資料表 (受參考的實體)。 如果資料表遭卸除，檢視便無法使用。  
   
- 如需詳細資訊，請參閱[記憶體內部 OLTP 的純量使用者定義函式](../../relational-databases/in-memory-oltp/scalar-user-defined-functions-for-in-memory-oltp.md)。  
+ 如需詳細資訊，請參閱[記憶體內部 OLTP 的純量使用者定義函數](../../relational-databases/in-memory-oltp/scalar-user-defined-functions-for-in-memory-oltp.md)。  
   
  您可以使用這個目錄檢視來報告下列實體的相依性資訊：  
   
@@ -57,11 +55,11 @@ ms.lasthandoff: 11/21/2017
 |referencing_id|**int**|參考實體的識別碼。 不可為 Null。|  
 |referencing_minor_id|**int**|當參考實體是資料行時，就是資料行識別碼，否則便是 0。 不可為 Null。|  
 |referencing_class|**tinyint**|參考實體的類別。<br /><br /> 1 = 物件或資料行<br /><br /> 12 = 資料庫 DDL 觸發程序<br /><br /> 13 = 伺服器 DDL 觸發程序<br /><br /> 不可為 Null。|  
-|referencing_class_desc|**nvarchar （60)**|參考實體之類別的描述。<br /><br /> OBJECT_OR_COLUMN<br /><br /> DATABASE_DDL_TRIGGER<br /><br /> SERVER_DDL_TRIGGER<br /><br /> 不可為 Null。|  
+|referencing_class_desc|**nvarchar(60)**|參考實體之類別的描述。<br /><br /> OBJECT_OR_COLUMN<br /><br /> DATABASE_DDL_TRIGGER<br /><br /> SERVER_DDL_TRIGGER<br /><br /> 不可為 Null。|  
 |is_schema_bound_reference|**bit**|1 = 受參考的實體是結構描述繫結。<br /><br /> 0 = 受參考的實體非結構描述繫結。<br /><br /> 不可為 Null。|  
 |referenced_class|**tinyint**|受參考實體的類別。<br /><br /> 1 = 物件或資料行<br /><br /> 6 = 類型<br /><br /> 10 = XML 結構描述集合<br /><br /> 21 = 資料分割函數<br /><br /> 不可為 Null。|  
-|referenced_class_desc|**nvarchar （60)**|受參考實體之類別的描述。<br /><br /> OBJECT_OR_COLUMN<br /><br /> TYPE<br /><br /> XML_SCHEMA_COLLECTION<br /><br /> PARTITION_FUNCTION<br /><br /> 不可為 Null。|  
-|referenced_server_name|**sysname**|受參考實體之伺服器的名稱。<br /><br /> 這個資料行會因透過指定有效的四部分名稱所達成的跨伺服器相依性而擴展。 多部分名稱的相關資訊，請參閱[TRANSACT-SQL 語法慣例 &#40;TRANSACT-SQL &#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).<br /><br /> 若為參考了實體的非結構描述繫結實體，但沒有指定四部分名稱，則為 NULL。<br /><br /> 結構描述繫結的實體為 NULL; 因為它們必須位於相同的資料庫，因此只能定義使用兩部分 (*schema.object*) 名稱。|  
+|referenced_class_desc|**nvarchar(60)**|受參考實體之類別的描述。<br /><br /> OBJECT_OR_COLUMN<br /><br /> TYPE<br /><br /> XML_SCHEMA_COLLECTION<br /><br /> PARTITION_FUNCTION<br /><br /> 不可為 Null。|  
+|referenced_server_name|**sysname**|受參考實體之伺服器的名稱。<br /><br /> 這個資料行會因透過指定有效的四部分名稱所達成的跨伺服器相依性而擴展。 多部分名稱的相關資訊，請參閱[TRANSACT-SQL 語法慣例&#40;TRANSACT-SQL&#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)。<br /><br /> 若為參考了實體的非結構描述繫結實體，但沒有指定四部分名稱，則為 NULL。<br /><br /> 結構描述繫結的實體為 NULL; 因為它們必須位於相同的資料庫，因此只能定義使用兩部分 (*schema.object*) 名稱。|  
 |referenced_database_name|**sysname**|受參考實體之資料庫的名稱。<br /><br /> 這個資料行會因透過指定有效的三部分或四部分名稱所達成的跨資料庫或跨伺服器參考而擴展。<br /><br /> 在使用一部分或兩部分名稱指定時，若為非結構描述繫結參考，則為 NULL。<br /><br /> 結構描述繫結的實體為 NULL; 因為它們必須位於相同的資料庫，因此只能定義使用兩部分 (*schema.object*) 名稱。|  
 |referenced_schema_name|**sysname**|受參考實體所屬的結構描述。<br /><br /> 若為參考了實體的非結構描述繫結參考，但沒有指定結構描述名稱，則為 NULL。<br /><br /> 若為結構描述繫結的參考，則永遠不會是 NULL；因為您必須使用兩部分名稱來定義和參考結構描述繫結的實體。|  
 |referenced_entity_name|**sysname**|受參考實體的名稱。 不可為 Null。|  
@@ -94,7 +92,7 @@ ms.lasthandoff: 11/21/2017
 |XML 結構描述集合|否|是|  
 |分割區函數|否|是|  
   
- \*資料表參考時，才會追蹤當做參考實體[!INCLUDE[tsql](../../includes/tsql-md.md)]模組、 使用者定義型別或定義中的計算資料行、 CHECK 條件約束或 DEFAULT 條件約束的 XML 結構描述集合。  
+ \* 資料表參考時，才會追蹤當做參考實體[!INCLUDE[tsql](../../includes/tsql-md.md)]模組、 使用者定義型別或定義中的計算資料行、 CHECK 條件約束或 DEFAULT 條件約束的 XML 結構描述集合。  
   
  ** 篩選述詞中使用的每一個資料行都會當做參考實體來追蹤。  
   
@@ -174,7 +172,7 @@ GO
   
 ```  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [sys.dm_sql_referenced_entities &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-sql-referenced-entities-transact-sql.md)   
  [sys.dm_sql_referencing_entities &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-sql-referencing-entities-transact-sql.md)  
   

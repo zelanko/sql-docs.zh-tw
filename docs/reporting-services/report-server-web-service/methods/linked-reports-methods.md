@@ -1,31 +1,30 @@
 ---
-title: "連結報表方法 | Microsoft Docs"
-ms.custom: 
+title: 連結報表方法 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
-ms.service: 
 ms.component: report-server-web-service
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 helpviewer_keywords:
 - linked reports [Reporting Services], methods
 - methods [Reporting Services], linked reports
 ms.assetid: 06941742-2c65-428e-a722-4b4dd59096a5
-caps.latest.revision: "35"
+caps.latest.revision: 35
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 079cd24c185d272d3b3b3f35222b756a6537d713
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 01cb371ad53e010fab68946d3034cc31aad7abbb
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="linked-reports-methods"></a>連結報表方法
   您可以使用這些方法來建立及管理連結項目。  

@@ -6,6 +6,11 @@
       "build_source_folder": "docs",
       "build_output_subfolder": "sql",
       "locale": "zh-tw",
+      "monikers": [],
+      "moniker_ranges": [
+        "= sql-server-2014",
+        "= azuresqldb-current || = azuresqldb-mi-current || = azure-sqldw-latest || >= aps-pdw-2016 || >= sql-analysis-services-2016 || >= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions"
+      ],
       "open_to_public_contributors": true,
       "type_mapping": {
         "Conceptual": "Content",
@@ -62,7 +67,16 @@
       }
     }
   ],
-  "branch_target_mapping": {},
+"branch_target_mapping": {
+     "live-sxs": [
+           "Publish",
+           "Pdf" 
+    ],
+    "live": [
+           "Publish",
+           "Pdf"
+    ]
+},
   "need_generate_pdf_url_template": false,
   "need_generate_pdf": false,
   "need_generate_intellisense": false,

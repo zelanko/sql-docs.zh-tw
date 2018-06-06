@@ -1,33 +1,23 @@
 ---
-title: "DISCOVER_STORAGE_TABLE_COLUMNS 資料列集 |Microsoft 文件"
-ms.custom: 
-ms.date: 03/03/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+title: DISCOVER_STORAGE_TABLE_COLUMNS 資料列集 |Microsoft 文件
+ms.date: 05/03/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: schema-rowsets
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
-ms.assetid: 24abb88e-33a9-4ae2-829d-cdef0ff22ec1
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 8a0fec3423b126a425206441543fd50679712c2f
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: dbbed22cc248f78409c2a1369bc082727be97bef
+ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="discoverstoragetablecolumns-rowset"></a>DISCOVER_STORAGE_TABLE_COLUMNS 資料列集
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
-提供在資料行層級中，有關 SharePoint 或表格式模式下執行 Analysis Services 資料庫所用儲存體資料表的資訊。  
+  提供在資料行層級中，有關 SharePoint 或表格式模式下執行 Analysis Services 資料庫所用儲存體資料表的資訊。  
   
  **適用於：** 表格式模型  
   
@@ -45,7 +35,7 @@ ms.lasthandoff: 02/15/2018
 |**COLUMN_ID**|**DBTYPE_ WSTR**||資料行的識別碼。 資料行識別碼是 xVelocity 記憶體中分析引擎 (VertiPaq) 內部的識別碼，因此，僅提供資訊之用。|  
 |**COLUMN_TYPE**|**DBTYPE_WSTR**||資料行的類型。 資料行類型是 xVelocity 記憶體中分析引擎 (VertiPaq) 內部的類型，因此，僅提供資訊之用。<br /><br /> BASIC_DATA<br /><br /> HIERARCHY_DATAID_TO_POSITION<br /><br /> HIERARCHY_POSITION_TO_DATAID<br /><br /> RELATIONSHIP|  
 |**COLUMN_ENCODING**|**DBTYPE_UI8**||表示用於資料行資料之編碼類型的整數。<br /><br /> **0**，搭配**COLUMN_TYPE**: HIERARCHY_DATAID_TO_POSITION、 HIERARCHY_POSITION_TO_DATAID、 關聯性<br /><br /> **1**，搭配**COLUMN_TYPE**: BASIC_DATA<br /><br /> **2**，搭配**COLUMN_TYPE**: BASIC_DATA|  
-|**DATATYPE**|**DBTYPE_WSTR**||資料行的資料類型。 具有下列可能的值：<br /><br /> DBTYPE_BOOL<br /><br /> DBTYPE_CY<br /><br /> DBTYPE_DATE<br /><br /> DBTYPE_I4<br /><br /> DBTYPE_I8<br /><br /> DBTYPE_R8<br /><br /> DBTYPE_WSTR<br /><br /> 해당 사항 없음|  
+|**資料類型**|**DBTYPE_WSTR**||資料行的資料類型。 具有下列可能的值：<br /><br /> DBTYPE_BOOL<br /><br /> DBTYPE_CY<br /><br /> DBTYPE_DATE<br /><br /> DBTYPE_I4<br /><br /> DBTYPE_I8<br /><br /> DBTYPE_R8<br /><br /> DBTYPE_WSTR<br /><br /> 해당 사항 없음|  
 |**ISKEY**|**DBTYPE_BOOL**||**True**如果資料行做為主要或外部索引鍵的索引鍵使用; 否則為**false**。|  
 |**ISUNIQUE**|**DBTYPE_BOOL**||**True**如果資料行中的值是唯一的否則為**false**。|  
 |**ISNULLABLE**|**DBTYPE_BOOL**||**True**如果資料行可為 null，否則為**false**。|  

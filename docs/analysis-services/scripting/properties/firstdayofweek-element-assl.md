@@ -1,36 +1,23 @@
 ---
-title: "FirstDayOfWeek 元素 (ASSL) |Microsoft 文件"
-ms.custom: 
-ms.date: 03/06/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+title: FirstDayOfWeek 元素 (ASSL) |Microsoft 文件
+ms.date: 5/8/2018
+ms.prod: sql
+ms.custom: assl
+ms.reviewer: owend
+ms.technology: analysis-services
 ms.topic: reference
-apiname: FirstDayOfWeek Element
-apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
-apitype: Schema
-applies_to: SQL Server 2016 Preview
-f1_keywords: FirstDayOfWeek
-helpviewer_keywords: FirstDayOfWeek element
-ms.assetid: d3c92fa3-b293-43b5-806e-cd1c146a3a7c
-caps.latest.revision: "28"
-author: Minewiskan
+author: minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 7d63b3f4941b19e30640cbe0781ef4079b43fb93
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 876d3d53a05ca6b0370d3c66efd9da13ae2edfab
+ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="firstdayofweek-element-assl"></a>FirstDayOfWeek 元素 (ASSL)
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]定義之當週的第一天[TimeBinding](../../../analysis-services/scripting/data-type/timebinding-data-type-assl.md)項目。  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+  定義之當週的第一天[TimeBinding](../../../analysis-services/scripting/data-type/timebinding-data-type-assl.md)項目。  
   
 ## <a name="syntax"></a>語法  
   
@@ -45,7 +32,7 @@ ms.lasthandoff: 01/08/2018
   
 ## <a name="element-characteristics"></a>元素特性  
   
-|特性|描述|  
+|特性|說明|  
 |--------------------|-----------------|  
 |資料類型和長度|整數 (介於 1 與 7 之間，其中 1 = 星期日而 7 = 星期六)|  
 |預設值|**1**|  
@@ -61,7 +48,7 @@ ms.lasthandoff: 01/08/2018
 ## <a name="remarks"></a>備註  
  對應目的父代的項目**FirstDayOfWeek**在 「 分析管理物件 (AMO) 物件模型而言， <xref:Microsoft.AnalysisServices.TimeBinding>。  
   
-## <a name="see-also"></a>請參閱  
- [屬性 &#40;ASSL &#41;](../../../analysis-services/scripting/properties/properties-assl.md)  
+## <a name="see-also"></a>另請參閱  
+ [屬性 & #40;ASSL & #41;](../../../analysis-services/scripting/properties/properties-assl.md)  
   
   

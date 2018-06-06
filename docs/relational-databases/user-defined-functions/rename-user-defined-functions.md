@@ -1,32 +1,31 @@
 ---
-title: "重新命名使用者定義函式 | Microsoft Docs"
-ms.custom: 
+title: 重新命名使用者定義函式 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/16/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
 ms.component: udf
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-udf
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: c2695a5c-9cc5-4b18-8771-53027ca9a9af
-caps.latest.revision: 
+caps.latest.revision: 7
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 19bff071242cdf7e68c7abe154a76378d9e76f90
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 1559e145230508fdc9ee05b54c6e030a7bfa356b
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="rename-user-defined-functions"></a>重新命名使用者定義函數
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
-您可以透過使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ，重新命名 [!INCLUDE[tsql](../../includes/tsql-md.md)]中的使用者定義函數。  
+  您可以透過使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ，重新命名 [!INCLUDE[tsql](../../includes/tsql-md.md)]中的使用者定義函數。  
   
  **本主題內容**  
   
@@ -61,7 +60,7 @@ ms.lasthandoff: 02/09/2018
   
 #### <a name="to-rename-user-defined-functions"></a>若要重新命名使用者定義函數  
   
-1.  在 **[物件總管]**中，按一下資料庫旁邊的加號，此資料庫包含要重新命名的函數。  
+1.  在 **[物件總管]** 中，按一下資料庫旁邊的加號，此資料庫包含要重新命名的函數。  
   
 2.  按一下 **[可程式性]** 資料夾旁的加號。  
   

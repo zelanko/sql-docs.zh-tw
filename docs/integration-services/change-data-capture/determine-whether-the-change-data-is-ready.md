@@ -1,30 +1,28 @@
 ---
-title: "判斷變更資料是否就緒 | Microsoft Docs"
-ms.custom: 
+title: 判斷變更資料是否就緒 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
 ms.component: change-data-capture
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - incremental load [Integration Services],determining readiness
 ms.assetid: 04935f35-96cc-4d70-a250-0fd326f8daff
-caps.latest.revision: 
+caps.latest.revision: 26
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 1d2f30ddb989c9d92d0972f85af33e3b0496ba56
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 325bd3ad9e274db6263d75e05e8f3117ea259e35
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="determine-whether-the-change-data-is-ready"></a>判斷變更資料是否就緒
   在執行累加式變更資料載入之 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 封裝的控制流程中，第二個工作是確保所選間隔之變更資料已就緒。 由於非同步的擷取程序可能還沒有處理到所選端點的所有變更，因此這是必要的步驟。  
@@ -78,7 +76,7 @@ ms.lasthandoff: 01/25/2018
   
 2.  將計算間隔端點的「執行 SQL」工作連接到「For 迴圈」容器。  
   
-3.  在 **[For 迴圈編輯器]**中，選取下列選項：  
+3.  在 **[For 迴圈編輯器]** 中，選取下列選項：  
   
     1.  針對 **InitExpression**，輸入 `@DataReady = 0`。  
   
@@ -105,7 +103,7 @@ ms.lasthandoff: 01/25/2018
   
 1.  在「For 迴圈」容器的內部，加入「執行 SQL」工作。  
   
-2.  在 **[執行 SQL 工作編輯器]**的 **[一般]** 頁面上，選取下列選項：  
+2.  在 **[執行 SQL 工作編輯器]** 的 **[一般]** 頁面上，選取下列選項：  
   
     1.  針對 **[ResultSet]**，選取 **[單一資料列]**。  
   
@@ -144,7 +142,7 @@ ms.lasthandoff: 01/25/2018
   
         ```  
   
-3.  在 **[執行 SQL 工作編輯器]** 的 **[參數對應]**頁面上，進行下列對應：  
+3.  在 **[執行 SQL 工作編輯器]** 的 **[參數對應]** 頁面上，進行下列對應：  
   
     1.  將 ExtractEndTime 變數對應到參數 0。  
   
@@ -156,7 +154,7 @@ ms.lasthandoff: 01/25/2018
   
     5.  將 TimeoutCeiling 變數對應到參數 4。  
   
-4.  在 **[執行 SQL 工作編輯器]** 的 **[結果集]**頁面上，將 DataReady 結果對應到 DataReady 變數，並將 TimeoutCount 結果對應到 TimeoutCount 變數。  
+4.  在 **[執行 SQL 工作編輯器]** 的 **[結果集]** 頁面上，將 DataReady 結果對應到 DataReady 變數，並將 TimeoutCount 結果對應到 TimeoutCount 變數。  
   
 ## <a name="waiting-until-the-change-data-is-ready"></a>等到變更資料就緒  
  變更資料尚未就緒時，您可以使用數個方法中的一個方法來實作延遲。 下列兩個程序說明如何使用「指令碼」工作或「執行 SQL」工作實作延遲。  
@@ -182,9 +180,9 @@ ms.lasthandoff: 01/25/2018
   
     4.  選取 **[邏輯 AND。所有的條件約束都必須評估為 True]** (如果尚未選取)。  
   
-4.  在 **[指令碼工作編輯器]**的 **[指令碼]** 頁面上，針對 **[ReadOnlyVariables]**，選取清單中的 **[User::DelaySeconds]** 整數變數。  
+4.  在 **[指令碼工作編輯器]** 的 **[指令碼]** 頁面上，針對 **[ReadOnlyVariables]**，選取清單中的 **[User::DelaySeconds]** 整數變數。  
   
-5.  在 **[指令碼工作編輯器]**的 **[指令碼]** 頁面上，按一下 **[編輯指令碼]** 來開啟指令碼開發環境。  
+5.  在 **[指令碼工作編輯器]** 的 **[指令碼]** 頁面上，按一下 **[編輯指令碼]** 來開啟指令碼開發環境。  
   
 6.  在 Main 程序中，輸入下列其中一個程式碼行：  
   
@@ -230,7 +228,7 @@ ms.lasthandoff: 01/25/2018
   
          此選項需要條件約束和運算式兩個條件必須同時為 true。  
   
-4.  在 **[執行 SQL 工作編輯器]**的 **[一般]** 頁面上，選取下列選項：  
+4.  在 **[執行 SQL 工作編輯器]** 的 **[一般]** 頁面上，選取下列選項：  
   
     1.  針對 **[ResultSet]**，選取 **[單一資料列]**。  
   
@@ -276,11 +274,11 @@ ms.lasthandoff: 01/25/2018
   
          此選項需要條件約束和運算式兩個條件必須同時為 true。  
   
-5.  在 **[指令碼工作編輯器]**的 **[指令碼]** 頁面上，針對 **[ReadOnlyVariables]**，從清單選取 **[User::DataReady]** 和 **[User::ExtractStartTime]** ，讓其值可以用於指令碼中。  
+5.  在 **[指令碼工作編輯器]** 的 **[指令碼]** 頁面上，針對 **[ReadOnlyVariables]**，從清單選取 **[User::DataReady]** 和 **[User::ExtractStartTime]** ，讓其值可以用於指令碼中。  
   
      如果您要將來自特定系統變數 (例如，System::PackageName) 的資訊加入到您要寫入記錄檔的資訊，請同時選取這些變數。  
   
-6.  在 **[指令碼工作編輯器]**的 **[指令碼]** 頁面上，按一下 **[編輯指令碼]** 來開啟指令碼開發環境。  
+6.  在 **[指令碼工作編輯器]** 的 **[指令碼]** 頁面上，按一下 **[編輯指令碼]** 來開啟指令碼開發環境。  
   
 7.  在 Main 程序中，呼叫 **Dts.Log** 方法來輸入程式碼以記錄錯誤，或呼叫 **Dts.Events** 介面的其中一個方法來引發事件。 傳回 `Dts.TaskResult = Dts.Results.Failure`以通知封裝發生錯誤。  
   

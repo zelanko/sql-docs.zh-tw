@@ -1,31 +1,23 @@
 ---
-title: "設定多維度資料庫屬性 (Analysis Services) |Microsoft 文件"
-ms.custom: 
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
-helpviewer_keywords: properties [Analysis Services], databases
-ms.assetid: a8be5b3f-3148-448a-976c-7222705155d9
-caps.latest.revision: "24"
-author: Minewiskan
+title: 設定多維度資料庫屬性 (Analysis Services) |Microsoft 文件
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: multidimensional-models
+ms.topic: conceptual
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 6585737ac1f796b7e9e6e8834d6ca5b5c1c11612
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: c055267aa2436a59e75a68c1b9bf1b15ff3d6387
+ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="set-multidimensional-database-properties-analysis-services"></a>設定多維度資料庫屬性 (Analysis Services)
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]有許多[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]資料庫中，您可以設定的屬性[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]資料庫設計工具。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+  您可以在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 資料庫設計工具中設定許多 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 資料庫屬性。  
   
  在此設計工具中，您可以執行以下工作類型：  
   
@@ -40,7 +32,7 @@ ms.lasthandoff: 01/08/2018
 ## <a name="database-properties"></a>資料庫屬性  
  除了上面提到的內容之外，您還可以在 [屬性] 視窗中設定許多資料庫屬性。  
   
-|屬性|描述|  
+|屬性|說明|  
 |--------------|-----------------|  
 |彙總前置詞|可用於資料庫中所有資料分割之彙總名稱的一般前置詞。 如需詳細資訊，請參閱 [AggregationPrefix 元素 &#40;ASSL&#41;](../../analysis-services/scripting/properties/aggregationprefix-element-assl.md)。|  
 |定序|當 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 專案部署到 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 執行個體時，資料庫將會繼承自定序伺服器屬性，除非這裡有提供不同的值。|  
@@ -49,8 +41,8 @@ ms.lasthandoff: 01/08/2018
 |語言|當 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 專案部署到 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 執行個體時，資料庫將會繼承自語言伺服器屬性，除非這裡有提供不同的值。|  
 |MasterDataSource ID|與遠端資料分割一起使用。 如需詳細資訊，請參閱 [遠端資料分割](../../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-remote-partitions.md)。|  
   
-## <a name="see-also"></a>請參閱  
- [資料庫屬性對話方塊 &#40;SSAS - 多維度&#41;](http://msdn.microsoft.com/library/70f000b7-917f-4699-b142-7a0d13ff767c)   
- [設定 Analysis Services 專案屬性 &#40;SSDT&#41;](../../analysis-services/multidimensional-models/configure-analysis-services-project-properties-ssdt.md)  
+## <a name="see-also"></a>另請參閱  
+ [資料庫屬性對話方塊 & #40;SSAS-多維度 & #41;](http://msdn.microsoft.com/library/70f000b7-917f-4699-b142-7a0d13ff767c)   
+ [設定 Analysis Services 專案屬性 & #40;SSDT & #41;](../../analysis-services/multidimensional-models/configure-analysis-services-project-properties-ssdt.md)  
   
   

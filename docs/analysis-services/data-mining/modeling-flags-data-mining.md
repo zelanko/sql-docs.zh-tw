@@ -1,39 +1,19 @@
 ---
-title: "模型旗標 （資料採礦） |Microsoft 文件"
-ms.custom: 
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
-helpviewer_keywords:
-- attributes [data mining]
-- data types [data mining]
-- REGRESSOR flag
-- MODEL_EXISTENCE_ONLY flag
-- REGRESSOR column
-- columns [data mining], modeling flags
-- NOT NULL modeling flag
-- modeling flags [data mining]
-- null values [Analysis Services]
-- MODEL_EXISTENCE_ONLY column
-- coding [Data Mining]
-ms.assetid: 8826d5ce-9ba8-4490-981b-39690ace40a4
-caps.latest.revision: 
-author: Minewiskan
+title: 模型旗標 （資料採礦） |Microsoft 文件
+ms.date: 05/08/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: data-mining
+ms.topic: conceptual
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 0b7139d1120e9b244ae4bc20e32951c52cc7f37d
-ms.sourcegitcommit: 657d18fc805512c9574b2fe7451310601b9d78cb
+ms.openlocfilehash: 32a7241fcea41af44e3e336d02c857f51d133208
+ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/13/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="modeling-flags-data-mining"></a>模型旗標 (資料採礦)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -111,13 +91,13 @@ WHERE MODEL_NAME = '<model name>'
   
 |工作|主題|  
 |----------|-----------|  
-|使用資料採礦設計師來編輯模型旗標|[檢視或變更模型旗標 &#40; 資料採礦 &#41;](../../analysis-services/data-mining/view-or-change-modeling-flags-data-mining.md)|  
+|使用資料採礦設計師來編輯模型旗標|[檢視或變更模型旗標 & #40; 資料採礦 & #41;](../../analysis-services/data-mining/view-or-change-modeling-flags-data-mining.md)|  
 |為演算法指定提示，以建議可能的迴歸輸入變數|[指定要做為模型中的迴歸輸入變數的資料行](../../analysis-services/data-mining/specify-a-column-to-use-as-regressor-in-a-model.md)|  
-|請參閱特定演算法所支援的模型旗標 (在每一個演算法參考主題的＜模型旗標＞一節內)。|[資料採礦演算法 &#40;Analysis Services-資料採礦 &#41;](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)|  
+|請參閱特定演算法所支援的模型旗標 (在每一個演算法參考主題的＜模型旗標＞一節內)。|[資料採礦演算法 & #40;Analysis Services-資料採礦 & #41;](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)|  
 |深入了解採礦結構資料行以及您可以在資料行上設定的屬性|[採礦結構資料行](../../analysis-services/data-mining/mining-structure-columns.md)|  
 |深入了解採礦模型資料行以及可以在模型層級套用的模型旗標|[採礦模型資料行](../../analysis-services/data-mining/mining-model-columns.md)|  
 |請參閱在 DMX 陳述式中搭配模型旗標使用的語法|[模型旗標 &#40;DMX&#41;](../../dmx/modeling-flags-dmx.md)|  
-|了解遺漏的值以及如何處理這些值|[遺漏值 &#40;Analysis Services-資料採礦 &#41;](../../analysis-services/data-mining/missing-values-analysis-services-data-mining.md)|  
+|了解遺漏的值以及如何處理這些值|[遺漏值 & #40;Analysis Services-資料採礦 & #41;](../../analysis-services/data-mining/missing-values-analysis-services-data-mining.md)|  
 |了解如何管理模型和結構以及設定使用屬性|[移動資料採礦物件](../../analysis-services/data-mining/moving-data-mining-objects.md)|  
   
   

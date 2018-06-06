@@ -1,28 +1,25 @@
 ---
-title: "步驟 2： 初始化主清單方塊 |Microsoft 文件"
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
+title: 步驟 2： 初始化主清單方塊 |Microsoft 文件
+ms.prod: sql
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
-ms.custom: 
+ms.technology: connectivity
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: a1454493-1c86-46c2-ada8-d3c6fcdaf3c1
-caps.latest.revision: 
+caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 60ece26fab2c6f691614b609d1dd3f07f42231e4
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 45ffd682eaa9213b13aaf3afb1ccc6edf470ca58
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="step-2-initialize-the-main-list-box"></a>步驟 2： 初始化主清單方塊
 若要宣告全域記錄和資料錄集物件，將下列程式碼插入 （一般） （宣告） form1:  
@@ -52,7 +49,7 @@ Private Sub Form_Load()
 End Sub  
 ```  
   
- 此程式碼會具現化的全域記錄和資料錄集物件。 記錄物件`grec`，開啟具有指定為 ActiveConnection 的 URL。 如果 URL 存在，會將它開啟。如果已經存在，它會建立它。 請注意，您應該從您的環境會取代"http://servername/foldername/ 」 具有有效的 URL。  
+ 此程式碼會具現化的全域記錄和資料錄集物件。 記錄物件`grec`，開啟具有指定為 ActiveConnection 的 URL。 如果 URL 存在，會將它開啟。如果已經存在，它會建立它。 請注意，您應該取代"http://servername/foldername/」 具有有效的 URL 從您的環境。  
   
  資料錄集物件， `grs`，開啟資料錄的子系`grec`。 然後`lstMain`會填入已發行的 url 資源的檔案名稱。  
   

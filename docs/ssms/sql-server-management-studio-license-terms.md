@@ -1,27 +1,25 @@
 ---
-title: "SQL Server Management Studio - 授權條款 | Microsoft Docs"
-ms.custom: 
+title: SQL Server Management Studio - 授權條款 | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
 ms.component: ssms
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: tools-ssms
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ssms
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: 8f3d273c-c663-4341-aa2f-5ed8ebcba5b0
-caps.latest.revision: "9"
+caps.latest.revision: 9
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: c718bbcd3df4d304f0e14cb1a5a01f46d77fe857
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.openlocfilehash: e3138ff1f34120234c47b826195e5102e44aa617
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sql-server-management-studio---license-terms"></a>SQL Server Management Studio - 授權條款
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -78,7 +76,7 @@ ms.lasthandoff: 01/17/2018
   
 **3.  網際網路服務。** Microsoft 隨軟體提供網際網路服務。 並得以隨時變更或取消這些服務。  
   
-&nbsp;&nbsp;**a.  網際網路服務之同意。** 下列及 SQL Server 隱私權聲明中所述之軟體功能會透過網際網路連線至 Microsoft 或服務提供者電腦系統。 在某些情況下，雙方連線時將不會另行通知　貴用戶。 貴用戶得關閉此功能或不使用此功能。 如需本功能之相關詳細資訊，請參閱 [http://go.microsoft.com/fwlink/?LinkID=398120](http://go.microsoft.com/fwlink/?LinkID=398120)。 **此功能一經使用，即代表　貴用戶同意這些資訊的傳輸。** Microsoft 不會用這些資訊來辨識或連絡　貴用戶。  
+&nbsp;&nbsp;**a.  網際網路服務之同意。** 下列及 SQL Server 隱私權聲明中所述之軟體功能會透過網際網路連線至 Microsoft 或服務提供者電腦系統。 在某些情況下，雙方連線時將不會另行通知　貴用戶。 貴用戶得關閉此功能或不使用此功能。 如需這項功能的詳細資訊，請參閱 [http://go.microsoft.com/fwlink/?LinkID=398120](http://go.microsoft.com/fwlink/?LinkID=398120)。 **此功能一經使用，即代表　貴用戶同意這些資訊的傳輸。** Microsoft 不會用這些資訊來辨識或連絡　貴用戶。  
   
 &nbsp;&nbsp;**i.  電腦資訊。** 下面功能會使用網際網路通訊協定，將　貴用戶的電腦資訊傳送至適當的系統上，例如　貴用戶的網際網路通訊協定位址、作業系統及瀏覽器的類型、　貴用戶使用的軟體名稱及版本，以及　貴用戶安裝軟體之裝置的語言代碼。 Microsoft 會使用這項資訊來提供網際網路服務予　貴用戶。  
   

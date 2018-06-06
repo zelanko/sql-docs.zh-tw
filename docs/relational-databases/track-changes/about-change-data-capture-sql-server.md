@@ -1,36 +1,34 @@
 ---
-title: "關於異動資料擷取 (SQL Server) | Microsoft Docs"
-ms.custom: 
+title: 關於異動資料擷取 (SQL Server) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
 ms.component: track-changes
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - change data capture [SQL Server], about
 - change data capture [SQL Server]
 - 22832 (Database Engine error)
 ms.assetid: 7d8c4684-9eb1-4791-8c3b-0f0bb15d9634
-caps.latest.revision: 
+caps.latest.revision: 21
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.workload: Active
-ms.openlocfilehash: a56878e9a37195e63e03b04b84c4a8d296844ff2
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: c060999df59d34237602d09381419da8a0d66167
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="about-change-data-capture-sql-server"></a>關於異動資料擷取 (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
-異動資料擷取會記錄套用至 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料表的插入、更新和刪除活動。 這樣會以方便取用的關聯式格式提供變更的詳細資料。 系統會針對修改的資料列擷取資料行資訊以及將變更套用至目標環境所需的中繼資料，並且將它們儲存在鏡像追蹤來源資料表之資料行結構的變更資料表中。 此外，系統會提供資料表值函式，讓取用者以有系統的方式存取異動資料。  
+  異動資料擷取會記錄套用至 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料表的插入、更新和刪除活動。 這樣會以方便取用的關聯式格式提供變更的詳細資料。 系統會針對修改的資料列擷取資料行資訊以及將變更套用至目標環境所需的中繼資料，並且將它們儲存在鏡像追蹤來源資料表之資料行結構的變更資料表中。 此外，系統會提供資料表值函式，讓取用者以有系統的方式存取異動資料。  
   
  此技術之目標資料取用者的理想範例為擷取、轉換和下載 (ETL) 應用程式。 ETL 應用程式會將變更資料從 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 來源資料表累加地載入資料倉儲或資料超市。 雖然在資料倉儲內的來源資料表表示法必須反映來源資料表中的變更，但是重新整理來源複本的端對端技術並不適用。 您需要的是結構化變更資料的可靠資料流，讓取用者可以將其套用到不同的資料目標表示法。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 異動資料擷取提供這種技術。  
   
@@ -113,7 +111,33 @@ ms.lasthandoff: 02/15/2018
  這兩個 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 作業都設計成具備足夠的彈性而且可充分地進行設定，以便符合異動資料擷取環境的基本需求。 不過，在這兩種情況下，系統已經公開提供核心功能的基礎預存程序，方便您進一步自訂。  
   
  以 NETWORK SERVICE 帳戶身分執行 Database Engine 服務或 SQL Server Agent 服務時，異動資料擷取無法正確運作。 這樣可能會造成錯誤 22832。  
-  
+ 
+## <a name="working-with-database-and-table-collation-differences"></a>使用資料庫和資料表定序差異
+
+請務必注意，在資料庫與設定進行異動資料擷取的資料表資料行之間有不同的定序。 CDC 會使用暫時儲存體來填入側邊資料表。 如果資料表的 CHAR 或 VARCHAR 資料行具有與資料庫定序不同的定序，而且如果這些資料行儲存非 ASCII 字元 (例如雙位元組 DBCS 字元)，則 CDC 可能無法保存與基底資料表中資料一致的已變更資料。 原因是過度儲存體變數不能有與其建立關聯的定序。
+
+請考慮下列其中一種方法來確保變更擷取資料已與基底資料表一致：
+
+- 將 NCHAR 或 NVARCHAR 資料類型用於包含非 ASCII 資料的資料行。
+
+- 或者，對於資料行和資料庫使用相同的定序。
+
+例如，如果您有一個使用 SQL_Latin1_General_CP1_CI_AS 定序的資料庫，請考慮使用下表：
+
+```tsql
+CREATE TABLE T1( 
+     C1 INT PRIMARY KEY, 
+     C2 VARCHAR(10) collate Chinese_PRC_CI_AI)
+```
+
+CDC 可能無法擷取資料行 C2 的二進位資料，因為其定序不同 (Chinese_PRC_CI_AI)。 使用 NVARCHAR 避免這個問題：
+
+```tsql
+CREATE TABLE T1( 
+     C1 INT PRIMARY KEY, 
+     C2 NVARCHAR(10) collate Chinese_PRC_CI_AI --Unicode data type, CDC works well with this data type)
+```
+
 ## <a name="see-also"></a>另請參閱  
  [追蹤資料變更 &#40;SQL Server&#41;](../../relational-databases/track-changes/track-data-changes-sql-server.md)   
  [啟用和停用異動資料擷取 &#40;SQL Server&#41;](../../relational-databases/track-changes/enable-and-disable-change-data-capture-sql-server.md)   

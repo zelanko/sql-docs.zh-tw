@@ -1,27 +1,21 @@
 ---
-title: "硬體設定 (Analytics Platform System)"
-author: barbkess
-ms.author: barbkess
-manager: jhubbard
-ms.prod: analytics-platform-system
-ms.prod_service: mpp-data-warehouse
-ms.service: 
-ms.component: 
-ms.suite: sql
-ms.custom: 
-ms.technology: mpp-data-warehouse
-description: "讓您根據業務需求購買適合的處理和儲存體容量，Analytics Platform System (APS) 硬體的架構與可延展單位。"
-ms.date: 01/05/2017
-ms.topic: article
-ms.assetid: f95945b7-97ae-4ab9-bae5-c792a516acea
-caps.latest.revision: "9"
-ms.openlocfilehash: 6762775fdec3cd3a01a372ed5c16fbc4a93c1426
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+title: 硬體組態]-[Analytics Platform System |Microsoft 文件
+description: 讓您根據業務需求購買適合的處理和儲存體容量，Analytics Platform System (APS) 的應用裝置硬體的架構與可延展單位。 應用裝置可從幾個 tb 針對平行處理資料倉儲儲存體調整到超過 6 pb 計的資料。
+author: mzaman1
+manager: craigg
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
+ms.openlocfilehash: 5677298e1924959c83cd95b86845e37eab7340e9
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/19/2018
 ---
-# <a name="hardware-configurations"></a>硬體設定
+# <a name="hardware-configurations---analytics-platform-system"></a>硬體組態]-[Analytics Platform System
 讓您根據業務需求購買適合的處理和儲存體容量，Analytics Platform System (APS) 硬體的架構與可延展單位。 應用裝置縮放儲存體的 SQL Server Parallel Data Wareouse (PDW) 從幾個 Tb 到超過 6 pb 計的資料。  
   
 ## <a name="contents"></a>目錄  

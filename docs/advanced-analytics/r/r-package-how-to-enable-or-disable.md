@@ -1,40 +1,33 @@
 ---
-title: "啟用或停用的 SQL Server 的遠端封裝管理 |Microsoft 文件"
-ms.custom: 
-ms.date: 02/20/2018
-ms.reviewer: 
-ms.suite: sql
-ms.prod: machine-learning-services
-ms.prod_service: machine-learning-services
-ms.component: r
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
-ms.assetid: 6e384893-04da-43f9-b100-bfe99888f085
-caps.latest.revision: 
-author: jeannt
-ms.author: jeannt
-manager: cgronlund
-ms.workload: Inactive
-ms.openlocfilehash: feb30d37f9c22d6620a7c6a734172ef43c15e253
-ms.sourcegitcommit: c08d665754f274e6a85bb385adf135c9eec702eb
+title: 啟用或停用遠端 SQL Server 機器學習的 R 封裝管理 |Microsoft 文件
+description: 啟用遠端 SQL Server 2016 R Services 或 SQL Server 2017 機器學習服務 （資料庫） 上的 R 封裝管理
+ms.prod: sql
+ms.technology: machine-learning
+ms.date: 05/10/2018
+ms.topic: conceptual
+author: HeidiSteen
+ms.author: heidist
+manager: cgronlun
+ms.openlocfilehash: 997db094cb5e69e0cbf82d9a7e247cb13ec1d452
+ms.sourcegitcommit: 2d93cd115f52bf3eff3069f28ea866232b4f9f9e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34707656"
 ---
 # <a name="enable-or-disable-remote-package-management-for-sql-server"></a>啟用或停用的 SQL Server 的遠端封裝管理
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-本文說明如何啟用 R 封裝，從遠端機器學習的伺服器執行個體的管理。 封裝管理功能已啟用之後，您可以使用 RevoScaleR 命令，將資料庫從遠端用戶端上安裝封裝。
+本文說明如何啟用遠端管理的 R 封裝，從用戶端工作站或不同的機器學習服務伺服器。 SQL Server 上已啟用封裝管理功能之後，您可以使用用戶端上 RevoScaleR 命令來安裝 SQL Server 上的封裝。
 
 > [!NOTE]
 > 目前支援的 R 程式庫管理;正在規劃 Python 的支援。
 
-根據預設，SQL Server 的外部封裝管理功能已停用，即使已安裝的機器學習功能。 您必須執行個別的指令碼，以啟用功能下, 一節中所述。
+根據預設，SQL Server 的外部封裝管理功能已停用。 您必須執行個別的指令碼，以啟用功能下, 一節中所述。
 
 ## <a name="overview-of-process-and-tools"></a>處理程序和工具的概觀
 
-若要啟用或停用封裝管理，使用命令列公用程式**RegisterRExt.exe**，隨附於**RevoScaleR**封裝。
+若要啟用或停用封裝管理 SQL Server 上的，使用命令列公用程式**RegisterRExt.exe**，隨附於**RevoScaleR**封裝。
 
 [啟用](#bkmk_enable)這項功能是兩個步驟的程序，需要資料庫管理員： 在封裝上啟用管理 SQL Server 執行個體 （每個 SQL Server 執行個體），然後再啟用 SQL database （每個 SQL Server 上的封裝管理資料庫）。
 
@@ -42,7 +35,7 @@ ms.lasthandoff: 02/28/2018
 
 ## <a name="bkmk_enable"></a> 啟用封裝管理
 
-1. 開啟提升權限的命令提示字元並瀏覽至包含 RegisterRExt.exe 公用程式的資料夾。 預設位置是`<SQLInstancePath>\R_SERVICES\library\RevoScaleR\rxLibs\x64\RegisterRExe.exe`。
+1. SQL Server 上開啟提升權限的命令提示字元並瀏覽至包含 RegisterRExt.exe 公用程式的資料夾。 預設位置是`<SQLInstancePath>\R_SERVICES\library\RevoScaleR\rxLibs\x64\RegisterRExe.exe`。
 
 2. 執行下列命令，並提供適當的引數為您的環境：
 
@@ -101,3 +94,8 @@ ms.lasthandoff: 02/28/2018
 
     此命令會從執行個體移除封裝管理功能。 您可能需要手動重新啟動 Launchpad 服務一次才能看到變更。
 
+## <a name="next-steps"></a>後續的步驟
+
++ [使用 RevoScaleR 安裝新的 R 封裝](use-revoscaler-to-manage-r-packages.md)
++ [安裝 R 封裝的秘訣](packages-installed-in-user-libraries.md)
++ [預設封裝](installing-and-managing-r-packages.md)

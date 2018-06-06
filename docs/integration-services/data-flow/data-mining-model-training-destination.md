@@ -1,17 +1,16 @@
 ---
-title: "資料採礦模型定型目的地 | Microsoft Docs"
-ms.custom: 
+title: 資料採礦模型定型目的地 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
 ms.component: data-flow
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 f1_keywords:
 - sql13.dts.designer.dataminingmodeltrainingdest.f1
 - sql13.dts.designer.dmmtrainingtransformation.connection.f1
@@ -22,16 +21,15 @@ helpviewer_keywords:
 - mining models [Analysis Services], training
 - training mining models
 ms.assetid: 6bc8cbe2-46af-4f7b-93d6-86779313c9d7
-caps.latest.revision: 
+caps.latest.revision: 46
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: de320d943bf8159b211af64caa32cb37d09a7da9
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 482e2bd27acedaed01acf4ef3d324af5b7e09b65
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="data-mining-model-training-destination"></a>資料採礦模型定型目的地
   「資料採礦模型培訓」目的地藉由傳送目的地接收的資料至資料採礦模型演算法，來培訓資料採礦模型。 如果多個資料採礦模型建立於同一資料採礦結構上，則可以由一個目的地來培訓這些模型。 如需詳細資訊，請參閱 [採礦結構資料行](../../analysis-services/data-mining/mining-structure-columns.md) 和 [採礦模型資料行](../../analysis-services/data-mining/mining-model-columns.md)。  
@@ -86,7 +84,7 @@ ms.lasthandoff: 01/25/2018
  檢視採礦結構資料行的清單。 拖曳採礦結構資料行以對應至可用的輸入資料行。  
   
  **輸入資料行**  
- 從上述資料表檢視選取的輸入資料行。 若要變更或移除對應選擇，請使用 **[可用的輸入資料行]**清單。  
+ 從上述資料表檢視選取的輸入資料行。 若要變更或移除對應選擇，請使用 **[可用的輸入資料行]** 清單。  
   
  **採礦結構資料行**  
  檢視每個可用的目的地資料行，不論是否已經對應。  

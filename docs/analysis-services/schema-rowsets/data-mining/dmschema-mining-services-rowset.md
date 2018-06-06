@@ -1,42 +1,31 @@
 ---
-title: "DMSCHEMA_MINING_SERVICES 資料列集 |Microsoft 文件"
-ms.custom: 
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+title: DMSCHEMA_MINING_SERVICES 資料列集 |Microsoft 文件
+ms.date: 05/03/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: schema-rowsets
 ms.topic: reference
-apiname: DMSCHEMA_MINING_SERVICES
-apitype: NA
-applies_to: SQL Server 2016 Preview
-helpviewer_keywords: DMSCHEMA_MINING_SERVICES rowset
-ms.assetid: 4a672f2f-d637-4def-a572-c18556f83d34
-caps.latest.revision: "35"
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 87fdcfb688d6e6b7305ef3a46b0de7800e6c4668
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 0cf94fa4fb22e38ac52513d2dba52500df3bb9d5
+ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="dmschemaminingservices-rowset"></a>DMSCHEMA_MINING_SERVICES 資料列集
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]提供描述每個資料採礦演算法提供者支援。  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+  提供由提供者支援之每個資料採礦演算法的描述。  
   
 ## <a name="rowset-columns"></a>資料列集資料行  
  **DMSCHEMA_MINING_SERVICES**資料列集包含下列資料行。  
   
-|資料行名稱|類型指標|描述|  
+|資料行名稱|類型指標|Description|  
 |-----------------|--------------------|-----------------|  
 |**服務名稱**|**DBTYPE_WSTR**|演算法的名稱。 這個欄位是提供者特定的。|  
-|**SERVICE_TYPE_ID**|**DBTYPE_UI4**|此資料行包含描述採礦服務的點陣圖。 [!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]擴展這個資料行具有下列值之一：<br /><br /> **DM_SERVICETYPE_CLASSIFICATION** (**1**)<br /><br /> **DM_SERVICETYPE_CLUSTERING** (**2**)|  
+|**SERVICE_TYPE_ID**|**DBTYPE_UI4**|此資料行包含描述採礦服務的點陣圖。 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 會填入此資料行具有下列值之一：<br /><br /> **DM_SERVICETYPE_CLASSIFICATION** (**1**)<br /><br /> **DM_SERVICETYPE_CLUSTERING** (**2**)|  
 |**SERVICE_DISPLAY_NAME**|**DBTYPE_WSTR**|可當地語系化的演算法顯示名稱。|  
 |**SERVICE_GUID**|**DBTYPE_GUID**|演算法的 GUID。|  
 |**DESCRIPTION**|**DBTYPE_WSTR**|使用者易記的演算法描述。|  
@@ -70,7 +59,7 @@ ms.lasthandoff: 01/08/2018
 |**服務名稱**|**DBTYPE_WSTR**|選擇性。|  
 |**SERVICE_TYPE_ID**|**DBTYPE_UI4**|選擇性。|  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [資料採礦結構描述資料列集](../../../analysis-services/schema-rowsets/data-mining/data-mining-schema-rowsets.md)  
   
   

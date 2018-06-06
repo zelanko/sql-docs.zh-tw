@@ -1,17 +1,15 @@
 ---
-title: "GRANT 資料庫範圍認證 (TRANSACT-SQL) | Microsoft Docs"
-ms.custom: 
+title: GRANT 資料庫範圍認證 (TRANSACT-SQL) | Microsoft Docs
+ms.custom: ''
 ms.date: 06/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
 ms.component: t-sql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: t-sql
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 f1_keywords:
 - GRANT DATABASE SCOPED CREDENTIAL
 - GRANT_DATABASE_SCOPED_CREDENTIAL_TSQL
@@ -23,16 +21,16 @@ helpviewer_keywords:
 - database scoped credential [SQL Server], permissions
 - GRANT statement, database scoped credentials
 ms.assetid: 501f2c8a-6aeb-41af-bf0b-974d17af33c0
-caps.latest.revision: 
+caps.latest.revision: 3
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 6dbd261334e580904e9c6ad3b12ff761d8c909ab
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+monikerRange: = azuresqldb-current || >= sql-server-2017 || = sqlallproducts-allversions
+ms.openlocfilehash: 6290a5b975b81805e23804aff8ad7383504426c3
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="grant-database-scoped-credential-permissions-transact-sql"></a>GRANT 資料庫範圍認證 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
@@ -85,7 +83,7 @@ AS *granting_principal*
 -   未對應至伺服器主體的資料庫使用者  
   
 ## <a name="remarks"></a>Remarks  
- 資料庫範圍認證是一個資料庫層級的安全性實體，其包含在權限階層的父系資料庫中。 下方列出的資料庫範圍認證權限，是可以授與的最明確與最有限權限，以及隱含包括這些權限的一般權限。  
+ 資料庫範圍認證是包含在資料庫內的資料庫層級安全性實體，在權限階層中，該資料庫為其父系。 下方列出的資料庫範圍認證權限，是可以授與的最明確與最有限權限，以及隱含包括這些權限的一般權限。  
   
 |資料庫範圍認證權限|資料庫範圍認證權限所隱含|資料庫權限所隱含|  
 |----------------------------|---------------------------------------|------------------------------------|  
@@ -113,7 +111,7 @@ AS *granting_principal*
   
  物件擁有者可以授與他們所擁有之物件的權限。 具有安全性實體之 CONTROL 權限的主體可以授與該安全性實體的權限。  
   
- 獲得 CONTROL SERVER 權限者 (例如 **sysadmin** 固定伺服器角色的成員) 可以授與伺服器中任何安全性實體的任何權限。 獲得資料庫 CONTROL 權限者 (例如 **db_owner** 固定資料庫角色的成員) 可以授與資料庫中任何安全性實體的任何權限。 結構描述之 CONTROL 權限的被授與者，可以授與結構描述中任何物件的任何權限。  
+ CONTROL SERVER 權限的承授者 (例如 **sysadmin** 固定伺服器角色的成員)，可以授與伺服器中任何安全性實體的任何權限。 資料庫 CONTROL 權限的承授者 (例如 **db_owner** 固定資料庫角色的成員) 可以授與資料庫中任何安全性實體的任何權限。 結構描述之 CONTROL 權限的被授與者，可以授與結構描述中任何物件的任何權限。  
   
 ## <a name="see-also"></a>另請參閱  
  [GRANT &#40;Transact-SQL&#41;](../../t-sql/statements/grant-transact-sql.md)   

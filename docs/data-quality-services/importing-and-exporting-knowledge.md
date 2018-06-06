@@ -1,33 +1,35 @@
 ---
-title: "匯入和匯出知識 | Microsoft Docs"
-ms.custom: 
+title: 匯入和匯出知識 | Microsoft Docs
+ms.custom: ''
 ms.date: 07/31/2012
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: data-quality-services
-ms.service: 
 ms.component: data-quality-services
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: data-quality-services
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- data-quality-services
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: 12537c9d-31e4-40b0-a411-cb343abbe96a
-caps.latest.revision: "10"
+caps.latest.revision: 10
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.workload: Inactive
-ms.openlocfilehash: d0443061d55f18dca07cf6f7c193995bda271419
-ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
+manager: craigg
+ms.openlocfilehash: c00c36fd9081475df79353de1bc7a1e1160406bf
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="importing-and-exporting-knowledge"></a>匯入和匯出知識
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
   您可以直接在 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 應用程式中建立知識庫和定義域，也可以將知識匯入知識庫或從中匯出知識。 在 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 應用程式中，您可以使用資料檔案進行匯入和匯出作業，或使用 Excel 檔案進行匯入作業。 使用的資料檔案是 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) 所建立的加密檔案，副檔名為 .dqs。 由 Microsoft Excel 建立的檔案可以具有 .xlsx、.xls 或 .csv 的副檔名。 這些作業可讓您更有彈性地建置並共用執行資料清理和比對所用的知識。  
   
 > [!IMPORTANT]  
->  您可以從命令提示字元執行 DQSInstaller.exe 檔案，一次將 *中的「所有」*[!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] 知識庫匯出至 DQS 備份檔案 (.dqsb)。 同樣地，您也可以從命令提示字元執行 DQSInstaller.exe 檔案，一次將 DQS 備份檔案 (.dqsb) 中的「所有」  知識庫匯入 [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] 中。 如需有關執行此作業的詳細資訊，請參閱《DQS 安裝指南》中的＜ [Export and Import DQS Knowledge Bases Using DQSInstaller.exe](../data-quality-services/install-windows/export-and-import-dqs-knowledge-bases-using-dqsinstaller-exe.md) ＞。  
+>  您可以從命令提示字元執行 DQSInstaller.exe 檔案，一次將 *中的「所有」*[!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] 知識庫匯出至 DQS 備份檔案 (.dqsb)。 同樣地，您也可以從命令提示字元執行 DQSInstaller.exe 檔案，一次將 DQS 備份檔案 (.dqsb) 中的「所有」  知識庫匯入 [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] 中。 如需有關執行此作業的詳細資訊，請參閱《DQS 安裝指南》中的＜ [使用 DQSInstaller.exe 匯出及匯入 DQS 知識庫](../data-quality-services/install-windows/export-and-import-dqs-knowledge-bases-using-dqsinstaller-exe.md) ＞。  
   
 ## <a name="in-this-section"></a>本節內容  
  您可以執行下列匯入和匯出作業：  
@@ -38,7 +40,7 @@ ms.lasthandoff: 01/19/2018
 |將 .dqs 資料檔案中的定義域匯入現有的知識庫中|[從 .dqs 檔案匯入網域](../data-quality-services/import-a-domain-from-a-dqs-file.md)|  
 |將整個知識庫匯出至 .dqs 資料檔案|[將知識匯出至 .dqs 檔案](../data-quality-services/export-a-knowledge-base-to-a-dqs-file.md)|  
 |將整個知識庫匯入 .dqs 資料檔案中|[從 .dqs 檔案匯入知識](../data-quality-services/import-a-knowledge-base-from-a-dqs-file.md)|  
-|將 Excel 檔案中的值匯入定義域中|[Import Values from an Excel File into a Domain](../data-quality-services/import-values-from-an-excel-file-into-a-domain.md)|  
+|將 Excel 檔案中的值匯入定義域中|[將 Excel 檔案中的值匯入定義域中](../data-quality-services/import-values-from-an-excel-file-into-a-domain.md)|  
 |將 Excel 檔案中的定義域匯入知識庫|[將 Excel 檔案中的網域匯入知識探索](../data-quality-services/import-domains-from-an-excel-file-in-knowledge-discovery.md)|  
 |將清理期間蒐集的知識匯入知識庫中|[將清理專案值匯入網域](../data-quality-services/import-cleansing-project-values-into-a-domain.md)|  
   

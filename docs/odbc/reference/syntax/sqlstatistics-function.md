@@ -1,32 +1,33 @@
 ---
-title: "SQLStatistics 函數 |Microsoft 文件"
-ms.custom: 
+title: SQLStatistics 函數 |Microsoft 文件
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
-ms.component: odbc
-ms.reviewer: 
+ms.prod: sql
+ms.prod_service: connectivity
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
-ms.topic: article
-apiname: SQLStatistics
-apilocation: sqlsrv32.dll
+ms.technology: connectivity
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
+apiname:
+- SQLStatistics
+apilocation:
+- sqlsrv32.dll
 apitype: dllExport
-f1_keywords: SQLStatistics
-helpviewer_keywords: SQLStatistics function [ODBC]
+f1_keywords:
+- SQLStatistics
+helpviewer_keywords:
+- SQLStatistics function [ODBC]
 ms.assetid: 45210682-cfea-4e5d-9951-bcf1cbe10f41
-caps.latest.revision: "23"
+caps.latest.revision: 23
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
-ms.workload: Inactive
-ms.openlocfilehash: c1e66748edcc81f87c261d6958a766f5b651c31a
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+manager: craigg
+ms.openlocfilehash: b5d7396e972d2c43798ca6a993c96355595e5e9c
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sqlstatistics-function"></a>SQLStatistics 函數
 **一致性**  
@@ -63,7 +64,7 @@ SQLRETURN SQLStatistics(
  *NameLength1*  
  [輸入]中的字元長度 **CatalogName*。  
   
- *SchemaName*  
+ *schemaName*  
  [輸入]結構描述名稱。 如果驅動程式支援的結構描述，對於某些資料表，但不適用於其他人使用，例如當驅動程式會擷取資料的不同 Dbms，空字串 ("") 表示沒有結構描述的資料表。 *SchemaName*不能包含字串的搜尋模式。  
   
  如果 SQL_ATTR_METADATA_ID 陳述式屬性設定為 SQL_TRUE， *SchemaName*會被視為識別項和其案例並不重要。 如果是 SQL_FALSE， *SchemaName*是一般的引數; 將它視為常值，和其案例很重要。  
@@ -82,12 +83,12 @@ SQLRETURN SQLStatistics(
  *唯一*  
  [輸入]索引類型： SQL_INDEX_UNIQUE 或 SQL_INDEX_ALL。  
   
- *已保留*  
+ *保留*  
  [輸入]指出結果集內的基數和頁面的資料行的重要性。 下列選項會影響傳回的基數和頁面只的資料行;即使不會傳回基數和頁面，會傳回索引資訊。  
   
  SQL_ENSURE 要求驅動程式無條件地擷取統計資料。 （只符合 Open Group 標準並不支援的 ODBC 延伸模組的驅動程式將無法再以支援 SQL_ENSURE。）  
   
- SQL_QUICK 要求，驅動程式擷取基數和頁面才從伺服器隨時可用。 在這個情況下，驅動程式無法確保這些值是否為最新的。 (撰寫 Open Group 標準的應用程式永遠會從 ODBC 3 取得 SQL_QUICK 行為*.x*-相容的驅動程式。)  
+ SQL_QUICK 要求，驅動程式擷取基數和頁面才從伺服器隨時可用。 在這個情況下，驅動程式無法確保這些值是否為最新的。 (撰寫 Open Group 標準的應用程式永遠會從 ODBC 3 取得 SQL_QUICK 行為 *.x*-相容的驅動程式。)  
   
 ## <a name="returns"></a>傳回值  
  SQL_SUCCESS、 SQL_SUCCESS_WITH_INFO、 SQL_STILL_EXECUTING、 SQL_ERROR 或 SQL_INVALID_HANDLE。  
@@ -95,7 +96,7 @@ SQLRETURN SQLStatistics(
 ## <a name="diagnostics"></a>診斷  
  當**SQLStatistics**會傳回 SQL_ERROR 或 SQL_SUCCESS_WITH_INFO，相關聯的 SQLSTATE 值可以藉由呼叫取得**SQLGetDiagRec**與*HandleType* SQL_ 的HANDLE_STMT 和*處理*的*StatementHandle*。 下表列出通常所傳回的 SQLSTATE 值**SQLStatistics** ，並說明這個函式; 每個內容中的標記法 」 (DM) 」 之前描述的驅動程式管理員傳回的 Sqlstate。 每個 SQLSTATE 值相關聯的傳回碼是 SQL_ERROR，除非有說明，否則為。  
   
-|SQLSTATE|錯誤|描述|  
+|SQLSTATE|錯誤|Description|  
 |--------------|-----------|-----------------|  
 |01000|一般警告|特定驅動程式告知性訊息。 （函式會傳回 SQL_SUCCESS_WITH_INFO）。|  
 |08S01|通訊連結失敗|功能已完成處理之前，驅動程式和驅動程式已連線到資料來源之間的通訊連結失敗。|  
@@ -127,9 +128,9 @@ SQLRETURN SQLStatistics(
 > [!NOTE]  
 >  如需一般用途、 引數和 ODBC 目錄函數的傳回的資料的詳細資訊，請參閱[目錄函數](../../../odbc/reference/develop-app/catalog-functions.md)。  
   
- 下列資料行已重新命名為 ODBC 3*.x*。 因為應用程式繫結的資料行編號的資料行名稱變更不會影響回溯相容性。  
+ 下列資料行已重新命名為 ODBC 3 *.x*。 因為應用程式繫結的資料行編號的資料行名稱變更不會影響回溯相容性。  
   
-|ODBC 2.0 資料行|ODBC 3*.x*資料行|  
+|ODBC 2.0 資料行|ODBC 3 *.x*資料行|  
 |---------------------|-----------------------|  
 |TABLE_QUALIFIER|TABLE_CAT|  
 |TABLE_OWNER|TABLE_SCHEM|  
@@ -140,7 +141,7 @@ SQLRETURN SQLStatistics(
   
 |資料行名稱|資料行編號|資料類型|註解|  
 |-----------------|-------------------|---------------|--------------|  
-|TABLE_CAT (ODBC 1.0)|@shouldalert|Varchar|資料表的統計資料或索引套用至; 目錄名稱如果不適用於資料來源，則為 NULL。 如果驅動程式支援目錄對於某些資料表，但不適用於其他項目，例如當驅動程式會從不同的 Dbms 擷取資料，它會傳回空字串 ("") 沒有目錄這些資料表。|  
+|TABLE_CAT (ODBC 1.0)|1|Varchar|資料表的統計資料或索引套用至; 目錄名稱如果不適用於資料來源，則為 NULL。 如果驅動程式支援目錄對於某些資料表，但不適用於其他項目，例如當驅動程式會從不同的 Dbms 擷取資料，它會傳回空字串 ("") 沒有目錄這些資料表。|  
 |再依據 TABLE_SCHEM 排列 (ODBC 1.0)|2|Varchar|統計資料或索引套用至; 資料表結構描述名稱如果不適用於資料來源，則為 NULL。 如果驅動程式支援的結構描述對於某些資料表，但不適用於其他項目，例如當驅動程式會從不同的 Dbms 擷取資料，它會傳回空字串 ("") 並沒有結構描述這些資料表。|  
 |TABLE_NAME (ODBC 1.0)|3|Varchar 不是 NULL|統計資料或索引套用至資料表的資料表名稱。|  
 |NON_UNIQUE (ODBC 1.0)|4|Smallint|指出是否索引不允許重複的值：<br /><br /> 如果索引值可以是唯一的則，SQL_TRUE。<br /><br /> 如果索引值必須是唯一的 SQL_FALSE。<br /><br /> 如果類型是 SQL_TABLE_STAT，則傳回 NULL。|  
@@ -170,6 +171,6 @@ SQLRETURN SQLStatistics(
 |傳回外部索引鍵資料行|[SQLForeignKeys 函式](../../../odbc/reference/syntax/sqlforeignkeys-function.md)|  
 |傳回主索引鍵資料行|[SQLPrimaryKeys 函式](../../../odbc/reference/syntax/sqlprimarykeys-function.md)|  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [ODBC 應用程式開發介面參考](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [ODBC 標頭檔](../../../odbc/reference/install/odbc-header-files.md)

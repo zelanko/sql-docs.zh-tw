@@ -1,32 +1,20 @@
 ---
-title: "（除法）(MDX) |Microsoft 文件"
-ms.custom: 
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: language-reference
-f1_keywords: /
-dev_langs: kbMDX
-helpviewer_keywords:
-- / (divide)
-- divide operator (/)
-ms.assetid: 42b7d3ea-234d-41b3-a849-f457be6d7972
-caps.latest.revision: "34"
-author: Minewiskan
+title: （除法）(MDX) |Microsoft 文件
+ms.date: 05/30/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: mdx
+ms.topic: reference
 ms.author: owend
-manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: 5cc93d1be3e91fc42fdd5e0d579321106c9375b3
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: fbf7e28d9e33d2eccbc3d51b8ff61c0cabd75270
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34577970"
 ---
 # <a name="divide---mdx-operator-reference"></a>除以-MDX 運算子參考
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -51,7 +39,7 @@ Dividend / Divisor
  具有較高優先順序之參數的資料類型的值。  
   
 ## <a name="remarks"></a>備註  
- 所傳回的實際值**/ （除法）**運算子代表第一個運算式除以第二個運算式的商數。  
+ 所傳回的實際值 **/ （除法）** 運算子代表第一個運算式除以第二個運算式的商數。  
   
  兩個運算式的資料類型必須相同，或者其中一個運算式必須可以用隱含方式轉換為另一個運算式的資料類型。 如果*除數*評估為 null 的值，則運算子會引發錯誤。 如果兩個*除數*和*被除數*評估為 null 的值，則運算子會傳回 null 值。  
   
@@ -111,8 +99,8 @@ WHERE
   
  `WHERE([Date].[Calendar].[Calendar Year].&[2001])`  
   
-## <a name="see-also"></a>請參閱  
- [IIf &#40;MDX &#41;](../mdx/iif-mdx.md)   
- [MDX 運算子參考 &#40;MDX &#41;](../mdx/mdx-operator-reference-mdx.md)  
+## <a name="see-also"></a>另請參閱  
+ [IIf &#40;MDX&#41;](../mdx/iif-mdx.md)   
+ [MDX 運算子參考&#40;MDX&#41;](../mdx/mdx-operator-reference-mdx.md)  
   
   

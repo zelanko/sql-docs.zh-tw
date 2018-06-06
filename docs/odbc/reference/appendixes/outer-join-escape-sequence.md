@@ -1,31 +1,28 @@
 ---
-title: "外部聯結逸出序列 |Microsoft 文件"
-ms.custom: 
+title: 外部聯結逸出序列 |Microsoft 文件
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
-ms.component: odbc
-ms.reviewer: 
+ms.prod: sql
+ms.prod_service: connectivity
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: connectivity
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - outer join escape sequence [ODBC]
 - escape sequences [ODBC], outer join
 - ODBC escape sequences [ODBC], outer join
 ms.assetid: 2cfd1525-6677-4d36-9b9e-730496853750
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
-ms.workload: Inactive
-ms.openlocfilehash: 6a2621b150980c5053d62ddae1a03bcf180daf81
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+manager: craigg
+ms.openlocfilehash: af6a98b3e1a7848fa242dfceb890c472e1d16f74
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="outer-join-escape-sequence"></a>外部聯結逸出序列
 ODBC 使用的外部聯結的逸出序列。 此逸出序列語法如下所示：  
@@ -41,9 +38,9 @@ ODBC 使用的外部聯結的逸出序列。 此逸出序列語法如下所示�
   
  *起始 esc ODBC 端*oj*外部聯結 ODBC esc 結束字元*  
   
- *外部聯結*:: =*資料表名稱*[*相互關聯名稱*] {左 &#124;權限 &#124;完整}  
+ *外部聯結*:: =*資料表名稱*[*相互關聯名稱*] {左&#124;右邊&#124;完整}  
   
- OUTER JOIN {*資料表名稱*[*相互關聯名稱*] &#124;*外部聯結*} ON  
+ 外部聯結 {*資料表名稱*[*相互關聯名稱*] &#124; *外部聯結*} ON  
   
  *搜尋-*  
   

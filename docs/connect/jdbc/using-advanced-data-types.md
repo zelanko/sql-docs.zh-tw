@@ -1,27 +1,24 @@
 ---
-title: "使用進階的資料類型 |Microsoft 文件"
-ms.custom: 
+title: 使用進階的資料類型 |Microsoft 文件
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
-ms.component: jdbc
-ms.reviewer: 
+ms.prod: sql
+ms.prod_service: connectivity
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: connectivity
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: b39461d3-48d6-4048-8300-1a886c00756d
-caps.latest.revision: "58"
+caps.latest.revision: 58
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
-ms.workload: On Demand
-ms.openlocfilehash: 5ca19754f3332c1832405085ad1b04fb36380bd9
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+manager: craigg
+ms.openlocfilehash: 4bd8d2b92c6d998c10239f3502328b016de42045
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="using-advanced-data-types"></a>使用進階資料類型
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -47,15 +44,15 @@ ms.lasthandoff: 11/18/2017
  JDBC 驅動程式會實作 java.sql.Blob、java.sql.Clob 和 java.sql.NClob 介面的所有方法。  
   
 > [!NOTE]  
->  CLOB 值可以搭配[!INCLUDE[ssVersion2005](../../includes/ssversion2005_md.md)]（或更新版本） 大數值資料類型。 明確地說，CLOB 型別可以搭配**varchar （max)**和**nvarchar （max)**資料型別、 BLOB 型別可以搭配**varbinary （max)**和**映像**資料型別，而 NCLOB 型別可以搭配**ntext**和**nvarchar （max)**。  
+>  CLOB 值可以搭配[!INCLUDE[ssVersion2005](../../includes/ssversion2005_md.md)]（或更新版本） 大數值資料類型。 明確地說，CLOB 型別可以搭配**varchar （max)** 和**nvarchar （max)** 資料型別、 BLOB 型別可以搭配**varbinary （max)** 和**映像**資料型別，而 NCLOB 型別可以搭配**ntext**和**nvarchar （max)**。  
   
 ## <a name="large-value-data-types"></a>大數值資料類型  
- 在舊版的[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]、 使用大數值資料類型需要特殊處理。 大數值資料類型是指最大資料列大小超過 8 KB 的資料類型。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]導入的最大規範**varchar**， **nvarchar**，和**varbinary**資料類型，以允許的值儲存大可達 2 ^31 個位元組。 資料表資料行和[!INCLUDE[tsql](../../includes/tsql_md.md)]變數可以指定**varchar （max)**， **nvarchar （max)**，或**varbinary （max)**資料型別。  
+ 在舊版的[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]、 使用大數值資料類型需要特殊處理。 大數值資料類型是指最大資料列大小超過 8 KB 的資料類型。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 導入的最大規範**varchar**， **nvarchar**，和**varbinary**資料類型，以允許的值儲存大可達 2 ^31 個位元組。 資料表資料行和[!INCLUDE[tsql](../../includes/tsql_md.md)]變數可以指定**varchar （max)**， **nvarchar （max)**，或**varbinary （max)** 資料型別。  
   
  使用大數值類型的主要狀況包括從資料庫擷取它們，或將它們加入資料庫中。 下列章節說明完成這些工作的不同方法。  
   
 ### <a name="retrieving-large-value-types-from-a-database"></a>從資料庫擷取大數值類型  
- 當您擷取非二進位的大數值資料類型 — 例如**varchar （max)**資料類型 — 從資料庫中，其中一個方法是讀取該資料當作字元資料流。 在下列範例中， [executeQuery](../../connect/jdbc/reference/executequery-method-sqlserverstatement.md)方法[SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md)類別用來從資料庫擷取資料，並將結果集傳回。 然後在[getCharacterStream](../../connect/jdbc/reference/getcharacterstream-method-sqlserverresultset.md)方法[SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md)類別用來從結果集讀取大數值資料。  
+ 當您擷取非二進位的大數值資料類型 — 例如**varchar （max)** 資料類型 — 從資料庫中，其中一個方法是讀取該資料當作字元資料流。 在下列範例中， [executeQuery](../../connect/jdbc/reference/executequery-method-sqlserverstatement.md)方法[SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md)類別用來從資料庫擷取資料，並將結果集傳回。 然後在[getCharacterStream](../../connect/jdbc/reference/getcharacterstream-method-sqlserverresultset.md)方法[SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md)類別用來從結果集讀取大數值資料。  
   
 ```  
 ResultSet rs = stmt.executeQuery("SELECT TOP 1 * FROM Test1");  
@@ -64,9 +61,9 @@ Reader reader = rs.getCharacterStream(2);
 ```  
   
 > [!NOTE]  
->  這個相同的方法也可用為**文字**， **ntext**，和**nvarchar （max)**資料型別。  
+>  這個相同的方法也可用為**文字**， **ntext**，和**nvarchar （max)** 資料型別。  
   
- 當您擷取二進位的大數值資料類型 — 例如**varbinary （max)**資料類型 — 從資料庫中，有數種方法可以採用。 最有效的方法就是將資料當作二進位資料流來讀取，如下所示：  
+ 當您擷取二進位的大數值資料類型 — 例如**varbinary （max)** 資料類型 — 從資料庫中，有數種方法可以採用。 最有效的方法就是將資料當作二進位資料流來讀取，如下所示：  
   
 ```  
 ResultSet rs = stmt.executeQuery("SELECT photo FROM mypics");  
@@ -98,9 +95,9 @@ pstmt.executeUpdate();
 ```  
   
 > [!NOTE]  
->  這個方法也可用的值，儲存於**文字**， **ntext**，和**nvarchar （max)**資料行。  
+>  這個方法也可用的值，儲存於**文字**， **ntext**，和**nvarchar （max)** 資料行。  
   
- 如果您具有影像程式庫伺服器上的，而且必須上傳至整個二進位影像檔**varbinary （max)**資料行，最有效率的方法，JDBC 驅動程式是直接使用資料流，如下所示：  
+ 如果您具有影像程式庫伺服器上的，而且必須上傳至整個二進位影像檔**varbinary （max)** 資料行，最有效率的方法，JDBC 驅動程式是直接使用資料流，如下所示：  
   
 ```  
 PreparedStatement pstmt = con.prepareStatement("INSERT INTO test1 (Col1, Col2) VALUES(?,?)");  
@@ -139,7 +136,7 @@ rs.updateRow();
  如需有關大數值類型的詳細資訊，請參閱《SQL Server 線上叢書》中的＜使用大數值類型＞。  
   
 ## <a name="xml-data-type"></a>XML 資料類型  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]提供**xml**資料型別，可讓您儲存 XML 文件和片段中[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]資料庫。 **Xml**資料類型是中的內建資料型別[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]，而且在某些方面類似於其他內建類型，例如**int**和**varchar**。 您可以使用其他內建類型， **xml**資料類型當做建立資料表時的資料行類型; 當做變數類型、 參數類型或函數傳回的類型; 或者在[!INCLUDE[tsql](../../includes/tsql_md.md)]CAST 和 CONVERT 函數。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 提供**xml**資料型別，可讓您儲存 XML 文件和片段中[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]資料庫。 **Xml**資料類型是中的內建資料型別[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]，而且在某些方面類似於其他內建類型，例如**int**和**varchar**。 您可以使用其他內建類型， **xml**資料類型當做建立資料表時的資料行類型; 當做變數類型、 參數類型或函數傳回的類型; 或者在[!INCLUDE[tsql](../../includes/tsql_md.md)]CAST 和 CONVERT 函數。  
   
  在 JDBC 驅動程式， **xml**資料型別可以對應為字串、 位元組陣列、 資料流、 CLOB、 BLOB 或 SQLXML 物件。 字串為預設值。 從 JDBC Driver 2.0 版開始，JDBC Driver 提供了 JDBC 4.0 API 的支援，其中導入 SQLXML 介面。 SQLXML 介面會定義與 XML 資料互動和進行操作的方法。 **SQLXML**資料類型會對應至[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] **xml**資料型別。 如需有關如何讀取和寫入 XML 資料的關聯式資料庫，使用**SQLXML** Java 資料類型，請參閱[支援 XML 資料](../../connect/jdbc/supporting-xml-data.md)。  
   
@@ -151,7 +148,7 @@ rs.updateRow();
   
 -   採用 UTF-16 編碼以與其他 XML 處理器和磁碟檔案進行交換時，存取 XML 作為具有開頭 BOM 的位元組陣列  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]UTF 16 編碼的 XML 中需要開頭 BOM。 提供 XML 參數值作為位元組陣列時，應用程式必須提供此項。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]一定會 XML 值輸出為 utf-16 字串不含 BOM 或內嵌編碼宣告。 擷取 XML 值當做 byte[]、BinaryStream 或 Blob 時，會將 UTF-16 BOM 附加至值的開頭。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] UTF 16 編碼的 XML 中需要開頭 BOM。 提供 XML 參數值作為位元組陣列時，應用程式必須提供此項。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 一定會 XML 值輸出為 utf-16 字串不含 BOM 或內嵌編碼宣告。 擷取 XML 值當做 byte[]、BinaryStream 或 Blob 時，會將 UTF-16 BOM 附加至值的開頭。  
   
  如需有關**xml**資料類型，請參閱中的 < xml 資料類型 >[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]線上叢書 》。  
   
@@ -162,7 +159,7 @@ rs.updateRow();
   
  如需使用者定義資料類型的詳細資訊，請參閱 < 使用和修改使用者定義類型的執行個體 」[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]線上叢書 》。  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [了解 JDBC Driver 資料類型](../../connect/jdbc/understanding-the-jdbc-driver-data-types.md)  
   
   

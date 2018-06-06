@@ -1,28 +1,24 @@
 ---
-title: "功能相依性的 Microsoft JDBC Driver for SQL Server |Microsoft 文件"
-ms.custom: 
+title: 功能相依性的 Microsoft JDBC Driver for SQL Server |Microsoft 文件
+ms.custom: ''
 ms.date: 02/28/2018
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
-ms.component: jdbc
-ms.reviewer: 
+ms.prod: sql
+ms.prod_service: connectivity
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- drivers
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: connectivity
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: 939a8773-2583-49a4-bf00-6b892fbe39dc
-caps.latest.revision: 
+caps.latest.revision: 57
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
-ms.workload: On Demand
-ms.openlocfilehash: 703a27220a80744c46ca0bc7667756cec1ab6596
-ms.sourcegitcommit: 9d0467265e052b925547aafaca51e5a5e93b7e38
+manager: craigg
+ms.openlocfilehash: 052628258ae1d8c1f31430ea132ed594a976be98
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/02/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="feature-dependencies-of-microsoft-jdbc-driver-for-sql-server"></a>Microsoft JDBC Driver for SQL Server 的功能相依性
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -90,7 +86,7 @@ ms.lasthandoff: 03/02/2018
 - JDBC 驅動程式 6.0.0 
     - 相依性版本： Adal4j （版本 1.3.0），以及其相依性
         - 在這個版本的驅動程式，您可以使用連線*ActiveDirectoryIntegrated*只能在 Windows 作業系統，並使用 SQL Server （sqljdbc_auth.dll 和 Active Directory Authentication Library 上的驗證模式ADALSQL。DLL)。 
-- JDBC Driver version 6.4.0
+- JDBC 驅動程式版本 6.4.0
     - 相依性版本： Adal4j （版本 1.4.0） 和其相依性
         - 在這個版本的驅動程式，您的應用程式不需要使用 ADALSQL。DLL。 根據作業系統中。 如**非 Windows 作業系統**，驅動程式需要使用 ActiveDirectoryIntegrated 驗證的 Kerberos 票證。 請參閱[Windows、 Linux 和 Mac 上的 設定 Kerberos 票證](https://docs.microsoft.com/sql/connect/jdbc/connecting-using-azure-active-directory-authentication#set-kerberos-ticket-on-windows-linux-and-mac)如需詳細資訊。 如**Windows 作業系統**，預設的驅動程式會檢查 sqljdbc_auth.dll 是否已載入，而且不需要 Kerberos 票證安裝程式或 adal4j 相依性。 不過，如果未載入 sqljdbc_auth.dll，驅動程式的行為與非 Windows 作業系統相同的方式，並需要安裝程式，下列範例中所述： 使用這項功能的範例應用程式可以找到[這裡](../../connect/jdbc/connecting-using-azure-active-directory-authentication.md).
 

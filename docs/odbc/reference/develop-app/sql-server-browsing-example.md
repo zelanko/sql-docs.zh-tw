@@ -1,31 +1,28 @@
 ---
-title: "瀏覽範例的 SQL Server |Microsoft 文件"
-ms.custom: 
+title: 瀏覽範例的 SQL Server |Microsoft 文件
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
-ms.component: odbc
-ms.reviewer: 
+ms.prod: sql
+ms.prod_service: connectivity
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: connectivity
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - SQLBrowseConnect function [ODBC], example
 - connecting to data source [ODBC], SqlBrowseConnect
 - connecting to driver [ODBC], SQLBrowseConnect
 ms.assetid: 6e0d5fd1-ec93-4348-a77a-08f5ba738bc6
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
-ms.workload: Inactive
-ms.openlocfilehash: 358a1ce1e7351fa61e19b78f766a7aaa71c3b441
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+manager: craigg
+ms.openlocfilehash: 113dd18f5ba6c9d2ff8a74e88a920e71bc145893
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sql-server-browsing-example"></a>SQL Server 瀏覽範例
 下列範例會示範如何**SQLBrowseConnect**可能用來瀏覽 SQL server 驅動程式可用的連接。 首先，應用程式要求連接控制代碼：  

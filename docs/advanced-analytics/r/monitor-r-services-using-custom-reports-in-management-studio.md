@@ -1,26 +1,17 @@
 ---
-title: "使用 Management Studio 中的自訂報表監視 R Services | Microsoft Docs"
-ms.custom: 
-ms.date: 10/09/2017
-ms.reviewer: 
-ms.suite: sql
-ms.prod: machine-learning-services
-ms.prod_service: machine-learning-services
-ms.component: r
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
-ms.assetid: 5933c72c-ba63-4966-b882-75719ef8428e
-caps.latest.revision: 
-author: jeannt
-ms.author: jeannt
-manager: cgronlund
-ms.workload: Inactive
-ms.openlocfilehash: 565041e140178055b4839985c10ba4633b5f0334
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+title: 監視使用 Management Studio 中自訂報告的 R 服務 |Microsoft 文件
+ms.prod: sql
+ms.technology: machine-learning
+ms.date: 04/15/2018
+ms.topic: conceptual
+author: HeidiSteen
+ms.author: heidist
+manager: cgronlun
+ms.openlocfilehash: 0e444612a5acd0726bdd6fb743e43813d6b0caf7
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="monitor-machine-learning-services-using-custom-reports-in-management-studio"></a>監視使用 Management Studio 中自訂報告的機器學習服務
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -118,6 +109,6 @@ Management Studio 中報表的一般簡介，請參閱[在 Management Studio 中
 
 ## <a name="see-also"></a>另請參閱
 
-[監視 R Services](../../advanced-analytics/r-services/monitoring-r-services.md)
+[監視 windows 服務](managing-and-monitoring-r-solutions.md)
 
-[R Services 的擴充事件](../../advanced-analytics/r-services/extended-events-for-sql-server-r-services.md)
+[R Services 的擴充事件](extended-events-for-sql-server-r-services.md)

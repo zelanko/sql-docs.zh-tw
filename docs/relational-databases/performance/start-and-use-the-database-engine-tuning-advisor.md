@@ -1,17 +1,13 @@
 ---
-title: "啟動及使用 Database Engine Tuning Advisor | Microsoft Docs"
-ms.custom: 
+title: 啟動及使用 Database Engine Tuning Advisor | Microsoft Docs
+ms.custom: ''
 ms.date: 01/09/2017
-ms.prod: sql-non-specified
-ms.prod_service: database-engine
-ms.service: 
-ms.component: performance
-ms.reviewer: 
+ms.prod: sql
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: performance
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 f1_keywords:
 - sql13.dta.workload.f1
 - sql13.dta.general.f1
@@ -22,19 +18,19 @@ f1_keywords:
 helpviewer_keywords:
 - Database Engine Tuning Advisor [SQL Server], starting
 ms.assetid: a4e3226a-3917-4ec8-bdf0-472879d231c9
-caps.latest.revision: 
+caps.latest.revision: 33
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: c827fd810238c823cd40ab11b47109876234b646
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 3bb4357c90eb0d4cd7aface5deccdb9096f0615d
+ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="start-and-use-the-database-engine-tuning-advisor"></a>啟動及使用 Database Engine Tuning Advisor
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 本主題描述如何在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中啟動及使用 Database Engine Tuning Advisor。 如需如何在微調資料庫後檢視及處理結果的資訊，請參閱 [檢視及處理 Database Engine Tuning Advisor 的輸出](../../relational-databases/performance/view-and-work-with-the-output-from-the-database-engine-tuning-advisor.md)。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  此主題描述如何在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]中啟動及使用 Database Engine Tuning Advisor。 如需如何在微調資料庫後檢視及處理結果的資訊，請參閱 [檢視及處理 Database Engine Tuning Advisor 的輸出](../../relational-databases/performance/view-and-work-with-the-output-from-the-database-engine-tuning-advisor.md)。  
   
 ##  <a name="Initialize"></a> 初始化 Database Engine Tuning Advisor  
  在第一次使用時， **系統管理員 (sysadmin)** 固定伺服器角色的成員使用者必須初始化 Database Engine Tuning Advisor。 原因是必須在 **msdb** 資料庫中建立數個系統資料表，以支援微調作業。 初始化也可讓屬於 **db_owner** 固定資料庫角色成員的使用者，微調他們所擁有資料庫中資料表的工作負載。  
@@ -104,7 +100,7 @@ ms.lasthandoff: 01/18/2018
   
 1.  使用下列其中一種方法啟動 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] ：  
   
-    -   在 **[開始]** 功能表中，依序指向 **[所有程式]**、 **[Microsoft SQL Server]**與 **[效能工具]**，然後按一下 **[SQL Server Profiler]**。  
+    -   在 **[開始]** 功能表中，依序指向 **[所有程式]**、 **[Microsoft SQL Server]** 與 **[效能工具]**，然後按一下 **[SQL Server Profiler]**。  
   
     -   在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中，按一下 **[工具]** 功能表，然後按一下 **[SQL Server Profiler]**。  
   
@@ -167,7 +163,7 @@ ms.lasthandoff: 01/18/2018
   
 3.  選取 **[計畫快取]** 做為工作負載選項。 Database Engine Tuning Advisor 會選取計畫快取中前 1,000 個用於分析的事件。  
   
-4.  選取一個或多個想要微調的資料庫，並選擇性地從 **[選取的資料表]**中選擇每個資料庫中的一個或多個資料表。 若要包含所有資料庫的快取項目，請按一下 **[微調選項]**中的 **[進階選項]** ，然後核取 **[包含來自所有資料庫的計畫快取事件]**。  
+4.  選取一個或多個想要微調的資料庫，並選擇性地從 **[選取的資料表]** 中選擇每個資料庫中的一個或多個資料表。 若要包含所有資料庫的快取項目，請按一下 **[微調選項]** 中的 **[進階選項]** ，然後核取 **[包含來自所有資料庫的計畫快取事件]**。  
   
 5.  核取 **[儲存微調記錄]** ，以儲存微調記錄的副本。 若您不想儲存微調記錄的副本，請清除核取方塊。  
   
@@ -460,7 +456,7 @@ database_name.owner_name.table_name
  只包含加入索引檢視的建議。 不建議叢集與非叢集索引。  
   
  **包含篩選的索引**  
- 包含加入篩選之索引的建議。 如果您選取下列其中一個實體設計結構，將可以使用這個選項： **[索引與索引檢視]**、 **[索引]**或 **[非叢集索引]**。  
+ 包含加入篩選之索引的建議。 如果您選取下列其中一個實體設計結構，將可以使用這個選項： **[索引與索引檢視]**、 **[索引]** 或 **[非叢集索引]**。  
   
  **[索引]**  
  只包含加入叢集與非叢集索引的建議。 不建議索引檢視。  

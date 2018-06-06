@@ -1,16 +1,14 @@
 ---
 title: MERGE (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 08/10/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
 ms.component: t-sql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: t-sql
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - MERGE
@@ -27,16 +25,15 @@ helpviewer_keywords:
 - data manipulation language [SQL Server], MERGE statement
 - inserting data
 ms.assetid: c17996d6-56a6-482f-80d8-086a3423eecc
-caps.latest.revision: 
+caps.latest.revision: 76
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Active
-ms.openlocfilehash: dd8ecb3609dd70516023afe84125252c708ad1ad
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 38ee232615df4c4f80bce08d69fb14251aab58e3
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="merge-transact-sql"></a>MERGE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -226,7 +223,7 @@ SET
  \<table_hint_limited>  
  指定針對每個由 MERGE 陳述式所執行的插入、更新或刪除動作，套用到目標資料表的一個或多個資料表提示。 WITH 關鍵字和括號都是必要的。  
   
- 不允許使用 NOLOCK 和 READUNCOMMITTED。 如需有關資料表提示的詳細資訊，請參閱[資料表提示 &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-table.md)。  
+ 不允許使用 NOLOCK 和 READUNCOMMITTED。 如需資料表提示的詳細資訊，請參閱[資料表提示 &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-table.md)。  
   
  指定 INSERT 陳述式目標資料表之 TABLOCK 提示的效果，與指定 TABLOCKX 提示相同。 獨佔鎖定是在資料表上取得的。 有指定 FORCESEEK 時，該提示會套用到與來源資料表聯結之目標資料表的隱含執行個體。  
   
@@ -257,7 +254,7 @@ SET
  指定要插入目標資料表的值。  
   
  (*column_list*)  
- 這是要插入資料的一個或多個目標資料表資料行的清單。 必須將資料行指定為單一部分名稱，否則 MERGE 陳述式會失敗。 *column_list* 必須括在括弧中，並以逗號分隔。  
+ 這是要插入資料的一個或多個目標資料表資料行的清單。 必須將資料行指定為單一部分名稱，否則 MERGE 陳述式會失敗。 *column_list* 必須以括弧括住，並以逗號分隔。  
   
  VALUES ( *values_list*)  
  這是以逗號分隔的常數、變數或運算式清單，這些項目會傳回要插入目標資料表的值。 運算式不能包含 EXECUTE 陳述式。  

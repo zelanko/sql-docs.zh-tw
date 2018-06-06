@@ -1,36 +1,23 @@
 ---
-title: "輸入元素 (Binding) (ASSL) |Microsoft 文件"
-ms.custom: 
-ms.date: 03/06/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+title: 輸入元素 (Binding) (ASSL) |Microsoft 文件
+ms.date: 5/8/2018
+ms.prod: sql
+ms.custom: assl
+ms.reviewer: owend
+ms.technology: analysis-services
 ms.topic: reference
-apiname: Type Element (Binding)
-apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
-apitype: Schema
-applies_to: SQL Server 2016 Preview
-f1_keywords: TYPE
-helpviewer_keywords: Type element
-ms.assetid: b5f5c485-dc83-4d66-a8d2-e96e96d068f9
-caps.latest.revision: "32"
-author: Minewiskan
+author: minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: c37eaed200b5f9be4d7ef39599bd2a02ce7b2e58
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 6f125c950c65f34c139e3b98ad4ca59b392ed2b9
+ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="type-element-binding-assl"></a>Type 元素 (Binding) (ASSL)
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]包含屬性繫結的類型。  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+  包含屬性繫結的類型。  
   
 ## <a name="syntax"></a>語法  
   
@@ -45,7 +32,7 @@ ms.lasthandoff: 01/08/2018
   
 ## <a name="element-characteristics"></a>元素特性  
   
-|特性|描述|  
+|特性|說明|  
 |--------------------|-----------------|  
 |資料類型和長度|字串 (列舉)|  
 |預設值|無|  
@@ -61,11 +48,11 @@ ms.lasthandoff: 01/08/2018
 ## <a name="remarks"></a>備註  
  這個元素的值限制為下表所列的其中一個字串。  
   
-|ReplTest1|描述|  
+|值|Description|  
 |-----------|-----------------|  
 |*全部*|所有層級|  
 |*索引鍵*|成員索引鍵|  
-|*[名稱]*|成員名稱|  
+|*名稱*|成員名稱|  
 |*值*|成員值|  
 |*轉譯*|成員翻譯|  
 |*UnaryOperator*|一元運算子|  
@@ -75,8 +62,8 @@ ms.lasthandoff: 01/08/2018
   
  對應至父系的項目**類型**在 「 分析管理物件 (AMO) 物件模型是<xref:Microsoft.AnalysisServices.AttributeBinding>和<xref:Microsoft.AnalysisServices.CubeAttributeBinding>。  
   
-## <a name="see-also"></a>請參閱  
- [繫結資料類型 &#40;ASSL &#41;](../../../analysis-services/scripting/data-type/binding-data-type-assl.md)   
- [屬性 &#40;ASSL &#41;](../../../analysis-services/scripting/properties/properties-assl.md)  
+## <a name="see-also"></a>另請參閱  
+ [繫結資料類型 & #40;ASSL & #41;](../../../analysis-services/scripting/data-type/binding-data-type-assl.md)   
+ [屬性 & #40;ASSL & #41;](../../../analysis-services/scripting/properties/properties-assl.md)  
   
   

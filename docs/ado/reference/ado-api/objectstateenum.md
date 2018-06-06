@@ -1,33 +1,30 @@
 ---
-title: ObjectStateEnum | Microsoft Docs
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
+title: ObjectStateEnum |Microsoft 文件
+ms.prod: sql
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
-ms.custom: 
+ms.technology: connectivity
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 apitype: COM
 f1_keywords:
 - ObjectStateEnum
 helpviewer_keywords:
 - ObjectStateEnum enumeration [ADO]
 ms.assetid: 32746558-097b-4749-989e-519aadf7e3f4
-caps.latest.revision: 
+caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: cf7bdb66b8c8de0e45417e85005d7eda90fdc014
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 7a8d7ba4da1908d2434049c8a71039a259bab8ea
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="objectstateenum"></a>ObjectStateEnum
 指定物件是否為開啟或關閉、 連接到執行命令，或擷取資料的資料來源。  
@@ -41,7 +38,7 @@ ms.lasthandoff: 02/09/2018
 |**adStateFetching**|8|指出，正在抓取物件的資料列。|  
   
 ## <a name="adowfc-equivalent"></a>ADO/WFC 對等項目  
- Package: **com.ms.wfc.data**  
+ 封裝： **com.ms.wfc.data**  
   
 |常數|  
 |--------------|  

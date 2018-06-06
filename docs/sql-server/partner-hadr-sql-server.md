@@ -1,29 +1,27 @@
 ---
-title: "SQL Server 高可用性和災害復原夥伴 | Microsoft Docs"
-description: "具有 Server 監視解決方案的協力廠商夥伴清單。"
+title: SQL Server 高可用性和災害復原夥伴 | Microsoft Docs
+description: 具有 Server 監視解決方案的協力廠商夥伴清單。
 services: sql-server
 documentationcenter: NA
 author: MikeRayMSFT
-manager: jhubbard
-editor: 
-ms.assetid: 
-ms.service: 
+manager: craigg
+editor: ''
+ms.assetid: ''
 ms.component: sql-non-specified
 ms.suite: sql
 ms.devlang: NA
 ms.topic: article
 ms.tgt_pltfrm: NA
-ms.workload: sql-server
-ms.custom: 
+ms.custom: ''
 ms.date: 09/17/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
 ms.author: mikeray
-ms.openlocfilehash: 18a740fa623665b6978bf5897f5654657602270d
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 7730d292f706db3450557585c6ba63ae7ea20614
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sql-server-high-availability-and-disaster-recovery-partners"></a>SQL Server 高可用性和災害復原夥伴
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

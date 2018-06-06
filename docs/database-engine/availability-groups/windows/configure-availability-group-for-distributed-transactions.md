@@ -1,32 +1,31 @@
 ---
-title: "設定分散式交易的可用性群組 | Microsoft Docs"
-ms.custom: 
-ms.date: 07/19/2017
-ms.prod: sql-non-specified
-ms.prod_service: database-engine
-ms.service: 
-ms.component: availability-groups
-ms.reviewer: 
+title: 設定分散式交易的可用性群組 | Microsoft Docs
+ms.custom: ''
+ms.date: 05/22/2018
+ms.prod: sql
+ms.prod_service: high-availability
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: dbe-high-availability
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: high-availability
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - database mirroring [SQL Server], interoperability
 - cross-database transactions [SQL Server]
 - transactions [database mirroring]
 - Availability Groups [SQL Server], interoperability
 - troubleshooting [SQL Server], cross-database transactions
-ms.assetid: 
-caps.latest.revision: "33"
+ms.assetid: ''
+caps.latest.revision: 33
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 9faba068fd3712b2ada9dbe3260795d4ecd19a6c
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: bde3ca6e1b9712e34a3e0b43f0a52687de25a40f
+ms.sourcegitcommit: b5ab9f3a55800b0ccd7e16997f4cd6184b4995f9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 05/23/2018
+ms.locfileid: "34455531"
 ---
 # <a name="configure-availability-group-for-distributed-transactions"></a>設定分散式交易的可用性群組
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -36,7 +35,7 @@ ms.lasthandoff: 01/18/2018
 為確保分散式交易，必須設定可用性群組，將資料庫註冊為分散式交易資源管理員。  
 
 >[!NOTE]
->[!INCLUDE[SQL2016](../../../includes/sssql15-md.md)] 也支援分散式交易，但 [!INCLUDE[SQL2016](../../../includes/sssql15-md.md)] 中的支援有所限制。 在 [!INCLUDE[SQL2016](../../../includes/sssql15-md.md)] 中，如果同一伺服器上有多個資料庫，則不支援可用性群組中附資料庫的分散式交易。 [!INCLUDE[SQL2017](../../../includes/sssqlv14-md.md)] 沒有這項限制。 
+>[!INCLUDE[SQL Server 2016]](../../../includes/sssql15-md.md)] Service Pack 2 和更新版本提供對於可用性群組中之分散式交易的完整支援。 在 Service Pack 2 之前的 [!INCLUDE[SQL Server 2016]](../../../includes/sssql15-md.md)] 版本中，不支援牽涉到可用性群組中之資料庫的跨資料庫分散式交易 (也就是使用相同 SQL Server 執行個體上之資料庫的交易)。 [!INCLUDE[SQL2017](../../../includes/sssqlv14-md.md)] 沒有這項限制。 
 >
 >[!INCLUDE[SQL2016](../../../includes/sssql15-md.md)] 和 [!INCLUDE[SQL2017](../../../includes/sssqlv14-md.md)] 的組態步驟相同。
 
@@ -50,7 +49,7 @@ ms.lasthandoff: 01/18/2018
 
 * 所有參與分散式交易的 [!INCLUDE[SQLServer](../../../includes/ssnoversion_md.md)] 執行個體都必須是 [!INCLUDE[SQL2016](../../../includes/sssql15-md.md)] 或更新版本。
 
-* 可用性群組必須在 Windows Server 2016 或 Windows Server 2012 R2 上執行。 針對 Windows Server 2012 R2，您必須安裝 [https://support.microsoft.com/en-us/kb/3090973](https://support.microsoft.com/en-us/kb/3090973)上所提供 KB3090973 中的更新。  
+* 可用性群組必須在 Windows Server 2016 或 Windows Server 2012 R2 上執行。 針對 Windows Server 2012 R2，您必須安裝 [https://support.microsoft.com/en-us/kb/3090973](https://support.microsoft.com/en-us/kb/3090973) 上所提供 KB3090973 中的更新。  
 
 ## <a name="create-an-availability-group-for-distributed-transactions"></a>建立分散式交易的可用性群組
 
@@ -58,7 +57,7 @@ ms.lasthandoff: 01/18/2018
 
 您可以在 [!INCLUDE[SQL2016](../../../includes/sssql15-md.md)] 或更新版本上建立分散式交易的可用性群組。 在可用性群組定義中建立分散式交易的可用性群組，包括 `DTC_SUPPORT = PER_DB`。 下列指令碼會建立分散式交易的可用性群組。 
 
-```transact-sql
+```sql
 CREATE AVAILABILITY GROUP MyAG
    WITH (
       DTC_SUPPORT = PER_DB  
@@ -84,7 +83,7 @@ CREATE AVAILABILITY GROUP MyAG
 
 您可以在 [!INCLUDE[SQL2017](../../../includes/sssqlv14-md.md)] 或更新版本上改變分散式交易的可用性群組。 以 `ALTER AVAILABILITY GROUP` 指令碼改變分散式交易的可用性群組，包括 `DTC_SUPPORT = PER_DB`。 範例指令碼變更可用性群組，以支援分散式交易。 
 
-```transact-sql
+```sql
 ALTER AVAILABILITY GROUP MyaAG
    SET (
       DTC_SUPPORT = PER_DB  
@@ -169,19 +168,19 @@ following the guideline for Troubleshooting DTC Transactions.
 
    * 認可交易，請更新並執行下列指令碼：以前一則錯誤訊息中的可疑交易 UOW 取代 `yyyyyyyy-yyyy-yyyy-yyyy-yyyyyyyyyyyy`，然後執行：
 
-      ```transact-sql
-      KILL 'yyyyyyyy-yyyy-yyyy-yyyy-yyyyyyyyyyyy' WITH COMMIT
-      ```
+   ```sql
+   KILL 'yyyyyyyy-yyyy-yyyy-yyyy-yyyyyyyyyyyy' WITH COMMIT
+   ```
 
    * 復原交易，請更新並執行下列指令碼：以前一則錯誤訊息中的可疑交易 UOW 取代 `yyyyyyyy-yyyy-yyyy-yyyy-yyyyyyyyyyyy`，然後執行：
 
-      ```transact-sql
-      KILL 'yyyyyyyy-yyyy-yyyy-yyyy-yyyyyyyyyyyy' WITH ROLLBACK
-     ```
+   ```sql
+   KILL 'yyyyyyyy-yyyy-yyyy-yyyy-yyyyyyyyyyyy' WITH ROLLBACK
+   ```
 
 認可或復原交易之後，您可以使用 `ALTER DATABASE` 將資料庫設定為線上。 更新並執行下列指令碼：將資料庫名稱設為可疑資料庫的名稱：
 
-   ```transact-sql
+   ```sql
    ALTER DATABASE [DB1] SET ONLINE
    ```
 

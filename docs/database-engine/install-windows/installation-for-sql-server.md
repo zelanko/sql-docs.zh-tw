@@ -1,17 +1,14 @@
 ---
-title: "SQL Server 安裝 | Microsoft Docs"
-ms.custom: 
+title: SQL Server 安裝 | Microsoft Docs
+ms.custom: ''
 ms.date: 09/06/2017
-ms.prod: sql-non-specified
-ms.prod_service: database-engine
-ms.service: 
-ms.component: install-windows
-ms.reviewer: 
+ms.prod: sql
+ms.prod_service: install
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- setup-install
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: install
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 f1_keywords:
 - sql13.portal.Installation.f1
 helpviewer_keywords:
@@ -19,15 +16,15 @@ helpviewer_keywords:
 - installation [SQL Server]
 - initial installation [SQL Server]
 ms.assetid: edd75f68-dc62-4479-a596-57ce8ad632e5
-caps.latest.revision: 
+caps.latest.revision: 34
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 8fe0874d637f1597814bf14c8d12d111ece4cee1
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 59eb3b4f64e0eaa4b40f51df98ee3db8057be3f4
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sql-server-installation"></a>SQL Server 安裝
 

@@ -1,25 +1,22 @@
 ---
-title: "建立和執行 SQL Server on Linux 作業 |Microsoft 文件"
-description: "本教學課程會示範如何在 Linux 上執行 SQL Server Agent 作業。"
+title: 建立和執行 SQL Server on Linux 作業 |Microsoft 文件
+description: 本教學課程會示範如何在 Linux 上執行 SQL Server Agent 作業。
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.date: 02/20/2018
 ms.topic: article
-ms.prod: sql-non-specified
-ms.prod_service: database-engine
-ms.service: 
-ms.component: 
+ms.prod: sql
+ms.component: ''
 ms.suite: sql
 ms.custom: sql-linux
-ms.technology: database-engine
+ms.technology: linux
 ms.assetid: 1d93d95e-9c89-4274-9b3f-fa2608ec2792
-ms.workload: Inactive
-ms.openlocfilehash: 0788983d79392fbd39c87ce13aeb4c9439bffe33
-ms.sourcegitcommit: 57f45ee008141ddf009b1c1195442529e0ea1508
+ms.openlocfilehash: 162015772bb54023816fcc7d911ca34fbd4a3ac7
+ms.sourcegitcommit: b5ab9f3a55800b0ccd7e16997f4cd6184b4995f9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/21/2018
+ms.lasthandoff: 05/23/2018
 ---
 # <a name="create-and-run-sql-server-agent-jobs-on-linux"></a>建立和執行在 Linux 上的 SQL Server Agent 作業
 
@@ -159,7 +156,7 @@ SQL Server 工作可用來定期執行的命令相同的順序，SQL Server 資�
 
 您也可以建立及管理在 Windows 上使用遠端 SQL Server Management Studio (SSMS) 的工作。
 
-1. 在 Windows 上啟動 SSMS 並連接至您的 Linux SQL Server 執行個體。 如需詳細資訊，請參閱[管理 SQL Server on Linux 使用 SSMS](sql-server-linux-develop-use-ssms.md)。
+1. 在 Windows 上啟動 SSMS 並連接至您的 Linux SQL Server 執行個體。 如需詳細資訊，請參閱[管理 SQL Server on Linux 使用 SSMS](sql-server-linux-manage-ssms.md)。
 
 1. 請確認您已建立名為的範例資料庫**SampleDB**。
 

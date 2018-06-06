@@ -1,16 +1,15 @@
 ---
-title: "使用聯結進行查詢 (Visual Database Tools) | Microsoft Docs"
-ms.custom: 
+title: 使用聯結進行查詢 (Visual Database Tools) | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
 ms.component: ssms-visual-db
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: tools-ssms
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ssms
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - queries [Visual Database Tools]
 - View Designer, joins
@@ -20,19 +19,19 @@ helpviewer_keywords:
 - Query Designer [SQL Server], joins
 - joins [SQL Server], queries
 ms.assetid: 8f068207-d777-4e64-8c4c-d821f0ddb450
-caps.latest.revision: "4"
+caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 011d5fd28f4a5f5bab66fd6579c8e84f52a5989d
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.openlocfilehash: c3e3d12584c9616f991fbaecd82ab7ab032f369e
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="query-with-joins-visual-database-tools"></a>使用聯結進行查詢 (Visual Database Tools)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 查詢結果可包含來自多個資料表或表格值物件的資料。 若要結合來自多個資料表值物件的資料，請使用 SQL 的 JOIN 作業。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+查詢結果可包含來自多個資料表或表格值物件的資料。 若要結合來自多個資料表值物件的資料，請使用 SQL 的 JOIN 作業。  
   
 如需使用多個資料表建立查詢的詳細資訊，請參閱下列主題。  
   

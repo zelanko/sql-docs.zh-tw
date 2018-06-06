@@ -1,39 +1,24 @@
 ---
-title: "MoveWithDescendants 元素 (XMLA) |Microsoft 文件"
-ms.custom: 
-ms.date: 03/06/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services, azure-analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+title: MoveWithDescendants 元素 (XMLA) |Microsoft 文件
+ms.date: 05/08/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: xmla
 ms.topic: reference
-apiname: MoveWithDescendants Element
-apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
-apitype: Schema
-applies_to: SQL Server 2016 Preview
-f1_keywords:
-- microsoft.xml.analysis.movewithdescendants
-- http://schemas.microsoft.com/analysisservices/2003/engine#MoveWithDescendants
-- urn:schemas-microsoft-com:xml-analysis#MoveWithDescendants
-helpviewer_keywords: MoveWithDescendants element
-ms.assetid: d02285b6-1801-4da9-8e2b-9ab008e25558
-caps.latest.revision: "11"
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: f4a5712589c87c0301a7285083fda5f87c96aa6f
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 518c95efa36c6a234036a1c7f293c3df8283749a
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34575730"
 ---
 # <a name="movewithdescendants-element-xmla"></a>MoveWithDescendants 元素 (XMLA)
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]指出是否屬性成員的下階也會更新它的父系[更新](../../../analysis-services/xmla/xml-elements-commands/update-element-xmla.md)命令。  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
+  指出是否屬性成員的下階也會更新它的父系[更新](../../../analysis-services/xmla/xml-elements-commands/update-element-xmla.md)命令。  
   
 ## <a name="syntax"></a>語法  
   
@@ -67,9 +52,9 @@ ms.lasthandoff: 01/08/2018
 > [!NOTE]  
 >  這個元素只會套用至父子式階層中的屬性成員。  
   
- 如需有關更新成員的詳細資訊，請參閱[插入、 更新及卸除成員 &#40;XMLA &#41;](../../../analysis-services/multidimensional-models-scripting-language-assl-xmla/inserting-updating-and-dropping-members-xmla.md).  
+ 如需有關更新成員的詳細資訊，請參閱[插入、 更新和卸除成員&#40;XMLA&#41;](../../../analysis-services/multidimensional-models-scripting-language-assl-xmla/inserting-updating-and-dropping-members-xmla.md)。  
   
-## <a name="see-also"></a>請參閱  
- [屬性 &#40;XMLA &#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
+## <a name="see-also"></a>另請參閱
+ [屬性&#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
   
   

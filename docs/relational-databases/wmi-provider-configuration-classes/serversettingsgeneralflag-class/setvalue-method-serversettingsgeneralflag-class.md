@@ -1,16 +1,15 @@
 ---
-title: "SetValue 方法 （ServerSettingsGeneralFlag 類別） |Microsoft 文件"
-ms.custom: 
+title: SetValue 方法 （ServerSettingsGeneralFlag 類別） |Microsoft 文件
+ms.custom: ''
 ms.date: 03/04/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
 ms.component: wmi
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - SetValue Method (ServerSettingsGeneralFlag Class)
@@ -20,20 +19,19 @@ apitype: MOFDef
 helpviewer_keywords:
 - SetValue method
 ms.assetid: a889feac-c0e0-4635-b506-843863d86967
-caps.latest.revision: 
-author: JennieHubbard
-ms.author: jhubbard
+caps.latest.revision: 30
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: ca4811fd144dc27ab244e42e75a30ff86f6cd1d7
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.openlocfilehash: e1e86af442ee11eaf18d0038ca49f25b62a20448
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="setvalue-method-serversettingsgeneralflag-class"></a>SetValue 方法 (ServerSettingsGeneralFlag 類別)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
-設定參考之旗標的所有值。  
+  設定參考之旗標的所有值。  
   
 ## <a name="syntax"></a>語法  
   

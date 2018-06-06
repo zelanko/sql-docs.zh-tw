@@ -1,44 +1,19 @@
 ---
-title: "Microsoft 時間序列演算法技術參考 |Microsoft 文件"
-ms.custom: 
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
-helpviewer_keywords:
-- ARTXP
-- HISTORICAL_MODEL_GAP parameter
-- AUTO_DETECT_PERIODICITY parameter
-- time series algorithms [Analysis Services]
-- ARIMA
-- INSTABILITY_SENSITIVITY parameter
-- PERIODICITY_HINT parameter
-- MAXIMUM_SERIES_VALUE parameter
-- time series [Analysis Services]
-- MINIMUM_SUPPORT parameter
-- HISTORIC_MODEL_COUNT parameter
-- FORECAST_METHOD parameter
-- MISSING_VALUE_SUBSTITUTION parameter
-- MINIMUM_SERIES_VALUE parameter
-- COMPLEXITY_PENALTY parameter
-- PREDICTION_SMOOTHING parameter
-ms.assetid: 7ab203fa-b044-47e8-b485-c8e59c091271
-caps.latest.revision: 
-author: Minewiskan
+title: Microsoft 時間序列演算法技術參考 |Microsoft 文件
+ms.date: 05/08/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: data-mining
+ms.topic: conceptual
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 40d0c34ea4bb7e95d77ff6aa37695da4080c20ac
-ms.sourcegitcommit: 657d18fc805512c9574b2fe7451310601b9d78cb
+ms.openlocfilehash: 5d4634a8d926ec62d05317976f4e1bf1a459f0cd
+ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/13/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="microsoft-time-series-algorithm-technical-reference"></a>Microsoft 時間序列演算法技術參考
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -142,13 +117,13 @@ ms.lasthandoff: 03/13/2018
 |*COMPLEXITY_PENALTY*|控制決策樹的成長。 預設值是 0.1。<br /><br /> 減少此值可增加分割的機率。 增加此值可減少分割的機率。<br /><br /> 注意：只有在某些 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]版本中才可使用這個參數。|  
 |*FORECAST_METHOD*|指定要使用哪一個演算法來分析和預測。 可能的值為 ARTXP、ARIMA 或 MIXED。 預設值為 MIXED。|  
 |*HISTORIC_MODEL_COUNT*|指定要建立的記錄模型數目。 預設值是 1。<br /><br /> 注意：只有在某些 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]版本中才可使用這個參數。|  
-|*HISTORICAL_MODEL_GAP*|指定兩個連續記錄模型之間的時間延遲。 預設值是 10。 此值代表時間單位數，此單位是由模型所定義。<br /><br /> 例如，將此值設定為 g，會造成要建立記錄模型的資料，依 g、2*g、3\*g 等等的間隔而遭到時間配量截斷。<br /><br /> 注意：只有在某些 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]版本中才可使用這個參數。|  
+|*HISTORICAL_MODEL_GAP*|指定兩個連續記錄模型之間的時間延遲。 預設值是 10。 此值代表時間單位數，此單位是由模型所定義。<br /><br /> 例如，將此值設定為 g，會造成要建立記錄模型的資料，依 g、2\*g、3\*g 等等的間隔而遭到時間配量截斷。<br /><br /> 注意：只有在某些 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]版本中才可使用這個參數。|  
 |*INSTABILITY_SENSITIVITY*|控制預測變異數超出某個臨界值的那個點，在那個點之後，ARTXP 演算法會隱藏預測。 預設值是 1。<br /><br /> 注意：這個參數不適用於只使用 ARIMA 的模型。<br /><br /> 預設值 1 會提供與 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]中相同的行為。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 會監視每一個預測的正規化標準差。 一旦任何預測的這個值超出臨界值，時間序列演算法就會傳回 NULL，並停止預測程序。<br /><br /> [!INCLUDE[tabValue](../../includes/tabvalue-md.md)] 值會停止不穩定的偵測。 這表示，您可以建立無限的預測數，不論變異數為何。<br /><br /> 注意：這個參數只能在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise 中修改。 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Standard 中， [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 只會使用預設值 1。|  
 |*MAXIMUM_SERIES_VALUE*|指定用於預測的最大值。 這個參數會與 *MINIMUM_SERIES_VALUE*一起使用，將預測限制為某個預期的範圍。 例如，您可以指定任何一天的預期銷售數量絕對不能超過存貨產品數。<br /><br /> 注意：只有在某些 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]版本中才可使用這個參數。|  
 |*MINIMUM_SERIES_VALUE*|指定可以預測的最小值。 這個參數會與 *MAXIMUM_SERIES_VALUE*一起使用，將預測限制為某個預期的範圍。 例如，您可以指定預期銷售數量絕對不能是負數。<br /><br /> 注意：只有在某些 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]版本中才可使用這個參數。|  
 |*MINIMUM_SUPPORT*|指定要在每一個時間序列樹中產生分割所需之時間配量的最小數目。 預設值是 10。|  
 |*MISSING_VALUE_SUBSTITUTION*|指定如何填滿歷程記錄資料中的間距。 根據預設，資料中不允許有間隔。 下表列出此參數的可能值：<br /><br /> **Previous**：重複先前時間配量中的值。<br /><br /> **Mean**：使用定型中使用之時間配量的移動平均。<br /><br /> 數值常數：使用指定的數目來取代所有遺漏的值。<br /><br /> **None**：預設值。 使用沿著定型模型曲線所繪製的值來取代遺漏的值。<br /><br /> <br /><br /> 請注意，如果資料包含多個數列，數列不能有不完全的邊緣。 也就是說，所有的數列都應該有相同的起點和終點。 <br />                    [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 當您在時間序列模型上執行 **PREDICTION JOIN** 時，也會使用這個參數值來填滿新資料中的間距。|  
-|*PERIODICITY_HINT*|提供演算法關於資料週期性的提示。 例如，若每年銷售不同，而且數列中的度量單位是月，則週期性是 12。 此參數採用 {n [, n]} 的格式，其中 n 為任意正數。<br /><br /> 方括弧 [] 內的 n 是選擇性的，可以視需要而重複。 例如，若要針對每個月提供的資料來提供多個週期性提示，您可輸入 {12, 3, 1} 來偵測年、季和月的模式。 但是，週期性對於模型的品質有很大的影響。 如果您所給的提示與實際週期性不同，對結果會有負面影響。<br /><br /> 預設值是 {1}。<br /><br /> 請注意，必須用大括號括住。 而且，這個參數具有字串資料類型。 因此，如果您在資料採礦延伸模組 (DMX) 陳述式中輸入這個參數，您必須以引號括住數字和大括號。|  
+|*PERIODICITY_HINT*|提供演算法關於資料週期性的提示。 例如，若每年銷售不同，而且數列中的度量單位是月，則週期性是 12。 此參數採用 {n [, n]} 的格式，其中 n 為任意正數。<br /><br /> 方括弧 [] 內的 n 是選擇性的，可以視需要而重複。 例如，若要針對每個月提供的資料來提供多個週期性提示，您可輸入 {12, 3, 1} 來偵測年、季和月的模式。 但是，週期性對於模型的品質有很大的影響。 如果您所給的提示與實際週期性不同，對結果會有負面影響。<br /><br /> 預設值為 {1}。<br /><br /> 請注意，必須用大括號括住。 而且，這個參數具有字串資料類型。 因此，如果您在資料採礦延伸模組 (DMX) 陳述式中輸入這個參數，您必須以引號括住數字和大括號。|  
 |*PREDICTION_SMOOTHING*|指定應該如何混合模型來讓預測最佳化。 您可以輸入 [!INCLUDE[tabValue](../../includes/tabvalue-md.md)] 與 1 之間的任何值，或是使用下列其中一個值：<br /><br /> [!INCLUDE[tabValue](../../includes/tabvalue-md.md)]:<br />                          指定預測只能使用 ARTXP。 已針對較少的預測數而最佳化預測。<br /><br /> 1：指定預測只能使用 ARIMA。 已針對許多的預測數而最佳化預測。<br /><br /> 0.5：預設值。 指定在預測時，這兩個演算法都應該使用，而且應該混合結果。<br /><br /> <br /><br /> 在執行預測平滑化時，使用 *FORECAST_METHOD* 參數來控制定型。   請注意，只有在某些 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]版本中才可使用這個參數。|  
   
 ### <a name="modeling-flags"></a>模型旗標  
@@ -176,6 +151,6 @@ ms.lasthandoff: 03/13/2018
 ## <a name="see-also"></a>另請參閱  
  [Microsoft 時間序列演算法](../../analysis-services/data-mining/microsoft-time-series-algorithm.md)   
  [時間序列模型查詢範例](../../analysis-services/data-mining/time-series-model-query-examples.md)   
- [時間序列模型 &#40; 的採礦模型內容Analysis Services-資料採礦 &#41;](../../analysis-services/data-mining/mining-model-content-for-time-series-models-analysis-services-data-mining.md)  
+ [時間序列模型 & #40; 的採礦模型內容Analysis Services-資料採礦 & #41;](../../analysis-services/data-mining/mining-model-content-for-time-series-models-analysis-services-data-mining.md)  
   
   

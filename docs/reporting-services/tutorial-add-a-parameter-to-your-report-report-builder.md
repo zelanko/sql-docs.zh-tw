@@ -1,28 +1,27 @@
 ---
-title: "教學課程： 將參數加入至報表 （報表產生器） |Microsoft 文件"
-ms.custom: 
+title: 教學課程： 將參數加入至報表 （報表產生器） |Microsoft 文件
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
-ms.service: 
 ms.component: reporting-services
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: get-started-article
-applies_to: SQL Server 2016
+applies_to:
+- SQL Server 2016
 ms.assetid: eab34ec4-b3ad-4a76-95cc-07b2f75ee6d7
-caps.latest.revision: "12"
+caps.latest.revision: 12
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.workload: Active
-ms.openlocfilehash: 7d8b0e4051da1cbcfc2ae641c2eb99102a13ac45
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: eb1fa8539eb0ba96edb5c48d29af160507e61998
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="tutorial-add-a-parameter-to-your-report-report-builder"></a>教學課程：將參數加入至報表 (報表產生器)
 在本教學課程中，您可以將參數新增至 [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] 分頁報表，讓報表讀者可以篩選報表資料中的一或多個值。 
@@ -151,11 +150,11 @@ ms.lasthandoff: 01/09/2018
     WHERE StoreID = (@StoreID)  
     ```  
   
-    **其中**子句限制擷取的資料，查詢參數所指定的商店識別碼 *@StoreID* 。  
+    **其中**子句限制擷取的資料，查詢參數所指定的商店識別碼*@StoreID*。  
   
-4.  在查詢設計工具工具列上，按一下 **[執行]**\(**!**)。 **定義查詢參數** 對話方塊隨即開啟，並且提示您輸入查詢參數的值 *@StoreID* 。  
+4.  在查詢設計工具工具列上，按一下 **[執行]** \(**!**)。 **定義查詢參數** 對話方塊隨即開啟，並且提示您輸入查詢參數的值*@StoreID*。  
   
-5.  在 **[參數值]**中，輸入 **200**。  
+5.  在 **[參數值]** 中，輸入 **200**。  
   
 6.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
@@ -178,17 +177,17 @@ ms.lasthandoff: 01/09/2018
   
 根據預設，所建立參數的資料類型為 [文字]。 因為商店識別碼是整數，所以您可以將資料類型變更為 Integer。  
   
-1.  在 報表資料窗格的 **參數** 節點，以滑鼠右鍵按一下 *@StoreID* ，然後按一下 **參數屬性**。  
+1.  在 報表資料窗格的 **參數** 節點，以滑鼠右鍵按一下*@StoreID*，然後按一下 **參數屬性**。  
   
 2.  在 [提示] 中輸入 [商店識別碼？] 。當您執行報表時，此文字會出現在報表檢視器工具列上。  
   
-3.  在 **[資料類型]**的下拉式清單中，選取 **[整數]**。  
+3.  在 **[資料類型]** 的下拉式清單中，選取 **[整數]**。  
   
 4.  接受對話方塊中其餘的預設值。  
   
 5.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-6.  按一下 **[執行]** 預覽報表。 報表檢視器會顯示提示**商店識別碼？**如 *@StoreID* 。  
+6.  按一下 **[執行]** 預覽報表。 報表檢視器會顯示提示**商店識別碼？**如*@StoreID*。  
   
 7.  在報表檢視器工具列上，就在 Store ID 旁，輸入 **200**，然後按一下 **[檢視報表]**。  
   
@@ -203,15 +202,15 @@ ms.lasthandoff: 01/09/2018
   
 2.  在 [報表資料] 窗格中，以滑鼠右鍵按一下 [資料集] 資料夾，然後按一下 [加入資料集]。  
   
-3.  在 **[名稱]**中輸入 **Stores**。  
+3.  在 **[名稱]** 中輸入 **Stores**。  
   
 4.  選取 [使用內嵌在我的報表中的資料集] 。  
   
 5.  在 [資料來源] 中，從下拉式清單選擇您於第一個程序中使用的資料來源。  
   
-6.  在 **[查詢類型]**中，確認已選取 **[文字]** 。  
+6.  在 **[查詢類型]** 中，確認已選取 **[文字]** 。  
   
-7.  在 **[查詢]**中，貼上下列文字：  
+7.  在 **[查詢]** 中，貼上下列文字：  
   
     ```  
     SELECT 200 AS StoreID, 'Contoso Catalog Store' as StoreName  
@@ -229,7 +228,7 @@ ms.lasthandoff: 01/09/2018
   
 ### <a name="to-provide-available-values-for-a-parameter-from-a-dataset"></a>若要從資料集提供可用的參數值  
   
-1.  在 報表資料 窗格中，以滑鼠右鍵按一下參數 *@StoreID* ，然後按一下 **參數屬性**。  
+1.  在 報表資料 窗格中，以滑鼠右鍵按一下參數*@StoreID*，然後按一下 **參數屬性**。  
   
 2.  按一下 **[可用的值]**，然後按一下 **[從查詢取得值]**。  
   
@@ -262,7 +261,7 @@ ms.lasthandoff: 01/09/2018
   
 1.  切換至 [設計] 檢視。  
   
-2.  在 報表資料 窗格中，以滑鼠右鍵按一下 *@StoreID* ，然後按一下 **參數屬性**。  
+2.  在 報表資料 窗格中，以滑鼠右鍵按一下*@StoreID*，然後按一下 **參數屬性**。  
   
 3.  按一下 [預設值]，然後按一下 [從查詢取得值]。  
   
@@ -280,7 +279,7 @@ ms.lasthandoff: 01/09/2018
   
 1.  切換至 [設計] 檢視。  
   
-2.  在 報表資料 窗格中，以滑鼠右鍵按一下 *@StoreID* ，然後按一下 **參數屬性**。  
+2.  在 報表資料 窗格中，以滑鼠右鍵按一下*@StoreID*，然後按一下 **參數屬性**。  
   
 3.  按一下 [預設值] > [指定值] > [加入]。 新的值資料列隨即加入。  
   
@@ -303,7 +302,7 @@ ms.lasthandoff: 01/09/2018
   
 3.  在運算式窗格中，刪除所有文字，但是保留開頭的**等號** (=)。  
   
-4.  在 **[類別目錄]**中，展開 **[一般函數]**，再按一下 **[其他]**。 [項目] 窗格顯示函數集。  
+4.  在 **[類別目錄]** 中，展開 **[一般函數]**，再按一下 **[其他]**。 [項目] 窗格顯示函數集。  
   
 5.  在 [項目] 中，按兩下 **[查詢]**。 運算式窗格會顯示 `=Lookup(`。 [範例] 窗格會示 Lookup 語法的範例。  
   
@@ -359,7 +358,7 @@ ms.lasthandoff: 01/09/2018
   
 5.  在 [運算子] 中，確認已選取 [等號]\(=)。  
   
-6.  在 **[值]**中，輸入 `[@StoreID]`。 
+6.  在 **[值]** 中，輸入 `[@StoreID]`。 
 
     `[@StoreID]` 為表示 `=Parameters!StoreID.Value`的簡單運算式語法。  
   
@@ -369,7 +368,7 @@ ms.lasthandoff: 01/09/2018
   
     矩陣只會顯示 "Contoso Catalog Store" 的資料。  
   
-9. 在報表檢視器工具列上，為 **[Store name?]**選取 **[Contoso Asia Online Store]**，然後按一下 **[檢視報表]**。  
+9. 在報表檢視器工具列上，為 **[Store name?]** 選取 **[Contoso Asia Online Store]**，然後按一下 **[檢視報表]**。  
   
 矩陣會顯示對應於您所選商店的資料。  
   
@@ -380,7 +379,7 @@ ms.lasthandoff: 01/09/2018
   
 1.  切換至 [設計] 檢視。  
   
-2.  在 報表資料 窗格中，以滑鼠右鍵按一下 *@StoreID* ，然後按一下 **參數屬性**。  
+2.  在 報表資料 窗格中，以滑鼠右鍵按一下*@StoreID*，然後按一下 **參數屬性**。  
   
 3.  選取 **[允許多個值]**。  
   
@@ -402,7 +401,7 @@ ms.lasthandoff: 01/09/2018
   
 9. 按一下 **[篩選]**。  
   
-10. 在 **[運算子]**中，選取 **[In]**。  
+10. 在 **[運算子]** 中，選取 **[In]**。  
   
 11. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
@@ -439,9 +438,9 @@ ms.lasthandoff: 01/09/2018
   
 1.  在設計介面的 [報表資料] 窗格中，以滑鼠右鍵按一下 [參數]，然後按一下 [加入參數]。  
   
-2.  在 **[名稱]**中，輸入 ShowSelections  
+2.  在 **[名稱]** 中，輸入 ShowSelections  
   
-3.  在 **[提示]**中，輸入 Show selections?  
+3.  在 **[提示]** 中，輸入 Show selections?  
   
 4.  在 [資料類型] 中，按一下 [布林值]。  
   
@@ -449,7 +448,7 @@ ms.lasthandoff: 01/09/2018
   
 6.  按一下 **[指定值]**，然後按一下 **[加入]**。  
   
-7.  在 **[值]**中，輸入 **False**。  
+7.  在 **[值]** 中，輸入 **False**。  
   
 8.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
@@ -459,7 +458,7 @@ ms.lasthandoff: 01/09/2018
   
 2.  按一下 **[可見性]**。  
   
-3.  選取 **[依據運算式顯示或隱藏]**選項，然後按一下 **Fx**運算式按鈕。  
+3.  選取 **[依據運算式顯示或隱藏]** 選項，然後按一下 **Fx**運算式按鈕。  
   
 4.  輸入下列運算式： `=Not Parameters!ShowSelections.Value`  
   
@@ -497,9 +496,9 @@ ms.lasthandoff: 01/09/2018
   
 3.  選取或輸入您有權儲存報表之報表伺服器的名稱。  
   
-    **[連接到報表伺服器]**訊息隨即顯示。 連接完成時，您就會看見報表伺服器管理員指定為預設報表位置之報表資料夾的內容。  
+    **[連接到報表伺服器]** 訊息隨即顯示。 連接完成時，您就會看見報表伺服器管理員指定為預設報表位置之報表資料夾的內容。  
   
-4.  在 **[名稱]**中，將預設名稱取代為「參數化產品銷售」。  
+4.  在 **[名稱]** 中，將預設名稱取代為「參數化產品銷售」。  
   
 5.  按一下 **[儲存]**。  
   

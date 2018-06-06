@@ -1,16 +1,15 @@
 ---
-title: "MSmerge_dynamic_snapshots (TRANSACT-SQL) |Microsoft 文件"
-ms.custom: 
+title: MSmerge_dynamic_snapshots (TRANSACT-SQL) |Microsoft 文件
+ms.custom: ''
 ms.date: 03/04/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
 ms.component: system-tables
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -22,16 +21,15 @@ dev_langs:
 helpviewer_keywords:
 - MSmerge_dynamic_snapshots system table
 ms.assetid: a5592b3c-731b-4fc9-ae4b-2602ed78248e
-caps.latest.revision: 
+caps.latest.revision: 28
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: dacb740cf4eb64bc206bf324ceac81f32f57a860
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 948a643d96228df9ecb816ac7a2a382c052c6c12
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="msmergedynamicsnapshots-transact-sql"></a>MSmerge_dynamic_snapshots (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,11 +38,11 @@ ms.lasthandoff: 11/21/2017
   
 |資料行名稱|資料類型|Description|  
 |-----------------|---------------|-----------------|  
-|**sys.partitions**|**int**|合併資料分割的識別碼。|  
+|**partition_id**|**int**|合併資料分割的識別碼。|  
 |**dynamic_snapshot_location**|**nvarchar(255)**|資料分割的已篩選資料快照集位置。|  
 |**last_updated**|**datetime**|重新整理已篩選資料快照集的日期。|  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [複寫資料表 &#40;Transact-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)  
   
   

@@ -1,16 +1,15 @@
 ---
-title: "sp_grant_publication_access (TRANSACT-SQL) |Microsoft 文件"
-ms.custom: 
+title: sp_grant_publication_access (TRANSACT-SQL) |Microsoft 文件
+ms.custom: ''
 ms.date: 03/04/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - sp_grant_publication_access
 ms.assetid: 17993952-def6-4a16-b1c1-323ec42967f8
-caps.latest.revision: 
+caps.latest.revision: 31
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 3a961e086d738d1784884142f22ed6dd45928897
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: c6739cd65e016e08773831d0bc87e46ac27ae1f6
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="spgrantpublicationaccess-transact-sql"></a>sp_grant_publication_access (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,11 +45,11 @@ sp_grant_publication_access [ @publication = ] 'publication', [ @login = ] 'logi
 ```  
   
 ## <a name="arguments"></a>引數  
- [  **@publication** =] **'***發行集***'**  
- 這是要存取的發行集名稱。 **'***發行集***'**是**sysname**，沒有預設值。  
+ [ **@publication**=] **'***發行集***'**  
+ 這是要存取的發行集名稱。 **'***發行集***'** 是**sysname**，沒有預設值。  
   
- [  **@login** =] **'***登入***'**  
- 這是登入識別碼。 **'***登入***'**是**sysname**，沒有預設值。  
+ [ **@login**=] **'***登入***'**  
+ 這是登入識別碼。 **'***登入***'** 是**sysname**，沒有預設值。  
   
  [  **@reserved =**] **'***保留***'**  
  [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
@@ -67,9 +65,9 @@ sp_grant_publication_access [ @publication = ] 'publication', [ @login = ] 'logi
 ## <a name="permissions"></a>Permissions  
  只有成員**sysadmin**固定的伺服器角色或**db_owner**固定的資料庫角色可以執行**sp_grant_publication_access**。  
   
-## <a name="see-also"></a>請參閱＜  
- [sp_help_publication_access &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/sp-help-publication-access-transact-sql.md)   
- [sp_revoke_publication_access &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/sp-revoke-publication-access-transact-sql.md)   
+## <a name="see-also"></a>另請參閱  
+ [sp_help_publication_access &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-publication-access-transact-sql.md)   
+ [sp_revoke_publication_access &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-revoke-publication-access-transact-sql.md)   
  [保護發行者](../../relational-databases/replication/security/secure-the-publisher.md)   
  [系統預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   

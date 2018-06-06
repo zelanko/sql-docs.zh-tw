@@ -1,30 +1,27 @@
 ---
-title: "多維度結構描述和資料的概觀 |Microsoft 文件"
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
+title: 多維度結構描述和資料的概觀 |Microsoft 文件
+ms.prod: sql
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
-ms.custom: 
+ms.technology: connectivity
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - multidimensional schemas and data
 ms.assetid: ce37fa06-c581-4d80-9a9b-c3aa66408909
-caps.latest.revision: 
+caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 518cb68ec75fb998ee2a53500db0dc096a38d678
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: e7dad7be35de7e15ae560f56c3ad51f7222be53b
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="overview-of-multidimensional-schemas-and-data"></a>多維度結構描述和資料的概觀
 ## <a name="understanding-multidimensional-schemas"></a>了解多維度結構描述  
@@ -65,15 +62,15 @@ Hamburg, Munich, Stuttgart}
   
  每個層級具有一組成員，如下所示：  
   
--   世界`= {All}`  
+-   世界 `= {All}`  
   
--   大陸`= {North America, Europe}`  
+-   大陸 `= {North America, Europe}`  
   
--   國家 （地區)`= {Canada, USA, UK, Germany}`  
+-   國家 （地區) `= {Canada, USA, UK, Germany}`  
   
--   區域`= {Canada-East, Canada-West, USA-NE, USA-NW, USA-SE, USA-SW, England, Ireland, Scotland, Wales, Germany-North, Germany-South}`  
+-   區域 `= {Canada-East, Canada-West, USA-NE, USA-NW, USA-SE, USA-SW, England, Ireland, Scotland, Wales, Germany-North, Germany-South}`  
   
--   城市`= {Ottawa, Toronto, Vancouver, Calgary, Seattle, Boise, Los Angeles, Houston, Shreveport, Miami, Boston, New York, London, Dover, Glasgow, Edinburgh, Cardiff, Pembroke, Belfast, Derry, Berlin, Hamburg, Munich, Stuttgart}`  
+-   城市 `= {Ottawa, Toronto, Vancouver, Calgary, Seattle, Boise, Los Angeles, Houston, Shreveport, Miami, Boston, New York, London, Dover, Glasgow, Edinburgh, Cardiff, Pembroke, Belfast, Derry, Berlin, Hamburg, Munich, Stuttgart}`  
   
 ### <a name="members"></a>成員  
  在階層的分葉層級的成員沒有子系，且在根層級的成員具有沒有父代。 所有其他成員都有至少一個父系類別與至少一個子系。 例如，Geography 維度的階層樹狀結構的部分周遊會產生下列的父子式關聯性：  

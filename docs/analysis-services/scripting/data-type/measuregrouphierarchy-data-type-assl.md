@@ -1,36 +1,23 @@
 ---
-title: "MeasureGroupHierarchy 資料類型 (ASSL) |Microsoft 文件"
-ms.custom: 
-ms.date: 03/06/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+title: MeasureGroupHierarchy 資料類型 (ASSL) |Microsoft 文件
+ms.date: 05/03/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: assl
 ms.topic: reference
-apiname: MeasureGroupHierarchy Data Type
-apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
-apitype: Schema
-applies_to: SQL Server 2016 Preview
-f1_keywords: MeasureGroupHierarchy
-helpviewer_keywords: MeasureGroupHierarchy data type
-ms.assetid: 63c2fd97-d7ad-4715-8c49-24d684bc92d7
-caps.latest.revision: "34"
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 47c52fdba689a77aedbfff39872ee5a4a2861f59
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 06866bc782529aca5893bd235633526f3b2a8a98
+ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="measuregrouphierarchy-data-type-assl"></a>MeasureGroupHierarchy 資料類型 (ASSL)
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]定義代表量值群組中某個階層之相關資訊的基本資料類型。  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+  定義代表量值群組中某個階層之相關資訊的基本資料類型。  
   
 ## <a name="syntax"></a>語法  
   
@@ -44,7 +31,7 @@ ms.lasthandoff: 01/08/2018
   
 ## <a name="data-type-characteristics"></a>資料類型特性  
   
-|特性|描述|  
+|特性|說明|  
 |--------------------|-----------------|  
 |基底資料類型|無|  
 |衍生資料類型|無|  
@@ -57,7 +44,7 @@ ms.lasthandoff: 01/08/2018
 |子元素|[註解](../../../analysis-services/scripting/collections/annotations-element-assl.md)， [HierarchyID](../../../analysis-services/scripting/properties/hierarchyid-element-assl.md)|  
 |衍生的元素|[階層](../../../analysis-services/scripting/objects/hierarchy-element-assl.md)([階層](../../../analysis-services/scripting/collections/hierarchies-element-assl.md)集合[RegularMeasureGroupDimension](../../../analysis-services/scripting/data-type/regularmeasuregroupdimension-data-type-assl.md))|  
   
-## <a name="see-also"></a>請參閱  
- [Analysis Services 指令碼語言 XML 資料類型 &#40;ASSL &#41;](../../../analysis-services/scripting/data-type/analysis-services-scripting-language-xml-data-types-assl.md)  
+## <a name="see-also"></a>另請參閱  
+ [Analysis Services 指令碼語言 XML 資料類型 & #40;ASSL & #41;](../../../analysis-services/scripting/data-type/analysis-services-scripting-language-xml-data-types-assl.md)  
   
   

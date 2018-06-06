@@ -1,16 +1,15 @@
 ---
-title: "Y (TRANSACT-SQL) |Microsoft 文件"
-ms.custom: 
+title: Y (TRANSACT-SQL) |Microsoft 文件
+ms.custom: ''
 ms.date: 03/04/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
 ms.component: system-tables
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -22,16 +21,15 @@ dev_langs:
 helpviewer_keywords:
 - MSmerge_settingshistory system table
 ms.assetid: 0bdf2d5f-5502-44cd-aa9d-2d5006ad20ce
-caps.latest.revision: 
+caps.latest.revision: 28
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: ac25c834da1e4101d7a5ae9f58f479994fd0e1b1
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 2bb8007d97619b3cbe7302fbf00bcfd98584539e
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="msmergesettingshistory-transact-sql"></a>MSmerge_settingshistory (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,13 +42,13 @@ ms.lasthandoff: 11/21/2017
 |**pubid**|**uniqueidentifier**|給定發行集的唯一識別碼。|  
 |**artid**|**uniqueidentifier**|給定發行項的唯一識別碼。|  
 |**eventtype**|**tinyint**|指定所記錄之事件的類型，它可以是下列項目之一：<br /><br /> **1** – 初始發行集層級屬性設定。<br /><br /> **2** -發行集屬性中的變更。<br /><br /> **101** -初始發行項屬性設定。<br /><br /> **102** -發行項屬性中的變更。|  
-|**屬性名稱**|**sysname**|設定或變更的屬性名稱|  
+|**propertyname**|**sysname**|設定或變更的屬性名稱|  
 |**previousvalue**|**sysname**|如果變更了屬性，便是先前的屬性值。|  
 |**newvalue**|**sysname**|屬性所改成的值，或建立時的值。|  
 |**eventtext**|**nvarchar(2000)**|描述事件的字元字串。|  
   
-## <a name="see-also"></a>請參閱＜  
- [複寫資料表 &#40;TRANSACT-SQL &#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
+## <a name="see-also"></a>另請參閱  
+ [複寫資料表&#40;Transact SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [複寫檢視 &#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  
   
   

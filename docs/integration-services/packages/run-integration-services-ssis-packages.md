@@ -1,17 +1,16 @@
 ---
-title: "執行 Integration Services (SSIS) 套件 | Microsoft Docs"
-ms.custom: 
+title: 執行 Integration Services (SSIS) 套件 | Microsoft Docs
+ms.custom: ''
 ms.date: 12/16/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
 ms.component: packages
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 f1_keywords:
 - sql13.ssis.ssms.ispackageexecute.f1
 - sql13.ssis.ssms.executepackage.f1
@@ -24,19 +23,22 @@ helpviewer_keywords:
 - running packages [Integration Services]
 - Integration Services, (See also Integration Services packages)
 ms.assetid: c5fecc23-6f04-4fb2-9a29-01492ea41404
-caps.latest.revision: 
+caps.latest.revision: 65
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 296bd4b460f603f6293dd42d3b2ceaa1ca97da02
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: fe9d96b588130d1b4bab8e611dc2e0143ab457c9
+ms.sourcegitcommit: b5ab9f3a55800b0ccd7e16997f4cd6184b4995f9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 05/23/2018
+ms.locfileid: "34455601"
 ---
 # <a name="run-integration-services-ssis-packages"></a>執行 Integration Services (SSIS) 封裝
   若要執行 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 封裝，您可以根據這些封裝的儲存位置使用數種工具的其中一種。 工具會列在下表中。  
+
+> [!NOTE]
+> 隨著 SQL Server for Linux 的發行，您可以在 Linux 上執行 SSIS 套件。 如需詳細資訊，請參閱[使用 SSIS 在 Linux 上擷取、轉換和載入資料](../../linux/sql-server-linux-migrate-ssis.md)。
   
  若要將封裝儲存於 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 伺服器，您可使用專案部署模型將專案部署到伺服器上。 如需資訊，請參閱[部署 Integration Services (SSIS) 專案和套件](../../integration-services/packages/deploy-integration-services-ssis-projects-and-packages.md)。  
   
@@ -101,7 +103,7 @@ ms.lasthandoff: 01/25/2018
   
 3.  以滑鼠右鍵按一下封裝名稱，然後選取 [執行]。  
   
-4.  使用 **[執行封裝]**對話方塊中， **[參數]**、 **[連線管理員]** 和 **[進階]** 標籤上的設定，設定封裝執行。  
+4.  使用 **[執行封裝]** 對話方塊中， **[參數]**、 **[連線管理員]** 和 **[進階]** 標籤上的設定，設定封裝執行。  
   
 5.  按一下 **[確定]** 以執行封裝。  
   

@@ -1,41 +1,39 @@
 ---
-title: "日期、 時間和時間戳記常值 |Microsoft 文件"
-ms.custom: 
+title: 日期、 時間和時間戳記常值 |Microsoft 文件
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
-ms.component: odbc
-ms.reviewer: 
+ms.prod: sql
+ms.prod_service: connectivity
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
-ms.topic: article
-helpviewer_keywords: escape sequences [ODBC], literals
+ms.technology: connectivity
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
+helpviewer_keywords:
+- escape sequences [ODBC], literals
 ms.assetid: 2b42a52a-6353-494c-a179-3a7533cd729f
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
-ms.workload: Inactive
-ms.openlocfilehash: 132377c8578ae4a403753d71dc82cd12b8be3c80
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+manager: craigg
+ms.openlocfilehash: c41d78b848009083abef2595d8628bb8fa1c0b0e
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="date-time-and-timestamp-literals"></a>日期、 時間和時間戳記常值
 日期、 時間和時間戳記常值的逸出序列是  
   
- **{***-類型* **'** *值* **'}**   
+ **{***-類型* **'** *值* **'}**  
   
  其中*常值型別*其中一個值列於下表。  
   
 |*常值型別*|意義|格式化的*值*|  
 |---------------------|-------------|-----------------------|  
-|**d**|date|*yyyy*-*公釐*-*dd*|  
+|**d**|日期|*yyyy*-*mm*-*dd*|  
 |**t**|時間 *|*hh*:*公釐*:*ss*[1]|  
-|**ts**|時間戳記|*yyyy*-*公釐*-*dd* *hh*:*公釐*:*ss*[.*f...*] [1]|  
+|**ts**|時間戳記|*yyyy*-*公釐*-*dd* *hh*:*公釐*:*ss*[。*f...*] [1]|  
   
  [SQL_DESC_PRECISION 描述項欄位中包含 1] 在時間戳記的間隔時間常值包含秒元件的小數點右邊位數的數目是秒數有效位數而定。 (如需詳細資訊，請參閱[SQLSetDescField](../../../odbc/reference/syntax/sqlsetdescfield-function.md)。)  
   

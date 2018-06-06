@@ -1,33 +1,30 @@
 ---
-title: "檢視資料表的相依性 | Microsoft 文件"
-ms.custom: 
+title: 檢視資料表的相依性 | Microsoft 文件
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
-ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
-ms.component: tables
-ms.reviewer: 
+ms.prod: sql
+ms.prod_service: table-view-index, sql-database, sql-data-warehouse, pdw
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- dbe-tables
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: table-view-index
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - table dependencies [SQL Server]
 - dependencies [SQL Server], tables
 - displaying dependences
 - viewing dependencies
 ms.assetid: c4351ef5-e7d0-46e7-8367-88695e9974f8
-caps.latest.revision: 
+caps.latest.revision: 24
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 809c461b1f9599e0d46ab7a6175d7dbd4cdb06bc
-ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: ca538a0814ebf962ba7663854be8094e245431a0
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="view-the-dependencies-of-a-table"></a>檢視資料表的相依性
 [!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
@@ -57,11 +54,11 @@ ms.lasthandoff: 02/23/2018
   
 #### <a name="to-view-the-dependencies-of-a-table"></a>若要檢視資料表的相依性  
   
-1.  在 **[物件總管]**中，展開 **[資料庫]**、展開其中一個資料庫，再展開 **[資料表]**。  
+1.  在 **[物件總管]** 中，展開 **[資料庫]**、展開其中一個資料庫，再展開 **[資料表]**。  
   
 2.  以滑鼠右鍵按一下資料表，然後按一下 [檢視相依性]。  
   
-3.  在 [物件相依性 \<<物件名稱>] 對話方塊中，選取 [相依於 \<物件名稱> 的物件] 或 [\<物件名稱> 所相依的物件]。  
+3.  在 [物件相依性 \<<物件名稱>] 對話方塊中，選取 [相依於 \<物件名稱> 的物件] 或 [\<物件名稱> 所相依的物件]****。  
   
 4.  選取 **[相依性]** 方格中的物件。 物件類型 (如「觸發程序」或「預存程序」) 會出現在 [類型] 方塊中。  
   
@@ -69,7 +66,7 @@ ms.lasthandoff: 02/23/2018
   
 #### <a name="to-view-the-objects-that-depend-on-a-table"></a>若要檢視相依於資料表的物件  
   
-1.  在 **[物件總管]**中，連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的執行個體。  
+1.  在 **[物件總管]** 中，連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的執行個體。  
   
 2.  在標準列上，按一下 **[新增查詢]**。  
   
@@ -86,7 +83,7 @@ ms.lasthandoff: 02/23/2018
   
 #### <a name="to-view-the-objects-on-which-a-table-depends"></a>若要檢視資料表所相依的物件  
   
-1.  在 **[物件總管]**中，連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的執行個體。  
+1.  在 **[物件總管]** 中，連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的執行個體。  
   
 2.  在標準列上，按一下 **[新增查詢]**。  
   

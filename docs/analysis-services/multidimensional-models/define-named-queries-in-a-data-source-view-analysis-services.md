@@ -1,35 +1,23 @@
 ---
-title: "資料來源檢視 (Analysis Services) 中定義具名的查詢 |Microsoft 文件"
-ms.custom: 
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
-helpviewer_keywords:
-- named queries [Analysis Services], creating
-- modifying named queries
-- data source views [Analysis Services], named queries
-ms.assetid: f09ba8aa-950e-4c0d-961e-970de13200be
-caps.latest.revision: 
-author: Minewiskan
+title: 資料來源檢視 (Analysis Services) 中定義具名的查詢 |Microsoft 文件
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: multidimensional-models
+ms.topic: conceptual
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: e82aedbca1db294e94a803db8541c2ff88876211
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: bee48d9927e9caaea28fd201480e507e5cfa7d9d
+ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="define-named-queries-in-a-data-source-view-analysis-services"></a>在資料來源檢視中定義具名查詢 (Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-具名查詢是以資料表代表的 SQL 運算式。 在具名查詢中，您可以指定 SQL 運算式，來選取在一個或多個資料來源中的一個或多個資料表所傳回的資料列和資料行。 具名查詢就像資料來源檢視 (DSV) 中具有資料列和關聯性的其他任何資料表一樣，差別在於具名查詢是以運算式為基礎。  
+  具名查詢是以資料表代表的 SQL 運算式。 在具名查詢中，您可以指定 SQL 運算式，來選取在一個或多個資料來源中的一個或多個資料表所傳回的資料列和資料行。 具名查詢就像資料來源檢視 (DSV) 中具有資料列和關聯性的其他任何資料表一樣，差別在於具名查詢是以運算式為基礎。  
   
  具名查詢可讓您擴充 DSV 中之現有資料表的關聯式結構描述，不需修改基礎資料來源。 例如，一系列具名查詢可以將複雜的維度資料表分割為較小、較簡單的維度資料表，以供資料庫維度使用。 具名查詢也可以用來將一個或多個資料來源中的多個資料庫資料表聯結到單一資料來源檢視資料表中。  
   
@@ -69,6 +57,6 @@ ms.lasthandoff: 02/15/2018
   
 ## <a name="see-also"></a>另請參閱  
  [多維度模型中的資料來源檢視](../../analysis-services/multidimensional-models/data-source-views-in-multidimensional-models.md)   
- [在資料來源檢視 &#40; 中定義具名的計算Analysis Services &#41;](../../analysis-services/multidimensional-models/define-named-calculations-in-a-data-source-view-analysis-services.md)  
+ [在資料來源檢視 & #40; 中定義具名的計算Analysis Services & #41;](../../analysis-services/multidimensional-models/define-named-calculations-in-a-data-source-view-analysis-services.md)  
   
   

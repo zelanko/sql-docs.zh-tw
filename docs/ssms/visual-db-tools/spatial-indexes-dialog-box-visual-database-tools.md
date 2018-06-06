@@ -1,31 +1,31 @@
 ---
-title: "空間索引對話方塊 (Visual Database Tools) | Microsoft Docs"
-ms.custom: 
+title: 空間索引對話方塊 (Visual Database Tools) | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
 ms.component: ssms-visual-db
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: tools-ssms
-ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords: vdt.dlgbox.spatialindexes
+ms.technology: ssms
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
+f1_keywords:
+- vdt.dlgbox.spatialindexes
 ms.assetid: 4d84239a-68c7-4aa2-8602-2b51dd07260f
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: bfaa6bfd65d898bedcbf7568f86c99b9c4b6a952
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.openlocfilehash: fb7c869dbf087db4c59eb9e5ba30c48f6e33f055
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="spatial-indexes-dialog-box-visual-database-tools"></a>空間索引對話方塊 (Visual Database Tools)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 使用 [空間索引] 對話方塊來建立 **geometry** 或 **geography** 資料類型之資料行 (「空間資料行」(Spatial Column)) 的索引，該資料行無法使用 [索引/索引鍵] 對話方塊來建立索引。 每一個空間資料行都可以有一個以上的空間索引，但是一次只能建立一個。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+使用 [空間索引] 對話方塊來建立 **geometry** 或 **geography** 資料類型之資料行 (「空間資料行」(Spatial Column)) 的索引，該資料行無法使用 [索引/索引鍵] 對話方塊來建立索引。 每一個空間資料行都可以有一個以上的空間索引，但是一次只能建立一個。  
   
 如需有關空間索引建立之限制的詳細資訊，請參閱 [空間索引概觀](http://msdn.microsoft.com/en-us/b1ae7b78-182a-459e-ab28-f743e43f8293)。  
   

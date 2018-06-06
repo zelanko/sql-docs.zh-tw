@@ -1,16 +1,15 @@
 ---
-title: "建構函式 (XQuery) |Microsoft 文件"
-ms.custom: 
+title: 建構函式 (XQuery) |Microsoft 文件
+ms.custom: ''
 ms.date: 03/09/2017
-ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
-ms.service: 
+ms.prod: sql
+ms.prod_service: sql
 ms.component: xquery
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -19,16 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - constructor functions [XQuery]
 ms.assetid: 98562d0e-d0e0-4f62-b001-90acbac67277
-caps.latest.revision: 
+caps.latest.revision: 27
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 882f5ed7260a195e815482a0fb44240fda48e138
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 6db36cc2dbd664869633d1d2f198684098ba29b4
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="constructor-functions-xquery"></a>建構函式函數 (XQuery)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -149,7 +147,7 @@ TYP($atomicvalue as xdt:anyAtomicType?
 ### <a name="a-using-the-datetime-xquery-function-to-retrieve-older-product-descriptions"></a>A. 使用 dateTime() XQuery 函數擷取較舊的產品描述  
  在此範例中，範例 XML 文件會先指派給**xml**類型變數。 此文件包含三個範例 <`ProductDescription`> 元素，而每個元素都包含一個 <`DateCreated`> 子元素。  
   
- 然後查詢該變數，只擷取在特定日期之前建立的那些產品描述。 基於比較的詳細資訊，此查詢會使用**xs:dateTime()**建構函式，以輸入日期。  
+ 然後查詢該變數，只擷取在特定日期之前建立的那些產品描述。 基於比較的詳細資訊，此查詢會使用**xs:dateTime()** 建構函式，以輸入日期。  
   
 ```  
 declare @x xml  
@@ -184,7 +182,7 @@ select @x.query('
   
 -   FOR ...WHERE 迴圈結構用來擷取\<ProductDescription > 滿足 WHERE 子句中指定之條件的項目。  
   
--   **Datetime （)**建構函式用來建構**dateTime**類型值，因此它們可以適當地比較。  
+-   **Datetime （)** 建構函式用來建構**dateTime**類型值，因此它們可以適當地比較。  
   
 -   然後查詢會建構產生的 XML。 因為您正在建構一連串的屬性，所以 XML 建構中會使用逗號及括號。  
   
@@ -197,7 +195,7 @@ select @x.query('
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [XML 建構 &#40;XQuery &#41;](../xquery/xml-construction-xquery.md)   
+ [XML 建構&#40;XQuery&#41;](../xquery/xml-construction-xquery.md)   
  [針對 xml 資料類型的 XQuery 函式](../xquery/xquery-functions-against-the-xml-data-type.md)  
   
   

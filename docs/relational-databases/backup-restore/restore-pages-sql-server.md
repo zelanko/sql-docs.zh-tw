@@ -1,17 +1,14 @@
 ---
-title: "還原頁面 (SQL Server) | Microsoft 文件"
-ms.custom: 
+title: 還原頁面 (SQL Server) | Microsoft 文件
+ms.custom: ''
 ms.date: 03/15/2017
-ms.prod: sql-non-specified
-ms.prod_service: database-engine
-ms.service: 
-ms.component: backup-restore
-ms.reviewer: 
+ms.prod: sql
+ms.prod_service: backup-restore
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- dbe-backup-restore
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: backup-restore
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 f1_keywords:
 - sql13.swb.restorepage.general.f1
 helpviewer_keywords:
@@ -22,16 +19,15 @@ helpviewer_keywords:
 - pages [SQL Server], damaged
 - restoring [SQL Server], pages
 ms.assetid: 07e40950-384e-4d84-9ac5-84da6dd27a91
-caps.latest.revision: 
+caps.latest.revision: 67
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 3e59972bf634c4326f14081d7909b0926161d90b
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: ad3206ff6ccec7db89dcf745b4dd03066e076589
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="restore-pages-sql-server"></a>還原頁面 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -125,7 +121,7 @@ ms.lasthandoff: 01/18/2018
 3.  以滑鼠右鍵按一下資料庫，指向 [工作] ，再指向 [還原] ，然後按一下 [頁面] ，這樣會開啟 [還原頁面]  對話方塊。  
   
      **Restore**  
-     此區段與 [還原資料庫 (一般頁面)](../../relational-databases/backup-restore/restore-database-general-page.md) 上的 **[還原至]**執行相同功能。  
+     此區段與 [還原資料庫 (一般頁面)](../../relational-databases/backup-restore/restore-database-general-page.md) 上的 **[還原至]** 執行相同功能。  
   
      **[資料庫備份]**  
      指定要還原的資料庫。 您可以輸入新的資料庫，或者從下拉式清單中選取現有的資料庫。  清單包含伺服器上的所有資料庫，但不含系統資料庫 **master**和 tempdb。  
@@ -143,7 +139,7 @@ ms.lasthandoff: 01/18/2018
     |------------|------------|  
     |**名稱**|備份組的名稱。|  
     |**元件**|備份元件：**資料庫**、**檔案**或 **\<空白>** (針對交易記錄)。|  
-    |**型別**|執行的備份類型： **[完整]**、 **[差異]**或 **[交易記錄]**。|  
+    |**型別**|執行的備份類型： **[完整]**、 **[差異]** 或 **[交易記錄]**。|  
     |**Server**|[!INCLUDE[ssDE](../../includes/ssde-md.md)] 執行備份作業的  執行個體名稱。|  
     |**[資料庫備份]**|備份作業中所含的資料庫名稱。|  
     |**位置**|備份組在磁碟區中的位置。|  
@@ -159,12 +155,12 @@ ms.lasthandoff: 01/18/2018
   
       按一下 [驗證] 來檢查執行頁面還原作業所需之備份檔案的完整性。  
   
-4.   若要識別損毀頁面，在 **[資料庫]**方塊中已選取正確的資料庫時，按一下 [檢查資料庫頁面]。 這是長時間執行的作業。  
+4.   若要識別損毀頁面，在 **[資料庫]** 方塊中已選取正確的資料庫時，按一下 [檢查資料庫頁面]。 這是長時間執行的作業。  
   
     > [!WARNING]  
     >  若要還原未損毀的特定頁面，請按一下 [加入]  ，然後輸入要還原之頁面的 [檔案識別碼]  和 [頁面識別碼]  。  
   
-5.  頁面方格會用來識別要還原的頁面。 一開始是從 [suspect_pages](../../relational-databases/system-tables/suspect-pages-transact-sql.md) 系統資料表填入這個方格。  若要從方格中加入或移除頁面，請按一下 **[加入]**或 [移除]。 如需詳細資訊，請參閱 [管理 suspect_pages 資料表 &#40;SQL Server&#41;](../../relational-databases/backup-restore/manage-the-suspect-pages-table-sql-server.md)，在  中還原頁面。  
+5.  頁面方格會用來識別要還原的頁面。 一開始是從 [suspect_pages](../../relational-databases/system-tables/suspect-pages-transact-sql.md) 系統資料表填入這個方格。  若要從方格中加入或移除頁面，請按一下 **[加入]** 或 [移除]。 如需詳細資訊，請參閱 [管理 suspect_pages 資料表 &#40;SQL Server&#41;](../../relational-databases/backup-restore/manage-the-suspect-pages-table-sql-server.md)，在  中還原頁面。  
   
 6.  **[備份組]** 方格會列出預設還原計畫中的備份組。 您可以選擇按一下 [確認]，確認備份可讀取而且備份組是完整的，而不需加以還原。 如需詳細資訊，請參閱 [RESTORE VERIFYONLY &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md)。  
   

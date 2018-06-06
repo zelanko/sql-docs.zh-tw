@@ -1,15 +1,14 @@
 ---
-title: "以指令碼工作處理 Excel 檔案 | Microsoft Docs"
-ms.custom: 
-ms.date: 03/17/2017
-ms.prod: sql-non-specified
+title: 以指令碼工作處理 Excel 檔案 | Microsoft Docs
+ms.custom: ''
+ms.date: 05/15/2018
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
 ms.component: extending-packages-scripting-task-examples
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 applies_to:
 - SQL Server 2016 Preview
@@ -20,39 +19,29 @@ helpviewer_keywords:
 - Script task [Integration Services], examples
 - Excel [Integration Services]
 ms.assetid: b8fa110a-2c9c-4f5a-8fe1-305555640e44
-caps.latest.revision: 
+caps.latest.revision: 35
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: bfbe8efdeab1af1ba6c802d69abdce4b1b4696fa
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 90a2b35f3e47affb8fb7a305eb0d24e88c58af39
+ms.sourcegitcommit: 6fd8a193728abc0a00075f3e4766a7e2e2859139
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 05/17/2018
 ---
 # <a name="working-with-excel-files-with-the-script-task"></a>以指令碼工作處理 Excel 檔案
-  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 提供 Excel 連接管理員、Excel 來源和 Excel 目的地，以處理 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel 檔案格式試算表中儲存的資料。 本主題所述的技術會使用指令碼工作取得有關可用 Excel 資料庫 (活頁簿檔案) 與資料表 (工作表與具名範圍) 的相關資訊。 您可以輕鬆地修改這些範例，使其可與 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Jet OLE DB Provider 所支援的其他以檔案為基礎之資料來源搭配使用。  
+  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 提供 Excel 連接管理員、Excel 來源和 Excel 目的地，以處理 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel 檔案格式試算表中儲存的資料。 本主題所述的技術會使用指令碼工作取得有關可用 Excel 資料庫 (活頁簿檔案) 與資料表 (工作表與具名範圍) 的相關資訊。
   
- [設定套件以測試範例](#configuring)  
-  
- [範例 1：檢查 Excel 檔案是否存在](#example1)  
-  
- [範例 2：檢查 Excel 資料表是否存在](#example2)  
-  
- [範例 3：取得資料夾中的 Excel 檔案清單](#example3)  
-  
- [範例 4：取得 Excel 檔案中的資料表清單](#example4)  
-  
- [顯示範例的結果](#testing)  
-  
-> [!NOTE]  
->  如果您想要建立可更輕鬆地在多個封裝之間重複使用的工作，請考慮使用此指令碼工作範例中的程式碼做為自訂工作的起點。 如需詳細資訊，請參閱 [開發自訂工作](../../integration-services/extending-packages-custom-objects/task/developing-a-custom-task.md)。  
-  
+> [!IMPORTANT]
+> 如需連接至 Excel 檔案，以及將資料從 Excel 檔案載入或載入至 Excel 檔案的限制與已知問題的詳細資訊，請參閱[使用 SQL Server Integration Services (SSIS) 將資料從 Excel 載入或載入至 Excel](../load-data-to-from-excel-with-ssis.md)。
+ 
+> [!TIP]  
+>  如果您想要建立可在多個套件之間重複使用的工作，請考慮使用此指令碼工作範例中的程式碼作為自訂工作的起點。 如需詳細資訊，請參閱 [開發自訂工作](../../integration-services/extending-packages-custom-objects/task/developing-a-custom-task.md)。  
+
 ##  <a name="configuring"></a> 設定套件以測試範例  
  您可以設定單一封裝以測試本主題中的所有範例。 範例使用許多相同的封裝變數與相同的 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 類別。  
   
-#### <a name="to-configure-a-package-for-use-with-the-examples-in-this-topic"></a>設定封裝與本主題中的範例搭配使用  
+### <a name="to-configure-a-package-for-use-with-the-examples-in-this-topic"></a>設定封裝與本主題中的範例搭配使用  
   
 1.  在 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 中建立新的 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 專案，並開啟預設封裝以進行編輯。  
   
@@ -85,7 +74,7 @@ ms.lasthandoff: 01/25/2018
 ##  <a name="example1"></a> 範例 1 描述：檢查 Excel 檔案是否存在  
  此範例會判斷 `ExcelFile` 變數中指定的 Excel 活頁簿檔案是否存在，然後將 `ExcelFileExists` 變數的布林值設定為結果。 您可以為封裝工作流程中的分支使用此布林值。  
   
-#### <a name="to-configure-this-script-task-example"></a>設定此指令碼工作範例  
+### <a name="to-configure-this-script-task-example"></a>設定此指令碼工作範例  
   
 1.  將新指令碼工作新增至套件，並將其名稱變更為 **ExcelFileExists**。  
   
@@ -155,7 +144,7 @@ public class ScriptMain
 ##  <a name="example2"></a> 範例 2 描述：檢查 Excel 資料表是否存在  
  此範例會判斷 `ExcelTable` 變數中指定的 Excel 工作表或具名範圍是否存在於 `ExcelFile` 變數中指定的 Excel 活頁簿檔案，然後將 `ExcelTableExists` 變數的布林值設定為結果。 您可以為封裝工作流程中的分支使用此布林值。  
   
-#### <a name="to-configure-this-script-task-example"></a>設定此指令碼工作範例  
+### <a name="to-configure-this-script-task-example"></a>設定此指令碼工作範例  
   
 1.  將新指令碼工作新增至套件，並將其名稱變更為 **ExcelTableExists**。  
   
@@ -201,9 +190,9 @@ Public Class ScriptMain
   
     Dts.Variables("ExcelTableExists").Value = False  
     If File.Exists(fileToTest) Then  
-      connectionString = "Provider=Microsoft.Jet.OLEDB.4.0;" & _  
+      connectionString = "Provider=Microsoft.ACE.OLEDB.12.0;" & _  
         "Data Source=" & fileToTest & _  
-        ";Extended Properties=Excel 8.0"  
+        ";Extended Properties=Excel 12.0"  
       excelConnection = New OleDbConnection(connectionString)  
       excelConnection.Open()  
       excelTables = excelConnection.GetSchema("Tables")  
@@ -238,8 +227,8 @@ public class ScriptMain
             Dts.Variables["ExcelTableExists"].Value = false;  
             if (File.Exists(fileToTest))  
             {  
-                connectionString = "Provider=Microsoft.Jet.OLEDB.4.0;" +  
-                "Data Source=" + fileToTest + ";Extended Properties=Excel 8.0";  
+                connectionString = "Provider=Microsoft.ACE.OLEDB.12.0;" +  
+                "Data Source=" + fileToTest + ";Extended Properties=Excel 12.0";  
                 excelConnection = new OleDbConnection(connectionString);  
                 excelConnection.Open();  
                 excelTables = excelConnection.GetSchema("Tables");  
@@ -262,7 +251,7 @@ public class ScriptMain
 ##  <a name="example3"></a> 範例 3 描述：取得資料夾中的 Excel 檔案清單  
  此範例會使用在 `ExcelFolder` 變數值中指定的資料夾內所找到的 Excel 檔案清單，來填滿陣列，然後將陣列複製到 `ExcelFiles` 變數中。 您可以使用 Foreach From Variable 列舉值來反覆運算陣列中的檔案。  
   
-#### <a name="to-configure-this-script-task-example"></a>設定此指令碼工作範例  
+### <a name="to-configure-this-script-task-example"></a>設定此指令碼工作範例  
   
 1.  將新指令碼工作新增至套件，並將其名稱變更為 **GetExcelFiles**。  
   
@@ -293,7 +282,7 @@ public class ScriptMain
 ```vb  
 Public Class ScriptMain  
   Public Sub Main()  
-    Const FILE_PATTERN As String = "*.xls"  
+    Const FILE_PATTERN As String = "*.xlsx"  
   
     Dim excelFolder As String  
     Dim excelFiles As String()  
@@ -313,7 +302,7 @@ public class ScriptMain
 {  
   public void Main()  
   {  
-    const string FILE_PATTERN = "*.xls";  
+    const string FILE_PATTERN = "*.xlsx";  
   
     string excelFolder;  
     string[] excelFiles;  
@@ -337,7 +326,7 @@ public class ScriptMain
 > [!NOTE]  
 >  Excel 活頁簿中資料表清單包含活頁簿 (具有 $ 後置詞) 及具名範圍。 如果您必須只篩選清單中的工作表或具名範圍，必須加入其他程式碼以達成此目的。  
   
-#### <a name="to-configure-this-script-task-example"></a>設定此指令碼工作範例  
+### <a name="to-configure-this-script-task-example"></a>設定此指令碼工作範例  
   
 1.  將新指令碼工作新增至套件，並將其名稱變更為 **GetExcelTables**。  
   
@@ -382,9 +371,9 @@ Public Class ScriptMain
     Dim excelTables As String()  
   
     excelFile = Dts.Variables("ExcelFile").Value.ToString  
-    connectionString = "Provider=Microsoft.Jet.OLEDB.4.0;" & _  
+    connectionString = "Provider=Microsoft.ACE.OLEDB.12.0;" & _  
         "Data Source=" & excelFile & _  
-        ";Extended Properties=Excel 8.0"  
+        ";Extended Properties=Excel 12.0"  
     excelConnection = New OleDbConnection(connectionString)  
     excelConnection.Open()  
     tablesInFile = excelConnection.GetSchema("Tables")  
@@ -419,8 +408,8 @@ public class ScriptMain
             string[] excelTables = new string[5];  
   
             excelFile = Dts.Variables["ExcelFile"].Value.ToString();  
-            connectionString = "Provider=Microsoft.Jet.OLEDB.4.0;" +  
-                "Data Source=" + excelFile + ";Extended Properties=Excel 8.0";  
+            connectionString = "Provider=Microsoft.ACE.OLEDB.12.0;" +  
+                "Data Source=" + excelFile + ";Extended Properties=Excel 12.0";  
             excelConnection = new OleDbConnection(connectionString);  
             excelConnection.Open();  
             tablesInFile = excelConnection.GetSchema("Tables");  
@@ -446,7 +435,7 @@ public class ScriptMain
 ##  <a name="testing"></a> 顯示範例的結果  
  如果您已在相同封裝中設定此主題中的每個範例，可以將所有的指令碼工作連接至其他顯示所有範例輸出的指令碼工作。  
   
-#### <a name="to-configure-a-script-task-to-display-the-output-of-the-examples-in-this-topic"></a>設定指令碼工作以顯示本主題中的範例輸出  
+### <a name="to-configure-a-script-task-to-display-the-output-of-the-examples-in-this-topic"></a>設定指令碼工作以顯示本主題中的範例輸出  
   
 1.  將新指令碼工作新增至套件，並將其名稱變更為 **DisplayResults**。  
   
@@ -550,7 +539,7 @@ public class ScriptMain
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [Excel 連線管理員](../../integration-services/connection-manager/excel-connection-manager.md)   
+ [使用 SQL Server Integration Services (SSIS) 將資料從 Excel 載入或載入至 Excel](../load-data-to-from-excel-with-ssis.md)  
  [使用 Foreach 迴圈容器來執行 Excel 檔案和資料表迴圈](../../integration-services/control-flow/loop-through-excel-files-and-tables-by-using-a-foreach-loop-container.md)  
   
   

@@ -1,16 +1,14 @@
 ---
 title: SOME | ANY (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/15/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
 ms.component: t-sql|language-elements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: t-sql
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - Azure SQL Database
@@ -27,16 +25,15 @@ helpviewer_keywords:
 - SOME | ANY keyword
 - single-column set of values [SQL Server]
 ms.assetid: 1f717ad6-f67b-4980-9397-577ecb0e5789
-caps.latest.revision: 
+caps.latest.revision: 41
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: d81a0d9fb87a11aa7bc109c003d7b723c20c8e77
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 62f3343b6cf7ffad9bf866b3a731b8c71d962855
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="some--any-transact-sql"></a>SOME | ANY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -70,7 +67,7 @@ scalar_expression { = | < > | ! = | > | > = | ! > | < | < = | ! < }
  **布林**  
   
 ## <a name="result-value"></a>結果值  
- 若任意組 (*scalar_expression***,***x*) 的指定比較都是 TRUE (其中 *x* 是單一資料行集中的值)，則 SOME 或 ANY 會傳回 **TRUE**；否則，會傳回 **FALSE**。  
+ 若任意組 (*scalar_expression ***,*** x*) 的指定比較都是 TRUE (其中 *x* 是單一資料行集中的值)，則 SOME 或 ANY 會傳回 **TRUE**；否則，會傳回 **FALSE**。  
   
 ## <a name="remarks"></a>Remarks  
  SOME 需要正面比較 *scalar_expression* 與至少一個子查詢傳回值。 對於需要以正數來比較 *scalar_expression* 和由子查詢傳回之每個值的陳述式，請參閱 [ALL &#40;Transact-SQL&#41;](../../t-sql/language-elements/all-transact-sql.md)。 例如，如果子查詢傳回 2 和 3 的值，*scalar_expression* = SOME (子查詢) 會針對值為 2 的 *scalar_express* 評估為 TRUE。 如果子查詢傳回 2 和 3 的值，*scalar_expression* = ALL (子查詢) 就會評估為 FALSE，因為子查詢 (值為 3) 的某些值不符合運算式的準則。  

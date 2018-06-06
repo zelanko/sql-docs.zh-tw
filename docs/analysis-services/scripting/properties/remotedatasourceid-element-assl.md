@@ -1,36 +1,23 @@
 ---
-title: "RemoteDatasourceID 元素 (ASSL) |Microsoft 文件"
-ms.custom: 
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+title: RemoteDatasourceID 元素 (ASSL) |Microsoft 文件
+ms.date: 5/8/2018
+ms.prod: sql
+ms.custom: assl
+ms.reviewer: owend
+ms.technology: analysis-services
 ms.topic: reference
-apiname: RemoteDatasourceID Element
-apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
-apitype: Schema
-applies_to: SQL Server 2016 Preview
-f1_keywords: RemoteDatasourceID
-helpviewer_keywords: RemoteDatasourceID element
-ms.assetid: 2eaf0b9c-8c2d-4dc6-9bad-1db70a4b04b1
-caps.latest.revision: "36"
-author: Minewiskan
+author: minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: aeb54f3172ba07337db9eddb3dea0c082e954cb8
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 0ef82f0ef212f1a54dafefaaddaf6b87eccf4f83
+ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="remotedatasourceid-element-assl"></a>RemoteDatasourceID 元素 (ASSL)
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]指定指向的執行個體的 OLAP 資料來源的識別碼 (ID) [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]儲存遠端資料分割。  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+  指定指向的執行個體的 OLAP 資料來源的識別碼 (ID) [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]儲存遠端資料分割。  
   
 ## <a name="syntax"></a>語法  
   
@@ -45,9 +32,9 @@ ms.lasthandoff: 01/08/2018
   
 ## <a name="element-characteristics"></a>元素特性  
   
-|特性|描述|  
+|特性|說明|  
 |--------------------|-----------------|  
-|資料類型和長度|String|  
+|資料類型和長度|字串|  
 |預設值|無|  
 |基數|0-1：只能出現一次的選擇性元素。|  
   
@@ -63,7 +50,7 @@ ms.lasthandoff: 01/08/2018
   
  對應目的父代的項目**RemoteDatasourceID**在 「 分析管理物件 (AMO) 物件模型而言， <xref:Microsoft.AnalysisServices.Partition>。  
   
-## <a name="see-also"></a>請參閱  
- [屬性 &#40;ASSL &#41;](../../../analysis-services/scripting/properties/properties-assl.md)  
+## <a name="see-also"></a>另請參閱  
+ [屬性 & #40;ASSL & #41;](../../../analysis-services/scripting/properties/properties-assl.md)  
   
   

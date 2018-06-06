@@ -1,37 +1,34 @@
 ---
-title: "建立同義字 | Microsoft Docs"
-ms.custom: 
+title: 建立同義字 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
-ms.component: synonyms
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
-ms.topic: get-started-article
+ms.technology: t-sql
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 f1_keywords:
 - sql13.swb.synonym.general.f1
 helpviewer_keywords:
 - creating synonyms
 - synonyms [SQL Server], creating
 ms.assetid: fedfa7a5-d0b6-4e2b-90f4-a08122958e33
-caps.latest.revision: 
-author: BYHAM
-ms.author: rickbyh
+caps.latest.revision: 7
+author: edmacauley
+ms.author: edmaca
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 7eebe7f6edfc447f36ea4256e392822f288e3acb
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 22cf9fe47d80716cdddbf245c9af04ae1aa0b5f5
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="create-synonyms"></a>建立同義字
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-本主題描述如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ，在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中建立同義字。  
+  本主題描述如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ，在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中建立同義字。  
   
  **本主題內容**  
   
@@ -56,7 +53,7 @@ ms.lasthandoff: 02/12/2018
   
 #### <a name="to-create-a-synonym"></a>若要建立同義字  
   
-1.  在 **[物件總管]**中，展開您要建立新檢視表的資料庫。  
+1.  在 **[物件總管]** 中，展開您要建立新檢視表的資料庫。  
   
 2.  以滑鼠右鍵按一下 [同義字] 資料夾，然後按一下 [新增同義字]。  
   

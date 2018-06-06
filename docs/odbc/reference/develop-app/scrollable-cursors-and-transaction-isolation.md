@@ -1,32 +1,29 @@
 ---
-title: "可捲動資料指標和交易隔離 |Microsoft 文件"
-ms.custom: 
+title: 可捲動資料指標和交易隔離 |Microsoft 文件
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
-ms.component: odbc
-ms.reviewer: 
+ms.prod: sql
+ms.prod_service: connectivity
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: connectivity
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - isolation levels [ODBC]
 - scrollable cursors [ODBC]
 - transaction isolation [ODBC]
 - transactions [ODBC], isolation
 ms.assetid: f0216f4a-46e3-48ae-be0a-e2625e8403a6
-caps.latest.revision: "9"
+caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
-ms.workload: Inactive
-ms.openlocfilehash: 6c9e38f4287a8832d8e794940093ce696ac0eaf7
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+manager: craigg
+ms.openlocfilehash: bbbcdf0c9ce2c7e37072502ae49b43dc20d15a9e
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="scrollable-cursors-and-transaction-isolation"></a>可捲動資料指標和交易隔離
 下表列出控管的變更可見性的因素。  
@@ -48,15 +45,15 @@ ms.lasthandoff: 12/21/2017
 |靜態|||||||  
 |Insert|可能是 [b]|否|否|否|否|否|  
 |Update|可能是 [b]|否|否|否|否|否|  
-|DELETE|可能是 [b]|否|否|否|否|否|  
+|Delete|可能是 [b]|否|否|否|否|否|  
 |索引鍵集導向的資料指標|||||||  
 |Insert|可能是 [b]|否|否|否|否|否|  
 |Update|是|是|是|是|否|否|  
-|DELETE|可能是 [b]|是|是|是|否|否|  
+|Delete|可能是 [b]|是|是|是|否|否|  
 |動態|||||||  
 |Insert|是|是|是|是|是|否|  
 |Update|是|是|是|是|否|否|  
-|DELETE|是|是|是|是|否|否|  
+|Delete|是|是|是|是|否|否|  
   
  [a] 括號括住字元表示包含資料指標; 之交易的隔離等級（在其中變更） 的其他交易隔離等級無關。  
   

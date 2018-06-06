@@ -1,32 +1,30 @@
 ---
-title: "程序附加方法範例 (VB) |Microsoft 文件"
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
+title: 程序附加方法範例 (VB) |Microsoft 文件
+ms.prod: sql
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
-ms.custom: 
+ms.technology: connectivity
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 dev_langs:
 - VB
 helpviewer_keywords:
 - Append method [ADOX], Visual Basic example
 ms.assetid: ce83b966-474b-4f57-8eb9-370996dfc5c0
-caps.latest.revision: 
+caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 8982cc8970cfbb79912688b038f1745d9d4b5612
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 46af14e62769073be33f891bc11a7bf012c8924b
+ms.sourcegitcommit: 2d93cd115f52bf3eff3069f28ea866232b4f9f9e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "32802580"
 ---
 # <a name="procedures-append-method-example-vb"></a>程序附加方法範例 (VB)
 下列程式碼示範如何使用[命令](../../../ado/reference/ado-api/command-object-ado.md)物件和[程序](../../../ado/reference/adox-api/procedures-collection-adox.md)集合[附加](../../../ado/reference/adox-api/append-method-adox-procedures.md)基礎資料來源中建立新的程序的方法。  

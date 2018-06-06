@@ -1,28 +1,26 @@
 ---
-title: "定義狀態變數 | Microsoft Docs"
-ms.custom: 
+title: 定義狀態變數 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
 ms.component: data-flow
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: 45d66152-883a-49a7-a877-2e8ab45f8f79
-caps.latest.revision: 
+caps.latest.revision: 12
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 292a24071ea7d6247972353a0dbe7d5bdb689f69
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 4a9ff7319403a724dcd1c2778a516114d6aef3e9
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="define-a-state-variable"></a>定義狀態變數
   此程序描述如何定義 CDC 狀態儲存所在的封裝變數。  
@@ -87,7 +85,7 @@ ms.lasthandoff: 01/25/2018
   
  不要指定變數值做為其定義的一部分。 此值必須是由 CDC 控制工作所設定。  
   
- 如果您打算將 CDC 控制工作與 **[自動狀態持續性]**搭配使用，CDC 狀態變數將會從您指定的資料庫狀態資料表讀取，並在其值變更時更新回該相同的資料表。 如需有關狀態變數的詳細資訊，請參閱＜ [CDC Control Task](../../integration-services/control-flow/cdc-control-task.md)＞和＜ [CDC Control Task Editor](../../integration-services/control-flow/cdc-control-task-editor.md)＞。  
+ 如果您打算將 CDC 控制工作與 **[自動狀態持續性]** 搭配使用，CDC 狀態變數將會從您指定的資料庫狀態資料表讀取，並在其值變更時更新回該相同的資料表。 如需有關狀態變數的詳細資訊，請參閱＜ [CDC Control Task](../../integration-services/control-flow/cdc-control-task.md)＞和＜ [CDC Control Task Editor](../../integration-services/control-flow/cdc-control-task-editor.md)＞。  
   
  如果您不打算將 CDC 控制工作與 [自動狀態持續性] 搭配使用，則必須從上次封裝執行時儲存其值的永續性儲存體中載入變數值，並在目前處理範圍已完成處理時將變數值寫回該永續性儲存體。  
   

@@ -1,16 +1,14 @@
 ---
-title: "sp_change_log_shipping_primary_database (TRANSACT-SQL) |Microsoft 文件"
-ms.custom: 
+title: sp_change_log_shipping_primary_database (TRANSACT-SQL) |Microsoft 文件
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: system-objects
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_change_log_shipping_primary_database
@@ -20,16 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_change_log_shipping_primary_database
 ms.assetid: 8c9dce6b-d2a3-4ca7-a832-8f59a5adb214
-caps.latest.revision: 
+caps.latest.revision: 27
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 9ea80f811016ec3502bea583c20edf4894753e83
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 0fd020ff499dfb230478434e70cee94edb45ba92
+ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="spchangelogshippingprimarydatabase-transact-sql"></a>sp_change_log_shipping_primary_database (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -57,13 +54,13 @@ sp_change_log_shipping_primary_database [ @database = ] 'database'
 ```  
   
 ## <a name="arguments"></a>引數  
- [ **@database =** ] '*database*'  
+ [  **@database =** ] '*資料庫*'  
  這是主要伺服器的資料庫名稱。 *primary_database*是**sysname**，沒有預設值。  
   
  [ **@backup_directory =** ] '*backup_directory*'  
  這是主要伺服器上備份資料夾的路徑。 *backup_directory*是**nvarchar （500)**，沒有預設值，不能是 NULL。  
   
- [ **@backup_share =** ] '*backup_share*'  
+ [  **@backup_share =** ] '*backup_share*'  
  這是主要伺服器上備份目錄的網路路徑。 *backup_share*是**nvarchar （500)**，沒有預設值，不能是 NULL。  
   
  [ **@backup_retention_period =** ] '*backup_retention_period*'  
@@ -81,13 +78,13 @@ sp_change_log_shipping_primary_database [ @database = ] 'database'
  [ **@monitor_server_login =** ] '*monitor_server_login*'  
  這是用來存取監視伺服器之帳戶的使用者名稱。  
   
- [ **@monitor_server_password =** ] '*monitor_server_password*'  
+ [  **@monitor_server_password =** ] '*monitor_server_password*'  
  這是用於存取監視伺服器之帳戶的密碼。  
   
- [ **@backup_threshold =** ] '*backup_threshold*'  
+ [  **@backup_threshold =** ] '*backup_threshold*'  
  這是之前的最後一個備份之後的分鐘的時間長度*threshold_alert*就會引發錯誤。 *backup_threshold*是**int**，預設值是 60 分鐘的時間。  
   
- [ **@threshold_alert =** ] '*threshold_alert*'  
+ [  **@threshold_alert =** ] '*threshold_alert*'  
  當超出備份臨界值時，所產生的警示。 *threshold_alert*是**int**不能是 NULL。  
   
  [ **@threshold_alert_enabled =** ] '*threshold_alert_enabled*'  
@@ -147,8 +144,8 @@ EXEC master.dbo.sp_change_log_shipping_primary_database
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [關於記錄傳送 &#40;SQL Server &#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
+ [關於記錄傳送 & #40;SQL Server & #41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
  [系統預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
- [log_shipping_primary_databases &#40;Transact-SQL&#41;](../../relational-databases/system-tables/log-shipping-primary-databases-transact-sql.md)  
+ [log_shipping_primary_databases &#40;Transact SQL&#41;](../../relational-databases/system-tables/log-shipping-primary-databases-transact-sql.md)  
   
   

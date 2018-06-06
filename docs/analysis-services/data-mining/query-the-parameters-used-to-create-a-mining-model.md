@@ -1,31 +1,23 @@
 ---
-title: "查詢用於建立採礦模型的參數 |Microsoft 文件"
-ms.custom: 
-ms.date: 03/01/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
-helpviewer_keywords: content queries [DMX]
-ms.assetid: ce7719e0-6127-4d9c-a753-0e0a3db065e1
-caps.latest.revision: "13"
-author: Minewiskan
+title: 查詢用於建立採礦模型的參數 |Microsoft 文件
+ms.date: 05/08/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: data-mining
+ms.topic: conceptual
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: a35dc0d2279b73086af5c16d9d827a12221f63dd
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: df2eb8317f90a96b35fc886e2158000e0f57d09d
+ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="query-the-parameters-used-to-create-a-mining-model"></a>查詢用於建立採礦模型的參數
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]受影響採礦模型的構成不僅受到定型案例的而且建立模型時所設定的參數。 因此，擷取現有模型的參數設定以更加了解模型行為，可能會很有用。 擷取參數在記錄該模型的特定版本時也很有用。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+  採礦模型的構成不僅受到定型案例的影響，還會受到在建立模型時所設定參數的影響。 因此，擷取現有模型的參數設定以更加了解模型行為，可能會很有用。 擷取參數在記錄該模型的特定版本時也很有用。  
   
  若要尋找建立模型時所用的參數，您可針對其中一個採礦模型結構描述資料列集建立查詢。 這些結構描述資料列會公開為一組系統檢視表，您可以輕鬆地使用查詢的 TRANSACT-SQL 語法。 這項程序描述如何建立查詢，以傳回用來建立指定採礦模型的參數。  
   
@@ -71,7 +63,7 @@ WHERE MODEL_NAME = 'TM Clustering'
   
  CLUSTER_COUNT=10,CLUSTER_SEED=0,CLUSTERING_METHOD=1,MAXIMUM_INPUT_ATTRIBUTES=255,MAXIMUM_STATES=100,MINIMUM_SUPPORT=1,MODELLING_CARDINALITY=10,SAMPLE_SIZE=50000,STOPPING_TOLERANCE=10  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [資料採礦查詢工作和使用說明](../../analysis-services/data-mining/data-mining-query-tasks-and-how-tos.md)   
  [資料採礦查詢](../../analysis-services/data-mining/data-mining-queries.md)  
   

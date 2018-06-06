@@ -1,27 +1,25 @@
 ---
-title: "新增篩選 (報表產生器及 SSRS) | Microsoft Docs"
-ms.custom: 
+title: 新增篩選 (報表產生器及 SSRS) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: report-design
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: 10ae54e7-0e8a-4dff-995d-05516c51d076
-caps.latest.revision: "8"
+caps.latest.revision: 8
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 9802327aa4eedb46086927e67c4b6673963157c4
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: c7138aa01512abe74931e7e0fd3510a597baaa0e
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="add-a-filter-report-builder-and-ssrs"></a>加入篩選 (報表產生器及 SSRS)
   當您想要針對計算或顯示包含或排除特定值時，請將篩選加入至資料集、資料區或群組。 篩選會在執行階段先套用至資料集、套用至資料區，然後套用至群組 (按照群組階層的由上而下順序)。 在資料表、矩陣或清單中，系統會針對資料列群組、資料行群組和相鄰群組獨立套用篩選。 在圖表中，系統會針對類別目錄群組和數列群組獨立套用篩選。  
@@ -39,7 +37,7 @@ ms.lasthandoff: 01/09/2018
   
 1.  在 **[設計]** 檢視中，開啟報表。  
   
-2.  選取設計介面上的資料區，然後以滑鼠右鍵按一下 [\<data region>Properties (<資料區>屬性)]。 若為量測計，請選取 **[量測計面板屬性]**。 [\<data region>Properties (<資料區>屬性)] 對話方塊隨即開啟。  
+2.  選取設計介面上的資料區，然後以滑鼠右鍵按一下 [*\<資料區>*屬性]。若為量測計，請選取 **[量測計面板屬性]**。[*\<資料區>***屬性**] 對話方塊隨即開啟。  
   
     > [!NOTE]  
     >  在 Tablix 資料區上，以滑鼠右鍵按一下邊角資料格或是資料列或資料行控制代碼，然後按一下 [Tablix 屬性]。  
@@ -48,13 +46,13 @@ ms.lasthandoff: 01/09/2018
   
 4.  按一下 **[加入]**。 新的空白篩選方程式隨即顯示。  
   
-5.  在 **[運算式]**中，針對要篩選的欄位輸入或選取運算式。 若要編輯運算式，請按一下運算式 (*fx*) 按鈕。  
+5.  在 **[運算式]** 中，針對要篩選的欄位輸入或選取運算式。 若要編輯運算式，請按一下運算式 (*fx*) 按鈕。  
   
 6.  在下拉式方塊中，選取符合您在步驟 5 中建立之運算式資料類型的資料類型。  
   
 7.  在 **[運算子]** 方塊中，選取您想要篩選用來比較 **[運算式]** 方塊和 **[值]** 方塊中值的運算子。 您所選擇的運算子會決定下一個步驟所使用的值數目。  
   
-8.  在 **[值]** 方塊中，輸入您想要篩選在評估 **[運算式]**中的值時，所針對的運算式或值。  
+8.  在 **[值]** 方塊中，輸入您想要篩選在評估 **[運算式]** 中的值時，所針對的運算式或值。  
   
      如需篩選方程式的範例，請參閱[篩選方程式範例 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/filter-equation-examples-report-builder-and-ssrs.md)。  
   
@@ -72,13 +70,13 @@ ms.lasthandoff: 01/09/2018
   
 5.  按一下 **[加入]**。 新的空白篩選方程式隨即顯示。  
   
-6.  在 **[運算式]**中，針對要篩選的欄位輸入或選取運算式。 若要編輯運算式，請按一下運算式 (*fx*) 按鈕。  
+6.  在 **[運算式]** 中，針對要篩選的欄位輸入或選取運算式。 若要編輯運算式，請按一下運算式 (*fx*) 按鈕。  
   
 7.  在下拉式方塊中，選取符合您在步驟 5 中建立之運算式資料類型的資料類型。  
   
 8.  在 **[運算子]** 方塊中，選取您想要篩選用來比較 **[運算式]** 方塊和 **[值]** 方塊中值的運算子。 您所選擇的運算子會決定下一個步驟所使用的值數目。  
   
-9. 在 **[值]** 方塊中，輸入您想要篩選在評估 **[運算式]**中的值時，所針對的運算式或值。  
+9. 在 **[值]** 方塊中，輸入您想要篩選在評估 **[運算式]** 中的值時，所針對的運算式或值。  
   
      如需篩選方程式的範例，請參閱[篩選方程式範例 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/filter-equation-examples-report-builder-and-ssrs.md)。  
   
@@ -96,13 +94,13 @@ ms.lasthandoff: 01/09/2018
   
 5.  按一下 **[加入]**。 新的空白篩選方程式隨即顯示。  
   
-6.  在 **[運算式]**中，針對要篩選的欄位輸入或選取運算式。 若要編輯運算式，請按一下運算式 (*fx*) 按鈕。  
+6.  在 **[運算式]** 中，針對要篩選的欄位輸入或選取運算式。 若要編輯運算式，請按一下運算式 (*fx*) 按鈕。  
   
 7.  在下拉式方塊中，選取符合您在步驟 5 中建立之運算式資料類型的資料類型。  
   
 8.  在 **[運算子]** 方塊中，選取您想要篩選用來比較 **[運算式]** 方塊和 **[值]** 方塊中值的運算子。 您所選擇的運算子會決定下一個步驟所使用的值數目。  
   
-9. 在 **[值]** 方塊中，輸入您想要篩選在評估 **[運算式]**中的值時，所針對的運算式或值。  
+9. 在 **[值]** 方塊中，輸入您想要篩選在評估 **[運算式]** 中的值時，所針對的運算式或值。  
   
      如需篩選方程式的範例，請參閱[篩選方程式範例 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/filter-equation-examples-report-builder-and-ssrs.md)。  
   
@@ -120,13 +118,13 @@ ms.lasthandoff: 01/09/2018
   
 5.  按一下 **[加入]**。 新的空白篩選方程式隨即顯示。  
   
-6.  在 **[運算式]**中，針對要篩選的欄位輸入或選取運算式。 若要編輯運算式，請按一下運算式 (*fx*) 按鈕。  
+6.  在 **[運算式]** 中，針對要篩選的欄位輸入或選取運算式。 若要編輯運算式，請按一下運算式 (*fx*) 按鈕。  
   
 7.  在下拉式方塊中，選取符合您在步驟 5 中建立之運算式資料類型的資料類型。  
   
 8.  在 **[運算子]** 方塊中，選取您想要篩選用來比較 **[運算式]** 方塊和 **[值]** 方塊中值的運算子。 您所選擇的運算子會決定下一個步驟所使用的值數目。  
   
-9. 在 **[值]** 方塊中，輸入您想要篩選在評估 **[運算式]**中的值時，所針對的運算式或值。  
+9. 在 **[值]** 方塊中，輸入您想要篩選在評估 **[運算式]** 中的值時，所針對的運算式或值。  
   
      如需篩選方程式的範例，請參閱[篩選方程式範例 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/filter-equation-examples-report-builder-and-ssrs.md)。  
   

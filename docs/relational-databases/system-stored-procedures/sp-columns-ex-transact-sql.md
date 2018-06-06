@@ -1,16 +1,14 @@
 ---
-title: "sp_columns_ex (TRANSACT-SQL) |Microsoft 文件"
-ms.custom: 
+title: sp_columns_ex (TRANSACT-SQL) |Microsoft 文件
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: system-objects
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_columns_ex
@@ -20,16 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_columns_ex
 ms.assetid: c12ef6df-58c6-4391-bbbf-683ea874bd81
-caps.latest.revision: 
+caps.latest.revision: 38
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 90ba287e14dc19afef8e19be65c81337c653fe48
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: a7f075de05288823c1ed290527de4005b1160c20
+ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="spcolumnsex-transact-sql"></a>sp_columns_ex (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -76,24 +73,24 @@ sp_columns_ex [ @table_server = ] 'table_server'
   
 |資料行名稱|資料類型|Description|  
 |-----------------|---------------|-----------------|  
-|**TABLE_CAT**|**sysname**|資料表或檢視表限定詞名稱。 各種 DBMS 產品都支援三部分的資料表命名 (*限定詞***。***擁有者***。***名稱*)。 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，這個資料行代表資料庫名稱。 在某些產品中，它代表資料表之資料庫環境的伺服器名稱。 這個欄位可以是 NULL。|  
+|**TABLE_CAT**|**sysname**|資料表或檢視表限定詞名稱。 各種 DBMS 產品都支援三部分的資料表命名 (*限定詞 ***。*** 擁有者 ***。*** 名稱*)。 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，這個資料行代表資料庫名稱。 在某些產品中，它代表資料表之資料庫環境的伺服器名稱。 這個欄位可以是 NULL。|  
 |**再依據 TABLE_SCHEM 排列**|**sysname**|資料表或檢視表擁有者名稱。 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，這個資料行代表建立資料表的資料庫使用者名稱。 這個欄位一律會傳回值。|  
 |**TABLE_NAME**|**sysname**|資料表或檢視表名稱。 這個欄位一律會傳回值。|  
 |**COLUMN_NAME**|**sysname**|每個資料行的資料行名稱**TABLE_NAME**傳回。 這個欄位一律會傳回值。|  
 |**DATA_TYPE**|**smallint**|對應於 ODBC 類型指標的整數值。 如果這是無法對應於 ODBC 類型的資料類型，這個值就是 NULL。 傳回原生資料型別名稱**TYPE_NAME**資料行。|  
-|**TYPE_NAME**|**varchar (**13**)**|代表資料類型的字串。 基礎 DBMS 提供這個資料類型名稱。|  
+|**TYPE_NAME**|**varchar (** 13 **)**|代表資料類型的字串。 基礎 DBMS 提供這個資料類型名稱。|  
 |**COLUMN_SIZE**|**int**|有效位數的數目。 傳回值**精確度**資料行是基底 10。|  
 |**BUFFER_LENGTH**|**int**|資料的傳送大小。1|  
 |**DECIMAL_DIGITS**|**smallint**|小數點右側的位數。|  
 |**NUM_PREC_RADIX**|**smallint**|這是數值資料類型的基礎。|  
 |**可為 NULL**|**smallint**|指定 Null 屬性。<br /><br /> 1 = 可能是 NULL。<br /><br /> 0 = 非 NULL。|  
-|**註解**|**varchar (**254**)**|這個欄位一律會傳回 NULL。|  
-|**COLUMN_DEF**|**varchar (**254**)**|資料行的預設值。|  
+|**註解**|**varchar (** 254 **)**|這個欄位一律會傳回 NULL。|  
+|**COLUMN_DEF**|**varchar (** 254 **)**|資料行的預設值。|  
 |**SQL_DATA_TYPE**|**smallint**|SQL 資料類型出現在描述子之 TYPE 欄位時的值。 此資料行等同於**DATA_TYPE**資料行，除了**datetime**和 sql-92**間隔**資料型別。 這個資料行一律會傳回值。|  
 |**SQL_DATETIME_SUB**|**smallint**|子類型代碼**datetime**和 sql-92**間隔**資料型別。 其他資料類型的這個資料行都會傳回 NULL。|  
 |**CHAR_OCTET_LENGTH**|**int**|字元或整數資料類型資料行的最大長度 (以位元組為單位)。 其他所有資料類型的這個資料行都會傳回 NULL。|  
 |**ORDINAL_POSITION**|**int**|資料行在資料表中的序數位置。 資料表中的第一個資料行是 1。 這個資料行一律會傳回值。|  
-|**IS_NULLABLE**|**varchar (**254**)**|資料表中資料行的 Null 屬性。 遵照 ISO 規則來決定 Null 屬性。 ISO SQL 標準 DBMS 無法傳回空字串。<br /><br /> YES = 資料行可以包括 NULLS。<br /><br /> NO = 資料行不能包括 NULLS。<br /><br /> 如果 Null 屬性不明，這個資料行會傳回長度為零的字串。<br /><br /> 傳回的值，這個資料行傳回的值不同的**NULLABLE**資料行。|  
+|**IS_NULLABLE**|**varchar (** 254 **)**|資料表中資料行的 Null 屬性。 遵照 ISO 規則來決定 Null 屬性。 ISO SQL 標準 DBMS 無法傳回空字串。<br /><br /> YES = 資料行可以包括 NULLS。<br /><br /> NO = 資料行不能包括 NULLS。<br /><br /> 如果 Null 屬性不明，這個資料行會傳回長度為零的字串。<br /><br /> 傳回的值，這個資料行傳回的值不同的**NULLABLE**資料行。|  
 |**SS_DATA_TYPE**|**tinyint**|擴充預存程序所用的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料類型。|  
   
  如需詳細資訊，請參閱 Microsoft ODBC 文件集。  
@@ -120,14 +117,14 @@ EXEC sp_columns_ex 'Seattle1',
    'JobTitle';  
 ```  
   
-## <a name="see-also"></a>請參閱  
- [sp_catalogs &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/sp-catalogs-transact-sql.md)   
- [sp_foreignkeys &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/sp-foreignkeys-transact-sql.md)   
- [< sp_indexes &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/sp-indexes-transact-sql.md)   
- [sp_linkedservers &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-linkedservers-transact-sql.md)   
- [sp_primarykeys &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/sp-primarykeys-transact-sql.md)   
- [sp_tables_ex &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/sp-tables-ex-transact-sql.md)   
- [sp_table_privileges &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/sp-table-privileges-transact-sql.md)   
+## <a name="see-also"></a>另請參閱  
+ [sp_catalogs &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-catalogs-transact-sql.md)   
+ [sp_foreignkeys &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-foreignkeys-transact-sql.md)   
+ [< sp_indexes &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-indexes-transact-sql.md)   
+ [sp_linkedservers & #40;TRANSACT-SQL & #41;](../../relational-databases/system-stored-procedures/sp-linkedservers-transact-sql.md)   
+ [sp_primarykeys &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-primarykeys-transact-sql.md)   
+ [sp_tables_ex &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-tables-ex-transact-sql.md)   
+ [sp_table_privileges &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-table-privileges-transact-sql.md)   
  [系統預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

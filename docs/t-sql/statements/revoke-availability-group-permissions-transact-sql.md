@@ -1,16 +1,14 @@
 ---
-title: "REVOKE 可用性群組權限 (Transact-SQL) | Microsoft Docs"
-ms.custom: 
+title: REVOKE 可用性群組權限 (Transact-SQL) | Microsoft Docs
+ms.custom: ''
 ms.date: 08/10/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
 ms.component: t-sql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: t-sql
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - TSQL
@@ -20,16 +18,15 @@ helpviewer_keywords:
 - revoking permissions, [SQL Server], availability groups
 - permissions [SQL Server], availability group
 ms.assetid: 02c77378-a36d-4286-9235-d8867a2b92ad
-caps.latest.revision: 
+caps.latest.revision: 10
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: f7bd88af97183e7cb5f3bd36a4bc5194be62a4d6
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 351ea5c0a315f32f4f2e499dad0a2026ac21ef45
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="revoke-availability-group-permissions-transact-sql"></a>撤銷可用性群組權限 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -60,7 +57,7 @@ REVOKE [ GRANT OPTION FOR ] permission  [ ,...n ]
  指定可以撤銷的可用性群組權限。 如需權限清單，請參閱這個主題稍後的「備註」一節。  
   
  ON AVAILABILITY GROUP **::***availability_group_name*  
- 指定要撤銷其權限的可用性群組。 範圍限定詞 (**::**) 為必要項目。  
+ 指定要撤銷其權限的可用性群組。 範圍限定詞 (**::**) 是必要項。  
   
  { FROM | TO } \<server_principal> 指定要撤銷其權限的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入。  
   
@@ -94,7 +91,7 @@ REVOKE [ GRANT OPTION FOR ] permission  [ ,...n ]
 ## <a name="remarks"></a>Remarks  
  只有在目前資料庫是 **master** 的情況下，才能夠撤銷伺服器範圍的權限。  
   
- 您可以在 [sys.availability_groups &#40;TRANSACT-SQL &#41;](../../relational-databases/system-catalog-views/sys-availability-groups-transact-sql.md) 目錄檢視中，看到有關可用性群組的資訊。 您可以在 [sys.server_permissions](../../relational-databases/system-catalog-views/sys-server-permissions-transact-sql.md) 目錄檢視中，看到伺服器權限的資訊，並在 [sys.server_principals](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md) 目錄檢視中，看到有關伺服器主體的資訊。  
+ 您可以在 [sys.availability_groups & #40;TRANSACT-SQL & #41;](../../relational-databases/system-catalog-views/sys-availability-groups-transact-sql.md) 目錄檢視中，看到有關可用性群組的資訊。 您可以在 [sys.server_permissions](../../relational-databases/system-catalog-views/sys-server-permissions-transact-sql.md) 目錄檢視中，看到伺服器權限的資訊，並在 [sys.server_principals](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md) 目錄檢視中，看到有關伺服器主體的資訊。  
   
  可用性群組是伺服器層級的安全性實體。 下表所列的是可以撤銷之最特定且最有限的可用性群組權限，並列出利用隱含方式來併入這些權限的較通用權限。  
   
@@ -131,7 +128,7 @@ GO
 ```  
   
 ### <a name="c-revoking-a-previously-granted-with-grant-option-clause"></a>C. 撤銷先前授與的 WITH GRANT OPTION 子句  
- 如果使用 WITH GRANT OPTION 授與權限，使用 REVOKE GRANT OPTION FOR … 即可移除 WITH GRANT OPTION。 to remove the WITH GRANT OPTION. 下列範例會授與權限，然後移除權限的 WITH GRANT 部分。  
+ 如果使用 WITH GRANT OPTION 授與權限，則請使用 REVOKE GRANT OPTION FOR … 移除 WITH GRANT OPTION。 下列範例會授與權限，然後移除權限的 WITH GRANT 部分。  
   
 ```  
 USE master;  

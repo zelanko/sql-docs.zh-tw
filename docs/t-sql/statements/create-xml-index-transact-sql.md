@@ -1,16 +1,14 @@
 ---
 title: CREATE XML INDEX (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 08/10/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
 ms.component: t-sql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: t-sql
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - XML_TSQL
@@ -30,16 +28,15 @@ helpviewer_keywords:
 - index creation [SQL Server], XML indexes
 - XML indexes [SQL Server], creating
 ms.assetid: c510cfbc-68be-4736-b3cc-dc5b7aa51f14
-caps.latest.revision: 
+caps.latest.revision: 38
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 133c957937d1c05cd108eeb2deb0847cd7944771
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: fddcf84d2aa860572e92ee9cb5c746ea2bbbba13
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="create-xml-index-transact-sql"></a>CREATE XML INDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -155,7 +152,7 @@ CREATE [ PRIMARY ] XML INDEX index_name
  OFF 或未指定 *fillfactor*  
  中繼層級頁面會幾乎填滿整個容量，但會考量中繼頁面上的索引鍵集，而保留至少可供索引所能擁有之大小上限的一個資料列使用的足夠空間。  
   
- 只有在指定 FILLFACTOR 時，才能使用 PAD_INDEX 選項，因為 PAD_INDEX 會使用 FILLFACTOR 所指定的百分比。 如果 FILLFACTOR 所指定的百分比不夠，無法允許一個資料列，[!INCLUDE[ssDE](../../includes/ssde-md.md)] 會在內部覆寫該百分比以允許最小值。 不論 *fillfactor* 的值設得多低，中繼索引頁面上的資料列數絕對不能少於兩個。  
+ 只有在指定 FILLFACTOR 時，才能使用 PAD_INDEX 選項，因為 PAD_INDEX 會使用 FILLFACTOR 所指定的百分比。 如果 FILLFACTOR 所指定的百分比不夠，無法允許一個資料列，[!INCLUDE[ssDE](../../includes/ssde-md.md)] 會在內部覆寫該百分比以允許最小值。 不論 *fillfactor* 的值設得多低，中繼索引頁面上的資料列數目絕對不能少於兩個。  
   
  FILLFACTOR **=***fillfactor*  
  指定用以指出建立或重建索引時，[!INCLUDE[ssDE](../../includes/ssde-md.md)] 填滿各索引頁面分葉層級之程度的百分比。 *fillfactor* 必須是 1 到 100 之間的整數值。 預設值是 0。 如果 *fillfactor* 是 100 或 0， [!INCLUDE[ssDE](../../includes/ssde-md.md)] 會利用已填滿容量的分葉頁面來建立索引。  
@@ -174,12 +171,12 @@ CREATE [ PRIMARY ] XML INDEX index_name
  指定是否要將暫時排序結果儲存在 **tempdb** 中。 預設值為 OFF。  
   
  ON  
- 用來建置索引的中繼排序結果會儲存在 **tempdb** 中。 如果 **tempdb** 位於使用者資料庫以外的另一組磁碟上，這可能會減少建立索引所需的時間。 不過，這會增加建立索引時所使用的磁碟空間量。  
+ 用來建置索引的中繼排序結果會儲存在 **tempdb** 中。 如果 **tempdb** 位於與使用者資料庫所在磁碟不同的磁碟上，這可能會減少建立索引所需的時間。 不過，這會增加建立索引時所使用的磁碟空間量。  
   
  OFF  
  中繼排序結果會儲存在與用來儲存索引相同的資料庫中。  
   
- 除了建立索引時，使用者資料庫中所需的空間以外，**tempdb** 還需要大約相同數量的其他空間來容納中繼排序結果。 如需詳細資訊，請參閱[索引的 SORT_IN_TEMPDB 選項](../../relational-databases/indexes/sort-in-tempdb-option-for-indexes.md)。  
+ 除了建立索引時使用者資料庫中所需的空間以外，**tempdb** 還需要大約相同數量的額外空間來容納中繼排序結果。 如需詳細資訊，請參閱[索引的 SORT_IN_TEMPDB 選項](../../relational-databases/indexes/sort-in-tempdb-option-for-indexes.md)。  
   
  IGNORE_DUP_KEY **=OFF**  
  對於 XML 索引沒有任何作用，因為索引類型絕對不是唯一的。 請勿將這個選項設定為 ON，否則會引發錯誤。  

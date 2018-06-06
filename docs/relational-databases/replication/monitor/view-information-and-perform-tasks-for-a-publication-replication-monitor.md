@@ -1,32 +1,30 @@
 ---
-title: "檢視發行集的資訊並執行工作 (複寫監視器) | Microsoft 文件"
-ms.custom: 
+title: 檢視發行集的資訊並執行工作 (複寫監視器) | Microsoft 文件
+ms.custom: ''
 ms.date: 03/07/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
 ms.component: replication
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - viewing publication information
 - publications [SQL Server replication], viewing information
 - publications [SQL Server replication], Replication Monitor tasks
 ms.assetid: 92e28a07-d6a7-461b-a0b3-bd9bc6afcbe5
-caps.latest.revision: 
+caps.latest.revision: 39
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 7dcd53ff789c6089aef8bcd4b71a9db6dd288a04
-ms.sourcegitcommit: ab25b08a312d35489a2c4a6a0d29a04bbd90f64d
+ms.openlocfilehash: fbe11687aefa08102d1b8a74534b53d31f561fe8
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="view-information-and-perform-tasks-for-a-publication-replication-monitor"></a>檢視發行集的資訊並執行工作 (複寫監視器)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -70,7 +68,7 @@ ms.lasthandoff: 03/08/2018
   
 5.  若要檢視有關代理程式警告與臨界值的詳細資訊，請按一下 **[警告]** 索引標籤。如需詳細資訊，請參閱＜ [Set Thresholds and Warnings in Replication Monitor](../../../relational-databases/replication/monitor/set-thresholds-and-warnings-in-replication-monitor.md)＞。  
   
-6.  若要檢視追蹤 Token 的資訊，請按一下 **[追蹤 Token]** 索引標籤。如需如何使用追蹤 Token 的詳細資訊，請參閱＜ [Measure Latency and Validate Connections for Transactional Replication](../../../relational-databases/replication/monitor/measure-latency-and-validate-connections-for-transactional-replication.md)＞。  
+6.  若要檢視追蹤 Token 的資訊，請按一下 **[追蹤 Token]** 索引標籤。如需如何使用追蹤 Token 的詳細資訊，請參閱＜ [針對異動複寫測量延遲及驗證連接](../../../relational-databases/replication/monitor/measure-latency-and-validate-connections-for-transactional-replication.md)＞。  
   
 ## <a name="see-also"></a>另請參閱  
  [檢視及修改發行集屬性](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md)   

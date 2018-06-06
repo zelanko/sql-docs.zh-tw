@@ -1,38 +1,23 @@
 ---
-title: "了解資料庫結構描述 |Microsoft 文件"
-ms.custom: 
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
-helpviewer_keywords:
-- Schema Generation Wizard, database schema
-- database schema [Analysis Services]
-- relational schema [Analysis Services], database schema
-- subject area schema options [Analysis Services]
-- staging area schema options [Analysis Services]
-- denormalized schemas
-ms.assetid: 51e411f9-ee3f-4b92-9833-c2bce8c6b752
-caps.latest.revision: 
-author: Minewiskan
+title: 了解資料庫結構描述 |Microsoft 文件
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: multidimensional-models
+ms.topic: conceptual
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 05f62f6beb2e248fc2e0c3ae405f8893c33c10e9
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 91a54be06727a674a16f12295fa886f869b188e4
+ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="understanding-the-database-schemas"></a>了解資料庫結構描述
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-結構描述產生精靈會根據 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 裡的維度和量值群組，產生主題領域資料庫反正規化關聯式結構描述。 此精靈會針對每一個維度產生關聯式資料表 (稱為維度資料表)，以便儲存維度資料，也會針對每一個量值群組產生關聯式資料表 (稱為事實資料表)，以便儲存事實資料。 精靈產生這些關聯式資料表時，會忽略連結維度、連結量值群組和伺服器時間維度。  
+  結構描述產生精靈會根據 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 裡的維度和量值群組，產生主題領域資料庫反正規化關聯式結構描述。 此精靈會針對每一個維度產生關聯式資料表 (稱為維度資料表)，以便儲存維度資料，也會針對每一個量值群組產生關聯式資料表 (稱為事實資料表)，以便儲存事實資料。 精靈產生這些關聯式資料表時，會忽略連結維度、連結量值群組和伺服器時間維度。  
   
 ## <a name="validation"></a>驗證  
  [結構描述產生精靈] 在開始產生基礎關聯式結構描述之前，會先驗證 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Cube 和維度。 如果精靈偵測到錯誤會停止，並會在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中的 [工作清單] 視窗報告錯誤。 導致無法產生之錯誤的範例包括：  

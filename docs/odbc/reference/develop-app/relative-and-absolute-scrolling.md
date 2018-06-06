@@ -1,35 +1,32 @@
 ---
-title: "相對與絕對捲動 |Microsoft 文件"
-ms.custom: 
+title: 相對與絕對捲動 |Microsoft 文件
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
-ms.component: odbc
-ms.reviewer: 
+ms.prod: sql
+ms.prod_service: connectivity
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: connectivity
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - absolute scrolling [ODBC]
 - relative scrolling [ODBC]
 - scrollable cursors [ODBC]
 - cursors [ODBC], scrollable
 ms.assetid: 3d0ff48d-fef5-4c01-bb1d-a583e6269b66
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
-ms.workload: Inactive
-ms.openlocfilehash: c7ade62e1c7760b7542b1e4dd82668c11f2947c8
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+manager: craigg
+ms.openlocfilehash: 93f92b1cd5369ade8102b2505ef37f1da29dde4f
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="relative-and-absolute-scrolling"></a>相對與絕對捲動
-大部分的捲動選項**SQLFetchScroll**放置游標的目前位置的相對或絕對位置。 **SQLFetchScroll**支援提取下一個、 第一個和最後一個資料列集，做為也為相對提取 (提取資料列集 *n* 從目前的資料列集的開頭的資料列) 和絕對提取 (提取資料列集資料列開始 *n* )。 如果 *n* 是負數的絕對提取中，會計算資料列從結果集的結尾。 因此，絕對提取資料列 – 1 表示提取從結果集中的最後一個資料列開始的資料列集。  
+大部分的捲動選項**SQLFetchScroll**放置游標的目前位置的相對或絕對位置。 **SQLFetchScroll**支援提取下一個、 一個、 第一個和最後一個資料列集，做為也為相對提取 (提取資料列集*n*從目前的資料列集的開頭的資料列) 和絕對提取 （提取的資料列集開始在資料列*n*)。 如果*n*是負數的絕對提取中，會計算資料列從結果集的結尾。 因此，絕對提取資料列 – 1 表示提取從結果集中的最後一個資料列開始的資料列集。  
   
  動態資料指標偵測資料列插入和刪除結果集中，所以沒有簡單的方式來擷取結果集，可能會變慢的開始處讀取以外的特定數字的資料列的動態資料指標。 此外，絕對提取不是很有用的動態資料指標因為資料列數字變更為資料列插入和刪除;因此，連續擷取相同的資料列數目可能會產生不同的資料列。  
   

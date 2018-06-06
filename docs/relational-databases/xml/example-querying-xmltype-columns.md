@@ -1,34 +1,31 @@
 ---
-title: "範例：查詢 XMLType 資料行 | Microsoft Docs"
-ms.custom: 
+title: 範例：查詢 XMLType 資料行 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
 ms.component: xml
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- dbe-xml
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: xml
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - RAW mode, querying XML example
 ms.assetid: d9f3710d-7a2e-4abe-9c02-3e3c0df4d620
-caps.latest.revision: 
+caps.latest.revision: 10
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 6b6c9252d91320b5aece66a4352a74324d04b917
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.openlocfilehash: 48235e0a875d7bbe3f66eccc9f8348db18538a17
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="example-querying-xmltype-columns"></a>範例：查詢 XMLType 資料行
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
-下列查詢包含 **xml** 類型的資料行。 此查詢會從 `Instructions` xml **類型之** 資料行的第一個位置，擷取產品型號識別碼、名稱和製造步驟。  
+  下列查詢包含 **xml** 類型的資料行。 此查詢會從 `Instructions` xml **類型之** 資料行的第一個位置，擷取產品型號識別碼、名稱和製造步驟。  
   
 ## <a name="example"></a>範例  
   

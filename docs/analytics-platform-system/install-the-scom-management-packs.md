@@ -1,28 +1,21 @@
 ---
-title: "安裝 SCOM 管理組件 (Analytics Platform System)"
-author: barbkess
-ms.author: barbkess
-manager: jhubbard
-ms.prod: analytics-platform-system
-ms.prod_service: mpp-data-warehouse
-ms.service: 
-ms.component: 
-ms.technology: mpp-data-warehouse
-ms.custom: 
-ms.date: 01/05/2017
-ms.reviewer: na
-ms.suite: sql
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: ab3985d8-0a71-4b28-9d28-9886ae2a110f
-caps.latest.revision: "16"
-ms.openlocfilehash: 0fce285f730508ec9bf7f384eed4f6b3c9ed3dda
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+title: 安裝 SCOM 管理組件-Analytics Platform System |Microsoft 文件
+description: 請遵循下列步驟來下載並安裝 SQL Server PDW System Center Operations Manager (SCOM) 管理組件。 監視 SQL Server PDW 從 SCOM 所需的管理組件。
+author: mzaman1
+manager: craigg
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
+ms.openlocfilehash: 163ab893074e171decb573d876c5f98334437985
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/19/2018
 ---
-# <a name="install-the-scom-management-packs"></a>安裝 SCOM 管理組件
+# <a name="install-sql-server-operations-manager-scom-management-packs-for-analytics-platform-system"></a>安裝 SQL 伺服器 Operations Manager (SCOM) 管理組件的 Analytics Platform System
 請遵循下列步驟來下載並安裝 SQL Server PDW System Center Operations Manager (SCOM) 管理組件。 監視 SQL Server PDW 從 SCOM 所需的管理組件。  
   
 ## <a name="BeforeBegin"></a>開始之前  
@@ -82,7 +75,7 @@ HDInsight 工作負載，下載[HDInsight 的 System Center 管理組件](http:/
     ![安裝完成](./media/install-the-scom-management-packs/SCOM_licnse_agmtB3.png "SCOM_licnse_agmtB3")  
   
 ## <a name="next-step"></a>下一個步驟  
-既然您已安裝的管理組件時，繼續下一個步驟： [PDW &#40; 針對匯入 SCOM 管理組件Analytics Platform System &#41;](import-the-scom-management-pack-for-pdw.md).  
+既然您已安裝的管理組件時，繼續下一個步驟： [SCOM 管理組件匯入 PDW &#40;Analytics Platform System&#41;](import-the-scom-management-pack-for-pdw.md)。  
   
 <!-- MISSING LINKS ## See Also  
 [Common Metadata Query Examples &#40;SQL Server PDW&#41;](../sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  -->  

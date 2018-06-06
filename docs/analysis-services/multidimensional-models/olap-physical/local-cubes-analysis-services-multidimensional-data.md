@@ -1,32 +1,23 @@
 ---
-title: "本機 Cube (Analysis Services-多維度資料) |Microsoft 文件"
-ms.custom: 
-ms.date: 03/16/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: reference
-applies_to: SQL Server 2016 Preview
-helpviewer_keywords: cubes [Analysis Services], local
-ms.assetid: e52e1515-35a7-4dc3-9bbf-736d176ba0c7
-caps.latest.revision: "13"
-author: Minewiskan
+title: 本機 Cube (Analysis Services-多維度資料) |Microsoft 文件
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: olap
+ms.topic: conceptual
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: b9b84028e2561b5a0fc25c6866d86d667b8873f2
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 11c4a7b2917d7baa4860137fa0764026264024a8
+ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="local-cubes-analysis-services---multidimensional-data"></a>本機 Cube (Analysis Services - 多維度資料)
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]若要建立、 更新或刪除本機 cube，您必須撰寫及執行 ASSL 指令碼或 AMO 程式。  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+  若要建立、更新或刪除本機 Cube，您必須撰寫及執行 ASSL 指令碼或 AMO 程式。  
   
  本機 Cube 和本機採礦模型可讓用戶端工作站與網路中斷連接時，仍能進行分析。 例如，用戶端應用程式可能會呼叫 OLE DB for OLAP 9.0 Provider (MSOLAP.3)，以便載入本機 Cube 引擎來建立及查詢本機 Cube，如下圖所示：  
   
@@ -44,10 +35,10 @@ ms.lasthandoff: 01/08/2018
   
 |本機 Cube 的資料來源|建立方法|  
 |------------------------------------|---------------------|  
-|以伺服器為基礎的 Cube|您可以使用 CREATE GLOBAL CUBE 陳述式或[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]指令碼語言 (ASSL) 指令碼建立和擴展 cube，以伺服器為基礎的 cube。 如需詳細資訊，請參閱[建立全域 CUBE 陳述式 &#40;MDX &#41;](../../../mdx/mdx-data-definition-create-global-cube.md)或[Analysis Services 指令碼語言 &#40;ASSL XMLA &#41;](../../../analysis-services/scripting/analysis-services-scripting-language-assl-for-xmla.md).|  
+|以伺服器為基礎的 Cube|您可以使用 CREATE GLOBAL CUBE 陳述式或[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]指令碼語言 (ASSL) 指令碼建立和擴展 cube，以伺服器為基礎的 cube。 如需詳細資訊，請參閱[建立全域 CUBE 陳述式&#40;MDX&#41; ](../../../mdx/mdx-data-definition-create-global-cube.md)或[Analysis Services 指令碼語言&#40;ASSL xmla&#41;](../../../analysis-services/scripting/analysis-services-scripting-language-assl-for-xmla.md)。|  
 |關聯式資料來源|您可以使用 ASSL 指令碼，根據 OLE DB 關聯式資料庫建立和擴展 Cube。 若要使用 ASSL 來建立本機 Cube，您只要連接至本機 Cube 檔案 (*.cub) 並以針對 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 執行個體執行 ASSL 指令碼來建立伺服器 Cube 的相同方式執行 ASSL 指令碼即可。 如需詳細資訊，請參閱 [Analysis Services 指令碼語言 &#40;ASSL&#41; 參考 ](../../../analysis-services/scripting/analysis-services-scripting-language-assl-for-xmla.md)。|  
   
- 您可以使用 REFRESH CUBE 陳述式來重建本機 Cube 並更新其資料。 如需詳細資訊，請參閱[重新整理 CUBE 陳述式 &#40;MDX &#41;](../../../mdx/mdx-data-definition-refresh-cube.md).  
+ 您可以使用 REFRESH CUBE 陳述式來重建本機 Cube 並更新其資料。 如需詳細資訊，請參閱[重新整理 CUBE 陳述式&#40;MDX&#41;](../../../mdx/mdx-data-definition-refresh-cube.md)。  
   
 ### <a name="local-cubes-created-from-server-based-cubes"></a>根據以伺服器為基礎的 Cube 建立本機 Cube  
  根據以伺服器為基礎的 Cube 建立本機 Cube 時，請考量以下事項：  
@@ -75,13 +66,13 @@ ms.lasthandoff: 01/08/2018
 -   只有依賴加入至本機 Cube 之量值與維度的這些導出成員、命名集和指派會顯示在本機 Cube 中。 系統將自動排除無效的導出成員、命名集和指派。  
   
 ### <a name="security"></a>Security  
- 為了讓使用者根據伺服器 cube 建立本機 cube，使用者必須授與**鑽研和本機 Cube**伺服器 cube 的權限。 如需詳細資訊，請參閱[授與 cube 或模型權限 &#40;Analysis Services &#41;](../../../analysis-services/multidimensional-models/grant-cube-or-model-permissions-analysis-services.md).  
+ 為了讓使用者根據伺服器 cube 建立本機 cube，使用者必須授與**鑽研和本機 Cube**伺服器 cube 的權限。 如需詳細資訊，請參閱[授與 cube 或模型的權限&#40;Analysis Services&#41;](../../../analysis-services/multidimensional-models/grant-cube-or-model-permissions-analysis-services.md)。  
   
  使用伺服器 Cube 等角色時，本機 Cube 不會受到保護。 擁有本機 Cube 檔案之檔案層級存取權的任何人都可以查詢其中的 Cube。 您可以使用**加密密碼**本機 cube 檔案在本機 cube 檔案上設定密碼的連接屬性。 如果設定本機 Cube 檔案的密碼，就會要求本機 Cube 檔案的所有未來連接都要使用此密碼，才能查詢檔案。  
   
-## <a name="see-also"></a>請參閱  
- [建立 GLOBAL CUBE 陳述式 &#40;MDX &#41;](../../../mdx/mdx-data-definition-create-global-cube.md)   
- [開發使用 Analysis Services 指令碼語言 &#40;ASSL &#41;](../../../analysis-services/multidimensional-models/scripting-language-assl/developing-with-analysis-services-scripting-language-assl.md)   
- [重新整理 CUBE 陳述式 &#40;MDX &#41;](../../../mdx/mdx-data-definition-refresh-cube.md)  
+## <a name="see-also"></a>另請參閱  
+ [CREATE GLOBAL CUBE 陳述式&#40;MDX&#41;](../../../mdx/mdx-data-definition-create-global-cube.md)   
+ [使用 Analysis Services 開發的指令碼語言&#40;ASSL&#41;](../../../analysis-services/multidimensional-models/scripting-language-assl/developing-with-analysis-services-scripting-language-assl.md)   
+ [重新整理 CUBE 陳述式&#40;MDX&#41;](../../../mdx/mdx-data-definition-refresh-cube.md)  
   
   

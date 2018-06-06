@@ -1,38 +1,27 @@
 ---
-title: "使用維度運算式 |Microsoft 文件"
-ms.custom: 
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: language-reference
-dev_langs: kbMDX
-helpviewer_keywords:
-- expressions [MDX], dimensions
-- dimensions [Analysis Services], MDX
-ms.assetid: 1d40cffb-e88f-4284-93cf-d62ab4f08395
-caps.latest.revision: "28"
-author: Minewiskan
+title: 使用維度運算式 |Microsoft 文件
+ms.date: 05/30/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: mdx
+ms.topic: reference
 ms.author: owend
-manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: 1417fd747df92c84fe66e2c69996f57ab51875e1
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: f680c5478eb1ee03fd69506d669fbc49c91c0241
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34582490"
 ---
 # <a name="using-dimension-expressions"></a>使用維度運算式
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   當您在多維度運算式 (MDX) 中傳遞參數給函數時，您通常會使用維度和階層運算式來傳回階層中的成員、集合或 tuple。  
   
- 維度運算式只能是簡單運算式，因為它們是物件識別碼。 請參閱[運算式 &#40;MDX &#41;](../mdx/expressions-mdx.md)取得簡單和複雜運算式的說明。  
+ 維度運算式只能是簡單運算式，因為它們是物件識別碼。 請參閱[運算式&#40;MDX&#41; ](../mdx/expressions-mdx.md)取得簡單和複雜運算式的說明。  
   
 ## <a name="dimension-expressions"></a>維度運算式  
  維度運算式包含維度識別碼或維度函數。  
@@ -70,9 +59,9 @@ ms.lasthandoff: 01/08/2018
   
  `FROM [Adventure Works]`  
   
- 階層識別碼會以*Dimension_Name**。**Hierarchy_Name*中用來描述 MDX 陳述式的 BNF 標記法。  
+ 階層識別碼會以*Dimension_Name **。** Hierarchy_Name*中用來描述 MDX 陳述式的 BNF 標記法。  
   
-## <a name="see-also"></a>請參閱  
- [運算式 &#40;MDX &#41;](../mdx/expressions-mdx.md)  
+## <a name="see-also"></a>另請參閱  
+ [運算式&#40;MDX&#41;](../mdx/expressions-mdx.md)  
   
   

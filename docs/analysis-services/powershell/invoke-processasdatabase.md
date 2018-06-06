@@ -1,30 +1,23 @@
 ---
-title: "叫用 ProcessASDatabase |Microsoft 文件"
-ms.custom: 
-ms.date: 03/01/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services, azure-analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+title: 叫用 ProcessASDatabase |Microsoft 文件
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: powershell
 ms.topic: reference
-ms.assetid: 66d5d154-88ce-4c2e-b1ef-e2d2f6fb1c44
-caps.latest.revision: "11"
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 73155507a34f955d390bfb86f160755753ee7763
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 44a5654207e84f3488c66b3bc9cfab4778b51acb
+ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="invoke-processasdatabase"></a>Invoke-ProcessASDatabase
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]進行**程序**作業指定**資料庫**具有特定**ProcessType**或**RefreshType**取決於基礎中繼資料型別。  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
+  在指定的 **Database** 進行 **Process** 作業，使用特定 **ProcessType** 或 **RefreshType** ，視基礎中繼資料類型而定。  
   
  使用 **ProcessType** 作為資料庫，並使用多維度中繼資料 (這包括相容性層級 1050、1100 或 1103 的表格式資料庫)。  
   
@@ -38,7 +31,7 @@ ms.lasthandoff: 01/08/2018
   
  `Invoke-ProcessASDatabase [-DatabaseName] <string> [-ProcessType] <ProcessType> {ProcessFull | ProcessAdd |     ProcessUpdate | ProcessIndexes | ProcessData | ProcessDefault | ProcessClear | ProcessStructure |     ProcessClearStructureOnly | ProcessScriptCache | ProcessRecalc | ProcessDefrag} [-Server <string>] [-Credential     <pscredential>] [-WhatIf] [-Confirm]  [<CommonParameters>]`  
   
-## <a name="description"></a>描述  
+## <a name="description"></a>Description  
  **Invoke-ProcessASDatabase** Cmdlet 會將資料庫處理至您指定的層級。 例如，若為相容性層級 1200 的表格式資料庫，將 **RefreshType** 設為 **Full** 會以所有新資料覆寫現有資料。  
   
  處理類型 (多維度) 或重新整理類型 (表格式) 是必要的，且可以在資料庫和伺服器參數之前或之後指定︰  
@@ -60,7 +53,7 @@ ms.lasthandoff: 01/08/2018
 |接受管線輸入？|false|  
 |接受萬用字元？|false|  
   
-### <a name="-servermicrosoftanalysissevicesserver"></a>伺服器\<Microsoft.AnalysisSevices.Server >  
+### <a name="-servermicrosoftanalysissevicesserver"></a>-Server\<Microsoft.AnalysisSevices.Server>  
  選擇性地指定如果您不是使用 **SQLAS** 提供者目錄作為內容時要連接的伺服器執行個體。  
   
 |||  
@@ -71,24 +64,24 @@ ms.lasthandoff: 01/08/2018
 |接受管線輸入？|false|  
 |接受萬用字元？|false|  
   
-### <a name="-refreshtype-microsoftanalysisservicesrefreshtype"></a>-RefreshType \<Microsoft.AnalysisServices.RefreshType >  
+### <a name="-refreshtype-microsoftanalysisservicesrefreshtype"></a>-RefreshType \<Microsoft.AnalysisServices.RefreshType>  
  指定表格式資料庫的處理類型。  有效值為 Full、ClearValues、Calculate、DataOnly、Automatic、Add 和 Defragment。 如需說明與指引，請參閱[處理資料庫、資料表或資料分割 &#40;Analysis Services&#41;](../../analysis-services/tabular-models/process-database-table-or-partition-analysis-services.md)。  
   
 |||  
 |-|-|  
 |必要項？|true|  
-|位置？|@shouldalert|  
+|位置？|1|  
 |預設值||  
 |接受管線輸入？|false|  
 |接受萬用字元？|false|  
   
-### <a name="-processtype-microsoftanalysisservicesprocesstype"></a>-ProcessType \<Microsoft.AnalysisServices.ProcessType >  
+### <a name="-processtype-microsoftanalysisservicesprocesstype"></a>-ProcessType \<Microsoft.AnalysisServices.ProcessType>  
  指定相容性層級 1050-1103 的多維度資料庫或表格式資料庫的處理類型。 有效值為：ProcessFull、ProcessAdd、ProcessUpdate、ProcessIndexes、ProcessData、ProcessDefault、ProcessClear、ProcessStructure、ProcessCelarStructureOnly、ProcessScriptCache、ProcessRecalc。 如需說明與指引，請參閱[處理選項和設定 &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/processing-options-and-settings-analysis-services.md)。  
   
 |||  
 |-|-|  
 |必要項？|true|  
-|位置？|@shouldalert|  
+|位置？|1|  
 |預設值||  
 |接受管線輸入？|false|  
 |接受萬用字元？|false|  

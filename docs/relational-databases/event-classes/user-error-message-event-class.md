@@ -1,34 +1,30 @@
 ---
-title: "User Error Message 事件類別 | Microsoft 文件"
-ms.custom: 
+title: User Error Message 事件類別 | Microsoft 文件
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
-ms.prod_service: database-engine, sql-database
-ms.service: 
-ms.component: event-classes
-ms.reviewer: 
+ms.prod: sql
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: supportability
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - User Error Message event class
 ms.assetid: d7594261-ccd9-487c-9678-11875ba57fb7
-caps.latest.revision: 
+caps.latest.revision: 19
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: bffe045c4ff0dbd58cd7b866102152fe28207ce7
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: af919b55097fe8b6a815b07f9407f7c127961357
+ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="user-error-message-event-class"></a>User Error Message 事件類別
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-User Error Message 事件類別顯示發生錯誤或例外狀況時，使用者看見的錯誤訊息。 錯誤訊息文字會顯示在 TextData 欄位。  
+  User Error Message 事件類別顯示發生錯誤或例外狀況時，使用者看見的錯誤訊息。 錯誤訊息文字會顯示在 TextData 欄位。  
   
 ## <a name="user-error-message-event-class-data-columns"></a>User Error Message 事件類別資料行  
   

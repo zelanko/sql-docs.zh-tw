@@ -1,17 +1,16 @@
 ---
-title: "網路通訊協定和網路程式庫 | Microsoft Docs"
-ms.custom: 
+title: 網路通訊協定和網路程式庫 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
 ms.component: install
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - setup-install
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - protocols [SQL Server]
 - configuration options [SQL Server], protocols
@@ -24,16 +23,15 @@ helpviewer_keywords:
 - network protocols [SQL Server], about network protocols
 - configuration options [SQL Server], libraries
 ms.assetid: 8cd437f6-9af1-44ce-9cb0-4d10c83da9ce
-caps.latest.revision: 
+caps.latest.revision: 50
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
-ms.workload: On Demand
-ms.openlocfilehash: 6a89bec1046eab92432ffa53a8de3618903f7ab6
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+manager: craigg
+ms.openlocfilehash: 6e1be13fdf4a14417ef47aa945227d9d66656d5f
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="network-protocols-and-network-libraries"></a>網路通訊協定和網路程式庫
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]

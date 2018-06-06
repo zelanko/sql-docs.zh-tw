@@ -1,32 +1,33 @@
 ---
-title: "SQLConfigDriver 函式 |Microsoft 文件"
-ms.custom: 
+title: SQLConfigDriver 函式 |Microsoft 文件
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
-ms.component: odbc
-ms.reviewer: 
+ms.prod: sql
+ms.prod_service: connectivity
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
-ms.topic: article
-apiname: SQLConfigDriver
-apilocation: sqlsrv32.dll
+ms.technology: connectivity
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
+apiname:
+- SQLConfigDriver
+apilocation:
+- sqlsrv32.dll
 apitype: dllExport
-f1_keywords: SQLConfigDriver
-helpviewer_keywords: SQLConfigDriver function [ODBC]
+f1_keywords:
+- SQLConfigDriver
+helpviewer_keywords:
+- SQLConfigDriver function [ODBC]
 ms.assetid: 4f681961-ac9f-4d88-b065-5258ba112642
-caps.latest.revision: "12"
+caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
-ms.workload: Inactive
-ms.openlocfilehash: 3af2f70156cae3427b5d22f3214f5c911af14a5d
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+manager: craigg
+ms.openlocfilehash: 1a5fc4ac9aebbabf0181d42ae9d026aa697e8b58
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sqlconfigdriver-function"></a>SQLConfigDriver 函式
 **一致性**  
@@ -87,7 +88,7 @@ BOOL SQLConfigDriver(
 ## <a name="diagnostics"></a>診斷  
  當**SQLConfigDriver**傳回 FALSE，相關聯 *\*pfErrorCode*可以取得值，藉由呼叫**SQLInstallerError**。 下表列出 *\*pfErrorCode*可以傳回的值**SQLInstallerError** ，並說明每個內容中的這個函式。  
   
-|*\*pfErrorCode*|錯誤|描述|  
+|*\*pfErrorCode*|錯誤|Description|  
 |---------------------|-----------|-----------------|  
 |ODBC_ERROR_GENERAL_ERR|一般安裝程式發生錯誤|發生錯誤，其中沒有特定的安裝程式錯誤。|  
 |ODBC_ERROR_INVALID_BUFF_LEN|無效的緩衝區長度|*LpszMsg*引數無效。|  

@@ -1,17 +1,13 @@
 ---
-title: "使用 sqlcmd 公用程式 | Microsoft Docs"
-ms.custom: 
+title: 使用 sqlcmd 公用程式 | Microsoft Docs
+ms.custom: ''
 ms.date: 06/06/2017
-ms.prod: sql-non-specified
-ms.prod_service: sql-tools
-ms.service: 
-ms.component: ssms-scripting
-ms.reviewer: 
+ms.prod: sql
+ms.technology: scripting
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 dev_langs:
 - TSQL
 helpviewer_keywords:
@@ -20,19 +16,20 @@ helpviewer_keywords:
 - statements [SQL Server], executing
 - sqlcmd utility, about sqlcmd utility
 ms.assetid: 3ec89119-7314-43ef-9e91-12e72bb63d62
-caps.latest.revision: 
-author: mightypen
+caps.latest.revision: 50
+author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Active
-ms.openlocfilehash: ea2018f4b9b0ad9c0ef29dbacaeaa6e7639a1a34
-ms.sourcegitcommit: a0aa5e611a0e6ebb74ac1e2f613e8916dc7a7617
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 8c24bcc938e0359de05e51c7c70c81a5081959c2
+ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/24/2018
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="sqlcmd---use-the-utility"></a>sqlcmd - 使用公用程式
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] **sqlcmd** 公用程式是命令列公用程式，可用來執行特定的互動式 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式和指令碼，以及用於自動化 [!INCLUDE[tsql](../../includes/tsql-md.md)] 指令碼工作。 若要以互動方式使用 **sqlcmd** ，或是要建立透過 **sqlcmd**執行的指令碼檔案，使用者必須了解 [!INCLUDE[tsql](../../includes/tsql-md.md)]。 一般而言， **sqlcmd** 公用程式的使用方式如下：  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+  **sqlcmd** 公用程式是命令列公用程式，可用來執行特定的互動式 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式和指令碼，以及用於自動化 [!INCLUDE[tsql](../../includes/tsql-md.md)] 指令碼工作。 若要以互動方式使用 **sqlcmd** ，或是要建立透過 **sqlcmd**執行的指令碼檔案，使用者必須了解 [!INCLUDE[tsql](../../includes/tsql-md.md)]。 一般而言， **sqlcmd** 公用程式的使用方式如下：  
   
 -   使用者可以像是在命令提示字元中工作一般，輸入 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式。 結果會顯示在命令提示字元視窗中。 若要開啟命令提示字元視窗，請在 [Windows 搜尋] 方塊中輸入 "cmd"，並按一下 [命令提示字元] 來開啟。 在命令提示字元中，輸入 **sqlcmd** ，後面接著您要使用的一串選項。 如需 **sqlcmd**所支援選項的完整清單，請參閱 [sqlcmd 公用程式](../../tools/sqlcmd-utility.md)。  
   
@@ -111,7 +108,7 @@ ms.lasthandoff: 01/24/2018
   
  在 **sqlcmd** 提示字元中，您可以輸入 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式及 **sqlcmd** 命令 (例如 **GO** 及 **EXIT**)。 每個 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式會放在稱為陳述式快取的緩衝區中。 這些陳述式會在您輸入 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 命令並按 ENTER 後，傳送至 **GO** 。 若要結束 **sqlcmd**，在新的一行的開頭輸入 **EXIT** 或 **QUIT** 。  
   
- 若要清除陳述式快取，請輸入 **:RESET**。 輸入 **^C** 會導致 **sqlcmd** 結束。 在發出**^C** 命令後，也可以使用 **^C** 來停止執行陳述式快取。  
+ 若要清除陳述式快取，請輸入 **:RESET**。 輸入 **^C** 會導致 **sqlcmd** 結束。 在發出 **^C** 命令後，也可以使用 **^C** 來停止執行陳述式快取。  
   
  [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式可藉由輸入 **:ED** 命令及 **sqlcmd** 提示字元。 此時會開啟編輯器，而在編輯過 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式並關閉編輯器之後，修訂的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式即顯示於命令視窗。 請輸入 **GO** 執行修訂的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式。  
   

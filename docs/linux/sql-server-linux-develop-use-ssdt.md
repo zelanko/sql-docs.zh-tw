@@ -1,25 +1,22 @@
 ---
-title: "開發及部署 SQL Server databases for Linux |Microsoft 文件"
-description: 
-author: erickangMSFT
-ms.author: erickang
-manager: jroth
+title: 開發及部署 SQL Server databases for Linux |Microsoft 文件
+description: ''
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.date: 03/17/2017
 ms.topic: article
-ms.prod: sql-non-specified
-ms.prod_service: database-engine
-ms.service: 
-ms.component: 
+ms.prod: sql
+ms.component: ''
 ms.suite: sql
-ms.technology: database-engine
+ms.technology: linux
 ms.assetid: 1e924704-e07c-4a8b-b243-8c1dd8cff0d3
 ms.custom: sql-linux
-ms.workload: On Demand
-ms.openlocfilehash: 0ff7526517be55100400da6ac84b6f7c927fb50e
-ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
+ms.openlocfilehash: efc03030c4d0c329fa7736e3622c621f684eecb3
+ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/13/2018
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="use-visual-studio-to-create-databases-for-sql-server-on-linux"></a>使用 Visual Studio 建立資料庫的 SQL Server on Linux
 
@@ -111,12 +108,12 @@ SQL Server Data Tools (SSDT) 會針對 SQL Server on Linux 轉換成強大開發
 
 ## <a name="next-steps"></a>後續的步驟
 
-如果您還不熟悉 T-SQL，請參閱[教學課程： 撰寫 TRANSACT-SQL 陳述式]和[TRANSACT-SQL 參考 (Database Engine)]。
+如果您還不熟悉 T-SQL，請參閱[教學課程：撰寫國際性通用的 Transact-SQL 陳述式]和[TRANSACT-SQL 參考 (Database Engine)]。
 
 如需開發使用 SQL Data Tools 資料庫的詳細資訊，請參閱[SSDT MSDN 文件]
 
 [下載並安裝 Visual Studio]:https://www.visualstudio.com/downloads/
 [Download and Install SSDT 17.0 RC2]:https://aka.ms/ssdt-download
 [SSDT MSDN 文件]: https://msdn.microsoft.com/en-us/library/hh272686(v=vs.103).aspx
-[教學課程： 撰寫 TRANSACT-SQL 陳述式]:https://msdn.microsoft.com/library/ms365303.aspx
+[教學課程：撰寫國際性通用的 Transact-SQL 陳述式]:https://msdn.microsoft.com/library/ms365303.aspx
 [TRANSACT-SQL 參考 (Database Engine)]:https://msdn.microsoft.com/library/bb510741.aspx

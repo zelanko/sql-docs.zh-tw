@@ -1,34 +1,32 @@
 ---
-title: "步驟 1： 設定 pymssql Python 開發環境 |Microsoft 文件"
-ms.custom: 
+title: 步驟 1： 設定 pymssql Python 開發環境 |Microsoft 文件
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
+ms.prod: sql
+ms.prod_service: connectivity
 ms.component: python
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: connectivity
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: 6d392a5e-b08e-4b35-9e99-61260888fc41
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
-ms.workload: Active
-ms.openlocfilehash: 91916f56a4bbdad46c7fc391257c4575886c28dc
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+manager: craigg
+ms.openlocfilehash: 91b941785a6fe7788c9590efd9f9c42ac6c60b10
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="step-1-configure-development-environment-for-pymssql-python-development"></a>步驟 1： 設定 pymssql Python 開發的開發環境
 您必須設定開發環境的必要條件，才能開發使用 Python Driver for SQL Server 的應用程式。    
   
 請注意，Python SQL 驅動程式會使用 TDS 通訊協定，SQL Server 和 Azure SQL Database 中的預設會啟用。  不需要進行其他組態設定。  
   
-## <a name="windows"></a>Windows  
+## <a name="windows"></a>視窗  
   
 1. **安裝 Python 執行階段以及 pip 封裝管理員**  
 a. 移至[python.org](https://www.python.org/downloads/)  

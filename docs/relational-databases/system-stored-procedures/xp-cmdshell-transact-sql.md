@@ -1,16 +1,14 @@
 ---
-title: "xp_cmdshell (TRANSACT-SQL) |Microsoft 文件"
-ms.custom: 
+title: xp_cmdshell (TRANSACT-SQL) |Microsoft 文件
+ms.custom: ''
 ms.date: 03/16/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: system-objects
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - xp_cmdshell
@@ -20,16 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - xp_cmdshell
 ms.assetid: 18935cf4-b320-4954-b6c1-e007fcefe358
-caps.latest.revision: 
+caps.latest.revision: 26
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Active
-ms.openlocfilehash: bb3fcd3cba2be225c4c45514b2dcbc021683c0db
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 73609eae141fd96f9a2f01bccc3cf18347a0fc00
+ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="xpcmdshell-transact-sql"></a>xp_cmdshell (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,7 +44,7 @@ xp_cmdshell { 'command_string' } [ , no_output ]
   
 ## <a name="arguments"></a>引數  
  **'** *command_string* **'**  
- 這是包含要傳送至作業系統之命令的字串。 *command_string*是**varchar(8000)**或**nvarchar （4000)**，沒有預設值。 *command_string*不能包含多組雙引號括住。 如果檔案路徑中有任何空格，或參考的程式名稱，則需要一對引號*command_string*。 如果使用內嵌空格會出錯，請考慮改用 FAT 8.3 檔案名稱作為因應措施。  
+ 這是包含要傳送至作業系統之命令的字串。 *command_string*是**varchar(8000)** 或**nvarchar （4000)**，沒有預設值。 *command_string*不能包含多組雙引號括住。 如果檔案路徑中有任何空格，或參考的程式名稱，則需要一對引號*command_string*。 如果使用內嵌空格會出錯，請考慮改用 FAT 8.3 檔案名稱作為因應措施。  
   
  **no_output**  
  這是選擇性參數，用來指定不應將輸出傳回用戶端。  
@@ -63,7 +60,7 @@ EXEC xp_cmdshell 'dir *.exe';
 GO  
 ```  
   
- 資料列的傳回**nvarchar （255)**資料行。 如果**no_output**使用選項，只有下列將會傳回：  
+ 資料列的傳回**nvarchar （255)** 資料行。 如果**no_output**使用選項，只有下列將會傳回：  
   
 ```  
 The command(s) completed successfully.  
@@ -88,7 +85,7 @@ The command(s) completed successfully.
 EXEC sp_xp_cmdshell_proxy_account 'SHIPPING\KobeR','sdfh%dkc93vcMt0';  
 ```  
   
- 如需詳細資訊，請參閱[sp_xp_cmdshell_proxy_account &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/sp-xp-cmdshell-proxy-account-transact-sql.md).  
+ 如需詳細資訊，請參閱[sp_xp_cmdshell_proxy_account &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-xp-cmdshell-proxy-account-transact-sql.md)。  
   
 ## <a name="permissions"></a>Permissions  
  因為惡意使用者有時會嘗試藉由提高其權限**xp_cmdshell**， **xp_cmdshell**預設會停用。 使用**sp_configure**或**原則式管理**加以啟用。 如需詳細資訊，請參閱 [xp_cmdshell 伺服器組態選項](../../database-engine/configure-windows/xp-cmdshell-server-configuration-option.md)。  
@@ -177,10 +174,10 @@ SET @cmd = @var + ' > dir_out.txt';
 EXEC master..xp_cmdshell @cmd;  
 ```  
   
-## <a name="see-also"></a>請參閱  
- [一般擴充預存程序 &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/general-extended-stored-procedures-transact-sql.md)   
+## <a name="see-also"></a>另請參閱  
+ [一般擴充預存程序&#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/general-extended-stored-procedures-transact-sql.md)   
  [xp_cmdshell 伺服器組態選項](../../database-engine/configure-windows/xp-cmdshell-server-configuration-option.md)   
  [介面區組態](../../relational-databases/security/surface-area-configuration.md)   
- [sp_xp_cmdshell_proxy_account &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/sp-xp-cmdshell-proxy-account-transact-sql.md)  
+ [sp_xp_cmdshell_proxy_account &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-xp-cmdshell-proxy-account-transact-sql.md)  
   
   

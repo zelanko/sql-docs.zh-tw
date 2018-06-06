@@ -1,16 +1,14 @@
 ---
-title: "sys.tcp_endpoints (TRANSACT-SQL) |Microsoft 文件"
-ms.custom: 
+title: sys.tcp_endpoints (TRANSACT-SQL) |Microsoft 文件
+ms.custom: ''
 ms.date: 06/10/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
 ms.component: system-catalog-views
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: system-objects
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.tcp_endpoints
@@ -22,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - sys.tcp_endpoints catalog view
 ms.assetid: 43cc3afa-cced-4463-8e97-fbfdaf2e4fa8
-caps.latest.revision: 
+caps.latest.revision: 28
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 2be15d96b5ab7274688c34303ccf1603064dce9d
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 1c04be5f76337422601486d08ff41316c7c98192
+ms.sourcegitcommit: 2d93cd115f52bf3eff3069f28ea866232b4f9f9e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "33221289"
 ---
 # <a name="systcpendpoints-transact-sql"></a>sys.tcp_endpoints (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -39,10 +37,10 @@ ms.lasthandoff: 11/21/2017
   針對系統中每個 TCP 端點，各包含一個資料列。 所描述的端點**sys.tcp_endpoints**提供要授與及撤銷連接權限的物件。 顯示的通訊埠及 IP 位址相關資訊不會用來設定通訊協定，而且可能與實際的通訊協定組態不相符。 若要檢視及設定通訊協定，請使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 組態管理員。  
   
   
-|資料行名稱|資料類型|Description|  
+|資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |**< 繼承的資料行 >**||繼承資料行從[sys.endpoints](../../relational-databases/system-catalog-views/sys-endpoints-transact-sql.md)。|  
-|**port**|int|端點正在接聽的通訊埠編號。 不可為 Null。|  
+|**port**|ssNoversion|端點正在接聽的通訊埠編號。 不可為 Null。|  
 |**is_dynamic_port**|bit|1 = 通訊埠編號是以動態方式指派。<br /><br /> 不可為 Null。|  
 |**ip_address**|**nvarchar(45)**|由 LISTENER_IP 子句指定的接聽程式 IP 位址。 可為 Null。|  
   
@@ -65,8 +63,8 @@ LEFT JOIN sys.dm_exec_connections AS dec
 ## <a name="permissions"></a>Permissions  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 如需相關資訊，請參閱 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)。  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [目錄檢視 &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
- [端點目錄檢視 &#40;TRANSACT-SQL &#41;](../../relational-databases/system-catalog-views/endpoints-catalog-views-transact-sql.md)  
+ [端點目錄檢視&#40;Transact SQL&#41;](../../relational-databases/system-catalog-views/endpoints-catalog-views-transact-sql.md)  
   
   

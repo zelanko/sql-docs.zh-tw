@@ -1,16 +1,12 @@
 ---
-title: "sys.dm_tran_version_store_space_usage (TRANSACT-SQL) |Microsoft 文件"
-ms.custom: 
-ms.date: 04/30/2017
-ms.prod: sql-non-specified
-ms.prod_service: database-engine
-ms.service: 
-ms.component: dmv's
-ms.reviewer: 
+title: sys.dm_tran_version_store_space_usage (TRANSACT-SQL) |Microsoft 文件
+ms.custom: ''
+ms.date: 04/24/2018
+ms.prod: sql
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: system-objects
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.dm_tran_version_store_space_usage_TSQL
@@ -22,19 +18,19 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_tran_version_store_space_usage dynamic management view
 ms.assetid: 7ab44517-0351-4f91-bdd9-7cf940f03c51
-caps.latest.revision: 
+caps.latest.revision: 10
 author: savjani
 ms.author: pariks
 manager: ajayj
-ms.workload: Inactive
-ms.openlocfilehash: 3108394b7848047bac97ece004bf9c168b0e045c
-ms.sourcegitcommit: 7ed8c61fb54e3963e451bfb7f80c6a3899d93322
+monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
+ms.openlocfilehash: fbfc968d9fb4620884f282121a820dad548405cc
+ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/20/2018
+ms.lasthandoff: 05/23/2018
 ---
-# <a name="sysdmtranversionstorespaceusage-transact-sql"></a>sys.dm_tran_version_store_space_usage (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
+# <a name="sysdmtranversionstorespaceusage-transact-sql"></a>sys.dm_tran_version_store_space_usage (TRANSACT-SQL)
+[!INCLUDE[tsql-appliesto-2016sp2-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-2016sp2-asdb-xxxx-xxx-md.md)]
 
 傳回資料表，以顯示在 tempdb 版本存放區記錄所使用的每個資料庫中的總空間。 **sys.dm_tran_version_store_space_usage**是有效率且不耗費資源，若要執行，它不會不瀏覽個別的版本存放區記錄，並傳回彙總每個資料庫 tempdb 中取用的版本存放區空間。
   
@@ -52,7 +48,7 @@ ms.lasthandoff: 02/20/2018
 在[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]，需要`VIEW SERVER STATE`權限。   
 
 ## <a name="examples"></a>範例  
- 下列查詢可判斷在 tempdb 中，使用的空間供版本存放區中每個資料庫[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體。 
+下列查詢可判斷在 tempdb 中，使用的空間供版本存放區中每個資料庫[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體。 
   
 ```sql  
 SELECT 

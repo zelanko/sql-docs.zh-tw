@@ -1,37 +1,35 @@
 ---
-title: "設定多重主目錄電腦進行 SQL Server 存取 | Microsoft Docs"
-ms.custom: 
+title: 設定多重主目錄電腦進行 SQL Server 存取 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
 ms.component: install
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - setup-install
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - ports [SQL Server], multi-homed computer
 - multi-homed computer [SQL Server] configuring ports
 - firewall systems [Database Engine], multi-homed computer
 ms.assetid: ba369e5b-7d1f-4544-b7f1-9b098a1e75bc
-caps.latest.revision: 
+caps.latest.revision: 23
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
-ms.workload: Inactive
-ms.openlocfilehash: 084fc871f35c8902fab894ad170db57b44f2b824
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+manager: craigg
+ms.openlocfilehash: 14c731e7ee2601ef81963efc27fa5a341d34f487
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="configure-a-multi-homed-computer-for-sql-server-access"></a>設定多重主目錄電腦進行 SQL Server 存取
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-  當伺服器必須提供兩個或多個網路或子網路的連接時，一般會使用多重主目錄電腦。 這部電腦通常位於周邊網路 (也稱為 DMZ、非軍事區域，或篩選的子網路) 中。 本文描述如何設定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和具有進階安全性的 Windows 防火牆，以便在多重主目錄環境中提供 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的網路連線。  
+  當伺服器必須提供兩個或多個網路或子網路的連接時，一般會使用多重主目錄電腦。 這部電腦通常位於周邊網路 (也稱為 DMZ 或篩選的子網路) 中。 本文描述如何設定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和具有進階安全性的 Windows 防火牆，以便在多重主目錄環境中提供 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的網路連線。  
   
 > [!NOTE]  
 >  多重主目錄電腦具有多張網路介面卡，或者已經設定成針對單一網路介面卡使用多個 IP 位址。 雙重主目錄電腦具有兩張網路介面卡，或者已經設定成針對單一網路介面卡使用兩個 IP 位址。  

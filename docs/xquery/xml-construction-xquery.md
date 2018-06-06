@@ -1,18 +1,20 @@
 ---
-title: "XML 建構 (XQuery) |Microsoft 文件"
-ms.custom: 
+title: XML 建構 (XQuery) |Microsoft 文件
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
-ms.service: 
+ms.prod: sql
+ms.prod_service: sql
 ms.component: xquery
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: database-engine
-ms.tgt_pltfrm: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
-applies_to: SQL Server
-dev_langs: XML
+applies_to:
+- SQL Server
+dev_langs:
+- XML
 helpviewer_keywords:
 - white space [XQuery]
 - computed constructor
@@ -23,16 +25,15 @@ helpviewer_keywords:
 - XML [SQL Server], construction
 - XQuery, XML construction
 ms.assetid: a6330b74-4e52-42a4-91ca-3f440b3223cf
-caps.latest.revision: "44"
+caps.latest.revision: 44
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.workload: Inactive
-ms.openlocfilehash: 9a3f85d368fa842f0e43eb8b0168c2d30741bfb2
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+manager: craigg
+ms.openlocfilehash: 66dc8917b0fa80c79d385dafb4bfb4c4c96c4127
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="xml-construction-xquery"></a>XML 建構 (XQuery)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -104,7 +105,7 @@ SELECT @x.query('<NewRoot><e> { /root } </e></NewRoot>');
 </NewRoot>  
 ```  
   
- 下列查詢與上一個查詢相似。 不過，在大括號運算式指定**data （)**函式可擷取的不可部份完成值 <`root`> 項目並將它指派給建構元素 <`e`>。  
+ 下列查詢與上一個查詢相似。 不過，在大括號運算式指定**data （)** 函式可擷取的不可部份完成值 <`root`> 項目並將它指派給建構元素 <`e`>。  
   
 ```  
 DECLARE @x xml;  
@@ -248,7 +249,7 @@ This is product model catalog description.
   
  當您建構屬性時，您可以在大括號中指定值與運算式。 在此情況下，將以屬性值傳回運算式的結果。  
   
- 在下列範例中， **data （)**函式不是絕對必要。 您的運算式值指派給屬性，因為**data （)**隱含地套用至擷取指定之運算式的具類型的值。  
+ 在下列範例中， **data （)** 函式不是絕對必要。 您的運算式值指派給屬性，因為**data （)** 隱含地套用至擷取指定之運算式的具類型的值。  
   
 ```  
 DECLARE @x xml;  
@@ -350,7 +351,7 @@ where ProductModelID=7;
     select @x.query( '<a attr="{''Item'', /x }" />')  
     ```  
   
-     如果您套用**data （)**函式，查詢運作，因為它會擷取運算式，不可部份完成值`/x`，這與字串串連。 下列是不可部份完成值的時序：  
+     如果您套用**data （)** 函式，查詢運作，因為它會擷取運算式，不可部份完成值`/x`，這與字串串連。 下列是不可部份完成值的時序：  
   
     ```  
     SELECT @x.query( '<a attr="{''Item'', data(/x)}"/>' )   
@@ -550,7 +551,7 @@ test
 ### <a name="other-direct-xml-constructors"></a>其他直接 XML 建構函式  
  處理指示和 XML 註解的建構函式使用與對應 XML 建構語法相同的語法。 也支援文字節點的計算建構函式，但主要用於 XML DML 以建構文字節點。  
   
- **請注意**使用明確文字節點建構函式的範例，請參閱中的特定範例[insert &#40;XML DML &#41;](../t-sql/xml/insert-xml-dml.md).  
+ **請注意**使用明確文字節點建構函式的範例，請參閱中的特定範例[插入&#40;XML DML&#41;](../t-sql/xml/insert-xml-dml.md)。  
   
  在下列查詢中，已建構的 XML 包含一個元素、兩個屬性、註解以及處理指示。 請注意在 <`FirstLocation`> 前面使用了一個逗號，因為正在建構時序。  
   
@@ -587,7 +588,7 @@ where ProductModelID=7;
 ```  
   
 ## <a name="using-computed-constructors"></a>使用計算建構函式  
- 執行個體時提供 SQL Server 登入。 在此情況下，您可以指定關鍵字，以識別您要建構的節點類型。 只支援下列關鍵字：  
+ 。 在此情況下，您可以指定關鍵字，以識別您要建構的節點類型。 只支援下列關鍵字：  
   
 -   element  
   
@@ -674,7 +675,7 @@ where ProductModelID=7
   
 -   計算註解建構函式  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [XQuery 運算式](../xquery/xquery-expressions.md)  
   
   

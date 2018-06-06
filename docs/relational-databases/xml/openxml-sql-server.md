@@ -1,17 +1,15 @@
 ---
 title: OPENXML (SQL Server) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
 ms.component: xml
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- dbe-xml
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: xml
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - ColPattern [XML in SQL Server]
 - OPENXML statement, about OPENXML statement
@@ -26,20 +24,19 @@ helpviewer_keywords:
 - XML [SQL Server], OPENXML statement
 - element-centric mapping [SQL Server]
 ms.assetid: 060126fc-ed0f-478f-830a-08e418d410dc
-caps.latest.revision: 
+caps.latest.revision: 43
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: ab0c04534f730157d6112c2428b0cd2ff4a7277f
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.openlocfilehash: 13ec9c1cea7a47853b45cb5f60f9161c75a0f0e1
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="openxml-sql-server"></a>OPENXML (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
-OPENXML 是 [!INCLUDE[tsql](../../includes/tsql-md.md)] 關鍵字，可透過類似資料表或檢視表的記憶體中 XML 文件，提供資料列集。 OPENXML 允許對 XML 資料的存取像是關聯式資料列集一樣。 其做法是，提供 XML 文件內部表示法的資料列集檢視。 資料列集的記錄可以儲存在資料庫的資料表中。  
+  OPENXML 是 [!INCLUDE[tsql](../../includes/tsql-md.md)] 關鍵字，可透過類似資料表或檢視表的記憶體中 XML 文件，提供資料列集。 OPENXML 允許對 XML 資料的存取像是關聯式資料列集一樣。 其做法是，提供 XML 文件內部表示法的資料列集檢視。 資料列集的記錄可以儲存在資料庫的資料表中。  
   
  OPENXML 可用於 SELECT 及 SELECT INTO 陳述式，其中出現的資料列集提供者、檢視或 OPENROWSET 都可做為來源。 如需 OPENXML 語法的資訊，請參閱 [OPENXML &#40;Transact-SQL&#41;](../../t-sql/functions/openxml-transact-sql.md)。  
   

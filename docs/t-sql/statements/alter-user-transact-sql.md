@@ -1,16 +1,14 @@
 ---
 title: ALTER USER (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 05/05/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
 ms.component: t-sql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: t-sql
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - ALTER_USER_TSQL
@@ -27,16 +25,16 @@ helpviewer_keywords:
 - default schemas
 - modifying default schemas
 ms.assetid: 344fc6ce-a008-47c8-a02e-47fae66cc590
-caps.latest.revision: 
+caps.latest.revision: 75
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Active
-ms.openlocfilehash: 61984e16244a32a28449a099b2e03b5916d2c2db
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: aafcc77a26dcd75c5581f36acc8e37cd852684a6
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="alter-user-transact-sql"></a>ALTER USER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -126,7 +124,7 @@ ALTER USER userName
  指定當伺服器解析這位使用者的物件名稱時，將搜尋的第一個結構描述。 當預設結構描述設為 NULL 時，會從 Windows 群組移除預設結構描述。   NULL 選項不可用於 Windows 使用者。  
   
  PASSWORD **=** '*password*'  
- **適用對象**：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]、 [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]。  
+ **適用對象**：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]、[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]。  
   
  指定正在變更之使用者的密碼。 密碼會區分大小寫。  
   
@@ -134,7 +132,7 @@ ALTER USER userName
 >  只有包含的使用者能夠使用此選項。 請參閱[自主資料庫](../../relational-databases/databases/contained-databases.md)和 [sp_migrate_user_to_contained &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-migrate-user-to-contained-transact-sql.md) 以取得詳細資訊。  
   
  OLD_PASSWORD **=***'oldpassword'*  
- **適用對象**：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]、 [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]。  
+ **適用對象**：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]、[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]。  
   
  目前的使用者密碼，將由 '*password*' 取代。 密碼會區分大小寫。 密碼區分大小寫。除非您有 **ALTER ANY USER** 權限，否則需要 *OLD_PASSWORD* 才能變更密碼。 需要 *OLD_PASSWORD* 可防止具有 **IMPERSONATION** 權限的使用者變更密碼。  
   
@@ -155,12 +153,12 @@ ALTER USER userName
  在大量複製作業時隱藏伺服器上的密碼編譯中繼資料檢查。 這會讓使用者得以在資料表或資料庫間大量複製加密資料，而無須解密資料。 預設值為 OFF。  
   
 > [!WARNING]  
->  不當使用這個選項會導致資料損毀。 如需詳細資訊，請參閱[移轉透過 Always Encrypted 保護的敏感性資料](../../relational-databases/security/encryption/migrate-sensitive-data-protected-by-always-encrypted.md)。  
+>  不當使用這個選項會導致資料損毀。 如需詳細資訊，請參閱[移轉透過 Always Encrypted 保護的機密資料](../../relational-databases/security/encryption/migrate-sensitive-data-protected-by-always-encrypted.md)。  
   
 ## <a name="remarks"></a>Remarks  
  預設結構描述是伺服器在解析這個資料庫使用者之物件名稱時，所搜尋到的第一個結構描述。 除非另有指定，否則預設結構描述是此資料庫使用者建立之物件的擁有者。  
   
- 如果使用者有預設結構描述，則使用預設結構描述。 如果使用者沒有預設結構描述，但使用者是有預設結構描述之群組的成員，則使用群組的預設結構描述。 如果使用者沒有預設結構描述，而且是有一個以上之群組的成員，使用者的預設結構描述將會是具有最低 principle_id 且明確設定預設結構描述之 Windows 群組的結構描述。 如果無法判斷使用者的預設結構描述，將使用 **dbo** 結構描述。  
+ 如果使用者有預設結構描述，則使用預設結構描述。 如果使用者沒有預設結構描述，但使用者是有預設結構描述之群組的成員，則使用群組的預設結構描述。 如果使用者沒有預設結構描述，而且是有一個以上之群組的成員，使用者的預設結構描述將會是具有最低 principle_id 且明確設定預設結構描述之 Windows 群組的結構描述。 如果無法判斷使用者的預設結構描述，即會使用 **dbo** 結構描述。  
   
  DEFAULT_SCHEMA 可設為目前不存在於資料庫中的結構描述。 因此，您可以在建立該結構描述之前，先將 DEFAULT_SCHEMA 指派給使用者。  
   

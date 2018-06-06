@@ -1,30 +1,29 @@
 ---
-title: "getObjectInstance 方法 (SQLServerDataSourceObjectFactory) |Microsoft 文件"
-ms.custom: 
+title: getObjectInstance 方法 (SQLServerDataSourceObjectFactory) |Microsoft 文件
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
-ms.component: jdbc
-ms.reviewer: 
+ms.prod: sql
+ms.prod_service: connectivity
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
-ms.topic: article
-apiname: SQLServerDataSourceObjectFactory.getObjectInstance
-apilocation: sqljdbc.jar
+ms.technology: connectivity
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
+apiname:
+- SQLServerDataSourceObjectFactory.getObjectInstance
+apilocation:
+- sqljdbc.jar
 apitype: Assembly
 ms.assetid: 0a1503e2-e991-4d70-a223-087fc63baf73
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
-ms.workload: Inactive
-ms.openlocfilehash: aa9417d9b20ae5c1858c3c8f10019383565c4330
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+manager: craigg
+ms.openlocfilehash: fc3675a6df5fdfb5964d16d0d1e22bb3ecf428f0
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="getobjectinstance-method-sqlserverdatasourceobjectfactory"></a>getObjectInstance 方法 (SQLServerDataSourceObjectFactory)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -54,7 +53,7 @@ public java.lang.Object getObjectInstance(java.lang.Object ref,
   
  相對於指定之名稱的內容。  
   
- *h*  
+ *H*  
   
  用於建立物件的環境。  
   
@@ -67,7 +66,7 @@ public java.lang.Object getObjectInstance(java.lang.Object ref,
 ## <a name="remarks"></a>備註  
  這個 getObjectInstance 方法是由 javax.naming.spi.ObjectFactory 介面中的 getObjectInstance 方法指定。  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [SQLServerDataSourceObjectFactory 方法](../../../connect/jdbc/reference/sqlserverdatasourceobjectfactory-methods.md)   
  [SQLServerDataSourceObjectFactory 成員](../../../connect/jdbc/reference/sqlserverdatasourceobjectfactory-members.md)   
  [SQLServerDataSourceObjectFactory 類別](../../../connect/jdbc/reference/sqlserverdatasourceobjectfactory-class.md)  

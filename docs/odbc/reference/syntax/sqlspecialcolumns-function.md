@@ -1,32 +1,33 @@
 ---
-title: "SQLSpecialColumns 函數 |Microsoft 文件"
-ms.custom: 
+title: SQLSpecialColumns 函數 |Microsoft 文件
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
-ms.component: odbc
-ms.reviewer: 
+ms.prod: sql
+ms.prod_service: connectivity
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
-ms.topic: article
-apiname: SQLSpecialColumns
-apilocation: sqlsrv32.dll
+ms.technology: connectivity
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
+apiname:
+- SQLSpecialColumns
+apilocation:
+- sqlsrv32.dll
 apitype: dllExport
-f1_keywords: SQLSpecialColumns
-helpviewer_keywords: SQLSpecialColumns function [ODBC]
+f1_keywords:
+- SQLSpecialColumns
+helpviewer_keywords:
+- SQLSpecialColumns function [ODBC]
 ms.assetid: bb2d9f21-bda0-4e50-a8be-f710db660034
-caps.latest.revision: "22"
+caps.latest.revision: 22
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
-ms.workload: Inactive
-ms.openlocfilehash: 80afdd42ee17c77a44035854207812ecac3afb46
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+manager: craigg
+ms.openlocfilehash: 2bae2c5a51d7d16798bc2d7fca0e9d38509a0d6e
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sqlspecialcolumns-function"></a>SQLSpecialColumns 函數
 **一致性**  
@@ -75,7 +76,7 @@ SQLRETURN SQLSpecialColumns(
  *NameLength1*  
  [輸入]中的字元長度 **CatalogName*。  
   
- *SchemaName*  
+ *schemaName*  
  [輸入]資料表的結構描述名稱。 如果驅動程式支援的結構描述，對於某些資料表，但不適用於其他人使用，例如當驅動程式會擷取資料的不同 Dbms，空字串 ("") 表示沒有結構描述的資料表。 *SchemaName*不能包含字串的搜尋模式。  
   
  如果 SQL_ATTR_METADATA_ID 陳述式屬性設定為 SQL_TRUE， *SchemaName*會被視為識別項和其案例並不重要。 如果是 SQL_FALSE， *SchemaName*是一般的引數; 將它視為常值，和其案例很重要。  
@@ -113,7 +114,7 @@ SQLRETURN SQLSpecialColumns(
 ## <a name="diagnostics"></a>診斷  
  當**SQLSpecialColumns**會傳回 SQL_ERROR 或 SQL_SUCCESS_WITH_INFO，相關聯的 SQLSTATE 值可能會取得藉由呼叫**SQLGetDiagRec**與*HandleType*的利用 SQL_HANDLE_STMT 和*處理*的*StatementHandle*。 下表列出通常所傳回的 SQLSTATE 值**SQLSpecialColumns** ，並說明這個函式; 每個內容中的標記法 」 (DM) 」 之前描述的驅動程式管理員傳回的 Sqlstate。 每個 SQLSTATE 值相關聯的傳回碼是 SQL_ERROR，除非有說明，否則為。  
   
-|SQLSTATE|錯誤|描述|  
+|SQLSTATE|錯誤|Description|  
 |--------------|-----------|-----------------|  
 |01000|一般警告|特定驅動程式告知性訊息。 （函式會傳回 SQL_SUCCESS_WITH_INFO）。|  
 |08S01|通訊連結失敗|功能已完成處理之前，驅動程式和驅動程式已連線到資料來源之間的通訊連結失敗。|  
@@ -152,9 +153,9 @@ SQLRETURN SQLSpecialColumns(
   
  **SQLSpecialColumns**做為標準的結果集，依 SCOPE 來排序傳回的結果。  
   
- 下列資料行已重新命名為 ODBC 3*.x*。 因為應用程式繫結的資料行編號的資料行名稱變更不會影響回溯相容性。  
+ 下列資料行已重新命名為 ODBC 3 *.x*。 因為應用程式繫結的資料行編號的資料行名稱變更不會影響回溯相容性。  
   
-|ODBC 2.0 資料行|ODBC 3*.x*資料行|  
+|ODBC 2.0 資料行|ODBC 3 *.x*資料行|  
 |---------------------|-----------------------|  
 |PRECISION|COLUMN_SIZE|  
 |LENGTH|BUFFER_LENGTH|  
@@ -166,7 +167,7 @@ SQLRETURN SQLSpecialColumns(
   
 |資料行名稱|資料行編號|資料類型|註解|  
 |-----------------|-------------------|---------------|--------------|  
-|範圍 (ODBC 1.0)|@shouldalert|Smallint|Rowid 實際範圍。 包含下列值之一：<br /><br /> 針對 SQL_SCOPE_CURROW SQL_SCOPE_TRANSACTION SQL_SCOPE_SESSION<br /><br /> 會傳回 NULL 時*IdentifierType*是 SQL_ROWVER。 如需每個值的說明，請參閱描述*範圍*中 「 語法 」，稍早在本章節中。|  
+|範圍 (ODBC 1.0)|1|Smallint|Rowid 實際範圍。 包含下列值之一：<br /><br /> 針對 SQL_SCOPE_CURROW SQL_SCOPE_TRANSACTION SQL_SCOPE_SESSION<br /><br /> 會傳回 NULL 時*IdentifierType*是 SQL_ROWVER。 如需每個值的說明，請參閱描述*範圍*中 「 語法 」，稍早在本章節中。|  
 |COLUMN_NAME (ODBC 1.0)|2|Varchar 不是 NULL|資料行名稱。 驅動程式傳回的資料行沒有名稱為空字串。|  
 |DATA_TYPE (ODBC 1.0)|3|Smallint 非 NULL|SQL 資料類型。 這可以是 ODBC SQL 資料類型或驅動程式專屬 SQL 資料類型。 如需有效的 ODBC SQL 資料類型的清單，請參閱[SQL 資料型別](../../../odbc/reference/appendixes/sql-data-types.md)。 如需驅動程式特有的 SQL 資料類型資訊，請參閱驅動程式的文件。|  
 |TYPE_NAME (ODBC 1.0)|4|Varchar 不是 NULL|資料來源而定的資料型別名稱。例如，"CHAR"、"VARCHAR"、"MONEY"、"長 VARBINARY"或者 「 CHAR （） FOR BIT DATA 中的 」。|  
@@ -199,6 +200,6 @@ SQLRETURN SQLSpecialColumns(
 |提取資料的區塊或捲動結果集|[SQLFetchScroll 函式](../../../odbc/reference/syntax/sqlfetchscroll-function.md)|  
 |傳回主索引鍵資料行|[SQLPrimaryKeys 函式](../../../odbc/reference/syntax/sqlprimarykeys-function.md)|  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [ODBC 應用程式開發介面參考](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [ODBC 標頭檔](../../../odbc/reference/install/odbc-header-files.md)

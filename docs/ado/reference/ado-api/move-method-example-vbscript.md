@@ -1,32 +1,29 @@
 ---
-title: "移動方法範例 (VBScript) |Microsoft 文件"
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
+title: 移動方法範例 (VBScript) |Microsoft 文件
+ms.prod: sql
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
-ms.custom: 
+ms.technology: connectivity
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 dev_langs:
 - VB
 helpviewer_keywords:
 - Move method, VBScript example
 ms.assetid: 29ec4b95-8986-4970-943f-3da3ecb207a2
-caps.latest.revision: 
+caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: e85b05939e905afb9ae91d3a4d230ac9a8f8b21f
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 3c73be1d871e1354f5c545ac44bf9feedad62c6d
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="move-method-example-vbscript"></a>Move 方法範例 (VBScript)
 這個範例會使用[移動](../../../ado/reference/ado-api/move-method-ado.md)方法，將記錄指標，以根據使用者輸入。  

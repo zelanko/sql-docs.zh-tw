@@ -1,32 +1,29 @@
 ---
-title: "建立記憶體最佳化資料表和原生編譯的預存程序 | Microsoft Docs"
-ms.custom: 
+title: 建立記憶體最佳化資料表和原生編譯的預存程序 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/16/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
 ms.component: in-memory-oltp
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine-imoltp
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: in-memory-oltp
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: 48a9a0a3-930f-477b-bd0f-e82e77999ecc
-caps.latest.revision: 
-author: JennieHubbard
-ms.author: jhubbard
+caps.latest.revision: 35
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 4bbbd0581a293ee43da5b56d4717802258150017
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.openlocfilehash: 107c27e0b8386926781b7dbf94742160c3376d9f
+ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="creating-a-memory-optimized-table-and-a-natively-compiled-stored-procedure"></a>建立記憶體最佳化資料表和原生編譯的預存程序
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-本主題包含介紹記憶體中 OLTP 語法的範例。  
+  本主題包含介紹記憶體中 OLTP 語法的範例。  
   
  若要讓應用程式能夠使用記憶體中 OLTP，您需要完成下列工作：  
   

@@ -1,27 +1,19 @@
 ---
-title: "Analysis Services 教學課程第 2 課： 取得資料 |Microsoft 文件"
-description: "描述如何取得和匯入 Analysis Services 教學課程專案中的資料。"
-ms.prod_service: analysis-services, azure-analysis-services
-services: analysis-services
-ms.suite: pro-bi
-documentationcenter: 
-author: Minewiskan
-manager: kfile
-editor: 
-tags: 
-ms.assetid: 
-ms.service: analysis-services
-ms.devlang: NA
-ms.topic: get-started-article
-ms.tgt_pltfrm: NA
-ms.workload: na
-ms.date: 02/20/2018
+title: Analysis Services 教學課程第 2 課： 取得資料 |Microsoft 文件
+ms.date: 05/08/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: tabular-models
+ms.topic: tutorial
 ms.author: owend
-ms.openlocfilehash: 1fd06f563581d42764b5b6f29b3c22d8129f9160
-ms.sourcegitcommit: 7ed8c61fb54e3963e451bfb7f80c6a3899d93322
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: 9adeebfbd3c49761adb816a7d28472a61ffca5cc
+ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/20/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="get-data"></a>取得資料
 
@@ -65,7 +57,7 @@ ms.lasthandoff: 02/20/2018
   
 6.  在導覽中，選取下列資料表的核取方塊： **DimCustomer**， **DimDate**， **DimGeography**， **DimProduct**， **DimProductCategory**， **DimProductSubcategory**，和**FactInternetSales**。  
 
-    ![as-lesson2-select-tables](../tutorial-tabular-1400/media/as-lesson2-select-tables.png)
+    ![做為第 2 課-選取的資料表](../tutorial-tabular-1400/media/as-lesson2-select-tables.png)
   
 按一下 確定 之後，查詢編輯器 隨即開啟。 在下一步 區段中，您可以選取只想要匯入的資料。
 
@@ -151,7 +143,7 @@ AdventureWorksDW 範例資料庫中的資料表有，就不需要在模型中包
   
 1.  檢閱您的選取項目。 如果無誤，請按一下**匯入**。 資料處理對話方塊中會顯示資料正在從您的資料來源匯入至工作空間資料庫的狀態。
   
-    ![as-lesson2-success](../tutorial-tabular-1400/media/as-lesson2-success.png) 
+    ![做為第 2 課成功](../tutorial-tabular-1400/media/as-lesson2-success.png) 
   
 2.  按一下 [ **關閉**]。  
 

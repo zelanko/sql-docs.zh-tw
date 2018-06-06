@@ -1,47 +1,23 @@
 ---
-title: "內容類型 （資料採礦） |Microsoft 文件"
-ms.custom: 
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
-helpviewer_keywords:
-- columns [data mining], content types
-- KEY SEQUENCE column
-- content types [data mining]
-- attributes [data mining]
-- DISCRETIZED column
-- CONTINUOUS column
-- CYCLICAL column
-- ORDERED column
-- discretized columns [data mining]
-- discrete columns [Analysis Services]
-- DISCRETE column
-- KEY column
-- KEY TIME column
-- continuous columns
-- coding [Data Mining]
-ms.assetid: 2dacd968-70e8-4993-88b6-a6d36024a4e4
-caps.latest.revision: 
-author: Minewiskan
+title: 內容類型 （資料採礦） |Microsoft 文件
+ms.date: 05/01/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: data-mining
+ms.topic: conceptual
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: c159c5fa111a4c1e04c6ad0871aea5ec13c2191c
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 0dcc5840467f039e78c0c4d4b75862bbf78a6a42
+ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="content-types-data-mining"></a>內容類型 (資料採礦)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]中，您可以同時定義採礦結構中資料行的實體資料類型，以及用於模型內之資料行的邏輯內容類型。  
+  在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]中，您可以同時定義採礦結構中資料行的實體資料類型，以及用於模型內之資料行的邏輯內容類型。  
   
  *「資料類型」* 會決定當您建立採礦模型時，演算法要如何處理這些資料行中的資料。 定義資料行的資料類型會提供資訊給演算法，這是有關資料行中的資料類型及如何處理資料的資訊。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 中的每一個資料類型都會支援一個或多個適用於資料採礦的內容類型。  
   
@@ -119,9 +95,9 @@ ms.lasthandoff: 02/15/2018
  除了前述常用於所有模型的內容類型之外，您可以使用分類資料行來定義某些資料類型的內容類型。 如需分類資料行的詳細資訊，請參閱[分類資料行 &#40;資料採礦&#41;](../../analysis-services/data-mining/classified-columns-data-mining.md)。  
   
 ## <a name="see-also"></a>另請參閱  
- [內容類型 &#40; DMX &#41;](../../dmx/content-types-dmx.md)   
- [資料類型 &#40; 資料採礦 &#41;](../../analysis-services/data-mining/data-types-data-mining.md)   
- [資料類型 &#40; DMX &#41;](../../dmx/data-types-dmx.md)   
+ [內容類型 & #40; DMX & #41;](../../dmx/content-types-dmx.md)   
+ [資料類型 & #40; 資料採礦 & #41;](../../analysis-services/data-mining/data-types-data-mining.md)   
+ [資料類型 & #40; DMX & #41;](../../dmx/data-types-dmx.md)   
  [變更採礦結構的屬性](../../analysis-services/data-mining/change-the-properties-of-a-mining-structure.md)   
  [採礦結構資料行](../../analysis-services/data-mining/mining-structure-columns.md)  
   

@@ -1,16 +1,14 @@
 ---
-title: "撰寫 ODBC 3.x 應用程式 |Microsoft 文件"
-ms.custom: 
+title: 撰寫 ODBC 3.x 應用程式 |Microsoft 文件
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
-ms.component: odbc
-ms.reviewer: 
+ms.prod: sql
+ms.prod_service: connectivity
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: connectivity
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - application upgrades [ODBC], about upgrading
 - ODBC drivers [ODBC], backward compatibility
@@ -20,27 +18,26 @@ helpviewer_keywords:
 - upgrading applications [ODBC], about upgrading
 - backward compatibility [ODBC], upgrading applications
 ms.assetid: 19c54fc5-9dd6-49b6-8c9f-a38961b40a65
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
-ms.workload: Inactive
-ms.openlocfilehash: da096dd38c87131259f9ea626fa874c0b83b7b95
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+manager: craigg
+ms.openlocfilehash: ee0aa19520ec0d6e3f2f0f6852cb40578f81247c
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="writing-odbc-3x-applications"></a>撰寫 ODBC 3.x 應用程式
 當 ODBC 2。*x*應用程式會升級到 ODBC 3。*x*，應該寫入，它會使用這兩個 ODBC 2。*x*和 3。*x*驅動程式。 應用程式應將條件式程式碼，以充分利用 ODBC 3。*x*功能。  
   
- SQL_ATTR_ODBC_VERSION 環境屬性應該設 SQL_OV_ODBC2。 這會確保此驅動程式的行為，ODBC 2 例如*.x*一節所述的變更的驅動程式[的行為變更](../../../odbc/reference/develop-app/behavioral-changes.md)。  
+ SQL_ATTR_ODBC_VERSION 環境屬性應該設 SQL_OV_ODBC2。 這會確保此驅動程式的行為，ODBC 2 例如 *.x*一節所述的變更的驅動程式[的行為變更](../../../odbc/reference/develop-app/behavioral-changes.md)。  
   
- 如果應用程式會使用任何一節所述的功能[新功能](../../../odbc/reference/develop-app/new-features.md)，條件式程式碼應該用來判斷驅動程式是否為 ODBC 3。*x*或 ODBC 2*.x*驅動程式。 應用程式使用**SQLGetDiagField**和**SQLGetDiagRec**取得 ODBC 3。*x*進行錯誤處理這些條件的程式碼片段時的 Sqlstate。 應該考慮下列新功能的相關要點：  
+ 如果應用程式會使用任何一節所述的功能[新功能](../../../odbc/reference/develop-app/new-features.md)，條件式程式碼應該用來判斷驅動程式是否為 ODBC 3。*x*或 ODBC 2 *.x*驅動程式。 應用程式使用**SQLGetDiagField**和**SQLGetDiagRec**取得 ODBC 3。*x*進行錯誤處理這些條件的程式碼片段時的 Sqlstate。 應該考慮下列新功能的相關要點：  
   
 -   資料列集大小行為的變更所影響的應用程式應該小心不要呼叫**SQLFetch**當陣列大小大於 1。 這些應用程式應該取代呼叫**SQLExtendedFetch**呼叫**SQLSetStmtAttr**設定 SQL_ATTR_ARRAY_STATUS_PTR 陳述式屬性，在**SQLFetchScroll**，使得它們具有適用於這兩個 ODBC 3 的通用程式碼。*x*和 ODBC 2。*x*驅動程式。 因為**SQLSetStmtAttr** SQL_ATTR_ROW_ARRAY_SIZE 與將對應至**SQLSetStmtAttr**與 ODBC 2 SQL_ROWSET_SIZE。*x*驅動程式，應用程式可以只將 SQL_ATTR_ROW_ARRAY_SIZE 設定為其多資料列提取作業。  
   
--   大部分的應用程式要升級不實際受到 SQLSTATE 程式碼中的變更。 會影響這些應用程式，它們可以機械搜尋並取代在大部分情況下，使用 「 SQLSTATE 對應 」 一節中的錯誤轉換資料表來轉換 ODBC 3。*x*錯誤碼 ODBC 2*.x*代碼。 因為 ODBC 3*.x*驅動程式管理員會執行對應的 ODBC 2。*x* ODBC 3 的 Sqlstate。*x* Sqlstate，這些應用程式寫入器需要只檢查針對 ODBC 3。*x* Sqlstate，而不必擔心包括 ODBC 2。*x*條件式程式碼中的 Sqlstate。  
+-   大部分的應用程式要升級不實際受到 SQLSTATE 程式碼中的變更。 會影響這些應用程式，它們可以機械搜尋並取代在大部分情況下，使用 「 SQLSTATE 對應 」 一節中的錯誤轉換資料表來轉換 ODBC 3。*x*錯誤碼 ODBC 2 *.x*代碼。 因為 ODBC 3 *.x*驅動程式管理員會執行對應的 ODBC 2。*x* ODBC 3 的 Sqlstate。*x* Sqlstate，這些應用程式寫入器需要只檢查針對 ODBC 3。*x* Sqlstate，而不必擔心包括 ODBC 2。*x*條件式程式碼中的 Sqlstate。  
   
 -   如果應用程式會很棒的日期、 時間和時間戳記資料類型使用，應用程式可以宣告本身為 ODBC 2。*x*應用程式並使用其現有的程式碼而不是使用的條件與程式碼。  
   
@@ -62,7 +59,7 @@ ms.lasthandoff: 12/21/2017
   
 -   取代所有呼叫**SQLTransact**呼叫**SQLEndTran**。 如果在最右邊有效的控制代碼**SQLTransact**呼叫是環境控制代碼， *HandleType*利用 SQL_HANDLE_ENV 的引數應該用於**SQLEndTran**呼叫適當*處理*引數。 如果在最右邊有效的控制代碼您**SQLTransact**呼叫是在連接控制代碼， *HandleType*利用 SQL_HANDLE_DBC 的引數應該用於**SQLEndTran**呼叫適當*處理*引數。  
   
--   取代所有呼叫**SQLColAttributes**呼叫**SQLColAttribute**。 如果*FieldIdentifier*引數是 SQL_COLUMN_PRECISION、 SQL_COLUMN_SCALE 或 SQL_COLUMN_LENGTH，不會將函式的名稱以外的任何變更。 如果沒有，請變更*FieldIdentifier*從 SQL_DESC_XXXX 的 SQL_COLUMN_XXXX。 如果*FieldIdentifier* 、 SQL_DESC_CONCISE_TYPE，且資料類型是 datetime 資料類型變更為對應的 ODBC 3*.x*資料型別。  
+-   取代所有呼叫**SQLColAttributes**呼叫**SQLColAttribute**。 如果*FieldIdentifier*引數是 SQL_COLUMN_PRECISION、 SQL_COLUMN_SCALE 或 SQL_COLUMN_LENGTH，不會將函式的名稱以外的任何變更。 如果沒有，請變更*FieldIdentifier*從 SQL_DESC_XXXX 的 SQL_COLUMN_XXXX。 如果*FieldIdentifier* 、 SQL_DESC_CONCISE_TYPE，且資料類型是 datetime 資料類型變更為對應的 ODBC 3 *.x*資料型別。  
   
 -   如果使用區塊資料指標、 可捲動資料指標，或兩者，應用程式會執行下列動作：  
   

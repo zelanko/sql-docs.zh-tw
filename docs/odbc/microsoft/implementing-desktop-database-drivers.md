@@ -1,31 +1,28 @@
 ---
-title: "實作桌面資料庫驅動程式 |Microsoft 文件"
-ms.custom: 
+title: 實作桌面資料庫驅動程式 |Microsoft 文件
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
-ms.component: odbc
-ms.reviewer: 
+ms.prod: sql
+ms.prod_service: connectivity
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: connectivity
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - Jet-based ODBC drivers [ODBC], implementing
 - ODBC desktop database drivers [ODBC], implementing
 - desktop database drivers [ODBC], implementing
 ms.assetid: a8bf304b-eff1-447c-887c-dabdb5353a2d
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
-ms.workload: Inactive
-ms.openlocfilehash: 3994ed86f488748f3edd569ad80979d9871f588f
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+manager: craigg
+ms.openlocfilehash: 4de328f3185597a81fa7a61ce2d23a5e5f0bf1c7
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="implementing-desktop-database-drivers"></a>實作桌面資料庫驅動程式
 ODBC 資料來源管理員線上說明中可以找到指示和有關如何實作和設定 Microsoft ODBC 桌面資料庫驅動程式的技術提示。 可以存取此檔案，從驅動程式安裝常式期間[Microsoft ODBC 資料來源管理員](../../odbc/admin/odbc-data-source-administrator.md)。  
@@ -36,7 +33,7 @@ ODBC 資料來源管理員線上說明中可以找到指示和有關如何實作
   
 -   [ODBC 元件檔案](../../odbc/microsoft/odbc-component-files.md)  
   
--   [硬體和軟體需求](../../odbc/microsoft/hardware-and-software-requirements-odbc.md)  
+-   [硬體及軟體需求](../../odbc/microsoft/hardware-and-software-requirements-odbc.md)  
   
 -   [使用桌面資料庫驅動程式的描述元](../../odbc/microsoft/descriptors-and-desktop-database-drivers.md)  
   

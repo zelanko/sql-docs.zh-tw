@@ -1,30 +1,28 @@
 ---
-title: "開啟或關閉 Reporting Services 功能 | Microsoft Docs"
-ms.custom: 
+title: 開啟或關閉 Reporting Services 功能 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: report-server
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - Reporting Services, configuration
 - security [Reporting Services], strategies
 ms.assetid: b69db02a-43a7-4fdc-ad9b-438d817a7f83
-caps.latest.revision: "10"
+caps.latest.revision: 10
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: a2b22762e13566c3ae7a9b9ce6861c96a86f75a7
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: edb78cc093837b8eb2beb1c3afc882a723e9a138
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="turn-reporting-services-features-on-or-off"></a>開啟或關閉 Reporting Services 功能
   您可以關閉鎖定策略中未使用的報表伺服器功能，以減少實際執行報表伺服器的攻擊面。 在大多數情況下，您會想要同時執行 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 功能，以便能夠使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]中所提供的所有功能。 不過，根據部署模型而定，您可以停用不需要的功能。 例如，如果所有報表處理都設定為排程的作業，您就可以只啟用背景處理。 同樣地，如果只想要視需要執行的互動式報表，可以只執行報表伺服器 Web 服務。  
@@ -69,7 +67,7 @@ ms.lasthandoff: 01/09/2018
   
 3.  在 **[Facet]** 清單中，選取 **[Reporting Services 的介面區組態]**。  
   
-4.  在 **[Facet 屬性]**底下：  
+4.  在 **[Facet 屬性]** 底下：  
   
     -   若要開啟報表伺服器 Web 服務，請將 **[WebServiceAndHTTPAccessEnabled]** 設定為 **True**。  
   
@@ -112,7 +110,7 @@ ms.lasthandoff: 01/09/2018
   
 3.  在 **[Facet]** 清單中，選取 **[Reporting Services 的介面區組態]**。  
   
-4.  在 **[Facet 屬性]**底下：  
+4.  在 **[Facet 屬性]** 底下：  
   
     -   若要開啟排程的事件和傳遞，請將 **[ScheduleEventsAndReportDeliveryEnabled]** 設定為 **[True]**。  
   
@@ -135,7 +133,7 @@ ms.lasthandoff: 01/09/2018
   
 2.  在物件總管中，以滑鼠右鍵按一下 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 節點，然後按一下 [屬性]。  
   
-3.  在 **[伺服器屬性]** 對話方塊的 **[選取頁面]**底下，按一下 **[安全性]**。  
+3.  在 **[伺服器屬性]** 對話方塊的 **[選取頁面]** 底下，按一下 **[安全性]**。  
   
     -   若要開啟報表產生器，請選取 **[啟用隨選報表執行]** 選項。  
   
@@ -151,7 +149,7 @@ ms.lasthandoff: 01/09/2018
   
 2.  在物件總管中，以滑鼠右鍵按一下 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 節點，然後按一下 [屬性]。  
   
-3.  在 **[伺服器屬性]** 對話方塊的 **[選取頁面]**底下，按一下 **[安全性]**。  
+3.  在 **[伺服器屬性]** 對話方塊的 **[選取頁面]** 底下，按一下 **[安全性]**。  
   
     -   若要開啟 Windows 整合式安全性，請選取 **[為報表資料來源啟用 Windows 整合式安全性]** 選項。  
   

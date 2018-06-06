@@ -1,33 +1,31 @@
 ---
-title: "檢視及修改散發者和發行者屬性 | Microsoft 文件"
-ms.custom: 
+title: 檢視及修改散發者和發行者屬性 | Microsoft 文件
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
 ms.component: replication
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - viewing replication properties
 - Distributors [SQL Server replication], modifying
 - modifying replication properties, Distributors
 - Distributors [SQL Server replication], properties
 ms.assetid: 5dae1d59-c377-4c6e-adc9-b68c5b328f79
-caps.latest.revision: 
+caps.latest.revision: 43
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 5a2ef558880c24176b3f6397b72e14e03c5f8328
-ms.sourcegitcommit: ab25b08a312d35489a2c4a6a0d29a04bbd90f64d
+ms.openlocfilehash: cbf020925e52b107867723494bc6cbf0ca563f62
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="view-and-modify-distributor-and-publisher-properties"></a>檢視及修改散發者和發行者屬性
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -70,7 +68,7 @@ ms.lasthandoff: 03/08/2018
   
     -   若要檢視和修改散發資料庫的屬性，請按一下對話方塊中 [一般] 頁面上資料庫的屬性按鈕 (**...**)。  
   
-    -   若要檢視和修改與「散發者」相關聯的「發行者」屬性，請按一下對話方塊中**[發行者]**頁面上「發行者」的屬性按鈕 ( **[...]** )。  
+    -   若要檢視和修改與「散發者」相關聯的「發行者」屬性，請按一下對話方塊中 **[發行者]** 頁面上「發行者」的屬性按鈕 ( **[...]** )。  
   
     -   若要存取複寫代理程式的設定檔，請按一下對話方塊中 **[一般]** 頁面上的 **[設定檔預設值]** 按鈕。 如需詳細資訊，請參閱 [Replication Agent Profiles](../../relational-databases/replication/agents/replication-agent-profiles.md)。  
   

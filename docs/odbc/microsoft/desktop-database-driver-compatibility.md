@@ -1,16 +1,14 @@
 ---
-title: "桌面資料庫驅動程式相容性 |Microsoft 文件"
-ms.custom: 
+title: 桌面資料庫驅動程式相容性 |Microsoft 文件
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
-ms.component: odbc
-ms.reviewer: 
+ms.prod: sql
+ms.prod_service: connectivity
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: connectivity
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - compatibility [ODBC], Unicode
 - Unicode [ODBC], desktop database drivers
@@ -19,16 +17,15 @@ helpviewer_keywords:
 - desktop database drivers [ODBC], Unicode
 - Jet-based ODBC drivers [ODBC], Unicode
 ms.assetid: dd695638-1a0b-4e27-8a6a-9510ebb5a5ee
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
-ms.workload: Inactive
-ms.openlocfilehash: fcb8ad39a2ba24890394bb05cb30f1ddb5b63d2e
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+manager: craigg
+ms.openlocfilehash: 5fb1e93c996b68a3110449dab797beb5c93208b4
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="desktop-database-driver-compatibility"></a>桌面資料庫驅動程式相容性
 Unicode 是軟體的字元編碼的方法會將所有的字元視為具有兩個位元組的固定的寬度。 這個方法用做為 Windows ANSI 字元編碼、 替代其，因為它代表一個位元組中的字元限制為 256 個字元。 Unicode 可表示 65000 的字元，因為它可容納許多語言的字元都不會出現在 ANSI 編碼方式。  

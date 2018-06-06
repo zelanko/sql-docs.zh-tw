@@ -1,36 +1,33 @@
 ---
-title: "描述元轉換 |Microsoft 文件"
-ms.custom: 
+title: 描述元轉換 |Microsoft 文件
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
-ms.component: odbc
-ms.reviewer: 
+ms.prod: sql
+ms.prod_service: connectivity
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: connectivity
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - state transitions [ODBC], descriptor
 - transitioning states [ODBC], descriptor
 - descriptor transitions [ODBC]
 ms.assetid: 0cf24fe6-5e3c-45fa-81b8-4f52ddf8501d
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
-ms.workload: Inactive
-ms.openlocfilehash: 2c762c4276fe236418be07dfe1fe93482d4d9a10
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+manager: craigg
+ms.openlocfilehash: 32799b8a7b78672e33da24bfac45aab1d764bb0b
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="descriptor-transitions"></a>描述元轉換
 ODBC 描述項會有下列三種狀態。  
   
-|State|描述|  
+|State|Description|  
 |-----------|-----------------|  
 |D0|未配置的描述元|  
 |D1i|隱含地配置描述項|  

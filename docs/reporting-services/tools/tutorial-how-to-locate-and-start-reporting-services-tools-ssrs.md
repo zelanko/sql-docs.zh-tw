@@ -1,16 +1,15 @@
 ---
-title: "教學課程：如何尋找及啟動 Reporting Services 工具 (SSRS) | Microsoft Docs"
-ms.custom: 
+title: 教學課程：如何尋找及啟動 Reporting Services 工具 (SSRS) | Microsoft Docs
+ms.custom: ''
 ms.date: 05/30/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: tools
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - Reporting Services, tutorials
 - Reporting Services, tools
@@ -22,16 +21,15 @@ helpviewer_keywords:
 - tutorials [Reporting Services]
 - Report Builder
 ms.assetid: 51ad69d8-fe92-4662-a7cd-d235692f0c03
-caps.latest.revision: "63"
+caps.latest.revision: 63
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.workload: Active
-ms.openlocfilehash: 5fb39a5bfeab9dc2ad3b78c94238c66e174d3395
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 13258b6c570aa0e40c5cca7cbde7b583abd5f297
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="tutorial-how-to-locate-and-start-reporting-services-tools-ssrs"></a>教學課程：如何尋找及啟動 Reporting Services 工具 (SSRS)
 
@@ -58,11 +56,11 @@ ms.lasthandoff: 01/09/2018
   
      **Or**  
   
-     依序按一下 **[開始]**、 **[程式集]**、[ [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]]、 **[組態工具]**和 **[Reporting Services 組態管理員]**。  
+     依序按一下 **[開始]**、 **[程式集]**、[ [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]]、 **[組態工具]** 和 **[Reporting Services 組態管理員]**。  
   
      **[報表伺服器安裝執行個體選取範圍]** 對話方塊隨即出現，以便讓您選取所要設定的報表伺服器執行個體。  
   
-2.  在 **[伺服器名稱]**中，指定安裝報表伺服器執行個體的電腦名稱。 依預設，會指定本機電腦的名稱，但您也可以輸入遠端 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的名稱。  
+2.  在 **[伺服器名稱]** 中，指定安裝報表伺服器執行個體的電腦名稱。 依預設，會指定本機電腦的名稱，但您也可以輸入遠端 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的名稱。  
   
      如果您指定遠端電腦，請按一下 **[尋找]** 來建立連接。 必須事先設定報表伺服器的遠端管理功能。 如需詳細資訊，請參閱 [設定報表伺服器來進行遠端管理](../../reporting-services/report-server/configure-a-report-server-for-remote-administration.md)。  
   
@@ -106,7 +104,7 @@ ms.lasthandoff: 01/09/2018
   
      依序按一下 [開始] 、[所有程式] 和 [ [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]]，然後按一下 [SQL Server Management Studio] 。 此時會出現 **[連接到伺服器]** 對話方塊。  
   
-2.  如果 **[連接到伺服器]** 對話方塊沒有出現，請在 **[物件總管]**中按一下 **[連接]** ，然後選取 **[Reporting Services]**。  
+2.  如果 **[連接到伺服器]** 對話方塊沒有出現，請在 **[物件總管]** 中按一下 **[連接]** ，然後選取 **[Reporting Services]**。  
   
 3.  在 **[伺服器類型]** 清單中，選取 **[Reporting Services]**。 如果 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 不在清單上，就表示未安裝。  
   

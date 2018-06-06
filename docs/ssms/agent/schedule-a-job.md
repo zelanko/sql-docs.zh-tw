@@ -1,34 +1,38 @@
 ---
-title: "排程作業 | Microsoft Docs"
-ms.custom: 
+title: 排程作業 | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
 ms.component: ssms-agent
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: tools-ssms
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ssms
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - scheduling jobs [SQL Server]
 - SQL Server Agent jobs, scheduling
 - jobs [SQL Server Agent], scheduling
 ms.assetid: f626390a-a3df-4970-b7a7-a0529e4a109c
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 608a92150a2115021b0ed6e996c3b5e22abc40cd
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: f3cfa6e09a639f196f3be95fb360cc83afe35cd0
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="schedule-a-job"></a>Schedule a Job
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 本主題描述如何排程 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent 作業。  
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+
+> [!IMPORTANT]  
+> [Azure SQL Database 受控執行個體](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)目前支援多數 (但非全部) 的 SQL Server Agent 功能。 如需詳細資料，請參閱 [Azure SQL Database 受控執行個體與 SQL Server 之間的 T-SQL 差異](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)。
+
+本主題描述如何排程 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent 作業。  
   
 -   **開始之前：**   
   
@@ -67,7 +71,7 @@ ms.lasthandoff: 01/17/2018
   
     -   按一下 **[只要 CPU 閒置就啟動]** ，以便在 CPU 到達閒置條件時啟動作業。  
   
-    -   如果您想要重複執行排程，請按一下 **[重複執行]** 。 若要設定重複執行的排程，請完成對話方塊上的 **[頻率]**、 **[每日頻率]**和 **[持續時間]** 群組。  
+    -   如果您想要重複執行排程，請按一下 **[重複執行]** 。 若要設定重複執行的排程，請完成對話方塊上的 **[頻率]**、 **[每日頻率]** 和 **[持續時間]** 群組。  
   
     -   如果您只要排程執行一次，請按一下 **[執行一次]** 。 若要設定 [執行一次] 排程，請完成對話方塊上的 [僅執行一次] 群組。  
   
@@ -91,7 +95,7 @@ ms.lasthandoff: 01/17/2018
   
 #### <a name="to-schedule-a-job"></a>排程作業  
   
-1.  在 **[物件總管]**中，連接到 [!INCLUDE[ssDE](../../includes/ssde_md.md)]的執行個體。  
+1.  在 **[物件總管]** 中，連接到 [!INCLUDE[ssDE](../../includes/ssde_md.md)]的執行個體。  
   
 2.  在標準列上，按一下 **[新增查詢]**。  
   

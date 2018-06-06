@@ -1,27 +1,24 @@
 ---
-title: "JDBC 驅動程式支援的高可用性、 災害復原 |Microsoft 文件"
-ms.custom: 
-ms.date: 01/19/2017
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
-ms.component: jdbc
-ms.reviewer: 
+title: JDBC 驅動程式支援的高可用性、 災害復原 |Microsoft 文件
+ms.custom: ''
+ms.date: 04/04/2018
+ms.prod: sql
+ms.prod_service: connectivity
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: connectivity
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: 62de4be6-b027-427d-a7e5-352960e42877
-caps.latest.revision: "40"
+caps.latest.revision: 40
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
-ms.workload: On Demand
-ms.openlocfilehash: 621f31fbeddee6ec3705396b5d049f5496f4ae04
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+manager: craigg
+ms.openlocfilehash: 77ebc4b570d74fca0ec5bfbde5fc8d34c3f3aa30
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="jdbc-driver-support-for-high-availability-disaster-recovery"></a>JDBC 驅動程式對於高可用性、災害復原的支援
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -63,7 +60,7 @@ ms.lasthandoff: 11/18/2017
   
  指定**multiSubnetFailover = true**當連接到的項目以外的可用性群組接聽程式或容錯移轉叢集執行個體可能會導致負面效能影響，並不支援。  
   
- 如果未安裝安全性管理員，則 Java Virtual Machine 會在一段有限期間快取虛擬 IP 位址 (VIP)，這在預設情況下是由您的 JDK 實作以及 Java 屬性 networkaddress.cache.ttl 和 networkaddress.cache.negative.ttl 所定義。 如果已安裝 JDK 安全性管理員，則 Java Virtual Machine 將會快取 VIP，而且預設不會重新整理快取。 您應該針對 Java Virtual Machine 快取將「存留時間」(networkaddress.cache.ttl) 設定為一天。 如果您未將預設值變更為一天 (或一天左右)，則當加入或更新 VIP 時，將不會從 Java Virtual Machine 快取中清除舊的值。 如需有關 networkaddress.cache.ttl 和 networkaddress.cache.negative.ttl 的詳細資訊，請參閱[http://download.oracle.com/javase/6/docs/technotes/guides/net/properties.html](http://download.oracle.com/javase/6/docs/technotes/guides/net/properties.html)。  
+ 如果未安裝安全性管理員，則 Java Virtual Machine 會在一段有限期間快取虛擬 IP 位址 (VIP)，這在預設情況下是由您的 JDK 實作以及 Java 屬性 networkaddress.cache.ttl 和 networkaddress.cache.negative.ttl 所定義。 如果已安裝 JDK 安全性管理員，則 Java Virtual Machine 將會快取 VIP，而且預設不會重新整理快取。 您應該針對 Java Virtual Machine 快取將「存留時間」(networkaddress.cache.ttl) 設定為一天。 如果您未將預設值變更為一天 (或一天左右)，則當加入或更新 VIP 時，將不會從 Java Virtual Machine 快取中清除舊的值。 如需有關 networkaddress.cache.ttl 和 networkaddress.cache.negative.ttl 的詳細資訊，請參閱[ http://download.oracle.com/javase/6/docs/technotes/guides/net/properties.html ](http://download.oracle.com/javase/6/docs/technotes/guides/net/properties.html)。  
   
  請使用下列指導方針，連接到可用性群組或容錯移轉叢集執行個體中的伺服器：  
   
@@ -93,29 +90,11 @@ ms.lasthandoff: 11/18/2017
  如果您升級[!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]目前使用資料庫鏡像的多重子網路案例的應用程式，您應該移除**failoverPartner**連接屬性並將它取代為**multiSubnetFailover**設**true** ，並以可用性群組接聽程式取代連接字串中的伺服器名稱。 如果連接字串使用**failoverPartner**和**multiSubnetFailover = true**，驅動程式會產生錯誤。 不過，如果連接字串使用**failoverPartner**和**multiSubnetFailover = false** (或**ApplicationIntent = ReadWrite**)，應用程式將會使用資料庫鏡像。  
   
  如果在 AG 的主要資料庫上使用資料庫鏡像，而且驅動程式會傳回錯誤**multiSubnetFailover = true**用於連接至可用性群組而不是主要資料庫的連接字串接聽程式。  
-  
-## <a name="specifying-application-intent"></a>指定應用程式意圖  
- 當**applicationIntent = ReadOnly**，用戶端會連線到啟用 AlwaysOn 的資料庫時要求唯讀工作負載。 伺服器會在連接時及 USE 資料庫陳述式期間強制施行此意圖，但是只限於啟用 AlwaysOn 的資料庫。  
-  
- **ApplicationIntent**關鍵字不適用於舊版唯讀資料庫。  
-  
- 資料庫可以允許或不允許 AlwaysOn 目標資料庫上的讀取工作負載 (作法是使用 **PRIMARY_ROLE** 和 **SECONDARY_ROLE**[!INCLUDE[tsql](../../includes/tsql_md.md)] 陳述式的 **ALLOW_CONNECTIONS** 子句。)  
-  
- **ApplicationIntent**關鍵字用於啟用唯讀路由。  
-  
-## <a name="read-only-routing"></a>唯讀路由  
- 唯讀路由功能可確保資料庫之唯讀複本的可用性。 若要啟用唯讀路由：  
-  
-1.  您必須連接到 AlwaysOn 可用性群組的可用性群組接聽程式。  
-  
-2.  **ApplicationIntent**連接字串關鍵字必須設為**ReadOnly**。  
-  
-3.  可用性群組必須由資料庫管理員設定為啟用唯讀路由。  
-  
- 使用唯讀路由的多個連接可能不會連接至相同的唯讀複本。 資料庫同步處理的變更或伺服器路由組態的變更，可能會導致用戶端連接至不同的唯讀複本。 若要確保所有唯讀要求連接至相同的唯讀複本，請勿將傳遞的可用性群組接聽程式或虛擬 IP 位址來**serverName**連接字串關鍵字。 請改為指定唯讀執行個體的名稱。  
-  
- 唯讀路由所花的時間可能會比連接到主要複本所花的時間更長，因為唯讀路由會先連接到主要複本，然後尋找最佳可用的可讀次要複本。 因此，您應該增加登入逾時。  
-  
+
+
+[!INCLUDE[specify-application-intent_read-only-routing](~/includes/paragraph-content/specify-application-intent-read-only-routing.md)]
+
+
 ## <a name="new-methods-supporting-multisubnetfailover-and-applicationintent"></a>支援 multiSubnetFailover 和 applicationIntent 的新方法  
  以下方法讓您以程式設計方式存取**multiSubnetFailover**， **applicationIntent**和**則 transparentNetworkIPResolution**連接字串關鍵字：  
   
@@ -136,9 +115,9 @@ ms.lasthandoff: 11/18/2017
  **GetMultiSubnetFailover**， **setMultiSubnetFailover**， **getApplicationIntent**， **setApplicationIntent**， **getTransparentNetworkIPResolution**和**setTransparentNetworkIPResolution**方法也會新增至[SQLServerDataSource 類別](../../connect/jdbc/reference/sqlserverdatasource-class.md)， [SQLServerConnectionPoolDataSource 類別](../../connect/jdbc/reference/sqlserverconnectionpooldatasource-class.md)，和[SQLServerXADataSource 類別](../../connect/jdbc/reference/sqlserverxadatasource-class.md)。  
   
 ## <a name="ssl-certificate-validation"></a>SSL 憑證驗證  
- 可用性群組是由多個實體伺服器所組成。 [!INCLUDE[jdbc_40](../../includes/jdbc_40_md.md)]新增支援**主體替代名稱**讓多個主機可以與相同的憑證相關聯的 SSL 憑證中。 如需有關 SSL 的詳細資訊，請參閱[了解 SSL 支援](../../connect/jdbc/understanding-ssl-support.md)。  
+ 可用性群組是由多個實體伺服器所組成。 [!INCLUDE[jdbc_40](../../includes/jdbc_40_md.md)] 新增支援**主體替代名稱**讓多個主機可以與相同的憑證相關聯的 SSL 憑證中。 如需有關 SSL 的詳細資訊，請參閱[了解 SSL 支援](../../connect/jdbc/understanding-ssl-support.md)。  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [連接到 SQL Server JDBC 驅動程式](../../connect/jdbc/connecting-to-sql-server-with-the-jdbc-driver.md)   
  [設定連接屬性](../../connect/jdbc/setting-the-connection-properties.md)  
   

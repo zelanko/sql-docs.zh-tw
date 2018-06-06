@@ -1,16 +1,14 @@
 ---
 title: OPENDATASOURCE (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-database
-ms.service: 
 ms.component: t-sql|functions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: t-sql
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - OPENDATASOURCE
@@ -25,22 +23,24 @@ helpviewer_keywords:
 - OLE DB data sources [SQL Server]
 - ad hoc connection information
 ms.assetid: 5510b846-9cde-4687-8798-be9a273aad31
-caps.latest.revision: 
+caps.latest.revision: 41
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: e2ddb99a84c910c89aedaa086eb10e3f9de7abb9
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 691a5017e14f217ec1807531e27694608139074e
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="opendatasource-transact-sql"></a>OPENDATASOURCE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
 
   提供特定連接資訊做為四部分物件名稱，而不使用連結伺服器名稱。  
-  
+
+[!INCLUDE[ssMIlimitation](../../includes/sql-db-mi-limitation.md)]
+
  ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>語法  
@@ -55,7 +55,7 @@ OPENDATASOURCE ( provider_name, init_string )
  這是登錄為 OLE DB 提供者之 PROGID 的名稱，以用來存取資料來源。 *provider_name* 為沒有預設值的 **char** 資料類型。  
   
  *init_string*  
- 為傳遞到目的地提供者 IDataInitialize 介面的連接字串。 提供者字串語法是以分號隔開的索引鍵-值組為基礎，例如：**'***keyword1*=*value***;***keyword2*=*value***'**。  
+ 為傳遞到目的地提供者 IDataInitialize 介面的連接字串。 提供者字串語法是以分號隔開的索引鍵-值組為基礎，例如：**'***keyword1*=* value***;***keyword2*=* value***'**。  
   
  如需在提供者上支援的特定關鍵字-值配對，請參閱 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Data Access SDK。 這份文件集定義基本語法。 下表列出 *init_string* 引數最常使用的關鍵字。  
   

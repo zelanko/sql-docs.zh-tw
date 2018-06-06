@@ -1,49 +1,42 @@
 ---
-title: "將遙測意見反應傳送給 Microsoft (SQL Server PDW)"
-author: barbkess
-ms.author: barbkess
-manager: jhubbard
-ms.prod: analytics-platform-system
-ms.prod_service: mpp-data-warehouse
-ms.service: 
-ms.component: 
-ms.technology: mpp-data-warehouse
-ms.custom: 
-ms.date: 01/05/2017
-ms.reviewer: na
-ms.suite: sql
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: 40a994f0-7eff-4db9-9572-401d6e1187a0
-caps.latest.revision: "18"
-ms.openlocfilehash: f78a9e7c1e66085dd84ba71e8e7b5f517131e18a
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+title: 遙測意見-Analytics Platform System |Microsoft 文件
+description: 傳送到 Microsoft Analytics Platform System 遙測意見反應。
+author: mzaman1
+manager: craigg
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
+ms.openlocfilehash: 747274cd03e9cbd5dd2eab4423458700331358dd
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/19/2018
 ---
-# <a name="send-telemetry-feedback-to-microsoft"></a>將遙測意見反應傳送給 Microsoft
-Analytics Platform System 具有選擇性的遙測功能，系統管理員主控台資料傳送給 Microsoft。 我們建議您啟用這個選項來協助我們改善產品。  
+# <a name="send-telemetry-feedback-to-microsoft-for-analytics-platform-system"></a>傳送遙測意見反應給 Microsoft Analytics Platform System
+Analytics Platform System 具有選擇性的遙測功能，系統管理員主控台資料傳送給 Microsoft。 
   
 > [!NOTE]  
 > 在此版本中，Microsoft 並不會主動監視的遙測資料。 僅供分析收集的資料。  
   
 ## <a name="privacy"></a>隱私權  
-若要提供的最大隱私權保護，AP 隨附不啟用遙測。 再啟用這個功能，先檢閱[Microsoft Analytics Platform System 隱私權聲明](http://go.microsoft.com/fwlink/?LinkId=400902)。 然後，來選擇加入執行 PowerShell 指令碼如下所述。  
+若要提供的最大隱私權保護，AP 隨附不啟用遙測。 再啟用這個功能，先檢閱[Microsoft Analytics Platform System 隱私權聲明](http://go.microsoft.com/fwlink/?LinkId=400902)。 若要選擇加入，執行如下所述的 PowerShell 指令碼。  
   
 ## <a name="enable"></a>啟用遙測  
-**DNS 轉寄：**遙測資料傳送給 Microsoft 需要 Analytics Platform System，DNS 轉寄站透過網際網路連線。 若要啟用這項功能，您必須啟用轉送上的所有主機和工作負載 Vm 的 DNS。 叫用`Enable-RemoteMonitoring`命令搭配`SetupDnsForwarder`正確設定 DNS 轉送，並啟用遙測的選項。 叫用`Enable-RemoteMonitoring`命令，而`SetupDnsForwarder`選項時已設定 DNS 轉送，而且您只想要啟用活動訊號監視。  
+**DNS 轉寄：** 遙測資料傳送給 Microsoft 需要 Analytics Platform System，DNS 轉寄站透過網際網路連線。 若要啟用這項功能，您必須啟用轉送上的所有主機和工作負載 Vm 的 DNS。 叫用`Enable-RemoteMonitoring`命令搭配`SetupDnsForwarder`正確設定 DNS 轉送，並啟用遙測的選項。 叫用`Enable-RemoteMonitoring`命令，而`SetupDnsForwarder`選項時已設定 DNS 轉送，而且您只想要啟用活動訊號監視。  
   
 > [!IMPORTANT]  
 > 啟用 DNS 轉寄，便會開啟所有主機和工作負載 Vm 的網際網路連線。  
   
 #### <a name="to-enable-feedback"></a>若要啟用的意見反應  
   
-1.  使用應用裝置的網域系統管理員帳戶，連接到的控制節點 (***appliance_domain*-CTL01**)，然後開啟命令提示字元中使用 Windows 系統管理員認證。  
+1.  使用應用裝置的網域系統管理員帳戶，連接到的控制節點 (***appliance_domain *-CTL01**)，然後開啟命令提示字元中使用 Windows 系統管理員認證。  
   
 2.  瀏覽至下列目錄： `C:\Program Files\Microsoft SQL Server Parallel Data Warehouse\100`。  
   
-3.  匯入模組`Configure-RemoteMonitoring.ps1`  
+3.  匯入模組 `Configure-RemoteMonitoring.ps1`  
   
     > [!NOTE]  
     > 若要匯入您必須使用兩個句點命令中。  
@@ -89,11 +82,11 @@ Analytics Platform System 具有選擇性的遙測功能，系統管理員主控
   
 #### <a name="to-disable-telemetry"></a>若要停用遙測  
   
-1.  使用應用裝置的網域系統管理員帳戶，連接到的控制節點 (***appliance_domain*-CTL01**) 並以系統管理員權限開啟 PowerShell 視窗。  
+1.  使用應用裝置的網域系統管理員帳戶，連接到的控制節點 (***appliance_domain *-CTL01**) 並以系統管理員權限開啟 PowerShell 視窗。  
   
 2.  瀏覽至下列目錄： `C:\Program Files\Microsoft SQL Server Parallel Data Warehouse\100`。  
   
-3.  匯入模組`Configure-RemoteMonitoring.ps1`  
+3.  匯入模組 `Configure-RemoteMonitoring.ps1`  
   
     > [!NOTE]  
     > 若要匯入您必須使用兩個句點命令中。  
@@ -116,9 +109,10 @@ Analytics Platform System 具有選擇性的遙測功能，系統管理員主控
   
 在執行沒有壞處`Disable-RemoteMonitoring`命令多次。  
   
-## <a name="see-also"></a>請參閱  
-[使用系統管理員主控台 &#40; 監視的應用裝置Analytics Platform System &#41;](monitor-the-appliance-by-using-the-admin-console.md)  
-[使用系統檢視 &#40; 監視的應用裝置Analytics Platform System &#41;](monitor-the-appliance-by-using-system-views.md)  
-[使用 System Center Operations Manager &#40; 監視的應用裝置Analytics Platform System &#41;](monitor-the-appliance-by-using-system-center-operations-manager.md)  
-[若要解決非應用裝置的 DNS 名稱 &#40; 使用 DNS 轉寄站Analytics Platform System &#41;](use-a-dns-forwarder-to-resolve-non-appliance-dns-names.md)  
+## <a name="next-steps"></a>後續的步驟
+如需詳細資訊，請參閱：
+- [使用管理主控台來監視設備&#40;Analytics Platform System&#41;](monitor-the-appliance-by-using-the-admin-console.md)  
+- [使用系統檢視表來監視設備&#40;Analytics Platform System&#41;](monitor-the-appliance-by-using-system-views.md)  
+- [使用 System Center Operations Manager 監視的應用裝置&#40;Analytics Platform System&#41;](monitor-the-appliance-by-using-system-center-operations-manager.md)  
+- [使用 DNS 轉寄站 dns 名稱解析非應用裝置&#40;Analytics Platform System&#41;](use-a-dns-forwarder-to-resolve-non-appliance-dns-names.md)  
   

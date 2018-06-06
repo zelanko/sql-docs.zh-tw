@@ -1,17 +1,16 @@
 ---
-title: "使用 SQL Server 的多個版本和執行個體 | Microsoft Docs"
-ms.custom: 
+title: 使用 SQL Server 的多個版本和執行個體 | Microsoft Docs
+ms.custom: ''
 ms.date: 08/25/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
 ms.component: install
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - setup-install
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - concurrent installations [SQL Server]
 - versions [SQL Server], multiple
@@ -23,21 +22,20 @@ helpviewer_keywords:
 - 32-bit edition [SQL Server]
 - editions [SQL Server], side-by-side installations
 ms.assetid: 93acefa8-bb41-4ccc-b763-7801f51134e0
-caps.latest.revision: 
+caps.latest.revision: 67
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
-ms.workload: Active
-ms.openlocfilehash: ccae571c9784b781197bf5ec462b6a8142d56452
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+manager: craigg
+ms.openlocfilehash: 0e2d76ecc7b0c0f6be29f97dd0a6edc941b9d016
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="work-with-multiple-versions-and-instances-of-sql-server"></a>使用 SQL Server 的多個版本和執行個體
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支援同一部電腦上的多個 [!INCLUDE[ssDE](../../includes/ssde-md.md)]、[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 和 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 執行個體。 您也可以升級舊版的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，或在已安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 舊版的電腦上安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 如需支援的升級案例，請參閱 [支援的版本與版本升級](../../database-engine/install-windows/supported-version-and-edition-upgrades.md)。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支援同一部電腦上的多個 [!INCLUDE[ssDE](../../includes/ssde-md.md)]、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]和 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 執行個體。 您也可以升級舊版的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，或在已安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 舊版的電腦上安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 如需支援的升級案例，請參閱 [支援的版本與版本升級](../../database-engine/install-windows/supported-version-and-edition-upgrades.md)。  
   
 ## <a name="version-components-and-numbering"></a>版本元件和編號  
  下列概念對於了解 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 對 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]並存執行個體的行為很有幫助。  

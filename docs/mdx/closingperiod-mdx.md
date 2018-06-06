@@ -1,30 +1,20 @@
 ---
-title: "ClosingPeriod (MDX) |Microsoft 文件"
-ms.custom: 
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: language-reference
-f1_keywords: CLOSINGPERIOD
-dev_langs: kbMDX
-helpviewer_keywords: ClosingPeriod function
-ms.assetid: ae709017-219d-43e1-a98a-a85bd365b4cd
-caps.latest.revision: "37"
-author: Minewiskan
+title: ClosingPeriod (MDX) |Microsoft 文件
+ms.date: 05/30/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: mdx
+ms.topic: reference
 ms.author: owend
-manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: 4fa2207edb9ea3e732807a3d4ac0783334c361c2
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: 3d082ec7958ab1b29b5b42108d6f9c5c78fc3470
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34577360"
 ---
 # <a name="closingperiod-mdx"></a>ClosingPeriod (MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -90,9 +80,9 @@ SELECT ClosingPeriod ([Date].[Fiscal].[Month],[Date].[Fiscal].[Fiscal Year].&[20
 FROM [Adventure Works]  
 ```  
   
-## <a name="see-also"></a>請參閱  
- [OpeningPeriod &#40;MDX &#41;](../mdx/openingperiod-mdx.md)   
- [MDX 函數參考 &#40;MDX &#41;](../mdx/mdx-function-reference-mdx.md)   
- [LastSibling &#40;MDX &#41;](../mdx/lastsibling-mdx.md)  
+## <a name="see-also"></a>另請參閱  
+ [OpeningPeriod &#40;MDX&#41;](../mdx/openingperiod-mdx.md)   
+ [MDX 函數參考&#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)   
+ [LastSibling &#40;MDX&#41;](../mdx/lastsibling-mdx.md)  
   
   

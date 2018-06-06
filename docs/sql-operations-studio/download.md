@@ -1,74 +1,96 @@
 ---
-title: "下載並安裝 Microsoft SQL Operations Studio （預覽） |Microsoft 文件"
-description: "下載和安裝 Microsoft SQL Operations Studio （預覽） for Windows、 macOS 或 Linux"
+title: 下載並安裝 Microsoft SQL Operations Studio (preview) |Microsoft 文件
+description: 下載和安裝 Microsoft SQL Operations Studio (preview) for Windows、 macOS 或 Linux
 ms.custom: tools|sos
-ms.date: 03/05/2018
-ms.prod: sql-non-specified
-ms.reviewer: alayu; erickang; sstein
+ms.date: 05/08/2018
+ms.prod: sql
+ms.reviewer: alayu; sstein
 ms.suite: sql
 ms.prod_service: sql-tools
 ms.component: sos
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 1cb41e1824fc157932e2cb08292608bb97e46712
-ms.sourcegitcommit: ab25b08a312d35489a2c4a6a0d29a04bbd90f64d
+ms.openlocfilehash: dcf6f9d14efd903c47d4e3b059503fb77606209b
+ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 05/10/2018
+ms.locfileid: "33988636"
 ---
-# <a name="download-and-install-sql-operations-studio-preview"></a>下載並安裝 SQL Operations Studio （預覽）
+# <a name="download-and-install-sql-operations-studio-preview"></a>下載並安裝 SQL Operations Studio (preview)
 
 [!INCLUDE[name-sos](../includes/name-sos.md)] 在 Windows、 macOS 和 Linux 上執行。
 
-下載並安裝最新版本中，*年 2 月公用預覽*:
+下載並安裝最新版本中，*5 月公開預覽版*:
 
 |平台|下載|發行日期| 版本 |
 |:---|:---|:---|:---|
-|視窗|[安裝程式](https://go.microsoft.com/fwlink/?linkid=867998)<br>[.zip](https://go.microsoft.com/fwlink/?linkid=867997)|2018 年 2 月 15 日 |0.26.7|
-|macOS|[.zip](https://go.microsoft.com/fwlink/?linkid=867999)|2018 年 2 月 15 日 |0.26.7|
-|Linux|[.deb](https://go.microsoft.com/fwlink/?linkid=868002)<br>[.rpm](https://go.microsoft.com/fwlink/?linkid=868001)<br>[.tar.gz](https://go.microsoft.com/fwlink/?linkid=868000)|2018 年 2 月 15 日|0.26.7|
+|Windows|[安裝程式](https://go.microsoft.com/fwlink/?linkid=873386)<br>[.zip](https://go.microsoft.com/fwlink/?linkid=873387)|2018 年 5 月 7 日 |0.29.3|
+|macOS|[.zip](https://go.microsoft.com/fwlink/?linkid=873388)|2018 年 5 月 7 日 |0.29.3|
+|Linux|[.deb](https://go.microsoft.com/fwlink/?linkid=873391)<br>[.rpm](https://go.microsoft.com/fwlink/?linkid=873390)<br>[.tar.gz](https://go.microsoft.com/fwlink/?linkid=873389)|2018 年 5 月 7 日 |0.29.3|
 
 如需最新版本的詳細資訊，請參閱[版本資訊](release-notes.md)。
 
-## <a name="get-sql-operations-studio-preview-for-windows"></a>取得 SQL Operations Studio （預覽） for Windows
+## <a name="get-sql-operations-studio-preview-for-windows"></a>取得 SQL Operations Studio (preview) for Windows
 
 這一版的[!INCLUDE[name-sos](../includes/name-sos-short.md)]包括標準的 Windows 安裝程式經驗，以及.zip: 
 
 **安裝程式**
 
-1. 下載並執行[ [!INCLUDE[name-sos](../includes/name-sos-short.md)] Windows 安裝程式](https://go.microsoft.com/fwlink/?linkid=867998)。
+1. 下載並執行[ [!INCLUDE[name-sos](../includes/name-sos-short.md)] Windows 安裝程式](https://go.microsoft.com/fwlink/?linkid=873386)。
 1. 啟動[!INCLUDE[name-sos-short](../includes/name-sos-short.md)]應用程式。
 
 
 **.zip 檔案**
 
-1. 下載[[!INCLUDE[name-sos](../includes/name-sos-short.md)]適用於 Windows 的.zip](https://go.microsoft.com/fwlink/?linkid=867997)。
+1. 下載[[!INCLUDE[name-sos](../includes/name-sos-short.md)]適用於 Windows 的.zip](https://go.microsoft.com/fwlink/?linkid=873387)。
 2. 瀏覽至下載的檔案，並將它解壓縮。
 3. 執行 `\sqlops-windows\sqlops.exe`
 
 
-## <a name="get-sql-operations-studio-preview-for-macos"></a>取得 macOS SQL Operations Studio （預覽）
+## <a name="get-sql-operations-studio-preview-for-macos"></a>取得 macOS SQL Operations Studio (preview)
 
-1. 下載[[!INCLUDE[name-sos](../includes/name-sos-short.md)]如 macOS](https://go.microsoft.com/fwlink/?linkid=867999)。
+1. 下載[[!INCLUDE[name-sos](../includes/name-sos-short.md)]如 macOS](https://go.microsoft.com/fwlink/?linkid=873388)。
 2. 若要展開的 zip 內容，請按兩下它。
 3. 讓[!INCLUDE[name-sos](../includes/name-sos-short.md)]用於*啟動控制板*，拖曳*sqlops.app*至*應用程式*資料夾。
 
 
-## <a name="get-sql-operations-studio-preview-for-linux"></a>取得 SQL Operations Studio （預覽） for Linux
+## <a name="get-sql-operations-studio-preview-for-linux"></a>取得 SQL Operations Studio (preview) for Linux
 
-1. 下載[[!INCLUDE[name-sos](../includes/name-sos-short.md)]適用於 Linux](https://go.microsoft.com/fwlink/?linkid=868000)。
+1. 下載[!INCLUDE[name-sos](../includes/name-sos-short.md)]適用於 Linux 使用其中一種安裝程式或.tar.gz 封存：
+    - [.deb](https://go.microsoft.com/fwlink/?linkid=873391)
+    - [.rpm](https://go.microsoft.com/fwlink/?linkid=873390)
+    - [.tar.gz](https://go.microsoft.com/fwlink/?linkid=873389)
 1. 擷取檔案和啟動[!INCLUDE[name-sos](../includes/name-sos-short.md)]，開啟新的終端機視窗，然後輸入下列命令：
 
+   **Debian 安裝：**
    ```bash
    cd ~
    sudo dpkg -i ./Downloads/sqlops-linux-<version string>.deb
 
    sqlops
    ```
+
+   **rpm 安裝：**
+   ```bash
+   cd ~
+   yum install ./Downloads/sqlops-linux-<version string>.rpm
+
+   sqlops
+   ```
+
+   **.tar.gz 安裝：**
+   ```bash 
+   cd ~ 
+   cp ~/Downloads/sqlops-linux-<version string>.tar.gz ~ 
+   tar -xvf ~/sqlops-linux-<version string>.tar.gz 
+   echo 'export PATH="$PATH:~/sqlops-linux-x64"' >> ~/.bashrc
+   source ~/.bashrc 
+   sqlops 
+   ``` 
 
    > [!NOTE]
    > 在 Debian、 Redhat 和 Ubuntu，您可能遺失相依性。 若要安裝這些相依性，根據您的 Linux 版本中使用下列命令：
@@ -94,11 +116,11 @@ ms.lasthandoff: 03/08/2018
    ```
 
 
-## <a name="uninstall-sql-operations-studio-preview"></a>解除安裝 SQL Operations Studio （預覽）
+## <a name="uninstall-sql-operations-studio-preview"></a>解除安裝 SQL Operations Studio (preview)
 
-如果您已安裝[!INCLUDE[name-sos-short](../includes/name-sos-short.md)]使用 Windows installer，然後解除安裝移除所有 Windows 應用程式的方式相同。
+如果您已使用 Windows installer 安裝[!INCLUDE[name-sos-short](../includes/name-sos-short.md)]，解除安裝方式與所有 Windows 應用程式移除方式相同。
 
-如果您已安裝[!INCLUDE[name-sos-short](../includes/name-sos-short.md)].zip 或其他封存，然後只要刪除檔案。
+如果您使用.zip 或其他封存安裝[!INCLUDE[name-sos-short](../includes/name-sos-short.md)]，只要刪除檔案即可。
 
 ## <a name="supported-operating-systems"></a>支援的作業系統
 
@@ -115,7 +137,7 @@ ms.lasthandoff: 03/08/2018
 - Windows Server 2008 R2 (64 位元)
 
 ### <a name="macos"></a>macOS
-- macOS 10.13 高利也
+- macOS 10.13 High Sierra
 - macOS 10.12 Sierra
 
 ### <a name="linux"></a>Linux

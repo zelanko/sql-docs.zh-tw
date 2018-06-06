@@ -1,30 +1,27 @@
 ---
-title: "ODBC 靜態游標 |Microsoft 文件"
-ms.custom: 
+title: ODBC 靜態游標 |Microsoft 文件
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
-ms.component: odbc
-ms.reviewer: 
+ms.prod: sql
+ms.prod_service: connectivity
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: connectivity
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - cursors [ODBC], static
 - static cursors [ODBC]
 ms.assetid: 28cb324c-e1c3-4b5c-bc3e-54df87037317
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
-ms.workload: Inactive
-ms.openlocfilehash: 049eb6998407ad02ca91565d9b26d0a0bf9b37eb
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+manager: craigg
+ms.openlocfilehash: b2ee8c5945e3ebed86df370fd537f9bc543ce844
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="odbc-static-cursors"></a>ODBC 靜態游標
 靜態資料指標是其中一個結果集似乎是靜態。 它通常無法偵測到的成員資格、 順序或值之結果集資料指標開啟後所做的變更。 例如，假設在靜態資料指標提取的資料列，而另一個應用程式，然後再更新該資料列。 如果靜態資料指標 refetches 資料列，它會看到的值是不變，即使其他應用程式所做的變更。  

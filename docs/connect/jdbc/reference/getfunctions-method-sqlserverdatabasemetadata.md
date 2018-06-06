@@ -1,27 +1,24 @@
 ---
-title: "getFunctions 方法 (SQLServerDatabaseMetaData) |Microsoft 文件"
-ms.custom: 
+title: getFunctions 方法 (SQLServerDatabaseMetaData) |Microsoft 文件
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
-ms.component: jdbc
-ms.reviewer: 
+ms.prod: sql
+ms.prod_service: connectivity
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: connectivity
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: 44335cbd-c84d-4ef3-a6a1-fca7eb7ec768
-caps.latest.revision: "20"
+caps.latest.revision: 20
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
-ms.workload: Inactive
-ms.openlocfilehash: d09162647b6d5a4076bb60b3bf05e1e90eb27dee
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+manager: craigg
+ms.openlocfilehash: 7bf039e2104a7ac2fbbcce8a5a9fbd8bade8589d
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="getfunctions-method-sqlserverdatabasemetadata"></a>getFunctions 方法 (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -38,7 +35,7 @@ public ResultSet getFunctions(java.lang.String catalog,
 ```  
   
 #### <a name="parameters"></a>參數  
- *類別目錄*  
+ *catalog*  
   
  在資料庫中之目錄的名稱。 如果它是空字串 ""，結果就會包含函數而不包含目錄。 如果是**null**，目錄名稱不會用於搜尋。  
   
@@ -75,11 +72,11 @@ public ResultSet getFunctions(java.lang.String catalog,
 |NUM_OUTPUT_PARAMS|**int**|保留供日後使用，目前會傳回值 -1。|  
 |NUM_RESULT_SETS|**int**|保留供日後使用，目前會傳回值 -1。|  
 |REMARKS|**字串**|有關此函數的註解。|  
-|FUNCTION_TYPE|**短**|函數的類型。 它可能是下列其中一個值：<br /><br /> SQL_PT_UNKNOWN (0)<br /><br /> SQL_PT_PROCEDURE (1)<br /><br /> SQL_PT_FUNCTION (2)|  
+|FUNCTION_TYPE|**short**|函數的類型。 它可能是下列其中一個值：<br /><br /> SQL_PT_UNKNOWN (0)<br /><br /> SQL_PT_PROCEDURE (1)<br /><br /> SQL_PT_FUNCTION (2)|  
   
  在所傳回結果集中的所有描述，都會依據 FUNCTION_CAT、FUNCTION_SCHEM、FUNCTION_NAME 和 SPECIFIC_NAME 排列順序。  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [SQLServerDatabaseMetaData 成員](../../../connect/jdbc/reference/sqlserverdatabasemetadata-members.md)   
  [SQLServerDatabaseMetaData 類別](../../../connect/jdbc/reference/sqlserverdatabasemetadata-class.md)  
   

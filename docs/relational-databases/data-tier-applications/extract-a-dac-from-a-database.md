@@ -1,17 +1,16 @@
 ---
-title: "從資料庫中擷取 DAC | Microsoft Docs"
-ms.custom: 
+title: 從資料庫中擷取 DAC | Microsoft Docs
+ms.custom: ''
 ms.date: 07/18/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
 ms.component: data-tier-applications
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-data-tier-apps
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 f1_keywords:
 - sql13.swb.extractdacwizard.validationandsummary.f1
 - sql13.swb.extractdacwizard.introduction.f1
@@ -24,19 +23,19 @@ helpviewer_keywords:
 - data-tier application [SQL Server], extract
 - wizard [DAC], extract
 ms.assetid: ae52a723-91c4-43fd-bcc7-f8de1d1f90e5
-caps.latest.revision: 
+caps.latest.revision: 21
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 510eb23505fde879a82d3ded7282cabd410cacaf
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.openlocfilehash: f7141252a11e4391d14a4b8aff5240e849ad27d8
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="extract-a-dac-from-a-database"></a>從資料庫中擷取 DAC
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 您可以使用 [擷取資料層應用程式精靈] 或 Windows PowerShell 指令碼，從現有的 SQL Server 資料庫中擷取資料層應用程式 (DAC) 套件。 此擷取程序會建立 DAC 封裝檔案，其中包含資料庫物件及其相關執行個體層級元素的定義。 例如，DAC 封裝檔案會包含資料庫資料表、預存程序、檢視表、使用者以及對應至資料庫使用者的登入。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  您可以使用 [擷取資料層應用程式精靈] 或 Windows PowerShell 指令碼，從現有的 SQL Server 資料庫中擷取資料層應用程式 (DAC) 封裝。 此擷取程序會建立 DAC 封裝檔案，其中包含資料庫物件及其相關執行個體層級元素的定義。 例如，DAC 封裝檔案會包含資料庫資料表、預存程序、檢視表、使用者以及對應至資料庫使用者的登入。  
   
  
 ## <a name="before-you-begin"></a>開始之前  
@@ -51,7 +50,7 @@ ms.lasthandoff: 01/17/2018
 ##  <a name="UsingDACExtractWizard"></a> 使用擷取資料層應用程式精靈  
  **使用精靈擷取 DAC**  
   
-1.  在 **[物件總管]**中，展開含有待擷取 DAC 之資料庫的執行個體的節點。  
+1.  在 **[物件總管]** 中，展開含有待擷取 DAC 之資料庫的執行個體的節點。  
   
 2.  展開 **[資料庫]** 節點。  
   
@@ -107,7 +106,7 @@ ms.lasthandoff: 01/17/2018
   
 > **注意！**如果 DAC 不支援一個或多個物件，[下一步] 按鈕就會停用，而且擷取程序便無法繼續。 在這種情況下，建議您移除不支援的物件，然後再次執行此精靈。  
   
- **摘要**：所選取的選項摘要會列在 [DAC 屬性] 底下。 驗證的結果則列在 **[DAC 物件]**底下。 驗證的結果有三種類型：  
+ **摘要**：所選取的選項摘要會列在 [DAC 屬性] 底下。 驗證的結果則列在 **[DAC 物件]** 底下。 驗證的結果有三種類型：  
   
 -   **物件成功包含在 DAC 中**：表示這些物件及其相依性受到支援，而且可以成功包含在 DAC 中。  
   
@@ -115,7 +114,7 @@ ms.lasthandoff: 01/17/2018
   
 -   **物件未包含在 DAC 中**：表示這些物件不受到支援，而且必須從資料庫中移除它們，然後才能成功擷取 DAC。  
   
- 驗證程序會檢查多個相依性層級。 例如，如果某個預存程序相依於使用不支援之 CLR 資料類型的資料表，此預存程序就會列在 **[物件包含在 DAC 中，但是出現警告]**底下。  
+ 驗證程序會檢查多個相依性層級。 例如，如果某個預存程序相依於使用不支援之 CLR 資料類型的資料表，此預存程序就會列在 **[物件包含在 DAC 中，但是出現警告]** 底下。  
   
  如果 DAC 不支援一個或多個物件， **[下一步]** 按鈕就會停用，而且擷取程序將無法繼續。 在這種情況下，建議您移除不支援的物件，然後再次執行此精靈。  
   

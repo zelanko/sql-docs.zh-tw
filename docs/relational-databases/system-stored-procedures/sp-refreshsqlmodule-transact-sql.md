@@ -1,16 +1,14 @@
 ---
-title: "sp_refreshsqlmodule (TRANSACT-SQL) |Microsoft 文件"
-ms.custom: 
+title: sp_refreshsqlmodule (TRANSACT-SQL) |Microsoft 文件
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: system-objects
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_refreshsqlmodule_TSQL
@@ -28,16 +26,16 @@ helpviewer_keywords:
 - stored procedures [SQL Server], refreshing metadata
 - user-defined functions [SQL Server], refreshing metadata
 ms.assetid: f0022a05-50dd-4620-961d-361b1681d375
-caps.latest.revision: 
+caps.latest.revision: 21
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: a95c2e905efa377edb83fd82a104758853b18271
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: b54f1410be78cc1be6095a1870fc5b6b9e5b694f
+ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="sprefreshsqlmodule-transact-sql"></a>sp_refreshsqlmodule (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -66,7 +64,7 @@ sys.sp_refreshsqlmodule [ @name = ] 'module_name'
  這是預存程序、使用者自訂函數、檢視、DML 觸發程序、資料庫層級 DDL 觸發程序或伺服器層級 DDL 觸發程序的名稱。 *適於*不能在 common language runtime (CLR) 預存程序或 CLR 函數。 *適於*無法結構描述繫結。 *適於*是**nvarchar**，沒有預設值。 *適於*可以是多重部分識別碼，但只能參考目前資料庫中的物件。  
   
  [ **，** @**命名空間**=] **'** \<類別 > **'**  
- 這是指定之模組的類別。 當*適於*DDL 觸發程序，\<類別 > 為必要。 *\<類別 >*是**nvarchar**(20)。 有效輸入包括：  
+ 這是指定之模組的類別。 當*適於*DDL 觸發程序，\<類別 > 為必要。 *\<類別 >* 是**nvarchar**(20)。 有效輸入包括：  
   
 |||  
 |-|-|  
@@ -176,8 +174,8 @@ GO
   
 ```  
   
-## <a name="see-also"></a>請參閱  
- [sp_refreshview &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/sp-refreshview-transact-sql.md)   
- [Database Engine 預存程序 &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)  
+## <a name="see-also"></a>另請參閱  
+ [sp_refreshview &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-refreshview-transact-sql.md)   
+ [Database Engine 預存程序&#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)  
   
   

@@ -1,16 +1,14 @@
 ---
-title: "REVOKE 結構描述權限 (Transact-SQL) | Microsoft Docs"
-ms.custom: 
+title: REVOKE 結構描述權限 (Transact-SQL) | Microsoft Docs
+ms.custom: ''
 ms.date: 06/10/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
 ms.component: t-sql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: t-sql
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - TSQL
@@ -19,16 +17,15 @@ helpviewer_keywords:
 - schemas [SQL Server], permissions
 - permissions [SQL Server], schemas
 ms.assetid: a1fabf35-1f42-48db-b0b8-7181f413ba3a
-caps.latest.revision: 
+caps.latest.revision: 28
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 09bf03fc40529e2975727ae1e7068a18c35b6002
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 6f9aada4f61b37aa47f8b39017a0767e3e0de1be
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="revoke-schema-permissions-transact-sql"></a>REVOKE 結構描述權限 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -58,7 +55,7 @@ REVOKE [ GRANT OPTION FOR ] permission  [ ,...n ]
 > [!IMPORTANT]  
 >  如果主體有不含 GRANT 選項的指定權限，則會撤銷權限本身。  
   
- ON SCHEMA **::** schema*_name*  
+ ON SCHEMA **::** schema *_name*  
  指定要撤銷其權限的結構描述。 範圍限定詞 **::** 為必要項目。  
   
  *database_principal*  

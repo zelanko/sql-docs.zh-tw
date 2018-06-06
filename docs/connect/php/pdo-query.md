@@ -1,27 +1,25 @@
 ---
-title: "Pdo:: query |Microsoft 文件"
-ms.custom: 
+title: 'Pdo:: query |Microsoft 文件'
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
+ms.prod: sql
+ms.prod_service: connectivity
 ms.component: php
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: connectivity
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: f6f5e6d4-8ca9-4f06-89ed-de65ad3952a2
-caps.latest.revision: "19"
+caps.latest.revision: 19
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
-ms.workload: Inactive
-ms.openlocfilehash: 42c24102f31df86ebf76d855d80487f5bba15e82
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+manager: craigg
+ms.openlocfilehash: fb23a63d77461cb13784c515bd0638af277e63b6
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="pdoquery"></a>PDO::query
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -47,9 +45,9 @@ PDOStatement PDO::query ($statement[, $fetch_style);
 PDOException。  
   
 ## <a name="remarks"></a>備註  
-使用 pdo:: query 執行的查詢可以執行已備妥的陳述式或直接根據 pdo:: SQLSRV_ATTR_DIRECT_QUERY; 的設定請參閱[的直接陳述式執行和已備妥 PDO_SQLSRV 驅動程式中的陳述式執行](../../connect/php/direct-statement-execution-prepared-statement-execution-pdo-sqlsrv-driver.md)如需詳細資訊。  
+使用 pdo:: query 執行的查詢可以執行已備妥的陳述式或直接根據 pdo:: SQLSRV_ATTR_DIRECT_QUERY 的設定。 如需詳細資訊，請參閱 [PDO_SQLSRV 驅動程式中的直接陳述式執行和已備妥的陳述式執行](../../connect/php/direct-statement-execution-prepared-statement-execution-pdo-sqlsrv-driver.md)。  
   
-Pdo:: SQLSRV_ATTR_QUERY_TIMEOUT 也會影響 pdo:: exec; 行為請參閱[pdo:: setattribute](../../connect/php/pdo-setattribute.md)如需詳細資訊。  
+Pdo:: SQLSRV_ATTR_QUERY_TIMEOUT 也會影響 pdo:: exec; 行為如需詳細資訊，請參閱[pdo:: setattribute](../../connect/php/pdo-setattribute.md)。  
   
 您可以指定下列選項為 $*fetch_style*。  
   
@@ -124,6 +122,7 @@ $stmt = null;
 ```  
   
 ## <a name="see-also"></a>另請參閱  
-[PDO 類別](../../connect/php/pdo-class.md)  
-[PDO](http://go.microsoft.com/fwlink/?LinkID=187441)  
+[PDO 類別](../../connect/php/pdo-class.md)
+
+[PDO](http://php.net/manual/book.pdo.php)  
   

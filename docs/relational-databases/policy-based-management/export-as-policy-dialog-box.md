@@ -1,33 +1,32 @@
 ---
-title: "匯出為原則對話方塊 | Microsoft Docs"
-ms.custom: 
+title: 匯出為原則對話方塊 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
 ms.component: performance-monitor
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 f1_keywords:
 - sql13.swb.dmf.exportaspolicy.f1
 ms.assetid: f19a8450-2a28-40a6-8a7d-9f4eaea0447d
-caps.latest.revision: 
+caps.latest.revision: 20
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 6d68124fea11952e85baeb531fd36241dbce4e0a
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 5cb887b7c6c1ca4243e0f313a352886ebf355bd4
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="export-as-policy-dialog-box"></a>匯出為原則對話方塊
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 使用此對話方塊可將一組原則式管理 Facet 屬性儲存為原則。 原則可以儲存在 XML 檔案中，或是直接儲存到目前的 [!INCLUDE[ssDE](../../includes/ssde-md.md)]執行個體。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  使用此對話方塊可將一組以原則為基礎之管理 Facet 的屬性儲存為原則。 原則可以儲存在 XML 檔案中，或是直接儲存到目前的 [!INCLUDE[ssDE](../../includes/ssde-md.md)]執行個體。  
   
 ## <a name="options"></a>選項。  
  **原則定義名稱**  

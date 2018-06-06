@@ -1,16 +1,14 @@
 ---
 title: CERTENCODED (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 07/24/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
 ms.component: t-sql|functions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: t-sql
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - CERTENCODED
@@ -20,21 +18,20 @@ dev_langs:
 helpviewer_keywords:
 - CERTENCODED
 ms.assetid: 677a0719-7b9a-4f0b-bc61-41634563f924
-caps.latest.revision: 
+caps.latest.revision: 14
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 635720f8ed9c3d2aa48d2f5cbf03438171b1fe78
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 1ff52c9e01f5820fad3a832ed2b4546be69f9ffa
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="certencoded-transact-sql"></a>CERTENCODED (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
-以二進位格式傳回憑證的公開部分。 這個函數會使用憑證識別碼，並傳回編碼憑證。 二進位結果可以傳遞給 **CREATE CERTIFICATE … WITH BINARY** 來建立新的憑證。
+此函式會以二進位格式傳回憑證的公開部分。 此函式會採用憑證識別碼作為引數，並傳回編碼憑證。 若要建立新的憑證，請將二進位結果傳遞給 **CREATE CERTIFICATE … WITH BINARY**。
   
 ## <a name="syntax"></a>語法  
   
@@ -44,13 +41,13 @@ CERTENCODED ( cert_id )
   
 ## <a name="arguments"></a>引數  
 *cert_id*  
-憑證的 **certificate_id**。 這可從 sys.certificates 或是使用 [CERT_ID &#40;Transact-SQL&#41;](../../t-sql/functions/cert-id-transact-sql.md) 函式取得。 *cert_id* 的類型為 **int**
+憑證的 **certificate_id**。 在 sys.certificates 中找到此值；[CERT_ID &#40;Transact-SQL&#41;](../../t-sql/functions/cert-id-transact-sql.md) 函式也會傳回它。 *cert_id* 的資料類型為 **int**。
   
-## <a name="return-types"></a>傳回型別
+## <a name="return-types"></a>傳回類型
 **varbinary**
   
 ## <a name="remarks"></a>Remarks  
-**CERTENCODED** 及 **CERTPRIVATEKEY** 會一起用來傳回憑證的不同部分 (二進位格式)。
+搭配使用 **CERTENCODED** 和 **CERTPRIVATEKEY**，以透過二進位格式傳回憑證的不同部分。
   
 ## <a name="permissions"></a>Permissions  
 **CERTENCODED** 可以公開使用。
@@ -58,23 +55,23 @@ CERTENCODED ( cert_id )
 ## <a name="examples"></a>範例  
   
 ### <a name="simple-example"></a>簡單範例  
-下列範例會建立名為 `Shipping04` 的憑證，然後使用 **CERTENCODED** 函式傳回憑證的二進位編碼。
+此範例會建立名為 `Shipping04` 的憑證，然後使用 **CERTENCODED** 函式傳回憑證的二進位編碼。 此範例將憑證到期日設定為 2040 年 10 月 31 日。
   
 ```sql
-CREATE DATABASE TEST1;  
-GO  
-USE TEST1  
-CREATE CERTIFICATE Shipping04   
-ENCRYPTION BY PASSWORD = 'pGFD4bb925DGvbd2439587y'  
-WITH SUBJECT = 'Sammamish Shipping Records',   
-EXPIRY_DATE = '20161031';  
-GO  
-SELECT CERTENCODED(CERT_ID('Shipping04'));  
+CREATE DATABASE TEST1;
+GO
+USE TEST1
+CREATE CERTIFICATE Shipping04
+ENCRYPTION BY PASSWORD = 'pGFD4bb925DGvbd2439587y'
+WITH SUBJECT = 'Sammamish Shipping Records',
+EXPIRY_DATE = '20401031';
+GO
+SELECT CERTENCODED(CERT_ID('Shipping04'));
   
 ```  
   
 ### <a name="b-copying-a-certificate-to-another-database"></a>B. 將憑證複製到另一個資料庫  
-下列更複雜的範例會建立兩個資料庫 `SOURCE_DB` 和 `TARGET_DB`。 目標是要在 `SOURCE_DB` 中建立憑證，然後將此憑證複製到 `TARGET_DB`，並示範 `SOURCE_DB` 中所加密的資料可以使用憑證複本在 `TARGET_DB` 中解密。
+更複雜的範例會建立兩個資料庫 `SOURCE_DB` 和 `TARGET_DB`。 接著，在 `SOURCE_DB` 中建立憑證，然後將憑證複製至 `TARGET_DB`。 最後，示範可以在 `TARGET_DB` 中使用憑證的複本來解密 `SOURCE_DB` 中所加密的資料。
   
 若要建立範例環境，請建立 `SOURCE_DB` 和 `TARGET_DB` 資料庫，並在每一個資料庫中建立一個主要金鑰。 然後在 `SOURCE_DB` 中建立憑證。
   
@@ -101,7 +98,7 @@ CREATE CERTIFICATE SOURCE_CERT WITH SUBJECT = 'SOURCE_CERTIFICATE';
 GO  
 ```  
   
-現在，請擷取憑證的二進位描述。
+接下來，請擷取憑證的二進位描述。
   
 ```sql
 DECLARE @CERTENC VARBINARY(MAX);  
@@ -114,7 +111,7 @@ SELECT @CERTPVK AS EncryptedBinaryCertificate;
 GO  
 ```  
   
-在 `TARGET_DB` 資料庫中建立重複憑證。 您必須修改下列程式碼，插入上一個步驟傳回的兩個二進位值。
+然後，在 `TARGET_DB` 資料庫中建立重複憑證。 修改下列程式碼使其運作，並插入上一個步驟中所傳回的兩個二進位值 (@CERTENC 和 @CERTPVK)。 請不要使用引號括住這些值。
   
 ```sql
 -- Create the duplicate certificate in the TARGET_DB database  
@@ -133,7 +130,7 @@ UNION
 SELECT * FROM TARGET_DB.sys.certificates;  
 ```  
   
-當做單一批次執行的下列程式碼會示範在 `SOURCE_DB` 中加密的資料可以在 `TARGET_DB` 中解密。
+這個當成單一批次執行的程式碼示範 `TARGET_DB` 可以解密 `SOURCE_DB` 中一開始加密的資料。
   
 ```sql
 USE SOURCE_DB;  

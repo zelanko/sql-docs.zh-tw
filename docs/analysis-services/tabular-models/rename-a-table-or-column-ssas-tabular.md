@@ -1,33 +1,23 @@
 ---
-title: "重新命名資料表或資料行 |Microsoft 文件"
-ms.custom: 
-ms.date: 05/22/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services, azure-analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords:
-- sql13.asvs.bidtoolset.renametableorcolumn.f1
-ms.assetid: 88061a39-c5aa-403d-a52b-7fdb365fc235
-caps.latest.revision: 
-author: Minewiskan
+title: 重新命名資料表或資料行 |Microsoft 文件
+ms.date: 05/07/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: tabular-models
+ms.topic: conceptual
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: bf8d925f0ffe72eab343ebf8af82030a21c0a9b0
-ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
+ms.openlocfilehash: 0c8564b7a61a73937bc5f9a207c98fd77c7b1bb7
+ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="rename-a-table-or-column"></a>重新命名資料表或資料行 
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
-您可以在匯入程序期間，於 **[資料表匯入精靈]** 的 **[選取資料表和檢視表]** 頁面中輸入 **[易記名稱]**來變更資料表的名稱。 如果在 **[資料表匯入精靈]** 的 **[指定 SQL 查詢]**頁面上指定查詢來匯入資料，也可以變更資料表和資料行名稱。  
+  您可以在匯入程序期間，於 **[資料表匯入精靈]** 的 **[選取資料表和檢視表]** 頁面中輸入 **[易記名稱]** 來變更資料表的名稱。 如果在 **[資料表匯入精靈]** 的 **[指定 SQL 查詢]** 頁面上指定查詢來匯入資料，也可以變更資料表和資料行名稱。  
   
  在您將資料加入至模型之後，資料表的名稱 (或標題) 會出現在模型設計師底部的資料表索引標籤上。 您可以變更資料表的名稱，為它提供一個更適合的名稱。 您也可以在將資料加入到模型之後重新命名資料行。 如果您是從多個來源匯入資料，並想要確保不同資料表中的資料行具有容易區分的名稱時，這個選項特別重要。  
   
@@ -53,7 +43,7 @@ ms.lasthandoff: 02/23/2018
   
 -   控制字元  
   
--   下列字元 (在 Analysis Services 物件的名稱中無效)：.,;':/\\*|?&%$!+=()[]{}<>  
+-   （這不適用於 Analysis Services 物件的名稱） 的下列字元:。，;': /\\*|?& %$！ + = （) []{}<>  
   
 -   Analysis Services 保留關鍵字，包括多維度運算式 (MDX) 和資料採礦延伸模組 (DMX) 的函數名稱與運算子。  
   

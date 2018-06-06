@@ -1,32 +1,29 @@
 ---
-title: "介面一致性層級 |Microsoft 文件"
-ms.custom: 
+title: 介面一致性層級 |Microsoft 文件
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
-ms.component: odbc
-ms.reviewer: 
+ms.prod: sql
+ms.prod_service: connectivity
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: connectivity
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - interface conformance levels [ODBC]
 - conformance levels [ODBC], interface
 - data sources [ODBC], conformance levels
 - ODBC drivers [ODBC], conformance levels
 ms.assetid: 2c470e54-0600-4b2b-b1f3-9885cb28a01a
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
-ms.workload: Inactive
-ms.openlocfilehash: 0abde908ca3205cc10a35c310b508c5142fcb82c
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+manager: craigg
+ms.openlocfilehash: 890684bf513b80cd484f7b15c75a04c38553513b
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="interface-conformance-levels"></a>介面的一致性層級
 調節的目的是通知哪些可用功能，從驅動程式的應用程式。 函式為基礎的撫平配置未充分達成這個目標。 在 ODBC 3。*x*，驅動程式就會歸類在根據他們擁有的功能。 支援的功能，可以包括支援函式。它也可以包含支援所傳回的資訊類型描述元欄位、 陳述式屬性、"Y"值**SQLGetInfo**，依此類推。  
@@ -42,7 +39,7 @@ ms.lasthandoff: 12/21/2017
  有三個 ODBC 介面一致性層級： 核心、 層級 1 和層級 2。  
   
 > [!NOTE]  
->  這些一致性層級比 ODBC 2 中的相同名稱的 ODBC API 的一致性層級有不同需求*.x*。 特別是，所有功能都暗示 ODBC 2*.x* API 的一致性層級 1 現在是核心介面的一致性層級的一部分。 如此一來，許多 ODBC 驅動程式可能會報告核心層級介面的一致性。  
+>  這些一致性層級比 ODBC 2 中的相同名稱的 ODBC API 的一致性層級有不同需求 *.x*。 特別是，所有功能都暗示 ODBC 2 *.x* API 的一致性層級 1 現在是核心介面的一致性層級的一部分。 如此一來，許多 ODBC 驅動程式可能會報告核心層級介面的一致性。  
   
  此章節包含下列主題。  
   

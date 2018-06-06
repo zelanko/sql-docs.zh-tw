@@ -1,16 +1,14 @@
 ---
-title: "sp_help_proxy (TRANSACT-SQL) |Microsoft 文件"
-ms.custom: 
+title: sp_help_proxy (TRANSACT-SQL) |Microsoft 文件
+ms.custom: ''
 ms.date: 08/09/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: system-objects
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_help_proxy
@@ -20,16 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_help_proxy
 ms.assetid: a2fce164-2b64-40c2-8f35-6eeb7844abf1
-caps.latest.revision: 
+caps.latest.revision: 38
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 19f4df348037b923ac5e7daf643b5ed114256324
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 8a64cf35c51d4857b666798debb633828b6c66b8
+ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="sphelpproxy-transact-sql"></a>sp_help_proxy (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -56,7 +53,7 @@ sp_help_proxy
  [ **@proxy_name** = ] **'***proxy_name***'**  
  要列出資訊的 Proxy 名稱。 *Proxy_name*是**sysname**，預設值是 NULL。 任一*識別碼*或*proxy_name*可指定。  
   
- [ **@subsystem_name** = ] '*subsystem_name*'  
+ [ **@subsystem_name** =] '*subsystem_name*'  
  要列出 Proxy 的子系統名稱。 *Subsystem_name*是**sysname**，預設值是 NULL。 當*subsystem_name*指定，則*名稱*也必須指定。  
   
  下表列出每個子系統的值。  
@@ -75,7 +72,7 @@ sp_help_proxy
 |Dts|SSIS 封裝執行|  
 |PowerShell|PowerShell 指令碼|  
   
- [ **@name** = ] '*name*'  
+ [ **@name** =] '*名稱*'  
  要列出 Proxy 的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入名稱。 名稱是**nvarchar （256)**，預設值是 NULL。 當*名稱*指定，則*subsystem_name*也必須指定。  
   
 ## <a name="return-code-values"></a>傳回碼值  
@@ -133,8 +130,8 @@ GO
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [SQL Server Agent 預存程序 &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/sql-server-agent-stored-procedures-transact-sql.md)   
+ [SQL Server Agent 預存程序&#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sql-server-agent-stored-procedures-transact-sql.md)   
  [sp_add_proxy &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-proxy-transact-sql.md)   
- [sp_delete_proxy &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-proxy-transact-sql.md)  
+ [sp_delete_proxy &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-proxy-transact-sql.md)  
   
   

@@ -1,16 +1,14 @@
 ---
-title: "字串函式 (Transact-SQL) | Microsoft Docs"
-ms.custom: 
+title: 字串函式 (Transact-SQL) | Microsoft Docs
+ms.custom: ''
 ms.date: 08/15/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
 ms.component: t-sql|functions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: t-sql
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - TSQL
@@ -20,16 +18,16 @@ helpviewer_keywords:
 - string functions
 - strings [SQL Server]
 ms.assetid: 6940a83d-5374-4af3-bb27-5d89c8af83ac
-caps.latest.revision: 
+caps.latest.revision: 29
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Active
-ms.openlocfilehash: 7cf1c000411dd8971621447e1202fe7400b69560
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: caca208b0b7fc9750786d7321a37dab573298870
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="string-functions-transact-sql"></a>字串函數 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -52,7 +50,7 @@ ms.lasthandoff: 11/21/2017
 
 
   
- 所有內建字串函式都具有確定性 (除 `FORMAT` 外)。 這表示任何時間使用一組特定輸入值來呼叫它們，都會傳回相同的值。 如需函式確定性的詳細資訊，請參閱[確定性與非確定性函式](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md)。  
+ 所有內建字串函式都具有確定性 (除 `FORMAT` 外)。 這表示任何時間使用一組特定輸入值來呼叫它們，都會傳回相同的值。 如需函數確定性的詳細資訊，請參閱[決定性與非決定性函數](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md)。  
   
  將不是字串值的引數傳遞給字串函數時，輸入類型會隱含地轉換成文字資料類型。 如需詳細資訊，請參閱[資料類型轉換 &#40;資料庫引擎&#41;](../../t-sql/data-types/data-type-conversion-database-engine.md)。  
   

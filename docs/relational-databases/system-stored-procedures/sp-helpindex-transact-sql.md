@@ -1,16 +1,14 @@
 ---
-title: "sp_helpindex (TRANSACT-SQL) |Microsoft 文件"
-ms.custom: 
+title: sp_helpindex (TRANSACT-SQL) |Microsoft 文件
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: system-objects
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_helpindex_TSQL
@@ -20,16 +18,16 @@ dev_langs:
 helpviewer_keywords:
 - sp_helpindex
 ms.assetid: c7f73ba0-ec35-4b10-aa5f-f1487e51fbf7
-caps.latest.revision: 
+caps.latest.revision: 32
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: cef2b217751b15eced19d8f77312b2bd6a5a59d0
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: e6e64715eeb893e1a93df1c1c7c52b62e0d18d4d
+ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="sphelpindex-transact-sql"></a>sp_helpindex (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -46,7 +44,7 @@ sp_helpindex [ @objname = ] 'name'
 ```  
   
 ## <a name="arguments"></a>引數  
- [  **@objname=** ] **'***名稱***'**  
+ [ **@objname=** ] **'***name***'**  
  這是使用者定義資料表或檢視的完整或非完整名稱。 只有在指定完整資料表或檢視表名稱時，才會用到引號。 如果提供其中包括資料庫名稱的完整名稱，資料庫名稱就必須是目前資料庫的名稱。 *名稱*是**nvarchar(776)**，沒有預設值。  
   
 ## <a name="return-code-values"></a>傳回碼值  
@@ -68,7 +66,7 @@ sp_helpindex [ @objname = ] 'name'
  **sp_helpindex**公開只可排序的索引資料行; 因此，不會公開 XML 索引或空間索引的相關資訊。  
   
 ## <a name="permissions"></a>Permissions  
- 需要 **public** 角色的成員資格。  
+ 需要 **public** 角色中的成員資格。  
   
 ## <a name="examples"></a>範例  
  下列範例會報告 `Customer` 資料表的索引類型。  
@@ -80,8 +78,8 @@ EXEC sp_helpindex N'Sales.Customer';
 GO  
 ```  
   
-## <a name="see-also"></a>請參閱  
- [Database Engine 預存程序 &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
+## <a name="see-also"></a>另請參閱  
+ [Database Engine 預存程序&#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
  [sys.indexes &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)   
  [sys.index_columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-index-columns-transact-sql.md)   
  [系統預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   

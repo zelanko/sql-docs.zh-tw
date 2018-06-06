@@ -1,16 +1,15 @@
 ---
-title: "sp_changelogreader_agent (TRANSACT-SQL) |Microsoft 文件"
-ms.custom: 
+title: sp_changelogreader_agent (TRANSACT-SQL) |Microsoft 文件
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - sp_changelogreader_agent
 ms.assetid: 929b2fa7-1267-41d0-8b69-e9ab26a62c0f
-caps.latest.revision: 
+caps.latest.revision: 21
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 42668e8b915af31cf746800fc65312caf84ad88e
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: b3a7d5a86ddbfb5af307c38e20948e5ebc7af383
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="spchangelogreaderagent-transact-sql"></a>sp_changelogreader_agent (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -52,31 +50,31 @@ sp_changelogreader_agent [ [ @job_login = ] 'job_login' ]
 ```  
   
 ## <a name="arguments"></a>引數  
- [  **@job_login** =] **'***job_login***'**  
+ [ **@job_login**=] **'***job_login***'**  
  這是用來執行代理程式之 Windows 帳戶的登入。 *job_login*是**nvarchar （257)**，預設值是 NULL。 *無法變更非*[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] *發行者。*  
   
- [  **@job_password** =] **'***job_password***'**  
+ [ **@job_password**=] **'***job_password***'**  
  這是用來執行代理程式之 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 帳戶的密碼。 *job_password*是**sysname**，預設值是 NULL。  
   
 > [!IMPORTANT]  
 >  可能的話，會在執行階段提示使用者輸入安全性認證。 如果您必須將認證儲存在指令碼檔案中，則必須維護這個檔案的安全性，使他人無法在未獲授權的情況下擅自存取。  
   
- [  **@publisher_security_mode** =] *publisher_security_mode*  
+ [ **@publisher_security_mode**=] *publisher_security_mode*  
  這是當連接到發行者時使用的安全性模式。 *publisher_security_mode*是**smallint**，預設值是 NULL。 **0**指定[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]驗證，以及**1**指定 Windows 驗證。  
   
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]  
   
- [  **@publisher_login** =] **'***publisher_login***'**  
+ [ **@publisher_login**=] **'***publisher_login***'**  
  這是連接到發行者時所用的登入。 *publisher_login*是**sysname**，預設值是 NULL。 *publisher_login*時，必須指定*publisher_security_mode*是**0**。 如果*publisher_login*是 NULL 和*publisher_security_mode*是**1**，然後在指定的 Windows 帳戶*job_login*時使用連接到發行者。  
   
- [  **@publisher_password** =] **'***publisher_password***'**  
+ [ **@publisher_password**=] **'***publisher_password***'**  
  這是連接到發行者時所用的密碼。 *publisher_password*是**sysname**，預設值是 NULL。  
   
 > [!IMPORTANT]  
 >  請勿使用空白密碼。 請使用增強式密碼。 可能的話，會在執行階段提示使用者輸入安全性認證。 如果您必須將認證儲存在指令碼檔案中，則必須維護這個檔案的安全性，使他人無法在未獲授權的情況下擅自存取。  
   
- [  **@publisher** =] **'***發行者***'**  
+ [ **@publisher**=] **'***發行者***'**  
  這是發行者的名稱。 *發行者*是**sysname**，預設值是 NULL。 只支援非 SQL Server 發行者使用這個參數。  
   
 ## <a name="return-code-values"></a>傳回碼值  
@@ -92,9 +90,9 @@ sp_changelogreader_agent [ [ @job_login = ] 'job_login' ]
 ## <a name="permissions"></a>Permissions  
  只有成員**sysadmin**固定的伺服器角色或**db_owner**固定的資料庫角色可以執行**sp_changelogreader_agent**。  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [檢視及修改複寫安全性設定](../../relational-databases/replication/security/view-and-modify-replication-security-settings.md)   
- [sp_helplogreader_agent &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/sp-helplogreader-agent-transact-sql.md)   
+ [sp_helplogreader_agent &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-helplogreader-agent-transact-sql.md)   
  [sp_addlogreader_agent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addlogreader-agent-transact-sql.md)  
   
   

@@ -1,30 +1,31 @@
 ---
-title: "建立模型 (適用於 Excel 的 MDS 增益集) | Microsoft Docs"
-ms.custom: 
+title: 建立模型 (適用於 Excel 的 MDS 增益集) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/15/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: mds
-ms.service: 
 ms.component: microsoft-excel-add-in
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - master-data-services
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: 8ae26ec3-c5d5-4c4f-a810-2951a7454439
-caps.latest.revision: 
+caps.latest.revision: 5
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: a205aa008476eab04faa3570d8d34f68662b460c
-ms.sourcegitcommit: 6ac1956307d8255dc544e1063922493b30907b80
+ms.openlocfilehash: 4d9c9c113fc1e02c69b2d87c3354bb8174ff47e1
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="building-a-model-mds-add-in-for-excel"></a>建立模型 (適用於 Excel 的 MDS 增益集)
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
   在 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]中，系統管理員可以執行 [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] Web 應用程式中的管理功能子集。  
   
  系統管理員可在 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)] 中執行的模型建立工作是：  
@@ -49,7 +50,7 @@ ms.lasthandoff: 03/05/2018
 |建立階層。|[!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] Web 應用程式或 Web 服務|[建立衍生階層 &#40;Master Data Services&#41;](../../master-data-services/create-a-derived-hierarchy-master-data-services.md)<br /><br /> [建立明確階層 &#40;Master Data Services&#41;](../../master-data-services/create-an-explicit-hierarchy-master-data-services.md)|  
 |建立集合。|[!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] Web 應用程式或 Web 服務|[建立集合 &#40;Master Data Services&#41;](../../master-data-services/create-a-collection-master-data-services.md)|  
 |建立資料的版本。|[!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] Web 應用程式或 Web 服務|[鎖定版本 &#40;Master Data Services&#41;](../../master-data-services/lock-a-version-master-data-services.md)|  
-|部署模型。|[!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] Web 應用程式、Web 服務或 MDSModelDeploy 工具。|[使用 MDSModelDeploy 建立模型部署套件](../../master-data-services/create-a-model-deployment-package-by-using-mdsmodeldeploy.md)|  
+|部署模型。|[!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] Web 應用程式、Web 服務或 MDSModelDeploy 工具。|[使用 MDSModelDeploy 建立模型部署封裝](../../master-data-services/create-a-model-deployment-package-by-using-mdsmodeldeploy.md)|  
   
 ## <a name="related-content"></a>相關內容  
   

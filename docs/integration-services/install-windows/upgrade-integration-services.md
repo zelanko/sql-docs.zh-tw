@@ -1,33 +1,31 @@
 ---
-title: "升級 Integration Services | Microsoft Docs"
-ms.custom: 
+title: 升級 Integration Services | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
 ms.component: install-windows
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - Integration Services, upgrading
 - SSIS, upgrading
 - SQL Server Integration Services, upgrading
 - upgrading Integration Services
 ms.assetid: 04f9863c-ba0b-47c5-af91-f2d41b078a23
-caps.latest.revision: 
+caps.latest.revision: 53
 author: MikeRayMSFT
 ms.author: mikeray
 manager: erikre
-ms.workload: On Demand
-ms.openlocfilehash: e7617074c17989315b75272611688f1bd77d97d2
-ms.sourcegitcommit: 657d18fc805512c9574b2fe7451310601b9d78cb
-ms.translationtype: MT
+ms.openlocfilehash: b22da94c6d94532fdf12eba1399008254e533de9
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/13/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="upgrade-integration-services"></a>升級 Integration Services
   如果您的電腦上目前安裝有 [!INCLUDE[ssISversion10](../../includes/ssisversion10-md.md)] 或更新版本，您可以升級到 [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)]。  
@@ -43,12 +41,12 @@ ms.lasthandoff: 03/13/2018
  我們建議您在升級到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]之前，最好先執行 Upgrade Advisor。 Upgrade Advisor 會報告當您將現有的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 封裝移轉至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 所使用的新封裝格式時可能會遇到的問題。  
   
 > [!NOTE]  
->  在目前的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]版本中，已停用針對移轉或執行 Data Transformation Services (DTS) 封裝所提供的支援。 下列 DTS 功能已停用：  
+>  在 SQL Server 2012 中，已停用為移轉或執行 Data Transformation Services (DTS) 套件所提供的支援。 下列 DTS 功能已停用：  
 >   
 >  -   DTS 執行階段  
 > -   DTS API  
-> -   可將 DTS 封裝移轉到下一版 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 的封裝移轉精靈  
-> -   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中對於 DTS 封裝維護的支援  
+> -   可將 DTS 封裝移轉到下一版 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]  
+> -   DTS 封裝維護的支援 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]  
 > -   執行 DTS 2000 封裝工作  
 > -   DTS 封包的 Upgrade Advisor 掃描。  
 >   
@@ -59,7 +57,7 @@ ms.lasthandoff: 03/13/2018
   
 -   執行 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 安裝程式，並選取**從 SQL Server 2008、SQL Server 2008 R2、[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 或 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]** 升級的選項。  
   
--   在命令提示字元上執行 **setup.exe**，並指定 **/ACTION=upgrade** 選項。 如需詳細資訊，請參閱 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] [從命令提示字元安裝 SQL Server 2016](../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md) 中的＜的安裝指令碼＞一節。  
+-   在命令提示字元上執行 **setup.exe**，並指定 **/ACTION=upgrade** 選項。 如需詳細資訊，請參閱[從命令提示字元安裝 SQL Server 2016](../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md) 中的＜[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 的安裝指令碼＞一節。  
   
  您無法使用升級作業來執行下列動作：  
   

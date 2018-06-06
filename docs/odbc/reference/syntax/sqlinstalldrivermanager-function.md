@@ -1,32 +1,33 @@
 ---
-title: "SQLInstallDriverManager 函式 |Microsoft 文件"
-ms.custom: 
+title: SQLInstallDriverManager 函式 |Microsoft 文件
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
-ms.component: odbc
-ms.reviewer: 
+ms.prod: sql
+ms.prod_service: connectivity
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
-ms.topic: article
-apiname: SQLInstallDriverManager
-apilocation: sqlsrv32.dll
+ms.technology: connectivity
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
+apiname:
+- SQLInstallDriverManager
+apilocation:
+- sqlsrv32.dll
 apitype: dllExport
-f1_keywords: SQLInstallDriverManager
-helpviewer_keywords: SQLInstallDriverManager function [ODBC]
+f1_keywords:
+- SQLInstallDriverManager
+helpviewer_keywords:
+- SQLInstallDriverManager function [ODBC]
 ms.assetid: aebc439b-fffd-4d98-907a-0163f79aee8d
-caps.latest.revision: "12"
+caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
-ms.workload: Inactive
-ms.openlocfilehash: 7d1769b4951662f99cd50709b498891540fd4b9c
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+manager: craigg
+ms.openlocfilehash: 739af9f6d97dbd4595a3c18254ab53f2a9db10f6
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sqlinstalldrivermanager-function"></a>SQLInstallDriverManager 函式
 **一致性**  
@@ -61,7 +62,7 @@ BOOL SQLInstallDriverManager(
 ## <a name="diagnostics"></a>診斷  
  當**SQLInstallDriverManager**傳回 FALSE，相關聯 *\*pfErrorCode*可以取得值，藉由呼叫**SQLInstallerError**。 下表列出 *\*pfErrorCode*可以傳回的值**SQLInstallerError** ，並說明每個內容中的這個函式。  
   
-|*\*pfErrorCode*|錯誤|描述|  
+|*\*pfErrorCode*|錯誤|Description|  
 |---------------------|-----------|-----------------|  
 |ODBC_ERROR_GENERAL_ERR|一般安裝程式發生錯誤|發生錯誤，其中沒有特定的安裝程式錯誤。|  
 |ODBC_ERROR_INVALID_BUFF_LEN|無效的緩衝區長度|*LpszPath*引數不是大小足以包含 輸出路徑。 緩衝區會包含已截斷的路徑。<br /><br /> *CbPathMax*引數是不超過 _MAX_PATH。|  

@@ -1,36 +1,33 @@
 ---
-title: "升級為不同的 SQL Server 2016 版本 (安裝程式) | Microsoft Docs"
-ms.custom: 
+title: 升級為不同的 SQL Server 2016 版本 (安裝程式) | Microsoft Docs
+ms.custom: ''
 ms.date: 07/24/2017
-ms.prod: sql-non-specified
-ms.prod_service: database-engine
-ms.service: 
-ms.component: install-windows
-ms.reviewer: 
+ms.prod: sql
+ms.prod_service: install
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- setup-install
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: install
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: 31d16820-d126-4c57-82cc-27701e4091bc
-caps.latest.revision: 
+caps.latest.revision: 27
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 976dc265c028061ee04d8188b8de4325ba335a69
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 1f23d04ecdaaafe3fdb2a7033a51e750eb61d519
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="upgrade-to-a-different-edition-of-sql-server-setup"></a>升級為不同的 SQL Server 版本 (安裝程式)
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝程式支援各種不同 [!INCLUDE[ssNoversion](../../includes/ssnoversion-md.md)]版本之間的版本升級。 如需支援版本升級方式的詳細資訊，請參閱 [支援的版本與版本升級](../../database-engine/install-windows/supported-version-and-edition-upgrades-2017.md)。 在您起始 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 執行個體的版本升級之前，請檢閱以下文章：  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝程式支援各種不同 [!INCLUDE[ssNoversion](../../includes/ssnoversion-md.md)] 版本之間的版本升級。 如需支援版本升級方式的詳細資訊，請參閱 [支援的版本與版本升級](../../database-engine/install-windows/supported-version-and-edition-upgrades-2017.md)。 在您起始 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 執行個體的版本升級之前，請檢閱以下文章：  
 
-- [版本和支援的 SQL Server 2017 功能](../../sql-server/editions-and-components-of-sql-server-2017.md)  
-- [版本和支援的 SQL Server 2016 功能](../../sql-server/editions-and-components-of-sql-server-2016.md)  
+- [版本及支援的 SQL Server 2017 功能](../../sql-server/editions-and-components-of-sql-server-2017.md)  
+- [版本及支援的 SQL Server 2016 功能](../../sql-server/editions-and-components-of-sql-server-2016.md)  
 - [SQL Server 版本的計算容量限制](../../sql-server/compute-capacity-limits-by-edition-of-sql-server.md)  
 - [安裝 SQL Server 的硬體與軟體需求](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)  
   

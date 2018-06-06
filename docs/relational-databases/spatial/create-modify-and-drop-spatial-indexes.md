@@ -1,17 +1,16 @@
 ---
-title: "建立、修改及卸除空間索引 | Microsoft Docs"
-ms.custom: 
+title: 建立、修改及卸除空間索引 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
 ms.component: spatial
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-spatial
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - indexes [SQL Server], creating
 - spatial indexes [SQL Server], dropping
@@ -20,20 +19,20 @@ helpviewer_keywords:
 - indexes [SQL Server], modifying
 - spatial indexes [SQL Server], modifying
 ms.assetid: 00c1b927-8ec5-44cf-87c2-c8de59745735
-caps.latest.revision: 
+caps.latest.revision: 23
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 68f2d5d07002de55913fd8cca4166d4254f9ed90
-ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 7466a59f0f9ae3eed8a348cffc43eea519763856
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="create-modify-and-drop-spatial-indexes"></a>建立、修改及卸除空間索引
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-空間索引可以更有效率地在 **geometry** 或 **geography** 資料類型的資料行 (「空間資料行」) 上執行某些作業。 可以在空間資料行上指定一個以上的空間索引。 這對於類似在單一資料行上為不同鑲嵌式參數建立索引會很有用處。  
+  空間索引可以更有效率地在 **geometry** 或 **geography** 資料類型的資料行 (「空間資料行」) 上執行某些作業。 可以在空間資料行上指定一個以上的空間索引。 這對於類似在單一資料行上為不同鑲嵌式參數建立索引會很有用處。  
   
  建立空間索引有一些限制。 如需詳細資訊，請參閱本主題中的 [空間索引的限制](#restrictions) 。  
   

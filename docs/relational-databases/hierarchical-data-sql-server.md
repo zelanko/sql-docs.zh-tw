@@ -1,17 +1,16 @@
 ---
-title: "階層式資料 (SQL Server) | Microsoft Docs"
-ms.custom: 
+title: 階層式資料 (SQL Server) | Microsoft Docs
+ms.custom: ''
 ms.date: 09/01/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
 ms.component: relational-databases-misc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - hierarchies [SQL Server], tables to support
 - hierarchyid [Database Engine], concepts
@@ -20,20 +19,20 @@ helpviewer_keywords:
 - hierarchyid [Database Engine]
 - hierarchical queries [SQL Server], using hierarchyid data type
 ms.assetid: 19aefa9a-fbc2-4b22-92cf-67b8bb01671c
-caps.latest.revision: 
+caps.latest.revision: 40
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 9eee39caae6b780e692ed0cee3440b6cb250da9f
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: c6c53ca0e99485f38d62c833cd3b0a3d3f11e4be
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="hierarchical-data-sql-server"></a>階層式資料 (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-內建 **hierarchyid** 資料類型讓儲存與查詢階層式資料更容易。 **hierarchyid** 最適合表示樹狀目錄，這是階層式資料最常見的類型。  
+  內建 **hierarchyid** 資料類型讓儲存與查詢階層式資料更容易。 **hierarchyid** 最適合表示樹狀目錄，這是階層式資料最常見的類型。  
   
  階層式資料的定義為一組資料項目，這些資料項目會依據階層式關聯性，彼此相關。 階層式關聯性表示資料的一個項目是另一個項目的父代。 通常儲存在資料庫的階層式資料範例包含下列：  
   

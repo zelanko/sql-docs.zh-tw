@@ -1,27 +1,17 @@
 ---
-title: "實施 R 程式碼 （機器學習服務） |Microsoft 文件"
-ms.custom:
-- SQL2016_New_Updated
-ms.date: 07/26/2016
-ms.reviewer: 
-ms.suite: sql
-ms.prod: machine-learning-services
-ms.prod_service: machine-learning-services
-ms.component: r
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
-ms.assetid: f15696b1-2479-4e5f-ac5e-4beaf958a043
-caps.latest.revision: 
-author: jeannt
-ms.author: jeannt
-manager: cgronlund
-ms.workload: Inactive
-ms.openlocfilehash: c982c62fbe79fffc878465a48ca993b8b720dc41
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+title: 實施 R 程式碼，在 SQL Server 機器學習服務 |Microsoft 文件
+ms.prod: sql
+ms.technology: machine-learning
+ms.date: 04/15/2018
+ms.topic: conceptual
+author: HeidiSteen
+ms.author: heidist
+manager: cgronlun
+ms.openlocfilehash: f5fa7806ad70c37c7d51c5ae2cc9606191560e58
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="operationalize-r-code-machine-learning-services"></a>實施 R 程式碼 （機器學習服務）
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -32,7 +22,7 @@ ms.lasthandoff: 02/11/2018
 
 ## <a name="get-started-with-r-code-in-sql-server"></a>開始使用 SQL Server 中的 R 程式碼
 
-傳統上，整合機器學習解決方案的目的在於廣泛的記錄，以支援的效能與整合。 不過，移動到生產環境的 R，並將 Python 程式碼是在 Microsoft 機器學習服務、 更容易，因為程式碼可以執行 SQL Server 中和使用呼叫預存程序。 您可以繼續使用熟悉的工具，而不需要安裝 R 開發環境。 
+傳統上，整合機器學習解決方案的目的在於廣泛的記錄，以支援的效能與整合。 不過，移動到生產環境的 R，並將 Python 程式碼是在 SQL Server 機器學習服務，更容易，因為程式碼可以執行 SQL Server 中和使用呼叫預存程序。 您可以繼續使用熟悉的工具，而不需要安裝 R 開發環境。 
 
 如需基本語法的詳細資訊，請參閱：
 

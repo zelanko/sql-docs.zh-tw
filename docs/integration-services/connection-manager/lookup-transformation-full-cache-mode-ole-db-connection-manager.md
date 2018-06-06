@@ -1,30 +1,28 @@
 ---
-title: "查閱轉換完整快取模式 - OLE DB 連線管理員 | Microsoft Docs"
-ms.custom: 
+title: 查閱轉換完整快取模式 - OLE DB 連線管理員 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/07/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
 ms.component: connection-manager
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - Lookup transformation [Integration Services]
 ms.assetid: c4150e1b-bdff-4f7a-af4c-3401c34def83
-caps.latest.revision: 
+caps.latest.revision: 17
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 6d69961ae90e09cc218fc24cfe6ffe364c63ee2f
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 194c86088c8770fc74f8c7543616d79021031f1c
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="lookup-transformation-full-cache-mode---ole-db-connection-manager"></a>查閱轉換完整快取模式 - OLE DB 連線管理員
   您可以將查閱轉換設定為使用完整快取模式以及 OLE DB 連接管理員。 在完整快取模式中，參考資料集會在查閱轉換執行之前載入快取。  
@@ -37,12 +35,12 @@ ms.lasthandoff: 01/25/2018
   
 1.  在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中，開啟包含所需封裝的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 專案，然後在 [方案總管] 中按兩下該封裝。  
   
-2.  在 **[資料流程]** 索引標籤中，將查閱轉換從 **[工具箱]**拖曳至設計介面。  
+2.  在 **[資料流程]** 索引標籤中，將查閱轉換從 **[工具箱]** 拖曳至設計介面。  
   
 3.  從來源或先前的轉換將連接子拖曳到查閱轉換，以便將查閱轉換連接到資料流程。  
   
     > [!NOTE]  
-    >  查閱轉換如果連接到包含空白日期欄位的一般檔案，則查閱轉換可能不會驗證。 此轉換是否會驗證將取決於一般檔案的連線管理員是否已設定為保留 null 值。 若要確保查閱轉換會驗證，請在 **[一般檔案來源編輯器]**的 **[連線管理員]**頁面上，選取 **[將來源的 Null 值保留為資料流程中的 Null 值]** 選項。  
+    >  查閱轉換如果連接到包含空白日期欄位的一般檔案，則查閱轉換可能不會驗證。 此轉換是否會驗證將取決於一般檔案的連線管理員是否已設定為保留 null 值。 若要確保查閱轉換會驗證，請在 **[一般檔案來源編輯器]** 的 **[連線管理員]** 頁面上，選取 **[將來源的 Null 值保留為資料流程中的 Null 值]** 選項。  
   
 4.  按兩下來源或前一個轉換以設定元件。  
   

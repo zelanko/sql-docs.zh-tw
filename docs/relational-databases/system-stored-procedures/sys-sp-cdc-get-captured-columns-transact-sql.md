@@ -1,16 +1,14 @@
 ---
-title: "sys.sp_cdc_get_captured_columns (TRANSACT-SQL) |Microsoft 文件"
-ms.custom: 
+title: sys.sp_cdc_get_captured_columns (TRANSACT-SQL) |Microsoft 文件
+ms.custom: ''
 ms.date: 03/15/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: system-objects
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_cdc_get_captured_columns
@@ -24,16 +22,15 @@ helpviewer_keywords:
 - sp_cdc_get_captured_columns
 - change data capture [SQL Server], querying metadata
 ms.assetid: d9e680be-ab9b-4e0c-b63a-90658f241df8
-caps.latest.revision: 
+caps.latest.revision: 30
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: e232446f85dabc19856913ebf2e0cc5f886dc8cb
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: b131dce10e231bc0ee479ff0157a614bcfb2d6f4
+ms.sourcegitcommit: fc3cd23685c6b9b6972d6a7bab2cc2fc5ebab5f2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 05/25/2018
 ---
 # <a name="sysspcdcgetcapturedcolumns-transact-sql"></a>sys.sp_cdc_get_captured_columns (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -68,7 +65,7 @@ sys.sp_cdc_get_captured_columns
 |capture_instance|**sysname**|擷取執行個體的名稱。|  
 |column_name|**sysname**|擷取來源資料行的名稱。|  
 |column_id|**int**|來源資料表中資料行的識別碼。|  
-|ordinal_position|**int**|來源資料表中資料行的位置。|  
+|column_ordinal|**int**|來源資料表中資料行的位置。|  
 |data_type|**sysname**|資料行資料類型。|  
 |character_maximum_length|**int**|以字元為基礎之資料行的最大字元長度，否則為 NULL。|  
 |numeric_precision|**tinyint**|如果是以數值為基礎，就是資料行的有效位數，否則為 NULL。|  
@@ -95,7 +92,7 @@ EXECUTE sys.sp_cdc_get_captured_columns
 GO  
 ```  
   
-## <a name="see-also"></a>請參閱  
- [sys.sp_cdc_help_change_data_capture &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-help-change-data-capture-transact-sql.md)  
+## <a name="see-also"></a>另請參閱  
+ [sys.sp_cdc_help_change_data_capture &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-help-change-data-capture-transact-sql.md)  
   
   

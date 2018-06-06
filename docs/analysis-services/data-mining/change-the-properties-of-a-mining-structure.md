@@ -1,31 +1,23 @@
 ---
-title: "變更採礦結構的屬性 |Microsoft 文件"
-ms.custom: 
-ms.date: 03/13/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
-helpviewer_keywords: mining structures [Analysis Services], properties
-ms.assetid: 03b16897-2e36-42b8-9f7d-db1b9b898401
-caps.latest.revision: "28"
-author: Minewiskan
+title: 變更採礦結構的屬性 |Microsoft 文件
+ms.date: 05/01/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: data-mining
+ms.topic: conceptual
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 2f97c94a1c594a341c1e03326c975a080d9033cf
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 8064fcc088c7ae9e7dd96c5c132b1246fe0ae2db
+ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="change-the-properties-of-a-mining-structure"></a>變更採礦結構的屬性
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]有兩種類型的採礦結構時，這兩者都可以修改的屬性：  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+  採礦結構有兩種屬性，這兩種屬性都可以修改：  
   
 -   影響整個採礦結構的採礦結構屬性  
   
@@ -45,7 +37,7 @@ ms.lasthandoff: 01/08/2018
   
      您在設計師中選取其他元素時，新值就會生效。  
   
-## <a name="see-also"></a>請參閱  
- [採礦結構工作和操作說明](../../analysis-services/data-mining/mining-structure-tasks-and-how-tos.md)  
+## <a name="see-also"></a>另請參閱  
+ [採礦結構工作和使用說明](../../analysis-services/data-mining/mining-structure-tasks-and-how-tos.md)  
   
   

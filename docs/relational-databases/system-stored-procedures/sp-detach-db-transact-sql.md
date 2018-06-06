@@ -1,16 +1,14 @@
 ---
-title: "sp_detach_db (TRANSACT-SQL) |Microsoft 文件"
-ms.custom: 
+title: sp_detach_db (TRANSACT-SQL) |Microsoft 文件
+ms.custom: ''
 ms.date: 09/30/2015
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: system-objects
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_detach_db
@@ -21,16 +19,15 @@ helpviewer_keywords:
 - sp_detach_db
 - detaching databases [SQL Server]
 ms.assetid: abcb1407-ff78-4c76-b02e-509c86574462
-caps.latest.revision: 
+caps.latest.revision: 86
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 09fd806b6ca491507fd748c3e2f9751b27c1eda5
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: c0f17581782cea310bcfad9ec6d7ce4823d1d38c
+ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="spdetachdb-transact-sql"></a>sp_detach_db (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -56,15 +53,15 @@ sp_detach_db [ @dbname= ] 'database_name'
  這是要卸離的資料庫名稱。 *database_name*是**sysname**值，預設值是 NULL。  
   
  [ **@skipchecks =** ] **'***skipchecks***'**  
- 指定要跳過或執行 UPDATE STATISTIC。 *skipchecks*是**nvarchar （10)**值，預設值是 NULL。 若要略過 UPDATE STATISTICS，指定**true**。 若要明確執行 UPDATE STATISTICS，請指定**false**。  
+ 指定要跳過或執行 UPDATE STATISTIC。 *skipchecks*是**nvarchar （10)** 值，預設值是 NULL。 若要略過 UPDATE STATISTICS，指定**true**。 若要明確執行 UPDATE STATISTICS，請指定**false**。  
   
  根據預設，系統會執行 UPDATE STATISTICS 來更新資料表和索引之資料的相關資訊。 對於要移至唯讀媒體的資料庫而言，執行 UPDATE STATISTICS 很有用。  
   
  [ **@keepfulltextindexfile=** ] **'***KeepFulltextIndexFile***'**  
- 指定在資料庫卸離作業期間，將不卸除與要卸離之資料庫相關聯的全文檢索索引檔案。 *KeepFulltextIndexFile*是**nvarchar （10)**值預設值是**true**。 如果*KeepFulltextIndexFile*是**false**、 與資料庫相關聯的全文檢索索引的所有檔案和全文檢索索引的中繼資料會卸除，除非資料庫為唯讀。 如果是 NULL 或**true**，全文檢索相關中繼資料會保留。  
+ 指定在資料庫卸離作業期間，將不卸除與要卸離之資料庫相關聯的全文檢索索引檔案。 *KeepFulltextIndexFile*是**nvarchar （10)** 值預設值是**true**。 如果*KeepFulltextIndexFile*是**false**、 與資料庫相關聯的全文檢索索引的所有檔案和全文檢索索引的中繼資料會卸除，除非資料庫為唯讀。 如果是 NULL 或**true**，全文檢索相關中繼資料會保留。  
   
 > [!IMPORTANT]  
->  **@keepfulltextindexfile** 的未來版本將移除參數[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 請勿在新的開發工作中使用此參數，並且盡快修改使用此參數的應用程式。  
+>  **@keepfulltextindexfile**的未來版本將移除參數[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 請勿在新的開發工作中使用此參數，並且盡快修改使用此參數的應用程式。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  0 (成功) 或 1 (失敗)  
@@ -76,7 +73,7 @@ sp_detach_db [ @dbname= ] 'database_name'
  卸離資料庫時，就會卸除其所有中繼資料。 如果資料庫是預設資料庫的任何登入帳戶，**主要**即成為其預設資料庫。  
   
 > [!NOTE]  
->  如需如何檢視所有登入帳戶的預設資料庫資訊，請參閱[sp_helplogins &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/sp-helplogins-transact-sql.md). 如果您有必要的權限，您可以使用[ALTER LOGIN](../../t-sql/statements/alter-login-transact-sql.md)指派新的預設資料庫的登入。  
+>  如需如何檢視所有登入帳戶的預設資料庫資訊，請參閱[sp_helplogins &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helplogins-transact-sql.md)。 如果您有必要的權限，您可以使用[ALTER LOGIN](../../t-sql/statements/alter-login-transact-sql.md)指派新的預設資料庫的登入。  
   
 ## <a name="restrictions"></a>限制  
  如果出現下列的任何狀況，您便無法卸離資料庫：  

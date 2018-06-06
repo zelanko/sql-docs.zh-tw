@@ -1,36 +1,32 @@
 ---
-title: "移動工作負載群組 | Microsoft Docs"
-ms.custom: 
+title: 移動工作負載群組 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/03/2017
-ms.prod: sql-non-specified
-ms.prod_service: database-engine
-ms.service: 
-ms.component: resource-governor
-ms.reviewer: 
+ms.prod: sql
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: performance
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 f1_keywords:
 - sql13.swb.rg.properties_moveworkloadgroup.f1
 helpviewer_keywords:
 - workload groups [SQL Server], move
 - Resource Governor, workload group move
 ms.assetid: f2068636-6e53-486a-a6fc-c12de2a38424
-caps.latest.revision: 
+caps.latest.revision: 12
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 9059139e5ccdc4327095a913752d55a84443d810
-ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
+ms.openlocfilehash: 8d1eb983f32e995d974ffbfb460e679f715d20ac
+ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="move-a-workload-group"></a>移動工作負載群組
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 您可以使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 或 Transact-SQL 將 Resource Governor 工作負載群組移至不同的資源集區。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  您可以使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 或 Transact-SQL 將資源管理員工作負載群組移至不同的資源集區。  
   
 -   **Before you begin:**  [Limitations and Restrictions](#LimitationsRestrictions), [Permissions](#Permissions)  
   
@@ -58,7 +54,7 @@ ms.lasthandoff: 01/18/2018
   
 5.  可用的資源集區會顯示在此視窗中。 按一下您想要將工作負載群組移到其中的資源集區名稱，然後按一下 **[確定]** 執行此動作。  
   
-6.  等到您按一下 **[確定]**之後，這個動作才會完成。 當您按一下 **[確定]**，就會執行 ALTER RESOURCE GOVERNOR RECONFIGURE 陳述式。  
+6.  等到您按一下 **[確定]** 之後，這個動作才會完成。 當您按一下 **[確定]**，就會執行 ALTER RESOURCE GOVERNOR RECONFIGURE 陳述式。  
   
 7.  如果建立或重新設定資源集區或工作負載群組的作業失敗，在屬性頁的標題下方會出現摘要錯誤訊息。 若要查看詳細錯誤訊息，按一下錯誤訊息上的向下箭頭。  
   

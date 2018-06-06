@@ -1,17 +1,14 @@
 ---
-title: "Database Engine 查詢編輯器 (SQL Server Management Studio) | Microsoft 文件"
-ms.custom: 
+title: Database Engine 查詢編輯器 (SQL Server Management Studio) | Microsoft 文件
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
-ms.component: ssms-scripting
-ms.reviewer: 
+ms.technology: scripting
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 f1_keywords:
 - sql13.swb.tsqlquery.f1
 dev_langs:
@@ -25,19 +22,20 @@ helpviewer_keywords:
 - Query Editor [Database Engine], Features
 - SQL Server Management Studio [SQL Server], Database Engine Query Editor
 ms.assetid: 05cfae9b-96d5-4a35-a098-0bc3a548bcfc
-caps.latest.revision: 
+caps.latest.revision: 47
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: e6b32e0a52127becc2850e79c0d2b6828ed14aaf
-ms.sourcegitcommit: a0aa5e611a0e6ebb74ac1e2f613e8916dc7a7617
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 8a43ec3925304c5d895ebedbf157ebfecf8f82c0
+ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/24/2018
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="database-engine-query-editor-sql-server-management-studio"></a>Database Engine 查詢編輯器 (SQL Server Management Studio)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 使用 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 查詢編輯器，建立及執行包含 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式的指令碼。 此編輯器也支援執行包含 **sqlcmd** 命令的指令碼。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+  使用 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 查詢編輯器，建立及執行包含 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式的指令碼。 此編輯器也支援執行包含 **sqlcmd** 命令的指令碼。  
   
 ## <a name="transact-sql-f1-help"></a>Transact-SQL F1 說明  
  當您選取 F1 時， [!INCLUDE[ssDE](../../includes/ssde-md.md)] 查詢編輯器支援將您連結至特定 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式的參考主題。 若要執行這項操作，請反白顯示 Transact-SQL 陳述式的名稱，然後選取 F1。 接著，說明搜尋引擎會搜尋具有符合您反白顯示的字串之 F1 說明屬性的主題。  
@@ -109,7 +107,7 @@ ms.lasthandoff: 01/24/2018
  在 [結果] 視窗中以一或多個方格傳回查詢結果。  
   
  **將結果存檔**  
- 執行查詢時，會開啟 [儲存結果] 對話方塊。 在 **[儲存於]**中，選取您想要用來儲存檔案的資料夾。 在 **[檔案名稱]**中輸入檔案的名稱，然後按一下 **[儲存]** ，將查詢結果另存為使用 .rpt 副檔名的 **[報表]** 檔案。 若要使用進階選項，請按一下 [儲存] 按鈕上的向下箭頭，然後按一下 [使用編碼方式儲存]。  
+ 執行查詢時，會開啟 [儲存結果] 對話方塊。 在 **[儲存於]** 中，選取您想要用來儲存檔案的資料夾。 在 **[檔案名稱]** 中輸入檔案的名稱，然後按一下 **[儲存]** ，將查詢結果另存為使用 .rpt 副檔名的 **[報表]** 檔案。 若要使用進階選項，請按一下 [儲存] 按鈕上的向下箭頭，然後按一下 [使用編碼方式儲存]。  
   
  **註解選取範圍**  
  在行頭加入註解運算子 (--)，將目前的行標示為註解。  

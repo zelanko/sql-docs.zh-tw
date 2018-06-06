@@ -1,41 +1,23 @@
 ---
-title: "時間序列模型查詢範例 |Microsoft 文件"
-ms.custom: 
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
-helpviewer_keywords:
-- time series algorithms [Analysis Services]
-- MISSING_VALUE_SUBSTITUTION
-- time series [Analysis Services]
-- predictions [Analysis Services], time series
-- EXTEND_MODEL_CASES parameter
-- REPLACE_MODEL_CASES parameter
-- prediction queries [DMX]
-- PREDICTION_SMOOTHING
-- content queries [DMX]
-ms.assetid: 9a1c527e-2997-493b-ad6a-aaa71260b018
-caps.latest.revision: 
-author: Minewiskan
+title: 時間序列模型查詢範例 |Microsoft 文件
+ms.date: 05/08/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: data-mining
+ms.topic: conceptual
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 4467fa9fcf4b695b77d533e358019b020545861c
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: fb280c856b6e7231c078bf830be4a10f9ecc4723
+ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="time-series-model-query-examples"></a>時間序列模型查詢範例
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-當您針對資料採礦模型建立查詢時，可以建立內容查詢來提供有關分析期間所發現之模式的詳細資料，或是建立預測查詢來使用模型中的模式，為新的資料進行預測。 例如，時間序列模型的內容查詢可能會提供有關所偵測到之週期性結構的其他詳細資料，而預測查詢則為您提供下 5-10 個時間配量的預測。 您也可以使用查詢來擷取有關模型的中繼資料。  
+  當您針對資料採礦模型建立查詢時，可以建立內容查詢來提供有關分析期間所發現之模式的詳細資料，或是建立預測查詢來使用模型中的模式，為新的資料進行預測。 例如，時間序列模型的內容查詢可能會提供有關所偵測到之週期性結構的其他詳細資料，而預測查詢則為您提供下 5-10 個時間配量的預測。 您也可以使用查詢來擷取有關模型的中繼資料。  
   
  本章節將說明如何針對以 Microsoft 時間序列演算法為根據的模型來建立兩種查詢。  
   
@@ -73,9 +55,9 @@ WHERE MODEL_NAME = '<model name>'
   
 |MINING_PARAMETERS|  
 |------------------------|  
-|COMPLEXITY_PENALTY=0.1,MINIMUM_SUPPORT=10,PERIODICITY_HINT={1,3},….|  
+|COMPLEXITY_PENALTY = 0.1，MINIMUM_SUPPORT = 10，PERIODICITY_HINT ={1,3}，...|  
   
- 預設週期性提示為 \{1\}，而且會出現在所有模型中；這個範例模型是使用其他提示所建立，這個提示可能不會出現在最終模型中。  
+ 預設週期性提示為 {1}，而且會出現在所有模型中；這個範例模型是使用其他提示所建立，這個提示可能不會出現在最終模型中。  
   
 > [!NOTE]  
 >  這裡的結果已被截斷來提高可讀性。  
@@ -222,11 +204,11 @@ AND NODE_TYPE = 15
 |||  
 |-|-|  
 |預測函數|使用方式|  
-|[Lag &#40; DMX &#41;](../../dmx/lag-dmx.md)|傳回目前案例的日期與定型集的最後日期之間的時間配量數目。<br /><br /> 這個函數的典型用法就是用來識別最近的定型案例，好讓您可以擷取有關案例的詳細資料。|  
-|[PredictNodeId &#40; DMX &#41;](../../dmx/predictnodeid-dmx.md)|傳回指定之可預測資料行的節點識別碼。<br /><br /> 這個函數的典型用法就是用來識別產生特定預測值的節點，好讓您可以檢閱與此節點有關的案例，或擷取方程式和其他詳細資料。|  
-|[PredictStdev &#40; DMX &#41;](../../dmx/predictstdev-dmx.md)|傳回指定之可預測資料行中預測的標準差。<br /><br /> 此函數會取代 INCLUDE_STATISTICS 引數，時間序列模型不支援這個引數。|  
-|[PredictVariance &#40; DMX &#41;](../../dmx/predictvariance-dmx.md)|傳回指定之可預測資料行中預測的變異數。<br /><br /> 此函數會取代 INCLUDE_STATISTICS 引數，時間序列模型不支援這個引數。|  
-|[PredictTimeSeries &#40; DMX &#41;](../../dmx/predicttimeseries-dmx.md)|傳回時間序列的預測記錄值或未來預測值。<br /><br /> 您也可以使用一般預測函數 [Predict &#40;DMX&#41;](../../dmx/predict-dmx.md) 來查詢時間序列模型。|  
+|[Lag & #40; DMX & #41;](../../dmx/lag-dmx.md)|傳回目前案例的日期與定型集的最後日期之間的時間配量數目。<br /><br /> 這個函數的典型用法就是用來識別最近的定型案例，好讓您可以擷取有關案例的詳細資料。|  
+|[PredictNodeId & #40; DMX & #41;](../../dmx/predictnodeid-dmx.md)|傳回指定之可預測資料行的節點識別碼。<br /><br /> 這個函數的典型用法就是用來識別產生特定預測值的節點，好讓您可以檢閱與此節點有關的案例，或擷取方程式和其他詳細資料。|  
+|[PredictStdev & #40; DMX & #41;](../../dmx/predictstdev-dmx.md)|傳回指定之可預測資料行中預測的標準差。<br /><br /> 此函數會取代 INCLUDE_STATISTICS 引數，時間序列模型不支援這個引數。|  
+|[PredictVariance & #40; DMX & #41;](../../dmx/predictvariance-dmx.md)|傳回指定之可預測資料行中預測的變異數。<br /><br /> 此函數會取代 INCLUDE_STATISTICS 引數，時間序列模型不支援這個引數。|  
+|[PredictTimeSeries & #40; DMX & #41;](../../dmx/predicttimeseries-dmx.md)|傳回時間序列的預測記錄值或未來預測值。<br /><br /> 您也可以使用一般預測函數 [Predict &#40;DMX&#41;](../../dmx/predict-dmx.md) 來查詢時間序列模型。|  
   
  如需所有 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 演算法通用函數的清單，請參閱[一般預測函數 &#40;DMX&#41;](../../dmx/general-prediction-functions-dmx.md)。 如需特定函數的語法，請參閱[資料採礦延伸模組 &#40;DMX&#41; 函數參考](../../dmx/data-mining-extensions-dmx-function-reference.md)。  
   
@@ -235,6 +217,6 @@ AND NODE_TYPE = 15
  [資料採礦查詢](../../analysis-services/data-mining/data-mining-queries.md)   
  [Microsoft 時間序列演算法](../../analysis-services/data-mining/microsoft-time-series-algorithm.md)   
  [Microsoft 時間序列演算法技術參考](../../analysis-services/data-mining/microsoft-time-series-algorithm-technical-reference.md)   
- [時間序列模型 &#40; 的採礦模型內容Analysis Services-資料採礦 &#41;](../../analysis-services/data-mining/mining-model-content-for-time-series-models-analysis-services-data-mining.md)  
+ [時間序列模型 & #40; 的採礦模型內容Analysis Services-資料採礦 & #41;](../../analysis-services/data-mining/mining-model-content-for-time-series-models-analysis-services-data-mining.md)  
   
   

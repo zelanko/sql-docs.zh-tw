@@ -1,15 +1,14 @@
 ---
-title: "WMI 事件提供者伺服器概念 |Microsoft 文件"
-ms.custom: 
+title: WMI 事件提供者伺服器概念 |Microsoft 文件
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
 ms.component: wmi
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - server events [WMI]
@@ -18,20 +17,19 @@ helpviewer_keywords:
 - monitoring events [WMI]
 - events [WMI]
 ms.assetid: 80767fe0-32ac-406a-81a0-8212cd6ce7e4
-caps.latest.revision: 
-author: JennieHubbard
-ms.author: jhubbard
+caps.latest.revision: 18
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 90490b4884521f509d6e008f2bbde49605afd7b4
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.openlocfilehash: 0572bd44ec4fd648b087ceae004aae8d5b529bc6
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="wmi-provider-for-server-events-concepts"></a>伺服器事件的 WMI 提供者概念
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
-伺服器事件的 WMI 提供者可讓您使用 Windows Management Instrumentation (WMI)，在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的執行個體中監視事件。  
+  伺服器事件的 WMI 提供者可讓您使用 Windows Management Instrumentation (WMI)，在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的執行個體中監視事件。  
   
 ## <a name="in-this-section"></a>本節內容  
  [了解伺服器事件的 WMI 提供者](../../relational-databases/wmi-provider-server-events/understanding-the-wmi-provider-for-server-events.md)  

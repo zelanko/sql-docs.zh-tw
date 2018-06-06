@@ -1,39 +1,24 @@
 ---
-title: "MergePartitions 元素 (XMLA) |Microsoft 文件"
-ms.custom: 
-ms.date: 03/03/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services, azure-analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+title: MergePartitions 元素 (XMLA) |Microsoft 文件
+ms.date: 05/08/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: xmla
 ms.topic: reference
-apiname: MergePartitions Element
-apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
-apitype: Schema
-applies_to: SQL Server 2016 Preview
-f1_keywords:
-- http://schemas.microsoft.com/analysisservices/2003/engine#MergePartitions
-- microsoft.xml.analysis.mergepartitions
-- urn:schemas-microsoft-com:xml-analysis#MergePartitions
-helpviewer_keywords: MergePartitions command
-ms.assetid: cf538189-0629-49b3-8e01-32afba7b020d
-caps.latest.revision: "12"
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 3eec367659c649c779ea053d66f8016a5b84a6e5
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 937ea7bb52e1b1ab4be992b5a8415edd51e680a9
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34573950"
 ---
 # <a name="mergepartitions-element-xmla"></a>MergePartitions 元素 (XMLA)
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]將一或多個來源資料分割的資料合併至目標資料分割，然後刪除來源資料分割。  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
+  將一個或多個來源資料分割的資料合併至目標資料分割中，然後刪除來源資料分割。  
   
 ## <a name="syntax"></a>語法  
   
@@ -65,7 +50,7 @@ ms.lasthandoff: 01/08/2018
 ## <a name="remarks"></a>備註  
  所有物件參考中的**來源**和**目標**項目必須指向相同的量值群組中的不同資料分割。 否則，系統將發生錯誤。  
   
-## <a name="see-also"></a>請參閱  
- [命令 &#40;XMLA &#41;](../../../analysis-services/xmla/xml-elements-commands/xml-elements-commands.md)  
+## <a name="see-also"></a>另請參閱
+ [命令&#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-commands/xml-elements-commands.md)  
   
   

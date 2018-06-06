@@ -1,33 +1,30 @@
 ---
-title: "書籤屬性 (ADO) |Microsoft 文件"
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
+title: 書籤屬性 (ADO) |Microsoft 文件
+ms.prod: sql
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
-ms.custom: 
-ms.date: 01/19/2017
-ms.reviewer: 
+ms.technology: connectivity
+ms.custom: ''
+ms.date: 03/20/2018
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 apitype: COM
 f1_keywords:
 - Recordset15::Bookmark
 helpviewer_keywords:
 - Bookmark property [ADO]
 ms.assetid: 481dcc93-487b-490e-ac58-a1e9b2ebfd43
-caps.latest.revision: 
+caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 3c6076acd2bde7e82bf142bad76093d582106877
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: e8b73c3d31886877702cadfca0194fd628bf6172
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="bookmark-property-ado"></a>書籤 屬性 (ADO)
 指出目前的記錄中的唯一識別書籤[資料錄集](../../../ado/reference/ado-api/recordset-object-ado.md)物件或設定目前資料錄**資料錄集**有效書籤所識別的記錄中的物件。  
@@ -40,7 +37,7 @@ ms.lasthandoff: 02/09/2018
   
  當您開啟**資料錄集**物件，其記錄的每個都有唯一的書籤。 若要儲存目前的資料錄的書籤，來指定的值**書籤**變數的屬性。 若要快速回到該記錄移動到不同記錄之後，任何時候，設定**資料錄集**物件的**書籤**屬性設為該變數的值。  
   
- 使用者可能無法檢視書籤的值。 此外，使用者不應預期是直接比較的書籤。 兩個參考同一筆記錄的書籤可能有不同的值。  
+ 使用者可能無法檢視書籤的值。 此外，使用者不應預期要直接比較，因為兩個參考同一筆記錄的書籤可能有不同的值的書籤。  
   
  如果您使用[複製](../../../ado/reference/ado-api/clone-method-ado.md)方法來建立一份**資料錄集**物件**書籤**原始和重複的屬性設定**資料錄集**物件相同，且您可以交換使用。 不過，您無法使用從不同的書籤**資料錄集**物件交替使用，即使它們已建立從相同來源或命令。  
   

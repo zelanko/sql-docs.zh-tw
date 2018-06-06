@@ -1,31 +1,29 @@
 ---
-title: "啟用、停用以及刪除中斷點 | Microsoft Docs"
-ms.custom: 
+title: 啟用、停用以及刪除中斷點 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
-ms.component: ssms-scripting
-ms.reviewer: 
+ms.technology: scripting
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: 357b5874-273f-43a9-8e30-83872bdea5dc
-caps.latest.revision: 
+caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 2c78a83bbf85641580f05d08af7272bce554bff2
-ms.sourcegitcommit: a0aa5e611a0e6ebb74ac1e2f613e8916dc7a7617
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 91d2ee0f4e000d5b27b3644532d9c34bc3713637
+ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/24/2018
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="enable-disable-and-delete-breakpoints"></a>啟用、停用以及刪除中斷點
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 若要檢視和管理所有已開啟的中斷點，您可以使用 [中斷點] 視窗。 這個視窗可用以檢視中斷點資訊，以及採取刪除、停用或啟用中斷點的這類動作。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+  若要檢視和管理所有已開啟的中斷點，您可以使用 **[中斷點]** 視窗。 這個視窗可用以檢視中斷點資訊，以及採取刪除、停用或啟用中斷點的這類動作。  
   
 ## <a name="the-breakpoints-window"></a>中斷點視窗  
  **[中斷點]** 視窗會列出一些資訊，例如中斷點所在的程式碼行。 在 **[中斷點]** 視窗中，您也可以刪除、停用和啟用中斷點。 如需有關 **[中斷點]** 視窗的詳細資訊，請參閱＜ [[中斷點] Window](../../relational-databases/scripting/transact-sql-debugger-breakpoints-window.md)＞。  

@@ -1,31 +1,23 @@
 ---
-title: "資料採礦 (SSAS) |Microsoft 文件"
-ms.custom: 
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
-helpviewer_keywords: data mining [Analysis Services], about data mining
-ms.assetid: b1c912da-72f6-4d96-89c8-55a2c4f19e88
-caps.latest.revision: "31"
-author: Minewiskan
+title: 資料採礦 (SSAS) |Microsoft 文件
+ms.date: 05/01/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: data-mining
+ms.topic: conceptual
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 6ccc1faad28913133cc0870899f20b443fc28eb7
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 7468074eb8a18dd9448e558cadebdc9f07ffc2cb
+ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="data-mining-ssas"></a>資料採礦 (SSAS)
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2000年發行版本以來已經過的預測分析中的前置字元藉由提供中的資料採礦[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]。 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料採礦的結合，針對包含資料清理和準備、預測分析機器學習和報表提供整合平台。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料採礦包括多個標準演算法，包括 EM 和 k-means 叢集模型，類神經網路、羅吉斯迴歸與線性迴歸、決策樹和貝氏機率分類分類器。 所有模型已都整合視覺效果以協助您開發、改善及評估模型。  將資料採礦整合至商業智慧方案，可協助您對複雜問題做出明智的決策。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 自 2000 版本後，藉由提供 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]的資料採礦，已是預測分析中的佼佼者。 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料採礦的結合，針對包含資料清理和準備、預測分析機器學習和報表提供整合平台。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料採礦包括多個標準演算法，包括 EM 和 k-means 叢集模型，類神經網路、羅吉斯迴歸與線性迴歸、決策樹和貝氏機率分類分類器。 所有模型已都整合視覺效果以協助您開發、改善及評估模型。  將資料採礦整合至商業智慧方案，可協助您對複雜問題做出明智的決策。  
   
 ## <a name="benefits-of-data-mining"></a>資料採礦的優點  
  資料採礦 (也稱為預測分析和機器學習服務) 使用經過詳盡研究的統計原則來探索資料的模式。 您可以將 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 中的資料採礦演算法套用至資料，以預測趨勢、識別模式、建立規則和建議、分析複雜資料集中的事件順序，以及取得新觀點。  
@@ -56,25 +48,25 @@ ms.lasthandoff: 01/08/2018
   
 -   [資料採礦概念](../../analysis-services/data-mining/data-mining-concepts.md)  
   
--   [資料採礦演算法 &#40;Analysis Services - 資料採礦&#41;](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)  
+-   [資料採礦演算法 & #40;Analysis Services-資料採礦 & #41;](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)  
   
--   [採礦結構 &#40;Analysis Services-資料採礦 &#41;](../../analysis-services/data-mining/mining-structures-analysis-services-data-mining.md)  
+-   [採礦結構 & #40;Analysis Services-資料採礦 & #41;](../../analysis-services/data-mining/mining-structures-analysis-services-data-mining.md)  
   
 -   [採礦模型 &#40;Analysis Services - 資料採礦&#41;](../../analysis-services/data-mining/mining-models-analysis-services-data-mining.md)  
   
--   [測試及驗證 &#40;資料採礦&#41;](../../analysis-services/data-mining/testing-and-validation-data-mining.md)  
+-   [測試和驗證 &#40;資料採礦&#41;](../../analysis-services/data-mining/testing-and-validation-data-mining.md)  
   
 -   [資料採礦查詢](../../analysis-services/data-mining/data-mining-queries.md)  
   
 -   [資料採礦方案](../../analysis-services/data-mining/data-mining-solutions.md)  
   
--   [資料採礦工具。](../../analysis-services/data-mining/data-mining-tools.md)  
+-   [資料採礦工具](../../analysis-services/data-mining/data-mining-tools.md)  
   
 -   [資料採礦架構](../../analysis-services/data-mining/data-mining-architecture.md)  
   
--   [安全性概觀 &#40;資料採礦&#41;](../../analysis-services/data-mining/security-overview-data-mining.md)  
+-   [安全性概觀 & #40; 資料採礦 & #41;](../../analysis-services/data-mining/security-overview-data-mining.md)  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [SQL Server R 服務](../../advanced-analytics/r-services/sql-server-r-services.md)  
   
   

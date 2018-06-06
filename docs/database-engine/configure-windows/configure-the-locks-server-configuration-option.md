@@ -1,30 +1,26 @@
 ---
-title: "設定 locks 伺服器組態選項 | Microsoft Docs"
-ms.custom: 
+title: 設定 locks 伺服器組態選項 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/02/2017
-ms.prod: sql-non-specified
-ms.prod_service: database-engine
-ms.service: 
-ms.component: configure-windows
-ms.reviewer: 
+ms.prod: sql
+ms.prod_service: high-availability
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: configuration
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - locks option [SQL Server]
 ms.assetid: b0cf0f86-7652-4574-a9fb-908e10d03973
-caps.latest.revision: 
+caps.latest.revision: 28
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 0cdafcdcd8fbabebfc55c285b46ea4ee1534ec43
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: dbe738bb44203f45b6d780b9beed9ec5dbb1dc29
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="configure-the-locks-server-configuration-option"></a>設定 locks 伺服器組態選項
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -77,7 +73,7 @@ ms.lasthandoff: 02/03/2018
   
 2.  按一下 **[進階]** 節點。  
   
-3.  在 **[平行處理原則]**下，輸入所需的 **locks** 選項值。  
+3.  在 **[平行處理原則]** 下，輸入所需的 **locks** 選項值。  
   
      使用 **locks** 選項來設定可用鎖定的最大數目，從而限制 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 用於鎖定的記憶體數量。  
   

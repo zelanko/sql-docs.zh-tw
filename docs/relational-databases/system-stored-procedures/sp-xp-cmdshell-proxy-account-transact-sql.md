@@ -1,16 +1,14 @@
 ---
-title: "sp_xp_cmdshell_proxy_account (TRANSACT-SQL) |Microsoft 文件"
-ms.custom: 
+title: sp_xp_cmdshell_proxy_account (TRANSACT-SQL) |Microsoft 文件
+ms.custom: ''
 ms.date: 03/16/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: system-objects
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_xp_cmdshell_proxy_account
@@ -21,16 +19,16 @@ helpviewer_keywords:
 - sp_xp_cmdshell_proxy_account
 - xp_cmdshell
 ms.assetid: f807c373-7fbc-4108-a2bd-73b48a236003
-caps.latest.revision: 
+caps.latest.revision: 15
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: f2aa36f38df0fdf1f36e5cfddc48044222d9509c
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 18c960fdf3d70c82684d493fd498a57ed357bb4d
+ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="spxpcmdshellproxyaccount-transact-sql"></a>sp_xp_cmdshell_proxy_account (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -56,14 +54,14 @@ sp_xp_cmdshell_proxy_account [ NULL | { 'account_name' , 'password' } ]
  *account_name*  
  指定將成為 Proxy 的 Windows 登入。  
   
- *密碼*  
+ *password*  
  指定 Windows 帳戶的密碼。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  0 (成功) 或 1 (失敗)  
   
 ## <a name="remarks"></a>備註  
- Proxy 認證將稱為**# # xp_cmdshell_proxy_account # #**。  
+ Proxy 認證將稱為 **# # xp_cmdshell_proxy_account # #**。  
   
  使用 NULL 選項執行時**sp_xp_cmdshell_proxy_account**刪除 proxy 認證。  
   
@@ -88,8 +86,8 @@ EXEC sp_xp_cmdshell_proxy_account NULL;
 GO  
 ```  
   
-## <a name="see-also"></a>請參閱  
- [xp_cmdshell &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/xp-cmdshell-transact-sql.md)   
+## <a name="see-also"></a>另請參閱  
+ [xp_cmdshell &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/xp-cmdshell-transact-sql.md)   
  [CREATE CREDENTIAL &#40;Transact-SQL&#41;](../../t-sql/statements/create-credential-transact-sql.md)   
  [sys.credentials &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-credentials-transact-sql.md)   
  [系統預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   

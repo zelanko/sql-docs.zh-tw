@@ -1,16 +1,14 @@
 ---
-title: "物件目錄檢視 (TRANSACT-SQL) |Microsoft 文件"
-ms.custom: 
+title: 物件目錄檢視 (TRANSACT-SQL) |Microsoft 文件
+ms.custom: ''
 ms.date: 03/03/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
 ms.component: system-catalog-views
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: system-objects
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - TSQL
@@ -18,16 +16,15 @@ helpviewer_keywords:
 - object catalog views [SQL Server]
 - catalog views [SQL Server], objects
 ms.assetid: e8670a6b-e15c-4126-8d2d-c9cfb968a12d
-caps.latest.revision: 
+caps.latest.revision: 35
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: ae328f6fba7a8aa01facf2270196dae9456bbc13
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 3d2e8f2da3cd467e479d79da2c942405aefc0fbc
+ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="object-catalog-views-transact-sql"></a>物件目錄檢視 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -57,8 +54,8 @@ ms.lasthandoff: 11/21/2017
 |[sys.views](../../relational-databases/system-catalog-views/sys-views-transact-sql.md)|[sys.numbered_procedure_parameters](../../relational-databases/system-catalog-views/sys-numbered-procedure-parameters-transact-sql.md)|
 |[sys.numbered_procedures](../../relational-databases/system-catalog-views/sys-numbered-procedures-transact-sql.md)||  
   
-## <a name="see-also"></a>請參閱＜  
- [系統目錄檢視](catalog-views-transact-sql.md)[系統檢視 &#40;TRANSACT-SQL &#41;](http://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)  
+## <a name="see-also"></a>另請參閱  
+ [系統目錄檢視](catalog-views-transact-sql.md)[系統檢視表&#40;Transact SQL&#41;](http://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)  
   
   
 

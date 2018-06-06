@@ -1,35 +1,23 @@
 ---
-title: "SystemGetCrossValidationResults (Analysis Services-資料採礦) |Microsoft 文件"
-ms.custom: 
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: reference
-helpviewer_keywords:
-- SystemGetCrossValidationResults
-- stored procedures [Analysis Services], data mining
-- cross-validation [data mining]
-ms.assetid: f70c3337-c930-434a-b278-caf1ef0c3b3b
-caps.latest.revision: 
-author: Minewiskan
+title: SystemGetCrossValidationResults (Analysis Services-資料採礦) |Microsoft 文件
+ms.date: 05/08/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: data-mining
+ms.topic: conceptual
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 499e62070cb0ec0fed8e814c926d915f7e69bbe3
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 2febed19e2bd481a8e442f115f9691e5abb6be4b
+ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="systemgetcrossvalidationresults-analysis-services---data-mining"></a>SystemGetCrossValidationResults (Analysis Services - 資料採礦)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-將採礦結構分割成指定數目的交叉區段、定型每一個資料分割的模型，然後傳回每一個資料分割的精確度度量。  
+  將採礦結構分割成指定數目的交叉區段、定型每一個資料分割的模型，然後傳回每一個資料分割的精確度度量。  
   
 > [!NOTE]  
 >  這個預存程序無法用來交叉驗證使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 時間序列演算法或 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 時序叢集演算法所建立的叢集模型或模型。 若要交叉驗證叢集模型，您可以使用個別的預存程序 [SystemGetClusterCrossValidationResults &#40;Analysis Services - 資料採礦&#41;](../../analysis-services/data-mining/systemgetclustercrossvalidationresults-analysis-services-data-mining.md)。  
@@ -119,7 +107,7 @@ SystemGetCrossValidationResults(
  預設值是 **null**。  
   
 > [!NOTE]  
->  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 將不會在將 *狀態臨界值* 設定為 0.0 時引發錯誤，但是您絕對不應該使用這個值。 就實際而言，0.0 的臨界值表示機率百分之 0 的預測將會算為正確的。  
+>  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 如果您將不會引發錯誤*狀態臨界值*為 0.0，但您應該永遠不會使用此值。 就實際而言，0.0 的臨界值表示機率百分之 0 的預測將會算為正確的。  
   
  (選擇性)  
   
@@ -195,8 +183,8 @@ NULL
   
 ## <a name="see-also"></a>另請參閱  
  [SystemGetCrossValidationResults](../../analysis-services/data-mining/systemgetcrossvalidationresults-analysis-services-data-mining.md)   
- [SystemGetAccuracyResults &#40;Analysis Services-資料採礦 &#41;](../../analysis-services/data-mining/systemgetaccuracyresults-analysis-services-data-mining.md)   
- [SystemGetClusterCrossValidationResults &#40;Analysis Services-資料採礦 &#41;](../../analysis-services/data-mining/systemgetclustercrossvalidationresults-analysis-services-data-mining.md)   
- [SystemGetClusterAccuracyResults &#40;Analysis Services-資料採礦 &#41;](../../analysis-services/data-mining/systemgetclusteraccuracyresults-analysis-services-data-mining.md)  
+ [SystemGetAccuracyResults &#40;Analysis Services-資料採礦&#41;](../../analysis-services/data-mining/systemgetaccuracyresults-analysis-services-data-mining.md)   
+ [SystemGetClusterCrossValidationResults &#40;Analysis Services-資料採礦&#41;](../../analysis-services/data-mining/systemgetclustercrossvalidationresults-analysis-services-data-mining.md)   
+ [SystemGetClusterAccuracyResults & #40;Analysis Services-資料採礦 & #41;](../../analysis-services/data-mining/systemgetclusteraccuracyresults-analysis-services-data-mining.md)  
   
   

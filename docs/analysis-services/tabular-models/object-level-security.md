@@ -1,31 +1,23 @@
 ---
-title: "表格式模型物件層級安全性 |Microsoft 文件"
-ms.custom: 
-ms.date: 06/20/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services, azure-analysis-services
-ms.service: 
-ms.component: multidimensional-tabular
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords: 
-ms.assetid: 
-caps.latest.revision: 
-author: Minewiskan
+title: 表格式模型物件層級安全性 |Microsoft 文件
+ms.date: 05/07/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: tabular-models
+ms.topic: conceptual
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 73424406508608226cbf30fa0271aa747dbf9101
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 98caa08ef6c3dcba37043124d0263507097a4374
+ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="object-level-security"></a>物件層級安全性
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]資料模型的安全性是以有效地實作[角色](../../analysis-services/tabular-models/roles-ssas-tabular.md)和資料列層級篩選，來定義使用者權限的資料模型物件和資料。 從開始 1400年的表格式模型，您也可以定義物件層級安全性，包括資料表層級的安全性和中的資料行層級安全性[角色物件](../../analysis-services/tabular-models-scripting-language-objects/roles-object-tmsl.md)。
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
+資料模型的安全性是以有效地實作[角色](../../analysis-services/tabular-models/roles-ssas-tabular.md)和資料列層級篩選，來定義使用者權限的資料模型物件和資料。 從開始 1400年的表格式模型，您也可以定義物件層級安全性，包括資料表層級的安全性和中的資料行層級安全性[角色物件](../../analysis-services/tabular-models-scripting-language-objects/roles-object-tmsl.md)。
 
 ## <a name="table-level-security"></a>資料表層級的安全性
 
@@ -95,7 +87,7 @@ ms.lasthandoff: 01/08/2018
 
 
 
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
 [角色](../../analysis-services/tabular-models/roles-ssas-tabular.md)  
 [Roles 物件 (TMSL)](../../analysis-services/tabular-models-scripting-language-objects/roles-object-tmsl.md)  
 [表格式模型指令碼語言 (TMSL)](../../analysis-services/tabular-model-scripting-language-tmsl-reference.md)  

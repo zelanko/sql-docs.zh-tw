@@ -1,30 +1,20 @@
 ---
-title: "上階 (MDX) |Microsoft 文件"
-ms.custom: 
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: language-reference
-f1_keywords: ANCESTOR
-dev_langs: kbMDX
-helpviewer_keywords: Ancestor function
-ms.assetid: b5bf2ce4-20df-4ebc-97eb-e44a6f64cc50
-caps.latest.revision: "46"
-author: Minewiskan
+title: 上階 (MDX) |Microsoft 文件
+ms.date: 05/30/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: mdx
+ms.topic: reference
 ms.author: owend
-manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: a8a7eee3ad6767c0a40dedb8f334c9767778e0d7
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: 5e30774aa9173bfcb7851096a25363c81d7abe9f
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34577070"
 ---
 # <a name="ancestor-mdx"></a>Ancestor (MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -56,7 +46,7 @@ Ancestor(Member_Expression, Distance)
  與**祖系**函式，您提供 MDX 成員運算式給函數，，然後提供層級之成員的上階的 MDX 運算式或代表該成員上面的層級數目的數值運算式。 利用此資訊，**祖系**函式會傳回該層級的上階成員。  
   
 > [!NOTE]  
->  若要傳回上階成員，而不是只是上階成員，其中包含一組使用[祖系 &#40;MDX &#41;](../mdx/ancestors-mdx.md)函式。  
+>  若要傳回上階成員，而不是只是上階成員，其中包含一組使用[祖系&#40;MDX&#41; ](../mdx/ancestors-mdx.md)函式。  
   
  如果指定層級運算式，則**祖系**函式會傳回指定層級的指定成員的上階。 如果指定成員不是位在指定層級的相同階層中，函數會傳回錯誤。  
   
@@ -109,7 +99,7 @@ SELECT {[Measures].[Internet Sales Amount], Measures.x} ON 0,
 FROM [Adventure Works]  
 ```  
   
-## <a name="see-also"></a>請參閱  
- [MDX 函數參考 &#40;MDX &#41;](../mdx/mdx-function-reference-mdx.md)  
+## <a name="see-also"></a>另請參閱  
+ [MDX 函數參考&#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

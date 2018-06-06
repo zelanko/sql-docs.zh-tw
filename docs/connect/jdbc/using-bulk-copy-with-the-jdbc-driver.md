@@ -1,27 +1,24 @@
 ---
-title: "JDBC 驅動程式使用大量複製 |Microsoft 文件"
-ms.custom: 
+title: JDBC 驅動程式使用大量複製 |Microsoft 文件
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
-ms.component: jdbc
-ms.reviewer: 
+ms.prod: sql
+ms.prod_service: connectivity
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: connectivity
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: 21e19635-340d-49bb-b39d-4867102fb5df
-caps.latest.revision: "14"
+caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
-ms.workload: On Demand
-ms.openlocfilehash: f4a714ce9ea2a076b922de3fc66851fa58110eb4
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+manager: craigg
+ms.openlocfilehash: 6daf0ae2773d8a99e4f9264c05024a86fcd79926
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="using-bulk-copy-with-the-jdbc-driver"></a>搭配 JDBC Driver 使用大量複製
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -51,7 +48,7 @@ ms.lasthandoff: 11/18/2017
 > [!NOTE]  
 >  提供的 SQLServerBulkCopy 程式碼範例，只是用來示範使用 SQLServerBulkCopy 的語法。 如果來源和目的地資料表位於相同的 SQL Server 執行個體，則使用 Transact-SQL INSERT … SELECT 陳述式來複製資料會更方便且更快速。  
   
-###  <a name="BKMK_TableSetup"></a>資料表設定  
+###  <a name="BKMK_TableSetup"></a> 資料表設定  
  若要建立程式碼範例正確執行所需的資料表，您必須在 SQL Server 資料庫中執行下列 Transact-SQL 陳述式。  
   
 ```  
@@ -460,7 +457,7 @@ public class Program
   
 ```  
   
-##  <a name="BKMK_TransactionBulk"></a>異動和大量複製作業  
+##  <a name="BKMK_TransactionBulk"></a> 異動和大量複製作業  
  大量複製作業可以做為隔離作業或做為多步驟交易的一部分執行。 這第二個選項可讓您執行相同交易內的多項大量複製作業，以及執行其他資料庫作業 (例如插入、更新和刪除)，同時仍然能夠認可或回復整個交易。  
   
  根據預設，大量複製作業會做為隔離作業執行。 該複製作業會以非交易的方式進行，且沒有機會復原。 當錯誤發生時，如果您需要復原全部或部分大量複製，您可以使用 SQLServerBulkCopy 受管理的交易，或執行現有交易中的大量複製作業。  
@@ -872,7 +869,7 @@ public class Program
   
 5.  選取**撰寫查詢來指定要傳送的資料**和**下一步**。  輸入您**SQL 陳述式**選取 ProductID，Name，ProductNumber FROM Production.Product 和**下一步**  
   
-6.  檢查設定：您可以將資料列分隔符號保留為 {CR} {LF}，將資料行分隔符號您留為逗號 {,}。  選取**編輯對應**... 並檢查資料**類型**是正確的每個資料行 （例如 ProductID 和 Unicode 字串，對於其餘的整數）。  
+6.  請檢查組態： 您可以保留為 {CR} {LF} 的資料列分隔符號和資料行分隔符號為逗號{,}。  選取**編輯對應**... 並檢查資料**類型**是正確的每個資料行 （例如 ProductID 和 Unicode 字串，對於其餘的整數）。  
   
 7.  跳到**完成**並執行匯出。  
   
@@ -1114,7 +1111,7 @@ public class Program
 |Void setTimeWithTimezoneFormat (DateTimeForm atter dateTimeFormatter)|設定將時間資料從檔案剖析為 java.sql.Types.TIME_WITH_TIMEZONE 的格式。|  
 |Void setTimeWithTimezoneFormat(String timeFormat)|設定將時間資料從檔案剖析為 java.sql.Types.TIME_WITH_TIMEZONE 的格式。|  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [JDBC Driver 概觀](../../connect/jdbc/overview-of-the-jdbc-driver.md)  
   
   

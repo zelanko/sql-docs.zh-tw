@@ -1,30 +1,20 @@
 ---
-title: "子系 (MDX) |Microsoft 文件"
-ms.custom: 
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: language-reference
-f1_keywords: CHILDREN
-dev_langs: kbMDX
-helpviewer_keywords: Children function
-ms.assetid: ce2c3069-914c-44a3-8a4c-5cbd4fb71e4c
-caps.latest.revision: "34"
-author: Minewiskan
+title: 子系 (MDX) |Microsoft 文件
+ms.date: 05/30/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: mdx
+ms.topic: reference
 ms.author: owend
-manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: 3227019749138eebef54da7da2a7bb8b85b51ccf
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: 4cf46d1844b8544dbf793ccaf7da98b3ba588fb5
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34578500"
 ---
 # <a name="children-mdx"></a>Children (MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -68,7 +58,7 @@ FROM
 |-------------|-------------|  
 |[!INCLUDE[ssBOL2005_R03](../includes/ssbol2005-r03-md.md)]|**已變更的內容：**<br /> -更新語法和引數，以改善清晰度。<br /><br /> — 新增更新的範例。|  
   
-## <a name="see-also"></a>請參閱  
- [MDX 函數參考 &#40;MDX &#41;](../mdx/mdx-function-reference-mdx.md)  
+## <a name="see-also"></a>另請參閱  
+ [MDX 函數參考&#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

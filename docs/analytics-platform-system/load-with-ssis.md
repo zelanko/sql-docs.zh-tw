@@ -1,27 +1,22 @@
 ---
-title: "With Integration Services 載入資料"
-author: barbkess
-ms.author: barbkess
-manager: jhubbard
-ms.prod: analytics-platform-system
-ms.prod_service: mpp-data-warehouse
-ms.service: 
-ms.component: 
-ms.suite: sql
-ms.custom: 
-ms.technology: mpp-data-warehouse
-description: "提供使用 SQL Server Integration Services (SSIS) 封裝將資料載入 SQL Server Parallel Data Warehouse 的參考和部署資訊。"
-ms.date: 10/20/2016
-ms.topic: article
-ms.assetid: 9bdb559a-a91c-4342-8a6e-438cb93f975c
-caps.latest.revision: "69"
-ms.openlocfilehash: f00f72886a10c8be05db6a28adf3df89f8116081
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+title: 使用 Integration Services-Parallel Data Warehouse 載入 |Microsoft 文件
+description: 提供用於載入資料到 Parallel Data Warehouse (PDW) 使用 SQL Server Integration Services (SSIS) 封裝的參考和部署資訊。
+author: mzaman1
+manager: craigg
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
+ms.openlocfilehash: 718a076822a4304e0ba951f3ca1903bb7c009e17
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34586060"
 ---
-# <a name="load-data-with-integration-services"></a>With Integration Services 載入資料
+# <a name="load-data-with-integration-services-to-parallel-data-warehouse"></a>載入資料到 Parallel Data Warehouse 的 Integration services
 提供使用 SQL Server Integration Services (SSIS) 封裝將資料載入 SQL Server Parallel Data Warehouse 的參考和部署資訊。  
   
 <!-- MISSING LINKS
@@ -34,7 +29,7 @@ Before you can start loading data, use the following topics to install the Integ
   
 -   [Connect With Integration Services for loading](connect-with-ssis-for-loading.md)  
   
-For general information about developing Integration Services packages, see [Designing and Implementing Packages (Integration Services)](http://msdn.microsoft.com/library/ms141091&#40;v=sql11&#40;.aspx) on MSDN.  
+For general information about developing Integration Services packages, see [Designing and Implementing Packages (Integration Services)](http://msdn.microsoft.com/library/ms141091\(v=sql11\).aspx) on MSDN.  
 
 -->
   
@@ -59,12 +54,12 @@ Integration Services 的完整文件，請參閱[SQL Server Integration Services
 若要執行封裝的 SQL Server Data Tools 中，以滑鼠右鍵按一下您的封裝，然後選擇 **執行封裝**。  
   
 ### <a name="run-from-powershell"></a>從 PowerShell 執行  
-若要從 Windows PowerShell 中執行封裝使用**dtexec**公用程式：`dtexec /FILE <packagePath>`  
+若要從 Windows PowerShell 中執行封裝使用**dtexec**公用程式： `dtexec /FILE <packagePath>`  
   
 例如，使用 IPv4 位址的 `dtexec /FILE "C:\Users\User1\Desktop\Package.dtsx"`  
   
 ### <a name="run-from-a-windows-command-prompt"></a>執行從 Windows 命令提示字元 
-若要從 Windows 命令提示字元中，執行封裝使用**dtexec**公用程式：`dtexec /FILE <packagePath>`  
+若要從 Windows 命令提示字元中，執行封裝使用**dtexec**公用程式： `dtexec /FILE <packagePath>`  
   
 例如： `dtexec /FILE "C:\Users\User1\Desktop\Package.dtsx"`  
   
@@ -156,7 +151,7 @@ For the maximum number of loads and queued loads per appliance, see [Minimum and
   
 ## <a name="Examples"></a>範例  
   
-### <a name="Walkthrough"></a>答： 從一般檔案的簡單負載  
+### <a name="Walkthrough"></a>。 從一般檔案的簡單負載  
 下列逐步解說會示範簡單資料載入一般檔案資料載入至 SQL Server PDW 應用裝置中使用 Integration Services。  這個範例假設在用戶端電腦上已安裝 Integration Services，並已安裝 SQL Server PDW 目的地，如上面所述。  
   
 在此範例中，我們將會載入至`Orders`具有下列 DDL 的資料表。 `Orders`資料表屬於`LoadExampleDB`資料庫。  
@@ -251,18 +246,18 @@ Integration Services 的電腦上執行封裝。
   
 2.  封裝執行時間，以及上，則會顯示進度，以及任何錯誤**進度**窗格。 使用在 SQL 用戶端以確認負載，或監視 SQL Server PDW 管理主控台透過負載。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
 [建立使用 SSIS PDW 目的地配接器的指令碼工作](create-ssis-script-task-using-pdw-destination-adapter.md)  
-[SQL Server Integration Services](http://msdn.microsoft.com/library/ms141026&#40;v=sql11&#40;.aspx)  
-[設計和實作封裝 (Integration Services)](http://msdn.microsoft.com/library/ms141091&#40;v=sql11&#40;.aspx)  
-[教學課程： 建立基本封裝，使用精靈](http://technet.microsoft.com/library/ms365330&#40;v=sql11&#40;.aspx)  
+[SQL Server Integration Services](http://msdn.microsoft.com/library/ms141026\(v=sql11\).aspx)  
+[設計和實作封裝 (Integration Services)](http://msdn.microsoft.com/library/ms141091\(v=sql11\).aspx)  
+[教學課程： 建立基本封裝，使用精靈](http://technet.microsoft.com/library/ms365330\(v=sql11\).aspx)  
 [使用者入門 (Integration Services)](http://go.microsoft.com/fwlink/?LinkId=202412)  
 [動態封裝產生範例](http://go.microsoft.com/fwlink/?LinkId=202413)  
 [SSIS 封裝設計平行處理原則 （SQL Server 影片）](http://msdn.microsoft.com/library/dd795221.aspx)  
 [Microsoft SQL Server 社群範例： Integration Services](http://go.microsoft.com/fwlink/?LinkId=202415)  
-[與異動資料擷取改善累加式載入](http://msdn.microsoft.com/library/bb895315&#40;v=sql11&#40;.aspx)  
-[緩時變維度轉換](http://msdn.microsoft.com/library/ms141715&#40;v=sql11&#40;.aspx)  
-[大量插入工作](http://msdn.microsoft.com/library/ms141239&#40;v=sql11&#40;.aspx)  
+[與異動資料擷取改善累加式載入](http://msdn.microsoft.com/library/bb895315\(v=sql11\).aspx)  
+[緩時變維度轉換](http://msdn.microsoft.com/library/ms141715\(v=sql11\).aspx)  
+[大量插入工作](http://msdn.microsoft.com/library/ms141239\(v=sql11\).aspx)  
   
 <!-- MISSING LINKS
 [Grant permissions to load data](grant-permissions-to-load-data.md)  

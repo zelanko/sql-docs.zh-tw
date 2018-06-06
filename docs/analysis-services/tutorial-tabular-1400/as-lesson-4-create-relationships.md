@@ -1,27 +1,19 @@
 ---
-title: "Analysis Services 教學課程第 4 課： 建立關聯性 |Microsoft 文件"
-description: "描述如何在 Analysis Services 教學課程專案中建立關聯性。"
-ms.prod_service: analysis-services, azure-analysis-services
-services: analysis-services
-ms.suite: pro-bi
-documentationcenter: 
-author: Minewiskan
-manager: kfile
-editor: 
-tags: 
-ms.assetid: 
-ms.service: analysis-services
-ms.devlang: NA
-ms.topic: get-started-article
-ms.tgt_pltfrm: NA
-ms.workload: na
-ms.date: 02/20/2018
+title: Analysis Services 教學課程第 4 課： 建立關聯性 |Microsoft 文件
+ms.date: 05/08/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: tabular-models
+ms.topic: tutorial
 ms.author: owend
-ms.openlocfilehash: 2776649b049254e27851a9d4ce95e8d6dea81067
-ms.sourcegitcommit: 7ed8c61fb54e3963e451bfb7f80c6a3899d93322
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: 564126e1de4a8019778e33718b48462f633ae232
+ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/20/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="create-relationships"></a>建立關聯性
 
@@ -48,7 +40,7 @@ ms.lasthandoff: 02/20/2018
 
     模型設計師現在會出現在圖表檢視以圖形格式顯示所有資料表匯入之間會線條。 資料表之間的線條表示匯入資料時自動建立的關聯性。
     
-    ![as-lesson4-diagram](../tutorial-tabular-1400/media/as-lesson4-diagram.png)
+    ![做為 lesson4 圖表](../tutorial-tabular-1400/media/as-lesson4-diagram.png)
   
     > [!NOTE]
     > 如果您沒有看到任何資料表之間的關聯性，也可能表示在資料來源中這些資料表之間有任何關聯性。
@@ -78,11 +70,11 @@ ms.lasthandoff: 02/20/2018
 
 在圖表檢視中，請注意箭號，星號，並且顯示資料表之間的關聯性的線條上的數字。
 
-![as-lesson4-line](../tutorial-tabular-1400/media/as-lesson4-line.png)
+![做為 lesson4 列](../tutorial-tabular-1400/media/as-lesson4-line.png)
 
 箭號會顯示篩選方向。 此資料表會顯示星號*許多*中關聯性的基數，另一個側邊顯示此資料表是*一個*側邊的關聯性。 如果您要編輯關聯性;例如，變更的關聯性篩選方向或基數，按兩下以開啟 [編輯關聯性] 對話方塊的關聯線。
 
-![as-lesson4-edit](../tutorial-tabular-1400/media/as-lesson4-edit.png)
+![做為 lesson4 編輯](../tutorial-tabular-1400/media/as-lesson4-edit.png)
 
 這些功能是為了進階資料模型化，並會在本教學課程的範圍之外。 若要進一步了解，請參閱[雙向交叉篩選中 Analysis Services 表格式模型的](../tabular-models/bi-directional-cross-filters-tabular-models-analysis-services.md)。
 
@@ -94,7 +86,7 @@ ms.lasthandoff: 02/20/2018
 
     實線顯示您已建立作用中的關聯**OrderDate**中的資料行**Internet Sales**資料表，而**日期**中的資料行**日期**資料表。 
   
-      ![as-lesson4-new](../tutorial-tabular-1400/media/as-lesson4-new.png) 
+      ![為-lesson4-新增](../tutorial-tabular-1400/media/as-lesson4-new.png) 
   
     > [!NOTE]  
     > 在建立關聯性時，會自動選取之間主資料表] 和 [相關的查閱資料表的基數和篩選方向。  

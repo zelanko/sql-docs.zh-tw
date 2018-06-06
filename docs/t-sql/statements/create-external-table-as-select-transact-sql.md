@@ -1,17 +1,16 @@
 ---
 title: CREATE EXTERNAL TABLE AS SELECT (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 08/10/2017
-ms.prod: 
+ms.prod: ''
 ms.prod_service: sql-data-warehouse, pdw
-ms.reviewer: 
+ms.reviewer: ''
 ms.service: sql-data-warehouse
 ms.component: t-sql|statements
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: t-sql
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 f1_keywords:
 - CREATE EXTERNAL TABLE AS SELECT
 - CREATE_EXTERNAL_TABLE_AS_SELECT
@@ -22,33 +21,21 @@ helpviewer_keywords:
 - External, table create as select
 - PolyBase, create table as select
 ms.assetid: 32dfe254-6df7-4437-bfd6-ca7d37557b0a
-caps.latest.revision: 
-author: barbkess
-ms.author: barbkess
+caps.latest.revision: 16
+author: edmacauley
+ms.author: edmaca
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: f2ca379cf30fe2e7d359a294a18804f0b5e6faeb
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
+ms.openlocfilehash: 3d61d87f1e19088d7f667029bdaaf935d150dc88
+ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="create-external-table-as-select-transact-sql"></a>CREATE EXTERNAL TABLE AS SELECT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
   建立外部資料表，然後將 [!INCLUDE[tsql](../../includes/tsql-md.md)] SELECT 陳述式的結果以平行方式匯出至 Hadoop 或「Azure 儲存體 Blob」。  
-  
- 使用 CREATE EXTERNAL TABLE AS SELECT (CETAS) 陳述式來：  
-  
--   將資料褲資料表匯出至 Hadoop 或 Azure Blob 儲存體。  
-  
--   從 Hadoop 或 Azure Blob 儲存體匯入資料，然後儲存在資料庫中。  
-  
--   從 Hadoop 或 Azure Blob 儲存體查詢資料、將該資料與資料庫關聯式資料表聯結，然後將結果寫回至 Hadoop 或 Azure Blob 儲存體。  
-  
--   從 Hadoop 或 Azure Blob 儲存體查詢資料、使用資料庫的快速處理功能來轉換該資料，然後將其寫回至 Hadoop 或 Azure Blob 儲存體。  
-  
- 如需詳細資訊，請參閱 [開始使用 PolyBase](../../relational-databases/polybase/get-started-with-polybase.md)。  
   
  ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例 &#40;Transact-SQL&#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   

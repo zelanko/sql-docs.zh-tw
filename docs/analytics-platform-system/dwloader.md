@@ -1,27 +1,21 @@
 ---
-title: "dwloader 平行處理資料倉儲的命令列載入器"
-author: barbkess
-ms.author: barbkess
-manager: jhubbard
-ms.prod: analytics-platform-system
-ms.prod_service: mpp-data-warehouse
-ms.service: 
-ms.component: 
-ms.suite: sql
-ms.custom: 
-ms.technology: mpp-data-warehouse
-description: "**dwloader** Parallel Data Warehouse (PDW) 的命令列工具，可將資料表資料列中大量載入現有的資料表。"
-ms.date: 11/04/2016
-ms.topic: article
-ms.assetid: f79b8354-fca5-41f7-81da-031fc2570a7c
-caps.latest.revision: 
-ms.openlocfilehash: 4050df3fa69a823ebb36076367c2e8d7344ac1a2
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+title: dwloader 命令列載入器-Parallel Data Warehouse |Microsoft 文件
+description: dwloader 是 Parallel Data Warehouse (PDW) 的命令列工具，可將資料表資料列中大量載入現有的資料表。
+author: mzaman1
+manager: craigg
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
+ms.openlocfilehash: d5d8ead82525266148729f9773e47b933def349e
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 04/19/2018
 ---
-# <a name="dwloader-command-line-loader"></a>dwloader 命令列載入器
+# <a name="dwloader-command-line-loader-for-parallel-data-warehouse"></a>dwloader 平行處理資料倉儲的命令列載入器
 **dwloader** Parallel Data Warehouse (PDW) 的命令列工具，可將資料表資料列中大量載入現有的資料表。 當載入的資料列，您可以將所有資料列加入到資料表結尾 (*附加模式*或*fastappend 模式*)、 附加新資料列，並更新現有的資料列 (*upsert 模式*)，或刪除所有現有之前載入的資料列，然後再將所有資料列插入空的資料表 (*重新載入模式*)。  
   
 **用於載入資料的程序**  
@@ -140,7 +134,7 @@ For information about configuring Windows Authentication, see [Security - Config
 **-f** *parameter_file_name*  
 使用參數檔案， *parameter_file_name*，來取代命令列參數。 *parameter_file_name*可以包含任何命令列參數，除了*user_name*和*密碼*。 如果在命令列上和參數檔案中，將指定的參數，命令列覆寫檔案參數。  
   
-參數檔案包含一個參數，而不 **-** 前置詞，每行。  
+參數檔案包含一個參數，而不**-** 前置詞，每行。  
   
 範例:  
   
@@ -161,7 +155,7 @@ For information about configuring Windows Authentication, see [Security - Config
 For more information about this install option, see [Install dwloader Command-Line Loader](install-dwloader.md).  
 -->
   
-**-T** *target_database_name.*[*schema*].*table_name*  
+**-T** *target_database_name。*[*結構描述*]。*table_name*  
 在目的地資料表的三部分名稱。  
   
 **-I***source_data_location*  
@@ -240,7 +234,7 @@ For more information about this install option, see [Install dwloader Command-Li
   
 範例:  
   
--t "|"  
+-t"|"  
   
 -t ' '  
   
@@ -284,7 +278,7 @@ LF 的範例包括：
   
 -s 0x22  
   
-< fixed_width_column_options>  
+< fixed_width_column_options >  
 具有固定長度資料行的來源資料檔案的選項。 根據預設， *source_data_file_name*包含可變長度資料行中的 ASCII 字元。  
   
 UTF8 – e 時不支援固定的寬度資料行。  
@@ -402,7 +396,7 @@ dym
 fastappend  
 載入器插入資料列直接管理，而不需要使用暫存資料表時，目的地資料表中的現有資料列的結尾。 fastappend 需要多重交易 (– m) 選項。 使用 fastappend 時無法指定暫存資料庫。 沒有任何與 fastappend，這表示您自己的載入處理序必須處理從失敗或已中止載入復原的復原。  
   
-upsert **-K**  *merge_column* [ ,...*n* ]  
+upsert **-K***merge_column* [，...*n* ]    
 載入器會使用 SQL Server Merge 陳述式來更新現有的資料列，並插入新資料列。  
   
 -K 選項指定要合併的基礎資料行的資料行。 這些資料行形成應該代表唯一的資料列的合併索引鍵。 如果合併索引鍵存在於目的地資料表時，會更新資料列。 如果合併索引鍵不存在於目的地資料表，則會附加資料列。  
@@ -431,7 +425,7 @@ upsert **-K**  *merge_column* [ ,...*n* ]
 指定選項來判斷允許載入器載入失敗的數目。 如果載入失敗超過閾值時，載入器將會中止，並認可的任何資料列。  
   
 **-rt** {**值**| 百分比}  
-指定是否-*reject_value*中**-rv** *reject_value*選項是常值的數字的資料列 （值） 或失敗 （百分比） 的速率。 預設為值。  
+指定是否-*reject_value*中 **-rv** *reject_value*選項是常值的數字的資料列 （值） 或失敗 （百分比） 的速率。 預設為值。  
   
 百分比選項是即時計算所發生在根據 cd-r 選項的時間間隔。  
   
@@ -466,9 +460,9 @@ upsert **-K**  *merge_column* [ ,...*n* ]
 **-m**  
 多重交易模式用於載入; 第二個階段當資料從暫存表格載入分散式的資料表。  
   
-與**– m**，SQL Server PDW 執行並認可以平行方式載入。 這會執行速度，比預設值載入模式，但不是交易安全。  
+與 **– m**，SQL Server PDW 執行並認可以平行方式載入。 這會執行速度，比預設值載入模式，但不是交易安全。  
   
-不含**– m**，SQL Server PDW 執行並載入以序列方式認可跨分佈在每個計算節點中，同時在計算節點之間。 這個方法會低於多重交易模式，但為交易安全。  
+不含 **– m**，SQL Server PDW 執行並載入以序列方式認可跨分佈在每個計算節點中，同時在計算節點之間。 這個方法會低於多重交易模式，但為交易安全。  
   
 **-m**是選擇性的*附加*，*重新載入*，和*upsert*。  
   
@@ -480,7 +474,7 @@ upsert **-K**  *merge_column* [ ,...*n* ]
   
 沒有任何多重交易模式中，這表示您自己的載入處理序必須處理從失敗或已中止負載復原的復原。  
   
-我們建議您使用**– m**才載入空白資料表，以便您可以復原不會遺失資料。 若要從負載失敗中復原： 卸除目的地資料表、 解決負載問題，重新建立目的地資料表，然後再次執行負載。  
+我們建議您使用 **– m**才載入空白資料表，以便您可以復原不會遺失資料。 若要從負載失敗中復原： 卸除目的地資料表、 解決負載問題，重新建立目的地資料表，然後再次執行負載。  
   
 **-N**  
 確認目標裝置具有有效的 SQL Server PDW 憑證來自受信任的授權單位。 使用它來協助確保您的資料不會遭到攻擊者攔截並傳送給未經授權的位置。 應用裝置上必須已安裝憑證。 若要安裝憑證的唯一支援的方法是應用裝置系統管理員所要使用組態管理員工具進行安裝。 如果您不確定應用裝置是否有安裝受信任的憑證要求您的應用裝置系統管理員。  
@@ -551,7 +545,7 @@ For the maximum number of loads per appliance, see [Minimum and Maximum Values](
   
 附加可以執行多個交易式模式 （使用-m 引數），但它並不安全的交易。 因此附加應該做為交易式的作業 （不使用 – m 引數）。 不幸的是，最後一個 INSERT SELECT 作業期間，交易式模式低於目前六倍的多重交易模式。  
   
-附加模式在兩個階段中載入資料。 第一階段資料載入從來源檔案的暫存資料表同時 （分散可能會發生）。 階段二到最後的資料表從暫存資料表載入資料。 第二個階段執行**INSERT INTO...選取 WITH (TABLOCK)**作業。 下表顯示在最後的資料表上的鎖定行為，並使用時，記錄行為附加模式：  
+附加模式在兩個階段中載入資料。 第一階段資料載入從來源檔案的暫存資料表同時 （分散可能會發生）。 階段二到最後的資料表從暫存資料表載入資料。 第二個階段執行**INSERT INTO...選取 WITH (TABLOCK)** 作業。 下表顯示在最後的資料表上的鎖定行為，並使用時，記錄行為附加模式：  
   
 |資料表類型|多重交易<br />模式 (-m)|資料表是空的|支援的並行存取|記錄|  
 |--------------|-----------------------------------|------------------|-------------------------|-----------|  
@@ -605,7 +599,7 @@ dwloader.exe -U mylogin -P 123jkl -S 10.192.63.148  -i C:\SQLData\AWDimEmployees
 For more information, see [Install AdventureWorksPDW2012](install-adventureworkspdw2012.md).  
 -->
 
-下列指令碼片段會將資料載入到 DimAccount 和 DimCurrency 資料表使用 dwloader。 此指令碼會使用乙太網路位址。 如果使用 InfiniBand，伺服器將*< appliance_name >*`-SQLCTL01`。  
+下列指令碼片段會將資料載入到 DimAccount 和 DimCurrency 資料表使用 dwloader。 此指令碼會使用乙太網路位址。 如果使用 InfiniBand，伺服器將 *< appliance_name >*`-SQLCTL01`。  
   
 ```  
 set server=10.193.63.134  
@@ -692,7 +686,7 @@ C:\Program Files\Microsoft SQL Server Parallel Data Warehouse\100\dwloader.exe �
   
 -   *-R DimAccount.bad*指定將寫入檔案，稱為 DimAccount.bad 無法載入的資料列。  
   
--   *– t"|"*指出輸入檔 DimAccount.txt 中的欄位會以縱線字元分隔。  
+-   *– t"|"* 指出輸入檔 DimAccount.txt 中的欄位會以縱線字元分隔。  
   
 -   *-r \r\n*指定 DimAccount.txt 中的每個資料列的結尾是歸位字元和換行字元。  
   

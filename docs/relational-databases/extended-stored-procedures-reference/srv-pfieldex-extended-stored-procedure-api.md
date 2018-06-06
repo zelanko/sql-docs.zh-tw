@@ -1,16 +1,15 @@
 ---
-title: "srv_pfieldex (擴充預存程序 API) | Microsoft Docs"
-ms.custom: 
+title: srv_pfieldex (擴充預存程序 API) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/16/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
 ms.component: extended-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - srv_pfieldex
@@ -22,16 +21,15 @@ dev_langs:
 helpviewer_keywords:
 - srv_pfieldex
 ms.assetid: d4e9a34b-b3a3-434f-8556-768bd20d145a
-caps.latest.revision: 
+caps.latest.revision: 30
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 70f36511846d7435cc940ea65f871c462130958d
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
-ms.translationtype: MT
+ms.openlocfilehash: 128586621b16aaf83b7533327c99c9f7bc952b10
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="srvpfieldex-extended-stored-procedure-api"></a>srv_pfieldex (擴充預存程序 API)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -61,7 +59,7 @@ len
  *field*  
  指定要傳回的 *srvproc* 欄位。  
   
-|欄位|Description|傳回類型|  
+|欄位|描述|傳回類型|  
 |-----------|-----------------|------------------|  
 |SRV_MSGLCID|目前的工作階段訊息 LCID。|ULONG*|  
 |SRV_INSTANCENAME|執行個體名稱 (如果是具名的)；否則，傳回 NULL。|WCHAR*|  
@@ -75,7 +73,7 @@ len
 > [!IMPORTANT]  
 >  從伺服器傳回的緩衝區應該是唯讀的。 否則，伺服器狀態可能會損毀。  
   
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>Remarks  
  **安全性注意事項**：您應該徹底檢閱擴充預存程序的原始程式碼，您也應該先測試編譯過的 DLL，才能將它們安裝在實際執行伺服器上。 如需安全性檢閱和測試的資訊，請參閱此 [Microsoft 網站](http://go.microsoft.com/fwlink/?LinkID=54761&amp;clcid=0x409http://msdn.microsoft.com/security/)。  
   
   

@@ -1,17 +1,16 @@
 ---
-title: "權限 (Database Engine) | Microsoft Docs"
-ms.custom: 
+title: 權限 (Database Engine) | Microsoft Docs
+ms.custom: ''
 ms.date: 01/03/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
 ms.component: security
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 f1_keywords:
 - sql13.swb.databaseuser.permissions.database.f1--May use common.permissions
 - sql13.swb.databaseuser.permissions.object.f1--May use common.permissions
@@ -21,25 +20,23 @@ helpviewer_keywords:
 - security [SQL Server], permissions
 - naming conventions [SQL Server]
 ms.assetid: f28e3dea-24e6-4a81-877b-02ec4c7e36b9
-caps.latest.revision: 
+caps.latest.revision: 76
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Active
-ms.openlocfilehash: a1648f5ecd3170b2b60c157e4debb25d7c7f793a
-ms.sourcegitcommit: 4edac878b4751efa57601fe263c6b787b391bc7c
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 25fdf523968b9158395136b804ea16f73308a8fb
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/19/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="permissions-database-engine"></a>權限 (Database Engine)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
   每個 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安全性實體都具有可授與主體的關聯權限。 在 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 中，指派給登入與伺服器角色的權限會在伺服器層級管理，而指派給資料庫使用者與資料庫角色的權限則會在資料庫層級進行管理。 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 模型的權限與資料庫權限系統相同，但無法使用伺服器層級的權限。 本主題包含完整的權限清單。 如需權限的一般實作，請參閱 [資料庫引擎權限使用者入門](../../relational-databases/security/authentication-access/getting-started-with-database-engine-permissions.md)。  
   
-[!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 和 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 的權限總數是 237。 大部分的權限適用於所有平台，但某些無法適用。 例如，無法在 SQL Database 上授與伺服器層級權限，以及少數權限只有在 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]才有意義。 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 公開 230 個權限。 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 公開 219 個權限。 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 公開 214 個權限。 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 公開 195 個權限。 [sys.fn_builtin_permissions](../../relational-databases/system-functions/sys-fn-builtin-permissions-transact-sql.md) 主題指出最新版本中的新主題。 下圖顯示這些權限及其彼此間的關聯性。 一些較高等級的權限 (例如 `CONTROL SERVER`) 會多次列出。 按一下影像，以下載 pdf 格式的 **Database Engine 權限海報**。  
-  
-[![Database Engine 權限](../../relational-databases/security/media/database-engine-permissions.PNG)](http://go.microsoft.com/fwlink/?LinkId=229142)
+[!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 和 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 的權限總數是 237。 大部分的權限適用於所有平台，但某些無法適用。 例如，無法在 SQL Database 上授與伺服器層級權限，以及少數權限只有在 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]才有意義。 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 公開 230 個權限。 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 公開 219 個權限。 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 公開 214 個權限。 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 公開 195 個權限。 [sys.fn_builtin_permissions](../../relational-databases/system-functions/sys-fn-builtin-permissions-transact-sql.md) 主題指出最新版本中的新主題。
 
 一旦您了解權限後，可以透過 [GRANT](../../t-sql/statements/grant-transact-sql.md)、 [REVOKE](../../t-sql/statements/revoke-transact-sql.md)和 [DENY](../../t-sql/statements/deny-transact-sql.md) 陳述式，將伺服器層級權限套用至登入和資料庫層級權限使用者。 例如：   
 ```sql
@@ -102,7 +99,7 @@ REVOKE SELECT ON OBJECT::HumanResources.Employee TO Larry;
      需要物件的 REFERENCES 權限，才能建立具有可參考該物件之 `WITH SCHEMABINDING` 的 FUNCTION 或 VIEW。  
   
 ## <a name="chart-of-sql-server-permissions"></a>SQL Server 權限的圖表  
- 如需 PDF 格式之海報大小的所有 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 權限圖表，請參閱 [http://go.microsoft.com/fwlink/?LinkId=229142](http://go.microsoft.com/fwlink/?LinkId=229142)。  
+[!INCLUDE[database-engine-permissions](../../includes/paragraph-content/database-engine-permissions.md)]
   
 ##  <a name="_securables"></a> 適用於特定安全性實體的權限  
  下表列出主要的權限類別，以及這些類別的權限適用的安全性實體。  

@@ -1,30 +1,28 @@
 ---
-title: "開始使用 SSMA for Oracle 主控台 (OracleToSQL) |Microsoft 文件"
-ms.prod: sql-non-specified
+title: 開始使用 SSMA for Oracle 主控台 (OracleToSQL) |Microsoft 文件
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
 ms.component: ssma-oracle
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ssma
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - Oracle Console, Console Output Conventions
 - Oracle Console, Launching Console
 ms.assetid: 667a5e4a-6848-4973-a72d-1287f64718ac
-caps.latest.revision: "31"
+caps.latest.revision: 31
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
-ms.workload: Inactive
-ms.openlocfilehash: f73c9250dd75d3beb5ec16cdb70fb3a4f7c57b20
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 95da4265bcaf56f7abbd5e445d93760790752b22
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="getting-started-with-ssma--for-oracle-console-oracletosql"></a>開始使用 SSMA for Oracle 主控台 (OracleToSQL)
 本章節描述的程序啟動並開始使用 Oracle 的主控台應用程式。 亦會使用的慣例典型的 SSMA 主控台輸出視窗中。  
@@ -41,13 +39,13 @@ ms.lasthandoff: 12/21/2017
 ## <a name="procedure-for-using-the-ssma-console"></a>針對使用 SSMA 主控台的程序  
 Windows 系統上已成功啟動主控台之後，您可以在 bob_ws 上工作使用下列步驟：  
   
-1.  透過指令碼檔案中設定 SSMA 主控台。 如需有關本章節的詳細資訊，請參閱[建立指令碼檔案 &#40; OracleToSQL &#41;](../../ssma/oracle/creating-script-files-oracletosql.md) 。  
+1.  透過指令碼檔案中設定 SSMA 主控台。 如需有關本章節的詳細資訊，請參閱[建立指令碼檔&#40;OracleToSQL&#41; ](../../ssma/oracle/creating-script-files-oracletosql.md) 。  
   
-2.  [建立變數值的檔案 &#40; OracleToSQL &#41;](../../ssma/oracle/creating-variable-value-files-oracletosql.md)  
+2.  [建立變數值的檔案&#40;OracleToSQL&#41;](../../ssma/oracle/creating-variable-value-files-oracletosql.md)  
   
-3.  [建立伺服器連接檔案 &#40; OracleToSQL &#41;](../../ssma/oracle/creating-the-server-connection-files-oracletosql.md)  
+3.  [建立伺服器連接檔案&#40;OracleToSQL&#41;](../../ssma/oracle/creating-the-server-connection-files-oracletosql.md)  
   
-4.  [執行 SSMA 主控台 &#40; OracleToSQL &#41;](../../ssma/oracle/executing-the-ssma-console-oracletosql.md)根據您的專案需求  
+4.  [執行 SSMA 主控台&#40;OracleToSQL&#41; ](../../ssma/oracle/executing-the-ssma-console-oracletosql.md)根據您的專案需求  
   
 其他功能：  
   
@@ -62,7 +60,7 @@ Windows 系統上已成功啟動主控台之後，您可以在 bob_ws 上工作�
   
 下表中的主控台輸出的色彩解譯：  
   
-|Color|描述|  
+|Color|Description|  
 |---------|---------------|  
 |紅色|執行期間發生嚴重錯誤|  
 |灰色|日期和時間戳記，訊息給使用者|  
@@ -71,6 +69,6 @@ Windows 系統上已成功啟動主控台之後，您可以在 bob_ws 上工作�
 |綠色|提示使用者輸入|  
 |11：青色|開始、 完成和作業的結果。|  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
 [安裝的 SSMA for Oracle](http://msdn.microsoft.com/en-us/9211013a-ab24-4c52-9b26-87994b35e502)  
   

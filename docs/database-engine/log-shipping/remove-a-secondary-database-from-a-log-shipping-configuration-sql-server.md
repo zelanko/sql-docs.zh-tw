@@ -1,16 +1,15 @@
 ---
-title: "從記錄傳送設定中移除次要資料庫 (SQL Server) | Microsoft Docs"
-ms.custom: 
+title: 從記錄傳送設定中移除次要資料庫 (SQL Server) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
-ms.prod_service: database-engine
-ms.service: 
+ms.prod: sql
+ms.prod_service: high-availability
 ms.component: log-shipping
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: dbe-high-availability
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: high-availability
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - deleting secondary databases
 - secondary databases [SQL Server], in log shipping
@@ -18,19 +17,19 @@ helpviewer_keywords:
 - secondary data files [SQL Server], removing
 - log shipping [SQL Server], secondary databases
 ms.assetid: ebe368a4-ca1c-45d0-9a71-3ddbd5b26a8e
-caps.latest.revision: "19"
+caps.latest.revision: 19
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 9ba25fa3bf012ff94c6eee36656e9a2339c0469c
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: d78ce5aa542301d6fc3ade415a24a24216fd87f0
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="remove-a-secondary-database-from-a-log-shipping-configuration-sql-server"></a>從記錄傳送組態中移除次要資料庫 (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 本主題描述如何使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 或 [!INCLUDE[tsql](../../includes/tsql-md.md)] 移除 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中的記錄傳送次要資料庫。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  本主題描述如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 移除 [!INCLUDE[tsql](../../includes/tsql-md.md)]中的記錄傳送次要資料庫。  
   
  **本主題內容**  
   
@@ -61,9 +60,9 @@ ms.lasthandoff: 01/18/2018
   
 2.  展開 [資料庫]，以滑鼠右鍵按一下記錄傳送主要資料庫，然後按一下 [屬性]。  
   
-3.  在 **[選取頁面]**下，按一下 **[交易記錄傳送]**。  
+3.  在 **[選取頁面]** 下，按一下 **[交易記錄傳送]**。  
   
-4.  在 **[次要伺服器執行個體與資料庫]**下，按一下您要移除的資料庫。  
+4.  在 **[次要伺服器執行個體與資料庫]** 下，按一下您要移除的資料庫。  
   
 5.  按一下 **[移除]**。  
   

@@ -1,40 +1,28 @@
 ---
-title: "支援 XMLA 屬性 (XMLA) |Microsoft 文件"
-ms.custom: 
-ms.date: 03/16/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services, azure-analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+title: 支援 XMLA 屬性 (XMLA) |Microsoft 文件
+ms.date: 05/08/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: xmla
 ms.topic: reference
-apitype: Schema
-applies_to: SQL Server 2016 Preview
-helpviewer_keywords:
-- properties [XML for Analysis]
-- XML for Analysis, properties
-- XMLA, properties
-ms.assetid: 5745f7b4-6b96-44d5-b77c-f2831a898e5e
-caps.latest.revision: "27"
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: c1076c683c164c2d084b431f4190c549d0a5a0cd
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 2365cee01941d32ae01a7be5f5e4d44bf15e2734
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34576310"
 ---
 # <a name="propertylist-element---supported-xmla-properties"></a>PropertyList 元素-支援 XMLA 屬性
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)][!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]支援下表中列出的屬性。 使用列出的屬性用於[屬性](../../../analysis-services/xmla/xml-elements-properties/properties-element-xmla.md)元素[探索](../../../analysis-services/xmla/xml-elements-methods-discover.md)和[Execute](../../../analysis-services/xmla/xml-elements-methods-execute.md)方法。  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
+  Analysis Services 支援下表所列的屬性。 使用列出的屬性用於[屬性](../../../analysis-services/xmla/xml-elements-properties/properties-element-xmla.md)元素[探索](../../../analysis-services/xmla/xml-elements-methods-discover.md)和[Execute](../../../analysis-services/xmla/xml-elements-methods-execute.md)方法。  
   
 |[屬性]|描述|類型|值|  
 |----------|-----------------|----------|------------|  
-|AxisFormat|決定用於格式[MDDataSet](../../../analysis-services/xmla/xml-data-types/mddataset-data-type-xmla.md)結果集中用於描述多維度資料集中的座標軸。 這個屬性可以具有下表中所列的值。<br /><br /> 這個屬性可以搭配**Execute**方法。|選擇性的唯寫**字串**屬性|*ClusterFormat*: **MDDataSet**軸所組成的一或多個[CrossProduct](../../../analysis-services/xmla/xml-elements-properties/crossproduct-element-xmla.md)項目。<br /><br /> *CustomFormat*: <br />                          [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]使用*TupleFormat*格式，這項設定。<br /><br /> *TupleFormat*預設值。 **MDDataSet**座標軸包含一個或多個[Tuple](../../../analysis-services/xmla/xml-elements-properties/tuple-element-xmla.md)項目。|  
+|AxisFormat|決定用於格式[MDDataSet](../../../analysis-services/xmla/xml-data-types/mddataset-data-type-xmla.md)結果集中用於描述多維度資料集中的座標軸。 這個屬性可以具有下表中所列的值。<br /><br /> 這個屬性可以搭配**Execute**方法。|選擇性的唯寫**字串**屬性|*ClusterFormat*: **MDDataSet**軸所組成的一或多個[CrossProduct](../../../analysis-services/xmla/xml-elements-properties/crossproduct-element-xmla.md)項目。<br /><br /> *CustomFormat*: <br />                          [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 使用*TupleFormat*格式，這項設定。<br /><br /> *TupleFormat*預設值。 **MDDataSet**座標軸包含一個或多個[Tuple](../../../analysis-services/xmla/xml-elements-properties/tuple-element-xmla.md)項目。|  
 |BeginRange|包含以零為起始的整數值對應至**CellOrdinal**屬性值。 ( **CellOrdinal**屬性屬於[儲存格](../../../analysis-services/xmla/xml-elements-properties/cell-element-mddataset-xmla.md)中的項目[CellData](../../../analysis-services/xmla/xml-elements-properties/celldata-element-xmla.md)區段**MDDataSet**。)<br /><br /> 這個屬性的預設值為-1。<br /><br /> 這個屬性可以搭配**Execute**方法。<br /><br /> 搭配**EndRange**屬性，用戶端應用程式可以使用這個屬性來限制為特定範圍的資料格的命令所傳回的 OLAP 資料集。 如果指定-1，則所有的資料格為止中指定**EndRange**屬性會傳回。|選擇性的唯寫**整數**屬性||  
 |目錄|使用 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 執行個體來建立要傳送 XMLA 命令的工作階段時，這個屬性就相當於 OLE DB 屬性 DBPROP_INIT_CATALOG。<br /><br /> 當您在工作階段期間設定這個屬性，以便變更工作階段的目前資料庫時，這個屬性就相當於 OLE DB 屬性 DBPROP_CURRENTCATALOG。<br /><br /> 這個屬性的預設為空字串。<br /><br /> 這個屬性可以搭配**探索**和**Execute**方法。|選擇性的讀取/寫入**字串**屬性||  
 |CatalogLocation|這個屬性就相當於 OLE DB 屬性 DBPROP_CATALOGLOCATION。<br /><br /> 這個屬性的預設值為零 (0)，相當於 DBPROPVAL_CL_START。<br /><br /> 這個屬性可以搭配**探索**和**Execute**方法。|選擇性的唯讀**整數**屬性||  
@@ -68,7 +56,7 @@ ms.lasthandoff: 01/08/2018
 |DbpropMsmdDynamicDebugLimit|*使用方式*<br /> 選擇性的讀取/寫入**整數**屬性<br /><br /> *描述*<br /> 保留供日後使用。<br /><br /> 這個屬性沒有預設值。<br /><br /> 這個屬性可以搭配**探索**和**Execute**方法。|||  
 |DbpropMsmdFlattened2|*使用方式*<br /> 選擇性的讀取/寫入**布林**屬性<br /><br /> *描述*<br /> 除非針對第 0 軸要求父子式階層，否則便在扁平化結果的單一資料表資料行中輸出父子式階層的所有成員。 系統不會使用輸出資料行的層級範本。<br /><br /> 這個屬性的預設值是 FALSE。<br /><br /> 這個屬性可以搭配**探索**和**Execute**方法。|||  
 |DbpropMsmdMDXCompatibility|*使用方式*<br /> 選擇性的讀取/寫入**整數**屬性<br /><br /> *描述*<br /> 決定如何處理不完全或不對稱階層中的預留位置成員。 此屬性可以有下列的值：<br /><br /> ***0***<br /><br /> 為了與舊版 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 相容，這個值相當於 1。<br /><br /> ***1***<br /><br /> 角色扮演維度中的階層收到包含維度名稱和階層名稱的標題。 此標題具有下列格式：`{Dimension].[Hierarchy]`會公開預留位置成員。<br /><br /> ***2***<br /><br /> 角色扮演維度中的階層收到包含維度名稱和階層名稱的標題。此標題具有下列格式：<br /><br /> [維度].[階層]<br /><br /> 系統不會公開預留位置成員。<br /><br /> *3*<br /><br /> (預設值) 系統不會公開預留位置成員。<br /><br /> 這個屬性可以搭配**探索**和**Execute**方法。|||  
-|DbpropMsmdMDXUniqueNameStyle|*使用方式*<br /> 選擇性的讀取/寫入**整數**屬性<br /><br /> *描述*<br /> 決定用於產生維度中成員之唯一名稱的演算法。 這個屬性可以具有下表中所列的值。<br /><br /> ***0***<br /><br /> 為了與舊版 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 相容，這個值相當於 2。<br /><br /> ***1***<br /><br /> 使用索引鍵路徑演算法：`[dim].&[key1].&[key2]`<br /><br /> ***2***<br /><br /> 使用名稱路徑演算法：`[dim].[name1].&[name2]`<br /><br /> ***3***<br /><br /> 使用保證隨著時間穩定的唯一名稱。<br /><br /> 這個屬性的預設值為 6。<br /><br /> 這個屬性可以搭配**探索**和**Execute**方法。|||  
+|DbpropMsmdMDXUniqueNameStyle|*使用方式*<br /> 選擇性的讀取/寫入**整數**屬性<br /><br /> *描述*<br /> 決定用於產生維度中成員之唯一名稱的演算法。 這個屬性可以具有下表中所列的值。<br /><br /> ***0***<br /><br /> 為了與舊版 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 相容，這個值相當於 2。<br /><br /> ***1***<br /><br /> 使用索引鍵路徑演算法： `[dim].&[key1].&[key2]`<br /><br /> ***2***<br /><br /> 使用名稱路徑演算法： `[dim].[name1].&[name2]`<br /><br /> ***3***<br /><br /> 使用保證隨著時間穩定的唯一名稱。<br /><br /> 這個屬性的預設值為 6。<br /><br /> 這個屬性可以搭配**探索**和**Execute**方法。|||  
 |DbpropMsmdSQLCompatibility|保留供日後使用。<br /><br /> 這個屬性的預設值為零 (0)。<br /><br /> 這個屬性可以搭配**探索**和**Execute**方法。|選擇性的讀取/寫入**整數**屬性||  
 |DbpropMsmdSubQueries|這是一個位元遮罩，用於決定子查詢的行為。<br /><br /> 這個屬性的預設值為零或空白。<br /><br /> 這是一個工作階段屬性，只能在建立工作階段時設定。<br /><br /> 請參閱[子選擇和 Subcube 中導出成員](../../../analysis-services/multidimensional-models/mdx/calculated-members-in-subselects-and-subcubes.md)的導出的成員或導出的集合子選擇和 subcube 中的行為的詳細說明。|選擇性的讀取/寫入**整數**屬性|此屬性可以有下列其中一個值：<br /><br /> *0*： 預設值，與舊版相容[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]。 子選擇或 subcube 中不允許導出的成員或導出的集合...<br /><br /> *1*： 計算子選擇或 subcube 中允許的成員或導出的集合。 導出成員的上階沒有包含在子選擇或 Subcube 的空間中。<br /><br /> *2*： 計算子選擇或 subcube 中允許的成員或導出的集合。 導出成員的上階包含在子選擇或 Subcube 的空間中。|  
 |DbpropMsmdUseFormulaCache|*使用方式*<br /> *描述*<br /> 保留供日後使用。<br /><br /> 這個屬性沒有預設值。<br /><br /> 這個屬性可以搭配**探索**和**Execute**方法。|||  
@@ -130,8 +118,8 @@ ms.lasthandoff: 01/08/2018
 |ReadOnlySession|保留供日後使用。<br /><br /> 這個屬性沒有預設值。<br /><br /> 這個屬性可以搭配**探索**和**Execute**方法。|選擇性的讀取/寫入**整數**屬性||  
 |RealTimeOlap|如果設定為 TRUE，就表示接聽資料表通知的所有資料分割都要進行即時查詢，而略過快取。 這個屬性就相當於 OLE DB 屬性 DBPROP_MSMD_REAL_TIME_OLAP。<br /><br /> 這個屬性的預設值是 FALSE。<br /><br /> 這個屬性可以搭配**探索**和**Execute**方法。|選擇性的讀取/寫入**布林**屬性||  
 |ReturnCellProperties|指定是否會傳回資料格屬性。<br /><br /> 這個屬性的預設值是 FALSE。<br /><br /> 這個屬性可以搭配**探索**和**Execute**方法。|選擇性的讀取/寫入**布林**屬性||  
-|角色|指定用戶端應用程式連接至 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 執行個體所用之角色名稱的逗號分隔字串。 這個屬性可讓使用者使用目前使用中角色以外的角色進行連接。 例如，伺服器管理員可能會想要以某個角色成員的身分連接至 Cube，以便測試授與該角色的權限。 這位使用者必須是指定之角色的成員，才能使用這個屬性進行連接。<br /><br /> **\*\*重要\* \*** 角色名稱區分大小寫，和不應以逗號分隔的角色名稱之間使用空格。 否則，受保護之資料格集的查詢可能會傳回錯誤和非預期的結果。<br /><br /> 這個屬性沒有預設值。<br /><br /> 這個屬性可以搭配**探索**和**Execute**方法。|選擇性的讀取/寫入**字串**屬性||  
-|SafetyOptions|決定用戶端應用程式是否可以註冊和載入不安全的程式庫。<br /><br /> 這個屬性的值也會決定本機 Cube 中是否允許使用 PASSTHROUGH 關鍵字。 在下列情況中會發生錯誤：<br /><br /> -如果用戶端應用程式嘗試建立本機 cube 搭配 INSERT INTO 陳述式，其中包含使用 PASSTHROUGH 關鍵字。<br /><br /> -如果用戶端應用程式會更新本機 cube，其中包含的 INSERT INTO 陳述式使用 PASSTHROUGH 關鍵字。<br /><br /> 這個屬性沒有預設值。<br /><br /> 這個屬性可以搭配**探索**和**Execute**方法。|選擇性的讀取/寫入**整數**屬性|這個屬性可以具有的值列於下列的其中一個**名稱**:**值**組：<br /><br /> **DBPROPVAL_MSMD_SAFETY_OPTIONS_DEFAULT**: <br />                          *0*.這個值會被視為 DBPROPVAL_MSMD_SAFETY_OPTIONS_ALLOW_SAFE。連接到本機 cube，這個值會取決於是否使用 CREATECUBE 連接字串屬性。 如果使用了 CREATECUBE 連接字串屬性，這個值就與 DBPROPVAL_MSMD_SAFETY_OPTIONS_ALLOW_ALL 相同。 否則，這個值會與 DBPROPVAL_MSMD_SAFETY_OPTIONS_ALLOW_SAFE 相同。<br /><br /> **與 DBPROPVAL_MSMD_SAFETY_OPTIONS_ALLOW_ALL**: <br />                          *1*.這個值會啟用所有使用者定義函數程式庫，但不驗證它們的初始化和指令碼是否安全。 若為本機 Cube 的連接，這個值可讓您使用預存程序以及在 INSERT INTO 陳述式中使用 PASSTHROUGH 關鍵字。 **\*\*安全性注意事項\* \*** ： 不建議使用此選項。<br /><br /> **DBPROPVAL_MSMD_SAFETY_OPTIONS_ALLOW_SAFE**: <br />                          *2*.這個值會確保特定使用者定義函數程式庫的所有類別都經過檢查，以便確定它們的初始化和指令碼安全無虞。 若為本機 Cube 的連接，這個值會讓您無法在 INSERT INTO 陳述式中使用 PASSTHROUGH 關鍵字以及 PermissionSet 屬性未設定為 Safe 的預存程序。 這個值也會移除在動作[MDSCHEMA_ACTIONS](../../../analysis-services/schema-rowsets/ole-db-olap/mdschema-actions-rowset.md) HTML 值，或是命令在 ACTION_TYPE 資料行，或是有 URL ACTION_TYPE 資料行的值和值並不會在內容資料行中的結構描述資料列以"http://"或"https://"開頭。<br /><br /> **DBPROPVAL_MSMD_SAFETY_OPTIONS_ALLOW_NONE**: <br />                          *3*： 此值可防止使用者定義函式在工作階段期間使用。 若為本機 Cube 的連接，這個值會讓您無法使用所有預存程序以及在 INSERT INTO 陳述式中使用 PASSTHROUGH 關鍵字。 此外，這個值也會移除 MDSCHEMA_ACTIONS 結構描述資料列集中的所有動作。|  
+|角色|指定用戶端應用程式連接至 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 執行個體所用之角色名稱的逗號分隔字串。 這個屬性可讓使用者使用目前使用中角色以外的角色進行連接。 例如，伺服器管理員可能會想要以某個角色成員的身分連接至 Cube，以便測試授與該角色的權限。 這位使用者必須是指定之角色的成員，才能使用這個屬性進行連接。<br /><br /> **\*\* 重要\* \*** 角色名稱區分大小寫，和不應以逗號分隔的角色名稱之間使用空格。 否則，受保護之資料格集的查詢可能會傳回錯誤和非預期的結果。<br /><br /> 這個屬性沒有預設值。<br /><br /> 這個屬性可以搭配**探索**和**Execute**方法。|選擇性的讀取/寫入**字串**屬性||  
+|SafetyOptions|決定用戶端應用程式是否可以註冊和載入不安全的程式庫。<br /><br /> 這個屬性的值也會決定本機 Cube 中是否允許使用 PASSTHROUGH 關鍵字。 在下列情況中會發生錯誤：<br /><br /> -如果用戶端應用程式嘗試建立本機 cube 搭配 INSERT INTO 陳述式，其中包含使用 PASSTHROUGH 關鍵字。<br /><br /> -如果用戶端應用程式會更新本機 cube，其中包含的 INSERT INTO 陳述式使用 PASSTHROUGH 關鍵字。<br /><br /> 這個屬性沒有預設值。<br /><br /> 這個屬性可以搭配**探索**和**Execute**方法。|選擇性的讀取/寫入**整數**屬性|這個屬性可以具有的值列於下列的其中一個**名稱**:**值**組：<br /><br /> **DBPROPVAL_MSMD_SAFETY_OPTIONS_DEFAULT**: <br />                          *0*.這個值會被視為 DBPROPVAL_MSMD_SAFETY_OPTIONS_ALLOW_SAFE。連接到本機 cube，這個值會取決於是否使用 CREATECUBE 連接字串屬性。 如果使用了 CREATECUBE 連接字串屬性，這個值就與 DBPROPVAL_MSMD_SAFETY_OPTIONS_ALLOW_ALL 相同。 否則，這個值會與 DBPROPVAL_MSMD_SAFETY_OPTIONS_ALLOW_SAFE 相同。<br /><br /> **與 DBPROPVAL_MSMD_SAFETY_OPTIONS_ALLOW_ALL**: <br />                          *1*.這個值會啟用所有使用者定義函數程式庫，但不驗證它們的初始化和指令碼是否安全。 若為本機 Cube 的連接，這個值可讓您使用預存程序以及在 INSERT INTO 陳述式中使用 PASSTHROUGH 關鍵字。 **\*\* 安全性注意事項\* \*** ： 不建議使用此選項。<br /><br /> **DBPROPVAL_MSMD_SAFETY_OPTIONS_ALLOW_SAFE**: <br />                          *2*.這個值會確保特定使用者定義函數程式庫的所有類別都經過檢查，以便確定它們的初始化和指令碼安全無虞。 若為本機 Cube 的連接，這個值會讓您無法在 INSERT INTO 陳述式中使用 PASSTHROUGH 關鍵字以及 PermissionSet 屬性未設定為 Safe 的預存程序。 這個值也會移除在動作[MDSCHEMA_ACTIONS](../../../analysis-services/schema-rowsets/ole-db-olap/mdschema-actions-rowset.md) HTML 值，或是命令在 ACTION_TYPE 資料行，或是有 URL ACTION_TYPE 資料行的值和值並不會在內容資料行中的結構描述資料列以"http://"或"https://"開頭。<br /><br /> **DBPROPVAL_MSMD_SAFETY_OPTIONS_ALLOW_NONE**: <br />                          *3*： 此值可防止使用者定義函式在工作階段期間使用。 若為本機 Cube 的連接，這個值會讓您無法使用所有預存程序以及在 INSERT INTO 陳述式中使用 PASSTHROUGH 關鍵字。 此外，這個值也會移除 MDSCHEMA_ACTIONS 結構描述資料列集中的所有動作。|  
 |SecuredCellValue|指定的錯誤程式碼和值**值**和**格式化值**資料格嘗試存取受保護的儲存格時要傳回的屬性。<br /><br /> 這個屬性可以搭配**探索**和**Execute**方法。|選擇性的讀取/寫入**整數**屬性|此屬性可以有下列其中一個值：<br /><br /> *0*： 預設值。 為了與舊版相容，這個值會是相同*1*。 這個預設值的意義在未來的版本中可能會變更。<br /><br /> *1*： 傳回的 HRESULT = NO_ERROR。 **值**屬性的資料格包含結果當做 variant 資料類型。 中傳回字串"# n/A"**格式化值**屬性。<br /><br /> *2*： 傳回錯誤當做 HRESULT 的值。<br /><br /> *3*： 傳回 NULL 在**值**和**格式化值**屬性。<br /><br /> *4*： 傳回數值零 (0) 中**值**屬性，並傳回格式化的零**格式化值**屬性。 比方說中, 傳回 0.00**格式化值**資料格的屬性其**格式**屬性是"#。 # #"。<br /><br /> *5*： 中都傳回字串"#SEC"**值**和**格式化值**屬性。|  
 |ServerName|這個屬性就相當於 OLE DB 屬性 DBPROP_SERVERNAME。<br /><br /> 這個屬性的預設值為 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 執行個體的名稱。<br /><br /> 這個屬性可以搭配**探索**和**Execute**方法。|選擇性的唯讀**字串**屬性||  
 |ShowHiddenCubes|保留供日後使用。<br /><br /> 這個屬性的預設值是 FALSE。<br /><br /> 這個屬性可以搭配**探索**和**Execute**方法。|選擇性的讀取/寫入**布林**屬性||  
@@ -140,13 +128,13 @@ ms.lasthandoff: 01/08/2018
 |SspropInitAppName|包含用戶端應用程式的名稱。<br /><br /> 這個屬性沒有預設值。<br /><br /> 這個屬性可以搭配**探索**和**Execute**方法。|選擇性的讀取/寫入**字串**屬性||  
 |SspropInitPacketsize|包含用戶端應用程式的識別碼。<br /><br /> 這個屬性沒有預設值。<br /><br /> 這個屬性可以搭配**探索**和**Execute**方法。|選擇性的讀取/寫入**整數**屬性||  
 |SspropInitWsid|包含用戶端工作站的識別碼。<br /><br /> 這個屬性沒有預設值。<br /><br /> 這個屬性可以搭配**探索**和**Execute**方法。|選擇性的讀取/寫入**字串**屬性||  
-|StateSupport|指定對 Statefulness 的支援程度。<br /><br /> 如需有關 statefulness 和工作階段支援的詳細資訊，請參閱[管理連接和工作階段 &#40;XMLA &#41;](../../../analysis-services/multidimensional-models-scripting-language-assl-xmla/managing-connections-and-sessions-xmla.md).<br /><br /> 這個屬性的預設值是*工作階段*。<br /><br /> 這個屬性可以搭配**探索**方法。|選擇性的唯讀**字串**屬性|此屬性可以有下列其中一個值：<br /><br /> *無*： 不支援 Statefulness。<br /><br /> *工作階段*: Statefulness 透過工作階段支援所提供。|  
+|StateSupport|指定對 Statefulness 的支援程度。<br /><br /> 如需有關 statefulness 和工作階段支援的詳細資訊，請參閱[管理連接和工作階段&#40;XMLA&#41;](../../../analysis-services/multidimensional-models-scripting-language-assl-xmla/managing-connections-and-sessions-xmla.md)。<br /><br /> 這個屬性的預設值是*工作階段*。<br /><br /> 這個屬性可以搭配**探索**方法。|選擇性的唯讀**字串**屬性|此屬性可以有下列其中一個值：<br /><br /> *無*： 不支援 Statefulness。<br /><br /> *工作階段*: Statefulness 透過工作階段支援所提供。|  
 |逾時|指定在傳回錯誤之前，[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 執行個體應該等候要求成功的最大時間 (以秒為單位)。 這個屬性也會決定在傳回錯誤之前，執行個體應該等候回寫資料表之更新成功的最大時間，相當於連接字串屬性 Writeback Timeout。<br /><br /> 這個屬性的預設值為零 (0)。<br /><br /> 這個屬性可以搭配**探索**和**Execute**方法。|選擇性的讀取/寫入**整數**屬性||  
 |TransactionDDL|保留供日後使用。<br /><br /> 這個屬性的預設值為 0。<br /><br /> 這個屬性可以搭配**探索**和**Execute**方法。|選擇性的唯讀**整數**屬性||  
 |UserName|這個屬性不再受到支援。<br /><br /> 指定字串，它會傳回 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 執行個體與命令產生關聯所用的使用者名稱。 回溯相容性，而不會產生錯誤與搭配使用時忽略這個屬性**Execute**或**探索**方法。 這個屬性就相當於 OLE DB 屬性 DBPROP_USERNAME。<br /><br /> 這個屬性的預設值是開啟目前工作階段或連接的使用者名稱。<br /><br /> 這個屬性可以搭配**Execute**方法。|選擇性的唯讀**字串**屬性||  
 |VisualMode|這個屬性就相當於 OLE DB 屬性 MDPROP_VISUALMODE。<br /><br /> 這個屬性的預設值為零 (0)，相當於 DBPROPVAL_VISUAL_MODE_DEFAULT。<br /><br /> 這個屬性可以搭配**探索**和**Execute**方法。|選擇性的唯寫**整數**屬性||  
   
-## <a name="see-also"></a>請參閱  
- [PropertyList 元素 &#40;XMLA &#41;](../../../analysis-services/xmla/xml-elements-properties/propertylist-element-xmla.md)  
+## <a name="see-also"></a>另請參閱
+ [PropertyList 元素&#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/propertylist-element-xmla.md)  
   
   

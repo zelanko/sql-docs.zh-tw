@@ -1,27 +1,25 @@
 ---
-title: "Power Pivot 連線類型 (SSRS) | Microsoft Docs"
-ms.custom: 
+title: Power Pivot 連線類型 (SSRS) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: report-data
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: a104c3c7-f118-4d02-9a0f-6859f1469d11
-caps.latest.revision: "9"
+caps.latest.revision: 9
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: c9377c8a436f057a1b257af70c0c8d23ee52a8ae
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: abc0e7f2d8ded8d69f758059b5ce85d34b080ebb
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="power-pivot-connection-type-ssrs"></a>Power Pivot 連接類型 (SSRS)
   您可以使用 SQL Server Analysis Services 資料處理延伸模組，從已在 SharePoint [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 圖庫中發行的 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 活頁簿中擷取資料。  

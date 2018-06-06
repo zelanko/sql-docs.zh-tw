@@ -1,16 +1,15 @@
 ---
-title: "專案設定 （型別對應） (AccessToSQL) |Microsoft 文件"
-ms.prod: sql-non-specified
+title: 專案設定 （型別對應） (AccessToSQL) |Microsoft 文件
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
 ms.component: ssma-access
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ssma
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 applies_to:
 - Azure SQL Database
 - SQL Server
@@ -22,16 +21,15 @@ helpviewer_keywords:
 - SQL Server data types
 - Type Mapping settings
 ms.assetid: b87b9683-abed-4677-8c50-18bdba704655
-caps.latest.revision: "16"
+caps.latest.revision: 16
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
-ms.workload: Inactive
-ms.openlocfilehash: 81c2512eacc634de526ecffb0d56d86dbcecca87
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+manager: craigg
+ms.openlocfilehash: 072d8aaf4582237cc60a3e3e6d76b02a86dc27c2
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="project-settings-type-mapping-accesstosql"></a>專案設定 （型別對應） (AccessToSQL)
 型別對應的專案設定可讓您設定的 SSMA 專案的預設型別對應。 您也可以指定個別的資料庫物件的型別對應。 如需詳細資訊，請參閱[對應來源和目標資料型別](http://msdn.microsoft.com/en-us/b362a075-16e7-423f-b63f-e1e9f02844a9)。  
@@ -42,7 +40,7 @@ ms.lasthandoff: 12/21/2017
   
 -   使用**預設專案設定**對話方塊來設定所有專案的組態選項。 若要存取的型別對應設定，在**工具**功能表上，選取**預設專案設定**，選取移轉專案類型設定為需要從變更 / 檢視**移轉的目標版本**下拉式清單，然後按一下 **型別對應**的左窗格中。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
 **來源類型**  
 存取的資料類型對應。  
   
@@ -53,24 +51,24 @@ ms.lasthandoff: 12/21/2017
   
 |存取資料類型|SQL Server 資料類型|  
 |--------------------|------------------------|  
-|**二進位 [\*..\*]**|**varbinary [\*]**|  
+|**binary[\*..\*]**|**varbinary[\*]**|  
 |**boolean**|**bit**|  
 |**位元組**|**tinyint**|  
-|**貨幣**|**money**|  
+|**currency**|**money**|  
 |**date**|**datetime**|  
 |**decimal**|**float**|  
 |**double**|**float**|  
-|**guid**|**uniqueidentifier**|  
+|**Guid**|**uniqueidentifier**|  
 |**integer**|**smallint**|  
 |**長**|**int**|  
 |**longbinary**|**varbinary(max)**|  
 |**附註**|**nvarchar(max)**|  
 |**備忘**： 適用於 Access 97|**varchar(max)**|  
-|**單一**|**real**|  
-|**text[\*..\*]**|**nvarchar [\*]**|  
-|**text[\*..\*]** ： 適用於 Access 97|**varchar [\*]**|  
+|**single**|**real**|  
+|**text[\*..\*]**|**nvarchar[\*]**|  
+|**文字 [\*..\*]** ： 適用於 Access 97|**varchar[\*]**|  
   
-**[加入]**  
+**加入**  
 按一下以新增的資料類型對應清單。  
   
 **編輯**  
@@ -82,7 +80,7 @@ ms.lasthandoff: 12/21/2017
 **重設預設值**  
 按一下以重設 SSMA 的所有資料類型對應。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
 [對應來源和目標資料類型](http://msdn.microsoft.com/en-us/b362a075-16e7-423f-b63f-e1e9f02844a9)  
 [使用者介面 Reference(Access)](http://msdn.microsoft.com/en-us/af24c303-4a41-449b-9c86-d6558a97e839)  
   

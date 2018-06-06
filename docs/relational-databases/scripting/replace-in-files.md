@@ -1,36 +1,33 @@
 ---
-title: "檔案中取代 | Microsoft Docs"
-ms.custom: 
+title: 檔案中取代 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
-ms.prod_service: sql-tools
-ms.service: 
-ms.component: ssms-scripting
-ms.reviewer: 
+ms.prod: sql
+ms.technology: scripting
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 f1_keywords:
 - vs.findreplace.replaceinfiles
 - vs.replaceinfiles
 helpviewer_keywords:
 - Replace in Files dialog box
 ms.assetid: 51191c0a-e022-41d6-8473-5cb3c6596862
-caps.latest.revision: 
+caps.latest.revision: 21
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 8ff5ad7512f416d936f14c2aa080e114e8bbcd4d
-ms.sourcegitcommit: a0aa5e611a0e6ebb74ac1e2f613e8916dc7a7617
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: ac813e5f0a61b981ac46ecbfa43e56ad5f8473ac
+ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/24/2018
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="replace-in-files"></a>檔案中取代
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] [尋找和取代] 視窗的 [檔案中取代] 索引標籤，可以讓您在指定檔案集的程式碼中搜尋字串或運算式，並變更部分或所有找到的相符結果。 找到的相符結果與採取的動作會列在 [結果選項] 所選取的 [尋找結果] 視窗中。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+  [尋找和取代] 視窗的 [檔案中取代] 索引標籤，可以讓您在指定檔案集的程式碼中搜尋字串或運算式，並變更部分或所有找到的相符結果。 找到的相符結果與採取的動作會列在 [結果選項] 所選取的 [尋找結果] 視窗中。  
   
  工具列按鈕與快速鍵也可用來開啟 **[尋找和取代]** 對話方塊。  
   
@@ -70,7 +67,7 @@ ms.lasthandoff: 01/24/2018
  顯示的提醒會包含 **[保持已修改的檔案開啟]** 選項。 若要保留 **[恢復]** 選項，您必須選取此選項。 **[恢復]** 功能僅適用於檔案在修改之後仍保持開啟可供編輯的檔案。  
   
  **略過檔案**  
- 當 [查詢] 包含多個檔案時才可以使用。 如果不要搜尋或修改目前的檔案，請按一下此按鈕。 搜尋會繼續在 **[查詢]**清單中的下一個檔案進行。  
+ 當 [查詢] 包含多個檔案時才可以使用。 如果不要搜尋或修改目前的檔案，請按一下此按鈕。 搜尋會繼續在 **[查詢]** 清單中的下一個檔案進行。  
   
 ## <a name="look-in"></a>查詢  
  您從 [查詢] 下拉式清單中選擇的選項，可決定 [檔案中取代] 僅搜尋目前使用中的檔案，或搜尋儲存在特定資料夾中的所有檔案。 從清單中選取搜尋範圍，鍵入資料夾路徑，或按一下 [瀏覽] 按鈕以顯示 [Custom Directory Set (自訂目錄集)] 對話方塊，然後選擇一組要搜尋的資料夾。  

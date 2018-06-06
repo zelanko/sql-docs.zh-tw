@@ -1,16 +1,15 @@
 ---
-title: "預估角色切換的服務中斷時間 (資料庫鏡像) | Microsoft Docs"
-ms.custom: 
+title: 預估角色切換的服務中斷時間 (資料庫鏡像) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
-ms.prod_service: database-engine
-ms.service: 
+ms.prod: sql
+ms.prod_service: high-availability
 ms.component: database-mirroring
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: dbe-high-availability
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: high-availability
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - parallel redo [SQL Server]
 - role switching [SQL Server]
@@ -19,19 +18,19 @@ helpviewer_keywords:
 - redo [database mirroring]
 - database mirroring [SQL Server], failover
 ms.assetid: 586a6f25-672b-491b-bc2f-deab2ccda6e2
-caps.latest.revision: "41"
+caps.latest.revision: 41
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 3b506d1897f7de298a3f9bbe9259eab106ffcbda
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 59904b08ba0a20a458e623b43b47c811e1ebf9b3
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="estimate-the-interruption-of-service-during-role-switching-database-mirroring"></a>預估角色切換期間的服務中斷時間 (資料庫鏡像)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 在角色切換期間，資料庫鏡像無法服務的時間量視角色切換類型和角色切換原因而定。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  在角色切換期間，資料庫鏡像無法服務的時間量視角色切換類型和角色切換原因而定。  
   
 -   對於自動容錯移轉，有兩個因素構成服務中斷時間：鏡像伺服器辨識主體伺服器執行個體失敗所需的時間，即錯誤偵測，加上資料庫容錯移轉所需的時間，即容錯移轉時間。  
   

@@ -1,15 +1,14 @@
 ---
-title: "卸除組件 |Microsoft 文件"
-ms.custom: 
+title: 卸除組件 |Microsoft 文件
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
 ms.component: clr
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - removing assemblies
@@ -17,20 +16,19 @@ helpviewer_keywords:
 - assemblies [CLR integration], removing
 - dropping assemblies
 ms.assetid: 03481034-dc91-4488-ab24-ba44243e2690
-caps.latest.revision: 
+caps.latest.revision: 16
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 1db4c5af104f3f00db4cdf26c3ab2f7c94800513
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 46be0c285631013e3847e7ad7c0e8f03a543ad8e
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="dropping-an-assembly"></a>卸除組件
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-如果您不再需要已經使用 CREATE ASSEMBLY 陳述式在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 中註冊之組件所提供的功能，就可以刪除或卸除這些組件。 卸除組件會從資料庫中移除組件及其所有相關聯的檔案 (例如偵錯檔案)。 若要卸除組件，請使用 DROP ASSEMBLY 陳述式搭配下列語法：  
+  如果您不再需要已經使用 CREATE ASSEMBLY 陳述式在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 中註冊之組件所提供的功能，就可以刪除或卸除這些組件。 卸除組件會從資料庫中移除組件及其所有相關聯的檔案 (例如偵錯檔案)。 若要卸除組件，請使用 DROP ASSEMBLY 陳述式搭配下列語法：  
   
 ```  
 DROP ASSEMBLY MyDotNETAssembly  
@@ -74,10 +72,10 @@ SELECT o.name AS major_name, o.type_desc AS major_type_desc
  [管理 CLR 整合組件](../../../relational-databases/clr-integration/assemblies/managing-clr-integration-assemblies.md)   
  [變更組件](../../../relational-databases/clr-integration/assemblies/altering-an-assembly.md)   
  [建立組件](../../../relational-databases/clr-integration/assemblies/creating-an-assembly.md)   
- [卸除彙總 &#40;TRANSACT-SQL &#41;](../../../t-sql/statements/drop-aggregate-transact-sql.md)   
- [卸除函數 &#40;TRANSACT-SQL &#41;](../../../t-sql/statements/drop-function-transact-sql.md)   
- [卸除程序 &#40;TRANSACT-SQL &#41;](../../../t-sql/statements/drop-procedure-transact-sql.md)   
+ [卸除彙總&#40;Transact SQL&#41;](../../../t-sql/statements/drop-aggregate-transact-sql.md)   
+ [DROP FUNCTION &#40;Transact-SQL&#41;](../../../t-sql/statements/drop-function-transact-sql.md)   
+ [卸除程序 & #40;TRANSACT-SQL & #41;](../../../t-sql/statements/drop-procedure-transact-sql.md)   
  [DROP TRIGGER &#40;Transact-SQL&#41;](../../../t-sql/statements/drop-trigger-transact-sql.md)   
- [DROP TYPE &#40;Transact-SQL&#41;](../../../t-sql/statements/drop-type-transact-sql.md)  
+ [卸除類型&#40;Transact SQL&#41;](../../../t-sql/statements/drop-type-transact-sql.md)  
   
   

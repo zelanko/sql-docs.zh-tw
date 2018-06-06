@@ -1,17 +1,16 @@
 ---
-title: "建立統計資料 | Microsoft Docs"
-ms.custom: 
+title: 建立統計資料 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
 ms.component: statistics
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-statistics
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 f1_keywords:
 - sql13.swb.stat.properties.f1
 - sql13.swb.statistics.filter.f1
@@ -21,20 +20,20 @@ helpviewer_keywords:
 - creating statistics
 - statistics [SQL Server], creating
 ms.assetid: 95a455fb-664d-4c95-851e-c6b62d7ebe04
-caps.latest.revision: 
+caps.latest.revision: 9
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 9cf772ad4cffd6d992233d4324ce270c884cb06d
-ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: f4a06d45ab3fa089f07e31ac8b8fd9a3162e820f
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="create-statistics"></a>建立統計資料
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-您可以使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ，在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中針對資料表或索引檢視表的一個或多個資料行建立查詢最佳化統計資料。 對於大部分查詢而言，查詢最佳化工具已經產生高品質查詢計畫的必要統計資料。不過，在少數情況下，您必須建立其他統計資料。  
+  您可以使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ，在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中針對資料表或索引檢視表的一個或多個資料行建立查詢最佳化統計資料。 對於大部分查詢而言，查詢最佳化工具已經產生高品質查詢計畫的必要統計資料。不過，在少數情況下，您必須建立其他統計資料。  
   
  **本主題內容**  
   
@@ -69,7 +68,7 @@ ms.lasthandoff: 02/23/2018
   
 #### <a name="to-create-statistics"></a>若要建立統計資料  
   
-1.  在 **[物件總管]**中，按一下加號展開要在其中建立新統計資料的資料庫。  
+1.  在 **[物件總管]** 中，按一下加號展開要在其中建立新統計資料的資料庫。  
   
 2.  按一下加號展開 **[資料表]** 資料夾。  
   
@@ -153,7 +152,7 @@ ms.lasthandoff: 02/23/2018
   
 #### <a name="to-create-statistics"></a>若要建立統計資料  
   
-1.  在 **[物件總管]**中，連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的執行個體。  
+1.  在 **[物件總管]** 中，連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的執行個體。  
   
 2.  在標準列上，按一下 **[新增查詢]**。  
   

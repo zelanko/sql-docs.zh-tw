@@ -1,28 +1,26 @@
 ---
-title: "答案是 ODBC？ | Microsoft Docs"
-ms.custom: 
+title: 答案是 ODBC？ | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
-ms.component: odbc
-ms.reviewer: 
+ms.prod: sql
+ms.prod_service: connectivity
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
-ms.topic: article
-helpviewer_keywords: interoperability [ODBC], ODBC
+ms.technology: connectivity
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
+helpviewer_keywords:
+- interoperability [ODBC], ODBC
 ms.assetid: bfa5e6ee-5979-42a9-be6f-a84d1ee7a54c
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
-ms.workload: Inactive
-ms.openlocfilehash: 390188eb430e51bf0ce27bf2f32f9f82c195d4da
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+manager: craigg
+ms.openlocfilehash: be3439dd75ac7e67fc83c630f9cf0e2ef670a863
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="is-odbc-the-answer"></a>答案是 ODBC？
 在深入之前的互通性問題，請考慮下列問題： 應用程式應該使用 ODBC 完全嗎？ 這似乎很奇怪 ODBC，指南中詢問問題，但很，事實上，合法。 ODBC 的設計無法完全取代原生資料庫應用程式開發介面，也就設計來提供在所有情況下的資料庫存取權。 它設計來提供資料庫的通用介面，其目的是要釋放應用程式設計人員必須了解和維護多個資料庫的連結。  

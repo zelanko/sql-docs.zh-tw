@@ -1,27 +1,24 @@
 ---
-title: "SQLServerPreparedStatement 成員 |Microsoft 文件"
-ms.custom: 
+title: SQLServerPreparedStatement 成員 |Microsoft 文件
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
-ms.component: jdbc
-ms.reviewer: 
+ms.prod: sql
+ms.prod_service: connectivity
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: connectivity
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: 2363902f-d4c6-4cd4-a5fc-86079eb9e418
-caps.latest.revision: "38"
+caps.latest.revision: 38
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
-ms.workload: Inactive
-ms.openlocfilehash: 05f80d22f4eb968f6db9ce24a8c5e9808bd43356
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+manager: craigg
+ms.openlocfilehash: 275115e8d23c48a564528de57fee14ae19513e00
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sqlserverpreparedstatement-members"></a>SQLServerPreparedStatement 成員
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -45,12 +42,12 @@ ms.lasthandoff: 11/18/2017
 |名稱|Description|  
 |----------|-----------------|  
 |[addBatch](../../../connect/jdbc/reference/addbatch-method-sqlserverpreparedstatement.md)|將一組參數加入至這個陳述式物件的命令批次。|  
-|[[取消]](../../../connect/jdbc/reference/cancel-method-sqlserverstatement.md)|(繼承自[SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md)。)取消目前正在這個陳述式物件所執行的 SQL 陳述式。|  
+|[cancel](../../../connect/jdbc/reference/cancel-method-sqlserverstatement.md)|(繼承自[SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md)。)取消目前正在這個陳述式物件所執行的 SQL 陳述式。|  
 |[clearBatch](../../../connect/jdbc/reference/clearbatch-method-sqlserverpreparedstatement.md)|清空目前的 SQL 命令清單，這個[SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md)物件。|  
 |[clearParameters](../../../connect/jdbc/reference/clearparameters-method-sqlserverpreparedstatement.md)|立刻清除目前的參數值。|  
 |[clearWarnings](../../../connect/jdbc/reference/clearwarnings-method-sqlserverstatement.md)|(繼承自[SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md)。)清除所有此陳述式物件所報告的警告。|  
 |[關閉](../../../connect/jdbc/reference/close-method-sqlserverpreparedstatement.md)|釋出資料庫和 JDBC 資源，這個陳述式之物件的立即而非等待它們由系統自動釋放。|  
-|[執行](../../../connect/jdbc/reference/execute-method-sqlserverpreparedstatement.md)|在這個陳述式物件，它可以是任何一種 SQL 陳述式中執行的 SQL 陳述式。|  
+|[execute](../../../connect/jdbc/reference/execute-method-sqlserverpreparedstatement.md)|在這個陳述式物件，它可以是任何一種 SQL 陳述式中執行的 SQL 陳述式。|  
 |[executeBatch](../../../connect/jdbc/reference/executebatch-method-sqlserverpreparedstatement.md)|將命令批次提交到要執行的資料庫。 如果所有命令都成功執行，則傳回更新計數陣列。|  
 |[executeQuery](../../../connect/jdbc/reference/executequery-method-sqlserverpreparedstatement.md)|在這個陳述式物件中執行 SQL 查詢，並傳回[SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md)查詢所產生的物件。|  
 |[executeUpdate](../../../connect/jdbc/reference/executeupdate-method-sqlserverpreparedstatement.md)|在此陳述式物件，其必須是 SQL INSERT、 UPDATE、 MERGE 或 DELETE 陳述式中，執行 SQL 陳述式或不傳回任何東西，例如 DDL 陳述式的 SQL 陳述式。|  
@@ -71,7 +68,7 @@ ms.lasthandoff: 11/18/2017
 |[getResultSetType](../../../connect/jdbc/reference/getresultsettype-method-sqlserverstatement.md)|(繼承自[SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md)。)擷取結果集類型為[SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md)這個陳述式物件所產生的物件。|  
 |[getUpdateCount](../../../connect/jdbc/reference/getupdatecount-method-sqlserverstatement.md)|(繼承自[SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md)，) 擷取目前結果當做更新計數。|  
 |[getWarnings](../../../connect/jdbc/reference/getwarnings-method-sqlserverstatement.md)|(繼承自[SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md)。)擷取由呼叫這個陳述式物件所報告的第一個警告。|  
-|[isClosed](../../../connect/jdbc/reference/isclosed-method-sqlserverstatement.md)|(繼承自[SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md)。)指出是否已關閉這個陳述式物件。|  
+|[IsClosed](../../../connect/jdbc/reference/isclosed-method-sqlserverstatement.md)|(繼承自[SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md)。)指出是否已關閉這個陳述式物件。|  
 |[isPoolable](../../../connect/jdbc/reference/ispoolable-method-sqlserverstatement.md)|(繼承自[SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md)。)傳回值，這個值指出陳述式是否可以加入至使用者提供的陳述式集區。|  
 |[isWrapperFor](../../../connect/jdbc/reference/iswrapperfor-method-sqlserverpreparedstatement.md)|指出這個陳述式物件是否為指定之介面的包裝函式。|  
 |[setArray](../../../connect/jdbc/reference/setarray-method-sqlserverpreparedstatement.md)|將指定的參數編號設定為指定的陣列物件。|  
@@ -81,7 +78,7 @@ ms.lasthandoff: 11/18/2017
 |[setBlob](../../../connect/jdbc/reference/setblob-method-sqlserverpreparedstatement.md)|將指定之的參數設定為指定的 Blob 物件。|  
 |[setboolean](../../../connect/jdbc/reference/setboolean-method-sqlserverpreparedstatement.md)|指定的參數設定為指定**布林**值。|  
 |[setByte](../../../connect/jdbc/reference/setbyte-method-sqlserverpreparedstatement.md)|指定的參數設定為指定**位元組**值。|  
-|[setBytes](../../../connect/jdbc/reference/setbytes-method-sqlserverpreparedstatement.md)|設定指定的參數為指定的位元組陣列。|  
+|[SetBytes](../../../connect/jdbc/reference/setbytes-method-sqlserverpreparedstatement.md)|設定指定的參數為指定的位元組陣列。|  
 |[setCharacterStream](../../../connect/jdbc/reference/setcharacterstream-method-sqlserverpreparedstatement.md)|將指定之的參數設定為指定的讀取器物件。|  
 |[setClob](../../../connect/jdbc/reference/setclob-method-sqlserverpreparedstatement.md)|指定的參數設定為給定的 Clob 物件。|  
 |[setCursorName](../../../connect/jdbc/reference/setcursorname-method-sqlserverstatement.md)|(繼承自[SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md)。)將 SQL 資料指標名稱設定為指定的字串，此字串將由後續執行方法使用。|  
@@ -123,7 +120,7 @@ ms.lasthandoff: 11/18/2017
 |java.sql.Statement|cancel, clearWarnings, execute, executeUpdate, getConnection, getFetchDirection, getFetchSize, getGeneratedKeys, getMaxFieldSize, getMaxRows, getMoreResults, getQueryTimeout, getResultSet, getResultSetConcurrency, getResultSetHoldability, getResultSetType, getUpdateCount, getWarnings, setCursorName, setEscapeProcessing, setFetchDirection, setFetchSize, setMaxFieldSize, setMaxRows, setQueryTimeout|  
 |java.sql.Wrapper|isWrapperFor, unwrap|  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [SQLServerPreparedStatement 類別](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md)  
   
   

@@ -1,32 +1,31 @@
 ---
-title: "sqlsrv_get_config |Microsoft 文件"
-ms.custom: 
+title: sqlsrv_get_config | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
+ms.prod: sql
+ms.prod_service: connectivity
 ms.component: php
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
-ms.topic: article
-apiname: sqlsrv_get_config
+ms.technology: connectivity
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
+apiname:
+- sqlsrv_get_config
 apitype: NA
 helpviewer_keywords:
 - API Reference, sqlsrv_get_config
 - sqlsrv_get_config
 ms.assetid: ce2befc2-af98-45bb-8d41-60f1674dccfc
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
-ms.workload: Inactive
-ms.openlocfilehash: c76e394715b1a866e193c1484f19c458a61668cc
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+manager: craigg
+ms.openlocfilehash: 433f5dc1d997c4f8756ad48a446aebff977cb908
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sqlsrvgetconfig"></a>sqlsrv_get_config
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -51,6 +50,8 @@ sqlsrv_get_config( string $setting )
   
 ## <a name="see-also"></a>另請參閱  
 [SQLSRV 驅動程式 API 參考](../../connect/php/sqlsrv-driver-api-reference.md)  
+
 [sqlsrv_configure](../../connect/php/sqlsrv-configure.md)  
+
 [sqlsrv_errors](../../connect/php/sqlsrv-errors.md)  
   

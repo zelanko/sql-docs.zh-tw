@@ -1,34 +1,23 @@
 ---
-title: "模型屬性 |Microsoft 文件"
-ms.custom: 
-ms.date: 03/01/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services, azure-analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords:
-- sql13.asvs.bidtoolset.wspacedbconfig.f1
-- sql13.asvs.bidtoolset.fileprop.f1
-ms.assetid: 8ab04656-75a5-485c-9687-7b1ca49f7f80
-caps.latest.revision: 
-author: Minewiskan
+title: 模型屬性 |Microsoft 文件
+ms.date: 05/07/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: tabular-models
+ms.topic: conceptual
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: a2f2478c92ba44040c8377f6957896d233bf9ce2
-ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
+ms.openlocfilehash: 56b0e5595887cb8da627ba0864c624f89a6857a6
+ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="model-properties"></a>模型屬性 
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
-這篇文章描述表格式模型屬性。 每個表格式模型專案皆含有模型屬性，可影響您在 SQL Server 開發工具中撰寫之模型的建立方式、備份方式，以及工作空間資料庫的儲存方式。 此處所述的模型屬性，並不適用於已部署的模型。  
+  這篇文章描述表格式模型屬性。 每個表格式模型專案皆含有模型屬性，可影響您在 SQL Server 開發工具中撰寫之模型的建立方式、備份方式，以及工作空間資料庫的儲存方式。 此處所述的模型屬性，並不適用於已部署的模型。  
   
  本主題的章節：  
   

@@ -1,17 +1,16 @@
 ---
-title: "異動複寫的可更新訂閱 | Microsoft 文件"
-ms.custom: 
+title: 異動複寫的可更新訂閱 | Microsoft 文件
+ms.custom: ''
 ms.date: 07/21/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
 ms.component: replication
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - transactional replication, updatable subscriptions
 - updatable subscriptions, about updatable subscriptions
@@ -20,16 +19,15 @@ helpviewer_keywords:
 - subscriptions [SQL Server replication], updatable
 - updatable subscriptions
 ms.assetid: 8eec95cb-3a11-436e-bcee-bdcd05aa5c5a
-caps.latest.revision: 
+caps.latest.revision: 60
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: c4922de0c287e5263163f56d151455fea9a836f9
-ms.sourcegitcommit: ab25b08a312d35489a2c4a6a0d29a04bbd90f64d
+ms.openlocfilehash: d52ee6d23418e83fb19a9029efe615b0f796f5e8
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="updatable-subscriptions---for-transactional-replication"></a>可更新訂閱 - 異動複寫
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -63,7 +61,7 @@ ms.lasthandoff: 03/08/2018
  **切換更新模式**  
   
  若要切換更新模式，則必須啟用兩種更新模式的發行集和訂閱，然後必要時在它們之間進行切換。 如需相關資訊，請參閱  
-[Switch Between Update Modes for an Updatable Transactional Subscription](../../../relational-databases/replication/administration/switch-between-update-modes-for-an-updatable-transactional-subscription.md)。  
+[切換可更新之交易式訂閱的更新模式](../../../relational-databases/replication/administration/switch-between-update-modes-for-an-updatable-transactional-subscription.md)  
   
 ### <a name="considerations-for-using-updatable-subscriptions"></a>使用可更新訂閱之考量  
   

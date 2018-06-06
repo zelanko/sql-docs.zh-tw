@@ -1,27 +1,19 @@
 ---
-title: "在 DirectQuery 模式中的 DAX 公式相容性 |Microsoft 文件"
-ms.custom: 
-ms.date: 02/22/2018
-ms.prod: analysis-services
-ms.prod_service: analysis-services, azure-analysis-services
-ms.service: 
-ms.component: multidimensional-tabular
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
-ms.assetid: d2fbafe6-d7fb-437b-b32b-fa2446023fa5
-caps.latest.revision: 
-author: Minewiskan
+title: 在 DirectQuery 模式中的 DAX 公式相容性 |Microsoft 文件
+ms.date: 05/07/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: tabular-models
+ms.topic: conceptual
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 92c5801fe05dfa19e136e15f15227e50af64f769
-ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
+ms.openlocfilehash: 2005742b524db0ec5587ad3f8d959b03dec6965b
+ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="dax-formula-compatibility-in-directquery-mode"></a>在 DirectQuery 模式中的 DAX 公式相容性 
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]

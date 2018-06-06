@@ -1,32 +1,22 @@
 ---
-title: "使用 R 進行資料探索和建立預測模型 | Microsoft Docs"
-ms.custom:
-- SQL2016_New_Updated
-ms.date: 04/18/2017
-ms.reviewer: 
-ms.suite: sql
-ms.prod: machine-learning-services
-ms.prod_service: machine-learning-services
-ms.component: r
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
-ms.assetid: bf6de7e2-f394-4b8a-a4b7-0b8dadf25426
-caps.latest.revision: 
-author: jeannt
-ms.author: jeannt
-manager: cgronlund
-ms.workload: Inactive
-ms.openlocfilehash: d7c5430e585d7324e94ebe64e5138246e26049c4
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+title: 資料探索和預測模型，以在 SQL Server 機器學習中的 R |Microsoft 文件
+ms.prod: sql
+ms.technology: machine-learning
+ms.date: 04/15/2018
+ms.topic: conceptual
+author: HeidiSteen
+ms.author: heidist
+manager: cgronlun
+ms.openlocfilehash: 9f808c2fffe0b008590ae1eaac51124471c02e5d
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 04/16/2018
 ---
-# <a name="data-exploration-and-predictive-modeling-with-r"></a>使用 R 的資料探索和預測模型
+# <a name="data-exploration-and-predictive-modeling-with-r-in-sql-server"></a>資料探索和預測模型，以在 SQL Server 中的 R
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-本主題說明資料科學程序可以透過與 SQL Server 整合的增強功能。
+本文說明資料科學程序可以透過與 SQL Server 整合的增強功能。
 
 適用於： SQL Server 2016 R Services、 SQL Server 2017 機器 Learnign 服務
 

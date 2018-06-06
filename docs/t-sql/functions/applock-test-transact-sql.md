@@ -1,16 +1,14 @@
 ---
 title: APPLOCK_TEST (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 07/24/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
 ms.component: t-sql|functions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: t-sql
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - APPLOCK_TEST_TSQL
@@ -24,21 +22,20 @@ helpviewer_keywords:
 - sessions [SQL Server], application locks
 - testing application locks
 ms.assetid: 4ea33d04-f8e9-46ff-ae61-985bd3eaca2c
-caps.latest.revision: 
+caps.latest.revision: 31
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: f4009a151873bf989a39bc4fb91ec3a9963af9f2
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 359590e5a05e71fb2033eb503e26e2bc2b4faf8a
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="applocktest-transact-sql"></a>APPLOCK_TEST (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-傳回是否可以針對未取得鎖定的指定鎖定擁有者，來授與特定應用程式資源之鎖定的相關資訊。 APPLOCK_TEST 是一個應用程式鎖定功能，它作用於目前資料庫。 應用程式鎖定的範圍是資料庫。
+此函數所傳回的資訊，乃是關於在未取得鎖定的情況下，針對指定的鎖定擁有者，是否可以將鎖定授與特定應用程式資源。 APPLOCK_TEST 是應用程式鎖定函數，會在目前的資料庫上運作。 資料庫是應用程式鎖定的範圍。
   
 ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -50,22 +47,22 @@ APPLOCK_TEST ( 'database_principal' , 'resource_name' , 'lock_mode' , 'lock_owne
   
 ## <a name="arguments"></a>引數  
 **'** *database_principal* **'**  
-這是已獲授與資料庫中的物件權限之使用者、角色或應用程式角色。 函式的呼叫者必須是 *database_principal*、**dbo** 或 **db_owner** 固定資料庫角色的成員，才能夠成功呼叫函式。
+可被授與資料庫中物件權限的使用者、角色或應用程式角色。 函數的呼叫者必須是 *database_principal*、dbo 或 db_owner 固定資料庫角色的成員，才能成功呼叫函數。
   
 **'** *resource_name* **'**  
-這是用戶端應用程式所指定的鎖定資源名稱。 應用程式必須確定資源是唯一的。 指定的名稱會在內部雜湊成可儲存在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 鎖定管理員中的值。 *resource_name* 是沒有預設值的 **nvarchar(255)**。 *resource_name* 是以二進位來比較，不論目前資料庫的定序設定為何，都會區分大小寫。
+用戶端應用程式指定的鎖定資源名稱。 應用程式必須確定資源名稱是唯一的。 指定的名稱會在內部雜湊成 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 鎖定管理員可儲存在內部的值。  *resource_name* 是沒有預設值的 **nvarchar(255)**。 *resource_name* 是以二進位來比較，不論目前資料庫的定序設定為何，都會區分大小寫。
   
 **'** *lock_mode* **'**  
-這是要取得的特定資源鎖定模式。 *lock_mode* 是沒有預設值的 **nvarchar(32)**。 這個值可以是下列中的任何一項：**Shared**、**Update**、**IntentShared**、**IntentExclusive**、**Exclusive**。
+針對特定資源要取得的鎖定模式。 *lock_mode* 是沒有預設值的 **nvarchar(32)**。 *lock_mode* 可具有下列任何一個值：**Shared**、**Update**、**IntentShared**、**IntentExclusive**、**Exclusive**。
   
 **'** *lock_owner* **'**  
-為鎖定的擁有者，也就是要求鎖定時的 *lock_owner* 值。 *lock_owner* 為 **nvarchar(32)**。 這個值可以是 **Transaction**  (預設值) 或 **Session** 。 如果明確指定預設值或 **Transaction**，就必須從交易內執行 APPLOCK_TEST。
+為鎖定的擁有者，也就是要求鎖定時的 *lock_owner* 值。 *lock_owner* 是 **nvarchar(32)**，而且此值可以是**交易** (預設值) 或**工作階段**。 如果明確指定預設值或 **Transaction**，就必須從交易內執行 APPLOCK_TEST。
   
-## <a name="return-types"></a>傳回型
+## <a name="return-types"></a>傳回類型
 **smallint**
   
 ## <a name="return-value"></a>傳回值
-當無法將鎖定授與指定的擁有者時，傳回 0；如果可以授與鎖定，便傳回 1。
+如果無法將鎖定授與指定的擁有者則為 0，如果可以授與鎖定則為 1。
   
 ## <a name="function-properties"></a>函式屬性
 **Nondeterministic**
@@ -75,7 +72,7 @@ APPLOCK_TEST ( 'database_principal' , 'resource_name' , 'lock_mode' , 'lock_owne
 **Nonparallelizable**
   
 ## <a name="examples"></a>範例  
-在下列範例中，具有個別工作階段的兩位使用者 (**使用者 A** 和**使用者 B**) 會執行下列 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式順序。
+有個別工作階段的兩個使用者 (**使用者 A** 和**使用者 B**)，按照以下順序執行 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式。
   
 **使用者 A** 執行：
   

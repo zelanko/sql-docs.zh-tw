@@ -1,31 +1,23 @@
 ---
-title: "從採礦模型鑽研到案例資料 |Microsoft 文件"
-ms.custom: 
-ms.date: 03/01/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
-helpviewer_keywords: drillthrough [Analysis Services]
-ms.assetid: b4d3f350-e543-4ea9-b3a2-b4f7c0a9ae27
-caps.latest.revision: "21"
-author: Minewiskan
+title: 從採礦模型鑽研到案例資料 |Microsoft 文件
+ms.date: 05/01/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: data-mining
+ms.topic: conceptual
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 9f287437903c54c4eb66da3343bc2c80f18ac5fe
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: f7b5b2cbfd141642cb5d36d0ec67958ec7ae14ae
+ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="drill-through-to-case-data-from-a-mining-model"></a>鑽研採礦模型的案例資料
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]如果採礦模型已經設定，讓您鑽研模型案例中，當您瀏覽模型，您可以擷取有關用來建立模型之案例的詳細的資訊。 此外，如果基礎採礦結構已經設定為允許鑽研結構案例，而且您擁有適當的權限，就可以從採礦結構傳回資訊。 這可能包括沒有包含在採礦模型中的資料行。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+  如果採礦模型已經設定為讓您鑽研模型案例，當您瀏覽此模型時，可以擷取有關用來建立模型之案例的詳細資訊。 此外，如果基礎採礦結構已經設定為允許鑽研結構案例，而且您擁有適當的權限，就可以從採礦結構傳回資訊。 這可能包括沒有包含在採礦模型中的資料行。  
   
  如果採礦結構不允許您鑽研基礎資料，但是採礦模型允許，您就可以檢視模型案例的資訊，但無法檢視採礦結構的資訊。  
   
@@ -45,7 +37,7 @@ ms.lasthandoff: 01/08/2018
 |**Microsoft 時序群集檢視器**|**項目集** 索引標籤|按一下包含項目集的資料列。|  
   
 > [!NOTE]  
->  有些模型無法使用鑽研。 使用鑽研的能力取決於建立模型所使用的演算法。 如需支援鑽研之採礦模型類型的清單，請參閱 [鑽研查詢 &#40;資料採礦&#41;](../../analysis-services/data-mining/drillthrough-queries-data-mining.md)來加入鑽研現有採礦模型的功能。  
+>  有些模型無法使用鑽研。 使用鑽研的能力取決於建立模型所使用的演算法。 如需支援鑽研之採礦模型類型的清單，請參閱[鑽研查詢 &#40;資料採礦&#41;](../../analysis-services/data-mining/drillthrough-queries-data-mining.md)。  
   
 ### <a name="to-view-drillthrough-data-from-a-mining-model"></a>若要檢視採礦模型中的鑽研資料  
   
@@ -61,7 +53,7 @@ ms.lasthandoff: 01/08/2018
   
 6.  若要將資料複製到剪貼簿，請以滑鼠右鍵按一下資料表中的任何資料列，然後選取 [全部複製]。  
   
-## <a name="see-also"></a>請參閱  
- [鑽研查詢 &#40;資料採礦&#41;](../../analysis-services/data-mining/drillthrough-queries-data-mining.md)  
+## <a name="see-also"></a>另請參閱  
+ [鑽研查詢 & #40; 資料採礦 & #41;](../../analysis-services/data-mining/drillthrough-queries-data-mining.md)  
   
   

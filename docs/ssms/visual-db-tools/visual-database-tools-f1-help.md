@@ -1,31 +1,31 @@
 ---
-title: "Visual Database Tools F1 說明 | Microsoft Docs"
-ms.custom: 
+title: Visual Database Tools F1 說明 | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
 ms.component: ssms-visual-db
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: tools-ssms
-ms.tgt_pltfrm: 
-ms.topic: article
-helpviewer_keywords: Visual Database Tools [SQL Server], help
+ms.technology: ssms
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
+helpviewer_keywords:
+- Visual Database Tools [SQL Server], help
 ms.assetid: 79d15b47-6759-4f48-b9ac-2c86a3cd9980
-caps.latest.revision: "3"
+caps.latest.revision: 3
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: b5c1404c4f5dceb9ca5ef5b6a9be5c8a64a24dd7
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.openlocfilehash: c93d0e1c66a5a51936f0d8d7705e244117477c1a
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="visual-database-tools-f1-help"></a>Visual Database Tools F1 說明
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 這些主題討論 Visual Database Tools 項目之對話方塊和屬性視窗 (例如 [資料表屬性] 視窗以及 [資料行屬性] 索引標籤) 中的命令和選項。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+這些主題討論 Visual Database Tools 元素之對話方塊和屬性視窗 (例如 [資料表屬性] 視窗以及 [資料行屬性] 索引標籤) 中的命令和選項。  
   
 若要存取對話方塊主題，請在對話方塊開啟並取得焦點時按 F1。 若要存取屬性視窗主題，請在 [屬性] 視窗中按一下，再按 F1。  
   

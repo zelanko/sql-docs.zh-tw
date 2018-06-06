@@ -1,33 +1,23 @@
 ---
-title: "Analysis Services 中的資料類型 |Microsoft 文件"
-ms.custom: 
-ms.date: 03/06/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
-ms.assetid: 910be4f4-3010-41cd-9fdc-f0a79a0ce823
-caps.latest.revision: 
-author: Minewiskan
+title: Analysis Services 中的資料類型 |Microsoft 文件
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: olap
+ms.topic: conceptual
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 7fcf359a6f760ffffa4e1a0682e4c4b45f4fe272
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 3b7ac934afdc086a50020e9ba22ca2d236ee091b
+ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="data-types-in-analysis-services"></a>Analysis Services 中的資料類型
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
-所有<xref:Microsoft.AnalysisServices.DataItem>物件[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]支援下列子集**System.Data.OleDb.OleDbType**。 若要設定或讀取的資料類型，請使用[DataItem 資料類型 &#40;ASSL &#41;](../../../analysis-services/scripting/data-type/dataitem-data-type-assl.md).  
+  所有<xref:Microsoft.AnalysisServices.DataItem>物件[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]支援下列子集**System.Data.OleDb.OleDbType**。 若要設定或讀取的資料類型，請使用[DataItem 資料類型&#40;ASSL&#41;](../../../analysis-services/scripting/data-type/dataitem-data-type-assl.md)。  
   
 ## <a name="supported-data-types"></a>支援的資料類型  
   

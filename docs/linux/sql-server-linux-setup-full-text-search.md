@@ -1,25 +1,22 @@
 ---
-title: "Linux 上安裝 SQL Server 全文檢索搜尋 |Microsoft 文件"
-description: "本文說明如何在 Linux 上安裝 SQL Server 全文檢索搜尋。"
+title: Linux 上安裝 SQL Server 全文檢索搜尋 |Microsoft 文件
+description: 本文說明如何在 Linux 上安裝 SQL Server 全文檢索搜尋。
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.date: 10/02/2017
 ms.topic: article
-ms.prod: sql-non-specified
-ms.prod_service: database-engine
-ms.service: 
-ms.component: 
+ms.prod: sql
+ms.component: ''
 ms.suite: sql
 ms.custom: sql-linux
-ms.technology: database-engine
+ms.technology: linux
 ms.assetid: bb42076f-e823-4cee-9281-cd3f83ae42f5
-ms.workload: Inactive
-ms.openlocfilehash: 1ffb4caadffb8f292f6bd8e495a457fe86e9d641
-ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
+ms.openlocfilehash: 401eb2569a1da86964543f9122d213398f39eff4
+ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/13/2018
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="install-sql-server-full-text-search-on-linux"></a>Linux 上安裝 SQL Server 全文檢索搜尋
 
@@ -212,7 +209,7 @@ sudo zypper update mssql-server-fts
 |.kci | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
 |.lgn | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
 |.log | C7310720-AC80-11D1-8DF3-00C04FB6EF4F | 12.0.6828.0 |
-|.lst | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
+|指定.lst | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
 |.m3u | C7310720-AC80-11D1-8DF3-00C04FB6EF4F | 12.0.6828.0 |
 |.mak | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
 |.mk | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |

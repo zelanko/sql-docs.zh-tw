@@ -1,16 +1,14 @@
 ---
 title: ALTER FUNCTION (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 08/07/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, pdw, sql-database
-ms.service: 
 ms.component: t-sql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: t-sql
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - ALTER_FUNCTION_TSQL
@@ -22,16 +20,16 @@ helpviewer_keywords:
 - modifying functions
 - functions [SQL Server], modifying
 ms.assetid: 89f066ee-05ac-4439-ab04-d8c3d5911179
-caps.latest.revision: 
+caps.latest.revision: 62
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 4b1008715d9cfd3e48945d0651f454253bc4e4bc
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: bb6c32e0711a14d8815ae5678c1f6719e2dbaf00
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="alter-function-transact-sql"></a>ALTER FUNCTION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-pdw-md.md)]
@@ -225,7 +223,7 @@ RETURNS return_data_type
  使用 "at" 記號 (**@**) 當作第一個字元來指定參數名稱。 參數名稱必須符合[識別碼](../../relational-databases/databases/database-identifiers.md)的規則。 對函數而言，參數必須是本機參數；相同的參數名稱可以用在其他函數中。 參數只能取代常數，不能用來取代資料表名稱、資料行名稱或其他資料庫物件的名稱。  
   
 > [!NOTE]  
->  當在預存程序或使用者自訂函數中傳遞參數時，或在批次陳述式中宣告和設定變數時，會忽略 ANSI_WARNINGS。 例如，如果變數定義為 **char(3)**，然後設定為大於三個字元的值，資料會被截斷成定義的大小，而 INSERT 或 UPDATE 陳述式會成功。  
+>  當在預存程序或使用者自訂函數中傳遞參數時，或在批次陳述式中宣告和設定變數時，會忽略 ANSI_WARNINGS。 例如，如果將變數定義為 **char(3)**，然後設定為大於三個字元的值，資料就會被截斷成定義的大小，而 INSERT 或 UPDATE 陳述式會執行成功。  
   
  [ *type_schema_name.* ] *parameter_data_type*  
  這是參數資料類型，對於其所屬的結構描述而言為選擇性。 就 [!INCLUDE[tsql](../../includes/tsql-md.md)] 函式而言，所有資料類型 (包括 CLR 使用者定義型別) 都是允許的資料類型，但 **timestamp** 資料類型除外。 就 CLR 函式而言，所有資料類型 (包括 CLR 使用者定義型別) 都是允許的資料類型，但 **text**、**ntext**、**image** 及 **timestamp** 資料類型除外。 非純量類型 **cursor** 和 **table** 不能指定為 [!INCLUDE[tsql](../../includes/tsql-md.md)] 或 CLR 函式中的參數資料類型。  
@@ -239,7 +237,7 @@ RETURNS return_data_type
 -   目前資料庫中的 **dbo** 結構描述。  
   
  [ **=***default* ]  
- 這是參數的預設值。 如果定義了 *default* 值，不必指定該參數的值就可以執行函式。  
+ 這是參數的預設值。 如果已定義 *default* 值，則不需為該參數指定值，即可執行函式。  
   
 > [!NOTE]  
 >  您可以針對 CLR 函式指定預設參數值，但 **varchar(max)** 和 **varbinary(max)** 資料類型除外。  
@@ -252,7 +250,7 @@ RETURNS return_data_type
  *function_body*  
  指定一系列 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式 (並用這些陳述式並不會造成任何副作用，例如修改資料表等) 定義函數的值。 *function_body* 僅用於純量函式和多重陳述式資料表值函式中。  
   
- 在純量函式中， *function_body* 是一系列的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式，這些陳述式會一起評估為純量值。  
+ 在純量函式中，*function_body* 是一系列的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式，這些陳述式會一起評估為純量值。  
   
  在多重陳述式資料表值函式中，*function_body* 是一系列的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式，這些陳述式會填入 TABLE 傳回變數。  
   
@@ -260,11 +258,11 @@ RETURNS return_data_type
  指定純量函數傳回純量值。  
   
  TABLE  
- 指定資料表值函式的傳回值是資料表。 可傳遞給資料表值函式的只有常數和 **@***local_variables*。  
+ 指定資料表值函式的傳回值是資料表。 只有常數和 **@***local_variables* 才能傳遞給資料表值函式。  
   
  在內嵌資料表值函式中，TABLE 傳回值是利用單一 SELECT 陳述式所定義。 內嵌函數沒有相關聯的傳回變數。  
   
- 在多重陳述式資料表值函式中，**@***return_variable* 是一個 TABLE 變數，可用來儲存及累積應作為函式值來傳回的資料列。 您只能針對 [!INCLUDE[tsql](../../includes/tsql-md.md)] 函式指定 **@***return_variable*，不能針對 CLR 函式指定。  
+ 在多重陳述式資料表值函式中，**@***return_variable* 是一個 TABLE 變數，可用來儲存及累積應作為函式值來傳回的資料列。 **@***return_variable* 只能指定給 [!INCLUDE[tsql](../../includes/tsql-md.md)] 函式，但不能指定給 CLR 函式。  
   
  *select-stmt*  
  這是單一 SELECT 陳述式，可定義嵌入資料表值函式的傳回值。  
@@ -275,20 +273,20 @@ RETURNS return_data_type
  指定繫結函數之組件的方法。 *assembly_name* 必須符合目前所顯示之資料庫的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的現有組件。 *class_name* 必須是有效的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 識別碼，且必須是組件中的類別。 如果該類別具有命名空間限定的名稱，且該名稱使用句號 (**.**) 來分隔命名空間的各個部分，您就必須使用方括弧 (**[]**) 或引號 (**""**) 來分隔類別名稱。 *method_name* 必須是有效的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 識別碼，且必須是指定類別中的靜態方法。  
   
 > [!NOTE]  
->  依預設，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不能執行 CLR 程式碼。 您可以建立、修改和卸除參考通用語言執行平台模組的資料庫物件；不過，在啟用 [clr enabled 選項](../../database-engine/configure-windows/clr-enabled-server-configuration-option.md)之前，您無法在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中執行這些參考。 若要啟用這個選項，請使用 [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)。  
+>  依預設，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不能執行 CLR 程式碼。 您可以建立、修改和卸除參考通用語言執行平台模組的資料庫物件；不過，必須等到您啟用 [clr enabled 選項](../../database-engine/configure-windows/clr-enabled-server-configuration-option.md)之後，才能在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中執行這些參考。 若要啟用這個選項，請使用 [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)。  
   
 > [!NOTE]  
 >  自主資料庫無法使用這個選項。  
   
- *\<*table_type_definition*>***(** { \<column_definition> \<column_constraint> | \<computed_column_definition> } [ \<table_constraint> ] [ **,**...*n* ]**)**  
+ *\<* table_type_definition *>***(** { \<column_definition> \<column_constraint> | \<computed_column_definition> } [ \<table_constraint> ] [ **,**...*n* ]**)**  
  定義 [!INCLUDE[tsql](../../includes/tsql-md.md)] 函數的資料表資料類型。 資料表宣告包括資料行定義和資料行或資料表條件約束。  
   
-\< clr_table_type_definition > **(** { *column_name**data_type* } [ **,**...*n* ] **)** **適用對象**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] ([在某些地區為預覽版](http://azure.microsoft.com/documentation/articles/sql-database-preview-whats-new/?WT.mc_id=TSQL_GetItTag))。  
+\< clr_table_type_definition > **(** { *column_name**data_type* } [ **,**...*n* ] **)** **適用於**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]、[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] ([在某些地區為預覽版](http://azure.microsoft.com/documentation/articles/sql-database-preview-whats-new/?WT.mc_id=TSQL_GetItTag))。  
   
  定義 CLR 函數的資料表資料類型。 資料表宣告只包含資料行名稱和資料類型。  
   
  NULL|NOT NULL  
- 只有針對原生編譯的純量使用者定義函式才支援。 如需詳細資訊，請參閱[記憶體內部 OLTP 的純量使用者定義函式](../../relational-databases/in-memory-oltp/scalar-user-defined-functions-for-in-memory-oltp.md)。  
+ 只有針對原生編譯的純量使用者定義函式才支援。 如需詳細資訊，請參閱[記憶體內部 OLTP 的純量使用者定義函數](../../relational-databases/in-memory-oltp/scalar-user-defined-functions-for-in-memory-oltp.md)。  
   
  NATIVE_COMPILATION  
  指出使用者定義函式是否為原生編譯函式。 此引數是原生編譯之純量使用者定義函式的必要引數。  
@@ -408,7 +406,7 @@ RETURNS return_data_type
   
  **\<index_option>::=**  
   
- 指定 PRIMARY KEY 或 UNIQUE 索引的索引選項。 如需有關索引選項的詳細資訊，請參閱 [CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md)。  
+ 指定 PRIMARY KEY 或 UNIQUE 索引的索引選項。 如需索引選項的詳細資訊，請參閱 [CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md)。  
   
  PAD_INDEX = { ON | OFF }  
  指定索引填補。 預設值為 OFF。  

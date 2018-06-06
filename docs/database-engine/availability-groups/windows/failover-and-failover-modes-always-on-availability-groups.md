@@ -1,32 +1,29 @@
 ---
-title: "容錯移轉及容錯移轉模式 (AlwaysOn 可用性群組) | Microsoft Docs"
-ms.custom: 
+title: 容錯移轉及容錯移轉模式 (AlwaysOn 可用性群組) | Microsoft Docs
+ms.custom: ''
 ms.date: 05/17/2016
-ms.prod: sql-non-specified
-ms.prod_service: database-engine
-ms.service: 
-ms.component: availability-groups
-ms.reviewer: 
+ms.prod: sql
+ms.prod_service: high-availability
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: dbe-high-availability
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: high-availability
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - Availability Groups [SQL Server], availability replicas
 - Availability Groups [SQL Server], failover
 - Availability Groups [SQL Server], failover modes
 - failover [SQL Server], AlwaysOn Availability Groups
 ms.assetid: 378d2d63-50b9-420b-bafb-d375543fda17
-caps.latest.revision: "75"
+caps.latest.revision: 75
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 5e688f4c428df93491b2f6e449022a447504b5e3
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 195dd7358a432bccd94c1916176fa0a35b728cca
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="failover-and-failover-modes-always-on-availability-groups"></a>容錯移轉及容錯移轉模式 (AlwaysOn 可用性群組)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -91,7 +88,7 @@ ms.lasthandoff: 01/18/2018
 |已規劃的手動容錯移轉|否|是|是|  
 |強制容錯移轉|是|是|是**\***|  
   
- **\***如果您在已同步處理的次要複本上發出強制容錯移轉命令，次要複本的行為會與手動容錯移轉時相同。  
+ **\*** 如果您在已同步處理的次要複本上發出強制容錯移轉命令，次要複本的行為會與手動容錯移轉時相同。  
   
  在容錯移轉期間，資料庫無法使用的時間量將依容錯移轉的類型及其原因而定。  
   

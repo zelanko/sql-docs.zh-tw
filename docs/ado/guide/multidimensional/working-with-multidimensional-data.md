@@ -1,35 +1,32 @@
 ---
-title: "使用多維度資料 |Microsoft 文件"
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
+title: 使用多維度資料 |Microsoft 文件
+ms.prod: sql
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
-ms.custom: 
+ms.technology: connectivity
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - multidimensional data [ADO]
 ms.assetid: 84387746-aa3e-44fd-ad6c-a8214a6966dc
-caps.latest.revision: 
+caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: c96d7fda2e02aeefa6225f1cea602f6ed6c7dc2e
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 1d7b5257bf0161c4064f1f25be5c223f46787e4f
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="working-with-multidimensional-data"></a>使用多維度資料
 A*資料格集*是多維度資料查詢的結果。 它包含的軸，通常是四個以上的座標軸和通常只有兩個或三個集合。 *軸*是用來尋找或篩選在 cube 中的特定值的一個或多個維度成員集合。  
   
- A*位置*沿著軸的點。 為座標軸單一維度所組成，這些位置會是維度成員的子集。 如果座標軸包含一個以上的維度，則每個位置是複合的實體，其具有 *n* 部分 where  *n* 是該軸方向的維度數目。 位置的每個部分是從一個的構成維度成員。  
+ A*位置*沿著軸的點。 為座標軸單一維度所組成，這些位置會是維度成員的子集。 如果座標軸包含一個以上的維度，則每個位置是複合的實體，其具有*n*部分 where *n*是該軸方向的維度數目。 位置的每個部分是從一個的構成維度成員。  
   
  例如，如果 cube 包含銷售資料的地理位置和產品維度由沿著 x 軸的資料格集，沿著此軸的位置可能包含成員，「 美國 」 和 「 電腦 」。 在此範例中，判斷沿著 x 軸的位置，需要從每個維度的成員軸方向。  
   
@@ -37,7 +34,7 @@ A*資料格集*是多維度資料查詢的結果。 它包含的軸，通常是�
   
  例如，cube 會有下列六個維度 (請注意此 cube 的結構描述與稍微不同提供的範例[概觀的多維度結構描述和資料](../../../ado/guide/multidimensional/overview-of-multidimensional-schemas-and-data.md)):  
   
--   Salesperson  
+-   銷售人員  
   
 -   地理位置 （也就是自然階層） — 大陸、 國家/地區、 州等等  
   

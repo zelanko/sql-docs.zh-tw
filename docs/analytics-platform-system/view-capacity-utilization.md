@@ -1,28 +1,21 @@
 ---
-title: "檢視容量使用率 (Analytics Platform System)"
-author: barbkess
-ms.author: barbkess
-manager: jhubbard
-ms.prod: analytics-platform-system
-ms.prod_service: mpp-data-warehouse
-ms.service: 
-ms.component: 
-ms.technology: mpp-data-warehouse
-ms.custom: 
-ms.date: 01/05/2017
-ms.reviewer: na
-ms.suite: sql
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: 373633ca-c5af-4618-88e8-58ca84e8e5f4
-caps.latest.revision: "9"
-ms.openlocfilehash: 9bf391d92b29acc057fad1170f878bfb47bccd23
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+title: 檢視中分析平台系統的容量使用率 |Microsoft 文件
+description: 檢視 Analytics Platform System 容量使用率。
+author: mzaman1
+manager: craigg
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
+ms.openlocfilehash: fcd440f3add9ff6823c9104fc94af736d3fdee4e
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/19/2018
 ---
-# <a name="view-capacity-utilization"></a>檢視容量使用率
+# <a name="view-capacity-utilization-in-analytics-platform-system"></a>檢視容量使用率，Analytics Platform System
 本主題說明如何在 SQL Server PDW 應用裝置中檢視容量使用率。  
   
 ## <a name="to-view-capacity-utilization-by-using-admin-console"></a>若要使用管理主控台檢視容量使用率  
@@ -109,7 +102,7 @@ GROUP BY [pdw_node_id], [db_name]
 ORDER BY [db_name], [pdw_node_id];  
 ```  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
 <!-- MISSING LINKS [Common Metadata Query Examples &#40;SQL Server PDW&#41;](../sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  -->
-[應用裝置監視 &#40;Analytics Platform System &#41;](appliance-monitoring.md)  
+[應用裝置監視&#40;Analytics Platform System&#41;](appliance-monitoring.md)  
   

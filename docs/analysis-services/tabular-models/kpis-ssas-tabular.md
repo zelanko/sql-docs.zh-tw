@@ -1,31 +1,23 @@
 ---
-title: KPIs | Microsoft Docs
-ms.custom: 
-ms.date: 04/10/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services, azure-analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
-ms.assetid: a0524602-5239-45a7-8c44-2477302a3637
-caps.latest.revision: 
-author: Minewiskan
+title: Kpi |Microsoft 文件
+ms.date: 05/07/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: tabular-models
+ms.topic: conceptual
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: a38d562df467f020db529fde8633acaa081d045c
-ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
+ms.openlocfilehash: 6eaaf0fc4589fb07484dd10479ded4956650b245
+ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="kpis"></a>KPI
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
-表格式模型中的「關鍵效能指標」(KPI) 可用來針對由量值或絕對值定義的「目標」值，量測由「基底」量值定義之值的績效。 本文章提供表格式模型作者在表格式模型中 Kpi 的基本知識。  
+  表格式模型中的「關鍵效能指標」(KPI) 可用來針對由量值或絕對值定義的「目標」值，量測由「基底」量值定義之值的績效。 本文章提供表格式模型作者在表格式模型中 Kpi 的基本知識。  
   
 ##  <a name="bkmk_benefits"></a> 優點  
  在商務用語中，關鍵效能指標 (KPI) 是量測商務目標的可量化度量。 KPI 通常會在一段時間內進行評估。 例如，組織的銷售部門可以使用 KPI，針對預計的毛利來測量每月的毛利。 會計部門可以針對營收測量每月支出，以評估成本，而人力資源部門可以測量每季員工營業額。 每一個都是 KPI 的範例。 商務專業人員經常會使用在商務計分卡中分組的 KPI，以取得商務成就之快速與精確的記錄摘要，或識別趨勢。  

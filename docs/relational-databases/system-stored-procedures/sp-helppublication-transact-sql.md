@@ -1,16 +1,15 @@
 ---
-title: "sp_helppublication (TRANSACT-SQL) |Microsoft 文件"
-ms.custom: 
+title: sp_helppublication (TRANSACT-SQL) |Microsoft 文件
+ms.custom: ''
 ms.date: 03/17/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - sp_helppublication
 ms.assetid: e801c3f0-dcbd-4b4a-b254-949a05f63518
-caps.latest.revision: 
+caps.latest.revision: 49
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: aa78ce2aa9ed1ba80a7ee733a2e458ba231d968f
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 532c1d371596cff80a547414a316ed0ec401728a
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sphelppublication-transact-sql"></a>sp_helppublication (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,13 +46,13 @@ sp_helppublication [ [ @publication = ] 'publication' ]
 ```  
   
 ## <a name="arguments"></a>引數  
- [  **@publication =** ] **'***發行集***'**  
- 這是要檢視的發行集名稱。 *發行集*是 sysname，預設值是 **%** ，它會傳回有關所有發行集的資訊。  
+ [ **@publication =** ] **'***publication***'**  
+ 這是要檢視的發行集名稱。 *發行集*是 sysname，預設值是**%**，它會傳回有關所有發行集的資訊。  
   
- [  **@found =** ] **'***找到***'**輸出  
+ [  **@found =** ] **'***找到***'** 輸出  
  這是表示傳回資料列的旗標。 *找到*是**int**和一個 OUTPUT 參數，預設值是**23456**。 **1**表示找到發行集。 **0**指出找不到發行集。  
   
- [  **@publisher**  =] **'***發行者***'**  
+ [ **@publisher** = ] **'***publisher***'**  
  指定非 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 發行者。 *發行者*是 sysname，預設值是 NULL。  
   
 > [!NOTE]  
@@ -81,14 +79,14 @@ sp_helppublication [ [ @publication = ] 'publication' ]
 |immediate_sync_ready|**bit**|快照代理程式是否要產生快照集供新訂閱使用。 只有在發行集設定成隨時都有快照供新的訂閱或重新初始化的訂閱使用時，才會定義這個參數。|  
 |allow_sync_tran|**bit**|發行集是否允許立即更新訂閱。|  
 |autogen_sync_procs|**bit**|是否要自動產生預存程序，以支援立即更新訂閱。|  
-|snapshot_jobid|**binary （16)**|排程工作識別碼。|  
+|snapshot_jobid|**binary(16)**|排程工作識別碼。|  
 |retention|**int**|給定發行集的變更儲存量 (以小時為單位)。|  
 |has subscription|**bit**|發行集是否有使用中的訂閱。 **1**表示發行集有使用中的訂閱和**0**表示發行集沒有訂閱。|  
 |allow_queued_tran|**bit**|指定是否停用在訂閱者端將變更放入佇列中，直到可以在發行者端套用這些變更為止。 如果**0**，「 訂閱者 」 端的變更不會排入佇列。|  
 |snapshot_in_defaultfolder|**bit**|指定是否將快照集檔案儲存在預設資料夾中。 如果**0**，快照集檔案已儲存在所指定的替代位置*alternate_snapshot_folder*。 如果**1**，可以在預設資料夾中找到快照集檔案。|  
 |alt_snapshot_folder|**nvarchar(255)**|指定快照集替代資料夾的位置。|  
-|pre_snapshot_script|**nvarchar(255)**|指定指向**.sql**檔案位置。 在訂閱者端套用快照集時，散發代理程式會在執行任何複寫的物件指令碼之前，先執行前快照集 (pre-snapshot) 指令碼。|  
-|post_snapshot_script|**nvarchar(255)**|指定指向**.sql**檔案位置。 在初始同步處理期間，散發代理程式會先套用所有其他複寫的物件指令碼和資料，然後才執行後快照集 (post-snapshot) 指令碼。|  
+|pre_snapshot_script|**nvarchar(255)**|指定指向 **.sql**檔案位置。 在訂閱者端套用快照集時，散發代理程式會在執行任何複寫的物件指令碼之前，先執行前快照集 (pre-snapshot) 指令碼。|  
+|post_snapshot_script|**nvarchar(255)**|指定指向 **.sql**檔案位置。 在初始同步處理期間，散發代理程式會先套用所有其他複寫的物件指令碼和資料，然後才執行後快照集 (post-snapshot) 指令碼。|  
 |compress_snapshot|**bit**|指定可寫入快照集*alt_snapshot_folder*位置是壓縮成[!INCLUDE[msCoName](../../includes/msconame-md.md)]CAB 格式。 **0**指定不壓縮快照集。|  
 |ftp_address|**sysname**|散發者之 FTP 服務的網路位址。 指定發行集快照集檔案所在的位置，以便訂閱者的散發代理程式或合併代理程式能夠加以收取。|  
 |ftp_port|**int**|散發者的 FTP 服務通訊埠編號。|  
@@ -109,7 +107,7 @@ sp_helppublication [ [ @publication = ] 'publication' ]
 |enabled_for_het_sub|**int**|指定發行集是否支援非 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 訂閱者。 值為**1**表示非[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]支援訂閱者。 值為**0**即表示只有[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]支援訂閱者。 如需詳細資訊，請參閱 [Non-SQL Server Subscribers](../../relational-databases/replication/non-sql/non-sql-server-subscribers.md)。|  
 |enabled_for_p2p_conflictdetection|**int**|指定散發代理程式是否會偵測啟用點對點複寫之發行集的衝突。 值為**1**表示會偵測衝突。 如需詳細資訊，請參閱 [Conflict Detection in Peer-to-Peer Replication](../../relational-databases/replication/transactional/peer-to-peer-conflict-detection-in-peer-to-peer-replication.md)。|  
 |originator_id|**int**|針對點對點拓撲中的節點指定識別碼。 此識別碼用於衝突偵測，如果**enabled_for_p2p_conflictdetection**設**1**。 如需已經使用的識別碼清單，請查詢 [Mspeer_originatorid_history](../../relational-databases/system-tables/mspeer-originatorid-history-transact-sql.md) 系統資料表。|  
-|p2p_continue_onconflict|**int**|指定散發代理程式是否會在偵測到衝突時繼續處理變更。 值為**1**表示代理程式會繼續處理變更。<br /><br /> **\*\*注意： \* \*** 我們建議您使用的預設值**0**。 當此選項設定為**1**，散發代理程式嘗試聚合拓撲中的資料，藉由套用衝突的資料列從節點具有最高訂閱者識別碼。 但是，這個方法無法保證聚合。 您應該確定在偵測到衝突之後，拓撲是一致的。 如需詳細資訊，請參閱＜ [Conflict Detection in Peer-to-Peer Replication](../../relational-databases/replication/transactional/peer-to-peer-conflict-detection-in-peer-to-peer-replication.md)＞中的「處理衝突」。|  
+|p2p_continue_onconflict|**int**|指定散發代理程式是否會在偵測到衝突時繼續處理變更。 值為**1**表示代理程式會繼續處理變更。<br /><br /> **\*\* 注意： \* \*** 我們建議您使用的預設值**0**。 當此選項設定為**1**，散發代理程式嘗試聚合拓撲中的資料，藉由套用衝突的資料列從節點具有最高訂閱者識別碼。 但是，這個方法無法保證聚合。 您應該確定在偵測到衝突之後，拓撲是一致的。 如需詳細資訊，請參閱＜ [Conflict Detection in Peer-to-Peer Replication](../../relational-databases/replication/transactional/peer-to-peer-conflict-detection-in-peer-to-peer-replication.md)＞中的「處理衝突」。|  
 |alllow_partition_switch|**int**|指定 ALTER TABLE…SWITCH 陳述式是否可以針對發行的資料庫來執行。 如需詳細資訊，請參閱[複寫資料分割資料表及索引](../../relational-databases/replication/publish/replicate-partitioned-tables-and-indexes.md)。|  
 |replicate_partition_switch|**int**|指定針對發行資料庫執行的 ALTER TABLE…SWITCH 陳述式是否應該複寫到訂閱者。 這個選項才有效才*allow_partition_switch*設**1**。|  
   
@@ -129,11 +127,11 @@ sp_helppublication [ [ @publication = ] 'publication' ]
   
  如果是非 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 發行者，只有散發者端的系統管理員 (sysadmin) 固定伺服器角色成員、散發資料庫的 db_owner 固定資料庫角色成員，或 PAL 中的使用者，才能夠執行 sp_helppublication。  
   
-## <a name="see-also"></a>請參閱＜  
- [檢視和修改發行集屬性](../../relational-databases/replication/publish/view-and-modify-publication-properties.md)   
- [sp_addpublication &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/sp-addpublication-transact-sql.md)   
+## <a name="see-also"></a>另請參閱  
+ [檢視及修改發行集屬性](../../relational-databases/replication/publish/view-and-modify-publication-properties.md)   
+ [sp_addpublication &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpublication-transact-sql.md)   
  [sp_changepublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md)   
- [sp_droppublication &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/sp-droppublication-transact-sql.md)   
+ [sp_droppublication &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-droppublication-transact-sql.md)   
  [複寫預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  
   
   

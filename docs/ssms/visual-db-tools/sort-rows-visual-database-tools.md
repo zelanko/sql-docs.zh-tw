@@ -1,33 +1,32 @@
 ---
-title: "排序資料列 (Visual Database Tools) | Microsoft Docs"
-ms.custom: 
+title: 排序資料列 (Visual Database Tools) | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
 ms.component: ssms-visual-db
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: tools-ssms
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ssms
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - sorting rows [SQL Server]
 - sorting query results [SQL Server]
 ms.assetid: 780ef467-f96e-4373-8235-6dacbedb05a2
-caps.latest.revision: "4"
+caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: e48f10c8bcc1302442a5c30e62c08160eb16e82a
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.openlocfilehash: 34fbc35b427862e469e6f6b617f819c475495b16
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sort-rows-visual-database-tools"></a>排序資料列 (Visual Database Tools)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 您可以排列查詢結果中的資料列。 也就是說，您可以命名特定的資料行或資料行組合，其值將決定結果集中的資料列排列順序。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+您可以排列查詢結果中的資料列。 也就是說，您可以命名特定的資料行或資料行組合，其值將決定結果集中的資料列排列順序。  
   
 > [!NOTE]  
 > 排序次序一部份取決於資料行的定序序列。 您可以在 [定序對話方塊](../../ssms/visual-db-tools/collation-dialog-box-visual-database-tools.md)中變更定序序列。  

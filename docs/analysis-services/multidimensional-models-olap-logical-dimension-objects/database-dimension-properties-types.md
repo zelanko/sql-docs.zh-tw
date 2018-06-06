@@ -1,50 +1,23 @@
 ---
-title: "維度類型 |Microsoft 文件"
-ms.custom: 
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- time dimensions [Analysis Services]
-- quantitative dimensions [Analysis Services]
-- BillOfMaterials dimension [Analysis Services]
-- geography dimensions
-- utility dimensions [Analysis Services]
-- channel dimensions
-- dimensions [Analysis Services], types
-- products dimensions [Analysis Services]
-- account dimensions [Analysis Services]
-- organization dimensions
-- currency dimensions [Analysis Services]
-- rates dimensions
-- promotion dimensions
-- scenario dimensions [Analysis Services]
-- customers dimensions [Analysis Services]
-- Type property
-ms.assetid: bd3195da-e762-4c98-b643-34c76e842343
-caps.latest.revision: 
-author: Minewiskan
+title: 維度類型 |Microsoft 文件
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: olap
+ms.topic: conceptual
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 7e870e18ae05b3daddf9e8230079bec87bb29e2d
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 663c26ac169c11e5ab2d9b90285419cf4145368c
+ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="database-dimension-properties---types"></a>資料庫維度屬性類型
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-**類型**屬性設定會提供給伺服器和用戶端應用程式的維度內容的相關資訊。 在某些情況下，**類型**設定只提供用戶端應用程式的指引，而且是選擇性。 在其他情況下，例如**帳戶**或**時間**維度**類型**維度和其屬性的屬性設定可決定特定的伺服器型行為而可能需要在 cube 中實作的特定行為。 例如，**類型**維度的屬性可以設定為**帳戶**用戶端應用程式指出標準維度包含帳戶屬性。 如需有關時間、 帳戶和貨幣維度的詳細資訊，請參閱[建立日期類型維度](../../analysis-services/multidimensional-models/database-dimensions-create-a-date-type-dimension.md)，[建立父子式類型維度的財務帳戶](../../analysis-services/multidimensional-models/database-dimensions-finance-account-of-parent-child-type.md)，和[建立貨幣輸入維度](../../analysis-services/multidimensional-models/database-dimensions-create-a-currency-type-dimension.md)。  
+  **類型**屬性設定會提供給伺服器和用戶端應用程式的維度內容的相關資訊。 在某些情況下，**類型**設定只提供用戶端應用程式的指引，而且是選擇性。 在其他情況下，例如**帳戶**或**時間**維度**類型**維度和其屬性的屬性設定可決定特定的伺服器型行為而可能需要在 cube 中實作的特定行為。 例如，**類型**維度的屬性可以設定為**帳戶**用戶端應用程式指出標準維度包含帳戶屬性。 如需有關時間、 帳戶和貨幣維度的詳細資訊，請參閱[建立日期類型維度](../../analysis-services/multidimensional-models/database-dimensions-create-a-date-type-dimension.md)，[建立父子式類型維度的財務帳戶](../../analysis-services/multidimensional-models/database-dimensions-finance-account-of-parent-child-type.md)，和[建立貨幣輸入維度](../../analysis-services/multidimensional-models/database-dimensions-create-a-currency-type-dimension.md)。  
   
  維度類型的預設設定**規則**，不讓內容的維度不作任何假設。 這是所有維度的預設設定，當您一開始定義維度，除非您指定**時間**定義維度使用 「 維度精靈 」 時。 您也應該保留**規則**做為維度類型，如果 「 維度精靈 」 不會列出維度類型的適當的類型。  
   
@@ -71,6 +44,6 @@ ms.lasthandoff: 02/15/2018
   
 ## <a name="see-also"></a>另請參閱  
  [使用現有的資料表建立維度](../../analysis-services/multidimensional-models/create-a-dimension-by-using-an-existing-table.md)   
- [維度 &#40;Analysis Services-多維度資料 &#41;](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/dimensions-analysis-services-multidimensional-data.md)  
+ [維度 & #40;Analysis Services-多維度資料 & #41;](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/dimensions-analysis-services-multidimensional-data.md)  
   
   

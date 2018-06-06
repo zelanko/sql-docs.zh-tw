@@ -1,36 +1,23 @@
 ---
-title: "將維度智慧加入維度 |Microsoft 文件"
-ms.custom: 
-ms.date: 03/01/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
-helpviewer_keywords:
-- Business Intelligence enhancements [Analysis Services], dimension intelligence
-- dimensions [Analysis Services], Business Intelligence enhancements
-- dimension intelligence [Analysis Services]
-- Type property
-ms.assetid: b64fa386-eac2-4286-a320-0631a1887aac
-caps.latest.revision: 
-author: Minewiskan
+title: 將維度智慧加入維度 |Microsoft 文件
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: multidimensional-models
+ms.topic: conceptual
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 86c5f345dc963667ea5b05177e84517609f7e5a7
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: ad714bfefa8010664a8105eebf1f45d63799847c
+ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="bi-wizard---add-dimension-intelligence-to-a-dimension"></a>BI 精靈-將維度智慧加入維度中
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-將維度智慧增強功能加入至 Cube 或維度，以指定維度的標準商務類型。 此增強功能同時也會指定維度屬性的對應類型。 用戶端應用程式在分析資料時可以使用這些類型規格。  
+  將維度智慧增強功能加入至 Cube 或維度，以指定維度的標準商務類型。 此增強功能同時也會指定維度屬性的對應類型。 用戶端應用程式在分析資料時可以使用這些類型規格。  
   
  若要加入維度智慧，您可使用 [商業智慧精靈]，並於 [選擇增強功能] 頁面上選取 [定義維度智慧] 選項。 然後，此精靈會引導您逐步完成選取要套用維度智慧的維度，並為選取的維度識別屬性。  
   

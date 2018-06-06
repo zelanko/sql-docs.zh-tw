@@ -1,36 +1,35 @@
 ---
-title: "教學課程：使用以原則為基礎的管理來管理伺服器 | Microsoft 文件"
-ms.custom: 
+title: 教學課程：使用以原則為基礎的管理來管理伺服器 | Microsoft 文件
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
 ms.component: performance-monitor
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 applies_to:
 - SQL Server 2016
 helpviewer_keywords:
 - tutorials [Policy-Based Management]
 - Policy-Based Management, tutorials
 ms.assetid: 7de96e7b-9fb8-4cc8-8d85-61345d68a1e8
-caps.latest.revision: 
+caps.latest.revision: 17
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: ae72070feb083068eb173bd551773727d4a3528f
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 2364b02f298365c29ca7346289aab7eb9dceaafd
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="tutorial-administering-servers-by-using-policy-based-management"></a>教學課程：使用以原則為基礎的管理來管理伺服器
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 歡迎使用「使用原則式管理原則來管理伺服器」教學課程。 本教學課程的主要對象是熟悉 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 但剛接觸以原則為基礎之管理的使用者。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+歡迎使用「使用以原則為基礎的管理原則來管理伺服器」教學課程。 本教學課程的主要對象是熟悉 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 但剛接觸以原則為基礎之管理的使用者。  
   
 ## <a name="what-you-will-learn"></a>學習內容  
 這個教學課程會建立管理伺服器的原則以及套用至單一資料庫的原則。 其中一項原則會視需要執行，以便測試是否符合。 另一項原則會強制執行未來的符合。  

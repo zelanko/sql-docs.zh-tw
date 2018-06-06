@@ -1,17 +1,15 @@
 ---
-title: "ConnectComplete 並中斷連線事件 (ADO) |Microsoft 文件"
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
+title: ConnectComplete 並中斷連線事件 (ADO) |Microsoft 文件
+ms.prod: sql
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
-ms.custom: 
+ms.technology: connectivity
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 apitype: COM
 f1_keywords:
 - Disconnect
@@ -22,16 +20,15 @@ helpviewer_keywords:
 - Disconnect event [ADO]
 - ConnectComplete event [ADO]
 ms.assetid: 568f5252-d069-4d99-a01b-2ada87ad1304
-caps.latest.revision: 
+caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 7ca521c0e850dd7fdacee6cd594b5c9f23a289d3
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: ee97139616af7b632ec2008f916b76d87d7f4bae
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="connectcomplete-and-disconnect-events-ado"></a>ConnectComplete 並中斷連線事件 (ADO)
 **ConnectComplete**連接啟動之後，會呼叫事件。 **中斷連線**連線結束後，會呼叫事件。  

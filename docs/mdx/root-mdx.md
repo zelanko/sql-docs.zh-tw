@@ -1,35 +1,25 @@
 ---
-title: "根 (MDX) |Microsoft 文件"
-ms.custom: 
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: language-reference
-f1_keywords: Root
-dev_langs: kbMDX
-helpviewer_keywords: Root function
-ms.assetid: f6c42e87-5a52-4e43-9dd1-ca757f2db79c
-caps.latest.revision: "32"
-author: Minewiskan
+title: 根 (MDX) |Microsoft 文件
+ms.date: 05/30/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: mdx
+ms.topic: reference
 ms.author: owend
-manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: 16e6fb8fb10816391a25d71a717cff5f4c7abe58
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: 8dd99d852ab33088d4af6df9bd06386b0e8877ab
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34580730"
 ---
 # <a name="root-mdx"></a>Root (MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
-  傳回 tuple 所組成，**所有**cube、 維度或 tuple 中目前的範圍內的每個屬性階層的成員。 如需範圍的詳細資訊，請參閱[SCOPE 陳述式 &#40;MDX &#41;](../mdx/mdx-scripting-scope.md).  
+  傳回 tuple 所組成，**所有**cube、 維度或 tuple 中目前的範圍內的每個屬性階層的成員。 如需範圍的詳細資訊，請參閱[SCOPE 陳述式&#40;MDX&#41;](../mdx/mdx-scripting-scope.md)。  
   
 > [!NOTE]  
 >  如果屬性階層沒有**所有**成員、 tuple 包含該階層的預設成員。  
@@ -87,7 +77,7 @@ FROM [Adventure Works]
 WHERE [Measures].[Order Count]  
 ```  
   
-## <a name="see-also"></a>請參閱  
- [MDX 函數參考 &#40;MDX &#41;](../mdx/mdx-function-reference-mdx.md)  
+## <a name="see-also"></a>另請參閱  
+ [MDX 函數參考&#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

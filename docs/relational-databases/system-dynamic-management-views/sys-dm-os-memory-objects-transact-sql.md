@@ -1,16 +1,13 @@
 ---
-title: sys.dm_os_memory_objects (Transact-SQL) | Microsoft Docs
-ms.custom: 
+title: sys.dm_os_memory_objects (TRANSACT-SQL) |Microsoft 文件
+ms.custom: ''
 ms.date: 03/13/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
-ms.component: dmv's
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: system-objects
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - dm_os_memory_objects
@@ -22,16 +19,16 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_os_memory_objects dynamic management view
 ms.assetid: 5688bcf8-5da9-4ff9-960b-742b671d7096
-caps.latest.revision: 
+caps.latest.revision: 40
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: b0a468001a048f627996e65a5743d3f136e96909
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: d2cfed528dcbc58e4abed89ae1b76d0532d6bf6f
+ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 05/23/2018
 ---
 # <a name="sysdmosmemoryobjects-transact-sql"></a>sys.dm_os_memory_objects (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -53,7 +50,7 @@ ms.lasthandoff: 02/03/2018
 |**max_pages_allocated_count**|**int**|**適用於**： [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 至 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]。<br /><br /> 這個記憶體物件所配置的最大頁數。 不可為 Null。|  
 |**page_size_in_bytes**|**int**|**適用於**： [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。<br /><br /> 這個物件所配置的頁面大小 (以位元組為單位)。 不可為 Null。|  
 |**max_pages_in_bytes**|**bigint**|這個記憶體物件所使用的最大記憶體數量。 不可為 Null。|  
-|**page_allocator_address**|**varbinary(8)**|頁面配置器的記憶體位址。 不可為 Null。 如需詳細資訊，請參閱[sys.dm_os_memory_clerks &#40;TRANSACT-SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-clerks-transact-sql.md).|  
+|**page_allocator_address**|**varbinary(8)**|頁面配置器的記憶體位址。 不可為 Null。 如需詳細資訊，請參閱[sys.dm_os_memory_clerks &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-clerks-transact-sql.md)。|  
 |**creation_stack_address**|**varbinary(8)**|僅供內部使用。 可為 Null。|  
 |**sequence_num**|**int**|僅供內部使用。 可為 Null。|  
 |**partition_type**|**int**|磁碟分割類型：<br /><br /> 0-非可分割記憶體物件<br /><br /> 1-可分割記憶體物件，目前沒有資料分割<br /><br /> 2-可分割記憶體物件，由 NUMA 節點分割。 在單一 NUMA 節點的環境中這相當於 1。<br /><br /> 3-可分割記憶體物件，依 CPU 分割。|  
@@ -64,10 +61,11 @@ ms.lasthandoff: 02/03/2018
   
  **partition_type**， **contention_factor**， **waiting_tasks_count**，和**exclusive_access_count**尚未實作中[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permissions
+
 在[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]，需要`VIEW SERVER STATE`權限。   
-在[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]Premium 層需要`VIEW DATABASE STATE`資料庫的權限。 在[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]標準和基本層，需要**伺服器管理員**或**Azure Active Directory 系統管理員**帳戶。  
-  
+在[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]，需要`VIEW DATABASE STATE`資料庫的權限。   
+
 ## <a name="remarks"></a>備註  
  記憶體物件是堆積。 它們提供的配置比記憶體 Clerk 所提供的配置資料粒度更細。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 元件會使用記憶體物件來取代記憶體 Clerk。 記憶體物件使用記憶體 Clerk 頁面配置器介面來配置頁面。 記憶體物件不使用虛擬或共用記憶體介面。 隨著配置模式的不同，元件可以建立不同類型的記憶體物件，來配置任意大小的頁面。  
   
@@ -88,8 +86,8 @@ GO
 ```  
   
 ## <a name="see-also"></a>另請參閱  
-  [SQL Server 作業系統相關的動態管理檢視 &#40;TRANSACT-SQL &#41;](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)   
- [sys.dm_os_memory_clerks &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-clerks-transact-sql.md)  
+  [SQL Server 作業系統相關的動態管理檢視&#40;Transact SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)   
+ [sys.dm_os_memory_clerks &#40;Transact SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-clerks-transact-sql.md)  
   
   
 

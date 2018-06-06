@@ -1,17 +1,14 @@
 ---
-title: "SCM 服務 - 避免自動啟動執行個體 | Microsoft Docs"
-ms.custom: 
+title: SCM 服務 - 避免自動啟動執行個體 | Microsoft Docs
+ms.custom: ''
 ms.date: 01/06/2016
-ms.prod: sql-non-specified
-ms.prod_service: database-engine
-ms.service: 
-ms.component: configure-windows
-ms.reviewer: 
+ms.prod: sql
+ms.prod_service: high-availability
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: configuration
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - automatic SQL Server startup
 - SQL Server, stopping
@@ -20,20 +17,19 @@ helpviewer_keywords:
 - stopping SQL Server
 - preventing automatic startups [SQL Server]
 ms.assetid: 782663cf-f3d7-4cc6-b621-21e4550f0322
-caps.latest.revision: 
+caps.latest.revision: 36
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: a47e6e4da6d415de5d5b8fac1150c0da21980f8a
-ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
+ms.openlocfilehash: d2abc9a96023941ad76c2181d0bbba07ddde9d3f
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="scm-services---prevent-automatic-startup-of-an-instance"></a>SCM 服務 - 避免自動啟動執行個體
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-此主題描述如何使用 SQL Server 組態管理員，在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中防止 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 執行個體自動啟動。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 通常會設定為自動啟動。 不過您也可以將該執行個體的啟動模式改設為手動。  
+  此主題描述如何使用 SQL Server 組態管理員，在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中防止 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 執行個體自動啟動。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 通常會設定為自動啟動。 不過您也可以將該執行個體的啟動模式改設為手動。  
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server 組態管理員  
   
@@ -53,9 +49,9 @@ ms.lasthandoff: 02/23/2018
   
 3.  在 [詳細資料] 窗格中，以滑鼠右鍵按一下 [MSSQLServer]，然後按一下 [屬性]。  
   
-4.  在 [SQL Server \<執行個體名稱> 屬性] 對話方塊之 [服務] 索引標籤的 [一般] 方塊中，將 [啟動模式] 的值設定為 [手動]。  
+4.  在 [SQL Server \<執行個體名稱> 屬性]**** 對話方塊之 [服務] 索引標籤的 [一般] 方塊中，將 [啟動模式] 的值設定為 [手動]。  
   
-5.  按一下 [確定] 關閉 [SQL Server \<執行個體名稱> 屬性] 對話方塊，然後關閉 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 設定管理員。  
+5.  按一下 [確定] 關閉 [SQL Server \<執行個體名稱> 屬性]**** 對話方塊，然後關閉 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 設定管理員。  
   
 ## <a name="see-also"></a>另請參閱  
  [啟動、停止、暫停、繼續、重新啟動 Database Engine、SQL Server Agent 或 SQL Server Browser 服務](../../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md)  

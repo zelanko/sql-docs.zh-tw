@@ -1,33 +1,31 @@
 ---
-title: "Node.js Driver for SQL Server |Microsoft 文件"
-ms.custom: 
+title: Node.js Driver for SQL Server |Microsoft 文件
+ms.custom: ''
 ms.date: 08/08/2017
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
+ms.prod: sql
+ms.prod_service: connectivity
 ms.component: node-js
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: connectivity
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: c4cdbfa6-9b73-4b72-a1a6-e1b45d8a773d
-caps.latest.revision: "17"
+caps.latest.revision: 17
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
-ms.workload: Active
-ms.openlocfilehash: c3f3203af56f39a4f9beffc8a7a616c0cde64270
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+manager: craigg
+ms.openlocfilehash: 2864b94779179b7023a326834b7fc48ae1b72c40
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="nodejs-driver-for-sql-server"></a>Node.js Driver for SQL Server
 
 ![下載 DownArrow Circled](../../ssdt/media/download.png)[若要下載 Node.js SQL 驅動程式](../sql-connection-libraries.md#anchor-20-drivers-relational-access)
 
-冗長的模組是受到所有現代化版本的 SQL Server 的 TDS 通訊協定的 javascript 實作。 驅動程式是開放原始碼專案可在 Github 上取得。  
+冗長的模組是受到所有現代化版本的 SQL Server 的 TDS 通訊協定的 javascript 實作。 驅動程式是開放原始碼專案，可在 Github 上取得。  
   
 您可以連接到在 Windows、 Linux 或 mac 上使用 Node.js SQL 資料庫  
   

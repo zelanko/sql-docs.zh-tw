@@ -1,36 +1,34 @@
 ---
-title: "資料行模式設定檔要求選項 (資料分析工作) | Microsoft Docs"
-ms.custom: 
+title: 資料行模式設定檔要求選項 (資料分析工作) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
 ms.component: control-flow
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - Data Profiling Task Editor
 ms.assetid: 9ccb8fc5-f65e-41a2-9511-7fa55586eb8b
-caps.latest.revision: 
+caps.latest.revision: 24
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 154dc4da51c19363cb9fd41616e9e89ea3d3ded8
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 97ebf10bb9ae1a30a7f66ba5b984e0c08ee5ac24
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="column-pattern-profile-request-options-data-profiling-task"></a>資料行模式設定檔要求選項 (資料分析工作)
-  您可以使用 [設定檔要求] 頁面的 [要求屬性] 窗格，針對要求窗格中選取的 [資料行模式設定檔要求] 設定選項。 資料行模式設定檔會報告一組規則運算式，其中涵蓋了字串資料行中值的指定百分比。 這個設定檔可協助您識別資料中的問題，例如無效的字串，而且可以建議未來可用於驗證新值的規則運算式。 例如，「美國郵遞區號」資料行的模式設定檔可能會產生規則運算式 \d{5}-\d{4}、\d{5} 和 \d{9}。 如果您看見其他規則運算式，表示您的資料可能包含無效或格式錯誤的值。  
+  您可以使用 [設定檔要求] 頁面的 [要求屬性] 窗格，針對要求窗格中選取的 [資料行模式設定檔要求] 設定選項。 資料行模式設定檔會報告一組規則運算式，其中涵蓋了字串資料行中值的指定百分比。 這個設定檔可協助您識別資料中的問題，例如無效的字串，而且可以建議未來可用於驗證新值的規則運算式。 舉例來說，「美國郵遞區號」資料行的模式設定檔可能會產生規則運算式 \d{5}-\d{4}、\d{5} 和 \d{9}。 如果您看見其他規則運算式，表示您的資料可能包含無效或格式錯誤的值。  
   
 > [!NOTE]  
->  本主題所描述的選項會顯示在 **[資料分析工作編輯器]** 的 **[設定檔要求]**頁面上。 如需此編輯器頁面的詳細資訊，請參閱[資料分析工作編輯器 &#40;設定檔要求頁面&#41;](../../integration-services/control-flow/data-profiling-task-editor-profile-requests-page.md)。  
+>  本主題所描述的選項會顯示在 **[資料分析工作編輯器]** 的 **[設定檔要求]** 頁面上。 如需此編輯器頁面的詳細資訊，請參閱[資料分析工作編輯器 &#40;設定檔要求頁面&#41;](../../integration-services/control-flow/data-profiling-task-editor-profile-requests-page.md)。  
   
  如需如何使用資料分析工作的詳細資訊，請參閱[資料分析工作的設定](../../integration-services/control-flow/setup-of-the-data-profiling-task.md)。 如需如何使用資料設定檔檢視器來分析資料分析工作輸出的詳細資訊，請參閱 [資料設定檔檢視器](../../integration-services/control-flow/data-profile-viewer.md)。  
   
@@ -135,7 +133,7 @@ ms.lasthandoff: 02/15/2018
  如需詳細資訊，請參閱本主題前面的「了解分隔符號和符號的使用方式」。  
   
  **Symbols**  
- 列出應該保留成為模式一部分的符號。 範例可能包括 "/" (代表日期)、":" (代表時間) 和 "@" (代表電子郵件地址)。 根據預設，[符號] 清單包含下列字元：`,.;:-"'~=&/@!?()<>[]{}|#*^%`。  
+ 列出應該保留成為模式一部分的符號。 範例可能包括 "/" (代表日期)、":" (代表時間) 和 ‘\@’ (代表電子郵件地址)。 根據預設，[符號] 清單包含下列字元：`,.;:-"'~=&/@!?()<>[]{}|#*^%`。  
   
  如需詳細資訊，請參閱本主題前面的「了解分隔符號和符號的使用方式」。  
   

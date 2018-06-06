@@ -1,16 +1,15 @@
 ---
-title: "srv_rpcdb (擴充預存程序 API) | Microsoft Docs"
-ms.custom: 
+title: srv_rpcdb (擴充預存程序 API) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/04/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
 ms.component: extended-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - srv_rpcdb
@@ -22,16 +21,15 @@ dev_langs:
 helpviewer_keywords:
 - srv_rpcdb
 ms.assetid: d52bfd22-7a7c-4ab0-af65-df96ff359e6f
-caps.latest.revision: 
+caps.latest.revision: 30
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 17798468b38998bea8ca06c2d2c73407bde37014
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
-ms.translationtype: MT
+ms.openlocfilehash: 2e613fc49853e913fa0ed3f6f5696aacb2c583a5
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="srvrpcdb-extended-stored-procedure-api"></a>srv_rpcdb (擴充預存程序 API)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -59,7 +57,7 @@ SRV_PROC * srvproc,int *len );
 ## <a name="returns"></a>傳回值  
  目前遠端預存程序的資料庫名稱部分以 null 結尾字串的 DBCHAR 指標。 如果沒有目前遠端預存程序，則會傳回 NULL 且 *len* 參數設定為 - 1。  
   
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>Remarks  
  函數只會傳回遠端預存程序物件名稱的資料庫元件。 其中不包含擁有人、遠端預存程序名稱和遠端預存程序號碼的選擇性規範。  
   
 > [!IMPORTANT]  

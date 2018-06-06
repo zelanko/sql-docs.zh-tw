@@ -1,16 +1,14 @@
 ---
-title: "sys.sp_cdc_scan (TRANSACT-SQL) |Microsoft 文件"
-ms.custom: 
+title: sys.sp_cdc_scan (TRANSACT-SQL) |Microsoft 文件
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: system-objects
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.sp_cdc_scan_TSQL
@@ -22,16 +20,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_cdc_scan
 ms.assetid: 46e4294c-97b8-47d6-9ed9-b436a9929353
-caps.latest.revision: 
+caps.latest.revision: 20
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: a8cd29ff4ce371f6d893ceb396bb3a69d20bcab2
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 5a295451cc5894d55d2e61ed941fb46af93d53c1
+ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="sysspcdcscan-transact-sql"></a>sys.sp_cdc_scan (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -75,7 +72,7 @@ sys.sp_cdc_scan [ [ @maxtrans = ] max_trans ]
 ## <a name="permissions"></a>Permissions  
  需要 db_owner 固定資料庫角色中的成員資格。  
   
-## <a name="see-also"></a>請參閱  
- [dbo.cdc_jobs &#40;TRANSACT-SQL &#41;](../../relational-databases/system-tables/dbo-cdc-jobs-transact-sql.md)  
+## <a name="see-also"></a>另請參閱  
+ [dbo.cdc_jobs &#40;Transact SQL&#41;](../../relational-databases/system-tables/dbo-cdc-jobs-transact-sql.md)  
   
   

@@ -1,28 +1,26 @@
 ---
-title: "OData 來源屬性 | Microsoft Docs"
-ms.custom: 
+title: OData 來源屬性 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
 ms.component: data-flow
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: 4fde5bb0-6d78-4ec4-8f0b-67f91c53fe99
-caps.latest.revision: 
+caps.latest.revision: 6
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 59b56a5040b7ea0219478f134a358f447eac8ad1
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 6c1035a694f53c274e47a89b45fc7b62022a7b21
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="odata-source-properties"></a>OData 來源屬性
 當您以滑鼠右鍵按一下資料流程中的 [OData 來源] 並按一下 [屬性] 時，您會看到 [OData 來源] 元件的屬性出現在 [屬性] 視窗中。  

@@ -1,17 +1,16 @@
 ---
-title: "建立或編輯伺服器群組 (SQL Server Management Studio) | Microsoft Docs"
-ms.custom: 
+title: 建立或編輯伺服器群組 (SQL Server Management Studio) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
 ms.component: ssms-registration
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 f1_keywords:
 - sql13.swb.editgroup.f1
 - sql13.swb.newgroup.f1
@@ -20,20 +19,19 @@ helpviewer_keywords:
 - server groups [SQL Server]
 - groups [SQL Server], server
 ms.assetid: d4a942bd-2dd1-42db-ad0e-e9a9ae5b856d
-caps.latest.revision: 
+caps.latest.revision: 21
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: f1deb61c45ababfd67c79131d55db07db1b62926
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.openlocfilehash: 4ced132ac6a5a5fb25da96247f01bfc8d2179299
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="create-or-edit-a-server-group-sql-server-management-studio"></a>建立或編輯伺服器群組 (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-本主題描述如何透過建立伺服器群組，然後將伺服器放入伺服器群組中的方式，組織 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中 [已註冊的伺服器] 內的伺服器。 您隨時都可在「已註冊的伺服器」中建立伺服器群組，您也可以在註冊伺服器時建立伺服器群組。  
+  本主題描述如何透過建立伺服器群組，然後將伺服器放入伺服器群組中的方式，組織 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中 [已註冊的伺服器] 內的伺服器。 您隨時都可在「已註冊的伺服器」中建立伺服器群組，您也可以在註冊伺服器時建立伺服器群組。  
   
 ##  <a name="SSMSProcedure"></a>  
   

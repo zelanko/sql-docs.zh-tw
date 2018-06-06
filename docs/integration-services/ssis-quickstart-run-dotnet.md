@@ -1,26 +1,26 @@
 ---
-title: "使用 .NET 程式碼執行 SSIS 專案 (C#) | Microsoft Docs"
-ms.date: 09/25/2017
-ms.topic: article
-ms.prod: sql-non-specified
+title: 使用 .NET 程式碼執行 SSIS 專案 (C#) | Microsoft Docs
+ms.date: 05/21/2018
+ms.topic: conceptual
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
 ms.component: quick-start
 ms.suite: sql
-ms.custom: 
-ms.technology: integration-services
+ms.custom: ''
+ms.technology:
+- integration-services
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 7ab3415d2252e52e79a0129ab5c5d438ad114a76
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 78ab97bd62ffcc564fbc1ef707f4ad5d1f7b2033
+ms.sourcegitcommit: b5ab9f3a55800b0ccd7e16997f4cd6184b4995f9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/23/2018
+ms.locfileid: "34455242"
 ---
 # <a name="run-an-ssis-package-with-c-code-in-a-net-app"></a>在 .NET 應用程式中使用 C# 程式碼執行 SSIS 套件
-本快速入門教學課程示範如何撰寫 C# 程式碼，來連線至資料庫伺服器並執行 SSIS 套件。
+本快速入門示範如何撰寫 C# 程式碼，來連線到資料庫伺服器並執行 SSIS 套件。
 
 您可以使用 Visual Studio、Visual Studio Code 或您選擇的另一個工具，來建立 C# 應用程式。
 
@@ -28,19 +28,18 @@ ms.lasthandoff: 12/21/2017
 
 開始之前，請確定已安裝 Visual Studio 或 Visual Studio Code。 從 [Visual Studio 下載](https://www.visualstudio.com/downloads/)，下載免費的 Visual Studio Community Edition 或免費的 Visual Studio Code。
 
-> [!NOTE]
-> Azure SQL Database 伺服器會接聽連接埠 1433。 如果您要嘗試透過公司防火牆連線至 Azure SQL Database 伺服器，則必須在公司防火牆中開啟此連線埠，讓您成功連線。
+Azure SQL Database 伺服器會接聽連接埠 1433。 如果您要嘗試透過公司防火牆連線至 Azure SQL Database 伺服器，則必須在公司防火牆中開啟此連接埠，讓您成功連線。
 
-## <a name="get-the-connection-info-if-deployed-to-sql-database"></a>取得部署至 SQL Database 時的連線資訊
+## <a name="for-azure-sql-database-get-the-connection-info"></a>若是 Azure SQL Database，請取得連線資訊
 
-如果您的套件是部署至 Azure SQL Database，請取得連線至 SSIS 目錄資料庫 (SSISDB) 所需的連線資料。 在下列程序中，您需要完整伺服器名稱和登入資訊。
+若要在 Azure SQL Database 執行套件，請取得連線至 SSIS 目錄資料庫 (SSISDB) 所需的連線資訊。 在下列程序中，您需要完整伺服器名稱和登入資訊。
 
 1. 登入 [Azure 入口網站](https://portal.azure.com/)。
-2. 從左側功能表中選取 [SQL 資料庫]，然後按一下 [SQL 資料庫] 頁面上的 SSISDB 資料庫。 
-3. 在您資料庫的 [概觀] 頁面上，檢閱完整伺服器名稱。 若要啟動 [按一下以複製] 選項，請將滑鼠指標放在伺服器名稱上方。 
+2. 從左側功能表中選取 [SQL 資料庫]，然後選取 [SQL 資料庫] 頁面上的 SSISDB 資料庫。 
+3. 在您資料庫的 [概觀] 頁面上，檢閱完整伺服器名稱。 若要顯示 [按一下以複製] 選項，請將滑鼠指標暫留在伺服器名稱上。 
 4. 如果您忘記 Azure SQL Database 伺服器登入資訊，請巡覽至 [SQL Database 伺服器] 頁面來檢視伺服器管理員名稱。 如有需要，您可以重設密碼。
 5. 按一下 [顯示資料庫連接字串]。
-6. 檢閱完整 **ADO.NET** 連接字串。 範例程式碼使用 `SqlConnectionStringBuilder`，以使用您提供的個別參數值來重新建立此連接字串。
+6. 檢閱完整 **ADO.NET** 連接字串。 您的程式碼可以選擇性地使用 `SqlConnectionStringBuilder`，以使用您提供的個別參數值來重新建立此連接字串。
 
 ## <a name="create-a-new-visual-studio-project"></a>建立新的 Visual Studio 專案
 
@@ -66,7 +65,7 @@ ms.lasthandoff: 12/21/2017
 2. 將 **Program.cs** 的內容取代為下列程式碼。 新增適當的伺服器、資料庫、使用者和密碼值。
 
 > [!NOTE]
-> 下列範例使用 Windows 驗證。 若要使用 SQL Server 驗證，請將 `Integrated Security=SSPI;` 引數取代為 `User ID=<user name>;Password=<password>;`。
+> 下列範例使用 Windows 驗證。 若要使用 SQL Server 驗證，請使用 `User ID=<user name>;Password=<password>;` 取代 `Integrated Security=SSPI;` 引數。 如果要連線至 Azure SQL Database 伺服器，您無法使用 Windows 驗證。
 
 
 ```csharp

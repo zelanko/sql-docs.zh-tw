@@ -1,16 +1,15 @@
 ---
-title: "lower-case 函數 (XQuery) |Microsoft 文件"
-ms.custom: 
+title: lower-case 函數 (XQuery) |Microsoft 文件
+ms.custom: ''
 ms.date: 03/09/2017
-ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
-ms.service: 
+ms.prod: sql
+ms.prod_service: sql
 ms.component: xquery
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,21 +19,20 @@ helpviewer_keywords:
 - lower-case Function (XQuery)
 - lower-case
 ms.assetid: 5222c4ff-890c-4d57-8506-c065a5ebfd3e
-caps.latest.revision: 
+caps.latest.revision: 11
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: b03fbc55fbcf7d49e318480ab42af1339aac1be0
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: c789ef6513193ba6fb0eeac2d8268e92fc23396c
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="functions-on-string-values---lower-case"></a>字串值-小寫相關函數
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  Lower-case 函數中的每個字元轉換*$arg*成小寫對等。 Microsoft Windows Unicode 字碼元素的二進位大小寫轉換會指定字元如何轉換成小寫。 這項標準與 Unicode 字碼元素標準的對應有所不同。  
+  Lower-case 函數中的每個字元轉換 *$arg*成小寫對等。 Microsoft Windows Unicode 字碼元素的二進位大小寫轉換會指定字元如何轉換成小寫。 這項標準與 Unicode 字碼元素標準的對應有所不同。  
   
 ## <a name="syntax"></a>語法  
   
@@ -51,7 +49,7 @@ fn:lower-case($arg as xs:string?) as xs:string
 |*$arg*|要轉換成小寫的字串值。|  
   
 ## <a name="remarks"></a>備註  
- 如果值*$arg*是會傳回空的零長度字串。  
+ 如果值 *$arg*是會傳回空的零長度字串。  
   
 ## <a name="examples"></a>範例  
   

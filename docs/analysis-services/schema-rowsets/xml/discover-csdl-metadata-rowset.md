@@ -1,33 +1,23 @@
 ---
-title: "DISCOVER_CSDL_METADATA 資料列集 |Microsoft 文件"
-ms.custom: 
-ms.date: 03/03/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+title: DISCOVER_CSDL_METADATA 資料列集 |Microsoft 文件
+ms.date: 05/03/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: schema-rowsets
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
-ms.assetid: a2d3cffd-a2c4-411c-b244-9e41ebe30939
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 91fa99b0a5338f705cecff4d1622a2db0a262154
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: ca80c243a7ee9c001f079f21908f803a99b75e1f
+ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="discovercsdlmetadata-rowset"></a>DISCOVER_CSDL_METADATA 資料列集
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
-傳回有關 (表格式或多維度) [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 資料模型的資訊，提供 CSDLBI (概念結構定義語言商業智慧註解) 格式的模型定義。 CSDLBI 是以 CSDL 為基礎，它是實體資料架構所使用的 XML 結構描述，用於 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 伺服器與 [!INCLUDE[ssCrescent](../../../includes/sscrescent-md.md)] 用戶端之間的通訊。 商業智慧 (BI) 註解提供了有關表格式模型和其中所含物件的其他中繼資料。 如需表格式資料模型的詳細資訊，請參閱[商業智慧的 CSDL 註解 &#40;CSDLBI&#41;](../../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/csdl-annotations-for-business-intelligence-csdlbi.md)。  
+  傳回有關 (表格式或多維度) [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 資料模型的資訊，提供 CSDLBI (概念結構定義語言商業智慧註解) 格式的模型定義。 CSDLBI 是以 CSDL 為基礎，它是實體資料架構所使用的 XML 結構描述，用於 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 伺服器與 [!INCLUDE[ssCrescent](../../../includes/sscrescent-md.md)] 用戶端之間的通訊。 商業智慧 (BI) 註解提供了有關表格式模型和其中所含物件的其他中繼資料。 如需表格式資料模型的詳細資訊，請參閱[商業智慧的 CSDL 註解 &#40;CSDLBI&#41;](../../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/csdl-annotations-for-business-intelligence-csdlbi.md)。  
   
  命令的安全性內容會影響傳回的資料列集。 若要從伺服器取得 CSDL 定義，需要 Analysis Services 執行個體的讀取權限。  
   
@@ -41,7 +31,7 @@ ms.lasthandoff: 02/15/2018
 |**CATALOG_NAME**|**DBTYPE_WSTR**|是|指定要求其 CSDLBI 描述之資料庫的名稱。 如果省略，就會使用目前的資料庫。<br /><br /> 這是所有模型類型的必要限制。|  
 |**PERSPECTIVE_ID**|**DBTYPE_WSTR**|是|指定已在 CATALOG_NAME 指定的模型上定義之檢視方塊的識別碼。<br /><br /> 選擇性限制。 適用於所有模型類型。|  
 |**PERSPECTIVE_NAME**|**DBTYPE_WSTR**|是|指定已在 CATALOG_NAME 指定的模型上定義之檢視方塊的名稱。<br /><br /> 這是表格式模型包含檢視方塊或多維度方案包含多個 Cube 或檢視方塊時的必要限制。|  
-|**METADATA**|**DBTYPE_WSTR**|否|根據 CSDLBI 結構描述，包含資料來源及其屬性之 XML 定義的字串。|  
+|**中繼資料**|**DBTYPE_WSTR**|否|根據 CSDLBI 結構描述，包含資料來源及其屬性之 XML 定義的字串。|  
 |**CUBE_ID**|**DBTYPE_WSTR**|是|字串識別碼。<br /><br /> 這是多維度資料庫的選擇性限制。 如果有多個可用的 Cube 且已省略限制，則會傳回預設 Cube。|  
   
 ## <a name="remarks"></a>備註  
@@ -131,6 +121,6 @@ ms.lasthandoff: 02/15/2018
   
 ## <a name="see-also"></a>另請參閱  
  [Analysis Services 結構描述資料列集](../../../analysis-services/schema-rowsets/analysis-services-schema-rowsets.md)   
- [Business Intelligence &#40; 的 CSDL 註解CSDLBI &#41;](../../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/csdl-annotations-for-business-intelligence-csdlbi.md)  
+ [Business Intelligence & #40; 的 CSDL 註解CSDLBI & #41;](../../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/csdl-annotations-for-business-intelligence-csdlbi.md)  
   
   

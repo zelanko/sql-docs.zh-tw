@@ -1,34 +1,30 @@
 ---
-title: "TransactionLog 事件類別 | Microsoft 文件"
-ms.custom: 
+title: TransactionLog 事件類別 | Microsoft 文件
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
-ms.prod_service: database-engine, sql-database
-ms.service: 
-ms.component: event-classes
-ms.reviewer: 
+ms.prod: sql
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: supportability
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - TransactionLog event class
 ms.assetid: bbcf09c6-3128-4775-b3de-e986a70411e0
-caps.latest.revision: 
+caps.latest.revision: 33
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 8d9f3f46c005665450baec0869fe956c38696b27
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: d1b232c19e5b7924ec4379e359dd98afda649939
+ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="transactionlog-event-class"></a>TransactionLog 事件類別
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-使用 TransactionLog 事件類別，可在 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]執行個體中，監視交易記錄檔內的活動。  
+  使用 TransactionLog 事件類別，可在 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]執行個體中，監視交易記錄檔內的活動。  
   
 ## <a name="transactionlog-event-class-data-columns"></a>TransactionLog 事件類別資料行  
   

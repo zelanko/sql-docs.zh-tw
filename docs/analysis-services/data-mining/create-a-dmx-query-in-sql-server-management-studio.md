@@ -1,39 +1,23 @@
 ---
-title: "在 SQL Server Management Studio 中建立 DMX 查詢 |Microsoft 文件"
-ms.custom: 
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
-helpviewer_keywords:
-- templates [Analysis Services], queries
-- SQL Server Management Studio [Analysis Services], DMX queries
-- predictions [Analysis Services], DMX prediction queries
-- predictions [DMX]
-- prediction queries [DMX]
-- queries [DMX], prediction queries
-- mining models [Analysis Services], DMX
-ms.assetid: 568ce40a-1f53-47eb-8c79-14347cdfde83
-caps.latest.revision: 
-author: Minewiskan
+title: 在 SQL Server Management Studio 中建立 DMX 查詢 |Microsoft 文件
+ms.date: 05/01/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: data-mining
+ms.topic: conceptual
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: edb3f0ab17369a4a1df4a69d80e07bfa1ff84012
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 9842dd19b9f613c7b10c86e3596ddda96a99f59b
+ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="create-a-dmx-query-in-sql-server-management-studio"></a>在 SQL Server Management Studio 中建立 DMX 查詢
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 提供一組功能，可幫助您針對採礦模型和採礦結構建立預測查詢、內容查詢和資料定義查詢。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]提供一組可協助您建立預測查詢、 內容查詢，以及針對採礦模型和採礦結構的資料定義查詢的功能。  
   
 -   [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 和 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中都有提供圖形化預測查詢產生器，可簡化撰寫預測查詢以及將資料集對應至模型的程序。  
   
@@ -57,7 +41,7 @@ ms.lasthandoff: 02/15/2018
  您也可以針對經常執行的查詢或命令建立自訂範本。  
   
 ## <a name="xmla-query-templates"></a>XMLA 查詢範本  
- [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 也提供 XMLA 查詢的範本。  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]也提供 XMLA 查詢範本。  
   
  您可以使用 XMLA 和 DMX 執行的查詢類型之間有一些重疊。 例如，您可以使用 DMX 或資料採礦結構描述資料列集來建立某些模型內容查詢，但是結構描述資料列集有時會包含未在 DMX 內容查詢中公開的資訊。  
   
@@ -93,6 +77,6 @@ ms.lasthandoff: 02/15/2018
   
 ## <a name="see-also"></a>另請參閱  
  [資料採礦查詢工具](../../analysis-services/data-mining/data-mining-query-tools.md)   
- [資料採礦延伸模組 &#40; DMX &#41;參考](../../dmx/data-mining-extensions-dmx-reference.md)  
+ [資料採礦延伸模組 & #40; DMX & #41;參考](../../dmx/data-mining-extensions-dmx-reference.md)  
   
   

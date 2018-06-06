@@ -1,34 +1,30 @@
 ---
-title: "TM: Begin Tran Completed 事件類別 | Microsoft 文件"
-ms.custom: 
+title: 'TM: Begin Tran Completed 事件類別 | Microsoft 文件'
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
-ms.prod_service: database-engine, sql-database
-ms.service: 
-ms.component: event-classes
-ms.reviewer: 
+ms.prod: sql
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: supportability
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - 'TM: Begin Tran Completed event class'
 ms.assetid: 95ddd3c6-51ef-4ad1-afd0-3aed82c9f724
-caps.latest.revision: 
+caps.latest.revision: 23
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: d68743592891bee8f6a60a095e29f6381fbf4a82
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 10f93792818b5c690caacd13e4c8f088ef39b4a8
+ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="tm-begin-tran-completed-event-class"></a>TM: Begin Tran Completed 事件類別
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-TM: Begin Tran Completed 事件類別表示 BEGIN TRANSACTION 要求已完成。 要求是從用戶端透過交易管理介面傳送。  
+  TM: Begin Tran Completed 事件類別表示 BEGIN TRANSACTION 要求已完成。 要求是從用戶端透過交易管理介面傳送。  
   
 ## <a name="tm-begin-tran-completed-event-class-data-columns"></a>TM: Begin Tran Completed 事件類別資料行  
   

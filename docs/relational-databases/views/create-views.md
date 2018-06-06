@@ -1,33 +1,31 @@
 ---
-title: "建立檢視 | Microsoft Docs"
-ms.custom: 
+title: 建立檢視 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
-ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
-ms.component: views
-ms.reviewer: 
+ms.prod: sql
+ms.prod_service: table-view-index, sql-database, sql-data-warehouse, pdw
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- dbe-views
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: table-view-index
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - views [SQL Server], creating
 ms.assetid: 0b7bd2a1-544c-42ba-8e7b-4822f34d7b64
-caps.latest.revision: 
-author: sstein
+caps.latest.revision: 16
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: a740bee23d84fc92097bac5a385c01236f688e16
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 899bf2cdab8716927806042c1fce6532f8670dfa
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="create-views"></a>建立檢視表
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-pdw-md.md)]
-您可以使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ，在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中建立檢視。 檢視可用於下列目的：  
+  您可以使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ，在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中建立檢視。 檢視可用於下列目的：  
   
 -   對焦 (Focus)、簡化和自訂每位使用者查看資料庫的角度。  
   
@@ -65,7 +63,7 @@ ms.lasthandoff: 02/03/2018
   
 #### <a name="to-create-a-view-by-using-the-query-and-view-designer"></a>透過使用查詢和檢視表設計工具建立檢視  
   
-1.  在 **[物件總管]**中，展開您要建立新檢視表的資料庫。  
+1.  在 **[物件總管]** 中，展開您要建立新檢視表的資料庫。  
   
 2.  以滑鼠右鍵按一下 [檢視] 資料夾，然後按一下 [新增檢視…]。  
   
@@ -73,9 +71,9 @@ ms.lasthandoff: 02/03/2018
   
 4.  按一下 **[加入]**，然後按一下 **[關閉]**。  
   
-5.  在 **[圖表]**窗格中，選取要包含在新檢視中的資料行或其他元素。  
+5.  在 **[圖表]** 窗格中，選取要包含在新檢視中的資料行或其他元素。  
   
-6.  在 **[準則]**窗格中，選擇資料行的其他排序或篩選準則。  
+6.  在 **[準則]** 窗格中，選擇資料行的其他排序或篩選準則。  
   
 7.  在 [檔案] 功能表上，按一下 [儲存 <view name>]******。  
   
@@ -87,7 +85,7 @@ ms.lasthandoff: 02/03/2018
   
 #### <a name="to-create-a-view"></a>建立檢視  
   
-1.  在 **[物件總管]**中，連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的執行個體。  
+1.  在 **[物件總管]** 中，連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的執行個體。  
   
 2.  在標準列上，按一下 **[新增查詢]**。  
   

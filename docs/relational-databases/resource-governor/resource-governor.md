@@ -1,34 +1,30 @@
 ---
-title: "資源管理員 | Microsoft 文件"
-ms.custom: 
+title: 資源管理員 | Microsoft 文件
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
-ms.prod_service: database-engine
-ms.service: 
-ms.component: resource-governor
-ms.reviewer: 
+ms.prod: sql
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: performance
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - Resource Governor, overview
 - Resource Governor
 ms.assetid: 2bc89b66-e801-45ba-b30d-8ed197052212
-caps.latest.revision: 
+caps.latest.revision: 41
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 631b9668bbea31db5b38a0f20eef099f470815b3
-ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
+ms.openlocfilehash: b4bc1092719a01bc885a261138baac388475cf9d
+ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="resource-governor"></a>[資源管理員]
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Resource Governor 這項功能可用來管理 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 工作負載和系統資源使用情況。 資源管理員可讓您針對內送應用程式要求可用的 CPU、實體 IO 和記憶體數量指定限制。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資源管理員是一項功能，可讓您用於管理 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 工作負載和系統資源耗用量。 資源管理員可讓您針對內送應用程式要求可用的 CPU、實體 IO 和記憶體數量指定限制。  
   
 ## <a name="benefits-of-resource-governor"></a>資源管理員的優點  
  資源管理員可讓您藉由指定內送要求的資源耗用量限制來管理 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 工作負載和資源。 在「資源管理員」環境中，工作負載是一組大小類似的查詢或要求，可以也應該將其視為單一實體。 這不是一項規定，但是當工作負載的資源使用模式越一致時，您就可以從「資源管理員」得到更多的好處。 可以即時重新設定資源限制，對正在執行的工作負載造成最低的影響。  
@@ -72,7 +68,7 @@ ms.lasthandoff: 01/18/2018
   
  在資源管理員的內容中，您可以將上述概念視為元件。 下圖將顯示這些元件以及它們在 Database Engine 環境中存在時，彼此的關聯性。 從處理的觀點而言，簡化的流程如下所示：  
   
--   工作階段 (工作階段 1，共 *n* 個) 的內送連線已存在。  
+-   工作階段 (工作階段 1，共 *n*個) 的內送連接已存在。  
   
 -   工作階段進行分類 (分類)。  
   

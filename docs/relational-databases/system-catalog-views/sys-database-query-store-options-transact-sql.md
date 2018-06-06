@@ -1,16 +1,14 @@
 ---
-title: sys.database_query_store_options (Transact-SQL) | Microsoft Docs
-ms.custom: 
+title: sys.database_query_store_options (TRANSACT-SQL) |Microsoft 文件
+ms.custom: ''
 ms.date: 10/25/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
 ms.component: system-catalog-views
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: system-objects
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - DATABASE_QUERY_STORE_OPTIONS_TSQL
@@ -23,16 +21,16 @@ helpviewer_keywords:
 - database_query_store_options catalog view
 - sys.database_query_store_options catalog view
 ms.assetid: 16b47d55-8019-41ff-ad34-1e0112178067
-caps.latest.revision: 
+caps.latest.revision: 24
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 46710eb543ae038d22052cd55b356df9458201e3
-ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: a9ce2b5f63405a0754782e0dddae5584c1b47ee2
+ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="sysdatabasequerystoreoptions-transact-sql"></a>sys.database_query_store_options (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -54,9 +52,9 @@ ms.lasthandoff: 02/01/2018
 |**max_storage_size_mb**|**bigint**|查詢存放區的最大磁碟大小。 預設值為 100 MB。<br />針對 [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] Premium 版本預設值為 1Gb，而針對 [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] Basic 版本預設值為 10Mb。<br /><br /> 藉由變更`ALTER DATABASE <database> SET QUERY_STORE (MAX_STORAGE_SIZE_MB = <size>)`陳述式。|  
 |**stale_query_threshold_days**|**bigint**|查詢的任何原則設定會保留查詢存放區中的日數。 預設值為 30。 若要停用保留原則設為 0。<br />[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] Basic 版的預設值為 7 天。<br /><br /> 藉由變更`ALTER DATABASE <database> SET QUERY_STORE ( CLEANUP_POLICY = ( STALE_QUERY_THRESHOLD_DAYS = <value> ) )`陳述式。|  
 |**max_plans_per_query**|**bigint**|限制預存的計劃的最大數目。 預設值為 200。 如果達到最大值時，查詢存放區會停止擷取新的計畫，該查詢。 設定為 0 會移除與擷取的計劃的數目限制。<br /><br /> 藉由變更`ALTER DATABASE<database> SET QUERY_STORE (MAX_PLANS_PER_QUERY = <n>)`陳述式。|  
-|**query_capture_mode**|**smallint**|目前作用中查詢擷取模式：<br /><br /> 1 = ALL-擷取所有查詢。 這是預設組態值 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 透過 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])。<br /><br /> 2 = AUTO-擷取相關的查詢，根據執行計數和資源耗用。 這是預設組態值[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]。<br /><br /> 3 = 無-停止擷取新的查詢。 查詢存放區將會繼續收集已擷取的查詢編譯和執行階段統計資料。 請小心使用此設定，因為您可能會遺失擷取重要的查詢。|  
+|**query_capture_mode**|**smallint**|目前作用中查詢擷取模式：<br /><br /> 1 = ALL-擷取所有查詢。 這是預設組態值 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 透過 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])。<br /><br /> 2 = AUTO-擷取相關的查詢，根據執行計數和資源耗用。 這是預設組態值[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]。<br /><br /> 3 = 無-停止擷取新的查詢。 查詢存放區將會繼續收集已擷取查詢的編譯和執行階段統計資料。 請小心使用此設定，因為您可能會遺失擷取重要的查詢。|  
 |**query_capture_mode_desc**|**nvarchar(60)**|查詢存放區的實際擷取模式的文字描述：<br /><br /> 全部 (預設為[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)])<br /><br /> 自動 (預設為[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)])<br /><br /> 無|  
-|**size_based_cleanup_mode**|**smallint**|控制是否清除要自動啟用當總資料量接近大小上限：<br /><br /> 1 = OFF – 大小基礎的清除並不會自動啟動。<br /><br /> 2 = AUTO-大小大小上的磁碟到達 90%時自動啟動根據的清除**到達了 max_storage_size_mb**。 這是預設組態值。<br /><br />大小基礎清除先移除最高和最舊的查詢。 會在大約 80%的到達了 max_storage_size_mb 停止。|  
+|**size_based_cleanup_mode**|**smallint**|控制當總資料量接近大小上限時，是否將自動啟用清除：<br /><br /> 1 = OFF – 大小基礎的清除並不會自動啟動。<br /><br /> 2 = AUTO-大小大小上的磁碟到達 90%時自動啟動根據的清除**到達了 max_storage_size_mb**。 這是預設組態值。<br /><br />以大小為依據的清除會先移除成本最高和最舊的查詢。 會在大約 80%的到達了 max_storage_size_mb 停止。|  
 |**size_based_cleanup_mode_desc**|**smallint**|查詢存放區的實際大小為基礎的清除模式的文字描述：<br /><br /> OFF <br /><br /> 自動 （預設值）|  
 |**wait_stats_capture_mode**|**smallint**|可控制查詢存放區是否執行擷取的等待統計資料： <br /><br /> 0 = OFF <br /><br /> 1 = ON <br /> **適用於**： [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。|
 |**wait_stats_mode_capture_desc**|**nvarchar(60)**|實際的等待統計資料的擷取模式的文字描述： <br /><br /> OFF <br /><br /> （預設值）<br /> **適用於**： [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。| 
@@ -65,16 +63,16 @@ ms.lasthandoff: 02/01/2018
  需要**VIEW DATABASE STATE**權限。  
   
 ## <a name="see-also"></a>另請參閱  
- [sys.query_context_settings &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-context-settings-transact-sql.md)   
+ [sys.query_context_settings &#40;Transact SQL&#41;](../../relational-databases/system-catalog-views/sys-query-context-settings-transact-sql.md)   
  [sys.query_store_plan &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-plan-transact-sql.md)   
- [sys.query_store_query &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-query-transact-sql.md)   
+ [sys.query_store_query &#40;Transact SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-query-transact-sql.md)   
  [sys.query_store_query_text &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-query-text-transact-sql.md)   
- [sys.query_store_runtime_stats &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-runtime-stats-transact-sql.md)   
+ [sys.query_store_runtime_stats &#40;Transact SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-runtime-stats-transact-sql.md)   
  [sys.query_store_wait_stats &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-wait-stats-transact-sql.md)  
- [sys.query_store_runtime_stats_interval &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-runtime-stats-interval-transact-sql.md)   
+ [sys.query_store_runtime_stats_interval &#40;Transact SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-runtime-stats-interval-transact-sql.md)   
  [相關檢視、函數與程序](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)   
  [目錄檢視 &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [sys.fn_stmt_sql_handle_from_sql_stmt &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-stmt-sql-handle-from-sql-stmt-transact-sql.md)   
- [查詢存放區預存程序 &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/query-store-stored-procedures-transact-sql.md)  
+ [查詢存放區預存程序&#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/query-store-stored-procedures-transact-sql.md)  
   
   

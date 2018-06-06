@@ -1,16 +1,14 @@
 ---
-title: "sp_describe_first_result_set (TRANSACT-SQL) |Microsoft 文件"
-ms.custom: 
-ms.date: 03/14/2017
-ms.prod: sql-non-specified
+title: sp_describe_first_result_set (TRANSACT-SQL) |Microsoft 文件
+ms.custom: ''
+ms.date: 03/17/2018
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: system-objects
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_describe_first_result_set
@@ -20,21 +18,21 @@ dev_langs:
 helpviewer_keywords:
 - sp_describe_first_result_set
 ms.assetid: f2355a75-3a8e-43e6-96ad-4f41038f6d22
-caps.latest.revision: 
+caps.latest.revision: 22
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: a1b0d3b22cfecff2fc09551400adfc338de341bd
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 12890dc6282f879259730530b3ff8f03fc6de8b9
+ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="spdescribefirstresultset-transact-sql"></a>sp_describe_first_result_set (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
 
-  傳回的中繼資料的第一個可能結果集[!INCLUDE[tsql](../../includes/tsql-md.md)]批次。 如果批次沒有傳回任何結果，就會傳回空的結果集。 如果會產生錯誤[!INCLUDE[ssDE](../../includes/ssde-md.md)]無法判別將透過執行靜態分析來執行的第一個查詢的中繼資料。 動態管理檢視[sys.dm_exec_describe_first_result_set &#40;TRANSACT-SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-transact-sql.md)傳回相同的資訊。  
+  傳回的中繼資料的第一個可能結果集[!INCLUDE[tsql](../../includes/tsql-md.md)]批次。 如果批次沒有傳回任何結果，就會傳回空的結果集。 如果會產生錯誤[!INCLUDE[ssDE](../../includes/ssde-md.md)]無法判別將透過執行靜態分析來執行的第一個查詢的中繼資料。 動態管理檢視[sys.dm_exec_describe_first_result_set &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-transact-sql.md)傳回相同的資訊。  
   
  ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -48,15 +46,15 @@ sp_describe_first_result_set [ @tsql = ] N'Transact-SQL_batch'
 ```  
   
 ## <a name="arguments"></a>引數  
- [  **@tsql =** ] **'***Transact SQL_batch***'**  
- 一個或多個 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式。 *Transact SQL_batch*可能**nvarchar (***n***)**或**nvarchar （max)**。  
+ [ **@tsql =** ] **'***Transact-SQL_batch***'**  
+ 一個或多個 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式。 *Transact SQL_batch*可能**nvarchar (***n***)** 或**nvarchar （max)**。  
   
  [  **@params =** ] **N'***參數***'**  
- @params提供的參數宣告字串[!INCLUDE[tsql](../../includes/tsql-md.md)]批次，類似於 sp_executesql。 參數可以是**nvarchar （n)**或**nvarchar （max)**。  
+ @params 提供的參數宣告字串[!INCLUDE[tsql](../../includes/tsql-md.md)]批次，類似於 sp_executesql。 參數可以是**nvarchar （n)** 或**nvarchar （max)**。  
   
  是一個字串，包含的所有參數都已內嵌在定義[!INCLUDE[tsql](../../includes/tsql-md.md)] *_batch*。 此字串必須是 Unicode 常數或 Unicode 變數。 每個參數定義都由參數名稱和資料類型組成。 *n*是指出其他參數定義的預留位置。 指定陳述式中每個參數必須定義在@params。 如果[!INCLUDE[tsql](../../includes/tsql-md.md)]陳述式或批次陳述式中的不包含參數，@params並非必要。 這個參數的預設值是 NULL。  
   
- [  **@browse_information_mode =** ] *tinyint*  
+ [ **@browse_information_mode =** ] *tinyint*  
  指定是否會傳回其他索引鍵資料行和來源資料表資訊。 如果設定為 1，就會分析每個查詢，如同查詢上包含 FOR BROWSE 選項一樣。 會傳回其他索引鍵資料行和來源資料表資訊。  
   
 -   如果設為 0，則不會傳回資訊。  
@@ -71,7 +69,7 @@ sp_describe_first_result_set [ @tsql = ] N'Transact-SQL_batch'
 ## <a name="result-sets"></a>結果集  
  這個通用的中繼資料會當做結果集來傳回，而結果中繼資料中的每個資料行都會有一個資料列。 每個資料列都會使用下一節所描述的格式來描述資料行的類型和 Null 屬性。 如果每個控制項路徑都沒有第一個陳述式，就會傳回具有零個資料列的結果集。  
   
-|資料行名稱|資料類型|描述|  
+|資料行名稱|資料類型|Description|  
 |-----------------|---------------|-----------------|  
 |**is_hidden**|**位元 NOT NULL**|指出資料行是為了用來瀏覽資訊而加入的額外資料行，且不會實際顯示在結果集中。|  
 |**column_ordinal**|**int NOT NULL**|包含資料行在結果集中的序數位置。 第一個資料行的位置將會指定為 1。|  
@@ -79,10 +77,10 @@ sp_describe_first_result_set [ @tsql = ] N'Transact-SQL_batch'
 |**is_nullable**|**位元 NOT NULL**|如果資料行允許 NULL 則包含值 1，如果資料行不允許 NULL 則包含 0，此外，如果無法判別資料行是否允許 NULL，則為 1。|  
 |**system_type_id**|**int NOT NULL**|包含做 sys.types 中所指定的資料行的資料類型的 system_type_id。 針對 CLR 類型，即使 system_type_name 資料行將傳回 NULL，這個資料行將會傳回值 240。|  
 |**system_type_name**|**nvarchar （256) NULL**|包含名稱和引數 (例如長度、有效位數、小數位數)，已指定給資料行的資料類型。 如果資料類型是使用者定義的別名類型，這裡就會指定基礎系統類型。 如果它是 CLR 使用者定義類型，這個資料行就會傳回 NULL。|  
-|**max_length**|**smallint 非 NULL**|資料行的最大長度 (以位元組為單位)。<br /><br /> -1 = 資料行資料類型是**varchar （max)**， **nvarchar （max)**， **varbinary （max)**，或**xml**。<br /><br /> 如**文字**資料行， **max_length**值會是 16，或是所設定的值**sp_tableoption 'text in row'**。|  
+|**max_length**|**Smallint 非 NULL**|資料行的最大長度 (以位元組為單位)。<br /><br /> -1 = 資料行資料類型是**varchar （max)**， **nvarchar （max)**， **varbinary （max)**，或**xml**。<br /><br /> 如**文字**資料行， **max_length**值會是 16，或是所設定的值**sp_tableoption 'text in row'**。|  
 |**有效位數**|**tinyint NOT NULL**|如果以數值為基礎，就是資料行的有效位數。 否則傳回 0。|  
-|**小數位數**|**tinyint NOT NULL**|如果是以數值為基礎，便是資料行的小數位數。 否則傳回 0。|  
-|**sys.databases**|**sysname 為 NULL**|如果是以字元為基礎，便是資料行的定序名稱。 否則，便傳回 NULL。|  
+|**scale**|**tinyint NOT NULL**|如果是以數值為基礎，便是資料行的小數位數。 否則傳回 0。|  
+|**collation_name**|**sysname 為 NULL**|如果是以字元為基礎，便是資料行的定序名稱。 否則，便傳回 NULL。|  
 |**user_type_id**|**int NULL**|針對 CLR 和別名類型，會如同 sys.types 中所指定，包含資料行資料類型的 user_type_id。 否則，便為 NULL。|  
 |**user_type_database**|**sysname 為 NULL**|針對 CLR 和別名類型，會包含定義類型之資料庫的名稱。 否則，便為 NULL。|  
 |**user_type_schema**|**sysname 為 NULL**|針對 CLR 和別名類型，會包含定義類型之結構描述的名稱。 否則，便為 NULL。|  
@@ -98,7 +96,7 @@ sp_describe_first_result_set [ @tsql = ] N'Transact-SQL_batch'
 |**source_server**|**sysname**|在這個結果中的資料行所傳回的原始伺服器名稱 (如果它來自遠端伺服器)。 給定的名稱會出現在 sys.servers 中。 如果資料行來自本機伺服器，或是如果無法判別其原始伺服器，則傳回 NULL。 只會在要求瀏覽資訊時填入。|  
 |**source_database**|**sysname**|這個結果中的資料行所傳回之原始資料庫名稱。 如果無法判別資料庫，則傳回 NULL。 只會在要求瀏覽資訊時填入。|  
 |**source_schema**|**sysname**|這個結果中的資料行所傳回之原始結構描述名稱。 如果無法判別結構描述，則傳回 NULL。 只會在要求瀏覽資訊時填入。|  
-|**c**|**sysname**|這個結果的資料行所傳回之原始資料表名稱。 如果無法判別資料表，則傳回 NULL。 只會在要求瀏覽資訊時填入。|  
+|**source_table**|**sysname**|這個結果的資料行所傳回之原始資料表名稱。 如果無法判別資料表，則傳回 NULL。 只會在要求瀏覽資訊時填入。|  
 |**source_column**|**sysname**|結果資料行所傳回之原始資料行名稱。 如果無法判別資料行，則傳回 NULL。 只會在要求瀏覽資訊時填入。|  
 |**is_identity_column**|**位元 NULL**|如果資料行是識別欄位，則傳回 1；如果不是，則傳回 0。 如果它無法判別資料行是否為識別欄位，則傳回 NULL。|  
 |**is_part_of_unique_key**|**位元 NULL**|如果資料行是唯一索引 (包括唯一和主要的條件約束) 的一部分，則傳回 1；如果不是，則傳回 0。 如果它無法判別資料行是否為唯一索引的一部分，則傳回 NULL。 只會在要求瀏覽資訊時填入。|  
@@ -146,17 +144,17 @@ sp_describe_first_result_set [ @tsql = ] N'Transact-SQL_batch'
   
 -   如果資料類型不同，將會擲回錯誤，且不會傳回任何結果，除非遇到下列情況：  
   
-    -   **varchar(a)**至**varchar(a')**其中 ' >。  
+    -   **varchar(a)** 至**varchar(a')** 其中 ' >。  
   
-    -   **varchar(a)**至**varchar （max)**  
+    -   **varchar(a)** 至**varchar （max)**  
   
-    -   **nvarchar(a)**至**nvarchar(a')**其中 ' >。  
+    -   **nvarchar(a)** 至**nvarchar(a')** 其中 ' >。  
   
-    -   **nvarchar(a)**至**nvarchar （max)**  
+    -   **nvarchar(a)** 至**nvarchar （max)**  
   
-    -   **varbinary(a)**至**varbinary(a')**其中 ' >。  
+    -   **varbinary(a)** 至**varbinary(a')** 其中 ' >。  
   
-    -   **varbinary(a)**至**varbinary （max)**  
+    -   **varbinary(a)** 至**varbinary （max)**  
   
  **sp_describe_first_result_set**不支援間接遞迴。  
   
@@ -199,9 +197,9 @@ EXEC sp_describe_first_result_set N'SELECT b2 AS b3 FROM dbo.v', null, 0;
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
-|is_hidden|column_ordinal|NAME|source_schema|source_table|source_column|is_part_of_unique_key|  
+|is_hidden|column_ordinal|name|source_schema|source_table|source_column|is_part_of_unique_key|  
 |----------------|---------------------|----------|--------------------|-------------------|--------------------|-------------------------------|  
-|0|@shouldalert|b3|NULL|NULL|NULL|NULL|  
+|0|1|b3|NULL|NULL|NULL|NULL|  
   
  下列範例使用 1，表示它傳回資訊，就如同在查詢中包含 FOR BROWSE 選項一樣。  
   
@@ -212,10 +210,10 @@ EXEC sp_describe_first_result_set N'SELECT b2 AS b3 FROM v', null, 1
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
-|is_hidden|column_ordinal|NAME|source_schema|source_table|source_column|is_part_of_unique_key|  
+|is_hidden|column_ordinal|name|source_schema|source_table|source_column|is_part_of_unique_key|  
 |----------------|---------------------|----------|--------------------|-------------------|--------------------|-------------------------------|  
-|0|@shouldalert|b3|dbo|t|B1|0|  
-|@shouldalert|2|a|dbo|t|a|@shouldalert|  
+|0|1|b3|dbo|t|B1|0|  
+|1|2|a|dbo|t|a|1|  
   
  下列範例使用 2，表示已分析，就如同準備資料指標一樣。  
   
@@ -225,10 +223,10 @@ EXEC sp_describe_first_result_set N'SELECT b2 AS b3 FROM v', null, 2
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
-|is_hidden|column_ordinal|NAME|source_schema|source_table|source_column|is_part_of_unique_key|  
+|is_hidden|column_ordinal|name|source_schema|source_table|source_column|is_part_of_unique_key|  
 |----------------|---------------------|----------|--------------------|-------------------|--------------------|-------------------------------|  
-|0|@shouldalert|B3|dbo|v|B2|0|  
-|@shouldalert|2|ROWSTAT|NULL|NULL|NULL|0|  
+|0|1|B3|dbo|v|B2|0|  
+|1|2|ROWSTAT|NULL|NULL|NULL|0|  
   
 ### <a name="examples-of-problems"></a>問題範例  
  下列範例會針對所有範例使用兩個資料表。 請執行下列陳述式以建立範例資料表。  
@@ -306,7 +304,7 @@ ELSE
     SELECT c FROM t1;'  
 ```  
   
- 結果： 錯誤，類型不相符 (**varchar （10)**與**nvarchar （10)**)。  
+ 結果： 錯誤，類型不相符 (**varchar （10)** 與**nvarchar （10)**)。  
   
 #### <a name="result-set-can-return-an-error"></a>結果集可以傳回錯誤  
  第一個結果集為錯誤或結果集。  
@@ -407,9 +405,8 @@ N'
   
  結果： **int NULL**因為 dbo.t1.a 和 s1.t1.a 都有類型**int**和不同的 null 屬性。  
   
-## <a name="see-also"></a>請參閱  
- [sp_describe_undeclared_parameters &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/sp-describe-undeclared-parameters-transact-sql.md)   
- [sys.dm_exec_describe_first_result_set &#40;TRANSACT-SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-transact-sql.md)   
- [sys.dm_exec_describe_first_result_set_for_object &#40;TRANSACT-SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-for-object-transact-sql.md)  
-  
-  
+## <a name="see-also"></a>另請參閱  
+ [sp_describe_undeclared_parameters &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-describe-undeclared-parameters-transact-sql.md)   
+ [sys.dm_exec_describe_first_result_set &#40;Transact SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-transact-sql.md)   
+ [sys.dm_exec_describe_first_result_set_for_object &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-for-object-transact-sql.md)  
+ 

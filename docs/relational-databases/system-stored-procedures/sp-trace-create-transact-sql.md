@@ -1,16 +1,14 @@
 ---
-title: "sp_trace_create (TRANSACT-SQL) |Microsoft 文件"
-ms.custom: 
+title: sp_trace_create (TRANSACT-SQL) |Microsoft 文件
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: system-objects
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_trace_create_TSQL
@@ -20,16 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_trace_create
 ms.assetid: f3a43597-4c5a-4520-bcab-becdbbf81d2e
-caps.latest.revision: 
+caps.latest.revision: 38
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: d370ebe5730f9b87d7303c067b9edc1a14d27509
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 06588729794b9a5b62b82e0576f955536687f57e
+ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="sptracecreate-transact-sql"></a>sp_trace_create (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -69,9 +66,9 @@ sp_trace_create [ @traceid = ] trace_id OUTPUT
 |TRACE_PRODUCE_BLACKBOX|**8**|指定伺服器將所產生最後 5 MB 的追蹤資訊記錄儲存起來。 TRACE_PRODUCE_BLACKBOX 與所有其他選項不相容。|  
   
  [ **@tracefile=** ] *'**trace_file**'*  
- 指定將寫入追蹤的位置和檔案名稱。 *trace_file*是**nvarchar(245)**沒有預設值。 *trace_file*可以是本機目錄 （如 N 'C:\MSSQL\Trace\trace.trc') 或共用或路徑的 UNC (N'\\\\*Servername*\\*Sharename*\\*目錄*\trace.trc')。  
+ 指定將寫入追蹤的位置和檔案名稱。 *trace_file*是**nvarchar(245)** 沒有預設值。 *trace_file*可以是本機目錄 （如 N 'C:\MSSQL\Trace\trace.trc') 或共用或路徑的 UNC (N'\\\\*Servername*\\*Sharename*\\*目錄*\trace.trc')。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 將會附加**.trc**延伸至所有的追蹤檔名稱。 如果 TRACE_FILE_ROLLOVER 選項和*max_file_size*都有指定，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]原始追蹤檔成長到其大小上限時，會建立新的追蹤檔案。 新的檔案具有相同名稱的原始檔案，但 _ *n* 附加以指出其順序，從**1**。 例如，如果第一個追蹤檔案名為**filename.trc**，第二個追蹤檔案名為**filename_1.trc**。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 將會附加 **.trc**延伸至所有的追蹤檔名稱。 如果 TRACE_FILE_ROLLOVER 選項和*max_file_size*都有指定，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]原始追蹤檔成長到其大小上限時，會建立新的追蹤檔案。 新的檔案具有相同名稱的原始檔案，但 _*n*附加以指出其順序，從**1**。 例如，如果第一個追蹤檔案名為**filename.trc**，第二個追蹤檔案名為**filename_1.trc**。  
   
  如果使用了 TRACE_FILE_ROLLOVER 選項，建議您不要在原始追蹤檔名稱中使用底線字元。 若您使用底線字元，便會發生下列行為：  
   
@@ -84,7 +81,7 @@ sp_trace_create [ @traceid = ] trace_id OUTPUT
   
  *trace_file*無法使用 TRACE_PRODUCE_BLACKBOX 選項時指定。  
   
- [ **@maxfilesize=** ] *max_file_size*  
+ [  **@maxfilesize=** ] *max_file_size*  
  指定追蹤檔所能成長的大小上限 (以 MB 為單位)。 *max_file_size*是**bigint**，預設值是**5**。  
   
  如果指定這個參數是不含 TRACE_FILE_ROLLOVER 選項，追蹤就會停止記錄到檔案時使用的磁碟空間超過指定的數量*max_file_size*。  
@@ -94,7 +91,7 @@ sp_trace_create [ @traceid = ] trace_id OUTPUT
   
  如果兩個*stop_time*和*max_file_size*都有指定，而且 TRACE_FILE_ROLLOVER 不指定，追蹤便當指定的停止時間 」 或 「 最大檔案大小上限。 如果*stop_time*， *max_file_size*，並指定 TRACE_FILE_ROLLOVER，追蹤就會停止在指定的停止時間，假設追蹤不會填滿的磁碟機。  
   
- [ **@filecount=** ] **'***max_rollover_files***'**  
+ [  **@filecount=** ] **'***max_rollover_files***'**  
  指定利用相同的基礎檔案名稱來維護的最大追蹤檔數目。 *max_rollover_files*是**int**，大於 1。 只有在指定了 TRACE_FILE_ROLLOVER 選項時，這個參數才有效。 當*max_rollover_files*指定，則[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]嘗試使維護否以上*max_rollover_files*追蹤檔的開啟新的追蹤檔之前，請先刪除最舊的追蹤檔案。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會在基礎檔案名稱上附加數字來追蹤這些追蹤檔的存在時間。  
   
  例如，當*trace_file*參數指定為"c:\mytrace"，名稱為"c:\mytrace_123.trc"的檔案是早於具有名稱"c:\mytrace_124.trc"的檔案。 如果*max_rollover_files*是設定為 2，則 SQL Server 刪除"c:\mytrace_123.trc"檔再建立追蹤檔"c:\mytrace_125.trc"。  
@@ -130,7 +127,7 @@ sp_trace_create [ @traceid = ] trace_id OUTPUT
  如**sp_trace_create**、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]服務帳戶必須具有寫入權限的追蹤檔案的資料夾。 如果 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服務帳戶不是追蹤檔所在電腦的管理員，您就必須將寫入權限明確授與 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服務帳戶。  
   
 > [!NOTE]  
->  您可以自動載入追蹤檔案以建立**sp_trace_create**插入資料表使用**fn_trace_gettable**系統函數。 如需如何使用這個系統函式的資訊，請參閱[sys.fn_trace_gettable &#40;TRANSACT-SQL &#41;](../../relational-databases/system-functions/sys-fn-trace-gettable-transact-sql.md).  
+>  您可以自動載入追蹤檔案以建立**sp_trace_create**插入資料表使用**fn_trace_gettable**系統函數。 如需如何使用這個系統函式的資訊，請參閱[sys.fn_trace_gettable &#40;TRANSACT-SQL&#41;](../../relational-databases/system-functions/sys-fn-trace-gettable-transact-sql.md)。  
   
  如需使用追蹤預存程序的範例，請參閱[建立追蹤 &#40;Transact-SQL&#41;](../../relational-databases/sql-trace/create-a-trace-transact-sql.md)。  
   
@@ -160,7 +157,7 @@ sp_trace_create [ @traceid = ] trace_id OUTPUT
  使用者必須有 ALTER TRACE 權限。  
   
 ## <a name="see-also"></a>另請參閱  
- [sp_trace_generateevent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-generateevent-transact-sql.md)   
+ [sp_trace_generateevent &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-generateevent-transact-sql.md)   
  [sp_trace_setevent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)   
  [sp_trace_setfilter &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setfilter-transact-sql.md)   
  [sp_trace_setstatus &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setstatus-transact-sql.md)   

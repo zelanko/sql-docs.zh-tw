@@ -1,17 +1,13 @@
 ---
-title: "執行 Transact-SQL 偵錯工具 | Microsoft 文件"
-ms.custom: 
+title: 執行 Transact-SQL 偵錯工具 | Microsoft 文件
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
-ms.prod_service: sql-tools
-ms.service: 
-ms.component: ssms-scripting
-ms.reviewer: 
+ms.prod: sql
+ms.technology: scripting
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - Transact-SQL debugger, sysadmin requirement
 - Transact-SQL debugger, supported versions
@@ -25,19 +21,20 @@ helpviewer_keywords:
 - Transact-SQL debugger, keyboard shortcuts
 - Transact-SQL debugger, starting
 ms.assetid: 386f6d09-dbec-4dc7-9e8a-cd9a4a50168c
-caps.latest.revision: 
+caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 9f67818832da03faacf25adee23a1261ce44f430
-ms.sourcegitcommit: a0aa5e611a0e6ebb74ac1e2f613e8916dc7a7617
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: f47339d4fb116778760ca571bd58f03b2c81ff1f
+ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/24/2018
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="run-the-transact-sql-debugger"></a>執行 Transact-SQL 偵錯工具
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 在您開啟 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 查詢編輯器視窗之後，就可以啟動 [!INCLUDE[tsql](../../includes/tsql-md.md)] 偵錯工具。 然後，您可以在偵錯模式中執行 [!INCLUDE[tsql](../../includes/tsql-md.md)] 程式碼，直到停止偵錯工具為止。 您可以設定選項來自訂偵錯工具的執行方式。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+  在您開啟 [!INCLUDE[tsql](../../includes/tsql-md.md)] 查詢編輯器視窗之後，就可以啟動 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 偵錯工具。 然後，您可以在偵錯模式中執行 [!INCLUDE[tsql](../../includes/tsql-md.md)] 程式碼，直到停止偵錯工具為止。 您可以設定選項來自訂偵錯工具的執行方式。  
   
 ## <a name="starting-and-stopping-the-debugger"></a>啟動和停止偵錯工具  
  啟動 [!INCLUDE[tsql](../../includes/tsql-md.md)] 偵錯工具的需求如下：  
@@ -94,12 +91,12 @@ ms.lasthandoff: 01/24/2018
 |**視窗/呼叫堆疊**|無法使用|**中斷點/呼叫堆疊**|CTRL+ALT+C|顯示 **[呼叫堆疊]** 視窗。|  
 |**視窗/執行緒**|無法使用|**中斷點/執行緒**|CTRL+ALT+H|顯示 **[執行緒]** 視窗。|  
 |**Continue**|無法使用|**Continue**|ALT+F5|執行到下一個中斷點。 在處於偵錯模式的 [查詢編輯器] 視窗中放置焦點之前，**[繼續]** 是處於非使用中狀態。|  
-|**[偵錯]**|無法使用|**[偵錯]**|ALT+F5|讓 [查詢編輯器] 視窗進入偵錯模式，並且執行到第一個中斷點。 如果您在處於偵錯模式的 [查詢編輯器] 視窗中放置焦點， **[開始偵錯]** 就會由 **[繼續]**所取代。|  
+|**[偵錯]**|無法使用|**[偵錯]**|ALT+F5|讓 [查詢編輯器] 視窗進入偵錯模式，並且執行到第一個中斷點。 如果您在處於偵錯模式的 [查詢編輯器] 視窗中放置焦點， **[開始偵錯]** 就會由 **[繼續]** 所取代。|  
 |**全部中斷**|無法使用|**全部中斷**|CTRL+ALT+BREAK|[!INCLUDE[tsql](../../includes/tsql-md.md)] 偵錯工具不會使用這項功能。|  
 |**停止偵錯**|無法使用|**[停止偵錯]**|SHIFT+F5|讓 [查詢編輯器] 視窗離開偵錯模式，並且返回一般模式。|  
 |**功能表上的**|無法使用|無法使用|無法使用|停止偵錯模式，但在 [查詢編輯器] 視窗中執行其餘陳述式。|  
 |**逐步執行**|無法使用|**逐步執行**|F11|執行下一個陳述式，而且如果下一個陳述式會執行預存程序、觸發程序或函數，就會在偵錯模式中開啟新的 [查詢編輯器] 視窗。|  
-|**不進入函數**|無法使用|**不進入函數**|F10|與 **[逐步執行]**相同，但是不會偵錯任何函數、預存程序或觸發程序。|  
+|**不進入函數**|無法使用|**不進入函數**|F10|與 **[逐步執行]** 相同，但是不會偵錯任何函數、預存程序或觸發程序。|  
 |**跳離函數**|無法使用|**跳離函數**|SHIFT+F11|執行觸發程序、函數或預存程序中的其餘程式碼，但是不會針對任何中斷點暫停。 當控制權返回呼叫模組的程式碼時，就會繼續進行一般偵錯模式。|  
 |無法使用|**執行至資料指標處**|無法使用|CTRL+F10|執行所有程式碼 (從上一個停止位置到目前的資料指標位置)，但是不會在任何中斷點上停止。|  
 |**QuickWatch**|**QuickWatch**|無法使用|CTRL+ALT+Q|顯示 **[快速監看式]** 視窗。|  

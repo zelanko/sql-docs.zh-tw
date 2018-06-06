@@ -1,28 +1,25 @@
 ---
-title: "開始使用資料行存放區進行即時作業分析 | Microsoft Docs"
-ms.custom: 
+title: 開始使用資料行存放區進行即時作業分析 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/08/2016
-ms.prod: sql-non-specified
-ms.prod_service: database-engine, sql-database
-ms.service: 
-ms.component: indexes
-ms.reviewer: 
+ms.prod: sql
+ms.prod_service: table-view-index, sql-database
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: table-view-index
+ms.tgt_pltfrm: ''
 ms.topic: get-started-article
 ms.assetid: e1328615-6b59-4473-8a8d-4f360f73187d
-caps.latest.revision: 
-author: barbkess
-ms.author: barbkess
+caps.latest.revision: 40
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: a9f8fc41e72885a9a08d7779afa611e07e1dc8f5
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: b23d666eda366913b6b1a22ed60804f28fb87fc9
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="get-started-with-columnstore-for-real-time-operational-analytics"></a>開始使用資料行存放區進行即時作業分析
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

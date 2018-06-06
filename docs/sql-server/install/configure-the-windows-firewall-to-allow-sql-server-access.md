@@ -1,17 +1,16 @@
 ---
-title: "設定 Windows 防火牆以允許 SQL Server 存取 | Microsoft Docs"
-ms.custom: 
+title: 設定 Windows 防火牆以允許 SQL Server 存取 | Microsoft Docs
+ms.custom: ''
 ms.date: 05/17/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
 ms.component: install
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - setup-install
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - Windows Firewall ports
 - WMI firewall ports
@@ -26,16 +25,15 @@ helpviewer_keywords:
 - ports [SQL Server], TCP
 - netsh to open firewall ports
 ms.assetid: f55c6a0e-b6bd-4803-b51a-f3a419803024
-caps.latest.revision: 
+caps.latest.revision: 48
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
-ms.workload: Active
-ms.openlocfilehash: 0827e7946df18bff42ad09285ad93c5c3a3b3996
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+manager: craigg
+ms.openlocfilehash: aa7b14005bacef0d094abd18bfe7e4d2e2e81665
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="configure-the-windows-firewall-to-allow-sql-server-access"></a>Configure the Windows Firewall to Allow SQL Server Access
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -266,7 +264,7 @@ ms.lasthandoff: 02/09/2018
   
     -   **只有我的網路 (子網路)**  
   
-         這是比 **[任何電腦]**更安全的設定。 只有位於網路之區域子網路的電腦才能連接至程式或通訊埠。  
+         這是比 **[任何電腦]** 更安全的設定。 只有位於網路之區域子網路的電腦才能連接至程式或通訊埠。  
   
     -   **自訂清單:**  
   
@@ -293,7 +291,7 @@ ms.lasthandoff: 02/09/2018
   
 ### <a name="to-create-a-new-firewall-rule-using-the-new-rule-wizard"></a>使用新增規則精靈來建立新的防火牆規則  
   
-1.  在 [開始] 功能表上、按一下 **[執行]**輸入 **WF.msc**，然後按一下 **[確定]**。  
+1.  在 [開始] 功能表上、按一下 **[執行]** 輸入 **WF.msc**，然後按一下 **[確定]**。  
   
 2.  在 [具有進階安全性的 Windows 防火牆] 的左窗格中，以滑鼠右鍵按一下 [輸入規則]，然後按一下 [新增規則]。  
   
@@ -314,7 +312,7 @@ ms.lasthandoff: 02/09/2018
   
     2.  請在命令提示字元之下，輸入 **netstat -n -a**。  
   
-         您可以從 [控制台] 開啟 **-n** 參數會指示 **netstat** 以數值方式顯示使用中 TCP 連線的位址與通訊埠號碼。 **-a** 參數會指示 **netstat** 顯示電腦所接聽之電腦上的 TCP 與 UDP 通訊埠。  
+         **-n** 參數會指示 **netstat** 以數值方式顯示使用中 TCP 連線的位址與通訊埠號碼。 **-a** 參數會指示 **netstat** 顯示電腦所接聽之電腦上的 TCP 與 UDP 通訊埠。  
   
 -   **PortQry** 公用程式可用於將 TCP/IP 通訊埠的狀態回報為接聽中、未接聽或已篩選。 (若為已篩選狀態，表示通訊埠不一定是接聽中。此狀態會指出公用程式未接收到通訊埠的回應)。**PortQry** 公用程式可從 [Microsoft 下載中心](http://go.microsoft.com/fwlink/?LinkId=28590)下載。  
   

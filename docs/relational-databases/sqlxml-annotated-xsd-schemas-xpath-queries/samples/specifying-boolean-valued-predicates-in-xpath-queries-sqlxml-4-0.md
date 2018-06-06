@@ -1,16 +1,14 @@
 ---
-title: "XPath 查詢 (SQLXML 4.0) 中指定布林值述詞 |Microsoft 文件"
-ms.custom: 
+title: XPath 查詢 (SQLXML 4.0) 中指定布林值述詞 |Microsoft 文件
+ms.custom: ''
 ms.date: 03/16/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
 ms.component: sqlxml
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- dbe-xml
-ms.tgt_pltfrm: 
+ms.technology: xml
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - XPath queries [SQLXML], predicates
@@ -21,20 +19,20 @@ helpviewer_keywords:
 - Boolean-valued predicates
 - multiple predicates
 ms.assetid: 5f6e7219-6911-4bca-a54b-56b95e0b43dd
-caps.latest.revision: 
+caps.latest.revision: 25
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 251563fb2c7bdee03efa1df2e52c37934b736dbc
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: aad334864e5b0aa26fa4d7e1a8e9a0e3ae4aff0d
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="specifying-boolean-valued-predicates-in-xpath-queries-sqlxml-40"></a>在 XPath 查詢中指定布林值述詞 (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-下列範例顯示如何在 XPath 查詢中指定布林值述詞。 這些範例中的 XPath 查詢會針對 SampleSchema1.xml 中包含的對應結構描述來指定。 如需此範例結構描述資訊，請參閱[範例註解式 XSD 結構描述的 XPath 範例 &#40;SQLXML 4.0 &#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md).  
+  下列範例顯示如何在 XPath 查詢中指定布林值述詞。 這些範例中的 XPath 查詢會針對 SampleSchema1.xml 中包含的對應結構描述來指定。 如需此範例結構描述資訊，請參閱[範例註解式 XSD 結構描述的 XPath 範例 & #40;SQLXML 4.0 & #41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md).  
   
 ## <a name="examples"></a>範例  
   
@@ -97,13 +95,13 @@ ms.lasthandoff: 02/12/2018
     ```  
   
 ### <a name="b-specify-successive-and-nested-predicates"></a>B. 指定連續和巢狀述詞  
- 下列查詢顯示使用連續述詞。 此查詢會傳回所有**\<客戶 >**內容節點的子項目都有**SalesPersonID**屬性值為 277 和**TerritoryID**屬性值為 3:  
+ 下列查詢顯示使用連續述詞。 此查詢會傳回所有**\<客戶 >** 內容節點的子項目都有**SalesPersonID**屬性值為 277 和**TerritoryID**屬性值為 3:  
   
 ```  
 /child::Customer[attribute::SalesPersonID="277"][attribute::TerritoryID="3"]  
 ```  
   
- 此查詢會傳回**\<客戶 >**符合述詞中指定這兩個條件的項目。  
+ 此查詢會傳回**\<客戶 >** 符合述詞中指定這兩個條件的項目。  
   
  捷徑**屬性**軸 (@) 可以指定，而且因為**子**軸是預設值，它可以從查詢省略：  
   
@@ -111,7 +109,7 @@ ms.lasthandoff: 02/12/2018
 /Customer[@SalesPersonID="277"][@TerritoryID="3"]  
 ```  
   
- 下列 XPath 查詢說明巢狀述詞的使用方式。 此查詢會傳回所有**\<客戶 >**內容節點的子項目，包括**\<順序 >**具有至少一個子元素 **\<順序 >**具有項目**SalesPersonID**屬性值為 2。  
+ 下列 XPath 查詢說明巢狀述詞的使用方式。 此查詢會傳回所有**\<客戶 >** 內容節點的子項目，包括**\<順序 >** 具有至少一個子元素 **\<順序 >** 具有項目**SalesPersonID**屬性值為 2。  
   
 ```  
 /Customer[Order[@SalesPersonID=2]]  
@@ -174,7 +172,7 @@ ms.lasthandoff: 02/12/2018
 ```  
   
 ### <a name="c-specify-a-top-level-predicate"></a>C. 指定最上層述詞  
- 下列查詢會傳回**\<客戶 >**內容節點的子元素節點，有**\<順序 >**元素子系。 此查詢會測試當做最上層述詞的位置路徑：  
+ 下列查詢會傳回**\<客戶 >** 內容節點的子元素節點，有**\<順序 >** 元素子系。 此查詢會測試當做最上層述詞的位置路徑：  
   
 ```  
 /child::Customer[child::Order]  

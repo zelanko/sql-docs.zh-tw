@@ -1,35 +1,23 @@
 ---
-title: "了解累加式產生 |Microsoft 文件"
-ms.custom: 
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
-helpviewer_keywords:
-- incremental generation [Analysis Services]
-- Schema Generation Wizard, incremental generation
-- relational schema [Analysis Services], incremental generation
-ms.assetid: 3ca0aa63-3eb5-4fe9-934f-8e96dee84eaa
-caps.latest.revision: 
-author: Minewiskan
+title: 了解累加式產生 |Microsoft 文件
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: multidimensional-models
+ms.topic: conceptual
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 8527382a85e1e85fb7981e69ea02304d2a7a940c
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 71b3f839326bec0a8b5606e2c7de3f25584b4ff1
+ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="understanding-incremental-generation"></a>了解累加式產生
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-在初始結構描述產生之後，您可以使用 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]來變更 Cube 和維度定義，然後重新執行 [結構描述產生精靈]。 此精靈會更新主題領域資料庫和相關資料來源檢視中的結構描述，以便能夠反映變更，同時盡量保留目前存在於要重新產生之資料表中的資料。 如果您在初始產生之後變更了資料表，結構描述產生精靈會使用下列規則，盡量保留那些變更：  
+  在初始結構描述產生之後，您可以使用 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]來變更 Cube 和維度定義，然後重新執行 [結構描述產生精靈]。 此精靈會更新主題領域資料庫和相關資料來源檢視中的結構描述，以便能夠反映變更，同時盡量保留目前存在於要重新產生之資料表中的資料。 如果您在初始產生之後變更了資料表，結構描述產生精靈會使用下列規則，盡量保留那些變更：  
   
 -   如果資料表是由精靈先前產生的，則會覆寫該資料表。 您可以將資料來源檢視中之資料表的 **AllowChangesDuringGeneration** 屬性變更為 **false**，以防止精靈產生的資料表遭到覆寫。 當您控制資料表時，資料表被視為任何其他使用者自訂資料表來處理，而且在重新產生時不受影響。 從產生移除資料表之後，稍後您可以將資料來源檢視中之資料表的 **AllowChangesDuringGeneration** 屬性變更為 **true** ，並重新開啟資料表供精靈變更。 如需詳細資訊，請參閱[變更資料來源檢視的屬性 &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/change-properties-in-a-data-source-view-analysis-services.md)。  
   
@@ -92,6 +80,6 @@ ms.lasthandoff: 02/15/2018
   
 ## <a name="see-also"></a>另請參閱  
  [管理資料來源檢視和資料來源的變更](../../analysis-services/multidimensional-models/manage-changes-to-data-source-views-and-data-sources.md)   
- [結構描述產生精靈 &#40;Analysis Services &#41;](../../analysis-services/multidimensional-models/schema-generation-wizard-analysis-services.md)  
+ [結構描述產生精靈 & #40;Analysis Services & #41;](../../analysis-services/multidimensional-models/schema-generation-wizard-analysis-services.md)  
   
   

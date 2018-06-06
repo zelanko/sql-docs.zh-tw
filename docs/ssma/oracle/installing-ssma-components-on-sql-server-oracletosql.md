@@ -1,30 +1,28 @@
 ---
-title: "安裝 SQL Server (OracleToSQL) 上的 SSMA 元件 |Microsoft 文件"
-ms.prod: sql-non-specified
+title: 安裝 SQL Server (OracleToSQL) 上的 SSMA 元件 |Microsoft 文件
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
 ms.component: ssma-oracle
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ssma
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - Installign the Extension Pack
 - SQL Server Database Objects
 ms.assetid: 33070e5f-4e39-4b70-ae81-b8af6e4983c5
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
-ms.workload: Inactive
-ms.openlocfilehash: 76880266efb8c38bffdaa4223e49822c6d3b0778
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: d75694edf4af06ec2d1e442ecebacaf971ba86de
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="installing-ssma-components-on-sql-server-oracletosql"></a>安裝 SQL Server (OracleToSQL) 上的 SSMA 元件
 除了安裝 SSMA，您也必須安裝元件正在執行的電腦上[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]。 這些元件包括 SSMA 延伸模組組件，可支援資料移轉和 Oracle 提供者，以啟用伺服器對伺服器的連線。  
@@ -34,12 +32,12 @@ SSMA 延伸模組組件會加入資料庫， **sysdb**和**ssmatesterdb**，以�
   
 此外，當您將資料移轉至[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]，SSMA 建立[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]代理程式作業的伺服器端資料移轉引擎是用來進行資料移轉。  
   
-### <a name="prerequisites"></a>Prerequisites  
+### <a name="prerequisites"></a>필수 구성 요소  
 SSMA for Oracle 伺服器元件在安裝之前[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]，請確定系統符合下列需求：  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]安裝執行個體。 SSMA 不支援 SQL Server 2008 Express Edition。  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 安裝執行個體。 SSMA 不支援 SQL Server 2008 Express Edition。  
   
--   [!INCLUDE[msCoName](../../includes/msconame_md.md)]Windows Installer 3.1 或更新版本。  
+-   [!INCLUDE[msCoName](../../includes/msconame_md.md)] Windows Installer 3.1 或更新版本。  
   
 -   Oracle 用戶端提供者或 OLE DB provider for Oracle 和您想要移轉的 Oracle 資料庫的連接。 您可以從 Oracle 產品媒體或 Oracle 網站上安裝提供者。  
   
@@ -60,9 +58,9 @@ SSMA for Oracle 伺服器元件在安裝之前[!INCLUDE[ssNoVersion](../../inclu
   
     根據您所擁有的 WinZip 版本，您可以按兩下該檔案，或以滑鼠右鍵按一下該檔案並選取**全部解壓縮**或**WinZip 中開啟**。 依照 WinZip 使用者介面中的指示，將檔案解壓縮。  
   
-2.  複製 SSMA for Oracle 延伸模組組件。*n*.Install.exe 其中 *n* 為電腦執行的組建編號[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]。  
+2.  複製 SSMA for Oracle 延伸模組組件。*n*。Install.exe 其中*n*為電腦執行的組建編號[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]。  
   
-3.  按兩下 SSMA for Oracle 延伸模組組件。*n*.Install.exe。  
+3.  按兩下 SSMA for Oracle 延伸模組組件。*n*。Install.exe。  
   
 4.  在 歡迎使用 頁面上，按一下 **下一步**。  
   
@@ -84,7 +82,7 @@ SSMA for Oracle 伺服器元件在安裝之前[!INCLUDE[ssNoVersion](../../inclu
   
     Windows 驗證會使用您的 Windows 認證來嘗試登入的執行個體[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]。 如果您選取[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]驗證，您必須輸入[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]登入名稱和密碼。  
   
-11. 在下一個頁面上，選取**安裝公用程式資料庫**  *n* ，其中 *n* 是版本號碼，然後按一下**下一步**。  
+11. 在下一個頁面上，選取**安裝公用程式資料庫** *n*，其中*n*是版本號碼，然後按一下**下一步**。  
   
     **Sysdb**建立資料庫，並在該資料庫中建立的使用者定義函數和預存程序。  
   
@@ -109,7 +107,7 @@ SSMA for Oracle 伺服器元件在安裝之前[!INCLUDE[ssNoVersion](../../inclu
   
 每當您將資料移轉至[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]，SSMA 建立[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]代理程式作業。 這些作業會命名為**ssma_oracle 資料移轉封裝 {GUID}**，而且會出現在[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]代理程式節點[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)]Jobs 資料夾中。  
   
-## <a name="see-also"></a>請參閱  
-[SSMA 安裝 Oracle 用戶端 &#40; OracleToSQL &#41;](../../ssma/oracle/installing-ssma-for-oracle-client-oracletosql.md)  
-[將 Oracle 資料庫移轉至 SQL Server &#40; OracleToSQL &#41;](../../ssma/oracle/migrating-oracle-databases-to-sql-server-oracletosql.md)  
+## <a name="see-also"></a>另請參閱  
+[安裝 Oracle 用戶端的 SSMA &#40;OracleToSQL&#41;](../../ssma/oracle/installing-ssma-for-oracle-client-oracletosql.md)  
+[SQL server 資料庫移轉 Oracle &#40;OracleToSQL&#41;](../../ssma/oracle/migrating-oracle-databases-to-sql-server-oracletosql.md)  
   

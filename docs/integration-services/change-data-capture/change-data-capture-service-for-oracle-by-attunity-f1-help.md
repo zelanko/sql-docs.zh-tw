@@ -1,28 +1,26 @@
 ---
-title: "Attunity Oracle Change Data Capture 服務 F1 說明 | Microsoft Docs"
-ms.custom: 
+title: Attunity Oracle Change Data Capture 服務 F1 說明 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/20/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
 ms.component: change-data-capture
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 0617fca6-1bc1-4ad2-9986-fab94ea0a6f0
-caps.latest.revision: 
+caps.latest.revision: 6
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: fdc72cfc3a6265c54d8b7f78a1266cea1a0e8756
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 1de0e7986dddcb1843e86edaa11c8a6ba6d6bebb
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="change-data-capture-service-for-oracle-by-attunity-f1-help"></a>Attunity Oracle Change Data Capture (CDC) 服務 F1 說明
   您可以使用 CDC 服務組態主控台來定義本機 Oracle CDC 服務，並加以更新和刪除。  

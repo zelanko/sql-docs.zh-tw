@@ -1,31 +1,23 @@
 ---
-title: "設定 Analysis Services 進行 Kerberos 限制委派 |Microsoft 文件"
-ms.custom: 
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
-ms.assetid: 6d751477-6bf1-48b4-8833-5a631bbe7650
-caps.latest.revision: 
-author: Minewiskan
+title: 設定 Analysis Services 進行 Kerberos 限制委派 |Microsoft 文件
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: ''
+ms.topic: conceptual
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: f6b199d42dc8273660018d8b0fb4a14606c62559
-ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
+ms.openlocfilehash: 6c906ef040504e2fec094ae0935a374e27cbf984
+ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="configure-analysis-services-for-kerberos-constrained-delegation"></a>設定 Analysis Services 進行 Kerberos 限制委派
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-將 Analysis Services 設定為 Kerberos 驗證時，若能獲致下列其中一項或兩項結果，對您來說可能最有用處：讓 Analysis Services 在查詢資料時模擬使用者識別，或是由 Analysis Services 將使用者識別委派給下層服務。 每一種情況的組態需求略有不同。 這兩種情況都需要驗證以確保組態設定正確。  
+  將 Analysis Services 設定為 Kerberos 驗證時，若能獲致下列其中一項或兩項結果，對您來說可能最有用處：讓 Analysis Services 在查詢資料時模擬使用者識別，或是由 Analysis Services 將使用者識別委派給下層服務。 每一種情況的組態需求略有不同。 這兩種情況都需要驗證以確保組態設定正確。  
   
 > [!TIP]  
 >  **[!INCLUDE[msCoName](../../includes/msconame-md.md)] Kerberos Configuration Manager for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** 是一種診斷工具，可幫助排除 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]發生的 Kerberos 相關連接問題。 如需詳細資訊，請參閱 [Microsoft Kerberos Configuration Manager for SQL Server](http://www.microsoft.com/download/details.aspx?id=39046)。  
@@ -123,6 +115,6 @@ ms.lasthandoff: 02/23/2018
  [使用 Kerberos 進行相互驗證](http://go.microsoft.com/fwlink/?LinkId=299283)   
  [連接到 Analysis Services](../../analysis-services/instances/connect-to-analysis-services.md)   
  [Analysis Services 執行個體的 SPN 註冊](../../analysis-services/instances/spn-registration-for-an-analysis-services-instance.md)   
- [連接字串屬性 &#40;Analysis Services &#41;](../../analysis-services/instances/connection-string-properties-analysis-services.md)  
+ [連接字串屬性 & #40;Analysis Services & #41;](../../analysis-services/instances/connection-string-properties-analysis-services.md)  
   
   

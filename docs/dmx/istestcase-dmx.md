@@ -1,30 +1,31 @@
 ---
-title: "IsTestCase (DMX) |Microsoft 文件"
-ms.custom: 
+title: IsTestCase (DMX) |Microsoft 文件
+ms.custom: ''
 ms.date: 03/02/2016
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
 ms.component: data-mining
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
-f1_keywords: IsTestCase
-dev_langs: DMX
-helpviewer_keywords: IsTestCase function
+f1_keywords:
+- IsTestCase
+dev_langs:
+- DMX
+helpviewer_keywords:
+- IsTestCase function
 ms.assetid: 7ff4b895-9bb4-4e26-ab1b-c9049cfc2291
-caps.latest.revision: "10"
+caps.latest.revision: 10
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: 6e25739d2c2fd92642e8e9d61e514c0fb181bb36
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 1534dd83efab97d7f3e450bbe955453013e4c2e7
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="istestcase-dmx"></a>IsTestCase (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -49,7 +50,7 @@ IsTestCase()
 > [!NOTE]  
 >  如果您想要使用 IsTrainingCase 或 IsTestCase 函數來傳回在特定模型中案例的相關詳細資料，必須在模型上啟用鑽研。 如需詳細資訊，請參閱 [針對採礦模型啟用鑽研](../analysis-services/data-mining/enable-drillthrough-for-a-mining-model.md)。  
   
- 若要傳回屬於訓練資料集的情況下，使用函數[IsTrainingCase &#40; DMX &#41;](../dmx/istrainingcase-dmx.md)。  
+ 若要傳回屬於訓練資料集的情況下，使用函數[IsTrainingCase &#40;DMX&#41;](../dmx/istrainingcase-dmx.md)。  
   
 ## <a name="examples"></a>範例  
  下列範例會使用`Targeted Mailing`中建立的採礦結構[基本資料採礦教學課程](http://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c)。 此查詢會傳回此結構中用於測試的所有案例。  
@@ -60,10 +61,10 @@ FROM [Targeted Mailing].CASES
 WHERE IsTestCase()  
 ```  
   
- 如需如何查詢資料採礦中使用的案例的詳細資訊，請參閱[SELECT FROM &#60; 模式 &#62;。案例 &#40; DMX &#41;](../dmx/select-from-model-cases-dmx.md)和[SELECT FROM &#60; 結構 &#62;。案例](../dmx/select-from-structure-cases.md)。  
+ 如需如何查詢資料採礦中使用的案例的詳細資訊，請參閱[SELECT FROM&#60;模型&#62;。案例&#40;DMX&#41; ](../dmx/select-from-model-cases-dmx.md)和[SELECT FROM&#60;結構&#62;。案例](../dmx/select-from-structure-cases.md)。  
   
-## <a name="see-also"></a>請參閱  
- [函式 &#40; DMX &#41;](../dmx/functions-dmx.md)   
+## <a name="see-also"></a>另請參閱  
+ [函式&#40;DMX&#41;](../dmx/functions-dmx.md)   
  [資料採礦查詢](../analysis-services/data-mining/data-mining-queries.md)   
  [定型和測試資料集](../analysis-services/data-mining/training-and-testing-data-sets.md)  
   

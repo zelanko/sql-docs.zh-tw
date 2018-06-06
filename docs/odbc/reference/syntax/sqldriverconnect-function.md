@@ -1,32 +1,34 @@
 ---
-title: "SQLDriverConnect 函數 |Microsoft 文件"
-ms.custom: 
+title: SQLDriverConnect 函數 |Microsoft 文件
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
-ms.component: odbc
-ms.reviewer: 
+ms.prod: sql
+ms.prod_service: connectivity
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
-ms.topic: article
-apiname: SQLDriverConnect
-apilocation: sqlsrv32.dll
+ms.technology: connectivity
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
+apiname:
+- SQLDriverConnect
+apilocation:
+- sqlsrv32.dll
 apitype: dllExport
-f1_keywords: SQLDriverConnect
-helpviewer_keywords: SQLDriverConnect function [ODBC]
+f1_keywords:
+- SQLDriverConnect
+helpviewer_keywords:
+- SQLDriverConnect function [ODBC]
 ms.assetid: e299be1d-5c74-4ede-b6a3-430eb189134f
-caps.latest.revision: "50"
+caps.latest.revision: 50
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
-ms.workload: On Demand
-ms.openlocfilehash: 4600a76e303930e941c737313f1db4850f8d5e43
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+manager: craigg
+ms.openlocfilehash: 6d53e3922a5ef8508e654805f39a329471c4ba70
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
+ms.locfileid: "32923153"
 ---
 # <a name="sqldriverconnect-function"></a>SQLDriverConnect 函數
 **一致性**  
@@ -80,7 +82,7 @@ SQLRETURN SQLDriverConnect(
   
  如果*OutConnectionString*是 NULL， *StringLength2Ptr*仍會傳回的總字元數 （不含字元資料 null 結束字元） 可用來傳回緩衝區中所指*OutConnectionString*。  
   
- *Columnsize*  
+ *BufferLength*  
  [輸入]長度 **OutConnectionString*緩衝區，以字元為單位。  
   
  *StringLength2Ptr*  
@@ -99,12 +101,12 @@ SQLRETURN SQLDriverConnect(
 ## <a name="diagnostics"></a>診斷  
  當**SQLDriverConnect**傳回 SQL_ERROR 或 SQL_SUCCESS_WITH_INFO，相關聯的 SQLSTATE 值可能會取得藉由呼叫**SQLGetDiagRec**與*fHandleType*利用 SQL_HANDLE_DBC 的和*hHandle*的*ConnectionHandle*。 下表列出通常所傳回的 SQLSTATE 值**SQLDriverConnect** ，並說明這個函式; 每個內容中的標記法 」 (DM) 」 之前描述的驅動程式管理員傳回的 Sqlstate。 每個 SQLSTATE 值相關聯的傳回碼是 SQL_ERROR，除非有說明，否則為。  
   
-|SQLSTATE|錯誤|描述|  
+|SQLSTATE|錯誤|Description|  
 |--------------|-----------|-----------------|  
 |01000|一般警告|特定驅動程式告知性訊息。 （函式會傳回 SQL_SUCCESS_WITH_INFO）。|  
 |01004|字串資料，右邊遭截斷|緩衝區\* *OutConnectionString*仍不夠大，無法傳回整個連接字串中，因此連接字串已遭截斷。 中會傳回未截斷的連接字串的長度 **StringLength2Ptr*。 （函式會傳回 SQL_SUCCESS_WITH_INFO）。|  
 |01S00|無效的連接字串屬性|連接字串中指定無效的屬性關鍵字 (*InConnectionString*)，但仍然連接到資料來源驅動程式。 （函式會傳回 SQL_SUCCESS_WITH_INFO）。|  
-|01S02 的警告|選項值已變更|驅動程式不支援指定的值所指向*ValuePtr*引數中的**SQLSetConnectAttr**置換相似的值。 （函式會傳回 SQL_SUCCESS_WITH_INFO）。|  
+|01S02|選項值已變更|驅動程式不支援指定的值所指向*ValuePtr*引數中的**SQLSetConnectAttr**置換相似的值。 （函式會傳回 SQL_SUCCESS_WITH_INFO）。|  
 |01S08|儲存檔案 DSN 時發生錯誤|中的字串 *\*InConnectionString*包含**FILEDSN**關鍵字，但.dsn 檔案未儲存。 （函式會傳回 SQL_SUCCESS_WITH_INFO）。|  
 |01S09|無效的關鍵字|(DM) 中的字串 *\*InConnectionString*包含**SAVEFILE**關鍵字，但不是**驅動程式**或**FILEDSN**關鍵字。 （函式會傳回 SQL_SUCCESS_WITH_INFO）。|  
 |08001|無法建立連線的用戶端|驅動程式無法建立與資料來源的連接。|  
@@ -146,11 +148,11 @@ SQLRETURN SQLDriverConnect(
 ## <a name="comments"></a>註解  
  連接字串具有下列語法：  
   
- *連接字串*:: =*空白字串*[;] &#124;*屬性*[;] &#124;*屬性*;*連接字串*  
+ *連接字串*:: =*空白字串*[;]&#124; *屬性*[;]&#124; *屬性*;*連接字串*  
   
  *空白字串*:: =*屬性*:: =*屬性關鍵字*=*屬性值*&#124;驅動程式 = [{]*屬性值*[}]  
   
- *屬性關鍵字*:: = DSN &#124;UID &#124;PWD &#124;*驅動程式-定義-屬性-關鍵字*  
+ *屬性關鍵字*:: = DSN &#124; UID &#124; PWD &#124; *驅動程式-定義-屬性-關鍵字*  
   
  *屬性值*:: =*字元字串*  
   
@@ -158,11 +160,11 @@ SQLRETURN SQLDriverConnect(
   
  其中*字元字串*有零個或多個字元。*識別碼*有一或多個字元。*屬性關鍵字*不區分大小寫。*屬性值*可能會區分大小寫，以及值**DSN**關鍵字並沒有包含單獨的空白個數。  
   
- 因為連接字串和初始設定檔案文法、 關鍵字和屬性值包含字元**[] {} （)，;？\*= ！ @**不括在大括號應予以避免。 值**DSN**關鍵字不能只包含空格，且不能包含前置的空白。 系統資訊的文法，因為關鍵字和資料來源名稱不能包含反斜線 (\\) 字元。  
+ 因為連接字串和初始設定檔案文法、 關鍵字和屬性值包含字元 **[]{}（)，;？\*= ！ @** 不括在大括號應予以避免。 值**DSN**關鍵字不能只包含空格，且不能包含前置的空白。 系統資訊的文法，因為關鍵字和資料來源名稱不能包含反斜線 (\\) 字元。  
   
  應用程式不需要將大括號括住屬性值之後,**驅動程式**關鍵字屬性包含分號 （;），除非這種情況下在大括號是必要。 如果驅動程式收到的屬性值包含大括號，驅動程式不應該移除它們，但它們應該傳回的連接字串的一部分。  
   
- 括在大括號 （{}） 包含任何字元的 DSN 或連接字串值**[] {} （)，;？\*= ！ @**便會傳遞至驅動程式。 不過，當關鍵字中使用這些字元，驅動程式管理員使用檔案名稱 （dsn） 會傳回錯誤，但將連接字串傳遞至規則的連接字串的驅動程式。 請避免使用內嵌的大括號中關鍵字值。  
+ 括在大括號 DSN 或連接字串值 ({}) 包含任何字元 **[]{}（)，;？\*= ！ @** 便會傳遞至驅動程式。 不過，當關鍵字中使用這些字元，驅動程式管理員使用檔案名稱 （dsn） 會傳回錯誤，但將連接字串傳遞至規則的連接字串的驅動程式。 請避免使用內嵌的大括號中關鍵字值。  
   
  連接字串可能包含任意數目的驅動程式定義的關鍵字。 因為**驅動程式**關鍵字不會使用系統資訊的資訊，此驅動程式必須定義足夠的關鍵字，讓驅動程式可以連接到資料來源連接字串中使用的資訊。 （如需詳細資訊，請參閱 < 驅動程式指導方針，> 本節後面）。驅動程式會定義哪些關鍵字，才能連接到資料來源。  
   
@@ -170,7 +172,7 @@ SQLRETURN SQLDriverConnect(
   
 |關鍵字|屬性值描述|  
 |-------------|---------------------------------|  
-|**資料來源名稱**|所傳回的資料來源名稱**SQLDataSources**或資料來源 對話方塊的**SQLDriverConnect**。|  
+|**DSN**|所傳回的資料來源名稱**SQLDataSources**或資料來源 對話方塊的**SQLDriverConnect**。|  
 |**FILEDSN**|資料來源的.dsn 檔案內建的連接字串的名稱。 檔案資料來源時，會呼叫這些資料來源。|  
 |**驅動程式**|描述驅動程式所傳回的**SQLDrivers**函式。 例如，Rdb 或 SQL Server。|  
 |**UID**|使用者識別碼。|  
@@ -368,6 +370,6 @@ int main() {
 |釋放控制代碼|[SQLFreeHandle 函式](../../../odbc/reference/syntax/sqlfreehandle-function.md)|  
 |設定連接屬性|[SQLSetConnectAttr 函式](../../../odbc/reference/syntax/sqlsetconnectattr-function.md)|  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [ODBC 應用程式開發介面參考](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [ODBC 標頭檔](../../../odbc/reference/install/odbc-header-files.md)

@@ -1,36 +1,23 @@
 ---
-title: "KpiID 元素 (ASSL) |Microsoft 文件"
-ms.custom: 
-ms.date: 03/07/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+title: KpiID 元素 (ASSL) |Microsoft 文件
+ms.date: 5/8/2018
+ms.prod: sql
+ms.custom: assl
+ms.reviewer: owend
+ms.technology: analysis-services
 ms.topic: reference
-apiname: KpiID Element
-apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
-apitype: Schema
-applies_to: SQL Server 2016 Preview
-f1_keywords: KpiID
-helpviewer_keywords: KpiID element
-ms.assetid: a76395bc-bc84-40f8-9770-6275842f93b5
-caps.latest.revision: "33"
-author: Minewiskan
+author: minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: b21076030d8106466e1ce032bdf4cf1b370b23f9
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 5474392a71f97ce171059fdabafd9f83ee01d232
+ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="kpiid-element-assl"></a>KpiID 元素 (ASSL)
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]包含產生關聯的識別項 (ID) [Kpi](../../../analysis-services/scripting/objects/kpi-element-assl.md)具有項目[觀點來看](../../../analysis-services/scripting/objects/perspective-element-assl.md)項目。  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+  包含產生關聯的識別項 (ID) [Kpi](../../../analysis-services/scripting/objects/kpi-element-assl.md)具有項目[觀點來看](../../../analysis-services/scripting/objects/perspective-element-assl.md)項目。  
   
 ## <a name="syntax"></a>語法  
   
@@ -45,9 +32,9 @@ ms.lasthandoff: 01/08/2018
   
 ## <a name="element-characteristics"></a>元素特性  
   
-|特性|描述|  
+|特性|說明|  
 |--------------------|-----------------|  
-|資料類型和長度|String|  
+|資料類型和長度|字串|  
 |預設值|無|  
 |基數|1-1：只出現一次的必要元素。|  
   
@@ -61,7 +48,7 @@ ms.lasthandoff: 01/08/2018
 ## <a name="remarks"></a>備註  
  對應目的父代的項目**KpiID**在 「 分析管理物件 (AMO) 物件模型而言， <xref:Microsoft.AnalysisServices.PerspectiveKpi>。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [屬性 (ASSL)](../../../analysis-services/scripting/properties/properties-assl.md)  
   
   

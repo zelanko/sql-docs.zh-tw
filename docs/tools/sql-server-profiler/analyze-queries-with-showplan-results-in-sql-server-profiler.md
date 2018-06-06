@@ -1,34 +1,32 @@
 ---
-title: "使用在 SQL Server Profiler SHOWPLAN 結果分析查詢 |Microsoft 文件"
-ms.custom: 
+title: 在 SQL Server Profiler 中使用 SHOWPLAN 結果分析查詢 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
-ms.component: sql-server-profiler
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: database-engine
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: profiler
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - events [SQL Server], Showplan
 - Profiler [SQL Server Profiler], Showplan results
 - SQL Server Profiler, Showplan results
 ms.assetid: 6a2f7727-141c-4f59-8613-2e452bc78467
-caps.latest.revision: "30"
+caps.latest.revision: 30
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: fc385ac38ff22a0b07231aa1ae81c332eb91c63f
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
-ms.translationtype: MT
+ms.openlocfilehash: 26e3fcd0f7959f5b659468f943a321d30c75cce9
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.translationtype: MTE
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="analyze-queries-with-showplan-results-in-sql-server-profiler"></a>在 SQL Server Profiler 中使用 SHOWPLAN 結果分析查詢
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]您可以將 Showplan 事件類別加入追蹤定義中，會導致[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]蒐集並顯示在追蹤中的查詢計畫資訊。 您也可以從追蹤所收集的其他事件中擷取顯示計畫事件，並將這些顯示計畫事件儲存在個別的 XML 檔案中。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  您可以將 Showplan 事件類別加入至追蹤定義中，讓 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 蒐集查詢計畫資訊並顯示在追蹤中。 您也可以從追蹤所收集的其他事件中擷取顯示計畫事件，並將這些顯示計畫事件儲存在個別的 XML 檔案中。  
   
  若要從追蹤中擷取顯示計畫事件，可以使用下列其中一個方式來進行：  
   

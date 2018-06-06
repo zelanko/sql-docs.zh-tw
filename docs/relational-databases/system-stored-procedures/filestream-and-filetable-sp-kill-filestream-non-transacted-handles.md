@@ -1,16 +1,14 @@
 ---
-title: "sp_kill_filestream_non_transacted_handles (TRANSACT-SQL) |Microsoft 文件"
-ms.custom: 
+title: sp_kill_filestream_non_transacted_handles (TRANSACT-SQL) |Microsoft 文件
+ms.custom: ''
 ms.date: 06/10/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: system-objects
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_kill_filestream_non_transacted_handles_TSQL
@@ -20,18 +18,17 @@ dev_langs:
 helpviewer_keywords:
 - sp_kill_filestream_non_transacted_handles
 ms.assetid: 7188353e-ab29-49a0-8f25-7fb8ab122589
-caps.latest.revision: 
+caps.latest.revision: 13
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: cb1054ec1ce9bab7311417e109ac0cece16c9c88
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: de6599caa4881800063a47d6adb25651a4c92f2c
+ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 05/04/2018
 ---
-# <a name="filestream-and-filetable---spkillfilestreamnontransactedhandles"></a>Filestream 和 FileTable-sp_kill_filestream_non_transacted_handles
+# <a name="spkillfilestreamnontransactedhandles-transact-sql"></a>sp_kill_filestream_non_transacted_handles (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   關閉 FileTable 資料的非交易式檔案控制代碼。  
@@ -51,7 +48,7 @@ sp_kill_filestream_non_transacted_handles [[ @table_name = ] ‘table_name’, [
  您可以傳遞 NULL 值的*table_name*關閉所有開啟的目前資料庫中的所有 Filetable 非交易式控制代碼。 NULL 是預設值。  
   
  *handle_id*  
- 要關閉之個別控制代碼的選擇性識別碼。 您可以取得*handle_id*從[sys.dm_filestream_non_transacted_handles &#40;TRANSACT-SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-filestream-non-transacted-handles-transact-sql.md)動態管理檢視。 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體中，每個識別碼都是唯一的。 如果您指定*handle_id*，則也必須提供值給*table_name*。  
+ 要關閉之個別控制代碼的選擇性識別碼。 您可以取得*handle_id*從[sys.dm_filestream_non_transacted_handles &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-filestream-non-transacted-handles-transact-sql.md)動態管理檢視。 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體中，每個識別碼都是唯一的。 如果您指定*handle_id*，則也必須提供值給*table_name*。  
   
  您可以傳遞 NULL 值的*handle_id*關閉所有開啟的非交易式控制代碼所指定之 filetable *table_name*。 NULL 是預設值。  
   
@@ -67,7 +64,7 @@ sp_kill_filestream_non_transacted_handles [[ @table_name = ] ‘table_name’, [
  如需詳細資訊，請參閱 [管理作業步驟](../../relational-databases/blob/manage-filetables.md)。  
   
 ## <a name="metadata"></a>中繼資料  
- 如需開啟的非交易式檔案控制代碼，查詢動態管理檢視[sys.dm_filestream_non_transacted_handles &#40;TRANSACT-SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-filestream-non-transacted-handles-transact-sql.md).  
+ 如需開啟的非交易式檔案控制代碼，查詢動態管理檢視[sys.dm_filestream_non_transacted_handles &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-filestream-non-transacted-handles-transact-sql.md)。  
   
 ## <a name="security"></a>Security  
   
@@ -103,5 +100,7 @@ GO
   
 ## <a name="see-also"></a>另請參閱  
  [管理 FileTable](../../relational-databases/blob/manage-filetables.md)  
-  
+ [Filestream 和 FileTable 動態管理檢視 (TRANSACT-SQL)](../system-dynamic-management-views/filestream-and-filetable-dynamic-management-views-transact-sql.md)
+ <br>[Filestream 和 FileTable 目錄檢視 (TRANSACT-SQL)](../system-catalog-views/filestream-and-filetable-catalog-views-transact-sql.md)
+ <br>[s (TRANSACT-SQL)](filestream-and-filetable-sp-filestream-force-garbage-collection.md)
   

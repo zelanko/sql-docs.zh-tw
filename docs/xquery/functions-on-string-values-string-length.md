@@ -1,16 +1,15 @@
 ---
-title: "string-length 函數 (XQuery) |Microsoft 文件"
-ms.custom: 
+title: string-length 函數 (XQuery) |Microsoft 文件
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
-ms.service: 
+ms.prod: sql
+ms.prod_service: sql
 ms.component: xquery
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,16 +19,15 @@ helpviewer_keywords:
 - string-length function
 - fn:string-length function
 ms.assetid: 7cd69c8b-cf2c-478c-b9a3-e0e14e1aa8aa
-caps.latest.revision: 
+caps.latest.revision: 46
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: a01221907acd777eaaf41ca77d73bf561724c96c
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 229aaf528780001001b9319ae352913f35d067fb
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="functions-on-string-values---string-length"></a>字串值的字串長度相關函數
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -49,13 +47,13 @@ fn:string-length($arg as xs:string?) as xs:integer
  要計算其長度的來源字串。  
   
 ## <a name="remarks"></a>備註  
- 如果值*$arg*是空的序列， **xs: integer**會傳回 0 的值。  
+ 如果值 *$arg*是空的序列， **xs: integer**會傳回 0 的值。  
   
- XQuery 函數中的 Surrogate 字組行為取決於資料庫相容性層級。 如果相容性層級為 110 以上，每個 Surrogate 字組都會計算成單一字元。 對於舊版的相容性層級來說，它們會算為兩個字元。 如需詳細資訊，請參閱[ALTER DATABASE 相容性層級 &#40;TRANSACT-SQL &#41;](../t-sql/statements/alter-database-transact-sql-compatibility-level.md)和[Collation and Unicode Support](../relational-databases/collations/collation-and-unicode-support.md)。  
+ XQuery 函數中的 Surrogate 字組行為取決於資料庫相容性層級。 如果相容性層級為 110 以上，每個 Surrogate 字組都會計算成單一字元。 對於舊版的相容性層級來說，它們會算為兩個字元。 如需詳細資訊，請參閱[ALTER DATABASE 相容性層級&#40;TRANSACT-SQL&#41; ](../t-sql/statements/alter-database-transact-sql-compatibility-level.md)和[Collation and Unicode Support](../relational-databases/collations/collation-and-unicode-support.md)。  
   
  如果該值包含一個有 4 個位元組但以兩個 Surrogate 字元代表的 Unicode 字元，[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 將會個別計算 Surrogate 字元。  
   
- **String-length （)**不只能在述詞內使用的參數。 例如，以下查詢會傳回 <`ROOT`> 元素：  
+ **String-length （)** 不只能在述詞內使用的參數。 例如，以下查詢會傳回 <`ROOT`> 元素：  
   
 ```  
 DECLARE @x xml;  
@@ -64,7 +62,7 @@ SELECT @x.query('/ROOT[string-length()=5]');
 ```  
   
 ## <a name="supplementary-characters-surrogate-pairs"></a>補充字元 (Surrogate 字組)  
- XQuery 函式中 Surrogate 字組的行為相依於資料庫相容性層級，而且在某些情況下，還相依於函式的預設命名空間 URI。 如需詳細資訊，請參閱主題中的 「 XQuery 函式是 Surrogate 感知 」 區段[SQL Server 2016 中對於 Database Engine 功能的突破性變更](../database-engine/breaking-changes-to-database-engine-features-in-sql-server-2016.md)。 另請參閱[ALTER DATABASE 相容性層級 &#40;TRANSACT-SQL &#41;](../t-sql/statements/alter-database-transact-sql-compatibility-level.md)和[Collation and Unicode Support](../relational-databases/collations/collation-and-unicode-support.md)。  
+ XQuery 函式中 Surrogate 字組的行為相依於資料庫相容性層級，而且在某些情況下，還相依於函式的預設命名空間 URI。 如需詳細資訊，請參閱主題中的 「 XQuery 函式是 Surrogate 感知 」 區段[SQL Server 2016 中對於 Database Engine 功能的突破性變更](../database-engine/breaking-changes-to-database-engine-features-in-sql-server-2016.md)。 另請參閱[ALTER DATABASE 相容性層級&#40;TRANSACT-SQL&#41; ](../t-sql/statements/alter-database-transact-sql-compatibility-level.md)和[Collation and Unicode Support](../relational-databases/collations/collation-and-unicode-support.md)。  
   
 ## <a name="examples"></a>範例  
  本主題提供 XQuery 範例，針對 XML 執行個體儲存在各種**xml**類型 AdventureWorks 資料庫中的資料行。  

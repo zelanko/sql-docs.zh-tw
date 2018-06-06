@@ -1,32 +1,31 @@
 ---
-title: "關聯式查詢設計工具使用者介面 (報表產生器) | Microsoft Docs"
-ms.custom: 
+title: 關聯式查詢設計工具使用者介面 (報表產生器) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: report-data
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords: "10012"
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
+f1_keywords:
+- "10012"
 helpviewer_keywords:
 - query designers
 - accessing data, query designer
 - relational query designer
 ms.assetid: cd5fa70c-5218-40d5-9ae6-02d798b5c485
-caps.latest.revision: "23"
+caps.latest.revision: 23
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: e563d196486a20a9d7df43d807f8a1726df3c7cc
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 23924ef7630d41ea1d60d34a4a131d004b2d8aa7
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="relational-query-designer-user-interface-report-builder"></a>關聯式查詢設計工具使用者介面 (報表產生器)
   [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中的報表產生器和報表設計師同時提供圖形化查詢設計工具和以文字為基礎的查詢設計工具，可協助您建立查詢，用來指定從 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssSDS](../../includes/sssds-md.md)] relational databases 和 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDWCurrentFull](../../includes/ssdwcurrentfull-md.md)] 中針對報表資料集擷取的資料。 使用圖形化查詢設計工具來瀏覽中繼資料、以互動方式建立查詢以及檢視查詢的結果。 使用以文字為基礎的查詢設計工具來檢視圖形化查詢設計工具所建立的查詢，或是修改查詢。 您也可以從檔案或報表匯入現有的查詢。  
@@ -85,7 +84,7 @@ ms.lasthandoff: 01/09/2018
   
      使用 [報表資料] 窗格檢視報表資料集的欄位集合。 這些欄位代表檢視報表時，您可以在資料表、圖表和其他報表項目中顯示的資料。  
   
--   **群組和彙總** ：在查詢中切換使用群組和彙總。 如果您在加入群組和彙總之後關閉群組和彙總功能，就會將它們移除。 **(無)**這個字表示未使用群組和彙總。 如果您再次開啟群組和彙總功能，則會還原之前的群組和彙總。  
+-   **群組和彙總** ：在查詢中切換使用群組和彙總。 如果您在加入群組和彙總之後關閉群組和彙總功能，就會將它們移除。 **(無)** 這個字表示未使用群組和彙總。 如果您再次開啟群組和彙總功能，則會還原之前的群組和彙總。  
   
 -   **刪除欄位** ：刪除選取的欄位。  
   

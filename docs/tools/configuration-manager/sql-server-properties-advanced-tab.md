@@ -1,32 +1,28 @@
 ---
-title: "SQL Server 屬性 （進階索引標籤） |Microsoft 文件"
-ms.custom: 
+title: SQL Server 屬性 (進階索引標籤) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
-ms.component: configuration-manager
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: configuration
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: 2ffd10fd-bac1-478f-9cff-96ed6c8b787f
-caps.latest.revision: 
+caps.latest.revision: 19
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 0a0b573dcb4b68c8becf86c8e847b10d5df5ed1a
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
-ms.translationtype: MT
+ms.openlocfilehash: 2c6c71003694d4b696fc771c6b89a29ffafbff0b
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.translationtype: MTE
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sql-server-properties-advanced-tab"></a>SQL Server 屬性 (進階索引標籤)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
-下列屬性預設會出現在 **[進階]** 索引標籤。 如果定義了自訂屬性，這些屬性與其值也會在這個索引標籤上顯示。  
+  下列屬性預設會出現在 **[進階]** 索引標籤。 如果定義了自訂屬性，這些屬性與其值也會在這個索引標籤上顯示。  
   
 ## <a name="options"></a>選項。  
  **叢集**  
@@ -71,7 +67,7 @@ ms.lasthandoff: 02/03/2018
  **存貨保持單元**  
  顯示產品存貨保持單元 (SKU) 號碼。  
   
- **版本**  
+ **版本(Version)**  
  顯示這個 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體的版本號碼。  
   
  **虛擬伺服器名稱**  

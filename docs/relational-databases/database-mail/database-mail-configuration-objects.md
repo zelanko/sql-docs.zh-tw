@@ -1,17 +1,16 @@
 ---
-title: "Database Mail 組態物件 | Microsoft 文件"
-ms.custom: 
+title: Database Mail 組態物件 | Microsoft 文件
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
 ms.component: database-mail
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 f1_keywords:
 - sql13.swb.sqlimail.profileandaccountmanagement.f1
 - sql13.swb.sqlimail.newaccount.f1
@@ -35,20 +34,19 @@ helpviewer_keywords:
 - profiles [SQL Server], Database Mail
 - accounts [Database Mail]
 ms.assetid: 03f6e4c0-04ff-490a-bd91-637806215bd1
-caps.latest.revision: 
+caps.latest.revision: 35
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 5cb2f1d2c6a21ddcc6b36c4c357da8cc380348cc
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.openlocfilehash: 6a4cdccc289b8348b443be415beed1656f5c3dde
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="database-mail-configuration-objects"></a>Database Mail 組態物件
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-Database Mail 包含兩個組態物件：這些資料庫組態物件提供您方法，來設定 Database Mail 從資料庫應用程式或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 傳送電子郵件時應使用的設定。  
+  Database Mail 包含兩個組態物件：這些資料庫組態物件提供您方法，來設定 Database Mail 從資料庫應用程式或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 傳送電子郵件時應使用的設定。  
   
 -   Database Mail 帳戶  
   

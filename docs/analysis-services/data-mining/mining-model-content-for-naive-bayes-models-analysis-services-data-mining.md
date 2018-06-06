@@ -1,36 +1,23 @@
 ---
-title: "貝氏機率分類模型的採礦模型內容 (Analysis Services-資料採礦) |Microsoft 文件"
-ms.custom: 
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
-helpviewer_keywords:
-- naive bayes model [Analysis Services]
-- Bayesian classifiers
-- naive bayes algorithms [Analysis Services]
-- mining model content, naive bayes models
-ms.assetid: 63fa15b0-e00c-4aa3-aa49-335f5572ff7e
-caps.latest.revision: 
-author: Minewiskan
+title: 貝氏機率分類模型的採礦模型內容 (Analysis Services-資料採礦) |Microsoft 文件
+ms.date: 05/08/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: data-mining
+ms.topic: conceptual
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: ea4b76bc06098491a1ef7025b326cc254a5e1cdc
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: cbfb701bf6c4a90cf285e4643377b38e51121dd3
+ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="mining-model-content-for-naive-bayes-models-analysis-services---data-mining"></a>貝氏機率分類模型的採礦模型內容 (Analysis Services - 資料採礦)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-本主題描述使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 貝式機率分類演算法之模型專用的採礦模型內容。 如需如何解譯所有模型類型共用的統計資料與結構的說明，以及與採礦模型內容相關的一般詞彙說明，請參閱[採礦模型內容 &#40;Analysis Services - 資料採礦&#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)。  
+  本主題描述使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 貝式機率分類演算法之模型專用的採礦模型內容。 如需如何解譯所有模型類型共用的統計資料與結構的說明，以及與採礦模型內容相關的一般詞彙說明，請參閱[採礦模型內容 &#40;Analysis Services - 資料採礦&#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)。  
   
 ## <a name="understanding-the-structure-of-a-naive-bayes-model"></a>了解貝式機率分類模型的結構  
  貝式機率分類模型擁有代表模型及其中繼資料的單一父節點，而且在該父節點下，則擁有代表所選取之可預測屬性的所有獨立樹狀結構。 除了屬性的樹狀結構，每個模型都包含一個臨界統計資料節點 (NODE_TYPE = 26)，該節點會提供該組定型案例的描述性統計資料。 如需詳細資訊，請參閱 [臨界統計資料節點中的資訊](#bkmk_margstats)。  
@@ -295,7 +282,7 @@ AND NODE_CAPTION = 'Bike Buyer -> Marital Status = S'
  **遺漏** 值 (VALUE_TYPE = 1) 會加入到每個輸入和輸出屬性，以代表不在定型資料中的可能值。 您必須仔細區別字串「遺漏」和預設的**遺漏**值。 如需詳細資訊，請參閱[遺漏值 &#40;Analysis Services - 資料採礦&#41;](../../analysis-services/data-mining/missing-values-analysis-services-data-mining.md)。  
   
 ## <a name="see-also"></a>另請參閱  
- [採礦模型內容 &#40;Analysis Services-資料採礦 &#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)   
+ [採礦模型內容 & #40;Analysis Services-資料採礦 & #41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)   
  [資料採礦模型檢視器](../../analysis-services/data-mining/data-mining-model-viewers.md)   
  [資料採礦查詢](../../analysis-services/data-mining/data-mining-queries.md)   
  [Microsoft 貝氏機率分類演算法](../../analysis-services/data-mining/microsoft-naive-bayes-algorithm.md)  

@@ -1,34 +1,34 @@
 ---
-title: "搭配使用 SQL Server 連接器與 SQL 加密功能 | Microsoft 文件"
-ms.custom: 
+title: 搭配使用 SQL Server 連接器與 SQL 加密功能 | Microsoft 文件
+ms.custom: ''
 ms.date: 04/04/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
 ms.component: security
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Connector, using
 - EKM, with SQL Server Connector
 ms.assetid: 58fc869e-00f1-4d7c-a49b-c0136c9add89
-caps.latest.revision: 
+caps.latest.revision: 14
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: e25ba8ad35a44088cee720ad626bb1524f3db1c0
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+monikerRange: = azuresqldb-current || = sqlallproducts-allversions
+ms.openlocfilehash: b22b47922534fc38d72c1d89104a9a301cb3637e
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="use-sql-server-connector-with-sql-encryption-features"></a>搭配使用 SQL Server 連接器與 SQL 加密功能
-[!INCLUDE[appliesto-xx-asdb-xxxx-xxx-md](../../../includes/appliesto-xx-asdb-xxxx-xxx-md.md)] 使用 Azure Key Vault 所保護的非對稱金鑰進行的一般 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 加密活動，包括下列三個部分。  
+[!INCLUDE[appliesto-xx-asdb-xxxx-xxx-md](../../../includes/appliesto-xx-asdb-xxxx-xxx-md.md)]
+  使用 Azure 金鑰保存庫所保護之非對稱金鑰進行的一般 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 加密活動，包括下列三個區域。  
   
 -   使用 Azure 金鑰保存庫中的非對稱金鑰進行透明資料加密  
   
@@ -219,7 +219,7 @@ ms.lasthandoff: 01/02/2018
     
     若要還原使用 TDE 加密的資料庫備份，目標 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體必須先有一份用於加密的非對稱金鑰保存庫金鑰。 以下是達成此目的的方法：  
     
-    - 若金鑰保存庫中不再有原始用於 TDE 的非對稱金鑰，請還原金鑰保存庫的金鑰備份或重新匯入本機 HSM 中的金鑰。 **重要事項︰**為了使金鑰的指紋符合資料庫備份上記錄的指紋，金鑰必須命名為與之前原始名稱**相同的金鑰保存庫金鑰名稱**。
+    - 若金鑰保存庫中不再有原始用於 TDE 的非對稱金鑰，請還原金鑰保存庫的金鑰備份或重新匯入本機 HSM 中的金鑰。 **重要事項︰** 為了使金鑰的指紋符合資料庫備份上記錄的指紋，金鑰必須命名為與之前原始名稱**相同的金鑰保存庫金鑰名稱**。
     
     - 將步驟 1 和 2 套用在目標 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體上。
     

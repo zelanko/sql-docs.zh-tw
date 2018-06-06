@@ -1,30 +1,20 @@
 ---
-title: "CurrentMember (MDX) |Microsoft 文件"
-ms.custom: 
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: language-reference
-f1_keywords: CURRENTMEMBER
-dev_langs: kbMDX
-helpviewer_keywords: CurrentMember function
-ms.assetid: 5da76496-7d13-4f17-9cee-3e1ef70c2d97
-caps.latest.revision: "38"
-author: Minewiskan
+title: CurrentMember (MDX) |Microsoft 文件
+ms.date: 05/30/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: mdx
+ms.topic: reference
 ms.author: owend
-manager: erikre
-ms.workload: On Demand
-ms.openlocfilehash: 2c8ff1f7343017b3c7870f963fe2006699f88e9d
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: 21fc1e7a210e8e2b2eac6e3b886ac7f3622ad15a
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34577680"
 ---
 # <a name="currentmember-mdx"></a>CurrentMember (MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -85,7 +75,7 @@ Hierarchy_Expression.CurrentMember
   
  `WHERE([Customer].[Customer Geography].[Country].&[Australia])`  
   
- 目前的成員會在查詢內之軸上使用的階層上變更。 因此，相同維度上不會在軸的其他階層上的目前成員也可以變更;這個行為稱為 「 自動存在 ' 和更多詳細資料位於[MDX &#40; 中的重要概念Analysis Services &#41;](../analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services.md). 例如，底下的查詢會顯示 Date 維度之 Calendar Year 階層上的目前成員會隨著 Calendar 階層上的目前成員而變更，後者會顯示在資料列軸上：  
+ 目前的成員會在查詢內之軸上使用的階層上變更。 因此，相同維度上不會在軸的其他階層上的目前成員也可以變更;這個行為稱為 「 自動存在 ' 和更多詳細資料位於[MDX 的關鍵概念&#40;Analysis Services&#41;](../analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services.md)。 例如，底下的查詢會顯示 Date 維度之 Calendar Year 階層上的目前成員會隨著 Calendar 階層上的目前成員而變更，後者會顯示在資料列軸上：  
   
  `WITH MEMBER MEASURES.CURRENTYEAR AS`  
   
@@ -127,7 +117,7 @@ FROM [Adventure Works]
 WHERE {[Date].[Calendar Year].[Calendar Year].&[2003]}  
 ```  
   
-## <a name="see-also"></a>請參閱  
- [MDX 函數參考 &#40;MDX &#41;](../mdx/mdx-function-reference-mdx.md)  
+## <a name="see-also"></a>另請參閱  
+ [MDX 函數參考&#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

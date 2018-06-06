@@ -1,31 +1,28 @@
 ---
-title: "附錄 a: ODBC 錯誤碼 |Microsoft 文件"
-ms.custom: 
+title: '附錄 a: ODBC 錯誤碼 |Microsoft 文件'
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
-ms.component: odbc
-ms.reviewer: 
+ms.prod: sql
+ms.prod_service: connectivity
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: connectivity
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - error codes [ODBC]
 - SQLSTATE [ODBC]
 - error codes [ODBC], SQLSTATE
 ms.assetid: c06902e4-721d-42e2-b818-05f0e18e4ce0
-caps.latest.revision: "13"
+caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
-ms.workload: On Demand
-ms.openlocfilehash: af6533afbeb3b47c548e5475604136ae5fdc894b
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+manager: craigg
+ms.openlocfilehash: c2f8c75c0066716eed74f6d53ee28413f9ae74ab
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="appendix-a-odbc-error-codes"></a>附錄 A：ODBC 錯誤碼
 本主題會討論 ODBC 3 SQLSTATE 值。*x*。 如需有關 ODBC 3 的詳細資訊。*x* SQLSTATE 值，請參閱[SQLSTATE 對應](../../../odbc/reference/develop-app/sqlstate-mappings.md)。  
@@ -48,7 +45,7 @@ ms.lasthandoff: 12/21/2017
 |01007|未授與的權限|**SQLExecDirect**<br /><br /> **SQLExecute**<br /><br /> **SQLParamData**|  
 |01S00|無效的連接字串屬性|**SQLBrowseConnect**<br /><br /> **SQLDriverConnec**|  
 |01S01|資料列中的錯誤|**SQLBulkOperations**<br /><br /> **SQLExtendedFetch**<br /><br /> **SQLSetPos**|  
-|01S02 的警告|選項值已變更|**SQLBrowseConnect**<br /><br /> **SQLConnect**<br /><br /> **SQLDriverConnect**<br /><br /> **SQLExecDirect**<br /><br /> **SQLExecute**<br /><br /> **SQLParamData**<br /><br /> **SQLPrepare**<br /><br /> **SQLSetConnectAttr**<br /><br /> **SQLSetDescField**<br /><br /> **SQLSetEnvAttr**<br /><br /> **SQLSetStmtAttr**|  
+|01S02|選項值已變更|**SQLBrowseConnect**<br /><br /> **SQLConnect**<br /><br /> **SQLDriverConnect**<br /><br /> **SQLExecDirect**<br /><br /> **SQLExecute**<br /><br /> **SQLParamData**<br /><br /> **SQLPrepare**<br /><br /> **SQLSetConnectAttr**<br /><br /> **SQLSetDescField**<br /><br /> **SQLSetEnvAttr**<br /><br /> **SQLSetStmtAttr**|  
 |01S06|嘗試擷取結果集傳回第一個資料列集之前|**SQLExtendedFetch**<br /><br /> **SQLFetchScroll**|  
 |01S07|小數位數截斷|**SQLBulkOperations**<br /><br /> **SQLExecDirect**<br /><br /> **SQLExecute**<br /><br /> **SQLExtendedFetch**<br /><br /> **SQLFetch**<br /><br /> **SQLFetchScroll**<br /><br /> **SQLGetData**<br /><br /> **SQLParamData**<br /><br /> **SQLSetPos**|  
 |01S08|儲存檔案 DSN 時發生錯誤|**SQLDriverConnect**|  

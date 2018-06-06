@@ -1,16 +1,13 @@
 ---
 title: DBCC SHRINKFILE (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-database
-ms.service: 
-ms.component: t-sql|database-console-commands
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: t-sql
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - SHRINKFILE
@@ -32,16 +29,16 @@ helpviewer_keywords:
 - reducing database size
 - DBCC SHRINKFILE statement
 ms.assetid: e02b2318-bee9-4d84-a61f-2fddcf268c9f
-caps.latest.revision: 
-author: barbkess
-ms.author: barbkess
+caps.latest.revision: 87
+author: uc-msft
+ms.author: umajay
 manager: craigg
-ms.workload: Active
-ms.openlocfilehash: 94ad5652920129790045e33c93e2a8fbb83816bd
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: a771f30b82a81fa05ea65409bce9a132cbb42dad
+ms.sourcegitcommit: b3bb41424249de198f22d9c6d40df4996f083aa6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 05/17/2018
+ms.locfileid: "34300336"
 ---
 # <a name="dbcc-shrinkfile-transact-sql"></a>DBCC SHRINKFILE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -81,7 +78,8 @@ FILESTREAM 檔案群組容器不支援此選項。
 如果指定了 *target_size*，DBCC SHRINKFILE 會嘗試將檔案壓縮成指定的大小。 檔案將釋出之部分所用的頁面，重新放置到檔案保留部分的可用空間中。 例如，如果有 10 MB 的資料檔案，將 *target_size* 設為 8 的 DBCC SHRINKFILE 作業會使檔案最後 2 MB 所用的所有頁面，都重新配置到檔案前 8 MB 的任何未配置頁面中。 DBCC SHRINKFILE 不會將檔案壓縮到小於將資料儲存在檔案中所需要的大小。 例如，如果使用了 10 MB 資料檔案中的 7 MB，將 *target_size* 設為 6 的 DBCC SHRINKFILE 陳述式，只會將檔案壓縮成 7 MB，而不是 6 MB。
   
 EMPTYFILE  
-將指定檔案中的所有資料移轉到「相同檔案群組」的其他檔案中。 換言之，EmptyFile 會將指定檔案中的資料移轉至同一檔案群組中的其他檔案。 Emptyfile 可確保沒有任何新資料將加入檔案。使用 [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md) 陳述式可移除檔案。
+將指定檔案中的所有資料移轉到「相同檔案群組」的其他檔案中。 換言之，EmptyFile 會將指定檔案中的資料移轉至同一檔案群組中的其他檔案。 Emptyfile 可確保沒有任何新資料將新增至檔案，而不論這個檔案是否標示為唯讀。使用 [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md) 陳述式可移除檔案。 如果使用 [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md) 陳述式更改檔案大小，則唯讀旗標會重設，並且可以新增資料。
+
 對於 FILESTREAM 檔案群組容器來說，在 FILESTREAM 記憶體回收行程已執行並刪除所有由 EMPTYFILE 複製至其他容器且已不需要的檔案群組容器檔案之前，檔案將無法使用 ALTER DATABASE 移除。 如需詳細資訊，請參閱 [sp_filestream_force_garbage_collection &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/filestream-and-filetable-sp-filestream-force-garbage-collection.md)
   
 > [!NOTE]  
@@ -114,7 +112,7 @@ WITH NO_INFOMSGS
 ## <a name="remarks"></a>Remarks  
 DBCC SHRINKFILE 適用於目前資料庫中的檔案。 如需有關如何變更目前資料庫的詳細資訊，請參閱 [USE &#40;Transact-SQL&#41;](../../t-sql/language-elements/use-transact-sql.md)。
   
-在這個處理序中，隨時可以停止 DBCC SHRINKFILE 作業，任何已完成的工作都會保留下來。
+在這個處理序中，隨時可以停止 DBCC SHRINKFILE 作業，任何已完成的工作都會保留下來。 如果在檔案上使用 EMPTYFILE 參數，並且取消作業，則不會標示檔案來防止新增額外資料。
   
 當 DBCC SHRINKFILE 作業失敗時，會引發錯誤。
   

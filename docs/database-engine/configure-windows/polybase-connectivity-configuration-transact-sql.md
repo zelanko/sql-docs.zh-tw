@@ -1,35 +1,32 @@
 ---
-title: "PolyBase 連接組態 (Transact-SQL) | Microsoft Docs"
-ms.custom: 
+title: PolyBase 連接組態 (Transact-SQL) | Microsoft Docs
+ms.custom: ''
 ms.date: 08/03/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, pdw
-ms.service: 
-ms.component: configure-windows
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: configuration
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - PolyBase
 ms.assetid: 82252e4f-b1d0-49e5-aa0b-3624aade2add
-caps.latest.revision: 
-author: barbkess
-ms.author: barbkess
+caps.latest.revision: 14
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 4a75f97300af0ddf7023fd95efa5e3a973ec332a
-ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
+monikerRange: '>= aps-pdw-2016 || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: bb82ed8c4a4dc7c881ac2b94dee9ea88ce009858
+ms.sourcegitcommit: d2573a8dec2d4102ce8882ee232cdba080d39628
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="polybase-connectivity-configuration-transact-sql"></a>PolyBase 連接組態 (Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-pdw-md](../../includes/appliesto-ss-xxxx-xxxx-pdw-md.md)]
 
-  顯示或變更適用於 PolyBase Hadoop 和 Azure Blob 儲存體連接的全域組態設定。  
+  顯示或變更適用於 PolyBase Hadoop 和 Azure Blob 儲存體連接的全域組態設定。
   
  ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -78,7 +75,7 @@ RECONFIGURE
   
 -   選項 5：Linux 上的 Hortonworks HDP 2.0  
   
--   選項 6：Linux 上的 Cloudera 5.1、5.2、5.3、5.4、5.5、5.9、5.10、5.11 及 5.12  
+-   選項 6：Linux 上的 Cloudera 5.1、5.2、5.3、5.4、5.5、5.9、5.10、5.11、5.12 和 5.13  
   
 -   選項 7：Linux 上的 Hortonworks 2.1、2.2、2.3、2.4、2.5 和 2.6  
   

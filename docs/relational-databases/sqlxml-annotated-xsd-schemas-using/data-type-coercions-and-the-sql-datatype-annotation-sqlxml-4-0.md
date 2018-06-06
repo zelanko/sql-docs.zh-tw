@@ -1,16 +1,14 @@
 ---
-title: "資料類型強制型轉和 sql: datatype 註解 (SQLXML 4.0) |Microsoft 文件"
-ms.custom: 
+title: '資料類型強制型轉和 sql: datatype 註解 (SQLXML 4.0) |Microsoft 文件'
+ms.custom: ''
 ms.date: 03/17/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
 ms.component: sqlxml
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- dbe-xml
-ms.tgt_pltfrm: 
+ms.technology: xml
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - mapping data types [SQLXML]
@@ -24,25 +22,25 @@ helpviewer_keywords:
 - data types [SQLXML], mapping data types
 - XSD schemas [SQLXML], mapping data types
 ms.assetid: db192105-e8aa-4392-b812-9d727918c005
-caps.latest.revision: 
+caps.latest.revision: 29
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: c4c5d33454cebe84fb14a5bb154f7ee30a57de51
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 25685856bbb1b088f7c2825e27973915f850dea7
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="data-type-coercions-and-the-sqldatatype-annotation-sqlxml-40"></a>資料類型強制型轉和 sql:datatype 註解 (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-在 XSD 結構描述中， **xsd: type**屬性會指定元素或屬性的 XSD 資料型別。 當 XSD 結構描述用於從資料庫擷取資料時，指定的資料類型則會用於將資料格式化。  
+  在 XSD 結構描述中， **xsd: type**屬性會指定元素或屬性的 XSD 資料型別。 當 XSD 結構描述用於從資料庫擷取資料時，指定的資料類型則會用於將資料格式化。  
   
  除了指定 XSD 類型的結構描述中，您也可以指定 Microsoft[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]所使用的資料型別**sql: datatype**註解。 **Xsd: type**和**sql: datatype**屬性控制的 XSD 資料型別之間的對應和[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]資料型別。  
   
 ## <a name="xsdtype-attribute"></a>xsd:type 屬性  
- 您可以使用**xsd: type**屬性來指定 XML 資料類型的屬性或對應至資料行的元素。 **Xsd: type**會影響從伺服器以及執行的 XPath 查詢傳回的文件。 針對對應結構描述，其中包含 XPath 查詢執行時**xsd: type**，XPath 會在處理查詢時，會使用指定的資料類型。 如需有關如何使用 XPath **xsd: type**，請參閱[對應 XSD 資料型別以 XPath 資料類型 &#40;SQLXML 4.0 &#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-using/mapping-xsd-data-types-to-xpath-data-types-sqlxml-4-0.md).  
+ 您可以使用**xsd: type**屬性來指定 XML 資料類型的屬性或對應至資料行的元素。 **Xsd: type**會影響從伺服器以及執行的 XPath 查詢傳回的文件。 針對對應結構描述，其中包含 XPath 查詢執行時**xsd: type**，XPath 會在處理查詢時，會使用指定的資料類型。 如需有關如何使用 XPath **xsd: type**，請參閱[對應 XSD 資料型別以 XPath 資料型別&#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-using/mapping-xsd-data-types-to-xpath-data-types-sqlxml-4-0.md)。  
   
  在傳回的文件中，所有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料類型會轉換為字串表示。 某些資料類型需要額外的轉換。 下表列出用於各種轉換**xsd: type**值。  
   
@@ -64,7 +62,7 @@ ms.lasthandoff: 02/12/2018
   
 |SQL Server 資料類型|XSD 資料類型|  
 |--------------------------|-------------------|  
-|**bigint**|**long**|  
+|**bigint**|**長**|  
 |**binary**|**base64Binary**|  
 |**bit**|**boolean**|  
 |**char**|**字串**|  
@@ -198,6 +196,6 @@ ms.lasthandoff: 02/12/2018
 ```  
   
 ### <a name="b-specifying-sql-data-type-using-sqldatatype"></a>B. 藉由使用 sql:datatype 指定 SQL 資料類型  
- 如需實用範例，請參閱 < 範例 G 中[XML 大量載入範例 &#40;SQLXML 4.0 &#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/bulk-load-xml/xml-bulk-load-examples-sqlxml-4-0.md). 在這個範例中，包含 "{" 和 "}" 的 GUID 值是大量載入的。 在此範例中的結構描述指定**sql: datatype**來識別[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]資料類型作為**uniqueidentifier**。 此範例會說明何時**sql: datatype**必須指定結構描述中。  
+ 如需實用範例，請參閱 < 範例 G 中[XML 大量載入範例&#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/bulk-load-xml/xml-bulk-load-examples-sqlxml-4-0.md)。 在這個範例中，包含 "{" 和 "}" 的 GUID 值是大量載入的。 在此範例中的結構描述指定**sql: datatype**來識別[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]資料類型作為**uniqueidentifier**。 此範例會說明何時**sql: datatype**必須指定結構描述中。  
   
   

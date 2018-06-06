@@ -1,33 +1,31 @@
 ---
-title: "Azure SQL Database 和資料倉儲的透明資料加密 | Microsoft Docs"
-description: "SQL Database 和資料倉儲的透明資料加密概觀。 本文件涵蓋透明資料加密的優點與設定選項，包括「受控服務的透明資料加密」和「攜帶您自己的金鑰 (BYOK)」。"
-keywords: 
+title: Azure SQL Database 和資料倉儲的透明資料加密 | Microsoft Docs
+description: SQL Database 和資料倉儲的透明資料加密概觀。 本文件涵蓋透明資料加密的優點與設定選項，包括「受控服務的透明資料加密」和「攜帶您自己的金鑰 (BYOK)」。
+keywords: ''
 author: becczhang
 manager: craigg
-editor: 
-ms.prod: 
-ms.reviewer: 
+editor: ''
+ms.prod: ''
+ms.reviewer: ''
 ms.suite: sql
 ms.prod_service: sql-database, sql-data-warehouse
 ms.service: sql-database
 ms.component: security
-ms.custom: 
-ms.workload: On Demand
-ms.tgt_pltfrm: 
-ms.devlang: na
-ms.topic: article
-ms.date: 08/07/2017
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
+ms.date: 05/08/2018
 ms.author: rebeccaz
-ms.openlocfilehash: 5c9ff69d5219e3cd508031669d67002931fa4060
-ms.sourcegitcommit: d7dcbcebbf416298f838a39dd5de6a46ca9f77aa
+monikerRange: = azuresqldb-current || = sqlallproducts-allversions
+ms.openlocfilehash: b88dfeac58ef9c00307b2cfee35aca3ea0549f02
+ms.sourcegitcommit: feff98b3094a42f345a0dc8a31598b578c312b38
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2018
+ms.lasthandoff: 05/11/2018
 ---
 # <a name="transparent-data-encryption-for-sql-database-and-data-warehouse"></a>SQL Database 和資料倉儲的透明資料加密
 [!INCLUDE[appliesto-xx-asdb-asdw-xxx-md](../../../includes/appliesto-xx-asdb-asdw-xxx-md.md)]
 
-透明資料加密可協助 Azure SQL Database 和 Azure 資料倉儲防範惡意活動所帶來的威脅。 它可即時執行資料庫、相關聯備份及交易記錄檔的即時加密與解密，完全無須變更應用程式。
+透明資料加密 (TDE) 可協助 Azure SQL Database 和 Azure 資料倉儲防範惡意活動所帶來的威脅。 它可即時執行資料庫、相關聯備份及交易記錄檔的即時加密與解密，完全無須變更應用程式。 預設會為所有新部署的 Azure SQL Database 啟用 TDE，但針對舊版資料庫，您可能需要手動啟用。  
 
 透明資料加密會使用一種稱為資料庫加密金鑰的對稱金鑰，將整個資料庫的儲存體加密。 此資料庫加密金鑰受到透明資料加密保護裝置保護。 保護裝置是指受控服務的憑證 (受控服務的透明資料加密) 或儲存在 Azure Key Vault 的非對稱金鑰 (攜帶您自己的金鑰)。 請在伺服器層級上設定透明資料加密保護裝置。 
 
@@ -45,9 +43,9 @@ Microsoft 也會順暢地移動和管理金鑰，以滿足異地複寫和還原�
 > 根據預設，所有新建立的 SQL 資料庫會以受控服務的透明資料加密來加密。 現有的資料庫和 2017 年 5 月以前透過還原、異地複寫和資料庫複本建立的資料庫，則預設為不加密。
 >
 
-## <a name="bring-your-own-key-preview"></a>攜帶您自己的金鑰 (預覽)
+## <a name="bring-your-own-key"></a>自行管理金鑰
 
-透過攜帶您自己的金鑰 (預覽) 支援，可讓您充分掌控透明資料加密金鑰，並控制存取的人員與時間。 Key Vault 是 Azure 的雲端式外部金鑰管理系統，也是透明資料加密與「攜帶您自己的金鑰」支援整合的第一項金鑰管理服務。 使用「攜帶您自己的金鑰」支援，資料庫加密金鑰即受到儲存在 Key Vault 的非對稱金鑰保護。 非對稱金鑰永遠不會離開 Key Vault。 伺服器擁有 Key Vault 的權限之後，伺服器就會透過 Key Vault，將基本金鑰的作業要求傳送給它。 請在伺服器層級設定非對稱金鑰，因此歸屬於該伺服器底下的所有資料庫都會繼承此金鑰。
+透過攜帶您自己的金鑰支援，可讓您充分掌控透明資料加密金鑰，並控制存取的人員與時間。 Key Vault 是 Azure 的雲端式外部金鑰管理系統，也是透明資料加密與「攜帶您自己的金鑰」支援整合的第一項金鑰管理服務。 使用「攜帶您自己的金鑰」支援，資料庫加密金鑰即受到儲存在 Key Vault 的非對稱金鑰保護。 非對稱金鑰永遠不會離開 Key Vault。 伺服器擁有 Key Vault 的權限之後，伺服器就會透過 Key Vault，將基本金鑰的作業要求傳送給它。 請在伺服器層級設定非對稱金鑰，因此歸屬於該伺服器底下的所有資料庫都會繼承此金鑰。
 
 利用「攜帶您自己的金鑰」支援，您現在可以控制金鑰管理工作，例如金鑰輪替和 Key Vault 權限。 您也可以刪除金鑰，以及對所有加密金鑰啟用稽核/報告功能。 Key Vault 提供集中式金鑰管理，並且使用受嚴密監視的硬體安全性模組。 Key Vault 促使分開管理金鑰和資料，以協助符合法規相符性。 若要深入了解 Key Vault，請參閱 [Key Vault 文件頁面](https://docs.microsoft.com/azure/key-vault/key-vault-secure-your-key-vault)。
 

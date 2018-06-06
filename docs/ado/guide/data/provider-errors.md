@@ -1,17 +1,15 @@
 ---
-title: "提供者錯誤，|Microsoft 文件"
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
+title: 提供者錯誤，|Microsoft 文件
+ms.prod: sql
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
-ms.custom: 
+ms.technology: connectivity
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - errors collection [ADO]
 - provider errors [ADO]
@@ -19,16 +17,15 @@ helpviewer_keywords:
 - errors [ADO], provider
 - Error object [ADO], provider errors
 ms.assetid: cc7d6ff9-2034-45c6-9d61-90b177010054
-caps.latest.revision: 
+caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 2ce82243dda984375bef3a1630650ff27c68dd09
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 551c3a7e7f90f69601ff84449d60fc79c1375ece
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="provider-errors"></a>提供者錯誤
 發生提供者錯誤時，會傳回-2147467259 的執行階段錯誤。 當您收到這個錯誤時，請檢查**錯誤**作用中的集合**連接**物件，會包含一個或多個描述所發生的錯誤。  
@@ -76,7 +73,7 @@ End Function
 |**說明**|發生錯誤的文字描述。|  
 |**HelpContext，說明檔**|指的說明主題，並說明檔案，含有發生之錯誤的描述。|  
 |**NativeError**|提供者特定錯誤號碼。|  
-|**Number**|長整數，表示數字 (列在**ErrorValueEnum**) 發生的錯誤。|  
+|**數字**|長整數，表示數字 (列在**ErrorValueEnum**) 發生的錯誤。|  
 |**Source**|表示產生錯誤的應用程式之物件的名稱。|  
 |**SQLState**|提供者會傳回 SQL 陳述式的程序期間的五個字元的錯誤程式碼。|  
   

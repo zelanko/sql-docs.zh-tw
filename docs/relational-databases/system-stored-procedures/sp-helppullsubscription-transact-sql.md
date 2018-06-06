@@ -1,16 +1,15 @@
 ---
-title: "sp_helppullsubscription (TRANSACT-SQL) |Microsoft 文件"
-ms.custom: 
+title: sp_helppullsubscription (TRANSACT-SQL) |Microsoft 文件
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - sp_helppullsubscription
 ms.assetid: a0d9c3f1-1fe9-497c-8e2f-5b74f47a7346
-caps.latest.revision: 
+caps.latest.revision: 26
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: e121aacbf65adc239f5474af32a863fc5d65f1f4
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: ada01ed2c7e447077026e65a9ca5776911b14dcd
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sphelppullsubscription-transact-sql"></a>sp_helppullsubscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,14 +47,14 @@ sp_helppullsubscription [ [ @publisher = ] 'publisher' ]
 ```  
   
 ## <a name="arguments"></a>引數  
- [  **@publisher=**] **'***發行者***'**  
- 這是遠端伺服器的名稱。 *發行者*是**sysname**，預設值是 **%** ，它會傳回所有發行者的資訊。  
+ [ **@publisher=**] **'***publisher***'**  
+ 這是遠端伺服器的名稱。 *發行者*是**sysname**，預設值是**%**，它會傳回所有發行者的資訊。  
   
- [  **@publisher_db=**] **'***publisher_db***'**  
- 這是發行者資料庫的名稱。 *publisher_db*是**sysname**，預設值是 **%** ，它會傳回所有發行者資料庫。  
+ [ **@publisher_db=**] **'***publisher_db***'**  
+ 這是發行者資料庫的名稱。 *publisher_db*是**sysname**，預設值是**%**，它會傳回所有發行者資料庫。  
   
- [  **@publication=**] **'***發行集***'**  
- 這是發行集的名稱。 *發行集*是**sysname**，預設值是 **%** ，它會傳回所有發行集。 如果這個參數等於 ALL，提取訂閱 independent_agent = **0**會傳回。  
+ [ **@publication=**] **'***publication***'**  
+ 這是發行集的名稱。 *發行集*是**sysname**，預設值是**%**，它會傳回所有發行集。 如果這個參數等於 ALL，提取訂閱 independent_agent = **0**會傳回。  
   
  [  **@show_push=**] **'***show_push***'**  
  這是指是否傳回所有發送訂閱。 *show_push*是**nvarchar （5)**，預設值是 FALSE，這不會傳回發送訂閱。  
@@ -70,16 +68,16 @@ sp_helppullsubscription [ [ @publisher = ] 'publisher' ]
 |**發行集**|**sysname**|發行集的名稱。|  
 |**independent_agent**|**bit**|指出這個發行集是否有獨立的散發代理程式。|  
 |**訂用帳戶類型**|**int**|發行集的訂閱類型。|  
-|**散發代理程式**|**nvarchar （100)**|處理訂閱的散發代理程式。|  
+|**散發代理程式**|**nvarchar(100)**|處理訂閱的散發代理程式。|  
 |**發行集的描述**|**nvarchar(255)**|發行集的描述。|  
 |**上次更新時間**|**date**|更新訂閱資訊的時間。 這是 ISO 日期 (114) + ODBC 時間 (121) 的 UNICODE 字串。 格式為 yyyymmdd hh:mi:sss.mmm，其中 'yyyy' 是年份，'mm' 是月份，'dd' 是日期，'hh' 是小時，'mi' 是分鐘，'sss' 是秒鐘，'mmm' 是毫秒。|  
 |**訂用帳戶名稱**|**varchar(386)**|訂閱的名稱。|  
-|**上次交易時間戳記**|**varbinary （16)**|最後一次複寫交易的時間戳記。|  
+|**上次交易時間戳記**|**varbinary(16)**|最後一次複寫交易的時間戳記。|  
 |**更新模式**|**tinyint**|允許的更新類型。|  
 |**散發代理程式 job_id**|**int**|散發代理程式的作業識別碼。|  
 |**enabled_for_synmgr**|**int**|是否能夠利用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Synchronization Manager 同步處理訂閱。|  
-|**訂用帳戶 guid**|**binary （16)**|發行集訂閱版本的全域識別碼。|  
-|**subid**|**binary （16)**|匿名訂閱的全域識別碼。|  
+|**訂用帳戶 guid**|**binary(16)**|發行集訂閱版本的全域識別碼。|  
+|**subid**|**binary(16)**|匿名訂閱的全域識別碼。|  
 |**immediate_sync**|**bit**|每次執行快照集代理程式時，是否要建立或重新建立同步處理檔案。|  
 |**發行者登入**|**sysname**|用於發行者端之 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證的登入識別碼。|  
 |**發行者密碼**|**nvarchar （524)**|用於發行者端之 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證的密碼 (加密)。|  
@@ -115,9 +113,9 @@ sp_helppullsubscription [ [ @publisher = ] 'publisher' ]
 ## <a name="permissions"></a>Permissions  
  只有成員**sysadmin**固定的伺服器角色或**db_owner**固定的資料庫角色可以執行**sp_helppullsubscription** 。  
   
-## <a name="see-also"></a>請參閱＜  
- [sp_addpullsubscription &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/sp-addpullsubscription-transact-sql.md)   
- [sp_droppullsubscription &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/sp-droppullsubscription-transact-sql.md)   
+## <a name="see-also"></a>另請參閱  
+ [sp_addpullsubscription &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpullsubscription-transact-sql.md)   
+ [sp_droppullsubscription &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-droppullsubscription-transact-sql.md)   
  [系統預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

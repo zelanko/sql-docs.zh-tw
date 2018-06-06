@@ -1,32 +1,33 @@
 ---
-title: "另存新檔 | Microsoft Docs"
-ms.custom: 
+title: 另存新檔 | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
 ms.component: ssms-menu
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: tools-ssms
-ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords: vs.saveas
-helpviewer_keywords: Save As dialog box
+ms.technology: ssms
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
+f1_keywords:
+- vs.saveas
+helpviewer_keywords:
+- Save As dialog box
 ms.assetid: 61347757-f5a3-481d-8b05-1fed086629b6
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 16e9002516156238be7eac9faa203b64f0d23318
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.openlocfilehash: d512ff8a9093433eefd5bf6eef9946433dbebda8
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="save-as"></a>另存新檔
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 此對話方塊可用於將目前項目的執行個體，以指定的檔案格式儲存在指定位置。 按一下 [檔案]**檔案** 功能表上的 [另存新檔] *<file>*  上 功能表 (其中 *<file>* 是目前項目的名稱)，或在程式碼輯器中按 ALT + F、A 鍵。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+此對話方塊可用於將目前項目的執行個體，以指定的檔案格式儲存在指定位置。 按一下 [檔案]**檔案** 功能表上的 [另存新檔] *<file>*  上 功能表 (其中 *<file>* 是目前項目的名稱)，或在程式碼輯器中按 ALT + F、A 鍵。  
   
 ## <a name="central-panel"></a>中央面板  
 **儲存於**  
@@ -36,7 +37,7 @@ ms.lasthandoff: 01/17/2018
 使用此選項來檢視目前的檔案名稱、變更檔案名稱，或篩選顯示的檔案和資料夾。 若要篩選顯示的檔案和資料夾，請輸入要篩選的完整或部份的檔案名稱。 您可以使用星號 (`*`) 作為萬用字元。  
   
 > [!TIP]  
-> 若要顯示位於網路及網路位置上的檔案，請在 [檔案名稱] 方塊中輸入 URL 或網路路徑。 例如 "http://mywebsite" 會顯示位於 "mywebsite" 這個網路位置上的檔案，而 "\\\myserver\myshare" 會顯示位於 "myserver"上之 "myshare" 位置中的檔案。  
+> 若要顯示位於網路及網路位置上的檔案，請在 [檔案名稱] 方塊中輸入 URL 或網路路徑。 例如，"http://mywebsite" 會顯示在 "mywebsite" Web 位置上的可用檔案，而 "\\\myserver\myshare" 則會顯示在 "myserver" 的 "myshare" 位置上的可用檔案。  
   
 **存檔類型**  
 使用此選項為所選項目選取新的檔案類型。 顯示的檔案類型都是適用於所選取項目進行轉換的可用檔案類型。  

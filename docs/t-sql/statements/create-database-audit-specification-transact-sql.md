@@ -1,16 +1,14 @@
 ---
 title: CREATE DATABASE AUDIT SPECIFICATION (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 04/04/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-database
-ms.service: 
 ms.component: t-sql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: t-sql
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - CREATE DATABASE AUDIT
@@ -25,16 +23,15 @@ helpviewer_keywords:
 - database audit specification
 - CREATE DATABASE AUDIT SPECIFICATION statement
 ms.assetid: 0544da48-0ca3-4a01-ba4c-940e23dc315b
-caps.latest.revision: 
+caps.latest.revision: 26
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 07388f35881ebd4b88fcd9505a6b5577b3a5dffc
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: c539c4218848e3f99883c906e5176dbc31e7aec3
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="create-database-audit-specification-transact-sql"></a>CREATE DATABASE AUDIT SPECIFICATION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -84,7 +81,7 @@ CREATE DATABASE AUDIT SPECIFICATION audit_specification_name
  這是資料庫中套用稽核動作或稽核動作群組的資料表、檢視表或其他安全性實體物件。 如需相關資訊，請參閱 [Securables](../../relational-databases/security/securables.md)。  
   
  *principal*  
- 這是套用稽核動作或稽核動作群組的資料庫主體名稱。 如需詳細資訊，請參閱[主體 &#40;Database Engine&#41;](../../relational-databases/security/authentication-access/principals-database-engine.md)。  
+ 這是套用稽核動作或稽核動作群組的資料庫主體名稱。 如需詳細資訊，請參閱[主體 &#40;資料庫引擎&#41;](../../relational-databases/security/authentication-access/principals-database-engine.md)。  
   
  WITH ( STATE = { ON | OFF } )  
  啟用或停用從這個稽核規格收集而來之記錄的稽核。  

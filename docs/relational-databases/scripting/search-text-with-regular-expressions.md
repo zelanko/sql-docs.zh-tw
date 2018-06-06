@@ -1,17 +1,13 @@
 ---
-title: "使用規則運算式搜尋文字 | Microsoft Docs"
-ms.custom: 
+title: 使用規則運算式搜尋文字 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
-ms.prod_service: sql-tools
-ms.service: 
-ms.component: ssms-scripting
-ms.reviewer: 
+ms.prod: sql
+ms.technology: scripting
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 f1_keywords:
 - vsregularexpressionhelp
 - vs.regularexpressionhelp
@@ -21,19 +17,20 @@ helpviewer_keywords:
 - Query Editor [SQL Server Management Studio], regular expression searches
 - searches [SQL Server Management Studio], regular expressions
 ms.assetid: a057690c-d118-4159-8e4d-2ed5ccfe79d3
-caps.latest.revision: 
+caps.latest.revision: 25
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Active
-ms.openlocfilehash: f60dd96e3a335938d99c0b0f619ce859c208e795
-ms.sourcegitcommit: a0aa5e611a0e6ebb74ac1e2f613e8916dc7a7617
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 2bdf5092dc19a5a96121db99ef0da7c9192da1bb
+ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/24/2018
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="search-text-with-regular-expressions"></a>使用規則運算式搜尋文字
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 規則運算式是在尋找及取代文字模式時所使用，為既簡明、又有彈性的標記法。 特定的規則運算式集可用在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] [尋找和取代] 對話方塊的 [尋找目標] 欄位。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+  規則運算式是在尋找及取代文字模式時所使用，為既簡明、又有彈性的標記法。 特定的規則運算式集可用在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] [尋找和取代] 對話方塊的 [尋找目標] 欄位。  
   
 #### <a name="to-find-using-regular-expressions"></a>若要使用規則運算式來尋找  
   

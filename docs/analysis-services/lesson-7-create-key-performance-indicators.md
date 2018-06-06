@@ -1,28 +1,19 @@
 ---
-title: "第 8 課： 建立關鍵效能指標 |Microsoft 文件"
-ms.custom: 
-ms.date: 03/27/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services, azure-analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: get-started-article
-applies_to: SQL Server 2016
-ms.assetid: a6c8ac2b-64ba-456f-b418-7bf0afe145d1
-caps.latest.revision: "18"
-author: Minewiskan
+title: 第 8 課： 建立關鍵效能指標 |Microsoft 文件
+ms.date: 05/08/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: multidimensional-models
+ms.topic: tutorial
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 2d5895160b92eded9dd50cf55cdaedc022183e0b
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 6e56d4a533caaf95077eb06fabb5fd0bc0c42b07
+ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="lesson-7-create-key-performance-indicators"></a>第 7 課： 建立關鍵效能指標
 [!INCLUDE[ssas-appliesto-sql2016-later-aas](../includes/ssas-appliesto-sql2016-later-aas.md)]
@@ -31,7 +22,7 @@ ms.lasthandoff: 01/08/2018
   
 完成本課程的估計時間： **15 分鐘**  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>必要條件  
 本主題是表格式模型教學課程的一部分，必須依序完成。 然後再執行工作，在這一課，您應已完成上一課：[第 6 課： 建立量值](../analysis-services/lesson-6-create-measures.md)。   
   
 ## <a name="create-key-performance-indicators"></a>建立關鍵效能指標  

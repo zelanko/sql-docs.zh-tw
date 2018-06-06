@@ -1,30 +1,27 @@
 ---
-title: "針對 SQL Server 資料庫引擎的連接進行疑難排解 | Microsoft Docs"
-ms.custom: 
+title: 針對 SQL Server 資料庫引擎的連接進行疑難排解 | Microsoft Docs
+ms.custom: ''
 ms.date: 02/07/2017
-ms.prod: sql-non-specified
-ms.prod_service: database-engine
-ms.service: 
-ms.component: configure-windows
-ms.reviewer: 
+ms.prod: sql
+ms.prod_service: high-availability
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: database-engine
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: configuration
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - troubleshooting, connecting to Database Engine
 - connecting to Database Engine, troubleshooting
 ms.assetid: 474c365b-c451-4b07-b636-1653439f4b1f
-caps.latest.revision: "15"
+caps.latest.revision: 15
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.workload: Active
-ms.openlocfilehash: 9a5ff7baa53924206192db30e8ae9f50cef02cff
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: fda5188298c2cae3b56bdb4119ae1bbc96679a2f
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="troubleshoot-connecting-to-the-sql-server-database-engine"></a>針對 SQL Server Database Engine 的連接進行疑難排解
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -155,7 +152,7 @@ Windows XP Service Pack 2 從多年前就開始這麼做：Windows 防火牆已�
 
 4. 一旦可以使用電腦名稱強制 TCP 連線，請嘗試使用電腦名稱連線，但不強制執行 TCP。 例如，預設執行個體只使用電腦名稱，如 `CCNT27`。具名的執行個體使用電腦名稱和執行個體名稱，如 `ACCNT27\PAYROLL`。如果強制執行 TCP 時可以連線，但不強制執行 TCP 時無法連線，則用戶端可能使用的是另一個通訊協定 (如具名管道)。
 
-    1. 在用戶端電腦上使用 SQL Server 組態管理員，在左窗格中展開 [SQL Native Client ***version*** 組態]，然後選取 [用戶端通訊協定]。
+    1. 在用戶端電腦上使用 SQL Server 組態管理員，在左窗格中展開 [SQL Native Client***version*** 組態]，然後選取 [用戶端通訊協定]。
     2. 右窗格中，請確定已啟用 TCP/IP。 如果 TCP/IP 停用，請以滑鼠右鍵按一下 [TCP/IP]，然後按一下 [啟用]。
     3. 確定 TCP/IP 通訊協定的順序值小於具名管道 (或較舊版本上的 VIA) 通訊協定的順序。 通常共用記憶體的順序應該為 1，TCP/IP 的順序為 2。 只有當用戶端和 SQL Server 在同一部電腦上執行時，才使用共用記憶體。 所有啟用的通訊協定會依序一一嘗試，直到有項目成功為止，但不連接到同一部電腦時，會略過共用記憶體。 
 

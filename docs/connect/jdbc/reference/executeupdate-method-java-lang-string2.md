@@ -1,30 +1,29 @@
 ---
-title: "executeUpdate 方法 (java.lang.String) |Microsoft 文件"
-ms.custom: 
+title: executeUpdate 方法 (java.lang.String) |Microsoft 文件
+ms.custom: ''
 ms.date: 02/07/2017
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
-ms.component: jdbc
-ms.reviewer: 
+ms.prod: sql
+ms.prod_service: connectivity
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
-ms.topic: article
-apiname: SQLServerPreparedStatement.executeUpdate (java.lang.String)
-apilocation: sqljdbc.jar
+ms.technology: connectivity
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
+apiname:
+- SQLServerPreparedStatement.executeUpdate (java.lang.String)
+apilocation:
+- sqljdbc.jar
 apitype: Assembly
 ms.assetid: 91ecb1cd-001d-4ac9-9ae8-5db05c3c2959
-caps.latest.revision: "11"
+caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
-ms.workload: Inactive
-ms.openlocfilehash: 7a78fe10c14c54b5e2bea1cc4030a4f5d8d83fa1
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+manager: craigg
+ms.openlocfilehash: a48df94bb417825aba64699443de6e43fced0d12
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="executeupdate-method-javalangstring"></a>executeUpdate 方法 (java.lang.String)
 
@@ -42,7 +41,7 @@ public final int executeUpdate(java.lang.String sql)
 A**字串**，其中包含 SQL 陳述式。
 
 ## <a name="return-value"></a>傳回值
-**Int** ，指出資料列受到影響或 0 的數目，如果使用 DDL 陳述式。
+**int** 會指出受影響的資料列數目，如果是使用 DDL 陳述式，則為 0。
 
 ## <a name="exceptions"></a>例外狀況
 [SQLServerException](./sqlserverexception-class.md)
@@ -52,9 +51,9 @@ A**字串**，其中包含 SQL 陳述式。
 
 呼叫這個方法會導致例外狀況，因為在建立物件時指定 SQLServerPreparedStatement 物件的 SQL 陳述式。
 
-## <a name="see-also"></a>請參閱＜
+## <a name="see-also"></a>另請參閱
 
-[executeUpdate 方法 &#40;SQLServerPreparedStatement &#41;](./executeupdate-method-sqlserverpreparedstatement.md)
+[executeUpdate 方法&#40;SQLServerPreparedStatement&#41;](./executeupdate-method-sqlserverpreparedstatement.md)
 
 [SQLServerPreparedStatement 成員](./sqlserverpreparedstatement-members.md)
 

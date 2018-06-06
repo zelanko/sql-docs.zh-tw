@@ -1,16 +1,15 @@
 ---
-title: "包含或排除資料列 (Visual Database Tools) | Microsoft Docs"
-ms.custom: 
+title: 包含或排除資料列 (Visual Database Tools) | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
 ms.component: ssms-visual-db
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: tools-ssms
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ssms
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - search criteria [SQL Server], excluding rows
 - search criteria [SQL Server], WHERE clause
@@ -23,19 +22,19 @@ helpviewer_keywords:
 - row included in search [SQL Server]
 - excluding rows
 ms.assetid: ba4e1202-31a2-444d-8365-c68a530ef223
-caps.latest.revision: "4"
+caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 020bbbcbae62267966e9fb020e3dc0f668cc977f
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.openlocfilehash: 20f1a6b78a13a7ca81386dbccb7358378ec6f76b
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="include-or-exclude-rows-visual-database-tools"></a>包含或排除資料列 (Visual Database Tools)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 若要限制 SELECT 查詢傳回的資料列數目，您可以建立搜尋條件或篩選條件。 在 SQL 中，搜尋條件出現在陳述式中的 WHERE 子句，或如果您要建立彙總查詢，查詢條件則位於 HAVING 子句中。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+若要限制 SELECT 查詢傳回的資料列數目，您可以建立搜尋條件或篩選條件。 在 SQL 中，搜尋條件出現在陳述式中的 WHERE 子句，或如果您要建立彙總查詢，查詢條件則位於 HAVING 子句中。  
   
 > [!NOTE]  
 > 您也可以使用搜尋條件來指出受到 UPDATE、Insert Results、Insert Values、DELETE 或製成資料表查詢影響的資料列。  

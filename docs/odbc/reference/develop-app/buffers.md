@@ -1,16 +1,14 @@
 ---
-title: "緩衝區 |Microsoft 文件"
-ms.custom: 
+title: 緩衝區 |Microsoft 文件
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
-ms.component: odbc
-ms.reviewer: 
+ms.prod: sql
+ms.prod_service: connectivity
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: connectivity
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - input buffers [ODBC]
 - length/indicator buffers [ODBC]
@@ -19,16 +17,15 @@ helpviewer_keywords:
 - application buffers [ODBC]
 - buffers [ODBC]
 ms.assetid: 42c5226c-cb40-4d1e-809f-2ea50ce6bd55
-caps.latest.revision: "8"
+caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
-ms.workload: Inactive
-ms.openlocfilehash: ceb263eb42a4ef58c38f18eba98736a4c9de89e2
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+manager: craigg
+ms.openlocfilehash: 90162445e385f42ed4b69232e58b63d3e7e8d52a
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="buffers"></a>緩衝區
 緩衝區是用來在應用程式和驅動程式之間傳遞資料的應用程式任何的記憶體片段。 例如，應用程式緩衝區可以與其產生關聯，或*結合*結果集資料行與**SQLBindCol**。 擷取每個資料列，因為在這些緩衝區中的每個資料行就會傳回資料。 *輸入緩衝區*用來將資料傳遞至驅動程式; 應用程式*輸出緩衝區*用來從驅動程式應用程式將資料傳回。  
@@ -40,7 +37,7 @@ ms.lasthandoff: 12/21/2017
   
  成對通常出現這些緩衝區。 *資料緩衝區*是用來傳遞資料本身，而*長度/指標緩衝區*用來傳遞的資料緩衝區或例如 SQL_NULL_DATA 表示資料為 NULL 的特殊值中的資料長度。 不同於本身的資料緩衝區的長度的資料緩衝區中的資料長度。 下圖顯示的資料緩衝區和長度/指標緩衝區之間的關聯性。  
   
- ![資料緩衝區和長度 &#47; 指標緩衝區](../../../odbc/reference/develop-app/media/pr09.gif "pr09")  
+ ![資料緩衝區和長度&#47;指標緩衝區](../../../odbc/reference/develop-app/media/pr09.gif "pr09")  
   
  每當資料緩衝區包含可變長度的資料，例如字元或二進位資料時需要長度/指標緩衝區。 如果資料緩衝區包含固定長度的資料，例如整數或日期的結構，長度/指標緩衝區需要只將指標值，因為資料的長度為已知。 如果應用程式會使用固定長度的資料長度/指標緩衝區，驅動程式會忽略任何傳入它的長度。  
   

@@ -1,32 +1,33 @@
 ---
-title: "SQLRemoveDriverManager 函式 |Microsoft 文件"
-ms.custom: 
+title: SQLRemoveDriverManager 函式 |Microsoft 文件
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
-ms.component: odbc
-ms.reviewer: 
+ms.prod: sql
+ms.prod_service: connectivity
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
-ms.topic: article
-apiname: SQLRemoveDriverManager
-apilocation: sqlsrv32.dll
+ms.technology: connectivity
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
+apiname:
+- SQLRemoveDriverManager
+apilocation:
+- sqlsrv32.dll
 apitype: dllExport
-f1_keywords: SQLRemoveDriverManager
-helpviewer_keywords: SQLRemoveDriverManager function function [ODBC]
+f1_keywords:
+- SQLRemoveDriverManager
+helpviewer_keywords:
+- SQLRemoveDriverManager function function [ODBC]
 ms.assetid: 3a41511f-6603-4b81-a815-7883874023c4
-caps.latest.revision: "13"
+caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
-ms.workload: Inactive
-ms.openlocfilehash: 8d74b3b3eda914210f8d69d6089eb9a474416318
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+manager: craigg
+ms.openlocfilehash: ad7508ef6825bda50adee02fe92665e4d3445ee5
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sqlremovedrivermanager-function"></a>SQLRemoveDriverManager 函式
 **一致性**  
@@ -53,7 +54,7 @@ BOOL SQLRemoveDriverManager(
 ## <a name="diagnostics"></a>診斷  
  當**SQLRemoveDriverManager**傳回 FALSE，相關聯 *\*pfErrorCode*可以取得值，藉由呼叫**SQLInstallerError**。 下表列出 *\*pfErrorCode*可以傳回的值**SQLInstallerError** ，並說明每個內容中的這個函式。  
   
-|*\*pfErrorCode*|錯誤|描述|  
+|*\*pfErrorCode*|錯誤|Description|  
 |---------------------|-----------|-----------------|  
 |ODBC_ERROR_GENERAL_ERR|一般安裝程式發生錯誤|發生錯誤，其中沒有特定的安裝程式錯誤。|  
 |ODBC_ERROR_COMPONENT_NOT_FOUND|在登錄中找不到元件|安裝程式無法移除驅動程式管理員資訊，因為它不存在於登錄或登錄中找不到。|  

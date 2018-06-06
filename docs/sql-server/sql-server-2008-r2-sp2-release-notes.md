@@ -1,33 +1,31 @@
 ---
-title: "SQL Server 2008 R2 SP2 版本資訊 | Microsoft Docs"
-ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
-ms.service: 
-ms.component: sql-non-specified
-ms.technology: server-general
-ms.custom: 
+title: SQL Server 2008 R2 SP2 版本資訊 | Microsoft Docs
+ms.prod: sql
+ms.prod_service: sql
+ms.technology: supportability
+ms.custom: ''
 ms.date: 01/31/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server 2008 R2 SP2
 - Release Notes, SQL Server 2008 R2 SP2
 ms.assetid: e2bd3de7-674c-4ea7-8d53-bb40bba86fae
-caps.latest.revision: "17"
 author: craigg-msft
 ms.author: craigg
 manager: jhubbard
-ms.workload: Inactive
-ms.openlocfilehash: a497aaec3879414fe2a7c6785a180ebf77ba25de
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+monikerRange: = sql-server-2014 || = sqlallproducts-allversions
+ms.openlocfilehash: 214be1c0aac58e06c931876d49f7066cad86953b
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sql-server-2008-r2-sp2-release-notes"></a>SQL Server 2008 R2 SP2 Release Notes
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)] 這份版本資訊文件描述安裝或對 Microsoft SQL Server 2008 R2 Service Pack 2 進行疑難排解之前應該閱讀的已知問題。 這份版本資訊文件適用於 SQL Server 2008 R2 SP2 的所有版本，而且僅在線上提供使用。 將定期進行更新。  
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+這份版本資訊文件將描述有關您安裝或疑難排解 Microsoft SQL Server 2008 R2 Service Pack 2 之前應該閱讀的已知問題。 這份版本資訊文件適用於 SQL Server 2008 R2 SP2 的所有版本，而且僅在線上提供使用。 將定期進行更新。  
   
 ## <a name="10-whats-new-in-service-pack-2"></a>1.0 Service Pack 2 中的新功能  
 新增動態管理檢視 (DMV) **sys.dm_db_stats_properties**。 您可以使用這個 DMV，傳回目前資料庫中所指定之資料表或索引檢視表的統計資料屬性。 例如，這個 DMV 會傳回取樣的資料列數目以及長條圖中的步驟數目。  

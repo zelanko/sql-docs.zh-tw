@@ -1,33 +1,30 @@
 ---
-title: "CubeDef 物件 (ADO MD) |Microsoft 文件"
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
+title: CubeDef 物件 (ADO MD) |Microsoft 文件
+ms.prod: sql
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
-ms.custom: 
+ms.technology: connectivity
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 apitype: COM
 f1_keywords:
 - CubeDef
 helpviewer_keywords:
 - CubeDef object [ADO MD]
 ms.assetid: feb2581c-fc41-471c-bb69-29f8a55fda70
-caps.latest.revision: 
+caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: ea97010f67e571ddf9ddfb1dcc1cf36e38769710
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 31e2bf587c19ab8088b0ab702be60fde54247aec
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="cubedef-object-ado-md"></a>CubeDef 物件 (ADO MD)
 代表多維度結構描述，其中包含一組相關維度的 cube。  

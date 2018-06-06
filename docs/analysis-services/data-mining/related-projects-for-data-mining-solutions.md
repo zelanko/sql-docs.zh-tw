@@ -1,31 +1,23 @@
 ---
-title: "資料採礦方案的相關專案 |Microsoft 文件"
-ms.custom: 
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
-ms.assetid: dc26489a-4c27-4b89-8215-6d245427c350
-caps.latest.revision: 
-author: Minewiskan
+title: 資料採礦方案的相關專案 |Microsoft 文件
+ms.date: 05/08/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: data-mining
+ms.topic: conceptual
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 7eebc2ae561e47481734c80dbc8f77ad381f4193
-ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
+ms.openlocfilehash: f884a7d70447771769ba2d6ff8928234095c7cae
+ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="related-projects-for-data-mining-solutions"></a>資料採礦方案的相關專案
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-資料採礦方案至少需要資料採礦專案，專案中會定義資料來源、資料來源檢視、採礦結構和採礦模型。 但是，當使用資料採礦模型進行每日決策時，資料採礦一定要與預測性分析方案的其他部分整合，該方案可包含這些程序和元件：  
+  資料採礦方案至少需要資料採礦專案，專案中會定義資料來源、資料來源檢視、採礦結構和採礦模型。 但是，當使用資料採礦模型進行每日決策時，資料採礦一定要與預測性分析方案的其他部分整合，該方案可包含這些程序和元件：  
   
 -   準備及選取資料和變數。 包括資料清理、中繼資料管理及整合多個資料來源，以及將資料轉換、合併和上傳到資料倉儲中。  
   
@@ -48,7 +40,7 @@ ms.lasthandoff: 02/23/2018
  [語意索引](#bkmk_SemSearch)  
   
 ##  <a name="bkmk_SSIS"></a> SQL Server Integration Services  
- [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 提供了資料準備和資料採礦專案定型階段所需的元件與功能。 雖然您可以使用類似指令碼的其他工具來執行許多資料清理或準備工作，但是 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 擁有許多資料採礦的優點：  
+ [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]提供元件和資料準備和資料採礦專案定型階段所需的功能。 雖然您可以使用類似指令碼的其他工具來執行許多資料清理或準備工作，但是 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 擁有許多資料採礦的優點：  
   
 -   將工作表示為工作流程的一部分，工作流程可以重複、自動化、建立分支及擴充。  
   
@@ -109,11 +101,11 @@ ms.lasthandoff: 02/23/2018
   
  如需有關如何搭配資料來源形式的 DMX 查詢使用 Reporting Services 的詳細資訊，請參閱以下連結：  
   
- [擷取資料，從資料採礦模型 &#40; DMX &#41;&#40;SSRS &#41;](../../reporting-services/report-data/retrieve-data-from-a-data-mining-model-dmx-ssrs.md)  
+ [擷取資料，從資料採礦模型 & #40; DMX & #41;& #40;SSRS & #41;](../../reporting-services/report-data/retrieve-data-from-a-data-mining-model-dmx-ssrs.md)  
   
  [Analysis Services DMX 查詢設計工具使用者介面](../../reporting-services/report-data/analysis-services-dmx-query-designer-user-interface.md)  
   
- [DMX &#40; analysis Services 連接類型SSRS &#41;](../../reporting-services/report-data/analysis-services-connection-type-for-dmx-ssrs.md)  
+ [DMX & #40; analysis Services 連接類型SSRS & #41;](../../reporting-services/report-data/analysis-services-connection-type-for-dmx-ssrs.md)  
   
  但是，使用 DMX 當做資料來源並不是必要的。 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 的資料採礦元件也支援將預測查詢結果儲存到關聯式資料庫。 如果您已經使用 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]建立更新模型的工作流程，則將預測和其他資料採礦查詢結果保存到 SQL Server 可讓您啟用報告用的 [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] 以及不與 DMX 接觸的其他工具。  
   
@@ -209,6 +201,6 @@ ms.lasthandoff: 02/23/2018
   
 ## <a name="see-also"></a>另請參閱  
  [多維度模型方案 ](../../analysis-services/multidimensional-models/multidimensional-model-solutions-ssas.md)   
- [表格式模型方案](../../analysis-services/tabular-models/tabular-model-solutions-ssas-tabular.md)  
+ [表格式模型方案](../../analysis-services/tabular-models/tabular-models-ssas.md)  
   
   

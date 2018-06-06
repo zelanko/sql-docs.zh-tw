@@ -1,16 +1,13 @@
 ---
-title: sys.dm_exec_query_profiles (Transact-SQL) | Microsoft Docs
-ms.custom: 
+title: sys.dm_exec_query_profiles (TRANSACT-SQL) |Microsoft 文件
+ms.custom: ''
 ms.date: 11/16/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
-ms.component: dmv's
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: system-objects
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - dm_exec_query_profiles_TSQL
@@ -22,16 +19,16 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_exec_query_profiles dynamic management view
 ms.assetid: 54efc6cb-eea8-4f6d-a4d0-aa05eeb54081
-caps.latest.revision: 
+caps.latest.revision: 19
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: c9a7656b78478c321e277ae16577f9bce178aeca
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+monikerRange: = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 4b3acec798d858f31aac79231060d0533a3499b3
+ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 05/23/2018
 ---
 # <a name="sysdmexecqueryprofiles-transact-sql"></a>sys.dm_exec_query_profiles (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
@@ -78,7 +75,7 @@ ms.lasthandoff: 02/03/2018
 |segment_read_count|**int**|目前為止的區段預先讀取數目。|  
 |segment_skip_count|**int**|目前為止略過的區段數目。| 
 |actual_read_row_count|**bigint**|讀取運算子在套用之前出現殘餘述詞的資料列數目。| 
-|estimated_read_row_count|**bigint**|**適用於：**開頭[!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)]SP1。 <br/>出現殘餘述詞套用之前讀取以運算子的估計資料列數目。|  
+|estimated_read_row_count|**bigint**|**適用於：** 開頭[!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)]SP1。 <br/>出現殘餘述詞套用之前讀取以運算子的估計資料列數目。|  
   
 ## <a name="general-remarks"></a>一般備註  
  如果查詢計畫節點沒有任何 IO，所有與 IO 相關的計數器都會設定為 NULL。  
@@ -97,10 +94,10 @@ ms.lasthandoff: 02/03/2018
  設定 XML ON 和 SET STATISTICS PROFILE ON 一律使用 基礎結構程式碼剖析的舊版的查詢執行統計資料的統計資料。
   
 ## <a name="permissions"></a>Permissions  
- 在[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]需要在伺服器上的 VIEW SERVER STATE 權限。  
-  
- 在[!INCLUDE[ssSDS](../../includes/sssds-md.md)]Premium 層需要資料庫的 VIEW DATABASE STATE 權限。 在[!INCLUDE[ssSDS](../../includes/sssds-md.md)]標準和基本層需要[!INCLUDE[ssSDS](../../includes/sssds-md.md)]系統管理員帳戶。  
-  
+
+在[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]，需要`VIEW SERVER STATE`權限。   
+在[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]，需要`VIEW DATABASE STATE`資料庫的權限。   
+   
 ## <a name="examples"></a>範例  
  步驟 1： 登入您打算使用 sys.dm_exec_query_profiles 執行分析的查詢的工作階段。 若要設定程式碼剖析的查詢會使用 SET STATISTICS PROFILE 上。 在此相同工作階段中執行查詢。  
   
@@ -134,7 +131,7 @@ ORDER BY node_id;
   
 ## <a name="see-also"></a>另請參閱  
  [動態管理檢視與函數 &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
- [執行相關動態管理檢視和函數 &#40;TRANSACT-SQL &#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)  
+ [執行相關動態管理檢視和函數&#40;Transact SQL&#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)  
   
   
 

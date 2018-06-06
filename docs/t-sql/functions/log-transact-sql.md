@@ -1,16 +1,14 @@
 ---
 title: LOG (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 07/29/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
 ms.component: t-sql|functions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: t-sql
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - LOG
@@ -22,16 +20,16 @@ helpviewer_keywords:
 - logarithm of expression
 - LOG function
 ms.assetid: f7c39511-cd84-4362-93ba-0d93655217ee
-caps.latest.revision: 
+caps.latest.revision: 42
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: ab2d021e583c3f4bec009e7959ea4fccfea8c5a3
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 8b54647650d2fec61c4f8fa8847dbafba98d8b3e
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="log-transact-sql"></a>LOG (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -61,7 +59,7 @@ LOG ( float_expression )
  *base*  
  可設定對數基數的選擇性整數引數。  
   
-**適用對象**：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 透過 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+**適用於**：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
   
 ## <a name="return-types"></a>傳回類型  
  **float**  
@@ -71,7 +69,7 @@ LOG ( float_expression )
   
  自然對數是基數 **e** 的對數，其中 **e** 是大約等於 2.718281828 的無理常數。  
   
- 數字之指數的自然對數，便是該數字本身：LOG( EXP( *n* ) ) = *n*。 而一個數字之自然對數的指數便是該數字本身：EXP( LOG( *n* ) ) = *n*。  
+ 數字之指數的自然對數就是該數字本身：LOG( EXP( *n* ) ) = *n*。 而數字之自然對數的指數就是該數字本身：EXP( LOG( *n* ) ) = *n*。  
   
 ## <a name="examples"></a>範例  
   
@@ -127,7 +125,7 @@ SELECT LOG(10);
  ```  
   
 ## <a name="see-also"></a>另請參閱  
- [數學函式 &#40;Transact-SQL&#41;](../../t-sql/functions/mathematical-functions-transact-sql.md)   
+ [數學函數 &#40;Transact-SQL&#41;](../../t-sql/functions/mathematical-functions-transact-sql.md)   
  [EXP &#40;Transact-SQL&#41;](../../t-sql/functions/exp-transact-sql.md)   
  [LOG10 &#40;Transact-SQL&#41;](../../t-sql/functions/log10-transact-sql.md)  
   

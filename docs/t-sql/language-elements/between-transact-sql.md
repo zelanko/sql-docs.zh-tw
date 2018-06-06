@@ -1,16 +1,14 @@
 ---
 title: BETWEEN (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 08/28/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
 ms.component: t-sql|language-elements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: t-sql
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - BETWEEN
@@ -25,16 +23,16 @@ helpviewer_keywords:
 - BETWEEN operator
 - range to test [SQL Server]
 ms.assetid: a5d5b050-203e-4355-ac85-e08ef5ca7823
-caps.latest.revision: 
+caps.latest.revision: 34
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: Active
-ms.openlocfilehash: b2e5f028fdc431ebd52302cc0b62dcf456d1d79f
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 77bf932353c926aec861661ead5706fb96e2400c
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="between-transact-sql"></a>BETWEEN (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -66,14 +64,14 @@ test_expression [ NOT ] BETWEEN begin_expression AND end_expression
  用來作為預留位置，表示 *test_expression* 應該位於 *begin_expression* 和 *end_expression* 所指定的範圍內。  
   
 ## <a name="result-types"></a>結果類型  
- **布林值**  
+ **布林**  
   
 ## <a name="result-value"></a>結果值  
  如果 *test_expression* 的值大於或等於 *begin_expression* 的值且小於或等於 *end_expression* 的值，BETWEEN 就會傳回 **TRUE**。  
   
  如果 *test_expression* 的值小於 *begin_expression* 的值或大於 *end_expression* 的值，NOT BETWEEN 就會傳回 **TRUE**。  
   
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>Remarks  
  若要指定獨佔範圍，請使用大於 (>) 和小於運算子 (<)。 如果 BETWEEN 或 NOT BETWEEN 述詞的任何輸入是 NULL，結果就是 UNKNOWN。  
   
 ## <a name="examples"></a>範例  

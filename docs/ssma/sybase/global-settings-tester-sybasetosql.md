@@ -1,37 +1,35 @@
 ---
-title: "全域設定 （測試人員） (SybaseToSQL) |Microsoft 文件"
-ms.custom: 
+title: 全域設定 （測試人員） (SybaseToSQL) |Microsoft 文件
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
 ms.component: ssma-sybase
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ssma
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: 6f0b9cea-5a24-4e42-8bbf-c4516b00da23
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
-ms.workload: Inactive
-ms.openlocfilehash: 1b5ba92c5972df1e29bbe3c4cd3df4f093739a86
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+manager: craigg
+ms.openlocfilehash: 02db2a2f89f91d745d3ffb0510f50e9e67d2ecd3
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="global-settings-tester-sybasetosql"></a>全域設定 （測試人員） (SybaseToSQL)
 使用的測試人員頁面**通用設定**對話方塊來指定設定 SSMA 軟體測試人員。  
   
 若要存取的測試設定，在**工具**功能表上，選取**通用設定**，按一下**軟體測試人員**在左窗格的底部。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
 **可測試的物件分析**  
 此設定指定是否要執行分析的可測試的物件。 選取**是**如果您想要分析並自動檢查相依物件 SSMA 軟體測試人員。 設定預設選項是**是**。  
   
@@ -72,6 +70,6 @@ ms.lasthandoff: 12/21/2017
   
 2.  否  
   
-## <a name="see-also"></a>請參閱  
-[完成測試案例準備 &#40;SybaseToSQL &#41;](../../ssma/sybase/finishing-test-case-preparation-sybasetosql.md)  
+## <a name="see-also"></a>另請參閱  
+[完成測試案例準備&#40;SybaseToSQL&#41;](../../ssma/sybase/finishing-test-case-preparation-sybasetosql.md)  
   

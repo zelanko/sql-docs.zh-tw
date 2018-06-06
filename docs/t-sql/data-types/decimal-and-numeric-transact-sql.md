@@ -1,16 +1,14 @@
 ---
-title: "decimal 和 numeric (Transact-SQL) | Microsoft Docs"
-ms.custom: 
+title: decimal 和 numeric (Transact-SQL) | Microsoft Docs
+ms.custom: ''
 ms.date: 7/23/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
 ms.component: t-sql|data-types
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: t-sql
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - decimal
@@ -25,16 +23,16 @@ helpviewer_keywords:
 - numeric data type
 - numeric data type, about numeric data type
 ms.assetid: 9d862a90-e6b7-4692-8605-92358dccccdf
-caps.latest.revision: 
+caps.latest.revision: 40
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Active
-ms.openlocfilehash: 614025c21f0f021a4b1ad3a193afec8f5115b845
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 2c86af3c5e32a92b3210327881cdc140f6fe7d20
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="decimal-and-numeric-transact-sql"></a>decimal 和 numeric (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -42,8 +40,8 @@ ms.lasthandoff: 11/21/2017
 具有固定有效位數和小數位數的數值資料類型。 Decimal 和 numeric 是同義字，可以交換使用。
   
 ## <a name="arguments"></a>引數  
-**decimal**[ **(***p*[ **,***s*] **)**] 和 **numeric**[ **(***p*[ **,***s*] **)**]  
-固定有效位數和小數位數的數字。 當使用最大有效位數時，有效的值是從 - 10^38 +1 到 10^38 - 1。 **decimal** 的 ISO 同義字為 **dec** 及 **dec(***p*, *s***)**。 **numeric** 在功能上相當於 **decimal**。
+**decimal**[ **(***p*[ **,***s*] **)**] and **numeric**[ **(***p*[ **,***s*] **)**]  
+固定有效位數和小數位數的數字。 當使用最大有效位數時，有效的值是從 - 10^38 +1 到 10^38 - 1。 **decimal** 的 ISO 同義字是 **dec** 和 **dec(***p*, *s***)**。 **numeric** 在功能上相當於 **decimal**。
   
 p (有效位數)  
 可儲存的最大十進位數總數，小數點左右兩側都包括在內。 有效位數必須是從 1 到最大有效位數 38 的值。 預設有效位數是 18。

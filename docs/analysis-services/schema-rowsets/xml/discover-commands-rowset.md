@@ -1,39 +1,30 @@
 ---
-title: "DISCOVER_COMMANDS 資料列集 |Microsoft 文件"
-ms.custom: 
-ms.date: 03/06/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+title: DISCOVER_COMMANDS 資料列集 |Microsoft 文件
+ms.date: 05/03/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: schema-rowsets
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
-helpviewer_keywords: DISCOVER_COMMANDS rowset
-ms.assetid: d228f265-05d9-4d2c-a622-44c73eab7a71
-caps.latest.revision: "14"
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: f5fac5cdcfc9dd7f7be511a20018f9c6732ce028
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: ba32ff2992e02b8b9e3fe452544f3a9b978d34f6
+ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="discovercommands-rowset"></a>DISCOVER_COMMANDS 資料列集
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]提供伺服器上的資源使用量與活動資訊，目前執行或是上次執行的命令開啟的連接中。  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+  提供在伺服器上已開啟的連接中，目前執行或是上次執行的命令之資源使用量與活動資訊。  
   
  **適用於：**表格式模型、 多維度模型  
   
 ## <a name="rowset-columns"></a>資料列集資料行  
  **DISCOVER_COMMANDS**資料列集包含下列資料行。  
   
-|資料行名稱|類型指標|限制|描述|  
+|資料行名稱|類型指標|限制|Description|  
 |-----------------|--------------------|-----------------|-----------------|  
 |**SESSION_SPID**|**DBTYPE_I4**|是|工作階段識別碼。|  
 |**SESSION_COMMAND_COUNT**|**DBTYPE_I4**||工作階段開始之後所執行的命令數目。|  
@@ -54,12 +45,12 @@ ms.lasthandoff: 01/08/2018
   
  下表將提供可識別此資料列集的 GUID 和字串值。  
   
-|引數|ReplTest1|  
+|引數|值|  
 |--------------|-----------|  
 |GUID|a07ccd34-8148-11d0-87bb-00c04fc33942|  
 |ADOMDNAME|命令|  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [XML for Analysis 結構描述資料列集](../../../analysis-services/schema-rowsets/xml/xml-for-analysis-schema-rowsets.md)  
   
   

@@ -1,17 +1,15 @@
 ---
-title: "產生內嵌 XSD 結構描述 | Microsoft Docs"
-ms.custom: 
+title: 產生內嵌 XSD 結構描述 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
 ms.component: xml
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- dbe-xml
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: xml
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - XSD schemas [SQL Server]
 - XMLSCHEMA option
@@ -21,20 +19,19 @@ helpviewer_keywords:
 - inline XSD schema generation [SQL Server]
 - XMLDATA option
 ms.assetid: 04b35145-1cca-45f4-9eb7-990abf2e647d
-caps.latest.revision: 
+caps.latest.revision: 34
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 2b651f16b3bf5c43755aafa1c6b67cbef06fc1cd
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.openlocfilehash: e2f360663435f0f9388fa4aca5c0391e540d08e4
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="generate-an-inline-xsd-schema"></a>產生內嵌 XSD 結構描述
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
-在 FOR XML 子句中，您可以要求您的查詢將內嵌結構描述連同查詢結果一起傳回。 如果您要的是 XDR 結構描述，請在 FOR XML 子句中使用 XMLDATA 關鍵字。 而如果您要的是 XSD 結構描述，則請使用 XMLSCHEMA 關鍵字。  
+  在 FOR XML 子句中，您可以要求您的查詢將內嵌結構描述連同查詢結果一起傳回。 如果您要的是 XDR 結構描述，請在 FOR XML 子句中使用 XMLDATA 關鍵字。 而如果您要的是 XSD 結構描述，則請使用 XMLSCHEMA 關鍵字。  
   
  此主題描述 XMLSCHEMA 關鍵字，並說明所產生之內嵌 XSD 結構描述的結構。 以下是要求內嵌結構描述時的一些限制：  
   

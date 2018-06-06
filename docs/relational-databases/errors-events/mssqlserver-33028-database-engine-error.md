@@ -1,30 +1,25 @@
 ---
 title: MSSQLSERVER_33028 | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 04/04/2017
-ms.prod: sql-non-specified
-ms.prod_service: database-engine
-ms.service: 
-ms.component: errors-events
-ms.reviewer: 
+ms.prod: sql
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: supportability
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 helpviewer_keywords:
 - 33028 (Database Engine error)
 ms.assetid: c5cec0e4-0bcd-4907-826f-e7d835cfcb37
-caps.latest.revision: 
-author: edmacauley
-ms.author: edmaca
+caps.latest.revision: 10
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 35fb1076d51f4b44016cb1ff4b47e9364bd0b7c0
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 7a53189762bb4eb7782db32d2fa3040549e7ce7b
+ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="mssqlserver33028"></a>MSSQLSERVER_33028
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -33,7 +28,7 @@ ms.lasthandoff: 11/21/2017
   
 |||  
 |-|-|  
-|產品名稱|SQL Server|  
+|產品名稱|[SQL Server]|  
 |事件識別碼|33028|  
 |事件來源|MSSQLSERVER|  
 |元件|SQLEngine|  
@@ -43,10 +38,10 @@ ms.lasthandoff: 11/21/2017
 ## <a name="explanation"></a>說明  
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 無法開啟錯誤訊息中所列的密碼編譯提供者。 此密碼編譯提供者提供了所列的錯誤碼。 如需有關此錯誤的詳細資訊，您可能必須連絡密碼編譯提供者。  
   
-|錯誤碼|Description|  
+|錯誤碼|描述|  
 |--------------|---------------|  
 |0|成功。 沒有錯誤。|  
-|1|失敗。 發生未指定或意外的錯誤。 沒有其他資訊可用。|  
+|@shouldalert|失敗。 發生未指定或意外的錯誤。 沒有其他資訊可用。|  
 |2|緩衝區不足。 無法針對密碼編譯提供者配置空間。|  
 |3|不支援。 這個版本不支援此密碼編譯提供者。 請選取另一個密碼編譯提供者。|  
 |4|找不到。 指定的密碼編譯提供者不存在，或者您沒有存取這些檔案的授權。|  

@@ -1,16 +1,13 @@
 ---
-title: "sys.dm_io_cluster_shared_drives (TRANSACT-SQL) |Microsoft 文件"
-ms.custom: 
+title: sys.dm_io_cluster_shared_drives (TRANSACT-SQL) |Microsoft 文件
+ms.custom: ''
 ms.date: 03/15/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, pdw
-ms.service: 
-ms.component: dmv's
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: system-objects
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.dm_io_cluster_shared_drives_TSQL
@@ -22,16 +19,16 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_io_cluster_shared_drives dynamic management view
 ms.assetid: c8fcced8-c780-49dc-99bd-6beb3ca532c4
-caps.latest.revision: 
+caps.latest.revision: 30
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 0c04a88653314158196c84af999348aba895141f
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+monikerRange: '>= aps-pdw-2016 || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 300d3bad9d7886db06a5b2891a6e030b03d63347
+ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 05/23/2018
 ---
 # <a name="sysdmioclustershareddrives-transact-sql"></a>sys.dm_io_cluster_shared_drives (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-pdw-md.md)]
@@ -50,7 +47,7 @@ ms.lasthandoff: 02/03/2018
  當啟用叢集時，容錯移轉叢集執行個體要求資料和記錄檔必須放在共用磁碟上，以便在執行個體容錯移轉至其他節點時，仍可存取這些檔案。 此檢視表中的每個資料列，都代表這個叢集 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體所用的單一共用磁碟。 只有此檢視表所列出的磁碟可以用來儲存這個 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的資料或記錄檔。 這份檢視中所列出的磁碟，即為與該執行個體相關聯之叢集資源群組中的磁碟。  
   
 > [!NOTE]  
->  這個檢視表在未來的版本將會被取代。 我們建議您改用[sys.dm_io_cluster_valid_path_names &#40;TRANSACT-SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-io-cluster-valid-path-names-transact-sql.md)改為。  
+>  這個檢視表在未來的版本將會被取代。 我們建議您改用[sys.dm_io_cluster_valid_path_names &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-io-cluster-valid-path-names-transact-sql.md)改為。  
   
 ## <a name="permissions"></a>Permissions  
  使用者必須具有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的 VIEW SERVER STATE 權限。  
@@ -73,9 +70,9 @@ SELECT * FROM sys.dm_io_cluster_shared_drives;
  n  
   
 ## <a name="see-also"></a>另請參閱  
- [sys.dm_io_cluster_valid_path_names &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-io-cluster-valid-path-names-transact-sql.md)   
- [sys.dm_os_cluster_nodes &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-cluster-nodes-transact-sql.md)   
- [sys.fn_servershareddrives &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-servershareddrives-transact-sql.md)   
+ [sys.dm_io_cluster_valid_path_names &#40;Transact SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-io-cluster-valid-path-names-transact-sql.md)   
+ [sys.dm_os_cluster_nodes &#40;Transact SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-cluster-nodes-transact-sql.md)   
+ [sys.fn_servershareddrives &#40;Transact SQL&#41;](../../relational-databases/system-functions/sys-fn-servershareddrives-transact-sql.md)   
  [動態管理檢視與函數 &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)  
   
   

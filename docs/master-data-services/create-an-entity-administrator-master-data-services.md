@@ -1,30 +1,31 @@
 ---
-title: "建立實體管理員 (Master Data Services) | Microsoft Docs"
-ms.custom: 
+title: 建立實體管理員 (Master Data Services) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: mds
-ms.service: 
 ms.component: non-specific
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - master-data-services
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: 717be1e8-488e-4219-8d1e-ca9084b864cd
-caps.latest.revision: 
+caps.latest.revision: 5
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: be0622ceacc22ab3066efd8f9cb81f15318ef2b9
-ms.sourcegitcommit: 6ac1956307d8255dc544e1063922493b30907b80
+ms.openlocfilehash: 3b9e781eb81096e364acd2040c075d7f170ca545
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="create-an-entity-administrator-master-data-services"></a>建立實體管理員 (Master Data Services)
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
   當您希望群組或使用者擁有一個或多個實體中全部物件的所有權限，或擁有核准暫止變更集的權限時，請在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中建立實體管理員。  
   
 > [!TIP]  

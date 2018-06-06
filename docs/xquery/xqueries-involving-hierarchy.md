@@ -1,16 +1,15 @@
 ---
-title: "與階層有關的 Xquery |Microsoft 文件"
-ms.custom: 
+title: 與階層有關的 Xquery |Microsoft 文件
+ms.custom: ''
 ms.date: 08/09/2016
-ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
-ms.service: 
+ms.prod: sql
+ms.prod_service: sql
 ms.component: xquery
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,16 +19,15 @@ helpviewer_keywords:
 - hierarchies [XQuery]
 - XQuery, hierarchies
 ms.assetid: 6953d8b7-bad8-4b64-bf7b-12fa4f10f65c
-caps.latest.revision: 
+caps.latest.revision: 25
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: c77b4dfc656ad55f6ca36301df04d65c506f3434
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: dd9e93969bd8677311edc22ae61f314c8b89c5d2
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="xqueries-involving-hierarchy"></a>與階層有關的 XQuery
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -68,11 +66,11 @@ WHERE ProductModelID=7
   
 -   內容切換 Token {) 和 (} 是用來將 XML 建構的查詢切換至查詢評估。  
   
--   **: Column （)**用於所建構的 XML 中包含關聯式值。  
+-   **: Column （)** 用於所建構的 XML 中包含關聯式值。  
   
 -   在建構 <`Location`> 元素時，$wc/@* 會擷取所有工作中心位置屬性。  
   
--   **String （)**函式傳回的字串值從 <`step`> 項目。  
+-   **String （)** 函式傳回的字串值從 <`step`> 項目。  
   
  以下是部份結果：  
   
@@ -126,7 +124,7 @@ WHERE ContactID = 1
   
 ## <a name="see-also"></a>另請參閱  
  [XQuery 基本概念](../xquery/xquery-basics.md)   
- [XML 建構 &#40;XQuery &#41;](../xquery/xml-construction-xquery.md)   
+ [XML 建構&#40;XQuery&#41;](../xquery/xml-construction-xquery.md)   
  [XML 資料 &#40;SQL Server&#41;](../relational-databases/xml/xml-data-sql-server.md)  
   
   

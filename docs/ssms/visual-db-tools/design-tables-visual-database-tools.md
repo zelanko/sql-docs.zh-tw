@@ -1,16 +1,15 @@
 ---
-title: "建立及更新資料表 (SSMS) | Microsoft Docs"
-ms.custom: 
+title: 建立及更新資料表 (SSMS) | Microsoft Docs
+ms.custom: ''
 ms.date: 08/25/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
 ms.component: ssms-visual-db
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: tools-ssms
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ssms
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - Visual Database Tools [SQL Server], Table Designer
 - Table Designer, designing tables
@@ -19,19 +18,19 @@ helpviewer_keywords:
 - tables [SQL Server], opening
 - Table Designer, opening
 ms.assetid: c49e0155-5dcb-481f-9538-e1bde77105e2
-caps.latest.revision: "3"
+caps.latest.revision: 3
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 1b693dfa57d72db69a6c4a5edd3545ad216645a0
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 8e90ba79e8677cd0f61a60f5132a6d4ed827e6c1
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="create-and-update-database-tables"></a>建立及更新資料表
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 資料表設計工具是視覺效果工具，您可在其中設計[資料庫資料表](../../relational-databases/tables/tables.md)及將其視覺化。 使用 SQL Server Management Studio (SSMS) 資料表設計工具來建立、編輯或刪除資料表、資料行、索引鍵、索引、關聯性及條件約束。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+資料表設計工具是視覺效果工具，您可在其中設計[資料庫資料表](../../relational-databases/tables/tables.md)及將其視覺化。 使用 SQL Server Management Studio (SSMS) 資料表設計工具來建立、編輯或刪除資料表、資料行、索引鍵、索引、關聯性及條件約束。  
 
   
 ## <a name="create-a-table"></a>建立資料表  

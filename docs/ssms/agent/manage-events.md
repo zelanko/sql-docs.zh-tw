@@ -1,16 +1,15 @@
 ---
-title: "管理事件 | Microsoft Docs"
-ms.custom: 
+title: 管理事件 | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
 ms.component: ssms-agent
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: tools-ssms
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ssms
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - event forwarding servers [SQL Server]
 - events [SQL Server], forwarding
@@ -20,19 +19,24 @@ helpviewer_keywords:
 - alerts [SQL Server], management servers
 - SQL Server Agent alerts, management servers
 ms.assetid: 8f4ee7f5-80df-49fd-b2b8-d020e04b6e1b
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: aaa831f2f09c12a02fa997a912bd9d0b97ec6cba
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: a0262ff33df1f98283c7eb5ebdc63256c69f0f88
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="manage-events"></a>管理事件
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 您可以將達到或超過特定錯誤嚴重性層級的所有事件訊息轉送到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 的執行個體。 這稱為「事件轉送」。 轉送伺服器是一個專用的伺服器，它也可以當做主要伺服器。 您可以利用事件轉送功能將伺服器群組的警示管理集中化，藉以減輕使用頻繁之伺服器的工作負載。  
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+
+> [!IMPORTANT]  
+> [Azure SQL Database 受控執行個體](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)目前支援多數 (但非全部) 的 SQL Server Agent 功能。 如需詳細資料，請參閱 [Azure SQL Database 受控執行個體與 SQL Server 之間的 T-SQL 差異](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)。
+
+您可以將達到或超過特定錯誤嚴重性層級的所有事件訊息轉送到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 的執行個體。 這稱為「事件轉送」。 轉送伺服器是一個專用的伺服器，它也可以當做主要伺服器。 您可以利用事件轉送功能將伺服器群組的警示管理集中化，藉以減輕使用頻繁之伺服器的工作負載。  
   
 當某伺服器接收到其他伺服器群組的事件時，接收事件的伺服器稱為「警示管理伺服器」。 在多伺服器的環境中，您可以將主要伺服器指定為警示管理伺服器。  
   

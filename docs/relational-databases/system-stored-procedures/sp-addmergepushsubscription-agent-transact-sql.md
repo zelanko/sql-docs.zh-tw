@@ -1,16 +1,15 @@
 ---
-title: "sp_addmergepushsubscription_agent (TRANSACT-SQL) |Microsoft 文件"
-ms.custom: 
+title: sp_addmergepushsubscription_agent (TRANSACT-SQL) |Microsoft 文件
+ms.custom: ''
 ms.date: 03/16/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - sp_addmergepushsubscription_agent
 ms.assetid: 808a1925-be46-4999-8d69-b3a83010ec81
-caps.latest.revision: 
+caps.latest.revision: 29
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 9692ecde71557a4898d7fb9892cdffdd37cbbcd2
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: b0e9b278672b8358c3b8c7db42cc629d2207179c
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="spaddmergepushsubscriptionagent-transact-sql"></a>sp_addmergepushsubscription_agent (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -71,7 +69,7 @@ sp_addmergepushsubscription_agent [ @publication =] 'publication'
 ```  
   
 ## <a name="arguments"></a>引數  
- [  **@publication =** ] **'***發行集***'**  
+ [ **@publication =** ] **'***publication***'**  
  這是發行集的名稱。 *發行集*是**sysname**，沒有預設值。  
   
  [  **@subscriber =** ] **'***訂閱者***'**  
@@ -113,13 +111,13 @@ sp_addmergepushsubscription_agent [ @publication =] 'publication'
 > [!IMPORTANT]  
 >  可能的話，會在執行階段提示使用者輸入安全性認證。 如果您必須將認證儲存在指令碼檔案中，則必須維護這個檔案的安全性，使他人無法在未獲授權的情況下擅自存取。  
   
- [  **@job_name =** ] **'***job_name***'**  
+ [ **@job_name =** ] **'***job_name***'**  
  這是現有散發代理程式作業的名稱。 *job_name*是**sysname**，預設值是 NULL。 只有在利用現有的作業來建立同步處理訂閱，而不用新建立的作業 (預設值) 時，才指定這個參數。 如果您不屬於**sysadmin**固定伺服器角色，您必須指定*job_login*和*job_password*當您指定*job_name*.  
   
  [  **@frequency_type =** ] *frequency_type*  
  這是排程合併代理程式所採用的頻率。 *frequency_type*是**int**，而且可以是下列值之一。  
   
-|值|描述|  
+|Value|描述|  
 |-----------|-----------------|  
 |**1**|一次|  
 |**2**|視需要|  
@@ -132,12 +130,12 @@ sp_addmergepushsubscription_agent [ @publication =] 'publication'
 |NULL (預設值)||  
   
 > [!NOTE]  
->  指定的值是**64**會導致合併代理程式，以連續模式執行。 這會對應至設定**-連續**代理程式的參數。 如需詳細資訊，請參閱 [Replication Merge Agent](../../relational-databases/replication/agents/replication-merge-agent.md)。  
+>  指定的值是**64**會導致合併代理程式，以連續模式執行。 這會對應至設定 **-連續**代理程式的參數。 如需詳細資訊，請參閱 [Replication Merge Agent](../../relational-databases/replication/agents/replication-merge-agent.md)。  
   
  [  **@frequency_interval =** ] *frequency_interval*  
  合併代理程式的執行天數。 *frequency_interval*是**int**，而且可以是下列值之一。  
   
-|值|描述|  
+|Value|描述|  
 |-----------|-----------------|  
 |**1**|星期日|  
 |**2**|星期一|  
@@ -154,7 +152,7 @@ sp_addmergepushsubscription_agent [ @publication =] 'publication'
  [  **@frequency_relative_interval =** ] *frequency_relative_interval*  
  這是合併代理程式的日期。 使用這個參數時*frequency_type*設**32** （每月相對）。 *frequency_relative_interval*是**int**，而且可以是下列值之一。  
   
-|值|描述|  
+|Value|描述|  
 |-----------|-----------------|  
 |**1**|第一個|  
 |**2**|第二個|  
@@ -169,7 +167,7 @@ sp_addmergepushsubscription_agent [ @publication =] 'publication'
  [  **@frequency_subday =** ] *frequency_subday*  
  這是在定義的期間內，重新排程的頻率。 *frequency_subday*是**int**，而且可以是下列值之一。  
   
-|值|描述|  
+|Value|描述|  
 |-----------|-----------------|  
 |**1**|一次|  
 |**2**|第二個|  
@@ -186,10 +184,10 @@ sp_addmergepushsubscription_agent [ @publication =] 'publication'
  [  **@active_end_time_of_day =** ] *active_end_time_of_day*  
  這是排程停止合併代理程式的當日時間，格式為 HHMMSS。 *active_end_time_of_day*是**int**，預設值是 NULL。  
   
- [  **@active_start_date =** ] *active_start_date*  
+ [ **@active_start_date =** ] *active_start_date*  
  這是第一次排程合併代理程式的日期，格式為 YYYYMMDD。 *active_start_date*是**int**，預設值是 NULL。  
   
- [  **@active_end_date =** ] *active_end_date*  
+ [ **@active_end_date =** ] *active_end_date*  
  這是排程停止合併代理程式的日期，格式為 YYYYMMDD。 *active_end_date*是**int**，預設值是 NULL。  
   
  [  **@enabled_for_syncmgr =** ] **'***enabled_for_syncmgr***'**  
@@ -207,12 +205,12 @@ sp_addmergepushsubscription_agent [ @publication =] 'publication'
 ## <a name="permissions"></a>Permissions  
  只有成員**sysadmin**固定的伺服器角色或**db_owner**固定的資料庫角色可以執行**sp_addmergepushsubscription_agent**。  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [Create a Push Subscription](../../relational-databases/replication/create-a-push-subscription.md)   
  [訂閱發行集](../../relational-databases/replication/subscribe-to-publications.md)   
- [sp_addmergesubscription &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/sp-addmergesubscription-transact-sql.md)   
- [sp_changemergesubscription &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/sp-changemergesubscription-transact-sql.md)   
- [sp_dropmergesubscription &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/sp-dropmergesubscription-transact-sql.md)   
- [sp_helpmergesubscription &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/sp-helpmergesubscription-transact-sql.md)  
+ [sp_addmergesubscription &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergesubscription-transact-sql.md)   
+ [sp_changemergesubscription &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-changemergesubscription-transact-sql.md)   
+ [sp_dropmergesubscription &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropmergesubscription-transact-sql.md)   
+ [sp_helpmergesubscription &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpmergesubscription-transact-sql.md)  
   
   

@@ -1,15 +1,14 @@
 ---
-title: "變更組件 |Microsoft 文件"
-ms.custom: 
+title: 變更組件 |Microsoft 文件
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
 ms.component: clr
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - assemblies [CLR integration], modifying
@@ -17,27 +16,26 @@ helpviewer_keywords:
 - altering assemblies
 - ALTER ASSEMBLY statement
 ms.assetid: 9e765fbd-f339-473c-8537-22f478e79696
-caps.latest.revision: 
+caps.latest.revision: 14
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 89d3058d2359ab5b7ec0f159d3f63f93e5b7c950
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 42a8ca545116bda764ed96a3093683d6e7d52bf9
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="altering-an-assembly"></a>變更組件
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-已經在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 中註冊的組件可以使用 ALTER ASSEMBLY 陳述式，從比較新的版本更新。 若要更新組件，請使用 ALTER ASSEMBLY 陳述式搭配下列語法：  
+  已經在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 中註冊的組件可以使用 ALTER ASSEMBLY 陳述式，從比較新的版本更新。 若要更新組件，請使用 ALTER ASSEMBLY 陳述式搭配下列語法：  
   
 ```  
 ALTER ASSEMBLY SQLCLRTest  
 FROM 'C:\MyDBApp\SQLCLRTest.dll'  
 ```  
   
- ALTER ASSEMBLY 不會中斷目前使用組件正在執行的處理序；處理序會繼續執行未變更的組件。 ALTER ASSEMBLY 無法用於變更 Common Language Runtime (CLR) 函數、彙總函式、預存程序和觸發程序的簽章。 新的公用方法可以加入到組件、私用方法可以用任何方式修改，而且只要簽章或屬性沒有變更，就可以修改公用方法。 包含在原生序列化使用者定義型別 (包括資料成員或基底類別) 中的欄位，不能使用 ALTER ASSEMBLY 加以變更。 所有其他變更亦不受支援。 如需詳細資訊，請參閱[ALTER ASSEMBLY &#40;TRANSACT-SQL &#41;](../../../t-sql/statements/alter-assembly-transact-sql.md).  
+ ALTER ASSEMBLY 不會中斷目前使用組件正在執行的處理序；處理序會繼續執行未變更的組件。 ALTER ASSEMBLY 無法用於變更 Common Language Runtime (CLR) 函數、彙總函式、預存程序和觸發程序的簽章。 新的公用方法可以加入到組件、私用方法可以用任何方式修改，而且只要簽章或屬性沒有變更，就可以修改公用方法。 包含在原生序列化使用者定義型別 (包括資料成員或基底類別) 中的欄位，不能使用 ALTER ASSEMBLY 加以變更。 所有其他變更亦不受支援。 如需詳細資訊，請參閱[ALTER ASSEMBLY &#40;TRANSACT-SQL&#41;](../../../t-sql/statements/alter-assembly-transact-sql.md)。  
   
 ## <a name="changing-the-permission-set-of-an-assembly"></a>變更組件的權限集合  
  組件的權限集合也可以使用 ALTER ASSEMBLY 陳述式進行變更。 下列陳述式變更 SQLCLRTest 組件的權限集**EXTERNAL_ACCESS**。  

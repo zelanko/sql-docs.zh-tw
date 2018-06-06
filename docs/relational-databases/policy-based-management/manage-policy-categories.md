@@ -1,33 +1,32 @@
 ---
-title: "管理原則類別目錄 | Microsoft Docs"
-ms.custom: 
+title: 管理原則類別目錄 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
 ms.component: performance-monitor
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 f1_keywords:
 - sql13.swb.dmf.policycategories.f1
 ms.assetid: d188a819-731f-4029-98aa-780d3299a0ce
-caps.latest.revision: 
+caps.latest.revision: 18
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: b420ef1758bbc2c3739c5553a25871f25732aeb2
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 088f033dcc51fd3cccb2342c8932ddfe911a4af3
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="manage-policy-categories"></a>管理原則類別目錄
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 本主題描述如何使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 或 [!INCLUDE[tsql](../../includes/tsql-md.md)]，將某個類別目錄中的任何或所有可用原則套用至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 的整個執行個體。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  本主題描述如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ，將某個類別目錄中的任何或所有可用原則套用至 [!INCLUDE[tsql](../../includes/tsql-md.md)]的整個執行個體。  
   
  **本主題內容**  
   
@@ -60,7 +59,7 @@ ms.lasthandoff: 01/18/2018
   
 #### <a name="to-apply-category-policies-to-a-sql-server-instance"></a>若要將類別目錄原則套用至 SQL Server 執行個體  
   
-1.  在 **[物件總管]**中，按一下加號展開要套用類別目錄原則的伺服器。  
+1.  在 **[物件總管]** 中，按一下加號展開要套用類別目錄原則的伺服器。  
   
 2.  按一下加號展開 **[管理]** 資料夾。  
   
@@ -82,7 +81,7 @@ ms.lasthandoff: 01/18/2018
   
 #### <a name="to-apply-category-policies-to-a-sql-server-instance"></a>若要將類別目錄原則套用至 SQL Server 執行個體  
   
-1.  在 **[物件總管]**中，連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的執行個體。  
+1.  在 **[物件總管]** 中，連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的執行個體。  
   
 2.  在標準列上，按一下 **[新增查詢]**。  
   

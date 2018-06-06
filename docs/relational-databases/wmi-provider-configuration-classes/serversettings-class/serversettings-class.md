@@ -1,15 +1,14 @@
 ---
-title: "ServerSettings 類別 |Microsoft 文件"
-ms.custom: 
+title: ServerSettings 類別 |Microsoft 文件
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
 ms.component: wmi
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - ServerSettings Class
@@ -19,20 +18,19 @@ apitype: MOFDef
 helpviewer_keywords:
 - ServerSettings class
 ms.assetid: d11ef801-dcb3-4fe1-84db-bf943ccf0e99
-caps.latest.revision: 
-author: JennieHubbard
-ms.author: jhubbard
+caps.latest.revision: 33
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: d09fc229270f91dc0e0769916fa002d0cf6eda4b
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.openlocfilehash: a13d0015818dcf6af827e5d0e4e6277d75ea6947
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="serversettings-class"></a>ServerSettings 類別
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
-[ServerSettings 類別](../../../relational-databases/wmi-provider-configuration-classes/serversettings-class/serversettings-class.md)代表執行個體上的伺服器設定[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]。  
+  [ServerSettings 類別](../../../relational-databases/wmi-provider-configuration-classes/serversettings-class/serversettings-class.md)代表執行個體上的伺服器設定[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]。  
   
  [ServerSettings 類別](../../../relational-databases/wmi-provider-configuration-classes/serversettings-class/serversettings-class.md)可讓您執行下列工作：  
   

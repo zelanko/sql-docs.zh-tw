@@ -1,35 +1,23 @@
 ---
-title: "在維度設計師中檢視屬性 |Microsoft 文件"
-ms.custom: 
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
-helpviewer_keywords:
-- displaying attributes
-- attributes [Analysis Services], viewing
-- viewing attributes
-ms.assetid: 855bef07-b72d-4ce3-bf02-de77abeee71a
-caps.latest.revision: 
-author: Minewiskan
+title: 在維度設計師中檢視屬性 |Microsoft 文件
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: multidimensional-models
+ms.topic: conceptual
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 123d00510932a19a033c82995f14de5b87467c5a
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: c8e0535a1df60b4a4e1550e2b49a02e7a60e2c04
+ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="attribute-properties---view-attributes-in-dimension-designer"></a>屬性的內容位在維度設計師中檢視屬性
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-屬性是在維度物件上建立的。 您可以使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 中的維度設計師，檢視和設定屬性。 維度設計師之 [維度結構] 索引標籤的 [屬性] 窗格，會列出維度中的屬性。 使用此窗格，即可加入、移除或設定屬性。 您也可以選取屬性，以用來做為新階層中的層級，或者加入做為現有階層的層級。  
+  屬性是在維度物件上建立的。 您可以使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 中的維度設計師，檢視和設定屬性。 維度設計師之 [維度結構] 索引標籤的 [屬性] 窗格，會列出維度中的屬性。 使用此窗格，即可加入、移除或設定屬性。 您也可以選取屬性，以用來做為新階層中的層級，或者加入做為現有階層的層級。  
   
  若要檢視維度中的屬性，請針對維度開啟維度設計師。 設計師之 [維度結構] 索引標籤的 [屬性] 窗格，會顯示維度中的屬性。 您可以指向 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 之 [維度] 功能表上的 [顯示屬性於]，然後按一下下列命令之一，在清單、樹狀或方格檢視之間切換：  
   

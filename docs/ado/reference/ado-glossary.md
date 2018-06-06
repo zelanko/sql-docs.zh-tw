@@ -1,28 +1,27 @@
 ---
-title: "ADO 詞彙 |Microsoft 文件"
-ms.custom: 
+title: ADO 詞彙 |Microsoft 文件
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
+ms.tgt_pltfrm: ''
+ms.prod: sql
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology: "“drivers”"
-ms.topic: article
+ms.technology: connectivity
+ms.topic: conceptual
 helpviewer_keywords:
 - ADO, glossary
 ms.assetid: b0478836-4123-4357-969a-c5784fc28be5
-caps.latest.revision: 
+caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ed92b88736cdc579ddee67dff313f8aad3c69b71
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: bdb021c9d036a3daab6b0e5c3f4912c0da4059eb
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ado-glossary"></a>ADO 詞彙
 本主題定義適用於 ADO 的詞彙。  
@@ -54,7 +53,7 @@ ms.lasthandoff: 02/09/2018
  資料表中的欄位和變數之間的對應。 ADO Visual c + + 擴充功能中**資料錄集**欄位會對應至 C/c + + 變數。  
   
  位元遮罩  
- 數字的值適用於搭配其他數值的位元值比較通常加上旗標參數或傳回值中的選項。 通常這項比較會完成的位元邏輯運算子，例如**和**和**或者**在 Visual Basic 中 **&** 和**&#124;**在 c + +。  
+ 數字的值適用於搭配其他數值的位元值比較通常加上旗標參數或傳回值中的選項。 通常這項比較會完成的位元邏輯運算子，例如**和**和**或者**在 Visual Basic 中**&** 和 **&#124;** c + + 中。  
   
  例如，ADO **FieldAttributeEnum**值可用來當作位元遮罩來決定欄位的屬性。 假設您想要判斷是否可更新的欄位。 您可以測試這個，與 Visual Basic 中的下列運算式：`Field.Attributes AND adFldUpdatable`  
   
@@ -165,7 +164,7 @@ ms.lasthandoff: 02/09/2018
   
 ## <a name="e"></a>E  
  列舉型別  
- 具名常數的清單。 列舉的值不需要是唯一的。 但是每個值的名稱必須是列舉型別定義所在的範圍內唯一的。 在 ADO 中，列舉型別用於數字參數和傳回值、 加入至 ADO 程式碼的意義，以及可為開發人員之數字的值 （這可能會變更版本）。 例如，若要開啟靜態**資料錄集**，使用**adOpenStatic**列舉值：`Recordset.Open ,,adOpenStatic`  
+ 具名常數的清單。 列舉的值不需要是唯一的。 但是每個值的名稱必須是列舉型別定義所在的範圍內唯一的。 在 ADO 中，列舉型別用於數字參數和傳回值、 加入至 ADO 程式碼的意義，以及可為開發人員之數字的值 （這可能會變更版本）。 例如，若要開啟靜態**資料錄集**，使用**adOpenStatic**列舉值： `Recordset.Open ,,adOpenStatic`  
   
  也稱為*列舉的常數*。 另請參閱*常數*。  
   
@@ -251,7 +250,7 @@ ms.lasthandoff: 02/09/2018
  ProgID （程式設計識別項）  
  對應至 Windows 登錄的 COM 應用程式的唯一名稱。 ADO 連接的 ProgID 是"ADODB。連接 」。 另請參閱 CLSID、 com。  
   
- proxy  
+ Proxy  
  提供參數封送處理的特定介面的物件和用戶端來呼叫在不同的執行緒或另一個處理序在不同的執行環境中，執行這類的應用程式物件所需的通訊。 Proxy 會位於與用戶端，而且與對應的虛設常式位於與應用程式物件所呼叫之通訊。 另請參閱虛設常式。  
   
 ## <a name="r"></a>R  
@@ -283,10 +282,10 @@ ms.lasthandoff: 02/09/2018
  預存程序  
  先行編譯程式碼，例如 SQL 陳述式和選擇性的流程控制陳述式的名稱下儲存和處理做為一個單位的集合。 預存程序會儲存在資料庫中。它們可以由應用程式的某個呼叫執行，且允許使用者宣告的變數、 條件式執行和其他功能強大的程式設計功能。  
   
- stub  
+ 虛設常式  
  提供參數封送處理的特定介面的物件，而且從不同的執行緒或另一個處理序在不同的執行環境中，執行這類的用戶端接收呼叫的應用程式物件所需的通訊。 虛設常式會位於與應用程式物件，而且會與對應的 proxy 位於與它所呼叫的用戶端進行通訊。 另請參閱 proxy。  
   
- sub-node  
+ 子節點  
  請參閱子系。  
   
  同步作業  

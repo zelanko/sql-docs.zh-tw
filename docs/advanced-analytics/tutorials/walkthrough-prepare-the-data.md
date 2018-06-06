@@ -1,30 +1,18 @@
 ---
-title: "準備資料使用 PowerShell （逐步解說） |Microsoft 文件"
-ms.custom: 
-ms.date: 11/10/2017
-ms.reviewer: 
-ms.suite: sql
-ms.prod: machine-learning-services
-ms.prod_service: machine-learning-services
-ms.component: 
-ms.technology: 
-ms.tgt_pltfrm: 
+title: 準備資料使用 PowerShell （逐步解說） |Microsoft 文件
+ms.prod: sql
+ms.technology: machine-learning
+ms.date: 04/15/2018
 ms.topic: tutorial
-applies_to:
-- SQL Server 2016
-dev_langs:
-- R
-ms.assetid: 65fd41d4-c94e-4929-a24a-20e792a86579
-caps.latest.revision: 
-author: jeannt
-ms.author: jeannt
-manager: cgronlund
-ms.workload: On Demand
-ms.openlocfilehash: a1ed4da0aca0b2876e2162c012aabc6c4043c567
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+author: HeidiSteen
+ms.author: heidist
+manager: cgronlun
+ms.openlocfilehash: ccdccaf4a3624bef365cec85e452a88526b9fd6b
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34585930"
 ---
 # <a name="prepare-the-data-using-powershell-walkthrough"></a>準備要使用 PowerShell （逐步解說） 的資料
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -70,7 +58,7 @@ GitHub 儲存機制中已提供所需的所有程式碼。 您可以使用 Power
   
     ![PowerShell 指令碼完成之後](media/rsql-e2e-psscriptresults.PNG "PowerShell 指令碼完成之後")
   
-5.  在 PowerShell 主控台中，您可以執行 `ls` 命令，來檢視已下載至 *DestDir*的檔案清單。  如需檔案的說明，請參閱[包含的內容](#What-the-Download-Includes)。
+5.  在 PowerShell 主控台中，您可以執行 `ls` 命令，來檢視已下載至 *DestDir*的檔案清單。  如需檔案的說明，請參閱[包含的內容](#whats-included-in-the-sample)。
 
 ## <a name="2-install-required-r-packages"></a>2.安裝必要的 R 封裝
 
@@ -96,7 +84,7 @@ GitHub 儲存機制中已提供所需的所有程式碼。 您可以使用 Power
 
 ### <a name="install-required-packages-on-the-server"></a>在伺服器上安裝必要套件
 
-有許多不同的方式，您可以在 SQL Server 上安裝封裝。 例如，SQL Server 提供[封裝管理](../r/installing-and-managing-r-packages.md)功能，可讓資料庫管理員建立的封裝儲存機制，並將使用者指派的權限安裝自己的封裝。 不過，如果您是電腦上的系統管理員，您可以在安裝新的封裝使用 R，只要您將安裝到正確的程式庫。
+有許多不同的方式，您可以在 SQL Server 上安裝封裝。 例如，SQL Server 提供[R 封裝管理](../r/install-additional-r-packages-on-sql-server.md)功能，可讓資料庫管理員建立的封裝儲存機制，並將使用者指派的權限安裝自己的封裝。 不過，如果您是電腦上的系統管理員，您可以在安裝新的封裝使用 R，只要您將安裝到正確的程式庫。
 
 > [!NOTE]
 > 在伺服器上，**不**即使提示您安裝至使用者的文件庫。 如果您安裝至使用者的文件庫時，SQL Server 執行個體無法找到或執行封裝。 如需詳細資訊，請參閱 [在 SQL Server 上安裝新的 R 封裝](../r/install-additional-r-packages-on-sql-server.md)。
@@ -112,7 +100,7 @@ GitHub 儲存機制中已提供所需的所有程式碼。 您可以使用 Power
     install.packages("RODBC", lib=grep("Program Files", .libPaths(), value=TRUE)[1])
     ```
 
-    - 這個範例會使用 R grep 函式，來搜尋可用的路徑的向量，並尋找包含"Program Files"路徑。 如需詳細資訊，請參閱 [http://www.rdocumentation.org/packages/base/functions/grep](http://www.rdocumentation.org/packages/base/functions/grep)。
+    - 這個範例會使用 R grep 函式，來搜尋可用的路徑的向量，並尋找包含"Program Files"路徑。 如需詳細資訊，請參閱[ http://www.rdocumentation.org/packages/base/functions/grep ](http://www.rdocumentation.org/packages/base/functions/grep)。
 
     - 如果您認為已安裝的封裝，請檢查已安裝的封裝清單執行`installed.packages()`。
 
@@ -175,7 +163,7 @@ Plug in the database server name, database name, user name and password into the
 This step (plugging in database information) takes 0.48 seconds.
 ```
 
-按一下此連結可跳至下一課：[檢視和瀏覽使用 SQL 資料](/walkthrough-view-and-explore-the-data.md)
+按一下此連結可跳至下一課：[檢視和瀏覽使用 SQL 資料](walkthrough-view-and-explore-the-data.md)
 
 ## <a name="bkmk_Troubleshooting"></a>疑難排解
 
@@ -279,7 +267,7 @@ bcp TutorialDB.dbo.nyctaxi_sample in c:\tempR\nyctaxi1pct.csv -t ',' -S rtestser
 
 + 公用資料集: [NYC 計程車和 Limousine 佣金] (http://www.nyc.gov/html/tlc/html/about/trip_record_data.shtml)
 
-+ [建立 Azure ML 模型 NYC 計程車資料集](https://blogs.technet.microsoft.com/machinelearning/2015/04/02/building-azure-ml-models-on-the-nyc-taxi-dataset/。
++ [建立 Azure ML 模型 NYC 計程車資料集](https://blogs.technet.microsoft.com/machinelearning/2015/04/02/building-azure-ml-models-on-the-nyc-taxi-dataset/.
 
 ### <a name="powershell-and-r-script-files"></a>PowerShell 和 R 指令碼檔案
 
@@ -293,7 +281,7 @@ bcp TutorialDB.dbo.nyctaxi_sample in c:\tempR\nyctaxi1pct.csv -t ',' -S rtestser
 
 PowerShell 指令碼會執行多個[!INCLUDE[tsql](../../includes/tsql-md.md)]SQL Server 執行個體上的指令碼。 下表列出[!INCLUDE[tsql](../../includes/tsql-md.md)]指令碼和它們的功用。
 
-|SQL 指令碼檔案名稱|Description|
+|SQL 指令碼檔案名稱|描述|
 |------------------------|----------------|
 |create-db-tb-upload-data.sql|建立資料庫和兩個資料表：<br /><br /> *nyctaxi_sample*：儲存定型資料的資料表，1% 的 NYC 計程車資料集樣本。 叢集資料行存放區索引會新增至資料表，以提高儲存和查詢效能。<br /><br /> *nyc_taxi_models*： 用來儲存已定型的模型，以二進位格式的資料表。|
 |PredictTipBatchMode.sql|建立預存程序，以呼叫所定型的模型來預測新觀測的標籤。 它會接受查詢作為其輸入參數。|
@@ -309,10 +297,10 @@ PowerShell 指令碼會執行多個[!INCLUDE[tsql](../../includes/tsql-md.md)]SQ
 
 ## <a name="next-lesson"></a>下一課
 
-[檢視及瀏覽的資料，使用 R 和 SQL](/walkthrough-view-and-explore-the-data.md)
+[檢視及瀏覽的資料，使用 R 和 SQL](walkthrough-view-and-explore-the-data.md)
 
 ## <a name="previous-lesson"></a>上一課
 
-[R 和 SQL Server 的端對端資料科學逐步解說](/walkthrough-data-science-end-to-end-walkthrough.md)
+[R 和 SQL Server 的端對端資料科學逐步解說](walkthrough-data-science-end-to-end-walkthrough.md)
 
 [資料科學逐步解說的必要條件](walkthrough-prerequisites-for-data-science-walkthroughs.md)

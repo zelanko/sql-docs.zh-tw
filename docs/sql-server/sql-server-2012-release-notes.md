@@ -1,31 +1,30 @@
 ---
-title: "SQL Server 2012 版本資訊 | Microsoft Docs"
-ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
-ms.service: 
-ms.component: sql-non-specified
-ms.technology: server-general
-ms.custom: 
+title: SQL Server 2012 版本資訊 | Microsoft Docs
+ms.prod: sql
+ms.prod_service: sql
+ms.technology: supportability
+ms.custom: ''
 ms.date: 01/31/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
-helpviewer_keywords: Release Notes, SQL Server
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
+helpviewer_keywords:
+- Release Notes, SQL Server
 ms.assetid: 9ccb390a-67a9-4593-85ea-2b4c41c4620f
-caps.latest.revision: "21"
 author: craigg-msft
 ms.author: craigg
 manager: jhubbard
-ms.workload: Inactive
-ms.openlocfilehash: e7adc5d4b4fdcf8886b2c8d08bce8de90d9b3eb1
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+monikerRange: = sql-server-2014 || = sqlallproducts-allversions
+ms.openlocfilehash: cf9360da746f08bc555a4796d5134a11c6b08d32
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sql-server-2012-release-notes"></a>SQL Server 2012 版本資訊
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)] 這份版本資訊文件描述安裝或對 Microsoft SQL Server 2012 進行疑難排解之前應該閱讀的已知問題 ([請按一下這裡下載](http://go.microsoft.com/fwlink/?LinkId=238647))。 這份版本資訊文件僅於線上提供，安裝媒體中並不提供，而且會定期更新。  
+[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+這份版本資訊文件將描述有關您安裝或疑難排解 Microsoft SQL Server 2012 ([請按一下這裡下載](http://go.microsoft.com/fwlink/?LinkId=238647)) 之前應該閱讀的已知問題。 這份版本資訊文件僅於線上提供，安裝媒體中並不提供，而且會定期更新。  
   
 如需有關如何開始使用和安裝 SQL Server 2012 的詳細資訊，請參閱 SQL Server 2012 讀我檔案。 您可以從安裝媒體與 [讀我檔案](http://download.microsoft.com/download/3/B/D/3BD9DD65-D3E3-43C3-BB50-0ED850A82AD5/ENU/Readme.htm) 下載頁面，取得讀我檔案文件。 您也可以在 [SQL Server 線上叢書](http://go.microsoft.com/fwlink/?LinkId=190948) 和 [SQL Server 論壇](http://go.microsoft.com/fwlink/?LinkId=213599)中尋找更多資訊。  
   
@@ -48,7 +47,7 @@ ms.lasthandoff: 12/05/2017
   
 3.  在 [元件服務] 視窗中，導覽至 [主控台根目錄] -> [元件服務] -> [電腦] -> [我的電腦] -> [Dconfig] ->[DReplayController]。  
   
-4.  以滑鼠右鍵按一下 [DReplayController]，然後按一下 [內容]。  
+4.  以滑鼠右鍵按一下 [DReplayController] ，然後按一下 [內容] 。  
   
 5.  在 [DReplayController 內容]  視窗的 [安全性]  索引標籤上，按一下 [啟動和啟用權限]  區段中的 [編輯]  。  
   
@@ -68,7 +67,7 @@ ms.lasthandoff: 12/05/2017
 <pre>The following error has occurred:  
 Service 'SQLBrowser' start request failed. Click 'Retry' to retry the failed action, or click 'Cancel' to cancel this action and continue setup.</pre>  
   
-或  
+中的多個  
   
 <pre>The following error has occurred:  
 SQL Server Browser configuration for feature 'SQL_Browser_Redist_SqlBrowser_Cpu32' was cancelled by user after a previous installation failure. The last attempted step: Starting the SQL Server Browser service 'SQLBrowser', and waiting for up to '900' seconds for the process to complete.</pre>  
@@ -98,7 +97,7 @@ SQL Server Browser configuration for feature 'SQL_Browser_Redist_SqlBrowser_Cpu3
   
 **因應措施** ：若要將語意語言統計資料庫設定為語意索引的必要元件，請執行下列工作：  
   
-1.  在 SQL Server 安裝媒體上，找到並執行名稱為 SemanticLanguageDatabase.msi 的 Windows Installer 套件，以擷取資料庫。 若為 SQL Server 2012 Express，請從 [Microsoft 下載中心](https://www.microsoft.com/download/details.aspx?id=35582) (http://go.microsoft.com/fwlink/?LinkId=221787) 下載語意語言統計資料庫，然後執行 Windows Installer 套件。  
+1.  在 SQL Server 安裝媒體上，找到並執行名稱為 SemanticLanguageDatabase.msi 的 Windows Installer 套件，以擷取資料庫。 若為 SQL Server 2012 Express，請從 [Microsoft 下載中心](https://www.microsoft.com/download/details.aspx?id=35582) (http://go.microsoft.com/fwlink/?LinkId=221787)下載語意語言統計資料庫，然後執行 Windows Installer 套件。  
   
 2.  將資料庫移至適當的資料夾。 若將資料庫保留在預設位置，則必須要變更權限，才能順利地進行附加。  
   
@@ -155,7 +154,7 @@ A semantic language statistics database is not registered. Full-text indexes usi
   
         2.  若要啟用 [Microsoft .NET Framework 3.5.1] ，請選取此功能旁的核取方塊。 若要關閉某項 Windows 功能，請清除核取方塊。  
   
-        3.  按一下 **[確定]**。  
+        3.  按一下 [確定] 。  
   
         **使用部署映像服務與管理 (DISM.exe) 來啟用 .NET Framework 3.5 SP1：**  
   
@@ -326,12 +325,12 @@ Analysis Services (AS) 的 SQL Server Integration Services (SSIS) 元件未以�
 ### <a name="41-dqs-not-supported-in-a-cluster"></a>4.1 叢集中不支援 DQS  
 **問題** ：SQL Server 叢集安裝中不支援 DQS。 如果您正在安裝 SQL Server 的叢集執行個體，就不得在 [特徵選取]  頁面上選取 [Data Quality Services]  和 [Data Quality Client]  核取方塊。 如果您在叢集執行個體安裝期間選取這兩個核取方塊 (而且您藉由執行 DQSInstaller.exe 檔案完成 Data Quality Server 安裝)，DQS 將會安裝在這個節點上，但是當您在叢集中加入其他節點時無法在其他節點上使用，因此 DQS 無法在其他節點上運作。  
   
-**因應措施** ：安裝 SQL Server 2012 累計更新 1 可解決此問題。 如需相關指示，請參閱 [http://support.microsoft.com/kb/2674817](http://support.microsoft.com/kb/2674817)。  
+**因應措施** ：安裝 SQL Server 2012 累計更新 1 可解決此問題。 如需指示，請參閱[http://support.microsoft.com/kb/2674817](http://support.microsoft.com/kb/2674817)。  
   
 ### <a name="42-to-reinstall-data-quality-server-delete-the-dqs-objects-after-uninstalling-data-quality-server"></a>4.2 若要重新安裝 Data Quality Server，請在解除安裝資料品質伺服器之後刪除 DQS 物件  
 **問題** ：如果您解除安裝 Data Quality Server，並不會自 SQL Server 執行個體刪除 DQS 物件 (DQS 資料庫、DQS 登入和 DQS 預存程序)。  
   
-**因應措施** ：若要在相同電腦的同一個 SQL Server 執行個體中重新安裝 Data Quality Server，您必須手動從該 SQL Server 執行個體中刪除 DQS 物件。 此外，您也必須從電腦上的 C:\Program Files\Microsoft SQL Server\MSSQL11.<SQL_Server_Instance>\MSSQL\DATA 資料夾中刪除 DQS 資料庫 (DQS_MAIN、DQS_PROJECTS 和 DQS_STAGING_DATA) 檔案，然後再重新安裝資料品質伺服器。 否則，Data Quality Server 安裝會失敗。 若要保留資料 (如知識庫或資料品質專案)，請移動資料庫檔案而不要刪除。 如需有關解除安裝程序完成之後移除 DQS 物件的詳細資訊，請參閱 [移除 Data Quality Server 物件](http://msdn.microsoft.com/library/hh231667.aspx)。  
+**因應措施**：若要在相同電腦的同一個 SQL Server 執行個體中重新安裝 Data Quality Server，您必須手動從該 SQL Server 執行個體中刪除 DQS 物件。 此外，您也必須從電腦上的 C:\Program Files\Microsoft SQL Server\MSSQL11.<SQL_Server_Instance>\MSSQL\DATA 資料夾中刪除 DQS 資料庫 (DQS_MAIN、DQS_PROJECTS 和 DQS_STAGING_DATA) 檔案，然後再重新安裝資料品質伺服器。 否則，Data Quality Server 安裝會失敗。 若要保留資料 (如知識庫或資料品質專案)，請移動資料庫檔案而不要刪除。 如需有關解除安裝程序完成之後移除 DQS 物件的詳細資訊，請參閱 [移除 Data Quality Server 物件](http://msdn.microsoft.com/library/hh231667.aspx)。  
   
 ### <a name="43-indication-of-a-terminated-knowledge-discovery-or-interactive-cleansing-activity-is-delayed"></a>4.3 指示知識探索已終止或互動式清理活動已延遲  
 **問題** ：如果系統管理員在 [活動監控] 畫面上終止活動，則執行知識探索、網域管理或互動式清理活動的互動式使用者在執行下一項作業之前，不會接到任何資訊指出活動已被終止。  
@@ -510,11 +509,11 @@ Analysis Services (AS) 的 SQL Server Integration Services (SSIS) 元件未以�
 |具有連接修補程式的 ADO.NET 與 .NET Framework 3.5 SP1 **\&#42;\&#42;**|是|是|是|是|是|  
 |Microsoft JDBC Driver 4.0 for SQL Server|是|是|是|是|是|  
   
-**\&#42;** 下載 ADO.NET 與 .NET Framework 4.0 連接修補程式： [http://support.microsoft.com/kb/2600211](http://support.microsoft.com/kb/2600211)。  
+**\&#42;** 下載 ADO .NET 與 .NET Framework 4.0 的連線修補程式：[http://support.microsoft.com/kb/2600211](http://support.microsoft.com/kb/2600211).  
   
-**\&#42;\&#42;** 下載 ADO.NET 與 .NET Framework 3.5 SP1 連接修補程式： [http://support.microsoft.com/kb/2654347](http://support.microsoft.com/kb/2654347)。  
+**\&#42;\&#42;** 下載 ADO.NET 與 .NET Framework 3.5 SP1 的連線修補程式：[http://support.microsoft.com/kb/2654347](http://support.microsoft.com/kb/2654347).  
   
-**MultiSubnetFailover 關鍵字和已建立關聯的功能**  
+**MultiSubnetFailover 關鍵字和相關聯的功能**  
   
 MultiSubnetFailover 是新的連接字串關鍵字，可用來加快 SQL Server 2012 中 AlwaysOn 可用性群組和 AlwaysOn 容錯移轉叢集執行個體的容錯移轉速度。 當您在連接字串中設定 MultiSubnetFailover=True 時，就會啟用下列三項子功能：  
   
@@ -613,7 +612,7 @@ Oracle CDC 服務是一種 Windows 服務，可掃描 Oracle 交易記錄，並�
 如需有關這些問題的詳細資訊，以及如何執行上述步驟的詳細資訊，請參閱 [http://support.microsoft.com/kb/2683467](http://support.microsoft.com/kb/2683467)。  
   
 ### <a name="72-microsoft-silverlight-5-required"></a>7.2 需要 Microsoft Silverlight 5  
-若要在主資料管理員 Web 應用程式中工作，用戶端電腦必須安裝 Silverlight 5.0。 如果您沒有必要的 Silverlight 版本，系統將會在您導覽至需要 Silverlight 的 Web 應用程式區域時提示安裝 Silverlight。 您可以從 [http://go.microsoft.com/fwlink/?LinkId=243096](http://go.microsoft.com/fwlink/?LinkId=243096)安裝 Silverlight 5。  
+若要在主資料管理員 Web 應用程式中工作，用戶端電腦必須安裝 Silverlight 5.0。 如果您沒有必要的 Silverlight 版本，系統將會在您導覽至需要 Silverlight 的 Web 應用程式區域時提示安裝 Silverlight。 您可以從 [http://go.microsoft.com/fwlink/?LinkId=243096](http://go.microsoft.com/fwlink/?LinkId=243096) 安裝 Silverlight 5。  
   
 ![horizontal_bar](media/horizontal-bar.png "horizontal_bar")  
   

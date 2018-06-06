@@ -1,16 +1,14 @@
 ---
 title: DATETIME2FROMPARTS (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 07/29/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
 ms.component: t-sql|functions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: t-sql
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - DATETIME2FROMPARTS_TSQL
@@ -20,16 +18,16 @@ dev_langs:
 helpviewer_keywords:
 - DATETIME2FROMPARTS function
 ms.assetid: 632b757d-d2d1-43a5-b870-792a779ae204
-caps.latest.revision: 
+caps.latest.revision: 16
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: ce109671228e82bc0f02e9920b2ef98c9bbcdb83
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 1a6cee0f40ba7cd92024fd11b82a32c3de99d0e7
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="datetime2fromparts-transact-sql"></a>DATETIME2FROMPARTS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
@@ -72,7 +70,7 @@ DATETIME2FROMPARTS ( year, month, day, hour, minute, seconds, fractions, precisi
 **datetime2(** *precision* **)**
   
 ## <a name="remarks"></a>Remarks  
-**DATETIME2FROMPARTS** 會傳回完整初始化的 **datetime2** 值。 如果引數無效，將會引發錯誤。 如果要求的引數為 null，即會傳回 null。 然而，若 *precision* 引數為 null，則會引發錯誤。
+**DATETIME2FROMPARTS** 會傳回完整初始化的 **datetime2** 值。 如果引數無效，將會引發錯誤。 如果要求的引數為 null，即會傳回 null。 然而，若 *precision* 引數為 Null，則會引發錯誤。
   
 *fractions* 引數相依於 *precision* 引數。 例如，假設 *precision* 為 7，每個分數即表示 100 奈秒；如果 *precision* 為 3，每個分數即表示 1 毫秒。 如果 *precision* 的值為零，*fractions* 也必須為零，否則將引發錯誤。
   

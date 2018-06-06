@@ -1,16 +1,14 @@
 ---
 title: ABS (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 07/24/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
 ms.component: t-sql|functions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: t-sql
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - ABS_TSQL
@@ -23,16 +21,16 @@ helpviewer_keywords:
 - ABS function
 - absolute positive value
 ms.assetid: e2ea7a6d-3e2f-472c-afbc-437d3b835c03
-caps.latest.revision: 
+caps.latest.revision: 44
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Active
-ms.openlocfilehash: 9f96d651f179120fab6fabfb78d08cca84404bd1
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: cd40d41cdd5b95b19d1d28791f821b214d77995c
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="abs-transact-sql"></a>ABS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -49,13 +47,13 @@ ABS ( numeric_expression )
   
 ## <a name="arguments"></a>引數  
 *numeric_expression*  
-這是精確數值或近似數值資料類型類別目錄的運算式。
+精確數值或近似數值資料型別類別目錄的運算式。
   
 ## <a name="return-types"></a>傳回類型  
 傳回與 *numeric_expression*相同的類型。
   
 ## <a name="examples"></a>範例  
-下列範例顯示針對三個不同數字使用 `ABS` 函數的結果。
+此範例顯示在三個不同數字上使用 `ABS` 函數的結果。
   
 ```sql
 SELECT ABS(-1.0), ABS(0.0), ABS(1.0);  
@@ -68,7 +66,7 @@ SELECT ABS(-1.0), ABS(0.0), ABS(1.0);
 1.0  .0   1.0  
 ```  
   
-當數值的絕對值大於可用特定資料類型來表示的最大數值時，`ABS` 函數會產生溢位錯誤。 例如，`int` 資料類型只接受`-2,147,483,648` 到 `2,147,483,647` 範圍的值。 計算帶正負號之整數 `-2,147,483,648` 的絕對值會產生溢位錯誤，因為其絕對值大於 `int` 資料類型的正數範圍。
+當數字的絕對值超過所指定資料型別能表示的最大數字時，`ABS` 函數可能會產生溢位錯誤。 例如，`int` 資料型別值的範圍在 `-2,147,483,648` 到 `2,147,483,647`。 計算帶正負號整數 `-2,147,483,648` 的絕對值會造成溢位錯誤，因為其絕對值超過 `int` 資料型別的正數範圍限制。
   
 ```sql
 DECLARE @i int;  
@@ -77,7 +75,7 @@ SELECT ABS(@i);
 GO  
 ```  
   
-錯誤訊息如下：
+傳回此錯誤訊息：
   
 「訊息 8115，層級 16，狀態 2，行 3」
   
@@ -87,7 +85,7 @@ GO
 ## <a name="see-also"></a>另請參閱
 [CAST 和 CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)  
 [資料類型 &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)  
-[數學函式 &#40;Transact-SQL&#41;](../../t-sql/functions/mathematical-functions-transact-sql.md)  
+[數學函數 &#40;Transact-SQL&#41;](../../t-sql/functions/mathematical-functions-transact-sql.md)  
 [內建函數 &#40;Transact-SQL&#41;](../../t-sql/functions/functions.md)
   
   

@@ -1,32 +1,23 @@
 ---
-title: "EXISTING 關鍵字 (MDX) |Microsoft 文件"
-ms.custom: 
-ms.date: 03/06/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords: EXISTING
-helpviewer_keywords: Existing keyword
-ms.assetid: 651ee9ac-04ef-4316-87c9-a3df5ac27d22
-caps.latest.revision: "38"
-author: Minewiskan
+title: EXISTING 關鍵字 (MDX) |Microsoft 文件
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: mdx
+ms.topic: conceptual
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: c3a9ebbb73e8bf2b305a7ab2730439ffd0d53f8f
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 08cdfd62f25ec42195418938da37c502f221120d
+ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="mdx-query---existing-keyword"></a>MDX 查詢-EXISTING 關鍵字
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]強制指定的設定為目前的內容內評估。  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+  強制在目前內容內評估指定的集合。  
   
 ## <a name="syntax"></a>語法  
   
@@ -80,14 +71,14 @@ WHERE
   
 ```  
   
-## <a name="see-also"></a>請參閱  
- [Count &#40;集合&#41; &#40;MDX&#41;](../../../mdx/count-set-mdx.md)   
- [AddCalculatedMembers &#40;MDX &#41;](../../../mdx/addcalculatedmembers-mdx.md)   
- [彙總 &#40;MDX &#41;](../../../mdx/aggregate-mdx.md)   
- [篩選 &#40;MDX &#41;](../../../mdx/filter-mdx.md)   
- [屬性 &#40;MDX &#41;](../../../mdx/properties-mdx.md)   
- [DrilldownLevel &#40;MDX &#41;](../../../mdx/drilldownlevel-mdx.md)   
- [Hierarchize &#40;MDX &#41;](../../../mdx/hierarchize-mdx.md)   
- [MDX 函數參考 &#40;MDX &#41;](../../../mdx/mdx-function-reference-mdx.md)  
+## <a name="see-also"></a>另請參閱  
+ [計數 & #40;設定 & #41;& #40;MDX & #41;](../../../mdx/count-set-mdx.md)   
+ [AddCalculatedMembers & #40;MDX & #41;](../../../mdx/addcalculatedmembers-mdx.md)   
+ [彙總 & #40;MDX & #41;](../../../mdx/aggregate-mdx.md)   
+ [篩選 & #40;MDX & #41;](../../../mdx/filter-mdx.md)   
+ [屬性 & #40;MDX & #41;](../../../mdx/properties-mdx.md)   
+ [DrilldownLevel & #40;MDX & #41;](../../../mdx/drilldownlevel-mdx.md)   
+ [Hierarchize & #40;MDX & #41;](../../../mdx/hierarchize-mdx.md)   
+ [MDX 函數參考 & #40;MDX & #41;](../../../mdx/mdx-function-reference-mdx.md)  
   
   

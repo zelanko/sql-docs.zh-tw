@@ -1,34 +1,33 @@
 ---
-title: "結果詳細檢視對話方塊 | Microsoft 文件"
-ms.custom: 
+title: 結果詳細檢視對話方塊 | Microsoft 文件
+ms.custom: ''
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
 ms.component: performance-monitor
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 f1_keywords:
 - sql13.swb.results.f1
 - sql13.swb.dmf.policy.resultdetails.f1
 ms.assetid: 366f0ff8-722a-40a9-934f-854147e4933d
-caps.latest.revision: 
+caps.latest.revision: 21
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: aa4a078b2e5e130e8bc4f739dab5b515b37852ec
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 46703b9de00698a4accbb629c8d3310779d2fa03
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="results-detailed-view-dialog-box"></a>結果詳細檢視對話方塊
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 當您使用 [評估原則] 對話方塊來執行原則並按一下 [評估] 之後，此對話方塊會顯示原則評估的結果。 此對話方塊是唯讀的，而且可幫助您了解哪一個部分的屬性運算式可能失敗。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  當您使用 **[評估原則]** 對話方塊來執行原則並按一下 **[評估]** 之後，此對話方塊會顯示原則評估的結果。 此對話方塊是唯讀的，而且可幫助您了解哪一個部分的屬性運算式可能失敗。  
   
 ## <a name="options"></a>選項。  
  **AndOr**  

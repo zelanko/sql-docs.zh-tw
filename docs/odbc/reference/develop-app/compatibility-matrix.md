@@ -1,16 +1,14 @@
 ---
-title: "相容性比較表 |Microsoft 文件"
-ms.custom: 
+title: 相容性比較表 |Microsoft 文件
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
-ms.component: odbc
-ms.reviewer: 
+ms.prod: sql
+ms.prod_service: connectivity
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: connectivity
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - driver compatibility issues [ODBC]
 - ODBC drivers [ODBC], backward compatibility
@@ -20,16 +18,15 @@ helpviewer_keywords:
 - application upgrades [ODBC], compatibility matrix
 - upgrading applications [ODBC], compatibility matrix
 ms.assetid: 0690b463-15a1-48fa-9d0b-9cc9e5bf7fc6
-caps.latest.revision: "11"
+caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
-ms.workload: Inactive
-ms.openlocfilehash: 6c3a7fac17ed685680e71b329388e192ec1c9f97
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+manager: craigg
+ms.openlocfilehash: 09f09d5a8b6e15c677969b2b865e3908200108e4
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="compatibility-matrix"></a>相容性比較表
 下表描述的相容性的應用程式和驅動程式，本節先前定義的類型。  
@@ -52,7 +49,7 @@ ms.lasthandoff: 12/21/2017
   
  [3] 這項設定可能無法運作，因為 ODBC 2 沒有功能。*x*所沒有的標準，例如書籤。  
   
- [4] 這項設定可能無法運作，因為在 ODBC 3 的功能*.x*所沒有的標準，例如書籤。  
+ [4] 這項設定可能無法運作，因為在 ODBC 3 的功能 *.x*所沒有的標準，例如書籤。  
   
  [5] 這項設定可能會因為未在 ODBC 2.x 或 3.x 驅動程式，例如驅動程式專屬 ODBC 3.8 功能[ODBC 中的 C 資料類型](../../../odbc/reference/develop-app/c-data-types-in-odbc.md)。  
   
@@ -74,5 +71,5 @@ ms.lasthandoff: 12/21/2017
 ## <a name="using-sqlcancelhandle-in-an-application-compatible-with-all-driver-managers"></a>在應用程式與相容的所有驅動程式管理員使用 SQLCancelHandle  
  因為[SQLCancelHandle 函式](../../../odbc/reference/syntax/sqlcancelhandle-function.md)不支援在 Windows 7 之前發行的驅動程式管理員，應用程式無法呼叫在舊版 Windows 中載入**SQLCancelHandle**直接。 若要使用所有版本的驅動程式管理員，並使用**SQLCancelHandle**應用程式應該在新版本的 Windows，呼叫**SQLCancelHandle**利用間接**LoadLibrary**和**GetProcAddress。**  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [ODBC 3.8 的新功能](../../../odbc/reference/what-s-new-in-odbc-3-8.md)

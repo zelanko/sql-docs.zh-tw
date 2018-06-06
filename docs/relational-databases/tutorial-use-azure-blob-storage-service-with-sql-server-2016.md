@@ -1,30 +1,28 @@
 ---
-title: "教學課程：搭配使用 Azure Blob 儲存體服務和 SQL Server 2016 | Microsoft 文件"
-ms.custom: 
+title: 教學課程：搭配使用 Azure Blob 儲存體服務和 SQL Server 2016 | Microsoft 文件
+ms.custom: ''
 ms.date: 01/07/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
 ms.component: tutorial
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 applies_to:
 - SQL Server 2016
 ms.assetid: e69be67d-da1c-41ae-8c9a-6b12c8c2fb61
-caps.latest.revision: 
+caps.latest.revision: 23
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 26c6376594efc1b34e50f2c058578387b6f8b7f0
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.openlocfilehash: c2aef9476c254267156c5bbde4d777a2ed5ab570
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="tutorial-use-azure-blob-storage-service-with-sql-server-2016"></a>教學課程：搭配使用 Azure Blob 儲存體服務和 SQL Server 2016
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -74,9 +72,6 @@ Microsoft Azure Blob 儲存體服務的 SQL Server 整合支援一開始是 SQL 
   
 **[第 9 課︰管理備份組和檔案快照集備份](../relational-databases/lesson-9-manage-backup-sets-and-file-snapshot-backups.md)**  
 在這一課，您可以刪除不必要的備份組，並了解如何刪除孤立的檔案快照集備份 (必要時)。  
-  
-## <a name="did-this-article-help-you-were-listening"></a>這篇文章對您有幫助嗎？ 我們會持續聽取您的意見  
-您要尋找哪些資訊？找到了嗎？ 我們會持續聽取您的意見來改進內容。 請將您的意見傳送到 [sqlfeedback@microsoft.com](mailto:sqlfeedback@microsoft.com?subject=Your%20feedback%20about%20the%20Tutorial:%20Using%20the%20Microsoft%20Azure%20Blob%20storage%20service%20with%20SQL%20Server%202016%20databases%20page)  
   
 ## <a name="see-also"></a>另請參閱  
 [Microsoft Azure 中的 SQL Server 資料檔案](../relational-databases/databases/sql-server-data-files-in-microsoft-azure.md)  

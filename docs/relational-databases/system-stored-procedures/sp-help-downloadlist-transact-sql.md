@@ -1,16 +1,14 @@
 ---
-title: "sp_help_downloadlist (TRANSACT-SQL) |Microsoft 文件"
-ms.custom: 
+title: sp_help_downloadlist (TRANSACT-SQL) |Microsoft 文件
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: system-objects
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_help_downloadlist_TSQL
@@ -20,16 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_help_downloadlist
 ms.assetid: 745b265b-86e8-4399-b928-c6969ca1a2c8
-caps.latest.revision: 
+caps.latest.revision: 24
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: c768ab8d8908d6c62805539e3fb811cee293da55
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: e48423bc91413518abe3002a3c3d8da2cef330c2
+ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="sphelpdownloadlist-transact-sql"></a>sp_help_downloadlist (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -62,7 +59,7 @@ sp_help_downloadlist { [ @job_id = ] job_id | [ @job_name = ] 'job_name' }
 > [!NOTE]  
 >  任一*job_id*或*job_name*必須指定，但不可同時指定兩者。  
   
- [ **@operation=** ] **'***operation***'**  
+ [  **@operation=** ] **'***作業***'**  
  指定作業的有效動作。 *作業*是**varchar(64)**，預設值是 NULL，而且可以是下列值之一。  
   
 |Value|Description|  
@@ -70,15 +67,15 @@ sp_help_downloadlist { [ @job_id = ] job_id | [ @job_name = ] 'job_name' }
 |**DEFECT**|要求從主要目標伺服器脫離的伺服器作業**SQLServerAgent**服務。|  
 |**DELETE**|移除整項作業的作業動作。|  
 |**INSERT**|插入整項作業或重新整理現有作業的作業動作。 適當的話，這個動作包括所有作業步驟和排程。|  
-|**RE-ENLIST**|使目標伺服器將編列資訊 (包括輪詢間隔和時區) 重新傳送到多伺服器網域的伺服器作業。 目標伺服器也會重新下載**MSXOperator**詳細資料。|  
+|**重新登錄**|使目標伺服器將編列資訊 (包括輪詢間隔和時區) 重新傳送到多伺服器網域的伺服器作業。 目標伺服器也會重新下載**MSXOperator**詳細資料。|  
 |**SET-POLL**|設定目標伺服器輪詢多伺服器網域的間隔 (以秒為單位) 之伺服器作業。 如果指定，*值*解譯為必要的間隔值，而且可以是值**10**至**28800**。|  
-|**START**|要求開始執行作業的作業動作。|  
-|**STOP**|要求停止執行作業的作業動作。|  
-|**SYNC-TIME**|使目標伺服器將它的系統時鐘和多伺服器網域同步化的伺服器作業。 由於這項作業成本很高，因此，請盡量不要太常執行這項作業。|  
+|**啟動**|要求開始執行作業的作業動作。|  
+|**停止**|要求停止執行作業的作業動作。|  
+|**同步處理時間**|使目標伺服器將它的系統時鐘和多伺服器網域同步化的伺服器作業。 由於這項作業成本很高，因此，請盡量不要太常執行這項作業。|  
 |**UPDATE**|只更新作業**sysjobs**作業，而非從作業步驟或排程的資訊。 會自動呼叫**sp_update_job**。|  
   
  [ **@object_type=** ] **'***object_type***'**  
- 指定作業的物件類型。 *object_type*是**varchar(64)**，預設值是 NULL。 *object_type*可以是 JOB 或 SERVER。 如需有關有效*object_type*值，請參閱[sp_add_category &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/sp-add-category-transact-sql.md).  
+ 指定作業的物件類型。 *object_type*是**varchar(64)**，預設值是 NULL。 *object_type*可以是 JOB 或 SERVER。 如需有關有效*object_type*值，請參閱[sp_add_category &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-category-transact-sql.md)。  
   
  [ **@object_name=** ] **'***object_name***'**  
  物件的名稱。 *object_name*是**sysname**，預設值是 NULL。 如果*object_type*是工作， *object_name*是工作名稱。 如果*object_type*是伺服器， *object_name*是伺服器的名稱。  
@@ -89,7 +86,7 @@ sp_help_downloadlist { [ @job_id = ] job_id | [ @job_name = ] 'job_name' }
  [ **@has_error=** ] *has_error*  
  這是指作業是否應該認可錯誤。 *has_error*是**tinyint**，預設值是 NULL，表示應該認可任何錯誤。 **1**指出不應該認可所有錯誤。  
   
- [ **@status=** ] *status*  
+ [  **@status=** ]*狀態*  
  作業的狀態。 *狀態*是**tinyint**，預設值是 NULL。  
   
  [ **@date_posted=** ] *date_posted*  

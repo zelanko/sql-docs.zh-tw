@@ -1,17 +1,14 @@
 ---
-title: "資料壓縮 | Microsoft Docs"
-ms.custom: 
+title: 資料壓縮 | Microsoft Docs
+ms.custom: ''
 ms.date: 08/31/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
-ms.component: compression
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- dbe-data-compression
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: performance
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - page compression [Database Engine]
 - indexes [SQL Server], compressed
@@ -25,16 +22,16 @@ helpviewer_keywords:
 - data compression [Database Engine]
 - compressed tables [SQL Server]
 ms.assetid: 5f33e686-e115-4687-bd39-a00c48646513
-caps.latest.revision: 
+caps.latest.revision: 60
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: d999c313752ccbb23f31b9763463fc69e10ac20b
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 1ed791ca34a8a88ce9dd8b25d38740430ce18424
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="data-compression"></a>資料壓縮
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -134,7 +131,7 @@ REBUILD PARTITION = ALL WITH (
 ) ;  
 ```  
   
-### <a name="performance"></a>[效能]  
+### <a name="performance"></a>效能  
  以封存壓縮壓縮資料行存放區索引會造成該索引的效能比沒有封存壓縮的資料行存放區索引還要慢。 只有當您可以負擔使用額外時間和 CPU 資源來壓縮及擷取資料時，才使用封存壓縮。  
   
  封存壓縮的好處就是減少儲存體，這對於不常存取的資料很實用。 例如，如果您每個月的資料都有一個資料分割，而您的大多數活動發生在最近的月份，您可以封存較舊的月份來減少儲存需求。  

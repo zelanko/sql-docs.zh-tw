@@ -1,41 +1,23 @@
 ---
-title: "瀏覽模型，使用 Microsoft 時序叢集檢視器 |Microsoft 文件"
-ms.custom: 
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
-helpviewer_keywords:
-- Sequence Cluster Viewer
-- clusters [Analysis Services]
-- data mining [Analysis Services], sequences
-- discrimination [Analysis Services]
-- mining model content, viewing
-- mining models [Analysis Services], sequences
-- Microsoft Sequence Cluster Viewer
-- sequence [Analysis Services]
-- transitions [Analysis Services]
-ms.assetid: 3ada00aa-da9e-488a-9f53-c3e188f81f84
-caps.latest.revision: 
-author: Minewiskan
+title: 瀏覽模型，使用 Microsoft 時序叢集檢視器 |Microsoft 文件
+ms.date: 05/01/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: data-mining
+ms.topic: conceptual
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 6553c3d5077b485d0736f2ffd8589d17a81edc33
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: cce1203b73f5a1685634c4b50f6e5941bed3eb98
+ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="browse-a-model-using-the-microsoft-sequence-cluster-viewer"></a>使用 Microsoft 時序叢集檢視器瀏覽模型
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 中的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 時序叢集檢視器會顯示以 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 時序群集演算法建立的採礦模型。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 時序群集演算法是時序分析演算法，用來瀏覽包含事件的資料，這些事件可透過遵循路徑或 *時序*加以連結。 如需這個演算法的詳細資訊，請參閱 [Microsoft 時序群集演算法](../../analysis-services/data-mining/microsoft-sequence-clustering-algorithm.md)。  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 中的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 時序叢集檢視器會顯示以 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 時序群集演算法建立的採礦模型。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 時序群集演算法是時序分析演算法，用來瀏覽包含事件的資料，這些事件可透過遵循路徑或 *時序*加以連結。 如需這個演算法的詳細資訊，請參閱 [Microsoft 時序群集演算法](../../analysis-services/data-mining/microsoft-sequence-clustering-algorithm.md)。  
   
 > [!NOTE]  
 >  若要檢視有關此模型中所用的方程式及所探索之模式的詳細資訊，請使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 一般內容樹狀檢視器。 如需詳細資訊，請參閱[使用 Microsoft 一般內容樹狀檢視器瀏覽模型](../../analysis-services/data-mining/browse-a-model-using-the-microsoft-generic-content-tree-viewer.md)或 [Microsoft 一般內容樹狀檢視器 &#40;資料採礦&#41;](http://msdn.microsoft.com/library/751b4393-f6fd-48c1-bcef-bdca589ce34c)。  
@@ -63,7 +45,7 @@ ms.lasthandoff: 02/15/2018
   
  若要重新命名叢集，請以滑鼠右鍵按一下其節點，然後選取 [重新命名叢集]。 新名稱會保存在伺服器上。  
   
- 若要將圖表的可見區段複製到剪貼簿，請按一下 **[複製圖表檢視]**。 若要複製完整圖表，請按一下 **[複製整個圖表]**。 您也可以使用 **[放大]** 和 **[縮小]**來放大和縮小，或使用 **[將圖表縮放至視窗大小]**，使圖表符合視窗大小。  
+ 若要將圖表的可見區段複製到剪貼簿，請按一下 **[複製圖表檢視]**。 若要複製完整圖表，請按一下 **[複製整個圖表]**。 您也可以使用 **[放大]** 和 **[縮小]** 來放大和縮小，或使用 **[將圖表縮放至視窗大小]**，使圖表符合視窗大小。  
   
  [回到頁首](#BKMK_ViewerTabs)  
   
@@ -72,7 +54,7 @@ ms.lasthandoff: 02/15/2018
   
  [長條圖列]  選項會控制長條圖中可見的橫條數。 如果總列數超出您選擇要顯示的列數，就會保留最重要的列，而其餘的列將會分組放入灰色值區中。  
   
- 您可以變更群集的預設名稱，使名稱更具描述性。 請以滑鼠右鍵按一下叢集的資料行標題並選取 [重新命名叢集]，來重新命名叢集。 您可以選取 **[隱藏資料行]**來隱藏群集，也可以拖曳資料行，在檢視器中將它們重新排序。  
+ 您可以變更群集的預設名稱，使名稱更具描述性。 請以滑鼠右鍵按一下叢集的資料行標題並選取 [重新命名叢集]，來重新命名叢集。 您可以選取 **[隱藏資料行]** 來隱藏群集，也可以拖曳資料行，在檢視器中將它們重新排序。  
   
  若要開啟一個能提供更大、更詳細之叢集檢視的視窗，請按兩下 [狀態] 資料行的資料格或檢視器中的長條圖。  
   

@@ -1,34 +1,33 @@
 ---
-title: "手動容錯移轉資料庫鏡像工作階段 (SQL Server Management Studio) | Microsoft Docs"
-ms.custom: 
+title: 手動容錯移轉資料庫鏡像工作階段 (SQL Server Management Studio) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
-ms.prod_service: database-engine
-ms.service: 
+ms.prod: sql
+ms.prod_service: high-availability
 ms.component: database-mirroring
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: dbe-high-availability
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: high-availability
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - failover [SQL Server], database mirroring
 - manual failover [SQL Server]
 - database mirroring [SQL Server], failover
 ms.assetid: 4ecf9c63-b3a4-4c54-b553-5bc37973232b
-caps.latest.revision: "32"
+caps.latest.revision: 32
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 59ef0f8eae527598c8ba08e236a1916c5454ab05
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: e076228a1347f84d9382541474cdeddc9418e70d
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="manually-fail-over-a-database-mirroring-session-sql-server-management-studio"></a>手動容錯移轉資料庫鏡像工作階段 (SQL Server Management Studio)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 鏡像資料庫已同步處理時 (亦即，資料庫為 SYNCHRONIZED 狀態時)，資料庫擁有者可以初始化至鏡像伺服器的手動容錯移轉。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  鏡像資料庫已同步處理時 (亦即，資料庫為 SYNCHRONIZED 狀態時)，資料庫擁有者可以初始化至鏡像伺服器的手動容錯移轉。  
   
  在手動容錯移轉期間，會針對發生容錯移轉的資料庫互換主體伺服器和鏡像伺服器角色。 鏡像資料庫變成主體資料庫，而主體資料庫變成鏡像。 例如，下表顯示手動容錯移轉如何互換這兩個鏡像夥伴 ( `SQLDBENGINE0_1` 和 `SQLDBENGINE0_2`) 的角色。  
   

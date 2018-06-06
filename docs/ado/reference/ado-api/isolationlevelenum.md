@@ -1,33 +1,30 @@
 ---
-title: IsolationLevelEnum | Microsoft Docs
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
+title: IsolationLevelEnum |Microsoft 文件
+ms.prod: sql
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
-ms.custom: 
+ms.technology: connectivity
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 apitype: COM
 f1_keywords:
 - IsolationLevelEnum
 helpviewer_keywords:
 - IsolationLevelEnum enumeration [ADO]
 ms.assetid: 8e17a7bc-b8a3-4ae2-b6c9-ce088ad31fdf
-caps.latest.revision: 
+caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 98a9f6213af3fbfb523701f0a8dda1de80cc2d93
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: a22b958066b681f70187dc5e49fcd36752f510b7
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="isolationlevelenum"></a>IsolationLevelEnum
 指定的交易隔離層級[連接](../../../ado/reference/ado-api/connection-object-ado.md)物件。  
@@ -45,7 +42,7 @@ ms.lasthandoff: 02/09/2018
 |**adXactSerializable**|1048576|與相同**adXactIsolated**。|  
   
 ## <a name="adowfc-equivalent"></a>ADO/WFC 對等項目  
- Package: **com.ms.wfc.data**  
+ 封裝： **com.ms.wfc.data**  
   
 |常數|  
 |--------------|  

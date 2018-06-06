@@ -1,30 +1,27 @@
 ---
-title: "系統函數 |Microsoft 文件"
-ms.custom: 
+title: 系統函數 |Microsoft 文件
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
-ms.component: odbc
-ms.reviewer: 
+ms.prod: sql
+ms.prod_service: connectivity
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: connectivity
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - system functions [ODBC]
 - functions [ODBC], system functions
 ms.assetid: 36614b4c-e037-43ef-8692-67f4861b144d
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
-ms.workload: Inactive
-ms.openlocfilehash: 79cbe8677ba4401fb779dc9765d639b1d86a0f5f
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+manager: craigg
+ms.openlocfilehash: d5bfd40b587956595bfc8c35b4bb030543253cd9
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="system-functions"></a>系統函數
 下表列出 ODBC 純量函式集合中包含的系統函數。 藉由呼叫**SQLGetInfo**與*資訊類型*的 SQL_SYSTEM_FUNCTIONS，應用程式可以判斷驅動程式支援的系統函數。  
@@ -35,8 +32,8 @@ ms.lasthandoff: 12/21/2017
   
  傳回的值會表示為 ODBC 資料類型。  
   
-|函數|描述|  
+|函數|Description|  
 |--------------|-----------------|  
 |**資料庫 （)** (ODBC 1.0)|傳回對應至連接控制代碼的資料庫名稱。 (資料庫的名稱，也可以透過呼叫**SQLGetConnectOption**使用 SQL_CURRENT_QUALIFIER 連接選項。)|  
-|**IFNULL (** *exp*，*值***)** (ODBC 1.0)|如果*exp*為 null，*值*傳回。 如果*exp*不是 null， *exp*傳回。 可能資料類型或類型*值*必須是相容的資料型別*exp*。|  
+|**IFNULL (** *exp*，*值 * * *)** (ODBC 1.0)|如果*exp*為 null，*值*傳回。 如果*exp*不是 null， *exp*傳回。 可能資料類型或類型*值*必須是相容的資料型別*exp*。|  
 |**使用者 > （)** (ODBC 1.0)|DBMS 中傳回的使用者名稱。 (使用者名稱也會藉由提供**SQLGetInfo**藉由指定的資訊類型： SQL_USER_NAME。)這可以是不同的登入名稱。|

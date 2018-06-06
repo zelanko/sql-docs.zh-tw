@@ -1,32 +1,33 @@
 ---
-title: "SQLSetConfigMode 函式 |Microsoft 文件"
-ms.custom: 
+title: SQLSetConfigMode 函式 |Microsoft 文件
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
-ms.component: odbc
-ms.reviewer: 
+ms.prod: sql
+ms.prod_service: connectivity
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
-ms.topic: article
-apiname: SQLSetConfigMode
-apilocation: sqlsrv32.dll
+ms.technology: connectivity
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
+apiname:
+- SQLSetConfigMode
+apilocation:
+- sqlsrv32.dll
 apitype: dllExport
-f1_keywords: SQLSetConfigMode
-helpviewer_keywords: SQLSetConfigMode function [ODBC]
+f1_keywords:
+- SQLSetConfigMode
+helpviewer_keywords:
+- SQLSetConfigMode function [ODBC]
 ms.assetid: 09eb88ea-b6f6-4eca-b19d-0951cebc6c0a
-caps.latest.revision: "8"
+caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
-ms.workload: Inactive
-ms.openlocfilehash: 3b9305a4b9cbbf8ce7316d1c3eccf71115e5f0fe
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+manager: craigg
+ms.openlocfilehash: 58cb5aabecfbccb3d8a2133f2d48e198e0fba0ce
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sqlsetconfigmode-function"></a>SQLSetConfigMode 函式
 **一致性**  
@@ -59,7 +60,7 @@ BOOL SQLSetConfigMode(
 ## <a name="diagnostics"></a>診斷  
  當**SQLSetConfigMode**傳回 FALSE，相關聯 *\*pfErrorCode*可以取得值，藉由呼叫**SQLInstallerError**。 下表列出 *\*pfErrorCode*可以傳回的值**SQLInstallerError** ，並說明每個內容中的這個函式。  
   
-|*\*pfErrorCode*|錯誤|描述|  
+|*\*pfErrorCode*|錯誤|Description|  
 |---------------------|-----------|-----------------|  
 |ODBC_ERROR_INVALID_PARAM_SEQUENCE|無效的參數順序|*WConfigMode* ODBC_USER_DSN、 ODBC_SYSTEM_DSN 或 ODBC_BOTH_DSN 不包含引數。|  
   

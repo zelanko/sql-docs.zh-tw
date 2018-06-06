@@ -1,34 +1,33 @@
 ---
-title: "SQL Server 的 Memory Manager 物件 | Microsoft Docs"
-ms.custom: 
+title: SQL Server 的 Memory Manager 物件 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
 ms.component: performance-monitor
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - SQLServer:Memory Manager
 - Memory Manager object
 ms.assetid: dbf49000-eeb0-4e9c-a361-5092363920dc
-caps.latest.revision: 
+caps.latest.revision: 29
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 3e385362666a573b97579a3f0e99924152b1bcdd
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 89b69f14e131453519bbaae77f16d629444eb169
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sql-server-memory-manager-object"></a>SQL Server 的 Memory Manager 物件
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的 **Memory Manager** 物件提供計數器，可監視整體的伺服器記憶體使用狀況。 監視整體的伺服器記憶體使用狀況以估計使用者活動和資源使用狀況，可協助您找出效能瓶頸。 監視 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體所使用的記憶體，有助於判定：  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  Microsoft **中的** Memory Manager [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 物件提供計數器，可監視整體的伺服器記憶體使用狀況。 監視整體的伺服器記憶體使用狀況以估計使用者活動和資源使用狀況，可協助您找出效能瓶頸。 監視 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體所使用的記憶體，有助於判定：  
   
 -   是否因為實體記憶體不足，無法將經常存取的資料儲存在快取中，而產生瓶頸。 若記憶體不足， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 必須從磁碟擷取資料。  
   
@@ -54,7 +53,7 @@ ms.lasthandoff: 01/18/2018
 |**Memory Grants Outstanding**|指定成功取得工作空間記憶體授權的處理序總數。|  
 |**Memory Grants Pending**|指定等候工作空間記憶體授權的處理序總數。|  
 |**Optimizer Memory (KB)**|指定伺服器用於查詢最佳化的動態記憶體總數。|  
-|**Reserved Server Memory (KB)**|表示伺服器已保留供未來使用的記憶體數量。 這個計數器會顯示最初授與之記憶體 ( **Granted Workspace Memory (KB)**中所示) 的目前未使用數量。|  
+|**Reserved Server Memory (KB)**|表示伺服器已保留供未來使用的記憶體數量。 這個計數器會顯示最初授與之記憶體 ( **Granted Workspace Memory (KB)** 中所示) 的目前未使用數量。|  
 |**SQL Cache Memory (KB)**|指定伺服器用於動態 SQL 快取的動態記憶體總數。|  
 |**Stolen Server Memory (KB)**|指定伺服器用於資料庫頁面以外用途的記憶體數量。|  
 |**Target Server Memory (KB)**|指出伺服器可用的理想記憶體數量。|  

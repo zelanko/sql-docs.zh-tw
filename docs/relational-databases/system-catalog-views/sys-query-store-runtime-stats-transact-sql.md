@@ -1,16 +1,14 @@
 ---
-title: "sys.query_store_runtime_stats (TRANSACT-SQL) |Microsoft 文件"
-ms.custom: 
+title: sys.query_store_runtime_stats (TRANSACT-SQL) |Microsoft 文件
+ms.custom: ''
 ms.date: 03/29/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
 ms.component: system-catalog-views
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: system-objects
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - SYS.QUERY_STORE_RUNTIME_STATS_TSQL
@@ -23,16 +21,16 @@ helpviewer_keywords:
 - query_store_runtime_stats catalog view
 - sys.query_store_runtime_stats catalog view
 ms.assetid: ccf7a57c-314b-450c-bd34-70749a02784a
-caps.latest.revision: 
+caps.latest.revision: 18
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 8cf026cb9beff10c6570a94bdd805aa2b78c0a4d
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 85bb7aa5bf91f8d357556adac9e58fb6ab83df24
+ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="sysquerystoreruntimestats-transact-sql"></a>sys.query_store_runtime_stats (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -42,10 +40,10 @@ ms.lasthandoff: 11/21/2017
 |資料行名稱|資料類型|Description|  
 |-----------------|---------------|-----------------|  
 |**runtime_stats_id**|**bigint**|代表執行階段執行統計資料的資料列的識別項**plan_id**， **execution_type**和**runtime_stats_interval_id**。 它是唯一的只會針對過去的執行階段統計資料間隔。 對於目前有效間隔可能代表執行階段統計資料所參考的計劃的多個資料列**plan_id**，與所代表的執行類型**execution_type**。 一般而言，一個資料列都代表執行階段統計資料會排清至磁碟，而其他 (s) 代表記憶體中狀態。 因此，若要取得每個間隔中的實際狀態您要彙總的度量資訊分組所依據**plan_id**， **execution_type**和**runtime_stats_interval_id**。 |  
-|**plan_id**|**bigint**|外部索引鍵。 加入[sys.query_store_plan &#40;TRANSACT-SQL &#41;](../../relational-databases/system-catalog-views/sys-query-store-plan-transact-sql.md).|  
-|**runtime_stats_interval_id**|**bigint**|外部索引鍵。 加入[sys.query_store_runtime_stats_interval &#40;TRANSACT-SQL &#41;](../../relational-databases/system-catalog-views/sys-query-store-runtime-stats-interval-transact-sql.md).|  
+|**plan_id**|**bigint**|外部索引鍵。 加入[sys.query_store_plan &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-plan-transact-sql.md)。|  
+|**runtime_stats_interval_id**|**bigint**|外部索引鍵。 加入[sys.query_store_runtime_stats_interval &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-runtime-stats-interval-transact-sql.md)。|  
 |**execution_type**|**tinyint**|判斷執行查詢的類型：<br /><br /> 0 – 正常執行 （成功完成）<br /><br /> 3 – 由用戶端起始已中止執行<br /><br /> 4-例外狀況已中止執行|  
-|**execution_type_desc**|**nvarchar （128)**|執行類型欄位的文字描述：<br /><br /> 0 – 一般<br /><br /> 3 – 中止<br /><br /> 4-例外狀況|  
+|**execution_type_desc**|**nvarchar(128)**|執行類型欄位的文字描述：<br /><br /> 0 – 一般<br /><br /> 3 – 中止<br /><br /> 4-例外狀況|  
 |**first_execution_time**|**datetimeoffset**|查詢計劃的彙總間隔內的第一個執行時間。|  
 |**last_execution_time**|**datetimeoffset**|上次執行時間的查詢計劃的彙總間隔內。|  
 |**count_executions**|**bigint**|執行查詢計畫的彙總間隔內的總計數。|  
@@ -103,16 +101,16 @@ ms.lasthandoff: 11/21/2017
 ## <a name="permissions"></a>Permissions  
  需要**VIEW DATABASE STATE**權限。  
   
-## <a name="see-also"></a>請參閱＜  
- [sys.database_query_store_options &#40;TRANSACT-SQL &#41;](../../relational-databases/system-catalog-views/sys-database-query-store-options-transact-sql.md)   
- [sys.query_context_settings &#40;TRANSACT-SQL &#41;](../../relational-databases/system-catalog-views/sys-query-context-settings-transact-sql.md)   
- [sys.query_store_plan &#40;TRANSACT-SQL &#41;](../../relational-databases/system-catalog-views/sys-query-store-plan-transact-sql.md)   
- [sys.query_store_query &#40;TRANSACT-SQL &#41;](../../relational-databases/system-catalog-views/sys-query-store-query-transact-sql.md)   
- [sys.query_store_query_text &#40;TRANSACT-SQL &#41;](../../relational-databases/system-catalog-views/sys-query-store-query-text-transact-sql.md)   
+## <a name="see-also"></a>另請參閱  
+ [sys.database_query_store_options &#40;Transact SQL&#41;](../../relational-databases/system-catalog-views/sys-database-query-store-options-transact-sql.md)   
+ [sys.query_context_settings &#40;Transact SQL&#41;](../../relational-databases/system-catalog-views/sys-query-context-settings-transact-sql.md)   
+ [sys.query_store_plan &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-plan-transact-sql.md)   
+ [sys.query_store_query &#40;Transact SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-query-transact-sql.md)   
+ [sys.query_store_query_text &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-query-text-transact-sql.md)   
  [sys.query_store_wait_stats &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-wait-stats-transact-sql.md)  
- [sys.query_store_runtime_stats_interval &#40;TRANSACT-SQL &#41;](../../relational-databases/system-catalog-views/sys-query-store-runtime-stats-interval-transact-sql.md)   
- [使用查詢存放區監視效能](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)   
+ [sys.query_store_runtime_stats_interval &#40;Transact SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-runtime-stats-interval-transact-sql.md)   
+ [相關檢視、函數與程序](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)   
  [目錄檢視 &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
- [查詢存放區預存程序 &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/query-store-stored-procedures-transact-sql.md)  
+ [查詢存放區預存程序&#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/query-store-stored-procedures-transact-sql.md)  
   
   

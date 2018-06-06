@@ -1,31 +1,17 @@
 ---
-title: "SQL Server 機器學習服務教學課程 |Microsoft 文件"
-ms.date: 12/14/2017
-ms.reviewer: 
-ms.suite: sql
-ms.prod: machine-learning-services
-ms.prod_service: machine-learning-services
-ms.component: 
-ms.technology: 
-ms.tgt_pltfrm: 
+title: SQL Server 機器學習服務教學課程 |Microsoft 文件
+ms.prod: sql
+ms.technology: machine-learning
+ms.date: 04/15/2018
 ms.topic: tutorial
-applies_to:
-- SQL Server 2016
-- SQL Server 2017
-dev_langs:
-- Python
-- R
-ms.assetid: 5ccc75f6-6703-47d9-b879-9a740569b45e
-caps.latest.revision: 
-author: jeannt
-ms.author: jeannt
-manager: cgronlund
-ms.workload: On Demand
-ms.openlocfilehash: 2d15f47fd148cb7b1f0edf399e94502c3570eabd
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+author: HeidiSteen
+ms.author: heidist
+manager: cgronlun
+ms.openlocfilehash: 604bbe9eb2a28c32b862174ce5da9cc5092e0c64
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="tutorials-for-sql-server-machine-learning-services"></a>SQL Server 機器學習服務的教學課程
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -111,8 +97,8 @@ Microsoft 資料科學團隊提供的解決方案範本，可用來快速啟動�
 
 若要執行這些教學課程，您必須下載並安裝 SQL Server 機器學習的元件，如下所示：
 
-+ [設定 SQL Server 2017 機器學習服務或 SQL Server 2016 R Services](../r/set-up-sql-server-r-services-in-database.md)
-+ [設定 SQL Server 2017 Python 的服務](../python/setup-python-machine-learning-services.md)
++ [安裝 SQL Server 2017 機器學習服務 （資料庫）](../install/sql-machine-learning-services-windows-install.md)
++ [安裝 SQL Server 2016 R Services （資料庫）](../install/sql-r-services-windows-install.md)
 
 使用 SQL Server 2017，您可以安裝 R 或 Python，或兩者。 否則整體的安裝程序、 架構和需求都相同。
 

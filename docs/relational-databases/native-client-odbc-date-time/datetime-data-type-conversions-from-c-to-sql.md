@@ -1,29 +1,28 @@
 ---
-title: "從 C 轉換成 SQL |Microsoft 文件"
-ms.custom: 
+title: 從 C 轉換成 SQL |Microsoft 文件
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
 ms.component: native-client-odbc-date-time
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - conversions [ODBC], C to SQL
 ms.assetid: 7ac098db-9147-4883-8da9-a58ab24a0d31
-caps.latest.revision: 
+caps.latest.revision: 35
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: de47b5b75d0823d7cae56db844a1d84bbac25f2f
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: d1e307f12de6f298381e1e314a343eaece6353ad
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="datetime-data-type-conversions-from-c-to-sql"></a>datetime 資料類型從 C 轉換成 SQL
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -31,7 +30,7 @@ ms.lasthandoff: 01/25/2018
 
   本主題列出當您從 C 類型轉換成應該考量的問題[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]日期/時間類型。  
   
- 下表描述的轉換會套用到用戶端上進行的轉換。 在用戶端上指定的參數與不同伺服器上定義的小數秒有效位數的情況下，用戶端轉換可能會成功，但伺服器會傳回錯誤時**SQLExecute**或**SQLExecuteDirect**呼叫。 特別是，ODBC 會將任何截斷的小數秒視為錯誤，而[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]行為會捨去，例如四捨五入時，就會從**datetime2(6)**至**datetime2(2)**. Datetime 資料行值會捨去為一秒的 1/300，而 smalldatetime 資料行的秒數會由伺服器設定為零。  
+ 下表描述的轉換會套用到用戶端上進行的轉換。 在用戶端上指定的參數與不同伺服器上定義的小數秒有效位數的情況下，用戶端轉換可能會成功，但伺服器會傳回錯誤時**SQLExecute**或**SQLExecuteDirect**呼叫。 特別是，ODBC 會將任何截斷的小數秒視為錯誤，而[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]行為會捨去，例如四捨五入時，就會從**datetime2(6)** 至**datetime2(2)**. Datetime 資料行值會捨去為一秒的 1/300，而 smalldatetime 資料行的秒數會由伺服器設定為零。  
   
 |||||||||  
 |-|-|-|-|-|-|-|-|  
@@ -99,6 +98,6 @@ ms.lasthandoff: 01/25/2018
 -   **N/A**： 現有[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]，而會保留舊有的行為。  
   
 ## <a name="see-also"></a>另請參閱  
- [日期和時間增強功能 &#40; ODBC &#41;](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)  
+ [日期和時間增強功能 & #40; ODBC & #41;](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)  
   
   

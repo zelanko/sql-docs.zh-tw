@@ -1,16 +1,15 @@
 ---
-title: "srv_setcoldata (擴充預存程序 API) | Microsoft Docs"
-ms.custom: 
+title: srv_setcoldata (擴充預存程序 API) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/04/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
 ms.component: extended-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - srv_setcoldata
@@ -22,16 +21,15 @@ dev_langs:
 helpviewer_keywords:
 - srv_setcoldata
 ms.assetid: 2e19205a-25ca-4d4a-916b-d591cf2c892b
-caps.latest.revision: 
+caps.latest.revision: 33
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 8be41b91658e1eeb2b5da1c361d64b76829e6126
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
-ms.translationtype: MT
+ms.openlocfilehash: 1575c262c190c014fe478cb0c4aa039688a12b5f
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="srvsetcoldata-extended-stored-procedure-api"></a>srv_setcoldata (擴充預存程序 API)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -70,7 +68,7 @@ data
 ## <a name="returns"></a>傳回值  
  SUCCEED 或 FAIL。  
   
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>Remarks  
  資料列的每個資料行必須先用 **srv_describe** 定義。 資料行資料位址最初是以 **srv_describe** 設定。 如果資料行資料的位址變更，則必須呼叫 **srv_setcoldata** 來指定資料的新位址，而且必須針對每一個變更的資料行個別呼叫 **srv_setcoldata**。  
   
  Null 資料的表示方式是使用 **srv_setcollen** 將資料行的長度設定為 0。 然後會忽略資料位址。  

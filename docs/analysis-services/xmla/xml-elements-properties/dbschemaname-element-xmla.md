@@ -1,39 +1,24 @@
 ---
-title: "DbSchemaName 元素 (XMLA) |Microsoft 文件"
-ms.custom: 
-ms.date: 03/03/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services, azure-analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+title: DbSchemaName 元素 (XMLA) |Microsoft 文件
+ms.date: 05/08/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: xmla
 ms.topic: reference
-apiname: DbSchemaName Element
-apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
-apitype: Schema
-applies_to: SQL Server 2016 Preview
-f1_keywords:
-- urn:schemas-microsoft-com:xml-analysis#DbSchemaName
-- microsoft.xml.analysis.dbschemaname
-- http://schemas.microsoft.com/analysisservices/2003/engine#DbSchemaName
-helpviewer_keywords: DbSchemaName element
-ms.assetid: 40ca10c9-7597-48fe-a9d9-ee2c7b84d4d1
-caps.latest.revision: "12"
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: fa236e2cbb5e9ac572bbb637643eeb8f07312168
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 2a91af2de915ac4147e8e10a9aa3469a7cbbe63a
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34577870"
 ---
 # <a name="dbschemaname-element-xmla"></a>DbSchemaName 元素 (XMLA)
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]包含父系所使用的結構描述名稱[TableNotification](../../../analysis-services/xmla/xml-elements-properties/tablenotification-element-xmla.md)所識別之資料表中的項目[DbTableName](../../../analysis-services/xmla/xml-elements-properties/dbtablename-element-xmla.md)項目。  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
+  包含父系所使用的結構描述名稱[TableNotification](../../../analysis-services/xmla/xml-elements-properties/tablenotification-element-xmla.md)所識別之資料表中的項目[DbTableName](../../../analysis-services/xmla/xml-elements-properties/dbtablename-element-xmla.md)項目。  
   
 ## <a name="syntax"></a>語法  
   
@@ -63,7 +48,7 @@ ms.lasthandoff: 01/08/2018
   
 ## <a name="remarks"></a>備註  
   
-## <a name="see-also"></a>請參閱  
- [屬性 &#40;XMLA &#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
+## <a name="see-also"></a>另請參閱
+ [屬性&#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
   
   

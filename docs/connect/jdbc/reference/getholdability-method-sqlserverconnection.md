@@ -1,30 +1,29 @@
 ---
-title: "getHoldability 方法 (SQLServerConnection) |Microsoft 文件"
-ms.custom: 
+title: getHoldability 方法 (SQLServerConnection) |Microsoft 文件
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
-ms.component: jdbc
-ms.reviewer: 
+ms.prod: sql
+ms.prod_service: connectivity
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
-ms.topic: article
-apiname: SQLServerConnection.getHoldability
-apilocation: sqljdbc.jar
+ms.technology: connectivity
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
+apiname:
+- SQLServerConnection.getHoldability
+apilocation:
+- sqljdbc.jar
 apitype: Assembly
 ms.assetid: b1644791-c36a-4837-86c4-9299537ee1c2
-caps.latest.revision: "11"
+caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
-ms.workload: Inactive
-ms.openlocfilehash: 9c7004b0720e285eaf031be2b79588caf3577325
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+manager: craigg
+ms.openlocfilehash: a2aa0c83ab2fc5148194a402359e445984369cc9
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="getholdability-method-sqlserverconnection"></a>getHoldability 方法 (SQLServerConnection)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -51,7 +50,7 @@ public int getHoldability()
 ## <a name="remarks"></a>備註  
  GetHoldability 方法 java.sql.Connection 介面中所指定此 getHoldability 方法。  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [SQLServerConnection 成員](../../../connect/jdbc/reference/sqlserverconnection-members.md)   
  [SQLServerConnection 類別](../../../connect/jdbc/reference/sqlserverconnection-class.md)  
   

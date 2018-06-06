@@ -1,37 +1,28 @@
 ---
-title: "第 5 課： 建立關聯性 |Microsoft 文件"
-ms.custom: 
-ms.date: 03/27/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services, azure-analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: get-started-article
-applies_to: SQL Server 2016
-ms.assetid: abac1a00-f827-4c3e-a473-6db5c8a3a66f
-caps.latest.revision: "29"
-author: Minewiskan
+title: 第 5 課： 建立關聯性 |Microsoft 文件
+ms.date: 05/08/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: tabular-models
+ms.topic: tutorial
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 318b583cc92dcd70c75f0eb04be262a82ecf7d1d
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 36993a468a6997ff8de40da542deac00b25b18b4
+ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="lesson-4-create-relationships"></a>第 4 課： 建立關聯性
 [!INCLUDE[ssas-appliesto-sql2016-later-aas](../includes/ssas-appliesto-sql2016-later-aas.md)]
 
 在這一課將驗證匯入資料時自動建立的關聯性，並加入不同資料表之間的新關聯性。 關聯性是在兩個資料表之間的一種連接，這種連接會建立這兩個資料表中資料相互關聯的方式。 例如，DimProduct 資料表和 DimProductSubcategory 資料表的關聯性是以每個產品都屬於某個子類別目錄為基礎。 若要進一步了解，請參閱[關聯性](../analysis-services/tabular-models/relationships-ssas-tabular.md)。
   
-完成本課程的估計時間： **10 分鐘**  
+完成本課程的估計時間：**10 分鐘**  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>必要條件  
 本主題是表格式模型教學課程的一部分，必須依序完成。 然後再執行工作，在這一課，您應已完成上一課：[第 3 課： 標記為日期資料表](../analysis-services/lesson-3-mark-as-date-table.md)。 
   
 ## <a name="review-existing-relationships-and-add-new-relationships"></a>檢閱現有的關聯性並加入新的關聯性  

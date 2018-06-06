@@ -1,32 +1,31 @@
 ---
-title: "sqlsrv_rows_affected |Microsoft 文件"
-ms.custom: 
+title: sqlsrv_rows_affected |Microsoft 文件
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
+ms.prod: sql
+ms.prod_service: connectivity
 ms.component: php
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
-ms.topic: article
-apiname: sqlsrv_rows_affected
+ms.technology: connectivity
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
+apiname:
+- sqlsrv_rows_affected
 apitype: NA
 helpviewer_keywords:
 - sqlsrv_rows_affected
 - API Reference, sqlsrv_rows_affected
 ms.assetid: 6f43fbfc-fc92-449b-82d0-33fa780e8f09
-caps.latest.revision: "24"
+caps.latest.revision: 24
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
-ms.workload: Inactive
-ms.openlocfilehash: 62fd71d47b762680d9c85a24366c0c3b55cf9109
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+manager: craigg
+ms.openlocfilehash: 2f831a585310f0233faaecd77911bafc061ac9c6
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sqlsrvrowsaffected"></a>sqlsrv_rows_affected
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -47,7 +46,7 @@ sqlsrv_rows_affected( resource $stmt)
 一個整數，表示上次執行的陳述式所修改的資料列數目。 如果未修改任何資料列，則會傳回零 (0)。 如果已修改的資料列數目沒有相關資訊可供參考，則會傳回負一 (-1)。 如果在擷取已修改的資料列數目時發生錯誤，則會傳回 **false** 。  
   
 ## <a name="example"></a>範例  
-下列範例顯示 UPDATE 陳述式所修改的資料列數目。 此範例假設本機電腦上已安裝 SQL Server 和 [AdventureWorks](http://go.microsoft.com/fwlink/?LinkID=67739) 資料庫。 從命令列執行範例時，所有輸出都會寫入至主控台。  
+下列範例顯示 UPDATE 陳述式所修改的資料列數目。 此範例假設 SQL Server 和[AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works)資料庫安裝在本機電腦上。 從命令列執行範例時，所有輸出都會寫入至主控台。  
   
 ```  
 <?php  
@@ -97,6 +96,9 @@ sqlsrv_close( $conn);
   
 ## <a name="see-also"></a>另請參閱  
 [SQLSRV 驅動程式 API 參考](../../connect/php/sqlsrv-driver-api-reference.md)  
+
 [關於文件中的程式碼範例](../../connect/php/about-code-examples-in-the-documentation.md)  
+
 [更新資料 &#40;Microsoft Drivers for PHP for SQL Server&#41;](../../connect/php/updating-data-microsoft-drivers-for-php-for-sql-server.md)  
+
   

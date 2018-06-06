@@ -1,35 +1,34 @@
 ---
-title: "sys.pdw_loader_backup_runs (TRANSACT-SQL) |Microsoft 文件"
-ms.custom: 
+title: sys.pdw_loader_backup_runs (TRANSACT-SQL) |Microsoft 文件
+ms.custom: ''
 ms.date: 03/06/2017
-ms.prod: 
+ms.prod: ''
 ms.prod_service: sql-data-warehouse, pdw
 ms.service: sql-data-warehouse
 ms.component: system-catalog-views
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: system-objects
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - TSQL
 ms.assetid: 2b72034c-6a11-46b9-a76c-7a88b2bea360
-caps.latest.revision: 
-author: barbkess
-ms.author: barbkess
+caps.latest.revision: 10
+author: ronortloff
+ms.author: rortloff
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 2bc42a27de363d0c1f3e62a4b3f69b8b9fbb95de
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
+ms.openlocfilehash: c9de90ab3777e8f432f29cb16002e629862f12f3
+ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 05/04/2018
 ---
-# <a name="syspdwloaderbackupruns-transact-sql"></a>sys.pdw_loader_backup_runs (Transact-SQL)
+# <a name="syspdwloaderbackupruns-transact-sql"></a>sys.pdw_loader_backup_runs (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
-  包含有關進行中和已完成的備份和還原作業中的資訊[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]，以及有關進行中和已完成的備份、 還原及載入作業中的[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]。 資訊會保留在系統重新啟動。  
+  包含有關進行中和已完成的備份和還原作業中的資訊[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]，以及有關進行中和已完成的備份、 還原及載入作業中的[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]。 此資訊在系統重新啟動之後會持續存留。  
   
 |資料行名稱|資料類型|Description|範圍|  
 |-----------------|---------------|-----------------|-----------|  
@@ -44,8 +43,8 @@ ms.lasthandoff: 02/03/2018
 |database_name|**nvarchar(255)**|這項作業的內容資料庫的名稱||  
 |table_name|**nvarchar(255)**|[!INCLUDE[ssInfoNA](../../includes/ssinfona-md.md)]||  
 |Principal_id|**int**|要求作業的使用者識別碼。||  
-|session_id|**nvarchar(32)**|執行作業的工作階段識別碼。|請參閱中的 session_id [sys.dm_pdw_exec_sessions &#40;TRANSACT-SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-sessions-transact-sql.md).|  
-|request_id|**nvarchar(32)**|執行作業之要求的識別碼。 若是載入，這是與此負載關聯的目前或上一個要求...|請參閱中的 request_id [sys.dm_pdw_exec_requests &#40;TRANSACT-SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-requests-transact-sql.md).|  
+|session_id|**nvarchar(32)**|執行作業的工作階段識別碼。|請參閱中的 session_id [sys.dm_pdw_exec_sessions &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-sessions-transact-sql.md)。|  
+|request_id|**nvarchar(32)**|執行作業之要求的識別碼。 若是載入，這是與此負載關聯的目前或上一個要求...|請參閱中的 request_id [sys.dm_pdw_exec_requests &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-requests-transact-sql.md)。|  
 |status|**nvarchar(16)**|執行狀態。|'取消'，' 填寫 '，'失敗'、 '佇列更新'、 '執行'|  
 |進度|**int**|完成的百分比。|0 到 100|  
 |command|**nvarchar(4000)**|使用者所提交的命令的完整文字。|如果超過 4000 個字元 （計數為空格） 會被截斷。|  

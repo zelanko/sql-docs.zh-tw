@@ -1,16 +1,14 @@
 ---
-title: "sp_estimate_data_compression_savings (TRANSACT-SQL) |Microsoft 文件"
-ms.custom: 
+title: sp_estimate_data_compression_savings (TRANSACT-SQL) |Microsoft 文件
+ms.custom: ''
 ms.date: 03/15/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: system-objects
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_estimate_data_compression_savings_TSQL
@@ -21,16 +19,15 @@ helpviewer_keywords:
 - compression [SQL Server], estimating
 - sp_estimate_data_compression_savings
 ms.assetid: 6f6c7150-e788-45e0-9d08-d6c2f4a33729
-caps.latest.revision: 
+caps.latest.revision: 27
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: acb61e6c699728902bc7ada6d5cfd7e12febb1c8
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 25798372f2b949446b746164665dbfe6752443d7
+ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="spestimatedatacompressionsavings-transact-sql"></a>sp_estimate_data_compression_savings (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -67,7 +64,7 @@ sp_estimate_data_compression_savings
  這是包含資料表或索引檢視表的資料庫結構描述名稱。 *schema_name*是**sysname**。 如果*schema_name*為 NULL，就會使用目前使用者的預設結構描述。  
   
  [ @object_name=] '*object_name*'  
- 這是索引所在的資料表或索引檢視表名稱。 *object_name*是**sysname**。  
+ 這是索引所在的資料表或索引檢視表名稱。 *object_name* 是 **sysname**.  
   
  [ @index_id=] '*index_id*'  
  這是索引的識別碼。 *index_id*是**int**，而且可以是下列值之一： 索引、 NULL 或 0 的 ID 編號*object_id*是堆積。 若要傳回基底資料表或檢視表的所有索引相關資訊，請指定 NULL。 如果您指定 NULL，您也必須指定為 NULL 。  
@@ -126,11 +123,11 @@ EXEC sp_estimate_data_compression_savings 'Production', 'WorkOrderRouting', NULL
 GO  
 ```  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)   
  [CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md)   
- [sys.partitions &#40;TRANSACT-SQL &#41;](../../relational-databases/system-catalog-views/sys-partitions-transact-sql.md)   
- [Database Engine 預存程序 &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
+ [sys.partitions &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-partitions-transact-sql.md)   
+ [Database Engine 預存程序&#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
  [Unicode 壓縮實作](../../relational-databases/data-compression/unicode-compression-implementation.md)  
   
   

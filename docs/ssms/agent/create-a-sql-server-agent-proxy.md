@@ -1,31 +1,36 @@
 ---
-title: "建立 SQL Server Agent Proxy | Microsoft Docs"
-ms.custom: 
+title: 建立 SQL Server Agent Proxy | Microsoft Docs
+ms.custom: ''
 ms.date: 05/04/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
 ms.component: ssms-agent
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: tools-ssms
-ms.tgt_pltfrm: 
-ms.topic: article
-helpviewer_keywords: proxies [SQL Server Agent], creating
+ms.technology: ssms
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
+helpviewer_keywords:
+- proxies [SQL Server Agent], creating
 ms.assetid: 142e0c55-a8b9-4669-be49-b9dc602d5988
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 7324511079eacd48c36309b287253f1d17fd9e9d
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 90acdf01a88ad5ae7e85775b5229df1a152a3669
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="create-a-sql-server-agent-proxy"></a>建立 SQL Server Agent Proxy
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 本主題描述如何使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] 或 [!INCLUDE[tsql](../../includes/tsql_md.md)]，在 [!INCLUDE[ssCurrent](../../includes/sscurrent_md.md)] 中建立 SQL Server Agent Proxy。  
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+
+> [!IMPORTANT]  
+> [Azure SQL Database 受控執行個體](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)目前支援多數 (但非全部) 的 SQL Server Agent 功能。 如需詳細資料，請參閱 [Azure SQL Database 受控執行個體與 SQL Server 之間的 T-SQL 差異](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)。
+
+此主題描述如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent_md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] ，在 [!INCLUDE[tsql](../../includes/tsql_md.md)]中建立 SQL Server Agent Proxy。  
   
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent Proxy 帳戶會定義作業步驟可以在其中執行的安全性內容。 每個 Proxy 都對應於一個安全性認證。 若要設定特定作業步驟的權限，請建立具有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent 子系統之必要權限的 Proxy，然後將該 Proxy 指派給作業步驟。  
   
@@ -69,7 +74,7 @@ ms.lasthandoff: 01/17/2018
   
 #### <a name="to-create-a-sql-server-agent-proxy"></a>若要建立 SQL Server Agent Proxy  
   
-1.  在 **[物件總管]**中，按一下加號展開要建立 SQL Server Agent Proxy 的伺服器。  
+1.  在 **[物件總管]** 中，按一下加號展開要建立 SQL Server Agent Proxy 的伺服器。  
   
 2.  按一下加號展開 **[SQL Server Agent]**。  
   
@@ -81,7 +86,7 @@ ms.lasthandoff: 01/17/2018
   
 6.  在 **[說明]** 方塊中，輸入 Proxy 帳戶的說明。  
   
-7.  在 **[對下列子系統有效]**下，選取此 Proxy 的適當子系統。  
+7.  在 **[對下列子系統有效]** 下，選取此 Proxy 的適當子系統。  
   
 8.  在 **[主體]** 頁面上，加入或移除登入或角色，藉此授與或移除 Proxy 帳戶的存取。  
   
@@ -91,7 +96,7 @@ ms.lasthandoff: 01/17/2018
   
 #### <a name="to-create-a-sql-server-agent-proxy"></a>若要建立 SQL Server Agent Proxy  
   
-1.  在 **[物件總管]**中，連接到 [!INCLUDE[ssDE](../../includes/ssde_md.md)]的執行個體。  
+1.  在 **[物件總管]** 中，連接到 [!INCLUDE[ssDE](../../includes/ssde_md.md)]的執行個體。  
   
 2.  在標準列上，按一下 **[新增查詢]**。  
   

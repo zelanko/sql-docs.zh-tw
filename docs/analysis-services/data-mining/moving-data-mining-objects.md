@@ -1,37 +1,23 @@
 ---
-title: "移動資料採礦物件 |Microsoft 文件"
-ms.custom: 
-ms.date: 03/06/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
-helpviewer_keywords:
-- data mining [Analysis Services], models
-- data mining editor [Analysis Services]
-- mining models [Analysis Services], managing
-- Data Mining Designer
-- mining models [Analysis Services], modifying
-ms.assetid: bc108407-2603-4387-b930-b5bb9df78069
-caps.latest.revision: 
-author: Minewiskan
+title: 移動資料採礦物件 |Microsoft 文件
+ms.date: 05/08/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: data-mining
+ms.topic: conceptual
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: c43da2044b4f3231d947c88626cb43081fb29f6a
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: edbceb50dd1532e427c3bf5738dfe183223afc2d
+ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="moving-data-mining-objects"></a>移動資料採礦物件
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-移動資料採礦物件的最常見情形是將模型從測試或分析環境部署到實際執行環境，或者與其他使用者共用模型。  
+  移動資料採礦物件的最常見情形是將模型從測試或分析環境部署到實際執行環境，或者與其他使用者共用模型。  
   
  本主題描述如何使用 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]提供的工具和指令碼語言來移動資料採礦物件。  
   
@@ -54,7 +40,7 @@ ms.lasthandoff: 02/15/2018
  如需部署 Analysis Services 方案的詳細資訊，請參閱[部署 Analysis Services 專案 &#40;SSDT&#41;](../../analysis-services/multidimensional-models/deploy-analysis-services-projects-ssdt.md)。  
   
 ### <a name="scripting"></a>指令碼  
- [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 提供了數種語言，可用於編寫物件的指令碼。  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]提供數種語言，您可以使用指令碼物件。  
   
 -   **XMLA**：您可以在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中以滑鼠右鍵按一下物件，使用 XMLA 編寫物件的指令碼。 若要執行指令碼，請在目標伺服器上的 [XMLA 查詢] 視窗中開啟指令碼。  
   
@@ -80,9 +66,9 @@ ms.lasthandoff: 02/15/2018
 ### <a name="exporting-and-importing"></a>匯出和匯入  
  利用 DMX 陳述式匯出採礦模型與結構，然後重新匯入，是移動或備份個別關聯式資料採礦物件最方便的方式。 如需有關這些作業之 DMX 語法的詳細資訊，請參閱下列主題：  
   
--   [匯出 &#40; DMX &#41;](../../dmx/export-dmx.md)  
+-   [匯出 & #40; DMX & #41;](../../dmx/export-dmx.md)  
   
--   [匯入 &#40; DMX &#41;](../../dmx/import-dmx.md)  
+-   [匯入 & #40; DMX & #41;](../../dmx/import-dmx.md)  
   
  如果您指定了 INCLUDE DEPENDENCIES 選項，[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 也會匯出任何所需資料來源檢視的定義，而且當您匯入模型或結構時，它將在目標伺服器上重新建立資料來源檢視。 在您已經完成匯入模型的作業之後，請務必針對此物件設定必要的採礦權限。  
   

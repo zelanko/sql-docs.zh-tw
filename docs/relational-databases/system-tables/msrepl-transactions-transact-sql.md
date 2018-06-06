@@ -1,16 +1,15 @@
 ---
-title: "MSrepl_transactions (TRANSACT-SQL) |Microsoft 文件"
-ms.custom: 
+title: MSrepl_transactions (TRANSACT-SQL) |Microsoft 文件
+ms.custom: ''
 ms.date: 03/04/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
 ms.component: system-tables
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -22,16 +21,15 @@ dev_langs:
 helpviewer_keywords:
 - MSrepl_transactions system table
 ms.assetid: d325288d-47ae-4488-8799-122f7ab43459
-caps.latest.revision: 
+caps.latest.revision: 28
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 70b86f4358706c5577e766c25a35d375b493cd0c
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 759731cb732df806915e6da23cbec80ad1f222f1
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="msrepltransactions-transact-sql"></a>MSrepl_transactions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,12 +39,12 @@ ms.lasthandoff: 11/21/2017
 |資料行名稱|資料類型|Description|  
 |-----------------|---------------|-----------------|  
 |**publisher_database_id**|**int**|發行者資料庫的識別碼。|  
-|**xact_id**|**varbinary （16)**|交易的識別碼。|  
-|**xact_seqno**|**varbinary （16)**|交易的序號。|  
+|**xact_id**|**varbinary(16)**|交易的識別碼。|  
+|**xact_seqno**|**varbinary(16)**|交易的序號。|  
 |**entry_time**|**datetime**|交易進入散發資料庫中的時間。|  
   
-## <a name="see-also"></a>請參閱＜  
- [複寫資料表 &#40;TRANSACT-SQL &#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
+## <a name="see-also"></a>另請參閱  
+ [複寫資料表&#40;Transact SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [複寫檢視 &#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  
   
   

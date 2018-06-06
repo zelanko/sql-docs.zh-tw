@@ -1,33 +1,31 @@
 ---
-title: "套件的 SQL Server Agent 作業 | Microsoft Docs"
-ms.custom: 
+title: 套件的 SQL Server Agent 作業 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
 ms.component: packages
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - jobs [Integration Services]
 - automatic package execution
 - scheduling packages [Integration Services]
 - SQL Server Agent [Integration Services]
 ms.assetid: ecf7a5f9-b8a7-47f1-9ac0-bac07cb89e31
-caps.latest.revision: 
+caps.latest.revision: 54
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: Active
-ms.openlocfilehash: 6b43c3a8b3d438bb211570921e06bb2085c0d022
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 9cb26adf331696cb98901c6c9db387dc4d47f052
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sql-server-agent-jobs-for-packages"></a>封裝的 SQL Server Agent 作業
   您可以使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent，自動化並排程 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 封裝的執行。 您可以排程部署到 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 伺服器，並且儲存到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 封裝存放區及檔案系統的封裝。  
@@ -172,7 +170,7 @@ ms.lasthandoff: 01/25/2018
     |**組態**|加入 XML 組態檔，以特定組態執行封裝。 使用封裝組態在執行階段更新封裝屬性的值。<br /><br /> 此選項對應至 **dtexec** 的 **/ConfigFile**選項。<br /><br /> 如需了解封裝組態套用的方式，請參閱＜ [Package Configurations](../../integration-services/packages/package-configurations.md)＞。 如需如何建立封裝組態的資訊，請參閱 [建立封裝組態](../../integration-services/packages/create-package-configurations.md)。|  
     |**命令檔**|在另一個檔案中，指定要以 **dtexec**執行的其他選項。<br /><br /> 例如，您可以納入包含 /Dump *errorcode* 選項的檔案，以便在封裝執行過程中發生一個或多個指定的事件時，產生偵錯傾印檔案。<br /><br /> 您可以建立多個檔案，然後使用 [命令檔] 選項指定適當的檔案，藉此以不同的選項組合執行封裝。<br /><br /> [命令檔] 選項對應至 **dtexec** 的 **/CommandFile** 選項。|  
     |**資料來源**|檢視包含在封裝中的連接管理員。 若要修改連接字串，請按一下連接管理員，然後按一下連接字串。<br /><br /> 此選項對應至 **dtexec** 的 **/Connection**選項。|  
-    |**執行選項**|**發生驗證警告時封裝就失敗**<br /> 指出是否將警告訊息視為錯誤。 如果您選取此選項，而在驗證期間發生警告，則封裝會在驗證期間失敗。 此選項對應至 **dtexec** 的 **/WarnAsError**選項。<br /><br /> **驗證封裝但不執行**<br /> 指出在驗證階段之後，是否停止執行封裝 (並不會實際執行封裝)。 此選項對應至 **dtexec** 的 **/Validate**選項。<br /><br /> **覆寫 MacConcurrentExecutables 屬性**<br /> 指定封裝可以同時執行的可執行檔數量。 值為 -1，表示封裝可以執行的最大可執行檔數目，等於執行封裝之電腦上的處理器總數再加 2。 此選項對應至 **dtexec** 的 **/MaxConcurrent**選項。<br /><br /> **啟用封裝檢查點**<br /> 指出在執行封裝期間，封裝是否要使用檢查點。 如需詳細資訊，請參閱 [Restart Packages by Using Checkpoints](../../integration-services/packages/restart-packages-by-using-checkpoints.md)。<br /><br /> 此選項對應至 **dtexec** 的 **/CheckPointing**選項。<br /><br /> **覆寫重新啟動選項**<br /> 指出是否為封裝上的 **CheckpointUsage** 屬性設定新值。 從 [重新啟動選項] 清單方塊中選取值。<br /><br /> 此選項對應至 **dtexec** 的 **/Restart**選項。<br /><br /> **使用 32 位元執行階段**<br /> 指出是否在已安裝 64 位元版本之 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 的 64 位元電腦上，使用 32 位元版本的 dtexec 公用程式執行封裝。<br /><br /> 如果您的封裝使用的原生 OLE DB 提供者無法在 64 位元版本中使用，您可能需要使用 32 位元版本的 dtexec 執行封裝。 如需詳細資訊，請參閱 [Integration Services 的 64 位元考量](http://msdn.microsoft.com/library/ms141766\(SQL.105\).aspx)。<br /><br /> 根據預設，當您選取 [SQL Server Integration Services 封裝] 作業步驟類型時，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 會使用系統自動叫用的 dtexec 公用程式版本執行封裝。 系統會根據電腦處理器以及 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的版本和電腦上執行的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent，叫用 32 位元或 64 位元版本的公用程式。|  
+    |**執行選項**|**發生驗證警告時封裝就失敗**<br /> 指出是否將警告訊息視為錯誤。 如果您選取此選項，而在驗證期間發生警告，則封裝會在驗證期間失敗。 此選項對應至 **dtexec** 的 **/WarnAsError**選項。<br /><br /> **驗證封裝但不執行**<br /> 指出在驗證階段之後，是否停止執行封裝 (並不會實際執行封裝)。 此選項對應至 **dtexec** 的 **/Validate**選項。<br /><br /> **覆寫 MacConcurrentExecutables 屬性**<br /> 指定封裝可以同時執行的可執行檔數量。 值為 -1，表示封裝可以執行的最大可執行檔數目，等於執行封裝之電腦上的處理器總數再加 2。 此選項對應至 **dtexec** 的 **/MaxConcurrent**選項。<br /><br /> **啟用封裝檢查點**<br /> 指出在執行封裝期間，封裝是否要使用檢查點。 如需詳細資訊，請參閱 [使用檢查點來重新啟動封裝](../../integration-services/packages/restart-packages-by-using-checkpoints.md)。<br /><br /> 此選項對應至 **dtexec** 的 **/CheckPointing**選項。<br /><br /> **覆寫重新啟動選項**<br /> 指出是否為封裝上的 **CheckpointUsage** 屬性設定新值。 從 [重新啟動選項] 清單方塊中選取值。<br /><br /> 此選項對應至 **dtexec** 的 **/Restart**選項。<br /><br /> **使用 32 位元執行階段**<br /> 指出是否在已安裝 64 位元版本之 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 的 64 位元電腦上，使用 32 位元版本的 dtexec 公用程式執行封裝。<br /><br /> 如果您的封裝使用的原生 OLE DB 提供者無法在 64 位元版本中使用，您可能需要使用 32 位元版本的 dtexec 執行封裝。 如需詳細資訊，請參閱 [Integration Services 的 64 位元考量](http://msdn.microsoft.com/library/ms141766\(SQL.105\).aspx)。<br /><br /> 根據預設，當您選取 [SQL Server Integration Services 封裝] 作業步驟類型時，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 會使用系統自動叫用的 dtexec 公用程式版本執行封裝。 系統會根據電腦處理器以及 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的版本和電腦上執行的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent，叫用 32 位元或 64 位元版本的公用程式。|  
     |**記錄**|讓記錄提供者與執行封裝產生關聯。<br /><br /> **文字檔的 SSIS 記錄提供者**<br /> 將記錄項目寫入 ASCII 文字檔中<br /><br /> **SQL Server 的 SSIS 記錄提供者**<br /> 將記錄項目寫入 MSDB 資料庫中的 sysssislog 資料表。<br /><br /> **SQL Server Profiler 的 SSIS 記錄提供者**<br /> 寫入您可以使用 SQL Server Profiler 檢視的追蹤檔。<br /><br /> **Windows 事件記錄檔的 SSIS 記錄提供者**<br /> 將記錄項目寫入 Windows 事件記錄檔中的應用程式記錄檔。<br /><br /> **XML 檔案的 SSIS 記錄提供者**<br /> 將記錄檔寫入 XML 檔案。<br /><br /> 對於文字檔、XML 檔案和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Profiler 記錄提供者，請選取包含在封裝中的檔案連接管理員。 對於 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 記錄提供者，請選取包含在封裝中的 OLE DB 連線管理員。<br /><br /> 此選項對應至 **dtexec** 的 **/Logger**選項。|  
     |**設定值**|覆寫封裝屬性設定。 在 [屬性] 方塊的 [屬性路徑] 和 [值] 資料行中輸入值。 在您輸入某個屬性的值之後，[屬性] 對話方塊中就會出現一個空白資料列，讓您輸入其他屬性的值。<br /><br /> 若要從 [屬性] 方塊中移除屬性，請按一下資料列，然後按一下 [移除]。<br /><br /> 您可以執行下列其中一個動作來尋找屬性路徑：<br /><br /> -從 XML 組態檔 (\*.dtsconfig) 檔案複製屬性路徑。 路徑會在檔案的 [組態] 區段中列出，做為 [路徑] 屬性的值。 以下是 MaximumErrorCount 屬性的路徑範例：\Package.Properties[MaximumErrorCount]<br /><br /> -執行 [封裝組態精靈]，並從最後的 [正在完成精靈] 頁面複製屬性路徑。 然後您就可以取消精靈。|  
     |**驗證**|**只執行簽署的封裝**<br /> 指出是否已檢查封裝簽章。 如果此封裝未簽署或是簽章無效，此封裝就會失敗。 此選項對應至 **dtexec** 的 **/VerifySigned**選項。<br /><br /> **確認封裝組建**<br /> 指出是否已對照此選項旁的 [組建] 方塊中所輸入的組建編號，驗證封裝的組建編號。 如果發生不符的情形，將不會執行封裝。 此選項對應至 **dtexec** 的 **/VerifyBuild**選項。<br /><br /> **確認封裝識別碼**<br /> 指出是否已驗證封裝的 GUID，方法是將它與此選項旁的 [封裝識別碼] 方塊中所輸入的封裝識別碼相比較。 此選項對應至 **dtexec** 的 **/VerifyPackageID**選項。<br /><br /> **確認版本識別碼**<br /> 指出是否已驗證封裝的版本 GUID，方法是將它與此選項旁的 [版本識別碼] 方塊中所輸入的版本識別碼相比較。 此選項對應至 **dtexec** 的 **/VerifyVersionID**選項。|  

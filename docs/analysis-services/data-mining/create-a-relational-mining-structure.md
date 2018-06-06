@@ -1,37 +1,23 @@
 ---
-title: "建立關聯式採礦結構 |Microsoft 文件"
-ms.custom: 
-ms.date: 03/13/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
-helpviewer_keywords:
-- dimensions [Analysis Services], data mining
-- data mining [Analysis Services], structure
-- mining structures [Analysis Services], creating
-- relational mining models [Analysis Services]
-- OLAP mining models [Analysis Services]
-ms.assetid: 5547d639-377d-4ca7-88fc-ce1f9e2babc5
-caps.latest.revision: 
-author: Minewiskan
+title: 建立關聯式採礦結構 |Microsoft 文件
+ms.date: 05/01/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: data-mining
+ms.topic: conceptual
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 6ea3691ad03e5133d14f6aa8f99324957eb0c2b4
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: fe3958698c41cc54b6606255ced3a79133c66320
+ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="create-a-relational-mining-structure"></a>建立關聯式採礦結構
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-大多數的資料採礦模型都是根據關聯式資料來源。 建立關聯式資料採礦模型的優點如下：您可以組合隨選資料及定型和更新模型，而不需要經歷建立 Cube 的複雜程序。  
+  大多數的資料採礦模型都是根據關聯式資料來源。 建立關聯式資料採礦模型的優點如下：您可以組合隨選資料及定型和更新模型，而不需要經歷建立 Cube 的複雜程序。  
   
  關聯式採礦結構可以繪製不同來源的資料。 原始資料可以儲存在資料表、檔案或關聯式資料庫系統中，前提是這些資料可以定義為資料來源檢視的一部分。 例如，如果您的資料在 Excel 中、SQL Server 資料倉儲中或 SQL Server 報表資料庫中，或是在透過 OLE DB 或 ODBC 提供者所存取的外部來源中，您應該使用關聯式採礦結構。  
   
@@ -133,7 +119,7 @@ ms.lasthandoff: 02/15/2018
   
 ## <a name="see-also"></a>另請參閱  
  [資料採礦設計師](../../analysis-services/data-mining/data-mining-designer.md)   
- [資料採礦精靈 &#40;Analysis Services-資料採礦 &#41;](../../analysis-services/data-mining/data-mining-wizard-analysis-services-data-mining.md)   
+ [資料採礦精靈 & #40;Analysis Services-資料採礦 & #41;](../../analysis-services/data-mining/data-mining-wizard-analysis-services-data-mining.md)   
  [採礦模型屬性](../../analysis-services/data-mining/mining-model-properties.md)   
  [採礦結構和結構資料行的屬性](../../analysis-services/data-mining/properties-for-mining-structure-and-structure-columns.md)   
  [採礦結構工作和使用說明](../../analysis-services/data-mining/mining-structure-tasks-and-how-tos.md)  

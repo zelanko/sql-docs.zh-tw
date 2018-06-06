@@ -1,17 +1,16 @@
 ---
-title: "在複寫監視器中設定閾值和警告 | Microsoft 文件"
-ms.custom: 
+title: 在複寫監視器中設定閾值和警告 | Microsoft 文件
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
 ms.component: replication
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - alerts [SQL Server replication]
 - Merge Agent, thresholds and warnings
@@ -20,16 +19,15 @@ helpviewer_keywords:
 - Replication Monitor, thresholds and warnings
 - monitoring performance [SQL Server replication], thresholds and warnings
 ms.assetid: 3a409c2c-b77e-4001-b81a-1dcd918618ec
-caps.latest.revision: 
+caps.latest.revision: 33
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 2559653139989677a9a7084423c1cbb7b451d901
-ms.sourcegitcommit: ab25b08a312d35489a2c4a6a0d29a04bbd90f64d
+ms.openlocfilehash: 4cd9334c240c2206f7e226b1c63c36d53cdeeed1
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="set-thresholds-and-warnings-in-replication-monitor"></a>在複寫監視器中設定臨界值和警告
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -143,7 +141,7 @@ ms.lasthandoff: 03/08/2018
   
 2.  按一下 **[警告]** 索引標籤。若要檢視此索引標籤上選項的詳細資訊，請按一下上方功能表上的 **[說明]** 。  
   
-3.  透過選取 **[若訂閱將在臨界值內過期，就發出警告]**核取方塊啟用警告。  
+3.  透過選取 **[若訂閱將在臨界值內過期，就發出警告]** 核取方塊啟用警告。  
   
 4.  在 **[臨界值]** 資料行中設定警告的臨界值。 例如，可在 **[臨界值]** 資料行中選取值 **[70%]** 。  
   

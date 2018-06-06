@@ -1,27 +1,25 @@
 ---
-title: "在關聯式查詢設計工具中建立查詢 (報表產生器及 SSRS) | Microsoft Docs"
-ms.custom: 
+title: 在關聯式查詢設計工具中建立查詢 (報表產生器及 SSRS) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: report-data
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: 28b25861-f3b4-4c3e-a9b0-03d6e4cfea26
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 166a38397f8af03d0d146c9fdd46388ad128376f
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: d0ca2e4b18c0bfbb267aa0bcf79da69459dcdc2f
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="build-a-query-in-the-relational-query-designer-report-builder-and-ssrs"></a>在關聯式查詢設計工具中建立查詢 (報表產生器及 SSRS)
   查詢設計工具可協助您針對報表資料集，指定要從外部資料來源擷取的資料。 當您在精靈中建置查詢或建立資料集查詢時，就會使用查詢設計工具。  
@@ -77,7 +75,7 @@ ms.lasthandoff: 01/09/2018
   
 4.  在 [運算子] 中，按一下以顯示運算子的下拉式清單，然後選取要用於篩選的比較運算子。  
   
-5.  在 **[值]**中，輸入篩選所要依據的值。 例如，若要篩選出超過 100 的數量，請輸入 100。  
+5.  在 **[值]** 中，輸入篩選所要依據的值。 例如，若要篩選出超過 100 的數量，請輸入 100。  
   
 6.  在此資料列中選取參數選項來建立資料集參數，以便讓使用者指定篩選值。 系統會自動建立符合資料集參數的報表參數。  
   

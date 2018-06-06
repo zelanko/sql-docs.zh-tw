@@ -1,28 +1,26 @@
 ---
-title: "選取的 SQL 命令 |Microsoft 文件"
-ms.custom: 
+title: 選取的 SQL 命令 |Microsoft 文件
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
-ms.component: odbc
-ms.reviewer: 
+ms.prod: sql
+ms.prod_service: connectivity
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
-ms.topic: article
-helpviewer_keywords: select [ODBC]
+ms.technology: connectivity
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
+helpviewer_keywords:
+- select [ODBC]
 ms.assetid: 2149c3ca-3a71-446d-8d53-3d056e2f301a
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
-ms.workload: Inactive
-ms.openlocfilehash: 3e7295a800b3cc84f6eb64f5dfa762573fe80b6b
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+manager: craigg
+ms.openlocfilehash: 7d3803c1e51a21e8006994db5ba89f9b2cb41ad6
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="select---sql-command"></a>選取的 SQL 命令
 從一或多個資料表中擷取資料。  
@@ -52,7 +50,7 @@ FROM [DatabaseName!]Table [Local_Alias]
 > [!NOTE]  
 >  A*子查詢*、 下列引數所指、 SELECT 中是選取和必須括在括號。 您可以在相同層級最多兩個的子查詢 （不在巢狀） 的 WHERE 子句中。 （請參閱該區段的引數）。子查詢可以包含多個聯結條件。  
   
- [所有 &#124;相異] [*別名*。]*Select_Item* [AS *Column_Name*] [，[*別名*。]*Select_Item* [AS *Column_Name*]...]  
+ [所有&#124;DISTINCT]  [*別名*。]*Select_Item* [AS *Column_Name*] [，[*別名*。]*Select_Item* [AS *Column_Name*]...]  
  SELECT 子句會指定欄位、 常數和查詢結果中顯示的運算式。  
   
  根據預設，所有查詢結果中顯示了所有資料列。  
@@ -108,7 +106,7 @@ FROM [DatabaseName!]Table [Local_Alias]
   
  *Local_Alias*指定資料表中的暫存名稱*資料表*。 如果您指定本機的別名，您必須使用本機的別名，而非整個 SELECT 陳述式的資料表名稱。 本機的別名不會影響 Visual FoxPro 環境。  
   
- 其中*JoinCondition* [AND *JoinCondition* ...]   [和 &#124;或者*FilterCondition* [AND &#124;或者*FilterCondition* ...]]  
+ 其中*JoinCondition* [AND *JoinCondition* ...]   [AND&#124;或者*FilterCondition* [AND&#124;或者*FilterCondition* ...]]  
  告知 Visual FoxPro 查詢結果中包含特定的記錄。 視需要從多個資料表擷取資料。  
   
  *JoinCondition*指定連結在 FROM 子句中的資料表的欄位。 如果您在查詢中包含多個資料表，您應該指定每個資料表的聯結條件，第一個之後。  
@@ -118,7 +116,7 @@ FROM [DatabaseName!]Table [Local_Alias]
   
 -   如果您在查詢中包含兩個資料表，而且未指定聯結條件，第一個資料表中的每一筆記錄會加入第二個資料表中的每一筆記錄，只要符合篩選條件。 這類查詢會產生執行時間較長的結果。  
   
--   當聯結資料表的空白欄位，因為 Visual FoxPro 符合空白欄位，請務必小心。 例如，如果您加入 CUSTOMER 上。ZIP 及發票。壓縮，並在查詢輸出如果客戶包含 100 空的郵遞區號，發票包含 400 空的郵遞區號包含 40,000 所得到的空白欄位的額外記錄。 使用**空的 （)**消除空記錄從查詢輸出的函式。  
+-   當聯結資料表的空白欄位，因為 Visual FoxPro 符合空白欄位，請務必小心。 例如，如果您加入 CUSTOMER 上。ZIP 及發票。壓縮，並在查詢輸出如果客戶包含 100 空的郵遞區號，發票包含 400 空的郵遞區號包含 40,000 所得到的空白欄位的額外記錄。 使用**空的 （)** 消除空記錄從查詢輸出的函式。  
   
 -   您必須使用 AND 運算子來連接多個聯結條件。 每個 join 條件具有下列格式：  
   
@@ -139,7 +137,7 @@ FROM [DatabaseName!]Table [Local_Alias]
   
  當您使用 = 運算子與字串，其運作方式會不同，根據設定的 ANSI 設定。 當設定 ANSI 設定為 OFF 時，Visual FoxPro Xbase 使用者熟悉的方式處理字串比較。 當設定 ANSI 設定設為 ON 時，Visual FoxPro 遵循 ANSI 標準的字串比較。 請參閱[設定 ANSI](../../odbc/microsoft/set-ansi-command.md)和[確切設定](../../odbc/microsoft/set-exact-command.md)如需有關 Visual FoxPro 執行字串比較的方式。  
   
- *FilterCondition*指定記錄必須符合包含在查詢結果的準則。 您可以包含篩選條件查詢中的所要使用 AND 或 OR 運算子。 您也可以使用 NOT 運算子，若要反轉的邏輯運算式的值，或者您可以使用**空的 （)**檢查的空白欄位。 *FilterCondition*可能需要在下列範例中任何一種格式：  
+ *FilterCondition*指定記錄必須符合包含在查詢結果的準則。 您可以包含篩選條件查詢中的所要使用 AND 或 OR 運算子。 您也可以使用 NOT 運算子，若要反轉的邏輯運算式的值，或者您可以使用**空的 （)** 檢查的空白欄位。 *FilterCondition*可能需要在下列範例中任何一種格式：  
   
  **範例 1** *FieldName1 比較 FieldName2*  
   
@@ -157,7 +155,7 @@ FROM [DatabaseName!]Table [Local_Alias]
   
  當篩選條件包含所有時，欄位必須符合其記錄包含在查詢結果之前，子查詢所產生的所有值的比較條件。  
   
- **範例 4** *FieldName 比較*任何 &#124;某些 (*子查詢*)  
+ **範例 4** *FieldName 比較*ANY &#124; SOME (*子查詢*)  
   
  `company < ANY ;`  
   
@@ -263,7 +261,7 @@ WHERE customer.cust_id NOT IN ;
     > [!NOTE]  
     >  預留位置必須是相同的型別所代表的欄位。 如果欄位是日期類型，應該是預留位置 {/ /}。 如果欄位是一個字元欄位，將預留位置應該是空字串 ("")。  
   
- ORDER BY *Order_Item* [ASC &#124;DESC] [， *Order_Item* [ASC &#124;DESC]...]  
+ ORDER BY *Order_Item* [ASC &#124; DESC] [， *Order_Item* [ASC &#124; DESC]...]  
  排序查詢結果根據一個或多個資料行中的資料。 每個*Order_Item*必須對應到查詢結果中的資料行，而且可以是下列其中之一：  
   
 -   也是主要的 SELECT 子句 （不在子查詢） 中的選取項目從資料表中的欄位。  
@@ -285,7 +283,7 @@ WHERE customer.cust_id NOT IN ;
 ## <a name="driver-remarks"></a>驅動程式註解  
  當您的應用程式會將 ODBC SQL 陳述式選取傳送至資料來源時，Visual FoxPro ODBC 驅動程式會將命令轉換 Visual FoxPro 選取命令，而不需轉譯除非命令包含 ODBC 逸出序列。 ODBC 逸出序列內的項目會轉換成 Visual FoxPro 語法。 如需有關使用 ODBC 逸出序列，請參閱[時間和日期函數](../../odbc/microsoft/time-and-date-functions-visual-foxpro-odbc-driver.md)和*Microsoft ODBC 程式設計人員參考*，請參閱[ODBC 中的逸出序列](../../odbc/reference/develop-app/escape-sequences-in-odbc.md).  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [建立資料表-SQL](../../odbc/microsoft/create-table-sql-command.md)   
  [插入-SQL](../../odbc/microsoft/insert-sql-command.md)   
  [SET ANSI](../../odbc/microsoft/set-ansi-command.md)   

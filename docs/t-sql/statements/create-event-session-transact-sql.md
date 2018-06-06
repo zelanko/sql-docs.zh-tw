@@ -1,16 +1,14 @@
 ---
 title: CREATE EVENT SESSION (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 08/10/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
 ms.component: t-sql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: t-sql
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - CREATE EVENT SESSION
@@ -25,16 +23,15 @@ helpviewer_keywords:
 - event sessions [SQL Server]
 - CREATE EVENT SESSION statement
 ms.assetid: 67683027-2b0f-47aa-b223-604731af8b4d
-caps.latest.revision: 
+caps.latest.revision: 65
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: ede0fb6715067bba3bafb1e77863483590d5f6a7
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: acfa3f2dc88b9893be39484890cd484f0efe5163
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="create-event-session-transact-sql"></a>CREATE EVENT SESSION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -185,7 +182,7 @@ ON SERVER
 > [!IMPORTANT]  
 >  如果是使用信號緩衝區目標，建議您將 max_memory 目標參數設為 2048 KB，以避免 XML 輸出可能發生資料截斷。 如需不同目標類型的詳細資訊，請參閱 [SQL Server 擴充的事件目標](http://msdn.microsoft.com/library/e281684c-40d1-4cf9-a0d4-7ea1ecffa384)。  
   
- WITH ( \<event_session_options> [ ,...*n*] ) Specifies options to use with the event session.  
+ WITH ( \<event_session_options> [ ,...*n*] ) 指定要與事件工作階段搭配使用的選項。  
   
  MAX_MEMORY =*size* [ KB | **MB** ]  
  指定為了事件緩衝處理而配置給工作階段的最大記憶體數量。 預設值是 4 MB。 *size* 是整數值，可以是 KB 或 MB 值。  

@@ -1,17 +1,16 @@
 ---
-title: "使用中央管理伺服器管理多部伺服器 | Microsoft Docs"
-ms.custom: 
+title: 使用中央管理伺服器管理多部伺服器 | Microsoft Docs
+ms.custom: ''
 ms.date: 08/12/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
 ms.component: relational-databases-misc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - multiserver queries
 - central management server
@@ -20,20 +19,19 @@ helpviewer_keywords:
 - target configuration [SQL Server]
 - server configuration [SQL Server]
 ms.assetid: 427911a7-57d4-4542-8846-47c3267a5d9c
-caps.latest.revision: 
-author: JennieHubbard
-ms.author: jhubbard
+caps.latest.revision: 27
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: a746ab7863c97e7738760f863227c7d1c0020644
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.openlocfilehash: c4a2eb01959ffc59a1252100193fffea348c8f86
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="administer-multiple-servers-using-central-management-servers"></a>使用中央管理伺服器管理多部伺服器
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-您可以透過指定中央管理伺服器並建立伺服器群組來管理多部伺服器。  
+  您可以透過指定中央管理伺服器並建立伺服器群組來管理多部伺服器。  
   
 ## <a name="what-is-a-central-management-server-and-server-groups"></a>什麼是中央管理伺服器和伺服器群組？  
  指定為中央管理伺服器的 SQL Server 執行個體，會針對一個或多個執行個體維護含有連接資訊的伺服器群組。 您可以針對伺服器群組同時執行 [!INCLUDE[tsql](../includes/tsql-md.md)] 陳述式和原則式管理原則。 您也可以在透過中央管理伺服器所管理的執行個體上檢視記錄檔。 

@@ -1,16 +1,13 @@
 ---
-title: "教學課程：使用 hierarchyid 資料類型 | Microsoft 文件"
-ms.custom: 
+title: 教學課程：使用 hierarchyid 資料類型 | Microsoft 文件
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
-ms.component: tables
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: table-view-index
+ms.tgt_pltfrm: ''
 ms.topic: get-started-article
 applies_to:
 - SQL Server 2016
@@ -18,19 +15,20 @@ helpviewer_keywords:
 - tutorials [hierarchyid]
 - hierarchyid [Database Engine], tutorial
 ms.assetid: 5a7f7cfd-7faf-439f-8085-8fd6bf7db355
-caps.latest.revision: 
+caps.latest.revision: 14
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 668177022a6032c906a97c1787ddac3b9a6771dc
-ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 817cb3a1693ddd7852d4ca143eb1b15326e8ad0d
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="tutorial-using-the-hierarchyid-data-type"></a>教學課程：使用 hierarchyid 資料類型
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)] 本教學課程的主要對象是對 [!INCLUDE[tsql](../../includes/tsql-md.md)] 有經驗，但未接觸過 **hierarchyid** 資料類型的使用者。  
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+本教學課程的主要對象是對 [!INCLUDE[tsql](../../includes/tsql-md.md)]有經驗，但未接觸過 **hierarchyid** 資料類型的使用者。  
   
 ## <a name="what-you-will-learn"></a>學習內容  
 這個教學課程分成兩個課程：  

@@ -1,17 +1,16 @@
 ---
-title: "驗證 DAC 封裝 | Microsoft 文件"
-ms.custom: 
+title: 驗證 DAC 封裝 | Microsoft 文件
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
 ms.component: data-tier-applications
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-data-tier-apps
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - data-tier application [SQL Server], validate
 - data-tier application [SQL Server], compare
@@ -20,19 +19,19 @@ helpviewer_keywords:
 - data-tier application [SQL Server], view
 - view DAC
 ms.assetid: 726ffcc2-9221-424a-8477-99e3f85f03bd
-caps.latest.revision: 
+caps.latest.revision: 17
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: c8eba0d38c9a36f9f66009283126e34f55f38202
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.openlocfilehash: 909fa2d13ac8cceab6127409bfd770dd00606359
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="validate-a-dac-package"></a>驗證 DAC 封裝
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 最好先檢閱 DAC 套件的內容，再將它部署至生產環境，以及先驗證升級動作，再升級現有 DAC。 當您部署的封裝之前不是在組織內開發時，特別會是這個情況。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  最好先檢閱 DAC 封裝的內容，再將它部署至實際執行環境，以及先驗證升級動作，再升級現有 DAC。 當您部署的封裝之前不是在組織內開發時，特別會是這個情況。  
   
 1.  **開始之前：**  [必要條件](#Prerequisites)  
   
@@ -48,9 +47,9 @@ ms.lasthandoff: 01/17/2018
   
 1.  開啟 **[檔案]** 功能表，並選取 **[開新檔案]**，然後選取 **[專案]**。  
   
-2.  選取 **[SQL Server]** 專案範本，並指定 **[名稱]**、 **[位置]**及 **[方案名稱]**。  
+2.  選取 **[SQL Server]** 專案範本，並指定 **[名稱]**、 **[位置]** 及 **[方案名稱]**。  
   
-3.  在 **[方案總管]**中，以滑鼠右鍵按一下專案節點，並選取 **[屬性]**。  
+3.  在 **[方案總管]** 中，以滑鼠右鍵按一下專案節點，並選取 **[屬性]**。  
   
 4.  在 [專案設定] 索引標籤的 [輸出類型] 區段中，選取 [資料層應用程式 (.dacpac 檔案)] 核取方塊，然後關閉屬性對話方塊。  
   

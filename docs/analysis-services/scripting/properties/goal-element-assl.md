@@ -1,36 +1,23 @@
 ---
-title: "Goal 元素 (ASSL) |Microsoft 文件"
-ms.custom: 
-ms.date: 03/06/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+title: Goal 元素 (ASSL) |Microsoft 文件
+ms.date: 5/8/2018
+ms.prod: sql
+ms.custom: assl
+ms.reviewer: owend
+ms.technology: analysis-services
 ms.topic: reference
-apiname: Goal Element
-apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
-apitype: Schema
-applies_to: SQL Server 2016 Preview
-f1_keywords: Goal
-helpviewer_keywords: Goal element
-ms.assetid: 75fa5b57-418e-43ad-8704-764e4f0a40cf
-caps.latest.revision: "32"
-author: Minewiskan
+author: minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 192c7f1f5486329193dde791e9061ecb5709b334
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: dbd027883370c694deb35bdb0b90823a143c71c4
+ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="goal-element-assl"></a>Goal 元素 (ASSL)
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]識別所需的目標中[Kpi](../../../analysis-services/scripting/objects/kpi-element-assl.md)項目。  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+  識別所需的目標中[Kpi](../../../analysis-services/scripting/objects/kpi-element-assl.md)項目。  
   
 ## <a name="syntax"></a>語法  
   
@@ -45,9 +32,9 @@ ms.lasthandoff: 01/08/2018
   
 ## <a name="element-characteristics"></a>元素特性  
   
-|特性|描述|  
+|特性|說明|  
 |--------------------|-----------------|  
-|資料類型和長度|String|  
+|資料類型和長度|字串|  
 |預設值|無|  
 |基數|0-1：只能出現一次的選擇性元素。|  
   
@@ -63,10 +50,10 @@ ms.lasthandoff: 01/08/2018
   
  對應目的父代的項目**目標**在 「 分析管理物件 (AMO) 物件模型而言， <xref:Microsoft.AnalysisServices.Kpi>。  
   
-## <a name="see-also"></a>請參閱  
- [Status 元素 &#40;ASSL &#41;](../../../analysis-services/scripting/properties/status-element-assl.md)   
- [Trend 元素 &#40;ASSL &#41;](../../../analysis-services/scripting/properties/trend-element-assl.md)   
- [Value 元素 &#40;ASSL &#41;](../../../analysis-services/scripting/properties/value-element-assl.md)   
- [屬性 &#40;ASSL &#41;](../../../analysis-services/scripting/properties/properties-assl.md)  
+## <a name="see-also"></a>另請參閱  
+ [Status 元素&#40;ASSL&#41;](../../../analysis-services/scripting/properties/status-element-assl.md)   
+ [趨勢元素&#40;ASSL&#41;](../../../analysis-services/scripting/properties/trend-element-assl.md)   
+ [值的項目&#40;ASSL&#41;](../../../analysis-services/scripting/properties/value-element-assl.md)   
+ [屬性 & #40;ASSL & #41;](../../../analysis-services/scripting/properties/properties-assl.md)  
   
   

@@ -1,24 +1,17 @@
 ---
-title: "資源管理針對 Python |Microsoft 文件"
-ms.custom: 
-ms.date: 03/30/2017
-ms.reviewer: 
-ms.suite: sql
-ms.prod: machine-learning-services
-ms.prod_service: machine-learning-services
-ms.component: python
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
-author: jeannt
-ms.author: jeannt
-manager: cgronlund
-ms.workload: Inactive
-ms.openlocfilehash: 8accb9b8e050340ff980a1b5d9f1faf9283d8b89
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+title: 資源管理針對 SQL Server Machine learning Python |Microsoft 文件
+ms.prod: sql
+ms.technology: machine-learning
+ms.date: 04/15/2018
+ms.topic: conceptual
+author: HeidiSteen
+ms.author: heidist
+manager: cgronlun
+ms.openlocfilehash: 88116b7db71e1b9a33815686f2f1ade7561264e9
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="resource-governance-for-python"></a>資源管理針對 Python
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -64,7 +57,7 @@ ms.lasthandoff: 02/11/2018
 
 ## <a name="resource-management-using-resource-governor"></a>使用 Resource Governor 進行資源管理
 
-如果您不熟悉 Resource Governor，請參閱以下主題的快速逐步解說，了解如何修改執行個體預設資源，以及建立新的外部資源集區：[操作說明：建立 R 的資源集區](../../advanced-analytics/r-services/how-to-create-a-resource-pool-for-r.md)
+如果您不熟悉資源管理員，請參閱 < 如何修改預設執行個體的資源，並建立新的外部資源集區的 快速逐步解說的這篇文章： [How To: Create a Resource Pool](../../advanced-analytics/r-services/how-to-create-a-resource-pool-for-r.md)
 
 您可以使用*外部資源集區*機制，管理下列支援的可執行檔所使用的資源：
 

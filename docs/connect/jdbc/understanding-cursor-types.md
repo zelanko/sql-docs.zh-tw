@@ -1,27 +1,24 @@
 ---
-title: "了解資料指標類型 |Microsoft 文件"
-ms.custom: 
+title: 了解資料指標類型 |Microsoft 文件
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
-ms.component: jdbc
-ms.reviewer: 
+ms.prod: sql
+ms.prod_service: connectivity
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: connectivity
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: 4f4d3db7-4f76-450d-ab63-141237a4f034
-caps.latest.revision: "51"
+caps.latest.revision: 51
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
-ms.workload: Inactive
-ms.openlocfilehash: dfd697881fbde24c797707990d53c2cc33576a24
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+manager: craigg
+ms.openlocfilehash: df4f0f6e43c0eb7184f8421d3ebeada44e74a3e4
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="understanding-cursor-types"></a>了解資料指標類型
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -48,20 +45,20 @@ ms.lasthandoff: 11/18/2017
   
 |結果集<br /><br /> (資料指標) 類型|SQL Server 資料指標類型|特性|select<br /><br /> 方法|response<br /><br /> 緩衝|Description|  
 |------------------------------------|----------------------------|---------------------|-----------------------|----------------------------|-----------------|  
-|TYPE_FORWARD_ONLY (CONCUR_READ_ONLY)|不適用|順向、唯讀|直接|完整|應用程式必須單一 (順向) 通過結果集。 這是預設的行為，而且與 TYPE_SS_DIRECT_FORWARD_ONLY 資料指標的行為相同。 驅動程式會在陳述式執行時間，將完整的結果集從伺服器讀入記憶體中。|  
-|TYPE_FORWARD_ONLY (CONCUR_READ_ONLY)|不適用|順向、唯讀|直接|adaptive|應用程式必須單一 (順向) 通過結果集。 它與 TYPE_SS_DIRECT_FORWARD_ONLY 資料指標的行為相同。 驅動程式會因為應用程式的要求而從伺服器讀取資料集，因此會將用戶端的記憶體使用量降到最低。|  
-|TYPE_FORWARD_ONLY (CONCUR_READ_ONLY)|向前快轉|順向、唯讀|cursor|不適用|應用程式必須使用伺服器資料指標單一 (順向) 通過結果集。 它與 TYPE_SS_SERVER_CURSOR_FORWARD_ONLY 資料指標的行為相同。<br /><br /> 從伺服器中擷取資料列 (以提取大小所指定的區塊為單位)。|  
-|TYPE_FORWARD_ONLY (CONCUR_UPDATABLE)|動態 (順向)|順向、可更新的|不適用|不適用|應用程式必須單一 (順向) 通過結果集以更新一或多個資料列。<br /><br /> 從伺服器中擷取資料列 (以提取大小所指定的區塊為單位)。<br /><br /> 根據預設，提取大小固定的應用程式進行呼叫時[setFetchSize](../../connect/jdbc/reference/setfetchsize-method-sqlserverresultset.md)方法[SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md)物件。<br /><br /> **注意：** JDBC driver 提供了適應性緩衝功能，可讓您擷取從陳述式執行結果[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]應用程式需要時，而非一次。 例如，如果應用程式應該擷取的大型資料過大而無法完整納入應用程式記憶體中，適應性緩衝就會允許用戶端應用程式將這類值擷取成資料流。 驅動程式的預設行為是"**適應性**"。 不過，若要取得的順向可更新結果集的適應性緩衝，應用程式必須明確地呼叫[setResponseBuffering](../../connect/jdbc/reference/setresponsebuffering-method-sqlserverstatement.md)方法[SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md)物件藉由提供**字串**值"**適應性"**。 如需範例程式碼，請參閱[更新大型資料範例](../../connect/jdbc/updating-large-data-sample.md)。|  
-|TYPE_SCROLL_INSENSITIVE|靜態|可捲動、不可更新<br /><br /> 系統不會顯示外部資料列更新、插入和刪除。|不適用|不適用|應用程式需要資料庫快照集。 此結果集不可更新。 僅支援 CONCUR_READ_ONLY。  搭配這種資料指標類型使用時，所有其他並行類型都會導致例外狀況發生。<br /><br /> 從伺服器中擷取資料列 (以提取大小所指定的區塊為單位)。|  
-|TYPE_SCROLL_SENSITIVE<br /><br /> (CONCUR_READ_ONLY)|索引鍵集|可捲動、唯讀。 系統會顯示外部資料列更新，而且刪除會顯示為遺失資料。<br /><br /> 系統不會顯示外部資料列插入。|不適用|不適用|應用程式必須僅針對現有的資料列查看變更的資料。<br /><br /> 從伺服器中擷取資料列 (以提取大小所指定的區塊為單位)。|  
-|TYPE_SCROLL_SENSITIVE<br /><br /> (CONCUR_UPDATABLE、CONCUR_SS_SCROLL_LOCKS、CONCUR_SS_OPTIMISTIC_CC、CONCUR_SS_OPTIMISTIC_CCVAL)|索引鍵集|可捲動、可更新。<br /><br /> 系統會顯示外部和內部資料列更新，而且刪除會顯示為遺失資料，但是不會顯示插入。|不適用|不適用|應用程式可能使用結果集物件，以變更現有的資料列中的資料。 應用程式也必須能夠看到資料列之外的結果集物件由其他人所做的變更。<br /><br /> 從伺服器中擷取資料列 (以提取大小所指定的區塊為單位)。|  
-|TYPE_SS_DIRECT_FORWARD_ONLY|不適用|順向、唯讀|不適用|完整或適應性|整數值 = 2003。 提供完整緩衝的唯讀用戶端資料指標。 系統不會建立任何伺服器資料指標。<br /><br /> 僅支援 CONCUR_READ_ONLY 並行類型。 搭配這種資料指標類型使用時，所有其他並行類型都會導致例外狀況發生。|  
-|TYPE_SS_SERVER_CURSOR_FORWARD_ONLY|向前快轉|順向|不適用|不適用|整數值 = 2004。 使用伺服器資料指標來快速存取所有資料。 搭配 CONCUR_UPDATABLE 並行類型使用時，它是可更新的。<br /><br /> 從伺服器中擷取資料列 (以提取大小所指定的區塊為單位)。<br /><br /> 若要取得此案例的適應性緩衝，應用程式必須明確地呼叫[setResponseBuffering](../../connect/jdbc/reference/setresponsebuffering-method-sqlserverstatement.md)方法[SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md)物件藉由提供**字串**值"**適應性"**。 如需範例程式碼，請參閱[更新大型資料範例](../../connect/jdbc/updating-large-data-sample.md)。|  
-|TYPE_SS_SCROLL_STATIC|靜態|系統不會反映其他使用者的更新。|不適用|不適用|整數值 = 1004。 應用程式需要資料庫快照集。 這是[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]-JDBC TYPE_SCROLL_INSENSITIVE 的特有同義字而且具有相同的並行設定行為。<br /><br /> 從伺服器中擷取資料列 (以提取大小所指定的區塊為單位)。|  
-|TYPE_SS_SCROLL_KEYSET<br /><br /> (CONCUR_READ_ONLY)|索引鍵集|可捲動、唯讀。 系統會顯示外部資料列更新，而且刪除會顯示為遺失資料。<br /><br /> 系統不會顯示外部資料列插入。|不適用|不適用|整數值 = 1005。 應用程式必須僅針對現有的資料列查看變更的資料。 這是[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]-JDBC TYPE_SCROLL_SENSITIVE 的特有同義字而且具有相同的並行設定行為。<br /><br /> 從伺服器中擷取資料列 (以提取大小所指定的區塊為單位)。|  
-|TYPE_SS_SCROLL_KEYSET<br /><br /> (CONCUR_UPDATABLE、CONCUR_SS_SCROLL_LOCKS、CONCUR_SS_OPTIMISTIC_CC、CONCUR_SS_OPTIMISTIC_CCVAL)|索引鍵集|可捲動、可更新。<br /><br /> 系統會顯示外部和內部資料列更新，而且刪除會顯示為遺失資料，但是不會顯示插入。|不適用|不適用|整數值 = 1005。 應用程式必須變更資料或針對現有的資料列查看變更的資料。 這是[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]-JDBC TYPE_SCROLL_SENSITIVE 的特有同義字而且具有相同的並行設定行為。<br /><br /> 從伺服器中擷取資料列 (以提取大小所指定的區塊為單位)。|  
-|TYPE_SS_SCROLL_DYNAMIC<br /><br /> (CONCUR_READ_ONLY)|動態|可捲動、唯讀。<br /><br /> 系統會顯示外部資料列更新和插入，而且刪除在目前的提取緩衝區中，會顯示為暫時遺失的資料。|不適用|不適用|整數值 = 1006。 應用程式必須針對現有的資料列查看變更的資料，並查看在資料指標存留時間期間插入以及刪除的資料列。<br /><br /> 從伺服器中擷取資料列 (以提取大小所指定的區塊為單位)。|  
-|TYPE_SS_SCROLL_DYNAMIC<br /><br /> (CONCUR_UPDATABLE、CONCUR_SS_SCROLL_LOCKS、CONCUR_SS_OPTIMISTIC_CC、CONCUR_SS_OPTIMISTIC_CCVAL)|動態|可捲動、可更新。<br /><br /> 系統會顯示外部和內部資料列更新和插入，而且刪除在目前的提取緩衝區中，會顯示為暫時遺失的資料。|不適用|不適用|整數值 = 1006。 應用程式可能會變更現有的資料列的資料或插入或刪除資料列使用結果集物件。 應用程式也必須能夠看見變更、 插入和刪除之外的結果集物件由其他人所做的動作。<br /><br /> 從伺服器中擷取資料列 (以提取大小所指定的區塊為單位)。|  
+|TYPE_FORWARD_ONLY (CONCUR_READ_ONLY)|해당 사항 없음|順向、唯讀|直接|完整|應用程式必須單一 (順向) 通過結果集。 這是預設的行為，而且與 TYPE_SS_DIRECT_FORWARD_ONLY 資料指標的行為相同。 驅動程式會在陳述式執行時間，將完整的結果集從伺服器讀入記憶體中。|  
+|TYPE_FORWARD_ONLY (CONCUR_READ_ONLY)|해당 사항 없음|順向、唯讀|直接|adaptive|應用程式必須單一 (順向) 通過結果集。 它與 TYPE_SS_DIRECT_FORWARD_ONLY 資料指標的行為相同。 驅動程式會因為應用程式的要求而從伺服器讀取資料集，因此會將用戶端的記憶體使用量降到最低。|  
+|TYPE_FORWARD_ONLY (CONCUR_READ_ONLY)|向前快轉|順向、唯讀|cursor|해당 사항 없음|應用程式必須使用伺服器資料指標單一 (順向) 通過結果集。 它與 TYPE_SS_SERVER_CURSOR_FORWARD_ONLY 資料指標的行為相同。<br /><br /> 從伺服器中擷取資料列 (以提取大小所指定的區塊為單位)。|  
+|TYPE_FORWARD_ONLY (CONCUR_UPDATABLE)|動態 (順向)|順向、可更新的|해당 사항 없음|해당 사항 없음|應用程式必須單一 (順向) 通過結果集以更新一或多個資料列。<br /><br /> 從伺服器中擷取資料列 (以提取大小所指定的區塊為單位)。<br /><br /> 根據預設，提取大小固定的應用程式進行呼叫時[setFetchSize](../../connect/jdbc/reference/setfetchsize-method-sqlserverresultset.md)方法[SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md)物件。<br /><br /> **注意：** JDBC driver 提供了適應性緩衝功能，可讓您擷取從陳述式執行結果[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]應用程式需要時，而非一次。 例如，如果應用程式應該擷取的大型資料過大而無法完整納入應用程式記憶體中，適應性緩衝就會允許用戶端應用程式將這類值擷取成資料流。 驅動程式的預設行為是"**適應性**"。 不過，若要取得的順向可更新結果集的適應性緩衝，應用程式必須明確地呼叫[setResponseBuffering](../../connect/jdbc/reference/setresponsebuffering-method-sqlserverstatement.md)方法[SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md)物件藉由提供**字串**值"**適應性"**。 如需範例程式碼，請參閱[更新大型資料範例](../../connect/jdbc/updating-large-data-sample.md)。|  
+|TYPE_SCROLL_INSENSITIVE|靜態|可捲動、不可更新<br /><br /> 系統不會顯示外部資料列更新、插入和刪除。|해당 사항 없음|해당 사항 없음|應用程式需要資料庫快照集。 此結果集不可更新。 僅支援 CONCUR_READ_ONLY。  搭配這種資料指標類型使用時，所有其他並行類型都會導致例外狀況發生。<br /><br /> 從伺服器中擷取資料列 (以提取大小所指定的區塊為單位)。|  
+|TYPE_SCROLL_SENSITIVE<br /><br /> (CONCUR_READ_ONLY)|索引鍵集|可捲動、唯讀。 系統會顯示外部資料列更新，而且刪除會顯示為遺失資料。<br /><br /> 系統不會顯示外部資料列插入。|해당 사항 없음|해당 사항 없음|應用程式必須僅針對現有的資料列查看變更的資料。<br /><br /> 從伺服器中擷取資料列 (以提取大小所指定的區塊為單位)。|  
+|TYPE_SCROLL_SENSITIVE<br /><br /> (CONCUR_UPDATABLE、CONCUR_SS_SCROLL_LOCKS、CONCUR_SS_OPTIMISTIC_CC、CONCUR_SS_OPTIMISTIC_CCVAL)|索引鍵集|可捲動、可更新。<br /><br /> 系統會顯示外部和內部資料列更新，而且刪除會顯示為遺失資料，但是不會顯示插入。|해당 사항 없음|해당 사항 없음|應用程式可能使用結果集物件，以變更現有的資料列中的資料。 應用程式也必須能夠看到資料列之外的結果集物件由其他人所做的變更。<br /><br /> 從伺服器中擷取資料列 (以提取大小所指定的區塊為單位)。|  
+|TYPE_SS_DIRECT_FORWARD_ONLY|해당 사항 없음|順向、唯讀|해당 사항 없음|完整或適應性|整數值 = 2003。 提供完整緩衝的唯讀用戶端資料指標。 系統不會建立任何伺服器資料指標。<br /><br /> 僅支援 CONCUR_READ_ONLY 並行類型。 搭配這種資料指標類型使用時，所有其他並行類型都會導致例外狀況發生。|  
+|TYPE_SS_SERVER_CURSOR_FORWARD_ONLY|向前快轉|順向|해당 사항 없음|해당 사항 없음|整數值 = 2004。 使用伺服器資料指標來快速存取所有資料。 搭配 CONCUR_UPDATABLE 並行類型使用時，它是可更新的。<br /><br /> 從伺服器中擷取資料列 (以提取大小所指定的區塊為單位)。<br /><br /> 若要取得此案例的適應性緩衝，應用程式必須明確地呼叫[setResponseBuffering](../../connect/jdbc/reference/setresponsebuffering-method-sqlserverstatement.md)方法[SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md)物件藉由提供**字串**值"**適應性"**。 如需範例程式碼，請參閱[更新大型資料範例](../../connect/jdbc/updating-large-data-sample.md)。|  
+|TYPE_SS_SCROLL_STATIC|靜態|系統不會反映其他使用者的更新。|해당 사항 없음|해당 사항 없음|整數值 = 1004。 應用程式需要資料庫快照集。 這是[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]-JDBC TYPE_SCROLL_INSENSITIVE 的特有同義字而且具有相同的並行設定行為。<br /><br /> 從伺服器中擷取資料列 (以提取大小所指定的區塊為單位)。|  
+|TYPE_SS_SCROLL_KEYSET<br /><br /> (CONCUR_READ_ONLY)|索引鍵集|可捲動、唯讀。 系統會顯示外部資料列更新，而且刪除會顯示為遺失資料。<br /><br /> 系統不會顯示外部資料列插入。|해당 사항 없음|해당 사항 없음|整數值 = 1005。 應用程式必須僅針對現有的資料列查看變更的資料。 這是[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]-JDBC TYPE_SCROLL_SENSITIVE 的特有同義字而且具有相同的並行設定行為。<br /><br /> 從伺服器中擷取資料列 (以提取大小所指定的區塊為單位)。|  
+|TYPE_SS_SCROLL_KEYSET<br /><br /> (CONCUR_UPDATABLE、CONCUR_SS_SCROLL_LOCKS、CONCUR_SS_OPTIMISTIC_CC、CONCUR_SS_OPTIMISTIC_CCVAL)|索引鍵集|可捲動、可更新。<br /><br /> 系統會顯示外部和內部資料列更新，而且刪除會顯示為遺失資料，但是不會顯示插入。|해당 사항 없음|해당 사항 없음|整數值 = 1005。 應用程式必須變更資料或針對現有的資料列查看變更的資料。 這是[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]-JDBC TYPE_SCROLL_SENSITIVE 的特有同義字而且具有相同的並行設定行為。<br /><br /> 從伺服器中擷取資料列 (以提取大小所指定的區塊為單位)。|  
+|TYPE_SS_SCROLL_DYNAMIC<br /><br /> (CONCUR_READ_ONLY)|動態|可捲動、唯讀。<br /><br /> 系統會顯示外部資料列更新和插入，而且刪除在目前的提取緩衝區中，會顯示為暫時遺失的資料。|해당 사항 없음|해당 사항 없음|整數值 = 1006。 應用程式必須針對現有的資料列查看變更的資料，並查看在資料指標存留時間期間插入以及刪除的資料列。<br /><br /> 從伺服器中擷取資料列 (以提取大小所指定的區塊為單位)。|  
+|TYPE_SS_SCROLL_DYNAMIC<br /><br /> (CONCUR_UPDATABLE、CONCUR_SS_SCROLL_LOCKS、CONCUR_SS_OPTIMISTIC_CC、CONCUR_SS_OPTIMISTIC_CCVAL)|動態|可捲動、可更新。<br /><br /> 系統會顯示外部和內部資料列更新和插入，而且刪除在目前的提取緩衝區中，會顯示為暫時遺失的資料。|해당 사항 없음|해당 사항 없음|整數值 = 1006。 應用程式可能會變更現有的資料列的資料或插入或刪除資料列使用結果集物件。 應用程式也必須能夠看見變更、 插入和刪除之外的結果集物件由其他人所做的動作。<br /><br /> 從伺服器中擷取資料列 (以提取大小所指定的區塊為單位)。|  
   
 ## <a name="cursor-positioning"></a>資料指標定位  
  TYPE_FORWARD_ONLY、 TYPE_SS_DIRECT_FORWARD_ONLY 和 TYPE_SS_SERVER_CURSOR_FORWARD_ONLY 資料指標僅支援[下一步](../../connect/jdbc/reference/next-method-sqlserverresultset.md)定位方法。  
@@ -82,7 +79,7 @@ ms.lasthandoff: 11/18/2017
  若是動態資料指標，更新的資料列將保留在提取緩衝區中的位置中，直到遺失提取緩衝區所定義的視窗為止。 更新的資料列後來可能會重複出現在資料集中的不同位置，也可能完全消失。 必須防止在結果集中產生暫時不一致的應用程式應該使用的提取大小為 1 (預設 CONCUR_SS_SCROLL_LOCKS 並行有 8 個資料列，而其他並行有 128 個資料列)。  
   
 ## <a name="cursor-conversion"></a>資料指標轉換  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]有時候可以選擇實作要求之外的資料指標類型，也就是做為隱含資料指標轉換 （或資料指標轉化）。 如需有關隱含資料指標轉換的詳細資訊，請參閱中的 < 使用隱含資料指標轉換 > 主題[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]線上叢書 》。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 有時候可以選擇實作要求之外的資料指標類型，也就是做為隱含資料指標轉換 （或資料指標轉化）。 如需有關隱含資料指標轉換的詳細資訊，請參閱中的 < 使用隱含資料指標轉換 > 主題[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]線上叢書 》。  
   
  與[!INCLUDE[ssVersion2000](../../includes/ssversion2000_md.md)]，當您更新透過 ResultSet.TYPE_SCROLL_SENSITIVE 和 ResultSet.CONCUR_UPDATABLE 結果的資料設定，會擲回例外狀況訊息 「 資料指標為 READ ONLY 」。 發生這個例外狀況，因為[!INCLUDE[ssVersion2000](../../includes/ssversion2000_md.md)]已經針對該結果集，並不會傳回已經要求可更新資料指標完成隱含資料指標轉換。  
   
@@ -117,7 +114,7 @@ ms.lasthandoff: 11/18/2017
 >   
 >  SQL Server 會將伺服器資料指標限制為單一結果集。 如果某個批次或預存程序包含多個陳述式，則必須使用順向唯讀用戶端資料指標。  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [使用 JDBC Driver 管理結果集](../../connect/jdbc/managing-result-sets-with-the-jdbc-driver.md)  
   
   

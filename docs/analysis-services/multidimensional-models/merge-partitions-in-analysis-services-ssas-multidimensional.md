@@ -1,34 +1,23 @@
 ---
-title: "合併資料分割中 Analysis Services (SSAS-多維度) |Microsoft 文件"
-ms.custom: 
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
-helpviewer_keywords:
-- partitions [Analysis Services], merging
-- merging partitions [Analysis Services]
-ms.assetid: b3857b9b-de43-4911-989d-d14da0196f89
-caps.latest.revision: 
-author: Minewiskan
+title: 合併資料分割中 Analysis Services (SSAS-多維度) |Microsoft 文件
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: multidimensional-models
+ms.topic: conceptual
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 519136d681c257d27f93894db6a7c2652d273f87
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: b488997ae97a54a2755847ad9112047015fb0eb5
+ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="merge-partitions-in-analysis-services-ssas---multidimensional"></a>在 Analysis Services 中合併分割區 (SSAS - 多維度)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-您可以合併現有 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 資料庫中的資料分割，以合併相同量值群組中之多個資料分割的事實資料。  
+  您可以合併現有 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 資料庫中的資料分割，以合併相同量值群組中之多個資料分割的事實資料。  
   
  [常見的案例](#bkmk_Scenario)  
   
@@ -140,9 +129,9 @@ ms.lasthandoff: 02/15/2018
   
 ## <a name="see-also"></a>另請參閱  
  [處理 Analysis Services 物件](../../analysis-services/multidimensional-models/processing-analysis-services-objects.md)   
- [分割區 &#40;Analysis Services-多維度資料 &#41;](../../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md)   
- [建立及管理本機分割區 &#40;Analysis Services &#41;](../../analysis-services/multidimensional-models/create-and-manage-a-local-partition-analysis-services.md)   
- [建立及管理遠端分割區 &#40;Analysis Services &#41;](../../analysis-services/multidimensional-models/create-and-manage-a-remote-partition-analysis-services.md)   
+ [分割區 & #40;Analysis Services-多維度資料 & #41;](../../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md)   
+ [建立及管理本機分割區 & #40;Analysis Services & #41;](../../analysis-services/multidimensional-models/create-and-manage-a-local-partition-analysis-services.md)   
+ [建立及管理遠端分割區 & #40;Analysis Services & #41;](../../analysis-services/multidimensional-models/create-and-manage-a-remote-partition-analysis-services.md)   
  [設定分割區回寫](../../analysis-services/multidimensional-models/set-partition-writeback.md)   
  [寫入的資料分割](../../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-write-enabled-partitions.md)   
  [設定維度和分割區的字串儲存體](../../analysis-services/multidimensional-models/configure-string-storage-for-dimensions-and-partitions.md)  

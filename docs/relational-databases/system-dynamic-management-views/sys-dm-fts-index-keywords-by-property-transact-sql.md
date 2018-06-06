@@ -1,16 +1,12 @@
 ---
-title: "sys.dm_fts_index_keywords_by_property (TRANSACT-SQL) |Microsoft 文件"
-ms.custom: 
+title: sys.dm_fts_index_keywords_by_property (TRANSACT-SQL) |Microsoft 文件
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
-ms.prod_service: database-engine
-ms.service: 
-ms.component: dmv's
-ms.reviewer: 
+ms.prod: sql
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: system-objects
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - dm_fts_index_keywords_by_property
@@ -25,16 +21,15 @@ helpviewer_keywords:
 - full-text search [SQL Server], viewing keywords
 - sys.dm_fts_index_keywords_by_property dynamic management view
 ms.assetid: fa41e052-a79a-4194-9b1a-2885f7828500
-caps.latest.revision: 
+caps.latest.revision: 14
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 0257f4a6ce50ff3e28497e3e27bdd704e40cbf84
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: a2839cd17ce0cd6bcc2735467a326248e0caa9cd
+ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 05/23/2018
 ---
 # <a name="sysdmftsindexkeywordsbyproperty-transact-sql"></a>sys.dm_fts_index_keywords_by_property (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -67,7 +62,7 @@ OBJECT_ID('table_name')
   
 ## <a name="arguments"></a>引數  
  db_id('*database_name*')  
- 呼叫[db_id （)](../../t-sql/functions/db-id-transact-sql.md)函式。 此函式會接受資料庫名稱，並傳回資料庫識別碼，哪些 sys.dm_fts_index_keywords_by_property 用來尋找指定的資料庫。 如果*database_name*已省略，則會傳回目前資料庫識別碼。  
+ 呼叫[db_id （)](../../t-sql/functions/db-id-transact-sql.md)函式。 此函式會接受資料庫名稱，並傳回資料庫識別碼，哪些 sys.dm_fts_index_keywords_by_property 用來尋找指定的資料庫。 如果省略 *database_name*，則會傳回目前的資料庫識別碼。  
   
  object_id('*table_name*')  
  呼叫[object_id （)](../../t-sql/functions/object-id-transact-sql.md)函式。 此函數會接受資料表名稱並傳回資料表的資料表識別碼 (包含所要檢查的全文檢索索引)。  
@@ -93,7 +88,7 @@ OBJECT_ID('table_name')
   
  當全文檢索索引鍵資料行為整數資料類型時，建議您將 document_id 直接對應到基底資料表內的全文檢索索引鍵值。  
   
- 相反地，當全文檢索索引鍵資料行使用非整數資料類型時，document_id 就不表示基底資料表內的全文檢索索引鍵。 在此情況下，若要識別由 dm_fts_index_keywords_by_property 的基底資料表中的資料列，您需要聯結此檢視與所傳回的結果[sp_fulltext_keymappings](../../relational-databases/system-stored-procedures/sp-fulltext-keymappings-transact-sql.md)。 在您可以聯結之前，必須先將預存程序的輸出儲存到暫存資料表。 然後您可以加入 dm_fts_index_keywords_by_property 的 document_id 資料行，這個預存程序所傳回的 DocId 資料行。 請注意，**時間戳記**資料行無法接收值在插入時，因為它們是由自動產生[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 因此，**時間戳記**資料行必須轉換成**varbinary （8)**資料行。 下列範例會示範這些步驟。 在此範例中， *table_id*是您的資料表識別碼*database_name*是您的資料庫名稱和*table_name*是資料表的名稱。  
+ 相反地，當全文檢索索引鍵資料行使用非整數資料類型時，document_id 就不表示基底資料表內的全文檢索索引鍵。 在此情況下，若要識別由 dm_fts_index_keywords_by_property 的基底資料表中的資料列，您需要聯結此檢視與所傳回的結果[sp_fulltext_keymappings](../../relational-databases/system-stored-procedures/sp-fulltext-keymappings-transact-sql.md)。 在您可以聯結之前，必須先將預存程序的輸出儲存到暫存資料表。 然後您可以加入 dm_fts_index_keywords_by_property 的 document_id 資料行，這個預存程序所傳回的 DocId 資料行。 請注意，**時間戳記**資料行無法接收值在插入時，因為它們是由自動產生[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 因此，**時間戳記**資料行必須轉換成**varbinary （8)** 資料行。 下列範例會示範這些步驟。 在此範例中， *table_id*是您的資料表識別碼*database_name*是您的資料庫名稱和*table_name*是資料表的名稱。  
   
 ```  
 USE database_name;  
@@ -141,9 +136,9 @@ GO
 ## <a name="see-also"></a>另請參閱  
  [全文檢索搜尋](../../relational-databases/search/full-text-search.md)   
  [改善全文檢索索引的效能](../../relational-databases/search/improve-the-performance-of-full-text-indexes.md)   
- [sp_fulltext_keymappings &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-fulltext-keymappings-transact-sql.md)   
- [sys.dm_fts_index_keywords_by_document &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-fts-index-keywords-by-document-transact-sql.md)   
- [sys.dm_fts_index_keywords &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-fts-index-keywords-transact-sql.md)   
+ [sp_fulltext_keymappings &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-fulltext-keymappings-transact-sql.md)   
+ [sys.dm_fts_index_keywords_by_document &#40;Transact SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-fts-index-keywords-by-document-transact-sql.md)   
+ [sys.dm_fts_index_keywords &#40;Transact SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-fts-index-keywords-transact-sql.md)   
  [sys.registered_search_properties &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-registered-search-properties-transact-sql.md)   
  [sys.registered_search_property_lists &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-registered-search-property-lists-transact-sql.md)   
  [使用搜索屬性清單搜索文件屬性](../../relational-databases/search/search-document-properties-with-search-property-lists.md)  

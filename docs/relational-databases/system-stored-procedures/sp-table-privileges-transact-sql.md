@@ -1,16 +1,14 @@
 ---
-title: "sp_table_privileges (TRANSACT-SQL) |Microsoft 文件"
-ms.custom: 
+title: sp_table_privileges (TRANSACT-SQL) |Microsoft 文件
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: system-objects
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_table_privileges
@@ -20,16 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_table_privileges
 ms.assetid: 0512e688-4fc0-4557-8dc8-016672c1e3fe
-caps.latest.revision: 
+caps.latest.revision: 36
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 3f71b84e9f2aa0f732178a302f3d131f0a448dc0
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 9d2863e17258fd0dea68548a15c059676c745424
+ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="sptableprivileges-transact-sql"></a>sp_table_privileges (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,10 +47,10 @@ sp_table_privileges [ @table_name = ] 'table_name'
   
 ## <a name="arguments"></a>引數  
  [ @table_name=] '*table_name*'  
- 這是用來傳回目錄資訊的資料表。 *table_name*是**nvarchar (**384**)**，沒有預設值。 支援萬用字元的模式比對。  
+ 這是用來傳回目錄資訊的資料表。 *table_name*是**nvarchar (** 384 **)**，沒有預設值。 支援萬用字元的模式比對。  
   
  [ @table_owner=] '*table_owner*'  
- 這是用來傳回目錄資訊之資料表的資料表擁有者。 *table_owner*是**nvarchar (**384**)**，預設值是 NULL。 支援萬用字元的模式比對。 如果未指定擁有者，就會套用基礎 DBMS 的預設資料表可見性規則。  
+ 這是用來傳回目錄資訊之資料表的資料表擁有者。 *table_owner*是**nvarchar (** 384 **)**，預設值是 NULL。 支援萬用字元的模式比對。 如果未指定擁有者，就會套用基礎 DBMS 的預設資料表可見性規則。  
   
  如果目前使用者擁有一份含指定名稱的資料表，就會傳回該資料表的資料行。 如果*擁有者*未指定目前使用者並未擁有含有指定的資料表和*名稱*，此程序會尋找具有指定的資料表*table_name*所擁有資料庫擁有者。 如果資料表存在，就會傳回這份資料表的資料行。  
   
@@ -94,8 +91,8 @@ EXEC sp_table_privileges
    @table_name = 'Contact%';  
 ```  
   
-## <a name="see-also"></a>請參閱  
- [目錄預存程序 &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/catalog-stored-procedures-transact-sql.md)   
+## <a name="see-also"></a>另請參閱  
+ [目錄預存程序&#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/catalog-stored-procedures-transact-sql.md)   
  [系統預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

@@ -1,31 +1,28 @@
 ---
-title: "DataFactory 物件 (RDSServer) |Microsoft 文件"
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
+title: DataFactory 物件 (RDSServer) |Microsoft 文件
+ms.prod: sql
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
-ms.custom: 
+ms.technology: connectivity
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 apitype: COM
 helpviewer_keywords:
 - DataFactory object [ADO]
 ms.assetid: e75240c2-b749-471e-b6ea-98cae232efbe
-caps.latest.revision: 
+caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: db11cc8488b2ca2d3083ca95ac124cbe15b5313c
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 35918fe661c3148cd3b2962f69975ea9925a6b05
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="datafactory-object-rdsserver"></a>DataFactory 物件 (RDSServer)
 > [!IMPORTANT]
@@ -35,7 +32,7 @@ ms.lasthandoff: 02/09/2018
   
  **RDSServer.DataFactory**物件的設計是以伺服器端 Automation 物件會接收用戶端要求。 在網際網路實作中，它位於 Web 伺服器，並由 ADISAPI 元件具現化。 **RDSServer.DataFactory**物件所提供的讀取和寫入權限指定的資料來源，但不包含任何驗證或商務規則邏輯。  
   
- 如果您使用的方法中都提供**RDSServer.DataFactory**和[.RDSDataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md)物件時，遠端資料服務會使用**.RDSDataControl**預設版本。 預設會假設基本程式設計案例中，其中**RDSServer.DataFactory**做為一般的伺服器端商務物件。  
+ 如果您使用的方法中都提供**RDSServer.DataFactory**和[.RDSDataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md)物件時，遠端資料服務會使用 **.RDSDataControl**預設版本。 預設會假設基本程式設計案例中，其中**RDSServer.DataFactory**做為一般的伺服器端商務物件。  
   
  如果您想 Web 應用程式以處理特定工作的伺服器端處理時，您可以取代**RDSServer.DataFactory**的自訂商務物件。  
   

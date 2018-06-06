@@ -1,27 +1,19 @@
 ---
-title: "比較表格式和多維度解決方案 (SSAS) |Microsoft 文件"
-ms.custom: 
-ms.date: 06/15/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: multidimensional-tabular
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: get-started-article
-ms.assetid: 76ee5e96-6a04-49af-a88e-cb5fe29f2e9a
-caps.latest.revision: 
-author: Minewiskan
+title: 比較表格式和多維度解決方案 (SSAS) |Microsoft 文件
+ms.date: 05/08/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: ''
+ms.topic: conceptual
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Active
-ms.openlocfilehash: 9212a5452469d59240d825524afa9747e12386b6
-ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
+ms.openlocfilehash: 4e6a5941b33d2d73ee8bd86e33a710e065a21ae1
+ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="comparing-tabular-and-multidimensional-solutions"></a>比較表格式和多維度解決方案
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -151,7 +143,7 @@ ms.lasthandoff: 02/23/2018
   
 -   多維度模型資料庫可以使用維度和資料格層級安全性，使用以角色為基礎的權限。  
 
--   [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] 活頁簿的安全。  
+-   系統會使用 SharePoint 權限在檔案層級維護[!INCLUDE[ssGemini](../includes/ssgemini-md.md)] 活頁簿的安全。  
   
  [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] 活頁簿可以還原成表格式模式伺服器。 一旦還原檔案之後，它是與 SharePoint 分離，好讓您使用所有表格式模型化功能，包括資料列層級安全性。  
   
@@ -168,7 +160,7 @@ ms.lasthandoff: 02/23/2018
  
  如果您正在使用 Reporting Services，則報表功能和可用性會因版本和伺服器模式而異。 因此，您想要建立的報表類型可能會影響您選擇安裝的伺服器模式。  
   
- [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)](也就是在 SharePoint 中執行的 Reporting Services 撰寫工具)。 唯一可以搭配此報表使用的資料來源類型為 Analysis Services 表格式模型資料庫或 [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] 活頁簿。 這表示，您必須擁有表格式模式伺服器或 [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] for SharePoint 伺服器，才能裝載此報表類型所使用的資料來源。 您不能將多維度模型當做 [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] 報表的資料來源使用。 您必須建立 [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] BI 語意模型連線或 Reporting Services 共用資料來源，作為 [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] 報表的資料來源使用。  
+ SharePoint 2010 伺服器陣列中部署的報表伺服器上有提供[!INCLUDE[ssCrescent](../includes/sscrescent-md.md)](也就是在 SharePoint 中執行的 Reporting Services 撰寫工具)。 唯一可以搭配此報表使用的資料來源類型為 Analysis Services 表格式模型資料庫或 [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] 活頁簿。 這表示，您必須擁有表格式模式伺服器或 [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] for SharePoint 伺服器，才能裝載此報表類型所使用的資料來源。 您不能將多維度模型當做 [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] 報表的資料來源使用。 您必須建立 [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] BI 語意模型連線或 Reporting Services 共用資料來源，作為 [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] 報表的資料來源使用。  
   
  報表產生器和報表設計師可以使用任何 Analysis Services 資料庫，包括在 [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] for SharePoint 上裝載的 [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] 活頁簿。  
   

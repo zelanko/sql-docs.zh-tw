@@ -1,36 +1,36 @@
 ---
-title: "加入角色 | Microsoft Docs"
-ms.custom: 
+title: 加入角色 | Microsoft Docs
+ms.custom: ''
 ms.date: 07/14/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
 ms.component: security
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 f1_keywords:
 - SQL13.SWB.DATABASEUSER.MEMBERSHIP.F1
 helpviewer_keywords:
 - adding a member to a role
 - join a role
 ms.assetid: 05c8d10d-5823-46c6-8b1a-81722da6a42b
-caps.latest.revision: 
+caps.latest.revision: 13
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 12899d16a1055b4b6a63cb880df1829fc61b4c6e
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: c7e223fe95d2e541ead02b819ede070a0ed554de
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="join-a-role"></a>加入角色
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 此主題描述如何使用 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 或 [!INCLUDE[tsql](../../../includes/tsql-md.md)]，在 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 中將角色指派給登入和資料庫使用者。 您可以在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 中使用角色來有效率地管理權限。 您可以將權限指派給角色，然後在這些角色中加入和移除使用者與登入。 使用角色時，不需要針對每位使用者個別維護權限。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+  此主題描述如何使用 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] ，在 [!INCLUDE[tsql](../../../includes/tsql-md.md)]中將角色指派給登入和資料庫使用者。 您可以在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 中使用角色來有效率地管理權限。 您可以將權限指派給角色，然後在這些角色中加入和移除使用者與登入。 使用角色時，不需要針對每位使用者個別維護權限。  
   
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 支援四種類型的角色。  
   
@@ -50,11 +50,11 @@ ms.lasthandoff: 11/21/2017
   
      [限制事項](#Restrictions)  
   
-     [安全性](#Security)  
+     [Security](#Security)  
   
 -   **若要將角色指派給登入和資料庫使用，使用：**  
   
-     [SQL Server Management Studio](#SSMSProcedure)  
+     [Transact-SQL](#SSMSProcedure)  
   
      [Transact-SQL](#TsqlProcedure)  
   
@@ -68,7 +68,7 @@ ms.lasthandoff: 11/21/2017
   
 ###  <a name="Security"></a> 安全性  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> 權限  
  需要資料庫的 **ALTER ANY ROLE** 權限、角色的 **ALTER** 權限，或 **db_securityadmin**的成員資格。  
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
@@ -83,9 +83,9 @@ ms.lasthandoff: 11/21/2017
   
 4.  以滑鼠右鍵按一下要編輯的角色，並且選取 [屬性]。  
   
-5.  在 [伺服器角色屬性 –*server_role_name*] 對話方塊的 [成員] 頁面上，按一下 [加入]。  
+5.  在 [伺服器角色屬性] – *server_role_name* 對話方塊的 [成員] 頁面上，按一下 [新增]。  
   
-6.  在 [選取伺服器登入或角色] 對話方塊中，於 [輸入要選取的物件名稱 (範例)] 底下輸入要加入至此伺服器角色的登入或伺服器角色。 或者，按一下 **[瀏覽]** 並選取 **[瀏覽物件]** 對話方塊中任何或所有可用的物件。 按一下 [確定]，返回 [伺服器角色屬性 –*server_role_name*] 對話方塊。  
+6.  在 [選取伺服器登入或角色] 對話方塊中，於 [輸入要選取的物件名稱 (範例)] 底下輸入要加入至此伺服器角色的登入或伺服器角色。 或者，按一下 **[瀏覽]** 並選取 **[瀏覽物件]** 對話方塊中任何或所有可用的物件。 按一下 [確定]，返回 [伺服器角色屬性] – *server_role_name* 對話方塊。  
   
 7.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
@@ -105,9 +105,9 @@ ms.lasthandoff: 11/21/2017
   
 7.  以滑鼠右鍵按一下要編輯的角色，並且選取 [屬性]。  
   
-8.  在 [資料庫角色屬性 –*database_role_name*] 對話方塊的 [一般] 頁面中，按一下 [加入]。  
+8.  在 [資料庫角色屬性] – *database_role_name* 對話方塊的 [一般] 頁面中，按一下 [新增]。  
   
-9. 在 [選取資料庫使用者或角色] 對話方塊中，於 [輸入要選取的物件名稱 (範例)] 底下輸入要加入至此資料庫角色的登入或資料庫角色。 或者，按一下 **[瀏覽]** 並選取 **[瀏覽物件]** 對話方塊中任何或所有可用的物件。 按一下 [確定]，返回 [資料庫角色屬性 –*database_role_name*] 對話方塊。  
+9. 在 [選取資料庫使用者或角色] 對話方塊中，於 [輸入要選取的物件名稱 (範例)] 底下輸入要加入至此資料庫角色的登入或資料庫角色。 或者，按一下 **[瀏覽]** 並選取 **[瀏覽物件]** 對話方塊中任何或所有可用的物件。 按一下 [確定]，返回 [資料庫角色屬性] – *database_role_name* 對話方塊。  
   
 10. [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
@@ -115,11 +115,11 @@ ms.lasthandoff: 11/21/2017
   
 #### <a name="to-add-a-member-to-a-fixed-server-role"></a>若要將成員加入至固定伺服器角色  
   
-1.  在 **[物件總管]**中，連接到 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]的執行個體。  
+1.  在 **[物件總管]** 中，連接到 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]的執行個體。  
   
 2.  在標準列上，按一下 **[新增查詢]**。  
   
-3.  將下列範例複製並貼入查詢視窗中，然後按一下 **[執行]**。  
+3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]**。  
   
     ```  
     ALTER SERVER ROLE diskadmin ADD MEMBER [Domain\Juan] ;  
@@ -130,11 +130,11 @@ ms.lasthandoff: 11/21/2017
   
 #### <a name="to-add-a-member-to-a-user-defined-database-role"></a>若要將成員加入至使用者定義資料庫角色  
   
-1.  在 **[物件總管]**中，連接到 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]的執行個體。  
+1.  在 **[物件總管]** 中，連接到 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]的執行個體。  
   
 2.  在標準列上，按一下 **[新增查詢]**。  
   
-3.  將下列範例複製並貼入查詢視窗中，然後按一下 **[執行]**。  
+3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]**。  
   
     ```  
     ALTER ROLE Marketing ADD MEMBER [Domain\Juan] ;  

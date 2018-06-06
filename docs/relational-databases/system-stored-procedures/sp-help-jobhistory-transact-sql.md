@@ -1,16 +1,14 @@
 ---
-title: "sp_help_jobhistory (TRANSACT-SQL) |Microsoft 文件"
-ms.custom: 
+title: sp_help_jobhistory (TRANSACT-SQL) |Microsoft 文件
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: system-objects
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_help_jobhistory_TSQL
@@ -20,16 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_help_jobhistory
 ms.assetid: a944d44e-411b-4735-8ce4-73888d4262d7
-caps.latest.revision: 
+caps.latest.revision: 33
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: de1836ee52354e96341386db5dfd33297f2d9be6
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: e001e9e0ea0dd7dfdbe64a788db465125b04e414
+ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="sphelpjobhistory-transact-sql"></a>sp_help_jobhistory (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -87,10 +84,10 @@ sp_help_jobhistory [ [ @job_id = ] job_id ]
  [ **@end_run_time=** ] *end_run_time*  
  作業完成執行的時間。 *end_run_time*是**int**，預設值是 NULL。 *end_run_time*必須在表單中 hhmmss 格式輸入，其中 HH 是兩字元的當日小時，MM 是兩個字元當日分鐘，SS 是兩個字元的當日秒鐘。  
   
- [ **@minimum_run_duration=** ] *minimum_run_duration*  
+ [  **@minimum_run_duration=** ] *minimum_run_duration*  
  完成作業的最小時間長度。 *minimum_run_duration*是**int**，預設值是 NULL。 *minimum_run_duration*必須在表單中 hhmmss 格式輸入，其中 HH 是兩字元的當日小時，MM 是兩個字元當日分鐘，SS 是兩個字元的當日秒鐘。  
   
- [ **@run_status=** ] *run_status*  
+ [  **@run_status=** ] *run_status*  
  作業的執行狀態。 *run_status*是**int**，預設值是 NULL，而且可以是下列值之一。  
   
 |Value|描述|  
@@ -102,16 +99,16 @@ sp_help_jobhistory [ [ @job_id = ] job_id ]
 |**4**|進行中訊息|  
 |**5**|Unknown|  
   
- [ **@minimum_retries=** ] *minimum_retries*  
+ [  **@minimum_retries=** ] *minimum_retries*  
  作業應該嘗試重新執行的最小次數。 *minimum_retries*是**int**，預設值是 NULL。  
   
- [ **@oldest_first=** ] *oldest_first*  
+ [  **@oldest_first=** ] *oldest_first*  
  這是指是否先提供最舊作業的輸出結果。 *oldest_first*是**int**，預設值是**0**，表示先提供最新的作業。 **1**先提供最舊的作業。  
   
  [ **@server=** ] **'***server***'**  
  執行作業的伺服器名稱。 *伺服器*是**nvarchar （30)**，預設值是 NULL。  
   
- [ **@mode=** ] **'***mode***'**  
+ [  **@mode=** ] **'***模式***'**  
  為 SQL Server 是否會列印結果集中的所有資料行 (**完整**) 或資料行的摘要。 *模式*是**varchar(7)**，預設值是**摘要**。  
   
 ## <a name="return-code-values"></a>傳回碼值  

@@ -1,16 +1,15 @@
 ---
-title: "sp_helpsubscription_properties (TRANSACT-SQL) |Microsoft 文件"
-ms.custom: 
+title: sp_helpsubscription_properties (TRANSACT-SQL) |Microsoft 文件
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - sp_helpsubscription_properties
 ms.assetid: 7a76a645-97eb-47ac-b3ea-e2d75012cbed
-caps.latest.revision: 
+caps.latest.revision: 18
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 060aad04898e9ce47c91cf835b107e4c2efc39e3
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 83f6699993f9ee4d0d3df4662bb75e4e07edb942
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sphelpsubscriptionproperties-transact-sql"></a>sp_helpsubscription_properties (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,19 +47,19 @@ sp_helpsubscription_properties [ [ @publisher = ] 'publisher' ]
 ```  
   
 ## <a name="arguments"></a>引數  
- [  **@publisher=**] **'***發行者***'**  
- 這是發行者的名稱。 *發行者*是**sysname**，預設值是 **%** ，傳回所有發行者的資訊。  
+ [ **@publisher=**] **'***publisher***'**  
+ 這是發行者的名稱。 *發行者*是**sysname**，預設值是**%**，傳回所有發行者的資訊。  
   
- [  **@publisher_db=**] **'***publisher_db***'**  
- 這是發行者資料庫的名稱。 *publisher_db*是**sysname**，預設值是 **%** ，傳回所有發行者資料庫的資訊。  
+ [ **@publisher_db=**] **'***publisher_db***'**  
+ 這是發行者資料庫的名稱。 *publisher_db*是**sysname**，預設值是**%**，傳回所有發行者資料庫的資訊。  
   
- [  **@publication=**] **'***發行集***'**  
- 這是發行集的名稱。 *發行集*是**sysname**，預設值是 **%** ，傳回所有發行集的資訊。  
+ [ **@publication=**] **'***publication***'**  
+ 這是發行集的名稱。 *發行集*是**sysname**，預設值是**%**，傳回所有發行集的資訊。  
   
  [  **@publication_type=**] *publication_type*  
  是發行集的類型。*publication_type*是**int**，預設值是 NULL。 如果提供， *publication_type*必須是下列值之一：  
   
-|值|描述|  
+|Value|描述|  
 |-----------|-----------------|  
 |**0**|交易式發行集|  
 |**1**|快照式發行集|  
@@ -96,12 +94,12 @@ sp_helpsubscription_properties [ [ @publisher = ] 'publisher' ]
 |**offload_server**|**sysname**|指定遠端啟用所用之伺服器的網路名稱。|  
 |**dynamic_snapshot_location**|**nvarchar(255)**|指定儲存快照集檔案的資料夾路徑。|  
 |**use_web_sync**|**bit**|如果訂用帳戶可以同步處理會透過 HTTPS 值**1**表示啟用這項功能。|  
-|**應**|**nvarchar （260)**|代表 Web 同步處理之複寫接聽程式位置的 URL。|  
-|**internet_url**|**nvarchar （128)**|當利用基本驗證來連接到主控 Web 同步處理的 Web 伺服器時，合併代理程式所用的登入。|  
+|**應**|**nvarchar(260)**|代表 Web 同步處理之複寫接聽程式位置的 URL。|  
+|**internet_url**|**nvarchar(128)**|當利用基本驗證來連接到主控 Web 同步處理的 Web 伺服器時，合併代理程式所用的登入。|  
 |**internet_login**|**nvarchar （524)**|當利用基本驗證來連接到主控 Web 同步處理的 Web 伺服器時，合併代理程式所用的登入密碼。|  
 |**internet_security_mode**|**int**|連接到主控 Web 同步處理，值為 Web 伺服器時使用的驗證模式**1**表示 Windows 驗證，而值為**0**表示基本驗證。|  
 |**internet_timeout**|**int**|Web 同步處理要求到期之前的時間長度 (以秒為單位)。|  
-|**主機名稱**|**nvarchar （128)**|指定在 WHERE 子句參數化資料列篩選器中使用這個函數時的 HOST_NAME() 值。|  
+|**主機名稱**|**nvarchar(128)**|指定在 WHERE 子句參數化資料列篩選器中使用這個函數時的 HOST_NAME() 值。|  
   
 ## <a name="return-code-values"></a>傳回碼值  
  **0** （成功） 或**1** （失敗）  
@@ -112,7 +110,7 @@ sp_helpsubscription_properties [ [ @publisher = ] 'publisher' ]
 ## <a name="permissions"></a>Permissions  
  只有成員**sysadmin**固定的伺服器角色或**db_owner**固定的資料庫角色可以執行**sp_helpsubscription_properties**。  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [系統預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

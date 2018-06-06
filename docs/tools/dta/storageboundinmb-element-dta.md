@@ -1,32 +1,34 @@
 ---
-title: "StorageBoundInMB 元素 (DTA) |Microsoft 文件"
-ms.custom: 
+title: StorageBoundInMB 元素 (DTA) |Microsoft 文件
+ms.custom: ''
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
 ms.component: dta
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: database-engine
-ms.tgt_pltfrm: 
-ms.topic: article
-dev_langs: XML
-helpviewer_keywords: StorageBoundInMB element
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
+dev_langs:
+- XML
+helpviewer_keywords:
+- StorageBoundInMB element
 ms.assetid: a8374910-bf68-4edb-b464-53a3a705e7f4
-caps.latest.revision: "12"
+caps.latest.revision: 12
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: e0584999dc8e98243c00f4bbd174d1bfa8b14ba2
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
-ms.translationtype: MT
+ms.openlocfilehash: ff7220d48a161456d899fb150c3749accad10fcf
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.translationtype: MTE
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="storageboundinmb-element-dta"></a>StorageBoundInMB 元素 (DTA)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]指定的最大空間 （mb） 供 Database Engine Tuning Advisor 的微調建議 （索引和資料分割集）。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  指定 Database Engine Tuning Advisor 微調建議 (索引和資料分割集) 所能取用的最大空間 (MB)。  
   
 ## <a name="syntax"></a>語法  
   
@@ -40,7 +42,7 @@ ms.lasthandoff: 01/17/2018
   
 ## <a name="element-characteristics"></a>元素特性  
   
-|特性|說明|  
+|特性|描述|  
 |--------------------|-----------------|  
 |**資料類型和長度**|**unsignedInt**，沒有長度限制。|  
 |**預設值**|無。|  
@@ -50,10 +52,10 @@ ms.lasthandoff: 01/17/2018
   
 |關聯性|元素|  
 |------------------|--------------|  
-|**父元素**|[TuningOptions 元素 &#40; Dta& &#41;](../../tools/dta/tuningoptions-element-dta.md)|  
+|**父元素**|[TuningOptions 元素 &#40;DTA&#41;](../../tools/dta/tuningoptions-element-dta.md)|  
 |**子元素**|無|  
   
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>Remarks  
  微調多個資料庫時，所有資料庫的建議內容都考量了空間的計算。 依預設，Database Engine Tuning Advisor 會採用下列中較小的儲存體大小：  
   
 -   目前的原始資料大小的三倍，其中包括各資料表的堆積和叢集索引的總大小。  
@@ -66,7 +68,7 @@ ms.lasthandoff: 01/17/2018
   
 ## <a name="example"></a>範例  
   
-## <a name="description"></a>說明  
+## <a name="description"></a>描述  
  下列程式碼範例顯示如何將 1500 MB 的限制設為微調建議所能取用的最大磁碟空間：  
   
 ## <a name="code"></a>程式碼  
@@ -82,6 +84,6 @@ ms.lasthandoff: 01/17/2018
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [XML 輸入檔參考 &#40;Database Engine Tuning Advisor&#41;](../../tools/dta/xml-input-file-reference-database-engine-tuning-advisor.md)  
+ [XML 輸入檔參考XML Input File ReferenceDatabase Engine Tuning Advisor&#41;](../../tools/dta/xml-input-file-reference-database-engine-tuning-advisor.md)  
   
   

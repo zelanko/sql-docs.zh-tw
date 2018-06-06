@@ -1,32 +1,23 @@
 ---
-title: "設定模擬選項 (SSAS-多維度) |Microsoft 文件"
-ms.custom: 
-ms.date: 03/13/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords: sql13.asvs.sqlserverstudio.impersonationinfo.f1
-helpviewer_keywords: Impersonation Information dialog box
-ms.assetid: 8e127f72-ef23-44ad-81e6-3dd58981770e
-caps.latest.revision: "27"
-author: Minewiskan
+title: 設定模擬選項 (SSAS-多維度) |Microsoft 文件
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: multidimensional-models
+ms.topic: conceptual
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 55ec66efd96a14bde8a9ea8b26488e18faadac0f
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 6c11064ecc87744999c31080e6a4d57a3849f5d2
+ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="set-impersonation-options-ssas---multidimensional"></a>設定模擬選項 (SSAS - 多維度)
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]建立時**資料來源**物件在 Analysis Services 模型中，您必須設定的設定值就是模擬選項。 此選項會決定當執行與連接有關的本機作業時，Analysis Services 是否採用特定 Windows 使用者帳戶的識別，例如在支援漫遊設定檔的環境中載入 OLE DB 資料提供者或解析使用者設定檔資訊。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+  在 Analysis Services 模型中建立**資料來源**物件時，您必須進行的其中一項設定就是模擬選項。 此選項會決定當執行與連接有關的本機作業時，Analysis Services 是否採用特定 Windows 使用者帳戶的識別，例如在支援漫遊設定檔的環境中載入 OLE DB 資料提供者或解析使用者設定檔資訊。  
   
  如果是使用 Windows 驗證的連接，則模擬選項也會決定在外部資料來源執行查詢所使用的使用者識別。 例如，如果您將模擬選項設定為 **contoso\dbuser**，則在處理期間用來擷取資料的查詢將會以資料庫伺服器上的 **contoso\dbuser** 身分執行。  
   
@@ -53,7 +44,7 @@ ms.lasthandoff: 01/08/2018
  對話方塊中的所有選項都可以使用，但並非所有選項都適合所有案例。 請使用下列資訊來確定最適合您案例的選項。  
   
  **使用特定的使用者名稱和密碼**  
- 選取此選項即可讓[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]物件使用依照以下格式指定 Windows 使用者帳戶的安全性認證： *\<網域名稱 >*  **\\**  *\<使用者帳戶名稱 >*。  
+ 選取此選項即可讓[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]物件使用依照以下格式指定 Windows 使用者帳戶的安全性認證： *\<網域名稱 >***\\***\<使用者帳戶名稱 >*。  
   
  選擇此選項，即可使用您專為資料存取目的所建立的專用最低權限 Windows 使用者識別。 例如，如果您習慣建立一般用途帳戶來擷取報表中使用的資料，則可以在此指定該帳戶。  
   
@@ -102,9 +93,9 @@ ms.lasthandoff: 01/08/2018
 
  若為多維度資料庫，[預設值] 表示使用服務帳戶和目前使用者進行資料採礦作業。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [建立資料來源 &#40;SSAS 多維度&#41;](../../analysis-services/multidimensional-models/create-a-data-source-ssas-multidimensional.md)   
- [設定資料來源屬性 &#40;SSAS 多維度&#41;](../../analysis-services/multidimensional-models/set-data-source-properties-ssas-multidimensional.md)   
+ [設定資料來源屬性 & #40;SSAS 多維度 & #41;](../../analysis-services/multidimensional-models/set-data-source-properties-ssas-multidimensional.md)   
 
   
   

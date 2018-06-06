@@ -1,31 +1,28 @@
 ---
-title: "資料空間物件 (RDS) |Microsoft 文件"
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
+title: 資料空間物件 (RDS) |Microsoft 文件
+ms.prod: sql
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
-ms.custom: 
+ms.technology: connectivity
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 apitype: COM
 helpviewer_keywords:
 - DataSpace object [RDS]
 ms.assetid: 9194bffa-5bdf-4dff-af86-f7158c23bfa7
-caps.latest.revision: 
+caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 3c4ee2e71334998cd0d2cba1c0c52c67e3314619
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 4624cf678df777a33e39a2d5438cbdc613ff7e02
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="dataspace-object-rds"></a>資料空間物件 (RDS)
 > [!IMPORTANT]
@@ -35,10 +32,10 @@ ms.lasthandoff: 02/09/2018
   
  遠端資料服務需要商務物件 proxy，以便用戶端元件可以與位於中介層商務物件通訊。 Proxy 促進封裝、 unpackaging，和傳輸 （封送處理） 的應用程式的[資料錄集](../../../ado/reference/ado-api/recordset-object-ado.md)跨處理序或電腦界限的資料。  
   
- 遠端資料服務會使用**.RDSDataSpace**物件的[CreateObject](../../../ado/reference/rds-api/createobject-method-rds.md)方法來建立商務物件的 proxy。 每當建立中介層商務物件與對應的執行個體時，動態建立的商務物件的 proxy。 遠端資料服務支援下列通訊協定： HTTP、 HTTPS （HTTP 安全通訊端）、 DCOM 和同處理序 （用戶端元件和商務物件位於同一部電腦上）。  
+ 遠端資料服務會使用 **.RDSDataSpace**物件的[CreateObject](../../../ado/reference/rds-api/createobject-method-rds.md)方法來建立商務物件的 proxy。 每當建立中介層商務物件與對應的執行個體時，動態建立的商務物件的 proxy。 遠端資料服務支援下列通訊協定： HTTP、 HTTPS （HTTP 安全通訊端）、 DCOM 和同處理序 （用戶端元件和商務物件位於同一部電腦上）。  
   
 > [!NOTE]
->  RDS 行為 「 無狀態 」 的方式時**.RDSDataSpace**物件使用的 HTTP 或 HTTPS 通訊協定。 亦即，伺服器會傳回回應之後，會捨棄任何有關用戶端要求的內部資訊。  
+>  RDS 行為 「 無狀態 」 的方式時 **.RDSDataSpace**物件使用的 HTTP 或 HTTPS 通訊協定。 亦即，伺服器會傳回回應之後，會捨棄任何有關用戶端要求的內部資訊。  
   
 > [!NOTE]
 >  雖然商務物件的存留期間的商務物件 proxy 存在，商務物件確實存在才傳送回應至要求。 要求發出時 （也就是一種方法會叫用商務物件上），proxy 會開啟新的連接到伺服器並伺服器建立的商務物件的新執行個體。 回應要求的商務物件之後，伺服器就會終結的商務物件，並關閉連線。  
@@ -46,7 +43,7 @@ ms.lasthandoff: 02/09/2018
 > [!NOTE]
 >  這個行為表示您無法將資料從一個要求傳遞到另一個使用商務物件的屬性或變數。 您必須採用另一種機制，例如檔案或為方法引數，來保存狀態資料。  
   
- 類別識別碼**.RDSDataSpace**物件是 BD96C556-65A3-11 D 0 983A 00C04FC29E36。  
+ 類別識別碼 **.RDSDataSpace**物件是 BD96C556-65A3-11 D 0 983A 00C04FC29E36。  
   
  **DataSpace**物件而言是安全的指令碼。  
   

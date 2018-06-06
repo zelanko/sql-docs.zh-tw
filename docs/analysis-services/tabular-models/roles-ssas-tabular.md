@@ -1,31 +1,23 @@
 ---
-title: "角色 |Microsoft 文件"
-ms.custom: 
-ms.date: 03/17/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services, azure-analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
-ms.assetid: e547382a-c064-4bc6-818c-5127890af334
-caps.latest.revision: 
-author: Minewiskan
+title: 角色 |Microsoft 文件
+ms.date: 05/07/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: tabular-models
+ms.topic: conceptual
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 15030b1b2c5345d3072ff188356aaa532857c90b
-ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
+ms.openlocfilehash: e73af245aaddbeb321acd60aeabd8a1617f3972f
+ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="roles"></a>角色
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
-表格式模型中的角色定義模型的成員權限。 角色的成員可以依角色權限所定義，對模型執行動作。 以讀取權限定義的角色也可以使用資料列層級篩選，在資料列層級提供額外的安全性。 
+  表格式模型中的角色定義模型的成員權限。 角色的成員可以依角色權限所定義，對模型執行動作。 以讀取權限定義的角色也可以使用資料列層級篩選，在資料列層級提供額外的安全性。 
   
  SQL Server Analysis services，角色包含使用者成員依 Windows 使用者名稱或 Windows 群組和權限 （讀取、 處理程序、 系統管理員）。 Azure Analysis services，使用者必須在您的 Azure Active Directory 和使用者名稱和指定的群組都必須是組織的電子郵件地址的 UPN。 
   

@@ -1,31 +1,28 @@
 ---
-title: "將 SQL Server 2014 Managed Backup 設定移轉到 SQL Server 2016 | Microsoft Docs"
-ms.custom: 
+title: 將 SQL Server 2014 Managed Backup 設定移轉到 SQL Server 2016 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
-ms.prod_service: database-engine
-ms.service: 
-ms.component: backup-restore
-ms.reviewer: 
+ms.prod: sql
+ms.prod_service: backup-restore
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- dbe-backup-restore
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: backup-restore
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: ae937ebb-24ff-4a33-be3c-8f85328dfc75
-caps.latest.revision: 
+caps.latest.revision: 7
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 0bbc82f05c8bd82abf999602a2881a47b435d7a1
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 894fe1d91cd11ec111f9628206a543ab4f2cff40
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="migrate-sql-server-2014-managed-backup-settings-to-sql-server-2016"></a>將 SQL Server 2014 管理的備份設定移轉到 SQL Server 2016
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 本主題涵蓋當從 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 升級到 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 時，[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 的移轉考量。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  本主題涵蓋當從 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 升級到 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 時， [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]的移轉考量。  
   
  [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 中 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]的程序和基礎行為已變更。 下列章節將說明功能上的變更及其隱含式。  
   

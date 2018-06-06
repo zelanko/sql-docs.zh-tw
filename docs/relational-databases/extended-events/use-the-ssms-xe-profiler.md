@@ -1,18 +1,14 @@
 ---
-title: "使用 SSMS XEvent 分析工具 | Microsoft Docs"
-ms.custom: 
+title: 使用 SSMS XEvent 分析工具 | Microsoft Docs
+ms.custom: ''
 ms.date: 10/02/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
-ms.component: extended-events
 ms.reviewer: genemi
 ms.suite: sql
-ms.technology:
-- database-engine
-- xevents
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: xevents
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - extended events [SQL Server], system health session
 - extended events [SQL Server], system_health session
@@ -22,20 +18,21 @@ ms.assetid: 1e1fad43-d747-4775-ac0d-c50648e56d78
 author: yualan
 ms.author: alayu
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 5d478dc053a744cfffa9f7234fe49bad552cc429
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: d8d7a1aad6ccaa2b948799293d68137aac44a56b
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="use-the-ssms-xevent-profiler"></a>使用 SSMS XEvent 分析工具
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] XEvent 分析工具是一項 SQL Server Management Studio (SSMS) 功能，其可顯示擴充事件的即時檢視器視窗。 本概觀將說明使用此分析工具的理由、重要功能，並會提供檢視擴充事件的入門指示。
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+XEvent 分析工具是一項 SQL Server Management Studio (SSMS) 功能，其可顯示擴充事件的即時檢視器視窗。 本概觀將說明使用此分析工具的理由、重要功能，並會提供檢視擴充事件的入門指示。
 
 ## <a name="why-would-i-use-the-xevent-profiler"></a>為什麼要使用 XEvent 分析工具？
 XEvent 分析工具不同於 SQL Profiler，其可直接整合到 SSMS，並以 SQL 引擎中可調式擴充事件技術作為基礎建置而成。 您可利用這項功能在 SQL 伺服器上快速存取診斷事件的即時串流檢視。 您可自訂此檢視，讓這些自訂內容以 .viewsettings 檔案的形式與其他 SSMS 使用者共用。 XE 分析工具建立的工作階段，對運作中 SQL 伺服器所造成的干擾，低於類似 SQL 追蹤使用 SQL Profiler 所造成的干擾。 使用者也可使用現有的 XE 工作階段屬性 UI 或是 TSQL，自訂此工作階段。
 
-## <a name="prerequisites"></a>必要條件
+## <a name="prerequisites"></a>Prerequisites
 只有 SQL Server Management Studio (SSMS) v17.3 或更新版本才提供此功能。 請確認目前使用的是最新版本。 您可以於[這裡](https://docs.microsoft.com/en-us/sql/ssms/download-sql-server-management-studio-ssms)找到最新版本。
 
 ## <a id="getting-started"></a>使用者入門

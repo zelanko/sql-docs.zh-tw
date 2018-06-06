@@ -1,16 +1,14 @@
 ---
-title: "資料型別 dBASE |Microsoft 文件"
-ms.custom: 
+title: 資料型別 dBASE |Microsoft 文件
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
-ms.component: odbc
-ms.reviewer: 
+ms.prod: sql
+ms.prod_service: connectivity
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: connectivity
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - Jet-based ODBC drivers [ODBC], DBasedriver
 - desktop database drivers [ODBC], DBasedriver
@@ -19,16 +17,15 @@ helpviewer_keywords:
 - dbase data types [ODBC]
 - ODBC desktop database drivers [ODBC], DBasedriver
 ms.assetid: a0e31e6b-d02b-4ee2-9b37-5baf6a11c0a6
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
-ms.workload: Inactive
-ms.openlocfilehash: fc9032a42f79e73009df216ecdb1273fa550ea72
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+manager: craigg
+ms.openlocfilehash: 60240eb9763d2d0b581765bde3a6d0958567f08e
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="dbase-data-types"></a>dBASE 資料類型
 下表顯示 dBASE 資料類型如何對應至 ODBC SQL 資料類型。 請注意，並非所有的 ODBC SQL 資料類型所支援。  
@@ -56,7 +53,7 @@ ms.lasthandoff: 12/21/2017
   
  下表顯示限制在 dBASE 資料類型。  
   
-|資料類型|描述|  
+|資料類型|Description|  
 |---------------|-----------------|  
 |CHAR|建立 CHAR 資料行的零或未指定的長度實際上會傳回 254 個位元組的資料行。|  
 |加密的資料|DBASE 驅動程式不支援加密的 dBASE 資料表。|  

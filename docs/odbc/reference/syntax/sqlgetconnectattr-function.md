@@ -1,32 +1,33 @@
 ---
-title: "SQLGetConnectAttr 函數 |Microsoft 文件"
-ms.custom: 
+title: SQLGetConnectAttr 函數 |Microsoft 文件
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
-ms.component: odbc
-ms.reviewer: 
+ms.prod: sql
+ms.prod_service: connectivity
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
-ms.topic: article
-apiname: SQLGetConnectOption
-apilocation: sqlsrv32.dll
+ms.technology: connectivity
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
+apiname:
+- SQLGetConnectOption
+apilocation:
+- sqlsrv32.dll
 apitype: dllExport
-f1_keywords: SQLGetConnectAttr
-helpviewer_keywords: SQLGetConnectAttr function [ODBC]
+f1_keywords:
+- SQLGetConnectAttr
+helpviewer_keywords:
+- SQLGetConnectAttr function [ODBC]
 ms.assetid: 2cb4ffa8-19d3-4664-8c2f-6682cdcc3f33
-caps.latest.revision: "32"
+caps.latest.revision: 32
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
-ms.workload: Inactive
-ms.openlocfilehash: 11e1ae7c2dc3de4611687349295bdd3344c46d47
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+manager: craigg
+ms.openlocfilehash: 32334ddfa2e58a0e6ec80a50fda44e704d20dee4
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sqlgetconnectattr-function"></a>SQLGetConnectAttr 函數
 **一致性**  
@@ -36,7 +37,7 @@ ms.lasthandoff: 12/21/2017
  **SQLGetConnectAttr**傳回連接屬性的目前設定。  
   
 > [!NOTE]  
->  如需有關什麼驅動程式管理員會對應到此函式時 ODBC 3*.x*應用程式使用 ODBC 2*.x*驅動程式，請參閱[向後的對應取代函式應用程式的相容性](../../../odbc/reference/develop-app/mapping-replacement-functions-for-backward-compatibility-of-applications.md)。  
+>  如需有關什麼驅動程式管理員會對應到此函式時 ODBC 3 *.x*應用程式使用 ODBC 2 *.x*驅動程式，請參閱[向後的對應取代函式應用程式的相容性](../../../odbc/reference/develop-app/mapping-replacement-functions-for-backward-compatibility-of-applications.md)。  
   
 ## <a name="syntax"></a>語法  
   
@@ -54,7 +55,7 @@ SQLRETURN SQLGetConnectAttr(
  *ConnectionHandle*  
  [輸入]連接控制代碼。  
   
- *Attribute*  
+ *屬性*  
  [輸入]要擷取的屬性。  
   
  *ValuePtr*  
@@ -62,7 +63,7 @@ SQLRETURN SQLGetConnectAttr(
   
  如果*ValuePtr*是 NULL， *StringLengthPtr*仍會傳回的總位元組數 （不含字元資料 null 結束字元） 可用來傳回所指向之緩衝區中*ValuePtr*。  
   
- *Columnsize*  
+ *BufferLength*  
  [輸入]如果*屬性*是 ODBC 定義的屬性和*ValuePtr*指向字元字串或二進位的緩衝區，這個引數應該是長度\* *ValuePtr*. 如果*屬性*是 ODBC 定義的屬性和\* *ValuePtr*是整數， *Columnsize*會被忽略。 如果中的值 *\*ValuePtr*是 Unicode 字串 (當呼叫**SQLGetConnectAttrW**)、 *Columnsize*引數必須是偶數。  
   
  如果*屬性*是驅動程式定義的屬性，應用程式設定指出屬性給驅動程式管理員性質*Columnsize*引數。 *Columnsize*可以是下列值：  
@@ -84,7 +85,7 @@ SQLRETURN SQLGetConnectAttr(
 ## <a name="diagnostics"></a>診斷  
  當**SQLGetConnectAttr**會傳回 SQL_ERROR 或 SQL_SUCCESS_WITH_INFO，相關聯的 SQLSTATE 值可以取自診斷資料結構藉由呼叫**SQLGetDiagRec**與*HandleType*利用 SQL_HANDLE_DBC 的和*處理*的*ConnectionHandle*。 下表列出通常所傳回的 SQLSTATE 值**SQLGetConnectAttr** ，並說明這個函式; 每個內容中的標記法 」 (DM) 」 位於驅動程式管理員傳回的 Sqlstate 的說明. 每個 SQLSTATE 值相關聯的傳回碼是 SQL_ERROR，除非有說明，否則為。  
   
-|SQLSTATE|錯誤|描述|  
+|SQLSTATE|錯誤|Description|  
 |--------------|-----------|-----------------|  
 |01000|一般警告|特定驅動程式告知性訊息。 （函式會傳回 SQL_SUCCESS_WITH_INFO）。|  
 |01004|字串資料，右邊遭截斷|中傳回的資料\* *ValuePtr*已截斷為*Columnsize*減去 null 結束字元的長度。 中會傳回未截斷的字串值的長度 **StringLengthPtr*。 （函式會傳回 SQL_SUCCESS_WITH_INFO）。|  
@@ -127,6 +128,6 @@ SQLRETURN SQLGetConnectAttr(
 |設定環境屬性|[SQLSetEnvAttr 函式](../../../odbc/reference/syntax/sqlsetenvattr-function.md)|  
 |設定陳述式屬性|[SQLSetStmtAttr 函式](../../../odbc/reference/syntax/sqlsetstmtattr-function.md)|  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [ODBC 應用程式開發介面參考](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [ODBC 標頭檔](../../../odbc/reference/install/odbc-header-files.md)

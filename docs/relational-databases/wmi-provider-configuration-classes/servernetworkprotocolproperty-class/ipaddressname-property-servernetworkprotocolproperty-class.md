@@ -1,16 +1,15 @@
 ---
-title: "IPAddressName 屬性 （ServerNetworkProtocolProperty 類別） |Microsoft 文件"
-ms.custom: 
+title: IPAddressName 屬性 （ServerNetworkProtocolProperty 類別） |Microsoft 文件
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
 ms.component: wmi
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - IPAddressName Property (ServerNetworkProtocolProperty Class)
@@ -20,20 +19,19 @@ apitype: MOFDef
 helpviewer_keywords:
 - IpAddressName property
 ms.assetid: b27ea0fa-ab31-424b-80cf-aad1e87f3816
-caps.latest.revision: 
-author: JennieHubbard
-ms.author: jhubbard
+caps.latest.revision: 30
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: e3c652f66b0b1051519967ab88e92b9aae58c2b5
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.openlocfilehash: 02da265eb4c9d4d44eb0a9708e1fec216d7e4d15
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ipaddressname-property-servernetworkprotocolproperty-class"></a>IPAddressName 屬性 (ServerNetworkProtocolProperty 類別)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
-取得 IP 位址的名稱。  
+  取得 IP 位址的名稱。  
   
 ## <a name="syntax"></a>語法  
   

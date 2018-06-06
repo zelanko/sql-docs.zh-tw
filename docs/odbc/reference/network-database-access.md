@@ -1,16 +1,14 @@
 ---
-title: "網路存取資料庫 |Microsoft 文件"
-ms.custom: 
+title: 網路存取資料庫 |Microsoft 文件
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
-ms.component: odbc
-ms.reviewer: 
+ms.prod: sql
+ms.prod_service: connectivity
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: connectivity
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - ODBC [ODBC], database access
 - SQL [ODBC], database access
@@ -18,16 +16,15 @@ helpviewer_keywords:
 - network database access [ODBC]
 - standardizing database access [ODBC], network
 ms.assetid: f31dd938-e992-436b-b613-145c23973064
-caps.latest.revision: "8"
+caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
-ms.workload: Inactive
-ms.openlocfilehash: acdc1f994d6fd598051ceb2e4e955650f17ffc27
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+manager: craigg
+ms.openlocfilehash: 39e49ab6e5aba7852968d9ee22ffc4873891be08
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="network-database-access"></a>網路資料庫存取權
 透過網路存取資料庫需要多個元件，其中每一個都是獨立的和位於下方的程式設計介面。 下列圖例顯示這些元件。  

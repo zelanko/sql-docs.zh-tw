@@ -1,29 +1,19 @@
 ---
-title: "轉換 R 程式碼以在 R Services 中使用 | Microsoft Docs"
-ms.date: 12/20/2017
-ms.reviewer: 
-ms.suite: sql
-ms.prod: machine-learning-services
-ms.prod_service: machine-learning-services
-ms.component: r
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
-dev_langs:
-- R
-ms.assetid: 0b11ab52-b2f9-4a4f-b1ab-68ba09c8adcc
-caps.latest.revision: 
-author: jeannt
-ms.author: jeannt
-manager: cgronlund
-ms.workload: Inactive
-ms.openlocfilehash: 802ad1ee49920db65eadccfb29650c649c339d48
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+title: 將 R 程式碼，以用於 SQL Server 機器學習服務轉換 |Microsoft 文件 」
+ms.prod: sql
+ms.technology: machine-learning
+ms.date: 04/15/2018
+ms.topic: conceptual
+author: HeidiSteen
+ms.author: heidist
+manager: cgronlun
+ms.openlocfilehash: bf3d272bd4b5c1227aa8a1969727ea17f5b65596
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 04/16/2018
 ---
-# <a name="converting-r-code-for-execution-in-database"></a>轉換執行資料庫內的 R 程式碼
+# <a name="convert-r-code-for-execution-in-sql-server-in-database-instances"></a>轉換為 SQL Server （資料庫） 執行個體中執行 R 程式碼
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 本文章提供有關如何修改工作在 SQL Server 中的 R 程式碼的高階指引。 
@@ -34,7 +24,7 @@ ms.lasthandoff: 02/11/2018
 
 + 您使用 R 程式庫，存取網路或無法在 SQL Server 上安裝的。
 + 程式碼會對 SQL Server 外部的資料來源，例如 Excel 工作表、 共用上的檔案和其他資料庫不同的呼叫。 
-+ 您想要執行的程式碼 *@script* 參數[sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md)和也參數化預存程序。
++ 您想要執行的程式碼*@script*參數[sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md)和也參數化預存程序。
 + 與原始方案包含多個可能會更有效率，如果執行獨立作業，例如資料準備或特徵設計模型定型、 計分或 reporting 與在生產環境中的步驟。
 + 您想要改善藉由變更文件庫，使用平行執行，或某些將處理卸載至 SQL Server 最佳化效能。 
 

@@ -1,31 +1,29 @@
 ---
-title: "從 Oracle 資料庫建立發行集 | Microsoft 文件"
-ms.custom: 
+title: 從 Oracle 資料庫建立發行集 | Microsoft 文件
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
 ms.component: replication
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - publications [SQL Server replication], Oracle databases
 - Oracle publishing [SQL Server replication], configuring
 ms.assetid: b3812746-14b0-4b22-809e-b4a95e1c8083
-caps.latest.revision: 
+caps.latest.revision: 39
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 2aceabb4f6328a12a71383a34f13c9444621b8f4
-ms.sourcegitcommit: ab25b08a312d35489a2c4a6a0d29a04bbd90f64d
+ms.openlocfilehash: f8f8aba1972cae5e92be6ea9456c836986af8514
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="create-a-publication-from-an-oracle-database"></a>從 Oracle 資料庫建立發行集
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -74,7 +72,7 @@ ms.lasthandoff: 03/08/2018
   
     3.  如果您選取 **[Oracle 標準驗證]**，則於設定期間輸入您在「Oracle 發行者」上建立的複寫管理使用者結構描述之登入和密碼。  
   
-6.  在 **[連接屬性]** 索引標籤上，選取 **[閘道]** 或 **[完整]**的「發行者」類型。  
+6.  在 **[連接屬性]** 索引標籤上，選取 **[閘道]** 或 **[完整]** 的「發行者」類型。  
   
      [完整]  選項可以為 Oracle 發行提供具有完整支援功能的快照式和交易式發行集。 **[閘道]** 選項可以在複寫作為系統之間的閘道時，提供特定的設計最佳化以提升效能。 如果您計畫在多個交易式發行集內發行相同的資料表，就無法使用 **[閘道]** 選項。 如果您選取 **[閘道]**，則資料表最多只能在一個交易式發行集裡出現，但可以在任意數目的快照式發行集裡出現。  
   

@@ -1,29 +1,22 @@
 ---
-title: "架構 |Microsoft 文件"
-ms.custom: 
-ms.date: 11/03/2017
-ms.reviewer: 
-ms.suite: sql
-ms.prod: machine-learning-services
-ms.prod_service: machine-learning-services
-ms.component: python
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
-author: jeannt
-ms.author: jeannt
-manager: cgronlund
-ms.workload: Inactive
-ms.openlocfilehash: 5ca823bc7094c77a31cfd3178294cd49a360d77a
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+title: SQL Server 機器學習服務使用 Python 架構概觀 |Microsoft 文件
+ms.prod: sql
+ms.technology: machine-learning
+ms.date: 04/15/2018
+ms.topic: conceptual
+author: HeidiSteen
+ms.author: heidist
+manager: cgronlun
+ms.openlocfilehash: 9876e54ed0b45bda48f76c3b1d764b1312313348
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="architecture-overview-for-machine-learning-services-with-python"></a>使用 Python 的機器學習服務的架構概觀
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-本主題提供的 Python 與 SQL Server，包括支援外部指令碼執行的資料庫引擎和啟用 Python 與 SQL Server 的互通性的新元件中的安全性模型，元件的整合方式的概觀。 如需詳細資訊，請參閱連結的主題。
+本文章提供 Python 與 SQL Server，包括支援外部指令碼執行的資料庫引擎和啟用 Python 與 SQL Server 的互通性的新元件中的安全性模型，元件的整合方式的概觀。 如需詳細資訊，請參閱連結文件。
 
 > [!IMPORTANT]
 > 從 SQL Server 2017 CTP 2.0 Python 的支援。 此發行前版本功能會隨時變更。

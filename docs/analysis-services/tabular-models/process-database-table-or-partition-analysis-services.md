@@ -1,33 +1,23 @@
 ---
-title: "處理資料庫、 資料表或資料分割 (Analysis Services) |Microsoft 文件"
-ms.custom: 
-ms.date: 03/01/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services, azure-analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords:
-- sql13.ASVS.SSMS.PARTITIONS.PROCESSINGOPTIONS.IMBI.F1
-ms.assetid: 307d69c3-cabb-4dfa-b90c-9852492c1213
-caps.latest.revision: 
-author: Minewiskan
+title: 處理資料庫、 資料表或資料分割 (Analysis Services) |Microsoft 文件
+ms.date: 05/07/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: tabular-models
+ms.topic: conceptual
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: c789fc9601bd4889585d52dcb6ecfe6365038323
-ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
+ms.openlocfilehash: 3fbaa230d4db635b5c3f6c232fa50ae0cf88aec1
+ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="process-database-table-or-partition-analysis-services"></a>處理資料庫、資料表或資料分割 (Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
-本主題中的工作描述如何使用手動處理表格式模型資料庫、 資料表或資料分割**程序\<物件 >**  對話方塊中的[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]。  
+  本主題中的工作描述如何使用手動處理表格式模型資料庫、 資料表或資料分割**程序\<物件 >**  對話方塊中的[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]。  
   
  如需有關表格式模型處理的詳細資訊，請參閱[處理資料](../../analysis-services/tabular-models/process-data-ssas-tabular.md)。  
   
@@ -68,7 +58,7 @@ ms.lasthandoff: 02/23/2018
   
 1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中，以滑鼠右鍵按一下含有您要處理之資料分割的資料表，然後按一下 [資料分割]。  
   
-2.  在 **[資料分割]** 對話方塊的 **[資料分割]**中，按一下 [處理] 按鈕。  
+2.  在 **[資料分割]** 對話方塊的 **[資料分割]** 中，按一下 [處理] 按鈕。  
   
 3.  在 **[處理資料分割]** 對話方塊的 **[模式]** 清單方塊中，選取下列其中一個處理模式：  
   

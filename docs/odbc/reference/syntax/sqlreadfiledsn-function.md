@@ -1,32 +1,33 @@
 ---
-title: "SQLReadFileDSN 函式 |Microsoft 文件"
-ms.custom: 
+title: SQLReadFileDSN 函式 |Microsoft 文件
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
-ms.component: odbc
-ms.reviewer: 
+ms.prod: sql
+ms.prod_service: connectivity
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
-ms.topic: article
-apiname: SQLReadFileDSN
-apilocation: sqlsrv32.dll
+ms.technology: connectivity
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
+apiname:
+- SQLReadFileDSN
+apilocation:
+- sqlsrv32.dll
 apitype: dllExport
-f1_keywords: SQLReadFileDSN
-helpviewer_keywords: SQLReadFileDSN function [ODBC]
+f1_keywords:
+- SQLReadFileDSN
+helpviewer_keywords:
+- SQLReadFileDSN function [ODBC]
 ms.assetid: ead464aa-cdc3-47dd-a0c0-997711205d31
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
-ms.workload: Inactive
-ms.openlocfilehash: a21a11c4b7b0ba3991df73e5e3e0860e5d4042b8
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+manager: craigg
+ms.openlocfilehash: 32804ed9657a4438c3509fc57b266eb97af9db5b
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sqlreadfiledsn-function"></a>SQLReadFileDSN 函式
 **一致性**  
@@ -75,7 +76,7 @@ BOOL SQLReadFileDSN(
 ## <a name="diagnostics"></a>診斷  
  當**SQLReadFileDSN**傳回 FALSE，相關聯 *\*pfErrorCode*可以取得值，藉由呼叫**SQLInstallerError**。 下表列出 *\*pfErrorCode*可以傳回的值**SQLInstallerError** ，並說明每個內容中的這個函式。  
   
-|*\*pfErrorCode*|錯誤|描述|  
+|*\*pfErrorCode*|錯誤|Description|  
 |---------------------|-----------|-----------------|  
 |ODBC_ERROR_GENERAL_ERR|一般安裝程式發生錯誤|發生錯誤，其中沒有特定的安裝程式錯誤。|  
 |ODBC_ERROR_INVALID_BUFF_LEN|無效的緩衝區長度|*LpszString*引數為 NULL。<br /><br /> *CbString*引數以前是小於或等於 0。|  

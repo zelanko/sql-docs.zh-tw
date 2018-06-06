@@ -1,36 +1,23 @@
 ---
-title: "Microsoft 線性迴歸演算法 |Microsoft 文件"
-ms.custom: 
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
-helpviewer_keywords:
-- algorithms [data mining]
-- linear regression algorithms [Analysis Services]
-- linear regression [Analysis Services]
-- regression algorithms [Analysis Services]
-ms.assetid: 50a4abb8-c0b0-4380-ba5e-c49b305b9d22
-caps.latest.revision: 
-author: Minewiskan
+title: Microsoft 線性迴歸演算法 |Microsoft 文件
+ms.date: 05/08/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: data-mining
+ms.topic: conceptual
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: b904dc4d9858b87f135b180b66ea24e8f688f0c2
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 20d052ad91a00a7b70b658ff9118dfb73736a410
+ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="microsoft-linear-regression-algorithm"></a>Microsoft 線性迴歸演算法
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-[!INCLUDE[msCoName](../../includes/msconame-md.md)] 線性迴歸演算法是 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 決策樹演算法的變異形式，可幫助您計算相依與獨立變數之間的線性關聯性，然後使用該關聯性進行預測。  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 線性迴歸演算法是 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 決策樹演算法的變異形式，可幫助您計算相依與獨立變數之間的線性關聯性，然後使用該關聯性進行預測。  
   
  關聯性會以最能夠代表一系列資料的線性方程式表示。 例如，下列圖表中的線條是最佳的資料線性表示法。  
   
@@ -87,6 +74,6 @@ ms.lasthandoff: 02/15/2018
  [資料採礦演算法 &#40;Analysis Services-資料採礦 &#41;](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
  [Microsoft 線性迴歸演算法技術參考](../../analysis-services/data-mining/microsoft-linear-regression-algorithm-technical-reference.md)   
  [線性迴歸模型查詢範例](../../analysis-services/data-mining/linear-regression-model-query-examples.md)   
- [線性迴歸模型 &#40; 的採礦模型內容Analysis Services-資料採礦 &#41;](../../analysis-services/data-mining/mining-model-content-for-linear-regression-models-analysis-services-data-mining.md)  
+ [線性迴歸模型 & #40; 的採礦模型內容Analysis Services-資料採礦 & #41;](../../analysis-services/data-mining/mining-model-content-for-linear-regression-models-analysis-services-data-mining.md)  
   
   

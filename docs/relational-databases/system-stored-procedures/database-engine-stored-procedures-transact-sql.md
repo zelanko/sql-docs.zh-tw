@@ -1,16 +1,14 @@
 ---
-title: "Database Engine 預存程序 (TRANSACT-SQL) |Microsoft 文件"
-ms.custom: 
+title: Database Engine 預存程序 (TRANSACT-SQL) |Microsoft 文件
+ms.custom: ''
 ms.date: 11/02/2015
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: system-objects
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - TSQL
@@ -19,16 +17,15 @@ helpviewer_keywords:
 - system stored procedures [SQL Server], Database Engine
 - stored procedures [SQL Server], Database Engine
 ms.assetid: 2ce018e9-1a3b-4530-a87d-842456a555ad
-caps.latest.revision: 
+caps.latest.revision: 42
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 406c8e28f1516078d8d4daaecb452a3ed86ac79c
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: b0880d72afbdd4d3c89cc5c42c399fde40bcc96d
+ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="database-engine-stored-procedures-transact-sql"></a>Database Engine 預存程序 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -87,7 +84,7 @@ ms.lasthandoff: 11/21/2017
 |[sp_getapplock](../../relational-databases/system-stored-procedures/sp-getapplock-transact-sql.md)|[sys.sp_xtp_checkpoint_force_garbage_collection](../../relational-databases/system-stored-procedures/sys-sp-xtp-checkpoint-force-garbage-collection-transact-sql.md)|  
 |[sp_getbindtoken](../../relational-databases/system-stored-procedures/sp-getbindtoken-transact-sql.md)|[sys.sp_xtp_unbind_db_resource_pool](../../relational-databases/system-stored-procedures/sys-sp-xtp-unbind-db-resource-pool-transact-sql.md)|  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [系統預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

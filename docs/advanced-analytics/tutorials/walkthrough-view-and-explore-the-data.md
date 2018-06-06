@@ -1,30 +1,17 @@
 ---
-title: "檢視及瀏覽的資料，使用 SQL （逐步解說） |Microsoft 文件"
-ms.custom: 
-ms.date: 07/14/2017
-ms.reviewer: 
-ms.suite: sql
-ms.prod: machine-learning-services
-ms.prod_service: machine-learning-services
-ms.component: 
-ms.technology: 
-ms.tgt_pltfrm: 
+title: 檢視及瀏覽的資料，使用 SQL （逐步解說） |Microsoft 文件
+ms.prod: sql
+ms.technology: machine-learning
+ms.date: 04/15/2018
 ms.topic: tutorial
-applies_to:
-- SQL Server 2016
-dev_langs:
-- R
-ms.assetid: d3835d6d-e68b-486d-81a0-81b717cc6134
-caps.latest.revision: 
-author: jeannt
-ms.author: jeannt
-manager: cgronlund
-ms.workload: Inactive
-ms.openlocfilehash: 97d1e0b468222162644e98f5813d4e4d97fd5add
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+author: HeidiSteen
+ms.author: heidist
+manager: cgronlun
+ms.openlocfilehash: b933337c1234f09f0a8963c1979a86a9ab61db53
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="view-and-explore-the-data-using-sql-walkthrough"></a>檢視及瀏覽的資料，使用 SQL （逐步解說）
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]

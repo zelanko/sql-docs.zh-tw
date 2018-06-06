@@ -1,16 +1,14 @@
 ---
-title: "sp_indexoption (TRANSACT-SQL) |Microsoft 文件"
-ms.custom: 
+title: sp_indexoption (TRANSACT-SQL) |Microsoft 文件
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: system-objects
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_indexoption
@@ -20,16 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_indexoption
 ms.assetid: 75f836be-d322-4a53-a45d-25bee6b42a52
-caps.latest.revision: 
+caps.latest.revision: 43
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 8b5b63c7f76695853ab216aee1aaab63a3139cc2
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: 6bc44ee2cbce8c96b314172a2bb856a9c3346e2a
+ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="spindexoption-transact-sql"></a>sp_indexoption (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -39,7 +36,7 @@ ms.lasthandoff: 01/02/2018
  [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 會自動選擇頁面、資料列或資料表層級的鎖定。 您不需要手動設定這些選項。 **sp_indexoption**專家級使用者確實特定類型的鎖定都適用。  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepNextAvoid](../../includes/ssnotedepnextavoid-md.md)]請改用[ALTER INDEX &#40;TRANSACT-SQL &#41;](../../t-sql/statements/alter-index-transact-sql.md).  
+>  [!INCLUDE[ssNoteDepNextAvoid](../../includes/ssnotedepnextavoid-md.md)] 請改用[ALTER INDEX &#40;TRANSACT-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md)。  
   
  ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -59,7 +56,7 @@ sp_indexoption [ @IndexNamePattern = ] 'table_or_index_name'
  [  **@OptionName =**] **'***option_name***'**  
  這是索引選項名稱。 *option_name*是**varchar （35)**，沒有預設值。 *option_name*可以有下列值之一。  
   
-|ReplTest1|描述|  
+|Value|Description|  
 |-----------|-----------------|  
 |**AllowRowLocks**|當設為 TRUE 時，在存取索引時，允許資料列鎖定。 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 會決定使用資料列鎖定的時機。 當設為 FALSE 時，不會使用資料列鎖定。 預設值是 TRUE。|  
 |**AllowPageLocks**|當設為 TRUE 時，在存取索引時，允許頁面鎖定。 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 會決定使用頁面鎖定的時機。 當設為 FALSE 時，不會使用頁面鎖定。 預設值是 TRUE。|  
@@ -148,7 +145,7 @@ WHERE OBJECT_NAME (object_id) = N'DatabaseLog';
 GO  
 ```  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [INDEXPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/indexproperty-transact-sql.md)   
  [系統預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [sys.indexes &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)  

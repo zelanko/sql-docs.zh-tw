@@ -1,27 +1,24 @@
 ---
-title: "free 方法 (SQLServerBlob) |Microsoft 文件"
-ms.custom: 
+title: free 方法 (SQLServerBlob) |Microsoft 文件
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
-ms.component: jdbc
-ms.reviewer: 
+ms.prod: sql
+ms.prod_service: connectivity
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: connectivity
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: 18a5732f-a246-4483-bcfb-169f25917467
-caps.latest.revision: "12"
+caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
-ms.workload: Inactive
-ms.openlocfilehash: 88fb9014a8e0fe5c33e07b9fea49faf2b5a28847
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+manager: craigg
+ms.openlocfilehash: 304120c89e4588aaa6fa4858ad753d20abbc2442
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="free-method-sqlserverblob"></a>free 方法 (SQLServerBlob)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -41,7 +38,7 @@ public void free()
 ## <a name="remarks"></a>備註  
  這個免費的方法是由 java.sql.Blob 介面中的可用方法所指定。  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [SQLServerBlob 方法](../../../connect/jdbc/reference/sqlserverblob-methods.md)   
  [SQLServerBlob 成員](../../../connect/jdbc/reference/sqlserverblob-members.md)   
  [SQLServerBlob 類別](../../../connect/jdbc/reference/sqlserverblob-class.md)  

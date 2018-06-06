@@ -1,33 +1,30 @@
 ---
-title: "使用 ADO 搭配 Microsoft Visual Basic |Microsoft 文件"
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
+title: 使用 ADO 搭配 Microsoft Visual Basic |Microsoft 文件
+ms.prod: sql
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
-ms.custom: 
+ms.technology: connectivity
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 dev_langs:
 - VB
 helpviewer_keywords:
 - ADO, Visual Basic
 - Visual Basic [ADO]
 ms.assetid: 9dfb6784-037d-4f9d-bb7f-b506b4498573
-caps.latest.revision: 
+caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Active
-ms.openlocfilehash: abeb037ed89277082fce38c833baadc5a4170e3c
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 842671f5859fc0522c30aec8a0d363d3f101473c
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="using-ado-with-microsoft-visual-basic-and-visual-basic-for-applications"></a>Microsoft Visual Basic 和 Visual Basic 中使用 ADO 的應用程式
 設定 ADO 專案，並撰寫 ADO 程式碼相似的。 您是否使用 Visual Basic 或 Visual Basic 應用程式 本主題說明使用 Visual Basic 和 Visual Basic 使用 ADO 的應用程式，並且資訊的任何差異。

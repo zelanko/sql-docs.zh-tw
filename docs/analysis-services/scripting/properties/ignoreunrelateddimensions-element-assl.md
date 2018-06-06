@@ -1,36 +1,23 @@
 ---
-title: "IgnoreUnrelatedDimensions 元素 (ASSL) |Microsoft 文件"
-ms.custom: 
-ms.date: 03/06/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+title: IgnoreUnrelatedDimensions 元素 (ASSL) |Microsoft 文件
+ms.date: 5/8/2018
+ms.prod: sql
+ms.custom: assl
+ms.reviewer: owend
+ms.technology: analysis-services
 ms.topic: reference
-apiname: IgnoreUnrelatedDimensions Element
-apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
-apitype: Schema
-applies_to: SQL Server 2016 Preview
-f1_keywords: IgnoreUnrelatedDimensions
-helpviewer_keywords: IgnoreUnrelatedDimensions element
-ms.assetid: c7d7a1cd-a8e0-4ae7-9464-a1d2a55a86ab
-caps.latest.revision: "33"
-author: Minewiskan
+author: minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 717d36bd445d777981c24e466c4bdcea674e00b1
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: fb55ec97bc6ca2e619e04b43b1e56869c57db5b2
+ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="ignoreunrelateddimensions-element-assl"></a>IgnoreUnrelatedDimensions 元素 (ASSL)
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]決定是否不相關的維度強制在其最上層查詢中包含的維度不相關的量值群組的成員時。  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+  決定當查詢中包含與量值群組不相關的維度成員時，是否將不相關的維度強制在其最上層。  
   
 ## <a name="syntax"></a>語法  
   
@@ -45,7 +32,7 @@ ms.lasthandoff: 01/08/2018
   
 ## <a name="element-characteristics"></a>元素特性  
   
-|特性|描述|  
+|特性|說明|  
 |--------------------|-----------------|  
 |資料類型和長度|布林|  
 |預設值|True|  
@@ -63,7 +50,7 @@ ms.lasthandoff: 01/08/2018
   
  對應目的父代的項目**IgnoreUnrelatedDimensions**在 「 分析管理物件 (AMO) 物件模型而言， <xref:Microsoft.AnalysisServices.MeasureGroup>。  
   
-## <a name="see-also"></a>請參閱  
- [屬性 &#40;ASSL &#41;](../../../analysis-services/scripting/properties/properties-assl.md)  
+## <a name="see-also"></a>另請參閱  
+ [屬性 & #40;ASSL & #41;](../../../analysis-services/scripting/properties/properties-assl.md)  
   
   

@@ -1,29 +1,19 @@
 ---
-title: "定義量值群組內的維度資料粒度 |Microsoft 文件"
-ms.custom: 
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: get-started-article
-applies_to:
-- SQL Server 2016
-ms.assetid: 4f079485-9eb4-405c-9a20-81258298b810
-caps.latest.revision: 
-author: Minewiskan
+title: 定義量值群組內的維度資料粒度 |Microsoft 文件
+ms.date: 05/08/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: multidimensional-models
+ms.topic: tutorial
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: d3140b2022e312094df84693acb69b2ea04917a7
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 9faa4c869591c6885a1856fca0ec63661af7799a
+ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="lesson-5-4---defining-dimension-granularity-within-a-measure-group"></a>課程 5-4-量值群組內定義維度資料粒度
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -70,7 +60,7 @@ ms.lasthandoff: 02/15/2018
   
 12. 從 [銷售配額] 量值群組中刪除 [日曆季] 量值。  
   
-    [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 偵測到作為 [日曆季] 量值基礎的資料行是包含量值的資料行。 不過，這個資料行和 CalendarYear 資料行都包含您稍後在這個主題中用於連結 [銷售配額] 量值群組與 [日期] 維度的值。  
+    [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 偵測到做為 [日曆季] 量值基礎的資料行是包含量值的資料行。 不過，這個資料行和 CalendarYear 資料行都包含您稍後在這個主題中用於連結 [銷售配額] 量值群組與 [日期] 維度的值。  
   
 13. 在 [量值] 窗格中，以滑鼠右鍵按一下 [銷售配額] 量值群組，然後按一下 [新增量值]。  
   

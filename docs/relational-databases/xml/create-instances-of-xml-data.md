@@ -1,17 +1,15 @@
 ---
-title: "建立 XML 資料的執行個體 | Microsoft Docs"
-ms.custom: 
+title: 建立 XML 資料的執行個體 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/16/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
 ms.component: xml
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- dbe-xml
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: xml
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - type casting string instances [XML in SQL Server]
 - XML [SQL Server], typed
@@ -22,20 +20,19 @@ helpviewer_keywords:
 - XML [SQL Server], generating instances
 - white space [XML in SQL Server]
 ms.assetid: dbd6c06f-db6e-44a7-855a-6a55bf374907
-caps.latest.revision: 
+caps.latest.revision: 40
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 1fd7895dae9dd1e1008c848b471cf02b0b53953a
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.openlocfilehash: 6181538998aefe964d728632bc1aa053436283dd
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="create-instances-of-xml-data"></a>建立 XML 資料的執行個體
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
-這個主題描述如何產生 XML 執行個體。  
+  這個主題描述如何產生 XML 執行個體。  
   
  在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中，您可以用下列方式產生 XML 執行個體：  
   
@@ -48,7 +45,7 @@ ms.lasthandoff: 02/12/2018
 -   使用大量載入。  
   
 ## <a name="type-casting-string-and-binary-instances"></a>類型轉換字串和二進位執行個體  
- 您可以將字串轉換 (CAST 或 CONVERT) 為 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] xml**n**字串資料類型 (例如 [**n**][**var** **char** **[n]text**、 **varbinary**及 **image** ) 剖析至 **image** 資料類型。 將會檢查不具類型的 XML 以確認它的格式正確。 如果有與 **xml** 類型相關聯的結構描述，也會執行驗證。 如需詳細資訊，請參閱 [比較具類型的 XML 與不具類型的 XML](../../relational-databases/xml/compare-typed-xml-to-untyped-xml.md)。  
+ 您可以將字串轉換 (CAST 或 CONVERT) 為 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] xml**資料類型，以便將任何**字串資料類型 (例如 [**n**][**var**] **char**、 **[n]text**、 **varbinary**及 **image** ) 剖析至 **xml** 資料類型。 將會檢查不具類型的 XML 以確認它的格式正確。 如果有與 **xml** 類型相關聯的結構描述，也會執行驗證。 如需詳細資訊，請參閱 [比較具類型的 XML 與不具類型的 XML](../../relational-databases/xml/compare-typed-xml-to-untyped-xml.md)。  
   
  XML 文件可以使用不同的編碼 (例如，UTF-8、UTF-16、windows-1252) 加以編碼。 以下是字串與二進位來源類型如何與 XML 文件編碼互動以及剖析器作用方式的規則。  
   

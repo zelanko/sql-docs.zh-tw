@@ -1,27 +1,25 @@
 ---
-title: "原生至 SharePoint 移轉 (SSRS) | Microsoft Docs"
-ms.custom: 
+title: 原生至 SharePoint 移轉 (SSRS) | Microsoft Docs
+ms.custom: ''
 ms.date: 08/17/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: install-windows
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: c5b15bec-6fde-4174-bcde-d043307244dd
-caps.latest.revision: "8"
+caps.latest.revision: 8
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: f7418326fb11d712ad8cea0bd77fb4479e3020f2
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: c1504f51732a5f0dd6b7affabdbc49f3517db254
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="native-to-sharepoint-migration-ssrs"></a>原生至 SharePoint 移轉 (SSRS)
 
@@ -32,7 +30,7 @@ ms.lasthandoff: 01/09/2018
 ##  <a name="bkmk_native_to_sharepoint"></a> Reporting Services 移轉工具  
  此工具支援將內容從原生模式部署移轉至 SharePoint 模式部署。 此工具不支援從 SharePoint 模式移轉至 SharePoint 模式，或是從 SharePoint 模式移轉至原生模式。  
   
- 如需詳細資訊，請參閱 [Reporting Services 移轉工具](http://www.microsoft.com/download/details.aspx?id=29560) (http://www.microsoft.com/download/details.aspx?id=29560)。  
+ 如需詳細資訊，請參閱 [Reporting Services 移轉工具](http://www.microsoft.com/download/details.aspx?id=29560) (http://www.microsoft.com/download/details.aspx?id=29560) \(英文\)。  
   
 ## <a name="use-script-to-migrate-content"></a>使用指令碼來移轉內容  
  如果移轉工具不符合您的需求，您可以手動移轉報表伺服器資料。 下面為將報表項目從一個 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 部署移轉至另一個部署之步驟的摘要。 此方法支援以原生模式或 SharePoint 模式做為來源或目的地伺服器。  
@@ -41,7 +39,7 @@ ms.lasthandoff: 01/09/2018
   
 2.  **[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] RSS 指令碼：** 撰寫呼叫報表伺服器 Web 服務 SOAP 方法的 Visual Basic 指令碼，以便在資料庫之間複製資料。 使用 **RS.exe** 公用程式來執行指令碼。 Rs.exe 會與 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]一起安裝。  
   
-    -   [Sample Reporting Services rs.exe Script to Copy Content between Report Servers](../../reporting-services/tools/sample-reporting-services-rs-exe-script-to-copy-content-between-report-servers.md)。 本主題說明如何使用您可以從 CodePlex 下載的範例指令碼。  
+    -   [在報表伺服器之間複製內容的範例 Reporting Services rs.exe 指令碼](../../reporting-services/tools/sample-reporting-services-rs-exe-script-to-copy-content-between-report-servers.md)。 本主題說明如何使用您可以從 CodePlex 下載的範例指令碼。  
   
     -   CodePlex 上的 rss 指令碼範例， [可將內容從一個報表伺服器移轉至另一個報表伺服器的 Reporting Services RS.exe 指令碼](http://azuresql.codeplex.com/releases/view/115207)。  
   

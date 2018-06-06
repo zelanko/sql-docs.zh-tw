@@ -1,17 +1,16 @@
 ---
-title: "Integration Services (SSIS) 記錄 | Microsoft Docs"
-ms.custom: 
+title: Integration Services (SSIS) 記錄 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
 ms.component: performance
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 f1_keywords:
 - sql13.dts.designer.configuredtslogs.containers.f1
 - sql13.dts.designer.configuredtslogs.loggingdetails.f1
@@ -32,16 +31,15 @@ helpviewer_keywords:
 - Text File log provider
 - SQL Server log provider
 ms.assetid: 65e17889-371f-4951-9a7e-9932b2d0dcde
-caps.latest.revision: 
+caps.latest.revision: 69
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: Active
-ms.openlocfilehash: f1082fb2dc121b3751a14b4cf1e291c8da9425ab
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: bd0e92f62d99f30d244b9fc14bbf0ebb42f15269
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="integration-services-ssis-logging"></a>Integration Services (SSIS) 記錄
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包括可用於在封裝、容器和工作中實作記錄的記錄提供者。 使用記錄，可以擷取有關封裝的執行階段資訊，藉此幫助您在每次執行封裝時對其進行稽核和疑難排解。 例如，記錄可以擷取執行封裝之操作員的名稱，以及封裝開始和結束的時間。  
@@ -406,7 +404,7 @@ ms.lasthandoff: 01/25/2018
   
 3.  在 **[執行封裝]** 對話方塊中，選取 **[進階]** 索引標籤。  
   
-4.  在 **[記錄層次]**底下，選取記錄層次。 本主題包含可用值的描述。  
+4.  在 **[記錄層次]** 底下，選取記錄層次。 本主題包含可用值的描述。  
   
 5.  完成任何其他封裝組態，然後按一下 **[確定]** 執行封裝。  
   
@@ -418,7 +416,7 @@ ms.lasthandoff: 01/25/2018
 |無|關閉記錄功能。 只記錄封裝執行狀態。|  
 |[基本]|記錄所有事件，自訂和診斷事件除外。 這是預設值。|  
 |RuntimeLineage|收集追蹤資料流程中歷程資訊所需的資料。 您可以剖析此歷程資訊，以對應工作間的歷程關聯性。 ISV 和開發人員可以使用此資訊來建置自訂歷程對應工具。|  
-|[效能]|只記錄效能統計資料，以及 OnError 和 OnWarning 事件。<br /><br /> **[執行效能]** 報表會顯示封裝資料流程元件的 [啟用時間] 和 [總時間]。 最後一個封裝執行作業的記錄層次設定為 **[效能]** 或 **[詳細資訊]**時，就可使用這項資訊。 如需詳細資訊，請參閱 [Reports for the Integration Services Server](../../integration-services/performance/monitor-running-packages-and-other-operations.md#reports)。<br /><br /> [catalog.execution_component_phases](../../integration-services/system-views/catalog-execution-component-phases.md) 檢視會顯示每一個執行階段之資料流程元件的開始和結束時間。 此檢視只會在封裝執行作業的記錄層次設定為 **[效能]** 或 **[詳細資訊]**時，顯示這些元件的這項資訊。|  
+|效能|只記錄效能統計資料，以及 OnError 和 OnWarning 事件。<br /><br /> **[執行效能]** 報表會顯示封裝資料流程元件的 [啟用時間] 和 [總時間]。 最後一個封裝執行作業的記錄層次設定為 **[效能]** 或 **[詳細資訊]** 時，就可使用這項資訊。 如需詳細資訊，請參閱 [Reports for the Integration Services Server](../../integration-services/performance/monitor-running-packages-and-other-operations.md#reports)。<br /><br /> [catalog.execution_component_phases](../../integration-services/system-views/catalog-execution-component-phases.md) 檢視會顯示每一個執行階段之資料流程元件的開始和結束時間。 此檢視只會在封裝執行作業的記錄層次設定為 **[效能]** 或 **[詳細資訊]** 時，顯示這些元件的這項資訊。|  
 |「詳細資訊」|記錄所有事件，包括自訂和診斷事件。<br /><br /> 自訂事件包括 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 工作所記錄的事件。 如需有關自訂事件的詳細資訊，請參閱 [Custom Messages for Logging](#custom_messages)。<br /><br /> **DiagnosticEx** 事件即為診斷事件的範例。 每當「執行封裝」工作執行子封裝時，此事件就會擷取傳遞至子封裝的參數值。<br /><br /> **DiagnosticEx** 事件也可協助您取得發生資料列層級錯誤的資料行名稱。 此事件會將資料流程歷程對應寫入記錄檔。 您接著可以使用錯誤輸出所擷取的資料行識別碼，在此歷程對應中查詢資料行名稱。  如需詳細資訊，請參閱[處理資料中的錯誤](../../integration-services/data-flow/error-handling-in-data.md)。<br /><br /> **DiagnosticEx** 的訊息資料行值是 XML 文字。 若要檢視封裝執行的訊息文字，請查詢 [catalog.operation_messages &#40;SSISDB 資料庫&#41;](../../integration-services/system-views/catalog-operation-messages-ssisdb-database.md) 檢視。 請注意， **DiagnosticEx** 事件不會在其 XML 輸出中保留空白，以縮減記錄檔的大小。 若要改善可讀性，可將記錄檔複製到 XML 編輯器 (例如，在 Visual Studio 中)，該編輯器需支援 XML 格式設定和語法反白顯示。<br /><br /> 每當資料流程元件傳送資料至封裝執行的下游元件， [catalog.execution_data_statistics](../../integration-services/system-views/catalog-execution-data-statistics.md) 檢視就會顯示一個資料列。 您必須將記錄層次設定為 **[詳細資訊]** ，以擷取檢視中的這項資訊。|  
   
 ### <a name="create-and-manage-customized-logging-levels-by-using-the-customized-logging-level-management-dialog-box"></a>使用自訂的記錄層級管理對話方塊建立和管理自訂的記錄層級  

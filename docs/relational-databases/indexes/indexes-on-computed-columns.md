@@ -1,17 +1,14 @@
 ---
-title: "計算資料行的索引 | Microsoft Docs"
-ms.custom: 
+title: 計算資料行的索引 | Microsoft Docs
+ms.custom: ''
 ms.date: 12/21/2017
-ms.prod: sql-non-specified
-ms.prod_service: database-engine, sql-database
-ms.service: 
-ms.component: indexes
-ms.reviewer: 
+ms.prod: sql
+ms.prod_service: table-view-index, sql-database
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- dbe-indexes
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: table-view-index
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - computed columns, index creation
 - index creation [SQL Server], computed columns
@@ -19,16 +16,16 @@ helpviewer_keywords:
 - persisted computed columns
 - precise [SQL Server]
 ms.assetid: 8d17ac9c-f3af-4bbb-9cc1-5cf647e994c4
-caps.latest.revision: 
-author: barbkess
-ms.author: barbkess
+caps.latest.revision: 41
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 17eefea966232b9ef297477efae843e556098ba8
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 7cfaac5fd37f389db2569906a21b02627241176b
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="indexes-on-computed-columns"></a>計算資料行的索引
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -99,7 +96,7 @@ COLUMNPROPERTY 函數的 **IsPrecise** 屬性會報告 *computed_column_expressi
 **Data Type Requirements**  
   
 -   針對計算資料行所定義的 *computed_column_expression* 並不能評估為 **text**、 **ntext**或 **image** 資料類型。  
--   從 **image**、 **ntext**、 **text**、 **varchar(max)**、 **nvarchar(max)**、 **varbinary(max)**以及 **xml** 資料類型所衍生的計算資料行，只要其資料類型可作為索引鍵資料行，就可以製作成索引。  
+-   從 **image**、 **ntext**、 **text**、 **varchar(max)**、 **nvarchar(max)**、 **varbinary(max)** 以及 **xml** 資料類型所衍生的計算資料行，只要其資料類型可作為索引鍵資料行，就可以製作成索引。  
 -   從 **image**、 **ntext**以及 **text** 資料類型所衍生的計算資料行，只要其資料類型可作為非索引鍵之索引資料行，就可作為非叢集索引中無索引鍵 (內含) 的資料行。  
   
 **SET Option Requirements**  

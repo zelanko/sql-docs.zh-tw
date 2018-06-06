@@ -1,30 +1,32 @@
 ---
-title: "updateString 方法 （java.lang.String，java.lang.String） |Microsoft 文件"
-ms.custom: 
+title: updateString 方法 （java.lang.String，java.lang.String） |Microsoft 文件
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
-ms.topic: article
-apiname: SQLServerResultSet.updateString (java.lang.String, java.lang.String)
-apilocation: sqljdbc.jar
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
+apiname:
+- SQLServerResultSet.updateString (java.lang.String, java.lang.String)
+apilocation:
+- sqljdbc.jar
 apitype: Assembly
 ms.assetid: 3a9236bb-a307-45a8-b7d2-c4cbd9b3cb35
-caps.latest.revision: "8"
+caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
-ms.workload: Inactive
-ms.openlocfilehash: 59841868c6338b430b010d8573f52d8cb416a193
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+manager: craigg
+ms.openlocfilehash: 3cb32f527fdfd7fc3701731e03ab3484bcfe9de8
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="updatestring-method-javalangstring-javalangstring"></a>updateString 方法 (java.lang.String, java.lang.String)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -54,8 +56,8 @@ public void updateString(java.lang.String columnName,
 ## <a name="remarks"></a>備註  
  這個 updateString 方法是由 java.sql.ResultSet 介面中的 updateString 方法指定。  
   
-## <a name="see-also"></a>請參閱＜  
- [updateString 方法 &#40;SQLServerResultSet &#41;](../../../connect/jdbc/reference/updatestring-method-sqlserverresultset.md)   
+## <a name="see-also"></a>另請參閱  
+ [updateString 方法&#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/updatestring-method-sqlserverresultset.md)   
  [SQLServerResultSet 成員](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
  [SQLServerResultSet 類別](../../../connect/jdbc/reference/sqlserverresultset-class.md)  
   

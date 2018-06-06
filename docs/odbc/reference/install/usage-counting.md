@@ -1,32 +1,29 @@
 ---
-title: "使用方式計數 |Microsoft 文件"
-ms.custom: 
+title: 使用方式計數 |Microsoft 文件
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
-ms.component: odbc
-ms.reviewer: 
+ms.prod: sql
+ms.prod_service: connectivity
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: connectivity
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - usage counts [ODBC]
 - file usage counts [ODBC]
 - installing ODBC components [ODBC], usage counts
 - subkeys [ODBC], usage counts
 ms.assetid: 0678aee9-8256-463c-89dd-77b1a0dfdd60
-caps.latest.revision: "8"
+caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
-ms.workload: Inactive
-ms.openlocfilehash: deb6923a2e842241eea1434997194f6e6d19ce1a
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+manager: craigg
+ms.openlocfilehash: 51d1acca922245a4b57ecd30428e0b4079327e29
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="usage-counting"></a>使用方式計數
 > [!NOTE]  
@@ -55,7 +52,7 @@ ms.lasthandoff: 12/21/2017
 >   
 >  Microsoft  
 >   
->  Windows  
+>  視窗  
 >   
 >  CurrentVersion  
 >   
@@ -65,7 +62,7 @@ ms.lasthandoff: 12/21/2017
   
  下表中顯示檔案的使用方式計數值的格式。  
   
-|[屬性]|資料類型|data|  
+|名稱|資料類型|資料|  
 |----------|---------------|----------|  
 |*完整路徑*|REG_DWORD|*計數*|  
   

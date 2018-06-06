@@ -1,30 +1,20 @@
 ---
-title: "NameToSet (MDX) |Microsoft 文件"
-ms.custom: 
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: language-reference
-f1_keywords: NAMETOSET
-dev_langs: kbMDX
-helpviewer_keywords: NameToSet function
-ms.assetid: e02e17d5-4309-49cb-84c7-5b445ac2bd94
-caps.latest.revision: "32"
-author: Minewiskan
+title: NameToSet (MDX) |Microsoft 文件
+ms.date: 05/30/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: mdx
+ms.topic: reference
 ms.author: owend
-manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: f7b9f52f494665d00f7a75811b839d543c3da5ea
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: 766049ff2c285de2b16e1aa67745a98eb22ef05f
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34580270"
 ---
 # <a name="nametoset-mdx"></a>NameToSet (MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -46,7 +36,7 @@ NameToSet(Member_Name)
  如果指定的成員名稱存在， **NameToSet**函式會傳回包含該成員的集合。 否則，函數會傳回空的集合。  
   
 > [!NOTE]  
->  指定的成員名稱只能是成員名稱，不能是成員運算式。 若要使用成員運算式，請參閱[StrToSet &#40;MDX &#41;](../mdx/strtoset-mdx.md).  
+>  指定的成員名稱只能是成員名稱，不能是成員運算式。 若要使用成員運算式，請參閱[StrToSet &#40;MDX&#41;](../mdx/strtoset-mdx.md)。  
   
 ## <a name="example"></a>範例  
  下列範例會傳回指定成員名稱的預設量值。  
@@ -56,7 +46,7 @@ SELECT NameToSet('[Date].[Calendar].[July 2001]') ON 0
 FROM [Adventure Works]  
 ```  
   
-## <a name="see-also"></a>請參閱  
- [MDX 函數參考 &#40;MDX &#41;](../mdx/mdx-function-reference-mdx.md)  
+## <a name="see-also"></a>另請參閱  
+ [MDX 函數參考&#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

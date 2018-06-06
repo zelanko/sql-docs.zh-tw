@@ -1,30 +1,29 @@
 ---
-title: "getIndexInfo 方法 (SQLServerDatabaseMetaData) |Microsoft 文件"
-ms.custom: 
+title: getIndexInfo 方法 (SQLServerDatabaseMetaData) |Microsoft 文件
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
-ms.component: jdbc
-ms.reviewer: 
+ms.prod: sql
+ms.prod_service: connectivity
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
-ms.topic: article
-apiname: SQLServerDatabaseMetaData.getIndexInfo
-apilocation: sqljdbc.jar
+ms.technology: connectivity
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
+apiname:
+- SQLServerDatabaseMetaData.getIndexInfo
+apilocation:
+- sqljdbc.jar
 apitype: Assembly
 ms.assetid: 8a677cc6-8e33-4e57-8678-0849345aa8d0
-caps.latest.revision: "15"
+caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
-ms.workload: Inactive
-ms.openlocfilehash: 0400e9241fa1856a33a6c483734b3f87e7285758
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+manager: craigg
+ms.openlocfilehash: cef7b37818e5bc7bf46c7181a3816edd5bbad860
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="getindexinfo-method-sqlserverdatabasemetadata"></a>getIndexInfo 方法 (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -47,7 +46,7 @@ public java.sql.ResultSet getIndexInfo(java.lang.String cat,
   
  A**字串**，其中包含目錄名稱。  
   
- *結構描述*  
+ *schema*  
   
  A**字串**，其中包含結構描述名稱。  
   
@@ -82,13 +81,13 @@ public java.sql.ResultSet getIndexInfo(java.lang.String cat,
 |NON_UNIQUE|**boolean**|指出索引值是否可以不是唯一的。|  
 |INDEX_QUALIFIER|**字串**|索引擁有者的名稱。 當 TYPE 為 tableIndexStatistic 時，它會是 null。|  
 |INDEX_NAME|**字串**|索引的名稱。|  
-|TYPE|**短**|索引的類型。 它可能是下列其中一個值：<br /><br /> tableIndexStatistic (0)<br /><br /> tableIndexClustered (1)<br /><br /> tableIndexHashed (2)<br /><br /> tableIndexOther (3)|  
-|ORDINAL_POSITION|**短**|資料行在索引中的序數位置。 索引中的第一個資料行是 1。|  
+|TYPE|**short**|索引的類型。 它可能是下列其中一個值：<br /><br /> tableIndexStatistic (0)<br /><br /> tableIndexClustered (1)<br /><br /> tableIndexHashed (2)<br /><br /> tableIndexOther (3)|  
+|ORDINAL_POSITION|**short**|資料行在索引中的序數位置。 索引中的第一個資料行是 1。|  
 |COLUMN_NAME|**字串**|資料行的名稱。|  
-|ASC_OR_DESC|**字串**|用於索引定序的順序。 它可能是下列其中一個值：<br /><br /> A (遞增)<br /><br /> D (遞減)<br /><br /> NULL (不適用)<br /><br /> **注意：** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]一律會傳回"A"。|  
+|ASC_OR_DESC|**字串**|用於索引定序的順序。 它可能是下列其中一個值：<br /><br /> A (遞增)<br /><br /> D (遞減)<br /><br /> NULL (不適用)<br /><br /> **注意：** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]一律會傳回"A"。  |  
 |CARDINALITY|**int**|資料表中的資料列數，或索引中的唯一值數目。|  
 |PAGES|**int**|用來儲存索引或資料表的頁數。|  
-|FILTER_CONDITION|**字串**|篩選條件。<br /><br /> **注意：** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]一定會傳回 null。|  
+|FILTER_CONDITION|**字串**|篩選條件。<br /><br /> **注意：** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]一定會傳回 null。  |  
   
 > [!NOTE]  
 >  多個 getIndexInfo 方法所傳回的資料的詳細資訊，請參閱 「 < sp_indexes (TRANSACT-SQL) 」，在[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]線上叢書 》。  
@@ -119,7 +118,7 @@ public static void executeGetIndexInfo(Connection con) {
 }  
 ```  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [SQLServerDatabaseMetaData 方法](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   
  [SQLServerDatabaseMetaData 成員](../../../connect/jdbc/reference/sqlserverdatabasemetadata-members.md)   
  [SQLServerDatabaseMetaData 類別](../../../connect/jdbc/reference/sqlserverdatabasemetadata-class.md)  

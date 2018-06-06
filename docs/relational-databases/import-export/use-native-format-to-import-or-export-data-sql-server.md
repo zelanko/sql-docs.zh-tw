@@ -1,31 +1,29 @@
 ---
-title: "使用原生格式匯入或匯出資料 (SQL Server) | Microsoft 文件"
-ms.custom: 
+title: 使用原生格式匯入或匯出資料 (SQL Server) | Microsoft 文件
+ms.custom: ''
 ms.date: 09/30/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
 ms.component: import-export
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- dbe-bulk-import-export
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: data-movement
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - native data format [SQL Server]
 - data formats [SQL Server], native
 ms.assetid: eb279b2f-0f1f-428f-9b8f-2a7fc495b79f
-caps.latest.revision: 
+caps.latest.revision: 43
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 6c979bd304e2715c587596d73c9e750b5935078b
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 90f15cbee03a155745366ed1a29d101752406ae3
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="use-native-format-to-import-or-export-data-sql-server"></a>使用原生格式匯入或匯出資料 (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -179,7 +177,7 @@ SQLCMD -Q "SELECT * FROM TestDatabase.dbo.myNative;"
 ```
 
 ### **使用 bcp 與原生格式匯入非 XML 格式檔案的資料**<a name="bcp_native_import_fmt"></a>
-**-n** 資料行之間傳送的 **-f** 參數與 **IN** 命令。  請在命令提示字元之下，輸入下列命令：
+**-n** 與 **-f** 參數與 **IN** 命令。  請在命令提示字元之下，輸入下列命令：
 
 ```cmd
 REM Truncate table (for testing)

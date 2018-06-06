@@ -1,16 +1,14 @@
 ---
-title: "數值資料類型覆寫預設有效位數和小數位數 |Microsoft 文件"
-ms.custom: 
+title: 數值資料類型覆寫預設有效位數和小數位數 |Microsoft 文件
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
-ms.component: odbc
-ms.reviewer: 
+ms.prod: sql
+ms.prod_service: connectivity
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: connectivity
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - numeric data type [ODBC], precision and scale
 - precision [ODBC], numeric data types
@@ -18,16 +16,15 @@ helpviewer_keywords:
 - numeric data type [ODBC]
 - numeric literals [ODBC]
 ms.assetid: 84292334-0e33-4a1b-84de-8c018dd787f3
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
-ms.workload: Inactive
-ms.openlocfilehash: e2be244dd3ad258ab3fa6b5679e5989d8a08778e
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+manager: craigg
+ms.openlocfilehash: 9cfe7bcedb96f5a7ff311d90b5dcdc28fc77b79f
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="overriding-default-precision-and-scale-for-numeric-data-types"></a>覆寫預設有效位數和小數位數值資料類型
 當 ARD 中的 SQL_DESC_TYPE 欄位設定為 SQL_C_NUMERIC，藉由呼叫**SQLBindCol**或**SQLSetDescField**、 ARD SQL_DESC_SCALE 欄位設定為 0，而且設定 SQL_DESC_PRECISION 欄位至驅動程式定義的預設有效位數。 這也是如此當 APD 中的 SQL_DESC_TYPE 欄位設為 SQL_C_NUMERIC，藉由呼叫**SQLBindParameter**或**SQLSetDescField**。 這是輸入、 輸入/輸出或輸出參數，則為 true。  

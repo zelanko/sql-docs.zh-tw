@@ -1,39 +1,24 @@
 ---
-title: "ID 元素 (XMLA) |Microsoft 文件"
-ms.custom: 
-ms.date: 03/06/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services, azure-analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+title: ID 元素 (XMLA) |Microsoft 文件
+ms.date: 05/08/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: xmla
 ms.topic: reference
-apiname: ID Element
-apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
-apitype: Schema
-applies_to: SQL Server 2016 Preview
-f1_keywords:
-- http://schemas.microsoft.com/analysisservices/2003/engine#ID
-- urn:schemas-microsoft-com:xml-analysis#ID
-- microsoft.xml.analysis.id
-helpviewer_keywords: ID element
-ms.assetid: f7d67599-6a70-4455-bfdb-1d127e5eff4e
-caps.latest.revision: "12"
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 8bccd79a186b95ccd0009442dca3f4e851882263
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 18c0a9e1db03ef30b54b788d16223e70bc9e9059
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34575500"
 ---
 # <a name="id-element-xmla"></a>ID 元素 (XMLA)
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]識別要在上面執行父代的鎖定[鎖定](../../../analysis-services/xmla/xml-elements-commands/lock-element-xmla.md)或[Unlock](../../../analysis-services/xmla/xml-elements-commands/unlock-element-xmla.md)項目。  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
+  識別要在上面執行父代的鎖定[鎖定](../../../analysis-services/xmla/xml-elements-commands/lock-element-xmla.md)或[Unlock](../../../analysis-services/xmla/xml-elements-commands/unlock-element-xmla.md)項目。  
   
 ## <a name="syntax"></a>語法  
   
@@ -64,9 +49,9 @@ ms.lasthandoff: 01/08/2018
 ## <a name="remarks"></a>備註  
  **識別碼**元素包含用來識別鎖定的全域唯一識別碼 (GUID)。  
   
-## <a name="see-also"></a>請參閱  
- [Object 元素 &#40;XMLA &#41;](../../../analysis-services/xmla/xml-elements-properties/object-element-xmla.md)   
- [Mode 元素 &#40;XMLA &#41;](../../../analysis-services/xmla/xml-elements-properties/mode-element-xmla.md)   
- [屬性 &#40;XMLA &#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
+## <a name="see-also"></a>另請參閱
+ [物件項目&#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/object-element-xmla.md)   
+ [Mode 元素&#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/mode-element-xmla.md)   
+ [屬性&#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
   
   

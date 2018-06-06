@@ -1,32 +1,30 @@
 ---
-title: "SSMA 主控台 (OracleToSQL) 中的命令列選項 |Microsoft 文件"
-ms.prod: sql-non-specified
+title: SSMA 主控台 (OracleToSQL) 中的命令列選項 |Microsoft 文件
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
 ms.component: ssma-oracle
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ssma
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - Command Line Options, Help Option
 - Command Line Options, SecurePassword Help Option
 - Command Line Options, Variable Value File Option
 - Command Line Options,Script File Option
 ms.assetid: bf4a9313-349e-4ebf-9c89-9f5bb515f9ff
-caps.latest.revision: "12"
+caps.latest.revision: 12
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
-ms.workload: Inactive
-ms.openlocfilehash: a5b0502ba12f5151679b6e4468bdb046b490ecc0
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: b3eeca8d9afb45b68d67f08b285624f3eee7cc5c
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="command-line-options-in-ssma-console-oracletosql"></a>SSMA 主控台 (OracleToSQL) 中的命令列選項
 Microsoft 為您提供執行及控制 SSMA 活動組強固命令列選項。 這可確保各節詳細說明相同。  
@@ -94,7 +92,7 @@ Microsoft 為您提供執行及控制 SSMA 活動組強固命令列選項。 這
 ### <a name="xml-output-option--xxmloutput-xmloutputfile"></a>XML 輸出選項:-x / xmloutput [xmloutputfile]  
 此命令用來輸出至主控台或至 xml 檔案的 xml 格式的命令輸出訊息。  
   
-有兩個選項可用來 xmloutput，viz。。，：  
+有兩個選項可用來 xmloutput，viz..,:  
   
 -   如果 xmloutput 切換之後提供的檔案路徑，則檔案會重新導向輸出。  
   
@@ -164,21 +162,21 @@ Microsoft 為您提供執行及控制 SSMA 活動組強固命令列選項。 這
   
 `C:\>SSMAforOracleConsole.EXE -?`  
   
-SSMA 主控台命令列選項表格式顯示中，請參閱[附錄-1 &#40; OracleToSQL &#41;](../../ssma/oracle/appendix-1-oracletosql.md)。  
+SSMA 主控台命令列選項表格式顯示中，請參閱[附錄-1 &#40;OracleToSQL&#41;](../../ssma/oracle/appendix-1-oracletosql.md)。  
   
 ### <a name="securepassword-help-option-securepassword--help"></a>SecurePassword 說明選項:-securepassword-？ / 說明  
 會顯示 SSMA 主控台選項的語法摘要：  
   
 `C:\>SSMAforOracleConsole.EXE -securepassword -?`  
   
-SSMA 主控台命令列選項表格式顯示中，請參閱[附錄-1 &#40; OracleToSQL &#41;](../../ssma/oracle/appendix-1-oracletosql.md)  
+SSMA 主控台命令列選項表格式顯示中，請參閱[附錄-1 &#40;OracleToSQL&#41;](../../ssma/oracle/appendix-1-oracletosql.md)  
   
 ### <a name="next-step"></a>下一個步驟  
 下一個步驟取決於您的專案需求：  
   
--   指定的密碼或匯出 / 匯入的密碼，請參閱[管理密碼 &#40; OracleToSQL &#41;](../../ssma/oracle/managing-passwords-oracletosql.md)。  
+-   指定的密碼或匯出 / 匯入的密碼，請參閱[管理密碼&#40;OracleToSQL&#41;](../../ssma/oracle/managing-passwords-oracletosql.md)。  
   
--   產生報告，請參閱[產生報表 &#40; OracleToSQL &#41;](../../ssma/oracle/generating-reports-oracletosql.md)。  
+-   產生報告，請參閱[產生報表&#40;OracleToSQL&#41;](../../ssma/oracle/generating-reports-oracletosql.md)。  
   
--   如需疑難排解主控台中的問題，請參閱[疑難排解 &#40; OracleToSQL &#41;](../../ssma/oracle/troubleshooting-oracletosql.md)。  
+-   如需疑難排解主控台中的問題，請參閱[疑難排解&#40;OracleToSQL&#41;](../../ssma/oracle/troubleshooting-oracletosql.md)。  
   

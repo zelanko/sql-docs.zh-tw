@@ -1,39 +1,24 @@
 ---
-title: "批次元素 (XMLA) |Microsoft 文件"
-ms.custom: 
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services, azure-analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+title: 批次元素 (XMLA) |Microsoft 文件
+ms.date: 05/08/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: xmla
 ms.topic: reference
-apiname: Batch Element
-apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
-apitype: Schema
-applies_to: SQL Server 2016 Preview
-f1_keywords:
-- urn:schemas-microsoft-com:xml-analysis#Batch
-- microsoft.xml.analysis.batch
-- http://schemas.microsoft.com/analysisservices/2003/engine#Batch
-helpviewer_keywords: Batch command
-ms.assetid: 818f3212-9605-4e34-8623-1154d9fae1f0
-caps.latest.revision: "14"
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 8591a521cb1d3fce934e32be3d7b5cd3a4a977c4
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 4644b8775212eae0cb6d912df9bc415c5fc96ec7
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34573940"
 ---
 # <a name="batch-element-xmla"></a>Batch 元素 (XMLA)
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]執行一或多個 XML for Analysis (XMLA) 命令，以批次作業，循序或平行的執行個體上[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]。  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
+  執行一或多個 XML for Analysis (XMLA) 命令批次作業，循序或平行方式，在 Analysis Services 的執行個體上。  
   
 ## <a name="syntax"></a>語法  
   
@@ -78,9 +63,9 @@ ms.lasthandoff: 01/08/2018
 > [!WARNING]  
 >  批次作業目前不支援命令/執行/陳述式。  
   
- 如需有關以 XMLA 執行批次作業的詳細資訊，請參閱[執行批次作業 &#40;XMLA &#41;](../../../analysis-services/multidimensional-models-scripting-language-assl-xmla/performing-batch-operations-xmla.md).  
+ 如需有關以 XMLA 執行批次作業的詳細資訊，請參閱[執行批次作業&#40;XMLA&#41;](../../../analysis-services/multidimensional-models-scripting-language-assl-xmla/performing-batch-operations-xmla.md)。  
   
-## <a name="see-also"></a>請參閱  
- [命令 &#40;XMLA &#41;](../../../analysis-services/xmla/xml-elements-commands/xml-elements-commands.md)  
+## <a name="see-also"></a>另請參閱
+ [命令&#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-commands/xml-elements-commands.md)  
   
   

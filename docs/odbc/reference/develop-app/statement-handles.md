@@ -1,30 +1,27 @@
 ---
-title: "陳述式控制代碼 |Microsoft 文件"
-ms.custom: 
+title: 陳述式控制代碼 |Microsoft 文件
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
-ms.component: odbc
-ms.reviewer: 
+ms.prod: sql
+ms.prod_service: connectivity
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: connectivity
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - statement handles [ODBC]
 - handles [ODBC], statement
 ms.assetid: 65d6d78b-a8c8-489a-9dad-f8d127a44882
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
-ms.workload: Inactive
-ms.openlocfilehash: 0d80db9c7ce795514dd362e37170aa58cce817c5
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+manager: craigg
+ms.openlocfilehash: f844a4a783ccdbb2281857e440ce09d965a0c738
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="statement-handles"></a>陳述式控制代碼
 A*陳述式*最容易想像成 SQL 陳述式，例如**選取\*從員工**。 不過，在陳述式是不只是 SQL 陳述式，其中包含所有與該 SQL 陳述式，例如任何結果集的陳述式所建立和執行陳述式中使用的參數相關聯的資訊。 陳述式甚至不必有應用程式定義的 SQL 陳述式。 例如，當目錄函數例如**SQLTables**執行上一個陳述式，它會執行預先定義的 SQL 陳述式會傳回一份資料表的名稱。  

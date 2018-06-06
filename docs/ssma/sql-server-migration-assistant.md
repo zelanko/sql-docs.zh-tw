@@ -1,30 +1,28 @@
 ---
-title: "SQL Server 移轉小幫手 |Microsoft 文件"
-ms.custom: 
+title: SQL Server 移轉小幫手 |Microsoft 文件
+ms.custom: ''
 ms.date: 09/30/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
 ms.component: ssma-access
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ssma
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: d0233525-a83b-4279-813e-c554042abd0e
-caps.latest.revision: "18"
+caps.latest.revision: 18
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.workload: Active
-ms.openlocfilehash: 7b3e57982cc43dcee94e10198220bd4d7838589e
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 1a49b3e1d9516d0276c689b7c61defc80bd2cb9c
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sql-server-migration-assistant"></a>SQL Server 移轉小幫手
 Microsoft SQL Server 移轉小幫手 (SSMA) 是要從 Microsoft Access、 DB2、 MySQL、 Oracle 和 SAP ASE 自動化 SQL Server 資料庫移轉所設計的工具。  
@@ -75,7 +73,7 @@ SSMA 支援下列版本的目標。
   
     -   [SQL Server 開發人員中心社群](http://go.microsoft.com/fwlink/?LinkId=42456)-新聞群組、 論壇及其他社群資源，SQL Server 開發人員很有用  
   
--   協助支援-請移至[https://support.microsoft.com/assistedsupportproducts](https://support.microsoft.com/assistedsupportproducts) ，並搜尋 SQL Server 移轉小幫手 '。  選取您的版本，然後選取 [start] 要求。  協助的支援隨附於 SQL Server 移轉小幫手 工具。  
+-   協助支援-請移至[ https://support.microsoft.com/assistedsupportproducts ](https://support.microsoft.com/assistedsupportproducts) ，並搜尋 [SQL Server 移轉小幫手]。  選取您的版本，然後選取 [start] 要求。  協助的支援隨附於 SQL Server 移轉小幫手 工具。  
   
 -   頂級支援-如果您有頂級合約，您可以取得頂級支援[Premier Online 入口網站](https://premier.microsoft.com/)。  
   

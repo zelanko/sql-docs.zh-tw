@@ -1,36 +1,23 @@
 ---
-title: "Audit 元素 (ASSL) |Microsoft 文件"
-ms.custom: 
-ms.date: 03/06/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+title: Audit 元素 (ASSL) |Microsoft 文件
+ms.date: 05/08/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: assl
 ms.topic: reference
-apiname: Audit Element
-apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
-apitype: Schema
-applies_to: SQL Server 2016 Preview
-f1_keywords: Audit
-helpviewer_keywords: Audit element
-ms.assetid: 26488119-6490-426d-a4e4-274b5bdffbc2
-caps.latest.revision: "39"
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 96a7b30f40c253b08372a1100527cef1bbea5a31
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: ea7ffeeb20ccc0a8fedc4130334fa07512bb8e17
+ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="audit-element-assl"></a>Audit 元素 (ASSL)
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]指定[追蹤](../../../analysis-services/scripting/objects/trace-element-assl.md)元素無法卸除任何事件，即使這樣造成伺服器效能降低。  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+  指定[追蹤](../../../analysis-services/scripting/objects/trace-element-assl.md)元素無法卸除任何事件，即使這樣造成伺服器效能降低。  
   
 ## <a name="syntax"></a>語法  
   
@@ -45,7 +32,7 @@ ms.lasthandoff: 01/08/2018
   
 ## <a name="element-characteristics"></a>元素特性  
   
-|特性|描述|  
+|特性|說明|  
 |--------------------|-----------------|  
 |資料類型和長度|布林|  
 |預設值|**False**|  
@@ -61,8 +48,8 @@ ms.lasthandoff: 01/08/2018
 ## <a name="remarks"></a>備註  
  對應目的父代的項目**稽核**在 「 分析管理物件 (AMO) 物件模型而言， <xref:Microsoft.AnalysisServices.Trace>。  
   
-## <a name="see-also"></a>請參閱  
- [Traces 元素 &#40;ASSL &#41;](../../../analysis-services/scripting/collections/traces-element-assl.md)   
- [屬性 &#40;ASSL &#41;](../../../analysis-services/scripting/properties/properties-assl.md)  
+## <a name="see-also"></a>另請參閱  
+ [Traces 元素 & #40;ASSL & #41;](../../../analysis-services/scripting/collections/traces-element-assl.md)   
+ [屬性 & #40;ASSL & #41;](../../../analysis-services/scripting/properties/properties-assl.md)  
   
   

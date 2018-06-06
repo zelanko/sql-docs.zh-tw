@@ -1,30 +1,27 @@
 ---
-title: "Sqlstate |Microsoft 文件"
-ms.custom: 
+title: Sqlstate |Microsoft 文件
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
-ms.component: odbc
-ms.reviewer: 
+ms.prod: sql
+ms.prod_service: connectivity
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: connectivity
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - diagnostic information [ODBC], sqlstates
 - SQLSTATE [ODBC]
 ms.assetid: f29fff2e-3d09-4a8c-a2f9-2059062cbebf
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
-ms.workload: Inactive
-ms.openlocfilehash: 29bd2646172cebd69f9c5a9f7cc055378e18e377
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+manager: craigg
+ms.openlocfilehash: 9408522a47b442e3001e09cdca2d636063f73fb5
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sqlstates"></a>SQLSTATE
 Sqlstate 會提供警告或錯誤的原因的詳細的資訊。 雖然使用 IM 啟動這些 Sqlstate 特有 ODBC Sqlstate 本手冊中取決於 ISO/IEF CLI 規格中。  

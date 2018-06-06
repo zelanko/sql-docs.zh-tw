@@ -1,36 +1,37 @@
 ---
-title: "Master Data Services 概觀 (MDS) | Microsoft Docs"
-ms.custom: 
+title: Master Data Services 概觀 (MDS) | Microsoft Docs
+ms.custom: ''
 ms.date: 02/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: mds
-ms.service: 
 ms.component: non-specific
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - master-data-services
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 keywords:
-- "何謂主要資料"
+- 何謂主要資料
 helpviewer_keywords:
 - Master Data Services, overview
 - Master Data Services
 ms.assetid: 8a4c28b1-6061-4850-80b6-132438b8c156
-caps.latest.revision: 
+caps.latest.revision: 28
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.workload: Active
-ms.openlocfilehash: a60fddbc00fa808590a06bc3263dfe6bc966f18b
-ms.sourcegitcommit: 6ac1956307d8255dc544e1063922493b30907b80
+ms.openlocfilehash: a329416c51580e32fef969a48c96dfa6a68b1cb7
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="master-data-services-overview-mds"></a>Master Data Services 概觀 (MDS)
-  本主題說明 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]的索引鍵資料組織和管理功能。 
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
+本主題說明 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]的索引鍵資料組織和管理功能。 
   
  [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] 可讓您管理組織的一組主要資料。 您可以將資料組織到模型、建立用來更新資料的規則，並控制誰更新資料。 使用 Excel，您可以在組織中與其他人共用主要資料集。 
   

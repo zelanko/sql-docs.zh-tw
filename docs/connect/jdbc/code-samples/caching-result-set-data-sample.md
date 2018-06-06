@@ -1,26 +1,24 @@
 ---
-title: "快取結果集資料範例 |Microsoft 文件"
-ms.custom: 
+title: 快取結果集資料範例 |Microsoft 文件
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
-ms.component: jdbc
-ms.reviewer: 
+ms.prod: sql
+ms.prod_service: connectivity
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: connectivity
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: 13a95ebb-996c-4713-a1bd-5834fe22a334
-caps.latest.revision: "20"
+caps.latest.revision: 20
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
-ms.openlocfilehash: 8ecf0da95e3ae8929aac14151d90f5701af2ac35
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+manager: craigg
+ms.openlocfilehash: f5e76a7d66a2cba66774a27e5d0f0c155bfb92d7
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="caching-result-set-data-sample"></a>快取結果集資料範例
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -42,13 +40,13 @@ ms.lasthandoff: 11/18/2017
  \<*安裝目錄*> \sqljdbc_\<*版本*>\\<*語言*> \samples\resultsets  
   
 ## <a name="requirements"></a>需求  
- 若要執行此範例應用程式，您必須將 Classpath 設定為包含 sqljdbc.jar 檔案或 sqljdbc4.jar 檔案。 如果 Classpath 遺漏 sqljdbc.jar 或 sqljdbc4.jar 的項目，範例應用程式將會擲回「找不到類別」的一般例外狀況。 您也會需要存取[!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal_md.md)]範例資料庫。 如需如何設定 classpath 的詳細資訊，請參閱[使用 JDBC 驅動程式](../../../connect/jdbc/using-the-jdbc-driver.md)。  
+ 若要執行此範例應用程式，您必須將 Classpath 設定為包含 sqljdbc.jar 檔案或 sqljdbc4.jar 檔案。 如果 Classpath 遺漏 sqljdbc.jar 或 sqljdbc4.jar 的項目，範例應用程式將會擲回「找不到類別」的一般例外狀況。 您也需要擁有 [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal_md.md)] 範例資料庫的存取權。 如需如何設定 classpath 的詳細資訊，請參閱[使用 JDBC 驅動程式](../../../connect/jdbc/using-the-jdbc-driver.md)。  
   
 > [!NOTE]  
->  [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)]提供 sqljdbc.jar 和 sqljdbc4.jar 類別庫檔案，可根據您慣用的 Java Runtime Environment (JRE) 設定。 如需選擇哪個 JAR 檔案的詳細資訊，請參閱[JDBC 驅動程式的系統需求](../../../connect/jdbc/system-requirements-for-the-jdbc-driver.md)。  
+>  [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] 提供 sqljdbc.jar 和 sqljdbc4.jar 類別庫檔案，可根據您慣用的 Java Runtime Environment (JRE) 設定使用。 如需選擇哪個 JAR 檔案的詳細資訊，請參閱[JDBC 驅動程式的系統需求](../../../connect/jdbc/system-requirements-for-the-jdbc-driver.md)。  
   
 ## <a name="example"></a>範例  
- 在下列範例中，範例程式碼會連接到[!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal_md.md)]範例資料庫。 然後它會使用 SQL 陳述式與[SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md)物件，指定伺服器端資料指標類型，然後執行 SQL 陳述式並將放入 SQLServerResultSet 物件傳回的資料。  
+ 在下列範例中，範例程式碼會建立與 [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal_md.md)] 範例資料庫的連線。 然後它會使用 SQL 陳述式與[SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md)物件，指定伺服器端資料指標類型，然後執行 SQL 陳述式並將放入 SQLServerResultSet 物件傳回的資料。  
   
  接著，範例程式碼呼叫自訂 timerTest 方法，傳遞引數的提取大小使用和結果集。 TimerTest 方法之結果集所使用的 setFetchSize 方法的提取大小、 設定開始時間的測試，然後再逐一查看結果集，`While`迴圈。 只要`While`迴圈一結束，程式碼設定停止時間，測試，然後顯示結果，包括提取大小、 處理、 資料列數目的測試並執行測試所花的時間。  
   
@@ -151,7 +149,7 @@ public class cacheRS {
 }  
 ```  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [使用結果集](../../../connect/jdbc/working-with-result-sets.md)  
   
   

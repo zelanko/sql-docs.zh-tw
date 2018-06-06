@@ -1,22 +1,22 @@
 ---
-title: "CREATE ACTION 陳述式 (MDX) |Microsoft 文件"
-ms.custom: 
+title: CREATE ACTION 陳述式 (MDX) |Microsoft 文件
+ms.custom: ''
 ms.date: 03/02/2016
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - CREATE ACTION
 - Action
 - CREATE
 - CREATE_ACTION
-dev_langs: kbMDX
+dev_langs:
+- kbMDX
 helpviewer_keywords:
 - invocation types [MDX]
 - dimensions [Analysis Services], actions
@@ -25,16 +25,15 @@ helpviewer_keywords:
 - actions [MDX]
 - hierarchies [Analysis Services], actions
 ms.assetid: 0419f349-ece2-42ba-8552-a1023f268a41
-caps.latest.revision: "36"
+caps.latest.revision: 36
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: 22c4cb48c762f2686f4cad86499b64cad0cc7e8b
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: dbb6e815e1cc9c66706641c16a9e169bb217ad6f
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="mdx-data-definition---create-action"></a>MDX 資料定義-建立動作
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -101,7 +100,7 @@ FOR
 ## <a name="action-types"></a>動作類型  
  下表說明不同類型中可用動作的[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]。  
   
-|動作類型|描述|  
+|動作類型|Description|  
 |-----------------|-----------------|  
 |**URL**|傳回的動作字串是 URL，應使用網際網路瀏覽器開啟。<br /><br /> 注意： 如果此動作不是以開頭`http://`或`https://`，此動作將無法用於瀏覽器除非**SafetyOptions**設為**與 DBPROPVAL_MSMD_SAFETY_OPTIONS_ALLOW_ALL**。|  
 |**HTML**|傳回的動作字串是 HTML 指令碼。 應將此字串儲存至檔案，而且應使用網際網路瀏覽器來轉譯此檔案。 在此情況下，可能會將整個指令碼視為已產生 HTML 的一部分執行。|  
@@ -114,13 +113,13 @@ FOR
 ## <a name="invocation-types"></a>引動過程類型  
  下表描述 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 中可用的不同引動過程類型。 引動過程類型只由用戶端應用程式使用，可協助判定何時要叫用動作。 引動過程類型實際上不會決定動作的引動過程行為。  
   
-|引動過程類型|描述|  
+|引動過程類型|Description|  
 |---------------------|-----------------|  
 |**互動式**|此動作應透過使用者互動，由用戶端應用程式叫用。|  
 |**ON_OPEN**|此動作應在目標物件開啟時，由用戶端應用程式叫用。 目前未實作此引動過程類型。|  
 |**批次**|此動作應在用戶端應用程式決定要在批次作業中叫用目標物件時，由用戶端應用程式叫用。 目前未實作此引動過程類型。|  
   
-### <a name="scope"></a>範圍。  
+### <a name="scope"></a>범위  
  每個動作是為特定 Cube 而定義，而且在該 Cube 中有唯一的名稱。 一個動作可有下表列出的其中一個範圍。  
   
  Cube 範圍  
@@ -141,7 +140,7 @@ FOR
  集合範圍  
  此動作僅適用於集合。 「 名稱 」， **ActionParameterSet**，已保留供動作的運算式內的應用程式。  
   
-## <a name="see-also"></a>請參閱  
- [MDX 資料定義陳述式 &#40;MDX &#41;](../mdx/mdx-data-definition-statements-mdx.md)  
+## <a name="see-also"></a>另請參閱  
+ [MDX 資料定義陳述式&#40;MDX&#41;](../mdx/mdx-data-definition-statements-mdx.md)  
   
   

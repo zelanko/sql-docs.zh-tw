@@ -1,17 +1,14 @@
 ---
-title: "結尾記錄備份 (SQL Server) | Microsoft Docs"
-ms.custom: 
+title: 結尾記錄備份 (SQL Server) | Microsoft Docs
+ms.custom: ''
 ms.date: 08/01/2016
-ms.prod: sql-non-specified
-ms.prod_service: database-engine
-ms.service: 
-ms.component: backup-restore
-ms.reviewer: 
+ms.prod: sql
+ms.prod_service: backup-restore
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- dbe-backup-restore
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: backup-restore
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - backing up [SQL Server], tail of log
 - transaction log backups [SQL Server], tail-log backups
@@ -20,19 +17,19 @@ helpviewer_keywords:
 - tail-log backups
 - backups [SQL Server], tail-log backups
 ms.assetid: 313ddaf6-ec54-4a81-a104-7ffa9533ca58
-caps.latest.revision: 
+caps.latest.revision: 55
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 06e3604fcd70a4ce7948d704d923c84cbc5acf2a
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 70b11ff22c345737e95e32695cbe187d846cac00
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="tail-log-backups-sql-server"></a>結尾記錄備份 (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 本主題僅與使用完整或大量記錄復原模式備份和還原 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫有關。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  本主題僅與使用完整或大量記錄復原模式備份和還原 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫有關。  
   
  「結尾記錄備份」(tail-log backup) 可擷取任何尚未備份的記錄檔記錄 (「記錄結尾」(tail of the log))，來防止工作遺失，並保持記錄鏈結完整。 將 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫復原到最新時間點之前，必須備份其交易記錄的結尾。 結尾記錄備份會是資料庫之復原計畫中感興趣的最後一個備份。  
   

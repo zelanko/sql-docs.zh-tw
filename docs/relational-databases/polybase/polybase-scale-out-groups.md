@@ -1,36 +1,33 @@
 ---
-title: "PolyBase 向外延展群組 | Microsoft Docs"
-ms.custom: 
+title: PolyBase 向外延展群組 | Microsoft Docs
+ms.custom: ''
 ms.date: 05/24/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-data-warehouse, pdw
-ms.service: 
 ms.component: polybase
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine-polybase
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: polybase
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - PolyBase
 - PolyBase, scale-out groups
 - scale-out PolyBase
 ms.assetid: c7810135-4d63-4161-93ab-0e75e9d10ab5
-caps.latest.revision: 
-author: barbkess
-ms.author: barbkess
+caps.latest.revision: 20
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 018d765aace9ef2f46a1dd8da4e0a6c503a0d35f
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.openlocfilehash: 3fd249645266a7d9477e2dc098817138d8f722d0
+ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="polybase-scale-out-groups"></a>PolyBase 向外延展群組
 [!INCLUDE[appliesto-ss-xxxx-asdw-pdw-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-含有 PolyBase 的獨立 SQL Server 執行個體會在處理 Hadoop 或 Azure Blob 儲存體中的大量資料集時成為效能瓶頸。 PolyBase 群組功能可讓您建立 SQL Server 執行個體的叢集，利用向外延展方式處理來自外部資料來源 (例如 Hadoop 或 Azure Blob 儲存體) 的大型資料集，以提高查詢效能。  
+  含有 PolyBase 的獨立 SQL Server 執行個體會在處理 Hadoop 或 Azure Blob 儲存體中的大量資料集時成為效能瓶頸。 PolyBase 群組功能可讓您建立 SQL Server 執行個體的叢集，利用向外延展方式處理來自外部資料來源 (例如 Hadoop 或 Azure Blob 儲存體) 的大型資料集，以提高查詢效能。  
   
  請參閱 [開始使用 PolyBase](../../relational-databases/polybase/get-started-with-polybase.md) 和 [PolyBase 指南](../../relational-databases/polybase/polybase-guide.md)。  
   

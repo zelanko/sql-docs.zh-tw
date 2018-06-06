@@ -1,34 +1,30 @@
 ---
-title: "Audit Database Object Management 事件類別 | Microsoft Docs"
-ms.custom: 
+title: Audit Database Object Management 事件類別 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
-ms.prod_service: database-engine, sql-database
-ms.service: 
-ms.component: event-classes
-ms.reviewer: 
+ms.prod: sql
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: supportability
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - Audit Database Object Management event class
 ms.assetid: bc5c0be2-990b-4032-a5e6-41ce98661698
-caps.latest.revision: 
+caps.latest.revision: 21
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 3e241e21a4270528803899791cd880ab76121ebd
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 82a8a6bf0ccdffdf9fea4ae71c5f8116d93330b0
+ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="audit-database-object-management-event-class"></a>Audit Database Object Management 事件類別
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-對資料庫物件 (例如結構描述) 執行 CREATE、ALTER 或 DROP 陳述式時，即會產生 **Audit Database Object Management** 事件類別。  
+  對資料庫物件 (例如結構描述) 執行 CREATE、ALTER 或 DROP 陳述式時，即會產生 **Audit Database Object Management** 事件類別。  
   
 > [!NOTE]  
 >  系統不會稽核與公開金鑰相關的動作。  

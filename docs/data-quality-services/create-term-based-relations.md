@@ -1,30 +1,33 @@
 ---
-title: "建立以詞彙為主的關聯 | Microsoft Docs"
-ms.custom: 
+title: 建立以詞彙為主的關聯 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/08/2011
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: data-quality-services
-ms.service: 
 ms.component: data-quality-services
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: data-quality-services
-ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords: sql13.dqs.dm.kbtermsbased.f1
+ms.technology:
+- data-quality-services
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
+f1_keywords:
+- sql13.dqs.dm.kbtermsbased.f1
 ms.assetid: 66db9277-d892-4dae-8a82-060fd3ba6949
-caps.latest.revision: "27"
+caps.latest.revision: 27
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.workload: Inactive
-ms.openlocfilehash: fef7b422366598e1974a07e4ee36e0100157dfa2
-ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
+manager: craigg
+ms.openlocfilehash: 1e35e6dbe790faff29ac5a34a664aec5a99d6bc1
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="create-term-based-relations"></a>建立以詞彙為主的關聯
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
   此主題描述如何針對 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) 中的定義域建立以詞彙為主的關聯。 以詞彙為主的關聯 (TBR) 可讓您針對屬於定義域值的詞彙進行更正。 它會啟用多個值，這些值除了被視為相同同義字的共同部分拼字以外，都是相同的。 例如，您可以設定某個以詞彙為主的關聯，將 “Inc.” 詞彙變更為 “Incorporated”。 每當在定義域中遇到 “Inc.” 詞彙時，都會加以變更。 出現 “Contoso, Inc.” 的地方將會變更為 “Contoso, Incorporated”，而且這兩個值會被視為完全相符的同義字。  
   
  若要使用以詞彙為主的關聯，請建立「值/更正為」配對清單，例如 “Inc.” 和 “Incorporated” 或是 “Senior” 和 “Sr.”。 使用以詞彙為主的關聯可讓您在整個定義域中變更詞彙，而不需要手動將個別定義域值設定為同義字。 您可以指定應該更正某個值，即使知識探索之前尚未探索該值。 如果以詞彙為主的關聯轉換讓兩個值變成完全相同，則 DQS 將會在兩者之間建立同義字關聯性 (在知識探索中)、在兩者之間建立更正關聯性 (在資料更正中)，或是建立完全相符的項目 (在比對中)。  

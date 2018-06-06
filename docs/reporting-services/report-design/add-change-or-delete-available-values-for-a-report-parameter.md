@@ -1,31 +1,29 @@
 ---
-title: "為報表參數新增、變更或刪除可用的值 | Microsoft Docs"
-ms.custom: 
+title: 為報表參數新增、變更或刪除可用的值 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: report-design
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 f1_keywords:
 - sql13.rtp.rptdesigner.reportparameters.availablevalues.f1
 - "10455"
 - "10071"
 ms.assetid: 0e03264c-523f-4c59-b71b-ceef600f75f6
-caps.latest.revision: "11"
+caps.latest.revision: 11
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: ff3ae7e2e01eab4629fa30f4ab188ac714d4fd2e
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 4d3466964e2b2550e5b0dd6b90cbaac3a063e68e
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="add-change-or-delete-available-values-for-a-report-parameter"></a>為報表參數加入、變更或刪除可用的值
   當您建立報表參數之後，可以指定要對使用者顯示的可用值清單。 可用值清單會將使用者可以做的選擇限制為參數的有效值。  
@@ -59,11 +57,11 @@ ms.lasthandoff: 01/09/2018
         > [!IMPORTANT]  
         >  如果相同資料集包含報表參數的對應查詢參數，報表就會在您嘗試執行時顯示錯誤訊息。 使用不同資料集來擷取值，即可解決這個錯誤。  
   
-         在 **[資料集]**中，選擇此資料集的名稱。  
+         在 **[資料集]** 中，選擇此資料集的名稱。  
   
-         在 **[值欄位]**中，選擇可提供參數值的欄位名稱。  
+         在 **[值欄位]** 中，選擇可提供參數值的欄位名稱。  
   
-         在 **[標籤欄位]**中，選擇可為參數提供易記名稱的欄位名稱。 如果易記名稱沒有個別的欄位，請選擇與 **[值]** 欄位相同的欄位。  
+         在 **[標籤欄位]** 中，選擇可為參數提供易記名稱的欄位名稱。 如果易記名稱沒有個別的欄位，請選擇與 **[值]** 欄位相同的欄位。  
   
 3.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
@@ -75,7 +73,7 @@ ms.lasthandoff: 01/09/2018
   
 2.  按一下 **[可用的值]**。  
   
-3.  在 **[選取下列其中一個選項]**中，按一下 **[無]**。  
+3.  在 **[選取下列其中一個選項]** 中，按一下 **[無]**。  
   
 4.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   

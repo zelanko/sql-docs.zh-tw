@@ -1,30 +1,28 @@
 ---
-title: "資料錄集 SourceRecordset 屬性 (RDS) |Microsoft 文件"
-ms.technology:
-- drivers
-ms.custom: 
+title: 資料錄集 SourceRecordset 屬性 (RDS) |Microsoft 文件
+ms.technology: connectivity
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.component: reference
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 apitype: COM
 helpviewer_keywords:
 - Recordset property [ADO]
 ms.assetid: a29e3fb9-306d-497a-9a59-1856a914e5e9
-caps.latest.revision: 
+caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 3a59056cd579bfc3bebfdd2e33c18e733fbacd1b
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 1b032e25ee5d4c85638cacfbe160240bf4c1853f
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="recordset-sourcerecordset-properties-rds"></a>資料錄集 SourceRecordset 屬性 (RDS)
 指出**資料錄集**傳回自訂的商務物件的物件。  

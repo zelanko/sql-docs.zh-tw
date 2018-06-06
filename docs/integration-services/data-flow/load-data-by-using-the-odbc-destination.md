@@ -1,28 +1,26 @@
 ---
-title: "使用 ODBC 目的地來載入資料 | Microsoft Docs"
-ms.custom: 
+title: 使用 ODBC 目的地來載入資料 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
 ms.component: data-flow
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: 339ec0a8-922e-48c0-97b3-fc5ee34f95e3
-caps.latest.revision: 
+caps.latest.revision: 9
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 9675d9f901f47a08cb18ea725e272f054eeb17ac
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 5875b2783e02a022f027f1352d6f6621c2754182
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="load-data-by-using-the-odbc-destination"></a>使用 ODBC 目的地來載入資料
   此程序說明如何透過使用 ODBC 目的地載入資料。 若要加入及設定 ODBC 目的地，封裝必須已包括至少一個「資料流程」工作與來源。  
@@ -31,7 +29,7 @@ ms.lasthandoff: 02/15/2018
   
 1.  在 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]中，開啟所要的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 封裝。  
   
-2.  按一下 **[資料流程]** 索引標籤，然後將 ODBC 目的地從 **[工具箱]**拖曳到設計介面。  
+2.  按一下 **[資料流程]** 索引標籤，然後將 ODBC 目的地從 **[工具箱]** 拖曳到設計介面。  
   
 3.  將某個資料流程元件的可用輸出拖曳到 ODBC 目的地的輸入。  
   

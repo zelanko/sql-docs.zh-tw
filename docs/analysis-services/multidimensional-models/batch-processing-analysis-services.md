@@ -1,31 +1,23 @@
 ---
-title: "批次處理 (Analysis Services) |Microsoft 文件"
-ms.custom: 
-ms.date: 03/01/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
-helpviewer_keywords: batches [Analysis Services]
-ms.assetid: ba4dcf72-0667-41d0-816b-ab8ff9a7d9cb
-caps.latest.revision: "39"
-author: Minewiskan
+title: 批次處理 (Analysis Services) |Microsoft 文件
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: multidimensional-models
+ms.topic: conceptual
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: ec94963644de42f6fd07da60c16f2f314f168e41
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 6d2f72dd0c7b380391a7b500d494d5aac83c4c6f
+ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="batch-processing-analysis-services"></a>批次處理 (Analysis Services)
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]在[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]，您可以使用批次命令，將多個處理命令傳送到單一要求中的伺服器。 批次處理讓您可以控制要處理的物件和處理順序。 此外，批次可以當做一系列獨立的作業來執行，或是做為交易執行，其中若有一個處理序失敗，就會造成整個批次全部回復。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+  在 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]中，您可以使用 [批次] 命令，以單一要求將多個處理命令傳送至伺服器。 批次處理讓您可以控制要處理的物件和處理順序。 此外，批次可以當做一系列獨立的作業來執行，或是做為交易執行，其中若有一個處理序失敗，就會造成整個批次全部回復。  
   
  批次處理透過合併及縮短認可變更所需的時間，來提高資料可用性。 當您完整處理維度時，任何使用該維度的分割區都會標示為尚未處理。 因此，包含尚未處理之分割區的 Cube 都無法瀏覽。 您可以同時處理維度和受影響的分割區，藉由批次處理作業的方式處理解決這種狀況。 將批次處理工作當做交易執行，可確保包含在交易中的所有物件保持可供查詢，直到所有處理完成為止。 當交易認可有所變更時，受影響的物件上會遭到鎖定，讓物件暫時無法使用，但是認可變更所使用的整體時間會比您個別處理物件還短。  
   
@@ -50,19 +42,19 @@ ms.lasthandoff: 01/08/2018
   
 5.  以滑鼠右鍵按一下選取的維度，然後按一下 [處理]。  
   
-6.  按住 Ctrl 鍵，並按一下 **[物件清單]**中列出的每個維度。  
+6.  按住 Ctrl 鍵，並按一下 **[物件清單]** 中列出的每個維度。  
   
 7.  以滑鼠右鍵按一下選取的維度，然後選取 [完整處理]。  
   
 8.  若要自訂批次處理作業，請按一下 **[變更設定]**。  
   
-9. 在 **[處理選項]**下標示下列設定：  
+9. 在 **[處理選項]** 下標示下列設定：  
   
-    -   將**[處理順序]** 設定為 **[循序]**，並將 **[交易模式]** 設定為 **[一筆交易]**。  
+    -   將 **[處理順序]** 設定為 **[循序]**，並將 **[交易模式]** 設定為 **[一筆交易]**。  
   
-    -   將**[回寫資料表選項]** 設定為 **[使用現有的]**。  
+    -   將 **[回寫資料表選項]** 設定為 **[使用現有的]**。  
   
-    -   在 **[受影響的物件]**下，選取 **[處理受影響的物件]** 核取方塊。  
+    -   在 **[受影響的物件]** 下，選取 **[處理受影響的物件]** 核取方塊。  
   
 10. 按一下 **[維度索引鍵錯誤]** 索引標籤。確認已選取 **[使用預設錯誤組態]** 。  
   
@@ -70,7 +62,7 @@ ms.lasthandoff: 01/08/2018
   
 12. 在 **[處理物件]** 畫面中按一下 **[執行]** ，以啟動處理作業。  
   
-13. 當 **[狀態]** 方塊顯示 **[處理成功]**時，按一下 **[關閉]**。  
+13. 當 **[狀態]** 方塊顯示 **[處理成功]** 時，按一下 **[關閉]**。  
   
 14. 按一下 **[處理物件]** 畫面上的 **[關閉]** 。  
   
@@ -79,7 +71,7 @@ ms.lasthandoff: 01/08/2018
   
  如需逐步指示，請參閱 **使用 SQL Server Agent 排程 SSAS 管理工作** 中的 [範例 2](../../analysis-services/instances/schedule-ssas-administrative-tasks-with-sql-server-agent.md)  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [處理多維度模型 &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services.md)  
   
   

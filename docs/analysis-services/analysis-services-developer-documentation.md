@@ -1,30 +1,19 @@
 ---
-title: "Analysis Services 開發人員文件 |Microsoft 文件"
-ms.custom: 
-ms.date: 03/24/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services, azure-analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: reference
-helpviewer_keywords:
-- multidimensional data [Analysis Services], developer's guide
-- developer's guide [Analysis Services - multidimensional data]
-ms.assetid: 0a6eda76-1c5e-487e-9c8b-1feb09f1a34c
-caps.latest.revision: 
-author: Minewiskan
+title: Analysis Services 開發人員文件 |Microsoft 文件
+ms.date: 05/08/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: ''
+ms.topic: conceptual
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: b20751879e566f85d12545238a890d4667190306
-ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
+ms.openlocfilehash: 978819f3b8af369942dde2c3c18d6ca117489633
+ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="analysis-services-developer-documentation"></a>Analysis Services Developer 文件
 [!INCLUDE[ssas-appliesto-sqlas-aas](../includes/ssas-appliesto-sqlas-aas.md)]
@@ -73,14 +62,14 @@ Analysis Services 提供許多方式可以自訂的解決方案，透過程式�
 
 [Analysis Services 結構描述資料列集](../analysis-services/schema-rowsets/analysis-services-schema-rowsets.md)描述提供有關伺服器狀態、 伺服器作業和資料庫物件的結構描述資料列集。
 
-[XML for Analysis &#40;XMLA &#41;參考](../analysis-services/xmla/xml-for-analysis-xmla-reference.md)描述 XMLA 概念可幫助您了解 XMLA 如何提供給您的自訂方案。 也會描述符合 XMLA 1.1 規格的層級。
+[XML for Analysis &#40;XMLA&#41;參考](../analysis-services/xmla/xml-for-analysis-xmla-reference.md)描述 XMLA 概念可幫助您了解 XMLA 如何提供給您的自訂方案。 也會描述符合 XMLA 1.1 規格的層級。
 
-[Analysis Services 指令碼語言 &#40;ASSL XMLA &#41;](../analysis-services/scripting/analysis-services-scripting-language-assl-for-xmla.md)描述 XMLA 之 ASSL 延伸模組。 ASSL 針對補充 XMLA 規格的 Analysis Services 多維度模型提供資料定義和操作語言。
+[Analysis Services 指令碼語言&#40;ASSL xmla&#41; ](../analysis-services/scripting/analysis-services-scripting-language-assl-for-xmla.md)描述 XMLA 之 ASSL 延伸模組。 ASSL 針對補充 XMLA 規格的 Analysis Services 多維度模型提供資料定義和操作語言。
 
-[表格式模型指令碼語言 &#40;TMSL &#41;參考](../analysis-services/tabular-model-scripting-language-tmsl-reference.md)TMSL 是 1200年或更高的相容性層級的表格式模型的 JSON 表示法。 物件定義根據表格式中繼資料建構，例如資料表、 資料行和關聯性，而可能不熟悉，如果您是在表格式模式的 Analysis Services 資料模型化新的多維度中繼資料。
+[表格式模型指令碼語言&#40;TMSL&#41;參考](../analysis-services/tabular-model-scripting-language-tmsl-reference.md)TMSL 是 1200年或更高的相容性層級的表格式模型的 JSON 表示法。 物件定義根據表格式中繼資料建構，例如資料表、 資料行和關聯性，而可能不熟悉，如果您是在表格式模式的 Analysis Services 資料模型化新的多維度中繼資料。
 
 [Analysis Services PowerShell Reference](../analysis-services/powershell/analysis-services-powershell-reference.md)用於系統管理功能，加上一般用途的 cmdlet 文件**Invoke-ascmd**指令程式可接受任何指令碼或做為輸入的查詢。
 
 ## <a name="see-also"></a>另請參閱
 [技術參考](../analysis-services/powershell/technical-reference-ssas.md) 
-[查詢及運算式語言參考 &#40;Analysis Services &#41;](http://msdn.microsoft.com/library/gg492188.aspx)
+[查詢及運算式語言參考&#40;Analysis Services&#41;](http://msdn.microsoft.com/library/gg492188.aspx)

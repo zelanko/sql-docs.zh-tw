@@ -1,16 +1,15 @@
 ---
-title: "SQL Server Agent 固定資料庫角色 | Microsoft Docs"
-ms.custom: 
+title: SQL Server Agent 固定資料庫角色 | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
 ms.component: ssms-agent
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: tools-ssms
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ssms
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - roles [SQL Server], SQL Server Agent
 - SQL Server Agent, roles
@@ -21,20 +20,24 @@ helpviewer_keywords:
 - fixed database roles [SQL Server]
 - SQLAgentOperatorRole database role
 ms.assetid: 719ce56b-d6b2-414a-88a8-f43b725ebc79
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: Active
-ms.openlocfilehash: 02a76ac743e89269296cdb04e9eb27ec5faca66f
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 19c4b994355cc4a4578342675f9f02c78ccf2bd1
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sql-server-agent-fixed-database-roles"></a>SQL Server Agent 固定資料庫角色
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 具有下列 **msdb** 資料庫固定資料庫角色，讓管理員在存取 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent 時具有更細微的控制權。 以下列出這些角色 (存取權限由少至多排列)：  
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+
+> [!IMPORTANT]  
+> [Azure SQL Database 受控執行個體](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)目前支援多數 (但非全部) 的 SQL Server Agent 功能。 如需詳細資料，請參閱 [Azure SQL Database 受控執行個體與 SQL Server 之間的 T-SQL 差異](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)。
+
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 具有下列 **msdb** 資料庫固定資料庫角色，讓管理員在存取 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 代理程式時具有更細微的控制權。 以下列出這些角色 (存取權限由少至多排列)：  
   
 -   **SQLAgentUserRole**  
   

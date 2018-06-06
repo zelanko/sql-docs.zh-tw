@@ -1,16 +1,15 @@
 ---
-title: "將目標伺服器編列至主要伺服器 | Microsoft Docs"
-ms.custom: 
+title: 將目標伺服器編列至主要伺服器 | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
 ms.component: ssms-agent
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: tools-ssms
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ssms
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - enlisting target servers [SQL Server]
 - SQL Server Agent jobs, target servers
@@ -18,19 +17,24 @@ helpviewer_keywords:
 - SQL Server Agent jobs, master servers
 - target servers [SQL Server], enlisting
 ms.assetid: 7633adb5-d140-4e58-a8f2-5b4b50c2f95b
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 9659a0e1559138f03452fee96523c42842c11776
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 74923f04bb54ac84ded6c5e699956e413ba1bdc5
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="enlist-a-target-server-to-a-master-server"></a>將目標伺服器編列至主要伺服器
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 本主題描述如何將目標伺服器新增至多伺服器管理設定。 從主要伺服器執行這個程序。 在 [!INCLUDE[ssCurrent](../../includes/sscurrent_md.md)] 中，使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)]、 [!INCLUDE[tsql](../../includes/tsql_md.md)]或 SQL Server 管理物件 (SMO)。  
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+
+> [!IMPORTANT]  
+> [Azure SQL Database 受控執行個體](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)目前支援多數 (但非全部) 的 SQL Server Agent 功能。 如需詳細資料，請參閱 [Azure SQL Database 受控執行個體與 SQL Server 之間的 T-SQL 差異](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)。
+
+此主題描述如何將目標伺服器新增至多伺服器管理組態。 從主要伺服器執行這個程序。 在 [!INCLUDE[ssCurrent](../../includes/sscurrent_md.md)] 中，使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)]、 [!INCLUDE[tsql](../../includes/tsql_md.md)]或 SQL Server 管理物件 (SMO)。  
   
 如需有關用於 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent 服務之 Windows 帳戶如何影響多伺服器環境的詳細資訊，請參閱 [建立多伺服器環境](../../ssms/agent/create-a-multiserver-environment.md)。  
   
@@ -48,7 +52,7 @@ ms.lasthandoff: 01/17/2018
   
 #### <a name="to-enlist-a-target-server"></a>若要編列目標伺服器  
   
-1.  在 **[物件總管]**中，展開設定為主要伺服器的伺服器。  
+1.  在 **[物件總管]** 中，展開設定為主要伺服器的伺服器。  
   
 2.  以滑鼠右鍵按一下 **[SQL Server Agent]**，指向 **[多伺服器管理]**，然後按一下 **[新增目標伺服器]**。  
   

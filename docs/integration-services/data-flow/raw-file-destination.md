@@ -1,17 +1,16 @@
 ---
-title: "原始檔案目的地 | Microsoft Docs"
-ms.custom: 
+title: 原始檔案目的地 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
 ms.component: data-flow
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 f1_keywords:
 - sql13.dts.designer.rawfiledest.f1
 - sql13.dts.designer.rawfiledestinationconnectionmanager.f1
@@ -23,16 +22,15 @@ helpviewer_keywords:
 - writing raw data
 - Raw File destination
 ms.assetid: d311b458-aefc-4b4d-b1a1-4c0ebbb34214
-caps.latest.revision: 
+caps.latest.revision: 59
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 1a9ce999e727a77b303b9978f59dc980b7d2ca21
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: c749048ddfe4bad75f1bf34d40d806fbe1bb1403
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="raw-file-destination"></a>Raw File Destination
   「原始檔案」目的地會將原始資料寫入檔案。 由於資料的格式對於目的地而言是原生的，因此資料不需翻譯，也幾乎不需要剖析。 這表示，「原始檔案」目的地可比其他目的地更快地寫入資料，例如「一般檔案」和 OLE DB 目的地。  
@@ -169,16 +167,16 @@ ms.lasthandoff: 01/25/2018
  選取用來建立和寫入檔案的方法。  
   
  **產生初始的原始檔案**  
- 按一下此按鈕可以產生僅包含資料行 (僅中繼資料的檔案) 的空白原始檔案，而不必執行封裝。 此檔案包含您在 **[原始檔案目的地編輯器]** 之 **[資料行]**頁面上選取的資料行。 您可以將原始檔案來源指向這個僅中繼資料的檔案。  
+ 按一下此按鈕可以產生僅包含資料行 (僅中繼資料的檔案) 的空白原始檔案，而不必執行封裝。 此檔案包含您在 **[原始檔案目的地編輯器]** 之 **[資料行]** 頁面上選取的資料行。 您可以將原始檔案來源指向這個僅中繼資料的檔案。  
   
- 當您按一下 **[產生初始原始檔案]**時，隨即顯示訊息方塊。 按一下 **[確定]** ，繼續建立檔案。 按一下 **[取消]** ，在 **[資料行]** 頁面上選取不同的資料行清單。  
+ 當您按一下 **[產生初始原始檔案]** 時，隨即顯示訊息方塊。 按一下 **[確定]** ，繼續建立檔案。 按一下 **[取消]** ，在 **[資料行]** 頁面上選取不同的資料行清單。  
   
 ###  <a name="mapping"></a> 設定資料行索引標籤上的選項  
  **可用的輸入資料行**  
  選取要寫入至原始檔案的一個或多個輸入資料行。  
   
  **輸入資料行**  
- 當您在 **[可用的輸入資料行]**底下選取資料表時，輸入資料行會自動加入此資料表中，或者您可以直接在此資料表中選取輸入資料行。  
+ 當您在 **[可用的輸入資料行]** 底下選取資料表時，輸入資料行會自動加入此資料表中，或者您可以直接在此資料表中選取輸入資料行。  
   
  **輸出別名**  
  指定要做為輸出資料行使用的替代名稱。  
@@ -220,7 +218,7 @@ ms.lasthandoff: 01/25/2018
  選取要寫入至原始檔案的一個或多個輸入資料行。  
   
  **輸入資料行**  
- 當您在 **[可用的輸入資料行]**底下選取資料表時，輸入資料行會自動加入此資料表中，或者您可以直接在此資料表中選取輸入資料行。  
+ 當您在 **[可用的輸入資料行]** 底下選取資料表時，輸入資料行會自動加入此資料表中，或者您可以直接在此資料表中選取輸入資料行。  
   
  **輸出別名**  
  指定要做為輸出資料行使用的替代名稱。  

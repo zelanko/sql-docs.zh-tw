@@ -1,35 +1,32 @@
 ---
-title: "在 Management Studio 中使用屬性視窗 | Microsoft 文件"
-ms.custom: 
+title: 在 Management Studio 中使用屬性視窗 | Microsoft 文件
+ms.custom: ''
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
-ms.prod_service: sql-tools
-ms.service: 
-ms.component: ssms-scripting
-ms.reviewer: 
+ms.prod: sql
+ms.technology: scripting
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - viewing properties
 - Properties window [SQL Server Management Studio]
 - complex properties [SQL Server Management Studio]
 ms.assetid: 903d4aca-f57c-43d9-a893-702eceaa7004
-caps.latest.revision: 
+caps.latest.revision: 24
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 22b1e823ce0c17afe17eee0da4e3c1f62678b079
-ms.sourcegitcommit: a0aa5e611a0e6ebb74ac1e2f613e8916dc7a7617
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 28304f4a077d345dd2253c1141354627c6388b9c
+ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/24/2018
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="use-the-properties-window-in-management-studio"></a>在 Management Studio 中使用屬性視窗
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] [屬性] 視窗描述 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中項目 (例如連線或執行程序表運算子) 的狀態，以及資料庫物件 (例如資料表、檢視表和設計師) 的相關資訊。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+  [屬性] 視窗描述 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中的項目狀態，如連接或執行程序表運算子，以及資料庫物件的詳細資訊，如資料表、檢視表及設計師。  
   
  您可以利用 [屬性] 視窗來檢視目前連接的屬性。 許多屬性在 [屬性] 視窗中都是唯讀的，但在 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]中的其他位置是可改變的。 例如，查詢的 [資料庫] 屬性在 [屬性] 視窗是唯讀的，但在工具列中是可改變的。  
   

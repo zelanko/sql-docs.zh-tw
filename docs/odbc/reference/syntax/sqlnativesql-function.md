@@ -1,32 +1,33 @@
 ---
-title: "SQLNativeSql 函數 |Microsoft 文件"
-ms.custom: 
+title: SQLNativeSql 函數 |Microsoft 文件
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
-ms.component: odbc
-ms.reviewer: 
+ms.prod: sql
+ms.prod_service: connectivity
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
-ms.topic: article
-apiname: SQLNativeSql
-apilocation: sqlsrv32.dll
+ms.technology: connectivity
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
+apiname:
+- SQLNativeSql
+apilocation:
+- sqlsrv32.dll
 apitype: dllExport
-f1_keywords: SQLNativeSql
-helpviewer_keywords: SQLNativeSql function [ODBC]
+f1_keywords:
+- SQLNativeSql
+helpviewer_keywords:
+- SQLNativeSql function [ODBC]
 ms.assetid: b8efc247-27ab-4a00-92b6-1400785783fe
-caps.latest.revision: "24"
+caps.latest.revision: 24
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
-ms.workload: Inactive
-ms.openlocfilehash: e233d9742ea7bd9aa5de56962e1d785be78b8066
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+manager: craigg
+ms.openlocfilehash: c19a18aad5268be9aa46f3f2674ed39e02ab0640
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sqlnativesql-function"></a>SQLNativeSql 函數
 **一致性**  
@@ -63,7 +64,7 @@ SQLRETURN SQLNativeSql(
   
  如果*OutStatementText*是 NULL， *TextLength2Ptr*仍會傳回的總字元數 （不含字元資料 null 結束字元） 可用來傳回緩衝區中所指*OutStatementText*。  
   
- *Columnsize*  
+ *BufferLength*  
  [輸入]中的字元數\* *OutStatementText*緩衝區。 如果中傳回的值 *\*InStatementText*是 Unicode 字串 (當呼叫**SQLNativeSqlW**)、 *Columnsize*引數必須是偶數。  
   
  *TextLength2Ptr*  
@@ -75,7 +76,7 @@ SQLRETURN SQLNativeSql(
 ## <a name="diagnostics"></a>診斷  
  當**SQLNativeSql**傳回 SQL_ERROR 或 SQL_SUCCESS_WITH_INFO，可以藉由呼叫取得相關聯的 SQLSTATE 值**SQLGetDiagRec**與*HandleType*利用 SQL_HANDLE_DBC 的和*處理*的*ConnectionHandle*。 下表列出通常所傳回的 SQLSTATE 值**SQLNativeSql** ，並說明這個函式; 每個內容中的標記法 」 (DM) 」 之前描述的驅動程式管理員傳回的 Sqlstate。 每個 SQLSTATE 值相關聯的傳回碼是 SQL_ERROR，除非有說明，否則為。  
   
-|SQLSTATE|錯誤|描述|  
+|SQLSTATE|錯誤|Description|  
 |--------------|-----------|-----------------|  
 |01000|一般警告|特定驅動程式告知性訊息。 （函式會傳回 SQL_SUCCESS_WITH_INFO）。|  
 |01004|字串資料，右邊遭截斷|緩衝區\* *OutStatementText*仍不夠大，無法傳回整個 SQL 字串，所以已截斷 SQL 字串。 中會傳回未截斷的 SQL 字串的長度 **TextLength2Ptr*。 （函式會傳回 SQL_SUCCESS_WITH_INFO）。|  
@@ -125,6 +126,6 @@ SELECT int2 (empid) FROM employee
 ## <a name="related-functions"></a>相關函數  
  無。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [ODBC 應用程式開發介面參考](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [ODBC 標頭檔](../../../odbc/reference/install/odbc-header-files.md)

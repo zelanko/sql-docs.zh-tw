@@ -1,37 +1,35 @@
 ---
-title: "全域設定 （對話方塊） (AccessToSQL) |Microsoft 文件"
-ms.prod: sql-non-specified
+title: 全域設定 （對話方塊） (AccessToSQL) |Microsoft 文件
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
 ms.component: ssma-access
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ssma
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: 6c2204f2-d49e-49ba-9c0f-f14cf07fa561
-caps.latest.revision: "3"
+caps.latest.revision: 3
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
-ms.workload: Inactive
-ms.openlocfilehash: 4493656a3b7e86a9d023edc7cbed1a5387ddf760
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+manager: craigg
+ms.openlocfilehash: f7d514991dc7af4ef7c030b47ed471d0eb4cddeb
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="global-settings-dialogs-accesstosql"></a>全域設定 （對話方塊） (AccessToSQL)
 使用的對話方塊頁面**通用設定**對話方塊來指定的預設使用者動作和 SSMA 的警告設定。  
   
 若要存取對話方塊設定在**工具**功能表上，選取**通用設定**，按一下  **GUI**底部的左的窗格，然後選取**對話方塊**。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
 **啟動時顯示移轉精靈**  
 SSMA for Access，在中，您可以選擇啟用或停用**移轉精靈**SSMA 應用程式啟動時。 這個選項是預設**True**。  
   

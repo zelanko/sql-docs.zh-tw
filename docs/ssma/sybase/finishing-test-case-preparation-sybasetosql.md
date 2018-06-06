@@ -1,31 +1,30 @@
 ---
-title: "完成測試案例準備 (SybaseToSQL) |Microsoft 文件"
-ms.custom: 
+title: 完成測試案例準備 (SybaseToSQL) |Microsoft 文件
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
 ms.component: ssma-sybase
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ssma
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 applies_to:
 - Azure SQL Database
 - SQL Server
-helpviewer_keywords: Tester Component,Test Case Settings
+helpviewer_keywords:
+- Tester Component,Test Case Settings
 ms.assetid: 8b2a49b0-4296-4f3f-9e56-323aa6a6fa8e
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
-ms.workload: Inactive
-ms.openlocfilehash: 41a22720524b4105bff9eec3dcf38e7183f01cc3
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+manager: craigg
+ms.openlocfilehash: cfb86c05dd96a6184bcbacf4cc7e6ac2b107b293
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="finishing-test-case-preparation-sybasetosql"></a>完成測試案例準備 (SybaseToSQL)
 精靈的最後一頁會顯示描述測試案例和測試使用到物件的相關資訊。 此外，在此頁面上您可以設定測試執行選項。  
@@ -54,7 +53,7 @@ ms.lasthandoff: 12/21/2017
 -   如果您選擇**否**，所有測試的執行資料變更將會儲存。  
   
 ### <a name="auxiliary-tables-saving-mode"></a>儲存模式的輔助資料表  
-定義測試執行期間所建立的輔助資料表的儲存模式。 請參閱中的輔助資料表的描述[執行測試案例 &#40;SybaseToSQL &#41;](../../ssma/sybase/running-test-cases-sybasetosql.md)主題。  
+定義測試執行期間所建立的輔助資料表的儲存模式。 請參閱中的輔助資料表的描述[執行測試案例&#40;SybaseToSQL&#41; ](../../ssma/sybase/running-test-cases-sybasetosql.md)主題。  
   
 -   如果您選取**永遠儲存**，輔助資料表的資料一律會儲存供稍後使用。  
   
@@ -64,10 +63,10 @@ ms.lasthandoff: 12/21/2017
   
 -   如果您選取**詢問使用者，如果資料表比較失敗**，使用者可以選取必要的動作，如果發生錯誤。  
   
-按一下**完成**按鈕以儲存到已備妥的測試案例[使用測試儲存機制 &#40;SybaseToSQL &#41;](../../ssma/sybase/using-test-repositories-sybasetosql.md).  
+按一下**完成**按鈕以儲存到已備妥的測試案例[使用測試儲存機制&#40;SybaseToSQL&#41;](../../ssma/sybase/using-test-repositories-sybasetosql.md)。  
   
-## <a name="see-also"></a>請參閱  
-[使用測試儲存機制 &#40;SybaseToSQL &#41;](../../ssma/sybase/using-test-repositories-sybasetosql.md)  
-[執行測試案例 &#40;SybaseToSQL &#41;](../../ssma/sybase/running-test-cases-sybasetosql.md)  
-[測試移轉的資料庫物件 &#40;SybaseToSQL &#41;](../../ssma/sybase/testing-migrated-database-objects-sybasetosql.md)  
+## <a name="see-also"></a>另請參閱  
+[使用測試儲存機制&#40;SybaseToSQL&#41;](../../ssma/sybase/using-test-repositories-sybasetosql.md)  
+[執行測試案例&#40;SybaseToSQL&#41;](../../ssma/sybase/running-test-cases-sybasetosql.md)  
+[測試移轉的資料庫物件 &#40;SybaseToSQL&#41;](../../ssma/sybase/testing-migrated-database-objects-sybasetosql.md)  
   

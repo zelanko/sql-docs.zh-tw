@@ -1,32 +1,29 @@
 ---
-title: "圖形 APPEND 子句 |Microsoft 文件"
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
+title: 圖形 APPEND 子句 |Microsoft 文件
+ms.prod: sql
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
-ms.custom: 
+ms.technology: connectivity
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - shape commands [ADO]
 - data shaping [ADO], APPEND clause
 - append clause [ADO]
 ms.assetid: f90fcf55-6b24-401d-94e1-d65bd24bd342
-caps.latest.revision: 
+caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 8f4c9bf19fd1df07bb4271a8db94311548a4e092
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 78a1b524d54f77fc5bdcc894c4948ca3139cf334
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="shape-append-clause"></a>圖形 APPEND 子句
 圖形命令 APPEND 子句將附加的資料行或資料行，以**資料錄集**。 通常，這些資料行是章節資料行，參考子系**資料錄集**。  
@@ -43,13 +40,13 @@ SHAPE [parent-command [[AS] parent-alias]] APPEND column-list
  *parent-command*  
  零或下列其中一個 (您可以省略*父命令*完全):  
   
--   提供者命令括在大括弧 （"{}"） 會傳回**資料錄集**物件。 命令發行至基礎資料提供者，並且它的語法取決於該提供者的需求。 這通常會是 SQL 語言，雖然 ADO 不需要任何特殊的查詢語言。  
+-   提供者命令括在大括弧 ("{}」) 會傳回**資料錄集**物件。 命令發行至基礎資料提供者，並且它的語法取決於該提供者的需求。 這通常會是 SQL 語言，雖然 ADO 不需要任何特殊的查詢語言。  
   
 -   另一個圖形命令內嵌在括號中。  
   
 -   資料表關鍵字，後面接著資料提供者中的資料表名稱。  
   
- *parent-alias*  
+ *父別名*  
  指的是父代的選擇性別名**資料錄集**。  
   
  *column-list*  
@@ -73,7 +70,7 @@ SHAPE [parent-command [[AS] parent-alias]]
   
 ## <a name="remarks"></a>備註  
  *child-recordset*  
- -   提供者命令括在大括弧 （"{}"） 會傳回**資料錄集**物件。 命令發行至基礎資料提供者，並且它的語法取決於該提供者的需求。 這通常會是 SQL 語言，雖然 ADO 不需要任何特殊的查詢語言。  
+ -   提供者命令括在大括弧 ("{}」) 會傳回**資料錄集**物件。 命令發行至基礎資料提供者，並且它的語法取決於該提供者的需求。 這通常會是 SQL 語言，雖然 ADO 不需要任何特殊的查詢語言。  
   
 -   另一個圖形命令內嵌在括號中。  
   

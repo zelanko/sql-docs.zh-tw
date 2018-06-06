@@ -1,32 +1,29 @@
 ---
-title: "XML 資料類型和資料行 (SQL Server) | Microsoft Docs"
-ms.custom: 
+title: XML 資料類型和資料行 (SQL Server) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
 ms.component: xml
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- dbe-xml
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: xml
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: 00db8f21-7d4b-4347-ae43-3a7c314d2fa1
-caps.latest.revision: 
+caps.latest.revision: 6
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: Active
-ms.openlocfilehash: 1c46731315da67c4258b4a08983b54e381bd6dbf
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.openlocfilehash: d76704d665b985804b2383690cd7dbeb22189201
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="xml-data-type-and-columns-sql-server"></a>XML 資料類型和資料行 (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
-本主題討論 **中** xml [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]資料類型的優勢和限制，並幫助您選擇儲存 XML 資料的方式。  
+  本主題討論 **中** xml [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]資料類型的優勢和限制，並幫助您選擇儲存 XML 資料的方式。  
   
 ## <a name="relational-or-xml-data-model"></a>關聯式或 XML 資料模型  
  如果您的資料使用已知的結構描述來高度結構化，則關聯式模型對資料儲存來說可能是最好的方式。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 提供必要的功能以及您可能需要的工具。 另一方面，如果結構是半結構化或是無結構，或是情況不明，您就必須考慮將這類資料模型化。  
@@ -67,9 +64,9 @@ ms.lasthandoff: 02/12/2018
   
 -   原生儲存為 **xml** 資料類型  
   
-     以內部表示法來儲存資料，以保存資料的 XML 內容。 這個內部表示法包括有關內含項目階層、文件順序，以及元素和屬性值的資訊。 特別是會保存 XML 資料的 InfoSet 內容。 如需有關 InfoSet 的詳細資訊，請瀏覽 [http://www.w3.org/TR/xml-infoset](http://go.microsoft.com/fwlink/?LinkId=48843)。 InfoSet 內容可能會與文字版 XML 不同，因為沒有保留下列資訊：不重要的空格、屬性的順序、命名空間前置詞及 XML 宣告。  
+     以內部表示法來儲存資料，以保存資料的 XML 內容。 這個內部表示法包括有關內含項目階層、文件順序，以及元素和屬性值的資訊。 特別是會保存 XML 資料的 InfoSet 內容。 如需 InfoSet 的詳細資訊，請前往 [http://www.w3.org/TR/xml-infoset](http://go.microsoft.com/fwlink/?LinkId=48843)。 InfoSet 內容可能會與文字版 XML 不同，因為沒有保留下列資訊：不重要的空格、屬性的順序、命名空間前置詞及 XML 宣告。  
   
-     針對具類型的 **xml** 資料類型 (與 XML 結構描述繫結的 **xml** 資料類型)，後置結構描述驗證 InfoSet (PSVI) 會將類型資訊加入 InfoSet 中，而且會以內部表示法來編碼。 這樣可以大幅增加剖析的速度。 如需詳細資訊，請參閱 [http://www.w3.org/TR/xmlschema-1](http://go.microsoft.com/fwlink/?LinkId=48881) 和 [http://www.w3.org/TR/xmlschema-2](http://go.microsoft.com/fwlink/?LinkId=4871)的 W3C XML 結構描述規格。  
+     針對具類型的 **xml** 資料類型 (與 XML 結構描述繫結的 **xml** 資料類型)，後置結構描述驗證 InfoSet (PSVI) 會將類型資訊加入 InfoSet 中，而且會以內部表示法來編碼。 這樣可以大幅增加剖析的速度。 如需詳細資訊，請參閱 [http://www.w3.org/TR/xmlschema-1](http://go.microsoft.com/fwlink/?LinkId=48881) 和 [http://www.w3.org/TR/xmlschema-2](http://go.microsoft.com/fwlink/?LinkId=4871) 的「W3C XML 結構描述」規格。  
   
 -   XML 與關聯式儲存之間的對應  
   

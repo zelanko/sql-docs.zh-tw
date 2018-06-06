@@ -1,30 +1,29 @@
 ---
-title: "isNullable 方法 (SQLServerParameterMetaData) |Microsoft 文件"
-ms.custom: 
+title: isNullable 方法 (SQLServerParameterMetaData) |Microsoft 文件
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
-ms.component: jdbc
-ms.reviewer: 
+ms.prod: sql
+ms.prod_service: connectivity
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
-ms.topic: article
-apiname: SQLServerParameterMetaData.sNullable
-apilocation: sqljdbc.jar
+ms.technology: connectivity
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
+apiname:
+- SQLServerParameterMetaData.sNullable
+apilocation:
+- sqljdbc.jar
 apitype: Assembly
 ms.assetid: d7e07cff-6fc4-4c9c-8e8f-838c77734bc5
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
-ms.workload: Inactive
-ms.openlocfilehash: 191ff02d737f9b2234e7b819006ea48402235ab2
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+manager: craigg
+ms.openlocfilehash: d3e49934129bc4da9bdc576eab3e252636dd5a60
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="isnullable-method-sqlserverparametermetadata"></a>isNullable 方法 (SQLServerParameterMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -39,7 +38,7 @@ public int isNullable(int param)
 ```  
   
 #### <a name="parameters"></a>參數  
- *param*  
+ *參數*  
   
  **Int** ，指出參數索引。  
   
@@ -58,7 +57,7 @@ public int isNullable(int param)
 ## <a name="remarks"></a>備註  
  這個 isNullable 方法是由 java.sql.ParameterMetaData 介面中的 isNullable 方法指定。  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [SQLServerParameterMetaData 方法](../../../connect/jdbc/reference/sqlserverparametermetadata-methods.md)   
  [SQLServerParameterMetaData 成員](../../../connect/jdbc/reference/sqlserverparametermetadata-members.md)   
  [SQLServerParameterMetaData 類別](../../../connect/jdbc/reference/sqlserverparametermetadata-class.md)  

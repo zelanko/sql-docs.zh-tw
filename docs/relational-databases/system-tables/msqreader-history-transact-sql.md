@@ -1,16 +1,15 @@
 ---
-title: "MSqreader_history (TRANSACT-SQL) |Microsoft 文件"
-ms.custom: 
+title: MSqreader_history (TRANSACT-SQL) |Microsoft 文件
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
 ms.component: system-tables
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -22,16 +21,15 @@ dev_langs:
 helpviewer_keywords:
 - MSqreader_history system table
 ms.assetid: c5c91d39-513c-4a77-870b-c8ef74a1cd6b
-caps.latest.revision: 
+caps.latest.revision: 15
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 7c9615bb702c89d8b2a5be0087671df9d8a6a910
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: c060cd85f1b4a36087f3d8756bf0d48c1976110f
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="msqreaderhistory-transact-sql"></a>MSqreader_history (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,7 +45,7 @@ ms.lasthandoff: 11/21/2017
 |**time**|**datetime**|上次記錄之訊息的日期和時間。|  
 |**duration**|**int**|所記錄之工作階段活動的經歷時間 (以秒為單位)。|  
 |**註解**|**nvarchar(255)**|描述性文字。|  
-|**transaction_id**|**nvarchar （40)**|與訊息一起儲存的交易識別碼 (如果適用的話)。|  
+|**transaction_id**|**nvarchar(40)**|與訊息一起儲存的交易識別碼 (如果適用的話)。|  
 |**transaction_status**|**int**|交易的狀態。|  
 |**transactions_processed**|**int**|在工作階段所處理的累計交易數。|  
 |**commands_processed**|**int**|在工作階段所處理的累計命令數。|  
@@ -58,8 +56,8 @@ ms.lasthandoff: 11/21/2017
 |**error_id**|**int**|如果不是零，數字代表[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]錯誤訊息。|  
 |**timestamp**|**timestamp**|資料表的時間戳記資料行。|  
   
-## <a name="see-also"></a>請參閱＜  
- [複寫資料表 &#40;TRANSACT-SQL &#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
+## <a name="see-also"></a>另請參閱  
+ [複寫資料表&#40;Transact SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [複寫檢視 &#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  
   
   

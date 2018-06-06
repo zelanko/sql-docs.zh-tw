@@ -1,30 +1,28 @@
 ---
-title: "GRANT-DENY-REVOKE 權限 - Azure SQL 資料倉儲和平行處理資料倉儲 | Microsoft Docs"
-ms.custom: 
+title: GRANT-DENY-REVOKE 權限 - Azure SQL 資料倉儲和平行處理資料倉儲 | Microsoft Docs
+ms.custom: ''
 ms.date: 08/10/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-data-warehouse, pdw
-ms.service: 
 ms.component: t-sql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: t-sql
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - TSQL
 ms.assetid: 5a3b7424-408e-4cb0-8957-667ebf4596fc
-caps.latest.revision: 
-author: barbkess
-ms.author: barbkess
+caps.latest.revision: 9
+author: edmacauley
+ms.author: edmaca
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: c46d4df3d19b2c548b203f62a14ea4ebc0226296
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
+ms.openlocfilehash: 7a47d1cc3e5fd9ca5e80f65b796162224735d0c1
+ms.sourcegitcommit: d2573a8dec2d4102ce8882ee232cdba080d39628
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="permissions-grant-deny-revoke-azure-sql-data-warehouse-parallel-data-warehouse"></a>權限：GRANT、DENY、REVOKE (Azure SQL 資料倉儲、平行處理資料倉儲)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -230,11 +228,11 @@ REVOKE
   
 -   ALTER  
   
--   DELETE  
+-   Delete  
   
--   EXECUTE  
+-   執行 CREATE 陳述式之前，請先執行  
   
--   INSERT  
+-   Insert  
   
 -   SELECT  
   

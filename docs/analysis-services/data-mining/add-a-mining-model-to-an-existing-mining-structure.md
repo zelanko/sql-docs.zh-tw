@@ -1,35 +1,23 @@
 ---
-title: "將採礦模型加入現有的採礦結構 |Microsoft 文件"
-ms.custom: 
-ms.date: 03/01/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
-helpviewer_keywords:
-- mining models [Analysis Services], adding
-- mining structures [Analysis Services], mining models
-- adding mining models
-ms.assetid: fcf72300-0674-4e73-a826-9b8eeffefbb5
-caps.latest.revision: 
-author: Minewiskan
+title: 將採礦模型加入現有的採礦結構 |Microsoft 文件
+ms.date: 05/01/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: data-mining
+ms.topic: conceptual
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: ecd909a6aeb0fb0b7d0557ba93333709f5ade242
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: f8b995a5b3fb89956e690598c786dc0a09474021
+ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="add-a-mining-model-to-an-existing-mining-structure"></a>將採礦模型加入至現有的採礦結構
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-在加入初始模型之後，您就可以將更多採礦模型加入至採礦結構中。 每一個模型必須包含存在於結構中的資料行，但您可以為每一個採礦模型定義不同的資料行使用方式。 如需如何定義採礦模型資料行的詳細資訊，請參閱 [採礦模型資料行](../../analysis-services/data-mining/mining-model-columns.md)。  
+  在加入初始模型之後，您就可以將更多採礦模型加入至採礦結構中。 每一個模型必須包含存在於結構中的資料行，但您可以為每一個採礦模型定義不同的資料行使用方式。 如需如何定義採礦模型資料行的詳細資訊，請參閱 [採礦模型資料行](../../analysis-services/data-mining/mining-model-columns.md)。  
   
 ### <a name="to-add-a-mining-model-to-the-structure"></a>若要將採礦模型加入至結構  
   

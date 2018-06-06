@@ -1,31 +1,28 @@
 ---
-title: "多執行緒 |Microsoft 文件"
-ms.custom: 
+title: 多執行緒 |Microsoft 文件
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
-ms.component: odbc
-ms.reviewer: 
+ms.prod: sql
+ms.prod_service: connectivity
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: connectivity
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - ODBC drivers [ODBC], thread-safe
 - thread-safe drivers [ODBC]
 - multithreaded applications [ODBC]
 ms.assetid: cdfebdf5-12ff-4e28-8055-41f49b77f664
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
-ms.workload: Inactive
-ms.openlocfilehash: 72cc8fd918c8ba69a0eb52f9739abeb3728c425d
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+manager: craigg
+ms.openlocfilehash: 7cf1543a039c0928068209d1d79064b074fdc2f8
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="multithreading"></a>多執行緒處理
 多執行緒在作業系統上，驅動程式必須具備執行緒安全。 也就是說，必須是可將多個執行緒上使用相同的控制代碼的應用程式。 這達成特定驅動程式和它可能會驅動程式會序列化任何嘗試同時在兩個不同的執行緒上使用相同的控制代碼。  

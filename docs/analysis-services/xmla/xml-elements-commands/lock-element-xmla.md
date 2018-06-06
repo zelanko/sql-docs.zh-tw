@@ -1,39 +1,24 @@
 ---
-title: "鎖定元素 (XMLA) |Microsoft 文件"
-ms.custom: 
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services, azure-analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+title: 鎖定元素 (XMLA) |Microsoft 文件
+ms.date: 05/08/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: xmla
 ms.topic: reference
-apiname: Lock Element
-apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
-apitype: Schema
-applies_to: SQL Server 2016 Preview
-f1_keywords:
-- urn:schemas-microsoft-com:xml-analysis#Lock
-- microsoft.xml.analysis.lock
-- http://schemas.microsoft.com/analysisservices/2003/engine#Lock
-helpviewer_keywords: Lock command
-ms.assetid: a819e805-4793-43bb-8af3-16a19f8bdab3
-caps.latest.revision: "14"
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 98e5087dc10ae495dec711c35fa807cb9fd68e02
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: a6524c4454eca42a771b2c3c87c2a6513804f720
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34575240"
 ---
 # <a name="lock-element-xmla"></a>Lock 元素 (XMLA)
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]鎖定指定的物件上[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]執行個體。  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
+  鎖定指定的物件上的 Analysis Services 執行個體。  
   
 ## <a name="syntax"></a>語法  
   
@@ -64,7 +49,7 @@ ms.lasthandoff: 01/08/2018
 |子元素|[識別碼](../../../analysis-services/xmla/xml-elements-properties/id-element-xmla.md)，[模式](../../../analysis-services/xmla/xml-elements-properties/mode-element-xmla.md)，[物件](../../../analysis-services/xmla/xml-elements-properties/object-element-xmla.md)|  
   
 ## <a name="remarks"></a>備註  
- **鎖定**命令會鎖定物件，以便共用或獨佔使用，目前使用中交易內容中。 只有資料庫管理員或伺服器管理員可以明確發出**鎖定**命令。 鎖定物件會防止認可交易，直到移除鎖定為止。 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 支援兩種鎖定類型：共用鎖定和獨佔鎖定。 如需有關所支援的鎖定類型[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]，請參閱[Mode 元素 &#40;XMLA &#41;](../../../analysis-services/xmla/xml-elements-properties/mode-element-xmla.md).  
+ **鎖定**命令會鎖定物件，以便共用或獨佔使用，目前使用中交易內容中。 只有資料庫管理員或伺服器管理員可以明確發出**鎖定**命令。 鎖定物件會防止認可交易，直到移除鎖定為止。 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 支援兩種鎖定類型：共用鎖定和獨佔鎖定。 如需有關所支援的鎖定類型[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]，請參閱[Mode 元素&#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/mode-element-xmla.md)。  
   
  [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 僅允許鎖定資料庫。 **物件**元素必須包含的物件參考[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]資料庫。 如果**物件**未指定項目或**物件**元素參考資料庫以外的物件發生錯誤。  
   
@@ -72,8 +57,8 @@ ms.lasthandoff: 01/08/2018
   
  所有鎖定都會保存在目前交易的內容中。 當目前的交易經過認可或回復時，就會自動釋放在交易內部定義的所有鎖定。  
   
-## <a name="see-also"></a>請參閱  
- [解除鎖定元素 &#40;XMLA &#41;](../../../analysis-services/xmla/xml-elements-commands/unlock-element-xmla.md)   
- [命令 &#40;XMLA &#41;](../../../analysis-services/xmla/xml-elements-commands/xml-elements-commands.md)  
+## <a name="see-also"></a>另請參閱
+ [Unlock 元素&#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-commands/unlock-element-xmla.md)   
+ [命令&#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-commands/xml-elements-commands.md)  
   
   

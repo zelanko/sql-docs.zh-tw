@@ -1,33 +1,30 @@
 ---
-title: "資料行和資料表附加方法中，屬性的範例 （VC + +） |Microsoft 文件"
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
+title: 資料行和資料表附加方法中，屬性的範例 （VC + +） |Microsoft 文件
+ms.prod: sql
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
-ms.custom: 
+ms.technology: connectivity
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - Name property [ADOX], VC++ example
 - Append method [ADOX], VC++ example
 ms.assetid: 2b6dfef9-bcdf-483d-a164-2fa3ec81a43f
-caps.latest.revision: 
+caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: c76a4633df33b051598332411eb90b6e2fbd7248
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 6496c812083d154205c0b96efa47badf35e56c82
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="columns-and-tables-append-methods-name-property-example-vc"></a>資料行和資料表附加方法名稱屬性的範例 （VC + +）
 下列程式碼會示範如何建立新的資料表。  

@@ -1,34 +1,26 @@
 ---
-title: "SQL Server 機器學習服務的架構概觀 |Microsoft 文件"
-ms.custom: 
-ms.date: 11/03/2017
-ms.prod: machine-learning-services
-ms.prod_service: machine-learning-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
-author: jeannt
-ms.author: jeannt
-manager: cgronlund
-ms.workload: Inactive
-ms.openlocfilehash: 4272a0f421bc8286fc9be7be44e3b7ef8cc13905
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+title: SQL Server 機器學習服務的架構概觀 |Microsoft 文件
+ms.prod: sql
+ms.technology: machine-learning
+ms.date: 04/15/2018
+ms.topic: conceptual
+author: HeidiSteen
+ms.author: heidist
+manager: cgronlun
+ms.openlocfilehash: 4abe5e508f1e183e1e6cb5012b9541fe3723b77a
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="architecture-overview-for-sql-server-machine-learning-services"></a>SQL Server 機器學習服務的架構概觀 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-本主題說明支援的 Python 和 R 指令碼的執行 SQL Server 中的擴充性架構的目標。
+本文描述 SQL Server 中支援的 Python 和 R 指令碼執行的擴充性架構的目標。
 
 它也提供一個概觀如何架構主要為了符合這些目標，如何 R Python 支援和是執行 SQL Server，並整合的優點。
 
-整體來說，擴充性架構則幾乎完全相同的 R 和 Python，稱為 launchers 的詳細資料、 設定選項等等中有些微差異。 如需特定語言的實作的進一步資訊，請參閱下列主題：
+整體來說，擴充性架構則幾乎完全相同的 R 和 Python，稱為 launchers 的詳細資料、 設定選項等等中有些微差異。 如需特定語言的實作的進一步資訊，請參閱下列文章：
 
 - [SQL Server R services 的架構概觀](r/architecture-overview-sql-server-r.md)
 - [SQL Server 中的 python 架構概觀](python/architecture-overview-sql-server-python.md)

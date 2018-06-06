@@ -1,31 +1,23 @@
 ---
-title: "無法載入檔案或組件的 Microsoft Data Services |Microsoft 文件"
-ms.custom: 
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: reference
-ms.assetid: 81ed0f44-8782-462d-af8f-0ba5b975df27
-caps.latest.revision: 
-author: Minewiskan
+title: 無法載入檔案或組件的 Microsoft Data Services |Microsoft 文件
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: ppvt-sharepoint
+ms.topic: conceptual
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 0daa7111e93a81c367fda433cc7b530a4c90e8f4
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 9472fffb790d8d18ced8d2a528011927717aabc6
+ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="could-not-load-file-or-assembly-microsoft-data-services"></a>無法載入檔案或組件的 Microsoft Data Services
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-在擁有 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint 的 SharePoint 2010 環境中，若您嘗試匯出資料摘要且系統遺漏必要的 Microsoft ADO.NET Data Services 版本，將會發生此錯誤。  
+  在擁有 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint 的 SharePoint 2010 環境中，若您嘗試匯出資料摘要且系統遺漏必要的 Microsoft ADO.NET Data Services 版本，將會發生此錯誤。  
   
 ## <a name="details"></a>詳細資料  
   
@@ -41,9 +33,9 @@ ms.lasthandoff: 02/15/2018
   
  如果尚未安裝 ADO.NET Data Services，則當您要求資料摘要時將會發生這個錯誤。  
   
-## <a name="user-action"></a>使用者動作  
+## <a name="user-action"></a>사용자 동작  
   
-1.  移至 SharePoint 2010 的硬體和軟體需求文件集：[判斷硬體和軟體需求 (SharePoint 2010)](http://go.microsoft.com/fwlink/?LinkId=169734) (http://go.microsoft.com/fwlink/?LinkId=169734)。  
+1.  移至適用於 SharePoint 2010 的硬體和軟體需求文件[判斷硬體和軟體需求 (SharePoint 2010)](http://go.microsoft.com/fwlink/?LinkId=169734) (http://go.microsoft.com/fwlink/?LinkId=169734)。  
   
 2.  在 [Installing software prerequisites] 中，尋找對應到您所使用之作業系統的 ADO.NET Data Services 3.5 連結。  
   

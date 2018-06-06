@@ -1,33 +1,30 @@
 ---
-title: "Microsoft OLE DB Provider for Microsoft Active Directory 服務 |Microsoft 文件"
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
+title: Microsoft OLE DB Provider for Microsoft Active Directory 服務 |Microsoft 文件
+ms.prod: sql
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
-ms.custom: 
+ms.technology: connectivity
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - ADSI provider [ADO]
 - Active Directory Service Interfaces provider [ADO]
 - providers [ADO], OLE DB provider for Active Directory service
 - OLE DB provider for Active Directory service [ADO]
 ms.assetid: f9e81452-5675-4cfc-9949-cfbd2fe57534
-caps.latest.revision: 
+caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 3824623cb28c6902b4a96542f149e537df41cb5d
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 7c38caaead8d2eb1fa24a4b7a38aebfdc19cbcec
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="microsoft-ole-db-provider-for-microsoft-active-directory-service"></a>Microsoft OLE DB Provider for Microsoft Active Directory 服務
 Active Directory 服務介面 (ADSI) 提供者可讓 ADO 連接到透過 ADSI 異質目錄服務。 這可讓 ADO 應用程式對唯讀存取 Microsoft Windows NT 4.0 和 Microsoft Windows 2000 目錄服務，除了任何 LDAP 相容目錄服務和 Novell 目錄服務。 ADSI 本身為基礎的提供者模型，使新的提供者提供存取至另一個目錄時，ADO 應用程式將能夠順暢地存取它。 ADSI 提供者是無限制執行緒，啟用 Unicode。  
@@ -102,11 +99,11 @@ objectClass='user' AND objectCategory='Person'"
 |[AbsolutePosition](../../../ado/reference/ado-api/absoluteposition-property-ado.md)|讀取/寫入|  
 |[ActiveConnection](../../../ado/reference/ado-api/activeconnection-property-ado.md)|唯讀|  
 |[BOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md)|唯讀|  
-|[Bookmark](../../../ado/reference/ado-api/bookmark-property-ado.md)|讀取/寫入|  
+|[書籤](../../../ado/reference/ado-api/bookmark-property-ado.md)|讀取/寫入|  
 |[CacheSize](../../../ado/reference/ado-api/cachesize-property-ado.md)|讀取/寫入|  
 |[CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md)|一律**adUseServer**|  
 |[CursorType](../../../ado/reference/ado-api/cursortype-property-ado.md)|一律**adOpenStatic**|  
-|[EditMode](../../../ado/reference/ado-api/editmode-property.md)|always **adEditNone**|  
+|[EditMode](../../../ado/reference/ado-api/editmode-property.md)|一律**adEditNone**|  
 |[EOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md)|唯讀|  
 |[篩選](../../../ado/reference/ado-api/filter-property.md)|讀取/寫入|  
 |[LockType](../../../ado/reference/ado-api/locktype-property-ado.md)|讀取/寫入|  
@@ -138,8 +135,8 @@ objectClass='user' AND objectCategory='Person'"
 |[MovePrevious](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|是|  
 |[NextRecordset](../../../ado/reference/ado-api/nextrecordset-method-ado.md)|是|  
 |[開啟](../../../ado/reference/ado-api/open-method-ado-recordset.md)|是|  
-|[Requery](../../../ado/reference/ado-api/requery-method.md)|是|  
-|[Resync](../../../ado/reference/ado-api/resync-method.md)|是|  
+|[重新查詢](../../../ado/reference/ado-api/requery-method.md)|是|  
+|[重新同步處理](../../../ado/reference/ado-api/resync-method.md)|是|  
 |[支援](../../../ado/reference/ado-api/supports-method.md)|是|  
 |[Update](../../../ado/reference/ado-api/update-method.md)|否|  
 |[UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md)|否|  

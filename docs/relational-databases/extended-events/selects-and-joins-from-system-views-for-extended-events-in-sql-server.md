@@ -1,29 +1,25 @@
 ---
-title: "SQL Server 擴充事件系統檢視表中的 SELECT 和 JOIN | Microsoft Docs"
-ms.custom: 
+title: SQL Server 擴充事件系統檢視表中的 SELECT 和 JOIN | Microsoft Docs
+ms.custom: ''
 ms.date: 08/02/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
-ms.component: extended-events
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-- xevents
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: xevents
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: 04521d7f-588c-4259-abc2-1a2857eb05ec
-caps.latest.revision: 
+caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 8e257fc470b6988141b5581650285d69c09b1f2a
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 356cfffea1189b3d7efb042fcec7e26eedc9b747
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="selects-and-joins-from-system-views-for-extended-events-in-sql-server"></a>SQL Server 擴充事件系統檢視表中的 SELECT 和 JOIN
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -580,7 +576,7 @@ type           package0       xml                           Well formed XML frag
 下列的 SELECT 會傳回事件類型特有的所有資料欄位。
 
 - 注意 WHERE 子句項目： *column_type = 'data'*。
-- 您也必須編輯 *o.name =*的 WHERE 子句值。
+- 您也必須編輯 *o.name =* 的 WHERE 子句值。
 
 
 ```sql
@@ -733,7 +729,7 @@ you could put:
 下列 SELECT 會傳回目標的每個參數。 每個參數都會標記，以指出它是否為強制。 您指派給參數的值會影響目標的行為。
 
 - 注意 WHERE 子句項目︰ *object_type = 'customizable'*。
-- 您也必須編輯 *o.name =*的 WHERE 子句值。
+- 您也必須編輯 *o.name =* 的 WHERE 子句值。
 
 
 ```sql
@@ -798,7 +794,7 @@ package0   event_file   metadatafile         unicode_string_ptr   Not_mandatory 
 這個 DMV SELECT 從作用中事件工作階段的目標傳回資料列。 資料會轉換成 XML，使其傳回的資料格為可按式項目，輕鬆以 SSMS 顯示。
 
 - 如果停止事件工作階段，此 SELECT 就不會傳回資料列。
-- 您可能需要編輯 *s.name =*的 WHERE 子句值。
+- 您可能需要編輯 *s.name =* 的 WHERE 子句值。
 
 
 ```sql

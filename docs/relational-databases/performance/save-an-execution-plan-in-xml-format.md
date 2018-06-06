@@ -1,17 +1,14 @@
 ---
-title: "以 XML 格式儲存執行計畫 | Microsoft 文件"
-ms.custom: 
+title: 以 XML 格式儲存執行計畫 | Microsoft 文件
+ms.custom: ''
 ms.date: 08/21/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
-ms.component: performance
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: performance
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - XML query plans [SQL Server]
 - opening execution plans
@@ -19,19 +16,20 @@ helpviewer_keywords:
 - execution plans [SQL Server], saving
 - saving execution plans
 ms.assetid: c439e53b-56f3-4442-97c6-dabd48a203d8
-caps.latest.revision: 
+caps.latest.revision: 25
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: caa43dba8d4ce0abdd5dc14f113a5fbfcf58d3ec
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 2d48e9e6902e3bd201b395aa817d3ec3f26ad222
+ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="save-an-execution-plan-in-xml-format"></a>以 XML 格式儲存執行計畫
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] 使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 將執行計畫儲存為 XML 檔，並開啟它們來進行檢視。  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+  使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 將執行計畫儲存為 XML 檔，並開啟它們來進行檢視。  
   
  若要使用 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]中的執行計畫功能，或使用 XML Showplan SET 選項，使用者必須具有適當的權限，才能執行 [!INCLUDE[tsql](../../includes/tsql-md.md)] 查詢來產生執行計畫，同時使用者還必須具有查詢所參考之所有資料庫的 SHOWPLAN 權限。  
   
@@ -75,7 +73,7 @@ ms.lasthandoff: 01/18/2018
   
 5.  在 [儲存 \<方格或文字> 結果]  對話方塊的 [存檔類型] 方塊中，按一下 [所有檔案 (\*.\*)]。  
   
-6.  在 [檔案名稱] 方塊中，提供格式為 \<名稱**>.sqlplan** 的名稱，然後按一下 [儲存]。  
+6.  在 [檔案名稱] 方塊中，提供格式為 \<名稱 **>.sqlplan** 的名稱，然後按一下 [儲存]。  
   
 ### <a name="to-save-an-execution-plan-by-using-sql-server-management-studio-options"></a>若要使用 SQL Server Management Studio 選項來儲存執行計畫  
   
@@ -87,7 +85,7 @@ ms.lasthandoff: 01/18/2018
   
 3.  在 [另存新檔] 對話方塊中，請確認將 [檔案類型] 設為 [執行計畫檔案 (\*.sqlplan)]。  
   
-4.  在 [檔案名稱] 方塊中，提供格式為 \<名稱**>.sqlplan** 的名稱，然後按一下 [儲存]。  
+4.  在 [檔案名稱] 方塊中，提供格式為 \<名稱 **>.sqlplan** 的名稱，然後按一下 [儲存]。  
   
 ### <a name="to-open-a-saved-xml-query-plan-in-sql-server-management-studio"></a>若要在 SQL Server Management Studio 中開啟已儲存的 XML 查詢計畫  
   

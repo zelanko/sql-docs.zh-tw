@@ -1,31 +1,30 @@
 ---
-title: "容錯移轉叢集執行個體的容錯移轉原則 | Microsoft Docs"
-ms.custom: 
+title: 容錯移轉叢集執行個體的容錯移轉原則 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
-ms.prod_service: database-engine
-ms.service: 
-ms.component: failover-clusters
-ms.reviewer: 
+ms.prod: sql
+ms.prod_service: high-availability
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: dbe-high-availability
-ms.tgt_pltfrm: 
-ms.topic: article
-helpviewer_keywords: flexible failover policy
+ms.technology: high-availability
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
+helpviewer_keywords:
+- flexible failover policy
 ms.assetid: 39ceaac5-42fa-4b5d-bfb6-54403d7f0dc9
-caps.latest.revision: "45"
+caps.latest.revision: 45
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
-ms.workload: On Demand
-ms.openlocfilehash: 09a372b1e2b2f2b9026259918d3b11ed3ad2d3b6
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+manager: craigg
+ms.openlocfilehash: a4b63755975f79e5dc601b952cc09eb5ab144116
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 05/03/2018
 ---
-# <a name="failover-policy-for-failover-cluster-instances"></a>容錯移轉叢集執行個體的容錯移轉原則
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 容錯移轉叢集執行個體 (FCI) 中，一個給定時間只能有一個節點可以擁有 Windows Server 容錯移轉叢集 (WSFC) 叢集資源群組。 用戶端要求都是透過 FCI 中的此節點提供服務。 萬一發生失敗而且重新啟動不成功，群組擁有權會移至 FCI 中的另一個 WSFC 節點。 這項程序就稱為容錯移轉。 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 提高失敗偵測的可靠性，並提供靈活的容錯移轉原則。  
+# <a name="failover-policy-for-failover-cluster-instances"></a>Failover Policy for Failover Cluster Instances
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 容錯移轉叢集執行個體 (FCI) 中，一個給定時間只能有一個節點可以擁有 Windows Server 容錯移轉叢集 (WSFC) 叢集資源群組。 用戶端要求都是透過 FCI 中的此節點提供服務。 萬一發生失敗而且重新啟動不成功，群組擁有權會移至 FCI 中的另一個 WSFC 節點。 這項程序就稱為容錯移轉。 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 提高失敗偵測的可靠性，並提供靈活的容錯移轉原則。  
   
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] FCI 仰賴基礎 WSFC 服務進行容錯移轉偵測。 因此，兩個機制決定 FCI 的容錯移轉行為：一是原生 WSFC 功能，二是 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 安裝程式所加入的功能。  
   
@@ -97,10 +96,10 @@ ms.lasthandoff: 12/05/2017
   
  請檢閱 [sp_server_diagnostics &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-server-diagnostics-transact-sql.md)，此系統預存程序在失敗狀況層級扮演重要角色。  
   
-|Level|條件|描述|  
+|層級|條件|描述|  
 |-----------|---------------|-----------------|  
 |0|沒有自動的容錯移轉或重新啟動|指出任何失敗狀況都不會自動觸發容錯移轉或重新啟動。 這個等級只會用於系統維護的用途。|  
-|1|伺服器關閉的容錯移轉或重新啟動|表示伺服器重新啟動或容錯移轉會在引發下列狀況時觸發：<br /><br /> SQL Server 服務已關閉。|  
+|@shouldalert|伺服器關閉的容錯移轉或重新啟動|表示伺服器重新啟動或容錯移轉會在引發下列狀況時觸發：<br /><br /> SQL Server 服務已關閉。|  
 |2|伺服器無回應的容錯移轉或重新啟動|表示伺服器重新啟動或容錯移轉會在引發下列任何一個狀況時觸發：<br /><br /> SQL Server 服務已關閉。<br /><br /> SQL Server 執行個體沒有回應 (資源 DLL 無法在 HealthCheckTimeout 設定內接收來自 sp_server_diagnostics 的資料)。|  
 |3*|發生重大伺服器錯誤的容錯移轉或重新啟動|表示伺服器重新啟動或容錯移轉會在引發下列任何一個狀況時觸發：<br /><br /> SQL Server 服務已關閉。<br /><br /> SQL Server 執行個體沒有回應 (資源 DLL 無法在 HealthCheckTimeout 設定內接收來自 sp_server_diagnostics 的資料)。<br /><br /> 系統預存程序 sp_server_diagnostics 傳回「系統錯誤」。|  
 |4|發生一般伺服器錯誤的容錯移轉或重新啟動|表示伺服器重新啟動或容錯移轉會在引發下列任何一個狀況時觸發：<br /><br /> SQL Server 服務已關閉。<br /><br /> SQL Server 執行個體沒有回應 (資源 DLL 無法在 HealthCheckTimeout 設定內接收來自 sp_server_diagnostics 的資料)。<br /><br /> 系統預存程序 sp_server_diagnostics 傳回「系統錯誤」。<br /><br /> 系統預存程序 sp_server_diagnostics 傳回「資源錯誤」。|  

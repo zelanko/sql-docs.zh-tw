@@ -1,31 +1,31 @@
 ---
-title: "建立新方案 | Microsoft Docs"
-ms.custom: 
+title: 建立新方案 | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
 ms.component: ssms-solutions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: tools-ssms
-ms.tgt_pltfrm: 
-ms.topic: article
-helpviewer_keywords: solutions [SQL Server Management Studio], creating
+ms.technology: ssms
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
+helpviewer_keywords:
+- solutions [SQL Server Management Studio], creating
 ms.assetid: 05a7edd9-8acc-4ccd-abc9-33ced53265de
-caps.latest.revision: "4"
+caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 73b2175e4ed0e47c78f957f19123a5b33354d1a3
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.openlocfilehash: e2b7a760a15c8ea953e87b8ff9ab550212c29cd7
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="create-a-new-solution"></a>建立新方案
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 當您建立專案時，[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] 會建立一個包含它的解決方案。 您一次只能開啟一個方案。 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] 不允許您在專案內建立資料夾。 若要組織您的工作，請建立多個專案。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+當您建立專案時，[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] 會建立一個包含它的方案。 您一次只能開啟一個方案。 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] 不允許您在專案內建立資料夾。 若要組織您的工作，請建立多個專案。  
   
 若要存取方案總管，請按一下 [檢視] 功能表中的 [方案總管]。  
   

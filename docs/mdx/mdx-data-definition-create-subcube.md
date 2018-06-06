@@ -1,36 +1,20 @@
 ---
-title: "CREATE SUBCUBE 陳述式 (MDX) |Microsoft 文件"
-ms.custom: 
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: language-reference
-f1_keywords:
-- CREATE_SUBCUBE
-- CREATE SUBCUBE
-- CREATE
-- SUBCUBE
-dev_langs: kbMDX
-helpviewer_keywords:
-- subcubes [MDX]
-- CREATE SUBCUBE statement
-ms.assetid: 15b6ac4c-b68a-4f9f-b33c-f5f7c4a74535
-caps.latest.revision: "32"
-author: Minewiskan
+title: CREATE SUBCUBE 陳述式 (MDX) |Microsoft 文件
+ms.date: 05/30/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: mdx
+ms.topic: reference
 ms.author: owend
-manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: bf2b3d21aa2eac4bc982b75257f8c1e2d87ea46b
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: 730d6f3b1445017cc1b1988c49bda176c6ba4ced
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34580740"
 ---
 # <a name="mdx-data-definition---create-subcube"></a>MDX 資料定義-建立 SUBCUBE
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -52,7 +36,7 @@ CREATE SUBCUBE Cube_Name AS Select_Statement
  *Select_Statement*  
  不包含 WITH、NON EMPTY 或 HAVING 子句，並且不要求維度或資料格屬性的有效多維度運算式 (MDX) SELECT 運算式。  
   
- 請參閱[選取陳述式 &#40;MDX &#41;](../mdx/mdx-data-manipulation-select.md)如需有關 Select 陳述式的詳細的語法說明和**NON VISUAL**子句。  
+ 請參閱[SELECT 陳述式&#40;MDX&#41; ](../mdx/mdx-data-manipulation-select.md)如需有關 Select 陳述式的詳細的語法說明和**NON VISUAL**子句。  
   
 ## <a name="remarks"></a>備註  
  Subcube 定義內排除預設成員時，座標將會相應地變更。 對於可彙總的屬性而言，預設成員會移動到 [All] 成員。 對於不可彙總的屬性而言，預設成員會移動到存在於 Subcube 內的成員。 下表包含 Subcube 範例以及預設成員組合。  
@@ -69,7 +53,7 @@ CREATE SUBCUBE Cube_Name AS Select_Statement
   
  Subcube 內容中建立的工作階段物件會在卸除 Subcube 時一併卸除。  
   
- 如需有關 subcube 的詳細資訊，請參閱[在 MDX &#40; 中建立 SubcubeMDX &#41;](../analysis-services/multidimensional-models/mdx/building-subcubes-in-mdx-mdx.md).  
+ 如需有關 subcube 的詳細資訊，請參閱[在 MDX 中建立 Subcube &#40;MDX&#41;](../analysis-services/multidimensional-models/mdx/building-subcubes-in-mdx-mdx.md)。  
   
 ## <a name="example"></a>範例  
  下列範例會建立 Subcube，將明顯 Cube 空間限制於國家 (地區) 為加拿大的成員。 然後它會使用**成員**函數來傳回 Geography 使用者定義階層-只傳回加拿大的層級的國家/地區的所有成員。  
@@ -144,10 +128,10 @@ SELECT [Geography].[Country].[Country].MEMBERS ON 0
   
  [All Products] 和 [All Resellers] 的資料行與資料列個別包含所有成員的總計，而不只是可見成員的總計。  
   
-## <a name="see-also"></a>請參閱  
- [MDX &#40; 中的重要概念Analysis Services &#41;](../analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services.md)   
- [MDX 指令碼陳述式 &#40;MDX &#41;](../mdx/mdx-scripting-statements-mdx.md)   
- [DROP SUBCUBE 陳述式 &#40;MDX &#41;](../mdx/mdx-data-definition-drop-subcube.md)   
- [SELECT 陳述式 &#40;MDX &#41;](../mdx/mdx-data-manipulation-select.md)  
+## <a name="see-also"></a>另請參閱  
+ [重要概念，在 MDX 中的&#40;Analysis Services&#41;](../analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services.md)   
+ [MDX 指令碼陳述式&#40;MDX&#41;](../mdx/mdx-scripting-statements-mdx.md)   
+ [DROP SUBCUBE 陳述式&#40;MDX&#41;](../mdx/mdx-data-definition-drop-subcube.md)   
+ [SELECT 陳述式&#40;MDX&#41;](../mdx/mdx-data-manipulation-select.md)  
   
   

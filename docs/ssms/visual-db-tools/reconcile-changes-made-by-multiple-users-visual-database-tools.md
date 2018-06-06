@@ -1,34 +1,33 @@
 ---
-title: "協調多位使用者所做的變更 (Visual Database Tools) | Microsoft Docs"
-ms.custom: 
+title: 協調多位使用者所做的變更 (Visual Database Tools) | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
 ms.component: ssms-visual-db
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: tools-ssms
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ssms
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - table modifications [SQL Server], multiple users
 - reconciling changes made by multiple users
 - modifications made by multiple users
 ms.assetid: fc7ed4f2-ad3d-47fc-a3ef-51e5bb069ef0
-caps.latest.revision: "4"
+caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 356f09be20f11e2ec701e4e98d92cb1fbbd12b63
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.openlocfilehash: 70dd406f128f9df1cb36ac6c4ddcd0dd18b446aa
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="reconcile-changes-made-by-multiple-users-visual-database-tools"></a>協調多位使用者所做的變更 (Visual Database Tools)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 在多位使用者環境中，可以同時讓多位使用者修改相同的物件。 這樣的情況會發生在當您使用資料表或資料庫圖表設計工具設計物件的結構時，或是發生在 [查詢和檢視設計師] 的 [結果] 窗格中的值。 這樣會產生您需要解決的衝突。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+在多位使用者環境中，可以同時讓多位使用者修改相同的物件。 這樣的情況會發生在當您使用資料表或資料庫圖表設計工具設計物件的結構時，或是發生在 [查詢和檢視設計師] 的 [結果] 窗格中的值。 這樣會產生您需要解決的衝突。  
   
 ## <a name="conflicts-in-the-table-or-database-diagram-designers"></a>在資料表或資料庫圖表設計工具中的衝突  
 例如，另外一位使用者可能會刪除或重新命名您正在 [資料表設計工具] 中使用的相同或相關資料表。 當您嘗試儲存資料表時， [偵測到資料庫變更對話方塊 &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/database-changes-detected-dialog-box-visual-database-tools.md) 會通知您資料庫已經在您開啟資料表之後經過更新。  

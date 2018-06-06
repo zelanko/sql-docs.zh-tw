@@ -1,31 +1,28 @@
 ---
-title: "偵測和解決衝突 |Microsoft 文件"
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
+title: 偵測和解決衝突 |Microsoft 文件
+ms.prod: sql
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
-ms.custom: 
+ms.technology: connectivity
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - conflicts [ADO], detecting and resolving
 - ADO, detecting and resolving conflicts
 ms.assetid: b28fdd26-c1a4-40ce-a700-2b0c9d201514
-caps.latest.revision: 
+caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 61f54b700be8ec03e56bf63999dc7f93b8d5fcdb
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 05e79fec4c5ddf9d33c9cfaa17581b6d50e0e42b
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="detecting-and-resolving-conflicts"></a>偵測並解決衝突
 如果您正在處理您的資料錄集即時模式中，會有更少的並行存取問題發生的機率。 相反地，如果您的應用程式會使用批次模式更新，可能有更佳可能發生在儲存編輯同一筆記錄的另一位使用者所做的變更之前，一位使用者將變更的記錄。 在這種情況下，您將會正常處理衝突的應用程式。 它可能是您要將更新傳送至伺服器的最後一個人員中 「 獲勝。 」 的希望 或者，您可能想要讓最新的使用者決定哪些更新應該優先藉由向他提供兩個衝突的值之間的選擇。  

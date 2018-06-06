@@ -1,32 +1,33 @@
 ---
-title: "SQLWriteDSNToIni 函式 |Microsoft 文件"
-ms.custom: 
+title: SQLWriteDSNToIni 函式 |Microsoft 文件
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
-ms.component: odbc
-ms.reviewer: 
+ms.prod: sql
+ms.prod_service: connectivity
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
-ms.topic: article
-apiname: SQLWriteDSNToIni
-apilocation: sqlsrv32.dll
+ms.technology: connectivity
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
+apiname:
+- SQLWriteDSNToIni
+apilocation:
+- sqlsrv32.dll
 apitype: dllExport
-f1_keywords: SQLWriteDSNToIni
-helpviewer_keywords: SQLWriteDSNToIni [ODBC]
+f1_keywords:
+- SQLWriteDSNToIni
+helpviewer_keywords:
+- SQLWriteDSNToIni [ODBC]
 ms.assetid: dc7018b2-18d4-4657-96d0-086479a47474
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
-ms.workload: Inactive
-ms.openlocfilehash: 315ea45ac8f88d482f0b2cf81ed3b9d15b80a7b8
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+manager: craigg
+ms.openlocfilehash: 4a1ee3bdbdc14c01bf267c9dbb64ef10c93dfe1a
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sqlwritedsntoini-function"></a>SQLWriteDSNToIni 函式
 **一致性**  
@@ -57,7 +58,7 @@ BOOL SQLWriteDSNToIni(
 ## <a name="diagnostics"></a>診斷  
  當**SQLWriteDSNToIni**傳回 FALSE，相關聯 *\*pfErrorCode*可以取得值，藉由呼叫**SQLInstallerError**。 下表列出 *\*pfErrorCode*可以傳回的值**SQLInstallerError** ，並說明每個內容中的這個函式。  
   
-|*\*pfErrorCode*|錯誤|描述|  
+|*\*pfErrorCode*|錯誤|Description|  
 |---------------------|-----------|-----------------|  
 |ODBC_ERROR_GENERAL_ERR|一般安裝程式發生錯誤|發生錯誤，其中沒有特定的安裝程式錯誤。|  
 |ODBC_ERROR_INVALID_DSN|無效的資料來源名稱|*LpszDSN*引數包含無效的資料來源名稱的字串。|  

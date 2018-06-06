@@ -1,16 +1,14 @@
 ---
-title: "XML 文件使用的 sql 中排除結構描述項目： 對應 |Microsoft 文件"
-ms.custom: 
+title: XML 文件使用的 sql 中排除結構描述項目： 對應 |Microsoft 文件
+ms.custom: ''
 ms.date: 03/17/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
 ms.component: sqlxml
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- dbe-xml
-ms.tgt_pltfrm: 
+ms.technology: xml
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - element does not map [SQLXML]
@@ -25,22 +23,22 @@ helpviewer_keywords:
 - attribute mapping [SQLXML], excluding schema elements
 - table/view mapping [SQLXML], excluding schema elements
 ms.assetid: 7d2649dd-0038-4a2c-b16d-f80f7c306966
-caps.latest.revision: 
+caps.latest.revision: 26
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 104c3958a6964967629c32ad22a5371a41226f67
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 640ae49de50fec55afb9c957042f5d317f41195f
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="excluding-schema-elements-from-the-xml-document-using-sqlmapped"></a>XML 文件使用的 sql 中排除結構描述項目： 對應
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-XSD 結構描述中的每個元素和屬性都會因為預設對應，而對應到資料庫資料表/檢視表和資料行。 如果您想要在 XSD 結構描述，不會對應到任何資料庫資料表 （檢視） 或資料行，不會出現在 XML 中建立項目，您可以指定**sql： 對應**註解。  
+  XSD 結構描述中的每個元素和屬性都會因為預設對應，而對應到資料庫資料表/檢視表和資料行。 如果您想要在 XSD 結構描述，不會對應到任何資料庫資料表 （檢視） 或資料行，不會出現在 XML 中建立項目，您可以指定**sql： 對應**註解。  
   
- **Sql： 對應**如果無法修改結構描述，或者如果結構描述來驗證 XML，從其他來源，而且不包含不會儲存在資料庫中的資料註解會特別實用。 **Sql： 對應**註釋不同於**sql: is-constant<**在於未對應的元素和屬性不會出現在 XML 文件。  
+ **Sql： 對應**如果無法修改結構描述，或者如果結構描述來驗證 XML，從其他來源，而且不包含不會儲存在資料庫中的資料註解會特別實用。 **Sql： 對應**註釋不同於**sql: is-constant<** 在於未對應的元素和屬性不會出現在 XML 文件。  
   
  **Sql： 對應**註解接受布林值 (0 = false，1 = true)。 可接受的值為 0、1、true 和 false。  
   
@@ -48,11 +46,11 @@ XSD 結構描述中的每個元素和屬性都會因為預設對應，而對應�
  若要使用下列範例建立工作範例，您必須符合某些需求。 如需詳細資訊，請參閱[執行 SQLXML 範例的需求](../../relational-databases/sqlxml/requirements-for-running-sqlxml-examples.md)。  
   
 ### <a name="a-specifying-the-sqlmapped-annotation"></a>A. 指定 sql:mapped 註解  
- 假設您有來自其他來源的 XSD 結構描述。 此 XSD 結構描述包含 **\<Person.Contact >**具有項目**ContactID**， **FirstName**， **LastName**，和**HomeAddress**屬性。  
+ 假設您有來自其他來源的 XSD 結構描述。 此 XSD 結構描述包含 **\<Person.Contact >** 具有項目**ContactID**， **FirstName**， **LastName**，和**HomeAddress**屬性。  
   
  此 XSD 結構描述對應至 AdventureWorks 資料庫中的 Person.Contact 資料表中**sql： 對應**上指定**HomeAddress**屬性，因為 Employees 資料表不會儲存首頁員工的地址。 因此，根據對應結構描述指定 XPath 查詢時，此屬性不會對應到資料庫，而且不會在產生的 XML 文件中傳回。  
   
- 預設的對應發生於其餘的結構描述。 **\<Person.Contact >**元素會對應至 Person.Contact 資料表中，而所有屬性都會都對應到 Person.Contact 資料表中相同名稱的資料行。  
+ 預設的對應發生於其餘的結構描述。 **\<Person.Contact >** 元素會對應至 Person.Contact 資料表中，而所有屬性都會都對應到 Person.Contact 資料表中相同名稱的資料行。  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
@@ -112,6 +110,6 @@ XSD 結構描述中的每個元素和屬性都會因為預設對應，而對應�
  請注意，ContactID、 FirstName 和 LastName 存在，但是 HomeAddress 不是，因為對應結構描述指定 0 **sql： 對應**屬性。  
   
 ## <a name="see-also"></a>另請參閱  
- [XSD 元素和屬性對資料表和資料行 &#40; 的預設對應SQLXML 4.0 &#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-using/default-mapping-of-xsd-elements-and-attributes-to-tables-and-columns-sqlxml-4-0.md)  
+ [XSD 元素和屬性對資料表和資料行的預設對應&#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-using/default-mapping-of-xsd-elements-and-attributes-to-tables-and-columns-sqlxml-4-0.md)  
   
   

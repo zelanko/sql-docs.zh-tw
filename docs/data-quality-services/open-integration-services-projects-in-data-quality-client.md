@@ -1,30 +1,31 @@
 ---
-title: "在 Data Quality Client 中開啟 Integration Services 專案 | Microsoft Docs"
-ms.custom: 
+title: 在 Data Quality Client 中開啟 Integration Services 專案 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: data-quality-services
-ms.service: 
 ms.component: data-quality-services
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - data-quality-services
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: a8bad2f1-8fb0-4d14-a978-11a5720e62d6
-caps.latest.revision: 
+caps.latest.revision: 9
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.workload: Inactive
-ms.openlocfilehash: cde79d85987d95fcec471cee6db2f5a07b8d2d86
-ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
+manager: craigg
+ms.openlocfilehash: ece9cda645f0077c7f9dd940d64644cecfb1bacb
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="open-integration-services-projects-in-data-quality-client"></a>在 Data Quality Client 中開啟 Integration Services 專案
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
   Integration Services 的 DQS 清理元件可讓您以批次模式執行清理專案。 但是，有時您可能會想要在 Integration Services 封裝中檢閱清理結果，類似於在 DQS 中，於資料品質專案中清理活動內的 **[管理和檢視結果]** 索引標籤中檢閱清理結果。 DQS 可讓您在 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 中開啟 Integration Services 專案，就像從 **[開啟專案]** 畫面開啟其他任何資料品質專案，並讓您擁有在 Integration Services 專案中清理結果的互動式清理體驗。  
   
 ##  <a name="BeforeYouBegin"></a> 開始之前  
@@ -33,7 +34,7 @@ ms.lasthandoff: 02/23/2018
   
 -   **中的** [開啟專案] [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)]畫面上只會提供完成的 Integration Services 專案。 **[開啟專案]** 畫面上不會提供失敗或執行中的專案。  
   
--   Integration Services 專案會在**中的互動式清理階段開啟 (** [管理和檢視結果] [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)]索引標籤)。 您不能移至 **[清理]** 或 **[對應]** 索引標籤。 您只能按 **[下一步]** 移至 **[匯出]**索引標籤。  
+-   Integration Services 專案會在**中的互動式清理階段開啟 (** [管理和檢視結果] [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)]索引標籤)。 您不能移至 **[清理]** 或 **[對應]** 索引標籤。 您只能按 **[下一步]** 移至 **[匯出]** 索引標籤。  
   
 -   您無法從 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)]刪除鎖定的 Integration Services 專案。 您必須先解除鎖定，然後才能刪除。  
   

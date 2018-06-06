@@ -1,32 +1,29 @@
 ---
-title: "SQL 一致性層級 |Microsoft 文件"
-ms.custom: 
+title: SQL 一致性層級 |Microsoft 文件
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
-ms.component: odbc
-ms.reviewer: 
+ms.prod: sql
+ms.prod_service: connectivity
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: connectivity
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - conformance levels [ODBC], SQL
 - SQL conformance levels [ODBC]
 - data sources [ODBC], conformance levels
 - ODBC drivers [ODBC], conformance levels
 ms.assetid: 3529df2c-a09b-4c16-9c60-eae7a06d903a
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
-ms.workload: Inactive
-ms.openlocfilehash: d397eef2bec5e803cca97f05d009708273a05473
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+manager: craigg
+ms.openlocfilehash: dcdb0f98d7260985e418a6eaeb670c40409c518d
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sql-conformance-levels"></a>SQL 一致性層級
 SQL 92 文法的驅動程式支援的層級由呼叫所傳回的值所表示**SQLGetInfo** SQL_SQL_CONFORMANCE 資訊類型。 這表示驅動程式是否符合以 sql-92 定義的項目、 FIPS 過渡、 中級者、 或全文層級。  

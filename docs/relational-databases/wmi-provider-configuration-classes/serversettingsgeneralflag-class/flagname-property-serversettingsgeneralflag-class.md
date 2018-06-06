@@ -1,16 +1,15 @@
 ---
-title: "FlagName 屬性 （ServerSettingsGeneralFlag 類別） |Microsoft 文件"
-ms.custom: 
+title: FlagName 屬性 （ServerSettingsGeneralFlag 類別） |Microsoft 文件
+ms.custom: ''
 ms.date: 03/04/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
 ms.component: wmi
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - FlagName Property (ServerSettingsGeneralFlag Class)
@@ -20,20 +19,19 @@ apitype: MOFDef
 helpviewer_keywords:
 - FlagName property
 ms.assetid: 108c13aa-da9c-4908-b0a3-a9460806819c
-caps.latest.revision: 
-author: JennieHubbard
-ms.author: jhubbard
+caps.latest.revision: 30
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 6dd6111b90c6dd505c7a132331e6f1f21585ad69
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.openlocfilehash: 820c896f5a406b142c87df4e154bd74462c5adf6
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="flagname-property-serversettingsgeneralflag-class"></a>FlagName 屬性 (ServerSettingsGeneralFlag 類別)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
-取得旗標的名稱。  
+  取得旗標的名稱。  
   
 ## <a name="syntax"></a>語法  
   

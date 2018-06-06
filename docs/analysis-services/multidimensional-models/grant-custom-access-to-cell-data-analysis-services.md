@@ -1,38 +1,23 @@
 ---
-title: "授與對資料格資料 (Analysis Services) 的自訂存取權 |Microsoft 文件"
-ms.custom: 
-ms.date: 03/06/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords: sql13.asvs.roledesignerdialog.celldata.f1
-helpviewer_keywords:
-- user access rights [Analysis Services], cell data
-- permissions [Analysis Services], cells
-- read contingent permissions
-- read permissions
-- cells [Analysis Services]
-- custom cell data access [Analysis Services]
-ms.assetid: 3b13a4ae-f3df-4523-bd30-b3fdf71e95cf
-caps.latest.revision: "31"
-author: Minewiskan
+title: 授與對資料格資料 (Analysis Services) 的自訂存取權 |Microsoft 文件
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: multidimensional-models
+ms.topic: conceptual
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 7f4c45a7e342a11fa7d235654581cad5b462877a
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 5e3b354d2bd4f4561962391bf3f0495b63833290
+ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="grant-custom-access-to-cell-data-analysis-services"></a>授與資料格資料的自訂存取權 (Analysis Services)
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]資料格安全性會用來允許或拒絕存取 cube 內的資料量值。 下圖顯示在利用其角色僅允許存取特定量值的使用者身分連接時，樞紐分析表中允許和拒絕的量值組合。 在此範例中， **Reseller Sales Amount** 及 **Reseller Total Product Cost** 是唯二能夠透過此角色取得的量值。 所有其他量值都會明確遭到拒絕 (下一節＜允許存取特定量值＞將提供用來取得這個結果的步驟)。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+  資料格安全性可用來允許或拒絕存取 Cube 內的量值資料。 下圖顯示在利用其角色僅允許存取特定量值的使用者身分連接時，樞紐分析表中允許和拒絕的量值組合。 在此範例中， **Reseller Sales Amount** 及 **Reseller Total Product Cost** 是唯二能夠透過此角色取得的量值。 所有其他量值都會明確遭到拒絕 (下一節＜允許存取特定量值＞將提供用來取得這個結果的步驟)。  
   
  ![樞紐分析表顯示允許與拒絕資料格](../../analysis-services/multidimensional-models/media/ssas-permscellsallowed.png "樞紐分析表顯示允許與拒絕資料格")  
   
@@ -53,7 +38,7 @@ ms.lasthandoff: 01/08/2018
   
 1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中，連接到 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 的執行個體，選取資料庫，開啟 [角色] 資料夾，然後按一下資料庫角色 (或建立新的資料庫角色)。 成員資格應該已經指定，而角色應該擁有 Cube 的 **Read** 存取權。 如需設定維度權限的詳細資訊，請參閱 [授與 Cube 或模型權限 &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/grant-cube-or-model-permissions-analysis-services.md) 。  
   
-2.  在 **[資料格資料]**中，檢查 Cube 選取項目以確定您已選擇正確的選項，然後選取 **[啟用讀取權限]**。  
+2.  在 **[資料格資料]** 中，檢查 Cube 選取項目以確定您已選擇正確的選項，然後選取 **[啟用讀取權限]**。  
   
      如果您只選取這個核取方塊，而且未提供 MDX 運算式，效果就和拒絕存取 Cube 中的所有資料格一樣。 這是因為當 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 解析 Cube 資料格子集時，預設允許的集合是空集合。  
   
@@ -101,12 +86,12 @@ AND (NOT Measures.CurrentMember IS [Measures].[Reseller Total Product Cost])
 ## <a name="set-readwrite-permissions-on-a-cell"></a>設定資料格的讀取/寫入權限  
  假設成員對 Cube 本身具有讀取/寫入權限，即可使用資料格的讀取/寫入權限來啟用回寫功能。 在資料格層級授與的權限不得大於在 Cube 層級授與的權限。 如需詳細資訊，請參閱＜ [Set Partition Writeback](../../analysis-services/multidimensional-models/set-partition-writeback.md) ＞。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [MDX 產生器 &#40;Analysis Services - 多維度資料&#41;](http://msdn.microsoft.com/library/fecbf093-65ea-4e1b-b637-f04876f1cb0f)   
- [基本 MDX 指令碼 &#40;MDX&#41;](../../analysis-services/multidimensional-models/mdx/the-basic-mdx-script-mdx.md)   
- [授與處理權限 &#40;Analysis Services &#41;](../../analysis-services/multidimensional-models/grant-process-permissions-analysis-services.md)   
- [授與權限維度 &#40;Analysis Services &#41;](../../analysis-services/multidimensional-models/grant-permissions-on-a-dimension-analysis-services.md)   
- [授與自訂存取維度資料 &#40;Analysis Services &#41;](../../analysis-services/multidimensional-models/grant-custom-access-to-dimension-data-analysis-services.md)   
- [授與 Cube 或模型權限 &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/grant-cube-or-model-permissions-analysis-services.md)  
+ [基本 MDX 指令碼 & #40;MDX & #41;](../../analysis-services/multidimensional-models/mdx/the-basic-mdx-script-mdx.md)   
+ [授與處理權限&#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/grant-process-permissions-analysis-services.md)   
+ [授與維度的權限&#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/grant-permissions-on-a-dimension-analysis-services.md)   
+ [授與自訂存取維度資料 & #40;Analysis Services & #41;](../../analysis-services/multidimensional-models/grant-custom-access-to-dimension-data-analysis-services.md)   
+ [授與 cube 或模型權限 & #40;Analysis Services & #41;](../../analysis-services/multidimensional-models/grant-cube-or-model-permissions-analysis-services.md)  
   
   

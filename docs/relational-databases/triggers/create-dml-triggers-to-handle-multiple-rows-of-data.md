@@ -1,17 +1,16 @@
 ---
-title: "建立 DML 觸發程序以處理多重資料列 | Microsoft Docs"
-ms.custom: 
+title: 建立 DML 觸發程序以處理多重資料列 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
 ms.component: triggers
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-dml
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - multiple row DML triggers
 - UPDATE statement [SQL Server], DML triggers
@@ -20,20 +19,20 @@ helpviewer_keywords:
 - INSERT statement [SQL Server], DML triggers
 - DML triggers, multirow
 ms.assetid: d476c124-596b-4b27-a883-812b6b50a735
-caps.latest.revision: 
+caps.latest.revision: 25
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 39adf5f718f4f4e0789e8e10bf6aa5e007fe6f0d
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: a7309d66c4fdc154ca30707133145e94dbf62f86
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="create-dml-triggers-to-handle-multiple-rows-of-data"></a>建立 DML 觸發程序以處理多重資料列
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
-撰寫 DML 觸發程序的程式碼時，請將造成觸發程序引發的陳述式，視為可影響多個資料列而非只影響單一資料列的單一陳述式。 此行為對 UPDATE 與 DELETE 觸發程序是常見的，因為這些陳述式經常會影響多個資料列。 然而該行為對 INSERT 觸發程序較不常見，因為基本 INSERT 陳述式僅會加入單一資料列。 不過，由於 INSERT 觸發程序可以由 INSERT INTO (*table_name*) SELECT 陳述式引發，所以插入多個資料列也許會造成單一觸發程序引動過程。  
+  撰寫 DML 觸發程序的程式碼時，請將造成觸發程序引發的陳述式，視為可影響多個資料列而非只影響單一資料列的單一陳述式。 此行為對 UPDATE 與 DELETE 觸發程序是常見的，因為這些陳述式經常會影響多個資料列。 然而該行為對 INSERT 觸發程序較不常見，因為基本 INSERT 陳述式僅會加入單一資料列。 不過，由於 INSERT 觸發程序可以由 INSERT INTO (*table_name*) SELECT 陳述式引發，所以插入多個資料列也許會造成單一觸發程序引動過程。  
   
  當 DML 觸發程序執行自動重新計算來自資料表的摘要值，並將計算結果存至另一資料表的功能時，考慮多重資料列所造成的影響就顯得特別地重要。  
   

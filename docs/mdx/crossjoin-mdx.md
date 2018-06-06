@@ -1,30 +1,20 @@
 ---
-title: "Crossjoin (MDX) |Microsoft 文件"
-ms.custom: 
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: language-reference
-f1_keywords: CROSSJOIN
-dev_langs: kbMDX
-helpviewer_keywords: Crossjoin function
-ms.assetid: 503b8376-d244-4855-8f44-a749764162e4
-caps.latest.revision: "33"
-author: Minewiskan
+title: Crossjoin (MDX) |Microsoft 文件
+ms.date: 05/30/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: mdx
+ms.topic: reference
 ms.author: owend
-manager: erikre
-ms.workload: On Demand
-ms.openlocfilehash: 24eb58744008984fca4dab647b12226769f4ab81
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: 7a3eb0bc9faadafbec91d327d4c0a4bd79882361
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34577740"
 ---
 # <a name="crossjoin-mdx"></a>Crossjoin (MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -52,12 +42,12 @@ Set_Expression1 * Set_Expression2 [* ...n]
 ## <a name="remarks"></a>備註  
  **Crossjoin**函式傳回的交叉乘積的兩個或多個指定集合。 Tuple 在結果集中的順序，會依據要聯結的集合順序以及它們成員的順序而定。 例如，當第一個集合所組成 {x1，x2，...，x*n*}，第二個集合所組成 {y1，y2，...，y*n*}，這些集合的交叉乘積是：  
   
- {(x1, y1), (x1, y2),...,(x1, y*n*), (x2, y1), (x2, y2),...,  
+ {(x1 y1)，(x1，y2)，...，(x1，y*n*)，(x2 y1)，(x2 y2)，...，  
   
- (x2, y*n*),..., (x*n*, y1), (x*n*, y2),..., (xn, y*n*)}  
+ (x2，y*n*)，...，(x*n*，y1)，(x*n*，y2)，...，(y2...xn，y*n*)}  
   
 > [!IMPORTANT]  
->  如果交叉聯結中的集合是由相同維度之不同屬性階層的 Tuple 組成，這個函數只會傳回實際存在的 Tuple。 如需詳細資訊，請參閱[MDX &#40; 中的重要概念Analysis Services &#41;](../analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services.md).  
+>  如果交叉聯結中的集合是由相同維度之不同屬性階層的 Tuple 組成，這個函數只會傳回實際存在的 Tuple。 如需詳細資訊，請參閱[MDX 的關鍵概念&#40;Analysis Services&#41;](../analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services.md)。  
   
 ## <a name="examples"></a>範例  
  下列查詢會示範在查詢的資料行軸和資料列軸上使用 Crossjoin 函數的範例：  
@@ -138,7 +128,7 @@ WHERE (Measures.[Internet Sales Amount],
    [Customer].[Country].[United States])  
 ```  
   
-## <a name="see-also"></a>請參閱  
- [MDX 函數參考 &#40;MDX &#41;](../mdx/mdx-function-reference-mdx.md)  
+## <a name="see-also"></a>另請參閱  
+ [MDX 函數參考&#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

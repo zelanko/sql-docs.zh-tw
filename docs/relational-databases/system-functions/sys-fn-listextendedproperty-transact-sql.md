@@ -1,16 +1,14 @@
 ---
-title: "sys.fn_listextendedproperty (TRANSACT-SQL) |Microsoft 文件"
-ms.custom: 
+title: sys.fn_listextendedproperty (TRANSACT-SQL) |Microsoft 文件
+ms.custom: ''
 ms.date: 06/10/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
 ms.component: system-functions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: system-objects
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - fn_listextendedproperty
@@ -28,16 +26,16 @@ helpviewer_keywords:
 - extended properties [SQL Server], columns
 - table extended properties [SQL Server]
 ms.assetid: 59bbb91f-a277-4a35-803e-dcb91e847a49
-caps.latest.revision: 
+caps.latest.revision: 32
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: c4c9daa724fd73ab9a1da7e4f8d7bf1c510a34d7
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 3484c32c00c5f94f084cd5c0e49837181054df40
+ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="sysfnlistextendedproperty-transact-sql"></a>sys.fn_listextendedproperty (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -76,7 +74,7 @@ fn_listextendedproperty (
  這是所指定之層級 0 物件類型的名稱。 *level0_object_name*是**sysname**預設值是 NULL。 有效的輸入是預設值、NULL 或物件名稱。  
   
  {預設 |'*level1_object_type*' |NULL}  
- 這是層級 1 物件的類型。 *level1_object_type*是**varchar （128)**預設值是 NULL。 有效輸入如下：AGGREGATE、DEFAULT、FUNCTION、LOGICAL FILE NAME、PROCEDURE、QUEUE、RULE、SYNONYM、TABLE、TYPE、VIEW、XML SCHEMA COLLECTION 和 NULL。  
+ 這是層級 1 物件的類型。 *level1_object_type*是**varchar （128)** 預設值是 NULL。 有效輸入如下：AGGREGATE、DEFAULT、FUNCTION、LOGICAL FILE NAME、PROCEDURE、QUEUE、RULE、SYNONYM、TABLE、TYPE、VIEW、XML SCHEMA COLLECTION 和 NULL。  
   
 > [!NOTE]  
 >  預設值對應到 NULL，'default' 對應到物件類型 DEFAULT。  
@@ -85,7 +83,7 @@ fn_listextendedproperty (
  這是所指定之層級 1 物件類型的名稱。 *level1_object_name*是**sysname**預設值是 NULL。 有效的輸入是預設值、NULL 或物件名稱。  
   
  {預設 |'*level2_object_type*' |NULL}  
- 這是層級 2 物件的類型。 *level2_object_type*是**varchar （128)**預設值是 NULL。 有效輸入有 DEFAULT、預設值 (對應到 NULL) 和 NULL。 有效輸入*level2_object_type*是資料行、 條件約束、 EVENT NOTIFICATION、 INDEX、 參數、 觸發程序和 NULL。  
+ 這是層級 2 物件的類型。 *level2_object_type*是**varchar （128)** 預設值是 NULL。 有效輸入有 DEFAULT、預設值 (對應到 NULL) 和 NULL。 有效輸入*level2_object_type*是資料行、 條件約束、 EVENT NOTIFICATION、 INDEX、 參數、 觸發程序和 NULL。  
   
  {預設 |'*level2_object_name*' |NULL}  
  這是所指定之層級 2 物件類型的名稱。 *level2_object_name*是**sysname**預設值是 NULL。 有效的輸入是預設值、NULL 或物件名稱。  
@@ -184,9 +182,9 @@ GO
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [sp_addextendedproperty &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/sp-addextendedproperty-transact-sql.md)   
- [sp_dropextendedproperty &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/sp-dropextendedproperty-transact-sql.md)   
- [sp_updateextendedproperty &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/sp-updateextendedproperty-transact-sql.md)   
- [sys.extended_properties &#40;TRANSACT-SQL &#41;](../../relational-databases/system-catalog-views/extended-properties-catalog-views-sys-extended-properties.md)  
+ [sp_addextendedproperty &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-addextendedproperty-transact-sql.md)   
+ [sp_dropextendedproperty &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropextendedproperty-transact-sql.md)   
+ [sp_updateextendedproperty &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-updateextendedproperty-transact-sql.md)   
+ [sys.extended_properties &#40;Transact SQL&#41;](../../relational-databases/system-catalog-views/extended-properties-catalog-views-sys-extended-properties.md)  
   
   

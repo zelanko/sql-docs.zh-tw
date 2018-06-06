@@ -1,16 +1,15 @@
 ---
-title: "sp_dropdynamicsnapshot_job (TRANSACT-SQL) |Microsoft 文件"
-ms.custom: 
+title: sp_dropdynamicsnapshot_job (TRANSACT-SQL) |Microsoft 文件
+ms.custom: ''
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - sp_dropdynamicsnapshot_job
 ms.assetid: 128e428a-01b3-4062-8c6e-d22d5fa268a9
-caps.latest.revision: 
+caps.latest.revision: 18
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 3cc6dc65589951513a5d05dbfad68cecb8d92745
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 2f4166aa3cfed68aae16bdccd09a001ef55f3661
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="spdropdynamicsnapshotjob-transact-sql"></a>sp_dropdynamicsnapshot_job (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,13 +47,13 @@ sp_dropdynamicsnapshot_job [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>引數  
- [  **@publication=**] **'***發行集***'**  
+ [ **@publication=**] **'***publication***'**  
  這是移除篩選之資料快照集作業的發行集名稱。 *發行集*是**sysname**，沒有預設值。  
   
- [  **@dynamic_snapshot_jobname** =] **'***dynamic_snapshot_jobname***'**  
+ [ **@dynamic_snapshot_jobname**=] **'***dynamic_snapshot_jobname***'**  
  這是移除篩選之資料快照集作業的名稱。 *dynamic_snapshot_jobname*是 sysname，如果不提供的預設值給任何工作名稱是與*dynamic_snapshot_jobid*。  
   
- [  **@dynamic_snapshot_jobid** =] **'***dynamic_snapshot_jobid***'**  
+ [ **@dynamic_snapshot_jobid**=] **'***dynamic_snapshot_jobid***'**  
  這是移除篩選之資料快照集作業的識別碼。 *dynamic_snapshot_jobid*是**uniqueidentifier**，預設值是 NULL。  
   
 > [!IMPORTANT]  
@@ -73,7 +71,7 @@ sp_dropdynamicsnapshot_job [ @publication = ] 'publication'
 ## <a name="permissions"></a>Permissions  
  只有成員**sysadmin**固定的伺服器角色或**db_owner**固定的資料庫角色可以執行**sp_dropdynamicsnapshot**。  
   
-## <a name="see-also"></a>請參閱＜  
- [sp_adddynamicsnapshot_job &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/sp-adddynamicsnapshot-job-transact-sql.md)  
+## <a name="see-also"></a>另請參閱  
+ [sp_adddynamicsnapshot_job &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-adddynamicsnapshot-job-transact-sql.md)  
   
   

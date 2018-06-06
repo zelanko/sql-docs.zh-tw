@@ -1,27 +1,21 @@
 ---
-title: "資料類型 dwloader 轉換的規則"
-author: barbkess
-ms.author: barbkess
-manager: jhubbard
-ms.prod: analytics-platform-system
-ms.prod_service: mpp-data-warehouse
-ms.service: 
-ms.component: 
-ms.suite: sql
-ms.custom: 
-ms.technology: mpp-data-warehouse
-description: "本主題描述的輸入的資料格式和隱含資料類型轉換時它會將資料載入 PDW 命令列載入器可支援該 dwloader。"
-ms.date: 10/20/2016
-ms.topic: article
-ms.assetid: 79c48520-b08b-4b15-a943-a551cc90a2c4
-caps.latest.revision: "30"
-ms.openlocfilehash: 29cf43b7bb5ea38d821e62b03cc125fe5e0fc30c
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+title: Dwloader 資料類型轉換規則-Parallel Data Warehouse |Microsoft 文件
+description: 本主題描述的輸入的資料格式和隱含資料類型轉換該 dwloader 命令列載入器支援在載入資料到 Parallel Data Warehouse (PDW) 時。 」
+author: mzaman1
+manager: craigg
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
+ms.openlocfilehash: ecfc29c92bc99827ee943ff665524ff49e82a8df
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/19/2018
 ---
-# <a name="data-type-conversion-rules-for-dwloader"></a>資料類型 dwloader 轉換的規則
+# <a name="data-type-conversion-rules-for-dwloader---parallel-data-warehouse"></a>資料類型轉換規則 dwloader-Parallel Data Warehouse
 本主題描述的輸入的資料格式和隱含資料類型轉換， [dwloader 命令列載入器](dwloader.md)時它會將資料載入 PDW 支援。 輸入的資料與 SQL Server PDW 目標資料表中的資料類型不相符時，就會發生隱含資料轉換。 設計您的載入程序，以確保您的資料將可順利載入到 SQL Server PDW 時，請使用此資訊。  
    
   
@@ -30,7 +24,7 @@ ms.lasthandoff: 12/21/2017
   
 |輸入的資料類型|輸入的資料範例|轉換成 binary 或 varbinary 資料類型|  
 |-------------------|-----------------------|-----------------------------------------------|  
-|二進位常值|[0 x]*hexidecimal_string*<br /><br />範例： 12Ef 或 0x12Ef|0x 前置詞是選擇性的。<br /><br />資料來源的長度不能超過指定的資料類型的位元組數目。<br /><br />如果資料來源的長度小於大小**二進位**資料類型，就會進行填補至資料類型大小加上零右邊。|  
+|二進位常值|[0x]*hexidecimal_string*<br /><br />範例： 12Ef 或 0x12Ef|0x 前置詞是選擇性的。<br /><br />資料來源的長度不能超過指定的資料類型的位元組數目。<br /><br />如果資料來源的長度小於大小**二進位**資料類型，就會進行填補至資料類型大小加上零右邊。|  
   
 ## <a name="InsertDateTimeTypes"></a>將常值插入日期和時間類型  
 日期和時間常值會以單引號括住的特定格式中使用字串常值。 下表定義允許的常值類型、 格式和載入類型的資料行的日期或時間常值的轉換規則**datetime**， **smalldatetime**，**日期**，**時間**， **datetimeoffset**，或**datetime2**。 資料表定義的指定的資料類型的預設格式。 您可以指定其他格式區段中定義[日期時間格式](#DateFormats)。 日期和時間常值不能包含開頭或尾端空格。 **日期**， **smalldatetime**，並在固定的寬度模式中，無法載入 null 值。  
@@ -65,7 +59,7 @@ ms.lasthandoff: 12/21/2017
   
 |輸入的資料類型|輸入的資料範例|時間資料類型的轉換|  
 |-------------------|-----------------------|--------------------------------|  
-|字串常值中**時間**格式|': ss.fffffff '<br /><br />範例: ' 12:35:29.1234567'|資料來源是否小於或等於有效位數 （小數位數） 的有效位數比**時間**資料類型，就會進行填補零的右邊。 例如，常值 '12:35:29.123' 插入為 '12:35:29.1230000'。|  
+|字串常值中**時間**格式|'hh:mm:ss.fffffff'<br /><br />範例: ' 12:35:29.1234567'|資料來源是否小於或等於有效位數 （小數位數） 的有效位數比**時間**資料類型，就會進行填補零的右邊。 例如，常值 '12:35:29.123' 插入為 '12:35:29.1230000'。|  
   
 ### <a name="datetimeoffset-data-type"></a>datetimeoffset 資料類型  
 下表定義的預設格式和載入類型的資料行中的常值的規則**datetimeoffset** (*n*)。 預設的格式是 ' yyyy MM dd: ss.fffffff {+ |-} hh: mm '。 空字串 （"） 會轉換成預設值 ' 1900年-01-01 12:00:00.0000000 + 00:00 '。 包含僅空白字串 (' ') 會產生錯誤。 小數位數取決於資料行定義。 例如，資料行定義為**datetimeoffset** (2) 將會有兩個小數。  
@@ -76,7 +70,7 @@ ms.lasthandoff: 12/21/2017
 |字串常值中**smalldatetime**格式|' yyyy MM dd hh: mm '<br /><br />範例: ' 2007年-05-08 12:35 '|秒數、 剩餘的小數點後數字和位移的值時都會設為 0 會插入的值。|  
 |字串常值中**日期**格式|' yyyy-MM-dd'<br /><br />範例: ' 2007年-05-08'|時間 （小時、 分鐘、 秒和分數） 時值都會設為 0 會插入的值。 例如，常值 '2007年-05-08' 會插入做為' 2007年-05-08 00:00:00.0000000 + 00:00 '。|  
 |字串常值中**datetime2**格式|' yyyy MM dd: ss.fffffff '<br /><br />範例: ' 2007年-05-08 12:35:29.1234567'|來源資料不能超過指定的 datetimeoffset 資料行中的小數秒數。 如果資料來源的小數秒數小於或等於數目，資料右側以零填補。 例如，如果資料類型為 datetimeoffset (5)、 常值 '2007年-05-08 12:35:29.123 + 12:15' 會插入做為 ' 12:35:29.12300 + 12:15 '。|  
-|字串常值中**datetimeoffset**格式|' yyyy MM dd: ss.fffffff {+ &#124;-} hh: mm '<br /><br />範例: ' 2007年-05-08 12:35:29.1234567 + 12:15 '|來源資料不能超過指定的 datetimeoffset 資料行中的小數秒數。 如果資料來源的小數秒數小於或等於數目，資料右側以零填補。 例如，如果資料類型為 datetimeoffset (5)、 常值 '2007年-05-08 12:35:29.123 + 12:15' 會插入做為 ' 12:35:29.12300 + 12:15 '。|  
+|字串常值中**datetimeoffset**格式|' yyyy MM dd: ss.fffffff {+&#124;-} hh: mm '<br /><br />範例: ' 2007年-05-08 12:35:29.1234567 + 12:15 '|來源資料不能超過指定的 datetimeoffset 資料行中的小數秒數。 如果資料來源的小數秒數小於或等於數目，資料右側以零填補。 例如，如果資料類型為 datetimeoffset (5)、 常值 '2007年-05-08 12:35:29.123 + 12:15' 會插入做為 ' 12:35:29.12300 + 12:15 '。|  
   
 ### <a name="datetime2-data-type"></a>datetime2 資料類型  
 下表定義的預設格式和載入類型的資料行中的常值的規則**datetime2** (*n*)。 預設格式為 'yyyy MM dd: ss.fffffff'。 空字串 （"） 會轉換成預設值 ' 1900年-01-01 12:00:00 '。 包含僅空白字串 (' ') 會產生錯誤。 小數位數取決於資料行定義。 例如，資料行定義為**datetime2** (2) 將會有兩個小數。  
@@ -91,34 +85,34 @@ ms.lasthandoff: 12/21/2017
 ### <a name="DateFormats"></a>日期時間格式  
 Dwloader 輸入資料載入到 SQL Server PDW 支援下列資料格式。 更多詳細資料列在表格之後。  
   
-|DATETIME|smalldatetime|日期|datetime2|datetimeoffset|  
+|datetime|smalldatetime|date|datetime2|datetimeoffset|  
 |------------|-----------------|--------|-------------|------------------|  
-|[[M] M]M-[d] d-[yy] yy hh: mm: [.fff]|[[M] M]M-[d] d-[yy] yy hh: mm [: 00]|[[M] M]M-[d] d-[yy] yy|[[M] M]M-[d] d-[yy] yy hh: mm: [.fffffff]|[[M] M]M-[d] d-[yy] yy hh: mm: [.fffffff] zzz|  
-|[[M] M]M-[d] d-[yy] yy hh: mm: [.fff] [tt]|[[M] M]M-[d] d-[yy] yy hh: mm [: 00] [tt]||[[M] M]M-[d] d-[yy] yy hh: mm: [.fffffff] [tt]|[[M] M]M-[d] d-[yy] yy hh: mm: [.fffffff] [tt] zzz|  
-|[[M] M]M [yy] yy-[d] d hh: mm: [.fff]|[[M] M]M [yy] yy-[d] d hh: mm [: 00]|[[M] M]M [yy] yy-[d] d|[[M] M]M [yy] yy-[d] d hh: mm: [.fffffff]|[[M] M]M [yy] yy-[d] d hh: mm: [.fffffff] zzz|  
-|[[M] M]M-[yy] yy-[d] d hh: mm: [.fff] [tt]|[[M] M]M-[yy] yy-[d] d hh: mm [: 00] [tt]||[[M] M]M-[yy] yy-[d] d hh: mm: [.fffffff] [tt]|[[M] M]M-[yy] yy-[d] d hh: mm: [.fffffff] [tt] zzz|  
-|[yy] yy-[[M] M] M-[d] d hh: mm: [.fff]|[yy] yy-[[M] M] M-[d] d hh: mm [: 00]|[yy] yy-[[M] M] M-[d] d|[yy] yy-[[M] M] M-[d] d hh: mm: [.fffffff]|[yy] yy-[[M] M] M-[d] d hh: mm: [.fffffff] zzz|  
-|[yy] yy-[[M] M] M-[d] d hh: mm: [.fff] [tt]|[yy] yy-[[M] M] M-[d] d hh: mm [: 00] [tt]||[yy] yy-[[M] M] M-[d] d hh: mm: [.fffffff] [tt]|[yy] yy-[[M] M] M-[d] d hh: mm: [.fffffff] [tt] zzz|  
-|[yy] yy-[d] d-[[M] M] M hh: mm: [.fff]|[yy] yy-[d] d-[[M] M] M hh: mm [: 00]|[yy] yy-d [d]-[[M] M] M|[yy] yy-[d] d-[[M] M] M hh: mm: [.fffffff]|[yy] yy-[d] d-[[M] M] M ss [.fffffff] zzz|  
-|[yy] yy-[d] d-[[M] M] M hh: mm: [.fff] [tt]|[yy] yy-[d] d-[[M] M] M hh: mm [: 00] [tt]||[yy] yy-[d] d-[[M] M] M hh: mm: [.fffffff] [tt]|[yy] yy-[d] d-[[M] M] M hh: mm: [.fffffff] [tt] zzz|  
-|[d] d-[[M] M] M-[yy] yy hh: mm: [.fff]|[d] d-[[M] M] M-[yy] yy hh: mm [: 00]|[d] d-[[M] M] M-[yy] yy|[d] d-[[M] M] M-[yy] yy hh: mm: [.fffffff]|[d] d-[[M] M] M-[yy] yy hh: mm: [.fffffff] zzz|  
-|[d] d-[[M] M] M-[yy] yy hh: mm: [.fff] [tt]|[d] d-[[M] M] M-[yy] yy hh: mm [: 00] [tt]||[d] d-[[M] M] M-[yy] yy hh: mm: [.fffffff] [tt]|[d] d-[[M] M] M-[yy] yy hh: mm: [.fffffff] [tt] zzz|  
-|[d] d-[yy] yy-[[M] M] M hh: mm: [.fff]|[d] d-[yy] yy-[[M] M] M hh: mm [: 00]|[d] d-[yy] yy-[[M] M] M|[d] d-[yy] yy-[[M] M] M hh: mm: [.fffffff]|[d] d-[yy] yy-[[M] M] M ss [.fffffff] zzz|  
-|[d] d-[yy] yy-[[M] M] M hh: mm: [.fff] [tt]|[d] d-[yy] yy-[[M] M] M hh: mm [: 00] [tt]||[d] d-[yy] yy-[[M] M] M hh: mm: [.fffffff] [tt]|[d] d-[yy] yy-[[M] M] M hh: mm: [.fffffff] [tt] zzz|  
+|[M[M]]M-[d]d-[yy]yy HH:mm:ss[.fff]|[M[M]]M-[d]d-[yy]yy HH:mm[:00]|[M[M]]M-[d]d-[yy]yy|[M[M]]M-[d]d-[yy]yy HH:mm:ss[.fffffff]|[M[M]]M-[d]d-[yy]yy HH:mm:ss[.fffffff] zzz|  
+|[M[M]]M-[d]d-[yy]yy hh:mm:ss[.fff][tt]|[M[M]]M-[d]d-[yy]yy hh:mm[:00][tt]||[M[M]]M-[d]d-[yy]yy hh:mm:ss[.fffffff][tt]|[M[M]]M-[d]d-[yy]yy hh:mm:ss[.fffffff][tt] zzz|  
+|[M[M]]M-[yy]yy-[d]d HH:mm:ss[.fff]|[M[M]]M-[yy]yy-[d]d HH:mm[:00]|[M[M]]M-[yy]yy-[d]d|[M[M]]M-[yy]yy-[d]d HH:mm:ss[.fffffff]|[M[M]]M-[yy]yy-[d]d HH:mm:ss[.fffffff] zzz|  
+|[M[M]]M-[yy]yy-[d]d hh:mm:ss[.fff][tt]|[M[M]]M-[yy]yy-[d]d hh:mm[:00][tt]||[M[M]]M-[yy]yy-[d]d hh:mm:ss[.fffffff][tt]|[M[M]]M-[yy]yy-[d]d hh:mm:ss[.fffffff][tt] zzz|  
+|[yy]yy-[M[M]]M-[d]d HH:mm:ss[.fff]|[yy]yy-[M[M]]M-[d]d HH:mm[:00]|[yy]yy-[M[M]]M-[d]d|[yy]yy-[M[M]]M-[d]d HH:mm:ss[.fffffff]|[yy]yy-[M[M]]M-[d]d HH:mm:ss[.fffffff]  zzz|  
+|[yy]yy-[M[M]]M-[d]d hh:mm:ss[.fff][tt]|[yy]yy-[M[M]]M-[d]d hh:mm[:00][tt]||[yy]yy-[M[M]]M-[d]d hh:mm:ss[.fffffff][tt]|[yy]yy-[M[M]]M-[d]d hh:mm:ss[.fffffff][tt] zzz|  
+|[yy]yy-[d]d-[M[M]]M HH:mm:ss[.fff]|[yy]yy-[d]d-[M[M]]M HH:mm[:00]|[yy]yy-[d]d-[M[M]]M|[yy]yy-[d]d-[M[M]]M HH:mm:ss[.fffffff]|[yy]yy-[d]d-[M[M]]M HH:mm:ss[.fffffff]  zzz|  
+|[yy]yy-[d]d-[M[M]]M hh:mm:ss[.fff][tt]|[yy]yy-[d]d-[M[M]]M hh:mm[:00][tt]||[yy]yy-[d]d-[M[M]]M hh:mm:ss[.fffffff][tt]|[yy]yy-[d]d-[M[M]]M hh:mm:ss[.fffffff][tt] zzz|  
+|[d]d-[M[M]]M-[yy]yy HH:mm:ss[.fff]|[d]d-[M[M]]M-[yy]yy HH:mm[:00]|[d]d-[M[M]]M-[yy]yy|[d]d-[M[M]]M-[yy]yy HH:mm:ss[.fffffff]|[d]d-[M[M]]M-[yy]yy HH:mm:ss[.fffffff] zzz|  
+|[d]d-[M[M]]M-[yy]yy hh:mm:ss[.fff][tt]|[d]d-[M[M]]M-[yy]yy hh:mm[:00][tt]||[d]d-[M[M]]M-[yy]yy hh:mm:ss[.fffffff][tt]|[d]d-[M[M]]M-[yy]yy hh:mm:ss[.fffffff][tt] zzz|  
+|[d]d-[yy]yy-[M[M]]M HH:mm:ss[.fff]|[d]d-[yy]yy-[M[M]]M HH:mm[:00]|[d]d-[yy]yy-[M[M]]M|[d]d-[yy]yy-[M[M]]M HH:mm:ss[.fffffff]|[d]d-[yy]yy-[M[M]]M HH:mm:ss[.fffffff]  zzz|  
+|[d]d-[yy]yy-[M[M]]M hh:mm:ss[.fff][tt]|[d]d-[yy]yy-[M[M]]M hh:mm[:00][tt]||[d]d-[yy]yy-[M[M]]M hh:mm:ss[.fffffff][tt]|[d]d-[yy]yy-[M[M]]M hh:mm:ss[.fffffff][tt] zzz|  
   
 詳細資料：  
   
--   若要分隔月、 日和年值，您可以使用 '-'，'/' 或 '。 '. 為了簡單起見，資料表會使用只在 '-' 分隔符號。  
+-   若要分隔月、 日和年值，您可以使用 '-'，'/' 或 '。 '. 為了簡單起見，此表格只使用 ' – ' 分隔符號。  
   
 -   若要指定文字，表示月份會使用三個或多個字元。 1 或 2 個字元的月份會解譯為數字。  
   
 -   若要分隔時間值，請使用 ': ' 符號。  
   
--   以方括弧括住的字母是選擇性的。  
+-   括在方括號中的字母是選擇性的。  
   
--   字母 'tt' 指定 [AM |PM | am | pm]。 AM 是預設值。 當指定 'tt' 時，小時值 (hh) 必須在 0 到 12 的範圍內。  
+-   字母 'tt' 會指定 [AM|PM|am|pm]。 預設值是 AM。 指定 'tt' 時，小時值 (hh) 的範圍必須介於 0 到 12 之間。  
   
--   字母 'zzz' 指定系統的目前的時區格式的時區位移 {+ |-} HH:ss]。  
+-   字母 'zzz' 會以 {+|-}HH:ss] 格式，指定系統目前時區的時區差距。  
   
 ## <a name="InsertNumerictypes"></a>將常值插入數值類型  
 下表定義的常值載入使用數值類型的 SQL Server PDW 資料行的預設格式和轉換規則。  
@@ -148,7 +142,7 @@ Dwloader 輸入資料載入到 SQL Server PDW 支援下列資料格式。 更多
 |-------------------|-----------------------|  
 |整數常值|321312313123|  
 |十進位常值|123344.34455|  
-|浮動點常值|3.12323E + 14|  
+|浮動點常值|3.12323E+14|  
   
 ### <a name="int-bigint-tinyint-smallint-data-types"></a>int、 bigint、 tinyint、 smallint 資料類型  
 下表定義載入類型的資料行中的常值的規則**int**， **bigint**， **tinyint**，或**smallint**。 資料來源不能超過指定的資料類型所允許的範圍。 例如，針對範圍**tinyint**且 0 到 255 的範圍**int**是-2,147,483,648 到 2,147,483,647。  

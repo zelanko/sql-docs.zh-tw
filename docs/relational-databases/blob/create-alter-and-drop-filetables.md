@@ -1,36 +1,34 @@
 ---
-title: "建立、改變及卸除 FileTable | Microsoft Docs"
-ms.custom: 
+title: 建立、改變及卸除 FileTable | Microsoft Docs
+ms.custom: ''
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
 ms.component: blob
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-blob
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - FileTables [SQL Server], altering
 - FileTables [SQL Server], dropping
 - FileTables [SQL Server], creating
 ms.assetid: 47d69e37-8778-4630-809b-2261b5c41c2c
-caps.latest.revision: 
+caps.latest.revision: 25
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 5e402ae5344d8dcae116954856644d206d62f0e5
-ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
+ms.openlocfilehash: ba8ada2a67db9c0f6ea4882fb6fd04b26caa4f9f
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/13/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="create-alter-and-drop-filetables"></a>建立、改變及卸除 FileTable
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-描述如何建立新的 FileTable，或是改變或卸除現有的 FileTable。  
+  描述如何建立新的 FileTable，或是改變或卸除現有的 FileTable。  
   
 ##  <a name="BasicsCreate"></a> 建立 FileTable  
  FileTable 是一種特殊化使用者資料表，它具有預先定義且固定的結構描述。 這個結構描述會儲存 FILESTREAM 資料、檔案和目錄資訊，以及檔案屬性。 如需有關 FileTable 結構描述的詳細資訊，請參閱＜ [FileTable Schema](../../relational-databases/blob/filetable-schema.md)＞。  
@@ -128,7 +126,7 @@ GO
 ```  
   
  **使用 SQL Server Management Studio 變更 FileTable 的目錄**  
- 在物件總管中，以滑鼠右鍵按一下 [FileTable]，並選取 [屬性] 開啟 [資料表屬性] 對話方塊。 在 **[FileTable]** 頁面上，輸入 **[FileTable 目錄名稱]**的新值。  
+ 在物件總管中，以滑鼠右鍵按一下 [FileTable]，並選取 [屬性] 開啟 [資料表屬性] 對話方塊。 在 **[FileTable]** 頁面上，輸入 **[FileTable 目錄名稱]** 的新值。  
   
 ###  <a name="ReqAlter"></a> 改變 FileTable 的需求和限制  
   

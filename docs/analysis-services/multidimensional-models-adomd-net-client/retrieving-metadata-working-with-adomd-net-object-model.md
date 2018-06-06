@@ -1,33 +1,19 @@
 ---
-title: "使用 ADOMD.NET 物件模型 |Microsoft 文件"
-ms.custom: 
-ms.date: 02/14/2018
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- metadata [ADOMD.NET]
-- object model (client) [ADOMD.NET]
-- retrieving metadata
-ms.assetid: 0183dcdc-f2ea-4246-ad00-6e8ccc9d8217
-caps.latest.revision: 
-author: Minewiskan
+title: 使用 ADOMD.NET 物件模型 |Microsoft 文件
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: adomd
+ms.topic: conceptual
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: d5ab7348371437e79b52f16c98890aa2c93431b8
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 29e59b5811f6c13c7aa222c7d6eba31f9bcd706e
+ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="retrieving-metadata---working-with-adomdnet-object-model"></a>擷取中繼資料-使用 ADOMD.NET 物件模型
   ADOMD.NET 提供的物件模型，可檢視分析資料來源所包含的 Cube 與從屬物件。 不過，並非指定的分析資料來源之所有中繼資料，都可透過物件模型取得。 物件模型只能存取對用戶端應用程式而言最為實用並加以顯示的資訊，以允許使用者以互動方式建構命令。 因為要顯示的中繼資料之複雜性已降低，所以 ADOMD.NET 物件模型使用起來較容易。  

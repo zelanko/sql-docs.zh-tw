@@ -1,30 +1,17 @@
 ---
-title: "建立和執行 R 指令碼 （SQL 與 R 深入探討） |Microsoft 文件"
-ms.date: 12/14/2017
-ms.reviewer: 
-ms.suite: sql
-ms.prod: machine-learning-services
-ms.prod_service: machine-learning-services
-ms.component: 
-ms.technology: 
-ms.tgt_pltfrm: 
+title: 建立和執行 R 指令碼 （SQL 與 R 深入探討） |Microsoft 文件
+ms.prod: sql
+ms.technology: machine-learning
+ms.date: 04/15/2018
 ms.topic: tutorial
-applies_to:
-- SQL Server 2016
-- SQL Server 2017
-dev_langs:
-- R
-ms.assetid: 51e8e66f-a0a5-4e96-aa71-f5c870e6d0d4
-caps.latest.revision: 
-author: jeannt
-ms.author: jeannt
-manager: cgronlund
-ms.workload: Inactive
-ms.openlocfilehash: 1ca2c7227163816092e7248fe20cb377fc03ac03
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+author: HeidiSteen
+ms.author: heidist
+manager: cgronlun
+ms.openlocfilehash: 1ff4b72b535f97ba0132dd5e2712b56f90effb10
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="create-and-run-r-scripts-sql-and-r-deep-dive"></a>建立和執行 R 指令碼 （SQL 與 R 深入探討）
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -175,7 +162,7 @@ ms.lasthandoff: 02/11/2018
 
 ## <a name="next-step"></a>下一步
 
-[使用 R 將 SQL Server 資料視覺化](../../advanced-analytics/tutorials/deepdive-visualize-sql-server-data-using-r.md)
+[使用 R 製作 SQL Server 資料的圖表](../../advanced-analytics/tutorials/deepdive-visualize-sql-server-data-using-r.md)
 
 ## <a name="previous-step"></a>上一個步驟
 

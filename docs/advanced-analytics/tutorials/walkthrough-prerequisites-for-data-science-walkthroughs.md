@@ -1,29 +1,18 @@
 ---
-title: "SQL Server R 的資料科學逐步解說的必要條件 |Microsoft 文件"
-ms.date: 11/10/2017
-ms.reviewer: 
-ms.suite: sql
-ms.prod: machine-learning-services
-ms.prod_service: machine-learning-services
-ms.component: 
-ms.technology: 
-ms.tgt_pltfrm: 
+title: SQL Server R 的資料科學逐步解說的必要條件 |Microsoft 文件
+ms.prod: sql
+ms.technology: machine-learning
+ms.date: 04/15/2018
 ms.topic: tutorial
-applies_to:
-- SQL Server 2016
-dev_langs:
-- R
-ms.assetid: 0b0582b8-8843-4787-94a8-2e28bdc04fb2
-caps.latest.revision: 
-author: jeannt
-ms.author: jeannt
-manager: cgronlund
-ms.workload: Inactive
-ms.openlocfilehash: 6ac8e646c93c0371f959afc212601e5abe0de213
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+author: HeidiSteen
+ms.author: heidist
+manager: cgronlun
+ms.openlocfilehash: 4f0e6130882ea5af6dd0827ed2d5e798d3c11c5f
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34585490"
 ---
 # <a name="prerequisites-for-the-data-science-walkthrough-for-sql-server-and-r"></a>SQL Server R 的資料科學逐步解說的必要條件
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -39,7 +28,7 @@ ms.lasthandoff: 02/11/2018
 + 機器學習服務 （資料庫） for SQL Server 2017
 + SQL Server 2016 R Services
 
-如需詳細資訊，請參閱[設定 SQL Server R 服務 (資料庫內](../r/set-up-sql-server-r-services-in-database.md)。
+如需詳細資訊，請參閱[安裝 SQL Server 2017 機器學習服務](../install/sql-machine-learning-services-windows-install.md)或[安裝 SQL Server 2016 R Services](../install/sql-r-services-windows-install.md)。
 
 > [!IMPORTANT]
 > SQL Server 版本早於 2016年不支援與 r 整合不過，您可以使用舊版的 SQL 資料庫做為 ODBC 資料來源。
@@ -52,7 +41,7 @@ ms.lasthandoff: 02/11/2018
 
 - **Microsoft R 用戶端**是一種輕量型開發工具，支援開發 R 使用 RevoScaleR 封裝中。 若要取得它，請參閱 [開始使用 Microsoft R Client](https://docs.microsoft.com/machine-learning-server/r-client/what-is-microsoft-r-client)。
 
-- **RStudio** 是其中一個比較常見的 R 開發環境。 如需詳細資訊，請參閱 [https://www.rstudio.com/products/RStudio/](https://www.rstudio.com/products/RStudio/)。
+- **RStudio** 是其中一個比較常見的 R 開發環境。 如需詳細資訊，請參閱[ https://www.rstudio.com/products/RStudio/ ](https://www.rstudio.com/products/RStudio/)。
 
     您無法完成本教學課程中使用的一般安裝 RStudio 或其他環境。您也必須安裝 R 封裝和連線程式庫的 Microsoft R Open。 如需詳細資訊，請參閱 [Set Up a Data Science Client](../r/set-up-a-data-science-client.md)(設定資料科學用戶端)。
 
@@ -76,4 +65,4 @@ ms.lasthandoff: 02/11/2018
 
 ## <a name="next-lesson"></a>下一課
 
-[準備要使用 PowerShell 的資料](/walkthrough-prepare-the-data.md)
+[準備要使用 PowerShell 的資料](walkthrough-prepare-the-data.md)

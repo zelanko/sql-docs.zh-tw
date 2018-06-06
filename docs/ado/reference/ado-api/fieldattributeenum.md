@@ -1,33 +1,32 @@
 ---
-title: FieldAttributeEnum | Microsoft Docs
-ms.prod: sql-non-specified
+title: FieldAttributeEnum |Microsoft 文件
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 apitype: COM
 f1_keywords:
 - FieldAttributeEnum
 helpviewer_keywords:
 - FieldAttributeEnum enumeration [ADO]
 ms.assetid: 6e34d886-005a-40dc-bd5c-6adcbf81e5cd
-caps.latest.revision: 
+caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: e2b737b179a47aa28196bf8ff334dfe3256f91ef
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
-ms.translationtype: MT
+ms.openlocfilehash: c54502119e76de0357551600f4288bac5d59cc9c
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="fieldattributeenum"></a>FieldAttributeEnum
 指定一或多個屬性[欄位](../../../ado/reference/ado-api/field-object.md)物件。  
@@ -53,7 +52,7 @@ ms.lasthandoff: 02/09/2018
 |**adFldUpdatable**|0x4|表示您可以寫入的欄位。|  
   
 ## <a name="adowfc-equivalent"></a>ADO/WFC 對等項目  
- Package: **com.ms.wfc.data**  
+ 封裝： **com.ms.wfc.data**  
   
 |常數|  
 |--------------|  

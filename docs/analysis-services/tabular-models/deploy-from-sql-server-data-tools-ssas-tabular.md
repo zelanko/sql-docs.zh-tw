@@ -1,33 +1,23 @@
 ---
-title: "從 SQL Server Data Tools 部署 |Microsoft 文件"
-ms.custom: 
-ms.date: 02/22/2018
-ms.prod: analysis-services
-ms.prod_service: analysis-services, azure-analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords:
-- sql13.asvs.bidtoolset.deploystatus.f1
-ms.assetid: 67dde3fe-ba43-41f3-b56c-c656029ee93f
-caps.latest.revision: 
-author: Minewiskan
+title: 從 SQL Server Data Tools 部署 |Microsoft 文件
+ms.date: 05/07/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: tabular-models
+ms.topic: conceptual
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: c009ba69247d754c95f98732f41e4023db0fcaa4
-ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
+ms.openlocfilehash: 009c286c105f8088897343f3694c7b3106ca493a
+ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="deploy-from-sql-server-data-tools"></a>從 SQL Server 資料工具部署
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
-使用本主題中的工作，若要使用 [部署] 命令在 SSDT 中部署表格式模型方案。  
+  使用本主題中的工作，若要使用 [部署] 命令在 SSDT 中部署表格式模型方案。  
   
 ##  <a name="bkmk_deploy"></a> 設定部署選項與部署伺服器屬性  
  在您部署表格式模型方案之前，必須先指定 [部署選項] 與 [部署伺服器] 屬性。 如需部署屬性和設定的詳細資訊，請參閱[表格式模型方案部署](../../analysis-services/tabular-models/tabular-model-solution-deployment-ssas-tabular.md)。  

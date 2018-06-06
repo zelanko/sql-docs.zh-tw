@@ -1,27 +1,19 @@
 ---
-title: "設定用於 SQL Server 的資料科學用戶端 |Microsoft 文件"
-ms.custom: 
-ms.date: 10/31/2017
-ms.reviewer: 
-ms.suite: sql
-ms.prod: machine-learning-services
-ms.prod_service: machine-learning-services
-ms.component: r
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
-ms.assetid: d15ee956-918f-40e0-b986-2bf929ef303a
-caps.latest.revision: 
-author: jeannt
-ms.author: jeannt
-manager: cgronlund
-ms.openlocfilehash: 80b4898397cd0cb6460b379d91be81eb28cd9b87
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+title: 設定 SQL Server 上的 R 開發資料科學用戶端 |Microsoft 文件
+ms.prod: sql
+ms.technology: machine-learning
+ms.date: 04/15/2018
+ms.topic: conceptual
+author: HeidiSteen
+ms.author: heidist
+manager: cgronlun
+ms.openlocfilehash: dd0b420630846382b9d7cf456352bb606a4f0040
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 04/16/2018
 ---
-# <a name="set-up-a-data-science-client-for-use-with-sql-server"></a>設定用於 SQL Server 的資料科學用戶端
+# <a name="set-up-a-data-science-client-for-r-development-on-sql-server"></a>設定 SQL Server 上的 R 開發資料科學用戶端
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 您已設定的執行個體之後[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]支援機器學習服務，您應該設定能夠連線到遠端執行和部署伺服器的開發環境。
@@ -36,17 +28,46 @@ ms.lasthandoff: 02/11/2018
   
 + [Microsoft R Client](http://aka.ms/rclient/download)
 
-+ Microsoft R Server (for SQL Server 2016)
++ Microsoft R Server （適用於 SQL Server 2016)
 
-    - 若要從 SQL Server 安裝程式安裝，請參閱[建立獨立 R 伺服器](../../advanced-analytics/r/create-a-standalone-r-server.md)
+    - 若要從 SQL Server 安裝程式安裝，請參閱[安裝 SQL Server 2016 R 伺服器 （獨立）](../install/sql-r-standalone-windows-install.md)
 
     - 若要使用個別的 windows 安裝程式，請參閱[安裝機器學習 Server for Windows](https://docs.microsoft.com/machine-learning-server/install/machine-learning-server-windows-install)
 
 + 機器學習伺服器 （適用於 SQL Server 2017)
 
-    - 若要從 SQL Server 安裝程式安裝，請參閱[建立獨立 R 伺服器](../../advanced-analytics/r/create-a-standalone-r-server.md)
+    - 若要從 SQL Server 安裝程式安裝，請參閱[安裝 SQL Server 2017 機器學習伺服器 （獨立）](../install/sql-machine-learning-standalone-windows-install.md)
 
     - 若要使用個別的 windows 安裝程式，請參閱[適用於 Windows 安裝 R Server 9.1](https://docs.microsoft.com/machine-learning-server/install/r-server-install-windows)
+
+## <a name="r-tools"></a>R 工具
+
+當您安裝 R 與 SQL Server 時，您會收到相同與任何已安裝的 R 工具**基底**R，例如 RGui、 Rterm，以及其他等等的安裝。 因此技術上來說，您必須開發和測試 R 程式碼所需的所有工具。
+
+下列標準的 R 工具隨附的*基底安裝*，並因此預設會安裝。
+
++ **RTerm**： 命令列的終端機執行 R 指令碼
+
++ **RGui.exe**：R 的簡單互動式編輯器。RGui.exe 和 RTerm 的命令列引數相同。
+
++ **RScript**：以批次模式執行 R 指令碼的命令列工具。
+
+若要尋找這些工具，決定當您設定 SQL Server 或獨立機器學習功能已安裝的 R 程式庫。 比方說，在預設安裝中，R 工具都在這些資料夾位於：
+
++ SQL Server 2016 R Services: `~\Program Files\Microsoft SQL Server\MSSQL13.<instancename>\R_SERVICES\bin\x64`
++ Microsoft R Server 的獨立： `~\Program Files\Microsoft R\R_SERVER\bin\x64`
++ SQL Server 2017 機器學習服務： `~\Program Files\Microsoft SQL Server\MSSQL14.<instancename>\R_SERVICES\bin\x64`
++ 機器學習服務伺服器 （獨立）： `~\Program Files\Microsoft\ML Server\R_SERVER\bin\x64`
+
+如果您需要協助的 R 工具，直接開啟**RGui**，按一下 **協助**，然後選取其中一個選項
+
+## <a name="microsoft-r-client"></a>Microsoft R Client
+
+Microsoft R 用戶端是免費下載，可讓您存取以供開發使用 RevoScaleR 封裝。 安裝 R 用戶端，您可以建立可以在所有支援的計算內容，包括 SQL Server 資料庫中的分析，以及 Hadoop、 Spark 或使用機器學習伺服器 Linux 上的分散式 R 運算執行的 R 解決方案。
+
+如果您已經安裝不同的 R 開發環境，例如 RStudio，務必要使用的程式庫和 Microsoft R 用戶端所提供的可執行檔的環境重新設定。 藉由讓您可以使用 RevoScaleR 封裝中，所有的功能但效能會受到限制。
+
+如需詳細資訊，請參閱[什麼是 Microsoft R 用戶端？](https://docs.microsoft.com/machine-learning-server/r-client/what-is-microsoft-r-client)
 
 ## <a name="install-a-development-environment"></a>安裝開發環境
 

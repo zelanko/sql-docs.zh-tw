@@ -1,33 +1,30 @@
 ---
-title: "Index 屬性 |Microsoft 文件"
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
+title: Index 屬性 |Microsoft 文件
+ms.prod: sql
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
-ms.custom: 
+ms.technology: connectivity
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 apitype: COM
 f1_keywords:
 - Recordset21::Index
 helpviewer_keywords:
 - Index property
 ms.assetid: 1c79e271-21ec-41a8-8163-c5e89f0001a7
-caps.latest.revision: 
+caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 441b310afc4465c21f84d4dfe67c6b5928cb5f42
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 01e7883719900e85fdb7227f50c90ed265f73c30
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="index-property"></a>Index 屬性
 表示索引的目前作用中的名稱[資料錄集](../../../ado/reference/ado-api/recordset-object-ado.md)物件。  
@@ -52,7 +49,7 @@ ms.lasthandoff: 02/09/2018
   
  如果可以設定索引和[LockType](../../../ado/reference/ado-api/locktype-property-ado.md)屬性是**Locktype**或**Adlockreadonly**，然後隱含[UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md)會執行作業。 這會釋放目前和受影響的群組。 已釋放任何現有的篩選，和目前資料列位置變更為第一個資料列 reordered**資料錄集**。  
   
- **索引**屬性用於搭配[搜尋](../../../ado/reference/ado-api/seek-method.md)方法。 如果基礎提供者不支援**索引**屬性，因此**搜尋**方法，請考慮使用[尋找](../../../ado/reference/ado-api/find-method-ado.md)方法改為。 判斷是否**資料錄集**物件支援的索引將以[支援](../../../ado/reference/ado-api/supports-method.md)**(adIndex)**方法。  
+ **索引**屬性用於搭配[搜尋](../../../ado/reference/ado-api/seek-method.md)方法。 如果基礎提供者不支援**索引**屬性，因此**搜尋**方法，請考慮使用[尋找](../../../ado/reference/ado-api/find-method-ado.md)方法改為。 判斷是否**資料錄集**物件支援的索引將以[支援](../../../ado/reference/ado-api/supports-method.md)**(adIndex)** 方法。  
   
  內建**索引**與不相關的動態屬性[最佳化](../../../ado/reference/ado-api/optimize-property-dynamic-ado.md)屬性，雖然它們都處理索引。  
   

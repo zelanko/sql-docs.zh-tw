@@ -1,17 +1,15 @@
 ---
-title: "擴展全文檢索索引 | Microsoft Docs"
-ms.custom: 
+title: 擴展全文檢索索引 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
-ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.prod: sql
+ms.prod_service: search, sql-database
 ms.component: search
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- dbe-search
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: search
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - index populations [full-text search]
 - incremental populations [full-text search]
@@ -27,20 +25,20 @@ helpviewer_keywords:
 - full populations [full-text search]
 - full-text indexes [SQL Server], populations
 ms.assetid: 76767b20-ef55-49ce-8dc4-e77cb8ff618a
-caps.latest.revision: 
+caps.latest.revision: 78
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: c139299c1613bb3d76328097fd1235f67ebe121a
-ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 15619488c2b8d9f71423af9a0ca853b74ed5b12b
+ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/13/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="populate-full-text-indexes"></a>擴展全文檢索索引
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-建立和維護全文檢索索引包括使用稱為「母體擴展」(Population) (也稱為「搜耙」(Crawl)) 的處理序來擴展索引。  
+  建立和維護全文檢索索引包括使用稱為「母體擴展」(Population) (也稱為「搜耙」(Crawl)) 的處理序來擴展索引。  
   
 ##  <a name="types"></a> Types of population  
 全文檢索索引支援下列類型的母體擴展：
@@ -167,7 +165,7 @@ ALTER FULLTEXT INDEX ON Production.Document
   
  累加母體擴展的執行要件是，索引資料表必須包含 **timestamp** 資料類型資料行。 少了 **timestamp** 資料行，就無法執行累加母體擴展。   
 
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會使用  資料行來識別上一次母體擴展以來已經變更的資料列。 然後，累加母體擴展會針對在上一次母體擴展之後或進行時加入、刪除或修改的資料列，更新全文檢索索引。 母體擴展結束時，全文檢索引擎會記錄新的 **timestamp** 值。 這個值就是「SQL 收集程式」所找到的最大 **timestamp** 值。 此值會在下次累加母體擴展啟動時使用。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會使用 **timestamp** 資料行來識別上一次母體擴展以來已經變更的資料列。 然後，累加母體擴展會針對在上一次母體擴展之後或進行時加入、刪除或修改的資料列，更新全文檢索索引。 母體擴展結束時，全文檢索引擎會記錄新的 **timestamp** 值。 這個值就是「SQL 收集程式」所找到的最大 **timestamp** 值。 此值會在下次累加母體擴展啟動時使用。  
  
 在某些情況下，累加母體擴展要求會導致完整母體擴展。
 -   對不含 **timestamp** 資料行的資料表提出累加母體擴展要求的話，會導致執行完整母體擴展作業。
@@ -225,7 +223,7 @@ ALTER FULLTEXT INDEX ON Production.Document
 以下是編目記錄檔名稱的變動部分。
 -   <**DatabaseID**> - 資料庫的識別碼。 <**dbid**> 是開頭為零的五位數數字。  
 -   <**FullTextCatalogID**> - 全文檢索目錄識別碼。 <**catid**> 是開頭為零的五位數數字。  
--   <**n**> - 是一個整數，指示相同全文檢索目錄的編目記錄數目。  
+-   <**n**> - 是一個整數，指示相同全文檢索目錄的編目記錄檔數目。  
   
  例如，`SQLFT0000500008.2` 是指資料庫識別碼 = 5 而且全文檢索目錄識別碼 = 8 之資料庫的編目記錄檔。 位於檔案名稱結尾的 2 表示此資料庫/目錄組有兩個搜耙記錄檔。  
 

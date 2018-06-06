@@ -1,39 +1,24 @@
 ---
-title: "了解用來建立部署指令碼的輸入的檔案 |Microsoft 文件"
-ms.custom: 
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
-helpviewer_keywords:
-- input files [Analysis Services]
-- Analysis Services Deployment Wizard, scripts
-- deploying [Analysis Services], input files
-- Analysis Services Deployment Wizard, input files
-- scripts [Analysis Services], deployment
-- Analysis Services deployments, input files
-- modifying input files
-ms.assetid: 20e080cd-6a0e-4591-b022-ea4cd3638e36
-caps.latest.revision: 
-author: Minewiskan
+title: 了解用來建立部署指令碼的輸入的檔案 |Microsoft 文件
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: multidimensional-models
+ms.topic: conceptual
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: affa6ce1f6ac586ea59607da196b6a4d2dc0f666
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 6b75ec5d7433931a81a0fa6e2c648f85335fbedc
+ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="deployment-script-files---input-used-to-create-deployment-script"></a>部署指令碼檔案-輸入用來建立部署指令碼
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-當您建置[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]專案，[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]產生之專案檔案。 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 將這些檔案放入輸出資料夾的[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]專案。 依預設，輸出是放在 \Bin 資料夾中。 下表列出 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 建立的 XML 檔案。  
+[!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
+
+  當您建置[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]專案，[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]產生之專案檔案。 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 將這些檔案放入輸出資料夾的[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]專案。 依預設，輸出是放在 \Bin 資料夾中。 下表列出 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 建立的 XML 檔案。  
   
 |檔案|Description|  
 |---------------|-----------------|  

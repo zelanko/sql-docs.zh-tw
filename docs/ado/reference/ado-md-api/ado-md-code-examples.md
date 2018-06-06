@@ -1,30 +1,27 @@
 ---
-title: "ADO MD 程式碼範例 |Microsoft 文件"
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
+title: ADO MD 程式碼範例 |Microsoft 文件
+ms.prod: sql
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
-ms.custom: 
+ms.technology: connectivity
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - ADO MD code examples
 ms.assetid: 72cf9eb3-31f6-441c-aede-5383fdfb81af
-caps.latest.revision: 
+caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 4fd1e15750413cbd4788d30e07714db458cb62f9
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 14021f4e91210ac76a55d3e2e2628bd3ffc99e4a
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ado-md-code-examples"></a>ADO MD 程式碼範例
 使用下列程式碼範例以了解如何使用 ADO MD 物件、 方法和屬性。 這些範例是與 Microsoft SQL Server 的 SQL Server 7.0 的 OLAP Services 一起安裝的範例應用程式的子集。  

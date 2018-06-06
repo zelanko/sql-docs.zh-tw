@@ -1,16 +1,15 @@
 ---
-title: "srv_paramdata (擴充預存程序 API) | Microsoft Docs"
-ms.custom: 
+title: srv_paramdata (擴充預存程序 API) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
 ms.component: extended-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - srv_paramdata
@@ -22,16 +21,15 @@ dev_langs:
 helpviewer_keywords:
 - srv_paramdata
 ms.assetid: 3104514d-b404-47c9-b6d7-928106384874
-caps.latest.revision: 
+caps.latest.revision: 30
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: e5837ecf48a6e97f5408d86f20b39e057285d64b
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
-ms.translationtype: MT
+ms.openlocfilehash: d73d1e6f2cf07edf29d96ef358b085a89e427a5c
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="srvparamdata-extended-stored-procedure-api"></a>srv_paramdata (擴充預存程序 API)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -62,7 +60,7 @@ n
  這是參數的數目。 第一個參數是數字 1。  
   
 ## <a name="returns"></a>傳回值  
- 參數值的指標。 如果第 *n* 個參數為 NULL、沒有第 *n* 個參數，或者沒有遠端預存程序，則傳回 NULL。 如果參數值為字串，則可能不會以 Null 結束。 請使用 **srv_paramlen** 來判斷字串的長度。  
+ 參數值的指標。 如果第 *n* 個參數為 NULL、沒有第 *n* 個參數，或是沒有任何遠端預存程序，會傳回 NULL。 如果參數值為字串，則可能不會以 Null 結束。 請使用 **srv_paramlen** 來判斷字串的長度。  
   
  如果參數是 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料類型的一種，則此函式會傳回下列值。 指標資料包含資料類型的指標是否為有效 (VP)、NULL 或不適用 (N/A)，以及資料所指向的內容。  
   
@@ -79,7 +77,7 @@ n
   
  \*   資料不是以 Null 結束；在截斷 >255 個字元的資料時，不會發出警告。  
   
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>Remarks  
  如果您知道參數名稱，可以使用 **srv_paramnumber** 來取得參數數目。 若要判斷參數是否為 NULL，請使用 **srv_paramlen**。  
   
  當遠端預存程序呼叫是用參數進行時，可以依名稱或位置 (未命名) 傳遞參數。 如果遠端預存程序呼叫是藉由一些依名稱傳遞的參數和一些依位置傳遞的參數來進行時，就會發生錯誤。 如果發生錯誤，則仍會呼叫 SRV_RPC 處理常式，但會看來好像沒有參數一般，而且 **srv_rpcparams** 會傳回 0。  

@@ -1,15 +1,14 @@
 ---
-title: "建立使用者定義型別 |Microsoft 文件"
-ms.custom: 
+title: 建立使用者定義型別 |Microsoft 文件
+ms.custom: ''
 ms.date: 03/16/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
 ms.component: clr
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 dev_langs:
 - TSQL
@@ -17,20 +16,19 @@ helpviewer_keywords:
 - user-defined types [CLR integration], creating
 - UDTs [CLR integration], creating
 ms.assetid: 0feb8b08-4062-467b-8433-e88e4e302738
-caps.latest.revision: 
+caps.latest.revision: 15
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: c9b8c9781e445e55b1b59d60db5d8e054da0d060
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 86a719023090aecee9a92fea8b772ed092a2111e
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="creating-user-defined-types"></a>建立使用者定義型別
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-若要建立可在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中安裝的使用者定義型別 (UDT)，您必須先以其中一種受支援的 .NET Framework 程式語言 (例如 Visual C# 或 Visual Basic)，建立符合建立 UDT 之規格的類別。 然後，您就可以將此類別編譯為可載入 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的動態連結程式庫 (DLL)。 您也可以使用 Visual Studio 來建立和部署 UDT。  
+  若要建立可在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中安裝的使用者定義型別 (UDT)，您必須先以其中一種受支援的 .NET Framework 程式語言 (例如 Visual C# 或 Visual Basic)，建立符合建立 UDT 之規格的類別。 然後，您就可以將此類別編譯為可載入 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的動態連結程式庫 (DLL)。 您也可以使用 Visual Studio 來建立和部署 UDT。  
   
  在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，執行 Common Language Runtime (CLR) 程式碼的功能預設為 OFF。 來啟用 CLR，請使用**sp_configure**系統預存程序，如下列所示[!INCLUDE[tsql](../../includes/tsql-md.md)]陳述式：  
   

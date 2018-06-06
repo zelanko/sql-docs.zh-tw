@@ -1,16 +1,14 @@
 ---
-title: "sp_addumpdevice (TRANSACT-SQL) |Microsoft 文件"
-ms.custom: 
+title: sp_addumpdevice (TRANSACT-SQL) |Microsoft 文件
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: system-objects
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_addumpdevice_TSQL
@@ -21,16 +19,15 @@ helpviewer_keywords:
 - backup devices [SQL Server], defining
 - sp_addumpdevice
 ms.assetid: c2d2ae49-0808-46d8-8444-db69a69d0ec3
-caps.latest.revision: 
+caps.latest.revision: 49
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: dad0547ea803cfbf709b36f078d552435c848900
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: cbf23913e95b53e490d55099cde44b5ab60d3141
+ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="spaddumpdevice-transact-sql"></a>sp_addumpdevice (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -60,7 +57,7 @@ sp_addumpdevice [ @devtype = ] 'device_type'
 |Value|Description|  
 |-----------|-----------------|  
 |**disk**|做為備份裝置的硬碟檔。|  
-|**tape**|[!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 所支援的任何磁帶裝置。<br /><br /> 注意：未來的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]版本中將會移除磁帶備份裝置的支援。 請避免在新的開發工作中使用這項功能，並規劃修改目前使用這項功能的應用程式。|  
+|**磁帶**|[!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 所支援的任何磁帶裝置。<br /><br /> 注意：未來的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]版本中將會移除磁帶備份裝置的支援。 請避免在新的開發工作中使用這項功能，並規劃修改目前使用這項功能的應用程式。|  
   
  [ **@logicalname =** ] **'***logical_name***'**  
  這是 BACKUP 和 RESTORE 陳述式所用之備份裝置的邏輯名稱。 *logical_name*是**sysname**，沒有預設值，不能是 NULL。  

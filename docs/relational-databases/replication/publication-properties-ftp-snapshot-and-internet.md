@@ -1,30 +1,28 @@
 ---
-title: "發行集屬性，FTP 快照集和網際網路 | Microsoft Docs"
-ms.custom: 
+title: 發行集屬性，FTP 快照集和網際網路 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
 ms.component: replication
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 f1_keywords:
 - sql13.rep.newpubwizard.pubproperties.internetsynchronization.f1
 ms.assetid: 8e0198c3-5e4e-418c-9920-78ccbbfc1323
-caps.latest.revision: 
+caps.latest.revision: 25
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: fae685dfbf79d3adff163fe1432b821d5e40cdc3
-ms.sourcegitcommit: ab25b08a312d35489a2c4a6a0d29a04bbd90f64d
+ms.openlocfilehash: 80764484ec32e54ce9d48be659811a0c641b78d7
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="publication-properties-ftp-snapshot-and-internet"></a>發行集屬性，FTP 快照集和網際網路
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -39,7 +37,7 @@ ms.lasthandoff: 03/08/2018
   
 ## <a name="options"></a>選項。  
  **透過 FTP 存取快照集檔案**  
- 選取 **[允許訂閱者使用 FTP (檔案傳輸通訊協定) 下載快照集檔案]**，並指定 **[FTP 伺服器名稱]**、 **[通訊埠編號]**、 **[FTP 根資料夾的路徑]**、 **[登入]**和 **[密碼]**，即可讓訂閱者使用 FTP 傳遞快照集。  
+ 選取 **[允許訂閱者使用 FTP (檔案傳輸通訊協定) 下載快照集檔案]**，並指定 **[FTP 伺服器名稱]**、 **[通訊埠編號]**、 **[FTP 根資料夾的路徑]**、 **[登入]** 和 **[密碼]**，即可讓訂閱者使用 FTP 傳遞快照集。  
   
  此選項可以讓訂閱者使用 FTP 擷取快照集檔案，但這並不是必要的。 如果您選取此選項，新增訂閱精靈就會預設讓訂閱者經由 FTP 擷取快照集檔案。 若要變更此設定，請使用 **[訂閱屬性]** 對話方塊。 如果您讓訂閱者經由 FTP 存取快照集檔案，請在 **[快照集屬性]** 對話方塊的 **[快照集]** 頁面上，指定 FTP 資料夾作為快照集檔案的位置。 這樣做會在新的快照集產生時，讓快照集代理程式自動更新 FTP 資料夾中的檔案。 如果位置沒有設定到 FTP 資料夾，當新的快照集產生時，您就必須手動更新檔案。 如需詳細資訊，請參閱[透過 FTP 傳遞快照集](../../relational-databases/replication/publish/deliver-a-snapshot-through-ftp.md)。  
   

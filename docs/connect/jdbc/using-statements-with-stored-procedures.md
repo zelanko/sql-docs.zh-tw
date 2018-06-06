@@ -1,27 +1,24 @@
 ---
-title: "使用陳述式與預存程序 |Microsoft 文件"
-ms.custom: 
+title: 使用陳述式與預存程序 |Microsoft 文件
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
-ms.component: jdbc
-ms.reviewer: 
+ms.prod: sql
+ms.prod_service: connectivity
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: connectivity
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: 0041f9e1-09b6-4487-b052-afd636c8e89a
-caps.latest.revision: "20"
+caps.latest.revision: 20
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
-ms.workload: Inactive
-ms.openlocfilehash: a46f7218cee1a6561428ad83babf288bf8e24bb5
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+manager: craigg
+ms.openlocfilehash: a2e5ff4dc6ffa18d553b0b0e3bbe0c9c3a629920
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="using-statements-with-stored-procedures"></a>搭配預存程序使用陳述式
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -61,7 +58,7 @@ ms.lasthandoff: 11/18/2017
 |[使用含傳回狀態的預存程序](../../connect/jdbc/using-a-stored-procedure-with-a-return-status.md)|描述如何使用 JDBC 驅動程式來執行包含傳回狀態值的預存程序。|  
 |[使用含更新計數的預存程序](../../connect/jdbc/using-a-stored-procedure-with-an-update-count.md)|描述如何使用 JDBC 驅動程式來執行傳回更新計數的預存程序。|  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [搭配使用陳述式與 JDBC Driver](../../connect/jdbc/using-statements-with-the-jdbc-driver.md)  
   
   

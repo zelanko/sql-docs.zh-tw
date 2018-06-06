@@ -1,29 +1,31 @@
 ---
-title: "DQS 知識庫與定義域 | Microsoft Docs"
-ms.custom: 
+title: DQS 知識庫與定義域 | Microsoft Docs
+ms.custom: ''
 ms.date: 10/01/2012
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: data-quality-services
-ms.service: 
 ms.component: data-quality-services
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: data-quality-services
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- data-quality-services
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: b5879041-db1e-4c6c-b49a-33784ade2942
-caps.latest.revision: "32"
+caps.latest.revision: 32
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.workload: Inactive
-ms.openlocfilehash: 039357d36d63b485eff66febbf4bf1df53a0e359
-ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
+manager: craigg
+ms.openlocfilehash: e18e755484c7e5a28d5122f6a1a2d142c419aaf6
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="dqs-knowledge-bases-and-domains"></a>DQS 知識庫與定義域
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
   本主題描述 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) 中的知識庫定義。 若要清理資料，您必須有關於資料的知識。 若要準備資料品質專案的知識，您要建置並維護一個 DQS 可以用來識別不正確或無效資料的知識庫 (KB)。 DQS 可讓您同時使用電腦輔助和互動式程序來建立、建置和更新知識庫。 知識庫中的知識是在定義域中維護，其中每個定義域都專屬於某個資料欄位。 知識庫是有關資料的知識儲存機制，可讓您了解資料及維護資料的完整性。  
   
  DQS 知識庫具有下列優點：  

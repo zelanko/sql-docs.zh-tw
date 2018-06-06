@@ -1,32 +1,33 @@
 ---
-title: "SQLSetParam 函式 |Microsoft 文件"
-ms.custom: 
+title: SQLSetParam 函式 |Microsoft 文件
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
-ms.component: odbc
-ms.reviewer: 
+ms.prod: sql
+ms.prod_service: connectivity
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
-ms.topic: article
-apiname: SQLSetParam
-apilocation: sqlsrv32.dll
+ms.technology: connectivity
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
+apiname:
+- SQLSetParam
+apilocation:
+- sqlsrv32.dll
 apitype: dllExport
-f1_keywords: SQLSetParam
-helpviewer_keywords: SQLSetParam function [ODBC]
+f1_keywords:
+- SQLSetParam
+helpviewer_keywords:
+- SQLSetParam function [ODBC]
 ms.assetid: 2ebdc303-3802-443a-8895-69c93dff5618
-caps.latest.revision: "11"
+caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
-ms.workload: Inactive
-ms.openlocfilehash: 7812c37b392dfa2db648733b7602b6f50507f374
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+manager: craigg
+ms.openlocfilehash: 1e4d0603d8f9d140bcac779433194fde4d4a66d3
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sqlsetparam-function"></a>SQLSetParam 函式
 **一致性**  
@@ -41,6 +42,6 @@ ms.lasthandoff: 12/21/2017
 ## <a name="remarks"></a>備註  
  請參閱[ODBC 64 位元資訊](../../../odbc/reference/odbc-64-bit-information.md)，如果您的應用程式將在 64 位元作業系統上執行。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [ODBC 應用程式開發介面參考](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [ODBC 標頭檔](../../../odbc/reference/install/odbc-header-files.md)

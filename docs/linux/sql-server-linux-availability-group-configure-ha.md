@@ -1,25 +1,22 @@
 ---
-title: "設定 SQL Server Alwayson 可用性群組在 Linux 上的高可用性 |Microsoft 文件"
-description: 
+title: 設定 SQL Server Alwayson 可用性群組在 Linux 上的高可用性 |Microsoft 文件
+description: ''
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.date: 02/14/2018
 ms.topic: article
-ms.prod: sql-non-specified
-ms.prod_service: database-engine
-ms.service: 
-ms.component: 
+ms.prod: sql
+ms.component: ''
 ms.suite: sql
 ms.custom: sql-linux
-ms.technology: database-engine
-ms.assetid: 
-ms.workload: On Demand
-ms.openlocfilehash: 90bd5cfea78adc5f73c4f95af34a108d6b953587
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.technology: linux
+ms.assetid: ''
+ms.openlocfilehash: 495646f4394d9639493a6e15846c80116a8bcee8
+ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="configure-sql-server-always-on-availability-group-for-high-availability-on-linux"></a>設定 SQL Server Alwayson 可用性群組在 Linux 上的高可用性
 

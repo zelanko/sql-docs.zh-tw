@@ -1,16 +1,14 @@
 ---
 title: CREATE REMOTE SERVICE BINDING (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-database
-ms.service: 
 ms.component: t-sql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: t-sql
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - CREATE REMOTE SERVICE BINDING
@@ -40,16 +38,15 @@ helpviewer_keywords:
 - conversation security [Service Broker]
 - remote service bindings [Service Broker], creating
 ms.assetid: 4165c404-4d50-4063-9a6e-6e267d309376
-caps.latest.revision: 
+caps.latest.revision: 46
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 6f0df6ec364331c118de08b6eb312d9cf331761e
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 58b4d3c5438356d61834f657eee787c1bf6ec393
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="create-remote-service-binding-transact-sql"></a>CREATE REMOTE SERVICE BINDING (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -86,7 +83,7 @@ CREATE REMOTE SERVICE BINDING binding_name
  指定與遠端服務通訊時，是否使用匿名驗證。 如果 ANONYMOUS = ON，便會使用匿名驗證，且遠端資料庫的作業會以 **public** 固定資料庫角色成員的身分來執行。 如果 ANONYMOUS = OFF，遠端資料庫的作業會以這個資料庫的特定使用者身分來執行。 如果未指定這個子句，預設值便是 OFF。  
   
 ## <a name="remarks"></a>Remarks  
- [!INCLUDE[ssSB](../../includes/sssb-md.md)] 利用遠端服務繫結來尋找新交談要用的憑證。 在與 *user_name* 建立關聯的憑證中，公開金鑰是用來驗證傳送給遠端服務的訊息，以及對之後要用來加密交談作業的工作階段金鑰進行加密。 *user_name* 的憑證必須對應於主控遠端服務之資料庫中的使用者憑證。  
+ [!INCLUDE[ssSB](../../includes/sssb-md.md)] 利用遠端服務繫結來尋找新交談要用的憑證。 已與 *user_name* 建立關聯的憑證中之公開金鑰會用來驗證傳給遠端服務的訊息，以及對之後要用來加密交談的工作階段金鑰進行加密。 *user_name* 的憑證必須對應於主控遠端服務之資料庫中的使用者憑證。  
   
  只有與 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體以外目標服務通訊的起始服務，才需要遠端服務繫結。 主控起始服務的資料庫必須含有在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體以外的任何目標服務的遠端服務繫結。 主控目標服務的資料庫不需要含有與它交談的起始服務之遠端服務繫結。 當起始端服務和目標服務位於相同的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體中時，不需要任何遠端服務繫結。 但是，如果有遠端服務繫結存在 (此時為 TO SERVICE 指定的 *service_name* 符合本機服務的名稱)，[!INCLUDE[ssSB](../../includes/sssb-md.md)] 將會使用此繫結。  
   

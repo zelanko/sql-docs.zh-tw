@@ -1,33 +1,30 @@
 ---
-title: MarshalOptionsEnum | Microsoft Docs
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
+title: MarshalOptionsEnum |Microsoft 文件
+ms.prod: sql
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
-ms.custom: 
+ms.technology: connectivity
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 apitype: COM
 f1_keywords:
 - MarshalOptionsEnum
 helpviewer_keywords:
 - MarshalOptionsEnum enumeration [ADO]
 ms.assetid: 4013075d-dbea-4bbc-a6f4-c345a55c5633
-caps.latest.revision: 
+caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 837e648bdc05324fe1a1618fec69d778b8cafd5d
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 25cfe307e51d7ac00016ac53c3b02bdf5cfe9a89
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="marshaloptionsenum"></a>MarshalOptionsEnum
 指定應傳回哪一筆記錄，到伺服器。  
@@ -38,7 +35,7 @@ ms.lasthandoff: 02/09/2018
 |**adMarshalModifiedOnly**|1|傳回只會修改到伺服器的資料列。|  
   
 ## <a name="adowfc-equivalent"></a>ADO/WFC 對等項目  
- Package: **com.ms.wfc.data**  
+ 封裝： **com.ms.wfc.data**  
   
 |常數|  
 |--------------|  

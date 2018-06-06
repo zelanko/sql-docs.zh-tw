@@ -1,35 +1,32 @@
 ---
-title: "範例：使用 XMLDATA 和 XMLSCHEMA 選項要求結構描述當作結果 | Microsoft Docs"
-ms.custom: 
+title: 範例：使用 XMLDATA 和 XMLSCHEMA 選項要求結構描述當作結果 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
 ms.component: xml
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- dbe-xml
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: xml
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - RAW mode, requesting schema example
 - RAW mode, with XMLDATA and XMLSCHEMA
 ms.assetid: 3504ca38-be66-42b2-8dab-f499c9584840
-caps.latest.revision: 
+caps.latest.revision: 11
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: cc4ba3242b22ac168b1469d1bd3870218839ea7b
-ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
+ms.openlocfilehash: f3da4c5ab6d1286c908a0f39807d1a3dc7e9017b
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="example-requesting-schemas-as-results-with-the-xmldata-and-xmlschema-options"></a>範例：使用 XMLDATA 和 XMLSCHEMA 選項要求結構描述當做結果
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
-下列查詢會傳回用於描述文件結構的 XML-DATA 結構描述。  
+  下列查詢會傳回用於描述文件結構的 XML-DATA 結構描述。  
   
 ## <a name="example"></a>範例  
   
@@ -60,7 +57,7 @@ GO
 ```  
   
 > [!NOTE]  
->  <`Schema`> 會宣告為命名空間。 為了在不同 FOR XML 查詢中要求多個 XML-Data 結構描述時避免命名空間衝突，所以在每次執行查詢時都會變更命名空間識別碼 (此範例中為 `Schema1` )。 命名空間識別項是由**Schema*n*** 所組成，其中 ***n*** 是整數。  
+>  <`Schema`> 會宣告為命名空間。 為了在不同 FOR XML 查詢中要求多個 XML-Data 結構描述時避免命名空間衝突，所以在每次執行查詢時都會變更命名空間識別碼 (此範例中為 `Schema1` )。 命名空間識別項是由 **Schema*n*** 所組成，其中 ***n*** 是整數。  
   
  指定 `XMLSCHEMA` 選項，則可要求結果傳回 XSD 結構描述。  
   

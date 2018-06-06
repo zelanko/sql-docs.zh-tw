@@ -1,16 +1,12 @@
 ---
-title: sys.dm_db_log_stats (Transact-SQL) | Microsoft Docs
-ms.custom: 
+title: sys.dm_db_log_stats (TRANSACT-SQL) |Microsoft 文件
+ms.custom: ''
 ms.date: 05/17/2017
-ms.prod: sql-non-specified
-ms.prod_service: database-engine
-ms.service: 
-ms.component: dmv's
-ms.reviewer: 
+ms.prod: sql
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: system-objects
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - dm_db_log_stats_TSQL
@@ -21,20 +17,20 @@ dev_langs:
 - TSQL
 helpviewer_keywords:
 - sys.dm_db_log_stats dynamic management function
-ms.assetid: 
-caps.latest.revision: 
+ms.assetid: ''
+caps.latest.revision: ''
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 281e3c2c74361698ddf67a4e9a607c559bd74ccb
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
+ms.openlocfilehash: 018c02c2348e14028a5cbb84ef30b2428ac9e9e7
+ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 05/23/2018
 ---
-# <a name="sysdmdblogstats-transact-sql"></a>sys.dm_db_log_stats (Transact-SQL)   
-[!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
+# <a name="sysdmdblogstats-transact-sql"></a>sys.dm_db_log_stats (TRANSACT-SQL)   
+[!INCLUDE[tsql-appliesto-2016sp2-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-2016sp2-asdb-xxxx-xxx-md.md)]
 
 傳回資料庫的交易記錄檔的摘要層級的屬性和資訊。 使用此資訊來監視和診斷的交易記錄檔的健全狀況。   
   
@@ -50,7 +46,7 @@ ms.lasthandoff: 02/03/2018
 
 *database_id* |NULL |**預設**
 
-資料庫的識別碼。 `database_id` 為 `int`。 有效輸入如下的資料庫，識別碼`NULL`，或`DEFAULT`。 預設值為 `NULL`。 `NULL`和`DEFAULT`是目前資料庫內容中的對等值。  
+資料庫的識別碼。 `database_id` 為 `int`。 有效輸入如下的資料庫，識別碼`NULL`，或`DEFAULT`。 預設值為 `NULL`。 `NULL` 和`DEFAULT`是目前資料庫內容中的對等值。  
 內建函式[DB_ID](../../t-sql/functions/db-id-transact-sql.md)可以指定。 當使用`DB_ID`如果不指定資料庫名稱，在目前資料庫的相容性層級必須是 90 或更高。
 
   
@@ -105,7 +101,7 @@ CROSS APPLY sys.dm_db_log_stats(s.database_id);
 
 ## <a name="see-also"></a>另請參閱  
 [動態管理檢視與函數 &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
-[資料庫相關動態管理檢視 &#40;TRANSACT-SQL &#41;](../../relational-databases/system-dynamic-management-views/database-related-dynamic-management-views-transact-sql.md)   
+[與資料庫相關動態管理檢視&#40;Transact SQL&#41;](../../relational-databases/system-dynamic-management-views/database-related-dynamic-management-views-transact-sql.md)   
 [sys.dm_db_log_space_usage &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-log-space-usage-transact-sql.md)   
 [sys.dm_db_log_info &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-log-info-transact-sql.md)    
   

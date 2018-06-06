@@ -1,34 +1,30 @@
 ---
-title: "Audit Addlogin 事件類別 | Microsoft Docs"
-ms.custom: 
+title: Audit Addlogin 事件類別 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
-ms.prod_service: database-engine, sql-database
-ms.service: 
-ms.component: event-classes
-ms.reviewer: 
+ms.prod: sql
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: supportability
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - Audit Addlogin event class
 ms.assetid: 6e0633dc-889e-49ef-bace-3c50958db2dd
-caps.latest.revision: 
+caps.latest.revision: 31
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 307e71a029c1e2aba66394d323ffe04017df153f
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: cd74da416d77b1d139624bcb0006ff72c87047b3
+ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="audit-addlogin-event-class"></a>Audit Addlogin 事件類別
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-當新增或移除  登入時，就會發生 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] login is added or removed.  
+  當新增或移除  登入時，就會發生 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] login is added or removed.  
   
  在新增登入時如果還有設定其他屬性，例如預設資料庫，您可在這個事件的 **TextData** 資料行中找到這些屬性的相關資訊。 如果在新增登入時設定了這些屬性，就不會發生 **Audit Login Change Property** 事件。  
   

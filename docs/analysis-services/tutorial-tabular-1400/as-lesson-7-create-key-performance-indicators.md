@@ -1,27 +1,19 @@
 ---
-title: "Analysis Services 教學課程第 7 課： 建立關鍵效能指標 |Microsoft 文件"
-description: "描述如何在 Analysis Services 教學課程專案中建立關鍵效能指標。"
-ms.prod_service: analysis-services, azure-analysis-services
-services: analysis-services
-ms.suite: pro-bi
-documentationcenter: 
-author: Minewiskan
-manager: kfile
-editor: 
-tags: 
-ms.assetid: 
-ms.service: analysis-services
-ms.devlang: NA
-ms.topic: get-started-article
-ms.tgt_pltfrm: NA
-ms.workload: na
-ms.date: 02/20/2018
+title: Analysis Services 教學課程第 7 課： 建立關鍵效能指標 |Microsoft 文件
+ms.date: 05/08/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: tabular-models
+ms.topic: tutorial
 ms.author: owend
-ms.openlocfilehash: d4036297bdfc8d2c75061951ff329d20378a57a2
-ms.sourcegitcommit: 7ed8c61fb54e3963e451bfb7f80c6a3899d93322
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: 03dd09c8f06c8e4d96176f47dcc310008feaf564
+ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/20/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="create-key-performance-indicators"></a>建立關鍵效能指標
 
@@ -59,7 +51,7 @@ ms.lasthandoff: 02/20/2018
   
 8.  在 [選取圖示樣式] 中，選取菱形 (紅色)、三角形 (黃色)、圓形 (綠色) 圖示類型。
   
-    ![as-lesson7-kpi](../tutorial-tabular-1400/media/as-lesson7-kpi.png)
+    ![做為 lesson7 kpi](../tutorial-tabular-1400/media/as-lesson7-kpi.png)
     
     > [!TIP]  
     > 請注意展開**描述**可用圖示樣式下方的標籤。 使其更容易識別在用戶端應用程式中使用不同的 KPI 元素的描述。  

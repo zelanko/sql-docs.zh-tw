@@ -1,16 +1,14 @@
 ---
 title: ALTER SECURITY POLICY (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 05/01/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
 ms.component: t-sql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: t-sql
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - ALTER_SECURITY_POLICY_TSQL
@@ -22,16 +20,15 @@ dev_langs:
 helpviewer_keywords:
 - ALTER SECURITY POLICY statement
 ms.assetid: a8efc37e-113d-489c-babc-b914fea2c316
-caps.latest.revision: 
+caps.latest.revision: 20
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: f5ce90660a43e5285735a74a01b560ec210ba3f0
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: 2943e1c1d85e1868ba51433a213e0c6ebfafcdd3
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="alter-security-policy-transact-sql"></a>ALTER SECURITY POLICY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -70,7 +67,7 @@ ALTER SECURITY POLICY schema_name.security_policy_name
  這是安全性原則所屬的結構描述名稱。 因為結構描述繫結，*schema_name* 是必要的。  
   
  [ FILTER | BLOCK ]  
- 繫結至目標資料表之函數的安全性述詞類型。 FILTER 述詞以無訊息方式篩選可讀取作業的資料列。 BLOCK 述詞明確封鎖違反述詞函數的寫入作業。  
+ 繫結至目標資料表之函式的安全性述詞類型。 FILTER 述詞會以無訊息方式篩選讀取作業可用的資料列。 BLOCK 述詞會明確封鎖違反述詞函式的寫入作業。  
   
  tvf_schema_name.security_predicate_function_name  
  這是內嵌資料表值函數，可做為述詞使用，並會在查詢目標資料表時強制執行。 針對每個特定資料表的每項特定 DML 作業，最多只能定義一個安全性述詞。 內嵌資料表值函數必須使用 SCHEMABINDING 選項建立。  
@@ -79,10 +76,10 @@ ALTER SECURITY POLICY schema_name.security_policy_name
  做為安全性述詞函數之參數的資料行名稱或運算式。 目標資料表上的任何資料行都可以做為述詞函數的引數。 可以使用包含常值的運算式、內建函數及使用算術運算子的運算式。  
   
  *table_schema_name.table_name*  
- 這是套用安全性述詞的目標資料表。 特定 DML 作業的單一資料表可以有多個已停用的安全性原則，但無論何時都只能啟用一個安全性原則。  
+ 這是套用安全性述詞的目標資料表。 您可以將多個已停用的安全性原則目標設為特定 DML 作業的單一資料表，但無論何時都只能啟用一個安全性原則。  
   
  *\<block_dml_operation>*  
- 將套用 BLOCK 述詞的特定 DML 作業。 AFTER 指定述詞將在 DML 作業執行之後 (INSERT 或 UPDATE)，根據資料列的值加以評估。 BEFORE 指定述詞將在 DML 作業執行之前 (UPDATE 或 DELETE)，根據資料列的值加以評估。 如果沒有指定作業，述詞將套用至所有作業。  
+ 將套用 BLOCK 述詞的特定 DML 作業。 AFTER 指定述詞將在 DML 作業執行之後 (INSERT 或 UPDATE)，根據資料列的值加以評估。 BEFORE 可指定在 DML 作業 (UPDATE 或 DELETE) 執行之前，根據資料列的值來評估述詞。 如果沒有指定作業，述詞將套用至所有作業。  
   
  您無法「改變」將套用 BLOCK 述詞的作業，因為作業是用來唯一識別該述詞。 相反地，您必須卸除該述詞，並針對新的作業加入一個新的述詞。  
   
@@ -100,7 +97,7 @@ ALTER SECURITY POLICY schema_name.security_policy_name
   
  當使用述詞函數與記憶體最佳化資料表時，安全性原則必須包含 **SCHEMABINDING** 並使用 **WITH NATIVE_COMPILATION** 編譯提示。 SCHEMABINDING 引數無法以 ALTER 陳述式變更，因為它套用至所有的述詞。 若要變更結構描述繫結，您必須卸除並重新建立安全性原則。  
   
- BLOCK 述詞會在執行對應的 DML 作業後加以評估。 因此，READ UNCOMMITTED 查詢可以查看將會回復的暫時性值。  
+ BLOCK 述詞會在執行對應的 DML 作業後加以評估。 因此，READ UNCOMMITTED 查詢可以查看之後會回復的暫時性值。  
   
 ## <a name="permissions"></a>Permissions  
  需要 ALTER ANY SECURITY POLICY 權限。  

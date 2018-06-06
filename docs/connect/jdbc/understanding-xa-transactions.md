@@ -1,27 +1,24 @@
 ---
-title: "了解 XA 交易 |Microsoft 文件"
-ms.custom: 
+title: 了解 XA 交易 |Microsoft 文件
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
-ms.component: jdbc
-ms.reviewer: 
+ms.prod: sql
+ms.prod_service: connectivity
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: connectivity
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: 574e326f-0520-4003-bdf1-62d92c3db457
-caps.latest.revision: "80"
+caps.latest.revision: 80
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
-ms.workload: On Demand
-ms.openlocfilehash: 6599312aa6c25275e6b7a642c6764591d1bf4cba
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+manager: craigg
+ms.openlocfilehash: a78fdb7edae90289d64d4c7fdf74ac3a12d4b115
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="understanding-xa-transactions"></a>了解 XA 交易
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -104,7 +101,7 @@ ms.lasthandoff: 11/18/2017
   
 3.  依照下一節的程式碼範例所示，設定記錄功能。 在輸出記錄檔案中搜尋 "Server XA DLL version:..." 片語。  
   
-###  <a name="BKMK_ServerSide"></a>設定自動回復已取消準備交易的伺服器端逾時設定  
+###  <a name="BKMK_ServerSide"></a> 設定自動回復已取消準備交易的伺服器端逾時設定  
   
 > [!WARNING]  
 >  此伺服器端選項是新功能包含 Microsoft JDBC Driver 4.2 （和更新版本） for SQL Server。 若要取得更新過的表現方式，請務必更新伺服器上的 sqljdbc_xa.dll。 如需有關如何設定用戶端端逾時值的詳細資訊，請參閱[xaresource.settransactiontimeout （)](http://docs.oracle.com/javase/8/docs/api/javax/transaction/xa/XAResource.html)。  
@@ -338,7 +335,7 @@ class XidImpl implements Xid {
 }  
 ```  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [使用 JDBC Driver 執行交易](../../connect/jdbc/performing-transactions-with-the-jdbc-driver.md)  
   
   

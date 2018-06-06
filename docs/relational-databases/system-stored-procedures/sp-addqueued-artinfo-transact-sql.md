@@ -1,16 +1,15 @@
 ---
-title: "sp_addqueued_artinfo (TRANSACT-SQL) |Microsoft 文件"
-ms.custom: 
+title: sp_addqueued_artinfo (TRANSACT-SQL) |Microsoft 文件
+ms.custom: ''
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - sp_addqueued_artinfo
 ms.assetid: decdb6eb-3dcd-4053-a21d-fd367c3fbafb
-caps.latest.revision: 
+caps.latest.revision: 20
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: d9d843930ab1626ac4caadc169567163043e8b1b
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 1bb30e29e1e3dc8d23dfff4a105d835470e51ea9
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="spaddqueuedartinfo-transact-sql"></a>sp_addqueued_artinfo (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -64,16 +62,16 @@ sp_addqueued_artinfo [ @artid= ] 'artid'
  [  **@article=**] **'***文章***'**  
  這是要編寫指令碼的發行項名稱。 *發行項*是**sysname**，沒有預設值  
   
- [  **@publisher=**] **'***發行者***'**  
+ [ **@publisher=**] **'***publisher***'**  
  這是發行者伺服器的名稱。 *發行者*是**sysname**，沒有預設值。  
   
- [  **@publisher_db=**] **'***publisher_db***'**  
+ [ **@publisher_db=**] **'***publisher_db***'**  
  這是發行者資料庫的名稱。 *publisher_db*是**sysname**，沒有預設值。  
   
- [  **@publication=**] **'***發行集***'**  
+ [ **@publication=**] **'***publication***'**  
  這是要編寫指令碼的發行集名稱。 *發行集*是**sysname**，沒有預設值。  
   
- [  **@dest_table=** ] *' dest_table***'**  
+ [  **@dest_table=** ] *' dest_table * * * '**  
  這是目的地資料表的名稱。 *dest_table*是**sysname**，沒有預設值。  
   
  [ **@owner =** ] **'***擁有者***'**  
@@ -93,10 +91,10 @@ sp_addqueued_artinfo [ @artid= ] 'artid'
 ## <a name="permissions"></a>Permissions  
  只有成員**sysadmin**固定的伺服器角色或**db_owner**固定的資料庫角色可以執行**sp_addqueued_artinfo**。  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [Updatable Subscriptions for Transactional Replication](../../relational-databases/replication/transactional/updatable-subscriptions-for-transactional-replication.md)   
- [sp_script_synctran_commands &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/sp-script-synctran-commands-transact-sql.md)   
- [MSsubscription_articles &#40;TRANSACT-SQL &#41;](../../relational-databases/system-tables/mssubscription-articles-transact-sql.md)   
+ [sp_script_synctran_commands &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-script-synctran-commands-transact-sql.md)   
+ [MSsubscription_articles &#40;Transact SQL&#41;](../../relational-databases/system-tables/mssubscription-articles-transact-sql.md)   
  [系統預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

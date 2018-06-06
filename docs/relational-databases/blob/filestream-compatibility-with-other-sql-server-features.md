@@ -1,35 +1,33 @@
 ---
-title: "FILESTREAM 與其他 SQL Server 功能的相容性 | Microsoft Docs"
-ms.custom: 
+title: FILESTREAM 與其他 SQL Server 功能的相容性 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
 ms.component: blob
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-blob
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - FILESTREAM [SQL Server], other SQL Server features and
 - FILESTREAM [SQL Server], limitations
 ms.assetid: d2c145dc-d49a-4f5b-91e6-89a2b0adb4f3
-caps.latest.revision: 
+caps.latest.revision: 42
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 0eed847233401ffffc5e783e4de89b52e57910eb
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.openlocfilehash: bb904d5e7c0804f4c0f9c84936bb3099c86e28be
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="filestream-compatibility-with-other-sql-server-features"></a>FILESTREAM 與其他 SQL Server 功能的相容性
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-由於 FILESTREAM 資料位於檔案系統中，所以本主題提供了搭配下列 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]功能使用 FILESTREAM 的一些考量、指導方針和限制：  
+  由於 FILESTREAM 資料位於檔案系統中，所以本主題提供了搭配下列 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]功能使用 FILESTREAM 的一些考量、指導方針和限制：  
   
 -   [SQL Server Integration Services (SSIS)](#ssis)  
   
@@ -59,7 +57,7 @@ ms.lasthandoff: 02/12/2018
  您可以使用匯入資料行轉換，將檔案系統中的檔案載入 FILESTREAM 資料行中。 您也可以使用匯出資料行轉換，將檔案從 FILESTREAM 資料行擷取至檔案系統中的其他位置。  
   
 ##  <a name="distqueries"></a> 分散式查詢和連結的伺服器  
- 可透過分散式查詢和連結的伺服器，將 FILESTREAM 資料當作 **varbinary(max)** 資料來使用。 在使用四部分名稱的分散式查詢中，即使此名稱參考本機伺服器，也無法使用 FILESTREAM **PathName()** 函數。 不過， **PathName()** 可在使用 **OPENQUERY()**之傳遞查詢的內部查詢中使用。  
+ 可透過分散式查詢和連結的伺服器，將 FILESTREAM 資料當作 **varbinary(max)** 資料來使用。 在使用四部分名稱的分散式查詢中，即使此名稱參考本機伺服器，也無法使用 FILESTREAM **PathName()** 函數。 不過， **PathName()** 可在使用 **OPENQUERY()** 之傳遞查詢的內部查詢中使用。  
   
 ##  <a name="encryption"></a> 加密  
  即使啟用了透明資料加密，FILESTREAM 資料也不會加密。  

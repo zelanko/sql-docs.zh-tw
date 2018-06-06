@@ -1,30 +1,23 @@
 ---
-title: "Restore-asdatabase 指令程式 |Microsoft 文件"
-ms.custom: 
-ms.date: 03/07/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services, azure-analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+title: Restore-asdatabase 指令程式 |Microsoft 文件
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: powershell
 ms.topic: reference
-ms.assetid: 8ab7a2d0-679c-40e6-b9b9-042184b2dfc9
-caps.latest.revision: "11"
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 86894e5f3c0d438a5a97c45e3927e3996ee6a6ab
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 867de3feef4ade78459d6e55f6fad756e18891d4
+ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="restore-asdatabase-cmdlet"></a>Restore-ASDatabase 指令程式
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]將多維度或表格式資料庫備份 (.abf) 檔案還原到 Analysis Services 執行個體。  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
+  將多維度或表格式資料庫備份 (.abf) 檔案還原到 Analysis Services 執行個體。  
 
 >[!NOTE] 
 >這份文件可能包含過時的資訊和範例。 使用 Get-help cmdlet 取得最新。
@@ -32,7 +25,7 @@ ms.lasthandoff: 01/08/2018
 ## <a name="syntax"></a>語法  
  `Restore-ASDatabase [-RestoreFile] <string> [-Name] <string> [-AllowOverwrite <SwitchParameter>] Locations <Microsoft.AnalysisServices.RestoreLocation[]>] [-Security <Microsoft.AnalysisServices.RestoreSecurity>] [-Password <System.SecureString>] [-StorageLocation <System.string>] [-Server <string>] [-Credential <PSCredential>] [<CommonParameters>]`  
   
-## <a name="description"></a>描述  
+## <a name="description"></a>Description  
  讓 Analysis Services 系統管理員將多維度或表格式資料庫從備份 (.abf) 檔案還原到本機或遠端伺服器執行個體。 如果您要還原的檔案已加密，可以使用 -FilePassword 來提供解密檔案所用的密碼。  
   
  此指令程式支援 –Credential 參數，如果您設定 Analysis Services 執行個體用於 HTTP 存取，就可以使用它。 –Credential 參數會採用提供 Windows 使用者識別的 PSCredential 物件。 然後在連接到 Analysis Services 時，IIS 會模擬此使用者。 此識別必須具有 Analysis Services 執行個體的系統管理員權限，才能還原檔案。  
@@ -50,13 +43,13 @@ ms.lasthandoff: 01/08/2018
 |接受管線輸入？|false|  
 |接受萬用字元？|false|  
   
-### <a name="-name-string"></a>-名稱\<字串 >  
+### <a name="-name-string"></a>-Name \<string>  
  指定要還原的 Analysis Services 資料庫。  
   
 |||  
 |-|-|  
 |必要項？|true|  
-|位置？|@shouldalert|  
+|位置？|1|  
 |預設值||  
 |接受管線輸入？|false|  
 |接受萬用字元？|false|  
@@ -116,7 +109,7 @@ ms.lasthandoff: 01/08/2018
 |接受管線輸入？|false|  
 |接受萬用字元？|false|  
   
-### <a name="-server-string"></a>伺服器\<字串 >  
+### <a name="-server-string"></a>-Server \<string>  
  指定指令程式將會連接並執行的 Analysis Services 執行個體。 如果沒有提供伺服器名稱，將會建立 localhost 的連接。 若為預設執行個體，請單獨指定伺服器名稱。 若為具名執行個體，請使用格式 servername\instancename。 若為 HTTP 連接，請使用格式 http[s]://server[:port]/virtualdirectory/msmdpump.dll。  
   
 |||  

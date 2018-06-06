@@ -1,34 +1,33 @@
 ---
-title: "選取和設定物件以測試 (OracleToSQL) |Microsoft 文件"
-ms.prod: sql-non-specified
+title: 選取和設定物件以測試 (OracleToSQL) |Microsoft 文件
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
 ms.component: ssma-oracle
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
-ms.topic: article
-helpviewer_keywords: Selection of Objects to Test,Parameter Comparison Settings
+ms.technology: ssma
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
+helpviewer_keywords:
+- Selection of Objects to Test,Parameter Comparison Settings
 ms.assetid: 29fb6542-5c1f-4b14-a822-87700beb7623
-caps.latest.revision: "8"
+caps.latest.revision: 8
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
-ms.workload: Inactive
-ms.openlocfilehash: 51688e76b4493b6f4fa5eda7712d1e60ac498c99
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 8f4e53df32355dbe26efee5f680eb19e529d9670
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="selecting-and-configuring-objects-to-test-oracletosql"></a>選取和設定測試 (OracleToSQL) 的物件
 在這個步驟中選取測試，並設定設定值比較程序和函式的輸出參數，以及函式的傳回值的物件。  
   
 ## <a name="selection-of-objects-to-test"></a>要測試之物件的選取範圍  
-在 Oracle 物件樹狀目錄，位於視窗的左半部，請檢查您想要在測試過程中叫用的物件。 請參閱中的可測試物件的完整清單[測試移轉的資料庫物件 &#40; OracleToSQL &#41;](../../ssma/oracle/testing-migrated-database-objects-oracletosql.md)主題。  
+在 Oracle 物件樹狀目錄，位於視窗的左半部，請檢查您想要在測試過程中叫用的物件。 請參閱中的可測試物件的完整清單[測試移轉的資料庫物件&#40;OracleToSQL&#41; ](../../ssma/oracle/testing-migrated-database-objects-oracletosql.md)主題。  
   
 如果 SSMA Tester 不支援任何測試選取的物件，您會看到標示為連結**有些選取的物件包含錯誤**物件樹狀結構下方。 按一下此連結來檢視的理由為何無法測試這些物件，並清除選取錯誤的物件。  
   
@@ -85,8 +84,8 @@ ms.lasthandoff: 12/21/2017
 您可以指定輸入的參數值在**呼叫值**頁面。 **加入呼叫**按鈕會將新的呼叫，以空的參數值。 **移除呼叫**按鈕會移除目前的呼叫。  
   
 ## <a name="next-step"></a>下一個步驟  
-[選取並設定受影響物件 &#40; OracleToSQL &#41;](../../ssma/oracle/selecting-and-configuring-affected-objects-oracletosql.md)  
+[選取並設定受影響的物件&#40;OracleToSQL&#41;](../../ssma/oracle/selecting-and-configuring-affected-objects-oracletosql.md)  
   
-## <a name="see-also"></a>請參閱  
-[測試移轉的資料庫物件 &#40; OracleToSQL &#41;](../../ssma/oracle/testing-migrated-database-objects-oracletosql.md)  
+## <a name="see-also"></a>另請參閱  
+[測試移轉的資料庫物件&#40;OracleToSQL&#41;](../../ssma/oracle/testing-migrated-database-objects-oracletosql.md)  
   

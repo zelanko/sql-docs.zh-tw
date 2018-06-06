@@ -1,21 +1,21 @@
 ---
-title: "建立採礦模型 (DMX) |Microsoft 文件"
-ms.custom: 
+title: 建立採礦模型 (DMX) |Microsoft 文件
+ms.custom: ''
 ms.date: 03/02/2016
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
 ms.component: data-mining
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - CREATE MINING MODEL
 - CREATE
 - CREATE_MINING_MODEL
-dev_langs: DMX
+dev_langs:
+- DMX
 helpviewer_keywords:
 - RELATED TO column
 - mining models [Analysis Services], creating
@@ -24,16 +24,15 @@ helpviewer_keywords:
 - SESSION clause
 - CREATE MINING MODEL statement
 ms.assetid: 43e4b591-7b34-494c-9b2d-7f0fe69af788
-caps.latest.revision: "57"
+caps.latest.revision: 57
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: 3c4720b0ecb2dcf3aa17f250a30f106ddd1e941f
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: b496ad8ea528345fed110c388c1ffa632c6b0cb3
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="create-mining-model-dmx"></a>CREATE MINING MODEL (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -42,7 +41,7 @@ ms.lasthandoff: 01/08/2018
   
  採礦結構的命名方式，是在模型名稱後附加「_structure」，這可確保結構名稱與模型名稱一樣保持唯一。  
   
- 若要建立現有採礦結構的採礦模型，使用[ALTER MINING STRUCTURE &#40; DMX &#41;](../dmx/alter-mining-structure-dmx.md)陳述式。  
+ 若要建立現有採礦結構的採礦模型，使用[ALTER MINING STRUCTURE &#40;DMX&#41; ](../dmx/alter-mining-structure-dmx.md)陳述式。  
   
 ## <a name="syntax"></a>語法  
   
@@ -114,22 +113,22 @@ CREATE MINING MODEL <model> FROM PMML <xml string>
   
  如需可用於定義資料行之資料類型、內容類型、資料行散發及模型旗標的清單，請參閱下列主題：  
   
--   [資料類型 &#40; 資料採礦 &#41;](../analysis-services/data-mining/data-types-data-mining.md)  
+-   [資料類型 & #40; 資料採礦 & #41;](../analysis-services/data-mining/data-types-data-mining.md)  
   
--   [內容類型 &#40; 資料採礦 &#41;](../analysis-services/data-mining/content-types-data-mining.md)  
+-   [內容類型 & #40; 資料採礦 & #41;](../analysis-services/data-mining/content-types-data-mining.md)  
   
--   [資料行散發 &#40; 資料採礦 &#41;](../analysis-services/data-mining/column-distributions-data-mining.md)  
+-   [資料行散發&#40;資料採礦&#41;](../analysis-services/data-mining/column-distributions-data-mining.md)  
   
--   [模型旗標 &#40; 資料採礦 &#41;](../analysis-services/data-mining/modeling-flags-data-mining.md)  
+-   [模型旗標 & #40; 資料採礦 & #41;](../analysis-services/data-mining/modeling-flags-data-mining.md)  
   
- 您可以在陳述式中加入子句，以描述兩個資料行之間的關聯性。 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]支援下列使用\<資料行關聯性 > 子句。  
+ 您可以在陳述式中加入子句，以描述兩個資料行之間的關聯性。 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 支援下列使用\<資料行關聯性 > 子句。  
   
  **與**  
  這個表單表示階層。 RELATED TO 資料行的目標可以是巢狀資料表中的索引鍵資料行、案例資料列中的分隔值資料行，或者使用 RELATED TO 子句的另一個資料行 (表示更深的階層)。  
   
  使用預測子句描述如何使用預測資料行。 下表描述兩個可能的子句。  
   
-|\<預測 > 子句|描述|  
+|\<預測 > 子句|Description|  
 |---------------------------|-----------------|  
 |**PREDICT**|這個資料行可以依模型預測，也可以在輸入案例中提供以預測其他可預測資料行的值。|  
 |**PREDICT_ONLY**|這個資料行可以依模型預測，但是其值不能用於輸入案例中以預測其他可預測資料行的值。|  
@@ -141,7 +140,7 @@ CREATE MINING MODEL <model> FROM PMML <xml string>
 [<parameter> = <value>, <parameter> = <value>,…]  
 ```  
   
- 如需每一種演算法相關聯的參數，請參閱[資料採礦演算法 &#40;Analysis Services-資料採礦 &#41;](../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md).  
+ 如需每一種演算法相關聯的參數，請參閱[資料採礦演算法&#40;Analysis Services-Data Mining&#41;](../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)。  
   
 ## <a name="remarks"></a>備註  
  如果您想要建立具有內建測試資料集的模型，您應該使用 CREATE MINING STRUCTURE 陳述式，後面接著 ALTER MINING STRUCTURE。 但是，並非所有模型類型都支援鑑效組資料集。 如需詳細資訊，請參閱 [CREATE MINING STRUCTURE &#40;DMX&#41;](../dmx/create-mining-structure-dmx.md)。  
@@ -206,9 +205,9 @@ CREATE MINING MODEL SalesForecast (
 USING Microsoft_Time_Series (PERIODICITY_HINT = '{12}', FORECAST_METHOD = 'ARTXP')  
 ```  
   
-## <a name="see-also"></a>請參閱  
- [資料採礦延伸模組 &#40; DMX &#41;資料定義陳述式](../dmx/dmx-statements-data-definition.md)   
- [資料採礦延伸模組 &#40; DMX &#41;資料操作陳述式](../dmx/dmx-statements-data-manipulation.md)   
- [資料採礦延伸模組 &#40;DMX&#41; 陳述式參考](../dmx/data-mining-extensions-dmx-statements.md)  
+## <a name="see-also"></a>另請參閱  
+ [資料採礦延伸模組&#40;DMX&#41;資料定義陳述式](../dmx/dmx-statements-data-definition.md)   
+ [資料採礦延伸模組&#40;DMX&#41;資料操作陳述式](../dmx/dmx-statements-data-manipulation.md)   
+ [資料採礦延伸模組 & #40; DMX & #41;陳述式參考](../dmx/data-mining-extensions-dmx-statements.md)  
   
   

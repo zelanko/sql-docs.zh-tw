@@ -1,17 +1,15 @@
 ---
-title: "ADO 的 Visual c + + 語法索引 #import |Microsoft 文件"
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
+title: 'ADO 的 Visual c + + 語法索引 #import |Microsoft 文件'
+ms.prod: sql
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
-ms.custom: 
+ms.technology: connectivity
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 apitype: COM
 dev_langs:
 - C++
@@ -20,25 +18,24 @@ helpviewer_keywords:
 - 'ADO for Visual C++ syntax with #import [ADO]'
 - '#import [ADO]'
 ms.assetid: 5930ccd2-5bab-448a-b0bf-773b8a83e87c
-caps.latest.revision: 
+caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 8829dcf3f55d7281ee2db8f3f09b474e95bc26a7
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 8f841b7d15682d30062ae498dbfe692b7ee39432
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ado-for-visual-c-syntax-index-with-import"></a>Visual c + + 語法索引 #import ADO
-此索引是根據 Microsoft Visual c + + ADO 語言參考的交互參照和**#import**指示詞。  
+此索引是根據 Microsoft Visual c + + ADO 語言參考的交互參照和 **#import**指示詞。  
   
- 這個特定的索引已編譯的程式衍生**#import**指示詞針對此 ADO.dll 檔，然後重新格式化 *.tlh 檔案所產生。 只有方法、 屬性和事件的相關資訊時保留。 替代語法宣告每個屬性會列出由相對應為"`__declspec(property...)`"指示詞。  
+ 這個特定的索引已編譯的程式衍生 **#import**指示詞針對此 ADO.dll 檔，然後重新格式化 *.tlh 檔案所產生。 只有方法、 屬性和事件的相關資訊時保留。 替代語法宣告每個屬性會列出由相對應為"`__declspec(property...)`"指示詞。  
   
  強烈建議您使用讀取[Visual c + + ADO Programming](../../../ado/guide/appendixes/visual-c-ado-programming.md)如需詳細資訊。  
   
- 使用 Visual c + + 中的方法和屬性語法**#import**指示詞會針對下列項目列出：  
+ 使用 Visual c + + 中的方法和屬性語法 **#import**指示詞會針對下列項目列出：  
   
 -   [ADO 集合](../../../ado/reference/ado-api/collections-visual-c-syntax-index-with-sharpimport.md)  
   

@@ -1,33 +1,32 @@
 ---
-title: "SQL Server 的 Memory Broker Clerks 物件 | Microsoft Docs"
-ms.custom: 
+title: SQL Server 的 Memory Broker Clerks 物件 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
 ms.component: performance-monitor
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - SQLServer:Memory Broker Clerks
 ms.assetid: 47b9c236-66a3-4c42-97ee-da5555bdc046
-caps.latest.revision: 
+caps.latest.revision: 4
 author: dagiro
 ms.author: v-dagir
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 9d86b986025348a829734d57625a0567041cd12d
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: abc1812029cdf51d829b6e15a4049d05a7ae5383
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sql-server-memory-broker-clerks-object"></a>SQL Server, Memory Broker Clerks 物件
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] **SQLServer:Memory Broker Clerks** 效能物件提供與記憶 Broker Clerk 相關之統計資料的計數器。
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+**SQLServer:Memory Broker Clerks** 效能物件提供與記憶體 Broker Clerk 相關之統計資料的計數器。
 
 下表說明 SQL Server **Memory Broker Clerks** 效能物件。
 

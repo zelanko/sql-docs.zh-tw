@@ -1,32 +1,33 @@
 ---
-title: "SQLGetDiagField 函數 |Microsoft 文件"
-ms.custom: 
+title: SQLGetDiagField 函數 |Microsoft 文件
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
-ms.component: odbc
-ms.reviewer: 
+ms.prod: sql
+ms.prod_service: connectivity
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
-ms.topic: article
-apiname: SQLGetDiagField
-apilocation: sqlsrv32.dll
+ms.technology: connectivity
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
+apiname:
+- SQLGetDiagField
+apilocation:
+- sqlsrv32.dll
 apitype: dllExport
-f1_keywords: SQLGetDiagField
-helpviewer_keywords: SQLGetDiagField function [ODBC]
+f1_keywords:
+- SQLGetDiagField
+helpviewer_keywords:
+- SQLGetDiagField function [ODBC]
 ms.assetid: 1dbc4398-97a8-4585-bb77-1f7ea75e24c4
-caps.latest.revision: "26"
+caps.latest.revision: 26
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
-ms.workload: Inactive
-ms.openlocfilehash: c202841d54e01758312c4e8388a78e583de9058c
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+manager: craigg
+ms.openlocfilehash: 39ae1a58454a7ce70f5ae2a33d951a769223fdd1
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sqlgetdiagfield-function"></a>SQLGetDiagField 函數
 **一致性**  
@@ -79,7 +80,7 @@ SQLRETURN SQLGetDiagField(
   
  如果*DiagInfoPtr*是 NULL， *StringLengthPtr*仍會傳回的總位元組數 （不含字元資料 null 結束字元） 可用來傳回所指向之緩衝區中*DiagInfoPtr*。  
   
- *Columnsize*  
+ *BufferLength*  
  [輸入]如果*Sqlgetdiagfield*是 ODBC 定義的診斷和*DiagInfoPtr*指向字元字串或二進位的緩衝區，這個引數應該是長度\* *DiagInfoPtr*. 如果*Sqlgetdiagfield*是 ODBC 定義的欄位和\* *DiagInfoPtr*是整數， *Columnsize*會被忽略。 如果中的值 *\*DiagInfoPtr*是 Unicode 字串 (當呼叫**SQLGetDiagFieldW**)、 *Columnsize*引數必須是偶數。  
   
  如果*Sqlgetdiagfield*是驅動程式定義的欄位，應用程式設定指出欄位驅動程式管理員性質*Columnsize*引數。 *Columnsize*可以是下列值：  
@@ -156,7 +157,7 @@ SQLRETURN SQLGetDiagField(
   
  驅動程式可以定義驅動程式特定標頭和記錄欄位中的診斷資料結構。  
   
- ODBC 3*.x*應用程式使用 ODBC 2*.x*驅動程式將無法呼叫**SQLGetDiagField**只能搭配*Sqlgetdiagfield*SQL_DIAG_CLASS_ORIGIN、 SQL_DIAG_CLASS_SUBCLASS_ORIGIN、 SQL_DIAG_CONNECTION_NAME、 SQL_DIAG_MESSAGE_TEXT、 SQL_DIAG_NATIVE、 SQL_DIAG_NUMBER、 SQL_DIAG_RETURNCODE、 SQL_DIAG_SERVER_NAME 或 SQL_DIAG_SQLSTATE 的引數。 所有其他診斷欄位將會傳回 SQL_ERROR。  
+ ODBC 3 *.x*應用程式使用 ODBC 2 *.x*驅動程式將無法呼叫**SQLGetDiagField**只能搭配*Sqlgetdiagfield*SQL_DIAG_CLASS_ORIGIN、 SQL_DIAG_CLASS_SUBCLASS_ORIGIN、 SQL_DIAG_CONNECTION_NAME、 SQL_DIAG_MESSAGE_TEXT、 SQL_DIAG_NATIVE、 SQL_DIAG_NUMBER、 SQL_DIAG_RETURNCODE、 SQL_DIAG_SERVER_NAME 或 SQL_DIAG_SQLSTATE 的引數。 所有其他診斷欄位將會傳回 SQL_ERROR。  
   
 ## <a name="header-fields"></a>標頭欄位  
  下表所列的標頭欄位可以包含在*Sqlgetdiagfield*引數。  
@@ -235,7 +236,7 @@ n 層定義 *|「 建立網域 」|SQL_DIAG_CREATE_DOMAIN|
 -   屬於特定的資料列的所有記錄，記錄會依照 SQL_DIAG_ROW_NUMBER 欄位中的值。 列出所有錯誤和警告的第一個資料列受到影響，，然後所有錯誤和警告的下一個資料都列受影響，依此類推。  
   
 > [!NOTE]  
->  ODBC 3*.x*驅動程式管理員不會排序狀態記錄診斷的佇列中如果 SQLSTATE 01S01 （資料列中的錯誤） 由 ODBC 2*.x*驅動程式或如果 SQLSTATE 01S01 （資料列中的錯誤） 由 ODBC3*.x*驅動程式時**SQLExtendedFetch**稱為或**SQLSetPos**已被使用定位資料指標上呼叫**SQLExtendedFetch**.  
+>  ODBC 3 *.x*驅動程式管理員不會排序狀態記錄診斷的佇列中如果 SQLSTATE 01S01 （資料列中的錯誤） 由 ODBC 2 *.x*驅動程式或如果 SQLSTATE 01S01 （資料列中的錯誤） 由 ODBC3 *.x*驅動程式時**SQLExtendedFetch**稱為或**SQLSetPos**已被使用定位資料指標上呼叫**SQLExtendedFetch**.  
   
  內每個資料列，或所有未對應的資料列或資料列號碼是未知，這些記錄或資料列數等於 SQL_NO_ROW_NUMBER 所有這些記錄，第一個列出的記錄是由使用一組的排序規則決定。 第一筆記錄之後, 會影響資料列的其他記錄的順序是未定義。 應用程式不能假設錯誤之前的警告之後第一筆記錄。 應用程式應該掃描完成診斷資料結構，以取得失敗呼叫的函式的完整資訊。  
   
@@ -257,6 +258,6 @@ n 層定義 *|「 建立網域 」|SQL_DIAG_CREATE_DOMAIN|
 |---------------------------|---------|  
 |取得多個欄位的診斷資料結構|[SQLGetDiagRec 函式](../../../odbc/reference/syntax/sqlgetdiagrec-function.md)|  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [ODBC 應用程式開發介面參考](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [ODBC 標頭檔](../../../odbc/reference/install/odbc-header-files.md)

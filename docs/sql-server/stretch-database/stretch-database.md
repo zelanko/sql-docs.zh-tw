@@ -1,30 +1,28 @@
 ---
 title: Stretch Database | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 06/27/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
 ms.component: stretch-database
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-stretch
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - Stretch Database
 ms.assetid: ce6db775-21a5-40bc-95a1-f560376d4ee2
-caps.latest.revision: 
+caps.latest.revision: 39
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 30361d4466b7495945a7dae857bbcd52fd86103a
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 9ea4006d0542200ce2546ad6f0a7d2835880b079
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="stretch-database"></a>Stretch Database
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly.md)]
@@ -50,7 +48,7 @@ ms.lasthandoff: 02/09/2018
  您可以安全地將最重要的應用程式延展到雲端，因此大可放心。 SQL Server 的永遠加密可為使用中的資料提供加密。 資料列層級安全性 (RLS) 及其他進階 SQL Server 安全性功能也可搭配 Stretch Database 運作，以保護您的資料。  
   
 ## <a name="what-does-stretch-database-do"></a>Stretch Database 有何作用？  
- 當您對 SQL Server 執行個體、資料庫或甚至一個資料表啟用 Stretch Database 後，Stretch Database 就會在幕後將您的原始資料遷移到 Azure。  
+ 當您對 SQL Server 執行個體、資料庫或選取至少一個資料表啟用 Stretch Database 後，Stretch Database 就會在幕後將您的原始資料移轉到 Azure。  
   
 -   如果您將原始資料儲存在個別的資料表中，可以遷移整個資料表。  
   

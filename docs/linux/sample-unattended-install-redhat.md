@@ -1,24 +1,21 @@
 ---
-title: "Red Hat Enterprise Linux 上的 SQL Server 的自動的安裝 |Microsoft 文件"
-description: "SQL Server 指令碼範例在 Red Hat Enterprise Linux 上的自動安裝"
+title: Red Hat Enterprise Linux 上的 SQL Server 的自動的安裝 |Microsoft 文件
+description: SQL Server 指令碼範例在 Red Hat Enterprise Linux 上的自動安裝
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.date: 10/02/2017
 ms.topic: article
-ms.prod: sql-non-specified
-ms.prod_service: database-engine
-ms.service: 
-ms.component: 
+ms.prod: sql
+ms.component: ''
 ms.suite: sql
 ms.custom: sql-linux
-ms.technology: database-engine
-ms.workload: Inactive
-ms.openlocfilehash: 67f9d71c2a5bd1f57e270c07028f6e8c0ac036a1
-ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
+ms.technology: linux
+ms.openlocfilehash: f9eb7f2e8754a81650f167104d53150f0f0a4d90
+ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/13/2018
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="sample-unattended-sql-server-installation-script-for-red-hat-enterprise-linux"></a>Red Hat Enterprise Linux 的範例： 無人看管的 SQL Server 安裝指令碼
 

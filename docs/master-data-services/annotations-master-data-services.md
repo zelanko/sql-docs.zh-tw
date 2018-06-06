@@ -1,33 +1,34 @@
 ---
-title: "註解 (Master Data Services) | Microsoft Docs"
-ms.custom: 
+title: 註解 (Master Data Services) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: mds
-ms.service: 
 ms.component: non-specific
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - master-data-services
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - annotations [Master Data Services]
 - annotations [Master Data Services], about annotations
 ms.assetid: 8c6401ef-17f0-41f5-be7a-01f49141f04c
-caps.latest.revision: 
+caps.latest.revision: 7
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 26b66a993dc0ccbd167b092b595ae989f6b53610
-ms.sourcegitcommit: 6ac1956307d8255dc544e1063922493b30907b80
+ms.openlocfilehash: 80b78a63bddfe1913fc3f8cabce8533bcf45cc76
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="annotations-master-data-services"></a>註解 (Master Data Services)
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
   在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中，註解是指您輸入以提供交易之相關詳細資料的註解。  
   
  您可以為交易加上註解，以便提供有關為何採取某項動作的原因。 您必須選取一個交易來加入相關的註解。 註解會與交易一起顯示在：  

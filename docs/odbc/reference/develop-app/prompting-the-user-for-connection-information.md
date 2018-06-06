@@ -1,16 +1,14 @@
 ---
-title: "提示使用者輸入連接資訊 |Microsoft 文件"
-ms.custom: 
+title: 提示使用者輸入連接資訊 |Microsoft 文件
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
-ms.component: odbc
-ms.reviewer: 
+ms.prod: sql
+ms.prod_service: connectivity
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: connectivity
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - connecting to data source [ODBC], SqlConnect
 - connecting to driver [ODBC], prompting user for information
@@ -22,16 +20,15 @@ helpviewer_keywords:
 - prompting user for connection information [ODBC]
 - SQLDriverConnect function [ODBC], prompting user for connection information
 ms.assetid: da98e9b9-a4ac-4a9d-bae6-e9252b1fe1e5
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
-ms.workload: Inactive
-ms.openlocfilehash: f72a196447399b6df74de8d46fa1eee572910fac
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+manager: craigg
+ms.openlocfilehash: 305d8bf4c3e18fdb610c6b67b7c678c43e83c6f0
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="prompting-the-user-for-connection-information"></a>提示使用者輸入連接資訊
 如果應用程式使用**SQLConnect**且需要提示使用者輸入的任何連接資訊，例如使用者名稱和密碼，就必須這麼做本身。 這可讓應用程式來控制其 「 外觀 」，它可能會強制應用程式中包含的驅動程式專屬的程式碼。 會發生這種情況是當應用程式必須提示使用者輸入驅動程式特有的連接資訊。 這會是不可能的狀況，設計來搭配任何和所有的驅動程式，包括驅動程式不存在時的應用程式撰寫的泛型應用程式。  

@@ -1,30 +1,30 @@
 ---
-title: "準備輸入的追蹤資料 |Microsoft 文件"
-ms.custom: 
+title: 準備輸入的追蹤資料 |Microsoft 文件
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
 ms.component: distributed-replay
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: database-engine
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: c14fd3d2-5770-47c2-a851-cc13ddbc9bf5
-caps.latest.revision: "23"
+caps.latest.revision: 23
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 7cda1a0a932a914e85618359cb067b2e4da2a0f7
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
-ms.translationtype: MT
+ms.openlocfilehash: 902e1753c1331d1bd35eebea58e53bb7ab7f6777
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.translationtype: MTE
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="prepare-the-input-trace-data"></a>準備輸入追蹤資料
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]您可以開始使用分散式重新執行之前[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay 功能，您必須準備輸入的追蹤資料起始前置處理階段，從 distributed 的 replay 管理工具。 在前置處理階段中，分散式重新執行控制器會處理追蹤資料並產生中繼檔案：  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  您必須先從 Distributed Replay 管理工具起始前置處理階段，準備輸入追蹤資料，才能透過 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay 功能啟動分散式重新執行。 在前置處理階段中，分散式重新執行控制器會處理追蹤資料並產生中繼檔案：  
   
  ![Distributed replay 前置處理階段](../../tools/distributed-replay/media/preprocess.gif "Distributed replay 前置處理階段")  
   
@@ -64,9 +64,9 @@ ms.lasthandoff: 01/17/2018
 3.  在前置處理階段完成之後，中繼檔案會儲存在控制器工作目錄中。 若要起始事件重新執行階段，您必須以 **replay** 選項執行管理工具。 如需詳細資訊，請參閱 [重新執行追蹤資料](../../tools/distributed-replay/replay-trace-data.md)。  
   
 ## <a name="see-also"></a>另請參閱  
- [SQL Server Distributed 的 Replay](../../tools/distributed-replay/sql-server-distributed-replay.md)   
- [Distributed 的 Replay 需求](../../tools/distributed-replay/distributed-replay-requirements.md)   
- [管理工具命令列選項 &#40; Distributed 的 Replay 公用程式 &#41;](../../tools/distributed-replay/administration-tool-command-line-options-distributed-replay-utility.md)   
- [設定 Distributed 的 Replay](../../tools/distributed-replay/configure-distributed-replay.md)  
+ [SQL Server Distributed Replay](../../tools/distributed-replay/sql-server-distributed-replay.md)   
+ [Distributed Replay Requirements](../../tools/distributed-replay/distributed-replay-requirements.md)   
+ [管理工具命令列選項 &#40;Distributed Replay Utility&#41;](../../tools/distributed-replay/administration-tool-command-line-options-distributed-replay-utility.md)   
+ [設定 Distributed Replay](../../tools/distributed-replay/configure-distributed-replay.md)  
   
   

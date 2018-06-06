@@ -1,31 +1,27 @@
 ---
-title: "資料庫引擎事件和錯誤 | Microsoft 文件"
-ms.custom: 
+title: 資料庫引擎事件和錯誤 | Microsoft 文件
+ms.custom: ''
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
-ms.prod_service: database-engine
-ms.service: 
-ms.component: errors-events
-ms.reviewer: 
+ms.prod: sql
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: supportability
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: 04ba51b6-cdc7-409c-8d7e-26ead13e614d
-caps.latest.revision: 
-author: edmacauley
-ms.author: edmaca
+caps.latest.revision: 20
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 4e5ebba9bfa6cdbf6bf0c6c2416227a30c6605df
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 9501265dd7a0c0fdac5941521ee6900aa215e1aa
+ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="database-engine-events-and-errors"></a>Database Engine 事件和錯誤
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 本主題提供 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 的錯誤和事件相關資訊。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  本主題提供有關 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]錯誤和事件的資訊。  
   
 ## <a name="in-this-section"></a>本節內容  
  [了解 Database Engine 錯誤](../../relational-databases/errors-events/understanding-database-engine-errors.md)  

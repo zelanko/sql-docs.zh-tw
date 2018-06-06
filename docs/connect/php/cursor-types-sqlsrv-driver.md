@@ -1,27 +1,25 @@
 ---
-title: "資料指標類型 （SQLSRV 驅動程式） |Microsoft 文件"
-ms.custom: 
+title: 資料指標類型 （SQLSRV 驅動程式） |Microsoft 文件
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
+ms.prod: sql
+ms.prod_service: connectivity
 ms.component: php
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: connectivity
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: 8472d839-8124-4a62-a83c-7e771b0d4962
-caps.latest.revision: "13"
+caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
-ms.workload: Inactive
-ms.openlocfilehash: 22307b0c750e0d860711695ff42031b36c31a731
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+manager: craigg
+ms.openlocfilehash: ed6b502b0d8b2034624518344c78ed0195dce6b4
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="cursor-types-sqlsrv-driver"></a>資料指標類型 （SQLSRV 驅動程式）
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -48,7 +46,7 @@ SQLSRV 驅動程式可讓您建立資料列結果集，您可以存取以任何�
   
 下表描述您可以在指定的值*列*參數。  
   
-|參數|Description|  
+|매개 변수|Description|  
 |-------------|---------------|  
 |SQLSRV_SCROLL_NEXT|指定下一個資料列。 這是預設值，如果您未指定*列*可捲動的結果集的參數。|  
 |SQLSRV_SCROLL_PRIOR|指定的資料列目前資料列之前。|  
@@ -230,6 +228,6 @@ if ($row ) {
 ?>  
 ```  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
 [指定資料指標類型及選取資料列](../../connect/php/specifying-a-cursor-type-and-selecting-rows.md)  
   

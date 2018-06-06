@@ -1,30 +1,28 @@
 ---
-title: "步驟 2：新增和設定記錄 | Microsoft Docs"
-ms.custom: 
+title: 步驟 2：新增和設定記錄 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
 ms.component: tutorial
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: get-started-article
 applies_to:
 - SQL Server 2016
 ms.assetid: 56105f3f-e500-4669-8c8e-acf434527727
-caps.latest.revision: 
+caps.latest.revision: 21
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 30ac8ecc9fb9b5b18b5dea5d0112a2d9fd045865
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 28f6ab44d3ad27e106a19f6cc9c8f7ac6067af5b
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="lesson-3-2---adding-and-configuring-logging"></a>第 3-2 課 - 新增和設定記錄
 在這項工作中，您將針對 Lesson 3.dtsx 封裝的資料流程啟用記錄。 然後，您會設定文字檔案記錄提供者來記錄 PipelineExecutionPlan 和 PipelineExecuteTrees 事件。 文字檔案記錄提供者會建立容易檢視及容易傳輸的記錄。 這些記錄檔的簡單性，使它們在封裝的基本測試階段特別有用。 您也可以在 [!INCLUDE[ssIS](../includes/ssis-md.md)] 設計師的 [記錄事件] 視窗中檢視記錄項目。  
@@ -45,7 +43,7 @@ ms.lasthandoff: 01/25/2018
   
 6.  在 [組態] 資料行中，按一下 [<New Connection>] 來指定記錄資訊寫入的目的地。  
   
-    在 **[檔案連接管理員編輯器]** 對話方塊中，對於 **[使用類型]**選取 **[建立檔案]**，然後按一下 **[瀏覽]**。 依預設， **[選取檔案]** 對話方塊會開啟專案資料夾，但您可以將記錄資訊儲存至任何位置。  
+    在 **[檔案連接管理員編輯器]** 對話方塊中，對於 **[使用類型]** 選取 **[建立檔案]**，然後按一下 **[瀏覽]**。 依預設， **[選取檔案]** 對話方塊會開啟專案資料夾，但您可以將記錄資訊儲存至任何位置。  
   
 7.  在 **[選取檔案]** 對話方塊的 **[檔案名稱]** 方塊中輸入 **TutorialLog.log**，然後按一下 **[開啟]**。  
   

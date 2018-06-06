@@ -1,33 +1,32 @@
 ---
-title: "刪除資料表對話方塊 (Visual Database Tools) | Microsoft Docs"
-ms.custom: 
+title: 刪除資料表對話方塊 (Visual Database Tools) | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
 ms.component: ssms-visual-db
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: tools-ssms
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ssms
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 f1_keywords:
 - vdt.dlgbox.deletetable
 - vdtsql.chm:69644
 ms.assetid: 56a60bfd-1353-4228-b23e-e887da2228a2
-caps.latest.revision: "3"
+caps.latest.revision: 3
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 9faedaacdacf9d2722ca1ae335d8f43af86d455f
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.openlocfilehash: 33c3e1fddf5260a23bbacf9d302838f051927d11
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="delete-table-dialog-box-visual-database-tools"></a>刪除資料表對話方塊 (Visual Database Tools)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 這個對話方塊可以讓您指定想要刪除資料錄的資料表。 當您變更查詢類型為 DELETE 查詢時，如果 [圖表窗格] 顯示一個以上的資料表，就會出現這個對話方塊。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+這個對話方塊可以讓您指定想要刪除資料錄的資料表。 當您變更查詢類型為 DELETE 查詢時，如果 [圖表窗格] 顯示一個以上的資料表，就會出現這個對話方塊。  
   
 選取要刪除記錄的資料表，然後選擇 [確定]。  
   

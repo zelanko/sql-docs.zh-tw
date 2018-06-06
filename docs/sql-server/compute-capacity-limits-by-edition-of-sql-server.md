@@ -1,43 +1,43 @@
 ---
-title: "SQL Server 版本的計算容量限制 | Microsoft Docs"
-ms.custom: 
+title: SQL Server 版本的計算容量限制 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/06/2017
-ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
-ms.service: 
+ms.prod: sql
+ms.prod_service: sql
 ms.component: sql-non-specified
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: database-engine
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - processors [SQL Server], supported
 - number of processors supported
 - maximum number of processors supported
 ms.assetid: cd308bc9-9468-40cc-ad6e-1a8a69aca6c8
-caps.latest.revision: "60"
+caps.latest.revision: 60
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
-ms.workload: Active
-ms.openlocfilehash: 56a8763efc38fbcb9fcd0597e09e5992f9efc793
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+manager: craigg
+ms.openlocfilehash: 1d197350d9dc209a18f7913ec9c6e27ef91b40a5
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="compute-capacity-limits-by-edition-of-sql-server"></a>SQL Server 版本的計算容量限制
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 本文討論 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 版本的計算容量限制，及其在具有超執行緒處理器的實體和虛擬化環境中有何差異。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  本文討論 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 版本的計算容量限制，及其在具有超執行緒處理器的實體和虛擬化環境中有何差異。  
   
  ![對應至計算容量限制](../sql-server/media/compute-capacity-limits.gif "對應至計算容量限制")  
   
  下表說明上圖中的標記法：  
   
-|值|描述|  
+|ReplTest1|描述|  
 |-----------|-----------------|  
 |0..1|零個或一個|  
-|1|只有一個|  
+|@shouldalert|只有一個|  
 |1..\*|一個或多個|  
 |0..\*|零個或多個|  
 |1..2|一個或兩個|  
@@ -86,7 +86,7 @@ ms.lasthandoff: 12/05/2017
 |[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 版本|單一執行個體的計算容量上限 ([!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssDE](../includes/ssde-md.md)])|單一執行個體的計算容量上限 (AS、RS)|  
 |---------------------------------------|--------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------|  
 |Enterprise Edition：核心授權\*|作業系統最大值|作業系統最大值|  
-|開發人員|作業系統最大值|作業系統最大值|  
+|Developer|作業系統最大值|作業系統最大值|  
 |Standard|限制為 4 個插槽或 24 個核心的較小者|限制為 4 個插槽或 24 個核心的較小者|  
 |Express|限制為 1 個插槽或 4 個核心的較小者|限制為 1 個插槽或 4 個核心的較小者|  
 
@@ -103,6 +103,7 @@ ms.lasthandoff: 12/05/2017
  [SQL Server 2016 版本支援的功能](~/sql-server/editions-and-supported-features-for-sql-server-2016.md)   
  [SQL Server 的最大容量規格](../sql-server/maximum-capacity-specifications-for-sql-server.md)   
  [SQL Server 2016 的安裝快速入門](http://msdn.microsoft.com/library/672afac9-364d-4946-ad5d-8a2d89cf8d81)  
-  
-  
 
+[!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]
+
+[!INCLUDE[contribute-to-content](../includes/paragraph-content/contribute-to-content.md)]

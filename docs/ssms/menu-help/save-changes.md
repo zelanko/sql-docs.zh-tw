@@ -1,34 +1,34 @@
 ---
-title: "儲存變更 | Microsoft Docs"
-ms.custom: 
+title: 儲存變更 | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
 ms.component: ssms-menu
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: tools-ssms
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ssms
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 f1_keywords:
 - sql13.swb.file.close.f1
 - VS.SaveChangesDlg
-helpviewer_keywords: Save Changes dialog box
+helpviewer_keywords:
+- Save Changes dialog box
 ms.assetid: abe17944-c538-4106-a18b-ade5e2d8e20f
-caps.latest.revision: "3"
+caps.latest.revision: 3
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 8913eedde43e2e59dbae1230480bca10fe84219a
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.openlocfilehash: 20d162ca05032645174d4775072486cba6360c6c
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="save-changes"></a>儲存變更
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 警告您除非按一下 [是]，否則不會儲存所列出之項目的變更。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+警告您除非按一下 [是]，否則不會儲存所列出之項目的變更。  
   
 當您關閉方案、維護計畫或其他開啟的檔案時，就會出現此對話方塊。  
   

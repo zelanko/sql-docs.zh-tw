@@ -1,43 +1,32 @@
 ---
-title: "DISCOVER_SCHEMA_ROWSETS 資料列集 |Microsoft 文件"
-ms.custom: 
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+title: DISCOVER_SCHEMA_ROWSETS 資料列集 |Microsoft 文件
+ms.date: 05/03/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: schema-rowsets
 ms.topic: reference
-apiname: DISCOVER_SCHEMA_ROWSETS
-apitype: NA
-applies_to: SQL Server 2016 Preview
-helpviewer_keywords: DISCOVER_SCHEMA_ROWSETS rowset
-ms.assetid: e5012aa0-6ef8-497f-96c1-2772e2394f62
-caps.latest.revision: "33"
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 73fe1580fb43a090a7df04a43432e5b213e86369
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 7349a3e4877813003212b125de31e7b98343313d
+ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="discoverschemarowsets-rowset"></a>DISCOVER_SCHEMA_ROWSETS 資料列集
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]傳回名稱、 限制、 描述和所有列舉值和所支援的任何其他的提供者特定列舉值的其他資訊[!INCLUDE[msCoName](../../../includes/msconame-md.md)]XML for Analysis (XMLA) 提供者。  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+  傳回 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] XML for Analysis (XMLA) 提供者所支援之所有列舉值 (Enumeration Value) 以及任何其他的提供者特定列舉值的名稱、限制、描述和其他資訊。  
   
  如果您呼叫[探索](../../../analysis-services/xmla/xml-elements-methods-discover.md)方法**DISCOVER_SCHEMA_ROWSETS**中的列舉值[RequestType](../../../analysis-services/xmla/xml-elements-properties/requesttype-element-xmla.md)項目，**探索**方法會傳回**DISCOVER_SCHEMA_ROWSETS**資料列集。  
   
 ## <a name="rowset-columns"></a>資料列集資料行  
  DISCOVER_SCHEMA_ROWSETS 資料列集包含下列資料行。  
   
-|資料行名稱|類型指標|長度|描述|  
+|資料行名稱|類型指標|長度|Description|  
 |-----------------|--------------------|------------|-----------------|  
-|**SchemaName**|**DBTYPE_WSTR**||結構描述或要求的名稱。 此要求會傳回中的值*RequestTypes*列舉型別。|  
+|**schemaName**|**DBTYPE_WSTR**||結構描述或要求的名稱。 此要求會傳回中的值*RequestTypes*列舉型別。|  
 |**SchemaGuid**|**DBTYPE_GUID**||結構描述的 GUID。|  
 |**限制**|**DBTYPE_HCHAPTER**||提供者所支援的限制陣列。|  
 |**說明**|**DBTYPE_WSTR**||結構描述的可當地語系化描述。|  
@@ -60,9 +49,9 @@ ms.lasthandoff: 01/08/2018
   
 |資料行名稱|類型指標|限制狀態|  
 |-----------------|--------------------|-----------------------|  
-|**SchemaName**|**DBTYPE_WSTR**||  
+|**schemaName**|**DBTYPE_WSTR**||  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [XML for Analysis 結構描述資料列集](../../../analysis-services/schema-rowsets/xml/xml-for-analysis-schema-rowsets.md)  
   
   

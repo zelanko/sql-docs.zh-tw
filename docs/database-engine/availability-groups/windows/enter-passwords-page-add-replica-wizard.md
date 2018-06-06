@@ -1,31 +1,30 @@
 ---
-title: "輸入密碼頁面 (新增複本精靈) | Microsoft Docs"
-ms.custom: 
+title: 輸入密碼頁面 (新增複本精靈) | Microsoft Docs
+ms.custom: ''
 ms.date: 05/17/2016
-ms.prod: sql-non-specified
-ms.prod_service: database-engine
-ms.service: 
-ms.component: availability-groups
-ms.reviewer: 
+ms.prod: sql
+ms.prod_service: high-availability
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: dbe-high-availability
-ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords: sql13.swb.addreplicawizard.enterpasswords.f1
+ms.technology: high-availability
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
+f1_keywords:
+- sql13.swb.addreplicawizard.enterpasswords.f1
 ms.assetid: e69207a0-c5c4-44e4-ae9a-4afbb67251d1
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 3b782184c4efe0bfdb632a3473d8a91fb2dfac58
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 64162e72b220d9355b982665c1a444df5eac8811
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="enter-passwords-page-add-replica-wizard"></a>輸入密碼頁面 (加入複本精靈)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 本描述主題描述 [輸入密碼] 頁面的選項。 本主題適用於 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 的 [!INCLUDE[ssAoAddRepWiz](../../../includes/ssaoaddrepwiz-md.md)]。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  本說明主題描述 [輸入密碼] 頁面的選項。 本主題適用於 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 的 [!INCLUDE[ssAoAddRepWiz](../../../includes/ssaoaddrepwiz-md.md)]。  
   
  如果您在 [指定複本] 頁面上選取的複本包含具有資料庫主要金鑰的資料庫，則會顯示 [輸入密碼] 頁面。  
   

@@ -1,0 +1,1 @@
+Itanium 不支援 SQL Server Data Tools\-架構的電腦。 不過，支援 SQL Server Data Tools 是適用於 x64\-架構的電腦。 如果 SQL Server 範例資料庫必須部署在 Itanium\-電腦時，請在 x86 上使用 BI Development Studio\-型或 x64\-架構的修改並執行範例的電腦。

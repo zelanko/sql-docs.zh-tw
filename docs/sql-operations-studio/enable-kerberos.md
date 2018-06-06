@@ -1,28 +1,27 @@
 ---
-title: "SQL Operations Studio （預覽） 中的連接時，使用 Active Directory 驗證 (Kerberos) |Microsoft 文件"
-description: "了解如何啟用 Kerberos，若要使用 Active Directory 驗證的 SQL Operations Studio （預覽）"
+title: SQL Operations Studio (preview) 中的連接時，使用 Active Directory 驗證 (Kerberos) |Microsoft 文件
+description: 了解如何啟用 Kerberos，若要使用 Active Directory 驗證的 SQL Operations Studio (preview)
 ms.custom: tools|sos
 ms.date: 11/17/2017
-ms.prod: sql-non-specified
-ms.reviewer: alayu; erickang; sstein
+ms.prod: sql
+ms.reviewer: alayu; sstein
 ms.suite: sql
 ms.prod_service: sql-tools
 ms.component: sos
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 author: meet-bhagdev
 ms.author: meetb
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: fcc9e91255317d53a63dd9867f6060af591f36e3
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 847638bc0693d83ba38dec6c8fec5e4ca030e01f
+ms.sourcegitcommit: b3bb41424249de198f22d9c6d40df4996f083aa6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/18/2018
 ---
 # <a name="connect-includename-sosincludesname-sos-shortmd-to-your-sql-server-using-windows-authentication---kerberos"></a>連接[!INCLUDE[name-sos](../includes/name-sos-short.md)]到 SQL Server 使用 Windows 驗證的 Kerberos 
 
-[!INCLUDE[name-sos](../includes/name-sos-short.md)]連接到 SQL Server 使用 Kerberos 的支援。
+[!INCLUDE[name-sos](../includes/name-sos-short.md)] 連接到 SQL Server 使用 Kerberos 的支援。
 
 若要在 macOS 或 Lunix 上使用整合式驗證 （Windows 驗證），您必須設定**Kerberos 票證**將目前的使用者連結至 Windows 網域帳戶。 
 
@@ -35,7 +34,7 @@ ms.lasthandoff: 12/21/2017
 ## <a name="checking-if-sql-server-has-kerberos-setup"></a>正在檢查 Sql Server 是否有 Kerberos 設定
 
 主機電腦的 Sql Server 登入。 從 「 Windows 命令提示字元中，使用`setspn -L %COMPUTERNAME%`列出主機的所有服務主體名稱。 您應該會看到開頭 MSSQLSvc/HostName.Domain.com 這表示 Sql Server 已註冊 SPN，而且已準備好接受 Kerberos 驗證的項目。 
-- 如果您沒有存取主應用程式的 Sql Server，然後從任何其他 Windows 作業系統加入相同 Active Directory，您可以使用命令`setspn -L <SQLSERVER_NETBIOS>`< SQLSERVER_NETBIOS > 所在的 Sql Server hsot 的電腦名稱。
+- 如果您沒有存取主應用程式的 Sql Server，然後從任何其他 Windows 作業系統加入相同 Active Directory，您可以使用命令`setspn -L <SQLSERVER_NETBIOS>`< SQLSERVER_NETBIOS > 所在的 Sql Server 主機的電腦名稱。
 
 
 ## <a name="get-the-kerberos-key-distribution-center"></a>取得 Kerberos 金鑰發佈中心
@@ -126,9 +125,9 @@ sudo realm join contoso.com -U 'user@CONTOSO.COM' -v
    
 ```
 
-### <a name="macos"></a>MacOS
+### <a name="macos"></a>macOS
 
-- [遵循下列步驟] 時，將您 macOS 聯結至 Active Directory 網域控制站 (https://support.apple.com/kb/PH26282?viewlocale=en_US 和地區設定 = en_US)。
+- [遵循下列步驟] 時，將您 macOS 聯結至 Active Directory 網域控制站 (https://support.apple.com/kb/PH26282?viewlocale=en_US&locale=en_US)。
 
 
 
@@ -170,7 +169,7 @@ klist
 krbtgt/DOMAIN.COMPANY.COM@ DOMAIN.COMPANY.COM.
 ```
 
-## <a name="connect-using-includename-sosincludesname-sos-shortmd"></a>使用連線[!INCLUDE[name-sos](../includes/name-sos-short.md)]
+## <a name="connect-using-includename-sosincludesname-sos-shortmd"></a>使用連線 [!INCLUDE[name-sos](../includes/name-sos-short.md)]
 
 * 建立新的連線設定檔
 

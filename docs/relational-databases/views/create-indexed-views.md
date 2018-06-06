@@ -1,17 +1,14 @@
 ---
-title: "建立索引檢視表 | Microsoft Docs"
-ms.custom: 
+title: 建立索引檢視表 | Microsoft Docs
+ms.custom: ''
 ms.date: 01/22/2018
-ms.prod: sql-non-specified
-ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
-ms.component: views
-ms.reviewer: 
+ms.prod: sql
+ms.prod_service: table-view-index, sql-database, sql-data-warehouse, pdw
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- dbe-views
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: table-view-index
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - indexed views [SQL Server], creating
 - clustered indexes, views
@@ -20,19 +17,20 @@ helpviewer_keywords:
 - indexed views [SQL Server]
 - views [SQL Server], indexed views
 ms.assetid: f86dd29f-52dd-44a9-91ac-1eb305c1ca8d
-caps.latest.revision: 
-author: sstein
+caps.latest.revision: 79
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.workload: Active
-ms.openlocfilehash: dc562d47b04c20a3878bc0e1b8c63bf5d1151e09
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 556665c8b89dd8b3c2e1b608bdede9bf226c2a8f
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="create-indexed-views"></a>建立索引檢視表
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
-本主題說明如何在檢視上建立索引。 對檢視建立的第一個索引必須是唯一的叢集索引。 建好唯一的叢集索引後，才可以建立其他非叢集索引。 為檢視表建立唯一的叢集索引，可以提升查詢效能，因為檢視表儲存在資料庫中的方式與包含叢集索引之資料表的儲存方式一樣。 查詢最佳化工具可以利用索引檢視表來加快查詢執行的速度。 不必在查詢中參考此檢視表，最佳化工具仍會考慮以該檢視表做為替代方式。  
+  本主題說明如何在檢視上建立索引。 對檢視建立的第一個索引必須是唯一的叢集索引。 建好唯一的叢集索引後，才可以建立其他非叢集索引。 為檢視表建立唯一的叢集索引，可以提升查詢效能，因為檢視表儲存在資料庫中的方式與包含叢集索引之資料表的儲存方式一樣。 查詢最佳化工具可以利用索引檢視表來加快查詢執行的速度。 不必在查詢中參考此檢視表，最佳化工具仍會考慮以該檢視表做為替代方式。  
   
 ##  <a name="BeforeYouBegin"></a> 開始之前  
  以下是建立索引檢視表所需要的步驟，這些步驟對於能否順利完成索引檢視表的實作是很重要的：  
@@ -93,7 +91,7 @@ ms.lasthandoff: 02/09/2018
   
 -   當您建立索引時，`IGNORE_DUP_KEY` 選項必須設定為 OFF (預設值)。    
   
--   在檢視表定義中，兩部分名稱 *schema***.***tablename* 必須參考資料表。    
+-   在檢視表定義中，兩部分名稱 *schema ***.*** tablename* 必須參考資料表。    
   
 -   檢視表中所參考的使用者定義函式，必須使用 `WITH SCHEMABINDING` 選項來建立。    
   
@@ -167,7 +165,7 @@ ms.lasthandoff: 02/09/2018
   
 #### <a name="to-create-an-indexed-view"></a>建立索引檢視表  
   
-1.  在 **[物件總管]**中，連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的執行個體。  
+1.  在 **[物件總管]** 中，連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的執行個體。  
   
 2.  在標準列上，按一下 **[新增查詢]**。  
   

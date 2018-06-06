@@ -1,36 +1,34 @@
 ---
-title: "已註冊的伺服器 F1 說明 | Microsoft Docs"
-ms.custom: 
+title: 已註冊的伺服器 F1 說明 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
 ms.component: ssms-registration
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - SQL Server Management Studio [SQL Server], Help
 - Registered Servers [SQL Server], help
 - SQL Server Management Studio Help [SQL Server], registered servers
 ms.assetid: 59f76b28-ba78-4a1a-b5d5-8b581f30114d
-caps.latest.revision: 
+caps.latest.revision: 23
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: fec25c98a971d3f38d4113042d50a25469e56777
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.openlocfilehash: 00fe3c62180ada724cf202ae1dc2c3e6e9c6df8e
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="registered-servers-f1-help"></a>已註冊的伺服器 F1 說明
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-本節包含 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中 [已註冊的伺服器] 元件的 F1 說明。 它描述各種選項。
+  本節包含 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中 [已註冊的伺服器] 元件的 F1 說明。 它描述各種選項。
   
  若要了解已註冊的伺服器，並取得如何處理它們的連結，請移至 [註冊伺服器](../../tools/sql-server-management-studio/register-servers.md) 主題。 
  
@@ -62,13 +60,13 @@ ms.lasthandoff: 02/12/2018
  如果您的 Reporting Services 安裝設定為使用自訂驗證延伸模組，請使用 [表單驗證] 來連接。  
   
  **使用者名稱**  
- 請輸入連接將使用的登入名稱。 唯有選取 **[基本驗證]** 或 **[表單驗證]**時，才能使用此選項。  
+ 請輸入連接將使用的登入名稱。 唯有選取 **[基本驗證]** 或 **[表單驗證]** 時，才能使用此選項。  
   
  **密碼**  
- 請輸入使用者名稱的密碼。 唯有選取 **[基本驗證]** 或 **[表單驗證]**時，才能編輯此選項。  
+ 請輸入使用者名稱的密碼。 唯有選取 **[基本驗證]** 或 **[表單驗證]** 時，才能編輯此選項。  
   
  **記住密碼**  
- 請儲存您輸入的密碼。 唯有已按一下 **[基本驗證]** 或 **[表單驗證]**時，才能使用此選項。  
+ 請儲存您輸入的密碼。 唯有已按一下 **[基本驗證]** 或 **[表單驗證]** 時，才能使用此選項。  
   
 > **注意：**如果您已儲存密碼而要停止儲存密碼，請清除此核取方塊，然後按一下 [儲存]。  
   

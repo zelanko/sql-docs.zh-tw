@@ -1,17 +1,13 @@
 ---
-title: "SQL Server Database Engine 和 Azure SQL Database 的效能中心 | Microsoft Docs"
-ms.custom: 
+title: SQL Server Database Engine 和 Azure SQL Database 的效能中心 | Microsoft Docs
+ms.custom: ''
 ms.date: 04/08/2016
-ms.prod: sql-non-specified
-ms.prod_service: database-engine
-ms.reviewer: 
-ms.service: 
-ms.component: performance
+ms.prod: sql
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: performance
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 f1_keywords:
 - Performance (SQL Server)
 - Performance (SQL Database)
@@ -23,27 +19,23 @@ helpviewer_keywords:
 - performance (SQL Database)
 - database performance (SQL Database)
 ms.assetid: 301204b2-140d-4495-98ed-021a9b5025f5
-caps.latest.revision: 
+caps.latest.revision: 14
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: f17dd20a0a6c3ffd93cc89dd97140341ed893383
-ms.sourcegitcommit: 7e9380e53341755df13fce130ab3287918a8e44c
+ms.openlocfilehash: 0dc039e723483777fee9d670ca943fb101a29aa5
+ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/21/2018
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="performance-center-for-sql-server-database-engine-and-azure-sql-database"></a>SQL Server Database Engine 和 Azure SQL Database 的效能中心
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-本頁提供的連結有助於您尋找所需之 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 和 [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]中的效能相關資訊。  
+  本頁提供的連結有助於您尋找所需之 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 和 [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]中的效能相關資訊。  
   
  **圖例**  
   
  ![security-center-legend](../../relational-databases/performance/media/security-center-legend.PNG "security-center-legend")  
-  
-## <a name="this-is-a-work-in-process-does-this-performance-center-help-you-how-can-we-improve-it"></a>這是正在處理的工作。 這個效能中心對您有幫助嗎？ 我們該如何改善它？  
- 您要尋找哪些資訊？找到了嗎？ 我們是否遺漏了什麼？ 您想要在這裡看到什麼？ 我們會持續聽取您的意見來改進內容。 請將您的意見傳送到 [sqlfeedback@microsoft.com](mailto:sqlfeedback@microsoft.com?subject=Your%20feedback%20about%20the%20Temporal%20Tables%20page)  
   
 ## <a name="configuration-options-for-performance"></a>效能的組態選項  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 可讓您透過許多組態選項來影響 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 層級的資料庫引擎效能。 使用 [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]，Microsoft 會為您執行其中的大部分 (但非全部) 最大化。  

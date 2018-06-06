@@ -1,16 +1,15 @@
 ---
-title: "為自訂資料處理延伸模組指定連線 | Microsoft Docs"
-ms.custom: 
+title: 為自訂資料處理延伸模組指定連線 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: report-data
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - custom data processing extensions [Reporting Services]
 - IDbConnection interface, connection strings
@@ -23,16 +22,15 @@ helpviewer_keywords:
 - external data sources [Reporting Services]
 - data processing extensions [Reporting Services], connections
 ms.assetid: 2cddc9ea-0e28-4350-80ae-332412908e47
-caps.latest.revision: "20"
+caps.latest.revision: 20
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 5d9cab28d5b6ebe7a9675cffaf6f594a1230c45d
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: f1bef72f7a07df727462e569c8b0971dcfa2f696
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="specify-connections-for-custom-data-processing-extensions"></a>為自訂資料處理延伸模組指定連接
   您可以在報表伺服器中建立或使用協力廠商自訂資料處理延伸模組，以便強化支援之資料來源的資料處理功能，或支援預設 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 安裝未提供的其他資料來源類型。 不同的實作，處理連接的方式也不同。 下列實作適用於資料處理延伸模組：  

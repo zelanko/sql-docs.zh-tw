@@ -1,36 +1,34 @@
 ---
-title: "修改檢視 |Microsoft Docs"
-ms.custom: 
+title: 修改檢視 |Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
-ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
-ms.component: views
-ms.reviewer: 
+ms.prod: sql
+ms.prod_service: table-view-index, sql-database, sql-data-warehouse, pdw
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- dbe-views
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: table-view-index
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - views [SQL Server], renaming
 - views [SQL Server], modifying
 - modifying views
 - renaming views
 ms.assetid: 2d3c14dc-43e5-4324-b8fb-f2692d330b16
-caps.latest.revision: 
-author: sstein
+caps.latest.revision: 22
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 8b389a635dceb2af0e8457f72ae56013edb1065c
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: e4a1df9dc02b3566315436ec8c82cdd466cf25fb
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="modify-views"></a>修改檢視
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-pdw-md.md)]
-定義檢視之後，可以使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ，在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中修改其定義，不需要卸除和重新建立檢視。  
+  定義檢視之後，可以使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ，在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中修改其定義，不需要卸除和重新建立檢視。  
   
  **本主題內容**  
   
@@ -65,7 +63,7 @@ ms.lasthandoff: 02/03/2018
   
 #### <a name="to-modify-a-view"></a>若要修改檢視  
   
-1.  在 **[物件總管]**中，按一下檢視表所在之資料庫旁邊的加號，然後按一下 **[檢視表]** 資料夾旁邊的加號。  
+1.  在 **[物件總管]** 中，按一下檢視表所在之資料庫旁邊的加號，然後按一下 **[檢視表]** 資料夾旁邊的加號。  
   
 2.  以滑鼠右鍵按一下您要修改的檢視，然後選取 [設計]。  
   
@@ -83,7 +81,7 @@ ms.lasthandoff: 02/03/2018
   
 #### <a name="to-modify-a-view"></a>若要修改檢視  
   
-1.  在 **[物件總管]**中，連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的執行個體。  
+1.  在 **[物件總管]** 中，連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的執行個體。  
   
 2.  在標準列上，按一下 **[新增查詢]**。  
   

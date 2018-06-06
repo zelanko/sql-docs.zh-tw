@@ -1,31 +1,28 @@
 ---
-title: "診斷訊息 |Microsoft 文件"
-ms.custom: 
+title: 診斷訊息 |Microsoft 文件
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
-ms.component: odbc
-ms.reviewer: 
+ms.prod: sql
+ms.prod_service: connectivity
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: connectivity
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - diagnostic information [ODBC], diagnostic messages messages
 - error messages [ODBC], diagnostic messages
 - diagnostic messages [ODBC]
 ms.assetid: 98027871-9901-476e-a722-ee58b7723c1f
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
-ms.workload: Inactive
-ms.openlocfilehash: 35cf3118e503193200dec0e5e07714aa4e2a54ba
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+manager: craigg
+ms.openlocfilehash: 9ea827e040afa43762edc32c5a4c28de5581b94e
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="diagnostic-messages"></a>診斷訊息
 診斷訊息會傳回包含每個的 SQLSTATE。 一些不同的訊息通常會傳回相同的 SQLSTATE。 例如，SQLSTATE 42000 （語法錯誤或存取違規） 會傳回 SQL 語法中的大部分錯誤。 不過，每個語法錯誤很可能透過不同的訊息描述。  

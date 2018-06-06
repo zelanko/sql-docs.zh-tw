@@ -1,29 +1,17 @@
 ---
-title: "檢視及彙總資料使用 R （逐步解說） |Microsoft 文件"
-ms.date: 11/10/2017
-ms.reviewer: 
-ms.suite: sql
-ms.prod: machine-learning-services
-ms.prod_service: machine-learning-services
-ms.component: 
-ms.technology: 
-ms.tgt_pltfrm: 
+title: 檢視及彙總資料使用 R （逐步解說） |Microsoft 文件
+ms.prod: sql
+ms.technology: machine-learning
+ms.date: 04/15/2018
 ms.topic: tutorial
-applies_to:
-- SQL Server 2016
-dev_langs:
-- R
-ms.assetid: 358e1431-8f47-4d32-a02f-f90e519eef49
-caps.latest.revision: 
-author: jeannt
-ms.author: jeannt
-manager: cgronlund
-ms.workload: On Demand
-ms.openlocfilehash: 91e936b3d972e0819622304fda2827d4f4674a82
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+author: HeidiSteen
+ms.author: heidist
+manager: cgronlun
+ms.openlocfilehash: ba464bafdb077649dad9633bcb21ca2b026221ca
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="view-and-summarize-data-using-r"></a>檢視及使用 R 的資料摘要
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -229,7 +217,7 @@ print(paste("It takes CPU Time=", round(used.time[1]+used.time[2],2)," seconds,
 
 ## <a name="next-lesson"></a>下一課
 
-[使用 R 建立圖表和繪圖](walkthrough-create-graphs-and-plots-using-r.md)
+[使用 R 建立圖表及繪圖](walkthrough-create-graphs-and-plots-using-r.md)
 
 ## <a name="previous-lesson"></a>上一課
 

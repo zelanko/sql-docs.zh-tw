@@ -1,31 +1,23 @@
 ---
-title: "定義資料庫維度 |Microsoft 文件"
-ms.custom: 
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
-helpviewer_keywords: dimensions [Analysis Services], defining
-ms.assetid: fe84588b-66a3-4100-a1cf-59b21b7adf01
-caps.latest.revision: "27"
-author: Minewiskan
+title: 定義資料庫維度 |Microsoft 文件
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: multidimensional-models
+ms.topic: conceptual
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: cc42f36439973607f4f0d45ea7a18c0160de5ced
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 3f9d827bbbcb50dc352ba8987cf04704a18e4ef0
+ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="define-database-dimensions"></a>定義資料庫維度
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]使用 維度設計師中[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]設定中的現有資料庫維度[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]專案或資料庫。 您可以使用 [維度設計師] 執行下列動作：  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+  使用 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 中的維度設計師來設定 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 專案或資料庫中的現有資料庫維度。 您可以使用 [維度設計師] 執行下列動作：  
   
 -   設定維度層級屬性 (Property)。  
   
@@ -45,7 +37,7 @@ ms.lasthandoff: 01/08/2018
   
  維度設計師有三個不同的索引標籤，下表就是這些索引標籤的描述。  
   
-|索引標籤|描述|  
+|索引標籤|說明|  
 |---------|-----------------|  
 |**維度結構**|使用此索引標籤搭配維度的結構使用 - 檢查或建立維度的資料來源檢視結構描述、使用屬性，以及組織使用者自訂階層中的屬性。|  
 |**中，使用 [維度設計師] 的**|使用這個索引標籤，即可建立、修改或刪除維度的屬性關聯性。|  
@@ -54,7 +46,7 @@ ms.lasthandoff: 01/08/2018
   
  下列主題描述可以在 [維度設計師] 中執行的工作。  
   
- [維度屬性內容參考](../../analysis-services/multidimensional-models/dimension-attribute-properties-reference.md)  
+ [維度屬性 （Property） 參考](../../analysis-services/multidimensional-models/dimension-attribute-properties-reference.md)  
  描述如何定義及設定維度屬性。  
   
  [建立使用者定義階層](../../analysis-services/multidimensional-models/user-defined-hierarchies-create.md)  

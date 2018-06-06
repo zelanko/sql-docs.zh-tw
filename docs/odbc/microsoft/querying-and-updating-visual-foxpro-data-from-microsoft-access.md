@@ -1,16 +1,14 @@
 ---
-title: "查詢和更新 Visual FoxPro 資料從 Microsoft Access |Microsoft 文件"
-ms.custom: 
+title: 查詢和更新 Visual FoxPro 資料從 Microsoft Access |Microsoft 文件
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
-ms.component: odbc
-ms.reviewer: 
+ms.prod: sql
+ms.prod_service: connectivity
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: connectivity
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - querying Visual FoxPro data [ODBC]
 - FoxPro ODBC driver [ODBC], Access
@@ -19,16 +17,15 @@ helpviewer_keywords:
 - Visual FoxPro data [ODBC], querying and updating
 - updating Visual FoxPro data [ODBC]
 ms.assetid: 2d314e78-9edf-44b2-bd8b-96784236bcbe
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
-ms.workload: Inactive
-ms.openlocfilehash: 34383ecfbfae7c037137296942ba392ddb50db63
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+manager: craigg
+ms.openlocfilehash: 6704fb70b7c8764e0299c7334aa384410c45a0a7
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="querying-and-updating-visual-foxpro-data-from-microsoft-access"></a>查詢和更新 Visual FoxPro 資料從 Microsoft Access
 您可以查詢和更新資料庫中儲存資料 Visual FoxPro 從 Microsoft Access 資料庫使用連結資料表選項。  

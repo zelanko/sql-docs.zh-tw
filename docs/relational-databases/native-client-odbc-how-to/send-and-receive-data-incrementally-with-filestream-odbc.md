@@ -1,27 +1,26 @@
 ---
-title: "傳送和接收資料，以累加方式與 FILESTREAM (ODBC) |Microsoft 文件"
-ms.custom: 
+title: 傳送和接收資料，以累加方式與 FILESTREAM (ODBC) |Microsoft 文件
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
 ms.component: native-client-odbc-how-to
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: b82ecf4c-f151-4a99-8717-a73ee5ec994f
-caps.latest.revision: 
+caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 0a469aaaf1e1b84a27091ead07fded761b02c3f0
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 71bdf8f52d8b8ea726e9d350013c7848654903a1
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="send-and-receive-data-incrementally-with-filestream-odbc"></a>利用 FILESTREAM 累加地傳送和接收資料 (ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -29,7 +28,7 @@ ms.lasthandoff: 01/25/2018
 
   此範例會示範如何使用 FILESTREAM 功能，以 SQLPutData 和 SQLGetData 累加地傳送和接收資料。  
   
- 如需有關 FILESTREAM 功能的詳細資訊，請參閱[FILESTREAM 支援 &#40; ODBC &#41;](../../relational-databases/native-client/odbc/filestream-support-odbc.md)。  
+ 如需有關 FILESTREAM 功能的詳細資訊，請參閱[FILESTREAM 支援&#40;ODBC&#41;](../../relational-databases/native-client/odbc/filestream-support-odbc.md)。  
   
 ## <a name="example"></a>範例  
  在編譯和執行此範例之前，啟用 FILESTREAM 支援 ([Enable and Configure FILESTREAM](../../relational-databases/blob/enable-and-configure-filestream.md))。  

@@ -1,16 +1,14 @@
 ---
-title: "STIntersects (geometry 資料型別) | Microsoft Docs"
-ms.custom: 
+title: STIntersects (geometry 資料型別) | Microsoft Docs
+ms.custom: ''
 ms.date: 08/03/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
 ms.component: t-sql|spatial-geography
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: t-sql
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - STIntersects (geometry Data Type)
@@ -20,16 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - STIntersects (geometry Data Type)
 ms.assetid: 7c18f5be-5a29-422e-8ca7-d8a5f38e03f5
-caps.latest.revision: 
+caps.latest.revision: 25
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 9bbadc0c93f8d1c75a60d8c4798b5b4a460b79e1
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: d4046d4a86de79747437af50e83ff4ee66cae8ab
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="stintersects-geometry-data-type"></a>STIntersects (geometry 資料類型)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -53,7 +50,7 @@ ms.lasthandoff: 01/25/2018
  CLR 傳回類型：**SqlBoolean**  
   
 ## <a name="remarks"></a>Remarks  
- 如果 **geometry** 執行個體的空間參考識別碼 (SRID) 不相符，這個方法一定會傳回 Null。  
+ 如果 **geometry** 執行個體的空間參考識別碼 (SRID) 不相符，這個方法一律會傳回 Null。  
   
 ## <a name="examples"></a>範例  
  下列範例使用 `STIntersects()` 來判斷兩個 `geometry` 執行個體是否相交。  

@@ -1,16 +1,15 @@
 ---
-title: "轉換存取資料庫物件 (AccessToSQL) |Microsoft 文件"
-ms.prod: sql-non-specified
+title: 轉換存取資料庫物件 (AccessToSQL) |Microsoft 文件
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
 ms.component: ssma-access
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ssma
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 applies_to:
 - Azure SQL Database
 - SQL Server
@@ -35,16 +34,15 @@ helpviewer_keywords:
 - translating Access to SQL Azure
 - translating Access to SQL Server
 ms.assetid: e0ef67bf-80a6-4e6c-a82d-5d46e0623c6c
-caps.latest.revision: "22"
+caps.latest.revision: 22
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
-ms.workload: Inactive
-ms.openlocfilehash: a710d76b5df020e258676e0b1ff160c0e2e7a353
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+manager: craigg
+ms.openlocfilehash: 09d88b62efad5e0aa3d67cc5788a8430f09024d6
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="converting-access-database-objects-accesstosql"></a>轉換 (AccessToSQL) 來存取資料庫物件
 您已加入 Access 資料庫，並連接到之後[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或 SQL Azure、 SSMA 顯示中繼資料存取和[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或 SQL Azure 資料庫物件。 您可以現在選取 存取資料庫物件，然後再轉換成結構描述[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或 SQL Azure 結構描述。  
@@ -65,7 +63,7 @@ ms.lasthandoff: 12/21/2017
   
 |存取物件|產生的 SQL Server 物件|  
 |-----------------|-------------------------------|  
-|資料表|資料表|  
+|table|table|  
 |column|column|  
 |索引|索引|  
 |外部索引鍵 (foreign key)|外部索引鍵 (foreign key)|  
@@ -127,6 +125,6 @@ ms.lasthandoff: 12/21/2017
 ## <a name="next-step"></a>下一個步驟  
 移轉程序的下一個步驟是[轉換之資料庫的物件載入 SQL Server](http://msdn.microsoft.com/en-us/4e854eee-b10c-4f0b-9d9e-d92416e6f2ba)  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
 [將 Access 資料庫移轉至 SQL Server](http://msdn.microsoft.com/en-us/76a3abcf-2998-4712-9490-fe8d872c89ca)  
   

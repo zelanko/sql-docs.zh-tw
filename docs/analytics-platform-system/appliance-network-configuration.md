@@ -1,29 +1,22 @@
 ---
-title: "應用裝置網路組態 (Analytics Platform System)"
-author: barbkess
-ms.author: barbkess
-manager: jhubbard
-ms.prod: analytics-platform-system
-ms.prod_service: mpp-data-warehouse
-ms.service: 
-ms.component: 
-ms.technology: mpp-data-warehouse
-ms.custom: 
-ms.date: 01/05/2017
-ms.reviewer: na
-ms.suite: sql
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: 8e2b9abe-963d-479b-a4a7-1739fcb3e249
-caps.latest.revision: "27"
-ms.openlocfilehash: 34f322e9bd1d500b3755262332ab5724de5aa301
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+title: 應用裝置網路組態 Analytics Platform System |Microsoft 文件
+description: 建置和設定的 IP 位址在所有伺服器和從 IHV 工廠，在適用裝置修正組 Analytics Platform System (APS) 的應用裝置。 一傳遞應用裝置，則必須重新 （乙太網路） 的外部 IP 位址設定為符合特定客戶的資料中心的需求。
+author: mzaman1
+manager: craigg
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
+ms.openlocfilehash: 2db040c63d3c31f93cd0b72e48422e806aef01e0
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/19/2018
 ---
-# <a name="appliance-network-configuration"></a>應用裝置網路組態
-SQL Server PDW 應用裝置會建立並設定 IP 位址在所有伺服器和從 IHV 工廠，在適用裝置修正組。 一傳遞應用裝置，則必須重新 （乙太網路） 的外部 IP 位址設定為符合特定客戶的資料中心的需求。  
+# <a name="appliance-network-configuration-for-analytics-platform-system"></a>Analytics Platform System 應用裝置網路組態
+建置和設定的 IP 位址在所有伺服器和從 IHV 工廠，在適用裝置修正組 Analytics Platform System (APS) 的應用裝置。 一傳遞應用裝置，則必須重新 （乙太網路） 的外部 IP 位址設定為符合特定客戶的資料中心的需求。  
   
 > [!NOTE]  
 > PDW V1 需要 8 IP 外部 (*客戶對向*) 位址提供給每個控制項的外部連線能力機架的節點。 PDW 2012 (V2) 增強網路通訊，藉由公開從外部透過 IP 位址應用裝置的每個元件。 此方法提供更強固的設計以減少成本，並增加彈性，和可增強資料移動、 載入資料，與 Hadoop 整合。 所需的 IP 位址數目取決於應用裝置中的節點數目和功能，例如 HDInsight 存在。 為了符合這個較大的 IP 位址區塊，客戶應該設定不同的子網路的 PDW。 此子網路中，會有足夠 IP 位址空間 （最多 250 個位址） 可容納多達 5 PDW 機架的元件。  
@@ -64,6 +57,6 @@ SQL Server PDW 應用裝置會建立並設定 IP 位址在所有伺服器和從 
   
 -   PDU 的**Dell 計量機架 PDU**`ftp://ftp.dell.com/Manuals/all-products/esuprt_ser_stor_net/esuprt_rack_infrastructure/dell-metered-pdu-led_User's%20Guide_en-us.pdf`  
   
-## <a name="see-also"></a>請參閱  
-[啟動組態管理員 &#40;Analytics Platform System &#41;](launch-the-configuration-manager.md)  
+## <a name="see-also"></a>另請參閱  
+[啟動 Configuration Manager &#40;Analytics Platform System&#41;](launch-the-configuration-manager.md)  
   

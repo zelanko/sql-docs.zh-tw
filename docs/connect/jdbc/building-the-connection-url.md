@@ -1,28 +1,24 @@
 ---
-title: "建立連接 URL |Microsoft 文件"
-ms.custom: 
+title: 建立連接 URL |Microsoft 文件
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
-ms.component: jdbc
-ms.reviewer: 
+ms.prod: sql
+ms.prod_service: connectivity
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- drivers
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: connectivity
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: 44996746-d373-4f59-9863-a8a20bb8024a
-caps.latest.revision: 
+caps.latest.revision: 53
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
-ms.workload: Active
-ms.openlocfilehash: 886dea89a0e3ddd0db19cd9d0f8159cd6becf1b8
-ms.sourcegitcommit: 9d0467265e052b925547aafaca51e5a5e93b7e38
+manager: craigg
+ms.openlocfilehash: c36793a50692a122dbd045dba9deae03d35014a8
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/02/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="building-the-connection-url"></a>建立連接 URL
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -80,7 +76,7 @@ jdbc:sqlserver://;servername=server_name;integratedSecurity=true;authenticationS
  `jdbc:sqlserver://localhost;databaseName=AdventureWorks;integratedSecurity=true;applicationName=MyApp;`  
   
 ## <a name="named-and-multiple-sql-server-instances"></a>具名和多個 SQL Server 執行個體  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 允許在每個伺服器上安裝多個資料庫執行個體。 並以特定的名稱識別每個執行個體。 若要連接到具名執行個體[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]、 您可以指定具名執行個體 （慣用） 的通訊埠編號，或您可以指定執行個體名稱為 JDBC URL 屬性或**datasource**屬性。 如果沒有指定執行個體名稱或通訊埠號碼屬性，則會建立預設執行個體的連接。 請參閱下列範例：  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 允許的多個資料庫執行個體，每一部伺服器上安裝。 並以特定的名稱識別每個執行個體。 若要連接到具名執行個體[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]、 您可以指定具名執行個體 （慣用） 的通訊埠編號，或您可以指定執行個體名稱為 JDBC URL 屬性或**datasource**屬性。 如果沒有指定執行個體名稱或通訊埠號碼屬性，則會建立預設執行個體的連接。 請參閱下列範例：  
   
  若要使用通訊埠號碼，請執行下列：  
   
@@ -103,7 +99,7 @@ jdbc:sqlserver://;servername=server_name;integratedSecurity=true;authenticationS
   
  sqljdbc_auth.dll 檔會安裝在下列位置：  
   
- \<*installation directory*>\sqljdbc_\<*version*>\\<*language*>\auth\  
+ \<*安裝目錄*> \sqljdbc_\<*版本*>\\<*語言*> \auth\  
   
  支援的任何作業系統[!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]，請參閱[使用 Kerberos 整合式驗證來連接到 SQL Server](../../connect/jdbc/using-kerberos-integrated-authentication-to-connect-to-sql-server.md)中新增一項功能的說明[!INCLUDE[jdbc_40](../../includes/jdbc_40_md.md)]，可讓應用程式連接至透過類型 4 Kerberos 整合式的驗證的資料庫。  
   

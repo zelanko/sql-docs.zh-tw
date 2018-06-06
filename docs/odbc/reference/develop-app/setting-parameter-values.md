@@ -1,28 +1,26 @@
 ---
-title: "設定參數值 |Microsoft 文件"
-ms.custom: 
+title: 設定參數值 |Microsoft 文件
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
-ms.component: odbc
-ms.reviewer: 
+ms.prod: sql
+ms.prod_service: connectivity
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
-ms.topic: article
-helpviewer_keywords: parameter values [ODBC]
+ms.technology: connectivity
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
+helpviewer_keywords:
+- parameter values [ODBC]
 ms.assetid: 13e5da79-b60c-48d0-b467-773f481ef2a4
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
-ms.workload: Inactive
-ms.openlocfilehash: 726af8b2a7b4e9f0b630c95c45f512201fa1cf3a
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+manager: craigg
+ms.openlocfilehash: 9669f001498f00b79b95bf2dca1457d2bf4aadb9
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="setting-parameter-values"></a>設定參數值
 若要設定參數的值，應用程式只會設定繫結至參數之變數的值。 它並不重要時設定此值，只要執行陳述式之前，它會設定。 應用程式可以設定的值之前或之後繫結變數，並可能會變更的值，它想要的次數。 當執行陳述式時，驅動程式只會擷取變數的目前值。 一次以上。 執行已備妥的陳述式時，這會特別有用應用程式會設定新值的部分或所有變數的每次執行陳述式時。 這個範例，請參閱[已備妥執行](../../../odbc/reference/develop-app/prepared-execution-odbc.md)稍早在本章節中。  
@@ -39,7 +37,7 @@ ms.lasthandoff: 12/21/2017
   
  下表顯示繫結的變數和應用程式會設定各種不同的參數值的長度/指標緩衝區的值。  
   
-|參數<br /><br /> value|參數<br /><br /> (SQL)<br /><br /> 資料類型|Variable (C)<br /><br /> 資料類型|中的值<br /><br /> 繫結<br /><br /> 變數|中的值<br /><br /> 長度/指標<br /><br /> 緩衝區 [d]|  
+|매개 변수<br /><br /> value|매개 변수<br /><br /> (SQL)<br /><br /> 資料類型|Variable (C)<br /><br /> 資料類型|中的值<br /><br /> 繫結<br /><br /> 變數|中的值<br /><br /> 長度/指標<br /><br /> 緩衝區 [d]|  
 |-------------------------|-----------------------------------------|----------------------------------|-------------------------------------|----------------------------------------------------|  
 |"ABC"|SQL_CHAR|SQL_C_CHAR|ABC\0 [a]|SQL_NTS 或 3|  
 |10|SQL_INTEGER|SQL_C_SLONG|10|--|  

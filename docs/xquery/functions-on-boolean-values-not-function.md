@@ -1,16 +1,15 @@
 ---
-title: "函數 (XQuery) |Microsoft 文件"
-ms.custom: 
+title: 函數 (XQuery) |Microsoft 文件
+ms.custom: ''
 ms.date: 03/09/2017
-ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
-ms.service: 
+ms.prod: sql
+ms.prod_service: sql
 ms.component: xquery
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -22,21 +21,20 @@ helpviewer_keywords:
 - not function [XQuery]
 - EBV
 ms.assetid: 93dfc377-45f1-4384-9392-560d9331a915
-caps.latest.revision: 
+caps.latest.revision: 33
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: a0a104fb4904e5df5433de3505cdd8c4e8cf2c4b
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: f3da41971a8af3fe92fc8c7034fa6cd749a68ac8
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="functions-on-boolean-values---not-function"></a>布林值的 not 函式的函式 
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  如果為 true 的有效布林值*$arg*為 false，並傳回 FALSE，如果有效布林值*$arg*為 true。  
+  如果為 true 的有效布林值 *$arg*為 false，並傳回 FALSE，如果有效布林值 *$arg*為 true。  
   
 ## <a name="syntax"></a>語法  
   
@@ -74,7 +72,7 @@ WHERE CatalogDescription.exist('
   
 -   然後查詢會建構 XML，其中包含 <`Product`> 項目和其**ProductModelID**屬性。  
   
--   WHERE 子句使用[exist （） 方法 （XML 資料類型）](../t-sql/xml/exist-method-xml-data-type.md)的資料列篩選。 **Exist （)**方法會傳回 True，如果沒有\<p > 項目沒有\<規格 > 子項目。 請注意使用**not （)**函式。  
+-   WHERE 子句使用[exist （） 方法 （XML 資料類型）](../t-sql/xml/exist-method-xml-data-type.md)的資料列篩選。 **Exist （)** 方法會傳回 True，如果沒有\<p > 項目沒有\<規格 > 子項目。 請注意使用**not （)** 函式。  
   
  此結果集是空的因為每個產品型號目錄描述包含\<規格 > 項目。  
   
@@ -100,7 +98,7 @@ WHERE ProductModelID=7
   
 -   **Declarenamespace**中[XQuery 初構](../xquery/modules-and-prologs-xquery-prolog.md)定義 Adventure Works 製造指示命名空間前置詞。 其代表的命名空間跟製造指示文件中使用的相同。  
   
--   在查詢中，**不 (@MachineHours)**述詞會傳回 True，如果沒有任何**MachineHours**屬性。  
+-   在查詢中，**不 (@MachineHours)** 述詞會傳回 True，如果沒有任何**MachineHours**屬性。  
   
  以下是結果：  
   
@@ -115,7 +113,7 @@ ProductModelID Result
 ### <a name="implementation-limitations"></a>實作限制  
  以下為其限制：  
   
--   **Not （)**函數只支援類型 xs: boolean 或 node （） * 或空的序列的引數。  
+-   **Not （)** 函數只支援類型 xs: boolean 或 node （） * 或空的序列的引數。  
   
 ## <a name="see-also"></a>另請參閱  
  [針對 xml 資料類型的 XQuery 函式](../xquery/xquery-functions-against-the-xml-data-type.md)  

@@ -1,36 +1,23 @@
 ---
-title: "LogFileName 元素 (ASSL) |Microsoft 文件"
-ms.custom: 
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+title: LogFileName 元素 (ASSL) |Microsoft 文件
+ms.date: 5/8/2018
+ms.prod: sql
+ms.custom: assl
+ms.reviewer: owend
+ms.technology: analysis-services
 ms.topic: reference
-apiname: LogFileName Element
-apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
-apitype: Schema
-applies_to: SQL Server 2016 Preview
-f1_keywords: LogFileName
-helpviewer_keywords: LogFileName element
-ms.assetid: 80c7530d-ef73-44c3-88b5-c11c0f290946
-caps.latest.revision: "34"
-author: Minewiskan
+author: minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 408da1050cead14f180854d050216788a28f546d
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 1877bca876c8b6689a12ffd3f6d88c022eeb0479
+ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="logfilename-element-assl"></a>LogFileName 元素 (ASSL)
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]包含的記錄檔的檔案名稱[追蹤](../../../analysis-services/scripting/objects/trace-element-assl.md)項目。  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+  包含的記錄檔的檔案名稱[追蹤](../../../analysis-services/scripting/objects/trace-element-assl.md)項目。  
   
 ## <a name="syntax"></a>語法  
   
@@ -45,9 +32,9 @@ ms.lasthandoff: 01/08/2018
   
 ## <a name="element-characteristics"></a>元素特性  
   
-|特性|描述|  
+|特性|說明|  
 |--------------------|-----------------|  
-|資料類型和長度|String|  
+|資料類型和長度|字串|  
 |預設值|無|  
 |基數|0-1：只能出現一次的選擇性元素。|  
   
@@ -63,8 +50,8 @@ ms.lasthandoff: 01/08/2018
   
  對應目的父代的項目**LogFileName**在 「 分析管理物件 (AMO) 物件模型而言， <xref:Microsoft.AnalysisServices.Trace>。  
   
-## <a name="see-also"></a>請參閱  
- [Traces 元素 &#40;ASSL &#41;](../../../analysis-services/scripting/collections/traces-element-assl.md)   
- [屬性 &#40;ASSL &#41;](../../../analysis-services/scripting/properties/properties-assl.md)  
+## <a name="see-also"></a>另請參閱  
+ [Traces 元素 & #40;ASSL & #41;](../../../analysis-services/scripting/collections/traces-element-assl.md)   
+ [屬性 & #40;ASSL & #41;](../../../analysis-services/scripting/properties/properties-assl.md)  
   
   

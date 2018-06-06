@@ -1,16 +1,14 @@
 ---
-title: "sys.database_mirroring_witnesses (TRANSACT-SQL) |Microsoft 文件"
-ms.custom: 
+title: sys.database_mirroring_witnesses (TRANSACT-SQL) |Microsoft 文件
+ms.custom: ''
 ms.date: 06/10/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
 ms.component: system-catalog-views
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: system-objects
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.database_mirroring_witnesses
@@ -24,16 +22,15 @@ helpviewer_keywords:
 - sys.database_mirroring_witnesses catalog view
 - witness [SQL Server], sys.database_mirroring_witnesses catalog view
 ms.assetid: 0dd5b794-733b-4a3c-b5a4-62f9f1f0f22d
-caps.latest.revision: 
+caps.latest.revision: 46
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 3ce23f7d9f763bf08842a1f121c881fb5fbdcee0
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 8af11f0dd540cfa9b796dd94ab34f595b76dc71c
+ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="database-mirroring-witness-catalog-views---sysdatabasemirroringwitnesses"></a>資料庫鏡像見證目錄檢視-sys.database_mirroring_witnesses
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -55,7 +52,7 @@ ms.lasthandoff: 02/03/2018
 |**family_guid**|**uniqueidentifier**|資料庫備份家族的識別碼。 它用來偵測相符還原狀態。|  
 |**is_suspended**|**bit**|資料庫鏡像已暫停。|  
 |**is_suspended_sequence_number**|**int**|設定的序號**is_suspended**。|  
-|**partner_sync_state**|**tinyint**|鏡像工作階段的同步處理狀態：<br /><br /> 5 = 夥伴已同步處理。 現在可能可以進行容錯移轉。 如需有關容錯移轉，請參閱的需求資訊[角色切換期間資料庫鏡像工作階段 &#40;SQL Server &#41;](../../database-engine/database-mirroring/role-switching-during-a-database-mirroring-session-sql-server.md).<br /><br /> 6 = 夥伴未同步處理。 現在不可能進行容錯移轉。|  
+|**partner_sync_state**|**tinyint**|鏡像工作階段的同步處理狀態：<br /><br /> 5 = 夥伴已同步處理。 現在可能可以進行容錯移轉。 如需有關容錯移轉，請參閱的需求資訊[角色切換資料庫鏡像工作階段期間的&#40;SQL Server&#41;](../../database-engine/database-mirroring/role-switching-during-a-database-mirroring-session-sql-server.md)。<br /><br /> 6 = 夥伴未同步處理。 現在不可能進行容錯移轉。|  
 |**partner_sync_state_desc**|**nvarchar(60)**|鏡像工作階段之同步處理狀態的描述：<br /><br /> SYNCHRONIZED<br /><br /> UNSYNCHRONIZED|  
   
 ## <a name="permissions"></a>Permissions  
@@ -63,7 +60,7 @@ ms.lasthandoff: 02/03/2018
   
 ## <a name="see-also"></a>另請參閱  
  [資料庫鏡像見證](../../database-engine/database-mirroring/database-mirroring-witness.md)   
- [sys.database_mirroring &#40;TRANSACT-SQL &#41;](../../relational-databases/system-catalog-views/sys-database-mirroring-transact-sql.md)   
+ [sys.database_mirroring &#40;Transact SQL&#41;](../../relational-databases/system-catalog-views/sys-database-mirroring-transact-sql.md)   
  [sys.database_mirroring_endpoints &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-mirroring-endpoints-transact-sql.md)   
  [查詢 SQL Server 系統目錄常見問題集](../../relational-databases/system-catalog-views/querying-the-sql-server-system-catalog-faq.md)  
   

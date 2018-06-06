@@ -1,39 +1,36 @@
 ---
-title: "設定 Excel 驅動程式以程式設計方式的選項 |Microsoft 文件"
-ms.custom: 
+title: 設定 Excel 驅動程式以程式設計方式的選項 |Microsoft 文件
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
-ms.component: odbc
-ms.reviewer: 
+ms.prod: sql
+ms.prod_service: connectivity
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: connectivity
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - Jet-based ODBC drivers [ODBC], Excel driver
 - desktop database drivers [ODBC], Excel driver
 - ODBC desktop database drivers [ODBC], Excel driver
 - Excel driver [ODBC], setting options programmatically
 ms.assetid: b5ee3636-4591-427a-a65a-a2d5926fcc1a
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
-ms.workload: Inactive
-ms.openlocfilehash: bd7669339c99e756c9e03fa00cfd60aa2f53cc74
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+manager: craigg
+ms.openlocfilehash: 30c48b72009b687e85edafc383213ae048b942f2
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="setting-options-programmatically-for-the-excel-driver"></a>設定 Excel 驅動程式以程式設計方式的選項
-|選項|描述|方法|  
+|選項|Description|方法|  
 |------------|-----------------|------------|  
 |資料來源名稱|識別資料來源，例如，薪資或人員的名稱。|若要以動態方式設定這個選項，使用**DSN**的呼叫中的關鍵字[SQLConfigDataSource](../../odbc/microsoft/odbc-jet-sqlconfigdatasource-excel-driver.md)。|  
-|[資料庫]|Microsoft Access 資料來源可以設定而不需要選取或建立資料庫。 如果資料庫不提供在安裝程式時，您就會提示使用者選擇連接到資料來源時的資料庫檔案。|若要以動態方式設定這個選項，使用**DBQ**的呼叫中的關鍵字[SQLConfigDataSource](../../odbc/microsoft/odbc-jet-sqlconfigdatasource-excel-driver.md)。|  
-|描述|選擇性的描述資料來源; 中的資料例如，"雇用日期、 薪資記錄以及目前檢視的所有員工。 」|若要以動態方式設定這個選項，使用**描述**的呼叫中的關鍵字[SQLConfigDataSource](../../odbc/microsoft/odbc-jet-sqlconfigdatasource-excel-driver.md)。|  
+|資料庫|Microsoft Access 資料來源可以設定而不需要選取或建立資料庫。 如果資料庫不提供在安裝程式時，您就會提示使用者選擇連接到資料來源時的資料庫檔案。|若要以動態方式設定這個選項，使用**DBQ**的呼叫中的關鍵字[SQLConfigDataSource](../../odbc/microsoft/odbc-jet-sqlconfigdatasource-excel-driver.md)。|  
+|Description|選擇性的描述資料來源; 中的資料例如，"雇用日期、 薪資記錄以及目前檢視的所有員工。 」|若要以動態方式設定這個選項，使用**描述**的呼叫中的關鍵字[SQLConfigDataSource](../../odbc/microsoft/odbc-jet-sqlconfigdatasource-excel-driver.md)。|  
 |目錄|顯示目前所選取的目錄。<br /><br /> Microsoft Excel 3.0/4.0 檔案的路徑顯示標示為 「 目錄 」，如 Microsoft Excel 5.0 版，而 7.0，或 97 檔案的路徑顯示標示為 「 活頁簿 」。|若要以動態方式設定這個選項，使用**DEFAULTDIR**的呼叫中的關鍵字[SQLConfigDataSource](../../odbc/microsoft/odbc-jet-sqlconfigdatasource-excel-driver.md)。|  
 |唯讀|指定資料庫為唯讀。|若要以動態方式設定這個選項，使用**READONLY**的呼叫中的關鍵字[SQLConfigDataSource](../../odbc/microsoft/odbc-jet-sqlconfigdatasource-excel-driver.md)。|  
 |要掃描的資料列|若要掃描以判斷每個資料行的資料類型的資料列數目。 找到的資料類型的最大值來決定的資料類型。 如果遇到猜測資料行資料類型不符的資料，資料類型會傳回為 NULL 值。<br /><br /> Microsoft Excel 驅動程式，您可以輸入的數字 1 到 16 個要掃描的資料列。 預設值為 8。如果設定為 0，會掃描所有資料列。 （限制以外的數字會傳回錯誤）。|若要以動態方式設定這個選項，使用**於 MAXSCANROWS**的呼叫中的關鍵字[SQLConfigDataSource](../../odbc/microsoft/odbc-jet-sqlconfigdatasource-excel-driver.md)。|  

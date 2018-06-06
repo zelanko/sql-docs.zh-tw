@@ -1,34 +1,30 @@
 ---
-title: "SQLSetScrollOptions 對應 |Microsoft 文件"
-ms.custom: 
+title: SQLSetScrollOptions 對應 |Microsoft 文件
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
-ms.component: odbc
-ms.reviewer: 
+ms.prod: sql
+ms.prod_service: connectivity
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- drivers
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: connectivity
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - SQLSetScrollOptions function [ODBC], mapping
 - mapping deprecated functions [ODBC], SQLSetScrollOptions
 ms.assetid: a0fa4510-8891-4a61-a867-b2555bc35f05
-caps.latest.revision: 
+caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
-ms.workload: Inactive
-ms.openlocfilehash: 57d4bb7747803f1fe65276ddb86c574763627906
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+manager: craigg
+ms.openlocfilehash: f4339f395ae4c554a7ad8ca2e554769d8b27cdd4
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sqlsetscrolloptions-mapping"></a>SQLSetScrollOptions 對應
-當應用程式呼叫**SQLSetScrollOptions**透過 ODBC 3*.x*驅動程式和驅動程式不支援**SQLSetScrollOptions**，呼叫  
+當應用程式呼叫**SQLSetScrollOptions**透過 ODBC 3 *.x*驅動程式和驅動程式不支援**SQLSetScrollOptions**，呼叫  
   
 ```  
 SQLSetScrollOptions(StatementHandle, Concurrency, KeysetSize, RowsetSize)  
@@ -106,4 +102,4 @@ SQLSetScrollOptions(StatementHandle, Concurrency, KeysetSize, RowsetSize)
      與 *\*ValuePtr*設*RowsetSize*引數中的**SQLSetScrollOptions**。  
   
     > [!NOTE]  
-    >  當驅動程式管理員會將對應**SQLSetScrollOptions**應用程式使用 ODBC 3*.x*不支援的驅動程式**SQLSetScrollOptions**，驅動程式管理員設定 SQL_ROWSET_SIZE 陳述式選項，而不將 SQL_ATTR_ROW_ARRAY_SIZE 陳述式屬性， *RowsetSize*引數中的**SQLSetScrollOption**。 如此一來， **SQLSetScrollOptions**不可由應用程式在呼叫提取多個資料列時， **SQLFetch**或**SQLFetchScroll**。 它可以用於擷取多個資料列呼叫時，只有**SQLExtendedFetch**。
+    >  當驅動程式管理員會將對應**SQLSetScrollOptions**應用程式使用 ODBC 3 *.x*不支援的驅動程式**SQLSetScrollOptions**，驅動程式管理員設定 SQL_ROWSET_SIZE 陳述式選項，而不將 SQL_ATTR_ROW_ARRAY_SIZE 陳述式屬性， *RowsetSize*引數中的**SQLSetScrollOption**。 如此一來， **SQLSetScrollOptions**不可由應用程式在呼叫提取多個資料列時， **SQLFetch**或**SQLFetchScroll**。 它可以用於擷取多個資料列呼叫時，只有**SQLExtendedFetch**。

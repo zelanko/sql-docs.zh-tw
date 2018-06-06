@@ -1,16 +1,15 @@
 ---
-title: "使用結果窗格中的資料 (Visual Database Tools) | Microsoft Docs"
-ms.custom: 
+title: 使用結果窗格中的資料 (Visual Database Tools) | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
 ms.component: ssms-visual-db
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: tools-ssms
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ssms
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - View Designer, Results pane
 - queries [Visual Database Tools]
@@ -21,19 +20,19 @@ helpviewer_keywords:
 - queries [SQL Server], results
 - Results pane
 ms.assetid: 4f8a0080-91ef-4442-83ae-53be2f478c54
-caps.latest.revision: "4"
+caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 506bb355413caeac330509853278f667bf73ee49
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.openlocfilehash: 5c45059cf8296e912853cac57d4e4da440ec03cc
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="work-with-data-in-the-results-pane-visual-database-tools"></a>使用結果窗格中的資料 (Visual Database Tools)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 在您執行查詢或檢視後，結果會顯示在 [結果] 窗格中。 接著您就可以使用這些結果。 例如，您可以加入與刪除資料列，輸入或變更資料，並且輕易地巡覽大筆的結果集。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+在您執行查詢或檢視後，結果會顯示在 [結果] 窗格中。 接著您就可以使用這些結果。 例如，您可以加入與刪除資料列，輸入或變更資料，並且輕易地巡覽大筆的結果集。  
   
 下列資訊可以協助您避免問題，並且有效率地使用結果集。  
   
@@ -123,7 +122,7 @@ ms.lasthandoff: 01/17/2018
   
 -   通常二進位資料類型對於在 [結果] 窗格中工作的人不太有用，而且下載要花費很長的時間。 因此，它們由 *<Binary data>* 或 *Null*代表。  
   
--   有效位數與小數位數未必會被保留。 例如，[結果] 窗格支援 27 位數的有效位數。 若資料具有較高有效位數的資料類型，則資料可能會被截斷或由 *<Unable to read data>*代表。  
+-   有效位數與小數位數未必會被保留。 例如，[結果] 窗格支援 27 位數的有效位數。 若資料具有較高有效位數的資料類型，則資料可能會被截斷或由 *<Unable to read data>* 代表。  
   
 ## <a name="see-also"></a>另請參閱  
 [使用查詢執行基本作業 &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/perform-basic-operations-with-queries-visual-database-tools.md)  

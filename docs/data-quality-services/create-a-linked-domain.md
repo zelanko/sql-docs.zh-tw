@@ -1,30 +1,33 @@
 ---
-title: "建立連結的定義域 | Microsoft Docs"
-ms.custom: 
+title: 建立連結的定義域 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/08/2011
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: data-quality-services
-ms.service: 
 ms.component: data-quality-services
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: data-quality-services
-ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords: sql13.dqs.kb.linkeddomain.f1
+ms.technology:
+- data-quality-services
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
+f1_keywords:
+- sql13.dqs.kb.linkeddomain.f1
 ms.assetid: fd99d422-c53d-4d7c-9cdd-303c703683b6
-caps.latest.revision: "20"
+caps.latest.revision: 20
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.workload: Inactive
-ms.openlocfilehash: 30f25b5b1c71f6a84bdd114173c8fc04c0b3902d
-ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
+manager: craigg
+ms.openlocfilehash: bf2c8fa7c15539eedef198f9bac03d0b2d073bb4
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="create-a-linked-domain"></a>建立連結的定義域
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
   此主題描述如何在 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) 中的知識庫內建立連結的定義域。 連結的定義域是從另一個定義域 (之前已經存在的定義域) 建立而來，而且會從它連結的定義域繼承所有值、規則和屬性，除了名稱和描述以外。 您可以將一組連結的定義域當做一個定義域來管理。 藉由連結一個定義域與另一個定義域，您所建立的定義域就會從另一個定義域繼承其內容。  
   
 ## <a name="scenarios"></a>案例  
@@ -85,9 +88,9 @@ ms.lasthandoff: 01/19/2018
   
 -   您可以變更連結的定義域的名稱和描述。  
   
--   若要針對 **[資料類型]**、 **[使用前置值]**或 **[設定輸出格式為]** 屬性變更定義域屬性，請選取您連結到的定義域，並在 **[定義域屬性]** 索引標籤中針對該定義域變更這些設定。 您不能在連結的定義域的屬性中變更這些設定。 如需相關資訊，請參閱 [建立定義域](../data-quality-services/create-a-domain.md)。  
+-   若要針對 **[資料類型]**、 **[使用前置值]** 或 **[設定輸出格式為]** 屬性變更定義域屬性，請選取您連結到的定義域，並在 **[定義域屬性]** 索引標籤中針對該定義域變更這些設定。 您不能在連結的定義域的屬性中變更這些設定。 如需相關資訊，請參閱 [建立定義域](../data-quality-services/create-a-domain.md)。  
   
--   [定義域管理] 頁面上 **[參考資料]**、 **[定義域規則]**、 **[定義域值]**和 **[以詞彙為主的關聯]** 索引標籤中的設定可以針對連結的定義域或是連結到的定義域來變更，而且另一個定義域將會繼承變更。  
+-   [定義域管理] 頁面上 **[參考資料]**、 **[定義域規則]**、 **[定義域值]** 和 **[以詞彙為主的關聯]** 索引標籤中的設定可以針對連結的定義域或是連結到的定義域來變更，而且另一個定義域將會繼承變更。  
   
  連結的定義域具有下列特性：  
   

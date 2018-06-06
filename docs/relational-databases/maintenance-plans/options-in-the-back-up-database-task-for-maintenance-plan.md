@@ -1,36 +1,35 @@
 ---
-title: "備份資料庫工作 (維護計畫) | Microsoft Docs"
-ms.custom: 
+title: 備份資料庫工作 (維護計畫) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
 ms.component: maintenance-plans
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 f1_keywords:
 - sql13.swb.maint.maintplanproperties.logbackup.f1
 - sql13.swb.maint.backup.f1
 helpviewer_keywords:
 - Back Up Database Task dialog box
 ms.assetid: ed1ef012-fa14-4ba5-bafe-d1527ba065b3
-caps.latest.revision: 
+caps.latest.revision: 52
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 49e8fb933c835ff58dbb8efb3aa91881abdbc807
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: b7023f73087a0cb1b09f8c94ac7742252bca4cb7
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="options-in-the-back-up-database-task-for-maintenance-plan"></a>維護計畫之備份資料庫工作中的選項
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 使用 [備份資料庫工作] 對話方塊，即可將備份工作新增至維護計畫。 萬一因為發生系統或硬體失敗 (或使用者錯誤) 而導致資料庫在某方面發生損毀，因此需要還原已備份副本時，備份資料庫就相當重要。 此工作讓您能夠執行完整、差異、檔案和檔案群組，以及交易記錄的備份。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  使用 [備份資料庫工作] 對話方塊，即可將備份工作加入維護計畫中。 萬一因為發生系統或硬體失敗 (或使用者錯誤) 而導致資料庫在某方面發生損毀，因此需要還原已備份副本時，備份資料庫就相當重要。 此工作讓您能夠執行完整、差異、檔案和檔案群組，以及交易記錄的備份。  
   
  **建立備份資料庫工作**  
   

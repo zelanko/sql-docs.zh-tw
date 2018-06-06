@@ -1,33 +1,25 @@
 ---
-title: "採礦模型的鑽研 |Microsoft 文件"
-ms.custom: 
-ms.date: 03/01/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
-ms.assetid: f179a467-7d03-4d61-8e9a-6b5afb5fc2d5
-caps.latest.revision: 
-author: Minewiskan
+title: 採礦模型的鑽研 |Microsoft 文件
+ms.date: 05/01/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: data-mining
+ms.topic: conceptual
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: cc94d0226262eb6c40fce83370774e9fed08a8ab
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 2abd3430c1882148cd564c973ecf5824f3a55d4a
+ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="drillthrough-on-mining-models"></a>採礦模型的鑽研
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   「鑽研」表示查詢採礦模型或採礦結構並取得模型中未公開之詳細資料的能力。  
   
- [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 提供了兩種不同的鑽研選項來鑽研案例資料。 您可以鑽研用來建立資料的案例，也可以鑽研採礦結構中的案例。  
+ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]提供兩個不同的鑽研案例資料的選項。 您可以鑽研用來建立資料的案例，也可以鑽研採礦結構中的案例。  
   
 ## <a name="drillthrough-to-model-cases-vs-drillthrough-to-structure"></a>鑽研模型案例和鑽研結構的比較  
  鑽研**模型案例**對於尋找模型中規則、模式或叢集的詳細資料很有幫助。 例如，您不會在叢集模型中使用客戶連絡資訊進行分析，即使已經有資料可用，但使用鑽研可以從模型中取得此資訊的存取。  

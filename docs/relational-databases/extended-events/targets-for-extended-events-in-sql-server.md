@@ -1,29 +1,25 @@
 ---
-title: "SQL Server 中的擴充事件目標 | Microsoft Docs"
-ms.custom: 
-ms.date: 06/12/2017
-ms.prod: sql-non-specified
+title: SQL Server 中的擴充事件目標 | Microsoft Docs
+ms.custom: ''
+ms.date: 04/17/2018
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
-ms.component: extended-events
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-- xevents
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: xevents
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: 47c64144-4432-4778-93b5-00496749665b
-caps.latest.revision: 
+caps.latest.revision: 2
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: a3c0d634e359b9b3578ba46649d202beef3367dd
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+monikerRange: = azuresqldb-current || = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: ff8bbd4060e6aa309c3e98f52c04fe88b76721fa
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="targets-for-extended-events-in-sql-server"></a>SQL Server 中的擴充事件目標
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -90,6 +86,10 @@ SQL Server 擴充事件可以與 Windows 事件追蹤 (ETW) 搭配運作，以�
 
 這個 ETW 目標會「同步」處理所接收到的資料，大部分的目標則會「非同步」處理所接收到的資料。
 
+> [!NOTE]
+> Azure SQL Database 不支援 ETW 目標。 Azure SQL Database 受控執行個體也不支援。
+
+<!-- After OPS Versioning is live, the above !NOTE could be converted into a "3colon ZONE".  GeneMi = MightyPen. -->
 
 <a name="h2_target_event_counter"></a>
 
@@ -152,6 +152,15 @@ CREATE EVENT SESSION [event_counter_1]
 
 
 - 系統會使用您選擇的檔案名稱作為附加日期時間型 long 整數的前置詞，並且後接 .xel 副檔名。
+
+::: moniker range="= azuresqldb-current || = azuresqldb-mi-current || = sqlallproducts-allversions"
+
+> [!NOTE]
+> Azure SQL Database 支援 **event_file** 目標，但只能使用 Azure 儲存體中的 Blob 進行輸出。 SQL Database 無法將事件輸出儲存在您本機硬碟的檔案中。
+>
+> 如需 SQL Database (以及 SQL Database 受控執行個體) 專屬之 **event_file** 程式碼範例，請參閱 [SQL Database 中擴充事件的事件檔案目標代碼](https://docs.microsoft.com/azure/sql-database/sql-database-xevent-code-event-file)。
+
+::: moniker-end
 
 
 #### <a name="create-event-session-with-eventfile-target"></a>含 **event_file** 目標的 CREATE EVENT SESSION

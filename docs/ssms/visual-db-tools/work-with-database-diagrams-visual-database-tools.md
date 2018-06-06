@@ -1,36 +1,36 @@
 ---
-title: "使用資料庫圖表 (Visual Database Tools) | Microsoft Docs"
-ms.custom: 
+title: 使用資料庫圖表 (Visual Database Tools) | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
 ms.component: ssms-visual-db
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: tools-ssms
-ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords: sql13.swb.workingwithsql2000diagrams
+ms.technology: ssms
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
+f1_keywords:
+- sql13.swb.workingwithsql2000diagrams
 helpviewer_keywords:
 - database diagrams [SQL Server], about database diagrams
 - diagrams [SQL Server], about diagrams
 - database diagrams [SQL Server]
 - diagrams [SQL Server]
 ms.assetid: 2dec7e0b-99cd-4185-8334-111795e52f45
-caps.latest.revision: "3"
+caps.latest.revision: 3
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: d1e2aa0e2e1c3ff69319e4183f6d68352f5937ea
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.openlocfilehash: 5339693a9bc2ad7f38fdc30e0f65c65905b77ca5
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="work-with-database-diagrams-visual-database-tools"></a>使用資料庫圖表 (Visual Database Tools)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 您可以使用資料庫設計工具建立您資料庫的視覺化圖表。 下列主題包含了使用設計工具設計資料庫圖表的基本概念。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+您可以使用 [資料庫設計工具] 建立您資料庫的視覺化圖表。 下列主題包含了使用設計工具設計資料庫圖表的基本概念。  
   
 ## <a name="in-this-section"></a>本節內容  
 [建立新資料庫圖表 &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/create-a-new-database-diagram-visual-database-tools.md)  

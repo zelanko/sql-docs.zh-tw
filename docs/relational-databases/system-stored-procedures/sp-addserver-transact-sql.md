@@ -1,16 +1,14 @@
 ---
-title: "sp_addserver (TRANSACT-SQL) |Microsoft 文件"
-ms.custom: 
+title: sp_addserver (TRANSACT-SQL) |Microsoft 文件
+ms.custom: ''
 ms.date: 06/10/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: system-objects
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_addserver
@@ -23,16 +21,15 @@ helpviewer_keywords:
 - machine names [SQL Server]
 - computer names
 ms.assetid: 160a6b29-5e80-44ab-80ec-77d4280f627c
-caps.latest.revision: 
+caps.latest.revision: 40
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 08224c1f35e0115ba3bb97f88b0a2a51f5e05a6a
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 4263ae95f80518504fca71cf5622b4d3c65c850b
+ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="spaddserver-transact-sql"></a>sp_addserver (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -51,20 +48,20 @@ sp_addserver [ @server = ] 'server' ,
 ```  
   
 ## <a name="arguments"></a>引數  
- [  **@server =** ] **'***伺服器***'**  
+ [ **@server =** ] **'***server***'**  
  這是伺服器的名稱。 伺服器名稱必須是唯一，並且遵照 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 電腦名稱的規則 (但不能加空格)。 *server* 是 **sysname**，沒有預設值。  
   
  當多個執行個體[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]已安裝的電腦上，執行個體就好像它是不同的伺服器上。 透過將指定的具名執行個體*伺服器*為*servername\instancename*。  
   
- [  **@local =** ] **'LOCAL'**  
- 將正在加入的伺服器指定為本機伺服器。 **@local**是**varchar （10)**，預設值是 NULL。 指定 **@local** 為**本機**定義 **@server** 做為名稱的本機伺服器和原因 @@SERVERNAME函式傳回值*伺服器*。  
+ [ **@local =** ] **'LOCAL'**  
+ 將正在加入的伺服器指定為本機伺服器。 **@local** 是**varchar （10)**，預設值是 NULL。 指定**@local**為**本機**定義**@server**做為名稱的本機伺服器和原因 @@SERVERNAME函式傳回值*伺服器*。  
   
  在安裝時，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝程式會將這個變數設為電腦名稱。 根據預設，電腦名稱是使用者的方式連接到的執行個體[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]不用其他組態。  
   
  本機定義在 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 重新啟動之後才會生效。 每個 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 執行個體只能定義一部本機伺服器。  
   
- [  **@duplicate_ok =** ] **'duplicate_OK'**  
- 指定是否允許重複的伺服器名稱。 **@duplicate_OK**是**varchar(13)**，預設值是 NULL。 **@duplicate_OK**只能有值**duplicate_OK**或 NULL。 如果**duplicate_OK**指定且已加入的伺服器名稱存在，不會引發錯誤。 如果沒有使用具名的參數，  **@local** 必須指定。  
+ [ **@duplicate_ok =** ] **'duplicate_OK'**  
+ 指定是否允許重複的伺服器名稱。 **@duplicate_OK** 是**varchar(13)**，預設值是 NULL。 **@duplicate_OK** 只能有值**duplicate_OK**或 NULL。 如果**duplicate_OK**指定且已加入的伺服器名稱存在，不會引發錯誤。 如果沒有使用具名的參數， **@local**必須指定。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  0 (成功) 或 1 (失敗)  
@@ -86,11 +83,11 @@ sp_addserver [ @server = ] 'server' ,
 sp_addserver 'ACCOUNTS', 'local';  
 ```  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [重新命名主控 SQL Server 獨立執行個體的電腦](../../database-engine/install-windows/rename-a-computer-that-hosts-a-stand-alone-instance-of-sql-server.md)   
  [sp_addlinkedserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md)   
- [sp_dropserver &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/sp-dropserver-transact-sql.md)   
- [sp_helpserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpserver-transact-sql.md)   
+ [sp_dropserver &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropserver-transact-sql.md)   
+ [sp_helpserver & #40;TRANSACT-SQL & #41;](../../relational-databases/system-stored-procedures/sp-helpserver-transact-sql.md)   
  [系統預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [安全性預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)  
   

@@ -1,16 +1,12 @@
 ---
-title: sys.dm_fts_semantic_similarity_population (Transact-SQL) | Microsoft Docs
-ms.custom: 
+title: sys.dm_fts_semantic_similarity_population (TRANSACT-SQL) |Microsoft 文件
+ms.custom: ''
 ms.date: 06/10/2016
-ms.prod: sql-non-specified
-ms.prod_service: database-engine
-ms.service: 
-ms.component: dmv's
-ms.reviewer: 
+ms.prod: sql
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: system-objects
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - dm_fts_semantic_similarity_population_TSQL
@@ -22,23 +18,22 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_fts_semantic_similarity_population dynamic management view
 ms.assetid: 33666f28-c370-47e2-a932-190316ed5f69
-caps.latest.revision: 
+caps.latest.revision: 12
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: a3ad5ff1a253c702f28f73e8b3e684e716e90bb9
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 0e28dfafb637aebf7e22f4b61f595f02de0f1284
+ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 05/23/2018
 ---
 # <a name="sysdmftssemanticsimilaritypopulation-transact-sql"></a>sys.dm_fts_semantic_similarity_population (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   傳回一個資料列，其中包含每個有相關語意索引的資料表中每個相似度索引之文件相似度索引母體擴展的狀態資訊。  
   
- 母體擴展步驟在擷取步驟之後執行。 如需有關相似度擷取步驟的狀態資訊，請參閱[sys.dm_fts_index_population &#40;TRANSACT-SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-fts-index-population-transact-sql.md).  
+ 母體擴展步驟在擷取步驟之後執行。 如需有關相似度擷取步驟的狀態資訊，請參閱[sys.dm_fts_index_population &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-fts-index-population-transact-sql.md)。  
     
 ||||  
 |-|-|-|  
@@ -60,7 +55,7 @@ ms.lasthandoff: 02/03/2018
  如需詳細資訊，請參閱[管理及監視語意搜尋](../../relational-databases/search/manage-and-monitor-semantic-search.md)。  
   
 ## <a name="metadata"></a>中繼資料  
- 如需詳細狀態資訊的語意索引，查詢[sys.dm_fts_index_population &#40;TRANSACT-SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-fts-index-population-transact-sql.md).  
+ 如需詳細狀態資訊的語意索引，查詢[sys.dm_fts_index_population &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-fts-index-population-transact-sql.md)。  
   
 ## <a name="security"></a>Security  
   

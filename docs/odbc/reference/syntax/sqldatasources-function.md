@@ -1,32 +1,33 @@
 ---
-title: "SQLDataSources 函式 |Microsoft 文件"
-ms.custom: 
+title: SQLDataSources 函式 |Microsoft 文件
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
-ms.component: odbc
-ms.reviewer: 
+ms.prod: sql
+ms.prod_service: connectivity
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
-ms.topic: article
-apiname: SQLDataSources
-apilocation: sqlsrv32.dll
+ms.technology: connectivity
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
+apiname:
+- SQLDataSources
+apilocation:
+- sqlsrv32.dll
 apitype: dllExport
-f1_keywords: SQLDataSources
-helpviewer_keywords: SQLDataSources function [ODBC]
+f1_keywords:
+- SQLDataSources
+helpviewer_keywords:
+- SQLDataSources function [ODBC]
 ms.assetid: 3f63b1b4-e70e-44cd-96c6-6878d50d0117
-caps.latest.revision: "22"
+caps.latest.revision: 22
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
-ms.workload: Inactive
-ms.openlocfilehash: 8aee3d9e1caa424f4792fb1fae0551adcacfcdc3
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+manager: craigg
+ms.openlocfilehash: c2faa7631aaba8192f04270236b3ff9ef4e48240
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sqldatasources-function"></a>SQLDataSources 函式
 **一致性**  
@@ -72,7 +73,7 @@ SQLRETURN SQLDataSources(
  *NameLength1Ptr*  
  [輸出]這是要傳回的總字元數 （不包括 null 結束字元） 中的緩衝區指標可用來傳回中\* *ServerName*。 可傳回的字元數目是否大於或等於*BufferLength1*中的資料來源名稱\* *ServerName*會被截斷成*BufferLength1*減去 null 結束字元的長度。  
   
- *描述*  
+ *說明*  
  [輸出]這是要傳回的資料來源相關聯的驅動程式描述的緩衝區指標。 例如，dBASE 或 SQL Server。  
   
  如果*描述*是 NULL， *NameLength2Ptr*仍會傳回的總字元數 （不含字元資料 null 結束字元） 可用來傳回中所指向的緩衝區*描述*。  
@@ -89,7 +90,7 @@ SQLRETURN SQLDataSources(
 ## <a name="diagnostics"></a>診斷  
  當**SQLDataSources**傳回 SQL_ERROR 或 SQL_SUCCESS_WITH_INFO，可以藉由呼叫取得相關聯的 SQLSTATE 值**SQLGetDiagRec**與*HandleType*利用 SQL_HANDLE_ENV 的和*處理*的*EnvironmentHandle*。 下表列出通常所傳回的 SQLSTATE 值**SQLDataSources** ，並說明這個函式; 每個內容中的標記法 」 (DM) 」 之前描述的驅動程式管理員傳回的 Sqlstate。 每個 SQLSTATE 值相關聯的傳回碼是 SQL_ERROR，除非有說明，否則為。  
   
-|SQLSTATE|錯誤|描述|  
+|SQLSTATE|錯誤|Description|  
 |--------------|-----------|-----------------|  
 |01000|一般警告|(DM) 驅動程式管理員特有的資訊訊息。 （函式會傳回 SQL_SUCCESS_WITH_INFO）。|  
 |01004|字串資料，右邊遭截斷|(DM) 緩衝區\* *ServerName*仍不夠大，無法傳回完整的資料來源名稱。 因此，名稱被截斷。 中會傳回整個資料來源名稱的長度\* *NameLength1Ptr*。 （函式會傳回 SQL_SUCCESS_WITH_INFO）。<br /><br /> (DM) 緩衝區\**描述*仍不夠大，無法傳回完整的驅動程式描述。 因此，描述已截斷。 中會傳回未截斷的資料來源描述的長度 **NameLength2Ptr*。 （函式會傳回 SQL_SUCCESS_WITH_INFO）。|  
@@ -119,6 +120,6 @@ SQLRETURN SQLDataSources(
 |連接到資料來源使用的連接字串或對話方塊方塊|[SQLDriverConnect 函式](../../../odbc/reference/syntax/sqldriverconnect-function.md)|  
 |傳回的驅動程式描述和屬性|[SQLDrivers 函式](../../../odbc/reference/syntax/sqldrivers-function.md)|  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [ODBC 應用程式開發介面參考](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [ODBC 標頭檔](../../../odbc/reference/install/odbc-header-files.md)

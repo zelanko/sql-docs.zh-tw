@@ -1,17 +1,16 @@
 ---
-title: "ADO NET 來源 | Microsoft Docs"
-ms.custom: 
+title: ADO NET 來源 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
 ms.component: data-flow
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 f1_keywords:
 - sql13.dts.designer.adonetsource.f1
 - sql13.dts.designer.adonetsource.connection.f1
@@ -24,16 +23,15 @@ helpviewer_keywords:
 - .NET Framework [Integration Services]
 - DataReader source
 ms.assetid: 2a2f1750-2cda-4dda-9dca-623a96a6b3c0
-caps.latest.revision: 
+caps.latest.revision: 101
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 05753f3cea7979f78499dc68cb4baa784367b383
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 81566c11122cd67e37e1304f1d56760fcae1ce29
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ado-net-source"></a>ADO NET 來源
   ADO NET 來源會從 .NET 提供者取用資料，並使該資料可供資料流程使用。  
@@ -156,7 +154,7 @@ ms.lasthandoff: 01/25/2018
   
 2.  在 [資料流程] 索引標籤上，按兩下 ADO NET 來源。  
   
-3.  在 **[ADO NET 來源編輯器]**中，按一下 **[資料行]**。  
+3.  在 **[ADO NET 來源編輯器]** 中，按一下 **[資料行]**。  
   
 ### <a name="options"></a>選項。  
  **可用的外部資料行**  

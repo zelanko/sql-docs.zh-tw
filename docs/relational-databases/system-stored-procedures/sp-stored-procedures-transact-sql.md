@@ -1,16 +1,14 @@
 ---
-title: "sp_stored_procedures (TRANSACT-SQL) |Microsoft 文件"
-ms.custom: 
+title: sp_stored_procedures (TRANSACT-SQL) |Microsoft 文件
+ms.custom: ''
 ms.date: 06/10/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: system-objects
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_stored_procedures_TSQL
@@ -20,16 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_stored_procedures
 ms.assetid: fe52dd83-000a-4665-83fb-7a0024193dec
-caps.latest.revision: 
+caps.latest.revision: 34
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: c71f292c8d6d1b93e73b028ed6d2fc75e944386c
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: e4f11ee53e27ba983098d20e6b40ee0c0ef176d7
+ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="spstoredprocedures-transact-sql"></a>sp_stored_procedures (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,7 +46,7 @@ sp_stored_procedures [ [ @sp_name = ] 'name' ]
 ```  
   
 ## <a name="arguments"></a>引數  
- [  **@sp_name =** ] **'***名稱***'**  
+ [ **@sp_name =** ] **'***name***'**  
  這是用來傳回目錄資訊的程序名稱。 *名稱*是**nvarchar(390)**，預設值是 NULL。 支援萬用字元的模式比對。  
   
  [  **@sp_owner =** ] **'***結構描述***'**  
@@ -64,7 +61,7 @@ sp_stored_procedures [ [ @sp_name = ] 'name' ]
 -   目前資料庫中的 **dbo** 結構描述。  
   
  [  **@qualifier =** ] **'***限定詞***'**  
- 這是程序限定詞的名稱。 *限定詞*是**sysname**，預設值是 NULL。 各種 DBMS 產品都支援三部分的表單中的資料表命名 (*限定詞***。***結構描述***。***名稱*。 在[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，*限定詞*代表資料庫名稱。 在某些產品中，它代表資料表之資料庫環境的伺服器名稱。  
+ 這是程序限定詞的名稱。 *限定詞*是**sysname**，預設值是 NULL。 各種 DBMS 產品都支援三部分的表單中的資料表命名 (*限定詞 ***。*** 結構描述 ***。*** 名稱*。 在[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，*限定詞*代表資料庫名稱。 在某些產品中，它代表資料表之資料庫環境的伺服器名稱。  
   
  [  **@fUsePattern =** ] **'***fUsePattern***'**  
  決定是否將底線 (_)、百分比 (%) 或方括號 ([ ]) 視為萬用字元。 *fUsePattern*是**元**，預設值是 1。  
@@ -119,8 +116,8 @@ GO
 sp_stored_procedures N'uspLogError', N'dbo', N'AdventureWorks2012', 1;  
 ```  
   
-## <a name="see-also"></a>請參閱  
- [目錄預存程序 &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/catalog-stored-procedures-transact-sql.md)   
+## <a name="see-also"></a>另請參閱  
+ [目錄預存程序&#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/catalog-stored-procedures-transact-sql.md)   
  [系統預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

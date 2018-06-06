@@ -1,39 +1,23 @@
 ---
-title: "分類矩陣 (Analysis Services-資料採礦) |Microsoft 文件"
-ms.custom: 
-ms.date: 03/01/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
-helpviewer_keywords:
-- mining models [Analysis Services], validating
-- validating data mining models
-- viewing mining accuracy
-- displaying mining accuracy
-- confusion matrix [data mining]
-- classification matrix [Analysis Services]
-- accuracy testing [data mining]
-ms.assetid: 5c12f202-2ed9-41fa-bee2-0f7ab3ff058a
-caps.latest.revision: 
-author: Minewiskan
+title: 分類矩陣 (Analysis Services-資料採礦) |Microsoft 文件
+ms.date: 05/01/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: data-mining
+ms.topic: conceptual
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 7897c756eb0aa9aa53ed56356052974e53afd601
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 1b6e9f3ccb71c0b3a45101cd1da660e6bc1af133
+ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="classification-matrix-analysis-services---data-mining"></a>分類矩陣 (Analysis Services - 資料採礦)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-「分類矩陣」會透過判斷預測值是否符合實際值，將模型中的所有案例分類到不同的類別目錄。 每個類別目錄中的所有案例都會計算在內，而且總數會顯示在矩陣中。 分類矩陣是統計模型評估的標準工具，有時稱為「混淆矩陣」。  
+  「分類矩陣」會透過判斷預測值是否符合實際值，將模型中的所有案例分類到不同的類別目錄。 每個類別目錄中的所有案例都會計算在內，而且總數會顯示在矩陣中。 分類矩陣是統計模型評估的標準工具，有時稱為「混淆矩陣」。  
   
  您選擇 [分類矩陣] 選項時所建立的圖表，會比較實際值與您指定之每個預測狀態的預測值。 矩陣的資料列代表模型的預測值，而資料行則代表實際值。 用於分析的類別目錄包括「誤判」、「真肯定」、「誤否定」和「真否定」  
   
@@ -86,7 +70,7 @@ ms.lasthandoff: 02/15/2018
 |主題|連結|  
 |------------|-----------|  
 |提供如何為此目標郵寄模型建立增益圖的逐步解說。|[基本資料採礦教學課程](http://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c)<br /><br /> [使用增益圖 &#40;測試精確度基本資料採礦教學課程&#41;](http://msdn.microsoft.com/library/822d414b-4a39-473f-80c3-53476e30655a)|  
-|說明相關的圖表類型。|[增益圖 &#40;Analysis Services - 資料採礦&#41;](../../analysis-services/data-mining/lift-chart-analysis-services-data-mining.md)<br /><br /> [收益圖 &#40;Analysis Services - 資料採礦&#41;](../../analysis-services/data-mining/profit-chart-analysis-services-data-mining.md)<br /><br /> [散佈圖 &#40;Analysis Services-資料採礦 &#41;](../../analysis-services/data-mining/scatter-plot-analysis-services-data-mining.md)|  
+|說明相關的圖表類型。|[增益圖 &#40;Analysis Services - 資料採礦&#41;](../../analysis-services/data-mining/lift-chart-analysis-services-data-mining.md)<br /><br /> [收益圖 &#40;Analysis Services - 資料採礦&#41;](../../analysis-services/data-mining/profit-chart-analysis-services-data-mining.md)<br /><br /> [散佈圖 & #40;Analysis Services-資料採礦 & #41;](../../analysis-services/data-mining/scatter-plot-analysis-services-data-mining.md)|  
 |描述採礦模型和採礦結構的交叉驗證用法。|[交叉驗證 &#40;Analysis Services - 資料採礦&#41;](../../analysis-services/data-mining/cross-validation-analysis-services-data-mining.md)|  
 |描述建立增益圖及其他精確度圖表的步驟。|[測試和驗證工作及操作方式 &#40;資料採礦&#41;](../../analysis-services/data-mining/testing-and-validation-tasks-and-how-tos-data-mining.md)|  
   

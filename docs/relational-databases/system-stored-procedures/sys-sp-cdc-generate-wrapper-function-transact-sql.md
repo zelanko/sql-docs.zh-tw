@@ -1,16 +1,14 @@
 ---
-title: "sys.sp_cdc_generate_wrapper_function (TRANSACT-SQL) |Microsoft 文件"
-ms.custom: 
+title: sys.sp_cdc_generate_wrapper_function (TRANSACT-SQL) |Microsoft 文件
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: system-objects
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_cdc_generate_wrapper_function_TSQL
@@ -23,16 +21,15 @@ helpviewer_keywords:
 - sys.sp_cdc_generate_wrapper_function
 - sp_cdc_generate_wrapper_function
 ms.assetid: 85bc086d-8a4e-4949-a23b-bf53044b925c
-caps.latest.revision: 
+caps.latest.revision: 11
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: b32fc0848943814052a72e4b3f91eb4f5556a4bc
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 0f8f81b97ad6b1c1bf09ee33bd460aab01872327
+ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="sysspcdcgeneratewrapperfunction-transact-sql"></a>sys.sp_cdc_generate_wrapper_function (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -64,10 +61,10 @@ sys.sp_cdc_generate_wrapper_function
  這是旗標位元，它會指出認可時間等於高端點的變更是否要由產生的程序包含在擷取間隔中。 *high_end_pt_flag*是**元**且具有預設值是 1，表示應該包含端點。 值為 0 表示所有認可時間都將確實小於高端點。  
   
  [ @column_list=] '*column_list*'  
- 這是即將包含在包裝函數所傳回之結果集中的已擷取資料行清單。 *column_list*是**nvarchar （max)**且具有預設值是 NULL。 當您指定了 NULL 時，就會包含所有已擷取的資料行。  
+ 這是即將包含在包裝函數所傳回之結果集中的已擷取資料行清單。 *column_list*是**nvarchar （max)** 且具有預設值是 NULL。 當您指定了 NULL 時，就會包含所有已擷取的資料行。  
   
  [ @update_flag_list=] '*update_flag_list*'  
- 這是更新旗標包含在包裝函數所傳回之結果集中的已包含資料行清單。 *update_flag_list*是**nvarchar （max)**且具有預設值是 NULL。 當您指定了 NULL 時，就不會包含任何更新旗標。  
+ 這是更新旗標包含在包裝函數所傳回之結果集中的已包含資料行清單。 *update_flag_list*是**nvarchar （max)** 且具有預設值是 NULL。 當您指定了 NULL 時，就不會包含任何更新旗標。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  0 (成功) 或 1 (失敗)  
@@ -110,8 +107,8 @@ CLOSE #hfunctions;
 DEALLOCATE #hfunctions;  
 ```  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [異動資料擷取預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/change-data-capture-stored-procedures-transact-sql.md)   
- [異動資料擷取 &#40;SSIS &#41;](../../integration-services/change-data-capture/change-data-capture-ssis.md)  
+ [異動資料擷取&#40;SSIS&#41;](../../integration-services/change-data-capture/change-data-capture-ssis.md)  
   
   

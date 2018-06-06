@@ -1,31 +1,23 @@
 ---
-title: "DirectQuery 模型中定義的資料分割 |Microsoft 文件"
-ms.custom: 
-ms.date: 02/22/2018
-ms.prod: analysis-services
-ms.prod_service: analysis-services, azure-analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
-ms.assetid: 5f179ba9-6efb-46ae-90e5-945bbfddb719
-caps.latest.revision: 
-author: Minewiskan
+title: DirectQuery 模型中定義的資料分割 |Microsoft 文件
+ms.date: 05/07/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: tabular-models
+ms.topic: conceptual
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 21e629bbac90f30562c6b8434e2a73a71fdea4ed
-ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
+ms.openlocfilehash: 599e2f97991bc6256132861f335ac7bd0b0aa592
+ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="define-partitions-in-directquery-models"></a>在 DirectQuery 模式中定義分割區
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
-本節說明如何在 DirectQuery 模型中使用資料分割。 更一般的表格式模型中的資料分割的詳細資訊，請參閱[分割](../../analysis-services/tabular-models/partitions-ssas-tabular.md)。  
+  本節說明如何在 DirectQuery 模型中使用資料分割。 更一般的表格式模型中的資料分割的詳細資訊，請參閱[分割](../../analysis-services/tabular-models/partitions-ssas-tabular.md)。  
   
 > [!NOTE]  
 >  雖然資料表可以有多個分割區，但在 DirectQuery 模式中，只有其中之一可指定用於執行查詢。 單一分割區需求適用於所有相容性等級的 DirectQuery 模型。  

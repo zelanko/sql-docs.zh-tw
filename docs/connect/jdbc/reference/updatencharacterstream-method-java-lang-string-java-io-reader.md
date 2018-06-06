@@ -1,27 +1,24 @@
 ---
-title: "updateNCharacterStream 方法 （java.lang.String，java.io.Reader） |Microsoft 文件"
-ms.custom: 
+title: updateNCharacterStream 方法 （java.lang.String，java.io.Reader） |Microsoft 文件
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
-ms.component: jdbc
-ms.reviewer: 
+ms.prod: sql
+ms.prod_service: connectivity
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: connectivity
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: 504d7d06-0227-45e1-8b01-899c3e6006e8
-caps.latest.revision: "15"
+caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
-ms.workload: Inactive
-ms.openlocfilehash: f5578d5a12dc4f1f25970f4af9ce25f365a4e36b
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+manager: craigg
+ms.openlocfilehash: 94f50da3e2d042d3570455c75a1bb193f25cae73
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="updatencharacterstream-method-javalangstring-javaioreader"></a>updateNCharacterStream 方法 (java.lang.String, java.io.Reader)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -41,7 +38,7 @@ public void updateNCharacterStream(java.lang.String columnLabel,
   
  A**字串**，其中包含資料行標籤。  
   
- *讀取器*  
+ *reader*  
   
  讀取器物件。  
   
@@ -53,8 +50,8 @@ public void updateNCharacterStream(java.lang.String columnLabel,
   
  這個方法會將 Unicode 字元傳遞從讀取器物件選取**nchar**， **nvarchar （max)**， **ntext**和**xml**資料行。 在其他資料類型資料行上使用這個方法，將會擲回例外狀況。  
   
-## <a name="see-also"></a>請參閱＜  
- [updateNCharacterStream 方法 &#40;SQLServerResultSet &#41;](../../../connect/jdbc/reference/updatencharacterstream-method-sqlserverresultset.md)   
+## <a name="see-also"></a>另請參閱  
+ [updateNCharacterStream 方法&#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/updatencharacterstream-method-sqlserverresultset.md)   
  [SQLServerResultSet 成員](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
  [SQLServerResultSet 類別](../../../connect/jdbc/reference/sqlserverresultset-class.md)  
   

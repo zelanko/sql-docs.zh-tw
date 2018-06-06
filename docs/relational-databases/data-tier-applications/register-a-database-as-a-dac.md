@@ -1,17 +1,16 @@
 ---
-title: "將資料庫註冊為 DAC | Microsoft Docs"
-ms.custom: 
+title: 將資料庫註冊為 DAC | Microsoft Docs
+ms.custom: ''
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
 ms.component: data-tier-applications
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-data-tier-apps
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 f1_keywords:
 - sql13.swb.registerdacwizard.summary.f1
 - sql13.swb.registerdacwizard.introduction.f1
@@ -23,20 +22,19 @@ helpviewer_keywords:
 - register DAC
 - data-tier application [SQL Server], register
 ms.assetid: 08e52aa6-12f3-41dd-a793-14b99a083fd5
-caps.latest.revision: 
+caps.latest.revision: 22
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 036bb0f6375461e5764fb92534d4d8b07e016f52
-ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
+ms.openlocfilehash: d14994b4e90429cdd4d3e8a9b58c2b3998492b3d
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="register-a-database-as-a-dac"></a>將資料庫註冊為 DAC
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-您可以使用 [註冊資料層應用程式精靈] 或 Windows PowerShell 指令碼來建立資料層應用程式 (DAC) 定義，以便描述現有資料庫中的物件，並在 **msdb** 系統資料庫 (在 [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)] 中為 **master**) 中註冊 DAC 定義。  
+  您可以使用 [註冊資料層應用程式精靈] 或 Windows PowerShell 指令碼來建立資料層應用程式 (DAC) 定義，以便描述現有資料庫中的物件，並在 **msdb** 系統資料庫 (在 [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)] 中為 **master**) 中註冊 DAC 定義。  
   
 -   **Before you begin:**  [Limitations and Restrictions](#LimitationsRestrictions), [Permissions](#Permissions)  
   
@@ -56,7 +54,7 @@ ms.lasthandoff: 02/23/2018
 ##  <a name="UsingRegisterDACWizard"></a> 使用註冊資料層應用程式精靈  
  **使用精靈註冊 DAC**  
   
-1.  在 **[物件總管]**中，展開含有要註冊為 DAC 的資料庫之執行個體的節點。  
+1.  在 **[物件總管]** 中，展開含有要註冊為 DAC 的資料庫之執行個體的節點。  
   
 2.  展開 **[資料庫]** 節點。  
   
@@ -117,7 +115,7 @@ ms.lasthandoff: 02/23/2018
  [使用註冊資料層應用程式精靈](#UsingRegisterDACWizard)  
   
 ### <a name="validating-objects"></a>驗證物件  
- **正在檢查**  *SchemaName* **＞。** *ObjectName* **＞。** - 當精靈驗證擷取之物件的相依性，並驗證這些對於 DAC 都是有效的物件時，將會顯示進度列。 *SchemaName***.***ObjectName* 識別目前正在驗證哪一個物件。  
+ **正在檢查**  *SchemaName* **＞。** *ObjectName* **＞。** - 當精靈驗證擷取之物件的相依性，並驗證這些對於 DAC 都是有效的物件時，將會顯示進度列。 *SchemaName ***.*** ObjectName* 識別目前正在驗證哪一個物件。  
   
  **< 上一步** - 回到 [設定屬性] 頁面來變更輸入。  
   

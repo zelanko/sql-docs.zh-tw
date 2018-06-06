@@ -1,36 +1,23 @@
 ---
-title: "ReportingWeekToMonthPattern 元素 (ASSL) |Microsoft 文件"
-ms.custom: 
-ms.date: 03/06/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+title: ReportingWeekToMonthPattern 元素 (ASSL) |Microsoft 文件
+ms.date: 5/8/2018
+ms.prod: sql
+ms.custom: assl
+ms.reviewer: owend
+ms.technology: analysis-services
 ms.topic: reference
-apiname: ReportingWeekToMonthPattern Element
-apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
-apitype: Schema
-applies_to: SQL Server 2016 Preview
-f1_keywords: ReportingWeekToMonthPattern
-helpviewer_keywords: ReportingWeekToMonthPattern element
-ms.assetid: 8d7c694d-d5c5-4faa-af78-155779e84fe9
-caps.latest.revision: "31"
-author: Minewiskan
+author: minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: c58d5d176b50b23f6f6f26f32a9d1b8d97456dbf
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: aebaad3237366bd129d09c215b04ac8e8d4e2f84
+ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="reportingweektomonthpattern-element-assl"></a>ReportingWeekToMonthPattern 元素 (ASSL)
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]定義的報表週至月份模式[TimeBinding](../../../analysis-services/scripting/data-type/timebinding-data-type-assl.md)項目。  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+  定義的報表週至月份模式[TimeBinding](../../../analysis-services/scripting/data-type/timebinding-data-type-assl.md)項目。  
   
 ## <a name="syntax"></a>語法  
   
@@ -45,7 +32,7 @@ ms.lasthandoff: 01/08/2018
   
 ## <a name="element-characteristics"></a>元素特性  
   
-|特性|描述|  
+|特性|說明|  
 |--------------------|-----------------|  
 |資料類型和長度|字串 (列舉)|  
 |預設值|*445*|  
@@ -61,7 +48,7 @@ ms.lasthandoff: 01/08/2018
 ## <a name="remarks"></a>備註  
  這個元素的值限制為下表所列的其中一個字串。  
   
-|ReplTest1|描述|  
+|值|Description|  
 |-----------|-----------------|  
 |*445*|4 季 4 週，在第二個月份，而第三個月有 5 週的第一個月的週。|  
 |*454*|4 季 5 週中第二個月，和第三個月中的 4 週的第一個月的週。|  
@@ -69,7 +56,7 @@ ms.lasthandoff: 01/08/2018
   
  列舉型別對應至允許的值**ReportingWeekToMonthPattern**在 「 分析管理物件 (AMO) 物件模型而言， <xref:Microsoft.AnalysisServices.ReportingWeekToMonthPattern>。  
   
-## <a name="see-also"></a>請參閱  
- [屬性 &#40;ASSL &#41;](../../../analysis-services/scripting/properties/properties-assl.md)  
+## <a name="see-also"></a>另請參閱  
+ [屬性 & #40;ASSL & #41;](../../../analysis-services/scripting/properties/properties-assl.md)  
   
   

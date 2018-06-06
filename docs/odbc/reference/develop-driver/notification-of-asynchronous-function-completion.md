@@ -1,27 +1,24 @@
 ---
-title: "非同步函式完成的通知 |Microsoft 文件"
-ms.custom: 
+title: 非同步函式完成的通知 |Microsoft 文件
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
-ms.component: odbc
-ms.reviewer: 
+ms.prod: sql
+ms.prod_service: connectivity
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: connectivity
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: 336565da-4203-4745-bce2-4f011c08e357
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
-ms.workload: Inactive
-ms.openlocfilehash: dbccf95ca62f3a77618f36f69523e28e5d85c17a
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+manager: craigg
+ms.openlocfilehash: b86f906385341b5b67a51cc60ef702f61dff13ea
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="notification-of-asynchronous-function-completion"></a>非同步函式完成的通知
 在 Windows 8 SDK 中，ODBC 會加入非同步作業完成時，我們將為 「 通知完成 」 的通知應用程式的機制。 (請參閱[非同步執行 （通知方法）](../../../odbc/reference/develop-app/asynchronous-execution-notification-method.md)如需詳細資訊。)本主題會討論的一些問題的驅動程式開發人員。  
@@ -41,5 +38,5 @@ ms.lasthandoff: 12/21/2017
   
  驅動程式管理員將驅動程式會呼叫傳回之後，再次呼叫原始函式。 驅動程式管理員可以使用應用程式執行緒都在驅動程式執行緒的執行緒。 如果驅動程式會使用一些執行緒 （例如，安全性權杖或使用者識別碼） 與相關聯的資訊，驅動程式應將所需的資訊儲存在初始的非同步呼叫，並使用整個非同步作業之前儲存的值完成。 通常，只有**SQLDriverConnect**， **SQLConnect**，或**SQLBrowseConnect**需要使用該種類的資訊。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [開發 ODBC 驅動程式](../../../odbc/reference/develop-driver/developing-an-odbc-driver.md)

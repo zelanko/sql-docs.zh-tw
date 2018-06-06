@@ -1,34 +1,33 @@
 ---
-title: "移動或刪除項目或專案 | Microsoft Docs"
-ms.custom: 
+title: 移動或刪除項目或專案 | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
 ms.component: ssms-solutions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: tools-ssms
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ssms
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - deleting project items
 - projects [SQL Server Management Studio], item removal
 - removing project items
 ms.assetid: 3fd92434-70f5-466e-bef0-7e0fd73ddb1c
-caps.latest.revision: "3"
+caps.latest.revision: 3
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 260005349211feaeb74280a65e1b5d89ef092426
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.openlocfilehash: 96e5484ed59b0852f0099602b5a4e3ff359d1b6f
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="remove-or-delete-an-item-or-project"></a>移除或刪除項目或專案
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] 專案中的專案項目有「查詢」、「連線」及「其他」檔案。 您可以在不從儲存體清除檔案的情況下，從方案中移除專案查詢和其他檔案。 當專案或項目在目前的方案中沒有用，而且您想要將它包含在另一個方案中時，就可移除它。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] 專案中的專案項目有「查詢」、「連接」及「其他」檔案。 您可以在不從儲存體清除檔案的情況下，從方案中移除專案查詢和其他檔案。 當專案或項目在目前的方案中沒有用，而且您想要將它包含在另一個方案中時，就可移除它。  
   
 ### <a name="to-remove-a-project-item"></a>移除專案項目  
   

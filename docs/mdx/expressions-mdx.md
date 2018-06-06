@@ -1,34 +1,20 @@
 ---
-title: "運算式 (MDX) |Microsoft 文件"
-ms.custom: 
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: language-reference
-dev_langs: kbMDX
-helpviewer_keywords:
-- identifiers [MDX]
-- expressions [MDX]
-- expressions [MDX], about expressions
-- MDX [Analysis Services], expressions
-- Multidimensional Expressions [Analysis Services], expressions
-ms.assetid: e20c34bc-30fa-4ac5-b896-9d4c9925ef59
-caps.latest.revision: "37"
-author: Minewiskan
+title: 運算式 (MDX) |Microsoft 文件
+ms.date: 05/30/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: mdx
+ms.topic: reference
 ms.author: owend
-manager: erikre
-ms.workload: On Demand
-ms.openlocfilehash: 0fbb0f5d2b1b9699cd468cbcbd81a528c217bd3a
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: 79909f574d818a599f30ad051be9cf6a980430a9
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34579480"
 ---
 # <a name="expressions-mdx"></a>運算式 (MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -47,7 +33,7 @@ ms.lasthandoff: 01/08/2018
  在 MDX 中，純量函數會傳回評估內容內的單一值。 因為不只會在單一資料元素上，也會反覆在一群資料元素 (例如，資料格或成員) 上評估大部份的 MDX 運算式、陳述式及指令碼，所以此特性對了解 MDX 如何解析純量函數很重要。 但是，在評估純量函數時，此函數一般會檢閱單一資料元素。  
   
  物件識別碼  
- 因為多維度資料的本質，所以 MDX 是物件導向的。 物件識別碼在 MDX 中視為簡單運算式。 如需有關識別碼的詳細資訊，請參閱[識別碼 &#40;MDX &#41;](../mdx/identifiers-mdx.md).  
+ 因為多維度資料的本質，所以 MDX 是物件導向的。 物件識別碼在 MDX 中視為簡單運算式。 如需有關識別碼的詳細資訊，請參閱[識別碼&#40;MDX&#41;](../mdx/identifiers-mdx.md)。  
   
  複雜運算式可以從上述項目利用運算子聯結的組合來建立。  
   
@@ -98,8 +84,8 @@ WHERE [Product].[Category].[Bikes]
 |[使用純量運算式](../mdx/using-scalar-expressions.md)|定義純量運算式。|  
 |[使用空白值](../mdx/working-with-empty-values.md)|描述什麼是空白值，以及如何處理這類的值。|  
   
-## <a name="see-also"></a>請參閱  
- [MDX 語言參考 &#40;MDX &#41;](../mdx/mdx-language-reference-mdx.md)   
- [MDX 查詢基礎觀念 &#40;Analysis Services &#41;](../analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services.md)  
+## <a name="see-also"></a>另請參閱  
+ [MDX 語言參考&#40;MDX&#41;](../mdx/mdx-language-reference-mdx.md)   
+ [MDX 查詢基礎觀念&#40;Analysis Services&#41;](../analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services.md)  
   
   

@@ -1,27 +1,24 @@
 ---
-title: "使用 SSL 加密連接 |Microsoft 文件"
-ms.custom: 
+title: 使用 SSL 加密連接 |Microsoft 文件
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
-ms.component: jdbc
-ms.reviewer: 
+ms.prod: sql
+ms.prod_service: connectivity
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: connectivity
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: ec91fa8a-ab7e-4c1e-a05a-d7951ddf33b1
-caps.latest.revision: "18"
+caps.latest.revision: 18
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
-ms.workload: On Demand
-ms.openlocfilehash: c359bd9c80317302288b56b1a5216b68f30e34ab
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+manager: craigg
+ms.openlocfilehash: 49c6aaf771bb5335b8ba649869a4a8cf13894e82
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="connecting-with-ssl-encryption"></a>使用 SSL 加密連接
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -71,7 +68,7 @@ String connectionUrl =
   
  如果**加密**屬性設定為**true**和**trustServerCertificate**屬性設定為**false**如果中的伺服器名稱連接字串中的伺服器名稱不相符[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]SSL 憑證，會發出下列錯誤： 此驅動程式無法建立安全的連線[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]使用安全通訊端層 (SSL) 加密。 錯誤：「java.security.cert.CertificateException：無法在安全通訊端層 (SSL) 初始化期間驗證憑證中的伺服器名稱」。  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [使用 SSL 加密](../../connect/jdbc/using-ssl-encryption.md)   
  [保護 JDBC Driver 應用程式](../../connect/jdbc/securing-jdbc-driver-applications.md)  
   

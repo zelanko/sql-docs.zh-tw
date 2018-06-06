@@ -1,36 +1,36 @@
 ---
-title: "資料分割資料表與索引 | Microsoft Docs"
-ms.custom: 
+title: 資料分割資料表與索引 | Microsoft Docs
+ms.custom: ''
 ms.date: 01/20/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
 ms.component: partitions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-partition
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - partitioned tables [SQL Server], about partitioned tables
 - partitioned indexes [SQL Server], architecture
 - partitioned tables [SQL Server], architecture
 - partitioned indexes [SQL Server], about partitioned indexes
 ms.assetid: cc5bf181-18a0-44d5-8bd7-8060d227c927
-caps.latest.revision: 
+caps.latest.revision: 48
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.workload: Active
-ms.openlocfilehash: 6e5758702f60671b64fc97d9e9e98b89a80ccd6f
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: bd4402ca30b3f99e8470282aea9fa46a4667cb05
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="partitioned-tables-and-indexes"></a>分割資料表與索引
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支援資料表和索引資料分割。 資料分割資料表和索引的資料，已分成可以在資料庫中的多個檔案群組之間分佈的單位。 資料是以水平方式分割，因此資料列的群組可對應至個別的資料分割。 單一索引或資料表的所有分割區必須在同一個資料庫中。 在資料上執行查詢或更新時，資料表或索引會被視為單一邏輯實體。 在 [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] SP1 之前，並非每個 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本都可使用資料分割資料表和索引。 如需 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本支援的功能清單，請參閱 [SQL Server 2016 版本和支援的功能](../../sql-server/editions-and-supported-features-for-sql-server-2016.md)。  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支援資料表和索引資料分割。 資料分割資料表和索引的資料，已分成可以在資料庫中的多個檔案群組之間分佈的單位。 資料是以水平方式分割，因此資料列的群組可對應至個別的資料分割。 單一索引或資料表的所有分割區必須在同一個資料庫中。 在資料上執行查詢或更新時，資料表或索引會被視為單一邏輯實體。 在 [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] SP1 之前，並非每個 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本都可使用資料分割資料表和索引。 如需 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本支援的功能清單，請參閱 [SQL Server 2016 版本和支援的功能](../../sql-server/editions-and-supported-features-for-sql-server-2016.md)。  
   
 > [!IMPORTANT]  
 >  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 預設最多支援 15,000 個資料分割。 在 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]之前版本中，資料分割數目預設限制為 1,000。在 x86 型系統上，可以建立超過 1000 個資料分割的資料表或索引，但不予支援。  
@@ -58,7 +58,7 @@ ms.lasthandoff: 01/18/2018
  將分割區函數的資料分割對應至一組檔案群組的資料庫物件。 將分割區放在不同檔案群組的主要理由是可以確保能夠對分割區獨立執行備份作業。 這是因為您可以對個別檔案群組執行備份。  
   
  資料分割資料行  
- 分割區函數用於分割資料表或索引的資料表或索引資料行。 參與分割區函數的計算資料行必須明確地標示為 PERSISTED。 所有適用於做為索引資料行的資料類型都可以做為分割資料行，但 **timestamp**除外。 無法指定 **ntext**、 **text**、 **image**、 **xml**、 **varchar(max)**、 **nvarchar(max)**或 **varbinary(max)** 資料類型。 此外，也無法指定 Microsoft .NET Framework Common Language Runtime (CLR) 使用者定義型別及別名資料類型資料行。  
+ 分割區函數用於分割資料表或索引的資料表或索引資料行。 參與分割區函數的計算資料行必須明確地標示為 PERSISTED。 所有適用於做為索引資料行的資料類型都可以做為分割資料行，但 **timestamp**除外。 無法指定 **ntext**、 **text**、 **image**、 **xml**、 **varchar(max)**、 **nvarchar(max)** 或 **varbinary(max)** 資料類型。 此外，也無法指定 Microsoft .NET Framework Common Language Runtime (CLR) 使用者定義型別及別名資料類型資料行。  
   
  對齊的索引  
  在與對應資料表相同的分割區配置上建立的索引。 資料表與其索引對齊時，SQL Server 可以在維護資料表及其索引之分割區結構的同時，快速且有效地切換分割區。 索引不需要參與相同的具名分割區函數，即可對齊其基底資料表。 不過，索引和基底資料表的分割區函數本質上必須相同，也就是說 1) 這兩種分割區函數的引數具有相同的資料類型，2) 它們都定義相同數目的分割區，3) 對分割區都定義相同的界限值。  

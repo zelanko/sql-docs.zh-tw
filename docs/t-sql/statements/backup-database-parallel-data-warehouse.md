@@ -1,28 +1,26 @@
 ---
-title: "BACKUP DATABASE (平行處理資料倉儲) | Microsoft Docs"
-ms.custom: 
+title: BACKUP DATABASE (平行處理資料倉儲) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: pdw
-ms.service: 
 ms.component: t-sql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: t-sql
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: 73c8d465-b36b-4727-b9f3-368e98677c64
-caps.latest.revision: 
-author: barbkess
-ms.author: barbkess
+caps.latest.revision: 11
+author: edmacauley
+ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: cc87423b3444daf6d44f590c283b52ce948da193
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+monikerRange: '>= aps-pdw-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 1dfce92ca664b934f5dec7085934eb4997df8e56
+ms.sourcegitcommit: d2573a8dec2d4102ce8882ee232cdba080d39628
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="backup-database-parallel-data-warehouse"></a>BACKUP DATABASE (平行處理資料倉儲)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
@@ -167,7 +165,7 @@ BACKUP DATABASE database_name
   
 -   [sys.pdw_loader_run_stages &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-pdw-loader-run-stages-transact-sql.md)  
   
-## <a name="performance"></a>[效能]  
+## <a name="performance"></a>效能  
  若要執行備份，[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]會先備份中繼資料，然後對儲存在計算節點上的資料庫資料執行平行備份。 這會將資料直接從每個計算節點複製到備份目錄。 為了在將資料從計算節點移至備份目錄時達到最佳效能，[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]會控制同時複製資料的計算節點數目。  
   
 ## <a name="locking"></a>鎖定  

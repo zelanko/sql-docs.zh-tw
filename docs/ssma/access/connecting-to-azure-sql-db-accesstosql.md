@@ -1,16 +1,15 @@
 ---
-title: "連接到 Azure SQL DB (AccessToSQL) |Microsoft 文件"
-ms.prod: sql-non-specified
+title: 連接到 Azure SQL DB (AccessToSQL) |Microsoft 文件
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
 ms.component: ssma-access
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ssma
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 applies_to:
 - Azure SQL Database
 - SQL Server
@@ -24,16 +23,15 @@ helpviewer_keywords:
 - SQL Azure, reconnecting
 - SQL Azure, synchronizing metadata
 ms.assetid: 1ba0d113-dc05-4431-8689-e14a8821bafd
-caps.latest.revision: "21"
+caps.latest.revision: 21
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
-ms.workload: Inactive
-ms.openlocfilehash: e68c4b94210234875eebbe166f83d87baebbc0e1
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+manager: craigg
+ms.openlocfilehash: 152a5cee9dbb7308772d0a2e21f263c873570171
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="connecting-to-azure-sql-db-accesstosql"></a>連接到 Azure SQL DB (AccessToSQL)
 若要將 Access 資料庫移轉至 SQL Azure，您必須連接到 SQL Azure 的目標執行個體。 連線時，SSMA 取得執行個體的 SQL Azure 中的所有資料庫的相關中繼資料，並在 SQL Azure 中繼資料總管 會顯示資料庫中繼資料。 SSMA 會儲存有關哪一個執行個體的 SQL Azure 連接到，但不會儲存密碼的資訊。  
@@ -116,6 +114,6 @@ SQL Azure 的連接會保持作用中直到您關閉專案。 當您重新開啟
   
 -   如果您不需要執行任何這些工作，您可以存取資料庫物件定義轉換 SQL Azure 物件定義。 如需詳細資訊，請參閱[轉換 Access 資料庫](http://msdn.microsoft.com/en-us/e0ef67bf-80a6-4e6c-a82d-5d46e0623c6c)  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
 [將 Access 資料庫移轉至 SQL Server](http://msdn.microsoft.com/en-us/76a3abcf-2998-4712-9490-fe8d872c89ca)  
   

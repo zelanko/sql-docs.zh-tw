@@ -1,28 +1,26 @@
 ---
-title: "記憶體內部 OLTP 不支援的 SQL Server 功能 | Microsoft Docs"
-ms.custom: 
+title: 記憶體內部 OLTP 不支援的 SQL Server 功能 | Microsoft Docs
+ms.custom: ''
 ms.date: 07/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
 ms.component: in-memory-oltp
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine-imoltp
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: in-memory-oltp
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: c39f03a7-e223-4fd7-bd30-142e28f51654
-caps.latest.revision: 
+caps.latest.revision: 55
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 5a2ccc853663dd125fec186b9e9e3834f28345c7
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 3a7393dfd780eb62aa6dff5ca70d89f297dc6952
+ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="unsupported-sql-server-features-for-in-memory-oltp"></a>記憶體內部 OLTP 不支援的 SQL Server 功能
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -38,7 +36,7 @@ ms.lasthandoff: 11/17/2017
 |-------------------------|-------------------------|  
 |記憶體最佳化之資料表的資料壓縮。|使用資料壓縮功能有助於將資料壓縮在資料庫內及縮小資料庫的大小。 如需詳細資訊，請參閱 [Data Compression](../../relational-databases/data-compression/data-compression.md)。|  
 |經記憶體最佳化的資料表和雜湊索引，以及非叢集索引的資料分割。|資料分割資料表和索引的資料，已分成可以在資料庫中的多個檔案群組之間分佈的單位。 如需詳細資訊，請參閱 [Partitioned Tables and Indexes](../../relational-databases/partitions/partitioned-tables-and-indexes.md)。|  
-| 複寫 | 複寫組態除了訂閱者端對經記憶體最佳化的資料表的異動複寫以外，與參考記憶體最佳化資料表的資料表或檢視表並不相容。<br /><br />若有經記憶體最佳化的檔案群組，就不支援使用 sync_mode=’database snapshot’ 的複寫。<br /><br />如需詳細資訊，請參閱 [複寫至記憶體最佳化資料表訂閱者](../../relational-databases/replication/replication-to-memory-optimized-table-subscribers.md)。|
+| 複寫 | 複寫組態除了訂閱者端對經記憶體最佳化的資料表的異動複寫以外，與參考記憶體最佳化資料表的資料表或檢視表並不相容。<br /><br />若有經記憶體最佳化的檔案群組，就不支援使用 sync_mode=’database snapshot’ 的複寫。<br /><br />如需詳細資訊，請參閱[複寫至記憶體最佳化資料表訂閱者](../../relational-databases/replication/replication-to-memory-optimized-table-subscribers.md)。|
 |鏡像|具有 MEMORY_OPTIMIZED_DATA 檔案群組的資料庫不支援資料庫鏡像。 如需鏡像的詳細資訊，請參閱[資料庫鏡像 &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-sql-server.md)。|  
 |重建記錄檔|具有 MEMORY_OPTIMIZED_DATA 檔案群組的資料庫不支援透過附加或 ALTER DATABASE 重建記錄檔。|  
 |連結的伺服器|在以記憶體最佳化資料表形式的相同查詢或交易中，您無法存取連結的伺服器。 如需詳細資訊，請參閱 [連結的伺服器 &#40;Database Engine&#41;](../../relational-databases/linked-servers/linked-servers-database-engine.md)。|  
@@ -57,7 +55,7 @@ ms.lasthandoff: 11/17/2017
 有一些例外狀況，不支援跨資料庫的交易。 下表描述支援的案例和對應的限制。 (另請參閱 [跨資料庫查詢](../../relational-databases/in-memory-oltp/cross-database-queries.md))。  
 
 
-|資料庫|Allowed|Description|  
+|資料庫|Allowed|描述|  
 |---------------|-------------|-----------------|  
 | 使用者資料庫、**model** 及 **msdb**。 | 否 | 在大部分情況下，「不」支援跨資料庫的查詢及交易。<br /><br />任一查詢如使用了經記憶體最佳化的資料表或者原生編譯的預存程序，該查詢即無法存取其他資料庫。 這項限制適用於交易及查詢。<br /><br />系統資料庫 **tempdb** 及 **master** 則是例外。 在這裡，**master** 資料庫可供唯讀存取。 |
 | **Resource** 資料庫、**tempdb** | 是 | 在接觸記憶體內部 OLTP 物件的交易中，可以無限制地使用 **Resource** 及 **tempdb** 系統資料庫。

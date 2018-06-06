@@ -1,30 +1,27 @@
 ---
-title: "資料格集物件屬性、 方法和事件 |Microsoft 文件"
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
+title: 資料格集物件屬性、 方法和事件 |Microsoft 文件
+ms.prod: sql
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
-ms.custom: 
+ms.technology: connectivity
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - Cellset object [ADO MD], members
 ms.assetid: fb303e33-5a85-4e4e-81db-acaaa6f53799
-caps.latest.revision: 
+caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 76687d99e803c4858d11c495e911ba18881b4b64
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 1bc353f4980eb9cfc4b6446a6f508120c3fc4fb0
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="cellset-object-properties-methods-and-events"></a>資料格集物件屬性、 方法和事件
 ## <a name="propertiescollections"></a>/ 屬性的集合  

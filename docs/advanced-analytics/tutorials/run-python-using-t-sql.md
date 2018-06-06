@@ -1,28 +1,17 @@
 ---
-title: "執行 Python 使用 T-SQL |Microsoft 文件"
-ms.custom: 
-ms.date: 02/28/2018
-ms.reviewer: 
-ms.suite: sql
-ms.prod: machine-learning-services
-ms.prod_service: machine-learning-services
-ms.component: 
-ms.technology: 
-ms.tgt_pltfrm: 
+title: 執行 Python 使用 T-SQL |Microsoft 文件
+ms.prod: sql
+ms.technology: machine-learning
+ms.date: 04/15/2018
 ms.topic: tutorial
-applies_to:
-- SQL Server 2017
-dev_langs:
-- Python
-caps.latest.revision: 
-author: jeannt
-ms.author: jeannt
-manager: cgronlund
-ms.openlocfilehash: 5c6145d3af6918a5f3daa954aae5522ffffebb89
-ms.sourcegitcommit: ab25b08a312d35489a2c4a6a0d29a04bbd90f64d
+author: HeidiSteen
+ms.author: heidist
+manager: cgronlun
+ms.openlocfilehash: db959c9d8802ad3d3d2f7e8bdb64e194130dfeba
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="run-python-using-t-sql"></a>執行 Python 使用 T-SQL
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -31,7 +20,7 @@ ms.lasthandoff: 03/08/2018
 
 ## <a name="prerequisites"></a>필수 구성 요소
 
-若要完成本教學課程中，您必須先安裝 SQL Server 2017 並啟用機器學習服務的執行個體中所述[本文](../python/setup-python-machine-learning-services.md)。 
+若要完成本教學課程中，您必須先安裝 SQL Server 2017 並啟用機器學習服務的執行個體中所述[安裝 SQL Server 2017 機器學習服務 （資料庫）](../install/sql-machine-learning-services-windows-install.md)。 
 
 您也應該安裝[SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms)。 或者，您可以使用其他的資料庫管理或查詢工具，只要可以連線至伺服器和資料庫，並執行 T-SQL 查詢或預存程序。
 
@@ -388,7 +377,7 @@ SQL Server 依賴 Python**熊**封裝，最適合用於使用表格式資料。 
 
 + 找不到預存程序，`sp_execute_external_script`嗎？ 這表示您可能尚未完成設定要支援外部指令碼執行的執行個體。 執行 SQL Server 2017 安裝程式並選取後 Python 和機器學習語言，您必須同時也可以明確啟用功能使用`sp_configure`，然後重新啟動執行個體。 
 
-    如需詳細資訊，請參閱[安裝程式的機器學習服務使用 Python](../python/setup-python-machine-learning-services.md)。
+    如需詳細資訊，請參閱[安裝 SQL Server 2017 機器學習服務 （資料庫）](../install/sql-machine-learning-services-windows-install.md)。
 
 ## <a name="next-steps"></a>後續的步驟
 

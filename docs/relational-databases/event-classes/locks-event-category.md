@@ -1,37 +1,33 @@
 ---
-title: "Locks 事件類別目錄 | Microsoft Docs"
-ms.custom: 
+title: Locks 事件類別目錄 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
-ms.prod_service: database-engine, sql-database
-ms.service: 
-ms.component: event-classes
-ms.reviewer: 
+ms.prod: sql
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: supportability
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - Locks event category [SQL Server]
 - SQL Server event classes, Locks event category
 - event classes [SQL Server], Locks event category
 - lock escalation [SQL Server], locks event category
 ms.assetid: 27d6afa2-7dab-4fe7-a1ad-064b879dc654
-caps.latest.revision: 
+caps.latest.revision: 27
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 4254c204a91eb0696b7ee08eda0a234d596bb51b
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 6d0616573c2215005994a45ac2d45d156dd065fc
+ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="locks-event-category"></a>Locks 事件類別目錄
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-使用 **Locks** 事件類別目錄的事件類別，監視 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]執行個體中的鎖定活動。 這些事件類別可協助您調查，因多位使用者同時讀取和修改資料而造成的鎖定問題。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  使用 **Locks** 事件類別目錄的事件類別，監視 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]執行個體中的鎖定活動。 這些事件類別可協助您調查，因多位使用者同時讀取和修改資料而造成的鎖定問題。  
   
  因為「 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 」經常要處理許多鎖定，於追蹤期間擷取 **Locks** 事件類別，會帶來大量負擔，而且導致產生龐大的追蹤檔案或資料表。  
   

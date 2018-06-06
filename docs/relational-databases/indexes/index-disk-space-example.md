@@ -1,17 +1,14 @@
 ---
-title: "索引磁碟空間範例 | Microsoft Docs"
-ms.custom: 
+title: 索引磁碟空間範例 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/02/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
-ms.component: indexes
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- dbe-indexes
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: table-view-index
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - online index disk space
 - disk space [SQL Server], indexes
@@ -20,20 +17,19 @@ helpviewer_keywords:
 - indexes [SQL Server], disk space requirements
 - offline index disk space [SQL Server]
 ms.assetid: e5c71f55-0be3-4c93-97e9-7b3455c8f581
-caps.latest.revision: 
-author: barbkess
-ms.author: barbkess
+caps.latest.revision: 30
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 04b3917ece9134d66a055e0d5b2daf68d901153d
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.openlocfilehash: 46809da9211dbb4ec8704a788945b30cf5e6ca65
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="index-disk-space-example"></a>索引磁碟空間範例
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-無論何時建立、重建或卸除索引，舊結構 (來源) 和新結構 (目標) 兩者在它們適當的檔案和檔案群組中都需要磁碟空間。 舊結構要到索引建立交易認可時才會取消配置。 此時也可能會需要額外暫存磁碟空間，以供排序作業。 如需詳細資訊，請參閱 [Disk Space Requirements for Index DDL Operations](../../relational-databases/indexes/disk-space-requirements-for-index-ddl-operations.md)。  
+  無論何時建立、重建或卸除索引，舊結構 (來源) 和新結構 (目標) 兩者在它們適當的檔案和檔案群組中都需要磁碟空間。 舊結構要到索引建立交易認可時才會取消配置。 此時也可能會需要額外暫存磁碟空間，以供排序作業。 如需詳細資訊，請參閱 [Disk Space Requirements for Index DDL Operations](../../relational-databases/indexes/disk-space-requirements-for-index-ddl-operations.md)。  
   
  在此範例中，會決定建立叢集索引的磁碟空間需求。  
   

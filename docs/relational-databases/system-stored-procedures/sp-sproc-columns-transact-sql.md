@@ -1,16 +1,14 @@
 ---
-title: "sp_sproc_columns (TRANSACT-SQL) |Microsoft 文件"
-ms.custom: 
+title: sp_sproc_columns (TRANSACT-SQL) |Microsoft 文件
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: system-objects
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_sproc_columns
@@ -20,16 +18,16 @@ dev_langs:
 helpviewer_keywords:
 - sp_sproc_columns
 ms.assetid: 62c18c21-35c5-4772-be0d-ffdcc19c97ab
-caps.latest.revision: 
+caps.latest.revision: 26
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 9488e94ffa0d3532ce72e421f5deadaf1acbed77
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: b543a96117ad267022233403f798e83c85e7efad
+ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="spsproccolumns-transact-sql"></a>sp_sproc_columns (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -52,19 +50,19 @@ sp_sproc_columns [[@procedure_name = ] 'name']
 ```  
   
 ## <a name="arguments"></a>引數  
- [  **@procedure_name =** ] **'***名稱***'**  
- 這是用來傳回目錄資訊的程序名稱。 *名稱*是**nvarchar (**390**)**，預設值是 %，代表目前資料庫中的所有資料表。 支援萬用字元的模式比對。  
+ [ **@procedure_name =** ] **'***name***'**  
+ 這是用來傳回目錄資訊的程序名稱。 *名稱*是**nvarchar (** 390 **)**，預設值是 %，代表目前資料庫中的所有資料表。 支援萬用字元的模式比對。  
   
  [  **@procedure_owner =**] **'***擁有者***'**  
- 這是程序擁有者的名稱。 *擁有者*是**nvarchar (**384**)**，預設值是 NULL。 支援萬用字元的模式比對。 如果*擁有者*未指定，套用基礎 dbms 的預設程序可見性規則。  
+ 這是程序擁有者的名稱。 *擁有者*是**nvarchar (** 384 **)**，預設值是 NULL。 支援萬用字元的模式比對。 如果*擁有者*未指定，套用基礎 dbms 的預設程序可見性規則。  
   
  如果目前使用者擁有含指定名稱的程序，就會傳回這個程序的相關資訊。 如果*擁有者*未指定且目前使用者並未擁有指定之名稱的程序**sp_sproc_columns**會尋找具有指定之名稱的資料庫擁有者所擁有的程序。 如果程序存在，就會傳回它的資料行的相關資訊。  
   
  [  **@procedure_qualifier =**] **'***限定詞***'**  
  這是程序限定詞的名稱。 *限定詞*是**sysname**，預設值是 NULL。 各種 DBMS 產品都支援三部分的資料表命名 (*q*)。 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，這個參數代表資料庫名稱。 在某些產品中，它代表資料表之資料庫環境的伺服器名稱。  
   
- [  **@column_name =**] **'***column_name***'**  
- 這是個單一資料行，當只需要一個目錄資訊的資料行時，便會使用這個單一資料行。 *column_name*是**nvarchar (**384**)**，預設值是 NULL。 如果*column_name*已省略，則會傳回所有資料行。 支援萬用字元的模式比對。 若要有最大交互操作能力，閘道用戶端應該只採用 ISO 標準模式比對 (% 和 _ 萬用字元)。  
+ [ **@column_name =**] **'***column_name***'**  
+ 這是個單一資料行，當只需要一個目錄資訊的資料行時，便會使用這個單一資料行。 *column_name*是**nvarchar (** 384 **)**，預設值是 NULL。 如果*column_name*已省略，則會傳回所有資料行。 支援萬用字元的模式比對。 若要有最大交互操作能力，閘道用戶端應該只採用 ISO 標準模式比對 (% 和 _ 萬用字元)。  
   
  [  **@ODBCVer =**] **'***ODBCVer***'**  
  這是所使用的 ODBC 版本。 *ODBCVer*是**int**，預設值是 2，表示 ODBC 2.0 版。 如需有關 ODBC 2.0 版和 ODBC 3.0 版之差異的詳細資訊，請參閱 ODBC **SQLProcedureColumns** odbc 3.0 版的規格  
@@ -81,18 +79,18 @@ sp_sproc_columns [[@procedure_name = ] 'name']
 |-----------------|---------------|-----------------|  
 |**PROCEDURE_QUALIFIER**|**sysname**|程序限定詞名稱。 這個資料行可以是 NULL。|  
 |**PROCEDURE_OWNER**|**sysname**|程序擁有者名稱。 這個資料行一律會傳回值。|  
-|**程序名稱**|**nvarchar (**134**)**|程序名稱。 這個資料行一律會傳回值。|  
+|**程序名稱**|**nvarchar (** 134 **)**|程序名稱。 這個資料行一律會傳回值。|  
 |**COLUMN_NAME**|**sysname**|每個資料行的資料行名稱**TABLE_NAME**傳回。 這個資料行一律會傳回值。|  
 |**COLUMN_TYPE**|**smallint**|這個欄位一律會傳回值：<br /><br /> 0 = SQL_PARAM_TYPE_UNKNOWN<br /><br /> 1 = SQL_PARAM_TYPE_INPUT<br /><br /> 2 = SQL_PARAM_TYPE_OUTPUT<br /><br /> 3 = SQL_RESULT_COL<br /><br /> 4 = SQL_PARAM_OUTPUT<br /><br /> 5 = SQL_RETURN_VALUE|  
 |**DATA_TYPE**|**smallint**|ODBC 資料類型的整數碼。 如果這個資料類型無法對應至 ISO 類型，此值就是 NULL。 傳回原生資料型別名稱**TYPE_NAME**資料行。|  
 |**TYPE_NAME**|**sysname**|資料類型的字串表示法。 這是基礎 DBMS 所提供的資料類型名稱。|  
-|**有效位數**|**int**|有效位數的數目。 傳回值**精確度**資料行是基底 10。|  
+|**PRECISION**|**int**|有效位數的數目。 傳回值**精確度**資料行是基底 10。|  
 |**LENGTH**|**int**|資料的傳送大小。|  
-|**小數位數**|**smallint**|小數點右側的位數。|  
-|**基數**|**smallint**|這是數值類型的基底。|  
+|**SCALE**|**smallint**|小數點右側的位數。|  
+|**RADIX**|**smallint**|這是數值類型的基底。|  
 |**可為 NULL**|**smallint**|指定 Null 屬性：<br /><br /> 1 = 資料類型可以建立成允許 Null 值。<br /><br /> 0 = 不允許 Null 值。|  
-|**註解**|**varchar (**254**)**|程序資料行的描述。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不會傳回這個資料行的值。|  
-|**COLUMN_DEF**|**nvarchar (**4000**)**|資料行的預設值。|  
+|**註解**|**varchar (** 254 **)**|程序資料行的描述。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不會傳回這個資料行的值。|  
+|**COLUMN_DEF**|**nvarchar (** 4000 **)**|資料行的預設值。|  
 |**SQL_DATA_TYPE**|**smallint**|它會出現在 SQL 資料類型的值**類型**欄位的描述元。 此資料行等同於**DATA_TYPE**資料行，除了**datetime**和 ISO**間隔**資料型別。 這個資料行一律會傳回值。|  
 |**SQL_DATETIME_SUB**|**smallint**|**Datetime** ISO**間隔**子代碼，如果值**SQL_DATA_TYPE**是**SQL_DATETIME**或**SQL_INTERVAL**. 資料類型以外**datetime**和 ISO**間隔**，這個欄位是 NULL。|  
 |**CHAR_OCTET_LENGTH**|**int**|以位元組為單位的最大長度**字元**或**二進位**資料類型資料行。 所有其他資料類型的這個資料行都會傳回 NULL。|  
@@ -106,8 +104,8 @@ sp_sproc_columns [[@procedure_name = ] 'name']
 ## <a name="permissions"></a>Permissions  
  需要結構描述的 SELECT 權限。  
   
-## <a name="see-also"></a>請參閱＜  
- [目錄預存程序 &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/catalog-stored-procedures-transact-sql.md)   
+## <a name="see-also"></a>另請參閱  
+ [目錄預存程序&#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/catalog-stored-procedures-transact-sql.md)   
  [系統預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

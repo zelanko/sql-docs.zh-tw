@@ -1,17 +1,14 @@
 ---
-title: "設定 max degree of parallelism 伺服器組態選項 | Microsoft Docs"
-ms.custom: 
+title: 設定 max degree of parallelism 伺服器組態選項 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/02/2017
-ms.prod: sql-non-specified
-ms.prod_service: database-engine
-ms.service: 
-ms.component: configure-windows
-ms.reviewer: 
+ms.prod: sql
+ms.prod_service: high-availability
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: configuration
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - parallel queries [SQL Server]
 - processors [SQL Server], parallel queries
@@ -19,16 +16,15 @@ helpviewer_keywords:
 - max degree of parallelism option
 - MaxDop
 ms.assetid: 86b65bf1-a6a1-4670-afc0-cdfad1558032
-caps.latest.revision: 
+caps.latest.revision: 33
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.workload: Active
-ms.openlocfilehash: 03d28f2701a077e8f822c6e174a8a6d61de7f6c2
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: edafaecb6bdc11622c7394e3f4a35410c9525ac4
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="configure-the-max-degree-of-parallelism-server-configuration-option"></a>設定 max degree of parallelism 伺服器組態選項
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -72,7 +68,7 @@ ms.lasthandoff: 02/03/2018
   
 #### <a name="to-configure-the-max-degree-of-parallelism-option"></a>設定 max degree of parallelism 選項  
   
-1.  在 **[物件總管]**中，以滑鼠右鍵按一下伺服器，然後選取 **[屬性]**。  
+1.  在 **[物件總管]** 中，以滑鼠右鍵按一下伺服器，然後選取 **[屬性]**。  
   
 2.  按一下 **[進階]** 節點。  
   
@@ -117,7 +113,7 @@ GO
  [DBCC CHECKDB &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md)   
  [DBCC CHECKFILEGROUP &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-checkfilegroup-transact-sql.md)   
  [設定平行索引作業](../../relational-databases/indexes/configure-parallel-index-operations.md)   
- [查詢提示 &#40;TRANSACT-SQL &#41;](../../t-sql/queries/hints-transact-sql-query.md) [設定索引選項](../../relational-databases/indexes/set-index-options.md)  
+ [查詢提示 & #40;TRANSACT-SQL & #41;](../../t-sql/queries/hints-transact-sql-query.md) [設定索引選項](../../relational-databases/indexes/set-index-options.md)  
  [SQL Server 的 "max degree of parallelism" 組態選項的建議和指導方針](http://support.microsoft.com/help/2806535)
   
   

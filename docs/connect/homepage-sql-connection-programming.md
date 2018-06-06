@@ -1,24 +1,22 @@
 ---
-title: "SQL 用戶端程式設計的首頁 |Microsoft 文件"
-description: "註解式連結來下載和文件的語言和作業系統，連線到 SQL Server 或 Azure SQL Database 的許多組合中樞 頁面。"
+title: SQL 用戶端程式設計的首頁 |Microsoft 文件
+description: 註解式連結來下載和文件的語言和作業系統，連線到 SQL Server 或 Azure SQL Database 的許多組合中樞 頁面。
 author: MightyPen
-ms.date: 11/29/2017
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
+ms.date: 04/16/2018
+ms.prod: sql
+ms.prod_service: connectivity
 ms.component: connect
 ms.suite: sql
-ms.custom: 
-ms.technology: drivers
-ms.topic: article
+ms.custom: ''
+ms.technology: connectivity
+ms.topic: conceptual
 ms.reviewer: meetb
 ms.author: genemi
-ms.workload: Inactive
-ms.openlocfilehash: 804a1f1e27e531d2282775db63628ed02fb50829
-ms.sourcegitcommit: 61fc9f81c295c2b93781ef194e9a2ebd475f800d
+ms.openlocfilehash: f281fff6085048bb5918901a9e12af702b71b3e1
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/29/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="homepage-for-client-programming-to-microsoft-sql-server"></a>用戶端程式設計與 Microsoft SQL Server 首頁
 
@@ -56,9 +54,9 @@ ms.lasthandoff: 11/29/2017
 
 | &nbsp; | &nbsp; | &nbsp; |
 | :-- | :-- | :-- |
-| &nbsp;[ ![C# 標誌][image-ref-320-csharp]](#an-110-ado-net-docu) | &nbsp;[ ![ORM Entity Framework 的.NET Framework][image-ref-333-ef]](#an-116-csharp-ef-orm) | &nbsp;[ ![Java 標誌][image-ref-330-java]](#an-130-jdbc-docu) |
-| &nbsp;[ ![Node.js 標誌][image-ref-340-node]](#an-140-node-js-docu) | &nbsp; [**`ODBC for C++`**](#an-160-odbc-cpp-docu)<br/>[![cpp 大加號][image-ref-322-cpp]](#an-160-odbc-cpp-docu) | &nbsp;[ ![PHP 標誌][image-ref-360-php]](#an-170-php-docu) |
-| &nbsp;[ ![Python 標誌][image-ref-370-python]](#an-180-python-docu) | &nbsp;[![拼音標誌][image-ref-380-ruby]](#an-190-ruby-docu) | &nbsp; ... |
+| &nbsp; [![C# 標誌][image-ref-320-csharp]](#an-110-ado-net-docu) | &nbsp; [![ORM Entity Framework 的.NET Framework][image-ref-333-ef]](#an-116-csharp-ef-orm) | &nbsp; [![Java 標誌][image-ref-330-java]](#an-130-jdbc-docu) |
+| &nbsp; [![Node.js 標誌][image-ref-340-node]](#an-140-node-js-docu) | &nbsp; [**`ODBC for C++`**](#an-160-odbc-cpp-docu)<br/>[![cpp 大加號][image-ref-322-cpp]](#an-160-odbc-cpp-docu) | &nbsp; [![PHP 標誌][image-ref-360-php]](#an-170-php-docu) |
+| &nbsp; [![Python 標誌][image-ref-370-python]](#an-180-python-docu) | &nbsp; [![拼音標誌][image-ref-380-ruby]](#an-190-ruby-docu) | &nbsp; ... |
 | &nbsp; | &nbsp; | <br />|
 
 
@@ -107,7 +105,7 @@ EF 具有直接或間接關聯性的下列技術：
 
 - .NET Framework
 - [LINQ to SQL](http://docs.microsoft.com/dotnet/framework/data/adonet/sql/linq/)，或[LINQ to Entities](http://docs.microsoft.com/dotnet/framework/data/adonet/ef/language-reference/linq-to-entities)
-- 語言語法的增強功能，例如 **=>**  C# 中的運算子。
+- 語言語法的增強功能，例如**=>** C# 中的運算子。
 - 產生 SQL 資料庫中資料表的對應類別的原始程式碼好用的程式。 比方說， [EdmGen.exe](http://docs.microsoft.com/dotnet/framework/data/adonet/ef/edm-generator-edmgen-exe)。
 
 

@@ -1,34 +1,33 @@
 ---
-title: "捨棄對查詢所做的變更 (Visual Database Tools) | Microsoft Docs"
-ms.custom: 
+title: 捨棄對查詢所做的變更 (Visual Database Tools) | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
 ms.component: ssms-visual-db
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: tools-ssms
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ssms
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - reverting queries
 - queries [SQL Server], discarding changes
 - discarding query changes
 ms.assetid: 7bb17ece-1222-4622-b476-5789d7641c64
-caps.latest.revision: "4"
+caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 5412ede653f8bd6eb67091dd4ebc532b1d7f1b19
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.openlocfilehash: 4a328d434b06f785fd5d2e3816c635dc7c039e78
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="discard-changes-made-to-queries-visual-database-tools"></a>捨棄對查詢所做的變更 (Visual Database Tools)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 在儲存對查詢定義所做的變更之前，您可以捨棄這些變更。 一旦儲存之後，就無法回復為先前的狀態。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+在儲存對查詢定義所做的變更之前，您可以捨棄這些變更。 一旦儲存之後，就無法回復為先前的狀態。  
   
 > [!NOTE]  
 > 若要恢復在 [結果] 窗格中對值的變更，請在移出資料錄之前按下 ESC 鍵。 如果移出資料錄，並收到資料庫將不會變更的通知，您也可以按下 ESC 鍵以回復為先前的值。  

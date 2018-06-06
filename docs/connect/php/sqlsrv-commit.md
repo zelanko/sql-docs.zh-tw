@@ -1,33 +1,32 @@
 ---
-title: "sqlsrv_commit |Microsoft 文件"
-ms.custom: 
-ms.date: 01/19/2017
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
+title: sqlsrv_commit | Microsoft Docs
+ms.custom: ''
+ms.date: 03/26/2018
+ms.prod: sql
+ms.prod_service: connectivity
 ms.component: php
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
-ms.topic: article
-apiname: sqlsrv_commit
+ms.technology: connectivity
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
+apiname:
+- sqlsrv_commit
 apitype: NA
 helpviewer_keywords:
 - transaction support
 - API Reference, sqlsrv_commit
 - sqlsrv_commit
 ms.assetid: bad67571-61ad-45b5-b4ff-677e3544f809
-caps.latest.revision: "16"
+caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
-ms.workload: Inactive
-ms.openlocfilehash: 7e5e7a7229f50cd5b0b28a07b6999d0891c97abc
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+manager: craigg
+ms.openlocfilehash: 05f3c5710cfcf308073a91fd752eb1abbff8b9d4
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sqlsrvcommit"></a>sqlsrv_commit
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -58,7 +57,7 @@ sqlsrv_commit( resource $conn )
   
 範例中的第一個查詢會將新的銷售訂單插入到 AdventureWorks 資料庫的 *Sales.SalesOrderDetail* 資料表中。 此訂單適用於具有產品識別碼 709 的五個產品單位。 第二個查詢可減少產品識別碼 709 的存貨數量 (五個單位)。 這些查詢會包含在交易中，因為對資料庫而言，這兩個查詢都必須成功，才能正確地反映訂單狀態和產品可用性。  
   
-此範例假設本機電腦上已安裝 SQL Server 和 [AdventureWorks](http://go.microsoft.com/fwlink/?LinkID=67739) 資料庫。 從命令列執行範例時，所有輸出都會寫入至主控台。  
+此範例假設 SQL Server 和[AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works)資料庫安裝在本機電腦上。 從命令列執行範例時，所有輸出都會寫入至主控台。  
   
 ```  
 <?php  
@@ -128,8 +127,10 @@ sqlsrv_close( $conn);
 > [!NOTE]  
 > 請勿使用內嵌的 Transact-SQL 來執行交易。 例如，請勿執行以 "BEGIN TRANSACTION" 作為 Transact-SQL 查詢的陳述式，進而開始交易。 使用內嵌的 Transact-SQL 來執行交易時，無法保證預期的交易行為。  
   
-## <a name="see-also"></a>請參閱＜  
-[SQLSRV 驅動程式 API 參考](../../connect/php/sqlsrv-driver-api-reference.md)  
-[如何：執行交易](../../connect/php/how-to-perform-transactions.md)  
-[PHP SQL 驅動程式概觀](../../connect/php/overview-of-the-php-sql-driver.md)
+## <a name="see-also"></a>另請參閱  
+[SQLSRV 驅動程式 API 參考](../../connect/php/sqlsrv-driver-api-reference.md)
+
+[如何：執行交易](../../connect/php/how-to-perform-transactions.md)
+
+[Microsoft Drivers for PHP for SQL Server 的概觀](../../connect/php/overview-of-the-php-sql-driver.md)
   

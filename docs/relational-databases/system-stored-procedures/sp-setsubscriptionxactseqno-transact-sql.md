@@ -1,16 +1,15 @@
 ---
-title: "sp_setsubscriptionxactseqno (TRANSACT-SQL) |Microsoft 文件"
-ms.custom: 
+title: sp_setsubscriptionxactseqno (TRANSACT-SQL) |Microsoft 文件
+ms.custom: ''
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - sp_setsubscriptionxactseqno
 ms.assetid: cdb4e0ba-5370-4905-b03f-0b0c6f080ca6
-caps.latest.revision: 
+caps.latest.revision: 16
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: aab7bf1c5fb7653f4b61af1912af7de3454bf776
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: f59325c709b8d16d5e120a135d5d9f9697692b1e
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="spsetsubscriptionxactseqno-transact-sql"></a>sp_setsubscriptionxactseqno (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -68,8 +66,8 @@ sp_setsubscriptionxactseqno [ @publisher = ] 'publisher'
   
 |資料行名稱|資料類型|Description|  
 |-----------------|---------------|-----------------|  
-|**原始 XACT_SEQNO**|**varbinary （16)**|訂閱者端所要套用之下一項交易的原始 LSN。|  
-|**更新的 XACT_SEQNO**|**varbinary （16)**|訂閱者端所要套用之下一項交易的更新 LSN。|  
+|**原始 XACT_SEQNO**|**varbinary(16)**|訂閱者端所要套用之下一項交易的原始 LSN。|  
+|**更新的 XACT_SEQNO**|**varbinary(16)**|訂閱者端所要套用之下一項交易的更新 LSN。|  
 |**訂用帳戶資料流計數**|**int**|在上一次同步處理期間所用的訂閱資料流數目。|  
   
 ## <a name="return-code-values"></a>傳回碼值  
@@ -80,7 +78,7 @@ sp_setsubscriptionxactseqno [ @publisher = ] 'publisher'
   
  **sp_setsubscriptionxactseqno**不能在對等的異動複寫拓撲。  
   
- **sp_setsubscriptionxactseqno**可用來略過導致錯誤的特定交易時在訂閱者端套用。 失敗時之後停止散發代理程式,，請連絡[sp_helpsubscriptionerrors &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/sp-helpsubscriptionerrors-transact-sql.md)在散發者上，擷取失敗的交易的 xact_seqno 值，然後再呼叫**sp_setsubscriptionxactseqno**，傳遞此值，以進行*xact_seqno*。 這可以確保只會處理在這個 LSN 之後的命令。  
+ **sp_setsubscriptionxactseqno**可用來略過導致錯誤的特定交易時在訂閱者端套用。 失敗時之後停止散發代理程式,，請連絡[sp_helpsubscriptionerrors &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-stored-procedures/sp-helpsubscriptionerrors-transact-sql.md) ，擷取失敗的交易的 xact_seqno 值，然後再呼叫散發者」端**sp_setsubscriptionxactseqno**，傳遞此值，以進行*xact_seqno*。 這可以確保只會處理在這個 LSN 之後的命令。  
   
  指定的值為**0**如*xact_seqno*散發資料庫中的所有暫止命令傳遞給訂閱者。  
   

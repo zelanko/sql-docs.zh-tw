@@ -1,26 +1,24 @@
 ---
-title: "連接及擷取資料 |Microsoft 文件"
-ms.custom: 
+title: 連接及擷取資料 |Microsoft 文件
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
-ms.component: jdbc
-ms.reviewer: 
+ms.prod: sql
+ms.prod_service: connectivity
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: connectivity
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: ce43cc20-46a3-42ff-a3fb-75ad1ed10e08
-caps.latest.revision: "11"
+caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
-ms.openlocfilehash: 5162a2cef17cc1950eb03f330e6e51bd991eabf3
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+manager: craigg
+ms.openlocfilehash: 86b7dce984408c7d49e302b9b450e07a32fdacc4
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="connecting-and-retrieving-data"></a>連接及擷取資料
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -41,7 +39,7 @@ ms.lasthandoff: 11/18/2017
 |[連接 URL 範例](../../../connect/jdbc/connection-url-sample.md)|描述如何使用連接 URL 連接到[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]然後使用 SQL 陳述式來擷取資料。|  
 |[資料來源範例](../../../connect/jdbc/data-source-sample.md)|說明如何使用資料來源來連接到 SQL Server，然後使用預存程序來擷取資料。|  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [範例 JDBC 驅動程式應用程式](../../../connect/jdbc/sample-jdbc-driver-applications.md)  
   
   

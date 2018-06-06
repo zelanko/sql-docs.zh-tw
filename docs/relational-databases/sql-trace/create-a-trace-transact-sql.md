@@ -1,35 +1,33 @@
 ---
-title: "建立追蹤 (Transact-SQL) | Microsoft Docs"
-ms.custom: 
+title: 建立追蹤 (Transact-SQL) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
 ms.component: sql-trace
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - traces [SQL Server], example
 - traces [SQL Server], creating
 ms.assetid: 79dd4254-e3c6-467a-bb6f-f99e51757e99
-caps.latest.revision: 
-author: MikeRayMSFT
-ms.author: mikeray
+caps.latest.revision: 19
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: d56ed4af251bb739c6717afa6373d4eac1ed9105
-ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
+ms.openlocfilehash: a187fc923c2dc47a178d4a1cecc8bc851a072598
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="create-a-trace-transact-sql"></a>建立追蹤 (Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-此主題描述如何使用預存程序來建立追蹤。  
+  此主題描述如何使用預存程序來建立追蹤。  
   
 ### <a name="to-create-a-trace"></a>若要建立追蹤  
   
@@ -42,7 +40,7 @@ ms.lasthandoff: 02/23/2018
      **sp_trace_setevent** 和 **sp_trace_setfilter** 只能在已停止的現有追蹤上執行。  
   
     > [!IMPORTANT]  
-    >  和一般的預存程序不同，所有 SQL Server Profiler 預存程序 (**sp_trace_*xx***) 的參數均嚴格分類，且不支援自動資料類型的轉換。 如果沒有依照引數描述所指定，以正確的輸入參數資料類型來呼叫這些參數，預存程序會傳回錯誤。  
+    >  和一般的預存程序不同，所有 SQL Server Profiler 預存程序 (**sp_trace_* xx***) 的參數均嚴格分類，且不支援自動資料類型的轉換。 如果沒有依照引數描述所指定，以正確的輸入參數資料類型來呼叫這些參數，預存程序會傳回錯誤。  
   
 ## <a name="example"></a>範例  
  下列程式碼將示範如何使用 [!INCLUDE[tsql](../../includes/tsql-md.md)]來建立追蹤。 這個程式碼含有三個區段：建立追蹤、擴展追蹤檔案以及停止追蹤。 您可以透過加入想要追蹤的事件，自訂追蹤。 如需事件和資料行的清單，請參閱 [sp_trace_setevent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)來建立追蹤。  

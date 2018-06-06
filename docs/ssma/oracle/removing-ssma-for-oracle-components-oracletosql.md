@@ -1,28 +1,27 @@
 ---
-title: "移除 SSMA for Oracle 元件 (OracleToSQL) |Microsoft 文件"
-ms.prod: sql-non-specified
+title: 移除 SSMA for Oracle 元件 (OracleToSQL) |Microsoft 文件
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
 ms.component: ssma-oracle
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
-ms.topic: article
-helpviewer_keywords: Uninstalling the Extension Pack
+ms.technology: ssma
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
+helpviewer_keywords:
+- Uninstalling the Extension Pack
 ms.assetid: 8b527a56-4e52-487a-9ac9-2320388e6d7d
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
-ms.workload: Inactive
-ms.openlocfilehash: 369c3d4cba7e60bde7c7f55bb1e96fd0d7ac4381
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: dc119244850dd7e7925b9f858fe8ea5cbf28ecda
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="removing-ssma--for-oracle-components-oracletosql"></a>移除 SSMA for Oracle 元件 (OracleToSQL)
 當您完成從 Oracle 資料庫移轉[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]，您可能想要解除安裝 SSMA 元件。 您可以在任何時間，以解除安裝用戶端元件。 不過，您不應該解除安裝的延伸模組組件，從[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]除非您已移轉的資料庫不再使用中的函式**ssma_oracle**的結構描述**sysdb**資料庫。  
@@ -61,7 +60,7 @@ ms.lasthandoff: 12/21/2017
   
 解除安裝之後，您可以確認物件中**sysdb.ssma_oracle**結構描述，以及可能是整個**sysdb**資料庫中，已移除使用[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)]。 不過，如果您使用其他 SSMA 產品時，他們也使用**sysdb**資料庫。 如果資料庫存在，而且確定沒有其他資料庫參考在此資料庫中的物件，您可以卸離資料庫。  
   
-## <a name="see-also"></a>請參閱  
-[SSMA 安裝 Oracle 用戶端 &#40; OracleToSQL &#41;](../../ssma/oracle/installing-ssma-for-oracle-client-oracletosql.md)  
-[SSMA 元件安裝 SQL Server &#40; OracleToSQL &#41;](../../ssma/oracle/installing-ssma-components-on-sql-server-oracletosql.md)  
+## <a name="see-also"></a>另請參閱  
+[安裝 Oracle 用戶端的 SSMA &#40;OracleToSQL&#41;](../../ssma/oracle/installing-ssma-for-oracle-client-oracletosql.md)  
+[安裝 SQL Server 上的 SSMA 元件&#40;OracleToSQL&#41;](../../ssma/oracle/installing-ssma-components-on-sql-server-oracletosql.md)  
   

@@ -1,32 +1,28 @@
 ---
-title: "Microsoft ODBC Driver for SQL Server |Microsoft 文件"
-ms.custom: 
+title: Microsoft ODBC Driver for SQL Server |Microsoft 文件
+ms.custom: ''
 ms.date: 08/09/2017
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
-ms.component: odbc
-ms.reviewer: 
+ms.prod: sql
+ms.prod_service: connectivity
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- drivers
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: connectivity
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: 9f2ae91b-06af-4c9a-9d24-062df7bc4662
-caps.latest.revision: 
+caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
-ms.workload: Active
-ms.openlocfilehash: 44d62e94b53d1599a0fcfb3f5815719bdbc2986d
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+manager: craigg
+ms.openlocfilehash: 5142268f69db446dc588af17d7b532ba680c24d9
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="microsoft-odbc-driver-for-sql-server"></a>Microsoft ODBC Driver for SQL Server
 
-![下載 DownArrow Circled](../../ssdt/media/download.png)[若要下載 ODBC 驅動程式](../sql-connection-libraries.md#anchor-20-drivers-relational-access)
+[!INCLUDE[Driver_ODBC_Download](../../includes/driver_odbc_download.md)]
 
 ODBC 是在 SQL Server 的 C 和 c + + 撰寫的應用程式的主要原生料存取 API。 沒有多數資料來源的 ODBC 驅動程式。 其他可以使用 ODBC 的語言包括 COBOL、 Perl、 PHP 和 Python。 ODBC 廣泛用於資料整合案例。
 
@@ -34,15 +30,15 @@ ODBC 驅動程式隨附工具例如[ **sqlcmd** ](../../tools/sqlcmd-utility.md)
 
 ## <a name="code-example-in-c"></a>在 c + + 程式碼範例
 
-我們有小型的.zip 檔案，其中包含使用 ODBC 的 c + + 程式碼的原始程式碼：
+下列 c + + 範例示範如何使用 ODBC Api 來連接到並存取資料庫：
 
 - [使用 ODBC 的 c + + 程式碼範例](../../odbc/reference/sample-odbc-program.md)
 
 ## <a name="download"></a>下載
 
-- ![下載 DownArrow Circled](../../ssdt/media/download.png)[若要下載 ODBC 驅動程式](../sql-connection-libraries.md#anchor-20-drivers-relational-access)
+- ![下載 DownArrow Circled](../../ssdt/media/download.png)[若要下載 ODBC 驅動程式](download-odbc-driver-for-sql-server.md)
 
-## <a name="documentation"></a>文件集  
+## <a name="documentation"></a>文件集
 
 ### <a name="features"></a>功能
 

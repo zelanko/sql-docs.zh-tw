@@ -1,17 +1,16 @@
 ---
-title: "建立提取訂閱 | Microsoft Docs"
-ms.custom: 
+title: 建立提取訂閱 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/17/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
 ms.component: replication
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - pull subscriptions [SQL Server replication], creating
 - merge replication subscribing [SQL Server replication], pull subscriptions
@@ -19,18 +18,17 @@ helpviewer_keywords:
 - snapshot replication [SQL Server], subscribing
 - transactional replication, subscribing
 ms.assetid: 41d1886d-59c9-41fc-9bd6-a59b40e0af6e
-caps.latest.revision: 
+caps.latest.revision: 46
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 4997f742fa8354c40c5f027d39f5b23514e9541f
-ms.sourcegitcommit: ab25b08a312d35489a2c4a6a0d29a04bbd90f64d
+ms.openlocfilehash: 5cc46be9d4d4a4623bf40244059c6040052fad3d
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 05/03/2018
 ---
-# <a name="create-a-pull-subscription"></a>Create a Pull Subscription
+# <a name="create-a-pull-subscription"></a>建立提取訂閱
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   本主題描述如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]或 Replication Management Objects (RMO)，在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中建立提取訂閱。  
   
@@ -51,7 +49,7 @@ ms.lasthandoff: 03/08/2018
   
     -   針對合併式發行集的訂閱，請於 **[合併代理程式安全性]** 頁面指定認證。  
   
-     如需有關各代理程式需要的權限資訊，請參閱＜ [Replication Agent Security Model](../../relational-databases/replication/security/replication-agent-security-model.md)＞。  
+     如需有關各代理程式需要的權限資訊，請參閱＜ [複寫代理程式安全性模型](../../relational-databases/replication/security/replication-agent-security-model.md)＞。  
   
 -   指定同步處理排程，以及訂閱者要初始化的時間。  
   
@@ -98,7 +96,7 @@ ms.lasthandoff: 03/08/2018
   
     -   如果 **allow_pull** 的值為 **0**，請執行 [sp_changepublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md)，並將 **@property** 指定為 **allow_pull**，以及將 **@value** 指定為 **true**。  
   
-2.  在訂閱者端，執行 [sp_addpullsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpullsubscription-transact-sql.md)。 指定 **@publisher** 和 **@publication**中透過 FTP 傳遞快照集。 如需有關更新訂閱的詳細資訊，請參閱＜ [Create an Updatable Subscription to a Transactional Publication](https://msdn.microsoft.com/library/ms152769.aspx)＞。   
+2.  在訂閱者端，執行 [sp_addpullsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpullsubscription-transact-sql.md)。 指定 **@publisher** 和 **@publication**中透過 FTP 傳遞快照集。 如需有關更新訂閱的詳細資訊，請參閱＜ [建立交易式發行集的可更新訂閱](https://msdn.microsoft.com/library/ms152769.aspx)＞。   
   
 3.  在訂閱者端，執行 [sp_addpullsubscription_agent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql.md)。 指定下列項目：  
   
@@ -129,7 +127,7 @@ ms.lasthandoff: 03/08/2018
   
     -   **@subscription_priority** ：指定訂閱的優先權 (**0.00** 到 **99.99**)。 只需要對主訂閱執行此動作。  
   
-         如需詳細資訊，請參閱 [Advanced Merge Replication Conflict Detection and Resolution](../../relational-databases/replication/merge/advanced-merge-replication-conflict-detection-and-resolution.md)。  
+         如需詳細資訊，請參閱 [進階合併式複寫衝突偵測與解決](../../relational-databases/replication/merge/advanced-merge-replication-conflict-detection-and-resolution.md)。  
   
 3.  在訂閱者端，執行 [sp_addmergepullsubscription_agent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql.md)。 指定下列參數：  
   
@@ -144,7 +142,7 @@ ms.lasthandoff: 03/08/2018
   
     -   (選擇性) **0** 指定為 **@publisher_security_mode** ，以及 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 **@publisher_login** ，並將 **@publisher_password**登入資訊 (如果您在連接到散發者時需要使用「 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證」)。  
   
-    -   此訂閱之「合併代理程式」作業的排程。 如需詳細資訊，請參閱 [Create an Updatable Subscription to a Transactional Publication](publish/create-an-updatable-subscription-to-a-transactional-publication.md)。  
+    -   此訂閱之「合併代理程式」作業的排程。 如需詳細資訊，請參閱 [建立交易式發行集的可更新訂閱](publish/create-an-updatable-subscription-to-a-transactional-publication.md)。  
   
 4.  在發行者端，執行 [sp_addmergesubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergesubscription-transact-sql.md)。 指定 **@publication**或 Replication Management Objects (RMO)，在 **@subscriber**或 Replication Management Objects (RMO)，在 **@subscriber_db**，並將 **@subscription_type** 指定為 **@subscription_type**＞。 如此會註冊提取訂閱。  
   
@@ -300,7 +298,7 @@ GO
     -   將 <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Login%2A> ，並將 <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Password%2A> (或 <xref:Microsoft.SqlServer.Replication.PullSubscription.SynchronizationAgentProcessSecurity%2A> ) 欄位，為「散發代理程式」在「訂閱者」上執行時所使用的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 帳戶提供認證。 此帳戶用於建立到「訂閱者」的本機連接，以及使用「Windows 驗證」建立遠端連接。  
   
         > [!NOTE]  
-        >  當訂閱是由 <xref:Microsoft.SqlServer.Replication.PullSubscription.SynchronizationAgentProcessSecurity%2A> 固定伺服器角色的成員建立時，不需要設定 **P:Microsoft.SqlServer.Replication.PullSubscription.SynchronizationAgentProcessSecurity** ，但還是建議您對其進行設定。 在這種情況下，代理程式會模擬「SQL Server Agent」帳戶。 如需詳細資訊，請參閱 [Replication Agent Security Model](../../relational-databases/replication/security/replication-agent-security-model.md)。  
+        >  當訂閱是由 <xref:Microsoft.SqlServer.Replication.PullSubscription.SynchronizationAgentProcessSecurity%2A> 固定伺服器角色的成員建立時，不需要設定 **P:Microsoft.SqlServer.Replication.PullSubscription.SynchronizationAgentProcessSecurity** ，但還是建議您對其進行設定。 在這種情況下，代理程式會模擬「SQL Server Agent」帳戶。 如需詳細資訊，請參閱 [複寫代理程式安全性模型](../../relational-databases/replication/security/replication-agent-security-model.md)。  
   
     -   (選擇性) **@value** 指定為 <xref:Microsoft.SqlServer.Replication.PullSubscription.CreateSyncAgentByDefault%2A> 值，以建立用於同步處理訂閱的代理程式作業。 如果指定 **false** (預設值)，則只能以程式設計的方式同步處理訂閱，而且您在從 <xref:Microsoft.SqlServer.Replication.TransSynchronizationAgent> 屬性存取此物件時必須指定其他屬性 <xref:Microsoft.SqlServer.Replication.TransPullSubscription.SynchronizationAgent%2A> 。 如需相關資訊，請參閱 [Synchronize a Pull Subscription](../../relational-databases/replication/synchronize-a-pull-subscription.md)。  
   
@@ -342,7 +340,7 @@ GO
     -   將 <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Login%2A> ，並將 <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Password%2A> (或 <xref:Microsoft.SqlServer.Replication.PullSubscription.SynchronizationAgentProcessSecurity%2A> ) 欄位，為「散發代理程式」在「訂閱者」上執行時所使用的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 帳戶提供認證。 此帳戶用於建立到「訂閱者」的本機連接，以及使用「Windows 驗證」建立遠端連接。  
   
         > [!NOTE]  
-        >  當訂閱是由 <xref:Microsoft.SqlServer.Replication.PullSubscription.SynchronizationAgentProcessSecurity%2A> 固定伺服器角色的成員建立時，不需要設定 **P:Microsoft.SqlServer.Replication.PullSubscription.SynchronizationAgentProcessSecurity** ，但還是建議您對其進行設定。 在這種情況下，代理程式會模擬「SQL Server Agent」帳戶。 如需詳細資訊，請參閱 [Replication Agent Security Model](../../relational-databases/replication/security/replication-agent-security-model.md)。  
+        >  當訂閱是由 <xref:Microsoft.SqlServer.Replication.PullSubscription.SynchronizationAgentProcessSecurity%2A> 固定伺服器角色的成員建立時，不需要設定 **P:Microsoft.SqlServer.Replication.PullSubscription.SynchronizationAgentProcessSecurity** ，但還是建議您對其進行設定。 在這種情況下，代理程式會模擬「SQL Server Agent」帳戶。 如需詳細資訊，請參閱 [複寫代理程式安全性模型](../../relational-databases/replication/security/replication-agent-security-model.md)。  
   
     -   (選擇性) **@value** 指定為 <xref:Microsoft.SqlServer.Replication.PullSubscription.CreateSyncAgentByDefault%2A> 值，以建立用於同步處理訂閱的代理程式作業。 如果指定 **false** (預設值)，則只能以程式設計的方式同步處理訂閱，而且您在從 <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent> 屬性存取此物件時必須指定其他屬性 <xref:Microsoft.SqlServer.Replication.MergePullSubscription.SynchronizationAgent%2A> 。 如需相關資訊，請參閱 [Synchronize a Pull Subscription](../../relational-databases/replication/synchronize-a-pull-subscription.md)。  
   

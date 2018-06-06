@@ -1,17 +1,16 @@
 ---
-title: "含參數化篩選之合併式發行集的快照集 | Microsoft 文件"
-ms.custom: 
+title: 含參數化篩選之合併式發行集的快照集 | Microsoft 文件
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
 ms.component: replication
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - parameterized filters [SQL Server replication], snapshots
 - snapshots [SQL Server replication], parameterized filters and
@@ -19,20 +18,19 @@ helpviewer_keywords:
 - merge replication [SQL Server replication], initializing subscriptions
 - initializing subscriptions [SQL Server replication], snapshots
 ms.assetid: 99d7ae15-5457-4ad4-886b-19c17371f72c
-caps.latest.revision: 
+caps.latest.revision: 37
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 113c1df4efd962de6353e9a4c9db76bae8fa78b2
-ms.sourcegitcommit: ab25b08a312d35489a2c4a6a0d29a04bbd90f64d
+ms.openlocfilehash: 279e9d178400cf53a4a7edea7cd245104f670361
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="snapshots-for-merge-publications-with-parameterized-filters"></a>含參數化篩選之合併式發行集的快照集
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  在合併發行集內使用參數化資料列篩選器時，覆寫會以兩段式的快照集來初始化每一個訂閱。 首先建立包含複寫所需之所有物件以及已發行物件之結構描述的結構描述快照集，但不含資料。 然後使用包含結構描述快照集中物件與結構描述以及訂閱之資料分割所屬資料的快照集，來初始化每個訂閱。 如果有多個訂閱收到給定的資料分割 (即收到相同的結構描述和資料)，該資料分割的快照集只會建立一次，多個訂閱均從同一快照集初始化。 如需參數化資料列篩選器的詳細資訊，請參閱＜ [Parameterized Row Filters](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)＞。  
+  在合併發行集內使用參數化資料列篩選器時，覆寫會以兩段式的快照集來初始化每一個訂閱。 首先建立包含複寫所需之所有物件以及已發行物件之結構描述的結構描述快照集，但不含資料。 然後使用包含結構描述快照集中物件與結構描述以及訂閱之資料分割所屬資料的快照集，來初始化每個訂閱。 如果有多個訂閱收到給定的資料分割 (即收到相同的結構描述和資料)，該資料分割的快照集只會建立一次，多個訂閱均從同一快照集初始化。 如需參數化資料列篩選器的詳細資訊，請參閱＜ [參數化資料列篩選器](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)＞。  
   
  您可以使用下列三種方法之一為含參數化篩選的發行集建立快照集：  
   
@@ -43,7 +41,7 @@ ms.lasthandoff: 03/08/2018
 -   允許訂閱者在首次執行同步處理時，要求快照集產生和應用程式。 使用此選項可讓新「訂閱者」執行同步處理，而無需管理員介入 (必須在「發行者」端執行[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent，才允許產生快照集)。  
   
     > [!NOTE]  
-    >  如果發行集內的一或多個發行項的篩選產生對每個訂閱而言是唯一的非重疊資料分割，則只要合併代理程式一執行，就會清除中繼資料。 這表示分割快照集會更快過期。 使用這個選項時，您應該考慮允許訂閱者初始化快照集的產生與傳遞。 如需有關篩選選項的詳細資訊，請參閱＜ [Parameterized Row Filters](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)＞。  
+    >  如果發行集內的一或多個發行項的篩選產生對每個訂閱而言是唯一的非重疊資料分割，則只要合併代理程式一執行，就會清除中繼資料。 這表示分割快照集會更快過期。 使用這個選項時，您應該考慮允許訂閱者初始化快照集的產生與傳遞。 如需有關篩選選項的詳細資訊，請參閱＜ [參數化資料列篩選器](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)＞。  
   
 -   使用「快照集代理程式」為每個「訂閱者」手動產生快照集。 然後，「訂閱者」必須為「合併代理程式」提供快照集位置，才能擷取和套用正確的快照集。  
   
@@ -54,14 +52,14 @@ ms.lasthandoff: 03/08/2018
   
  請考慮使用 [!INCLUDE[ssSampleDBCoShort](../../includes/sssampledbcoshort-md.md)]，此產品具有行動工作能力，可將庫存傳遞至個別商店。 每個業務員都會收到其登入帳戶的訂閱 (擷取業務員服務之商店的資料)。 管理員選擇預先產生快照集，並在每個週日重新整理這些快照集。 偶而，會有新使用者新增到系統中，並且需要無可用快照集之資料分割中的資料。 管理員也可以選擇允許「訂閱者」初始化的快照集，以避免由於快照集不可用而造成「訂閱者」無法訂閱發行集的情況。 當新的「訂閱者」首次進行連接時，會為指定的資料分割建立快照集，並套用到「訂閱者」(必須在「發行者」端執行[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent，才允許產生快照集)。  
   
- 若要為含參數化篩選的發行集建立快照集，請參閱＜ [Create a Snapshot for a Merge Publication with Parameterized Filters](../../relational-databases/replication/create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md)＞。  
+ 若要為含參數化篩選的發行集建立快照集，請參閱＜ [使用參數化篩選建立合併式發行集的快照集](../../relational-databases/replication/create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md)＞。  
   
 ## <a name="security-settings-for-the-snapshot-agent"></a>快照集代理程式的安全性設定  
  「快照集代理程式」會為每個資料分割建立快照集。 對於預先產生的快照集和「訂閱者」所需的快照集，代理程式會在建立發行集的快照集代理程式作業 (此作業由「新增發行集精靈」或 **sp_addpublication_snapshot**建立) 時指定的認證下執行並進行連接。 若要變更認證，請使用 **sp_changedynamicsnapshot_job**。 如需詳細資訊，請參閱 [sp_changedynamicsnapshot_job &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changedynamicsnapshot-job-transact-sql.md)。  
   
 ## <a name="see-also"></a>另請參閱  
  [使用快照集初始化訂閱](../../relational-databases/replication/initialize-a-subscription-with-a-snapshot.md)   
- [Parameterized Row Filters](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)   
+ [參數化資料列篩選器](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)   
  [保護快照集資料夾](../../relational-databases/replication/security/secure-the-snapshot-folder.md)  
   
   

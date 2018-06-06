@@ -1,35 +1,23 @@
 ---
-title: "相依性網路中尋找特定節點 |Microsoft 文件"
-ms.custom: 
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
-helpviewer_keywords:
-- nodes [Analysis Services]
-- dependency network nodes [Analysis Services]
-- Mining Model Viewer [Analysis Services], dependency network nodes
-ms.assetid: 37c54602-ab25-48be-ae7a-59819deea8ed
-caps.latest.revision: 
-author: Minewiskan
+title: 相依性網路中尋找特定節點 |Microsoft 文件
+ms.date: 05/08/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: data-mining
+ms.topic: conceptual
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: e67cca59b2383c525fdd0fbd80546d2c123a8a96
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: ad00f715533e5da24cbec9c61dc79a045fa035ef
+ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="find-a-specific-node-in-a-dependency-network"></a>在相依性網路中尋找特定節點
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 採礦模型中的相依性網路可包含許多節點，因此難以找到您感興趣的資料。 若要解決此問題，您可以使用資料採礦設計師之 **[相依性網路]** 索引標籤上的 **[尋找節點]** 對話方塊，來搜尋特定節點。  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 採礦模型中的相依性網路可包含許多節點，因此難以找到您感興趣的資料。 若要解決此問題，您可以使用資料採礦設計師之 **[相依性網路]** 索引標籤上的 **[尋找節點]** 對話方塊，來搜尋特定節點。  
   
 ### <a name="to-find-a-specific-node-in-a-dependency-network"></a>若要在相依性網路中尋找特定節點  
   

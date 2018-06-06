@@ -1,16 +1,15 @@
 ---
-title: "執行 SSMA 主控台 (SybaseToSQL) |Microsoft 文件"
-ms.custom: 
+title: 執行 SSMA 主控台 (SybaseToSQL) |Microsoft 文件
+ms.custom: ''
 ms.date: 09/27/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
 ms.component: ssma-sybase
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ssma
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 applies_to:
 - Azure SQL Database
 - SQL Server
@@ -24,16 +23,15 @@ helpviewer_keywords:
 - Sybase Console,Script File Commands
 - Sybase Console,Script Generation Commands
 ms.assetid: ea8950b7-fabc-4aa4-89f8-9573a2617d70
-caps.latest.revision: "22"
+caps.latest.revision: 22
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
-ms.workload: Inactive
-ms.openlocfilehash: 5a76b457d7178483d18a5a7a26d176d7e606b6fa
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+manager: craigg
+ms.openlocfilehash: bbad5207581a713327112b9d319c69f706ad2f61
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="executing-the-ssma-console-sybasetosql"></a>執行 SSMA 主控台 (SybaseToSQL)
 Microsoft 提供一組強大的指令碼檔案命令來執行及控制 SSMA 活動。 這可確保各節詳細說明相同。  
@@ -47,9 +45,9 @@ Microsoft 提供一組強大的指令碼檔案命令來執行及控制 SSMA 活�
 ### <a name="create-new-project"></a>建立新專案間的  
 此命令會建立新的 SSMA 專案。  
   
--   `project-folder`表示取得建立之專案的資料夾。  
+-   `project-folder` 表示取得建立之專案的資料夾。  
   
--   `project-name`表示專案的名稱。 {string}  
+-   `project-name` 表示專案的名稱。 {string}  
   
 -   `overwrite-if-exists`選擇性屬性會指出是否應該覆寫現有的專案。 {布林值。  
   
@@ -76,9 +74,9 @@ Microsoft 提供一組強大的指令碼檔案命令來執行及控制 SSMA 活�
 ### <a name="open-project"></a>開啟專案  
 此命令會開啟專案。
 
--   `project-folder`表示取得建立之專案的資料夾。 如果指定的資料夾不存在，則命令會失敗。  {string}  
+-   `project-folder` 表示取得建立之專案的資料夾。 如果指定的資料夾不存在，則命令會失敗。  {string}  
   
--   `project-name`表示專案的名稱。 如果指定的專案不存在，則命令會失敗。  {string}  
+-   `project-name` 表示專案的名稱。 如果指定的專案不存在，則命令會失敗。  {string}  
   
 **語法範例：**  
   
@@ -120,9 +118,9 @@ Microsoft 提供一組強大的指令碼檔案命令來執行及控制 SSMA 活�
   
 > [!NOTE]  
 > - **瀏覽**主控台中不支援功能的 ui。  
-> - 如需有關建立指令碼檔的詳細資訊，請參閱[建立指令碼檔案 &#40;SybaseToSQL &#41;](../../ssma/sybase/creating-script-files-sybasetosql.md).  
+> - 如需有關建立指令碼檔的詳細資訊，請參閱[建立指令碼檔&#40;SybaseToSQL&#41;](../../ssma/sybase/creating-script-files-sybasetosql.md)。  
   
-### <a name="connect-source-database"></a>連接來源資料庫  
+### <a name="connect-source-database"></a>connect-source-database  
 此命令會執行來源資料庫的連接並載入高層級的中繼資料的來源資料庫，而非全部的中繼資料。
   
 如果無法建立來源的連接，則會產生錯誤，主控台應用程式會停止進一步執行。
@@ -135,7 +133,7 @@ Microsoft 提供一組強大的指令碼檔案命令來執行及控制 SSMA 活�
 <connect-source-database  server="<server-unique-name>"/>  
 ```  
   
-### <a name="force-load-sourcetarget-database"></a>強制載入-來源/目標的資料庫  
+### <a name="force-load-sourcetarget-database"></a>force-load-source/target-database  
 這個命令載入來源的中繼資料，且有助於處理離線移轉專案。  
   
 如果無法建立來源/目標的連接，則會產生錯誤，主控台應用程式會停止進一步執行。  
@@ -152,7 +150,7 @@ Microsoft 提供一組強大的指令碼檔案命令來執行及控制 SSMA 活�
 </force-load>  
 ```  
   
-### <a name="reconnect-source-database"></a>重新連接來源資料庫  
+### <a name="reconnect-source-database"></a>reconnect-source-database  
 此命令會重新連接至來源資料庫，但不會載入與不同的是連接來源資料庫命令的任何中繼資料。  
   
 如果 (re) 與來源的連接無法建立，則會產生錯誤，主控台應用程式會停止進一步執行。  
@@ -176,7 +174,7 @@ Microsoft 提供一組強大的指令碼檔案命令來執行及控制 SSMA 活�
 <connect-target-database  server="<server-unique-name>"/>  
 ```  
   
-### <a name="reconnect-target-database"></a>重新連線目標資料庫  
+### <a name="reconnect-target-database"></a>reconnect-target-database  
   
 此命令會重新連接到目標資料庫，但不會載入任何中繼資料，不同於連接目標資料庫命令。  
   
@@ -191,7 +189,7 @@ Microsoft 提供一組強大的指令碼檔案命令來執行及控制 SSMA 活�
 ## <a name="report-commands"></a>報表命令  
 報表命令產生各種 SSMA 主控台活動的效能上的報表。  
   
-### <a name="generate-assessment-report"></a>產生評估報告  
+### <a name="generate-assessment-report"></a>generate-assessment-report  
   
 此命令會產生來源資料庫上的評估報告。  
   
@@ -199,25 +197,25 @@ Microsoft 提供一組強大的指令碼檔案命令來執行及控制 SSMA 活�
   
 無法連線至來源資料庫伺服器，在命令執行時，也會產生結束主控台應用程式中。  
   
--   `conversion-report-folder:`指定評估報表可以儲存的資料夾。 （選擇性的屬性）  
+-   `conversion-report-folder:` 指定評估報表可以儲存的資料夾。 （選擇性的屬性）  
   
--   `object-name:`指定評估報表產生 （支援個別的物件名稱或群組的物件名稱） 被視為物件。  
+-   `object-name:` 指定評估報表產生 （支援個別的物件名稱或群組的物件名稱） 被視為物件。  
   
--   `object-type:`指定物件中所呼叫的物件名稱屬性 （如果指定物件類別，則物件類型將會是 「 類別目錄 」） 的類型。  
+-   `object-type:` 指定物件中所呼叫的物件名稱屬性 （如果指定物件類別，則物件類型將會是 「 類別目錄 」） 的類型。  
   
--   `conversion-report-overwrite:`指定是否要覆寫評估報表資料夾已經存在。  
+-   `conversion-report-overwrite:` 指定是否要覆寫評估報表資料夾已經存在。  
   
     **預設值：** false。 （選擇性的屬性）  
   
--   `write-summary-report-to:`指定產生報表的路徑。  
+-   `write-summary-report-to:` 指定產生報表的路徑。  
   
     如果只提及的資料夾路徑，然後檔案名稱**AssessmentReport&lt;n&gt;。XML**建立。 （選擇性的屬性）  
   
     報表建立具有兩個其他的子類別目錄：  
   
-    -   `report-errors`（="true/false"，預設值為"false"（選擇性的屬性））  
+    -   `report-errors` （="true/false"，預設值為"false"（選擇性的屬性））  
   
-    -   `verbose`（="true/false"，預設值為"false"（選擇性的屬性））  
+    -   `verbose` （="true/false"，預設值為"false"（選擇性的屬性））  
   
 **語法範例：**  
   
@@ -240,7 +238,7 @@ Microsoft 提供一組強大的指令碼檔案命令來執行及控制 SSMA 活�
   
 />  
 ```  
-中的多個  
+或  
   
 ```xml  
 <generate-assessment-report  
@@ -260,30 +258,30 @@ Microsoft 提供一組強大的指令碼檔案命令來執行及控制 SSMA 活�
 ## <a name="migration-commands"></a>移轉命令  
 來源結構描述轉換成目標資料庫結構描述移轉命令，並將資料移轉到目標伺服器。  
   
-### <a name="convert-schema"></a>轉換結構描述  
+### <a name="convert-schema"></a>convert-schema  
 此命令會執行從來源到目標結構描述的結構描述轉換。  
   
 如果來源或目標資料庫的連接不會再執行此命令執行或在命令執行期間的來源或目標資料庫伺服器的連線失敗，則會產生錯誤，則主控台應用程式結束。  
   
--   `conversion-report-folder:`指定評估報表可以儲存所在的資料夾。 （選擇性的屬性）  
+-   `conversion-report-folder:` 指定評估報表可以儲存所在的資料夾。 （選擇性的屬性）  
   
--   `object-name:`指定來源物件視為轉換結構描述 （支援個別的物件名稱或群組的物件名稱）。  
+-   `object-name:` 指定來源物件視為轉換結構描述 （支援個別的物件名稱或群組的物件名稱）。  
   
--   `object-type:`指定物件中所呼叫的物件名稱屬性 （如果指定物件類別，則物件類型將會是 「 類別目錄 」） 的類型。  
+-   `object-type:` 指定物件中所呼叫的物件名稱屬性 （如果指定物件類別，則物件類型將會是 「 類別目錄 」） 的類型。  
   
--   `conversion-report-overwrite:`指定是否要覆寫評估報表資料夾已經存在。  
+-   `conversion-report-overwrite:` 指定是否要覆寫評估報表資料夾已經存在。  
   
     **預設值：** false。 （選擇性的屬性）  
   
--   `write-summary-report-to:`指定產生的摘要報告的路徑。  
+-   `write-summary-report-to:` 指定產生的摘要報告的路徑。  
   
     如果只提及的資料夾路徑，然後檔案名稱**SchemaConversionReport&lt;n&gt;。XML**建立。 （選擇性的屬性）  
   
     報表建立具有兩個其他的子類別目錄：  
   
-    -   `report-errors`（="true/false"，預設值為"false"（選擇性的屬性））  
+    -   `report-errors` （="true/false"，預設值為"false"（選擇性的屬性））  
   
-    -   `verbose`（="true/false"，預設值為"false"（選擇性的屬性））  
+    -   `verbose` （="true/false"，預設值為"false"（選擇性的屬性））  
   
 **語法範例：**  
   
@@ -305,7 +303,7 @@ Microsoft 提供一組強大的指令碼檔案命令來執行及控制 SSMA 活�
   
 />  
 ```  
-中的多個  
+或  
   
 ```xml  
 <convert-schema  
@@ -324,19 +322,19 @@ Microsoft 提供一組強大的指令碼檔案命令來執行及控制 SSMA 活�
 ### <a name="migrate-data"></a>移轉資料  
 此命令會將來源資料移轉到目標。  
   
--   `object-name:`指定來源物件視為移轉的資料 （支援個別的物件名稱或群組的物件名稱）。  
+-   `object-name:` 指定來源物件視為移轉的資料 （支援個別的物件名稱或群組的物件名稱）。  
   
--   `object-type:`指定物件中所呼叫的物件名稱屬性 （如果指定物件類別，則物件類型將會是 「 類別目錄 」） 的類型。  
+-   `object-type:` 指定物件中所呼叫的物件名稱屬性 （如果指定物件類別，則物件類型將會是 「 類別目錄 」） 的類型。  
   
--   `write-summary-report-to:`指定產生報表的路徑。  
+-   `write-summary-report-to:` 指定產生報表的路徑。  
   
     如果只提及的資料夾路徑，然後檔案名稱**DataMigrationReport&lt;n&gt;。XML**建立。 （選擇性的屬性）  
   
     報表建立具有兩個其他的子類別目錄：  
   
-    -   `report-errors`（="true/false"，預設值為"false"（選擇性的屬性））  
+    -   `report-errors` （="true/false"，預設值為"false"（選擇性的屬性））  
   
-    -   `verbose`（="true/false"，預設值為"false"（選擇性的屬性））  
+    -   `verbose` （="true/false"，預設值為"false"（選擇性的屬性））  
   
 **語法範例：**  
   
@@ -361,7 +359,7 @@ Microsoft 提供一組強大的指令碼檔案命令來執行及控制 SSMA 活�
   
 </migrate-data>  
 ```  
-中的多個  
+或  
   
 ```xml  
 <migrate-data  
@@ -384,9 +382,9 @@ Microsoft 提供一組強大的指令碼檔案命令來執行及控制 SSMA 活�
 ### <a name="map-schema"></a>對應結構描述  
 這個命令會提供結構描述對應到目標結構描述的來源資料庫。  
   
--   `source-schema`指定要移轉的來源結構描述。  
+-   `source-schema` 指定要移轉的來源結構描述。  
   
--   `sql-server-schema`指定將會移轉的來源結構描述的目標結構描述。  
+-   `sql-server-schema` 指定將會移轉的來源結構描述的目標結構描述。  
   
 **語法範例：**  
   
@@ -409,11 +407,11 @@ sql-server-schema="<target-schema>"/>
   
 如果目標資料庫連接不會再執行此命令執行，或在目標資料庫伺服器的連線失敗命令執行期間，會產生錯誤，則主控台應用程式結束。  
   
--   `object-name:`指定同步處理目標資料庫 （支援個別的物件名稱或群組的物件名稱） 被視為目標物件。  
+-   `object-name:` 指定同步處理目標資料庫 （支援個別的物件名稱或群組的物件名稱） 被視為目標物件。  
   
--   `object-type:`指定物件中所呼叫的物件名稱屬性 （如果指定物件類別，則物件類型將會是 「 類別目錄 」） 的類型。  
+-   `object-type:` 指定物件中所呼叫的物件名稱屬性 （如果指定物件類別，則物件類型將會是 「 類別目錄 」） 的類型。  
   
--   `on-error:`指定是否要指定同步處理錯誤視為警告或錯誤。 在錯誤的可用選項：  
+-   `on-error:` 指定是否要指定同步處理錯誤視為警告或錯誤。 在錯誤的可用選項：  
   
     -   報表-總計-為-警告  
   
@@ -421,7 +419,7 @@ sql-server-schema="<target-schema>"/>
   
     -   失敗指令碼  
   
--   `report-errors-to:`指定同步處理作業 （選擇性的屬性） 的錯誤報表的位置。 如果只指定資料夾路徑，然後檔案名稱**TargetSynchronizationReport.XML**建立。  
+-   `report-errors-to:` 指定同步處理作業 （選擇性的屬性） 的錯誤報表的位置。 如果只指定資料夾路徑，然後檔案名稱**TargetSynchronizationReport.XML**建立。  
   
 **語法範例：**  
   
@@ -440,7 +438,7 @@ fail-script>" (optional)
   
 />  
 ```  
-中的多個  
+或  
   
 ```xml  
 <synchronize-target  
@@ -449,7 +447,7 @@ fail-script>" (optional)
   
   object-type="<object-category>"/>  
 ```  
-中的多個  
+或  
   
 ```xml  
 <synchronize-target>  
@@ -470,11 +468,11 @@ fail-script>" (optional)
   
 此命令需要一個或數個 metabase 節點做為命令列參數。  
   
--   `object-name:`指定來源物件視為重新整理從來源資料庫 （支援個別的物件名稱或群組的物件名稱）。  
+-   `object-name:` 指定來源物件視為重新整理從來源資料庫 （支援個別的物件名稱或群組的物件名稱）。  
   
--   `object-type:`指定的屬性中指定的物件名稱 （如果指定物件類別，則物件類型將會是 「 類別目錄 」） 的物件類型。  
+-   `object-type:` 指定的屬性中指定的物件名稱 （如果指定物件類別，則物件類型將會是 「 類別目錄 」） 的物件類型。  
   
--   `on-error:`指定是否要重新整理錯誤視為警告或錯誤呼叫。 在錯誤的可用選項：  
+-   `on-error:` 指定是否要重新整理錯誤視為警告或錯誤呼叫。 在錯誤的可用選項：  
   
     -   報表-總計-為-警告  
   
@@ -482,7 +480,7 @@ fail-script>" (optional)
   
     -   失敗指令碼  
   
--   `report-errors-to:`指定重新整理作業 （選擇性的屬性） 的錯誤報表的位置。 如果只指定資料夾路徑，然後檔案名稱**SourceDBRefreshReport.XML**建立。  
+-   `report-errors-to:` 指定重新整理作業 （選擇性的屬性） 的錯誤報表的位置。 如果只指定資料夾路徑，然後檔案名稱**SourceDBRefreshReport.XML**建立。  
   
 **語法範例：**  
   
@@ -501,7 +499,7 @@ fail-script>" (optional)
   
 />  
 ```  
-中的多個  
+或  
   
 ```xml  
 <refresh-from-database  
@@ -510,7 +508,7 @@ fail-script>" (optional)
   
   object-type="<object-category>" />  
 ```  
-中的多個  
+或  
   
 ```xml  
 <refresh-from-database>  
@@ -523,20 +521,20 @@ fail-script>" (optional)
 ## <a name="script-generation-commands"></a>指令碼產生命令  
 產生指令碼命令執行雙重工作： 它們協助節省主控台輸出中的指令碼檔案，並將它們記錄 T-SQL 輸出到主控台或檔案，根據您指定的參數。  
   
-### <a name="save-as-script"></a>儲存為指令碼  
+### <a name="save-as-script"></a>save-as-script  
 此命令用來儲存到檔案物件的指令碼所述當 metabase = 目標。 也就是說，我們取得的指令碼，並且在目標資料庫上執行相同，這是替代同步處理命令。  
   
 此命令需要一個或數個 metabase 節點做為命令列參數。  
   
--   `object-name:`指定的物件的指令碼要儲存 （支援個別的物件名稱或群組的物件名稱）。  
+-   `object-name:` 指定的物件的指令碼要儲存 （支援個別的物件名稱或群組的物件名稱）。  
   
--   `object-type:`指定物件中所呼叫的物件名稱屬性 （如果指定物件類別，則物件類型將會是 「 類別目錄 」） 的類型。  
+-   `object-type:` 指定物件中所呼叫的物件名稱屬性 （如果指定物件類別，則物件類型將會是 「 類別目錄 」） 的類型。  
   
--   `metabase:`指定是否在來源或目標 metabase。  
+-   `metabase:` 指定是否在來源或目標 metabase。  
   
--   `destination:`指定的路徑或指令碼必須儲存的資料夾。 如果沒有指定的檔案名稱，則會提供中格式 （object_name 屬性值）.out 的檔案名稱。
+-   `destination:` 指定的路徑或指令碼必須儲存的資料夾。 如果沒有指定的檔案名稱，則會提供中格式 （object_name 屬性值）.out 的檔案名稱。
   
--   `overwrite:`如果為 true，然後它會覆寫相同的檔名若有的話。 它可以包含值 (true/false)。  
+-   `overwrite:` 如果為 true，然後它會覆寫相同的檔名若有的話。 它可以包含值 (true/false)。  
   
 **語法範例：**  
   
@@ -555,7 +553,7 @@ fail-script>" (optional)
   
 />  
 ```  
-中的多個  
+或  
   
 ```xml  
 <save-as-script  
@@ -571,28 +569,28 @@ fail-script>" (optional)
 </save-as-script>  
 ```  
   
-### <a name="convert-sql-statement"></a>轉換 sql 陳述式
+### <a name="convert-sql-statement"></a>convert-sql-statement
 此命令會將轉換的 SQL 陳述式。  
   
--   `context`指定的結構描述名稱。  
+-   `context` 指定的結構描述名稱。  
   
--   `destination`指定是否要將輸出儲存在檔案中。  
+-   `destination` 指定是否要將輸出儲存在檔案中。  
   
     如果未指定此屬性，則已轉換的 T-SQL 陳述式會顯示在主控台上。 （選擇性的屬性）  
   
--   `conversion-report-folder`指定評估報表可以儲存的資料夾。 （選擇性的屬性）  
+-   `conversion-report-folder` 指定評估報表可以儲存的資料夾。 （選擇性的屬性）  
   
--   `conversion-report-overwrite`指定是否要覆寫評估報表資料夾已經存在。  
+-   `conversion-report-overwrite` 指定是否要覆寫評估報表資料夾已經存在。  
   
     **預設值：** false。 （選擇性的屬性）  
   
--   `write-converted-sql-to`指定要儲存已轉換的 T-SQL 檔案 （或） 資料夾路徑。 與指定的資料夾路徑時`sql-files`屬性，每個原始程式檔有對應的目標 T-SQL 檔案的指定資料夾底下建立。 與指定的資料夾路徑時`sql`屬性，已轉換的 T-SQL 寫入 Result.out 為指定的資料夾下的檔案。  
+-   `write-converted-sql-to` 指定要儲存已轉換的 T-SQL 檔案 （或） 資料夾路徑。 與指定的資料夾路徑時`sql-files`屬性，每個原始程式檔有對應的目標 T-SQL 檔案的指定資料夾底下建立。 與指定的資料夾路徑時`sql`屬性，已轉換的 T-SQL 寫入 Result.out 為指定的資料夾下的檔案。  
   
--   `sql`指定要轉換的 Sybase sql 陳述式可以分隔一或多個陳述式，使用";"  
+-   `sql` 指定要轉換的 Sybase sql 陳述式可以分隔一或多個陳述式，使用";"  
   
--   `sql-files`指定已轉換成 T-SQL 程式碼的 sql 檔案的路徑。  
+-   `sql-files` 指定已轉換成 T-SQL 程式碼的 sql 檔案的路徑。  
   
--   `write-summary-report-to`指定產生的摘要報告所在的路徑。 如果只提及的資料夾路徑，然後檔案名稱**ConvertSQLReport.XML**建立。 （選擇性的屬性）  
+-   `write-summary-report-to` 指定產生的摘要報告所在的路徑。 如果只提及的資料夾路徑，然後檔案名稱**ConvertSQLReport.XML**建立。 （選擇性的屬性）  
   
     建立摘要報表也就是具有兩個其他的子類別：  
   
@@ -629,7 +627,7 @@ fail-script>" (optional)
   
 </convert-sql-statement>  
 ```  
-中的多個  
+或  
   
 ```  
 <convert-sql-statement  
@@ -654,7 +652,7 @@ fail-script>" (optional)
   
 />  
 ```  
-中的多個  
+或  
   
 ```  
 <convert-sql-statement  
@@ -670,16 +668,16 @@ fail-script>" (optional)
 />  
 ```  
   
-## <a name="next-steps"></a>後續步驟  
+## <a name="next-steps"></a>後續的步驟  
 如需命令列選項的資訊，請參閱[SSMA 主控台 (AccessToSQL) 中的命令列選項](../access/command-line-options-in-ssma-console-accesstosql.md)。  
   
-如需範例主控台指令碼檔案的資訊，請參閱[使用範例主控台指令碼檔案 &#40;SybaseToSQL &#41;](../../ssma/sybase/working-with-the-sample-console-script-files-sybasetosql.md)  
+如需範例主控台指令碼檔案的資訊，請參閱[使用範例主控台指令碼檔案&#40;SybaseToSQL&#41;](../../ssma/sybase/working-with-the-sample-console-script-files-sybasetosql.md)  
   
 下一個步驟取決於您的專案需求：  
   
--   指定的密碼或匯出 / 匯入的密碼，請參閱[管理密碼 &#40;SybaseToSQL &#41;](../../ssma/sybase/managing-passwords-sybasetosql.md).  
+-   指定的密碼或匯出 / 匯入的密碼，請參閱[管理密碼&#40;SybaseToSQL&#41;](../../ssma/sybase/managing-passwords-sybasetosql.md)。  
   
--   產生報告，請參閱[產生報表 &#40;SybaseToSQL &#41;](../../ssma/sybase/generating-reports-sybasetosql.md).  
+-   產生報告，請參閱[產生報表&#40;SybaseToSQL&#41;](../../ssma/sybase/generating-reports-sybasetosql.md)。  
   
--   如需疑難排解主控台中的問題，請參閱[疑難排解 &#40;SybaseToSQL &#41;](../../ssma/sybase/troubleshooting-sybasetosql.md).  
+-   如需疑難排解主控台中的問題，請參閱[疑難排解&#40;SybaseToSQL&#41;](../../ssma/sybase/troubleshooting-sybasetosql.md)。  
   

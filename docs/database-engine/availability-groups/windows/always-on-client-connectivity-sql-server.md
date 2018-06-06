@@ -1,31 +1,28 @@
 ---
-title: "AlwaysOn 用戶端連接 (SQL Server) | Microsoft Docs"
-ms.custom: 
-ms.date: 05/17/2016
-ms.prod: sql-non-specified
-ms.prod_service: database-engine
-ms.service: 
-ms.component: availability-groups
-ms.reviewer: 
+title: AlwaysOn 用戶端連接 (SQL Server) | Microsoft Docs
+ms.custom: ''
+ms.date: 04/26/2018
+ms.prod: sql
+ms.prod_service: high-availability
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: dbe-high-availability
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: high-availability
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - Availability Groups [SQL Server], listeners
 - Availability Groups [SQL Server], prerequisites and restrictions
 - Availability Groups [SQL Server], client connectivity
 ms.assetid: b456448d-1757-48c8-8bbb-2d1c2d6d61e9
-caps.latest.revision: "22"
+caps.latest.revision: 22
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 31fe7088d4c57d84e68f42628b3c87c18662c8ce
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 3d45898b390eea40f49624a5a18877d9a52340ab
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="always-on-client-connectivity-sql-server"></a>AlwaysOn 用戶端連接性 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -51,12 +48,15 @@ ms.lasthandoff: 01/18/2018
 |SQL Native Client 11.0 OLEDB|否|是|是|否|否|  
 |具有連接修補程式的 ADO.NET 與 .NET Framework 4.0*|是|是|是|是|是|  
 |具有連接修補程式的 ADO.NET 與 .NET Framework 3.5 SP1**|是|是|是|是|是|  
-|Microsoft JDBC Driver 4.0 for SQL Server|是|是|是|是|是|  
+|Microsoft JDBC Driver 4.0 for SQL Server|是|是|是|是|是| 
+|Microsoft OLE DB Driver for SQL Server|是|是|是|是|是| 
   
- *下載 ADO.NET 與 .NET Framework 4.0 連接修補程式： [http://support.microsoft.com/kb/2600211](http://support.microsoft.com/kb/2600211)。  
+ *下載 ADO .NET 與 .NET Framework 4.0 的連線修補程式：[http://support.microsoft.com/kb/2600211](http://support.microsoft.com/kb/2600211)。  
   
- *下載 ADO.NET 與 .NET Framework 3.5 SP1 連接修補程式： [http://support.microsoft.com/kb/2654347](http://support.microsoft.com/kb/2654347)。  
-  
+ **下載 ADO.NET 與 .NET Framework 3.5 SP1 的連線修補程式：[http://support.microsoft.com/kb/2654347](http://support.microsoft.com/kb/2654347)。  
+ 
+ *下載新的適用於 SQL Server 的 Microsoft OLE DB 驅動程式：[https://www.microsoft.com/en-us/download/details.aspx?id=56730 ](https://www.microsoft.com/en-us/download/details.aspx?id=56730)。  
+
 > [!IMPORTANT]  
 >  若要連接到可用性群組接聽程式，用戶端必須使用 TCP 連接字串。  
   

@@ -1,42 +1,41 @@
 ---
-title: "PDF 裝置資訊設定 | Microsoft Docs"
-ms.custom: 
-ms.date: 03/16/2017
+title: PDF 裝置資訊設定 | Microsoft Docs
+ms.custom: ''
+ms.date: 03/16/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: reporting-services
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - device information settings [Reporting Services], PDF rendering
 - PDF [Reporting Services]
 ms.assetid: 9a4aabe5-dbdc-4884-b999-1200983fee47
-caps.latest.revision: "41"
+caps.latest.revision: 41
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: dccc67734b6cf54758ec14b326b171a6effef30b
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 0f0ec8d6bfe88182f84078aa8155afed9f149828
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="pdf-device-information-settings"></a>PDF 裝置資訊設定
   下表列出以 PDF 格式轉譯報表的裝置資訊設定。  
   
 |設定|ReplTest1|  
 |-------------|-----------|  
+| **AccessiblePDF** | 指出是否要轉譯可存取/已加註標記的 PDF，雖然大小會較大，但較易於螢幕上閱讀，同時有其他輔助技術可協助閱讀及瀏覽。 預設值為 **false**。 [Power BI 報表伺服器 (2018 年 3 月) 及更新版本中提供] |
 |**資料行**|為報表所設定的資料行數目。 這個值會覆寫報表的原始設定。|  
 |**ColumnSpacing**|為報表所設定的資料行間距。 這個值會覆寫報表的原始設定。|  
 |**DpiX**|輸出裝置在 x 方向的解析度。|  
 |**DpiY**|輸出裝置在 y 方向的解析度。|  
 |**EndPage**|要轉譯之報表的最後一頁。 預設值為 **StartPage**的值。|  
-|**HumanReadablePDF**|指出是否應該壓縮 PDF，這可提高來源的可讀性。 預設值為 **false**。|  
+|**HumanReadablePDF**|指出是否要轉譯為未壓縮的 PDF 檔案，其大小會較大的，但在純文字編輯器中較易閱讀。 預設值為 **false**。|  
 |**MarginBottom**|為報表所設定的下邊界值 (以英吋為單位)。 您必須包含後面接著 "in" 的整數或小數值 (例如，1in)。 這個值會覆寫報表的原始設定。|  
 |**MarginLeft**|為報表所設定的左邊界值 (以英吋為單位)。 您必須包含後面接著 "in" 的整數或小數值 (例如，1in)。 這個值會覆寫報表的原始設定。|  
 |**MarginRight**|為報表所設定的右邊界值 (以英吋為單位)。 您必須包含後面接著 "in" 的整數或小數值 (例如，1in)。 這個值會覆寫報表的原始設定。|  

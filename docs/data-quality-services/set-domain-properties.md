@@ -1,30 +1,33 @@
 ---
-title: "設定定義域屬性 | Microsoft Docs"
-ms.custom: 
+title: 設定定義域屬性 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/08/2011
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: data-quality-services
-ms.service: 
 ms.component: data-quality-services
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: data-quality-services
-ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords: sql13.dqs.dm.domainproperties.f1
+ms.technology:
+- data-quality-services
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
+f1_keywords:
+- sql13.dqs.dm.domainproperties.f1
 ms.assetid: 8a3c88ca-31d6-4f75-9aca-cf027c6d9845
-caps.latest.revision: "22"
+caps.latest.revision: 22
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.workload: Inactive
-ms.openlocfilehash: 5f67adedb0a54b35bb9ca5d4a27f42086e010d4b
-ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
+manager: craigg
+ms.openlocfilehash: 6edd4254f763a761b134c0db12d2d9c86040ede7
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="set-domain-properties"></a>設定定義域屬性
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
   此主題描述如何在 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) 中設定定義域屬性。  
   
 ##  <a name="BeforeYouBegin"></a> 開始之前  
@@ -54,7 +57,7 @@ ms.lasthandoff: 01/19/2018
  建立定義域之後，可以變更定義域名稱或描述。 定義域名稱在知識庫中必須是唯一的。 描述最多可以有 256 個字元。  
   
 ###  <a name="Type"></a> 資料類型  
- 當您建立定義域時，請針對定義域中的值選取下列其中一個資料類型： **[字串]** (預設值)、 **[日期]**、 **[整數]**或 **[十進位]**。 在您建立定義域之後，可以檢視資料類型，但是無法變更資料類型。 針對定義域所選取的資料類型會定義可對應至該定義域的來源資料類型。 如需 DQS 中四種定義域資料類型分別支援之資料類型的資訊，請參閱 [DQS 定義域支援的 SQL Server 和 SSIS 資料類型](../data-quality-services/supported-sql-server-and-ssis-data-types-for-dqs-domains.md)。  
+ 當您建立定義域時，請針對定義域中的值選取下列其中一個資料類型： **[字串]** (預設值)、 **[日期]**、 **[整數]** 或 **[十進位]**。 在您建立定義域之後，可以檢視資料類型，但是無法變更資料類型。 針對定義域所選取的資料類型會定義可對應至該定義域的來源資料類型。 如需 DQS 中四種定義域資料類型分別支援之資料類型的資訊，請參閱 [DQS 定義域支援的 SQL Server 和 SSIS 資料類型](../data-quality-services/supported-sql-server-and-ssis-data-types-for-dqs-domains.md)。  
   
 ###  <a name="Leading"></a> 使用前置值  
  選取這個核取方塊，指定一組同義字中的前置值將會是輸出，而不是與其同義的值。 取消選取 **[使用前置值]** ，指定每一個同義字值都是正確或更正形式的輸出，而且不會由其群組的前置值加以取代。  

@@ -1,26 +1,17 @@
 ---
-title: "SQL Server 組態 (R Services) | Microsoft Docs"
-ms.custom: 
-ms.date: 07/26/2017
-ms.reviewer: 
-ms.suite: sql
-ms.prod: machine-learning-services
-ms.prod_service: machine-learning-services
-ms.component: r
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
-ms.assetid: 4b08969f-b90b-46b3-98e7-0bf7734833fc
-caps.latest.revision: 
-author: jeannt
-ms.author: jeannt
-manager: cgronlund
-ms.workload: Inactive
-ms.openlocfilehash: 5716fced7dd2be49c580222b9ae155451cf8f426
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+title: SQL Server 組態 (R Services) | Microsoft Docs
+ms.prod: sql
+ms.technology: machine-learning
+ms.date: 04/15/2018
+ms.topic: conceptual
+author: HeidiSteen
+ms.author: heidist
+manager: cgronlun
+ms.openlocfilehash: 382b39a7209480f7f02b0cee5d91eb6cbd662cd9
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sql-server-configuration-for-use-with-r"></a>使用 R 與 SQL Server 組態
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -126,7 +117,7 @@ SQL Server 中的資源管理機制可讓您集中監視和控制 r 和 SQL Serv
 
 記憶體耗用量外部指令碼的預設值是限制為 20%的總記憶體可供 SQL Server 本身。 若要確保依賴 資料庫伺服器的所有工作都不會嚴重都影響長時間執行的 R 作業所預設會套用此限制。 不過，資料庫管理員可以變更這些限制。 在許多情況下，不適合用來支援嚴重的機器學習服務工作負載的 20%的限制。
 
-支援的組態選項都**MAX_CPU_PERCENT**， **MAX_MEMORY_PERCENT**，和**MAX_PROCESSES**。 若要檢視目前的設定，請使用此陳述式：`SELECT * FROM sys.resource_governor_external_resource_pools`
+支援的組態選項都**MAX_CPU_PERCENT**， **MAX_MEMORY_PERCENT**，和**MAX_PROCESSES**。 若要檢視目前的設定，請使用此陳述式： `SELECT * FROM sys.resource_governor_external_resource_pools`
 
 -  如果伺服器主要用於 R 服務，可能很有幫助 MAX_CPU_PERCENT 增加至 40%或 60%。
 
@@ -134,11 +125,11 @@ SQL Server 中的資源管理機制可讓您集中監視和控制 r 和 SQL Serv
 
 若要變更已配置的資源值，請使用 T-SQL 陳述式。
 
-+ 這個陳述式會設定為 40%的記憶體使用量：`ALTER EXTERNAL RESOURCE POOL [default] WITH (MAX_MEMORY_PERCENT = 40)`
++ 這個陳述式會設定為 40%的記憶體使用量： `ALTER EXTERNAL RESOURCE POOL [default] WITH (MAX_MEMORY_PERCENT = 40)`
 
-+ 這個陳述式會設定所有三個可設定的值：`ALTER EXTERNAL RESOURCE POOL [default] WITH (MAX_CPU_PERCENT = 40, MAX_MEMORY_PERCENT = 50, MAX_PROCESSES = 20)`
++ 這個陳述式會設定所有三個可設定的值： `ALTER EXTERNAL RESOURCE POOL [default] WITH (MAX_CPU_PERCENT = 40, MAX_MEMORY_PERCENT = 50, MAX_PROCESSES = 20)`
 
-+ 如果您變更記憶體、 CPU 或最大的處理序設定，並想要立即套用設定，執行此陳述式：`ALTER RESOURCE GOVERNOR RECONFIGURE`
++ 如果您變更記憶體、 CPU 或最大的處理序設定，並想要立即套用設定，執行此陳述式： `ALTER RESOURCE GOVERNOR RECONFIGURE`
 
 ## <a name="soft-numa-hardware-numa-and-cpu-affinity"></a>軟體 NUMA 硬體 NUMA 和 CPU 親和性
 

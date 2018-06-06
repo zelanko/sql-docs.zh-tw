@@ -1,31 +1,31 @@
 ---
-title: "選項 (環境 - 說明 - 一般頁面) | Microsoft Docs"
-ms.custom: 
+title: 選項 (環境 - 說明 - 一般頁面) | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
 ms.component: ssms-menu
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: tools-ssms
-ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords: VS.ToolsOptionsPages.Environment.Help.General
+ms.technology: ssms
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
+f1_keywords:
+- VS.ToolsOptionsPages.Environment.Help.General
 ms.assetid: deaf23d6-6cbe-4984-ab09-71d2a7ba06c8
-caps.latest.revision: "4"
+caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: d5b9be182f2af8ab60469591d63fb847da20f244
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.openlocfilehash: dfc7a585b40acca4658174b403207ad8480abf46
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="options-environment---help---general-page"></a>選項 (環境 - 說明 - 一般頁面)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 使用 [選項] 對話方塊來選擇文件集，並決定是否要在 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio_md.md)] 中顯示主題，或是在不同的視窗中顯示。 若要存取此對話方塊，請按一下 [工具] 功能表上的 [選項]，展開 [環境] 節點中的 [說明]，然後按一下 [一般]。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+使用 [選項] 對話方塊來選擇文件集，並決定是否要在 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio_md.md)] 中顯示主題，或是在不同的視窗中顯示。 若要存取此對話方塊，請按一下 [工具] 功能表上的 [選項]，展開 [環境] 節點中的 [說明]，然後按一下 [一般]。  
   
 > [!NOTE]  
 > 一直到重新啟動環境之後，在此頁面上對選項所做的變更才會生效。  

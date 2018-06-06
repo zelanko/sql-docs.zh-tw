@@ -1,30 +1,28 @@
 ---
-title: "步驟 3：測試已部署的套件 | Microsoft Docs"
-ms.custom: 
+title: 步驟 3：測試已部署的套件 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
 ms.component: tutorial
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 applies_to:
 - SQL Server 2016
 ms.assetid: 9159da3f-c9ca-4015-9e85-3bf4373a1349
-caps.latest.revision: 
+caps.latest.revision: 27
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: e51a4fb96520cd5a887fe27fb5eddd62062f4eae
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: da1b64fb6debe69ee67e6cd32ca3d9f470fc035d
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="lesson-3-3---testing-the-deployed-packages"></a>課程 3-3 - 測試已部署的套件
 在這項工作中，您會測試已部署到 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]執行個體的封裝。  
@@ -44,12 +42,12 @@ ms.lasthandoff: 01/25/2018
   
 ### <a name="to-connect-to-integration-services-in-sql-server-management-studio"></a>若要在 SQL Server Management Studio 中連接到 Integration Services  
   
-1.  按一下 **[開始]**，依序指向 **[所有程式]**和 **[Microsoft SQL Server]**，然後按一下 **[SQL Server Management Studio]**。  
+1.  按一下 **[開始]**，依序指向 **[所有程式]** 和 **[Microsoft SQL Server]**，然後按一下 **[SQL Server Management Studio]**。  
   
 2.  在 **[連接到伺服器]** 對話方塊中，從 **[伺服器類型]** 清單中選取 **[Integration Services]** ，並在 **[伺服器名稱]** 方塊中提供伺服器名稱，然後按一下 **[連接]**。  
   
     > [!IMPORTANT]  
-    > 如果您無法連接到 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]， [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 服務目前可能沒有執行。 若要了解此服務的狀態，請按一下 **[開始]**，依序指向 **[所有程式]**、 **[Microsoft SQL Server]**和 **[組態工具]**，然後按一下 **[SQL Server 組態管理員]**。 在左窗格中，按一下 **[SQL Server 服務]**。 在右窗格中，尋找 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 服務。 如果此服務尚未執行，請將它啟動。  
+    > 如果您無法連接到 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]， [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 服務目前可能沒有執行。 若要了解此服務的狀態，請按一下 **[開始]**，依序指向 **[所有程式]**、 **[Microsoft SQL Server]** 和 **[組態工具]**，然後按一下 **[SQL Server 組態管理員]**。 在左窗格中，按一下 **[SQL Server 服務]**。 在右窗格中，尋找 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 服務。 如果此服務尚未執行，請將它啟動。  
   
     [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 隨即開啟。 依預設，[物件總管] 視窗會開啟並放置在 SQL Server Management Studio 的右上角。 如果 [物件總管] 未開啟，請按一下 **[檢視]** 功能表上的 **[物件總管]** 。  
   

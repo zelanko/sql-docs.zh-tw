@@ -1,32 +1,20 @@
 ---
-title: "SELECT 陳述式 (MDX) |Microsoft 文件"
-ms.custom: 
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: language-reference
-f1_keywords: SELECT
-dev_langs: kbMDX
-helpviewer_keywords:
-- SELECT statement [MDX]
-- cubes [Analysis Services], SELECT statement
-ms.assetid: c0a57214-aa3f-44ce-a369-660c69746f34
-caps.latest.revision: "43"
-author: Minewiskan
+title: SELECT 陳述式 (MDX) |Microsoft 文件
+ms.date: 05/30/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: mdx
+ms.topic: reference
 ms.author: owend
-manager: erikre
-ms.workload: On Demand
-ms.openlocfilehash: b1cf2d78fcb8b275a899be437b85b643c2f5b6af
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: 787bd07976f7472ae5f86c347c5ba06493414d7a
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34579980"
 ---
 # <a name="mdx-data-manipulation---select"></a>MDX 資料操作選取
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -129,7 +117,7 @@ FROM
   
  子選擇陳述式中的 NON VISUAL 選項，可以讓您在篩選出成員的同時，保留實際總計而非篩選後的總計。 如此一來，您可以查詢前十筆銷售 (人員/產品/地區) 並取得所有查詢成員的實際銷售總計，而不只是傳回的前十筆銷售額總計。 如需詳細資訊，請參閱以下範例。  
   
- 導出的成員可以包含在\<query axis clause> > 只要使用連接字串參數開啟連線*子查詢 = 1*; 請參閱[支援 XMLA 屬性 &#40;XMLA &#41;](../analysis-services/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties.md)和<xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A>參數用法。 以下提供子選擇中的導出成員範例。  
+ 導出的成員可以包含在\<query axis clause> > 只要使用連接字串參數開啟連線*子查詢 = 1*; 請參閱[支援 XMLA 屬性&#40;XMLA&#41; ](../analysis-services/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties.md)和<xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A>參數用法。 以下提供子選擇中的導出成員範例。  
   
 ## <a name="autoexists"></a>自動存在  
  在 SELECT 陳述式中使用兩個或多個維度屬性時，Analysis Services 會評估屬性的運算式來確認這些屬性的成員有受到正確的限制以符合所有其他屬性的準則。 例如，假設您正在使用來自 Geography 維度的屬性。 如果您所擁有的其中一個運算式會從 City 屬性傳回所有成員，而另一個運算式會將 Country 屬性的成員限制為歐洲所有國家 (地區)，這將會使得 City 成員限制為只有屬於歐洲國家 (地區) 的城市。 Analysis Services 的這個特性稱為「自動存在」，僅適用於相同維度中的屬性。 「自動存在」僅適用於相同維度的屬性的原因是，它會嘗試防止某個屬性運算式加入其他屬性運算式中排除的維度記錄。 您也可以將「自動存在」視為不同之屬性運算式在維度記錄上所產生的交集。 請參閱下列範例：  
@@ -352,7 +340,7 @@ FROM
 |**Mountain-100**|**$8,568,958.27**|**$139,393.27**|**1.63%**|  
 |**HL Mountain Frame**|**$3,365,069.27**|**$174.11**|**0.01%**|  
   
- 「 自動存在 」 行為可以修改使用 AUTOEXISTS = [1 | 2 | 3] 參數中的連接字串。請參閱[支援 XMLA 屬性 &#40;XMLA &#41;](../analysis-services/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties.md)和<xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A>參數用法。  
+ 「 自動存在 」 行為可以修改使用 AUTOEXISTS = [1 | 2 | 3] 參數中的連接字串。請參閱[支援 XMLA 屬性&#40;XMLA&#41; ](../analysis-services/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties.md)和<xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A>參數用法。  
   
 ## <a name="examples"></a>範例  
  下列範例會傳回的 sum`Measures.[Order Quantity]`成員前, 八個月 2003年日曆年度中所包含的彙總`Date`維度中，從**Adventure Works** cube。  
@@ -374,7 +362,7 @@ WHERE
     [Measures].[Order Quantity]  
 ```  
   
- 若要了解**NON VISUAL，**下列範例會取得 [Reseller Sales Amount] 數字，其中產品類別目錄的資料行和轉售商商務類型是資料列的資料表中 [Adventure Works] 的查詢。 請注意，產品和轉售商的總計都有提供。  
+ 若要了解**NON VISUAL，** 下列範例會取得 [Reseller Sales Amount] 數字，其中產品類別目錄的資料行和轉售商商務類型是資料列的資料表中 [Adventure Works] 的查詢。 請注意，產品和轉售商的總計都有提供。  
   
  下列 SELECT 陳述式：  
   
@@ -475,10 +463,10 @@ WHERE
 |Reseller Sales Amount|Reseller Total Product Cost|Reseller Gross Profit|Reseller Gross Profit Margin|  
 |$80,450,596.98|$79,980,114.38|$470,482.60|0.58%|  
   
-## <a name="see-also"></a>請參閱  
- [MDX &#40; 中的重要概念Analysis Services &#41;](../analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services.md)   
- [MDX 資料操作陳述式 &#40;MDX &#41;](../mdx/mdx-data-manipulation-statements-mdx.md)   
- [利用查詢與 Slicer 軸 &#40; 限制查詢MDX &#41;](~/analysis-services/multidimensional-models/mdx/mdx-query-and-slicer-axes-restricting-the-query.md)  
+## <a name="see-also"></a>另請參閱  
+ [重要概念，在 MDX 中的&#40;Analysis Services&#41;](../analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services.md)   
+ [MDX 資料操作陳述式&#40;MDX&#41;](../mdx/mdx-data-manipulation-statements-mdx.md)   
+ [利用查詢與 Slicer 軸限制查詢&#40;MDX&#41;](~/analysis-services/multidimensional-models/mdx/mdx-query-and-slicer-axes-restricting-the-query.md)  
   
   
 

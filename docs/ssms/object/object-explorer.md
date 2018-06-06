@@ -1,16 +1,15 @@
 ---
-title: "物件總管 | Microsoft Docs"
-ms.custom: 
+title: 物件總管 | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
 ms.component: ssms-objects
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: tools-ssms
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ssms
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 f1_keywords:
 - sql13.swb.objectexplorer.scriptingoptions
 - sql13.swb.objectexplorer.commandsoptions
@@ -28,20 +27,19 @@ helpviewer_keywords:
 - filtering objects [SQL Server]
 - Object Explorer, about Object Explorer
 ms.assetid: 469ea8e2-79b9-44c8-bb6f-f0e1c5dbf0f2
-caps.latest.revision: "3"
+caps.latest.revision: 3
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: Active
-ms.openlocfilehash: d308da274b3dc178dc9ed5f93122057005579920
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.openlocfilehash: e5409a2d155631e72d29752751d8fb294acc8ca8
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="object-explorer"></a>物件總管
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] 提供的功能，可用於管理 [!INCLUDE[ssDE](../../includes/ssde_md.md)]、[!INCLUDE[ssASnoversion](../../includes/ssasnoversion_md.md)]、[!INCLUDE[ssISnoversion](../../includes/ssisnoversion_md.md)] 及 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion_md.md)] 執行個體中的物件。  
+[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] 提供的功能，可用於管理 [!INCLUDE[ssDE](../../includes/ssde_md.md)]、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion_md.md)]、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion_md.md)]及 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion_md.md)]執行個體中的物件。  
   
 ## <a name="benefits-of-object-explorer"></a>物件總管的優點  
 [物件總管] 提供階層式使用者介面以檢視及管理每個 SQL Server 執行個體中的物件。 [物件總管詳細資料] 窗格會以表格式檢視來呈現執行個體物件，而且可以搜尋特定物件。 物件總管的功能會隨著伺服器的類型而有些不同，不過，它通常會包括資料庫的開發功能，以及所有伺服器類型的管理功能。  

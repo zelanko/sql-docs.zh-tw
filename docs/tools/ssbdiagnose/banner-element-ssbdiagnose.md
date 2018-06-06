@@ -1,34 +1,34 @@
 ---
-title: "Banner 元素 (ssbdiagnose) |Microsoft 文件"
-ms.custom: 
+title: Banner 元素 (ssbdiagnose) |Microsoft 文件
+ms.custom: ''
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
 ms.component: ssbdiagnose
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: database-engine
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - banner element
 - XML output file format [ssbdiagnose], banner element
 - ssbdiagnose
 ms.assetid: cc6cd49a-acf0-4cfb-8c6a-554692b89de2
-caps.latest.revision: "15"
+caps.latest.revision: 15
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 67483820a6f6b9e0033808df7233d1908002fa69
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
-ms.translationtype: MT
+ms.openlocfilehash: cd5119e483fc089c19782eb6287ea42a08c79c4a
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.translationtype: MTE
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="banner-element-ssbdiagnose"></a>Banner 元素 (ssbdiagnose)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]識別產生的公用程式**ssbdiagnose**輸出 XML 檔案。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  識別產生 **ssbdiagnose** 輸出 XML 檔的公用程式。  
   
 ## <a name="syntax"></a>語法  
   
@@ -42,7 +42,7 @@ ms.lasthandoff: 01/17/2018
   
 ## <a name="element-attributes"></a>元素屬性  
   
-|Attribute|Description|  
+|attribute|描述|  
 |---------------|-----------------|  
 |**title**|識別產生 **ssbdiagnose** XML 輸出檔的公用程式。|  
 |**product**|識別產生 **ssbdiagnose** XML 輸出檔的產品。|  
@@ -50,7 +50,7 @@ ms.lasthandoff: 01/17/2018
   
 ## <a name="element-characteristics"></a>元素特性  
   
-|特性|說明|  
+|特性|描述|  
 |--------------------|-----------------|  
 |**資料類型和長度**|無。|  
 |**預設值**|無。|  
@@ -60,7 +60,7 @@ ms.lasthandoff: 01/17/2018
   
 |關聯性|元素|  
 |------------------|--------------|  
-|**父元素**|[DiagnosticInformation 元素 &#40; ssbdiagnose&#41;](../../tools/ssbdiagnose/diagnosticinformation-element-ssbdiagnose.md)|  
+|**父元素**|[DiagnosticInformation 元素 &#40;ssbdiagnose&#41;](../../tools/ssbdiagnose/diagnosticinformation-element-ssbdiagnose.md)|  
 |**子元素**|無。|  
   
 ## <a name="example"></a>範例  
@@ -71,6 +71,6 @@ ms.lasthandoff: 01/17/2018
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [ssbdiagnose 公用程式 &#40;Service Broker &#41;](../../tools/ssbdiagnose/ssbdiagnose-utility-service-broker.md)  
+ [ssbdiagnose 公用程式 &#40;Service Broker&#41;](../../tools/ssbdiagnose/ssbdiagnose-utility-service-broker.md)  
   
   

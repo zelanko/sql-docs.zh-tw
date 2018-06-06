@@ -1,16 +1,14 @@
 ---
-title: sys.sp_xtp_bind_db_resource_pool (Transact-SQL) | Microsoft Docs
-ms.custom: 
+title: sys.sp_xtp_bind_db_resource_pool (TRANSACT-SQL) |Microsoft 文件
+ms.custom: ''
 ms.date: 08/03/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: system-objects
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_xtp_bind_db_resource_pool_TSQL
@@ -23,16 +21,15 @@ helpviewer_keywords:
 - sp_xtp_bind_db_resource_pool
 - sys.sp_xtp_bind_db_resource_pool
 ms.assetid: c2a78073-626b-4159-996e-1808f6bfb6d2
-caps.latest.revision: 
+caps.latest.revision: 9
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 8bcac671ebd335be8e6f22a1385d0c038e61e365
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 4ce8af4df2491d6b80acf931ae769b1a0299504b
+ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="sysspxtpbinddbresourcepool-transact-sql"></a>sys.sp_xtp_bind_db_resource_pool (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
@@ -72,7 +69,7 @@ Database 'Hekaton_DB213' does not exist. Make sure that the name is entered corr
 ```  
   
 **資料庫是系統資料庫**  
- [!INCLUDE[hek_2](../../includes/hek-2-md.md)] 無法在系統資料庫中建立資料表。  因此，針對這類資料庫建立 [!INCLUDE[hek_2](../../includes/hek-2-md.md)] 記憶體的繫結是無效的作法。  系統會傳回下列錯誤：  
+ 無法在系統資料庫中建立 [!INCLUDE[hek_2](../../includes/hek-2-md.md)] 資料表。  因此，針對這類資料庫建立 [!INCLUDE[hek_2](../../includes/hek-2-md.md)] 記憶體的繫結是無效的作法。  系統會傳回下列錯誤：  
 *Database_name %s 指的是系統資料庫。資源集區可能只繫結至使用者資料庫。*  
   
 ```  
@@ -99,7 +96,7 @@ Database 'Hekaton_DB' cannot be explicitly bound to the resource pool 'internal'
 ```  
   
 **資料庫已繫結至另一個資源集區**  
- 一個資料庫在任何時候都只能繫結至一個資源集區。 您必須先明確移除資源集區的資料庫繫結，然後才能將它們繫結至其他集區。 請參閱[sys.sp_xtp_bind_db_resource_pool &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/sys-sp-xtp-unbind-db-resource-pool-transact-sql.md).  
+ 一個資料庫在任何時候都只能繫結至一個資源集區。 您必須先明確移除資源集區的資料庫繫結，然後才能將它們繫結至其他集區。 請參閱[sys.sp_xtp_bind_db_resource_pool &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-xtp-unbind-db-resource-pool-transact-sql.md)。  
 *資料庫 %s 已經繫結至資源集區 %s。您可以建立新的繫結之前，您必須解除連結。*  
   
 ```  
@@ -122,7 +119,7 @@ sys.sp_xtp_bind_db_resource_pool N'Hekaton_DB', N'Pool_Hekaton'
  
  繫結會在下一次資料庫重新上線時生效。  
  
- B. 展開的範例包括一些基本檢查上面的範例。  執行下列[!INCLUDE[tsql](../../includes/tsql-md.md)]中[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]\:
+ B. 展開的範例包括一些基本檢查上面的範例。  執行下列[!INCLUDE[tsql](../../includes/tsql-md.md)]中 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]\:
  
 ```sql
 DECLARE @resourcePool sysname = N'Pool_Hekaton';
@@ -160,6 +157,6 @@ END
   
 ## <a name="see-also"></a>另請參閱  
  [將包含記憶體最佳化資料表的資料庫繫結至資源集區](../../relational-databases/in-memory-oltp/bind-a-database-with-memory-optimized-tables-to-a-resource-pool.md)   
- [sys.sp_xtp_bind_db_resource_pool &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/sys-sp-xtp-unbind-db-resource-pool-transact-sql.md)  
+ [sys.sp_xtp_bind_db_resource_pool & #40;TRANSACT-SQL & #41;](../../relational-databases/system-stored-procedures/sys-sp-xtp-unbind-db-resource-pool-transact-sql.md)  
   
   

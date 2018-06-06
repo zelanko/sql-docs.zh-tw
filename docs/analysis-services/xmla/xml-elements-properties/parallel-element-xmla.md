@@ -1,39 +1,24 @@
 ---
-title: "Parallel 元素 (XMLA) |Microsoft 文件"
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services, azure-analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.custom: 
-ms.technology: 
-ms.tgt_pltfrm: 
+title: Parallel 元素 (XMLA) |Microsoft 文件
+ms.date: 05/08/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: xmla
 ms.topic: reference
-apiname: Parallel Element
-apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
-apitype: Schema
-applies_to: SQL Server 2016 Preview
-f1_keywords:
-- urn:schemas-microsoft-com:xml-analysis#Parallel
-- http://schemas.microsoft.com/analysisservices/2003/engine#Parallel
-- microsoft.xml.analysis.parallel
-helpviewer_keywords: Parallel element
-ms.assetid: 04726d94-37ee-460b-9744-d62b45f536b9
-caps.latest.revision: "13"
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 0045bb8696a6f8cae8977cd5d4f2d1b6da0f8f22
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 88e7cf2387c8ee45936b5de21f529e142142d02c
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34575960"
 ---
 # <a name="parallel-element-xmla"></a>Parallel Element (XMLA)
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]指定多少處理工作可以使用的父系的平行執行[批次](../../../analysis-services/xmla/xml-elements-commands/batch-element-xmla.md)命令。  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
+  指定多少處理工作可以使用的父系的平行執行[批次](../../../analysis-services/xmla/xml-elements-commands/batch-element-xmla.md)命令。  
   
 ## <a name="syntax"></a>語法  
   
@@ -67,11 +52,11 @@ ms.lasthandoff: 01/08/2018
   
 |attribute|描述|  
 |---------------|-----------------|  
-|maxParallel|選擇性 **Integer** 屬性。 表示要以平行方式執行命令的最大執行緒數目。 如果沒有指定或設定為 0， [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 的執行個體就會根據電腦上可用的處理器數目來決定最佳的執行緒數目。|  
+|maxParallel|選擇性 **Integer** 屬性。 表示要以平行方式執行命令的最大執行緒數目。 如果未指定，或設為 0，Analysis Services 執行個體決定最佳的電腦上可用的處理器數目為基礎的執行緒數目。|  
   
 ## <a name="remarks"></a>備註  
   
-## <a name="see-also"></a>請參閱  
- [屬性 &#40;XMLA &#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
+## <a name="see-also"></a>另請參閱
+ [屬性&#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
   
   

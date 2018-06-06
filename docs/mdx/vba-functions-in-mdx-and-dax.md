@@ -1,27 +1,20 @@
 ---
-title: "MDX 和 DAX 中的 VBA 函數 |Microsoft 文件"
-ms.custom: 
-ms.date: 01/30/2018
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: language-reference
-ms.assetid: 420452fd-9507-4093-8857-71d3e70d96cc
-caps.latest.revision: 
-author: Minewiskan
+title: MDX 和 DAX 中的 VBA 函數 |Microsoft 文件
+ms.date: 05/30/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: mdx
+ms.topic: reference
 ms.author: owend
-manager: erikre
-ms.workload: On Demand
-ms.openlocfilehash: 6356a6c841072490e10f9c32933606010ce0b9f9
-ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: a9764d4e302a663800bd71a5c7083d985ea230bc
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34582520"
 ---
 # <a name="vba-functions-in-mdx-and-dax"></a>MDX 和 DAX 中的 VBA 函數
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -30,7 +23,7 @@ ms.lasthandoff: 02/01/2018
   
 ## <a name="visual-basic-for-applications-functions-reference"></a>Visual Basic for Applications 函數參考  
   
-|函數名稱|Supported|注意|  
+|函數名稱|支援|注意|  
 |-------------------|---------------|-----------|  
 |Abs|DAX、MDX||  
 |Array|不支援||  
@@ -50,7 +43,7 @@ ms.lasthandoff: 02/01/2018
 |CLng|僅限 MDX||  
 |CLngLng|不支援||  
 |CLngPtr|不支援||  
-|Command|不支援||  
+|命令|不支援||  
 |Cos|僅限 MDX||  
 |CreateObject|不支援||  
 |CSng|僅限 MDX||  
@@ -58,7 +51,7 @@ ms.lasthandoff: 02/01/2018
 |CurDir|不支援||  
 |CVar|僅限 MDX||  
 |CVErr|不支援||  
-|日期|僅限 MDX|**警告**DAX 會實作具有相同的不同函式名稱，用來從指定的引數產生日期類型值的 DATE (Year，Month，Day) 函數|  
+|date|僅限 MDX|**警告**DAX 會實作具有相同的不同函式名稱，用來從指定的引數產生日期類型值的 DATE (Year，Month，Day) 函數|  
 |DateAdd|僅限 MDX|**警告**DAX 會實作具有相同的不同函式名稱，則 DATEADD (\<日期 >，< number_of_intervals >，\<間隔 >) 函數，用來移位給定的日期，由數項給定的間隔|  
 |DateDiff]|僅限 MDX||  
 |DatePart|僅限 MDX||  
@@ -92,11 +85,11 @@ ms.lasthandoff: 02/01/2018
 |Hour|DAX、MDX||  
 |Iif|僅限 MDX|**警告**DAX 會實作名稱類似的函式： IF (logical_test，value_if_true，value_if_false) 函數。|  
 |IMEStatus|不支援||  
-|Input|不支援||  
+|輸入|不支援||  
 |InputBox|不支援||  
 |InStr|僅限 MDX||  
 |InStrRev|不支援||  
-|整數|DAX、MDX||  
+|int|DAX、MDX||  
 |IPmt|僅限 MDX||  
 |IRR|僅限 MDX||  
 |IsArray|僅限 MDX||  
@@ -163,7 +156,7 @@ ms.lasthandoff: 02/01/2018
 |Timer|僅限 MDX||  
 |TimeSerial|僅限 MDX||  
 |TimeValue|DAX、MDX||  
-|Trim]|DAX、MDX||  
+|修剪]|DAX、MDX||  
 |TypeName|僅限 MDX||  
 |UBound|不支援||  
 |UCase|僅限 MDX||  

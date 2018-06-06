@@ -1,36 +1,23 @@
 ---
-title: "從採礦結構刪除採礦模型 |Microsoft 文件"
-ms.custom: 
-ms.date: 03/04/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
-helpviewer_keywords:
-- mining structures [Analysis Services], mining models
-- deleting mining models
-- removing mining models
-- mining models [Analysis Services], deleting
-ms.assetid: 9ab1506b-856e-4762-a663-5adf15ac71e3
-caps.latest.revision: 
-author: Minewiskan
+title: 從採礦結構刪除採礦模型 |Microsoft 文件
+ms.date: 05/01/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: data-mining
+ms.topic: conceptual
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 363ac575844136dee04f9cf249253479e64836dd
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: b17489213e0f057d8f291095f01b65f97a977ff1
+ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="delete-a-mining-model-from-a-mining-structure"></a>從採礦結構刪除採礦模型
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-您可以使用資料採礦設計師、[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 或 DMX 陳述式來刪除採礦模型。  
+  您可以使用資料採礦設計師、[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 或 DMX 陳述式來刪除採礦模型。  
   
 ### <a name="delete-a-mining-model-using-sql-server-data-tools"></a>使用 SQL Server 資料工具刪除採礦模型  
   
@@ -54,7 +41,7 @@ ms.lasthandoff: 02/15/2018
   
 ### <a name="delete-a-mining-model-using-dmx"></a>使用 DMX 刪除採礦模型  
   
--   [卸除採礦模型 &#40; DMX &#41;](../../dmx/drop-mining-model-dmx.md)  
+-   [卸除採礦模型 & #40; DMX & #41;](../../dmx/drop-mining-model-dmx.md)  
   
 ## <a name="see-also"></a>另請參閱  
  [採礦模型的工作與操作方法](../../analysis-services/data-mining/mining-model-tasks-and-how-tos.md)  

@@ -1,31 +1,23 @@
 ---
-title: "處理採礦模型 |Microsoft 文件"
-ms.custom: 
-ms.date: 03/01/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
-helpviewer_keywords: mining models [Analysis Services], processing
-ms.assetid: c2204472-c500-47a5-9afa-7ce2ca78b233
-caps.latest.revision: "32"
-author: Minewiskan
+title: 處理採礦模型 |Microsoft 文件
+ms.date: 05/08/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: data-mining
+ms.topic: conceptual
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 3152bfff58d0e5163c3ef3635ebee59a9258bd07
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 2bfc8d22ff87f467fa89d178d46b422918aa4dd6
+ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="process-a-mining-model"></a>處理採礦模型
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]在 [採礦模型] 索引標籤中的資料採礦設計師的[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]，您可以處理與採礦結構相關聯的特定採礦模型或處理與結構相關聯的所有模型。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+  在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 資料採礦設計師的 [採礦模型] 索引標籤中，您可以處理與採礦結構相關聯的特定採礦模型，或處理與結構相關聯的所有模型。  
   
  您可以使用下列工具處理採礦模型：  
   
@@ -43,7 +35,7 @@ ms.lasthandoff: 01/08/2018
   
      如果您變更了採礦結構，在處理模型之前，會提示您重新部署結構。 按一下 **[是]**。  
   
-3.  在**處理採礦模型-\<模型 >**對話方塊中，按一下 **執行**。  
+3.  在**處理採礦模型-\<模型 >** 對話方塊中，按一下 **執行**。  
   
      [處理進度] 對話方塊就會開啟，以顯示模型處理的詳細資料。  
   
@@ -59,7 +51,7 @@ ms.lasthandoff: 01/08/2018
   
 2.  如果您變更了採礦結構，在處理模型之前，會提示您重新部署結構。 按一下 **[是]**。  
   
-3.  在**處理採礦結構 –\<結構 >**對話方塊中，按一下 **執行**。  
+3.  在**處理採礦結構 –\<結構 >** 對話方塊中，按一下 **執行**。  
   
 4.  [處理進度] 對話方塊就會開啟，以顯示模型處理的詳細資料。  
   
@@ -69,7 +61,7 @@ ms.lasthandoff: 01/08/2018
   
  已處理採礦結構和所有相關聯的採礦模型。  
   
-## <a name="see-also"></a>請參閱  
- [採礦模型工作和操作說明](../../analysis-services/data-mining/mining-model-tasks-and-how-tos.md)  
+## <a name="see-also"></a>另請參閱  
+ [採礦模型的工作與操作方法](../../analysis-services/data-mining/mining-model-tasks-and-how-tos.md)  
   
   

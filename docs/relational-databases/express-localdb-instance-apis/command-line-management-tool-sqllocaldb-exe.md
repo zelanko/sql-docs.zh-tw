@@ -1,33 +1,31 @@
 ---
-title: "命令列管理工具： SqlLocalDB.exe |Microsoft 文件"
-ms.custom: 
+title: 命令列管理工具： SqlLocalDB.exe |Microsoft 文件
+ms.custom: ''
 ms.date: 03/04/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
 ms.component: localdb
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apilocation:
 - sqluserinstance.dll
 ms.assetid: dd0882b1-a8a9-447a-8bdf-0f9d7f36d336
-caps.latest.revision: 
-author: JennieHubbard
-ms.author: jhubbard
+caps.latest.revision: 9
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 3c3fdfd48670039900bbe96881bec7a60230da10
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.openlocfilehash: eba929c35e7e6010bbb12089a7a69f4c52be74dd
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="command-line-management-tool-sqllocaldbexe"></a>命令列管理工具：SqlLocalDB.exe
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-SqlLocalDB.exe 是可讓使用者從命令列輕鬆管理 LocalDB 執行個體的簡單工具。 它會實作為 LocalDB 執行個體 API 外圍的簡單包裝函式。 就像在許多類似的 SQL Server 工具 (例如 SQLCMD) 中一樣，參數會當做命令列引數傳遞給 SqlLocalDB，並且將輸出傳送到主控台。  
+  SqlLocalDB.exe 是可讓使用者從命令列輕鬆管理 LocalDB 執行個體的簡單工具。 它會實作為 LocalDB 執行個體 API 外圍的簡單包裝函式。 就像在許多類似的 SQL Server 工具 (例如 SQLCMD) 中一樣，參數會當做命令列引數傳遞給 SqlLocalDB，並且將輸出傳送到主控台。  
   
  SqlLocalDB 可讓開發人員使用 LocalDB，而不需要撰寫呼叫 API 的程式碼，或依賴其他工具來完成作業。  
   

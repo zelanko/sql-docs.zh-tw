@@ -1,16 +1,15 @@
 ---
-title: "算術運算式 (XQuery) |Microsoft 文件"
-ms.custom: 
+title: 算術運算式 (XQuery) |Microsoft 文件
+ms.custom: ''
 ms.date: 03/03/2017
-ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
-ms.service: 
+ms.prod: sql
+ms.prod_service: sql
 ms.component: xquery
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,16 +19,15 @@ helpviewer_keywords:
 - expressions [XQuery], arithmetic
 - arithmetic expressions
 ms.assetid: 90d675bf-56da-459a-9771-8cd13920a9fc
-caps.latest.revision: 
+caps.latest.revision: 16
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 8834cca53dd4dcdd8bbdc1b3fae5e3ca8df31634
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: b39c5febb04d22b5dd79791585cd1c0fb51e1649
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="arithmetic-expressions-xquery"></a>算術運算式 (XQuery)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -43,7 +41,7 @@ SELECT @x.query('2 div 2')
 SELECT @x.query('2 * 2')  
 ```  
   
- 因為**i**是不受支援，解決方案是使用**xs:integer()**建構函式：  
+ 因為**i**是不受支援，解決方案是使用**xs:integer()** 建構函式：  
   
 ```  
 DECLARE @x xml  

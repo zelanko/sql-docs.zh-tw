@@ -1,35 +1,39 @@
 ---
-title: "實作作業 | Microsoft Docs"
-ms.custom: 
+title: 實作作業 | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
 ms.component: ssms-agent
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: tools-ssms
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ssms
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - jobs [SQL Server Agent]
 - SQL Server Agent jobs
 - SQL Server Agent jobs, about jobs
 - jobs [SQL Server Agent], about jobs
 ms.assetid: 69e06724-25c7-4fb3-8a5b-3d4596f21756
-caps.latest.revision: "4"
+caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 86944bd1f1a11102a79599449a8cde21c4ba721f
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 3ffd23e554ce16f10afdca59224cafee4c86f800
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="implement-jobs"></a>實作作業
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 您可以使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent 作業，使例行性管理工作自動化，並重複執行它們，使管理更有效率。  
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+
+> [!IMPORTANT]  
+> [Azure SQL Database 受控執行個體](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)目前支援多數 (但非全部) 的 SQL Server Agent 功能。 如需詳細資料，請參閱 [Azure SQL Database 受控執行個體與 SQL Server 之間的 T-SQL 差異](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)。
+
+您可以使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent 作業，使例行性管理工作自動化，並重複執行它們，使管理更有效率。  
   
 作業是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent 循序執行的一系列指定作業。 作業可執行各式各樣的活動，包括執行 [!INCLUDE[tsql](../../includes/tsql_md.md)] 指令碼、命令列應用程式、Microsoft ActiveX Script、Integration Services 封裝、Analysis Services 命令和查詢，或複寫工作。 作業可執行重複性工作或可排程的工作，而且可產生警示，將作業狀態自動通知使用者，藉此大幅簡化 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 的管理。  
   

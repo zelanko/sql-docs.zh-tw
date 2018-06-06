@@ -1,30 +1,17 @@
 ---
-title: "建立資料的功能使用 R 和 SQL （逐步解說） |Microsoft 文件"
-ms.custom: 
-ms.date: 08/23/2017
-ms.reviewer: 
-ms.suite: sql
-ms.prod: machine-learning-services
-ms.prod_service: machine-learning-services
-ms.component: 
-ms.technology: 
-ms.tgt_pltfrm: 
+title: 建立資料的功能使用 R 和 SQL （逐步解說） |Microsoft 文件
+ms.prod: sql
+ms.technology: machine-learning
+ms.date: 04/15/2018
 ms.topic: tutorial
-applies_to:
-- SQL Server 2016
-dev_langs:
-- R
-ms.assetid: 4981d4eb-0874-4fe9-82e1-edf99890e27a
-caps.latest.revision: 
-author: jeannt
-ms.author: jeannt
-manager: cgronlund
-ms.workload: Inactive
-ms.openlocfilehash: 9b447f8c8faa834bea4360844308e468bf15d89c
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+author: HeidiSteen
+ms.author: heidist
+manager: cgronlun
+ms.openlocfilehash: 226b8f2977f527d22a09fcbb4ab460e05285f858
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="create-data-features-using-r-and-sql-walkthrough"></a>建立資料的功能使用 R 和 SQL （逐步解說）
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -242,7 +229,7 @@ print(paste("It takes CPU Time=", round(used.time[1]+used.time[2],2)," seconds, 
 您的時間可能會大大地改變，視您的網路速度和硬體組態而定。 我們所測試的組態中[!INCLUDE[tsql](../../includes/tsql-md.md)]函式方法，就是較快，使用自訂的 R 函數。 因此，我們使用[!INCLUDE[tsql](../../includes/tsql-md.md)]函式的後續步驟中，這些計算。
 
 > [!TIP]
-> 通常，功能 工程使用[!INCLUDE[tsql](../../includes/tsql-md.md)]會較快，。例如，T-SQL 包括快速的視窗化和可套用至一般資料科學計算，例如循環移動平均的排名函數和 *n* -磚。 請根據您的資料和工作，選擇最有效率的方法。
+> 通常，功能 工程使用[!INCLUDE[tsql](../../includes/tsql-md.md)]會較快，。例如，T-SQL 包括快速的視窗化和可套用至一般資料科學計算，例如循環移動平均的排名函數和*n*-磚。 請根據您的資料和工作，選擇最有效率的方法。
 
 ## <a name="next-lesson"></a>下一課
 

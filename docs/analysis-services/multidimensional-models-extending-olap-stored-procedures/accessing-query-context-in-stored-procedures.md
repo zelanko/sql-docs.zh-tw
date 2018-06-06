@@ -1,38 +1,23 @@
 ---
-title: "存取查詢內容中的預存程序 |Microsoft 文件"
-ms.custom: 
-ms.date: 03/06/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- execution context [Analysis Services]
-- stored procedures [Analysis Services], query context
-- Context object
-- query context [Analysis Services]
-ms.assetid: bdc7dad8-2f22-4265-aba4-a3a451527840
-caps.latest.revision: 
-author: Minewiskan
+title: 存取查詢內容中的預存程序 |Microsoft 文件
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: olap
+ms.topic: conceptual
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 5b7a0c3e57a5249a26bf13a2cf9709e58df85da8
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 1679b5ddaf2c3abefb6da4e89e97e84193593630
+ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="accessing-query-context-in-stored-procedures"></a>在預存程序中存取查詢內容
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-預存程序的執行內容是可以在預存程序的程式碼中使用**內容**ADOMD.NET 伺服器物件模型的物件。 這是唯讀的內容，而且不能由預存程序加以修改。 下列屬性可以在此物件上使用。  
+  預存程序的執行內容是可以在預存程序的程式碼中使用**內容**ADOMD.NET 伺服器物件模型的物件。 這是唯讀的內容，而且不能由預存程序加以修改。 下列屬性可以在此物件上使用。  
   
 |屬性|유형|Description|  
 |--------------|----------|-----------------|  

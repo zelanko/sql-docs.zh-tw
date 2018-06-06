@@ -1,17 +1,15 @@
 ---
-title: "建立新外部索引鍵之間的關聯性的資料表範例 (VB) |Microsoft 文件"
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
+title: 建立新外部索引鍵之間的關聯性的資料表範例 (VB) |Microsoft 文件
+ms.prod: sql
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
-ms.custom: 
+ms.technology: connectivity
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 dev_langs:
 - VB
 helpviewer_keywords:
@@ -21,16 +19,15 @@ helpviewer_keywords:
 - UpdateRule property [ADOX], Visual Basic example
 - RelatedColumn property [ADOX], Visual Basic example
 ms.assetid: 13b5b1c3-6af6-439e-bb65-976578ba6bc2
-caps.latest.revision: 
+caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 705ff3187e9502168d278d7059acd1ee5fcbd9d4
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 42668a15a942df6061e95cb35c1be2cdb6b7693b
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="keys-append-method-key-type-relatedcolumn-relatedtable-and-updaterule-properties-example-vb"></a>索引鍵附加方法、 金鑰類型、 RelatedColumn、 RelatedTable 和 UpdateRule 屬性範例 (VB)
 下列程式碼示範如何建立兩個現有的資料表，名為新的外部索引鍵關係**客戶**和**訂單**。  

@@ -1,16 +1,15 @@
 ---
-title: "有效的布林值 (XQuery) |Microsoft 文件"
-ms.custom: 
+title: 有效的布林值 (XQuery) |Microsoft 文件
+ms.custom: ''
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
-ms.service: 
+ms.prod: sql
+ms.prod_service: sql
 ms.component: xquery
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -22,16 +21,15 @@ helpviewer_keywords:
 - XQuery, effective Boolean values
 - EBV
 ms.assetid: 506682b1-b6c9-45e2-aa54-7abd5844c3f1
-caps.latest.revision: 
+caps.latest.revision: 17
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 93c3ecaf4a4ded90a4b65aed08c6112fd9b670f1
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 4ab470f5643335cd1ed26edd07aa93284bab1d47
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="effective-boolean-value-xquery"></a>有效的布林值 (XQuery)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -73,7 +71,7 @@ SELECT @x.query('if (/a[1]) then "true" else "false"')
 go  
 ```  
   
- 在查詢具類型**xml**資料行或變數，您可以有布林類型的節點。 **Data （)**在此情況下會傳回布林值。 如果查詢運算式傳回的布林值為 True，則有效布林值即為 True，如下個範例所示。 範例中也說明下列各項：  
+ 在查詢具類型**xml**資料行或變數，您可以有布林類型的節點。 **Data （)** 在此情況下會傳回布林值。 如果查詢運算式傳回的布林值為 True，則有效布林值即為 True，如下個範例所示。 範例中也說明下列各項：  
   
 -   建立 XML 結構描述集合。 項目\<b > 集合中是屬於布林類型。  
   
@@ -99,6 +97,6 @@ go
   
 ## <a name="see-also"></a>另請參閱  
  [XQuery 基本概念](../xquery/xquery-basics.md)   
- [FLWOR 陳述式和反覆項目 &#40;XQuery &#41;](../xquery/flwor-statement-and-iteration-xquery.md)  
+ [FLWOR 陳述式和反覆項目&#40;XQuery&#41;](../xquery/flwor-statement-and-iteration-xquery.md)  
   
   

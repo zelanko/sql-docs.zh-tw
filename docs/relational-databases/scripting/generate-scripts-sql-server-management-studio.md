@@ -1,35 +1,32 @@
 ---
-title: "產生指令碼 (SQL Server Management Studio) | Microsoft Docs"
-ms.custom: 
+title: 產生指令碼 (SQL Server Management Studio) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
-ms.component: ssms-scripting
-ms.reviewer: 
+ms.technology: scripting
+ms.reviewer: mathoma
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: 9711c617-3c68-4e5a-aea3-befc64d51524
-caps.latest.revision: 
+caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: d1afb1297566bb7f203956d24b0ea62b56817d28
-ms.sourcegitcommit: a0aa5e611a0e6ebb74ac1e2f613e8916dc7a7617
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 6d3d77c77be6e16e6d4deb5fd968774717230f88
+ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/24/2018
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="generate-scripts-sql-server-management-studio"></a>產生指令碼 (SQL Server Management Studio)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 提供兩種產生 [!INCLUDE[tsql](../../includes/tsql-md.md)] 指令碼的機制。 您可以使用 [產生和發佈指令碼精靈] 來建立多個物件的指令碼。 您也可以使用**物件總管**中的 [編寫組件的指令碼為] 功能表，為個別物件或多個物件產生指令碼。  
-  
-1.  **選擇方法**：[[產生和發佈指令碼精靈]](#GenPubScriptWiz)、[物件總管的 [編寫組件的指令碼為] 功能表](#OEScriptAsMenu)  
-  
-2.  **使用 [編寫組件的指令碼為] 功能表**  [編寫單一物件的指令碼](#ScriptSingleObject)、 [使用物件總管編寫兩個物件的指令碼](#ScriptTwoObjectsOE)、 [使用物件總管詳細資料編寫兩個物件的指令碼](#ScriptTwoObjectsOED)  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 提供兩種產生 [!INCLUDE[tsql](../../includes/tsql-md.md)] 指令碼的機制。 您可以使用 [產生和發佈指令碼精靈] 來建立多個物件的指令碼。 您也可以使用**物件總管**中的 [編寫組件的指令碼為] 功能表，為個別物件或多個物件產生指令碼。  
+
+如需使用 SQL Server Management Studio (SSMS) 撰寫各種物件指令碼的詳細教學課程，請參閱[教學課程：在 SSMS 中撰寫指令碼](https://docs.microsoft.com/en-us/sql/ssms/tutorials/scripting-ssms)。
+
   
 ## <a name="before-you-begin"></a>開始之前  
  選擇最符合您需求的機制。  
@@ -38,7 +35,7 @@ ms.lasthandoff: 01/24/2018
  使用 [產生和發佈指令碼精靈]，為多個物件建立 [!INCLUDE[tsql](../../includes/tsql-md.md)] 指令碼。 此精靈會產生資料庫中所有物件的指令碼，或是您所選取之物件子集的指令碼。 此精靈具有許多適用於指令碼的選項，例如是否要包含權限、定序及條件約束等。 如需有關使用此精靈的指示，請參閱 [產生和發佈指令碼精靈](../../relational-databases/scripting/generate-and-publish-scripts-wizard.md)。  
   
 ###  <a name="OEScriptAsMenu"></a> 物件總管的 [編寫組件的指令碼為] 功能表  
- 您可以使用物件總管的 [編寫組件的指令碼為] 功能表，編寫單一物件、多個物件或單一物件之多個陳述式的指令碼。 您可以選擇數種指令碼的其中一種，例如建立、變更或卸除物件。 您可以將指令碼儲存到 [查詢編輯器] 視窗，或是儲存到檔案或剪貼簿。 指令碼是使用 Unicode 格式所建立。  
+ 您可以使用物件總管的 [編寫指令碼為] 功能表來編寫單一物件、多個物件或單一物件之多個陳述式的指令碼。 您可以選擇數種指令碼的其中一種，例如建立、變更或卸除物件。 您可以將指令碼儲存到 [查詢編輯器] 視窗，或是儲存到檔案或剪貼簿。 指令碼是使用 Unicode 格式所建立。  
   
 ##  <a name="ScriptSingleObject"></a> 產生單一物件的指令碼  
  **編寫單一物件的指令碼**  
@@ -54,28 +51,11 @@ ms.lasthandoff: 01/24/2018
 5.  指向指令碼類型，例如 [CREATE 至] 或 [ALTER 至]。  
   
 6.  選取儲存指令碼的位置，例如 [新增查詢編輯器視窗] 或 [剪貼簿]。  
+
+    ![指令碼資料表](media/generate-scripts-sql-server-management-studio/scripttable.png)
   
-##  <a name="ScriptTwoObjectsOE"></a> 使用物件總管產生兩個物件的指令碼  
- **使用物件總管編寫兩個物件的指令碼**  
   
- 有時候，您可能會希望指令碼有多個選項，例如先卸除程序，再建立程序，或先建立資料表，再變更資料表。 如果您需要建立一個參考不同類型之物件 (例如資料表、檢視表及預存程序) 的指令碼，也可以使用下列程序以產生多個物件的指令碼。  
-  
-1.  在 [物件總管] 中，連接到 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 的執行個體，然後展開該執行個體。  
-  
-2.  展開 [資料庫]，然後展開含有要編寫指令碼之物件的資料庫。  
-  
-3.  以滑鼠右鍵按一下第一個要編寫指令碼的物件，並指向 [產生 \<物件類型> 的指令碼為]，然後在 [另存新檔] 選項中選擇 [新增查詢編輯器視窗] 作為輸出目的地。  
-  
-4.  導覽至您想要編寫指令碼的第二個物件。  
-  
-5.  以滑鼠右鍵按一下物件，並指向 [產生 \<物件類型> 的指令碼為]，然後在 [另存新檔] 選項中選擇 [剪貼簿] 作為輸出目的地。  
-  
-6.  在針對第一個物件開啟的 [查詢編輯器] 視窗中，從剪貼簿貼上第二個物件的指令碼。  
-  
-##  <a name="ScriptTwoObjectsOED"></a> 使用物件總管詳細資料產生兩個物件的指令碼  
- **使用物件總管詳細資料編寫兩個物件的指令碼**  
-  
- 您可以使用 [物件總管詳細資料] 窗格，產生相同類別目錄之多個物件的指令碼。  
+ 您可以使用物件總管的 [詳細資料] 窗格，產生相同類別目錄之多個物件的指令碼。  
   
 1.  在 [物件總管] 中，連接到 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 的執行個體，然後展開該執行個體。  
   
@@ -87,8 +67,10 @@ ms.lasthandoff: 01/24/2018
   
 5.  以滑鼠左鍵按一下您想要編寫指令碼的其中一個物件。  
   
-6.  Crtl + 以滑鼠左鍵按一下您想要編寫指令碼的第二個物件。  
+6.  Ctrl + 以滑鼠左鍵按一下您想要編寫指令碼的第二個物件。  
   
 7.  以滑鼠右鍵按一下其中一個選取的物件，然後選取 [產生 \<物件類型> 的指令碼為]。  
+
+    ![物件總管](media/generate-scripts-sql-server-management-studio/objectexplorerdetails.png)
   
   

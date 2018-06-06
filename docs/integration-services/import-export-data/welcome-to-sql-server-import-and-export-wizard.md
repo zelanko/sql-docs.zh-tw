@@ -1,30 +1,28 @@
 ---
-title: "啟動 SQL Server 匯入和匯出精靈 | Microsoft Docs"
-ms.custom: 
+title: 啟動 SQL Server 匯入和匯出精靈 | Microsoft Docs
+ms.custom: ''
 ms.date: 02/15/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
 ms.component: import-export-data
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 f1_keywords:
 - sql13.dts.impexpwizard.welcome.f1
 ms.assetid: 8a56d80d-8e31-4542-87cc-a41b3fdd5a7d
-caps.latest.revision: 
+caps.latest.revision: 74
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 2edc03674b5456f68e484f29c1bbd71c4064ca8b
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 44f144643c92a274b45b681b85963cd0fc9308a6
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="welcome-to-sql-server-import-and-export-wizard"></a>歡迎使用 SQL Server 匯入和匯出精靈
   當您啟動 [ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 匯入和匯出精靈] 時，第一頁是 [歡迎使用 SQL Server 匯入和匯出精靈] 。 您不需要在此頁面上採取任何動作。

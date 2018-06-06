@@ -1,17 +1,16 @@
 ---
-title: "指令碼元件 | Microsoft Docs"
-ms.custom: 
+title: 指令碼元件 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
 ms.component: data-flow
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 f1_keywords:
 - sql13.dts.designer.scriptcomponentdetails.f1
 - sql13.dts.designer.scriptcomponent.f1
@@ -25,16 +24,15 @@ helpviewer_keywords:
 - Script component [Integration Services], about Script component
 - Script component [Integration Services]
 ms.assetid: 131c2d0c-2e33-4785-94af-ada5c049821e
-caps.latest.revision: 
+caps.latest.revision: 70
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 82aad5cf36717e374cdb3e45d231504efac16549
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 28b0e0036e6c85e6898c4d2f24007eb8915b3703
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="script-component"></a>指令碼元件
   指令碼元件可裝載指令碼，並讓封裝包含及執行自訂指令碼。 您可在封裝中使用指令碼元件以達到下列目的：  
@@ -68,7 +66,7 @@ ms.lasthandoff: 01/25/2018
  在「 [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 設計工具」中，指令碼元件有兩個模式：中繼資料設計模式與程式碼設計模式。 在中繼資料設計模式中，您可以加入和修改指令碼元件輸入和輸出，但是不能編寫程式碼。 設定好所有輸入和輸出後，您可以切換到程式碼設計模式編寫指令碼。 指令碼元件會自動從輸入和輸出的中繼資料產生基底程式碼。 如果您在指令碼元件產生基底程式碼後變更中繼資料，您的程式碼可能無法再編譯，因為更新的基底程式碼可能與您的程式碼不相容。  
   
 ## <a name="writing-the-script-that-the-component-uses"></a>撰寫元件使用的指令碼  
- 指令碼元件使用 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] Tools for Applications (VSTA) 當作撰寫指令碼的環境。 您可以從 **[指令碼轉換編輯器]**存取 VSTA。 如需詳細資訊，請參閱 [指令碼轉換編輯器 &#40;指令碼頁面&#41;](../../../integration-services/data-flow/transformations/script-transformation-editor-script-page.md)。  
+ 指令碼元件使用 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] Tools for Applications (VSTA) 當作撰寫指令碼的環境。 您可以從 **[指令碼轉換編輯器]** 存取 VSTA。 如需詳細資訊，請參閱 [指令碼轉換編輯器 &#40;指令碼頁面&#41;](../../../integration-services/data-flow/transformations/script-transformation-editor-script-page.md)。  
   
  指令碼元件提供 VSTA 專案，其中包含自動產生的類別，該類別名為 ScriptMain 且代表元件中繼資料。 例如，如果指令碼元件當做具有三個輸出的轉換使用，則 ScriptMain 會包含每個輸出的方法。 ScriptMain 是指令碼的進入點。  
   
@@ -76,7 +74,7 @@ ms.lasthandoff: 01/25/2018
   
  VSTA 支援 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual C# 和 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Basic 程式語言。  
   
- 如需有關如何以程式設計方式編寫指令碼元件的詳細資訊，請參閱＜ [Extending the Data Flow with the Script Component](../../../integration-services/extending-packages-scripting/data-flow-script-component/extending-the-data-flow-with-the-script-component.md)＞。 如需有關如何將指令碼元件設為來源、轉換或目的地的特定資訊，請參閱＜ [Developing Specific Types of Script Components](../../../integration-services/extending-packages-scripting-data-flow-script-component-types/developing-specific-types-of-script-components.md)＞。 如需其他範例 (例如示範如何使用指令碼元件的 ODBC 目的地)，請參閱＜ [Additional Script Component Examples](../../../integration-services/extending-packages-scripting-data-flow-script-component-examples/additional-script-component-examples.md)＞。  
+ 如需有關如何以程式設計方式編寫指令碼元件的詳細資訊，請參閱＜ [以指令碼元件來擴充資料流程](../../../integration-services/extending-packages-scripting/data-flow-script-component/extending-the-data-flow-with-the-script-component.md)＞。 如需有關如何將指令碼元件設為來源、轉換或目的地的特定資訊，請參閱＜ [Developing Specific Types of Script Components](../../../integration-services/extending-packages-scripting-data-flow-script-component-types/developing-specific-types-of-script-components.md)＞。 如需其他範例 (例如示範如何使用指令碼元件的 ODBC 目的地)，請參閱＜ [Additional Script Component Examples](../../../integration-services/extending-packages-scripting-data-flow-script-component-examples/additional-script-component-examples.md)＞。  
   
 > [!NOTE]  
 >  不像在舊版中可以指出是否已經先行編譯指令碼，所有指令碼在 [!INCLUDE[ssISversion10](../../../includes/ssisversion10-md.md)] 和更新的版本中都會先行編譯。 指令碼經過先行編譯後，在執行階段不會載入語言引擎，因此封裝的執行速度會更快。 不過，先行編譯的二進位檔案會使用大量的磁碟空間。  
@@ -118,15 +116,15 @@ ms.lasthandoff: 01/25/2018
 ## <a name="select-script-component-type"></a>選取指令碼元件類型
   使用 **[選取指令碼元件類型]** 對話方塊，即可指定是否建立指令碼轉換，而這類轉換必須預先設定以作為來源、轉換或目的地。  
   
- 若要深入了解指令碼元件，請參閱[在指令碼元件編輯器中設定指令碼元件](../../../integration-services/extending-packages-scripting/data-flow-script-component/configuring-the-script-component-in-the-script-component-editor.md)。 若要了解如何以程式設計方式編寫指令碼元件，請參閱＜ [Extending the Data Flow with the Script Component](../../../integration-services/extending-packages-scripting/data-flow-script-component/extending-the-data-flow-with-the-script-component.md)＞。  
+ 若要深入了解指令碼元件，請參閱[在指令碼元件編輯器中設定指令碼元件](../../../integration-services/extending-packages-scripting/data-flow-script-component/configuring-the-script-component-in-the-script-component-editor.md)。 若要了解如何以程式設計方式編寫指令碼元件，請參閱＜ [以指令碼元件來擴充資料流程](../../../integration-services/extending-packages-scripting/data-flow-script-component/extending-the-data-flow-with-the-script-component.md)＞。  
   
 ### <a name="options"></a>選項。  
- 選擇 **[來源]**、 **[目的地]**或 **[轉換]** ，會影響 [指令碼轉換] 的組態和指令碼轉換編輯器的頁面。  
+ 選擇 **[來源]**、 **[目的地]** 或 **[轉換]** ，會影響 [指令碼轉換] 的組態和指令碼轉換編輯器的頁面。  
   
 ## <a name="script-transformation-editor-connection-managers-page"></a>指令碼轉換編輯器 (連接管理員頁面)
   使用 [指令碼轉換編輯器] 的 [連線管理員] 頁面，即可指定指令碼將要使用的任何連接。  
   
- 若要深入了解指令碼元件，請參閱[在指令碼元件編輯器中設定指令碼元件](../../../integration-services/extending-packages-scripting/data-flow-script-component/configuring-the-script-component-in-the-script-component-editor.md)。 若要了解如何以程式設計方式編寫指令碼元件，請參閱＜ [Extending the Data Flow with the Script Component](../../../integration-services/extending-packages-scripting/data-flow-script-component/extending-the-data-flow-with-the-script-component.md)＞。  
+ 若要深入了解指令碼元件，請參閱[在指令碼元件編輯器中設定指令碼元件](../../../integration-services/extending-packages-scripting/data-flow-script-component/configuring-the-script-component-in-the-script-component-editor.md)。 若要了解如何以程式設計方式編寫指令碼元件，請參閱＜ [以指令碼元件來擴充資料流程](../../../integration-services/extending-packages-scripting/data-flow-script-component/extending-the-data-flow-with-the-script-component.md)＞。  
   
 ### <a name="options"></a>選項。  
  **連接管理員**  
@@ -153,7 +151,7 @@ ms.lasthandoff: 01/25/2018
 > [!NOTE]  
 >  針對來源元件不會顯示 [輸入資料行] 頁面，因為來源元件只有輸出沒有輸入。  
   
- 若要深入了解指令碼元件，請參閱[在指令碼元件編輯器中設定指令碼元件](../../../integration-services/extending-packages-scripting/data-flow-script-component/configuring-the-script-component-in-the-script-component-editor.md)。 若要了解如何以程式設計方式編寫指令碼元件，請參閱＜ [Extending the Data Flow with the Script Component](../../../integration-services/extending-packages-scripting/data-flow-script-component/extending-the-data-flow-with-the-script-component.md)＞。  
+ 若要深入了解指令碼元件，請參閱[在指令碼元件編輯器中設定指令碼元件](../../../integration-services/extending-packages-scripting/data-flow-script-component/configuring-the-script-component-in-the-script-component-editor.md)。 若要了解如何以程式設計方式編寫指令碼元件，請參閱＜ [以指令碼元件來擴充資料流程](../../../integration-services/extending-packages-scripting/data-flow-script-component/extending-the-data-flow-with-the-script-component.md)＞。  
   
 ### <a name="options"></a>選項。  
  **輸入名稱**  
@@ -177,7 +175,7 @@ ms.lasthandoff: 01/25/2018
 > [!NOTE]  
 >  來源元件會有輸出但沒有輸入，而目的地元件會有輸入但沒有輸出。 轉換則同時具有輸入和輸出。  
   
- 若要深入了解指令碼元件，請參閱[在指令碼元件編輯器中設定指令碼元件](../../../integration-services/extending-packages-scripting/data-flow-script-component/configuring-the-script-component-in-the-script-component-editor.md)。 若要了解如何以程式設計方式編寫指令碼元件，請參閱＜ [Extending the Data Flow with the Script Component](../../../integration-services/extending-packages-scripting/data-flow-script-component/extending-the-data-flow-with-the-script-component.md)＞。  
+ 若要深入了解指令碼元件，請參閱[在指令碼元件編輯器中設定指令碼元件](../../../integration-services/extending-packages-scripting/data-flow-script-component/configuring-the-script-component-in-the-script-component-editor.md)。 若要了解如何以程式設計方式編寫指令碼元件，請參閱＜ [以指令碼元件來擴充資料流程](../../../integration-services/extending-packages-scripting/data-flow-script-component/extending-the-data-flow-with-the-script-component.md)＞。  
   
 ### <a name="options"></a>選項。  
  **Inputs and outputs**  
@@ -202,7 +200,7 @@ ms.lasthandoff: 01/25/2018
 ## <a name="script-transformation-editor-script-page"></a>指令碼轉換編輯器 (指令碼頁面)
   使用 **[指令碼轉換編輯器]** 對話方塊的 **[指令碼]** 索引標籤，來指定指令碼和相關的屬性。  
   
- 若要深入了解指令碼元件，請參閱[在指令碼元件編輯器中設定指令碼元件](../../../integration-services/extending-packages-scripting/data-flow-script-component/configuring-the-script-component-in-the-script-component-editor.md)。 若要了解如何以程式設計方式編寫指令碼元件，請參閱＜ [Extending the Data Flow with the Script Component](../../../integration-services/extending-packages-scripting/data-flow-script-component/extending-the-data-flow-with-the-script-component.md)＞。  
+ 若要深入了解指令碼元件，請參閱[在指令碼元件編輯器中設定指令碼元件](../../../integration-services/extending-packages-scripting/data-flow-script-component/configuring-the-script-component-in-the-script-component-editor.md)。 若要了解如何以程式設計方式編寫指令碼元件，請參閱＜ [以指令碼元件來擴充資料流程](../../../integration-services/extending-packages-scripting/data-flow-script-component/extending-the-data-flow-with-the-script-component.md)＞。  
   
 ### <a name="options"></a>選項。  
  **屬性**  
@@ -225,6 +223,6 @@ ms.lasthandoff: 01/25/2018
 ## <a name="related-content"></a>相關內容  
  [Integration Services 轉換](../../../integration-services/data-flow/transformations/integration-services-transformations.md)  
   
- [Extending the Data Flow with the Script Component](../../../integration-services/extending-packages-scripting/data-flow-script-component/extending-the-data-flow-with-the-script-component.md)  
+ [以指令碼元件來擴充資料流程](../../../integration-services/extending-packages-scripting/data-flow-script-component/extending-the-data-flow-with-the-script-component.md)  
   
   

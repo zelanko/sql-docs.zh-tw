@@ -1,35 +1,34 @@
 ---
-title: "SELECT FROM&lt;模型&gt;。DIMENSION_CONTENT (DMX) |Microsoft 文件"
-ms.custom: 
+title: SELECT FROM&lt;模型&gt;。DIMENSION_CONTENT (DMX) |Microsoft 文件
+ms.custom: ''
 ms.date: 03/02/2016
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
 ms.component: data-mining
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - SELECT
 - FROM
 - DIMENSION_CONTENT
-dev_langs: DMX
+dev_langs:
+- DMX
 helpviewer_keywords:
 - mining models [Analysis Services], dimension content
 - SELECT FROM <model>.DIMENSION_CONTENT statement
 ms.assetid: 907fb3fb-2131-4a10-8635-2a39b9a805aa
-caps.latest.revision: "42"
+caps.latest.revision: 42
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: eea37242444142b217e7a792465553cfc316321d
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: e733881415d997a7a8d9e120963f625a042f3294
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="select-from-ltmodelgtdimensioncontent-dmx"></a>SELECT FROM&lt;模型&gt;。DIMENSION_CONTENT (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -84,7 +83,7 @@ SELECT [FLATTENED] [TOP <n>] <expression list> FROM <model>.Dimension_CONTENT
   
 ## <a name="examples"></a>範例  
   
-### <a name="description"></a>描述  
+### <a name="description"></a>Description  
  範例選取所有來自 `[TM Decision Tree]` 模型內容的資料行，其中均為使用模型作為維度的相關內容。  
   
 ### <a name="code"></a>程式碼  
@@ -94,10 +93,10 @@ SELECT *
 FROM [TM Decision Tree].Dimension_Content  
 ```  
   
-## <a name="see-also"></a>請參閱  
- [SELECT &#40; DMX &#41;](../dmx/select-dmx.md)   
- [資料採礦延伸模組 &#40; DMX &#41;資料定義陳述式](../dmx/dmx-statements-data-definition.md)   
- [資料採礦延伸模組 &#40; DMX &#41;資料操作陳述式](../dmx/dmx-statements-data-manipulation.md)   
- [資料採礦延伸模組 &#40;DMX&#41; 陳述式參考](../dmx/data-mining-extensions-dmx-statements.md)  
+## <a name="see-also"></a>另請參閱  
+ [選取&AMP;#40;DMX&AMP;#41;](../dmx/select-dmx.md)   
+ [資料採礦延伸模組&#40;DMX&#41;資料定義陳述式](../dmx/dmx-statements-data-definition.md)   
+ [資料採礦延伸模組&#40;DMX&#41;資料操作陳述式](../dmx/dmx-statements-data-manipulation.md)   
+ [資料採礦延伸模組 & #40; DMX & #41;陳述式參考](../dmx/data-mining-extensions-dmx-statements.md)  
   
   

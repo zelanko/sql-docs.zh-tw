@@ -1,28 +1,21 @@
 ---
-title: "追蹤應用裝置警示 (Analytics Platform System)"
-author: barbkess
-ms.author: barbkess
-manager: jhubbard
-ms.prod: analytics-platform-system
-ms.prod_service: mpp-data-warehouse
-ms.service: 
-ms.component: 
-ms.technology: mpp-data-warehouse
-ms.custom: 
-ms.date: 01/05/2017
-ms.reviewer: na
-ms.suite: sql
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: 631345d9-4967-461a-8922-e5f8fd33f48f
-caps.latest.revision: "14"
-ms.openlocfilehash: a780aa34667280d9e079dad4f44954ba919275d5
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+title: 追蹤應用裝置警示-Analytics Platform System |Microsoft 文件
+description: 追蹤 Analytics Platform System 中的應用裝置警示。
+author: mzaman1
+manager: craigg
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
+ms.openlocfilehash: 82803e6f20e4a710f317e2e7a541c4a1c72ed08d
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/19/2018
 ---
-# <a name="track-appliance-alerts"></a>追蹤應用裝置的警示
+# <a name="track-appliance-alerts-in-analytics-platform-system"></a>追蹤 Analytics Platform System 中的應用裝置警示
 本主題說明如何使用管理主控台和系統檢視表來追蹤 SQL Server PDW 應用裝置中的警示。  
   
 ## <a name="to-track-appliance-alerts"></a>追蹤應用裝置的警示  
@@ -76,7 +69,7 @@ ORDER BY
     aa.[pdw_node_id];  
 ```  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
 <!-- MISSING LINKS [Common Metadata Query Examples &#40;SQL Server PDW&#41;](../sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  -->
-[應用裝置監視 &#40;Analytics Platform System &#41;](appliance-monitoring.md)  
+[應用裝置監視&#40;Analytics Platform System&#41;](appliance-monitoring.md)  
   

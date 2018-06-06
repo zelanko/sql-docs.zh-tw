@@ -1,37 +1,35 @@
 ---
-title: "建立指令碼檔案 (AccessToSQL) |Microsoft 文件"
-ms.prod: sql-non-specified
+title: 建立指令碼檔案 (AccessToSQL) |Microsoft 文件
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
 ms.component: ssma-access
-ms.custom: 
+ms.custom: ''
 ms.date: 08/17/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ssma
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: 64dfe192-965c-49d4-a3ea-848fbc5f619f
-caps.latest.revision: "21"
+caps.latest.revision: 21
 author: Shamikg
 ms.author: Shamikg
 manager: murato
-ms.workload: Inactive
-ms.openlocfilehash: d39055374caa0697c073b6abfc8d99e87ed42bb1
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 5d1b0fda2c6c822d6d080bb2cf48958964e230ed
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="creating-script-files-accesstosql"></a>建立指令碼檔案 (AccessToSQL)
 第一個步驟之前啟動 SSMA 主控台應用程式。 若要建立指令碼檔案，並在必要時建立的變數值的檔案和伺服器連接檔案。  
   
-指令碼檔案可以分成三個區段，viz。。，：  
+指令碼檔案可以分成三個區段，viz..,:  
   
-1.  **config:**可讓使用者設定的主控台應用程式的組態參數。  
+1.  **config:** 可讓使用者設定的主控台應用程式的組態參數。  
   
 2.  **伺服器：**可讓使用者設定來源/目標伺服器定義。 這也可以在不同的伺服器連接檔案中。  
   
@@ -71,7 +69,7 @@ ms.lasthandoff: 12/21/2017
   
     </output-providers>  
     ```  
-     *或*   
+    *或*  
   
     ```xml  
     <…All commands…>  
@@ -108,7 +106,7 @@ ms.lasthandoff: 12/21/2017
   
     </output-providers>  
     ```  
-     *或*   
+    *或*  
   
     ```xml  
     <migrate-data>  
@@ -124,11 +122,11 @@ ms.lasthandoff: 12/21/2017
   
     模式包括：  
   
-    -   **詢問使用者-**會提示使用者 continue('yes') 或 out ('no') 的錯誤。  
+    -   **詢問使用者-** 會提示使用者 continue('yes') 或 out ('no') 的錯誤。  
   
-    -   **錯誤-**主控台會顯示錯誤並暫停執行。  
+    -   **錯誤-** 主控台會顯示錯誤並暫停執行。  
   
-    -   **繼續-**主控台會繼續執行。  
+    -   **繼續-** 主控台會繼續執行。  
   
     預設模式是**錯誤**。  
   
@@ -141,7 +139,7 @@ ms.lasthandoff: 12/21/2017
   
     </output-providers>  
     ```  
-     *或*   
+    *或*  
   
     ```xml  
     <!-- Connect to target database -->  
@@ -174,7 +172,7 @@ ms.lasthandoff: 12/21/2017
   
     </output-providers>  
     ```  
-     *或*   
+    *或*  
   
     ```xml  
     <!--synchronization-->  
@@ -185,7 +183,7 @@ ms.lasthandoff: 12/21/2017
   
     </synchronize-target>  
     ```  
-     *或*   
+    *或*  
   
     ```xml  
     <!--data migration-->  
@@ -220,7 +218,7 @@ ms.lasthandoff: 12/21/2017
   
     </output-providers>  
     ```  
-     *或*   
+    *或*  
   
     ```xml  
     <convert-schema object-name="ssma.TT1">  
@@ -242,9 +240,9 @@ ms.lasthandoff: 12/21/2017
     </output-providers>  
     ```  
   
-7.  **停止作業：**中間作業期間，如果使用者想要停止作業，然後**' Ctrl + C'**快速鍵可用。 存取主控台的 SSMA 會等候該操作完成，並終止主控台執行。  
+7.  **停止作業：**中間作業期間，如果使用者想要停止作業，然後 **' Ctrl + C'** 快速鍵可用。 存取主控台的 SSMA 會等候該操作完成，並終止主控台執行。  
   
-    如果使用者想要停止執行，然後**' Ctrl + C'**快速鍵可以按下一次的 SSMA 主控台應用程式突然終止。  
+    如果使用者想要停止執行，然後 **' Ctrl + C'** 快速鍵可以按下一次的 SSMA 主控台應用程式突然終止。  
   
 8.  **進度的提供者：**通知每個主控台命令的進度。 預設為停用。 進度報告的屬性組成：  
   
@@ -273,7 +271,7 @@ ms.lasthandoff: 12/21/2017
   
     </output-providers>  
     ```  
-     *或*   
+    *或*  
   
     ```xml  
     <…All commands…>  
@@ -315,7 +313,7 @@ ms.lasthandoff: 12/21/2017
   
     </output-providers>  
     ```  
-     *或*   
+    *或*  
   
     ```xml  
     <…All commands…>  
@@ -348,7 +346,7 @@ ms.lasthandoff: 12/21/2017
 -   **重新連接嘗試次數上限：**時建立的連接逾時或因網路失敗而中斷，則需要重新連線的伺服器。 最多允許重新連線嘗試**5**重試次數之後，主控台會自動執行重新連線。 自動重新連線功能會減少您在重新執行指令碼的工作。  
   
 ## <a name="server-connection-parameters"></a>伺服器連接參數  
-伺服器連接參數可以在指令碼檔案或伺服器連接檔案中定義。 請參閱[建立伺服器連接檔案 &#40;AccessToSQL &#41;](../../ssma/access/creating-the-server-connection-files-accesstosql.md) > 一節以取得詳細資料。  
+伺服器連接參數可以在指令碼檔案或伺服器連接檔案中定義。 請參閱[伺服器連線檔案建立&#40;AccessToSQL&#41; ](../../ssma/access/creating-the-server-connection-files-accesstosql.md) > 一節以取得詳細資料。  
   
 ## <a name="script-commands"></a>指令碼命令  
 指令碼檔案包含一連串的移轉工作流程命令，以 XML 格式。 SSMA 主控台應用程式會處理指令碼檔案中出現的命令順序移轉。  
@@ -394,14 +392,14 @@ ms.lasthandoff: 12/21/2017
   
 在變更參數，其中顯示的資訊之後，您可以執行範本 （檔案）。  
   
-指令碼命令的完整清單位於[執行 SSMA 主控台 &#40;AccessToSQL &#41;](../../ssma/access/executing-the-ssma-console-accesstosql.md)  
+指令碼命令的完整清單位於[執行 SSMA 主控台&#40;AccessToSQL&#41;](../../ssma/access/executing-the-ssma-console-accesstosql.md)  
   
 ## <a name="script-file-validation"></a>指令碼檔案驗證  
-使用者可以輕鬆地驗證自己的指令碼檔案對結構描述定義檔**'A2SSConsoleScriptSchema.xsd'**可用 '結構描述' 資料夾中。  
+使用者可以輕鬆地驗證自己的指令碼檔案對結構描述定義檔 **'A2SSConsoleScriptSchema.xsd'** 可用 '結構描述' 資料夾中。  
   
 ## <a name="next-step"></a>下一步
-在操作主控台的下一個步驟是[建立變數值的檔案 &#40;AccessToSQL &#41;](../../ssma/access/creating-variable-value-files-accesstosql.md).  
+在操作主控台的下一個步驟是[建立變數值的檔案&#40;AccessToSQL&#41;](../../ssma/access/creating-variable-value-files-accesstosql.md)。  
   
 ## <a name="see-also"></a>另請參閱  
-[建立變數值的檔案 &#40;AccessToSQL &#41;](../../ssma/access/creating-variable-value-files-accesstosql.md)  
+[建立變數值的檔案&#40;AccessToSQL&#41;](../../ssma/access/creating-variable-value-files-accesstosql.md)  
   

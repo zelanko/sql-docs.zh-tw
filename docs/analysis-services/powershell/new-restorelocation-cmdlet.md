@@ -1,31 +1,23 @@
 ---
-title: "New-restorelocation 指令程式 |Microsoft 文件"
-ms.custom: 
-ms.date: 03/07/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+title: New-restorelocation 指令程式 |Microsoft 文件
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: powershell
 ms.topic: reference
-ms.assetid: 5ca13d8c-1c5d-4f02-869c-72e0defce6d7
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: ca5bf33d2d528b8e216915170d7df528589a85c3
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 8ce57664514cc11bb0ff7dd72f94e900279b7a13
+ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="new-restorelocation-cmdlet"></a>New-RestoreLocation 指令程式
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-指定用來還原資料庫的資訊。  
+  指定用來還原資料庫的資訊。  
 
 >[!NOTE] 
 >這份文件可能包含過時的資訊和範例。 使用 Get-help cmdlet 取得最新。
@@ -42,7 +34,7 @@ ms.lasthandoff: 02/15/2018
   
 ## <a name="parameters"></a>參數  
   
-### <a name="-file-string"></a>-File \<string>  
+### <a name="-file-string"></a>-檔案\<字串 >  
  指定您要還原之備份檔案的名稱。  
   
 |||  
@@ -63,7 +55,7 @@ ms.lasthandoff: 02/15/2018
 |接受管線輸入？|false|  
 |接受萬用字元？|false|  
   
-### <a name="-connectionstring-string"></a>-ConnectionString \<string>  
+### <a name="-connectionstring-string"></a>-ConnectionString\<字串 >  
  指定遠端 Analysis Services 執行個體的連接字串。  
   
 |||  
@@ -85,7 +77,7 @@ ms.lasthandoff: 02/15/2018
 |接受管線輸入？|false|  
 |接受萬用字元？|false|  
   
-### <a name="-folders-asrestorefolder"></a>-Folders \<AS.RestoreFolder>  
+### <a name="-folders-asrestorefolder"></a>-資料夾\<AS.RestoreFolder >  
  指定本機或遠端執行個體上的資料分割資料夾。  
   
 |||  
@@ -96,7 +88,7 @@ ms.lasthandoff: 02/15/2018
 |接受管線輸入？|false|  
 |接受萬用字元？|false|  
   
-### <a name="-astemplate-switchparameter"></a>-AsTemplate \<SwitchParameter>  
+### <a name="-astemplate-switchparameter"></a>-AsTemplate \<SwitchParameter >  
  指定是否應該在記憶體中建立物件並傳回物件。  
   
 |||  
@@ -119,7 +111,7 @@ ms.lasthandoff: 02/15/2018
 |接受萬用字元？|false|  
   
 ### <a name="-credential-pscredential"></a>-Credential \<PSCredential >  
- 若為您已經設定為 HTTP 存取的執行個體，這個參數是在使用 Analysis Service 執行個體的 HTTP 連接時用來傳入使用者名稱和密碼。 如需詳細資訊，請參閱[設定 HTTP 存取 Analysis Services，Internet Information Services &#40; IIS &#41; 8.0](../../analysis-services/instances/configure-http-access-to-analysis-services-on-iis-8-0.md)進行 HTTP 連線。  
+ 若為您已經設定為 HTTP 存取的執行個體，這個參數是在使用 Analysis Service 執行個體的 HTTP 連接時用來傳入使用者名稱和密碼。 如需詳細資訊，請參閱[設定 Internet Information Services 上的 Analysis Services 的 HTTP 存取&#40;IIS&#41; 8.0](../../analysis-services/instances/configure-http-access-to-analysis-services-on-iis-8-0.md)進行 HTTP 連線。  
   
  如果指定了此參數，使用者名稱和密碼將會用來連接到指定的 Analysis Server 執行個體。 如果沒有指定認證，則會使用執行此工具之使用者的預設 Windows 帳戶。  
   

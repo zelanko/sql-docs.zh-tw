@@ -1,31 +1,23 @@
 ---
-title: "判斷伺服器模式的 Analysis Services 執行個體 |Microsoft 文件"
-ms.custom: 
-ms.date: 03/03/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
-ms.assetid: 9e556fb1-ca37-4f06-8f8f-f187cb0fdb37
-caps.latest.revision: 
-author: Minewiskan
+title: 判斷伺服器模式的 Analysis Services 執行個體 |Microsoft 文件
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: ''
+ms.topic: conceptual
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: c51a35297b1a079ec026c6bcd8ac0fbd0ea7169e
-ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
+ms.openlocfilehash: 52f12b7d828f9d863f3efe29355e59b6a76d33ef
+ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="determine-the-server-mode-of-an-analysis-services-instance"></a>判斷 Analysis Services 執行個體的伺服器模式
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-Analysis Services 可安裝為以下三種伺服器模式之一：多維度和資料採礦 (預設模式)、 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint，以及表格式。 Analysis Services 執行個體的伺服器模式是在安裝期間您選擇安裝伺服器選項時決定。  
+  Analysis Services 可安裝為以下三種伺服器模式之一：多維度和資料採礦 (預設模式)、 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint，以及表格式。 Analysis Services 執行個體的伺服器模式是在安裝期間您選擇安裝伺服器選項時決定。  
   
  伺服器模式決定您所建立和部署的方案類型。 如果您沒有安裝伺服器軟體並且想要知道伺服器的安裝模式，可以使用本主題中的資訊來判斷模式。 如需功能可用性的特定模式的詳細資訊，請參閱[比較表格式和多維度解決方案](../../analysis-services/comparing-tabular-and-multidimensional-solutions-ssas.md)。  
   
@@ -60,8 +52,8 @@ Analysis Services 可安裝為以下三種伺服器模式之一：多維度和�
  [以多維度及資料採礦模式安裝 Analysis Services](http://msdn.microsoft.com/library/8a1f33e8-2bd6-4fb8-bd46-c86f2a067f60)   
  [Power Pivot for SharePoint 2010 安裝](http://msdn.microsoft.com/en-us/8d47dde7-c941-4280-a934-e2fe3f9a938f)   
  [連接到 Analysis Services](../../analysis-services/instances/connect-to-analysis-services.md)   
- [表格式模型方案](../../analysis-services/tabular-models/tabular-model-solutions-ssas-tabular.md)   
+ [表格式模型方案](../../analysis-services/tabular-models/tabular-models-ssas.md)   
  [多維度模型方案 ](../../analysis-services/multidimensional-models/multidimensional-model-solutions-ssas.md)   
- [採礦模型 &#40;Analysis Services-資料採礦 &#41;](../../analysis-services/data-mining/mining-models-analysis-services-data-mining.md)  
+ [採礦模型 & #40;Analysis Services-資料採礦 & #41;](../../analysis-services/data-mining/mining-models-analysis-services-data-mining.md)  
   
   

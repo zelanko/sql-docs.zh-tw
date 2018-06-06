@@ -1,62 +1,41 @@
 ---
-title: "疑難排解 SQL Server 的機器學習-資料收集"
-ms.custom: 
-ms.date: 06/16/2017
-ms.prod: machine-learning-services
-ms.prod_service: machine-learning-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
-dev_langs:
-- R
-caps.latest.revision: 
-author: jeannt
-ms.author: jeannt
-manager: cgronlund
-ms.workload: Inactive
-ms.openlocfilehash: ee3b5fb649d659ade9cca22292aa5c8715f515c8
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+title: 疑難排解 SQL Server 的機器學習-資料收集
+ms.prod: sql
+ms.technology: machine-learning
+ms.date: 04/15/2018
+ms.topic: conceptual
+author: HeidiSteen
+ms.author: heidist
+manager: cgronlun
+ms.openlocfilehash: 9b0fdd8d198675720188d6ab2417be97a9280c57
+ms.sourcegitcommit: 2d93cd115f52bf3eff3069f28ea866232b4f9f9e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34708406"
 ---
 # <a name="troubleshoot-data-collection-for-machine-learning"></a>疑難排解機器學習的資料收集
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-本文將討論當您嘗試解決問題的安裝程式、 組態或了解 SQL Server 中的機器的效能時，即應收集的資料種類。 這些資料包括記錄、 錯誤訊息，以及系統資訊。
-
-本文將告訴您最有用的資訊來源當您執行診斷自助為基礎。 收集這項資訊也很有用時要求 SQL Server 的機器學習功能的相關問題的技術支援人員。
+本文說明資料收集方法，您應該使用時嘗試解決您自己的問題，或搭配使用時的協助 Microsoft 客戶支援。 
 
 **適用於：** SQL Server 2016 R Services、 SQL Server 2017 機器學習服務 （R 和 Python）
 
-## <a name="sql-server-and-r-versions"></a>SQL Server 和 R 版本
 
-請注意版本是否為新的安裝或升級。 如果是升級，來判斷執行方式：
+## <a name="sql-server-version-and-edition"></a>SQL Server 版本與版本
 
-- 您未從升級哪個版本？ 
-- 您是否已移除舊的元件，或您升級就地？
-- 您在升級期間變更任何功能選取項目嗎？ 
+SQL Server 2016 R Services 是以包含整合的 R 支援的 SQL Server 的第一個版本。 SQL Server 2016 Service Pack 1 (SP1) 包含數個主要改進，包括執行外部指令碼的能力。 如果您是 SQL Server 2016 的客戶，您應該考慮安裝 SP1 或更新版本。
 
-### <a name="which-edition-of-sql-server-is-installed-and-which-version"></a>已安裝哪些版本的 SQL Server，以及哪個版本？ 
+SQL Server 2017 加入 Python 語言整合。 較早的版本中，您無法取得 Python 功能整合。
 
-SQL Server 2016 中引進了 SQL Server R Services。 先前的版本不支援機器學習。 此外，2016年發行的後續 service pack 包含許多 bug 修正和增強功能。 第一個步驟中，您應該考慮安裝 Service Pack 1 或更新版本。
+如版本及版本中，取得協助，請參閱這篇文章會針對每個列出的組建編號， [SQL Server 版本](https://social.technet.microsoft.com/wiki/contents/articles/783.sql-server-versions.aspx#Service_Pack_editions)。
 
-在 SQL Server 2017，支援已擴充為 Python 語言。 在舊版中未提供對 Python 的支援。
-
-如果您需要協助以判斷有哪些版本及版本，請參閱這篇文章會針對每個列出的組建編號， [SQL Server 版本](https://social.technet.microsoft.com/wiki/contents/articles/783.sql-server-versions.aspx#Service_Pack_editions)。
-
-根據您所使用的 SQL Server 版本中，有些機器學習功能可能無法使用，或只有有限的。
-
-請參閱下列主題中的 Enterprise、 Developer、 Standard 和 Express 版本中的機器學習功能清單。
+根據您所使用的 SQL Server 版本中，有些機器學習功能可能無法使用，或只有有限的。 下列文件清單的 Enterprise、 Developer、 Standard 和 Express 版本中的機器學習功能。
 
 * [版本和支援的 SQL Server 功能](https://docs.microsoft.com/sql/sql-server/editions-and-components-of-sql-server-2016)
-* [R 功能的 SQL Server 版本之間的差異](https://docs.microsoft.com/sql/advanced-analytics/r/differences-in-r-features-between-editions-of-sql-server)
+* [SQL Server 版本的 R，並將 Python 功能](r/differences-in-r-features-between-editions-of-sql-server.md)
 
-### <a name="which-version-of-microsoft-r-is-installed"></a>所安裝的 Microsoft R 版本？
+## <a name="r-language-and-tool-versions"></a>R 語言和工具版本
 
 當您選取的 R 服務功能或機器學習服務功能已安裝的 Microsoft R 版本在一般情況下，取決於 SQL Server 組建編號。 如果您升級或修補程式 SQL Server，您也必須升級或修補程式及其 R 元件。
 
@@ -64,7 +43,7 @@ SQL Server 2016 中引進了 SQL Server R Services。 先前的版本不支援�
 
 您可個別升級 R 伺服器元件，從稱為繫結的程序中的 SQL Server 資料庫引擎。 因此，您使用 SQL Server 中執行 R 程式碼時的 R 版本可能會與不同，視安裝的 SQL Server 版本和是否有伺服器移轉到最新的 R 版本而定。
 
-#### <a name="determine-the-r-version"></a>判斷 R 版本
+### <a name="determine-the-r-version"></a>判斷 R 版本
 
 若要判斷 R 版本最簡單方式是，以取得執行階段屬性執行的陳述式，如下所示：
 
@@ -123,9 +102,7 @@ R 主控台會在啟動時顯示的版本資訊。 例如，下列版本代表 S
     *Loading Microsoft R Server packages, version 9.1.0.*
 
 
-### <a name="what-version-of-python-is-installed"></a>已安裝的 Python 版本？
-
-僅適用於 SQL Server 2017 社群技術預覽 (CTP) 2.0 和更新版本 Python 的支援。
+## <a name="python-versions"></a>Python 版本
 
 有幾種方式可取得的 Python 版本。 最簡單的方式是從 Management Studio 或任何其他的 SQL 查詢工具執行此陳述式：
 
@@ -146,7 +123,7 @@ with WITH RESULT SETS (SQL keywords) ((PropertyName nvarchar(100), PropertyValue
 
 如果機器學習服務未在執行中，您可以查看 pythonlauncher.config 檔來判斷已安裝的 Python 版本。 我們建議您製作並開啟檔案的複本，因此您不小心不要變更任何屬性。
 
-1. 僅適用於 SQL 伺服器 2017年:`C:\Program Files\Microsoft SQL Server\MSSQL14.<instance_name>\MSSQL\Log\ExtensibilityLog\pythonlauncher.config `
+1. 僅適用於 SQL 伺服器 2017年: `C:\Program Files\Microsoft SQL Server\MSSQL14.<instance_name>\MSSQL\Log\ExtensibilityLog\pythonlauncher.config `
 2. 取得值**PYTHONHOME**。
 3. 取得目前工作目錄的值。
 
@@ -154,7 +131,7 @@ with WITH RESULT SETS (SQL keywords) ((PropertyName nvarchar(100), PropertyValue
 > [!NOTE]
 > 如果您有安裝 Python 和 R 中 SQL Server 2017，工作目錄和背景工作帳戶的集區共用的 R 和 Python 語言。
 
-### <a name="are-multiple-instances-of-r-or-python-installed"></a>R 的多個執行個體或 Python 安裝嗎？
+## <a name="are-multiple-instances-of-r-or-python-installed"></a>R 的多個執行個體或 Python 安裝嗎？
 
 請檢查電腦上是否已安裝的 R 程式庫的多個複本。 如果，可能會發生這種重複狀況：
 
@@ -167,7 +144,7 @@ with WITH RESULT SETS (SQL keywords) ((PropertyName nvarchar(100), PropertyValue
 
 如果您發現安裝多個程式庫或執行階段，請確定您取得只有 SQL Server 執行個體所使用的 Python 或 R 執行階段的相關錯誤。
 
-## <a name="errors-and-messages"></a>錯誤和訊息
+## <a name="origin-of-errors"></a>錯誤的來源
 
 當您嘗試執行 R 程式碼時，您會看到的錯誤可以來自任何下列來源：
 
@@ -182,7 +159,7 @@ with WITH RESULT SETS (SQL keywords) ((PropertyName nvarchar(100), PropertyValue
 - 您會使用 Management Studio 嗎？ 外部應用程式嗎？
 - 在遠端用戶端，或直接在預存程序中執行 R 程式碼的？
 
-### <a name="what-errors-has-sql-server-logged"></a>SQL Server 已記錄哪些錯誤？
+## <a name="sql-server-log-files"></a>SQL Server 記錄檔
 
 取得最新的 SQL Server 錯誤記錄檔。 一組完整的錯誤記錄檔包含下列的預設記錄目錄中的檔案：
 
@@ -198,7 +175,7 @@ with WITH RESULT SETS (SQL keywords) ((PropertyName nvarchar(100), PropertyValue
 > 一模一樣的資料夾名稱而異的執行個體名稱。
 
 
-### <a name="what-errors-were-returned-by-the-spexecuteexternalscript-command"></a>Sp_execute_external_script 命令所傳回哪些錯誤？
+## <a name="errors-returned-by-spexecuteexternalscript"></a>Sp_execute_external_script 所傳回的錯誤
 
 如果有的話，當您執行 sp_execute_external_script 命令，取得會傳回錯誤的完整文字。 
 
@@ -224,7 +201,7 @@ with result sets (([hello] int not null));
 go
 ```
 
-### <a name="what-errors-are-generated-by-the-extensibility-framework"></a>擴充性架構，會產生哪些錯誤？
+## <a name="errors-generated-by-the-extensibility-framework"></a>擴充性架構所產生的錯誤
 
 SQL Server 會產生不同的外部指令碼語言執行階段記錄檔。 這些錯誤不會產生 Python 或 R 語言。 它們是從 SQL Server，包括語言特有 launchers 和其附屬程序中的擴充性元件所產生。
 
@@ -255,20 +232,20 @@ SQL Server 會產生不同的外部指令碼語言執行階段記錄檔。 這�
 
 * *附屬項目工作階段管理員初始化失敗*
 
-### <a name="are-there-any-related-system-events"></a>是否有任何相關的系統事件？
+## <a name="system-events"></a>系統事件
 
 1. 開啟 Windows 事件檢視器，並搜尋**系統事件**記錄檔中的訊息，其中包含字串*啟動控制板*。 
 2. 開啟 ExtLaunchErrorlog 檔案，並尋找字串*ErrorCode*。 檢視訊息與錯誤碼相關聯。
 
 例如，下列訊息是 SQL Server 擴充性架構與相關的常見系統錯誤： 
 
-* *SQL Server Launchpad (MSSQLSERVER) 服務無法啟動，因為發生下列錯誤：<text>*
+* *SQL Server Launchpad (MSSQLSERVER) 服務無法啟動，因為發生下列錯誤：  <text>*
 
 * *服務未啟動或控制要求能夠及時回應。* 
 
 * *逾時等候連接 SQL Server Launchpad (MSSQLSERVER) 服務達到 （120000 毫秒為單位）。* 
 
-### <a name="did-any-components-start-and-then-crash"></a>沒有任何元件啟動，然後損毀？
+## <a name="dump-files"></a>傾印檔案
 
 如果您了解偵錯時，您可以使用傾印檔案來分析 [啟動列] 中的失敗。
 
@@ -279,7 +256,7 @@ SQL Server 會產生不同的外部指令碼語言執行階段記錄檔。 這�
 確切的位置可能會與您系統上的不同，而且它可能在 C 磁碟機以外的磁碟機上。 請務必取得機器學習服務安裝所在的執行個體的記錄。 
 
 
-## <a name="related-tools-and-configuration"></a>相關的工具和設定
+## <a name="configuration-settings"></a>組態設定
 
 此區段會列出其他元件，或是當您執行 R 或 Python 指令碼時，可能是錯誤的來源提供者。
 
@@ -330,19 +307,6 @@ SQL Server 會產生不同的外部指令碼語言執行階段記錄檔。 這�
 
 2. 判斷是否已經建立 SQL Server 的防火牆規則。 基於安全性理由，在預設安裝中，它可能不會為遠端 R 或 Python 用戶端，連接到執行個體。 如需詳細資訊，請參閱[疑難排解連接到 SQL Server](../database-engine/configure-windows/troubleshoot-connecting-to-the-sql-server-database-engine.md)。
 
-### <a name="can-you-run-r-script-outside-t-sql"></a>您可以執行 R 指令碼外 T-SQL 嗎？
-
-您可以嘗試執行 R 執行階段相關聯 SQL Server 執行個體使用其他的 R 工具。 這樣一來，您可以判斷是否已安裝必要的程式庫。
-
-R 的基底安裝包含多項工具可讓您從命令列，以及 RGui 的 R 指令碼執行的指令碼的互動執行。
-
-如果 R 執行階段正常運作，但您的指令碼會傳回錯誤，我們建議您嘗試偵錯專用的 R 開發環境，例如 R Tools for Visual Studio 中的指令碼。
-
-我們也建議您檢閱，並可稍微重寫指令碼來更正 R 和 database engine 之間移動資料時可能發生的資料類型的任何問題。 如需詳細資訊，請參閱[R 程式庫和資料型別](r/r-libraries-and-data-types.md)。
-
-此外，您可以使用 sqlrutils 封裝來封裝您的 R 指令碼是做為預存程序更方便取用的格式。 如需詳細資訊，請參閱：
-* [使用 sqlrutils 封裝產生 R 程式碼的預存程序](r/generating-an-r-stored-procedure-for-r-code-using-the-sqlrutils-package.md)
-* [使用 sqlrutils 建立預存程序](r/how-to-create-a-stored-procedure-using-sqlrutils.md)
 
 ## <a name="see-also"></a>另請參閱
 

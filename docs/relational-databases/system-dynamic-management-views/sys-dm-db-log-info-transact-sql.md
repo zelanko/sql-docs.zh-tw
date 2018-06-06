@@ -1,17 +1,13 @@
 ---
-title: sys.dm_db_log_info (Transact-SQL) | Microsoft Docs
-ms.custom: 
-ms.date: 03/11/2018
-ms.prod: sql-non-specified
-ms.prod_service: database-engine
-ms.service: 
-ms.component: dmv's
-ms.reviewer: 
+title: sys.dm_db_log_info (TRANSACT-SQL) |Microsoft 文件
+ms.custom: ''
+ms.date: 04/24/2018
+ms.prod: sql
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: system-objects
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 f1_keywords:
 - sys.dm_db_log_info
 - sys.dm_db_log_info_TSQL
@@ -22,19 +18,19 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_db_log_info dynamic management view
 ms.assetid: f6b40060-c17d-472f-b0a3-3b350275d487
-caps.latest.revision: 
+caps.latest.revision: 4
 author: savjani
 ms.author: pariks
 manager: ajayj
-ms.workload: Inactive
-ms.openlocfilehash: 56064f19713bf3e5da29109520045762474d4539
-ms.sourcegitcommit: 6b1618aa3b24bf6759b00a820e09c52c4996ca10
+monikerRange: '>= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: e2b99ce1a417c31b4ca81eb9f538acda0edfc517
+ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 05/23/2018
 ---
 # <a name="sysdmdbloginfo-transact-sql"></a>sys.dm_db_log_info (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-2016sp2-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-2016sp2-asdb-xxxx-xxx-md.md)]
 
 傳回[虛擬記錄檔 (VLF)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch)交易記錄的資訊。 請注意，所有交易記錄檔會都併入資料表輸出。 在輸出中的每個資料列代表 VLF 中的交易記錄檔，並提供該記錄檔中的 VLF 的相關資訊。
 
@@ -42,10 +38,11 @@ ms.lasthandoff: 03/15/2018
   
 ```  
 sys.dm_db_log_info ( database_id )  
-```  
+``` 
+
 ## <a name="arguments"></a>引數  
  *database_id* |NULL |預設值  
- 資料庫的識別碼。 *database_id*是**int**。有效輸入如下的資料庫、 NULL 或預設的識別碼。 預設值是 NULL。 NULL 和 DEFAULT 是目前資料庫內容中的對等值。
+ 資料庫的識別碼。 *database_id* 為 **int**。有效輸入如下的資料庫、 NULL 或預設的識別碼。 預設值是 NULL。 NULL 和 DEFAULT 是目前資料庫內容中的對等值。
  
  請指定 NULL 來傳回目前資料庫的 VLF 資訊。
 
@@ -67,10 +64,10 @@ sys.dm_db_log_info ( database_id )
 |vlf_create_lsn|**nvarchar(48)** |[記錄序號 (LSN)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#Logical_Arch)記錄檔的記錄建立[虛擬記錄檔 (VLF)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch)。|
 
 ## <a name="remarks"></a>備註
- `sys.dm_db_log_info`動態管理函數會取代`DBCC LOGINFO`陳述式。 
+`sys.dm_db_log_info`動態管理函數會取代`DBCC LOGINFO`陳述式。    
  
 ## <a name="permissions"></a>Permissions  
- 需要`VIEW DATABASE STATE`資料庫的權限。  
+需要`VIEW DATABASE STATE`資料庫的權限。  
   
 ## <a name="examples"></a>範例  
   

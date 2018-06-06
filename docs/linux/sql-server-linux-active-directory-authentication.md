@@ -1,26 +1,23 @@
 ---
-title: "Active Directory 驗證教學課程中的 SQL Server on Linux |Microsoft 文件"
-description: "本教學課程提供的 SQL Server on Linux 的 AAD 驗證的設定步驟。"
+title: Active Directory 驗證教學課程中的 SQL Server on Linux |Microsoft 文件
+description: 本教學課程提供的 SQL Server on Linux 的 AAD 驗證的設定步驟。
 author: meet-bhagdev
 ms.date: 02/23/2018
 ms.author: meetb
 manager: craigg
 ms.topic: article
-ms.prod: sql-non-specified
-ms.prod_service: database-engine
-ms.service: 
-ms.component: 
+ms.prod: sql
+ms.component: ''
 ms.suite: sql
 ms.custom: sql-linux
-ms.technology: database-engine
+ms.technology: linux
 helpviewer_keywords:
 - Linux, AAD authentication
-ms.workload: On Demand
-ms.openlocfilehash: a0939dfa0f8304dc47a6925cf4c6f0375eb6a8df
-ms.sourcegitcommit: f0c5e37c138be5fb2cbb93e9f2ded307665b54ea
+ms.openlocfilehash: df3cea6d47d50464fe0b8a7f2573c230585b9cb1
+ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/24/2018
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="tutorial-use-active-directory-authentication-with-sql-server-on-linux"></a>教學課程： 使用 Active Directory 驗證與 SQL Server on Linux
 
@@ -51,7 +48,7 @@ ms.lasthandoff: 02/24/2018
 
 使用下列步驟來加入[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]Active Directory 網域的主機：
 
-1. 使用 **[realmd](https://www.freedesktop.org/software/realmd/docs/guide-active-directory-join.html)** 主機電腦加入 AD 網域。 如果您還沒有這麼做，realmd 和 Kerberos 用戶端套件上安裝[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]主機電腦使用您的 Linux 散發套件管理員：
+1. 使用**[realmd](https://www.freedesktop.org/software/realmd/docs/guide-active-directory-join.html)** 主機電腦加入 AD 網域。 如果您還沒有這麼做，realmd 和 Kerberos 用戶端套件上安裝[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]主機電腦使用您的 Linux 散發套件管理員：
 
    ```bash
    # RHEL
@@ -137,6 +134,8 @@ ms.lasthandoff: 02/24/2018
    > 如果您看到錯誤，「 未安裝必要的套件，」 然後您應該安裝使用您的 Linux 散發套件管理員，再執行這些封裝`realm join`命令一次。
    >
    > 如果您收到的錯誤 」 的權限不足，加入網域 」 您需要網域系統管理員檢查您有足夠的權限加入您的網域中的 Linux 機器。
+   >
+   > 如果您收到錯誤 「 KDC 的回覆不符合預期，"，然後您可能指定了不正確的領域名稱的使用者。 領域名稱會區分大小寫，則通常是大寫，和可使用命令識別`realm discover contoso.com`。
    
    > SQL Server 會使用 SSSD 和 NSS 對應使用者帳戶和群組安全性識別碼 (SID)。 SSSD 必須設定並執行 SQL Server 已成功建立 AD 登入的順序。 Realmd 通常會自動執行此聯結網域的一部分，但在某些情況下，就必須分別。
    >
@@ -145,7 +144,7 @@ ms.lasthandoff: 02/24/2018
   
 5. 請確認您現在可以收集使用者資訊從網域中，您可以取得 Kerberos 票證來當做該使用者。
 
-   下列範例會使用**識別碼**，  **[kinit](https://web.mit.edu/kerberos/krb5-1.12/doc/user/user_commands/kinit.html)**，和 **[klist](https://web.mit.edu/kerberos/krb5-1.12/doc/user/user_commands/klist.html)** 這個命令。
+   下列範例會使用**識別碼**，  **[kinit](https://web.mit.edu/kerberos/krb5-1.12/doc/user/user_commands/kinit.html)**，和**[klist](https://web.mit.edu/kerberos/krb5-1.12/doc/user/user_commands/klist.html)** 這個命令。
 
    ```bash
    id user@contoso.com
@@ -170,7 +169,7 @@ ms.lasthandoff: 02/24/2018
 ## <a id="createuser"></a> 建立 AD 使用者輸入[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]和設定 SPN
 
   > [!NOTE]
-  > 下一個步驟會使用您[完整的網域名稱](https://en.wikipedia.org/wiki/Fully_qualified_domain_name)。 如果您在**Azure**，您必須**[建立一個](https://docs.microsoft.com/en-us/azure/virtual-machines/linux/portal-create-fqdn)**在繼續之前。
+  > 下一個步驟會使用您[完整的網域名稱](https://en.wikipedia.org/wiki/Fully_qualified_domain_name)。 如果您在**Azure**，您必須**[建立一個](https://docs.microsoft.com/en-us/azure/virtual-machines/linux/portal-create-fqdn)** 在繼續之前。
 
 1. 在您的網域控制站上執行[New-aduser](https://technet.microsoft.com/library/ee617253.aspx) PowerShell 命令，建立新的 AD 使用者的密碼永久有效。 這個範例會命名帳戶 」"mssql，但帳戶名稱可以是任何您喜歡的項目。 系統會提示您輸入新密碼的帳戶：
 
@@ -206,7 +205,7 @@ ms.lasthandoff: 02/24/2018
    kvno MSSQLSvc/**<fully qualified domain name of host machine>**:**<tcp port>**
    ```
 
-2. 建立的 keytab 檔案 **[ktutil](https://web.mit.edu/kerberos/krb5-1.12/doc/admin/admin_commands/ktutil.html)** 您在上一個步驟中建立 AD 使用者。 出現提示時，輸入該 AD 帳戶的密碼。
+2. 建立的 keytab 檔案**[ktutil](https://web.mit.edu/kerberos/krb5-1.12/doc/admin/admin_commands/ktutil.html)** 您在上一個步驟中建立 AD 使用者。 出現提示時，輸入該 AD 帳戶的密碼。
 
    ```bash
    sudo ktutil

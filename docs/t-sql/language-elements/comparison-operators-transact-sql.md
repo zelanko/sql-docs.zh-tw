@@ -1,16 +1,14 @@
 ---
-title: "比較運算子 (Transact-SQL) | Microsoft Docs"
-ms.custom: 
+title: 比較運算子 (Transact-SQL) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-database
-ms.service: 
 ms.component: t-sql|language-elements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: t-sql
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - TSQL
@@ -23,16 +21,15 @@ helpviewer_keywords:
 - comparing expressions
 - comparison operators [SQL Server]
 ms.assetid: b0cc68ef-3029-484c-a917-0c15dcbc230d
-caps.latest.revision: 
+caps.latest.revision: 35
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: Active
-ms.openlocfilehash: cd8dcf23064d6caae62d10065c9aa3731823e99b
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 5e0e5538d69caf96e7eb8864de177d14e99ce642
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="comparison-operators-transact-sql"></a>比較運算子 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -47,9 +44,9 @@ ms.lasthandoff: 01/25/2018
 |[>= (大於或等於)](../../t-sql/language-elements/greater-than-or-equal-to-transact-sql.md)|大於或等於|  
 |[<= (小於或等於)](../../t-sql/language-elements/less-than-or-equal-to-transact-sql.md)|小於或等於|  
 |[<> (不等於)](../../t-sql/language-elements/not-equal-to-transact-sql-traditional.md)|不等於|  
-|[!= (不等於)](../../t-sql/language-elements/not-equal-to-transact-sql-exclamation.md)|不等於 (不是 ISO 標準)|  
-|[!< (不小於)](../../t-sql/language-elements/not-less-than-transact-sql.md)|不小於 (不是 ISO 標準)|  
-|[!> (不大於)](../../t-sql/language-elements/not-greater-than-transact-sql.md)|不大於 (不是 ISO 標準)|  
+|[\!= (不等於)](../../t-sql/language-elements/not-equal-to-transact-sql-exclamation.md)|不等於 (不是 ISO 標準)|  
+|[\!< (不小於)](../../t-sql/language-elements/not-less-than-transact-sql.md)|不小於 (不是 ISO 標準)|  
+|[\!> (不大於)](../../t-sql/language-elements/not-greater-than-transact-sql.md)|不大於 (不是 ISO 標準)|  
   
 ## <a name="boolean-data-type"></a>布林資料類型  
  比較運算子的結果具有 **Boolean** 資料類型。 它有三個值：TRUE、FALSE 和 UNKNOWN。 傳回 **Boolean** 資料類型的運算式稱為布林運算式。  

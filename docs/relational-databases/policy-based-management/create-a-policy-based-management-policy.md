@@ -1,33 +1,32 @@
 ---
-title: "建立原則式管理原則 | Microsoft 文件"
-ms.custom: 
+title: 建立原則式管理原則 | Microsoft 文件
+ms.custom: ''
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
 ms.component: performance-monitor
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - Policy-Based Management, creating policies
 ms.assetid: b28bf963-89f9-4941-b6c1-6004fec347f1
-caps.latest.revision: 
+caps.latest.revision: 9
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: a6495828ee76e490d2b7da7bfbe6bf4d2c4799da
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 43132cbc9dc61ec0782abb01121deff7020d7eeb
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="create-a-policy-based-management-policy"></a>建立原則式管理原則
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 本主題描述如何使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]，在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中建立原則式管理原則。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  本主題描述如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] ，在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中建立原則式管理原則。  
   
  **本主題內容**  
   
@@ -72,7 +71,7 @@ ms.lasthandoff: 01/18/2018
   
 11. 若要將此原則限制為目標類型的子集，請在 **[伺服器限制]** 方塊中，選取限制條件或建立新的條件。  
   
-     如需有關 **[建立新原則]** 對話方塊可用之選項的詳細資訊，請參閱＜ [Create New Policy or Open Policy Dialog Box, General Page](../../relational-databases/policy-based-management/create-new-policy-or-open-policy-dialog-box-general-page.md) ＞或＜ [Create New Policy or Open Policy Dialog Box, Description Page](../../relational-databases/policy-based-management/create-new-policy-or-open-policy-dialog-box-description-page.md)＞。  
+     如需有關 **[建立新原則]** 對話方塊可用之選項的詳細資訊，請參閱＜ [建立新原則或開啟原則對話方塊，一般頁面](../../relational-databases/policy-based-management/create-new-policy-or-open-policy-dialog-box-general-page.md) ＞或＜ [建立新原則或開啟原則對話方塊，描述頁面](../../relational-databases/policy-based-management/create-new-policy-or-open-policy-dialog-box-description-page.md)＞。  
   
 12. 完成後，請按一下 **[確定]**。  
   

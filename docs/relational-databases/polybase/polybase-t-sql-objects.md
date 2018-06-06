@@ -1,35 +1,32 @@
 ---
-title: "PolyBase T-SQL 物件 | Microsoft Docs"
-ms.custom: 
+title: PolyBase T-SQL 物件 | Microsoft Docs
+ms.custom: ''
 ms.date: 08/15/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-data-warehouse, pdw
-ms.service: 
 ms.component: polybase
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine-polybase
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: polybase
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - PolyBase, fundamentals
 - PolyBase, SQL statements
 - PolyBase, SQL objects
-caps.latest.revision: 
-author: barbkess
-ms.author: barbkess
+caps.latest.revision: 20
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 9941f7e1c8bda690114a626315c9fe5afb4a2da7
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.openlocfilehash: ee8e10e0b018d8b49316710d40279f8d62802225
+ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="polybase-t-sql-objects"></a>PolyBase T-SQL 物件
 [!INCLUDE[appliesto-ss-xxxx-asdw-pdw-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-若要使用 PolyBase，您必須建立外部資料表來參考您的外部資料。  
+  若要使用 PolyBase，您必須建立外部資料表來參考您的外部資料。  
   
  [CREATE DATABASE SCOPED CREDENTIAL &#40;TRANSACT-SQL&#41;](../../t-sql/statements/create-database-scoped-credential-transact-sql.md)  
   

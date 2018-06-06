@@ -1,17 +1,16 @@
 ---
-title: "Integration Services 容器 | Microsoft Docs"
-ms.custom: 
+title: Integration Services 容器 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
 ms.component: control-flow
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - SSIS containers
 - containers [Integration Services]
@@ -19,16 +18,15 @@ helpviewer_keywords:
 - control flow [Integration Services], containers
 - SQL Server Integration Services containers
 ms.assetid: 1b725922-ec59-4a47-9d55-e079463058f3
-caps.latest.revision: 
+caps.latest.revision: 48
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 79759c7f5ec38bb2c729f092248866b87bf9e611
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 20ce53ebc4de2694039019857264b5821f3c6f2d
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="integration-services-containers"></a>整合服務容器
   容器是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 中的物件，可提供結構給封裝，並提供服務給工作。 它們支援封裝中的重複控制流程，且會將工作和容器分組成有意義的工作單位。 除了工作外，容器還可包含其他容器。  
@@ -102,7 +100,7 @@ ms.lasthandoff: 01/25/2018
  容器中所用的變數包括 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 提供的容器層級系統變數，以及容器使用的使用者定義變數。 如需詳細資訊，請參閱 [Integration Services &#40;SSIS&#41; 變數](../../integration-services/integration-services-ssis-variables.md)。  
   
 ## <a name="break-points"></a>中斷點  
- 當您在容器上設定中斷點，且中斷條件為 **[當容器接收 OnVariableValueChanged 事件時中斷]**時，請在容器範圍中定義變數。  
+ 當您在容器上設定中斷點，且中斷條件為 **[當容器接收 OnVariableValueChanged 事件時中斷]** 時，請在容器範圍中定義變數。  
   
 ## <a name="see-also"></a>另請參閱  
  [控制流程](../../integration-services/control-flow/control-flow.md)  

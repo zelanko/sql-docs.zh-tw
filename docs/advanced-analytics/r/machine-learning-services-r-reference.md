@@ -1,24 +1,18 @@
 ---
-title: "SQL Server 機器學習服務的 API 參考 |Microsoft 文件"
-ms.custom: 
-ms.date: 10/31/2017
-ms.reviewer: 
-ms.suite: sql
-ms.prod: machine-learning-services
-ms.prod_service: machine-learning-services
-ms.component: r
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
-author: jeannt
-ms.author: jeannt
-manager: cgronlund
-ms.workload: Inactive
-ms.openlocfilehash: ab95ffe13fafa6e54d129ae155ddd58c16f07044
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+title: SQL Server 機器學習服務的 API 參考 |Microsoft 文件
+ms.prod: sql
+ms.technology: machine-learning
+ms.date: 04/15/2018
+ms.topic: conceptual
+author: HeidiSteen
+ms.author: heidist
+manager: cgronlun
+ms.openlocfilehash: 8f0714f223145acd65a0dd57d02b105e5ec2aa0e
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34563647"
 ---
 # <a name="api-reference-for-sql-server-machine-learning-services"></a>SQL Server 機器學習服務的 API 參考
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -38,7 +32,7 @@ ms.lasthandoff: 02/11/2018
 
     支援遠端運算內容以及多個資料來源的可擴充演算法。
 
-+ [MicrosoftML](https://docs.microsoft.com/machine-learning-serverr-reference/microsoftml/microsoftml-package)
++ [MicrosoftML](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/microsoftml-package)
 
     快速且可擴充的機器學習演算法和轉換為 r 需要 RevoScaleR。
 

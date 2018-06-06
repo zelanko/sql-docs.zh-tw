@@ -1,27 +1,25 @@
 ---
 title: SQL Server Management Studio (SSMS) | Microsoft Docs
 ms.date: 02/02/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
 ms.component: ssms
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.custom: 
-ms.technology: tools-ssms
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.custom: ''
+ms.technology: ssms
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: 66a6b7b1-de6a-4161-82bd-98ded486947b
-caps.latest.revision: "17"
+caps.latest.revision: 17
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: Active
-ms.openlocfilehash: 1319f45b9a41cf32357f4c92c3088e5dc18ade25
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: d09b2dab33e8c2c2b1f7fae579f5d6577402ebe6
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sql-server-management-studio-ssms"></a>SQL Server Management Studio (SSMS)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -32,7 +30,7 @@ ms.lasthandoff: 12/21/2017
  
  - [**下載 SQL Server Management Studio (SSMS)**](download-sql-server-management-studio-ssms.md) 
  - [**下載 SQL Server 2016 Developer**](https://my.visualstudio.com/Downloads?q=SQL%20Server%20Developer)
- - [**下載 Visual Studio**](https://www.visualstudio.com/post-download-vs/?sku=community&clcid=0x409&downloadrename=true)
+ - [**下載 Visual Studio**](https://www.visualstudio.com/downloads/)
 
   
 ## <a name="sql-server-management-studio-components"></a>SQL Server Management Studio 元件  

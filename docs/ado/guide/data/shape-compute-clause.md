@@ -1,32 +1,29 @@
 ---
-title: "圖形 COMPUTE 子句 |Microsoft 文件"
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
+title: 圖形 COMPUTE 子句 |Microsoft 文件
+ms.prod: sql
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
-ms.custom: 
+ms.technology: connectivity
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - shape commands [ADO]
 - compute clause [ADO]
 - data shaping [ADO], COMPUTE clause
 ms.assetid: 3fdfead2-b5ab-4163-9b1d-3d2143a5db8c
-caps.latest.revision: 
+caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 53ebeab9edfa1d9fc339f080d4a9de995053f77a
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 25d89db4052234482846dc752e5c0431bb517164
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="shape-compute-clause"></a>圖形 COMPUTE 子句
 圖形 COMPUTE 子句產生父代**資料錄集**，其資料行所組成之子系的參考**資料錄集**; 選擇性資料行內容的章節中，新的、 或導出資料行，或子系上執行彙總函式的結果**資料錄集**或先前形狀**資料錄集**; 以及從子系的任何資料行**資料錄集**中所列選擇性的 BY 子句。  
@@ -45,7 +42,7 @@ SHAPE child-command [AS] child-alias
  *child-command*  
  包含下列其中一項：  
   
--   在大括號 （"{}"） 則會傳回子查詢命令**資料錄集**物件。 命令發行至基礎資料提供者，並且它的語法取決於該提供者的需求。 這通常會是 SQL 語言，雖然 ADO 不需要任何特殊的查詢語言。  
+-   查詢命令，在大括號 ("{}")，則會傳回子**資料錄集**物件。 命令發行至基礎資料提供者，並且它的語法取決於該提供者的需求。 這通常會是 SQL 語言，雖然 ADO 不需要任何特殊的查詢語言。  
   
 -   現有的形狀名稱**資料錄集**。  
   

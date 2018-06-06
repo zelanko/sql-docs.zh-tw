@@ -1,16 +1,15 @@
 ---
-title: "HostName 屬性 （SqlService 類別） |Microsoft 文件"
-ms.custom: 
+title: HostName 屬性 （SqlService 類別） |Microsoft 文件
+ms.custom: ''
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
 ms.component: wmi
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - HostName Property (SqlService Class)
@@ -20,20 +19,19 @@ apitype: MOFDef
 helpviewer_keywords:
 - HostName property
 ms.assetid: 3df0ca15-9eca-4cbd-8c39-cb00be6a0215
-caps.latest.revision: 
-author: JennieHubbard
-ms.author: jhubbard
+caps.latest.revision: 34
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: a07221e8e0993d3dacce6a6400aeac58a7f3693d
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.openlocfilehash: bfd5064f33e95db9050a3a9aaf8339b5121a4d9b
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="hostname-property-sqlservice-class"></a>HostName 屬性 (SqlService 類別)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
-取得服務的主機名稱。  
+  取得服務的主機名稱。  
   
 ## <a name="syntax"></a>語法  
   

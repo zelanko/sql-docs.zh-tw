@@ -1,42 +1,23 @@
 ---
-title: "授與對維度資料 (Analysis Services) 的自訂存取權 |Microsoft 文件"
-ms.custom: 
-ms.date: 03/01/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords: sql13.asvs.roledesignerdialog.dimensiondata.f1
-helpviewer_keywords:
-- dimensions [Analysis Services], security
-- AllowedSet property
-- IsAllowed property
-- DeniedSet property
-- user access rights [Analysis Services], dimensions
-- custom dimension data access [Analysis Services]
-- permissions [Analysis Services], dimensions
-- DefaultMember property
-- VisualTotals property
-- ApplyDenied property
-ms.assetid: b028720d-3785-4381-9572-157d13ec4291
-caps.latest.revision: "40"
-author: Minewiskan
+title: 授與對維度資料 (Analysis Services) 的自訂存取權 |Microsoft 文件
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: multidimensional-models
+ms.topic: conceptual
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 95cd49cfac7e318e427a4944182bf21cb16f8c3b
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: eb93b4aeeaae9d659a225763286fc15a7d9f52a3
+ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="grant-custom-access-to-dimension-data-analysis-services"></a>授與維度資料的自訂存取權 (Analysis Services)
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]啟用 cube 的讀取權限之後, 您可以設定其他權限以明確允許或拒絕對維度成員 （包括所包含的量值包含在 cube 中使用的量值的所有量值維度中） 的存取。 例如，假設指定了多個轉售商類別，您可能想要設定權限以排除特定商業類型的資料。 下圖為拒絕存取 Reseller 維度中之 Warehouse 商業類型之前與之後的效果。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+  啟用 Cube 的讀取權限後，您可以設定額外的權限以明確允許或拒絕維度成員 (包括 Measures 維度中的量值，其中含有 Cube 中使用的所有量值) 的存取。 例如，假設指定了多個轉售商類別，您可能想要設定權限以排除特定商業類型的資料。 下圖為拒絕存取 Reseller 維度中之 Warehouse 商業類型之前與之後的效果。  
   
  ![不具有維度成員與樞紐分析表](../../analysis-services/multidimensional-models/media/ssas-permsdimdenied.png "不具有維度成員與樞紐分析表")  
   
@@ -49,7 +30,7 @@ ms.lasthandoff: 01/08/2018
 > [!NOTE]  
 >  下列指示假設用戶端連接使用 MDX 發出查詢。 如果用戶端使用 DAX (例如 Power BI 中的 Power View)，則查詢結果中不會顯示維度安全性。 如需詳細資訊，請參閱[了解適用於多維度模型的 Power View](understanding-power-view-for-multidimensional-models.md)。
       
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>필수 구성 요소  
  並非所有量值或維度成員均可用在自訂存取案例中。 如果某個角色禁止存取預設的量值或成員，或是該角色禁止存取的量值為量值運算式的一部分，則連線將會失敗。  
   
  **檢查維度安全性的限制：預設量值、預設成員及量值運算式中使用的量值**  
@@ -96,7 +77,7 @@ ms.lasthandoff: 01/08/2018
   
  您可以使用 MDX 產生器來撰寫 MDX 陳述式。 如需詳細資訊，請參閱 [MDX 產生器 &#40;Analysis Services - 多維度資料&#41;](http://msdn.microsoft.com/library/fecbf093-65ea-4e1b-b637-f04876f1cb0f)。 [進階] 索引標籤具有下列選項：  
   
- **Attribute**  
+ **屬性**  
  選取您要管理其成員安全性的屬性。  
   
  **允許的成員集**  
@@ -105,7 +86,7 @@ ms.lasthandoff: 01/08/2018
  建立 AllowedSet，會在屬性參與多層級階層時產生漣漪效果。 例如，假設有一個角色允許存取 Washington 州 (假設已將公司的 Washington 州業務部門權限授與角色)。 對於透過這個角色連接的人員，包含上階 (United States) 或下階 (Seattle 和 Redmond) 的查詢將只會看見包含 Washington 州之鏈結中的成員。 因為並未明確允許其他州，所以效果會和拒絕它們一樣。  
   
 > [!NOTE]  
->  如果您定義空的屬性成員集合 ({})，資料庫角色就看不到該屬性的任何成員。 沒有允許的集合不會被解釋為空的集合。  
+>  如果您定義空的集合 ({}) 之屬性成員的屬性的任何成員會看到資料庫角色。 沒有允許的集合不會被解釋為空的集合。  
   
  **拒絕的成員集**  
  DeniedSet 屬性可以解析為沒有成員、全部成員 (預設值) 或部分屬性成員。 當拒絕的集合僅包含特定的屬性成員集合時，資料庫角色只會被拒絕存取這些特定成員以及下階 (如果屬性位於多層級階層中)。 請考量 Washington 州業務部門範例。 如果將 Washington 放在 DeniedSet 中，透過這個角色連接的人員將看見除了 Washington 及其下階屬性以外的所有其他州。  
@@ -133,10 +114,10 @@ ms.lasthandoff: 01/08/2018
  **檢查**  
  按一下即可測試此頁面定義的 MDX 語法。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [授與 Cube 或模型權限 &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/grant-cube-or-model-permissions-analysis-services.md)   
- [授與自訂資料 &#40; 的儲存格的存取Analysis Services &#41;](../../analysis-services/multidimensional-models/grant-custom-access-to-cell-data-analysis-services.md)   
- [授與權限的資料採礦結構和模型 &#40;Analysis Services &#41;](../../analysis-services/multidimensional-models/grant-permissions-on-data-mining-structures-and-models-analysis-services.md)   
- [授與資料來源物件的權限 &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/grant-permissions-on-a-data-source-object-analysis-services.md)  
+ [授與對資料格資料的自訂存取&#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/grant-custom-access-to-cell-data-analysis-services.md)   
+ [授與權限的資料採礦結構和模型&#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/grant-permissions-on-data-mining-structures-and-models-analysis-services.md)   
+ [授與權限的資料來源物件 & #40;Analysis Services & #41;](../../analysis-services/multidimensional-models/grant-permissions-on-a-data-source-object-analysis-services.md)  
   
   

@@ -1,29 +1,22 @@
 ---
-title: "鎖定行為 (SQL Server PDW)"
-author: barbkess
-ms.author: barbkess
-manager: jhubbard
-ms.prod: analytics-platform-system
-ms.prod_service: mpp-data-warehouse
-ms.service: 
-ms.component: 
-ms.technology: mpp-data-warehouse
-ms.custom: 
-ms.date: 01/13/2017
-ms.reviewer: na
-ms.suite: sql
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: c55c636e-b767-4a0c-8184-be991a10801f
-caps.latest.revision: "27"
-ms.openlocfilehash: c1cb1b0ec346ff18d40a3ac03e7ba45b37666c98
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+title: 鎖定行為-Parallel Data Warehouse |Microsoft 文件
+description: 了解如何 Parallel Data Warehouse 使用鎖定來確保交易完整性，並維護資料庫一致性，當多位使用者同時存取資料，在相同的時間。
+author: mzaman1
+manager: craigg
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
+ms.openlocfilehash: 3f9862fed432036dcb4a3905fb3af1d3132349a5
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/19/2018
 ---
-# <a name="locking-behavior"></a>鎖定行為
-SQL Server PDW 會使用鎖定來確保交易完整性，以及當多位使用者同時存取資料，同時維護資料庫一致性。  
+# <a name="locking-behavior-in-parallel-data-warehouse"></a>平行處理資料倉儲的鎖定行為
+了解如何 Parallel Data Warehouse 使用鎖定來確保交易完整性，並維護資料庫一致性，當多位使用者同時存取資料，在相同的時間。  
   
 ## <a name="Basics"></a>鎖定的基本概念  
 **模式**  
@@ -101,7 +94,7 @@ SQL Server 支援下列類型的鎖定。 並非所有的鎖定類型的控制�
   
 -   RangeX_X （獨佔索引鍵範圍和獨佔資源鎖定）。 這是更新範圍中的索引鍵時所用的轉換鎖定。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
 <!-- MISSING LINKS 
 [Common Metadata Query Examples &#40;SQL Server PDW&#41;](../sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  
 -->

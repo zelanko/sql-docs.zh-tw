@@ -1,30 +1,29 @@
 ---
-title: "setWorkstationID 方法 (SQLServerDataSource) |Microsoft 文件"
-ms.custom: 
+title: setWorkstationID 方法 (SQLServerDataSource) |Microsoft 文件
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
-ms.component: jdbc
-ms.reviewer: 
+ms.prod: sql
+ms.prod_service: connectivity
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
-ms.topic: article
-apiname: SQLServerDataSource.setWorkstationID
-apilocation: sqljdbc.jar
+ms.technology: connectivity
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
+apiname:
+- SQLServerDataSource.setWorkstationID
+apilocation:
+- sqljdbc.jar
 apitype: Assembly
 ms.assetid: c1093615-90bf-4918-9f05-8abd765ffb03
-caps.latest.revision: "10"
+caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
-ms.workload: Inactive
-ms.openlocfilehash: bd2d1ad16dd1ff622c7d8f4f8394df08bdfd3f6a
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+manager: craigg
+ms.openlocfilehash: ae8a5eeefcad88ae35c2ce4388d09b555a495a30
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="setworkstationid-method-sqlserverdatasource"></a>setWorkstationID 方法 (SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -46,7 +45,7 @@ public void setWorkstationID(java.lang.String workstationID)
 ## <a name="remarks"></a>備註  
  workstationID 是用戶端電腦或工作站的名稱。 如果未設定 workstationID 屬性，預設值是藉由呼叫 InetAddress.getLocalHost().getHostName() 方法建構。 如果 getHostName 傳回空白值時，會呼叫 getHostAddress().toString() 方法。  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [SQLServerDataSource 成員](../../../connect/jdbc/reference/sqlserverdatasource-members.md)   
  [SQLServerDataSource 類別](../../../connect/jdbc/reference/sqlserverdatasource-class.md)  
   

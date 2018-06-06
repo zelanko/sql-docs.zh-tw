@@ -1,31 +1,29 @@
 ---
-title: "DATEPART (SSIS 運算式) | Microsoft Docs"
-ms.custom: 
+title: DATEPART (SSIS 運算式) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
 ms.component: expressions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - dates [Integration Services], DATEPART
 - DATEPART function
 ms.assetid: 3e590094-fc49-4144-805f-fdc1bf2fe509
-caps.latest.revision: 
+caps.latest.revision: 40
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 728ffb5edba54705bad3863bb442c2e22abfc1f8
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 5b4624143c16a4b5f0d4ecbd446cfd5d368af7ba
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="datepart-ssis-expression"></a>DATEPART (SSIS 運算式)
   傳回代表日期之日期部分的整數。  

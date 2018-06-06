@@ -1,0 +1,131 @@
+---
+title: 已更新-適用於 SQL Server 文件範例 |Microsoft 文件
+description: 顯示更新的內容，如需 Microsoft SQL Server 的範例中最近變更過的文件的程式碼片段。
+manager: craigg
+author: MightyPen
+ms.author: genemi
+ms.topic: article
+ms.custom: UpdArt.exe
+ms.suite: sql
+ms.technology: release-landing
+ms.prod: sql
+ms.prod_service: sql-non-specified
+ms.component: samples
+ms.date: 04/28/2018
+ms.openlocfilehash: f425839b2a93a487e35e6d63546c6cbf92afd15d
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 05/03/2018
+---
+# <a name="new-and-recently-updated-samples-for-sql-server"></a>新增和更新最近： SQL Server 的範例
+
+
+
+幾乎每日 Microsoft 某些現有發行項上更新其[Docs.Microsoft.com](http://docs.microsoft.com/)文件網站。 這篇文章會顯示從最近已更新的發行項的摘錄。 可能也會列出新的文章連結。
+
+這篇文章會定期重新執行程式所產生的。 偶爾摘錄會顯示具有完美的格式，或 markdown 從來源文件。 影像永遠不會顯示在這裡。
+
+新的更新會報告下列日期範圍和主體：
+
+
+
+- *日期範圍的更新：* &nbsp; **2018年-02-03** &nbsp; -到- &nbsp; **2018年-04-28**
+- *主旨區域：* &nbsp; **適用於 SQL Server 範例**。
+
+
+
+
+&nbsp;
+
+## <a name="new-articles-created-recently"></a>最近才建立新的發行項
+
+下列連結會跳至最近新增的新文章。
+
+
+1. [SQL 範例](sql-samples-where-are.md)
+2. [WideWorldImportersDW 資料庫目錄](wide-world-importers-dw-database-catalog.md)
+3. [WideWorldImportersDW 安裝和設定](wide-world-importers-dw-install-configure.md)
+4. [WideWorldImportersDW 使用的 SQL Server 特性與功能](wide-world-importers-dw-use-of-sql-server-features.md)
+5. [WideWorldImporters 資料產生](wide-world-importers-generate-data.md)
+6. [WideWorldImporters 資料庫目錄](wide-world-importers-oltp-database-catalog.md)
+7. [安裝和設定](wide-world-importers-oltp-install-configure.md)
+8. [使用 SQL Server 功能和功能](wide-world-importers-oltp-use-of-sql-server-features.md)
+9. [WideWorldImportersDW ETL 工作流程](wide-world-importers-perform-etl.md)
+10. [Wide World Importers 的 Microsoft SQL 範例資料庫](wide-world-importers-what-is.md)
+
+
+
+&nbsp;
+
+## <a name="updated-articles-with-excerpts"></a>更新的發行項、 只有摘要
+
+本節會顯示從最近發生大規模更新的文章所收集的更新摘錄。
+
+此處顯示的摘錄顯示分隔其適當語意的內容。 此外，有時摘錄分開四周實際文件中的重要的 markdown 語法。 因此，這些摘錄適用於一般指導方針。 摘錄只會讓您知道您的興趣是否值得花時間按一下，瀏覽實際的發行項。
+
+如需這些和其他原因，不要複製程式碼從這些摘錄中，而且不採用確切真為任何文字摘錄。 相反地，請瀏覽實際的發行項。
+
+
+
+
+
+&nbsp;
+
+<a name="compactupdatedlist"/>
+
+### <a name="compact-list-of-articles-updated-recently"></a>Compact 文件最近才更新清單
+
+此壓縮清單提供＜摘要＞一節中所有更新文章的連結。
+
+
+
+
+
+&nbsp;
+
+***已更新此區域中的沒有發行項，此時間。***
+
+
+
+
+
+
+## <a name="similar-articles-about-new-or-updated-articles"></a>新文章或更新文章的類似文章
+
+本節會在我們的公開 GitHub 存放庫中，列出與其他主題區中最近更新的文章十分相似的文章：[MicrosoftDocs/sql-docs](https://github.com/MicrosoftDocs/sql-docs/)。
+
+
+
+#### <a name="subject-areas-that-do-have-new-or-recently-updated-articles"></a>具有新文章或最近更新文章的主題區
+
+- [新 + 更新 (11 + 6): &nbsp; &nbsp; **Advanced Analytics sql**文件](../advanced-analytics/new-updated-advanced-analytics.md)
+- [新 + 更新 (18 + 0): &nbsp; &nbsp; **sql Analysis Services**文件](../analysis-services/new-updated-analysis-services.md)
+- [新 + 更新 (218 + 14):**連接到 SQL**文件](../connect/new-updated-connect.md)
+- [新 + 更新 (14 + 0): &nbsp; &nbsp; **sql 資料庫引擎**文件](../database-engine/new-updated-database-engine.md)
+- [新 + 更新 (3 + 2): &nbsp; &nbsp; **sql Integration Services**文件](../integration-services/new-updated-integration-services.md)
+- [新 + 更新 (3 + 3): &nbsp; &nbsp; **sql Linux**文件](../linux/new-updated-linux.md)
+- [新 + 更新 (7 + 10): &nbsp; &nbsp;**關聯式資料庫供 SQL**文件](../relational-databases/new-updated-relational-databases.md)
+- [新 + 更新 (0 + 2): &nbsp; &nbsp; **Reporting Services SQL**文件](../reporting-services/new-updated-reporting-services.md)
+- [新 + 更新 (1 + 3): &nbsp; &nbsp; **SQL 作業 Studio**文件](../sql-operations-studio/new-updated-sql-operations-studio.md)
+- [新 + 更新 (2 + 3): &nbsp; &nbsp; **Microsoft SQL Server**文件](../sql-server/new-updated-sql-server.md)
+- [新 + 更新 (1 + 1): &nbsp; &nbsp; **SQL Server Data Tools (SSDT)** 文件](../ssdt/new-updated-ssdt.md)
+- [新 + 更新 (5 + 2): &nbsp; &nbsp; **SQL Server Management Studio (SSMS)** 文件](../ssms/new-updated-ssms.md)
+- [新 + 更新 (0 + 2): &nbsp; &nbsp; **TRANSACT-SQL**文件](../t-sql/new-updated-t-sql.md)
+- [新 + 更新 (1 + 1): &nbsp; &nbsp; **Tools for SQL**文件](../tools/new-updated-tools.md)
+
+
+
+#### <a name="subject-areas-that-do-not-have-any-new-or-recently-updated-articles"></a>沒有新文章或最近更新文章的主題區
+
+- [新 + 更新 (0 + 0): **Analytics Platform System sql**文件](../analytics-platform-system/new-updated-analytics-platform-system.md)
+- [新 + 更新 (0 + 0): **SQL 的 Data Quality Services**文件](../data-quality-services/new-updated-data-quality-services.md)
+- [新 + 更新 (0 + 0):**資料採礦延伸模組 (DMX)，sql**文件](../dmx/new-updated-dmx.md)
+- [新文章 + 更新文章 (0+0)：**SQL Master Data Services (MDS)** 文件](../master-data-services/new-updated-master-data-services.md)
+- [新 + 更新 (0 + 0):**多維度運算式 (MDX) 的 SQL**文件](../mdx/new-updated-mdx.md)
+- [新 + 更新 (0 + 0): **ODBC （開放式資料庫連接） 的 SQL**文件](../odbc/new-updated-odbc.md)
+- [新 + 更新 (0 + 0):**適用於 SQL PowerShell**文件](../powershell/new-updated-powershell.md)
+- [新 + 更新 (0 + 0):**範例 sql**文件](../samples/new-updated-samples.md)
+- [新 + 更新 (0 + 0): **SQL Server 移轉小幫手 (SSMA)** 文件](../ssma/new-updated-ssma.md)
+- [新 + 更新 (0 + 0): **sql XQuery**文件](../xquery/new-updated-xquery.md)
+

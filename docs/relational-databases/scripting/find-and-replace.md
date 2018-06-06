@@ -1,17 +1,14 @@
 ---
-title: "尋找和取代 | Microsoft Docs"
-ms.custom: 
+title: 尋找和取代 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
-ms.component: ssms-scripting
-ms.reviewer: 
+ms.technology: scripting
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 f1_keywords:
 - vs.findreplace.quickfind
 - vs.find
@@ -19,19 +16,20 @@ f1_keywords:
 helpviewer_keywords:
 - Find and Replace dialog box
 ms.assetid: 09297893-d80b-4c88-86b4-52bfb639e521
-caps.latest.revision: 
+caps.latest.revision: 24
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: fe528cb691bfff2d46f01470477fe602ee91c410
-ms.sourcegitcommit: a0aa5e611a0e6ebb74ac1e2f613e8916dc7a7617
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: d21331b418a553a0a7a048a28b20f84faeed109c
+ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/24/2018
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="find-and-replace"></a>尋找和取代
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 使用 [尋找和取代] 對話方塊尋找檔案內的文字，並選擇性地取代。 **[尋找和取代]** 對話方塊的版本不同，選項也會有些微差異，視對話方塊以何種方式開啟而定。 在 **[編輯]** 功能表上，指向 **[尋找和取代]**，然後按一下 **[快速尋找]** 以開啟有尋找選項，但沒有取代選項的對話方塊。 在 **[編輯]** 功能表上，指向 **[尋找和取代]**，然後按一下 **[快速取代]** 以開啟同時具有尋找和取代選項的對話方塊。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+  使用 **[尋找和取代]** 對話方塊尋找檔案內的文字，並選擇性地取代。 **[尋找和取代]** 對話方塊的版本不同，選項也會有些微差異，視對話方塊以何種方式開啟而定。 在 **[編輯]** 功能表上，指向 **[尋找和取代]**，然後按一下 **[快速尋找]** 以開啟有尋找選項，但沒有取代選項的對話方塊。 在 **[編輯]** 功能表上，指向 **[尋找和取代]**，然後按一下 **[快速取代]** 以開啟同時具有尋找和取代選項的對話方塊。  
   
  工具列按鈕與快速鍵也可用來開啟 **[尋找和取代]** 對話方塊。  
   
@@ -54,7 +52,7 @@ ms.lasthandoff: 01/24/2018
  這些控制項可以讓您指定要插入的字串，以取代相符的字串或運算式。  
   
  **Replace with**  
- 若要以另一個字串來取代 [尋找目標] 中所指定之字串的執行個體，請在此欄位中輸入取代字串。 若要刪除 **[尋找目標]**中所指定之文字的執行個體，請保留此欄位空白。 選取下拉式清單，即可顯示最後輸入的 20 個項目。 若要將規則運算式包含在 **[取代成]** 方塊裡所指定的字串中，請按一下 **[使用]** 核取方塊，然後按一下 **[規則運算式]**。 只有透過按一下 **[快速取代]**的方式開啟此對話方塊，才會出現此方塊。  
+ 若要以另一個字串來取代 [尋找目標] 中所指定之字串的執行個體，請在此欄位中輸入取代字串。 若要刪除 **[尋找目標]** 中所指定之文字的執行個體，請保留此欄位空白。 選取下拉式清單，即可顯示最後輸入的 20 個項目。 若要將規則運算式包含在 **[取代成]** 方塊裡所指定的字串中，請按一下 **[使用]** 核取方塊，然後按一下 **[規則運算式]**。 只有透過按一下 **[快速取代]** 的方式開啟此對話方塊，才會出現此方塊。  
   
  **Replace with**  
  若要以另一個字串來取代 [尋找目標] 方塊中所指定之字串的執行個體，請在此欄位中輸入取代字串。 若要刪除 **[尋找目標]** 方塊中所指定之字串的執行個體，請保留此欄位空白。 選取下拉式清單，即可顯示最後輸入的 20 個項目。 若要將規則運算式包含在 **[取代成]** 方塊裡所指定的字串中，請按一下 **[使用]** 核取方塊，然後按一下 **[規則運算式]**。  
@@ -74,7 +72,7 @@ ms.lasthandoff: 01/24/2018
  顯示的提醒會包含 **[保持已修改的檔案開啟]** 選項。 若要保留 **[恢復]** 選項，您必須選取此選項。 **[恢復]** 功能僅適用於檔案在修改之後仍保持開啟可供編輯的檔案。  
   
  **略過檔案**  
- 當 [查詢] 所指定的值包含多個檔案時，即可使用。 如果不要搜尋或修改目前的檔案，請按一下此按鈕。 搜尋會繼續在 **[查詢]**清單中的下一個檔案進行。  
+ 當 [查詢] 所指定的值包含多個檔案時，即可使用。 如果不要搜尋或修改目前的檔案，請按一下此按鈕。 搜尋會繼續在 **[查詢]** 清單中的下一個檔案進行。  
   
 ## <a name="look-in"></a>查詢  
  **Look in**  
@@ -84,7 +82,7 @@ ms.lasthandoff: 01/24/2018
  您可以展開或摺疊 **[尋找選項]** 區段。 您可以選取或清除下列選項。  
   
  **大小寫須相符**  
- 如果選取此核取方塊，則 [尋找結果] 視窗僅會顯示內容和大小寫均與 [尋找目標] 中所指定之字串相符的執行個體。 例如，選取**[大小寫須相符]**核取方塊來搜尋「 **MyObject** 」，將會傳回「MyObject」，但不會傳回「myobject」或「MYOBJECT」。  
+ 如果選取此核取方塊，則 [尋找結果] 視窗僅會顯示內容和大小寫均與 [尋找目標] 中所指定之字串相符的執行個體。 例如，選取 **[大小寫須相符]** 核取方塊來搜尋「 **MyObject** 」，將會傳回「MyObject」，但不會傳回「myobject」或「MYOBJECT」。  
   
  **全字拼寫須相符**  
  如果選取此核取方塊，則 [尋找結果] 視窗僅會顯示整個字串與 [尋找目標] 中所指定之字串相符的執行個體。 例如，搜尋 **MyObject** ，將會傳回「MyObject」，但不會傳回「CMyObject」或「MyObjectC」。  

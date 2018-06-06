@@ -1,16 +1,14 @@
 ---
 title: TEXTPTR (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 10/23/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-database
-ms.service: 
 ms.component: t-sql|functions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: t-sql
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - TEXTPTR_TSQL
@@ -23,16 +21,15 @@ helpviewer_keywords:
 - text-pointer values
 - displaying text pointer values
 ms.assetid: 2672b8cb-f747-46f3-9358-9b49b3583b8e
-caps.latest.revision: 
+caps.latest.revision: 36
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 109f9bdd06bf27928450c89ad06dc6d93247b881
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 06a756411c7f1fba5899a83817d3b476013b56f2
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="text-and-image-functions---textptr-transact-sql"></a>Text 和 Image 函式 - TEXTPTR (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -69,8 +66,8 @@ TEXTPTR ( column )
   
 |函數或陳述式|描述|  
 |---------------------------|-----------------|  
-|PATINDEX**('***%pattern%***' ,** *expression***)**|傳回指定字元字串在 **text** 或 **ntext** 資料行中的字元位置。|  
-|DATALENGTH**(***expression***)**|傳回 **text**、**ntext** 和 **image** 資料行中資料的長度。|  
+|PATINDEX **('***%pattern%***' ,** *expression***)**|傳回指定字元字串在 **text** 或 **ntext** 資料行中的字元位置。|  
+|DATALENGTH **(***expression***)**|傳回 **text**、**ntext** 和 **image** 資料行中資料的長度。|  
 |SET TEXTSIZE|傳回 SELECT 陳述式所要傳回的 **text**、**ntext** 或 **image** 資料的限制 (以位元組為單位)。|  
 |SUBSTRING**(***text_column*, *start*, *length***)**|傳回指定的 *start* 位移和 *length* 所指定的 **varchar** 字串。 長度應該小於 8 KB。|  
   
@@ -197,7 +194,7 @@ pr_info
  [PATINDEX &#40;Transact-SQL&#41;](../../t-sql/functions/patindex-transact-sql.md)   
  [READTEXT &#40;Transact-SQL&#41;](../../t-sql/queries/readtext-transact-sql.md)   
  [SET TEXTSIZE &#40;Transact-SQL&#41;](../../t-sql/statements/set-textsize-transact-sql.md)   
- [Text 和 Image 函式 &#40;Transact-SQL&#41;](http://msdn.microsoft.com/library/b9c70488-1bf5-4068-a003-e548ccbc5199)   
+ [Text 和 Image 函數 &#40;Transact-SQL&#41;](http://msdn.microsoft.com/library/b9c70488-1bf5-4068-a003-e548ccbc5199)   
  [UPDATETEXT &#40;Transact-SQL&#41;](../../t-sql/queries/updatetext-transact-sql.md)   
  [WRITETEXT &#40;Transact-SQL&#41;](../../t-sql/queries/writetext-transact-sql.md)  
   

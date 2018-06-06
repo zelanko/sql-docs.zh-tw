@@ -1,16 +1,15 @@
 ---
-title: "srv_convert (擴充預存程序 API) | Microsoft Docs"
-ms.custom: 
+title: srv_convert (擴充預存程序 API) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/17/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
 ms.component: extended-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - srv_convert
@@ -22,16 +21,15 @@ dev_langs:
 helpviewer_keywords:
 - srv_convert
 ms.assetid: 216b4a31-786e-4361-8a33-e5f6e9790f90
-caps.latest.revision: 
+caps.latest.revision: 33
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 15833b00d82ddb6451309b517a779b10ee5eb4fb
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
-ms.translationtype: MT
+ms.openlocfilehash: 4812174e3a736a05475ceaf901bc86bf7949436d
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="srvconvert-extended-stored-procedure-api"></a>srv_convert (擴充預存程序 API)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -96,7 +94,7 @@ destlen
 ## <a name="returns"></a>傳回值  
  如果資料類型轉換成功，則為轉換之資料的長度 (以位元組為單位)。 當 **srv_convert** 遇到所不支援的轉換要求時，它會呼叫開發人員提供的錯誤處理常式 (如果有的話)、設定全域錯誤號碼，並傳回 -1。  
   
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>Remarks  
  **srv_willconvert** 函式會決定是否允許特定的轉換。  
   
  轉換成近似的數值資料類型 SRVFLT4 或 SRVFLT8 可能會造成部分有效位數遺失。 從近似的數值資料類型 SRVFLT4 或 SRVFLT8 轉換成 SRVCHAR 或 SRVTEXT 可能會造成部分有效位數遺失。  

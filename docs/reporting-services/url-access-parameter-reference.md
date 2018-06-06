@@ -1,30 +1,28 @@
 ---
-title: "URL 存取參數參考 | Microsoft Docs"
-ms.custom: 
+title: URL 存取參數參考 | Microsoft Docs
+ms.custom: ''
 ms.date: 09/09/2015
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: reporting-services
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - reports [Reporting Services], display options
 - URL access [Reporting Services], report display parameters
 ms.assetid: 1c3e680a-83ea-4979-8e79-fa2337ae12a3
-caps.latest.revision: "48"
+caps.latest.revision: 48
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: Active
-ms.openlocfilehash: 32a53f285348210ef551a3189a7676f87366fb17
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 76f7e0be913313c56b8f05eeb24e43534407ceec
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="url-access-parameter-reference"></a>URL 存取參數參考
   您可以使用下列參數當做 URL 的一部分，以設定 [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)]報表的外觀及操作。 本章節中將列出最常用的參數。 參數會區分大小寫，而且如果是導向至報表伺服器，則以參數前置字元 *rs:* 開頭，如果是導向至 HTML 檢視器，則以 *rc:* 開頭。 您也可以指定裝置或轉譯延伸模組特定的參數。 如需裝置特定參數的詳細資訊，請參閱 [在 URL 中指定裝置資訊設定](../reporting-services/specify-device-information-settings-in-a-url.md)。  
@@ -284,7 +282,7 @@ ms.lasthandoff: 01/09/2018
                   切換該報表區段的顯示和隱藏狀態。 指定正整數以表示要切換的區段。  
   
 ##  <a name="bkmk_webpart"></a> 報表檢視器 Web 組件命令 (rv:)  
- 下列 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 保留報表參數名稱，而這些名稱用於將報表檢視器 Web 組件作為目標，該組件與 SharePoint 整合。 這些參數名稱都使用 *rv:*做為字首。 報表檢視器 Web 組件也接受 *rs:ParameterLanguage* 參數。  
+ 下列 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 保留報表參數名稱，而這些名稱用於將報表檢視器 Web 組件作為目標，該組件與 SharePoint 整合。 這些參數名稱都使用 *rv:* 做為字首。 報表檢視器 Web 組件也接受 *rs:ParameterLanguage* 參數。  
   
 -   *Toolbar*：控制報表檢視器 Web 組件的工具列顯示。 預設值是 **Full**秒。 其值可能是：  
   

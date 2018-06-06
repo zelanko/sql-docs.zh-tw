@@ -1,38 +1,39 @@
 ---
 title: SQL Server Audit (Database Engine) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/21/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
 ms.component: security
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 f1_keywords:
 - audit
 helpviewer_keywords:
 - SQL Server Audit
 - audits [SQL Server], SQL Server Audit
 ms.assetid: 0c1fca2e-f22b-4fe8-806f-c87806664f00
-caps.latest.revision: 
+caps.latest.revision: 58
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Active
-ms.openlocfilehash: 02c5d20286c4bcf688e9570a85d58ac89e2ffd06
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 61ff78d987e173c875e68f992d4ef4a57fee28b3
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sql-server-audit-database-engine"></a>SQL Server Audit (Database Engine)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   「稽核」[!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)] 執行個體或個別資料庫會在 [!INCLUDE[ssDE](../../../includes/ssde-md.md)] 上發生追蹤及記錄事件。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 稽核可讓您建立伺服器稽核，其中可包含伺服器層級事件的伺服器稽核規格，以及資料庫層級事件的資料庫稽核規格。 您可以將稽核事件寫入事件記錄或稽核檔案。  
+  
+[!INCLUDE[ssMIlimitation](../../../includes/sql-db-mi-limitation.md)]
   
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]的稽核有幾個層級，需視安裝的管制或標準需求而定。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Audit 提供了一些工具和程序，您必須擁有這些工具和程序，才能啟用、儲存及檢視各種伺服器和資料庫物件的稽核。  
   
@@ -67,7 +68,7 @@ ms.lasthandoff: 11/21/2017
   
  資料庫層級的稽核動作群組和稽核動作在 [SQL Server Audit 動作群組和動作](../../../relational-databases/security/auditing/sql-server-audit-action-groups-and-actions.md)主題中有描述。  
   
-### <a name="target"></a>Target  
+### <a name="target"></a>目標  
  稽核的結果會傳送到目標，這可以是檔案、Windows 安全性事件記錄檔或 Windows 應用程式事件記錄檔 記錄檔必須定期檢閱及封存，以確保目標有足夠的空間來寫入其他的記錄。  
   
 > [!IMPORTANT]  
@@ -131,7 +132,7 @@ ms.lasthandoff: 11/21/2017
 ### <a name="database-mirroring-and-sql-server-audit"></a>資料庫鏡像和 SQL Server Audit  
  已定義資料庫稽核規格而且使用資料庫鏡像的資料庫將會包含資料庫稽核規格。 若要在鏡像的 SQL 執行個體上正確運作，必須設定下列項目：  
   
--   鏡像伺服器必須具有相同 GUID 的稽核，才能讓資料庫稽核規格寫入稽核記錄。 您可以使用 CREATE AUDIT WITH GUID**=***\<來源 Server Audit 的 GUID*> 命令來進行這項設定。  
+-   鏡像伺服器必須具有相同 GUID 的稽核，才能讓資料庫稽核規格寫入稽核記錄。 您可以使用 CREATE AUDIT WITH GUID**=***\<來源伺服器稽核的 GUID*> 命令來進行這項設定。  
   
 -   如果是二進位檔案目標，鏡像伺服器服務帳戶必須具有寫入稽核記錄之位置的適當權限。  
   
@@ -157,7 +158,7 @@ ms.lasthandoff: 11/21/2017
 ### <a name="dynamic-views-and-functions"></a>動態檢視和函數  
  下表列出可用於 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 稽核的動態檢視和函數。  
   
-|動態檢視和函數|Description|  
+|動態檢視和函數|描述|  
 |---------------------------------|-----------------|  
 |[sys.dm_audit_actions](../../../relational-databases/system-dynamic-management-views/sys-dm-audit-actions-transact-sql.md)|傳回稽核記錄檔中可報告的每一個稽核動作及 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Audit 中可設定之每一個稽核動作群組的資料列。|  
 |[sys.dm_server_audit_status](../../../relational-databases/system-dynamic-management-views/sys-dm-server-audit-status-transact-sql.md)|提供有關稽核之目前狀態的資訊。|  
@@ -167,7 +168,7 @@ ms.lasthandoff: 11/21/2017
 ### <a name="catalog-views"></a>目錄檢視  
  下表列出可用於 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 稽核的目錄檢視。  
   
-|目錄檢視|Description|  
+|目錄檢視|描述|  
 |-------------------|-----------------|  
 |[sys.database_ audit_specifications](../../../relational-databases/system-catalog-views/sys-database-audit-specifications-transact-sql.md)|包含有關伺服器執行個體上 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 稽核內之資料庫稽核規格的資訊。|  
 |[sys.database_audit_specification_details](../../../relational-databases/system-catalog-views/sys-database-audit-specification-details-transact-sql.md)|包含所有資料庫伺服器執行個體上 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 稽核內之資料庫稽核規格的資訊。|  
@@ -202,10 +203,10 @@ ms.lasthandoff: 11/21/2017
  說明如何開啟 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的登入稽核。 這些稽核記錄會儲存在 Windows 應用程式記錄檔中。  
   
  [C2 稽核模式伺服器組態選項](../../../database-engine/configure-windows/c2-audit-mode-server-configuration-option.md)  
- 說明 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 中的 C2 安全性規範稽核模式。  
+ 說明 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]中的 C2 安全性規範稽核模式。  
   
  [安全性稽核事件類別目錄 &#40;SQL Server Profiler&#41;](../../../relational-databases/event-classes/security-audit-event-category-sql-server-profiler.md)  
- 說明 [!INCLUDE[ssSqlProfiler](../../../includes/sssqlprofiler-md.md)] 中可用的稽核事件。 如需詳細資訊，請參閱 [SQL Server Profiler](../../../tools/sql-server-profiler/sql-server-profiler.md)。  
+ 說明 [!INCLUDE[ssSqlProfiler](../../../includes/sssqlprofiler-md.md)]中可用的稽核事件。 如需詳細資訊，請參閱 [SQL Server Profiler](../../../tools/sql-server-profiler/sql-server-profiler.md)。  
   
  [SQL 追蹤](../../../relational-databases/sql-trace/sql-trace.md)  
  說明如何從自己的應用程式中使用 SQL 追蹤來手動建立追蹤，而不是使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Profiler 來建立追蹤。  

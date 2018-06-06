@@ -1,28 +1,27 @@
 ---
-title: "評估 Oracle 結構描述轉換 (OracleToSQL) |Microsoft 文件"
-ms.prod: sql-non-specified
+title: 評估 Oracle 結構描述轉換 (OracleToSQL) |Microsoft 文件
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
 ms.component: ssma-oracle
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
-ms.topic: article
-helpviewer_keywords: Analyzing Conversion Problems
+ms.technology: ssma
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
+helpviewer_keywords:
+- Analyzing Conversion Problems
 ms.assetid: 4de9bcf6-1346-4740-87f9-7f24a8226357
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
-ms.workload: Inactive
-ms.openlocfilehash: 72e4156ed3ac58a4870ab5487a3ece2e3adeaadb
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 6a05353860c8012bbd0f3e97d1262107c39a45e4
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="assessing-oracle-schemas-for-conversion-oracletosql"></a>轉換 (OracleToSQL) 評估 Oracle 結構描述
 在您載入的物件，並將資料移轉至之前[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]，您應該決定如何複雜移轉，以及多少時間會移轉。 SSMA 可以建立顯示成功轉換的物件百分比的評估報告。 SSMA 也可讓您檢視特定的問題，導致轉換失敗。  
@@ -80,13 +79,13 @@ SSMA 轉換至選取的 Oracle 資料庫物件時它會建立此評估報表，[
   
     -   更新 SSMA 的 Oracle 語法。 您可以更新程序、 函數、 觸發程序、 函式和已封裝的程序的語法。 若要更新的語法，在 Oracle 中繼資料總管 窗格中選取的物件，請按一下**SQL**索引標籤，然後再修改的 SQL 程式碼。 當您離開此項目時，系統會提示您儲存更新的語法。 您可以檢視報告的錯誤物件上**報表** 索引標籤。  
   
-    -   在 Oracle 中，您可以修改 Oracle 物件以移除或修改程式碼有問題。 若要更新的程式碼載入 SSMA，您必須更新的中繼資料。 如需詳細資訊，請參閱[連接到 Oracle 資料庫 &#40; OracleToSQL &#41;](../../ssma/oracle/connecting-to-oracle-database-oracletosql.md)。  
+    -   在 Oracle 中，您可以修改 Oracle 物件以移除或修改程式碼有問題。 若要更新的程式碼載入 SSMA，您必須更新的中繼資料。 如需詳細資訊，請參閱[連接到 Oracle 資料庫&#40;OracleToSQL&#41;](../../ssma/oracle/connecting-to-oracle-database-oracletosql.md)。  
   
     -   您可以從移轉排除的物件。 在[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]中繼資料總管和 Oracle 中繼資料總管，清除項目旁邊的核取方塊之前物件載入[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]並將資料從 Oracle 移轉。  
   
 ## <a name="next-step"></a>下一個步驟  
-[轉換 Oracle 結構描述 &#40; OracleToSQL &#41;](../../ssma/oracle/converting-oracle-schemas-oracletosql.md)  
+[轉換 Oracle 結構描述&#40;OracleToSQL&#41;](../../ssma/oracle/converting-oracle-schemas-oracletosql.md)  
   
-## <a name="see-also"></a>請參閱  
-[將 Oracle 資料庫移轉至 SQL Server &#40; OracleToSQL &#41;](../../ssma/oracle/migrating-oracle-databases-to-sql-server-oracletosql.md)  
+## <a name="see-also"></a>另請參閱  
+[SQL server 資料庫移轉 Oracle &#40;OracleToSQL&#41;](../../ssma/oracle/migrating-oracle-databases-to-sql-server-oracletosql.md)  
   

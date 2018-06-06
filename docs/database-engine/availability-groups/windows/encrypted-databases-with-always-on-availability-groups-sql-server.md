@@ -1,31 +1,28 @@
 ---
-title: "加密資料庫與 AlwaysOn 可用性群組 (SQL Server) | Microsoft Docs"
-ms.custom: 
+title: 加密資料庫與 AlwaysOn 可用性群組 (SQL Server) | Microsoft Docs
+ms.custom: ''
 ms.date: 05/17/2016
-ms.prod: sql-non-specified
-ms.prod_service: database-engine
-ms.service: 
-ms.component: availability-groups
-ms.reviewer: 
+ms.prod: sql
+ms.prod_service: high-availability
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: dbe-high-availability
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: high-availability
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - Transparent Data Encryption, AlwaysOn Availability Groups
 - TDE, AlwaysOn Availability Groups
 - Availability Groups [SQL Server], interoperability
 ms.assetid: 09eb6ebc-3051-4fff-86a5-93524507b1fc
-caps.latest.revision: "10"
+caps.latest.revision: 10
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: bc4f4f3aad2621c75793829d587c1c8f0d139bb0
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 3a3b8815e9410f480d14866b0ab12db74b6c0923
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="encrypted-databases-with-always-on-availability-groups-sql-server"></a>加密的資料庫與 AlwaysOn 可用性群組 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

@@ -1,29 +1,22 @@
 ---
-title: "使用系統檢視表 (Analytics Platform System) 監視的應用裝置"
-author: barbkess
-ms.author: barbkess
-manager: jhubbard
-ms.prod: analytics-platform-system
-ms.prod_service: mpp-data-warehouse
-ms.service: 
-ms.component: 
-ms.technology: mpp-data-warehouse
-ms.custom: 
-ms.date: 01/05/2017
-ms.reviewer: na
-ms.suite: sql
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: d6e34c16-12ba-4a6f-80a7-391bca5ba534
-caps.latest.revision: "8"
-ms.openlocfilehash: 17845f9be4a3b6c40573403d2d314c8802b71015
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+title: 監視器與系統檢視表-Analytics Platform System |Microsoft 文件
+description: 本文列出您可以使用監視 Analytics Platform system 應用裝置的系統檢視表。
+author: mzaman1
+manager: craigg
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
+ms.openlocfilehash: 363e18441d95884b025de2ec07f0fed276852eb0
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/19/2018
 ---
-# <a name="monitor-the-appliance-by-using-system-views"></a>使用系統檢視表來監視應用裝置
-本主題列出可用於監視 SQL Server PDW 系統檢視表。  
+# <a name="monitor-the-appliance-with-system-views---analytics-platform-system"></a>監視與系統檢視表-Analytics Platform System 應用裝置
+本文列出您可以用來監視 SQL Server PDW 系統檢視表。  
   
 ## <a name="to-monitor-the-appliance-by-using-system-views"></a>若要使用系統檢視表來監視應用裝置  
 SQL Server PDW 包含完善的系統檢視，可讓您取得有關應用裝置的健全狀況、 狀態和效能的詳細的資訊。 下表提供可用於每個監視功能的系統檢視表的連結。  
@@ -40,7 +33,7 @@ SQL Server PDW 包含完善的系統檢視，可讓您取得有關應用裝置�
 |監視負載、 備份和還原的其他資訊。|[sys.pdw_loader_backup_runs](../relational-databases/system-catalog-views/sys-pdw-loader-backup-runs-transact-sql.md)<br /><br />[sys.pdw_loader_backup_run_details](../relational-databases/system-catalog-views/sys-pdw-loader-backup-run-details-transact-sql.md)<br /><br />[sys.pdw_loader_run_stages](../relational-databases/system-catalog-views/sys-pdw-loader-run-stages-transact-sql.md)|  
 |作業系統層級記錄檔和效能資訊|[sys.dm_pdw_os_performance_counters](../relational-databases/system-dynamic-management-views/sys-dm-pdw-os-performance-counters-transact-sql.md)<br /><br />[sys.dm_pdw_os_event_logs](../relational-databases/system-dynamic-management-views/sys-dm-pdw-os-event-logs-transact-sql.md)<br /><br />[sys.dm_pdw_os_threads](../relational-databases/system-dynamic-management-views/sys-dm-pdw-os-threads-transact-sql.md)|  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
 <!-- MISSING LINKS [Common Metadata Query Examples &#40;SQL Server PDW&#41;](../sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  -->  
-[應用裝置監視 &#40;Analytics Platform System &#41;](appliance-monitoring.md)  
+[應用裝置監視&#40;Analytics Platform System&#41;](appliance-monitoring.md)  
   

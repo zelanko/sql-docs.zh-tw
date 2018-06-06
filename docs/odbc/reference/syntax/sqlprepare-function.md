@@ -1,32 +1,33 @@
 ---
-title: "SQLPrepare 函數 |Microsoft 文件"
-ms.custom: 
+title: SQLPrepare 函數 |Microsoft 文件
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
-ms.component: odbc
-ms.reviewer: 
+ms.prod: sql
+ms.prod_service: connectivity
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
-ms.topic: article
-apiname: SQLPrepare
-apilocation: sqlsrv32.dll
+ms.technology: connectivity
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
+apiname:
+- SQLPrepare
+apilocation:
+- sqlsrv32.dll
 apitype: dllExport
-f1_keywords: SQLPrepare
-helpviewer_keywords: SQLPrepare function [ODBC]
+f1_keywords:
+- SQLPrepare
+helpviewer_keywords:
+- SQLPrepare function [ODBC]
 ms.assetid: 332e1b4b-b0ed-4e7a-aa4d-4f35f4f4476b
-caps.latest.revision: "23"
+caps.latest.revision: 23
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
-ms.workload: Inactive
-ms.openlocfilehash: 0f4f752416fd704d3976728eabbe6a8b9d00bd37
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+manager: craigg
+ms.openlocfilehash: e2134b972d8cceebb5928f856f8a4361aa4199fd
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sqlprepare-function"></a>SQLPrepare 函數
 **一致性**  
@@ -61,10 +62,10 @@ SQLRETURN SQLPrepare(
 ## <a name="diagnostics"></a>診斷  
  當**SQLPrepare**會傳回 SQL_ERROR 或 SQL_SUCCESS_WITH_INFO，相關聯的 SQLSTATE 值可以藉由呼叫取得**SQLGetDiagRec**與*HandleType* SQL_ 的HANDLE_STMT 和*處理*的*StatementHandle*。 下表列出通常所傳回的 SQLSTATE 值**SQLPrepare** ，並說明這個函式; 每個內容中的標記法 」 (DM) 」 之前描述的驅動程式管理員傳回的 Sqlstate。 每個 SQLSTATE 值相關聯的傳回碼是 SQL_ERROR，除非有說明，否則為。  
   
-|SQLSTATE|錯誤|描述|  
+|SQLSTATE|錯誤|Description|  
 |--------------|-----------|-----------------|  
 |01000|一般警告|特定驅動程式告知性訊息。 （函式會傳回 SQL_SUCCESS_WITH_INFO）。|  
-|01S02 的警告|選項值已變更|指定的陳述式屬性不實作工作狀況，造成無效的因此暫時取代相似的值。 (**SQLGetStmtAttr**可以呼叫以決定哪些暫時替代的值。)取代值無效， *StatementHandle*直到關閉資料指標。 您可以變更陳述式屬性是： sql_attr_concurrency 設定 SQL_ATTR_CURSOR_TYPE SQL_ATTR_KEYSET_SIZE SQL_ATTR_MAX_LENGTH SQL_ATTR_MAX_ROWS sql_attr_query_timeout 時 SQL_ATTR_SIMULATE_CURSOR<br /><br /> （函式會傳回 SQL_SUCCESS_WITH_INFO）。|  
+|01S02|選項值已變更|指定的陳述式屬性不實作工作狀況，造成無效的因此暫時取代相似的值。 (**SQLGetStmtAttr**可以呼叫以決定哪些暫時替代的值。)取代值無效， *StatementHandle*直到關閉資料指標。 您可以變更陳述式屬性是： sql_attr_concurrency 設定 SQL_ATTR_CURSOR_TYPE SQL_ATTR_KEYSET_SIZE SQL_ATTR_MAX_LENGTH SQL_ATTR_MAX_ROWS sql_attr_query_timeout 時 SQL_ATTR_SIMULATE_CURSOR<br /><br /> （函式會傳回 SQL_SUCCESS_WITH_INFO）。|  
 |08S01|通訊連結失敗|功能已完成處理之前，驅動程式和驅動程式已連線到資料來源之間的通訊連結失敗。|  
 |21S01|插入值清單與資料行清單不符|\**StatementText*包含**插入**陳述式，以及要插入值的數目不符合衍生資料表的程度。|  
 |21S02|衍生資料表的程度與資料行清單不符|\**StatementText*包含**CREATE VIEW**陳述式，以及指定的名稱數目不是當做查詢規格所定義的衍生資料表的程度。|  
@@ -131,6 +132,6 @@ SQLRETURN SQLPrepare(
 |傳回陳述式所影響的資料列的數目|[SQLRowCount 函式](../../../odbc/reference/syntax/sqlrowcount-function.md)|  
 |設定資料指標名稱|[SQLSetCursorName 函式](../../../odbc/reference/syntax/sqlsetcursorname-function.md)|  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [ODBC 應用程式開發介面參考](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [ODBC 標頭檔](../../../odbc/reference/install/odbc-header-files.md)

@@ -1,16 +1,14 @@
 ---
 title: COL_NAME (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 07/24/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
 ms.component: t-sql|functions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: t-sql
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - COL_NAME
@@ -23,21 +21,21 @@ helpviewer_keywords:
 - column names [SQL Server]
 - names [SQL Server], columns
 ms.assetid: 214144ab-f2bc-4052-83cf-caf0a85c4cc6
-caps.latest.revision: 
+caps.latest.revision: 28
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: c69e738d69be578b92becba95e70534061286f43
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: c79414874a166ad005a2caf9e65ca0a051a732de
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="colname-transact-sql"></a>COL_NAME (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-從指定的對應資料表識別碼和資料行識別碼傳回資料行的名稱。
+此函式會根據資料表資料行的資料表識別碼和資料行識別碼值來傳回該資料表資料行的名稱。
   
 ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -49,18 +47,18 @@ COL_NAME ( table_id , column_id )
   
 ## <a name="arguments"></a>引數  
 *table_id*  
-這是包含資料行之資料表的識別碼。 *table_id* 的類型為 **int**。
+包含該資料行之資料表的識別碼。 *table_id* 引數具有 **int** 資料類型。
   
 *column_id*  
-這是資料行的識別碼。 *column_id* 參數的類型為 **int**。
+資料行的識別碼。 *column_id* 引數具有 **int** 資料類型。
   
-## <a name="return-types"></a>傳回型
+## <a name="return-types"></a>傳回類型
 **sysname**
   
 ## <a name="exceptions"></a>例外狀況  
-當發生錯誤，或呼叫端沒有檢視物件的權限時，便會傳回 NULL。
+發生錯誤或呼叫端沒有檢視物件的正確權限時，會傳回 NULL。
   
-使用者只能檢視使用者擁有或被授與某些權限之安全性實體的中繼資料。 這表示發出中繼資料的內建函數 (例如，COL_NAME) 會在使用者不具有該物件任何權限時傳回 NULL。 如需相關資訊，請參閱 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)。
+在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，使用者只能檢視使用者擁有或被授與某些權限之安全性實體的中繼資料。 這表示，如果使用者沒有物件的正確權限，則發出中繼資料的內建函式 (例如 `COL_NAME`) 可能會傳回 NULL。 如需詳細資訊，請參閱[中繼資料可見性設定](../../relational-databases/security/metadata-visibility-configuration.md)。
   
 ## <a name="remarks"></a>Remarks  
 *table_id* 和 *column_id* 參數會共同產生一個資料行名稱字串。
@@ -68,7 +66,7 @@ COL_NAME ( table_id , column_id )
 如需取得資料表和資料行識別碼的詳細資訊，請參閱 [OBJECT_ID &#40;Transact-SQL&#41;](../../t-sql/functions/object-id-transact-sql.md)。
   
 ## <a name="examples"></a>範例  
-下列範例會傳回範例 `Employee` 資料表中第一個資料行的名稱。
+此範例會傳回範例 `Employee` 資料表中第一個資料行的名稱。
   
 ```sql
 -- Uses AdventureWorks  

@@ -1,31 +1,23 @@
 ---
-title: "建立資料採礦維度 |Microsoft 文件"
-ms.custom: 
-ms.date: 03/13/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
-helpviewer_keywords: mining structures [Analysis Services], dimensions
-ms.assetid: 9f0c39e5-3516-43ab-b203-f3f6dbcff89a
-caps.latest.revision: "12"
-author: Minewiskan
+title: 建立資料採礦維度 |Microsoft 文件
+ms.date: 05/01/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: data-mining
+ms.topic: conceptual
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 786ef852e8bb6e820c4f52df87767478b68e74f2
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 2455ccc283af429cb314aa2e5182f8b2ee58c18e
+ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="create-a-data-mining-dimension"></a>建立資料採礦維度
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]如果您的採礦結構以 OLAP cube 為基礎，您可以建立包含的採礦模型內容的維度。 然後您就可以將維度併入來源 Cube 中。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+  如果採礦結構是以 OLAP Cube 為基礎，您就可以建立一個包含採礦模型內容的維度。 然後您就可以將維度併入來源 Cube 中。  
   
  您也可以瀏覽維度、用它來瀏覽模型結果，或是使用 MDX 查詢維度。  
   
@@ -43,11 +35,11 @@ ms.lasthandoff: 01/08/2018
   
 5.  如果您想要建立包含新資料採礦維度的 Cube，請選取 [建立 Cube]。 在選取 [建立 Cube] 之後，您就可以輸入 Cube 的新名稱。  
   
-6.  按一下 [確定] 。  
+6.  按一下 **[確定]**。  
   
      這時會建立資料採礦維度，並加入方案總管的 [維度] 資料夾。 如果您選取 [建立 Cube]，則也會建立新的 Cube，並將其加入 [Cubes] 資料夾。  
   
-## <a name="see-also"></a>請參閱  
- [採礦結構工作和操作說明](../../analysis-services/data-mining/mining-structure-tasks-and-how-tos.md)  
+## <a name="see-also"></a>另請參閱  
+ [採礦結構工作和使用說明](../../analysis-services/data-mining/mining-structure-tasks-and-how-tos.md)  
   
   

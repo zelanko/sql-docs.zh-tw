@@ -1,33 +1,32 @@
 ---
-title: "儲存查詢 (Visual Database Tools) | Microsoft Docs"
-ms.custom: 
+title: 儲存查詢 (Visual Database Tools) | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
 ms.component: ssms-visual-db
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: tools-ssms
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ssms
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - queries [SQL Server], saving
 - saving queries
 ms.assetid: 1909b7be-cc87-44f1-9eb0-a3c355628ce6
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 9a976c7b8fbc6889b5edcb8bc5e338a4d44a3cdc
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.openlocfilehash: b7b19d883d3c32697575924f0a71f7c9d5591fe2
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="save-queries-visual-database-tools"></a>儲存查詢 (Visual Database Tools)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 儲存您的查詢以便在稍後使用。 請注意，執行查詢並不會儲存您的變更。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+儲存您的查詢以便在稍後使用。 請注意，執行查詢並不會儲存您的變更。  
   
 ### <a name="to-save-a-query"></a>若要儲存查詢  
   

@@ -1,35 +1,34 @@
 ---
-title: "使用者定義的函式 | Microsoft 文件"
-ms.custom: 
+title: 使用者定義的函式 | Microsoft 文件
+ms.custom: ''
 ms.date: 08/05/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
 ms.component: udf
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-udf
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - user-defined functions [SQL Server], components
 - user-defined functions [SQL Server], about user-defined functions
 ms.assetid: d7ddafab-f5a6-44b0-81d5-ba96425aada4
-caps.latest.revision: 
+caps.latest.revision: 23
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.workload: Active
-ms.openlocfilehash: 03521903614a187ca0af708dd318bbc9b3ae599d
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: cc7cf4ed368b63c7b070873dda3d23fcce909f35
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="user-defined-functions"></a>使用者定義的函式
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用者定義函數與程式語言函數類似，是可接受參數、執行動作 (如複雜計算) 以及傳回該動作所得值的常式。 傳回值可以是單一純量值或結果集。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用者定義函數與程式語言函數類似，是可接受參數、執行動作 (如複雜計算) 以及傳回該動作所得值的常式。 傳回值可以是單一純量值或結果集。  
    
 ##  <a name="Benefits"></a> 使用者定義的函式  
 為什麼要使用？ 
@@ -49,7 +48,7 @@ ms.lasthandoff: 02/09/2018
      對於無法以單一純量運算式表示的作業 (例如，根據某些複雜條件約束來篩選資料)，可以利用函數來表示。 接著，您可以在 WHERE 子句中叫用函數，減少傳送到用戶端的資料列數。  
   
 > [!NOTE]
-> [!INCLUDE[tsql](../../includes/tsql-md.md)] 查詢中的使用者定義函數只能在單一執行緒上執行 (序列執行計畫)。  
+> 查詢中的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 使用者定義函數只能在單一執行緒上執行 (序列執行計畫)。  
   
 ##  <a name="FunctionTypes"></a> 函式類型  
 **純量函式**  
@@ -63,7 +62,7 @@ ms.lasthandoff: 02/09/2018
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 提供許多可用以執行各種作業的系統函數。 這些函數不能修改。 如需詳細資訊，請參閱[內建函數 &#40;Transact-SQL&#41;](~/t-sql/functions/functions.md)、[系統預存函式 &#40;Transact-SQL&#41;](~/relational-databases/system-functions/system-functions-for-transact-sql.md)，和[動態管理檢視與函數 &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)。  
   
 ##  <a name="Guidelines"></a> 指導方針  
- [!INCLUDE[tsql](../../includes/tsql-md.md)] 造成陳述式取消並且以模組中下一個陳述式繼續 (例如觸發程序或預存程序) 的錯誤會在函數內部以不同方式處理。 在函數中，這樣的錯誤會造成函數停止執行。 進而導致叫用該函數的陳述式取消。  
+ [!INCLUDE[tsql](../../includes/tsql-md.md)] 造成陳述式取消並且以模組中下一個陳述式繼續 (例如觸發程序或預存程序) 的錯誤會在函式內部以不同方式處理。 在函數中，這樣的錯誤會造成函數停止執行。 進而導致叫用該函數的陳述式取消。  
   
  BEGIN...END 區塊中的陳述式不能有任何副作用。 函數副作用是在函數的範圍外對資源狀態所做的任何永久變更，例如修改資料庫資料表。 在函數中陳述式只能變更函數的區域性物件，例如本機資料指標或變數。 在函數中不得執行的動作包括修改資料庫資料表、對函數的非本機資料指標進行運算、傳送電子郵件、試圖修改目錄，以及產生傳回給使用者的結果集。  
   

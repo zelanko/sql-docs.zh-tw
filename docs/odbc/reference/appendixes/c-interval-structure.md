@@ -1,31 +1,28 @@
 ---
-title: "C 間隔結構 |Microsoft 文件"
-ms.custom: 
+title: C 間隔結構 |Microsoft 文件
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
-ms.component: odbc
-ms.reviewer: 
+ms.prod: sql
+ms.prod_service: connectivity
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: connectivity
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - data types [ODBC], interval data types
 - interval data type [ODBC], structure
 - C data types [ODBC], interval
 ms.assetid: 52b42b56-50aa-4ce6-8d79-0963c7a71437
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
-ms.workload: Inactive
-ms.openlocfilehash: 00ec992c87cce93eb95cd85314743a109183c51f
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+manager: craigg
+ms.openlocfilehash: 2f3a2c8f0e3ad967b3c0b7b02255774c2603a1b6
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="c-interval-structure"></a>C 間隔結構
 每個 C 間隔資料類型中所列[C 資料類型](../../../odbc/reference/appendixes/c-data-types.md)區段包含間隔資料使用相同的結構。 當**SQLFetch**， **SQLFetchScroll**，或**SQLGetData**是呼叫，此驅動程式傳回的資料到 SQL_INTERVAL_STRUCT 結構，會使用所指定的值應用程式的 C 資料類型 (在呼叫**SQLBindCol**， **SQLGetData**，或**SQLBindParameter**) 來解譯 SQL_INTERVAL_STRUCT 的內容並於其中填入*interval_type*欄位具有結構*列舉*對應到 C 類型的值。 請注意，驅動程式不會讀取*interval_type*欄位來決定的間隔類型; 它們會擷取 SQL_DESC_CONCISE_TYPE 描述項欄位的值。 參數資料的使用結構時，驅動程式會使用 APD SQL_DESC_CONCISE_TYPE 欄位中的應用程式所指定的值解譯內容 SQL_INTERVAL_STRUCT，即使應用程式設定的值*interval_type*欄位設為不同的值。  

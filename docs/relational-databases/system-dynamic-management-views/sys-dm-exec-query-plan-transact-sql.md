@@ -1,16 +1,12 @@
 ---
-title: sys.dm_exec_query_plan (Transact-SQL) | Microsoft Docs
-ms.custom: 
+title: sys.dm_exec_query_plan (TRANSACT-SQL) |Microsoft 文件
+ms.custom: ''
 ms.date: 08/02/2016
-ms.prod: sql-non-specified
-ms.prod_service: database-engine
-ms.service: 
-ms.component: dmv's
-ms.reviewer: 
+ms.prod: sql
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: system-objects
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - dm_exec_query_plan_TSQL
@@ -22,16 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_exec_query_plan dynamic management function
 ms.assetid: e26f0867-9be3-4b2e-969e-7f2840230770
-caps.latest.revision: 
+caps.latest.revision: 33
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 5dca7ee8a3721df6992bab61e9228e3bfe73c6ac
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 36eb4273ebdc689320ff831268a508fa977997fb
+ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 05/23/2018
 ---
 # <a name="sysdmexecqueryplan-transact-sql"></a>sys.dm_exec_query_plan (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -68,7 +63,7 @@ sys.dm_exec_query_plan ( plan_handle )
 |**dbid**|**smallint**|當編譯對應於這個計畫的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式時，作用中內容資料庫的識別碼。 對於隨選和準備的 SQL 陳述式而言，則為編譯陳述式的資料庫識別碼。<br /><br /> 資料行可為 Null。|  
 |**objectid**|**int**|這個查詢計畫的物件識別碼 (如預存程序或使用者自訂函數)。 特定和準備批次，這個資料行是**null**。<br /><br /> 資料行可為 Null。|  
 |**number**|**smallint**|編號預存程序整數。 例如，群組的程序**訂單**應用程式可以命名為**orderproc; 1**， **orderproc; 2**，依此類推。 特定和準備批次，這個資料行是**null**。<br /><br /> 資料行可為 Null。|  
-|**encrypted**|**bit**|指出對應的預存程序是否加密。<br /><br /> 0 = 未加密<br /><br /> 1 = 加密<br /><br /> 資料行不可為 Null。|  
+|**加密**|**bit**|指出對應的預存程序是否加密。<br /><br /> 0 = 未加密<br /><br /> 1 = 加密<br /><br /> 資料行不可為 Null。|  
 |**query_plan**|**xml**|包含指定的查詢執行計畫的編譯時期顯示計畫表示法*plan_handle*。 顯示計畫是 XML 格式。 每個包含諸如特定 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式、預存程序呼叫和使用者自訂函數呼叫的批次，都會產生一份計畫。<br /><br /> 資料行可為 Null。|  
   
 ## <a name="remarks"></a>備註  
@@ -82,7 +77,7 @@ sys.dm_exec_query_plan ( plan_handle )
   
  當隨選查詢使用簡單或強制參數化， **query_plan**資料行會包含陳述式文字，而非實際查詢計畫。 若要傳回查詢計畫，請呼叫**sys.dm_exec_query_plan**取得準備參數化查詢的計畫控制代碼。 您可以判斷查詢是否參數化參考**sql**資料行[sys.syscacheobjects](../../relational-databases/system-compatibility-views/sys-syscacheobjects-transact-sql.md)檢視或文字資料行[sys.dm_exec_sql_text](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md)動態管理檢視。  
   
- 基於中允許的巢狀層級數目的限制**xml**資料型別， **sys.dm_exec_query_plan**無法傳回查詢計畫，符合或超過 128 個層級的巢狀項目。 在舊版 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，這會讓查詢計畫無法傳回並產生錯誤 6335。 在[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]Service Pack 2 和更新版本中， **query_plan**資料行會傳回 NULL。 您可以使用[sys.dm_exec_text_query_plan &#40;TRANSACT-SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-text-query-plan-transact-sql.md)動態管理函數，以文字格式傳回查詢計畫的輸出。  
+ 基於中允許的巢狀層級數目的限制**xml**資料型別， **sys.dm_exec_query_plan**無法傳回查詢計畫，符合或超過 128 個層級的巢狀項目。 在舊版 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，這會讓查詢計畫無法傳回並產生錯誤 6335。 在[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]Service Pack 2 和更新版本中， **query_plan**資料行會傳回 NULL。 您可以使用[sys.dm_exec_text_query_plan &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-exec-text-query-plan-transact-sql.md)動態管理函數，以文字格式傳回查詢計畫的輸出。  
   
 ## <a name="permissions"></a>Permissions  
  若要執行**sys.dm_exec_query_plan**，使用者必須是屬於**sysadmin**固定伺服器角色，或在伺服器上有 VIEW SERVER STATE 權限。  
@@ -162,7 +157,7 @@ GO
   
 ## <a name="see-also"></a>另請參閱  
  [動態管理檢視與函數 &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
- [sys.dm_exec_cached_plans &#40;TRANSACT-SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cached-plans-transact-sql.md)   
+ [sys.dm_exec_cached_plans &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cached-plans-transact-sql.md)   
  [sys.dm_exec_query_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-stats-transact-sql.md)   
  [sys.dm_exec_requests &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)   
  [sp_who &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-who-transact-sql.md)   

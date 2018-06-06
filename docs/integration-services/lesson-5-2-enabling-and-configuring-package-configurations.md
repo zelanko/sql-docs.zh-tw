@@ -1,30 +1,28 @@
 ---
-title: "步驟 2：啟用和設定套件設定 | Microsoft Docs"
-ms.custom: 
+title: 步驟 2：啟用和設定套件設定 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
 ms.component: tutorial
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: get-started-article
 applies_to:
 - SQL Server 2016
 ms.assetid: 005218ab-8dd5-48e9-a185-6bc60cd43a7a
-caps.latest.revision: 
+caps.latest.revision: 39
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: Active
-ms.openlocfilehash: 1a63c43606d2a27da3469c4cedb83654c79c1bf1
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 1e70fa8824db8bebf314d3b8d0280ec3d321df6a
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="lesson-5-2---enabling-and-configuring-package-configurations"></a>課程 5-2 - 啟用和設定套件設定
 在此工作中，您會將專案轉換成封裝部署模型，並使用封裝組態精靈來啟用封裝組態。 您將利用這個精靈來產生 XML 組態檔，它包含 Foreach 迴圈容器的 **Directory** 屬性的組態設定。 Directory 屬性的值是由新的封裝層級變數提供，您可以在執行階段更新它。 另外，您還會擴展一個要在測試期間使用的新範例資料夾。  

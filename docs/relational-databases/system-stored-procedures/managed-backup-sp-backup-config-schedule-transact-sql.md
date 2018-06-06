@@ -1,16 +1,14 @@
 ---
-title: "managed_backup.sp_backup_config_schedule (TRANSACT-SQL) |Microsoft 文件"
-ms.custom: 
+title: managed_backup.sp_backup_config_schedule (TRANSACT-SQL) |Microsoft 文件
+ms.custom: ''
 ms.date: 06/10/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: system-objects
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_backup_config_schedule_TSQL
@@ -23,16 +21,15 @@ helpviewer_keywords:
 - managed_backup.sp_backup_config_schedule
 - sp_backup_config_schedule
 ms.assetid: 82541160-d1df-4061-91a5-6868dd85743a
-caps.latest.revision: 
+caps.latest.revision: 12
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: d3ba08667f9eebe37cc5493903b714ee1bf0d67f
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 8ebeca4b0a1c9079f8786303207bcbae4dfe74c3
+ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="managedbackupspbackupconfigschedule-transact-sql"></a>managed_backup.sp_backup_config_schedule (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -45,7 +42,8 @@ ms.lasthandoff: 02/03/2018
   
 ```vb  
 EXEC managed_backup.sp_backup_config_schedule   
-    [@database_name = ] 'database_name'    ,[@scheduling_option = ] {'Custom' | 'System'}  
+    [@database_name = ] 'database_name'
+    ,[@scheduling_option = ] {'Custom' | 'System'}  
     ,[@full_backup_freq_type = ] {'Daily' | 'Weekly'}  
     ,[@days_of_week = ] 'days_of_the_week'  
     ,[@backup_begin_time = ] 'begin time of the backup window'  
@@ -64,7 +62,7 @@ EXEC managed_backup.sp_backup_config_schedule
  受管理的備份作業，可以設定為 'Daily' 或 '每週' 頻率類型。  
   
  @days_of_week  
- 每週備份的天數時@full_backup_freq_type設定為每週。 指定完整字串的名稱，例如 '星期一'。  您也可以指定 超過一天名稱，並以逗號分隔。 例如 ' 星期一、 星期三、 星期五 '。  
+ 每週備份的天數時@full_backup_freq_type設定為每週。 指定完整字串的名稱，例如 '星期一'。  您也可以指定 超過一天名稱，以垂直線分隔。 例如 N'Monday |星期三 |星期五 '。  
   
  @backup_begin_time  
  在備份時段開始時間。 備份將不會啟動時間視窗中，由組合所定義的外部@backup_begin_time和@backup_duration。  
@@ -73,7 +71,7 @@ EXEC managed_backup.sp_backup_config_schedule
  備份的時間間隔的持續時間。 請注意，備份將會完成所定義的時間間隔不能保證@backup_begin_time和@backup_duration。 將不會取消備份作業都已在此時間視窗中啟動，但是超過視窗的持續時間。  
   
  @log_backup_freq  
- 這會決定交易記錄備份的頻率。 定期而不是在指定的資料庫備份的排程，就會發生這些備份。 @log_backup_freq可以是分鐘或小時，0 是有效的表示沒有記錄備份。 停用記錄檔備份只會適用於簡單復原模式的資料庫。  
+ 這會決定交易記錄備份的頻率。 定期而不是在指定的資料庫備份的排程，就會發生這些備份。 @log_backup_freq 可以是分鐘或小時，0 是有效的表示沒有記錄備份。 停用記錄檔備份只會適用於簡單復原模式的資料庫。  
   
 > [!NOTE]  
 >  為 full，從簡單變更復原模式，您需要重新設定從 0 log_backup_freq 為非零值。  

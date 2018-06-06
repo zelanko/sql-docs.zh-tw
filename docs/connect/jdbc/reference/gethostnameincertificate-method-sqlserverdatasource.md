@@ -1,30 +1,29 @@
 ---
-title: "getHostNameInCertificate 方法 (SQLServerDataSource) |Microsoft 文件"
-ms.custom: 
+title: getHostNameInCertificate 方法 (SQLServerDataSource) |Microsoft 文件
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
-ms.component: jdbc
-ms.reviewer: 
+ms.prod: sql
+ms.prod_service: connectivity
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
-ms.topic: article
-apiname: getHostNameInCertificate Method (SQLServerDataSource)
-apilocation: getHostNameInCertificate Method (SQLServerDataSource)
+ms.technology: connectivity
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
+apiname:
+- getHostNameInCertificate Method (SQLServerDataSource)
+apilocation:
+- getHostNameInCertificate Method (SQLServerDataSource)
 apitype: Assembly
 ms.assetid: 45ea04e2-9ea5-4171-9136-d09f8a95e128
-caps.latest.revision: "11"
+caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
-ms.workload: Inactive
-ms.openlocfilehash: 1fca55d9ba571f8c54a3efd766f4b02a72da3295
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+manager: craigg
+ms.openlocfilehash: bd5ba2b9a98fedc7d2ebf47c3282cca839d59265
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="gethostnameincertificate-method-sqlserverdatasource"></a>getHostNameInCertificate 方法 (SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -46,7 +45,7 @@ public java.lang.String getHostNameInCertificate()
   
  如果未設定主機名稱， [getHostNameInCertificate](../../../connect/jdbc/reference/gethostnameincertificate-method-sqlserverdatasource.md)方法會傳回 null。  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [SQLServerDataSource 成員](../../../connect/jdbc/reference/sqlserverdatasource-members.md)   
  [SQLServerDataSource 類別](../../../connect/jdbc/reference/sqlserverdatasource-class.md)  
   

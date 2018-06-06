@@ -1,16 +1,14 @@
 ---
-title: sp_fulltext_column (Transact-SQL) | Microsoft Docs
-ms.custom: 
+title: sp_fulltext_column (TRANSACT-SQL) |Microsoft 文件
+ms.custom: ''
 ms.date: 06/10/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-data-warehouse
-ms.service: 
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: system-objects
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_fulltext_column_TSQL
@@ -20,16 +18,16 @@ dev_langs:
 helpviewer_keywords:
 - sp_fulltext_column
 ms.assetid: a84cc45d-1b50-44af-85df-2ea033b8a6a9
-caps.latest.revision: 
+caps.latest.revision: 36
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: f1099b9ee7ebf38703701a2160e15d24b80ba859
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+monikerRange: = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 6c1a53e05eef89584526846c3f3d3c6324164a94
+ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="spfulltextcolumn-transact-sql"></a>sp_fulltext_column (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-xxx-md.md)]
@@ -57,27 +55,27 @@ sp_fulltext_column [ @tabname= ] 'qualified_table_name' ,
  這是一或兩部分的資料表名稱。 資料表必須在目前的資料庫中。 資料表必須具有全文檢索索引。 *qualified_table_name*是**nvarchar （517)**，沒有預設值。  
   
  [ **@colname=** ] **'***column_name***'**  
- 中的資料行名稱*qualified_table_name*。 這個資料行必須是 character、 **varbinary （max)**或**映像**資料行，不能是計算資料行。 *column_name*是**sysname**，沒有預設值。  
+ 中的資料行名稱*qualified_table_name*。 這個資料行必須是 character、 **varbinary （max)** 或**映像**資料行，不能是計算資料行。 *column_name*是**sysname**，沒有預設值。  
   
 > [!NOTE]  
->  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 可以建立全文檢索索引中的資料行所儲存之文字資料**varbinary （max)**或**映像**資料型別。 影像和圖片沒有索引。  
+>  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 可以建立全文檢索索引中的資料行所儲存之文字資料**varbinary （max)** 或**映像**資料型別。 影像和圖片沒有索引。  
   
- [ **@action=** ] **'***action***'**  
+ [  **@action=** ] **'***動作***'**  
  這是要執行的動作。 *動作*是**varchar （20)**，沒有預設值，它可以是下列值之一。  
   
 |Value|Description|  
 |-----------|-----------------|  
 |**add**|新增*column_name*的*qualified_table_name*至資料表的非使用中全文檢索索引。 這個動作會啟用全文檢索索引的資料行。|  
-|**drop**|移除*column_name*的*qualified_table_name*從資料表的非使用中全文檢索索引。|  
+|**卸除**|移除*column_name*的*qualified_table_name*從資料表的非使用中全文檢索索引。|  
   
  [ **@language=** ] **'***language_term***'**  
- 這是資料行所儲存之資料的語言。 如需中所包含的語言的清單[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，請參閱[sys.fulltext_languages &#40;TRANSACT-SQL &#41;](../../relational-databases/system-catalog-views/sys-fulltext-languages-transact-sql.md).  
+ 這是資料行所儲存之資料的語言。 如需中所包含的語言的清單[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，請參閱[sys.fulltext_languages &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-fulltext-languages-transact-sql.md)。  
   
 > [!NOTE]  
 >  當資料行包含的資料有多種語言或不受支援的語言時，請使用「中性」語言。 [預設全文檢索語言] 組態選項指定這個預設值。  
   
  [ **@type_colname =** ] **'***type_column_name***'**  
- 中的資料行名稱*qualified_table_name*保存的文件類型*column_name*。 此資料行必須是**char**， **nchar**， **varchar**，或**nvarchar**。 它時才會使用的資料類型*column_name*的型別**varbinary （max)**或**映像**。 *type_column_name*是**sysname**，沒有預設值。  
+ 中的資料行名稱*qualified_table_name*保存的文件類型*column_name*。 此資料行必須是**char**， **nchar**， **varchar**，或**nvarchar**。 它時才會使用的資料類型*column_name*的型別**varbinary （max)** 或**映像**。 *type_column_name*是**sysname**，沒有預設值。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  0 (成功) 或 1 (失敗)  
@@ -125,11 +123,11 @@ WHERE CONTAINS(spanishCol, 'formsof(inflectional, trabajar)')
   
 ## <a name="see-also"></a>另請參閱  
  [OBJECTPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/objectproperty-transact-sql.md)   
- [sp_help_fulltext_columns &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-fulltext-columns-transact-sql.md)   
- [sp_help_fulltext_columns_cursor &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-fulltext-columns-cursor-transact-sql.md)   
- [sp_help_fulltext_tables &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-fulltext-tables-transact-sql.md)   
- [sp_help_fulltext_tables_cursor &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-fulltext-tables-cursor-transact-sql.md)   
+ [sp_help_fulltext_columns &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-fulltext-columns-transact-sql.md)   
+ [sp_help_fulltext_columns_cursor &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-fulltext-columns-cursor-transact-sql.md)   
+ [sp_help_fulltext_tables &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-fulltext-tables-transact-sql.md)   
+ [sp_help_fulltext_tables_cursor &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-fulltext-tables-cursor-transact-sql.md)   
  [系統預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
- [全文檢索搜尋和語意搜尋預存程序 &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/full-text-search-and-semantic-search-stored-procedures-transact-sql.md)  
+ [全文檢索搜尋和語意搜尋預存程序&#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/full-text-search-and-semantic-search-stored-procedures-transact-sql.md)  
   
   

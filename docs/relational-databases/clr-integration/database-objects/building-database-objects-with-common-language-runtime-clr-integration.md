@@ -1,15 +1,14 @@
 ---
-title: "建立資料庫物件，利用 Common Language Runtime (CLR) 整合 |Microsoft 文件"
-ms.custom: 
+title: 建立資料庫物件，利用 Common Language Runtime (CLR) 整合 |Microsoft 文件
+ms.custom: ''
 ms.date: 03/17/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
 ms.component: clr
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - routines [CLR integration]
@@ -19,20 +18,19 @@ helpviewer_keywords:
 - building database objects [CLR integration]
 - .NET Framework routines [SQL Server]
 ms.assetid: ce34132c-bfa3-447b-9131-b6e17c672efe
-caps.latest.revision: 
+caps.latest.revision: 48
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: bffc0c6796955eee2a23bc4885c3cfc23a7e9304
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 597645c52f37034ba4f294784cbde2a7489516d3
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="building-database-objects-with-common-language-runtime-clr-integration"></a>利用 Common Language Runtime (CLR) 整合建置資料庫物件
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-您可以搭配 .NET Framework Common Language Runtime (CLR) 使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 整合來建立資料庫物件。 內部執行 managed 程式碼[!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]稱為 「 CLR 常式 」。 這些常式包括：  
+  您可以搭配 .NET Framework Common Language Runtime (CLR) 使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 整合來建立資料庫物件。 內部執行 managed 程式碼[!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]稱為 「 CLR 常式 」。 這些常式包括：  
   
 -   純量值的使用者定義函數 (純量 UDF)  
   
@@ -79,6 +77,6 @@ ms.lasthandoff: 02/09/2018
  描述如何實作及使用 CLR 觸發程序。  
   
 ## <a name="see-also"></a>另請參閱  
- [Common Language Runtime &#40;CLR &#41;整合概觀](../../../relational-databases/clr-integration/common-language-runtime-integration-overview.md)  
+ [Common Language Runtime & #40;CLR & #41;整合概觀](../../../relational-databases/clr-integration/common-language-runtime-integration-overview.md)  
   
   

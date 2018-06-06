@@ -1,27 +1,25 @@
 ---
-title: "準備 Reporting Services 行動報表的 Excel 資料 | Microsoft Docs"
-ms.custom: 
+title: 準備 Reporting Services 行動報表的 Excel 資料 | Microsoft Docs
+ms.custom: ''
 ms.date: 02/08/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
-ms.service: 
 ms.component: mobile-reports
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: 16698f8d-bfc7-4eca-9e97-82c99d8bc08e
-caps.latest.revision: "14"
+caps.latest.revision: 14
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: b9f739a009fe8b80ce5005e8145b3fd95648e6f9
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 76f71b0f284602ae1860fcba5bc69f9221b0be33
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="prepare-excel-data-for-reporting-services-mobile-reports"></a>準備 Reporting Services 行動報表的 Excel 資料
   
@@ -56,7 +54,7 @@ ms.lasthandoff: 01/09/2018
   
 如您在上述的範例中所見，第一個資料列包含該資料行中的度量名稱。 [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-short.md)] 會保留這些資料行標頭，以便組件庫項目設定中的簡單參考使用。 不過，資料行標頭並非必要。 如果遺漏， [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-short.md)] 會使用 Excel 的 A、B、C,...、AA、BB、...慣例來產生標題。  
   
-[!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-short.md)]會比較每個資料行中前兩個資料格的資料類型，在匯入 Excel 工作表時自動偵測第一個資料列的標頭。 如果任何資料行中前兩個資料格的資料類型不相符，第一個資料列會判斷為包含資料行標頭。 因此，若資料表有數值資料行標頭、請在標頭名稱前面加上字串，如此它們在匯入程序時就會偵測為標頭。  
+[!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-short.md)] 會比較每個資料行中前兩個資料格的資料類型，在匯入 Excel 工作表時自動偵測第一個資料列的標頭。 如果任何資料行中前兩個資料格的資料類型不相符，第一個資料列會判斷為包含資料行標頭。 因此，若資料表有數值資料行標頭、請在標頭名稱前面加上字串，如此它們在匯入程序時就會偵測為標頭。  
   
 ## <a name="cells"></a>資料格  
   

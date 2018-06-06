@@ -1,16 +1,14 @@
 ---
-title: "內嵌 SQL |Microsoft 文件"
-ms.custom: 
+title: 內嵌 SQL |Microsoft 文件
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
-ms.component: odbc
-ms.reviewer: 
+ms.prod: sql
+ms.prod_service: connectivity
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: connectivity
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - SQL [ODBC], embedded SQL
 - sending SQL statements to DBMS [ODBC]
@@ -18,16 +16,15 @@ helpviewer_keywords:
 - ODBC [ODBC], SQL
 - embedded SQL [ODBC]
 ms.assetid: 8eee3527-f225-4aa2-bd18-a16bd3ab0fb7
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
-ms.workload: Inactive
-ms.openlocfilehash: db7c9b02f885c09df1eccbdc27ef2fd895168848
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+manager: craigg
+ms.openlocfilehash: 4d74fcd9aaecebf409580ad139b504b05f67e286
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="embedded-sql"></a>內嵌的 SQL
 第一種技術，將 SQL 陳述式傳送至 DBMS 內嵌 SQL。 SQL 不使用變數和流程控制陳述式，因為它通常作為資料庫次語言，可以加入至傳統的程式設計語言，例如 C 或 COBOL 中撰寫的程式。 這是內嵌式 SQL 的中心概念： 放置在主機中程式設計語言撰寫的程式中的 SQL 陳述式。 簡言之，下列技術可用於主機語言中嵌入 SQL 陳述式：  

@@ -1,30 +1,27 @@
 ---
-title: "第 1 課︰建立預存存取原則和共用存取簽章 | Microsoft Docs"
-ms.custom: 
+title: 第 1 課︰建立預存存取原則和共用存取簽章 | Microsoft Docs
+ms.custom: ''
 ms.date: 06/02/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
 ms.component: tutorial
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- dbe-backup-restore
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: backup-restore
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 applies_to:
 - SQL Server 2016
 ms.assetid: 41674d9d-8132-4bff-be4d-85a861419f3d
-caps.latest.revision: 
+caps.latest.revision: 22
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: fe7163f6ff8d2f79a4eb3297c831e82d59b70c48
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.openlocfilehash: 721f9245ff8057c54cef5facdf4a4de423e53961
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="lesson-1-create-stored-access-policy-and-shared-access-signature"></a>第 1 課︰建立預存存取原則和共用存取簽章
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -65,7 +62,7 @@ ms.lasthandoff: 02/12/2018
 2.  編輯並執行下列指令碼。  
   
     ```  
-    \<#   
+    <#   
     This script uses the Azure Resource model and creates a new ARM storage account.  
     Modify this script to use an existing ARM or classic storage account   
     using the instructions in comments within this script  
@@ -78,7 +75,7 @@ ms.lasthandoff: 02/12/2018
     $containerName= $prefixName + 'container'  # the storage container name to which you will attach the SAS policy with its SAS token  
     $policyName = $prefixName + 'policy' # the name of the SAS policy  
   
-    \<#   
+    <#   
     Using Azure Resource Manager deployment model  
     Comment out this entire section and use the classic storage account name to use an existing classic storage account  
     #>  
@@ -104,7 +101,7 @@ ms.lasthandoff: 02/12/2018
     # Create a new storage account context using an ARM storage account  
     $storageContext = New-AzureStorageContext -StorageAccountName $storageAccountName -StorageAccountKey $accountKeys[0].Value 
   
-    \<#  
+    <#  
     Using the Classic deployment model  
     Use the following four lines to use an existing classic storage account  
     #>  

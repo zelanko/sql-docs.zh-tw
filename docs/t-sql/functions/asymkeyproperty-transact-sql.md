@@ -1,16 +1,14 @@
 ---
 title: ASYMKEYPROPERTY (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 07/24/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
 ms.component: t-sql|functions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: t-sql
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - ASYMKEYPROPERTY_TSQL
@@ -20,21 +18,20 @@ dev_langs:
 helpviewer_keywords:
 - ASYMKEYPROPERTY
 ms.assetid: a30581f2-e1b1-4996-93e6-527ff96b7c42
-caps.latest.revision: 
+caps.latest.revision: 13
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 808f7c8d840f18d9e09fe9906e366fb7feb76cff
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: e876a71e8f447319910510b1098eaf22ff47a6de
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="asymkeyproperty-transact-sql"></a>ASYMKEYPROPERTY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-傳回非對稱金鑰的屬性。
+此函數傳回非對稱金鑰的屬性。
   
 ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -46,25 +43,25 @@ ASYMKEYPROPERTY (Key_ID , 'algorithm_desc' | 'string_sid' | 'sid')
   
 ## <a name="arguments"></a>引數  
 *Key_ID*  
-這是資料庫中非對稱金鑰的 Key_ID。 若要在只知道金鑰名稱時尋找 Key_ID，請使用 ASYMKEY_ID。 *Key_ID* 的資料類型為 **int**。
+資料庫中非對稱金鑰的 Key_ID。 如果您只知道金鑰名稱，請使用 ASYMKEY_ID 來尋找 Key_ID。 *Key_ID* 的資料型別為 **int**。
   
-**'**algorithm_desc**'**  
+**'** algorithm_desc **'**  
 指定輸出會傳回非對稱金鑰的演算法描述。 僅適用於根據 EKM 模組所建立的非對稱金鑰。
   
-**'**string_sid**'**  
-指定輸出會以 **nvarchar()** 格式傳回非對稱金鑰的 SID。
+**'** string_sid **'**  
+指定輸出以 **nvarchar()** 格式傳回非對稱金鑰的 SID。
   
-**'**sid**'**  
+**'** sid **'**  
 指定輸出會以二進位格式傳回非對稱金鑰的 SID。
   
-## <a name="return-types"></a>傳回型  
+## <a name="return-types"></a>傳回類型  
 **sql_variant**
   
 ## <a name="permissions"></a>Permissions  
-需要非對稱金鑰的部份權限，且呼叫端尚未拒絕非對稱金鑰的 VIEW 權限。
+需要非對稱金鑰上適當的權限，且呼叫端尚未拒絕非對稱金鑰的 VIEW 權限。 如需非對稱金鑰權限的詳細資訊，請參閱 [CREATE ASYMMETRIC KEY &#40;Transact-SQL&#41; ](../../t-sql/statements/create-asymmetric-key-transact-sql.md)。
   
 ## <a name="examples"></a>範例  
-下列範例會傳回含有 Key_ID 256 之非對稱金鑰的屬性。
+下列範例傳回 Key_ID 256 的非對稱金鑰屬性。
   
 ```sql
 SELECT   

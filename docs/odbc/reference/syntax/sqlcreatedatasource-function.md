@@ -1,32 +1,33 @@
 ---
-title: "SQLCreateDataSource 函式 |Microsoft 文件"
-ms.custom: 
+title: SQLCreateDataSource 函式 |Microsoft 文件
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
-ms.component: odbc
-ms.reviewer: 
+ms.prod: sql
+ms.prod_service: connectivity
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
-ms.topic: article
-apiname: SQLCreateDataSource
-apilocation: sqlsrv32.dll
+ms.technology: connectivity
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
+apiname:
+- SQLCreateDataSource
+apilocation:
+- sqlsrv32.dll
 apitype: dllExport
-f1_keywords: SQLCreateDataSource
-helpviewer_keywords: SQLCreateDataSource function [ODBC]
+f1_keywords:
+- SQLCreateDataSource
+helpviewer_keywords:
+- SQLCreateDataSource function [ODBC]
 ms.assetid: 76ee851a-dca9-40cc-8e9e-eb3f74e560ee
-caps.latest.revision: "10"
+caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
-ms.workload: Inactive
-ms.openlocfilehash: 9077489c1380b0c750c9a725dfa50f813a5418da
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+manager: craigg
+ms.openlocfilehash: 87a5383d5580c9c6ca706e13e1fd3171713511bf
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sqlcreatedatasource-function"></a>SQLCreateDataSource 函式
 **一致性**  
@@ -57,7 +58,7 @@ BOOL SQLCreateDataSource(
 ## <a name="diagnostics"></a>診斷  
  當**SQLCreateDataSource**傳回 FALSE，相關聯 *\*pfErrorCode*可以取得值，藉由呼叫**SQLInstallerError**。 下表列出 *\*pfErrorCode*可以傳回的值**SQLInstallerError** ，並說明每個內容中的這個函式。  
   
-|*\*pfErrorCode*|錯誤|描述|  
+|*\*pfErrorCode*|錯誤|Description|  
 |---------------------|-----------|-----------------|  
 |ODBC_ERROR_GENERAL_ERR|一般安裝程式發生錯誤|發生錯誤，其中沒有特定的安裝程式錯誤。|  
 |ODBC_ERROR_INVALID_HWND|無效的視窗控制代碼|*Hwnd*引數以前是無效或為 NULL。|  

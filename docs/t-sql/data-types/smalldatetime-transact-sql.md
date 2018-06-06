@@ -1,16 +1,14 @@
 ---
 title: smalldatetime (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 7/22/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
 ms.component: t-sql|data-types
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: t-sql
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - smalldatetime_TSQL
@@ -24,16 +22,16 @@ helpviewer_keywords:
 - date and time [SQL Server], smalldatetime
 - data types [SQL Server], date and time
 ms.assetid: 68b74610-d54c-4c8e-b4b2-7e3747546ee0
-caps.latest.revision: 
+caps.latest.revision: 50
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Active
-ms.openlocfilehash: 07ab6616d91d0508c2c52f7e3b8be4e03127ecaa
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: a9fff2a0066840b8adcb6afd80cb901fceb8b95f
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="smalldatetime-transact-sql"></a>smalldatetime (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -41,7 +39,7 @@ ms.lasthandoff: 11/21/2017
 定義與當日時間結合的日期。 這個時間是以 24 小時制為基礎，而秒鐘一律為零 (:00) 而且不含小數秒數。
   
 > [!NOTE]  
->  為新工作使用 **time**、**date**、**datetime2** 和 **datetimeoffset** 資料類型。 這些類型符合 SQL 標準。 它們具有方便移植的特性。 **time**、**datetime2** 和 **datetimeoffset** 提供更多秒數有效位數。 **datetimeoffset** 可為全域部署的應用程式提供時區支援。  
+>  對新工作使用 **time**、**date**、**datetime2** 和 **datetimeoffset** 資料類型。 這些類型符合 SQL 標準。 它們具有方便移植的特性。 **time**、**datetime2** 和 **datetimeoffset** 提供更多秒數有效位數。 **datetimeoffset** 可為全域部署的應用程式提供時區支援。  
   
 ## <a name="smalldatetime-description"></a>smalldatetime 描述
   
@@ -66,7 +64,7 @@ ms.lasthandoff: 11/21/2017
 **smalldatetime**不符合 ANSI 或 ISO 8601 標準。
   
 ## <a name="converting-date-and-time-data"></a>轉換日期和時間資料
-當您轉換成日期與時間資料類型時，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會拒絕所有無法辨識為日期或時間的值。 如需 CAST 及 CONVERT 函式與日期和時間資料搭配使用的資訊，請參閱 [CAST 和 CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)。
+當您轉換成日期與時間資料類型時，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會拒絕所有無法辨識為日期或時間的值。 如需搭配日期和時間資料使用 CAST 及 CONVERT 函數的詳細資訊，請參閱 [CAST 和 CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)。
   
 ### <a name="converting-smalldatetime-to-other-date-and-time-types"></a>將 smalldatetime 轉換成其他日期與時間類型
 本節描述當 **smalldatetime** 資料類型轉換成其他日期和時間資料類型時，可能發生的狀況。
@@ -187,11 +185,11 @@ SELECT
   
 |資料類型|輸出|  
 |---|---|
-|**time**|12:35:29。 1234567|  
+|**time**|12:35:29. 1234567|  
 |**date**|2007-05-08|  
 |**smalldatetime**|2007-05-08 12:35:00|  
 |**datetime**|2007-05-08 12:35:29.123|  
-|**datetime2**|2007-05-08 12:35:29。 1234567|  
+|**datetime2**|2007-05-08 12:35:29. 1234567|  
 |**datetimeoffset**|2007-05-08 12:35:29.1234567 +12:15|  
   
 ## <a name="see-also"></a>另請參閱

@@ -1,31 +1,23 @@
 ---
-title: "檢視方塊 |Microsoft 文件"
-ms.custom: 
-ms.date: 04/10/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services, azure-analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
-ms.assetid: 1f78c3a1-ce2c-4e7f-a277-71a657692bea
-caps.latest.revision: 
-author: Minewiskan
+title: 檢視方塊 |Microsoft 文件
+ms.date: 05/07/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: tabular-models
+ms.topic: conceptual
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: e78bf1c9300fcd9a6c0d198d0239ecee12a5ea22
-ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
+ms.openlocfilehash: 3e687116fa1f388da3b59884c29526cb9e7dd629
+ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="perspectives"></a>檢視方塊
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
-表格式模型中的檢視方塊會定義可檢視之模型子集，以提供具體的特定商務或應用程式模型視點。  
+  表格式模型中的檢視方塊會定義可檢視之模型子集，以提供具體的特定商務或應用程式模型視點。  
   
 ##  <a name="bkmk_understanding"></a> 優點  
  對於要瀏覽的使用者而言，表格式模型可以是很複雜的。 單一模型可能代表完整的資料倉儲內容，其中有許多資料表、量值和維度。 對只需要與模型的一小部分進行互動即可滿足其商業智慧和報表需求的使用者而言，這樣的複雜性令人望而生畏。  

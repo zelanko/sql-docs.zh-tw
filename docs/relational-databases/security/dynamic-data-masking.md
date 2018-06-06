@@ -1,28 +1,23 @@
 ---
-title: "動態資料遮罩 | Microsoft Docs"
-ms.custom: 
-ms.date: 09/26/2016
-ms.prod: sql-non-specified
+title: 動態資料遮罩 | Microsoft Docs
+ms.date: 04/23/2018
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
-ms.component: security
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: security
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: a62f4ff9-2953-42ca-b7d8-1f8f527c4d66
-caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: a40b52ccc4839f63acbd1be1f9b2643552a44430
-ms.sourcegitcommit: 60d0c9415630094a49d4ca9e4e18c3faa694f034
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: bdd58460e8dc3c9d763f92a335b0d2a0cee850b2
+ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="dynamic-data-masking"></a>動態資料遮罩
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -40,9 +35,9 @@ ms.lasthandoff: 01/09/2018
 
 例如，話務中心支援人員可以從來電者的社會安全號碼或信用卡號碼其中幾個數字加以識別，但這些資料項目都不應該完全對支援人員曝光。 此時可以定義遮罩規則，使其遮罩任何查詢結果集內的任何社會安全號碼或信用卡號碼，只顯示最後四碼。 另一個例子是，開發人員可以使用適當的資料遮罩保護個人識別資訊 (PII) 資料，為疑難排解目的查詢生產環境，而不會違反法務遵循規定。
 
- 動態資料遮罩的目的在於限制機密限制的曝光，防止不該存取資料的使用者檢視該資料。 動態資料遮罩並不是用來防止資料庫使用者直接連接到資料庫，以及執行會讓機密資料片段曝光的全面查詢。 動態資料遮罩旨在補足其他 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安全性功能 (稽核、加密、資料列層級安全性…)，強烈建議您額外搭配這些功能使用此功能，讓資料庫中的敏感性資料獲得更妥善的保護。  
+動態資料遮罩的目的在於限制機密限制的曝光，防止不該存取資料的使用者檢視該資料。 動態資料遮罩並不是用來防止資料庫使用者直接連接到資料庫，以及執行會讓機密資料片段曝光的全面查詢。 動態資料遮罩旨在補足其他 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安全性功能 (稽核、加密、資料列層級安全性…)，強烈建議您額外搭配這些功能使用此功能，讓資料庫中的敏感性資料獲得更妥善的保護。  
   
- 動態資料遮罩提供於 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 和 [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]，並且使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 命令來設定。 如需使用 Azure 入口網站設定動態資料遮罩的其他資訊，請參閱 [開始使用 SQL Database 動態資料遮罩 (Azure 入口網站)](http://azure.microsoft.com/documentation/articles/sql-database-dynamic-data-masking-get-started/)。  
+動態資料遮罩提供於 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 和 [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]，並且使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 命令來設定。 如需使用 Azure 入口網站設定動態資料遮罩的其他資訊，請參閱 [開始使用 SQL Database 動態資料遮罩 (Azure 入口網站)](http://azure.microsoft.com/documentation/articles/sql-database-dynamic-data-masking-get-started/)。  
   
 ## <a name="defining-a-dynamic-data-mask"></a>定義動態資料遮罩  
  您可以在資料庫中的資料行定義遮罩規則，以模糊該資料行中的資料。 遮罩有四種類型。  
@@ -69,12 +64,12 @@ ms.lasthandoff: 01/09/2018
   
 -   使用 `SELECT INTO` 或 `INSERT INTO` 將資料從遮罩的資料行複製到另一個資料表，會讓資料在目標資料表中也有遮罩。  
   
--   執行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 匯入與匯出時會套用動態資料遮罩。 包含遮罩資料行的資料庫會導致備份檔案含有遮罩資料 (假設檔案是由不具 **UNMASK** 權限的使用者所匯出)，匯入的資料庫則會包含靜態遮罩的資料。  
+-   執行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 匯入與匯出時會套用動態資料遮罩。 包含遮罩資料行的資料庫會導致匯出的資料檔案包含遮罩資料 (假設檔案是由不具 **UNMASK** 權限的使用者所匯出)，而匯入的資料庫則會包含靜態遮罩的資料。  
   
 ## <a name="querying-for-masked-columns"></a>查詢遮罩的資料行  
  使用 **sys.masked_columns** 檢視來查詢已套用遮罩函數的資料表資料行。 此檢視繼承自 **sys.columns** 檢視。 它會傳回 **sys.columns** 檢視中的所有資料行，加上 **is_masked** 和 **masking_function** 資料行，指出資料行是否已遮罩，若已遮罩，則指出定義了哪個遮罩函數。 此檢視只會顯示已套用遮罩函數的資料行。  
   
-```  
+```sql 
 SELECT c.name, tbl.name as table_name, c.is_masked, c.masking_function  
 FROM sys.masked_columns AS c  
 JOIN sys.tables AS tbl   
@@ -107,7 +102,7 @@ WHERE is_masked = 1;
 例如，請考慮資料庫主體具有足夠的權限對資料庫執行特定查詢，並嘗試猜測基礎資料，最終推斷實際的值。 假設我們在 `[Employee].[Salary]` 資料行上定義了遮罩，而這位使用者直接連接到資料庫並開始猜測值，最後推斷一組員工的 `[Salary]` 值︰
  
 
-```
+```sql
 SELECT ID, Name, Salary FROM Employees
 WHERE Salary > 99999 and Salary < 100001;
 ```
@@ -127,15 +122,15 @@ WHERE Salary > 99999 and Salary < 100001;
 ### <a name="creating-a-dynamic-data-mask"></a>建立動態資料遮罩  
  下列範例將建立有三種不同動態資料遮罩類型的資料表。 範例會填入資料表，並選擇顯示結果。  
   
-```  
+```sql
 CREATE TABLE Membership  
   (MemberID int IDENTITY PRIMARY KEY,  
    FirstName varchar(100) MASKED WITH (FUNCTION = 'partial(1,"XXXXXXX",0)') NULL,  
    LastName varchar(100) NOT NULL,  
-   Phone# varchar(12) MASKED WITH (FUNCTION = 'default()') NULL,  
+   Phone varchar(12) MASKED WITH (FUNCTION = 'default()') NULL,  
    Email varchar(100) MASKED WITH (FUNCTION = 'email()') NULL);  
   
-INSERT Membership (FirstName, LastName, Phone#, Email) VALUES   
+INSERT Membership (FirstName, LastName, Phone, Email) VALUES   
 ('Roberto', 'Tamburello', '555.123.4567', 'RTamburello@contoso.com'),  
 ('Janice', 'Galvin', '555.123.4568', 'JGalvin@contoso.com.co'),  
 ('Zheng', 'Mu', '555.123.4569', 'ZMu@contoso.net');  
@@ -144,7 +139,7 @@ SELECT * FROM Membership;
   
  新的使用者已建立，並已授與資料表的 **SELECT** 權限。 在 `TestUser` 檢視遮罩資料時執行了查詢。  
   
-```  
+```sql 
 CREATE USER TestUser WITHOUT LOGIN;  
 GRANT SELECT ON Membership TO TestUser;  
   
@@ -165,14 +160,14 @@ REVERT;
  使用 **ALTER TABLE** 陳述式將遮罩加入資料表的現有資料行中，或在該資料行編輯遮罩。  
 以下範例會將遮罩函數加入 `LastName` 資料行中：  
   
-```  
+```sql  
 ALTER TABLE Membership  
 ALTER COLUMN LastName ADD MASKED WITH (FUNCTION = 'partial(2,"XXX",0)');  
 ```  
   
  以下範例會變更 `LastName` 資料行的遮罩函數：  
-  
-```  
+
+```sql  
 ALTER TABLE Membership  
 ALTER COLUMN LastName varchar(100) MASKED WITH (FUNCTION = 'default()');  
 ```  
@@ -180,7 +175,7 @@ ALTER COLUMN LastName varchar(100) MASKED WITH (FUNCTION = 'default()');
 ### <a name="granting-permissions-to-view-unmasked-data"></a>授與權限以檢視未遮罩的資料  
  授與 **UNMASK** 權限可讓 `TestUser` 看見未遮罩的資料。  
   
-```  
+```sql
 GRANT UNMASK TO TestUser;  
 EXECUTE AS USER = 'TestUser';  
 SELECT * FROM Membership;  
@@ -193,7 +188,7 @@ REVOKE UNMASK TO TestUser;
 ### <a name="dropping-a-dynamic-data-mask"></a>卸除動態資料遮罩  
  以下陳述式會卸除先前範例中在 `LastName` 資料行建立的遮罩：  
   
-```  
+```sql  
 ALTER TABLE Membership   
 ALTER COLUMN LastName DROP MASKED;  
 ```  
@@ -204,5 +199,3 @@ ALTER COLUMN LastName DROP MASKED;
  [column_definition &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-column-definition-transact-sql.md)   
  [sys.masked_columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-masked-columns-transact-sql.md)   
  [開始使用 SQL 資料庫動態資料遮罩 (Azure Preview 入口網站)](http://azure.microsoft.com/documentation/articles/sql-database-dynamic-data-masking-get-started/)  
-  
-  

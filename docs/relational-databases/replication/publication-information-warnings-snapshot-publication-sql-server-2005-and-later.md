@@ -1,30 +1,28 @@
 ---
-title: "發行集資訊-警告-快照式發行集-SQL Server 2005+ | Microsoft Docs"
-ms.custom: 
+title: 發行集資訊-警告-快照式發行集-SQL Server 2005+ | Microsoft Docs
+ms.custom: ''
 ms.date: 03/04/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
 ms.component: replication
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 f1_keywords:
 - sql13.rep.monitor.publicationinfo.warningsandagents.snapshot.f1
 ms.assetid: 7aa2eb52-b6b7-4dd3-8483-8ef00d9f0435
-caps.latest.revision: 
+caps.latest.revision: 26
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: e9fe533275d23065494afd0edefc40102445288f
-ms.sourcegitcommit: ab25b08a312d35489a2c4a6a0d29a04bbd90f64d
+ms.openlocfilehash: 26bfecdfdf47b3626128392223977af22a4f01b3
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="publication-information-warnings-snapshot-publication-sql-server-2005-and-later"></a>發行集資訊，警告 (快照式發行集，SQL Server 2005 和更新的版本)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -37,7 +35,7 @@ ms.lasthandoff: 03/08/2018
 -   定義與警告相關聯的警示。  
   
 ## <a name="warnings-thresholds-and-alerts"></a>警告、臨界值和警示  
- 根據預設，複寫監視器會針對未初始化的訂閱顯示警告：[未初始化的訂閱]  狀態會在包含訂閱資訊之頁面的 [狀態]  資料行中顯示為警告。 針對快照式發行集，您也可以藉由設定 **[若訂閱將在臨界值內過期，就發出警告]**選項，來指定即將發生訂閱逾期時會產生警告。 如果達到或超出指定的臨界值，訂閱狀態會顯示為 **[即將過期/已過期]** (除非必須顯示具有更高優先權的問題)。  
+ 根據預設，複寫監視器會針對未初始化的訂閱顯示警告：[未初始化的訂閱]  狀態會在包含訂閱資訊之頁面的 [狀態]  資料行中顯示為警告。 針對快照式發行集，您也可以藉由設定 **[若訂閱將在臨界值內過期，就發出警告]** 選項，來指定即將發生訂閱逾期時會產生警告。 如果達到或超出指定的臨界值，訂閱狀態會顯示為 **[即將過期/已過期]** (除非必須顯示具有更高優先權的問題)。  
   
  除了在複寫監視器顯示警告外，達到臨界值也會觸發警示。 定義警示的方式，是按一下 **[設定警示]** ，並在 **[設定複寫警示]** 對話方塊中提供資訊。  
   

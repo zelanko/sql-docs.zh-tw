@@ -1,27 +1,24 @@
 ---
-title: "升級 Power Pivot for SharePoint | Microsoft Docs"
-ms.custom: 
+title: 升級 Power Pivot for SharePoint | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
-ms.prod_service: database-engine
-ms.service: 
-ms.component: install-windows
-ms.reviewer: 
+ms.prod: sql
+ms.prod_service: install
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: 80ba9e43-f3f0-4730-9fb1-2afd2dd3e6fc
-caps.latest.revision: 
+caps.latest.revision: 17
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: df0547a4e9665040cea0aff190586759d6a24cd4
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 6eb36f679c18a86f25d0f894208f81def02fa9b5
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="upgrade-power-pivot-for-sharepoint"></a>升級 Power Pivot for SharePoint
 
@@ -126,7 +123,7 @@ ms.lasthandoff: 02/09/2018
         > [!IMPORTANT]  
         >  您必須一律先處理第一個動作 **[升級伺服器陣列方案]**。 此動作會註冊用來設定伺服器的 PowerShell 指令程式。 如果此動作出現錯誤，請不要繼續。 在處理工作清單中的其他動作之前，請改用此錯誤所提供的資訊診斷並解決問題。  
   
-    7.  按一下 **[執行]** ，執行適用於此工作的所有動作。 只有在通過驗證檢查的情況下，才可以使用**[執行]** 。 當您按一下 [執行] 時，會出現下列警告，提醒您動作是在批次模式下處理：「**工具中標示為有效的所有組態設定都會套用到 SharePoint 伺服器陣列。您要繼續嗎？**」  
+    7.  按一下 **[執行]** ，執行適用於此工作的所有動作。 只有在通過驗證檢查的情況下，才可以使用 **[執行]** 。 當您按一下 [執行] 時，會出現下列警告，提醒您動作是在批次模式下處理：「**工具中標示為有效的所有組態設定都會套用到 SharePoint 伺服器陣列。您要繼續嗎？**」  
   
     8.  按一下 **[是]** 繼續。  
   
@@ -202,7 +199,7 @@ ms.lasthandoff: 02/09/2018
         > [!IMPORTANT]  
         >  您必須一律先處理第一個動作 **[升級伺服器陣列方案]**。 此動作會註冊用來設定伺服器的 PowerShell 指令程式。 如果此動作出現錯誤，請不要繼續。 在處理工作清單中的其他動作之前，請改用此錯誤所提供的資訊診斷並解決問題。  
   
-    8.  按一下 **[執行]** ，執行適用於此工作的所有動作。 只有在通過驗證檢查的情況下，才可以使用**[執行]** 。 當您按一下 **[執行]**時，會出現下列警告，提醒您動作是在批次模式下處理：「工具中標示為有效的所有組態設定都會套用到 SharePoint 伺服器陣列。 您要繼續嗎?」  
+    8.  按一下 **[執行]** ，執行適用於此工作的所有動作。 只有在通過驗證檢查的情況下，才可以使用 **[執行]** 。 當您按一下 **[執行]** 時，會出現下列警告，提醒您動作是在批次模式下處理：「工具中標示為有效的所有組態設定都會套用到 SharePoint 伺服器陣列。 您要繼續嗎?」  
   
     9. 按一下 **[是]** 繼續。  
   

@@ -1,28 +1,24 @@
 ---
-title: "在 FIPS 模式 |Microsoft 文件"
-ms.custom: 
+title: 在 FIPS 模式 |Microsoft 文件
+ms.custom: ''
 ms.date: 01/19/2018
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
-ms.component: jdbc
-ms.reviewer: 
+ms.prod: sql
+ms.prod_service: connectivity
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- drivers
-ms.tgt_pltfrm: 
-ms.topic: article
-ms.assetid: 
-caps.latest.revision: 
+ms.technology: connectivity
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
+ms.assetid: ''
+caps.latest.revision: 1
 author: v-nisidh
 ms.author: v-nisidh
 manager: andrela
-ms.workload: Inactive
-ms.openlocfilehash: e6e60a44f4dbe890683436ea6f6801f504396239
-ms.sourcegitcommit: 9d0467265e052b925547aafaca51e5a5e93b7e38
+ms.openlocfilehash: 48c0ca49b743a012130a46dda30dd5053e52cea3
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/02/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="fips-mode"></a>在 FIPS 模式
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -93,7 +89,7 @@ public boolean isFIPS() throws Exception {
 |屬性|型別|預設值|Description|注意|
 |---|---|---|---|---|
 |encrypt|布林值 ["，則為 true / false"]|"false"|JVM 已啟用則為 FIPS 加密屬性應該是**，則為 true**||
-|TrustServerCertificate|布林值 ["，則為 true / false"]|"false"|使用者必須要驗證憑證鏈結，因此，使用者應該使用 FIPS， **"false"**這個屬性的值。 ||
+|TrustServerCertificate|布林值 ["，則為 true / false"]|"false"|使用者必須要驗證憑證鏈結，因此，使用者應該使用 FIPS， **"false"** 這個屬性的值。 ||
 |trustStore|字串|null|您匯入您的憑證的 Java Keystore 檔案路徑。 如果您的系統，則不需要傳遞任何項目上安裝憑證。 驅動程式會使用 cacerts 或 jssecacerts 檔案。||
 |trustStorePassword|字串|null|用於檢查 trustStore 資料完整性的密碼。||
 |fips|布林值 ["，則為 true / false"]|"false"|這個屬性應該是 fips 已啟用則為 JVM **，則為 true**|加入 6.1.4 (穩定版本 6.2.2)||

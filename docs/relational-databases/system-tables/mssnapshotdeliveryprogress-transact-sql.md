@@ -1,16 +1,15 @@
 ---
-title: "MSsnapshotdeliveryprogress (TRANSACT-SQL) |Microsoft 文件"
-ms.custom: 
+title: MSsnapshotdeliveryprogress (TRANSACT-SQL) |Microsoft 文件
+ms.custom: ''
 ms.date: 03/04/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
 ms.component: system-tables
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -22,16 +21,15 @@ dev_langs:
 helpviewer_keywords:
 - MSsnapshotdeliveryprogress system table
 ms.assetid: 9164bfe2-6fc4-4b52-946a-09ea3cf67041
-caps.latest.revision: 
+caps.latest.revision: 30
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: d7fbb80963679858339cc1df9206f101968f4f8e
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 0989999080b57bf2f78b6a297df29a0ee8a32f35
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="mssnapshotdeliveryprogress-transact-sql"></a>MSsnapshotdeliveryprogress (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,13 +38,13 @@ ms.lasthandoff: 11/21/2017
   
 |資料行名稱|資料類型|Description|  
 |-----------------|---------------|-----------------|  
-|**session_token**|**nvarchar （260)**|識別通往順利傳遞檔案之快照集資料夾的路徑。 發行集使用參數化的篩選，字串**dynsnap**會附加至的值。|  
+|**session_token**|**nvarchar(260)**|識別通往順利傳遞檔案之快照集資料夾的路徑。 發行集使用參數化的篩選，字串**dynsnap**會附加至的值。|  
 |**progress_token_hash**|**int**|產生的雜湊值的值為基礎*progress_token*用來改善查詢效能的給定*progress_token*值。|  
-|**progress_token**|**nvarchar （500)**|識別已經順利傳遞的檔案，該值是檔案名稱和路徑的組合。|  
+|**progress_token**|**nvarchar(500)**|識別已經順利傳遞的檔案，該值是檔案名稱和路徑的組合。|  
 |**progress_timestamp**|**datetime**|**Datetime**指出快照集檔案已成功傳遞的值。|  
   
-## <a name="see-also"></a>請參閱＜  
- [複寫資料表 &#40;TRANSACT-SQL &#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
+## <a name="see-also"></a>另請參閱  
+ [複寫資料表&#40;Transact SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [複寫檢視 &#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  
   
   

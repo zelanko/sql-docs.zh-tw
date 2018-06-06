@@ -1,33 +1,20 @@
 ---
-title: "運算子 （MDX 語法） |Microsoft 文件"
-ms.custom: 
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: language-reference
-dev_langs: kbMDX
-helpviewer_keywords:
-- Multidimensional Expressions [Analysis Services], operators
-- operators [MDX]
-- precedence [MDX]
-- MDX [Analysis Services], operators
-ms.assetid: 1ff5a529-88fd-4619-86e1-19fa214650d6
-caps.latest.revision: "29"
-author: Minewiskan
+title: 運算子 （MDX 語法） |Microsoft 文件
+ms.date: 05/30/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: mdx
+ms.topic: reference
 ms.author: owend
-manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: 87304b4a33daa7d9460983a403136974c46c1f81
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: 309311bfcef0ada531e391e99091a788715c8e2d
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34580660"
 ---
 # <a name="operators-mdx-syntax"></a>運算子 (MDX 語法)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -91,12 +78,12 @@ ms.lasthandoff: 01/08/2018
   
 -   或  
   
- 如需 MDX 運算子的詳細資訊，請參閱[MDX 運算子參考 &#40;MDX &#41;](../mdx/mdx-operator-reference-mdx.md).  
+ 如需 MDX 運算子的詳細資訊，請參閱[MDX 運算子參考&#40;MDX&#41;](../mdx/mdx-operator-reference-mdx.md)。  
   
 ### <a name="determining-results"></a>決定結果  
  當您將簡單的運算式組合成複雜的運算式時，結合了資料類型優先順序規則的運算子規則，即可決定結果值的資料類型。  
   
- 如果結果是字元或 Unicode 值， 結合運算子的規則與定序優先順序的規則，就可以決定結果的定序。 如需有關定序的詳細資訊，請參閱[語言和定序 &#40;Analysis Services &#41;](../analysis-services/languages-and-collations-analysis-services.md).  
+ 如果結果是字元或 Unicode 值， 結合運算子的規則與定序優先順序的規則，就可以決定結果的定序。 如需有關定序的詳細資訊，請參閱[語言和定序&#40;Analysis Services&#41;](../analysis-services/languages-and-collations-analysis-services.md)。  
   
  另外也有一些規則，根據簡單運算式的有效位數、小數位數與長度，決定結果的有效位數、小數位數與長度。  
   
@@ -111,8 +98,8 @@ ms.lasthandoff: 01/08/2018
 |Tuple|成員|\<tuple >.item(0)|  
 |Tuple|純量|\<tuple >.value|  
   
-## <a name="see-also"></a>請參閱  
- [MDX 運算子參考 &#40;MDX &#41;](../mdx/mdx-operator-reference-mdx.md)   
- [MDX 語法元素 &#40;MDX &#41;](../mdx/mdx-syntax-elements-mdx.md)  
+## <a name="see-also"></a>另請參閱  
+ [MDX 運算子參考&#40;MDX&#41;](../mdx/mdx-operator-reference-mdx.md)   
+ [MDX 語法元素&#40;MDX&#41;](../mdx/mdx-syntax-elements-mdx.md)  
   
   

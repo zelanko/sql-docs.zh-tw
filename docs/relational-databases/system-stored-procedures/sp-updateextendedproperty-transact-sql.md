@@ -1,16 +1,14 @@
 ---
-title: "sp_updateextendedproperty (TRANSACT-SQL) |Microsoft 文件"
-ms.custom: 
+title: sp_updateextendedproperty (TRANSACT-SQL) |Microsoft 文件
+ms.custom: ''
 ms.date: 04/12/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: system-objects
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_updateextendedproperty_TSQL
@@ -20,16 +18,16 @@ dev_langs:
 helpviewer_keywords:
 - sp_updateextendedproperty
 ms.assetid: 7f02360f-cb9e-48b4-b75f-29b4bc9ea304
-caps.latest.revision: 
+caps.latest.revision: 41
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 284eb1e8d95ff94091df493048826e3a958ffb8c
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: fef4a744e237d81edc15ec7dbcef79a67e5edc70
+ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="spupdateextendedproperty-transact-sql"></a>sp_updateextendedproperty (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -74,13 +72,13 @@ sp_updateextendedproperty
  這是所指定之層級 1 物件類型的名稱。 *level0_object_name*是**sysname**預設值是 NULL。  
   
  [ @level1type=] {'*level1_object_type*'}  
- 這是層級 1 物件的類型。 *level1_object_type*是**varchar （128)**預設值是 NULL。 有效輸入如下：AGGREGATE、DEFAULT、FUNCTION、LOGICAL FILE NAME、PROCEDURE、QUEUE、RULE、SYNONYM、TABLE、TABLE_TYPE、TYPE、VIEW、XML SCHEMA COLLECTION 和 NULL。  
+ 這是層級 1 物件的類型。 *level1_object_type*是**varchar （128)** 預設值是 NULL。 有效輸入如下：AGGREGATE、DEFAULT、FUNCTION、LOGICAL FILE NAME、PROCEDURE、QUEUE、RULE、SYNONYM、TABLE、TABLE_TYPE、TYPE、VIEW、XML SCHEMA COLLECTION 和 NULL。  
   
  [ @level1name=] {'*level1_object_name*'}  
  這是所指定之層級 1 物件類型的名稱。 *level1_object_name*是**sysname**預設值是 NULL。  
   
  [ @level2type=] {'*level2_object_type*'}  
- 這是層級 2 物件的類型。 *level2_object_type*是**varchar （128)**預設值是 NULL。 有效輸入如下：COLUMN、CONSTRAINT、EVENT NOTIFICATION、INDEX、PARAMETER、TRIGGER 和 NULL。  
+ 這是層級 2 物件的類型。 *level2_object_type*是**varchar （128)** 預設值是 NULL。 有效輸入如下：COLUMN、CONSTRAINT、EVENT NOTIFICATION、INDEX、PARAMETER、TRIGGER 和 NULL。  
   
  [ @level2name=] {'*level2_object_name*'}  
  這是所指定之層級 2 物件類型的名稱。 *level2_object_name*是**sysname**，預設值是 NULL。  
@@ -141,11 +139,11 @@ EXEC sp_updateextendedproperty
 GO  
 ```  
   
-## <a name="see-also"></a>請參閱＜  
- [Database Engine 預存程序 &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
- [sys.fn_listextendedproperty &#40;TRANSACT-SQL &#41;](../../relational-databases/system-functions/sys-fn-listextendedproperty-transact-sql.md)   
- [sp_addextendedproperty &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/sp-addextendedproperty-transact-sql.md)   
- [sp_dropextendedproperty &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/sp-dropextendedproperty-transact-sql.md)   
- [sys.extended_properties &#40;TRANSACT-SQL &#41;](../../relational-databases/system-catalog-views/extended-properties-catalog-views-sys-extended-properties.md)  
+## <a name="see-also"></a>另請參閱  
+ [Database Engine 預存程序&#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
+ [sys.fn_listextendedproperty &#40;Transact SQL&#41;](../../relational-databases/system-functions/sys-fn-listextendedproperty-transact-sql.md)   
+ [sp_addextendedproperty &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-addextendedproperty-transact-sql.md)   
+ [sp_dropextendedproperty &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropextendedproperty-transact-sql.md)   
+ [sys.extended_properties &#40;Transact SQL&#41;](../../relational-databases/system-catalog-views/extended-properties-catalog-views-sys-extended-properties.md)  
   
   

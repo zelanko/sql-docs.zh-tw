@@ -1,30 +1,28 @@
 ---
 title: MSSQL_ENG002601 | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
 ms.component: replication
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - MSSQL_ENG002601 error
 ms.assetid: 657c3ae6-9e4b-4c60-becc-4caf7435c1dc
-caps.latest.revision: 
+caps.latest.revision: 15
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: e708bdefdee6680a7dcc6d44048a1714a6389916
-ms.sourcegitcommit: ab25b08a312d35489a2c4a6a0d29a04bbd90f64d
+ms.openlocfilehash: 64e6968cb9cabe62a9b939b194f6f97b10110f2a
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="mssqleng002601"></a>MSSQL_ENG002601
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -68,7 +66,7 @@ ms.lasthandoff: 03/08/2018
   
 -   在插入系統資料表 **MSmerge_contents**期間會發生此錯誤。  
   
-     發生此錯誤是因為聯結篩選屬性 **join_unique_key**的值不正確。 只有在父資料表中的聯結資料行為唯一時，此屬性才應設定為 TRUE。 如果屬性設定為 TRUE，但是資料行不是唯一的，則會引發此錯誤。 如需有關設定此屬性的詳細資訊，請參閱＜ [Define and Modify a Join Filter Between Merge Articles](../../relational-databases/replication/publish/define-and-modify-a-join-filter-between-merge-articles.md)＞。  
+     發生此錯誤是因為聯結篩選屬性 **join_unique_key**的值不正確。 只有在父資料表中的聯結資料行為唯一時，此屬性才應設定為 TRUE。 如果屬性設定為 TRUE，但是資料行不是唯一的，則會引發此錯誤。 如需有關設定此屬性的詳細資訊，請參閱＜ [定義和修改合併發行項之間的聯結篩選](../../relational-databases/replication/publish/define-and-modify-a-join-filter-between-merge-articles.md)＞。  
   
 ## <a name="see-also"></a>另請參閱  
  [錯誤和事件參考 &#40;複寫&#41;](../../relational-databases/replication/errors-and-events-reference-replication.md)  

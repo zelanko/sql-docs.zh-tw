@@ -1,31 +1,17 @@
 ---
-title: "第 3 課： 探索和視覺化資料 |Microsoft 文件"
-ms.custom: 
-ms.date: 07/26/2017
-ms.reviewer: 
-ms.suite: sql
-ms.prod: machine-learning-services
-ms.prod_service: machine-learning-services
-ms.component: 
-ms.technology: 
-ms.tgt_pltfrm: 
+title: 課程 3 瀏覽及視覺化資料 |Microsoft 文件
+ms.prod: sql
+ms.technology: machine-learning
+ms.date: 04/15/2018
 ms.topic: tutorial
-applies_to:
-- SQL Server 2016
-dev_langs:
-- R
-- TSQL
-ms.assetid: 7fe670f3-5e62-43ef-97eb-b9af54df9128
-caps.latest.revision: 
-author: jeannt
-ms.author: jeannt
-manager: cgronlund
-ms.workload: Inactive
-ms.openlocfilehash: 7d0d272c2623d2a23a8e486f15c320d40cba6bf5
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+author: HeidiSteen
+ms.author: heidist
+manager: cgronlun
+ms.openlocfilehash: 4be76ebbb8f082e84a00bfe93b36c9bd8c2c0a81
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="lesson-3-explore-and-visualize-the-data"></a>第 3 課： 探索和視覺化資料
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -132,7 +118,7 @@ R 通常會使用 R 裝置建立影像，以進行圖形輸出。 您可以擷�
   
     **結果**
     
-    *plot*
+    *繪圖*
     *0xFFD8FFE000104A4649...*
   
 2.  開啟 PowerShell 命令提示字元，並將適當的執行個體名稱、資料庫名稱、使用者名稱和認證提供為引數來執行下列命令︰

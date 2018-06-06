@@ -1,35 +1,31 @@
 ---
-title: "儲存 Deadlock Graph (SQL Server Profiler) | Microsoft Docs"
-ms.custom: 
+title: 儲存 Deadlock Graph (SQL Server Profiler) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
-ms.prod_service: database-engine
-ms.service: 
-ms.component: performance
-ms.reviewer: 
+ms.prod: sql
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: performance
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - deadlocks [SQL Server], saving deadlock graphs
 - graphs [SQL Server]
 - saving deadlock graphs
 ms.assetid: bf1fc906-abd6-4a89-842e-da0d66b2defe
-caps.latest.revision: 
+caps.latest.revision: 26
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 0aaa9c41b63479eda21bf1f0e862639c50160495
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: dc79e1f5434361c899e86b7cbc8beb557a98d3a4
+ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="save-deadlock-graphs-sql-server-profiler"></a>儲存 Deadlock Graph (SQL Server Profiler)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 本主題描述如何使用 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 儲存 Deadlock Graph。 死結圖表會儲存為 XML 檔。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  此主題描述如何使用 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]儲存死結圖表。 死結圖表會儲存為 XML 檔。  
   
 ## <a name="save-deadlock-graph-events-separately"></a>個別儲存 Deadlock Graph 事件  
   
@@ -46,7 +42,7 @@ ms.lasthandoff: 01/18/2018
   
 4. 執行下列其中之一：  
   
-    -   若要將追蹤擷取至檔案，請選取 [儲存至檔案] 核取方塊。 在 **[設定最大檔案大小]**中指定一個值。  
+    -   若要將追蹤擷取至檔案，請選取 [儲存至檔案] 核取方塊。 在 **[設定最大檔案大小]** 中指定一個值。  
   
          (選擇性) 選取 **[啟用檔案換用]** 與 **[伺服器處理追蹤資料]** 核取方塊。 
   

@@ -1,39 +1,37 @@
 ---
-title: "啟用外部指令碼伺服器設定選項 | Microsoft Docs"
+title: 啟用外部指令碼伺服器設定選項 | Microsoft Docs
 ms.date: 11/13/2017
-ms.prod: sql-non-specified
-ms.prod_service: database-engine
-ms.service: 
-ms.component: configure-windows
-ms.reviewer: 
+ms.prod: sql
+ms.prod_service: high-availability
+ms.reviewer: ''
 ms.suite: sql
-ms.custom: 
-ms.technology: database-engine
-ms.tgt_pltfrm: 
+ms.custom: ''
+ms.technology: configuration
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - external scripts enabled
 - external_scripts_enabled_TSQL
-helpviewer_keywords: external scripts enabled option
+helpviewer_keywords:
+- external scripts enabled option
 ms.assetid: 9d0ce165-8719-4007-9ae8-00f85cab3a0d
-caps.latest.revision: "9"
+caps.latest.revision: 9
 author: jeannt
 ms.author: edmaca
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 8d92fc9873ffd3fded2e0f614b0f633895d6a715
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: a84fc90e8ec1f18c97d5ba6d56a7c515a5f4efb6
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="external-scripts-enabled-server-configuration-option"></a>啟用外部指令碼伺服器設定選項
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-**適用於：** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] [!INCLUDE[rsql-productname-md](../../includes/rsql-productname-md.md)] 和 [!INCLUDE[sssql17-md](../../includes/sssql17-md.md)] [!INCLUDE[rsql-productnamenew-md](../../includes/rsql-productnamenew-md.md)]
+**適用對象**：[!INCLUDE[sssql15-md](../../includes/sssql15-md.md)][!INCLUDE[rsql-productname-md](../../includes/rsql-productname-md.md)] 和 [!INCLUDE[sssql17-md](../../includes/sssql17-md.md)][!INCLUDE[rsql-productnamenew-md](../../includes/rsql-productnamenew-md.md)]
 
 使用 **external scripts enabled** 選項以啟用具有特定遠端語言擴充功能之指令碼的執行。 依預設，此屬性為 OFF。 如果已安裝**進階分析服務**，安裝程式就可以選擇將此屬性設定為 true。
 
-## <a name="remarks"></a>備註
+## <a name="remarks"></a>Remarks
 
 您必須先啟用 external script enabled 選項，才能使用 [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) 程序來執行外部指令碼。 使用 **sp_execute_external_script** 執行以所支援語言 (例如 R 或 Python) 所撰寫的指令碼。 
 

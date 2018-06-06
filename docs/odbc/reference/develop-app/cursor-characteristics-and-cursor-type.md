@@ -1,31 +1,28 @@
 ---
-title: "資料指標的特性以及資料指標類型 |Microsoft 文件"
-ms.custom: 
+title: 資料指標的特性以及資料指標類型 |Microsoft 文件
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
-ms.component: odbc
-ms.reviewer: 
+ms.prod: sql
+ms.prod_service: connectivity
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: connectivity
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - scrollable cursors [ODBC]
 - cursors [ODBC], scrollable
 - cursors [ODBC], creating
 ms.assetid: 6f67edd2-ae71-4ca0-9b2d-abf4c20dc17b
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
-ms.workload: Inactive
-ms.openlocfilehash: 0314dfcc66e783a48a7474b0b0656a93b1bf3822
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+manager: craigg
+ms.openlocfilehash: b73c8d966f0974b09b672e497238f122bf1b13da
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="cursor-characteristics-and-cursor-type"></a>資料指標的特性以及資料指標類型
 應用程式可以指定資料指標，而不是指定資料指標類型 （順向、 靜態、 索引鍵集驅動或動態） 的特性。 若要這樣做，應用程式 （藉由設定 SQL_ATTR_CURSOR_SCROLLABLE 陳述式屬性） 的資料指標的可捲動性和敏感度 （藉由設定 SQL_ATTR_CURSOR_SENSITIVITY 陳述式屬性） 之前先選取開啟資料指標的陳述式上控制代碼。 驅動程式再選擇最有效率的方式，提供特性的資料指標類型要求之應用程式。  

@@ -1,31 +1,29 @@
 ---
-title: "伺服器屬性的範例 (VBScript) |Microsoft 文件"
-ms.technology:
-- drivers
-ms.custom: 
+title: 伺服器屬性的範例 (VBScript) |Microsoft 文件
+ms.technology: connectivity
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.component: reference
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 dev_langs:
 - VB
 helpviewer_keywords:
 - Server property [RDS], VBScript example
 ms.assetid: 0fe57af9-a4d0-4986-a2e3-beaa4d26ed58
-caps.latest.revision: 
+caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 609afcec22d49c7391f48042720367dce1146681
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 56dd3ab941a40b6b574a7fca5b907c18b126ac29
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="server-property-example-vbscript"></a>伺服器屬性的範例 (VBScript)
 > [!IMPORTANT]
@@ -95,7 +93,7 @@ body {
 <!-- EndServerDesignVBS -->  
 ```  
   
- 下列範例示範如何設定必要的參數**.RDSDataControl**在執行階段。 若要測試此範例中，剪下、 貼上這段程式碼正常的 ASP 文件和命名**ServerRuntimeVBS.asp**。 ASP 指令碼會找出您的伺服器。  
+ 下列範例示範如何設定必要的參數 **.RDSDataControl**在執行階段。 若要測試此範例中，剪下、 貼上這段程式碼正常的 ASP 文件和命名**ServerRuntimeVBS.asp**。 ASP 指令碼會找出您的伺服器。  
   
 ```  
 <!-- BeginServerRuntimeVBS -->  

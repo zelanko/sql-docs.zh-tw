@@ -1,16 +1,14 @@
 ---
-title: "組態函式 (Transact-SQL) | Microsoft Docs"
-ms.custom: 
+title: 組態函式 (Transact-SQL) | Microsoft Docs
+ms.custom: ''
 ms.date: 07/24/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
 ms.component: t-sql|functions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: t-sql
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - TSQL
@@ -20,21 +18,20 @@ helpviewer_keywords:
 - current configuration information
 - configuration functions [SQL Server]
 ms.assetid: 066f15e7-3406-437e-93c4-3f247c529169
-caps.latest.revision: 
+caps.latest.revision: 30
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 56bab03c9e25db7e425a0bbb4416b47f1d39b4a9
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 2011645518636d05f5076a4cb8dbf2c3b1470d23
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="configuration-functions-transact-sql"></a>組態函數 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-下列純量函數會傳回目前組態選項設定的相關資訊：
+這些純量函數會傳回目前組態選項設定的相關資訊：
   
 |||  
 |-|-|  
@@ -47,7 +44,7 @@ ms.lasthandoff: 11/21/2017
 |[@@MAX_PRECISION](../../t-sql/functions/max-precision-transact-sql.md)|[@@VERSION](../../t-sql/functions/version-transact-sql-configuration-functions.md)|  
 |[@@NESTLEVEL](../../t-sql/functions/nestlevel-transact-sql.md)||  
   
-所有組態函數都不具決定性。 這表示這些函數並非每次呼叫時，都會傳回相同的結果，即便使用同一組輸入值也是如此。 如需確定性函式的詳細資訊，請參閱[確定性與非確定性函式](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md)。
+所有組態函數的運算結果充滿不確定性。 換言之，這些函數並非每次呼叫時，都會傳回相同的結果，即便使用同一組輸入值也是如此。 如需函式確定性的詳細資訊，請參閱[決定性和非決定性函式](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md)。
   
 ## <a name="see-also"></a>另請參閱
 [函式 &#40;Transact-SQL&#41;](../../t-sql/functions/functions.md)

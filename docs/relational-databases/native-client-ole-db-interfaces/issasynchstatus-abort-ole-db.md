@@ -1,16 +1,15 @@
 ---
-title: "Issasynchstatus:: Abort (OLE DB) |Microsoft 文件"
-ms.custom: 
+title: 'Issasynchstatus:: Abort (OLE DB) |Microsoft 文件'
+ms.custom: ''
 ms.date: 03/07/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
 ms.component: native-client-ole-db-interfaces
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - ISSAsynchStatus::Abort (OLE DB)
@@ -18,16 +17,16 @@ apitype: COM
 helpviewer_keywords:
 - Abort method
 ms.assetid: 2a4bd312-839a-45a8-a299-fc8609be9a2a
-caps.latest.revision: 
+caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: e74ff2d81fccff596612cc591e750c0ed6756e7f
-ms.sourcegitcommit: a0aa5e611a0e6ebb74ac1e2f613e8916dc7a7617
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: cf05d99617114059dac55794b68ca7bf2222ca4e
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/24/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="issasynchstatusabort-ole-db"></a>ISSAsynchStatus::Abort (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -74,7 +73,7 @@ HRESULT Abort(
   
  **Issasynchstatus:: Abort**上的資料來源物件上呼叫**idbinitialize:: Initialize**後續取消之前初始化，但呼叫，或已逾時。此資料來源物件仍未初始化。  
   
- **Issasynchstatus:: Abort**所在的資料列集上呼叫**itransaction:: Commit**或**itransaction:: Abort**之前呼叫和資料列集沒有未被認可或中止和是在廢止狀態。  
+ **Issasynchstatus:: Abort**所在的資料列集上呼叫**itransaction:: Commit**或**itransaction:: Abort**之前呼叫和資料列集沒有未被認可或中止，且處於廢止狀態。  
   
  **Issasynchstatus:: Abort**已非同步地取消其初始化階段中的資料列集上呼叫。 此資料列集處於廢止狀態。  
   

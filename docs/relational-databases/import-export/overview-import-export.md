@@ -1,29 +1,29 @@
 ---
-title: "匯入和匯出 SQL Server 和 Azure SQL Database 的資料 | Microsoft Docs"
-ms.custom: 
+title: 匯入和匯出 SQL Server 和 Azure SQL Database 的資料 | Microsoft Docs
+ms.custom: ''
 ms.date: 10/27/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
 ms.component: import-export
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 74f7d68b9e3feb4e65c1a287b69a580802719199
-ms.sourcegitcommit: fbbb050f43ecb780281b370ec73fdcd472eb0ecc
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 57b59258776e0bd4d582e44a650cd0450a82d549
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/06/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="import-and-export-data-from-sql-server-and-azure-sql-database"></a>匯入和匯出 SQL Server 和 Azure SQL Database 的資料
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 您可以使用多種方法將資料匯入 SQL Server 和 Azure SQL Database 中，及從中匯出資料。 這些方法包括 Transact-SQL 陳述式、命令列工具和精靈。
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+您可以使用各種方法在 SQL Server 和 Azure SQL Database 匯入和匯出資料。 這些方法包括 Transact-SQL 陳述式、命令列工具和精靈。
 
 您也可以匯入和匯出各種不同資料格式的資料。 這些格式包括一般檔案、Excel、主要關聯式資料庫，以及各種雲端服務。
 

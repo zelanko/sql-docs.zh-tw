@@ -1,16 +1,14 @@
 ---
 title: GROUPING_ID (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/03/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
 ms.component: t-sql|functions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: t-sql
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - GROUPING_ID_TSQL
@@ -21,16 +19,15 @@ helpviewer_keywords:
 - GROUP BY clause, GROUPING_ID
 - GROUPING_ID function
 ms.assetid: c1050658-b19f-42ee-9a05-ecd6a73b896c
-caps.latest.revision: 
+caps.latest.revision: 36
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 048ce847992563943a7ff358dcda6ebe249a7310
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 33ab24df5acdf5468909995f2d39ad45d978d2fd
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="groupingid-transact-sql"></a>GROUPING_ID (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -57,7 +54,7 @@ GROUPING_ID ( <column_expression>[ ,...n ] )
  GROUPING_ID \<column_expression> 必須完全符合 GROUP BY 清單中的運算式。 例如，若您要根據 DATEPART (yyyy, \<*column name*>) 分組，請使用 GROUPING_ID (DATEPART (yyyy, \<資料行名稱>))。若您要根據 \<資料行名稱> 分組，請使用 GROUPING_ID (\<資料行名稱>)。  
   
 ## <a name="comparing-groupingid--to-grouping-"></a>比較 GROUPING_ID () 與 GROUPING ()  
- GROUPING_ID (\<資料行運算式> [ **,**...*n* ]) 針對每一個輸出資料列中資料行清單中的每一個資料行輸入等於 GROUPING (\<column_expression>) 傳回的項目 (當作一和零的字串)。 GROUPING_ID 會將此字串解譯為以 2 為基底的數字，並傳回對等的整數。 例如，假設有以下的陳述式：`SELECT a, b, c, SUM(d),``GROUPING_ID(a,b,c)``FROM T GROUP BY <group by list>`。 下表顯示 GROUPING_ID () 輸入和輸出值。  
+ GROUPING_ID (\<column_expression> [ **,**...*n* ]) 針對每一個輸出資料列中資料行清單中的每一個資料行輸入等於 GROUPING (\<column_expression>) 傳回的項目 (當作一和零的字串)。 GROUPING_ID 會將此字串解譯為以 2 為基底的數字，並傳回對等的整數。 例如，假設有以下的陳述式：`SELECT a, b, c, SUM(d),``GROUPING_ID(a,b,c)``FROM T GROUP BY <group by list>`。 下表顯示 GROUPING_ID () 輸入和輸出值。  
   
 |彙總資料行|GROUPING_ID (a, b, c) 輸入 = GROUPING(a) + GROUPING(b) + GROUPING(c)|GROUPING_ID () 輸出|  
 |------------------------|---------------------------------------------------------------------------------------|------------------------------|  
@@ -245,7 +242,7 @@ ORDER BY
 ### <a name="c-using-groupingid--with-rollup-and-cube-to-identify-grouping-levels"></a>C. 搭配 ROLLUP 和 CUBE 使用 GROUPING_ID () 來識別群組層級  
  下列範例的程式碼會示範如何使用 `GROUPING()` 來計算 `Bit Vector(base-2)` 資料行。 `GROUPING_ID()` 是用來計算對應的 `Integer Equivalent` 資料行。 `GROUPING_ID()` 函數中的資料行順序與 `GROUPING()` 函數串連之資料行的資料行順序相反。  
   
- 在這些範例中，`GROUPING_ID()` 是用來針對 `Grouping Level` 資料行中的每一個資料列各建立一個值，以識別群組的層級。 群組層級不一定是以 1 (0, 1, 2,...*n*) 開頭之整數的連續清單。  
+ 在這些範例中，`GROUPING_ID()` 是用來針對 `Grouping Level` 資料行中的每一個資料列各建立一個值，以識別群組的層級。 群組層級不一定是以 1 (0、1、2...*n*) 開頭之整數的連續清單。  
   
 > [!NOTE]  
 >  GROUPING 和 GROUPING_ID 可用於 HAVING 子句來篩選結果集。  
@@ -423,7 +420,7 @@ ORDER BY GROUPING_ID(DATEPART(yyyy,OrderDate)
 |NULL|NULL|NULL|9364513.6416|111|7|總計|  
   
 ## <a name="see-also"></a>另請參閱  
- [&#40;Transact SQL&#41;](../../t-sql/functions/grouping-transact-sql.md)   
+ [GROUPING &#40;Transact-SQL&#41;](../../t-sql/functions/grouping-transact-sql.md)   
  [GROUP BY &#40;Transact-SQL&#41;](../../t-sql/queries/select-group-by-transact-sql.md)  
   
   

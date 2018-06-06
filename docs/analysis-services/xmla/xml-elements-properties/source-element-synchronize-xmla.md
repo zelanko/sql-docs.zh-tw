@@ -1,39 +1,24 @@
 ---
-title: "Source 元素 (Synchronize) (XMLA) |Microsoft 文件"
-ms.custom: 
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services, azure-analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+title: Source 元素 (Synchronize) (XMLA) |Microsoft 文件
+ms.date: 05/08/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: xmla
 ms.topic: reference
-apiname: Source Element (Synchronize)
-apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
-apitype: Schema
-applies_to: SQL Server 2016 Preview
-f1_keywords:
-- urn:schemas-microsoft-com:xml-analysis#Source
-- http://schemas.microsoft.com/analysisservices/2003/engine#Source
-- microsoft.xml.analysis.source
-helpviewer_keywords: Source element
-ms.assetid: 0a857f91-771f-4c5e-8bf7-4bf17442d4df
-caps.latest.revision: "11"
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: e7543001263a4f12f3c3f1459ff0fe0c98d0d964
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 40afa5695c1f3629f9d88054d3d7129f95af240b
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34576400"
 ---
 # <a name="source-element-synchronize-xmla"></a>Source 元素 (Synchronize) (XMLA)
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]表示要從中同步處理期間的目標資料庫的來源資料庫[Synchronize](../../../analysis-services/xmla/xml-elements-commands/synchronize-element-xmla.md)命令。  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
+  表示要從中同步處理期間的目標資料庫的來源資料庫[Synchronize](../../../analysis-services/xmla/xml-elements-commands/synchronize-element-xmla.md)命令。  
   
 ## <a name="syntax"></a>語法  
   
@@ -63,9 +48,9 @@ ms.lasthandoff: 01/08/2018
 |子元素|[ConnectionString](../../../analysis-services/xmla/xml-elements-properties/connectionstring-element-xmla.md)，[物件](../../../analysis-services/xmla/xml-elements-properties/object-element-xmla.md)|  
   
 ## <a name="remarks"></a>備註  
- **Synchronize**命令會使用**來源**項目建立的連接，以及識別執行個體上的資料庫[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]用來同步處理目標資料庫。  
+ **Synchronize**命令會使用**來源**項目建立的連接，以及識別用來同步處理目標資料庫的 Analysis Services 執行個體上的資料庫。  
   
-## <a name="see-also"></a>請參閱  
- [屬性 &#40;XMLA &#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
+## <a name="see-also"></a>另請參閱
+ [屬性&#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
   
   

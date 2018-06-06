@@ -1,31 +1,31 @@
 ---
-title: "建立查詢 (Visual Database Tools) | Microsoft Docs"
-ms.custom: 
+title: 建立查詢 (Visual Database Tools) | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
 ms.component: ssms-visual-db
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: tools-ssms
-ms.tgt_pltfrm: 
-ms.topic: article
-helpviewer_keywords: queries [SQL Server], creating
+ms.technology: ssms
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
+helpviewer_keywords:
+- queries [SQL Server], creating
 ms.assetid: 696a080d-848f-44d3-a918-e29bafaab85a
-caps.latest.revision: "4"
+caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 813673a5b992a27fe9d93f480024cb988136ab3a
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.openlocfilehash: 9aecd0e9a0393356409439ec9c46943ebded6233
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="create-queries-visual-database-tools"></a>建立查詢 (Visual Database Tools)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 查詢可讓您從資料庫的資料表和檢視中擷取資料。 您可以在查詢和檢視表設計工具中建立並使用查詢，這包含四個窗格：[[圖表] 窗格](../../ssms/visual-db-tools/diagram-pane-visual-database-tools.md)、[[SQL] 窗格](../../ssms/visual-db-tools/sql-pane-visual-database-tools.md)、[[準則] 窗格](../../ssms/visual-db-tools/criteria-pane-visual-database-tools.md)及 [[結果] 窗格](../../ssms/visual-db-tools/results-pane-visual-database-tools.md)。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+查詢可讓您從資料庫的資料表和檢視中擷取資料。 您可以在查詢和檢視表設計工具中建立並使用查詢，這包含四個窗格：[[圖表] 窗格](../../ssms/visual-db-tools/diagram-pane-visual-database-tools.md)、[[SQL] 窗格](../../ssms/visual-db-tools/sql-pane-visual-database-tools.md)、[[準則] 窗格](../../ssms/visual-db-tools/criteria-pane-visual-database-tools.md)及 [[結果] 窗格](../../ssms/visual-db-tools/results-pane-visual-database-tools.md)。  
   
 ### <a name="to-create-a-new-query"></a>若要建立新的查詢  
   

@@ -1,16 +1,15 @@
 ---
-title: "sp_help_publication_access (TRANSACT-SQL) |Microsoft 文件"
-ms.custom: 
+title: sp_help_publication_access (TRANSACT-SQL) |Microsoft 文件
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - sp_help_publication_access
 ms.assetid: 9408fa13-54a0-4cb1-8fb0-845e5536ef50
-caps.latest.revision: 
+caps.latest.revision: 26
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 1568ded984bcb38c6633fdf5ceddfb2b960df41b
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: f4a8503a1c93283c2af8e6b4e2494cfdaff632b2
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sphelppublicationaccess-transact-sql"></a>sp_help_publication_access (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,14 +47,14 @@ sp_help_publication_access [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>引數  
- [  **@publication=**] **'***發行集***'**  
+ [ **@publication=**] **'***publication***'**  
  這是要存取的發行集名稱。 *發行集*是**sysname**，沒有預設值。  
   
  [  **@return_granted=**] **'***return_granted***'**  
  這是登入識別碼。 *return_granted*是**元**，預設值是 1。 如果**0**指定和[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]使用驗證，則會傳回出現在 「 發行者 」，但不是在散發者端的可用登入。 如果**0**指定和使用 Windows 驗證、 登入未明確拒絕存取 「 發行者 」 或 「 散發者 」 會傳回。  
   
  [  **@login=**] **'***登入***'**  
- 這是標準安全性登入識別碼。 *登入*是**sysname**，預設值是 **%** 。  
+ 這是標準安全性登入識別碼。 *登入*是**sysname**，預設值是**%**。  
   
  [  **@initial_list =**] *initial_list*  
  指定傳回含發行集存取權的所有成員，或只傳回在新成員加入清單之前有存取權的成員。 *initial_list* bit，預設值是**0**。  
@@ -84,9 +82,9 @@ sp_help_publication_access [ @publication = ] 'publication'
 ## <a name="permissions"></a>Permissions  
  只有成員**sysadmin**固定的伺服器角色或**db_owner**固定的資料庫角色可以執行**sp_help_publication_access**。  
   
-## <a name="see-also"></a>請參閱＜  
- [sp_grant_publication_access &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/sp-grant-publication-access-transact-sql.md)   
- [sp_revoke_publication_access &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/sp-revoke-publication-access-transact-sql.md)   
+## <a name="see-also"></a>另請參閱  
+ [sp_grant_publication_access &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-grant-publication-access-transact-sql.md)   
+ [sp_revoke_publication_access &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-revoke-publication-access-transact-sql.md)   
  [系統預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

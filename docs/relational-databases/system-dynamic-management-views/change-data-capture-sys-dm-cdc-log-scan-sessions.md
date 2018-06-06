@@ -1,16 +1,12 @@
 ---
-title: sys.dm_cdc_log_scan_sessions (Transact-SQL) | Microsoft Docs
-ms.custom: 
+title: sys.dm_cdc_log_scan_sessions (TRANSACT-SQL) |Microsoft 文件
+ms.custom: ''
 ms.date: 06/10/2016
-ms.prod: sql-non-specified
-ms.prod_service: database-engine
-ms.service: 
-ms.component: dmv's
-ms.reviewer: 
+ms.prod: sql
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: system-objects
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - dm_cdc_log_scan_sessions
@@ -23,16 +19,15 @@ helpviewer_keywords:
 - change data capture [SQL Server], log scan reporting
 - sys.dm_cdc_log_scan_sessions dynamic management view
 ms.assetid: d337e9d0-78b1-4a07-8820-2027d0b9f87c
-caps.latest.revision: 
+caps.latest.revision: 17
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: f7d81782bac9590aac7fb1905304aec53f531db1
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 74a99cc08a030327c4f0b70f11c64f6c2a952dec
+ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 05/23/2018
 ---
 # <a name="change-data-capture---sysdmcdclogscansessions"></a>異動資料擷取-sys.dm_cdc_log_scan_sessions
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -59,7 +54,7 @@ ms.lasthandoff: 02/03/2018
 |**first_begin_cdc_lsn**|**nvarchar(23)**|包含異動資料擷取交易的第一個 LSN。<br /><br /> 當**session_id** = 0 時，包含異動資料擷取交易的第一個 LSN。|  
 |**last_commit_cdc_lsn**|**nvarchar(23)**|包含異動資料擷取交易之上一個認可記錄的 LSN。<br /><br /> 當**session_id** = 任何工作階段中包含異動資料擷取交易之上一個認可記錄 LSN，0|  
 |**last_commit_cdc_time**|**datetime**|處理包含異動資料擷取交易之上一個認可記錄的時間。<br /><br /> 當**session_id** = 0 時，最後一個認可記錄的任何工作階段中包含異動資料擷取交易的時間。|  
-|**latency**|**int**|差異，以秒為單位，介於**end_time**和**last_commit_cdc_time**工作階段中。 這個計數器會在第 7 個階段結束時填入。<br /><br /> 當**session_id** = 0 時，工作階段所記錄的最後一個非零延遲值。|  
+|**延遲**|**int**|差異，以秒為單位，介於**end_time**和**last_commit_cdc_time**工作階段中。 這個計數器會在第 7 個階段結束時填入。<br /><br /> 當**session_id** = 0 時，工作階段所記錄的最後一個非零延遲值。|  
 |**empty_scan_count**|**int**|不包含任何異動資料擷取交易的連續工作階段數目。|  
 |**failed_sessions_count**|**int**|失敗的工作階段數目。|  
   
@@ -67,7 +62,7 @@ ms.lasthandoff: 02/03/2018
  每次啟動 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體時，這個動態管理檢視中的值就會重設。  
   
 ## <a name="permissions"></a>Permissions  
- 需要 VIEW DATABASE STATE 權限來查詢**sys.dm_cdc_log_scan_sessions**動態管理檢視。 如需動態管理檢視權限的相關詳細資訊，請參閱[動態管理檢視和函數 &#40;TRANSACT-SQL &#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md).  
+ 需要 VIEW DATABASE STATE 權限來查詢**sys.dm_cdc_log_scan_sessions**動態管理檢視。 如需動態管理檢視權限的相關詳細資訊，請參閱[動態管理檢視和函數&#40;TRANSACT-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)。  
   
 ## <a name="examples"></a>範例  
  下列範例會傳回最新工作階段的資訊。  

@@ -1,31 +1,29 @@
 ---
-title: "設定編輯器 (SQL Server Management Studio) | Microsoft Docs"
-ms.custom: 
+title: 設定編輯器 (SQL Server Management Studio) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
-ms.component: ssms-scripting
-ms.reviewer: 
+ms.technology: scripting
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: e7c7a8ef-f561-4258-a7b6-c445dba69f87
-caps.latest.revision: 
+caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 6085dc6fe12622915eca8f01ff10df020e69bbde
-ms.sourcegitcommit: a0aa5e611a0e6ebb74ac1e2f613e8916dc7a7617
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 608ad6d5f7bef9ce21aa80e09699c2de3cc9c228
+ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/24/2018
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="configure-editors-sql-server-management-studio"></a>設定編輯器 (SQL Server Management Studio)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 您可以設定各個 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 編輯器的選項，以自訂其作業。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+  您可以設定各個 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 編輯器的選項，以自訂其作業。  
   
 ## <a name="settng-editor-options"></a>設定編輯器選項  
  利用 **[工具]** 功能表，然後選取 **[選項…]** 以顯示 **[選項]** 對話方塊，可設定大部分的編輯器選項設定。 在 **[選項]** 對話方塊於左窗格中開啟 **[文字編輯器]** 節點，可設定編碼與文字編輯選項。 文字編輯器下的節點適用於特定的編輯器：  

@@ -1,27 +1,25 @@
 ---
-title: "Pdo:: commit |Microsoft 文件"
-ms.custom: 
+title: 'Pdo:: commit |Microsoft 文件'
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
+ms.prod: sql
+ms.prod_service: connectivity
 ms.component: php
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: connectivity
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: a0db4a00-9700-4f49-ab16-6522dd1101d3
-caps.latest.revision: "8"
+caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
-ms.workload: Inactive
-ms.openlocfilehash: 52958b4f08a244982d1871d4f2ad5dfe6a1d8ea5
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+manager: craigg
+ms.openlocfilehash: 98bd6d4f7856dee4580f303638e7de2346a9feb4
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="pdocommit"></a>PDO::commit
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -46,6 +44,7 @@ PDO::commit 不受 PDO::ATTR_AUTOCOMMIT 的值影響 (且不會影響該值)。
 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]2.0 版已加入 PDO 支援。  
   
 ## <a name="see-also"></a>另請參閱  
-[PDO 類別](../../connect/php/pdo-class.md)  
-[PDO](http://go.microsoft.com/fwlink/?LinkID=187441)  
+[PDO 類別](../../connect/php/pdo-class.md)
+
+[PDO](http://php.net/manual/book.pdo.php)  
   

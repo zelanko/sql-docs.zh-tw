@@ -1,30 +1,31 @@
 ---
-title: "商務規則範例 (Master Data Services) | Microsoft Docs"
-ms.custom: 
+title: 商務規則範例 (Master Data Services) | Microsoft Docs
+ms.custom: ''
 ms.date: 01/05/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: mds
-ms.service: 
 ms.component: non-specific
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - master-data-services
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: 3974b9be-4b7c-4a37-ab26-1a36ef455744
-caps.latest.revision: 
+caps.latest.revision: 21
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: e01b4c5141011209f5fdf314711e9cc26595c5f5
-ms.sourcegitcommit: 6ac1956307d8255dc544e1063922493b30907b80
+ms.openlocfilehash: 68be5f600da960023548a5b9e5678c995766a71b
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="business-rule-examples-master-data-services"></a>商務規則範例 (Master Data Services)
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
 本文說明 [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)]的商務規則範例。 您也可以在 [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)]安裝隨附的範例模型中找到這些範例。   
   
 如需如何部署範例模型的指示，請參閱 [Master Data Services 安裝和組態](../master-data-services/master-data-services-installation-and-configuration.md)。  
@@ -160,8 +161,7 @@ Else
 3. 按一下要套用規則的實體 (如上述表格所列)，然後按一下 [商務規則]。  
 4. 按一下您想要檢視的商務規則名稱。 隨即展開 UI 以顯示 **If**、 **Then** 和 **Else** 陳述式。  
   
-## <a name="did-this-article-help-you-were-listening"></a>這篇文章對您有幫助嗎？ 我們會持續聽取您的意見   
-您要尋找哪些資訊？找到了嗎？ 我們會持續聽取您的意見來改進內容。 請將您的意見傳送到 [sqlfeedback@microsoft.com](mailto:sqlfeedback@microsoft.com)的商務規則範例。   
+ 
   
   
   

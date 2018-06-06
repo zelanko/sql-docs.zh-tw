@@ -1,36 +1,23 @@
 ---
-title: "Microsoft 時序群集演算法 |Microsoft 文件"
-ms.custom: 
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
-helpviewer_keywords:
-- clusters [Analysis Services]
-- algorithms [data mining]
-- sequence clustering algorithms [Analysis Services]
-- sequence [Analysis Services]
-ms.assetid: ae779a1f-0adb-4857-afbd-a15543dff299
-caps.latest.revision: 
-author: Minewiskan
+title: Microsoft 時序群集演算法 |Microsoft 文件
+ms.date: 05/08/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: data-mining
+ms.topic: conceptual
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 181b95753ac004aef4da9134ce46347c4cffa304
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: d231e1c11e53650b7e76c0c7070bcbc0e0a7fa70
+ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="microsoft-sequence-clustering-algorithm"></a>Microsoft 時序群集演算法
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-[!INCLUDE[msCoName](../../includes/msconame-md.md)] 時序群集演算法是結合時序分析和叢集的獨特演算法。 您可以使用此演算法來瀏覽資料，其中包含可在 [時序] 中連結的事件。 此演算法會尋找最常見的時序，並執行叢集以尋找類似的時序。 下列範例描述您可能擷取作為機器學習資料的時序類型，以深入了解常見的問題或商務案例：  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 時序群集演算法是結合時序分析和叢集的獨特演算法。 您可以使用此演算法來瀏覽資料，其中包含可在 [時序] 中連結的事件。 此演算法會尋找最常見的時序，並執行叢集以尋找類似的時序。 下列範例描述您可能擷取作為機器學習資料的時序類型，以深入了解常見的問題或商務案例：  
   
 -   使用者巡覽或瀏覽網站時所產生的點選流或點選路徑  
   

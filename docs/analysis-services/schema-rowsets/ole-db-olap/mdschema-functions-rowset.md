@@ -1,39 +1,28 @@
 ---
-title: "MDSCHEMA_FUNCTIONS 資料列集 |Microsoft 文件"
-ms.custom: 
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+title: MDSCHEMA_FUNCTIONS 資料列集 |Microsoft 文件
+ms.date: 05/03/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: schema-rowsets
 ms.topic: reference
-apiname: MDSCHEMA_FUNCTIONS
-apitype: NA
-applies_to: SQL Server 2016 Preview
-helpviewer_keywords: MDSCHEMA_FUNCTIONS rowset
-ms.assetid: 5253fa8c-b1ce-4504-aff6-a246b5e675c7
-caps.latest.revision: "29"
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: e8a03e34bf6ea617e650132f2a81fb065a014d80
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 7e6786f53ddc48c457857f58128c3f16959420d5
+ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="mdschemafunctions-rowset"></a>MDSCHEMA_FUNCTIONS 資料列集
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]描述連接到資料庫的用戶端應用程式可用的函數。  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+  描述可用於與資料庫相連接的用戶端應用程式的函數。  
   
 ## <a name="rowset-columns"></a>資料列集資料行  
  **MDSCHEMA_FUNCTIONS**資料列集包含下列資料行。  
   
-|資料行名稱|類型指標|描述|  
+|資料行名稱|類型指標|Description|  
 |-----------------|--------------------|-----------------|  
 |**FUNCTION_NAME**|**DBTYPE_WSTR**|函數的名稱。|  
 |**DESCRIPTION**|**DBTYPE_WSTR**|函數的描述。|  
@@ -45,7 +34,7 @@ ms.lasthandoff: 01/08/2018
 |**DLL_NAME**|**DBTYPE_WSTR**|(選擇性) 實作使用者定義函數之組件的名稱。<br /><br /> 傳回**VT_NULL** MDX 函數。|  
 |**HELP_FILE**|**DBTYPE_WSTR**|(選擇性) 檔案的名稱，這個檔案包含使用者定義函數的說明文件集。<br /><br /> 傳回**VT_NULL** MDX 函數。|  
 |**HELP_CONTEXT**|**DBTYPE_I4**|(選擇性) 傳回這個函數的說明內容識別碼。|  
-|**物件**|**DBTYPE_WSTR**|(選擇性) 屬性所套用至的物件類別的一般名稱。 例如，資料列集對應至 < l >。成員函式會傳回"**層級**"。<br /><br /> 傳回**VT_NULL**使用者定義函式或非屬性的 MDX 函數。|  
+|**OBJECT**|**DBTYPE_WSTR**|(選擇性) 屬性所套用至的物件類別的一般名稱。 例如，資料列集對應至 < l >。成員函式會傳回"**層級**"。<br /><br /> 傳回**VT_NULL**使用者定義函式或非屬性的 MDX 函數。|  
 |**標題**|**DBTYPE_WSTR**|函數的顯示標題。|  
   
  排序資料列集**原點**， **INTERFACE_NAME**， **FUNCTION_NAME**。  
@@ -60,7 +49,7 @@ ms.lasthandoff: 01/08/2018
 |**FUNCTION_NAME**|**DBTYPE_WSTR**|選擇性。|  
 |**來源**|**DBTYPE_I4**|選擇性。|  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [OLE DB for OLAP 結構描述資料列集](../../../analysis-services/schema-rowsets/ole-db-olap/ole-db-for-olap-schema-rowsets.md)  
   
   

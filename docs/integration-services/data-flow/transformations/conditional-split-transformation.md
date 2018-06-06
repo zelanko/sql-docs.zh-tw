@@ -1,17 +1,16 @@
 ---
-title: "條件式分割轉換 | Microsoft Docs"
-ms.custom: 
+title: 條件式分割轉換 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
 ms.component: data-flow
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 f1_keywords:
 - sql13.dts.designer.conditionalsplittrans.f1
 - sql13.dts.designer.conditionalsplittransformation.f1
@@ -19,16 +18,15 @@ helpviewer_keywords:
 - Conditional Split transformation
 - route rows to different outputs [Integration Services]
 ms.assetid: 3f8b5825-226f-413c-ba8f-0bb931ca3770
-caps.latest.revision: 
+caps.latest.revision: 51
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 751ca45d923265f7477aa7461cd24c87e3d0d41a
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: fbb3488bcd17087caf11096a788312fdfa147df7
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="conditional-split-transformation"></a>條件式分割轉換
   「條件式分割」轉換可根據資料的內容，將資料列傳送至不同的輸出。 「條件式分割」轉換的實作與程式設計語言中的 CASE 決策結構類似。 轉換會評估運算式，並根據結果將資料列導向指定的輸出。 此轉換亦提供預設輸出，如此一來，即使資料列未符合任何運算式，仍會導向預設輸出。  

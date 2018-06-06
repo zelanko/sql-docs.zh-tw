@@ -1,30 +1,28 @@
 ---
-title: "SSMA for 入門存取主控台 (AccessToSQL) |Microsoft 文件"
-ms.prod: sql-non-specified
+title: SSMA for 入門存取主控台 (AccessToSQL) |Microsoft 文件
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
 ms.component: ssma-access
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ssma
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: 8585ec16-7e0a-483a-b250-adab9b9232a3
-caps.latest.revision: "21"
+caps.latest.revision: 21
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
-ms.workload: Inactive
-ms.openlocfilehash: bc7b11e4317eb6f982a31bdd1fee17b9c54cbe04
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+manager: craigg
+ms.openlocfilehash: 60c9a1775c1d5acf9f3c4b26d061d991941d07d6
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="getting-started-with-ssma-for-access-console-accesstosql"></a>SSMA for 入門存取主控台 (AccessToSQL)
 本章節描述的程序啟動並開始使用存取主控台應用程式。 亦會使用的慣例典型的 SSMA 主控台輸出視窗中。  
@@ -41,13 +39,13 @@ ms.lasthandoff: 12/21/2017
 ## <a name="procedure-for-using-the-ssma-console"></a>針對使用 SSMA 主控台的程序  
 Windows 系統上已成功啟動主控台之後，您可以在 bob_ws 上工作使用下列步驟：  
   
-1.  透過指令碼檔案中設定 SSMA 主控台。 如需有關本章節的詳細資訊，請參閱[建立指令碼檔案 &#40;AccessToSQL &#41;](../../ssma/access/creating-script-files-accesstosql.md).  
+1.  透過指令碼檔案中設定 SSMA 主控台。 如需有關本章節的詳細資訊，請參閱[建立指令碼檔&#40;AccessToSQL&#41;](../../ssma/access/creating-script-files-accesstosql.md)。  
   
-2.  [建立變數值的檔案 &#40;AccessToSQL &#41;](../../ssma/access/creating-variable-value-files-accesstosql.md)  
+2.  [建立變數值的檔案&#40;AccessToSQL&#41;](../../ssma/access/creating-variable-value-files-accesstosql.md)  
   
-3.  [建立伺服器連接檔案 &#40;AccessToSQL &#41;](../../ssma/access/creating-the-server-connection-files-accesstosql.md)  
+3.  [建立伺服器連接檔案&#40;AccessToSQL&#41;](../../ssma/access/creating-the-server-connection-files-accesstosql.md)  
   
-4.  [執行 SSMA 主控台 &#40;AccessToSQL &#41;](../../ssma/access/executing-the-ssma-console-accesstosql.md)根據您的專案需求  
+4.  [執行 SSMA 主控台&#40;AccessToSQL&#41; ](../../ssma/access/executing-the-ssma-console-accesstosql.md)根據您的專案需求  
   
 其他功能：  
   
@@ -62,7 +60,7 @@ Windows 系統上已成功啟動主控台之後，您可以在 bob_ws 上工作�
   
 下表中的主控台輸出的色彩解譯：  
   
-|Color|描述|  
+|Color|Description|  
 |---------|---------------|  
 |紅色|執行期間發生嚴重錯誤|  
 |灰色|日期和時間戳記，訊息給使用者|  
@@ -71,6 +69,6 @@ Windows 系統上已成功啟動主控台之後，您可以在 bob_ws 上工作�
 |綠色|提示使用者輸入|  
 |11：青色|開始、 完成和作業的結果。|  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
 [安裝 SQL Server 移轉小幫手進行存取](http://msdn.microsoft.com/en-us/dd50eebd-75df-4e0d-8c4d-88b511aae4c7)  
   

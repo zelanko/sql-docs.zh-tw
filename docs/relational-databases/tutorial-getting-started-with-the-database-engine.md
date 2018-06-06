@@ -1,16 +1,15 @@
 ---
-title: "教學課程：Database Engine 使用者入門 | Microsoft 文件"
-ms.custom: 
+title: 教學課程：Database Engine 使用者入門 | Microsoft 文件
+ms.custom: ''
 ms.date: 06/21/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
 ms.component: tutorial
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: get-started-article
 helpviewer_keywords:
 - tutorials [connecting]
@@ -19,16 +18,16 @@ helpviewer_keywords:
 - failure to connect [SQL Server]
 - connecting tutorial [SQL Server]
 ms.assetid: 655e709b-346b-469c-bddc-a5a0238d07e0
-caps.latest.revision: 
+caps.latest.revision: 20
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 64fca04ede55e3bf0e98c4cb62b4495fd19d576b
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: ca03e5c6dce2c99417e86167613ea8bbfd6b3b84
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="tutorial-getting-started-with-the-database-engine"></a>教學課程：Database Engine 使用者入門
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -51,7 +50,7 @@ ms.lasthandoff: 02/09/2018
   
 您的系統必須已經安裝下列項目，才能使用這個教學課程：  
   
--   [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]執行個體時提供 SQL Server 登入。 若要安裝 [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]，請參閱[下載 SQL Server Management Studio](../ssms/download-sql-server-management-studio-ssms.md)。  
+-   [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]。 若要安裝 [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]，請參閱[下載 SQL Server Management Studio](../ssms/download-sql-server-management-studio-ssms.md)。  
   
 ## <a name="see-also"></a>另請參閱  
 [教學課程：SQL Server Management Studio](../ssms/tutorials/tutorial-sql-server-management-studio.md)  

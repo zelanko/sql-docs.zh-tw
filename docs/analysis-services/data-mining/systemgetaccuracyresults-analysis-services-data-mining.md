@@ -1,35 +1,23 @@
 ---
-title: "SystemGetAccuracyResults (Analysis Services-資料採礦) |Microsoft 文件"
-ms.custom: 
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: reference
-helpviewer_keywords:
-- stored procedures [Analysis Services], data mining
-- SystemGetAccuracyResults
-- cross-validation [data mining]
-ms.assetid: 54ff584c-c6ce-4c31-9515-0a645719bd1a
-caps.latest.revision: 
-author: Minewiskan
+title: SystemGetAccuracyResults (Analysis Services-資料採礦) |Microsoft 文件
+ms.date: 05/08/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: data-mining
+ms.topic: conceptual
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 1f6cc8a8bc3e35f6072e5998faed8fb9d51b768f
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 54fc91b67a695110383c19422befab0d7b0f7a9d
+ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="systemgetaccuracyresults-analysis-services---data-mining"></a>SystemGetAccuracyResults (Analysis Services - 資料採礦)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-針對採礦結構和所有相關模型傳回交叉驗證精確度的度量，不包括群集模型。  
+  針對採礦結構和所有相關模型傳回交叉驗證精確度的度量，不包括群集模型。  
   
  此預存程序會將整組資料的度量當做單一資料分割來傳回。 若要將資料集分割成交叉區段，並傳回每個資料分割的度量，請使用 [SystemGetCrossValidationResults &#40;Analysis Services - 資料採礦&#41;](../../analysis-services/data-mining/systemgetcrossvalidationresults-analysis-services-data-mining.md)。  
   
@@ -114,7 +102,7 @@ SystemGetAccuracyResults(<mining structure>,
 |AttributeName|可預測的資料行名稱。|  
 |AttributeState|可預測資料行內的目標值。<br /><br /> 如果這個資料行包含值，只會針對指定的狀態收集度量。<br /><br /> 如果未指定這個值，或是指定了 null，將會針對每一項預測最有可能的狀態來計算度量。|  
 |PartitionIndex|代表套用結果的磁碟分割。<br /><br /> 對於此程序而言，一定是 0。|  
-|PartitionCases|整數，表示在案例集，根據資料列數目*\<資料集 >*參數。|  
+|PartitionCases|整數，表示在案例集，根據資料列數目*\<資料集 >* 參數。|  
 |測試|已執行的測試類型。|  
 |[量值]|測試所傳回之量值的名稱。 每一個模型的量值取決於模型類型及可預測值的類型。<br /><br /> 如需每一個可預測類型所傳回的量值清單，請參閱[交叉驗證報表中的量值](../../analysis-services/data-mining/measures-in-the-cross-validation-report.md)。<br /><br /> 如需每個量值的定義，請參閱[交叉驗證 &#40;Analysis Services - 資料採礦&#41;](../../analysis-services/data-mining/cross-validation-analysis-services-data-mining.md)。|  
 |Value|指定之量值的值。|  
@@ -168,7 +156,7 @@ CALL SystemGetAccuracyResults (
 ## <a name="see-also"></a>另請參閱  
  [SystemGetCrossValidationResults &#40;Analysis Services - 資料採礦&#41;](../../analysis-services/data-mining/systemgetcrossvalidationresults-analysis-services-data-mining.md)   
  [SystemGetAccuracyResults](../../analysis-services/data-mining/systemgetaccuracyresults-analysis-services-data-mining.md)   
- [SystemGetClusterCrossValidationResults &#40;Analysis Services-資料採礦 &#41;](../../analysis-services/data-mining/systemgetclustercrossvalidationresults-analysis-services-data-mining.md)   
- [SystemGetClusterAccuracyResults &#40;Analysis Services-資料採礦 &#41;](../../analysis-services/data-mining/systemgetclusteraccuracyresults-analysis-services-data-mining.md)  
+ [SystemGetClusterCrossValidationResults &#40;Analysis Services-資料採礦&#41;](../../analysis-services/data-mining/systemgetclustercrossvalidationresults-analysis-services-data-mining.md)   
+ [SystemGetClusterAccuracyResults & #40;Analysis Services-資料採礦 & #41;](../../analysis-services/data-mining/systemgetclusteraccuracyresults-analysis-services-data-mining.md)  
   
   

@@ -1,34 +1,33 @@
 ---
-title: "SQL Server 的 Broker - DBM Transport 物件 | Microsoft Docs"
-ms.custom: 
+title: SQL Server 的 Broker - DBM Transport 物件 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
 ms.component: performance-monitor
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - Broker / DBM Transport object
 - SQLServer:Broker/DBM Transport
 ms.assetid: eddb60b6-20a9-416c-adf3-4bc1687944fa
-caps.latest.revision: 
+caps.latest.revision: 34
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 2939dbbd505021da7a8623c5671ad7bd3063cc7a
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: dc79e7ca28f76cb2a2e81995448ea6f645d058a5
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sql-server-broker---dbm-transport-object"></a>SQL Server 的 Broker─DBM Transport 物件
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] **Broker / DBM Transport** 效能物件包含效能計數器，以報告 Service Broker 和資料庫鏡像的網路資訊。 下表列出這個物件包含的計數器。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  **Broker / DBM Transport** 效能物件包含效能計數器，以報告 Service Broker 和資料庫鏡像的網路資訊。 下表列出這個物件包含的計數器。  
   
 |SQL Server Broker / DBM Transport 計數器|描述|  
 |------------------------------------------------|-----------------|  

@@ -1,16 +1,13 @@
 ---
-title: sys.dm_exec_connections (Transact-SQL) | Microsoft Docs
-ms.custom: 
+title: sys.dm_exec_connections (TRANSACT-SQL) |Microsoft 文件
+ms.custom: ''
 ms.date: 11/16/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
-ms.component: dmv's
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: system-objects
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - dm_exec_connections_TSQL
@@ -22,16 +19,16 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_exec_connections dynamic management view
 ms.assetid: 6bd46fe1-417d-452d-a9e6-5375ee8690d8
-caps.latest.revision: 
+caps.latest.revision: 50
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: ef46c3c9ffdf534b2ef76154498a4da8b11fa197
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 27499bf31561addd909d92a81222662e4470b8b5
+ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 05/23/2018
 ---
 # <a name="sysdmexecconnections-transact-sql"></a>sys.dm_exec_connections (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -39,14 +36,14 @@ ms.lasthandoff: 02/03/2018
   傳回有關與這個 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體建立之連接及每一個連接之詳細資料的資訊。 傳回 SQL Server 的伺服器寬的連接資訊。 傳回目前 SQL database 的資料庫連接資訊。  
   
 > [!NOTE]
-> 若要呼叫從[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]或[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]，使用[sys.dm_pdw_exec_connections &#40;TRANSACT-SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-connections-transact-sql.md).  
+> 若要呼叫從[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]或[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]，使用[sys.dm_pdw_exec_connections &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-connections-transact-sql.md)。  
   
 |資料行名稱|資料類型|Description|  
 |-----------------|---------------|-----------------|  
 |session_id|**int**|識別這項連接的相關工作階段。 可為 Null。|  
 |most_recent_session_id|**int**|代表這項連接最近的相關要求的工作階段識別碼 (SOAP 連接可由其他工作階段重複使用)可為 Null。|  
 |connect_time|**datetime**|建立連接的時間戳記。 不可為 Null。|  
-|net_transport|**nvarchar(40)**|一律傳回**工作階段**當連接已啟用 multiple active result set (MARS)。<br /><br /> **注意：**描述這個連接所用的實體傳輸通訊協定。 不可為 Null。|  
+|net_transport|**nvarchar(40)**|一律傳回**工作階段**當連接已啟用 multiple active result set (MARS)。<br /><br /> **注意：** 描述這個連接所用的實體傳輸通訊協定。 不可為 Null。|  
 |protocol_type|**nvarchar(40)**|指定裝載的通訊協定類型。 它目前會區分 TDS (TSQL) 和 SOAP。 可為 Null。|  
 |protocol_version|**int**|這項連接的相關資料存取通訊協定的版本。 可為 Null。|  
 |endpoint_id|**int**|描述其為何種連接類型的識別碼。 這個 endpoint_id 可用來查詢 sys.endpoints 檢視。 可為 Null。|  
@@ -67,10 +64,11 @@ ms.lasthandoff: 02/03/2018
 |most_recent_sql_handle|**varbinary(64)**|這項連接所執行之前一項要求的 SQL 控制代碼。 most_recent_sql_handle 資料行一律與 most_recent_session_id 資料行同步。 可為 Null。|  
 |pdw_node_id|**int**|**適用於**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]， [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 此發行版本上的節點識別碼。|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permissions
+
 在[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]，需要`VIEW SERVER STATE`權限。   
-在[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]Premium 層需要`VIEW DATABASE STATE`資料庫的權限。 在[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]標準和基本層，需要**伺服器管理員**或**Azure Active Directory 系統管理員**帳戶。
-  
+在[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]，需要`VIEW DATABASE STATE`資料庫的權限。   
+
 ## <a name="physical-joins"></a>實體聯結  
  ![Sys.dm_exec_connections 的聯結](../../relational-databases/system-dynamic-management-views/media/join-dm-exec-connections-1.gif "sys.dm_exec_connections 的聯結")  
   
@@ -100,7 +98,7 @@ WHERE c.session_id = @@SPID;
   
 ## <a name="see-also"></a>另請參閱  
 
- [執行相關動態管理檢視和函數 &#40;TRANSACT-SQL &#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)  
+ [執行相關動態管理檢視和函數&#40;Transact SQL&#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)  
   
   
 

@@ -1,16 +1,14 @@
 ---
 title: ALTER LOGIN (Transact-SQL) | Microsoft Docs
-ms.custom: 
-ms.date: 05/01/2017
-ms.prod: sql-non-specified
+ms.custom: ''
+ms.date: 04/17/2018
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
 ms.component: t-sql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: t-sql
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - ALTER_LOGIN_TSQL
@@ -26,16 +24,16 @@ helpviewer_keywords:
 - names [SQL Server], logins
 - modifying login accounts
 ms.assetid: e247b84e-c99e-4af8-8b50-57586e1cb1c5
-caps.latest.revision: 
+caps.latest.revision: 68
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Active
-ms.openlocfilehash: fc5c2a17e3d75cb743c6c0e3a335d911e102de0e
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: c39118f020f50d3349e15cb5581e52347e74ee70
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="alter-login-transact-sql"></a>ALTER LOGIN (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -83,7 +81,7 @@ ALTER LOGIN login_name
 ```  
   
 ```  
--- Syntax for Azure SQL Database  
+-- Syntax for Azure SQL Database and Azure SQL Data Warehouse 
   
 ALTER LOGIN login_name   
   {   
@@ -104,7 +102,7 @@ ALTER LOGIN login_name
 ```  
   
 ```  
--- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
+-- Syntax for Parallel Data Warehouse  
   
 ALTER LOGIN login_name   
     {   
@@ -133,7 +131,7 @@ ALTER LOGIN login_name
  指定正在變更的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入名稱。 網域登入必須加上方括號，使用 [domain\user] 格式。  
   
  ENABLE | DISABLE  
- 啟用或停用這個登入。 停用登入並不會影響已經連線之登入的行為。 (使用 `KILL` 陳述式來終止現有的連線。)已停用的登入會保留其權限，而且依然可以模擬。  
+ 啟用或停用這個登入。 停用登入並不會影響已經連接之登入的行為。 (使用 `KILL` 陳述式來終止現有的連線。)已停用的登入會保留其權限，而且依然可以模擬。  
   
  PASSWORD **='***password***'**  
  只適用於 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入。 指定正在變更的登入密碼。 密碼會區分大小寫。  
@@ -146,7 +144,7 @@ ALTER LOGIN login_name
  僅適用於 HASHED 關鍵字。 指定要建立之登入的密碼雜湊值。  
   
 > [!IMPORTANT]  
->  當登入 (或自主資料庫使用者) 連線並通過驗證時，此連線就會快取有關登入的識別資訊。 若為 Windows 驗證登入，這就包括 Windows 群組中成員資格的相關資訊。 只要維持連線，登入的識別就會維持已驗證狀態。 若要強制變更識別 (例如重設密碼或變更 Windows 群組成員資格)，登入必須先登出驗證授權單位 (Windows 或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)])，然後重新登入。 **系統管理員 (sysadmin)** 固定伺服器角色的成員或任何擁有 **ALTER ANY CONNECTION** 權限的登入都可以使用 **KILL** 命令來結束連線並強制登入重新連線。 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 可以在開啟 [物件總管] 視窗和 [查詢編輯器] 視窗的多個連線時，重複使用連線資訊。 關閉所有連線以強制重新連線。  
+>  當登入 (或自主資料庫使用者) 連接並通過驗證時，此連接就會快取有關登入的識別資訊。 若為 Windows 驗證登入，這就包括 Windows 群組中成員資格的相關資訊。 只要維持連接，登入的識別就會維持驗證狀態。 若要強制變更識別 (例如重設密碼或變更 Windows 群組成員資格)，登入必須先登出驗證授權單位 (Windows 或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)])，然後重新登入。 **系統管理員 (sysadmin)** 固定伺服器角色的成員或任何擁有 **ALTER ANY CONNECTION** 權限的登入都可以使用 **KILL** 命令來結束連接並強制登入重新連接。 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 可以在開啟 [物件總管] 視窗和 [查詢編輯器] 視窗的多個連接時，重複使用連接資訊。 關閉所有連接以強制重新連接。  
   
  HASHED  
    
@@ -158,7 +156,7 @@ ALTER LOGIN login_name
  只適用於 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入。 將要指派新密碼之登入的目前密碼。 密碼會區分大小寫。  
   
  MUST_CHANGE  
- **適用於**： [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。  
+ **適用於**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]，和平行資料倉儲。  
   
  只適用於 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入。 如果包含這個選項，則在第一次使用變更後的登入時，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會提示您輸入更新後的密碼。  
   
@@ -177,14 +175,14 @@ ALTER LOGIN login_name
  正在重新命名之登入的新名稱。 如果這是 Windows 登入，則對應到新名稱的 Windows 主體 SID 必須與 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中之登入相關聯的 SID 相同。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入的新名稱，不能包含反斜線字元 (\\)。  
   
  CHECK_EXPIRATION = { ON | **OFF** }  
- **適用於**： [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。  
+ **適用於**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]，和平行資料倉儲。  
   
  只適用於 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入。 指定是否應該對這個登入強制執行密碼逾期原則。 預設值是 OFF。  
   
  CHECK_POLICY **=** { **ON** | OFF }  
- **適用於**： [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。  
+ **適用於**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]，和平行資料倉儲。  
   
- 只適用於 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入。 指定應該在這個登入上強制使用執行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 之電腦的 Windows 密碼原則。 預設值是 ON。  
+ 只適用於 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入。 指定應該在這項登入上強制使用執行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 之電腦的 Windows 密碼原則。 預設值是 ON。  
   
  CREDENTIAL = *credential_name*  
  **適用於**： [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。  
@@ -197,7 +195,7 @@ ALTER LOGIN login_name
  移除從登入到伺服器認證的任何現有對應。 如需詳細資訊，請參閱[認證 &#40;資料庫引擎&#41;](../../relational-databases/security/authentication-access/credentials-database-engine.md)。  
   
  UNLOCK  
- **適用於**： [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。  
+ **適用於**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]，和平行資料倉儲。  
   
  只適用於 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入。 指定應該將鎖定的登入解除鎖定。  
   

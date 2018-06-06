@@ -1,33 +1,31 @@
 ---
-title: "附加資料庫 | Microsoft Docs"
-ms.custom: 
+title: 附加資料庫 | Microsoft Docs
+ms.custom: ''
 ms.date: 10/24/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
 ms.component: databases
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 f1_keywords:
 - sql13.swb.attachdatabase.f1
 helpviewer_keywords:
 - database attaching [SQL Server]
 - attaching databases [SQL Server]
 ms.assetid: b4efb0ae-cfe6-4d81-a4b4-6e4916885caa
-caps.latest.revision: 
+caps.latest.revision: 52
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: Active
-ms.openlocfilehash: 04d101550bb7a1215c261419e42820af45ab5098
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 331d5dc6a7f570e626edb541e14da57b3370858e
+ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="attach-a-database"></a>附加資料庫
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -127,7 +125,7 @@ ms.lasthandoff: 01/18/2018
      顯示選取之資料庫檔案的路徑。 路徑可以用手動的方式編輯。  
   
      **訊息**  
-     顯示空白訊息或**「找不到檔案」**超連結。  
+     顯示空白訊息或 **「找不到檔案」** 超連結。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   
@@ -153,7 +151,7 @@ ms.lasthandoff: 01/18/2018
     >  或者，您可以使用 [sp_attach_db](../../relational-databases/system-stored-procedures/sp-attach-db-transact-sql.md) 或 [sp_attach_single_file_db](../../relational-databases/system-stored-procedures/sp-attach-single-file-db-transact-sql.md) 預存程序。 但是，Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的未來版本將移除這些程序。 請避免在新的開發工作中使用這項功能，並規劃修改目前使用這項功能的應用程式。 建議您改用 CREATE DATABASE ... FOR ATTACH。  
   
 ##  <a name="FollowUp"></a> 待處理：升級 SQL Server 資料庫之後  
- 當您使用附加方法升級資料庫之後，該資料庫會立即可用並自動升級。 如果資料庫具有全文檢索索引，升級程序就會根據 **[全文檢索目錄升級選項]** 伺服器屬性的設定，匯入、重設或重建這些索引。 如果升級選項設定為 **[匯入]** 或 **[重建]**，則全文檢索索引在升級期間將無法使用。 根據進行索引的資料數量而定，匯入可能需要數個小時，而重建可能需要十倍以上的時間。 此外，請注意，當升級選項設定為 **[匯入]**時，如果全文檢索目錄無法使用，系統就會重建相關聯的全文檢索索引。  
+ 當您使用附加方法升級資料庫之後，該資料庫會立即可用並自動升級。 如果資料庫具有全文檢索索引，升級程序就會根據 **[全文檢索目錄升級選項]** 伺服器屬性的設定，匯入、重設或重建這些索引。 如果升級選項設定為 **[匯入]** 或 **[重建]**，則全文檢索索引在升級期間將無法使用。 根據進行索引的資料數量而定，匯入可能需要數個小時，而重建可能需要十倍以上的時間。 此外，請注意，當升級選項設定為 **[匯入]** 時，如果全文檢索目錄無法使用，系統就會重建相關聯的全文檢索索引。  
   
  如果使用者資料庫的相容性層級在升級前為 100 或更高層級，則在升級後仍會保持相同。 如果升級前的相容性層級為 90，則在升級後的資料庫中，相容性層級會設定為 100 (這是 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 所支援的最低相容性層級)。 如需詳細資訊，請參閱 [ALTER DATABASE 相容性層級 &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)。  
   
@@ -165,7 +163,8 @@ ms.lasthandoff: 01/18/2018
   ``` 
   
 ## <a name="see-also"></a>另請參閱  
- [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md)   
+ [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md) 
+ <br>[管理在另一部伺服器上提供資料庫時所需的中繼資料](/manage-metadata-when-making-a-database-available-on-another-server.md)  
  [卸離資料庫](../../relational-databases/databases/detach-a-database.md)  
   
   

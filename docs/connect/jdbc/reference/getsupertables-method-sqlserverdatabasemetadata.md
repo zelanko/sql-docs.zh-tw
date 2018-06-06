@@ -1,30 +1,29 @@
 ---
-title: "getSuperTables 方法 (SQLServerDatabaseMetaData) |Microsoft 文件"
-ms.custom: 
+title: getSuperTables 方法 (SQLServerDatabaseMetaData) |Microsoft 文件
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
-ms.component: jdbc
-ms.reviewer: 
+ms.prod: sql
+ms.prod_service: connectivity
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
-ms.topic: article
-apiname: SQLServerDatabaseMetaData.getSuperTables
-apilocation: sqljdbc.jar
+ms.technology: connectivity
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
+apiname:
+- SQLServerDatabaseMetaData.getSuperTables
+apilocation:
+- sqljdbc.jar
 apitype: Assembly
 ms.assetid: 085461de-367b-4832-88aa-010813d2bc41
-caps.latest.revision: "10"
+caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
-ms.workload: Inactive
-ms.openlocfilehash: fdda31ad9072b5c4353038011cf700633125997e
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+manager: craigg
+ms.openlocfilehash: 0f81be238af46d232adc2870f0ce349f97e89588
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="getsupertables-method-sqlserverdatabasemetadata"></a>getSuperTables 方法 (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -44,7 +43,7 @@ public java.sql.ResultSet getSuperTables(java.lang.String catalog,
 ```  
   
 #### <a name="parameters"></a>參數  
- *類別目錄*  
+ *catalog*  
   
  A**字串**，其中包含目錄名稱。  
   
@@ -65,7 +64,7 @@ public java.sql.ResultSet getSuperTables(java.lang.String catalog,
 ## <a name="remarks"></a>備註  
  這個 getSuperTables 方法是由 java.sql.DatabaseMetaData 介面中 getSuperTables 方法指定。  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [SQLServerDatabaseMetaData 方法](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   
  [SQLServerDatabaseMetaData 成員](../../../connect/jdbc/reference/sqlserverdatabasemetadata-members.md)   
  [SQLServerDatabaseMetaData 類別](../../../connect/jdbc/reference/sqlserverdatabasemetadata-class.md)  

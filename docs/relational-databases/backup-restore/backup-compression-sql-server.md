@@ -1,17 +1,14 @@
 ---
-title: "備份壓縮 (SQL Server) | Microsoft Docs"
-ms.custom: 
+title: 備份壓縮 (SQL Server) | Microsoft Docs
+ms.custom: ''
 ms.date: 08/08/2016
-ms.prod: sql-non-specified
-ms.prod_service: database-engine
-ms.service: 
-ms.component: backup-restore
-ms.reviewer: 
+ms.prod: sql
+ms.prod_service: backup-restore
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- dbe-backup-restore
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: backup-restore
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - log shipping [SQL Server], backup compression
 - backup compression [SQL Server], about backup compression
@@ -20,19 +17,19 @@ helpviewer_keywords:
 - backing up [SQL Server], backup compression
 - backup compression [SQL Server]
 ms.assetid: 05bc9c4f-3947-4dd4-b823-db77519bd4d2
-caps.latest.revision: 
+caps.latest.revision: 51
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 36e6a2f449d649da1137947b5255d025646f43b9
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 22260f7ef4d34cd4bdce3696baa6f535501a7a23
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="backup-compression-sql-server"></a>備份壓縮 (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 本主題描述 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 備份的壓縮，包括限制、壓縮備份的效能取捨、備份壓縮的設定及壓縮比率。  下列 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 版本支援備份壓縮︰Enterprise、Standard 和 Developer。  每個 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 版本與更新版本都可以還原壓縮的備份。 
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  本主題會說明 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 備份的壓縮，包括限制、壓縮備份的效能取捨、備份壓縮的組態及壓縮比率。  下列 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 版本支援備份壓縮︰Enterprise、Standard 和 Developer。  每個 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 版本與更新版本都可以還原壓縮的備份。 
  
   
 ##  <a name="Benefits"></a> 優點  
@@ -73,7 +70,7 @@ ms.lasthandoff: 01/18/2018
   
  例如，壓縮比 3:1 表示您節省了大約 66% 的磁碟空間。 若要針對這些資料行進行查詢，您可以使用下列 Transact-SQL 陳述式：  
   
-```  
+```sql  
 SELECT backup_size/compressed_backup_size FROM msdb..backupset;  
 ```  
   

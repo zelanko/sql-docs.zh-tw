@@ -1,40 +1,37 @@
 ---
-title: "資料來源規格子機碼 |Microsoft 文件"
-ms.custom: 
+title: 資料來源規格子機碼 |Microsoft 文件
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
-ms.component: odbc
-ms.reviewer: 
+ms.prod: sql
+ms.prod_service: connectivity
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: connectivity
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - data source specification subkeys [ODBC]
 - registry entries for data sources [ODBC], data source specification subkeys
 - subkeys [ODBC], data source specification subkeys
 ms.assetid: d7e88a07-e6ab-4258-a45d-1ca21234fbec
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
-ms.workload: Inactive
-ms.openlocfilehash: 6394b29ff1f76fd0f7edd24a3c239de367c3d58b
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+manager: craigg
+ms.openlocfilehash: d432b5ede436db3aa334d060e2a4bce152606c75
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="data-source-specification-subkeys"></a>資料來源規格子機碼
 ODBC 資料來源的子機碼中所列每個資料來源都有自己的子機碼。 這個子機碼有同名的 ODBC 資料來源的子機碼下的對應值。 這個子機碼下的值必須列出驅動程式 DLL，而且可能會列出資料來源的描述。 如果驅動程式支援的轉譯器，這些值可能會列出預設轉譯程式預設轉譯 DLL 及預設轉譯選項的名稱。 值可能也會列出其他驅動程式連接到資料來源所需的資訊。 例如，驅動程式可能需要伺服器名稱、 資料庫名稱或結構描述名稱。  
   
  值的格式是下表所示。 需要的驅動程式值。  
   
-|[屬性]|資料類型|data|  
+|名稱|資料類型|資料|  
 |----------|---------------|----------|  
-|描述|REG_SZ|*描述*|  
+|Description|REG_SZ|*description*|  
 |驅動程式|REG_SZ|*驅動程式 DLL 路徑*|  
 |TranslationDLL|REG_SZ|*轉譯程式 DLL 路徑*|  
 |TranslationName|REG_SZ|*轉譯程式名稱*|  

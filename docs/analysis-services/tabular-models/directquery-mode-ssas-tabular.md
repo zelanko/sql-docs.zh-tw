@@ -1,33 +1,23 @@
 ---
-title: "DirectQuery 模式 |Microsoft 文件"
-ms.custom: 
-ms.date: 02/22/2018
-ms.prod: analysis-services
-ms.prod_service: analysis-services, azure-analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords:
-- sql13.asvs.bidtoolset.realtime.f1
-ms.assetid: 45ad2965-05ec-4fb1-a164-d8060b562ea5
-caps.latest.revision: 
-author: Minewiskan
+title: DirectQuery 模式 |Microsoft 文件
+ms.date: 05/07/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: tabular-models
+ms.topic: conceptual
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 13c60b58664d87cf23ea76069a6c68eb00870927
-ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
+ms.openlocfilehash: 0e0c462c8ae4183889b9c75f5fe30203042a02a0
+ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="directquery-mode"></a>DirectQuery 模式
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
-本文說明*DirectQuery 模式*1200年 （含） 以上的相容性層級的 Analysis Services 表格式模型。 您可以針對在 SSDT 中設計的模型開啟 DirectQuery 模式；或者，針對已部署的表格式模型，則可以在 SSMS 中變更為 DirectQuery 模式。 選擇 DirectQuery 模式之前，請務必了解優點與限制。
+  本文說明*DirectQuery 模式*1200年 （含） 以上的相容性層級的 Analysis Services 表格式模型。 您可以針對在 SSDT 中設計的模型開啟 DirectQuery 模式；或者，針對已部署的表格式模型，則可以在 SSMS 中變更為 DirectQuery 模式。 選擇 DirectQuery 模式之前，請務必了解優點與限制。
   
 ##  <a name="bkmk_Benefits"></a> 優點
  根據預設，表格式模型會使用記憶體中快取來儲存和查詢資料。 當表格式模型查詢位於記憶體中的資料時，即使是複雜查詢也可以非常快速地執行。 但是，使用快取資料有一些限制。 那就是，大型資料集可以超過可用的記憶體，且如果在正常處理排程上並非不可能達成的話，資料有效性需求可能會有困難。  

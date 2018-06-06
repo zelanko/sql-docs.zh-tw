@@ -1,16 +1,14 @@
 ---
-title: "sys.sysindexes (TRANSACT-SQL) |Microsoft 文件"
-ms.custom: 
+title: sys.sysindexes (TRANSACT-SQL) |Microsoft 文件
+ms.custom: ''
 ms.date: 06/10/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
 ms.component: system-compatibility-views
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: system-objects
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sysindexes
@@ -23,16 +21,15 @@ helpviewer_keywords:
 - sysindexes system table
 - sys.sysindexes compatibility view
 ms.assetid: f483d89c-35c4-4a08-8f8b-737fd80d13f5
-caps.latest.revision: 
+caps.latest.revision: 57
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 6871dcbbc0259e6aeca7b3d24ff6050b9608f199
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 276d2bfd5374fc24b31648250b5ffcd1eefb1ac7
+ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="syssysindexes-transact-sql"></a>sys.sysindexes (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -53,7 +50,7 @@ ms.lasthandoff: 02/09/2018
 |**keycnt**|**smallint**|索引鍵數目。|  
 |**groupid**|**smallint**|建立物件的檔案群組識別碼。<br /><br /> NULL = 索引已分割時**indid** > 1。<br /><br /> NULL = 資料表已分割時**indid**是 0 或 1。|  
 |**dpages**|**int**|如**indid** = 0 或**indid** = 1， **dpages**是所使用的資料頁的計數。<br /><br /> 如**indid** > 1， **dpages**是索引所使用的頁面計數。<br /><br /> 0 = 索引已分割時**indid** > 1。<br /><br /> 0 = 資料表已分割時**indid**是 0 或 1。<br /><br /> 如果發生資料列溢位，便不產生精確的結果。|  
-|**reserved**|**int**|如**indid** = 0 或**indid** = 1，**保留**是頁面配置之所有索引和資料表的資料計數。<br /><br /> 如**indid** > 1，**保留**是索引所配置的頁面計數。<br /><br /> 0 = 索引已分割時**indid** > 1。<br /><br /> 0 = 資料表已分割時**indid**是 0 或 1。<br /><br /> 如果發生資料列溢位，便不產生精確的結果。|  
+|**保留**|**int**|如**indid** = 0 或**indid** = 1，**保留**是頁面配置之所有索引和資料表的資料計數。<br /><br /> 如**indid** > 1，**保留**是索引所配置的頁面計數。<br /><br /> 0 = 索引已分割時**indid** > 1。<br /><br /> 0 = 資料表已分割時**indid**是 0 或 1。<br /><br /> 如果發生資料列溢位，便不產生精確的結果。|  
 |**used**|**int**|如**indid** = 0 或**indid** = 1，**用**是用於所有索引和資料表資料的總頁數計數。<br /><br /> 如**indid** > 1，**用**是針對索引所使用的頁面計數。<br /><br /> 0 = 索引已分割時**indid** > 1。<br /><br /> 0 = 資料表已分割時**indid**是 0 或 1。<br /><br /> 如果發生資料列溢位，便不產生精確的結果。|  
 |**rowcnt**|**bigint**|基礎資料層級資料列計數**indid** = 0 和**indid** = 1。<br /><br /> 0 = 索引已分割時**indid** > 1。<br /><br /> 0 = 資料表已分割時**indid**是 0 或 1。|  
 |**rowmodctr**|**int**|計算前次更新資料表的統計資料之後，插入、刪除或更新資料列的總數。<br /><br /> 0 = 索引已分割時**indid** > 1。<br /><br /> 0 = 資料表已分割時**indid**是 0 或 1。<br /><br /> 在[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]和更新版本， **rowmodctr**不完全與舊版相容。 如需詳細資訊，請參閱＜備註＞。|  
@@ -68,7 +65,7 @@ ms.lasthandoff: 02/09/2018
 |**impid**|**smallint**|索引實作旗標。<br /><br /> 傳回 0。<br /><br /> [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**lockflags**|**smallint**|用來約束所考量的索引鎖定資料粒度。 例如，若要將鎖定成本降到最低，您可以將基本上是唯讀的參考表設為只執行資料表層級的鎖定。|  
 |**pgmodctr**|**int**|傳回 0。<br /><br /> [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
-|**keys**|**varbinary(816)**|組成索引鍵的各個資料行之資料行識別碼清單。<br /><br /> 傳回 NULL。<br /><br /> 若要顯示索引鍵資料行，請使用[sys.sysindexkeys](../../relational-databases/system-compatibility-views/sys-sysindexkeys-transact-sql.md)。|  
+|**索引鍵**|**varbinary(816)**|組成索引鍵的各個資料行之資料行識別碼清單。<br /><br /> 傳回 NULL。<br /><br /> 若要顯示索引鍵資料行，請使用[sys.sysindexkeys](../../relational-databases/system-compatibility-views/sys-sysindexkeys-transact-sql.md)。|  
 |**name**|**sysname**|索引或統計資料的名稱。 傳回 NULL **indid** = 0。 請修改您的應用程式來查閱 NULL 堆積名稱。|  
 |**statblob**|**image**|統計資料二進位大型物件 (BLOB)。<br /><br /> 傳回 NULL。|  
 |**maxlen**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
@@ -93,7 +90,7 @@ ms.lasthandoff: 02/09/2018
   
 ## <a name="see-also"></a>另請參閱  
  [目錄檢視 &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
- [將系統資料表對應至系統檢視 &#40;TRANSACT-SQL &#41;](../../relational-databases/system-tables/mapping-system-tables-to-system-views-transact-sql.md)   
+ [將系統資料表對應至系統檢視表&#40;Transact SQL&#41;](../../relational-databases/system-tables/mapping-system-tables-to-system-views-transact-sql.md)   
  [sys.indexes &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)  
   
   

@@ -1,16 +1,15 @@
 ---
-title: "InstanceName 屬性 （CInstance 類別） |Microsoft 文件"
-ms.custom: 
+title: InstanceName 屬性 （CInstance 類別） |Microsoft 文件
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
 ms.component: wmi
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - InstanceName Property (CInstance Class)
@@ -20,20 +19,19 @@ apitype: MOFDef
 helpviewer_keywords:
 - InstanceName property
 ms.assetid: 806fafa8-bf89-4ce8-a082-8081dde9fcc3
-caps.latest.revision: 
-author: JennieHubbard
-ms.author: jhubbard
+caps.latest.revision: 32
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 4941a34ffd348018e8c4b34474fb809d871a04d8
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.openlocfilehash: 16b47a53db4e63bcb28bac858d25e9204af6b6f1
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="cinstance-class---instancename-property"></a>CInstance 類別-InstanceName 屬性
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
-取得 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 用戶端的執行個體名稱。  
+  取得 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 用戶端的執行個體名稱。  
   
 ## <a name="syntax"></a>語法  
   

@@ -1,39 +1,28 @@
 ---
-title: "MDSCHEMA_SETS 資料列集 |Microsoft 文件"
-ms.custom: 
-ms.date: 03/06/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+title: MDSCHEMA_SETS 資料列集 |Microsoft 文件
+ms.date: 05/03/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: schema-rowsets
 ms.topic: reference
-apiname: MDSCHEMA_SETS
-apitype: NA
-applies_to: SQL Server 2016 Preview
-helpviewer_keywords: MDSCHEMA_SETS rowset
-ms.assetid: abb00dc0-2b83-48d6-b2ba-6615c1488d06
-caps.latest.revision: "37"
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: d861c23e40464535fbde4b666c2e1429f65c772c
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 666f8aa8889f2d15e9e62499e41ad9c0bc69fcff
+ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="mdschemasets-rowset"></a>MDSCHEMA_SETS 資料列集
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]描述目前在資料庫中，包括工作階段範圍集未定義任何設定。  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+  描述目前定義於資料庫中的任何集合，包括工作階段範圍集。  
   
 ## <a name="rowset-columns"></a>資料列集資料行  
  **MDSCHEMA_SETS**資料列集包含下列資料行。  
   
-|資料行名稱|類型指標|描述|  
+|資料行名稱|類型指標|Description|  
 |-----------------|--------------------|-----------------|  
 |**CATALOG_NAME**|**DBTYPE_WSTR**|資料庫的名稱。|  
 |**SCHEMA_NAME**|**DBTYPE_WSTR**|不支援。|  
@@ -62,7 +51,7 @@ ms.lasthandoff: 01/08/2018
 |**HIERARCHY_UNIQUE_NAME**|**DBTYPE_WSTR**|選擇性。|  
 |**CUBE_SOURCE**|**DBTYPE_UI2**|選擇性。<br /><br /> 注意： 只有一個階層可以包含在內，而且命名集只會傳回其階層完全符合限制。|  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [OLE DB for OLAP 結構描述資料列集](../../../analysis-services/schema-rowsets/ole-db-olap/ole-db-for-olap-schema-rowsets.md)  
   
   

@@ -1,17 +1,14 @@
 ---
-title: "規則、 觸發程序，預設值和預存程序支援 |Microsoft 文件"
-ms.custom: 
+title: 規則、 觸發程序，預設值和預存程序支援 |Microsoft 文件
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
-ms.component: odbc
-ms.reviewer: 
+ms.prod: sql
+ms.prod_service: connectivity
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- drivers
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: connectivity
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - Visual FoxPro ODBC driver [ODBC], stored procedures
 - FoxPro ODBC driver [ODBC], commands and functions
@@ -31,16 +28,15 @@ helpviewer_keywords:
 - FoxPro ODBC driver [ODBC], stored procedures
 - Visual FoxPro commands and functions [ODBC]
 ms.assetid: e449de20-d6ca-4902-9f8e-814eb6e86650
-caps.latest.revision: 
+caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
-ms.workload: Inactive
-ms.openlocfilehash: c2fcdf0a9a7af2f34a2a0d87495d00ddf3373d3a
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+manager: craigg
+ms.openlocfilehash: ba9045b69420b70328071cbf3859ab29676260b9
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="support-for-rules-triggers-default-values-and-stored-procedures-visual-foxpro-odbc-driver"></a>規則、 觸發程序，預設值和預存程序 （Visual FoxPro ODBC 驅動程式） 支援
 您無法建立 Visual FoxPro 規則、 觸發程序、 預設值或使用 Visual FoxPro ODBC 驅動程式的預存程序。 不過，您的應用程式可能會與互動現有的規則、 觸發程序、 預設值或預存程序，因為它會將插入、 更新或刪除儲存在資料庫中的 Visual FoxPro 資料。  
@@ -50,7 +46,7 @@ ms.lasthandoff: 02/15/2018
  如果您的應用程式會與資料互動，其規則、 觸發程序、 預設值，或任何其他 Visual FoxPro 命令或函式，呼叫預存程序，驅動程式會產生錯誤。 請參閱[不支援 Visual FoxPro 命令和函數](../../odbc/microsoft/unsupported-visual-foxpro-commands-and-functions-visual-foxpro-odbc-driver.md)命令和函數不支援的驅動程式的清單。  
   
 > [!TIP]  
->  如果您想要將條件式程式碼插入您的規則、 觸發程序或預存程序會決定要由驅動程式呼叫時執行的命令，您可以使用**版本 （)**函式。 **版本 （)**函式會傳回 「 Visual FoxPro ODBC 驅動程式*\<版本 >*「 驅動程式呼叫時。  
+>  如果您想要將條件式程式碼插入您的規則、 觸發程序或預存程序會決定要由驅動程式呼叫時執行的命令，您可以使用**版本 （)** 函式。 **版本 （)** 函式會傳回 「 Visual FoxPro ODBC 驅動程式*\<版本 >*「 驅動程式呼叫時。  
   
 ## <a name="visual-foxpro-commands-and-functions-supported-in-rules-triggers-default-values-and-stored-procedures"></a>Visual FoxPro 命令和函數中規則、 觸發程序，預設值，以及預存程序支援  
   
@@ -81,24 +77,24 @@ ms.lasthandoff: 02/15/2018
   
 ||||  
 |-|-|-|  
-|開始交易命令|BETWEEN( ) Function|BITNOT （） 函式|  
+|開始交易命令|之間 （） 函式|BITNOT （） 函式|  
 |BITCLEAR （） 函式|BITLSHIFT （） 函式|BITSET （） 函式|  
 |BITOR （） 函式|BITRSHIFT （） 函式|空白的命令|  
-|位元測試 （） 函式|BITXOR( ) Function||  
+|位元測試 （） 函式|BITXOR （） 函式||  
 |BOF （） 函式|BITAND （） 函式||  
   
 ## <a name="c"></a>C  
   
 ||||  
 |-|-|-|  
-|計算命令|候選 （） 函式|CHR( ) Function|  
+|計算命令|候選 （） 函式|CHR （） 函式|  
 |CDX （） 函式|CEILING （） 函式|關閉命令|  
-|CHRTRAN( ) Function|CHRTRANC （） 函式|複製索引命令|  
+|CHRTRAN （） 函式|CHRTRANC （） 函式|複製索引命令|  
 |CMONTH （） 函式|繼續命令|複製結構擴充命令|  
 |複製程序命令|結構 [複製] 命令|將複製到命令|  
 |複製 TAG 命令|將複製到陣列命令|CPCONVERT （） 函式|  
 |COS （） 函式|COUNT 命令|CTOD （） 函式|  
-|CPCURRENT （） 函式|CPDBF( ) Function|CURSORSETPROP （） 函式|  
+|CPCURRENT （） 函式|CPDBF （） 函式|CURSORSETPROP （） 函式|  
 |CTOT （） 函式|CURSORGETPROP （） 函式||  
 |CURVAL （） 函式|CDOW （） 函式||  
   
@@ -156,7 +152,7 @@ ms.lasthandoff: 02/15/2018
 |INDBC （） 函式|INDEX 命令|INLIST （） 函式|  
 |插入 SQL 命令|INT （） 函式|ISALPHA （） 函式|  
 |ISBLANK （） 函式|ISDIGIT （） 函式|ISEXCLUSIVE （） 函式|  
-|ISLEADBYTE （） 函式|ISLOWER( ) Function|ISNULL （） 函式|  
+|ISLEADBYTE （） 函式|ISLOWER （） 函式|ISNULL （） 函式|  
 |ISREADONLY （） 函式|ISUPPER （） 函式||  
   
 ## <a name="k"></a>K  
@@ -208,7 +204,7 @@ ms.lasthandoff: 02/15/2018
 |參數的命令|主要的 （） 函式|私用的命令|  
 |PI （） 函式|程式 > （） 函式|適當的 （） 函式|  
 |程序命令|PV （） 函式||  
-|公用命令|PADL （) &#124;PADR （) &#124;PADC （） 函式||  
+|公用命令|PADL （) &#124; PADR （) &#124; PADC （） 函式||  
   
 ## <a name="r"></a>R  
   

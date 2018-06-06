@@ -1,27 +1,25 @@
 ---
-title: "PDOStatement 類別 |Microsoft 文件"
-ms.custom: 
-ms.date: 01/19/2017
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
+title: PDOStatement 類別 |Microsoft 文件
+ms.custom: ''
+ms.date: 03/26/2018
+ms.prod: sql
+ms.prod_service: connectivity
 ms.component: php
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: connectivity
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: ef2db0b3-b10e-4898-8bfc-d5e4baca18ef
-caps.latest.revision: "12"
+caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
-ms.workload: Inactive
-ms.openlocfilehash: 5250ca91c0a4a90d22742c078cc027d48fea3195
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+manager: craigg
+ms.openlocfilehash: 9c26c39720598d4fa1f43bf0987d004c5007073a
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="pdostatement-class"></a>PDOStatement 類別
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -31,7 +29,6 @@ PDOStatement 類別表示陳述式和陳述式的結果。
 ## <a name="syntax"></a>語法  
   
 ```  
-  
 PDOStatement {}  
 ```  
   
@@ -79,10 +76,15 @@ PDOStatement 類別包含以下的方法：
 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]2.0 版已加入 PDO 支援。  
   
 ## <a name="see-also"></a>另請參閱  
-[PDO_SQLSRV 驅動程式參考](../../connect/php/pdo-sqlsrv-driver-reference.md)  
-[PHP SQL 驅動程式概觀](../../connect/php/overview-of-the-php-sql-driver.md)
-[常數 &#40;Microsoft Drivers for PHP for SQL Server&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md)  
-[PHP SQL 驅動程式程式設計指南](../../connect/php/programming-guide-for-php-sql-driver.md)
-[PHP SQL 驅動程式快速入門](../../connect/php/getting-started-with-the-php-sql-driver.md)
-[PDO](http://go.microsoft.com/fwlink/?LinkID=187441)  
+[PDO_SQLSRV 驅動程式參考](../../connect/php/pdo-sqlsrv-driver-reference.md) 
+
+[Microsoft Drivers for PHP for SQL Server 的概觀](../../connect/php/overview-of-the-php-sql-driver.md)
+
+[常數 &#40;Microsoft Drivers for PHP for SQL Server&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md)
+
+[程式程式設計指南 Microsoft Drivers for PHP，適用於 SQL Server](../../connect/php/programming-guide-for-php-sql-driver.md)
+
+[開始使用 Microsoft Drivers for PHP for SQL Server](../../connect/php/getting-started-with-the-php-sql-driver.md)
+
+[PDO](http://php.net/manual/book.pdo.php)  
   

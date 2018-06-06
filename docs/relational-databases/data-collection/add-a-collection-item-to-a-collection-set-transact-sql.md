@@ -1,35 +1,30 @@
 ---
-title: "將收集項新增至收集組 (Transact-SQL) | Microsoft Docs"
-ms.custom: 
+title: 將收集項新增至收集組 (Transact-SQL) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/07/2017
-ms.prod: sql-non-specified
-ms.prod_service: database-engine
-ms.service: 
-ms.component: data-collection
-ms.reviewer: 
+ms.prod: sql
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: supportability
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - collection items [SQL Server]
 - collection sets [SQL Server], adding items
 ms.assetid: 9fe6454e-8c0e-4b50-937b-d9871b20fd13
-caps.latest.revision: 
-author: stevestein
-ms.author: sstein
+caps.latest.revision: 21
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 5e6a3619ee81352c4345b31546599839fdb59eb2
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.openlocfilehash: aa263e4b3a21f283adf1da24b817cd2a0f31fba4
+ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="add-a-collection-item-to-a-collection-set-transact-sql"></a>將收集項加入收集組 (Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-您可以使用資料收集器所提供的預存程序，將收集項加入到現有的收集組中。  
+  您可以使用資料收集器所提供的預存程序，將收集項加入到現有的收集組中。  
   
  請在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中使用查詢編輯器來完成以下步驟。  
   

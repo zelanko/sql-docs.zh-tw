@@ -1,16 +1,14 @@
 ---
-title: "sp_delete_proxy (TRANSACT-SQL) |Microsoft 文件"
-ms.custom: 
+title: sp_delete_proxy (TRANSACT-SQL) |Microsoft 文件
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: system-objects
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_delete_proxy
@@ -21,16 +19,15 @@ helpviewer_keywords:
 - sp_delete_proxy
 - DROP PROXY statement
 ms.assetid: 44a1db13-b7f2-4dab-a1b5-b8dafb41737c
-caps.latest.revision: 
+caps.latest.revision: 21
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: c39d8c4e35b17570d3ea9b19d2be13ed05ba15d0
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 7e6f13ead19c72b65623dad1e6f2390162d2f900
+ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="spdeleteproxy-transact-sql"></a>sp_delete_proxy (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -60,7 +57,7 @@ sp_delete_proxy [ @proxy_id = ] id , [ @proxy_name = ] 'proxy_name'
  無  
   
 ## <a name="remarks"></a>備註  
- 任一 **@proxy_name** 或 **@proxy_id** 必須指定。 如果同時指定了兩個引數，這兩個引數都必須參考相同的 Proxy，否則，預存程序會失敗。  
+ 任一**@proxy_name**或**@proxy_id**必須指定。 如果同時指定了兩個引數，這兩個引數都必須參考相同的 Proxy，否則，預存程序會失敗。  
   
  如果作業步驟參考指定的 Proxy，就無法刪除這個 Proxy，預存程序會失敗。  
   

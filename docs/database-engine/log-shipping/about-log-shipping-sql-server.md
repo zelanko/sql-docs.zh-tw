@@ -1,16 +1,15 @@
 ---
-title: "關於記錄傳送 (SQL Server) | Microsoft Docs"
-ms.custom: 
+title: 關於記錄傳送 (SQL Server) | Microsoft Docs
+ms.custom: ''
 ms.date: 05/17/2016
-ms.prod: sql-non-specified
-ms.prod_service: database-engine
-ms.service: 
+ms.prod: sql
+ms.prod_service: high-availability
 ms.component: log-shipping
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: dbe-high-availability
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: high-availability
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - secondary servers [SQL Server]
 - log shipping [SQL Server], jobs
@@ -27,19 +26,22 @@ helpviewer_keywords:
 - backup jobs [SQL Server]
 - primary servers [SQL Server]
 ms.assetid: 55da6b94-3a4b-4bae-850f-4bf7f6e918ca
-caps.latest.revision: "65"
+caps.latest.revision: 65
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.workload: Active
-ms.openlocfilehash: 5ab35997e2241e7ef2c788308c56c6b532852517
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+monikerRange: '>= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 0d507c250cdf26f2bcbafebcb14b31df83623e2a
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="about-log-shipping-sql-server"></a>關於記錄傳送 (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 記錄傳送可讓您將「主要伺服器」執行個體上「主要資料庫」中的交易記錄備份，自動傳送到個別「次要伺服器」執行個體上的一或多個「次要資料庫」。 交易記錄備份會個別套用到每一個次要資料庫。 第三部選擇性的伺服器執行個體，稱為 *「監視伺服器」*，負責記錄備份和還原作業的記錄與狀態，如果這些作業未依排程進行，還可以選擇性地發出警示。  
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 記錄傳送可讓您將 *「主要伺服器」* 執行個體上 *「主要資料庫」* 中的交易記錄備份，自動傳送到個別的 *「次要伺服器」* 執行個體上的一個或多個 *「次要資料庫」* 。 交易記錄備份會個別套用到每一個次要資料庫。 第三部選擇性的伺服器執行個體，稱為 *「監視伺服器」*，負責記錄備份和還原作業的記錄與狀態，如果這些作業未依排程進行，還可以選擇性地發出警示。  
   
  **本主題內容：**  
   

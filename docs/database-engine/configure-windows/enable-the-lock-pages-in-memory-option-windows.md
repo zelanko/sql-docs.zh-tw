@@ -1,31 +1,30 @@
 ---
-title: "啟用記憶體選項中的鎖定頁面 (Windows) | Microsoft Docs"
-ms.custom: 
+title: 啟用記憶體選項中的鎖定頁面 (Windows) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
-ms.prod_service: database-engine
-ms.service: 
-ms.component: configure-windows
-ms.reviewer: 
+ms.prod: sql
+ms.prod_service: high-availability
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: database-engine
-ms.tgt_pltfrm: 
-ms.topic: article
-helpviewer_keywords: Lock Pages in Memory option
+ms.technology: configuration
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
+helpviewer_keywords:
+- Lock Pages in Memory option
 ms.assetid: cd581fbc-4747-439e-87f9-2f18e39c5bb9
-caps.latest.revision: "35"
+caps.latest.revision: 35
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.workload: Active
-ms.openlocfilehash: ad766a982b180e6fad72ec0ca3314648be81315f
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: aef0ca374aa9ccc08d50814c967a4fbee755ea64
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="enable-the-lock-pages-in-memory-option-windows"></a>啟用鎖定記憶體分頁選項 (Windows)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 此 Windows 原則決定哪些帳戶可以使用處理序將資料保留在實體記憶體中，以防止系統將資料分頁到磁碟上的虛擬記憶體。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  此 Windows 原則決定哪些帳戶可以使用處理序將資料保留在實體記憶體中，以防止系統將資料傳送到磁碟上的虛擬記憶體。  
   
 > [!NOTE]  
 >  在預期到磁碟的分頁記憶體時，在記憶體中鎖定分頁可能會提升效能。  
@@ -48,9 +47,9 @@ ms.lasthandoff: 01/18/2018
   
 6.  在 [本機安全性設定 – 鎖定記憶體中的分頁] 對話方塊中，按一下 [新增使用者或群組]。  
   
-7.  在 [選取使用者、服務帳戶或群組] 對話方塊中，加入具有執行 sqlservr.exe 權限的帳戶。  
+7.  在 [Select Users, Service Accounts, or Groups] \(選取使用者、服務帳戶或群組) 對話方塊方塊中，選取 SQL Server 服務帳戶。  
   
-8.  重新啟動 SQL Server Data Engine 服務，這項設定才會生效。
+8.  重新啟動 SQL Server 服務，這項設定才會生效。
   
 ## <a name="see-also"></a>另請參閱  
  [伺服器記憶體伺服器組態選項](../../database-engine/configure-windows/server-memory-server-configuration-options.md)  

@@ -1,30 +1,20 @@
 ---
-title: "值 (MDX) |Microsoft 文件"
-ms.custom: 
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: language-reference
-f1_keywords: Value
-dev_langs: kbMDX
-helpviewer_keywords: Value function
-ms.assetid: ff76628e-2d49-49f6-a6cb-f6da07d83d65
-caps.latest.revision: "31"
-author: Minewiskan
+title: 值 (MDX) |Microsoft 文件
+ms.date: 05/30/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: mdx
+ms.topic: reference
 ms.author: owend
-manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: 2605c0984a772ca3af031a4fc3d6b13d64c02452
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: f1d30c54661602fc1f21d37c92480202533928c2
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34582090"
 ---
 # <a name="value-mdx"></a>Value (MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -43,7 +33,7 @@ Member_Expression[.Value]
  傳回成員的有效多維度運算式 (MDX) 運算式。  
   
 ## <a name="remarks"></a>備註  
- **值**函式會傳回字串形式的指定成員的值。 **值**引數是選擇性的因為成員值是預設屬性的成員，而如果未不指定任何其他值則會傳回成員的值。 如需有關成員屬性的詳細資訊，請參閱[內建成員屬性 &#40;MDX &#41;](../analysis-services/multidimensional-models/mdx/mdx-member-properties-intrinsic-member-properties.md)和[使用者自訂成員屬性 &#40;MDX &#41;](../analysis-services/multidimensional-models/mdx/mdx-member-properties-user-defined-member-properties.md).  
+ **值**函式會傳回字串形式的指定成員的值。 **值**引數是選擇性的因為成員值是預設屬性的成員，而如果未不指定任何其他值則會傳回成員的值。 如需有關成員屬性的詳細資訊，請參閱[內建成員屬性&#40;MDX&#41; ](../analysis-services/multidimensional-models/mdx/mdx-member-properties-intrinsic-member-properties.md)和[使用者自訂成員屬性&#40;MDX&#41;](../analysis-services/multidimensional-models/mdx/mdx-member-properties-user-defined-member-properties.md)。  
   
 ## <a name="examples"></a>範例  
  下列範例會傳回成員值，並且會明確傳回成員名稱。  
@@ -63,11 +53,11 @@ SELECT {[Date].[Calendar].[July 1, 2001]} ON 0
 from [Adventure Works]  
 ```  
   
-## <a name="see-also"></a>請參閱  
- [MemberValue &#40;MDX &#41;](../mdx/membervalue-mdx.md)   
- [屬性 &#40;MDX &#41;](../mdx/properties-mdx.md)   
- [名稱為 &#40;MDX &#41;](../mdx/name-mdx.md)   
- [UniqueName &#40;MDX &#41;](../mdx/uniquename-mdx.md)   
- [MDX 函數參考 &#40;MDX &#41;](../mdx/mdx-function-reference-mdx.md)  
+## <a name="see-also"></a>另請參閱  
+ [MemberValue &#40;MDX&#41;](../mdx/membervalue-mdx.md)   
+ [屬性&#40;MDX&#41;](../mdx/properties-mdx.md)   
+ [名稱&#40;MDX&#41;](../mdx/name-mdx.md)   
+ [UniqueName &#40;MDX&#41;](../mdx/uniquename-mdx.md)   
+ [MDX 函數參考&#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

@@ -1,27 +1,24 @@
 ---
-title: "範例 JDBC 驅動程式應用程式 |Microsoft 文件"
-ms.custom: 
+title: 範例 JDBC 驅動程式應用程式 |Microsoft 文件
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
-ms.component: jdbc
-ms.reviewer: 
+ms.prod: sql
+ms.prod_service: connectivity
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: connectivity
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: e136b87c-a138-45d6-8c3e-bcef94b7e483
-caps.latest.revision: "23"
+caps.latest.revision: 23
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
-ms.workload: On Demand
-ms.openlocfilehash: f28dbea0aed74639a72e923f5558b31b9777d3dc
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+manager: craigg
+ms.openlocfilehash: a93b47d03f4cbd5f2a8dbdffe3d0e14c59b19cc4
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sample-jdbc-driver-applications"></a>範例 JDBC 驅動程式應用程式
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -39,11 +36,11 @@ ms.lasthandoff: 11/18/2017
 |主題|Description|  
 |-----------|-----------------|  
 |[連接及擷取資料](../../connect/jdbc/connecting-and-retrieving-data.md)|這些範例應用程式示範如何連接到[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]資料庫。 它們也示範從擷取資料的不同方法[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]資料庫。|  
-|[使用資料類型 &#40;JDBC &#41;](../../connect/jdbc/working-with-data-types-jdbc.md)|這些範例應用程式示範如何使用 JDBC 驅動程式資料類型方法來處理資料中[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]資料庫。|  
+|[使用資料型別&#40;JDBC&#41;](../../connect/jdbc/working-with-data-types-jdbc.md)|這些範例應用程式示範如何使用 JDBC 驅動程式資料類型方法來處理資料中[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]資料庫。|  
 |[使用結果集](../../connect/jdbc/working-with-result-sets.md)|這些範例應用程式示範如何使用結果集來處理資料中包含[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]資料庫。|  
 |[使用大型資料](../../connect/jdbc/working-with-large-data.md)|這些範例應用程式示範如何使用適應性緩衝來擷取大數值資料，從[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]資料庫而沒有伺服器資料指標的負擔。|  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [JDBC Driver 概觀](../../connect/jdbc/overview-of-the-jdbc-driver.md)  
   
   

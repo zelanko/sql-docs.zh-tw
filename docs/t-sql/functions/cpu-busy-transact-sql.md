@@ -1,16 +1,14 @@
 ---
 title: '@@CPU_BUSY (Transact-SQL) | Microsoft Docs'
-ms.custom: 
+ms.custom: ''
 ms.date: 09/18/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-database
-ms.service: 
 ms.component: t-sql|functions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: t-sql
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - '@@CPU_BUSY_TSQL'
@@ -26,24 +24,23 @@ helpviewer_keywords:
 - statistical information [SQL Server], CPU
 - CPU [SQL Server], activity
 ms.assetid: 81ae0e64-79fa-4a74-9aa5-37045c4cd211
-caps.latest.revision: 
+caps.latest.revision: 36
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 337682a73ae351536af64afca77959cbe6297d7f
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 27eb30bf1a8b176024610affa368a8db1c6607e1
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="x40x40cpubusy-transact-sql"></a>&#x40;&#x40;CPU_BUSY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-傳回 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 上次啟動之後所花的工作時間。 結果是以 CPU 時間遞增 (「刻度」) 來計算，且會針對所有 CPU 來累計，因此，它可能會超出實際的經歷時間。 乘以 @@TIMETICKS 以轉換成微秒。
+此函數會傳回 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 自上次開始之後，花費在進行中操作的總時間。 `@@CPU_BUSY` 會傳回以 CPU 時間遞增 (或以「刻度」為單位) 所測量的結果。 這個值是所有 CPU 的累計，所以可能會超出實際的經歷時間。 乘以 [@@TIMETICKS](./timeticks-transact-sql.md) 以轉換成毫秒。
   
 > [!NOTE]  
->  如果 @@CPU_BUSY 或 @@IO_BUSY 的傳回時間超出大約 49 天的累計 CPU 時間，您會收到算術溢位的警告。 在這個情況下，@@CPU_BUSY、@@IO_BUSY 和 @@IDLE 變數的值並不精確。  
+>  若 @@CPU_BUSY 或 @@IO_BUSY 的傳回時間超出大約 49 天的累計 CPU 時間，您會收到算術溢位的警告。 在這個情況下，`@@CPU_BUSY`、`@@IO_BUSY` 和 `@@IDLE` 變數的值並不精確。  
   
 ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -53,14 +50,14 @@ ms.lasthandoff: 11/21/2017
 @@CPU_BUSY  
 ```  
   
-## <a name="return-types"></a>傳回型
+## <a name="return-types"></a>傳回類型
 **integer**
   
 ## <a name="remarks"></a>Remarks  
-若要顯示包含多項 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 統計資料的報表，其中包括 CPU 活動，請執行 [sp_monitor](../../relational-databases/system-stored-procedures/sp-monitor-transact-sql.md)。
+若要查看包含多項 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 統計資料的報表，其中包括 CPU 活動，請執行 [sp_monitor](../../relational-databases/system-stored-procedures/sp-monitor-transact-sql.md)。
   
 ## <a name="examples"></a>範例  
-下列範例會顯示傳回迄今 (到目前的日期和時間為止) 的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] CPU 活動。 為了避免在將值轉換成百萬分之一秒時，發生算術溢位，這個範例會將其中一個值轉換成 `float` 資料類型。
+此範例會傳回迄今 (到目前的日期和時間為止) 的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] CPU 活動。 此範例會將其中一個值轉換成 `float` 資料類型。 以毫秒為單位計算值時，可避免算術溢位問題。
   
 ```sql
 SELECT @@CPU_BUSY * CAST(@@TIMETICKS AS float) AS 'CPU microseconds',   

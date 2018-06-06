@@ -1,33 +1,31 @@
 ---
-title: "ODBC 來源 | Microsoft Docs"
-ms.custom: 
+title: ODBC 來源 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
 ms.component: data-flow
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 f1_keywords:
 - sql13.ssis.designer.odbcsource.f1
 - sql13.ssis.designer.odbcsource.connection.f1
 - sql13.ssis.designer.odbcsource.columns.f1
 - sql13.ssis.designer.odbcsource.errorhandling.f1
 ms.assetid: abcf34eb-9140-4100-82e6-b85bccd22abe
-caps.latest.revision: 
+caps.latest.revision: 9
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 9c8def299d18a8c7d64cd581fdf7934f366ce5dc
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: c67cbfeb3797c2e0d9fb5758078dad96f290d4e7
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="odbc-source"></a>ODBC 來源
   ODBC 來源會使用資料庫資料表、檢視或 SQL 陳述式，從 ODBC 支援的資料庫中擷取資料。  
@@ -136,7 +134,7 @@ ms.lasthandoff: 01/25/2018
   
 2.  在 [資料流程] 索引標籤中，按兩下 ODBC 來源。  
   
-3.  在 **[ODBC 來源編輯器]**中，按一下 **[資料行]**。  
+3.  在 **[ODBC 來源編輯器]** 中，按一下 **[資料行]**。  
   
 ### <a name="options"></a>選項。  
   
@@ -161,7 +159,7 @@ ms.lasthandoff: 01/25/2018
   
 -   在 [資料流程] 索引標籤上，按兩下 ODBC 來源。  
   
--   在 **[ODBC 來源編輯器]**中，按一下 **[錯誤輸出]**。  
+-   在 **[ODBC 來源編輯器]** 中，按一下 **[錯誤輸出]**。  
   
 ### <a name="options"></a>選項。  
   

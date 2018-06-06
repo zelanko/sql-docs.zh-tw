@@ -1,16 +1,15 @@
 ---
-title: "Name 屬性 （SecurityCertificate 類別） |Microsoft 文件"
-ms.custom: 
+title: Name 屬性 （SecurityCertificate 類別） |Microsoft 文件
+ms.custom: ''
 ms.date: 03/04/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
 ms.component: wmi
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - Name Property (SecurityCertificate Class)
@@ -20,20 +19,19 @@ apitype: MOFDef
 helpviewer_keywords:
 - Name property
 ms.assetid: 797f338f-4d2d-4171-acad-6cc997a7a6c8
-caps.latest.revision: 
-author: JennieHubbard
-ms.author: jhubbard
+caps.latest.revision: 32
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: e8ae82b00d4eb6bea701ad0715f1f710c3d32196
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.openlocfilehash: 0d99dd09c455e72a0b5b5115f5dc38af25e469ca
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="name-property-securitycertificate-class"></a>Name 屬性 (SecurityCertificate 類別)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
-取得安全性憑證的名稱。  
+  取得安全性憑證的名稱。  
   
 ## <a name="syntax"></a>語法  
   

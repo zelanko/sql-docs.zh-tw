@@ -1,36 +1,23 @@
 ---
-title: "模型篩選語法和範例 (Analysis Services-資料採礦) |Microsoft 文件"
-ms.custom: 
-ms.date: 03/01/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
-helpviewer_keywords:
-- model filter [data mining]
-- filter syntax [data mining]
-- filters [data mining]
-- filters [Analysis Services]
-ms.assetid: c729d9b3-8fda-405e-9497-52b2d7493eae
-caps.latest.revision: 
-author: Minewiskan
+title: 模型篩選語法和範例 (Analysis Services-資料採礦) |Microsoft 文件
+ms.date: 05/08/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: data-mining
+ms.topic: conceptual
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: daf31a5100ced2272b74b1bcad982f84bbbe5916
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 467d3efbe979bf2ea58c700409913ef0767457ab
+ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="model-filter-syntax-and-examples-analysis-services---data-mining"></a>模型篩選語法和範例 (Analysis Services - 資料採礦)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-本節提供了有關模型篩選語法的詳細資訊，以及範例運算式。  
+  本節提供了有關模型篩選語法的詳細資訊，以及範例運算式。  
   
  [篩選語法](#bkmk_Syntax)  
   
@@ -319,7 +306,7 @@ FILTER (EXISTS (Products))
   
   
 ## <a name="see-also"></a>另請參閱  
- [篩選採礦模型 &#40;Analysis Services-資料採礦 &#41;](../../analysis-services/data-mining/filters-for-mining-models-analysis-services-data-mining.md)   
- [測試及驗證 &#40; 資料採礦 &#41;](../../analysis-services/data-mining/testing-and-validation-data-mining.md)  
+ [篩選採礦模型 & #40;Analysis Services-資料採礦 & #41;](../../analysis-services/data-mining/filters-for-mining-models-analysis-services-data-mining.md)   
+ [測試及驗證 & #40; 資料採礦 & #41;](../../analysis-services/data-mining/testing-and-validation-data-mining.md)  
   
   

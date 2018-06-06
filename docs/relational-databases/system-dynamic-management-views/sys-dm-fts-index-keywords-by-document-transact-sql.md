@@ -1,16 +1,13 @@
 ---
-title: sys.dm_fts_index_keywords_by_document (Transact-SQL) | Microsoft Docs
-ms.custom: 
+title: sys.dm_fts_index_keywords_by_document (TRANSACT-SQL) |Microsoft 文件
+ms.custom: ''
 ms.date: 06/10/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, pdw
-ms.service: 
-ms.component: dmv's
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: system-objects
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.dm_fts_index_keywords_by_document_TSQL
@@ -24,16 +21,16 @@ helpviewer_keywords:
 - sys.dm_fts_index_keywords_by_document dynamic management function
 - full-text search [SQL Server], viewing keywords
 ms.assetid: 793b978b-c8a1-428c-90c2-a3e49d81b5c9
-caps.latest.revision: 
+caps.latest.revision: 40
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: e2662effefa1c05c33364923342e0f73829a1df3
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+monikerRange: '>= aps-pdw-2016 || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 58377295a7bccadd1a1d273ba45469e817408949
+ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 05/23/2018
 ---
 # <a name="sysdmftsindexkeywordsbydocument-transact-sql"></a>sys.dm_fts_index_keywords_by_document (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-pdw-md.md)]
@@ -62,7 +59,7 @@ sys.dm_fts_index_keywords_by_document
   
 ## <a name="arguments"></a>引數  
  db_id('*database_name*')  
- 呼叫[db_id （)](../../t-sql/functions/db-id-transact-sql.md)函式。 這個函數會接受資料庫名稱並傳回資料庫識別碼，然後 sys.dm_fts_index_keywords_by_document 就會使用此識別碼來尋找指定的資料庫。 如果*database_name*已省略，則會傳回目前資料庫識別碼。  
+ 呼叫[db_id （)](../../t-sql/functions/db-id-transact-sql.md)函式。 這個函數會接受資料庫名稱並傳回資料庫識別碼，然後 sys.dm_fts_index_keywords_by_document 就會使用此識別碼來尋找指定的資料庫。 如果省略 *database_name*，則會傳回目前的資料庫識別碼。  
   
  object_id('*table_name*')  
  呼叫[object_id （)](../../t-sql/functions/object-id-transact-sql.md)函式。 此函數會接受資料表名稱並傳回資料表的資料表識別碼 (包含所要檢查的全文檢索索引)。  
@@ -86,7 +83,7 @@ sys.dm_fts_index_keywords_by_document
   
 -   關鍵字出現在整個全文檢索索引中的次數，亦即：  
   
-     ([SUM](../../t-sql/functions/sum-transact-sql.md)(**occurrence_count**) WHERE **keyword**=*keyword_value* )  
+     ([總和](../../t-sql/functions/sum-transact-sql.md)(**occurrence_count**) 其中**關鍵字**=*keyword_value* )  
   
 -   關鍵字出現在給定文件或資料列中的次數。  
   
@@ -96,7 +93,7 @@ sys.dm_fts_index_keywords_by_document
   
  當全文檢索索引鍵資料行為整數資料類型時，建議您將 document_id 直接對應到基底資料表內的全文檢索索引鍵值。  
   
- 相反地，當全文檢索索引鍵資料行使用非整數資料類型時，document_id 就不表示基底資料表內的全文檢索索引鍵。 在此情況下，若要識別 dm_fts_index_keywords_by_document 所傳回的基底資料表中的資料列，您需要聯結此檢視與所傳回的結果[sp_fulltext_keymappings](../../relational-databases/system-stored-procedures/sp-fulltext-keymappings-transact-sql.md)。 在您可以聯結之前，必須先將預存程序的輸出儲存到暫存資料表。 然後您可以將 dm_fts_index_keywords_by_document 的 document_id 資料行聯結到此預存程序所傳回的 DocId 資料行。 請注意，**時間戳記**資料行無法接收值在插入時，因為它們是由自動產生[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 因此，**時間戳記**資料行必須轉換成**varbinary （8)**資料行。 下列範例會示範這些步驟。 在此範例中， *table_id*是您的資料表識別碼*database_name*是您的資料庫名稱和*table_name*是資料表的名稱。  
+ 相反地，當全文檢索索引鍵資料行使用非整數資料類型時，document_id 就不表示基底資料表內的全文檢索索引鍵。 在此情況下，若要識別 dm_fts_index_keywords_by_document 所傳回的基底資料表中的資料列，您需要聯結此檢視與所傳回的結果[sp_fulltext_keymappings](../../relational-databases/system-stored-procedures/sp-fulltext-keymappings-transact-sql.md)。 在您可以聯結之前，必須先將預存程序的輸出儲存到暫存資料表。 然後您可以將 dm_fts_index_keywords_by_document 的 document_id 資料行聯結到此預存程序所傳回的 DocId 資料行。 請注意，**時間戳記**資料行無法接收值在插入時，因為它們是由自動產生[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 因此，**時間戳記**資料行必須轉換成**varbinary （8)** 資料行。 下列範例會示範這些步驟。 在此範例中， *table_id*是您的資料表識別碼*database_name*是您的資料庫名稱和*table_name*是資料表的名稱。  
   
 ```  
 USE database_name;  
@@ -125,7 +122,7 @@ GO
  下列範例會在 `HumanResources.JobCandidate` 範例資料庫的 `AdventureWorks2012` 資料表中顯示位於文件層級之全文檢索索引的內容。  
   
 > [!NOTE]  
->  您可以藉由執行所提供的範例來建立這個索引`HumanResources.JobCandidate`資料表中[CREATE FULLTEXT INDEX &#40;TRANSACT-SQL &#41;](../../t-sql/statements/create-fulltext-index-transact-sql.md).  
+>  您可以藉由執行所提供的範例來建立這個索引`HumanResources.JobCandidate`資料表中[CREATE FULLTEXT INDEX &#40;TRANSACT-SQL&#41;](../../t-sql/statements/create-fulltext-index-transact-sql.md)。  
   
 ```  
 SELECT * FROM sys.dm_fts_index_keywords_by_document(db_id('AdventureWorks'),   
@@ -134,11 +131,11 @@ GO
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [全文檢索搜尋及語意搜尋動態管理檢視與函數 &#40;TRANSACT-SQL &#41;](../../relational-databases/system-dynamic-management-views/full-text-and-semantic-search-dynamic-management-views-functions.md)   
+ [全文檢索搜尋和語意搜尋動態管理檢視與函數&#40;Transact SQL&#41;](../../relational-databases/system-dynamic-management-views/full-text-and-semantic-search-dynamic-management-views-functions.md)   
  [全文檢索搜尋](../../relational-databases/search/full-text-search.md)   
- [sys.dm_fts_index_keywords &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-fts-index-keywords-transact-sql.md)   
+ [sys.dm_fts_index_keywords &#40;Transact SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-fts-index-keywords-transact-sql.md)   
  [sys.dm_fts_index_keywords_by_property &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-fts-index-keywords-by-property-transact-sql.md)   
- [sp_fulltext_keymappings &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-fulltext-keymappings-transact-sql.md)   
+ [sp_fulltext_keymappings &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-fulltext-keymappings-transact-sql.md)   
  [改善全文檢索索引的效能](../../relational-databases/search/improve-the-performance-of-full-text-indexes.md)  
   
   

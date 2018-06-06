@@ -1,30 +1,31 @@
 ---
-title: "TopSum (DMX) |Microsoft 文件"
-ms.custom: 
+title: TopSum (DMX) |Microsoft 文件
+ms.custom: ''
 ms.date: 03/02/2016
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
 ms.component: data-mining
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
-f1_keywords: TOPSUM
-dev_langs: DMX
-helpviewer_keywords: TopSum function
+f1_keywords:
+- TOPSUM
+dev_langs:
+- DMX
+helpviewer_keywords:
+- TopSum function
 ms.assetid: a0bebdfa-3db2-4818-ab8c-440598de71f1
-caps.latest.revision: "41"
+caps.latest.revision: 41
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: c3f3a81f804673fa0f9586a224d881b284719ebf
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 83382c6fba828d1dc438f380dad72c670feb6c6b
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="topsum-dmx"></a>TopSum (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -65,7 +66,7 @@ SELECT (SELECT 'Women''s Mountain Shorts' as [Model]) AS [v Assoc Seq Line Items
   
  範例結果：  
   
-|[模型]|$SUPPORT|$PROBABILITY|$ADJUSTEDPROBABILITY|  
+|模型|$SUPPORT|$PROBABILITY|$ADJUSTEDPROBABILITY|  
 |-----------|--------------|------------------|--------------------------|  
 |Sport-100|4334|0.291283016|0.252695851|  
 |Water Bottle|2866|0.192620472|0.175205052|  
@@ -101,7 +102,7 @@ NATURAL PREDICTION JOIN
   
  範例結果：  
   
-|[模型]|$SUPPORT|$PROBABILITY|$ADJUSTEDPROBABILITY|  
+|模型|$SUPPORT|$PROBABILITY|$ADJUSTEDPROBABILITY|  
 |-----------|--------------|------------------|--------------------------|  
 |Sport-100|4334|0.29…|0.25…|  
 |Water Bottle|2866|0.19…|0.17…|  
@@ -109,9 +110,9 @@ NATURAL PREDICTION JOIN
   
  **請注意**提供這個範例只是為了說明使用**TopSum**。 根據資料集的大小而定，此查詢可能會花上很長的一段執行時間。  
   
-## <a name="see-also"></a>請參閱  
- [函式 &#40; DMX &#41;](../dmx/functions-dmx.md)   
- [一般預測函數 &#40; DMX &#41;](../dmx/general-prediction-functions-dmx.md)   
- [TopPercent &#40; DMX &#41;](../dmx/toppercent-dmx.md)  
+## <a name="see-also"></a>另請參閱  
+ [函式&#40;DMX&#41;](../dmx/functions-dmx.md)   
+ [一般預測函數&#40;DMX&#41;](../dmx/general-prediction-functions-dmx.md)   
+ [TopPercent &#40;DMX&#41;](../dmx/toppercent-dmx.md)  
   
   

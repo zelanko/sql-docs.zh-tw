@@ -1,29 +1,27 @@
 ---
-title: "教學課程：建立自由格式報表 (報表產生器) | Microsoft Docs"
-ms.custom: 
+title: 教學課程：建立自由格式報表 (報表產生器) | Microsoft Docs
+ms.custom: ''
 ms.date: 09/02/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
-ms.service: 
 ms.component: reporting-services
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: get-started-article
 applies_to:
 - SQL Server 2016
 ms.assetid: 87288b59-faf2-4b1d-a8e4-a7582baedf2f
-caps.latest.revision: 
+caps.latest.revision: 17
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 76a43f57cfd8c5712928dc8ee408cb517f7dceaf
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 7f1f50c211910400ec99b2dc309a5f42dd3d3081
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="tutorial-creating-a-free-form-report-report-builder"></a>教學課程：建立自由格式報表 (報表產生器)
 在本教學課程中，您會建立分頁報表，作為電子報。 每個頁面會顯示靜態文字、摘要的視覺效果，以及詳細的範例銷售資料。
@@ -353,7 +351,7 @@ ms.lasthandoff: 02/15/2018
   
     「正在連接到報表伺服器」訊息隨即顯示。 連接完成時，您就會看見報表伺服器管理員指定為預設報表位置之報表資料夾的內容。  
   
-4.  在 **[名稱]**中，將預設名稱取代為 **SalesInformationByTerritory**。  
+4.  在 **[名稱]** 中，將預設名稱取代為 **SalesInformationByTerritory**。  
   
 5.  按一下 **[儲存]**。  
   
@@ -363,9 +361,9 @@ ms.lasthandoff: 02/15/2018
   
 1.  在 **[報表產生器]** 按鈕中，按一下 **[另存新檔]**。  
   
-2.  按一下 **[桌面]**、 **[我的文件]**或 **[我的電腦]**，然後瀏覽到您要儲存報表的資料夾。  
+2.  按一下 **[桌面]**、 **[我的文件]** 或 **[我的電腦]**，然後瀏覽到您要儲存報表的資料夾。  
   
-3.  在 **[名稱]**中，將預設名稱取代為 **SalesInformationByTerritory**。  
+3.  在 **[名稱]** 中，將預設名稱取代為 **SalesInformationByTerritory**。  
   
 4.  按一下 **[儲存]**。  
   

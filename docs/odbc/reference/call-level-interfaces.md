@@ -1,16 +1,14 @@
 ---
-title: "呼叫層級介面 |Microsoft 文件"
-ms.custom: 
+title: 呼叫層級介面 |Microsoft 文件
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
-ms.component: odbc
-ms.reviewer: 
+ms.prod: sql
+ms.prod_service: connectivity
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: connectivity
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - SQL statements [ODBC], CLI
 - CLI [ODBC], using CLI
@@ -18,16 +16,15 @@ helpviewer_keywords:
 - SQL [ODBC], CLI
 - call-level interface [ODBC], using call-level interface
 ms.assetid: 42257bb6-0bf1-4533-a4ef-4a6dd2aecb18
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
-ms.workload: Inactive
-ms.openlocfilehash: 253a322e200f0da9046f5928385c5892265cbc19
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+manager: craigg
+ms.openlocfilehash: 6094e97d73dc11ec4c6507b6d5018353e2e345e2
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="call-level-interfaces"></a>呼叫層級介面
 將 SQL 陳述式傳送至 DBMS 的最後一個技巧是透過呼叫層級介面 (CLI)。 呼叫層級介面提供的應用程式可以呼叫的 DBMS 函式的程式庫。 因此，而不是嘗試另一種程式設計語言與混合 SQL，則呼叫層級介面便是類似於大部分的程式設計人員會習慣使用，例如字串、 I/O 或 C.便箋支援內嵌式的 SQL 的 Dbms 中的數學程式庫常式的程式庫已經呼叫層級介面，先行編譯器所產生的呼叫。 不過，這些呼叫都未記載並可能有所變更，恕不另行通知。  

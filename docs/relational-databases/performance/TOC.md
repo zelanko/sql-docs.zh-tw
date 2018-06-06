@@ -2,9 +2,10 @@
 # [SQL Server Database Engine 和 Azure SQL Database 的效能中心](performance-center-for-sql-server-database-engine-and-azure-sql-database.md)  
 # [設定具有 NVDIMM-N 回寫式快取的儲存空間](configuring-storage-spaces-with-a-nvdimm-n-write-back-cache.md)  
 
-# [彈性查詢處理](adaptive-query-processing.md)
 # [自動調整](../automatic-tuning/automatic-tuning.md)
 # [基數估計](cardinality-estimation-sql-server.md)  
+# [智慧查詢處理](intelligent-query-processing.md)
+## [彈性查詢處理](adaptive-query-processing.md)
 
 # [效能的監視與微調](monitor-and-tune-for-performance.md)  
 ## [監視 SQL Server 元件](monitor-sql-server-components.md)  

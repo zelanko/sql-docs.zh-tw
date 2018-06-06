@@ -1,31 +1,17 @@
 ---
-title: "建立 R 模型 （SQL 與 R 深入探討） |Microsoft 文件"
-ms.custom: 
-ms.date: 12/14/2017
-ms.reviewer: 
-ms.suite: sql
-ms.prod: machine-learning-services
-ms.prod_service: machine-learning-services
-ms.component: 
-ms.technology: 
-ms.tgt_pltfrm: 
+title: 建立 R 模型 （SQL 與 R 深入探討） |Microsoft 文件
+ms.prod: sql
+ms.technology: machine-learning
+ms.date: 04/15/2018
 ms.topic: tutorial
-applies_to:
-- SQL Server 2016
-- SQL Server 2017
-dev_langs:
-- R
-ms.assetid: a195d5e2-72e2-4dd6-bf43-947312e4a52a
-caps.latest.revision: 
-author: jeannt
-ms.author: jeannt
-manager: cgronlund
-ms.workload: Inactive
-ms.openlocfilehash: a076c6b1bdc06709d14cb8e98be1d01b59cb935e
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+author: HeidiSteen
+ms.author: heidist
+manager: cgronlun
+ms.openlocfilehash: a2f6e9b23e1592073c1b21bc41e4975ffaf17075
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="create-r-models-sql-and-r-deep-dive"></a>建立 R 模型 （SQL 與 R 深入探討）
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -141,4 +127,4 @@ Number of iterations: 15
 
 ## <a name="previous-step"></a>上一個步驟
 
-[使用 R 將 SQL Server 資料視覺化](../../advanced-analytics/tutorials/deepdive-visualize-sql-server-data-using-r.md)
+[使用 R 製作 SQL Server 資料的圖表](../../advanced-analytics/tutorials/deepdive-visualize-sql-server-data-using-r.md)

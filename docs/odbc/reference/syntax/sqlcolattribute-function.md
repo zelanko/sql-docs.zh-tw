@@ -1,32 +1,33 @@
 ---
-title: "SQLColAttribute 函數 |Microsoft 文件"
-ms.custom: 
+title: SQLColAttribute 函數 |Microsoft 文件
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
-ms.component: odbc
-ms.reviewer: 
+ms.prod: sql
+ms.prod_service: connectivity
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
-ms.topic: article
-apiname: SQLColAttribute
-apilocation: sqlsrv32.dll
+ms.technology: connectivity
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
+apiname:
+- SQLColAttribute
+apilocation:
+- sqlsrv32.dll
 apitype: dllExport
-f1_keywords: SQLColAttribute
-helpviewer_keywords: SQLColAttribute function [ODBC]
+f1_keywords:
+- SQLColAttribute
+helpviewer_keywords:
+- SQLColAttribute function [ODBC]
 ms.assetid: 8c45c598-cb01-4789-a571-e93619a18ed9
-caps.latest.revision: "42"
+caps.latest.revision: 42
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
-ms.workload: Inactive
-ms.openlocfilehash: 7470412149bf336be8d07495eab4aa9bdf449a86
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+manager: craigg
+ms.openlocfilehash: 5afbe6bbea4e1c50e3b16742bf5d0fa1b3c16a9d
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sqlcolattribute-function"></a>SQLColAttribute 函數
 **一致性**  
@@ -69,7 +70,7 @@ SQLRETURN SQLColAttribute (
   
  如果*CharacterAttributePtr*是 NULL， *StringLengthPtr*仍會傳回的總位元組數 （不含字元資料 null 結束字元） 可用來傳回緩衝區中所指*CharacterAttributePtr*。  
   
- *Columnsize*  
+ *BufferLength*  
  [輸入]如果*FieldIdentifier*是 ODBC 定義的欄位和*CharacterAttributePtr*指向的字元字串或二進位的緩衝區，這個引數應該是長度\* *CharacterAttributePtr*。 如果*FieldIdentifier*是 ODBC 定義的欄位和\* *CharacterAttribute*Ptr 是一個整數，這個欄位會被忽略。 如果 *\*CharacterAttributePtr*是 Unicode 字串 (當呼叫**SQLColAttributeW**)、 *Columnsize*引數必須是偶數。 如果*FieldIdentifier*是驅動程式定義的欄位，應用程式設定指出欄位驅動程式管理員性質*Columnsize*引數。 *Columnsize*可以是下列值：  
   
 -   如果*CharacterAttributePtr*是指標的指標， *Columnsize*應該有 SQL_IS_POINTER 的值。  
@@ -96,7 +97,7 @@ SQLRETURN SQLColAttribute (
 ## <a name="diagnostics"></a>診斷  
  當**SQLColAttribute**傳回 SQL_ERROR 或 SQL_SUCCESS_WITH_INFO，相關聯的 SQLSTATE 值可能會取得藉由呼叫**SQLGetDiagRec**與*HandleType*利用 SQL_HANDLE_STMT 的和*處理*的*StatementHandle*。 下表列出通常所傳回的 SQLSTATE 值**SQLColAttribute** ，並說明這個函式; 每個內容中的標記法 」 (DM) 」 之前描述的驅動程式管理員傳回的 Sqlstate。 每個 SQLSTATE 值相關聯的傳回碼是 SQL_ERROR，除非有說明，否則為。  
   
-|SQLSTATE|錯誤|描述|  
+|SQLSTATE|錯誤|Description|  
 |--------------|-----------|-----------------|  
 |01000|一般警告|特定驅動程式告知性訊息。 （函式會傳回 SQL_SUCCESS_WITH_INFO）。|  
 |01004|字串資料，右邊遭截斷|緩衝區\* *CharacterAttributePtr*仍不夠大，無法傳回整個字串值，所以已截斷字串值。 中會傳回未截斷的字串值的長度 **StringLengthPtr*。 （函式會傳回 SQL_SUCCESS_WITH_INFO）。|  
@@ -131,23 +132,23 @@ SQLRETURN SQLColAttribute (
   
  ODBC 3。*x*驅動程式必須傳回每個描述項欄位的值。 如果描述項欄位不會套用到驅動程式或資料來源，且除非另有指明，驅動程式會傳回在 0 \* *StringLengthPtr*或空字串中的 **CharacterAttributePtr*。  
   
-## <a name="backward-compatibility"></a>Backward Compatibility  
+## <a name="backward-compatibility"></a>回溯相容性  
  ODBC 3。*x*函式**SQLColAttribute**取代已被取代的 ODBC 2。*x*函式**SQLColAttributes**。 當對應**SQLColAttributes**至**SQLColAttribute** (當 ODBC 2。*x*應用程式使用 ODBC 3。*x*驅動程式)，或對應**SQLColAttribute**至**SQLColAttributes** (當 ODBC 3。*x*應用程式使用 ODBC 2。*x*驅動程式)，驅動程式管理員可以將值傳遞*FieldIdentifier* ，透過將其對應至新的值，或將傳回錯誤，如下所示：  
   
 > [!NOTE]  
 >  使用中的前置詞*FieldIdentifier* ODBC 3 中的值。*x*從該使用中的 ODBC 2 已變更。*x*。 新的前置詞為"SQL_DESC";舊的前置詞為"SQL_COLUMN"。  
   
--   如果**#define** ODBC 2 的值。*x* *FieldIdentifier*相同**#define** ODBC 3 的值。*x* *FieldIdentifier*，函式呼叫中的值就只會傳遞。  
+-   如果 **#define** ODBC 2 的值。*x* *FieldIdentifier*相同 **#define** ODBC 3 的值。*x* *FieldIdentifier*，函式呼叫中的值就只會傳遞。  
   
--   **#Define** ODBC 2 的值。*x* *FieldIdentifiers* SQL_COLUMN_LENGTH、 SQL_COLUMN_PRECISION 和 SQL_COLUMN_SCALE 會與不同**#define** ODBC 3 的值。*x* *FieldIdentifiers* SQL_DESC_PRECISION、 SQL_DESC_SCALE 和 SQL_DESC_LENGTH。 ODBC 2。*x*驅動程式只需要支援 ODBC 2。*x*值。 ODBC 3。*x*驅動程式必須支援 「 SQL_COLUMN"和"SQL_DESC"值的這三個*FieldIdentifiers*。 因為有效位數、 小數位數和長度會定義以不同的方式在 ODBC 3，這些值會不同。*x*比 ODBC 2。*x*。 如需詳細資訊，請參閱[資料行大小、 十進位數字、 傳輸八位元長度和顯示大小](../../../odbc/reference/appendixes/column-size-decimal-digits-transfer-octet-length-and-display-size.md)。  
+-   **#Define** ODBC 2 的值。*x* *FieldIdentifiers* SQL_COLUMN_LENGTH、 SQL_COLUMN_PRECISION 和 SQL_COLUMN_SCALE 會與不同 **#define** ODBC 3 的值。*x* *FieldIdentifiers* SQL_DESC_PRECISION、 SQL_DESC_SCALE 和 SQL_DESC_LENGTH。 ODBC 2。*x*驅動程式只需要支援 ODBC 2。*x*值。 ODBC 3。*x*驅動程式必須支援 「 SQL_COLUMN"和"SQL_DESC"值的這三個*FieldIdentifiers*。 因為有效位數、 小數位數和長度會定義以不同的方式在 ODBC 3，這些值會不同。*x*比 ODBC 2。*x*。 如需詳細資訊，請參閱[資料行大小、 十進位數字、 傳輸八位元長度和顯示大小](../../../odbc/reference/appendixes/column-size-decimal-digits-transfer-octet-length-and-display-size.md)。  
   
--   如果**#define** ODBC 2 的值。*x* *FieldIdentifier*不同**#define** ODBC 3 的值。*x* *FieldIdentifier*，做為與計數，名稱，並可為 NULL 值，函式呼叫中的值會對應到對應的值。 例如，SQL_COLUMN_COUNT 會對應至 SQL_DESC_COUNT，和 SQL_DESC_COUNT 對應到 SQL_COLUMN_COUNT，根據對應的方向。  
+-   如果 **#define** ODBC 2 的值。*x* *FieldIdentifier*不同 **#define** ODBC 3 的值。*x* *FieldIdentifier*，做為與計數，名稱，並可為 NULL 值，函式呼叫中的值會對應到對應的值。 例如，SQL_COLUMN_COUNT 會對應至 SQL_DESC_COUNT，和 SQL_DESC_COUNT 對應到 SQL_COLUMN_COUNT，根據對應的方向。  
   
 -   如果*FieldIdentifier*是在 ODBC 3 的新值。*x*，如這沒有對應的值在 ODBC 2。*x*，它將不會對應時 ODBC 3。*x*應用程式所使用的是它的呼叫中**SQLColAttribute** ODBC 2。*x*驅動程式，並呼叫會傳回 SQLSTATE HY091 （無效的描述項欄位識別碼）。  
   
  下表列出所傳回的描述元類型**SQLColAttribute**。 型別*NumericAttributePtr*值是**SQLLEN \*** 。  
   
-|*FieldIdentifier*|[資訊]<br /><br /> 傳回|描述|  
+|*FieldIdentifier*|資訊<br /><br /> 傳回|Description|  
 |-----------------------|---------------------------------|-----------------|  
 |SQL_DESC_AUTO_UNIQUE_VALUE (ODBC 1.0)|*NumericAttributePtr*|SQL_TRUE 的資料行是否自動遞增資料行。<br /><br /> 如果資料行不是自動遞增資料行，或不是數值，SQL_FALSE。<br /><br /> 此欄位僅適用於數值資料類型資料行。 應用程式可以將值插入含有自動遞增資料行的資料列，但是通常無法更新資料行中的值。<br /><br /> 插入至 autoincrement 資料行中進行時，唯一的值被插入資料行在插入時。 未定義時，遞增，但資料來源專用。 應用程式不應該假設任何特定值的 autoincrement 資料行開始在任何特定點或增量。|  
 |SQL_DESC_BASE_COLUMN_NAME (ODBC 3.0)|*CharacterAttributePtr*|基底的資料行名稱的結果集資料行。 如果基底的資料行名稱不存在 （如同在資料行是運算式的案例），此變數包含空字串。<br /><br /> 此資訊會從 IRD 是唯讀欄位的 SQL_DESC_BASE_COLUMN_NAME 記錄欄位傳回。|  
@@ -172,7 +173,7 @@ SQLRETURN SQLColAttribute (
 |SQL_DESC_SCHEMA_NAME (ODBC 2.0)|*CharacterAttributePtr*|包含資料行的資料表結構描述。 傳回的值是由實作定義的資料行是運算式或資料行是檢視的一部分。 如果資料來源不支援結構描述，或無法判斷結構描述名稱，則會傳回空字串。 此 VARCHAR 記錄欄位不是限制為 128 個字元。|  
 |SQL_DESC_SEARCHABLE (ODBC 1.0)|*NumericAttributePtr*|如果資料行不能在 WHERE 子句，SQL_PRED_NONE。 （這是 ODBC 2 SQL_UNSEARCHABLE 值相同。*x*。)<br /><br /> 如果資料行可以用於 WHERE 子句中，但是只能搭配 LIKE 述詞，SQL_PRED_CHAR。 （這是 ODBC 2 SQL_LIKE_ONLY 值相同。*x*。)<br /><br /> 如果資料行可以用於 WHERE 子句類似以外的所有比較運算子與，SQL_PRED_BASIC。 （這是 ODBC 2 SQL_EXCEPT_LIKE 值相同。*x*。)<br /><br /> 如果資料行可以用於 WHERE 子句搭配任何比較運算子，SQL_PRED_SEARCHABLE。<br /><br /> 資料行的輸入 SQL_LONGVARCHAR 及 SQL_LONGVARBINARY 通常傳回 SQL_PRED_CHAR。|  
 |SQL_DESC_TABLE_NAME (ODBC 2.0)|*CharacterAttributePtr*|包含資料行之資料表的名稱。 傳回的值是由實作定義的資料行是運算式或資料行是檢視的一部分。<br /><br /> 如果無法判別資料表名稱，則會傳回空字串。|  
-|SQL_DESC_TYPE (ODBC 3.0)|*NumericAttributePtr*|數值，指定 SQL 資料類型。<br /><br /> 當*ColumnNumber*等於 SQL_BINARY 傳回可變長度的書籤為 0，而且 SQL_INTEGER 會傳回固定長度的書籤。<br /><br /> 日期時間和間隔資料類型，這個欄位會傳回的詳細資訊的資料類型： 如果是 SQL_DATETIME 或 SQL_INTERVAL。 (如需詳細資訊，請參閱[資料類型識別碼和描述元](../../../odbc/reference/appendixes/data-type-identifiers-and-descriptors.md)附錄 d： 資料型別中。<br /><br /> 此資訊會從 IRD 的 SQL_DESC_TYPE 記錄欄位傳回。 **注意：**才能對 ODBC 2。*x*驅動程式，請改用 SQL_DESC_CONCISE_TYPE。|  
+|SQL_DESC_TYPE (ODBC 3.0)|*NumericAttributePtr*|數值，指定 SQL 資料類型。<br /><br /> 當*ColumnNumber*等於 SQL_BINARY 傳回可變長度的書籤為 0，而且 SQL_INTEGER 會傳回固定長度的書籤。<br /><br /> 日期時間和間隔資料類型，這個欄位會傳回的詳細資訊的資料類型： 如果是 SQL_DATETIME 或 SQL_INTERVAL。 (如需詳細資訊，請參閱[資料類型識別碼和描述元](../../../odbc/reference/appendixes/data-type-identifiers-and-descriptors.md)附錄 d： 資料型別中。<br /><br /> 此資訊會從 IRD 的 SQL_DESC_TYPE 記錄欄位傳回。 **注意：** 才能對 ODBC 2。*x*驅動程式，請改用 SQL_DESC_CONCISE_TYPE。|  
 |SQL_DESC_TYPE_NAME (ODBC 1.0)|*CharacterAttributePtr*|資料來源而定的資料型別名稱。例如，"CHAR"、"VARCHAR"、"MONEY"、"長 VARBINARY"或者 「 CHAR （） FOR BIT DATA 中的 」。<br /><br /> 如果此類型為 unknown，則會傳回空字串。|  
 |SQL_DESC_UNNAMED (ODBC 3.0)|*NumericAttributePtr*|SQL_NAMED 或 sql_unnamed 時。 如果 SQL_DESC_NAME 欄位 IRD 的包含資料行別名或資料行名稱，則會傳回 SQL_NAMED。 如果沒有任何資料行名稱或資料行別名，則會傳回 sql_unnamed 時。<br /><br /> 此資訊會從 IRD 的 SQL_DESC_UNNAMED 記錄欄位傳回。|  
 |SQL_DESC_UNSIGNED (ODBC 1.0)|*NumericAttributePtr*|SQL_TRUE 如果資料行是不帶正負號 （或不是數字）。<br /><br /> 如果資料行已簽署，SQL_FALSE。|  
@@ -306,7 +307,7 @@ int main() {
 }  
 ```  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [ODBC 應用程式開發介面參考](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [ODBC 標頭檔](../../../odbc/reference/install/odbc-header-files.md)   
  [ODBC 程式範例](../../../odbc/reference/sample-odbc-program.md)

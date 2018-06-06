@@ -1,24 +1,17 @@
 ---
-title: "使用 Python revoscalepy 建立模型 |Microsoft 文件"
-titleSuffix: SQL Server
-ms.date: 02/28/2018
-mms.reviewer: 
-ms.suite: sql
-ms.prod: machine-learning-services
-ms.prod_service: machine-learning-services
-ms.component: 
-ms.technology: 
-ms.tgt_pltfrm: 
+title: 使用 Python revoscalepy 建立模型 |Microsoft 文件
+ms.prod: sql
+ms.technology: machine-learning
+ms.date: 04/15/2018
 ms.topic: tutorial
-caps.latest.revision: 
-author: jeannt
-ms.author: jeannt
-manager: cgronlund
-ms.openlocfilehash: 02e4592398e0558ff01a968bef7c3d1dd199666c
-ms.sourcegitcommit: ab25b08a312d35489a2c4a6a0d29a04bbd90f64d
+author: HeidiSteen
+ms.author: heidist
+manager: cgronlun
+ms.openlocfilehash: d886466d7bf4f0c86c1cd9505480a3fadb6e66ef
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="use-python-with-revoscalepy-to-create-a-model"></a>使用 Python revoscalepy 建立模型
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -28,7 +21,6 @@ ms.lasthandoff: 03/08/2018
 ## <a name="prerequisites"></a>필수 구성 요소
 
 + 這一課使用不同的資料，比先前的課程。 您不需要先完成先前的課程。 不過，如果您已完成先前的課程，並已設定為執行 Python 的伺服器，使用該伺服器和資料庫做為運算環境。
-
 + 若要執行 Python 程式碼以計算中使用 SQL Server 內容需要 2017年或更新版本的 SQL Server。 此外，您必須明確地安裝並再啟用此功能**機器學習服務**，選擇 Python 語言選項。
 
     如果您安裝的 SQL Server 2017 發行前版本，您應該更新為至少 RTM 版本。 以展開和改善 Python 功能持續更新的服務版本。 本教學課程的某些功能可能不適用於早期發行前版本。
@@ -53,9 +45,9 @@ ms.lasthandoff: 03/08/2018
 
     ```sql
     CREATE DATABASE sqlpy;
-    GO;
+    GO
     USE sqlpy;
-    GO;
+    GO
     ```
 
     > [!IMPORTANT]

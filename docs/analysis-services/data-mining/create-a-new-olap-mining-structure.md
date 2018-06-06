@@ -1,35 +1,23 @@
 ---
-title: "建立新的 OLAP 採礦結構 |Microsoft 文件"
-ms.custom: 
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
-helpviewer_keywords:
-- mining structures [Analysis Services], OLAP
-- mining structures [Analysis Services], creating
-- OLAP [Analysis Services], mining models
-ms.assetid: 368f4273-a016-4748-bcb6-505a3e745af3
-caps.latest.revision: 
-author: Minewiskan
+title: 建立新的 OLAP 採礦結構 |Microsoft 文件
+ms.date: 05/01/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: data-mining
+ms.topic: conceptual
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: a60a88bbf9816e4af0260cde3063f5bd6d5240e6
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 672b94be0aad740ddcb2659b8cf82ef0cd7ab76e
+ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="create-a-new-olap-mining-structure"></a>建立新的 OLAP 採礦結構
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-您可以使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 中的資料採礦精靈，建立使用多維度模型資料的採礦結構。 以 OLAP Cube 為基礎的採礦模型可以使用事實資料表、維度和量值群組中的資料行和值做為分析屬性。  
+  您可以使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 中的資料採礦精靈，建立使用多維度模型資料的採礦結構。 以 OLAP Cube 為基礎的採礦模型可以使用事實資料表、維度和量值群組中的資料行和值做為分析屬性。  
   
 ### <a name="to-create-a-new-olap-mining-structure"></a>若要建立新的 OLAP 採礦結構  
   
@@ -45,19 +33,19 @@ ms.lasthandoff: 02/15/2018
   
      如果您要建立採礦模型，請選取您想要使用的資料採礦演算法，然後按 **[下一步]**。 如需如何選擇演算法的詳細資訊，請參閱[資料採礦演算法 &#40;Analysis Services - 資料採礦&#41;](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)。  
   
-5.  在 **[選取來源 Cube 維度]** 頁面的 **[選取來源 Cube 維度]**之下，找出包含多數案例資料的維度。  
+5.  在 **[選取來源 Cube 維度]** 頁面的 **[選取來源 Cube 維度]** 之下，找出包含多數案例資料的維度。  
   
      例如，如果您嘗試識別客戶群組，可以選擇 [Customer] 維度；如果您嘗試分析跨多筆交易的購買行為，可以選擇 [Internet Sales Order Details] 維度。 不限制您只能使用此維度中的資料，但該維度應該包含要在分析中使用的重要屬性。  
   
      按一下 **[下一步]**。  
   
-6.  在 **[選取案例索引鍵]** 頁面的 **[屬性]**之下，選取將成為採礦結構之索引鍵的屬性，然後按 **[下一步]**。  
+6.  在 **[選取案例索引鍵]** 頁面的 **[屬性]** 之下，選取將成為採礦結構之索引鍵的屬性，然後按 **[下一步]**。  
   
      通常，做為採礦結構之索引鍵的屬性也是維度的索引鍵，並且會預先選取。  
   
-7.  在 **[選取案例層級資料行]** 頁面的 **[相關的屬性和量值]**之下，選取其值要加入至採礦結構中做為案例資料的屬性和量值。 按一下 **[下一步]**。  
+7.  在 **[選取案例層級資料行]** 頁面的 **[相關的屬性和量值]** 之下，選取其值要加入至採礦結構中做為案例資料的屬性和量值。 按一下 **[下一步]**。  
   
-8.  在 **[指定採礦模型資料行使用方式]** 頁面的 **[採礦模型結構]**之下，先設定可預測資料行，然後選擇要做為輸入的資料行。  
+8.  在 **[指定採礦模型資料行使用方式]** 頁面的 **[採礦模型結構]** 之下，先設定可預測資料行，然後選擇要做為輸入的資料行。  
   
     -   選取最左邊資料行的核取方塊，將資料包含在採礦結構中。 您可以在結構中包含僅供參考但不用於分析的資料行。  
   
@@ -79,7 +67,7 @@ ms.lasthandoff: 02/15/2018
   
     -   巢狀資料表的索引鍵：這應該在 [選取巢狀資料表索引鍵] 頁面上預先選取。  
   
-    -   用於分析的屬性： **[選取巢狀資料表資料行]**頁面提供巢狀資料表選取範圍的量值和屬性清單。  
+    -   用於分析的屬性： **[選取巢狀資料表資料行]** 頁面提供巢狀資料表選取範圍的量值和屬性清單。  
   
         -   對於要包含在模型中的每個屬性，請選取左側資料行的核取方塊。  
   
@@ -91,7 +79,7 @@ ms.lasthandoff: 02/15/2018
   
      按一下 **[完成]** 關閉處理巢狀資料表的精靈部分。 您可以重複此程序，新增多個巢狀資料行。  
   
-10. 在 **[指定資料行的內容和資料類型]** 頁面的 **[採礦模型結構]**之下，設定每一個資料行的內容類型和資料類型。  
+10. 在 **[指定資料行的內容和資料類型]** 頁面的 **[採礦模型結構]** 之下，設定每一個資料行的內容類型和資料類型。  
   
     > [!NOTE]  
     >  OLAP 採礦模型不支援使用 [偵測] 功能，來自動偵測資料行包含連續資料或不連續資料。  

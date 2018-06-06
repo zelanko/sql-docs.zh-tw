@@ -1,17 +1,16 @@
 ---
-title: "建立伺服器角色 | Microsoft Docs"
-ms.custom: 
+title: 建立伺服器角色 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, pdw
-ms.service: 
 ms.component: security
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 f1_keywords:
 - SQL13.SWB.SERVERROLE.GENERAL.F1
 - sql13.swb.serverrole.memberships.f1
@@ -19,19 +18,20 @@ f1_keywords:
 helpviewer_keywords:
 - SERVER ROLE, creating
 ms.assetid: 74f19992-8082-4ed7-92a1-04fe676ee82d
-caps.latest.revision: 
+caps.latest.revision: 13
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: ca312c8c2d5d83b7e8fb233f9d9dfac3c37fcaab
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+monikerRange: '>= aps-pdw-2016 || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 20712a5c126d359eaf6bdbf4ea05c3dd79423c25
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="create-a-server-role"></a>建立伺服器角色
-[!INCLUDE[appliesto-ss-xxxx-xxxx-pdw-md](../../../includes/appliesto-ss-xxxx-xxxx-pdw-md.md)] 此主題描述如何使用 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 或 [!INCLUDE[tsql](../../../includes/tsql-md.md)]，在 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 中建立新的伺服器角色。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-pdw-md](../../../includes/appliesto-ss-xxxx-xxxx-pdw-md.md)]
+  此主題描述如何使用 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] ，在 [!INCLUDE[tsql](../../../includes/tsql-md.md)]中建立新的伺服器角色。  
   
  **本主題內容**  
   
@@ -39,11 +39,11 @@ ms.lasthandoff: 11/21/2017
   
      [限制事項](#Restrictions)  
   
-     [安全性](#Security)  
+     [Security](#Security)  
   
 -   **若要建立新的伺服器角色，可使用下列項目：**  
   
-     [SQL Server Management Studio](#SSMSProcedure)  
+     [Transact-SQL](#SSMSProcedure)  
   
      [Transact-SQL](#TsqlProcedure)  
   
@@ -54,7 +54,7 @@ ms.lasthandoff: 11/21/2017
   
 ###  <a name="Security"></a> 安全性  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> 權限  
   
 -   需要 CREATE SERVER ROLE 權限或系統管理員 (sysadmin) 固定伺服器角色中的成員資格。  
   
@@ -76,7 +76,7 @@ ms.lasthandoff: 11/21/2017
   
 3.  以滑鼠右鍵按一下 [伺服器角色] 資料夾，然後選取 [新增伺服器角色]。  
   
-4.  在 [新增伺服器角色 - <伺服器角色名稱>] 對話方塊中，於 [一般] 頁面的 [伺服器角色名稱] 方塊中輸入新伺服器角色的名稱。  
+4.  在 [新增伺服器角色] – *server_role_name* 對話方塊中，於 [一般] 頁面的 [伺服器角色名稱] 方塊中輸入新伺服器角色的名稱。  
   
 5.  在 **[擁有者]** 方塊中，輸入將擁有新角色之伺服器主體的名稱。 或者，按一下省略符號 **(...)**，開啟 [選取伺服器登入或角色] 對話方塊。  
   
@@ -94,11 +94,11 @@ ms.lasthandoff: 11/21/2017
   
 #### <a name="to-create-a-new-server-role"></a>若要建立新的伺服器角色  
   
-1.  在 **[物件總管]**中，連接到 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]的執行個體。  
+1.  在 **[物件總管]** 中，連接到 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]的執行個體。  
   
 2.  在標準列上，按一下 **[新增查詢]**。  
   
-3.  將下列範例複製並貼入查詢視窗中，然後按一下 **[執行]**。  
+3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]**。  
   
     ```  
     --Creates the server role auditors that is owned the securityadmin fixed server role.  

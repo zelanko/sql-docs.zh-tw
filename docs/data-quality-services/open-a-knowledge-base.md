@@ -1,30 +1,33 @@
 ---
-title: "開啟知識庫 | Microsoft Docs"
-ms.custom: 
+title: 開啟知識庫 | Microsoft Docs
+ms.custom: ''
 ms.date: 06/04/2013
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: data-quality-services
-ms.service: 
 ms.component: data-quality-services
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: data-quality-services
-ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords: sql13.dqs.kb.openkb.f1
+ms.technology:
+- data-quality-services
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
+f1_keywords:
+- sql13.dqs.kb.openkb.f1
 ms.assetid: a5f010a5-b762-41c9-881b-bf0c192dca83
-caps.latest.revision: "20"
+caps.latest.revision: 20
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.workload: Inactive
-ms.openlocfilehash: f01519c6ddbeb4a137f6f9ec5bf6cc2d0f84d6f4
-ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
+manager: craigg
+ms.openlocfilehash: adcef51bfccf2cf6c977037a0e794904c794ee46
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="open-a-knowledge-base"></a>開啟知識庫
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
   此主題描述如何在 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) 中開啟現有的知識庫，並預備此知識庫進行定義域管理、知識探索或是加入比對原則。  
   
 ##  <a name="BeforeYouBegin"></a> 開始之前  
@@ -48,7 +51,7 @@ ms.lasthandoff: 01/19/2018
     > [!NOTE]  
     >  您可以在資料表中按一下滑鼠右鍵，對知識庫執行作業。 您可以開啟知識庫、以另一個名稱儲存、解除鎖定、捨棄工作、重新命名或顯示其屬性。  
   
-4.  在 **[選取活動]**中，選取您想要在知識庫上執行的活動：  
+4.  在 **[選取活動]** 中，選取您想要在知識庫上執行的活動：  
   
     -   選取 **[定義域管理]** ，進入用來修改知識庫內之定義域的畫面。  
   
@@ -84,7 +87,7 @@ ms.lasthandoff: 01/19/2018
   
 -   **\<空白>**：知識庫的 [狀態] 欄位空白的條件如下：已在 [定義域管理] 活動中按一下 [發行]，然後按一下 [是 - 發行知識庫並結束] 來發行知識庫。  
   
--   **工作中**：已在 [定義域管理] 活動中按一下 **[發行]** ，然後按一下 **[否 - 儲存知識庫工作並結束]**來儲存知識庫工作。  
+-   **工作中**：已在 [定義域管理] 活動中按一下 **[發行]** ，然後按一下 **[否 - 儲存知識庫工作並結束]** 來儲存知識庫工作。  
   
 -   **定義域管理**：已輸入知識庫的定義域資料，但尚未發行知識庫，而且工作仍在 [定義域管理] 活動中。 知識探索活動無法使用。 當您在 **[定義域管理]** 畫面中按一下 **[關閉]** 時，就會發生這種狀況。  
   

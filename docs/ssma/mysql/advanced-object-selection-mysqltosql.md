@@ -1,30 +1,28 @@
 ---
-title: "進階物件選取項目 (MySQLToSQL) |Microsoft 文件"
-ms.prod: sql-non-specified
+title: 進階物件選取項目 (MySQLToSQL) |Microsoft 文件
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
 ms.component: ssma-mysql
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ssma
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: 390ef0c2-107c-4443-9495-80f35f22d168
-caps.latest.revision: "4"
+caps.latest.revision: 4
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
-ms.workload: Inactive
-ms.openlocfilehash: d940a606be683a5ae345fb02a214002695e9c050
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+manager: craigg
+ms.openlocfilehash: ff84e14790640ccd117412ec734867d4d3837983
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="advanced-object-selection--mysqltosql"></a>進階的物件選取項目 (MySQLToSQL)
 **進階物件部分**對話方塊可讓您篩選資料庫物件，使用字串和子字串中的物件名稱，然後選取或取消選取這些物件。 SSMA 會執行轉換並移轉作業選取的物件。  
@@ -35,7 +33,7 @@ ms.lasthandoff: 12/21/2017
   
 使用此對話方塊之前，您可以強制 SSMA 載入轉換結構描述，或儲存專案的所有中繼資料。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
 **請檢查所有的項目**  
 將所有項目旁的核取記號。 在 [中繼資料總管] 會立即選取這些項目。  
   

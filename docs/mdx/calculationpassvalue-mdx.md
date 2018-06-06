@@ -1,30 +1,20 @@
 ---
-title: "CalculationPassValue (MDX) |Microsoft 文件"
-ms.custom: 
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: language-reference
-f1_keywords: CALCULATIONPASSVALUE
-dev_langs: kbMDX
-helpviewer_keywords: CalculationPassValue function
-ms.assetid: 1b4012cb-c8c7-441a-bb9c-59430703b189
-caps.latest.revision: "45"
-author: Minewiskan
+title: CalculationPassValue (MDX) |Microsoft 文件
+ms.date: 05/30/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: mdx
+ms.topic: reference
 ms.author: owend
-manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: dd5ed7f5ef6eb60b37c5066f7535d34913572871
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: 88d7d8c52105feb14c982586f9a819977fc81ed0
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34577230"
 ---
 # <a name="calculationpassvalue-mdx"></a>CalculationPassValue (MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -63,16 +53,16 @@ CalculationPassValue(String_Expression ,Pass_Value [, ABSOLUTE | RELATIVE [,ALL]
 ## <a name="remarks"></a>備註  
  如果提供了數值運算式，此函數會評估指定的計算行程中之指定的 MDX 數值運算式，並且選擇性地存取旗標和存取旗標修飾詞加以修改，來傳回數值。  
   
- 如果提供的字串運算式，則函式藉由評估指定的 MDX 字串運算式，指定的計算行程中，傳回字串值，並選擇性地存取旗標和存取旗標修飾詞加以修改*。*  
+ 如果提供的字串運算式，則函式藉由評估指定的 MDX 字串運算式，指定的計算行程中，傳回字串值，並選擇性地存取旗標和存取旗標修飾詞加以修改 *。*  
   
  使用自動遞迴解析功能[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]，此函式具有不具實用性。  
   
 > [!NOTE]  
 >  只有系統管理員可以使用**CalculationPassValue** MDX 指令碼內的函式。 如果在不具有系統管理員權限的角色內容中，執行包含此函數的 MDX 指令碼，就會發生錯誤。  
   
-## <a name="see-also"></a>請參閱  
- [CalculationCurrentPass &#40;MDX &#41;](../mdx/calculationcurrentpass-mdx.md)   
- [IIf &#40;MDX &#41;](../mdx/iif-mdx.md)   
- [MDX 函數參考 &#40;MDX &#41;](../mdx/mdx-function-reference-mdx.md)  
+## <a name="see-also"></a>另請參閱  
+ [CalculationCurrentPass &#40;MDX&#41;](../mdx/calculationcurrentpass-mdx.md)   
+ [IIf &#40;MDX&#41;](../mdx/iif-mdx.md)   
+ [MDX 函數參考&#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

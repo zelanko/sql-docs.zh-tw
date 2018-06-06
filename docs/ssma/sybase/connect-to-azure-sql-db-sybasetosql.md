@@ -1,49 +1,47 @@
 ---
-title: "連接到 Azure SQL DB (SybaseToSQL) |Microsoft 文件"
-ms.custom: 
+title: 連接到 Azure SQL DB (SybaseToSQL) |Microsoft 文件
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
 ms.component: ssma-sybase
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ssma
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: 96538007-1099-40c8-9902-edd07c5620ee
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
-ms.workload: Inactive
-ms.openlocfilehash: 1267aecb68c344b6de0fad2c7c129a0b6ab2205c
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+manager: craigg
+ms.openlocfilehash: f73b6e88e457ef74a82512876715a333d0a52d71
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="connect-to-azure-sql-db--sybasetosql"></a>連接到 Azure SQL DB (SybaseToSQL)
 使用 [連線到 Azure SQL DB] 對話方塊中，連接到您想要移轉的 Azure SQL DB 資料庫。  
   
 若要存取此對話方塊，請在**檔案**功能表上，選取**連接到 Azure SQL DB**。 如果您之前已連線，則命令是**重新連接到 Azure SQL DB。**  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
 **伺服器名稱**  
   
 選取或輸入伺服器名稱連接到 Azure SQL DB。  
   
-**[資料庫備份]**  
+**資料庫**  
   
 選取、 輸入或**瀏覽**資料庫名稱。  
   
 > [!IMPORTANT]  
 > SSMA for Sybase 不支援連接至 master 資料庫中 Azure SQL DB。  
   
-**User name**  
+**使用者名稱**  
   
 輸入 SSMA 將用來連接到 Azure SQL DB 資料庫的使用者名稱  
   
@@ -51,7 +49,7 @@ ms.lasthandoff: 12/21/2017
   
 請輸入使用者名稱的密碼。  
   
-**加密**  
+**Encrypt**  
   
 SSMA 會建議加密的連接到 Azure SQL DB。  
   

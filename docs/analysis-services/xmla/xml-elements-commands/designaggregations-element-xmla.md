@@ -1,39 +1,24 @@
 ---
-title: "DesignAggregations 元素 (XMLA) |Microsoft 文件"
-ms.custom: 
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services, azure-analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+title: DesignAggregations 元素 (XMLA) |Microsoft 文件
+ms.date: 05/08/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: xmla
 ms.topic: reference
-apiname: DesignAggregations Element
-apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
-apitype: Schema
-applies_to: SQL Server 2016 Preview
-f1_keywords:
-- urn:schemas-microsoft-com:xml-analysis#DesignAggregations
-- microsoft.xml.analysis.designaggregations
-- http://schemas.microsoft.com/analysisservices/2003/engine#DesignAggregations
-helpviewer_keywords: DesignAggregations command
-ms.assetid: 4c419dbc-7405-40aa-8ddd-6b46685a297d
-caps.latest.revision: "13"
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 5e6e3755c3f043a446301092ff948e31910547cf
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: b32a7ecaf7c8268b88d3fc417cc1e41e024bfd2f
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34574130"
 ---
 # <a name="designaggregations-element-xmla"></a>DesignAggregations 元素 (XMLA)
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]針對建立的彙總設計的彙總[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]執行個體。  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
+  Analysis Services 執行個體上建立的彙總設計的彙總。  
   
 ## <a name="syntax"></a>語法  
   
@@ -65,12 +50,12 @@ ms.lasthandoff: 01/08/2018
 |關聯性|元素|  
 |------------------|-------------|  
 |父元素|[Command](../../../analysis-services/xmla/xml-elements-properties/command-element-xmla.md)|  
-|子元素|[具體化](../../../analysis-services/xmla/xml-elements-properties/materialize-element-xmla.md)，[物件](../../../analysis-services/xmla/xml-elements-properties/object-element-xmla.md)，[最佳化](../../../analysis-services/xmla/xml-elements-properties/optimization-element-xmla.md)，[查詢](../../../analysis-services/xmla/xml-elements-properties/queries-element-xmla.md)，[步驟](../../../analysis-services/xmla/xml-elements-properties/steps-element-xmla.md)，[儲存體](../../../analysis-services/xmla/xml-elements-properties/storage-element-xmla.md)，[時間](../../../analysis-services/xmla/xml-elements-properties/time-element-xmla.md)|  
+|子元素|[具體化](../../../analysis-services/xmla/xml-elements-properties/materialize-element-xmla.md)，[物件](../../../analysis-services/xmla/xml-elements-properties/object-element-xmla.md)，[最佳化](../../../analysis-services/xmla/xml-elements-properties/optimization-element-xmla.md)，[查詢](../../../analysis-services/xmla/xml-elements-properties/queries-element-xmla.md)，[步驟](../../../analysis-services/xmla/xml-elements-properties/steps-element-xmla.md)，[儲存體](../../../analysis-services/xmla/xml-elements-properties/storage-element-xmla.md)[時間](../../../analysis-services/xmla/xml-elements-properties/time-element-xmla.md)|  
   
 ## <a name="remarks"></a>備註  
  **DesignAggregations**命令用來產生彙總設計所儲存的彙總定義。 然後，彙總設計可以用來具體化分割區的彙總而且可以在分割區之間重複使用。  
   
-## <a name="see-also"></a>請參閱  
- [命令 &#40;XMLA &#41;](../../../analysis-services/xmla/xml-elements-commands/xml-elements-commands.md)  
+## <a name="see-also"></a>另請參閱
+ [命令&#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-commands/xml-elements-commands.md)  
   
   

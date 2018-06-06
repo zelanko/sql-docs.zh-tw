@@ -1,35 +1,34 @@
 ---
-title: "監視資料層應用程式 |Microsoft Docs"
-ms.custom: 
+title: 監視資料層應用程式 |Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
 ms.component: data-tier-applications
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-data-tier-apps
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - monitoring [SQL Server], data-tier applications
 - monitoring server performance [SQL Server], DACs
 - data-tier application [SQL Server], monitor
 ms.assetid: d2765828-2385-4019-aef2-1de3ab7d1b26
-caps.latest.revision: 
+caps.latest.revision: 11
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: a8bfc10f588c868693eb0d24308730a618db9df7
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.openlocfilehash: f25b948403332fe5edf048e68bc210f786f9898c
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="monitor-data-tier-applications"></a>監視資料層應用程式
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 您可以從 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS) 中的 [公用程式總管] 與 [物件總管] 以及系統檢視表和資料表中監視資料層應用程式 (DAC)。 此外，包含在 DAC 中之資料庫內的所有物件都可以使用標準資料庫與 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 監視技術進行監視。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  您可以從 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS) 中的 [公用程式總管] 與 [物件總管] 以及系統檢視表和資料表中監視資料層應用程式 (DAC)。 此外，包含在 DAC 中之資料庫內的所有物件都可以使用標準資料庫與 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 監視技術進行監視。  
   
 ## <a name="before-you-begin"></a>開始之前  
  若您將 DAC 部署至 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的受管理執行個體，下次從執行個體將公用程式收集組傳送到公用程式控制點時，部署 DAC 的相關資訊就會合併至 SQL Server 公用程式。 然後，您可以使用 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] **[公用程式總管]**，檢視 DAC 的基本健全狀況資訊。  

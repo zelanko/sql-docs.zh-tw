@@ -1,27 +1,25 @@
 ---
-title: "在報表上新增鑽研動作 (報表產生器及 SSRS) | Microsoft Docs"
-ms.custom: 
+title: 在報表上新增鑽研動作 (報表產生器及 SSRS) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: report-design
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: 153729c4-d01e-4629-b78f-0cfd5a7f83da
-caps.latest.revision: "9"
+caps.latest.revision: 9
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 668cf69ec377fa01b494aacde2a56f0579deed1e
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 0af8a88162eabd7058d81ef72586da8309cf36be
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="add-a-drillthrough-action-on-a-report-report-builder-and-ssrs"></a>在報表上加入鑽研動作 (報表產生器及 SSRS)
   當您按一下主報表中的連結所開啟的報表稱為 *「鑽研報表」*(Drillthrough Report)。 此鑽研連結會啟用一個鑽研動作。  
@@ -41,20 +39,20 @@ ms.lasthandoff: 01/09/2018
   
 3.  選取 **[移至報表]**。 對話方塊中會出現這個選項的其他區段。  
   
-4.  在 **[指定報表]**中，按一下 **[瀏覽]** ，找出您想要跳至的報表，或輸入報表的名稱。 或者，您也可以按一下運算式 (**fx**) 按鈕來建立報表名稱的運算式。  
+4.  在 **[指定報表]** 中，按一下 **[瀏覽]** ，找出您想要跳至的報表，或輸入報表的名稱。 或者，您也可以按一下運算式 (**fx**) 按鈕來建立報表名稱的運算式。  
   
      鑽研報表的路徑格式會因原生和 SharePoint 整合模式而不同。 如果您瀏覽至報表，就會提供正確格式的路徑。 如需詳細資訊，請參閱[指定外部項目的路徑 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/specifying-paths-to-external-items-report-builder-and-ssrs.md)。  
   
      如果您必須指定鑽研報表的參數，請遵循下一個步驟。  
   
-5.  在 **[使用這些參數執行報表]**中，按一下 **[加入]**。 新的資料列就會加入至參數方格。  
+5.  在 **[使用這些參數執行報表]** 中，按一下 **[加入]**。 新的資料列就會加入至參數方格。  
   
     -   在 [名稱] 文字方塊中，按一下下拉式清單或鍵入鑽研報表內的報表參數名稱。  
   
         > [!NOTE]  
         >  參數清單中的名稱必須與目標報表中預期的參數完全相符。 例如，參數名稱的大小寫必須相符。 如果名稱不相符，或是未列出預期的參數，鑽研報表就會失敗。  
   
-    -   在 **[值]**中，輸入或選取要傳遞給鑽研報表內之參數的值。  
+    -   在 **[值]** 中，輸入或選取要傳遞給鑽研報表內之參數的值。  
   
         > [!NOTE]  
         >  值可以包含運算式，此運算式必須評估為傳遞至報表參數的值。 值清單中的運算式包含目前報表的欄位清單。  

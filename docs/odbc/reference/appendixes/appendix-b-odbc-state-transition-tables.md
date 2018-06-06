@@ -1,32 +1,28 @@
 ---
-title: "附錄 b: ODBC 狀態轉換表 |Microsoft 文件"
-ms.custom: 
+title: '附錄 b: ODBC 狀態轉換表 |Microsoft 文件'
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
-ms.component: odbc
-ms.reviewer: 
+ms.prod: sql
+ms.prod_service: connectivity
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- drivers
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: connectivity
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - state transitions [ODBC]
 - transitioning states [ODBC], about state transitions
 - state transitions [ODBC], about state transitions
 ms.assetid: 15088dbe-896f-4296-b397-02bb3d0ac0fb
-caps.latest.revision: 
+caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
-ms.workload: Inactive
-ms.openlocfilehash: 2dabd364fb0a7415a4cf05035d06f5a1dd5838e5
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+manager: craigg
+ms.openlocfilehash: a0d114dd574faf2909fa200f7c24ab0ccaa07804
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="appendix-b-odbc-state-transition-tables"></a>附錄 b: ODBC 狀態轉換表
 本附錄的表格會顯示如何 ODBC 函數會造成的環境、 連接、 陳述式，以及描述項狀態的轉換。 環境、 連接、 陳述式或描述元的狀態通常會規定使用控制代碼 （環境、 連接、 陳述式或描述元） 的對應類型的函式可以呼叫時。 環境、 連接、 陳述式，以及描述項狀態重疊大約在下圖所示。 例如，完全重疊的連線狀態 C5 和 C6 且陳述式說明 S1 S12 透過資料來源而定，因為交易在不同的時間開始，針對不同的資料來源，並描述項狀態 D1i （隱含地配置描述元） 而定陳述式與描述項相關聯的狀態，而 state D1e （明確配置描述項） 是獨立狀態的任何陳述式。 如需每個狀態的說明，請參閱[環境轉換](../../../odbc/reference/appendixes/environment-transitions.md)，[連接轉換](../../../odbc/reference/appendixes/connection-transitions.md)，[陳述式轉換](../../../odbc/reference/appendixes/statement-transitions.md)，和[描述元轉換](../../../odbc/reference/appendixes/descriptor-transitions.md)稍後在本附錄中。  
@@ -52,13 +48,13 @@ ms.lasthandoff: 02/15/2018
 -   **--** — 狀態之後執行函式保持不變。  
   
 -   **E**  
-     ***n*** **C*n * * *，**S*n***，或**D * n***  — 環境、 連接、 陳述式或描述項狀態移至指定的狀態。  
+     ***n*** ，**C*n * * *，**S*n * **，或**D * n***  — 環境、 連接、 陳述式或描述項狀態移至指定的狀態。  
   
 -   **(KARTRIS)** -無效的控制代碼傳遞給函式。 如果控制代碼的 null 控制代碼是否有效的控制代碼類型錯誤-需要陳述式控制代碼時，例如，傳遞連接控制代碼 — 函式會傳回 SQL_INVALID_HANDLE;否則行為未定義，而且可能嚴重。 是唯一可能的呼叫函式中指定的狀態結果時，會顯示此錯誤。 此錯誤不會變更狀態，會持續偵測此 dt 由驅動程式管理員，括號所示。  
   
 -   **NS** -下一個狀態。 陳述式轉換會與相同的陳述式有尚未通過的非同步狀態。 例如，假設建立結果集的陳述式便會進入狀態 S11 從狀態 S1 因為**SQLExecDirect**傳回 SQL_STILL_EXECUTING。 在狀態 S11 NS 標記法表示陳述式轉換相同狀態 S1 中的陳述式來建立結果集。 如果**SQLExecDirect**傳回錯誤，陳述式維持狀態 S1 陳述式如果成功，會移至狀態 S5; 它需要資料時，如果陳述式會移至狀態 S8; 而如果它仍在執行中，它會維持狀態 S11。  
   
--   ***XXXXX***或**(*XXXXX*)** — SQLSTATE 是與 [轉換] 資料表中。Sqlstate 偵測到驅動程式管理員會放在括號。 函式會傳回 SQL_ERROR，並指定的 SQLSTATE，但不會變更狀態。 例如，如果**SQLExecute**之前，會呼叫**SQLPrepare**，它會傳回 SQLSTATE HY010 （函數順序錯誤）。  
+-   ***XXXXX***或 **(*XXXXX*)** — SQLSTATE 是與 [轉換] 資料表中。Sqlstate 偵測到驅動程式管理員會放在括號。 函式會傳回 SQL_ERROR，並指定的 SQLSTATE，但不會變更狀態。 例如，如果**SQLExecute**之前，會呼叫**SQLPrepare**，它會傳回 SQLSTATE HY010 （函數順序錯誤）。  
   
 > [!NOTE]  
 >  資料表不會顯示不會變更狀態的轉換資料表不相關的錯誤。 例如，當**SQLAllocHandle**環境狀態 E1 中呼叫，並傳回 SQLSTATE HY001 （記憶體配置錯誤），環境會維持狀態 E1; 這不會顯示在環境轉換資料表**SQLAllocHandle**。  
@@ -74,7 +70,7 @@ ms.lasthandoff: 02/15/2018
 |i|無效的資料列。 指標置於結果中的資料列集和資料列都已刪除或資料列上的作業中發生錯誤。 如果資料列狀態陣列存在，則資料列的資料列狀態陣列中的值會是 SQL_ROW_DELETED 或 SQL_ROW_ERROR。 （資料列狀態陣列是由指向 SQL_ATTR_ROW_STATUS_PTR 陳述式屬性。）|  
 |nf|找不到。 此函式會傳回 sql_no_data 為止。 這不適用時**SQLExecDirect**， **SQLExecute**，或**SQLParamData**傳回 SQL_NO_DATA 之後執行搜尋的 update 或 delete 陳述式。|  
 |np|已備妥。 尚未準備陳述式。|  
-|nr|沒有結果。 陳述式不會或未建立結果集。|  
+|編號|沒有結果。 陳述式不會或未建立結果集。|  
 |o|其他函式。 另一個函式以非同步方式執行。|  
 |p|備妥。 已備妥的陳述式。|  
 |r|結果。 將陳述式，或未建立 （也許是空的） 的結果集。|  

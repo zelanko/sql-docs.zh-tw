@@ -1,16 +1,15 @@
 ---
-title: "sp_MSchange_snapshot_agent_properties (TRANSACT-SQL) |Microsoft 文件"
-ms.custom: 
+title: sp_MSchange_snapshot_agent_properties (TRANSACT-SQL) |Microsoft 文件
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - sp_MSchange_snapshot_agent_properties
 ms.assetid: 7947a788-3fd7-469f-84db-b03ba89a153c
-caps.latest.revision: 
+caps.latest.revision: 20
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: c503aafed87719edd03996142ad6a47e34a68106
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 9ad2369da53ddd339fadafac0b16e9c9a2bd2ac4
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="spmschangesnapshotagentproperties-transact-sql"></a>sp_MSchange_snapshot_agent_properties (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -65,19 +63,19 @@ sp_MSchange_snapshot_agent_properties [ @publisher = ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>引數  
- [  **@publisher**  =] **'***發行者***'**  
+ [ **@publisher** = ] **'***publisher***'**  
  這是發行者的名稱。 *發行者*是**sysname**，沒有預設值。  
   
  [  **@publisher_db=** ] **'***publisher_db***'**  
  這是發行集資料庫的名稱。 *publisher_db*是**sysname**，沒有預設值。  
   
- [  **@publication =** ] **'***發行集***'**  
+ [ **@publication =** ] **'***publication***'**  
  這是發行集的名稱。 *發行集*是**sysname**，沒有預設值。  
   
  [  **@frequency_type =** ] *frequency_type*  
  這是快照集代理程式的執行頻率。 *frequency_type*是**int**，而且可以是下列值之一。  
   
-|值|描述|  
+|Value|描述|  
 |-----------|-----------------|  
 |**1**|一次|  
 |**2**|視需要|  
@@ -93,7 +91,7 @@ sp_MSchange_snapshot_agent_properties [ @publisher = ] 'publisher'
  [  **@frequency_subday =** ] *frequency_subday*  
  單位*freq_subday_interval*。 *frequency_subday*是**int**，而且可以是下列值之一。  
   
-|值|描述|  
+|Value|描述|  
 |-----------|-----------------|  
 |**1**|一次|  
 |**2**|第二個|  
@@ -109,10 +107,10 @@ sp_MSchange_snapshot_agent_properties [ @publisher = ] 'publisher'
  [  **@frequency_recurrence_factor =** ] *frequency_recurrence_factor*  
  所使用的循環因數*frequency_type*。 *frequency_recurrence_factor*是**int**，沒有預設值。  
   
- [  **@active_start_date =** ] *active_start_date*  
+ [ **@active_start_date =** ] *active_start_date*  
  這是第一次排程快照集代理程式的日期，格式為 YYYYMMDD。 *active_start_date*是**int**，沒有預設值。  
   
- [  **@active_end_date =** ] *active_end_date*  
+ [ **@active_end_date =** ] *active_end_date*  
  這是排程停止快照集代理程式的日期，格式為 YYYYMMDD。 *active_end_date*是**int**，沒有預設值。  
   
  [  **@active_start_time_of_day=**] *active_start_time_of_day*  
@@ -124,31 +122,31 @@ sp_MSchange_snapshot_agent_properties [ @publisher = ] 'publisher'
  [  **@snapshot_job_name =** ] **'***snapshot_agent_name***'**  
  這是在使用現有作業時，現有快照集代理程式作業的名稱。 *snapshot_agent_name*是**nvarchar （100)**，沒有預設值。  
   
- [  **@publisher_security_mode** =] *publisher_security_mode*  
+ [ **@publisher_security_mode**=] *publisher_security_mode*  
  這是當連接到發行者時使用的安全性模式。 *publisher_security_mode*是**int**，沒有預設值。 **0**指定[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]驗證，以及**1**指定 Windows 驗證。 值為**0**必須指定非[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]發行者。 [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]  
   
- [  **@publisher_login** =] **'***publisher_login***'**  
- 這是連接到發行者時所用的登入。 *publisher_login*是**sysname**，沒有預設值。 *publisher_login*時，必須指定*publisher_security_mode*是**0**。 如果*publisher_login*是 NULL，publisher*_**security_mode*是**1**，然後在指定的 Windows 帳戶*job_login*連接到發行者時所使用。  
+ [ **@publisher_login**=] **'***publisher_login***'**  
+ 這是連接到發行者時所用的登入。 *publisher_login*是**sysname**，沒有預設值。 *publisher_login*時，必須指定*publisher_security_mode*是**0**。 如果*publisher_login*是 NULL，publisher *_ * * security_mode*是**1**，然後在指定的 Windows 帳戶*job_login*會連接到發行者時使用。  
   
- [  **@publisher_password** =] **'***publisher_password***'**  
+ [ **@publisher_password**=] **'***publisher_password***'**  
  這是連接到發行者時所用的密碼。 *publisher_password*是**nvarchar （524)**，沒有預設值。  
   
 > [!IMPORTANT]  
 >  請勿將驗證資訊儲存在指令碼檔案中。 若要改善安全性，我們建議您在執行階段提供登入名稱和密碼。  
   
- [  **@job_login** =] **'***job_login***'**  
+ [ **@job_login**=] **'***job_login***'**  
  這是用來執行代理程式之 Windows 帳戶的登入。 *job_login*是**nvarchar （257)**，沒有預設值。 通往散發者的代理程式連接一律使用這個 Windows 帳戶。 您必須在建立新的快照集代理程式作業時，提供這個參數。 *無法變更非*[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] *發行者。*  
   
- [  **@job_password** =] **'***job_password***'**  
+ [ **@job_password**=] **'***job_password***'**  
  這是用來執行代理程式之 Windows 帳戶的密碼。 *job_password*是**sysname**，沒有預設值。 您必須在建立新的快照集代理程式作業時，提供這個參數。  
   
 > [!IMPORTANT]  
 >  請勿將驗證資訊儲存在指令碼檔案中。 若要改善安全性，我們建議您在執行階段提供登入名稱和密碼。  
   
- [  **@publisher_type** =] **'***publisher_type***'**  
+ [ **@publisher_type**=] **'***publisher_type***'**  
  指定當發行者不是在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體中執行時的發行者類型。 *publisher_type*是**sysname**，而且可以是下列值之一。  
   
-|值|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |**MSSQLSERVER**|指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 發行者。|  
 |**ORACLE**|指定標準 Oracle 發行者。|  
@@ -169,7 +167,7 @@ sp_MSchange_snapshot_agent_properties [ @publisher = ] 'publisher'
 ## <a name="permissions"></a>Permissions  
  只有成員**sysadmin**散發者端的固定的伺服器角色可以執行**sp_MSchange_snapshot_agent_properties**。  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [sp_addpublication_snapshot &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql.md)  
   
   

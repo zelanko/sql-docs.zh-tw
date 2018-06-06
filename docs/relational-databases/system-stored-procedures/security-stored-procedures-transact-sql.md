@@ -1,16 +1,14 @@
 ---
-title: "安全性預存程序 (TRANSACT-SQL) |Microsoft 文件"
-ms.custom: 
+title: 安全性預存程序 (TRANSACT-SQL) |Microsoft 文件
+ms.custom: ''
 ms.date: 07/17/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: system-objects
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - Azure SQL Database
@@ -22,21 +20,21 @@ helpviewer_keywords:
 - stored procedures [SQL Server], security
 - security [SQL Server], stored procedures
 ms.assetid: 62b72907-7e95-4c97-9891-0c45d5b678ce
-caps.latest.revision: 
+caps.latest.revision: 22
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 59a87a888f23e722857952d6cdacb6165a092805
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 6ae3eb8d4d0c88f4065f82536cc3a6b00bb51fb0
+ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="security-stored-procedures-transact-sql"></a>安全性預存程序 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]支援下列系統預存程序，用來管理安全性。 某些預存程序已被取代，但繼續使用支援回溯相容性。 已被取代之程序的主題將列出其取代項目。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支援下列系統預存程序，用來管理安全性。 某些預存程序已被取代，但繼續使用支援回溯相容性。 已被取代之程序的主題將列出其取代項目。  
 
 |||  
 |-|-|  
@@ -73,7 +71,7 @@ ms.lasthandoff: 11/21/2017
 
  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [系統預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [安全性函數 &#40;Transact-SQL&#41;](../../t-sql/functions/security-functions-transact-sql.md)  
   

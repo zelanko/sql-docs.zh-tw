@@ -1,30 +1,27 @@
 ---
-title: "ADO MD 基本概念 |Microsoft 文件"
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
+title: ADO MD 基本概念 |Microsoft 文件
+ms.prod: sql
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
-ms.custom: 
+ms.technology: connectivity
+ms.custom: ''
 ms.date: 02/15/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - ADO MD, fundamentals
 ms.assetid: f6a20d9f-c1ab-474c-b9f3-82277e2a126d
-caps.latest.revision: 
+caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 8c2097cbf365febffd6582fc31c0af753f929e21
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 5d15a76c1a7109c6c08d95610278ba4ac9d5c37a
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ado-md-fundamentals"></a>ADO MD 基本概念
 Microsoft® ActiveX® Data Objects （多維度） (ADO MD) 提供簡易存取多維度資料的語言 Microsoft Visual Basic®，例如從 microsoft。 ADO MD 擴充 Microsoft ActiveX® Data Objects (ADO) 要包含物件的特定多維度資料，例如[CubeDef](../../../ado/reference/ado-md-api/cubedef-object-ado-md.md)和[資料格集](../../../ado/reference/ado-md-api/cellset-object-ado-md.md)物件。 使用 ADO MD 中，您可以瀏覽多維度結構描述、 查詢 cube 中，並擷取結果。  

@@ -1,31 +1,28 @@
 ---
-title: "純量函數逸出序列 |Microsoft 文件"
-ms.custom: 
+title: 純量函數逸出序列 |Microsoft 文件
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
-ms.component: odbc
-ms.reviewer: 
+ms.prod: sql
+ms.prod_service: connectivity
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: connectivity
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - escape sequences [ODBC], scalar function
 - scalar functions [ODBC], escape sequences
 - ODBC escape sequences [ODBC], scalar function
 ms.assetid: aaf5d516-e090-445f-8839-9e39581c69c7
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
-ms.workload: Inactive
-ms.openlocfilehash: 6792312d9b82b54460a35dd6f614c206c7bdfe3d
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+manager: craigg
+ms.openlocfilehash: 8ca98389b0279ded2aba487e2e3e0f6bbbe95e6b
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="scalar-function-escape-sequence"></a>純量函數逸出序列
 ODBC 純量函數會使用逸出序列。 此逸出序列語法如下所示：  

@@ -1,30 +1,17 @@
 ---
-title: "步驟 6： 實施 Python 模型使用 SQL Server |Microsoft 文件"
-ms.custom: 
-ms.date: 10/17/2017
-ms.reviewer: 
-ms.suite: sql
-ms.prod: machine-learning-services
-ms.prod_service: machine-learning-services
-ms.component: 
-ms.technology: 
-ms.tgt_pltfrm: 
+title: 步驟 6 實施 Python 模型使用 SQL Server |Microsoft 文件
+ms.prod: sql
+ms.technology: machine-learning
+ms.date: 04/15/2018
 ms.topic: tutorial
-applies_to:
-- SQL Server 2017
-dev_langs:
-- Python
-- TSQL
-ms.assetid: 
-caps.latest.revision: 
-author: jeannt
-ms.author: jeannt
-manager: cgronlund
-ms.openlocfilehash: 18d90dfca8af630a129e03e73d3c3a4ee4681e18
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+author: HeidiSteen
+ms.author: heidist
+manager: cgronlun
+ms.openlocfilehash: aedd6beeb720c24a6960950abc6a29c1bf89a5fa
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="step-6-operationalize-the-python-model-using-sql-server"></a>步驟 6： 實施 Python 模型使用 SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -354,16 +341,16 @@ GO
 
 兩個程序的輸出是提示的機率為要支付計程車旅程功能或指定的參數。
 
-### <a name="changes"></a>變更
+### <a name="changes"></a> 變更
 
 此區段會列出此教學課程中使用的程式碼變更。 這些變更會反映最新**revoscalepy**版本。 應用程式開發介面的協助，請參閱[Python 函式程式庫參考](https://docs.microsoft.com/machine-learning-server/python-reference/introducing-python-package-reference)。
 
 | 變更詳細資料 | 注意|
 | ----|----|
 | 刪除`import pandas`中所有的範例| 預設立即載入熊|
-| 函式`rx_predict_ex`變更為`rx_predict`| RTM 和發行前版本需要`rx_predict_ex`|
-| 函式`rx_logit_ex`變更為`rx_logit`| RTM 和發行前版本需要`rx_logit_ex`|
-| ` probList.append(probArray._results["tipped_Pred"])`變更為`prob_list = prob_array["tipped_Pred"].values`| 更新應用程式開發介面|
+| 函式`rx_predict_ex`變更為 `rx_predict`| RTM 和發行前版本需要 `rx_predict_ex`|
+| 函式`rx_logit_ex`變更為 `rx_logit`| RTM 和發行前版本需要 `rx_logit_ex`|
+| ` probList.append(probArray._results["tipped_Pred"])` 變更為 `prob_list = prob_array["tipped_Pred"].values`| 更新應用程式開發介面|
 
 如果您安裝 Python 的服務使用發行前版本的 SQL Server 2017，我們建議您升級。 您也可以使用最新版的機器學習伺服器升級的 Python 和 R 元件。 如需詳細資訊，請參閱[繫結使用的 SQL Server 執行個體升級](../r/use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md)。
 

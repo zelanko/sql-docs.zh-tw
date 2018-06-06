@@ -1,16 +1,14 @@
 ---
-title: "sp_executesql (TRANSACT-SQL) |Microsoft 文件"
-ms.custom: 
+title: sp_executesql (TRANSACT-SQL) |Microsoft 文件
+ms.custom: ''
 ms.date: 03/16/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: system-objects
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_executesql
@@ -21,16 +19,16 @@ helpviewer_keywords:
 - sp_executesql
 - dynamic SQL
 ms.assetid: a8d68d72-0f4d-4ecb-ae86-1235b962f646
-caps.latest.revision: 
+caps.latest.revision: 64
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Active
-ms.openlocfilehash: b6dec48efa27a14443e69158ed9e9fffb55eba29
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: b0b0e9906c39de7875edc183e36fd5257afbe303
+ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="spexecutesql-transact-sql"></a>sp_executesql (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -56,17 +54,17 @@ sp_executesql [ @stmt = ] statement
   
 ## <a name="arguments"></a>引數  
  [ @stmt=]*陳述式*  
- 是 Unicode 字串，包含[!INCLUDE[tsql](../../includes/tsql-md.md)]陳述式或批次。 @stmt必須是 Unicode 常數或 Unicode 變數。 不允許使用比較複雜的 Unicode 運算式，如用 + 運算子來串連兩個字串。 不允許使用字元常數。 如果指定了 Unicode 常數，它必須在前面加上**N**。例如，Unicode 常數**N'SP_WHO '**有效，但字元常數**'sp_who'**不是。 字串大小只受到可用資料庫伺服器記憶體的限制。 在 64 位元伺服器上限制為 2 GB，最大的大小字串的大小是**nvarchar （max)**。  
+ 是 Unicode 字串，包含[!INCLUDE[tsql](../../includes/tsql-md.md)]陳述式或批次。 @stmt 必須是 Unicode 常數或 Unicode 變數。 不允許使用比較複雜的 Unicode 運算式，如用 + 運算子來串連兩個字串。 不允許使用字元常數。 如果指定了 Unicode 常數，它必須在前面加上**N**。例如，Unicode 常數**N'SP_WHO '** 有效，但字元常數 **'sp_who'** 不是。 字串大小只受到可用資料庫伺服器記憶體的限制。 在 64 位元伺服器上限制為 2 GB，最大的大小字串的大小是**nvarchar （max)**。  
   
 > [!NOTE]  
->  @stmt可以包含參數具有相同的形式的變數名稱，例如：`N'SELECT * FROM HumanResources.Employee WHERE EmployeeID = @IDParameter'`  
+>  @stmt 可以包含參數具有相同的形式的變數名稱，例如： `N'SELECT * FROM HumanResources.Employee WHERE EmployeeID = @IDParameter'`  
   
  在 @stmt 參數定義清單和參數值清單中，@params 所包含的每個參數都必須有對應的項目。  
   
- [ @params=] N'@*parameter_name**data_type* [，...*n* ] '  
+ [ @params=] N'@*parameter_name * * data_type* [，...*n* ] '  
  這是包含 @stmt 的所有內嵌參數定義的字串。此字串必須是 Unicode 常數或 Unicode 變數。 每個參數定義都由參數名稱和資料類型組成。 *n*是指出其他參數定義的預留位置。 指定在每個參數@stmtmust中定義@params。 如果 @stmt 中的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式或批次不包含參數，就不需要 @params。 這個參數的預設值是 NULL。  
   
- [ @param1=] '*value1*'  
+ [ @param1= ] '*value1*'  
  這是參數字串所定義的第一個參數的值。 這個值可以是 Unicode 常數或 Unicode 變數。 @stmt 所包含的每個參數都必須有提供的參數值。當 @stmt 中的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式或批次沒有參數時，便不需要值。  
   
  [ OUT | OUTPUT ]  
@@ -240,7 +238,7 @@ FROM Sales.SalesOrderHeader
 WHERE SalesOrderNumber = @SalesOrderNumber;  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>範例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]和[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>範例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="d-executing-a-simple-select-statement"></a>D. 執行簡單的 SELECT 陳述式  
  下列範例會建立和執行包含名稱為 `SELECT` 的內嵌參數之簡單 `@level` 陳述式。  
@@ -257,7 +255,7 @@ EXECUTE sp_executesql
   
  如需其他範例，請參閱[sp_executesql (TRANSACT-SQL)](http://msdn.microsoft.com/library/ms188001.aspx)。  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [EXECUTE &#40;Transact-SQL&#41;](../../t-sql/language-elements/execute-transact-sql.md)   
  [系統預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   

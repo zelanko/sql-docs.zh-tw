@@ -1,37 +1,23 @@
 ---
-title: "重要的 MDX (Analysis Services) 中的概念 |Microsoft 文件"
-ms.custom: 
-ms.date: 03/13/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
-helpviewer_keywords:
-- Multidimensional Expressions [Analysis Services], about MDX
-- dimensional modeling [MDX]
-- MDX [Analysis Services], about MDX
-- Multidimensional Expressions [Analysis Services], dimensional modeling
-- MDX [Analysis Services], dimensional modeling
-ms.assetid: 4797ddc8-6423-497a-9a43-81a1af7eb36c
-caps.latest.revision: 
-author: Minewiskan
+title: 重要的 MDX (Analysis Services) 中的概念 |Microsoft 文件
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: mdx
+ms.topic: conceptual
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 23aca9e6a5595c8597d13e2e832390988c50be3c
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 72033d700bb86f8ef2ce17b55880666a6903e67d
+ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="key-concepts-in-mdx-analysis-services"></a>MDX 的關鍵概念 (Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
-在您使用多維度運算式 (MDX) 查詢 Cube 中的多維度資料，或在 Cube 中建立 MDX 運算式之前，先了解多維度的概念與詞彙會相當有助益。  
+  在您使用多維度運算式 (MDX) 查詢 Cube 中的多維度資料，或在 Cube 中建立 MDX 運算式之前，先了解多維度的概念與詞彙會相當有助益。  
   
  最好先從您已經知道的資料摘要開始著手，然後觀察 MDX 如何與此資料摘要相關聯。 以下是在 Excel 中建立的樞紐分析表，其中已填入了 Analysis Services 範例 Cube 的資料。  
   
@@ -145,21 +131,21 @@ ms.lasthandoff: 02/15/2018
 ## <a name="next-steps"></a>後續步驟  
  現在您已經認識了重要的概念和術語，您可以繼續閱讀這些其他主題，以進一步了解 Analysis Services 中的基本概念：  
   
--   [基本 MDX 查詢 &#40;MDX &#41;](../../../analysis-services/multidimensional-models/mdx/mdx-query-the-basic-query.md)  
+-   [基本 MDX 查詢 & #40;MDX & #41;](../../../analysis-services/multidimensional-models/mdx/mdx-query-the-basic-query.md)  
   
--   [基本 MDX 指令碼 &#40;MDX &#41;](../../../analysis-services/multidimensional-models/mdx/the-basic-mdx-script-mdx.md)  
+-   [基本 MDX 指令碼 & #40;MDX & #41;](../../../analysis-services/multidimensional-models/mdx/the-basic-mdx-script-mdx.md)  
   
--   [多維度模型化 &#40;Adventure Works 教學課程 &#41;](../../../analysis-services/multidimensional-modeling-adventure-works-tutorial.md)  
+-   [多維度模型化 & #40;Adventure Works 教學課程 & #41;](../../../analysis-services/multidimensional-modeling-adventure-works-tutorial.md)  
   
 ## <a name="see-also"></a>另請參閱  
  [Cube 空間](../../../analysis-services/multidimensional-models/mdx/cube-space.md)   
  [Tuple](../../../analysis-services/multidimensional-models/mdx/tuples.md)   
  [「 自動存在 」](../../../analysis-services/multidimensional-models/mdx/autoexists.md)   
- [使用成員、 Tuple 及集合 &#40;MDX &#41;](../../../analysis-services/multidimensional-models/mdx/working-with-members-tuples-and-sets-mdx.md)   
+ [使用成員、 Tuple 及集合 & #40;MDX & #41;](../../../analysis-services/multidimensional-models/mdx/working-with-members-tuples-and-sets-mdx.md)   
  [視覺化總計和非視覺化總計](../../../analysis-services/multidimensional-models/mdx/visual-totals-and-non-visual-totals.md)   
- [MDX 查詢基礎觀念 &#40;Analysis Services &#41;](../../../analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services.md)   
- [MDX 指令碼基礎觀念 &#40;Analysis Services &#41;](../../../analysis-services/multidimensional-models/mdx/mdx-scripting-fundamentals-analysis-services.md)   
- [MDX 語言參考 &#40;MDX &#41;](../../../mdx/mdx-language-reference-mdx.md)   
- [多維度運算式 &#40;MDX &#41;參考](../../../mdx/multidimensional-expressions-mdx-reference.md)  
+ [MDX 查詢基礎觀念 & #40;Analysis Services & #41;](../../../analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services.md)   
+ [MDX 指令碼基礎觀念 & #40;Analysis Services & #41;](../../../analysis-services/multidimensional-models/mdx/mdx-scripting-fundamentals-analysis-services.md)   
+ [MDX 語言參考 & #40;MDX & #41;](../../../mdx/mdx-language-reference-mdx.md)   
+ [多維度運算式 & #40;MDX & #41;參考](../../../mdx/multidimensional-expressions-mdx-reference.md)  
   
   

@@ -1,27 +1,25 @@
 ---
-title: "將篩選新增至資料集 (報表產生器及 SSRS) | Microsoft Docs"
-ms.custom: 
+title: 將篩選新增至資料集 (報表產生器及 SSRS) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: report-data
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: eed37e74-6a43-4d7c-9959-2d5fa6a6aba9
-caps.latest.revision: "8"
+caps.latest.revision: 8
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: fe9dcb6eb8401348212fbaaae7c5f57aa4fccc99
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: fa07a8ea7240f7cd06d302a2b39cca942f12d643
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="add-a-filter-to-a-dataset-report-builder-and-ssrs"></a>將篩選加入至資料集 (報表產生器及 SSRS)
   從外部資料來源擷取資料後，將篩選加入至資料集來限制報表中的資料。 當您將篩選加入至資料集時，所有報表組件或資料區都只會使用符合篩選條件的資料。  
@@ -43,13 +41,13 @@ ms.lasthandoff: 01/09/2018
   
 4.  按一下 **[加入]**。 新的空白篩選方程式隨即顯示。  
   
-5.  在 **[運算式]**中，針對要篩選的欄位輸入或選取運算式。 若要編輯運算式，請按一下運算式 (*fx*) 按鈕。  
+5.  在 **[運算式]** 中，針對要篩選的欄位輸入或選取運算式。 若要編輯運算式，請按一下運算式 (*fx*) 按鈕。  
   
 6.  在清單方塊中，選取符合您在步驟 5 中建立之運算式資料類型的資料類型。  
   
 7.  在 **[運算子]** 方塊中，選取您想要篩選用來比較 **[運算式]** 方塊和 **[值]** 方塊中值的運算子。 您所選擇的運算子會決定下一個步驟所使用的值數目。  
   
-8.  在 **[值]** 方塊中，輸入您想要篩選在評估 **[運算式]**中的值時，所針對的運算式或值。  
+8.  在 **[值]** 方塊中，輸入您想要篩選在評估 **[運算式]** 中的值時，所針對的運算式或值。  
   
      如需篩選方程式的範例，請參閱[篩選方程式範例 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/filter-equation-examples-report-builder-and-ssrs.md)。  
   
@@ -65,13 +63,13 @@ ms.lasthandoff: 01/09/2018
   
 4.  按一下 **[加入]**。 新的空白篩選方程式隨即顯示。  
   
-5.  在 **[運算式]**中，針對要篩選的欄位輸入或選取運算式。 若要編輯運算式，請按一下運算式 (*fx*) 按鈕。  
+5.  在 **[運算式]** 中，針對要篩選的欄位輸入或選取運算式。 若要編輯運算式，請按一下運算式 (*fx*) 按鈕。  
   
 6.  在下拉式方塊中，選取符合您在步驟 5 中建立之運算式資料類型的資料類型。  
   
 7.  在 **[運算子]** 方塊中，選取您想要篩選用來比較 **[運算式]** 方塊和 **[值]** 方塊中值的運算子。 您所選擇的運算子會決定下一個步驟所使用的值數目。  
   
-8.  在 **[值]** 方塊中，輸入您想要篩選在評估 **[運算式]**中的值時，所針對的運算式或值。  
+8.  在 **[值]** 方塊中，輸入您想要篩選在評估 **[運算式]** 中的值時，所針對的運算式或值。  
   
      如需篩選方程式的範例，請參閱[篩選方程式範例 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/filter-equation-examples-report-builder-and-ssrs.md)。  
   

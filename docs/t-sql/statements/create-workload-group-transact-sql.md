@@ -1,16 +1,14 @@
 ---
 title: CREATE WORKLOAD GROUP (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 01/04/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-database
-ms.service: 
 ms.component: t-sql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: t-sql
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - WORKLOAD GROUP
@@ -22,16 +20,15 @@ dev_langs:
 helpviewer_keywords:
 - CREATE WORKLOAD GROUP statement
 ms.assetid: d949e540-9517-4bca-8117-ad8358848baa
-caps.latest.revision: 
-author: barbkess
-ms.author: barbkess
+caps.latest.revision: 47
+author: edmacauley
+ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: cec1360259d78679fab31a45a074d5fbbf3779b5
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 82f3df3e82ae7be0c8df9e12e29afbffdb43f92d
+ms.sourcegitcommit: d2573a8dec2d4102ce8882ee232cdba080d39628
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="create-workload-group-transact-sql"></a>CREATE WORKLOAD GROUP (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -105,7 +102,7 @@ CREATE WORKLOAD GROUP group_name
 > 根據預設，Resource Governor 不會在超過最大時間時，阻止要求繼續執行。 不過，系統將會產生某個事件。 如需詳細資訊，請參閱[超過 CPU 閾值事件類別](../../relational-databases/event-classes/cpu-threshold-exceeded-event-class.md)。  
 
 > [!IMPORTANT]
-> 從 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3 開始 (並使用[追蹤旗標 2422](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md))，Resource Governor 將在超過時間上限時中止要求。 
+> 從 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 和 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3 開始，並使用[追蹤旗標 2422](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)，Resource Governor 將在超過時間上限時中止要求。 
   
  REQUEST_MEMORY_GRANT_TIMEOUT_SEC =*value*  
  指定查詢能夠等待記憶體授權 (工作緩衝區記憶體) 變成可用的最大時間 (以秒為單位)。  

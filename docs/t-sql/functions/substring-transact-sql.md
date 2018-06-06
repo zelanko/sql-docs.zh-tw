@@ -1,16 +1,14 @@
 ---
 title: SUBSTRING (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 10/21/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
 ms.component: t-sql|functions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: t-sql
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - SUBSTRING
@@ -26,16 +24,16 @@ helpviewer_keywords:
 - expressions [SQL Server], part returned
 - characters [SQL Server], returning part of
 ms.assetid: a19c808f-aaf9-4a69-af59-b1a5fc3e5c4c
-caps.latest.revision: 
+caps.latest.revision: 65
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Active
-ms.openlocfilehash: 2c78c77953dc60bdcd73ec29ba542a12478783fb
-ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 5733adbcf8823b816a1e287cca45e6ea1ab2a145
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="substring-transact-sql"></a>SUBSTRING (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -52,7 +50,7 @@ SUBSTRING ( expression ,start , length )
   
 ## <a name="arguments"></a>引數  
  *expression*  
- 這是**字元****二進位****文字****ntext**或 **影像**[運算式](../../t-sql/language-elements/expressions-transact-sql.md)。  
+ 這是 **character**、**binary**、**text**、**ntext** 或 **image** [expression](../../t-sql/language-elements/expressions-transact-sql.md)。  
   
  *start*  
  這是指定傳回之字元開始的整數或 **bigint** 運算式。 (編號是以 1 為基礎，這表示運算式中的第一個字元為 1)。 如果 *start* 小於 1，傳回的運算式將會從 *expression* 內指定的第一個字元開始。 在此情況下，傳回的字元數會是 *start* + *length* 的總和 -1 或是 0 (以最大值為準)。 如果 *start* 大於值運算式中的字元數，則會傳回長度為零的運算式。  

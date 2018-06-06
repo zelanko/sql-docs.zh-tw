@@ -1,29 +1,28 @@
 ---
-title: "大型 CLR 使用者定義型別 (OLE DB) |Microsoft 文件"
-ms.custom: 
+title: 大型 CLR 使用者定義型別 (OLE DB) |Microsoft 文件
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
 ms.component: native-client-ole-db
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - large CLR user-defined types [OLE DB]
 ms.assetid: 4bf12058-0534-42ca-a5ba-b1c23b24d90f
-caps.latest.revision: 
+caps.latest.revision: 24
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: a6bdb5767937e4fbfdf7dd92cc683fe7830e066a
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 6959f7e6993a6d9f024a8201056f57c0b85b54f1
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="large-clr-user-defined-types-ole-db"></a>大型 CLR 使用者定義型別 (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -31,7 +30,7 @@ ms.lasthandoff: 01/25/2018
 
   本主題討論 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 中 OLE DB 的變更，以支援大型 Common Language Runtime (CLR) 使用者定義型別 (UDT)。  
   
- 如需有關針對中大型 CLR Udt 支援[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]原生用戶端，請參閱[Large CLR User-Defined 類型](../../../relational-databases/native-client/features/large-clr-user-defined-types.md)。 如需範例，請參閱[使用大型 CLR Udt &#40; OLE DB &#41;](../../../relational-databases/native-client-ole-db-how-to/use-large-clr-udts-ole-db.md)。  
+ 如需有關針對中大型 CLR Udt 支援[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]原生用戶端，請參閱[Large CLR User-Defined 類型](../../../relational-databases/native-client/features/large-clr-user-defined-types.md)。 如需範例，請參閱[使用大型 CLR Udt &#40;OLE DB&#41;](../../../relational-databases/native-client-ole-db-how-to/use-large-clr-udts-ole-db.md)。  
   
 ## <a name="data-format"></a>資料格式  
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 使用 ~0 來代表大型物件 (LOB) 類型的無限制大小的值長度。 ~0 也代表大於 8,000 個位元組的 CLR UDT 大小。  
@@ -40,9 +39,9 @@ ms.lasthandoff: 01/25/2018
   
 |SQL Server 資料類型|OLE DB 資料類型|記憶體配置|Value|  
 |--------------------------|----------------------|-------------------|-----------|  
-|CLR UDT|DBTYPE_UDT|BYTE[](byte array\)|132 (oledb.h)|  
+|CLR UDT|DBTYPE_UDT|BYTE [] （位元組陣列\)|132 (oledb.h)|  
   
- UDT 值會表示為位元組陣列。 支援與十六進位字串之間的來回轉換。 常值會表示為具有 "0x" 前置詞的十六進位字串。 十六進位字串是基底 16 的二進位資料文字表示法。 一個範例就是從伺服器類型轉換**varbinary(10)**至 DBTYPE_STR，這會導致 20 個字元，其中每一組字元都代表單一位元組的十六進位表示法。  
+ UDT 值會表示為位元組陣列。 支援與十六進位字串之間的來回轉換。 常值會表示為具有 "0x" 前置詞的十六進位字串。 十六進位字串是基底 16 的二進位資料文字表示法。 一個範例就是從伺服器類型轉換**varbinary(10)** 至 DBTYPE_STR，這會導致 20 個字元，其中每一組字元都代表單一位元組的十六進位表示法。  
   
 ## <a name="parameter-properties"></a>參數屬性  
  DBPROPSET_SQLSERVERPARAMETER 屬性集會透過 OLE DB 支援 UDT。 如需詳細資訊，請參閱[Using User-Defined 類型](~/relational-databases/native-client/features/using-user-defined-types.md)。  
@@ -60,7 +59,7 @@ ms.lasthandoff: 01/25/2018
 ## <a name="icommandwithparametersgetparameterinfo"></a>ICommandWithParameters::GetParameterInfo  
  傳回以 DBPARAMINFO 結構透過資訊**prgParamInfo**如下所示：  
   
-|參數類型|*wType*|*ulParamSize*|*bPrecision*|*bScale*|*dwFlags* DBPARAMFLAGS_ISLONG|  
+|參數類型|*wType*|*ulParamSize*|*bPrecision*|*bScale*|*將 dwFlags* DBPARAMFLAGS_ISLONG|  
 |--------------------|-------------|-------------------|------------------|--------------|------------------------------------|  
 |DBTYPE_UDT<br /><br /> (長度小於或等於 8,000 個位元組)|"DBTYPE_UDT"|*n*|未定義|未定義|清除|  
 |DBTYPE_UDT<br /><br /> (長度大於 8,000 個位元組)|"DBTYPE_UDT"|~0|未定義|未定義|集合|  
@@ -68,7 +67,7 @@ ms.lasthandoff: 01/25/2018
 ## <a name="icommandwithparameterssetparameterinfo"></a>ICommandWithParameters::SetParameterInfo  
  以 DBPARAMBINDINFO 結構所提供的資訊必須與下列相符：  
   
-|參數類型|*pwszDataSourceType*|*ulParamSize*|*bPrecision*|*bScale*|*dwFlags* DBPARAMFLAGS_ISLONG|  
+|參數類型|*pwszDataSourceType*|*ulParamSize*|*bPrecision*|*bScale*|*將 dwFlags* DBPARAMFLAGS_ISLONG|  
 |--------------------|--------------------------|-------------------|------------------|--------------|------------------------------------|  
 |DBTYPE_UDT<br /><br /> (長度小於或等於 8,000 個位元組)|DBTYPE_UDT|*n*|忽略|忽略|如果要使用 DBTYPE_IUNKNOWN 傳遞此參數，則必須設定。|  
 |DBTYPE_UDT<br /><br /> (長度大於 8,000 個位元組)|DBTYPE_UDT|~0|忽略|忽略|忽略|  

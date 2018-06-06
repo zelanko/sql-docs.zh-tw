@@ -1,30 +1,28 @@
 ---
-title: "步驟 3：加入錯誤流程重新導向 | Microsoft Docs"
-ms.custom: 
+title: 步驟 3：加入錯誤流程重新導向 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
 ms.component: tutorial
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: get-started-article
 applies_to:
 - SQL Server 2016
 ms.assetid: 5683a45d-9e73-4cd5-83ca-fae8b26b488c
-caps.latest.revision: 
+caps.latest.revision: 39
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: d823eff897577569b99736b152d289353bdc1507
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: eb4d16cfa53445fe95a406a8c7c55b80244bd319
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="lesson-4-3---adding-error-flow-redirection"></a>課程 4-3 - 新增錯誤流程重新導向
 如上一項工作所示範的，當 [查閱貨幣索引鍵] 轉換試圖處理已損毀範例一般檔案 (其產生錯誤) 時，不會產生相符者。 因為轉換使用錯誤輸出的預設值，所以任何錯誤都會造成轉換失敗。 當轉換失敗時，封裝的其餘部分也會失敗。  
@@ -39,7 +37,7 @@ ms.lasthandoff: 01/25/2018
   
 ## <a name="to-configure-an-error-output"></a>設定錯誤輸出  
   
-1.  在 **[SSIS 工具箱]**中，展開 **[通用]**，然後將 **[指令碼元件]** 拖曳至 **[資料流程]** 索引標籤的設計介面中。將 **[指令碼]** 放到 **[查閱貨幣索引鍵]** 轉換的右邊。  
+1.  在 **[SSIS 工具箱]** 中，展開 **[通用]**，然後將 **[指令碼元件]** 拖曳至 **[資料流程]** 索引標籤的設計介面中。將 **[指令碼]** 放到 **[查閱貨幣索引鍵]** 轉換的右邊。  
   
 2.  在 **[選取指令碼元件類型]** 對話方塊中，按一下 **[轉換]**，然後按一下 **[確定]**。  
   

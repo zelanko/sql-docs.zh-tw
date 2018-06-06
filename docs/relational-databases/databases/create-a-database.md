@@ -1,36 +1,34 @@
 ---
-title: "建立資料庫 | Microsoft 文件"
-ms.custom: 
+title: 建立資料庫 | Microsoft 文件
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
 ms.component: databases
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - databases [SQL Server], creating
 - database creation [SQL Server], SQL Server Management Studio
 - creating databases
 ms.assetid: 4c4beea2-6cbc-4352-9db6-49ea8130bb64
-caps.latest.revision: 
+caps.latest.revision: 38
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: Active
-ms.openlocfilehash: b1d1b1c50212e613513861202d40a912b299c353
-ms.sourcegitcommit: 4edac878b4751efa57601fe263c6b787b391bc7c
+ms.openlocfilehash: 517e5542b0d059c924d8d7faa4f9c1be5330c8d2
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/19/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="create-a-database"></a>建立資料庫
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-此主題描述如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ，在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中建立資料庫。  
+  此主題描述如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ，在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中建立資料庫。  
 
 > [!NOTE]
 > 若要使用 T-SQL 在 Azure SQL Database 中建立資料庫，請參閱[在 Azure SQL Database 中建立資料庫](https://docs.microsoft.com/sql/t-sql/statements/create-database-azure-sql-database)。
@@ -80,11 +78,11 @@ ms.lasthandoff: 02/19/2018
   
 #### <a name="to-create-a-database"></a>若要建立資料庫  
   
-1.  在 **[物件總管]**中，連接到 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 的執行個體，然後展開該執行個體。  
+1.  在 **[物件總管]** 中，連接到 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 的執行個體，然後展開該執行個體。  
   
 2.  以滑鼠右鍵按一下 [資料庫]，然後按一下 [新增資料庫]。  
   
-3.  在 **[新增資料庫]**中，輸入資料庫名稱。  
+3.  在 **[新增資料庫]** 中，輸入資料庫名稱。  
   
 4.  若要使用所有預設值來建立資料庫，請按一下 **[確定]**，否則繼續執行下列選擇性步驟。  
   
@@ -93,7 +91,7 @@ ms.lasthandoff: 02/19/2018
     > [!NOTE]  
     >  [使用全文檢索索引] 選項一定是核取狀態而且呈暗灰色，因為從 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 開始，所有使用者資料庫都會啟用全文檢索。  
   
-6.  若要變更主要資料與交易記錄檔的預設值，請在 **[資料庫檔案]** 方格中按一下適當的資料格，並輸入新的值。 如需詳細資訊，請參閱 [Add Data or Log Files to a Database](../../relational-databases/databases/add-data-or-log-files-to-a-database.md)。  
+6.  若要變更主要資料與交易記錄檔的預設值，請在 **[資料庫檔案]** 方格中按一下適當的資料格，並輸入新的值。 如需詳細資訊，請參閱 [將資料或記錄檔加入資料庫](../../relational-databases/databases/add-data-or-log-files-to-a-database.md)。  
   
 7.  若要變更資料庫的定序，請選取 **[選項]** 頁面，然後從清單中選取定序。  
   
@@ -146,6 +144,6 @@ GO
  [資料庫檔案與檔案群組](../../relational-databases/databases/database-files-and-filegroups.md)   
  [資料庫卸離與附加 &#40;SQL Server&#41;](../../relational-databases/databases/database-detach-and-attach-sql-server.md)   
  [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)   
- [Add Data or Log Files to a Database](../../relational-databases/databases/add-data-or-log-files-to-a-database.md)  
+ [將資料或記錄檔加入資料庫](../../relational-databases/databases/add-data-or-log-files-to-a-database.md)  
   
   

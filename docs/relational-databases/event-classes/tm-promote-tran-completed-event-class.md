@@ -1,34 +1,30 @@
 ---
-title: "TM: Promote Tran Completed 事件類別 | Microsoft 文件"
-ms.custom: 
+title: 'TM: Promote Tran Completed 事件類別 | Microsoft 文件'
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
-ms.prod_service: database-engine, sql-database
-ms.service: 
-ms.component: event-classes
-ms.reviewer: 
+ms.prod: sql
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: supportability
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - 'TM: Promote Tran Completed event class'
 ms.assetid: 839beaed-b094-467a-9b97-8764e9451fc0
-caps.latest.revision: 
+caps.latest.revision: 25
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 974b69a9771aecc02e9d916499f9fe7262f41f79
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 9b1307e7d65275ef1412ce6a48c94ad147dee36a
+ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="tm-promote-tran-completed-event-class"></a>TM: Promote Tran Completed 事件類別
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-TM: Promote Tran Completed 事件類別指出 PROMOTE TRANSACTION 要求已完成。 要求是從用戶端透過交易管理介面傳送。  
+  TM: Promote Tran Completed 事件類別指出 PROMOTE TRANSACTION 要求已完成。 要求是從用戶端透過交易管理介面傳送。  
   
 ## <a name="tm-promote-tran-completed-event-class-data-columns"></a>TM: Promote Tran Completed 事件類別資料行  
   

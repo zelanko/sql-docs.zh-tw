@@ -1,27 +1,26 @@
 ---
-title: "計劃和測試資料庫引擎升級計畫 | Microsoft Docs"
-ms.custom: 
-ms.date: 07/20/2016
-ms.prod: sql-non-specified
-ms.prod_service: database-engine
-ms.service: 
-ms.component: install-windows
-ms.reviewer: 
+title: 計劃和測試資料庫引擎升級計畫 | Microsoft Docs
+ms.custom: ''
+ms.date: 05/18/2018
+ms.prod: sql
+ms.prod_service: install
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - server-general
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: 19c5b725-7400-4881-af8f-fd232ca28234
-caps.latest.revision: 
+caps.latest.revision: 16
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: a10e7d35aa5a72f9dcc7ba34b11b6486fb9ac1cf
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: bbe0ecaee2d03865f7e8f6700b6aa5a146c533f1
+ms.sourcegitcommit: b3bb41424249de198f22d9c6d40df4996f083aa6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 05/17/2018
+ms.locfileid: "34300206"
 ---
 # <a name="plan-and-test-the-database-engine-upgrade-plan"></a>計劃和測試資料庫引擎升級計畫
 
@@ -56,7 +55,7 @@ ms.lasthandoff: 02/09/2018
    >[!NOTE]
    >前面的清單也適用於 [!INCLUDE[sscurrent](../../includes/sscurrent-md.md)]。
   
--   **協力廠商元件︰**判斷協力廠商元件的相容性，例如整合式備份。  
+-   **協力廠商元件︰** 判斷協力廠商元件的相容性，例如整合式備份。  
   
 -   **目標環境︰** 確認您的目標環境符合硬體和軟體需求，且能夠支援原始系統的需求。 例如，您的升級可能包含多個 SQL Server 執行個體對單一執行個體的調節、新的 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] 執行個體，或是將 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 環境虛擬化至私人或公用雲端。  
   
@@ -65,22 +64,22 @@ ms.lasthandoff: 02/09/2018
     > [!NOTE]  
     >  當您從舊版 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise Edition 升級 [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] 時，請選擇 [Enterprise Edition: 核心授權] 和 [Enterprise Edition]。 這些 Enterprise Edition 只有在授權模式方面不同。 如需詳細資訊，請參閱 [Compute Capacity Limits by Edition of SQL Server](../../sql-server/compute-capacity-limits-by-edition-of-sql-server.md)。  
   
--   **回溯相容性︰**請檢閱 [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] 資料庫引擎回溯相容性文章，以檢閱 [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] 與您要升級的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本之間的行為變更。 請參閱 [SQL Server Database Engine Backward Compatibility](../../database-engine/sql-server-database-engine-backward-compatibility.md)。  
+-   **回溯相容性︰** 請檢閱 [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] 資料庫引擎回溯相容性文章，以檢閱 [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] 與您要升級的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本之間的行為變更。 請參閱 [SQL Server Database Engine Backward Compatibility](../../database-engine/sql-server-database-engine-backward-compatibility.md)。  
   
--   **升級建議程式：**  執行 [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] 升級建議程式來協助診斷可能封鎖升級程序，或現有指令碼或應用程式因重大變更而需要修改等原因造成的問題。 [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] 包含新版的升級建議程式，以協助客戶為現有的系統備妥升級。  此工具也能夠檢查現有資料庫，以查看其升級後是否能夠利用新功能 (如延伸資料表)。   
-    您可以在 [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)]這裡  [下載](https://www.microsoft.com/en-us/download/details.aspx?id=48119)升級建議程式。  
+-   **Data Migration Assistant：** 執行 Data Migration Assistant 來協助診斷可能封鎖升級程序，或現有指令碼或應用程式因重大變更而需要修改等原因造成的問題。
+    您可以在[這裡](https://aka.ms/get-dma)下載 Data Migration Assistant。  
   
--   **System Configuration Checker：**  在您實際排定升級之前，先執行 [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] System Configuration Checker (SCC) 來判斷 SQL Server 安裝程式是否偵測到封鎖問題。 如需詳細資訊，請參閱 [Check Parameters for the System Configuration Checker](../../database-engine/install-windows/check-parameters-for-the-system-configuration-checker.md)。  
+-   **System Configuration Checker：** 在您排定升級之前，先執行 [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] System Configuration Checker (SCC) 來判斷 SQL Server 安裝程式是否偵測到封鎖問題。 如需詳細資訊，請參閱 [Check Parameters for the System Configuration Checker](../../database-engine/install-windows/check-parameters-for-the-system-configuration-checker.md)。  
   
--   **升級記憶體最佳化資料表：** 將包含記憶體最佳化資料表的 SQL Server 2014 資料庫執行個體升級到 SQL Server 2016 時，升級程序將需要額外的時間來將記憶體最佳化資料表轉換成磁碟上格式 (執行這些步驟時資料庫將會離線)。   時間長短是根據記憶體最佳化資料表的大小及 I/O 子系統的速度而定。 針對就地和新安裝升級，升級需要三種大小的資料作業 (輪流升級不需要步驟 1，但需要步驟 2 和 3)：  
+-   **升級記憶體最佳化資料表：** 將包含記憶體最佳化資料表的 SQL Server 2014 資料庫執行個體升級到 SQL Server 2016 時，升級程序需要額外的時間來將記憶體最佳化資料表轉換成磁碟上格式 (執行這些步驟時資料庫會離線)。   時間長短是根據記憶體最佳化資料表的大小及 I/O 子系統的速度而定。 針對就地和新安裝升級，升級需要三種大小的資料作業 (輪流升級不需要步驟 1，但需要步驟 2 和 3)：  
   
-    1.  以舊的磁碟上格式執行資料庫復原 (這包含從磁碟機將所有記憶體最佳化資料表中的資料載入記憶體)  
+    1.  以舊的磁碟上格式執行資料庫復原 (包含從磁碟機將所有記憶體最佳化資料表中的資料載入記憶體)  
   
     2.  將資料以新的磁碟上格式序列化  
   
     3.  以新的格式執行資料庫復原 (包含從磁碟機將所有記憶體最佳化資料表中的資料載入記憶體)  
   
-     此外，若執行此程序期間磁碟機空間不足，將會造成復原失敗。 請確定磁碟機的空間足夠儲存現有資料庫，並擁有等同資料庫內 MEMORY_OPTIMIZED_DATA 檔案群組中容器之大小的額外儲存空間，以執行就地升級或將 SQL Server 2014 資料庫附加到 SQL Server 2016 執行個體。使用以下查詢來判斷目前 MEMORY_OPTIMIZED_DATA 檔案群組所需的磁碟空間，以及完成升級所需的可用磁碟空間：  
+     此外，若執行此程序期間磁碟機空間不足，會造成復原失敗。 確定磁碟上有足夠空間可存放現有的資料庫，加上等於資料庫中 MEMORY_OPTIMIZED_DATA 檔案群組之容器現有大小的額外儲存空間，以便執行就地升級或是將 SQL Server 2014 資料庫附加到 SQL Server 2016 執行個體。 使用下列查詢來判斷目前 MEMORY_OPTIMIZED_DATA 檔案群組所需的磁碟空間，以及因此判斷升級要成功所需的可用磁碟空間量：  
   
     ```  
     select cast(sum(size) as float)*8/1024/1024 'size in GB'   
@@ -89,17 +88,18 @@ ms.lasthandoff: 02/09/2018
     ```  
   
 ## <a name="develop-and-test-the-upgrade-plan"></a>開發和測試升級計畫  
- 最好的方法是將升級視為如同其他 IT 專案。 您應該組織一個具備資料庫系統管理員、網路、擷取、轉換與載入 (ETL)，以及其他升級所需之技能的升級小組。 該小組需要：  
+ 最好的方法是將升級視為如同其他 IT 專案。 請組織一個具備資料庫系統管理員、網路、擷取、轉換與載入 (ETL)，以及其他升級所需之技能的升級小組。 該小組需要：  
   
 -   **選擇升級方法：** 請參閱 [選擇 Database Engine 升級方法](../../database-engine/install-windows/choose-a-database-engine-upgrade-method.md)。  
   
--   **開發復原計劃︰**。 如果需要復原，執行此計劃就能還原為原始的環境。  
+-   **開發復原計劃：** 如果需要復原，執行此計劃就能還原為原始的環境。  
   
--   **決定驗收準則：** 將使用者切換到升級的環境之前，您需要知道升級是否成功。  
+-   **決定驗收準則：** 將使用者切換到升級的環境之前，確認升級是否成功。  
   
 -   **測試升級計劃︰** 使用 Microsoft SQL Server Distributed Replay 公用程式，來以您的實際工作負載測試效能。 此公用程式可使用多部電腦重新執行追蹤資料，並模擬關鍵任務的工作負載。 在 SQL Server 升級前後於測試伺服器上進行重新執行作業，可讓您衡量效能差異，並找出應用程式在升級後可能會發生的不相容情況。 如需詳細資訊，請參閱 [SQL Server Distributed Replay](../../tools/distributed-replay/sql-server-distributed-replay.md) 和[管理工具命令列選項 &#40;Distributed Replay Utility&#41;](../../tools/distributed-replay/administration-tool-command-line-options-distributed-replay-utility.md)。  
   
 ## <a name="next-steps"></a>後續步驟  
- [升級 Database Engine](../../database-engine/install-windows/upgrade-database-engine.md)  
+[升級 Database Engine](../../database-engine/install-windows/upgrade-database-engine.md) 
   
-  
+## <a name="additional-resources"></a>其他資源 
+[資料庫移轉指南](https://aka.ms/datamigration)  

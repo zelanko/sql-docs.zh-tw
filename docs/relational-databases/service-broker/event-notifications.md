@@ -1,35 +1,33 @@
 ---
-title: "事件通知 | Microsoft Docs"
-ms.custom: 
+title: 事件通知 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
 ms.component: service-broker
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - event notifications, about
 - events [SQL Server], notifications
 ms.assetid: 4da73ca1-6c06-4e96-8ab8-2ecba30b6c86
-caps.latest.revision: 
-author: BYHAM
-ms.author: rickbyh
+caps.latest.revision: 18
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 8590e3177aefa3889743069c8b69b63ec5f93953
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.openlocfilehash: 37602cb45dabc2c00d47dd3c7be28ed6e8fe63e5
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="event-notifications"></a>事件通知
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-事件通知會傳送事件的詳細資訊給 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 服務。 事件通知會將這些事件的資訊傳送給 [!INCLUDE[tsql](../../includes/tsql-md.md)] 服務，以回應各種 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 資料定義語言 (DDL) 陳述式和 SQL 追蹤事件。  
+  事件通知會傳送事件的詳細資訊給 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 服務。 事件通知會將這些事件的資訊傳送給 [!INCLUDE[tsql](../../includes/tsql-md.md)] 服務，以回應各種 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 資料定義語言 (DDL) 陳述式和 SQL 追蹤事件。  
   
  事件通知可用來執行下列工作：  
   

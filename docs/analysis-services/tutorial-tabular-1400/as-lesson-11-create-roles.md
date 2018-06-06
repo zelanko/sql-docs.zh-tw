@@ -1,27 +1,19 @@
 ---
-title: "Analysis Services 教學課程第 11 課： 建立角色 |Microsoft 文件"
-description: "描述如何建立 Analysis Services 教學課程專案中的角色。"
-ms.prod_service: analysis-services, azure-analysis-services
-services: analysis-services
-ms.suite: pro-bi
-documentationcenter: 
-author: Minewiskan
-manager: kfile
-editor: 
-tags: 
-ms.assetid: 
-ms.service: analysis-services
-ms.devlang: NA
-ms.topic: get-started-article
-ms.tgt_pltfrm: NA
-ms.workload: na
-ms.date: 02/20/2018
+title: Analysis Services 教學課程第 11 課： 建立角色 |Microsoft 文件
+ms.date: 05/08/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: tabular-models
+ms.topic: tutorial
 ms.author: owend
-ms.openlocfilehash: b3ed6028a02b117fb6cdb87a8097d1e1eab48b0f
-ms.sourcegitcommit: 7ed8c61fb54e3963e451bfb7f80c6a3899d93322
+ms.reviewer: owend
+author: minewiskan
+manager: kfiles"
+ms.openlocfilehash: 8e630d53aed8f722c2de4a21afea8391cefe8bd8
+ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/20/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="create-roles"></a>建立角色
 
@@ -79,7 +71,7 @@ ms.lasthandoff: 02/20/2018
     ```
     
     資料列篩選公式必須解析布林 (TRUE/FALSE) 值。 使用這個公式，就指定的資料列的 Country Region Code 值為"US"會顯示給使用者。  
-    ![as-lesson11-role-filter](../tutorial-tabular-1400/media/as-lesson11-role-filter.png) 
+    ![做為 lesson11-角色-篩選](../tutorial-tabular-1400/media/as-lesson11-role-filter.png) 
   
 6.  選擇性： 按一下**成員**索引標籤，然後再按一下**新增**。 在 [選取使用者或群組] 對話方塊中，從組織輸入要包含在角色中的 Windows 使用者或群組。  
   

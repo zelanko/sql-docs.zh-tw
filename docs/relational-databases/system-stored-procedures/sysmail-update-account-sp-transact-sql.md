@@ -1,16 +1,14 @@
 ---
-title: "sysmail_update_account_sp (TRANSACT-SQL) |Microsoft 文件"
-ms.custom: 
+title: sysmail_update_account_sp (TRANSACT-SQL) |Microsoft 文件
+ms.custom: ''
 ms.date: 11/17/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: system-objects
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sysmail_update_account_sp
@@ -20,16 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - sysmail_update_account_sp
 ms.assetid: ba2fdccc-5ed4-40ef-a479-79497b4d61aa
-caps.latest.revision: 
+caps.latest.revision: 51
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 4be8c0c87771f89d92cc0344c207149467c4554c
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: ad64d1d455a4419c66949ba0196f9a9557a8ae52
+ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="sysmailupdateaccountsp-transact-sql"></a>sysmail_update_account_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -68,10 +65,10 @@ sysmail_update_account_sp [ [ @account_id = ] account_id ] [ , ] [ [ @account_na
  [ **@email_address** = ] **'***email_address***'**  
  這是傳送訊息的新來源電子郵件地址。 這個地址必須是網際網路電子郵件地址。 地址中的伺服器名稱是 Database Mail 用來從這個帳戶傳送郵件的伺服器。 *email_address*是**nvarchar （128)**，預設值是 NULL。  
   
- [ **@display_name** = ] **'***display_name***'**  
+ [ **@display_name** =] **'***display_name***'**  
  這個帳戶發出的電子郵件訊息所用的新顯示名稱。 *display_name*是**nvarchar （128)**，沒有預設值。  
   
- [ **@replyto_address** = ] **'***replyto_address***'**  
+ [ **@replyto_address** =] **'***replyto_address***'**  
  這個帳戶發出的電子郵件訊息之 [回覆至] 標頭中所用的新地址。 *replyto_address*是**nvarchar （128)**，沒有預設值。  
   
  [ **@description** = ] **'***description***'**  
@@ -81,24 +78,24 @@ sysmail_update_account_sp [ [ @account_id = ] account_id ] [ , ] [ [ @account_na
  這個帳戶要用的 SMTP 郵件伺服器的新名稱。 執行的電腦[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]必須能夠解析*server_name*為 IP 位址。 *server_name*是**sysname**，沒有預設值。  
   
  [ **@mailserver_type** = ] **'***server_type***'**  
- 郵件伺服器的新類型。 *server_type*是**sysname**，沒有預設值。 值**'SMTP'**支援。  
+ 郵件伺服器的新類型。 *server_type*是**sysname**，沒有預設值。 值 **'SMTP'** 支援。  
   
  [ **@port** = ] *port_number*  
  郵件伺服器的新通訊埠編號。 *port_number*是**int**，沒有預設值。  
   
- [ **@timeout** = ] **'***timeout***'**  
+ [ **@timeout** =] **'***逾時***'**  
  單一電子郵件訊息之 SmtpClient.Send 的 Timeout 參數。 *逾時*是**int**以秒為單位，沒有預設值。  
   
- [ **@username** = ] **'***username***'**  
+ [ **@username** =] **'***username***'**  
  用來登入郵件伺服器的新使用者名稱。 *使用者名稱*是**sysname**，沒有預設值。  
   
- [ **@password** = ] **'***password***'**  
+ [ **@password** =] **'***密碼***'**  
  用來登入郵件伺服器的新密碼。 *密碼*是**sysname**，沒有預設值。  
   
- [ **@use_default_credentials** = ] use_default_credentials  
- 指定是否要使用 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 服務的認證將郵件傳送至 SMTP 伺服器。 **use_default_credentials** bit，沒有預設值。 當此參數是 1 時，Database Mail 會使用 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的認證。 此參數為 0 時，Database Mail 會使用 **@username** 和 **@password** 在 SMTP 伺服器進行驗證。 如果 **@username** 和 **@password** 都為 NULL，則它會使用匿名驗證。 在指定此參數之前，請洽 SMTP 管理員。  
+ [ **@use_default_credentials** =] use_default_credentials  
+ 指定是否要使用 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 服務的認證將郵件傳送至 SMTP 伺服器。 **use_default_credentials** bit，沒有預設值。 當此參數是 1 時，Database Mail 會使用 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的認證。 此參數為 0 時，Database Mail 會使用**@username**和**@password**在 SMTP 伺服器進行驗證。 如果**@username**和**@password**都為 NULL，則它會使用匿名驗證。 在指定此參數之前，請洽 SMTP 管理員。  
   
- [ **@enable_ssl** = ] enable_ssl  
+ [ **@enable_ssl** =] enable_ssl  
  指定 Database Mail 是否使用安全通訊端層 (SSL) 加密通訊。 如果 SMTP 伺服器上需要 SSL，則使用此選項。 **enable_ssl** bit，沒有預設值。  
   
 ## <a name="return-code-values"></a>傳回碼值  
@@ -158,6 +155,6 @@ EXECUTE msdb.dbo.sysmail_update_account_sp
 ## <a name="see-also"></a>另請參閱  
  [Database Mail](../../relational-databases/database-mail/database-mail.md)   
  [建立 Database Mail 帳戶](../../relational-databases/database-mail/create-a-database-mail-account.md)   
- [Database Mail 預存程序 &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/database-mail-stored-procedures-transact-sql.md)  
+ [Database Mail 預存程序&#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/database-mail-stored-procedures-transact-sql.md)  
   
   

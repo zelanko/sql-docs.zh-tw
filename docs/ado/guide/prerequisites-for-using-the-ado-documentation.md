@@ -1,29 +1,27 @@
 ---
-title: "使用 ADO 文件的必要條件 |Microsoft 文件"
-ms.custom: 
+title: 使用 ADO 文件的必要條件 |Microsoft 文件
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
+ms.tgt_pltfrm: ''
+ms.prod: sql
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology: "“drivers”"
-ms.topic: article
+ms.technology: connectivity
+ms.topic: conceptual
 helpviewer_keywords:
 - ADO, prerequisites
 ms.assetid: 557ee99f-3cc8-4578-9694-6b1b0788cfdd
-caps.latest.revision: 
+caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 99d44aac8ce764c7d7220cf1c2cd32b267d7a230
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: b1845ee99dc77a25c1afbd7257a6ba31f1fb6d6c
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="prerequisites-for-using-the-ado-documentation"></a>使用 ADO 文件的必要條件
 若要使用這份文件，您應該有，最少開發應用程式使用 Microsoft Visual Basic 中，因為大部分的指南中的範例以該語言撰寫的經驗。 另外還有 Microsoft Visual c + +、 Java、 Visual Basic Scripting Edition (VBScript) 和 Microsoft JScript 撰寫的一些範例。  

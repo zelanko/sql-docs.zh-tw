@@ -1,31 +1,30 @@
 ---
-title: "群組窗格 | Microsoft Docs"
-ms.custom: 
+title: 群組窗格 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: tools
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 f1_keywords:
 - "10033"
 - sql13.rtp.rptdesigner.group.f1
-helpviewer_keywords: Grouping Pane dialog box
+helpviewer_keywords:
+- Grouping Pane dialog box
 ms.assetid: 8b4bd0b3-ec97-48f8-8bfb-82a53a2f35a1
-caps.latest.revision: "22"
+caps.latest.revision: 22
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 35cd5b4ca339091504293cef7b06444ba0316a26
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: af8410f48f43e656946930df78df2e519dc41154
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="grouping-pane"></a>群組窗格
 設計 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 報表時，[群組] 窗格會顯示目前所選 Tablix 資料區的資料列群組和資料行群組。 [群組] 窗格不適用於 [圖表] 或 [量測計] 資料區。 [群組] 窗格是由 [資料列群組] 窗格和 [資料行群組] 窗格所組成。 [群組] 窗格有兩種模式：預設和進階。 預設模式會針對資料列和資料行群組，顯示動態成員的階層式檢視。 進階模式則會針對資料列和資料行群組，同時顯示動態和靜態成員。 群組是來自顯示於資料區域上之報表資料集的命名集資料。 群組會組織成包含靜態和動態成員的階層。 如需詳細資訊，請參閱[了解群組 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/understanding-groups-report-builder-and-ssrs.md)。  
@@ -54,7 +53,7 @@ ms.lasthandoff: 01/09/2018
  如需詳細資訊，請參閱 [Tablix 資料區資料格、資料列及資料行 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/tablix-data-region-cells-rows-and-columns-report-builder-and-ssrs.md)。  
   
 ## <a name="advanced-mode"></a>[進階模式]  
-在進階模式下，您可以檢視群組的所有靜態和動態成員。 當您選取成員時，[屬性] 視窗會顯示目前選取之 **[Tablix 成員]**的屬性。  
+在進階模式下，您可以檢視群組的所有靜態和動態成員。 當您選取成員時，[屬性] 視窗會顯示目前選取之 **[Tablix 成員]** 的屬性。  
   
 ![ssrs_fyi_note](../../analysis-services/instances/install-windows/media/ssrs-fyi-note.png) 若要切換 [進階模式]，以滑鼠右鍵按一下 [資料行群組] 窗格旁邊的向下箭頭，然後按一下 [進階模式]。  
   

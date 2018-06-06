@@ -1,28 +1,26 @@
 ---
-title: "使用 ODBC 來源擷取資料 | Microsoft Docs"
-ms.custom: 
+title: 使用 ODBC 來源擷取資料 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
 ms.component: data-flow
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: 10f25703-49a2-4d45-abab-6b4da2a57ba5
-caps.latest.revision: 
+caps.latest.revision: 8
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 83e5422eca9042594ab5234e84d9a9d5da3c2aa2
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: a7b8966e0955eb5a2eb85da0a77a64a4ca95c33e
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="extract-data-by-using-the-odbc-source"></a>使用 ODBC 來源來擷取資料
   此程序描述如何使用 ODBC 來源擷取資料。 若要加入和設定 ODBC 來源，封裝必須至少含有一個「資料流程」工作。  
@@ -31,7 +29,7 @@ ms.lasthandoff: 02/15/2018
   
 1.  在 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]中，開啟所要的 [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] 封裝。  
   
-2.  按一下 **[資料流程]** 索引標籤，然後將 ODBC 來源從 **[工具箱]**拖曳至設計介面。  
+2.  按一下 **[資料流程]** 索引標籤，然後將 ODBC 來源從 **[工具箱]** 拖曳至設計介面。  
   
 3.  按兩下 ODBC 來源。  
   

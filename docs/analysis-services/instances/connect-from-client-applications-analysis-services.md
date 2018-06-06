@@ -1,35 +1,23 @@
 ---
-title: "從用戶端應用程式 (Analysis Services) 連接 |Microsoft 文件"
-ms.custom: 
-ms.date: 03/07/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords:
-- sql13.swb.connection.login.analysisserver.f1
-- sql13.swb.connecttoas.connectionproperties.f1
-- sql13.swb.connecttoas.login.f1
-ms.assetid: b1e0f1d4-0b87-4ad3-8172-f746fe2f16a2
-caps.latest.revision: 
-author: Minewiskan
+title: 從用戶端應用程式 (Analysis Services) 連接 |Microsoft 文件
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: ''
+ms.topic: conceptual
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 3aaccfe1f58568bde946c9ddf112b3e83bf8b9e1
-ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
+ms.openlocfilehash: d71320fad55b9a0d052ad1bb9c9fd25ab861246c
+ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="connect-from-client-applications-analysis-services"></a>從用戶端應用程式連接 (Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-如果您不熟悉 Analysis Services，請透過本主題中的資訊，使用常用的工具和應用程式連接至 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 現有的執行個體。 本主題也說明如何以不同的使用者識別進行連接，方便測試之用。  
+  如果您不熟悉 Analysis Services，請透過本主題中的資訊，使用常用的工具和應用程式連接至 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 現有的執行個體。 本主題也說明如何以不同的使用者識別進行連接，方便測試之用。  
   
 -   [使用 SQL Server Management Studio (SSMS) 連接](#bkmk_SSMS)  
   
@@ -45,7 +33,7 @@ ms.lasthandoff: 02/23/2018
   
 -   [設定 Windows 防火牆以允許 Analysis Services 存取](../../analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access.md)  
   
--   [授權的存取權的物件和作業 &#40;Analysis Services &#41;](../../analysis-services/multidimensional-models/authorizing-access-to-objects-and-operations-analysis-services.md)  
+-   [授權的存取權的物件和作業 & #40;Analysis Services & #41;](../../analysis-services/multidimensional-models/authorizing-access-to-objects-and-operations-analysis-services.md)  
   
 ##  <a name="bkmk_SSMS"></a> 使用 SQL Server Management Studio (SSMS) 連接  
  您可以使用 SSMS 連接至 Analysis Services，以互動方式管理伺服器執行個體和資料庫。 您也可以執行 XMLA 或 MDX 查詢，以執行管理工作或擷取資料。 相較於在傳送查詢時只會載入資料庫的其他工具和應用程式，SSMS 會在您連接到伺服器時載入所有資料庫，前提是您有權檢視資料庫。 這表示，如果您在伺服器上擁有許多表格式資料庫，當您使用 SSMS 連接時，所有資料庫都會載入系統記憶體中。  
@@ -142,6 +130,6 @@ ms.lasthandoff: 02/23/2018
  [連接到 Analysis Services](../../analysis-services/instances/connect-to-analysis-services.md)   
  [Analysis Services 支援的驗證方法](../../analysis-services/instances/authentication-methodologies-supported-by-analysis-services.md)   
  [模擬](../../analysis-services/tabular-models/impersonation-ssas-tabular.md)   
- [建立資料來源 &#40;SSAS 多維度 &#41;](../../analysis-services/multidimensional-models/create-a-data-source-ssas-multidimensional.md)  
+ [建立資料來源 & #40;SSAS 多維度 & #41;](../../analysis-services/multidimensional-models/create-a-data-source-ssas-multidimensional.md)  
   
   

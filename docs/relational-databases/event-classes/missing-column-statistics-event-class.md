@@ -1,34 +1,30 @@
 ---
-title: "Missing Column Statistics 事件類別 | Microsoft Docs"
-ms.custom: 
+title: Missing Column Statistics 事件類別 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
-ms.prod_service: database-engine, sql-database
-ms.service: 
-ms.component: event-classes
-ms.reviewer: 
+ms.prod: sql
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: supportability
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - Missing Column Statistics event class
 ms.assetid: b9321143-3f29-4a19-8471-7085669282ef
-caps.latest.revision: 
+caps.latest.revision: 29
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: c02c0efc51189cc355c980970e8927f1bd74b2c4
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: eace3d9f0c12c8b0d51514dfc99129c1d366c30f
+ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="missing-column-statistics-event-class"></a>Missing Column Statistics 事件類別
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-Missing Column Statistics 事件類別指出無法取得原本對最佳化工具非常有用的資料行統計資料。  
+  Missing Column Statistics 事件類別指出無法取得原本對最佳化工具非常有用的資料行統計資料。  
   
  透過監視 Missing Column Statistics 事件類別，您可以判斷查詢所使用的資料行是否遺漏統計資料。 這可能會造成最佳化工具選擇比所預期更沒有效率的查詢計畫。  
   

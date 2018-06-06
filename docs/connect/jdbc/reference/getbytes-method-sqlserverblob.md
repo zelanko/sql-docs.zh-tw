@@ -1,30 +1,29 @@
 ---
-title: "getBytes 方法 (SQLServerBlob) |Microsoft 文件"
-ms.custom: 
+title: getBytes 方法 (SQLServerBlob) |Microsoft 文件
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
-ms.component: jdbc
-ms.reviewer: 
+ms.prod: sql
+ms.prod_service: connectivity
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
-ms.topic: article
-apiname: SQLServerBlob.getBytes
-apilocation: sqljdbc.jar
+ms.technology: connectivity
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
+apiname:
+- SQLServerBlob.getBytes
+apilocation:
+- sqljdbc.jar
 apitype: Assembly
 ms.assetid: bea1b810-b5c1-466d-bdc4-561468214632
-caps.latest.revision: "12"
+caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
-ms.workload: Inactive
-ms.openlocfilehash: c6125a23f0c66e7e24533cacf1ce77d829003ce8
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+manager: craigg
+ms.openlocfilehash: 7a872d042c0a96123cccffac5c5a6f8e2b686c4d
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="getbytes-method-sqlserverblob"></a>getBytes 方法 (SQLServerBlob)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -44,7 +43,7 @@ public byte[] getBytes(long pos,
   
  開始位置，從 1 (而不是 0) 開始。  
   
- *length*  
+ *長度*  
   
  要取得的資料長度。  
   
@@ -61,7 +60,7 @@ public byte[] getBytes(long pos,
   
  如果您擁有長度為 null 或零的 BLOB，而且嘗試在位置 1 以外的位置取得任何位元組長度，則會擲回位置例外狀況。  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [SQLServerBlob 方法](../../../connect/jdbc/reference/sqlserverblob-methods.md)   
  [SQLServerBlob 成員](../../../connect/jdbc/reference/sqlserverblob-members.md)   
  [SQLServerBlob 類別](../../../connect/jdbc/reference/sqlserverblob-class.md)  

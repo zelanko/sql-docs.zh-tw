@@ -1,28 +1,26 @@
 ---
-title: "非同步執行 （輪詢方法） |Microsoft 文件"
-ms.custom: 
+title: 非同步執行 （輪詢方法） |Microsoft 文件
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
-ms.component: odbc
-ms.reviewer: 
+ms.prod: sql
+ms.prod_service: connectivity
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
-ms.topic: article
-helpviewer_keywords: asynchronous execution [ODBC]
+ms.technology: connectivity
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
+helpviewer_keywords:
+- asynchronous execution [ODBC]
 ms.assetid: 8cd21734-ef8e-4066-afd5-1f340e213f9c
-caps.latest.revision: "40"
+caps.latest.revision: 40
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
-ms.workload: Inactive
-ms.openlocfilehash: 357ee77565e711e886184d803540b5745edb1f25
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+manager: craigg
+ms.openlocfilehash: d64874a4633e7bede14051d882925f633dadc36c
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="asynchronous-execution-polling-method"></a>非同步執行 （輪詢方法）
 ODBC 3.8 和 Windows 7 SDK 之前, 才被允許陳述式的函式的非同步作業。 如需詳細資訊，請參閱**非同步執行陳述式作業**稍後在本主題中。  
@@ -216,7 +214,7 @@ while ((rc = SQLExecDirect(hstmt1, SQLStatement, SQL_NTS)) == SQL_STILL_EXECUTIN
   
 ## <a name="example"></a>範例  
   
-### <a name="description"></a>描述  
+### <a name="description"></a>Description  
  下列範例示範如何使用**SQLSetConnectAttr**啟用連線相關的函式的非同步執行。  
   
 ### <a name="code"></a>程式碼  
@@ -270,7 +268,7 @@ BOOL AsyncConnect (SQLHANDLE hdbc)
   
 ## <a name="example"></a>範例  
   
-### <a name="description"></a>描述  
+### <a name="description"></a>Description  
  這個範例示範非同步認可作業。 回復作業也可以透過這種方式。  
   
 ### <a name="code"></a>程式碼  
@@ -299,5 +297,5 @@ BOOL AsyncCommit ()
 }  
 ```  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [執行陳述式 ODBC](../../../odbc/reference/develop-app/executing-statements-odbc.md)

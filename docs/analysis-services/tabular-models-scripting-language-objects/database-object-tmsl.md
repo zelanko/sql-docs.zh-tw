@@ -1,30 +1,23 @@
 ---
-title: "資料庫物件 (TMSL) |Microsoft 文件"
-ms.custom: 
-ms.date: 05/30/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services, azure-analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+title: 資料庫物件 (TMSL) |Microsoft 文件
+ms.date: 05/07/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: tmsl
 ms.topic: reference
-ms.assetid: ae5c046b-8242-4046-ae76-2c070503fd93
-caps.latest.revision: "9"
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: e67dfe62b23e08a675fbb93833c9383091198629
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 9da6d97236811aaa0ef8ee757c7b2773bdda496a
+ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="database-object-tmsl"></a>資料庫物件 (TMSL)
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]定義表格式資料庫相容性層級 1200年或更高，相同層級的模型為基礎。 本主題將說明物件定義的資料庫，提供裝載之要求的建立、 修改、 刪除和執行資料庫管理工作。  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
+  定義表格式資料庫相容性層級 1200年或更高，相同層級的模型為基礎。 本主題將說明物件定義的資料庫，提供裝載之要求的建立、 修改、 刪除和執行資料庫管理工作。  
   
 > [!NOTE]  
 >  任何指令碼，只有一個資料庫時，可參考。 資料庫本身以外的任何物件，資料庫屬性是選擇性，如果您指定的模型。 沒有模型，可用來推算的資料庫名稱，如果未明確提供的資料庫之間具有一對一對應。   
@@ -42,12 +35,12 @@ ms.lasthandoff: 01/08/2018
                 或 readOnlyExclusive。 請參閱[Analysis Services 的高可用性與延展性](../../analysis-services/instances/high-availability-and-scalability-in-analysis-services.md)和[切換 ReadOnly 和 ReadWrite 模式之間的 Analysis Services 資料庫](../../analysis-services/multidimensional-models/switch-an-analysis-services-database-between-readonly-and-readwrite-modes.md)如需有關使用這個屬性時。  
   
 ## <a name="usage"></a>使用方式  
- **資料庫**幾乎每個命令會使用物件。 請參閱[命令中表格式模型指令碼語言 &#40;TMSL &#41;](../../analysis-services/tabular-models-scripting-language-commands/tmsl-reference-commands.md)清單。 A**資料庫**物件是伺服器物件的子系。  
+ **資料庫**幾乎每個命令會使用物件。 請參閱[中表格式模型指令碼語言命令&#40;TMSL&#41; ](../../analysis-services/tabular-models-scripting-language-commands/tmsl-reference-commands.md)清單。 A**資料庫**物件是伺服器物件的子系。  
   
  建立時，取代或改變資料庫物件，指定物件定義的所有讀寫屬性。 省略的讀 / 寫屬性會被視為刪除。  
   
 ## <a name="partial-syntax"></a>部分語法  
- 因為這個物件定義是很大，則會列出只有直接屬性。 **模型**物件提供大量的資料庫定義。 請參閱[模型物件 &#40;TMSL &#41;](../../analysis-services/tabular-models-scripting-language-objects/model-object-tmsl.md)來定義物件的方式。  
+ 因為這個物件定義是很大，則會列出只有直接屬性。 **模型**物件提供大量的資料庫定義。 請參閱[模型物件&#40;TMSL&#41; ](../../analysis-services/tabular-models-scripting-language-objects/model-object-tmsl.md)來定義物件的方式。  
   
 ```  
     "database": {  
@@ -80,7 +73,7 @@ ms.lasthandoff: 01/08/2018
   
 ```  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [表格式模型指令碼語言 &#40;TMSL&#41; 參考](../../analysis-services/tabular-model-scripting-language-tmsl-reference.md)   
  [Analysis Services 的高可用性與延展性](../../analysis-services/instances/high-availability-and-scalability-in-analysis-services.md)  
   

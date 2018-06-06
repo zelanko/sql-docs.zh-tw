@@ -1,34 +1,19 @@
 ---
-title: "合併資料分割 (XMLA) |Microsoft 文件"
-ms.custom: 
-ms.date: 02/14/2018
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- merging partitions [XMLA]
-- XMLA, partitions
-- partitions [Analysis Services], XML for Analysis
-- XML for Analysis, partitions
-ms.assetid: 657e1d4d-6d50-40f8-a771-7b20c9d865f8
-caps.latest.revision: 
-author: Minewiskan
+title: 合併資料分割 (XMLA) |Microsoft 文件
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: xmla
+ms.topic: conceptual
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 347c85a1258e43fb1adedcb5546dccae5854d00d
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 32c212ee7ffdfe234c5a4dd7760c32b0504ac38b
+ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="merging-partitions-xmla"></a>合併資料分割 (XMLA)
   如果資料分割有相同的彙總設計與結構，您可以合併資料分割使用[MergePartitions](../../analysis-services/xmla/xml-elements-commands/mergepartitions-element-xmla.md) XML for Analysis (XMLA) 命令。 合併資料分割是管理資料分割時要執行的一項重要的動作，特別是那些包含依日期分割的歷程記錄資料之資料分割。  

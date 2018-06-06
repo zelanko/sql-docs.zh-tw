@@ -1,17 +1,16 @@
 ---
-title: "建立連結的伺服器 (SQL Server Database Engine) | Microsoft Docs"
-ms.custom: 
+title: 建立連結的伺服器 (SQL Server Database Engine) | Microsoft Docs
+ms.custom: ''
 ms.date: 11/20/2015
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
 ms.component: linked-servers
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 f1_keywords:
 - sql13.swb.linkedserver.properties.general.f1
 - sql13.swb.linkedserver.properties.security.f1
@@ -20,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - linked servers [SQL Server], creating
 ms.assetid: 3228065d-de8f-4ece-a9b1-e06d3dca9310
-caps.latest.revision: 
+caps.latest.revision: 18
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: Active
-ms.openlocfilehash: aef8e627adca014fbc9213f0a88f0588a950a4ef
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.openlocfilehash: 8c7dfed0144de73aa7bf84db9999e4b6a5aec6c8
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="create-linked-servers-sql-server-database-engine"></a>建立連結的伺服器 (SQL Server Database Engine)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -89,9 +87,9 @@ ms.lasthandoff: 02/12/2018
      若要測試連接到連結伺服器的能力，在 [物件總管] 中，以滑鼠右鍵按一下連結伺服器，然後按一下 **[測試連接]**。  
   
     > [!NOTE]  
-    >  如果 **[SQL Server]** 的執行個體是預設的執行個體，請輸入裝載 **[SQL Server]**執行個體之電腦的名稱。 如果 **SQL Server** 是具名執行個體，請輸入電腦的名稱和執行個體的名稱，例如 **Accounting\SQLExpress**。  
+    >  如果 **[SQL Server]** 的執行個體是預設的執行個體，請輸入裝載 **[SQL Server]** 執行個體之電腦的名稱。 如果 **SQL Server** 是具名執行個體，請輸入電腦的名稱和執行個體的名稱，例如 **Accounting\SQLExpress**。  
   
-3.  在 **[伺服器類型]** 區域中，選取 **[SQL Server]** 表示連結的伺服器是 **[SQL Server]**的另一個執行個體。  
+3.  在 **[伺服器類型]** 區域中，選取 **[SQL Server]** 表示連結的伺服器是 **[SQL Server]** 的另一個執行個體。  
   
 4.  在 **[安全性]** 頁面上，指定原始 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 連線到連結的伺服器時將使用的安全性內容。 在使用者使用其網域登入進行連線的網域環境中，選取 **[使用登入的目前安全性內容建立]** 通常是最佳選擇。 當使用者使用 **[SQL Server]** 登入連線到原始 **[SQL Server]** 時，最佳選擇通常是選取 **[使用此安全性內容]**，然後提供所需的認證在連結的伺服器進行驗證。  
   
@@ -104,7 +102,7 @@ ms.lasthandoff: 02/12/2018
      若要使用模擬，則組態必須符合委派需求。  
   
      **遠端使用者**  
-     使用遠端使用者以對應未定義於 **[本機登入]**中的使用者。 **[遠端使用者]** 必須是遠端伺服器上的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證登入。  
+     使用遠端使用者以對應未定義於 **[本機登入]** 中的使用者。 **[遠端使用者]** 必須是遠端伺服器上的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證登入。  
   
      **遠端密碼**  
      指定遠端使用者的密碼。  

@@ -1,16 +1,14 @@
 ---
 title: SET LANGUAGE (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 06/05/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-data-warehouse, database-engine, sql-database
-ms.service: 
 ms.component: t-sql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: t-sql
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - SET_LANGUAGE_TSQL
@@ -24,16 +22,16 @@ helpviewer_keywords:
 - options [SQL Server], date
 - default languages
 ms.assetid: 0ec0e5cf-e115-4be9-a0db-e65837d6fa45
-caps.latest.revision: 
+caps.latest.revision: 20
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 606c97d144bf209836ae89db199bd4d81ef137c0
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+monikerRange: = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 48108a45b04fe06063ad4a3b396e64c4988bddc4
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="set-language-transact-sql"></a>SET LANGUAGE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
@@ -52,7 +50,7 @@ SET LANGUAGE { [ N ] 'language' | @language_var }
   
 ## <a name="arguments"></a>引數  
  [**N**]**'***language***'** | **@***language_var*  
- 這是符合 [sys.syslanguages](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md) 中所儲存的語言名稱。 這個引數可以是 Unicode 或轉換成 Unicode 的 DBCS。 若要用 Unicode 來指定語言，請使用 **N'***language***'**。 如果指定為變數，變數必須是 **sysname**。  
+ 這是符合 [sys.syslanguages](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md) 中所儲存的語言名稱。 這個引數可以是 Unicode 或轉換成 Unicode 的 DBCS。 若要使用 Unicode 來指定語言，請使用 **N'***language***'**。 如果指定為變數，變數必須是 **sysname**。  
   
 ## <a name="remarks"></a>Remarks  
  SET LANGUAGE 的設定是在執行階段進行設定，而不是在剖析階段進行設定。  

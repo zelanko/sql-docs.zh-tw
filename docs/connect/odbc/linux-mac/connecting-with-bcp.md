@@ -1,28 +1,26 @@
 ---
-title: "連接 bcp |Microsoft 文件"
-ms.custom: 
+title: 連接 bcp |Microsoft 文件
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
-ms.component: odbc
-ms.reviewer: 
+ms.prod: sql
+ms.prod_service: connectivity
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
-ms.topic: article
-helpviewer_keywords: bcp
+ms.technology: connectivity
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
+helpviewer_keywords:
+- bcp
 ms.assetid: 3eca5717-e50f-40db-be16-a1cebbdfee70
-caps.latest.revision: "33"
+caps.latest.revision: 33
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
-ms.workload: On Demand
-ms.openlocfilehash: f7e9db6a1ea636975a3f5719d9a1b3e9d5721eb6
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+manager: craigg
+ms.openlocfilehash: 707db709188db15bc3627d65a2dba5a2bc516308
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="connecting-with-bcp"></a>連接 bcp
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -51,7 +49,7 @@ bcp AdventureWorks2008R2.Person.Address out test.dat -Usa -Pxxxx -Sxxx.xxx.xxx.x
 ## <a name="available-options"></a>可用的選項
 在目前版本中，下列語法和選項可用：  
 
-[*database***.**]*schema***.***table* **in** *data_file* | **out** *data_file*
+[*資料庫 ***。**]* 結構描述***。***資料表 ***中** *data_file* | **出** *data_file*
 
 - -a *packet_size*  
 指定伺服器所收送之每個網路封包的位元組數。  
@@ -147,9 +145,9 @@ bcp AdventureWorks2008R2.Person.Address out test.dat -Usa -Pxxxx -Sxxx.xxx.xxx.x
 - -V (80 | 90 | 100)  
 使用資料類型，從較早版本的[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]。  
   
-- -x  
+- -X  
 與 format 和 -f format_file 選項一起使用，會產生以 XML 為基礎的格式檔案，而非預設的非 XML 格式檔案。  
   
-## <a name="see-also"></a>請參閱＜
+## <a name="see-also"></a>另請參閱
 
 [使用連接**sqlcmd**](../../../connect/odbc/linux-mac/connecting-with-sqlcmd.md)  

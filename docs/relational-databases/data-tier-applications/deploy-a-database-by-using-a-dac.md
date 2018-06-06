@@ -1,17 +1,16 @@
 ---
-title: "使用 DAC 部署資料庫 | Microsoft 文件"
-ms.custom: 
+title: 使用 DAC 部署資料庫 | Microsoft 文件
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
 ms.component: data-tier-applications
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-data-tier-apps
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 f1_keywords:
 - sql13.swb.dbdeployment.settings.f1
 - sql13.swb.dbdeployment.progress.f1
@@ -22,19 +21,19 @@ helpviewer_keywords:
 - deploy database wizard
 - database deploy [SQL Server]
 ms.assetid: 08c506e8-4ba0-4a19-a066-6e6a5c420539
-caps.latest.revision: 
+caps.latest.revision: 12
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 110cea8f6a219fad5121e88a19ed5608b2afcb59
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.openlocfilehash: d87f60bc73ff969aa2f3f6ef42264ea8cb93b23c
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="deploy-a-database-by-using-a-dac"></a>使用 DAC 來部署資料庫
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 使用 [將資料庫部署到 SQL Azure 精靈]，在[!INCLUDE[ssDE](../../includes/ssde-md.md)]執行個體與 [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)] 伺服器之間部署資料庫，或在兩個 [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)] 伺服器之間部署資料庫。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  使用 [將資料庫部署到 SQL Azure]  精靈，在 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 執行個體與 [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)] 伺服器之間部署資料庫，或在兩個 [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]伺服器之間部署資料庫。  
   
 ##  <a name="BeforeBegin"></a> 開始之前  
  精靈會使用資料層應用程式 (DAC) BACPAC 封存檔案，來部署資料和資料庫物件的定義。 它會從來源資料庫執行 DAC 匯出作業並對目的地資料庫執行 DAC 匯入。  
@@ -70,7 +69,7 @@ ms.lasthandoff: 01/17/2018
   
 1.  連接至您要部署的資料庫位置。 您可以指定 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 執行個體或 [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)] 伺服器。  
   
-2.  在 **[物件總管]**中，展開含有資料庫的執行個體的節點。  
+2.  在 **[物件總管]** 中，展開含有資料庫的執行個體的節點。  
   
 3.  展開 **[資料庫]** 節點。  
   

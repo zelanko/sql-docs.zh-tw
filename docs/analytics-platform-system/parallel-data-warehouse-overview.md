@@ -1,28 +1,22 @@
 ---
-title: "平行資料倉儲概觀"
-author: barbkess
-ms.author: barbkess
-manager: jhubbard
-ms.prod: analytics-platform-system
-ms.prod_service: mpp-data-warehouse
-ms.service: 
-ms.component: 
-ms.suite: sql
-ms.custom: 
-ms.technology: mpp-data-warehouse
-description: "本主題說明裝置軟體和 Analytics Platform System 的非裝置軟體元件。"
-ms.date: 01/05/2017
-ms.topic: article
-ms.assetid: db0c4a43-a66d-4c44-ab91-791c5785f71c
-caps.latest.revision: "20"
-ms.openlocfilehash: f2b6708f6e82340c971bdd3a6cc0cdb7e67f2d65
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+title: 平行資料倉儲元件-Analytics Platform System |Microsoft 文件
+description: 此文章說明裝置軟體，以及 Analytics Platform System 的非裝置軟體元件。
+author: mzaman1
+manager: craigg
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
+ms.openlocfilehash: 09813eecdcc933619955de8d94e83079cad0c68f
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/19/2018
 ---
-# <a name="parallel-data-warehouse-overview"></a>平行資料倉儲概觀
-本主題說明裝置軟體和 Analytics Platform System 的非裝置軟體元件。  
+# <a name="parallel-data-warehouse-components---analytics-platform-system"></a>平行資料倉儲元件-Analytics Platform System
+此文章說明裝置軟體，以及 Analytics Platform System 的非裝置軟體元件。  
   
 <!-- MISSING LINKS
 
@@ -248,15 +242,15 @@ Analytics Platform System 有數種方式來監視應用裝置活動
 ### <a name="admin-console"></a>管理主控台  
 在管理主控台可讓您檢視有關應用裝置健康情況的目前狀態。 此 web 應用程式的控制節點上執行而且可透過 https。  
   
-如需詳細資訊，請參閱[使用系統管理員主控台 &#40; 監視的應用裝置Analytics Platform System &#41;](monitor-the-appliance-by-using-the-admin-console.md)  
+如需詳細資訊，請參閱[使用管理主控台來監視設備&#40;Analytics Platform System&#41;](monitor-the-appliance-by-using-the-admin-console.md)  
 
 ### <a name="system-views"></a>系統檢視表  
 系統管理員主控台會根據系統檢視查詢。 您可以查詢系統檢視表，才能取得特定的片段，您需要的資訊。  
 
-如需詳細資訊，請參閱[監視所使用的系統檢視 &#40; 應用裝置Analytics Platform System &#41;](monitor-the-appliance-by-using-system-views.md) 
+如需詳細資訊，請參閱[監視所使用的系統檢視表設備&#40;Analytics Platform System&#41;](monitor-the-appliance-by-using-system-views.md) 
   
 ### <a name="system-center-operations-manager"></a>System Center Operations Manager  
 沒有 SQL Server PDW 的 System Center Operations Manager (SCOM) 管理組件。 
 
-若要設定 SCOM 應用裝置，請參閱[監視使用 System Center Operations Manager &#40; 應用裝置Analytics Platform System &#41;](monitor-the-appliance-by-using-system-center-operations-manager.md)  
+若要設定 SCOM 應用裝置，請參閱[監視使用 System Center Operations Manager 應用裝置&#40;Analytics Platform System&#41;](monitor-the-appliance-by-using-system-center-operations-manager.md)  
   

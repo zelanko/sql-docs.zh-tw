@@ -1,16 +1,15 @@
 ---
-title: "在報表產生器及 SSRS 中變更地圖圖例、色階及相關規則 | Microsoft Docs"
-ms.custom: 
+title: 在報表產生器及 SSRS 中變更地圖圖例、色階及相關規則 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: report-design
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 f1_keywords:
 - sql13.rtp.rptdesigner.mapcolorscaleproperties.labels.f1
 - sql13.rtp.rptdesigner.mappointlayerproperties.typerules.f1
@@ -35,16 +34,15 @@ f1_keywords:
 - "10540"
 - "10517"
 ms.assetid: a1d691b2-c5ae-420f-af60-b7c54a7385a4
-caps.latest.revision: "12"
+caps.latest.revision: 12
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 5f252d1bc68c8b9f9e44b2d1741c88060210d90e
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 96de567e40763ca1db0b2aae8f13af3d8a17ffb5
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="change-map-legends-color-scale-and-associated-rules-report-builder-and-ssrs"></a>變更地圖圖例、色階與相關的規則 (報表產生器及 SSRS)
   在 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 分頁報表中，地圖可包含地圖圖例、色階和距離標尺。 這些地圖組件可協助使用者解譯地圖上的資料視覺化。  
@@ -63,7 +61,7 @@ ms.lasthandoff: 01/09/2018
   
 #### <a name="to-change-the-position-of-a-legend-relative-to-the-viewport"></a>變更圖例相對於檢視區的位置  
   
-1.  在 [設計] 檢視中，以滑鼠右鍵按一下圖例，然後開啟 [\<報表項目>屬性] 頁面。  
+1.  在 [設計] 檢視中，以滑鼠右鍵按一下圖例，然後開啟 [*\<報表項目>*屬性]**** 頁面。  
   
 2.  在 [位置] 中，按一下指定讓圖例顯示在相對於檢視區的位置。  
   
@@ -109,7 +107,7 @@ ms.lasthandoff: 01/09/2018
   
 1.  在 [設計] 檢視中，按一下地圖，直到 [地圖] 窗格出現為止。  
   
-2.  以滑鼠右鍵按一下包含所需資料的圖層，然後按一下 [\<地圖元素類型> 色彩規則]。  
+2.  以滑鼠右鍵按一下包含所需資料的圖層，然後按一下 [*\<地圖元素類型>*色彩規則]。  
   
 3.  按一下 **[圖例]**。  
   
@@ -123,7 +121,7 @@ ms.lasthandoff: 01/09/2018
   
 1.  在 [設計] 檢視中，按一下地圖，直到 [地圖] 窗格出現為止。  
   
-2.  以滑鼠右鍵按一下包含所需資料的圖層，然後按一下 [\<地圖元素類型> 色彩規則]。  
+2.  以滑鼠右鍵按一下包含所需資料的圖層，然後按一下 [*\<地圖元素類型>*色彩規則]。  
   
 3.  按一下 [套用範本樣式]。  
   
@@ -137,7 +135,7 @@ ms.lasthandoff: 01/09/2018
   
 1.  在 [設計] 檢視中，按一下地圖，直到 [地圖] 窗格出現為止。  
   
-2.  以滑鼠右鍵按一下包含所需資料的圖層，然後按一下 [\<地圖元素類型>色彩規則]。  
+2.  以滑鼠右鍵按一下包含所需資料的圖層，然後按一下 [\<地圖元素類型*>色彩規則]。  
   
 3.  按一下 [使用調色盤將資料視覺化]。  
   
@@ -155,7 +153,7 @@ ms.lasthandoff: 01/09/2018
   
 1.  在 [設計] 檢視中，按一下地圖，直到 [地圖] 窗格出現為止。  
   
-2.  以滑鼠右鍵按一下包含所需資料的圖層，然後按一下 [\<地圖元素類型>色彩規則]。  
+2.  以滑鼠右鍵按一下包含所需資料的圖層，然後按一下 [\<地圖元素類型*>色彩規則]。  
   
 3.  按一下 [使用色彩範圍將資料視覺化]。  
   
@@ -177,7 +175,7 @@ ms.lasthandoff: 01/09/2018
   
 1.  在 [設計] 檢視中，按一下地圖，直到 [地圖] 窗格出現為止。  
   
-2.  以滑鼠右鍵按一下包含所需資料的圖層，然後按一下 [\<地圖元素類型>色彩規則]。  
+2.  以滑鼠右鍵按一下包含所需資料的圖層，然後按一下 [\<地圖元素類型*>色彩規則]。  
   
 3.  按一下 [使用自訂色彩將資料視覺化]。  
   
@@ -195,7 +193,7 @@ ms.lasthandoff: 01/09/2018
   
 1.  在 [設計] 檢視中，按一下地圖，直到 [地圖] 窗格出現為止。  
   
-2.  以滑鼠右鍵按一下包含所需資料的圖層，然後按一下 [\<地圖元素類型>色彩規則]。  
+2.  以滑鼠右鍵按一下包含所需資料的圖層，然後按一下 [\<地圖元素類型*>色彩規則]。  
   
 3.  選取 [使用 \<規則類型> 將資料視覺化] 選項。 若要使用分佈選項，您必須根據與圖層相關聯的分析資料，在 [分佈] 頁面上建立範圍。  
   
@@ -227,7 +225,7 @@ ms.lasthandoff: 01/09/2018
   
 1.  在 [設計] 檢視中，按一下地圖，直到 [地圖] 窗格出現為止。  
   
-2.  以滑鼠右鍵按一下其中包含所需資料的圖層，然後按一下 [\<地圖元素類型> 規則]。  
+2.  以滑鼠右鍵按一下其中包含所需資料的圖層，然後按一下 [*\<地圖元素類型>*規則]。  
   
 3.  驗證已選取 [使用 \<rule type> 將資料視覺化]。  
   
@@ -248,7 +246,7 @@ ms.lasthandoff: 01/09/2018
   
 1.  在 [設計] 檢視中，按一下地圖，直到 [地圖] 窗格出現為止。  
   
-2.  以滑鼠右鍵按一下包含所需資料的圖層，然後按一下 [\<地圖元素類型>色彩規則]。  
+2.  以滑鼠右鍵按一下包含所需資料的圖層，然後按一下 [\<地圖元素類型*>色彩規則]。  
   
 3.  選取要使用的色彩規則選項。 若要以地圖圖例或色階顯示項目，您必須選取其中一個 [使用 \<規則類型> 將資料視覺化] 選項。  
   
@@ -269,7 +267,7 @@ ms.lasthandoff: 01/09/2018
   
 1.  在 [設計] 檢視中，按一下地圖，直到 [地圖] 窗格出現為止。  
   
-2.  以滑鼠右鍵按一下其中包含所需資料的圖層，然後按一下 [\<地圖元素類型> 規則]。  
+2.  以滑鼠右鍵按一下其中包含所需資料的圖層，然後按一下 [*\<地圖元素類型>*規則]。  
   
 3.  按一下 **[圖例]**。  
   
@@ -282,7 +280,7 @@ ms.lasthandoff: 01/09/2018
   
 1.  在 [設計] 檢視中，按一下地圖，直到 [地圖] 窗格出現為止。  
   
-2.  以滑鼠右鍵按一下其中包含所需資料的圖層，然後按一下 [\<地圖元素類型> 規則]。  
+2.  以滑鼠右鍵按一下其中包含所需資料的圖層，然後按一下 [*\<地圖元素類型>*規則]。  
   
 3.  按一下 **[圖例]**。  
   

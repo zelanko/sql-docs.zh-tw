@@ -1,16 +1,15 @@
 ---
-title: "擴充 QName (XQuery) |Microsoft 文件"
-ms.custom: 
+title: 擴充 QName (XQuery) |Microsoft 文件
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
-ms.service: 
+ms.prod: sql
+ms.prod_service: sql
 ms.component: xquery
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,21 +19,20 @@ helpviewer_keywords:
 - expanded-QName function
 - fn:expanded-QName function
 ms.assetid: b8377042-95cc-467b-9ada-fe43cebf4bc3
-caps.latest.revision: 
+caps.latest.revision: 19
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: a9a00b0b5f6e21f8590c4dee3e1a588d0203f004
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: b76f85fae2f01322838c40b79227da896fabd01c
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="functions-related-to-qnames---expanded-qname"></a>函式與 QNames 相關的-Expanded-qname
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  傳回 URI 中指定的命名空間的 xs: qname 類型值*$paramURI*中指定的本機名稱和*$paramLocal*。 如果*$paramURI*是空字串或空的序列，它代表沒有命名空間。  
+  傳回 URI 中指定的命名空間的 xs: qname 類型值 *$paramURI*中指定的本機名稱和 *$paramLocal*。 如果 *$paramURI*是空字串或空的序列，它代表沒有命名空間。  
   
 ## <a name="syntax"></a>語法  
   
@@ -50,13 +48,13 @@ fn:expanded-QName($paramURI as xs:string?, $paramLocal as xs:string?) as xs:QNam
  為 QName 的本機名稱部份。  
   
 ## <a name="remarks"></a>備註  
- 下列適用於**expanded-qname （)**函式：  
+ 下列適用於**expanded-qname （)** 函式：  
   
--   如果*$paramLocal*指定值不是 xs: ncname 類型的正確語彙格式，會傳回空的序列，並代表動態錯誤。  
+-   如果 *$paramLocal*指定值不是 xs: ncname 類型的正確語彙格式，會傳回空的序列，並代表動態錯誤。  
   
--   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 不支援從 xs:QName 類型轉換成任何其他類型。 因為這個緣故， **expanded-qname （)**函式不能用於 XML 建構中。 例如，當您建構節點時，例如 `<e> expanded-QName(…) </e>`，該值必須為不具類型。 您將需要將 `expanded-QName()` 傳回的 xs:QName 類型值轉換成 xdt:untypedAtomic。 不過，並不支援此轉換。 本主題稍後將在範例中提供解決方案。  
+-   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 不支援從 xs:QName 類型轉換成任何其他類型。 因為這個緣故， **expanded-qname （)** 函式不能用於 XML 建構中。 例如，當您建構節點時，例如 `<e> expanded-QName(…) </e>`，該值必須為不具類型。 您將需要將 `expanded-QName()` 傳回的 xs:QName 類型值轉換成 xdt:untypedAtomic。 不過，並不支援此轉換。 本主題稍後將在範例中提供解決方案。  
   
--   您無法修改或比較現有的 QName 類型值。 例如，`/root[1]/e[1] eq expanded-QName("http://nsURI" "myNS")`比較元素的值 <`e`>，所傳回的 qname **expanded-qname （)**函式。  
+-   您無法修改或比較現有的 QName 類型值。 例如，`/root[1]/e[1] eq expanded-QName("http://nsURI" "myNS")`比較元素的值 <`e`>，所傳回的 qname **expanded-qname （)** 函式。  
   
 ## <a name="examples"></a>範例  
  本主題提供 XQuery 範例，針對 XML 執行個體儲存在各種**xml**類型資料行中的[!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)]資料庫。  
@@ -70,7 +68,7 @@ fn:expanded-QName($paramURI as xs:string?, $paramLocal as xs:string?) as xs:QNam
   
 -   在資料表中儲存 XML 執行個體。  
   
--   使用**modify （)**方法來修改執行個體中的 QName 類型元素值的 xml 資料類型。 **Expanded-qname （)**函式用來產生新的 QName 類型值。  
+-   使用**modify （)** 方法來修改執行個體中的 QName 類型元素值的 xml 資料類型。 **Expanded-qname （)** 函式用來產生新的 QName 類型值。  
   
 ```  
 -- If XML schema collection (if exists)  
@@ -195,7 +193,7 @@ go
   
  `<root xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:p1="http://ns">p1:someLocalName</root>`  
   
- 您可以比較 QName 值，如下列查詢所示。 查詢只會傳回 <`root`> 類型的傳回值的元素值符合的 QName **expanded-qname （)**函式。  
+ 您可以比較 QName 值，如下列查詢所示。 查詢只會傳回 <`root`> 類型的傳回值的元素值符合的 QName **expanded-qname （)** 函式。  
   
 ```  
 SELECT xmlCol.query('  
@@ -209,9 +207,9 @@ FROM T
 ```  
   
 ### <a name="implementation-limitations"></a>實作限制  
- 會有一個限制： **expanded-qname （)**函式接受空的序列，做為第二個引數，並會傳回空白的而不是第二個引數不正確時引發執行階段錯誤。  
+ 會有一個限制： **expanded-qname （)** 函式接受空的序列，做為第二個引數，並會傳回空白的而不是第二個引數不正確時引發執行階段錯誤。  
   
 ## <a name="see-also"></a>另請參閱  
- [與 QNames &#40; 函式XQuery &#41;](http://msdn.microsoft.com/library/7e07eb26-f551-4b63-ab77-861684faff71)  
+ [函式與 QNames 相關的&#40;XQuery&#41;](http://msdn.microsoft.com/library/7e07eb26-f551-4b63-ab77-861684faff71)  
   
   

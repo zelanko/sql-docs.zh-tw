@@ -1,16 +1,15 @@
 ---
-title: "SetStartMode 方法 （SqlService 類別） |Microsoft 文件"
-ms.custom: 
+title: SetStartMode 方法 （SqlService 類別） |Microsoft 文件
+ms.custom: ''
 ms.date: 03/03/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
 ms.component: wmi
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - SetStartMode Method (SqlService Class)
@@ -20,20 +19,19 @@ apitype: MOFDef
 helpviewer_keywords:
 - SetStartMode method
 ms.assetid: f6f198b4-f9a4-468c-8977-76462ef06e61
-caps.latest.revision: 
-author: JennieHubbard
-ms.author: jhubbard
+caps.latest.revision: 35
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 713513ec867a8d5dadf46a59a0721eea10d26919
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.openlocfilehash: 5f3973183d5564f813ab12c561e7097b3f68f09d
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="setstartmode-method-sqlservice-class"></a>SetStartMode 方法 (SqlService 類別)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
-修改服務執行個體的啟動模式。  
+  修改服務執行個體的啟動模式。  
   
 ## <a name="syntax"></a>語法  
   

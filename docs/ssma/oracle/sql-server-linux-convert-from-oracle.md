@@ -1,24 +1,22 @@
 ---
-title: "將 Oracle HR 結構描述移轉至 SQL Server on Linux |Microsoft 文件"
-description: "範例 Oracle 結構描述轉換為 SQL Server on Linux"
+title: 將 Oracle HR 結構描述移轉至 SQL Server on Linux |Microsoft 文件
+description: 範例 Oracle 結構描述轉換為 SQL Server on Linux
 author: edmacauley
 ms.author: edmacauley
-manager: jhubbard
+manager: craigg
 ms.date: 10/02/2017
 ms.topic: article
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
 ms.component: ssma-oracle
 ms.suite: sql
-ms.custom: 
+ms.custom: ''
 ms.technology: database-engine
-ms.workload: Inactive
-ms.openlocfilehash: f4ab25f440db693c0fd81093f6191fc0c3390ebb
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: b044f54f172bc354c9c0a14e6628678911dbb82c
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="migrate-an-oracle-schema-to-sql-server-2017-on-linux-with-the-sql-server-migration-assistant"></a>將 Oracle 結構描述移轉至 SQL Server 2017 on Linux 與 SQL Server 移轉小幫手
 
@@ -32,7 +30,7 @@ ms.lasthandoff: 12/21/2017
 > * 範例 HR 結構描述轉換
 > * 移轉資料
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>필수 구성 요소
 
 - 執行個體的 Oracle 12c (12.2.0.1.0) 與**HR**安裝的結構描述
 - 工作執行個體的 SQL Server on Linux
@@ -110,7 +108,7 @@ SSMA for Oracle 不使用預設的 Oracle 範例結構描述。 若要啟用 HR 
 
 接下來，同步處理您的資料庫。
 
-1. 在轉換完成時，使用**SQL Server 中繼資料總管]**您先前步驟中，前往 [資料庫建立。
+1. 在轉換完成時，使用**SQL Server 中繼資料總管]** 您先前步驟中，前往 [資料庫建立。
 
 1. 以滑鼠右鍵按一下您在資料庫上，選取**同步處理資料庫**，然後按一下 [確定]。
 
@@ -128,7 +126,7 @@ SSMA for Oracle 不使用預設的 Oracle 範例結構描述。 若要啟用 HR 
 
    ![資料移轉報告](./media/sql-server-linux-convert-from-oracle/DataMigrationReport.png)
 
-## <a name="next-steps"></a>後續步驟
+## <a name="next-steps"></a>後續的步驟
 
 對於更複雜的 Orcale 結構描述中，轉換程序牽涉到更多時間、 測試和用戶端應用程式可能發生的變更。 本教學課程的用途是示範如何使用 SSMA for Oracle 整體的移轉程序的一部分。
 

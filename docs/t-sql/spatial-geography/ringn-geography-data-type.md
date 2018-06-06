@@ -1,16 +1,14 @@
 ---
-title: "RingN (geography 資料類型) | Microsoft Docs"
-ms.custom: 
+title: RingN (geography 資料類型) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
 ms.component: t-sql|spatial-geography
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: t-sql
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - RingN
@@ -20,16 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - RingN method
 ms.assetid: 30f47275-2727-4d22-bbec-c0c54bcb3ac2
-caps.latest.revision: 
+caps.latest.revision: 14
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: e08cc4d2a3359362b0e5bff28c2e18459863b120
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: f310b91d1b08256f5da1809bbe8c0f3f478f9bce
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ringn-geography-data-type"></a>RingN (geography 資料類型)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -53,7 +50,7 @@ ms.lasthandoff: 01/25/2018
  CLR 傳回類型：**SqlGeography**  
   
 ## <a name="remarks"></a>Remarks  
- 如果環形索引 **n** 的值小於 1，這個方法會擲回 **ArgumentOutOfRangeException**。 環形索引值必須大於或等於 1，而且應該要小於或等於 `NumRings()` 傳回的數字。  
+ 如果環形索引 **n** 的值小於 1，則這個方法會擲回 **ArgumentOutOfRangeException**。 環形索引值必須大於或等於 1，而且應該要小於或等於 `NumRings()` 傳回的數字。  
   
 ## <a name="examples"></a>範例  
  這個範例會建立具有兩個環形的 `Polygon` 例項，並傳回第二個環形。  

@@ -1,34 +1,32 @@
 ---
-title: "指定複本頁面 (新增可用性群組精靈：新增複本精靈) | Microsoft Docs"
-ms.custom: 
+title: 指定複本頁面 (新增可用性群組精靈：新增複本精靈) | Microsoft Docs
+ms.custom: ''
 ms.date: 05/17/2016
-ms.prod: sql-non-specified
-ms.prod_service: database-engine
-ms.service: 
-ms.component: availability-groups
-ms.reviewer: 
+ms.prod: sql
+ms.prod_service: high-availability
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: dbe-high-availability
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: high-availability
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 f1_keywords:
 - sql13.swb.newagwizard.listeners.f1
 - sql13.swb.addreplicawizard.specifyreplicas.f1
 - sql13.swb.newagwizard.specifyreplicas.f1
 ms.assetid: 2d90fc12-a67b-4bd0-b0ab-899b73017196
-caps.latest.revision: "35"
+caps.latest.revision: 35
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 7fc2b166d0e56bb1590e3da1705553ffab2b6ac0
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 23035b6eb4d2089917777d5bb19bb4a432e67164
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="specify-replicas-page-new-availability-group-wizard-add-replica-wizard"></a>指定複本頁面 (新增可用性群組精靈：加入複本精靈)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 此主題描述 [指定複本] 頁面的選項。 此頁面適用於 **[!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)]** 和 **[!INCLUDE[ssAoAddRepWiz](../../../includes/ssaoaddrepwiz-md.md)]**。 使用 **[指定複本]** 頁面指定與設定要加入可用性群組的一個或多個可用性複本。 此頁面包含四個索引標籤，其說明如下表所示。 按一下表格中的索引標籤名稱即可前往對應的章節，如本主題稍後所示。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  此主題描述 **[指定複本]** 頁面的選項。 此頁面適用於 **[!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)]** 和 **[!INCLUDE[ssAoAddRepWiz](../../../includes/ssaoaddrepwiz-md.md)]**。 使用 **[指定複本]** 頁面指定與設定要加入可用性群組的一個或多個可用性複本。 此頁面包含四個索引標籤，其說明如下表所示。 按一下表格中的索引標籤名稱即可前往對應的章節，如本主題稍後所示。  
   
 |索引標籤|簡短描述|  
 |---------|-----------------------|  
@@ -104,7 +102,7 @@ ms.lasthandoff: 01/18/2018
   
 -   如果每個伺服器執行個體都在網域服務帳戶之下執行，也就是說，如果 **[SQL Server 服務帳戶]** 欄會顯示每一個伺服器執行個體的網域服務帳戶，請按 **[下一步]**。  
   
--   如果有任何伺服器執行個體在非網域服務帳戶之下執行，您需要對伺服器執行個體進行手動變更，然後才可以在精靈中繼續執行。 在此情況下，按 **[下一步]** 將會出現警告對話方塊；您應該按一下 **[否]**，這會讓您回到**[端點]** 索引標籤。當您在 **[指定複本]** 頁面上離開精靈時，請針對 **[SQL Server 服務帳戶]** 欄顯示非網域服務帳戶的每一個伺服器執行個體進行下列其中一項變更：  
+-   如果有任何伺服器執行個體在非網域服務帳戶之下執行，您需要對伺服器執行個體進行手動變更，然後才可以在精靈中繼續執行。 在此情況下，按 **[下一步]** 將會出現警告對話方塊；您應該按一下 **[否]**，這會讓您回到 **[端點]** 索引標籤。當您在 **[指定複本]** 頁面上離開精靈時，請針對 **[SQL Server 服務帳戶]** 欄顯示非網域服務帳戶的每一個伺服器執行個體進行下列其中一項變更：  
   
     -   使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 組態管理員將 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 服務帳戶變更為網域帳戶。 如需詳細資訊，請參閱[變更 SQL Server 的服務啟動帳戶 &#40;SQL Server 組態管理員&#41;](../../../database-engine/configure-windows/scm-services-change-the-service-startup-account.md)。  
   

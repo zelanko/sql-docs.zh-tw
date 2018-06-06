@@ -1,16 +1,15 @@
 ---
-title: "監視及回應事件 | Microsoft Docs"
-ms.custom: 
+title: 監視及回應事件 | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
 ms.component: ssms-agent
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: tools-ssms
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ssms
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - notifications [SQL Server], alert
 - events [SQL Server], alerts
@@ -23,20 +22,24 @@ helpviewer_keywords:
 - monitoring [SQL Server], events
 - responding to events automatically
 ms.assetid: f7fbe155-5b68-4777-bc71-a47637471f32
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 9599d16a627d3bef2c5a1f0261d6395b08ec1ecd
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 21c40862e43cd7f5c4e883c6482d83faa4175ede
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="monitor-and-respond-to-events"></a>監視及回應事件
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent 會監視及自動回應「事件」(Event)，例如：來自 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 的訊息、特定效能狀況與 Windows Management Instrumentation (WMI) 事件。  
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+
+> [!IMPORTANT]  
+> [Azure SQL Database 受控執行個體](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)目前支援多數 (但非全部) 的 SQL Server Agent 功能。 如需詳細資料，請參閱 [Azure SQL Database 受控執行個體與 SQL Server 之間的 T-SQL 差異](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)。
+
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]Agent 會監視及自動回應「事件」(Event)，例如：來自 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 的訊息、特定效能狀況與 Windows Management Instrumentation (WMI) 事件。  
   
 ## <a name="in-this-section"></a>本節內容  
 [警示](../../ssms/agent/alerts.md)  

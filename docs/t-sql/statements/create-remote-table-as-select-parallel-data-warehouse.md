@@ -1,28 +1,27 @@
 ---
-title: "CREATE REMOTE TABLE AS SELECT (平行處理資料倉儲) | Microsoft Docs"
-ms.custom: 
+title: CREATE REMOTE TABLE AS SELECT (平行處理資料倉儲) | Microsoft Docs
+ms.custom: ''
 ms.date: 08/10/2017
-ms.prod: 
+ms.prod: ''
 ms.prod_service: pdw
-ms.reviewer: 
+ms.reviewer: ''
 ms.service: sql-data-warehouse
 ms.component: t-sql|statements
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: t-sql
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: 16ef8191-7587-45a3-9ee9-7d99b7088de3
-caps.latest.revision: 
-author: barbkess
-ms.author: barbkess
+caps.latest.revision: 9
+author: edmacauley
+ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 1a44f5f46a60959b38b3e8121847e0c80c1ba82b
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+monikerRange: '>= aps-pdw-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 619fe7055ef67a7be88dfa6fbf08ceeb8dae66ee
+ms.sourcegitcommit: d2573a8dec2d4102ce8882ee232cdba080d39628
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="create-remote-table-as-select-parallel-data-warehouse"></a>CREATE REMOTE TABLE AS SELECT (平行處理資料倉儲)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]

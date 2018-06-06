@@ -1,31 +1,23 @@
 ---
-title: "了解多維度模型的 Power View |Microsoft 文件"
-ms.custom: 
-ms.date: 03/06/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
-ms.assetid: d0558cae-8209-4242-80c5-2c95981b88b9
-caps.latest.revision: 
-author: Minewiskan
+title: 了解多維度模型的 Power View |Microsoft 文件
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: multidimensional-models
+ms.topic: conceptual
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 103d42ffa1f2f4bc823c8b95327347323f0ccf86
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 899569bffcb0e521d6bcb36e0172498fa0da340c
+ms.sourcegitcommit: b3bb41424249de198f22d9c6d40df4996f083aa6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/17/2018
 ---
 # <a name="understanding-power-view-for-multidimensional-models"></a>了解適用於多維度模型的 Power View
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-本文描述 SQL Server 中的 [多維度模型的 Power View] 功能，並為想要在組織中實作 Power View 的 BI 專業人員和系統管理員提供重要資訊。  
+  本文描述 SQL Server 中的 [多維度模型的 Power View] 功能，並為想要在組織中實作 Power View 的 BI 專業人員和系統管理員提供重要資訊。  
   
  多維度模型提供領先業界的 OLAP 資料模型化、儲存體和分析解決方案。 SQL Server 中的多維度模型透過 Microsoft Power View 支援特定資料分析、探索和視覺效果。  
   
@@ -101,7 +93,7 @@ ms.lasthandoff: 02/15/2018
  ![Power View 中的非彙總階層](../../analysis-services/multidimensional-models/media/daxmd-nonaggrattrib.gif "Power View 中的非彙總階層")  
   
 ### <a name="implicit-measures"></a>隱含量值  
- 表格式模型讓使用者能夠建立「隱含」量值，例如欄位的計數、加總或平均。 對於多維度模型，因為維度屬性資料的儲存方式不同，查詢隱含量值可能很耗時。 因此，Power View 中無法使用隱含量值。  
+ 表格式模型讓使用者能夠建立「隱含」量值，例如欄位的計數、加總或平均。 多維度模型，因為維度屬性資料的儲存方式不同，查詢隱含量值可能會花費很長的時間。 因此，Power View 中無法使用隱含量值。  
   
 ## <a name="dimensions-attributes-and-hierarchies"></a>維度、屬性和階層  
  Cube 維度在表格式中繼資料中公開為資料表。 在 Power View 欄位清單中，維度屬性會顯示為顯示資料夾中的資料行。  AttributeHierarchyEnabled 屬性設為 false 的維度屬性，例如 Customer 維度中的 Birth Date 屬性，或是 AttributeHierarchyVisible 屬性設為 false 的維度屬性都不會出現在 Power View 欄位清單中。 多層級階層或使用者階層，例如 Customer 維度中的 Customer Geography，在 Power View 欄位清單中公開為階層。 維度屬性的隱藏 UnknownMembers 會在 DAX 查詢和 Power View 中公開。  

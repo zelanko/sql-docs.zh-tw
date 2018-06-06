@@ -1,31 +1,30 @@
 ---
-title: "發行資料庫 (SQL Server Management Studio) | Microsoft Docs"
-ms.custom: 
+title: 發行資料庫 (SQL Server Management Studio) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
 ms.component: databases
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: 98b2914e-7147-40af-ba7d-87253bbe8bf9
-caps.latest.revision: 
+caps.latest.revision: 10
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 75c8ba6edd0aed89854e62f66b2011927fb4879e
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 09255d7a04063de609a7f54c395f50f83e765643
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="publish-a-database-sql-server-management-studio"></a>發行資料庫 (SQL Server Management Studio)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 您可以使用 [產生和發佈指令碼精靈]，將整個資料庫或個別的資料庫物件發行至 Web 主控提供者。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  您可以使用 **[產生和發佈指令碼]** 精靈，將整個資料庫或個別的資料庫物件發行至 Web 主控提供者。  
   
 > [!NOTE]  
 >  本主題所述的功能在過去是由發行資料庫精靈所提供。 發行功能已經加入至產生和發佈指令碼精靈，而且發行資料庫精靈已經停用。  

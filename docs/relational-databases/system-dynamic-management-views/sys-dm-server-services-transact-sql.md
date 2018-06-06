@@ -1,16 +1,12 @@
 ---
-title: sys.dm_server_services (Transact-SQL) | Microsoft Docs
-ms.custom: 
+title: sys.dm_server_services (TRANSACT-SQL) |Microsoft 文件
+ms.custom: ''
 ms.date: 01/07/2018
-ms.prod: sql-non-specified
-ms.prod_service: database-engine
-ms.service: 
-ms.component: dmv's
-ms.reviewer: 
+ms.prod: sql
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: system-objects
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - dm_server_services
@@ -22,16 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_server_services dynamic management view
 ms.assetid: 3f0defd0-478d-4e7f-96be-8795c9de4e3f
-caps.latest.revision: 
+caps.latest.revision: 9
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 205d755e46b472cfca44170819ba177e523e4f3f
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 427dfc77aaf7178a9bd14a7243be4a44a9e1781c
+ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 05/23/2018
 ---
 # <a name="sysdmserverservices-transact-sql"></a>sys.dm_server_services (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -52,7 +47,7 @@ ms.lasthandoff: 02/03/2018
 |filename|**nvarchar(256)**|服務可執行檔的路徑和檔案名稱。 不可為 null。|  
 |is_clustered|**nvarchar(1)**|指出服務是否安裝為叢集伺服器的資源。 不可為 null。|  
 |cluster_nodename|**nvarchar(256)**|安裝服務所在之叢集節點的名稱。 可為 Null。|
-|instant_file_initialization_enabled|**nvarchar(1)**|指定是否啟用立即檔案初始化[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]服務。<br /><br />Y = 服務啟用立即檔案初始化。<br /><br />N = 停用服務的立即檔案初始化。<br /><br /> 可為 Null。<br /><br /> **注意：**不適用於其他服務，例如 SQL Server 代理程式。<br /><br /> **適用於：** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (開頭為[!INCLUDE[sssql11](../../includes/sssql11-md.md)]SP4 和[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]SP1 透過[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])。|  
+|instant_file_initialization_enabled|**nvarchar(1)**|指定是否啟用立即檔案初始化[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]服務。<br /><br />Y = 服務啟用立即檔案初始化。<br /><br />N = 停用服務的立即檔案初始化。<br /><br /> 可為 Null。<br /><br /> **注意：** 不適用於其他服務，例如 SQL Server 代理程式。<br /><br /> **適用於：** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (開頭為[!INCLUDE[sssql11](../../includes/sssql11-md.md)]SP4 和[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]SP1 透過[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])。|  
 
 ## <a name="security"></a>Security  
   
@@ -60,5 +55,5 @@ ms.lasthandoff: 02/03/2018
  需要伺服器的 `VIEW SERVER STATE` 權限。  
   
 ## <a name="see-also"></a>另請參閱  
- [sys.dm_server_registry &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-server-registry-transact-sql.md)  
+ [sys.dm_server_registry &#40;Transact SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-server-registry-transact-sql.md)  
   

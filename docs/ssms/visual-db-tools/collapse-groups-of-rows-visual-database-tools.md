@@ -1,34 +1,33 @@
 ---
-title: "摺疊資料列群組 (Visual Database Tools) | Microsoft Docs"
-ms.custom: 
+title: 摺疊資料列群組 (Visual Database Tools) | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
 ms.component: ssms-visual-db
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: tools-ssms
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ssms
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - group collapsing [SQL Server]
 - collapsing rows
 - row collapsing [SQL Server]
 ms.assetid: 7338dad0-965d-44ba-8c1a-b993acb7156d
-caps.latest.revision: "4"
+caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 4bc579ff02d58fbc4a06800af44e5eb514977aac
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.openlocfilehash: 5657c180de1c66320b4eba4c33058f625c0d1402
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="collapse-groups-of-rows-visual-database-tools"></a>摺疊資料列群組 (Visual Database Tools)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 可以建立一種查詢結果，其中各結果資料列對應至原始資料的完整資料列群組。 摺疊資料列時，請注意下列事項：  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+可以建立一種查詢結果，其中各結果資料列對應至原始資料的完整資料列群組。 摺疊資料列時，請注意下列事項：  
   
 -   **您可以排除重複的資料列** ：有些查詢建立的結果集中會產生許多完全相同的資料列。 例如，您可以建立結果集，其中每個資料列都包含城市以及某個城市 (含有一個作者) 所在的州名 － 但如果某個城市含有數個作者，則將產生數個相同的資料列。 產生的 SQL 將如下所示：  
   

@@ -1,31 +1,17 @@
 ---
-title: "使用 TRANSACT-SQL (R SQL 快速入門) 中的 R 程式碼 |Microsoft 文件"
-ms.custom:
-- SQL2016_New_Updated
-ms.date: 08/20/2017
-ms.reviewer: 
-ms.suite: sql
-ms.prod: machine-learning-services
-ms.prod_service: machine-learning-services
-ms.component: 
-ms.technology: 
-ms.tgt_pltfrm: 
+title: 使用 TRANSACT-SQL (R SQL 快速入門) 中的 R 程式碼 |Microsoft 文件
+ms.prod: sql
+ms.technology: machine-learning
+ms.date: 04/15/2018
 ms.topic: tutorial
-applies_to:
-- SQL Server 2016
-dev_langs:
-- R
-ms.assetid: 4e6fe30d-a105-4d5b-bc05-5e5204753847
-caps.latest.revision: 
-author: jeannt
-ms.author: jeannt
-manager: cgronlund
-ms.workload: Active
-ms.openlocfilehash: d4810554e5ed40a300a902b96ca568f799c63899
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+author: HeidiSteen
+ms.author: heidist
+manager: cgronlun
+ms.openlocfilehash: c11e2bba73cef8a8b6f59d5a92de22cddb19ccd9
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="using-r-code-in-transact-sql-r-in-sql-quickstart"></a>使用 TRANSACT-SQL (R SQL 快速入門) 中的 R 程式碼
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -84,7 +70,7 @@ ms.lasthandoff: 02/11/2018
 
 ## <a name="troubleshooting"></a>疑難排解
 
-+ 如果此查詢的任何錯誤，安裝可能不完整。 使用 SQL Server 安裝精靈新增該功能之後，您必須採取一些額外的步驟才能使用外部程式碼程式庫。  請參閱[設定 SQL Server R 服務](../r/set-up-sql-server-r-services-in-database.md)。
++ 如果此查詢的任何錯誤，安裝可能不完整。 使用 SQL Server 安裝精靈新增該功能之後，您必須採取一些額外的步驟才能使用外部程式碼程式庫。  請參閱[安裝 SQL Server 2017 機器學習服務](../install/sql-machine-learning-services-windows-install.md)或[安裝 SQL Server 2016 R Services](../install/sql-r-services-windows-install.md)。
 
 + 請確定 Launchpad 服務正在執行。 根據您的環境，您可能需要啟用 R 背景工作帳戶以連線到 SQL Server、安裝額外的網路程式庫、啟用遠端程式碼執行，或在一切已設定完畢後重新啟動執行個體。 請參閱 [R 服務安裝和升級常見問題集](../r/upgrade-and-installation-faq-sql-server-r-services.md)
 

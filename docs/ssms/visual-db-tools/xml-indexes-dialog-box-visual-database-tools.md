@@ -1,31 +1,31 @@
 ---
-title: "XML 索引對話方塊 (Visual Database Tools) | Microsoft Docs"
-ms.custom: 
+title: XML 索引對話方塊 (Visual Database Tools) | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
 ms.component: ssms-visual-db
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: tools-ssms
-ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords: vdt.dlgbox.xmlindexes
+ms.technology: ssms
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
+f1_keywords:
+- vdt.dlgbox.xmlindexes
 ms.assetid: eef38310-4498-4ccc-bb77-5bbd1c7cc477
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: f47274fe87b23da05550d05b28af1b003fa9a2bc
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.openlocfilehash: 00757208c128ef00ea58c5139b6edc8461621307
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="xml-indexes-dialog-box-visual-database-tools"></a>XML 索引對話方塊 (Visual Database Tools)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 使用 [XML 索引] 對話方塊可建立 XML 資料類型資料行的索引，但是此類資料行無法以 [索引/索引鍵] 對話方塊進行索引。 各個 XML 資料行可以具有一個以上的 XML 索引，但是首先建立 (主要) 的索引將成為其他索引 (次要) 的基準。 如果刪除主要的 XML 索引，次要索引也將一併刪除。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+使用 [XML 索引] 對話方塊可建立 XML 資料類型資料行的索引，但是此類資料行無法以 [索引/索引鍵] 對話方塊進行索引。 各個 XML 資料行可以具有一個以上的 XML 索引，但是首先建立 (主要) 的索引將成為其他索引 (次要) 的基準。 如果刪除主要的 XML 索引，次要索引也將一併刪除。  
   
 ## <a name="options"></a>選項。  
 **選取的 XML 索引**  

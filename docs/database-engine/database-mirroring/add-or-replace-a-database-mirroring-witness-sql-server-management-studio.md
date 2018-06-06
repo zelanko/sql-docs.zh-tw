@@ -1,33 +1,32 @@
 ---
-title: "新增或取代資料庫鏡像見證 (SQL Server Management Studio) | Microsoft Docs"
-ms.custom: 
+title: 新增或取代資料庫鏡像見證 (SQL Server Management Studio) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/07/2017
-ms.prod: sql-non-specified
-ms.prod_service: database-engine
-ms.service: 
+ms.prod: sql
+ms.prod_service: high-availability
 ms.component: database-mirroring
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: dbe-high-availability
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: high-availability
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - witness [SQL Server], establishing
 - database mirroring [SQL Server], witness
 ms.assetid: 4b5ecffd-f025-4ab7-b69d-8958c6477127
-caps.latest.revision: "16"
+caps.latest.revision: 16
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: bf344815c90bbabcab08d75880fb2605f6683a36
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 592d34b19b73b9cd32774b848f6e2fac609b14aa
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="add-or-replace-a-database-mirroring-witness-sql-server-management-studio"></a>加入或取代資料庫鏡像見證 (SQL Server Management Studio)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 如果資料庫鏡像端點使用 Windows 驗證，您就可以使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 來新增或取代見證。 在 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 中加入見證也會將作業模式變更為具有自動容錯移轉的高安全性模式。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  如果資料庫鏡像端點使用 Windows 驗證，您就可以使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 來加入或取代見證。 在 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 中加入見證也會將作業模式變更為具有自動容錯移轉的高安全性模式。  
   
 > [!NOTE]  
 >  我們強烈建議見證應該位在任何夥伴的另一台電腦上。 見證使用的服務帳戶必須與主體和鏡像伺服器執行個體使用的服務帳戶位於相同的網域中，否則此帳戶就必須位於受信任網域中。  
@@ -60,7 +59,7 @@ ms.lasthandoff: 01/18/2018
   
     -   如果這些伺服器執行個體都使用相同的服務帳戶，請將這些欄位保留空白。  
   
-    -   如果見證伺服器執行個體與其中一個夥伴使用不同的服務帳戶，請在 **[主體]**、 **[鏡像]**及 **[見證]** 欄位中填入帳戶名稱：  
+    -   如果見證伺服器執行個體與其中一個夥伴使用不同的服務帳戶，請在 **[主體]**、 **[鏡像]** 及 **[見證]** 欄位中填入帳戶名稱：  
   
          *DOMAINNAME* **\\** *username*  
   

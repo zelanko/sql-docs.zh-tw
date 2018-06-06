@@ -1,33 +1,29 @@
 ---
-title: "登錄項目 （Visual FoxPro ODBC 驅動程式） |Microsoft 文件"
-ms.custom: 
+title: 登錄項目 （Visual FoxPro ODBC 驅動程式） |Microsoft 文件
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
-ms.component: odbc
-ms.reviewer: 
+ms.prod: sql
+ms.prod_service: connectivity
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- drivers
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: connectivity
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - registry keys [ODBC]
 - Visual FoxPro ODBC driver [ODBC], registry entries
 - keys [ODBC]
 - FoxPro ODBC driver [ODBC], registry entries
 ms.assetid: 1a63d92d-ca3a-46ae-911f-6788292c801e
-caps.latest.revision: 
+caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
-ms.workload: Inactive
-ms.openlocfilehash: b9d776df7e758f0902ca3b20a94f8c40e351e959
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+manager: craigg
+ms.openlocfilehash: 2a8a742aeb4f2290ef7f76410d689e15afec5c6d
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="registry-entries-visual-foxpro-odbc-driver"></a>登錄項目 （Visual FoxPro ODBC 驅動程式）
 當您安裝 Visual FoxPro ODBC 驅動程式時，安裝程式會更新您的系統登錄中，登錄機碼 HKEY_LOCAL_MACHINE\SOFTWARE\ODBC\ODBCInst.ini，若要加入新的金鑰，呼叫 Microsoft Visual FoxPro 驅動程式中。 下該機碼，會使用下表中描述的值。  
@@ -59,7 +55,7 @@ ms.lasthandoff: 02/15/2018
 |排除||[是] 或 [否]|  
 |BackgroundFetch||[是] 或 [否]|  
 |SourceDB|REG_SZ|路徑。雙位元組字元的檔案|  
-|SourceType|REG_SZ|"DBC" or "DBF"|  
+|SourceType|REG_SZ|「 雙位元組字元"或者"DBF"|  
   
  您不應該直接; 存取這項資訊新增、 修改或刪除資料來源時，任何系統管理登錄處理由 ODBC 系統管理員。  
   

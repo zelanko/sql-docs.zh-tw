@@ -1,16 +1,13 @@
 ---
-title: "sys.dm_resource_governor_workload_groups (TRANSACT-SQL) |Microsoft 文件"
-ms.custom: 
-ms.date: 03/30/2016
-ms.prod: sql-non-specified
+title: sys.dm_resource_governor_workload_groups (TRANSACT-SQL) |Microsoft 文件
+ms.custom: ''
+ms.date: 04/24/2018
+ms.prod: sql
 ms.prod_service: database-engine, sql-data-warehouse, pdw
-ms.service: 
-ms.component: dmv's
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: system-objects
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.dm_resource_governor_workload_groups
@@ -22,19 +19,19 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_resource_governor_workload_groups dynamic management view
 ms.assetid: f63c4914-1272-43ef-b135-fe1aabd953e0
-caps.latest.revision: 
+caps.latest.revision: 27
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 588bbcb915873ba8a121432a83579b5877df8454
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 023dc1559ade2a14be43750acd783fefd000e7b0
+ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 05/23/2018
 ---
 # <a name="sysdmresourcegovernorworkloadgroups-transact-sql"></a>sys.dm_resource_governor_workload_groups (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-pdw-md.md)]
 
   傳回工作負載群組統計資料以及工作負載群組的目前記憶體中組態。 這個檢視可以使用 sys.dm_resource_governor_resource_pools 加入，以取得資源集區名稱。  
   
@@ -54,7 +51,7 @@ ms.lasthandoff: 02/03/2018
 |queued_request_count|**int**|目前佇列的要求計數。 不可為 Null。|  
 |total_cpu_limit_violation_count|**bigint**|超過 CPU 限制之要求的累計計數。 不可為 Null。|  
 |total_cpu_usage_ms|**bigint**|此工作負載群組的累計 CPU 使用量 (以毫秒為單位)。 不可為 Null。|  
-|max_request_cpu_time_ms|**bigint**|單一要求的最大 CPU 使用量 (以毫秒為單位)。 不可為 Null。<br /><br /> **注意：**這是一個測量的值，不像 request_max_cpu_time_sec，後者是可設定的值。 如需詳細資訊，請參閱[CPU Threshold Exceeded Event Class<](../../relational-databases/event-classes/cpu-threshold-exceeded-event-class.md)。|  
+|max_request_cpu_time_ms|**bigint**|單一要求的最大 CPU 使用量 (以毫秒為單位)。 不可為 Null。<br /><br /> **注意：** 這是一個測量的值，不像 request_max_cpu_time_sec，後者是可設定的值。 如需詳細資訊，請參閱[超過 CPU 閾值事件類別](../../relational-databases/event-classes/cpu-threshold-exceeded-event-class.md)。|  
 |blocked_task_count|**int**|封鎖之工作的目前計數。 不可為 Null。|  
 |total_lock_wait_count|**bigint**|發生之鎖定等候的累計計數。 不可為 Null。|  
 |total_lock_wait_time_ms|**bigint**|保留鎖定之經過時間的累計總和 (以毫秒為單位)。 不可為 Null。|  
@@ -81,8 +78,8 @@ ms.lasthandoff: 02/03/2018
   
 ## <a name="see-also"></a>另請參閱  
  [動態管理檢視與函數 &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
- [sys.dm_resource_governor_resource_pools &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-resource-pools-transact-sql.md)   
- [sys.resource_governor_workload_groups &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-resource-governor-workload-groups-transact-sql.md)   
+ [sys.dm_resource_governor_resource_pools &#40;Transact SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-resource-pools-transact-sql.md)   
+ [sys.resource_governor_workload_groups &#40;Transact SQL&#41;](../../relational-databases/system-catalog-views/sys-resource-governor-workload-groups-transact-sql.md)   
  [ALTER RESOURCE GOVERNOR &#40;Transact-SQL&#41;](../../t-sql/statements/alter-resource-governor-transact-sql.md)  
   
   

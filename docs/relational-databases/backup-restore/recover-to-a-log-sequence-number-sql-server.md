@@ -1,17 +1,14 @@
 ---
-title: "復原到記錄序號 (SQL Server) | Microsoft Docs"
-ms.custom: 
+title: 復原到記錄序號 (SQL Server) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/17/2017
-ms.prod: sql-non-specified
-ms.prod_service: database-engine
-ms.service: 
-ms.component: backup-restore
-ms.reviewer: 
+ms.prod: sql
+ms.prod_service: backup-restore
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- dbe-backup-restore
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: backup-restore
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - log sequence numbers [SQL Server]
 - STOPBEFOREMARK option [RESTORE statement]
@@ -24,20 +21,19 @@ helpviewer_keywords:
 - database recovery [SQL Server]
 - database restores [SQL Server], point in time
 ms.assetid: f7b3de5b-198d-448d-8c71-1cdd9239676c
-caps.latest.revision: 
+caps.latest.revision: 38
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: eb43b2630d4eebe0c101f616e7da71908c031ac7
-ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
+ms.openlocfilehash: 441daeb74bcc141c148edef396b04bf75aff3f0f
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="recover-to-a-log-sequence-number-sql-server"></a>復原到記錄序號 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-本主題僅與使用完整或大量記錄復原模式的資料庫相關。  
+  本主題僅與使用完整或大量記錄復原模式的資料庫相關。  
   
  您可使用記錄序號 (LSN) 定義還原作業的復原點。 但是，這是為工具供應商所提供的特定功能，未必普遍適用。  
   
@@ -71,11 +67,11 @@ ms.lasthandoff: 02/23/2018
 ## <a name="transact-sql-syntax-for-restoring-to-an-lsn"></a>還原至 LSN 所用的 Transact-SQL 語法  
  使用 [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md) 陳述式，您可以在 LSN 上或剛好就在它之前停止，如下所述：  
   
--   使用 WITH STOPATMARK **='**lsn:*<lsn_number>***'** 子句，其中 lsn:*\<lsnNumber>* 是會指定包含所指定的 LSN 的記錄檔記錄為復原點的字串。  
+-   使用 WITH STOPATMARK **='** lsn:*<lsn_number>***'** 子句，其中 lsn:*\<lsnNumber>* 是會指定包含所指定的 LSN 的記錄檔記錄為復原點的字串。  
   
      STOPATMARK 會向前復原到 LSN，並且將該筆記錄納入向前復原中。  
   
--   使用 WITH STOPBEFOREMARK **='**lsn:*<lsn_number>***'** 子句，其中 lsn:*\<lsnNumber>* 是會指定緊接在包含指定的 LSN 號碼的記錄檔記錄之前的記錄檔記錄為復原點的字串。  
+-   使用 WITH STOPBEFOREMARK **='** lsn:*<lsn_number>***'** 子句，其中 lsn:*\<lsnNumber>* 是會指定緊接在包含指定的 LSN 號碼的記錄檔記錄之前的記錄檔記錄為復原點的字串。  
   
      STOPBEFOREMARK 會向前復原到 LSN，並且從向前復原中排除該筆記錄。  
   

@@ -1,27 +1,25 @@
 ---
-title: "為手機或平板電腦配置 Reporting Services 行動報表 | Microsoft Docs"
-ms.custom: 
+title: 為手機或平板電腦配置 Reporting Services 行動報表 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
-ms.service: 
 ms.component: mobile-reports
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: f8632816-068f-4a87-b15a-779387f3d3a3
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 1d5b0d607f3e111c5cc2e05f303d43d236c76b50
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 68e84cf29e013461dba77f67294901eef05a5101
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="lay-out-a-reporting-services-mobile-report-for-phone-or-tablet"></a>為手機或平板電腦配置 Reporting Services 行動報表
 現在，您已 [建立 Reporting Services 行動報表](../../reporting-services/mobile-reports/create-a-reporting-services-mobile-report.md) in [!INCLUDE[SS_MobileReptPub_Short](../../includes/ss-mobilereptpub-long.md)]，可以配置它的手機或平板電腦版本。  

@@ -1,30 +1,27 @@
 ---
-title: "程序呼叫 |Microsoft 文件"
-ms.custom: 
+title: 程序呼叫 |Microsoft 文件
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
-ms.component: odbc
-ms.reviewer: 
+ms.prod: sql
+ms.prod_service: connectivity
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: connectivity
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - escape sequences [ODBC], procedure calls
 - procedure calls [ODBC]
 ms.assetid: 145130cc-40e7-4722-8417-dff131084752
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
-ms.workload: Inactive
-ms.openlocfilehash: d4ca9347cae8227885237882117ae3f486309093
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+manager: craigg
+ms.openlocfilehash: 6327ef340fe5fbd712ad9237bb6749d20bbd69af
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="procedure-calls"></a>程序呼叫
 A*程序*是儲存在資料來源上的可執行物件。 通常，它是先行編譯的一或多個 SQL 陳述式。 是逸出序列呼叫程序  
@@ -35,7 +32,7 @@ A*程序*是儲存在資料來源上的可執行物件。 通常，它是先行�
   
  如需程序呼叫逸出序列的詳細資訊，請參閱[程序呼叫的逸出序列](../../../odbc/reference/appendixes/procedure-call-escape-sequence.md)附錄 c: SQL 文法中。  
   
- 程序可以有零或多個參數。 它也可以傳回值，選擇性的參數標記所示**？ =**語法的開頭。 如果*參數*是輸入參數或輸入/輸出參數，它可以是常值或參數標記。 不過，因為某些資料來源不接受常值的參數值可互通的應用程式應該一律使用參數標記。 如果*參數*是一個 output 參數，它必須是參數標記。 必須與參數標記繫結**SQLBindParameter**陳述式執行之前的程序呼叫。  
+ 程序可以有零或多個參數。 它也可以傳回值，選擇性的參數標記所示**？ =** 語法的開頭。 如果*參數*是輸入參數或輸入/輸出參數，它可以是常值或參數標記。 不過，因為某些資料來源不接受常值的參數值可互通的應用程式應該一律使用參數標記。 如果*參數*是一個 output 參數，它必須是參數標記。 必須與參數標記繫結**SQLBindParameter**陳述式執行之前的程序呼叫。  
   
  輸入和輸入/輸出參數可以從程序呼叫省略。 如果程序會呼叫包含括號，但不含任何參數，例如 {呼叫*程序名稱*（)}，驅動程式會指示要使用第一個參數的預設值的資料來源。 如果程序並沒有任何參數，這可能會導致程序失敗。 如果程序呼叫沒有括號，例如 {呼叫*程序名稱*}，驅動程式不會傳送任何參數值。  
   

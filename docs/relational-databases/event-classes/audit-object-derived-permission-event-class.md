@@ -1,34 +1,30 @@
 ---
-title: "Audit Object Derived Permission 事件類別 | Microsoft Docs"
-ms.custom: 
+title: Audit Object Derived Permission 事件類別 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
-ms.prod_service: database-engine, sql-database
-ms.service: 
-ms.component: event-classes
-ms.reviewer: 
+ms.prod: sql
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: supportability
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - Audit Object Derived Permission event class
 ms.assetid: cf61b789-a326-47f9-9d0c-19470782328f
-caps.latest.revision: 
+caps.latest.revision: 35
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: d4b9c8deac23e7504e24c3cf931655660a256551
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: cf4d61db8f85b5724df7af4cf97aaf14066bfe62
+ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="audit-object-derived-permission-event-class"></a>Audit Object Derived Permission 事件類別
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-**Audit Object Derived Permission** 事件類別會記錄何時對指定的物件發出 CREATE、ALTER 或 DROP 命令。 只有當物件沒有直接關聯的權限或擁有者時，才會發生此事件。  
+  **Audit Object Derived Permission** 事件類別會記錄何時對指定的物件發出 CREATE、ALTER 或 DROP 命令。 只有當物件沒有直接關聯的權限或擁有者時，才會發生此事件。  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的未來版本可能會移除這個事件類別。 建議您改用 **Audit Schema Object Management** 事件類別。  
   

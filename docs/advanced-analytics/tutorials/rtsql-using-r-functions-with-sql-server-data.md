@@ -1,29 +1,18 @@
 ---
-title: "R 函式中使用 SQL Server 資料 (SQL 快速入門中的 R) |Microsoft 文件"
-ms.custom: 
-ms.date: 07/26/2017
-ms.reviewer: 
-ms.suite: sql
-ms.prod: machine-learning-services
-ms.prod_service: machine-learning-services
-ms.component: 
-ms.technology: 
-ms.tgt_pltfrm: 
+title: R 函式中使用 SQL Server 資料 (SQL 快速入門中的 R) |Microsoft 文件
+ms.prod: sql
+ms.technology: machine-learning
+ms.date: 04/15/2018
 ms.topic: tutorial
-dev_langs:
-- R
-- SQL
-ms.assetid: e2fe5d90-eee9-4daf-9eae-21d17b3ef320
-caps.latest.revision: 
-author: jeannt
-ms.author: jeannt
-manager: cgronlund
-ms.workload: On Demand
-ms.openlocfilehash: 93fb7d90ab6d1f387fe50dd63a29eda7a2ecc764
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+author: HeidiSteen
+ms.author: heidist
+manager: cgronlun
+ms.openlocfilehash: 52b03b16c55b4ae8a772c2c12861fcc4b184d1f4
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34585740"
 ---
 # <a name="using-r-functions-with-sql-server-data-r-in-sql-quickstart"></a>R 函式中使用 SQL Server 資料 (SQL 快速入門中的 R)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -83,12 +72,6 @@ AS
 ```sql
 EXEC MyRNorm @param1 = 100,@param2 = 50, @param3 = 3
 ```
-
-## <a name="related-resources"></a>相關資源
-
-+ 您想要安裝更多的 R 封裝，以取得更多進階的統計函數嗎？ 請參閱[安裝和管理的 R 封裝](../r/installing-and-managing-r-packages.md)。
-
-+ 為了協助您將您的獨立 R 程式碼轉換成的格式，可以輕鬆地參數化使用 SQL Server 預存程序，Microsoft R 團隊提供新的 R 封裝， **sqlrutils**。 如需詳細資訊，請參閱[如何建立預存程序中使用 sqlrutils](../r/how-to-create-a-stored-procedure-using-sqlrutils.md)。
 
 ## <a name="use-r-utility-functions-for-troubleshooting"></a>使用 R 公用程式函式進行疑難排解
 

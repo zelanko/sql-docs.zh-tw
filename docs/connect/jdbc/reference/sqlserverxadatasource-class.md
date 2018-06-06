@@ -1,27 +1,24 @@
 ---
-title: "SQLServerXADataSource 類別 |Microsoft 文件"
-ms.custom: 
+title: SQLServerXADataSource 類別 |Microsoft 文件
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
-ms.component: jdbc
-ms.reviewer: 
+ms.prod: sql
+ms.prod_service: connectivity
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: connectivity
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: 95fc7b07-2498-4a7e-8f7f-ee0d86b598b4
-caps.latest.revision: "9"
+caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
-ms.workload: Inactive
-ms.openlocfilehash: 91f9aabbd93aa17c2104835d2f42cabf7aa8f781
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+manager: craigg
+ms.openlocfilehash: b69edd13e84599e4e3e11ba56a3a1c34ee1d36ae
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sqlserverxadatasource-class"></a>SQLServerXADataSource 類別
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -50,7 +47,7 @@ public class SQLServerXADataSource
   
  SQLServerXAConnection 物件是由 SQLServerXADataSource 物件所產生。 SQLServerConnectionPoolDataSource 物件和 SQLServerXADataSource 物件是類似，因為兩者都是 JDBC 應用程式可以看到資料來源層底下來實作它們。 此架構可讓[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]對應用程式是透明的方式支援分散式的交易。 SQLServerXADataSource 可以設定為與整合[!INCLUDE[msCoName](../../../includes/msconame_md.md)]藉此提供真正的分散式交易協調器 (DTC) 的分散式交易處理。  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [SQLServerXADataSource 成員](../../../connect/jdbc/reference/sqlserverxadatasource-members.md)   
  [JDBC 驅動程式 API 參考](../../../connect/jdbc/reference/jdbc-driver-api-reference.md)  
   

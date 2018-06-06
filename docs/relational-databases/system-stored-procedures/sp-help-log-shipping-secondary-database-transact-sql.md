@@ -1,16 +1,14 @@
 ---
-title: "sp_help_log_shipping_secondary_database (TRANSACT-SQL) |Microsoft 文件"
-ms.custom: 
+title: sp_help_log_shipping_secondary_database (TRANSACT-SQL) |Microsoft 文件
+ms.custom: ''
 ms.date: 08/02/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: system-objects
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_help_log_shipping_secondary_database
@@ -20,16 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_help_log_shipping_secondary_database
 ms.assetid: 11ce42ca-d3f1-44c8-9cac-214ca8896b9a
-caps.latest.revision: 
+caps.latest.revision: 28
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 8bb243bd5d35293df828be305dba20cb405ad926
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 0e2a943234d835d1f78cf57c096fd8492849bfa0
+ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="sphelplogshippingsecondarydatabase-transact-sql"></a>sp_help_log_shipping_secondary_database (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,7 +47,7 @@ sp_help_log_shipping_secondary_database
 ```  
   
 ## <a name="arguments"></a>引數  
- [ **@secondary_database =** ] '*secondary_database*'  
+ [  **@secondary_database =** ] '*secondary_database*'  
  這是次要資料庫的名稱。 *secondary_database*是**sysname**，沒有預設值。  
   
  [ **@secondary_id =** ] '*secondary_id*'  
@@ -102,8 +99,8 @@ sp_help_log_shipping_secondary_database
  只有成員**sysadmin**固定的伺服器角色可以執行此程序。  
   
 ## <a name="see-also"></a>另請參閱  
- [sp_help_log_shipping_secondary_primary &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-log-shipping-secondary-primary-transact-sql.md)   
- [關於記錄傳送 &#40;SQL Server &#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
+ [sp_help_log_shipping_secondary_primary &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-log-shipping-secondary-primary-transact-sql.md)   
+ [關於記錄傳送 & #40;SQL Server & #41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
  [系統預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

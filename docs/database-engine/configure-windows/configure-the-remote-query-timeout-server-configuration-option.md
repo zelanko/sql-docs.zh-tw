@@ -1,30 +1,27 @@
 ---
-title: "設定 remote query timeout 伺服器組態選項 | Microsoft Docs"
-ms.custom: 
+title: 設定 remote query timeout 伺服器組態選項 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/08/2017
-ms.prod: sql-non-specified
-ms.prod_service: database-engine
-ms.service: 
-ms.component: configure-windows
-ms.reviewer: 
+ms.prod: sql
+ms.prod_service: high-availability
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: database-engine
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: configuration
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - time limit for remote queries [SQL Server]
 - remote query timeout option
 ms.assetid: 888c8448-933b-41e3-8aa1-c206bc0cdb78
-caps.latest.revision: "26"
+caps.latest.revision: 26
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.workload: Active
-ms.openlocfilehash: 996cd73586da5845176cdb6112252045d4d4fcb6
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 10c9e6e858f12e439b7fe0f95e3680ccf3246443
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="configure-the-remote-query-timeout-server-configuration-option"></a>設定 remote query timeout 伺服器組態選項
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -70,7 +67,7 @@ ms.lasthandoff: 01/18/2018
   
 2.  按一下 **[連接]** 節點。  
   
-3.  請在 **[遠端伺服器連接]**下方的 **[遠端查詢逾時]** 方塊中，輸入或選取從 0 至 2,147,483,647 的值，以設定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 在逾時之前要等待的最大秒數。  
+3.  請在 **[遠端伺服器連接]** 下方的 **[遠端查詢逾時]** 方塊中，輸入或選取從 0 至 2,147,483,647 的值，以設定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 在逾時之前要等待的最大秒數。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   

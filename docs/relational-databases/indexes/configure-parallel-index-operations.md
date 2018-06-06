@@ -1,17 +1,14 @@
 ---
-title: "設定平行索引作業 | Microsoft Docs"
-ms.custom: 
+title: 設定平行索引作業 | Microsoft Docs
+ms.custom: ''
 ms.date: 02/17/2017
-ms.prod: sql-non-specified
-ms.prod_service: database-engine, sql-database
-ms.service: 
-ms.component: indexes
-ms.reviewer: 
+ms.prod: sql
+ms.prod_service: table-view-index, sql-database
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- dbe-indexes
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: table-view-index
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - index parallel operations [SQL Server]
 - processors [SQL Server], parallel index operations
@@ -19,16 +16,16 @@ helpviewer_keywords:
 - MAXDOP index option, parallel index operations
 - parallel index operations [SQL Server]
 ms.assetid: 8ec8c71e-5fc1-443a-92da-136ee3fc7f88
-caps.latest.revision: 
-author: barbkess
-ms.author: barbkess
+caps.latest.revision: 43
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: b8008f980f72c76ded7911329c2d86d5c67ab13c
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: f2d1a1463b751bcd820419db24c978ed08d7e463
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="configure-parallel-index-operations"></a>設定平行索引作業
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -101,7 +98,7 @@ ms.lasthandoff: 02/12/2018
   
 5.  以滑鼠右鍵按一下要設定平行處理原則最大程度的索引，然後選取 [屬性]。  
   
-6.  在 **[選取頁面]**底下，選取 **[選項]**。  
+6.  在 **[選取頁面]** 底下，選取 **[選項]**。  
   
 7.  選取 **[平行處理原則的最大程度]**，然後輸入介於 1 和 64 之間的一些值。  
   
@@ -111,7 +108,7 @@ ms.lasthandoff: 02/12/2018
   
 #### <a name="to-set-max-degree-of-parallelism-on-an-existing-index"></a>若要在現有索引上設定平行處理原則的最大程度  
   
-1.  在 **[物件總管]**中，連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的執行個體。  
+1.  在 **[物件總管]** 中，連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的執行個體。  
   
 2.  在標準列上，按一下 **[新增查詢]**。  
   
@@ -131,7 +128,7 @@ ms.lasthandoff: 02/12/2018
   
 #### <a name="set-max-degree-of-parallelism-on-a-new-index"></a>在新索引上設定平行處理原則的最大程度  
   
-1.  在 **[物件總管]**中，連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的執行個體。  
+1.  在 **[物件總管]** 中，連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的執行個體。  
   
 2.  在標準列上，按一下 **[新增查詢]**。  
   

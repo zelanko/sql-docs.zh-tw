@@ -1,16 +1,15 @@
 ---
-title: "工作與權限 | Microsoft Docs"
-ms.custom: 
+title: 工作與權限 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: security
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - permissions [Reporting Services], tasks
 - role-based security [Reporting Services], permissions
@@ -20,16 +19,15 @@ helpviewer_keywords:
 - predefined tasks [Reporting Services]
 - tasks [Reporting Services]
 ms.assetid: d7ff90b5-b976-4270-b9ad-9d7b801d8263
-caps.latest.revision: "40"
+caps.latest.revision: 40
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 242fbc404f49f41c1051a900144a7a61e46d3714
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: c5fbec485953e91080607623d07ea8bfaa2751e9
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="tasks-and-permissions"></a>工作和權限
   在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 中，「工作」(Task) 是使用者或管理員可以執行的動作。 工作是預先定義的。 您無法建立自訂工作或修改以程式設計的方式或透過工具而提供的工作。 總共有 25 種工作。 這些工作構成以角色為基礎之安全性中，可以使用的整個作業集。 工作的範例包括「檢視報表」、「管理報表」以及「管理報表伺服器屬性」。  

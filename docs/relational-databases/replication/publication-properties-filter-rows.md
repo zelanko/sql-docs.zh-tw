@@ -1,30 +1,28 @@
 ---
-title: "發行集屬性，篩選資料列 | Microsoft Docs"
-ms.custom: 
+title: 發行集屬性，篩選資料列 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
 ms.component: replication
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 f1_keywords:
 - sql13.rep.newpubwizard.pubproperties.filterrows.f1
 ms.assetid: 2c5fdbed-9b10-4818-98cc-cc6b01351318
-caps.latest.revision: 
+caps.latest.revision: 21
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 80da582db33f49ef5fe456eb9351e9b4d6091591
-ms.sourcegitcommit: ab25b08a312d35489a2c4a6a0d29a04bbd90f64d
+ms.openlocfilehash: af2b61d080777176e89181044af3fc99da19f8d7
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="publication-properties-filter-rows"></a>發行集屬性，篩選資料列
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -58,7 +56,7 @@ ms.lasthandoff: 03/08/2018
  當您在發行集的資料表發行項中加入篩選時，這些篩選就會擴展到窗格中。 含有資料列篩選的資料表，會顯示為窗格中的最上層節點。 若為合併式發行集，則透過聯結篩選而擴充篩選的資料表，就會顯示為子節點。  
   
  **[加入]**  
- 按一下 **[加入]** 即可啟動一個可讓您篩選資料表發行項的對話方塊。 在快照集或交易式發行集按一下 **[加入]** 會立即啟動對話方塊。 針對合併式發行集按一下 **[加入]** ，就會顯示三個選項： **[加入篩選]**、 **[加入聯結以擴充選取的篩選]**和 **[自動產生篩選]**。  
+ 按一下 **[加入]** 即可啟動一個可讓您篩選資料表發行項的對話方塊。 在快照集或交易式發行集按一下 **[加入]** 會立即啟動對話方塊。 針對合併式發行集按一下 **[加入]** ，就會顯示三個選項： **[加入篩選]**、 **[加入聯結以擴充選取的篩選]** 和 **[自動產生篩選]**。  
   
 -   選取 **[加入篩選]** 即可啟動 **[加入篩選]** 對話方塊。 這個對話方塊可以讓您套用資料列篩選至資料表發行項。 例如，在 **[加入篩選]** 對話方塊中，您可以指定含有客戶資料的資料表在複寫到訂閱者時，只能包含法國客戶的資料。  
   

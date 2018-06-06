@@ -1,27 +1,25 @@
 ---
-title: "新增資料繫結影像 (報表產生器及 SSRS) | Microsoft Docs"
-ms.custom: 
+title: 新增資料繫結影像 (報表產生器及 SSRS) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: report-design
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: df4c38d4-bfcc-41c4-aa6d-952ca6fd7a2e
-caps.latest.revision: "8"
+caps.latest.revision: 8
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 4199db348aa0c6537e33471e6e5912cddba7d685
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 7a0891c5131b15e727db4664618753253bd605dc
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="add-a-data-bound-image-report-builder-and-ssrs"></a>加入資料繫結影像 (報表產生器及 SSRS)
   報表可以包含儲存在資料庫內之影像的參考。 這類影像稱為「資料繫結影像」。 出現在產品清單中產品名稱旁邊的圖片就是資料繫結影像的範例。  
@@ -43,11 +41,11 @@ ms.lasthandoff: 01/09/2018
   
 5.  (選擇性) 在 [工具提示] 文字方塊中，鍵入您希望使用者將滑鼠停留在轉譯成 HTML 之報表內的影像上方時，所要顯示的文字。  
   
-6.  在 **[選取影像來源]**中，選取 **[資料庫]**。  
+6.  在 **[選取影像來源]** 中，選取 **[資料庫]**。  
   
-7.  在 **[使用此欄位]**中，選取包含您報表中之影像的欄位。  
+7.  在 **[使用此欄位]** 中，選取包含您報表中之影像的欄位。  
   
-8.  在 **[使用此 MIME 類型]**中，選取影像的 MIME 類型或檔案格式，例如 bmp。  
+8.  在 **[使用此 MIME 類型]** 中，選取影像的 MIME 類型或檔案格式，例如 bmp。  
   
 9. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   

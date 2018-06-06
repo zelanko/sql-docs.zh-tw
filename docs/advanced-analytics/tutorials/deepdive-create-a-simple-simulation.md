@@ -1,31 +1,17 @@
 ---
-title: "建立簡單的模擬 （SQL 與 R 深入探討） |Microsoft 文件"
-ms.custom: 
-ms.date: 12/14/2017
-ms.reviewer: 
-ms.suite: sql
-ms.prod: machine-learning-services
-ms.prod_service: machine-learning-services
-ms.component: 
-ms.technology: 
-ms.tgt_pltfrm: 
+title: 建立簡單的模擬 （SQL 與 R 深入探討） |Microsoft 文件
+ms.prod: sql
+ms.technology: machine-learning
+ms.date: 04/15/2018
 ms.topic: tutorial
-applies_to:
-- SQL Server 2016
-- SQL Server 2017
-dev_langs:
-- R
-ms.assetid: f420b816-ddab-4a1a-89b9-c8285a2d33a3
-caps.latest.revision: 
-author: jeannt
-ms.author: jeannt
-manager: cgronlund
-ms.workload: Inactive
-ms.openlocfilehash: cc613d303fa3200c3460face71399223e00272e6
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+author: HeidiSteen
+ms.author: heidist
+manager: cgronlun
+ms.openlocfilehash: 7c93d91324233b05541c09e037f5043f2d9e376f
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="create-a-simple-simulation-sql-and-r-deep-dive"></a>建立簡單的模擬 （SQL 與 R 深入探討）
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -133,8 +119,8 @@ ms.lasthandoff: 02/11/2018
 若要重新使用本逐步解說的較大的資料檔案，下載的資料，，然後修改每一個資料來源，如下所示：
 
 1. 修改變數`ccFraudCsv`和`ccScoreCsv`以指向新的資料檔
-2. 變更所參考的資料表名稱*sqlFraudTable*至`ccFraud10`
-3. 變更所參考的資料表名稱*sqlScoreTable*至`ccFraudScore10`
+2. 變更所參考的資料表名稱*sqlFraudTable*至 `ccFraud10`
+3. 變更所參考的資料表名稱*sqlScoreTable*至 `ccFraudScore10`
 
 ## <a name="additional-samples"></a>其他範例
 

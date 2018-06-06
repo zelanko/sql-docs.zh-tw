@@ -1,31 +1,29 @@
 ---
-title: "預先定義的角色 | Microsoft Docs"
-ms.custom: 
+title: 預先定義的角色 | Microsoft Docs
+ms.custom: ''
 ms.date: 10/22/2015
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: security
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - security [Reporting Services], defaults
 - default security
 - role-based security [Reporting Services], defaults
 ms.assetid: 6b46db51-7c30-467d-a251-50f50647fe21
-caps.latest.revision: "42"
+caps.latest.revision: 42
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 492f85664f3a1068d32fca9910717d794fb6dc6e
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 59deac2a0b2e20d94fad6dc46f6d70a76ee884ef
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="role-definitions---predefined-roles"></a>角色定義 - 預先定義的角色
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 會安裝一些預先定義的角色，可讓您用來授與報表伺服器作業的存取權。 每個預先定義的角色都會描述相關工作的集合。 您可以將群組和使用者帳戶指派至預先定義的角色，以便提供報表伺服器作業的立即存取權。  
@@ -213,7 +211,7 @@ ms.lasthandoff: 01/09/2018
 |檢視報表伺服器屬性|檢視套用至報表伺服器的屬性，例如應用程式名稱、是否啟用「我的報表」，以及報表記錄預設值。<br /><br /> 如果您從 **系統使用者** 角色移除此工作，將無法使用 [站台設定] 頁面。 另外，應用程式標題不會在每一個頁面的頂端顯示。 根據預設，報表管理員的標題是 "[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]"。|  
 |檢視共用排程|檢視用來執行報表或重新整理報表的共用排程。<br /><br /> 如果您從 **系統使用者** 角色移除此工作，使用者就無法選取共用排程，以搭配訂閱和其他已排程的作業使用。|  
   
- 可以使用 **系統使用者** 角色來補充預設安全性。 您可以將角色包括在新的角色指派中，這會擴充報表伺服器存取權給報表使用者。 如需詳細資訊，請參閱 [Granting Permissions on a Native Mode Report Server](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)。  
+ 可以使用 **系統使用者** 角色來補充預設安全性。 您可以將角色包括在新的角色指派中，這會擴充報表伺服器存取權給報表使用者。 如需詳細資訊，請參閱 [在原生模式報表伺服器上授與權限](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)。  
   
 ## <a name="see-also"></a>另請參閱  
  [建立、刪除或修改角色 &#40;Management Studio&#41;](../../reporting-services/security/role-definitions-create-delete-or-modify.md)   

@@ -1,16 +1,15 @@
 ---
-title: "sp_changesubstatus (TRANSACT-SQL) |Microsoft 文件"
-ms.custom: 
+title: sp_changesubstatus (TRANSACT-SQL) |Microsoft 文件
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - sp_changesubstatus
 ms.assetid: 9370e47a-d128-4f15-9224-1c3642770c39
-caps.latest.revision: 
+caps.latest.revision: 31
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 9fb31421c8f9398e259b41f652d13a5ff8d565b5
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 94c26330636d4e13fe84a2776a72315a418d3d96
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="spchangesubstatus-transact-sql"></a>sp_changesubstatus (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -73,19 +71,19 @@ sp_changesubstatus [ [ @publication = ] 'publication' ]
 ```  
   
 ## <a name="arguments"></a>引數  
- [  **@publication=**] **'***發行集***'**  
- 這是發行集的名稱。 *發行集*是**sysname**，預設值是 **%** 。 如果*發行集*未指定，會影響所有發行集。  
+ [ **@publication=**] **'***publication***'**  
+ 這是發行集的名稱。 *發行集*是**sysname**，預設值是**%**。 如果*發行集*未指定，會影響所有發行集。  
   
  [  **@article=**] **'***文章***'**  
- 這是發行項的名稱。 對發行集而言，它必須是唯一的。 *發行項*是**sysname**，預設值是 **%** 。 如果*文章*未指定，所有發行項會受到影響。  
+ 這是發行項的名稱。 對發行集而言，它必須是唯一的。 *發行項*是**sysname**，預設值是**%**。 如果*文章*未指定，所有發行項會受到影響。  
   
  [  **@subscriber=**] **'***訂閱者***'**  
- 這是要變更狀態的訂閱者名稱。 *訂閱者*是**sysname**，預設值是 **%** 。 如果*訂閱者*未指定，狀態為所有訂閱者變更為指定的發行項。  
+ 這是要變更狀態的訂閱者名稱。 *訂閱者*是**sysname**，預設值是**%**。 如果*訂閱者*未指定，狀態為所有訂閱者變更為指定的發行項。  
   
  [  **@status =**] **'***狀態***'**  
  中的訂閱狀態**syssubscriptions**資料表。 *狀態*是**sysname**，沒有預設值，它可以是下列值之一。  
   
-|值|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |**使用中**|已同步處理訂閱者，正在接收資料。|  
 |**非使用中**|訂閱者項目存在，但不含訂閱。|  
@@ -95,7 +93,7 @@ sp_changesubstatus [ [ @publication = ] 'publication' ]
  這是訂閱先前的狀態。 *previous_status*是**sysname**，預設值是 NULL。 這個參數可讓您變更任何訂用帳戶目前具有該狀態，因此讓一組特定的訂用帳戶中的 群組函式 (例如，將所有作用中訂閱重設為**訂閱**)。  
   
  [  **@destination_db=**] **'***destination_db***'**  
- 這是目的地資料庫的名稱。 *destination_db*是**sysname**，預設值是 **%** 。  
+ 這是目的地資料庫的名稱。 *destination_db*是**sysname**，預設值是**%**。  
   
  [  **@frequency_type=**] *frequency_type*  
  這是散發工作的排程頻率。 *frequency_type*是**int**，預設值是 NULL。  
@@ -106,7 +104,7 @@ sp_changesubstatus [ [ @publication = ] 'publication' ]
  [  **@frequency_relative_interval=**] *frequency_relative_interval*  
  這是散發工作的日期。 使用這個參數時*frequency_type*設為 32 （每月相對）。 *frequency_relative_interval*是**int**，而且可以是下列值之一。  
   
-|值|描述|  
+|Value|描述|  
 |-----------|-----------------|  
 |**1**|第一個|  
 |**2**|第二個|  
@@ -121,7 +119,7 @@ sp_changesubstatus [ [ @publication = ] 'publication' ]
  [  **@frequency_subday=**] *frequency_subday*  
  這是在定義的期間內，重新排程的頻率 (以分鐘為單位)。 *frequency_subday*是**int**，而且可以是下列值之一。  
   
-|值|描述|  
+|Value|描述|  
 |-----------|-----------------|  
 |**1**|一次|  
 |**2**|第二個|  
@@ -164,25 +162,25 @@ sp_changesubstatus [ [ @publication = ] 'publication' ]
  > [!NOTE]  
 >  遠端代理程式啟用已被取代，不再受到支援。 支援這個參數的目的，只是為了與舊版的指令碼相容。 設定*remote_agent_server_name*為任何非 NULL 值會產生錯誤。  
   
- [  **@dts_package_name** =] **'***dts_package_name***'**  
+ [ **@dts_package_name**=] **'***dts_package_name***'**  
  指定 Data Transformation Services (DTS) 封裝的名稱。 *dts_package_name*是**sysname**，預設值是 NULL。 例如，針對名為套件**DTSPub_Package**您會指定`@dts_package_name = N'DTSPub_Package'`。  
   
- [  **@dts_package_password** =] **'***dts_package_password***'**  
+ [ **@dts_package_password**=] **'***dts_package_password***'**  
  指定封裝的密碼。 *dts_package_password*是**sysname**預設值是 NULL，其指定密碼屬性維持不變。  
   
 > [!NOTE]  
 >  DTS 封裝必須有密碼。  
   
- [  **@dts_package_location** =] *dts_package_location*  
+ [ **@dts_package_location**=] *dts_package_location*  
  指定封裝的位置。 *dts_package_location*是**int**，預設值是**0**。 如果**0**，封裝位置是在散發者。 如果**1**，封裝位置是在 「 訂閱者 」。 封裝位置可以是**散發者**或**訂閱者**。  
   
- [  **@skipobjectactivation** =] *skipobjectactivation*  
+ [ **@skipobjectactivation**=] *skipobjectactivation*  
  [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
  [  **@distribution_job_name=** ] **'***distribution_job_name***'**  
  這是散發代理程式工作的名稱。 *distribution_job_name*是**sysname**，預設值是 NULL。  
   
- [  **@publisher** =] **'***發行者***'**  
+ [ **@publisher**=] **'***發行者***'**  
  指定非[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]發行者。 *發行者*是**sysname**，預設值是 NULL。  
   
 > [!NOTE]  
@@ -199,11 +197,11 @@ sp_changesubstatus [ [ @publication = ] 'publication' ]
 ## <a name="permissions"></a>Permissions  
  只有成員**sysadmin**固定伺服器角色、 **db_owner**固定的資料庫角色或訂閱的建立者可以執行**sp_changesubstatus**。  
   
-## <a name="see-also"></a>請參閱＜  
- [sp_addsubscription &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md)   
- [sp_dropsubscription &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/sp-dropsubscription-transact-sql.md)   
+## <a name="see-also"></a>另請參閱  
+ [sp_addsubscription &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md)   
+ [sp_dropsubscription &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropsubscription-transact-sql.md)   
  [sp_helpdistributor &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpdistributor-transact-sql.md)   
- [sp_helpsubscription &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/sp-helpsubscription-transact-sql.md)   
+ [sp_helpsubscription &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpsubscription-transact-sql.md)   
  [系統預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

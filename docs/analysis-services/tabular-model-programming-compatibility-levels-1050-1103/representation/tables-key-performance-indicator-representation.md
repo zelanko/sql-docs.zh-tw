@@ -1,33 +1,23 @@
 ---
-title: "主要效能指標表示法 （表格式） |Microsoft 文件"
-ms.custom: 
-ms.date: 03/04/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+title: 主要效能指標表示法 （表格式） |Microsoft 文件
+ms.date: 05/07/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: tabular-models
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
-ms.assetid: 8d3d949e-5d43-4d2e-9dc8-48d182a7a935
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 5b159965ba0428c267b62fd712cd34bc26cca833
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 3a536272f6e41e3aaf1abe6404139b67e0e558f0
+ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="tables---key-performance-indicator-representation"></a>資料表的關鍵效能指標表示法
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
-KPI 是用來針對目標值，測量由基底量值定義之值的效能。  
+  KPI 是用來針對目標值，測量由基底量值定義之值的效能。  
   
 ## <a name="key-performance-indicator-representation"></a>關鍵效能指標表示法  
  在表格式物件模型中，關鍵效能指標 kpi 是包含其他資訊的一種量值，可讓用戶端應用程式以圖形方式加以顯示。 kpi 通常包含有關要取得之目標的資訊、要與目標相比較之量值的狀態，以及有關如何以圖形方式顯示狀態的用戶端工具資訊。  

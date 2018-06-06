@@ -1,32 +1,33 @@
 ---
-title: "ConfigDriver 函式 |Microsoft 文件"
-ms.custom: 
+title: ConfigDriver 函式 |Microsoft 文件
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
-ms.component: odbc
-ms.reviewer: 
+ms.prod: sql
+ms.prod_service: connectivity
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
-ms.topic: article
-apiname: ConfigDriver
-apilocation: sqlsrv32.dll
+ms.technology: connectivity
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
+apiname:
+- ConfigDriver
+apilocation:
+- sqlsrv32.dll
 apitype: dllExport
-f1_keywords: ConfigDriver
-helpviewer_keywords: ConfigDriver [ODBC]
+f1_keywords:
+- ConfigDriver
+helpviewer_keywords:
+- ConfigDriver [ODBC]
 ms.assetid: 9473f48f-bcae-4784-89c1-7839bad4ed13
-caps.latest.revision: "9"
+caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
-ms.workload: Inactive
-ms.openlocfilehash: 1697b7e697760afee2b62c49bd24c2ab22c9201d
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+manager: craigg
+ms.openlocfilehash: 100cf1cc68287c2eb5914176cb307f9a450344d8
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="configdriver-function"></a>ConfigDriver 函式
 **一致性**  
@@ -85,7 +86,7 @@ BOOL ConfigDriver(
 ## <a name="diagnostics"></a>診斷  
  當**ConfigDriver**傳回 FALSE，相關聯 *\*pfErrorCode*值由呼叫張貼至安裝程式錯誤緩衝區**SQLPostInstallerError**可取得藉由呼叫**SQLInstallerError**。 下表列出 *\*pfErrorCode*可以傳回的值**SQLInstallerError** ，並說明每個內容中的這個函式。  
   
-|*\*pfErrorCode*|錯誤|描述|  
+|*\*pfErrorCode*|錯誤|Description|  
 |---------------------|-----------|-----------------|  
 |ODBC_ERROR_INVALID_HWND|無效的視窗控制代碼|*HwndParent*引數無效。|  
 |ODBC_ERROR_INVALID_REQUEST_TYPE|要求的類型無效|*常見*引數不是下列其中之一：<br /><br /> ODBC_INSTALL_DRIVER ODBC_REMOVE_DRIVER<br /><br /> 驅動程式特有的選項是小於或等於 ODBC_CONFIG_DRIVER_MAX。|  

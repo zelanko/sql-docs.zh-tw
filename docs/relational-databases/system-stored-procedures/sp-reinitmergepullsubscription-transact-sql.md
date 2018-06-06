@@ -1,16 +1,15 @@
 ---
-title: "sp_reinitmergepullsubscription (TRANSACT-SQL) |Microsoft 文件"
-ms.custom: 
+title: sp_reinitmergepullsubscription (TRANSACT-SQL) |Microsoft 文件
+ms.custom: ''
 ms.date: 03/04/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - sp_reinitmergepullsubscription
 ms.assetid: 48464bc9-60aa-4886-b526-163f010102b8
-caps.latest.revision: 
+caps.latest.revision: 32
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 5d6f906cf3335079618629c03cc5503debd9a519
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 20c701adf431f550f107a9cef08f1a3e49a9d611
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="spreinitmergepullsubscription-transact-sql"></a>sp_reinitmergepullsubscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,16 +47,16 @@ sp_reinitmergepullsubscription [ [ @publisher = ] 'publisher' ]
 ```  
   
 ## <a name="arguments"></a>引數  
- [  **@publisher**  =] **'***發行者***'**  
+ [ **@publisher** = ] **'***publisher***'**  
  這是發行者的名稱。 *發行者*是**sysname**，所有的預設值。  
   
- [  **@publisher_db**  =] **'***publisher_db***'**  
+ [ **@publisher_db** = ] **'***publisher_db***'**  
  這是發行者資料庫的名稱。 *publisher_db*是**sysname**，所有的預設值。  
   
- [  **@publication**  =] **'***發行集***'**  
+ [ **@publication** = ] **'***publication***'**  
  這是發行集的名稱。 *發行集*是**sysname**，所有的預設值。  
   
- [  **@upload_first**  =] **'***upload_first***'**  
+ [ **@upload_first** =] **'***upload_first***'**  
  這是指在訂閱重新初始化之前，是否上傳在訂閱者端的變更。 *upload_first*是**nvarchar （5)**，預設值是 FALSE。 如果**true**，訂閱重新初始化之前上傳變更。 如果**false**，不會上傳變更。  
   
 ## <a name="return-code-values"></a>傳回碼值  
@@ -78,7 +76,7 @@ sp_reinitmergepullsubscription [ [ @publisher = ] 'publisher' ]
 ## <a name="permissions"></a>Permissions  
  只有成員**sysadmin**固定的伺服器角色或**db_owner**固定的資料庫角色可以執行**sp_reinitmergepullsubscription**。  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [重新初始化訂閱](../../relational-databases/replication/reinitialize-a-subscription.md)   
  [重新初始化訂閱](../../relational-databases/replication/reinitialize-subscriptions.md)   
  [系統預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  

@@ -1,16 +1,15 @@
 ---
-title: "sp_deletetracertokenhistory (TRANSACT-SQL) |Microsoft 文件"
-ms.custom: 
+title: sp_deletetracertokenhistory (TRANSACT-SQL) |Microsoft 文件
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,21 +19,20 @@ f1_keywords:
 helpviewer_keywords:
 - sp_deletetracertokenhistory
 ms.assetid: 9ae1be14-0d2f-40b1-9d6e-22d79726abf4
-caps.latest.revision: 
+caps.latest.revision: 26
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: b9e130ffe0853d899bcacd63c35d7987c9981329
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: fdfe59e931fe224106eddb9358a5cba06e57c61a
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="spdeletetracertokenhistory-transact-sql"></a>sp_deletetracertokenhistory (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  移除追蹤 token 記錄從[MStracer_tokens &#40;TRANSACT-SQL &#41;](../../relational-databases/system-tables/mstracer-tokens-transact-sql.md)和[MStracer_history &#40;TRANSACT-SQL &#41;](../../relational-databases/system-tables/mstracer-history-transact-sql.md)系統資料表。 這個預存程序是在發行集資料庫的發行者端，或散發資料庫的散發者端執行。  
+  移除追蹤 token 記錄從[MStracer_tokens &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-tables/mstracer-tokens-transact-sql.md)和[MStracer_history &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-tables/mstracer-history-transact-sql.md)系統資料表。 這個預存程序是在發行集資料庫的發行者端，或散發資料庫的散發者端執行。  
   
  ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -78,13 +76,13 @@ sp_deletetracertokenhistory [ @publication = ] 'publication'
   
  如果您不會執行**sp_deletetracertokenhistory**若要移除追蹤 token 中繼資料，將會移除資訊時定期排程的記錄清除工作。  
   
- 您可以藉由執行判斷追蹤 token 識別碼[sp_helptracertokens &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/sp-helptracertokens-transact-sql.md)或藉由查詢[MStracer_tokens &#40;TRANSACT-SQL &#41;](../../relational-databases/system-tables/mstracer-tokens-transact-sql.md)系統資料表。  
+ 您可以藉由執行判斷追蹤 token 識別碼[sp_helptracertokens &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-stored-procedures/sp-helptracertokens-transact-sql.md)或藉由查詢[MStracer_tokens &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-tables/mstracer-tokens-transact-sql.md)系統資料表。  
   
 ## <a name="permissions"></a>Permissions  
  只有成員**sysadmin**固定伺服器角色、 **db_owner**在發行集資料庫中，固定資料庫角色或**db_owner**固定的資料庫或**replmonitor**散發資料庫中的角色可以執行**sp_deletetracertokenhistory**。  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [針對異動複寫測量延遲及驗證連線](../../relational-databases/replication/monitor/measure-latency-and-validate-connections-for-transactional-replication.md)   
- [sp_helptracertokenhistory &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/sp-helptracertokenhistory-transact-sql.md)  
+ [sp_helptracertokenhistory &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-helptracertokenhistory-transact-sql.md)  
   
   

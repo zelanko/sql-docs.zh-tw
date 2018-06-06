@@ -1,17 +1,14 @@
 ---
-title: "將資料庫還原到新位置 (SQL Server) | Microsoft 文件"
-ms.custom: 
+title: 將資料庫還原到新位置 (SQL Server) | Microsoft 文件
+ms.custom: ''
 ms.date: 08/05/2016
-ms.prod: sql-non-specified
-ms.prod_service: database-engine
-ms.service: 
-ms.component: backup-restore
-ms.reviewer: 
+ms.prod: sql
+ms.prod_service: backup-restore
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- dbe-backup-restore
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: backup-restore
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - restoring databases [SQL Server], moving
 - database restores [SQL Server], creating new databases
@@ -22,20 +19,19 @@ helpviewer_keywords:
 - restoring databases [SQL Server], renaming
 - database creation [SQL Server], restoring with move
 ms.assetid: 4da76d61-5e11-4bee-84f5-b305240d9f42
-caps.latest.revision: 
+caps.latest.revision: 71
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.workload: Active
-ms.openlocfilehash: fab639dbd4bccffd5e4739d80a7e6830835c790c
-ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
+ms.openlocfilehash: 159436df1286717f2698b463a2645b6b4a58430d
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="restore-a-database-to-a-new-location-sql-server"></a>將資料庫還原到新位置 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-此主題描述如何使用 SQL Server Management Studio (SSMS) 或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中將 [!INCLUDE[tsql](../../includes/tsql-md.md)]資料庫還原至新位置，並選擇性地重新命名資料庫。 您可以將資料庫移至新目錄路徑，或是在相同的伺服器執行個體或不同的伺服器執行個體上建立資料庫的複本。  
+  此主題描述如何使用 SQL Server Management Studio (SSMS) 或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中將 [!INCLUDE[tsql](../../includes/tsql-md.md)]資料庫還原至新位置，並選擇性地重新命名資料庫。 您可以將資料庫移至新目錄路徑，或是在相同的伺服器執行個體或不同的伺服器執行個體上建立資料庫的複本。  
     
 ##  <a name="BeforeYouBegin"></a> 開始之前！  
   
@@ -97,7 +93,7 @@ ms.lasthandoff: 02/23/2018
   
      如需 [要還原的備份組] 方格中各資料行的相關資訊，請參閱[還原資料庫 &#40;一般頁面&#41;](../../relational-databases/backup-restore/restore-database-general-page.md)。  
   
-7.  若要指定資料庫檔案的新位置，請選取 **[檔案]** 頁面，然後按一下 **[將所有檔案重新放置到資料夾]**。 提供 **[資料檔資料夾]** 及 **[記錄檔資料夾]**的新位置。 如需這個方格的詳細資訊，請參閱[還原資料庫 &#40;檔案頁面&#41;](../../relational-databases/backup-restore/restore-database-files-page.md)。  
+7.  若要指定資料庫檔案的新位置，請選取 **[檔案]** 頁面，然後按一下 **[將所有檔案重新放置到資料夾]**。 提供 **[資料檔資料夾]** 及 **[記錄檔資料夾]** 的新位置。 如需這個方格的詳細資訊，請參閱[還原資料庫 &#40;檔案頁面&#41;](../../relational-databases/backup-restore/restore-database-files-page.md)。  
   
 8.  在 **[選項]** 頁面上，依需要調整選項。 如需這些選項的詳細資訊，請參閱[還原資料庫 &#40;選項頁面&#41;](../../relational-databases/backup-restore/restore-database-options-page.md)。  
 

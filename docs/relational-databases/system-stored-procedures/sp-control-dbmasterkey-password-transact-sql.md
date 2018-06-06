@@ -1,16 +1,14 @@
 ---
-title: "sp_control_dbmasterkey_password (TRANSACT-SQL) |Microsoft 文件"
-ms.custom: 
+title: sp_control_dbmasterkey_password (TRANSACT-SQL) |Microsoft 文件
+ms.custom: ''
 ms.date: 02/25/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: system-objects
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_control_dbmasterkey_password
@@ -20,16 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_control_dbmasterkey_password
 ms.assetid: 63979a87-42a2-446e-8e43-30481faaf3ca
-caps.latest.revision: 
+caps.latest.revision: 27
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 8564e7fc3ab9f9e6419ebe7ff140408cb1940b29
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: a9894a10965affbd65406276445f6c84f05ce76e
+ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="spcontroldbmasterkeypassword-transact-sql"></a>sp_control_dbmasterkey_password (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -81,7 +78,7 @@ sp_control_dbmasterkey_password @db_name = 'database_name,
 > [!NOTE]  
 >  當您使用的認證是之前使用 sp_control_dbmasterkey_password 開啟資料庫主要金鑰所加入的認證時，服務主要金鑰會重新加密資料庫主要金鑰。 如果資料庫處於唯讀模式，重新加密作業將會失敗，而且資料庫主要金鑰會維持未加密的狀態。 之後如果要存取資料庫主要金鑰，您必須使用 OPEN MASTER KEY 陳述式和密碼。 若要避免使用密碼，將資料庫移到唯讀模式之前要先建立認證。  
   
- **可能的回溯相容性問題：**目前預存程序不會檢查主要金鑰是否存在。 這可允許回溯相容性，但是會顯示警告。 這個行為已被取代。 在未來的版本，主要金鑰必須存在，預存程序中使用的密碼**sp_control_dbmasterkey_password**必須是相同的密碼做為其中一個用來加密資料庫主要金鑰的密碼。  
+ **可能的回溯相容性問題：** 目前預存程序不會檢查主要金鑰是否存在。 這可允許回溯相容性，但是會顯示警告。 這個行為已被取代。 在未來的版本，主要金鑰必須存在，預存程序中使用的密碼**sp_control_dbmasterkey_password**必須是相同的密碼做為其中一個用來加密資料庫主要金鑰的密碼。  
   
 ## <a name="permissions"></a>Permissions  
  需要資料庫的 CONTROL 權限。  
@@ -106,9 +103,9 @@ EXEC sp_control_dbmasterkey_password @db_name = N'AdventureWorks2012',
 GO  
 ```  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [設定加密鏡像資料庫](../../database-engine/database-mirroring/set-up-an-encrypted-mirror-database.md)   
- [安全性預存程序 &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
+ [安全性預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
  [系統預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [sys.credentials &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-credentials-transact-sql.md)   
  [認證 &#40;Database Engine&#41;](../../relational-databases/security/authentication-access/credentials-database-engine.md)  

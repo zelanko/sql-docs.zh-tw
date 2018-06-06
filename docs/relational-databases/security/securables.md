@@ -1,17 +1,16 @@
 ---
-title: "安全性實體 | Microsoft Docs"
-ms.custom: 
+title: 安全性實體 | Microsoft Docs
+ms.custom: ''
 ms.date: 10/18/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
 ms.component: security
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 f1_keywords:
 - sql13.swb.roleproperties.selectobject.f1
 helpviewer_keywords:
@@ -21,16 +20,16 @@ helpviewer_keywords:
 - hierarchies [SQL Server], securables
 - server securables [SQL Server]
 ms.assetid: bfa748f0-70b0-453c-870a-04b7b205b9ff
-caps.latest.revision: 
+caps.latest.revision: 41
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 872f68edea028965624fdb06ea82973e5a8480fa
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: d829c96618376895a3d1b3c402b80fc3c945cbdc
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="securables"></a>[安全性實體]
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -48,7 +47,7 @@ ms.lasthandoff: 11/21/2017
   
 -   伺服器角色  
   
--   資料庫  
+-   [資料庫]  
   
 ## <a name="securable-scope-database"></a>安全性實體範圍：資料庫  
  **資料庫** 安全性實體範圍包含下列安全性實體：  
@@ -88,7 +87,7 @@ ms.lasthandoff: 11/21/2017
 ## <a name="securable-scope-schema"></a>安全性實體範圍：結構描述  
  **結構描述** 安全性實體範圍包含下列安全性實體：  
   
--   型別  
+-   類型  
   
 -   XML 結構描述集合  
   

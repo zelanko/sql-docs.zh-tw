@@ -1,33 +1,30 @@
 ---
-title: "CursorType 屬性 (ADO) |Microsoft 文件"
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
+title: CursorType 屬性 (ADO) |Microsoft 文件
+ms.prod: sql
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
-ms.custom: 
+ms.technology: connectivity
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 apitype: COM
 f1_keywords:
 - Recordset15::CursorType
 helpviewer_keywords:
 - CursorType property [ADO]
 ms.assetid: b62c66ca-58d5-430e-9257-eb38c65e48c2
-caps.latest.revision: 
+caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 6b2123fe185bd52947812bea251c7af4b46989a9
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 83302f195c18aee51f0f7fb4c5bfe2d59ae4e882
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="cursortype-property-ado"></a>CursorType 屬性 (ADO)
 表示使用中的資料指標類型[資料錄集](../../../ado/reference/ado-api/recordset-object-ado.md)物件。  
@@ -47,9 +44,9 @@ ms.lasthandoff: 02/09/2018
 |資料錄集的這個 CursorType|支援方法必須為 true，則傳回所有這些常數|  
 |----------------------------------------|---------------------------------------------------------------------|  
 |**adOpenForwardOnly**|無|  
-|**adOpenKeyset**|**adBookmark**, **adHoldRecords**, **adMovePrevious**, **adResync**|  
+|**adOpenKeyset**|**adBookmark**， **adHoldRecords**， **adMovePrevious**， **adResync**|  
 |**adOpenDynamic**|**adMovePrevious**|  
-|**adOpenStatic**|**adBookmark**, **adHoldRecords**, **adMovePrevious**, **adResync**|  
+|**adOpenStatic**|**adBookmark**， **adHoldRecords**， **adMovePrevious**， **adResync**|  
   
 > [!NOTE]
 >  雖然**支援**(**adUpdateBatch**) 可能是動態且順向資料指標，則為 true 批次更新，您應該使用索引鍵集或靜態資料指標。 設定[LockType](../../../ado/reference/ado-api/locktype-property-ado.md)屬性**Adlockpessimistic**和**CursorLocation**屬性**adUseClient**以啟用資料指標OLE DB 中，所需的批次更新服務。  

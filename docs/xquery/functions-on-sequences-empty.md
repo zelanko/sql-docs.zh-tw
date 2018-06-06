@@ -1,16 +1,15 @@
 ---
-title: "空白函數 (XQuery) |Microsoft 文件"
-ms.custom: 
+title: 空白函數 (XQuery) |Microsoft 文件
+ms.custom: ''
 ms.date: 03/09/2017
-ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
-ms.service: 
+ms.prod: sql
+ms.prod_service: sql
 ms.component: xquery
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,21 +19,20 @@ helpviewer_keywords:
 - empty function
 - fn:empty function
 ms.assetid: 46da89a8-0cd9-4913-8521-4087589a04ba
-caps.latest.revision: 
+caps.latest.revision: 27
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 433edf397acdb7a49371c80bffb562f7c27bf125
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: f312276737406070eb07f371d5fb1c807b8e24b2
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="functions-on-sequences---empty"></a>序列-空白的函式
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  如果為 true 的值*$arg*是空的序列。 否則，此函數會傳回 False。  
+  如果為 true 的值 *$arg*是空的序列。 否則，此函數會傳回 False。  
   
 ## <a name="syntax"></a>語法  
   
@@ -48,7 +46,7 @@ fn:empty($arg as item()*) as xs:boolean
  項目序列。 如果序列是空的，則函數會傳回 True。 否則，此函數會傳回 False。  
   
 ## <a name="remarks"></a>備註  
- **Fn:exists()**函式不支援。 或者， **not （)**可用函式。  
+ **Fn:exists()** 函式不支援。 或者， **not （)** 可用函式。  
   
 ## <a name="examples"></a>範例  
  本主題提供 XQuery 範例，針對 XML 執行個體儲存在各種**xml**類型 AdventureWorks 資料庫中的資料行。  
@@ -121,6 +119,6 @@ ProductModelID Result
   
 ## <a name="see-also"></a>另請參閱  
  [針對 xml 資料類型的 XQuery 函數](../xquery/xquery-functions-against-the-xml-data-type.md)   
- [存在 &#40; &#41;方法 &#40; xml 資料類型 &#41;](../t-sql/xml/exist-method-xml-data-type.md)  
+ [exist&#40;&#41; 方法 &#40;xml 資料類型&#41;](../t-sql/xml/exist-method-xml-data-type.md)  
   
   

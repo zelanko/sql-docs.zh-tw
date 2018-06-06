@@ -1,16 +1,15 @@
 ---
-title: "與順序有關的 Xquery |Microsoft 文件"
-ms.custom: 
+title: 與順序有關的 Xquery |Microsoft 文件
+ms.custom: ''
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
-ms.service: 
+ms.prod: sql
+ms.prod_service: sql
 ms.component: xquery
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -21,16 +20,15 @@ helpviewer_keywords:
 - XQuery, sequence
 - ordered expressions [XQuery]
 ms.assetid: 4f1266c5-93d7-402d-94ed-43f69494c04b
-caps.latest.revision: 
+caps.latest.revision: 23
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: ade45beb1eed3079937b6d9302500b10adcca162
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 978e800ba5539878eb805c16f2460de3761dda59
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="xqueries-involving-order"></a>與順序有關的 XQuery
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -68,9 +66,9 @@ WHERE ProductModelID=7
   
  請注意下列項目是從上一個查詢而來：  
   
--   大括號括住的運算式由其評估結果取代。 如需詳細資訊，請參閱[XML 建構 &#40;XQuery &#41;](../xquery/xml-construction-xquery.md).  
+-   大括號括住的運算式由其評估結果取代。 如需詳細資訊，請參閱[XML 建構&#40;XQuery&#41;](../xquery/xml-construction-xquery.md)。  
   
--   **@\***擷取第二個工作中心位置的所有的屬性。  
+-   **@\*** 擷取第二個工作中心位置的所有的屬性。  
   
 -   FLWOR 反覆運算 (FOR ...RETURN) 擷取第二個工作中心位置的所有 <`step`> 子元素。  
   
@@ -90,7 +88,7 @@ WHERE ProductModelID=7
 </ManuStep>    
 ```  
   
- 上一個查詢只擷取文字節點。 如果您想讓整個 <`step`> 項目傳回相反地，移除**string （)**函式的查詢：  
+ 上一個查詢只擷取文字節點。 如果您想讓整個 <`step`> 項目傳回相反地，移除**string （)** 函式的查詢：  
   
 ### <a name="b-find-all-the-material-and-tools-used-at-the-second-work-center-location-in-the-manufacturing-of-a-product"></a>B. 在第二個工作中心位置尋找所有用來製造產品的材料和工具  
  針對特定產品型號，下列查詢會在製造過程的工作中心位置順序中，擷取在第二個工作中心位置所使用的工具和材料。  
@@ -168,7 +166,7 @@ where ProductModelID=19
   
  查詢主題建構 XML 來包含具有 ProductModelID 和 ProductModelName 屬性的 <`ProductModel`> 元素。  
   
--   此查詢使用 FOR ...RETURN 迴圈來擷取產品型號功能描述。 **Position （)**函式用來擷取前兩個功能。  
+-   此查詢使用 FOR ...RETURN 迴圈來擷取產品型號功能描述。 **Position （)** 函式用來擷取前兩個功能。  
   
  以下是結果：  
   
@@ -226,7 +224,7 @@ where ProductModelID=7
 ```  
   
 ### <a name="e-find-the-last-two-manufacturing-steps-at-the-first-work-center-location-in-the-manufacturing-of-a-specific-product"></a>E. 在特定產品之製造過程的第一個工作中心位置尋找最後兩個製造步驟  
- 此查詢會使用**last （)**函式可擷取最後兩個製造步驟。  
+ 此查詢會使用**last （)** 函式可擷取最後兩個製造步驟。  
   
 ```  
 SELECT Instructions.query('   
@@ -257,6 +255,6 @@ where ProductModelID=7
 ## <a name="see-also"></a>另請參閱  
  [XML 資料 &#40;SQL Server&#41;](../relational-databases/xml/xml-data-sql-server.md)   
  [XQuery 語言參考 &#40;SQL Server&#41;](../xquery/xquery-language-reference-sql-server.md)   
- [XML 建構 &#40;XQuery &#41;](../xquery/xml-construction-xquery.md)  
+ [XML 建構&#40;XQuery&#41;](../xquery/xml-construction-xquery.md)  
   
   

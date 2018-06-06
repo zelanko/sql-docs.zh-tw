@@ -1,35 +1,23 @@
 ---
-title: "將篩選套用至模型測試資料 |Microsoft 文件"
-ms.custom: 
-ms.date: 03/01/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
-helpviewer_keywords:
-- input row filtering [SQL Server]
-- filtering input rows [Analysis Services]
-- Mining Accuracy Chart [Analysis Services], filtering input rows
-ms.assetid: 9ccc9a23-5597-4b35-a05f-2fc8eb885147
-caps.latest.revision: 
-author: Minewiskan
+title: 將篩選套用至模型測試資料 |Microsoft 文件
+ms.date: 05/01/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: data-mining
+ms.topic: conceptual
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: bb193bb9e90d1bd2b7773c2a1bd2f237e7fa0135
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 03eb6a8b8a459f0d5d0769d1f7af16f06b81f560
+ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="apply-filters-to-model-testing-data"></a>將篩選套用至模型測試資料
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-當您指定要用於測試模型的外部資料來源時，可以選擇性地套用篩選，以限制輸入資料。 例如，您可能想要特別針對某個收入範圍的客戶進行預測來測試模型。  
+  當您指定要用於測試模型的外部資料來源時，可以選擇性地套用篩選，以限制輸入資料。 例如，您可能想要特別針對某個收入範圍的客戶進行預測來測試模型。  
   
  例如，在 Adventure Works 目標郵寄案例中，您可以對 ProspectiveBuyer (這是包含測試資料的資料表) 建立一個如下的篩選運算式，依收入範圍來限制測試案例：  
   
@@ -88,7 +76,7 @@ ms.lasthandoff: 02/15/2018
   
 9. 按一下 [及/或] 文字方塊並選取邏輯運算子來定義多項條件的組合方式。  
   
-10. (選擇性) 按一下位於 [值] 文字方塊右側的瀏覽按鈕 **(…)**來開啟 [篩選] 對話方塊，並針對巢狀資料表或個別的案例資料表資料行設定條件。  
+10. (選擇性) 按一下位於 [值] 文字方塊右側的瀏覽按鈕 **(…)** 來開啟 [篩選] 對話方塊，並針對巢狀資料表或個別的案例資料表資料行設定條件。  
   
 11. 檢視 [運算式] 窗格中的文字，藉以確認完成的篩選條件是否正確。  
   

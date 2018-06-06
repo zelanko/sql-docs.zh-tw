@@ -1,34 +1,33 @@
 ---
-title: "逐步解說：加入與變更資料庫圖表 | Microsoft Docs"
-ms.custom: 
+title: 逐步解說：加入與變更資料庫圖表 | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
 ms.component: ssms-visual-db
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: tools-ssms
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ssms
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - database diagrams [SQL Server], about database diagrams
 - database diagrams [SQL Server], designing
 - database diagrams [SQL Server], creating
 ms.assetid: 228caa0d-8f24-46ab-86d1-b6d8631322bc
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: a258f766d08c0cbd513cd34b152708f4948445e7
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.openlocfilehash: a81fc1d6a60bc4bbb1d9ef2f67c3f5c32f60dc7c
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="walkthrough-adding-and-changing-a-database-diagram"></a>逐步解說：加入與變更資料庫圖表
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 這個逐步解說將說明如何建立與修改資料庫圖表，以及透過資料庫圖表元件對資料庫進行變更。 您將看到如何將資料表加入至圖表、建立資料表之間的關聯性、建立資料行上的條件約束和索引，以及變更您查看每個資料表的資訊層級。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+這個逐步解說將說明如何建立與修改資料庫圖表，以及透過資料庫圖表元件對資料庫進行變更。 您將看到如何將資料表加入至圖表、建立資料表之間的關聯性、建立資料行上的條件約束和索引，以及變更您查看每個資料表的資訊層級。  
   
 ## <a name="prerequisites"></a>Prerequisites  
 為了完成這個逐步解說，您需要：  

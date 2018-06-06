@@ -1,28 +1,26 @@
 ---
-title: "在記憶體最佳化資料表中實作 SQL_VARIANT | Microsoft Docs"
-ms.custom: 
+title: 在記憶體最佳化資料表中實作 SQL_VARIANT | Microsoft Docs
+ms.custom: ''
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
 ms.component: in-memory-oltp
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine-imoltp
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: in-memory-oltp
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: f17f21df-959d-4e20-92f3-bd707d555a46
-caps.latest.revision: 
+caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 9b043fb065a9b9930c6cd86d23bd6fefaf1de4af
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: a0f5e3f0ea24919009e0a7b42946e2431a7e95df
+ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="implementing-sqlvariant-in-a-memory-optimized-table"></a>在記憶體最佳化資料表中實作 SQL_VARIANT
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -33,7 +31,7 @@ ms.lasthandoff: 02/12/2018
 CREATE TABLE [dbo].[T1]([Key] [sql_variant] NOT NULL)  
 ```  
   
- 假設索引鍵資料行只能是 **BIGINT** 或 **NVARCHAR(300)**其中之一。 您可以依照下列方式製作此資料表的模型：  
+ 假設索引鍵資料行只能是 **BIGINT** 或 **NVARCHAR(300)** 其中之一。 您可以依照下列方式製作此資料表的模型：  
   
 ```sql  
 -- original disk-based table  

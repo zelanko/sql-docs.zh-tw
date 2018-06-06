@@ -1,17 +1,16 @@
 ---
-title: "增強式密碼 | Microsoft Docs"
-ms.custom: 
+title: 增強式密碼 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
 ms.component: security
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - logins [SQL Server], passwords
 - passwords [SQL Server], strong
@@ -21,19 +20,20 @@ helpviewer_keywords:
 - characters [SQL Server], password policies
 - strong passwords [SQL Server]
 ms.assetid: 338548f4-c4d8-47ca-b597-5c9c0f2fa205
-caps.latest.revision: 
+caps.latest.revision: 30
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 7c5b783d4899479523d0e54fda7620ad0145b642
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 1118725745df2d61e73dcb376ab6a260bdd007fb
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="strong-passwords"></a>增強式密碼
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 密碼可能是伺服器安全性部署中最薄弱的環節。 您在選取密碼的時候，應該始終保持小心謹慎的態度。 增強式密碼具有下列特性：  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+  密碼會是伺服器安全性部署中最薄弱的連結。 您在選取密碼的時候，應該始終保持小心謹慎的態度。 增強式密碼具有下列特性：  
   
 -   長度至少為 8 個字元。  
   
@@ -59,7 +59,7 @@ ms.lasthandoff: 11/21/2017
   
 -   以 $ 或 @ 字元開始。  
   
- 如果是用在 OLE DB 或 ODBC 連接字串中，則登入或密碼中不能包含下列字元：[] {}() , ; ? * ! @. 這些字元是用來初始化連接或分隔連接值。  
+ 如果是用在 OLE DB 或 ODBC 連接字串中，則登入或密碼中不能包含下列字元：[] {}() , ; ? * ! @。 這些字元是用來初始化連接或分隔連接值。  
   
 ## <a name="related-content"></a>相關內容  
  [密碼原則](../../relational-databases/security/password-policy.md)  

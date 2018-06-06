@@ -1,25 +1,22 @@
 ---
-title: "開始使用 Red Hat Enterprise Linux 上的 SQL Server 2017 |Microsoft 文件"
-description: "本快速入門示範如何在 Red Hat Enterprise Linux 上安裝 SQL Server 2017 然後建立並查詢資料庫，以使用 sqlcmd。"
+title: 開始使用 Red Hat Enterprise Linux 上的 SQL Server 2017 |Microsoft 文件
+description: 本快速入門示範如何在 Red Hat Enterprise Linux 上安裝 SQL Server 2017 然後建立並查詢資料庫，以使用 sqlcmd。
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.date: 02/22/2018
 ms.topic: article
-ms.prod: sql-non-specified
-ms.prod_service: database-engine
-ms.service: 
-ms.component: 
+ms.prod: sql
+ms.technology: linux
+ms.component: ''
 ms.suite: sql
 ms.custom: sql-linux
-ms.technology: database-engine
 ms.assetid: 92503f59-96dc-4f6a-b1b0-d135c43e935e
-ms.workload: Active
-ms.openlocfilehash: 6919cdbb506ccbe36ed3e8c167be4321b5ee2a27
-ms.sourcegitcommit: f0c5e37c138be5fb2cbb93e9f2ded307665b54ea
+ms.openlocfilehash: de149b0a75a550101e761baa109bc07dac062fcd
+ms.sourcegitcommit: b5ab9f3a55800b0ccd7e16997f4cd6184b4995f9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/24/2018
+ms.lasthandoff: 05/23/2018
 ---
 # <a name="quickstart-install-sql-server-and-create-a-database-on-red-hat"></a>快速入門： 安裝 SQL Server 和 Red Hat 上建立資料庫
 
@@ -34,7 +31,7 @@ ms.lasthandoff: 02/24/2018
 
 您必須擁有 RHEL 7.3 或 7.4 機器**至少 2 GB**的記憶體。
 
-若要在自己電腦上安裝 Red Hat Enterprise Linux，請移至[http://access.redhat.com/products/red-hat-enterprise-linux/evaluation](http://access.redhat.com/products/red-hat-enterprise-linux/evaluation)。 您也可以在 Azure 中建立 RHEL 虛擬機器。 請參閱[建立和管理 Linux Vm 與 Azure CLI](https://docs.microsoft.com/azure/virtual-machines/linux/tutorial-manage-vm)，並使用`--image RHEL`呼叫`az vm create`。
+若要在自己電腦上安裝 Red Hat Enterprise Linux，請移至[ http://access.redhat.com/products/red-hat-enterprise-linux/evaluation ](http://access.redhat.com/products/red-hat-enterprise-linux/evaluation)。 您也可以在 Azure 中建立 RHEL 虛擬機器。 請參閱[建立和管理 Linux Vm 與 Azure CLI](https://docs.microsoft.com/azure/virtual-machines/linux/tutorial-manage-vm)，並使用`--image RHEL`呼叫`az vm create`。
 
 其他系統需求，請參閱[系統需求的 SQL Server on Linux](sql-server-linux-setup.md#system)。
 
@@ -120,7 +117,7 @@ ms.lasthandoff: 02/24/2018
 > **Sqlcmd**是一個工具連接到 SQL Server 來執行查詢，並執行管理和開發工作。 其他工具包括：
 >
 > * [SQL Server Operations Studio (預覽)](../sql-operations-studio/what-is.md)
-> * [SQL Server Management Studio](sql-server-linux-develop-use-ssms.md)
+> * [SQL Server Management Studio](sql-server-linux-manage-ssms.md)
 > * [Visual Studio 程式碼](sql-server-linux-develop-use-vscode.md)。
 > * [mssql-cli (預覽)](https://blogs.technet.microsoft.com/dataplatforminsider/2017/12/12/try-mssql-cli-a-new-interactive-command-line-tool-for-sql-server/)
 

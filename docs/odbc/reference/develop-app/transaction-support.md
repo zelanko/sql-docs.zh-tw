@@ -1,28 +1,26 @@
 ---
-title: "交易支援 |Microsoft 文件"
-ms.custom: 
+title: 交易支援 |Microsoft 文件
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
-ms.component: odbc
-ms.reviewer: 
+ms.prod: sql
+ms.prod_service: connectivity
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
-ms.topic: article
-helpviewer_keywords: transactions [ODBC], degree of support
+ms.technology: connectivity
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
+helpviewer_keywords:
+- transactions [ODBC], degree of support
 ms.assetid: d56e1458-8da2-4d73-a777-09e045c30a33
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
-ms.workload: Inactive
-ms.openlocfilehash: 4964565ce7de30b30fa3dc4c7705c5656ebcb88b
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+manager: craigg
+ms.openlocfilehash: 2f3e62cd93f3823a2205ed2c2721ed95749f7a1a
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="transaction-support"></a>交易支援
 交易程度是支援的驅動程式定義。 ODBC 被設計來管理多個更新，其資料不需要在單一使用者或桌面資料庫上實作。 此外，某些支援交易的資料庫進行，只讓資料操作語言 (DML) 陳述式的 SQL。沒有限制或特殊交易語意有關使用資料定義語言 (DDL) 使用中交易時。 也就是可能對資料表的多個同時更新，但對變更的數目與定義的資料表在交易期間的交易支援。  

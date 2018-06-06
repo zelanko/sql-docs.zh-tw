@@ -1,16 +1,15 @@
 ---
-title: "sp_helpqreader_agent (TRANSACT-SQL) |Microsoft 文件"
-ms.custom: 
+title: sp_helpqreader_agent (TRANSACT-SQL) |Microsoft 文件
+ms.custom: ''
 ms.date: 03/04/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - sp_helpqreader_agent
 ms.assetid: 8e74e1aa-e95b-4183-8017-bf123439b08d
-caps.latest.revision: 
+caps.latest.revision: 21
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 50492a76e742459e7b883f9887026d0ce63d1eb1
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: be49f8a6303096487ef2c36593280fcc72e38a91
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sphelpqreaderagent-transact-sql"></a>sp_helpqreader_agent (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -51,13 +49,13 @@ sp_helpqreader_agent [ [ @frompublisher = ] frompublisher ]
   
 ## <a name="result-sets"></a>結果集  
   
-|資料行名稱|資料類型|描述|  
+|資料行名稱|資料類型|Description|  
 |-----------------|---------------|-----------------|  
 |**id**|**int**|代理程式的識別碼。|  
-|**name**|**nvarchar （100)**|代理程式的名稱。|  
+|**name**|**nvarchar(100)**|代理程式的名稱。|  
 |**job_id**|**uniqueidentifier**|代理程式作業的唯一識別碼。|  
 |**job_login**|**nvarchar(512)**|Windows 帳戶的散發代理程式執行，這傳回的格式如下*網域*\\*username*。|  
-|**job_password**|**sysname**|基於安全性理由，值為 **\* \* \* \* \* \* \* \* \* \*** 一律是傳回。|  
+|**job_password**|**sysname**|基於安全性理由，值為**\* \* \* \* \* \* \* \* \* \*** 一律是傳回。|  
   
 ## <a name="return-code-values"></a>傳回碼值  
  **0** （成功） 或**1** （失敗）  
@@ -68,7 +66,7 @@ sp_helpqreader_agent [ [ @frompublisher = ] frompublisher ]
 ## <a name="permissions"></a>Permissions  
  當值*frompublisher*是**1**，只有的成員**sysadmin** 「 發行者 」 或成員的固定的伺服器角色**db_owner**發行集資料庫上的固定的資料庫角色可以執行**sp_helpqreader_agent**。 否則，只有**sysadmin**固定的伺服器角色的成員的散發者**db_owner**散發資料庫上的固定的資料庫角色可以執行**sp_helpqreader_代理程式**。  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [啟用交易式發行集的更新訂閱](../../relational-databases/replication/publish/enable-updating-subscriptions-for-transactional-publications.md)  
   
   

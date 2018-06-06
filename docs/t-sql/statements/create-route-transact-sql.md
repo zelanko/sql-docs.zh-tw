@@ -1,16 +1,14 @@
 ---
 title: CREATE ROUTE (Transact-SQL) | Microsoft Docs
-ms.custom: 
-ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.custom: ''
+ms.date: 03/30/2018
+ms.prod: sql
 ms.prod_service: sql-database
-ms.service: 
 ms.component: t-sql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: t-sql
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - CREATE_ROUTE_TSQL
@@ -29,19 +27,19 @@ helpviewer_keywords:
 - activating routes
 - CREATE ROUTE statement
 ms.assetid: 7e695364-1a98-4cfd-8ebd-137ac5a425b3
-caps.latest.revision: 
-author: barbkess
-ms.author: barbkess
+caps.latest.revision: 42
+author: edmacauley
+ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 767be5069d65c11dad849a8fc32f5b15296a4eda
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 17d01e8997fc27cd26fda5b29644b0cc1418af9e
+ms.sourcegitcommit: d2573a8dec2d4102ce8882ee232cdba080d39628
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="create-route-transact-sql"></a>CREATE ROUTE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md )]
 
   將新的路由加入目前資料庫的路由表中。 如果是外寄郵件，[!INCLUDE[ssSB](../../includes/sssb-md.md)] 會檢查本機資料庫中的路由表來判斷路由。 如果是另一個執行個體所引發之交談的訊息，其中包括要轉寄的訊息，[!INCLUDE[ssSB](../../includes/sssb-md.md)] 會檢查 **msdb** 中的路由。  
   
@@ -73,7 +71,7 @@ WITH
  導入定義所建立之路由的子句。  
   
  SERVICE_NAME = **'***service_name***'**  
- 指定這個路由所指向的遠端服務名稱。 *service_name* 必須與遠端服務所使用的名稱完全相符。 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 會利用逐位元組的比較方式來比對 *service_name*。 換言之，這項比較會區分大小寫，且不會考慮目前的定序。 如果省略 SERVICE_NAME，這個路由會符合任何服務名稱，但符合的優先權低於指定 SERVICE_NAME 的路由。 服務名稱是 **'SQL/ServiceBroker/BrokerConfiguration'** 的路由，是指向 Broker Configuration Notice 服務的路由。 指向這項服務的路由不能指定 Broker 執行個體。  
+ 指定這個路由所指向的遠端服務名稱。 *service_name* 必須與遠端服務所使用的名稱完全相符。 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 會使用逐位元組的比較方式來比對 *service_name*。 換言之，這項比較會區分大小寫，且不會考慮目前的定序。 如果省略 SERVICE_NAME，這個路由會符合任何服務名稱，但符合的優先權低於指定 SERVICE_NAME 的路由。 服務名稱是 **'SQL/ServiceBroker/BrokerConfiguration'** 的路由，是指向 Broker Configuration Notice 服務的路由。 指向這項服務的路由不能指定 Broker 執行個體。  
   
  BROKER_INSTANCE = **'***broker_instance_identifier***'**  
  指定主控目標服務的資料庫。 *broker_instance_identifier* 參數必須是遠端資料庫的 Broker 執行個體識別碼，您可以在所選資料庫中執行下列查詢來取得這個識別碼：  
@@ -90,7 +88,9 @@ WHERE database_id = DB_ID()
  指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 將路由保留在路由表中的時間量 (以秒為單位)。 在存留期間結束時，路由會到期，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 在選擇新交談的路由時，不會再考慮這個路由。 如果省略這個子句，*route_lifetime* 便是 NULL，且路由永遠不會到期。  
   
  ADDRESS **='***next_hop_address***'**  
- 指定這個路由的網路位址。 *next_hop_address* 以下列格式指定 TCP/IP 位址：  
+Azure SQL Database 受控執行個體的 `ADDRESS` 必須為本機。 
+
+指定這個路由的網路位址。 *next_hop_address* 以下列格式指定 TCP/IP 位址：  
   
  **TCP://**{ *dns_name* | *netbios_name* | *ip_address* } **:***port_number*  
   

@@ -1,16 +1,14 @@
 ---
 title: PARSE (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 07/05/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
 ms.component: t-sql|functions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: t-sql
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - PARSE
@@ -20,16 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - PARSE function
 ms.assetid: 6a2dbf10-f692-471b-9458-24d246963049
-caps.latest.revision: 
+caps.latest.revision: 18
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Active
-ms.openlocfilehash: 3e172a7d68edc212ce4803103dc1f975e4bf89db
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 71317463fcfd585067832627f50bd8090fe0ae19
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="parse-transact-sql"></a>PARSE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -57,7 +54,7 @@ PARSE ( string_value AS data_type [ USING culture ] )
  *culture*  
  選擇性字串，指出 *string_value* 要據以格式化的文化特性 (Culture)。  
   
- 如未提供 *culture* 引數，將會使用目前工作階段的語言。 此語言是以 SET LANGUAGE 陳述式隱含或明確加以設定。 *culture* 接受 .NET Framework 所支援的任何文化特性，不限於 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 明確支援的語言。 如果 *culture* 引數無效，PARSE 會引發錯誤。  
+ 如未提供 *culture* 引數，將會使用目前工作階段的語言。 此語言是以 SET LANGUAGE 陳述式隱含或明確加以設定。 *culture* 接受 .NET Framework 所支援的任何文化特性 (Culture)，不限於 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 明確支援的語言。 如果 *culture* 引數無效，PARSE 會引發錯誤。  
   
 ## <a name="return-types"></a>傳回類型  
  傳回轉譯成所要求之資料類型的運算式結果。  
@@ -98,7 +95,7 @@ PARSE ( string_value AS data_type [ USING culture ] )
 |日期及時間|datetime2|DateTime|DateTimeStyles.AllowWhiteSpaces &#124; DateTimeStyles.AssumeUniversal|  
 |日期及時間|datetimeoffset|DateTimeOffset|DateTimeStyles.AllowWhiteSpaces &#124; DateTimeStyles.AssumeUniversal|  
   
- **文化特性參數的詳細資訊**  
+ **文化特性 (Culture) 參數的詳細資訊**  
   
  下表顯示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 語言所對應的 .NET Framework 文化特性。  
   

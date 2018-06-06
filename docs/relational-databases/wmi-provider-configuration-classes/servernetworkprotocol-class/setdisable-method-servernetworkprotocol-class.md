@@ -1,16 +1,15 @@
 ---
-title: "SetDisable 方法 （ServerNetworkProtocol 類別） |Microsoft 文件"
-ms.custom: 
+title: SetDisable 方法 （ServerNetworkProtocol 類別） |Microsoft 文件
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
 ms.component: wmi
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - SetDisable Method (ServerNetworkProtocol Class)
@@ -20,20 +19,19 @@ apitype: MOFDef
 helpviewer_keywords:
 - SetDisable method
 ms.assetid: 0ebbe0c5-07ad-4a76-a918-e379930adf71
-caps.latest.revision: 
-author: JennieHubbard
-ms.author: jhubbard
+caps.latest.revision: 30
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: e93adefad43663fd278fd13f1c0882894953d1b4
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.openlocfilehash: 3fe3e2d7976dd4159b336b38266ab0e80928478c
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="setdisable-method-servernetworkprotocol-class"></a>SetDisable 方法 (ServerNetworkProtocol 類別)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
-停用伺服器網路通訊協定。  
+  停用伺服器網路通訊協定。  
   
 ## <a name="syntax"></a>語法  
   

@@ -1,31 +1,28 @@
 ---
-title: "Oracle 的 ODBC 驅動程式 |Microsoft 文件"
-ms.custom: 
+title: Oracle 的 ODBC 驅動程式 |Microsoft 文件
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
-ms.component: odbc
-ms.reviewer: 
+ms.prod: sql
+ms.prod_service: connectivity
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: connectivity
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - ODBC driver for Oracle [ODBC]
 - ODBC driver for Oracle [ODBC], about ODBC driver for Oracle
 - Oracle data access [ODBC]
 ms.assetid: 937e0662-8b1d-44f7-b077-4015c6605b2c
-caps.latest.revision: "11"
+caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
-ms.workload: On Demand
-ms.openlocfilehash: 70ae9b447f0f3bcc6e70060b2f46f994ef3ea773
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+manager: craigg
+ms.openlocfilehash: a129bbc39f35c2418fc0dc5d34e534d4c7fb8cbc
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="odbc-driver-for-oracle"></a>Oracle 的 ODBC 驅動程式
 > [!IMPORTANT]  
@@ -37,7 +34,7 @@ ms.lasthandoff: 12/21/2017
   
  Oracle 的 ODBC 驅動程式可讓應用程式透過 ODBC 介面存取 Oracle 資料庫中的資料。 此驅動程式可以存取本機 Oracle 資料庫或透過 SQL 網路與通訊 * 網路。 下圖詳細說明此應用程式和驅動程式的架構。  
   
- ![ODBC Driver for Oracle 應用程式 &#47; 驅動程式架構](../../odbc/microsoft/media/orcdrvsdkarch.gif "OrcDrvSDKArch")  
+ ![Oracle 應用程式的 ODBC 驅動程式&#47;驅動程式架構](../../odbc/microsoft/media/orcdrvsdkarch.gif "OrcDrvSDKArch")  
   
  Oracle 的 ODBC 驅動程式符合 API 的一致性層級 1 和 SQL 一致性層級的核心。 它也會支援 API 的一致性層級 2 和大部分的核心和擴充 SQL 一致性層級中的文法中的某些函式。 驅動程式為 ODBC 2.5 相容，並支援 32 位元系統。 Oracle 7.3 x 完全; 支援Oracle8 具有有限的支援。 ODBC Driver for Oracle 不支援新的 Oracle8 資料類型，Unicode 資料類型，Blob、 Clob、，依此類推，也不支援 Oracle 的新的關聯式物件模型。 如需有關支援的資料類型的詳細資訊，請參閱[Supported Data Types](../../odbc/microsoft/supported-data-types-odbc-driver-for-oracle.md)本指南中。  
   

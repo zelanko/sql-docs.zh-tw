@@ -1,25 +1,22 @@
 ---
-title: "設定 SQL Server SLES 共用的磁碟叢集 |Microsoft 文件"
-description: "藉由設定適用於 SQL Server 的 SUSE Linux Enterprise Server (SLES) 共用的磁碟叢集實作高可用性。"
+title: 設定 SQL Server SLES 共用的磁碟叢集 |Microsoft 文件
+description: 藉由設定適用於 SQL Server 的 SUSE Linux Enterprise Server (SLES) 共用的磁碟叢集實作高可用性。
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.date: 03/17/2017
 ms.topic: article
-ms.prod: sql-non-specified
-ms.prod_service: database-engine
-ms.service: 
-ms.component: 
+ms.prod: sql
+ms.component: ''
 ms.suite: sql
 ms.custom: sql-linux
-ms.technology: database-engine
+ms.technology: linux
 ms.assetid: e5ad1bdd-c054-4999-a5aa-00e74770b481
-ms.workload: Inactive
-ms.openlocfilehash: 9ef50e606e89d1e6673806ee0d90df510c6c6a68
-ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
+ms.openlocfilehash: 5c394dbfc613803a8f7eb0cf906b4b7733777919
+ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/13/2018
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="configure-sles-shared-disk-cluster-for-sql-server"></a>設定 SQL Server SLES 共用的磁碟叢集
 

@@ -1,30 +1,28 @@
 ---
-title: "如何： 使用 SQLSRV 驅動程式時，指定 SQL Server 資料類型 |Microsoft 文件"
-ms.custom: 
+title: 如何： 使用 SQLSRV 驅動程式時，指定 SQL Server 資料類型 |Microsoft 文件
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
+ms.prod: sql
+ms.prod_service: connectivity
 ms.component: php
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: connectivity
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - converting data types
 - streaming data
 ms.assetid: 1fcf73cb-5634-4d89-948f-9326f1dbd030
-caps.latest.revision: "18"
+caps.latest.revision: 18
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
-ms.workload: Inactive
-ms.openlocfilehash: c3ad9f3e6aa9e136f76122f39079db21b31c30d3
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+manager: craigg
+ms.openlocfilehash: d3c73c660e0b5468eabfb2878552dd396567144e
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="how-to-specify-sql-server-data-types-when-using-the-sqlsrv-driver"></a>如何：使用 SQLSRV 驅動程式指定 SQL Server 資料類型
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -36,7 +34,7 @@ ms.lasthandoff: 11/18/2017
 下列步驟概述如何在將資料傳送至伺服器時指定 SQL Server 資料類型：  
   
 > [!NOTE]  
-> 如果未指定 SQL Server 資料類型，將會使用預設類型。 如需預設 SQL Server 資料類型的相關資訊，請參閱 [Default SQL Server Data Types](../../connect/php/default-sql-server-data-types.md)。  
+> 如果指定 SQL Server 資料類型，則會使用預設類型。 如需預設 SQL Server 資料類型的相關資訊，請參閱 [Default SQL Server Data Types](../../connect/php/default-sql-server-data-types.md)。  
   
 1.  定義會插入或更新資料的 Transact-SQL 查詢。 在查詢中，請使用問號 (?) 做為參數值的預留位置。  
   
@@ -44,7 +42,7 @@ ms.lasthandoff: 11/18/2017
   
 3.  建構在準備或執行查詢時要使用的 *$params* 陣列。 請注意， *$params* 陣列的每個元素，在您指定 SQL Server 資料類型時也必須是陣列。  
   
-4.  指定所需的 SQL Server 資料類型，使用適當的**SQLSRV_SQLTYPE_\*** 常數中的每個子陣列的第四個參數為*$params*陣列。 如需完整的清單**SQLSRV_SQLTYPE_\*** 常數，請參閱 Sqltype 」 一節的[常數 &#40;Microsoft Drivers for PHP for SQL Server&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md). 例如，在下方的程式碼中， *$changeDate*、 *$rate*和 *$payFrequency* 分別指定為 **$params**陣列中的 SQL Server 類型 **datetime**、 **money** 和 *tinyint* 。 由於未指定 *$employeeId* 的 SQL Server 類型，而且它初始化為整數，因此會使用預設的 SQL Server 類型 **integer** 。  
+4.  指定所需的 SQL Server 資料類型，使用適當的**SQLSRV_SQLTYPE_\*** 常數中的每個子陣列的第四個參數為 *$params*陣列。 如需完整的清單**SQLSRV_SQLTYPE_\*** 常數，請參閱 Sqltype 」 一節的[常數&#40;Microsoft Drivers for PHP for SQL Server&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md)。 例如，在下方的程式碼中， *$changeDate*、 *$rate*和 *$payFrequency* 分別指定為 **$params**陣列中的 SQL Server 類型 **datetime**、 **money** 和 *tinyint* 。 由於未指定 *$employeeId* 的 SQL Server 類型，而且它初始化為整數，因此會使用預設的 SQL Server 類型 **integer** 。  
   
     ```  
     $employeeId = 5;  
@@ -60,9 +58,9 @@ ms.lasthandoff: 11/18/2017
     ```  
   
 ## <a name="example"></a>範例  
-下列範例會在 AdventureWorks 資料庫的 *HumanResources.EmployeePayHistory* 資料表中插入資料。 對於 *$changeDate*、 *$rate*和 *$payFrequency* 參數，會指定 SQL Server 類型。 對於 *$employeeId* 參數會使用預設 SQL Server 類型。 若要確認資料已成功插入，可以擷取和顯示相同的資料。  
+下列範例會將資料插入*HumanResources.EmployeePayHistory* AdventureWorks 資料庫的資料表。 對於 *$changeDate*、 *$rate*和 *$payFrequency* 參數，會指定 SQL Server 類型。 對於 *$employeeId* 參數會使用預設 SQL Server 類型。 若要確認資料已成功插入，可以擷取和顯示相同的資料。  
   
-此範例假設本機電腦上已安裝 SQL Server 和 [AdventureWorks](http://go.microsoft.com/fwlink/?LinkID=67739) 資料庫。 從命令列執行範例時，所有輸出都會寫入至主控台。  
+這個範例假設 SQL Server 和[AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works)資料庫安裝在本機電腦上。 從命令列執行範例時，所有輸出都會寫入至主控台。  
   
 ```  
 <?php  
@@ -141,9 +139,13 @@ sqlsrv_close($conn);
 ```  
   
 ## <a name="see-also"></a>另請參閱  
-[擷取資料](../../connect/php/retrieving-data.md)  
-[關於文件中的程式碼範例](../../connect/php/about-code-examples-in-the-documentation.md)  
-[如何：指定 PHP 資料類型](../../connect/php/how-to-specify-php-data-types.md)  
-[Converting Data Types](../../connect/php/converting-data-types.md)  
-[如何：使用內建的 UTF-8 支援傳送及接收 UTF-8 資料](../../connect/php/how-to-send-and-retrieve-utf-8-data-using-built-in-utf-8-support.md)  
+[擷取資料](../../connect/php/retrieving-data.md)
+
+[關於文件中的程式碼範例](../../connect/php/about-code-examples-in-the-documentation.md)
+
+[如何：指定 PHP 資料類型](../../connect/php/how-to-specify-php-data-types.md)
+
+[轉換資料類型](../../connect/php/converting-data-types.md)
+
+[如何：使用內建的 UTF-8 支援傳送及擷取 UTF-8 資料](../../connect/php/how-to-send-and-retrieve-utf-8-data-using-built-in-utf-8-support.md)  
   

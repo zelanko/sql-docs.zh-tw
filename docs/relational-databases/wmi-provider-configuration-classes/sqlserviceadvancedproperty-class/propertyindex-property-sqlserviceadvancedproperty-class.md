@@ -1,16 +1,15 @@
 ---
-title: "PropertyIndex 屬性 （SqlServiceAdvancedProperty 類別） |Microsoft 文件"
-ms.custom: 
+title: PropertyIndex 屬性 （SqlServiceAdvancedProperty 類別） |Microsoft 文件
+ms.custom: ''
 ms.date: 03/03/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
 ms.component: wmi
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - PropertyIndex Property (SqlServiceAdvancedProperty Class)
@@ -20,20 +19,19 @@ apitype: MOFDef
 helpviewer_keywords:
 - PropertyIndex property
 ms.assetid: b18b45a2-e187-44f5-a8c9-26fd9828b6c6
-caps.latest.revision: 
-author: JennieHubbard
-ms.author: jhubbard
+caps.latest.revision: 33
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: fa87a6944453adb11c1d1654e019679047fa0354
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.openlocfilehash: 358d1040f833d1f6e286c7a08e6fa72d816bca11
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="propertyindex-property-sqlserviceadvancedproperty-class"></a>PropertyIndex 屬性 (SqlServiceAdvancedProperty 類別)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
-取得或設定指定進階屬性位置的屬性索引，該進階屬性位於屬於參考之服務的進階屬性陣列中。  
+  取得或設定指定進階屬性位置的屬性索引，該進階屬性位於屬於參考之服務的進階屬性陣列中。  
   
 ## <a name="syntax"></a>語法  
   

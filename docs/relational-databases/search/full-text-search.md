@@ -1,33 +1,32 @@
 ---
-title: "全文檢索搜尋 | Microsoft Docs"
-ms.custom: 
-ms.date: 07/29/2016
-ms.prod: sql-non-specified
-ms.prod_service: database-engine, sql-database
-ms.service: 
+title: 全文檢索搜尋 | Microsoft Docs
+ms.custom: ''
+ms.date: 04/10/2018
+ms.prod: sql
+ms.prod_service: search, sql-database
 ms.component: search
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- dbe-search
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: database-engine
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - full-text search [SQL Server]
 ms.assetid: a0ce315d-f96d-4e5d-b4eb-ff76811cab75
-caps.latest.revision: 
+caps.latest.revision: 54
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: Active
-ms.openlocfilehash: f69fa33969aeaa0d6ae1064651afd6c93c93d353
-ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 5464c11f7c9594e613bb4385731736a3204c08f9
+ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/13/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="full-text-search"></a>全文檢索搜尋
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)] 中的全文檢索搜尋可讓使用者和應用程式針對 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料表中以字元為主的資料，執行全文檢索查詢。
   
 ## <a name="basic-tasks"></a>基本工作
@@ -139,7 +138,7 @@ ms.lasthandoff: 02/13/2018
 ###  <a name="indexing"></a> 全文檢索索引處理序  
  全文檢索擴展 (也就是搜耙) 起始時，全文檢索引擎會將大批的資料發送至記憶體中，並通知篩選背景程式主機。 此主機會針對資料進行篩選並斷詞，並且將轉換的資料轉換成反向字詞清單。 然後，全文檢索搜尋會從這些字詞清單中提取轉換的資料、處理資料以便移除停用字詞，並且將批次的字詞清單保存在一或多個反向索引中。  
   
- 對 **varbinary(max)** 或 **image** 資料行中儲存的資料編製索引時，實作 **IFilter** 介面的篩選會依據為該資料指定的檔案格式 (例如 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Word 格式) 擷取文字。 在某些情況下，篩選元件必須將 **varbinary(max)**或 **image** 資料寫出至 filterdata 資料夾，而不是推送至記憶體中。  
+ 對 **varbinary(max)** 或 **image** 資料行中儲存的資料編製索引時，實作 **IFilter** 介面的篩選會依據為該資料指定的檔案格式 (例如 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Word 格式) 擷取文字。 在某些情況下，篩選元件必須將 **varbinary(max)** 或 **image** 資料寫出至 filterdata 資料夾，而不是推送至記憶體中。  
   
  做為處理程序的一部分，收集的文字資料在經由文字分隔的處理之後，會分隔成 Token 或關鍵字。 用於 Token 化的語言是在資料行層級指定，也可由篩選元件在 **varbinary(max)**、 **image**或 **xml** 資料中識別。  
   

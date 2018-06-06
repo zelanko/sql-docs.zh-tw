@@ -1,32 +1,29 @@
 ---
-title: "轉換規則 |Microsoft 文件"
-ms.custom: 
+title: 轉換規則 |Microsoft 文件
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
-ms.component: odbc
-ms.reviewer: 
+ms.prod: sql
+ms.prod_service: connectivity
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: connectivity
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - numeric data type [ODBC], literals
 - conversions with numeric literals [ODBC]
 - numeric literals [ODBC]
 - literals [ODBC], numeric
 ms.assetid: 89f846a3-001d-496a-9843-ac9c38dc1762
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
-ms.workload: Inactive
-ms.openlocfilehash: 441f65fabad5894d1277a9c42ecd6c4a6d9e5fff
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+manager: craigg
+ms.openlocfilehash: d8020afb215724e05201ac0a2a23ff0f39f1642a
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="rules-for-conversions"></a>轉換規則
 本節中的規則適用於包含數值常值轉換。 這些規則的目的，會定義下列詞彙：  
@@ -35,13 +32,13 @@ ms.lasthandoff: 12/21/2017
   
 -   *擷取指派：*若干應用程式緩衝區，從資料庫擷取資料時。 呼叫期間發生此錯誤**SQLFetch**， **SQLGetData**， **SQLFetchScroll**，和**SQLSetPos**。 在擷取指派 「 目標 」 是指應用程式緩衝區和 「 來源 」 是指資料庫資料行。  
   
--   *CS:*字元來源中的值。  
+-   *CS:* 字元來源中的值。  
   
--   *NT:*數值目標中的值。  
+-   *NT:* 數值目標中的值。  
   
--   *NS:*數值來源中的值。  
+-   *NS:* 數值來源中的值。  
   
--   *CT:*字元目標中的值。  
+-   *CT:* 字元目標中的值。  
   
 -   確切的數值常值的有效位數： 它所包含的位數。  
   
@@ -81,9 +78,9 @@ ms.lasthandoff: 12/21/2017
   
     -   如果 NS 小於 0，然後讓 Y 是結果：  
   
-         '-' &#124; &#124;YP  
+         '-' &AMP;#124; &AMP;#124; YP  
   
-         其中 ' &#124; &#124;' 是字串串連運算子。  
+         其中 '&#124;&#124;' 是字串串連運算子。  
   
          否則，可讓等於 YP Y。  
   

@@ -1,32 +1,29 @@
 ---
-title: "尋找方法範例 (JScript) |Microsoft 文件"
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
+title: 尋找方法範例 (JScript) |Microsoft 文件
+ms.prod: sql
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
-ms.custom: 
+ms.technology: connectivity
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 dev_langs:
 - JScript
 helpviewer_keywords:
 - Find method [ADO], JScript example
 ms.assetid: adb5c37e-7874-41db-b4ee-572c1323deff
-caps.latest.revision: 
+caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 71fc2a1180d702cf0324aefd7769f1fb6d7c0dec
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 4671755b8ebbe5cf69a0341604f931902dea2d0e
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="find-method-example-jscript"></a>尋找方法範例 (JScript)
 這個範例會使用[資料錄集](../../../ado/reference/ado-api/recordset-object-ado.md)物件的[尋找](../../../ado/reference/ado-api/find-method-ado.md)方法來找出並顯示在公司***Northwind***資料庫名稱開頭為字母 G.剪下並貼上下列程式碼，以 [記事本] 或其他文字編輯器，並將它儲存成**FindJS.asp**。  

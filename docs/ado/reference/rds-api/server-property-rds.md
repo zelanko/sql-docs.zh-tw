@@ -1,32 +1,30 @@
 ---
-title: "伺服器屬性 (RDS) |Microsoft 文件"
-ms.technology:
-- drivers
-ms.custom: 
+title: 伺服器屬性 (RDS) |Microsoft 文件
+ms.technology: connectivity
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.component: reference
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 apitype: COM
 f1_keywords:
 - RDS::IBindMgr21::Server
 helpviewer_keywords:
 - Server property [RDS]
 ms.assetid: d2727ce7-da9f-4271-ae3c-9334ef477c14
-caps.latest.revision: 
+caps.latest.revision: 18
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 8a81a3139892898b8468d73f53d22d8bd29c4b63
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 6015f19a003148dbe12d6489b23a33848aa0ca29
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="server-property-rds"></a>伺服器屬性 (RDS)
 指出 Internet Information Services (IIS) 名稱與通訊的通訊協定。  
@@ -120,10 +118,10 @@ DataControl.Server=""
  選擇性。 用來連接到執行 IIS 的伺服器連接埠。 在 Internet Explorer 中設定的連接埠號碼 (上**檢視**功能表上，按一下**選項**，然後選取**連接** 索引標籤) 或在 IIS 中。  
   
  *DataControl*  
- 物件變數，表示**.RDSDataControl**物件。  
+ 物件變數，表示 **.RDSDataControl**物件。  
   
 ## <a name="remarks"></a>備註  
- 伺服器是位置其中**.RDSDataControl**處理要求 （亦即，查詢或更新）。 根據預設，所有處理要求的[RDSServer.DataFactory](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)物件[MSDFMAP。處理常式](../../../ado/guide/remote-data-service/datafactory-customization.md)元件，和[MSDFMAP。INI](../../../ado/guide/remote-data-service/understanding-the-customization-file.md)指定的伺服器上的檔案。 請記住，變更要協調設定中的舊和新的伺服器時**MSDFMAP。INI**檔案。 不相容，可能會失敗，在另一部伺服器上造成成功的要求。 如果 [伺服器] 屬性設定為空字串""，這些物件會使用本機電腦上。  
+ 伺服器是位置其中 **.RDSDataControl**處理要求 （亦即，查詢或更新）。 根據預設，所有處理要求的[RDSServer.DataFactory](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)物件[MSDFMAP。處理常式](../../../ado/guide/remote-data-service/datafactory-customization.md)元件，和[MSDFMAP。INI](../../../ado/guide/remote-data-service/understanding-the-customization-file.md)指定的伺服器上的檔案。 請記住，變更要協調設定中的舊和新的伺服器時**MSDFMAP。INI**檔案。 不相容，可能會失敗，在另一部伺服器上造成成功的要求。 如果 [伺服器] 屬性設定為空字串""，這些物件會使用本機電腦上。  
   
 ## <a name="applies-to"></a>適用於  
  [DataControl 物件 (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)  

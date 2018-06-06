@@ -1,30 +1,31 @@
 ---
-title: "存在 (DMX) |Microsoft 文件"
-ms.custom: 
+title: 存在 (DMX) |Microsoft 文件
+ms.custom: ''
 ms.date: 03/02/2016
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
 ms.component: data-mining
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
-f1_keywords: Exists
-dev_langs: DMX
-helpviewer_keywords: Exists function
+f1_keywords:
+- Exists
+dev_langs:
+- DMX
+helpviewer_keywords:
+- Exists function
 ms.assetid: 3b54dd93-f0a8-4f9a-96ae-a38bf977dda1
-caps.latest.revision: "14"
+caps.latest.revision: 14
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: 6f5fb5dccb91af6409c0ed91796ba5119475ccaf
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: c42102653cb2da9ec85e4714bba3bedb7a99cd52
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="exists-dmx"></a>Exists (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -39,7 +40,7 @@ EXISTS(<subquery>)
 ```  
   
 ## <a name="arguments"></a>引數  
- *子查詢*  
+ *subquery*  
  選取表單的 SELECT 陳述式 * FROM\<資料行名稱 > [其中\<述詞清單 >]。  
   
 ## <a name="result-type"></a>結果類型  
@@ -66,8 +67,8 @@ WHERE [[Model] = 'Patch kit'
   
  若要檢視此查詢所傳回的相同資料的另一個方法是在關聯檢視器中開啟模型，以滑鼠右鍵按一下項目集**Patch kit = Existing**，選取**鑽研**選項，然後再選取**僅限模型案例**。  
   
-## <a name="see-also"></a>請參閱  
- [函式 &#40; DMX &#41;](../dmx/functions-dmx.md)   
- [模型篩選語法和範例 &#40;Analysis Services-資料採礦 &#41;](../analysis-services/data-mining/model-filter-syntax-and-examples-analysis-services-data-mining.md)  
+## <a name="see-also"></a>另請參閱  
+ [函式&#40;DMX&#41;](../dmx/functions-dmx.md)   
+ [模型篩選語法和範例&#40;Analysis Services-資料採礦&#41;](../analysis-services/data-mining/model-filter-syntax-and-examples-analysis-services-data-mining.md)  
   
   

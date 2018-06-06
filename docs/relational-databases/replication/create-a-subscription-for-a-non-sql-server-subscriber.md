@@ -1,32 +1,30 @@
 ---
-title: "為非 SQL Server 訂閱者建立訂閱 | Microsoft Docs"
-ms.custom: 
+title: 為非 SQL Server 訂閱者建立訂閱 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/17/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
 ms.component: replication
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - subscriptions [SQL Server replication], non-SQL Server Subscribers
 - Subscribers [SQL Server replication], non-SQL Server Subscribers
 - non-SQL Server Subscribers, subscriptions
 ms.assetid: 5020ee68-b988-4d57-8066-67d183e61237
-caps.latest.revision: 
+caps.latest.revision: 28
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: a5abfc62f959e40006a2f25cfc91cc84955831aa
-ms.sourcegitcommit: ab25b08a312d35489a2c4a6a0d29a04bbd90f64d
+ms.openlocfilehash: 5c8fdd22ae4a058be09ef59a7ffaf97911647fc8
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="create-a-subscription-for-a-non-sql-server-subscriber"></a>為非 SQL Server 訂閱者建立訂閱
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -71,7 +69,7 @@ ms.lasthandoff: 03/08/2018
   
 3.  以滑鼠右鍵按一下發行集，然後再按一下 **[屬性]**。  
   
-4.  在 **[訂閱選項]** 頁面中，為 **[允許非 SQL Server 訂閱者]** 選項選取 **[True]**值。 選取此選項會變更某些屬性，使發行集能與非[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 訂閱者相容。  
+4.  在 **[訂閱選項]** 頁面中，為 **[允許非 SQL Server 訂閱者]** 選項選取 **[True]** 值。 選取此選項會變更某些屬性，使發行集能與非[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 訂閱者相容。  
   
     > [!NOTE]  
     >  選取 **[True]** 會將 **pre_creation_cmd** 發行項屬性值設為 'drop'。 這項設定會指定當複寫符合發行項中的資料表名稱時，應該要卸除「訂閱者」端的資料表。 如果您在「訂閱者」端有想要保留的現有資料表，請針對每一個發行項使用 [sp_changearticle](../../relational-databases/system-stored-procedures/sp-changearticle-transact-sql.md) 預存程序，並為 **pre_creation_cmd**指定 'none' 值： `sp_changearticle @publication= 'MyPublication', @article= 'MyArticle', @property='pre_creation_cmd', @value='none'`。  
@@ -90,7 +88,7 @@ ms.lasthandoff: 03/08/2018
   
 5.  在 **[加入非 SQL Server 訂閱者]** 對話方塊中，選取「訂閱者」類型。  
   
-6.  在 **[資料來源名稱]**中輸入值：  
+6.  在 **[資料來源名稱]** 中輸入值：  
   
     -   對於 Oracle，該值是您設定的 Transparent Network Substrate (TNS) 的名稱。  
   
@@ -108,11 +106,11 @@ ms.lasthandoff: 03/08/2018
   
 9. 在 **[散發代理程式安全性]** 對話方塊中：  
   
-    -   在 **[處理帳戶]**、 **[密碼]**及 **[確認密碼]** 欄位中，輸入「散發代理程式」應執行並與「訂閱者」建立本機連接所使用的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 帳戶和密碼。  
+    -   在 **[處理帳戶]**、 **[密碼]** 及 **[確認密碼]** 欄位中，輸入「散發代理程式」應執行並與「訂閱者」建立本機連接所使用的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 帳戶和密碼。  
   
          帳戶要求具有以下最小權限：散發資料庫中 **db_owner** 固定資料庫角色的成員；發行集存取清單 (PAL) 的成員；快照集共用的讀取權限；以及對 OLE DB 提供者之安裝目錄的讀取權限。 如需 PAL 的詳細資訊，請參閱[保護發行者](../../relational-databases/replication/security/secure-the-publisher.md)。  
   
-    -   在 **[連接到訂閱者]**下的 **[登入]**、 **[密碼]**及 **[確認密碼]** 欄位中，輸入用來連接到「訂閱者」的登入和密碼。 此登入必須已經設定，還必須具有在訂閱資料庫中建立物件的足夠權限。  
+    -   在 **[連接到訂閱者]** 下的 **[登入]**、 **[密碼]** 及 **[確認密碼]** 欄位中，輸入用來連接到「訂閱者」的登入和密碼。 此登入必須已經設定，還必須具有在訂閱資料庫中建立物件的足夠權限。  
   
     -   在 **[其他連接選項]** 欄位中，以連接字串形式指定「訂閱者」的任何連接選項 (Oracle 不需要其他選項)。 每個選項應以分號分隔。 以下為 DB2 連接字串的範例 (分行符號僅為便於閱讀)：  
   

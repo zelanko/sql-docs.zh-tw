@@ -1,31 +1,23 @@
 ---
-title: "設定使用量資料收集 (Powerpivot for SharePoint |Microsoft 文件"
-ms.custom: 
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
-ms.assetid: 955ca6d6-9d5b-47a4-a87c-59bd23f1bf74
-caps.latest.revision: 
-author: Minewiskan
+title: 設定使用量資料收集 (Powerpivot for SharePoint |Microsoft 文件
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: ppvt-sharepoint
+ms.topic: conceptual
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 60e8c6ab0537a8757d6a75b05e4788dc4a29768f
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: bafa3d8b45dc2ad59314218f34959120b50e6bfe
+ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="configure-usage-data-collection-for-power-pivot-for-sharepoint"></a>設定使用量資料收集的對象 (PowerPivot for SharePoint
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-使用量資料收集是伺服陣列層級的 SharePoint 功能。 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint 會使用並擴充此系統來支援 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 管理儀表板中的報表，以便顯示 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 資料與服務的使用方式。 根據您安裝 SharePoint 的方式而定，可能會關閉伺服陣列的使用量資料收集。 伺服器陣列管理員必須啟用使用量記錄，以建立會顯示在 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 管理儀表板中的使用量資料。  
+  使用量資料收集是伺服陣列層級的 SharePoint 功能。 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint 會使用並擴充此系統來支援 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 管理儀表板中的報表，以便顯示 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 資料與服務的使用方式。 根據您安裝 SharePoint 的方式而定，可能會關閉伺服陣列的使用量資料收集。 伺服器陣列管理員必須啟用使用量記錄，以建立會顯示在 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 管理儀表板中的使用量資料。  
   
  如需 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 管理儀表板中使用量資料的相關資訊，請參閱 [Power Pivot 管理儀表板和使用量資料](../../analysis-services/power-pivot-sharepoint/power-pivot-management-dashboard-and-usage-data.md)。  
   
@@ -55,7 +47,7 @@ ms.lasthandoff: 02/15/2018
   
 1.  在管理中心，按一下 **[監視]**。  
   
-2.  在 **[報表]**區段中，按一下 **[設定 Usage and Health Data Collection]**。  
+2.  在 **[報表]** 區段中，按一下 **[設定 Usage and Health Data Collection]**。  
   
 3.  選取 **[啟用使用狀況資料收集]**。  
   
@@ -118,7 +110,7 @@ ms.lasthandoff: 02/15/2018
   
 1.  [開啟 PowerPivot 服務應用程式頁面](#openconfig)。  
   
-2.  在 **[使用量資料收集]** 區段的 **[使用量資料記錄]**中，輸入要為每個活頁簿記錄資料重新整理活動的天數。  
+2.  在 **[使用量資料收集]** 區段的 **[使用量資料記錄]** 中，輸入要為每個活頁簿記錄資料重新整理活動的天數。  
   
     -   預設值為 365 天。  
   
@@ -173,13 +165,13 @@ ms.lasthandoff: 02/15/2018
 ##  <a name="openconfig"></a> 開啟 [PowerPivot 服務應用程式] 頁面以存取組態設定  
  您必須是伺服陣列或服務系統管理員，才能修改服務應用程式設定。 如果已在伺服器陣列中定義多個 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 服務應用程式，則必須個別修改每個服務應用程式。  
   
-1.  在 [SharePoint 管理中心] 的 **[應用程式管理]**中，按一下 **[管理服務應用程式]**。  
+1.  在 [SharePoint 管理中心] 的 **[應用程式管理]** 中，按一下 **[管理服務應用程式]**。  
   
 2.  尋找 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 服務應用程式。 您可以依其類型來識別服務應用程式。 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 服務應用程式類型是 [[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 服務應用程式]。  
   
 3.  按一下 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 服務應用程式名稱。 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 管理儀表板隨即開啟。  
   
-4.  在 **[動作]**中，按一下 **[設定服務應用程式設定]**。 [ [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 服務應用程式設定] 頁面隨即開啟。  
+4.  在 **[動作]** 中，按一下 **[設定服務應用程式設定]**。 [ [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 服務應用程式設定] 頁面隨即開啟。  
   
 ##  <a name="defaultconfig"></a> PowerPivot 使用量資料收集的預設組態  
  [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 服務作業的使用量資料收集可以使用預設設定來啟用，以便在支援 Analysis Services 整合功能的應用程式中可以立即使用它。 預設值包括會觸發使用量資料收集的事件，對儲存使用量資料之時間長度的限制，以及分類查詢回應時間的臨界值。  
@@ -188,7 +180,7 @@ ms.lasthandoff: 02/15/2018
   
 |設定|預設值|型別|有效範圍|  
 |-------------|-------------------|----------|-----------------|  
-|**Analysis Services 使用量事件** (連接、載入、卸載、要求)|\<enabled>|布林|啟用或停用這些值。|  
+|**Analysis Services 使用量事件** (連接、載入、卸載、要求)|\<啟用 >|布林|啟用或停用這些值。|  
 |**查詢報告間隔**|300 (以秒為單位)|整數|1 到任何正整數。 預設值是 5 分鐘。|  
 |**Usage data history**|365 (以天為單位)|Integer|0 表示無限制，但是您也可以設定歷程記錄資料到期的上限，並設成可自動刪除資料。 有限的保留週期有效值為 1 到 5000 (以天為單位)。|  
 |簡單式回應時間上限|500 (以毫秒為單位)|Integer|設定會定義簡單式要求-回應交換的上限。 任何介於 0 到 500 毫秒之間完成的要求都是簡單式要求，報告用途會加以忽略。|  

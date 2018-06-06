@@ -1,16 +1,15 @@
 ---
-title: "BinaryPath 屬性 （SqlService 類別） |Microsoft 文件"
-ms.custom: 
+title: BinaryPath 屬性 （SqlService 類別） |Microsoft 文件
+ms.custom: ''
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
 ms.component: wmi
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - BinaryPath Property (SqlService Class )
@@ -19,20 +18,19 @@ apilocation:
 helpviewer_keywords:
 - BinaryPath property
 ms.assetid: c59ec28e-be76-44a8-b7aa-e53ea10f71d1
-caps.latest.revision: 
-author: JennieHubbard
-ms.author: jhubbard
+caps.latest.revision: 15
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: a4c21724d4c94906c295e8daf15eed33fc518a71
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.openlocfilehash: 2246782e1284a678d665ad73172ecfc243c871b7
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="binarypath-property-sqlservice-class-"></a>BinaryPath 屬性 (SqlService 類別)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
-取得服務的二進位路徑。  
+  取得服務的二進位路徑。  
   
 ## <a name="syntax"></a>語法  
   

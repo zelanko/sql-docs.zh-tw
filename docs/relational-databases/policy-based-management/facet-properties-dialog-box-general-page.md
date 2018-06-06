@@ -1,33 +1,32 @@
 ---
-title: "Facet 屬性對話方塊，一般頁面 | Microsoft Docs"
-ms.custom: 
+title: Facet 屬性對話方塊，一般頁面 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
 ms.component: performance-monitor
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 f1_keywords:
 - sql13.swb.dmf.facet.f1
 ms.assetid: 04f1d325-832d-4889-a5f1-ca004bdce2de
-caps.latest.revision: 
+caps.latest.revision: 21
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 08c7a77bd90f67e325960cd6c6725220abf04596
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 05517c1df6317c2d44e8ae57e43a605ba28b0db9
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="facet-properties-dialog-box-general-page"></a>Facet 屬性對話方塊、一般頁面
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 使用此對話方塊可檢視原則式管理 Facet 的屬性。 每一個 Facet 都可以套用到一或多個目標類型，例如：伺服器、資料庫或資料表。 使用此頁面可檢視哪些目標類型與這個 Facet 有關。 建立 Facet 時會定義 Facet 的屬性，而且不能使用這個頁面加以變更。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  使用此對話方塊可檢視以原則為基礎之管理 Facet 的屬性。 每一個 Facet 都可以套用到一或多個目標類型，例如：伺服器、資料庫或資料表。 使用此頁面可檢視哪些目標類型與這個 Facet 有關。 建立 Facet 時會定義 Facet 的屬性，而且不能使用這個頁面加以變更。  
   
 ## <a name="options"></a>選項。  
  **說明**  

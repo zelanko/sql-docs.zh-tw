@@ -1,16 +1,15 @@
 ---
-title: "在查詢中指定 TOP 子句 (Visual Database Tools) | Microsoft Docs"
-ms.custom: 
+title: 在查詢中指定 TOP 子句 (Visual Database Tools) | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
 ms.component: ssms-visual-db
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: tools-ssms
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ssms
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - TOP clause, queries
 - percentage of rows returned [SQL Server]
@@ -22,19 +21,19 @@ helpviewer_keywords:
 - limiting rows returned
 - search criteria [SQL Server], TOP clause
 ms.assetid: ba7d7c10-9bb3-4d9b-90b0-5fa94ecae59b
-caps.latest.revision: "4"
+caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 25864b7e96a36e38e1ec31cdee4e902e75033da9
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.openlocfilehash: 1bcf376898866238839c0658d9b445e11b05c70e
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="specify-the-top-clause-in-queries-visual-database-tools"></a>在查詢中指定 TOP 子句 (Visual Database Tools)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] TOP 子句只傳回查詢中的前 *n* 或百分之 *n* 個資料列。 當您要調查結果的一部份，以了解查詢是否如預期運作時，TOP 子句會很有用，它不會使用傳回全部查詢結果所需的資源。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+TOP 子句只傳回查詢中的前 *n* 或百分之 *n* 個資料列。 當您要調查結果的一部份，以了解查詢是否如預期運作時，TOP 子句會很有用，它不會使用傳回全部查詢結果所需的資源。  
   
 ### <a name="to-specify-the-top-clause-in-queries"></a>若要指定查詢中的 TOP 子句  
   

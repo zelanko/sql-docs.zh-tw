@@ -1,16 +1,14 @@
 ---
-title: "將 TCP/IP 連接埠對應到 NUMA 節點 (SQL Server) | Microsoft Docs"
-ms.custom: 
+title: 將 TCP/IP 連接埠對應到 NUMA 節點 (SQL Server) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
-ms.prod_service: database-engine
-ms.service: 
-ms.component: configure-windows
-ms.reviewer: 
+ms.prod: sql
+ms.prod_service: high-availability
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: database-engine
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: configuration
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - NUMA
 - memory [SQL Server], NUMA
@@ -22,19 +20,19 @@ helpviewer_keywords:
 - TCP/IP [SQL Server], NUMA support
 - non-uniform memory access
 ms.assetid: 07727642-0266-4cbc-8c55-3c367e4458ca
-caps.latest.revision: "20"
+caps.latest.revision: 20
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 3f29668768deb7c713d1c80f9d54ac0df9fbfd15
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 6481a8eabffc9459aa742e28400db7fe1442c701
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="map-tcp-ip-ports-to-numa-nodes-sql-server"></a>將 TCP/IP 連接埠對應到 NUMA 節點 (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 本主題描述如何使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 設定管理員，將 TCP/IP 通訊埠對應到非統一記憶體存取 (NUMA) 節點。 在啟動時， [!INCLUDE[ssDE](../../includes/ssde-md.md)] 會將節點資訊寫入錯誤記錄檔。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  此主題描述如何使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 組態管理員，將 TCP/IP 通訊埠對應到非統一記憶體存取 (NUMA) 節點。 在啟動時， [!INCLUDE[ssDE](../../includes/ssde-md.md)] 會將節點資訊寫入錯誤記錄檔。  
   
  若要判斷您想要使用之節點的節點號碼，請從錯誤記錄檔或從 **sys.dm_os_schedulers** 檢視中讀取節點資訊。 若要將 TCP/IP 位址和通訊埠設為單一或多重節點，請在通訊埠編號後面用方括號附加節點識別點陣圖 (相似性遮罩)。 可以用十進位或十六進位格式指定節點。 若要建立點陣圖，請由零開始，將節點從右到左編號，例如 76543210。 建立節點清單的二進位表示法，以 1 代表您要使用的節點，以 0 代表您不要使用的節點。 例如，若要使用 NUMA 節點 0、2 和 5，請指定 00100101。  
   
@@ -58,7 +56,7 @@ ms.lasthandoff: 01/18/2018
   
 2.  在詳細資料窗格中，按兩下 [TCP/IP]。  
   
-3.  在 **[IP 位址]** 索引標籤上，在對應到要設定之 IP 位址的區段中，在 **[TCP 通訊埠]** 方塊中，在通訊埠編號後面以方括號加入 NUMA 節點識別碼中。 例如，對於 TCP 通訊埠 1500 和節點 0、2 和 5，請使用 **1500[37]**或 **1500[0x25]**。  
+3.  在 **[IP 位址]** 索引標籤上，在對應到要設定之 IP 位址的區段中，在 **[TCP 通訊埠]** 方塊中，在通訊埠編號後面以方括號加入 NUMA 節點識別碼中。 例如，對於 TCP 通訊埠 1500 和節點 0、2 和 5，請使用 **1500[37]** 或 **1500[0x25]**。  
   
 ## <a name="see-also"></a>另請參閱  
  [軟體 NUMA &#40;SQL Server&#41;](../../database-engine/configure-windows/soft-numa-sql-server.md)  

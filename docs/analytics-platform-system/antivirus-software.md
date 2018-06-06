@@ -1,28 +1,21 @@
 ---
-title: "防毒軟體 (Analytics Platform System)"
-author: barbkess
-ms.author: barbkess
-manager: jhubbard
-ms.prod: analytics-platform-system
-ms.prod_service: mpp-data-warehouse
-ms.service: 
-ms.component: 
-ms.technology: mpp-data-warehouse
-ms.custom: 
-ms.date: 01/05/2017
-ms.reviewer: na
-ms.suite: sql
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: 60ab9a88-d339-4917-a38b-f9481aef38fd
-caps.latest.revision: "29"
-ms.openlocfilehash: 1733ec6be50d839284fa147eb1cf5c1660b77190
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+title: 防毒軟體-Analytics Platform System |Microsoft 文件
+description: 如果您的資料中心需要防毒軟體，請使用下列指導方針來分析平台系統上安裝的防毒軟體。 我們建議不要安裝防毒軟體，除非確實需要資料中心。
+author: mzaman1
+manager: craigg
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/24/2018
+ms.author: murshedz
+ms.reviewer: martinle
+ms.openlocfilehash: 5d9ff6848d2df43408613d41dc7a0e6f8c1b0b8c
+ms.sourcegitcommit: fc3cd23685c6b9b6972d6a7bab2cc2fc5ebab5f2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/25/2018
 ---
-# <a name="antivirus-software"></a>防毒軟體
+# <a name="antivirus-software-for-analytics-platform-system"></a>防毒軟體對 Analytics Platform System
 如果您的資料中心需要防毒軟體，請使用下列指導方針來分析平台系統上安裝的防毒軟體。 我們建議不要安裝防毒軟體，除非確實需要資料中心。  
   
 > [!WARNING]  
@@ -58,7 +51,7 @@ ms.lasthandoff: 12/21/2017
   
 -   G:\  
   
-***appliance_domain*-AD01**和 ***appliance_domain*-ad02 移**  
+***appliance_domain *-AD01**和 ***appliance_domain *-ad02 移**  
   
 -   無限制  
   
@@ -68,7 +61,7 @@ ms.lasthandoff: 12/21/2017
   
 -   G:\  
   
-***appliance_domain*VMM**  
+***appliance_domain*-VMM**  
   
 -   無限制  
   
@@ -80,6 +73,6 @@ ms.lasthandoff: 12/21/2017
   
 -   C:\iscsitarget  
   
-## <a name="see-also"></a>請參閱  
-[應用裝置管理工作 &#40;Analytics Platform System &#41;](appliance-management-tasks.md)  
+## <a name="see-also"></a>另請參閱  
+[應用裝置管理工作&#40;Analytics Platform System&#41;](appliance-management-tasks.md)  
   

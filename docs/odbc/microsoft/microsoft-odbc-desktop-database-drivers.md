@@ -1,16 +1,14 @@
 ---
-title: "Microsoft ODBC 桌面資料庫驅動程式 |Microsoft 文件"
-ms.custom: 
+title: Microsoft ODBC 桌面資料庫驅動程式 |Microsoft 文件
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
-ms.component: odbc
-ms.reviewer: 
+ms.prod: sql
+ms.prod_service: connectivity
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: connectivity
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - ODBC desktop database drivers [ODBC]
 - Jet-based ODBC drivers [ODBC]
@@ -19,16 +17,15 @@ helpviewer_keywords:
 - Jet-based ODBC drivers [ODBC], about Jet-based ODBC drivers
 - desktop database drivers [ODBC], about desktop database drivers
 ms.assetid: 4e505c65-a8dd-4283-ae28-313d8a3aa046
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
-ms.workload: On Demand
-ms.openlocfilehash: 0a57a4fca26e40a5c83d79f4a952e1c9ccbfa1cc
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+manager: craigg
+ms.openlocfilehash: 4411abb0d9eccf3a209f873d80360de92317ae48
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="microsoft-odbc-desktop-database-drivers"></a>Microsoft ODBC 桌面資料庫驅動程式
 ODBC 是應用程式開發介面使用結構化查詢語言 (SQL) 資料庫存取語言。 您可以存取各種資料庫管理系統 (Dbms) 具有相同 ODBC 來源的程式碼直接併入應用程式的原始程式碼。 Microsoft ODBC 桌面資料庫驅動程式，可以開啟，查詢中，並更新透過 ODBC 介面的桌面資料庫啟用 ODBC 的應用程式的使用者。  
@@ -43,7 +40,7 @@ ODBC 是應用程式開發介面使用結構化查詢語言 (SQL) 資料庫存�
   
 -   dBASE  
   
--   文字  
+-   Text  
   
  請參閱[Visual FoxPro ODBC 驅動程式](../../odbc/microsoft/visual-foxpro-odbc-driver.md)如 Microsoft Visual FoxPro® ODBC 驅動程式的相關詳細文件。  
   

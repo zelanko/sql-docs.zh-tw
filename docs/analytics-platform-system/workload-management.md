@@ -1,28 +1,23 @@
 ---
-title: "工作負載管理 (SQL Server PDW)"
-author: barbkess
-ms.author: barbkess
-manager: jhubbard
-ms.prod: analytics-platform-system
-ms.prod_service: mpp-data-warehouse
-ms.service: 
-ms.component: 
-ms.technology: mpp-data-warehouse
-ms.custom: 
-ms.date: 01/12/2017
-ms.reviewer: na
-ms.suite: sql
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: 69063b1a-a8f3-453a-83ab-afbe7eb4f463
-caps.latest.revision: 
-ms.openlocfilehash: 738818a49491fbf8f8df491cac2f10ebdeedf3bf
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+title: Analytics Platform System 中的工作負載管理 |Microsoft 文件
+description: Analytics Platform System 中的工作負載管理。
+author: mzaman1
+manager: craigg
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
+ms.openlocfilehash: a4f748ed39705f865a303f1b59ae352068f93431
+ms.sourcegitcommit: 2d93cd115f52bf3eff3069f28ea866232b4f9f9e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34707096"
 ---
-# <a name="workload-management"></a>工作負載管理
+# <a name="workload-management-in-analytics-platform-system"></a>Analytics Platform System 中的工作負載管理
+
 SQL Server PDW 的工作負載管理功能可讓使用者和系統管理員將指派到預先設定的記憶體和並行處理設定要求。 使用工作負載管理來改善效能的負載，一致或 mixed 時，允許要求而不會佔用任何要求永遠將適當的資源。  
   
 例如，與在 SQL Server PDW 工作負載管理技術，您可以：  
@@ -42,7 +37,7 @@ SQL Server PDW 的工作負載管理功能可讓使用者和系統管理員將�
 資源類別  
 在 SQL Server PDW，*資源類別*是已預先指派的記憶體和並行限制的內建的伺服器角色。 SQL Server PDW 分配資源，以根據資源類別伺服器角色成員資格，會送出要求的登入要求。  
   
-在計算節點上資源類別的實作會在 SQL Server 中使用資源管理員功能。 資源管理員的相關資訊，請參閱[Resource Governor](http://msdn.microsoft.com/en-us/library/bb933866(v=sql.11).aspx) MSDN 上。  
+在計算節點上資源類別的實作會在 SQL Server 中使用資源管理員功能。 資源管理員的相關資訊，請參閱[Resource Governor](http://msdn.microsoft.com/library/bb933866(v=sql.11).aspx) MSDN 上。  
   
 ### <a name="understand-current-resource-utilization"></a>了解目前的資源使用率  
 若要了解目前正在執行要求的系統資源使用量，請使用 SQL Server PDW 動態管理檢視。 例如，您可以使用 Dmv 來了解是否是執行緩慢的大型雜湊聯結獲益有更多記憶體。  
@@ -63,9 +58,9 @@ ALTER SERVER ROLE largerc ADD MEMBER Anna;
 ## <a name="RC"></a>資源類別的描述  
 下表描述的資源類別和其系統資源配置。  
   
-|資源類別|要求的重要性|最大記憶體使用量 *|並行插槽 (上限 = 32)|Description|  
+|資源類別|要求的重要性|最大記憶體使用量 *|並行插槽 (上限 = 32)|描述|  
 |------------------|----------------------|--------------------------|---------------------------------------|---------------|  
-|預設|中|400 MB|1|根據預設，每個登入允許少量的記憶體和其要求的並行存取資源。<br /><br />登入加入至資源類別時，新的類別會優先使用。 卸除登入後從所有資源類別，登入會還原回預設資源配置。|  
+|預設|中|400 MB|@shouldalert|根據預設，每個登入允許少量的記憶體和其要求的並行存取資源。<br /><br />登入加入至資源類別時，新的類別會優先使用。 卸除登入後從所有資源類別，登入會還原回預設資源配置。|  
 |MediumRC|中|1200 MB|3|要求可能需要的媒體資源類別的範例包括：<br /><br />較大的 CTAS 作業雜湊聯結。<br /><br />選取 需要更多的記憶體，以避免快取到磁碟的作業。<br /><br />資料載入叢集資料行存放區索引。<br /><br />建置、 重建和重新組織叢集資料行存放區索引的較小的資料表有 10-15 資料行。|  
 |largerc|高|2.8 GB|7|要求可能需要大量的資源類別的範例包括：<br /><br />超大型 CTAS 作業有很大的雜湊聯結或包含大型的彙總，例如大型的 ORDER BY 或 GROUP BY 子句。<br /><br />選取作業，例如雜湊聯結或彙總，例如 ORDER BY 或 GROUP BY 子句需要非常大量的記憶體的作業<br /><br />資料載入叢集資料行存放區索引。<br /><br />建置、 重建和重新組織叢集資料行存放區索引的較小的資料表有 10-15 資料行。|  
 |xlargerc|高|8.4 GB|22|超大型的資源類別是針對可能需要在執行階段的額外大型的資源耗用量的要求。|  
@@ -136,7 +131,7 @@ SQL 陳述式和資源類別所控管的作業：
   
 -   UPDATE  
   
--   DELETE  
+-   Delete  
   
 -   還原資料庫還原至應用裝置與多個運算節點時。  
   

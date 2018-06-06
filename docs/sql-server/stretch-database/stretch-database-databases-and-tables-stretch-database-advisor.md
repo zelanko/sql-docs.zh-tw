@@ -1,33 +1,31 @@
 ---
-title: "識別 Stretch Database 的資料庫和資料表 | Microsoft Docs"
-ms.custom: 
+title: 識別 Stretch Database 的資料庫和資料表 | Microsoft Docs
+ms.custom: ''
 ms.date: 10/30/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
 ms.component: stretch-database
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-stretch
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - Stretch Database, identifying databases
 - Stretch Database, identifying tables
 - identifying databases for Stretch Database
 - identifying tables for Stretch Database
 ms.assetid: 81bd93d8-eef8-4572-88d7-5c37ab5ac2bf
-caps.latest.revision: 
+caps.latest.revision: 29
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: c5b4c49b5b2e1c098503bab4e61c8bad0d75f891
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 9543168fcebbc4ee48921bdcf9efd92f6438ed8f
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="identify-databases-and-tables-for-stretch-database-with-data-migration-assistant"></a>使用 Data Migration Assistant 識別適用於 Stretch Database 的資料庫和資料表
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly.md)]

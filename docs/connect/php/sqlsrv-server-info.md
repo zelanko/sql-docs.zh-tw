@@ -1,32 +1,31 @@
 ---
-title: "sqlsrv_server_info |Microsoft 文件"
-ms.custom: 
+title: sqlsrv_server_info | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
+ms.prod: sql
+ms.prod_service: connectivity
 ms.component: php
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
-ms.topic: article
-apiname: sqlsrv_server_info
+ms.technology: connectivity
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
+apiname:
+- sqlsrv_server_info
 apitype: NA
 helpviewer_keywords:
 - API Reference, sqlsrv_server_info
 - sqlsrv_server_info
 ms.assetid: ef6fe2b7-d267-4379-b948-5626c4684367
-caps.latest.revision: "21"
+caps.latest.revision: 21
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
-ms.workload: Inactive
-ms.openlocfilehash: 27c25d930ece1e744dcee3386555c8a709fa90d5
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+manager: craigg
+ms.openlocfilehash: eff340f63fed18cc70fe02a0b36ec6423365e855
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sqlsrvserverinfo"></a>sqlsrv_server_info
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -46,7 +45,7 @@ sqlsrv_server_info( resource $conn)
 ## <a name="return-value"></a>傳回值  
 具有下列索引鍵的關聯陣列：  
   
-|索引鍵|描述|  
+|索引鍵|Description|  
 |-------|---------------|  
 |CurrentDatabase|目前做為目標的資料庫。|  
 |SQLServerVersion|SQL Server 的版本。|  
@@ -87,5 +86,6 @@ sqlsrv_close( $conn);
   
 ## <a name="see-also"></a>另請參閱  
 [SQLSRV 驅動程式 API 參考](../../connect/php/sqlsrv-driver-api-reference.md)  
+
 [關於文件中的程式碼範例](../../connect/php/about-code-examples-in-the-documentation.md)  
   

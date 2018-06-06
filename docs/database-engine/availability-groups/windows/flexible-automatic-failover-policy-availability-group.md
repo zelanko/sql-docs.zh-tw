@@ -1,35 +1,33 @@
 ---
-title: "彈性自動容錯移轉原則 - 可用性群組 | Microsoft Docs"
-ms.custom: 
+title: 彈性自動容錯移轉原則 - 可用性群組 | Microsoft Docs
+ms.custom: ''
 ms.date: 05/17/2016
-ms.prod: sql-non-specified
-ms.prod_service: database-engine
-ms.service: 
-ms.component: availability-groups
-ms.reviewer: 
+ms.prod: sql
+ms.prod_service: high-availability
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: dbe-high-availability
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: high-availability
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - Availability Groups [SQL Server], flexible failover policy
 - Availability Groups [SQL Server], failover
 - flexible failover policy
 - failover [SQL Server], AlwaysOn Availability Groups
 ms.assetid: 8c504c7f-5c1d-4124-b697-f735ef0084f0
-caps.latest.revision: "29"
+caps.latest.revision: 29
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: d7860f367b7bf23aa3e2e58654633b5567625d37
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 8624c517ddbaa4b1b48feab2f13fc577a30d0ea0
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="flexible-automatic-failover-policy---availability-group"></a>彈性自動容錯移轉原則 - 可用性群組
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 彈性容錯移轉原則可讓您更精確地控制造成可用性群組之[自動容錯移轉](../../../database-engine/availability-groups/windows/failover-and-failover-modes-always-on-availability-groups.md)的狀況。 透過變更觸發自動容錯移轉的失敗狀況和健全狀況檢查的頻率，您可以提高或降低自動容錯移轉的可能性，以便支援高可用性的 SLA。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  彈性容錯移轉原則可讓您更精確地控制造成可用性群組之 [自動容錯移轉](../../../database-engine/availability-groups/windows/failover-and-failover-modes-always-on-availability-groups.md) 的狀況。 透過變更觸發自動容錯移轉的失敗狀況和健全狀況檢查的頻率，您可以提高或降低自動容錯移轉的可能性，以便支援高可用性的 SLA。  
   
  可用性群組的彈性容錯移轉原則是由其失敗狀況層級和健全狀況檢查逾時臨界值所定義。 一旦偵測到可用性群組超過其失敗狀況層級或健全狀況檢查逾時臨界值時，可用性群組的資源 DLL 就會回應至 Windows Server 容錯移轉叢集 (WSFC) 叢集。 然後，WSFC 叢集就會起始自動容錯移轉至次要複本。  
   

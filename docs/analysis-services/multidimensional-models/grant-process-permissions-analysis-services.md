@@ -1,34 +1,23 @@
 ---
-title: "授與處理權限 (Analysis Services) |Microsoft 文件"
-ms.custom: 
-ms.date: 03/01/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
-helpviewer_keywords:
-- permissions [Analysis Services], process
-- process permissions [Analysis Services]
-ms.assetid: c1531c23-6b46-46a8-9ba3-b6d3f2016443
-caps.latest.revision: 
-author: Minewiskan
+title: 授與處理權限 (Analysis Services) |Microsoft 文件
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: multidimensional-models
+ms.topic: conceptual
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: b63cc40a5620fc0ae23f2b9d17a52acdea2ae3ef
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: c855bf2ecc14490b2298cf1fa240509a07369cf1
+ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="grant-process-permissions-analysis-services"></a>授與處理權限 (Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-身為管理員，您可以建立專用於 Analysis Services 處理作業的角色，讓您能夠將該特殊工作委派給其他使用者，或委派給用於自動排程處理的應用程式。 處理權限可在資料庫、Cube、維度和採礦結構層級上授與。 除非您正在使用一個非常大的 Cube 或表格式資料庫，否則建議在資料層級授與處理權限，內含所有物件，包含彼此間具有相依性的物件。  
+  身為管理員，您可以建立專用於 Analysis Services 處理作業的角色，讓您能夠將該特殊工作委派給其他使用者，或委派給用於自動排程處理的應用程式。 處理權限可在資料庫、Cube、維度和採礦結構層級上授與。 除非您正在使用一個非常大的 Cube 或表格式資料庫，否則建議在資料層級授與處理權限，內含所有物件，包含彼此間具有相依性的物件。  
   
  權限是透過將物件與權限和 Windows 使用者或群組帳戶關聯的角色來授與。 請記住，權限是加總的。 如果某個角色會授與處理 Cube 的權限，第二個角色則提供處理維度的相同使用者權限時，在兩個不同角色的權限結合之後，使用者即擁有處理 Cube 及處理該資料庫內之指定維度的權限。  
   
@@ -99,7 +88,7 @@ ms.lasthandoff: 02/15/2018
 ## <a name="see-also"></a>另請參閱  
  [處理資料庫、資料表或資料分割 &#40;Analysis Services&#41;](../../analysis-services/tabular-models/process-database-table-or-partition-analysis-services.md)   
  [處理多維度模型 &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services.md)   
- [Grant 資料庫權限 &#40;Analysis Services &#41;](../../analysis-services/multidimensional-models/grant-database-permissions-analysis-services.md)   
- [授與的讀取定義權限的物件中繼資料 &#40;Analysis Services &#41;](../../analysis-services/multidimensional-models/grant-read-definition-permissions-on-object-metadata-analysis-services.md)  
+ [Grant 資料庫權限 & #40;Analysis Services & #41;](../../analysis-services/multidimensional-models/grant-database-permissions-analysis-services.md)   
+ [授與的讀取定義權限的物件中繼資料 & #40;Analysis Services & #41;](../../analysis-services/multidimensional-models/grant-read-definition-permissions-on-object-metadata-analysis-services.md)  
   
   

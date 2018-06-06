@@ -1,32 +1,33 @@
 ---
-title: "SQLWritePrivateProfileString 函式 |Microsoft 文件"
-ms.custom: 
+title: SQLWritePrivateProfileString 函式 |Microsoft 文件
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
-ms.component: odbc
-ms.reviewer: 
+ms.prod: sql
+ms.prod_service: connectivity
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
-ms.topic: article
-apiname: SQLWritePrivateProfileString
-apilocation: sqlsrv32.dll
+ms.technology: connectivity
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
+apiname:
+- SQLWritePrivateProfileString
+apilocation:
+- sqlsrv32.dll
 apitype: dllExport
-f1_keywords: SQLWritePrivateProfileString
-helpviewer_keywords: SQLWritePrivateProfileString [ODBC]
+f1_keywords:
+- SQLWritePrivateProfileString
+helpviewer_keywords:
+- SQLWritePrivateProfileString [ODBC]
 ms.assetid: 526f36a4-92ed-4874-9725-82d27c0b86f9
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
-ms.workload: Inactive
-ms.openlocfilehash: 081d91ac2c257fbaa60b93de24dd134ea698bcd9
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+manager: craigg
+ms.openlocfilehash: cd2ef7d8e5fdab610c5bc37f9e58c1dd031b80e9
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sqlwriteprivateprofilestring-function"></a>SQLWritePrivateProfileString 函式
 **一致性**  
@@ -65,7 +66,7 @@ BOOL SQLWritePrivateProfileString(
 ## <a name="diagnostics"></a>診斷  
  當**SQLWritePrivateProfileString**傳回 FALSE，相關聯 *\*pfErrorCode*可以取得值，藉由呼叫**SQLInstallerError**。 下表列出 *\*pfErrorCode*可以傳回的值**SQLInstallerError** ，並說明每個內容中的這個函式。  
   
-|*\*pfErrorCode*|錯誤|描述|  
+|*\*pfErrorCode*|錯誤|Description|  
 |---------------------|-----------|-----------------|  
 |ODBC_ERROR_GENERAL_ERR|一般安裝程式發生錯誤|發生錯誤，其中沒有特定的安裝程式錯誤。|  
 |ODBC_ERROR_REQUEST_FAILED|要求失敗|無法寫入要求的系統資訊。|  

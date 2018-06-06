@@ -1,30 +1,29 @@
 ---
-title: sys.pdw_nodes_partitions (Transact-SQL) | Microsoft Docs
-ms.custom: 
+title: sys.pdw_nodes_partitions (TRANSACT-SQL) |Microsoft 文件
+ms.custom: ''
 ms.date: 03/03/2017
-ms.prod: 
+ms.prod: ''
 ms.prod_service: sql-data-warehouse, pdw
-ms.reviewer: 
+ms.reviewer: ''
 ms.service: sql-data-warehouse
 ms.component: system-catalog-views
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: system-objects
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - TSQL
 ms.assetid: b4216752-4813-4b2c-b259-7d8ffc6cc190
-caps.latest.revision: 
-author: barbkess
-ms.author: barbkess
+caps.latest.revision: 11
+author: ronortloff
+ms.author: rortloff
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 7199f2d29c59d93c28ce5c5dca81a7a0b812f1b6
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
+ms.openlocfilehash: f05d5ce80bf7ca286050a160d5cfbc41a689e67e
+ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="syspdwnodespartitions-transact-sql"></a>sys.pdw_nodes_partitions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -46,17 +45,17 @@ ms.lasthandoff: 02/03/2018
 ## <a name="permissions"></a>Permissions  
  需要 CONTROL SERVER 權限。  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>範例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]和[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>範例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
 
 ### <a name="example-a-display-rows-in-each-partition-within-each-distribution"></a>範例 a： 顯示資料列中每個發佈中的每個資料分割 
 
-適用於： [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]， [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]
+適用於：[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]
  
 若要顯示每個發佈中的每個資料分割的資料列數目，使用[DBCC PDW_SHOWPARTITIONSTATS (SQL Server PDW)](../../t-sql/database-console-commands/dbcc-pdw-showpartitionstats-transact-sql.md) 。
 
 ### <a name="example-b-uses-system-views-to-view-rows-in-each-partition-of-each-distribution-of-a-table"></a>若要檢視每個資料分割中之資料表的每個發佈的資料列的範例 b： 使用系統檢視表
 
-適用於： [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]
+適用於：[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]
  
 此查詢傳回的資料列數目，每個資料分割中之資料表的每個發佈`myTable`。  
  

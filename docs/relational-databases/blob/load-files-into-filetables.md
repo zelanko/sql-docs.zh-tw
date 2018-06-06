@@ -1,36 +1,34 @@
 ---
-title: "載入檔案至 FileTable | Microsoft Docs"
-ms.custom: 
+title: 載入檔案至 FileTable | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
 ms.component: blob
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-blob
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - FileTables [SQL Server], migrating files
 - FileTables [SQL Server], bulk loading
 - FileTables [SQL Server], loading files
 ms.assetid: dc842a10-0586-4b0f-9775-5ca0ecc761d9
-caps.latest.revision: 
+caps.latest.revision: 23
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: b9eef4bd725efda114727b5d6e7902daa2eaae93
-ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
+ms.openlocfilehash: 3a23963ad7a27e5a70b742493b0382c43c7037d4
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/13/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="load-files-into-filetables"></a>載入檔案至 FileTable
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-描述如何載入或移轉檔案至 FileTable 中。  
+  描述如何載入或移轉檔案至 FileTable 中。  
   
 ##  <a name="BasicsLoadNew"></a> 將檔案載入或移轉至 FileTable  
  您選擇用於將檔案載入或移轉至 FileTable 中的方法，取決於目前儲存檔案的位置。  

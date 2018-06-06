@@ -1,31 +1,28 @@
 ---
-title: "Unicode 驅動程式 |Microsoft 文件"
-ms.custom: 
+title: Unicode 驅動程式 |Microsoft 文件
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
-ms.component: odbc
-ms.reviewer: 
+ms.prod: sql
+ms.prod_service: connectivity
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: connectivity
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - Unicode [ODBC], drivers
 - Unicode [ODBC], functions
 - functions [ODBC], Unicode functions
 ms.assetid: 3b4742d5-74fb-4aff-aa21-d83a0064d73d
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
-ms.workload: Inactive
-ms.openlocfilehash: 195dc99394d8708e4895fce746ca13bbf724782c
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+manager: craigg
+ms.openlocfilehash: 310ae2855099544181cfeec75352bfa0742f397e
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="unicode-drivers"></a>Unicode 驅動程式
 驅動程式是否應該是 Unicode 驅動程式或 ANSI 驅動程式完全取決於資料來源的本質。 如果資料來源支援 Unicode 資料，此驅動程式應該是 Unicode 驅動程式。 如果資料來源只支援 ANSI 資料，此驅動程式應保留 ANSI 驅動程式。  

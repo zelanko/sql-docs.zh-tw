@@ -1,29 +1,19 @@
 ---
-title: "Analysis Services 教學課程 |Microsoft 文件"
-ms.date: 02/20/2018
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.custom: 
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: get-started-article
-applies_to:
-- SQL Server 2016
-ms.assetid: b378c3bb-eead-46eb-b213-70d994f2d562
-caps.latest.revision: 
-author: Minewiskan
+title: Analysis Services 教學課程 |Microsoft 文件
+ms.date: 05/08/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: ''
+ms.topic: tutorial
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Active
-ms.openlocfilehash: 78b46dfa832faf6496d0b986dce78390fb8af33a
-ms.sourcegitcommit: 7ed8c61fb54e3963e451bfb7f80c6a3899d93322
+ms.openlocfilehash: 0b92410b6c078d83158b64db69716e23204745db
+ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/20/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="analysis-services-tutorials"></a>Analysis Services 教學課程
 [!INCLUDE[ssas-appliesto-sqlas-all-aas](../includes/ssas-appliesto-sqlas-all-aas.md)]
@@ -31,7 +21,7 @@ ms.lasthandoff: 02/20/2018
 [表格式模型化 （1400年相容性層級）](tutorial-tabular-1400/as-adventure-works-tutorial.md)   
 適用於 Azure Analysis Services 和 SQL Server 2017 Analysis Services 和更新版本。 本教學課程提供有關如何使用 SQL Server Data Tools (SSDT) 為虛擬公司 Adventure Works 撰寫基本 Analysis Services 表格式模型的課程。 
 
-[表格式模型化 （1200年相容性層級）](../analysis-services/tabular-modeling-adventure-works-tutorial.md)  
+[表格式模型 (1200 相容性層級)](../analysis-services/tabular-modeling-adventure-works-tutorial.md)  
 適用於 Azure Analysis Services 和 SQL Server 2016 Analysis Services 和更新版本。 本教學課程提供有關如何使用 SQL Server Data Tools (SSDT) 為虛擬公司 Adventure Works 撰寫基本 Analysis Services 表格式模型的課程。  
   
 [多維度模型化](../analysis-services/multidimensional-modeling-adventure-works-tutorial.md)  

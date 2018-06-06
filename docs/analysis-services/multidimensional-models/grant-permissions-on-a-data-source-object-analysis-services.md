@@ -1,37 +1,23 @@
 ---
-title: "授與權限的資料來源物件 (Analysis Services) |Microsoft 文件"
-ms.custom: 
-ms.date: 03/04/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords: sql13.asvs.roledesignerdialog.datasources.f1
-helpviewer_keywords:
-- read/write permissions
-- user access rights [Analysis Services], data sources
-- security [Analysis Services], data sources
-- connection strings [Analysis Services]
-- data sources [Analysis Services], security
-ms.assetid: b4e302d3-c93b-4383-aa4a-37d15c129830
-caps.latest.revision: "38"
-author: Minewiskan
+title: 授與權限的資料來源物件 (Analysis Services) |Microsoft 文件
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: multidimensional-models
+ms.topic: conceptual
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: f7cd02446a61b7ff1c8d9fdaa2803c30ee81a6e0
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 9d550b376a644592a228708decb59ca436756ddc
+ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="grant-permissions-on-a-data-source-object-analysis-services"></a>授與資料來源物件的權限 (Analysis Services)
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]一般而言，大部分使用者都[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]不需要存取基礎資料來源[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]專案。 使用者通常只會查詢 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 資料庫內的資料。 不過，在資料採礦的內容中，例如要執行以採礦模型為基礎的預測時，使用者就必須聯結採礦模型的所獲得 (Learned) 資料與使用者提供的資料。 若要連接到包含使用者所提供資料的資料來源，使用者要使用包含 [OPENQUERY &#40;DMX&#41;](../../dmx/source-data-query-openquery.md) 和 [OPENROWSET &#40;DMX&#41;](../../dmx/source-data-query-openrowset.md) 子句的資料採礦延伸模組 (DMX) 查詢。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+  通常，大部分的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 使用者都不需要存取 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 專案的基礎資料來源。 使用者通常只會查詢 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 資料庫內的資料。 不過，在資料採礦的內容中，例如要執行以採礦模型為基礎的預測時，使用者就必須聯結採礦模型的所獲得 (Learned) 資料與使用者提供的資料。 若要連接到包含使用者所提供資料的資料來源，使用者要使用包含 [OPENQUERY &#40;DMX&#41;](../../dmx/source-data-query-openquery.md) 和 [OPENROWSET &#40;DMX&#41;](../../dmx/source-data-query-openrowset.md) 子句的資料採礦延伸模組 (DMX) 查詢。  
   
  若要執行連接到資料來源的 DMX 查詢，使用者必須存取 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 資料庫內的資料來源物件。 根據預設，只有伺服器管理員或資料庫管理員擁有存取資料來源物件的權限。 這表示除非管理員授與權限，否則使用者無法存取資料來源物件。  
   
@@ -58,12 +44,12 @@ ms.lasthandoff: 01/08/2018
   
      如果用戶端不容許模擬 (透過 OLE DB 和其他用戶端元件的模擬層級屬性)， [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 將會嘗試與基礎資料來源建立匿名連線。 匿名連線遠端資料來源很少成功，因為大部分的資料來源都不接受匿名連線)。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [多維度模型中的資料來源](../../analysis-services/multidimensional-models/data-sources-in-multidimensional-models.md)   
- [連接字串屬性 &#40;Analysis Services &#41;](../../analysis-services/instances/connection-string-properties-analysis-services.md)   
+ [連接字串屬性 & #40;Analysis Services & #41;](../../analysis-services/instances/connection-string-properties-analysis-services.md)   
  [Analysis Services 支援的驗證方法](../../analysis-services/instances/authentication-methodologies-supported-by-analysis-services.md)   
- [授與自訂存取維度資料 &#40;Analysis Services &#41;](../../analysis-services/multidimensional-models/grant-custom-access-to-dimension-data-analysis-services.md)   
- [授與 Cube 或模型權限 &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/grant-cube-or-model-permissions-analysis-services.md)   
- [授與資料格資料的自訂存取權 &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/grant-custom-access-to-cell-data-analysis-services.md)  
+ [授與自訂存取維度資料 & #40;Analysis Services & #41;](../../analysis-services/multidimensional-models/grant-custom-access-to-dimension-data-analysis-services.md)   
+ [授與 cube 或模型權限 & #40;Analysis Services & #41;](../../analysis-services/multidimensional-models/grant-cube-or-model-permissions-analysis-services.md)   
+ [授與自訂資料 & #40; 的儲存格的存取Analysis Services & #41;](../../analysis-services/multidimensional-models/grant-custom-access-to-cell-data-analysis-services.md)  
   
   

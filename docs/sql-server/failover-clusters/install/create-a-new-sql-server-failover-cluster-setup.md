@@ -1,16 +1,15 @@
 ---
-title: "建立新的 SQL Server 容錯移轉叢集 (安裝程式) | Microsoft Docs"
-ms.custom: 
+title: 建立新的 SQL Server 容錯移轉叢集 (安裝程式) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
-ms.prod_service: database-engine
-ms.service: 
-ms.component: failover-clusters
-ms.reviewer: 
+ms.prod: sql
+ms.prod_service: high-availability
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: setup-install
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- setup-install
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - adding nodes
 - failover clustering [SQL Server], creating clusters
@@ -19,19 +18,19 @@ helpviewer_keywords:
 - clusters [SQL Server], creating
 - removing nodes
 ms.assetid: 30e06a7d-75e9-44e2-bca3-b3b0c4a33f61
-caps.latest.revision: "77"
+caps.latest.revision: 77
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
-ms.workload: Active
-ms.openlocfilehash: 581129c04f1348b0fd66a9a5064c923324365d65
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+manager: craigg
+ms.openlocfilehash: a6f43eb8ad81372c1dc83fefb9dd4477fe601330
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="create-a-new-sql-server-failover-cluster-setup"></a>建立新的 SQL Server 容錯移轉叢集 (安裝程式)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 若要安裝或升級 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 容錯移轉叢集，您必須在容錯移轉叢集的每個節點上執行安裝程式。 若要將節點加入至現有的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 容錯移轉叢集，您必須在要加入至 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 容錯移轉叢集執行個體的節點上執行 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 安裝程式。 請勿在使用中節點上執行安裝程式來管理其他節點。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  若要安裝或升級 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 容錯移轉叢集，您必須在容錯移轉叢集的每個節點上執行安裝程式。 若要將節點加入至現有的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 容錯移轉叢集，您必須在要加入至 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 容錯移轉叢集執行個體的節點上執行 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 安裝程式。 請勿在使用中節點上執行安裝程式來管理其他節點。  
   
  視節點叢集的方式而定， [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 容錯移轉叢集會以下列方式設定：  
   
@@ -74,7 +73,7 @@ ms.lasthandoff: 12/05/2017
   
  如需有關在 Windows 容錯移轉叢集中安裝 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 的詳細資訊，請參閱＜ [如何將 SQL Server Analysis Services 叢集化](http://go.microsoft.com/fwlink/p/?LinkId=396548)＞。  
   
-## <a name="prerequisites"></a>必要條件  
+## <a name="prerequisites"></a>Prerequisites  
  開始之前，請先檢視下列《 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 線上叢書》主題：  
   
 -   [規劃 SQL Server 安裝](../../../sql-server/install/planning-a-sql-server-installation.md)  
@@ -94,13 +93,13 @@ ms.lasthandoff: 12/05/2017
   
 2.  安裝精靈會啟動 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 安裝中心。 若要建立新的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 叢集安裝，請在安裝頁面上按一下 新的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [容錯移轉叢集安裝]。  
   
-3.  系統組態檢查會在電腦上執行探索作業。 若要繼續，請 [!INCLUDE[clickOK](../../../includes/clickok-md.md)]。 您可以按一下 **[顯示詳細資料]**在畫面上檢視詳細資料，或是按一下 **[檢視詳細資料報表]**來以 HTML 報表形式檢視詳細資料。  
+3.  系統組態檢查會在電腦上執行探索作業。 若要繼續，請 [!INCLUDE[clickOK](../../../includes/clickok-md.md)]。 您可以按一下 **[顯示詳細資料]** 在畫面上檢視詳細資料，或是按一下 **[檢視詳細資料報表]** 來以 HTML 報表形式檢視詳細資料。  
   
 4.  若要繼續進行，請按 **[下一步]**。  
   
 5.  在 [安裝程式支援檔案] 頁面上，按一下 **[安裝]** ，即可安裝安裝程式支援檔案。  
   
-6.  系統組態檢查將會先確認電腦的系統狀態，然後安裝程式才會繼續進行。 檢查完成之後，請按 **[下一步]** 繼續進行。 您可以按一下 **[顯示詳細資料]**在畫面上檢視詳細資料，或是按一下 **[檢視詳細資料報表]**來以 HTML 報表形式檢視詳細資料。  
+6.  系統組態檢查將會先確認電腦的系統狀態，然後安裝程式才會繼續進行。 檢查完成之後，請按 **[下一步]** 繼續進行。 您可以按一下 **[顯示詳細資料]** 在畫面上檢視詳細資料，或是按一下 **[檢視詳細資料報表]** 來以 HTML 報表形式檢視詳細資料。  
   
 7.  在 [產品金鑰] 頁面上，指出您要安裝免費的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]版本，還是您擁有產品之實際執行版本的 PID 金鑰。 如需詳細資訊，請參閱 [SQL Server 2016 的版本和元件](../../../sql-server/editions-and-components-of-sql-server-2016.md)。  
   
@@ -184,7 +183,7 @@ ms.lasthandoff: 12/05/2017
   
 18. 使用 [伺服器組態 - 定序] 索引標籤，為 [!INCLUDE[ssDE](../../../includes/ssde-md.md)] 和 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 指定非預設的定序。  
   
-19. 使用 [!INCLUDE[ssDE](../../../includes/ssde-md.md)] [組態 - 帳戶提供] 頁面來指定以下項目：  
+19. 使用 [ [!INCLUDE[ssDE](../../../includes/ssde-md.md)] 組態 - 帳戶提供] 頁面來指定以下項目：  
   
     -   安全性模式 - 為 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]執行個體選取 Windows 驗證或混合模式驗證。 如果您選取混合模式驗證，就必須為內建 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 系統管理員帳戶提供增強式密碼。  
   
@@ -226,7 +225,7 @@ ms.lasthandoff: 12/05/2017
   
 29. 如果指示您重新啟動電腦，請立刻執行。 當您完成安裝時，請務必閱讀安裝精靈所提供的訊息。 如需安裝程式記錄檔的詳細資訊，請參閱 [檢視與讀取 SQL Server 安裝程式記錄檔](../../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)。  
   
-30. 若要將節點加入到您剛才建立的單一節點容錯移轉叢集中，請在每一個額外的節點上執行安裝程式，並遵循 AddNode 作業的步驟。 如需詳細資訊，請參閱[在 SQL Server 容錯移轉叢集中加入或移除節點 &#40;安裝程式&#41;](../../../sql-server/failover-clusters/install/add-or-remove-nodes-in-a-sql-server-failover-cluster-setup.md)。  
+30. 若要將節點加入到您剛才建立的單一節點容錯移轉叢集中，請在每一個額外的節點上執行安裝程式，並遵循 AddNode 作業的步驟。 如需詳細資訊，請參閱[在 SQL Server 容錯移轉叢集中新增或移除節點 &#40;安裝程式&#41;](../../../sql-server/failover-clusters/install/add-or-remove-nodes-in-a-sql-server-failover-cluster-setup.md)。  
   
     > [!NOTE]  
     >  如果您要加入一個以上的節點，可以使用組態檔來部署安裝。 如需詳細資訊，請參閱 [使用組態檔安裝 SQL Server 2016](../../../database-engine/install-windows/install-sql-server-2016-using-a-configuration-file.md)。  
@@ -243,11 +242,11 @@ ms.lasthandoff: 12/05/2017
   
 3.  安裝必要元件之後，安裝精靈將會啟動 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 安裝中心。 若要準備要建立叢集的節點，請移到 **[進階]** 頁面，然後按一下 **[進階叢集準備]**。  
   
-4.  系統組態檢查會在電腦上執行探索作業。 若要繼續，請 [!INCLUDE[clickOK](../../../includes/clickok-md.md)]。 您可以按一下 **[顯示詳細資料]**在畫面上檢視詳細資料，或是按一下 **[檢視詳細資料報表]**來以 HTML 報表形式檢視詳細資料。  
+4.  系統組態檢查會在電腦上執行探索作業。 若要繼續，請 [!INCLUDE[clickOK](../../../includes/clickok-md.md)]。 您可以按一下 **[顯示詳細資料]** 在畫面上檢視詳細資料，或是按一下 **[檢視詳細資料報表]** 來以 HTML 報表形式檢視詳細資料。  
   
 5.  在 [安裝程式支援檔案] 頁面上，按一下 **[安裝]** ，即可安裝安裝程式支援檔案。  
   
-6.  系統組態檢查將會先確認電腦的系統狀態，然後安裝程式才會繼續進行。 檢查完成之後，請按 **[下一步]** 繼續進行。 您可以按一下 **[顯示詳細資料]**在畫面上檢視詳細資料，或是按一下 **[檢視詳細資料報表]**來以 HTML 報表形式檢視詳細資料。  
+6.  系統組態檢查將會先確認電腦的系統狀態，然後安裝程式才會繼續進行。 檢查完成之後，請按 **[下一步]** 繼續進行。 您可以按一下 **[顯示詳細資料]** 在畫面上檢視詳細資料，或是按一下 **[檢視詳細資料報表]** 來以 HTML 報表形式檢視詳細資料。  
   
 7.  如果您在當地語系化的作業系統上安裝，而且安裝媒體包含英文以及與作業系統對應之語言的語言套件，您便可以在 [語言選擇] 頁面上指定 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體的語言。 如需跨語言支援和安裝考量的詳細資訊，請參閱 [SQL Server 中的地區語言版本](../../../sql-server/install/local-language-versions-in-sql-server.md)。  
   
@@ -309,7 +308,7 @@ ms.lasthandoff: 12/05/2017
   
 17. 使用 [Server Configuration - Filestream (伺服器組態 - Filestream)]**[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 可針對**  的執行個體啟用 FILESTREAM。  按 **[下一步]** ，繼續進行。  
   
-18. 使用 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] [組態] 頁面來指定要建立的 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 安裝類型。 如果是容錯移轉叢集安裝，此選項會設定為未設定的 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 安裝。 在您完成安裝之後，必須設定 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 服務。  
+18. 使用[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] [組態] 頁面來指定要建立的 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 安裝類型。 如果是容錯移轉叢集安裝，此選項會設定為未設定的 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 安裝。 在您完成安裝之後，必須設定 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 服務。  
    
 19. 在 [錯誤報告] 頁面上，指定您想要傳送給 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 的資訊，這可協助改善 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]。 錯誤報告選項預設為啟用。  
   
@@ -331,11 +330,11 @@ ms.lasthandoff: 12/05/2017
   
 1.  在依照 [準備步驟](#prepare)中所述的內容來準備所有節點之後，請在其中一個備妥的節點上執行安裝程式，最好是在擁有共用磁碟的節點上執行。 在  安裝中心的 [進階] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 頁面上，按一下 **[進階叢集完成]**。  
   
-2.  系統組態檢查會在電腦上執行探索作業。 若要繼續，請 [!INCLUDE[clickOK](../../../includes/clickok-md.md)]。 您可以按一下 **[顯示詳細資料]**在畫面上檢視詳細資料，或是按一下 **[檢視詳細資料報表]**來以 HTML 報表形式檢視詳細資料。  
+2.  系統組態檢查會在電腦上執行探索作業。 若要繼續，請 [!INCLUDE[clickOK](../../../includes/clickok-md.md)]。 您可以按一下 **[顯示詳細資料]** 在畫面上檢視詳細資料，或是按一下 **[檢視詳細資料報表]** 來以 HTML 報表形式檢視詳細資料。  
   
 3.  在 [安裝程式支援檔案] 頁面上，按一下 **[安裝]** ，即可安裝安裝程式支援檔案。  
   
-4.  系統組態檢查將會先確認電腦的系統狀態，然後安裝程式才會繼續進行。 檢查完成之後，請按 **[下一步]** 繼續進行。 您可以按一下 **[顯示詳細資料]**在畫面上檢視詳細資料，或是按一下 **[檢視詳細資料報表]**來以 HTML 報表形式檢視詳細資料。  
+4.  系統組態檢查將會先確認電腦的系統狀態，然後安裝程式才會繼續進行。 檢查完成之後，請按 **[下一步]** 繼續進行。 您可以按一下 **[顯示詳細資料]** 在畫面上檢視詳細資料，或是按一下 **[檢視詳細資料報表]** 來以 HTML 報表形式檢視詳細資料。  
   
 5.  如果您在當地語系化的作業系統上安裝，而且安裝媒體包含英文以及與作業系統對應之語言的語言套件，您便可以在 [語言選擇] 頁面上指定 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體的語言。 如需跨語言支援和安裝考量的詳細資訊，請參閱 [SQL Server 中的地區語言版本](../../../sql-server/install/local-language-versions-in-sql-server.md)。  
   
@@ -367,7 +366,7 @@ ms.lasthandoff: 12/05/2017
   
 11. 本主題其餘部分的工作流程會因您針對安裝所指定的功能而不同。 您可能不會看到所有頁面，端視您的選取項目而定。  
   
-12. 使用 [!INCLUDE[ssDE](../../../includes/ssde-md.md)] [組態 - 帳戶提供] 頁面來指定以下項目：  
+12. 使用 [ [!INCLUDE[ssDE](../../../includes/ssde-md.md)] 組態 - 帳戶提供] 頁面來指定以下項目：  
   
     -   安全性模式 - 為 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]執行個體選取 Windows 驗證或混合模式驗證。 如果您選取混合模式驗證，就必須為內建 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 系統管理員帳戶提供增強式密碼。  
   
@@ -401,7 +400,7 @@ ms.lasthandoff: 12/05/2017
   
 19. 安裝之後， **[完成]** 頁面會提供安裝和其他重要注意事項之摘要記錄檔的連結。 若要完成 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 安裝程序，請按一下 **[關閉]**。 有了這個步驟，針對相同容錯移轉叢集準備的所有節點現在都會成為已完成之 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 容錯移轉叢集的一部分。  
   
-## <a name="next-steps"></a>後續步驟  
+## <a name="next-steps"></a>Next Steps  
  **設定新的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 安裝** - 為了減少系統的可攻擊介面區，[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 會選擇性地安裝及啟用主要服務和功能。 如需詳細資訊，請參閱＜ [Surface Area Configuration](../../../relational-databases/security/surface-area-configuration.md)＞。  
   
  如需記錄檔位置的詳細資訊，請參閱 [檢視與讀取 SQL Server 安裝程式記錄檔](../../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)。  

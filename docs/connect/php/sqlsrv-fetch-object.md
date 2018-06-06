@@ -1,33 +1,32 @@
 ---
-title: "sqlsrv_fetch_object |Microsoft 文件"
-ms.custom: 
+title: sqlsrv_fetch_object |Microsoft 文件
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
+ms.prod: sql
+ms.prod_service: connectivity
 ms.component: php
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
-ms.topic: article
-apiname: sqlsrv_fetch_object
+ms.technology: connectivity
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
+apiname:
+- sqlsrv_fetch_object
 apitype: NA
 helpviewer_keywords:
 - sqlsrv_fetch_object
 - API Reference, sqlsrv_fetch_object
 - retrieving data, as an object
 ms.assetid: 4ce2df2c-083a-4a4d-a1e2-e866e63707d5
-caps.latest.revision: "31"
+caps.latest.revision: 31
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
-ms.workload: Inactive
-ms.openlocfilehash: 68c6e32e4aa090dc76d80e176f7653815c80335b
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+manager: craigg
+ms.openlocfilehash: b753000c255d6c07777c94e8fb61c847ab10d0c5
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sqlsrvfetchobject"></a>sqlsrv_fetch_object
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -46,9 +45,9 @@ sqlsrv_fetch_object( resource $stmt [, string $className [, array $ctorParams[, 
   
 *$className* [選用]: 指定要具現化類別名稱的字串。 如果未指定 *$className* 參數的值，則會具現化 PHP **stdClass** 的執行個體。  
   
-*$ctorParams* [選用]: 包含值的陣列傳遞至具有指定之類別的建構函式*$className*參數。 如果指定類別的建構函式接受參數值，則在呼叫 *$ctorParams* object **sqlsrv_fetch_object**參數。  
+*$ctorParams* [選用]: 包含值的陣列傳遞至具有指定之類別的建構函式 *$className*參數。 如果指定類別的建構函式接受參數值，則在呼叫 *$ctorParams* object **sqlsrv_fetch_object**參數。  
   
-*資料列*[選用]: 下列的值，指定要在使用可捲動資料指標結果集內存取的資料列的其中一個。 (如果*列*指定，則*$className*和*$ctorParams*必須明確指定，即使您必須指定 null *$className*和*$ctorParams*。)  
+*資料列*[選用]: 下列的值，指定要在使用可捲動資料指標結果集內存取的資料列的其中一個。 (如果*列*指定，則 *$className*和 *$ctorParams*必須明確指定，即使您必須指定 null *$className*和 *$ctorParams*。)  
   
 -   SQLSRV_SCROLL_NEXT  
   
@@ -94,7 +93,7 @@ SELECT SCOPE_IDENTITY()</pre>
 `SELECT SCOPE_IDENTITY() AS PictureID`  
   
 ## <a name="example"></a>範例  
-下列範例會以 PHP 物件的形式，擷取結果集的每個資料列。 此範例假設本機電腦上已安裝 SQL Server 和 [AdventureWorks](http://go.microsoft.com/fwlink/?LinkID=67739) 資料庫。 從命令列執行範例時，所有輸出都會寫入至主控台。  
+下列範例會以 PHP 物件的形式，擷取結果集的每個資料列。 此範例假設 SQL Server 和[AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works)資料庫安裝在本機電腦上。 從命令列執行範例時，所有輸出都會寫入至主控台。  
   
 ```  
 <?php  
@@ -143,7 +142,7 @@ sqlsrv_close( $conn);
   
 -   私用屬性 *UnitPrice* 會以填入 *UnitPrice* 欄位的值填入。  
   
-此範例假設本機電腦上已安裝 SQL Server 和 [AdventureWorks](http://go.microsoft.com/fwlink/?LinkID=67739) 資料庫。 從命令列執行範例時，所有輸出都會寫入至主控台。  
+此範例假設 SQL Server 和[AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works)資料庫安裝在本機電腦上。 從命令列執行範例時，所有輸出都會寫入至主控台。  
   
 ```  
 <?php  
@@ -246,8 +245,10 @@ SELECT SCOPE_IDENTITY()</pre>
   
 `SELECT SCOPE_IDENTITY() AS PictureID`  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
 [擷取資料](../../connect/php/retrieving-data.md)  
+
 [關於文件中的程式碼範例](../../connect/php/about-code-examples-in-the-documentation.md)  
+
 [SQLSRV 驅動程式 API 參考](../../connect/php/sqlsrv-driver-api-reference.md)  
   

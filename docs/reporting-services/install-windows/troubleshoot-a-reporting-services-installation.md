@@ -1,27 +1,25 @@
 ---
-title: "針對 Reporting Services 安裝進行疑難排解 | Microsoft Docs"
-ms.custom: 
+title: 針對 Reporting Services 安裝進行疑難排解 | Microsoft Docs
+ms.custom: ''
 ms.date: 01/17/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
-ms.service: 
 ms.component: install-windows
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: e2536f7f-d90c-4571-9ffd-6bbfe69018d6
-caps.latest.revision: 
+caps.latest.revision: 16
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: d71e0f0bfd70ec17552a6114c4378bd79bdfff25
-ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
+ms.openlocfilehash: a9e470347f20649c3ef42a93e862e32cb046171a
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="troubleshoot-a-reporting-services-installation"></a>針對 Reporting Services 安裝進行疑難排解
 
@@ -213,7 +211,7 @@ ms.lasthandoff: 01/19/2018
   
 2.  開啟命令視窗，然後在命令提示字元下輸入下列命令：  
   
-    -   **run \<**.NET 4.0 Framework 目錄**>\InstallUtil.exe \<**Report Server Bin 目錄**>\ReportingServicesLibrary.dll**  
+    -   **run \<**.NET 4.0 Framework 目錄 **>\InstallUtil.exe \<** Report Server Bin 目錄 **>\ReportingServicesLibrary.dll**  
   
         > [!NOTE]  
         >  以 .NET Framework 4.0 檔案的實體路徑來取代 \<.NET 4.0 Framework 目錄>，並以報表伺服器 Bin 檔案的實體路徑來取代 \<報表伺服器 Bin 目錄>。  

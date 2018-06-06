@@ -1,30 +1,27 @@
 ---
-title: "SQLTables （Paradox 驅動程式） |Microsoft 文件"
-ms.custom: 
+title: SQLTables （Paradox 驅動程式） |Microsoft 文件
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
-ms.component: odbc
-ms.reviewer: 
+ms.prod: sql
+ms.prod_service: connectivity
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: connectivity
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - Paradox driver [ODBC], SQLTables
 - SQLTables function [ODBC], Paradox Driver
 ms.assetid: d68adad6-97bd-4b47-bcf9-0102aafb00d4
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
-ms.workload: Inactive
-ms.openlocfilehash: b11865bc59b2fbdbc81a771fadd099dde78f1f42
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+manager: craigg
+ms.openlocfilehash: 1108b06702a4753f0f99f6e67418fe8f54dc7de8
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sqltables-paradox-driver"></a>SQLTables （Paradox 驅動程式）
 > [!NOTE]  
@@ -36,5 +33,5 @@ ms.lasthandoff: 12/21/2017
 |*szTableQualifier*|TABLE_QUALIFIER 資料行中**SQLTables**會傳回路徑的目錄。|  
 |*SzTableType*|Paradox 檔案的"TABLE"會是唯一支援的資料表類型。|  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [SQLTables 函式](../../odbc/reference/syntax/sqltables-function.md)

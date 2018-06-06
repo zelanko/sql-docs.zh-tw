@@ -1,17 +1,15 @@
 ---
-title: "NextRecordset 方法 (ADO) |Microsoft 文件"
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
+title: NextRecordset 方法 (ADO) |Microsoft 文件
+ms.prod: sql
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
-ms.custom: 
-ms.date: 01/19/2017
-ms.reviewer: 
+ms.technology: connectivity
+ms.custom: ''
+ms.date: 03/20/2018
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 apitype: COM
 f1_keywords:
 - NextRecordset
@@ -20,16 +18,15 @@ f1_keywords:
 helpviewer_keywords:
 - NextRecordset method [ADO]
 ms.assetid: ab1fa449-a695-4987-b1ee-bc68f89418dd
-caps.latest.revision: 
+caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: ffbc85f40d684095b4f91512943f16911af3233f
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 1773c2bd8709a429a2e388b8a38a192107f2e7f3
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="nextrecordset-method-ado"></a>NextRecordset 方法 (ADO)
 清除目前[資料錄集](../../../ado/reference/ado-api/recordset-object-ado.md)物件，並傳回下一個**資料錄集**往前移透過一系列的命令。  
@@ -54,7 +51,7 @@ Set recordset2 = recordset1.NextRecordset(RecordsAffected )
 ## <a name="remarks"></a>備註  
  使用**NextRecordset**方法以傳回結果的複合命令陳述式中的下一個命令或預存程序傳回多個結果。 如果您開啟**資料錄集**複合命令陳述式為基礎的物件 (例如，「 選取\*從 table1;選取\*從 table2") 使用[Execute](../../../ado/reference/ado-api/execute-method-ado-command.md)方法[命令](../../../ado/reference/ado-api/command-object-ado.md)或[開啟](../../../ado/reference/ado-api/open-method-ado-recordset.md)方法**資料錄集**，ADO 執行只有第一個命令，並傳回結果*資料錄集*。 若要存取之陳述式中的後續命令的結果，請呼叫**NextRecordset**方法。  
   
- 只要有其他結果和**資料錄集**包含複合陳述式不在中斷連線，或可封送處理跨處理序界限**NextRecordset**方法將繼續傳回**資料錄集**物件。 如果傳回資料列的命令執行成功，但未傳回資料錄，傳回**資料錄集**物件將會開啟但空的。 測試此案例藉由確認[BOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md)和[EOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md)屬性都**True**。 如果非???傳回資料列命令執行成功，傳回**資料錄集**物件將會關閉，您可以藉由測試來確認其[狀態](../../../ado/reference/ado-api/state-property-ado.md)屬性**資料錄集**。 當沒有其他結果時，*資料錄集*會設定為*Nothing*。  
+ 只要有其他結果和**資料錄集**包含複合陳述式不在中斷連線，或可封送處理跨處理序界限**NextRecordset**方法將繼續傳回**資料錄集**物件。 如果傳回資料列的命令執行成功，但未傳回資料錄，傳回**資料錄集**物件將會開啟但空的。 測試此案例藉由確認[BOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md)和[EOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md)屬性都**True**。 如果未傳回資料列的命令執行成功，傳回**資料錄集**物件將會關閉，您可以藉由測試來確認其[狀態](../../../ado/reference/ado-api/state-property-ado.md)屬性**資料錄集**. 當沒有其他結果時，*資料錄集*會設定為*Nothing*。  
   
  **NextRecordset**方法並不適用於已中斷連線**資料錄集**物件，其中[ActiveConnection](../../../ado/reference/ado-api/activeconnection-property-ado.md)已設定為**Nothing**(在 Microsoft Visual Basic) 或 NULL （在其他語言）。  
   

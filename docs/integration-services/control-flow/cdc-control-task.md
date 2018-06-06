@@ -1,31 +1,29 @@
 ---
-title: "CDC 控制工作 | Microsoft Docs"
-ms.custom: 
+title: CDC 控制工作 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
 ms.component: control-flow
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 f1_keywords:
 - sql13.ssis.designer.cdccontroltask.f1
 - sql13.ssis.designer.cdccontroltask.config.f1
 ms.assetid: 6404dc7f-550c-47cc-b901-c072742f430a
-caps.latest.revision: 
+caps.latest.revision: 12
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 0990c664bb8a962dc8a9c1eebd862808965f2c02
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: e43fdab0290f413abf8a33a1da8664f3ae70e45e
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="cdc-control-task"></a>CDC 控制工作
   CDC 控制工作是用來控制異動資料擷取 (CDC) 封裝的開發週期。 它會處理 CDC 封裝與初始載入封裝的同步處理，以及 CDC 封裝執行中所處理之記錄序號 (LSN) 範圍的管理。 此外，CDC 控制工作也會處理錯誤狀況和復原。  
@@ -138,7 +136,7 @@ ms.lasthandoff: 01/25/2018
  如需定義狀態變數的詳細資訊，請參閱 [定義狀態變數](../../integration-services/data-flow/define-a-state-variable.md)。  
   
  **要啟動 CDC 的 SQL Server LSN/快照集名稱:**  
- 輸入目前的來源資料庫 LSN 或從中執行初始載入以決定 CDC 啟動位置之快照集資料庫的名稱。 只有當 **[CDC 控制作業]** 設定為 **[標記 CDC 開始]**時，才能使用這個選項。  
+ 輸入目前的來源資料庫 LSN 或從中執行初始載入以決定 CDC 啟動位置之快照集資料庫的名稱。 只有當 **[CDC 控制作業]** 設定為 **[標記 CDC 開始]** 時，才能使用這個選項。  
   
  如需有關這些作業的詳細資訊，請參閱＜ [CDC Control Task](../../integration-services/control-flow/cdc-control-task.md)＞。  
   

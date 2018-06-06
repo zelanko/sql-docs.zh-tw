@@ -1,16 +1,15 @@
 ---
-title: "輸入搜尋值的規則 (Visual Database Tools) | Microsoft Docs"
-ms.custom: 
+title: 輸入搜尋值的規則 (Visual Database Tools) | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
 ms.component: ssms-visual-db
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: tools-ssms
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ssms
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - time [SQL Server], searches
 - date searches
@@ -22,19 +21,19 @@ helpviewer_keywords:
 - text value searches [SQL Server]
 - numeric value searches [SQL Server]
 ms.assetid: 3c8134b7-83f4-41b4-99c8-e3949a685ff5
-caps.latest.revision: "4"
+caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 979bc40803391e773624d9d7f2b9e43e3bad5ee6
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.openlocfilehash: 2308add086753aa3212a5a1860e144b96c9f6ae5
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="rules-for-entering-search-values-visual-database-tools"></a>輸入搜尋值的規則 (Visual Database Tools)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 本主題會討論輸入下列搜尋條件的常值類型時必須使用的規格：  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+本主題會討論輸入下列搜尋條件的常值類型時必須使用的規格：  
   
 -   文字值  
   

@@ -1,41 +1,40 @@
 ---
-title: "重建索引工作 (維護計畫) | Microsoft Docs"
-ms.custom: 
+title: 重建索引工作 (維護計畫) | Microsoft Docs
+ms.custom: ''
 ms.date: 07/21/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
 ms.component: maintenance-plans
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 f1_keywords:
 - reindex
 - sql13.swb.maint.reindex.f1
 helpviewer_keywords:
 - Rebuild Index Task dialog box
 ms.assetid: 33e2940b-139f-4563-b0cb-5683f08bd879
-caps.latest.revision: 
+caps.latest.revision: 42
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: f077a5071cfb7f3da4114fde9453cfa2c331783f
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 27392a1b2ad04033e8b5a6dab14f55246279ae57
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="rebuild-index-task-maintenance-plan"></a>重建索引工作 (維護計畫)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 使用 [重建索引工作] 對話方塊，以新的填滿因數重新建立資料庫資料表上的索引。 填滿因數會決定索引中每頁的空白數量，以配合未來擴充需要。 將資料加入資料表時，因為沒有維護填滿因數，所以可用空間都會填滿。 重新組織資料與索引頁面可以重新建立可用空間。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  使用 [重建索引工作] 對話方塊，以新的填滿因數重新建立資料庫資料表上的索引。 填滿因數會決定索引中每頁的空白數量，以配合未來擴充需要。 將資料加入資料表時，因為沒有維護填滿因數，所以可用空間都會填滿。 重新組織資料與索引頁面可以重新建立可用空間。  
   
  [重建索引工作] 會使用 ALTER INDEX 陳述式。 如需此頁面所描述之選項的詳細資訊，請參閱 [ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md)。  
   
-## <a name="options"></a>選項  
- **連接**  
+## <a name="options"></a>選項。  
+ **[連接]**  
  選取執行此工作時要使用的伺服器連接。  
   
  **新增**  
@@ -85,7 +84,7 @@ ms.lasthandoff: 11/17/2017
  使用 `ONLINE` 選項，而這個選項可讓使用者在索引作業期間存取基礎資料表或叢集索引資料以及任何相關的非叢集索引。  
   
 > [!NOTE]  
->  [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的所有版本都無法使用線上索引作業。 如需 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]版本支援的功能清單，請參閱 [SQL Server 2016 版本支援的功能](~/sql-server/editions-and-supported-features-for-sql-server-2016.md)。  
+>  [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的所有版本都無法使用線上索引作業。 如需 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]版本支援的功能清單，請參閱 [SQL Server 2016 版本支援的功能](~/sql-server/editions-and-supported-features-for-sql-server-2016.md)。  
   
  **不要重建索引 | 離線重建索引**  
  指定如何處理無法在線上重建的索引類型。  
@@ -119,7 +118,7 @@ ms.lasthandoff: 11/17/2017
  **選取或輸入伺服器名稱**  
  選取執行此工作時要連接的伺服器。  
   
- **重新整理**  
+ **[重新整理]**  
  重新整理可用的伺服器清單。  
   
  **輸入要登入到伺服器的資訊**  
@@ -131,7 +130,7 @@ ms.lasthandoff: 11/17/2017
  **使用特定的使用者名稱和密碼**  
  使用 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 驗證，連接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的執行個體。 無法使用此選項。  
   
- **使用者名稱**  
+ **User name**  
  提供驗證時要使用的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入。 無法使用此選項。  
   
  **密碼**  

@@ -1,26 +1,25 @@
 ---
-title: "快速存取 insights 和 SQL 作業 Studio （預覽） 中的一般工作 |Microsoft 文件"
-description: "深入了解具洞察力的 widget 顯示 SQL 作業 Studio （預覽） 中。"
+title: 快速存取 insights 和 SQL 作業 Studio （預覽） 中的一般工作 |Microsoft 文件
+description: 深入了解具洞察力的 widget 顯示 SQL 作業 Studio （預覽） 中。
 ms.custom: tools|sos
 ms.date: 11/15/2017
-ms.prod: sql-non-specified
-ms.reviewer: alayu; erickang; sstein
+ms.prod: sql
+ms.reviewer: alayu; sstein
 ms.suite: sql
 ms.prod_service: sql-tools
 ms.component: sos
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 author: yualan
 ms.author: alayu
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 7b501b653920d2a8ff7e3e8ed4656c8154b344f6
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 8ed47935a863a14d68385c540ce68d0e75e99799
+ms.sourcegitcommit: 6fd8a193728abc0a00075f3e4766a7e2e2859139
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/17/2018
 ---
-# <a name="dashboards-in-includename-sosincludesname-sos-shortmd"></a>儀表板[!INCLUDE[name-sos](../includes/name-sos-short.md)]
+# <a name="dashboards-in-includename-sosincludesname-sos-shortmd"></a>儀表板 [!INCLUDE[name-sos](../includes/name-sos-short.md)]
 
 若要檢視儀表板，以滑鼠右鍵按一下伺服器或資料庫，並選取**管理**。
 
@@ -107,11 +106,11 @@ ms.lasthandoff: 12/21/2017
 
 ## <a name="sample-insight-action-definition"></a>深入了解動作定義範例
 
-```"actions"{}```定義的深入解析 」 動作。 動作可以定義在特定範圍例如```"server"```，```"database"```等和[!INCLUDE[name-sos](../includes/name-sos-short.md)]將目前的連接內容資訊傳遞至動作。 
+```"actions"{}``` 定義的深入解析 」 動作。 動作可以定義在特定範圍例如```"server"```，```"database"```等和[!INCLUDE[name-sos](../includes/name-sos-short.md)]將目前的連接內容資訊傳遞至動作。 
 
-例如，還原動作啟動時 WideWorldImporters 資料庫```"database": "${Database}"```定義表示傳遞```Database```您要還原動作的查詢結果中的資料行值。 接著還原動作，啟動資料庫。 ```"types"```json 陣列，陣列中可以列出多個動作。 它基本上會成為快顯功能表在深入了解詳細資料 對話方塊上，該使用者可以按一下並執行的動作。 
+例如，還原動作啟動時 WideWorldImporters 資料庫```"database": "${Database}"```定義表示傳遞```Database```您要還原動作的查詢結果中的資料行值。 接著還原動作，啟動資料庫。 ```"types"``` json 陣列，陣列中可以列出多個動作。 它基本上會成為快顯功能表在深入了解詳細資料 對話方塊上，該使用者可以按一下並執行的動作。 
 
-> [!INCLUDE[name-sos](../includes/name-sos-short.md)]預覽 0.17.1 已啟用 「 備份 」、 「 還原 」、 [新增查詢] 和 [新的資料庫] 做為動作類型。
+> [!INCLUDE[name-sos](../includes/name-sos-short.md)] 預覽 0.17.1 已啟用 「 備份 」、 「 還原 」、 [新增查詢] 和 [新的資料庫] 做為動作類型。
 
 ```json
 "details": {

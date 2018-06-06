@@ -1,39 +1,30 @@
 ---
-title: "DISCOVER_COMMAND_OBJECTS 資料列集 |Microsoft 文件"
-ms.custom: 
-ms.date: 03/06/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+title: DISCOVER_COMMAND_OBJECTS 資料列集 |Microsoft 文件
+ms.date: 05/03/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: schema-rowsets
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
-helpviewer_keywords: DISCOVER_COMMAND_OBJECTS rowset
-ms.assetid: 325114ee-3a50-4504-9782-dbf7c1a44778
-caps.latest.revision: "21"
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 7f97592e50485bdd26c55eb62fb9b4649acb545b
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: a580be3c487416c6f5c710553f2e4a4d9869e206
+ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="discovercommandobjects-rowset"></a>DISCOVER_COMMAND_OBJECTS 資料列集
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]提供資源使用量與活動資訊的使用中的物件所參考命令。  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+  提供參考命令使用中之物件的資源使用量與活動的有關資訊。  
   
  **適用於：**表格式模型、 多維度模型  
   
 ## <a name="rowset-columns"></a>資料列集資料行  
  **DISCOVER_COMMAND_OBJECTS**資料列集包含下列資料行。  
   
-|資料行名稱|類型指標|限制|描述|  
+|資料行名稱|類型指標|限制|Description|  
 |-----------------|--------------------|-----------------|-----------------|  
 |**SESSION_SPID**|**DBTYPE_I4**|是|工作階段識別碼。|  
 |**SESSION_ID**|**DBTYPE_WSTR**|是|做為 GUID 的工作階段唯一識別碼。|  
@@ -60,12 +51,12 @@ ms.lasthandoff: 01/08/2018
   
  下表將提供可識別此資料列集的 GUID 和字串值。  
   
-|引數|ReplTest1|  
+|引數|值|  
 |--------------|-----------|  
 |GUID|a07ccd35-8148-11d0-87bb-00c04fc33942|  
 |ADOMDNAME|CommandObjects|  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [XML for Analysis 結構描述資料列集](../../../analysis-services/schema-rowsets/xml/xml-for-analysis-schema-rowsets.md)  
   
   

@@ -1,15 +1,14 @@
 ---
-title: "使用伺服器事件的 WMI 提供者 |Microsoft 文件"
-ms.custom: 
+title: 使用伺服器事件的 WMI 提供者 |Microsoft 文件
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
 ms.component: wmi
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - event notifications [WMI]
@@ -22,20 +21,19 @@ helpviewer_keywords:
 - notifications [WMI]
 - WMI Provider for Server Events, security
 ms.assetid: cd974b3b-2309-4a20-b9be-7cfc93fc4389
-caps.latest.revision: 
-author: JennieHubbard
-ms.author: jhubbard
+caps.latest.revision: 33
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: da5cc9e2163ba86ebb26f631c8b35d8590de27c5
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.openlocfilehash: 98f1dfb796dbd30eb6e4d7f4e20d9bf37854d902
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="working-with-the-wmi-provider-for-server-events"></a>使用伺服器事件的 WMI 提供者
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
-本主題會提供您使用伺服器事件的 WMI 提供者進行程式設計前應該考慮的指導方針。  
+  本主題會提供您使用伺服器事件的 WMI 提供者進行程式設計前應該考慮的指導方針。  
   
 ## <a name="enabling-service-broker"></a>啟用 Service Broker  
  伺服器事件的 WMI 提供者可透過將事件的 WQL 查詢轉譯為目標系統中的事件通知來運作。 了解事件通知如何運作在根據提供者進行程式設計時可能很有用。 如需詳細資訊，請參閱＜ [伺服器事件的 WMI 提供者概念](http://technet.microsoft.com/library/ms180560.aspx)＞。  

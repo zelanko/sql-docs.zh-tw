@@ -1,38 +1,19 @@
 ---
-title: "多維度模型組件管理 |Microsoft 文件"
-ms.custom: 
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
-helpviewer_keywords:
-- permissions [Analysis Services], assemblies
-- calling user-defined functions
-- user impersonation [Analysis Services]
-- impersonation [Analysis Services]
-- Data Mining Extensions [Analysis Services], assemblies
-- MDX [Analysis Services], assemblies
-- user-defined functions [Analysis Services]
-- Analysis Services objects, assemblies
-- assemblies [Analysis Services]
-- application domains [Analysis Services]
-ms.assetid: b2645d10-6d17-444e-9289-f111ec48bbfb
-caps.latest.revision: 
-author: Minewiskan
+title: 多維度模型組件管理 |Microsoft 文件
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: multidimensional-models
+ms.topic: conceptual
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 2ccd3083abd00b2f2ad4f343a35cb53d7f2e1c08
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: df015e99df80915c68fa8f45e9f31ec475e22bc2
+ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="multidimensional-model-assemblies-management"></a>多維度模型組件管理
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]

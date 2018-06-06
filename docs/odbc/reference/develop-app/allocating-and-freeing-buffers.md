@@ -1,31 +1,28 @@
 ---
-title: "配置及釋放緩衝區 |Microsoft 文件"
-ms.custom: 
+title: 配置及釋放緩衝區 |Microsoft 文件
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
-ms.component: odbc
-ms.reviewer: 
+ms.prod: sql
+ms.prod_service: connectivity
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: connectivity
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - buffers [ODBC], allocating and freeing
 - allocating buffers [ODBC]
 - freeing buffers [ODBC]
 ms.assetid: 886bc9ed-39d4-43d2-82ff-aebc35b14d39
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
-ms.workload: Inactive
-ms.openlocfilehash: 4602d02a25740ce296a059a0f3f1fd82a9a3db47
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+manager: craigg
+ms.openlocfilehash: e85c2ab4ad25501637ccba2206f85c7895440ade
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="allocating-and-freeing-buffers"></a>配置及釋放緩衝區
 所有緩衝區配置及釋放應用程式。 如果緩衝區未延後，它必須只存在於呼叫的函式的持續時間。 例如， **SQLGetInfo**傳回中所指向之緩衝區的特定選項相關聯的值*InfoValuePtr*引數。 可以呼叫之後立即釋放此緩衝區**SQLGetInfo**，如下列程式碼範例所示：  

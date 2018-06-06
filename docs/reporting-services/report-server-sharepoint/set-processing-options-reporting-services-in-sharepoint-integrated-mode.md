@@ -1,25 +1,23 @@
 ---
-title: "設定處理選項 (SharePoint 整合模式的 Reporting Services) | Microsoft Docs"
-ms.custom: 
+title: 設定處理選項 (SharePoint 整合模式的 Reporting Services) | Microsoft Docs
+ms.custom: ''
 ms.date: 10/05/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: report-server-sharepoint
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 1b9c5a476c346812140919006fd6f2d3e0d721ac
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: aa011aa0429646f51cf8a75660e116b0b49457ac
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="set-processing-options-reporting-services-in-sharepoint-integrated-mode"></a>設定處理選項 (SharePoint 整合模式的 Reporting Services)
 
@@ -48,15 +46,15 @@ ms.lasthandoff: 01/09/2018
   
 2.  按一下向下箭頭，然後選取 **[管理處理選項]**。  
   
-3.  在 **[資料重新整理選項]**中，按一下 **[使用快照集資料]**。 如果您看見「此報表不可從快照集執行，因為有一或多個資料來源認證未儲存。」，表示報告未設定為自動執行，而且您必須先修改資料來源以使用儲存的認證，才能設定此選項。  
+3.  在 **[資料重新整理選項]** 中，按一下 **[使用快照集資料]**。 如果您看見「此報表不可從快照集執行，因為有一或多個資料來源認證未儲存。」，表示報告未設定為自動執行，而且您必須先修改資料來源以使用儲存的認證，才能設定此選項。  
   
-4.  在 **[資料快照集選項]**中，選取 **[排程資料處理]**。  
+4.  在 **[資料快照集選項]** 中，選取 **[排程資料處理]**。  
   
 5.  如果要使用現有的共用排程，請選取 **[在共用排程上]** ，否則，請按一下 **[在自訂排程上]**，然後按一下 **[設定]**。  
   
 6.  選取頻率、排程，以及開始和結束日期，然後按一下 **[確定]**。  
   
-7.  如果要立即建立搭配報表使用的快照集資料，而不想等到排程的資料處理發生，請在 **[資料快照集選項]**中選取 **[儲存此頁面時建立或更新快照集]** 。  
+7.  如果要立即建立搭配報表使用的快照集資料，而不想等到排程的資料處理發生，請在 **[資料快照集選項]** 中選取 **[儲存此頁面時建立或更新快照集]** 。  
   
 ## <a name="set-report-caching-options"></a>設定報表快取選項
   
@@ -64,9 +62,9 @@ ms.lasthandoff: 01/09/2018
   
 2.  按一下向下箭頭，然後選取 **[管理處理選項]**。  
   
-3.  在 **[資料重新整理選項]**中，按一下 **[使用快取的資料]**。 如果您看見「無法快取此報表，因為有一或多個資料來源認證未儲存。」，表示報告未設定為自動執行，而且您必須先修改資料來源以使用儲存的認證，才能設定此選項。  
+3.  在 **[資料重新整理選項]** 中，按一下 **[使用快取的資料]**。 如果您看見「無法快取此報表，因為有一或多個資料來源認證未儲存。」，表示報告未設定為自動執行，而且您必須先修改資料來源以使用儲存的認證，才能設定此選項。  
   
-4.  在 **[快取選項]**中，指定快取過期的方式：  
+4.  在 **[快取選項]** 中，指定快取過期的方式：  
   
     -   輸入分鐘數，快取將在經過此分鐘數之後過期。  
   
@@ -88,9 +86,9 @@ ms.lasthandoff: 01/09/2018
   
 2.  按一下向下箭頭，然後選取 **[管理處理選項]**。  
   
-3.  在 **[記錄快照集選項]**中，指定資料處理發生和儲存的方式及時間。  
+3.  在 **[記錄快照集選項]** 中，指定資料處理發生和儲存的方式及時間。  
   
-4.  如果要使用在報表伺服器層級指定的值，請在 **[記錄快照集限制]**中選取 **[使用站台預設值]** 。 否則，請選取 **[不限制快照集數目]** 或 **[限制快照集數目為]** 指定自訂值。  
+4.  如果要使用在報表伺服器層級指定的值，請在 **[記錄快照集限制]** 中選取 **[使用站台預設值]** 。 否則，請選取 **[不限制快照集數目]** 或 **[限制快照集數目為]** 指定自訂值。  
   
 ## <a name="set-database-timeout"></a>設定資料庫逾時
   

@@ -1,36 +1,35 @@
 ---
-title: "解除封裝 DAC 封裝 | Microsoft 文件"
-ms.custom: 
+title: 解除封裝 DAC 封裝 | Microsoft 文件
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
 ms.component: data-tier-applications
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-data-tier-apps
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - wizard [DAC], unpack
 - data-tier application [SQL Server], unpack
 - How to [DAC], unpack
 - unpack DAC
 ms.assetid: 697b69b3-f157-4e22-ac4e-f65c5fc2d0ad
-caps.latest.revision: 
+caps.latest.revision: 11
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 84728faa46ca75d50b44e8047ce962bda4d415fc
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.openlocfilehash: 2e30fdb3d4fe97021ba89b710fd128ee9faaedec
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="unpack-a-dac-package"></a>解除封裝 DAC 封裝
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 使用 [解除封裝資料層應用程式] 對話方塊可從資料層應用程式 (DAC) 封裝解壓縮指令碼和檔案。 這些指令碼和檔案會放置在某個資料夾中，使用此封裝來將 DAC 部署到實際執行系統之前便可以進行檢閱。 DAC 的內容也可以與解除封裝到另一個資料夾的另一個封裝內容相比較。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  使用 [解除封裝資料層應用程式] 對話方塊可從資料層應用程式 (DAC) 封裝解壓縮指令碼和檔案。 這些指令碼和檔案會放置在某個資料夾中，使用此封裝來將 DAC 部署到實際執行系統之前便可以進行檢閱。 DAC 的內容也可以與解除封裝到另一個資料夾的另一個封裝內容相比較。  
   
 1.  **開始之前**  [安全性](#Security)  
   

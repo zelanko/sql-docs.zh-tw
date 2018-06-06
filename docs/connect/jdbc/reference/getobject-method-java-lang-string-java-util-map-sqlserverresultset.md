@@ -1,30 +1,29 @@
 ---
-title: "getObject 方法 （java.lang.String，java.util.Map） |Microsoft 文件"
-ms.custom: 
+title: getObject 方法 （java.lang.String，java.util.Map） |Microsoft 文件
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
-ms.component: jdbc
-ms.reviewer: 
+ms.prod: sql
+ms.prod_service: connectivity
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
-ms.topic: article
-apiname: SQLServerResultSet.getObject (java.lang.String, java.util.Map)
-apilocation: sqljdbc.jar
+ms.technology: connectivity
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
+apiname:
+- SQLServerResultSet.getObject (java.lang.String, java.util.Map)
+apilocation:
+- sqljdbc.jar
 apitype: Assembly
 ms.assetid: 8104406b-417d-4ff5-9aca-183ee0f76762
-caps.latest.revision: "15"
+caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
-ms.workload: Inactive
-ms.openlocfilehash: b5d9892d895f42792f548eb8b4d4ef23f5029bf2
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+manager: craigg
+ms.openlocfilehash: 3286cd54429926df0906394c9cd06feccc7b6af6
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="getobject-method-javalangstring-javautilmap-sqlserverresultset"></a>getObject 方法 (java.lang.String, java.util.Map) (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -32,7 +31,7 @@ ms.lasthandoff: 11/18/2017
   取得值，這個目前的資料列內指定之資料行名稱的[SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md)物件為 Java 程式語言，並透過給定的 Map 物件中的物件。  
   
 > [!NOTE]  
->  這個方法目前不支援由[!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)]。 因此，使用這個方法時一定會傳回預設對應。  
+>  [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] 目前不支援這個方法。 因此，使用這個方法時一定會傳回預設對應。  
   
 ## <a name="syntax"></a>語法  
   
@@ -43,9 +42,9 @@ public java.lang.Object getObject(java.lang.String colName,
 ```  
   
 #### <a name="parameters"></a>參數  
- *colName*  
+ *ColName*  
   
- A**字串**，其中包含資料行名稱。  
+ 包含資料行名稱的**字串**。  
   
  *對應*  
   
@@ -74,8 +73,8 @@ public java.lang.Object getObject(java.lang.String colName,
   
 -   將會以 microsoft.sql.DateTimeOffset 物件的形式傳回 datetimeoffset 型別的值。  
   
-## <a name="see-also"></a>請參閱＜  
- [getObject 方法 &#40;SQLServerResultSet &#41;](../../../connect/jdbc/reference/getobject-method-sqlserverresultset.md)   
+## <a name="see-also"></a>另請參閱  
+ [getObject 方法&#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/getobject-method-sqlserverresultset.md)   
  [SQLServerResultSet 成員](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
  [SQLServerResultSet 類別](../../../connect/jdbc/reference/sqlserverresultset-class.md)  
   

@@ -1,30 +1,20 @@
 ---
-title: "Lag (MDX) |Microsoft 文件"
-ms.custom: 
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: language-reference
-f1_keywords: LAG
-dev_langs: kbMDX
-helpviewer_keywords: Lag function
-ms.assetid: 08c704ea-35d8-44ee-abe5-93bd24b99906
-caps.latest.revision: "34"
-author: Minewiskan
+title: Lag (MDX) |Microsoft 文件
+ms.date: 05/30/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: mdx
+ms.topic: reference
 ms.author: owend
-manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: a219e0b8455ff3a66d20a8c670bb8675481498e4
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: c5e019312eacc2cf3f842721054ad5e39ea75d4b
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34578860"
 ---
 # <a name="lag-mdx"></a>Lag (MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -52,7 +42,7 @@ Member_Expression.Lag(Index)
   
  如果指定的落後是負數，**延隔**函式會傳回後續成員。  
   
- `Lag(1)`相當於[PrevMember](../mdx/prevmember-mdx.md)函式。 `Lag(-1)`相當於[NextMember](../mdx/nextmember-mdx.md)函式。  
+ `Lag(1)` 相當於[PrevMember](../mdx/prevmember-mdx.md)函式。 `Lag(-1)` 相當於[NextMember](../mdx/nextmember-mdx.md)函式。  
   
  **延隔**函數很相似[導致](../mdx/lead-mdx.md)函式中，不同處在於**導致**函式會以相反的方向，以尋找**延隔**函式。 也就是說，`Lag(n)` 相當於 `Lead(-n)`。  
   
@@ -73,7 +63,7 @@ FROM [Adventure Works]
   
 ```  
   
-## <a name="see-also"></a>請參閱  
- [MDX 函數參考 &#40;MDX &#41;](../mdx/mdx-function-reference-mdx.md)  
+## <a name="see-also"></a>另請參閱  
+ [MDX 函數參考&#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

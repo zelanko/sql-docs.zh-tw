@@ -1,16 +1,14 @@
 ---
-title: "sys.master_files (TRANSACT-SQL) |Microsoft 文件"
-ms.custom: 
+title: sys.master_files (TRANSACT-SQL) |Microsoft 文件
+ms.custom: ''
 ms.date: 03/10/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, pdw
-ms.service: 
 ms.component: system-catalog-views
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: system-objects
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.master_files
@@ -22,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - sys.master_files catalog view
 ms.assetid: 803b22f2-0016-436b-a561-ce6f023d6b6a
-caps.latest.revision: 
+caps.latest.revision: 56
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 1c0ee418f8b04c8a549fb107698bd1f2df5648b2
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+monikerRange: '>= aps-pdw-2016 || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: cd7c2b9aac08fe6133c2138f5a1c2ea5369ec34c
+ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="sysmasterfiles-transact-sql"></a>sys.master_files (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-pdw-md.md)]
@@ -44,12 +42,12 @@ ms.lasthandoff: 11/21/2017
 |file_id|**int**|資料庫內的檔案識別碼。 主要 file_id 一定是 1。|  
 |file_guid|**uniqueidentifier**|檔案的唯一識別碼。<br /><br /> NULL = 資料庫從舊版 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 升級。|  
 |型別|**tinyint**|檔案類型：<br /><br /> 0 = 資料列 <br /><br /> 1 = 記錄<br /><br /> 2 = FILESTREAM<br /><br /> 3 = [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]<br /><br /> 4 = 全文檢索 (早於 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 的全文檢索目錄；已升級為 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 或更高版本或是以此版本建立的全文檢索目錄將報告檔案類型 0)。|  
-|type_desc|**nvarchar （60)**|檔案類型的描述：<br /><br /> ROWS<br /><br /> LOG<br /><br /> FILESTREAM<br /><br /> FULLTEXT (早於 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 的全文檢索目錄)。|  
+|type_desc|**nvarchar(60)**|檔案類型的描述：<br /><br /> ROWS<br /><br /> LOG<br /><br /> FILESTREAM<br /><br /> FULLTEXT (早於 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 的全文檢索目錄)。|  
 |data_space_id|**int**|這個檔案所屬的資料空間識別碼。 資料空間是一個檔案群組。<br /><br /> 0 = 記錄檔。|  
 |name|**sysname**|資料庫中之檔案的邏輯名稱。|  
-|physical_name|**nvarchar （260)**|作業系統檔案名稱。|  
+|physical_name|**nvarchar(260)**|作業系統檔案名稱。|  
 |state|**tinyint**|檔案狀態：<br /><br /> 0 = ONLINE <br /><br /> 1 = RESTORING<br /><br /> 2 = RECOVERING<br /><br /> 3 = RECOVERY_PENDING<br /><br /> 4 = SUSPECT<br /><br /> 5 = [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]<br /><br /> 6 = OFFLINE<br /><br /> 7 = DEFUNCT|  
-|state_desc|**nvarchar （60)**|檔案狀態的描述：<br /><br /> ONLINE<br /><br /> RESTORING<br /><br /> RECOVERING<br /><br /> RECOVERY_PENDING<br /><br /> SUSPECT<br /><br /> OFFLINE<br /><br /> DEFUNCT<br /><br /> 如需詳細資訊，請參閱[檔案狀態](../../relational-databases/databases/file-states.md)。|  
+|state_desc|**nvarchar(60)**|檔案狀態的描述：<br /><br /> ONLINE<br /><br /> RESTORING<br /><br /> RECOVERING<br /><br /> RECOVERY_PENDING<br /><br /> SUSPECT<br /><br /> OFFLINE<br /><br /> DEFUNCT<br /><br /> 如需詳細資訊，請參閱[檔案狀態](../../relational-databases/databases/file-states.md)。|  
 |size|**int**|目前檔案大小 (以 8 KB 頁面為單位)。 如果是資料庫快照集，size 會反映快照集可以使用的最大檔案空間。<br /><br /> 注意： 此欄位會填入零 FILESTREAM 容器。 查詢*sys.database_files*目錄檢視中 FILESTREAM 容器的實際大小。|  
 |max_size|**int**|最大檔案大小 (以 8 KB 頁面為單位)：<br /><br /> 0 = 不允許任何成長。<br /><br /> -1 = 檔案會成長到磁碟已滿。<br /><br /> 268435456 = 記錄檔可以成長到最大 2 TB 的大小。<br /><br /> 注意： 升級以無限的記錄檔案大小的資料庫將會報告記錄檔的大小上限-1。|  
 |growth|**int**|0 = 檔案是固定大小，不會成長。<br /><br /> >0 = 檔案會自動成長。<br /><br /> 如果 is_percent_growth = 0，成長遞增是以 8 KB 頁面來表示，會捨入到最接近的 64 KB。<br /><br /> 如果 is_percent_growth = 1，便會以整數百分比的方式來表現成長遞增。|  
@@ -78,7 +76,7 @@ ms.lasthandoff: 11/21/2017
 ## <a name="permissions"></a>Permissions  
  查看對應資料列時所需的最低權限為 CREATE DATABASE、ALTER ANY DATABASE 或 VIEW ANY DEFINITION。  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [資料庫和檔案目錄檢視 &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/databases-and-files-catalog-views-transact-sql.md)   
  [檔案狀態](../../relational-databases/databases/file-states.md)   
  [sys.databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)   

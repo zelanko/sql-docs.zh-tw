@@ -1,27 +1,25 @@
 ---
-title: "在多個頁面上顯示資料列和資料行標頭 (報表產生器及 SSRS) | Microsoft Docs"
-ms.custom: 
+title: 在多個頁面上顯示資料列和資料行標頭 (報表產生器及 SSRS) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: report-design
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: 2422b1e2-822f-4379-9d7f-9afebb350e3f
-caps.latest.revision: "8"
+caps.latest.revision: 8
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.workload: Active
-ms.openlocfilehash: f9c2cc9c26644cb4671f5a601ad4c755ff2a1019
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 1865c120f784d7e184e24ede5ccb6943b7ba439f
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="display-row-and-column-headers-on-multiple-pages-report-builder-and-ssrs"></a>在多個頁面上顯示資料列和資料行標頭 (報表產生器及 SSRS)
   您可以控制是否要針對跨多個頁面的 Tablix 資料區 (資料表、矩陣或清單)，在 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 分頁報表的每個頁面上重複資料列和資料行標頭。
@@ -38,7 +36,7 @@ ms.lasthandoff: 01/09/2018
   
 1.  以滑鼠右鍵按一下 Tablix 資料區的資料列、資料行或角控點，然後按一下 **[Tablix 屬性]**。  
   
-2.  在 **[資料列標頭]**中，選取 **[在每一頁重複標頭資料列]**。  
+2.  在 **[資料列標頭]** 中，選取 **[在每一頁重複標頭資料列]**。  
   
 3.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
@@ -46,7 +44,7 @@ ms.lasthandoff: 01/09/2018
   
 1.  以滑鼠右鍵按一下 Tablix 資料區的資料列、資料行或角控點，然後按一下 **[Tablix 屬性]**。  
   
-2.  在 **[資料行標頭]**中，選取 **[在每一頁重複標頭資料行]**。  
+2.  在 **[資料行標頭]** 中，選取 **[在每一頁重複標頭資料行]**。  
   
 3.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   

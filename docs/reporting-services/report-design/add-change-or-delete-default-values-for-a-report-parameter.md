@@ -1,31 +1,29 @@
 ---
-title: "為報表參數新增、變更或刪除預設值 | Microsoft Docs"
-ms.custom: 
+title: 為報表參數新增、變更或刪除預設值 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: report-design
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 f1_keywords:
 - "10460"
 - sql13.rtp.rptdesigner.reportparameters.defaultvalues.f1
 - "10072"
 ms.assetid: 6a87e069-b3a9-47b6-bcec-afcdd8aff65f
-caps.latest.revision: "11"
+caps.latest.revision: 11
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 45866119e6f1182e21d79db154a04fe8f1fc6674
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 86e726e458454a5f1016b36b5a63f0e4fdaaf542
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="add-change-or-delete-default-values-for-a-report-parameter"></a>為報表參數加入、變更或刪除預設值
   當您建立報表參數以後，可以提供預設值的清單。 如果所有的參數都有有效的預設值，當您第一次檢視或預覽報表時，報表就會自動執行。  
@@ -52,9 +50,9 @@ ms.lasthandoff: 01/09/2018
   
          如果是多值參數，請重複這個步驟，盡量提供您想要的值。 您在這個清單中看到的項目順序會決定使用者在下拉式清單中看到它們的順序。 若要變更某個項目在清單中的順序，請按一下 [值] 文字方塊來選取此項目，然後使用向上箭頭和向下箭頭按鈕，將此項目移到清單中的更高或更低位置。  
   
-    -   若要提供現有資料集名稱 (該資料集會擷取值)，請按一下 [從查詢取得值]。 在 **[資料集]**中，選擇此資料集的名稱。  
+    -   若要提供現有資料集名稱 (該資料集會擷取值)，請按一下 [從查詢取得值]。 在 **[資料集]** 中，選擇此資料集的名稱。  
   
-         在 **[值欄位]**中，選擇可提供參數值的欄位名稱。  
+         在 **[值欄位]** 中，選擇可提供參數值的欄位名稱。  
   
 4.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   

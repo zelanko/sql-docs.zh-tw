@@ -1,16 +1,15 @@
 ---
-title: "ResumeService 方法 （SqlService 類別） |Microsoft 文件"
-ms.custom: 
+title: ResumeService 方法 （SqlService 類別） |Microsoft 文件
+ms.custom: ''
 ms.date: 03/04/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
 ms.component: wmi
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - ResumeService Method (SqlService Class)
@@ -20,20 +19,19 @@ apitype: MOFDef
 helpviewer_keywords:
 - ResumeService method
 ms.assetid: 0b0a5f08-b95e-4626-bf81-309da7a0aacd
-caps.latest.revision: 
-author: JennieHubbard
-ms.author: jhubbard
+caps.latest.revision: 34
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: aa8374f8eadd988d29e42bdcbb234b1f3446070e
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.openlocfilehash: 49d3185f45e7c324581c15183bc5016297137c81
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="resumeservice-method-sqlservice-class"></a>ResumeService 方法 (SqlService 類別)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
-嘗試將此服務置於繼續狀態。  
+  嘗試將此服務置於繼續狀態。  
   
 ## <a name="syntax"></a>語法  
   

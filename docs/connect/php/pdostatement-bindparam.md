@@ -1,27 +1,26 @@
 ---
-title: "Pdostatement:: Bindparam |Microsoft 文件"
-ms.custom: 
-ms.date: 10/24/2017
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
+title: 'Pdostatement:: Bindparam |Microsoft 文件'
+ms.custom: ''
+ms.date: 05/22/2018
+ms.prod: sql
+ms.prod_service: connectivity
 ms.component: php
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: connectivity
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: 65212058-2632-47a4-ba7d-2206883abf09
-caps.latest.revision: "17"
+caps.latest.revision: 17
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
-ms.workload: Inactive
-ms.openlocfilehash: 61cecbcd76ba7c28135cd4ed306dad1c0ea0830c
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+manager: craigg
+ms.openlocfilehash: 476030f5a5f08b2226036b5214ebc973a8a04b3a
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34563936"
 ---
 # <a name="pdostatementbindparam"></a>PDOStatement::bindParam
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -104,6 +103,9 @@ echo $input1;
 ?>  
 ```  
   
+> [!NOTE]
+> Bigint 型別，繫結 output 參數，如果值可能會超出範圍時[整數](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md)，pdo:: PARAM_INT 使用 pdo:: SQLSRV_PARAM_OUT_DEFAULT_SIZE，可能會導致 「 超出範圍的值 」 例外狀況。 因此，請改用 default pdo:: PARAM_STR，並提供結果的字串，最多為 21 的大小。 它是數字，包括任何 bigint 值的負值正負號的數目上限。 
+
 ## <a name="example"></a>範例  
 此程式碼範例說明如何使用輸入/輸出參數。  
   
@@ -124,7 +126,7 @@ echo $input1;
 ```  
 
 > [!NOTE]
-> 建議使用字串做為輸入，當繫結至值[十進位或數值資料行](https://docs.microsoft.com/en-us/sql/t-sql/data-types/decimal-and-numeric-transact-sql)為確保如 PHP 有限的有效位數的有效位數和精確度[浮點數](http://php.net/manual/en/language.types.float.php)。
+> 建議使用字串做為輸入，當繫結至值[十進位或數值資料行](../../t-sql/data-types/decimal-and-numeric-transact-sql.md)為確保如 PHP 有限的有效位數的有效位數和精確度[浮點數](http://php.net/manual/en/language.types.float.php)。 同樣適用於 bigint 資料行，尤其是有效值的範圍外[整數](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md)。
 
 ## <a name="example"></a>範例  
 此程式碼範例示範如何將繫結十進位值做為輸入參數。  
@@ -145,7 +147,8 @@ $stmt->execute();
 ```
 
 
-## <a name="see-also"></a>請參閱＜  
-[PDOStatement 類別](../../connect/php/pdostatement-class.md)  
-[PDO](http://go.microsoft.com/fwlink/?LinkID=187441)  
+## <a name="see-also"></a>另請參閱  
+[PDOStatement 類別](../../connect/php/pdostatement-class.md)
+
+[PDO](http://php.net/manual/book.pdo.php)  
   

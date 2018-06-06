@@ -1,31 +1,30 @@
 ---
-title: "伺服器屬性 (其他伺服器設定頁面) | Microsoft Docs"
-ms.custom: 
+title: 伺服器屬性 (其他伺服器設定頁面) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
-ms.prod_service: database-engine
-ms.service: 
-ms.component: configure-windows
-ms.reviewer: 
+ms.prod: sql
+ms.prod_service: high-availability
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: database-engine
-ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords: sql13.swb.serverproperties.miscserversettings.f1
+ms.technology: configuration
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
+f1_keywords:
+- sql13.swb.serverproperties.miscserversettings.f1
 ms.assetid: b170c066-30cd-42dd-8d34-aa129ea09551
-caps.latest.revision: "22"
+caps.latest.revision: 22
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: a15ed54489890a17059330ea88e906ad6778e095
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: a6ef0e31d5a1faf0fbca745f725fe27f0e31b65d
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="server-properties---misc-server-settings-page"></a>伺服器屬性 - 其他伺服器設定頁面
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 使用此頁面來檢視或修改伺服器設定。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  使用此頁面來檢視或修改伺服器設定。  
   
 ## <a name="options"></a>選項。  
  **使用者的預設語言**  

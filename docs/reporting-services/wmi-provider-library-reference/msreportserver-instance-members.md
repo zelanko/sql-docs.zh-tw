@@ -1,31 +1,32 @@
 ---
-title: "MSReportServer_Instance 成員 | Microsoft Docs"
-ms.custom: 
+title: MSReportServer_Instance 成員 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: wmi-provider-library-reference
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
-apiname: MSReportServer_Instance Members
-apilocation: reportingservices.mof
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
+apiname:
+- MSReportServer_Instance Members
+apilocation:
+- reportingservices.mof
 apitype: MOFDef
-helpviewer_keywords: MSReportServer_Instance class
+helpviewer_keywords:
+- MSReportServer_Instance class
 ms.assetid: 154b78e6-59cc-44eb-a7d9-34908d1b6b1a
-caps.latest.revision: "22"
+caps.latest.revision: 22
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: f730c67bfe4fd08a9289d5466d8579acc8cf045f
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: dff6e88cd1eb727caca99754fd0507342c6be3a5
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="msreportserverinstance-members"></a>MSReportServer_Instance 成員
   MSReportServer_Instance 類別提供用戶端所需的基本資訊，以連接至安裝的報表伺服器。  

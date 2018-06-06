@@ -1,36 +1,36 @@
 ---
-title: "取代範本參數 | Microsoft Docs"
-ms.custom: 
+title: 取代範本參數 | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
 ms.component: ssms-templates
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: tools-ssms
-ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords: sql13.swb.templates.replaceparameters.f1
+ms.technology: ssms
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
+f1_keywords:
+- sql13.swb.templates.replaceparameters.f1
 helpviewer_keywords:
 - template parameters [Template Explorer]
 - templates [Transact-SQL], replacing parameters
 - Replace (Query) Template Parameters dialog box
 - replacing template parameters
 ms.assetid: 1234aa14-3464-4a3e-922a-5cfb8fb23627
-caps.latest.revision: "4"
+caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 5ebd4117ea5e966503cf9a2ab85760c33b6b7f35
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.openlocfilehash: 896f34a07cfccbc1f739eb714643ba181b2bb35e
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="replace-template-parameters"></a>取代範本參數
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 範本包含每次使用範本時可由實作特定值替換的參數。 在程式碼編輯器中開啟範本之後，可以使用與您的實作相關的值替換這些參數。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+範本包含每次使用範本時可由實作特定值替換的參數。 在程式碼編輯器中開啟範本之後，可以使用與您的實作相關的值替換這些參數。  
   
 ## <a name="before-you-begin"></a>開始之前  
 [指定範本參數的值] 對話方塊是包含三個資料行的方格。 [參數] 和 [類型] 資料行是唯讀的，無法變更。 檢閱 [值] 資料行的內容，並將任意預設值更改為適合您實作的值。  

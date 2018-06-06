@@ -1,29 +1,31 @@
 ---
-title: "管理複合定義域 | Microsoft Docs"
-ms.custom: 
+title: 管理複合定義域 | Microsoft Docs
+ms.custom: ''
 ms.date: 07/31/2012
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: data-quality-services
-ms.service: 
 ms.component: data-quality-services
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: data-quality-services
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- data-quality-services
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: 47821eff-800b-4053-8d36-e42bbc267f54
-caps.latest.revision: "12"
+caps.latest.revision: 12
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.workload: Inactive
-ms.openlocfilehash: c9a7ebf0d795639f59106afc0573f42d088926fa
-ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
+manager: craigg
+ms.openlocfilehash: b7ac2c454befa88bd9079590d16015d8011d38fd
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="managing-a-composite-domain"></a>管理複合定義域
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
   此主題描述如何在 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) 中使用複合定義域。 有時單一定義域無法滿意地表示欄位中的資料，您只能透過群組單一定義域來表示該資料。 若要這樣做，請建立複合定義域。 複合定義域是由兩個或多個單一定義域所組成，而且會對應至由多個相關詞彙所組成的資料欄位，這些詞彙未經過剖析，但是包含在單一複合值中。 此值中的每一個詞彙將由不同的單一定義域表示。 一旦您將單一定義域併入複合定義域，然後將複合定義域對應至資料欄位之後，您就可以藉由在單一定義域中建立知識，於知識庫中建立有關該欄位中之資料的知識。 複合定義域就像單一定義域一樣，都是單一資料欄位中資料的語意表示法。  
   
  複合定義域中的單一定義域必須擁有共同知識領域。 範例如下：擁有街道、縣市、州/省、國家/地區和郵遞區號資料的地址欄位。 此欄位中的不同詞彙可能會有不同的資料類型。 若要處理這種情況，請將這些詞彙對應到不同的單一定義域。 另一個範例如下：擁有名字、中間名和姓氏資料的完整名稱欄位。 若要使用複合定義域，您必須能夠將此欄位中的資料剖析成不同的單一定義域，為此欄位建立複合定義域，並為此欄位的一部分建立單一定義域。  

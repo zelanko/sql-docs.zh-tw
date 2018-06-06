@@ -1,31 +1,23 @@
 ---
-title: "多維度資料庫 (Analysis Services) 的相容性層級 |Microsoft 文件"
-ms.custom: 
-ms.date: 03/04/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
-ms.assetid: 978279e6-a581-4184-af9d-8701b9826a89
-caps.latest.revision: 
-author: Minewiskan
+title: 多維度資料庫 (Analysis Services) 的相容性層級 |Microsoft 文件
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: multidimensional-models
+ms.topic: conceptual
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: f0b002ac618a9e55da3a433c11817eca716345ef
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: d8f11bb819073ef054582a55620b553865469466
+ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="compatibility-level-of-a-multidimensional-database-analysis-services"></a>多維度資料庫的相容性層級 (Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-在 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]中，資料庫相容性層級屬性會決定資料庫的功能層級。 每個模型類型都有唯一的相容性層級。 例如，相容性層級 **1100** 的意義會因為資料庫是多維度或表格式而有所不同。  
+  在 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]中，資料庫相容性層級屬性會決定資料庫的功能層級。 每個模型類型都有唯一的相容性層級。 例如，相容性層級 **1100** 的意義會因為資料庫是多維度或表格式而有所不同。  
   
  本主題描述只適用於多維度資料庫的相容性層級。 如需表格式方案的詳細資訊，請參閱 [Analysis Services 中表格式模型的相容性層級](../../analysis-services/tabular-models/compatibility-level-for-tabular-models-in-analysis-services.md)。  
   

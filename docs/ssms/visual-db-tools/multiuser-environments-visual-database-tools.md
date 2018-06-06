@@ -1,16 +1,15 @@
 ---
-title: "多使用者環境 (Visual Database Tools) | Microsoft Docs"
-ms.custom: 
+title: 多使用者環境 (Visual Database Tools) | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
 ms.component: ssms-visual-db
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: tools-ssms
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ssms
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - users [SQL Server], multiuser environments
 - conflict resolution [Visual Database Tools]
@@ -20,19 +19,19 @@ helpviewer_keywords:
 - version control [Visual Database Tools]
 - Visual Database Tools [SQL Server], multiuser environments
 ms.assetid: 330bd48c-9427-4967-b58e-b7c492d5ee36
-caps.latest.revision: "3"
+caps.latest.revision: 3
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: b0af6f6a7a0ff96a6fa5edc1b7c0bf3914e55c4b
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.openlocfilehash: 41d58d45e9411caa3734f95986f3d22a7cb77529
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="multiuser-environments-visual-database-tools"></a>多使用者環境 (Visual Database Tools)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 在多使用者環境中，其他使用者可以連線並變更您正在使用的相同資料庫。 因此數個使用者可同時使用同一個資料庫物件。 也就是說，當您在多使用者環境中進行變更時，其他使用者所做的變更可能會影響資料庫，反之亦然。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+在多使用者環境中，其他使用者可以連接並變更您正在使用的相同資料庫。 因此數個使用者可同時使用同一個資料庫物件。 也就是說，當您在多使用者環境中進行變更時，其他使用者所做的變更可能會影響資料庫，反之亦然。  
   
 在多使用者環境中使用資料庫的重點即為存取權限。 您具備的資料庫權限將決定您可以使用資料庫的工作範圍。 例如，若要變更資料庫中的物件，您必須擁有資料庫的寫入權限。 如需資料庫權限的詳細資訊，請參閱您的資料庫文件。 如需詳細資訊，請參閱[權限和 Visual Database Tools &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/permissions-and-visual-database-tools-visual-database-tools.md)。  
   

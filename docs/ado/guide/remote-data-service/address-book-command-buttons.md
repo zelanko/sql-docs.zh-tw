@@ -1,31 +1,28 @@
 ---
-title: "地址通訊錄命令按鈕 |Microsoft 文件"
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
+title: 地址通訊錄命令按鈕 |Microsoft 文件
+ms.prod: sql
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
-ms.custom: 
+ms.technology: connectivity
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - address book application scenario [ADO], command buttons
 - RDS scenarios [ADO], command buttons
 ms.assetid: 80676831-6488-4dad-a558-c47c52256a22
-caps.latest.revision: 
+caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 531e10f28850e6da6f9863cb5f06e253793b1dee
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 5db9a77104bab65e12b54d860ddcb49ced321f95
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="address-book-command-buttons"></a>地址通訊錄命令按鈕
 通訊錄應用程式包含下列的命令按鈕：  
@@ -58,7 +55,7 @@ Select FirstName, LastName, Title, Email, Building, Room, Phone from Employee wh
  如果查詢成功，所有的人員姓氏包含文字"淑真 」 （例如淑真和 Berger） 與包含文字 「 程式管理員 」 （例如，程式管理員、 進階技術） 的標題會顯示在 HTML 資料格。  
   
 ## <a name="preparing-and-sending-the-query"></a>準備和傳送查詢  
- Find_OnClick Sub 程序的最後一個部分是由兩個陳述式所組成。 第一個陳述式會指派[SQL](../../../ado/reference/rds-api/sql-property.md)屬性[.RDSDataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md)等於動態建立 SQL 查詢的物件。 第二個陳述式會導致**.RDSDataControl**物件 (`DC1`) 以查詢資料庫，並在方格中顯示新查詢的結果。  
+ Find_OnClick Sub 程序的最後一個部分是由兩個陳述式所組成。 第一個陳述式會指派[SQL](../../../ado/reference/rds-api/sql-property.md)屬性[.RDSDataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md)等於動態建立 SQL 查詢的物件。 第二個陳述式會導致 **.RDSDataControl**物件 (`DC1`) 以查詢資料庫，並在方格中顯示新查詢的結果。  
   
 ```  
 Sub Find_OnClick  
@@ -78,7 +75,7 @@ Sub Update_OnClick
 End Sub  
 ```  
   
- 當`DC1.SubmitChanges`執行時，遠端資料服務封裝更新資訊，並將它傳送到伺服器，透過 HTTP。 更新是全;如果失敗更新的一部分，進行的任何變更，並會傳回狀態訊息。 `DC1.Refresh`不需要後**SubmitChanges**與遠端資料服務，但是它確保了全新的資料。  
+ 當`DC1.SubmitChanges`執行時，遠端資料服務封裝更新資訊，並將它傳送到伺服器，透過 HTTP。 更新是全;如果失敗更新的一部分，進行的任何變更，並會傳回狀態訊息。 `DC1.Refresh` 不需要後**SubmitChanges**與遠端資料服務，但是它確保了全新的資料。  
   
 ## <a name="cancel-changes-button"></a>取消變更 按鈕  
  按一下**取消變更**啟動 VBScript Cancel_OnClick Sub 程序，它會執行[.RDSDataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md)物件的 (`DC1)` [CancelUpdate](../../../ado/reference/rds-api/cancelupdate-method-rds.md)方法。  

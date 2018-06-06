@@ -1,26 +1,18 @@
 ---
-title: "機器學習服務中的已知問題 |Microsoft 文件"
-ms.date: 02/05/2018
-ms.prod: machine-learning-services
-ms.prod_service: machine-learning-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
-ms.assetid: 2b37a63a-5ff5-478e-bcc2-d13da3ac241c
-caps.latest.revision: 
-author: jeannt
-ms.author: jeannt
-manager: cgronlund
-ms.workload: On Demand
-ms.openlocfilehash: 2143b576e3104ba2cf707e8fada75471a007a987
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+title: 機器學習服務中的已知問題 |Microsoft 文件
+ms.prod: sql
+ms.technology: machine-learning
+ms.date: 04/15/2018
+ms.topic: conceptual
+author: HeidiSteen
+ms.author: heidist
+manager: cgronlun
+ms.openlocfilehash: 20a3742c9dfc956accd902539524724cac3f9b8c
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34563856"
 ---
 # <a name="known-issues-in-machine-learning-services"></a>機器學習服務中的已知的問題
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -94,7 +86,7 @@ SQL Server 2016 需要用戶端上的 R 程式庫會完全符合伺服器上的 
 
 **適用於：** SQL Server 2017 使用 Python
 
-### <a name="bkmk_sqlbindr"></a>當您從連線到較舊版本的 SQL Server R Services 用戶端使用的不相容的版本警告[!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)]
+### <a name="bkmk_sqlbindr"></a> 當您從連線到較舊版本的 SQL Server R Services 用戶端使用的不相容的版本警告 [!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)]
 
 當您執行 R 程式碼 SQL Server 2016 計算內容時，您可能會看到下列錯誤：
 
@@ -105,7 +97,7 @@ SQL Server 2016 需要用戶端上的 R 程式庫會完全符合伺服器上的 
 + 用戶端電腦上安裝 R Server （獨立） 使用的安裝精靈[!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)]。
 + 您可以使用來安裝 Microsoft R Server[分隔 Windows installer](https://docs.microsoft.com/machine-learning-server/install/r-server-install-windows)。
 
-若要確保伺服器和用戶端都使用相同的版本，您可能需要使用_繫結_、 支援的 Microsoft R Server 9.0 和更新版本中，若要升級 SQL Server 2016 執行個體中的 R 元件。 若要判斷是否支援升級為可用，如 R 服務版本，請參閱[使用 SqlBindR.exe R 服務的執行個體升級](/r/use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md)。
+若要確保伺服器和用戶端都使用相同的版本，您可能需要使用_繫結_、 支援的 Microsoft R Server 9.0 和更新版本中，若要升級 SQL Server 2016 執行個體中的 R 元件。 若要判斷是否支援升級為可用，如 R 服務版本，請參閱[使用 SqlBindR.exe R 服務的執行個體升級](r/use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md)。
 
 **適用於：** SQL Server 2016 R Services 中，使用 R Server 9.0.0 版本或更早版本
 
@@ -117,7 +109,7 @@ SQL Server 2016 需要用戶端上的 R 程式庫會完全符合伺服器上的 
 
 `C:\<path to installation media>\SQLServer2016-KB3164674-x64.exe /Action=Patch /IACCEPTROPENLICENSETERMS /MRCACHEDIRECTORY=<path to CU1 CAB files>`
 
-若要取得最新的安裝程式，請參閱[安裝沒有網際網路存取的機器學習元件](r/installing-ml-components-without-internet-access.md)。
+若要取得最新的安裝程式，請參閱[安裝沒有網際網路存取的機器學習元件](install/sql-ml-component-install-without-internet-access.md)。
 
 **適用於：** SQL Server 2016 R Services 中，使用 R Server 9.0.0 版本或更早版本
 
@@ -155,7 +147,7 @@ SQL Server 2016 需要用戶端上的 R 程式庫會完全符合伺服器上的 
 
 比方說，即使您使用 SQL Server 的 Enterprise Edition，R 以單一執行緒模式執行時使用外部工具執行 R 程式碼。 若要在 SQL Server 中取得的效能優點，啟動 SQL Server 連線，並使用[sp_execute_external_script](../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md)呼叫外部指令碼執行階段。
 
-一般情況下，避免呼叫機器學習所使用的 SQL Server 上，從外部工具的程式庫。 如果您需要偵錯 R 或 Python 程式碼，則通常更容易，若要這樣做的 SQL Server 外部。 若要取得 SQL Server 中的相同程式庫，您可以安裝 Microsoft R 用戶端或[Server 機器學習](r/create-a-standalone-r-server.md)。
+一般情況下，避免呼叫機器學習所使用的 SQL Server 上，從外部工具的程式庫。 如果您需要偵錯 R 或 Python 程式碼，則通常更容易，若要這樣做的 SQL Server 外部。 若要取得 SQL Server 中的相同程式庫，您可以安裝 Microsoft R 用戶端， [SQL Server 2017 機器學習伺服器 （獨立）](install/sql-machine-learning-standalone-windows-install.md)，或[SQL Server 2016 R 伺服器 （獨立）](install/sql-r-standalone-windows-install.md)。
 
 ### <a name="sql-server-data-tools-does-not-support-permissions-required-by-external-scripts"></a>SQL Server Data Tools 中不支援外部指令碼所需的權限
 
@@ -264,7 +256,7 @@ data <- RxSqlServerData(
 
 因應措施，避免任意清除變數和其他物件時您在執行 R [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]。 雖然使用 R 主控台時，清除工作區是很常見的它可以包含非預期的結果。
 
-* 若要刪除特定變數，請使用 R`remove`函式： 例如，`remove('name1', 'name2', ...)`
+* 若要刪除特定變數，請使用 R`remove`函式： 例如， `remove('name1', 'name2', ...)`
 * 如有多個變數要刪除，請將暫存變數名稱儲存至清單，並執行定期記憶體回收。
 
 ### <a name="restrictions-on-data-that-can-be-provided-as-input-to-an-r-script"></a>可作為輸出提供給 R 指令碼的資料限制
@@ -305,7 +297,7 @@ data <- RxSqlServerData(
 
 這項限制適用於以及 SQL Server，並將 Python 之間傳遞資料。 多位元組字元應該傳遞為 utf-8，並儲存為 Unicode。
 
-### <a name="only-one-value-of-type-raw-can-be-returned-from-spexecuteexternalscript"></a>只有一個值的型別`raw`可從傳回`sp_execute_external_script`
+### <a name="only-one-value-of-type-raw-can-be-returned-from-spexecuteexternalscript"></a>只有一個值的型別`raw`可從傳回 `sp_execute_external_script`
 
 當二進位資料類型 (R**原始**資料類型) 會傳回從 R，則必須將值傳送的輸出資料框架中。
 
@@ -436,7 +428,7 @@ go
 
 > *來自外部指令碼的 STDERR 訊息：*
 > **~PYTHON_SERVICES\lib\site-packages\revoscalepy\utils\RxTelemetryLogger*
-> *SyntaxWarning: telemetry_state使用全域宣告之前*
+> *SyntaxWarning: telemetry_state 是使用全域宣告之前*
 
 
 SQL Server 2017 累計更新 3 (CU3) 中已修正此問題。 

@@ -1,37 +1,30 @@
 ---
-title: "啟動 Configuration Manager (Analytics Platform System)"
-author: barbkess
-ms.author: barbkess
-manager: jhubbard
-ms.prod: analytics-platform-system
-ms.prod_service: mpp-data-warehouse
-ms.service: 
-ms.component: 
-ms.technology: mpp-data-warehouse
-ms.custom: 
-ms.date: 01/05/2017
-ms.reviewer: na
-ms.suite: sql
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: b914ba9a-e4ec-4750-934a-c447fc8909e3
-caps.latest.revision: "22"
-ms.openlocfilehash: 2ead82cd226a585d261eac2779cacb72cd5edbb6
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+title: 啟動 Configuration Manager-Analytics Platform System |Microsoft 文件
+description: 啟動組態管理員工具，Analytics Platform System 應用裝置的指示。
+author: mzaman1
+manager: craigg
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
+ms.openlocfilehash: d2e7a726386aa64d04f87f30cd22328900b1e5cd
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/19/2018
 ---
-# <a name="launch-the-configuration-manager"></a>啟動 Configuration Manager
+# <a name="launch-the-configuration-manager-in-analytics-platform-system"></a>啟動 Configuration Manager 中 Analytics Platform System
 本主題提供指示來啟動**Configuration Manager** Analytics Platform System 應用裝置。  
   
 ## <a name="before-you-begin"></a>開始之前  
   
-### <a name="prerequisites"></a>Prerequisites  
-Analytics Platform System**Configuration Manager**只能應用裝置的網域系統管理員身分執行。 若要執行這項工具，您需要應用裝置的網域系統管理員密碼。 若要建立 AP 的其他系統管理員，請參閱[建立 AP 網域系統管理員 &#40;APS &#41;](create-an-aps-domain-administrator-aps.md).  
+### <a name="prerequisites"></a>필수 구성 요소  
+Analytics Platform System**Configuration Manager**只能應用裝置的網域系統管理員身分執行。 若要執行這項工具，您需要應用裝置的網域系統管理員密碼。 若要建立 AP 的其他系統管理員，請參閱[建立 AP 網域系統管理員&#40;AP&#41;](create-an-aps-domain-administrator-aps.md)。  
   
 ## <a name="Accessing"></a>啟動組態管理員工具  
-若要執行 組態管理員，使用遠端桌面連接至 PDW 控制節點 (***PDW_region*-CTL01**) 節點，然後登入為*appliance_domain* **\Administrator**。 啟動時**Configuration Manager**程式中，使用**系統管理員身分執行**選項，以確保會使用您的系統管理員認證。  
+若要執行 組態管理員，使用遠端桌面連接至 PDW 控制節點 (***PDW_region *-CTL01**) 節點，然後登入為 * appliance_domain ***\Administrator**。 啟動時**Configuration Manager**程式中，使用**系統管理員身分執行**選項，以確保會使用您的系統管理員認證。  
   
 #### <a name="to-launch-from-a-browser-window"></a>若要從瀏覽器視窗中啟動  
   
@@ -53,6 +46,6 @@ Analytics Platform System**Configuration Manager**只能應用裝置的網域系
   
 ![SQL_Server_PDW_DWConfig_ApplTop](./media/launch-the-configuration-manager/SQL_Server_PDW_DWConfig_ApplTop.png "SQL_Server_PDW_DWConfig_ApplTop")  
   
-## <a name="see-also"></a>請參閱  
-[使用系統管理員主控台 &#40; 監視的應用裝置Analytics Platform System &#41;](monitor-the-appliance-by-using-the-admin-console.md)  
+## <a name="see-also"></a>另請參閱  
+[使用管理主控台來監視設備&#40;Analytics Platform System&#41;](monitor-the-appliance-by-using-the-admin-console.md)  
   

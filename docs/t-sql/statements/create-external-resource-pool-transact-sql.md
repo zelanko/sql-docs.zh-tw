@@ -1,16 +1,14 @@
 ---
 title: CREATE EXTERNAL RESOURCE POOL (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/13/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-database
-ms.service: 
 ms.component: t-sql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: t-sql
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - CREATE EXTERNAL RESOURCE POOL
@@ -24,24 +22,23 @@ dev_langs:
 helpviewer_keywords:
 - CREATE EXTERNAL RESOURCE POOL statement
 ms.assetid: 8cc798ad-c395-461c-b7ff-8c561c098808
-caps.latest.revision: 
+caps.latest.revision: 12
 author: jeannt
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: cb3da0f663ab67238c0eb133f66f465a62dcc970
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 7bcf757af91eed9b56a43cb6be4da1390b3f8605
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="create-external-resource-pool-transact-sql"></a>CREATE EXTERNAL RESOURCE POOL (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
-**適用於：** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] [!INCLUDE[rsql-productname-md](../../includes/rsql-productname-md.md)] 和 [!INCLUDE[sssql17-md](../../includes/sssql17-md.md)] [!INCLUDE[rsql-productnamenew-md](../../includes/rsql-productnamenew-md.md)]
+**適用對象**：[!INCLUDE[sssql15-md](../../includes/sssql15-md.md)][!INCLUDE[rsql-productname-md](../../includes/rsql-productname-md.md)] 和 [!INCLUDE[sssql17-md](../../includes/sssql17-md.md)][!INCLUDE[rsql-productnamenew-md](../../includes/rsql-productnamenew-md.md)]
 
 建立外部集區，以用來定義外部處理序的資源。 資源集區代表資料庫引擎執行個體的實體資源 (記憶體和 CPU) 子集。 資源管理員可讓資料庫管理員在資源集區間散發伺服器資源，最多可達 64 個集區。
 
-+ 若是 [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] 中的 [!INCLUDE[rsql-productname-md](../../includes/rsql-productname-md.md)]，外部集區可管理 `rterm.exe`、`BxlServer.exe` 及其衍生的其他處理序。
++ 若是 [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] 中的 [!INCLUDE[rsql-productname-md](../../includes/rsql-productname-md.md)]，外部集區會掌管 `rterm.exe`、`BxlServer.exe` 及其衍生的其他處理序。
 
 + 若是 [!INCLUDE[sssql17-md](../../includes/sssql17-md.md)] 中的 [!INCLUDE[rsql-productnamenew-md](../../includes/rsql-productnamenew-md.md)]，外部集區可管理針對 SQL Server 2016 所列出的 R 處理序，以及 `python.exe`、`BxlServer.exe` 及其所衍生的其他處理序。
 
@@ -76,19 +73,19 @@ CREATE EXTERNAL RESOURCE POOL pool_name
 這是外部資源集區的使用者定義名稱。 *pool_name* 是英數字元，最多可有 128 個字元，而且在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體內必須是唯一的，並須符合[識別碼](../../relational-databases/databases/database-identifiers.md)的規則。  
 
 MAX_CPU_PERCENT =*value*  
-指定當出現 CPU 競爭時，所有要求在外部資源集區中可接收的平均 CPU 頻寬上限。 *value* 是整數，預設值為 100。 允許的 *value* 範圍從 1 至 100。
+在出現 CPU 競爭時，指定外部資源集區中所有要求可接收的最大平均 CPU 頻寬。 *value* 是整數，預設值為 100。 允許的 *value* 範圍從 1 至 100。
 
 AFFINITY {CPU = AUTO | ( \<CPU_range_spec> ) | NUMANODE = (\<NUMA_node_range_spec>)} 將外部資源集區附加至特定的 CPU。 預設值是 AUTO。
 
-AFFINITY CPU = **(** \<CPU_range_spec> **)** 可將外部資源集區對應至特定 CPU_ID 所識別的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] CPU。
+AFFINITY CPU = **(** \<CPU_range_spec> **)** 會將外部資源集區對應到指定 CPU_IDs 所識別的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] CPU。
 
-當您使用 AFFINITY NUMANODE = **(** \<NUMA_node_range_spec> **)** 時，外部資源集區會與對應至特定 NUMA 節點或節點範圍的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 實體 CPU 相似化。 
+當您使用 AFFINITY NUMANODE = **(** \<NUMA_node_range_spec> **)** 時，外部資源集區會與對應到指定 NUMA 節點或節點範圍的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 實體 CPU 同質化。 
 
 MAX_MEMORY_PERCENT =*value*  
-指定在此外部資源集區中，可供要求所用的伺服器記憶體總量。 *value* 是整數，預設值為 100。 允許的 *value* 範圍從 1 至 100。
+指定在此外部資源集區中，可供要求使用的伺服器記憶體總量。 *value* 是整數，預設值為 100。 允許的 *value* 範圍為 1 至 100。
 
 MAX_PROCESSES =*value*  
-指定外部資源集區允許的處理序數目上限。 若要為集區設定無限的臨界值，請指定 0，但之後只能由電腦資源來限制。 預設值是 0。
+指定允許外部資源集區使用的處理序數目上限。 指定 0 來為集區設定無限的閾值，這在之後只有電腦資源繫結會對其建立繫結。 預設值是 0。
 
 ## <a name="remarks"></a>Remarks
 

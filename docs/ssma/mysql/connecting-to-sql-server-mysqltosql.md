@@ -1,16 +1,15 @@
 ---
-title: "連接到 SQL Server (MySQLToSQL) |Microsoft 文件"
-ms.prod: sql-non-specified
+title: 連接到 SQL Server (MySQLToSQL) |Microsoft 文件
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
 ms.component: ssma-mysql
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ssma
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 applies_to:
 - Azure SQL Database
 - SQL Server
@@ -18,16 +17,15 @@ helpviewer_keywords:
 - connecting to SQL Server 2008, SQL Server permission
 - connecting to SQL Server 2008, synchronization
 ms.assetid: 08233267-693e-46e6-9ca3-3a3dfd3d2be7
-caps.latest.revision: "18"
+caps.latest.revision: 18
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
-ms.workload: On Demand
-ms.openlocfilehash: ed92b4a6b8b54e797f6dd623153ea677743a6c7b
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+manager: craigg
+ms.openlocfilehash: d946b7c6d5fed230fab2daed139421c43d814566
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="connecting-to-sql-server-mysqltosql"></a>連接到 SQL Server (MySQLToSQL)
 若要將 MySQL 資料庫移轉至 SQL Server，您必須連接到目標 SQL Server 執行個體。 連線時，SSMA 取得 SQL Server 執行個體中的所有資料庫的相關中繼資料，並在 SQL Server 中繼資料總管 會顯示資料庫中繼資料。 SSMA 會儲存您連線到，但不會儲存密碼的 SQL Server 執行個體的資訊。  
@@ -46,7 +44,7 @@ SQL Server 執行個體的相關中繼資料不會自動同步處理。 相反�
 ## <a name="establishing-a-sql-server-connection"></a>建立 SQL Server 連接  
 您將 MySQL 資料庫物件轉換成 SQL Server 語法之前，您必須建立您要移轉的 MySQL 資料庫的 SQL Server 執行個體的連接。  
   
-當您定義的連接屬性時，您也可以指定其中將移轉物件和資料的資料庫。 您連線至 SQL Server 後，您可以自訂這個對應 MySQL 結構描述層級。 如需詳細資訊，請參閱[對應至 SQL Server 結構描述 &#40; 的 MySQL 資料庫MySQLToSQL &#41;](../../ssma/mysql/mapping-mysql-databases-to-sql-server-schemas-mysqltosql.md)  
+當您定義的連接屬性時，您也可以指定其中將移轉物件和資料的資料庫。 您連線至 SQL Server 後，您可以自訂這個對應 MySQL 結構描述層級。 如需詳細資訊，請參閱[對應至 SQL Server 結構描述的 MySQL 資料庫&#40;MySQLToSQL&#41;](../../ssma/mysql/mapping-mysql-databases-to-sql-server-schemas-mysqltosql.md)  
   
 > [!IMPORTANT]  
 > 您嘗試連接到 SQL Server 之前，請確定 SQL Server 執行個體正在執行，且可接受連接。  
@@ -116,14 +114,14 @@ SQL Server 資料庫的相關中繼資料不會自動更新。 SQL Server 中繼
 ## <a name="next-step"></a>下一個步驟  
 移轉的下一個步驟取決於您專案的需求：  
   
--   若要自訂 MySQL 結構描述和 SQL Server 資料庫和結構描述之間的對應，請參閱[對應至 SQL Server 結構描述 &#40; 的 MySQL 資料庫MySQLToSQL &#41;](../../ssma/mysql/mapping-mysql-databases-to-sql-server-schemas-mysqltosql.md)  
+-   若要自訂 MySQL 結構描述和 SQL Server 資料庫和結構描述之間的對應，請參閱[對應至 SQL Server 結構描述的 MySQL 資料庫&#40;MySQLToSQL&#41;](../../ssma/mysql/mapping-mysql-databases-to-sql-server-schemas-mysqltosql.md)  
   
--   若要自訂專案的組態選項，請參閱[設定專案選項 &#40;MySQLToSQL &#41;](../../ssma/mysql/setting-project-options-mysqltosql.md)  
+-   若要自訂專案的組態選項，請參閱[設定專案選項&#40;MySQLToSQL&#41;](../../ssma/mysql/setting-project-options-mysqltosql.md)  
   
--   若要自訂的來源和目標資料類型對應，請參閱[對應 MySQL 及 SQL Server 資料類型 &#40;MySQLToSQL &#41;](../../ssma/mysql/mapping-mysql-and-sql-server-data-types-mysqltosql.md)  
+-   若要自訂的來源和目標資料類型對應，請參閱[對應 MySQL 及 SQL Server 資料類型&#40;MySQLToSQL&#41;](../../ssma/mysql/mapping-mysql-and-sql-server-data-types-mysqltosql.md)  
   
--   如果您不需要執行任何這些工作，您將轉換的 MySQL 資料庫物件定義 SQL Server 物件定義。 如需詳細資訊，請參閱[轉換 MySQL 資料庫 &#40;MySQLToSQL &#41;](../../ssma/mysql/converting-mysql-databases-mysqltosql.md)  
+-   如果您不需要執行任何這些工作，您將轉換的 MySQL 資料庫物件定義 SQL Server 物件定義。 如需詳細資訊，請參閱[轉換 MySQL 資料庫&#40;MySQLToSQL&#41;](../../ssma/mysql/converting-mysql-databases-mysqltosql.md)  
   
-## <a name="see-also"></a>請參閱  
-[將 MySQL 資料庫移轉至 SQL Server-Azure SQL DB &#40;MySQLToSql &#41;](../../ssma/mysql/migrating-mysql-databases-to-sql-server-azure-sql-db-mysqltosql.md)  
+## <a name="see-also"></a>另請參閱  
+[移轉的 MySQL 資料庫到 SQL Server-Azure SQL DB &#40;MySQLToSql&#41;](../../ssma/mysql/migrating-mysql-databases-to-sql-server-azure-sql-db-mysqltosql.md)  
   

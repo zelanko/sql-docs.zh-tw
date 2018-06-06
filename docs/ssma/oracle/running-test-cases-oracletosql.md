@@ -1,27 +1,25 @@
 ---
-title: "執行測試案例 (OracleToSQL) |Microsoft 文件"
-ms.prod: sql-non-specified
+title: 執行測試案例 (OracleToSQL) |Microsoft 文件
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
 ms.component: ssma-oracle
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ssma
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: fc208cdb-7373-4f6b-8f6c-cdff9d3dcd02
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
-ms.workload: Inactive
-ms.openlocfilehash: 6d9e4e71813ff5b092ba1b67db207abd9b1adc44
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: a0affe85a5c823fdeecf530cd2c661011076c18f
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="running-test-cases-oracletosql"></a>執行測試案例 (OracleToSQL)
 當 SSMA 軟體測試人員執行測試案例時，它會執行測試所選取的物件，並建立驗證結果的相關報表。 如果兩個平台上相同的結果，測試成功。 Oracle 之間的物件的對應關係和[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]取決於目前的 SSMA 專案的結構描述對應設定。  
@@ -39,7 +37,7 @@ ms.lasthandoff: 12/21/2017
   
 ## <a name="test-case-execution-steps"></a>測試案例執行步驟  
   
-### <a name="prerequisites"></a>Prerequisites  
+### <a name="prerequisites"></a>필수 구성 요소  
 SSMA 軟體測試人員會檢查測試在測試執行開始之前是否符合所有必要條件。 如果未滿足一些條件，便會出現錯誤訊息。  
   
 ### <a name="initialization"></a>初始化  
@@ -49,10 +47,10 @@ SSMA 軟體測試人員會檢查測試在測試執行開始之前是否符合所
   
 ||||  
 |-|-|-|  
-|[屬性]|類型|描述|  
+|名稱|型別|Description|  
 |USER_TABLE$ Trg|觸發程序 (trigger)|稽核的變更已驗證的資料表中的觸發程序。|  
-|USER_TABLE$ 則|資料表|儲存已刪除和覆寫的資料列的資料表。|  
-|USER_TABLE$ AUDID|資料表|儲存新和已變更的資料列的資料表。|  
+|USER_TABLE$ 則|table|儲存已刪除和覆寫的資料列的資料表。|  
+|USER_TABLE$ AUDID|table|儲存新和已變更的資料列的資料表。|  
 |USER_TABLE|檢視|資料表修改簡化表示法。|  
 |新 USER_TABLE $|檢視|簡化的插入和覆寫的資料列的表示法。|  
 |USER_TABLE$ NEW_ID|檢視|插入和已變更資料列的識別。|  
@@ -62,16 +60,16 @@ SSMA 軟體測試人員會檢查測試在測試執行開始之前是否符合所
   
 ||||  
 |-|-|-|  
-|[屬性]|類型|描述|  
+|名稱|型別|Description|  
 |USER_TABLE$ Trg|觸發程序 (trigger)|稽核的變更已驗證的資料表中的觸發程序。|  
   
 下列物件會在建立和[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]ssmatesterdb 資料庫中。  
   
 ||||  
 |-|-|-|  
-|[屬性]|類型|描述|  
-|USER_TABLE$ 則|資料表|儲存已刪除和覆寫的資料列的資料表。|  
-|USER_TABLE$ AudID|資料表|儲存新和已變更的資料列的資料表。|  
+|名稱|型別|Description|  
+|USER_TABLE$ 則|table|儲存已刪除和覆寫的資料列的資料表。|  
+|USER_TABLE$ AudID|table|儲存新和已變更的資料列的資料表。|  
 |USER_TABLE|檢視|資料表修改簡化表示法。|  
 |新的 USER_TABLE $|檢視|簡化的插入和覆寫的資料列的表示法。|  
 |USER_TABLE$ new_id|檢視|插入和已變更資料列的識別。|  
@@ -84,10 +82,10 @@ SSMA 軟體測試人員會檢查測試在測試執行開始之前是否符合所
 在最終處理期間 SSMA 軟體測試人員會清除在建立輔助物件**初始化**步驟。  
   
 ## <a name="next-step"></a>下一個步驟  
-[檢視測試案例報表 &#40; OracleToSQL &#41;](../../ssma/oracle/viewing-test-case-reports-oracletosql.md)  
+[檢視測試案例報表&#40;OracleToSQL&#41;](../../ssma/oracle/viewing-test-case-reports-oracletosql.md)  
   
-## <a name="see-also"></a>請參閱  
-[選取和設定物件測試 &#40; OracleToSQL &#41;](../../ssma/oracle/selecting-and-configuring-objects-to-test-oracletosql.md)  
-[選取並設定受影響物件 &#40; OracleToSQL &#41;](../../ssma/oracle/selecting-and-configuring-affected-objects-oracletosql.md)  
-[測試移轉的資料庫物件 &#40; OracleToSQL &#41;](../../ssma/oracle/testing-migrated-database-objects-oracletosql.md)  
+## <a name="see-also"></a>另請參閱  
+[選取和設定測試的物件&#40;OracleToSQL&#41;](../../ssma/oracle/selecting-and-configuring-objects-to-test-oracletosql.md)  
+[選取並設定受影響的物件&#40;OracleToSQL&#41;](../../ssma/oracle/selecting-and-configuring-affected-objects-oracletosql.md)  
+[測試移轉的資料庫物件&#40;OracleToSQL&#41;](../../ssma/oracle/testing-migrated-database-objects-oracletosql.md)  
   

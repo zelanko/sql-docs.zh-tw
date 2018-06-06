@@ -1,27 +1,25 @@
 ---
-title: "針對 Reporting Services 的伺服器與資料庫連線問題進行疑難排解 | Microsoft Docs"
-ms.custom: 
+title: 針對 Reporting Services 的伺服器與資料庫連線問題進行疑難排解 | Microsoft Docs
+ms.custom: ''
 ms.date: 02/28/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: troubleshooting
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: 8bbb88df-72fd-4c27-91b7-b255afedd345
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: d6544043e8925c77dc88d7d1191e8ccd690b7a00
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 3e639f2f410584a4b9d1cefc991e9c6540f9ea7f
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="troubleshoot-server-and-database-connection-problems-with-reporting-services"></a>針對 Reporting Services 的伺服器與資料庫連線問題進行疑難排解
 使用此主題，即可對在連接到報表伺服器時遇到的問題進行疑難排解。 此主題也提供有關「意外的錯誤」訊息的資訊。 如需資料來源組態和設定報表伺服器連接的詳細資訊，請參閱 [指定報表資料來源的認證和連接資訊](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md) 和 [設定報表伺服器資料庫連接 (SSRS 組態管理員)](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md)。  

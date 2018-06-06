@@ -1,16 +1,14 @@
 ---
-title: "明確的對應 XSD 元素和屬性對資料表和資料行 |Microsoft 文件"
-ms.custom: 
+title: 明確的對應 XSD 元素和屬性對資料表和資料行 |Microsoft 文件
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
 ms.component: sqlxml
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- dbe-xml
-ms.tgt_pltfrm: 
+ms.technology: xml
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - explicit schema mapping [SQLXML]
@@ -31,20 +29,20 @@ helpviewer_keywords:
 - table mapping [SQLXML], explicit mapping
 - element/attribute mapping [SQLXML]
 ms.assetid: 7a5ebeb6-7322-4141-a307-ebcf95976146
-caps.latest.revision: 
+caps.latest.revision: 28
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: b2cc71e8ce8daf3da61754dc8e01d264d42c863a
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 1836db12438017023637185d6e8ba24a6e533a77
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="explicit-mapping-xsd-elements-and-attributes-to-tables-and-columns"></a>明確的對應 XSD 元素和屬性對資料表和資料行
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-使用 XSD 結構描述提供關聯式資料庫的 XML 檢視表時，必須將結構描述的元素但屬性對應到資料庫的資料表和資料行。 資料庫資料表/檢視表中的資料列將會對應到 XML 文件中的元素。 資料庫中的資料行值會對應到屬性或元素。  
+  使用 XSD 結構描述提供關聯式資料庫的 XML 檢視表時，必須將結構描述的元素但屬性對應到資料庫的資料表和資料行。 資料庫資料表/檢視表中的資料列將會對應到 XML 文件中的元素。 資料庫中的資料行值會對應到屬性或元素。  
   
  針對註解式 XSD 結構描述指定 XPath 查詢時，結構描述中元素和屬性的資料會從所對應的資料表和資料行對應。 若要從資料庫取得單一值，在 XSD 結構描述中指定的對應必須同時擁有關聯和欄位規格。 如果元素/屬性的名稱不是相同的名稱做為資料表/檢視表或資料行名稱與其對應， **sql: relation**和**sql: field**註解用來指定項目之間的對應或XML 文件及資料表 （檢視） 或在資料庫中的資料行中的屬性。  
   
@@ -66,9 +64,9 @@ ms.lasthandoff: 02/12/2018
  若要使用下列範例建立工作範例，您必須符合某些需求。 如需詳細資訊，請參閱[執行 SQLXML 範例的需求](../../relational-databases/sqlxml/requirements-for-running-sqlxml-examples.md)。  
   
 ### <a name="a-specifying-the-sqlrelation-and-sqlfield-annotations"></a>A. 指定 sql:relation 和 sql:field 註解  
- 在此範例中，XSD 結構描述包含**\<連絡人 >**與複雜類型的項目 **\<FName >**和 **\<LName >**子項目和**ContactID**屬性。  
+ 在此範例中，XSD 結構描述包含**\<連絡人 >** 與複雜類型的項目 **\<FName >** 和 **\<LName >** 子項目和**ContactID**屬性。  
   
- **Sql: relation**註解 maps **\<連絡人 >**至 AdventureWorks 資料庫中的 Person.Contact 資料表的項目。 **Sql: field**註解 maps  **\<FName >** FirstName 資料行的元素和 **\<LName >** LastName 的項目資料行。  
+ **Sql: relation**註解 maps **\<連絡人 >** 至 AdventureWorks 資料庫中的 Person.Contact 資料表的項目。 **Sql: field**註解 maps  **\<FName >** FirstName 資料行的元素和 **\<LName >** LastName 的項目資料行。  
   
  針對指定任何註解**ContactID**屬性。 這會導致將屬性預設對應到具有相同名稱的資料行。  
   

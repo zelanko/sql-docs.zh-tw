@@ -1,37 +1,28 @@
 ---
-title: "DISCOVER_SESSIONS 資料列集 |Microsoft 文件"
-ms.custom: 
-ms.date: 03/06/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+title: DISCOVER_SESSIONS 資料列集 |Microsoft 文件
+ms.date: 05/03/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: schema-rowsets
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
-helpviewer_keywords: DISCOVER_SESSIONS rowset
-ms.assetid: 47a79542-3142-4e62-a66f-6c4dbfe0f5c0
-caps.latest.revision: "18"
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: daa1e2d464283fa3e2cb37733bb2a705454e50dc
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 986fe462d5582f86fab56a28751b48475cbeb74e
+ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="discoversessions-rowset"></a>DISCOVER_SESSIONS 資料列集
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]在伺服器上，提供有關目前開啟的工作階段的資源使用量與活動資訊。  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+  提供伺服器上目前已開啟的工作階段之資源使用量與活動的有關資訊。  
   
 ## <a name="rowset-columns"></a>資料列集資料行  
  **DISCOVER_SESSIONS**資料列集包含下列資料行。  
   
-|資料行名稱|類型指標|長度|描述|  
+|資料行名稱|類型指標|長度|Description|  
 |-----------------|--------------------|------------|-----------------|  
 |**SESSION_COMMAND_COUNT**|**DBTYPE_I4**||工作階段開始之後開始執行的命令數目。|  
 |**SESSION_CONNECTION_ID**|**DBTYPE_I4**||工作階段的連接識別碼。|  
@@ -73,7 +64,7 @@ ms.lasthandoff: 01/08/2018
 |SESSION_IDLE_TIME_MS|DBTYPE_UI8|選擇性。|  
 |SESSION_STATUS|DBTYPE_I4|選擇性。|  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [XML for Analysis 結構描述資料列集](../../../analysis-services/schema-rowsets/xml/xml-for-analysis-schema-rowsets.md)  
   
   

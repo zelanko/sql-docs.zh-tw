@@ -1,16 +1,14 @@
 ---
-title: "sys.symmetric_keys (TRANSACT-SQL) |Microsoft 文件"
-ms.custom: 
+title: sys.symmetric_keys (TRANSACT-SQL) |Microsoft 文件
+ms.custom: ''
 ms.date: 03/07/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
 ms.component: system-catalog-views
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: system-objects
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - symmetric_keys
@@ -22,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - sys.symmetric_keys catalog view
 ms.assetid: d410eae1-3a52-45de-b9a1-52d2bd93a8eb
-caps.latest.revision: 
+caps.latest.revision: 41
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 6dbfdb1c6b128c1a596f092f500ce5c3cf85d2e7
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 9920ff9e4b648c4911568b44374d860cc2d18710
+ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="syssymmetrickeys-transact-sql"></a>sys.symmetric_keys (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -45,7 +43,7 @@ ms.lasthandoff: 11/21/2017
 |**symmetric_key_id**|**int**|金鑰的識別碼。 在資料庫中，這是唯一的。|  
 |**key_length**|**int**|金鑰的長度 (以位元為單位)。|  
 |**key_algorithm**|**char(2)**|金鑰使用的演算法：<br /><br /> R2 = RC2<br /><br /> R4 = RC4<br /><br /> D = DES<br /><br /> D3 = Triple DES<br /><br /> DT = TRIPLE_DES_3KEY<br /><br /> DX = DESX<br /><br /> A1 = AES 128<br /><br /> A2 = AES 192<br /><br /> A3 = AES 256<br /><br /> NA = EKM 金鑰|  
-|**algorithm_desc**|**nvarchar （60)**|金鑰使用之演算法的描述：<br /><br /> RC2<br /><br /> RC4<br /><br /> DES<br /><br /> Triple_DES<br /><br /> TRIPLE_DES_3KEY<br /><br /> DESX<br /><br /> AES_128<br /><br /> AES_192<br /><br /> AES_256<br /><br /> NULL (僅限 Extensible Key Management 演算法)|  
+|**algorithm_desc**|**nvarchar(60)**|金鑰使用之演算法的描述：<br /><br /> RC2<br /><br /> RC4<br /><br /> DES<br /><br /> Triple_DES<br /><br /> TRIPLE_DES_3KEY<br /><br /> DESX<br /><br /> AES_128<br /><br /> AES_192<br /><br /> AES_256<br /><br /> NULL (僅限 Extensible Key Management 演算法)|  
 |**create_date**|**datetime**|建立金鑰的日期。|  
 |**modify_date**|**datetime**|修改金鑰的日期。|  
 |**key_guid**|**uniqueidentifier**|與金鑰相關聯的全域唯一識別碼 (GUID)。 它會為保存的金鑰自動產生。 暫時金鑰的 GUID 衍生自使用者提供的複雜密碼。|  
@@ -71,7 +69,7 @@ ms.lasthandoff: 11/21/2017
   
 -   以 ALGORITHM = TRIPLE_DES 建立的對稱金鑰使用具有 128 位元金鑰的 TRIPLE DES。  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [目錄檢視 &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [可延伸金鑰管理 &#40;EKM&#41;](../../relational-databases/security/encryption/extensible-key-management-ekm.md)   
  [安全性目錄檢視 &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/security-catalog-views-transact-sql.md)   

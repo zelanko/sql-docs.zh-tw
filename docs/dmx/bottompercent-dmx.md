@@ -1,30 +1,31 @@
 ---
-title: "BottomPercent (DMX) |Microsoft 文件"
-ms.custom: 
+title: BottomPercent (DMX) |Microsoft 文件
+ms.custom: ''
 ms.date: 03/02/2016
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
 ms.component: data-mining
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
-f1_keywords: BOTTOMPERCENT
-dev_langs: DMX
-helpviewer_keywords: BottomPercent function
+f1_keywords:
+- BOTTOMPERCENT
+dev_langs:
+- DMX
+helpviewer_keywords:
+- BottomPercent function
 ms.assetid: 984eb18a-c55c-49f3-81fa-918dfc983174
-caps.latest.revision: "41"
+caps.latest.revision: 41
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: 086ac8bb714bca7c182a59040d64badf89f261d3
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 84b87d2bea1431b6e33a47e09887f1ab0ff753ad
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="bottompercent-dmx"></a>BottomPercent (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -72,7 +73,7 @@ SELECT (SELECT 'Women''s Mountain Shorts' as [Model]) AS [v Assoc Seq Line Items
   
  範例結果：  
   
-|[模型]|$SUPPORT|$PROBABILITY|$ADJUSTEDPROBABILITY|  
+|模型|$SUPPORT|$PROBABILITY|$ADJUSTEDPROBABILITY|  
 |-----------|--------------|------------------|--------------------------|  
 |Sport-100|4334|0.291283016|0.252695851|  
 |Water Bottle|2866|0.192620472|0.175205052|  
@@ -108,7 +109,7 @@ NATURAL PREDICTION JOIN
   
  範例結果：  
   
-|[模型]|$SUPPORT|$PROBABILITY|$ADJUSTEDPROBABILITY|  
+|模型|$SUPPORT|$PROBABILITY|$ADJUSTEDPROBABILITY|  
 |-----------|--------------|------------------|--------------------------|  
 |Road Bottle Cage|1195|0.080314537|0.077173962|  
 |Mountain Bottle Cage|1367|0.091874454|0.087780332|  
@@ -121,10 +122,10 @@ NATURAL PREDICTION JOIN
  **請注意**提供這個範例只是為了說明 BottomPercent 的使用方式。 根據資料集的大小而定，此查詢可能會花上很長的一段執行時間。  
   
 > [!WARNING]  
->  當用來計算百分比的值包含負數時，TOPPERCENT 和 BOTTOMPERCENT 的 MDX 函數會產生非預期的結果。 這種行為並不影響 DMX 函數。 如需詳細資訊，請參閱[BottomPercent &#40;MDX &#41;](../mdx/bottompercent-mdx.md).  
+>  當用來計算百分比的值包含負數時，TOPPERCENT 和 BOTTOMPERCENT 的 MDX 函數會產生非預期的結果。 這種行為並不影響 DMX 函數。 如需詳細資訊，請參閱[BottomPercent &#40;MDX&#41;](../mdx/bottompercent-mdx.md)。  
   
-## <a name="see-also"></a>請參閱  
- [資料採礦延伸模組 &#40; DMX &#41;函數參考](../dmx/data-mining-extensions-dmx-function-reference.md)   
- [函式 &#40; DMX &#41;](../dmx/functions-dmx.md)  
+## <a name="see-also"></a>另請參閱  
+ [資料採礦延伸模組&#40;DMX&#41;函數參考](../dmx/data-mining-extensions-dmx-function-reference.md)   
+ [函式&#40;DMX&#41;](../dmx/functions-dmx.md)  
   
   

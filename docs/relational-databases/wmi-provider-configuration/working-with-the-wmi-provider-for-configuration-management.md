@@ -1,15 +1,14 @@
 ---
-title: "使用組態管理的 WMI 提供者 |Microsoft 文件"
-ms.custom: 
+title: 使用組態管理的 WMI 提供者 |Microsoft 文件
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
 ms.component: wmi
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - permissions [WMI]
@@ -21,20 +20,19 @@ helpviewer_keywords:
 - WMI Provider for Configuration Management, late binding
 - binding [WMI]
 ms.assetid: 34daa922-7074-41d0-9077-042bb18c222a
-caps.latest.revision: 
-author: JennieHubbard
-ms.author: jhubbard
+caps.latest.revision: 25
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: a81f11f9c28fe19b02890c665cf4ce1e4b6f4a94
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.openlocfilehash: 031370656da517eda6d56db89bdcead7aff799da
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="working-with-the-wmi-provider-for-configuration-management"></a>針對組態管理使用 WMI 提供者
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
-在使用電腦管理的 WMI 提供者進行程式設計之前，請考慮下列事項：  
+  在使用電腦管理的 WMI 提供者進行程式設計之前，請考慮下列事項：  
   
 ## <a name="binding"></a>繫結  
  組態管理的 WMI 提供者是 COM 物件模型，而且可支援早期和晚期繫結。 藉由晚期繫結，您可以使用指令碼語言 (例如 VBScript) 透過程式設計的方式來操作 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服務、網路設定和別名。  

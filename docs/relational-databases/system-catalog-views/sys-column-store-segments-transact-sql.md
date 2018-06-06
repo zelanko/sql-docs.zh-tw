@@ -1,16 +1,14 @@
 ---
-title: "sys.column_store_segments (TRANSACT-SQL) |Microsoft 文件"
-ms.custom: 
+title: sys.column_store_segments (TRANSACT-SQL) |Microsoft 文件
+ms.custom: ''
 ms.date: 01/15/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
 ms.component: system-catalog-views
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: system-objects
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - column_store_segments
@@ -22,16 +20,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.column_store_segments catalog view
 ms.assetid: 1253448c-2ec9-4900-ae9f-461d6b51b2ea
-caps.latest.revision: 
+caps.latest.revision: 20
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: f73379d3ae23570f95209631444d1335279a5ef5
-ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
+ms.openlocfilehash: 5de9c261a2e5f6b7b2d1eb31c63a88caa54cbbe9
+ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="syscolumnstoresegments-transact-sql"></a>sys.column_store_segments (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
@@ -49,7 +46,7 @@ ms.lasthandoff: 01/18/2018
 |**row_count**|**int**|資料列群組中的列數。|  
 |**has_nulls**|**int**|如果資料行區段具有 Null 值，則為 1。|  
 |**base_id**|**bigint**|如果使用編碼類型 1 的基底值識別碼。  如果沒有使用編碼類型 1，base_id 會設定為-1。|  
-|**magnitude**|**float**|如果正在使用編碼類型 1 的範圍。  如果沒有使用編碼類型 1，會將範圍設為-1。|  
+|**大小**|**float**|如果正在使用編碼類型 1 的範圍。  如果沒有使用編碼類型 1，會將範圍設為-1。|  
 |**primary_dictionary_id**|**int**|值為 0 表示通用的字典。 -1 表示沒有為此資料行建立全域字典。|  
 |**secondary_dictionary_id**|**int**|為非零的值會指向本機字典中目前的區段 （也就是資料列群組） 此資料行。 -1 表示沒有任何本機的字典，此區段。|  
 |**min_data_id**|**bigint**|資料行區段中的最小資料識別碼。|  
@@ -79,12 +76,12 @@ GO
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 如需相關資訊，請參閱 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)。  
   
 ## <a name="see-also"></a>另請參閱  
- [物件目錄檢視 &#40;TRANSACT-SQL &#41;](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
+ [物件目錄檢視 &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
  [目錄檢視 &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [查詢 SQL Server 系統目錄 FAQ](../../relational-databases/system-catalog-views/querying-the-sql-server-system-catalog-faq.md)   
  [sys.columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-columns-transact-sql.md)   
- [sys.all_columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-all-columns-transact-sql.md)   
- [sys.computed_columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-computed-columns-transact-sql.md)   
+ [sys.all_columns &#40;Transact SQL&#41;](../../relational-databases/system-catalog-views/sys-all-columns-transact-sql.md)   
+ [sys.computed_columns &#40;Transact SQL&#41;](../../relational-databases/system-catalog-views/sys-computed-columns-transact-sql.md)   
  [資料行存放區索引指南](~/relational-databases/indexes/columnstore-indexes-overview.md)    
  [sys.column_store_dictionaries &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-column-store-dictionaries-transact-sql.md)  
   

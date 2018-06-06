@@ -1,30 +1,28 @@
 ---
-title: "SSMA 主控台 (AccessToSQL) 中的命令列選項 |Microsoft 文件"
-ms.prod: sql-non-specified
+title: SSMA 主控台 (AccessToSQL) 中的命令列選項 |Microsoft 文件
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
 ms.component: ssma-access
-ms.custom: 
+ms.custom: ''
 ms.date: 08/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ssma
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: c1f3b3f0-0f3e-4e07-b745-2fbdde85c67e
-caps.latest.revision: "11"
+caps.latest.revision: 11
 author: Shamikg
 ms.author: Shamikg
 manager: murato
-ms.workload: Inactive
-ms.openlocfilehash: c1d26043b33ea902aec4ae7976ad8b215829bf34
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 361ef1f9fcac31f864350098a2c3d223c59e2afe
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="command-line-options-in-the-ssma-console-accesstosql"></a>SSMA 主控台 (AccessToSQL) 中的命令列選項
 Microsoft 提供一組強固的執行及控制 SSMA 活動的命令列選項。 後續章節將提供其他詳細資料。  
@@ -166,21 +164,21 @@ Microsoft 提供一組強固的執行及控制 SSMA 活動的命令列選項。 
   
 `C:\>SSMAforAccessConsole.EXE -?`  
   
-SSMA 主控台命令列選項表格式顯示中，請參閱[附錄-1 &#40;AccessToSQL &#41;](../../ssma/access/appendix-1-accesstosql.md).  
+SSMA 主控台命令列選項表格式顯示中，請參閱[附錄-1 &#40;AccessToSQL&#41;](../../ssma/access/appendix-1-accesstosql.md)。  
   
 ### <a name="securepassword-help-option-securepassword--help"></a>SecurePassword 說明選項:-securepassword-？ / 說明  
 會顯示 SSMA 主控台選項的語法摘要：  
   
 `C:\>SSMAforAccessConsole.EXE -securepassword -?`  
   
-SSMA 主控台命令列選項表格式顯示中，請參閱[附錄-1 &#40;AccessToSQL &#41;](../../ssma/access/appendix-1-accesstosql.md)  
+SSMA 主控台命令列選項表格式顯示中，請參閱[附錄-1 &#40;AccessToSQL&#41;](../../ssma/access/appendix-1-accesstosql.md)  
   
-### <a name="next-steps"></a>後續步驟  
+### <a name="next-steps"></a>後續的步驟  
 下一個步驟取決於您的專案需求：  
   
-1.  指定的密碼或匯出 / 匯入的密碼，請參閱[管理密碼 &#40;AccessToSQL &#41;](../../ssma/access/managing-passwords-accesstosql.md).  
+1.  指定的密碼或匯出 / 匯入的密碼，請參閱[管理密碼&#40;AccessToSQL&#41;](../../ssma/access/managing-passwords-accesstosql.md)。  
   
-2.  產生報告，請參閱[產生報表 &#40;AccessToSQL &#41;](../../ssma/access/generating-reports-accesstosql.md).  
+2.  產生報告，請參閱[產生報表&#40;AccessToSQL&#41;](../../ssma/access/generating-reports-accesstosql.md)。  
   
-3.  如需疑難排解主控台中的問題，請參閱[疑難排解 &#40;AccessToSQL &#41;](../../ssma/access/troubleshooting-accesstosql.md).  
+3.  如需疑難排解主控台中的問題，請參閱[疑難排解&#40;AccessToSQL&#41;](../../ssma/access/troubleshooting-accesstosql.md)。  
   

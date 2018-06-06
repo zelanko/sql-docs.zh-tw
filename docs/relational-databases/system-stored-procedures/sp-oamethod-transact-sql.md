@@ -1,16 +1,14 @@
 ---
-title: "sp_OAMethod (TRANSACT-SQL) |Microsoft 文件"
-ms.custom: 
+title: sp_OAMethod (TRANSACT-SQL) |Microsoft 文件
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: system-objects
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_OAMethod
@@ -20,16 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_OAMethod
 ms.assetid: 1dfaebe2-c7cf-4041-a586-5d04faf2e25e
-caps.latest.revision: 
+caps.latest.revision: 25
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 0dcf9235953ca1e907c4bae97562d5ea0a00049b
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: ef5d79a14aaee0b8f23738c3e359e37032d80318
+ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="spoamethod-transact-sql"></a>sp_OAMethod (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -54,7 +51,7 @@ sp_OAMethod objecttoken , methodname
  *方法名稱*  
  這是要呼叫之 OLE 物件的方法名稱。  
   
- *returnvalue***輸出**   
+ *returnvalue***輸出**  
  這是 OLE 物件的方法傳回值。 如果指定的話，它必須是適當資料類型的本機變數。  
   
  如果此方法傳回單一值，也可以指定一個本機變數*returnvalue*，它會傳回此方法傳回值，在本機變數，或不指定*returnvalue*，它會傳回方法會傳回做為單一資料行、 單一資料列結果集給用戶端的值。  
@@ -71,18 +68,18 @@ sp_OAMethod objecttoken , methodname
   
 -   方法在輸出參數中傳回陣列。  
   
- [  *@parametername*   **=**  ]*參數*[**輸出**]  
+ [  *@parametername* * * =**]*參數*[**輸出**]  
  這是一個方法參數。 如果指定，*參數*必須是適當的資料類型的值。  
   
  若要取得輸出參數，傳回值*參數*必須是適當資料類型的本機變數和**輸出**必須指定。 如果指定常數參數，或如果**輸出**未指定，任何傳回輸出參數的值會被忽略。  
   
- 如果指定， *parametername*必須是名稱[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]具名參數。 請注意，  **@**  *parametername*不[!INCLUDE[tsql](../../includes/tsql-md.md)]本機變數。 @ 記號 (**@**) 移除時，和*parametername*傳遞給 OLE 物件做為參數名稱。 您必須在指定好所有位置性參數之後，指定所有具名參數。  
+ 如果指定， *parametername*必須是名稱[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]具名參數。 請注意，  **@** *parametername*不[!INCLUDE[tsql](../../includes/tsql-md.md)]本機變數。@ 記號 (**@ * *) 會移除和*parametername*傳遞給 OLE 物件做為參數名稱。 您必須在指定好所有位置性參數之後，指定所有具名參數。  
   
  *n*  
  這是一個預留位置，表示可以指定多個參數。  
   
 > [!NOTE]  
->  *@parametername*可以是具名的參數，因為它是指定方法的一部分，並且會傳遞至物件。 這個預存程序的其他參數是依照位置來指定，而不是名稱。  
+>  *@parametername* 可以是具名的參數，因為它是指定方法的一部分，並且會傳遞至物件。 這個預存程序的其他參數是依照位置來指定，而不是名稱。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  0 (成功) 或非零數字 (失敗)，這個數字是 OLE Automation 物件所傳回之 HRESULT 的整數值。  
@@ -144,8 +141,8 @@ END;
 PRINT @property;  
 ```  
   
-## <a name="see-also"></a>請參閱  
- [OLE Automation 預存程序 &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/ole-automation-stored-procedures-transact-sql.md)   
+## <a name="see-also"></a>另請參閱  
+ [OLE Automation 預存程序&#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/ole-automation-stored-procedures-transact-sql.md)   
  [OLE Automation 範例指令碼](../../relational-databases/stored-procedures/ole-automation-sample-script.md)  
   
   

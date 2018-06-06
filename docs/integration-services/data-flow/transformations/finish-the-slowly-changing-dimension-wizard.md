@@ -1,30 +1,28 @@
 ---
-title: "完成緩時變維度精靈 | Microsoft Docs"
-ms.custom: 
+title: 完成緩時變維度精靈 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
 ms.component: data-flow
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 f1_keywords:
 - sql13.dts.loaddimwizard.finish.f1
 ms.assetid: f8ed1a54-d79a-43ca-80a0-02547d97c0f9
-caps.latest.revision: 
+caps.latest.revision: 21
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 52c3f9f2606d3ced4928e877f9a4a41dfdacfa72
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: e2814b4d8ccab39bc3aa5d480a51c2cd9b575cc2
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="finish-the-slowly-changing-dimension-wizard"></a>完成緩時變維度精靈
   使用 [完成緩時變維度精靈] 對話方塊，即可在精靈為緩時變維度建立支援之前，先確認您的選擇。  

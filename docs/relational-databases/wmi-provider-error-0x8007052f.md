@@ -1,29 +1,29 @@
 ---
-title: "WMI 錯誤 0x8007052f | Microsoft Docs"
-ms.custom: 
+title: WMI 錯誤 0x8007052f | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: relational-databases-misc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - 0x8007052f (WMI error)
 ms.assetid: a33f12bd-15c4-42a8-b343-de44c3e87729
-caps.latest.revision: 
-author: JennieHubbard
-ms.author: jhubbard
+caps.latest.revision: 10
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ecaaadf170764bdd22e2a263361a343b790a1228
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.openlocfilehash: 06f5b8000dcd43b12ed5d25ddc733fb892d385f3
+ms.sourcegitcommit: d2573a8dec2d4102ce8882ee232cdba080d39628
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="wmi-provider-error-0x8007052f"></a>WMI 提供者錯誤 0x8007052f
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

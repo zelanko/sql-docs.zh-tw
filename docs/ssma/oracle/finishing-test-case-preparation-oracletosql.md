@@ -1,27 +1,25 @@
 ---
-title: "完成測試案例準備 (OracleToSQL) |Microsoft 文件"
-ms.prod: sql-non-specified
+title: 完成測試案例準備 (OracleToSQL) |Microsoft 文件
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
 ms.component: ssma-oracle
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ssma
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: 32f38713-7ae4-48d3-980d-74cadc8545a0
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
-ms.workload: Inactive
-ms.openlocfilehash: f6bf969705a049e03212500a3112e643fbe7654a
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 5103b990f98246b35de80767cabdc7b94006f23b
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="finishing-test-case-preparation-oracletosql"></a>完成測試案例準備 (OracleToSQL)
 精靈的最後一頁會顯示描述測試案例和測試使用到物件的相關資訊。 此外，在此頁面上您可以設定測試執行選項。  
@@ -50,7 +48,7 @@ ms.lasthandoff: 12/21/2017
 -   如果您選擇**否**，所有測試的執行資料變更將會儲存。  
   
 ### <a name="auxiliary-tables-saving-mode"></a>儲存模式的輔助資料表  
-定義測試執行期間所建立的輔助資料表的儲存模式。 請參閱中的輔助資料表的描述[執行測試案例 &#40; OracleToSQL &#41;](../../ssma/oracle/running-test-cases-oracletosql.md)主題。  
+定義測試執行期間所建立的輔助資料表的儲存模式。 請參閱中的輔助資料表的描述[執行測試案例&#40;OracleToSQL&#41; ](../../ssma/oracle/running-test-cases-oracletosql.md)主題。  
   
 -   如果您選取**永遠儲存**，輔助資料表的資料一律會儲存供稍後使用。  
   
@@ -62,8 +60,8 @@ ms.lasthandoff: 12/21/2017
   
 按一下**完成**按鈕以儲存到已備妥的測試案例[使用測試儲存機制 (OracleToSQL)](http://msdn.microsoft.com/en-us/f941cce4-d3e3-4aeb-a88a-4f101a97a9f4)。  
   
-## <a name="see-also"></a>請參閱  
-[使用測試儲存機制 &#40; OracleToSQL &#41;](../../ssma/oracle/using-test-repositories-oracletosql.md)  
-[執行測試案例 &#40; OracleToSQL &#41;](../../ssma/oracle/running-test-cases-oracletosql.md)  
-[測試移轉的資料庫物件 &#40; OracleToSQL &#41;](../../ssma/oracle/testing-migrated-database-objects-oracletosql.md)  
+## <a name="see-also"></a>另請參閱  
+[使用測試儲存機制&#40;OracleToSQL&#41;](../../ssma/oracle/using-test-repositories-oracletosql.md)  
+[執行測試案例&#40;OracleToSQL&#41;](../../ssma/oracle/running-test-cases-oracletosql.md)  
+[測試移轉的資料庫物件&#40;OracleToSQL&#41;](../../ssma/oracle/testing-migrated-database-objects-oracletosql.md)  
   

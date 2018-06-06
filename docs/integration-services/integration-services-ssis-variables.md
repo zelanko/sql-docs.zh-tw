@@ -1,17 +1,16 @@
 ---
-title: "Integration Services (SSIS) 變數 | Microsoft Docs"
-ms.custom: 
+title: Integration Services (SSIS) 變數 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
 ms.component: non-specific
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - variables [Integration Services], passing between packages
 - user-defined variables [Integration Services]
@@ -21,16 +20,15 @@ helpviewer_keywords:
 - variables [Integration Services], about variables
 - values [Integration Services]
 ms.assetid: c1e81ad6-628b-46d4-9b09-d2866517b6ca
-caps.latest.revision: 
+caps.latest.revision: 60
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: Active
-ms.openlocfilehash: 141b245a49e1d2fa6f83b886c70c159ab089c2fa
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 40acc806d038e85c206d0861bb28575085483ade
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="integration-services-ssis-variables"></a>Integration Services (SSIS) 變數
   變數會儲存 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 封裝及其容器、工作和事件處理常式在執行階段可使用的值。 「指令碼」工作和「指令碼」元件中的指令碼也可以使用變數。 將工作和容器排序成工作流程的優先順序條件約束，可在其條件約束定義含有運算式時使用變數。  

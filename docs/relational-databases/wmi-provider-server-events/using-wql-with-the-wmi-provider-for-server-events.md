@@ -1,16 +1,15 @@
 ---
-title: "伺服器事件的 WMI 提供者使用 WQL |Microsoft 文件"
-ms.custom: 
+title: 伺服器事件的 WMI 提供者使用 WQL |Microsoft 文件
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
 ms.component: wmi
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - queries [WMI]
@@ -19,20 +18,19 @@ helpviewer_keywords:
 - WQL [WMI]
 - WMI Provider for Server Events, WQL
 ms.assetid: 58b67426-1e66-4445-8e2c-03182e94c4be
-caps.latest.revision: 
-author: JennieHubbard
-ms.author: jhubbard
+caps.latest.revision: 36
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: d14958366c9dfa24343e244a8a5d5cb880fafa3e
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.openlocfilehash: e417f360129f63477702dfbd95015886f0836ddc
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="using-wql-with-the-wmi-provider-for-server-events"></a>搭配伺服器事件的 WMI 提供者使用 WQL
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
-管理應用程式可藉由發出 WMI 查詢語言 (WQL) 陳述式，使用 WMI Provider for Server Events 來存取 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 事件。 WQL 是結構化查詢語言 (SQL) 的簡化子集，具有一些 WMI 特定的延伸模組。 在使用 WQL 時，應用程式會針對 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的特定執行個體、資料庫或資料庫物件 (目前唯一支援的物件是佇列) 來擷取事件類型。 伺服器事件的 WMI 提供者會將查詢轉譯為資料庫範圍或物件範圍的事件通知，或在目標資料庫中建立的事件通知**主要**資料庫的伺服器範圍的事件通知。  
+  管理應用程式可藉由發出 WMI 查詢語言 (WQL) 陳述式，使用 WMI Provider for Server Events 來存取 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 事件。 WQL 是結構化查詢語言 (SQL) 的簡化子集，具有一些 WMI 特定的延伸模組。 在使用 WQL 時，應用程式會針對 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的特定執行個體、資料庫或資料庫物件 (目前唯一支援的物件是佇列) 來擷取事件類型。 伺服器事件的 WMI 提供者會將查詢轉譯為資料庫範圍或物件範圍的事件通知，或在目標資料庫中建立的事件通知**主要**資料庫的伺服器範圍的事件通知。  
   
  例如，請看下列的 WQL 查詢：  
   
@@ -99,7 +97,7 @@ WHERE where_condition
   
  WMI Provider for Server Events 會使用由下而上 (Bottom-Up)、最先合適 (First-Fit) 演算法，針對基礎 EVENT NOTIFICATION 產生最小的可能範圍。 此種演算法會嘗試將伺服器上的內部活動以及 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體和 WMI 主機處理序之間的網路傳輸量降至最低。 提供者會檢查*event_type*指定在 FROM 子句中，在 WHERE 子句條件，並嘗試使用最少的可能範圍註冊基礎事件通知。 如果提供者不能以最窄的範圍註冊，就會嘗試以連續的較高範圍註冊，直到註冊終於成功為止。 如果在達到最高的範圍 (伺服器層級) 時仍舊失敗，就會對取用者傳回錯誤。  
   
- 例如，如果 DatabaseName =**'**AdventureWorks**'**在 WHERE 子句中，提供者會嘗試註冊事件通知中的指定[!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]資料庫。 如果 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 資料庫存在，而且呼叫用戶端具有在 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 中建立事件通知的必要權限，註冊作業就會成功， 否則系統會嘗試在伺服器層級註冊事件通知。 如果 WMI 用戶端擁有必要的權限，註冊就會成功。 不過，在此種情況下，在建立 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 資料庫之前，不會對用戶端傳回事件。  
+ 例如，如果 DatabaseName =**'** AdventureWorks **'** 在 WHERE 子句中，提供者會嘗試註冊事件通知中的指定[!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]資料庫。 如果 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 資料庫存在，而且呼叫用戶端具有在 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 中建立事件通知的必要權限，註冊作業就會成功， 否則系統會嘗試在伺服器層級註冊事件通知。 如果 WMI 用戶端擁有必要的權限，註冊就會成功。 不過，在此種情況下，在建立 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 資料庫之前，不會對用戶端傳回事件。  
   
  *Where_condition*也可以當做篩選，將此外限制到特定的資料庫、 結構描述或物件查詢。 例如，請看下列的 WQL 查詢：  
   

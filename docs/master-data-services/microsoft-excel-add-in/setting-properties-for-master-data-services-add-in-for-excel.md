@@ -1,30 +1,31 @@
 ---
-title: "設定適用於 Excel 之 Master Data Services 增益集的屬性 | Microsoft Docs"
-ms.custom: 
+title: 設定適用於 Excel 之 Master Data Services 增益集的屬性 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: mds
-ms.service: 
 ms.component: microsoft-excel-add-in
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - master-data-services
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: cab1c662-5d40-4c16-9f5c-36ff9608810b
-caps.latest.revision: 
+caps.latest.revision: 8
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: f04c236ea1534ce5f2d33313117dd082cb75bd6c
-ms.sourcegitcommit: 6ac1956307d8255dc544e1063922493b30907b80
+ms.openlocfilehash: f0afa753c2439eb55236d25bf518b6069c31750d
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="setting-properties-for-master-data-services-add-in-for-excel"></a>設定適用於 Excel 之 Master Data Services 增益集的屬性
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
   Master Data Services Add-in for Excel 設定會決定如何從 MDS 將資料載入 Excel 增益集，以及如何從 Excel 增益集將資料發行到 MDS。  
   
  若要針對 Excel 增益集進行設定，請開啟 [Excel]，並按一下 [主要資料] 功能表，然後按一下 [設定]。 可存取 Excel 的任何人都可以變更這些設定。 這些設定適用於開啟 Excel 的電腦。  

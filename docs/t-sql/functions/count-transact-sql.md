@@ -1,16 +1,14 @@
 ---
 title: COUNT (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 07/24/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
 ms.component: t-sql|functions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: t-sql
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - COUNT_TSQL
@@ -25,21 +23,21 @@ helpviewer_keywords:
 - number of group items
 - COUNT function [Transact-SQL]
 ms.assetid: 28d39da6-bc2e-46c7-858c-b1721c938830
-caps.latest.revision: 
+caps.latest.revision: 45
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Active
-ms.openlocfilehash: 0342e593b0bf13b5e5a9b53600aae5f3c39ae59d
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 665edc29f3989f73ba997e1ac693634356689aa4
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="count-transact-sql"></a>COUNT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-傳回群組中的項目數。 COUNT 的運作方式與 [COUNT_BIG](../../t-sql/functions/count-big-transact-sql.md) 函式類似。 這兩個函數的唯一差異是它們的傳回值。 COUNT 一律會傳回 **int** 資料類型值。 COUNT_BIG 一律會傳回 **bigint** 資料類型值。
+此函數會傳回群組中找到的項目數。 `COUNT` 的運作方式類似 [COUNT_BIG](../../t-sql/functions/count-big-transact-sql.md) 函數。 這些函數唯一的差別就是其傳回值的資料類型。 `COUNT` 一律會傳回 **int** 資料類型值。 `COUNT_BIG` 一律會傳回 **bigint** 資料類型值。
   
 ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -68,38 +66,38 @@ COUNT ( { expression | * } ) OVER ( [ <partition_by_clause> ] )
   
 ## <a name="arguments"></a>引數  
 **ALL**  
-將彙總函式套用至所有值。 ALL 是預設值。
+將彙總函式套用至所有值。 全部都可以當作預設值。
   
 DISTINCT  
-指定 COUNT 傳回唯一非 Null 值的數目。
+指定 `COUNT` 傳回唯一非 Null 值的數目。
   
 *expression*  
-為任何類型的[運算式](../../t-sql/language-elements/expressions-transact-sql.md) (**text**、**image** 或 **ntext** 除外)。 不允許彙總函式和子查詢。
+為任何類型的[運算式](../../t-sql/language-elements/expressions-transact-sql.md) (**image**、**ntext** 或 **text** 除外)。 請注意，`COUNT` 不支援運算式中的彙總函數或子查詢。
   
 \*  
-指定應該計算所有資料列，以傳回資料表中的資料列總數。 COUNT(\*) 沒有參數，無法與 DISTINCT 搭配使用。 COUNT(\*) 不需要 *expression* 參數，因為依照定義，它不會使用任何特定資料行的相關資訊。 COUNT(*) 會傳回指定資料表中不迴避複製的資料列數。 它會個別計算每個資料列。 其中包括含有 Null 值的資料列。
+指定 `COUNT` 應該計算所有資料列，以判斷要傳回的總資料表資料列計數。 `COUNT(*)` 不接受任何參數，而且不支援使用 DISTINCT。 `COUNT(*)` 不需要 *expression* 參數，因為依照定義，它不會使用任何特定資料行的相關資訊。 `COUNT(*)` 會傳回指定之資料表的資料列數，而且它會保留重複的資料列。 它會個別計算每個資料列。 其中包括含有 Null 值的資料列。
   
 OVER **(** [ *partition_by_clause* ] [ *order_by_clause* ] [ *ROW_or_RANGE_clause* ] **)**  
-*partition_by_clause* 會將 FROM 子句產生的結果集分割成函式所要套用的分割區。 如未指定，此函數會將查詢結果集的所有資料列視為單一群組。 *order_by_clause* 可決定執行作業的邏輯順序。 如需詳細資訊，請參閱 [OVER 子句 &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md)。
-  
-## <a name="return-types"></a>傳回型別
+*partition_by_clause* 會將 `FROM` 子句產生的結果集，分割成 `COUNT` 函數所要套用的資料分割。 如未指定，此函數會將查詢結果集的所有資料列視為單一群組。 *order_by_clause* 會決定作業的邏輯順序。 如需詳細資訊，請參閱 [OVER 子句 &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md)。 
+
+## <a name="return-types"></a>傳回類型
  **int**  
   
 ## <a name="remarks"></a>Remarks  
-COUNT(*) 會傳回群組中的項目數。 其中包括 NULL 值和複本。
+COUNT(\*) 會傳回群組中的項目數。 其中包括 NULL 值和複本。
   
 COUNT(ALL *expression*) 會針對群組中的每個資料列來評估 *expression*，且會傳回非 Null 值的數目。
   
 COUNT(DISTINCT *expression*) 會針對群組中的每個資料列來評估 *expression*，且會傳回唯一且非 Null 值的數目。
   
-如果傳回值大於 2^31-1，COUNT 會產生錯誤。 請改用 COUNT_BIG。
+若傳回的值超過 2^31-1，`COUNT` 會傳回錯誤。 這些情況下，請改用 `COUNT_BIG`。
   
-COUNT 未搭配 OVER 和 ORDER BY 子句使用時，是具決定性函數。 使用 OVER 和 ORDER BY 子句指定時，則不具決定性。 如需詳細資訊，請參閱 [決定性與非決定性函數](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md)。
+***未搭配*** OVER 和 ORDER BY 子句使用時，`COUNT` 是具決定性函數。 ***搭配*** OVER 和 ORDER BY 子句時，則不具決定性。 如需詳細資訊，請參閱[決定性與非決定性函數](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md)。
   
 ## <a name="examples"></a>範例  
   
 ### <a name="a-using-count-and-distinct"></a>A. 使用 COUNT 與 DISTINCT  
-下列範例會列出在 [!INCLUDE[ssSampleDBCoFull](../../includes/sssampledbcofull-md.md)] 工作的員工所能擁有的不同職稱數目。
+此範例會傳回 [!INCLUDE[ssSampleDBCoFull](../../includes/sssampledbcofull-md.md)] 員工可能擁有的數個職稱。
   
 ```sql
 SELECT COUNT(DISTINCT Title)  
@@ -116,8 +114,8 @@ GO
 (1 row(s) affected)
 ```
   
-### <a name="b-using-count"></a>B. 使用 COUNT(*)  
-下列範例會尋找在 [!INCLUDE[ssSampleDBCoFull](../../includes/sssampledbcofull-md.md)] 工作的員工總數。
+### <a name="b-using-count"></a>B. 使用 COUNT(\*)  
+此範例會傳回 [!INCLUDE[ssSampleDBCoFull](../../includes/sssampledbcofull-md.md)] 員工總數。
   
 ```sql
 SELECT COUNT(*)  
@@ -134,8 +132,8 @@ GO
 (1 row(s) affected)
 ```
   
-### <a name="c-using-count-with-other-aggregates"></a>C. 搭配其他彙總使用 COUNT(*)  
-下列範例會顯示 `COUNT(*)` 可以結合選取清單中的其他彙總函式。 此範例會使用 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 資料庫。
+### <a name="c-using-count-with-other-aggregates"></a>C. 搭配其他彙總使用 COUNT(\*)  
+此範例會說明 `COUNT(*)` 如何搭配 `SELECT` 清單中的其他彙總函數使用。 此範例會使用 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 資料庫。
   
 ```sql
 SELECT COUNT(*), AVG(Bonus)  
@@ -154,7 +152,7 @@ GO
 ```
   
 ### <a name="d-using-the-over-clause"></a>D. 使用 OVER 子句  
-下列範例會將 MIN、MAX、AVG 和 COUNT 函數搭配 OVER 子句一起使用，為 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 資料庫之 `HumanResources.Department` 資料表中的各部門提供彙總值。
+這個範例會將 `MIN`、`MAX`、`AVG` 和 `COUNT` 函數與 `OVER` 子句搭配使用，以便傳回 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 資料庫 `HumanResources.Department` 資料表中每一部門的彙總值。
   
 ```sql
 SELECT DISTINCT Name  
@@ -199,7 +197,7 @@ Tool Design                   8.62                  29.8462               23.505
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>範例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="e-using-count-and-distinct"></a>E. 使用 COUNT 與 DISTINCT  
-下列範例會列出在特定公司工作的員工所能擁有的不同職稱數目。
+此範例會傳回特定公司某一員工可能擁有的不同職稱數。
   
 ```sql
 USE ssawPDW;  
@@ -215,8 +213,8 @@ FROM dbo.DimEmployee;
 67
 ```  
   
-### <a name="f-using-count"></a>F. 使用 COUNT(*)  
-下列範例會傳回 `dbo.DimEmployee` 資料表中資料列的總數。
+### <a name="f-using-count"></a>F. 使用 COUNT(\*)  
+此範例會傳回 `dbo.DimEmployee` 資料表中的資料列總數。
   
 ```sql
 USE ssawPDW;  
@@ -232,8 +230,8 @@ FROM dbo.DimEmployee;
 296
 ```  
   
-### <a name="g-using-count-with-other-aggregates"></a>G. 搭配其他彙總使用 COUNT(*)  
-下列範例會在 SELECT 清單中合併 `COUNT(*)` 與其他彙總函式。 查詢會傳回年銷售配額大於美金 $500,000 元的銷售代表數目，以及平均銷售配額。
+### <a name="g-using-count-with-other-aggregates"></a>G. 搭配其他彙總使用 COUNT(\*)  
+此範例會將 `COUNT(*)` 與 `SELECT` 清單中的其他彙總函數結合。 它會傳回年銷售配額大於美金 $500,000 元的銷售代表數目，以及這些銷售代表的平均銷售配額。
   
 ```sql
 USE ssawPDW;  
@@ -253,7 +251,7 @@ TotalCount  Average Sales Quota
 ```
   
 ### <a name="h-using-count-with-having"></a>H. 搭配 HAVING 使用 COUNT  
-下列範例會搭配 HAVING 子句使用 COUNT 來傳回公司中員工數量超過 15 名的部門。
+此範例會使用 `COUNT` 與 `HAVING` 子句，以便傳回公司中員工數超過 15 人的各部門。
   
 ```sql
 USE ssawPDW;  
@@ -275,7 +273,7 @@ Production      179
 ```
   
 ### <a name="i-using-count-with-over"></a>I. OVER 與 COUNT 使用搭配  
-下列範例會與 OVER 搭配子句使用 COUNT 來傳回每個指定銷售訂單中包含的產品數目。
+此範例使用 `COUNT` 與 `OVER` 子句，以便傳回每個指定銷售訂單中包含的產品數目。
   
 ```sql
 USE ssawPDW;  

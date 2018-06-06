@@ -1,31 +1,23 @@
 ---
-title: "設定維度和分割區的字串儲存體 |Microsoft 文件"
-ms.custom: 
-ms.date: 03/06/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
-ms.assetid: 987f6cfc-da82-4b2e-96ef-a8af88339e5f
-caps.latest.revision: 
-author: Minewiskan
+title: 設定維度和分割區的字串儲存體 |Microsoft 文件
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: multidimensional-models
+ms.topic: conceptual
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: c10be134f541434543c43c186181b122188a379f
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: f6a5aff8822d3fceb05d22433094dc952c6cb872
+ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="configure-string-storage-for-dimensions-and-partitions"></a>設定維度及分割區的字串存放區
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-您可以重新設定字串存放區，在超出字串存放區之 4 GB 檔案大小限制的維度屬性或分割區中容納非常大的字串。 如果您的維度或資料分割包含此大小的字串存放區，您可以在維度或資料分割層級，變更本機及連結 (本機或遠端) 物件的 **StringStoresCompatibilityLevel** 屬性來解決檔案大小限制。  
+  您可以重新設定字串存放區，在超出字串存放區之 4 GB 檔案大小限制的維度屬性或分割區中容納非常大的字串。 如果您的維度或資料分割包含此大小的字串存放區，您可以在維度或資料分割層級，變更本機及連結 (本機或遠端) 物件的 **StringStoresCompatibilityLevel** 屬性來解決檔案大小限制。  
   
  請注意您可以只在需要額外容量的物件上加大字串存放區。 在大部分的維度模型中，字串資料會與維度相關聯。 但包分割區中最上層的字串若包含相異計數量值，也可以受益於此設定。 因為此設定係針對字串，所以數值資料不受影響。  
   
@@ -95,7 +87,7 @@ ms.lasthandoff: 02/15/2018
   
 ## <a name="see-also"></a>另請參閱  
  [處理的工具和方式 &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/tools-and-approaches-for-processing-analysis-services.md)   
- [處理選項和設定 &#40;Analysis Services &#41;](../../analysis-services/multidimensional-models/processing-options-and-settings-analysis-services.md)   
+ [處理選項和設定 & #40;Analysis Services & #41;](../../analysis-services/multidimensional-models/processing-options-and-settings-analysis-services.md)   
  [資料分割儲存模式及處理](../../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-partition-storage-modes-and-processing.md)   
  [維度儲存](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/dimensions-storage.md)  
   

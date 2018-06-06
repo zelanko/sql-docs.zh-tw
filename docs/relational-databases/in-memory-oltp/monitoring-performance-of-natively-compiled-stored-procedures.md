@@ -1,35 +1,33 @@
 ---
-title: "監視原生編譯預存程序的效能 | Microsoft Docs"
-ms.custom: 
-ms.date: 03/16/2017
-ms.prod: sql-non-specified
+title: 監視原生編譯預存程序的效能 | Microsoft Docs
+ms.custom: ''
+ms.date: 04/03/2018
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
 ms.component: in-memory-oltp
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine-imoltp
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: in-memory-oltp
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: 55548cb2-77a8-4953-8b5a-f2778a4f13cf
-caps.latest.revision: 
-author: JennieHubbard
-ms.author: jhubbard
+caps.latest.revision: 11
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: de69f1adb23ab36c7f35819762dba1578f7015fd
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: d62096acba1d44cfa15af8ae6028ec2b756a117c
+ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="monitoring-performance-of-natively-compiled-stored-procedures"></a>監視原生編譯預存程序的效能
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-本主題討論如何監視原生編譯預存程序的效能  
+  本文討論如何監視原生編譯預存程序和其他原生編譯 T-SQL 模組的效能。  
   
 ## <a name="using-extended-events"></a>使用擴充的事件  
- 使用 **sp_statement_completed** 擴充事件來追蹤查詢的執行。 以此事件建立擴充事件工作階段，選擇性地針對特定原生編譯預存程序篩選 object_id。執行每項查詢之後都將引發此擴充事件。 擴充事件所報告的 CPU 時間和持續時間代表了查詢的 CPU 使用率和執行時間。 原生編譯預存程序若佔用大量的 CPU 時間，可能就會導致效能問題。  
+ 使用 **sp_statement_completed** 擴充事件來追蹤查詢的執行。 以此事件建立擴充事件工作階段，選擇性地針對特定原生編譯預存程序篩選 object_id。 執行每項查詢之後都將引發此擴充事件。 擴充事件所報告的 CPU 時間和持續時間代表了查詢的 CPU 使用率和執行時間。 原生編譯預存程序若佔用大量的 CPU 時間，可能就會導致效能問題。  
   
  **line_number**連同擴充事件中的 **object_id** 皆可用來調查查詢。 使用下列查詢即可擷取程序定義。 行號可用來識別定義內的查詢：  
   
@@ -39,21 +37,39 @@ select [definition] from sys.sql_modules where object_id=object_id
   
  如需 **sp_statement_completed** 擴充事件的詳細資訊，請參閱 [How to retrieve the statement that caused an event](http://blogs.msdn.com/b/extended_events/archive/2010/05/07/making-a-statement-how-to-retrieve-the-t-sql-statement-that-caused-an-event.aspx)(如何擷取導致事件的陳述式)。  
   
-## <a name="using-data-management-views"></a>使用資料管理檢視  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支援收集原生編譯預存程序在程序層級和查詢層級的執行統計資料。 收集執行統計資料會影響效能，所以預設並未啟用。  
-  
- 您可以使用 [sys.sp_xtp_control_proc_exec_stats &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-xtp-control-proc-exec-stats-transact-sql.md) 啟用和停用原生編譯預存程序的統計資料收集。  
-  
- 使用 [sys.sp_xtp_control_proc_exec_stats &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-xtp-control-proc-exec-stats-transact-sql.md) 啟用統計資料收集時，您可以使用 [sys.dm_exec_procedure_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-procedure-stats-transact-sql.md) 監視原生編譯預存程序的效能。  
-  
- 使用 [sys.sp_xtp_control_query_exec_stats &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-xtp-control-query-exec-stats-transact-sql.md) 啟用統計資料收集時，您可以使用 [sys.dm_exec_query_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-stats-transact-sql.md) 監視原生編譯預存程序的效能。  
-  
- 在一開始收集時，啟用統計資料集合。 接著，執行原生編譯預存程序。 在結束收集後，停用統計資料集合。 接著，分析 DMV 所傳回的執行統計資料。  
-  
+## <a name="using-data-management-views-and-query-store"></a>使用資料管理檢視和查詢存放區
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 支援收集原生編譯預存程序在程序層級和查詢層級的執行統計資料。 收集執行統計資料會影響效能，所以預設並未啟用。  
+
+執行統計資料會反映在系統檢視表 [sys.dm_exec_procedure_stats](../../relational-databases/system-dynamic-management-views/sys-dm-exec-procedure-stats-transact-sql.md) 和 [sys.dm_exec_query_stats](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-stats-transact-sql.md)，也會反映在[查詢存放區](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)。
+
+### <a name="enabling-procedure-level-execution-statistics-collection"></a>啟用程序層級的執行統計資料收集
+
+**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**：使用 [sys.sp_xtp_control_proc_exec_stats &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-xtp-control-proc-exec-stats-transact-sql.md) 在程序層級啟用和停用原生編譯預存程序的統計資料收集。  下列陳述式可以在目前的執行個體上啟用所有原生編譯 T-SQL 模組的程序層級執行統計資料收集：
+```sql
+EXEC sys.sp_xtp_control_proc_exec_stats 1
+```
+
+**[!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]**：使用 [database-scoped configuration](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md) 選項 `XTP_PROCEDURE_EXECUTION_STATISTICS` 來啟用或停用原生編譯預存程序的程序層級統計資料收集。 下列陳述式可以在目前的資料庫上啟用所有原生編譯 T-SQL 模組的程序層級執行統計資料收集：
+```sql
+ALTER DATABASE SCOPED CONFIGURATION SET XTP_PROCEDURE_EXECUTION_STATISTICS = ON
+```
+
+### <a name="enabling-query-level-execution-statistics-collection"></a>啟用查詢層級的執行統計資料收集
+
+**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**：使用 [sys.sp_xtp_control_query_exec_stats &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-xtp-control-query-exec-stats-transact-sql.md) 在查詢層級啟用和停用原生編譯預存程序的統計資料收集。  下列陳述式可以在目前的執行個體上啟用所有原生編譯 T-SQL 模組的查詢層級執行統計資料收集：
+```sql
+EXEC sys.sp_xtp_control_query_exec_stats 1
+```
+
+**[!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]**：使用 [database-scoped configuration](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md) 選項 `XTP_QUERY_EXECUTION_STATISTICS` 啟用或停用原生編譯預存程序的陳述式層級統計資料收集。 下列陳述式可以在目前的資料庫上啟用所有原生編譯 T-SQL 模組的陳述式層級執行統計資料收集：
+```sql
+ALTER DATABASE SCOPED CONFIGURATION SET XTP_QUERY_EXECUTION_STATISTICS = ON
+```
+
+## <a name="sample-queries"></a>範例查詢
+
  收集統計資料之後，使用 [sys.dm_exec_procedure_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-procedure-stats-transact-sql.md) 和 [sys.dm_exec_query_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-stats-transact-sql.md) 分別可查詢原生編譯預存程序的程序層級和查詢層級執行統計資料。  
-  
-> [!NOTE]  
->  如果統計資料集合啟用的對象是原生編譯預存程序，則收集的工作者時間單位為毫秒。 若查詢的執行時間少於一毫秒，其值將會是 0。 如果原生編譯預存程序執行數次的時間都少於 1 毫秒， **total_worker_time** 可能就不準確。  
+ 
   
  下列查詢會在收集統計資料之後傳回目前資料庫中原生編譯預存程序的程序名稱和執行統計資料：  
   
@@ -99,7 +115,9 @@ where  st.dbid=db_id() and st.objectid in (select object_id
 from sys.sql_modules where uses_native_compilation=1)  
 order by qs.total_worker_time desc  
 ```  
-  
+
+## <a name="query-execution-plans"></a>查詢執行計畫
+
  原生編譯預存程序支援 SHOWPLAN_XML (估計執行計畫)。 估計執行計畫可用來檢查查詢計劃，以找出任何的計劃錯誤問題。 計劃錯誤的常見原因包括：  
   
 -   在建立程序之前未先更新統計資料。  

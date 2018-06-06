@@ -1,32 +1,30 @@
 ---
-title: "RDS 程式碼的 Visual c + + 中的範例 |Microsoft 文件"
-ms.technology:
-- drivers
-ms.custom: 
+title: RDS 程式碼的 Visual c + + 中的範例 |Microsoft 文件
+ms.technology: connectivity
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.component: reference
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - Visual C++ RDS examples [ADO]
 - RDS samples [ADO], Visual C++
 ms.assetid: 380264da-e6bb-418c-b4af-3c22d35644b8
-caps.latest.revision: 
+caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 034f55413c65799f6f7a905a3857cbfa20ee14e9
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: bfb9b2699b70f2459aac022266b0e437a1291ce4
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="rds-code-examples-in-visual-c"></a>RDS Visual c + + 的程式碼範例
 使用下列程式碼範例以了解如何在 Microsoft Visual c + + 中撰寫時，使用 RDS 屬性。  

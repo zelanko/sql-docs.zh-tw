@@ -1,31 +1,28 @@
 ---
-title: "資料流和持續性 |Microsoft 文件"
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
+title: 資料流和持續性 |Microsoft 文件
+ms.prod: sql
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
-ms.custom: 
+ms.technology: connectivity
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - persisted streams [ADO]
 - streams [ADO], persistence
 ms.assetid: ad5bf52c-fd10-4cfa-bf7d-fcedcaa41eea
-caps.latest.revision: 
+caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 4a0a45a32086dc3befd19e720c8d600b6b43adde
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: eb0302de0cc9ac87c55ae0e6c8d44557b517d79d
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="streams-and-persistence"></a>資料流和持續性
 [資料錄集](../../../ado/reference/ado-api/recordset-object-ado.md)物件[儲存](../../../ado/reference/ado-api/save-method.md)方法存放區，或*持續發生*、**資料錄集**在檔案中，而[開啟](../../../ado/reference/ado-api/open-method-ado-recordset.md)方法還原**資料錄集**從該檔案。  

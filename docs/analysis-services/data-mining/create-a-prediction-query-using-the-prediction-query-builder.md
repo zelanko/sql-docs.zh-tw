@@ -1,34 +1,23 @@
 ---
-title: "建立預測查詢使用預測查詢產生器 |Microsoft 文件"
-ms.custom: 
-ms.date: 03/01/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
-helpviewer_keywords:
-- prediction queries [Analysis Services]
-- Mining Model Prediction [Analysis Services], prediction queries
-ms.assetid: e02836e5-dd8c-4c97-a078-840ae79d3660
-caps.latest.revision: 
-author: Minewiskan
+title: 建立預測查詢使用預測查詢產生器 |Microsoft 文件
+ms.date: 05/01/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: data-mining
+ms.topic: conceptual
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: af9277de8848136f2123b7acf476dbee80a92ce1
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 8a112efd8fdfe2b8108d2b6005028f10abf4a706
+ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="create-a-prediction-query-using-the-prediction-query-builder"></a>使用預測查詢產生器來建立預測查詢
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-您可以建立預測查詢，方法是當您在 BI Development Studio 中建立資料採礦方案時，或是在 SQL Server Management Studio 中以滑鼠右鍵按一下現有的採礦模型，然後選擇 [建立預測查詢] 選項。  
+  您可以建立預測查詢，方法是當您在 BI Development Studio 中建立資料採礦方案時，或是在 SQL Server Management Studio 中以滑鼠右鍵按一下現有的採礦模型，然後選擇 [建立預測查詢] 選項。  
   
  [預測查詢產生器] 有以下三個設計模式，您可以按一下左上角的圖示切換模式。  
   
@@ -95,7 +84,7 @@ ms.lasthandoff: 02/15/2018
   
     -   預測函數  
   
-8.  按一下 **[採礦模型預測]** 索引標籤之工具列上的第一個按鈕，然後選取 **[結果]**來執行查詢。  
+8.  按一下 **[採礦模型預測]** 索引標籤之工具列上的第一個按鈕，然後選取 **[結果]** 來執行查詢。  
   
 ## <a name="see-also"></a>另請參閱  
  [在資料採礦設計師中建立單一查詢](../../analysis-services/data-mining/create-a-singleton-query-in-the-data-mining-designer.md)   

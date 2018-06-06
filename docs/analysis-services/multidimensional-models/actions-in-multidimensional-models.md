@@ -1,36 +1,23 @@
 ---
-title: "多維度模型中的動作 |Microsoft 文件"
-ms.custom: 
-ms.date: 03/03/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
-helpviewer_keywords:
-- actions [Analysis Services], creating
-- report actions [Analysis Services]
-- drillthrough actions [Analysis Services]
-- cubes [Analysis Services], actions
-ms.assetid: b9fee2b9-05a5-4077-848d-d8457326dc27
-caps.latest.revision: 
-author: Minewiskan
+title: 多維度模型中的動作 |Microsoft 文件
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: multidimensional-models
+ms.topic: conceptual
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 6c68c3d8eba2ec1519c38a89c7a1b0b71f3be4e3
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 6ed03893bbf3f18137329fc1792ecd0b30a77a68
+ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="actions-in-multidimensional-models"></a>多維度模型中的動作
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-動作是使用者在所選取的 Cube 或部分 Cube 上所起始的作業。 這個作業可以使用所選取項目做為參數來啟動應用程式，或擷取關於所選取項目的資訊。 如需動作的詳細資訊，請參閱[動作 &#40;Analysis Services - 多維度資料&#41;](../../analysis-services/multidimensional-models/actions-analysis-services-multidimensional-data.md)。  
+  動作是使用者在所選取的 Cube 或部分 Cube 上所起始的作業。 這個作業可以使用所選取項目做為參數來啟動應用程式，或擷取關於所選取項目的資訊。 如需動作的詳細資訊，請參閱[動作 &#40;Analysis Services - 多維度資料&#41;](../../analysis-services/multidimensional-models/actions-analysis-services-multidimensional-data.md)。  
   
  使用 Cube 設計師的 [動作] 索引標籤來建立 Cube 的動作。 指定下列項目：  
   

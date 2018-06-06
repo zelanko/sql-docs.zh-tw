@@ -1,30 +1,30 @@
 ---
-title: "安裝 SMO |Microsoft 文件"
-ms.custom: 
+title: 安裝 SMO |Microsoft 文件
+ms.custom: ''
 ms.date: 08/06/2017
-ms.prod: sql-non-specified
-ms.reviewer: 
+ms.prod: sql
+ms.reviewer: ''
 ms.suite: sql
 ms.prod_service: database-engine
 ms.component: smo
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - installing SMO
 - SMO [SQL Server], installing
 - SQL Server Management Objects, installing
 ms.assetid: 140e9971-4940-4866-89b9-5cec938e2a16
-caps.latest.revision: 
+caps.latest.revision: 46
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 26438c3a9baea978aace0fc1383349f813e6c0d0
-ms.sourcegitcommit: cb2f9d4db45bef37c04064a9493ac2c1d60f2c22
+monikerRange: = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 125712a02b362a49902c9f1e2422414f059864ef
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/12/2018
+ms.lasthandoff: 05/03/2018
 ---
 #<a name="installing-smo"></a>安裝 SMO
 
@@ -39,7 +39,7 @@ ms.lasthandoff: 01/12/2018
 這是取代 SharedManagementObjects.msi，先前發行為每個版本的 SQL Server SQL Feature Pack 的一部分。 使用 SMO 應用程式應該改為使用 NuGet 套件更新，且將負責確保二進位檔案安裝與正在開發的應用程式。
 
 >>[!Important]
->>如所述上[檔案和版本號碼](files-and-version-numbers.md)] 頁面上，您不應該安裝 SMO 組件至 GAC。 如此一來可能會造成問題與其他也使用這些版本的 SMO 應用程式 (例如[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Management Studio)。
+>>如所述上[檔案和版本號碼](files-and-version-numbers.md) 頁面上，您不應該安裝 SMO 組件至 GAC。 如此一來可能會造成問題與其他也使用這些版本的 SMO 應用程式 (例如[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Management Studio)。
 
 ##<a name="installing-the-package"></a>安裝封裝
 

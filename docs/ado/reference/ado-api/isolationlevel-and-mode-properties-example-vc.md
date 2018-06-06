@@ -1,33 +1,32 @@
 ---
-title: "IsolationLevel 和模式屬性範例 （VC + +） |Microsoft 文件"
-ms.prod: sql-non-specified
+title: IsolationLevel 和模式屬性範例 （VC + +） |Microsoft 文件
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - Mode property [ADO], VC++ example
 - IsolationLevel property [ADO], VC++ example
 ms.assetid: 92ddec5d-e3dc-4e8e-997a-c5417cceab69
-caps.latest.revision: 
+caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: dfb9da4ee435ef3ebbf6980f6d9dfd9822c3450d
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
-ms.translationtype: MT
+ms.openlocfilehash: d0ddcb604ef9ccb1762e58af6ff9c384c26ef647
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="isolationlevel-and-mode-properties-example-vc"></a>IsolationLevel 和模式屬性範例 （VC + +）
 這個範例會使用[模式](../../../ado/reference/ado-api/mode-property-ado.md)屬性可開啟的獨佔連接，而[IsolationLevel](../../../ado/reference/ado-api/isolationlevel-property.md)屬性可開啟所執行的交易中的其他交易隔離。  

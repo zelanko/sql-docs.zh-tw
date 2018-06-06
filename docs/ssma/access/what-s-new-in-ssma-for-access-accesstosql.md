@@ -1,31 +1,28 @@
 ---
-title: "SSMA for Access(AccessToSQL) 中最新消息 |Microsoft 文件"
-ms.prod: sql-non-specified
+title: SSMA for Access(AccessToSQL) 中最新消息 |Microsoft 文件
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
 ms.component: ssma-access
-ms.custom: 
+ms.custom: ''
 ms.date: 03/01/2018
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- sql-ssma
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ssma
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: a24d3fc0-6911-4bfa-828a-197abf222e02
-caps.latest.revision: 
+caps.latest.revision: 37
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 487fa165ce29ae2ae2a7fffe4463e88fb45001c6
-ms.sourcegitcommit: 6a5b80cac78fe5c2d2567a391daa335f9b4b3637
+ms.openlocfilehash: cdd8f3f3898dcfd2f3233132ba7ecb4ea7861ab3
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/01/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="whats-new-in-ssma-for-access-accesstosql"></a>SSMA for Access (AccessToSQL) 中最新消息
 本主題列出 SSMA 存取每個版本中的變更。  
@@ -78,7 +75,7 @@ SSMA for Access v7.2 版本包含下列變更：
 - 改善的品質和轉換的度量根據客戶的意見反應目標的修正程式。
 - 遙測增強功能提供更好的資料點，來解決客戶問題，並改善 SSMA 的轉換比率。
 
-## <a name="ssma-v71"></a>SSMA v7.1
+## <a name="ssma-v71"></a>SSMA 7.1 版
 SSMA for Access 的 7.1 版發行版本包含下列變更：
 - 在 Windows 和 Linux CTP1 上的 SQL Server 2017 已移轉的支援的目標平台。 這項功能是 technical preview 中，並支援結構描述和資料移動到目標 SQL 伺服器。
 - SSMA 現在支援自動更新，以下載最新版本的 SSMA，如有的話。

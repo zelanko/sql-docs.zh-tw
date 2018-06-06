@@ -1,32 +1,29 @@
 ---
-title: "重新命名資料行 (Database Engine) | Microsoft Docs"
-ms.custom: 
+title: 重新命名資料行 (Database Engine) | Microsoft Docs
+ms.custom: ''
 ms.date: 08/03/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
-ms.component: tables
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- dbe-tables
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: table-view-index
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - columns [SQL Server], names
 - renaming columns
 - column names [SQL Server]
 ms.assetid: 7c71ec9f-0180-4398-b32a-4bfb7592e75d
-caps.latest.revision: 
+caps.latest.revision: 17
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: Active
-ms.openlocfilehash: 0bb8f1e02fa372e33174b2268584885808e25790
-ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 6f49a47ebfe4e529c11fc0d1b79d7eec5896f13f
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="rename-columns-database-engine"></a>重新命名資料行 (Database Engine)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -61,7 +58,7 @@ ms.lasthandoff: 02/23/2018
   
 #### <a name="to-rename-a-column-using-object-explorer"></a>若要使用物件總管來重新命名資料行  
   
-1.  在 **[物件總管]**中，連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的執行個體。  
+1.  在 **[物件總管]** 中，連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的執行個體。  
   
 2.  在物件總管中，以滑鼠右鍵按一下您想要重新命名資料行的資料表，然後選擇 [重新命名]。  
   
@@ -71,19 +68,19 @@ ms.lasthandoff: 02/23/2018
   
 1.  在物件總管中，以滑鼠右鍵按一下您想要重新命名資料行的資料表，然後選擇 [設計]。  
   
-2.  在 **[資料行名稱]**下，選取您要變更的名稱，並輸入新名稱。  
+2.  在 **[資料行名稱]** 下，選取您要變更的名稱，並輸入新名稱。  
   
 3.  在 [檔案]  功能表上，按一下 [儲存 <資料表名稱>]。  
   
 > [!NOTE]  
->  您也可以在 **[資料行屬性]** 索引標籤中變更資料行的名稱。請選取您要變更名稱的資料行，並輸入新的 **[名稱]**值。  
+>  您也可以在 **[資料行屬性]** 索引標籤中變更資料行的名稱。請選取您要變更名稱的資料行，並輸入新的 **[名稱]** 值。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
  **若要重新命名資料行**  
   
 #### <a name="to-rename-a-column"></a>重新命名資料行  
   
-1.  在 **[物件總管]**中，連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的執行個體。  
+1.  在 **[物件總管]** 中，連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的執行個體。  
   
 2.  在標準列上，按一下 **[新增查詢]**。  
   

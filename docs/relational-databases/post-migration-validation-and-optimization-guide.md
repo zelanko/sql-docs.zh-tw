@@ -1,31 +1,29 @@
 ---
-title: "移轉後驗證和最佳化指南 | Microsoft Docs"
-ms.custom: 
+title: 移轉後驗證和最佳化指南 | Microsoft Docs
+ms.custom: ''
 ms.date: 5/03/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
 ms.component: relational-databases-misc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - post-migration validation and optimization
 - guide, post-migration validation and optimization
 ms.assetid: 11f8017e-5bc3-4bab-8060-c16282cfbac1
-caps.latest.revision: 
+caps.latest.revision: 3
 author: pelopes
 ms.author: harinid
-manager: 
-ms.workload: Inactive
-ms.openlocfilehash: 3264cab532c77a8e27daff0a3c5c1bd5ed801818
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+manager: ''
+ms.openlocfilehash: 72d3f28c6cc0e2998004b8b4883fdb846e2a92e2
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="post-migration-validation-and-optimization-guide"></a>移轉後驗證和最佳化指南
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

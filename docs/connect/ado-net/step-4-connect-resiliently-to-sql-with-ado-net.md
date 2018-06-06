@@ -1,28 +1,27 @@
 ---
-title: "步驟 4： 彈性地連接到 SQL 搭配 ADO.NET |Microsoft 文件"
-ms.custom: 
+title: 步驟 4： 彈性地連接到 SQL 搭配 ADO.NET |Microsoft 文件
+ms.custom: ''
 ms.date: 08/08/2017
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
+ms.prod: sql
+ms.prod_service: connectivity
 ms.component: ado-net
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
-ms.topic: article
-dev_langs: CSharp
+ms.technology: connectivity
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
+dev_langs:
+- CSharp
 ms.assetid: 9b608b0b-6b38-42da-bb83-79df8c170cd7
-caps.latest.revision: "9"
+caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
-ms.workload: Inactive
-ms.openlocfilehash: 4c95f481bdd001ff85a63db9ebcc1c4438008447
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+manager: craigg
+ms.openlocfilehash: 2f9b36f5ddf9fdf70f11580154150d008bfca436
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="step-4-connect-resiliently-to-sql-with-adonet"></a>步驟 4： 彈性地連接到使用 ADO.NET 的 SQL
 
@@ -274,7 +273,7 @@ ms.lasthandoff: 11/18/2017
 此程式碼範例包含：  
   
 - 小型的第二個類別，名為**TestSqlException**，屬性名為**數目**。  
-- `//throw new TestSqlException(4060);`其中您可以取消註解。  
+- `//throw new TestSqlException(4060);` 其中您可以取消註解。  
   
 如果您取消註解 throw 陳述式，並重新編譯，在下次執行的**RetryAdo2.exe**會輸出類似下列的項目。  
   

@@ -1,33 +1,30 @@
 ---
-title: "SQLGetConnectOption 對應 |Microsoft 文件"
-ms.custom: 
+title: SQLGetConnectOption 對應 |Microsoft 文件
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
-ms.component: odbc
-ms.reviewer: 
+ms.prod: sql
+ms.prod_service: connectivity
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: connectivity
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - mapping deprecated functions [ODBC], SQLGetConnectOption
 - SQLGetConnectOption function [ODBC], mapping
 ms.assetid: e3792fe4-a955-473a-a297-c1b2403660c4
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
-ms.workload: Inactive
-ms.openlocfilehash: faf67d9649911122b0b3fc19905c50e94af684ab
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+manager: craigg
+ms.openlocfilehash: 9ec36a536732299337efde3cf58cc98fbf4c46e0
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sqlgetconnectoption-mapping"></a>SQLGetConnectOption 對應
-當應用程式呼叫**SQLGetConnectOption**透過 ODBC 3*.x*驅動程式，會呼叫  
+當應用程式呼叫**SQLGetConnectOption**透過 ODBC 3 *.x*驅動程式，會呼叫  
   
 ```  
 SQLGetConnectOption(hdbc, fOption, pvParam)   
@@ -57,4 +54,4 @@ SQLGetConnectOption(hdbc, fOption, pvParam)
   
  針對 ODBC 定義的字串連接選項，設定驅動程式管理員*Columnsize*引數在呼叫**SQLGetConnectAttr**預先定義的最大長度 (SQL_MAX_OPTION_STRING_LENGTH);將非字串的連接選項，如*Columnsize*設為 0。  
   
- ODBC 3*.x*驅動程式，驅動程式管理員不會再檢查，看看是否*選項*之間 SQL_CONN_OPT_MIN 和 SQL_CONN_OPT_MAX，或大於 SQL_CONNECT_OPT_DRVR_START。 驅動程式必須檢查的選項值的有效性。
+ ODBC 3 *.x*驅動程式，驅動程式管理員不會再檢查，看看是否*選項*之間 SQL_CONN_OPT_MIN 和 SQL_CONN_OPT_MAX，或大於 SQL_CONNECT_OPT_DRVR_START。 驅動程式必須檢查的選項值的有效性。

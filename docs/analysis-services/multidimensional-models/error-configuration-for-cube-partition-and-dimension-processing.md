@@ -1,35 +1,23 @@
 ---
-title: "Cube、 分割區和維度處理的錯誤組態 |Microsoft 文件"
-ms.custom: 
-ms.date: 03/07/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords:
-- sql13.asvs.sqlserverstudio.cubeproperties.errorconfiguration.f1
-- sql13.asvs.sqlserverstudio.partitionproperties.errorconfiguration.f1
-- sql13.asvs.sqlserverstudio.dimensionproperties.errorconfiguration.f1
-ms.assetid: 3f442645-790d-4dc8-b60a-709c98022aae
-caps.latest.revision: 
-author: Minewiskan
+title: Cube、 分割區和維度處理的錯誤組態 |Microsoft 文件
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: multidimensional-models
+ms.topic: conceptual
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 9dcbefced6fd34dd5fa69537733d7820b0130f4d
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 57ad330c44f378dd71cad1e02f3a5b3e6c63f38f
+ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="error-configuration-for-cube-partition-and-dimension-processing"></a>Cube、 分割區和維度處理的錯誤組態
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-Cube、資料分割或維度物件的錯誤組態屬性決定了在處理期間發生資料完整性錯誤時，伺服器的回應方式。 索引鍵重複、遺漏索引鍵和索引鍵資料行有 Null 值通常會觸發這類錯誤，而造成錯誤的記錄並不會加入至資料庫，您便可設定屬性以決定接下來將發生什麼情況。 依預設，處理作業會停止。 不過，在開發 Cube 期間，您可能希望錯誤發生時仍繼續進行處理，好讓您能夠使用匯入的資料測試 Cube 行為，就算未完全匯入也無妨。  
+  Cube、資料分割或維度物件的錯誤組態屬性決定了在處理期間發生資料完整性錯誤時，伺服器的回應方式。 索引鍵重複、遺漏索引鍵和索引鍵資料行有 Null 值通常會觸發這類錯誤，而造成錯誤的記錄並不會加入至資料庫，您便可設定屬性以決定接下來將發生什麼情況。 依預設，處理作業會停止。 不過，在開發 Cube 期間，您可能希望錯誤發生時仍繼續進行處理，好讓您能夠使用匯入的資料測試 Cube 行為，就算未完全匯入也無妨。  
   
  本主題包含下列各節：  
   
@@ -118,7 +106,7 @@ Cube、資料分割或維度物件的錯誤組態屬性決定了在處理期間�
   
 #### <a name="sql-server-data-tools"></a>SQL Server Data Tools  
   
-1.  在 [方案總管] 中，按兩下任何維度或 Cube。 下方窗格中的 [屬性] 內隨即出現**[ErrorConfiguration]** 。  
+1.  在 [方案總管] 中，按兩下任何維度或 Cube。 下方窗格中的 [屬性] 內隨即出現 **[ErrorConfiguration]** 。  
   
 2.  或者，如果只有單一維度，則在方案總管中以滑鼠右鍵按一下該維度，然後選擇 [處理]，再從 [處理維度] 對話方塊中選擇 [變更設定]。 [維度索引鍵錯誤] 索引標籤上隨即出現錯誤組態選項。  
   
@@ -127,7 +115,7 @@ Cube、資料分割或維度物件的錯誤組態屬性決定了在處理期間�
   
  當事實資料表中的記錄包含外部索引鍵值，但是該外部索引鍵在相關維度資料表中沒有對應的記錄時，伺服器將於資料分割處理期間產生 **KeyNotFound** 錯誤。 在處理相關維度或雪花維度資料表時，若某一維度的記錄所指定的外部索引鍵不存在於相關維度中，可能也會發生此錯誤。  
   
- 一旦發生 **KeyNotFound** 錯誤，便會將違規的記錄配置為未知的成員。 此行為是透過 **[索引鍵錯誤動作]**設為 **ConvertToUnknown**來控制，因此您可以檢視配置的記錄做進一步調查。  
+ 一旦發生 **KeyNotFound** 錯誤，便會將違規的記錄配置為未知的成員。 此行為是透過 **[索引鍵錯誤動作]** 設為 **ConvertToUnknown**來控制，因此您可以檢視配置的記錄做進一步調查。  
   
 ##  <a name="bkmk_nullfact"></a> 事實資料表中的 Null 外部索引鍵 (KeyNotFound)  
  依預設，事實資料表的外部索引鍵資料行中的 Null 值會轉換成零。 顯然零不是有效的外部索引鍵值，所以系統會記錄 **KeyNotFound** 錯誤並將其計數算入預設為零的錯誤限制。  

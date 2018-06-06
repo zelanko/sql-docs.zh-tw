@@ -1,32 +1,20 @@
 ---
-title: "= （等於） (MDX) |Microsoft 文件"
-ms.custom: 
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: language-reference
-f1_keywords: =
-dev_langs: kbMDX
-helpviewer_keywords:
-- equals operator (=)
-- = (equals operator)
-ms.assetid: 5e1f3b58-a646-4fc1-a3f1-19090a5437b7
-caps.latest.revision: "36"
-author: Minewiskan
+title: = （等於） (MDX) |Microsoft 文件
+ms.date: 05/30/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: mdx
+ms.topic: reference
 ms.author: owend
-manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: 51df250577d539c48acb55e26e9906cf1d5a15d4
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: bb609b1a3bcfe08d0720aef70e584049080be148
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34578170"
 ---
 # <a name="-equal-to-mdx"></a>=  (等於) (MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -34,7 +22,7 @@ ms.lasthandoff: 01/08/2018
   執行比對作業，判定某個多維度運算式 (MDX) 運算式的值是否等於另一個 MDX 運算式的值。  
   
 > [!NOTE]  
->  若要比較的物件，使用[IS &#40;MDX &#41;](../mdx/is-mdx.md)運算子。 例如，當您正在檢查查詢軸上的目前成員是否為特定成員時，請使用 IS 運算子。  
+>  若要比較的物件，使用[IS &#40;MDX&#41; ](../mdx/is-mdx.md)運算子。 例如，當您正在檢查查詢軸上的目前成員是否為特定成員時，請使用 IS 運算子。  
   
 ## <a name="syntax"></a>語法  
   
@@ -87,7 +75,7 @@ MDX_Expression = MDX_Expression
   
  `From [Adventure Works]`  
   
-## <a name="see-also"></a>請參閱  
- [MDX 運算子參考 &#40;MDX &#41;](../mdx/mdx-operator-reference-mdx.md)  
+## <a name="see-also"></a>另請參閱  
+ [MDX 運算子參考&#40;MDX&#41;](../mdx/mdx-operator-reference-mdx.md)  
   
   

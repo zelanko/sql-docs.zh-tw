@@ -1,36 +1,23 @@
 ---
-title: "資料來源中產生非時間資料表來建立維度 |Microsoft 文件"
-ms.custom: 
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
-helpviewer_keywords:
-- data sources [Analysis Services], dimensions without data source
-- dimensions [Analysis Services], standard
-- dimensions [Analysis Services], creating without data source
-- standard dimensions [Analysis Services]
-ms.assetid: a37f7a46-7451-4582-ba19-2595196d97bc
-caps.latest.revision: 
-author: Minewiskan
+title: 資料來源中產生非時間資料表來建立維度 |Microsoft 文件
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: multidimensional-models
+ms.topic: conceptual
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: dda2fe632e3a4cae0f36d766d4778f5ff910d649
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 0f9f84131307282b00fd99c1d5770ac352e31713
+ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="create-a-dimension-by-generating-a-non-time-table-in-the-data-source"></a>在資料來源中產生非時間資料表來建立維度
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 中，您可以使用 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 中的 [維度精靈] 建立維度，而不需使用現有的資料來源。 方法是，選取精靈之 [選取建立方法] 頁面的 [在資料來源中產生非時間資料表] 選項。 若要在基礎資料來源中建立新的維度資料表，您必須擁有在基礎資料來源中建立物件的權限。 在沒有預先定義之資料來源檢視的情況下定義維度時，可以從頭開始定義維度或使用維度範本。  
+  在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 中，您可以使用 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 中的 [維度精靈] 建立維度，而不需使用現有的資料來源。 方法是，選取精靈之 [選取建立方法] 頁面的 [在資料來源中產生非時間資料表] 選項。 若要在基礎資料來源中建立新的維度資料表，您必須擁有在基礎資料來源中建立物件的權限。 在沒有預先定義之資料來源檢視的情況下定義維度時，可以從頭開始定義維度或使用維度範本。  
   
  「維度精靈」提供了一些維度範本範例，讓您可以建立常見的維度類型。 您可以從以下維度類型中選擇：  
   

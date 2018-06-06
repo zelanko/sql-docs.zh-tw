@@ -1,28 +1,26 @@
 ---
-title: "建立系統建立版本的時態表 | Microsoft Docs"
-ms.custom: 
+title: 建立系統建立版本的時態表 | Microsoft Docs
+ms.custom: ''
 ms.date: 05/24/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
-ms.component: tables
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- dbe-tables
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: table-view-index
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: 21e6d74f-711f-40e6-a8b7-85f832c5d4b3
-caps.latest.revision: 
+caps.latest.revision: 20
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: d9980d3617c66d3d000af32cfbe4c50b957bcc24
-ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 03077d7ede10d42b4d4812ce6ef93a35dd295a22
+ms.sourcegitcommit: b5ab9f3a55800b0ccd7e16997f4cd6184b4995f9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 05/23/2018
+ms.locfileid: "34455551"
 ---
 # <a name="creating-a-system-versioned-temporal-table"></a>建立系統建立版本的時態表
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -187,7 +185,7 @@ ALTER TABLE InsurancePolicy
   
 -   加入時段時，系統會執行目前資料表的資料一致性檢查，以確定時段資料行的預設值為有效。  
   
--   在啟用 **SYSTEM_VERSIONING**時指定現有的記錄資料表，系統會對目前的資料表和記錄資料表執行資料一致性檢查。 如果您將 **DATA_CONISTENCY_CHECK = OFF** 指定為額外的參數，即可略過此檢查。  
+-   在啟用 **SYSTEM_VERSIONING**時指定現有的記錄資料表，系統會對目前的資料表和記錄資料表執行資料一致性檢查。 如果您將 **DATA_CONSISTENCY_CHECK = OFF** 指定為額外的參數，即可略過此檢查。  
   
 ### <a name="migrate-existing-tables-to-built-in-support"></a>將現有的資料表移轉至內建支援  
  此範例說明如何根據觸發程序，將現有的方案移轉至內建的暫時支援。 在這個範例中，我們假設自訂方案會將目前資料和記錄資料分割成兩個不同的使用者資料表 (**ProjectTaskCurrent** 和 **ProjectTaskHistory**)。 如果您現有的方案使用單一資料表儲存實際資料列和記錄資料列，您就應該先將資料分割成兩個資料表，再執行本範例的移轉步驟︰  
@@ -215,9 +213,7 @@ ALTER TABLE ProjectTaskCurrent
   
 -   強烈建議您將 **SYSTEM_VERSIONING** 設為 **DATA_CONSISTENCY_CHECK = ON** ，以強制執行現有資料的資料一致性檢查。  
   
-## <a name="did-this-article-help-you-were-listening"></a>這篇文章對您有幫助嗎？ 我們會持續聽取您的意見  
- 您要尋找哪些資訊？找到了嗎？ 我們會持續聽取您的意見來改進內容。 請將您的意見傳送到 [sqlfeedback@microsoft.com](mailto:sqlfeedback@microsoft.com?subject=Your%20feedback%20about%20the%20Creating%20a%20System-Versioned%20Temporal%20Table%20page)  
-  
+ 
 ## <a name="see-also"></a>另請參閱  
  [時態表](../../relational-databases/tables/temporal-tables.md)   
  [開始使用系統建立版本的時態表](../../relational-databases/tables/getting-started-with-system-versioned-temporal-tables.md)   

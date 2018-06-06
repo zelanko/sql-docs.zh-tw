@@ -1,32 +1,29 @@
 ---
-title: "在 Visual Basic 中的 ADO 程式碼範例 |Microsoft 文件"
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
+title: 在 Visual Basic 中的 ADO 程式碼範例 |Microsoft 文件
+ms.prod: sql
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
-ms.custom: 
+ms.technology: connectivity
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 dev_langs:
 - VB
 helpviewer_keywords:
 - ADO code examples, Visual Basic
 ms.assetid: 1152893e-b617-40f1-88b6-81e82e2234f1
-caps.latest.revision: 
+caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 490b15408b3fc1864ac3f953e71f98aa27e9bd79
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 44bbaccea787e3afb3a4fbef9f0d6c1d8e110483
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ado-code-examples-in-visual-basic"></a>在 Visual Basic 中的 ADO 程式碼範例
 若要了解如何使用 ADO 方法、 屬性和事件時寫入在 Visual Basic 中使用下列程式碼範例。  

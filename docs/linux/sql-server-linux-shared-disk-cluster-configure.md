@@ -1,25 +1,22 @@
 ---
-title: "設定容錯移轉叢集執行個體的 SQL Server 上 Linux (RHEL) |Microsoft 文件"
-description: 
+title: 設定容錯移轉叢集執行個體的 SQL Server 上 Linux (RHEL) |Microsoft 文件
+description: ''
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.date: 08/28/2017
 ms.topic: article
-ms.prod: sql-non-specified
-ms.prod_service: database-engine
-ms.service: 
-ms.component: 
+ms.prod: sql
+ms.component: ''
 ms.suite: sql
 ms.custom: sql-linux
-ms.technology: database-engine
+ms.technology: linux
 ms.assetid: 31c8c92e-12fe-4728-9b95-4bc028250d85
-ms.workload: Inactive
-ms.openlocfilehash: 26ccd4389bd02f659110c0fe3ac2cd8b23b240db
-ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
+ms.openlocfilehash: 2550c2d53f50f2c5647ed0ab61d4d73e586495e2
+ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/13/2018
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="configure-failover-cluster-instance---sql-server-on-linux-rhel"></a>設定容錯移轉叢集執行個體的 SQL Server 上 Linux (RHEL)
 

@@ -1,30 +1,28 @@
 ---
-title: "專案設定 （轉換） (SybaseToSQL) |Microsoft 文件"
-ms.custom: 
+title: 專案設定 （轉換） (SybaseToSQL) |Microsoft 文件
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
 ms.component: ssma-sybase
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ssma
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: eeb80fa5-f530-4f21-beee-25f5a4b8ace6
-caps.latest.revision: "8"
+caps.latest.revision: 8
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
-ms.workload: Inactive
-ms.openlocfilehash: 64845d9450c412ca975d541f1171a725271ec502
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+manager: craigg
+ms.openlocfilehash: 4903ec6923239b76784d1aef94303860582b8b85
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="project-settings-conversion-sybasetosql"></a>專案設定 （轉換） (SybaseToSQL)
 [轉換] 頁面的**專案設定**對話方塊包含自訂 SSMA 如何轉換 Sybase Adaptive Server Enterprise (ASE) 語法來設定[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或 SQL Azure 的語法。  
@@ -39,7 +37,7 @@ ms.lasthandoff: 12/21/2017
 **@@ERROR**  
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]/ SQL Azure 和 ASE 使用不同的錯誤碼。  
   
-使用此設定可指定 SSMA 在遇到的參考時，要顯示 [輸出] 或 [錯誤清單] 窗格中的訊息 （警告或錯誤） 的型別**@@ERROR**  ASE 程式碼中。  
+使用此設定可指定 SSMA 在遇到的參考時，要顯示 [輸出] 或 [錯誤清單] 窗格中的訊息 （警告或錯誤） 的型別 **@@ERROR**  ASE 程式碼中。  
   
 -   如果您選取**轉換，以警告標記**，SSMA 會將轉換的陳述式，並將它們標示的警告註解。  
   
@@ -271,7 +269,7 @@ ms.lasthandoff: 12/21/2017
 **預設/Optimistic/完整模式：**錯誤標記  
   
 **RAISERROR 基底的訊息編號**  
-ASE 使用者訊息會儲存在每個資料庫。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]集中儲存及可透過使用者訊息**sys.messages**目錄檢視。 此外 ASE 使用者訊息開始 20000，但[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]開始 50001 的錯誤訊息。  
+ASE 使用者訊息會儲存在每個資料庫。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 集中儲存及可透過使用者訊息**sys.messages**目錄檢視。 此外 ASE 使用者訊息開始 20000，但[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]開始 50001 的錯誤訊息。  
   
 此設定指定要加入至將它轉換成 ASE 使用者訊息編號的數字[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]使用者訊息。 如果您[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]中有使用者訊息**sys.messages**目錄檢視中，您可能必須將這個數字變更為較高的值。 這是讓轉換後的訊息數字未與現有的訊息編號衝突。  
   
@@ -334,7 +332,7 @@ ASE 使用者訊息會儲存在每個資料庫。 [!INCLUDE[ssNoVersion](../../i
 **完整模式：**取代函式  
   
 **DATALENGTH 函數**  
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]/ SQL Azure 和 ASE 的單一空格的值時，DATALENGTH 函數所傳回的值不同。 在此情況下， [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]/ SQL Azure 會傳回 0 和 ASE 傳回 1。  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] / SQL Azure 和 ASE 的單一空格的值時，DATALENGTH 函數所傳回的值不同。 在此情況下， [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]/ SQL Azure 會傳回 0 和 ASE 傳回 1。  
   
 -   若要使用 ASE 行為，請選取**取代函式**。 為了模擬 Sybase ASE 行為的 CASE 運算式會替換 DATALENGTH 函數的所有呼叫。  
   
@@ -454,6 +452,6 @@ REPLICATE 函數會重複指定次數的字串。 在 ASE，如果您指定重�
 > [!NOTE]  
 > 當連接到 SQL Azure 時，預設為 True。  
   
-## <a name="see-also"></a>請參閱  
-[使用者介面參考 &#40;SybaseToSQL &#41;](../../ssma/sybase/user-interface-reference-sybasetosql.md)  
+## <a name="see-also"></a>另請參閱  
+[使用者介面參考&#40;SybaseToSQL&#41;](../../ssma/sybase/user-interface-reference-sybasetosql.md)  
   

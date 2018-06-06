@@ -1,16 +1,15 @@
 ---
-title: "在 XQuery 中的搜尋的字串 |Microsoft 文件"
-ms.custom: 
+title: 在 XQuery 中的搜尋的字串 |Microsoft 文件
+ms.custom: ''
 ms.date: 03/04/2017
-ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
-ms.service: 
+ms.prod: sql
+ms.prod_service: sql
 ms.component: xquery
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -22,16 +21,15 @@ helpviewer_keywords:
 - searches [SQL Server], XML documents
 - XQuery, string search
 ms.assetid: edc62024-4c4c-4970-b5fa-2e54a5aca631
-caps.latest.revision: 
+caps.latest.revision: 23
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 44b938d202d61eb576bf520707b1b1db1fd283e8
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: cdd490ca34a1fa95a341da7665031659ffd099b6
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="string-search-in-xquery"></a>XQuery 中的字串搜尋
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -53,7 +51,7 @@ FROM Production.ProductModel
 WHERE ProductModelID=19  
 ```  
   
- 在上述查詢中，`where`中，FLOWR 運算式會篩選的結果`for`運算式並傳回唯一的項目滿足**contains （)**條件。  
+ 在上述查詢中，`where`中，FLOWR 運算式會篩選的結果`for`運算式並傳回唯一的項目滿足**contains （)** 條件。  
   
  以下是結果：  
   

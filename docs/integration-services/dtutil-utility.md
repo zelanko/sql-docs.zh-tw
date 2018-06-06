@@ -1,17 +1,16 @@
 ---
-title: "dtutil 公用程式 | Microsoft Docs"
-ms.custom: 
+title: dtutil 公用程式 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
 ms.component: non-specific
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - verifying packages
 - checking packages
@@ -28,16 +27,15 @@ helpviewer_keywords:
 - removing packages
 - relocating packages
 ms.assetid: 6c7975ff-acec-4e6e-82e5-a641e3a98afe
-caps.latest.revision: 
+caps.latest.revision: 114
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 5fcb9ddbd493f259341026d07a1867add85169e1
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: a3978535dd221b4df0534b1e559d688d14741168
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="dtutil-utility"></a>Encrypt
   **dtutil** 命令提示字元公用程式可用來管理 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 封裝。 這個公用程式可以複製、移動、刪除封裝，或確認封裝是否存在。 下列三個位置所儲存的任何 [!INCLUDE[ssIS](../includes/ssis-md.md)] 封裝都可以執行這些動作： [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 資料庫、 [!INCLUDE[ssIS](../includes/ssis-md.md)] 封裝存放區和檔案系統。 如果公用程式存取存放在 **msdb**中的封裝，則命令提示字元可能會需要使用者名稱和密碼。 如果 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的執行個體使用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 驗證，則命令提示字元需要使用者名稱和密碼。 如果遺漏使用者名稱， **dtutil** 會嘗試使用 Windows 驗證登入 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 。 封裝的儲存類型是由 **/SQL**、 **/FILE**和 **/DTS** 等選項來識別。  
@@ -117,7 +115,7 @@ dtutil /option [value] [/option [value]]...
 |/Si[gn] {*SQL* &#124; *File* &#124; *DTS*}; *path*; *hash*|簽署 [!INCLUDE[ssIS](../includes/ssis-md.md)] 封裝。 這個動作需要使用三個以分號分隔的引數 (目的地、路徑及雜湊)：<br /><br /> 目的地引數可指定 *SQL*、 *FILE*或 *DTS*。 SQL 目的地可包含 *DESTUSER*、 *DESTPASSWORD* 和 *DESTSERVER* 選項。<br /><br /> path 引數指定要處理之封裝的位置。<br /><br /> hash 引數指定用可變長度十六進位字串來表示的憑證識別碼。<br /><br /> 如需詳細資訊，請參閱 [使用數位簽章來識別封裝的來源](../integration-services/security/identify-the-source-of-packages-with-digital-signatures.md)。<br /><br /> <br /><br /> **\*\* 重要事項 \*\*** 當 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 設定為檢查封裝的簽章時，將只會檢查數位簽章是否存在、是否有效，以及是否來自信任的來源。 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]「不會」檢查套件是否經過變更。|  
 |/SourceP[assword] *password*|指定 *SQL* 和 *SOURCEUSER* 選項使用的密碼，以擷取儲存在 [!INCLUDE[ssIS](../includes/ssis-md.md)] 執行個體上之資料庫中的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 驗證的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 執行個體時，所使用的密碼。 在不含 *SOURCEUSER* 選項的命令列上指定 **SOURCEPASSWORD** 是錯的。<br /><br /> 注意： [!INCLUDE[ssNoteWinAuthentication](../includes/ssnotewinauthentication-md.md)]|  
 |/SourceS[erver] *server_instance*|指定與 **SQL** 選項一起使用的伺服器名稱，以擷取 [!INCLUDE[ssIS](../includes/ssis-md.md)] 中所儲存之 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]。 在不含與 *SOURCESERVER* 、 *SIGN SQL*、 *COPY* *SQL*或 *MOVE* *SQL* 選項來指定封裝的位置。<br /><br /> 您可以在伺服器名稱中加入反斜線和執行個體名稱來指定 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 執行個體的名稱。|  
-|/SourceU[ser] *username*|指定與 *SOURCESERVER* 選項一起使用的伺服器名稱，以擷取 [!INCLUDE[ssIS](../includes/ssis-md.md)] 驗證之 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 中的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 執行個體時，所使用的密碼。 在不含 *SOURCEUSER* 、 *SIGN SQL*或 *COPY SQL*選項的命令列上指定 *MOVE SQL* 是錯的。<br /><br /> 注意： [!INCLUDE[ssNoteWinAuthentication](../includes/ssnotewinauthentication-md.md)]|  
+|/SourceU[ser] *username*|指定與 *SOURCESERVER* 選項一起使用的伺服器名稱，以擷取 [!INCLUDE[ssIS](../includes/ssis-md.md)] 驗證之 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 中的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 執行個體時，所使用的密碼。 在不含 *SOURCEUSER* 、 *SIGN SQL*或 *COPY SQL*選項的命令列上指定 *MOVE SQL* 是錯的。<br /><br /> 注意：[!INCLUDE[ssNoteWinAuthentication](../includes/ssnotewinauthentication-md.md)]|  
 |/SQ[L] *package_path*|指定 [!INCLUDE[ssIS](../includes/ssis-md.md)] 封裝的位置。 這個選項指出封裝儲存在 **msdb** 資料庫中。 *package_path* 引數指定 [!INCLUDE[ssIS](../includes/ssis-md.md)] 封裝的路徑和名稱。 資料夾名稱以反斜線做為結尾。<br /><br /> 如果在下列任何選項的相同命令列中指定 *SQL* 選項，就會傳回 DTEXEC_DTEXECERROR：<br /><br /> *DTS*<br /><br /> *FILE*<br /><br /> *SQL* 選項可附帶下列選項中的零個或一個執行個體：<br /><br /> *SOURCEUSER*<br /><br /> *SOURCEPASSWORD*<br /><br /> *SOURCESERVER*<br /><br /> <br /><br /> 如果未加入 *SOURCEUSERNAME* ，將會使用 Windows 驗證存取封裝。 只有在*SOURCEPASSWORD* 存在時，才允許使用 *SOURCEUSER* 。 如果不包含 *SOURCEPASSWORD* ，則使用空白密碼。<br /><br /> **\*\* 重要事項 \*\*** [!INCLUDE[ssNoteStrongPass](../includes/ssnotestrongpass-md.md)]|  
   
 ## <a name="dtutil-exit-codes"></a>dtutil 結束碼  

@@ -1,16 +1,15 @@
 ---
-title: "MSdistribution_agents (TRANSACT-SQL) |Microsoft 文件"
-ms.custom: 
+title: MSdistribution_agents (TRANSACT-SQL) |Microsoft 文件
+ms.custom: ''
 ms.date: 10/28/2015
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
 ms.component: system-tables
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -22,26 +21,25 @@ dev_langs:
 helpviewer_keywords:
 - MSdistribution_agents system table
 ms.assetid: 0e8f0653-1351-41d1-95d2-40f6d5a050ca
-caps.latest.revision: 
+caps.latest.revision: 30
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: f71cc1c79f36dcc14980ce4a04b1079fba6a8ee9
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 63d202dceb9f5b8c96edf47e2105d21b478969d6
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="msdistributionagents-transact-sql"></a>MSdistribution_agents (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   **MSdistribution_agents**資料表包含一個資料列在本機散發者端執行每個散發代理程式。 這份資料表儲存在散發資料庫中。  
   
-|資料行名稱|資料類型|描述|  
+|資料行名稱|資料類型|Description|  
 |-----------------|---------------|-----------------|  
 |**id**|**int**|散發代理程式的識別碼。|  
-|**name**|**nvarchar （100)**|散發代理程式的名稱。|  
+|**name**|**nvarchar(100)**|散發代理程式的名稱。|  
 |**publisher_database_id**|**int**|發行者資料庫的識別碼。|  
 |**publisher_id**|**smallint**|發行者的識別碼。|  
 |**publisher_db**|**sysname**|發行者資料庫的名稱。|  
@@ -50,9 +48,9 @@ ms.lasthandoff: 11/21/2017
 |**subscriber_db**|**sysname**|訂閱資料庫的名稱。|  
 |**subscription_type**|**int**|訂閱的類型：<br /><br /> **0** = 發送。<br /><br /> **1** = 提取。<br /><br /> **2** = 匿名。|  
 |**local_job**|**bit**|指出本機散發者上是否有 SQL Server Agent 作業。|  
-|**job_id**|**binary （16)**|作業識別碼。|  
-|**subscription_guid**|**binary （16)**|這個代理程式的訂閱識別碼。|  
-|**profile_id**|**int**|設定識別碼，從[MSagent_profiles &#40;TRANSACT-SQL &#41;](../../relational-databases/system-tables/msagent-profiles-transact-sql.md)資料表。|  
+|**job_id**|**binary(16)**|作業識別碼。|  
+|**subscription_guid**|**binary(16)**|這個代理程式的訂閱識別碼。|  
+|**profile_id**|**int**|設定識別碼，從[MSagent_profiles &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-tables/msagent-profiles-transact-sql.md)資料表。|  
 |**anonymous_subid**|**uniqueidentifier**|匿名代理程式的識別碼。|  
 |**subscriber_name**|**sysname**|訂閱者的名稱，只供匿名代理程式使用。|  
 |**virtual_agent_id**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
@@ -75,7 +73,7 @@ ms.lasthandoff: 11/21/2017
 |**subscriptionstreams**|**tinyint**|設定每個散發代理程式將數批變更並行套用在訂閱者時所能使用的連接數目。 支援的值範圍是 1-64。|  
 |**memory_optimized**|**bit**|1 表示 「 訂閱者 」 可用於記憶體最佳化的資料表。|  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [複寫資料表 &#40;Transact-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)  
   
   

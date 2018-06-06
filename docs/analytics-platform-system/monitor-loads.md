@@ -1,28 +1,23 @@
 ---
-title: "監視負載 Parallel Data Warehouse"
-author: barbkess
-ms.author: barbkess
-manager: jhubbard
-ms.prod: analytics-platform-system
-ms.prod_service: mpp-data-warehouse
-ms.service: 
-ms.component: 
-ms.suite: sql
-ms.custom: 
-ms.technology: mpp-data-warehouse
-description: "您可以監視使用中和最近[dwloader](dwloader.md)載入使用 Analytics Platform System (APS) 管理主控台或 Parallel Data Warehouse (PDW) 系統檢視表。"
-ms.date: 10/20/2016
-ms.topic: article
-ms.assetid: c0c55c16-00bc-4676-8970-a8e10b3e9408
-caps.latest.revision: "6"
-ms.openlocfilehash: 988c34b248b0058941f53575a79e4f3b6acb4de0
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+title: 監視平行資料倉儲載入 |Microsoft 文件
+description: 監視使用中和最近載入使用分析平台 System (APS) 系統管理員主控台或平行資料倉儲 (PDW) 系統檢視表。 」
+author: mzaman1
+manager: craigg
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
+ms.openlocfilehash: 8980259b69dfa74c2bb27c9406553a5b5810348a
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34585670"
 ---
-# <a name="monitor-loads"></a>監視載入
-您可以監視使用中和最近[dwloader](dwloader.md)藉由使用 Analytics Platform System (APS) 管理主控台或 Parallel Data Warehouse (PDW) 載入[系統檢視表](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-reference-tsql-system-views/)。 
+# <a name="monitor-loads-into-parallel-data-warehouse"></a>監視載入 Parallel Data Warehouse
+監視使用中和最近[dwloader](dwloader.md)藉由使用 Analytics Platform System (APS) 管理主控台或 Parallel Data Warehouse (PDW) 載入[系統檢視表](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-reference-tsql-system-views/)。 
   
 > [!TIP]  
 > 使用 INSERT 陳述式或使用 SQL 陳述式來執行載入的商業智慧工具不會起始部分載入。 
@@ -31,7 +26,7 @@ ms.lasthandoff: 12/21/2017
 To monitor this type of load, see [Monitoring Active Queries](monitor-active-queries.md).  
 -->
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>必要條件  
 不論用來監視負載的方法，登入必須擁有存取基礎資料來源的權限。 
 
 <!-- MISSING LINKS
@@ -54,7 +49,7 @@ For the permissions to grant, see “Use All of the Admin Console” in [Grant P
   
 -   [sys.dm_pdw_exec_requests](../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-requests-transact-sql.md)  
   
--   [sys.pdw_loader_run_stages](https://msdn.microsoft.com/library/mt203879.aspx.md)  
+-   [sys.pdw_loader_run_stages](https://msdn.microsoft.com/library/mt203879.aspx)  
   
 -   [sys.pdw_loader_backup_runs](../relational-databases/system-catalog-views/sys-pdw-loader-backup-runs-transact-sql.md)  
   

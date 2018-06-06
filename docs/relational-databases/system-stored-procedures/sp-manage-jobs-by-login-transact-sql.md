@@ -1,16 +1,14 @@
 ---
-title: "sp_manage_jobs_by_login (TRANSACT-SQL) |Microsoft 文件"
-ms.custom: 
+title: sp_manage_jobs_by_login (TRANSACT-SQL) |Microsoft 文件
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: system-objects
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_manage_jobs_by_login
@@ -20,16 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_manage_jobs_by_login
 ms.assetid: 832ec15a-6e92-4eb5-8c4a-af4dba79fbaa
-caps.latest.revision: 
+caps.latest.revision: 27
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 2575a298f71475452dffe05b75adeaf41ac8f2fa
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 59f79ac7f0dfa72be2f63d0c3e711969f92ea93d
+ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="spmanagejobsbylogin-transact-sql"></a>sp_manage_jobs_by_login (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,7 +46,7 @@ sp_manage_jobs_by_login
 ```  
   
 ## <a name="arguments"></a>引數  
- [ **@action=** ] **'***action***'**  
+ [  **@action=** ] **'***動作***'**  
  針對指定登入所採取的動作。 *動作*是**varchar （10)**，沒有預設值。 當*動作*是**刪除**， **sp_manage_jobs_by_login**刪除所擁有的所有工作*current_owner_login_name*。 當*動作*是**重新指派**，所有作業都會都指派給*new_owner_login_name*。  
   
  [ **@current_owner_login_name=** ] **'***current_owner_login_name***'**  
@@ -82,7 +79,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [sp_delete_job &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-job-transact-sql.md)   
+ [sp_delete_job &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-job-transact-sql.md)   
  [系統預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

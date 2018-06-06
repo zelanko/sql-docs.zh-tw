@@ -1,16 +1,14 @@
 ---
-title: sys.fulltext_document_types (Transact-SQL) | Microsoft Docs
-ms.custom: 
+title: sys.fulltext_document_types (TRANSACT-SQL) |Microsoft 文件
+ms.custom: ''
 ms.date: 06/10/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
 ms.component: system-catalog-views
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: system-objects
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.fulltext_document_types_TSQL
@@ -22,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - sys.fulltext_document_types catalog view
 ms.assetid: 156fcfa4-7304-4a5c-b96f-1c3e061e5df0
-caps.latest.revision: 
+caps.latest.revision: 19
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 26a1729aac9094d0b0f150d64772229d7f89c20a
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 12ffa574d72bd2ee901015f5714eeb228524579c
+ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="sysfulltextdocumenttypes-transact-sql"></a>sys.fulltext_document_types (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -41,7 +39,7 @@ ms.lasthandoff: 02/03/2018
  
 |資料行名稱|資料類型|Description|  
 |-----------------|---------------|-----------------|  
-|**document_type**|**sysname**|支援之文件類型的副檔名。<br /><br /> 這個值可以用來識別將會用於全文檢索索引類型的資料行的篩選**varbinary （max)**或**映像**。|  
+|**document_type**|**sysname**|支援之文件類型的副檔名。<br /><br /> 這個值可以用來識別將會用於全文檢索索引類型的資料行的篩選**varbinary （max)** 或**映像**。|  
 |**class_id**|**uniqueidentifier**|支援副檔名之 IFilter 類別的 GUID。|  
 |**path**|**nvarchar(260)**|通往 IFilter DLL 的路徑。 路徑，只會顯示的成員**serveradmin**固定的伺服器角色。|  
 |**version**|**sysname**|IFilter DLL 的版本。|  

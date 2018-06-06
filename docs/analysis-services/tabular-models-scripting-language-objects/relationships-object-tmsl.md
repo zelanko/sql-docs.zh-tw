@@ -1,30 +1,23 @@
 ---
-title: "關聯性物件 (TMSL) |Microsoft 文件"
-ms.custom: 
-ms.date: 05/30/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services, azure-analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+title: 關聯性物件 (TMSL) |Microsoft 文件
+ms.date: 05/07/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: tmsl
 ms.topic: reference
-ms.assetid: 7588565f-ea34-4402-8be9-331188bdb8c2
-caps.latest.revision: "7"
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: c41594e9e4ef5776a4e170ba3d9895d5799e9bd7
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: fdfe3bbbfa966fe1ef1002897a7d2e6f76131842
+ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="relationships-object-tmsl"></a>關聯性物件 (TMSL)
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]定義來源和目標資料表，能夠指定基數，以及查詢和安全性篩選方向之間的關聯性。  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
+  定義來源和目標資料表，能夠指定基數，以及查詢和安全性篩選方向之間的關聯性。  
   
 ## <a name="object-definition"></a>物件定義  
  所有物件都具有一組常用的屬性，包括名稱、 類型、 描述、 屬性集合，以及註解。 **關聯性**物件也有下列屬性。  
@@ -59,11 +52,11 @@ ms.lasthandoff: 01/08/2018
 -   BothDirections (2)-關聯性任一端點篩選器會自動篩選另一個資料表。  
   
 ## <a name="usage"></a>使用方式  
- 關聯性物件中使用[Alter 命令 &#40;TMSL &#41;](../../analysis-services/tabular-models-scripting-language-commands/alter-command-tmsl.md)，[建立命令 &#40;TMSL &#41;](../../analysis-services/tabular-models-scripting-language-commands/create-command-tmsl.md)， [CreateOrReplace 命令 &#40;TMSL &#41;](../../analysis-services/tabular-models-scripting-language-commands/createorreplace-command-tmsl.md)，和[刪除命令 &#40;TMSL &#41;](../../analysis-services/tabular-models-scripting-language-commands/delete-command-tmsl.md).  
+ 關聯性物件中使用[Alter 命令&#40;TMSL&#41;](../../analysis-services/tabular-models-scripting-language-commands/alter-command-tmsl.md)，[建立命令&#40;TMSL&#41;](../../analysis-services/tabular-models-scripting-language-commands/create-command-tmsl.md)， [CreateOrReplace 命令&#40;TMSL&#41;](../../analysis-services/tabular-models-scripting-language-commands/createorreplace-command-tmsl.md)，和[Delete 命令&#40;TMSL&#41;](../../analysis-services/tabular-models-scripting-language-commands/delete-command-tmsl.md)。  
   
  建立時，取代或改變關聯性的物件，指定物件定義的所有讀寫屬性。 省略的讀 / 寫屬性會被視為刪除。  
   
-## <a name="full-syntax"></a>完整的語法  
+## <a name="full-syntax"></a>完整語法  
  以下是關聯性物件的結構描述表示法。  
   
 ```  
@@ -168,7 +161,7 @@ ms.lasthandoff: 01/08/2018
         }  
 ```  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [表格式模型指令碼語言 &#40;TMSL&#41; 參考](../../analysis-services/tabular-model-scripting-language-tmsl-reference.md)   
  [建立關聯性](../../integration-services/data-flow/transformations/create-relationships.md)  
   

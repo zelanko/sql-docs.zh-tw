@@ -1,36 +1,28 @@
 ---
-title: "Introduction to 中分析表格式物件模型 (TOM) 服務 AMO |Microsoft 文件"
-ms.custom: 
-ms.date: 03/07/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services, azure-analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+title: 了解表格式物件模型 (TOM) 中 Analysis Services AMO |Microsoft 文件
+ms.date: 05/08/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: tabular-models
 ms.topic: reference
-ms.assetid: 57a4a934-ecd0-4365-8147-d36899d86751
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 7efb5e145bbc4b481f73624a4c0d08d9698dc24c
-ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
+ms.openlocfilehash: 9a075f78694727d723b70bd0ffcb7c23d10210f1
+ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/10/2018
 ---
-# <a name="introduction-to-the-tabular-object-model-tom-in-analysis-services-amo"></a>Analysis Services AMO 中表格式物件模型 (TOM) 簡介
+# <a name="understanding-tabular-object-model-tom-in-analysis-services-amo"></a>了解 Analysis Services AMO 中的表格式物件模型 (TOM)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
-表格式物件模型 (TOM) 是 Analysis Services 管理物件 (AMO) 用戶端程式庫，以支援建置在相容性層級 1200年 （含） 以上的表格式模型程式設計案例建立擴充功能。 如同 AMO，TOM 提供程式設計的方式來處理管理功能，例如建立模型、 匯入和重新整理資料，及指派角色和權限。  
+  表格式物件模型 (TOM) 是 Analysis Services 管理物件 (AMO) 用戶端程式庫，以支援建置在相容性層級 1200年 （含） 以上的表格式模型程式設計案例建立擴充功能。 如同 AMO，TOM 提供程式設計的方式來處理管理功能，例如建立模型、 匯入和重新整理資料，及指派角色和權限。  
   
 TOM 公開原生的表格式中繼資料，例如**模型**，**資料表**，**資料行**，和**關聯性**物件。  物件模型樹狀結構，以下提供的概要說明之元件部分的關聯方式。  
   
  因為 TOM 是 AMO 的延伸，表示 SQL Server 2016 中引進新的表格式物件的所有類別會都實作新的 Microsoft.AnalysisServices.Tabular.dll 組件。 一般用途的 AMO 類別已移至 Microsoft.AnalysisServices.Core 組件。 您的程式碼必須參考兩個組件。
-請參閱[安裝、 散佈及參考表格式物件模型 &#40;Microsoft.AnalysisServices.Tabular &#41;](../../analysis-services/tabular-model-programming-compatibility-level-1200/install-distribute-and-reference-the-tabular-object-model.md)如需詳細資訊。  
+請參閱[安裝、 散佈及參考表格式物件模型&#40;Microsoft.AnalysisServices.Tabular&#41; ](../../analysis-services/tabular-model-programming-compatibility-level-1200/install-distribute-and-reference-the-tabular-object-model.md)如需詳細資訊。  
   
  目前應用程式開發介面透過.NET framework 是僅適用於 managed 程式碼。 若要檢閱的完整清單程式設計選項，包括指令碼和查詢語言支援，請參閱[的相容性層級 1200年的表格式模型程式設計](../../analysis-services/tabular-model-programming-compatibility-level-1200/tabular-model-programming-for-compatibility-level-1200.md)。  
   
@@ -50,7 +42,7 @@ TOM 建置 AMO 基礎結構，也適用於多維度和相容性層級低於 1200
 這會有一些實際影響。
 第一個是 all，當您管理表格式中繼資料中未指定的物件時 (例如**伺服器**或**資料庫**)，您必須利用現有的 AMO 堆疊的說明這些物件的組件。 舊版的 API 會提供更細微的說明，當作探索到的伺服器，或是儲存到伺服器時，物件狀態的主要和次要物件的概念。 Microsoft.AnalysisServices 命名空間之下的 MajorObject 類別公開的方法**重新整理**和**更新**。 次要物件是唯一的重新整理或儲存的主要物件透過包含它們。
 
-相反地，當您管理屬於表格式中繼資料的物件 (例如**模型**或**資料表**)，您可以利用全新的表格式堆疊。 在此堆疊，更新是更細緻，這表示每個中繼資料物件 (衍生自**MetadataObject** Microsoft.AnalysisServices.Tabular 命名空間之下的類別) 可以個別儲存到伺服器。 一般而言，您會發現整個**模型**，然後針對個別的中繼資料物件，其下進行變更 (例如**資料表**或**資料行**)，然後呼叫**Model.SaveChanges()**方法 （了解更細緻的層級，您所做的變更），將命令傳送至伺服器，以更新這些變更的物件。
+相反地，當您管理屬於表格式中繼資料的物件 (例如**模型**或**資料表**)，您可以利用全新的表格式堆疊。 在此堆疊，更新是更細緻，這表示每個中繼資料物件 (衍生自**MetadataObject** Microsoft.AnalysisServices.Tabular 命名空間之下的類別) 可以個別儲存到伺服器。 一般而言，您會發現整個**模型**，然後針對個別的中繼資料物件，其下進行變更 (例如**資料表**或**資料行**)，然後呼叫**Model.SaveChanges()** 方法 （了解更細緻的層級，您所做的變更），將命令傳送至伺服器，以更新這些變更的物件。
 
 ### <a name="tom-and-xmla"></a>TOM 和 XMLA
 

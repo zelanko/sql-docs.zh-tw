@@ -1,30 +1,25 @@
 ---
 title: MSSQLSERVER_4104 | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 04/04/2017
-ms.prod: sql-non-specified
-ms.prod_service: database-engine
-ms.service: 
-ms.component: errors-events
-ms.reviewer: 
+ms.prod: sql
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: supportability
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 helpviewer_keywords:
 - 4104 (Database Engine error)
 ms.assetid: 52dc32d8-97ad-4ef0-834d-2e68f215d007
-caps.latest.revision: 
-author: edmacauley
-ms.author: edmaca
+caps.latest.revision: 16
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 0c0cdcfd3336eef5d120c9c73c57f8d744cc70a5
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: c9e17f25fd71fe94f53c2cbd3afe20d62a9c348f
+ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="mssqlserver4104"></a>MSSQLSERVER_4104
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -33,7 +28,7 @@ ms.lasthandoff: 11/21/2017
   
 |||  
 |-|-|  
-|產品名稱|SQL Server|  
+|產品名稱|[SQL Server]|  
 |事件識別碼|4104|  
 |事件來源|MSSQLSERVER|  
 |元件|SQLEngine|  
@@ -41,7 +36,7 @@ ms.lasthandoff: 11/21/2017
 |訊息文字|無法繫結多重部分 (Multi-Part) 識別碼 "%.*ls"。|  
   
 ## <a name="explanation"></a>說明  
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中實體的名稱也稱為*「識別碼」*(Identifier)。 每當參考實體 (例如在查詢中指定資料行和資料表名稱) 時，您就可以使用識別碼。 多重部分識別碼包含一個或多個限定詞，當做識別碼的前置詞。 例如，資料表識別碼的前置詞可能是包含此資料表之資料庫名稱和結構描述等限定詞，或者資料行識別碼的前置詞可能是資料表名稱或資料表別名等限定詞。  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中實體的名稱也稱為 *「識別碼」*(Identifier)。 每當參考實體 (例如在查詢中指定資料行和資料表名稱) 時，您就可以使用識別碼。 多重部分識別碼包含一個或多個限定詞，當做識別碼的前置詞。 例如，資料表識別碼的前置詞可能是包含此資料表之資料庫名稱和結構描述等限定詞，或者資料行識別碼的前置詞可能是資料表名稱或資料表別名等限定詞。  
   
 錯誤 4104 表示指定的多重部分識別碼無法對應至現有的實體。 這項錯誤可能會在下列情況下傳回：  
   
@@ -121,7 +116,7 @@ ms.lasthandoff: 11/21/2017
     SELECT 'X' FROM TableA, TableB WHERE TableB.KeyCol = TableA.KeyCol;  
     ```  
   
-    或  
+    中的多個  
   
     ```  
     SELECT 'X' FROM TableA INNER JOIN TableB ON TableB.KeyCol = TableA.KeyCol;  

@@ -1,48 +1,46 @@
 ---
-title: "xml 資料類型支援在 SQLXML 4.0 |Microsoft 文件"
-ms.custom: 
+title: xml 資料類型支援在 SQLXML 4.0 |Microsoft 文件
+ms.custom: ''
 ms.date: 03/17/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
 ms.component: sqlxml
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- dbe-xml
-ms.tgt_pltfrm: 
+ms.technology: xml
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - SQLXML, xml data type support
 - xml data type [SQL Server], SQLXML
 ms.assetid: 9a6f5ad8-4a8f-4de7-ac17-81d5ccf78459
-caps.latest.revision: 
+caps.latest.revision: 17
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: dfdb6b2fba95fc3e723122e9402e70caede522b1
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 68cb00ced8f77b5921be07a3f6383d4436f0bade
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="xml-data-type-support-in-sqlxml-40"></a>xml 資料類型在 SQLXML 4.0 中的支援
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-開頭為[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]支援 XML 輸入資料使用**xml**資料型別。 本主題提供有關 SQLXML 4.0 如何識別的執行個體的資訊**xml**資料型別，而且會實作其支援的。  
+  開頭為[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]支援 XML 輸入資料使用**xml**資料型別。 本主題提供有關 SQLXML 4.0 如何識別的執行個體的資訊**xml**資料型別，而且會實作其支援的。  
   
 ## <a name="working-with-xml-data-types"></a>使用 xml 資料類型  
  若要了解更多有關如何使用可實作 SQL 資料表**xml**資料類型資料行，提供下列的範例：  
   
 |工作|範例|主題|  
 |----------|-------------|-----------|  
-|如何對應與包含**xml** XML 檢視中的資料行|「將 XML 元素對應至 XML 資料類型資料行」|[XSD 元素和屬性對資料表和資料行 &#40; 的預設對應SQLXML 4.0 &#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-using/default-mapping-of-xsd-elements-and-attributes-to-tables-and-columns-sqlxml-4-0.md)|  
-|如何將資料插入至**xml** updategram 的資料行|「將資料插入至 XML 資料類型資料行」|[使用 XML Updategram &#40; 插入資料SQLXML 4.0 &#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/updategrams/inserting-data-using-xml-updategrams-sqlxml-4-0.md)|  
-|大量載入 XML 資料轉換成**xml**資料行|「大量載入到 xml 資料類型資料行」|[XML 大量載入範例 &#40;SQLXML 4.0 &#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/bulk-load-xml/xml-bulk-load-examples-sqlxml-4-0.md)|  
+|如何對應與包含**xml** XML 檢視中的資料行|「將 XML 元素對應至 XML 資料類型資料行」|[XSD 元素和屬性對資料表和資料行的預設對應&#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-using/default-mapping-of-xsd-elements-and-attributes-to-tables-and-columns-sqlxml-4-0.md)|  
+|如何將資料插入至**xml** updategram 的資料行|「將資料插入至 XML 資料類型資料行」|[使用 XML Updategram 插入資料&#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/updategrams/inserting-data-using-xml-updategrams-sqlxml-4-0.md)|  
+|大量載入 XML 資料轉換成**xml**資料行|「大量載入到 xml 資料類型資料行」|[XML 大量載入範例 & #40;SQLXML 4.0 & #41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/bulk-load-xml/xml-bulk-load-examples-sqlxml-4-0.md)|  
   
 ## <a name="guidelines-and-limitations"></a>指導方針與限制  
   
--   **\<xsd： 任何 >**無法對應至資料行，包括**xml**資料型別。 這種情況下透過提供的 SQLXML 中支援**sql: overflow-field-欄位**註解。 另一個解決方法是將對應**xml**做為項目資料類型欄位**具有 xsd: anytype**。 此因應措施會在上述資料表中參考之「將 XML 元素對應至 XML 資料類型資料行」範例中示範。  
+-   **\<xsd： 任何 >** 無法對應至資料行，包括**xml**資料型別。 這種情況下透過提供的 SQLXML 中支援**sql: overflow-field-欄位**註解。 另一個解決方法是將對應**xml**做為項目資料類型欄位**具有 xsd: anytype**。 此因應措施會在上述資料表中參考之「將 XML 元素對應至 XML 資料類型資料行」範例中示範。  
   
 -   XPath 查詢的內容**xml**不支援資料類型資料行。  
   

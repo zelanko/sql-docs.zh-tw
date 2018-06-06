@@ -1,27 +1,24 @@
 ---
-title: "在 ODBC 中的 SQL 資料類型 |Microsoft 文件"
-ms.custom: 
+title: 在 ODBC 中的 SQL 資料類型 |Microsoft 文件
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
-ms.component: odbc
-ms.reviewer: 
+ms.prod: sql
+ms.prod_service: connectivity
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: connectivity
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: a833a725-3c27-4d6b-9f6a-8c2e6e3e2920
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
-ms.workload: Inactive
-ms.openlocfilehash: a807389f7bd53f8bbf864fcbe4203e41ad8f7828
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+manager: craigg
+ms.openlocfilehash: 4621d5c2e5b45a8898d278726eee6fc85bca140d
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sql-data-types-in-odbc"></a>在 ODBC 中的 SQL 資料類型
 SQL 資料類型為資料儲存在資料來源中的類型。  

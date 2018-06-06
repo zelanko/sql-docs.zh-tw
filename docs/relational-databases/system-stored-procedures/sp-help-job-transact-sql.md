@@ -1,16 +1,14 @@
 ---
-title: "sp_help_job (TRANSACT-SQL) |Microsoft 文件"
-ms.custom: 
+title: sp_help_job (TRANSACT-SQL) |Microsoft 文件
+ms.custom: ''
 ms.date: 08/02/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: system-objects
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_help_job_TSQL
@@ -20,16 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_help_job
 ms.assetid: 8a8b6104-e0e4-4d07-a2c3-f4243ee0d6fa
-caps.latest.revision: 
+caps.latest.revision: 27
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 9d91594f032409dbe2597dd859a549c17b795e04
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: f60875014b4fe03833947bfed87ab42a23c79e32
+ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="sphelpjob-transact-sql"></a>sp_help_job (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -66,7 +63,7 @@ sp_help_job { [ @job_id = ] job_id
  作業的名稱。 *job_name*是**sysname**，預設值是 NULL。  
   
 > [!NOTE]  
->  任一*job_id*或*job_name*必須指定，但不可同時指定兩者。  
+>  若要檢視特定工作，可能是*job_id*或*job_name*必須指定。  省略兩者*job_id*和*job_name*傳回所有工作的相關資訊。
   
  [ **@job_aspect =**] **'***job_aspect***'**  
  要顯示的作業屬性。 *job_aspect*是**varchar(9)**，預設值是 NULL，而且可以是下列值之一。  
@@ -75,7 +72,7 @@ sp_help_job { [ @job_id = ] job_id
 |-----------|-----------------|  
 |**ALL**|作業各方面的資訊|  
 |**JOB**|作業資訊|  
-|**SCHEDULES**|排程資訊|  
+|**排程**|排程資訊|  
 |**STEPS**|作業步驟資訊|  
 |**目標**|目標資訊|  
   
@@ -91,10 +88,10 @@ sp_help_job { [ @job_id = ] job_id
  [ **@category_name =**] **'***category***'**  
  類別目錄的名稱。 *類別*是**sysname**，預設值是 NULL。  
   
- [ **@enabled =**] *enabled*  
+ [  **@enabled =**]*啟用*  
  這是一個數字，指出所顯示的資訊是關於已啟用或停用之作業。 *啟用*是**tinyint**，預設值是 NULL。 **1**表示已啟用的工作和**0**表示已停用的作業。  
   
- [ **@execution_status =**] *status*  
+ [  **@execution_status =**]*狀態*  
  作業的執行狀態。 *狀態*是**int**，預設值是 NULL，而且可以是下列值之一。  
   
 |Value|描述|  
@@ -135,7 +132,7 @@ sp_help_job { [ @job_id = ] job_id
 |**start_step_id**|**int**|應該作為執行起點的作業步驟識別碼。|  
 |**category**|**sysname**|作業類別目錄。|  
 |**擁有者**|**sysname**|作業擁有者。|  
-|**notify_level_eventlog**|**int**|**位元遮罩**指出在哪些情況之下通知事件應該在 Microsoft Windows 應用程式記錄檔記錄。 它可以是下列值之一：<br /><br /> **0** = Never<br /><br /> **1** = 當作業成功時<br /><br /> **2** = 當作業失敗<br /><br /> **3** = 每當作業完成 （不論作業結果）|  
+|**notify_level_eventlog**|**int**|**位元遮罩**指出在哪些情況之下通知事件應該在 Microsoft Windows 應用程式記錄檔記錄。 它可以是下列值之一：<br /><br /> **0** = 永不<br /><br /> **1** = 當作業成功時<br /><br /> **2** = 當作業失敗<br /><br /> **3** = 每當作業完成 （不論作業結果）|  
 |**notify_level_email**|**int**|**位元遮罩**指出在哪些情況之下的通知電子郵件應該傳送作業完成時。 可能的值為一樣**notify_level_eventlog**。|  
 |**notify_level_netsend**|**int**|**位元遮罩**指出在哪些情況之下網路訊息應該傳送作業完成時。 可能的值為一樣**notify_level_eventlog**。|  
 |**notify_level_page**|**int**|**位元遮罩**指出在哪些情況之下一個頁面應該在作業完成時。 可能的值為一樣**notify_level_eventlog**。|  
@@ -197,11 +194,11 @@ sp_help_job { [ @job_id = ] job_id
 |**schedule_id**|**int**|排程的識別碼 (跨越所有作業而為唯一)。|  
 |**schedule_name**|**sysname**|排程的名稱 (只對這項作業而為唯一)。|  
 |**enabled**|**int**|排程是否為作用中 (**1**) 與否 (**0**)。|  
-|**freq_type**|**int**|指出作業執行時間的值：<br /><br /> **1** = Once<br /><br /> **4** = 每天<br /><br /> **8** = 每週<br /><br /> **16** = 每月<br /><br /> **32** = 每月，相對於**freq_interval**<br /><br /> **64** = 時執行**SQLServerAgent**服務啟動。|  
-|**freq_interval**|**int**|執行作業的天數。 值取決於值**freq_type**。 如需詳細資訊，請參閱[sp_add_schedule &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md)|  
-|**freq_subday_type**|**整數**|單位**freq_subday_interval**。 如需詳細資訊，請參閱[sp_add_schedule &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md)|  
-|**freq_subday_interval**|**int**|數目**freq_subday_type**期間每次執行作業之間發生。 如需詳細資訊，請參閱[sp_add_schedule &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md)|  
-|**freq_relative_interval**|**int**|排程作業的次數**freq_interval**中每個月。 如需詳細資訊，請參閱[sp_add_schedule &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md)|  
+|**freq_type**|**int**|指出作業執行時間的值：<br /><br /> **1** = 一次<br /><br /> **4** = 每天<br /><br /> **8** = 每週<br /><br /> **16** = 每月<br /><br /> **32** = 每月，相對於**freq_interval**<br /><br /> **64** = 時執行**SQLServerAgent**服務啟動。|  
+|**freq_interval**|**int**|執行作業的天數。 值取決於值**freq_type**。 如需詳細資訊，請參閱[sp_add_schedule &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md)|  
+|**freq_subday_type**|**整數**|單位**freq_subday_interval**。 如需詳細資訊，請參閱[sp_add_schedule &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md)|  
+|**freq_subday_interval**|**int**|數目**freq_subday_type**期間每次執行作業之間發生。 如需詳細資訊，請參閱[sp_add_schedule &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md)|  
+|**freq_relative_interval**|**int**|排程作業的次數**freq_interval**中每個月。 如需詳細資訊，請參閱[sp_add_schedule &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md)|  
 |**freq_recurrence_factor**|**int**|排程執行作業的間隔月數。|  
 |**active_start_date**|**int**|開始執行作業的日期。|  
 |**active_end_date**|**int**|停止執行作業的日期。|  
@@ -284,8 +281,8 @@ GO
   
 ## <a name="see-also"></a>另請參閱  
  [sp_add_job &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-job-transact-sql.md)   
- [sp_delete_job &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-job-transact-sql.md)   
- [sp_update_job &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-update-job-transact-sql.md)   
+ [sp_delete_job &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-job-transact-sql.md)   
+ [sp_update_job &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-update-job-transact-sql.md)   
  [系統預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

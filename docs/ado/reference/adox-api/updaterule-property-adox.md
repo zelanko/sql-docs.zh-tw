@@ -1,17 +1,15 @@
 ---
-title: "UpdateRule 屬性 (ADOX) |Microsoft 文件"
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
+title: UpdateRule 屬性 (ADOX) |Microsoft 文件
+ms.prod: sql
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
-ms.custom: 
+ms.technology: connectivity
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 apitype: COM
 f1_keywords:
 - _Key::GetUpdateRule
@@ -22,16 +20,15 @@ f1_keywords:
 helpviewer_keywords:
 - UpdateRule property [ADOX]
 ms.assetid: f4e21060-40cb-4790-8611-4086a092dda2
-caps.latest.revision: 
+caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 90e7ae8092a82c778abe0e698bd2350af31c9fca
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: c4ff1ee3ac7e7513ccd67368b2ee3b2c9defcf2b
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="updaterule-property-adox"></a>UpdateRule 屬性 (ADOX)
 表示執行的動作，當主要[金鑰](../../../ado/reference/adox-api/key-object-adox.md)會更新。  

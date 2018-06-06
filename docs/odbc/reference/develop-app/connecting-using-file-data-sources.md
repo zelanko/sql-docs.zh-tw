@@ -1,16 +1,14 @@
 ---
-title: "使用檔案資料來源連接 |Microsoft 文件"
-ms.custom: 
+title: 使用檔案資料來源連接 |Microsoft 文件
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
-ms.component: odbc
-ms.reviewer: 
+ms.prod: sql
+ms.prod_service: connectivity
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: connectivity
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - connecting to driver [ODBC], file data sources
 - SQLDriverConnect function [ODBC], connecting using file data sources
@@ -19,16 +17,15 @@ helpviewer_keywords:
 - connecting to data source [ODBC], file data sources
 - file data sources [ODBC]
 ms.assetid: 3003f8c2-8be6-41cc-8d9c-612e9bd0f3ae
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
-ms.workload: On Demand
-ms.openlocfilehash: d64a08cc8e748efe984c8aa5acd7deac743c2ed3
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+manager: craigg
+ms.openlocfilehash: e9e8fa3bbc90af4dc17d1dfc7e161fcab0177db7
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="connecting-using-file-data-sources"></a>使用檔案資料來源連接
 檔案資料來源的連接資訊儲存在.dsn 檔案。 如此一來，連接字串可以重複使用由單一使用者，或如果他們已安裝適當的驅動程式，在數個使用者之間共用。 檔案包含驅動程式名稱 （或在自檔案資料來源的情況下的另一個資料來源名稱） 與 （選擇性） 的連接字串，可供**SQLDriverConnect**。 驅動程式管理員建置連接字串呼叫**SQLDriverConnect**從.dsn 檔案中的關鍵字。  
@@ -59,5 +56,5 @@ DSN = MyDataSource
   
  用於檔案資料來源的連接字串是.dsn 檔案中指定的關鍵字和連接字串，在呼叫中指定關鍵字的等位**SQLDriverConnect**。 如果任何.dsn 檔案中的關鍵字衝突與連接字串中的關鍵字，驅動程式管理員會決定要使用的關鍵字值。 如需詳細資訊，請參閱[SQLDriverConnect](../../../odbc/reference/syntax/sqldriverconnect-function.md)。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [http://support.microsoft.com/kb/165866](http://support.microsoft.com/kb/165866)

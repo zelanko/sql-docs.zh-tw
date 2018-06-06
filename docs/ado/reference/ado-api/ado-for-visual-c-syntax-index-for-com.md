@@ -1,17 +1,15 @@
 ---
-title: "Visual c + + 語法索引 com ADO |Microsoft 文件"
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
+title: Visual c + + 語法索引 com ADO |Microsoft 文件
+ms.prod: sql
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
-ms.custom: 
+ms.technology: connectivity
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 apitype: COM
 dev_langs:
 - C++
@@ -19,21 +17,20 @@ helpviewer_keywords:
 - ADO for Visual C++ syntax [ADO]
 - syntax indexes [ADO], ADO for Visual C++ syntax
 ms.assetid: d02b199e-1e52-4cc9-b118-750952ae7f63
-caps.latest.revision: 
+caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 081d81654e6898496e81b809b9c4925020630181
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: b0db41cef5c6eb47c28f2eb8dd14a683153c3ecd
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ado-for-visual-c-syntax-index-for-com"></a>Visual c + + 語法索引 com ADO
 此索引是根據 Microsoft Visual c + + ADO 語言參考的交互參照。  
   
- 如果您使用**#import**指示詞在應用程式中，標頭檔將會產生可讓您使用 Microsoft Visual Basic 中以類似的語法。 屬性的名稱格式 **get_ * * * PropertyName*和 **put_ * * * PropertyName*可以視為就像是已宣告為*PropertyName*。 屬性可以被視為資料成員，而不是函式。  
+ 如果您使用 **#import**指示詞在應用程式中，標頭檔將會產生可讓您使用 Microsoft Visual Basic 中以類似的語法。 屬性的名稱格式 **get_ * * * PropertyName*和 **put_ * * * PropertyName*可以視為就像是已宣告為*PropertyName*。 屬性可以被視為資料成員，而不是函式。  
   
  所有方法、 屬性和事件都是函式會傳回**HRESULT**，您可以測試會判斷如果成功地執行函式。  
   

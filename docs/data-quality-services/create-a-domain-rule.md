@@ -1,32 +1,34 @@
 ---
-title: "建立定義域規則 | Microsoft Docs"
-ms.custom: 
+title: 建立定義域規則 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/08/2011
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: data-quality-services
-ms.service: 
 ms.component: data-quality-services
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: data-quality-services
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- data-quality-services
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 f1_keywords:
 - sql13.dqs.dm.testdomainrule.f1
 - sql13.dqs.dm.rules.f1
 ms.assetid: 339fa10d-e22c-4468-b366-080c33f1a23f
-caps.latest.revision: "28"
+caps.latest.revision: 28
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.workload: Inactive
-ms.openlocfilehash: d5c7e6f027352d3d8fbd79304d6454340a438d9b
-ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
+manager: craigg
+ms.openlocfilehash: 3b1103a3528674c8541aa04569e0d63a17ddcefc
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="create-a-domain-rule"></a>建立定義域規則
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
   本主題描述如何在 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) 中建立定義域規則。 定義域規則是用來驗證、更正並標準化定義域值的條件。 定義域規則必須在定義域中成立，才能讓定義域值被視為正確且符合商務需求。 定義域規則所包含的驗證規則可用來驗證定義域值，但是無法用來更正資料品質專案中的資料。 此外，規則也包含針對有效資料套用以及用於資料更正的標準化規則。  
   
 ##  <a name="BeforeYouBegin"></a> 開始之前  
@@ -94,7 +96,7 @@ ms.lasthandoff: 01/19/2018
   
 ##  <a name="Apply"></a> 套用定義域規則  
   
-1.  按一下 **[套用所有規則]** ，將規則套用至定義域中的值。 當您按一下 **[套用所有規則]**之後，系統就會顯示一個快顯視窗，其中指出處於特定狀態的多少值將會受到此規則所影響。 如果您仍然想要套用規則，請按一下 **[是]** ，否則請按一下 **[否]** 。 如果您按一下 **[是]**，請按一下 **[確定]** 關閉結果快顯視窗。  
+1.  按一下 **[套用所有規則]** ，將規則套用至定義域中的值。 當您按一下 **[套用所有規則]** 之後，系統就會顯示一個快顯視窗，其中指出處於特定狀態的多少值將會受到此規則所影響。 如果您仍然想要套用規則，請按一下 **[是]** ，否則請按一下 **[否]** 。 如果您按一下 **[是]**，請按一下 **[確定]** 關閉結果快顯視窗。  
   
     > [!NOTE]  
     >  當您建立或變更規則時，不需要儲存變更。 不過，您必須套用規則，才能讓變更生效。  

@@ -1,27 +1,24 @@
 ---
-title: "updateNString 方法 （java.lang.String，java.lang.String） |Microsoft 文件"
-ms.custom: 
+title: updateNString 方法 （java.lang.String，java.lang.String） |Microsoft 文件
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
-ms.component: jdbc
-ms.reviewer: 
+ms.prod: sql
+ms.prod_service: connectivity
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: connectivity
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: 6daca03f-c60f-4842-b9e3-11d136e78312
-caps.latest.revision: "18"
+caps.latest.revision: 18
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
-ms.workload: Inactive
-ms.openlocfilehash: 0d4c0eac1b3c7e9ab77f5c005f5bbd7243e020cc
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+manager: craigg
+ms.openlocfilehash: 41c12f32b1b42153baa79543ca284872040763ba
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="updatenstring-method-javalangstring-javalangstring"></a>updateNString 方法 (java.lang.String, java.lang.String)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -53,8 +50,8 @@ public void updateNString(java.lang.String columnLabel,
   
  這個方法會傳遞 Java**字串**選取**nchar**， **nvarchar （max)**， **ntext**，和**xml**資料行。 在其他資料類型資料行上使用這個方法，將會擲回例外狀況。  
   
-## <a name="see-also"></a>請參閱＜  
- [updateNString 方法 &#40;SQLServerResultSet &#41;](../../../connect/jdbc/reference/updatenstring-method-sqlserverresultset.md)   
+## <a name="see-also"></a>另請參閱  
+ [updateNString 方法&#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/updatenstring-method-sqlserverresultset.md)   
  [SQLServerResultSet 成員](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
  [SQLServerResultSet 類別](../../../connect/jdbc/reference/sqlserverresultset-class.md)  
   

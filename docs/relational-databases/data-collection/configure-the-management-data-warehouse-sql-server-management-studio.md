@@ -1,17 +1,13 @@
 ---
-title: "設定管理資料倉儲 (SQL Server Management Studio) | Microsoft Docs"
-ms.custom: 
+title: 設定管理資料倉儲 (SQL Server Management Studio) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
-ms.prod_service: database-engine
-ms.service: 
-ms.component: data-collection
-ms.reviewer: 
+ms.prod: sql
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: supportability
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 f1_keywords:
 - sql13.swb.dc.datacollection.wizard_completecfg.f1
 - sql13.swb.dc.datacollection.wizard_config.f1
@@ -26,20 +22,19 @@ helpviewer_keywords:
 - Configure Management Data Warehouse Wizard
 - management data warehouse, configuring
 ms.assetid: 23a584f3-c5e1-414c-9afe-73cd7efbda4b
-caps.latest.revision: 
-author: stevestein
-ms.author: sstein
+caps.latest.revision: 28
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: da6483877cf2f69a3aa638f635366f91b9f7352a
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.openlocfilehash: 48225263d322b901baa87084b47bedaf36fcc601
+ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="configure-the-management-data-warehouse-sql-server-management-studio"></a>設定管理資料倉儲 (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-此主題描述如何設定管理資料倉儲，以支援使用資料收集器之一個或多個 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的資料儲存體。 這些執行個體可以在相同伺服器或不同伺服器上。 此主題也提供 [設定管理資料倉儲精靈](#Wizard) 對話方塊的使用者介面描述。 如需設定資料收集器的詳細資訊，請參閱＜ [Configure Properties of a Data Collector](../../relational-databases/data-collection/configure-properties-of-a-data-collector.md)＞。  
+  此主題描述如何設定管理資料倉儲，以支援使用資料收集器之一個或多個 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的資料儲存體。 這些執行個體可以在相同伺服器或不同伺服器上。 此主題也提供 [設定管理資料倉儲精靈](#Wizard) 對話方塊的使用者介面描述。 如需設定資料收集器的詳細資訊，請參閱＜ [Configure Properties of a Data Collector](../../relational-databases/data-collection/configure-properties-of-a-data-collector.md)＞。  
   
 > [!NOTE]  
 >  如果 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 設定成使用其中一個系統服務帳戶 (本機系統、網路服務或本機服務) 來執行，而且管理資料倉儲是從資料收集器的另一個執行個體建立，您就必須設定收集組使用 Proxy 將資料上傳到管理資料倉儲。  
@@ -115,7 +110,7 @@ ms.lasthandoff: 02/12/2018
   
  **完成精靈頁面**  
   
- 使用此頁面可驗證及完成資料收集組態。 檢視視窗中所顯示的樹狀目錄會顯示將要套用哪些組態，以及當您按一下 **[完成]**時將會發生的動作。  
+ 使用此頁面可驗證及完成資料收集組態。 檢視視窗中所顯示的樹狀目錄會顯示將要套用哪些組態，以及當您按一下 **[完成]** 時將會發生的動作。  
   
  **設定資料收集精靈進度頁面**  
   

@@ -1,17 +1,15 @@
 ---
-title: "AbsolutePage、 PageCount 和 PageSize 屬性範例 (JScript) |Microsoft 文件"
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
+title: AbsolutePage、 PageCount 和 PageSize 屬性範例 (JScript) |Microsoft 文件
+ms.prod: sql
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
-ms.custom: 
+ms.technology: connectivity
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 dev_langs:
 - JScript
 helpviewer_keywords:
@@ -19,16 +17,15 @@ helpviewer_keywords:
 - AbsolutePage property [ADO], JScript example
 - PageSize property [ADO], JScript example
 ms.assetid: 2db6dd3f-5a9c-438c-ae62-d09242906c98
-caps.latest.revision: 
+caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 233efeb6854e5cddeb7185d109b261e763c3b1e0
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: d665b39f1f80756270c1f1843476b153a6309949
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="absolutepage-pagecount-and-pagesize-properties-example-jscript"></a>AbsolutePage、 PageCount 和 PageSize 屬性範例 (JScript)
 此範例示範 AbsolutePage、 PageCount 和 PageSize 屬性。 剪下並貼到 [記事本] 或其他文字編輯器，下列程式碼，然後將它儲存成**AbsolutePageJS.asp**。  

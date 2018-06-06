@@ -1,30 +1,27 @@
 ---
-title: sys.dm_pdw_query_stats_xe (Transact-SQL) | Microsoft Docs
-ms.custom: 
+title: sys.dm_pdw_query_stats_xe (TRANSACT-SQL) |Microsoft 文件
+ms.custom: ''
 ms.date: 03/07/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: pdw
-ms.service: 
-ms.component: dmv's
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: system-objects
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - TSQL
 ms.assetid: 5d551241-db35-4958-b60f-55e996f95c1f
-caps.latest.revision: 
-author: barbkess
-ms.author: barbkess
+caps.latest.revision: 7
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 00109ae27ca0038a6da8f8bd359c3d99d4e84a3f
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+monikerRange: '>= aps-pdw-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 32d5cf452735bab9915afce6df6311dd6279a52d
+ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 05/23/2018
 ---
 # <a name="sysdmpdwquerystatsxe-transact-sql"></a>sys.dm_pdw_query_stats_xe (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
@@ -36,7 +33,7 @@ ms.lasthandoff: 02/03/2018
 |event|**nvarchar(60)**|此檢視的索引鍵。||  
 |event_id|**nvarchar(36)**|||  
 |create_time|**datetime**|||  
-|session_id|**int**|工作階段識別碼。|請參閱中的 session_id [sys.dm_pdw_exec_sessions &#40;TRANSACT-SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-sessions-transact-sql.md).|  
+|session_id|**int**|工作階段識別碼。|請參閱中的 session_id [sys.dm_pdw_exec_sessions &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-sessions-transact-sql.md)。|  
 |cpu|**int**|||  
 |reads|**int**|事件啟動之後的邏輯讀取數。||  
 |writes|**int**|邏輯寫入數開始之後的事件。||  
@@ -46,6 +43,6 @@ ms.lasthandoff: 02/03/2018
 |pdw_node_id|**int**|這個 Xevent 執行個體執行所在的節點。|  
   
 ## <a name="see-also"></a>另請參閱  
- [SQL 資料倉儲和平行處理資料倉儲動態管理檢視 &#40;TRANSACT-SQL &#41;](../../relational-databases/system-dynamic-management-views/sql-and-parallel-data-warehouse-dynamic-management-views.md)  
+ [SQL 資料倉儲和平行處理資料倉儲動態管理檢視&#40;Transact SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-and-parallel-data-warehouse-dynamic-management-views.md)  
   
   

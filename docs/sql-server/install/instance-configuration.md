@@ -1,33 +1,31 @@
 ---
-title: "安裝精靈說明 | Microsoft Docs"
-ms.custom: 
+title: 安裝精靈說明 | Microsoft Docs
+ms.custom: ''
 ms.date: 2017-04-21
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
 ms.component: install
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - setup-install
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 f1_keywords:
 - instance configuration, Setup
 helpviewer_keywords:
 - Instance Name page [SQL Server Installation Wizard]
 - SQL Server Installation Wizard, Instance Name page
 ms.assetid: 5bf822fc-6dec-4806-a153-e200af28e9a5
-caps.latest.revision: 
+caps.latest.revision: 62
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 robots: noindex,nofollow
-ms.workload: On Demand
-ms.openlocfilehash: 16c42d4f6864e94c475ba917c75c8219d96245ce
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 0366b0613623960afd56a2877ad9462fded60bf5
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="installation-wizard-help"></a>安裝精靈說明
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -139,14 +137,14 @@ ms.lasthandoff: 02/15/2018
   
 |描述|預設目錄|建議|  
 |-----------------|-----------------------|---------------------|  
-|資料根目錄|C:\Program Files\Microsoft SQL Server\MSAS*nn*.\<執行個體識別碼>\OLAP\Data\ |請確定 \Program files\Microsoft SQL Server\ 資料夾受到有限權限的保護。 在許多組態中，[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 效能取決於資料目錄所在之儲存體的效能。 請將這個目錄放置於附加至系統的最高效能儲存體上。 若為容錯移轉叢集安裝，請確定資料目錄位於共用磁碟上。|  
-|記錄檔目錄|C:\Program Files\Microsoft SQL Server\MSAS*nn*.\<執行個體識別碼>\OLAP\Log\ |這是 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 記錄檔的目錄，而且它包括了 FlightRecorder 記錄檔。 如果您增加了飛行記錄器持續時間，請確定記錄檔目錄具有足夠的空間。|  
-|暫存目錄|C:\Program Files\Microsoft SQL Server\MSAS*nn*.\<執行個體識別碼>\OLAP\Temp\ |請將暫存目錄放置於高效能的儲存體子系統上。|  
-|備份目錄|C:\Program Files\Microsoft SQL Server\MSAS*nn*.\<執行個體識別碼>\OLAP\Backup\ |這是 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 預設備份檔案的目錄。 對於 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint 安裝來說，這也是 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 系統服務快取 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 資料檔案的位置。<br /><br /> 請確定已設定適當的權限來防止資料遺失，並且確定 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 服務的使用者群組具有足夠的權限，可寫入備份目錄。 不支援針對備份目錄使用對應的磁碟機。|  
+|資料根目錄|C:\Program Files\Microsoft SQL Server\MSAS*nn*.\<InstanceID>\OLAP\Data\ |請確定 \Program files\Microsoft SQL Server\ 資料夾受到有限權限的保護。 在許多組態中，[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 效能取決於資料目錄所在之儲存體的效能。 請將這個目錄放置於附加至系統的最高效能儲存體上。 若為容錯移轉叢集安裝，請確定資料目錄位於共用磁碟上。|  
+|記錄檔目錄|C:\Program Files\Microsoft SQL Server\MSAS*nn*.\<InstanceID>\OLAP\Log\ |這是 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 記錄檔的目錄，而且它包括了 FlightRecorder 記錄檔。 如果您增加了飛行記錄器持續時間，請確定記錄檔目錄具有足夠的空間。|  
+|暫存目錄|C:\Program Files\Microsoft SQL Server\MSAS*nn*.\<InstanceID>\OLAP\Temp\ |請將暫存目錄放置於高效能的儲存體子系統上。|  
+|備份目錄|C:\Program Files\Microsoft SQL Server\MSAS*nn*.\<InstanceID>\OLAP\Backup\ |這是 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 預設備份檔案的目錄。 對於 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint 安裝來說，這也是 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 系統服務快取 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 資料檔案的位置。<br /><br /> 請確定已設定適當的權限來防止資料遺失，並且確定 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 服務的使用者群組具有足夠的權限，可寫入備份目錄。 不支援針對備份目錄使用對應的磁碟機。|  
   
 ### <a name="notes"></a>注意  
   
--   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 執行個體若部署於 Sharepoint 伺服器陣列，會將應用程式檔案、資料檔案及屬性儲存在內容資料庫和服務應用程式資料庫中。  
+-   部署在 SharePoint 伺服陣列上的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 執行個體會將應用程式檔案、資料檔案和屬性儲存在內容資料庫與服務應用程式資料庫中。  
   
 -   將功能加入至現有的安裝時，您不能變更先前安裝之功能的位置，也不能指定新功能的位置。  
 
@@ -177,10 +175,10 @@ ms.lasthandoff: 02/15/2018
   
 |描述|支援的儲存類型|預設目錄|建議|  
 |-----------------|----------------------------|-----------------------|---------------------|  
-|資料根目錄|本機磁碟, SMB 檔案伺服器, 共用儲存體* |C:\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\ |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 進行組態設定時，安裝程式將會設定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 目錄的 ACL 並中斷繼承。|  
-|使用者資料庫目錄|本機磁碟, SMB 檔案伺服器, 共用儲存體*|C:\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL*nn*.\<執行個體識別碼>\MSSQL\Data |使用者資料目錄的最佳作法取決於工作負載和效能需求。|  
-|使用者資料庫記錄檔目錄|本機磁碟, SMB 檔案伺服器, 共用儲存體*|C:\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL*nn*.\<執行個體識別碼>\MSSQL\Data|請確定記錄檔目錄具有足夠的空間。|  
-|備份目錄|本機磁碟, SMB 檔案伺服器, 共用儲存體*|C:\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL*nn*.\<執行個體識別碼>\MSSQL\Backup|請設定適當的權限來防止資料遺失，並且確定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服務的使用者帳戶具有足夠的權限，可寫入備份目錄。 不支援針對備份目錄使用對應的磁碟機。|  
+|資料根目錄|本機磁碟, SMB 檔案伺服器, 共用儲存體* |C:\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\ |進行組態設定時，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝程式將會設定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 目錄的 ACL 並中斷繼承。|  
+|使用者資料庫目錄|本機磁碟, SMB 檔案伺服器, 共用儲存體*|C:\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL*nn*.\<InstanceID>\MSSQL\Data |使用者資料目錄的最佳作法取決於工作負載和效能需求。|  
+|使用者資料庫記錄檔目錄|本機磁碟, SMB 檔案伺服器, 共用儲存體*|C:\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL*nn*.\<InstanceID>\MSSQL\Data|請確定記錄檔目錄具有足夠的空間。|  
+|備份目錄|本機磁碟, SMB 檔案伺服器, 共用儲存體*|C:\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL*nn*.\<InstanceID>\MSSQL\Backup|請設定適當的權限來防止資料遺失，並且確定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服務的使用者帳戶具有足夠的權限，可寫入備份目錄。 不支援針對備份目錄使用對應的磁碟機。|  
   
  *儘管支援共用磁碟，但不建議對 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 獨立執行個體採用這種做法。  
   
@@ -189,10 +187,10 @@ ms.lasthandoff: 02/15/2018
   
 |描述|支援的儲存類型|預設目錄|建議|  
 |-----------------|----------------------------|-----------------------|---------------------|  
-|資料根目錄|共用儲存體、SMB 檔案伺服器|\<磁碟機：>\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\\<br /><br /> 秘訣：如果在 [叢集磁碟選取]  頁面上選取共用磁碟，預設為第一個共用磁碟。 如果在 **[叢集磁碟選取]** 頁面上沒有進行任何選擇，此欄位預設為空白。|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 進行組態設定時，安裝程式將會設定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 目錄的 ACL 並中斷繼承。|  
-|使用者資料庫目錄|共用儲存體、SMB 檔案伺服器|\<磁碟機:>Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL*nn*.\<執行個體識別碼>\MSSQL\Data<br /><br /> 秘訣：如果在 [叢集磁碟選取]  頁面上選取共用磁碟，預設為第一個共用磁碟。 如果在 **[叢集磁碟選取]** 頁面上沒有進行任何選擇，此欄位預設為空白。|使用者資料目錄的最佳作法取決於工作負載和效能需求。|  
-|使用者資料庫記錄檔目錄|共用儲存體、SMB 檔案伺服器|\<磁碟機:>\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL*nn*.\<執行個體識別碼>\MSSQL\Data<br /><br /> 秘訣：如果在 [叢集磁碟選取]  頁面上選取共用磁碟，預設為第一個共用磁碟。 如果在 **[叢集磁碟選取]** 頁面上沒有進行任何選擇，此欄位預設為空白。|請確定記錄檔目錄具有足夠的空間。|  
-|備份目錄|本機磁碟、共用儲存體、SMB 檔案伺服器|\<磁碟機:>\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL*nn*.\<執行個體識別碼>\MSSQL\Backup<br /><br /> 秘訣：如果在 [叢集磁碟選取]  頁面上選取共用磁碟，預設為第一個共用磁碟。 如果在 **[叢集磁碟選取]** 頁面上沒有進行任何選擇，此欄位預設為空白。|請設定適當的權限來防止資料遺失，並且確定 SQL Server 服務的使用者帳戶具有足夠的權限，可寫入備份目錄。 不支援針對備份目錄使用對應的磁碟機。|  
+|資料根目錄|共用儲存體、SMB 檔案伺服器|\<磁碟機：>\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\\<br /><br /> 秘訣：如果在 [叢集磁碟選取]  頁面上選取共用磁碟，預設為第一個共用磁碟。 如果在 **[叢集磁碟選取]** 頁面上沒有進行任何選擇，此欄位預設為空白。|進行組態設定時，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝程式將會設定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 目錄的 ACL 並中斷繼承。|  
+|使用者資料庫目錄|共用儲存體、SMB 檔案伺服器|\<Drive:>Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL*nn*.\<InstanceID>\MSSQL\Data<br /><br /> 秘訣：如果在 [叢集磁碟選取]  頁面上選取共用磁碟，預設為第一個共用磁碟。 如果在 **[叢集磁碟選取]** 頁面上沒有進行任何選擇，此欄位預設為空白。|使用者資料目錄的最佳作法取決於工作負載和效能需求。|  
+|使用者資料庫記錄檔目錄|共用儲存體、SMB 檔案伺服器|\<Drive:>\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL*nn*.\<InstanceID>\MSSQL\Data<br /><br /> 秘訣：如果在 [叢集磁碟選取]  頁面上選取共用磁碟，預設為第一個共用磁碟。 如果在 **[叢集磁碟選取]** 頁面上沒有進行任何選擇，此欄位預設為空白。|請確定記錄檔目錄具有足夠的空間。|  
+|備份目錄|本機磁碟、共用儲存體、SMB 檔案伺服器|\<Drive:>\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL*nn*.\<InstanceID>\MSSQL\Backup<br /><br /> 秘訣：如果在 [叢集磁碟選取]  頁面上選取共用磁碟，預設為第一個共用磁碟。 如果在 **[叢集磁碟選取]** 頁面上沒有進行任何選擇，此欄位預設為空白。|請設定適當的權限來防止資料遺失，並且確定 SQL Server 服務的使用者帳戶具有足夠的權限，可寫入備份目錄。 不支援針對備份目錄使用對應的磁碟機。|  
   
 ### <a name="security-considerations"></a>安全性考量  
  進行組態設定時，安裝程式將會設定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 目錄的 ACL 並中斷繼承。  
@@ -229,14 +227,14 @@ ms.lasthandoff: 02/15/2018
   
 |描述|預設目錄|建議|  
 |-----------------|-----------------------|---------------------|  
-|資料根目錄 |C:\Program Files\Microsoft SQL Server\MSAS*nn*.\<執行個體識別碼>\OLAP\Data |請確定 \Program files\Microsoft SQL Server\ 資料夾受到有限權限的保護。 在許多組態中，[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 效能取決於資料目錄所在之儲存體的效能。 請將這個目錄放置於附加至系統的最高效能儲存體上。 若為容錯移轉叢集安裝，請確定資料目錄位於共用磁碟上。|  
-|記錄檔目錄|C:\Program Files\Microsoft SQL Server\MSAS*nn*.\<執行個體識別碼>\OLAP\Log |這是 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 記錄檔的目錄，而且它包括了 FlightRecorder 記錄檔。 如果您增加了飛行記錄器持續時間，請確定記錄檔目錄具有足夠的空間。|  
-|暫存目錄|C:\Program Files\Microsoft SQL Server\MSAS*nn*.\<執行個體識別碼>\OLAP\Temp |請將暫存目錄放置於高效能的儲存體子系統上。|  
-|備份目錄|C:\Program Files\Microsoft SQL Server\MSAS*nn*.\<執行個體識別碼>\OLAP\Backup |這是 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 預設備份檔案的目錄。 對於 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint 安裝來說，這也是 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 系統服務快取 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 資料檔案的位置。<br /><br /> 請確定已設定適當的權限來防止資料遺失，並且確定 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 服務的使用者群組具有足夠的權限，可寫入備份目錄。 不支援針對備份目錄使用對應的磁碟機。|  
+|資料根目錄 |C:\Program Files\Microsoft SQL Server\MSAS*nn*.\<InstanceID>\OLAP\Data |請確定 \Program files\Microsoft SQL Server\ 資料夾受到有限權限的保護。 在許多組態中，[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 效能取決於資料目錄所在之儲存體的效能。 請將這個目錄放置於附加至系統的最高效能儲存體上。 若為容錯移轉叢集安裝，請確定資料目錄位於共用磁碟上。|  
+|記錄檔目錄|C:\Program Files\Microsoft SQL Server\MSAS*nn*.\<InstanceID>\OLAP\Log |這是 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 記錄檔的目錄，而且它包括了 FlightRecorder 記錄檔。 如果您增加了飛行記錄器持續時間，請確定記錄檔目錄具有足夠的空間。|  
+|暫存目錄|C:\Program Files\Microsoft SQL Server\MSAS*nn*.\<InstanceID>\OLAP\Temp |請將暫存目錄放置於高效能的儲存體子系統上。|  
+|備份目錄|C:\Program Files\Microsoft SQL Server\MSAS*nn*.\<InstanceID>\OLAP\Backup |這是 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 預設備份檔案的目錄。 對於 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint 安裝來說，這也是 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 系統服務快取 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 資料檔案的位置。<br /><br /> 請確定已設定適當的權限來防止資料遺失，並且確定 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 服務的使用者群組具有足夠的權限，可寫入備份目錄。 不支援針對備份目錄使用對應的磁碟機。|  
   
 #### <a name="notes"></a>注意  
   
--   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 執行個體若部署於 Sharepoint 伺服器陣列，會將應用程式檔案、資料檔案及屬性儲存在內容資料庫和服務應用程式資料庫中。  
+-   部署在 SharePoint 伺服陣列上的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 執行個體會將應用程式檔案、資料檔案和屬性儲存在內容資料庫與服務應用程式資料庫中。  
   
 -   將功能加入至現有的安裝時，您不能變更先前安裝之功能的位置，也不能指定新功能的位置。  
 
@@ -309,7 +307,7 @@ ms.lasthandoff: 02/15/2018
 >  [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteStrongPass](../../includes/ssnotestrongpass-md.md)] 不得設定空白或弱式 sa 密碼。  
+>  [!INCLUDE[ssNoteStrongPass](../../includes/ssnotestrongpass-md.md)] 絕對不可設定空白或弱式 sa 密碼。  
   
  **混合模式 (Windows 驗證或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證)**  
  允許使用者利用 Windows 驗證或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證來連接。 透過 Windows 使用者帳戶連接的使用者可以使用 Windows 已驗證的信任連接。  
@@ -317,7 +315,7 @@ ms.lasthandoff: 02/15/2018
  如果您必須選擇混合模式驗證，而且需要使用 SQL 登入來配合舊版應用程式，則您必須為所有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 帳戶設定增強式密碼。  
   
 > [!NOTE]  
->  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 提供驗證的目的，只是為了回溯相容性。 [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]  
+>  提供 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證的目的，只是為了回溯相容性。 [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]  
   
  **輸入密碼**  
  輸入並確認系統管理員 (sa) 登入。 密碼是對抗入侵者的第一道防線，因此，設定增強式密碼對於系統的安全性很重要。 不得設定空白或弱式 sa 密碼。  
@@ -373,8 +371,8 @@ ms.lasthandoff: 02/15/2018
   
 |描述|支援的儲存類型|預設目錄|建議|  
 |-----------------|----------------------------|-----------------------|---------------------|  
-|**資料目錄**|本機磁碟、SMB 檔案伺服器、共用儲存體* |C:\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL*nn*.\<執行個體識別碼>\MSSQL\Data|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 進行組態設定時，安裝程式將會設定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 目錄的 ACL 並中斷繼承。<br /><br /> **temdb** 目錄的最佳做法取決於工作負載和效能需求。 指定多個資料夾/磁碟機，以將資料檔案分散到數個磁碟區。|  
-|**記錄目錄**|本機磁碟、SMB 檔案伺服器、共用儲存體*|C:\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL*nn*.\<執行個體識別碼>\MSSQL\Data|請確定記錄檔目錄具有足夠的空間。|  
+|**資料目錄**|本機磁碟、SMB 檔案伺服器、共用儲存體* |C:\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL*nn*.\<InstanceID>\MSSQL\Data|進行組態設定時，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝程式將會設定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 目錄的 ACL 並中斷繼承。<br /><br /> **temdb** 目錄的最佳做法取決於工作負載和效能需求。 指定多個資料夾/磁碟機，以將資料檔案分散到數個磁碟區。|  
+|**記錄目錄**|本機磁碟、SMB 檔案伺服器、共用儲存體*|C:\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL*nn*.\<InstanceID>\MSSQL\Data|請確定記錄檔目錄具有足夠的空間。|  
   
  *儘管支援共用磁碟，但不建議對 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 獨立執行個體採用這種做法。  
   
@@ -383,8 +381,8 @@ ms.lasthandoff: 02/15/2018
   
 |描述|支援的儲存類型|預設目錄|建議|  
 |-----------------|----------------------------|-----------------------|---------------------|  
-|**tempdb** 資料目錄|本機磁碟、共用儲存體、SMB 檔案伺服器|\<磁碟機:>\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL*nn*.\<執行個體識別碼>\Data<br /><br /> 秘訣：如果在 [叢集磁碟選取]  頁面上選取共用磁碟，預設為第一個共用磁碟。 如果在 **[叢集磁碟選取]** 頁面上沒有進行任何選擇，此欄位預設為空白。|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 進行組態設定時，安裝程式將會設定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 目錄的 ACL 並中斷繼承。<br /><br /> 請確定指定的一或多個目錄 (如果指定了多個檔案) 適用於所有叢集節點。 在容錯移轉期間，如果容錯移轉目標節點上的 **tempdb** 目錄無法使用，則 SQL Server 資源將無法上線。|  
-|**tempdb** 記錄目錄|本機磁碟、共用儲存體、SMB 檔案伺服器|\<磁碟機:>\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL*nn*.\<執行個體識別碼>\MSSQL\Data<br /><br /> 秘訣：如果在 [叢集磁碟選取]  頁面上選取共用磁碟，預設為第一個共用磁碟。 如果在 **[叢集磁碟選取]** 頁面上沒有進行任何選擇，此欄位預設為空白。|使用者資料目錄的最佳作法取決於工作負載和效能需求。<br /><br /> 請確定指定的目錄對所有叢集節點都有效。 在容錯移轉期間，如果容錯移轉目標節點上的 **tempdb** 目錄無法使用，則 SQL Server 資源將無法上線。<br /><br /> 請確定記錄檔目錄具有足夠的空間。|  
+|**tempdb** 資料目錄|本機磁碟、共用儲存體、SMB 檔案伺服器|\<Drive:>\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL*nn*.\<InstanceID>\Data<br /><br /> 秘訣：如果在 [叢集磁碟選取]  頁面上選取共用磁碟，預設為第一個共用磁碟。 如果在 **[叢集磁碟選取]** 頁面上沒有進行任何選擇，此欄位預設為空白。|進行組態設定時，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝程式將會設定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 目錄的 ACL 並中斷繼承。<br /><br /> 請確定指定的一或多個目錄 (如果指定了多個檔案) 適用於所有叢集節點。 在容錯移轉期間，如果容錯移轉目標節點上的 **tempdb** 目錄無法使用，則 SQL Server 資源將無法上線。|  
+|**tempdb** 記錄目錄|本機磁碟、共用儲存體、SMB 檔案伺服器|\<Drive:>\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL*nn*.\<InstanceID>\MSSQL\Data<br /><br /> 秘訣：如果在 [叢集磁碟選取]  頁面上選取共用磁碟，預設為第一個共用磁碟。 如果在 **[叢集磁碟選取]** 頁面上沒有進行任何選擇，此欄位預設為空白。|使用者資料目錄的最佳作法取決於工作負載和效能需求。<br /><br /> 請確定指定的目錄對所有叢集節點都有效。 在容錯移轉期間，如果容錯移轉目標節點上的 **tempdb** 目錄無法使用，則 SQL Server 資源將無法上線。<br /><br /> 請確定記錄檔目錄具有足夠的空間。|  
   
 ### <a name="uielement-list"></a>UIElement 清單  
  根據您的工作負載和需求來設定 **tempdb** 的設定。 下列設定會套用到 **tempdb** 資料檔案︰  
@@ -451,7 +449,7 @@ ms.lasthandoff: 02/15/2018
  將使用者加入至 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 管理員角色  
  預設值不是開啟。 若要將目前的安裝程式使用者加入至 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 管理員角色，請選取該核取方塊。  
   
- [!INCLUDE[wiprlhext](../../includes/wiprlhext-md.md)] 身為 BUILTIN\Administrators 成員的使用者並不會在連接到 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]時，自動加入系統管理員固定伺服器角色中。 只有已明確地加入至伺服器層級之管理員角色的 [!INCLUDE[wiprlhext](../../includes/wiprlhext-md.md)] 使用者可以管理 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]。 Built-In\Users 群組的任何成員都可以連接至 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 執行個體，但這些成員僅具有執行資料庫工作的有限權限。 因為這個原因，所以必須在 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 上執行的 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 執行個體中，明確地為從舊版 Windows 的 BUILTIN\Administrators 和 Built-In\Users 繼承 [!INCLUDE[wiprlhext](../../includes/wiprlhext-md.md)]權限的使用者授與管理員權限。  
+ 身為 BUILTIN\Administrators 成員的 [!INCLUDE[wiprlhext](../../includes/wiprlhext-md.md)] 使用者並不會在連接到 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 時，自動加入系統管理員固定伺服器角色中。 只有已明確地加入至伺服器層級之管理員角色的 [!INCLUDE[wiprlhext](../../includes/wiprlhext-md.md)] 使用者可以管理 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]。 Built-In\Users 群組的任何成員都可以連接至 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 執行個體，但這些成員僅具有執行資料庫工作的有限權限。 因為這個原因，所以必須在 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 上執行的 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 執行個體中，明確地為從舊版 Windows 的 BUILTIN\Administrators 和 Built-In\Users 繼承 [!INCLUDE[wiprlhext](../../includes/wiprlhext-md.md)]權限的使用者授與管理員權限。  
   
  若要在此安裝程式結束後，對使用者角色進行任何變更，請使用 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 介面區組態工具 (SQLSAC.exe)。 若要更新 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 系統管理員角色中的使用者清單，按一下 **[新增管理員]** 連結。  
   

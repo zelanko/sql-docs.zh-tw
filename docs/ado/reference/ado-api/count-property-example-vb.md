@@ -1,32 +1,29 @@
 ---
-title: "計數屬性範例 (VB) |Microsoft 文件"
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
+title: 計數屬性範例 (VB) |Microsoft 文件
+ms.prod: sql
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
-ms.custom: 
+ms.technology: connectivity
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 dev_langs:
 - VB
 helpviewer_keywords:
 - Count property [ADO], Visual Basic example
 ms.assetid: 35033910-623b-449a-a57d-baff3ed5ab8f
-caps.latest.revision: 
+caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 4ab29cd1d57ebdb721085c7f743d96b2c0052ea6
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 1046d3e75b29dec55bfcc3bc1acfbcdbe94dbb64
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="count-property-example-vb"></a>計數屬性範例 (VB)
 這個範例會示範[計數](../../../ado/reference/ado-api/count-property-ado.md)屬性中的兩個集合與***員工***資料庫。 此屬性會取得中的每個集合的物件數目，並設定列舉這些集合的迴圈的上限。 列舉不使用這些集合的另一種方式**計數**屬性就是使用`For Each...Next`陳述式。  

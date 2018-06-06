@@ -1,31 +1,23 @@
 ---
-title: "變更資料表、 資料行或資料列篩選對應 |Microsoft 文件"
-ms.custom: 
-ms.date: 02/21/2018
-ms.prod: analysis-services
-ms.prod_service: analysis-services, azure-analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
-ms.assetid: 2124c526-5772-4f84-a019-9dd3e906e8dd
-caps.latest.revision: 
-author: Minewiskan
+title: 變更資料表、 資料行或資料列篩選對應 |Microsoft 文件
+ms.date: 05/07/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: tabular-models
+ms.topic: conceptual
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 361cdea7d72a02c455ccf3f5b6d21255473b937e
-ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
+ms.openlocfilehash: 6eab5a756fb52afeb69c5f4c7646d768b9ec263f
+ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="change-table-column-or-row-filter-mappings"></a>變更資料表、資料行或資料列篩選對應 
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
-本文章說明如何使用變更資料表、 資料行或資料列篩選對應**編輯資料表屬性**] 對話方塊中的[!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]。  
+  本文章說明如何使用變更資料表、 資料行或資料列篩選對應**編輯資料表屬性** 對話方塊中的[!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]。  
   
  視您一開始是透過從清單中選取資料表或使用 SQL 查詢匯入資料而定， **[編輯資料表屬性]** 對話方塊的選項都不同。 若您一開始是從清單中選取來匯入資料， **[編輯資料表屬性]** 對話方塊就會顯示資料表預覽模式。 這種模式僅會顯示來源資料表的前五十個資料列。 若您一開始是使用 SQL 陳述式匯入資料， **[編輯資料表屬性]** 對話方塊就只會顯示 SQL 陳述式。 若是使用 SQL 查詢陳述式，您可以設計篩選或以手動方式編輯 SQL 陳述式，只擷取資料列的子集。  
   

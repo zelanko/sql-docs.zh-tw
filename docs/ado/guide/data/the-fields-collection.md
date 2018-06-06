@@ -1,31 +1,28 @@
 ---
-title: "Fields 集合 |Microsoft 文件"
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
+title: Fields 集合 |Microsoft 文件
+ms.prod: sql
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
-ms.custom: 
+ms.technology: connectivity
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - Field object [ADO], fields collection
 - Fields collection [ADO]
 ms.assetid: 574cf36e-e5f5-403b-983c-749ef93c108f
-caps.latest.revision: 
+caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: e983573d5bcbfdf9e39ba0933a86cdbf59ae6ef2
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 35be5189e20c9f028c5d73a68aab90ac502b4dfc
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="the-fields-collection"></a>Fields 集合
 **欄位**集合是 ADO 的內建集合的其中一個。 集合是已排序的集合的項目可以當做一個單位加以參考。 如需 ADO 集合的詳細資訊，請參閱[ADO 物件模型](../../../ado/guide/data/ado-objects-and-collections.md)。  

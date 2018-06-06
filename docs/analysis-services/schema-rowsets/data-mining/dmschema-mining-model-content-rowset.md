@@ -1,41 +1,30 @@
 ---
-title: "DMSCHEMA_MINING_MODEL_CONTENT 資料列集 |Microsoft 文件"
-ms.custom: 
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+title: DMSCHEMA_MINING_MODEL_CONTENT 資料列集 |Microsoft 文件
+ms.date: 05/03/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: schema-rowsets
 ms.topic: reference
-apiname: DMSCHEMA_MINING_MODEL_CONTENT
-apitype: NA
-applies_to: SQL Server 2016 Preview
-helpviewer_keywords: DMSCHEMA_MINING_MODEL_CONTENT rowset
-ms.assetid: 1e85d9e7-3b74-42ac-b94e-f52f76d8a25d
-caps.latest.revision: "32"
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 23410bac137e67e81e6e7b302f81c5cfd5db8b71
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 1b1fec6efb8ec638c54226ffa9d2ef335beb19f0
+ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="dmschemaminingmodelcontent-rowset"></a>DMSCHEMA_MINING_MODEL_CONTENT 資料列集
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]可讓用戶端應用程式，可瀏覽資料採礦模型的內容。 用戶端應用程式可使用本主題結尾處所述的特殊樹狀作業限制，以導覽採礦模型的內容。  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+  允許用戶端應用程式瀏覽資料採礦模型中的內容。 用戶端應用程式可使用本主題結尾處所述的特殊樹狀作業限制，以導覽採礦模型的內容。  
   
 ## <a name="rowset-columns"></a>資料列集資料行  
  **DMSCHEMA_MINING_MODEL_CONTENT**資料列集包含下列資料行。  
   
-|資料行名稱|類型指標|長度|描述|  
+|資料行名稱|類型指標|長度|Description|  
 |-----------------|--------------------|------------|-----------------|  
-|**MODEL_CATALOG**|**DBTYPE_WSTR**||目錄的名稱。 [!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]擴展此資料行的模型是成員的資料庫名稱。|  
+|**MODEL_CATALOG**|**DBTYPE_WSTR**||目錄的名稱。 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 會填入此資料行的模型是成員的資料庫名稱。|  
 |**MODEL_SCHEMA**|**DBTYPE_WSTR**||不合格的結構描述名稱。 不支援此資料行[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]; 它一律包含**VT_NULL**。|  
 |**MODEL_NAME**|**DBTYPE_WSTR**||與此資料列所述的內容相關聯的模型名稱。|  
 |**ATTRIBUTE_NAME**|**DBTYPE_WSTR**||對應至這個節點之屬性的名稱。|  
@@ -75,7 +64,7 @@ ms.lasthandoff: 01/08/2018
   
  限制**TREE_OPERATION**，不在任何特定的資料行上**DMSCHEMA_MINING_MODEL_CONTENT**資料列集; 相反地，它會指定樹狀運算子。 取用者可以指定**NODE_UNIQUE_NAME**限制以及樹狀運算子 (**祖系**，**子系**，**同層級**， **父**，**下階**，**自助**) 若要取得之成員的要求的集合。 **自助**運算子傳回的資料列清單中包括節點本身的資料列。 下表描述組成之點陣圖定義的常數**TREE_OPERATION**限制。 也可以結合使用邏輯**或**運算子。  
   
-|常數|ReplTest1|  
+|常數|Value|  
 |--------------|-----------|  
 |**DMTREEOP_ANCESTORS**|**0x00000020**|  
 |**DMTREEOP_CHILDREN**|**0x00000001**|  
@@ -84,7 +73,7 @@ ms.lasthandoff: 01/08/2018
 |**DMTREEOP_SELF**|**0x00000008**|  
 |**DMTREEOP_DESCENDANTS**|**0x00000010**|  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [資料採礦結構描述資料列集](../../../analysis-services/schema-rowsets/data-mining/data-mining-schema-rowsets.md)  
   
   

@@ -1,27 +1,26 @@
 ---
-title: "整合式 Kerberos 驗證 (OLE DB) |Microsoft 文件"
-ms.custom: 
+title: 整合式 Kerberos 驗證 (OLE DB) |Microsoft 文件
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
 ms.component: native-client-ole-db-how-to
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 953ee253-a4be-4f47-bbad-d2f6600207b2
-caps.latest.revision: 
+caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: eaed0b0527d89b31ab6bd55b56915d9bbf8ec419
-ms.sourcegitcommit: a0aa5e611a0e6ebb74ac1e2f613e8916dc7a7617
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 156138a305fadb58b6aac4d0c17825319d63fe25
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/24/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="integrated-kerberos-authentication-ole-db"></a>整合式 Kerberos 驗證 (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -29,7 +28,7 @@ ms.lasthandoff: 01/24/2018
 
   此範例顯示如何使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 中的 OLE DB 取得 Kerberos 相互驗證。 此範例適用於 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 或更新版本。  
   
- 如需有關 Spn 和 Kerberos 驗證的詳細資訊，請參閱[服務主要名稱 &#40;SPN &#41;在用戶端連接中的支援](../../relational-databases/native-client/features/service-principal-name-spn-support-in-client-connections.md)。  
+ 如需有關 Spn 和 Kerberos 驗證的詳細資訊，請參閱[服務主體名稱&#40;SPN&#41;支援用戶端連接中的](../../relational-databases/native-client/features/service-principal-name-spn-support-in-client-connections.md)。  
   
 ## <a name="example"></a>範例  
  您必須指定一個伺服器。 在 .cpp 檔案中，將 "MyServer" 變更為擁有 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] (或更新版本) 執行個體的電腦名稱。  

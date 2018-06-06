@@ -1,33 +1,30 @@
 ---
-title: "使用 SysPrep 安裝 SQL Server | Microsoft Docs"
-ms.custom: 
+title: 使用 SysPrep 安裝 SQL Server | Microsoft Docs
+ms.custom: ''
 ms.date: 09/07/2017
-ms.prod: sql-non-specified
-ms.prod_service: database-engine
-ms.service: 
-ms.component: install-windows
-ms.reviewer: 
+ms.prod: sql
+ms.prod_service: install
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- setup-install
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: install
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: 11f4ed8a-aaa9-417b-bdd5-204f551c6bb6
-caps.latest.revision: 
+caps.latest.revision: 29
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: e538fc7315661cf76dc807cb54cbd0d518cb8603
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: e5ae0e2aec2dc85d8a95bb4d56f4d5529e16160e
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="install-sql-server-with-sysprep"></a>使用 SysPrep 安裝 SQL Server
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SysPrep 相關的安裝動作可以透過安裝中心來存取。 **[安裝中心]** 的 **[進階]** 頁面包含兩個選項 - 準備 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **獨立執行個體的映像** 及 完成備妥的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **獨立執行個體的映像**。 [準備](#prepare) 和 [完成](#complete) 章節會詳細說明安裝程序。 如需詳細資訊，請參閱＜ [Considerations for Installing SQL Server Using SysPrep](../../database-engine/install-windows/considerations-for-installing-sql-server-using-sysprep.md)＞。 
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SysPrep 相關的安裝動作可以透過安裝中心來存取。 **[安裝中心]** 的 **[進階]** 頁面包含兩個選項 - 準備 **獨立執行個體的映像[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** 及 完成備妥的 **獨立執行個體的映像[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**。 [準備](#prepare) 和 [完成](#complete) 章節會詳細說明安裝程序。 如需詳細資訊，請參閱＜ [Considerations for Installing SQL Server Using SysPrep](../../database-engine/install-windows/considerations-for-installing-sql-server-using-sysprep.md)＞。 
   
 您也可以使用命令提示字元或組態檔，準備及完成 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的執行個體。 如需詳細資訊，請參閱：  
   
@@ -91,13 +88,13 @@ ms.lasthandoff: 02/09/2018
   
 2. 安裝精靈會執行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝中心。 若要準備 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的執行個體，請在 [進階] 頁面上，按一下 準備 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 獨立執行個體的映像。 
   
-3. 系統組態檢查會在電腦上執行探索作業。 若要繼續進行，請按一下 **[確定]**。 您可以按一下 **[顯示詳細資料]**在畫面上檢視詳細資料，或是按一下 **[檢視詳細資料報表]**來以 HTML 報表形式檢視詳細資料。 
+3. 系統組態檢查會在電腦上執行探索作業。 若要繼續進行，請按一下 **[確定]**。 您可以按一下 **[顯示詳細資料]** 在畫面上檢視詳細資料，或是按一下 **[檢視詳細資料報表]** 來以 HTML 報表形式檢視詳細資料。 
   
 4. 最新可用的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 產品更新會隨即顯示在 [產品更新] 頁面上。 如果不想包含更新，請清除 包含 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 產品更新程式 核取方塊。 如果未偵測到任何產品更新， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝程式將不會顯示此頁面，而會自動前往 **[安裝安裝程式檔案]** 頁面。 
   
 5. 安裝程式會在 [安裝安裝程式檔案] 頁面上，顯示下載、擷取及安裝安裝程式檔案的進度。 如有找到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝程式的更新，並指定要包含該更新，將會一併安裝。 
   
-6. 系統組態檢查將會先確認電腦的系統狀態，然後安裝程式才會繼續進行。 您可以按一下 **[顯示詳細資料]**在畫面上檢視詳細資料，或是按一下 **[檢視詳細資料報表]**來以 HTML 報表形式檢視詳細資料。 
+6. 系統組態檢查將會先確認電腦的系統狀態，然後安裝程式才會繼續進行。 您可以按一下 **[顯示詳細資料]** 在畫面上檢視詳細資料，或是按一下 **[檢視詳細資料報表]** 來以 HTML 報表形式檢視詳細資料。 
   
 7. 在 [準備映像類型] 頁面上，選取 準備新的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體。 
   
@@ -115,7 +112,7 @@ ms.lasthandoff: 02/09/2018
   
      右窗格會顯示選取功能的必要條件。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝程式將會在這個程序稍後說明的安裝步驟期間安裝尚未安裝的必要條件。 
   
-10. 在 **[準備映像規則]** 頁面上，系統組態檢查會先確認電腦的系統狀態，然後安裝程式才會繼續進行。 您可以按一下 **[顯示詳細資料]**在畫面上檢視詳細資料，或是按一下 **[檢視詳細資料報表]**來以 HTML 報表形式檢視詳細資料。 
+10. 在 **[準備映像規則]** 頁面上，系統組態檢查會先確認電腦的系統狀態，然後安裝程式才會繼續進行。 您可以按一下 **[顯示詳細資料]** 在畫面上檢視詳細資料，或是按一下 **[檢視詳細資料報表]** 來以 HTML 報表形式檢視詳細資料。 
   
 11. 在 [執行個體組態] 頁面上，指定執行個體的執行個體識別碼。 按 **[下一步]** ，繼續進行。 
   
@@ -129,7 +126,7 @@ ms.lasthandoff: 02/09/2018
   
 12. **[磁碟空間需求]** 頁面會計算您所指定之功能的所需磁碟空間。 然後，它會比較所需的空間與可用的磁碟空間。 
   
-13. 系統組態檢查將會執行預備映像規則，以便使用您已指定的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 功能來驗證電腦組態。 您可以按一下 **[顯示詳細資料]**在畫面上檢視詳細資料，或是按一下 **[檢視詳細資料報表]**來以 HTML 報表形式檢視詳細資料。 
+13. 系統組態檢查將會執行預備映像規則，以便使用您已指定的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 功能來驗證電腦組態。 您可以按一下 **[顯示詳細資料]** 在畫面上檢視詳細資料，或是按一下 **[檢視詳細資料報表]** 來以 HTML 報表形式檢視詳細資料。 
   
 14. **[準備開始預備映像]** 頁面會顯示安裝期間指定之安裝選項的樹狀檢視。 在此頁面上，安裝程式會指出產品更新功能為啟用或停用，以及最後的更新版本。 若要繼續，請按一下 **[準備]**。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝程式會先安裝選取功能所需的必要條件，之後再進行功能安裝。 
   
@@ -147,11 +144,11 @@ ms.lasthandoff: 02/09/2018
   
 1. 如果您電腦上的映像中已經包含備妥的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體，您將會在 [開始] 功能表中看到一個捷徑。 您也可以啟動安裝中心，並按一下 [進階] 頁面上的 [完成備妥的獨立執行個體的映像]。 
   
-2. 系統組態檢查會在電腦上執行探索作業。 若要繼續進行，請按一下 **[確定]**。 您可以按一下 **[顯示詳細資料]**在畫面上檢視詳細資料，或是按一下 **[檢視詳細資料報表]**來以 HTML 報表形式檢視詳細資料。 
+2. 系統組態檢查會在電腦上執行探索作業。 若要繼續進行，請按一下 **[確定]**。 您可以按一下 **[顯示詳細資料]** 在畫面上檢視詳細資料，或是按一下 **[檢視詳細資料報表]** 來以 HTML 報表形式檢視詳細資料。 
   
 3. 在 **[安裝程式支援檔案]** 頁面上，按一下 **[安裝]** ，即可安裝安裝程式支援檔案。 
   
-4. 系統組態檢查將會先確認電腦的系統狀態，然後安裝程式才會繼續進行。 檢查完成之後，請按 **[下一步]** 繼續進行。 您可以按一下 **[顯示詳細資料]**在畫面上檢視詳細資料，或是按一下 **[檢視詳細資料報表]**來以 HTML 報表形式檢視詳細資料。 
+4. 系統組態檢查將會先確認電腦的系統狀態，然後安裝程式才會繼續進行。 檢查完成之後，請按 **[下一步]** 繼續進行。 您可以按一下 **[顯示詳細資料]** 在畫面上檢視詳細資料，或是按一下 **[檢視詳細資料報表]** 來以 HTML 報表形式檢視詳細資料。 
   
 5. 在 **[產品金鑰]** 頁面上，選取選項按鈕，指出您要安裝免費的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]版本，或具有 PID 金鑰之產品的實際執行版本。 如需詳細資訊，請參閱 [SQL Server 的版本及支援功能](../../sql-server/editions-and-components-of-sql-server-2017.md)。 如果您要安裝 Evaluation Edition，180 天的試用期會在您完成這個步驟之後開始。 
   
@@ -161,7 +158,7 @@ ms.lasthandoff: 02/09/2018
   
      **安裝的執行個體** ：此方格會顯示所有執行個體，包括這部電腦上任何已備妥的執行個體。 
   
-8. 在 **[功能檢閱]** 頁面上，您將會在準備步驟期間看到安裝所包含的選定功能和元件。 如果您想要將更多功能加入至已備妥之執行個體中並未包含的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體，您必須先完成這個步驟，才能完成 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體，然後從 **[安裝中心]** 上的 **[加入功能]**來加入功能。 
+8. 在 **[功能檢閱]** 頁面上，您將會在準備步驟期間看到安裝所包含的選定功能和元件。 如果您想要將更多功能加入至已備妥之執行個體中並未包含的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體，您必須先完成這個步驟，才能完成 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體，然後從 **[安裝中心]** 上的 **[加入功能]** 來加入功能。 
   
     > [!NOTE]  
     >  您可以加入您所安裝之產品版本的可用功能。 如需詳細資訊，請參閱 [SQL Server 的版本及支援功能](../../sql-server/editions-and-components-of-sql-server-2017.md)。  
@@ -213,7 +210,7 @@ ms.lasthandoff: 02/09/2018
   
 17. 在 **[錯誤報告]** 頁面上，指定您想要傳送給 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 的資訊，這可協助改善 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 錯誤報告選項預設為啟用。 
   
-18. 在 **[完成映像規則]** 頁面上，系統組態檢查會執行完整的映像規則，以便使用您已指定的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 組態來驗證電腦組態。 您可以按一下 **[顯示詳細資料]**在畫面上檢視詳細資料，或是按一下 **[檢視詳細資料報表]**來以 HTML 報表形式檢視詳細資料。 
+18. 在 **[完成映像規則]** 頁面上，系統組態檢查會執行完整的映像規則，以便使用您已指定的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 組態來驗證電腦組態。 您可以按一下 **[顯示詳細資料]** 在畫面上檢視詳細資料，或是按一下 **[檢視詳細資料報表]** 來以 HTML 報表形式檢視詳細資料。 
   
 19. **[準備好要完成映像]** 頁面會顯示安裝期間指定之安裝選項的樹狀檢視。 若要繼續，請按一下 **[安裝]**。 
   
@@ -233,7 +230,7 @@ ms.lasthandoff: 02/09/2018
   
 2. 安裝精靈會執行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝中心。 若要將功能加入備妥的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體，請在 [進階] 頁面上，按一下 準備 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [獨立執行個體的映像]。 
   
-3. 系統組態檢查會在電腦上執行探索作業。 若要繼續進行，請按一下 **[確定]**。 您可以按一下 **[顯示詳細資料]**在畫面上檢視詳細資料，或是按一下 **[檢視詳細資料報表]**來以 HTML 報表形式檢視詳細資料。 
+3. 系統組態檢查會在電腦上執行探索作業。 若要繼續進行，請按一下 **[確定]**。 您可以按一下 **[顯示詳細資料]** 在畫面上檢視詳細資料，或是按一下 **[檢視詳細資料報表]** 來以 HTML 報表形式檢視詳細資料。 
   
 4. 在 [安裝程式支援檔案] 頁面上，按一下 **[安裝]** ，即可安裝安裝程式支援檔案。 
   
@@ -243,11 +240,11 @@ ms.lasthandoff: 02/09/2018
   
      右窗格會顯示選取功能的必要條件。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝程式將會在這個程序稍後說明的安裝步驟期間安裝尚未安裝的必要條件。 
   
-7. 在 **[準備映像規則]** 頁面上，系統組態檢查會先確認電腦的系統狀態，然後安裝程式才會繼續進行。 您可以按一下 **[顯示詳細資料]**在畫面上檢視詳細資料，或是按一下 **[檢視詳細資料報表]**來以 HTML 報表形式檢視詳細資料。 
+7. 在 **[準備映像規則]** 頁面上，系統組態檢查會先確認電腦的系統狀態，然後安裝程式才會繼續進行。 您可以按一下 **[顯示詳細資料]** 在畫面上檢視詳細資料，或是按一下 **[檢視詳細資料報表]** 來以 HTML 報表形式檢視詳細資料。 
   
 8. [磁碟空間需求] 頁面會計算您所指定之功能的所需磁碟空間。 然後，它會比較所需的空間與可用的磁碟空間。 
   
-9. 在 **[準備映像規則]** 頁面上，系統組態檢查會執行準備映像規則，以便使用您已指定的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 功能來驗證電腦組態。 您可以按一下 **[顯示詳細資料]**在畫面上檢視詳細資料，或是按一下 **[檢視詳細資料報表]**來以 HTML 報表形式檢視詳細資料。 
+9. 在 **[準備映像規則]** 頁面上，系統組態檢查會執行準備映像規則，以便使用您已指定的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 功能來驗證電腦組態。 您可以按一下 **[顯示詳細資料]** 在畫面上檢視詳細資料，或是按一下 **[檢視詳細資料報表]** 來以 HTML 報表形式檢視詳細資料。 
   
 10. **[準備開始預備映像]** 頁面會顯示安裝期間指定之安裝選項的樹狀檢視。 若要繼續，請按一下 **[安裝]**。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝程式會先安裝選取功能所需的必要條件，之後再進行功能安裝。 
   

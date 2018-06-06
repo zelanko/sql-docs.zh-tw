@@ -1,16 +1,14 @@
 ---
-title: sp_syscollector_stop_collection_set (Transact-SQL) | Microsoft Docs
-ms.custom: 
+title: sp_syscollector_stop_collection_set (TRANSACT-SQL) |Microsoft 文件
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: system-objects
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_syscollector_stop_collection_set_TSQL
@@ -21,16 +19,15 @@ helpviewer_keywords:
 - sp_syscollector_stop_collection_set
 - data collector [SQL Server], stored procedures
 ms.assetid: 4668cfb7-462f-40d0-948c-8f740a792a4d
-caps.latest.revision: 
+caps.latest.revision: 16
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 828d097a749fd1c0db89d24d2079fed5a5fd2ce9
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 1464a9dfac11cf6b84a3895b94881d4825f9758c
+ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="spsyscollectorstopcollectionset-transact-sql"></a>sp_syscollector_stop_collection_set (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -53,13 +50,13 @@ sp_syscollector_stop_collection_set
  [ @collection_set_id = ] *collection_set_id*  
  這是收集組的唯一本機識別碼。 *collection_set_id*是**int**預設值是 NULL。 *collection_set_id*必須有值，如果*名稱*是 NULL。  
   
- [ @name = ] '*name*'  
+ [ @name =] '*名稱*'  
  這是收集組的名稱。 *名稱*是**sysname**預設值是 NULL。 *名稱*必須有值，如果*collection_set_id*是 NULL。  
   
  [ @stop_collection_job = ] *stop_collection_job*  
  如果收集組的收集作業正在執行，則指定將它停止。 *stop_collection_job*是**元**預設值是 1。  
   
- *stop_collection_job*只適用於收集組的收集模式設定為快取。 如需詳細資訊，請參閱[sp_syscollector_create_collection_set &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/sp-syscollector-create-collection-set-transact-sql.md).  
+ *stop_collection_job*只適用於收集組的收集模式設定為快取。 如需詳細資訊，請參閱[sp_syscollector_create_collection_set &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syscollector-create-collection-set-transact-sql.md)。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  **0** （成功） 或**1** （失敗）  

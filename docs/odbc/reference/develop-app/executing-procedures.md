@@ -1,30 +1,27 @@
 ---
-title: "執行程序 |Microsoft 文件"
-ms.custom: 
+title: 執行程序 |Microsoft 文件
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
-ms.component: odbc
-ms.reviewer: 
+ms.prod: sql
+ms.prod_service: connectivity
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: connectivity
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - SQL statements [ODBC], procedures
 - procedures [ODBC], executing
 ms.assetid: a75e497a-4661-438a-a10e-f598c65f81be
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
-ms.workload: Inactive
-ms.openlocfilehash: 5faf7f71d56ea6a1f6a8d4de436937dd96c03cec
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+manager: craigg
+ms.openlocfilehash: d61929c1d2afb756be5157f3378ff0fe6b4d7e95
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="executing-procedures"></a>執行程序
 ODBC 定義的標準逸出序列執行程序。 如需此順序和使用它的程式碼範例的語法，請參閱[程序呼叫](../../../odbc/reference/develop-app/procedure-calls.md)。  

@@ -1,16 +1,15 @@
 ---
-title: "InstanceName 屬性 （ServerNetworkProtocol 類別） |Microsoft 文件"
-ms.custom: 
+title: InstanceName 屬性 （ServerNetworkProtocol 類別） |Microsoft 文件
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
 ms.component: wmi
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - InstanceName Property (ServerNetworkProtocol Class)
@@ -20,20 +19,19 @@ apitype: MOFDef
 helpviewer_keywords:
 - InstanceName property
 ms.assetid: 456911c1-9881-4574-8576-0070eff78c27
-caps.latest.revision: 
-author: JennieHubbard
-ms.author: jhubbard
+caps.latest.revision: 31
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: a038f1b2ffdf7f5b88bab2d7eb31d1cbe4fd260d
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.openlocfilehash: ff9cf626af1fecc516dd14f95b1651ce9612c8b1
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="instancename-property-servernetworkprotocol-class"></a>InstanceName 屬性 (ServerNetworkProtocol 類別)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
-取得執行個體名稱[!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]由伺服器網路通訊協定所參考。  
+  取得執行個體名稱[!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]由伺服器網路通訊協定所參考。  
   
 ## <a name="syntax"></a>語法  
   

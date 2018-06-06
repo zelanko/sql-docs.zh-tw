@@ -1,16 +1,15 @@
 ---
-title: "類型系統 (XQuery) |Microsoft 文件"
-ms.custom: 
+title: 類型系統 (XQuery) |Microsoft 文件
+ms.custom: ''
 ms.date: 08/10/2016
-ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
-ms.service: 
+ms.prod: sql
+ms.prod_service: sql
 ms.component: xquery
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -28,16 +27,15 @@ helpviewer_keywords:
 - built-in XML schema types [SQL Server]
 - xs prefix [XML in SQL Server]
 ms.assetid: 22d6f861-d058-47ee-b550-cbe9092dcb12
-caps.latest.revision: 
+caps.latest.revision: 28
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 5e0c8e060eede58292de8f47a39c563059927513
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: dcdaf7607d425dec01a9f2cf8c87ff55e5441aae
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="type-system-xquery"></a>類型系統 (XQuery)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -52,14 +50,14 @@ ms.lasthandoff: 02/09/2018
   
 -   具類型的值與節點的字串值。  
   
--   [Data 函數 &#40;XQuery &#41;](../xquery/data-accessor-functions-data-xquery.md)和[字串函數 &#40;XQuery &#41;](../xquery/data-accessor-functions-string-xquery.md).  
+-   [資料函式&#40;XQuery&#41; ](../xquery/data-accessor-functions-data-xquery.md)和[string 函數&#40;XQuery&#41;](../xquery/data-accessor-functions-string-xquery.md)。  
   
 -   比對運算式傳回的序列類型。  
   
 ## <a name="built-in-types-of-xml-schema"></a>XML 結構描述的內建類型  
  XML 結構描述的內建類型具有預先定義的命名空間前置詞 xs。 這些類型包括**xs: integer**和**xs: string**。 這些內建類型都受到支援。 當您建立 XML 結構描述集合時，可以使用這些類型。  
   
- 查詢具類型的 XML 時，節點的靜態和動態類型是由被查詢的資料行或變數相關聯之 XML 結構描述集合所決定。 如需靜態和動態類型的詳細資訊，請參閱[運算式內容和查詢評估 &#40;XQuery &#41;](../xquery/expression-context-and-query-evaluation-xquery.md). 例如，指定下列查詢針對具類型**xml**資料行 (`Instructions`)。 運算式使用 `instance of` 來確認所傳回之 `LotSize` 屬性的具類型值屬於 `xs:decimal` 類型。  
+ 查詢具類型的 XML 時，節點的靜態和動態類型是由被查詢的資料行或變數相關聯之 XML 結構描述集合所決定。 如需靜態和動態類型的詳細資訊，請參閱[運算式內容和查詢評估&#40;XQuery&#41;](../xquery/expression-context-and-query-evaluation-xquery.md)。 例如，指定下列查詢針對具類型**xml**資料行 (`Instructions`)。 運算式使用 `instance of` 來確認所傳回之 `LotSize` 屬性的具類型值屬於 `xs:decimal` 類型。  
   
 ```  
 SELECT Instructions.query('  
@@ -77,7 +75,7 @@ WHERE ProductModelID=7
   
 -   當您建立 XML 結構描述集合時，不能使用這些類型。 XQuery 類型系統中使用這些類型，並用於[XQuery 與靜態類型](../xquery/xquery-and-static-typing.md)。 可以轉換成不可部份完成類型，例如**xdt: untypedatomic**，請在**xdt**命名空間。  
   
--   查詢具類型的 XML 項目節點的靜態和動態類型時， **xdt： 不具型別的**，且屬性值的類型為**xdt: untypedatomic**。 結果**query （)**方法會產生不具類型的 XML。 這表示 XML 節點會以傳回**xdt： 不具型別的**和**xdt: untypedatomic**分別。  
+-   查詢具類型的 XML 項目節點的靜態和動態類型時， **xdt： 不具型別的**，且屬性值的類型為**xdt: untypedatomic**。 結果**query （)** 方法會產生不具類型的 XML。 這表示 XML 節點會以傳回**xdt： 不具型別的**和**xdt: untypedatomic**分別。  
   
 -   **Xdt: daytimeduration**和**xdt: yearmonthduration**不支援的類型。  
   
@@ -108,11 +106,11 @@ SELECT @x.query( '/a[1] instance of element()')
 ## <a name="typed-value-vs-string-value"></a>具類型值與字串值  
  每一個節點都有一個具類型值和一個字串值。 若為具類型的 XML 資料，具類型值的類型是由被查詢的資料行或變數相關聯之 XML 結構描述集合來提供。 針對不具類型的 XML 資料，具類型值的型別是**xdt: untypedatomic**。  
   
- 您可以使用**data （)**或**string （)**函式可擷取節點的值：  
+ 您可以使用**data （)** 或**string （)** 函式可擷取節點的值：  
   
--   [Data 函數 &#40;XQuery &#41;](../xquery/data-accessor-functions-data-xquery.md)傳回節點的具類型的值。  
+-   [資料函式&#40;XQuery&#41; ](../xquery/data-accessor-functions-data-xquery.md)傳回節點的具類型的值。  
   
--   [字串函數 &#40;XQuery &#41;](../xquery/data-accessor-functions-string-xquery.md)傳回節點的字串值。  
+-   [String 函數&#40;XQuery&#41; ](../xquery/data-accessor-functions-string-xquery.md)傳回節點的字串值。  
   
  在下列 XML 結構描述集合中，定義了整數類型的 <`root`> 元素：  
   
@@ -155,7 +153,7 @@ WHERE ProductModelID=7
  此查詢傳回的結果為 12.75。  
   
 > [!NOTE]  
->  明確使用**data （)**函式，在此範例中是僅供說明。 如果未指定， **sum （)**隱含地套用**data （)**函式可擷取節點的具類型的值。  
+>  明確使用**data （)** 函式，在此範例中是僅供說明。 如果未指定， **sum （)** 隱含地套用**data （)** 函式可擷取節點的具類型的值。  
   
 ## <a name="see-also"></a>另請參閱  
  [SQL Server Profiler 範本和權限](../tools/sql-server-profiler/sql-server-profiler-templates-and-permissions.md)   

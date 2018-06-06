@@ -1,20 +1,21 @@
 ---
-title: "已更新-Analysis Services 的 SQL Server 文件 |Microsoft 文件"
-description: "顯示更新的內容，如需 Microsoft SQL server Analysis Services 中最近變更過的文件的程式碼片段。"
+title: 已更新-Analysis Services 的 SQL Server 文件 |Microsoft 文件
+description: 顯示更新的內容，如需 Microsoft SQL server Analysis Services 中最近變更過的文件的程式碼片段。
 manager: craigg
 author: MightyPen
 ms.author: genemi
-ms.topic: article
-ms.custom: UpdArt.exe
+ms.topic: conceptual
+ms.custom: analysis-services
 ms.suite: sql
+ms.technology: release-landing
+ms.prod: sql
 ms.prod_service: sql-non-specified
-ms.component: ssas
-ms.date: 02/03/2018
-ms.openlocfilehash: 35da9b00567ea338a764bf1d1b3bc390bd9a88db
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.date: 04/28/2018
+ms.openlocfilehash: b499ead7affe952df0f0eaaaebf5d7533636cce1
+ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="new-and-recently-updated-analysis-services-for-sql-server"></a>新增和更新最近： 適用於 SQL Server Analysis Services
 
@@ -28,7 +29,7 @@ ms.lasthandoff: 02/09/2018
 
 
 
-- *日期範圍的更新：* &nbsp; **2017年-12-03** &nbsp; -到- &nbsp; **2018年-02-03**
+- *更新日期範圍：* &nbsp; **2018-02-03** &nbsp; 至 &nbsp; **2018-04-28**
 - *主旨區域：* &nbsp; **for SQL Server Analysis Services**。
 
 
@@ -41,7 +42,24 @@ ms.lasthandoff: 02/09/2018
 下列連結會跳至最近新增的新文章。
 
 
-***目前無新文章列出。***
+1. [支援 SQL Server Analysis Services 中表格式 1400年模型的資料來源](tabular-models/data-sources-supported-ssas-tabular-1400.md)
+2. [表格式模型 (1400 相容性層級)](tutorial-tabular-1400/as-adventure-works-tutorial.md)
+3. [建立資料分割](tutorial-tabular-1400/as-lesson-10-create-partitions.md)
+4. [建立角色](tutorial-tabular-1400/as-lesson-11-create-roles.md)
+5. [在 Excel 中進行分析](tutorial-tabular-1400/as-lesson-12-analyze-in-excel.md)
+6. [部署](tutorial-tabular-1400/as-lesson-13-deploy.md)
+7. [建立表格式模型專案](tutorial-tabular-1400/as-lesson-1-create-a-new-tabular-model-project.md)
+8. [取得資料](tutorial-tabular-1400/as-lesson-2-Get-data.md)
+9. [標記為日期資料表](tutorial-tabular-1400/as-lesson-3-mark-as-date-table.md)
+10. [建立關聯性](tutorial-tabular-1400/as-lesson-4-create-relationships.md)
+11. [建立導出資料行](tutorial-tabular-1400/as-lesson-5-create-calculated-columns.md)
+12. [建立量值](tutorial-tabular-1400/as-lesson-6-create-measures.md)
+13. [建立關鍵效能指標](tutorial-tabular-1400/as-lesson-7-create-key-performance-indicators.md)
+14. [建立檢視方塊](tutorial-tabular-1400/as-lesson-8-create-perspectives.md)
+15. [建立階層](tutorial-tabular-1400/as-lesson-9-create-hierarchies.md)
+16. [補充課程 - 詳細資料列](tutorial-tabular-1400/as-supplemental-lesson-detail-rows.md)
+17. [補充課程 - 動態安全性](tutorial-tabular-1400/as-supplemental-lesson-dynamic-security.md)
+18. [補充課程 - 不完全階層](tutorial-tabular-1400/as-supplemental-lesson-ragged-hierarchies.md)
 
 
 
@@ -80,45 +98,41 @@ ms.lasthandoff: 02/09/2018
 
 
 
-## <a name="similar-articles-about-new-or-updated-articles"></a>新的或更新的發行項相關的類似文件
+## <a name="similar-articles-about-new-or-updated-articles"></a>新文章或更新文章的類似文章
 
 本節會在我們的公開 GitHub 存放庫中，列出與其他主題區中最近更新的文章十分相似的文章：[MicrosoftDocs/sql-docs](https://github.com/MicrosoftDocs/sql-docs/)。
 
 
-#### <a name="subject-areas-that-do-have-new-or-recently-updated-articles"></a>主旨區域，*不要*new 或最近更新發行項
+
+#### <a name="subject-areas-that-do-have-new-or-recently-updated-articles"></a>具有新文章或最近更新文章的主題區
+
+- [新文章 + 更新文章 (11+6)：&nbsp; &nbsp;**Advanced Analytics for SQL** 文件](../advanced-analytics/new-updated-advanced-analytics.md)
+- [新文章 + 更新文章 (18+0)：&nbsp; &nbsp;**Analysis Services for SQL** 文件](../analysis-services/new-updated-analysis-services.md)
+- [新文章 + 更新文章 (218+14)：**連線到 SQL** 文件](../connect/new-updated-connect.md)
+- [新文章 + 更新文章 (14+0)：&nbsp; &nbsp;**SQL 資料庫引擎**文件](../database-engine/new-updated-database-engine.md)
+- [新文章 + 更新文章 (3+2)：&nbsp; &nbsp; **Integration Services for SQL** 文件](../integration-services/new-updated-integration-services.md)
+- [新文章 + 更新文章 (3+3)：&nbsp; &nbsp; **Linux for SQL** 文件](../linux/new-updated-linux.md)
+- [新文章 + 更新文章 (7+10)：&nbsp; &nbsp;**SQL 的關聯式資料庫**文件](../relational-databases/new-updated-relational-databases.md)
+- [新文章 + 更新文章 (0+2)：&nbsp; &nbsp; **Reporting Services for SQL** 文件](../reporting-services/new-updated-reporting-services.md)
+- [新文章 + 更新文章 (1+3)：&nbsp; &nbsp; **SQL Operations Studio** 文件](../sql-operations-studio/new-updated-sql-operations-studio.md)
+- [新文章 + 更新文章 (2+3)：&nbsp; &nbsp; **Microsoft SQL Server** 文件](../sql-server/new-updated-sql-server.md)
+- [新文章 + 更新文章 (1+1)：&nbsp; &nbsp; **SQL Server Data Tools (SSDT)** 文件](../ssdt/new-updated-ssdt.md)
+- [新文章 + 更新文章 (5+2)：&nbsp; &nbsp; **SQL Server Management Studio (SSMS)** 文件](../ssms/new-updated-ssms.md)
+- [新文章 + 更新文章 (0+2)：&nbsp; &nbsp; **Transact-SQL** 文件](../t-sql/new-updated-t-sql.md)
+- [新文章 + 更新文章 (1+1)：&nbsp; &nbsp; **SQL 工具**文件](../tools/new-updated-tools.md)
 
 
-- [新 + 更新 (1 + 3):&nbsp; **Advanced Analytics sql**文件](../advanced-analytics/new-updated-advanced-analytics.md)
-- [新 + 更新 (0 + 1):&nbsp; **Analytics Platform System sql**文件](../analytics-platform-system/new-updated-analytics-platform-system.md)
-- [新 + 更新 (0 + 1):&nbsp; **連接到 SQL**文件](../connect/new-updated-connect.md)
-- [新 + 更新 (0 + 1):&nbsp; **sql 資料庫引擎**文件](../database-engine/new-updated-database-engine.md)
-- [新 + 更新 (12 + 1): **sql Integration Services**文件](../integration-services/new-updated-integration-services.md)
-- [新 + 更新 (6 + 2):&nbsp; **sql Linux**文件](../linux/new-updated-linux.md)
-- [新 + 更新 (15 + 0):**適用於 SQL PowerShell**文件](../powershell/new-updated-powershell.md)
-- [新 + 更新 (2 + 9):&nbsp; **關聯式資料庫供 SQL**文件](../relational-databases/new-updated-relational-databases.md)
-- [新 + 更新 (1 + 0):&nbsp; **Reporting Services SQL**文件](../reporting-services/new-updated-reporting-services.md)
-- [新 + 更新 (1 + 1):&nbsp; **SQL 作業 Studio**文件](../sql-operations-studio/new-updated-sql-operations-studio.md)
-- [新 + 更新 (1 + 1):&nbsp; **Microsoft SQL Server**文件](../sql-server/new-updated-sql-server.md)
-- [新 + 更新 (0 + 1):&nbsp; **SQL Server Data Tools (SSDT)**文件](../ssdt/new-updated-ssdt.md)
-- [新 + 更新 (1 + 2):&nbsp; **SQL Server Management Studio (SSMS)**文件](../ssms/new-updated-ssms.md)
-- [新 + 更新 (0 + 2):&nbsp; **TRANSACT-SQL**文件](../t-sql/new-updated-t-sql.md)
 
+#### <a name="subject-areas-that-do-not-have-any-new-or-recently-updated-articles"></a>沒有新文章或最近更新文章的主題區
 
-
-#### <a name="subject-areas-that-do-not-have-any-new-or-recently-updated-articles"></a>主旨區域執行*不*有任何新的或最近的更新發行項
-
-
-- [新文章 + 更新文章 (0+0)：**SQL 資料移轉小幫手 (DMA)** 文件](../dma/new-updated-dma.md)
-- [新 + 更新 (0 + 0): **ActiveX Data Objects (ADO) 的 SQL**文件](../ado/new-updated-ado.md)
-- [新文章 + 更新文章 (0+0)：**SQL Analysis Services** 文件](../analysis-services/new-updated-analysis-services.md)
+- [新文章 + 更新文章 (0+0)：**SQL 的分析平台系統**文件](../analytics-platform-system/new-updated-analytics-platform-system.md)
 - [新 + 更新 (0 + 0): **SQL 的 Data Quality Services**文件](../data-quality-services/new-updated-data-quality-services.md)
 - [新 + 更新 (0 + 0):**資料採礦延伸模組 (DMX)，sql**文件](../dmx/new-updated-dmx.md)
 - [新文章 + 更新文章 (0+0)：**SQL Master Data Services (MDS)** 文件](../master-data-services/new-updated-master-data-services.md)
 - [新 + 更新 (0 + 0):**多維度運算式 (MDX) 的 SQL**文件](../mdx/new-updated-mdx.md)
 - [新 + 更新 (0 + 0): **ODBC （開放式資料庫連接） 的 SQL**文件](../odbc/new-updated-odbc.md)
-- [新 + 更新 (0 + 0):**範例 sql**文件](../sample/new-updated-sample.md)
-- [新 + 更新 (0 + 0): **SQL Server 移轉小幫手 (SSMA)**文件](../ssma/new-updated-ssma.md)
-- [新文章 + 更新文章 (0+0)：**SQL 的工具** 文件](../tools/new-updated-tools.md)
+- [新 + 更新 (0 + 0):**適用於 SQL PowerShell**文件](../powershell/new-updated-powershell.md)
+- [新 + 更新 (0 + 0):**範例 sql**文件](../samples/new-updated-samples.md)
+- [新 + 更新 (0 + 0): **SQL Server 移轉小幫手 (SSMA)** 文件](../ssma/new-updated-ssma.md)
 - [新 + 更新 (0 + 0): **sql XQuery**文件](../xquery/new-updated-xquery.md)
-
 

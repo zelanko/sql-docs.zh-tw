@@ -1,17 +1,15 @@
 ---
-title: "DeleteRecord 方法 (ADO) |Microsoft 文件"
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
+title: DeleteRecord 方法 (ADO) |Microsoft 文件
+ms.prod: sql
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
-ms.custom: 
+ms.technology: connectivity
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 apitype: COM
 f1_keywords:
 - _Record::raw_DeleteRecord
@@ -19,16 +17,15 @@ f1_keywords:
 helpviewer_keywords:
 - DeleteRecord method [ADO]
 ms.assetid: 2726498c-dbd8-4266-983b-ae7d62c39142
-caps.latest.revision: 
+caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 5088293b3866f74f39e608a8de8f300d4e3980c1
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: ca7b2a425e24a115b8572f26ec7b2efb103ba9ec
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="deleterecord-method-ado"></a>DeleteRecord 方法 (ADO)
 刪除所代表的實體[記錄](../../../ado/reference/ado-api/record-object-ado.md)。  
@@ -44,7 +41,7 @@ Record.DeleteRecord Source, Async
  *Source*  
  選擇性。 A**字串**值，包含 URL 識別 （例如，檔案或目錄） 的實體被刪除。 如果*來源*省略或空字串，表示由目前的實體指定[記錄](../../../ado/reference/ado-api/record-object-ado.md)被刪除。 如果記錄集合記錄 ([RecordType](../../../ado/reference/ado-api/recordtype-property-ado.md)的**adCollectionRecord**，例如目錄) 所有的子系 （例如，是子目錄） 也將一併刪除。  
   
- *Async*  
+ *非同步*  
  選擇性。 A**布林**值，當**True**，指定刪除作業是非同步。  
   
 ## <a name="remarks"></a>備註  

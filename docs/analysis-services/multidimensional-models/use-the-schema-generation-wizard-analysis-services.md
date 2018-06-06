@@ -1,34 +1,23 @@
 ---
-title: "使用結構描述產生精靈 (Analysis Services) |Microsoft 文件"
-ms.custom: 
-ms.date: 03/01/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
-helpviewer_keywords:
-- Schema Generation Wizard, steps
-- relational schema [Analysis Services], Schema Generation Wizard
-ms.assetid: 8c710745-d41d-4c31-b6a2-2956229df75a
-caps.latest.revision: 
-author: Minewiskan
+title: 使用結構描述產生精靈 (Analysis Services) |Microsoft 文件
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: multidimensional-models
+ms.topic: conceptual
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: d8cae9fd297d0ae2946cccab69a9a273a2cf85b4
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: a9f60b324a706d28145fb9e843957b20da5ed90a
+ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="use-the-schema-generation-wizard-analysis-services"></a>使用結構描述產生精靈 (Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-結構描述產生精靈在產生階段，需要不多的資訊。 [結構描述產生精靈] 產生關聯式結構描述所需的大部分資訊，都是從您在專案中已建立的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Cube 和維度中擷取。 此外，您可以自訂產生主題領域資料庫結構描述的方式，以及為結構描述中之物件命名的方式。  
+  結構描述產生精靈在產生階段，需要不多的資訊。 [結構描述產生精靈] 產生關聯式結構描述所需的大部分資訊，都是從您在專案中已建立的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Cube 和維度中擷取。 此外，您可以自訂產生主題領域資料庫結構描述的方式，以及為結構描述中之物件命名的方式。  
   
 ## <a name="start-the-wizard"></a>啟動精靈  
  您可以使用幾個不同的方法從 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 開啟 [結構描述產生精靈]：  

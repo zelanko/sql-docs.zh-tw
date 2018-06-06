@@ -1,16 +1,14 @@
 ---
-title: "sp_get_query_template (TRANSACT-SQL) |Microsoft 文件"
-ms.custom: 
+title: sp_get_query_template (TRANSACT-SQL) |Microsoft 文件
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: system-objects
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_get_query_template
@@ -20,16 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_get_query_template
 ms.assetid: 85e9bef7-2417-41a8-befa-fe75507d9bf2
-caps.latest.revision: 
+caps.latest.revision: 26
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 17fa74789d172177747ed398c43ae5ac9f1f1db5
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 3fac47c5b84894f681ffc9c6729dd526f9e8488c
+ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="spgetquerytemplate-transact-sql"></a>sp_get_query_template (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -53,10 +50,10 @@ sp_get_query_template
  這是要產生參數化版本的查詢。 '*query_text*' 必須括在單引號中，且前面必須有 N Unicode 規範。 N'*query_text*' 的值指派給@querytext參數。 這屬於類型**nvarchar （max)**。  
   
  @templatetext  
- 這是輸出參數的型別**nvarchar （max)**指示，以接收的參數化的形式提供*query_text*字串常值。  
+ 這是輸出參數的型別**nvarchar （max)** 指示，以接收的參數化的形式提供*query_text*字串常值。  
   
  @parameters  
- 這是輸出參數的型別**nvarchar （max)**指示，以接收中已參數化之參數名稱和資料類型的字串常值提供@templatetext。  
+ 這是輸出參數的型別**nvarchar （max)** 指示，以接收中已參數化之參數名稱和資料類型的字串常值提供@templatetext。  
   
 ## <a name="remarks"></a>備註  
  當發生下列情況時，sp_get_query_template 會傳回錯誤：  
@@ -119,9 +116,9 @@ SELECT @my_parameters;
 > [!NOTE]  
 >  在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的快速修復工程、Service Pack 和版本升級之間，sp_get_query_template 輸出中的參數順序和命名可能會不同。 升級也可能造成針對相同查詢參數化不同組的常數常值，在兩個輸出參數的結果中，可能會套用不同的間距。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [系統預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
- [Database Engine 預存程序 &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
+ [Database Engine 預存程序&#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
  [使用計畫指南指定查詢參數化行為](../../relational-databases/performance/specify-query-parameterization-behavior-by-using-plan-guides.md)  
   
   

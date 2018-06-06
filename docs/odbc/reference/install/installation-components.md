@@ -1,30 +1,27 @@
 ---
-title: "安裝元件 |Microsoft 文件"
-ms.custom: 
+title: 安裝元件 |Microsoft 文件
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
-ms.component: odbc
-ms.reviewer: 
+ms.prod: sql
+ms.prod_service: connectivity
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: connectivity
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - installing ODBC components [ODBC], setup program
 - ODBC [ODBC], component installation
 ms.assetid: 9de15ca0-fe6a-4634-8709-a928d3c9cc73
-caps.latest.revision: "10"
+caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
-ms.workload: On Demand
-ms.openlocfilehash: eb01be821c1d3fd1d08c7a21b605354836d78a54
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+manager: craigg
+ms.openlocfilehash: 1c5fe2538d1567630121f05a4798583099de7200
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="installation-components"></a>安裝元件
 > [!NOTE]  
@@ -35,7 +32,7 @@ ms.lasthandoff: 12/21/2017
  ![安裝元件之間的關聯性](../../../odbc/reference/install/media/pr29.gif "pr29")  
   
 > [!IMPORTANT]  
->  ODBC 2 中使用 Odbc.inf 檔案。*x*來描述每個 ODBC 所需的檔案元件不是在 ODBC 3*.x*。 驅動程式隨附 ODBC 3*.x*元件不需要建立 Odbc.inf 檔案。 移除**SQLInstallDriver**和**SQLInstallODBC**，並取代的**SQLInstallTranslator**，轉譯 Odbc.inf 非必要。 使用 Driver 關鍵字各 Odbc.inf 的驅動程式的資訊現已提供中*lpszDriver*引數中的**SQLInstallDriverEx**。 用於 [ODBC 轉譯程式] 中的轉譯程式資訊和 Odbc.inf 轉譯器規格區段現在提供在*lpszTranslator*引數的**SQLInstallTranslatorEx**。 這些變更可讓 ODBC 安裝程式能夠更容易移植到不同的平台。  
+>  ODBC 2 中使用 Odbc.inf 檔案。*x*來描述每個 ODBC 所需的檔案元件不是在 ODBC 3 *.x*。 驅動程式隨附 ODBC 3 *.x*元件不需要建立 Odbc.inf 檔案。 移除**SQLInstallDriver**和**SQLInstallODBC**，並取代的**SQLInstallTranslator**，轉譯 Odbc.inf 非必要。 使用 Driver 關鍵字各 Odbc.inf 的驅動程式的資訊現已提供中*lpszDriver*引數中的**SQLInstallDriverEx**。 用於 [ODBC 轉譯程式] 中的轉譯程式資訊和 Odbc.inf 轉譯器規格區段現在提供在*lpszTranslator*引數的**SQLInstallTranslatorEx**。 這些變更可讓 ODBC 安裝程式能夠更容易移植到不同的平台。  
   
  如需有關這些元件的詳細資訊，請參閱本節結尾處的下列主題。  
   

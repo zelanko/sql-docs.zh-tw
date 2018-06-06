@@ -1,30 +1,24 @@
 ---
-title: "對 PolyBase Kerberos 的連線問題進行疑難排解 | Microsoft Docs"
-description: 
-services: 
-documentationcenter: 
+title: 對 PolyBase Kerberos 的連線問題進行疑難排解 | Microsoft Docs
 author: alazad-msft
-manager: 
-editor: 
-tags: 
-ms.assetid: 
-ms.service: 
+ms.author: alazad
+manager: craigg
+ms.assetid: ''
 ms.component: polybase
+ms.technology: polybase
 ms.suite: sql
-ms.custom: 
-ms.workload: 
+ms.custom: ''
 ms.tgt_pltfrm: na
-ms.devlang: 
+ms.devlang: ''
 ms.topic: article
 ms.date: 07/19/2017"
-ms.prod: sql-non-specified
-ms.prod_service: database-engine, sql-data-warehouse, pdw
-ms.author: alazad
-ms.openlocfilehash: cbbc687cf4c3a5edf769ab973879bc81f8db8406
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.prod: sql
+ms.prod_service: polybase, sql-data-warehouse, pdw
+ms.openlocfilehash: fc09df1265c81f1fe1a127e17c4ebd4edcc66a1a
+ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="troubleshoot-polybase-kerberos-connectivity"></a>對 PolyBase Kerberos 的連線問題進行疑難排解
 [!INCLUDE[appliesto-ss-xxxx-asdw-pdw-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

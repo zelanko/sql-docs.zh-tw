@@ -1,16 +1,15 @@
 ---
-title: "自訂地圖或地圖圖層的資料和顯示 (報表產生器及 SSRS) | Microsoft Docs"
-ms.custom: 
+title: 自訂地圖或地圖圖層的資料和顯示 (報表產生器及 SSRS) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: report-design
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 f1_keywords:
 - "10521"
 - sql13.rtp.rptdesigner.mapgroupproperties.filter.f1
@@ -25,16 +24,15 @@ f1_keywords:
 - sql13.rtp.rptdesigner.mapgroupproperties.variables.f1
 - "10507"
 ms.assetid: fdd9b994-d138-4990-a291-279b0249eb72
-caps.latest.revision: "13"
+caps.latest.revision: 13
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: f0c131fe26b5f7ab05a774ed7c66f54db0d816bb
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 2965210603f3727edd2563d5f0b9301e31efee0e
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="customize-the-data-and-display-of-a-map-or-map-layer-report-builder-and-ssrs"></a>自訂地圖或地圖圖層的資料和顯示 (報表產生器及 SSRS)
   使用精靈將地圖或地圖圖層加入至 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 分頁報表之後，您可能會想要變更地圖在報表中的外觀。 您可以考慮下列構想來進行改善：  

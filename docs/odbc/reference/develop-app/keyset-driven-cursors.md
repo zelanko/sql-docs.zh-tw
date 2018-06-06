@@ -1,30 +1,27 @@
 ---
-title: "索引鍵集驅動資料指標 |Microsoft 文件"
-ms.custom: 
+title: 索引鍵集驅動資料指標 |Microsoft 文件
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
-ms.component: odbc
-ms.reviewer: 
+ms.prod: sql
+ms.prod_service: connectivity
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: connectivity
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - keyset-driven cursors [ODBC]
 - cursors [ODBC], key-set driven
 ms.assetid: 01769f43-1d9c-4685-84fa-15a6465335e9
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
-ms.workload: Inactive
-ms.openlocfilehash: eff91b12ebf378aa4bbcdbbfbdfa84c40a66f06b
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+manager: craigg
+ms.openlocfilehash: 13bb740a6d76ae97541f39b73d1cecf60bef61fa
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="keyset-driven-cursors"></a>索引鍵集驅動資料指標
 索引鍵集驅動資料指標的介於靜態和動態資料指標偵測變更的能力。 類似靜態資料指標，它不一定偵測的變更的成員資格和順序的結果集。 動態資料指標，例如它沒有結果集 （受限於由 SQL_ATTR_TXN_ISOLATION 連接屬性設定的交易隔離等級） 來偵測變更的資料列的值。  

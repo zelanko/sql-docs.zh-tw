@@ -1,24 +1,21 @@
 ---
-title: "SUSE Linux Enterprise Server 上的 SQL Server 的自動的安裝 |Microsoft 文件"
-description: "SQL Server 指令碼範例在 SUSE Linux Enterprise Server 上的自動安裝"
+title: SUSE Linux Enterprise Server 上的 SQL Server 的自動的安裝 |Microsoft 文件
+description: SQL Server 指令碼範例在 SUSE Linux Enterprise Server 上的自動安裝
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.date: 10/02/2017
 ms.topic: article
-ms.prod: sql-non-specified
-ms.prod_service: database-engine
-ms.service: 
-ms.component: 
+ms.prod: sql
+ms.component: ''
 ms.suite: sql
 ms.custom: sql-linux
-ms.technology: database-engine
-ms.workload: Inactive
-ms.openlocfilehash: 3302262c83d8d12e0fff826a2f9c72afa4068941
-ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
+ms.technology: linux
+ms.openlocfilehash: 53d4e3838288180994e3e505fc93f4ef18aca402
+ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/13/2018
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="sample-unattended-sql-server-installation-script-for-suse-linux-enterprise-server"></a>SUSE Linux Enterprise Server 的範例： 無人看管的 SQL Server 安裝指令碼
 

@@ -1,16 +1,12 @@
 ---
-title: "sys.dm_os_child_instances (TRANSACT-SQL) |Microsoft 文件"
-ms.custom: 
+title: sys.dm_os_child_instances (TRANSACT-SQL) |Microsoft 文件
+ms.custom: ''
 ms.date: 08/18/2017
-ms.prod: sql-non-specified
-ms.prod_service: database-engine
-ms.service: 
-ms.component: dmv's
-ms.reviewer: 
+ms.prod: sql
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: system-objects
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.dm_os_child_instances
@@ -24,16 +20,15 @@ helpviewer_keywords:
 - sys.dm_os_child_instances dynamic management view
 - monitoring server health
 ms.assetid: 1bef3074-0ccc-48fa-8f3d-14f3d99df86b
-caps.latest.revision: 
+caps.latest.revision: 37
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: d33bda7b901600598446cdea45d434df84b6e7f0
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 66f4d8c770cc10c2ba47769576d8f9625edac0cf
+ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 05/23/2018
 ---
 # <a name="sysdmoschildinstances-transact-sql"></a>sys.dm_os_child_instances (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,7 +39,7 @@ ms.lasthandoff: 02/03/2018
   
  從傳回的資訊**sys.dm_os_child_instances**可用來判斷每個使用者執行個體 (heart_beat) 的狀態，以及取得可用來建立的使用者連接的管道名稱 (instance_pipe_name)執行個體使用[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]或 SQLCmd。 您只能連接到已由外部處理序 (例如，用戶端應用程式) 啟動的使用者執行個體。 SQL 管理工具無法啟動使用者執行個體。  
   
-> **注意：**使用者執行個體是一項功能的[!INCLUDE[ssExpressEd11](../../includes/ssexpressed11-md.md)]只。  
+> **注意：** 使用者執行個體是一項功能的[!INCLUDE[ssExpressEd11](../../includes/ssexpressed11-md.md)]只。  
   
 > **請注意**呼叫從[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]或[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]，使用名稱**sys.dm_pdw_nodes_os_child_instances**。  
   
@@ -64,7 +59,7 @@ ms.lasthandoff: 02/03/2018
  需要伺服器的 VIEW SERVER STATE 權限。  
   
 ## <a name="remarks"></a>備註  
- 如需有關動態管理檢視的詳細資訊，請參閱[動態管理檢視和函數 &#40;TRANSACT-SQL &#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)中[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]線上叢書 》。  
+ 如需有關動態管理檢視的詳細資訊，請參閱[動態管理檢視和函數&#40;TRANSACT-SQL&#41; ](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)中[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]線上叢書 》。  
   
 ## <a name="see-also"></a>另請參閱  
  [非系統管理員的使用者執行個體](http://msdn.microsoft.com/en-us/85385aae-10fb-4f8b-9eeb-cce2ee7da019)  

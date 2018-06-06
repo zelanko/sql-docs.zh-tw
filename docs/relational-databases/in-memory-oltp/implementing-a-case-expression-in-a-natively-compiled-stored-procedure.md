@@ -1,33 +1,31 @@
 ---
-title: "在原生編譯的預存程序中實作 CASE 運算式 | Microsoft Docs"
-ms.custom: 
+title: 在原生編譯的預存程序中實作 CASE 運算式 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/21/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
 ms.component: in-memory-oltp
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine-imoltp
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: in-memory-oltp
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: 2f82db01-da7e-4a7d-8bc0-48b245e6f768
-caps.latest.revision: 
+caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 6419acc6380b15d289d3ac3602d6a28c0fc5c75b
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 5241efba681fa1913d77ea6857da26aef3c227ca
+ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="implementing-a-case-expression-in-a-natively-compiled-stored-procedure"></a>在原生編譯的預存程序中實作 CASE 運算式
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
-**適用於**：[!INCLUDE[ssSDSFull_md](../../includes/ssSDSFull_md.md)] 和 SQL Server (從 [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]
+**適用於：**[!INCLUDE[ssSDSFull_md](../../includes/ssSDSFull_md.md)] 和 SQL Server (從 [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 起)
 
 原生編譯的 T-SQL 模組可支援 CASE 運算式。 下列範例示範一種在查詢中使用 CASE 運算式的方式。 
 
@@ -50,7 +48,7 @@ EXEC dbo.usp_SOHOnlineOrderResult
 GO  
 ``` 
 
-**適用於**：[!INCLUDE[ssSQL14-md](../../includes/ssSQL14-md.md)] 和 SQL Server (從 [!INCLUDE[ssSQL15-md](../../includes/ssSQL15-md.md)]
+**適用於：**[!INCLUDE[ssSQL14-md](../../includes/ssSQL14-md.md)] 和 SQL Server (從 [!INCLUDE[ssSQL15-md](../../includes/ssSQL15-md.md)] 起)
 
   原生編譯的 T-SQL 模組「不」支援 CASE 運算式。 下列範例示範如何在原生編譯的預存程序中實作 CASE 運算式功能。  
   

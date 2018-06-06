@@ -1,16 +1,15 @@
 ---
-title: "sp_helpmergearticle (TRANSACT-SQL) |Microsoft 文件"
-ms.custom: 
+title: sp_helpmergearticle (TRANSACT-SQL) |Microsoft 文件
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - sp_helpmergearticle
 ms.assetid: 0fb9986a-3c33-46ef-87bb-297396ea5a6a
-caps.latest.revision: 
+caps.latest.revision: 40
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 970c07111ba123be3262f9effb5c87a26bb14960
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 46c8751290a1e5c08cb2f77a458aae252ec903c2
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sphelpmergearticle-transact-sql"></a>sp_helpmergearticle (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,20 +45,20 @@ sp_helpmergearticle [ [ @publication = ] 'publication' ]
 ```  
   
 ## <a name="arguments"></a>引數  
- [  **@publication=**] **'***發行集***'**  
- 這是將擷取資訊之發行集的名稱。 *發行集*是**sysname**，預設值是 **%** ，傳回包含在目前資料庫中的所有發行集的所有合併發行項的相關資訊。  
+ [ **@publication=**] **'***publication***'**  
+ 這是將擷取資訊之發行集的名稱。 *發行集*是**sysname**，預設值是**%**，傳回包含在目前資料庫中的所有發行集的所有合併發行項的相關資訊。  
   
  [  **@article=**] **'***文章***'**  
- 這是要傳回資訊之發行項的名稱。 *發行項*是**sysname**，預設值是 **%** ，傳回給定發行集中所有合併發行項的相關資訊。  
+ 這是要傳回資訊之發行項的名稱。 *發行項*是**sysname**，預設值是**%**，傳回給定發行集中所有合併發行項的相關資訊。  
   
 ## <a name="result-set"></a>結果集  
   
-|資料行名稱|資料類型|描述|  
+|資料行名稱|資料類型|Description|  
 |-----------------|---------------|-----------------|  
 |**id**|**int**|發行項識別碼。|  
 |**name**|**sysname**|發行項的名稱。|  
 |**source_owner**|**sysname**|來源物件擁有者的名稱。|  
-|**_ o b j**|**sysname**|新增發行項的來源物件名稱。|  
+|**source_object**|**sysname**|新增發行項的來源物件名稱。|  
 |**sync_object_owner**|**sysname**|定義已發行的發行項之檢視的擁有者名稱。|  
 |**sync_object**|**sysname**|用來建立資料分割初始資料之自訂物件的名稱。|  
 |**描述**|**nvarchar(255)**|發行項的描述。|  
@@ -68,10 +66,10 @@ sp_helpmergearticle [ [ @publication = ] 'publication' ]
 |**creation_script**|**nvarchar(255)**|在訂閱資料庫中，用來建立發行項的選擇性發行項結構描述指令碼的路徑和名稱。|  
 |**conflict_table**|**nvarchar(270)**|儲存插入或更新衝突的資料表名稱。|  
 |**article_resolver**|**nvarchar(255)**|自訂的發行項解析程式。|  
-|**subset_filterclause**|**nvarchar （1000)**|指定水平篩選的 WHERE 子句。|  
+|**subset_filterclause**|**nvarchar(1000)**|指定水平篩選的 WHERE 子句。|  
 |**pre_creation_command**|**tinyint**|預先建立方法，它可以是下列項目之一：<br /><br /> **0** = 無<br /><br /> **1** = 卸除<br /><br /> **2** = 刪除<br /><br /> **3** = 截斷|  
-|**schema_option**|**binary （8)**|發行項的結構描述產生選項點陣圖。 有關這個點陣圖選項的詳細資訊，請參閱[sp_addmergearticle](../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md)或[sp_changemergearticle](../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md)。|  
-|**型別**|**smallint**|發行項的類型，它可以是下列項目之一：<br /><br /> **10** = 資料表<br /><br /> **32** = 預存程序<br /><br /> **64** = 檢視或索引檢視表<br /><br /> **128** = 使用者定義函數<br /><br /> **160** = 僅限同義字結構描述|  
+|**schema_option**|**binary(8)**|發行項的結構描述產生選項點陣圖。 有關這個點陣圖選項的詳細資訊，請參閱[sp_addmergearticle](../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md)或[sp_changemergearticle](../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md)。|  
+|**type**|**smallint**|發行項的類型，它可以是下列項目之一：<br /><br /> **10** = 資料表<br /><br /> **32** = 預存程序<br /><br /> **64** = 檢視或索引檢視表<br /><br /> **128** = 使用者定義函數<br /><br /> **160** = 僅限同義字結構描述|  
 |**column_tracking**|**int**|設定資料行層級追蹤。其中**1**表示資料行層級追蹤已開啟，並**0**表示資料行層級追蹤已經關閉。|  
 |**resolver_info**|**nvarchar(255)**|發行項解析程式的名稱。|  
 |**vertical_partition**|**bit**|如果發行項的垂直資料分割;其中**1**表示，發行項的垂直資料分割，以及**0**表示它不是。|  
@@ -79,12 +77,12 @@ sp_helpmergearticle [ [ @publication = ] 'publication' ]
 |**identity_support**|**int**|如果已啟用自動識別範圍處理。其中**1**已啟用和**0**已停用。|  
 |**pub_identity_range**|**bigint**|當指派新的識別值時，所用的範圍大小。 如需詳細資訊，請參閱 「 合併式複寫 」 一節[複寫識別資料行](../../relational-databases/replication/publish/replicate-identity-columns.md)。|  
 |**identity_range**|**bigint**|當指派新的識別值時，所用的範圍大小。 如需詳細資訊，請參閱 「 合併式複寫 」 一節[複寫識別資料行](../../relational-databases/replication/publish/replicate-identity-columns.md)。|  
-|**臨界值**|**int**|用於執行的訂閱者的百分比值[!INCLUDE[ssEW](../../includes/ssew-md.md)]或舊版[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 **閾值**控制合併代理程式指派新識別範圍的時機。 當使用 threshold 指定的百分比值，合併代理程式會建立新的識別範圍。 如需詳細資訊，請參閱 「 合併式複寫 」 一節[複寫識別資料行](../../relational-databases/replication/publish/replicate-identity-columns.md)。|  
+|**threshold**|**int**|用於執行的訂閱者的百分比值[!INCLUDE[ssEW](../../includes/ssew-md.md)]或舊版[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 **閾值**控制合併代理程式指派新識別範圍的時機。 當使用 threshold 指定的百分比值，合併代理程式會建立新的識別範圍。 如需詳細資訊，請參閱 「 合併式複寫 」 一節[複寫識別資料行](../../relational-databases/replication/publish/replicate-identity-columns.md)。|  
 |**verify_resolver_signature**|**int**|如果在合併式複寫; 使用解析程式之前驗證數位簽章其中**0**表示不驗證簽章，以及**1**表示簽章會驗證它是否來自信任的來源。|  
 |**destination_object**|**sysname**|目的地物件的名稱。 只適用於合併預存程序、檢視和 UDF 結構描述發行項。|  
 |**allow_interactive_resolver**|**int**|如果發行項; 上使用互動式解析程式其中**1**表示會使用這個解析程式，以及**0**表示不使用。|  
 |**fast_multicol_updateproc**|**int**|啟用或停用合併代理程式將變更套用到在一個 UPDATE 陳述式; 相同的資料列中的多個資料行其中**1**表示，在單一陳述式，也會更新多個資料行和**0**個別 UPDATE 陳述式的方式是每個更新的資料行的問題。|  
-|**check_permissions**|**int**|這是一個整數值，代表所驗證之資料表層級權限的點陣圖。 如需可能值的清單，請參閱[sp_addmergearticle &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md).|  
+|**check_permissions**|**int**|這是一個整數值，代表所驗證之資料表層級權限的點陣圖。 如需可能值的清單，請參閱[sp_addmergearticle &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md)。|  
 |**processing_order**|**int**|發行集中的發行項套用資料變更的順序。|  
 |**upload_options**|**tinyint**|定義客訂閱在訂閱者端進行的更新之限制，它可以是下列值之一。<br /><br /> **0** = 客訂閱的訂閱者端進行的更新沒有限制; 所有的變更會上傳到 「 發行者 」。<br /><br /> **1** = 允許客訂閱，訂閱者端進行變更，但未上傳到 「 發行者 」。<br /><br /> **2** = 不允許客訂閱的訂閱者端進行變更。<br /><br /> 如需詳細資訊，請參閱[使用僅限下載的發行項最佳化合併式複寫效能](../../relational-databases/replication/merge/optimize-merge-replication-performance-with-download-only-articles.md)。|  
 |**identityrangemanagementoption**|**int**|如果已啟用自動識別範圍處理。其中**1**已啟用和**0**已停用。|  
@@ -107,9 +105,9 @@ sp_helpmergearticle [ [ @publication = ] 'publication' ]
 ## <a name="example"></a>範例  
  [!code-sql[HowTo#sp_helpmergearticle](../../relational-databases/replication/codesnippet/tsql/sp-helpmergearticle-tran_1.sql)]  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [檢視和修改發行項屬性](../../relational-databases/replication/publish/view-and-modify-article-properties.md)   
- [sp_addmergearticle &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md)   
+ [sp_addmergearticle &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md)   
  [sp_changemergearticle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md)   
  [sp_dropmergearticle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropmergearticle-transact-sql.md)   
  [複寫預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  

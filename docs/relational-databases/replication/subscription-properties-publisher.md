@@ -1,32 +1,30 @@
 ---
-title: "訂閱屬性 - 發行者 | Microsoft Docs"
-ms.custom: 
+title: 訂閱屬性 - 發行者 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
 ms.component: replication
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 f1_keywords:
 - sql13.rep.newsubwizard.subproperties.publisher.f1
 helpviewer_keywords:
 - Subscription Properties dialog box
 ms.assetid: d4b2bc8b-0431-4331-8305-8992c96d0d34
-caps.latest.revision: 
+caps.latest.revision: 22
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: dbf57cb3f73b3f59130afd10492b248a16a9cf5f
-ms.sourcegitcommit: ab25b08a312d35489a2c4a6a0d29a04bbd90f64d
+ms.openlocfilehash: a393e209483b93b0181bc57f4eabac1727c967fa
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="subscription-properties---publisher"></a>訂閱屬性 - 發行者
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -57,7 +55,7 @@ ms.lasthandoff: 03/08/2018
   
 ## <a name="options-for-merge-subscriptions"></a>合併訂閱的選項  
  **資料分割定義 (HOST_NAME)**  
- 針對使用參數化篩選的發行集，合併式複寫會在同步處理過程中評估兩個系統函數之一 (如果篩選參考兩個函數，則兩個都會評估)，以決定訂閱者應接收的資料： **SUSER_SNAME()** 或 **HOST_NAME()**。 依預設， **HOST_NAME()** 會傳回執行合併代理程式之電腦的名稱，但是您可以在新增訂閱精靈中覆寫這個值。 如需參數化篩選與覆寫 **HOST_NAME()**的詳細資訊，請參閱＜ [Parameterized Row Filters](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)＞。  
+ 針對使用參數化篩選的發行集，合併式複寫會在同步處理過程中評估兩個系統函數之一 (如果篩選參考兩個函數，則兩個都會評估)，以決定訂閱者應接收的資料： **SUSER_SNAME()** 或 **HOST_NAME()**。 依預設， **HOST_NAME()** 會傳回執行合併代理程式之電腦的名稱，但是您可以在新增訂閱精靈中覆寫這個值。 如需參數化篩選與覆寫 **HOST_NAME()** 的詳細資訊，請參閱＜ [Parameterized Row Filters](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)＞。  
   
  **[訂閱類型]** 和 **[優先權]**  
  顯示訂閱是客訂閱或主訂閱 (建立了訂閱之後就無法再變更)。 主訂閱可以將資料重新發行至其他訂閱者，並且可以指派衝突解決的優先權。  

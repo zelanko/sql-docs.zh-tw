@@ -1,33 +1,32 @@
 ---
-title: "還原資料庫主要金鑰 | Microsoft 文件"
-ms.custom: 
+title: 還原資料庫主要金鑰 | Microsoft 文件
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
 ms.component: security
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - database master key [SQL Server], importing
 ms.assetid: 16897cc5-db8f-43bb-a38e-6855c82647cf
-caps.latest.revision: 
+caps.latest.revision: 16
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 74a31a4f25ca6e1666e3057bef990765460ca4e1
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 41b2a6badc568faa98bc920770020b1a70d16d28
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="restore-a-database-master-key"></a>還原資料庫主要金鑰
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 此主題描述如何使用 [!INCLUDE[tsql](../../../includes/tsql-md.md)]，還原 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 中的資料庫主要金鑰。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  此主題描述如何使用 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] ，還原 [!INCLUDE[tsql](../../../includes/tsql-md.md)]中的資料庫主要金鑰。  
   
  **本主題內容**  
   
@@ -35,7 +34,7 @@ ms.lasthandoff: 11/21/2017
   
      [限制事項](#Restrictions)  
   
-     [安全性](#Security)  
+     [Security](#Security)  
   
 -   [若要使用 Transact-SQL 還原資料庫主要金鑰](#SSMSProcedure)  
   
@@ -53,7 +52,7 @@ ms.lasthandoff: 11/21/2017
   
 ###  <a name="Security"></a> 安全性  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> 權限  
  需要資料庫的 CONTROL 權限。  
   
 ##  <a name="SSMSProcedure"></a> 搭配 Transact-SQL 使用 SQL Server Management Studio  
@@ -62,11 +61,11 @@ ms.lasthandoff: 11/21/2017
   
 1.  從實體備份媒體或本機檔案系統上的目錄，擷取已備份的資料庫主要金鑰副本。  
   
-2.  在 **[物件總管]**中，連接到 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]的執行個體。  
+2.  在 **[物件總管]** 中，連接到 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]的執行個體。  
   
 3.  在標準列上，按一下 **[新增查詢]**。  
   
-4.  將下列範例複製並貼入查詢視窗中，然後按一下 **[執行]**。  
+4.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]**。  
   
     ```  
     -- Restores the database master key of the AdventureWorks2012 database.  

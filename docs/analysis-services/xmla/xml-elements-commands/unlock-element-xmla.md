@@ -1,39 +1,24 @@
 ---
-title: "Unlock 元素 (XMLA) |Microsoft 文件"
-ms.custom: 
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services, azure-analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+title: Unlock 元素 (XMLA) |Microsoft 文件
+ms.date: 05/08/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: xmla
 ms.topic: reference
-apiname: Unlock Element
-apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
-apitype: Schema
-applies_to: SQL Server 2016 Preview
-f1_keywords:
-- http://schemas.microsoft.com/analysisservices/2003/engine#Unlock
-- urn:schemas-microsoft-com:xml-analysis#Unlock
-- microsoft.xml.analysis.unlock
-helpviewer_keywords: Unlock command
-ms.assetid: 46425b33-baa2-41ad-803a-34d2fb4b2cab
-caps.latest.revision: "14"
-author: Minewiskan
 ms.author: owend
-manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: e898471957c96ea35b1214cd389eb6ba8ebc901d
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.reviewer: owend
+author: minewiskan
+manager: kfilee"
+ms.openlocfilehash: 18b81434c2e863ef3fc4db6ce2458f236dafdd53
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34573870"
 ---
 # <a name="unlock-element-xmla"></a>Unlock 元素 (XMLA)
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]在解除鎖定的指定的鎖定[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]執行個體。  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
+  解除鎖定 Analysis Services 執行個體上的指定的鎖定。  
   
 ## <a name="syntax"></a>語法  
   
@@ -66,8 +51,8 @@ ms.lasthandoff: 01/08/2018
   
  所有鎖定都會保存在目前交易的內容中。 當目前的交易經過認可或回復時，就會自動釋放在交易內部定義的所有鎖定。  
   
-## <a name="see-also"></a>請參閱  
- [Lock 元素 &#40;XMLA &#41;](../../../analysis-services/xmla/xml-elements-commands/lock-element-xmla.md)   
- [命令 &#40;XMLA &#41;](../../../analysis-services/xmla/xml-elements-commands/xml-elements-commands.md)  
+## <a name="see-also"></a>另請參閱
+ [鎖定項目&#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-commands/lock-element-xmla.md)   
+ [命令&#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-commands/xml-elements-commands.md)  
   
   

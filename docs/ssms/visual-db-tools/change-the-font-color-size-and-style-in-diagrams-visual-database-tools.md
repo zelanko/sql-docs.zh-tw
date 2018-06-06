@@ -1,34 +1,33 @@
 ---
-title: "變更圖表中的字型色彩、大小及樣式 | Microsoft Docs"
-ms.custom: 
+title: 變更圖表中的字型色彩、大小及樣式 | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
 ms.component: ssms-visual-db
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: tools-ssms
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ssms
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - database diagrams [SQL Server], changing text size
 - text in database diagrams
 - appearance of database diagrams
 ms.assetid: 14de9c19-8bbf-4347-bef5-156499640052
-caps.latest.revision: "3"
+caps.latest.revision: 3
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 0924148e83cbaa52da10b883cfdf7a67ed4011fa
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.openlocfilehash: bd841dcccf602cd359cb0a8af5ef6d1e97924842
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="change-the-font-color-size-and-style-in-diagrams-visual-database-tools"></a>變更圖表中的字型色彩、大小及樣式 (Visual Database Tools)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 您可以透過變更字型色彩、大小及樣式，自訂資料庫圖表中文字的顯示方式。 進行修改後，這些變更就會套用至新的圖表以及現有的圖表。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+您可以透過變更字型色彩、大小及樣式，自訂資料庫圖表中文字的顯示方式。 進行修改後，這些變更就會套用至新的圖表以及現有的圖表。  
   
 ### <a name="to-change-the-font-color-size-and-style-in-diagrams"></a>若要變更圖表中的字型色彩、大小及樣式  
   

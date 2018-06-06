@@ -1,32 +1,29 @@
 ---
-title: "GetRows 方法範例 (JScript) |Microsoft 文件"
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
+title: GetRows 方法範例 (JScript) |Microsoft 文件
+ms.prod: sql
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
-ms.custom: 
+ms.technology: connectivity
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 dev_langs:
 - JScript
 helpviewer_keywords:
 - Getrows method [ADO], JScript example
 ms.assetid: d33467a5-5a56-450d-98c1-c3ce6f9f103c
-caps.latest.revision: 
+caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: a6b3d16d4d9fb84d56a3bb7941f03348410d7d3d
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: ad6b509232d807fc60b8d6a40587f6bfe3eeb16f
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="getrows-method-example-jscript"></a>GetRows 方法範例 (JScript)
 這個範例會使用[GetRows](../../../ado/reference/ado-api/getrows-method-ado.md)方法來擷取所有資料列的*Custiomers*資料表中[資料錄集](../../../ado/reference/ado-api/recordset-object-ado.md)，並使用產生的資料填入陣列。 **GetRows**方法會傳回所需的資料列數少於兩個案例中： 如果任一個[EOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md)已達到，或如果**GetRows**嘗試擷取記錄其他使用者刪除。 此函數會傳回**False**第二種情況發生時，才。 剪下並貼到 [記事本] 或其他文字編輯器，下列程式碼，然後將它儲存成**GetRowsJS.asp**。  

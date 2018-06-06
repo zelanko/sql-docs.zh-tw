@@ -1,16 +1,14 @@
 ---
 title: CREATE RESOURCE POOL (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 08/10/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-database
-ms.service: 
 ms.component: t-sql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: t-sql
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - CREATE RESOURCE POOL
@@ -22,16 +20,15 @@ dev_langs:
 helpviewer_keywords:
 - CREATE RESOURCE POOL
 ms.assetid: 82712505-c6f9-4a65-a469-f029b5a2d6cd
-caps.latest.revision: 
-author: barbkess
-ms.author: barbkess
+caps.latest.revision: 42
+author: edmacauley
+ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 6da47e346606170b29798b0301c10c5adeeed055
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 229aa2bc153efbe7b77e1e0490b6d506df82f598
+ms.sourcegitcommit: d2573a8dec2d4102ce8882ee232cdba080d39628
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="create-resource-pool-transact-sql"></a>CREATE RESOURCE POOL (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -77,12 +74,12 @@ CREATE RESOURCE POOL pool_name
  當 CPU 出現競爭時，為在資源集區中的所有要求，指定保證平均 CPU 頻寬。 *value* 是預設值為 0 的整數。 允許的 *value* 範圍從 0 至 100。  
   
  MAX_CPU_PERCENT =*value*  
- 當出現 CPU 競爭時，指定所有要求在資源集區中將會接收的最大平均 CPU 頻寬。 *value* 是預設值為 100 的整數。 允許的 *value* 範圍從 1 至 100。  
+ 當出現 CPU 競爭時，指定所有要求在資源集區中將會接收的最大平均 CPU 頻寬。 *value* 是整數，預設值為 100。 允許的 *value* 範圍從 1 至 100。  
   
  CAP_CPU_PERCENT =*value*  
  **適用於**： [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。  
   
- 指定資源集區中所有要求都將接收的 CPU 頻寬硬體上限。 將最大 CPU 頻寬層級限制為指定的值。 *value* 是預設值為 100 的整數。 允許的 *value* 範圍從 1 至 100。  
+ 指定資源集區中所有要求都將接收的 CPU 頻寬硬體上限。 將最大 CPU 頻寬層級限制為指定的值。 *value* 是整數，預設值為 100。 允許的 *value* 範圍從 1 至 100。  
   
  AFFINITY {SCHEDULER = AUTO | ( \<scheduler_range_spec> ) | NUMANODE = (\<NUMA_node_range_spec>)} **適用於**：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。  
   
@@ -104,7 +101,7 @@ INNER JOIN sys.dm_os_schedulers AS sc
  指定為此資源集區所保留的最小記憶體數量 (不與其他資源集區共享)。 *value* 是預設值為 0 的整數。允許的 *value* 範圍從 0 到 100。  
   
  MAX_MEMORY_PERCENT =*value*  
- 指定在此資源集區中，可供要求所用的伺服器記憶體總量。 *value* 是預設值為 100 的整數。 允許的 *value* 範圍從 1 至 100。  
+ 指定在此資源集區中，可供要求所用的伺服器記憶體總量。 *value* 是整數，預設值為 100。 允許的 *value* 範圍從 1 至 100。  
   
  MIN_IOPS_PER_VOLUME =*value*  
  **適用於**： [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。  

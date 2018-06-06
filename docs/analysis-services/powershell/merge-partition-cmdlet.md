@@ -1,30 +1,23 @@
 ---
-title: "Merge-partition 指令程式 |Microsoft 文件"
-ms.custom: 
-ms.date: 03/07/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services, azure-analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+title: Merge-partition 指令程式 |Microsoft 文件
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: powershell
 ms.topic: reference
-ms.assetid: 15c7b069-897d-4bc8-a808-59cbeeabe4d8
-caps.latest.revision: "9"
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 897104785c82686879a83811d070c3e1ce8391ae
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: f78b946367c6bff01ab233cf5f4382ee3b9057e0
+ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="merge-partition-cmdlet"></a>Merge-Partition 指令程式
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]將一或多個來源資料分割的資料合併到目標分割區，然後刪除來源資料分割。  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
+  將一個或多個來源資料分割的資料合併至目標資料分割中，然後刪除來源資料分割。  
 
 >[!NOTE] 
 >這份文件可能包含過時的資訊和範例。 使用 Get-help cmdlet 取得最新。
@@ -34,7 +27,7 @@ ms.lasthandoff: 01/08/2018
   
  `Merge-ASDatabase -TargetPartition <Microsoft.AnalysisServices.Partition> [-SourcePartitions] <System.String[]> -Database <string> -Cube <string> -MeasureGroup <string> [-Server <string>] [-Credentials <PSCredential>] [<CommonParameters>]`  
   
-## <a name="description"></a>描述  
+## <a name="description"></a>Description  
  Merge-Partition 指令程式會將一個或多個來源資料分割的資料合併至目標資料分割中，然後刪除來源資料分割。 只能合併符合下列所有準則的資料分割：  
   
 -   資料分割位於相同的量值群組中。  
@@ -45,7 +38,7 @@ ms.lasthandoff: 01/08/2018
   
 ## <a name="parameters"></a>參數  
   
-### <a name="-name-string"></a>-名稱\<字串 >  
+### <a name="-name-string"></a>-Name \<string>  
  指定要合併來源資料分割資料的目標資料分割。 此資料分割必須已存在。  
   
 |||  
@@ -62,7 +55,7 @@ ms.lasthandoff: 01/08/2018
 |||  
 |-|-|  
 |必要項？|true|  
-|位置？|@shouldalert|  
+|位置？|1|  
 |預設值||  
 |接受管線輸入？|false|  
 |接受萬用字元？|false|  
@@ -100,7 +93,7 @@ ms.lasthandoff: 01/08/2018
 |接受管線輸入？|false|  
 |接受萬用字元？|false|  
   
-### <a name="-server-string"></a>伺服器\<字串 >  
+### <a name="-server-string"></a>-Server \<string>  
  指定指令程式將會連接並執行的 Analysis Services 執行個體。 如果沒有提供伺服器名稱，則會建立 localhost 的連接。 若為預設執行個體，請單獨指定伺服器名稱。 若為具名執行個體，請使用格式 servername\instancename。 若為 HTTP 連接，請使用格式 http[s]://server[:port]/virtualdirectory/msmdpump.dll。  
   
 |||  
@@ -112,7 +105,7 @@ ms.lasthandoff: 01/08/2018
 |接受萬用字元？|false|  
   
 ### <a name="-credential-pscredential"></a>-Credential \<PSCredential >  
- 若為您已經設定為 HTTP 存取的執行個體，這個參數是在使用 Analysis Service 執行個體的 HTTP 連接時用來傳入使用者名稱和密碼。 如需詳細資訊，請參閱[設定 HTTP 存取 Analysis Services，Internet Information Services &#40; IIS &#41; 8.0](../../analysis-services/instances/configure-http-access-to-analysis-services-on-iis-8-0.md)進行 HTTP 連線。  
+ 若為您已經設定為 HTTP 存取的執行個體，這個參數是在使用 Analysis Service 執行個體的 HTTP 連接時用來傳入使用者名稱和密碼。 如需詳細資訊，請參閱[設定 Internet Information Services 上的 Analysis Services 的 HTTP 存取&#40;IIS&#41; 8.0](../../analysis-services/instances/configure-http-access-to-analysis-services-on-iis-8-0.md)進行 HTTP 連線。  
   
  如果指定了此參數，使用者名稱和密碼將會用來連接到指定的 Analysis Server 執行個體。 如果沒有指定認證，則會使用執行此工具之使用者的預設 Windows 帳戶。  
   

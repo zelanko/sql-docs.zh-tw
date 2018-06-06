@@ -1,16 +1,15 @@
 ---
-title: "sp_repladdcolumn (TRANSACT-SQL) |Microsoft 文件"
-ms.custom: 
+title: sp_repladdcolumn (TRANSACT-SQL) |Microsoft 文件
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - sp_repladdcolumn
 ms.assetid: d6220f9f-c738-4f9c-bcf8-419994e86c81
-caps.latest.revision: 
+caps.latest.revision: 37
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: d638619d087d43b0820fdf21650a9b8db1f7cf63
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: ad4517c4dfa5d71b63fdd07ff7a116f36f6c5038
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sprepladdcolumn-transact-sql"></a>sp_repladdcolumn (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -62,7 +60,7 @@ sp_repladdcolumn [ @source_object = ] 'source_object', [ @column = ] 'column' ]
  這是複寫要加入之資料表中的資料行名稱。 *資料行*是**sysname**，沒有預設值。  
   
  [ @typetext =] '*typetext*'  
- 這是要加入之資料行的定義。 *typetext*是**nvarchar （3000)**，沒有預設值。 例如，如果要加入資料行，而且它是單一字元欄位時，不是 NULL，且預設值為**N**，order_filled 就是*資料行*參數，而的定義資料行， **char （1) NOT NULL CONSTRAINT constraint_name DEFAULT 'n'**會*typetext*參數值。  
+ 這是要加入之資料行的定義。 *typetext*是**nvarchar （3000)**，沒有預設值。 例如，如果要加入資料行，而且它是單一字元欄位時，不是 NULL，且預設值為**N**，order_filled 就是*資料行*參數，而的定義資料行， **char （1) NOT NULL CONSTRAINT constraint_name DEFAULT 'n'** 會*typetext*參數值。  
   
  [ @publication_to_add =] '*publication_to_add*'  
  這是新資料行要加入其中的發行集名稱。 *publication_to_add*是**nvarchar （4000)**，預設值是**所有**。 如果**所有**，則所有發行集包含此資料表會受到影響。 如果*publication_to_add*指定，則此發行集已加入新的資料行。  
@@ -97,7 +95,7 @@ sp_repladdcolumn [ @source_object = ] 'source_object', [ @column = ] 'column' ]
 ## <a name="permissions"></a>Permissions  
  只有系統管理員 (sysadmin) 固定伺服器角色和 db_owner 固定資料庫角色的成員，才能夠執行 sp_repladdcolumn。  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [SQL Server 複寫中已被取代的功能](../../relational-databases/replication/deprecated-features-in-sql-server-replication.md)   
  [系統預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   

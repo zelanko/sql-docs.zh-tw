@@ -1,26 +1,22 @@
 ---
-title: "[授與權限]"
-author: barbkess
-ms.author: barbkess
-manager: jhubbard
-ms.prod: analytics-platform-system
-ms.prod_service: mpp-data-warehouse
-ms.service: 
-ms.component: 
-ms.technology: mpp-data-warehouse
-ms.custom: 
-ms.date: 01/05/2017
-ms.reviewer: na
-ms.suite: sql
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.openlocfilehash: d7d685d15eb0e5704698ebd2b79c20589f49ee16
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+title: 授與 T-SQL 的權限-Parallel Data Warehouse |Microsoft 文件
+description: 授與 T-SQL 的平行處理資料倉儲的資料庫作業的權限。
+author: mzaman1
+manager: craigg
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
+ms.openlocfilehash: 01ef7b199a07be8bbc2dc1dee40d9c4d5771db1b
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/19/2018
 ---
-# <a name="grant-permissions"></a>[授與權限]
+# <a name="grant-t-sql-permissions-for-parallel-data-warehouse"></a>授與 T-SQL 的平行處理資料倉儲的權限
+授與 T-SQL 的平行處理資料倉儲的資料庫作業的權限。
 
 ## <a name="grant-permissions-to-submit-database-queries"></a>授與權限來送出資料庫查詢
 本章節描述如何授與資料庫角色的權限與使用者對 SQL Server PDW 應用裝置上的查詢資料。  
@@ -221,7 +217,7 @@ For a list of all permissions, see [Permissions: GRANT, DENY, REVOKE &#40;SQL Se
 -->
 
 ## <a name="grant-permissions-to-monitor-the-appliance"></a>若要監視的應用裝置的權限授與
-SQL Server PDW 應用裝置可以使用 系統管理員主控台 或 SQL Server PDW 系統檢視表來監視。 登入需要伺服器層級**VIEW SERVER STATE**監視的應用裝置的權限。 登入需要**ALTER ANY CONNECTION**終止使用系統管理員主控台連線的權限或**KILL**命令。 如需使用管理主控台所需的權限資訊，請參閱[使用管理主控台 &#40; 授與權限SQL Server PDW &#41;](#grant-permissions-to-use-the-admin-console).  
+SQL Server PDW 應用裝置可以使用 系統管理員主控台 或 SQL Server PDW 系統檢視表來監視。 登入需要伺服器層級**VIEW SERVER STATE**監視的應用裝置的權限。 登入需要**ALTER ANY CONNECTION**終止使用系統管理員主控台連線的權限或**KILL**命令。 如需使用管理主控台所需的權限資訊，請參閱[授與權限可使用管理主控台&#40;SQL Server PDW&#41;](#grant-permissions-to-use-the-admin-console)。  
   
 ### <a name="PermsAdminConsole"></a>使用系統檢視表來監視應用裝置的權限授與  
 下列 SQL 陳述式建立名為登入`monitor_login`並且授與**VIEW SERVER STATE**權限`monitor_login`登入。  

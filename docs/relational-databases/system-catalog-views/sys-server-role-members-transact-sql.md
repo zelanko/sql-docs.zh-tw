@@ -1,16 +1,14 @@
 ---
-title: "sys.server_role_members (TRANSACT-SQL) |Microsoft 文件"
-ms.custom: 
+title: sys.server_role_members (TRANSACT-SQL) |Microsoft 文件
+ms.custom: ''
 ms.date: 03/15/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, pdw
-ms.service: 
 ms.component: system-catalog-views
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: system-objects
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - server_role_members
@@ -22,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - sys.server_role_members catalog view
 ms.assetid: efa20414-2c6b-45a2-a7a9-60110a24da18
-caps.latest.revision: 
+caps.latest.revision: 31
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: dd26b9ea6419e17df0e318fbffeaeee958c0c501
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+monikerRange: '>= aps-pdw-2016 || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 83d2548be09bc19a664dab70f18da8611bc31bc5
+ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="sysserverrolemembers-transact-sql"></a>sys.server_role_members (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-pdw-md.md)]
@@ -43,7 +41,7 @@ ms.lasthandoff: 11/21/2017
 |**role_principal_id**|**int**|角色的伺服器主體識別碼。|  
 |**member_principal_id**|**int**|成員的伺服器主體識別碼。|  
   
- 若要新增或移除伺服器角色成員資格，使用[ALTER SERVER ROLE &#40;TRANSACT-SQL &#41;](../../t-sql/statements/alter-server-role-transact-sql.md)陳述式。  
+ 若要新增或移除伺服器角色成員資格，使用[ALTER SERVER ROLE &#40;TRANSACT-SQL&#41;](../../t-sql/statements/alter-server-role-transact-sql.md)陳述式。  
   
 ## <a name="permissions"></a>Permissions  
  登入可以檢視本身所屬的伺服器角色成員資格，也可以檢視固定伺服器角色成員的 principal_id。 若要檢視所有伺服器角色成員資格，需要**都檢視 DEFINITION ON SERVER ROLE**權限或成員資格**securityadmin**固定的伺服器角色。  
@@ -63,7 +61,7 @@ JOIN sys.server_principals AS member
     ON sys.server_role_members.member_principal_id = member.principal_id;  
 ```  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [目錄檢視 &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [安全性目錄檢視 &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/security-catalog-views-transact-sql.md)   
  [伺服器層級角色](../../relational-databases/security/authentication-access/server-level-roles.md)   

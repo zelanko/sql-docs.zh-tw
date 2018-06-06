@@ -1,28 +1,26 @@
 ---
-title: "ODBC 驅動程式架構 |Microsoft 文件"
-ms.custom: 
+title: ODBC 驅動程式架構 |Microsoft 文件
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
-ms.component: odbc
-ms.reviewer: 
+ms.prod: sql
+ms.prod_service: connectivity
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
-ms.topic: article
-helpviewer_keywords: ODBC drivers [ODBC], architecture
+ms.technology: connectivity
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
+helpviewer_keywords:
+- ODBC drivers [ODBC], architecture
 ms.assetid: 21a62c7c-192e-4718-a16e-aa12b0de4419
-caps.latest.revision: "13"
+caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
-ms.workload: Inactive
-ms.openlocfilehash: 69d4103e9f04da7775f38b436b009f8a3c06a962
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+manager: craigg
+ms.openlocfilehash: 9566599b68ac931604ab68c06da2f6cd624673fe
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="odbc-driver-architecture"></a>ODBC 驅動程式架構
 驅動程式撰寫者必須知道驅動程式架構，可能會影響是否應用程式可以使用 DBMS 專屬 SQL。  
@@ -59,5 +57,5 @@ ms.lasthandoff: 12/21/2017
 |啟用連線共用|[ODBC 連接共用](../../../odbc/reference/develop-app/driver-manager-connection-pooling.md)|[連接到資料來源或驅動程式](../../../odbc/reference/develop-app/connecting-to-a-data-source-or-driver.md)，在 ODBC 程式設計人員參考|  
 |Unicode/ANSI 驅動程式和連線問題|[Unicode 驅動程式](../../../odbc/reference/develop-app/unicode-drivers.md)|[程式設計考量](../../../odbc/reference/develop-app/programming-considerations.md)，在 ODBC 程式設計人員參考|  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [開發 ODBC 驅動程式](../../../odbc/reference/develop-driver/developing-an-odbc-driver.md)

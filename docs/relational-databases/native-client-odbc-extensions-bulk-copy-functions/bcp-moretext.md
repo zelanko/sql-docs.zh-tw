@@ -1,16 +1,15 @@
 ---
-title: bcp_moretext | Microsoft Docs
-ms.custom: 
+title: bcp_moretext |Microsoft 文件
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
 ms.component: native-client-odbc-extensions-bulk-copy-functions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - bcp_moretext
@@ -20,16 +19,16 @@ apitype: DLLExport
 helpviewer_keywords:
 - bcp_moretext function
 ms.assetid: 23e98015-a8e4-4434-9b3f-9c7350cf965f
-caps.latest.revision: 
+caps.latest.revision: 39
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 5a273980a28a31334653feec576fde85de007c38
-ms.sourcegitcommit: a0aa5e611a0e6ebb74ac1e2f613e8916dc7a7617
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: e64f445788e35563120c357b93395fcfede50410
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/24/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="bcpmoretext"></a>bcp_moretext
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -71,7 +70,7 @@ RETCODE bcp_moretext (
   
  如果複製的資料列都包含一個以上的長型、 變動長度資料行， **bcp_moretext**第一個傳送資料到最低序數編號的資料行，接著是最低序數編號的資料行，以此類推。 更正預期資料的總長度設定是很重要的一件事。 除了使用長度設定以外，沒有任何方法可以指示大量複製已經收到資料行的所有資料。  
   
- 當**var(max)**值都會傳送到使用 bcp_sendrow 和 bcp_moretext 伺服器，則不需要呼叫 bcp_collen 設定資料行的長度。 相反地，僅限這些類型的值便會終止呼叫 bcp_sendrow 長度為零。  
+ 當**var(max)** 值都會傳送到使用 bcp_sendrow 和 bcp_moretext 伺服器，則不需要呼叫 bcp_collen 設定資料行的長度。 相反地，僅限這些類型的值便會終止呼叫 bcp_sendrow 長度為零。  
   
  應用程式通常會呼叫**bcp_sendrow**和**bcp_moretext**內傳送的資料列數目的迴圈。 以下是如何執行此動作包含兩個資料表的外框**文字**資料行：  
   

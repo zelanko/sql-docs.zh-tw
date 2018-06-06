@@ -1,31 +1,28 @@
 ---
-title: "明確資料類型轉換函式 |Microsoft 文件"
-ms.custom: 
+title: 明確資料類型轉換函式 |Microsoft 文件
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
-ms.component: odbc
-ms.reviewer: 
+ms.prod: sql
+ms.prod_service: connectivity
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: connectivity
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - explicit data type conversion functions [ODBC]
 - data type conversion functions [ODBC]
 - functions [ODBC], explicit data type conversion functions
 ms.assetid: d5789450-b668-4753-96c8-6789e955e7ed
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
-ms.workload: Inactive
-ms.openlocfilehash: c1520ca18c42d2efbc2822630fe7ccae9f90302a
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+manager: craigg
+ms.openlocfilehash: 1c0326cb06ce772a66be464c176cba58c085d855
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="explicit-data-type-conversion-function"></a>明確資料類型轉換函式
 明確資料類型轉換是根據 SQL 資料型別定義中指定。  
@@ -34,7 +31,7 @@ ms.lasthandoff: 12/21/2017
   
  格式**轉換**函式是：  
   
- **轉換 (** *value_exp*， *data_type***)**  
+ **轉換 (** *value_exp*， *data_type * * *)**  
   
  此函數會傳回所指定的值*value_exp*轉換成指定*data_type*，其中*data_type*是其中一個下列關鍵字：  
   

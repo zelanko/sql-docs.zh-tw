@@ -1,16 +1,15 @@
 ---
-title: "sp_scriptdynamicupdproc (TRANSACT-SQL) |Microsoft 文件"
-ms.custom: 
+title: sp_scriptdynamicupdproc (TRANSACT-SQL) |Microsoft 文件
+ms.custom: ''
 ms.date: 03/04/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - sp_scriptdynamicupdproc
 ms.assetid: b4c18863-ed92-4aa2-a04f-7ed832fc9e07
-caps.latest.revision: 
+caps.latest.revision: 24
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 89a2704f20a2bdea0bb015d0280492dc594057da
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 707a4262c6d4ae31596d01c0194c7bc438af26ee
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="spscriptdynamicupdproc-transact-sql"></a>sp_scriptdynamicupdproc (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,7 +48,7 @@ sp_scriptdynamicupdproc [ @artid =] artid
  這是發行項識別碼。 *artid*是**int**，沒有預設值。  
   
 ## <a name="result-sets"></a>結果集  
- 傳回的結果集包含單一**nvarchar （4000)**資料行。 這個結果集形成用來建立自訂預存程序的完整 CREATE PROCEDURE 陳述式。  
+ 傳回的結果集包含單一**nvarchar （4000)** 資料行。 這個結果集形成用來建立自訂預存程序的完整 CREATE PROCEDURE 陳述式。  
   
 ## <a name="remarks"></a>備註  
  **sp_scriptdynamicupdproc**用於異動複寫中。 預設 MCALL 指令碼邏輯包括 UPDATE 陳述式內的所有資料行，且利用點陣圖來判斷已變更的資料行。 如果資料行並未變更，資料行會重設為其本身，這通常不會有問題。 如果資料行已建立索引，就會進行額外的處理。 動態方法只包括已變更的資料行，這會提供最佳的 UPDATE 字串。 不過，當建立動態 UPDATE 陳述式時，會在執行階段進行額外的處理。 我們建議您測試動態和靜態方法，然後再選擇最佳方案。  
@@ -132,7 +130,7 @@ if @@rowcount = 0
   
  在執行這個預存程序之後，您可以利用產生的指令碼來手動建立在訂閱者端的預存程序。  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [系統預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

@@ -1,16 +1,15 @@
 ---
-title: "方案總管 | Microsoft Docs"
-ms.custom: 
+title: 方案總管 | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
 ms.component: ssms-solutions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: tools-ssms
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ssms
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Management Studio [SQL Server], solutions
 - projects [SQL Server Management Studio], about projects
@@ -19,19 +18,19 @@ helpviewer_keywords:
 - SQL Server Management Studio [SQL Server], items
 - items [SQL Server]
 ms.assetid: 0df09843-0d4f-4925-bc6c-99265035a0c1
-caps.latest.revision: "3"
+caps.latest.revision: 3
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: f4d77dde666a8fb751e637265333a334075807af
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.openlocfilehash: 02ac675f7dd209cb538e90142f6b9049068e2ad7
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="solution-explorer"></a>方案總管
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] 中的 [方案總管] 窗格提供稱為專案的容器，可用來管理資料庫指令碼、查詢、資料連線和檔案等項目。 一個或多個彼此相關的專案會合併到稱為方案的容器。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] 中的 [方案總管] 窗格提供稱為專案的容器，可用來管理資料庫指令碼、查詢、資料連接和檔案等項目。 一個或多個彼此相關的專案會合併到稱為方案的容器。  
   
 方案包括一個或多個專案，加上有助於將方案當做一個整體來定義的檔案和中繼資料。 專案是一組檔案，加上連接資訊等相關的中繼資料。 方案和專案包含代表建立資料庫方案時所需要之指令碼、查詢、連接資訊和檔案的項目。  
   

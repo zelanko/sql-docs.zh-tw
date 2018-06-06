@@ -1,37 +1,34 @@
 ---
-title: "附錄 d： 資料類型 |Microsoft 文件"
-ms.custom: 
+title: 附錄 d： 資料類型 |Microsoft 文件
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
-ms.component: odbc
-ms.reviewer: 
+ms.prod: sql
+ms.prod_service: connectivity
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: connectivity
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - C data types [ODBC], defined
 - SQL data types [ODBC], defined
 - data types [ODBC]
 - data types [ODBC], about data types
 ms.assetid: 981d49c3-3531-4543-aa75-5bd9e4f67000
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
-ms.workload: Inactive
-ms.openlocfilehash: 68e4d1d80dfa517db63b850d546d1fcb7e2ba60d
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+manager: craigg
+ms.openlocfilehash: bea62ceaba74b56087ecbb8fa28c8a0108426380
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="appendix-d-data-types"></a>附錄 d： 資料類型
 ODBC 定義兩組資料類型： SQL 資料類型和 C 資料類型。 SQL 資料類型表示資料儲存在資料來源的資料類型。 C 資料類型表示資料儲存在應用程式緩衝區中的資料類型。  
   
- SQL 資料類型是由每個 DBMS 符合 sql-92 標準中定義。 Sql-92 標準中所指定每個 SQL 資料類型，如 ODBC 定義的型別識別碼，也就是**#define**作為 ODBC 函數的引數傳遞或傳回結果集的中繼資料中的值。 唯一的 SQL 92 不支援 ODBC 資料類型為位元 （ODBC SQL_BIT 類型具有不同的特性）、 BIT_VARYING、 TIME_WITH_TIMEZONE、 TIMESTAMP_WITH_TIMEZONE 和 NATIONAL_CHARACTER。 驅動程式會負責將資料來源專用的 SQL 資料類型對應至 ODBC SQL 資料類型識別碼和驅動程式特有的 SQL 資料類型識別項。 SQL 資料型別是欄位中指定 SQL_DESC_CONCISE_TYPE 實作描述元。  
+ SQL 資料類型是由每個 DBMS 符合 sql-92 標準中定義。 Sql-92 標準中所指定每個 SQL 資料類型，如 ODBC 定義的型別識別碼，也就是 **#define**作為 ODBC 函數的引數傳遞或傳回結果集的中繼資料中的值。 唯一的 SQL 92 不支援 ODBC 資料類型為位元 （ODBC SQL_BIT 類型具有不同的特性）、 BIT_VARYING、 TIME_WITH_TIMEZONE、 TIMESTAMP_WITH_TIMEZONE 和 NATIONAL_CHARACTER。 驅動程式會負責將資料來源專用的 SQL 資料類型對應至 ODBC SQL 資料類型識別碼和驅動程式特有的 SQL 資料類型識別項。 SQL 資料型別是欄位中指定 SQL_DESC_CONCISE_TYPE 實作描述元。  
   
  ODBC 定義的 C 資料類型和其對應的 ODBC 類型識別項。 應用程式指定 C 資料類型，將會收到傳遞適當的 C 類型識別項中的結果集資料的緩衝區*TargetType*呼叫中的引數**SQLBindCol**或**SQLGetData**。 它會指定藉由傳遞適當的 C 類型識別項中包含的陳述式參數的緩衝區的 C 類型*ValueType*呼叫中的引數**SQLBindParameter**。 C 資料類型為欄位中指定 SQL_DESC_CONCISE_TYPE 應用程式描述元。  
   

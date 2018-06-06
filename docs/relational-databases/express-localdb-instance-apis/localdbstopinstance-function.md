@@ -1,16 +1,15 @@
 ---
-title: "LocalDBStopInstance 函數 |Microsoft 文件"
-ms.custom: 
+title: LocalDBStopInstance 函數 |Microsoft 文件
+ms.custom: ''
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
 ms.component: localdb
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - LocalDBStopInstance
@@ -18,20 +17,19 @@ apilocation:
 - sqluserinstance.dll
 apitype: DLLExport
 ms.assetid: 4bd73187-0aac-4f03-ac54-2b78e41917e5
-caps.latest.revision: 
-author: JennieHubbard
-ms.author: jhubbard
+caps.latest.revision: 17
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: bde22cf301e05030402df861a137ae0c5070d2c4
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.openlocfilehash: 6f6fa0a9346818d58936dfe539b1f7bdf1ca1392
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="localdbstopinstance-function"></a>LocalDBStopInstance 函數
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-停止執行指定的 SQL Server Express LocalDB 執行個體。  
+  停止執行指定的 SQL Server Express LocalDB 執行個體。  
   
  **標頭檔：** sqlncli.h  
   

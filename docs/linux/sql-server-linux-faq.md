@@ -1,24 +1,21 @@
 ---
-title: "SQL Server on Linux 常見問題集 |Microsoft 文件"
-description: "本文章會提供在 Linux 上執行 SQL Server 相關常見問題的解答。"
+title: SQL Server on Linux 常見問題集 |Microsoft 文件
+description: 本文章會提供在 Linux 上執行 SQL Server 相關常見問題的解答。
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 02/22/2018
+ms.date: 03/22/2018
 ms.topic: article
-ms.prod: sql-non-specified
-ms.prod_service: database-engine
-ms.service: 
-ms.component: 
+ms.prod: sql
+ms.component: ''
 ms.suite: sql
 ms.custom: sql-linux
-ms.technology: database-engine
-ms.workload: Active
-ms.openlocfilehash: 3fad3fb2892e5a91e42eefb5f00932c39d00064f
-ms.sourcegitcommit: f0c5e37c138be5fb2cbb93e9f2ded307665b54ea
+ms.technology: linux
+ms.openlocfilehash: b0df550ee3489ba8c37ded47878096d75909343e
+ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/24/2018
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="sql-server-on-linux-frequently-asked-questions-faq"></a>SQL Server on Linux 常見問題集 (FAQ)
 
@@ -30,11 +27,11 @@ ms.lasthandoff: 02/24/2018
 
 1. **支援哪些 Linux 平台？**
 
-   Red Hat Enterprise Server、 SUSE Linux Enterprise Server 和 Ubuntu 上目前支援 SQL Server。 它也會在使用 Docker 容器中執行。 如需有關支援版本的最新資訊，請參閱[支援的平台](sql-server-linux-setup.md#supportedplatforms)。
+   Red Hat Enterprise Server、 SUSE Linux Enterprise Server 和 Ubuntu 上目前支援 SQL Server。 它也支援在使用 Docker 容器中執行。 如需有關支援版本的最新資訊，請參閱[支援的平台](sql-server-linux-setup.md#supportedplatforms)。
 
 1. **會使用其他平台上的 SQL Server on Linux**嗎？
 
-   您可能可以安裝並執行 SQL Server 上其他 Linux 散發。 例如，CentOS 與密切相關 Red Hat Enterprise Server，因此您可能會安裝 RPM SQL Server 封裝。 這可能是適用於其他密切相關的發佈。 主要的問題是測試及支援。 SQL Server 只測試和 Red Hat Enterprise Linux、 SUSE Linux Enterprise Server 和 Ubuntu 上才支援。
+   測試 SQL Server 和 Linux 上支援先前列出的發佈。 其他 Linux 散發套件密切相關，或許可以執行 SQL Server （例如 CentOS 密切相關 Red Hat Enterprise Server）。 但如果您選擇不支援的作業系統上安裝 SQL Server，請檢閱**支援原則**區段[Microsoft SQL Server 的技術支援人員原則](https://support.microsoft.com/help/4047326/support-policy-for-microsoft-sql-server)來了解支援含意。 也請注意，某些社群維護之 Linux 發行套件沒有型式的方式獲得支援，如果基礎作業系統問題。
 
 1. **在 Linux 上支援的 SQL Server 功能？**
 
@@ -78,7 +75,7 @@ ms.lasthandoff: 02/24/2018
 
 1. **是否有這類工具會在 Linux 執行的 SSMS？**
 
-   新的 Microsoft SQL 作業 Studio （預覽） 是用來管理 SQL Server 的跨平台工具。 如需詳細資訊，請參閱[什麼是 Microsoft SQL 作業 Studio （預覽）](../sql-operations-studio/what-is.md)。
+   新的 Microsoft SQL Operations Studio (preview) 是用來管理 SQL Server 的跨平台工具。 如需詳細資訊，請參閱[什麼是 Microsoft SQL 作業 Studio （預覽）](../sql-operations-studio/what-is.md)。
 
 1. **可用等 sqlcmd 和 bcp 命令在 Linux 上？**
 

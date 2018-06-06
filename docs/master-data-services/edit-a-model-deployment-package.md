@@ -1,30 +1,31 @@
 ---
-title: "編輯模型部署套件 | Microsoft Docs"
-ms.custom: 
+title: 編輯模型部署套件 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: mds
-ms.service: 
 ms.component: non-specific
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - master-data-services
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: 6b0fdb7d-83dd-4392-9011-4ae642c471f1
-caps.latest.revision: 
+caps.latest.revision: 7
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: b2bdfa27750d9eaa882c70a4fcf5b13030375268
-ms.sourcegitcommit: 6ac1956307d8255dc544e1063922493b30907b80
+ms.openlocfilehash: 82dce00aff2c66ea95e2c93d5d093441fd1cb0f8
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="edit-a-model-deployment-package"></a>編輯模型部署封裝
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
   此主題描述如何在 MDS 中部署模型的選定部分，而不是整個模型。 若要這樣做，請使用模型封裝編輯器編輯 MDS 模型封裝。  
   
  模型封裝編輯器精靈可讓您選取要併入 MDS 封裝中的特定實體、衍生階層、訂閱檢視和模型中的商務規則，並在之後加以部署。 您可以不處理模型中不想要部署的部分。 當您選取實體時，也會自動選取該實體中的所有相依物件。  

@@ -1,42 +1,38 @@
 ---
-title: "空間資料類型概觀 | Microsoft Docs"
-ms.custom: 
+title: 空間資料類型概觀 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/01/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
 ms.component: spatial
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-spatial
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - geometry data type [SQL Server], understanding
 - geography data type [SQL Server], spatial data
 - planar spatial data [SQL Server], geometry data type
 - spatial data types [SQL Server]
 ms.assetid: 1615db50-69de-4778-8be6-4e058c00ccd4
-caps.latest.revision: 
+caps.latest.revision: 51
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: a1eae19761ec8afa2ddf6491314d3f6ce5930f37
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 093dd3f82e6c08db8d2dffd02ea42db1048c0fba
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="spatial-data-types-overview"></a>空間資料類型概觀
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   
 空間資料有兩種類型： **geometry** 資料類型支援平面或 Euclidean (扁平表面) 資料。 **geometry** 資料類型同時符合開放式地理空間協會 (Open Geospatial Consortium, OGC) 的 SQL 簡單特徵規格 1.1.0 版，而且符合 SQL MM (ISO 標準)。
 此外， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 也支援 **geography** 資料類型，它會儲存橢圓體 (圓形表面) 資料，例如 GPS 經緯度座標。
-
-> [!IMPORTANT]  
->  如需 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]中空間功能 (包括空間資料類型的增強功能) 的詳細描述和範例，請下載技術白皮書： [New Spatial Features in SQL Server Code-Named "Denali"](http://go.microsoft.com/fwlink/?LinkId=226407)(SQL Server 代號 "Denali" 中的新空間功能)。  
 
 ##  <a name="objects"></a> 空間資料物件  
 **geometry** 和 **geography** 資料類型支援十六種空間資料物件或執行個體類型。 但是，其中只有十一種執行個體類型「可具現化」；因此，您可以在資料庫中建立及處理這些執行個體 (或加以具現化)。 這些執行個體會從父資料類型衍生某些屬性，這些資料類型會將其區分為 **Points**、 **LineStrings, CircularStrings**、 **CompoundCurves**、 **Polygons**、 **CurvePolygons** ，或是 **geometry** 中的多個 **geography** 或 **GeometryCollection**執行個體。 **Geography** 類型具有一種額外的執行個體類型： **FullGlobe**。  
@@ -108,9 +104,7 @@ OGC 的 SQL 簡單特徵規格討論了外部環形和內部環形，但是這�
 >  如果針對圓弧線段提供了 Z 值，則圓弧線段中所有點的這些值都必須相同，系統才會接受輸入。 例如：系統可接受 `CIRCULARSTRING(0 0 1, 2 2 1, 4 0 1)` ，但無法接受 `CIRCULARSTRING(0 0 1, 2 2 2, 4 0 1)` 。  
 
 ### <a name="linestring-and-circularstring-comparison"></a>LineString 和 CircularString 的比較  
-下圖顯示完全相同的等腰三角形 (三角形 A 會使用直線線段來定義三角形，而三角形 B 則使用圓弧線段來定義三角形)：  
-
-![7e382f76-59da-4b62-80dc-caf93e637c14](../../relational-databases/spatial/media/7e382f76-59da-4b62-80dc-caf93e637c14.gif) 此範例示範如何使用 **LineString** 執行個體和 **CircularString** 執行個體來儲存上述等腰三角形：  
+此範例會示範如何使用 **LineString** 執行個體和 **CircularString** 執行個體來儲存完全相同的等腰三角形：  
 ```sql
 DECLARE @g1 geometry;
 DECLARE @g2 geometry;
@@ -138,11 +132,7 @@ LS LengthCS Length
 5.65685…6.28318…
 ```
 
-下圖顯示每種類型的儲存方式 (紅線顯示 **LineString**`@g1`，藍線顯示 **CircularString**`@g2`)：  
-
-![e52157b5-5160-4a4b-8560-50cdcf905b76](../../relational-databases/spatial/media/e52157b5-5160-4a4b-8560-50cdcf905b76.gif)  
-
-如上圖所示， **CircularString** 執行個體會使用較少的點來儲存曲線界限，而精確度卻高於 **LineString** 執行個體。 **CircularString** 執行個體適合用於儲存圓形邊界，像是從特定點起算的二十英哩搜尋半徑。 **LineString** 執行個體適合用於儲存線性邊界，像是方形的城市街區。  
+**CircularString** 執行個體會使用較少的點來儲存曲線界限，而精確度卻高於 **LineString** 執行個體。 **CircularString** 執行個體適合用於儲存圓形邊界，像是從特定點起算的二十英哩搜尋半徑。 **LineString** 執行個體適合用於儲存線性邊界，像是方形的城市街區。  
 
 ### <a name="linestring-and-compoundcurve-comparison"></a>LineString 和 CompoundCurve 的比較  
 下列程式碼範例會示範如何使用 **LineString** 和 **CompoundCurve** 執行個體來儲存相同的圖形：

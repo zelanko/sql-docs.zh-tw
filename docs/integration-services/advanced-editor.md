@@ -1,17 +1,16 @@
 ---
-title: "進階編輯器 | Microsoft Docs"
-ms.custom: 
+title: 進階編輯器 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
 ms.component: non-specific
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 f1_keywords:
 - sql13.dts.designer.advancededitor.columnproperties.f1
 - sql13.dts.designer.advancededitor.componentproperties.f1
@@ -19,16 +18,15 @@ f1_keywords:
 - sql13.dts.designer.advancededitor.connections.f1
 - sql13.dts.designer.advancededitor.columnmappings.f1
 ms.assetid: 5ad0ac71-fa8b-4c26-bd42-e6ef00c87571
-caps.latest.revision: 
+caps.latest.revision: 7
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: e6c929bf7a8aa3525049e295e83541547fa420f7
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: eadaa9e7608fb1ad17fee92f44aa8138ded0f7d1
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="advanced-editor"></a>進階編輯器
   使用 **[進階編輯器]** 對話方塊設定所選取之 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 物件的屬性。  
@@ -47,7 +45,7 @@ ms.lasthandoff: 01/25/2018
   
 -   **輸入與輸出屬性** -- 此索引標籤可用於設定輸入與輸出屬性，並可加入及移除輸出、選取或移除輸入與輸出的資料行，以及設定輸入與輸出的屬性  
   
- 顯示的屬性會因元件而異。 如需有關 **[進階編輯器]**可能顯示之屬性的詳細資訊，請參閱下列主題：  
+ 顯示的屬性會因元件而異。 如需有關 **[進階編輯器]** 可能顯示之屬性的詳細資訊，請參閱下列主題：  
   
 -   [Common Properties](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   

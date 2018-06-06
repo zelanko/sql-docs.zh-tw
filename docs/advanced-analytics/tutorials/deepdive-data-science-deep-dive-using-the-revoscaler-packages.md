@@ -1,30 +1,17 @@
 ---
-title: "資料科學深入探討： 搭配 SQL Server 使用 RevoScaleR 封裝 |Microsoft 文件"
-ms.date: 12/14/2017
-ms.reviewer: 
-ms.suite: sql
-ms.prod: machine-learning-services
-ms.prod_service: machine-learning-services
-ms.component: 
-ms.technology: 
-ms.tgt_pltfrm: 
+title: 搭配 SQL Server 使用 RevoScaleR 封裝資料科學深入探討 |Microsoft 文件
+ms.prod: sql
+ms.technology: machine-learning
+ms.date: 04/15/2018
 ms.topic: tutorial
-applies_to:
-- SQL Server 2016
-- SQL Server 2017
-dev_langs:
-- R
-ms.assetid: c2efb3f2-cad5-4188-b889-15d68b742ef5
-caps.latest.revision: 
-author: jeannt
-ms.author: jeannt
-manager: cgronlund
-ms.workload: On Demand
-ms.openlocfilehash: 003434a055ab73afb288ea5801130ce1c06aa9c5
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+author: HeidiSteen
+ms.author: heidist
+manager: cgronlun
+ms.openlocfilehash: 5c2596c881d48d2f2629b4363749e7d1c45b3489
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="data-science-deep-dive-using-the-revoscaler-packages-with-sql-server"></a>資料科學深入探討： 搭配 SQL Server 使用 RevoScaleR 封裝
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]

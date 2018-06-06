@@ -1,17 +1,15 @@
 ---
-title: "前置處理結構描述以合併包含的結構描述 | Microsoft Docs"
-ms.custom: 
+title: 前置處理結構描述以合併包含的結構描述 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
 ms.component: xml
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- dbe-xml
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: xml
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - testing preprocessor tool
 - xsd:include
@@ -22,20 +20,19 @@ helpviewer_keywords:
 - preprocessor tool [XML schemas]
 - XML schemas [SQL Server]
 ms.assetid: cde1de5f-077a-4a6d-8a81-1ecb6e10d549
-caps.latest.revision: 
+caps.latest.revision: 27
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: bb486493743bc51842c0531e1072aa1eac106d76
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.openlocfilehash: 6667fd78bc2b345f8976edab3fbdf8197cf6dac7
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="preprocess-a-schema-to-merge-included-schemas"></a>前置處理結構描述以合併包含的結構描述
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
-W3C XSD **include** 元素提供結構描述模組化的支援，在模組化中可以將 XML 結構描述分割成一個以上的實體檔案。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 目前不支援這個元素。 伺服器將會拒絕包含此元素的 XML 結構描述。  
+  W3C XSD **include** 元素提供結構描述模組化的支援，在模組化中可以將 XML 結構描述分割成一個以上的實體檔案。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 目前不支援這個元素。 伺服器將會拒絕包含此元素的 XML 結構描述。  
   
  可預先處理作為解決方案且包含 \<xsd:include> 指示詞的 XML 結構描述，以便將任何包含結構描述的內容複製和合併成單一結構描述，以利上傳至伺服器。 下列 C#  程式碼可用以預先處理。 在程式碼開始部份的註解提供如何使用它的資訊。  
   

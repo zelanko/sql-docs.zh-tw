@@ -1,28 +1,24 @@
 ---
-title: "使用 JDBC 驅動程式 |Microsoft 文件"
-ms.custom: 
+title: 使用 JDBC 驅動程式 |Microsoft 文件
+ms.custom: ''
 ms.date: 01/19/2018
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
-ms.component: jdbc
-ms.reviewer: 
+ms.prod: sql
+ms.prod_service: connectivity
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- drivers
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: connectivity
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: 6faaf05b-8b70-4ed2-9b44-eee5897f1cd0
-caps.latest.revision: 
+caps.latest.revision: 54
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
-ms.workload: Active
-ms.openlocfilehash: 9118a82f333b14f9ba468c039255ff3e6a1280d7
-ms.sourcegitcommit: 9d0467265e052b925547aafaca51e5a5e93b7e38
+manager: craigg
+ms.openlocfilehash: 03ea3e895fb7d70b392e0c25372536770308049d
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/02/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="using-the-jdbc-driver"></a>使用 JDBC 驅動程式
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -46,11 +42,11 @@ ms.lasthandoff: 03/02/2018
 ### <a name="for-microsoft-jdbc-driver-64"></a>For Microsoft JDBC Driver 6.4
  **Mssql-jdbc-6.4.0.jre7.jar**， **mssql-jdbc-6.4.0.jre8.jar**或**mssql-jdbc-6.4.0.jre9.jar**檔案會安裝在下列位置：  
   
- \<*installation directory*>\sqljdbc_\<*version*>\\<*language*>\mssql-jdbc-6.4.0.jre7.jar 
+ \<*安裝目錄*> \sqljdbc_\<*版本*>\\<*語言*> \mssql-jdbc-6.4.0.jre7.jar 
   
- \<*installation directory*>\sqljdbc_\<*version*>\\<*language*>\mssql-jdbc-6.4.0.jre8.jar
+ \<*安裝目錄*> \sqljdbc_\<*版本*>\\<*語言*> \mssql-jdbc-6.4.0.jre8.jar
  
- \<*installation directory*>\sqljdbc_\<*version*>\\<*language*>\mssql-jdbc-6.4.0.jre9.jar
+ \<*安裝目錄*> \sqljdbc_\<*版本*>\\<*語言*> \mssql-jdbc-6.4.0.jre9.jar
   
  以下是用於 Windows 應用程式的 CLASSPATH 陳述式範例：  
   
@@ -65,9 +61,9 @@ ms.lasthandoff: 03/02/2018
 ### <a name="for-microsoft-jdbc-driver-62"></a>For Microsoft JDBC Driver 6.2
  **Mssql-jdbc-6.2.1.jre7.jar**或**mssql-jdbc-6.2.1.jre8.jar**檔案會安裝在下列位置：  
   
- \<*installation directory*>\sqljdbc_\<*version*>\\<*language*>\mssql-jdbc-6.2.1.jre7.jar 
+ \<*安裝目錄*> \sqljdbc_\<*版本*>\\<*語言*> \mssql-jdbc-6.2.1.jre7.jar 
   
- \<*installation directory*>\sqljdbc_\<*version*>\\<*language*>\mssql-jdbc-6.2.1.jre8.jar
+ \<*安裝目錄*> \sqljdbc_\<*版本*>\\<*語言*> \mssql-jdbc-6.2.1.jre8.jar
   
  以下是用於 Windows 應用程式的 CLASSPATH 陳述式範例：  
   
@@ -82,13 +78,13 @@ ms.lasthandoff: 03/02/2018
 ### <a name="for-microsoft-jdbc-driver-41-42-and-60"></a>Microsoft JDBC driver 4.1、 4.2 與 6.0
  sqljdbc.jar 檔案、sqljdbc4.jar 檔案、sqljdbc41.jar 或 sqljdbc42.jar 檔案安裝於下列位置：  
   
- \<*installation directory*>\sqljdbc_\<*version*>\\<*language*>\sqljdbc.jar  
+ \<*安裝目錄*> \sqljdbc_\<*版本*>\\<*語言*> \sqljdbc.jar  
   
- \<*installation directory*>\sqljdbc_\<*version*>\\<*language*>\sqljdbc4.jar  
+ \<*安裝目錄*> \sqljdbc_\<*版本*>\\<*語言*> \sqljdbc4.jar  
   
- \<*installation directory*>\sqljdbc_\<*version*>\\<*language*>\sqljdbc41.jar  
+ \<*安裝目錄*> \sqljdbc_\<*版本*>\\<*語言*> \sqljdbc41.jar  
   
- \<*installation directory*>\sqljdbc_\<*version*>\\<*language*>\sqljdbc42.jar  
+ \<*安裝目錄*> \sqljdbc_\<*版本*>\\<*語言*> \sqljdbc42.jar  
   
  以下是用於 Windows 應用程式的 CLASSPATH 陳述式範例：  
   

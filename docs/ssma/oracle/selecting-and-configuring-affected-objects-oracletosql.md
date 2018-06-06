@@ -1,30 +1,28 @@
 ---
-title: "選取並設定受影響的物件 (OracleToSQL) |Microsoft 文件"
-ms.prod: sql-non-specified
+title: 選取並設定受影響的物件 (OracleToSQL) |Microsoft 文件
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
 ms.component: ssma-oracle
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ssma
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - Columns Comparison Settings
 - Selection of Affected Objects
 ms.assetid: 545eeda2-9829-4187-a858-619a96b4b71d
-caps.latest.revision: "8"
+caps.latest.revision: 8
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
-ms.workload: Inactive
-ms.openlocfilehash: 1a4fe479f53c914b4417cd0069335fa8bb0da027
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 4593830a2cc22b04977f117502bb14118b1b31a8
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="selecting-and-configuring-affected-objects-oracletosql"></a>選取並設定受影響的物件 (OracleToSQL)
 在此頁面中，您可以選取資料表和外部索引鍵，在其中變更應該比較當 SSMA 確認上一個步驟中所選擇的物件執行的結果。 此外，您可以自訂的驗證參數。  
@@ -47,7 +45,7 @@ ms.lasthandoff: 12/21/2017
   
 -   規則  
   
--   預設  
+-   預設值  
   
 -   識別  
   
@@ -56,7 +54,7 @@ ms.lasthandoff: 12/21/2017
 ## <a name="sql"></a>Sql  
 SQL 索引標籤包含 「 建立資料表 」 選取的資料表的 SQL。  
   
-## <a name="data"></a>data  
+## <a name="data"></a>資料  
 資料索引標籤會顯示選取的資料表中存在的資料。  
   
 ## <a name="properties"></a>屬性  
@@ -113,10 +111,10 @@ SQL 索引標籤包含 「 建立資料表 」 選取的資料表的 SQL。
 您可以編輯這些 SELECT 陳述式，以提供自訂驗證。 若要儲存變更，Oracle 和 SQL Server 陳述式中，使用**套用**跟著按鈕底下的來源和目標 SQL。  
   
 ## <a name="next-step"></a>下一個步驟  
-[自訂呼叫順序 &#40; OracleToSQL &#41;](../../ssma/oracle/customizing-calls-order-oracletosql.md)  
+[自訂呼叫順序&#40;OracleToSQL&#41;](../../ssma/oracle/customizing-calls-order-oracletosql.md)  
   
-## <a name="see-also"></a>請參閱  
-[完成測試案例準備 &#40; OracleToSQL &#41;](../../ssma/oracle/finishing-test-case-preparation-oracletosql.md)  
-[執行測試案例 &#40; OracleToSQL &#41;](../../ssma/oracle/running-test-cases-oracletosql.md)  
-[測試移轉的資料庫物件 &#40; OracleToSQL &#41;](../../ssma/oracle/testing-migrated-database-objects-oracletosql.md)  
+## <a name="see-also"></a>另請參閱  
+[完成測試案例準備&#40;OracleToSQL&#41;](../../ssma/oracle/finishing-test-case-preparation-oracletosql.md)  
+[執行測試案例&#40;OracleToSQL&#41;](../../ssma/oracle/running-test-cases-oracletosql.md)  
+[測試移轉的資料庫物件&#40;OracleToSQL&#41;](../../ssma/oracle/testing-migrated-database-objects-oracletosql.md)  
   

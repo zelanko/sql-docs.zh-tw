@@ -1,30 +1,31 @@
 ---
-title: "StructureColumn (DMX) |Microsoft 文件"
-ms.custom: 
+title: StructureColumn (DMX) |Microsoft 文件
+ms.custom: ''
 ms.date: 03/02/2016
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
 ms.component: data-mining
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
-f1_keywords: StructureColumn
-dev_langs: DMX
-helpviewer_keywords: StructureColumn function
+f1_keywords:
+- StructureColumn
+dev_langs:
+- DMX
+helpviewer_keywords:
+- StructureColumn function
 ms.assetid: 57557536-4bfa-4fa7-bf7a-fb8722ca200d
-caps.latest.revision: "15"
+caps.latest.revision: 15
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: 24b7869462815e6d636572a093a332ecce6dc02c
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 8dbf127092a2fc15e8c113f42249bc4fb0d49bdf
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="structurecolumn-dmx"></a>StructureColumn (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -54,7 +55,7 @@ StructureColumn('structure column name')
   
  從查詢傳回的結果**StructureColumn**函式會受到模型上的任何篩選器的目前狀態。 也就是說，模型篩選會控制採礦模型內所包含的案例。 因此，結構資料行上的查詢只能傳回採礦模型內使用的案例。 請參閱本主題的「範例」一節，以取得可顯示採礦模型篩選對案例資料表和巢狀資料表之影響的程式碼範例。  
   
- 如需如何在 DMX SELECT 陳述式中使用此函式的詳細資訊，請參閱[SELECT FROM &#60; 模式 &#62;。案例 &#40; DMX &#41;](../dmx/select-from-model-cases-dmx.md)或[SELECT FROM &#60; 結構 &#62;。案例](../dmx/select-from-structure-cases.md)。  
+ 如需如何在 DMX SELECT 陳述式中使用此函式的詳細資訊，請參閱[SELECT FROM&#60;模型&#62;。案例&#40;DMX&#41; ](../dmx/select-from-model-cases-dmx.md)或[SELECT FROM&#60;結構&#62;。案例](../dmx/select-from-structure-cases.md)。  
   
 ## <a name="error-messages"></a>錯誤訊息  
  如果使用者沒有父採礦結構的鑽研權限，就會引發下列安全性錯誤：  
@@ -146,9 +147,9 @@ FROM MyModel.CASES
 WHERE EXISTS (SELECT * FROM Products WHERE StructureColumn('Quantity')>1)  
 ```  
   
-## <a name="see-also"></a>請參閱  
- [資料採礦延伸模組 &#40; DMX &#41;函數參考](../dmx/data-mining-extensions-dmx-function-reference.md)   
- [函式 &#40; DMX &#41;](../dmx/functions-dmx.md)   
- [一般預測函數 &#40; DMX &#41;](../dmx/general-prediction-functions-dmx.md)  
+## <a name="see-also"></a>另請參閱  
+ [資料採礦延伸模組&#40;DMX&#41;函數參考](../dmx/data-mining-extensions-dmx-function-reference.md)   
+ [函式&#40;DMX&#41;](../dmx/functions-dmx.md)   
+ [一般預測函數&#40;DMX&#41;](../dmx/general-prediction-functions-dmx.md)  
   
   

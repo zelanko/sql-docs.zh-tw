@@ -1,29 +1,19 @@
 ---
-title: "第 1 課： 定義資料來源檢視內的 Analysis Services 專案 |Microsoft 文件"
-ms.custom: 
-ms.date: 02/13/2018
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: get-started-article
-applies_to:
-- SQL Server 2016
-ms.assetid: 7d3ffabd-78ae-4204-8323-29949d030c16
-caps.latest.revision: 
-author: Minewiskan
+title: 第 1 課： 定義資料來源檢視內的 Analysis Services 專案 |Microsoft 文件
+ms.date: 05/08/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: multidimensional-models
+ms.topic: tutorial
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 840d9f3ad39c2c3488833bdbba3f38e9998fc0b2
-ms.sourcegitcommit: 4edac878b4751efa57601fe263c6b787b391bc7c
+ms.openlocfilehash: a1f492bde0b5b8f096c480616882a6a47b7f1619
+ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/19/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="lesson-1-defining-a-data-source-view-within-an-analysis-services-project"></a>第 1 課：在 Analysis Services 專案內定義資料來源檢視
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]

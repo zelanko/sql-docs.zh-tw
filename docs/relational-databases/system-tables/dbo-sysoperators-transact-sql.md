@@ -1,16 +1,14 @@
 ---
-title: "dbo.sysoperators (TRANSACT-SQL) |Microsoft 文件"
-ms.custom: 
+title: dbo.sysoperators (TRANSACT-SQL) |Microsoft 文件
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
 ms.component: system-tables
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: system-objects
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sysoperators
@@ -22,16 +20,15 @@ dev_langs:
 helpviewer_keywords:
 - sysoperators system table
 ms.assetid: c2afa20c-b15f-46ca-ae74-2eb65909409e
-caps.latest.revision: 
+caps.latest.revision: 32
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 4196ed656febfa2ea8f3815bb1819e2426280a7d
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: a19301b897480e71fbaf62d502709e082d57da05
+ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="dbosysoperators-transact-sql"></a>dbo.sysoperators (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -62,6 +59,6 @@ ms.lasthandoff: 02/03/2018
 |**category_id**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
   
 ## <a name="see-also"></a>另請參閱  
- [SQL Server Agent 資料表 &#40;TRANSACT-SQL &#41;](../../relational-databases/system-tables/sql-server-agent-tables-transact-sql.md)  
+ [SQL Server Agent 資料表&#40;Transact SQL&#41;](../../relational-databases/system-tables/sql-server-agent-tables-transact-sql.md)  
   
   

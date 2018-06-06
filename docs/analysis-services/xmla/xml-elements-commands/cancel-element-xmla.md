@@ -1,39 +1,24 @@
 ---
-title: "Cancel 元素 (XMLA) |Microsoft 文件"
-ms.custom: 
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services, azure-analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+title: Cancel 元素 (XMLA) |Microsoft 文件
+ms.date: 05/08/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: xmla
 ms.topic: reference
-apiname: Cancel Element
-apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
-apitype: Schema
-applies_to: SQL Server 2016 Preview
-f1_keywords:
-- microsoft.xml.analysis.cancel
-- http://schemas.microsoft.com/analysisservices/2003/engine#Cancel
-- urn:schemas-microsoft-com:xml-analysis#Cancel
-helpviewer_keywords: Cancel command
-ms.assetid: de4062c1-7434-44dc-9f01-29fcf78963bd
-caps.latest.revision: "15"
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: c50ff4e923e046a157c06ccb139e1b8645d1e9aa
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 7bc3cd9330261d0ec4e13a715612d73e6ecb44eb
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34574870"
 ---
 # <a name="cancel-element-xmla"></a>Cancel 元素 (XMLA)
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]取消目前正在執行的命令[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]執行個體。  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
+  取消目前執行中命令的 Analysis Services 執行個體。  
   
 ## <a name="syntax"></a>語法  
   
@@ -71,10 +56,10 @@ ms.lasthandoff: 01/08/2018
   
  一般而言，**取消**命令用來取消目前作用中工作階段上執行的命令。 在此情況下，沒有任何子項目**取消**必須指定命令。 **取消**命令也可由系統管理員取消連接或目前使用中工作階段以外的工作階段上執行的命令。 針對給定資料庫擁有管理權限之角色的成員可以取消適用於該資料庫之連接和工作階段的命令，而伺服器管理員可以取消給定 Analysis Services 執行個體之連接和工作階段的命令。  
   
- 若要擷取目前的連接和工作階段的相關資訊[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]執行個體，**探索**方法來分別要求 DISCOVER_CONNECTIONS 和 DISCOVER_SESSIONS 結構描述資料列上執行。 針對給定資料庫擁有管理權限之角色的成員可以在 DISCOVER_SESSIONS 結構描述資料列集的 SESSION_CURRENT_DATABASE 限制資料行中指定該資料庫，以便僅針對給定資料庫傳回工作階段。 如需有關**探索**方法，請參閱[探索方法 &#40;XMLA &#41;](../../../analysis-services/xmla/xml-elements-methods-discover.md).  
+ 若要擷取目前的連接和工作階段的相關資訊[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]執行個體，**探索**方法來分別要求 DISCOVER_CONNECTIONS 和 DISCOVER_SESSIONS 結構描述資料列上執行。 針對給定資料庫擁有管理權限之角色的成員可以在 DISCOVER_SESSIONS 結構描述資料列集的 SESSION_CURRENT_DATABASE 限制資料行中指定該資料庫，以便僅針對給定資料庫傳回工作階段。 如需有關**探索**方法，請參閱[探索方法&#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-methods-discover.md)。  
   
-## <a name="see-also"></a>請參閱  
- [批次元素 &#40;XMLA &#41;](../../../analysis-services/xmla/xml-elements-commands/batch-element-xmla.md)   
- [命令 &#40;XMLA &#41;](../../../analysis-services/xmla/xml-elements-commands/xml-elements-commands.md)  
+## <a name="see-also"></a>另請參閱
+ [批次項目&#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-commands/batch-element-xmla.md)   
+ [命令&#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-commands/xml-elements-commands.md)  
   
   

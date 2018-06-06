@@ -1,40 +1,37 @@
 ---
-title: "驅動程式規格子機碼 |Microsoft 文件"
-ms.custom: 
+title: 驅動程式規格子機碼 |Microsoft 文件
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
-ms.component: odbc
-ms.reviewer: 
+ms.prod: sql
+ms.prod_service: connectivity
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: connectivity
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - subkeys [ODBC], driver specification subkeys
 - driver specification subkeys [ODBC]
 - registry entries for components [ODBC], driver specification subkeys
 - drivers subkey [ODBC]
 ms.assetid: b4d802ef-b199-4e64-b7a5-6f2b3e5e2c80
-caps.latest.revision: "9"
+caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
-ms.workload: Inactive
-ms.openlocfilehash: 078afea5ea6dfa6e0c3312d8e61cabb37369a2f8
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+manager: craigg
+ms.openlocfilehash: 017e2ff63f93fed46df72e35f1a4f678a147aa04
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="driver-specification-subkeys"></a>驅動程式規格子機碼
 ODBC 驅動程式的子機碼中列出的每個驅動程式都有自己的子機碼。 這個子機碼有同名的 ODBC 驅動程式的子機碼下的對應值。 這個子機碼下的值清單之驅動程式和驅動程式安裝程式所傳回的驅動程式關鍵字值的 Dll 的完整路徑**SQLDrivers**，和使用方式計數。 值的格式是下表所示。  
   
-|[屬性]|資料類型|data|  
+|名稱|資料類型|資料|  
 |----------|---------------|----------|  
 |APILevel|REG_SZ|**0** &#124; **1** &#124; **2**|  
-|ConnectFunctions|REG_SZ|{**Y**&#124;**N**} {**Y**&#124;**N**} {**Y**&#124;**N**}|  
+|ConnectFunctions|REG_SZ|{**Y**&AMP;#124;**N**} {**Y**&AMP;#124;**N**} {**Y**&AMP;#124;**N**}|  
 |CreateDSN|REG_SZ|*驅動程式說明*|  
 |驅動程式|REG_SZ|*驅動程式 DLL 路徑*|  
 |DriverODBCVer|REG_SZ|*nn.nn*|  

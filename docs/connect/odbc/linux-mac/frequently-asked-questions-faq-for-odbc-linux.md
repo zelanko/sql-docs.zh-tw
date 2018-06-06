@@ -1,27 +1,24 @@
 ---
-title: "常見問題集 (FAQ) 適用於 ODBC Linux 和 macOS |Microsoft 文件"
-ms.custom: 
+title: 常見問題集 (FAQ) 適用於 ODBC Linux 和 macOS |Microsoft 文件
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
-ms.component: odbc
-ms.reviewer: 
+ms.prod: sql
+ms.prod_service: connectivity
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: connectivity
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: 65bfd6d2-c83d-4528-a5e1-a85b125a4f4a
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
-ms.workload: Inactive
-ms.openlocfilehash: 77fb4288a8479cb4aaf9add1c62ea92e846a37c3
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+manager: craigg
+ms.openlocfilehash: 17d25f6084e136736dbc4c8a8ff3cb019ce4692e
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="frequently-asked-questions-faq-for-odbc-linux-and-macos"></a>常見問題集 (FAQ) 適用於 ODBC Linux 和 macOS
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -51,5 +48,5 @@ UTF-8 用於 SQL_CHAR 資料，UTF-16 則用於 SQL_WCHAR 資料。
 
 否，Linux 和 macOS 上的 ODBC 驅動程式不是開放原始碼產品。  
 
-## <a name="see-also"></a>請參閱＜
+## <a name="see-also"></a>另請參閱
 [安裝的 Microsoft ODBC Driver for SQL Server on Linux 及 macOS](../../../connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md)

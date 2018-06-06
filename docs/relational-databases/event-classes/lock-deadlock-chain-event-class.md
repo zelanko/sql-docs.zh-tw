@@ -1,34 +1,30 @@
 ---
-title: "Lock:Deadlock Chain 事件類別 | Microsoft Docs"
-ms.custom: 
+title: Lock:Deadlock Chain 事件類別 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
-ms.prod_service: database-engine, sql-database
-ms.service: 
-ms.component: event-classes
-ms.reviewer: 
+ms.prod: sql
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: supportability
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - Deadlock Chain event class
 ms.assetid: 9883127b-aa34-4235-88cc-c161cd2112cc
-caps.latest.revision: 
+caps.latest.revision: 35
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 5b22c7d953bbbe6417c207628b6e3d2faaf0de5a
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: f75a0b3580e19791e189512dd0788d074f16cb2d
+ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="lockdeadlock-chain-event-class"></a>Lock:Deadlock Chain 事件類別
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-每個處於死結中的參與者都會產生 Lock:Deadlock Chain 事件類別。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  每個處於死結中的參與者都會產生 Lock:Deadlock Chain 事件類別。  
   
  使用 Lock:Deadlock Chain 事件類別可監視死結情況發生的時間。 這項資訊有助於判斷死結對應用程式的效能是否有重大影響，以及哪些物件會受到影響。 您可以檢查修改這些物件的應用程式碼，以判斷是否可進行變更來減少死結。  
   

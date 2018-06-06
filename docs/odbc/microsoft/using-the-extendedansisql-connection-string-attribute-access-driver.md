@@ -1,31 +1,28 @@
 ---
-title: "使用 ExtendedAnsiSQL 連接字串屬性 |Microsoft 文件"
-ms.custom: 
+title: 使用 ExtendedAnsiSQL 連接字串屬性 |Microsoft 文件
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
-ms.component: odbc
-ms.reviewer: 
+ms.prod: sql
+ms.prod_service: connectivity
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: connectivity
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - Access driver [ODBC], ExtendedAnsiSql
 - extendedANSISQL [ODBC]
 - extendedANSISQL [ODBC], about ExtendedAnsiSQL
 ms.assetid: 92675c30-9100-43ae-aa35-041f3006a54f
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
-ms.workload: Inactive
-ms.openlocfilehash: e3908aaa9cc9e36895fd22fa2cd9179142aaaf3b
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+manager: craigg
+ms.openlocfilehash: 34ebab5ed23c57996ff508818b25597c42a64d9e
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="using-the-extendedansisql-connection-string-attribute-access-driver"></a>使用 ExtendedAnsiSQL 連接字串屬性 （存取驅動程式）
 Jet 4.0 有數個 ODBC 桌面資料庫驅動程式 4.0 版中，預設不會啟用的新功能。 若要充分利用這些新功能，應用程式必須設定新的連接屬性，將新屬性加入至連接字串中，或在 DSN 中設定屬性。 呼叫 ExtendedAnsiSQL 以及適用於 Microsoft ODBC 桌面資料庫驅動程式 4.0 和更新版本的屬性。  

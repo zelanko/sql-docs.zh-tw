@@ -1,37 +1,23 @@
 ---
-title: "採礦模型的篩選 (Analysis Services-資料採礦) |Microsoft 文件"
-ms.custom: 
-ms.date: 03/20/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
-helpviewer_keywords:
-- attributes [data mining]
-- filter syntax [data mining]
-- models [Analysis Services], filtering
-- filters [data mining]
-- filtering data [Analysis Services]
-ms.assetid: 0f29c19c-4be3-4bc7-ab60-f4130a10d59c
-caps.latest.revision: 
-author: Minewiskan
+title: 採礦模型的篩選 (Analysis Services-資料採礦) |Microsoft 文件
+ms.date: 05/08/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: data-mining
+ms.topic: conceptual
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 83c491408707f1a7107a3bb6d485418189d9eb1c
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 4c678773a77b9411eb1a51dbeb85b5eeb5f08b43
+ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="filters-for-mining-models-analysis-services---data-mining"></a>採礦模型的篩選 (Analysis Services - 資料採礦)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-以資料為基礎的模型篩選可協助您建立使用採礦結構中之資料子集的採礦模型。 當您設計採礦結構和資料來源時，篩選可提供彈性，因為您可以根據完整的資料來源檢視來建立單一採礦結構。 然後，您可以建立篩選來單獨使用其中一部分資料進行各種模型的定型和測試，而非針對每個資料子集建立不同的結構和相關模型。  
+  以資料為基礎的模型篩選可協助您建立使用採礦結構中之資料子集的採礦模型。 當您設計採礦結構和資料來源時，篩選可提供彈性，因為您可以根據完整的資料來源檢視來建立單一採礦結構。 然後，您可以建立篩選來單獨使用其中一部分資料進行各種模型的定型和測試，而非針對每個資料子集建立不同的結構和相關模型。  
   
  例如，您可以針對 Customers 資料表和相關資料表定義資料來源檢視。 接著，您可以定義包含所需之所有欄位的單一採礦結構。 最後，您可以建立在特定客戶屬性 (例如 Region) 上篩選的模型。 然後，您可以輕鬆地建立該模型的副本，並且單獨將篩選條件變更為根據不同的區域產生新的模型。  
   
@@ -57,7 +43,7 @@ ms.lasthandoff: 02/15/2018
 ### <a name="creating-model-filters-using-data-mining-designer"></a>使用資料採礦設計師來建立模型篩選  
  您可以變更採礦模型的 **Filter** 屬性，藉以在資料採礦設計師中篩選模型。 您可以直接在 **[屬性]** 窗格中輸入篩選運算式，也可以開啟篩選對話方塊來建立條件。  
   
- 目前提供了兩個篩選對話方塊。 第一個對話方塊可讓您建立套用至案例資料表的條件。 如果資料來源包含多份資料表，您首先要選取一份資料表，然後選取資料行並指定套用至該資料行的運算子與條件。 您可以使用 **AND**/**OR** 運算子。 可用來定義值的運算子會因資料行包含離散值或連續值而不同。 例如，如果包含連續值，您就可以使用 **greater than** 和 **less than** 運算子。 不過，若是離散值，您只能使用 **= (等於)**、 **!= (不等於)**和 **is null** 運算子。  
+ 目前提供了兩個篩選對話方塊。 第一個對話方塊可讓您建立套用至案例資料表的條件。 如果資料來源包含多份資料表，您首先要選取一份資料表，然後選取資料行並指定套用至該資料行的運算子與條件。 您可以使用 **AND**/**OR** 運算子。 可用來定義值的運算子會因資料行包含離散值或連續值而不同。 例如，如果包含連續值，您就可以使用 **greater than** 和 **less than** 運算子。 不過，若是離散值，您只能使用 **= (等於)**、 **!= (不等於)** 和 **is null** 運算子。  
   
 > [!NOTE]  
 >  不支援 **LIKE** 關鍵字。 如果您想要加入多個離散屬性，就必須建立不同的條件，然後使用 **OR** 運算子來連結它們。  

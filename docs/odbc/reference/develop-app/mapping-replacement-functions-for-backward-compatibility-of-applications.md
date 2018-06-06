@@ -1,16 +1,14 @@
 ---
-title: "取代函式對應的應用程式的 ODBC 相容 |Microsoft 文件"
-ms.custom: 
+title: 取代函式對應的應用程式的 ODBC 相容 |Microsoft 文件
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
-ms.component: odbc
-ms.reviewer: 
+ms.prod: sql
+ms.prod_service: connectivity
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: connectivity
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - mapping replacement functions [ODBC]
 - upgrading applications [ODBC], mapping replacement functions
@@ -20,19 +18,18 @@ helpviewer_keywords:
 - application upgrades [ODBC], mapping replacement functions
 - backward compatibility [ODBC], mapping replacement functions
 ms.assetid: f5e6d9da-76ef-42cb-b3f5-f640857df732
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
-ms.workload: Inactive
-ms.openlocfilehash: c93ea22e03f401580a968dacb1ca15910c7eb44b
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+manager: craigg
+ms.openlocfilehash: 14ca73aefb033580c2770da05189e3de04a424e3
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="mapping-replacement-functions-for-backward-compatibility-of-applications"></a>取代函式對應的應用程式的回溯相容性
-ODBC 3*.x*應用程式使用 ODBC 3 透過*.x*驅動程式管理員會針對 ODBC 2。*x*只要使用了沒有的新功能的驅動程式。 同時複製功能和行為變更，不過，會影響的方式，ODBC 3。*x*應用程式適用於 ODBC 2。*x*驅動程式。 當使用的 ODBC 2。*x*驅動程式，驅動程式管理員會將對應下列 ODBC 3。*x*函式，也有取代一或多個 ODBC 2。*x*函式，到對應的 ODBC 2。*x*函式。  
+ODBC 3 *.x*應用程式使用 ODBC 3 透過 *.x*驅動程式管理員會針對 ODBC 2。*x*只要使用了沒有的新功能的驅動程式。 同時複製功能和行為變更，不過，會影響的方式，ODBC 3。*x*應用程式適用於 ODBC 2。*x*驅動程式。 當使用的 ODBC 2。*x*驅動程式，驅動程式管理員會將對應下列 ODBC 3。*x*函式，也有取代一或多個 ODBC 2。*x*函式，到對應的 ODBC 2。*x*函式。  
   
 |ODBC 3。*x*函式|ODBC 2。*x*函式|  
 |-------------------------|-------------------------|  
@@ -107,7 +104,7 @@ SQLColAttribute(StatementHandle, ColumnNumber, FieldIdentifier, CharacterAttribu
   
      驅動程式管理員會傳回 sql_error，其中包含 SQLSTATE HY091 （無效的描述項欄位識別碼）。 本節的任何進一步的規則不套用。  
   
-2.  驅動程式管理員會將對應 SQL_COLUMN_COUNT、 SQL_COLUMN_NAME 或 SQL_COLUMN_NULLABLE SQL_DESC_COUNT、 SQL_DESC_NAME，或 SQL_DESC_NULLABLE，分別。 (ODBC 2*.x*驅動程式需要只支援 SQL_COLUMN_COUNT、 SQL_COLUMN_NAME，SQL_COLUMN_NULLABLE、 不 SQL_DESC_COUNT、 SQL_DESC_NAME，以及 SQL_DESC_NULLABLE。)SQLColAttribute 的呼叫會對應至：  
+2.  驅動程式管理員會將對應 SQL_COLUMN_COUNT、 SQL_COLUMN_NAME 或 SQL_COLUMN_NULLABLE SQL_DESC_COUNT、 SQL_DESC_NAME，或 SQL_DESC_NULLABLE，分別。 (ODBC 2 *.x*驅動程式需要只支援 SQL_COLUMN_COUNT、 SQL_COLUMN_NAME，SQL_COLUMN_NULLABLE、 不 SQL_DESC_COUNT、 SQL_DESC_NAME，以及 SQL_DESC_NULLABLE。)SQLColAttribute 的呼叫會對應至：  
   
     ```  
     SQLColAttributes(StatementHandle, ColumnNumber, FieldIdentifier, CharacterAttributePtr, BufferLength, StringLengthPtr, NumericAttributePtr);  
@@ -239,7 +236,7 @@ SQLGetConnectAttr(ConnectionHandle, Attribute, ValuePtr, BufferLength, StringLen
      請注意， *Columnsize*和*StringLengthPtr*都會被忽略。  
   
 ## <a name="sqlgetdata"></a>SQLGetData  
- 當 ODBC 3。*x*應用程式使用 ODBC 2*.x*驅動程式呼叫**SQLGetData**與*ColumnNumber*等於 0，而 ODBC 3引數*.x*驅動程式管理員對應到呼叫**SQLGetStmtOption**與*選項*屬性設為 SQL_GET_BOOKMARK。  
+ 當 ODBC 3。*x*應用程式使用 ODBC 2 *.x*驅動程式呼叫**SQLGetData**與*ColumnNumber*等於 0，而 ODBC 3引數 *.x*驅動程式管理員對應到呼叫**SQLGetStmtOption**與*選項*屬性設為 SQL_GET_BOOKMARK。  
   
 ## <a name="sqlgetstmtattr"></a>SQLGetStmtAttr  
  驅動程式管理員會將對應為**SQLGetStmtOption**。 下列呼叫**SQLGetStmtAttr**:  
@@ -409,20 +406,20 @@ SQLParamOptions (StatementHandle, Size, &RowCount);
 ## <a name="error-handling"></a>錯誤處理  
  在 ODBC 3。*x*，則呼叫**SQLFetch**或**SQLFetchScroll**於其中填入在 IRD 和指定的診斷記錄的 SQL_DIAG_ROW_NUMBER 欄位 SQL_DESC_ARRAY_STATUS_PTR包含這個記錄相關之資料列集的資料列數目。 使用這種情況，應用程式可以將相互關聯的錯誤訊息與給定資料列位置。  
   
- ODBC 2。*x*驅動程式將無法提供這項功能。 不過，它會提供與 SQLSTATE 01S01 錯誤分界 （資料列中的錯誤）。 ODBC 3。*x*正在使用應用程式**SQLFetch**或**SQLFetchScroll**時將對 ODBC 2。*x*驅動程式必須瞭解這個情況。 也請注意，這類應用程式將無法呼叫**SQLGetDiagField**實際上還是取得 SQL_DIAG_ROW_NUMBER 欄位。 ODBC 3。*x*應用程式使用 ODBC 2。*x*驅動程式將無法呼叫**SQLGetDiagField**只能搭配*Sqlgetdiagfield* SQL_DIAG_MESSAGE_TEXT、 SQL_DIAG_NATIVE、 SQL_DIAG_RETURNCODE 或 SQL_DIAG_ 的引數SQLSTATE。 ODBC 3*.x*驅動程式管理員會使用 ODBC 2 時，維護診斷資料結構。*x*驅動程式，但是 ODBC 2。*x*驅動程式會傳回只這四個欄位。  
+ ODBC 2。*x*驅動程式將無法提供這項功能。 不過，它會提供與 SQLSTATE 01S01 錯誤分界 （資料列中的錯誤）。 ODBC 3。*x*正在使用應用程式**SQLFetch**或**SQLFetchScroll**時將對 ODBC 2。*x*驅動程式必須瞭解這個情況。 也請注意，這類應用程式將無法呼叫**SQLGetDiagField**實際上還是取得 SQL_DIAG_ROW_NUMBER 欄位。 ODBC 3。*x*應用程式使用 ODBC 2。*x*驅動程式將無法呼叫**SQLGetDiagField**只能搭配*Sqlgetdiagfield* SQL_DIAG_MESSAGE_TEXT、 SQL_DIAG_NATIVE、 SQL_DIAG_RETURNCODE 或 SQL_DIAG_ 的引數SQLSTATE。 ODBC 3 *.x*驅動程式管理員會使用 ODBC 2 時，維護診斷資料結構。*x*驅動程式，但是 ODBC 2。*x*驅動程式會傳回只這四個欄位。  
   
- 當 ODBC 2。*x*應用程式使用 ODBC 2。*x*驅動程式，如果作業可能會導致多個錯誤，傳回由驅動程式管理員，不同的錯誤可能會傳回 ODBC 3*.x*比 ODBC 2 的驅動程式管理員。*x*驅動程式管理員。  
+ 當 ODBC 2。*x*應用程式使用 ODBC 2。*x*驅動程式，如果作業可能會導致多個錯誤，傳回由驅動程式管理員，不同的錯誤可能會傳回 ODBC 3 *.x*比 ODBC 2 的驅動程式管理員。*x*驅動程式管理員。  
   
 ## <a name="mappings-for-bookmark-operations"></a>書籤作業的對應  
- ODBC 3*.x*驅動程式管理員執行下列的對應時 ODBC 3。*x*應用程式使用 ODBC 2。*x*驅動程式會在執行書籤的作業。  
+ ODBC 3 *.x*驅動程式管理員執行下列的對應時 ODBC 3。*x*應用程式使用 ODBC 2。*x*驅動程式會在執行書籤的作業。  
   
 ### <a name="sqlbindcol"></a>SQLBindCol  
- 當 ODBC 3。*x*應用程式使用 ODBC 2。*x*驅動程式呼叫**SQLBindCol**繫結至資料行 0 *fCType*等於 SQL_C_VARBOOKMARK，ODBC 3*.x*驅動程式管理員會檢查是否*Columnsize*引數小於 4 或大於 4，而如果是的話，會傳回 SQLSTATE HY090 （無效的字串或緩衝區長度）。 如果*Columnsize*引數等於 4，驅動程式管理員呼叫**SQLBindCol**驅動程式，來取代之後*fCType* SQL_C_BOOKMARK 與。  
+ 當 ODBC 3。*x*應用程式使用 ODBC 2。*x*驅動程式呼叫**SQLBindCol**繫結至資料行 0 *fCType*等於 SQL_C_VARBOOKMARK，ODBC 3 *.x*驅動程式管理員會檢查是否*Columnsize*引數小於 4 或大於 4，而如果是的話，會傳回 SQLSTATE HY090 （無效的字串或緩衝區長度）。 如果*Columnsize*引數等於 4，驅動程式管理員呼叫**SQLBindCol**驅動程式，來取代之後*fCType* SQL_C_BOOKMARK 與。  
   
 ### <a name="sqlcolattribute"></a>SQLColAttribute  
  當 ODBC 3。*x*應用程式使用 ODBC 2。*x*驅動程式呼叫**SQLColAttribute**與*ColumnNumber*引數設定為 0，則驅動程式管理員會傳回*FieldIdentifier*值下表所列。  
   
-|*FieldIdentifier*|ReplTest1|  
+|*FieldIdentifier*|Value|  
 |-----------------------|-----------|  
 |SQL_DESC_AUTO_UNIQUE_VALUE|SQL_FALSE|  
 |SQL_DESC_CASE_SENSITIVE|SQL_FALSE|  
@@ -454,7 +451,7 @@ SQLParamOptions (StatementHandle, Size, &RowCount);
 ### <a name="sqldescribecol"></a>SQLDescribeCol  
  當 ODBC 3。*x*應用程式使用 ODBC 2。*x*驅動程式呼叫**SQLDescribeCol**與*ColumnNumber*引數設定為 0，驅動程式管理員會傳回下表所列的值。  
   
-|緩衝區|ReplTest1|  
+|緩衝區|Value|  
 |------------|-----------|  
 |ColumnName|"" (空字串)|  
 |* NameLengthPtr|0|  

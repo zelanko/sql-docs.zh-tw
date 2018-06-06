@@ -1,37 +1,23 @@
 ---
-title: "動作 (Analysis Services-多維度資料) |Microsoft 文件"
-ms.custom: 
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
-helpviewer_keywords:
-- actions [Analysis Services]
-- actions [Analysis Services], about actions
-- MDX [Analysis Services], actions
-- cubes [Analysis Services], actions
-- OLAP objects [Analysis Services], actions
-ms.assetid: 07229bb2-805c-427e-8455-69c9ca5d01e0
-caps.latest.revision: 
-author: Minewiskan
+title: 動作 (Analysis Services-多維度資料) |Microsoft 文件
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: multidimensional-models
+ms.topic: conceptual
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: bd000979f6a7db2ea3da1b449312193edaa2c6ef
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: b7c4d8781aa316ab49fb3730dd783c77e2776441
+ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="actions-analysis-services---multidimensional-data"></a>動作 (Analysis Services - 多維度資料)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-動作可以屬於不同類型，而且必須據此來建立。 動作可以是：  
+  動作可以屬於不同類型，而且必須據此來建立。 動作可以是：  
   
 -   鑽研動作，該動作會傳回一組資料列，這些資料列表示動作發生所在之 Cube 中選定資料格的基礎資料。  
   

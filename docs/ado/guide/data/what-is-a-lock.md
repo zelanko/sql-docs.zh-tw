@@ -1,31 +1,28 @@
 ---
-title: "什麼是鎖定？ | Microsoft Docs"
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
+title: 什麼是鎖定？ | Microsoft Docs
+ms.prod: sql
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
-ms.custom: 
+ms.technology: connectivity
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - cursors [ADO], locking
 - locks [ADO], about locking
 ms.assetid: f8989555-28c6-4c17-9bf8-7f44a8a5c407
-caps.latest.revision: 
+caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 945416224804a6e3b384981912d2375351012a8c
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 97d36e1fdfa054de01862d8978c8efdae8cadb86
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="what-is-a-lock"></a>什麼是鎖定？
 鎖定是 DBMS 會存取限制在多使用者環境中的資料列的程序。 資料列或資料行以獨佔方式鎖定時，不允許其他使用者存取鎖定的資料，直到釋放鎖定為止。 這可確保兩位使用者無法同時更新相同的資料行的資料列中。  

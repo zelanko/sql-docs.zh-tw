@@ -1,17 +1,16 @@
 ---
-title: "檢視 SQL Server 執行個體上的資料庫清單 | Microsoft 文件"
-ms.custom: 
+title: 檢視 SQL Server 執行個體上的資料庫清單 | Microsoft 文件
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
 ms.component: databases
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - current databases
 - databases currently on server [SQL Server]
@@ -22,19 +21,20 @@ helpviewer_keywords:
 - servers [SQL Server], databases listed on
 - listing databases
 ms.assetid: 7ee7a789-db36-4be9-8a0e-0362a1e152dd
-caps.latest.revision: 
+caps.latest.revision: 31
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: Active
-ms.openlocfilehash: c7d724e3a3de5f03c6175acdd9760753f60cd91b
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: f88b9e65a94b7389738995446710051ae9302980
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="view-a-list-of-databases-on-an-instance-of-sql-server"></a>檢視 SQL Server 執行個體上的資料庫清單
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] 本主題描述如何使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 或 [!INCLUDE[tsql](../../includes/tsql-md.md)] 來檢視 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體上的資料庫清單。  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+  此主題描述如何使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 來檢視 [!INCLUDE[tsql](../../includes/tsql-md.md)]執行個體上的資料庫清單。  
   
  **本主題內容**  
   
@@ -59,7 +59,7 @@ ms.lasthandoff: 01/18/2018
   
 #### <a name="to-view-a-list-of-databases-on-an-instance-of-sql-server"></a>若要檢視 SQL Server 執行個體上的資料庫清單  
   
-1.  在 **[物件總管]**中，連接到 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]的執行個體，然後展開該執行個體。  
+1.  在 **[物件總管]** 中，連接到 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]的執行個體，然後展開該執行個體。  
   
 2.  若要查看執行個體上所有資料庫的清單，請展開 **[資料庫]**。  
   

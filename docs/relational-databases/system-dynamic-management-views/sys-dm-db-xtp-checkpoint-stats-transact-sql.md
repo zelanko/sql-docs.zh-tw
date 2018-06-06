@@ -1,16 +1,14 @@
 ---
-title: "sys.dm_db_xtp_checkpoint_stats (TRANSACT-SQL) |Microsoft 文件"
-ms.custom: 
+title: sys.dm_db_xtp_checkpoint_stats (TRANSACT-SQL) |Microsoft 文件
+ms.custom: ''
 ms.date: 03/20/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
-ms.component: dmv's
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine-imoltp
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - dm_db_xtp_checkpoint_stats
@@ -22,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_db_xtp_checkpoint_stats dynamic management view
 ms.assetid: 8d0b18ca-db4d-4376-9905-3e4457727c46
-caps.latest.revision: 
+caps.latest.revision: 26
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: a3bce2f4337894c86e251e53c9fc0546f2e69253
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+monikerRange: = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 183970c09d23304553167b20366e0751d5f35207
+ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 05/23/2018
 ---
 # <a name="sysdmdbxtpcheckpointstats-transact-sql"></a>sys.dm_db_xtp_checkpoint_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
@@ -44,10 +42,10 @@ ms.lasthandoff: 02/03/2018
 SELECT * FROM db.sys.dm_db_xtp_checkpoint_stats;  
 ```  
   
-**[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]本質上與較新的版本不同，會在主題中的較低討論[SQL Server 2014](#bkmk_2014)。**
+**[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 本質上與較新的版本不同，會在主題中的較低討論[SQL Server 2014](#bkmk_2014)。**
   
-## <a name="includesssql15includessssql15-mdmd-and-later"></a>[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]及更新版本  
- 下表描述的資料行`sys.dm_db_xtp_checkpoint_stats`開始 **[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]** 。  
+## <a name="includesssql15includessssql15-mdmd-and-later"></a>[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 及更新版本  
+ 下表描述的資料行`sys.dm_db_xtp_checkpoint_stats`開始**[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]**。  
   
 |資料行名稱|類型|Description|  
 |-----------------|----------|-----------------|  
@@ -89,7 +87,7 @@ SELECT * FROM db.sys.dm_db_xtp_checkpoint_stats;
 |bytes_of_large_data_serialized|**bigint**|已序列化的資料量。 |  
   
 ##  <a name="bkmk_2014"></a> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]  
- 下表描述的資料行`sys.dm_db_xtp_checkpoint_stats`，如 **[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]** 。  
+ 下表描述的資料行`sys.dm_db_xtp_checkpoint_stats`，如**[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]**。  
   
 |資料行名稱|類型|Description|  
 |-----------------|----------|-----------------|  
@@ -113,6 +111,6 @@ SELECT * FROM db.sys.dm_db_xtp_checkpoint_stats;
  需要伺服器的 `VIEW DATABASE STATE` 權限。  
   
 ## <a name="see-also"></a>另請參閱  
- [記憶體最佳化的資料表動態管理檢視 &#40;TRANSACT-SQL &#41;](../../relational-databases/system-dynamic-management-views/memory-optimized-table-dynamic-management-views-transact-sql.md)  
+ [記憶體最佳化的資料表動態管理檢視&#40;Transact SQL&#41;](../../relational-databases/system-dynamic-management-views/memory-optimized-table-dynamic-management-views-transact-sql.md)  
   
   

@@ -1,16 +1,15 @@
 ---
-title: "格式化圖表上的軸標籤 (報表產生器及 SSRS) | Microsoft Docs"
-ms.custom: 
+title: 格式化圖表上的軸標籤 (報表產生器及 SSRS) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: report-design
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 f1_keywords:
 - sql13.rtp.rptdesigner.axisproperties.majortickmarks.f1
 - sql13.rtp.rptdesigner.calculatedseriesproperties.axeschartareas.f1
@@ -26,18 +25,18 @@ f1_keywords:
 - sql13.rtp.rptdesigner.axisproperties.labelfont.f1
 - sql13.rtp.rptdesigner.axisproperties.minortickmarks.f1
 - "10141"
-helpviewer_keywords: "10140"
+helpviewer_keywords:
+- "10140"
 ms.assetid: ddf50dd5-5314-42ff-97f4-c3a4a17cfcdd
-caps.latest.revision: "8"
+caps.latest.revision: 8
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: c5fd2ef17552e0f27fd2206b4a14acdb1e1231bd
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 326bc2a7516d7401fe3af763237b0f5f0c7a1170
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="formatting-axis-labels-on-a-chart-report-builder-and-ssrs"></a>格式化圖表上的軸標籤 (報表產生器及 SSRS)
   以座標為基礎的圖表類型 (直條圖、橫條圖、區域圖、點圖、折線圖和範圍圖) 具有兩個座標軸，可用來分類及顯示資料關聯性。 每個座標軸都會套用不同類型的格式設定。  

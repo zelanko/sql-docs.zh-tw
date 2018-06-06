@@ -1,16 +1,15 @@
 ---
-title: "srv_willconvert (擴充預存程序 API) | Microsoft Docs"
-ms.custom: 
+title: srv_willconvert (擴充預存程序 API) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/17/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
 ms.component: extended-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - srv_willconvert
@@ -22,16 +21,15 @@ dev_langs:
 helpviewer_keywords:
 - srv_willconvert
 ms.assetid: 6f4db5fd-215a-461c-95e4-17697852733e
-caps.latest.revision: 
+caps.latest.revision: 29
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: e4a39602f8e7e75dabacbac405758aee6879b0b2
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
-ms.translationtype: MT
+ms.openlocfilehash: e22955b073e17802be37e95ddf41659766da0662
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="srvwillconvert-extended-stored-procedure-api"></a>srv_willconvert (擴充預存程序 API)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -64,7 +62,7 @@ desttype
 ## <a name="returns"></a>傳回值  
  支援資料類型轉換時為 TRUE；不支援資料類型轉換時則為 FALSE。  
   
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>Remarks  
  如需每種資料類型的描述，請參閱[資料類型 &#40;擴充預存程序 API&#41;](../../relational-databases/extended-stored-procedures-reference/data-types-extended-stored-procedure-api.md)。  
   
 > [!IMPORTANT]  

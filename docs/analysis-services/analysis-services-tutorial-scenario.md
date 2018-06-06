@@ -1,29 +1,19 @@
 ---
-title: "Analysis Services 教學課程案例 |Microsoft 文件"
-ms.custom: 
-ms.date: 03/17/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: get-started-article
-applies_to:
-- SQL Server 2016
-ms.assetid: 2f5b1a42-b814-4d7d-b603-5383d9ac66b9
-caps.latest.revision: 
-author: Minewiskan
+title: Analysis Services 教學課程案例 |Microsoft 文件
+ms.date: 05/08/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: multidimensional-models
+ms.topic: tutorial
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 85890ac9d5264bdce01f5bf10a0060532da00646
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 9a564052f268120fb02baefdf7991978bf24bfaa
+ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="analysis-services-tutorial-scenario"></a>Analysis Services 教學課程案例
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -72,7 +62,7 @@ ms.lasthandoff: 02/15/2018
 Analysis Services 教學課程中的課程提供建立符合這些所有目標之 Cube 資料庫的指導方針。 若要開始使用，請繼續進行第一課： [第 1 課：建立新的表格式模型專案](../analysis-services/lesson-1-create-a-new-tabular-model-project.md)。  
   
 ## <a name="see-also"></a>另請參閱  
-[多維度模型化 &#40;Adventure Works 教學課程 &#41;](../analysis-services/multidimensional-modeling-adventure-works-tutorial.md)  
+[多維度模型化 & #40;Adventure Works 教學課程 & #41;](../analysis-services/multidimensional-modeling-adventure-works-tutorial.md)  
   
   
   

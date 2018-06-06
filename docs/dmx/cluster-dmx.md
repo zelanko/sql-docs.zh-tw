@@ -1,30 +1,31 @@
 ---
-title: "群集 (DMX) |Microsoft 文件"
-ms.custom: 
+title: 群集 (DMX) |Microsoft 文件
+ms.custom: ''
 ms.date: 03/02/2016
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
 ms.component: data-mining
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
-f1_keywords: Cluster
-dev_langs: DMX
-helpviewer_keywords: Cluster function
+f1_keywords:
+- Cluster
+dev_langs:
+- DMX
+helpviewer_keywords:
+- Cluster function
 ms.assetid: 14b2942a-6dec-4dfa-98a6-697a3c89036a
-caps.latest.revision: "34"
+caps.latest.revision: 34
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: cec73e5b3c182073cfad14c3605183fe72732d72
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 8a847f60134abd44fa5fc9da2deb4e9a53532960
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="cluster-dmx"></a>群集 (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -50,7 +51,7 @@ Cluster()
  **叢集**也可用來當作`<`叢集資料行參考`>`如**PredictHistogram**函式。  
   
 ## <a name="examples"></a>範例  
- 下列範例會使用單一查詢及[PredictHistogram &#40; DMX &#41;](../dmx/predicthistogram-dmx.md)和叢集函式來傳回 TM Clustering 採礦模型和個別的案例會存在於每個群集的機率的每一個叢集中的個別案例的距離。  
+ 下列範例會使用單一查詢及[PredictHistogram &#40;DMX&#41; ](../dmx/predicthistogram-dmx.md)和叢集函式來傳回 TM Clustering 採礦模型的每一個叢集中的個別案例的距離，個別的案例會存在於每個群集的機率。  
   
 ```  
 SELECT  
@@ -65,10 +66,10 @@ FROM
   0 AS [Number Children At Home]) AS t  
 ```  
   
-## <a name="see-also"></a>請參閱  
- [ClusterProbability &#40; DMX &#41;](../dmx/clusterprobability-dmx.md)   
- [資料採礦延伸模組 &#40; DMX &#41;函數參考](../dmx/data-mining-extensions-dmx-function-reference.md)   
- [函式 &#40; DMX &#41;](../dmx/functions-dmx.md)   
- [一般預測函數 &#40; DMX &#41;](../dmx/general-prediction-functions-dmx.md)  
+## <a name="see-also"></a>另請參閱  
+ [ClusterProbability &#40;DMX&#41;](../dmx/clusterprobability-dmx.md)   
+ [資料採礦延伸模組&#40;DMX&#41;函數參考](../dmx/data-mining-extensions-dmx-function-reference.md)   
+ [函式&#40;DMX&#41;](../dmx/functions-dmx.md)   
+ [一般預測函數&#40;DMX&#41;](../dmx/general-prediction-functions-dmx.md)  
   
   

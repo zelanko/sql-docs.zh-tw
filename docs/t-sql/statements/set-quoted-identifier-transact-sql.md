@@ -1,16 +1,14 @@
 ---
 title: SET QUOTED_IDENTIFIER (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 02/03/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
 ms.component: t-sql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: t-sql
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - QUOTED_IDENTIFIER_TSQL
@@ -27,16 +25,16 @@ helpviewer_keywords:
 - ISO delimited identifiers rules
 - SET QUOTED_IDENTIFIER statement
 ms.assetid: 10f66b71-9241-4a3a-9292-455ae7252565
-caps.latest.revision: 
+caps.latest.revision: 48
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Active
-ms.openlocfilehash: 207cf23523a315a0a4a4bc923ae9e52d7b82f8b0
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: b78a2ba8a3d9520376746da1810c4a2d64324781
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="set-quotedidentifier-transact-sql"></a>SET QUOTED_IDENTIFIER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -66,7 +64,7 @@ SET QUOTED_IDENTIFIER ON
   
  當 SET QUOTED_IDENTIFIER 是 OFF 時，您可以用單引號或雙引號來分隔運算式中的文字字串。 如果用雙引號來分隔文字字串，字串便可以包含內嵌的單引號，如撇號。  
   
- 當您建立或變更計算資料行索引或索引檢視時，SET QUOTED_IDENTIFIER 也必須是 ON。 如果 SET QUOTED_IDENTIFIER 是 OFF，含計算資料行索引的資料表或索引檢視之 CREATE、UPDATE、INSERT 和 DELETE 陳述式會失敗。 如需使用索引檢視表和計算資料行索引時之必要 SET 選項設定的詳細資訊，請參閱 [SET 陳述式 &#40;Transact-SQL&#41;](../../t-sql/statements/set-statements-transact-sql.md) 中的＜使用 SET 陳述式時的考量＞一節。  
+ 當您建立或變更計算資料行索引或索引檢視時，SET QUOTED_IDENTIFIER 也必須是 ON。 如果 SET QUOTED_IDENTIFIER 是 OFF，含計算資料行索引的資料表或索引檢視之 CREATE、UPDATE、INSERT 和 DELETE 陳述式會失敗。 如需使用索引檢視表和計算資料行索引時所需之 SET 選項設定的詳細資訊，請參閱 [SET 陳述式 &#40;Transact-SQL&#41;](../../t-sql/statements/set-statements-transact-sql.md) 中的＜使用 SET 陳述式時的考量＞一節。  
   
  當您要建立篩選索引時，SET QUOTED_IDENTIFIER 必須是 ON。  
   

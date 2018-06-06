@@ -1,30 +1,28 @@
 ---
-title: "預設 PHP 資料類型 |Microsoft 文件"
-ms.custom: 
+title: 預設 PHP 資料類型 |Microsoft 文件
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
+ms.prod: sql
+ms.prod_service: connectivity
 ms.component: php
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: connectivity
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - default data types
 - converting data types
 ms.assetid: b66c301d-3d20-45b8-a112-225d8f01c0bd
-caps.latest.revision: "40"
+caps.latest.revision: 40
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
-ms.workload: Inactive
-ms.openlocfilehash: 7ff008fdf5cd27300da5912c5347f8c7089bdf53
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+manager: craigg
+ms.openlocfilehash: f8ae48b672aa4817f8451eeee788985b4b90694f
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="default-php-data-types"></a>預設 PHP 資料類型
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -40,7 +38,7 @@ ms.lasthandoff: 11/18/2017
 |SQL Server 類型|預設 PHP 類型|預設編碼|  
 |-------------------|--------------------|--------------------|  
 |bigint|字串|8 位元字元<sup>1</sup>|  
-|binary|資料流<sup>2</sup>|二進位<sup>3</sup>|  
+|BINARY|資料流<sup>2</sup>|二進位<sup>3</sup>|  
 |bit|Integer|8 位元字元<sup>1</sup>|  
 |char|字串|8 位元字元<sup>1</sup>|  
 |date<sup>4</sup>|Datetime|不適用|  
@@ -51,10 +49,10 @@ ms.lasthandoff: 11/18/2017
 |float|Float|8 位元字元<sup>1</sup>|  
 |地理位置|資料流|二進位<sup>3</sup>|  
 |幾何|資料流|二進位<sup>3</sup>|  
-|映像<sup>5</sup>|資料流<sup>2</sup>|二進位<sup>3</sup>|  
+|image<sup>5</sup>|資料流<sup>2</sup>|二進位<sup>3</sup>|  
 |int|Integer|8 位元字元<sup>1</sup>|  
 |money|字串|8 位元字元<sup>1</sup>|  
-|nchar|字串|8 位元字元<sup>1</sup>|  
+|NCHAR|字串|8 位元字元<sup>1</sup>|  
 |numeric|字串|8 位元字元<sup>1</sup>|  
 |nvarchar|字串|8 位元字元<sup>1</sup>|  
 |nvarchar(MAX)|資料流<sup>2</sup>|8 位元字元<sup>1</sup>|  
@@ -77,9 +75,9 @@ ms.lasthandoff: 11/18/2017
 |xml|資料流<sup>2</sup>|8 位元字元<sup>1</sup>|  
   
 
-1.  資料會以如同在系統上設定之 Windows 地區設定的字碼頁中指定的 8 位元字元傳回。 系統會以單一位元組問號 (?) 字元取代任何多位元組字元或未對應到此字碼頁的字元。  
+1.  資料會以如同在系統上設定之 Windows 地區設定的字碼頁中指定的 8 位元字元傳回。 以單一位元組問號 （？） 字元取代任何多位元組字元或未對應到此字碼頁的字元。  
   
-2.  如果 [sqlsrv_fetch_array](../../connect/php/sqlsrv-fetch-array.md) 或 [sqlsrv_fetch_object](../../connect/php/sqlsrv-fetch-object.md) 用來擷取預設 PHP 類型為「資料流」的資料，將會以字串形式 (其編碼方式與資料流相同) 傳回資料。 例如，如果使用 **sqlsrv_fetch_array**擷取 SQL Server 二進位類型，則預設傳回類型會是二進位字串。  
+2.  如果[sqlsrv_fetch_array](../../connect/php/sqlsrv-fetch-array.md)或[sqlsrv_fetch_object](../../connect/php/sqlsrv-fetch-object.md)是用來擷取預設 PHP 類型的資料流的資料，資料會以字串傳回具有相同的編碼方式與資料流。 例如，如果 SQL Server 二進位類型會擷取使用**sqlsrv_fetch_array**，則預設傳回類型是二進位字串。  
   
 3.  資料會以原始位元組資料流形式從伺服器傳回，而不需執行編碼或轉譯。  
 
@@ -114,9 +112,13 @@ ms.lasthandoff: 11/18/2017
 部分類型支援表示您無法以程式設計方式查詢資料行的類型。  
   
 ## <a name="see-also"></a>另請參閱  
-[常數 &#40;Microsoft Drivers for PHP for SQL Server&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md)  
-[Converting Data Types](../../connect/php/converting-data-types.md)  
-[PHP 類型](http://go.microsoft.com/fwlink/?LinkId=109071)  
-[資料類型 (TRANSACT-SQL)](http://go.microsoft.com/fwlink/?LinkId=109068)  
+[常數 &#40;Microsoft Drivers for PHP for SQL Server&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md)
+
+[Converting Data Types](../../connect/php/converting-data-types.md)
+
+[PHP 類型](http://php.net/manual/en/language.types.php)
+
+[資料類型 (TRANSACT-SQL)](../../t-sql/data-types/data-types-transact-sql.md)
+
 [sqlsrv_field_metadata](../../connect/php/sqlsrv-field-metadata.md)  
   

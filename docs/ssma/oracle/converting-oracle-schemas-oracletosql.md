@@ -1,28 +1,27 @@
 ---
-title: "轉換 Oracle 結構描述 (OracleToSQL) |Microsoft 文件"
-ms.prod: sql-non-specified
+title: 轉換 Oracle 結構描述 (OracleToSQL) |Microsoft 文件
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
 ms.component: ssma-oracle
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
-ms.topic: article
-helpviewer_keywords: Conversion Results
+ms.technology: ssma
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
+helpviewer_keywords:
+- Conversion Results
 ms.assetid: e021182d-31da-443d-b110-937f5db27272
-caps.latest.revision: "14"
+caps.latest.revision: 14
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
-ms.workload: On Demand
-ms.openlocfilehash: 208378f2be9ad4eea080df758616e554c1262905
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: a0b94e194c7d1db8dc4de0c56d3d9c37b5586d6a
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="converting-oracle-schemas-oracletosql"></a>轉換 Oracle 結構描述 (OracleToSQL)
 您已經連接到 Oracle 之後，連接到[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]，設定專案和對應的資料選項，您可以將轉換至 Oracle 資料庫物件和[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]資料庫物件。  
@@ -33,7 +32,7 @@ ms.lasthandoff: 12/21/2017
 在轉換期間，SSMA 會列印至輸出窗格的輸出訊息和錯誤訊息 [錯誤清單] 窗格。 若要判斷您是否需要修改 Oracle 資料庫或您要取得所需的轉換結果的轉換程序使用的輸出和錯誤的資訊。  
   
 ## <a name="setting-conversion-options"></a>設定轉換選項  
-在轉換前的物件，請檢閱中的專案轉換選項**專案設定** 對話方塊。 藉由使用此對話方塊中，您可以設定 SSMA 如何將轉換函式和全域變數。 如需詳細資訊，請參閱[專案設定 &#40;轉換 &#41;&#40; OracleToSQL &#41;](../../ssma/oracle/project-settings-conversion-oracletosql.md).  
+在轉換前的物件，請檢閱中的專案轉換選項**專案設定** 對話方塊。 藉由使用此對話方塊中，您可以設定 SSMA 如何將轉換函式和全域變數。 如需詳細資訊，請參閱[專案設定&#40;轉換&#41; &#40;OracleToSQL&#41;](../../ssma/oracle/project-settings-conversion-oracletosql.md)。  
   
 ## <a name="conversion-results"></a>轉換結果  
 下表顯示 Oracle 物件轉換，以及產生[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]物件：  
@@ -114,13 +113,13 @@ ms.lasthandoff: 12/21/2017
   
 -   您可以修改程序的程式碼上**SQL**  索引標籤。  
   
--   您可以修改以移除或修改有問題的程式碼的 Oracle 資料庫中的物件。 若要更新的程式碼載入 SSMA，您必須更新的中繼資料。 如需詳細資訊，請參閱[連接到 Oracle 資料庫 &#40; OracleToSQL &#41;](../../ssma/oracle/connecting-to-oracle-database-oracletosql.md)。  
+-   您可以修改以移除或修改有問題的程式碼的 Oracle 資料庫中的物件。 若要更新的程式碼載入 SSMA，您必須更新的中繼資料。 如需詳細資訊，請參閱[連接到 Oracle 資料庫&#40;OracleToSQL&#41;](../../ssma/oracle/connecting-to-oracle-database-oracletosql.md)。  
   
 -   您可以從移轉排除的物件。 在[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]中繼資料總管和 Oracle 中繼資料總管，清除項目旁邊的核取方塊，然後再載入物件到[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]和從 Oracle 移轉資料。  
   
 ## <a name="next-step"></a>下一個步驟  
 移轉程序的下一個步驟是[已轉換的物件載入 SQL Server](http://msdn.microsoft.com/en-us/a8ae33b2-1883-4785-922b-ea0e31c0b37a)。  
   
-## <a name="see-also"></a>請參閱  
-[將 Oracle 資料庫移轉至 SQL Server &#40; OracleToSQL &#41;](../../ssma/oracle/migrating-oracle-databases-to-sql-server-oracletosql.md)  
+## <a name="see-also"></a>另請參閱  
+[SQL server 資料庫移轉 Oracle &#40;OracleToSQL&#41;](../../ssma/oracle/migrating-oracle-databases-to-sql-server-oracletosql.md)  
   

@@ -1,34 +1,30 @@
 ---
-title: "Bitmap Warning 事件類別 | Microsoft Docs"
-ms.custom: 
+title: Bitmap Warning 事件類別 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
-ms.prod_service: database-engine, sql-database
-ms.service: 
-ms.component: event-classes
-ms.reviewer: 
+ms.prod: sql
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: supportability
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - Bitmap Warning event class
 ms.assetid: 5bf9b4e3-0eba-4e67-8ba9-30ca4b48e1d4
-caps.latest.revision: 
+caps.latest.revision: 15
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 8ed699dc2035ed65236bd998496aaf1d001d6128
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 0778e11f9780569c2417c2cd843bc5e860250dc5
+ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="bitmap-warning-event-class"></a>點陣圖警告事件類別
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-**點陣圖警告** 事件類別可用來監視查詢中的點陣圖篩選使用情況。 此事件子類別可用來報告何時已經在查詢中停用點陣圖篩選。  
+  **點陣圖警告** 事件類別可用來監視查詢中的點陣圖篩選使用情況。 此事件子類別可用來報告何時已經在查詢中停用點陣圖篩選。  
   
 ## <a name="bitmap-warning-event-class-data-columns"></a>點陣圖警告事件類別資料行  
   

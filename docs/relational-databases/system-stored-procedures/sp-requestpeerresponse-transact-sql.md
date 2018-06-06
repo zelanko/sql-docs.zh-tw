@@ -1,16 +1,15 @@
 ---
-title: "sp_requestpeerresponse (TRANSACT-SQL) |Microsoft 文件"
-ms.custom: 
+title: sp_requestpeerresponse (TRANSACT-SQL) |Microsoft 文件
+ms.custom: ''
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - sp_requestpeerresponse
 ms.assetid: cbe13c22-4d7d-4a36-b194-7a13ce68ef27
-caps.latest.revision: 
+caps.latest.revision: 26
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 2d0a4009c5a6615a000989e2d41f2902ac37535f
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 83f5cfcac2f109b88fc63ab96942d7682bdb2a90
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sprequestpeerresponse-transact-sql"></a>sp_requestpeerresponse (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,14 +46,14 @@ sp_requestpeerresponse [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>引數  
- [  **@publication** =] **'***發行集***'**  
+ [ **@publication**=] **'***發行集***'**  
  這是點對點拓撲中驗證狀態的發行集名稱。 *發行集*是**sysname**，沒有預設值。  
   
- [  **@description** =] **'***描述***'**  
+ [ **@description**=] **'***描述***'**  
  使用者自訂的資訊，可以用來識別個別狀態要求。 *描述*是**nvarchar （4000)**，預設值是 NULL。  
   
- [  **@request_id**  =] *request_id*  
- 傳回新要求的識別碼。 *request_id*是**int**是 OUTPUT 參數。 執行時，就可以使用此值[sp_helppeerresponses &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/sp-helppeerresponses-transact-sql.md)以檢視所有回應狀態要求。  
+ [ **@request_id** =] *request_id*  
+ 傳回新要求的識別碼。 *request_id*是**int**是 OUTPUT 參數。 執行時，就可以使用此值[sp_helppeerresponses &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-stored-procedures/sp-helppeerresponses-transact-sql.md)以檢視所有回應狀態要求。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  **0** （成功） 或**1** （失敗）  
@@ -70,8 +68,8 @@ sp_requestpeerresponse [ @publication = ] 'publication'
 ## <a name="permissions"></a>Permissions  
  只有成員**sysadmin**固定的伺服器角色或**db_owner**固定的資料庫角色可以執行**sp_requestpeerresponse**。  
   
-## <a name="see-also"></a>請參閱＜  
- [sp_deletepeerrequesthistory &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/sp-deletepeerrequesthistory-transact-sql.md)   
- [sp_helppeerrequests &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/sp-helppeerrequests-transact-sql.md)  
+## <a name="see-also"></a>另請參閱  
+ [sp_deletepeerrequesthistory &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-deletepeerrequesthistory-transact-sql.md)   
+ [sp_helppeerrequests &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-helppeerrequests-transact-sql.md)  
   
   

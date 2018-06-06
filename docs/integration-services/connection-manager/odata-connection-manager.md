@@ -1,31 +1,29 @@
 ---
-title: "OData 連線管理員 | Microsoft Docs"
+title: OData 連線管理員 | Microsoft Docs
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
 ms.component: connection-manager
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.custom: 
+ms.custom: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: 3caa4372-aff3-4c0f-9ecd-97870948b8d0
-caps.latest.revision: 
+caps.latest.revision: 9
 f1_keywords:
 - sql13.dts.designer.odatasource.connectionmanager.f1
 - sql13.dts.designer.odataconnectionmanager.f1
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 331cf4ff00eeda4b1c1d22c021138ae67d6d23b9
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 124877025d9e01c7d00f8693093a4227680c145d
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="odata-connection-manager"></a>OData 連接管理員
  使用 OData 連線管理員連線到 OData 資料來源。 OData 來源元件會使用 OData 連線管理員連線到 OData 資料來源，並取用服務中的資料。 如需詳細資訊，請參閱＜ [OData Source](../../integration-services/data-flow/odata-source.md)＞。  
@@ -80,7 +78,7 @@ ms.lasthandoff: 01/25/2018
  連接管理員的名稱。  
   
  **服務文件位置**  
- OData 服務的 URL。 例如：http://services.odata.org/V3/Northwind/Northwind.svc/。  
+ OData 服務的 URL。 例如： http://services.odata.org/V3/Northwind/Northwind.svc/＞。  
   
  **驗證**  
 選取下列其中一個選項：

@@ -1,16 +1,14 @@
 ---
-title: "藉由使用 OLE DB (SQLXML 4.0) 執行 Updategram |Microsoft 文件"
-ms.custom: 
+title: 藉由使用 OLE DB (SQLXML 4.0) 執行 Updategram |Microsoft 文件
+ms.custom: ''
 ms.date: 03/16/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
 ms.component: sqlxml
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- dbe-xml
-ms.tgt_pltfrm: 
+ms.technology: xml
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - ICommandStream interface
@@ -18,20 +16,20 @@ helpviewer_keywords:
 - OLE DB, SQLXML
 - executing updategrams [SQLXML]
 ms.assetid: 4154c590-1541-49d0-8117-4ddf2ce5ccba
-caps.latest.revision: 
+caps.latest.revision: 24
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: f3ce470a52fea5f6f5bc8cc105e9e0fcfd98ec29
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 1c80025b375cfa017d92a6ae1602c78ddc57d9f7
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="executing-an-updategram-by-using-ole-db-sqlxml-40"></a>使用 OLE DB 執行 Updategram (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-本主題提供 usingOLE DB 來執行 updategram 的工作範例。  
+  本主題提供 usingOLE DB 來執行 updategram 的工作範例。  
   
 ## <a name="using-icommandstream-to-set-an-xml-command"></a>使用 ICommandStream 來設定 XML 命令  
  OLE DB （2.6 版或更新版本） ICommandStream 介面傳遞的命令，為資料流物件，而不是字串。  
@@ -66,7 +64,7 @@ ms.lasthandoff: 02/12/2018
 </Schema>  
 ```  
   
- 此查詢會傳回所有的員工元素。 利用預設對應，  **\<Person.Contact >**元素會對應至 AdventureWorks 資料庫中的 Person.Contact 資料表。  
+ 此查詢會傳回所有的員工元素。 利用預設對應，  **\<Person.Contact >** 元素會對應至 AdventureWorks 資料庫中的 Person.Contact 資料表。  
   
 ###### <a name="to-set-xml-as-a-command-and-retrieving-result-as-an-xml-document"></a>將 XML 設定為命令並且將結果擷取為 XML 文件  
   

@@ -1,29 +1,25 @@
 ---
-title: "安裝 SQL Server 2016 Business Intelligence 功能 | Microsoft Docs"
-ms.custom: 
+title: 安裝 SQL Server 2016 Business Intelligence 功能 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/02/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
 ms.component: install
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- setup-install
-- setup-install
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: setup-install
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: 67399b24-e48a-49f3-9dd4-32d78c6a2ece
-caps.latest.revision: 
-author: guyinacube
-ms.author: asaxton
-manager: erikre
-ms.workload: On Demand
-ms.openlocfilehash: c63c70bdd99e31466aa94f72d765e50e0db78779
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+caps.latest.revision: 27
+author: markingmyname
+ms.author: maghan
+manager: kfile
+ms.openlocfilehash: 202ea2f4a22cb10d535e254b7a7e33921d929634
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="install-sql-server-business-intelligence-features"></a>安裝 SQL Server Business Intelligence 功能
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]

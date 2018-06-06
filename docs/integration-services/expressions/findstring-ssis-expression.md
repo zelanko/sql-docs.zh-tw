@@ -1,30 +1,28 @@
 ---
-title: "FINDSTRING (SSIS 運算式) | Microsoft Docs"
-ms.custom: 
+title: FINDSTRING (SSIS 運算式) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
 ms.component: expressions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - FINDSTRING function
 ms.assetid: c83cb1b1-3c52-4496-b518-4c9253b9336d
-caps.latest.revision: 
+caps.latest.revision: 41
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: c2787fdb4663ea8c1495a811b44f878b896498eb
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 9db74ac092eb46c359ed390cab9edc299a2dac0f
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="findstring-ssis-expression"></a>FINDSTRING (SSIS 運算式)
   傳回字元運算式中字串的指定出現位置。 傳回結果是以 1 為主的索引出現位置。 string 參數的評估結果必須為字串運算式，且 occurrence 參數的評估結果必須為整數。 如果找不到字串，傳回值將為 0。 如果字串出現的次數少於 occurrence 引數指定的次數，傳回值也是 0。  
@@ -71,10 +69,10 @@ FINDSTRING("New York, NY, NY", "NY", 1)
 FINDSTRING("New York, NY, NY", "NY", 3)   
 ```  
   
- 此範例使用 **Name** 資料行。 它會傳回數值 n 在 **Name** 資料行中的位置。 傳回結果視 **Name**中的值而有所不同。 如果 **Name** 包含 Anderson，則函數會傳回 8。  
+ 此範例使用 **Name** 資料行。 其會傳回 **Name** 資料行第二個 "n" 的位置。 傳回結果視 **Name**中的值而有所不同。 如果 **Name** 包含 Anderson，則函數會傳回 8。  
   
 ```  
-FINDSTRING(Name,"n", 2)   
+FINDSTRING(Name, "n", 2)   
 ```  
   
  此範例使用 **Name** 和 **Size** 資料行。 它會傳回 **Name** 資料行中， **Size** 值最左邊字元的位置。 傳回的結果視資料行的值而有所不同。 如果 **Name** 包含 Mountain,500Red,42，而 **Size** 包含 42，則傳回結果為 17。  

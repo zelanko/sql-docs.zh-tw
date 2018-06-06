@@ -1,31 +1,29 @@
 ---
-title: "^ (位元排除 OR) (SSIS 運算式) | Microsoft Docs"
-ms.custom: 
+title: ^ (位元排除 OR) (SSIS 運算式) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
 ms.component: expressions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - ^ (bitwise exclusive OR operator)
 - bitwise exclusive OR (^)
 ms.assetid: 6ac53cab-29c4-4835-9f87-371b058b2f38
-caps.latest.revision: 
+caps.latest.revision: 37
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: e26e1cf5b11f83daa8a5ac4c48408e31e407f53c
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: a3bd8e80b3112b3b0b6aa69284daa9f02670d487
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="-bitwise-exclusive-or-ssis-expression"></a>^ (位元排除 OR) (SSIS 運算式)
   執行兩個整數值的位元排除 OR 運算。 它會比較其第一個運算元的每個位元和其第二個運算元的對應位元。 如果一個位元為 0 而另一個位元為 1，則對應的結果位元會設為 1。 如果這兩個位元都是 0 或都是 1，則對應的結果位元會設為 0。  

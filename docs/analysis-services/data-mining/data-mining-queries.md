@@ -1,37 +1,23 @@
 ---
-title: "資料採礦查詢 |Microsoft 文件"
-ms.custom: 
-ms.date: 03/06/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
-helpviewer_keywords:
-- prediction queries [Analysis Services]
-- queries [DMX], creating
-- prediction queries [DMX]
-- Prediction Query Builder
-- mining models [Analysis Services], querying
-ms.assetid: 802806a6-69bb-4c3c-b9aa-d1a1ddfc7fc2
-caps.latest.revision: 
-author: Minewiskan
+title: 資料採礦查詢 |Microsoft 文件
+ms.date: 05/01/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: data-mining
+ms.topic: conceptual
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 260a6d48b6da55f65098790df73b01a10e35e126
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 072ffe2e41aa75d3fe62875685b0a4aa0d9a5138
+ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="data-mining-queries"></a>資料採礦查詢
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-資料採礦查詢有許多實用的用途。 您可以：  
+  資料採礦查詢有許多實用的用途。 您可以：  
   
 -   將模型套用到新的資料，以做出單一或多個預測。 您可以在批次中提供輸入值當做參數。  
   
@@ -60,7 +46,7 @@ ms.lasthandoff: 02/15/2018
 ##  <a name="bkmk_Understand"></a> 了解資料採礦查詢  
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 資料採礦支援以下類型的查詢：  
   
--   [預測查詢 &#40; 資料採礦 &#41;](../../analysis-services/data-mining/prediction-queries-data-mining.md)  
+-   [預測查詢 & #40; 資料採礦 & #41;](../../analysis-services/data-mining/prediction-queries-data-mining.md)  
   
      根據模型中的模式並從輸入資料進行推斷的查詢。  
   
@@ -68,7 +54,7 @@ ms.lasthandoff: 02/15/2018
   
      傳回中繼資料、統計資料，以及有關模型本身之其他資訊的查詢。  
   
--   [鑽研查詢 &#40; 資料採礦 &#41;](../../analysis-services/data-mining/drillthrough-queries-data-mining.md)  
+-   [鑽研查詢 & #40; 資料採礦 & #41;](../../analysis-services/data-mining/drillthrough-queries-data-mining.md)  
   
      可以針對模型擷取基礎案例資料，或甚至擷取模型中未使用之結構中之資料的查詢。  
   
@@ -149,13 +135,13 @@ ms.lasthandoff: 02/15/2018
 ## <a name="in-this-section"></a>本節內容  
  本節的主題會詳細介紹每一種類型的資料採礦查詢，並提供如何針對資料採礦模型建立查詢之詳細範例的連結。  
   
- [預測查詢 &#40; 資料採礦 &#41;](../../analysis-services/data-mining/prediction-queries-data-mining.md)  
+ [預測查詢 & #40; 資料採礦 & #41;](../../analysis-services/data-mining/prediction-queries-data-mining.md)  
   
  [內容查詢 &#40;資料採礦&#41;](../../analysis-services/data-mining/content-queries-data-mining.md)  
   
  [鑽研查詢 &#40;資料採礦&#41;](../../analysis-services/data-mining/drillthrough-queries-data-mining.md)  
   
- [資料定義查詢 &#40; 資料採礦 &#41;](../../analysis-services/data-mining/data-definition-queries-data-mining.md)  
+ [資料定義查詢 & #40; 資料採礦 & #41;](../../analysis-services/data-mining/data-definition-queries-data-mining.md)  
   
  [資料採礦查詢工具](../../analysis-services/data-mining/data-mining-query-tools.md)  
   

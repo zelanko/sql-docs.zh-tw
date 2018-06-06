@@ -1,27 +1,25 @@
 ---
-title: "運算式中的資料類型 (報表產生器及 SSRS) | Microsoft Docs"
-ms.custom: 
+title: 運算式中的資料類型 (報表產生器及 SSRS) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: report-design
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: 94fdf921-270c-4c12-87b3-46b1cc98fae5
-caps.latest.revision: "9"
+caps.latest.revision: 9
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: e8f9aac801e823f364070fc2b3ce2e6b4b015f78
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 61d9e125f12d9c642408316ccb936e54f2a29372
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="data-types-in-expressions-report-builder-and-ssrs"></a>運算式中的資料類型 (報表產生器及 SSRS)
   資料類型代表不同種類的資料，以便讓系統能夠有效率地儲存和處理資料。 一般資料類型包括文字 (也稱為字串)、含與不含小數位數的數字、日期和時間，以及影像。 報表中的值必須是報表定義語言 (RDL) 資料類型。 當您在報表中顯示值時，可以根據您的喜好設定來格式化值。 例如，代表貨幣的欄位會當做浮點數儲存在報表定義中，但是可能會根據您選擇的格式屬性，以各種格式顯示此欄位。  

@@ -1,39 +1,28 @@
 ---
-title: "MDSCHEMA_INPUT_DATASOURCES 資料列集 |Microsoft 文件"
-ms.custom: 
-ms.date: 03/06/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+title: MDSCHEMA_INPUT_DATASOURCES 資料列集 |Microsoft 文件
+ms.date: 05/03/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: schema-rowsets
 ms.topic: reference
-apiname: MDSCHEMA_INPUT_DATASOURCES
-apitype: NA
-applies_to: SQL Server 2016 Preview
-helpviewer_keywords: MDSCHEMA_INPUT_DATASOURCES rowset
-ms.assetid: 12482fd5-16e3-4171-9cb0-76d0d4f5308e
-caps.latest.revision: "30"
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: a810fef41d402cb35d9e6e3c62120f09b0c6bae4
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 329f3081e3e16b3603c5ddd299ccafc0a98f6a9a
+ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="mdschemainputdatasources-rowset"></a>MDSCHEMA_INPUT_DATASOURCES 資料列集
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]描述在資料庫內定義的資料來源。  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+  說明在資料庫內定義的資料來源。  
   
 ## <a name="rowset-columns"></a>資料列集資料行  
  **MDSCHEMA_INPUT_DATASOURCES**資料列集包含下列資料行。  
   
-|資料行名稱|類型指標|長度|描述|  
+|資料行名稱|類型指標|長度|Description|  
 |-----------------|--------------------|------------|-----------------|  
 |**CATALOG_NAME**|**DBTYPE_WSTR**||此資料來源所屬目錄的名稱。|  
 |**SCHEMA_NAME**|**DBTYPE_WSTR**||不支援。|  
@@ -56,7 +45,7 @@ ms.lasthandoff: 01/08/2018
 |**DATASOURCE_NAME**|**DBTYPE_WSTR**|選擇性。|  
 |**DATASOURCE_TYPE**|**DBTYPE_WSTR**|選擇性。|  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [OLE DB for OLAP 結構描述資料列集](../../../analysis-services/schema-rowsets/ole-db-olap/ole-db-for-olap-schema-rowsets.md)  
   
   

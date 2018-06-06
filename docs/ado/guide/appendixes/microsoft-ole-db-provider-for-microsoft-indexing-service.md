@@ -1,32 +1,29 @@
 ---
-title: "Microsoft OLE DB Provider for Microsoft 索引服務 |Microsoft 文件"
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
+title: Microsoft OLE DB Provider for Microsoft 索引服務 |Microsoft 文件
+ms.prod: sql
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
-ms.custom: 
+ms.technology: connectivity
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - Indexing Service provider [ADO]
 - providers [ADO], OLE DB provider for Microsoft Indexing service
 - OLE DB provider for Microsoft Indexing service [ADO]
 ms.assetid: f86a0598-5097-471b-8318-d2c859d085f2
-caps.latest.revision: 
+caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 861d5d18c3a3ba72d4f4b5ef6fc01f0e6a0e9fc8
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 8dc341794d419559b3683c06d51766d2e7b6287a
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="microsoft-ole-db-provider-for-microsoft-indexing-service-overview"></a>Microsoft OLE DB Provider for Microsoft 索引服務概觀
 Microsoft OLE DB Provider for Microsoft 索引服務提供以程式設計方式唯讀存取檔案系統和 Web 資料由 Microsoft 索引服務編製索引。 ADO 應用程式可以發出 SQL 查詢來擷取內容和檔案屬性資訊。
@@ -34,7 +31,7 @@ Microsoft OLE DB Provider for Microsoft 索引服務提供以程式設計方式�
  提供者是無限制執行緒，啟用 UNICODE。
 
 ## <a name="connection-string-parameters"></a>連接字串參數
- 若要連接到此提供者，設定**提供者 =**引數[ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md)屬性：
+ 若要連接到此提供者，設定**提供者 =** 引數[ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md)屬性：
 
 ```
 MSIDXS
@@ -79,11 +76,11 @@ MSIDXS
 |[AbsolutePosition](../../../ado/reference/ado-api/absoluteposition-property-ado.md)|讀取/寫入|
 |[ActiveConnection](../../../ado/reference/ado-api/activeconnection-property-ado.md)|唯讀|
 |[BOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md)|唯讀|
-|[Bookmark](../../../ado/reference/ado-api/bookmark-property-ado.md)*|讀取/寫入|
+|[書籤](../../../ado/reference/ado-api/bookmark-property-ado.md)*|讀取/寫入|
 |[CacheSize](../../../ado/reference/ado-api/cachesize-property-ado.md)|讀取/寫入|
 |[CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md)|一律**adUseServer**|
 |[CursorType](../../../ado/reference/ado-api/cursortype-property-ado.md)|一律**adOpenStatic**|
-|[EditMode](../../../ado/reference/ado-api/editmode-property.md)|always **adEditNone**|
+|[EditMode](../../../ado/reference/ado-api/editmode-property.md)|一律**adEditNone**|
 |[EOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md)|唯讀|
 |[篩選](../../../ado/reference/ado-api/filter-property.md)|讀取/寫入|
 |[LockType](../../../ado/reference/ado-api/locktype-property-ado.md)|讀取/寫入|
@@ -114,8 +111,8 @@ MSIDXS
 |[MoveFirst](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|是|
 |[NextRecordset](../../../ado/reference/ado-api/nextrecordset-method-ado.md)|是|
 |[開啟](../../../ado/reference/ado-api/open-method-ado-recordset.md)|是|
-|[Requery](../../../ado/reference/ado-api/requery-method.md)|是|
-|[Resync](../../../ado/reference/ado-api/resync-method.md)|是|
+|[重新查詢](../../../ado/reference/ado-api/requery-method.md)|是|
+|[重新同步處理](../../../ado/reference/ado-api/resync-method.md)|是|
 |[支援](../../../ado/reference/ado-api/supports-method.md)|是|
 |[Update](../../../ado/reference/ado-api/update-method.md)|否|
 |[UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md)|否|

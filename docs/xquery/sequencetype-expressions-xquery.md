@@ -1,16 +1,15 @@
 ---
-title: "SequenceType 運算式 (XQuery) |Microsoft 文件"
-ms.custom: 
+title: SequenceType 運算式 (XQuery) |Microsoft 文件
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
-ms.service: 
+ms.prod: sql
+ms.prod_service: sql
 ms.component: xquery
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -22,16 +21,15 @@ helpviewer_keywords:
 - expressions [XQuery], SequenceType
 - cast as operator
 ms.assetid: ad3573da-d820-4d1c-81c4-a83c4640ce22
-caps.latest.revision: 
+caps.latest.revision: 25
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 3fa5ebb01c50823b5fe329063d9fc63023ce2478
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: e2be9250c77c23e00a302d57f0148507f0db41bb
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sequencetype-expressions-xquery"></a>時序類型運算式 (XQuery)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -48,7 +46,7 @@ ms.lasthandoff: 02/09/2018
 Expression instance of SequenceType[Occurrence indicator]  
 ```  
   
- 請注意，`instance of`運算子， `Occurrence indicator`，指定基數，所產生的順序中的項目數。 若未指定，會將基數假設為 1。 在[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]，只有問號 (**？)**支援發生指標。 **嗎？** 發生指標指出`Expression`可以傳回零個或一個項目。 如果**嗎？** 指定發生指標，則`instance of`，則傳回 True 時`Expression`類型符合指定`SequenceType`，無論是否`Expression`傳回單一值或空的序列。  
+ 請注意，`instance of`運算子， `Occurrence indicator`，指定基數，所產生的順序中的項目數。 若未指定，會將基數假設為 1。 在[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]，只有問號 (**？)** 支援發生指標。 **嗎？** 發生指標指出`Expression`可以傳回零個或一個項目。 如果**嗎？** 指定發生指標，則`instance of`，則傳回 True 時`Expression`類型符合指定`SequenceType`，無論是否`Expression`傳回單一值或空的序列。  
   
  如果**嗎？** 未指定發生指標， `sequence of` ，則傳回 True 時，才`Expression`輸入符合`Type`指定和`Expression`傳回單一值。  
   
@@ -107,7 +105,7 @@ go
 ### <a name="example-b"></a>範例 B  
  在此範例中，您正在查詢 AdventureWorks 範例資料庫中具 XML 類型的資料行。 與正在查詢的資料行關聯的 XML 結構描述集合，將會提供類型資訊。  
   
- 在運算式中， **data （)**傳回型別為 xs: string 根據結構描述相關聯的資料行的 ProductModelID 屬性具類型的值。 因此，`instance of` 會傳回 True。  
+ 在運算式中， **data （)** 傳回型別為 xs: string 根據結構描述相關聯的資料行的 ProductModelID 屬性具類型的值。 因此，`instance of` 會傳回 True。  
   
 ```  
 SELECT CatalogDescription.query('  
@@ -317,11 +315,11 @@ select @x.query(' declare namespace CustOrders="Customers";
 ### <a name="implementation-limitations"></a>實作限制  
  以下為其限制：  
   
--   **Schema-element()**和**schema-attribute()**序列類型不支援比較`instance of`運算子。  
+-   **Schema-element()** 和**schema-attribute()** 序列類型不支援比較`instance of`運算子。  
   
 -   例如，完整時序不支援 `(1,2) instance of xs:integer*`。  
   
--   當您使用一種**element()**時序類型的指定類型名稱，例如`element(ElementName, TypeName)`，此型別必須以問號 （？） 限定。 例如，`element(Title, xs:string?)` 指出元素可能為 Null。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]不支援的執行階段偵測**xsi: nil**屬性使用`instance of`。  
+-   當您使用一種**element()** 時序類型的指定類型名稱，例如`element(ElementName, TypeName)`，此型別必須以問號 （？） 限定。 例如，`element(Title, xs:string?)` 指出元素可能為 Null。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 不支援的執行階段偵測**xsi: nil**屬性使用`instance of`。  
   
 -   如果在 `Expression` 中的值是源自於聯集類型的元素或屬性，則 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 只能識別基本類型，而無法識別衍生值類型的衍生類型。 例如，如果 <`e1`> 是定義為具有靜態類型的 (xs:integer | xs:string)，下列程式碼將會傳回 False。  
   
@@ -349,7 +347,7 @@ set @x=''
 select @x.query('"2" cast as xs:integer?')  
 ```  
   
- 在下列查詢中， **data （)**傳回 ProductModelID 屬性，字串類型的具類型的值。 `cast as`運算子會將值轉換為 xs: integer。  
+ 在下列查詢中， **data （)** 傳回 ProductModelID 屬性，字串類型的具類型的值。 `cast as`運算子會將值轉換為 xs: integer。  
   
 ```  
 WITH XMLNAMESPACES ('http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription' AS PD)  
@@ -360,10 +358,10 @@ FROM Production.ProductModel
 WHERE ProductModelID = 19  
 ```  
   
- 明確使用**data （)**不一定要在此查詢。 `cast as` 運算式可在輸入運算式上執行隱含的不可部份完成。  
+ 明確使用**data （)** 不一定要在此查詢。 `cast as` 運算式可在輸入運算式上執行隱含的不可部份完成。  
   
 ### <a name="constructor-functions"></a>建構函式  
- 您可以使用不可部份完成類型的建構函式。 例如，而不是使用`cast as`運算子， `"2" cast as xs:integer?`，您可以使用**xs:integer()**建構函式，如下列範例所示：  
+ 您可以使用不可部份完成類型的建構函式。 例如，而不是使用`cast as`運算子， `"2" cast as xs:integer?`，您可以使用**xs:integer()** 建構函式，如下列範例所示：  
   
 ```  
 declare @x xml  
@@ -379,7 +377,7 @@ set @x=''
 select @x.query('xs:date("2000-01-01Z")')  
 ```  
   
- 您也可以使用使用者自訂不可部份完成類型的建構函式。 例如，如果 XML 結構描述集合與相關聯的 XML 資料型別定義簡單型別， **myType()**建構函式可以用來傳回該類型的值。  
+ 您也可以使用使用者自訂不可部份完成類型的建構函式。 例如，如果 XML 結構描述集合與相關聯的 XML 資料型別定義簡單型別， **myType()** 建構函式可以用來傳回該類型的值。  
   
 #### <a name="implementation-limitations"></a>實作限制  
   
@@ -417,6 +415,6 @@ select @x.query('xs:date("2000-01-01Z")')
   
 ## <a name="see-also"></a>另請參閱  
  [XQuery 運算式](../xquery/xquery-expressions.md)   
- [型別系統 &#40;XQuery &#41;](../xquery/type-system-xquery.md)  
+ [類型系統&#40;XQuery&#41;](../xquery/type-system-xquery.md)  
   
   

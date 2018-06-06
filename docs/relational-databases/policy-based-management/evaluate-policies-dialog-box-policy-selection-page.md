@@ -1,33 +1,32 @@
 ---
-title: "評估原則對話方塊，原則選取頁面 | Microsoft Docs"
-ms.custom: 
+title: 評估原則對話方塊，原則選取頁面 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
 ms.component: performance-monitor
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 f1_keywords:
 - sql13.swb.dmf.runnow.f1
 ms.assetid: 20075fbe-0b48-42c8-b747-690f1aa23dcf
-caps.latest.revision: 
+caps.latest.revision: 36
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 1d055c8d7ea11a36f5fadb5065c29995d13b55b0
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: a92afcb9fec91f099b9ffbee048d5d2f2df884e2
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="evaluate-policies-dialog-box-policy-selection-page"></a>評估原則對話方塊，原則選取頁面
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 使用此對話方塊可評估原則式管理原則。 您可以藉由選取 **[評估結果]** 頁面，將原則套用到目標集內不符合原則的項目。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  使用此對話方塊可評估以原則為基礎的管理原則。 您可以藉由選取 **[評估結果]** 頁面，將原則套用到目標集內不符合原則的項目。  
   
 ## <a name="options"></a>選項。  
  **Source**  

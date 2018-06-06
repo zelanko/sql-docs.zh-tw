@@ -1,32 +1,19 @@
 ---
-title: "變更採礦模型中的資料行的離散化 |Microsoft 文件"
-ms.custom: 
-ms.date: 03/01/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
-helpviewer_keywords:
-- discretization [Analysis Services]
-- mining structures [Analysis Services], how-to topics
-- discretized columns [data mining]
-- bucketing problems [Analysis Services]
-ms.assetid: 3c49862b-595d-4fa4-b890-e2e1bde1d74f
-caps.latest.revision: 
-author: Minewiskan
+title: 變更採礦模型中的資料行的離散化 |Microsoft 文件
+ms.date: 05/01/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: data-mining
+ms.topic: conceptual
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: a443aa02dbc035c6acef13e39c5b03c45692ba37
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: e9d6b2c75becad147e196534bb4d366dff01a13d
+ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="change-the-discretization-of-a-column-in-a-mining-model"></a>變更採礦模型中的資料行離散化
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -46,7 +33,7 @@ ms.lasthandoff: 02/15/2018
   
 ### <a name="to-change-the-discretization-method"></a>變更離散化方法  
   
-1.  在 **[採礦屬性]** 視窗中，按一下 **[內容]**旁邊的文字方塊，然後從下拉式清單中選取 **Discretized** 。  
+1.  在 **[採礦屬性]** 視窗中，按一下 **[內容]** 旁邊的文字方塊，然後從下拉式清單中選取 **Discretized** 。  
   
      <xref:Microsoft.AnalysisServices.ScalarMiningStructureColumn.DiscretizationBucketCount%2A> 和 <xref:Microsoft.AnalysisServices.ScalarMiningStructureColumn.DiscretizationMethod%2A> 屬性現在就會啟用。  
   

@@ -1,16 +1,14 @@
 ---
 title: CHECKSUM_AGG (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 07/24/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
 ms.component: t-sql|functions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: t-sql
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - CHECKSUM_AGG
@@ -22,21 +20,20 @@ helpviewer_keywords:
 - CHECKSUM_AGG function
 - groups [SQL Server], checksum values
 ms.assetid: cdede70c-4eb5-4c92-98ab-b07787ab7222
-caps.latest.revision: 
+caps.latest.revision: 38
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 3499cd8fb118d12fdbf450c23f2919fd0003cee7
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 54e82e66d2f5ba49291cadf0cef198733cb7e0e0
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="checksumagg-transact-sql"></a>CHECKSUM_AGG (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-傳回群組中各個值的總和檢查碼。 會忽略 Null 值。 後面可接著 [OVER 子句](../../t-sql/queries/select-over-clause-transact-sql.md)。
+此函式會傳回群組中值的總和檢查碼。 `CHECKSUM_AGG` 會忽略 Null 值。 [OVER 子句](../../t-sql/queries/select-over-clause-transact-sql.md)可以跟在 `CHECKSUM_AGG` 後面。
   
 ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -48,28 +45,28 @@ CHECKSUM_AGG ( [ ALL | DISTINCT ] expression )
   
 ## <a name="arguments"></a>引數  
 **ALL**  
-將彙總函式套用至所有值。 ALL 是預設值。
+將彙總函式套用至所有值。 ALL 是預設引數。
   
 DISTINCT  
-指定 CHECKSUM_AGG 傳回唯一值的總和檢查碼。
+指定 `CHECKSUM_AGG` 傳回唯一值的總和檢查碼。
   
 *expression*  
-為整數[運算式](../../t-sql/language-elements/expressions-transact-sql.md)。 不允許彙總函式和子查詢。
+整數[運算式](../../t-sql/language-elements/expressions-transact-sql.md)。 `CHECKSUM_AGG` 不允許使用彙總函式或子查詢。
   
-## <a name="return-types"></a>傳回型別
+## <a name="return-types"></a>傳回類型
 將所有 *expression* 值的總和檢查碼作為 **int** 傳回。
   
 ## <a name="remarks"></a>Remarks  
-CHECKSUM_AGG 可用來偵測資料表中的變更。
+`CHECKSUM_AGG` 可以偵測資料表中的變更。
   
-資料表中的資料列順序不會影響 CHECKSUM_AGG 的結果。 另外，CHECKSUM_AGG 函數也可以搭配 DISTINCT 關鍵字和 GROUP BY 子句來使用。
+`CHECKSUM_AGG` 結果與資料表中資料列的順序無關。 此外，`CHECKSUM_AGG` 函式允許使用 DISTINCT 關鍵字和 GROUP BY 子句。
   
-如果變更了運算式清單中的其中一個值，清單的總和檢查碼通常也會改變。 不過，總和檢查碼也有可能不會變更。
+如果運算式清單值變更，則清單總和檢查碼值清單也可能會變更。 不過，計算的總和檢查碼有極小的可能不會變更。
   
-CHECKSUM_AGG 的功能相似於其他彙總函式。 如需詳細資訊，請參閱[彙總函式 &#40;Transact-SQL&#41;](../../t-sql/functions/aggregate-functions-transact-sql.md)。
+`CHECKSUM_AGG` 的功能與其他彙總函式的功能類似。 如需詳細資訊，請參閱[彙總函式 &#40;Transact-SQL&#41;](../../t-sql/functions/aggregate-functions-transact-sql.md)。
   
 ## <a name="examples"></a>範例  
-下列範例會利用 `CHECKSUM_AGG` 來偵測 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 資料庫中 `Quantity` 資料表之 `ProductInventory` 資料行的變更。
+這些範例使用 `CHECKSUM_AGG` 來偵測 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 資料庫中 `ProductInventory` 資料表之 `Quantity` 資料行的變更。
   
 ```sql
 --Get the checksum value before the column value is changed.  

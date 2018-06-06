@@ -1,32 +1,33 @@
 ---
-title: "SQLSetDescField 函數 |Microsoft 文件"
-ms.custom: 
+title: SQLSetDescField 函數 |Microsoft 文件
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
-ms.component: odbc
-ms.reviewer: 
+ms.prod: sql
+ms.prod_service: connectivity
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
-ms.topic: article
-apiname: SQLSetDescField
-apilocation: sqlsrv32.dll
+ms.technology: connectivity
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
+apiname:
+- SQLSetDescField
+apilocation:
+- sqlsrv32.dll
 apitype: dllExport
-f1_keywords: SQLSetDescField
-helpviewer_keywords: SQLSetDescField function [ODBC]
+f1_keywords:
+- SQLSetDescField
+helpviewer_keywords:
+- SQLSetDescField function [ODBC]
 ms.assetid: 8c544388-fe9d-4f94-a0ac-fa0b9c9c88a5
-caps.latest.revision: "28"
+caps.latest.revision: 28
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
-ms.workload: Inactive
-ms.openlocfilehash: 3e6a0ee843ce2b78ebc611fee30a5ee8e16fc7e1
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+manager: craigg
+ms.openlocfilehash: 3c09d341cc5f6f592d84dab06a5a6785e9514f78
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sqlsetdescfield-function"></a>SQLSetDescField 函數
 **一致性**  
@@ -60,7 +61,7 @@ SQLRETURN SQLSetDescField(
  *ValuePtr*  
  [輸入]包含描述元資訊或整數值之緩衝區的指標。 資料型別取決於值*FieldIdentifier*。 如果*ValuePtr*是整數值，可能會為 8 個位元組 (SQLLEN)、 4 個位元組 (SQLINTEGER) 或 2 個位元組 (SQLSMALLINT)，根據的值被視為*FieldIdentifier*引數。  
   
- *Columnsize*  
+ *BufferLength*  
  [輸入]如果*FieldIdentifier*是 ODBC 定義的欄位和*ValuePtr*指向字元字串或二進位的緩衝區，這個引數應該是長度 **ValuePtr*。 字元字串資料，這個引數應該包含在字串中的位元組數目。  
   
  如果*FieldIdentifier*是 ODBC 定義的欄位和*ValuePtr*是整數， *Columnsize*會被忽略。  
@@ -81,10 +82,10 @@ SQLRETURN SQLSetDescField(
 ## <a name="diagnostics"></a>診斷  
  當**SQLSetDescField**會傳回 SQL_ERROR 或 SQL_SUCCESS_WITH_INFO，相關聯的 SQLSTATE 值可以藉由呼叫取得**SQLGetDiagRec**與*HandleType*的SQL_HANDLE_DESC 和*處理*的*DescriptorHandle*。 下表列出通常所傳回的 SQLSTATE 值**SQLSetDescField** ，並說明這個函式; 每個內容中的標記法 」 (DM) 」 之前描述的驅動程式管理員傳回的 Sqlstate。 每個 SQLSTATE 值相關聯的傳回碼是 SQL_ERROR，除非有說明，否則為。  
   
-|SQLSTATE|錯誤|描述|  
+|SQLSTATE|錯誤|Description|  
 |--------------|-----------|-----------------|  
 |01000|一般警告|特定驅動程式告知性訊息。 （函式會傳回 SQL_SUCCESS_WITH_INFO）。|  
-|01S02 的警告|選項值已變更|驅動程式不支援指定的值 *\*ValuePtr* (如果*ValuePtr*是指標) 中的值或*ValuePtr* (如果*ValuePtr*是整數值)，或 *\*ValuePtr*不實作的工作狀況，造成無效，因此驅動程式取代相似的值。 （函式會傳回 SQL_SUCCESS_WITH_INFO）。|  
+|01S02|選項值已變更|驅動程式不支援指定的值 *\*ValuePtr* (如果*ValuePtr*是指標) 中的值或*ValuePtr* (如果*ValuePtr*是整數值)，或 *\*ValuePtr*不實作的工作狀況，造成無效，因此驅動程式取代相似的值。 （函式會傳回 SQL_SUCCESS_WITH_INFO）。|  
 |07009|無效的描述元索引|*FieldIdentifier*引數就是記錄 欄位中， *RecNumber*引數為 0，而*DescriptorHandle* IPD 控制代碼的參考引數。<br /><br /> *RecNumber*引數為 0，小於和*DescriptorHandle* ARD 或 APD 參考引數。<br /><br /> *RecNumber*引數為大於最大數目的資料行或參數，可支援資料來源，而*DescriptorHandle* APD 或 ARD 參考引數。<br /><br /> (DM) *FieldIdentifier*引數以前是 SQL_DESC_COUNT，和 *\*ValuePtr*引數為小於 0。<br /><br /> *RecNumber*引數以前是等於 0，而*DescriptorHandle*隱含配置的 APD 參考引數。 （這個錯誤就不需要明確配置的應用程式描述元，因為不知道應用程式明確配置描述元是 APD 或 ARD 直到執行時間。）|  
 |08S01|通訊連結失敗|功能已完成處理之前，驅動程式和驅動程式已連線到資料來源之間的通訊連結失敗。|  
 |22001|字串資料，右邊遭截斷|*FieldIdentifier*引數以前是 SQL_DESC_NAME，而*Columnsize*引數為大於 SQL_MAX_IDENTIFIER_LEN 的值。|  
@@ -94,7 +95,7 @@ SQLRETURN SQLSetDescField(
 |HY013|記憶體管理錯誤|無法處理函式呼叫，因為基礎記憶體的物件無法存取，可能是因為記憶體不足。|  
 |HY016|無法修改實作資料列描述項|*DescriptorHandle*引數以前是相關聯的 IRD 和*FieldIdentifier*引數不是 SQL_DESC_ARRAY_STATUS_PTR 或 SQL_DESC_ROWS_PROCESSED_PTR。|  
 |HY021|不一致的描述項資訊|SQL_DESC_TYPE 和 SQL_DESC_DATETIME_INTERVAL_CODE 欄位並非來自有效的 ODBC SQL 類型的有效驅動程式專屬 SQL 型別 （Ipd) 或有效的 ODBC C 類型 （適用於 Apd 或 ARDs）。<br /><br /> 檢查一致性檢查期間的描述項資訊不一致。 (請參閱中的 「 一致性檢查 」 **SQLSetDescRec**。)|  
-|HY090|字串或緩衝區長度無效|(DM)  *\*ValuePtr*是字元字串，並*Columnsize*小於零，但不是等於 SQL_NTS。<br /><br /> (DM) 驅動程式為 ODBC 2*.x*驅動程式，描述元是 ARD， *ColumnNumber*引數設定為 0，而且指定的引數的值*Columnsize*已不等於 4。|  
+|HY090|字串或緩衝區長度無效|(DM)  *\*ValuePtr*是字元字串，並*Columnsize*小於零，但不是等於 SQL_NTS。<br /><br /> (DM) 驅動程式為 ODBC 2 *.x*驅動程式，描述元是 ARD， *ColumnNumber*引數設定為 0，而且指定的引數的值*Columnsize*已不等於 4。|  
 |HY091|無效的描述項欄位識別碼|指定的值*FieldIdentifier*引數不是 ODBC 定義的欄位，且不實作定義的值。<br /><br /> *FieldIdentifier*引數無效*DescriptorHandle*引數。<br /><br /> *FieldIdentifier*引數以前是唯讀、 ODBC 定義的欄位。|  
 |HY092|屬性/選項識別碼無效|中的值 *\*ValuePtr*對無效*FieldIdentifier*引數。<br /><br /> *FieldIdentifier*引數以前是 SQL_DESC_UNNAMED，和*ValuePtr*已 SQL_NAMED。|  
 |HY105|無效的參數類型|(DM) 指定 SQL_DESC_PARAMETER_TYPE 欄位的值無效。 (如需詳細資訊，請參閱 「*了*引數 」 一節中**SQLBindParameter**。)|  
@@ -141,7 +142,7 @@ SQLRETURN SQLSetDescField(
   
  標頭欄位的初始設定後續的表格中所述。  
   
-|標頭欄位名稱|類型|R/W|預設|  
+|標頭欄位名稱|型別|R/W|預設值|  
 |-----------------------|----------|----------|-------------|  
 |SQL_DESC_ALLOC_TYPE|SQLSMALLINT|ARD: R APD: R IRD: R IPD: R|ARD: SQL_DESC_ALLOC_AUTO 的隱含或 SQL_DESC_ALLOC_USER 為明確<br /><br /> APD: SQL_DESC_ALLOC_AUTO 的隱含或 SQL_DESC_ALLOC_USER 為明確<br /><br /> IRD: SQL_DESC_ALLOC_AUTO<br /><br /> IPD: SQL_DESC_ALLOC_AUTO|  
 |SQL_DESC_ARRAY_SIZE|SQLULEN|ARD: R/W APD: R/W IRD： 未使用的 IPD： 未使用|ARD: [1] APD: [1] 的 IRD： 未使用的 IPD： 未使用|  
@@ -155,7 +156,7 @@ SQL_DESC_COUNT|SQLSMALLINT|ARD: R/W APD: IRD R/W: R IPD: R/W|ARD: 0 APD: IRD 0: 
   
  記錄的欄位初始化為下表所示。  
   
-|記錄欄位名稱|類型|R/W|預設|  
+|記錄欄位名稱|型別|R/W|預設值|  
 |-----------------------|----------|----------|-------------|  
 |SQL_DESC_AUTO_UNIQUE_VALUE|SQLINTEGER|ARD： 未使用的 APD： 未使用的 IRD: R IPD： 未使用|ARD： 未使用的 APD： 未使用的 IRD: D IPD： 未使用|  
 |SQL_DESC_BASE_COLUMN_NAME|SQLCHAR *|ARD： 未使用的 APD： 未使用的 IRD: R IPD： 未使用|ARD： 未使用的 APD： 未使用的 IRD: D IPD： 未使用|  
@@ -417,7 +418,7 @@ QL_INTERVAL_SECOND / SQL_C_INTERVAL_SECOND|SQL_CODE_SECOND|
  **SQL_DESC_LENGTH [All]**  
  這個 SQLULEN 記錄欄位是以字元為單位的字元字串的最大或實際長度或二進位資料類型，以位元組為單位。 它是固定長度的資料類型的最大長度或可變長度資料類型的實際長度。 其值永遠不包括結束的字元字串的 null 終止字元。 型別是 SQL_TYPE_DATE、 SQL_TYPE_TIME、 SQL_TYPE_TIMESTAMP，或其中一個 SQL 間隔資料類型的值，此欄位會有以字元為單位的字元字串表示法，將日期時間或間隔值的長度。  
   
- 此欄位中的值可能會與 「 長度 」 做為 ODBC 2 中定義的值不同*.x*。 如需詳細資訊，請參閱[附錄 d： 資料型別](../../../odbc/reference/appendixes/appendix-d-data-types.md)。  
+ 此欄位中的值可能會與 「 長度 」 做為 ODBC 2 中定義的值不同 *.x*。 如需詳細資訊，請參閱[附錄 d： 資料型別](../../../odbc/reference/appendixes/appendix-d-data-types.md)。  
   
  **SQL_DESC_LITERAL_PREFIX [IRDs]**  
  這個唯讀 SQLCHAR * 記錄欄位包含驅動程式會辨識為此資料類型的常值的前置詞的字元。 此變數包含空字串資料類型的常值前置詞不適用。  
@@ -463,7 +464,7 @@ QL_INTERVAL_SECOND / SQL_C_INTERVAL_SECOND|SQL_CODE_SECOND|
  **SQL_DESC_PRECISION [All]**  
  此 SQLSMALLINT 記錄欄位包含的是精確數值類型，（二進位精確度） 的近似數值類型，則表示尾數的位元數目或 SQL_TYPE_TIME SQL_TYPE 的小數秒數元件中的數字的數字的位數_TIMESTAMP 或 SQL_INTERVAL_SECOND 資料型別。 這個欄位是未定義的所有其他資料類型。  
   
- 此欄位中的值可能是"precision"做為 ODBC 2 中定義的值不同*.x*。 如需詳細資訊，請參閱[附錄 d： 資料型別](../../../odbc/reference/appendixes/appendix-d-data-types.md)。  
+ 此欄位中的值可能是"precision"做為 ODBC 2 中定義的值不同 *.x*。 如需詳細資訊，請參閱[附錄 d： 資料型別](../../../odbc/reference/appendixes/appendix-d-data-types.md)。  
   
  **SQL_DESC_ROWVER [實作描述元]**  
  這個 SQLSMALLINTrecord 欄位會指示是否修改資料行是自動由 DBMS 時 （例如，類型"timestamp"SQL Server 中的資料行） 更新資料列。 此記錄欄位的值會設定為 SQL_TRUE，如果資料行是資料列版本設定資料行，以及 SQL_FALSE 否則。 這個資料行屬性是類似於呼叫**SQLSpecialColumns** IdentifierType 的 SQL_ROWVER 來判斷是否會自動更新的資料行使用。  
@@ -471,7 +472,7 @@ QL_INTERVAL_SECOND / SQL_C_INTERVAL_SECOND|SQL_CODE_SECOND|
  **[All] SQL_DESC_SCALE**  
  此 SQLSMALLINT 記錄欄位包含 decimal 和 numeric 資料類型的定義小數位數。 此欄位是未定義的所有其他資料類型。  
   
- 此欄位中的值可能會與 「 刻度 」 ODBC 2 中所定義的值不同*.x*。 如需詳細資訊，請參閱[附錄 d： 資料型別](../../../odbc/reference/appendixes/appendix-d-data-types.md)。  
+ 此欄位中的值可能會與 「 刻度 」 ODBC 2 中所定義的值不同 *.x*。 如需詳細資訊，請參閱[附錄 d： 資料型別](../../../odbc/reference/appendixes/appendix-d-data-types.md)。  
   
  **SQL_DESC_SCHEMA_NAME [IRDs]**  
  這個唯讀 SQLCHAR * 記錄欄位包含基底資料表包含資料行的結構描述名稱。 傳回值是驅動程式而定，如果資料行是運算式或資料行是檢視的一部分。 如果資料來源不支援結構描述，或無法判斷結構描述名稱，此變數包含空字串。  
@@ -479,11 +480,11 @@ QL_INTERVAL_SECOND / SQL_C_INTERVAL_SECOND|SQL_CODE_SECOND|
  **SQL_DESC_SEARCHABLE [IRDs]**  
  這個唯讀 SQLSMALLINT 記錄欄位設定為下列值之一：  
   
--   如果資料行不能在 SQL_PRED_NONE**其中**子句。 (這是 ODBC 2 SQL_UNSEARCHABLE 值相同*.x*。)  
+-   如果資料行不能在 SQL_PRED_NONE**其中**子句。 (這是 ODBC 2 SQL_UNSEARCHABLE 值相同 *.x*。)  
   
--   如果資料行可以用於 SQL_PRED_CHAR**其中**子句只與**像**述詞。 (這是 ODBC 2 SQL_LIKE_ONLY 值相同*.x*。)  
+-   如果資料行可以用於 SQL_PRED_CHAR**其中**子句只與**像**述詞。 (這是 ODBC 2 SQL_LIKE_ONLY 值相同 *.x*。)  
   
--   如果資料行可以用於 SQL_PRED_BASIC**其中**子句以外的所有比較運算子搭配**像**。 (這是 ODBC 2 SQL_EXCEPT_LIKE 值相同*.x*。)  
+-   如果資料行可以用於 SQL_PRED_BASIC**其中**子句以外的所有比較運算子搭配**像**。 (這是 ODBC 2 SQL_EXCEPT_LIKE 值相同 *.x*。)  
   
 -   如果資料行可以用於 SQL_PRED_SEARCHABLE**其中**子句搭配任何比較運算子。  
   
@@ -548,6 +549,6 @@ QL_INTERVAL_SECOND / SQL_C_INTERVAL_SECOND|SQL_CODE_SECOND|
 |取得多個描述項欄位|[SQLGetDescRec 函式](../../../odbc/reference/syntax/sqlgetdescrec-function.md)|  
 |設定多個描述項欄位|[SQLSetDescRec 函式](../../../odbc/reference/syntax/sqlsetdescrec-function.md)|  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [ODBC 標頭檔](../../../odbc/reference/install/odbc-header-files.md)   
  [ODBC API 參考](../../../odbc/reference/syntax/odbc-api-reference.md)

@@ -1,16 +1,14 @@
 ---
-title: "sp_getbindtoken (TRANSACT-SQL) |Microsoft 文件"
-ms.custom: 
+title: sp_getbindtoken (TRANSACT-SQL) |Microsoft 文件
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: system-objects
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_getbindtoken
@@ -20,16 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_getbindtoken
 ms.assetid: 5db87d77-85fa-45a3-a23a-3ea500f9a5ac
-caps.latest.revision: 
+caps.latest.revision: 47
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 58c73d303ac8fdcd8e9d4acf9f937538c3df816c
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: ecf272b61591124b6e7ce920ecf1c8b481a6ac5e
+ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="spgetbindtoken-transact-sql"></a>sp_getbindtoken (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -37,7 +34,7 @@ ms.lasthandoff: 11/27/2017
   傳回交易的唯一識別碼。 這個唯一識別碼是利用 sp_bindsession 來繫結工作階段時所用的字串。  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]請改用 Multiple Active Result Set (MARS) 或分散式交易。 如需詳細資訊，請參閱[使用 Multiple Active Result Set &#40;MARS &#41;](../../relational-databases/native-client/features/using-multiple-active-result-sets-mars.md).  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]請改用 Multiple Active Result Set (MARS) 或分散式交易。 如需詳細資訊，請參閱[使用 Multiple Active Result Set & #40;MARS & #41;](../../relational-databases/native-client/features/using-multiple-active-result-sets-mars.md).  
   
  ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -50,7 +47,7 @@ sp_getbindtoken [@out_token =] 'return_value' OUTPUT
   
 ## <a name="arguments"></a>引數  
  [@out_token=]'*return_value*'  
- 這是用來繫結工作階段的 Token。 *return_value*是**varchar （255)**沒有預設值。  
+ 這是用來繫結工作階段的 Token。 *return_value*是**varchar （255)** 沒有預設值。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  無  
@@ -132,9 +129,9 @@ SELECT @bind_token AS Token;
   
  `\0]---5^PJK51bP<1F<-7U-]ANZ`  
   
-## <a name="see-also"></a>請參閱  
- [sp_bindsession &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/sp-bindsession-transact-sql.md)   
+## <a name="see-also"></a>另請參閱  
+ [sp_bindsession & #40;TRANSACT-SQL & #41;](../../relational-databases/system-stored-procedures/sp-bindsession-transact-sql.md)   
  [系統預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
- [srv_getbindtoken &#40;擴充預存程序 API &#41;](../../relational-databases/extended-stored-procedures-reference/srv-getbindtoken-extended-stored-procedure-api.md)  
+ [srv_getbindtoken&#40;擴充預存程序 API&#41;](../../relational-databases/extended-stored-procedures-reference/srv-getbindtoken-extended-stored-procedure-api.md)  
   
   

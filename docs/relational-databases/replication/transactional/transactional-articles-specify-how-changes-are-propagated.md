@@ -1,30 +1,28 @@
 ---
-title: "指定交易式發行項變更的傳播方式 | Microsoft 文件"
-ms.custom: 
+title: 指定交易式發行項變更的傳播方式 | Microsoft 文件
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
 ms.component: replication
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - transactional replication, propagation methods
 ms.assetid: a10c5001-22cc-4667-8f0b-3d0818dca2e9
-caps.latest.revision: 
+caps.latest.revision: 48
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 9556148f1f8f55fcd6df5e8574f8cbc10232c79c
-ms.sourcegitcommit: ab25b08a312d35489a2c4a6a0d29a04bbd90f64d
+ms.openlocfilehash: e1301da5fd36bf38a28bb4722c460642d65fa9b3
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="transactional-articles---specify-how-changes-are-propagated"></a>交易式發行項 - 指定變更的傳播方式
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -40,7 +38,7 @@ ms.lasthandoff: 03/08/2018
   
  依預設，異動複寫會透過每個訂閱者上所安裝的一組預存程序，將變更傳播到訂閱者。 在「發行者」端的資料表中進行插入、更新或刪除操作時，作業會翻譯為對「訂閱者」端預存程序的呼叫。 預存程序接受對應至資料表中資料行的參數，允許在「訂閱者」端變更這些資料行。  
   
- 若要設定對交易式發行項之資料變更的傳播方法，請參閱＜ [Set the Propagation Method for Data Changes to Transactional Articles](../../../relational-databases/replication/publish/set-the-propagation-method-for-data-changes-to-transactional-articles.md)＞。  
+ 若要設定對交易式發行項之資料變更的傳播方法，請參閱＜ [設定對交易式發行項之資料變更的傳播方法](../../../relational-databases/replication/publish/set-the-propagation-method-for-data-changes-to-transactional-articles.md)＞。  
   
 ## <a name="default-and-custom-stored-procedures"></a>預設與自訂預存程序  
  依預設，複寫為每個資料表發行項建立的三個程序為：  

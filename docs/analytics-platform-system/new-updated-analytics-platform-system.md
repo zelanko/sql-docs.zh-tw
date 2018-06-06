@@ -1,20 +1,22 @@
 ---
-title: "已更新-SQL Server 文件的 Analytics Platform System |Microsoft 文件"
-description: "顯示更新的內容，如需 Analytics Platform System 的 Microsoft SQL Server 中最近變更過的文件的程式碼片段。"
+title: 已更新-SQL Server 文件的 Analytics Platform System |Microsoft 文件
+description: 顯示更新的內容，如需 Analytics Platform System 的 Microsoft SQL Server 中最近變更過的文件的程式碼片段。
 manager: craigg
 author: MightyPen
 ms.author: genemi
 ms.topic: article
 ms.custom: UpdArt.exe
 ms.suite: sql
+ms.technology: release-landing
+ms.prod: sql
 ms.prod_service: sql-non-specified
 ms.component: aps-pdw
-ms.date: 02/03/2018
-ms.openlocfilehash: 2ae6339897b52cd16ad3417cc218afe1df95ba2a
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.date: 04/28/2018
+ms.openlocfilehash: 7b312d0e09ba8771bb108cb3a1e35771a6981f64
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="new-and-recently-updated-analytics-platform-system-for-sql-server"></a>新增和更新最近： Analytics Platform System for SQL Server
 
@@ -28,7 +30,7 @@ ms.lasthandoff: 02/09/2018
 
 
 
-- *日期範圍的更新：* &nbsp; **2017年-12-03** &nbsp; -到- &nbsp; **2018年-02-03**
+- *日期範圍的更新：* &nbsp; **2018年-02-03** &nbsp; -到- &nbsp; **2018年-04-28**
 - *主旨區域：* &nbsp; **Analytics Platform System for SQL Server**。
 
 
@@ -67,102 +69,54 @@ ms.lasthandoff: 02/09/2018
 
 此壓縮清單提供＜摘要＞一節中所有更新文章的連結。
 
-1. [設定外部資料的 PolyBase 連線組態](#TitleNum_1)
 
 
 
 
 &nbsp;
 
-&nbsp;
-
-<a name="TitleNum_1"/>
-
-### <a name="1-nbsp-configure-polybase-connectivity-to-external-dataconfigure-polybase-connectivity-to-external-datamd"></a>1.&nbsp;[設定外部資料的 PolyBase 連線組態](configure-polybase-connectivity-to-external-data.md)
-
-*Updated: 2018-01-29* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
-
-<!-- Source markdown line 132.  ms.author= "barbkess".  -->
-
-&nbsp;
-
-
-<!-- git diff --ignore-all-space --unified=0 947f789480da66b9f636f39b30caec6be60d8c4d d4d4d45fbbb8e10ed6f26fe12f9a25d2e8e4f068  (PR=4741  ,  Filename=configure-polybase-connectivity-to-external-data.md  ,  Dirpath=docs\analytics-platform-system\  ,  MergeCommitSha40=0a44ce9993ebf61f86e409255a1d58d47993951a) -->
-
-
-
-**Kerberos 設定**
-
-請注意，當 PolyBase，向 Kerberos 受保護的叢集，hadoop.rpc.protection 設定必須設為驗證。 這樣會讓未加密的 Hadoop 節點之間維持資料通訊。
-
- 若要連接到 [使用 MIT KDC] 的 Kerberos 保護的 Hadoop 叢集：
-
-
-1.  尋找 Hadoop 組態目錄中的控制節點上的安裝路徑：
-
-    ```
-    C:\Program Files\Microsoft SQL Server Parallel Data Warehouse\100\Hadoop\conf
-    ```
-
-2.  尋找資料表中所列之組態機碼的 Hadoop 端組態值。 (在 Hadoop 電腦上，尋找 Hadoop 組態目錄中的檔案)。
-
-3.  將組態值複製到 [控制] 節點上對應檔案中的 value 屬性。
-
-    |**#**|**組態檔**|**組態機碼**|**動作**|
-    |------------|----------------|---------------------|----------|
-    |1|core-site.xml|polybase.kerberos.kdchost|指定 KDC 主機名稱。 例如：kerberos.your-realm.com。|
-    |2|core-site.xml|polybase.kerberos.realm|指定 Kerberos 領域。 例如：YOUR-REALM.COM|
-    |3|core-site.xml|hadoop.security.authentication|尋找 Hadoop 端組態並複製到 SQL Server 電腦。 例如：KERBEROS<br></br>**安全性注意事項︰** KERBEROS 必須為大寫。 如果為小寫，KERBEROS 可能不會開啟。|
-    |4|hdfs-site.xml|dfs.namenode.kerberos.principal|尋找 Hadoop 端組態並複製到 SQL Server 電腦。 例如： hdfs/_HOST@YOUR-REALM.COM|
-    |5|mapred-site.xml|mapreduce.jobhistory.principal|尋找 Hadoop 端組態並複製到 SQL Server 電腦。 例如： mapred/_HOST@YOUR-REALM.COM|
-    |6|mapred-site.xml|mapreduce.jobhistory.address|尋找 Hadoop 端組態並複製到 SQL Server 電腦。 例如：10.193.26.174:10020|
-    |7|yarn-site.xml yarn。|yarn.resourcemanager.principal|尋找 Hadoop 端組態並複製到 SQL Server 電腦。 例如： yarn/_HOST@YOUR-REALM.COM|
+***已更新此區域中的沒有發行項，此時間。***
 
 
 
 
 
 
-
-## <a name="similar-articles-about-new-or-updated-articles"></a>新的或更新的發行項相關的類似文件
+## <a name="similar-articles-about-new-or-updated-articles"></a>新文章或更新文章的類似文章
 
 本節會在我們的公開 GitHub 存放庫中，列出與其他主題區中最近更新的文章十分相似的文章：[MicrosoftDocs/sql-docs](https://github.com/MicrosoftDocs/sql-docs/)。
 
 
-#### <a name="subject-areas-that-do-have-new-or-recently-updated-articles"></a>主旨區域，*不要*new 或最近更新發行項
+
+#### <a name="subject-areas-that-do-have-new-or-recently-updated-articles"></a>具有新文章或最近更新文章的主題區
+
+- [新 + 更新 (11 + 6): &nbsp; &nbsp; **Advanced Analytics sql**文件](../advanced-analytics/new-updated-advanced-analytics.md)
+- [新 + 更新 (18 + 0): &nbsp; &nbsp; **sql Analysis Services**文件](../analysis-services/new-updated-analysis-services.md)
+- [新 + 更新 (218 + 14):**連接到 SQL**文件](../connect/new-updated-connect.md)
+- [新 + 更新 (14 + 0): &nbsp; &nbsp; **sql 資料庫引擎**文件](../database-engine/new-updated-database-engine.md)
+- [新 + 更新 (3 + 2): &nbsp; &nbsp; **sql Integration Services**文件](../integration-services/new-updated-integration-services.md)
+- [新 + 更新 (3 + 3): &nbsp; &nbsp; **sql Linux**文件](../linux/new-updated-linux.md)
+- [新 + 更新 (7 + 10): &nbsp; &nbsp;**關聯式資料庫供 SQL**文件](../relational-databases/new-updated-relational-databases.md)
+- [新 + 更新 (0 + 2): &nbsp; &nbsp; **Reporting Services SQL**文件](../reporting-services/new-updated-reporting-services.md)
+- [新 + 更新 (1 + 3): &nbsp; &nbsp; **SQL 作業 Studio**文件](../sql-operations-studio/new-updated-sql-operations-studio.md)
+- [新 + 更新 (2 + 3): &nbsp; &nbsp; **Microsoft SQL Server**文件](../sql-server/new-updated-sql-server.md)
+- [新 + 更新 (1 + 1): &nbsp; &nbsp; **SQL Server Data Tools (SSDT)** 文件](../ssdt/new-updated-ssdt.md)
+- [新 + 更新 (5 + 2): &nbsp; &nbsp; **SQL Server Management Studio (SSMS)** 文件](../ssms/new-updated-ssms.md)
+- [新 + 更新 (0 + 2): &nbsp; &nbsp; **TRANSACT-SQL**文件](../t-sql/new-updated-t-sql.md)
+- [新 + 更新 (1 + 1): &nbsp; &nbsp; **Tools for SQL**文件](../tools/new-updated-tools.md)
 
 
-- [新 + 更新 (1 + 3):&nbsp; **Advanced Analytics sql**文件](../advanced-analytics/new-updated-advanced-analytics.md)
-- [新 + 更新 (0 + 1):&nbsp; **Analytics Platform System sql**文件](../analytics-platform-system/new-updated-analytics-platform-system.md)
-- [新 + 更新 (0 + 1):&nbsp; **連接到 SQL**文件](../connect/new-updated-connect.md)
-- [新 + 更新 (0 + 1):&nbsp; **sql 資料庫引擎**文件](../database-engine/new-updated-database-engine.md)
-- [新 + 更新 (12 + 1): **sql Integration Services**文件](../integration-services/new-updated-integration-services.md)
-- [新 + 更新 (6 + 2):&nbsp; **sql Linux**文件](../linux/new-updated-linux.md)
-- [新 + 更新 (15 + 0):**適用於 SQL PowerShell**文件](../powershell/new-updated-powershell.md)
-- [新 + 更新 (2 + 9):&nbsp; **關聯式資料庫供 SQL**文件](../relational-databases/new-updated-relational-databases.md)
-- [新 + 更新 (1 + 0):&nbsp; **Reporting Services SQL**文件](../reporting-services/new-updated-reporting-services.md)
-- [新 + 更新 (1 + 1):&nbsp; **SQL 作業 Studio**文件](../sql-operations-studio/new-updated-sql-operations-studio.md)
-- [新 + 更新 (1 + 1):&nbsp; **Microsoft SQL Server**文件](../sql-server/new-updated-sql-server.md)
-- [新 + 更新 (0 + 1):&nbsp; **SQL Server Data Tools (SSDT)**文件](../ssdt/new-updated-ssdt.md)
-- [新 + 更新 (1 + 2):&nbsp; **SQL Server Management Studio (SSMS)**文件](../ssms/new-updated-ssms.md)
-- [新 + 更新 (0 + 2):&nbsp; **TRANSACT-SQL**文件](../t-sql/new-updated-t-sql.md)
 
+#### <a name="subject-areas-that-do-not-have-any-new-or-recently-updated-articles"></a>沒有新文章或最近更新文章的主題區
 
-
-#### <a name="subject-areas-that-do-not-have-any-new-or-recently-updated-articles"></a>主旨區域執行*不*有任何新的或最近的更新發行項
-
-
-- [新文章 + 更新文章 (0+0)：**SQL 資料移轉小幫手 (DMA)** 文件](../dma/new-updated-dma.md)
-- [新 + 更新 (0 + 0): **ActiveX Data Objects (ADO) 的 SQL**文件](../ado/new-updated-ado.md)
-- [新文章 + 更新文章 (0+0)：**SQL Analysis Services** 文件](../analysis-services/new-updated-analysis-services.md)
+- [新 + 更新 (0 + 0): **Analytics Platform System sql**文件](../analytics-platform-system/new-updated-analytics-platform-system.md)
 - [新 + 更新 (0 + 0): **SQL 的 Data Quality Services**文件](../data-quality-services/new-updated-data-quality-services.md)
 - [新 + 更新 (0 + 0):**資料採礦延伸模組 (DMX)，sql**文件](../dmx/new-updated-dmx.md)
 - [新文章 + 更新文章 (0+0)：**SQL Master Data Services (MDS)** 文件](../master-data-services/new-updated-master-data-services.md)
 - [新 + 更新 (0 + 0):**多維度運算式 (MDX) 的 SQL**文件](../mdx/new-updated-mdx.md)
 - [新 + 更新 (0 + 0): **ODBC （開放式資料庫連接） 的 SQL**文件](../odbc/new-updated-odbc.md)
-- [新 + 更新 (0 + 0):**範例 sql**文件](../sample/new-updated-sample.md)
-- [新 + 更新 (0 + 0): **SQL Server 移轉小幫手 (SSMA)**文件](../ssma/new-updated-ssma.md)
-- [新文章 + 更新文章 (0+0)：**SQL 的工具** 文件](../tools/new-updated-tools.md)
+- [新 + 更新 (0 + 0):**適用於 SQL PowerShell**文件](../powershell/new-updated-powershell.md)
+- [新 + 更新 (0 + 0):**範例 sql**文件](../samples/new-updated-samples.md)
+- [新 + 更新 (0 + 0): **SQL Server 移轉小幫手 (SSMA)** 文件](../ssma/new-updated-ssma.md)
 - [新 + 更新 (0 + 0): **sql XQuery**文件](../xquery/new-updated-xquery.md)
-
 

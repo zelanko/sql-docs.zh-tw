@@ -1,17 +1,14 @@
 ---
-title: "產生和發佈指令碼精靈 | Microsoft Docs"
-ms.custom: 
+title: 產生和發佈指令碼精靈 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
-ms.component: ssms-scripting
-ms.reviewer: 
+ms.technology: scripting
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 f1_keywords:
 - sql9.swb.generatescriptswizard.chooseviews.f1
 - sql13.swb.generatescriptswizard.manageproviders.f1
@@ -45,23 +42,24 @@ helpviewer_keywords:
 - databases [SQL Server], generating scripts
 - Publish Database Wizard
 ms.assetid: 5ee520ba-ec7e-4199-a441-189e9e264b37
-caps.latest.revision: 
+caps.latest.revision: 45
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 6a9e1ba4f4afadc27174f3dfd61b03005a33ef16
-ms.sourcegitcommit: a0aa5e611a0e6ebb74ac1e2f613e8916dc7a7617
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: d755a56c4ee302ed0f249bac303b082b9031a239
+ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/24/2018
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="generate-and-publish-scripts-wizard"></a>[產生和發佈指令碼]
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 您可以使用 [產生和發佈指令碼精靈] 建立指令碼，以在 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]或 [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)] 執行個體之間傳送資料庫。 您可以針對區域網路上 Database Engine 執行個體的資料庫產生指令碼，或是從 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]產生指令碼。 產生的指令碼可以在另一個 Database Engine 或 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]執行個體上執行。 您也可以使用此精靈，將資料庫內容直接發行到使用資料庫發行服務所建立的 Web 服務。 您可以針對整個資料庫建立指令碼，或將它限制為特定物件。  
-  
-1.  **開始之前：**[發佈到託管服務](#PubHostSvc)、[權限](#Permissions)  
-  
-2.  **若要產生或發行指令碼，請使用：**  [產生和發佈指令碼精靈](#GenPubScriptWiz)  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+  您可以使用 [產生和發佈指令碼精靈] 建立指令碼，以在 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 或 [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)] 執行個體之間傳送資料庫。 您可以針對區域網路上 Database Engine 執行個體的資料庫產生指令碼，或是從 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]產生指令碼。 產生的指令碼可以在另一個 Database Engine 或 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]執行個體上執行。 您也可以使用此精靈，將資料庫內容直接發行到使用資料庫發行服務所建立的 Web 服務。 您可以針對整個資料庫建立指令碼，或將它限制為特定物件。  
+
+如需有關使用 [產生和發佈指令碼精靈] 的更詳細教學課程，請參閱[教學課程：產生指令碼精靈](https://docs.microsoft.com/en-us/sql/ssms/tutorials/scripting-ssms#script-database-using-generate-scripts-option)。
+
+
   
 ## <a name="before-you-begin"></a>開始之前  
  來源和目標資料庫可以位於執行 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]或更新版本的 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 或 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 執行個體上。  
@@ -79,28 +77,22 @@ ms.lasthandoff: 01/24/2018
 ##  <a name="GenPubScriptWiz"></a> 使用產生和發佈指令碼精靈  
  **產生和發佈指令碼**  
   
-1.  在 **[物件總管]**中，展開含有要編寫指令碼之資料庫的執行個體的節點。  
+1.  在 **[物件總管]** 中，展開含有要編寫指令碼之資料庫的執行個體的節點。  
   
 2.  指向 **[工作]**，然後按一下 **[產生指令碼]**。  
+
+    ![產生指令碼精靈](media/generate-and-publish-scripts-wizard/generatescripts.png)
   
 3.  完成精靈對話方塊：  
   
     -   [簡介頁面](#Introduction)  
-  
-    -   [選擇物件頁面](#ChooseObjects)  
-  
+    -   [選擇物件頁面](#ChooseObjects)   
     -   [設定指令碼編寫選項頁面](#SetScriptOpt)  
-  
     -   [進階編寫指令碼選項頁面](#AdvScriptOpt)  
-  
-    -   [管理提供者頁面](#MgProviders)  
-  
+    -   [管理提供者頁面](#MgProviders)   
     -   [進階發佈選項頁面](#AdvPubOpts)  
-  
     -   [提供者組態頁面](#ProvConfig)  
-  
-    -   [摘要頁面](#Summary)  
-  
+    -   [摘要頁面](#Summary)   
     -   [儲存或發佈指令碼頁面](#SavePubScripts)  
   
 ###  <a name="Introduction"></a> 簡介頁面  
@@ -108,14 +100,14 @@ ms.lasthandoff: 01/24/2018
   
  [不要再顯示此頁面] - 下次啟動 [產生和發佈指令碼精靈] 時會略過此頁面。  
   
- [下一步 >] - 繼續進行至 [選擇方法] 頁面。  
-  
- [取消] - 結束精靈，而不從資料庫中產生或發佈指令碼。  
+  ![簡介頁面](media/generate-and-publish-scripts-wizard/intro.png)
   
 ###  <a name="ChooseObjects"></a> 選擇物件頁面  
  您可以使用這個頁面來選擇哪些物件要包含在此精靈所產生的指令碼中。 在下列精靈頁面中，您可以選擇將這些指令碼儲存至所選擇的位置，或使用這些指令碼，將資料庫物件和資料發行至已安裝 [SQL Server Database Publishing Services](http://go.microsoft.com/fwlink/?LinkId=142025)的遠端 Web 主控提供者。  
   
- **編寫整個資料庫選項** ：按一下即可針對資料庫中的所有物件產生指令碼，並且包含資料庫本身的指令碼。  
+ **編寫整個資料庫選項** ：按一下即可針對資料庫中的所有物件產生指令碼，並且包含資料庫本身的指令碼。 
+
+   ![撰寫所有資料庫的指令碼](media/generate-and-publish-scripts-wizard/scriptall.png) 
   
  **選取特定的資料庫物件** ：按一下即可限制此精靈只針對所選擇資料庫中的特定物件產生指令碼。  
   
@@ -124,15 +116,17 @@ ms.lasthandoff: 01/24/2018
 -   **全選** ：選取所有可用的核取方塊。  
   
 -   **取消全選** ：清除所有的核取方塊。 然後，您至少必須選取一個資料庫物件才能繼續。  
+
+   ![撰寫特定的指令碼](media/generate-and-publish-scripts-wizard/scriptspecificobjects.png)
   
 ###  <a name="SetScriptOpt"></a> 設定指令碼編寫選項頁面  
  您可以使用這個頁面來指定要讓精靈將指令碼儲存至所選擇的位置，還是使用這些指令碼，將資料庫物件發行至遠端 Web 主控提供者。 若要發行，您必須能夠存取使用資料庫發行服務 Web 服務所安裝的 Web 服務。  
   
  **選項** ：如果您想要讓精靈將指令碼儲存至所選擇的位置，請選取 **[將指令碼儲存至特定位置]**。 您之後可以針對 Database Engine 執行個體或 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]執行指令碼。 如果您想要讓精靈將資料庫物件發行至遠端 Web 主控提供者，請選取 **[發佈到 Web 服務]**。  
   
- **將指令碼儲存至特定位置** ：將一個或多個 .Transact-SQL 指令碼檔案儲存至指定的位置。  
-  
--   **進階** ：顯示可從中選取用於產生指令碼之進階選項的 **[進階編寫指令碼選項]** 對話方塊。  
+ **將指令碼儲存至特定位置**：將一或多個 Transact-SQL 指令碼檔案儲存至指定的位置。  
+
+  ![儲存](media/generate-and-publish-scripts-wizard/save.png)   
   
 -   **儲存至檔案** ：將指令碼儲存至一個或多個 .sql 檔案。 按一下瀏覽按鈕 (**…**)，來指定檔案的名稱和位置。 如果已經存在相同名稱的檔案，請選取 **[覆寫現有檔案]** 核取方塊來取代該檔案。 若要指定指令碼的產生方式，請按一下 **[單一檔案]** 或 **[每一物件單一檔案]** 。 若要指定指令碼中應該使用的文字種類，請按一下 **[Unicode 文字]** 或 **[ANSI 文字]** 。  
   
@@ -152,6 +146,8 @@ ms.lasthandoff: 01/24/2018
   
 ###  <a name="AdvScriptOpt"></a> 進階編寫指令碼選項頁面  
  您可以使用這個頁面來指定要如何讓此精靈產生指令碼。 這個頁面提供了許多不同的選項。 如果 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] [Database Engine 類型] **中指定的 SQL Server 或**版本不支援選項，選項會呈現灰色。  
+
+![[進階選項]](media/generate-and-publish-scripts-wizard/advanced.png)
   
  **選項** - 在每個選項右方的可用設定清單中選取值，即可指定進階選項。  
   
@@ -159,21 +155,21 @@ ms.lasthandoff: 01/24/2018
   
 -   **ANSI 填補** ：在指令碼中包含 **ANSI PADDING ON** 。 預設值為 **True**。  
   
--   **附加至檔案** ：設定為 **[True]**時，這個指令碼會加入至 **[設定指令碼編寫選項]** 頁面上所指定的現有指令碼底部。 設定為 **[False]**時，新的指令碼就會覆寫先前的指令碼。 預設值為 **False**。  
+-   **附加至檔案** ：設定為 **[True]** 時，這個指令碼會加入至 **[設定指令碼編寫選項]** 頁面上所指定的現有指令碼底部。 設定為 **[False]** 時，新的指令碼就會覆寫先前的指令碼。 預設值為 **False**。  
   
--   **發生錯誤時繼續編寫指令碼** ：設定為 **[True]**時，指令碼編寫會在發生錯誤時停止。 設定為 **[False]**時，則會繼續編寫指令碼。 預設值為 **False**。  
+-   **發生錯誤時繼續編寫指令碼** ：設定為 **[True]** 時，指令碼編寫會在發生錯誤時停止。 設定為 **[False]** 時，則會繼續編寫指令碼。 預設值為 **False**。  
   
--   **將 UDDT 轉換為基底類型** ：設定為 **[True]**時，使用者定義資料類型 (UDDT) 會轉換為用來建立它們的基礎基底資料類型。 當 UDDT 不存在於執行指令碼的資料庫時，請使用 **[True]** 。 設定為 **[False]**時，就會使用 UDDT。 預設值為 **False**。  
+-   **將 UDDT 轉換為基底類型** ：設定為 **[True]** 時，使用者定義資料類型 (UDDT) 會轉換為用來建立它們的基礎基底資料類型。 當 UDDT 不存在於執行指令碼的資料庫時，請使用 **[True]** 。 設定為 **[False]** 時，就會使用 UDDT。 預設值為 **False**。  
   
 -   **產生相依物件的指令碼** ：針對在執行所選取物件的指令碼時必須存在的物件產生指令碼。 預設值為 **True**。  
   
--   **包含描述性標頭** ：設定為 **[True]**時，會將描述性註解加入至指令碼，並將指令碼分隔為代表每個物件的區段。 預設值為 **False**。  
+-   **包含描述性標頭** ：設定為 **[True]** 時，會將描述性註解加入至指令碼，並將指令碼分隔為代表每個物件的區段。 預設值為 **False**。  
   
--   **包含 if NOT EXISTS** ：設定為 **[True]**時，此指令碼會包含檢查物件是否存在於資料庫的陳述式，而且如果該物件已經存在，就不會嘗試建立新物件。 預設值為 **False**。  
+-   **包含 if NOT EXISTS** ：設定為 **[True]** 時，此指令碼會包含檢查物件是否存在於資料庫的陳述式，而且如果該物件已經存在，就不會嘗試建立新物件。 預設值為 **False**。  
   
--   **包括系統條件約束名稱** ：設定為 **[False]**時，會在目標資料庫上自動重新命名已在來源資料庫上自動命名之條件約束的預設值。 設定為 **[True]**時，來源和目標資料庫的條件約束會具有相同的名稱。  
+-   **包括系統條件約束名稱** ：設定為 [False] 時，會在目標資料庫上自動重新命名已在來源資料庫上自動命名之條件約束的預設值。 設定為 **[True]** 時，來源和目標資料庫的條件約束會具有相同的名稱。  
   
--   **包括不支援的陳述式** ：設定為 **[False]**時，此指令碼不會包含所選取伺服器版本或引擎類型上不支援之物件的陳述式。 當設為 **[True]**時，此指令碼包含不支援的物件。 對於不支援的物件而言，每個陳述式都會有陳述式必須編輯的註解，然後才可以針對選取的 SQL Server 版本或引擎類型來執行指令碼。 預設值為 **False**。  
+-   **包括不支援的陳述式** ：設定為 **[False]** 時，此指令碼不會包含所選取伺服器版本或引擎類型上不支援之物件的陳述式。 當設為 **[True]** 時，此指令碼包含不支援的物件。 對於不支援的物件而言，每個陳述式都會有陳述式必須編輯的註解，然後才可以針對選取的 SQL Server 版本或引擎類型來執行指令碼。 預設值為 **False**。  
   
 -   **結構描述會限定物件名稱** - 在所建立物件的名稱中包含結構描述名稱。 預設值為 **True**。  
   
@@ -183,7 +179,7 @@ ms.lasthandoff: 01/24/2018
   
 -   **編寫預設值的指令碼** ：包含用來在資料表資料行中設定預設值的預設物件。 預設值為 **True**。 如需詳細資訊，請參閱 [CREATE DEFAULT &#40;Transact-SQL&#41;](../../t-sql/statements/create-default-transact-sql.md)。  
   
--   [編寫 DROP 和 CREATE 的指令碼] - 設定為 [編寫 CREATE 指令碼] 時，會包含建立物件的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式。 設定為 **[編寫 DROP 指令碼]**時，就會包含卸除物件的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式。 設定為 **[編寫 DROP 和 CREATE 的指令碼]**時，就會針對每個編寫指令碼的物件，在指令碼中包含 [!INCLUDE[tsql](../../includes/tsql-md.md)] DROP 陳述式，後面接著 CREATE 陳述式。 預設值為 **編寫 CREATE 指令碼**。  
+-   [編寫 DROP 和 CREATE 的指令碼] - 設定為 [編寫 CREATE 指令碼] 時，會包含建立物件的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式。 設定為 **[編寫 DROP 指令碼]** 時，就會包含卸除物件的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式。 設定為 **[編寫 DROP 和 CREATE 的指令碼]** 時，就會針對每個編寫指令碼的物件，在指令碼中包含 [!INCLUDE[tsql](../../includes/tsql-md.md)] DROP 陳述式，後面接著 CREATE 陳述式。 預設值為 **編寫 CREATE 指令碼**。  
   
 -   **編寫擴充屬性的指令碼** - 物件具有擴充屬性時，在指令碼中包含擴充屬性。 預設值為 **True**。  
   
@@ -195,7 +191,7 @@ ms.lasthandoff: 01/24/2018
   
 -   **編寫物件層級權限的指令碼** ：包含於資料庫的物件上設定權限的指令碼。 預設值為 **False**。  
   
--   **編寫統計資料的指令碼** ：設定為 **[編寫統計資料的指令碼]**時，此選項會包含 **CREATE STATISTICS** 陳述式以重新建立物件的統計資料。 **[編寫統計資料和長條圖的指令碼]** 選項也會建立長條圖資訊。 預設值為 **[不要編寫統計資料的指令碼]**。 如需詳細資訊，請參閱 [CREATE STATISTICS &#40;Transact-SQL&#41;](../../t-sql/statements/create-statistics-transact-sql.md)。  
+-   **編寫統計資料的指令碼** ：設定為 **[編寫統計資料的指令碼]** 時，此選項會包含 **CREATE STATISTICS** 陳述式以重新建立物件的統計資料。 **[編寫統計資料和長條圖的指令碼]** 選項也會建立長條圖資訊。 預設值為 **[不要編寫統計資料的指令碼]**。 如需詳細資訊，請參閱 [CREATE STATISTICS &#40;Transact-SQL&#41;](../../t-sql/statements/create-statistics-transact-sql.md)。  
   
 -   [編寫 USE DATABASE 的指令碼] - 在指令碼中加入 **USE DATABASE** 陳述式。 若要確保在正確的資料庫中建立資料庫物件，請包含 **USE DATABASE** 陳述式。 當指令碼要用於其他資料庫時，請選取 **False** 以省略 **USE DATABASE** 陳述式。 預設值為 **True**。 如需詳細資訊，請參閱 [USE &#40;Transact-SQL&#41;](../../t-sql/language-elements/use-transact-sql.md)。  
   
@@ -240,12 +236,14 @@ ms.lasthandoff: 01/24/2018
   
 ###  <a name="AdvPubOpts"></a> 進階發佈選項頁面  
  您可以使用這個頁面來指定要如何讓此精靈發佈資料庫。 這個頁面提供了許多不同的選項。 如果 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] [Database Engine 類型] **中指定的 SQL Server 或**版本不支援選項，選項會呈現灰色。  
+
+  ![進階發佈](media/generate-and-publish-scripts-wizard/advancedpublish.png)
   
  **選項** - 在每個選項右方的可用設定清單中選取值，即可指定進階選項。  
   
  **一般** ：下列選項適用於整個發佈作業。  
   
-1.  **將 UDDT 轉換為基底類型** ：設定為 **[True]**時，使用者定義資料類型 (UDDT) 會轉換為用來建立它們的基礎基底資料類型。 當 UDDT 不存在於執行指令碼的資料庫時，請使用 **[True]** 。 設定為 **[False]**時，就會使用 UDDT。 預設值為 **False**。  
+1.  **將 UDDT 轉換為基底類型** ：設定為 **[True]** 時，使用者定義資料類型 (UDDT) 會轉換為用來建立它們的基礎基底資料類型。 當 UDDT 不存在於執行指令碼的資料庫時，請使用 **[True]** 。 設定為 **[False]** 時，就會使用 UDDT。 預設值為 **False**。  
   
 2.  **發佈定序** ：包含資料表資料行的定序資訊。 預設值為 **False**。 如需相關資訊，請參閱 [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md)。  
   
@@ -259,7 +257,7 @@ ms.lasthandoff: 01/24/2018
   
 7.  **發佈物件層級權限** ：包含資料庫中所選取物件的權限。 預設值為 **False**。  
   
-8.  **發佈統計資料** ：設定為 **[發佈統計資料]**時，會包含重新建立物件之統計資料的 **CREATE STATISTICS** 陳述式。 **[發行統計資料和長條圖]** 選項也會建立長條圖資訊。 預設值為 **不要發行統計資料**。 如需詳細資訊，請參閱 [CREATE STATISTICS &#40;Transact-SQL&#41;](../../t-sql/statements/create-statistics-transact-sql.md)。  
+8.  **發佈統計資料** ：設定為 **[發佈統計資料]** 時，會包含重新建立物件之統計資料的 **CREATE STATISTICS** 陳述式。 **[發行統計資料和長條圖]** 選項也會建立長條圖資訊。 預設值為 **不要發行統計資料**。 如需詳細資訊，請參閱 [CREATE STATISTICS &#40;Transact-SQL&#41;](../../t-sql/statements/create-statistics-transact-sql.md)。  
   
 9. [發佈 Vardecimal 選項] - 在來源資料庫資料表上啟用 **vardecimal** 資料表格式時，會在目標資料庫資料表上啟用這種格式。 預設值為 **True**。  
   

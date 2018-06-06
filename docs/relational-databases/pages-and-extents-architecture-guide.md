@@ -1,31 +1,30 @@
 ---
-title: "分頁與範圍架構指南 | Microsoft Docs"
-ms.custom: 
+title: 分頁與範圍架構指南 | Microsoft Docs
+ms.custom: ''
 ms.date: 10/21/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
 ms.component: relational-databases-misc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - page and extent architecture guide
 - guide, page and extent architecture
 ms.assetid: 83a4aa90-1c10-4de6-956b-7c3cd464c2d2
-caps.latest.revision: 
+caps.latest.revision: 2
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: b81580d88fc57a88aadd7212c229faf2aa7bcda7
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 6f42360e4a0b3a23a7e39d390b711870e855129b
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="pages-and-extents-architecture-guide"></a>分頁與範圍架構指南
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -95,7 +94,7 @@ ms.lasthandoff: 02/09/2018
 
 ### <a name="managing-extent-allocations"></a>管理範圍配置
 
-[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 會使用兩種配置對應來記錄範圍的配置： 
+[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 使用兩種配置對應來記錄範圍的配置： 
 
 - **整體配置對應 (GAM)**   
   GAM 分頁可記錄已配置哪些範圍。 每個 GAM 可涵蓋 64,000 個範圍，或接近 4 GB 的資料。 GAM 以一個位元來表示所涵蓋期間的每個範圍。 若位元為 1，代表範圍可用；若位元為 0，代表範圍已配置。 
@@ -163,7 +162,7 @@ IAM 頁面是視需要配置給每個配置單位，而且在檔案中的位置�
 
 ## <a name="tracking-modified-extents"></a>追蹤修改的範圍 
 
-[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 會使用兩個內部資料結構來追蹤大量複製作業修改過的範圍，以及自從上次完整備份之後修改過的範圍。 這些資料結構大幅加速差異備份； 同時也在資料庫使用大量記錄復原模式時，提高了大量複製作業記錄的速度。 就好像整體配置對應 (GAM) 和共用整體配置對應 (SGAM) 分頁一樣，這些結構也是點陣圖，其中每個位元都代表一個範圍。 
+[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 使用兩個內部資料結構來追蹤大量複製作業修改過的範圍，以及自從上個完整備份之後修改過的範圍。 這些資料結構大幅加速差異備份； 同時也在資料庫使用大量記錄復原模式時，提高了大量複製作業記錄的速度。 就好像整體配置對應 (GAM) 和共用整體配置對應 (SGAM) 分頁一樣，這些結構也是點陣圖，其中每個位元都代表一個範圍。 
 
 - **差異式變更對應 (DCM)**   
    這種對應會追蹤自從上個 `BACKUP DATABASE` 陳述式之後發生變更的範圍。 若某個範圍的位元為 1，代表該範圍自從上個 `BACKUP DATABASE` 陳述式之後已經修改。 若位元為 0，代表該範圍並未修改過。 差異備份只讀取 DCM 分頁，找出哪些範圍經過修改。 這可大幅減少差異式備份必須掃描的分頁數目。 差異式備份的執行時間長度，將與上次執行 BACKUP DATABASE 陳述式之後修改過的範圍數目成正比，而不是與資料庫的整體大小成正比。 

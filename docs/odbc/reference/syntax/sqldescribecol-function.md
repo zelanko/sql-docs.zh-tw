@@ -1,32 +1,33 @@
 ---
-title: "SQLDescribeCol 函數 |Microsoft 文件"
-ms.custom: 
+title: SQLDescribeCol 函數 |Microsoft 文件
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
-ms.component: odbc
-ms.reviewer: 
+ms.prod: sql
+ms.prod_service: connectivity
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
-ms.topic: article
-apiname: SQLDescribeCol
-apilocation: sqlsrv32.dll
+ms.technology: connectivity
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
+apiname:
+- SQLDescribeCol
+apilocation:
+- sqlsrv32.dll
 apitype: dllExport
-f1_keywords: SQLDescribeCol
-helpviewer_keywords: SQLDescribeCol function [ODBC]
+f1_keywords:
+- SQLDescribeCol
+helpviewer_keywords:
+- SQLDescribeCol function [ODBC]
 ms.assetid: eddef353-83f3-4a3c-8f24-f9ed888890a4
-caps.latest.revision: "35"
+caps.latest.revision: 35
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
-ms.workload: Inactive
-ms.openlocfilehash: 4967b2de98246e3ae8eedb91ecfcbf507b2afc8c
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+manager: craigg
+ms.openlocfilehash: 4e35649b865a41481de3bfe3356d8738888be39c
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sqldescribecol-function"></a>SQLDescribeCol 函數
 **一致性**  
@@ -63,7 +64,7 @@ SQLRETURN SQLDescribeCol(
   
  如果*ColumnName*是 NULL， *NameLengthPtr*仍會傳回的總字元數 （不含字元資料 null 結束字元） 可用來傳回中所指向的緩衝區*ColumnName*。  
   
- *Columnsize*  
+ *BufferLength*  
  [輸入]長度 **ColumnName*緩衝區，以字元為單位。  
   
  *NameLengthPtr*  
@@ -99,7 +100,7 @@ SQLRETURN SQLDescribeCol(
 ## <a name="diagnostics"></a>診斷  
  當**SQLDescribeCol**傳回 SQL_ERROR 或 SQL_SUCCESS_WITH_INFO，可以藉由呼叫取得相關聯的 SQLSTATE 值**SQLGetDiagRec**與*HandleType*利用 SQL_HANDLE_STMT 的和*處理*的*StatementHandle*。 下表列出通常所傳回的 SQLSTATE 值**SQLDescribeCol** ，並說明這個函式; 每個內容中的標記法 」 (DM) 」 之前描述的驅動程式管理員傳回的 Sqlstate。 每個 SQLSTATE 值相關聯的傳回碼是 SQL_ERROR，除非有說明，否則為。  
   
-|SQLSTATE|錯誤|描述|  
+|SQLSTATE|錯誤|Description|  
 |--------------|-----------|-----------------|  
 |01000|一般警告|特定驅動程式告知性訊息。 （函式會傳回 SQL_SUCCESS_WITH_INFO）。|  
 |01004|字串資料，右邊遭截斷|緩衝區\* *ColumnName*仍不夠大，無法傳回整個資料行名稱，所以已截斷的資料行名稱。 中會傳回未截斷的資料行名稱的長度 **NameLengthPtr*。 （函式會傳回 SQL_SUCCESS_WITH_INFO）。|  
@@ -118,7 +119,7 @@ SQLRETURN SQLDescribeCol(
 |IM017|中的非同步通知模式已停用輪詢|每當通知模型使用時，會停用輪詢。|  
 |IM018|**SQLCompleteAsync**尚未完成先前的非同步作業，此控制代碼上呼叫。|如果控制代碼上先前的函式呼叫傳回 SQL_STILL_EXECUTING，且如果已啟用通知模式， **SQLCompleteAsync**必須在後續處理作業，並完成此作業的控制代碼上呼叫。|  
   
- **SQLDescribeCol**可以傳回任何可傳回的 SQLSTATE **SQLPrepare**或**SQLExecute**之後呼叫**SQLPrepare** 之前**SQLExecute**，端視資料來源時評估陳述式控制代碼相關聯的 SQL 陳述式。  
+ **SQLDescribeCol**可以傳回任何可傳回的 SQLSTATE **SQLPrepare**或**SQLExecute**之後呼叫**SQLPrepare**之前**SQLExecute**，端視資料來源時評估陳述式控制代碼相關聯的 SQL 陳述式。  
   
  基於效能考量，應用程式不應該呼叫**SQLDescribeCol**之前執行的陳述式。  
   
@@ -141,6 +142,6 @@ SQLRETURN SQLDescribeCol(
 |傳回結果集資料行|[SQLNumResultCols](../../../odbc/reference/syntax/sqlnumresultcols-function.md)|  
 |準備執行陳述式|[SQLPrepare](../../../odbc/reference/syntax/sqlprepare-function.md)|  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [ODBC 應用程式開發介面參考](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [ODBC 標頭檔](../../../odbc/reference/install/odbc-header-files.md)

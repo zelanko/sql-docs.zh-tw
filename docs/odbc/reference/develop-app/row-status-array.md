@@ -1,16 +1,14 @@
 ---
-title: "資料列狀態陣列 |Microsoft 文件"
-ms.custom: 
+title: 資料列狀態陣列 |Microsoft 文件
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
-ms.component: odbc
-ms.reviewer: 
+ms.prod: sql
+ms.prod_service: connectivity
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: connectivity
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - row status array [ODBC]
 - cursors [ODBC], block
@@ -19,21 +17,20 @@ helpviewer_keywords:
 - result sets [ODBC], block cursors
 - rowset status [ODBC]
 ms.assetid: 4b69f189-2722-4314-8a02-f4ffecd6dabd
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
-ms.workload: Inactive
-ms.openlocfilehash: 35f61dfb550c54c47e821476687320125b60b7e1
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+manager: craigg
+ms.openlocfilehash: b2c45b2dc5ea9326b5ae3b229a17c13207edcabc
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="row-status-array"></a>資料列狀態陣列
 除了資料之外， **SQLFetch**和**SQLFetchScroll**可以傳回資料列集中提供的每個資料列狀態的陣列。 此陣列是透過將 sql_attr_row_status_ptr 設定陳述式屬性指定。 此陣列由應用程式所配置，而且必須具有 SQL_ATTR_ROW_ARRAY_SIZE 陳述式屬性所指定的元素。 陣列中的值由設定**SQLBulkOperations**， **SQLFetch**， **SQLFetchScroll**，和**SQLSetPos。** 這些值描述的資料列，以及上一次提取之後，該狀態是否已經變更的狀態。  
   
-|資料列狀態陣列值|描述|  
+|資料列狀態陣列值|Description|  
 |----------------------------|-----------------|  
 |SQL_ROW_SUCCESS|已成功擷取的資料列，以及自從上一次提取未變更。|  
 |SQL_ROW_SUCCESS_WITH_INFO|已成功擷取的資料列，以及自從上一次提取未變更。 不過，資料列相關的傳回警告。|  

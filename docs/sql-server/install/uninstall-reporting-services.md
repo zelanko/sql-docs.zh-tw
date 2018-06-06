@@ -1,29 +1,25 @@
 ---
-title: "解除安裝 Reporting Services | Microsoft Docs"
-ms.custom: 
+title: 解除安裝 Reporting Services | Microsoft Docs
+ms.custom: ''
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
 ms.component: install
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- setup-install
-- setup-install
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: setup-install
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: 5c764a00-d4bc-465d-b32e-e4efce052ce4
-caps.latest.revision: 
-author: MikeRayMSFT
-ms.author: mikeray
-manager: erikre
-ms.workload: On Demand
-ms.openlocfilehash: 89bd9331c7e4d8d89bdd617200dbce2664f00074
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+caps.latest.revision: 7
+author: markingmyname
+ms.author: maghan
+manager: kfile
+ms.openlocfilehash: 202a771a42e1c55e78e5ad2efca3236b5c4b8884
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="uninstall-reporting-services"></a>解除安裝 Reporting Services
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]

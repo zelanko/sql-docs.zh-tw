@@ -1,30 +1,17 @@
 ---
-title: "部署 R 模型，並將它用於 SQL （逐步解說） |Microsoft 文件"
-ms.custom: 
-ms.date: 07/26/2017
-ms.reviewer: 
-ms.suite: sql
-ms.prod: machine-learning-services
-ms.prod_service: machine-learning-services
-ms.component: 
-ms.technology: 
-ms.tgt_pltfrm: 
+title: 部署 R 模型，並將它用於 SQL （逐步解說） |Microsoft 文件
+ms.prod: sql
+ms.technology: machine-learning
+ms.date: 04/15/2018
 ms.topic: tutorial
-applies_to:
-- SQL Server 2016
-dev_langs:
-- R
-ms.assetid: f28a7aac-6d08-4781-ad28-b48d18cc16a0
-caps.latest.revision: 
-author: jeannt
-ms.author: jeannt
-manager: cgronlund
-ms.workload: Inactive
-ms.openlocfilehash: 771683f472af17292de62fb1591539f1215ebf57
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+author: HeidiSteen
+ms.author: heidist
+manager: cgronlun
+ms.openlocfilehash: 8476381c60a63d85ce6d3cb0153578416856f8fb
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="deploy-the-r-model-and-use-it-in-sql"></a>部署 R 模型，並將它用於 SQL
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -71,9 +58,9 @@ ms.lasthandoff: 02/11/2018
     END
     ```
 
-    + 您可以使用 SELECT 陳述式來呼叫預存的模型，從 SQL 資料表。 模型會從資料表擷取**varbinary （max)** SQL 變數中儲存的資料 _@lmodel2_ ，並做為參數傳遞*mod*儲存系統程序[sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md)。
+    + 您可以使用 SELECT 陳述式來呼叫預存的模型，從 SQL 資料表。 模型會從資料表擷取**varbinary （max)** SQL 變數中儲存的資料_@lmodel2_，並做為參數傳遞*mod*儲存系統程序[sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md)。
 
-    + 當做輸入使用的計分做為 SQL 查詢定義及儲存 SQL 變數以字串形式的資料 _@input_ 。 從資料庫擷取資料時，它會儲存在資料框架稱為*InputDataSet*，這是預設名稱的輸入資料與[sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md)程序，您可以定義如果需要使用參數的其他變數名稱  *_@input_data_1_name_*  。
+    + 當做輸入使用的計分做為 SQL 查詢定義及儲存 SQL 變數以字串形式的資料_@input_。 從資料庫擷取資料時，它會儲存在資料框架稱為*InputDataSet*，這是預設名稱的輸入資料與[sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md)程序，您可以定義如果需要使用參數的其他變數名稱*_@input_data_1_name_*。
 
     + 預存程序會從 `rxPredict` RevoScaleR **程式庫呼叫** 函數以產生分數。
 

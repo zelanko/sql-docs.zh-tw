@@ -1,34 +1,30 @@
 ---
-title: "OLEDB Errors 事件類別 | Microsoft Docs"
-ms.custom: 
+title: OLEDB Errors 事件類別 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
-ms.prod_service: database-engine, sql-database
-ms.service: 
-ms.component: event-classes
-ms.reviewer: 
+ms.prod: sql
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: supportability
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - OLEDB Errors event class
 ms.assetid: 0ce1e906-5d92-42f2-ab38-8771ad5ca008
-caps.latest.revision: 
+caps.latest.revision: 33
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 91e0272bfabcf627048567ef9366d5f0306a0236
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: fb0c1e048bbfebd0dfab8aa5afee2da7ee7bb279
+ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="oledb-errors-event-class"></a>OLEDB Errors 事件類別
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-對 OLE DB 提供者的呼叫若傳回錯誤， [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中就會產生 OLEDB Errors 事件類別。 在追蹤中包含此事件類別，以檢視 OLE DB 提供者的失敗 HRESULT。  
+  對 OLE DB 提供者的呼叫若傳回錯誤， [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中就會產生 OLEDB Errors 事件類別。 在追蹤中包含此事件類別，以檢視 OLE DB 提供者的失敗 HRESULT。  
   
  當追蹤中包含 OLEDB Errors 事件類別時，效能負擔需視追蹤期間資料庫發生 OLE DB 提供者錯誤的頻率決定。 如果經常發生這類錯誤，追蹤可能會嚴重妨礙效能。  
   

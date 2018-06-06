@@ -1,17 +1,16 @@
 ---
-title: "取得 DML 觸發程序的資訊 | Microsoft Docs"
-ms.custom: 
+title: 取得 DML 觸發程序的資訊 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
 ms.component: triggers
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-dml
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - metadata [SQL Server], triggers
 - viewing DML triggers
@@ -20,20 +19,20 @@ helpviewer_keywords:
 - status information [SQL Server], triggers
 - DML triggers, viewing
 ms.assetid: 37574aac-181d-4aca-a2cc-8abff64237dc
-caps.latest.revision: 
+caps.latest.revision: 31
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 4d9dac7711cc7eb07ce507e4749b82dcb2a1a7be
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: ed7aada845a81baee642a0f5f1b0b0f76a48dc2d
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="get-information-about-dml-triggers"></a>取得關於 DML 觸發程序的詳細資訊
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
-本主題描述如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 取得有關 [!INCLUDE[tsql](../../includes/tsql-md.md)]中 DML 觸發程序的資訊。 這項資訊可能包括資料表上觸發程序的類型、觸發程序的名稱、其擁有者，以及建立或修改的日期。 如果觸發程序建立時並未加密，則您會取得觸發程序的定義。 定義可幫助您了解觸發程序如何影響本身定義所在的資料表。 另外，您可以找出特定觸發程序所使用的物件。 有了這項資訊，您就可以識別影響觸發程序的物件 (如果已在資料庫中變更或刪除這些物件)。  
+  本主題描述如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 取得有關 [!INCLUDE[tsql](../../includes/tsql-md.md)]中 DML 觸發程序的資訊。 這項資訊可能包括資料表上觸發程序的類型、觸發程序的名稱、其擁有者，以及建立或修改的日期。 如果觸發程序建立時並未加密，則您會取得觸發程序的定義。 定義可幫助您了解觸發程序如何影響本身定義所在的資料表。 另外，您可以找出特定觸發程序所使用的物件。 有了這項資訊，您就可以識別影響觸發程序的物件 (如果已在資料庫中變更或刪除這些物件)。  
   
  **本主題內容**  
   
@@ -65,7 +64,7 @@ ms.lasthandoff: 02/09/2018
   
 #### <a name="to-view-the-definition-of-a-dml-trigger"></a>若要檢視 DML 觸發程序的定義  
   
-1.  在 **[物件總管]**中，連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的執行個體，然後展開該執行個體。  
+1.  在 **[物件總管]** 中，連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的執行個體，然後展開該執行個體。  
   
 2.  展開您要的資料庫，展開 **[資料表]**，然後展開包含您要檢視其定義之觸發程序的資料表。  
   
@@ -73,7 +72,7 @@ ms.lasthandoff: 02/09/2018
   
 #### <a name="to-view-the-dependencies-of-a-dml-trigger"></a>若要檢視 DML 觸發程序的相依性  
   
-1.  在 **[物件總管]**中，連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的執行個體，然後展開該執行個體。  
+1.  在 **[物件總管]** 中，連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的執行個體，然後展開該執行個體。  
   
 2.  展開您要的資料庫，展開 **[資料表]**，然後展開包含您要檢視的觸發程序及其相依性的資料表。  
   
@@ -83,7 +82,7 @@ ms.lasthandoff: 02/09/2018
   
      若要檢視 DML 所相依的物件，請選取 [\<DML 觸發程序名稱> 所相依的物件]。 物件會出現在 **[相依性]** 區域中。 展開每個節點，查看所有物件。  
   
-5.  若要取得出現在 **[相依性]** 區域中之物件的相關資訊，請按一下該物件。 **[選取的物件]** 欄位的 **[名稱]**、 **[類型]**和 **[相依性類型]** 方塊中會提供資訊。  
+5.  若要取得出現在 **[相依性]** 區域中之物件的相關資訊，請按一下該物件。 **[選取的物件]** 欄位的 **[名稱]**、 **[類型]** 和 **[相依性類型]** 方塊中會提供資訊。  
   
 6.  若要關閉 **[物件相依性]** 視窗，請按一下 **[確定]**。  
   

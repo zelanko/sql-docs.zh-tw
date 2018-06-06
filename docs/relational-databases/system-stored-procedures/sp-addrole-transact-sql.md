@@ -1,16 +1,14 @@
 ---
-title: "sp_addrole (TRANSACT-SQL) |Microsoft 文件"
-ms.custom: 
+title: sp_addrole (TRANSACT-SQL) |Microsoft 文件
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: system-objects
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_addrole
@@ -20,16 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_addrole
 ms.assetid: e8a21642-8440-419a-8585-93d3d9d44f00
-caps.latest.revision: 
+caps.latest.revision: 33
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 070e1d0e71b49689e547dc29300bf5a5476d17ec
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 01a51141bc5e28c09879667dee69721f6e5d4473
+ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="spaddrole-transact-sql"></a>sp_addrole (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -61,7 +58,7 @@ sp_addrole [ @rolename = ] 'role' [ , [ @ownername = ] 'owner' ]
 ## <a name="remarks"></a>備註  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫角色的名稱，可以包含 1 到 128 個字元，其中包括字母、符號和數字。 資料庫角色的名稱不能： 包含反斜線字元 (\\)，是 NULL，則為空字串 (**'**)。  
   
- 加入資料庫角色之後，請使用[sp_addrolemember &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/sp-addrolemember-transact-sql.md)將主體加入至角色。 當您使用 GRANT、DENY 或 REVOKE 陳述式將權限套用至資料庫角色時，資料庫角色的成員會繼承那些權限，如同這些權限是直接套用至其帳戶。  
+ 加入資料庫角色之後，請使用[sp_addrolemember &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-stored-procedures/sp-addrolemember-transact-sql.md)將主體加入至角色。 當您使用 GRANT、DENY 或 REVOKE 陳述式將權限套用至資料庫角色時，資料庫角色的成員會繼承那些權限，如同這些權限是直接套用至其帳戶。  
   
 > [!NOTE]  
 >  無法建立新的伺服器角色。 角色只能在資料庫層級建立。  
@@ -78,9 +75,9 @@ sp_addrole [ @rolename = ] 'role' [ , [ @ownername = ] 'owner' ]
 EXEC sp_addrole 'Managers';  
 ```  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [系統預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
- [安全性預存程序 &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
+ [安全性預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
  [CREATE ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-role-transact-sql.md)  
   
   

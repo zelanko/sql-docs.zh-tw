@@ -1,31 +1,23 @@
 ---
-title: "排程 SSAS 管理工作，與 SQL Server Agent |Microsoft 文件"
-ms.custom: 
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
-ms.assetid: 2d1484b3-51d9-48a0-93d2-0c3e4ed22b87
-caps.latest.revision: 
-author: Minewiskan
+title: 排程 SSAS 管理工作，與 SQL Server Agent |Microsoft 文件
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: ''
+ms.topic: conceptual
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: d8872cadbcbd7da67212fa26417ac66debc5f79c
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: f0a8525196bacff6d0bf75b28a17c154a6eb919a
+ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="schedule-ssas-administrative-tasks-with-sql-server-agent"></a>使用 SQL Server Agent 排程 SSAS 管理工作
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-您可以使用 SQL Server Agent 服務來為 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 管理工作排程，以便按照所需的順序和時間執行工作。 為工作排程可協助您將處理自動化，以便定期或依照可預測的週期執行。 您可以排程管理工作 (例如 Cube 處理) 在商務活動較少的時間執行。 此外，您也可以在 SQL Server Agent 作業內建立作業步驟，決定工作執行的順序。 例如，您可以先處理 Cube，然後再執行 Cube 的備份。  
+  您可以使用 SQL Server Agent 服務來為 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 管理工作排程，以便按照所需的順序和時間執行工作。 為工作排程可協助您將處理自動化，以便定期或依照可預測的週期執行。 您可以排程管理工作 (例如 Cube 處理) 在商務活動較少的時間執行。 此外，您也可以在 SQL Server Agent 作業內建立作業步驟，決定工作執行的順序。 例如，您可以先處理 Cube，然後再執行 Cube 的備份。  
   
  作業步驟可以讓您控制執行的流程。 如果一項作業失敗，您可以設定 SQL Server Agent 繼續執行其餘工作或停止執行。 您也可以設定 SQL Server Agent 傳送有關作業執行成功或失敗的通知。  
   
@@ -47,7 +39,7 @@ ms.lasthandoff: 02/15/2018
   
 1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中，連接到 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]。 開啟資料庫資料夾並尋找維度。 以滑鼠右鍵按一下維度，然後選取 [處理]。  
   
-2.  在 **[處理維度]** 對話方塊中，於 **[物件清單]** 下的 **[處理選項]**資料行中，確認這個資料行的選項是 **[完整處理]**。 如果不是，請在 [處理選項] 底下，按一下選項，然後從下拉式清單中選取 [完整處理]。  
+2.  在 **[處理維度]** 對話方塊中，於 **[物件清單]** 下的 **[處理選項]** 資料行中，確認這個資料行的選項是 **[完整處理]**。 如果不是，請在 [處理選項] 底下，按一下選項，然後從下拉式清單中選取 [完整處理]。  
   
 3.  按一下 **[指令碼]**。  
   
@@ -82,25 +74,25 @@ ms.lasthandoff: 02/15/2018
   
 3.  以滑鼠右鍵按一下 [作業]，然後選取 [新增作業]。  
   
-4.  在 **[新增作業]** 對話方塊的 **[名稱]**方塊中，輸入作業名稱。  
+4.  在 **[新增作業]** 對話方塊的 **[名稱]** 方塊中，輸入作業名稱。  
   
-5.  在 **[選取頁面]**底下，選取 **[步驟]**，然後按一下 **[新增]**。  
+5.  在 **[選取頁面]** 底下，選取 **[步驟]**，然後按一下 **[新增]**。  
   
-6.  在 **[新增作業步驟]** 對話方塊的 **[步驟名稱]**中，輸入步驟名稱。  
+6.  在 **[新增作業步驟]** 對話方塊的 **[步驟名稱]** 中，輸入步驟名稱。  
   
 7.  在 [伺服器] 中，輸入 **localhost** (代表 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 的預設執行個體) 和 **localhost\\**\<執行個體名稱> (代表具名執行個體)。  
   
      如果您要從遠端電腦執行作業，請使用作業執行所在的伺服器名稱和執行個體名稱。 使用格式\<*伺服器名稱*> 預設執行個體，和\<*伺服器名稱*>\\<*執行個體名稱*> 的具名執行個體。  
   
-8.  在 **[類型]**中，選取 **[SQL Server Analysis Services 命令]**。  
+8.  在 **[類型]** 中，選取 **[SQL Server Analysis Services 命令]**。  
   
 9. 在 [命令] 中，按一下滑鼠右鍵，然後選取 [貼上]。 您在上一個步驟中產生的 XMLA 指令碼應該就會出現在命令視窗中。  
   
 10. 按一下 **[確定]**。  
   
-11. 在 **[選取頁面]**底下，按一下 **[排程]**，然後按一下 **[新增]**。  
+11. 在 **[選取頁面]** 底下，按一下 **[排程]**，然後按一下 **[新增]**。  
   
-12. 在 **[新增作業排程]** 對話方塊的 **[名稱]**中，輸入排程名稱，然後按一下 **[確定]**。  
+12. 在 **[新增作業排程]** 對話方塊的 **[名稱]** 中，輸入排程名稱，然後按一下 **[確定]**。  
   
      此步驟會建立星期日上午 12:00 的排程。 下一個步驟將為您示範如何手動執行作業。 您也可以指定在監視時執行作業的排程。  
   
@@ -119,7 +111,7 @@ ms.lasthandoff: 02/15/2018
   
 1.  使用相同的資料庫時，展開 [維度]、以滑鼠右鍵按一下 [客戶] 維度，然後選取 [處理]。  
   
-2.  在 **[處理維度]** 對話方塊中，於 **[物件清單]** 下的 **[處理選項]**資料行中，確認這個資料行的選項是 **[完整處理]**。  
+2.  在 **[處理維度]** 對話方塊中，於 **[物件清單]** 下的 **[處理選項]** 資料行中，確認這個資料行的選項是 **[完整處理]**。  
   
 3.  按一下 **[指令碼]**。  
   
@@ -129,7 +121,7 @@ ms.lasthandoff: 02/15/2018
   
 5.  依序展開 [Cube]、[Adventure Works]、[量值群組]、[網際網路銷售] 和 [資料分割]、以滑鼠右鍵按一下清單中的最後一個資料分割，然後選取 [處理]。  
   
-6.  在 **[處理資料分割]** 對話方塊中，於 **[物件清單]** 下的 **[處理選項]**資料行中，確認這個資料行的選項是 **[完整處理]**。  
+6.  在 **[處理資料分割]** 對話方塊中，於 **[物件清單]** 下的 **[處理選項]** 資料行中，確認這個資料行的選項是 **[完整處理]**。  
   
 7.  按一下 **[指令碼]**。  
   
@@ -198,17 +190,17 @@ ms.lasthandoff: 02/15/2018
   
 3.  以滑鼠右鍵按一下 [作業]，然後選取 [新增作業]。  
   
-4.  在 **[新增作業]** 對話方塊的 **[名稱]**方塊中，輸入作業名稱。  
+4.  在 **[新增作業]** 對話方塊的 **[名稱]** 方塊中，輸入作業名稱。  
   
-5.  在 **[步驟]**中，按一下 **[新增]**。  
+5.  在 **[步驟]** 中，按一下 **[新增]**。  
   
-6.  在 **[新增作業步驟]** 對話方塊的 **[步驟名稱]**中，輸入步驟名稱。  
+6.  在 **[新增作業步驟]** 對話方塊的 **[步驟名稱]** 中，輸入步驟名稱。  
   
-7.  在 **[類型]**中，選取 **[SQL Server Analysis Services 命令]**。  
+7.  在 **[類型]** 中，選取 **[SQL Server Analysis Services 命令]**。  
   
-8.  在 **[執行身分]**中，選取 **[SQL Server Agent 服務帳戶]**。 正如＜必要條件＞一節所述，此帳戶必須擁有 Analysis Services 的系統管理權限。  
+8.  在 **[執行身分]** 中，選取 **[SQL Server Agent 服務帳戶]**。 正如＜必要條件＞一節所述，此帳戶必須擁有 Analysis Services 的系統管理權限。  
   
-9. 在 **[伺服器]**中，指定 Analysis Services 執行個體的伺服器名稱。  
+9. 在 **[伺服器]** 中，指定 Analysis Services 執行個體的伺服器名稱。  
   
 10. 在 [命令] 中，按一下滑鼠右鍵，然後選取 [貼上]。  
   
@@ -216,7 +208,7 @@ ms.lasthandoff: 02/15/2018
   
 12. 在 **[排程]** 頁面中，按一下 **[新增]**。  
   
-13. 在 **[新增作業排程]** 對話方塊的 **[名稱]**中，輸入排程名稱，然後按一下 **[確定]**。  
+13. 在 **[新增作業排程]** 對話方塊的 **[名稱]** 中，輸入排程名稱，然後按一下 **[確定]**。  
   
      此步驟會建立星期日上午 12:00 的排程。 下一個步驟將為您示範如何手動執行作業。 您也可以選取在監視時執行作業的排程。  
   
@@ -229,6 +221,6 @@ ms.lasthandoff: 02/15/2018
 16. 當作業完成時，請按一下 **[關閉]**。  
   
 ## <a name="see-also"></a>另請參閱  
- [處理選項和設定 &#40;Analysis Services &#41;](../../analysis-services/multidimensional-models/processing-options-and-settings-analysis-services.md)   
+ [處理選項和設定&#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/processing-options-and-settings-analysis-services.md)   
   
   

@@ -1,31 +1,30 @@
 ---
-title: "設定專案選項 (MySQLToSQL) |Microsoft 文件"
-ms.prod: sql-non-specified
+title: 設定專案選項 (MySQLToSQL) |Microsoft 文件
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
 ms.component: ssma-mysql
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ssma
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 applies_to:
 - Azure SQL Database
 - SQL Server
-helpviewer_keywords: Setting project options,configuration options
+helpviewer_keywords:
+- Setting project options,configuration options
 ms.assetid: 08820d88-e157-4d49-9401-38580dd7ec2d
-caps.latest.revision: "12"
+caps.latest.revision: 12
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
-ms.workload: Inactive
-ms.openlocfilehash: 3aaec0d6811369af2ab4b5c52591af95fd944b57
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+manager: craigg
+ms.openlocfilehash: dbe36fd3276ae6a5de2f5f41a8694fa9331d75a0
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="setting-project-options-mysqltosql"></a>設定專案選項 (MySQLToSQL)
 每個 SSMA 專案，您可以設定專案層級的選項。 這些選項會指定物件的轉換方式、 如何移轉資料和來源資料類型如何對應至目標資料類型。  您將物件轉換成 SQL Server 或 SQL Azure，或將資料移轉至 SQL Server 或 SQL Azure 之前，請確認組態選項都適用於專案。  
@@ -47,11 +46,11 @@ SSMA 會有五種專案設定：
   
 專案設定可以設定四種方式：  
   
--   預設  
+-   預設值  
   
 -   開放式  
   
--   完整  
+-   [完整]  
   
 -   Custom  
   
@@ -59,17 +58,17 @@ SSMA 會有五種專案設定：
   
 如需詳細的設定，以及如何將設定套用在每個模式的詳細資訊，請參閱下列主題：  
   
--   [專案設定 &#40;轉換 &#41;&#40;MySQLToSQL &#41;](../../ssma/mysql/project-settings-conversion-mysqltosql.md)  
+-   [專案設定&#40;轉換&#41; &#40;MySQLToSQL&#41;](../../ssma/mysql/project-settings-conversion-mysqltosql.md)  
   
--   [專案設定 &#40;移轉 &#41;&#40;MySQLToSQL &#41;](../../ssma/mysql/project-settings-migration-mysqltosql.md)  
+-   [專案設定&#40;移轉&#41; &#40;MySQLToSQL&#41;](../../ssma/mysql/project-settings-migration-mysqltosql.md)  
   
 -   [專案設定 (GUI) （SSMA 一般）](http://msdn.microsoft.com/en-us/cf06baf1-8714-48a3-95dc-781f6ca53693)  
   
--   [專案設定 &#40;型別對應 &#41;&#40;MySQLToSQL &#41;](../../ssma/mysql/project-settings-type-mapping-mysqltosql.md)  
+-   [專案設定&#40;型別對應&#41; &#40;MySQLToSQL&#41;](../../ssma/mysql/project-settings-type-mapping-mysqltosql.md)  
   
--   [專案設定 &#40;同步處理 &#41;&#40;MySQLToSQL &#41;](../../ssma/mysql/project-settings-synchronization-mysqltosql.md)  
+-   [專案設定&#40;同步&#41; &#40;MySQLToSQL&#41;](../../ssma/mysql/project-settings-synchronization-mysqltosql.md)  
   
--   [專案設定 &#40;Azure SQL DB &#41;&#40;MySQLToSQL &#41;](../../ssma/mysql/project-settings-azure-sql-db-mysqltosql.md)  
+-   [專案設定&#40;Azure SQL DB&#41; &#40;MySQLToSQL&#41;](../../ssma/mysql/project-settings-azure-sql-db-mysqltosql.md)  
   
 ## <a name="setting-project-options"></a>設定專案選項  
 SSMA，在您可以設定所有專案的預設設定。 這些設定會儲存 SSMA 組態檔，並套用至您建立任何新的專案。  
@@ -86,7 +85,7 @@ SSMA，在您可以設定所有專案的預設設定。 這些設定會儲存 SS
   
     3.  若要指定自訂設定，請選取或輸入新的設定或值。  
   
-3.  按一下**確定**儲存設定。  
+3.  按一下  **確定** 儲存設定。  
   
 您也可以自訂目前專案的設定。 取得目前的專案檔儲存設定。  
   
@@ -100,15 +99,15 @@ SSMA，在您可以設定所有專案的預設設定。 這些設定會儲存 SS
   
     2.  若要指定自訂的模式，請選取**自訂**從**模式**下拉式清單方塊。 然後選取適當的專案設定。  
   
-3.  按一下**確定**儲存設定。  
+3.  按一下  **確定** 儲存設定。  
   
 ## <a name="next-step"></a>下一個步驟  
 移轉的下一個步驟取決於您專案的需求：  
   
--   若要自訂的來源和目標資料類型對應，請參閱[對應 MySQL 及 SQL Server 資料類型 &#40;MySQLToSQL &#41;](../../ssma/mysql/mapping-mysql-and-sql-server-data-types-mysqltosql.md)  
+-   若要自訂的來源和目標資料類型對應，請參閱[對應 MySQL 及 SQL Server 資料類型&#40;MySQLToSQL&#41;](../../ssma/mysql/mapping-mysql-and-sql-server-data-types-mysqltosql.md)  
   
--   否則，您可以將 MySQL 資料庫物件定義轉換成 SQL Server 或 SQL Azure 物件定義。 如需詳細資訊，請參閱[轉換 MySQL 資料庫 &#40;MySQLToSQL &#41;](../../ssma/mysql/converting-mysql-databases-mysqltosql.md)  
+-   否則，您可以將 MySQL 資料庫物件定義轉換成 SQL Server 或 SQL Azure 物件定義。 如需詳細資訊，請參閱[轉換 MySQL 資料庫&#40;MySQLToSQL&#41;](../../ssma/mysql/converting-mysql-databases-mysqltosql.md)  
   
-## <a name="see-also"></a>請參閱  
-[對應 MySQL 及 SQL Server 資料類型 &#40;MySQLToSQL &#41;](../../ssma/mysql/mapping-mysql-and-sql-server-data-types-mysqltosql.md)  
+## <a name="see-also"></a>另請參閱  
+[MySQL 及 SQL Server 資料類型對應&#40;MySQLToSQL&#41;](../../ssma/mysql/mapping-mysql-and-sql-server-data-types-mysqltosql.md)  
   

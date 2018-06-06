@@ -1,27 +1,21 @@
 ---
-title: "分析平台處理和儲存體容量"
-author: barbkess
-ms.author: barbkess
-manager: jhubbard
-ms.prod: analytics-platform-system
-ms.prod_service: mpp-data-warehouse
-ms.service: 
-ms.component: 
-ms.suite: sql
-ms.custom: 
-ms.technology: mpp-data-warehouse
-description: "您的業務需求決定數目資料擴充單元，以及您需要在您 Analytics Platform System (APS) 的應用裝置中的計算節點磁碟的大小。"
-ms.date: 10/20/2016
-ms.topic: article
-ms.assetid: 2c32fec4-e97c-4797-b7f8-7c8d4301b7b6
-caps.latest.revision: "7"
-ms.openlocfilehash: 9d7f933c45f05d7d4226a2f64fd41eff8d1c914a
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+title: 處理和儲存體容量-Analytics Platform System |Microsoft 文件
+description: 您的業務需求決定數目資料擴充單元，以及您需要在您 Analytics Platform System (APS) 的應用裝置中的計算節點磁碟的大小。
+author: mzaman1
+manager: craigg
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
+ms.openlocfilehash: f552372ac108d219ad410b88ec9911ecaea63ab3
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/19/2018
 ---
-# <a name="analytics-platform-system-processing-and-storage-capacity"></a>分析平台系統的處理和儲存體容量
+# <a name="processing-and-storage-capacity-in-analytics-platform-system"></a>處理和儲存體容量 Analytics Platform System
 您的業務需求決定數目資料擴充單元，以及您需要在您 Analytics Platform System (APS) 的應用裝置中的計算節點磁碟的大小。 您可以使用這些處理和儲存體的計算，引導您購買與規劃決策的容量。  
   
   
@@ -39,7 +33,7 @@ Uplift 為百分比的產能提升的增加資料比例 Uunits 從一個資料�
   
 |資料縮放單位|計算節點|CPU 核心|記憶體 (GB)|Uplift|  
 |--------------------|-----------------|-------------|-----------------|----------|  
-|@shouldalert|2|32|512|-|  
+|1|2|32|512|-|  
 |2|4|64|1024|100%|  
 |3|6|96|1536|50%|  
 |4|8|128|2048|33%|  
@@ -70,7 +64,7 @@ Uplift 為百分比的產能提升的增加資料比例 Uunits 從一個資料�
   
 |資料縮放單位|計算節點|CPU 核心|記憶體 (GB)|Uplift|  
 |--------------------|-----------------|-------------|-----------------|----------|  
-|@shouldalert|3|48|768|-|  
+|1|3|48|768|-|  
 |2|6|96|1536|100%|  
 |3|9|144|2,304|50%|  
 |4|12|192|3,072|33%|  

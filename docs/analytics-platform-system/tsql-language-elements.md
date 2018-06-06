@@ -1,33 +1,22 @@
 ---
-title: "T-SQL 語言項目-Analytics Platform System Parallel Data Warehouse |Microsoft 文件"
-author: barbkess
-ms.author: barbkess
-manager: jhubbard
-ms.prod: analytics-platform-system
-ms.prod_service: mpp-data-warehouse
-ms.service: 
-ms.component: 
-ms.suite: sql
-ms.custom: 
-ms.technology: mpp-data-warehouse
-description: "TRANSACT-SQL (T-SQL) 語言項目為分析平台 System (APS) SQL Server 平行資料倉儲 (PDW)。"
-services: sql-data-warehouse
-documentationcenter: NA
-editor: 
-ms.assetid: ea0b9a3e-e489-458e-addc-cc153e5cc158
-ms.devlang: NA
-ms.topic: article
-ms.tgt_pltfrm: NA
-ms.workload: data-services
-ms.date: 12/15/2016
-ms.openlocfilehash: 35c8de2f1105bbbda05642b993d8fe0c88d76f39
-ms.sourcegitcommit: 6ac1956307d8255dc544e1063922493b30907b80
+title: T-SQL 語言項目-Parallel Data Warehouse |Microsoft 文件
+description: T-SQL 語言項目為分析平台 System (APS) SQL Server 平行資料倉儲 (PDW)。
+author: mzaman1
+manager: craigg
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
+ms.openlocfilehash: d9e2011ef30864e35245f59cab0861ea116d1502
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2018
+ms.lasthandoff: 04/19/2018
 ---
-# <a name="language-elements"></a>語言元素
-TRANSACT-SQL (T-SQL) 語言項目為分析平台 System (APS) SQL Server 平行資料倉儲 (PDW)。
+# <a name="t-sql-language-elements-for-parallel-data-warehouse"></a>平行資料倉儲的 T-SQL 語言項目
+T-SQL 語言項目為分析平台 System (APS) SQL Server 平行資料倉儲 (PDW)。
 
 ## <a name="core-elements"></a>核心項目
 * [語法慣例](../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
@@ -35,7 +24,7 @@ TRANSACT-SQL (T-SQL) 語言項目為分析平台 System (APS) SQL Server 平行�
 * [保留的關鍵字](../t-sql/language-elements/reserved-keywords-transact-sql.md)
 * [定序](https://msdn.microsoft.com/library/ff848763.aspx)
 * [註解](../t-sql/language-elements/comment-transact-sql.md)
-* [constants](../t-sql/data-types/constants-transact-sql.md)
+* [常數](../t-sql/data-types/constants-transact-sql.md)
 * [資料類型](../t-sql/data-types/data-types-transact-sql.md)
 * [EXECUTE](../t-sql/language-elements/execute-transact-sql.md)
 * [expressions](../t-sql/language-elements/expressions-transact-sql.md)
@@ -71,7 +60,7 @@ TRANSACT-SQL (T-SQL) 語言項目為分析平台 System (APS) SQL Server 平行�
 * [> = （大或等於）](../t-sql/language-elements/greater-than-or-equal-to-transact-sql.md)
 * [< = （小於或等於）](../t-sql/language-elements/less-than-or-equal-to-transact-sql.md)
 * [<> （不等於）](../t-sql/language-elements/not-equal-to-transact-sql-traditional.md)
-* [！ = （不等於）](../t-sql/language-elements/not-equal-to-transact-sql-exclamation.md)
+* [\!= （不等於）](../t-sql/language-elements/not-equal-to-transact-sql-exclamation.md)
 * [AND](../t-sql/language-elements/and-transact-sql.md)
 * [BETWEEN](../t-sql/language-elements/between-transact-sql.md)
 * [EXISTS](../t-sql/language-elements/exists-transact-sql.md)
@@ -235,7 +224,7 @@ TRANSACT-SQL (T-SQL) 語言項目為分析平台 System (APS) SQL Server 平行�
 * [XACT_STATE](../t-sql/functions/xact-state-transact-sql.md)
 
 ## <a name="transactions"></a>交易
-* [transactions](../t-sql/language-elements/transactions-sql-data-warehouse.md)
+* [交易](../t-sql/language-elements/transactions-sql-data-warehouse.md)
 
 ## <a name="diagnostic-sessions"></a>診斷工作階段
 * [CREATE DIAGNOSTICS SESSION](../t-sql/language-elements/create-diagnostics-session-transact-sql.md)

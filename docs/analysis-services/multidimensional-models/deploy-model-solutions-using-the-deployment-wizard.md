@@ -1,38 +1,29 @@
 ---
-title: "使用部署精靈部署模型方案 |Microsoft 文件"
-ms.custom: 
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
-helpviewer_keywords:
-- Analysis Services Deployment Wizard
-- deploying [Analysis Services], Analysis Services Deployment Wizard
-- Analysis Services deployments, Analysis Services Deployment Wizard
-- Analysis Services Deployment Wizard, about Analysis Services Deployment Wizard
-ms.assetid: ff711e8e-971c-43ba-b479-effc034af4a4
-caps.latest.revision: 
-author: Minewiskan
+title: 使用部署精靈部署模型方案 |Microsoft 文件
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: multidimensional-models
+ms.topic: conceptual
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: afcaef54af0b0bd100aba138c8372f04494a1880
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: cde312f2bfad67c6cfe61a9b8379973c1f59a56c
+ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="deploy-model-solutions-using-the-deployment-wizard"></a>Deploy Model Solutions Using the Deployment Wizard
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]部署精靈 」 會使用產生的 JSON 輸出檔[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]專案做為輸入檔。 這些輸入檔很容易進行修改，以自訂 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 專案的部署。 產生的部署指令碼可以立即執行，或儲存供稍後進行部署使用。  
+[!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
+
+  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]部署精靈 」 會使用產生的 JSON 輸出檔[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]專案做為輸入檔。 這些輸入檔很容易進行修改，以自訂 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 專案的部署。 產生的部署指令碼可以立即執行，或儲存供稍後進行部署使用。  
+
+> [!NOTE]
+> [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]部署精靈公用程式會隨[SQL Server 管理 Studio](../../ssms/download-sql-server-management-studio-ssms.md) (SSMS)。 請確定您使用最新版本。 如果執行的命令提示字元中，依預設，「 部署精靈 」 的最新版本已安裝至 C:\Program Files (x86) \Microsoft SQL Server\140\Tools\Binn\ManagementStudio。 
   
- 您可以使用此處討論的精靈來進行部署， 也可以自動化部署或使用同步處理功能。 如果部署的資料庫很龐大，請考慮在目標系統上使用資料分割。 您也可以使用分析管理物件 (AMO)，自動化資料分割的建立與擴展。  
+ 您可以使用此處討論的精靈來進行部署， 也可以自動化部署或使用同步處理功能。 如果部署的資料庫很龐大，請考慮在目標系統上使用資料分割。 您可以使用表格式物件模型 (TOM)、 表格式模型 Scriting 語言 (TMSL) 和分析管理物件 (AMO) 自動化資料分割的建立與擴展。  
   
 > [!IMPORTANT]  
 >  輸出檔或部署指令碼都不會包含使用者識別碼或密碼如果這些都是連接字串中指定針對資料來源或模擬用途。 由於在這種狀況下需要使用這些資訊進行處理，所以您將手動加入這些資訊。 如果部署不包含處理，您就可以在部署之後視需要加入此連接和模擬資訊。 如果部署包含處理，您可以在儲存之後於精靈內部或在部署指令碼中加入這項資訊。  

@@ -1,32 +1,29 @@
 ---
-title: "處理 |Microsoft 文件"
-ms.custom: 
+title: 處理 |Microsoft 文件
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
-ms.component: odbc
-ms.reviewer: 
+ms.prod: sql
+ms.prod_service: connectivity
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: connectivity
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - handles [ODBC]
 - driver handles [ODBC]
 - driver manager [ODBC], handles
 - handles [ODBC], about handles
 ms.assetid: f663101e-a4cc-402b-b9d7-84d5e975be71
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
-ms.workload: Inactive
-ms.openlocfilehash: 1c1198607b5a664b14fe6da31c9ebdc4f82bdb8e
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+manager: craigg
+ms.openlocfilehash: 830c4b653af74097c59c9aff9e073267792a84b7
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="handles"></a>處理
 控制代碼是不透明，32 位元值，識別特定的項目。在 ODBC 中，這個項目可以是環境、 連接、 陳述式或描述元。 當應用程式呼叫**SQLAllocHandle**、 驅動程式管理員或驅動程式會建立指定類型的新項目和其控制代碼傳回至應用程式。 更新版本的應用程式會使用控制代碼，以便識別該項目時呼叫 ODBC 函數。 驅動程式與驅動程式管理員使用控點來尋找相關項目資訊。  

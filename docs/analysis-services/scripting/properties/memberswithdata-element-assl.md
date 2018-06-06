@@ -1,36 +1,23 @@
 ---
-title: "MembersWithData 元素 (ASSL) |Microsoft 文件"
-ms.custom: 
-ms.date: 03/06/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+title: MembersWithData 元素 (ASSL) |Microsoft 文件
+ms.date: 5/8/2018
+ms.prod: sql
+ms.custom: assl
+ms.reviewer: owend
+ms.technology: analysis-services
 ms.topic: reference
-apiname: MembersWithData Element
-apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
-apitype: Schema
-applies_to: SQL Server 2016 Preview
-f1_keywords: MembersWithData
-helpviewer_keywords: MembersWithData element
-ms.assetid: 845087a2-b12d-4344-a8be-85ca61155296
-caps.latest.revision: "33"
-author: Minewiskan
+author: minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 6021c376319135614c6938ee522acf0151c72989
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: a8e777d22a6e87fa111f5c3fead76b0ed24b854e
+ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="memberswithdata-element-assl"></a>MembersWithData 元素 (ASSL)
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]決定是否要顯示在父屬性中的非分葉成員的資料成員。  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+  決定是否要在父屬性中顯示非分葉成員的資料成員。  
   
 ## <a name="syntax"></a>語法  
   
@@ -45,7 +32,7 @@ ms.lasthandoff: 01/08/2018
   
 ## <a name="element-characteristics"></a>元素特性  
   
-|特性|描述|  
+|特性|說明|  
 |--------------------|-----------------|  
 |資料類型和長度|字串 (列舉)|  
 |預設值|*NonLeafDataVisible*|  
@@ -63,16 +50,16 @@ ms.lasthandoff: 01/08/2018
   
  這個元素的值限制為下表所列的其中一個字串。  
   
-|ReplTest1|描述|  
+|值|Description|  
 |-----------|-----------------|  
 |*NonLeafDataHidden*|隱藏非分葉資料。|  
 |*NonLeafDataVisible*|顯示非分頁資料。|  
   
  列舉型別對應至允許的值**MembersWithData**在 「 分析管理物件 (AMO) 物件模型而言， <xref:Microsoft.AnalysisServices.MembersWithData>。  
   
-## <a name="see-also"></a>請參閱  
- [MembersWithDataCaption 元素 &#40;ASSL &#41;](../../../analysis-services/scripting/properties/memberswithdatacaption-element-assl.md)   
- [DimensionAttribute 資料類型 &#40;ASSL &#41;](../../../analysis-services/scripting/data-type/dimensionattribute-data-type-assl.md)   
- [屬性 &#40;ASSL &#41;](../../../analysis-services/scripting/properties/properties-assl.md)  
+## <a name="see-also"></a>另請參閱  
+ [MembersWithDataCaption 元素&#40;ASSL&#41;](../../../analysis-services/scripting/properties/memberswithdatacaption-element-assl.md)   
+ [DimensionAttribute 資料類型&#40;ASSL&#41;](../../../analysis-services/scripting/data-type/dimensionattribute-data-type-assl.md)   
+ [屬性 & #40;ASSL & #41;](../../../analysis-services/scripting/properties/properties-assl.md)  
   
   

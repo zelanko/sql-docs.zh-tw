@@ -1,16 +1,14 @@
 ---
-title: "sp_update_jobstep (TRANSACT-SQL) |Microsoft 文件"
-ms.custom: 
+title: sp_update_jobstep (TRANSACT-SQL) |Microsoft 文件
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: system-objects
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_update_jobstep
@@ -20,16 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_update_jobstep
 ms.assetid: e158802c-c347-4a5d-bf75-c03e5ae56e6b
-caps.latest.revision: 
+caps.latest.revision: 33
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: c81c22e3fb6de374b378df4ef52b316efe65fdb6
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 67986dbdbace492fc2fb82bcb94e6cc32a05616a
+ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="spupdatejobstep-transact-sql"></a>sp_update_jobstep (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -83,7 +80,7 @@ sp_update_jobstep
  [ **@subsystem =**] **'***subsystem***'**  
  用來執行 Microsoft SQL Server Agent 的子系統*命令*。 *子系統*是**nvarchar （40)**，預設值是 NULL。  
   
- [ **@command =**] **'***command***'**  
+ [  **@command =**] **'***命令***'**  
  若要透過執行命令*子系統*。 *命令*是**nvarchar （max)**，預設值是 NULL。  
   
  [ **@additional_parameters =**] **'***parameters***'**  
@@ -139,7 +136,7 @@ sp_update_jobstep
  [ **@output_file_name =**] **'***file_name***'**  
  儲存此步驟之輸出的檔案名稱。 *file_name*是**nvarchar(200)**，預設值是 NULL。 這個參數只對在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 或 CmdExec 子系統中執行的命令有效。  
   
- 若要將 output_file_name 設為 NULL，您必須設定*output_file_name*為空字串 (' ') 或字串中的空白字元，但您無法使用**CHAR(32)**函式。 例如，依照下列方式，將這個引數設為空字串：  
+ 若要將 output_file_name 設為 NULL，您必須設定*output_file_name*為空字串 (' ') 或字串中的空白字元，但您無法使用**CHAR(32)** 函式。 例如，依照下列方式，將這個引數設為空字串：  
   
  **@output_file_name = ' '**  
   
@@ -199,8 +196,8 @@ GO
   
 ## <a name="see-also"></a>另請參閱  
  [檢視或修改作業](http://msdn.microsoft.com/library/57f649b8-190c-4304-abd7-7ca5297deab7)   
- [sp_delete_jobstep &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-jobstep-transact-sql.md)   
- [sp_help_jobstep &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-jobstep-transact-sql.md)   
+ [sp_delete_jobstep &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-jobstep-transact-sql.md)   
+ [sp_help_jobstep &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-jobstep-transact-sql.md)   
  [系統預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

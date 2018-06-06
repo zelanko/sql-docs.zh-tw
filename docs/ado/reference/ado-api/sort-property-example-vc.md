@@ -1,32 +1,29 @@
 ---
-title: "排序屬性範例 （VC + +） |Microsoft 文件"
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
+title: 排序屬性範例 （VC + +） |Microsoft 文件
+ms.prod: sql
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
-ms.custom: 
+ms.technology: connectivity
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - Sort property [ADO], VC++ example
 ms.assetid: 58199284-747b-4312-b97f-797ee7bd4435
-caps.latest.revision: 
+caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: a62d88aedb5e3f99af7beb6e9e6b74dbce3becfc
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 10ce301591aaa8c921fb7eabfa153e2e83207ea4
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sort-property-example-vc"></a>排序屬性範例 （VC + +）
 這個範例會使用[資料錄集](../../../ado/reference/ado-api/recordset-object-ado.md)物件的[排序](../../../ado/reference/ado-api/sort-property.md)屬性，以重新排序的資料列**資料錄集**衍生自***作者***資料表**Pubs**資料庫。 次要的公用程式常式會列印每個資料列。  

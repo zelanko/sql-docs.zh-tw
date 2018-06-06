@@ -1,16 +1,15 @@
 ---
-title: "MSmerge_contents (TRANSACT-SQL) |Microsoft 文件"
-ms.custom: 
+title: MSmerge_contents (TRANSACT-SQL) |Microsoft 文件
+ms.custom: ''
 ms.date: 03/04/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
 ms.component: system-tables
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -22,16 +21,15 @@ dev_langs:
 helpviewer_keywords:
 - MSmerge_contents system table
 ms.assetid: 8d68a61a-683f-4b20-92f9-c0a8d9ba0ad1
-caps.latest.revision: 
+caps.latest.revision: 19
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 14f004eea5240962740a544756301de6895a8bf8
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: ad83b251629b87a85da723a0d7db2875c8c45462
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="msmergecontents-transact-sql"></a>MSmerge_contents (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -51,8 +49,8 @@ ms.lasthandoff: 11/21/2017
 |**logical_record_lineage**|**varbinary(501)**|用來維護邏輯記錄中最上層父資料列之變更記錄的訂閱者暱稱、版本號碼組。 邏輯記錄中所有子資料列的這個值都是 NULL。|  
 |**logical_relation_change_gen**|**bigint**|造成在邏輯記錄中重新對齊的最後一項變更之相關聯層代 (Generation) 值，現有的資料列會移入或移出邏輯記錄。|  
   
-## <a name="see-also"></a>請參閱＜  
- [複寫資料表 &#40;TRANSACT-SQL &#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
+## <a name="see-also"></a>另請參閱  
+ [複寫資料表&#40;Transact SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [複寫檢視 &#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  
   
   

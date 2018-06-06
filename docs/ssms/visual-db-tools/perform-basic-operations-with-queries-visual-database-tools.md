@@ -1,33 +1,32 @@
 ---
-title: "執行查詢的基本作業 (Visual Database Tools) | Microsoft Docs"
-ms.custom: 
+title: 執行查詢的基本作業 (Visual Database Tools) | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
 ms.component: ssms-visual-db
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: tools-ssms
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ssms
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - queries [Visual Database Tools]
 - Visual Database Tools [SQL Server], queries
 ms.assetid: 88dbdbfe-bc60-4e11-b338-dbe7f26566d5
-caps.latest.revision: "4"
+caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: e61d1ac966ed5c5829e6c03c463fc5fa4b1e38bf
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.openlocfilehash: 28814c1df05e6e5c90c546cdc053bc938f77abe6
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="perform-basic-operations-with-queries-visual-database-tools"></a>執行查詢的基本作業 (Visual Database Tools)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 下列的基本操作適用於大部分或所有的查詢。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+下列的基本操作適用於大部份或所有的查詢。  
   
 ## <a name="in-this-section"></a>本節內容  
 [建立查詢 &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/create-queries-visual-database-tools.md)  

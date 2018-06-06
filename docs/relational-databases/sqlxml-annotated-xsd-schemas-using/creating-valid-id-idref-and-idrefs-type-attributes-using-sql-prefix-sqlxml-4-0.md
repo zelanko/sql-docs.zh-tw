@@ -1,16 +1,14 @@
 ---
-title: "建立有效識別碼-IDREF-IDREFS 類型屬性-sql: prefix (SQLXML 4.0) |Microsoft 文件"
-ms.custom: 
+title: '建立有效識別碼-IDREF-IDREFS 類型屬性-sql: prefix (SQLXML 4.0) |Microsoft 文件'
+ms.custom: ''
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
 ms.component: sqlxml
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- dbe-xml
-ms.tgt_pltfrm: 
+ms.technology: xml
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - IDREFS relationships [SQLXML]
@@ -25,20 +23,20 @@ helpviewer_keywords:
 - annotated XSD schemas, IDREF type attribute
 - ID relationships [SQLXML]
 ms.assetid: 1c7f77d3-81f3-4820-bb63-c4aaa4ea9aa1
-caps.latest.revision: 
+caps.latest.revision: 28
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: d83afe7280ff784389f52e536b12f4c2955b5607
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 891182053b28673b8a7a16c484b591f4924f3842
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="creating-valid-id-idref-and-idrefs-type-attributes-using-sqlprefix-sqlxml-40"></a>使用 sql:prefix 建立 Valid ID、IDREF 和 IDREFS 類型屬性 (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-屬性可以指定為識別碼類型屬性。 然後可以使用指定為 IDREF 或 IDREFS 的屬性來參考 ID 類型屬性，啟用文件之間的連結。  
+  屬性可以指定為識別碼類型屬性。 然後可以使用指定為 IDREF 或 IDREFS 的屬性來參考 ID 類型屬性，啟用文件之間的連結。  
   
  ID、IDREF 和 IDREFS 會對應至 PK/FK (主索引鍵/外部索引鍵) 在資料庫中的關聯性，但是有一些差異。 在 XML 文件中，ID 類型屬性的值必須是相異的。 如果**CustomerID**和**OrderID**屬性會指定為 ID 類型 XML 文件，這些值必須相異。 然而在資料庫中，CustomerID 和 OrderID 資料行的值可以相同  (例如，CustomerID = 1 且 OrderID = 1 在資料庫中是有效的)。  
   
@@ -60,9 +58,9 @@ ms.lasthandoff: 02/12/2018
  若要使用下列範例建立工作範例，您必須符合某些需求。 如需詳細資訊，請參閱[執行 SQLXML 範例的需求](../../relational-databases/sqlxml/requirements-for-running-sqlxml-examples.md)。  
   
 ### <a name="a-specifying-id-and-idrefs-types"></a>A. 指定 ID 和 IDREFS 類型  
- 下列的結構描述， **\<客戶 >**元素組成**\<順序 >**子項目。 **\<順序 >**項目也具有子元素，  **\<OrderDetail >**項目。  
+ 下列的結構描述， **\<客戶 >** 元素組成**\<順序 >** 子項目。 **\<順序 >** 項目也具有子元素，  **\<OrderDetail >** 項目。  
   
- **OrderIDList**屬性**\<客戶 >**是 IDREFS 類型屬性，它是指**OrderID**屬性 **\<順序 >**項目。  
+ **OrderIDList**屬性**\<客戶 >** 是 IDREFS 類型屬性，它是指**OrderID**屬性 **\<順序 >** 項目。  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  

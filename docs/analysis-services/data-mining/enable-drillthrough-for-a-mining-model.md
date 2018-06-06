@@ -1,34 +1,23 @@
 ---
-title: "針對採礦模型啟用鑽研 |Microsoft 文件"
-ms.custom: 
-ms.date: 03/06/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
-helpviewer_keywords:
-- data mining [Analysis Services], how-to topics
-- drillthrough [Analysis Services]
-ms.assetid: 4fa44f60-ef9a-4b59-98c0-c0baf1195c8e
-caps.latest.revision: 
-author: Minewiskan
+title: 針對採礦模型啟用鑽研 |Microsoft 文件
+ms.date: 05/08/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: data-mining
+ms.topic: conceptual
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 81778c4f9b2602c8fa49d5b33f8e1725c05122b7
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: a928e8d49c815ad087b5baf19f9f85c7888c75dd
+ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="enable-drillthrough-for-a-mining-model"></a>針對採礦模型啟用鑽研
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-如果您已經啟用採礦模型的鑽研，當您瀏覽此模型時，可以擷取有關用來建立模型之案例的詳細資訊。 若要檢視這項資訊，您必須擁有必要的權限，而且結構必須已經經過處理。  
+  如果您已經啟用採礦模型的鑽研，當您瀏覽此模型時，可以擷取有關用來建立模型之案例的詳細資訊。 若要檢視這項資訊，您必須擁有必要的權限，而且結構必須已經經過處理。  
   
  **權限** ：若要讓使用者鑽研模型資料或結構資料，該使用者必須是針對採礦模型或採礦結構擁有 [AllowDrillThrough](../../analysis-services/scripting/properties/allowdrillthrough-element-assl.md) 權限之角色的成員。 鑽研權限是在結構和模型上分別設定的。  
   
@@ -62,6 +51,6 @@ ms.lasthandoff: 02/15/2018
 4.  在 [資料庫] 功能表中，選取 [處理]。  
   
 ## <a name="see-also"></a>另請參閱  
- [鑽研查詢 &#40; 資料採礦 &#41;](../../analysis-services/data-mining/drillthrough-queries-data-mining.md)  
+ [鑽研查詢 & #40; 資料採礦 & #41;](../../analysis-services/data-mining/drillthrough-queries-data-mining.md)  
   
   

@@ -1,16 +1,15 @@
 ---
-title: "角色與權限 (Reporting Services) | Microsoft Docs"
-ms.custom: 
+title: 角色與權限 (Reporting Services) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: security
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - access controls [Reporting Services]
 - permissions [Reporting Services], about permissions
@@ -20,16 +19,15 @@ helpviewer_keywords:
 - security [Reporting Services], role-based
 - identity [Reporting Services]
 ms.assetid: eea655fe-43ed-418d-8233-b288a8f4daa4
-caps.latest.revision: "18"
+caps.latest.revision: 18
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 169cc23cc10ab031b26d3e6853e8e0a4b983f588
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 9315c11b3208353244fc6f7ddc0c234c175be20f
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="roles-and-permissions-reporting-services"></a>角色與權限 (Reporting Services)
   Reporting Services 會提供驗證子系統和以角色為基礎的授權模型。 驗證和授權模型會因報表伺服器是以原生模式或 SharePoint 模式執行而不同。 如果報表伺服器屬於 SharePoint 部署的一部分，SharePoint 權限將決定擁有報表伺服器存取權的人員。  

@@ -1,16 +1,14 @@
 ---
 title: CHAR (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 07/24/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
 ms.component: t-sql|functions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: t-sql
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - char_TSQL
@@ -29,21 +27,21 @@ helpviewer_keywords:
 - line feed
 - printing ASCII values
 ms.assetid: 955afe94-539c-465d-af22-16ec45da432a
-caps.latest.revision: 
+caps.latest.revision: 39
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Active
-ms.openlocfilehash: 5dd3a4f8b6fd308560ddcf2db3c6940625dc6ee3
-ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 7aad9053901e9278aaac15affa694ffccdc832bb
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="char-transact-sql"></a>CHAR (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-將 **int** ASCII 碼轉換成字元。
+此函式會將 **int** ASCII 代碼轉換成字元值。
   
 ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -55,13 +53,13 @@ CHAR ( integer_expression )
   
 ## <a name="arguments"></a>引數  
 *integer_expression*  
-這是介於 0 到 255 之間的整數。 如果整數運算式不在這個範圍內，則傳回 `NULL`。
+0 到 255 之間的整數。 `CHAR` 傳回超出此範圍之整數運算式的 `NULL` 值。
   
 ## <a name="return-types"></a>傳回類型
 **char(1)**
   
 ## <a name="remarks"></a>Remarks  
-`CHAR` 可用來將控制字元插入字元字串。 下表顯示一些常用的控制字元。
+使用 `CHAR` 將控制字元插入字元字串。 此表顯示一些常用的控制字元。
   
 |控制字元|ReplTest1|  
 |---|---|
@@ -72,7 +70,7 @@ CHAR ( integer_expression )
 ## <a name="examples"></a>範例  
   
 ### <a name="a-using-ascii-and-char-to-print-ascii-values-from-a-string"></a>A. 利用 ASCII 和 CHAR 來列印字串中的 ASCII 值  
-下列範例會針對 `New Moon` 字串中的每個字元來列印 ASCII 值和字元。
+此範例會列印 `New Moon` 字串中每個字元的 ASCII 值和字元。
   
 ```sql
 SET TEXTSIZE 0;  
@@ -113,7 +111,7 @@ GO
 ```
   
 ### <a name="b-using-char-to-insert-a-control-character"></a>B. 利用 CHAR 來插入控制字元  
-下列範例在傳回文字結果時，利用 `CHAR(13)` 於個別行中列印員工的名稱和電子郵件地址。 這個範例會使用 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 資料庫。
+此範例在查詢將其結果傳回為文字時，使用 `CHAR(13)` 於個別行中列印員工的名稱和電子郵件地址。 這個範例會使用 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 資料庫。
   
 ```sql
 SELECT p.FirstName + ' ' + p.LastName, + CHAR(13)  + pe.EmailAddress   
@@ -135,7 +133,7 @@ ken0@adventure-works.com
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>範例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="c-using-ascii-and-char-to-print-ascii-values-from-a-string"></a>C. 利用 ASCII 和 CHAR 來列印字串中的 ASCII 值  
-下列範例假設 ASCII 字元集，且會傳回 6 個 ASCII 字元數的字元值。
+此範例採用 ASCII 字元集。 它會傳回六個不同 ASCII 字元數字值的字元值。
   
 ```sql
 SELECT CHAR(65) AS [65], CHAR(66) AS [66],   
@@ -152,7 +150,7 @@ A    B    a    b    1    2
 ```
   
 ### <a name="d-using-char-to-insert-a-control-character"></a>D. 利用 CHAR 來插入控制字元  
-下列範例在會傳回文字結果時，使用 `CHAR(13)`，在個別行中傳回有關資料庫的資訊。
+此範例在查詢將其結果傳回為文字時，使用 `CHAR(13)` 於個別行中傳回 sys.databases 的資訊。
   
 ```sql
 SELECT name, 'was created on ', create_date, CHAR(13), name, 'is currently ', state_desc   

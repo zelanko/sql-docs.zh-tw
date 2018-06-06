@@ -1,39 +1,24 @@
 ---
-title: "Restrictions 元素 (XMLA) |Microsoft 文件"
-ms.custom: 
-ms.date: 03/04/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services, azure-analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+title: Restrictions 元素 (XMLA) |Microsoft 文件
+ms.date: 05/08/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: xmla
 ms.topic: reference
-apiname: Restrictions Element
-apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
-apitype: Schema
-applies_to: SQL Server 2016 Preview
-f1_keywords:
-- urn:schemas-microsoft-com:xml-analysis#Restrictions
-- http://schemas.microsoft.com/analysisservices/2003/engine#Restrictions
-- microsoft.xml.analysis.restrictions
-helpviewer_keywords: Restrictions element
-ms.assetid: e745ce13-b468-4372-a6f0-0da3d772dda3
-caps.latest.revision: "11"
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 704906a3b42557feace9c75ce5f2702be553ff08
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 902f3086b28d17b11d1c1c44b130e2dcf224eb30
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34578740"
 ---
 # <a name="restrictions-element-xmla"></a>Restrictions 元素 (XMLA)
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]限制資料行和使用的資料包含[探索](../../../analysis-services/xmla/xml-elements-methods-discover.md)方法。  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
+  限制資料行和使用的資料包含[探索](../../../analysis-services/xmla/xml-elements-methods-discover.md)方法。  
   
 ## <a name="syntax"></a>語法  
   
@@ -80,7 +65,7 @@ ms.lasthandoff: 01/08/2018
 </Discover>  
 ```  
   
-## <a name="see-also"></a>請參閱  
- [屬性 &#40;XMLA &#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
+## <a name="see-also"></a>另請參閱
+ [屬性&#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
   
   

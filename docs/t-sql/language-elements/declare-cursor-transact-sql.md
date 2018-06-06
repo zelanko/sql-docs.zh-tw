@@ -1,16 +1,14 @@
 ---
 title: DECLARE CURSOR (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
 ms.component: t-sql|language-elements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: t-sql
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - DECLARE_CURSOR_TSQL
@@ -27,16 +25,15 @@ helpviewer_keywords:
 - Transact-SQL cursors, attributes
 - global cursors [SQL Server]
 ms.assetid: 5a3a27aa-03e8-4c98-a27e-809282379b21
-caps.latest.revision: 
+caps.latest.revision: 51
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: Active
-ms.openlocfilehash: 79bf3115ef4e1d929e3e4a1b3ff731a1977ba28e
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 42e3ae8b426b7230cf8cfee4be68838792d30318
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="declare-cursor-transact-sql"></a>DECLARE CURSOR (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -93,7 +90,7 @@ DECLARE cursor_name CURSOR [ LOCAL | GLOBAL ]
  指定已建立資料指標的批次、預存程序或觸發程序，其資料指標的範圍為本機範圍。 資料指標名稱只在這個範圍內有效。 批次、預存程序或觸發程序內的區域資料指標變數或是預存程序 OUTPUT 參數可以參考資料指標。 OUTPUT 參數用來將本機資料指標傳回呼叫的批次、預存程序或觸發程序，而可將參數指派到資料指標變數，以便在預存程序中止後參考資料指標。 當批次、預存程序或觸發程序結束時，除非在 OUTPUT 參數中傳回資料指標，否則，會隱含地取消配置資料指標。 如果在 OUTPUT 參數中傳回資料指標，當最後一個參考資料指標的變數取消配置或離開範圍時，便會取消配置資料指標。  
   
  GLOBAL  
- 指定連線的資料指標範圍為全域。 連線所執行的任何預存程序或批次內都可以參考資料指標名稱。 只有在中斷連線時，才會隱含地取消配置資料指標。  
+ 指定連接的資料指標範圍為全域。 連接所執行的任何預存程序或批次內都可以參考資料指標名稱。 只有在中斷連接時，才會隱含地取消配置資料指標。  
   
 > [!NOTE]  
 >  若未指定 GLOBAL 或 LOCAL，預設值是由 **default to local cursor** 資料庫選項的設定所控制。  
@@ -110,7 +107,7 @@ DECLARE cursor_name CURSOR [ LOCAL | GLOBAL ]
 > [!NOTE]  
 >  如果查詢所參考的資料表中至少有一個沒有唯一的索引鍵，則索引鍵集資料指標會轉換為靜態資料指標。  
   
- 當資料指標擁有者捲動資料指標時，基底資料表中非索引鍵的變更，不論是資料指標擁有者所進行的變更，或其他使用者所認可的變更，都是可見的。 其他使用者的插入便不可見 (無法利用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 伺服器資料指標來插入)。 如果刪除某個資料列，嘗試擷取此資料列會傳回值為 -2 的 @@FETCH_STATUS。 從資料指標之外更新索引鍵值，類似於先刪除舊資料列，再插入新資料列。 含有新值的資料列不可見，且嘗試擷取含舊值的資料列傳回值為 -2 的 @@FETCH_STATUS。 如果更新是藉由指定 WHERE CURRENT OF 子句透過資料指標完成，便可看到新值。  
+ 當資料指標擁有者捲動資料指標時，基底資料表中非索引鍵的變更，不論是資料指標擁有者所進行的變更，或其他使用者所認可的變更，都是可見的。 其他使用者的插入便不可見 (無法利用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 伺服器資料指標來插入)。 如果刪除某個資料列，嘗試擷取該資料列的動作會傳回值為 -2 的 @@FETCH_STATUS。 從資料指標之外更新索引鍵值，類似於先刪除舊資料列，再插入新資料列。 含有新值的資料列不可見，且嘗試擷取含舊值的資料列傳回值為 -2 的 @@FETCH_STATUS。 如果更新是藉由指定 WHERE CURRENT OF 子句透過資料指標完成，便可看到新值。  
   
  DYNAMIC  
  定義在您捲動資料指標時，資料指標能夠反映結果集資料列的所有資料變更。 每次提取時，資料列的資料值、順序和成員資格都有可能改變。 動態資料指標不支援 ABSOLUTE 提取選項。  
@@ -142,9 +139,9 @@ DECLARE cursor_name CURSOR [ LOCAL | GLOBAL ]
  如果 *select_statement* 中的子句與所要求資料指標類型的功能相衝突，則 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會隱含地將資料指標轉換為其他類型。 如需詳細資訊，請參閱＜隱含資料指標轉換＞。  
   
  FOR UPDATE [OF *column_name* [**,**...*n*]]  
- 在資料指標內定義可更新的資料行。 如果提供了 OF *column_name* [**,**...*n*]，只有所列出的資料行才允許修改。 若指定 UPDATE 時未加上資料行清單，除非指定 READ_ONLY 這個並行選項，否則所有資料行皆可更新。  
+ 在資料指標內定義可更新的資料行。 如果提供 OF *column_name* [**,**...*n*]，則只允許修改所列出的資料行。 若指定 UPDATE 時未加上資料行清單，除非指定 READ_ONLY 這個並行選項，否則所有資料行皆可更新。  
   
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>Remarks  
  DECLARE CURSOR 定義 [!INCLUDE[tsql](../../includes/tsql-md.md)] 伺服器資料指標的屬性，例如資料指標運作時的捲動行為以及用來建立結果集的查詢。 OPEN 陳述式可擴展結果集，而 FETCH 會從結果集中傳回一個資料列。 CLOSE 陳述式會釋放與資料指標相關聯的目前結果集。 DEALLOCATE 陳述式則會釋放資料指標所使用的資源。  
   
  DECLARE CURSOR 陳述式的第一種格式是使用 ISO 語法來宣告資料指標的行為。 DECLARE CURSOR 的第二種格式是使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 延伸模組，讓您使用與 ODBC 或 ADO 資料庫 API 資料指標功能中相同的資料指標類型來定義資料指標。  
@@ -165,14 +162,14 @@ DECLARE cursor_name CURSOR [ LOCAL | GLOBAL ]
   
 |系統預存程序|描述|  
 |------------------------------|-----------------|  
-|**sp_cursor_list**|傳回目前連線可見的資料指標清單及其屬性。|  
+|**sp_cursor_list**|傳回目前連接可見的資料指標清單及其屬性。|  
 |**sp_describe_cursor**|描述某個資料指標的屬性，例如，它是一個順向資料指標或捲動資料指標。|  
 |**sp_describe_cursor_columns**|描述資料指標結果集中的資料行屬性。|  
 |**sp_describe_cursor_tables**|描述資料指標所存取的基底資料表。|  
   
  您可以在宣告資料指標的 *select_statement* 中使用變數。 在資料指標宣告之後，資料指標變數值便不會改變。  
   
-## <a name="permissions"></a>權限  
+## <a name="permissions"></a>Permissions  
  若使用者對於資料指標中使用的檢視、資料表及資料行擁有 SELECT 權限，則預設擁有 DECLARE CURSOR 權限。
  
 ## <a name="limitations-and-restrictions"></a>限制事項

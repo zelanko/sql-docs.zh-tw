@@ -1,30 +1,20 @@
 ---
-title: "DrilldownLevelTop (MDX) |Microsoft 文件"
-ms.custom: 
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: language-reference
-f1_keywords: DRILLDOWNLEVELTOP
-dev_langs: kbMDX
-helpviewer_keywords: DrilldownLevelTop function
-ms.assetid: b3b45dd6-2ade-4dd7-83dd-849231e2e517
-caps.latest.revision: "38"
-author: Minewiskan
+title: DrilldownLevelTop (MDX) |Microsoft 文件
+ms.date: 05/30/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: mdx
+ms.topic: reference
 ms.author: owend
-manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: f4f3454f14371a7d75cf04f18ba69f11bce6d71f
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: d1953cfb50f57f33859b8efd5258bd96d1d9cae9
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34578010"
 ---
 # <a name="drilldownleveltop-mdx"></a>DrilldownLevelTop (MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -58,11 +48,11 @@ DrilldownLevelTop(<Set_Expression>, <Count> [,[<Level_Expression>] [,[<Numeric_E
 ## <a name="remarks"></a>備註  
  如果指定數值運算式， **DrilldownLevelTop**函數會在子成員集合評估後以遞減的順序，根據值的數值運算式，指定集合中每個成員的子系來排序。 如果沒有指定數值運算式，此函數會根據子成員集合所代表的資料格值 (由查詢內容所決定)，以遞減的順序來排序指定集合中每個成員的子系。  
   
- 完成排序之後， **DrilldownLevelTop**函式會傳回一組包含父成員中指定的子成員數目*計數，*具有最高值。  
+ 完成排序之後， **DrilldownLevelTop**函式會傳回一組包含父成員中指定的子成員數目*計數，* 具有最高值。  
   
  **DrilldownLevelTop**函數很相似[DrilldownLevel](../mdx/drilldownlevel-mdx.md)函式，但不包含指定的層級的每個成員的所有子系**DrilldownLevelTop**函式會傳回子成員的最高數目。  
   
- 查詢 XMLA 屬性 MdpropMdxDrillFunctions，可讓您確認伺服器為鑽研函數; 提供的支援層級請參閱[支援 XMLA 屬性 &#40;XMLA &#41;](../analysis-services/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties.md)如需詳細資訊。  
+ 查詢 XMLA 屬性 MdpropMdxDrillFunctions，可讓您確認伺服器為鑽研函數; 提供的支援層級請參閱[支援 XMLA 屬性&#40;XMLA&#41; ](../analysis-services/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties.md)如需詳細資訊。  
   
 ## <a name="examples"></a>範例  
  下列範例會根據預設量值來傳回 Product Category 層級的前三個子系。 在 Adventure Works 範例 Cube 中，Accessories 的前三個子系為 Bike Racks、Bike Stands 及 Bottles and Cages。 您可以在 Management Studio 的 MDX 查詢視窗中，導覽至 Products | Product Categories | Members | All Products | Accessories 以檢視完整清單。 您可以增加 Count 引數以傳回更多成員。  
@@ -93,8 +83,8 @@ DRILLDOWNLEVELTOP(
 FROM [Adventure Works]  
 ```  
   
-## <a name="see-also"></a>請參閱  
- [DrilldownLevel &#40;MDX &#41;](../mdx/drilldownlevel-mdx.md)   
- [MDX 函數參考 &#40;MDX &#41;](../mdx/mdx-function-reference-mdx.md)  
+## <a name="see-also"></a>另請參閱  
+ [DrilldownLevel &#40;MDX&#41;](../mdx/drilldownlevel-mdx.md)   
+ [MDX 函數參考&#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

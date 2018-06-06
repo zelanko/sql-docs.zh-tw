@@ -1,28 +1,26 @@
 ---
-title: "要監看式功能 |Microsoft 文件"
-ms.custom: 
+title: 要監看式功能 |Microsoft 文件
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
-ms.component: odbc
-ms.reviewer: 
+ms.prod: sql
+ms.prod_service: connectivity
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
-ms.topic: article
-helpviewer_keywords: interoperability [ODBC], writing interoperable applications
+ms.technology: connectivity
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
+helpviewer_keywords:
+- interoperability [ODBC], writing interoperable applications
 ms.assetid: 0fb1693b-11c3-43b1-bb16-c3323b7b2d45
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
-ms.workload: Inactive
-ms.openlocfilehash: 0a2e4c0e37d62eccccf1e0af0f2acc28ed09e8b6
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+manager: craigg
+ms.openlocfilehash: 704fc0c45706e80408218d185146a438099da829
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="features-to-watch-for"></a>監看式的功能
 本章節描述一些應用程式開發人員通常需要，授與的功能。 事實上，這些功能相當廣泛的支援和 Dbms; 之間的支援方式無法為它們的程式碼是可能會導致在互通的應用程式中的問題。  

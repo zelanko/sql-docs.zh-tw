@@ -1,31 +1,23 @@
 ---
-title: "Power Pivot 資料重新整理與 SharePoint 2013 |Microsoft 文件"
-ms.custom: 
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
-ms.assetid: 34f03407-2ec4-4554-b16b-bc9a6c161815
-caps.latest.revision: 
-author: Minewiskan
+title: Power Pivot 資料重新整理與 SharePoint 2013 |Microsoft 文件
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: ppvt-sharepoint
+ms.topic: conceptual
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 59648b6a3f3dc221fa1e80be1e737606b5fede04
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 34208a7b3e3f782bcb93d46ab29099fe609f9925
+ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="power-pivot-data-refresh-with-sharepoint-2013"></a>SharePoint 2013 中的 PowerPivot 資料重新整理
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-在 SharePoint 2013 中， [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 資料模型重新整理的設計會利用 Excel Services 做為主要元件，在以 SharePoint 模式執行的 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 執行個體上載入並重新整理資料模型。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 伺服器會在 SharePoint 伺服器陣列外部執行。 SharePoint 2013 Excel Services 中的架構同時支援 **互動式資料重新整理** 和 **排定的資料重新整理**。  
+  在 SharePoint 2013 中， [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 資料模型重新整理的設計會利用 Excel Services 做為主要元件，在以 SharePoint 模式執行的 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 執行個體上載入並重新整理資料模型。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 伺服器會在 SharePoint 伺服器陣列外部執行。 SharePoint 2013 Excel Services 中的架構同時支援 **互動式資料重新整理** 和 **排定的資料重新整理**。  
   
  **[!INCLUDE[applies](../../includes/applies-md.md)]**  SharePoint 2013  
   
@@ -67,7 +59,7 @@ ms.lasthandoff: 02/15/2018
  **(\*)** 如需活頁簿升級的詳細資訊，請參閱[升級活頁簿和排程的資料重新整理 &#40;SharePoint 2013&#41;](../../analysis-services/instances/install-windows/upgrade-workbooks-and-scheduled-data-refresh-sharepoint-2013.md)。  
   
 ##  <a name="bkmk_interactive_refresh"></a> Interactive Data Refresh  
- SharePoint Server 2013 Excel Services 中的互動式或手動資料重新整理，可以利用原始資料來源中的資料，以重新整理資料模型。 在您透過註冊以 SharePoint 模式執行的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 伺服器，設定 Excel Services 應用程式之後，就可以使用互動式資料重新整理。 如需詳細資訊，請參閱 [Manage Excel Services data model settings (SharePoint Server 2013)](http://technet.microsoft.com/library/jj219780.aspx) (管理 Excel Services 資料模型設定 (SharePoint Server 2013)) (http://technet.microsoft.com/library/jj219780.aspx)。  
+ SharePoint Server 2013 Excel Services 中的互動式或手動資料重新整理，可以利用原始資料來源中的資料，以重新整理資料模型。 在您透過註冊以 SharePoint 模式執行的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 伺服器，設定 Excel Services 應用程式之後，就可以使用互動式資料重新整理。 如需詳細資訊，請參閱[管理 Excel Services 資料模型設定 (SharePoint Server 2013)](http://technet.microsoft.com/library/jj219780.aspx) (http://technet.microsoft.com/library/jj219780.aspx)。  
   
 > [!NOTE]  
 >  互動式資料重新整理僅適用於在 Excel 2013 中建立的活頁簿。 如果您嘗試重新整理 Excel 2010 活頁簿，Excel Services 就會顯示類似以下的錯誤訊息：「[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 作業失敗: 此活頁簿是以舊版 Excel 與 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 建立而成，在檔案升級之前無法重新整理」。 如需升級活頁簿的詳細資訊，請參閱[升級活頁簿和排程的資料重新整理 &#40;SharePoint 2013&#41;](../../analysis-services/instances/install-windows/upgrade-workbooks-and-scheduled-data-refresh-sharepoint-2013.md)。  
@@ -121,7 +113,7 @@ ms.lasthandoff: 02/15/2018
   
     1.  執行 “`secpol.msc`”  
   
-    2.  依序按一下 **[本機安全性原則]**、 **[本機原則]**和 **[使用者權限指派]**。  
+    2.  依序按一下 **[本機安全性原則]**、 **[本機原則]** 和 **[使用者權限指派]**。  
   
     3.  加入服務帳戶。  
   
@@ -131,7 +123,7 @@ ms.lasthandoff: 02/15/2018
   
  ![as_interactive_data_refresh2012SP1_windowsauth](../../analysis-services/power-pivot-sharepoint/media/as-interactive-data-refresh2012sp1-windowsauth.gif "as_interactive_data_refresh2012SP1_windowsauth")  
   
- 如需詳細資訊，請參閱 [當成作業系統的一部分](http://technet.microsoft.com/library/cc784323\(WS.10\).aspx) (http://technet.microsoft.com/library/cc784323(WS.10).aspx)。  
+ 如需詳細資訊，請參閱[做為作業系統的一部分](http://technet.microsoft.com/library/cc784323\(WS.10\).aspx)(http://technet.microsoft.com/library/cc784323(WS.10).aspx)。  
   
 ##  <a name="bkmk_scheduled_refresh"></a> Scheduled Data Refresh  
  **排程的資料重新整理關鍵重點：**  
@@ -171,7 +163,7 @@ ms.lasthandoff: 02/15/2018
  ![管理資料重新整理內容功能表](../../analysis-services/power-pivot-sharepoint/media/as-manage-datarefresh-sharepoint2013.gif "管理資料重新整理內容功能表")  
   
 > [!TIP]  
->  如需從 SharePoint Online 重新整理活頁簿的資訊，請參閱 [Refreshing Excel workbooks with embedded Power Pivot models from SharePoint Online](http://technet.microsoft.com/library/jj992650.aspx) (從 SharePoint Online 重新整理內嵌 Power Pivot 模型的 Excel 活頁簿) (技術白皮書) (http://technet.microsoft.com/library/jj992650.aspx)。  
+>  重新整理活頁簿從 SharePoint online 的資訊，請參閱[重新整理 Excel 活頁簿從 SharePoint Online （白皮書） 的內嵌 Powerpivot 模型](http://technet.microsoft.com/library/jj992650.aspx)(http://technet.microsoft.com/library/jj992650.aspx)。  
   
 ##  <a name="bkmk_refresh_architecture"></a> SharePoint 2013 中排程的資料重新整理架構  
  下圖摘要說明 SharePoint 2013 和 SQL Server 2012 SP1 中的資料重新整理架構。  
@@ -212,7 +204,7 @@ ms.lasthandoff: 02/15/2018
   
 -   [[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 服務] 的 [區域]。  
   
--   **[資料重新整理]**的類別。  
+-   **[資料重新整理]** 的類別。  
   
  檢閱 **[設定診斷記錄]**。 如需詳細資訊，請參閱[設定及檢視 SharePoint 記錄檔與診斷記錄 &#40;Power Pivot for SharePoint&#41;](../../analysis-services/power-pivot-sharepoint/configure-and-view-sharepoint-and-diagnostic-logging.md)。
   
@@ -231,7 +223,7 @@ ms.lasthandoff: 02/15/2018
   
 2.  在功能區中，按一下 **[連線]** 。  
   
-3.  在 **[活頁簿連線]**對話方塊中，選取連線，然後按一下 **[內容]**。  
+3.  在 **[活頁簿連線]** 對話方塊中，選取連線，然後按一下 **[內容]**。  
   
 4.  在 **[連線內容]** 對話方塊中，按一下 **[定義]**，然後按一下 **[驗證設定]** 按鈕，可選取色彩。  
   
@@ -242,7 +234,7 @@ ms.lasthandoff: 02/15/2018
 ##  <a name="bkmk_moreinformation"></a> 其他資訊  
  [Troubleshooting PowerPivot Data Refresh](http://social.technet.microsoft.com/wiki/contents/articles/3870.troubleshooting-powerpivot-data-refresh.aspx)(PowerPivot 資料重新整理疑難排解)。  
   
- [SharePoint 2013 中的 excel Services](http://msdn.microsoft.com/library/sharepoint/jj164076\(v=office.15\)) (http://msdn.microsoft.com/library/sharepoint/jj164076 (v = office.15)。  
+ [SharePoint 2013 中的 excel Services](http://msdn.microsoft.com/library/sharepoint/jj164076\(v=office.15\)) (http://msdn.microsoft.com/library/sharepoint/jj164076(v=office.15)。  
   
 ## <a name="see-also"></a>另請參閱  
  [以 Power Pivot 模式安裝 Analysis Services](../../analysis-services/instances/install-windows/install-analysis-services-in-power-pivot-mode.md)  

@@ -1,34 +1,25 @@
 ---
-title: "存在 (MDX) |Microsoft 文件"
-ms.custom: 
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: language-reference
-dev_langs: kbMDX
-helpviewer_keywords: Exists function
-ms.assetid: 1e1d93b5-5be6-421c-b82b-839538ea50b1
-caps.latest.revision: "34"
-author: Minewiskan
+title: 存在 (MDX) |Microsoft 文件
+ms.date: 05/30/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: mdx
+ms.topic: reference
 ms.author: owend
-manager: erikre
-ms.workload: On Demand
-ms.openlocfilehash: 2adc9ae709257cc3d44496e9ad4c7d078b76cb92
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: 98f07985b83ae32f02bd3da68d382c8f3fceb0cf
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34578250"
 ---
 # <a name="exists-mdx"></a>Exists (MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
-  傳回屬於第一個指定集合並且與第二個指定集合中一或多個 Tuple 同時存在的 Tuple 集合。 這個函數會手動執行自動存在功能自動執行的動作。 如需有關自動存在，請參閱 < [MDX &#40; 中的重要概念Analysis Services &#41;](../analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services.md).  
+  傳回屬於第一個指定集合並且與第二個指定集合中一或多個 Tuple 同時存在的 Tuple 集合。 這個函數會手動執行自動存在功能自動執行的動作。 如需有關自動存在，請參閱 < [MDX 的關鍵概念&#40;Analysis Services&#41;](../analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services.md)。  
   
  如果選擇性\<量值群組名稱 > 所提供函式傳回一個或多個 tuple 存在的 tuple 從第二個集合，以及具有相關聯的事實資料表中指定的量值群組的資料列的 tuple。  
   
@@ -102,11 +93,11 @@ EXISTS(
 FROM [Adventure Works]  
 ```  
   
-## <a name="see-also"></a>請參閱  
- [MDX 函數參考 &#40;MDX &#41;](../mdx/mdx-function-reference-mdx.md)   
- [交叉聯結 &#40;MDX &#41;](../mdx/crossjoin-mdx.md)   
- [NonEmptyCrossjoin &#40;MDX &#41;](../mdx/nonemptycrossjoin-mdx.md)   
- [NonEmpty &#40;MDX &#41;](../mdx/nonempty-mdx.md)   
- [IsEmpty &#40;MDX &#41;](../mdx/isempty-mdx.md)  
+## <a name="see-also"></a>另請參閱  
+ [MDX 函數參考&#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)   
+ [交叉聯結&#40;MDX&#41;](../mdx/crossjoin-mdx.md)   
+ [NonEmptyCrossjoin &#40;MDX&#41;](../mdx/nonemptycrossjoin-mdx.md)   
+ [NonEmpty &#40;MDX&#41;](../mdx/nonempty-mdx.md)   
+ [IsEmpty &#40;MDX&#41;](../mdx/isempty-mdx.md)  
   
   

@@ -1,30 +1,29 @@
 ---
-title: SQLBindParameter | Microsoft Docs
-ms.custom: 
+title: SQLBindParameter |Microsoft 文件
+ms.custom: ''
 ms.date: 03/17/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
 ms.component: native-client-odbc-api
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apitype: DLLExport
 helpviewer_keywords:
 - SQLBindParameter function
 ms.assetid: c302c87a-e7f4-4d2b-a0a7-de42210174ac
-caps.latest.revision: 
+caps.latest.revision: 46
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 6eceb24668a73eb94224f2c4d6f09f272595a92a
-ms.sourcegitcommit: a0aa5e611a0e6ebb74ac1e2f613e8916dc7a7617
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 3c078adc30fee659d87e58a1ea6ac44e25e68236
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/24/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sqlbindparameter"></a>SQLBindParameter
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -44,7 +43,7 @@ ms.lasthandoff: 01/24/2018
 ## <a name="binding-parameters-for-sql-character-types"></a>SQL 字元類型的繫結參數  
  如果傳入的 SQL 資料類型是字元類型， *ColumnSize*是以字元為單位 （而不是個位元組） 的大小。 如果以位元組為單位的資料字串的長度大於 8000， *ColumnSize*應該設定為**SQL_SS_LENGTH_UNLIMITED**，表示為 SQL 類型的大小沒有限制。  
   
- 比方說，如果 SQL 資料類型是**SQL_WVARCHAR**， *ColumnSize*不能超過 4000。 如果實際資料長度大於 4000，然後*ColumnSize*應該設定為**SQL_SS_LENGTH_UNLIMITED**以便**nvarchar （max)**將驅動程式所使用。  
+ 比方說，如果 SQL 資料類型是**SQL_WVARCHAR**， *ColumnSize*不能超過 4000。 如果實際資料長度大於 4000，然後*ColumnSize*應該設定為**SQL_SS_LENGTH_UNLIMITED**以便**nvarchar （max)** 將驅動程式所使用。  
   
 ## <a name="sqlbindparameter-and-table-valued-parameters"></a>SQLBindParameter 和資料表值參數  
  如同其他參數類型，資料表值參數是由 SQLBindParameter 繫結。  
@@ -53,15 +52,15 @@ ms.lasthandoff: 01/24/2018
   
  將參數對應到資料表值參數的描述項欄位的相關資訊，請參閱[繫結和 Data Transfer of Table-Valued 參數和資料行值](../../relational-databases/native-client-odbc-table-valued-parameters/binding-and-data-transfer-of-table-valued-parameters-and-column-values.md)。  
   
- 如需有關資料表值參數的詳細資訊，請參閱[資料表值參數 &#40; ODBC &#41;](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md)。  
+ 如需有關資料表值參數的詳細資訊，請參閱[資料表值參數 & #40; ODBC & #41;](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md)。  
   
 ## <a name="sqlbindparameter-support-for-enhanced-date-and-time-features"></a>SQLBindParameter 對增強型日期和時間功能的支援  
  日期/時間類型的參數值會轉換中所述[從 C 轉換成 SQL](../../relational-databases/native-client-odbc-date-time/datetime-data-type-conversions-from-c-to-sql.md)。 請注意該型別參數的**時間**和**datetimeoffset**必須*ValueType*指定為**SQL_C_DEFAULT**或**SQL_C_BINARY**如果及其對應的結構 (**SQL_SS_TIME2_STRUCT**和**SQL_SS_TIMESTAMPOFFSET_STRUCT**) 所使用。  
   
- 如需詳細資訊，請參閱[日期和時間增強功能 &#40; ODBC &#41;](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)。  
+ 如需詳細資訊，請參閱[日期和時間增強功能 & #40; ODBC & #41;](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)。  
   
 ## <a name="sqlbindparameter-support-for-large-clr-udts"></a>大型 CLR UDT 的 SQLBindParameter 支援  
- **SQLBindParameter**支援大型 CLR 使用者定義型別 (Udt)。 如需詳細資訊，請參閱[Large CLR User-Defined 類型 &#40; ODBC &#41;](../../relational-databases/native-client/odbc/large-clr-user-defined-types-odbc.md)。  
+ **SQLBindParameter**支援大型 CLR 使用者定義型別 (Udt)。 如需詳細資訊，請參閱[Large CLR User-Defined 類型 & #40; ODBC & #41;](../../relational-databases/native-client/odbc/large-clr-user-defined-types-odbc.md)。  
   
 ## <a name="see-also"></a>另請參閱  
  [ODBC API 實作詳細資料](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)   

@@ -1,35 +1,34 @@
 ---
-title: "將次要資料庫新增至記錄傳送組態 (SQL Server) | Microsoft Docs"
-ms.custom: 
+title: 將次要資料庫新增至記錄傳送組態 (SQL Server) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
-ms.prod_service: database-engine
-ms.service: 
+ms.prod: sql
+ms.prod_service: high-availability
 ms.component: log-shipping
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: dbe-high-availability
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: high-availability
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - adding secondary databases
 - secondary databases [SQL Server], in log shipping
 - secondary data files [SQL Server], adding
 - log shipping [SQL Server], secondary databases
 ms.assetid: b02eba13-f8e6-4684-b7e4-75ea038ea473
-caps.latest.revision: "20"
+caps.latest.revision: 20
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 7c039ba0926ceaa30c7a329c3edd00fdb6ab6402
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: f6da92384490ae4907390dbeceee8da4564f153d
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="add-a-secondary-database-to-a-log-shipping-configuration-sql-server"></a>將次要資料庫加入至記錄傳送組態 (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 本主題描述如何使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 或 [!INCLUDE[tsql](../../includes/tsql-md.md)]，將次要資料庫新增至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中現有的記錄傳送設定。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  本主題描述如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ，將次要資料庫加入至 [!INCLUDE[tsql](../../includes/tsql-md.md)]中現有的記錄傳送組態。  
   
  **本主題內容**  
   
@@ -58,9 +57,9 @@ ms.lasthandoff: 01/18/2018
   
 1.  以滑鼠右鍵按一下記錄傳送組態中要作為主要資料庫的資料庫，然後按一下 [屬性]。  
   
-2.  在 **[選取頁面]**下，按一下 **[交易記錄傳送]**。  
+2.  在 **[選取頁面]** 下，按一下 **[交易記錄傳送]**。  
   
-3.  在 **[次要伺服器執行個體與資料庫]**下，按一下 **[新增]**。  
+3.  在 **[次要伺服器執行個體與資料庫]** 下，按一下 **[新增]**。  
   
 4.  按一下 **[連接]** ，連接到您要做為次要伺服器的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體。  
   
@@ -68,19 +67,19 @@ ms.lasthandoff: 01/18/2018
   
 6.  在 **[初始化次要資料庫]** 索引標籤上，選擇要用於初始化次要資料庫的選項。  
   
-7.  在 **[複製檔案]**索引標籤上的 **[複製之檔案的目的資料夾]** 方塊中，輸入交易記錄檔備份所應複製到的資料夾路徑。 這個資料夾通常位於次要伺服器上。  
+7.  在 **[複製檔案]** 索引標籤上的 **[複製之檔案的目的資料夾]** 方塊中，輸入交易記錄檔備份所應複製到的資料夾路徑。 這個資料夾通常位於次要伺服器上。  
   
-8.  請注意 **[複製作業]** 之下 **[排程]**方塊中所列的複製排程。 如果您要自訂安裝的排程，請按一下 **[排程]** ，然後視需要調整 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 排程。 這個排程應接近備份排程。  
+8.  請注意 **[複製作業]** 之下 **[排程]** 方塊中所列的複製排程。 如果您要自訂安裝的排程，請按一下 **[排程]** ，然後視需要調整 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 排程。 這個排程應接近備份排程。  
   
-9. 在 **[還原]** 索引標籤上的 **[還原備份時的資料庫狀態]**下，選擇 **[不復原模式]** 或 **[待命模式]** 選項。  
+9. 在 **[還原]** 索引標籤上的 **[還原備份時的資料庫狀態]** 下，選擇 **[不復原模式]** 或 **[待命模式]** 選項。  
   
 10. 如果您選擇 **[待命模式]** 選項，請選擇是否要在還原作業進行時，中斷使用者與次要資料庫的連接。  
   
-11. 如果您要延遲次要伺服器上的還原處理序，請在 **[延遲還原備份至少]**下選擇延遲時間。  
+11. 如果您要延遲次要伺服器上的還原處理序，請在 **[延遲還原備份至少]** 下選擇延遲時間。  
   
-12. 在 **[如果未在此時間內進行還原，則發出警示]**下選擇警示臨界值。  
+12. 在 **[如果未在此時間內進行還原，則發出警示]** 下選擇警示臨界值。  
   
-13. 請注意 **[還原作業]** 下之 **[排程]**方塊中所列的還原排程。 如果您要自訂安裝的排程，請按一下 **[排程]** ，然後視需要調整 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 排程。 這個排程應接近備份排程。  
+13. 請注意 **[還原作業]** 下之 **[排程]** 方塊中所列的還原排程。 如果您要自訂安裝的排程，請按一下 **[排程]** ，然後視需要調整 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 排程。 這個排程應接近備份排程。  
   
 14. 按一下 [確定] 。  
   

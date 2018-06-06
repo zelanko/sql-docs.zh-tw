@@ -1,16 +1,14 @@
 ---
-title: "sp_help_log_shipping_monitor_primary (TRANSACT-SQL) |Microsoft 文件"
-ms.custom: 
+title: sp_help_log_shipping_monitor_primary (TRANSACT-SQL) |Microsoft 文件
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: system-objects
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_help_log_shipping_monitor_primary
@@ -20,16 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_help_log_shipping_monitor_primary
 ms.assetid: d9dfcb8f-1da6-49ca-a2c8-411574915434
-caps.latest.revision: 
+caps.latest.revision: 21
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: e3722c19a3ddf6fc09032490eafebbcd46628f05
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 0a818e8b944a7fbb296ee17a1b892cd2c6ebf77d
+ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="sphelplogshippingmonitorprimary-transact-sql"></a>sp_help_log_shipping_monitor_primary (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -51,7 +48,7 @@ sp_help_log_shipping_monitor_primary
  [ **@primary_server =** ] '*primary_server*'  
  主要執行個體的名稱[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]記錄傳送組態中。 *primary_server*是**sysname**不能是 NULL。  
   
- [ **@primary_database =** ] '*primary_database*'  
+ [  **@primary_database =** ] '*primary_database*'  
  這是主要伺服器的資料庫名稱。 *primary_database*是**sysname**，沒有預設值。  
   
 ## <a name="return-code-values"></a>傳回碼值  
@@ -79,7 +76,7 @@ sp_help_log_shipping_monitor_primary
  只有成員**sysadmin**固定的伺服器角色可以執行此程序。  
   
 ## <a name="see-also"></a>另請參閱  
- [關於記錄傳送 &#40;SQL Server &#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
+ [關於記錄傳送 & #40;SQL Server & #41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
  [系統預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

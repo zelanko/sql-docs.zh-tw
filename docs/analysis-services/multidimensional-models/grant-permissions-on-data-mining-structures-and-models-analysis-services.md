@@ -1,39 +1,23 @@
 ---
-title: "授與權限的資料採礦結構和模型 (Analysis Services) |Microsoft 文件"
-ms.custom: 
-ms.date: 03/04/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords: sql13.asvs.roledesignerdialog.miningmodels.f1
-helpviewer_keywords:
-- data mining [Analysis Services], security
-- permissions [Analysis Services], mining models
-- mining models [Analysis Services], security
-- mining structures [Analysis Services], security
-- permissions [Analysis Services], mining structures
-- user access rights [Analysis Services], mining structures
-- user access rights [Analysis Services], mining models
-ms.assetid: a0008004-e2b7-47db-acad-5fe7e12b130f
-caps.latest.revision: "37"
-author: Minewiskan
+title: 授與權限的資料採礦結構和模型 (Analysis Services) |Microsoft 文件
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: multidimensional-models
+ms.topic: conceptual
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: d94d769d1eb7434a918950e2c56c87f7241d77d9
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 91e805488ff5a90b4f358cb908fe2efa6fd8d04a
+ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="grant-permissions-on-data-mining-structures-and-models-analysis-services"></a>授與資料採礦結構和模型的權限 (Analysis Services)
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]根據預設，只有 Analysis Services 伺服器管理員有權限來檢視資料庫中的資料採礦結構或採礦模型。 請依照下列指示，授與權限給非管理員的使用者。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+  根據預設，只有 Analysis Services 伺服器管理員擁有檢視資料庫中資料採礦結構或採礦模型的權限。 請依照下列指示，授與權限給非管理員的使用者。  
   
 ## <a name="set-permissions-to-access-a-mining-structure"></a>設定權限以存取採礦結構  
   
@@ -71,10 +55,10 @@ ms.lasthandoff: 01/08/2018
 > [!NOTE]  
 >  依預設，使用 OPENROWSET 來提交 DMX 查詢的功能已停用。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [將伺服器系統管理員權限授與 Analysis Services 執行個體](../../analysis-services/instances/grant-server-admin-rights-to-an-analysis-services-instance.md)   
- [授與 Cube 或模型權限 &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/grant-cube-or-model-permissions-analysis-services.md)   
- [授與自訂存取維度資料 &#40;Analysis Services &#41;](../../analysis-services/multidimensional-models/grant-custom-access-to-dimension-data-analysis-services.md)   
- [授與資料格資料的自訂存取權 &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/grant-custom-access-to-cell-data-analysis-services.md)  
+ [授與 cube 或模型權限 & #40;Analysis Services & #41;](../../analysis-services/multidimensional-models/grant-cube-or-model-permissions-analysis-services.md)   
+ [授與自訂存取維度資料 & #40;Analysis Services & #41;](../../analysis-services/multidimensional-models/grant-custom-access-to-dimension-data-analysis-services.md)   
+ [授與自訂資料 & #40; 的儲存格的存取Analysis Services & #41;](../../analysis-services/multidimensional-models/grant-custom-access-to-cell-data-analysis-services.md)  
   
   

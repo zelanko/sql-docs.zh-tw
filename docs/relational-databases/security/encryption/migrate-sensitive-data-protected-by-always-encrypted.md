@@ -1,33 +1,33 @@
 ---
-title: "移轉透過 Always Encrypted 保護的機密資料 | Microsoft Docs"
-ms.custom: 
+title: 移轉透過 Always Encrypted 保護的機密資料 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2015
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
 ms.component: security
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - Always Encrypted, bulk import
 ms.assetid: b2ca08ed-a927-40fb-9059-09496752595e
-caps.latest.revision: 
+caps.latest.revision: 11
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 9fa13b882639b0b23d937c479eec6b2a29aa34ae
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: d0a119b5c88775b4a4f70f31c139c6fb809ab200
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="migrate-sensitive-data-protected-by-always-encrypted"></a>移轉透過永遠加密保護的機密資料
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] 若要在大量複製作業期間載入加密的資料，而不在伺服器上執行中繼資料檢查，請使用 **ALLOW_ENCRYPTED_VALUE_MODIFICATIONS** 選項來建立使用者。 此選項適用於比 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 還舊之 [!INCLUDE[ssSQL15](../../../includes/sssql15-md.md)] 版本的舊版工具 (例如 bcp.exe)，或者利用無法使用「永遠加密」的協力廠商擷取-轉換-載入 (ETL) 工作流程來使用。 這可讓使用者將加密的資料從某一組資料表 (包含加密的資料行) 安全地移至另一組具有加密資料行 (位於相同或不同的資料庫) 的資料表。  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+ 若要在大量複製作業期間載入加密的資料而不需在伺服器上執行中繼資料檢查，請使用 **ALLOW_ENCRYPTED_VALUE_MODIFICATIONS** 選項來建立使用者。 此選項適用於比 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 還舊之 [!INCLUDE[ssSQL15](../../../includes/sssql15-md.md)] 版本的舊版工具 (例如 bcp.exe)，或者利用無法使用「永遠加密」的協力廠商擷取-轉換-載入 (ETL) 工作流程來使用。 這可讓使用者將加密的資料從某一組資料表 (包含加密的資料行) 安全地移至另一組具有加密資料行 (位於相同或不同的資料庫) 的資料表。  
  -  
  ## <a name="the-allowencryptedvaluemodifications-option"></a>ALLOW_ENCRYPTED_VALUE_MODIFICATIONS 選項  
  [CREATE USER](https://msdn.microsoft.com/library/ms173463.aspx) 和 [ALTER USER](https://msdn.microsoft.com/library/ms176060.aspx) 都具有 ALLOW_ENCRYPTED_VALUE_MODIFICATIONS 選項。 設為 ON (預設值為 OFF) 時，此選項會在大量複製作業中抑制伺服器上的密碼編譯中繼資料檢查，讓使用者不需解密資料，就能在資料表或資料庫之間大量複製加密的資料。  

@@ -1,37 +1,23 @@
 ---
-title: "資料採礦設計師 |Microsoft 文件"
-ms.custom: 
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
-helpviewer_keywords:
-- data mining [Analysis Services], structure
-- mining structures [Analysis Services], modifying
-- data mining editor [Analysis Services]
-- Data Mining Designer
-- data mining [Analysis Services], modifying
-ms.assetid: 2540db5b-2bf3-4b6c-87c8-79c48d71acce
-caps.latest.revision: 
-author: Minewiskan
+title: 資料採礦設計師 |Microsoft 文件
+ms.date: 05/01/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: data-mining
+ms.topic: conceptual
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 8ba0683192d2e0aabfce9e8c340692e48053a7f8
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 25eea114d105ec445e91b5bebbbe74e1d0f846f3
+ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="data-mining-designer"></a>資料採礦設計師
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-資料採礦設計師是您在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]中使用採礦模型的主要環境。 您可以選取現有的採礦結構，或使用資料採礦精靈來建立新的採礦結構和採礦模型，以存取此設計師。 您可以使用資料採礦設計師來執行下列工作：  
+  資料採礦設計師是您在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]中使用採礦模型的主要環境。 您可以選取現有的採礦結構，或使用資料採礦精靈來建立新的採礦結構和採礦模型，以存取此設計師。 您可以使用資料採礦設計師來執行下列工作：  
   
 -   修改一開始是由資料採礦精靈所建立的採礦結構和採礦模型。  
   
@@ -46,7 +32,7 @@ ms.lasthandoff: 02/15/2018
 ## <a name="mining-structure-tab"></a>採礦結構索引標籤  
  使用 **[採礦結構]** 索引標籤，加入資料行及修改現有採礦結構的屬性。 下列工作和主題提供有關使用採礦結構的詳細資訊：  
   
- [採礦結構 &#40;Analysis Services-資料採礦 &#41;](../../analysis-services/data-mining/mining-structures-analysis-services-data-mining.md)  
+ [採礦結構 & #40;Analysis Services-資料採礦 & #41;](../../analysis-services/data-mining/mining-structures-analysis-services-data-mining.md)  
   
  [採礦結構工作和使用說明](../../analysis-services/data-mining/mining-structure-tasks-and-how-tos.md)  
   
@@ -57,7 +43,7 @@ ms.lasthandoff: 02/15/2018
   
  如需有關使用採礦模型的詳細資訊，請參閱下列主題：  
   
- [採礦模型 &#40;Analysis Services-資料採礦 &#41;](../../analysis-services/data-mining/mining-models-analysis-services-data-mining.md)  
+ [採礦模型 & #40;Analysis Services-資料採礦 & #41;](../../analysis-services/data-mining/mining-models-analysis-services-data-mining.md)  
   
  [採礦模型的工作與操作方法](../../analysis-services/data-mining/mining-model-tasks-and-how-tos.md)  
   

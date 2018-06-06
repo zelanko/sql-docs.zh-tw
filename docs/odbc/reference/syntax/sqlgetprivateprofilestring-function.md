@@ -1,32 +1,33 @@
 ---
-title: "SQLGetPrivateProfileString 函式 |Microsoft 文件"
-ms.custom: 
+title: SQLGetPrivateProfileString 函式 |Microsoft 文件
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
-ms.component: odbc
-ms.reviewer: 
+ms.prod: sql
+ms.prod_service: connectivity
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
-ms.topic: article
-apiname: SQLGetPrivateProfileString
-apilocation: sqlsrv32.dll
+ms.technology: connectivity
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
+apiname:
+- SQLGetPrivateProfileString
+apilocation:
+- sqlsrv32.dll
 apitype: dllExport
-f1_keywords: SQLGetPrivateProfileString
-helpviewer_keywords: SQLGetPrivateProfileString function [ODBC]
+f1_keywords:
+- SQLGetPrivateProfileString
+helpviewer_keywords:
+- SQLGetPrivateProfileString function [ODBC]
 ms.assetid: b72ca065-4d67-48df-baac-e18379a8320a
-caps.latest.revision: "8"
+caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
-ms.workload: Inactive
-ms.openlocfilehash: b7829cbff471b431b5c4975e8066356479631596
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+manager: craigg
+ms.openlocfilehash: 4538c94012ab6ccc7c532436cedef1abae3fc936
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sqlgetprivateprofilestring-function"></a>SQLGetPrivateProfileString 函式
 **一致性**  
@@ -73,7 +74,7 @@ int SQLGetPrivateProfileString(
 ## <a name="diagnostics"></a>診斷  
  當呼叫**SQLGetPrivateProfileString**失敗時，相關聯 *\*pfErrorCode*可以取得值，藉由呼叫**SQLInstallerError**。 下表列出 *\*pfErrorCode*可以傳回的值**SQLInstallerError** ，並說明每個內容中的這個函式。  
   
-|*\*pfErrorCode*|錯誤|描述|  
+|*\*pfErrorCode*|錯誤|Description|  
 |---------------------|-----------|-----------------|  
 |ODBC_ERROR_GENERAL_ERR|一般安裝程式發生錯誤|發生錯誤，其中沒有特定的安裝程式錯誤。|  
 |ODBC_ERROR_OUT_OF_MEM|記憶體不足|安裝程式無法執行函式，因為記憶體不足。|  

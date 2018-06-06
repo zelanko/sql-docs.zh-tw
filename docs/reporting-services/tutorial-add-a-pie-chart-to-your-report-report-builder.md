@@ -1,28 +1,27 @@
 ---
-title: "教學課程：將圓形圖新增至報表 (報表產生器) | Microsoft Docs"
-ms.custom: 
+title: 教學課程：將圓形圖新增至報表 (報表產生器) | Microsoft Docs
+ms.custom: ''
 ms.date: 06/15/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
-ms.service: 
 ms.component: reporting-services
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: get-started-article
-applies_to: SQL Server 2016
+applies_to:
+- SQL Server 2016
 ms.assetid: eaadf7bf-c312-428a-b214-0a1fbf959c3f
-caps.latest.revision: "14"
+caps.latest.revision: 14
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 68b4e3536833e23be59db3195f5903bfccbc5539
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 682aaa2705f3f2fb5281bccecd177117592cf51d
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="tutorial-add-a-pie-chart-to-your-report-report-builder"></a>教學課程：將圓形圖加入至報表 (報表產生器)
 在本教學課程中，您會在 Reporting Services 分頁報表中建立圓形圖。 您將新增百分比，並將小配量合併為單一配量。
@@ -124,7 +123,7 @@ ms.lasthandoff: 01/09/2018
   
 4.  在 [標籤資料] 方塊中，選取 **#PERCENT**。  
     
-5.  (選擇性) 若要指定標籤所顯示的小數位數，請在 [標籤資料] 方塊中，於 **#PERCENT** 後面鍵入**{Pn}**，其中 *n* 是要顯示的小數位數。 例如，如果不要顯示任何小數位數，請輸入 **#PERCENT{P0}**。  
+5.  (選擇性) 若要指定標籤所顯示的小數位數，請在 [標籤資料] 方塊中，於 **#PERCENT** 後面輸入 **{Pn}**，其中 *n* 是要顯示的小數位數。 例如，如果不要顯示任何小數位數，請輸入 **#PERCENT{P0}**。  
 
 6.  若要以百分比顯示值，UseValueAsLabel 屬性必須為 False。 如果系統提示您在 [確認動作] 對話方塊中設定這個值，請按一下 [是]。  
   

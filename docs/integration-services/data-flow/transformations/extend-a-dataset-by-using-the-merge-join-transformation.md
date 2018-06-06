@@ -1,33 +1,31 @@
 ---
-title: "使用合併聯結轉換來擴充資料集 | Microsoft Docs"
-ms.custom: 
+title: 使用合併聯結轉換來擴充資料集 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
 ms.component: data-flow
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - Merge Join transformation
 - datasets [Integration Services], joining
 - datasets [Integration Services], extending
 - joining datasets [Integration Services]
 ms.assetid: 9e512c3c-f89b-45f3-8281-cdb8f35a2b1f
-caps.latest.revision: 
+caps.latest.revision: 27
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 00aaf46bb6b24813a79300be3a23d2a3aab28e41
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 0d7732d21ebcafc14f172c7a7218540f2d39548a
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="extend-a-dataset-by-using-the-merge-join-transformation"></a>使用合併聯結轉換來擴充資料集
   若要加入和設定「合併聯結」轉換，封裝必須已包含至少一個「資料流程」工作，及兩個為「合併聯結」轉換提供輸入的資料流程元件。  

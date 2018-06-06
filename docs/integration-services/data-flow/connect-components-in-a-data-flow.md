@@ -1,31 +1,29 @@
 ---
-title: "連接資料流程中的元件 | Microsoft Docs"
-ms.custom: 
+title: 連接資料流程中的元件 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
 ms.component: data-flow
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - components [Integration Services], connections
 - connections [Integration Services], data flow components
 ms.assetid: 70616a58-8921-4218-85bf-f3e90c5a9dbf
-caps.latest.revision: 
+caps.latest.revision: 41
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 676aa85a4a8b5fcf39f198fe1b70b5b1b9f7fbfe
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 1200157ec8321fd721b3a1b7f158eaa2b38fcaf7
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="connect-components-in-a-data-flow"></a>連接資料流程中的元件
   此程序描述如何將資料流程中的元件輸出，連接到同一資料流程中的其他元件。  
@@ -35,7 +33,7 @@ ms.lasthandoff: 01/25/2018
   
  ![Data flow](../../integration-services/data-flow/media/mw-dts-08.gif "Data flow")  
   
- 在連接兩個元件之後，您可以在 **[資料流程路徑編輯器]**中，檢視經由路徑移動的資料之中繼資料，以及路徑的屬性。 如需詳細資訊，請參閱 [Integration Services Paths](../../integration-services/data-flow/integration-services-paths.md)。  
+ 在連接兩個元件之後，您可以在 **[資料流程路徑編輯器]** 中，檢視經由路徑移動的資料之中繼資料，以及路徑的屬性。 如需詳細資訊，請參閱 [Integration Services Paths](../../integration-services/data-flow/integration-services-paths.md)。  
   
  您也可以將資料檢視器加入路徑。 資料檢視器可讓您在封裝執行時，檢視在資料流程元件之間移動的資料。  
   

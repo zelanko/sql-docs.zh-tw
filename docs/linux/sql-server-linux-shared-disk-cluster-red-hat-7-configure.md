@@ -1,25 +1,22 @@
 ---
-title: "設定 SQL Server 的 Red Hat Enterprise Linux 共用的叢集 |Microsoft 文件"
-description: "藉由設定 Red Hat Enterprise Linux 共用的磁碟叢集的 SQL Server 實作高可用性。"
+title: 設定 SQL Server 的 Red Hat Enterprise Linux 共用的叢集 |Microsoft 文件
+description: 藉由設定 Red Hat Enterprise Linux 共用的磁碟叢集的 SQL Server 實作高可用性。
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.date: 03/17/2017
 ms.topic: article
-ms.prod: sql-non-specified
-ms.prod_service: database-engine
-ms.service: 
-ms.component: 
+ms.prod: sql
+ms.component: ''
 ms.suite: sql
 ms.custom: sql-linux
-ms.technology: database-engine
+ms.technology: linux
 ms.assetid: dcc0a8d3-9d25-4208-8507-a5e65d2a9a15
-ms.workload: On Demand
-ms.openlocfilehash: 5263a40e37388ea9a884cafeffe2302f56f0043e
-ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
+ms.openlocfilehash: 7ddd34e56d8f8499715c535de21ae6f23bd282b1
+ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/13/2018
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="configure-red-hat-enterprise-linux-shared-disk-cluster-for-sql-server"></a>設定 SQL Server 的 Red Hat Enterprise Linux 共用的磁碟叢集
 

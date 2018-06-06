@@ -1,16 +1,15 @@
 ---
-title: "XQuery 基本概念 |Microsoft 文件"
-ms.custom: 
+title: XQuery 基本概念 |Microsoft 文件
+ms.custom: ''
 ms.date: 03/17/2017
-ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
-ms.service: 
+ms.prod: sql
+ms.prod_service: sql
 ms.component: xquery
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -19,16 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - XQuery, about XQuery
 ms.assetid: b2460a37-7663-42de-9c72-fdfbe2f1504d
-caps.latest.revision: 
+caps.latest.revision: 25
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: e2cafafe39eeb1efd8dbca66215ae26c991a1823
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 726bf0f34e8fe8d8b5d0713ca74b8f07f9e94483
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="xquery-basics"></a>XQuery 基本概念
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -36,22 +34,22 @@ ms.lasthandoff: 02/09/2018
   本節描述 XQuery 的基礎觀念。  
   
 ## <a name="in-this-section"></a>本節內容  
- [順序和 Qname &#40;XQuery &#41;](../xquery/sequence-and-qnames-xquery.md)  
+ [順序和 Qname &#40;XQuery&#41;](../xquery/sequence-and-qnames-xquery.md)  
  描述時序以及 QNames 與預先定義的命名空間。  
   
- [運算式內容和查詢評估 &#40;XQuery &#41;](../xquery/expression-context-and-query-evaluation-xquery.md)  
+ [運算式內容和查詢評估&#40;XQuery&#41;](../xquery/expression-context-and-query-evaluation-xquery.md)  
  描述評估 XQuery 的兩個內容。 這兩個內容是靜態和動態的。  
   
- [不可部分完成 &#40;XQuery &#41;](../xquery/atomization-xquery.md)  
+ [不可部分完成&#40;XQuery&#41;](../xquery/atomization-xquery.md)  
  描述自動化，這是擷取項目的具類型值之處理序。  
   
- [有效的布林值 &#40;XQuery &#41;](../xquery/effective-boolean-value-xquery.md)  
+ [有效的布林值&#40;XQuery&#41;](../xquery/effective-boolean-value-xquery.md)  
  描述有效的布林值。 運算式可用此值來計算，以傳回單一布林值、節點時序或空白時序。  
   
- [型別系統 &#40;XQuery &#41;](../xquery/type-system-xquery.md)  
+ [類型系統&#40;XQuery&#41;](../xquery/type-system-xquery.md)  
  描述有各種預先定義類型的 XQuery 類型系統。 XQuery 是結構描述類型的強型語言，且為不具類型的資料之弱型語言。  
   
- [錯誤處理 &#40;XQuery &#41;](../xquery/error-handling-xquery.md)  
+ [錯誤處理&#40;XQuery&#41;](../xquery/error-handling-xquery.md)  
  描述 XQuery 中靜態、動態和類型錯誤的處理。  
   
  [XQuery 中的註解](../xquery/comments-in-xquery.md)  

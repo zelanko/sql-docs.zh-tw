@@ -1,31 +1,23 @@
 ---
-title: "使用從模型檢視器鑽研 |Microsoft 文件"
-ms.custom: 
-ms.date: 03/01/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
-ms.assetid: e5e065ad-c688-4c2c-8c82-7f3038e04915
-caps.latest.revision: 
-author: Minewiskan
+title: 使用從模型檢視器鑽研 |Microsoft 文件
+ms.date: 05/08/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: data-mining
+ms.topic: conceptual
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 31ac0cffe6656c5d644b5424b56f150572dc9af6
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 9c1d636b4435aca63ffadbef3b45e93f3215a40c
+ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="use-drillthrough-from-the-model-viewers"></a>從模型檢視器使用鑽研
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-根據模型類型，您可以從資料採礦設計師的 [採礦模型檢視器] 索引標籤上的瀏覽檢視器中使用鑽研，以瀏覽採礦模型中使用的案例或查看採礦結構中的其他資料行。 雖然因為模型中的模式無法直接連結到特定案例，導致許多模型類型不支援鑽研，但下列模型類型支援鑽研。  
+  根據模型類型，您可以從資料採礦設計師的 [採礦模型檢視器] 索引標籤上的瀏覽檢視器中使用鑽研，以瀏覽採礦模型中使用的案例或查看採礦結構中的其他資料行。 雖然因為模型中的模式無法直接連結到特定案例，導致許多模型類型不支援鑽研，但下列模型類型支援鑽研。  
   
  請注意，模型上必須已啟用鑽研，而且您必須擁有適當的權限。 無論模型是否以前已處理並具有內容，如果模型處於未處理狀態，鑽研選項也可能會停用。 若要透過使用鑽研擷取模型案例資料，結構和模型的快取必須是最新狀態。  
   

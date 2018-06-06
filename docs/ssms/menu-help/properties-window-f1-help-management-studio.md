@@ -1,16 +1,15 @@
 ---
-title: "屬性視窗 F1 說明 (Management Studio) | Microsoft Docs"
-ms.custom: 
+title: 屬性視窗 F1 說明 (Management Studio) | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
 ms.component: ssms-menu
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: tools-ssms
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ssms
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 f1_keywords:
 - .SPID
 - .ExecutionTime
@@ -25,19 +24,19 @@ helpviewer_keywords:
 - Properties window [SQL Server Management Studio]
 - SQL Server Management Studio Help [SQL Server], properties window
 ms.assetid: f682ff0d-0161-4b42-a689-26eeb077d9e9
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 868c16ecea52d24010ca2012756cfc00e7cdd15a
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.openlocfilehash: 3c7320b1f4d91d94b4e53da3640458030057a45f
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="properties-window-f1-help-management-studio"></a>屬性視窗 F1 說明 (Management Studio)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 使用 [屬性] 視窗來檢視所選取項目的屬性。 您也可以使用 [屬性] 視窗來檢視檔案、專案和方案屬性。 按一下 [檢視] 功能表上的 [屬性視窗]，就可以使用 [屬性] 視窗。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+使用 [屬性] 視窗來檢視所選取元素的屬性。 您也可以使用 [屬性] 視窗來檢視檔案、專案和方案屬性。 按一下 [檢視] 功能表上的 [屬性視窗]，就可以使用 [屬性] 視窗。  
   
 視特定屬性的需求而定，[屬性] 視窗會顯示不同類型的編輯欄位。 以灰色顯示的屬性是唯讀屬性。  
   

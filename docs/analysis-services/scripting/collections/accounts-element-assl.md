@@ -1,36 +1,23 @@
 ---
-title: "帳戶元素 (ASSL) |Microsoft 文件"
-ms.custom: 
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+title: 帳戶元素 (ASSL) |Microsoft 文件
+ms.date: 05/03/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: assl
 ms.topic: reference
-apiname: Accounts Element
-apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
-apitype: Schema
-applies_to: SQL Server 2016 Preview
-f1_keywords: Accounts
-helpviewer_keywords: Accounts element
-ms.assetid: 3ec62f58-c19b-4b15-b040-8941521a389b
-caps.latest.revision: "44"
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 68975a4da8425a423f38bed174c180ea5d27299b
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: bf3d3b56e9cc2b299ddcdec1c0a506e0168f8741
+ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="accounts-element-assl"></a>Accounts 元素 (ASSL)
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]包含集合中所定義的帳戶類型[資料庫](../../../analysis-services/scripting/objects/database-element-assl.md)項目。  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+  包含集合中所定義的帳戶類型[資料庫](../../../analysis-services/scripting/objects/database-element-assl.md)項目。  
   
 ## <a name="syntax"></a>語法  
   
@@ -47,7 +34,7 @@ ms.lasthandoff: 01/08/2018
   
 ## <a name="element-characteristics"></a>元素特性  
   
-|特性|描述|  
+|特性|說明|  
 |--------------------|-----------------|  
 |資料類型和長度|無 (集合)|  
 |預設值|無 (集合)|  
@@ -57,7 +44,7 @@ ms.lasthandoff: 01/08/2018
   
 |關聯性|元素|  
 |------------------|-------------|  
-|父元素|[[資料庫]](../../../analysis-services/scripting/objects/database-element-assl.md)|  
+|父元素|[資料庫](../../../analysis-services/scripting/objects/database-element-assl.md)|  
 |子元素|[帳戶](../../../analysis-services/scripting/objects/account-element-assl.md)|  
   
 ## <a name="remarks"></a>備註  
@@ -69,8 +56,8 @@ ms.lasthandoff: 01/08/2018
   
  分析管理物件 (AMO) 物件模型中的對應元素是<xref:Microsoft.AnalysisServices.AccountCollection>。  
   
-## <a name="see-also"></a>請參閱  
- [AccountType 元素 &#40;ASSL &#41;](../../../analysis-services/scripting/properties/accounttype-element-assl.md)   
- [集合 &#40;ASSL &#41;](../../../analysis-services/scripting/collections/collections-assl.md)  
+## <a name="see-also"></a>另請參閱  
+ [AccountType 元素&#40;ASSL&#41;](../../../analysis-services/scripting/properties/accounttype-element-assl.md)   
+ [集合 & #40;ASSL & #41;](../../../analysis-services/scripting/collections/collections-assl.md)  
   
   

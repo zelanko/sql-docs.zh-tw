@@ -1,26 +1,19 @@
 ---
-title: "遠端資料表副本 (SQL Server PDW)"
-author: barbkess
-ms.author: barbkess
-manager: jhubbard
-ms.prod: analytics-platform-system
-ms.prod_service: mpp-data-warehouse
-ms.service: 
-ms.component: 
-ms.technology: mpp-data-warehouse
-ms.custom: 
-ms.date: 01/13/2017
-ms.reviewer: na
-ms.suite: sql
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: e00d948f-fede-4d41-a45d-67134770ce37
-caps.latest.revision: "23"
-ms.openlocfilehash: 3de6700957b48c5022c73c3d521bf6f6ed090553
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+title: 遠端資料表複製-Parallel Data Warehouse |Microsoft 文件
+description: 使用遠端資料表複製 Analytics Platform System 平行資料倉儲中。
+author: mzaman1
+manager: craigg
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
+ms.openlocfilehash: 5ed517a471368e4192ad7393a92274424d37f975
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/19/2018
 ---
 # <a name="remote-table-copy"></a>遠端資料表複製
 描述如何將資料表從 SQL Server PDW 資料庫複製到遠端 （非應用裝置） SMP SQL Server 資料庫時，用於遠端資料表複製功能。 使用 SQL Server PDW 啟用中樞和支點案例的遠端資料表副本。  
@@ -35,7 +28,7 @@ ms.lasthandoff: 12/21/2017
   
 -   要複製的資料必須可使用單一的有效 SQL Server PDW 選取[選取](../t-sql/queries/select-transact-sql.md)陳述式。  
   
--   目的地伺服器必須是在非應用裝置的伺服器。 資料無法直接從一個工具複製到另一個使用中的指示本主題。  
+-   目的地伺服器必須是非應用裝置伺服器。 資料無法直接從一個工具複製到另一個使用中的指示本主題。  
   
 -   目的地伺服器必須可以存取應用裝置的 Infiniband 網路上的所有節點。  
   

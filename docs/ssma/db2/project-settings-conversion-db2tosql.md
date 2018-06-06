@@ -1,30 +1,28 @@
 ---
-title: "專案設定 （轉換） (DB2ToSQL) |Microsoft 文件"
-ms.prod: sql-non-specified
+title: 專案設定 （轉換） (DB2ToSQL) |Microsoft 文件
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
 ms.component: ssma-db2
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ssma
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: 538c93cf-c5bb-43d5-b758-186d9fb00c19
-caps.latest.revision: "8"
+caps.latest.revision: 8
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
-ms.workload: Inactive
-ms.openlocfilehash: 5f459472409e9fc85322aca5067d0953bd24831a
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+manager: craigg
+ms.openlocfilehash: 64f014daf9dc81362b55931729bf33ac97fa105e
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="project-settings-conversion-db2tosql"></a>專案設定 （轉換） (DB2ToSQL)
 [轉換] 頁面的**專案設定**對話方塊包含自訂 SSMA 如何轉換 DB2 語法來設定[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]語法。  
@@ -100,7 +98,7 @@ SSMA 會將轉換 ROWNUM 運算式，它會將運算式轉換成 TOP 子句，�
 **預設/Optimistic/完整模式：**使用 MERGE 陳述式  
   
 ### <a name="convert-calls-to-subprograms-that-use-default-arguments"></a>將使用預設引數的子的呼叫轉換  
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]函式不支援函式呼叫中省略參數。 此外，[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]函數和程序不支援做為預設參數值的運算式。  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 函式不支援函式呼叫中省略參數。 此外，[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]函數和程序不支援做為預設參數值的運算式。  
   
 -   如果您選取**是**函式呼叫會省略參數，SSMA 會插入關鍵字**預設**函式與呼叫中的正確位置。 然後，它會將標記的呼叫，但出現警告。  
   
@@ -115,7 +113,7 @@ SSMA 會將轉換 ROWNUM 運算式，它會將運算式轉換成 TOP 子句，�
   
 -   如果您選取**是**，SSMA 會將所有使用計數都轉換成 COUNT_BIG。  
   
--   如果您選取**否**，函式會保留為計數。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]如果函式傳回的值大於 2，會傳回錯誤<sup>31</sup>-1。  
+-   如果您選取**否**，函式會保留為計數。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 如果函式傳回的值大於 2，會傳回錯誤<sup>31</sup>-1。  
   
 當您選取中的轉換模式**模式** 方塊中，SSMA 會套用下列設定：  
   
@@ -137,7 +135,7 @@ SSMA 會將轉換 ROWNUM 運算式，它會將運算式轉換成 TOP 子句，�
 **完整模式：** [是]  
   
 ### <a name="convert-foreign-keys-with-set-null-referential-action-on-column-that-is-not-null"></a>NOT NULL 轉換的外部索引鍵資料行上 SET NULL 參考動作  
-DB2 可讓建立 foreign key 條件約束，其中 SET NULL 不執行動作，可能是因為參考的資料行中不允許 null 值。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]不允許這類外部索引鍵的組態。  
+DB2 可讓建立 foreign key 條件約束，其中 SET NULL 不執行動作，可能是因為參考的資料行中不允許 null 值。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 不允許這類外部索引鍵的組態。  
   
 -   如果您選取**是**、 SSMA 將會產生與 DB2 的參考動作，但您必須進行手動變更，然後再載入條件約束[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]。 例如，您可以選擇 NO ACTION，而不是設定為 NULL。  
   
@@ -227,7 +225,7 @@ SSMA 可以轉換 PL/SQL 子類型有兩種：
   
 -   如果您選取**是**，SSMA 會建立[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]使用者定義類型從子型別，並將它用於此子類型的每個變數。  
   
--   如果您選取**否**，SSMA 會取代所有來源宣告子類型的基礎類型，並如往常般將轉換結果。 在此情況下中, 不建立任何其他類型[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]  
+-   如果您選取**否**，SSMA 會取代所有來源宣告子類型的基礎類型，並如往常般將轉換結果。 在此情況下中, 不建立任何其他類型 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]  
   
 當您選取中的轉換模式**模式** 方塊中，SSMA 會套用下列設定：  
   
@@ -317,7 +315,7 @@ SSMA 可以模擬 DB2 ORDER BY 行為，藉由檢查 NULL 值。 它然後先排
   
 -   如果您選取**是**，SSMA 會將呼叫 sysdb 程序 db_error_exact_one_row_check 每個 SELECT 陳述式後面。 此程序會模擬 NO_DATA_FOUND 和 TOO_MANY_ROWS 例外狀況。 這是預設值，它可讓您重現盡可能接近 DB2 行為。 您應該一律選擇**是**如果的原始程式碼已經處理這些錯誤的例外狀況處理常式。 請注意，是否 SELECT 陳述式就會發生在使用者定義函式，此模組將被轉換成預存程序，因為在執行預存程序，並引發例外狀況與不相容[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]函式的內容。  
   
--   如果您選取**否**，將會產生任何例外狀況。 有助於進行 SSMA 會將轉換的使用者定義函式和您想要保留中的函式[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]  
+-   如果您選取**否**，將會產生任何例外狀況。 有助於進行 SSMA 會將轉換的使用者定義函式和您想要保留中的函式 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]  
   
 當您選取中的轉換模式**模式** 方塊中，SSMA 會套用下列設定：  
   
@@ -370,7 +368,7 @@ SSMA 當建立資料表中的[!INCLUDE[ssNoVersion](../../includes/ssnoversion_m
 **預設開放式/全模式：**內嵌  
   
 ### <a name="use-isnull-in-string-concatenation"></a>字串串連中使用 ISNULL  
-DB2 和[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]字串串連的方式包含 NULL 值時傳回不同的結果。 DB2 會將 NULL 值，像是空的字元集。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]會傳回 NULL。  
+DB2 和[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]字串串連的方式包含 NULL 值時傳回不同的結果。 DB2 會將 NULL 值，像是空的字元集。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 會傳回 NULL。  
   
 -   如果您選取**是**，SSMA 取代 DB2 串連字元 (|)[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]串連字元 （+）。 SSMA 還會檢查 NULL 值串連兩邊的運算式。  
   
@@ -430,7 +428,7 @@ CONCAT 函式呼叫使用 ISNULL 陳述式來模擬 DB2 行為。 此設定有�
 ## <a name="returning-clause-conversion"></a>傳回子句轉換  
   
 ### <a name="convert-returning-clause-in-delete-statement-to-output"></a>將 DELETE 陳述式中的 RETURNING 子句轉換成輸出  
-DB2 提供 RETURNING 子句來立即取得已刪除的值。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]搭配 OUTPUT 子句中提供該功能。  
+DB2 提供 RETURNING 子句來立即取得已刪除的值。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 搭配 OUTPUT 子句中提供該功能。  
   
 -   如果您選取**是**，SSMA 會將轉換 DELETE 陳述式中的 RETURNING 子句的 OUTPUT 子句。 因為資料表上的觸發程序可以變更值，傳回的值可能會在不同[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]比 DB2 中。  
   
@@ -441,7 +439,7 @@ DB2 提供 RETURNING 子句來立即取得已刪除的值。 [!INCLUDE[ssNoVersi
 **預設開放式/全模式：** [是]  
   
 ### <a name="convert-returning-clause-in-insert-statement-to-output"></a>將 INSERT 陳述式中的 RETURNING 子句轉換成輸出  
-DB2 提供 RETURNING 子句來立即取得插入的值。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]搭配 OUTPUT 子句中提供該功能。  
+DB2 提供 RETURNING 子句來立即取得插入的值。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 搭配 OUTPUT 子句中提供該功能。  
   
 -   如果您選取**是**，SSMA 會將 INSERT 陳述式中的 RETURNING 子句轉換成輸出。 因為資料表上的觸發程序可以變更值，傳回的值可能會在不同[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]比 DB2 中。  
   
@@ -452,7 +450,7 @@ DB2 提供 RETURNING 子句來立即取得插入的值。 [!INCLUDE[ssNoVersion]
 **預設開放式/全模式：** [是]  
   
 ### <a name="convert-returning-clause-in-update-statement-to-output"></a>將 UPDATE 陳述式中的 RETURNING 子句轉換成輸出  
-DB2 提供 RETURNING 子句來立即取得更新的值。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]搭配 OUTPUT 子句中提供該功能。  
+DB2 提供 RETURNING 子句來立即取得更新的值。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 搭配 OUTPUT 子句中提供該功能。  
   
 -   如果您選取**是**，SSMA 會將 UPDATE 陳述式中的 RETURNING 子句轉換成的 OUTPUT 子句。 因為資料表上的觸發程序可以變更值，傳回的值可能會在不同[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]比 DB2 中。  
   
@@ -488,6 +486,6 @@ SSMA 還提供用以將 DB2 序列轉換成 SSMA 順序模擬器選項。 這是
   
 -   如果您選取**否**，SSMA 會將標示為外部觸發程序上的轉換後排序 CURRVAL 並產生錯誤的所有參考。  
   
-## <a name="see-also"></a>請參閱  
-[使用者介面參考 &#40; DB2ToSQL &#41;](../../ssma/db2/user-interface-reference-db2tosql.md)  
+## <a name="see-also"></a>另請參閱  
+[使用者介面參考&#40;DB2ToSQL&#41;](../../ssma/db2/user-interface-reference-db2tosql.md)  
   

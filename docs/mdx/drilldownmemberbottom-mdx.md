@@ -1,30 +1,20 @@
 ---
-title: "DrilldownMemberBottom (MDX) |Microsoft 文件"
-ms.custom: 
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: language-reference
-f1_keywords: DRILLDOWNMEMBERBOTTOM
-dev_langs: kbMDX
-helpviewer_keywords: DrilldownMemberBottom function
-ms.assetid: 603927ba-68f6-4e7a-b17f-44cad33bdfb0
-caps.latest.revision: "35"
-author: Minewiskan
+title: DrilldownMemberBottom (MDX) |Microsoft 文件
+ms.date: 05/30/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: mdx
+ms.topic: reference
 ms.author: owend
-manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: aa91524e15441d2e11945dcda798d86aa16b0945
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: 517e42b2ed5ba2f06de1e0d12b9f04bc2848bceb
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34578210"
 ---
 # <a name="drilldownmemberbottom-mdx"></a>DrilldownMemberBottom (MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -63,7 +53,7 @@ DrillDownMemberBottom(<Set_Expression1>, <Set_Expression2>, <Count> [,[<Numeric_
 ## <a name="remarks"></a>備註  
  如果指定數值運算式， **DrilldownMemberBottom**函式來排序，以子成員集合評估後遞增的順序，根據值的數值運算式的第一個集合中每個成員的子系。 如果沒有指定數值運算式，此函數會根據子成員集合所代表的資料格值 (由查詢內容所決定)，以遞增的順序來排序第一個集合中每個成員的子系。 此行為類似 BottomCount 和 Tail (MDX) 函數，這些函數會依自然順序傳回成員的集合，不進行任何排序。  
   
- 完成排序之後， **DrilldownMemberBottom**函式會傳回一組包含父成員中指定的子成員數目*計數，*是最小值與包含在兩個集合。  
+ 完成排序之後， **DrilldownMemberBottom**函式會傳回一組包含父成員中指定的子成員數目*計數，* 是最小值與包含在兩個集合。  
   
  如果**遞迴**指定，如先前所述，函式會排序第一個集合，則遞迴比較第一個集合的成員，如同在階層中，針對第二個集合的組織方式。 此函數會擷取屬於第一個集合並且也出現在第二個集合中每個成員的最低子系數目。  
   
@@ -71,9 +61,9 @@ DrillDownMemberBottom(<Set_Expression1>, <Set_Expression2>, <Count> [,[<Numeric_
   
  **DrilldownMemberBottom**函數很相似[DrilldownMember](../mdx/drilldownmember-mdx.md)運作，但不包含每個成員的所有子系中第一個集合並且也存在第二個集中**DrilldownMemberBottom**函式會傳回每個成員的子成員的最底層的數目。  
   
- 查詢 XMLA 屬性 MdpropMdxDrillFunctions，可讓您確認伺服器為鑽研函數; 提供的支援層級請參閱[支援 XMLA 屬性 &#40;XMLA &#41;](../analysis-services/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties.md)如需詳細資訊。  
+ 查詢 XMLA 屬性 MdpropMdxDrillFunctions，可讓您確認伺服器為鑽研函數; 提供的支援層級請參閱[支援 XMLA 屬性&#40;XMLA&#41; ](../analysis-services/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties.md)如需詳細資訊。  
   
-## <a name="see-also"></a>請參閱  
- [MDX 函數參考 &#40;MDX &#41;](../mdx/mdx-function-reference-mdx.md)  
+## <a name="see-also"></a>另請參閱  
+ [MDX 函數參考&#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

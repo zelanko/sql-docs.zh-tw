@@ -1,31 +1,23 @@
 ---
-title: "關聯性 |Microsoft 文件"
-ms.custom: 
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services, azure-analysis-services
-ms.service: 
-ms.component: multidimensional-tabular
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
-ms.assetid: 21e0144a-3cfd-4bc7-87ff-bb7d1800ed2f
-caps.latest.revision: 
-author: Minewiskan
+title: 關聯性 |Microsoft 文件
+ms.date: 05/07/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: tabular-models
+ms.topic: conceptual
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: ff8d2460b53eed9189b230fea270b97e323ac0b9
-ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
+ms.openlocfilehash: b704b7e2fdc299006d77e08314d2b16ffd750a0a
+ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="relationships"></a>關聯性 
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
-在表格式模型中，關聯性是指兩個資料表之間的連接。 關聯性會建立兩個資料表中的資料相互關聯的方式。 例如，Customers 資料表和 Orders 資料表可以產生關聯，以便顯示彼此有關聯性的客戶名稱。  
+  在表格式模型中，關聯性是指兩個資料表之間的連接。 關聯性會建立兩個資料表中的資料相互關聯的方式。 例如，Customers 資料表和 Orders 資料表可以產生關聯，以便顯示彼此有關聯性的客戶名稱。  
   
  當使用 [資料表匯入精靈] 從相同資料來源匯入時，您選擇要匯入之資料表 (位於資料來源) 中已存在的關聯性會在模型中重新建立。 您可以使用 [圖表檢視] 中的模型設計師或使用 [管理關聯性] 對話方塊，檢視偵測到且自動重新建立的關聯性。 您也可以使用 [圖表檢視] 中的模型設計師或使用 [建立關聯性] 或 [管理關聯性] 對話方塊，手動建立資料表之間的新關聯性。  
   

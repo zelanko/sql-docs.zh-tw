@@ -1,31 +1,29 @@
 ---
-title: "SQL 屬性範例 (VBScript) |Microsoft 文件"
-ms.technology:
-- drivers
-ms.custom: 
+title: SQL 屬性範例 (VBScript) |Microsoft 文件
+ms.technology: connectivity
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.component: reference
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 dev_langs:
 - VB
 helpviewer_keywords:
 - SQL property [ADO], VBScript example
 ms.assetid: 32c33bcf-3320-4836-9e2e-99c8978ce581
-caps.latest.revision: 
+caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: d1ddca15f0848be1a3cc6fb9789d2ccba8d638cf
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: a64946744e552a0dd8dc086f2f95deb7d2827bcf
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sql-property-example-vbscript"></a>SQL 屬性範例 (VBScript)
 > [!IMPORTANT]
@@ -94,7 +92,7 @@ body {
 <!-- EndSQLDesignVBS -->  
 ```  
   
- 下列範例示範如何設定必要的參數**.RDSDataControl**在執行階段。 若要測試此範例中，剪下並貼入下列程式碼一般的 ASP 文件然後命名**SQLRuntimeVBS.asp**。 ASP 指令碼會找出您的伺服器。  
+ 下列範例示範如何設定必要的參數 **.RDSDataControl**在執行階段。 若要測試此範例中，剪下並貼入下列程式碼一般的 ASP 文件然後命名**SQLRuntimeVBS.asp**。 ASP 指令碼會找出您的伺服器。  
   
 ```  
 <!-- BeginSQLRuntimeVBS -->  

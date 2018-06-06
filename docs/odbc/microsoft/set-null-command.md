@@ -1,28 +1,26 @@
 ---
-title: "SET NULL 命令 |Microsoft 文件"
-ms.custom: 
+title: SET NULL 命令 |Microsoft 文件
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
-ms.component: odbc
-ms.reviewer: 
+ms.prod: sql
+ms.prod_service: connectivity
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
-ms.topic: article
-helpviewer_keywords: set nullSET NULL
+ms.technology: connectivity
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
+helpviewer_keywords:
+- set nullSET NULL
 ms.assetid: 410c5a6e-e957-4ecc-9e2d-e591cbc0bc4f
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
-ms.workload: Inactive
-ms.openlocfilehash: 1050db2b6a50fc794626b6017bd26af05f458a8a
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+manager: craigg
+ms.openlocfilehash: 641269e9d216bc54c1b84a77b6b769d1618d24fb
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="set-null-command"></a>SET NULL 命令
 決定如何 ALTER TABLE SQL、 CREATE TABLE SQL 和插入-支援 null 值的 SQL 命令。  
@@ -48,7 +46,7 @@ SET NULL ON | OFF
 ## <a name="remarks"></a>備註  
  ALTER TABLE、 CREATE TABLE 和 INSERT-SQL 支援 SET NULL 會影響如何只在 null 值。 其他命令會受到 NULL 設定。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [ALTER TABLE 的 SQL 命令](../../odbc/microsoft/alter-table-sql-command.md)   
  [建立資料表的 SQL 命令](../../odbc/microsoft/create-table-sql-command.md)   
  [INSERT - SQL 命令](../../odbc/microsoft/insert-sql-command.md)

@@ -1,27 +1,25 @@
 ---
-title: "步驟 1： 設定適用於拼音開發的開發環境 |Microsoft 文件"
-ms.custom: 
+title: 步驟 1： 設定適用於拼音開發的開發環境 |Microsoft 文件
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
+ms.prod: sql
+ms.prod_service: connectivity
 ms.component: ruby
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: connectivity
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: 8cdbadeb-f640-406c-977c-d2d44b7b5368
-caps.latest.revision: "9"
+caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
-ms.workload: Inactive
-ms.openlocfilehash: 1f50042c6ae0233b5bc39ce2879391d1d5340741
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+manager: craigg
+ms.openlocfilehash: c8b4cd36a78952e8d783e79388ede49287e5e0f7
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="step-1-configure-development-environment-for-ruby-development"></a>步驟 1： 設定適用於拼音開發的開發環境
 您必須設定開發環境的必要條件，才能開發使用 SQL Server 的 Ruby 驅動程式的應用程式。    
@@ -29,7 +27,7 @@ ms.lasthandoff: 11/18/2017
 請注意 Ruby 驅動程式會使用 TDS 通訊協定，SQL Server 和 Azure SQL Database 中的預設會啟用。  不需要進行其他組態設定。  
   
   
-## <a name="windows"></a>Windows  
+## <a name="windows"></a>視窗  
   
 1.  **下載後安裝程式**  
 如果您的電腦沒有 Ruby 請加以安裝。 新的拼音使用者，我們建議您針對使用拼音 2.2.X 安裝程式。 這些資料行會提供穩定的語言和廣泛的封裝 （珍貴） 相容，並且更新清單。 移[拼音下載頁面](http://rubyinstaller.org/downloads/)及下載適當的 2.1.x 版安裝程式。 如範例中，如果您是在 64 位元的電腦，下載 Ruby 2.1.6 (x64) 安裝程式。   

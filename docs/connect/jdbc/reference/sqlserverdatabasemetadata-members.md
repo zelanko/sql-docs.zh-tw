@@ -1,27 +1,24 @@
 ---
-title: "SQLServerDatabaseMetaData 成員 |Microsoft 文件"
-ms.custom: 
+title: SQLServerDatabaseMetaData 成員 |Microsoft 文件
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
-ms.component: jdbc
-ms.reviewer: 
+ms.prod: sql
+ms.prod_service: connectivity
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: connectivity
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: 327ba0bc-438a-494c-b119-1cd4a096bb58
-caps.latest.revision: "24"
+caps.latest.revision: 24
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
-ms.workload: Inactive
-ms.openlocfilehash: a467dca2697056235c1ac4584f6eea299d5f0e17
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+manager: craigg
+ms.openlocfilehash: 99e11d827cfc8e81f00a471b06521f33e872d64e
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sqlserverdatabasemetadata-members"></a>SQLServerDatabaseMetaData 成員
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -51,7 +48,7 @@ ms.lasthandoff: 11/18/2017
 |[dataDefinitionIgnoredInTransactions](../../../connect/jdbc/reference/datadefinitionignoredintransactions-method-sqlserverdatabasemetadata.md)|擷取值，此值指出這個資料庫是否會忽略交易中的資料定義陳述式。|  
 |[deletesAreDetected](../../../connect/jdbc/reference/deletesaredetected-method-sqlserverdatabasemetadata.md)|可以呼叫來偵測可見資料列的刪除是否擷取[rowDeleted](../../../connect/jdbc/reference/rowdeleted-method-sqlserverresultset.md)方法[SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md)類別。|  
 |[doesMaxRowSizeIncludeBlobs](../../../connect/jdbc/reference/doesmaxrowsizeincludeblobs-method-sqlserverdatabasemetadata.md)|擷取是否傳回值[getMaxRowSize](../../../connect/jdbc/reference/getmaxrowsize-method-sqlserverdatabasemetadata.md)方法包括 SQL 資料類型 LONGVARCHAR 和 LONGVARBINARY。|  
-|[getAttributes](../../../connect/jdbc/reference/getattributes-method-sqlserverdatabasemetadata.md)|擷取使用者定義類型的給定類型之給定屬性的描述，此類型可由給定結構描述和目錄提供。|  
+|[GetAttributes](../../../connect/jdbc/reference/getattributes-method-sqlserverdatabasemetadata.md)|擷取使用者定義類型的給定類型之給定屬性的描述，此類型可由給定結構描述和目錄提供。|  
 |[getBestRowIdentifier](../../../connect/jdbc/reference/getbestrowidentifier-method-sqlserverdatabasemetadata.md)|擷取資料表中最佳資料行集的描述，此資料行集可唯一識別資料列。|  
 |[getCatalogs](../../../connect/jdbc/reference/getcatalogs-method-sqlserverdatabasemetadata.md)|擷取已連接伺服器中所提供的目錄名稱。|  
 |[getCatalogSeparator](../../../connect/jdbc/reference/getcatalogseparator-method-sqlserverdatabasemetadata.md)|擷取**字串**，這個資料庫會使用做為類別目錄和資料表名稱之間的分隔符號。|  
@@ -106,7 +103,7 @@ ms.lasthandoff: 11/18/2017
 |[getProcedureTerm](../../../connect/jdbc/reference/getprocedureterm-method-sqlserverdatabasemetadata.md)|擷取慣用詞彙做為這個資料庫中的「程序」。|  
 |[getResultSetHoldability](../../../connect/jdbc/reference/getresultsetholdability-method-sqlserverdatabasemetadata.md)|擷取這個資料庫預設結果集保留性。|  
 |[getRowIdLifetime](../../../connect/jdbc/reference/getrowidlifetime-method-sqlserverdatabasemetadata.md)|傳回狀態，此狀態會指出是否支援 SQL RowId 資料類型。 如果支援，將傳回 RowId 物件維持有效的存留期間。|  
-|[getSchemas](../../../connect/jdbc/reference/getschemas-method.md)|擷取目前資料庫中所提供的結構描述名稱。|  
+|[GetSchemas](../../../connect/jdbc/reference/getschemas-method.md)|擷取目前資料庫中所提供的結構描述名稱。|  
 |[getSchemaTerm](../../../connect/jdbc/reference/getschematerm-method-sqlserverdatabasemetadata.md)|擷取慣用詞彙做為這個資料庫中的「目錄」。|  
 |[getSearchStringEscape](../../../connect/jdbc/reference/getsearchstringescape-method-sqlserverdatabasemetadata.md)|擷取**字串**可用來逸出萬用字元。|  
 |[getSQLKeywords](../../../connect/jdbc/reference/getsqlkeywords-method-sqlserverdatabasemetadata.md)|擷取這個資料庫的非同時為 SQL92 關鍵字的其他所有 SQL 關鍵字的逗號分隔清單。|  
@@ -119,10 +116,10 @@ ms.lasthandoff: 11/18/2017
 |[getTables](../../../connect/jdbc/reference/gettables-method-sqlserverdatabasemetadata.md)|擷取可依給定目錄、結構描述或資料表名稱模式取得之資料表的描述。|  
 |[getTableTypes](../../../connect/jdbc/reference/gettabletypes-method-sqlserverdatabasemetadata.md)|擷取目前資料庫中所提供的資料表類型。|  
 |[getTimeDateFunctions](../../../connect/jdbc/reference/gettimedatefunctions-method-sqlserverdatabasemetadata.md)|擷取這個資料庫可用之時間和日期函數的逗號分隔清單。|  
-|[getTypeInfo](../../../connect/jdbc/reference/gettypeinfo-method-sqlserverdatabasemetadata.md)|擷取目前資料庫支援之所有標準 SQL 類型的描述。|  
+|[GetTypeInfo](../../../connect/jdbc/reference/gettypeinfo-method-sqlserverdatabasemetadata.md)|擷取目前資料庫支援之所有標準 SQL 類型的描述。|  
 |[getUDTs](../../../connect/jdbc/reference/getudts-method-sqlserverdatabasemetadata.md)|擷取使用者定義類型的描述，這些類型會定義在特定的結構描述中。|  
 |[getURL](../../../connect/jdbc/reference/geturl-method-sqlserverdatabasemetadata.md)|擷取這個資料庫的 URL。|  
-|[getUserName](../../../connect/jdbc/reference/getusername-method-sqlserverdatabasemetadata.md)|擷取這個資料庫的已知使用者名稱。|  
+|[GetUserName](../../../connect/jdbc/reference/getusername-method-sqlserverdatabasemetadata.md)|擷取這個資料庫的已知使用者名稱。|  
 |[getVersionColumns](../../../connect/jdbc/reference/getversioncolumns-method-sqlserverdatabasemetadata.md)|擷取資料表的資料行描述，此資料表會在資料列中的任何值更新時自動跟著更新。|  
 |[insertsAreDetected](../../../connect/jdbc/reference/insertsaredetected-method-sqlserverdatabasemetadata.md)|擷取是否可以呼叫方法來偵測可見資料列插入[rowInserted](../../../connect/jdbc/reference/rowinserted-method-sqlserverresultset.md)方法[SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md)類別。|  
 |[isCatalogAtStart](../../../connect/jdbc/reference/iscatalogatstart-method-sqlserverdatabasemetadata.md)|擷取值，此值指出目錄是否會出現在完整資料表名稱的開頭。|  
@@ -222,7 +219,7 @@ ms.lasthandoff: 11/18/2017
 |java.lang.Object|clone, equals, finalize, getClass, hashCode, notify, notifyAll, toString, wait|  
 |java.sql.Wrapper|isWrapperFor, unwrap|  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [SQLServerDatabaseMetaData 類別](../../../connect/jdbc/reference/sqlserverdatabasemetadata-class.md)  
   
   

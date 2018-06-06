@@ -1,36 +1,34 @@
 ---
-title: "實作事件通知 | Microsoft Docs"
-ms.custom: 
+title: 實作事件通知 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
 ms.component: service-broker
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - event notifications [SQL Server], target service
 - target service [SQL Server]
 - event notifications [SQL Server], creating
 ms.assetid: 29ac8f68-a28a-4a77-b67b-a8663001308c
-caps.latest.revision: 
-author: BYHAM
-ms.author: rickbyh
+caps.latest.revision: 34
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 259065dc0de5207598a785e21815cfaddf37d4b1
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.openlocfilehash: 46be0ae46fff0af1ba926777e042312523500ad0
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="implement-event-notifications"></a>實作事件通知
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-若要實作事件通知，您必須先建立目標服務來接收事件通知，然後建立事件通知。  
+  若要實作事件通知，您必須先建立目標服務來接收事件通知，然後建立事件通知。  
   
 > [!IMPORTANT]  
 >  [!INCLUDE[ssSB](../../includes/sssb-md.md)] 對話安全性。 對話安全性必須根據完整安全性模型，以手動方式加以設定。  

@@ -1,16 +1,14 @@
 ---
-title: "Transact-SQL 語法慣例 (Transact-SQL) | Microsoft Docs"
-ms.custom: 
+title: Transact-SQL 語法慣例 (Transact-SQL) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/09/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
 ms.component: t-sql|language-elements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: t-sql
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sql13.TSQLExpandPortal.f1
@@ -30,16 +28,16 @@ helpviewer_keywords:
 - naming conventions [SQL Server]
 - syntax [SQL Server], Transact-SQL
 ms.assetid: 35fbcf7f-8b55-46cd-a957-9b8c7b311241
-caps.latest.revision: 
+caps.latest.revision: 55
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: Active
-ms.openlocfilehash: 5e829518825abe3b4b6da589513d085161eddcb0
-ms.sourcegitcommit: 657d18fc805512c9574b2fe7451310601b9d78cb
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: a20affed4c50345d5b7d2d61a2f2666e456a5971
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="transact-sql-syntax-conventions-transact-sql"></a>Transact-SQL 語法慣例 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -65,9 +63,9 @@ ms.lasthandoff: 03/12/2018
   
 *server_name* **.**[*database_name*]**.**[*schema_name*]**.***object_name*  
   
- | *database_name***.**[*schema_name*]**.***object_name*  
+ | *database_name***.**[* schema_name *]**.***object_name*  
   
- | *schema_name***.***object_name*  
+ | *schema_name ***.*** object_name*  
   
  | *object_name*  
   

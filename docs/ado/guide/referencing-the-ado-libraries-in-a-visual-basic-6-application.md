@@ -1,16 +1,15 @@
 ---
-title: "參考 Visual Basic 6 應用程式中的 ADO 程式庫 |Microsoft 文件"
-ms.custom: 
+title: 參考 Visual Basic 6 應用程式中的 ADO 程式庫 |Microsoft 文件
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
+ms.tgt_pltfrm: ''
+ms.prod: sql
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology: "“drivers”"
-ms.topic: article
+ms.technology: connectivity
+ms.topic: conceptual
 dev_langs:
 - VB
 helpviewer_keywords:
@@ -18,16 +17,15 @@ helpviewer_keywords:
 - referencing libraries in a Visual Basic application[ADO]
 - ADO, libraries
 ms.assetid: cfd37a82-aad2-41cd-8d13-1566c43d95f0
-caps.latest.revision: 
+caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 937934fd297c876fa023ddae89ac027068bb20c9
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: d2c2aa317f9d4ff810cba13fbb315ce090997583
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="referencing-the-ado-libraries-in-a-visual-basic-6-application"></a>參考 Visual Basic 6 應用程式中的 ADO 程式庫
 ADO 程式庫匯入的 Microsoft Visual Basic 6 應用程式，您必須在 Visual Basic 專案中設定參考。  
@@ -36,13 +34,13 @@ ADO 程式庫匯入的 Microsoft Visual Basic 6 應用程式，您必須在 Visu
   
 1.  建立新的或開啟現有的 Visual Basic 專案。  
   
-2.  按一下**專案**功能表項目，然後選取**參考...**從下拉功能表面板。  
+2.  按一下**專案**功能表項目，然後選取**參考...** 從下拉功能表面板。  
   
-3.  從**可用的參考**，核取方塊， **Microsoft ActiveX Data Objects *n.n*文件庫**，其中***n.n***代表最新版本號碼。 **位置**下列欄位應該識別您的選擇為*$installDir\msado15.dll*，其中*$installDir*表示在其中的目錄路徑 ADO 程式庫已安裝。  
+3.  從**可用的參考**，核取方塊， **Microsoft ActiveX Data Objects *n.n*文件庫**，其中***n.n***代表最新版本號碼。 **位置**下列欄位應該識別您的選擇為 *$installDir\msado15.dll*，其中 *$installDir*表示在其中的目錄路徑 ADO 程式庫已安裝。  
   
-4.  如果您想要使用 ADO MD 中，重複步驟 3 以選取**Microsoft ActiveX Data Objects （多維度） *n.n*文件庫**。 **位置**欄位應該識別這項選擇做為*$installDir\msadomd.dll*。  
+4.  如果您想要使用 ADO MD 中，重複步驟 3 以選取**Microsoft ActiveX Data Objects （多維度） *n.n*文件庫**。 **位置**欄位應該識別這項選擇做為 *$installDir\msadomd.dll*。  
   
-5.  如果您想要使用 ADOX，重複步驟 3 以選取**Microsoft ADO 分機*n.n* DDL 和安全性**。 **位置**欄位應該識別這項選擇做為*$installDir\msadox.dll*。  
+5.  如果您想要使用 ADOX，重複步驟 3 以選取**Microsoft ADO 分機*n.n* DDL 和安全性**。 **位置**欄位應該識別這項選擇做為 *$installDir\msadox.dll*。  
   
 6.  按一下**確定**完成設定的參考。  
   

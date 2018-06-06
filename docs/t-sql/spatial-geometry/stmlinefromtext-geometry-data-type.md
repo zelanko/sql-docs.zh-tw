@@ -1,16 +1,14 @@
 ---
-title: "STMLineFromText (geometry 資料類型) | Microsoft Docs"
-ms.custom: 
+title: STMLineFromText (geometry 資料類型) | Microsoft Docs
+ms.custom: ''
 ms.date: 08/03/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
 ms.component: t-sql|spatial-geography
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: t-sql
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - STMLineFromText (geometry Data Type)
@@ -20,21 +18,20 @@ dev_langs:
 helpviewer_keywords:
 - STMLineFromText (geometry Data Type)
 ms.assetid: 39fe8559-c4c2-4d61-8508-86eb0a103807
-caps.latest.revision: 
+caps.latest.revision: 20
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: ae5056af923732edd4eb64b80b36084f80ba2b68
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 2356c433b27b7ab68e5fffce8b17489693944039
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="stmlinefromtext-geometry-data-type"></a>STMLineFromText (geometry 資料類型)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-從「開放地理空間協會」(OGC) 的「已知文字」(WKT) 表示法傳回 **geometry** 執行個體 (以此執行個體所攜帶的任何 Z (高度) 和 M (測量) 值擴增)。
+從開放地理空間協會 (Open Geospatial Consortium，OGC) 的已知的文字 (Well-Known Text，WKT) 表示法傳回 **geometry** 執行個體，經由此執行個體夾帶的任何 Z (高度) 和 M (測量) 值來擴充。
   
 ## <a name="syntax"></a>語法  
   

@@ -1,17 +1,16 @@
 ---
-title: "移動系統資料庫 | Microsoft Docs"
-ms.custom: 
+title: 移動系統資料庫 | Microsoft Docs
+ms.custom: ''
 ms.date: 08/26/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
 ms.component: databases
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - moving system databases
 - disaster recovery [SQL Server], moving database files
@@ -30,16 +29,15 @@ helpviewer_keywords:
 - Resource database [SQL Server]
 - databases [SQL Server], moving
 ms.assetid: 72bb62ee-9602-4f71-be51-c466c1670878
-caps.latest.revision: 
+caps.latest.revision: 62
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: Active
-ms.openlocfilehash: 3444bc386251013e6dc7e4d81ad408b9a07b971a
-ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
+ms.openlocfilehash: 96f8d859d0ff673cc459e4d7bd81307334ee6971
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="move-system-databases"></a>移動系統資料庫
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -72,11 +70,11 @@ ms.lasthandoff: 02/23/2018
     ALTER DATABASE database_name MODIFY FILE ( NAME = logical_name , FILENAME = 'new_path\os_file_name' )  
     ```  
   
-2.  停止 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的執行個體或關閉系統以執行維護。 如需詳細資訊，請參閱 [Start, Stop, Pause, Resume, Restart the Database Engine, SQL Server Agent, or SQL Server Browser Service](../../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md)。  
+2.  停止 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的執行個體或關閉系統以執行維護。 如需詳細資訊，請參閱 [啟動、停止、暫停、繼續、重新啟動 Database Engine、SQL Server Agent 或 SQL Server Browser 服務](../../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md)。  
   
 3.  將一個或多個檔案移到新位置。  
 
-4.  重新啟動 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的執行個體或伺服器。 如需詳細資訊，請參閱 [Start, Stop, Pause, Resume, Restart the Database Engine, SQL Server Agent, or SQL Server Browser Service](../../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md)。  
+4.  重新啟動 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的執行個體或伺服器。 如需詳細資訊，請參閱 [啟動、停止、暫停、繼續、重新啟動 Database Engine、SQL Server Agent 或 SQL Server Browser 服務](../../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md)。  
   
 5.  執行下列查詢以驗證檔案變更。  
   
@@ -122,7 +120,7 @@ ms.lasthandoff: 02/23/2018
         NET START MSSQL$instancename /f /T3608
         ```  
   
-     如需詳細資訊，請參閱 [Start, Stop, Pause, Resume, Restart the Database Engine, SQL Server Agent, or SQL Server Browser Service](../../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md)。  
+     如需詳細資訊，請參閱 [啟動、停止、暫停、繼續、重新啟動 Database Engine、SQL Server Agent 或 SQL Server Browser 服務](../../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md)。  
   
 3.  對於要移動的每個檔案，使用 **sqlcmd** 命令或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 來執行下列陳述式。  
   
@@ -151,11 +149,11 @@ ms.lasthandoff: 02/23/2018
 ##  <a name="master"></a> 移動 master 資料庫  
  若要移動 master 資料庫，請遵循下列步驟。  
   
-1.  從 **[開始]** 功能表上，依序指向 **[程式集]**、 **[Microsoft SQL Server]**和 **[組態工具]**，再按一下 **[SQL Server 組態管理員]**。  
+1.  從 **[開始]** 功能表上，依序指向 **[程式集]**、 **[Microsoft SQL Server]** 和 **[組態工具]**，再按一下 **[SQL Server 組態管理員]**。  
   
 2.  在 **[SQL Server 服務]** 節點中，以滑鼠右鍵按一下 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的執行個體 (例如 **[SQL Server (MSSQLSERVER)]**)，然後選擇 **[屬性]**。  
   
-3.  在 [SQL Server (<執行個體名稱>) 屬性] 對話方塊中，按一下 [啟動參數] 索引標籤。  
+3.  在 [SQL Server (<執行個體名稱>) 屬性]**** 對話方塊中，按一下 [啟動參數] 索引標籤。  
   
 4.  在 [現有參數] 方塊中，選取 –d 參數來移動 master 資料檔案。 按一下 **[更新]** 來儲存變更。  
   
@@ -219,7 +217,7 @@ ms.lasthandoff: 02/23/2018
   
 2.  在 **[伺服器屬性]** 對話方塊中，選取 **[資料庫設定]**。  
   
-3.  在 **[資料庫預設位置]**底下，瀏覽至資料和記錄檔的新位置。  
+3.  在 **[資料庫預設位置]** 底下，瀏覽至資料和記錄檔的新位置。  
   
 4.  停止 SQL Server 服務然後啟動它來完成變更。  
   

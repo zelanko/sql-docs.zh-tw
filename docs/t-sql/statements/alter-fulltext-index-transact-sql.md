@@ -1,16 +1,14 @@
 ---
 title: ALTER FULLTEXT INDEX (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 04/27/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
 ms.component: t-sql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: t-sql
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - ALTER FULLTEXT INDEX
@@ -24,16 +22,15 @@ helpviewer_keywords:
 - search property lists [SQL Server], associating with full-text indexes
 - ALTER FULLTEXT INDEX statement
 ms.assetid: b6fbe9e6-3033-4d1b-b6bf-1437baeefec3
-caps.latest.revision: 
+caps.latest.revision: 95
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 022cec421b1827c525d18d04d42bdd648936d147
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: f757ad0379550472fe7f75628990180e5ba5b234
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="alter-fulltext-index-transact-sql"></a>ALTER FULLTEXT INDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -88,7 +85,7 @@ ALTER FULLTEXT INDEX ON table_name
 >  如需有關變更追蹤與 WITH NO POPULATION 之間互動的詳細資訊，請參閱本主題後面的＜備註＞一節。  
   
  MANUAL  
- 指定追蹤的變更會手動傳播 (藉由呼叫 ALTER FULLTEXT INDEX... START UPDATE POPULATION [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式 (手動母體擴展)。 您可以使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 來定期呼叫這個 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式。  
+ 指定追蹤的變更會手動傳播 (藉由呼叫 ALTER FULLTEXT INDEX... START UPDATE POPULATION [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式 (「手動母體擴展」)。 您可以使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 來定期呼叫這個 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式。  
   
  AUTO  
  指定在修改基底資料表中的資料時，同時自動散佈追蹤變更 (「自動母體擴展」)。 雖然變更會自動傳播，但這些變更可能不會立即反映在全文檢索索引中。 預設值是 AUTO。  
@@ -127,7 +124,7 @@ ALTER FULLTEXT INDEX ON table_name
   
  您必須針對指定為 *language_term* 的語言來啟用資源，如文字分隔和詞幹分析器。 如果這些資源不支援指定的語言，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會傳回錯誤。  
   
- 如果是包含多種語言之文字資料的非 BLOB 和非 XML 資料行，或資料行所儲存的文字語言不明，請使用中性 (0x0) 語言資源。 如果是儲存在 XML 或 BLOB 類型資料行中的文件，在建立索引時，將使用文件內的語言編碼。 例如，在 XML 資料行中，XML 文件的 xml:lang 屬性會識別語言。 在查詢時，除非在全文檢索查詢中指定 *language_term*，否則，*language_term* 先前所指定的值會成為全文檢索查詢所用的預設語言。  
+ 如果是包含多種語言之文字資料的非 BLOB 和非 XML 資料行，或資料行所儲存的文字語言不明，請使用中性 (0x0) 語言資源。 如果是儲存在 XML 或 BLOB 類型資料行中的文件，在建立索引時，將使用文件內的語言編碼。 例如，在 XML 資料行中，XML 文件的 xml:lang 屬性會識別語言。 在查詢時，除非在全文檢索查詢中指定 *language_term*否則，*language_term* 先前所指定的值會成為全文檢索查詢所用的預設語言。  
   
  STATISTICAL_SEMANTICS  
  **適用於**： [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。  

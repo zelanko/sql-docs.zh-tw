@@ -1,30 +1,31 @@
 ---
-title: "BottomSum (DMX) |Microsoft 文件"
-ms.custom: 
+title: BottomSum (DMX) |Microsoft 文件
+ms.custom: ''
 ms.date: 03/02/2016
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
 ms.component: data-mining
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
-f1_keywords: BOTTOMSUM
-dev_langs: DMX
-helpviewer_keywords: BottomSum function
+f1_keywords:
+- BOTTOMSUM
+dev_langs:
+- DMX
+helpviewer_keywords:
+- BottomSum function
 ms.assetid: fd4b0418-f814-4d83-b2fe-850117e1beb7
-caps.latest.revision: "36"
+caps.latest.revision: 36
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: 6fa897bdaf0ebccf356603eaf0bfd3b4dafa1de6
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: b7bb5ede61f9ddb95c5f9d76ea09ef2667811bc7
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="bottomsum-dmx"></a>BottomSum (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -65,7 +66,7 @@ SELECT (SELECT 'Women''s Mountain Shorts' as [Model]) AS [v Assoc Seq Line Items
   
  範例結果：  
   
-|[模型]|$SUPPORT|$PROBABILITY|$ADJUSTEDPROBABILITY|  
+|模型|$SUPPORT|$PROBABILITY|$ADJUSTEDPROBABILITY|  
 |-----------|--------------|------------------|--------------------------|  
 |Sport-100|4334|0.291283016|0.252695851|  
 |Water Bottle|2866|0.192620472|0.175205052|  
@@ -101,16 +102,16 @@ NATURAL PREDICTION JOIN
   
  範例結果：  
   
-|[模型]|$SUPPORT|$PROBABILITY|$ADJUSTEDPROBABILITY|  
+|模型|$SUPPORT|$PROBABILITY|$ADJUSTEDPROBABILITY|  
 |-----------|--------------|------------------|--------------------------|  
 |Road Bottle Cage|1195|0.08…|0.07…|  
 |Mountain Bottle Cage|1367|0.09…|0.08…|  
   
  **請注意**提供這個範例只是為了說明 BottomSum 的使用方式。 根據資料集的大小而定，此查詢可能會花上很長的一段執行時間。  
   
-## <a name="see-also"></a>請參閱  
- [函式 &#40; DMX &#41;](../dmx/functions-dmx.md)   
- [一般預測函數 &#40; DMX &#41;](../dmx/general-prediction-functions-dmx.md)   
- [BottomPercent &#40; DMX &#41;](../dmx/bottompercent-dmx.md)  
+## <a name="see-also"></a>另請參閱  
+ [函式&#40;DMX&#41;](../dmx/functions-dmx.md)   
+ [一般預測函數&#40;DMX&#41;](../dmx/general-prediction-functions-dmx.md)   
+ [BottomPercent &#40;DMX&#41;](../dmx/bottompercent-dmx.md)  
   
   

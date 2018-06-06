@@ -1,32 +1,33 @@
 ---
-title: "SQLConfigDataSource 函數 |Microsoft 文件"
-ms.custom: 
+title: SQLConfigDataSource 函數 |Microsoft 文件
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
-ms.component: odbc
-ms.reviewer: 
+ms.prod: sql
+ms.prod_service: connectivity
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
-ms.topic: article
-apiname: SQLConfigDataSource
-apilocation: sqlsrv32.dll
+ms.technology: connectivity
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
+apiname:
+- SQLConfigDataSource
+apilocation:
+- sqlsrv32.dll
 apitype: dllExport
-f1_keywords: SQLConfigDataSource
-helpviewer_keywords: SQLConfigDataSource function [ODBC]
+f1_keywords:
+- SQLConfigDataSource
+helpviewer_keywords:
+- SQLConfigDataSource function [ODBC]
 ms.assetid: f8d6e342-c010-434e-b1cd-f5371fb50a14
-caps.latest.revision: "15"
+caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
-ms.workload: Inactive
-ms.openlocfilehash: 6678a9b2fd25a1c639d03753f7e89a47d287adf2
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+manager: craigg
+ms.openlocfilehash: ddff49350de9d4e713b065848ab53649b25cb094
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sqlconfigdatasource-function"></a>SQLConfigDataSource 函數 (英文)
 **一致性**  
@@ -81,7 +82,7 @@ BOOL SQLConfigDataSource(
 ## <a name="diagnostics"></a>診斷  
  當**SQLConfigDataSource**傳回 FALSE，相關聯 *\*pfErrorCode*可以取得值，藉由呼叫**SQLInstallerError**。 下表列出 *\*pfErrorCode*可以傳回的值**SQLInstallerError** ，並說明每個內容中的這個函式。  
   
-|*\*pfErrorCode*|錯誤|描述|  
+|*\*pfErrorCode*|錯誤|Description|  
 |---------------------|-----------|-----------------|  
 |ODBC_ERROR_GENERAL_ERR|一般安裝程式發生錯誤|發生錯誤，其中沒有特定的安裝程式錯誤。|  
 |ODBC_ERROR_INVALID_HWND|無效的視窗控制代碼|*HwndParent*引數以前是無效或為 NULL。|  
@@ -97,7 +98,7 @@ BOOL SQLConfigDataSource(
   
  **SQLConfigDataSource**如果找不到或載入 DLL 的安裝，或使用者取消對話方塊會傳回 FALSE。 否則，它會傳回它收到來自狀態**ConfigDSN**。  
   
- **SQLConfigDataSource**對應系統 DSN*常見*使用者 DSN 的 s*常見*s 至 ODBC_ADD_DSN (ODBC_ADD_SYS_DSN、 ODBC_CONFIG_DSN，和 ODBC_REMOVE_SYS ODBC_CONFIG_SYS_DSN_DSN ODBC_REMOVE_DSN 到)。 為了區分使用者和系統 Dsn **SQLConfigDataSource**設定安裝程式，根據下表的組態模式。 在傳回時之前, **SQLConfigDataSource** BOTHDSN 重設為組態模式。 **ConfigDSN** （實作由驅動程式） 應該呼叫**SQLWriteDSNToIni**和**SQLWritePrivateProfileString**支援系統 DSN。 如需詳細資訊，請參閱[ConfigDSN 函式](../../../odbc/reference/syntax/configdsn-function.md)。  
+ **SQLConfigDataSource**對應系統 DSN*常見*使用者 DSN 的 s*常見*s 至 ODBC_ADD_DSN (ODBC_ADD_SYS_DSN、 ODBC_CONFIG_DSN，和 ODBC_REMOVE_SYS_ ODBC_CONFIG_SYS_DSNDSN ODBC_REMOVE_DSN)。 為了區分使用者和系統 Dsn **SQLConfigDataSource**設定安裝程式，根據下表的組態模式。 在傳回時之前, **SQLConfigDataSource** BOTHDSN 重設為組態模式。 **ConfigDSN** （實作由驅動程式） 應該呼叫**SQLWriteDSNToIni**和**SQLWritePrivateProfileString**支援系統 DSN。 如需詳細資訊，請參閱[ConfigDSN 函式](../../../odbc/reference/syntax/configdsn-function.md)。  
   
 |*常見*|設定模式|  
 |----------------|------------------------|  

@@ -1,16 +1,14 @@
 ---
-title: "針對可用性群組手動準備次要資料庫 (SQL Server) | Microsoft Docs"
-ms.custom: 
+title: 針對可用性群組手動準備次要資料庫 (SQL Server) | Microsoft Docs
+ms.custom: ''
 ms.date: 07/25/2017
-ms.prod: sql-non-specified
-ms.prod_service: database-engine
-ms.service: 
-ms.component: availability-groups
-ms.reviewer: 
+ms.prod: sql
+ms.prod_service: high-availability
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: dbe-high-availability
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: high-availability
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 f1_keywords:
 - sql13.swb.availabilitygroup.preparedbs.f1
 - sql13.swb.availabilitygroup.configsecondarydbs.f1
@@ -20,18 +18,19 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], configuring
 - Availability Groups [SQL Server], databases
 ms.assetid: 9f2feb3c-ea9b-4992-8202-2aeed4f9a6dd
-caps.latest.revision: "47"
+caps.latest.revision: 47
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 58b7a7ba954159974f60e58ff6b8bbbd07017fef
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: ebdabe4ea402188340e46cd6ee71aec49cc7a909
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="manually-prepare-a-database-for-an-availability-group-sql-server"></a>針對可用性群組手動準備資料庫 (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 本主題描述如何使用 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]、[!INCLUDE[tsql](../../../includes/tsql-md.md)] 或 PowerShell，在 [!INCLUDE[ssnoversion](../../../includes/ssnoversion-md.md)] 中準備 AlwaysOn 可用性群組的資料庫。 準備資料庫需要進行兩個步驟： 
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+本主題描述如何使用 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]、[!INCLUDE[tsql](../../../includes/tsql-md.md)] 或 PowerShell，在 [!INCLUDE[ssnoversion](../../../includes/ssnoversion-md.md)] 中準備 AlwaysOn 可用性群組的資料庫。 準備資料庫需要進行兩個步驟： 
 
 1. 使用 RESTORE WITH NORECOVERY，將主要資料庫的最新資料庫備份和後續記錄備份還原到裝載次要複本的每個伺服器執行個體上
 2. 將還原的資料庫加入可用性群組。  
@@ -184,7 +183,7 @@ ms.lasthandoff: 01/18/2018
         > [!IMPORTANT]  
         >  如果主要與次要資料庫的路徑名稱不同，您將無法加入檔案。 這是因為接收加入檔案作業的記錄時，次要複本的伺服器執行個體會嘗試將新檔案放在主要資料庫所使用的相同路徑中。  
   
-         例如，下列命令會還原位於 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]預設執行個體資料目錄 (C:\Program Files\Microsoft SQL Server\MSSQL12.MSSQLSERVER\MSSQL\DATA) 中之主要資料庫的備份。 還原資料庫作業必須將資料庫移至名為 ( [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] Always On1*) 之*遠端執行個體的資料目錄，其中裝載另一個叢集節點的次要複本。 然後，資料和記錄檔就會還原至 *C:\Program Files\Microsoft SQL Server\MSSQL13.Always On1\MSSQL\DATA* 目錄。 此還原作業會使用 WITH NORECOVERY，將次要資料庫保留在還原資料庫中。  
+         例如，下列命令會還原位於 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]預設執行個體資料目錄 (C:\Program Files\Microsoft SQL Server\MSSQL12.MSSQLSERVER\MSSQL\DATA) 中之主要資料庫的備份。 還原資料庫作業必須將資料庫移至名為 ( [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] Always On1 *) 之*遠端執行個體的資料目錄，其中裝載另一個叢集節點的次要複本。 然後，資料和記錄檔就會還原至 *C:\Program Files\Microsoft SQL Server\MSSQL13.Always On1\MSSQL\DATA* 目錄。 此還原作業會使用 WITH NORECOVERY，將次要資料庫保留在還原資料庫中。  
   
         ```  
         RESTORE DATABASE MyDB1  

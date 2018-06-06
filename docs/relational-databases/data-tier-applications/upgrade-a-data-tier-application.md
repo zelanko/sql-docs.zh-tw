@@ -1,17 +1,16 @@
 ---
-title: "升級資料層應用程式 | Microsoft 文件"
-ms.custom: 
+title: 升級資料層應用程式 | Microsoft 文件
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
 ms.component: data-tier-applications
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-data-tier-apps
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 f1_keywords:
 - sql13.swb.upgradedacwizard.summary.f1
 - sql13.swb.upgradedacwizard.reviewplan.f1
@@ -27,19 +26,19 @@ helpviewer_keywords:
 - wizard [DAC], upgrade
 - How to [DAC], upgrade
 ms.assetid: c117df94-f02b-403f-9383-ec5b3ac3763c
-caps.latest.revision: 
+caps.latest.revision: 35
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 8ea79fb1e120239f25cfab958e92fcd44b79423d
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.openlocfilehash: fe2d3027feada8c7140822dde49fe6d1b4dcbf46
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="upgrade-a-data-tier-application"></a>升級資料層應用程式
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 您可以使用 [升級資料層應用程式精靈] 或 Windows PowerShell 指令碼，將目前部署之資料層應用程式 (DAC) 的結構描述和屬性變更為符合新版 DAC 中所定義的結構描述和屬性。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  您可以使用升級資料層應用程式精靈或 Windows PowerShell 指令碼，將目前部署之資料層應用程式 (DAC) 的結構描述和屬性變更為符合新版 DAC 中所定義的結構描述和屬性。  
   
 -   **開始之前：**  [選擇 DAC 升級選項](#ChoseDACUpgOptions)、 [限制事項](#LimitationsRestrictions)、 [必要條件](#Prerequisites)、 [安全性](#Security)、 [權限](#Permissions)  
   
@@ -86,7 +85,7 @@ ms.lasthandoff: 01/17/2018
 ##  <a name="UsingDACUpgradeWizard"></a> 使用升級資料層應用程式精靈  
  **使用精靈升級 DAC**  
   
-1.  在 **[物件總管]**中，展開含有要升級 DAC 之執行個體的節點。  
+1.  在 **[物件總管]** 中，展開含有要升級 DAC 之執行個體的節點。  
   
 2.  展開 [管理] 節點，然後展開 [資料層應用程式] 節點。  
   

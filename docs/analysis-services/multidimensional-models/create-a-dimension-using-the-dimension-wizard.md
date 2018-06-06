@@ -1,31 +1,23 @@
 ---
-title: "使用 「 維度精靈 」 建立維度 |Microsoft 文件"
-ms.custom: 
-ms.date: 03/01/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
-helpviewer_keywords: dimensions [Analysis Services], creating
-ms.assetid: d84f66ae-7551-49bf-99d0-88368ca2dd0e
-caps.latest.revision: "17"
-author: Minewiskan
+title: 使用 「 維度精靈 」 建立維度 |Microsoft 文件
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: multidimensional-models
+ms.topic: conceptual
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: a36943eeb6042deaf35853dd9e69a3492b9cf327
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: ba906ab17169b2e2faf6bef54137fcc4e6210660
+ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="create-a-dimension-using-the-dimension-wizard"></a>使用維度精靈建立維度
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]您可以使用中的 「 維度精靈 」，以建立新的維度[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+  您可以使用 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 中的 [維度精靈] 來建立新的維度。  
   
 ### <a name="to-create-a-new-dimension"></a>建立新維度  
   
@@ -50,7 +42,7 @@ ms.lasthandoff: 01/08/2018
   
          如果 [索引鍵資料行] 清單包含多個索引鍵資料行，您必須可針對索引鍵屬性提供成員值的名稱資料行。 若要這樣做，您可以在資料來源檢視中，建立具名計算，並將其當做名稱資料行使用。  
   
-    5.  按 [下一步] 。  
+    5.  按一下 **[下一步]**。  
   
 4.  在 [選取相關資料表] 頁面上，選取您要包含在維度中的相關資料表，然後按一下 [下一步]。  
   
@@ -76,7 +68,7 @@ ms.lasthandoff: 01/08/2018
     > [!NOTE]  
     >  您可以在完成「維度精靈」之後，使用 [維度設計師] 在維度中加入、移除和設定屬性與階層。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [使用現有的資料表建立維度](../../analysis-services/multidimensional-models/create-a-dimension-by-using-an-existing-table.md)  
   
   

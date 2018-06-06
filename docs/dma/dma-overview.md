@@ -1,38 +1,35 @@
 ---
-title: "資料移轉小幫手 (SQL Server) 的概觀 |Microsoft 文件"
-ms.custom: 
+title: 資料移轉小幫手 (SQL Server) 的概觀 |Microsoft 文件
+ms.custom: ''
 ms.date: 03/15/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: dma
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- sql-dma
-ms.tgt_pltfrm: 
-ms.topic: article
-keywords: 
+ms.technology: dma
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
+keywords: ''
 helpviewer_keywords:
 - Data Migration Assistant, overview
-ms.assetid: 
-caps.latest.revision: 
+ms.assetid: ''
+caps.latest.revision: ''
 author: HJToland3
 ms.author: jtoland
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: c387e5bb2a0b5cef10217b32807f88a8aee6c627
-ms.sourcegitcommit: 6b1618aa3b24bf6759b00a820e09c52c4996ca10
+ms.openlocfilehash: dd681a6445c6759b0ec17e06dc0b4dbf24b3b72f
+ms.sourcegitcommit: 2d93cd115f52bf3eff3069f28ea866232b4f9f9e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34707966"
 ---
 # <a name="overview-of-data-migration-assistant"></a>資料移轉小幫手的概觀
 
 資料移轉小幫手 (DMA) 可讓您升級至現代化資料平台，就會偵測相容性問題，可能會影響資料庫的新版本的 SQL Server 和 Azure SQL Database 的功能。 DMA 效能和可靠性的改進您的目標環境的建議，並可讓您將您的結構描述、 資料和非內含性的物件從來源伺服器移至您的目標伺服器。
 
 > [!NOTE] 
-> 為大型 （依據資料庫的大小和數量） 移轉，建議使用[Azure 資料庫移轉服務](https://docs.microsoft.com/en-us/azure/dms/dms-overview)，大規模的資料庫的移轉。
+> 為大型 （依據資料庫的大小和數量） 移轉，建議使用[Azure 資料庫移轉服務](https://docs.microsoft.com/azure/dms/dms-overview)，大規模的資料庫的移轉。
   
 ## <a name="capabilities"></a>Capabilities
 
@@ -52,7 +49,7 @@ ms.lasthandoff: 03/15/2018
 
   - 效能
   - Security
-  - 儲存空間
+  - Storage
 
 - 將內部部署 SQL Server 執行個體移轉至的現代的 SQL Server 執行個體，裝載在內部部署或在 Azure 虛擬機器 (VM) 可從您的內部部署網路存取。 可以使用 VPN 或其他技術來存取 Azure VM。 移轉工作流程可協助您移轉下列元件：
 
@@ -74,7 +71,7 @@ DMA 取代所有舊版的 SQL Server Upgrade Advisor，並適用於大多數的 
 - SQL Server 2012 
 - SQL Server 2014
 - SQL Server 2016
-- SQL Server 2017 on Windows
+- 在 Windows 上的 SQL Server 2017
 
 **目標**
 - SQL Server 2012

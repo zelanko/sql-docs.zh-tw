@@ -1,30 +1,28 @@
 ---
-title: "設定資料庫引擎執行個體 (SQL Server) | Microsoft Docs"
-ms.custom: 
+title: 設定資料庫引擎執行個體 (SQL Server) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/07/2017
-ms.prod: sql-non-specified
-ms.prod_service: database-engine
-ms.service: 
-ms.component: configure-windows
-ms.reviewer: 
+ms.prod: sql
+ms.prod_service: high-availability
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: database-engine
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: configuration
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: 84e36fcb-2c78-48e8-8e4b-bf784a3ee557
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: f245606ea20d419098b919019e7854546fdc7208
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 436870f48dbc5814d81fd091a8d2ffafbc6d9320
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="configure-database-engine-instances-sql-server"></a>設定 Database Engine 執行個體 (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 每個[!INCLUDE[ssDE](../../includes/ssde-md.md)]執行個體都必須設定成符合針對執行個體所裝載之資料庫定義的效能和可用性需求。 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 包含的組態選項可控制如資源使用狀況等行為，或是如稽核或觸發程序遞迴等功能的可用性。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  每個 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 執行個體都必須設定成符合針對執行個體所裝載之資料庫定義的效能和可用性需求。 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 包含的組態選項可控制如資源使用狀況等行為，或是如稽核或觸發程序遞迴等功能的可用性。  
   
 ## <a name="instance-configuration"></a>執行個體組態  
  將資料庫部署至實際執行環境時，通常會有服務等級合約 (SLA) 定義資料庫所需效能層級和資料庫所需可用性層級這類區域。 SLA 的條款通常會驅動執行個體的組態需求。  

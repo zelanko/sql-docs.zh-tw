@@ -1,31 +1,23 @@
 ---
-title: "遠端處理 (Analysis Services) |Microsoft 文件"
-ms.custom: 
-ms.date: 03/04/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
-ms.assetid: d58bcb3c-0b3f-4ab0-81eb-4fdcc86153af
-caps.latest.revision: 
-author: Minewiskan
+title: 遠端處理 (Analysis Services) |Microsoft 文件
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: multidimensional-models
+ms.topic: conceptual
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 498a045c82630fdcd89ca857877d37d07b8b3dd2
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 0e7afa72ef5a2f3ad9c27f0d8586b622c033be73
+ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="remote-processing-analysis-services"></a>遠端處理 (Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-您可以執行遠端 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 執行個體上的排程處理或自動處理，其只會處理某電腦所發出的要求，但會在同一網路中的另一部電腦上執行。  
+  您可以執行遠端 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 執行個體上的排程處理或自動處理，其只會處理某電腦所發出的要求，但會在同一網路中的另一部電腦上執行。  
   
 ## <a name="prerequisites"></a>必要條件  
   
@@ -38,7 +30,7 @@ ms.lasthandoff: 02/15/2018
 -   解決現有的本機處理錯誤，然後再嘗試遠端處理。 確認當處理要求來自本機時，可以順利從外部關聯式資料來源擷取資料。 如需指定用來擷取資料之認證相關指示，請參閱[設定模擬選項 (SSAS - 多維度)](../../analysis-services/multidimensional-models/set-impersonation-options-ssas-multidimensional.md)。  
   
 ## <a name="on-demand-remote-processing"></a>隨選遠端處理  
- [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 接受具有 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 系統管理員權限之使用者或應用程式帳戶所發出的處理要求。 您若是系統管理員，請確認您可以連接到遠端執行個體，並可透過遠端連接手動處理資料庫。  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]接受來自使用者或應用程式帳戶所擁有的處理要求[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]系統管理員權限。 您若是系統管理員，請確認您可以連接到遠端執行個體，並可透過遠端連接手動處理資料庫。  
   
 1.  在要用於排程處理電腦上啟動 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ，並連接到遠端 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 執行個體。  
   
@@ -100,8 +92,8 @@ ms.lasthandoff: 02/15/2018
 ## <a name="see-also"></a>另請參閱  
  [SQL Server Agent 元件](http://msdn.microsoft.com/library/8d1dc600-aabb-416f-b3af-fbc9fccfd0ec)   
  [使用 SQL Server Agent 排程 SSAS 管理工作](../../analysis-services/instances/schedule-ssas-administrative-tasks-with-sql-server-agent.md)   
- [批次處理 &#40;Analysis Services &#41;](../../analysis-services/multidimensional-models/batch-processing-analysis-services.md)   
+ [批次處理 & #40;Analysis Services & #41;](../../analysis-services/multidimensional-models/batch-processing-analysis-services.md)   
  [處理多維度模型 &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services.md)   
- [處理物件 &#40;XMLA &#41;](../../analysis-services/multidimensional-models-scripting-language-assl-xmla/processing-objects-xmla.md)  
+ [處理物件 & #40;XMLA & #41;](../../analysis-services/multidimensional-models-scripting-language-assl-xmla/processing-objects-xmla.md)  
   
   

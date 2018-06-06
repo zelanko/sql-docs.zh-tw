@@ -1,16 +1,15 @@
 ---
-title: "sp_markpendingschemachange (TRANSACT-SQL) |Microsoft 文件"
-ms.custom: 
+title: sp_markpendingschemachange (TRANSACT-SQL) |Microsoft 文件
+ms.custom: ''
 ms.date: 03/04/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - sp_markpendingschemachange
 ms.assetid: 01100309-7bef-4154-85bf-f18489577e37
-caps.latest.revision: 
+caps.latest.revision: 12
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: fc1712e646a8efda1fdc4f06d912a1021a0beaff
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: e3bfd0bb51e6d269b84fdb57a5a64139ce23cedc
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="spmarkpendingschemachange-transact-sql"></a>sp_markpendingschemachange (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -53,10 +51,10 @@ sp_markpendingschemachange [@publication = ] 'publication'
  這是發行集的名稱。 *發行集*是**sysname**，沒有預設值。  
   
  [  **@schemaversion=** ] *schemaversion*  
- 識別暫止結構描述變更。 *schemaversion*是**int**，預設值是**0**。 使用[sp_enumeratependingschemachanges &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/sp-enumeratependingschemachanges-transact-sql.md)列出發行集的暫止結構描述變更。  
+ 識別暫止結構描述變更。 *schemaversion*是**int**，預設值是**0**。 使用[sp_enumeratependingschemachanges &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-stored-procedures/sp-enumeratependingschemachanges-transact-sql.md)列出發行集的暫止結構描述變更。  
   
  [  **@status=** ] **'***狀態***'**  
- 這是指是否將略過暫止結構描述變更。 *狀態*是**nvarchar （10)**預設值是**active**。 如果值*狀態*是**略過**，然後選取結構描述變更不會複寫。  
+ 這是指是否將略過暫止結構描述變更。 *狀態*是**nvarchar （10)** 預設值是**active**。 如果值*狀態*是**略過**，然後選取結構描述變更不會複寫。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  **0** （成功） 或**1** （失敗）  
@@ -69,7 +67,7 @@ sp_markpendingschemachange [@publication = ] 'publication'
 ## <a name="permissions"></a>Permissions  
  只有成員**sysadmin**固定的伺服器角色或**db_owner**固定的資料庫角色可以執行**sp_markpendingschemachange**。  
   
-## <a name="see-also"></a>請參閱＜  
- [sysmergeschemachange &#40;TRANSACT-SQL &#41;](../../relational-databases/system-tables/sysmergeschemachange-transact-sql.md)  
+## <a name="see-also"></a>另請參閱  
+ [sysmergeschemachange &#40;Transact SQL&#41;](../../relational-databases/system-tables/sysmergeschemachange-transact-sql.md)  
   
   

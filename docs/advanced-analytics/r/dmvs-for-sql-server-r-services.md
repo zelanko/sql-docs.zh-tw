@@ -1,36 +1,27 @@
 ---
-title: "SQL Server 機器學習服務 Dmv |Microsoft 文件"
-ms.custom: 
-ms.date: 07/31/2017
-ms.reviewer: 
-ms.suite: sql
-ms.prod: machine-learning-services
-ms.prod_service: machine-learning-services
-ms.component: r
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
-ms.assetid: b3643ea0-d9f3-463f-8ece-572127f32a24
-caps.latest.revision: 
-author: jeannt
-ms.author: jeannt
-manager: cgronlund
-ms.workload: Inactive
-ms.openlocfilehash: d3c90457c7d55071520546e6362a451427503a52
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+title: SQL Server 的資料管理檢視 (Dmv) 機器學習服務 |Microsoft 文件
+ms.prod: sql
+ms.technology: machine-learning
+ms.date: 04/15/2018
+ms.topic: conceptual
+author: HeidiSteen
+ms.author: heidist
+manager: cgronlun
+ms.openlocfilehash: e2180794ca96fc6387105745e346802725afe1dd
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="dmvs-for-sql-server-machine-learning-services"></a>SQL Server 機器學習服務 Dmv
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-本主題列出系統目錄檢視和 SQL Server 中的機器學習服務與相關的 Dmv。
+本文列出的系統目錄檢視和 SQL Server 中的機器學習服務與相關的 Dmv。
 
 擴充事件的相關資訊，請參閱[擴充事件的機器學習](../../advanced-analytics/r/extended-events-for-sql-server-r-services.md)。
 
 > [!TIP]
-> 產品團隊提供的自訂報告，您可以使用機器學習服務工作階段和封裝使用率監視。 如需詳細資訊，請參閱[監視使用 Management Studio 中自訂報告的機器學習](../../advanced-analytics/r/monitor-r-services-using-custom-reports-in-management-studio.md)。
+> 使用內建報告來監視的機器學習服務工作階段和封裝使用率。 如需詳細資訊，請參閱[監視使用 Management Studio 中自訂報告的機器學習](../../advanced-analytics/r/monitor-r-services-using-custom-reports-in-management-studio.md)。
 
 ## <a name="system-configuration-and-system-resources"></a>系統組態和系統資源
 
@@ -53,7 +44,7 @@ ms.lasthandoff: 02/11/2018
   此 DMV 會針對每一執行個體的外部指令碼回報下列計數器：
 
   + **總執行**： 本機或遠端呼叫所啟動的外部處理序數目
-  + **平行執行**： 指令碼包含次數 _@parallel_ 規格，[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]可以產生並使用平行查詢計劃
+  + **平行執行**： 指令碼包含次數_@parallel_規格，[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]可以產生並使用平行查詢計劃
   + **資料流執行**： 的串流處理功能已叫用次數
   + **SQL CC 執行**： 數目外部指令碼的執行其中呼叫未具現化遠端和 SQL Server 用來做計算內容
   + **Implied Auth.登入次數**：使用隱含驗證來發出 ODBC 回送呼叫的次數；亦即 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 代表傳送指令碼要求的使用者執行呼叫

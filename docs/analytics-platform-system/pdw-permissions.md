@@ -1,29 +1,22 @@
 ---
-title: "PDW 權限 (SQL Server PDW)"
-author: barbkess
-ms.author: barbkess
-manager: jhubbard
-ms.prod: analytics-platform-system
-ms.prod_service: mpp-data-warehouse
-ms.service: 
-ms.component: 
-ms.technology: mpp-data-warehouse
-ms.custom: 
-ms.date: 01/05/2017
-ms.reviewer: na
-ms.suite: sql
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: 7e271980-bec8-424b-9f68-cea11b4e64e8
-caps.latest.revision: "23"
-ms.openlocfilehash: 49bcb7cf5e8d4bb03acd9db5de87716ec2462191
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+title: 平行資料倉儲中的權限 |Microsoft 文件
+description: 本文說明的需求和選項管理平行處理資料倉儲的資料庫權限。
+author: mzaman1
+manager: craigg
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
+ms.openlocfilehash: 16ed81d3349cd1e641a66a95d9993e2a86ca4098
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/19/2018
 ---
-# <a name="pdw-permissions"></a>PDW 權限
-本主題說明的需求和選項，來管理 SQL Server PDW 的資料庫權限。  
+# <a name="managing-permissions-in-parallel-data-warehouse"></a>平行處理資料倉儲的管理權限
+本文說明的需求和選項，來管理 SQL Server PDW 的資料庫權限。  
   
 ## <a name="BackupRestoreBasics"></a>資料庫引擎權限的基本概念  
 伺服器層級透過登入，以及資料庫使用者與使用者定義資料庫角色的資料庫層級管理 SQL Server PDW 上的資料庫引擎權限。  
@@ -64,11 +57,11 @@ ms.lasthandoff: 12/21/2017
 使用者與資料庫角色是資料庫層級物件，可以藉由檢視列出[sys.database_principals](../relational-databases/system-catalog-views/sys-database-principals-transact-sql.md)。 只有資料庫層級權限可授與資料庫主體。  
   
 ## <a name="BackupTypes"></a>預設權限  
-下列清單描述預設權限：  
+下列清單說明預設權限：  
   
 -   當登入由 using **CREATE LOGIN**陳述式中，登入會收到**CONNECT SQL**允許登入的權限連接到 SQL Server PDW。  
   
--   使用建立資料庫使用者時**CREATE USER**陳述式中，使用者會收到**CONNECT ON DATABASE::***< 資料庫名稱 >*權限，允許若要連接至該資料庫的使用者身分登入。  
+-   使用建立資料庫使用者時**CREATE USER**陳述式中，使用者會收到 **CONNECT ON DATABASE:: * * * < 資料庫名稱 >* 權限，允許連接至該資料庫登入為使用者。  
   
 -   所有的主體，包括公用角色中，依預設有沒有明確或隱含的權限，因為隱含權限繼承自明確權限。 因此，當沒有明確的權限時，可以也沒有隱含的權限。  
   
@@ -80,7 +73,7 @@ ms.lasthandoff: 12/21/2017
   
 -   交易不需要權限。 可以執行所有主體**BEGIN TRANSACTION**，**認可**，和**復原**交易命令。 但是，主體必須具有適當的權限來執行交易內的每個陳述式。  
   
--   **使用**陳述式不需要權限。 可以執行所有主體**使用**陳述式上任何資料庫，不過若要存取資料庫它們必須擁有使用者主體在資料庫中，或必須啟用 guest 使用者。  
+-   **USE** 陳述式不需要權限。 可以執行所有主體**使用**陳述式上任何資料庫，不過若要存取資料庫它們必須擁有使用者主體在資料庫中，或必須啟用 guest 使用者。  
   
 ### <a name="the-public-role"></a>PUBLIC 角色  
 所有新的應用裝置登入自動屬於 PUBLIC 角色。 PUBLIC 伺服器角色具有下列特性：  
@@ -95,7 +88,7 @@ ms.lasthandoff: 12/21/2017
 登入有權限執行特定動作而定的權限授與或拒絕登入、 使用者和角色的成員。 伺服器層級權限 (例如**CREATE LOGIN**和**VIEW SERVER STATE**) 可用於伺服器層級主體 （登入）。 資料庫層級權限 (例如**選取**從資料表或**EXECUTE**程序上) 可使用資料庫層級主體 （使用者和資料庫角色）。  
   
 ### <a name="implicit-and-explicit-permissions"></a>隱含和明確權限  
-*明確權限*是**GRANT**或**拒絕**權限提供給主體的**授與**或**拒絕**陳述式。 資料庫層級權限詳列於[sys.database_permissions](../relational-databases/system-catalog-views/sys-database-permissions-transact-sql.md)檢視。 伺服器層級權限詳列於[sys.server_permissions](../relational-databases/system-catalog-views/sys-server-permissions-transact-sql.md)檢視。  
+「明確權限」 是藉由 **GRANT** 或 **DENY** 陳述式來賦予主體的 **GRANT** 或 **DENY** 權限。 資料庫層級權限詳列於[sys.database_permissions](../relational-databases/system-catalog-views/sys-database-permissions-transact-sql.md)檢視。 伺服器層級權限詳列於[sys.server_permissions](../relational-databases/system-catalog-views/sys-server-permissions-transact-sql.md)檢視。  
   
 *隱含的權限*是**GRANT**或**拒絕**主體 （登入或伺服器角色） 已繼承的權限。 權限可以下列方式繼承。  
   
@@ -103,7 +96,7 @@ ms.lasthandoff: 12/21/2017
   
 -   如果主體有其中一個物件的父系領域 （例如資料表或整個資料庫上的權限的結構描述） 上的權限的主體可以繼承 （例如資料表） 的從屬物件權限。  
   
--   主體可以擁有包含從屬權限的權限繼承的權限。 例如**ALTER ANY USER**權限同時包括**CREATE USER**和**ALTER ON USER::**  *<name>* 權限。  
+-   主體可以擁有包含從屬權限的權限繼承的權限。 例如**ALTER ANY USER**權限同時包括**CREATE USER**和 **ALTER ON USER:: * * *<name>* 權限。  
   
 ### <a name="determining-permissions-when-performing-actions"></a>執行動作時，判斷權限  
 決定哪些權限，指派給主體的程序相當複雜。 判斷隱含權限，因為主體可以是多個角色的成員和權限可傳遞多個層級角色階層中時，就會發生的複雜性。  
@@ -225,7 +218,7 @@ SQL Server 提供預先設定 （固定） 可協助您管理的伺服器上的�
 SQL Server 固定的伺服器角色會自動建立。 SQL Server PDW 具有有限的 SQL Server 固定伺服器角色實作。 只有**sysadmin**和**公用**擁有做為成員的使用者登入。 **Setupadmin**和**dbcreator**角色會在內部使用 SQL Server PDW。 無法加入其他成員，或從任何角色中移除。  
   
 ### <a name="sysadmin-fixed-server-role"></a>sysadmin 固定伺服器角色  
-**sysadmin** 固定伺服器角色的成員可以執行伺服器中的所有活動。 **Sa**登入是唯一的成員**sysadmin**固定的伺服器角色。 無法加入其他登入**sysadmin**固定的伺服器角色。 授與**CONTROL SERVER**權限近似於中的成員資格**sysadmin**固定的伺服器角色。 下列範例會授與**CONTROL SERVER**權限的登入名為 Fay。  
+**sysadmin** 固定伺服器角色的成員可以執行伺服器中的所有活動。 **Sa**登入是唯一的成員**sysadmin**固定的伺服器角色。 無法加入其他登入**sysadmin**固定的伺服器角色。 授與 **CONTROL SERVER** 權限會近似於 **sysadmin** 固定伺服器角色中的成員資格。 下列範例會授與**CONTROL SERVER**權限的登入名為 Fay。  
   
 ```sql  
 USE master;  

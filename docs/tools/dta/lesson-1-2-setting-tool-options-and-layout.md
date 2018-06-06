@@ -1,32 +1,33 @@
 ---
-title: "設定工具選項和配置 |Microsoft 文件"
-ms.custom: 
+title: 設定工具選項和配置 |Microsoft 文件
+ms.custom: ''
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
 ms.component: dta
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: dbe-query-tuning
-ms.tgt_pltfrm: 
-ms.topic: article
-applies_to: SQL Server 2016
-helpviewer_keywords: Database Engine [SQL Server], tutorials
+ms.technology: performance
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
+applies_to:
+- SQL Server 2016
+helpviewer_keywords:
+- Database Engine [SQL Server], tutorials
 ms.assetid: 43e97ce0-97bc-4a27-9485-5bbeb7190b85
-caps.latest.revision: "24"
+caps.latest.revision: 24
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 68a4c894fb4defe848b146c59b3ad159ac3da287
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
-ms.translationtype: MT
+ms.openlocfilehash: b197e970df26c5d48ccaf18603df107f0f3785db
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.translationtype: MTE
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/03/2018
 ---
-# <a name="lesson-1-2---setting-tool-options-and-layout"></a>課程 1-2-設定工具選項和配置
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]您可以設定選項來設定 Database Engine Tuning Advisor 圖形化使用者介面 (GUI) 會顯示在啟動時，它會使用時，字型，並調整其他工具的功能支援使用它。 這一頁的練習可讓您熟悉您可以設定的選項及如何設定它們。  
+# <a name="lesson-1-2---setting-tool-options-and-layout"></a>課程 1-2 - 設定工具選項和配置
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+您可以設定一些選項來設定 Database Engine Tuning Advisor 圖形化使用者介面 (GUI) 在啟動時所顯示的項目、它使用的字型，以及其他工具功能，以便對您使用它的方式，提供最好的支援。 這一頁的練習可讓您熟悉您可以設定的選項及如何設定它們。  
   
 ### <a name="set-the-tool-options"></a>設定工具選項  
   
@@ -49,7 +50,7 @@ ms.lasthandoff: 01/17/2018
     -   依預設，會核取 [停止工作階段分析之前先詢問]，以避免在 Database Engine Tuning Advisor 分析工作負載完成之前不慎停止微調工作階段。  
   
 ## <a name="next-lesson"></a>下一課  
-[第 2 課： 使用 Database Engine Tuning Advisor](../../tools/dta/lesson-2-using-database-engine-tuning-advisor.md)  
+[課程 2：使用 Database Engine Tuning Advisor](../../tools/dta/lesson-2-using-database-engine-tuning-advisor.md)  
   
   
   

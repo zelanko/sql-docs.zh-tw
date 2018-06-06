@@ -1,28 +1,25 @@
 ---
-title: "SSMA for Oracle (OracleToSQL) 中最新消息 |Microsoft 文件"
-ms.prod: sql-non-specified
+title: SSMA for Oracle (OracleToSQL) 中最新消息 |Microsoft 文件
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
 ms.component: ssma-oracle
-ms.custom: 
+ms.custom: ''
 ms.date: 03/01/2018
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- sql-ssma
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ssma
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: f305ebb6-7393-4a43-abb3-6332b739d690
-caps.latest.revision: 
+caps.latest.revision: 24
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 63bc96b49c351d9923c5e4d4ae59056c7911ae40
-ms.sourcegitcommit: 6a5b80cac78fe5c2d2567a391daa335f9b4b3637
+ms.openlocfilehash: d80bf7637c5c17cdade7c47f25265a6d2b6c94c1
+ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/01/2018
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="whats-new-in-ssma-for-oracle-oracletosql"></a>SSMA for Oracle (OracleToSQL) 中最新消息
 本主題列出每個版本中的 Oracle 變更 SSMA。  
@@ -83,7 +80,7 @@ SSMA for Oracle 的 v7.3 版本包含下列變更：
   - 可供 SSMA 執行自訂轉換執行的程式庫。
     - 您現在可以建構自訂語法轉換和 SSMA 先前未處理的轉換可以處理的程式碼。
       - 這個部落格文章，指示如何建構自訂轉換子可用[擴充 SQL Server 移轉小幫手的轉換功能](https://blogs.msdn.microsoft.com/datamigration/2017/02/21/2185/)。
-      - 轉換的範例專案可以是下載此[部落格文章](https://blogs.msdn.microsoft.com/datamigration/ssmafororacleconversionsample/)。
+      - 下載範例專案，從這個轉換[部落格文章](https://blogs.msdn.microsoft.com/datamigration/ssmafororacleconversionsample/)。
 
 
 ## <a name="ssma-v72"></a>SSMA v7.2
@@ -91,7 +88,7 @@ SSMA for Oracle 的 v7.2 版本包含下列變更：
 - 改善的品質和轉換的度量根據客戶的意見反應目標的修正程式。
 - 遙測增強功能提供更好的資料點，來解決客戶問題，並改善 SSMA 的轉換比率。
 
-## <a name="ssma-v71"></a>SSMA v7.1
+## <a name="ssma-v71"></a>SSMA 7.1 版
 7.1 版版本的 SSMA for Oracle 包含下列變更：
 - 在 Windows 和 Linux CTP1 上的 SQL Server 2017 已移轉的支援的目標平台。 此功能是 technical preview 中，並可讓結構描述和資料移動到目標 SQL 伺服器。
 - SSMA 現在支援自動更新，以下載最新版本的 SSMA，如有的話。
@@ -106,18 +103,28 @@ SSMA for Oracle 的 v7.2 版本包含下列變更：
 ## <a name="may-2016"></a>2016 年  
 2016 年版本的 SSMA for Oracle 包含下列變更：  
 
--   已新增的支援 SQL Server 2016。
--   加入至 SQL Server 的時態表 Oracle 回溯封存資料表的轉換。
--   加入的 Oracle VPD 原則轉換成 SQL Server 原則物件 （Oracle 的資料列層級安全性） 的轉換。
--   Oracle 的初始載入時間降低。
--   改良的剖析和解析程式。
--   移除安裝程式檢查適用於.Net 2.0。
--   更新擴充功能組件相依性從.Net 3.5.net 4.0。
--   修正 儲存專案 」 以及 「 開啟專案 」 SSMA 主控台命令。
--   SSMA 主控台的固定"securepassword"命令。
--   已修正的初始載入的物件計數。
--   修正 for Oracle 的字元資料類型轉換。
--   通用設定 中修正的 bug。
+- 已新增的支援 SQL Server 2016。
+- 加入至 SQL Server 的時態表 Oracle 回溯封存資料表的轉換。
+
+    **請注意**-SSMA 不會複製從 Oracle 回溯資料封存資料表的歷程記錄資料。 如此一來，必須手動複製的歷程記錄資料移轉的程序。 此外，SSMA 不會在 SQL Server 中繼資料總管 顯示歷程記錄資料表，因為它會被視為系統資料表，而您可以在 SQL Server Management Studio 中檢視歷程記錄資料表。
+    SQL Server 2016 中不支援數個 Oracle 回溯功能，包括：
+    - Oracle 回溯交易查詢
+    - DBMS_FLASHBACK 封裝
+    - 回溯交易
+    - 回溯資料封存
+    - 回溯資料表
+    - 回溯拖放
+    - 回溯資料庫
+- 加入的 SQL Server 原則物件 （Oracle 的資料列層級安全性） 的 Oracle VPD 原則轉換。
+- Oracle 的初始載入時間降低。
+- 改良的剖析和解析程式。
+- 移除安裝程式檢查適用於.Net 2.0。
+- 更新擴充功能組件相依性從.Net 3.5.net 4.0。
+- 修正 儲存專案 」 以及 「 開啟專案 」 SSMA 主控台命令。
+- SSMA 主控台的固定"securepassword"命令。
+- 已修正的初始載入的物件計數。
+- 修正 for Oracle 的字元資料類型轉換。
+- 通用設定 中修正的 bug。
   
 ## <a name="march-2016"></a>2016 年 3 月  
 2016 年 3 月預覽版本的 SSMA for Oracle 包含下列變更：  

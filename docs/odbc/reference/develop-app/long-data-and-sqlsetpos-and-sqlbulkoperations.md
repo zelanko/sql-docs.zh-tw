@@ -1,16 +1,14 @@
 ---
-title: "Long 資料和 SQLSetPos SQLBulkOperations |Microsoft 文件"
-ms.custom: 
+title: Long 資料和 SQLSetPos SQLBulkOperations |Microsoft 文件
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
-ms.component: odbc
-ms.reviewer: 
+ms.prod: sql
+ms.prod_service: connectivity
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: connectivity
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - long data [ODBC]
 - SQLSetPos function [ODBC], long data and SQLBulkOperations
@@ -18,16 +16,15 @@ helpviewer_keywords:
 - updating data [ODBC], long data
 - SQLBulkOperations function [ODBC], long data
 ms.assetid: e2fdf842-5e4c-46ca-bb21-4625c3324f28
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
-ms.workload: Inactive
-ms.openlocfilehash: 7684c15df244828211c2b87acd7314a7e05bea5e
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+manager: craigg
+ms.openlocfilehash: 0c5734480db4ac3b8098254a4c99dbf7a361ea3c
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="long-data-and-sqlsetpos-and-sqlbulkoperations"></a>Long 資料和 SQLSetPos SQLBulkOperations
 更新資料列時，使用 SQL 陳述式中的參數案例一樣，可以傳送長資料**SQLBulkOperations**或**SQLSetPos**或插入資料列時**SQLBulkOperations**. 資料會使用多個呼叫的組件，以傳送**SQLPutData**。 在執行階段資料會傳送的資料行稱為*資料在執行中資料行*。  

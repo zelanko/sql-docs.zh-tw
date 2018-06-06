@@ -1,25 +1,22 @@
 ---
-title: "在 Linux 上的 SQL Server 2017 的版本資訊 |Microsoft 文件"
-description: "本文章包含版本資訊，並支援在 Linux 上執行的 SQL Server 2017 的功能。 版本資訊會包含最新的版次和數個先前發行的版本。"
+title: 在 Linux 上的 SQL Server 2017 的版本資訊 |Microsoft 文件
+description: 本文章包含版本資訊，並支援在 Linux 上執行的 SQL Server 2017 的功能。 版本資訊會包含最新的版次和數個先前發行的版本。
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 02/20/2018
+ms.date: 05/24/2018
 ms.topic: article
-ms.prod: sql-non-specified
-ms.prod_service: database-engine
-ms.service: 
-ms.component: 
+ms.prod: sql
+ms.component: ''
 ms.suite: sql
 ms.custom: sql-linux
-ms.technology: database-engine
+ms.technology: linux
 ms.assetid: 1314744f-fcaf-46db-800e-2918fa7e1b6c
-ms.workload: Active
-ms.openlocfilehash: 23f93527aa295815304f76676f2efc3506fd9878
-ms.sourcegitcommit: f0c5e37c138be5fb2cbb93e9f2ded307665b54ea
+ms.openlocfilehash: 07782a5b8290b41a5a11557c503fcbfd0736790b
+ms.sourcegitcommit: a9da0abd3e17fbcd6339980d7331d0418cdada53
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/24/2018
+ms.lasthandoff: 05/24/2018
 ---
 # <a name="release-notes-for-sql-server-2017-on-linux"></a>在 Linux 上的 SQL Server 2017 的版本資訊
 
@@ -49,7 +46,10 @@ ms.lasthandoff: 02/24/2018
 
 | 版本 | 版本 | 發行日期 |
 |-----|-----|-----|
-| [CU4](#CU4) | 14.0.3022.28 | 2-2018 |
+| [CU7](#CU7) | 14.0.3026.27 | 5 2018 |
+| [CU6 來](#CU6) | 14.0.3025.34 | 4 2018 |
+| [CU5](#CU5) | 14.0.3023.8 | 3 2018 |
+| [CU4](#CU4) | 14.0.3022.28 | 2 2018 |
 | [CU3](#CU3) | 14.0.3015.40 | 1-2018 |
 | [CU2](#CU2) | 14.0.3008.27 | 11-2017 |
 | [CU1](#CU1) | 14.0.3006.16 | 10-2017 |
@@ -66,9 +66,69 @@ ms.lasthandoff: 02/24/2018
 - [安裝 SQL Server Integration Services](sql-server-linux-setup-ssis.md)
 - [啟用 SQL Server 代理程式](sql-server-linux-setup-sql-agent.md)
 
+## <a id="CU7"></a> CU7 (可能 2018)
+
+這是 SQL Server 2017 的累積更新 7 (CU7) 版本。 此版本的 SQL Server 引擎版本是 14.0.3026.27。 此版本中的改進與修正的相關資訊，請參閱[ https://support.microsoft.com/en-us/help/4229789 ](https://support.microsoft.com/en-us/help/4229789)。
+
+### <a name="package-details"></a>封裝詳細資料
+
+手動或離線的封裝安裝，您可以下載 RPM 和 Debian 封裝與下表中的資訊：
+
+| 封裝 | 封裝版本 | 下載 |
+|-----|-----|-----|
+| Red Hat RPM 套件 | 14.0.3026.27-2 | [引擎 RPM 套件](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-14.0.3026.27-2.x86_64.rpm)</br>[高可用性 RPM 套件](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-ha-14.0.3026.27-2.x86_64.rpm)</br>[全文檢索搜尋 RPM 套件](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-fts-14.0.3026.27-2.x86_64.rpm)</br>[SSIS 封裝](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-is-14.0.1000.169-1.x86_64.rpm) | 
+| SLES RPM 套件 | 14.0.3026.27-2 | [mssql 伺服器引擎 RPM 套件](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-14.0.3026.27-2.x86_64.rpm)</br>[高可用性 RPM 套件](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-ha-14.0.3026.27-2.x86_64.rpm)</br>[全文檢索搜尋 RPM 套件](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-fts-14.0.3026.27-2.x86_64.rpm) | 
+| Ubuntu 16.04 Debian 封裝 | 14.0.3026.27-2 | [引擎 Debian 封裝](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server/mssql-server_14.0.3026.27-2_amd64.deb)</br>[高可用性 Debian 封裝](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-ha/mssql-server-ha_14.0.3026.27-2_amd64.deb)</br>[全文檢索搜尋 Debian 封裝](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-fts/mssql-server-fts_14.0.3026.27-2_amd64.deb)<br/>[SSIS 封裝](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-is/mssql-server-is_14.0.1000.169-1_amd64.deb) |
+
+## <a id="CU6"></a> Cu6 來 (年 4 月 2018)
+
+這是 SQL Server 2017 加裝累計更新 6 （cu6） 來發行。 此版本的 SQL Server 引擎版本是 14.0.3025.34。 此版本中的改進與修正的相關資訊，請參閱[ https://support.microsoft.com/help/4101464 ](https://support.microsoft.com/help/4101464)。
+
+### <a name="package-details"></a>封裝詳細資料
+
+手動或離線的封裝安裝，您可以下載 RPM 和 Debian 封裝與下表中的資訊：
+
+| 封裝 | 封裝版本 | 下載 |
+|-----|-----|-----|
+| Red Hat RPM 套件 | 14.0.3025.34-3 | [引擎 RPM 套件](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-14.0.3025.34-3.x86_64.rpm)</br>[高可用性 RPM 套件](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-ha-14.0.3025.34-3.x86_64.rpm)</br>[全文檢索搜尋 RPM 套件](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-fts-14.0.3025.34-3.x86_64.rpm)</br>[SSIS 封裝](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-is-14.0.1000.169-1.x86_64.rpm) | 
+| SLES RPM 套件 | 14.0.3025.34-3 | [mssql 伺服器引擎 RPM 套件](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-14.0.3025.34-3.x86_64.rpm)</br>[高可用性 RPM 套件](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-ha-14.0.3025.34-3.x86_64.rpm)</br>[全文檢索搜尋 RPM 套件](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-fts-14.0.3025.34-3.x86_64.rpm) | 
+| Ubuntu 16.04 Debian 封裝 | 14.0.3025.34-3 | [引擎 Debian 封裝](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server/mssql-server_14.0.3025.34-3_amd64.deb)</br>[高可用性 Debian 封裝](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-ha/mssql-server-ha_14.0.3025.34-3_amd64.deb)</br>[全文檢索搜尋 Debian 封裝](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-fts/mssql-server-fts_14.0.3025.34-3_amd64.deb)<br/>[SSIS 封裝](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-is/mssql-server-is_14.0.1000.169-1_amd64.deb) |
+
+## <a id="CU5"></a> CU5 (年 3 月 2018)
+
+這是 SQL Server 2017 的累計更新 5 (CU5) 版本。 此版本的 SQL Server 引擎版本是 14.0.3023.8。 此版本中的改進與修正的相關資訊，請參閱[ https://support.microsoft.com/help/4092643 ](https://support.microsoft.com/help/4092643)。
+
+### <a name="known-upgrade-issue"></a>已知的升級問題
+
+當您升級從舊版 CU5 時，SQL Server 可能無法啟動，發生下列錯誤：
+
+```
+Error: 4860, Severity: 16, State: 1.
+Cannot bulk load. The file "C:\Install\SqlTraceCollect.dtsx" does not exist or you don't have file access rights.
+Error: 912, Severity: 21, State: 2.
+Script level upgrade for database 'master' failed because upgrade step 'msdb110_upgrade.sql' encountered error 200, state
+```
+
+若要解決這個錯誤，啟用 SQL Server 代理程式並重新啟動 SQL Server 使用下列命令：
+
+```bash
+sudo /opt/mssql/bin/mssql-conf set sqlagent.enabled true
+sudo systemctl start mssql-server
+```
+
+### <a name="package-details"></a>封裝詳細資料
+
+手動或離線的封裝安裝，您可以下載 RPM 和 Debian 封裝與下表中的資訊：
+
+| 封裝 | 封裝版本 | 下載 |
+|-----|-----|-----|
+| Red Hat RPM 套件 | 14.0.3023.8-5 | [引擎 RPM 套件](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-14.0.3023.8-5.x86_64.rpm)</br>[高可用性 RPM 套件](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-ha-14.0.3023.8-5.x86_64.rpm)</br>[全文檢索搜尋 RPM 套件](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-fts-14.0.3023.8-5.x86_64.rpm)</br>[SSIS 封裝](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-is-14.0.1000.169-1.x86_64.rpm) | 
+| SLES RPM 套件 | 14.0.3023.8-5 | [mssql 伺服器引擎 RPM 套件](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-14.0.3023.8-5.x86_64.rpm)</br>[高可用性 RPM 套件](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-ha-14.0.3023.8-5.x86_64.rpm)</br>[全文檢索搜尋 RPM 套件](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-fts-14.0.3023.8-5.x86_64.rpm) | 
+| Ubuntu 16.04 Debian 封裝 | 14.0.3023.8-5 | [引擎 Debian 封裝](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server/mssql-server_14.0.3023.8-5_amd64.deb)</br>[高可用性 Debian 封裝](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-ha/mssql-server-ha_14.0.3023.8-5_amd64.deb)</br>[全文檢索搜尋 Debian 封裝](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-fts/mssql-server-fts_14.0.3023.8-5_amd64.deb)<br/>[SSIS 封裝](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-is/mssql-server-is_14.0.1000.169-1_amd64.deb) |
+
 ## <a id="CU4"></a> CU4 (年 2 月 2018)
 
-這是 SQL Server 2017 的累計更新 4 (CU4) 版本。 此版本的 SQL Server 引擎版本是 14.0.3022.28。 此版本中的改進與修正的相關資訊，請參閱[https://support.microsoft.com/en-us/help/4056498](https://support.microsoft.com/en-us/help/4056498)。
+這是 SQL Server 2017 的累計更新 4 (CU4) 版本。 此版本的 SQL Server 引擎版本是 14.0.3022.28。 此版本中的改進與修正的相關資訊，請參閱[ https://support.microsoft.com/en-us/help/4056498 ](https://support.microsoft.com/en-us/help/4056498)。
 
 ### <a name="package-details"></a>封裝詳細資料
 
@@ -85,7 +145,7 @@ ms.lasthandoff: 02/24/2018
 
 ## <a id="CU3"></a> CU3 (年 1 月 2018)
 
-這是 SQL Server 2017 的累積更新 3 (CU3) 版本。 此版本的 SQL Server 引擎版本是 14.0.3015.40。 此版本中的改進與修正的相關資訊，請參閱[https://support.microsoft.com/en-us/help/4052987](https://support.microsoft.com/en-us/help/4052987)。
+這是 SQL Server 2017 的累積更新 3 (CU3) 版本。 此版本的 SQL Server 引擎版本是 14.0.3015.40。 此版本中的改進與修正的相關資訊，請參閱[ https://support.microsoft.com/en-us/help/4052987 ](https://support.microsoft.com/en-us/help/4052987)。
 
 ### <a name="package-details"></a>封裝詳細資料
 
@@ -99,7 +159,7 @@ ms.lasthandoff: 02/24/2018
 
 ## <a id="CU2"></a> CU2 (11 月版 2017)
 
-這是 SQL Server 2017 的累計更新 2 (CU2) 版本。 此版本的 SQL Server 引擎版本是 14.0.3008.27。 此版本中的改進與修正的相關資訊，請參閱[https://support.microsoft.com/help/4052574](https://support.microsoft.com/help/4052574)。
+這是 SQL Server 2017 的累計更新 2 (CU2) 版本。 此版本的 SQL Server 引擎版本是 14.0.3008.27。 此版本中的改進與修正的相關資訊，請參閱[ https://support.microsoft.com/help/4052574 ](https://support.microsoft.com/help/4052574)。
 
 ### <a name="package-details"></a>封裝詳細資料
 
@@ -113,7 +173,7 @@ ms.lasthandoff: 02/24/2018
 
 ## <a id="CU1"></a> CU1 (第 2017 年 10 月)
 
-這是 SQL Server 2017 的累計更新 1 (CU1) 版本。 此版本的 SQL Server 引擎版本是 14.0.3006.16。 此版本中的改進與修正的相關資訊，請參閱[https://support.microsoft.com/help/KB4053439](https://support.microsoft.com/help/4038634)。
+這是 SQL Server 2017 的累計更新 1 (CU1) 版本。 此版本的 SQL Server 引擎版本是 14.0.3006.16。 此版本中的改進與修正的相關資訊，請參閱[ https://support.microsoft.com/help/KB4053439 ](https://support.microsoft.com/help/4038634)。
 
 ### <a name="package-details"></a>封裝詳細資料
 
@@ -153,7 +213,7 @@ ms.lasthandoff: 02/24/2018
 | **資料庫引擎** | 異動複寫 |
 | &nbsp; | 合併式複寫 |
 | &nbsp; | Stretch DB |
-| &nbsp; | Polybase |
+| &nbsp; | PolyBase |
 | &nbsp; | 合作對象第 3 層連線與分散式的查詢 |
 | &nbsp; | 系統擴充預存程序 （XP_CMDSHELL 等等） |
 | &nbsp; | Filetable，FILESTREAM |
@@ -257,10 +317,10 @@ ms.lasthandoff: 02/24/2018
 1. 藉由移除啟用 ipv6 環境中，核心`ipv6.disable=1`從開機 cmdline。 若要這樣做的方式取決於 Linux 散發套件和開機載入器，例如幼蟲。 如果您想要停用 IPv6，您仍可停用它藉由設定`net.ipv6.conf.all.disable_ipv6 = 1`中`sysctl`組態 (例如`/etc/sysctl.conf`)。 這仍會避免系統的網路介面卡 IPv6 位址，但是允許 sqlservr 功能運作。
 
 #### <a name="network-file-system-nfs"></a>Network File System (NFS)
-如果您使用**網路檔案系統 (NFS)**遠端共用實際執行環境，請注意下列的支援需求：
+如果您使用**網路檔案系統 (NFS)** 遠端共用實際執行環境，請注意下列的支援需求：
 
 - 使用 NFS 版本**4.2 或更新版本**。 NFS 的舊版本不支援必要的功能，例如 fallocate 和通用的現代的檔案系統的疏鬆檔案建立。
-- 只尋找**/var/opt/mssql**上 NFS 掛接的目錄。 不支援其他檔案，例如 SQL Server 系統二進位檔。
+- 只尋找 **/var/opt/mssql**上 NFS 掛接的目錄。 不支援其他檔案，例如 SQL Server 系統二進位檔。
 - 確定 NFS 用戶端在掛接的遠端共用時，會使用 'nolock' 選項。
 
 #### <a name="localization"></a>當地語系化
@@ -307,7 +367,7 @@ ms.lasthandoff: 02/24/2018
 -   [Linux 上安裝 SQL Server Integration Services (SSIS)](sql-server-linux-setup-ssis.md)
 -   [擷取、 轉換和載入與 SSIS Linux 上的資料](sql-server-linux-migrate-ssis.md)
 
-#### <a name="sql-server-management-studio-ssms"></a>SQL Server Management Studio (SSMS)
+#### <a name="-a-idssmsa-sql-server-management-studio-ssms"></a>< a id ="ssms"></a> SQL Server Management Studio (SSMS)
 
 下列限制適用於 SSMS 連接到 SQL Server on Linux 的 Windows 上。
 

@@ -1,30 +1,31 @@
 ---
-title: "ClusterDistance (DMX) |Microsoft 文件"
-ms.custom: 
+title: ClusterDistance (DMX) |Microsoft 文件
+ms.custom: ''
 ms.date: 03/02/2016
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
 ms.component: data-mining
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
-f1_keywords: ClusterDistance
-dev_langs: DMX
-helpviewer_keywords: ClusterDistance function
+f1_keywords:
+- ClusterDistance
+dev_langs:
+- DMX
+helpviewer_keywords:
+- ClusterDistance function
 ms.assetid: a13152b3-4cd1-4c79-8a3e-207624198330
-caps.latest.revision: "11"
+caps.latest.revision: 11
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: 0a3f0d8b9167a399249cce2183b5a03ae0995473
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 03e85862a5fc8a1a9daae56282294d9addad53f0
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="clusterdistance-dmx"></a>ClusterDistance (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -60,13 +61,13 @@ ClusterDistance([<ClusterID expression>])
 ## <a name="related-prediction-functions"></a>相關的預測函數  
  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 提供下列額外的函數來查詢群集模型：  
   
--   使用[叢集 &#40; DMX &#41;](../dmx/cluster-dmx.md)函數來傳回最可能的群集。  
+-   使用[叢集&#40;DMX&#41; ](../dmx/cluster-dmx.md)函數來傳回最可能的群集。  
   
--   使用[ClusterProbability &#40; DMX &#41;](../dmx/clusterprobability-dmx.md)函式可取得案例屬於特定群集的機率。 這個值會當做群集距離的反向。  
+-   使用[ClusterProbability &#40;DMX&#41; ](../dmx/clusterprobability-dmx.md)函式可取得案例屬於特定群集的機率。 這個值會當做群集距離的反向。  
   
--   使用[PredictHistogram &#40; DMX &#41;](../dmx/predicthistogram-dmx.md)函數來傳回輸入案例存在於每個模型的群集的可能性的長條圖。  
+-   使用[PredictHistogram &#40;DMX&#41; ](../dmx/predicthistogram-dmx.md)函數來傳回輸入案例存在於每個模型的群集的可能性的長條圖。  
   
--   使用[PredictCaseLikelihood &#40; DMX &#41;](../dmx/predictcaselikelihood-dmx.md)函式傳回 0 到 1 表示輸入的案例可能性的量值為模型存在於透過演算法取得。  
+-   使用[PredictCaseLikelihood &#40;DMX&#41; ](../dmx/predictcaselikelihood-dmx.md)函式傳回 0 到 1 表示輸入的案例可能性的量值為模型存在於透過演算法取得。  
   
 ## <a name="example1-obtaining-cluster-distance-to-the-most-likely-cluster"></a>範例 1：取得最可能之群集的群集距離  
  下列範例會傳回指定之案例與該案力最可能所屬之群集間的距離。  
@@ -135,10 +136,10 @@ NATURAL PREDICTION JOIN
 |------------------------|  
 |0.97008209236394|  
   
-## <a name="see-also"></a>請參閱  
- [叢集 &#40; DMX &#41;](../dmx/cluster-dmx.md)   
- [資料採礦延伸模組 &#40; DMX &#41;函數參考](../dmx/data-mining-extensions-dmx-function-reference.md)   
- [函式 &#40; DMX &#41;](../dmx/functions-dmx.md)   
- [叢集模型 &#40; 採礦模型內容Analysis Services-資料採礦 &#41;](../analysis-services/data-mining/mining-model-content-for-clustering-models-analysis-services-data-mining.md)  
+## <a name="see-also"></a>另請參閱  
+ [叢集&#40;DMX&#41;](../dmx/cluster-dmx.md)   
+ [資料採礦延伸模組&#40;DMX&#41;函數參考](../dmx/data-mining-extensions-dmx-function-reference.md)   
+ [函式&#40;DMX&#41;](../dmx/functions-dmx.md)   
+ [叢集模型 & #40; 採礦模型內容Analysis Services-資料採礦 & #41;](../analysis-services/data-mining/mining-model-content-for-clustering-models-analysis-services-data-mining.md)  
   
   

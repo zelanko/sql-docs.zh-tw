@@ -1,27 +1,25 @@
 ---
-title: "將展開或摺疊動作新增項目中 (報表產生器及 SSRS) | Microsoft Docs"
-ms.custom: 
+title: 將展開或摺疊動作新增項目中 (報表產生器及 SSRS) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: report-design
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: 49f07ad6-242b-4861-8fc1-91ca78c36d6c
-caps.latest.revision: "12"
+caps.latest.revision: 12
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.workload: Active
-ms.openlocfilehash: 84a57041ddc986a359d598e1fbb47a0181f432cc
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 727521df55b09dc4d28a1b79054c4ad8c411cb01
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="add-an-expand-or-collapse-action-to-an-item-report-builder-and-ssrs"></a>將展開或摺疊動作加入項目中 (報表產生器及 SSRS)
   您可以讓使用者以互動方式展開或摺疊報表項目，或者針對資料表或矩陣，展開或摺疊與群組關聯的資料列和資料行。 若要讓使用者展開或摺疊項目，您可以設定該項目的可見性屬性。 設定可見性適用於 HTML 報表檢視器，有時稱為 *「向下鑽研」* (Drilldown) 動作。  
@@ -50,7 +48,7 @@ ms.lasthandoff: 01/09/2018
     > [!NOTE]  
     >  如果看不到 [屬性] 窗格，請按一下功能區上的 [檢視]，然後按一下 [屬性]。  
   
-4.  在 **[隱藏]**中，選擇下列其中一個選項來設定第一次執行報表時，此報表項目的可見性：  
+4.  在 **[隱藏]** 中，選擇下列其中一個選項來設定第一次執行報表時，此報表項目的可見性：  
   
     -   選取 **[False]** 來顯示報表項目。  
   
@@ -77,7 +75,7 @@ ms.lasthandoff: 01/09/2018
   
 2.  按一下 **[可見性]**。  
   
-3.  在 **[一開始執行報表時]**中，選擇下列其中一個選項來設定第一次執行報表時，此報表項目的可見性：  
+3.  在 **[一開始執行報表時]** 中，選擇下列其中一個選項來設定第一次執行報表時，此報表項目的可見性：  
   
     -   選取 **[顯示]** 來顯示報表項目。  
   

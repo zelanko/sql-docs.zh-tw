@@ -1,4 +1,4 @@
-# [概觀](multidimensional-models-ssas.md)
+# [多維度模型](multidimensional-models-ssas.md)
  
 # [多維度方案](multidimensional-model-solutions-ssas.md)  
 ## [使用 SQL Server Data Tools (SSDT) 建立多維度模型](creating-multidimensional-models-using-sql-server-data-tools-ssdt.md)  

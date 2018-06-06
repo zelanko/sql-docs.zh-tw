@@ -1,34 +1,30 @@
 ---
-title: "Audit Server Scope GDR 事件類別 | Microsoft Docs"
-ms.custom: 
+title: Audit Server Scope GDR 事件類別 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
-ms.prod_service: database-engine, sql-database
-ms.service: 
-ms.component: event-classes
-ms.reviewer: 
+ms.prod: sql
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: supportability
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - Audit Server Scope GDR event class
 ms.assetid: d3b1e47f-2ba2-49af-b404-1aa231d4e4a0
-caps.latest.revision: 
+caps.latest.revision: 36
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 02b6faf2c8a8b516a8040afdb39fb40eb806c1bb
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 2847512530ab2b95b2aeeb1d3a2fe1aba2ab0c52
+ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="audit-server-scope-gdr-event-class"></a>Audit Server Scope GDR 事件類別
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-發出 GRANT、REVOKE 或 DENY 以取得伺服器範圍中的權限時 (例如建立登入) 時，會發生 **Audit Server Scope GDR** 事件類別。  
+  發出 GRANT、REVOKE 或 DENY 以取得伺服器範圍中的權限時 (例如建立登入) 時，會發生 **Audit Server Scope GDR** 事件類別。  
   
 ## <a name="audit-server-scope-gdr-event-class-data-columns"></a>Audit Server Scope GDR 事件類別資料行  
   

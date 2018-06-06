@@ -1,35 +1,23 @@
 ---
-title: "通知事件類別目錄 |Microsoft 文件"
-ms.custom: 
-ms.date: 03/01/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+title: 通知事件類別目錄 |Microsoft 文件
+ms.date: 05/07/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: trace-events
 ms.topic: reference
-helpviewer_keywords:
-- event classes [Analysis Services], notification events
-- Notification Events event category
-- notification events [Analysis Services]
-ms.assetid: 5f215a7a-dab8-458c-b846-2d261e957849
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 4359a0599078688729e69bdc033d007fbc504af0
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: c1ea8dd0b6f19177a85b7a4b4ed4457c633dbb69
+ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="notification-events-event-category"></a>通知事件的事件類別目錄
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-[通知事件] 的事件類別目錄具有下表所描述的事件類別。  
+  [通知事件] 的事件類別目錄具有下表所描述的事件類別。  
   
 |Event Class|事件識別碼|說明|  
 |-----------------|--------------|-----------------|  

@@ -1,30 +1,28 @@
 ---
-title: "SQL 屬性 |Microsoft 文件"
-ms.technology:
-- drivers
-ms.custom: 
+title: SQL 屬性 |Microsoft 文件
+ms.technology: connectivity
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.component: reference
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 apitype: COM
 helpviewer_keywords:
 - SQL property [RDS]
 ms.assetid: e0dabf23-a159-4fe5-a962-3df544a21f5c
-caps.latest.revision: 
+caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 406d5cd5fcf159d9354ef0af0b7036e3ebd24bab
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: a5ddbfa6b69f4859f61130e8ec1c9b758c40cf64
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sql-property"></a>SQL 屬性
 表示用來擷取查詢字串[資料錄集](../../../ado/reference/ado-api/recordset-object-ado.md)。  
@@ -47,7 +45,7 @@ Run time: DataControl.SQL = "QueryString"
  A**字串**包含有效的 SQL 資料要求的值。  
   
  *DataControl*  
- 物件變數，表示**.RDSDataControl**物件。  
+ 物件變數，表示 **.RDSDataControl**物件。  
   
 ## <a name="remarks"></a>備註  
  一般情況下，這是 SQL 陳述式 （使用的方言的資料庫伺服器），例如`"Select * from NewTitles"`。 若要確保記錄會比對，並正確地更新，可更新的查詢必須包含二進位長的欄位或計算的欄位以外的欄位。  

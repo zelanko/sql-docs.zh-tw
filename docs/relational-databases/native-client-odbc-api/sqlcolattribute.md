@@ -1,30 +1,29 @@
 ---
-title: SQLColAttribute | Microsoft Docs
-ms.custom: 
+title: SQLColAttribute |Microsoft 文件
+ms.custom: ''
 ms.date: 03/17/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
 ms.component: native-client-odbc-api
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apitype: DLLExport
 helpviewer_keywords:
 - SQLColAttribute function
 ms.assetid: a5387d9e-a243-4cfe-b786-7fad5842b1d6
-caps.latest.revision: 
+caps.latest.revision: 52
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 0ba0d2473ed054e9d356f84fdf5a698cae4c201a
-ms.sourcegitcommit: a0aa5e611a0e6ebb74ac1e2f613e8916dc7a7617
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 6a846851ac4558c3b39bd821f32f32c20a0993f2
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/24/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sqlcolattribute"></a>SQLColAttribute
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -47,7 +46,7 @@ ms.lasthandoff: 01/24/2018
 |SQL_DESC_TABLE_NAME|可用於擷取自產生伺服器資料指標之陳述式的結果集，或包含 FOR BROWSE 子句之已執行 SELECT 陳述式。|  
 |SQL_DESC_UNNAMED|除非資料行是運算式的結果，而且該運算式在執行時不包含標籤指派，否則為結果集中所有資料行的 SQL_NAMED。 當 SQL_DESC_UNNAMED 傳回 SQL_UNNAMED 時，資料行的所有 ODBC 資料行識別碼屬性都包含零長度字串。|  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client ODBC 驅動程式會使用 SET FMTONLY 陳述式來減少伺服器的負擔時**SQLColAttribute**會針對備妥但未執行的陳述式呼叫。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驅動程式會使用 SET FMTONLY 陳述式來減少伺服器的負擔時**SQLColAttribute**會針對備妥但未執行的陳述式呼叫。  
   
  對於大數值類型**SQLColAttribute**會傳回下列值：  
   
@@ -80,9 +79,9 @@ ms.lasthandoff: 01/24/2018
 |SQL_CA_SS_NUM_COMPUTES|在目前的 Transact-SQL SELECT 陳述式中指定的 COMPUTE 子句數目。|  
 |SQL_CA_SS_NUM_ORDERS|在 ODBC 或 Transact-SQL SELECT 陳述式的 ORDER BY 子句中指定之資料行的數目。|  
   
- \*如果陳述式屬性 SQL_SOPT_SS_HIDDEN_COLUMNS 設定為 sql_hc_on 時，可用。  
+ \*   如果陳述式屬性 SQL_SOPT_SS_HIDDEN_COLUMNS 設定為 sql_hc_on 時，可用。  
   
- [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]導入驅動程式專屬描述項欄位來提供其他資訊，分別代表 XML 結構描述集合名稱、 結構描述名稱，以及目錄名稱。 如果這些屬性包含非英數字元，則它們不需要引號或逸出字元。 下表列出這些新的描述項欄位：  
+ [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 導入驅動程式專屬描述項欄位來提供其他資訊，分別代表 XML 結構描述集合名稱、 結構描述名稱，以及目錄名稱。 如果這些屬性包含非英數字元，則它們不需要引號或逸出字元。 下表列出這些新的描述項欄位：  
   
 |資料行名稱|類型|Description|  
 |-----------------|----------|-----------------|  
@@ -104,15 +103,15 @@ ms.lasthandoff: 01/24/2018
 ## <a name="sqlcolattribute-support-for-enhanced-date-and-time-features"></a>增強型日期和時間功能的 SQLColAttribute 支援  
  針對日期/時間類型傳回的值，請參閱中的 「 資訊 IRD 欄位中傳回 」 一節[and Result Metadata<](../../relational-databases/native-client-odbc-date-time/metadata-parameter-and-result.md)。  
   
- 如需詳細資訊，請參閱[日期和時間增強功能 &#40; ODBC &#41;](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)。  
+ 如需詳細資訊，請參閱[日期和時間增強功能 & #40; ODBC & #41;](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)。  
   
 ## <a name="sqlcolattribute-support-for-large-clr-udts"></a>大型 CLR UDT 的 SQLColAttribute 支援  
- **SQLColAttribute**支援大型 CLR 使用者定義型別 (Udt)。 如需詳細資訊，請參閱[Large CLR User-Defined 類型 &#40; ODBC &#41;](../../relational-databases/native-client/odbc/large-clr-user-defined-types-odbc.md)。  
+ **SQLColAttribute**支援大型 CLR 使用者定義型別 (Udt)。 如需詳細資訊，請參閱[Large CLR User-Defined 類型 & #40; ODBC & #41;](../../relational-databases/native-client/odbc/large-clr-user-defined-types-odbc.md)。  
   
 ## <a name="sqlcolattribute-support-for-sparse-columns"></a>疏鬆資料行的 SQLColAttribute 支援  
  SQLColAttribute 查詢新實作資料列描述項 (IRD) 欄位 SQL_CA_SS_IS_COLUMN_SET 來判斷資料行是否為**column_set**資料行。  
   
- 如需詳細資訊，請參閱[疏鬆資料行支援 &#40; ODBC &#41;](../../relational-databases/native-client/odbc/sparse-columns-support-odbc.md)。  
+ 如需詳細資訊，請參閱[疏鬆資料行支援&#40;ODBC&#41;](../../relational-databases/native-client/odbc/sparse-columns-support-odbc.md)。  
   
 ## <a name="see-also"></a>另請參閱  
  [SQLColAttribute 函數](http://go.microsoft.com/fwlink/?LinkId=59334)   

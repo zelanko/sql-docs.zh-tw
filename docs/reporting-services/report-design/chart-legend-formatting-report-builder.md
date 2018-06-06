@@ -1,16 +1,15 @@
 ---
-title: "在圖表上格式化圖例 (報表產生器及 SSRS) | Microsoft Docs"
-ms.custom: 
+title: 在圖表上格式化圖例 (報表產生器及 SSRS) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: report-design
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 f1_keywords:
 - sql13.rtp.rptdesigner.calculatedseriesproperties.legend.f1
 - "10183"
@@ -29,16 +28,15 @@ f1_keywords:
 - sql13.rtp.rptdesigner.legendtitleproperties.general.f1
 - sql13.rtp.rptdesigner.legendproperties.font.f1
 ms.assetid: b035b2e0-ab1e-4a37-bff7-a42d1e914bac
-caps.latest.revision: "8"
+caps.latest.revision: 8
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 6671b7465773e0c0f27b2ba2ec5bf1d16e2b1b2c
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: ece29c4bf152cfe96f79bcf47c6eea5e7e195871
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="chart-legend---formatting-report-builder"></a>圖表圖例 - 格式化 (報表產生器)
   圖表圖例包含圖表中每一個類別目錄的描述。 圖例一定會包含一或多個圖例項目，其中每一個圖例項目都是由代表數列的彩色方塊及描述此數列的文字字串所組成，如下圖所示。  
@@ -72,7 +70,7 @@ ms.lasthandoff: 01/09/2018
 ## <a name="repositioning-the-legend"></a>調整圖例的位置  
  矩形區域中的圖表區域包含軸標籤和繪圖區。 當圖例置於圖表區域的外面時，您可以將圖例拖曳到十二個不同位置當中的其中一個。 依預設，此圖例會顯示在圖表區域的外面。 您也可以在 **[圖例屬性]** 對話方塊中設定此位置。  
   
- 您無法將此圖例拖曳到圖表區域的裡面或外面。 如果您要將圖例放到圖表區域的內部，請在 **[圖例屬性]** 對話方塊的 **[停駐]**底下，從下拉式清單中選取 **[預設值]** ，並清除 **[在圖表區域外顯示圖例]** 選項。 當您將圖例放在圖表區域的內部時，可以將圖表上資料點的空間最大化。 但是，根據資料集而定，這樣可能會造成圖例與圖表區域上的某些資料點重疊，使得圖表更難閱讀。  
+ 您無法將此圖例拖曳到圖表區域的裡面或外面。 如果您要將圖例放到圖表區域的內部，請在 **[圖例屬性]** 對話方塊的 **[停駐]** 底下，從下拉式清單中選取 **[預設值]** ，並清除 **[在圖表區域外顯示圖例]** 選項。 當您將圖例放在圖表區域的內部時，可以將圖表上資料點的空間最大化。 但是，根據資料集而定，這樣可能會造成圖例與圖表區域上的某些資料點重疊，使得圖表更難閱讀。  
   
 ## <a name="displaying-legend-items-horizontally"></a>水平顯示圖例項目  
  根據預設，圖例會格式化成一或多個資料列的清單，其中每一個資料列包含一個圖例項目。 圖例區域會展開，以容納這個數目的圖例項目。 如果此圖例無法展開，就會顯示省略符號 ( )。 根據指定的圖例樣式而定，此圖例可垂直或水平展開。 您可以在 **[圖例屬性]** 對話方塊上變更配置樣式，或是變更用來顯示所有圖例項目的配置空間。  

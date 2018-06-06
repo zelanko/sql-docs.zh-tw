@@ -1,32 +1,29 @@
 ---
-title: "SQL 到 c： 二進位 |Microsoft 文件"
-ms.custom: 
+title: SQL 到 c： 二進位 |Microsoft 文件
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
-ms.component: odbc
-ms.reviewer: 
+ms.prod: sql
+ms.prod_service: connectivity
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: connectivity
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - converting data from SQL to c types [ODBC], binary
 - binary data type [ODBC]
 - data conversions from SQL to C types [ODBC], binary
 - binary data transfers [ODBC]
 ms.assetid: 8c519072-ae4c-4d32-9d4e-775e3d3d6389
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
-ms.workload: Inactive
-ms.openlocfilehash: 293c18d2206d1b034eadc532f8850c6599e904e1
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+manager: craigg
+ms.openlocfilehash: b18b421173945869d5ff57fea8a7716aa0459fb5
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sql-to-c-binary"></a>SQL 到 c： 二進位
 二進位的 ODBC SQL 資料類型的識別項是：  
@@ -41,9 +38,9 @@ ms.lasthandoff: 12/21/2017
   
 |C 類型識別碼|測試|**TargetValuePtr*|**StrLen_or_IndPtr*|SQLSTATE|  
 |-----------------------|----------|------------------------|----------------------------|--------------|  
-|SQL_C_CHAR|（位元組長度的資料）\* 2 < *Columnsize*<br /><br /> （位元組長度的資料）\* 2 > = *Columnsize*|data<br /><br /> 截斷的資料|以位元組為單位的資料長度<br /><br /> 以位元組為單位的資料長度|n/a<br /><br /> 01004|  
-|SQL_C_WCHAR|（字元長度的資料）\* 2 < *Columnsize*<br /><br /> （字元長度的資料）\* 2 > = *Columnsize*|data<br /><br /> 截斷的資料|以字元為單位的資料長度<br /><br /> 以字元為單位的資料長度|n/a<br /><br /> 01004|  
-|SQL_C_BINARY|資料的位元組長度 < = *Columnsize*<br /><br /> 資料的位元組長度 > *Columnsize*|data<br /><br /> 截斷的資料|以位元組為單位的資料長度<br /><br /> 以位元組為單位的資料長度|n/a<br /><br /> 01004|  
+|SQL_C_CHAR|（位元組長度的資料）\* 2 < *Columnsize*<br /><br /> （位元組長度的資料）\* 2 > = *Columnsize*|資料<br /><br /> 截斷的資料|以位元組為單位的資料長度<br /><br /> 以位元組為單位的資料長度|n/a<br /><br /> 01004|  
+|SQL_C_WCHAR|（字元長度的資料）\* 2 < *Columnsize*<br /><br /> （字元長度的資料）\* 2 > = *Columnsize*|資料<br /><br /> 截斷的資料|以字元為單位的資料長度<br /><br /> 以字元為單位的資料長度|n/a<br /><br /> 01004|  
+|SQL_C_BINARY|資料的位元組長度 < = *Columnsize*<br /><br /> 資料的位元組長度 > *Columnsize*|資料<br /><br /> 截斷的資料|以位元組為單位的資料長度<br /><br /> 以位元組為單位的資料長度|n/a<br /><br /> 01004|  
   
  當二進位 SQL 資料轉換成 C 字元資料時，來源資料的每個位元組 （8 位元） 被以兩個 ASCII 字元。 這些字元出現在其十六進位格式的數字的 ASCII 字元表示法。 例如，二進位 00000001 會轉換為"01"，而二進位 11111111 會轉換成"FF"。  
   

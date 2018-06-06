@@ -1,28 +1,26 @@
 ---
-title: "開始使用這個匯入和匯出精靈的簡單範例 | Microsoft Docs"
-ms.custom: 
+title: 開始使用這個匯入和匯出精靈的簡單範例 | Microsoft Docs
+ms.custom: ''
 ms.date: 02/15/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
 ms.component: import-export-data
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: get-started-article
 ms.assetid: ea3db39b-698b-4a74-8eb8-21dc7252dc1a
-caps.latest.revision: 
+caps.latest.revision: 22
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 169ad5455571c2b0e484fc0aa153e55141cdd1fd
-ms.sourcegitcommit: 4edac878b4751efa57601fe263c6b787b391bc7c
+ms.openlocfilehash: 20a36a42ca3ce3cd7511dbf36896827f156b6bd3
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/19/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="get-started-with-this-simple-example-of-the-import-and-export-wizard"></a>開始使用這個匯入和匯出精靈的簡單範例
 逐步執行將資料從 Excel 試算表匯入至 SQL Server 資料庫的這個常見案例，以了解 [SQL Server 匯入和匯出精靈] 中的預期作業。 即使您要使用不同的來源和不同的目的地，本主題還是會示範您執行精靈時所需知道的大部分內容。
@@ -62,9 +60,12 @@ ms.lasthandoff: 02/19/2018
 ## <a name="step-3---pick-excel-as-your-data-source"></a>步驟 3 - 挑選 Excel 作為資料來源
 在下一個 [選擇資料來源] 頁面上，您可以挑選 Microsoft Excel 作為資料來源。 您接著可以瀏覽以挑選 Excel 檔案。 最後，您會指定用來建立檔案的 Excel 版本。
 
+> [!IMPORTANT]
+> 如需連接至 Excel 檔案，以及將資料從 Excel 檔案載入或載入至 Excel 檔案的限制與已知問題的詳細資訊，請參閱[使用 SQL Server Integration Services (SSIS) 將資料從 Excel 載入或載入至 Excel](../load-data-to-from-excel-with-ssis.md)。
+
 ![選擇 Excel 資料來源](../../integration-services/import-export-data/media/choose-the-excel-data-source.jpg)
 
-如需連線至 Excel 的詳細資訊，請參閱[連線至 Excel 資料來源](../../integration-services/import-export-data/connect-to-an-excel-data-source-sql-server-import-and-export-wizard.md)。 如需精靈之這個頁面的詳細資訊，請參閱[選擇資料來源](../../integration-services/import-export-data/choose-a-data-source-sql-server-import-and-export-wizard.md)。
+如需精靈之這個頁面的詳細資訊，請參閱[選擇資料來源](../../integration-services/import-export-data/choose-a-data-source-sql-server-import-and-export-wizard.md)。
 
 ## <a name="step-4---pick-sql-server-as-your-destination"></a>步驟 4 - 挑選 SQL Server 作為目的地
 在下一個 [選擇目的地] 頁面上，您可以挑選清單中連線至 SQL Server 的其中一個資料提供者，以挑選 Microsoft SQL Server 作為目的地。 在此範例中，您挑選 **.Net Framework Data Provider for SQL Server**。
@@ -162,4 +163,4 @@ ms.lasthandoff: 02/19/2018
 
 -   **了解如何連線至資料來源和目的地。** 如果您要尋找如何連線至資料的資訊，請從這裡的清單中選取您想要的頁面 - [使用 SQL Server 匯入和匯出精靈連線至資料來源](../../integration-services/import-export-data/connect-to-data-sources-with-the-sql-server-import-and-export-wizard.md)。 數個常用資料來源都各有個別文件頁面。
 
-
+-   **深入了解將資料從 Excel 載入或載入至 Excel。** 如果您在尋找連接至 Excel 檔案，以及將資料從 Excel 檔案載入或載入至 Excel 檔案的限制與已知問題的詳細資訊，請參閱[使用 SQL Server Integration Services (SSIS) 將資料從 Excel 載入或載入至 Excel](../load-data-to-from-excel-with-ssis.md)。

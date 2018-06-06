@@ -1,39 +1,23 @@
 ---
-title: "產生時間資料表來建立時間維度 |Microsoft 文件"
-ms.custom: 
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
-helpviewer_keywords:
-- time dimensions [Analysis Services]
-- dimensions [Analysis Services], time
-- time periods [Analysis Services]
-- range-based time dimensions [Analysis Services]
-- server time dimensions [Analysis Services]
-- calendars [Analysis Services]
-- table-based time dimensions [Analysis Services]
-ms.assetid: 58303326-1361-4c0e-9f3d-642ce69c4f6a
-caps.latest.revision: 
-author: Minewiskan
+title: 產生時間資料表來建立時間維度 |Microsoft 文件
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: multidimensional-models
+ms.topic: conceptual
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 7c437b381faae56438376a93355adec76b28d7e9
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: d35cf55f64b977e952b57416a31c35cd669fc468
+ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="create-a-time-dimension-by-generating-a-time-table"></a>產生時間資料表來建立時間維度
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]中，當來源資料庫中沒有任何可用的時間資料表時，您就可以使用 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 中的「維度精靈」來建立時間維度。 您可以透過在 **[選取建立方法]** 頁面上選取下列其中一個選項，完成此作業：  
+  在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]中，當來源資料庫中沒有任何可用的時間資料表時，您就可以使用 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 中的「維度精靈」來建立時間維度。 您可以透過在 **[選取建立方法]** 頁面上選取下列其中一個選項，完成此作業：  
   
 -   **在資料來源中產生時間資料表** ：當您擁有在基礎資料來源中建立物件的權限時，請選取這個選項。 然後，這個精靈將產生時間資料表並將此資料表儲存在資料來源中。 接著，這個精靈會根據此時間資料表建立時間維度。  
   
@@ -46,7 +30,7 @@ ms.lasthandoff: 02/15/2018
   
  選取當精靈建立套用至資料的階層時要使用的時間週期，例如年、半年、季、每四個月、月、十天、週或日期。 您至少一定要選取日期時間週期。 Date 屬性是維度的索引鍵屬性，因此維度沒有它就無法作用。  
   
- 在 **[時間成員名稱的語言]**旁，選取要用來標示維度之成員的語言。  
+ 在 **[時間成員名稱的語言]** 旁，選取要用來標示維度之成員的語言。  
   
  您建立以日期範圍為基礎的時間維度之後，可以使用維度設計師來加入或移除時間屬性。 由於 Date 屬性是維度的索引鍵屬性，因此不能從維度中移除該屬性。 若要對使用者隱藏 Date 屬性 (attribute)，您可以將該屬性 (attribute) 的 **AttributeHierarchyVisible** 屬性 (property) 變更為 **False**。  
   

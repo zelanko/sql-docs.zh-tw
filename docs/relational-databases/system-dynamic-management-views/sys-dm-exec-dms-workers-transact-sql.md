@@ -1,16 +1,13 @@
 ---
-title: sys.dm_exec_dms_workers (Transact-SQL) | Microsoft Docs
-ms.custom: 
+title: sys.dm_exec_dms_workers (TRANSACT-SQL) |Microsoft 文件
+ms.custom: ''
 ms.date: 03/15/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-data-warehouse, pdw
-ms.service: 
-ms.component: dmv's
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: system-objects
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - SYS.DM_EXEC_DMS_WORKERS_TSQL
@@ -24,16 +21,16 @@ helpviewer_keywords:
 - dm_exec_dms_workers management view
 - sys.dm_exec_dms_workers management view
 ms.assetid: f468da29-78c3-4f10-8a3c-17905bbf46f2
-caps.latest.revision: 
+caps.latest.revision: 8
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: ec7edcfc352e2addf3ba69d5915a11b25f483eba
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 940857ee9b723eed5adf1626d8db8c7868d30e7c
+ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 05/23/2018
 ---
 # <a name="sysdmexecdmsworkers-transact-sql"></a>sys.dm_exec_dms_workers (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-pdw-md.md)]
@@ -45,9 +42,9 @@ ms.lasthandoff: 02/03/2018
 |資料行名稱|資料類型|Description|範圍|  
 |-----------------|---------------|-----------------|-----------|  
 |execution_id|**nvarchar(32)**|查詢此 DMS 工作者是部分 of.request_id，step_index，，和 dms_step_index 形成這個檢視的索引鍵。||  
-|step_index|**int**|查詢此 DMS 工作者是一部分的步驟。|請參閱中的步驟索引[sys.dm_exec_distributed_request_steps &#40;TRANSACT-SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-distributed-request-steps-transact-sql.md).|  
-|dms_step_index|**int**|這個工作者執行的 DMS 計劃中的步驟。|See [sys.dm_exec_dms_workers (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-exec-dms-workers-transact-sql.md)|  
-|compute_node_id|**int**|背景工作執行的節點。|請參閱[sys.dm_exec_compute_nodes &#40;TRANSACT-SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-compute-nodes-transact-sql.md).|  
+|step_index|**int**|查詢此 DMS 工作者是一部分的步驟。|請參閱中的步驟索引[sys.dm_exec_distributed_request_steps &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-distributed-request-steps-transact-sql.md)。|  
+|dms_step_index|**int**|這個工作者執行的 DMS 計劃中的步驟。|請參閱[sys.dm_exec_dms_workers (TRANSACT-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-exec-dms-workers-transact-sql.md)|  
+|compute_node_id|**int**|背景工作執行的節點。|請參閱[sys.dm_exec_compute_nodes &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-compute-nodes-transact-sql.md)。|  
 |distribution_id|**int**|||  
 |型別|**nvarcha(32)**|||  
 |status|**nvarchar(32)**|此步驟的狀態|' 取消暫停的'，'執行'，'完整'、 'Failed'、 'UndoFailed'、 'PendingCancel'，''，'復原'、 '中止'|  
@@ -70,6 +67,6 @@ ms.lasthandoff: 02/03/2018
 ## <a name="see-also"></a>另請參閱  
  [PolyBase，疑難排解動態管理檢視](http://msdn.microsoft.com/library/ce9078b7-a750-4f47-b23e-90b83b783d80)   
  [動態管理檢視與函數 &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
- [資料庫相關動態管理檢視 &#40;TRANSACT-SQL &#41;](../../relational-databases/system-dynamic-management-views/database-related-dynamic-management-views-transact-sql.md)  
+ [與資料庫相關動態管理檢視&#40;Transact SQL&#41;](../../relational-databases/system-dynamic-management-views/database-related-dynamic-management-views-transact-sql.md)  
   
   

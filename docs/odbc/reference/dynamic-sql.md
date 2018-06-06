@@ -1,16 +1,14 @@
 ---
-title: "動態 SQL |Microsoft 文件"
-ms.custom: 
+title: 動態 SQL |Microsoft 文件
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
-ms.component: odbc
-ms.reviewer: 
+ms.prod: sql
+ms.prod_service: connectivity
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: connectivity
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - SQL [ODBC], embedded SQL
 - SQL statements [ODBC], dynamic SQL
@@ -19,16 +17,15 @@ helpviewer_keywords:
 - SQL [ODBC], dynamic SQL
 - embedded SQL [ODBC]
 ms.assetid: 0bfb9ab7-9c15-4433-93bc-bad8b6c9d287
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
-ms.workload: On Demand
-ms.openlocfilehash: a2378a7e84b62102666985f3166bd9c8586837e3
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+manager: craigg
+ms.openlocfilehash: 465f9785436880fce74136dd293abab33d1d2b4c
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="dynamic-sql"></a>動態 SQL
 靜態 SQL 都適用於許多情況下，雖然還有無法事先判斷資料存取的應用程式類別。 例如，假設試算表可讓使用者輸入的查詢，試算表然後傳送給 DBMS 來擷取資料。 此查詢的內容很明顯地不知道程式設計人員寫入試算表程式時。  

@@ -1,31 +1,28 @@
 ---
-title: "內嵌 SQL 範例 |Microsoft 文件"
-ms.custom: 
+title: 內嵌 SQL 範例 |Microsoft 文件
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
-ms.component: odbc
-ms.reviewer: 
+ms.prod: sql
+ms.prod_service: connectivity
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: connectivity
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - SQL [ODBC], embedded SQL
 - SQL statements [ODBC], embedded SQL
 - embedded SQL [ODBC]
 ms.assetid: b8a26e05-3c82-4c5f-8f01-9de0edb645e9
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
-ms.workload: On Demand
-ms.openlocfilehash: 13890248b3e724f2a41db5a3425c62dc7635b63a
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+manager: craigg
+ms.openlocfilehash: 8d8983bcabb791c99974055fa718bdd89057e2d9
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="embedded-sql-example"></a>內嵌的 SQL 範例
 下列程式碼是簡單內嵌的 SQL 撰寫的程式，在 c 中。程式會說明許多，但不是所有的內嵌 SQL 技術。 程式會提示使用者輸入訂單號碼、 擷取客戶編號、 銷售人員，以及狀態的順序，以及在螢幕上顯示所擷取的資訊。  

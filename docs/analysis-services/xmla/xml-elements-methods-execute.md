@@ -1,41 +1,24 @@
 ---
-title: "Execute 方法 (XMLA) |Microsoft 文件"
-ms.custom: 
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services, azure-analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+title: Execute 方法 (XMLA) |Microsoft 文件
+ms.date: 05/08/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: xmla
 ms.topic: reference
-apiname: Execute Method
-apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
-apitype: Schema
-applies_to: SQL Server 2016 Preview
-f1_keywords:
-- EXECUTE
-- urn:schemas-microsoft-com:xml-analysis#
-- http://schemas.microsoft.com/analysisservices/2003/engine#
-- microsoft.xml.analysis.execute
-- urn:schemas-microsoft-com:xml-analysis#Execute
-helpviewer_keywords: Execute method
-ms.assetid: 0fff5221-7164-4bbc-ab58-49cf04c52664
-caps.latest.revision: "34"
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 083137b2c739916210113373c709ab04c0e8f4e0
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 6c47a3c1a297bd636c64e52fcb83fda6a2b7bad5
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34574930"
 ---
 # <a name="xml-elements---methods---execute"></a>XML 項目-方法-執行
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]將 XML for Analysis (XMLA) 命令傳送到的執行個體[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]。 這包括涉及資料傳輸的要求，例如擷取或更新伺服器資料的要求。  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
+  將 XML for Analysis (XMLA) 命令傳送到 Analysis Services 的執行個體。 這包括涉及資料傳輸的要求，例如擷取或更新伺服器資料的要求。  
   
  **命名空間**描述 urn:-microsoft-schemas-microsoft-com:-分析  
   
@@ -91,11 +74,11 @@ ms.lasthandoff: 01/08/2018
 </Execute>  
 ```  
   
-## <a name="see-also"></a>請參閱  
- [XML 資料類型 &#40;XMLA &#41;](../../analysis-services/xmla/xml-data-types/xml-data-types-xmla.md)   
- [探索方法 &#40;XMLA &#41;](../../analysis-services/xmla/xml-elements-methods-discover.md)   
- [方法 &#40;XMLA &#41;](../../analysis-services/xmla/xml-elements-methods.md)   
- [XML 項目 &#40;XMLA &#41;](http://msdn.microsoft.com/library/40ab2360-efb6-4ba6-bf23-e84964e51008)   
+## <a name="see-also"></a>另請參閱
+ [XML 資料型別&#40;XMLA&#41;](../../analysis-services/xmla/xml-data-types/xml-data-types-xmla.md)   
+ [Discover 方法&#40;XMLA&#41;](../../analysis-services/xmla/xml-elements-methods-discover.md)   
+ [方法&#40;XMLA&#41;](../../analysis-services/xmla/xml-elements-methods.md)   
+ [XML 項目&#40;XMLA&#41;](http://msdn.microsoft.com/library/40ab2360-efb6-4ba6-bf23-e84964e51008)   
  [Analysis Services 結構描述資料列集](../../analysis-services/schema-rowsets/analysis-services-schema-rowsets.md)  
   
   

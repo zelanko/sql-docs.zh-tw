@@ -1,16 +1,15 @@
 ---
-title: "檢視或變更專案中連接的屬性 | Microsoft Docs"
-ms.custom: 
+title: 檢視或變更專案中連接的屬性 | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
 ms.component: ssms-solutions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: tools-ssms
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ssms
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - viewing connection properties
 - projects [SQL Server Management Studio], connections
@@ -18,19 +17,19 @@ helpviewer_keywords:
 - connections [SQL Server Management Studio], viewing
 - modifying connection properties
 ms.assetid: 16e6e7f0-30d9-46f2-8e14-f4d6d3ab1a46
-caps.latest.revision: "4"
+caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 0bc7f0a8d553cbf7f103732d34a7063425f700ed
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.openlocfilehash: 87a8d52cfdacdb51f62c7983c961131137c13dbd
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="view-or-change-the-properties-of-a-connection-in-a-project"></a>檢視或變更專案中連接的屬性
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 您可以檢視專案中所儲存之連線的屬性，也可以修改其中的部分屬性。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+您可以檢視專案中所儲存之連接的屬性，也可以修改其中的部份屬性。  
   
 ### <a name="to-change-the-properties-of-a-connection-in-a-project"></a>變更專案中之連接的屬性  
   

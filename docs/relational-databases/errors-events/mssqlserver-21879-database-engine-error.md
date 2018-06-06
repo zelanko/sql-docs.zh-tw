@@ -1,30 +1,25 @@
 ---
 title: MSSQLSERVER_21879 | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 04/04/2017
-ms.prod: sql-non-specified
-ms.prod_service: database-engine
-ms.service: 
-ms.component: errors-events
-ms.reviewer: 
+ms.prod: sql
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: supportability
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 helpviewer_keywords:
 - 21879 (Database Engine error)
 ms.assetid: fcfab735-05ca-423a-89f1-fdee7e2ed8c0
-caps.latest.revision: 
-author: edmacauley
-ms.author: edmaca
+caps.latest.revision: 7
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 3d366b7cc857471370afd18b28b8ee9c9b3e561a
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 086498a5c4300c3c67d5f2b71a0ee1c638b6e31e
+ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="mssqlserver21879"></a>MSSQLSERVER_21879
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -33,7 +28,7 @@ ms.lasthandoff: 11/21/2017
   
 |||  
 |-|-|  
-|產品名稱|SQL Server|  
+|產品名稱|[SQL Server]|  
 |事件識別碼|21879|  
 |事件來源|MSSQLSERVER|  
 |元件|SQLEngine|  
@@ -51,7 +46,7 @@ ms.lasthandoff: 11/21/2017
   
     -   如果使用者明確呼叫了 **sp_validate_redirected_publisher**，就會使用其在 Windows 中所用的登入進行連接。  
   
-    -   如果複寫代理程式從 **sp_get_redirected_publisher** 呼叫 **sp_validate_redirected_**publisher，就會使用與代理程式相關聯的 Windows 登入。  
+    -   如果複寫代理程式從 **sp_get_redirected_publisher** 呼叫 **sp_validate_redirected_** publisher，就會使用與代理程式相關聯的 Windows 登入。  
   
 錯誤 21879 可能表示呼叫 **sp_validate_redirected_publisher** 時使用了重新導向目標發行者未知的登入。  
   

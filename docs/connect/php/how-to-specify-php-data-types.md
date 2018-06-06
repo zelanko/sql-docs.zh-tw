@@ -1,30 +1,28 @@
 ---
-title: "如何： 指定 PHP 資料類型 |Microsoft 文件"
-ms.custom: 
+title: 如何： 指定 PHP 資料類型 |Microsoft 文件
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
+ms.prod: sql
+ms.prod_service: connectivity
 ms.component: php
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: connectivity
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - converting data types
 - streaming data
 ms.assetid: fee6e6b8-aad9-496b-84a2-18d2950470a4
-caps.latest.revision: "32"
+caps.latest.revision: 32
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
-ms.workload: Inactive
-ms.openlocfilehash: 0a0374a32d2798a28cfe3e27ab557921763eea36
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+manager: craigg
+ms.openlocfilehash: 3fdd7d2eee34303c466da0445233109b707c6645
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="how-to-specify-php-data-types"></a>如何：指定 PHP 資料類型
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -37,14 +35,14 @@ ms.lasthandoff: 11/18/2017
   
 2.  讓某個資料列可透過 [sqlsrv_fetch](../../connect/php/sqlsrv-fetch.md)來讀取。  
   
-3.  使用 [sqlsrv_get_field](../../connect/php/sqlsrv-get-field.md) ，並將所需的 PHP 資料類型指定為選用的第三個參數，以從傳回的資料列中擷取欄位資料。 若未指定選用的第三個參數，則會根據預設 PHP 類型傳回資料。 如需預設 PHP 傳回類型的相關資訊，請參閱 [Default PHP Data Types](../../connect/php/default-php-data-types.md)。  
+3.  使用 [sqlsrv_get_field](../../connect/php/sqlsrv-get-field.md) ，並將所需的 PHP 資料類型指定為選用的第三個參數，以從傳回的資料列中擷取欄位資料。 如果未指定選擇性的第三個參數，則會根據預設 PHP 類型傳回資料。 如需預設 PHP 傳回類型的相關資訊，請參閱 [Default PHP Data Types](../../connect/php/default-php-data-types.md)。  
   
-    用來指定 PHP 資料類型之常數的相關資訊，請參閱 phptype 」 一節的[常數 &#40;Microsoft Drivers for PHP for SQL Server&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md).  
+    用來指定 PHP 資料類型之常數的相關資訊，請參閱 phptype 」 一節的[常數&#40;Microsoft Drivers for PHP for SQL Server&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md)。  
   
 ## <a name="example"></a>範例  
-下列範例會從 AdventureWorks 資料庫的 *Production.ProductReview* 資料表中擷取資料列。 在每個傳回的資料列中， *ReviewDate* 欄位會擷取為字串，而 *Comments* 欄位會擷取為串流。 串流資料可使用 PHP [fpassthru](http://php.net/manual/en/function.fpassthru.php) 函數來顯示。  
+下列範例會從 AdventureWorks 資料庫的 *Production.ProductReview* 資料表中擷取資料列。 每個傳回的資料列中*ReviewDate*欄位會擷取為字串而*註解*欄位會擷取為資料流。 串流資料可使用 PHP [fpassthru](http://php.net/manual/en/function.fpassthru.php) 函數來顯示。  
   
-此範例假設本機電腦上已安裝 SQL Server 和 [AdventureWorks](http://go.microsoft.com/fwlink/?LinkID=67739) 資料庫。 從命令列執行範例時，所有輸出都會寫入至主控台。  
+此範例假設 SQL Server 和[AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works)資料庫安裝在本機電腦上。 從命令列執行範例時，所有輸出都會寫入至主控台。  
   
 ```  
 <?php  
@@ -111,8 +109,11 @@ sqlsrv_close( $conn);
 > [sqlsrv_field_metadata](../../connect/php/sqlsrv-field-metadata.md) 函數可用來在執行查詢之前取得欄位資訊，包括類型資訊。  
   
 ## <a name="see-also"></a>另請參閱  
-[擷取資料](../../connect/php/retrieving-data.md)  
-[關於文件中的程式碼範例](../../connect/php/about-code-examples-in-the-documentation.md)  
-[如何：使用 SQLSRV 驅動程式擷取輸出參數](../../connect/php/how-to-retrieve-output-parameters-using-the-sqlsrv-driver.md)  
+[擷取資料](../../connect/php/retrieving-data.md)
+
+[關於文件中的程式碼範例](../../connect/php/about-code-examples-in-the-documentation.md)
+
+[如何：使用 SQLSRV 驅動程式擷取輸出參數](../../connect/php/how-to-retrieve-output-parameters-using-the-sqlsrv-driver.md)
+
 [How to: Retrieve Input and Output Parameters Using the SQLSRV Driver](../../connect/php/how-to-retrieve-input-and-output-parameters-using-the-sqlsrv-driver.md)  
   

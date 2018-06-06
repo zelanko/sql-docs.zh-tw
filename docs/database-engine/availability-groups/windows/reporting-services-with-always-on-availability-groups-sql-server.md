@@ -1,30 +1,27 @@
 ---
-title: "Reporting Services與 AlwaysOn 可用性群組 (SQL Server) | Microsoft Docs"
-ms.custom: 
+title: Reporting Services與 AlwaysOn 可用性群組 (SQL Server) | Microsoft Docs
+ms.custom: ''
 ms.date: 05/17/2016
-ms.prod: sql-non-specified
-ms.prod_service: database-engine
-ms.service: 
-ms.component: availability-groups
-ms.reviewer: 
+ms.prod: sql
+ms.prod_service: high-availability
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: dbe-high-availability
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: high-availability
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - Reporting Services, AlwaysOn Availability Groups
 - Availability Groups [SQL Server], interoperability
 ms.assetid: edeb5c75-fb13-467e-873a-ab3aad88ab72
-caps.latest.revision: "22"
+caps.latest.revision: 22
 author: MikeRayMSFT
 ms.author: mikeray
 manager: erikre
-ms.workload: On Demand
-ms.openlocfilehash: eec3793f658bf1194787c0f3e2391903308d3ea6
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 6e89f8b784c822f8792c823054c62ae01ddd7e42
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="reporting-services-with-always-on-availability-groups-sql-server"></a>Reporting Services 與 AlwaysOn 可用性群組 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -33,7 +30,7 @@ ms.lasthandoff: 01/08/2018
   
  使用 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 搭配 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 資料來源的主要優點是能夠運用可讀取的次要複本做為報表資料來源，同時次要複本可針對主要資料庫提供容錯移轉。  
   
- 如需有關 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]的一般資訊，請參閱 [SQL Server 2012 AlwaysOn 常見問題集 (http://msdn.microsoft.com/sqlserver/gg508768)](http://msdn.microsoft.com/sqlserver/gg508768)。  
+ 如需 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 的一般資訊，請參閱 [SQL Server 2012 的 AlwaysOn 常見問題集 (http://msdn.microsoft.com/sqlserver/gg508768)](http://msdn.microsoft.com/sqlserver/gg508768)。  
   
  **本主題內容：**  
   
@@ -148,7 +145,7 @@ ms.lasthandoff: 01/08/2018
   
 -   ReportServerTempDB  
   
- 原生模式不支援或使用警示資料庫及相關功能。 您可以在 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 組態管理員中設定原生模式報表伺服器。 若為 SharePoint 模式，您可以將服務應用程式資料庫名稱設定為進行 SharePoint 組態設定時所建立之「用戶端存取點」的名稱。 如需有關使用 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]來設定 SharePoint 的詳細資訊，請參閱 [Configure and manage SQL Server availability groups for SharePoint Server (http://go.microsoft.com/fwlink/?LinkId=245165)](http://go.microsoft.com/fwlink/?LinkId=245165)(設定及管理 SharePoint Server 的 SQL Server 可用性群組)。  
+ 原生模式不支援或使用警示資料庫及相關功能。 您可以在 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 組態管理員中設定原生模式報表伺服器。 若為 SharePoint 模式，您可以將服務應用程式資料庫名稱設定為進行 SharePoint 組態設定時所建立之「用戶端存取點」的名稱。 如需使用 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 來設定 SharePoint 的詳細資訊，請參閱 [Configure and manage SQL Server availability groups for SharePoint Server (http://go.microsoft.com/fwlink/?LinkId=245165)](http://go.microsoft.com/fwlink/?LinkId=245165) (設定及管理 SharePoint Server 的 SQL Server 可用性群組)。  
   
 > [!NOTE]  
 >  SharePoint 模式報表伺服器會在 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 服務應用程式資料庫與 SharePoint 內容資料庫之間使用同步處理程序。 請務必一起維護報表伺服器資料庫和內容資料庫。 您應該考慮將它們設定在相同的可用性群組中，以便一起容錯移轉和復原。 請考慮下列案例：  

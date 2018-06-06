@@ -1,33 +1,23 @@
 ---
-title: "DISCOVER_MEMORYGRANT 資料列集 |Microsoft 文件"
-ms.custom: 
-ms.date: 03/16/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+title: DISCOVER_MEMORYGRANT 資料列集 |Microsoft 文件
+ms.date: 05/03/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: schema-rowsets
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
-ms.assetid: d254e42d-9918-47ce-b6df-47f1f0b432dd
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 9bf3896348044d084144fd2276ff31f617b202c3
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: a19d5520e15df761dc019a994edf7b794ac1eb0f
+ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="discovermemorygrant-rowset"></a>DISCOVER_MEMORYGRANT 資料列集
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
-傳回伺服器上目前執行作業所使用之內部記憶體配額授權的清單。 若要了解作業是否正在伺服器上執行，請使用 `Select * from $System.Discover_Jobs`。  
+  傳回伺服器上目前執行作業所使用之內部記憶體配額授權的清單。 若要了解作業是否正在伺服器上執行，請使用 `Select * from $System.Discover_Jobs`。  
   
  **適用於：**表格式模型、 多維度模型  
   
@@ -42,7 +32,7 @@ ms.lasthandoff: 02/15/2018
 |**LastRequestTime**|**DBTYPE_DBTIMESTAMP**||上次修改配額要求的時間。|  
 |**MemoryUsed**|**DBTYPE_I4**||依照配額使用的記憶體數量。|  
 |**MemoryGranted**|**DBTYPE_I4**||供取得記憶體配額之作業使用的記憶體數量。|  
-|**Blocked**|**DBTYPE_BOOL**||指出作業封鎖狀態的布林值。 True 表示已封鎖作業，等候另一個作業釋放足夠的配額以授與其配額要求。 False 表示作業已收到其配額而且可執行。|  
+|**封鎖**|**DBTYPE_BOOL**||指出作業封鎖狀態的布林值。 True 表示已封鎖作業，等候另一個作業釋放足夠的配額以授與其配額要求。 False 表示作業已收到其配額而且可執行。|  
   
  這個結構描述資料列集並未排序。  
   

@@ -1,30 +1,27 @@
 ---
-title: "RDS 傳回&quot;資料流不讀取&quot;錯誤 |Microsoft 文件"
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
+title: RDS 傳回&quot;資料流不讀取&quot;錯誤 |Microsoft 文件
+ms.prod: sql
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
-ms.custom: 
+ms.technology: connectivity
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - stream not read error in RDS [ADO]
 ms.assetid: cb5a68f8-dba4-41da-bafd-04efe53706b7
-caps.latest.revision: 
+caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: a14606f5ac503494159a70129e13b53b51758e72
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 05b6c571c96f2e5322e1dcfe8e57b8f12c29a7bf
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="rds-returns-quotstream-not-readquot-error"></a>RDS 傳回&quot;資料流不讀取&quot;錯誤
 「 資料流物件無法讀取，因為它是空的或目前的位置位於資料流結尾。 對於非空白的資料流，設定 Position 屬性與目前的位置。 若要判斷是否為空資料流，檢查 [大小] 屬性。 」  

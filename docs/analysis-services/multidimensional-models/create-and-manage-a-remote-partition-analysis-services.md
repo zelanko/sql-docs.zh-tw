@@ -1,34 +1,23 @@
 ---
-title: "建立及管理遠端資料分割 (Analysis Services) |Microsoft 文件"
-ms.custom: 
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
-helpviewer_keywords:
-- partitions [Analysis Services], remote
-- remote partitions [Analysis Services]
-ms.assetid: 4322b5cb-af07-4e79-8ecb-59e1121a9eb8
-caps.latest.revision: 
-author: Minewiskan
+title: 建立及管理遠端資料分割 (Analysis Services) |Microsoft 文件
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: multidimensional-models
+ms.topic: conceptual
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: d5793220e57962f801573e8201688dd1c03b9c0e
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 32c687ee8bb2d3c7efc323f71652c511c0272c42
+ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="create-and-manage-a-remote-partition-analysis-services"></a>建立及管理遠端分割區 (Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-分割量值群組時，您可以在遠端 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 執行個體上設定次要資料庫作為分割區儲存。  
+  分割量值群組時，您可以在遠端 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 執行個體上設定次要資料庫作為分割區儲存。  
   
  Cube (稱為 master 資料庫) 的遠端分割區，會儲存在 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 遠端執行個體上的專用 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 資料庫 (稱為次要資料庫) 中。  
   
@@ -131,7 +120,7 @@ ms.lasthandoff: 02/15/2018
 5.  在主要伺服器上：以滑鼠右鍵按一下方案總管中的 Cube 名稱，然後選取 [處理] 並完整處理 Cube。  
   
 ## <a name="administering-remote-partitions"></a>管理遠端分割區  
- [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 支援遠端資料分割的平行和循序處理。 定義分割區的 master 資料庫會協調參與處理 Cube 之分割區所有執行個體之間的交易。 然後將處理報表傳送至處理分割區的所有執行個體。  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]支援遠端分割區的平行和循序處理。 定義分割區的 master 資料庫會協調參與處理 Cube 之分割區所有執行個體之間的交易。 然後將處理報表傳送至處理分割區的所有執行個體。  
   
  您可以在單一 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]執行個體上同時管理內含遠端分割區的 Cube 及其分割區。 但是，您只能在定義遠端分割區及其父 Cube 的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 執行個體上，檢視及更新分割區的中繼資料。 您無法在遠端 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]執行個體上，檢視或更新遠端資料分割。  
   
@@ -139,6 +128,6 @@ ms.lasthandoff: 02/15/2018
 >  雖然結構描述資料列集不會顯示專用於儲存遠端分割區的資料庫，但是使用分析管理物件 (AMO) 的應用程式仍可使用 XML for Analysis Discover 命令探索專用資料庫。 任何使用 TCP 或 HTTP 用戶端直接傳送至專用資料庫的 CREATE 或 DELETE 命令會成功完成，但是伺服器會傳回警告，指出這些動作可能會損毀此密切管理的資料庫。  
   
 ## <a name="see-also"></a>另請參閱  
- [分割區 &#40;Analysis Services-多維度資料 &#41;](../../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md)  
+ [分割區 & #40;Analysis Services-多維度資料 & #41;](../../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md)  
   
   

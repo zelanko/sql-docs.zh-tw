@@ -1,16 +1,14 @@
 ---
-title: "CONTAINSTABLE (TRANSACT-SQL) |Microsoft 文件"
-ms.custom: 
+title: CONTAINSTABLE (TRANSACT-SQL) |Microsoft 文件
+ms.custom: ''
 ms.date: 07/24/2015
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
 ms.component: system-functions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: system-objects
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - CONTAINSTABLE
@@ -35,16 +33,16 @@ helpviewer_keywords:
 - rankings [full-text search]
 - less precise (fuzzy) searches [full-text search]
 ms.assetid: e580c210-cf57-419d-9544-7f650f2ab814
-caps.latest.revision: 
+caps.latest.revision: 69
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: a9f4ab666351984b62e47d664d17d9e2769337cd
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 6c1741644ab38afd4003265b659c06b4b9448e20
+ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="containstable-transact-sql"></a>CONTAINSTABLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -53,7 +51,7 @@ ms.lasthandoff: 02/03/2018
   
  CONTAINSTABLE 會用於相同類型的相符項目做為[CONTAINS 述詞](../../t-sql/queries/contains-transact-sql.md)，並為包含使用相同的搜尋條件。  
   
- 和 CONTAINS 不同的是，使用 CONTAINSTABLE 的查詢會傳回每個資料列的相關次序值 (RANK) 和全文檢索索引鍵 (KEY)。  如需所支援的全文檢索搜尋形式的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，請參閱[使用全文檢索搜尋進行查詢](../../relational-databases/search/query-with-full-text-search.md)。  
+ 和 CONTAINS 不同的是，使用 CONTAINSTABLE 的查詢會傳回每個資料列的相關次序值 (RANK) 和全文檢索索引鍵 (KEY)。  如需有關 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 所支援全文檢索搜尋形式的資訊，請參閱[使用全文檢索搜尋進行查詢](../../relational-databases/search/query-with-full-text-search.md)。  
   
  ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -125,35 +123,35 @@ CONTAINSTABLE
  *資料表*無法同時指定伺服器名稱，並且不能用在連結伺服器查詢。  
   
  *column_name*  
- 這是為了全文檢索搜尋而進行索引處理的一個或多個資料行名稱。 資料行可以是類型**char**， **varchar**， **nchar**， **nvarchar**，**文字**， **ntext**，**映像**， **xml**， **varbinary**，或**varbinary （max)**。  
+ 這是為了全文檢索搜尋而進行索引處理的一個或多個資料行名稱。 資料行可為以下類型：**char**、**varchar**、**nchar**、**nvarchar**、**text**、**ntext**、**image**、**xml**、**varbinary** 或 **varbinary(max)**。  
   
  *column_list*  
- 指出您可以指定多個資料行，各資料行用逗號分隔。 *column_list*必須括在括號。 除非*language_term*指定，則所有資料行的語言*column_list*必須相同。  
+ 指出您可以指定多個資料行，各資料行用逗號分隔。 *column_list* 必須括在括號中。 除非已指定 *language_term*，否則 *column_list* 之所有資料行的語言都必須相同。  
   
  \*  
- 指定的所有全文檢索都索引中的資料行*資料表*應該用來搜尋給定的搜尋條件。 除非*language_term*指定，則資料表的所有資料行的語言必須相同。  
+ 指定的所有全文檢索都索引中的資料行*資料表*應該用來搜尋給定的搜尋條件。 除非已指定 *language_term*，否則資料表之所有資料行的語言都必須相同。  
   
- 語言*language_term*  
- 是的語言其資源來斷詞、 詞幹分析和同義字和非搜尋字 (或[停用字詞](../../relational-databases/search/configure-and-manage-stopwords-and-stoplists-for-full-text-search.md)) 移除，因為查詢的一部分。 這個參數是選擇性的，可以指定成對應於語言地區設定識別碼 (LCID) 的字串、整數或十六進位值。 如果*language_term*指定時，它代表的語言會套用至搜尋條件的所有項目。 如果未指定任何值，就會使用資料行全文檢索語言。  
+ LANGUAGE *language_term*  
+ 是的語言其資源來斷詞、 詞幹分析和同義字和非搜尋字 (或[停用字詞](../../relational-databases/search/configure-and-manage-stopwords-and-stoplists-for-full-text-search.md)) 移除，因為查詢的一部分。 這個參數是選擇性的，可以指定成對應於語言地區設定識別碼 (LCID) 的字串、整數或十六進位值。 如果指定 *language_term*，系統就會將它所代表的語言套用至搜尋條件的所有項。 如果未指定任何值，就會使用資料行全文檢索語言。  
   
- 如果不同語言的文件當做二進位大型物件 (BLOB) 一起儲存在單一資料行中，給定文件的地區設定識別碼 (LCID) 會判斷要建立其內容索引所使用的語言。 當查詢這類資料行，指定*語言 * * language_term*可以增加完全相符的機率。  
+ 如果不同語言的文件當做二進位大型物件 (BLOB) 一起儲存在單一資料行中，給定文件的地區設定識別碼 (LCID) 會判斷要建立其內容索引所使用的語言。 查詢這類資料行時，指定 *LANGUAGE**language_term* 可以增加完全相符的機率。  
   
- 當指定為字串， *language_term*對應至**別名**中的資料行值[sys.syslanguages](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md)相容性檢視。  字串必須括在單引號括住，如 '*language_term*'。 當指定為整數， *language_term*是識別之語言的實際 LCID。 當指定為十六進位值， *language_term* 0x 後面接著 LCID 的十六進位值。 十六進位值不能超出 8 位數，開頭的零也包括在內。  
+ 當指定為字串， *language_term*對應至**別名**中的資料行值[sys.syslanguages](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md)相容性檢視。  字串必須以單引號括住，如 '*language_term*'。 當指定為整數時，*language_term* 是用於識別語言的實際 LCID。 當指定為十六進位值時，*language_term* 是 0x，後面接著 LCID 的十六進位值。 十六進位值不能超出 8 位數，開頭的零也包括在內。  
   
- 如果值是雙位元組字集 (DBCS) 格式， [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]會將它轉換成 Unicode。  
+ 如果這個值是雙位元組字集 (DBCS) 格式，[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會將它轉換成 Unicode。  
   
- 如果指定的語言無效，或尚未安裝對應於這個語言的資源，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 就會傳回錯誤。 若要使用的中性語言資源，指定 0x0 *language_term*。  
+ 如果指定的語言無效，或尚未安裝對應於這個語言的資源，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 就會傳回錯誤。 若要使用中性語言資源，請將 0x0 指定為 *language_term*。  
   
  *top_n_by_rank*  
- 指定只有 *n* 最高等級的相符項目以遞減順序，會傳回。 整數值時才適用 *n* ，指定。 如果結合 *top_n_by_rank* 與其他參數，則查詢所傳回的資料列數目會少於實際符合所有述詞的資料列數目。 *top_n_by_rank*可讓您可以重新呼叫最相關叫用來提升查詢效能。  
+ 指定只有*n*最高等級的相符項目以遞減順序，會傳回。 整數值時才適用*n*，指定。 如果結合 *top_n_by_rank* 與其他參數，則查詢所傳回的資料列數目會少於實際符合所有述詞的資料列數目。 *top_n_by_rank*可讓您可以重新呼叫最相關叫用來提升查詢效能。  
   
  <contains_search_condition>  
- 指定要搜尋的文字*column_name*和比對條件。 搜尋條件的相關資訊，請參閱[CONTAINS &#40;TRANSACT-SQL &#41;](../../t-sql/queries/contains-transact-sql.md).  
+ 指定要在 *column_name* 中搜尋的文字，以及要比對的條件。 搜尋條件的相關資訊，請參閱[CONTAINS &#40;TRANSACT-SQL&#41;](../../t-sql/queries/contains-transact-sql.md)。  
   
 ## <a name="remarks"></a>備註  
  全文檢索述詞與函數會在 FROM 述詞中隱含的單一資料表上處理。 若要在多個資料表上進行搜尋，請使用 FROM 子句中聯結的資料表，在兩個或多個資料表之產品的結果集上進行搜尋。  
   
- 傳回的資料表有資料行名為**金鑰**且含有全文檢索索引鍵值。 每個全文檢索索引的資料表具有資料行的數值保證是唯一的並在傳回的值**金鑰**資料行是全文檢索索引鍵值的資料列符合選取準則中指定的包含搜尋條件。 **TableFulltextKeyColumn**從 OBJECTPROPERTYEX 函數中取得的屬性提供這個唯一索引鍵資料行的識別。 若要取得全文檢索索引的全文檢索索引鍵相關聯的資料行的識別碼，請使用**sys.fulltext_indexes**。 如需詳細資訊，請參閱[sys.fulltext_indexes &#40;TRANSACT-SQL &#41;](../../relational-databases/system-catalog-views/sys-fulltext-indexes-transact-sql.md).  
+ 傳回的資料表有資料行名為**金鑰**且含有全文檢索索引鍵值。 每個全文檢索索引的資料表具有資料行的數值保證是唯一的並在傳回的值**金鑰**資料行是全文檢索索引鍵值的資料列符合選取準則中指定的包含搜尋條件。 **TableFulltextKeyColumn**從 OBJECTPROPERTYEX 函數中取得的屬性提供這個唯一索引鍵資料行的識別。 若要取得全文檢索索引的全文檢索索引鍵相關聯的資料行的識別碼，請使用**sys.fulltext_indexes**。 如需詳細資訊，請參閱[sys.fulltext_indexes &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-fulltext-indexes-transact-sql.md)。  
   
  若要取得原始資料表中您想要的資料列，請指定含有 CONTAINSTABLE 資料列的聯結。 使用 CONTAINSTABLE 的 SELECT 陳述式之 FROM 子句的一般形式如下：  
   

@@ -1,30 +1,28 @@
 ---
-title: "SAP BW 來源編輯器 (錯誤輸出頁面) | Microsoft Docs"
-ms.custom: 
+title: SAP BW 來源編輯器 (錯誤輸出頁面) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
 ms.component: data-flow
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 f1_keywords:
 - sql13.dts.designer.sapbwsource.erroroutput.f1
 ms.assetid: b6e23b0c-949a-46d1-8424-4dc3d9035e79
-caps.latest.revision: 
+caps.latest.revision: 10
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 86a85b437421f5306f0d80b61fcfa4bf1642438f
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 366d152c495e92b882d2ff2c929169f8641d5d64
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sap-bw-source-editor-error-output-page"></a>SAP BW 來源編輯器 (錯誤輸出頁面)
   使用 **[SAP BW 來源編輯器]** 的 **[錯誤輸出]** 頁面可以選取錯誤處理選項，並設定錯誤輸出資料行的屬性。  
@@ -43,7 +41,7 @@ ms.lasthandoff: 01/25/2018
   
 2.  在 [資料流程] 索引標籤上，按兩下 SAP BW 來源。  
   
-3.  在 **[SAP BW 來源編輯器]**中，按一下 **[錯誤輸出]** 開啟編輯器的 **[錯誤輸出]** 頁面。  
+3.  在 **[SAP BW 來源編輯器]** 中，按一下 **[錯誤輸出]** 開啟編輯器的 **[錯誤輸出]** 頁面。  
   
 ## <a name="options"></a>選項。  
   

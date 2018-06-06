@@ -1,35 +1,32 @@
 ---
-title: "中斷點視窗 | Microsoft 文件"
-ms.custom: 
+title: 中斷點視窗 | Microsoft 文件
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
-ms.prod_service: sql-tools
-ms.service: 
-ms.component: ssms-scripting
-ms.reviewer: 
+ms.prod: sql
+ms.technology: scripting
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 f1_keywords:
 - vs.debug.breakpoints
 helpviewer_keywords:
 - Breakpoints Window [Transact-SQL]
 ms.assetid: bad88d10-fdd5-4d3d-b5ea-a4f063847485
-caps.latest.revision: 
+caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: e65aa2535f4c0f1aebb9723edf29c041a9c74fed
-ms.sourcegitcommit: a0aa5e611a0e6ebb74ac1e2f613e8916dc7a7617
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 5af1b40a5bd3d017ee7ba500c170902836199fa6
+ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/24/2018
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="transact-sql-debugger---breakpoints-window"></a>Transact-SQL 偵錯工具 - 中斷點視窗
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] [中斷點] 視窗會列出目前[!INCLUDE[ssDE](../../includes/ssde-md.md)] 查詢編輯器中設定的所有中斷點。 若要管理中斷點，請使用 [中斷點] 視窗內的工具列。 中斷點是偵錯模式下暫停執行的程式碼位置，好讓您可以檢視偵錯資料。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+  [中斷點] 視窗會列出目前 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 查詢編輯器中設定的所有中斷點。 若要管理中斷點，請使用 [中斷點] 視窗內的工具列。 中斷點是偵錯模式下暫停執行的程式碼位置，好讓您可以檢視偵錯資料。  
   
 ## <a name="task-list"></a>工作清單  
  **存取中斷點視窗**  

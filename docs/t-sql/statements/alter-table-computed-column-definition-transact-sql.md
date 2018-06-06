@@ -1,32 +1,29 @@
 ---
 title: computed_column_definition (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 05/05/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
 ms.component: t-sql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: t-sql
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - TSQL
 helpviewer_keywords:
 - ALTER TABLE statement
 ms.assetid: 746eabda-3b4f-4940-b0b5-1c379f5cf7a5
-caps.latest.revision: 
+caps.latest.revision: 62
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: faff7cbb4f4eec1cf68601805d0dbbe1a3a84b3e
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 00ed2233653ea5a98fdc389bbfc470f65c817f3f
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="alter-table-computedcolumndefinition-transact-sql"></a>ALTER TABLE computed_column_definition (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -76,7 +73,8 @@ column_name AS computed_column_expression
     >  因為對於計算資料行所涉及的資料行，資料表中的每個資料列都可能有不同的值，所以每個資料列的計算資料行可能各有不同的結果。  
   
 PERSISTED  
- 指定 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 會實際將計算值儲存在資料表中，以及在計算資料行所依賴的任何其他資料行有了更新時，也會更新這些值。 將計算資料行標示為 PERSISTED，可讓您在具決定性但不精確的計算資料行上建立索引。 如需詳細資訊，請參閱 [計算資料行的索引](../../relational-databases/indexes/indexes-on-computed-columns.md)。 任何用為分割資料表之分割資料行的計算資料行，都必須明確標示為 PERSISTED。 指定 PERSISTED 時，*computed_column_expression* 必須具決定性。  
+ 指定 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 會實際將計算值儲存在資料表中，以及在計算資料行所依賴的任何其他資料行有了更新時，也會更新這些值。 將計算資料行標示為 PERSISTED，可讓您在具決定性但不精確的計算資料行上建立索引。 如需詳細資訊，請參閱 [計算資料行的索引](../../relational-databases/indexes/indexes-on-computed-columns.md)。 任何用為分割資料表之分割資料行的計算資料行，都必須明確標示為 PERSISTED。 指定 PERSISTED 時，*computed_column_expression* 必須具決定性。 
+
 NULL | NOT NULL  
  指定資料行是否允許使用 Null 值。 NULL 並不是嚴格的條件約束，但您也可以依照 NOT NULL 的相同方式來指定它。 只有在也指定了 PERSISTED 時，計算資料行才能指定 NOT NULL。  
   
@@ -84,7 +82,7 @@ CONSTRAINT
  指定開始定義 PRIMARY KEY 或 UNIQUE 條件約束。  
   
 *constraint_name*  
- 這是新的條件約束。 條件約束名稱必須遵循[識別碼](../../relational-databases/databases/database-identifiers.md)的規則，不過，名稱開頭不能是數字符號 (#)。 如果未提供 *constraint_name*，就會將系統產生的名稱指派給條件約束。  
+ 這是新的條件約束。 條件約束名稱必須遵照[識別碼](../../relational-databases/databases/database-identifiers.md)的規則，不過，名稱開頭不能是數字符號 (#)。 如果未提供 *constraint_name*，就會將系統產生的名稱指派給條件約束。  
   
 PRIMARY KEY  
  這是一個條件約束，它會利用唯一索引來強制執行一個或多個指定之資料行的實體完整性。 每份資料表都只能建立一個 PRIMARY KEY 條件約束。  
@@ -101,7 +99,7 @@ WITH FILLFACTOR =*fillfactor*
  指定用來儲存索引資料的每個索引頁面，[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 所應加以填滿的程度。 使用者指定的 *fillfactor* 可以是從 1 到 100 的值。 如果未指定值，預設值為 0。  
   
 > [!IMPORTANT]  
->  為了與舊版相容，我們保持將 WITH FILLFACTOR = *fillfactor* 記載為適用於 PRIMARY KEY 或 UNIQUE 條件約束的唯一索引選項，但未來版本的文件不會再遵循這個方式來說明。 您可以在 ALTER TABLE 的 [index_option &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-index-option-transact-sql.md) 子句中，指定其他索引選項。  
+>  為了與舊版相容，我們保持將 WITH FILLFACTOR = *fillfactor* 記載為適用於 PRIMARY KEY 或 UNIQUE 條件約束的唯一索引選項，但未來版本的文件不會再依照這個方式來說明。 您可以在 ALTER TABLE 的 [index_option &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-index-option-transact-sql.md) 子句中，指定其他索引選項。  
   
 FOREIGN KEY REFERENCES  
  這是一個條件約束，它提供一個或多個資料行中之資料的參考完整性。 FOREIGN KEY 條件約束要求資料行中的每個值存在於所參考之資料表中的一個或多個對應的被參考資料行中。 FOREIGN KEY 條件約束所參考的資料行，必須是所參考的資料表中的 PRIMARY KEY 或 UNIQUE 條件約束，或是所參考的資料表之 UNIQUE INDEX 中所參考的資料行。 計算資料行的外部索引鍵也必須標示為 PERSISTED。  
@@ -116,7 +114,8 @@ ON DELETE { **NO ACTION** | CASCADE }
  指定如果資料表中之資料列有參考關聯性，且在父資料表中刪除了所參考的資料列，資料表中之資料列會發生什麼動作。 預設值是 NO ACTION。  
   
 NO ACTION  
- [!INCLUDE[ssDE](../../includes/ssde-md.md)] 會產生一則錯誤，且會回復父資料表中之資料列的刪除動作。  
+ [!INCLUDE[ssDE](../../includes/ssde-md.md)] 會產生一則錯誤，且會回復父資料表中之資料列的刪除動作。
+
 CASCADE  
  如果從父資料表中刪除資料列，便會從進行參考的資料表中刪除對應的資料列。  
   
@@ -145,7 +144,7 @@ CHECK
 ON { *partition_scheme_name*(*partition_column_name*) | *filegroup*| "default"}  
  **適用於**： [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。  
   
- 指定條件約束所建立之索引的儲存位置。 如果指定 *partition_scheme_name*，索引就會進行資料分割，這些資料分割會對應於 *partition_scheme_name* 所指定的檔案群組。 如果指定 *filegroup*，就會在具名檔案群組中建立索引。 如果指定了 "default"，或完全未指定 ON，索引就會建立在資料表的相同檔案群組中。 如果加入 PRIMARY KEY 或 UNIQUE 條件約束的叢集索引時指定了 ON，則建立叢集索引時，會將整份資料表移到指定的檔案群組中。  
+ 指定條件約束所建立之索引的儲存位置。 如果指定 *partition_scheme_name*，索引就會進行資料分割，這些資料分割會對應於 *partition_scheme_name* 所指定的檔案群組。 如果指定了 *filegroup*，就會在具名檔案群組中建立索引。 如果指定了 "default"，或完全未指定 ON，索引就會建立在資料表的相同檔案群組中。 如果加入 PRIMARY KEY 或 UNIQUE 條件約束的叢集索引時指定了 ON，則建立叢集索引時，會將整份資料表移到指定的檔案群組中。  
   
 > [!NOTE]  
 >  在此內容中，default 不是關鍵字。 它是預設檔案群組的識別碼，必須加以分隔，例如 ON "default" 或 ON [default]。 如果指定了 "default"，目前工作階段的 QUOTED_IDENTIFIER 選項就必須是 ON。 這是預設值。 如需詳細資訊，請參閱 [SET QUOTED_IDENTIFIER &#40;Transact-SQL&#41;](../../t-sql/statements/set-quoted-identifier-transact-sql.md)。  
@@ -155,5 +154,3 @@ ON { *partition_scheme_name*(*partition_column_name*) | *filegroup*| "default"}
   
 ## <a name="see-also"></a>另請參閱  
  [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)  
-  
-  

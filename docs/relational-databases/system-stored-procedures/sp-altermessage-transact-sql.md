@@ -1,16 +1,14 @@
 ---
-title: "sp_altermessage (TRANSACT-SQL) |Microsoft 文件"
-ms.custom: 
+title: sp_altermessage (TRANSACT-SQL) |Microsoft 文件
+ms.custom: ''
 ms.date: 08/09/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: system-objects
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_altermessage_TSQL
@@ -20,16 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_altermessage
 ms.assetid: 1b28f280-8ef9-48e9-bd99-ec14d79abaca
-caps.latest.revision: 
+caps.latest.revision: 32
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 0922bc2c5365b31c1f4b385e43b10302f6465c52
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: cce6620bbc74d5c83cef907ab87f8252f963748a
+ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="spaltermessage-transact-sql"></a>sp_altermessage (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -52,13 +49,13 @@ sp_altermessage [ @message_id = ] message_number   ,[ @parameter = ]'write_to_lo
  是從變更之訊息的錯誤數目**sys.messages**。 *message_number*是**int** ，沒有預設值。  
   
  [ **@parameter =** ] **'***write_to_log*'  
- 搭配使用 **@parameter_value** 來指示訊息寫入到[!INCLUDE[msCoName](../../includes/msconame-md.md)]Windows 應用程式記錄檔。 *write_to_log*是**sysname** ，沒有預設值。 *write_to_log*必須設為 WITH_LOG 或 NULL。 如果*write_to_log*設為 WITH_LOG 或 NULL，且值 **@parameter_value** 是**true**，訊息會寫入 Windows 應用程式記錄檔。 如果*write_to_log*設為 WITH_LOG 或 NULL 值和 **@parameter_value** 是**false**，訊息不一定會寫入 Windows 應用程式記錄檔，但可能寫入錯誤的產生方式而定。 如果*write_to_log*指定的值 **@parameter_value** 也必須指定。  
+ 搭配使用**@parameter_value**來指示訊息寫入到[!INCLUDE[msCoName](../../includes/msconame-md.md)]Windows 應用程式記錄檔。 *write_to_log*是**sysname** ，沒有預設值。 *write_to_log*必須設為 WITH_LOG 或 NULL。 如果*write_to_log*設為 WITH_LOG 或 NULL，且值**@parameter_value**是**true**，訊息會寫入 Windows 應用程式記錄檔。 如果*write_to_log*設為 WITH_LOG 或 NULL 值和**@parameter_value**是**false**，訊息不一定會寫入 Windows 應用程式記錄檔，但可能寫入錯誤的產生方式而定。 如果*write_to_log*指定的值**@parameter_value**也必須指定。  
   
 > [!NOTE]  
 >  如果訊息寫入 Windows 應用程式記錄檔中，它也會寫入 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 錯誤記錄檔中。  
   
  [ **@parameter_value =** ]**'***value*'  
- 搭配使用 **@parameter** 來指出錯誤寫入至[!INCLUDE[msCoName](../../includes/msconame-md.md)]Windows 應用程式記錄檔。 *值*是**varchar(5)**，沒有預設值。 如果**true**，錯誤一律會寫入 Windows 應用程式記錄檔。 如果**false**，錯誤不一定會寫入 Windows 應用程式記錄檔，但也可能會寫入錯誤的產生方式而定。 如果*值*指定，則*write_to_log*如 **@parameter** 也必須指定。  
+ 搭配使用**@parameter**來指出錯誤寫入至[!INCLUDE[msCoName](../../includes/msconame-md.md)]Windows 應用程式記錄檔。 *值*是**varchar(5)**，沒有預設值。 如果**true**，錯誤一律會寫入 Windows 應用程式記錄檔。 如果**false**，錯誤不一定會寫入 Windows 應用程式記錄檔，但也可能會寫入錯誤的產生方式而定。 如果*值*指定，則*write_to_log*如**@parameter**也必須指定。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  0 (成功) 或 1 (失敗)  
@@ -85,7 +82,7 @@ GO
 ## <a name="see-also"></a>另請參閱  
  [RAISERROR &#40;Transact-SQL&#41;](../../t-sql/language-elements/raiserror-transact-sql.md)   
  [sp_addmessage &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmessage-transact-sql.md)   
- [sp_dropmessage &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/sp-dropmessage-transact-sql.md)   
+ [sp_dropmessage &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropmessage-transact-sql.md)   
  [系統預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

@@ -1,34 +1,30 @@
 ---
-title: "Object:Altered 事件類別 | Microsoft Docs"
-ms.custom: 
+title: Object:Altered 事件類別 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
-ms.prod_service: database-engine, sql-database
-ms.service: 
-ms.component: event-classes
-ms.reviewer: 
+ms.prod: sql
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: supportability
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - Object:Altered event class
 ms.assetid: f94e3b59-ff2f-4d8d-8479-e85ce5b3483e
-caps.latest.revision: 
+caps.latest.revision: 23
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 21eafbc19f9659ca6fc22cf59c242f0b4857b699
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 5ec82c09240dfd74a9ceae2422699179ad95db1b
+ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="objectaltered-event-class"></a>Object:Altered 事件類別
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-Object:Altered 事件類別指出物件已遭到改變，例如被 ALTER INDEX、ALTER TABLE 或 ALTER DATABASE 陳述式改變。 這個事件類別可用來判別物件是否已被改變，例如被 ODBC 應用程式改變，此應用程式經常會建立暫存的預存程序。  
+  Object:Altered 事件類別指出物件已遭到改變，例如被 ALTER INDEX、ALTER TABLE 或 ALTER DATABASE 陳述式改變。 這個事件類別可用來判別物件是否已被改變，例如被 ODBC 應用程式改變，此應用程式經常會建立暫存的預存程序。  
   
  Object:Altered 事件類別一定會產生兩個事件。 第一個事件指出 Begin 階段。 第二個事件指出 Rollback 或 Commit 階段。  
   

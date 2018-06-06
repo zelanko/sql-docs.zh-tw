@@ -1,30 +1,27 @@
 ---
-title: "命令物件參數 |Microsoft 文件"
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
+title: 命令物件參數 |Microsoft 文件
+ms.prod: sql
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
-ms.custom: 
+ms.technology: connectivity
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - Command object [ADO], parameters
 ms.assetid: 10e7ef4a-78bf-4e91-931e-cbc6c065dd4c
-caps.latest.revision: 
+caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 527ed7c9e6e3a3f250fd559b479637414be3989f
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: fa60d076d6c4a3d4eea2092db92c3006d4fd0905
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="command-object-parameters"></a>命令物件參數
 先前所討論的主題[建立和執行簡單的命令](../../../ado/guide/data/creating-and-executing-a-simple-command.md)。 更有趣用於[命令](../../../ado/reference/ado-api/command-object-ado.md)物件會顯示在下一個範例中，在其中已經進行參數化 SQL 命令。 這項修改讓您能夠重複使用的命令，在不同的值中的參數每次的傳遞。 因為[備妥屬性](../../../ado/reference/ado-api/prepared-property-ado.md)屬性**命令**物件設定為**true**，ADO 會需要編譯中指定的命令提供者[CommandText](../../../ado/reference/ado-api/commandtext-property-ado.md)再執行第一次。 它也會保留在記憶體中已編譯的命令。 這會執行此命令稍微第一次執行因為準備，但是結果每次之後呼叫命令時獲得效能所需的額外負荷。 因此，它們將會使用一次以上時，才應該準備命令。  

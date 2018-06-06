@@ -1,16 +1,14 @@
 ---
-title: "char 和 varchar (Transact-SQL) | Microsoft Docs"
-ms.custom: 
+title: char 和 varchar (Transact-SQL) | Microsoft Docs
+ms.custom: ''
 ms.date: 7/23/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
 ms.component: t-sql|data-types
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: t-sql
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - varchar
@@ -25,16 +23,16 @@ helpviewer_keywords:
 - variable-length data types [SQL Server]
 - varchar data type
 ms.assetid: 282cd982-f4fb-4b22-b2df-9e8478f13f6a
-caps.latest.revision: 
+caps.latest.revision: 48
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Active
-ms.openlocfilehash: 4c383e3b3ff5b79604454f80443c9042633797bf
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 0d07b9fec8168a21ff492ac216f08881ff278932
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="char-and-varchar-transact-sql"></a>char 和 varchar (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -42,12 +40,12 @@ ms.lasthandoff: 11/21/2017
 這些資料類型可為固定長度或可變長度。  
   
 ## <a name="arguments"></a>引數  
-**char** [ ( *n* ) ] 固定長度的非 Unicode 字串資料。 *n* 定義字串長度，而且必須是 1 到 8,000 之間的值。 儲存體大小為 *n* 位元組。 **char** 的 ISO 同義字為 **character**。
+**char** [ ( *n* ) ] 固定長度的非 Unicode 字串資料。 *n* 可定義字串長度，而且必須是 1 到 8,000 之間的值。 儲存體大小是 *n* 位元組。 **char** 的 ISO 同義字為 **character**。
   
 **varchar** [ ( *n* | **max** ) ] 可變長度的非 Unicode 字串資料。 *n* 定義字串長度，可以是 1 到 8,000 之間的值。 **max** 表示儲存體大小上限是 2^31-1 個位元組 (2 GB)。 儲存體大小是輸入資料的實際長度再加上 2 位元組。 **varchar** 的 ISO 同義字為 **charvarying** 或 **charactervarying**。
   
 ## <a name="remarks"></a>Remarks  
-當資料定義或變數宣告陳述式中沒有指定 *n* 時，預設長度為 1。 若使用 CAST 和 CONVERT 函式時未指定 *n*，則預設長度為 30。
+當資料定義或變數宣告陳述式中沒有指定 *n* 時，預設長度為 1。 如果使用 CAST 和 CONVERT 函式時未指定 *n*，則預設長度為 30。
   
 除非使用 COLLATE 子句指派特定定序；否則，使用 **char** 或 **varchar** 的物件會被指派資料庫的預設定序。 定序會控制用來儲存字元資料的字碼頁。
   
@@ -58,7 +56,7 @@ ms.lasthandoff: 11/21/2017
   
 如果執行 CREATE TABLE 或 ALTER TABLE 時，SET ANSI_PADDING 是 OFF，就會將定義為 NULL 的 **char** 資料行當作 **varchar** 來處理。
   
-當定序字碼頁使用雙位元組字元時，儲存體大小仍是 *n* 位元組。 *n* 位元組的儲存體大小有可能少於 *n* 個字元，這會隨著字元字串而不同。
+當定序字碼頁使用雙位元組字元時，儲存體大小仍是 *n* 個位元組。 *n* 位元組的儲存體大小可能會少於 *n* 個字元，這會隨著字元字串而不同。
 
 > [!WARNING]
 > 每個非 null 的 varchar(max) 或 nvarchar(max) 資料行都需要額外 24 位元組的固定配置，而不利於排序作業期間 8,060 位元組的資料列限制。 因此可能會對資料表中可建立的非 null varchar(max) 或 nvarchar(max) 資料行數目建立隱含限制。  
@@ -81,7 +79,7 @@ ms.lasthandoff: 11/21/2017
 ## <a name="examples"></a>範例  
   
 ### <a name="a-showing-the-default-value-of-n-when-used-in-variable-declaration"></a>A. 顯示在變數宣告中使用時，n 的預設值。  
-下列範例會顯示當在變數宣告中使用 `char` 和 `varchar` 資料類型時，*n* 的預設值是 1。
+下列範例顯示在變數宣告中使用 `char` 和 `varchar` 資料類型時，這些資料類型的 *n* 預設值是 1。
   
 ```sql
 DECLARE @myVariable AS varchar = 'abc';  
@@ -92,7 +90,7 @@ GO
 ```  
   
 ### <a name="b-showing-the-default-value-of-n-when-varchar-is-used-with-cast-and-convert"></a>B. 顯示搭配 CAST 和 CONVERT 使用 varchar 時，n 的預設值。  
-下列範例會顯示搭配 `CAST` 和 `CONVERT` 函式來使用 `char` 或 `varchar` 資料類型時，*n* 的預設值是 30。
+下列範例顯示搭配使用 `char` 或 `varchar` 資料類型與 `CAST` 和 `CONVERT` 函式時，*n* 的預設值是 30。
   
 ```sql
 DECLARE @myVariable AS varchar(40);  

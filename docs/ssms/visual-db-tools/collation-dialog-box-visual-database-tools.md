@@ -1,33 +1,32 @@
 ---
-title: "定序對話方塊 (Visual Database Tools) | Microsoft Docs"
-ms.custom: 
+title: 定序對話方塊 (Visual Database Tools) | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
 ms.component: ssms-visual-db
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: tools-ssms
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ssms
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 f1_keywords:
 - vdt.dlgbox.definecolumncollation
 - vdtsql.chm:65561
 ms.assetid: e4020f79-7abf-4839-b9b2-984ef7049817
-caps.latest.revision: "4"
+caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: b99f35322872e33f4bd727724dd9167465d6f1ea
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.openlocfilehash: e29b71abbcba7e5b37ff1547321b6bd6d27d339c
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="collation-dialog-box-visual-database-tools"></a>定序對話方塊 (Visual Database Tools)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 這個對話方塊讓您指定資料行的定序序列 (Collation Sequence)。 在將資料行的值與另一個資料行的值或常數值進行比較的任何作業中，會使用資料行的定序序列。 它也會影響某些字串函數的行為，例如 SUBSTRING 和 CHARINDEX。 如需資料行定序設定作用的完整清單，請參閱 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 文件。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+這個對話方塊讓您指定資料行的定序序列 (Collation Sequence)。 在將資料行的值與另一個資料行的值或常數值進行比較的任何作業中，會使用資料行的定序序列。 它也會影響某些字串函數的行為，例如 SUBSTRING 和 CHARINDEX。 如需資料行定序設定作用的完整清單，請參閱 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 文件。  
   
 下列情況會出現這個對話方塊：  
   

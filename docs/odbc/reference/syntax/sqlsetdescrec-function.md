@@ -1,32 +1,33 @@
 ---
-title: "SQLSetDescRec 函數 |Microsoft 文件"
-ms.custom: 
+title: SQLSetDescRec 函數 |Microsoft 文件
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
-ms.component: odbc
-ms.reviewer: 
+ms.prod: sql
+ms.prod_service: connectivity
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
-ms.topic: article
-apiname: SQLSetDescRec
-apilocation: sqlsrv32.dll
+ms.technology: connectivity
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
+apiname:
+- SQLSetDescRec
+apilocation:
+- sqlsrv32.dll
 apitype: dllExport
-f1_keywords: SQLSetDescRec
-helpviewer_keywords: SQLSetDescRec function [ODBC]
+f1_keywords:
+- SQLSetDescRec
+helpviewer_keywords:
+- SQLSetDescRec function [ODBC]
 ms.assetid: bf55256c-7eb7-4e3f-97ef-b0fee09ba829
-caps.latest.revision: "22"
+caps.latest.revision: 22
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
-ms.workload: Inactive
-ms.openlocfilehash: c817bad04757820b7c8ee83905fbc0fad08b4e26
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+manager: craigg
+ms.openlocfilehash: 085543aca838cfe1a8123f891c30f618b86eb15d
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sqlsetdescrec-function"></a>SQLSetDescRec 函數
 **一致性**  
@@ -91,7 +92,7 @@ SQLRETURN SQLSetDescRec(
 ## <a name="diagnostics"></a>診斷  
  當**SQLSetDescRec**會傳回 SQL_ERROR 或 SQL_SUCCESS_WITH_INFO，相關聯的 SQLSTATE 值可以藉由呼叫取得**SQLGetDiagRec**與*HandleType* SQL_ 的HANDLE_DESC 和*處理*的*DescriptorHandle*。 下表列出通常所傳回的 SQLSTATE 值**SQLSetDescRec** ，並說明這個函式; 每個內容中的標記法 」 (DM) 」 之前描述的驅動程式管理員傳回的 Sqlstate。 每個 SQLSTATE 值相關聯的傳回碼是 SQL_ERROR，除非有說明，否則為。  
   
-|SQLSTATE|錯誤|描述|  
+|SQLSTATE|錯誤|Description|  
 |--------------|-----------|-----------------|  
 |01000|一般警告|特定驅動程式告知性訊息。 （函式會傳回 SQL_SUCCESS_WITH_INFO）。|  
 |07009|無效的描述元索引|*RecNumber*引數設定為 0，而*DescriptorHandle* IPD 控制代碼的參考。<br /><br /> *RecNumber*引數為小於 0。<br /><br /> *RecNumber*引數為大於最大數目的資料行或參數，可支援資料來源，而*DescriptorHandle*引數是 APD、 IPD 或 ARD。<br /><br /> *RecNumber*引數以前是等於 0，而*DescriptorHandle*隱含配置的 APD 參考引數。 （發生這個錯誤不會不具有明確配置的應用程式描述元因為不知道應用程式明確配置描述元是否 APD 或 ARD 直到執行時間。）|  
@@ -102,7 +103,7 @@ SQLRETURN SQLSetDescRec(
 |HY013|記憶體管理錯誤|無法處理函式呼叫，因為基礎記憶體的物件無法存取，可能是因為記憶體不足。|  
 |HY016|無法修改實作資料列描述項|*DescriptorHandle*引數以前是 IRD 相關聯。|  
 |HY021|不一致的描述項資訊|*類型* 欄位中或描述元中的 SQL_DESC_TYPE 欄位相關聯的任何其他欄位不是有效或一致。<br /><br /> 檢查一致性檢查期間的描述項資訊不一致。 （請參閱 「 一致性檢查，> 本節中的更新版本）。|  
-|HY090|字串或緩衝區長度無效|(DM) 驅動程式為 ODBC 2*.x*驅動程式，描述元是 ARD， *ColumnNumber*引數設定為 0，而且指定的引數的值*Columnsize*已不等於 4。|  
+|HY090|字串或緩衝區長度無效|(DM) 驅動程式為 ODBC 2 *.x*驅動程式，描述元是 ARD， *ColumnNumber*引數設定為 0，而且指定的引數的值*Columnsize*已不等於 4。|  
 |HY117|連接已暫止原因未知的交易狀態。 只有中斷連線，並允許唯讀函式。|(DM) 如需暫停狀態的詳細資訊，請參閱[SQLEndTran 函數](../../../odbc/reference/syntax/sqlendtran-function.md)。|  
 |HYT01|連接逾時過期|連接逾時期限過期之前對要求回應資料來源。 連接逾時期限透過設定**SQLSetConnectAttr**，SQL_ATTR_CONNECTION_TIMEOUT。|  
 |IM001|驅動程式不支援此函式|(DM) 驅動程式相關聯*DescriptorHandle*不支援此函式。|  
@@ -161,6 +162,6 @@ SQLRETURN SQLSetDescRec(
 |取得多個描述項欄位|[SQLGetDescRec 函式](../../../odbc/reference/syntax/sqlgetdescrec-function.md)|  
 |設定單一描述項欄位|[SQLSetDescField 函式](../../../odbc/reference/syntax/sqlsetdescfield-function.md)|  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [ODBC 應用程式開發介面參考](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [ODBC 標頭檔](../../../odbc/reference/install/odbc-header-files.md)

@@ -1,41 +1,26 @@
 ---
-title: "Parameters 元素 (XMLA) |Microsoft 文件"
-ms.custom: 
-ms.date: 03/06/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services, azure-analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+title: Parameters 元素 (XMLA) |Microsoft 文件
+ms.date: 05/08/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: xmla
 ms.topic: reference
-apiname: Parameters Element
-apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
-apitype: Schema
-applies_to: SQL Server 2016 Preview
-f1_keywords:
-- http://schemas.microsoft.com/analysisservices/2003/engine#Parameters
-- urn:schemas-microsoft-com:xml-analysis#Parameters
-- microsoft.xml.analysis.parameters
-helpviewer_keywords: Parameters element
-ms.assetid: d46454a1-a1d1-4aa8-95ea-54be22a53e83
-caps.latest.revision: "11"
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 8756ded720e9884596a7a7aaab6fdd6e2271ef7a
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 68366f03168b7c7c434f05e88f512401248c1124
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34576060"
 ---
 # <a name="parameters-element-xmla"></a>Parameters 元素 (XMLA)
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]包含集合[參數](../../../analysis-services/xmla/xml-elements-properties/parameter-element-xmla.md)元素所使用[Execute](../../../analysis-services/xmla/xml-elements-methods-execute.md)方法。  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
+  包含集合[參數](../../../analysis-services/xmla/xml-elements-properties/parameter-element-xmla.md)元素所使用[Execute](../../../analysis-services/xmla/xml-elements-methods-execute.md)方法。  
   
- **命名空間：**`urn:schemas-microsoft-com:xml-analysis`  
+ **命名空間：** `urn:schemas-microsoft-com:xml-analysis`  
   
 ## <a name="syntax"></a>語法  
   
@@ -70,7 +55,7 @@ ms.lasthandoff: 01/08/2018
   
  如果 XMLA 命令沒有使用**參數**項目，呼叫時，就可以省略此元素**Execute**方法。  
   
-## <a name="see-also"></a>請參閱  
- [屬性 &#40;XMLA &#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
+## <a name="see-also"></a>另請參閱
+ [屬性&#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
   
   

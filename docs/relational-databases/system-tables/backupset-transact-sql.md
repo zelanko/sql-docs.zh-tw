@@ -1,16 +1,14 @@
 ---
-title: "備份組 (TRANSACT-SQL) |Microsoft 文件"
-ms.custom: 
+title: 備份組 (TRANSACT-SQL) |Microsoft 文件
+ms.custom: ''
 ms.date: 06/10/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, pdw
-ms.service: 
 ms.component: system-tables
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: system-objects
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - backupset
@@ -22,21 +20,21 @@ helpviewer_keywords:
 - backup media [SQL Server], backupset system table
 - backup sets [SQL Server]
 ms.assetid: 6ff79bbf-4acf-4f75-926f-38637ca8a943
-caps.latest.revision: 
+caps.latest.revision: 70
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: dd98b3e7e120e186901d8120243a35d620411ba2
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+monikerRange: '>= aps-pdw-2016 || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 1089a1a30e50b389b05c79cf9af2443f7dc55d6e
+ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="backupset-transact-sql"></a>backupset (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-pdw-md.md)]
 
-  每個備份組各含一個資料列。 A*備份組*包含單次成功備份作業的備份。 RESTORE、RESTORE FILELISTONLY、RESTORE HEADERONLY 和 RESTORE VERIFYONLY 陳述式會在位於指定之單一或多重備份裝置上媒體集內單一備份組上操作。  
+  每個備份組各含一個資料列。 「備份組」包含單次成功備份作業的備份。 RESTORE、RESTORE FILELISTONLY、RESTORE HEADERONLY 和 RESTORE VERIFYONLY 陳述式會在位於指定之單一或多重備份裝置上媒體集內單一備份組上操作。  
   
  這份資料表儲存在**msdb**資料庫。  
 
@@ -52,7 +50,7 @@ ms.lasthandoff: 02/03/2018
 |**last_media_number**|**smallint**|備份組結束時所在之媒體的媒體號碼。 可以是 NULL。|  
 |**catalog_family_number**|**tinyint**|備份組目錄起點所在之媒體的家族號碼。 可以是 NULL。|  
 |**catalog_media_number**|**smallint**|備份組目錄起點所在之媒體的媒體號碼。 可以是 NULL。|  
-|**position**|**int**|還原作業用來尋找適當備份組和檔案的備份組位置。 可以是 NULL。 如需詳細資訊，請參閱中的檔案[備份 &#40;TRANSACT-SQL &#41;](../../t-sql/statements/backup-transact-sql.md).|  
+|**position**|**int**|還原作業用來尋找適當備份組和檔案的備份組位置。 可以是 NULL。 如需詳細資訊，請參閱中的檔案[備份&#40;TRANSACT-SQL&#41;](../../t-sql/statements/backup-transact-sql.md)。|  
 |**expiration_date**|**datetime**|備份組到期的日期和時間。 可以是 NULL。|  
 |**software_vendor_id**|**int**|寫入備份媒體標頭的軟體供應商識別碼。 可以是 NULL。|  
 |**name**|**nvarchar(128)**|備份組的名稱。 可以是 NULL。|  
@@ -62,7 +60,7 @@ ms.lasthandoff: 02/03/2018
 |**software_minor_version**|**tinyint**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 次要版本號碼。 可以是 NULL。|  
 |**software_build_version**|**smallint**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 組建編號。 可以是 NULL。|  
 |**time_zone**|**smallint**|本機時間 (備份作業所在位置) 和國際標準時間 (UTC) 的時差，間隔是 15 分鐘。 值可以是 -48 至 +48，頭尾包括在內。 127 值表示未知。 例如，-20 是美東標準時間 (EST) 或 UTC 之後 5 小時。 可以是 NULL。|  
-|**mtf_minor_version**|**tinyint**|[!INCLUDE[msCoName](../../includes/msconame-md.md)] 磁帶 Format 次要版本號碼。 可以是 NULL。|  
+|**mtf_minor_version**|**tinyint**|[!INCLUDE[msCoName](../../includes/msconame-md.md)] Tape Format 次要版本號碼。 可以是 NULL。|  
 |**first_lsn**|**numeric(25,0)**|備份組中第一個或最舊記錄檔記錄的記錄序號。 可以是 NULL。|  
 |**last_lsn**|**numeric(25,0)**|備份組之後下一個記錄檔記錄的記錄序號。 可以是 NULL。|  
 |**checkpoint_lsn**|**numeric(25,0)**|必須啟動重做的記錄之記錄序號。 可以是 NULL。|  
@@ -100,9 +98,9 @@ ms.lasthandoff: 02/03/2018
 |**fork_point_lsn**|**numeric(25,0)**|如果**first_recovery_fork_guid**不等於**last_recovery_fork_guid**，這就是分岔點的記錄序號。 否則，這個值是 NULL。|  
 |**database_guid**|**uniqueidentifier**|資料庫的唯一識別碼。 這會對應至**BindingID** RESTORE headeronly。 當還原資料庫時，會指派一個新值。|  
 |**family_guid**|**uniqueidentifier**|建立時原始資料庫的唯一識別碼。 當還原資料庫時，即使還原成不同的名稱，這個值也會維持不變。|  
-|**differential_base_lsn**|**numeric(25,0)**|差異備份的基底 LSN。 單一為基礎的差異備份。變更 lsn 大於或等於**differential_base_lsn**隨附的差異備份。<br /><br /> 對於基底差異備份，這個值會是 NULL，且基底 LSN 必須取決於檔案層級 (請參閱[backupfile &#40;TRANSACT-SQL &#41;](../../relational-databases/system-tables/backupfile-transact-sql.md)).<br /><br /> 如果是非差異備份類型，這個值永遠是 NULL。|  
+|**differential_base_lsn**|**numeric(25,0)**|差異備份的基底 LSN。 單一為基礎的差異備份。變更 lsn 大於或等於**differential_base_lsn**隨附的差異備份。<br /><br /> 對於基底差異備份，這個值會是 NULL，且基底 LSN 必須取決於檔案層級 (請參閱[backupfile &#40;TRANSACT-SQL&#41;](../../relational-databases/system-tables/backupfile-transact-sql.md))。<br /><br /> 如果是非差異備份類型，這個值永遠是 NULL。|  
 |**differential_base_guid**|**uniqueidentifier**|如果是單一基底差異備份，這個值就是差異基底的唯一識別碼。<br /><br /> 如果是多重基底差異備份，這個值就是 NULL，差異基底必須取決於檔案層級。<br /><br /> 如果是非差異備份類型，這個值就是 NULL。|  
-|**compressed_backup_size**|**Numeric(20,0)**|儲存於磁碟上之備份的總位元組數。<br /><br /> 若要計算的壓縮率，請使用**compressed_backup_size**和**backup_size**。<br /><br /> 期間**msdb**升級時，此值設為 NULL。 這表示非壓縮的備份。|  
+|**compressed_backup_size**|**numeric(20,0)**|儲存於磁碟上之備份的總位元組數。<br /><br /> 若要計算的壓縮率，請使用**compressed_backup_size**和**backup_size**。<br /><br /> 期間**msdb**升級時，此值設為 NULL。 這表示非壓縮的備份。|  
 |**key_algorithm**|**nvarchar(32)**|用於加密備份的加密演算法。 NO_Encryption 值表示備份未加密。|  
 |**encryptor_thumbprint**|**varbinary(20)**|加密程式指模，可用來尋找資料庫中的憑證或非對稱金鑰。 在備份未加密的情況下，這個值是 NULL。|  
 |**encryptor_type**|**nvarchar(32)**|使用的加密程式類型：憑證或非對稱金鑰。 。 在備份未加密的情況下，這個值是 NULL。|  
@@ -113,7 +111,7 @@ ms.lasthandoff: 02/03/2018
  若要減少此資料表和其他備份和記錄資料表中的資料列數目，請執行[sp_delete_backuphistory](../../relational-databases/system-stored-procedures/sp-delete-backuphistory-transact-sql.md)預存程序。  
   
 ## <a name="see-also"></a>另請參閱  
- [備份及還原資料表 &#40;TRANSACT-SQL &#41;](../../relational-databases/system-tables/backup-and-restore-tables-transact-sql.md)   
+ [備份與還原資料表&#40;Transact SQL&#41;](../../relational-databases/system-tables/backup-and-restore-tables-transact-sql.md)   
  [backupfile &#40;Transact-SQL&#41;](../../relational-databases/system-tables/backupfile-transact-sql.md)   
  [backupfilegroup &#40;Transact-SQL&#41;](../../relational-databases/system-tables/backupfilegroup-transact-sql.md)   
  [backupmediafamily &#40;Transact-SQL&#41;](../../relational-databases/system-tables/backupmediafamily-transact-sql.md)   
@@ -122,6 +120,6 @@ ms.lasthandoff: 02/03/2018
  [媒體集、媒體家族與備份組 &#40;SQL Server&#41;](../../relational-databases/backup-restore/media-sets-media-families-and-backup-sets-sql-server.md)   
  [復原模式 &#40;SQL Server&#41;](../../relational-databases/backup-restore/recovery-models-sql-server.md)   
  [RESTORE HEADERONLY &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-headeronly-transact-sql.md)   
- [備份及還原資料表 &#40;TRANSACT-SQL &#41;](../../relational-databases/system-tables/backup-and-restore-tables-transact-sql.md)  
+ [備份與還原資料表&#40;Transact SQL&#41;](../../relational-databases/system-tables/backup-and-restore-tables-transact-sql.md)  
   
   

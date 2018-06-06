@@ -1,35 +1,33 @@
 ---
-title: "資料移轉報告 (MySQLToSQL) |Microsoft 文件"
-ms.prod: sql-non-specified
+title: 資料移轉報告 (MySQLToSQL) |Microsoft 文件
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
 ms.component: ssma-mysql
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ssma
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: 5524a575-67dd-4ef6-9d17-3412df9b9f9c
-caps.latest.revision: "4"
+caps.latest.revision: 4
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
-ms.workload: Inactive
-ms.openlocfilehash: 0fe8dfc94eb8db5da55a150c122616f6f7cc2d19
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+manager: craigg
+ms.openlocfilehash: c9ffe3c71bca0ef6fbd439a4f29ae0e8703901fb
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="data-migration-report--mysqltosql"></a>資料移轉報告 (MySQLToSQL)
 **資料移轉報告** 對話方塊隨即出現之後您將資料移轉至, [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
 **狀態**  
 顯示來源的資料移轉到目標資料庫的狀態。  
   

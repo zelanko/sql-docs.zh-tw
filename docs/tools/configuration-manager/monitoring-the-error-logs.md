@@ -1,17 +1,14 @@
 ---
-title: "監視錯誤記錄檔 |Microsoft 文件"
-ms.custom: 
+title: 監視錯誤記錄檔 |Microsoft 文件
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
-ms.component: configuration-manager
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: configuration
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - logs [SQL Server]
 - database performance [SQL Server], errors
@@ -27,16 +24,15 @@ helpviewer_keywords:
 - error logs [SQL Server]
 - logs [SQL Server], Windows application logs
 ms.assetid: e250336b-0695-44f6-a42f-23222f94e377
-caps.latest.revision: 
+caps.latest.revision: 23
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: af83c65a76d5dc190ca8833f247d3bc5e3138505
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
-ms.translationtype: MT
+ms.openlocfilehash: 6917f16f1807d68b8a3124596fa1e19ddf56e692
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.translationtype: MTE
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="monitoring-the-error-logs"></a>監視錯誤記錄
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -49,9 +45,9 @@ ms.lasthandoff: 02/03/2018
   
 ## <a name="in-this-section"></a>本節內容  
   
-|主題|說明|  
+|主題|描述|  
 |-----------|-----------------|  
-|[檢視 SQL Server 錯誤記錄檔](../../tools/configuration-manager/viewing-the-sql-server-error-log.md)|包含 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 錯誤記錄檔及其檢視方式的詳細資訊。|  
-|[檢視 Windows 應用程式記錄檔](../../tools/configuration-manager/viewing-the-windows-application-log.md)|包含 Windows 應用程式記錄檔及其檢視方式的詳細資訊。|  
+|[檢視 SQL Server 錯誤記錄](../../tools/configuration-manager/viewing-the-sql-server-error-log.md)|包含 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 錯誤記錄檔及其檢視方式的詳細資訊。|  
+|[檢視 Windows 應用程式記錄](../../tools/configuration-manager/viewing-the-windows-application-log.md)|包含 Windows 應用程式記錄檔及其檢視方式的詳細資訊。|  
   
   

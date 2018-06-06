@@ -1,16 +1,12 @@
 ---
-title: "sys.dm_os_cluster_properties (TRANSACT-SQL) |Microsoft 文件"
-ms.custom: 
+title: sys.dm_os_cluster_properties (TRANSACT-SQL) |Microsoft 文件
+ms.custom: ''
 ms.date: 08/09/2016
-ms.prod: sql-non-specified
-ms.prod_service: database-engine
-ms.service: 
-ms.component: dmv's
-ms.reviewer: 
+ms.prod: sql
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: system-objects
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.dm_os_cluster_properties_TSQL
@@ -23,16 +19,15 @@ helpviewer_keywords:
 - dm_os_cluster_properties
 - sys.dm_os_cluster_properties
 ms.assetid: 6d82e770-fba7-49e0-9a0c-3b34b393e4a7
-caps.latest.revision: 
+caps.latest.revision: 17
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 71ac8027fa835a1d087c9914b73b8a1e4c0ead34
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 617f40a71074c8480d38e2eb5f59e108ee2d6ff7
+ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 05/23/2018
 ---
 # <a name="sysdmosclusterproperties-transact-sql"></a>sys.dm_os_cluster_properties (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -44,7 +39,7 @@ ms.lasthandoff: 02/03/2018
 
 |資料行名稱|屬性|Description|  
 |-----------------|--------------|-----------------|  
-|VerboseLogging|bigint|SQL Server 容錯移轉叢集的記錄層次。 可開啟以在錯誤記錄檔中提供詳細資訊供疑難排解之用的詳細資訊記錄。 為下列其中一個值：<br /><br /> 0 - 關閉記錄功能 (預設)<br /><br /> 1 - 只有錯誤<br /><br /> 2 - 錯誤和警告<br /><br /> 如需詳細資訊，請參閱[ALTER SERVER CONFIGURATION &#40;TRANSACT-SQL &#41;](../../t-sql/statements/alter-server-configuration-transact-sql.md).|  
+|VerboseLogging|bigint|SQL Server 容錯移轉叢集的記錄層次。 可開啟以在錯誤記錄檔中提供詳細資訊供疑難排解之用的詳細資訊記錄。 為下列其中一個值：<br /><br /> 0 - 關閉記錄功能 (預設)<br /><br /> 1 - 只有錯誤<br /><br /> 2 - 錯誤和警告<br /><br /> 如需詳細資訊，請參閱[ALTER SERVER CONFIGURATION &#40;TRANSACT-SQL&#41;](../../t-sql/statements/alter-server-configuration-transact-sql.md)。|  
 |SqlDumperDumpFlags|bigint|SQLDumper 傾印旗標決定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 所產生的傾印檔案類型。 預設設定為 0。|  
 |SqlDumperDumpPath|nvarchar(260)|SQLDumper 公用程式產生傾印檔案的位置。|  
 |SqlDumperDumpTimeOut|bigint|當 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 發生失敗時，SQLDumper 公用程式產生傾印的逾時值 (以毫秒為單位)。 預設值是 0。|  

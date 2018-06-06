@@ -1,35 +1,23 @@
 ---
-title: "ReadSourceData 元素 (ASSL) |Microsoft 文件"
-ms.custom: 
-ms.date: 03/06/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+title: ReadSourceData 元素 (ASSL) |Microsoft 文件
+ms.date: 5/8/2018
+ms.prod: sql
+ms.custom: assl
+ms.reviewer: owend
+ms.technology: analysis-services
 ms.topic: reference
-apiname: ReadSourceData Element
-apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
-apitype: Schema
-applies_to: SQL Server 2016 Preview
-helpviewer_keywords: ReadSourceData element
-ms.assetid: 7da4665a-fba3-4aae-8dee-678dc14d3b05
-caps.latest.revision: "12"
-author: Minewiskan
+author: minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: a50c6ffd2d0a305edb4bf4ed78579d0bf4108ca9
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 9a990decd1b3fc36cb77483be649dca371fd5aea
+ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="readsourcedata-element-assl"></a>ReadSourceData 元素 (ASSL)
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]決定如何唯一名稱的內所包含的階層產生[CubePermission](../../../analysis-services/scripting/objects/cubepermission-element-assl.md)。  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+  決定如何唯一名稱的內所包含的階層產生[CubePermission](../../../analysis-services/scripting/objects/cubepermission-element-assl.md)。  
   
 ## <a name="syntax"></a>語法  
   
@@ -44,7 +32,7 @@ ms.lasthandoff: 01/08/2018
   
 ## <a name="element-characteristics"></a>元素特性  
   
-|特性|描述|  
+|特性|說明|  
 |--------------------|-----------------|  
 |資料類型和長度|字串 (列舉)|  
 |預設值|*無*|  
@@ -60,7 +48,7 @@ ms.lasthandoff: 01/08/2018
 ## <a name="remarks"></a>備註  
  這個元素的值限制為下表所列的其中一個字串。  
   
-|ReplTest1|描述|  
+|值|說明|  
 |-----------|-----------------|  
 |*無*|不允許存取計算行程 0 可用的資料。|  
 |*允許*|允許存取計算行程 0 可用的資料。|  
@@ -68,9 +56,9 @@ ms.lasthandoff: 01/08/2018
 ## <a name="remarks"></a>備註  
  對應目的父代的項目**ReadSourceData**在 「 分析管理物件 (AMO) 物件模型而言， <xref:Microsoft.AnalysisServices.CubePermission>。  
   
-## <a name="see-also"></a>請參閱  
- [Cube 元素 &#40;ASSL &#41;](../../../analysis-services/scripting/objects/cube-element-assl.md)   
- [Dimension 元素 &#40;ASSL &#41;](../../../analysis-services/scripting/objects/dimension-element-assl.md)   
- [屬性 &#40;ASSL &#41;](../../../analysis-services/scripting/properties/properties-assl.md)  
+## <a name="see-also"></a>另請參閱  
+ [Cube 元素 & #40;ASSL & #41;](../../../analysis-services/scripting/objects/cube-element-assl.md)   
+ [Dimension 元素 & #40;ASSL & #41;](../../../analysis-services/scripting/objects/dimension-element-assl.md)   
+ [屬性 & #40;ASSL & #41;](../../../analysis-services/scripting/properties/properties-assl.md)  
   
   

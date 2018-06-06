@@ -1,28 +1,25 @@
 ---
-title: "使用 PowerShell 輪替永遠加密金鑰 | Microsoft 文件"
-ms.custom: 
+title: 使用 PowerShell 輪替永遠加密金鑰 | Microsoft 文件
+ms.custom: ''
 ms.date: 05/17/2017
-ms.prod: sql-non-specified
-ms.prod_service: database-engine, sql-database
-ms.service: 
-ms.component: security
-ms.reviewer: 
+ms.prod: sql
+ms.prod_service: security, sql-database"
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- dbe-security
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: security
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: 5117b4fd-c8d3-48d5-87c9-756800769f31
-caps.latest.revision: 
+caps.latest.revision: 19
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 71bd82e9db46d763e5d405ef8749adefcfe32a0f
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 0b16ad6c18bec1954d9c52ada5fd22202e3ff9da
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="rotate-always-encrypted-keys-using-powershell"></a>使用 PowerShell 輪替永遠加密金鑰
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

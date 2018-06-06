@@ -1,31 +1,27 @@
 ---
-title: "SQL Server Express LocalDB 錯誤訊息參考 |Microsoft 文件"
-ms.custom: 
+title: SQL Server Express LocalDB 錯誤訊息參考 |Microsoft 文件
+ms.custom: ''
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
-ms.prod_service: database-engine
-ms.service: 
-ms.component: localdb
-ms.reviewer: 
+ms.prod: sql
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: performance
+ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: ee413207-d6f5-4938-82a1-0e245037e246
-caps.latest.revision: 
+caps.latest.revision: 8
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: cdaaf5e15d664352715622db595a07e3ed6898fd
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.openlocfilehash: 3b19c9d16b22eb2a7c893d578214b48457482df7
+ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="sql-server-express-localdb-reference---error-messages"></a>SQL Server Express LocalDB 參考-錯誤訊息
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-本節提供有關下列 SQL Server Express LocalDB 錯誤訊息的參考資訊：  
+  本節提供有關下列 SQL Server Express LocalDB 錯誤訊息的參考資訊：  
   
  [LOCALDB_ERROR_ADMIN_RIGHTS_REQUIRED](../../relational-databases/express-localdb-error-messages/localdb-error-admin-rights-required.md)  
  您必須擁有管理員權限才能執行這項作業。  

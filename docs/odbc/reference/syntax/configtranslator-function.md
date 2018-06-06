@@ -1,32 +1,33 @@
 ---
-title: "ConfigTranslator 函式 |Microsoft 文件"
-ms.custom: 
+title: ConfigTranslator 函式 |Microsoft 文件
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
-ms.component: odbc
-ms.reviewer: 
+ms.prod: sql
+ms.prod_service: connectivity
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
-ms.topic: article
-apiname: ConfigTranslator
-apilocation: sqlsrv32.dll
+ms.technology: connectivity
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
+apiname:
+- ConfigTranslator
+apilocation:
+- sqlsrv32.dll
 apitype: dllExport
-f1_keywords: ConfigTranslator
-helpviewer_keywords: ConfigTranslator [ODBC]
+f1_keywords:
+- ConfigTranslator
+helpviewer_keywords:
+- ConfigTranslator [ODBC]
 ms.assetid: 7c22f07e-36de-425b-aa67-e32a84afae92
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
-ms.workload: Inactive
-ms.openlocfilehash: 8b0c064453d84d10037eb1360c20b2fab8ecb1d8
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+manager: craigg
+ms.openlocfilehash: 5b38bc6340ec456ce180eb2a9cc266d5b8a19305
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="configtranslator-function"></a>ConfigTranslator 函式
 **一致性**  
@@ -57,7 +58,7 @@ BOOL ConfigTranslator(
 ## <a name="diagnostics"></a>診斷  
  當**ConfigTranslator**傳回 FALSE，相關聯 *\*pfErrorCode*值由呼叫張貼至安裝程式錯誤緩衝區**SQLPostInstallerError**而且可以藉由呼叫取得**SQLInstallerError**。 下表列出 *\*pfErrorCode*可以傳回的值**SQLInstallerError** ，並說明每個內容中的這個函式。  
   
-|*\*pfErrorCode*|錯誤|描述|  
+|*\*pfErrorCode*|錯誤|Description|  
 |---------------------|-----------|-----------------|  
 |ODBC_ERROR_INVALID_HWND|無效的視窗控制代碼|*HwndParent*引數以前是無效或為 NULL。|  
 |ODBC_ERROR_DRIVER_SPECIFIC|特定驅動程式或轉譯器錯誤|驅動程式特有的錯誤，它沒有任何已定義的 ODBC 安裝程式發生錯誤。 *SzError*呼叫中的引數**SQLPostInstallerError**函式應該包含驅動程式特有的錯誤訊息。|  

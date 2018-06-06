@@ -1,29 +1,27 @@
 ---
-title: "Microsoft ActiveX Data Objects (ADO) |Microsoft 文件"
-ms.custom: 
+title: Microsoft ActiveX Data Objects (ADO) |Microsoft 文件
+ms.custom: ''
 ms.date: 07/25/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
+ms.prod: sql
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology: drivers
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: connectivity
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - ADO, about
 ms.assetid: 2fa6237b-44b8-4b6c-9952-5acd80a54e20
-caps.latest.revision: 
+caps.latest.revision: 20
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 2ad1f280a51c061621145e9c3e3f1d656a4eca80
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 40e0ba7ff0b05a8f1faa4d0b62893f51145c81c3
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="microsoft-activex-data-objects-ado"></a>Microsoft ActiveX Data Objects (ADO)
 

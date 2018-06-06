@@ -1,30 +1,28 @@
 ---
-title: "連接到 SQL Server (DB2eToSQL) |Microsoft 文件"
-ms.prod: sql-non-specified
+title: 連接到 SQL Server (DB2eToSQL) |Microsoft 文件
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
 ms.component: ssma-db2
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ssma
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: b59803cb-3cc6-41cc-8553-faf90851410e
-caps.latest.revision: "8"
+caps.latest.revision: 8
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
-ms.workload: Inactive
-ms.openlocfilehash: 1530b84e785a0c707f4a0d8ca66b273ca697ccde
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+manager: craigg
+ms.openlocfilehash: d257c6b2569eec1677577e8fe98a0fe619ab60f1
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="connecting-to-sql-server-db2etosql"></a>連接到 SQL Server (DB2eToSQL)
 若要將 DB2 資料庫移轉至[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]2012年[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]2014年或 Azure SQL 資料庫，您必須連接到任何這些目標執行個體[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]。 SSMA 連線時，取得執行個體中的所有資料庫的相關中繼資料[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]並顯示資料庫中繼資料中的[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]中繼資料總管。 SSMA 會儲存有關哪一個執行個體資訊[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]您已連線，但不會儲存密碼。  
@@ -49,7 +47,7 @@ ms.lasthandoff: 12/21/2017
 ## <a name="establishing-a-sql-server-connection"></a>建立 SQL Server 連接  
 轉換至 DB2 資料庫物件之前[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]語法中，您必須連接到執行個體[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]您要移轉的 DB2 資料庫。  
   
-當您定義的連接屬性時，您也可以指定其中將移轉物件和資料的資料庫。 連線之後，您可以自訂這個對應 DB2 結構描述層級[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]。 如需詳細資訊，請參閱[對應至 SQL Server 結構描述 &#40; DB2ToSQL &#41; 的 DB2 結構描述](../../ssma/db2/mapping-db2-schemas-to-sql-server-schemas-db2tosql.md)。  
+當您定義的連接屬性時，您也可以指定其中將移轉物件和資料的資料庫。 連線之後，您可以自訂這個對應 DB2 結構描述層級[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]。 如需詳細資訊，請參閱[對應至 SQL Server 結構描述的 DB2 結構描述&#40;DB2ToSQL&#41;](../../ssma/db2/mapping-db2-schemas-to-sql-server-schemas-db2tosql.md)。  
   
 > [!IMPORTANT]  
 > 您嘗試連接到之前[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]，請確定執行個體[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]正在執行，而且可接受連接。  
@@ -115,14 +113,14 @@ ms.lasthandoff: 12/21/2017
 ## <a name="next-step"></a>下一個步驟  
 移轉的下一個步驟取決於您專案的需求：  
   
--   若要自訂 DB2 結構描述之間的對應和[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]資料庫和結構描述，請參閱[對應至 SQL Server 結構描述 &#40; DB2ToSQL &#41; 的 DB2 結構描述](../../ssma/db2/mapping-db2-schemas-to-sql-server-schemas-db2tosql.md)。  
+-   若要自訂 DB2 結構描述之間的對應和[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]資料庫和結構描述，請參閱[對應至 SQL Server 結構描述的 DB2 結構描述&#40;DB2ToSQL&#41;](../../ssma/db2/mapping-db2-schemas-to-sql-server-schemas-db2tosql.md)。  
   
--   若要自訂專案的組態選項，請參閱[專案設定 &#40;轉換 &#41;&#40; DB2ToSQL &#41;](../../ssma/db2/project-settings-conversion-db2tosql.md)和相關的區段。  
+-   若要自訂專案的組態選項，請參閱[專案設定&#40;轉換&#41; &#40;DB2ToSQL&#41; ](../../ssma/db2/project-settings-conversion-db2tosql.md)和相關的區段。  
   
--   若要自訂的來源和目標資料類型對應，請參閱[對應 DB2 與 SQL Server 資料類型 &#40; DB2ToSQL &#41;](../../ssma/db2/mapping-db2-and-sql-server-data-types-db2tosql.md)。  
+-   若要自訂的來源和目標資料類型對應，請參閱[對應 DB2 與 SQL Server 資料類型&#40;DB2ToSQL&#41;](../../ssma/db2/mapping-db2-and-sql-server-data-types-db2tosql.md)。  
   
--   如果您不需要執行任何這些工作，您可以將轉換成的 DB2 資料庫物件定義[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]物件定義。 如需詳細資訊，請參閱[轉換 DB2 結構描述 &#40; DB2ToSQL &#41;](../../ssma/db2/converting-db2-schemas-db2tosql.md)。  
+-   如果您不需要執行任何這些工作，您可以將轉換成的 DB2 資料庫物件定義[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]物件定義。 如需詳細資訊，請參閱[轉換 DB2 結構描述&#40;DB2ToSQL&#41;](../../ssma/db2/converting-db2-schemas-db2tosql.md)。  
   
-## <a name="see-also"></a>請參閱  
-[DB2 資料庫移轉至 SQL Server &#40; DB2ToSQL &#41;](../../ssma/db2/migrating-db2-databases-to-sql-server-db2tosql.md)  
+## <a name="see-also"></a>另請參閱  
+[SQL server 資料庫移轉 DB2 &#40;DB2ToSQL&#41;](../../ssma/db2/migrating-db2-databases-to-sql-server-db2tosql.md)  
   

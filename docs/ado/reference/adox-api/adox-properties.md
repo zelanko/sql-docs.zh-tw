@@ -1,31 +1,28 @@
 ---
-title: "ADOX 屬性 |Microsoft 文件"
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
+title: ADOX 屬性 |Microsoft 文件
+ms.prod: sql
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
-ms.custom: 
+ms.technology: connectivity
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - properties [ADOX]
 - ADOX, properties
 ms.assetid: 2ddf19e4-312e-4d21-8053-a6fc4b738ad4
-caps.latest.revision: 
+caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 779d8fe872fe5db8d36b7dc7feb2f0e4742595be
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 2e9ea6ff9f515a0dee79d464dda4bf44b8b6ab6e
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="adox-properties"></a>ADOX 屬性
 |||  
@@ -45,7 +42,7 @@ ms.lasthandoff: 02/09/2018
 |[NumericScale](../../../ado/reference/adox-api/numericscale-property-adox.md)|指出資料行中的數字值的小數位數。|  
 |[ParentCatalog](../../../ado/reference/adox-api/parentcatalog-property-adox.md)|指定的父目錄的資料表或資料行，以提供存取提供者特有的屬性。|  
 |[有效位數](../../../ado/reference/adox-api/precision-property-adox.md)|指出資料行中的資料值的最大有效位數。|  
-|[PrimaryKey](../../../ado/reference/adox-api/primarykey-property-adox.md)|指出索引是否代表資料表的主索引鍵。|  
+|[primaryKey](../../../ado/reference/adox-api/primarykey-property-adox.md)|指出索引是否代表資料表的主索引鍵。|  
 |[RelatedColumn](../../../ado/reference/adox-api/relatedcolumn-property-adox.md)|表示在相關資料表 （只有索引鍵資料行） 中相關的資料行的名稱。|  
 |[RelatedTable](../../../ado/reference/adox-api/relatedtable-property-adox.md)|指出相關的資料表名稱。|  
 |[SortOrder](../../../ado/reference/adox-api/sortorder-property-adox.md)|指出資料行 （僅限索引欄） 的排序順序。|  

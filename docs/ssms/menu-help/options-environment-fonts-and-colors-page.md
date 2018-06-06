@@ -1,33 +1,32 @@
 ---
-title: "選項 (環境 - 字型和色彩頁面) | Microsoft Docs"
-ms.custom: 
+title: 選項 (環境 - 字型和色彩頁面) | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
 ms.component: ssms-menu
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: tools-ssms
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ssms
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 f1_keywords:
 - VS.ToolsOptionsPages.Environment.Fonts_And_Colors
 - VS.TOOLSOPTIONSPAGES.ENVIRONMENT.FONTS_AND_COLORS
 ms.assetid: ea3aa222-538d-485f-99dc-01eb02cdcfea
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: dce7af8a58cd0cfc486f21846df7a7bcb887b034
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.openlocfilehash: e4f8160145814a85b909c0edd41e240102fc893a
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="options-environment---fonts-and-colors-page"></a>選項 (環境 - 字型和色彩頁面)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] [選項] 對話方塊讓您能夠針對 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] 中的各種使用者介面項目，來建立自訂的字型和色彩配置。 在 [工具] 功能表上按一下 [選項]、展開 [環境] 資料夾，然後選取 [字型和色彩]。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[選項] 對話方塊讓您能夠針對 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] 中的各種使用者介面元素，來建立自訂的字型和色彩配置。 在 [工具] 功能表上按一下 [選項]、展開 [環境] 資料夾，然後選取 [字型和色彩]。  
   
 在對色彩配置進行變更的工作階段中，色彩配置的變更並不會生效。 您可以開啟 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] 的其他執行個體，並產生您希望套用變更的條件，來評估色彩變更。  
   

@@ -1,16 +1,14 @@
 ---
-title: "INTO 子句 (Transact-SQL) | Microsoft Docs"
-ms.custom: 
+title: INTO 子句 (Transact-SQL) | Microsoft Docs
+ms.custom: ''
 ms.date: 05/23/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
 ms.component: t-sql|queries
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: t-sql
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - INTO_TSQL
@@ -31,44 +29,45 @@ helpviewer_keywords:
 - clauses [SQL Server], INTO
 - row additions [SQL Server], INTO clause
 ms.assetid: b48d69e8-5a00-48bf-b2f3-19278a72dd88
-caps.latest.revision: 
+caps.latest.revision: 63
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: Active
-ms.openlocfilehash: 410e71466944f1744d0c8092f0ad030ffa1da29b
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 23b48b3246509d62459daee8ecf50dd9f54ab8c4
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="select---into-clause-transact-sql"></a>SELECT - INTO 子句 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  SELECT INTO 會在預設的檔案群組中建立新的資料表，然後將查詢的結果資料列插入其中。 若要檢視完整的 SELECT 語法，請參閱 [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)。  
+SELECT INTO 會在預設的檔案群組中建立新的資料表，然後將查詢的結果資料列插入其中。 若要檢視完整的 SELECT 語法，請參閱 [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)。  
   
- ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>語法  
   
 ```  
 [ INTO new_table ]
-[ ON filegroup]
+[ ON filegroup ]
 ```  
   
 ## <a name="arguments"></a>引數  
- *new_table*  
+ *new_table*   
  根據選取清單中的資料行以及從資料來源中選擇的資料列，指定要建立之新資料表的名稱。  
- 
-  *filegroup*
- 
- 指定將作為新資料表建立位置的檔案群組名稱。 指定的檔案群組應該存在於資料庫上，否則 SQL Server 引擎會擲回錯誤。 從 [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] 開始才有支援此選項。
  
  *new_table* 的格式會藉由評估選取清單中的運算式來決定。 *new_table* 中的資料行會依照選取清單所指定的順序來建立。 *new_table* 中每個資料行的名稱、資料類型、可 NULL 性及值，都與選取清單中對應的運算式相同。 此時，系統會傳送資料行的 IDENTITY 屬性，但是＜備註＞一節中「使用識別欄位」內定義的狀況除外。  
   
  若要在相同 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體上的另一個資料庫中建立資料表，請使用 *database.schema.table_name* 格式以完整名稱指定 *new_table*。  
   
  您無法在遠端伺服器上建立 *new_table*，不過，您可以從遠端資料來源填入 *new_table*。 若要從遠端來源資料表建立 *new_table*，請在 SELECT 陳述式的 FROM 子句中，使用 *linked_server*.*catalog*.*schema*.*object* 格式的四部分名稱來指定來源資料表。 或者，您也可以在 FROM 子句中使用 [OPENQUERY](../../t-sql/functions/openquery-transact-sql.md) 函數或 [OPENDATASOURCE](../../t-sql/functions/opendatasource-transact-sql.md) 函數來指定遠端資料來源。  
+ 
+ *filegroup*    
+ 指定將作為新資料表建立位置的檔案群組名稱。 指定的檔案群組應該存在於資料庫上，否則 SQL Server 引擎會擲回錯誤。   
+ 
+ **適用於**：[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。
   
 ## <a name="data-types"></a>資料型別  
  FILESTREAM 屬性不會傳送至新的資料表。 FILESTREAM BLOB 會以 **varbinary(max)** BLOB 的形式被複製並儲存在新資料表中。 在沒有 FILESTREAM 屬性的情況下，**varbinary(max)** 資料類型會有 2 GB 的限制。 如果 FILESTREAM BLOB 超過這個值，系統就會引發錯誤 7119 並且停止此陳述式。  
@@ -90,18 +89,18 @@ ms.lasthandoff: 01/25/2018
 ## <a name="limitations-and-restrictions"></a>限制事項  
  您無法將資料表變數或資料表值參數指定為新的資料表。  
   
- 即使已分割來源資料表，您還是無法使用 SELECT INTO 來建立分割區資料表。 SELECT...INTO 不會使用來源資料表的分割區配置，不過它會在預設的檔案群組中建立新的資料表。 若要將資料列插入分割資料表，您必須先建立分割資料表，然後再使用 INSERT INTO...SELECT FROM 陳述式。  
+ 即使已分割來源資料表，您還是無法使用 `SELECT…INTO` 來建立資料分割資料表。 `SELECT...INTO` 不會使用來源資料表的資料分割配置；但會在預設檔案群組中建立新的資料表。 若要將資料列插入資料分割資料表，您必須先建立資料分割資料表，再使用 `INSERT INTO...SELECT...FROM` 陳述式。  
   
- 在來源資料表中定義的索引、條件約束和觸發程序都不會傳送至新的資料表，而且您也無法在 SELECT...INTO 陳述式中指定它們。 如果您需要這些物件，可以在執行 SELECT...INTO 陳述式之後建立它們。  
+ 在來源資料表中定義的索引、條件約束和觸發程序都不會傳送至新的資料表，而且您也無法在 `SELECT...INTO` 陳述式中指定它們。 如果您需要這些物件，則可以在執行 `SELECT...INTO` 陳述式之後建立它們。  
   
- 指定 ORDER BY 子句並不保證會依照指定的順序插入資料列。  
+ 指定 `ORDER BY` 子句並不保證會依照指定的順序插入資料列。  
   
  當選取清單包括疏鬆資料行時，疏鬆資料行屬性不會傳送至新資料表中的資料行。 如果新資料表需要這個屬性，請在執行 SELECT...INTO 陳述式來加入這個屬性之後，改變資料行定義。  
   
- 當選取清單包括計算資料行時，新資料表變數中對應的資料行並不是計算資料行。 新資料行中的值是執行 SELECT...INTO 時所計算的值。  
+ 當選取清單包括計算資料行時，新資料表變數中對應的資料行並不是計算資料行。 新資料行中的值是執行 `SELECT...INTO` 時所計算的值。  
   
 ## <a name="logging-behavior"></a>記錄行為  
- SELECT...INTO 的記錄數量主要取決於資料庫目前使用的復原模式。 在簡單復原模式或大量記錄復原模式下，大量作業會進行最低限度記錄。 搭配最低限度記錄時，使用 SELECT… INTO 陳述式會比建立資料表後再使用 INSERT 陳述式來填入資料表，還要有效率。 如需詳細資訊，請參閱 [交易記錄 &#40;SQL Server&#41;](../../relational-databases/logs/the-transaction-log-sql-server.md)。  
+ `SELECT...INTO` 的記錄數量主要取決於資料庫目前使用的復原模式。 在簡單復原模式或大量記錄復原模式下，大量作業會進行最低限度記錄。 透過最低限度記錄，使用 `SELECT...INTO` 陳述式可能會比建立資料表後使用 INSERT 陳述式來擴展資料表更有效率。 如需詳細資訊，請參閱 [交易記錄 &#40;SQL Server&#41;](../../relational-databases/logs/the-transaction-log-sql-server.md)。  
   
 ## <a name="permissions"></a>Permissions  
  需要目的地資料庫中的 CREATE TABLE 權限。  
@@ -213,7 +212,7 @@ FROM OPENDATASOURCE('SQLNCLI',
 GO  
 ```  
   
-### <a name="e-import-from-an-external-table-created-with--polybase"></a>E. 從使用 PolyBase 建立的外部資料表匯入  
+### <a name="e-import-from-an-external-table-created-with-polybase"></a>E. 從使用 PolyBase 建立的外部資料表匯入  
  將資料從 Hadoop 或 Azure 儲存體匯入至 SQL Server 以便持續儲存。 請使用 `SELECT INTO` 來匯入外部資料表所參考的資料，以便持續儲存在 SQL Server 中。 在第二個步驟中，快速建立關聯式資料表，然後在資料表上建立資料行存放區索引。  
   
  **適用於：** [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。  
@@ -228,13 +227,12 @@ INTO Fast_Customers from Insured_Customers INNER JOIN
         SELECT * FROM CarSensor_Data where Speed > 35   
 ) AS SensorD  
 ON Insured_Customers.CustomerKey = SensorD.CustomerKey  
-ORDER BY YearlyIncome  
-  
+ORDER BY YearlyIncome;  
 ```  
 ### <a name="f-creating-a-new-table-as-a-copy-of-another-table-and-loading-it-a-specified-filegroup"></a>F. 將新資料表建立成另一個資料表的複本並載入至指定的檔案群組中
 下列範例示範如何將新資料表建立成另一個資料表的複本，然後載入至與使用者預設檔案群組不同的指定檔案群組中。
 
- **適用於：**[!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)]
+ **適用於**：[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。
 
 ```sql
 ALTER DATABASE [AdventureWorksDW2016] ADD FILEGROUP FG2;
@@ -246,7 +244,7 @@ FILENAME = '/var/opt/mssql/data/AdventureWorksDW2016_Data1.mdf'
 )
 TO FILEGROUP FG2;
 GO
-SELECT *  INTO [dbo].[FactResellerSalesXL] ON FG2 from [dbo].[FactResellerSales]
+SELECT * INTO [dbo].[FactResellerSalesXL] ON FG2 FROM [dbo].[FactResellerSales];
 ```
   
 ## <a name="see-also"></a>另請參閱  

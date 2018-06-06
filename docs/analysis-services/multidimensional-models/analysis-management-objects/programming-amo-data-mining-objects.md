@@ -1,34 +1,19 @@
 ---
-title: "程式設計 AMO 資料採礦物件 |Microsoft 文件"
-ms.custom: 
-ms.date: 02/14/2018
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- programming [AMO]
-- data mining [AMO]
-- AMO, data mining
-- Analysis Management Objects, data mining
-ms.assetid: d27f58b9-91be-449c-8403-439aa6dd1ff9
-caps.latest.revision: 
-author: Minewiskan
+title: 程式設計 AMO 資料採礦物件 |Microsoft 文件
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: amo
+ms.topic: conceptual
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: be27072d93bb9cee3d787732e57fc591452c2191
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 288a6bfda85247306def8c4222139b6889d5e407
+ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="programming-amo-data-mining-objects"></a>設計 AMO 資料採礦物件的程式
   使用 AMO 來設計資料採礦物件是簡單且直接的。 第一個步驟是建立資料結構模型以支援採礦專案。 接著建立足以支援您要使用之採礦演算法的資料採礦模型，這是為了預測或是尋找隱藏在資料之下無法察覺的關係。 採礦專案建立完成後 (包括結構與演算法)，您就可以處理採礦模型並取得定型模型，以便稍後在從用戶端應用程式查詢和預測時可以使用。  
@@ -41,7 +26,7 @@ ms.lasthandoff: 02/15/2018
   
 -   [MiningModel 物件](#MiningModel)  
   
-##  <a name="MiningStructure">MiningStructure 物件</a>  
+##  <a name="MiningStructure"></a> MiningStructure 物件  
  採礦結構是用以建立所有採礦模型的資料結構定義。 採礦結構包含在資料庫中定義的資料來源檢視繫結，並且包含所有參與採礦模型的資料行定義。 一個採礦結構可以包含一個以上的採礦模型。  
   
  建立 <xref:Microsoft.AnalysisServices.MiningStructure> 物件需要下列步驟：  
@@ -94,7 +79,7 @@ public static MiningStructure CreateSalesForecastingMiningStructure(Database db)
 }  
 ```  
   
-##  <a name="MiningModel">MiningModel 物件</a>  
+##  <a name="MiningModel"></a> MiningModel 物件  
  採礦模式是一個儲存機制，其中包含所有資料行以及將用於採礦演算法中的資料行定義。  
   
  建立 <xref:Microsoft.AnalysisServices.MiningModel> 物件需要下列步驟：  
@@ -149,7 +134,7 @@ public static MiningModel CreateSalesForecastingMiningModel(MiningStructure ms)
  [AMO 基礎類別](../../../analysis-services/multidimensional-models/analysis-management-objects/amo-fundamental-classes.md)   
  [AMO 類別簡介](../../../analysis-services/multidimensional-models/analysis-management-objects/amo-classes-introduction.md)   
  [AMO 資料採礦類別](../../../analysis-services/multidimensional-models/analysis-management-objects/amo-data-mining-classes.md)   
- [邏輯架構 &#40;Analysis Services-多維度資料 &#41;](../../../analysis-services/multidimensional-models/olap-logical/understanding-microsoft-olap-logical-architecture.md)   
- [資料庫物件 &#40;Analysis Services-多維度資料 &#41;](../../../analysis-services/multidimensional-models/olap-logical/database-objects-analysis-services-multidimensional-data.md)  
+ [邏輯架構 & #40;Analysis Services-多維度資料 & #41;](../../../analysis-services/multidimensional-models/olap-logical/understanding-microsoft-olap-logical-architecture.md)   
+ [資料庫物件 & #40;Analysis Services-多維度資料 & #41;](../../../analysis-services/multidimensional-models/olap-logical/database-objects-analysis-services-multidimensional-data.md)  
   
   

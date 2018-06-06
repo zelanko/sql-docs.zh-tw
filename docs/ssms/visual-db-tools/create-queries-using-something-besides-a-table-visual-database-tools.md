@@ -1,33 +1,32 @@
 ---
-title: "使用資料表以外的項目來建立查詢 | Microsoft Docs"
-ms.custom: 
+title: 使用資料表以外的項目來建立查詢 | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
 ms.component: ssms-visual-db
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: tools-ssms
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ssms
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - user-defined functions [SQL Server], queries
 - queries [SQL Server], creating
 ms.assetid: 8e4a1f0a-8a42-4733-be8d-e21d6dbddb33
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: ac44c00dd2ffb0a37a4a7a53a33dbddb54df49f9
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.openlocfilehash: ee54d948bb5acebaf55a3b0137677bf72013570d
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="create-queries-using-something-besides-a-table-visual-database-tools"></a>使用資料表以外的項目建立查詢 (Visual Database Tools)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 當您編寫擷取查詢時，應該明白指出您要的資料行、您要的資料列和查詢處理器尋找原始資料的位置。 通常其原始資料是由某資料表組成或由數個資料表聯結在一起。 但原始資料可能源自資料表以外的來源。 其實，原始資料可以來自檢視、查詢、同義資料表或傳回資料表的使用者定義函數。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+當您編寫擷取查詢時，應該明白指出您要的資料行、您要的資料列和查詢處理器尋找原始資料的位置。 通常其原始資料是由某資料表組成或由數個資料表聯結在一起。 但原始資料可能源自資料表以外的來源。 其實，原始資料可以來自檢視、查詢、同義資料表或傳回資料表的使用者定義函數。  
   
 ## <a name="using-a-view-in-place-of-a-table"></a>使用檢視取代資料表  
 您可以選取檢視的資料列。 例如，假設資料庫中含有名為「ExpensiveBooks」的檢視，其中每個資料列將說明價錢超過 19.99 的書名。 其檢視定義將如下所示：  

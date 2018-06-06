@@ -1,31 +1,29 @@
 ---
-title: "Unicode 資料和伺服器字碼頁 |Microsoft 文件"
-ms.custom: 
+title: Unicode 資料和伺服器字碼頁 |Microsoft 文件
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
 ms.component: extended-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - metadata [SQL Server], stored procedures
 - Unicode [SQL Server], extended stored procedures
 - extended stored procedures [SQL Server], metadata
 ms.assetid: 52310260-a892-4b27-ad2e-bf164b98ee80
-caps.latest.revision: 
+caps.latest.revision: 31
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 179cc807318e420579fa4efd2d09780aeedcd354
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: d38bf13ae6f80de24e9595d79042b8e3e40ef310
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="unicode-data-and-server-code-pages"></a>Unicode 資料和伺服器字碼頁
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -157,6 +155,6 @@ ms.lasthandoff: 02/09/2018
     ```  
   
 ## <a name="see-also"></a>另請參閱  
- [srv_wsendmsg &#40;擴充預存程序 API &#41;](../../relational-databases/extended-stored-procedures-reference/srv-wsendmsg-extended-stored-procedure-api.md)  
+ [srv_wsendmsg&#40;擴充預存程序 API&#41;](../../relational-databases/extended-stored-procedures-reference/srv-wsendmsg-extended-stored-procedure-api.md)  
   
   

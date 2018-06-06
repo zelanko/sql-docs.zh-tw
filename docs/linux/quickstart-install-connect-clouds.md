@@ -1,22 +1,21 @@
 ---
-title: "開始使用雲端中的 SQL Server 2017 |Microsoft 文件"
-description: "本快速入門示範如何在您選擇的雲端中的 Linux 上執行 SQL Server 2017。"
+title: 開始使用雲端中的 SQL Server 2017 |Microsoft 文件
+description: 本快速入門示範如何在您選擇的雲端中的 Linux 上執行 SQL Server 2017。
 author: annashres
 ms.author: annashres
 manager: craigg
 ms.date: 10/25/2017
 ms.topic: article
-ms.prod: sql-non-specified
-ms.prod_service: database-engine
-ms.component: 
+ms.prod: sql
+ms.component: ''
 ms.custom: sql-linux
-ms.technology: database-engine
-ms.assetid: 
-ms.openlocfilehash: 3966bb71f4112c12d340ab9780586013d8732206
-ms.sourcegitcommit: f0c5e37c138be5fb2cbb93e9f2ded307665b54ea
+ms.technology: linux
+ms.assetid: ''
+ms.openlocfilehash: f5d67ff25cb5d2816672fafe0602d56921c034bb
+ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/24/2018
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="quickstart-run-the-sql-server-2017-in-the-cloud"></a>快速入門： 在雲端中執行 SQL Server 2017
 
@@ -29,7 +28,7 @@ ms.lasthandoff: 02/24/2018
 
 ## <a name="amazon-web-services"></a>Amazon Web Services
 1.  建立 Linux AMI 至少 2 gb 的記憶體從 marketplace 
-    * [RHEL 7.3+](https://aws.amazon.com/marketplace/pp/B00KWBZVK6)
+    * [RHEL 7.3 +](https://aws.amazon.com/marketplace/pp/B00KWBZVK6)
     * [SLES v12 SP2](https://aws.amazon.com/marketplace/pp/B00PMM99PI)
     * [Ubuntu 16.04](https://aws.amazon.com/marketplace/pp/B01JBL2M0O)
 1.  連接到與 AMI ssh
@@ -55,7 +54,7 @@ ms.lasthandoff: 02/24/2018
     
 ## <a name="google-cloud-platform"></a>Google 雲端平台
 1.  使用至少 2 GB 的記憶體從雲端啟動器建立 Linux 映像 
-    * [RHEL 7.3+](https://console.cloud.google.com/launcher/details/rhel-cloud/rhel-7)
+    * [RHEL 7.3 +](https://console.cloud.google.com/launcher/details/rhel-cloud/rhel-7)
     * [SLES v12 SP2](https://console.cloud.google.com/launcher/details/suse-cloud/sles-12)
     * [Ubuntu 16.04](https://console.cloud.google.com/launcher/details/ubuntu-os-cloud/ubuntu-xenial)
 1.  連接到影像的 ssh

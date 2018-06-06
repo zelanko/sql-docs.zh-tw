@@ -1,34 +1,34 @@
 ---
-title: "選擇工具箱項目 (維護工作頁面) | Microsoft Docs"
-ms.custom: 
+title: 選擇工具箱項目 (維護工作頁面) | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
 ms.component: ssms-menu
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: tools-ssms
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ssms
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 f1_keywords:
 - vs.chooseitems.maintenance_tasks
 - VS.ToolboxPages.Maintenance_Tasks
-helpviewer_keywords: Customize Toolbox dialog box
+helpviewer_keywords:
+- Customize Toolbox dialog box
 ms.assetid: b92c9054-7479-45d8-a54c-c1bb6699bdb3
-caps.latest.revision: "4"
+caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 5f53e840362768dde02db91d5305f043fc384985
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.openlocfilehash: c9126d758d0b51948072a924da34a5f8674ce2f7
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="choose-toolbox-items-maintenance-tasks-page"></a>選擇工具箱項目 (維護工作頁面)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] [自訂工具箱] 對話方塊的這個索引標籤，會顯示所有已在您電腦上註冊的維護工作元件清單，而且可讓您變更工具箱中所顯示的項目。 您可以從 [工具] 功能表開啟 [自訂工具箱] 對話方塊。 若要排序元件的清單，請選取任何資料行標題。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[自訂工具箱] 對話方塊的這個索引標籤，會顯示所有已在您電腦上註冊的維護工作元件清單，而且可讓您變更工具箱中所顯示的項目。 您可以從 [工具] 功能表開啟 [自訂工具箱] 對話方塊。 若要排序元件的清單，請選取任何資料行標題。  
   
 ## <a name="options"></a>選項。  
 [維護工作] 索引標籤包含下列資料行資訊。  

@@ -1,28 +1,26 @@
 ---
-title: "使用資料來源 |Microsoft 文件"
-ms.custom: 
+title: 使用資料來源 |Microsoft 文件
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
-ms.component: odbc
-ms.reviewer: 
+ms.prod: sql
+ms.prod_service: connectivity
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
-ms.topic: article
-helpviewer_keywords: data sources [ODBC], about data sources
+ms.technology: connectivity
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
+helpviewer_keywords:
+- data sources [ODBC], about data sources
 ms.assetid: d5550619-22b2-4b16-bd08-fbabb6554c40
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
-ms.workload: Inactive
-ms.openlocfilehash: a9ef21a59be0b292912a6ca4b4fc75a67dc952fb
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+manager: craigg
+ms.openlocfilehash: a74aa59a701d68bf4230db27e2899ce46ea9e715
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="using-data-sources"></a>使用資料來源
 建立資料來源通常會由終端使用者或程式的技術人員稱為*ODBC 管理員*。 ODBC 管理員會提示使用者輸入驅動程式來使用，然後再呼叫該驅動程式。 驅動程式會顯示對話方塊，要求需要連接到資料來源的資訊。 使用者輸入的資訊之後，驅動程式會將它儲存在系統上。  

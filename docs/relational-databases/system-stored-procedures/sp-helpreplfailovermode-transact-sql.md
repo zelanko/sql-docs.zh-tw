@@ -1,16 +1,15 @@
 ---
-title: "sp_helpreplfailovermode (TRANSACT-SQL) |Microsoft 文件"
-ms.custom: 
+title: sp_helpreplfailovermode (TRANSACT-SQL) |Microsoft 文件
+ms.custom: ''
 ms.date: 03/04/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - sp_helpreplfailovermode
 ms.assetid: d1090e42-6840-4bf6-9aa9-327fd8987ec2
-caps.latest.revision: 
+caps.latest.revision: 30
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 212775844dde7400ca3ddb17753091aa56b582f1
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 8d54500307b05a5aa6c9cfeca4e55ff92b3062b6
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sphelpreplfailovermode-transact-sql"></a>sp_helpreplfailovermode (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,22 +48,22 @@ sp_helpreplfailovermode [ @publisher= ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>引數  
- [  **@publisher=**] **'***發行者***'**  
+ [ **@publisher=**] **'***publisher***'**  
  這是參與這個訂閱者更新的發行者名稱。 *發行者*是**sysname**，沒有預設值。 必須已設定發行者的發行作業。  
   
  [  **@publisher_db =**] **'***publisher_db***'**  
  這是發行集資料庫的名稱。 *publisher_db*是**sysname**，沒有預設值。  
   
- [  **@publication=**] **'***發行集***'**  
+ [ **@publication=**] **'***publication***'**  
  這是參與這個訂閱者更新的發行集名稱。 *發行集*是**sysname**，沒有預設值。  
   
  [  **@failover_mode_id=**] **'***failover_mode_id***' 輸出**  
  傳回容錯移轉模式的整數值，它是**輸出**參數。 *failover_mode_id*是**tinyint**預設值是**0**。 它會傳回**0**進行立即更新和**1**佇列更新。  
   
  [**@failover_mode=**] **'***failover_mode***' 輸出**  
- 傳回在訂閱者端修改資料的模式。 *failover_mode*是**nvarchar （10)**預設值是 NULL。 是**輸出**參數。  
+ 傳回在訂閱者端修改資料的模式。 *failover_mode*是**nvarchar （10)** 預設值是 NULL。 是**輸出**參數。  
   
-|值|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |**即時運算**|立即更新：利用兩段式認可通訊協定 (2PC)，將訂閱者端的更新立即傳播到發行者。|  
 |**排入佇列**|佇列更新：將訂閱者端的更新儲存在佇列中。|  
@@ -79,7 +77,7 @@ sp_helpreplfailovermode [ @publisher= ] 'publisher'
 ## <a name="permissions"></a>Permissions  
  只有成員**sysadmin**固定的伺服器角色或**db_owner**固定的資料庫角色可以執行**sp_helpreplfailovermode**。  
   
-## <a name="see-also"></a>請參閱＜  
- [sp_setreplfailovermode &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/sp-setreplfailovermode-transact-sql.md)  
+## <a name="see-also"></a>另請參閱  
+ [sp_setreplfailovermode &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-setreplfailovermode-transact-sql.md)  
   
   

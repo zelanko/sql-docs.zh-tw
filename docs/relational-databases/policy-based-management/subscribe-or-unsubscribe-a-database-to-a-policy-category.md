@@ -1,33 +1,32 @@
 ---
-title: "訂閱或取消訂閱原則類別目錄資料庫 | Microsoft Docs"
-ms.custom: 
+title: 訂閱或取消訂閱原則類別目錄資料庫 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
 ms.component: performance-monitor
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 f1_keywords:
 - sql13.swb.dmf.groupsubscription.f1
 ms.assetid: d2c31769-7098-428e-ad9c-ef56541b7c52
-caps.latest.revision: 
+caps.latest.revision: 20
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 747b220659484754677428226d5eb7467a8bf443
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 31cc525cbd26ddd423bcc7e6caa7a8354817b4bc
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="subscribe-or-unsubscribe-a-database--to-a-policy-category"></a>讓資料庫訂閱或取消訂閱原則類別目錄
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 本主題描述如何使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 或 [!INCLUDE[tsql](../../includes/tsql-md.md)]，在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中讓資料庫訂閱或取消訂閱原則類別目錄。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  本主題描述如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ，在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中讓資料庫訂閱或取消訂閱原則類別目錄。  
   
  **本主題內容**  
   
@@ -52,7 +51,7 @@ ms.lasthandoff: 01/18/2018
   
 #### <a name="to-subscribe-or-unsubscribe-a-database-to-a-policy-category"></a>若要讓資料庫訂閱或取消訂閱原則類別目錄  
   
-1.  在 **[物件總管]**中，按一下加號展開伺服器，此伺服器包含要管理其中類別目錄訂閱的資料庫。  
+1.  在 **[物件總管]** 中，按一下加號展開伺服器，此伺服器包含要管理其中類別目錄訂閱的資料庫。  
   
 2.  按一下加號展開 **[資料庫]** 資料夾。  
   
@@ -67,7 +66,7 @@ ms.lasthandoff: 01/18/2018
      原則類別目錄的名稱。  
   
      **已訂閱**  
-     指出目標是否已訂閱原則類別目錄。 如果已停用此核取方塊，會針對 **[託管資料庫訂閱]**設定原則類別目錄。 這表示，原則類別目錄會套用到伺服器上的所有資料庫。  
+     指出目標是否已訂閱原則類別目錄。 如果已停用此核取方塊，會針對 **[託管資料庫訂閱]** 設定原則類別目錄。 這表示，原則類別目錄會套用到伺服器上的所有資料庫。  
   
      **原則**  
      當原則群組展開時，會顯示原則類別目錄中的原則。  
@@ -89,7 +88,7 @@ ms.lasthandoff: 01/18/2018
   
 #### <a name="to-subscribe-a-database-to-a-policy-category"></a>若要讓資料庫訂閱原則類別目錄  
   
-1.  在 **[物件總管]**中，連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的執行個體。  
+1.  在 **[物件總管]** 中，連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的執行個體。  
   
 2.  在標準列上，按一下 **[新增查詢]**。  
   
@@ -106,7 +105,7 @@ ms.lasthandoff: 01/18/2018
   
 #### <a name="to-unsubscribe-a-database-to-a-policy-category"></a>若要讓資料庫取消訂閱原則類別目錄  
   
-1.  在 **[物件總管]**中，連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的執行個體。  
+1.  在 **[物件總管]** 中，連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的執行個體。  
   
 2.  在標準列上，按一下 **[新增查詢]**。  
   

@@ -1,32 +1,30 @@
 ---
-title: "檢視訂閱代理程式的資訊並執行工作 | Microsoft 文件"
-ms.custom: 
+title: 檢視訂閱代理程式的資訊並執行工作 | Microsoft 文件
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
 ms.component: replication
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - agents [SQL Server replication], viewing information
 - viewing replication agent information
 - agents [SQL Server replication], tasks in Replication Monitor
 ms.assetid: fbb59d31-2424-4552-9195-0da8d83e755f
-caps.latest.revision: 
+caps.latest.revision: 37
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: ae84b02e10013afbf1467a5c0030a85b4c2af734
-ms.sourcegitcommit: ab25b08a312d35489a2c4a6a0d29a04bbd90f64d
+ms.openlocfilehash: f98dd86491561fb67197a02e228ec1b151e6e3ea
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="view-information-and-perform-tasks-for-subscription-agents"></a>檢視訂閱代理程式的資訊並執行工作
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -50,7 +48,7 @@ ms.lasthandoff: 03/08/2018
   
     -   若要檢視有關與訂閱相關聯之代理程式的詳細資訊，請以滑鼠右鍵按一下訂閱，然後按一下 **[檢視詳細資料]**。 詳細的資訊包括：代理程式記錄與錯誤訊息；異動複寫的效能統計資料；以及合併式複寫的發行項層級同步處理統計資料。  
   
-         在詳細資料視窗中啟動的索引標籤視訂閱類型而定：對於快照式訂閱，此索引標籤為 **[散發者到訂閱者記錄]**；對於交易式訂閱，此索引標籤為 **[發行者到散發者記錄]**、 **[散發者到訂閱者記錄]**以及 **[未散發的命令]**；對於合併式訂閱，此索引標籤為 **[同步處理記錄]**。  
+         在詳細資料視窗中啟動的索引標籤視訂閱類型而定：對於快照式訂閱，此索引標籤為 **[散發者到訂閱者記錄]**；對於交易式訂閱，此索引標籤為 **[發行者到散發者記錄]**、 **[散發者到訂閱者記錄]** 以及 **[未散發的命令]**；對於合併式訂閱，此索引標籤為 **[同步處理記錄]**。  
   
     -   若要同步處理發送訂閱，請以滑鼠右鍵按一下訂閱，然後按一下 **[啟動同步處理]**。  
   
@@ -68,7 +66,7 @@ ms.lasthandoff: 03/08/2018
   
     -   若要檢視有關與訂閱相關聯之代理程式的詳細資訊，請以滑鼠右鍵按一下訂閱，然後按一下 **[檢視詳細資料]**。 詳細的資訊包括：代理程式記錄與錯誤訊息；異動複寫的效能統計資料；以及合併式複寫的發行項層級同步處理統計資料。  
   
-         在詳細資料視窗中啟動的索引標籤視訂閱類型而定：對於快照式訂閱，此索引標籤為 **[散發者到訂閱者記錄]**；對於交易式訂閱，此索引標籤為 **[發行者到散發者記錄]**、 **[散發者到訂閱者記錄]**以及 **[效能]**；對於合併式訂閱，此索引標籤為 **[同步處理記錄]**。  
+         在詳細資料視窗中啟動的索引標籤視訂閱類型而定：對於快照式訂閱，此索引標籤為 **[散發者到訂閱者記錄]**；對於交易式訂閱，此索引標籤為 **[發行者到散發者記錄]**、 **[散發者到訂閱者記錄]** 以及 **[效能]**；對於合併式訂閱，此索引標籤為 **[同步處理記錄]**。  
   
     -   若要同步處理發送訂閱，請以滑鼠右鍵按一下訂閱，然後按一下 **[啟動同步處理]**。  
   

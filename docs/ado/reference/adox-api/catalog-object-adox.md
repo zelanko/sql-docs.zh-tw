@@ -1,33 +1,30 @@
 ---
-title: "目錄物件 (ADOX) |Microsoft 文件"
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
+title: 目錄物件 (ADOX) |Microsoft 文件
+ms.prod: sql
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
-ms.custom: 
+ms.technology: connectivity
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 apitype: COM
 f1_keywords:
 - Catalog
 helpviewer_keywords:
 - Catalog object [ADOX]
 ms.assetid: bb651639-a488-4e38-b6de-0ed99fa4dd92
-caps.latest.revision: 
+caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 5d8f47b63022f481c5ed102bcc9e97f5fa563aea
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: b30a6725a58c96fc414f9ac4c15cc86fc9599329
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="catalog-object-adox"></a>目錄物件 (ADOX)
 包含集合 ([資料表](../../../ado/reference/adox-api/tables-collection-adox.md)，[檢視](../../../ado/reference/adox-api/views-collection-adox.md)，[使用者](../../../ado/reference/adox-api/users-collection-adox.md)，[群組](../../../ado/reference/adox-api/groups-collection-adox.md)，和[程序](../../../ado/reference/adox-api/procedures-collection-adox.md))，說明資料來源的結構描述目錄。  

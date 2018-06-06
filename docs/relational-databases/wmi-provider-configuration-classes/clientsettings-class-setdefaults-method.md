@@ -1,16 +1,15 @@
 ---
-title: "SetDefaults 方法 （ClientSettings 類別） |Microsoft 文件"
-ms.custom: 
+title: SetDefaults 方法 （ClientSettings 類別） |Microsoft 文件
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
 ms.component: wmi
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - SetDefaults Method (ClientSettings Class)
@@ -20,20 +19,19 @@ apitype: MOFDef
 helpviewer_keywords:
 - SetDefaults method
 ms.assetid: 056508f3-a5c8-467c-a196-dc1ef1f5178f
-caps.latest.revision: 
-author: JennieHubbard
-ms.author: jhubbard
+caps.latest.revision: 28
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: ea9e3a62a1d8995c7f7df2d45f0e4f51fd8627ed
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.openlocfilehash: bedc2c0b326b0007c3a4d3edbc6301090fd709d9
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="clientsettings-class---setdefaults-method"></a>ClientSettings 類別-SetDefaults 方法
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
-設定執行個體的所有預設值[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]選項來覆寫現有資料的用戶端。  
+  設定執行個體的所有預設值[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]選項來覆寫現有資料的用戶端。  
   
 ## <a name="syntax"></a>語法  
   

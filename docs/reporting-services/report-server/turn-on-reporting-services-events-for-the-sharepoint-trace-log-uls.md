@@ -1,27 +1,25 @@
 ---
-title: "開啟 SharePoint 追蹤記錄檔的 Reporting Services 事件 (ULS) | Microsoft Docs"
-ms.custom: 
+title: 開啟 SharePoint 追蹤記錄檔的 Reporting Services 事件 (ULS) | Microsoft Docs
+ms.custom: ''
 ms.date: 05/30/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: report-server
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: 81110ef6-4289-405c-a931-e7e9f49e69ba
-caps.latest.revision: "19"
+caps.latest.revision: 19
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 89baca75b96115ac70e6f520cd2248f03497cbda
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 99fedd6b1dd298f545b578342b79ca91aafc0eef
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="turn-on-reporting-services-events-for-the-sharepoint-trace-log-uls"></a>Turn on Reporting Services events for the SharePoint trace log (ULS)
 
@@ -64,11 +62,11 @@ ms.lasthandoff: 01/09/2018
   
 4.  在類別目錄清單中找到 **[SQL Server Reporting Services]** 。  
   
-5.  按一下加號 (+) 展開 **[SQL Server Reporting Services]**之下的子類別目錄。  
+5.  按一下加號 (+) 展開 **[SQL Server Reporting Services]** 之下的子類別目錄。  
   
 6.  選取要加入至追蹤記錄的子類別目錄。  
   
-7.  在類別目錄清單的底部，選取 **[回報至追蹤記錄的最低緊急事件]**的事件等級。 選取 **[無]** 停用追蹤。  
+7.  在類別目錄清單的底部，選取 **[回報至追蹤記錄的最低緊急事件]** 的事件等級。 選取 **[無]** 停用追蹤。  
   
 > [!NOTE]  
 >  **不支援** [回報至追蹤記錄的最低緊急事件] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]選項。 已忽略此選項。  

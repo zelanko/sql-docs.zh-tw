@@ -1,29 +1,29 @@
 ---
-title: "Always Encrypted (用戶端開發) | Microsoft Docs"
-ms.custom: 
+title: Always Encrypted (用戶端開發) | Microsoft Docs
+ms.custom: ''
 ms.date: 07/29/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
 ms.component: security
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 dev_langs:
 - CSharp
 ms.assetid: 9595eb66-284c-4474-828f-8961a05ce989
-caps.latest.revision: 
+caps.latest.revision: 33
 author: stevestein
+ms.author: sstein
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: b342d2733ad9dfab013957c08edfee93a3c78859
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: f34940fce129a4a2d4921751d7691af99c071f9b
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="always-encrypted-client-development"></a>永遠加密 (用戶端開發)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

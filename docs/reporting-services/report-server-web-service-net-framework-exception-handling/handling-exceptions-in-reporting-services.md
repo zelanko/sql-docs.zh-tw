@@ -1,33 +1,32 @@
 ---
-title: "處理 Reporting Services 中的例外狀況 | Microsoft Docs"
-ms.custom: 
+title: 處理 Reporting Services 中的例外狀況 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
-ms.service: 
 ms.component: report-server-web-service-net-framework-exception-handling
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 helpviewer_keywords:
 - SOAP [Reporting Services], exceptions
 - .NET Framework [Reporting Services]
 - exceptions [Reporting Services], about exception handling
 - SoapException object
 ms.assetid: 1a443432-2db5-48c5-bc29-433b4688082f
-caps.latest.revision: "31"
+caps.latest.revision: 31
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 8223c103c02f0516d699a5dfbce8bb8f24b92016
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 75bc7d7f057c9207a0f70525acf61072b82f3469
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="handling-exceptions-in-reporting-services"></a>處理 Reporting Services 中的例外狀況
   無法完成 Reporting Services SOAP API 用戶端要求時，報表伺服器會傳回錯誤，而非呼叫的預期結果。 無法完成呼叫時，則會以 SOAP **Fault** XML 項目傳回報表伺服器 Web 服務的錯誤。 該錯誤的關鍵描述項目為 **detail** 項目，此項目會包含報表伺服器提供的所有錯誤資訊以及任何其他 Web 服務錯誤資訊。 報表伺服器錯誤碼是 **detail** 項目中的主要資訊。 您可以根據訊息與錯誤碼，決定要在應用程式中採取的下一個適當動作。 如需有關 SOAP 錯誤的詳細資訊，請參閱全球資訊網協會 (W3C) 網站，網址為 http://www.w3.org/TR/SOAP。  

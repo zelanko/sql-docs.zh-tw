@@ -1,16 +1,14 @@
 ---
-title: "執行包含 SQL 查詢 （SQLXMLOLEDB 提供者） 的範本 |Microsoft 文件"
-ms.custom: 
+title: 執行包含 SQL 查詢 （SQLXMLOLEDB 提供者） 的範本 |Microsoft 文件
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
 ms.component: sqlxml
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- dbe-xml
-ms.tgt_pltfrm: 
+ms.technology: xml
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - templates [SQLXML]
@@ -19,20 +17,20 @@ helpviewer_keywords:
 - XML templates [SQLXML]
 - SQL queries [SQLXML]
 ms.assetid: ff2bc36f-e3fb-4d8f-8e3a-2680a39eda11
-caps.latest.revision: 
+caps.latest.revision: 29
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 2977174b886e859c471bc9c2f64f52c86bb0a052
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 6bbaf505a1a79c836a98f66ddf65bcc5f242d9b4
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="executing-templates-that-contain-sql-queries-sqlxmloledb-provider"></a>執行包含 SQL 查詢的範本 (SQLXMLOLEDB 提供者)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-此範例說明使用 SQLXMLOLEDB 提供者專屬屬性 ClientSideXML。 在此用戶端 ADO 範例應用程式中，由 SQL 查詢所組成的 XML 範本會在伺服器上執行。  
+  此範例說明使用 SQLXMLOLEDB 提供者專屬屬性 ClientSideXML。 在此用戶端 ADO 範例應用程式中，由 SQL 查詢所組成的 XML 範本會在伺服器上執行。  
   
  ClientSideXML 屬性設定為 True，因為未使用 FOR XML 子句的 SELECT 陳述式會傳送到伺服器。 伺服器會執行查詢，並將資料列集傳回給用戶端。 用戶端接著會將 FOR XML 轉換套用至資料列集，並產生 XML 文件。  
   

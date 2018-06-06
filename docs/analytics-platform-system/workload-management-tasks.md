@@ -1,26 +1,22 @@
 ---
-title: "工作負載管理工作"
-author: barbkess
-ms.author: barbkess
-manager: jhubbard
-ms.prod: analytics-platform-system
-ms.prod_service: mpp-data-warehouse
-ms.service: 
-ms.component: 
-ms.technology: mpp-data-warehouse
-ms.custom: 
-ms.date: 01/12/2017
-ms.reviewer: na
-ms.suite: sql
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.openlocfilehash: 70f70c504aab81f490ee39d244555022bf73d91b
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+title: 工作負載管理工作 Analytics Platform System |Microsoft 文件
+description: Analytics Platform System 中的工作負載管理工作。
+author: mzaman1
+manager: craigg
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
+ms.openlocfilehash: 16206cb5cefd68b19e1640592b903890808b5a31
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/19/2018
 ---
-# <a name="workload-management-tasks"></a>工作負載管理工作
+# <a name="workload-management-tasks-in-analytics-platform-system"></a>Analytics Platform System 中的工作負載管理工作
+Analytics Platform System 中的工作負載管理工作。
 
 ## <a name="view-login-members-of-each-resource-class"></a>檢視登入成員的每個資源類別
 描述如何在 SQL Server PDW 中顯示登入每個資源類別伺服器角色的成員。 使用這個查詢，找出允許提交每個登入所要求資源的類別。  
@@ -45,7 +41,7 @@ WHERE
   
 如果登入不是這份清單中，其要求將會接收預設資源。 如果登入為一個以上的資源類別的成員，最大類別具有優先順序。  
   
-資源配置會列在[工作負載管理](workload-management.md)主題。  
+資源配置會列在[工作負載管理](workload-management.md)。  
   
 ## <a name="change-the-system-resources-allocated-to-a-request"></a>變更配置給要求的系統資源
 描述如何找出哪些資源類別下，執行 SQL Server PDW 要求以及如何變更該要求的系統資源。 變更資源的要求需要變更使用送出要求的登入的資源類別的成員資格[ALTER SERVER ROLE](../t-sql/statements/alter-server-role-transact-sql.md)陳述式。  
@@ -71,9 +67,9 @@ WHERE
 GO  
 ```  
   
-如果沒有資源類別的伺服器角色的成員登入，產生的資料表將會是空白。 在此情況下，如果查詢會傳回名為 Ching 登入，然後當 Ching 提交要求，要求會接收預設的系統資源，其小於資源類別系統資源。 如果登入為一個以上的資源類別的成員，最大類別具有優先順序。  
+如果沒有資源類別的伺服器角色的成員登入，產生的資料表將會是空白。 在此情況下，如果查詢會傳回名為 Ching 登入，然後當 Ching 提交要求，要求會接收預設系統資源，也就是小於資源類別系統資源。 如果登入為一個以上的資源類別的成員，最大類別具有優先順序。  
   
-如需每個資源類別的資源配置的清單，請參閱[工作負載管理](workload-management.md)主題。  
+如需每個資源類別的資源配置的清單，請參閱[工作負載管理](workload-management.md)。  
   
 ### <a name="step-2-run-the-request-under-a-login-with-different-resource-class-membership"></a>步驟 2： 執行登入要求不同的資源類別的成員資格  
 有兩種方式，可能是較大或較小的系統資源以執行要求：  
@@ -90,7 +86,7 @@ ALTER SERVER ROLE xlargerc ADD MEMBER Ching;
   
 Ching 現在是 largerc 和 xlargerc 伺服器角色的成員。 當 Ching 提交要求時，要求將會接收 xlargerc 系統資源。  
   
-下列範例回到 Ching mediumrc 伺服器角色。  若要這樣做，她必須移除 xlargerc，與 largerc 伺服器 」 角色，並加入至 mediumrc 伺服器角色。  
+下列範例回到 Ching mediumrc 伺服器角色。  若要變更至新的角色，登入必須移除 xlargerc，與 largerc 伺服器 」 角色，並加入至 mediumrc 伺服器角色。  
   
 ```sql  
 -- Move login Ching back to using medium system resources for requests.  
@@ -99,7 +95,7 @@ ALTER SERVER ROLE largerc DROP MEMBER Ching;
 ALTER SERVER ROLE mediumrc ADD MEMBER Ching;  
 ```  
   
-Ching 現在是 mediumrc 伺服器角色的成員。  下列範例會變更 Ching 有其要求的預設系統資源。  
+Ching 現在是 mediumrc 伺服器角色的成員。  下列範例會變更 Ching 有預設系統資源的要求。  
   
 ```sql  
 -- Move login Ching to use the default system resources for requests.  
@@ -109,13 +105,13 @@ ALTER SERVER ROLE mediumrc DROP MEMBER Ching;
 如需有關如何變更資源類別角色成員資格的詳細資訊，請參閱[ALTER SERVER ROLE](../t-sql/statements/alter-server-role-transact-sql.md)。  
 
 ## <a name="change-a-login-to-the-default-system-resources-for-its-requests"></a>變更預設的系統資源，其要求的登入
-描述如何變更指派給預設少量的 SQL Server PDW 登入的系統資源配置。 這會影響 SQL Server PDW 將指派給登入所提交要求的系統資源。  
+描述如何變更指派給預設少量的 SQL Server PDW 登入的系統資源配置。 
   
 資源類別的描述，請參閱[工作負載管理](workload-management.md)  
   
 當登入不是任何資源類別的伺服器角色的成員時，登入所提交的要求將會接收預設數量的系統資源。  
   
-假設 Matt 目前是所有的資源類別伺服器角色的成員，而且想要還原成具有預設資源會收到其要求的登入。  下列範例將卸除所有的三個資源類別伺服器角色中的其成員資格指派給 Matt 的要求的預設資源。  
+假設 Matt 目前是所有的資源類別伺服器角色的成員，而且想要還原成具有預設資源會收到要求的登入。  下列範例將卸除所有的三個資源類別伺服器角色中的其成員資格指派給 Matt 的要求的預設資源。  
   
 ```sql  
 --Give the requests submitted by Matt the default system resources   
@@ -130,7 +126,7 @@ ALTER SERVER ROLE MediumRC DROP MEMBER Matt;
   
 如需詳細資訊，請參閱[工作負載管理](workload-management.md)。  
   
-要求無法等候太久沒有正在執行。 其中一種方式來疑難排解此問題是查看並行位置需要要求數目。  下列範例示範等待中的每個要求所需的並行存取位置的數目。  
+要求無法等候太久沒有正在執行。 其中一個疑難排解要求的方法。 若要查看的並行存取位置需要要求數目  下列範例示範等待中的每個要求所需的並行存取位置的數目。  
   
 ```sql  
 --Display the number of concurrency slots required   
@@ -140,6 +136,6 @@ FROM sys.dm_pdw_resource_waits;
 ```  
   
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
 [工作負載管理](workload-management.md)  
   

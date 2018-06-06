@@ -1,28 +1,26 @@
 ---
-title: "SQL Server Integration Services (SSIS) Scale Out 主機 | Microsoft Docs"
+title: SQL Server Integration Services (SSIS) Scale Out 主機 | Microsoft Docs
 ms.description: This article describes the Scale Out Master component of SSIS Scale Out
-ms.custom: 
+ms.custom: ''
 ms.date: 12/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
 ms.component: scale-out
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
-ms.topic: article
-caps.latest.revision: 
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
+caps.latest.revision: 1
 author: haoqian
 ms.author: haoqian
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 0cd80620f668e87eba8a77f1ac6a9e5faa2378da
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 5b19aee11489551b3f06fb58cb0242b495929213
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="integration-services-ssis-scale-out-worker"></a>Integration Services (SSIS) 相應放大背景工作
 
@@ -43,8 +41,8 @@ StoreName|背景工作憑證所在的存放區名稱。|My
 AgentHeartbeatInterval|相應放大背景工作的活動訊號間隔。|00:01:00         
 TaskHeartbeatInterval|相應放大背景工作報告工作狀態的間隔。|00:00:10         
 HeartbeatErrorTollerance|在最後一個成功的工作活動訊號時段後，如果收到活動訊號的錯誤回應，便會終止工作。|00:10:00      
-TaskRequestMaxCPU|相應放大背景工作要求工作的 CPU 上限。 **未在 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 2017 中使用。**|70.0         
-TaskRequestMinMemory|相應放大背景工作要求工作的記憶體 MB 下限。 **未在 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 2017 中使用。**|100.0         
+TaskRequestMaxCPU|相應放大背景工作要求工作的 CPU 上限。|70.0         
+TaskRequestMinMemory|相應放大背景工作要求工作的記憶體 MB 下限。|100.0         
 MaxTaskCount|相應放大背景工作可以保留的最大工作數目。|10         
 LeaseInternval|相應放大背景工作保留的工作租用間隔。|00:01:00         
 TasksRootFolder|工作記錄檔的資料夾。 如果值空白，則會使用 `\<drive\>:\Users\[account]\AppData\Local\SSIS\Cluster\Tasks` 資料夾路徑。 [帳戶] 是執行相應放大背景工作服務的帳戶。 預設的帳戶是 SSISScaleOutWorker140。|Empty         

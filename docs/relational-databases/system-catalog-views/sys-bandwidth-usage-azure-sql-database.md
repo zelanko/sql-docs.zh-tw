@@ -1,16 +1,15 @@
 ---
-title: "sys.bandwidth_usage （SQL Azure 資料庫） |Microsoft 文件"
-ms.custom: 
+title: sys.bandwidth_usage （SQL Azure 資料庫） |Microsoft 文件
+ms.custom: ''
 ms.date: 03/04/2017
-ms.prod: 
+ms.prod: ''
 ms.prod_service: sql-database
-ms.reviewer: 
+ms.reviewer: ''
 ms.service: sql-database
 ms.component: system-catalog-views
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: system-objects
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - bandwidth_usage
@@ -23,16 +22,16 @@ helpviewer_keywords:
 - sys.bandwidth_usage
 - bandwidth_usage
 ms.assetid: 43ed8435-f059-4907-b5c0-193a258b394a
-caps.latest.revision: 
+caps.latest.revision: 21
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: d30cab1768b293c7cbc2e53729f8e8e8564a53d3
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+monikerRange: = azuresqldb-current || = sqlallproducts-allversions
+ms.openlocfilehash: e34541614f20c4fedd8a691fc3c1c13d1929fb3c
+ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="sysbandwidthusage-azure-sql-database"></a>sys.bandwidth_usage (Azure SQL Database)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -50,7 +49,7 @@ ms.lasthandoff: 11/21/2017
 |**time**|頻寬消耗的小時。 這個檢視中的資料列是以每小時為基礎。 例如，2009-09-19 02:00:00.000 表示頻寬是在 2009 年 9 月 19 日的上午 2:00  和 3:00 之間耗用。|  
 |**database_name**|使用頻寬的資料庫名稱。|  
 |**方向**|使用的頻寬類型，下列其中一個值：<br /><br /> 輸入： 資料移入[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。<br /><br /> 輸出： 資料移出的[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。|  
-|**類別**|使用的頻寬類別，下列其中一個值：<br />內部： 在 Azure 平台中移動的資料。<br />外部： Azure 平台移出的資料。<br /><br /> 這個類別在資料庫參與區域之間的連續複製關聯性時，才會傳回 ([!INCLUDE[ssGeoDR](../../includes/ssgeodr-md.md)])。 If a given database does not participate in any continuous copy relationship, then “Interlink” rows are not returned. 如需詳細資訊，請參閱本主題稍後的＜備註＞一節。|  
+|**class**|使用的頻寬類別，下列其中一個值：<br />內部： 在 Azure 平台中移動的資料。<br />外部： Azure 平台移出的資料。<br /><br /> 這個類別在資料庫參與區域之間的連續複製關聯性時，才會傳回 ([!INCLUDE[ssGeoDR](../../includes/ssgeodr-md.md)])。 If a given database does not participate in any continuous copy relationship, then “Interlink” rows are not returned. 如需詳細資訊，請參閱本主題稍後的＜備註＞一節。|  
 |**time_period**|尖峰或 OffPeak 發生使用時的時間週期。 The Peak time is based on the region in which the server was created. 例如，如果伺服器是在 "US_Northwest" 區域中建立，則尖峰時間會定義為介於太平洋標準時間上午 10:00 到 和 06:00:00 執行報表， 之間。|  
 |**數量**|使用的頻寬數量，以 KB 為單位。|  
   

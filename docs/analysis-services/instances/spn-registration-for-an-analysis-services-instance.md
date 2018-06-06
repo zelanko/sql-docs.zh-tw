@@ -1,31 +1,23 @@
 ---
-title: "Analysis Services 執行個體的 SPN 註冊 |Microsoft 文件"
-ms.custom: 
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
-ms.assetid: 9e78dc37-a3f0-415d-847c-32fec69efa8c
-caps.latest.revision: 
-author: Minewiskan
+title: Analysis Services 執行個體的 SPN 註冊 |Microsoft 文件
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: ''
+ms.topic: conceptual
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: ecb1a5b33ede8c99150fd8b3ce1cf9babdb1f519
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: c08495fb3a6486f58462562be120ea1d4cd7f8ad
+ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="spn-registration-for-an-analysis-services-instance"></a>為 Analysis Services 執行個體註冊 SPN
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-使用 Kerberos 相互驗證用戶端和服務識別時，服務主要名稱 (SPN) 可唯一識別在 Active Directory 網域中的服務執行個體。 SPN 與服務執行個體的執行登入帳戶有關。  
+  使用 Kerberos 相互驗證用戶端和服務識別時，服務主要名稱 (SPN) 可唯一識別在 Active Directory 網域中的服務執行個體。 SPN 與服務執行個體的執行登入帳戶有關。  
   
  對透過 Kerberos 驗證連接至 Analysis Services 的用戶端應用程式而言，Analysis Services 用戶端程式庫會使用連接字串中的主機名稱和所有 Analysis Services 之指定版本中固有的已知變數 (例如服務類別) 來建構 SPN。  
   

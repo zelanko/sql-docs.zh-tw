@@ -1,39 +1,24 @@
 ---
-title: "資料列元素 (XMLA) |Microsoft 文件"
-ms.custom: 
-ms.date: 03/03/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services, azure-analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+title: 資料列元素 (XMLA) |Microsoft 文件
+ms.date: 05/08/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: xmla
 ms.topic: reference
-apiname: row Element
-apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
-apitype: Schema
-applies_to: SQL Server 2016 Preview
-f1_keywords:
-- urn:schemas-microsoft-com:xml-analysis#row
-- microsoft.xml.analysis.row
-- http://schemas.microsoft.com/analysisservices/2003/engine#row
-helpviewer_keywords: row element
-ms.assetid: 4d9977a0-c396-44c7-9fd4-97f4c3d643aa
-caps.latest.revision: "13"
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: e28026dda3ddb43e1ed43ac427851b8fa4ff773c
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 84cf252303832ed157981103ffaede9718949e16
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34576210"
 ---
 # <a name="row-element-xmla"></a>row 元素 (XMLA)
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]包含單一資料列之資料的[根](../../../analysis-services/xmla/xml-elements-properties/root-element-xmla.md)包含所傳回的表格式資料的項目[探索](../../../analysis-services/xmla/xml-elements-methods-discover.md)或[Execute](../../../analysis-services/xmla/xml-elements-methods-execute.md)方法呼叫。  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
+  包含單一資料列之資料的[根](../../../analysis-services/xmla/xml-elements-properties/root-element-xmla.md)包含所傳回的表格式資料的項目[探索](../../../analysis-services/xmla/xml-elements-methods-discover.md)或[Execute](../../../analysis-services/xmla/xml-elements-methods-execute.md)方法呼叫。  
   
 ## <a name="syntax"></a>語法  
   
@@ -97,9 +82,9 @@ ms.lasthandoff: 01/08/2018
 </row>  
 ```  
   
- 如需有關命名資料行的資訊和表格式資料的結構描述資訊，請參閱[資料列集資料類型 &#40;XMLA &#41;](../../../analysis-services/xmla/xml-data-types/rowset-data-type-xmla.md).  
+ 如需有關命名資料行的資訊和表格式資料的結構描述資訊，請參閱[資料列集的資料型別&#40;XMLA&#41;](../../../analysis-services/xmla/xml-data-types/rowset-data-type-xmla.md)。  
   
-## <a name="see-also"></a>請參閱  
- [屬性 &#40;XMLA &#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
+## <a name="see-also"></a>另請參閱
+ [屬性&#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
   
   

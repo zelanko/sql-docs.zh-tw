@@ -1,16 +1,15 @@
 ---
-title: "Visual Database Tool 設計工具 | Microsoft Docs"
-ms.custom: 
+title: Visual Database Tool 設計工具 | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
 ms.component: ssms-visual-db
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: tools-ssms
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ssms
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - data sources [SQL Server]
 - View Designer
@@ -22,19 +21,19 @@ helpviewer_keywords:
 - Visual Database Tools [SQL Server], designers
 - Properties window [Visual Database Tools]
 ms.assetid: bd0ca68e-6f69-42dd-bcb5-ce511673769c
-caps.latest.revision: "4"
+caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 6f9174882f49b0307617ddc0576c146cabe6d22d
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.openlocfilehash: 0ce2c27eb14fdafe41d30792f1464e190b92ffdf
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="visual-database-tool-designers"></a>Visual Database Tool 設計工具
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Visual Database Tools 是設計組合工具，可用來使用資料來源。 您可以使用這些工具來建立查詢、設計或修改資料庫結構，或是更新資料。 這些工具包括資料庫圖表設計工具、資料表設計師以及查詢和檢視設計師。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+Visual Database Tools 是設計組合工具，可用來使用資料來源。 您可以使用這些工具來建立查詢、設計或修改資料庫結構，或是更新資料。 這些工具包括資料庫圖表設計工具、資料表設計師以及查詢和檢視設計師。  
   
 ## <a name="properties-window"></a>屬性視窗  
 [屬性] 視窗並非專屬於 Visual Database Tools，但可在其中進行許多修改動作。 其顯示目前所選取項目 (例如，資料表) 的屬性，並可讓您編輯這些屬性 (從屬性名稱到資料行定序的所有屬性)。 某些屬性可以在屬性視窗中查看，但必須以不同工具修改。  

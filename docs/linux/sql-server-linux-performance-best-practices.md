@@ -1,24 +1,21 @@
 ---
-title: "SQL Server on Linux 的效能最佳做法 |Microsoft 文件"
-description: "本文提供在 Linux 上執行 SQL Server 2017 的效能最佳做法和方針。"
+title: SQL Server on Linux 的效能最佳做法 |Microsoft 文件
+description: 本文提供在 Linux 上執行 SQL Server 2017 的效能最佳做法和方針。
 author: rgward
 ms.author: bobward
 manager: craigg
 ms.date: 09/14/2017
 ms.topic: article
-ms.prod: sql-non-specified
-ms.prod_service: database-engine
-ms.service: 
-ms.component: 
+ms.prod: sql
+ms.component: ''
 ms.suite: sql
 ms.custom: sql-linux
-ms.technology: database-engine
-ms.workload: Inactive
-ms.openlocfilehash: a5cc1b84780ce8b3ea471ee567a7296ab2b183b9
-ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
+ms.technology: linux
+ms.openlocfilehash: 4725a8043be3aad99f3432f99d00f6279a9d814d
+ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/13/2018
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="performance-best-practices-and-configuration-guidelines-for-sql-server-2017-on-linux"></a>效能最佳作法和 Linux 上的 SQL Server 2017 的設定指導方針
 
@@ -71,7 +68,7 @@ ms.lasthandoff: 02/13/2018
 | CPU 頻率管理員 | 效能 | 請參閱**cpupower**命令 |
 | ENERGY_PERF_BIAS | 效能 | 請參閱**x86_energy_perf_policy**命令 |
 | min_perf_pct | 100 | 在 intel p 狀態上看到您的文件 |
-| C-States | 只有 C1 | 如何確保只有 C 狀態設為 C1 上看到您的 Linux 或系統文件 |
+| C 狀態 | 只有 C1 | 如何確保只有 C 狀態設為 C1 上看到您的 Linux 或系統文件 |
 
 下表提供磁碟設定的建議：
 

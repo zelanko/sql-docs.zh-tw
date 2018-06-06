@@ -1,16 +1,14 @@
 ---
-title: "SQL 類型識別項 |Microsoft 文件"
-ms.custom: 
+title: SQL 類型識別項 |Microsoft 文件
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
-ms.component: odbc
-ms.reviewer: 
+ms.prod: sql
+ms.prod_service: connectivity
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: connectivity
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - data types [ODBC], identifiers
 - SQL data types [ODBC], identifiers
@@ -18,16 +16,15 @@ helpviewer_keywords:
 - identifiers [ODBC], SQL type
 - SQL type identifiers [ODBC]
 ms.assetid: 22f6793b-2f43-4281-b35a-28f48e504dd8
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
-ms.workload: Inactive
-ms.openlocfilehash: 98754c574acd8dea29184fafa70e1df702925a2a
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+manager: craigg
+ms.openlocfilehash: 7f3a9270e698f7f0ff12bd12c02de865a3c6f2b3
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sql-type-identifiers"></a>SQL 類型識別碼
 每個資料來源定義自己的 SQL 資料類型。 ODBC 定義類型的識別項，並描述可能會對應至每個類型識別項的 SQL 資料類型的一般特性。 它是驅動程式專用的基礎資料來源中的每個資料類型如何對應至 ODBC SQL 類型識別碼。  

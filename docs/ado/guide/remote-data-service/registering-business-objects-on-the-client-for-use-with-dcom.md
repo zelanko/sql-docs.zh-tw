@@ -1,30 +1,27 @@
 ---
-title: "使用用戶端上的商務物件向 DCOM |Microsoft 文件"
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
+title: 使用用戶端上的商務物件向 DCOM |Microsoft 文件
+ms.prod: sql
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
-ms.custom: 
+ms.technology: connectivity
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - business objects in RDS [ADO]
 ms.assetid: 75a21910-607f-463a-ae18-a17130dafb7e
-caps.latest.revision: 
+caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: adba9240c501136d891686da3e5361be96e80ee0
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 3c92544630110443b3db9092738978a3608e57db
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="registering-business-objects-on-the-client-for-use-with-dcom"></a>用於搭配 DCOM 用戶端上註冊商務物件
 自訂商務物件需要確保用戶端可以將他們的程式名稱 (ProgId) 對應到可透過 DCOM 使用的識別項 (CLSID)。 基於這個理由，DCOM 物件的 ProgID 必須位於用戶端登錄中，並將對應至的伺服器端的商務物件的類別識別碼。 針對其他支援的通訊協定 （HTTP、 HTTPS 和同處理序），這不需要。  

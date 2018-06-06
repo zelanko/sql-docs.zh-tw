@@ -1,16 +1,15 @@
 ---
-title: "Ibcpsession:: Bcpcontrol (OLE DB) |Microsoft 文件"
-ms.custom: 
+title: 'Ibcpsession:: Bcpcontrol (OLE DB) |Microsoft 文件'
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
 ms.component: native-client-ole-db-interfaces
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - IBCPSession::BCPControl (OLE DB)
@@ -18,16 +17,16 @@ apitype: COM
 helpviewer_keywords:
 - BCPControl method
 ms.assetid: d58f3fe1-45e3-4e46-8e9c-000971829d99
-caps.latest.revision: 
+caps.latest.revision: 50
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 123232c2815dcb2e7086a58e363a0003d747f80d
-ms.sourcegitcommit: a0aa5e611a0e6ebb74ac1e2f613e8916dc7a7617
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 808ab79ea75bb191b496411d5088e7a23b692daf
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/24/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ibcpsessionbcpcontrol-ole-db"></a>IBCPSession::BCPControl (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -57,7 +56,7 @@ HRESULT BCPControl(
 |BCP_OPTION_BATCH|每一批次中的資料列數目。 預設值為 0，表示資料擷取時，會指出資料表中的所有資料列，或資料複製到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 時，會指出使用者資料檔案中的所有資料列。 小於 1 的值會將 BCP_OPTION_BATCH 重設為預設值。|  
 |BCP_OPTION_DELAYREADFMT|布林值，如果設定為 true，將導致[ibcpsession:: Bcpreadfmt](../../relational-databases/native-client-ole-db-interfaces/ibcpsession-bcpreadfmt-ole-db.md)讀取在執行。 如果為 false （預設值），ibcpsession:: Bcpreadfmt 將立即讀取格式檔案。 如果會發生順序錯誤**BCP_OPTION_DELAYREADFMT**是 true，並且呼叫 ibcpsession:: Bcpcolumns 或 ibcpsession:: Bcpcolfmt。<br /><br /> 如果您呼叫也會發生順序錯誤`IBCPSession::BCPControl(BCPDELAYREADFMT, (void *)FALSE))`之後呼叫`IBCPSession::BCPControl(BCPDELAYREADFMT, (void *)TRUE)`和 ibcpsession:: Bcpwritefmt。<br /><br /> 如需詳細資訊，請參閱[中繼資料探索](../../relational-databases/native-client/features/metadata-discovery.md)。|  
 |BCP_OPTION_FILECP|*IValue*引數包含資料檔案的字碼頁的數目。 您可以指定程式碼頁面的數目，例如 1252 或 850，或以下任一個值：<br /><br /> BCP_FILECP_ACP：檔案中的資料是在用戶端的 Microsoft Windows® 程式碼頁面。<br /><br /> BCP_FILECP_OEMCP：檔案中的資料是在用戶端的 OEM 程式碼頁面 (預設)。<br /><br /> BCP_FILECP_RAW：檔案中的資料是在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 程式碼頁面。|  
-|BCP_OPTION_FILEFMT|資料檔案格式的版本號碼。 這個號碼可以是 80 ([!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)])、90 ([!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)])、100 ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 或 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)])、110 ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]) 或 120 ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)])。 120 是預設值。 這個值在使用舊版伺服器支援的格式匯出和匯入資料時非常實用。  例如，匯入資料取自中的文字資料行[!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]將伺服器**varchar （max)**中的資料行[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]或更新版本的伺服器，您應該指定 80。 同樣地，如果您指定匯出的資料時的 80 **varchar （max)**資料行，它會儲存文字資料行中儲存如同[!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]格式，然後可以匯入的文字資料行[!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]伺服器。|  
+|BCP_OPTION_FILEFMT|資料檔案格式的版本號碼。 這個號碼可以是 80 ([!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)])、90 ([!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)])、100 ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 或 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)])、110 ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]) 或 120 ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)])。 120 是預設值。 這個值在使用舊版伺服器支援的格式匯出和匯入資料時非常實用。  例如，匯入資料取自中的文字資料行[!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]將伺服器**varchar （max)** 中的資料行[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]或更新版本的伺服器，您應該指定 80。 同樣地，如果您指定匯出的資料時的 80 **varchar （max)** 資料行，它會儲存文字資料行中儲存如同[!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]格式，然後可以匯入的文字資料行[!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]伺服器。|  
 |BCP_OPTION_FIRST|要複製的檔案或資料表的資料列。 預設值為 1，小於 1 的值會將這個選項重設為預設。|  
 |BCP_OPTION_FIRSTEX|如果是 BCP Out 作業，則指定將資料庫資料表第一個資料列複製到資料檔案中。<br /><br /> 如果是 BCP In 作業，則指定將資料檔案的第一個資料列複製到資料庫資料表中。<br /><br /> *IValue*參數必須是帶正負號的 64 位元整數，其中包含值的位址。 可傳遞至 BCPFIRSTEX 的最大值為 2^63-1。|  
 |BCP_OPTION_FMTXML|用於指定所產生的格式檔案應該是 XML 格式。 根據預設，這個選項是關閉的，而且格式檔案會儲存為文字檔案。 XML 格式檔案提供更大的彈性，但是有一些條件約束。 例如，您不可以同時指定欄位的前置詞和結束字元，即使在更早版本中是可以這麼做的。<br /><br /> 注意： XML 格式檔案，則只有時，支援[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]連同安裝工具[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]原生用戶端。|  
@@ -92,7 +91,7 @@ HRESULT BCPControl(
  記憶體不足錯誤  
   
 ## <a name="see-also"></a>另請參閱  
- [IBCPSession &#40; OLE DB &#41;](../../relational-databases/native-client-ole-db-interfaces/ibcpsession-ole-db.md)   
+ [IBCPSession &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-interfaces/ibcpsession-ole-db.md)   
  [執行大量複製作業](../../relational-databases/native-client/features/performing-bulk-copy-operations.md)  
   
   

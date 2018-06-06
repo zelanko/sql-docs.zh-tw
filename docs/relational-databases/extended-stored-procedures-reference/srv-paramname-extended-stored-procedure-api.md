@@ -1,16 +1,15 @@
 ---
-title: "srv_paramname (擴充預存程序 API) | Microsoft Docs"
-ms.custom: 
+title: srv_paramname (擴充預存程序 API) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/03/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
 ms.component: extended-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - srv_paramname
@@ -22,16 +21,15 @@ dev_langs:
 helpviewer_keywords:
 - srv_paramname
 ms.assetid: 1a53d707-7b06-49cc-a0df-ac727cfe953f
-caps.latest.revision: 
+caps.latest.revision: 30
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: cb51036008882a5a5a1859d9b9b81492c5242c06
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
-ms.translationtype: MT
+ms.openlocfilehash: 71da765cd6ad0de2b17462f55eb653e6c832d755
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="srvparamname-extended-stored-procedure-api"></a>srv_paramname (擴充預存程序 API)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -60,9 +58,9 @@ SRV_PROC * srvproc,intn, int *len );
  提供包含參數名稱長度 (以位元組為單位) 之 **int** 變數的指標。 如果 *len* 為 NULL，則不會傳回遠端預存程序參數名稱的長度。  
   
 ## <a name="returns"></a>傳回值  
- 包含參數名稱且以 Null 結束之字元字串的指標。 參數名稱的長度會儲存在 *len* 中。 如果沒有第 *n* 個參數或遠端預存程序，則會傳回 NULL、將 *len* 設定為 -1，並傳送參考用錯誤訊息。 如果參數名稱為 NULL，*len* 就會設定為 0，而且傳回以 Null 結束的空字串。  
+ 包含參數名稱且以 Null 結束之字元字串的指標。 參數名稱的長度會儲存在 *len* 中。 如果沒有第 *n* 個參數或沒有任何遠端預存程序，其會傳回 NULL、將 *len* 設定為 -1，並會傳送參考用錯誤訊息。 如果參數名稱為 NULL，*len* 就會設定為 0，而且傳回以 Null 結束的空字串。  
   
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>Remarks  
  這個函數會取得遠端預存程序呼叫參數的名稱。 當遠端預存程序呼叫是用參數產生時，該參數可以依名稱或位置 (未命名) 傳遞。 如果遠端預存程序呼叫是藉由一些依名稱傳遞的參數和一些依位置傳遞的參數來進行時，就會發生錯誤。 雖然仍會呼叫 SRV_RPC 處理常式，但是看起來好像沒有參數，而且 **srv_rpcparams** 會傳回 0。  
   
 > [!IMPORTANT]  

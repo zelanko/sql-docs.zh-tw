@@ -1,32 +1,30 @@
 ---
-title: "Integration Services 錯誤和訊息參考 | Microsoft Docs"
-ms.custom: 
+title: Integration Services 錯誤和訊息參考 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
 ms.component: non-specific
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - error numbers [Integration Services]
 - hresults [Integration Services]
 - errors [Integration Services], listed
 ms.assetid: 2c825c07-5074-42ad-90ea-0dc5a588dcf7
-caps.latest.revision: 
+caps.latest.revision: 44
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: Active
-ms.openlocfilehash: 16f1793a182cf762882a90889ec8576c9fc6d99e
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 55b664bda08e6842333fed67dafeab6e58a605e5
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="integration-services-error-and-message-reference"></a>Integration Services 錯誤和訊息參考
   下表列出預先定義的 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 錯誤、警告和參考用訊息 (依據每一個類別內的遞增號碼順序)，連同這些訊息的數字代碼和符號名稱。 每一個錯誤都會以欄位形式定義於 <xref:Microsoft.SqlServer.Dts.Runtime.Hresults> 命名空間的 <xref:Microsoft.SqlServer.Dts.Runtime> 類別內。  
@@ -51,7 +49,7 @@ ms.lasthandoff: 01/25/2018
 -   [資料流程元件錯誤訊息 (DTSBC_E_*)](#msgPipeline)  
   
 ##  <a name="msgError"></a> 錯誤訊息  
- [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 錯誤訊息的符號名稱以 **DTS_E_**當作開頭。  
+ [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 錯誤訊息的符號名稱以 **DTS_E_** 當作開頭。  
   
 |十六進位碼|十進位碼|符號名稱|描述|  
 |----------------------|------------------|-------------------|-----------------|  
@@ -236,8 +234,8 @@ ms.lasthandoff: 01/25/2018
 |0xC0015004|-1073655804|DTS_E_CANTWRITETOFILE|無法開啟檔案 "%1" 進行寫入。 檔案可能是唯讀，或您沒有正確的權限。|  
 |0xC0015005|-1073655803|DTS_E_NOROWSETRETURNED|這個查詢的執行沒有相關聯的結果資料列集。 未正確指定結果。|  
 |0xC0015105|-1073655547|DTS_E_DUMP_FAILED|未正確產生偵錯傾印檔案。 hresult 為 0x%1!8.8X!。|  
-|0xC0016001|-1073651711|DTS_E_INVALIDURL|指定的 URL 無效。 當伺服器或 Proxy URL 為 Null 或格式不正確時，就會發生這個問題。 有效的 URL 格式為 http://ServerName:Port/ResourcePath 或 https://ServerName:Port/ResourcePath。|  
-|0xC0016002|-1073651710|DTS_E_INVALIDSCHEME|URL %1 無效。 當指定 http 或 https 以外的配置或 URL 的格式不正確時，就會發生這個問題。 有效的 URL 格式為 http://ServerName:Port/ResourcePath 或 https://ServerName:Port/ResourcePath。|  
+|0xC0016001|-1073651711|DTS_E_INVALIDURL|指定的 URL 無效。 當伺服器或 Proxy URL 為 Null 或格式不正確時，就會發生這個問題。 有效 URL 格式的形式是 http://ServerName:Port/ResourcePath 或 https://ServerName:Port/ResourcePath。|  
+|0xC0016002|-1073651710|DTS_E_INVALIDSCHEME|URL %1 無效。 當指定 http 或 https 以外的配置或 URL 的格式不正確時，就會發生這個問題。 有效 URL 格式的形式是 http://ServerName:Port/ResourcePath 或 https://ServerName:Port/ResourcePath。|  
 |0xC0016003|-1073651709|DTS_E_WINHTTPCANNOTCONNECT|無法建立與伺服器 %1 的連接。 當伺服器不存在或 Proxy 設定不正確時，就會發生這個錯誤。|  
 |0xC0016004|-1073651708|DTS_E_CONNECTIONTERMINATED|已經重設或結束與伺服器的連接。 請稍後再試一次。|  
 |0xC0016005|-1073651707|DTS_E_LOGINFAILURE|"%1" 的登入嘗試失敗。 當提供的登入憑證不正確時，就會發生這個錯誤。 請驗證登入認證。|  
@@ -2019,13 +2017,13 @@ ms.lasthandoff: 01/25/2018
 |0xC0209318|-1071607016|DTS_E_XMLDATATYPECHANGED|元素 "%2" 上 "%1" 的 XML 結構描述資料類型資訊已變更。  請重新初始化這個元件的中繼資料，並檢閱資料行對應。|  
 |0xC0209319|-1071607015|DTS_E_TXLOOKUP_UNUSEDINPUTCOLUMN|%1 未用在聯結或複製中。 請從輸入資料行清單中移除未使用的資料行。|  
 |0xC020931A|-1071607014|DTS_E_SORTSTACKOVERFLOW|由於排序內送緩衝區時發生堆疊溢位，所以排序失敗。  請減少資料流程工作的 DefaultBufferMaxRows 屬性。|  
-|0xC020F42A|-1071582166|DTS_E_OLEDB_OLDPROVIDER_ERROR|請考慮將連接字串中的 PROVIDER 變更為 %1，或造訪 http://www.microsoft.com/downloads 以便尋找並下載 %2 的支援。|  
+|0xC020F42A|-1071582166|DTS_E_OLEDB_OLDPROVIDER_ERROR|請考慮將連接字串中的 PROVIDER 變更為 %1，或前往 http://www.microsoft.com/downloads 以尋找並安裝 %2 的支援。|  
 |||DTS_E_INITTASKOBJECTFAILED|無法為工作 "%1!s!"、類型 "%2!s!" 初始化工作物件， 因為錯誤 0x%3!8.8X! "%4!s!"。|  
 |||DTS_E_GETCATMANAGERFAILED|無法建立 COM 元件類別目錄管理員，因為錯誤 0x%1!8.8X! "%2!s!"。|  
 |||DTS_E_COMPONENTINITFAILED|元件 %1!s! 無法初始化，因為錯誤 0x%2!8.8X! "%3!s!"。|  
   
 ##  <a name="msgWarning"></a> 警告訊息  
- [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 警告訊息的符號名稱以 **DTS_W_**當作開頭。  
+ [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 警告訊息的符號名稱以 **DTS_W_** 當作開頭。  
   
 |十六進位碼|十進位碼|符號名稱|描述|  
 |----------------------|------------------|-------------------|-----------------|  
@@ -2171,7 +2169,7 @@ ms.lasthandoff: 01/25/2018
 |0x930D|37645|DTS_W_EXTERNALTABLECOLSOUTOFSYNC|資料表 "%1" 已變更。 此資料表可能已加入新的資料行。|  
   
 ##  <a name="msgInfo"></a> 參考用訊息  
- [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 參考用訊息的符號名稱以 **DTS_I_**當作開頭。  
+ [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 參考用訊息的符號名稱以 **DTS_I_** 當作開頭。  
   
 |十六進位碼|十進位碼|符號名稱|描述|  
 |----------------------|------------------|-------------------|-----------------|  
@@ -2270,7 +2268,7 @@ ms.lasthandoff: 01/25/2018
 |0x4020F42C|1075901484|DTS_I_OLEDBDESTZEROMAXCOMMITSIZE|OLE DB 目的地 "%1" 的插入認可大小上限屬性設定為 0。 這個屬性設定可能會導致執行中的封裝停止回應。 如需詳細資訊，請參閱 OLE DB 目的地編輯器 (連接管理員頁面) 的 F1 說明主題。|  
   
 ##  <a name="msgGeneral"></a> 一般和事件訊息  
- [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 錯誤訊息的符號名稱以 **DTS_MSG_**當作開頭。  
+ [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 錯誤訊息的符號名稱以 **DTS_MSG_** 當作開頭。  
   
 |十六進位碼|十進位碼|符號名稱|描述|  
 |----------------------|------------------|-------------------|-----------------|  
@@ -2309,7 +2307,7 @@ ms.lasthandoff: 01/25/2018
 |0x4010310E|1074802958|DTS_MSG_EVENTLOGENTRY_INFORMATION|事件名稱: %1<br /><br /> 訊息: %9<br /><br /> 操作員: %2<br /><br /> 來源名稱: %3<br /><br /> 來源識別碼: %4<br /><br /> 執行識別碼: %5<br /><br /> 開始時間: %6<br /><br /> 結束時間: %7<br /><br /> 資料碼: %8|  
   
 ##  <a name="msgSuccess"></a> 成功訊息  
- [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 成功訊息的符號名稱以 **DTS_S_**當作開頭。  
+ [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 成功訊息的符號名稱以 **DTS_S_** 當作開頭。  
   
 |十六進位碼|十進位碼|符號名稱|描述|  
 |----------------------|------------------|-------------------|-----------------|  
@@ -2318,7 +2316,7 @@ ms.lasthandoff: 01/25/2018
 |0x200001|2097153|DTS_S_EXPREVALTRUNCATIONOCCURRED|在運算式評估期間發生截斷。 截斷是在評估期間發生，可能包含中間步驟的任何點。|  
   
 ##  <a name="msgPipeline"></a> 資料流程元件錯誤訊息  
- [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 錯誤訊息的符號名稱是以 **DTSBC_E_**當作開頭，其中 "BC" 指的是大多數 Microsoft 資料流程元件衍生來源的原生基底類別。  
+ [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 錯誤訊息的符號名稱是以 **DTSBC_E_** 當作開頭，其中 "BC" 指的是大多數 Microsoft 資料流程元件衍生來源的原生基底類別。  
   
 |十六進位碼|十進位碼|符號名稱|描述|  
 |----------------------|------------------|-------------------|-----------------|  

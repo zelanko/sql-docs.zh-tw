@@ -1,49 +1,23 @@
 ---
-title: "Microsoft 類神經網路演算法技術參考 |Microsoft 文件"
-ms.custom: 
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
-helpviewer_keywords:
-- HIDDEN_NODE_RATIO parameter
-- MAXIMUM_INPUT_ATTRIBUTES parameter
-- HOLDOUT_PERCENTAGE parameter
-- neural network algorithms [Analysis Services]
-- output layer [Data Mining]
-- neural networks
-- MAXIMUM_OUTPUT_ATTRIBUTES parameter
-- MAXIMUM_STATES parameter
-- SAMPLE_SIZE parameter
-- hidden layer
-- hidden neurons
-- input layer [Data Mining]
-- activation function [Data Mining]
-- Back-Propagated Delta Rule network
-- neural network model [Analysis Services]
-- coding [Data Mining]
-- HOLDOUT_SEED parameter
-ms.assetid: b8fac409-e3c0-4216-b032-364f8ea51095
-caps.latest.revision: 
-author: Minewiskan
+title: Microsoft 類神經網路演算法技術參考 |Microsoft 文件
+ms.date: 05/08/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: data-mining
+ms.topic: conceptual
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: ceac69e8f44885b16983b1354acea23f43b5b594
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 76e71ae9c0ceb236c49df8e7fc8ec67713ef3e76
+ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="microsoft-neural-network-algorithm-technical-reference"></a>Microsoft Neural Network Algorithm Technical Reference
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-[!INCLUDE[msCoName](../../includes/msconame-md.md)] 類神經網路使用「多層認知」(Multilayer Perceptron) 網路，亦稱為「倒傳播差異規則」(Back-Propagated Delta Rule) 網路，它包含最多 3 層神經 (Neuron) 或「認知器」(Perceptron)。 這 3 層分別是輸入層、選擇性隱藏層和輸出層。  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 類神經網路使用「多層認知」(Multilayer Perceptron) 網路，亦稱為「倒傳播差異規則」(Back-Propagated Delta Rule) 網路，它包含最多 3 層神經 (Neuron) 或「認知器」(Perceptron)。 這 3 層分別是輸入層、選擇性隱藏層和輸出層。  
   
  多層認知類神經網路的詳細討論是在此文件集的範圍之外。 本主題說明演算法的基本實作，包括將輸入和輸出值正規化所使用的方法，以及減少屬性基數所使用的特徵選取方法。 本主題描述自訂演算法行為所使用的參數及其他設定，並提供關於查詢模型之其他資訊的連結。  
   

@@ -1,30 +1,28 @@
 ---
-title: "Microsoft 複寫衝突檢視器 (合併式複寫) | Microsoft Docs"
-ms.custom: 
+title: Microsoft 複寫衝突檢視器 (合併式複寫) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/07/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
 ms.component: replication
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 f1_keywords:
 - sql13.rep.replconflictviewer.cvmerge.f1
 ms.assetid: bfef5e21-ac04-4bc5-a55e-595421e34923
-caps.latest.revision: 
+caps.latest.revision: 24
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 4fbbfbe441da04c73f39e653fc9b12a6169eaea3
-ms.sourcegitcommit: ab25b08a312d35489a2c4a6a0d29a04bbd90f64d
+ms.openlocfilehash: c0a46f863c810f41422c96267e2be21b0a5f47ea
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="microsoft-replication-conflict-viewer-merge-replication"></a>Microsoft 複寫衝突檢視器 (合併式複寫)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -79,7 +77,7 @@ ms.lasthandoff: 03/08/2018
  選取即可顯示前五個資料行和有衝突的任何資料行。 當資料表有大量資料行，但是您只想查看與解決衝突最相關的資料行時，這很有用。 前五個資料行一律會包含在此檢視中做為識別資料列的欄位，例如主索引鍵或名稱欄位，通常是在資料表的前幾個資料行中。  
   
  **顯示資料行資訊** (**...**)  
- 按一下即可檢視資料行資訊： **[資料表名稱]**、 **[資料行名稱]**、 **[資料類型]**和 **[資料行值]**。 **[資料行值]** 是可編輯的，除非以唯讀顯示該值。  
+ 按一下即可檢視資料行資訊： **[資料表名稱]**、 **[資料行名稱]**、 **[資料類型]** 和 **[資料行值]**。 **[資料行值]** 是可編輯的，除非以唯讀顯示該值。  
   
  **提交成功者**  
  按一下即可使 Conflict Resolver 所決定的資料列仍是成功者。 按一下此按鈕之前，可以變更非顯示為唯讀之任何資料行的值。  

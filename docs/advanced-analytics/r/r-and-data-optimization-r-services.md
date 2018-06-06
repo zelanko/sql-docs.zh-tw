@@ -1,26 +1,18 @@
 ---
-title: "R Services-資料最佳化的效能 |Microsoft 文件"
-ms.custom: 
-ms.date: 07/12/2017
-ms.reviewer: 
-ms.suite: sql
-ms.prod: machine-learning-services
-ms.prod_service: machine-learning-services
-ms.component: r
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
-ms.assetid: b6104878-ed19-47a7-ac37-21e4d6e2a1af
-caps.latest.revision: 
-author: jeannt
-ms.author: jeannt
-manager: cgronlund
-ms.workload: Inactive
-ms.openlocfilehash: 0ca7a57b10787ca183c2979fe95a5e3fe446dc86
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+title: SQL Server R Services-資料最佳化的效能 |Microsoft 文件
+ms.prod: sql
+ms.technology: machine-learning
+ms.date: 04/15/2018
+ms.topic: conceptual
+author: HeidiSteen
+ms.author: heidist
+manager: cgronlun
+ms.openlocfilehash: 5a30ff30651bacde42c60a1e0b265105e3c932e3
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34563756"
 ---
 # <a name="performance-for-r-services---data-optimization"></a>R Services-資料最佳化的效能
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -39,7 +31,7 @@ ms.lasthandoff: 02/11/2018
 
 ## <a name="factors"></a>因素
 
-R 語言有"因素 」，也就是特殊的變數的分類資料的概念。 資料科學家通常使用其公式中的因數變數，因為處理當做因素類別變數時，可確保資料正確地處理由機器學習服務函式。 如需詳細資訊，請參閱 [傻瓜 R： 因數變數] (http://www.dummies.com/programming/r/how-to-look-at-the-structure-of-a-factor-in-r/)。
+R 語言有"因素 」，也就是特殊的變數的分類資料的概念。 資料科學家通常使用其公式中的因數變數，因為處理當做因素類別變數時，可確保資料正確地處理由機器學習服務函式。 如需詳細資訊，請參閱[傻瓜 R： 因數變數](http://www.dummies.com/programming/r/how-to-look-at-the-structure-of-a-factor-in-r/)。
 
 根據設計，因數變數可以從轉換字串至整數一次的存放裝置或處理。 R`data.frame`函式會處理所有字串做為因數變數，除非引數*stringsAsFactors*設**False**。 這表示字串會自動轉換成整數進行處理，並且接著對應回原始的字串。
 
@@ -139,7 +131,7 @@ RxSqlServerData(sqlQuery= "SELECT [ArrDelay],[CRSDepTime],[DayOfWeek] FROM  airl
 
 + [rxDTree](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxdtree)
 
-    `rxDTree`支援`maxDepth`參數，控制的決策樹的深度。 做為`maxDepth`會增加，效能可能會降低，所以分析優點增加與影響效能的深度。
+    `rxDTree` 支援`maxDepth`參數，控制的決策樹的深度。 做為`maxDepth`會增加，效能可能會降低，所以分析優點增加與影響效能的深度。
 
     您也可以控制時間複雜性和預測精確度，例如調整參數之間的平衡`maxNumBins`， `maxDepth`， `maxComplete`，和`maxSurrogate`。 將深度增加到超過 10 或 15 以上，會讓計算付出很高的代價。
 
@@ -169,7 +161,7 @@ RxSqlServerData(sqlQuery= "SELECT [ArrDelay],[CRSDepTime],[DayOfWeek] FROM  airl
 
 + 函式的參考[rxBTrees](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxbtrees)
 
-### <a name="use-microsoftml"></a>Use MicrosoftML
+### <a name="use-microsoftml"></a>使用 MicrosoftML
 
 我們也建議您查看到新**MicrosoftML**封裝，提供可調整的機器學習演算法，可以使用的計算內容和提供的 RevoScaleR 轉換。
 

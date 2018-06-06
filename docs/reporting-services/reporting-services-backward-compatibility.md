@@ -1,15 +1,14 @@
 ---
-title: "回溯相容性 | Reporting Services | Microsoft Docs"
-ms.custom: 
+title: 回溯相容性 | Reporting Services | Microsoft Docs
+ms.custom: ''
 ms.date: 09/12/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: reporting-services
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: get-started-article
 helpviewer_keywords:
 - Reporting Services, backward compatibility
@@ -17,16 +16,15 @@ helpviewer_keywords:
 - SQL Server Reporting Services, backward compatibility
 - backward compatibility [Reporting Services]
 ms.assetid: 675b0e0e-cfee-4790-9675-80fc3ea6d30f
-caps.latest.revision: "44"
+caps.latest.revision: 44
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: d4924fee006b0e40eb60a0525e80c71cefe558ea
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 11dfa49c18beda96b86817fc4391d1b6f4cf772d
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 #  <a name="reporting-services-backward-compatibility"></a>Reporting Services 回溯相容性
 了解 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]的行為變更。 這涵蓋不能再使用或已排程在未來版本中移除的功能。

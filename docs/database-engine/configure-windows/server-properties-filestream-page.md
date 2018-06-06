@@ -1,32 +1,32 @@
 ---
-title: "SQL Server 屬性 (FILESTREAM 頁面) | Microsoft Docs"
-ms.custom: 
+title: SQL Server 屬性 (FILESTREAM 頁面) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
-ms.prod_service: database-engine
-ms.service: 
-ms.component: configure-windows
-ms.reviewer: 
+ms.prod: sql
+ms.prod_service: high-availability
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: database-engine
-ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords: sql13.swb.serverproperties.filestream.f1
-helpviewer_keywords: FILESTREAM [SQL Server], properties page
+ms.technology: configuration
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
+f1_keywords:
+- sql13.swb.serverproperties.filestream.f1
+helpviewer_keywords:
+- FILESTREAM [SQL Server], properties page
 ms.assetid: 8a8d38d3-e97a-4b09-a40b-659b2e3a5c47
-caps.latest.revision: "10"
+caps.latest.revision: 10
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: dda63c64fe1bf0acb9cc7c7aaf24c693fda0b025
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 2de00c8dabc890cb215e4dc278b15f17e6fbebb7
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="server-properties---filestream-page"></a>伺服器屬性 - FILESTREAM 頁面
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 您可以使用這個頁面，針對這個 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 安裝啟用 FILESTREAM。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  您可以使用這個頁面，針對這個 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 安裝啟用 FILESTREAM。  
   
 ## <a name="uielement-list"></a>UIElement 清單  
  **對 Transact-SQL 存取啟用 FILESTREAM**  

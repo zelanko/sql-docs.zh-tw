@@ -1,28 +1,26 @@
 ---
-title: "SQL Server Data Tools (SSDT) 的變更記錄 | Microsoft Docs"
-ms.custom: 
-ms.date: 02/09/2018
-ms.prod: sql-non-specified
+title: SQL Server Data Tools (SSDT) 的變更記錄 | Microsoft Docs
+ms.custom: ''
+ms.date: 04/10/2018
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
 ms.component: ssdt
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- tools-ssdt
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ssdt
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: b071f8b8-c8e5-44e0-bbb6-04804dd1863a
-caps.latest.revision: 
+caps.latest.revision: 31
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: Active
-ms.openlocfilehash: cd69c5ff505f60aacd131976a5f42edef02a4d4d
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 7e2348aa63bce657c85ce0b9d6644be471e1f487
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="changelog-for-sql-server-data-tools-ssdt"></a>SQL Server Data Tools (SSDT) 的變更記錄
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -30,26 +28,57 @@ ms.lasthandoff: 02/11/2018
   
 如需新功能和已變更功能的詳細文章，請參閱 [SSDT 小組部落格](https://blogs.msdn.microsoft.com/ssdt/)。
 
+
+
+## <a name="ssdt-for-visual-studio-2017-1560"></a>SSDT for Visual Studio 2017 (15.6.0)
+組建編號：14.0.16162.0  
+發行日期：2018 年 4 月 10 日
+  
+### <a name="whats-new"></a>新功能
+
+**SSIS：**
+
+1.  修正自發的系統處理工作在目標為 SQLServer2016 和 SQLServer2017 時，不會記錄任何處理步驟的問題
+2.  修正在 SSDT 中以非常長的英文工作名稱開啟 dtsx 時，會發生存取違規的問題
+3.  修正 ScriptTask 的變數清單有時候會從工作 UI 消失的問題
+4.  修正當套件位置為 SQL Server 時，新增現有套件複本會失敗的問題
+5.  修正在某些編輯器對話方塊中存取下拉式方塊時，焦點會卡住的問題。
+6.  修正切換 VS 佈景主題時，背景不會變更的問題。
+7.  修正在深色佈景主題中看不到註釋與載入標籤的問題。
+8.  修正已停用 SSIS 工具箱之項目的狀態屬性未正確定義的問題。
+9.  修正執行 WebServiceTask 時總是失敗的問題。
+10. 修正當連接字串設定為具有相依於專案參數之運算式的變數時，套件部署會失敗的問題。
+
+**安裝程式：**
+
+1.  在隱私權免責聲明中新增「適用於 SQL Server Data Tools 的客戶經驗改進計畫」的連結。
+2.  修正選取 [為 Visual Studio 2017 執行個體安裝新的 SQL Server Data Tools] 時，VS 安裝程式視窗會彈出的問題
+
+### <a name="known-issues"></a>已知問題：
+1.  當 ExecuteOutOfProcess 設定為 True 時，SSIS 執行套件工作不支援偵錯。 此問題僅適用偵錯。 透過 DTExec.exe 或 SSIS 目錄進行的儲存、部署及執行則不受到影響。
+
+
+
 ## <a name="ssdt-for-visual-studio-2017-1552"></a>SSDT for Visual Studio 2017 (15.5.2)
 組建編號︰14.0.16156.0
   
 ### <a name="whats-new"></a>新功能
 
 **SSIS**
-1.  修正將 SSAS 和 SSIS 安裝到相同 VS 2017 執行個體時 SSIS 2008 專案移轉會失敗的問題。
+1.  修正當 SSAS 與 SSIS 都安裝在相同的 VS 2017 執行個體時，移轉 SSIS 2008 專案會失敗的問題。
 2.  修正將 RDLC 報表設計師和 SSIS 安裝到相同 VS 2017 執行個體時不能建立 RDLC 專案的問題。
 3.  修正無法更新註解色彩的問題。
 4.  修正 Hadoop 連線管理員編輯器會截斷其他語言某些字串的問題。
 5.  修正 OData 連線管理員編輯器會截斷某些字串的問題。
 6.  修正 [Integration Services 匯入專案精靈] 視窗會截斷某些字串的問題。
-7.  修正 SSIS 工具箱資訊視窗的標題問題。
+7.  修正 SSIS 工具箱資訊視窗中的標題問題。
 8.  修正 [Integration Services 部署精靈] 視窗會截斷某些字串的問題。 
 
 **安裝程式**
 - 修正有時無法下載承載並會出現「系統找不到指定的檔案 (0x80070002)」錯誤的問題。  
 
 ### <a name="known-issues"></a>已知問題
-- 當 ExecuteOutOfProcess 設定為 True 時，SSIS 執行套件工作不支援偵錯。 此問題僅適用偵錯。 透過 DTExec.exe 或 SSIS 目錄進行的儲存、部署及執行則不受到影響。
+- 當 *ExecuteOutOfProcess* 設定為 *True* 時，SSIS 執行套件工作不支援偵錯。 此問題僅適用偵錯。 透過 DTExec.exe 或 SSIS 目錄進行的儲存、部署及執行則不受到影響。
 
 
 

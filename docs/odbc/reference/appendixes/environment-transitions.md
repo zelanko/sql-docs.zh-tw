@@ -1,36 +1,33 @@
 ---
-title: "環境轉換 |Microsoft 文件"
-ms.custom: 
+title: 環境轉換 |Microsoft 文件
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
-ms.component: odbc
-ms.reviewer: 
+ms.prod: sql
+ms.prod_service: connectivity
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: connectivity
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - environment transitions [ODBC]
 - transitioning states [ODBC], environment
 - state transitions [ODBC], environment
 ms.assetid: 9d11b1ab-f4c8-48ca-9812-8c04303f939d
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
-ms.workload: Inactive
-ms.openlocfilehash: 1a47acf216ef707600fad3fd28a8d94603052be6
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+manager: craigg
+ms.openlocfilehash: c6152a2ee5f21d20a6bf0ddea568e807443dfd00
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="environment-transitions"></a>環境會轉換
 ODBC 環境有下列三種狀態。  
   
-|State|描述|  
+|State|Description|  
 |-----------|-----------------|  
 |E0|未配置的環境|  
 |E1|配置的環境中，未配置的連接|  

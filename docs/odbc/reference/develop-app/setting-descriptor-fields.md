@@ -1,28 +1,26 @@
 ---
-title: "設定描述項欄位 |Microsoft 文件"
-ms.custom: 
+title: 設定描述項欄位 |Microsoft 文件
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
-ms.component: odbc
-ms.reviewer: 
+ms.prod: sql
+ms.prod_service: connectivity
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
-ms.topic: article
-helpviewer_keywords: descriptors [ODBC], retrieving or setting field values
+ms.technology: connectivity
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
+helpviewer_keywords:
+- descriptors [ODBC], retrieving or setting field values
 ms.assetid: d735dc64-370f-48ab-a59f-6cef9bc4e1e8
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
-ms.workload: Inactive
-ms.openlocfilehash: fc02690bd62802f9d356851cd85522328107a707
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+manager: craigg
+ms.openlocfilehash: c67bb653f1dd87aea52d613b427f5bcb6e66f821
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="setting-descriptor-fields"></a>設定描述項欄位
 若要修改的描述項欄位，應用程式可以呼叫**SQLSetDescField**。 某些欄位是唯讀而且無法設定。 (請參閱[SQLSetDescField](../../../odbc/reference/syntax/sqlsetdescfield-function.md)函式描述。)  

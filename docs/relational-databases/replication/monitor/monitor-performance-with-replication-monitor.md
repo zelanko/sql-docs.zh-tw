@@ -1,17 +1,16 @@
 ---
-title: "使用複寫監視器監視效能 |Microsoft Docs"
-ms.custom: 
+title: 使用複寫監視器監視效能 |Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
 ms.component: replication
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - monitoring performance [SQL Server replication], Replication Monitor
 - Log Reader Agent, monitoring
@@ -22,16 +21,15 @@ helpviewer_keywords:
 - Distribution Agent, monitoring
 - monitoring performance [SQL Server replication]
 ms.assetid: f212397d-1bfd-496b-a246-668952891d09
-caps.latest.revision: 
+caps.latest.revision: 36
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 590c82fa430be2c34796b6ae5201a0ef7efba7c1
-ms.sourcegitcommit: ab25b08a312d35489a2c4a6a0d29a04bbd90f64d
+ms.openlocfilehash: b32f10e884b501eec72b526dce06b703089a046a
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="monitor-performance-with-replication-monitor"></a>使用複寫監視器監視效能
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -96,7 +94,7 @@ ms.lasthandoff: 03/08/2018
  如需檢視訂閱資訊的詳細資訊，請參閱[檢視訂閱的資訊並執行工作 &#40;複寫監視器&#41;](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-a-subscription-replication-monitor.md)。  
   
 ## <a name="determine-latency-with-tracer-tokens"></a>使用追蹤 Token 判斷延遲  
- 異動複寫可允許您藉由在發行集資料庫的交易記錄中插入 Token (少量資料)，並記錄到達散發者和訂閱者所需花費的時間，以測量系統中的延遲。 Token 亦可讓您識別資料是否未到達散發者或訂閱者。 如需相關資訊，請參閱 [Measure Latency and Validate Connections for Transactional Replication](../../../relational-databases/replication/monitor/measure-latency-and-validate-connections-for-transactional-replication.md)。  
+ 異動複寫可允許您藉由在發行集資料庫的交易記錄中插入 Token (少量資料)，並記錄到達散發者和訂閱者所需花費的時間，以測量系統中的延遲。 Token 亦可讓您識別資料是否未到達散發者或訂閱者。 如需相關資訊，請參閱 [針對異動複寫測量延遲及驗證連接](../../../relational-databases/replication/monitor/measure-latency-and-validate-connections-for-transactional-replication.md)。  
   
 ## <a name="view-detailed-synchronization-performance-for-merge-replication"></a>檢視合併式複寫的詳細同步處理效能  
  針對合併式複寫，複寫監視器於同步處理時顯示每個已處理發行項的詳細資訊，包括每個處理階段花費的時間 (上傳變更、下載變更等等)。 這樣有助於找出導致過慢的特定資料表，同時也是解決合併訂閱效能問題的最佳地點。 如需檢視詳細統計資料的詳細資訊，請參閱[檢視與訂閱建立關聯之代理程式的資訊並執行工作 &#40;複寫監視器&#41;](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-subscription-agents.md)。  

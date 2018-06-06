@@ -1,35 +1,23 @@
 ---
-title: "線性迴歸模型查詢範例 |Microsoft 文件"
-ms.custom: 
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
-helpviewer_keywords:
-- linear regression algorithms [Analysis Services]
-- linear regression [Analysis Services]
-- content queries [DMX]
-ms.assetid: fd3cf312-57a1-44b6-b772-fce6fc1c26d7
-caps.latest.revision: 
-author: Minewiskan
+title: 線性迴歸模型查詢範例 |Microsoft 文件
+ms.date: 05/08/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: data-mining
+ms.topic: conceptual
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 150ef98bd2c949f7b4eb47170ec7855173608fbc
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: e967bcb024a20c09105447780e5d672d4dc843fa
+ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="linear-regression-model-query-examples"></a>線性迴歸模型查詢範例
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-當您針對資料採礦模型建立查詢時，可以建立內容查詢來提供有關分析期間所發現之模式的詳細資料，或是建立預測查詢來使用模型中的模式，為新的資料進行預測。 例如，內容查詢可能會提供有關迴歸公式的其他詳細資料，而預測查詢則會告訴您新資料點是否符合模型。 您也可以使用查詢來擷取有關模型的中繼資料。  
+  當您針對資料採礦模型建立查詢時，可以建立內容查詢來提供有關分析期間所發現之模式的詳細資料，或是建立預測查詢來使用模型中的模式，為新的資料進行預測。 例如，內容查詢可能會提供有關迴歸公式的其他詳細資料，而預測查詢則會告訴您新資料點是否符合模型。 您也可以使用查詢來擷取有關模型的中繼資料。  
   
  本節說明如何針對以 Microsoft 線性迴歸演算法為基礎的模型來建立查詢。  
   
@@ -99,11 +87,11 @@ FROM LR_PredictIncome.CONTENT
 |Age|45.4269617936399|0|0|126.969442359327|9|  
 ||35793.5477381267|0|0|1012968919.28372|11|  
   
- 相較之下，在 **[採礦圖例]**中，迴歸公式顯示如下：  
+ 相較之下，在 **[採礦圖例]** 中，迴歸公式顯示如下：  
   
  `Yearly Income = 57,220.919 + 471.688 * (Age - 45.427)`  
   
- 您可以發現，在 **[採礦圖例]**中，有些數字會被捨入，不過，NODE_DISTRIBUTION 資料表和 **[採礦圖例]** 基本上包含相同的值。  
+ 您可以發現，在 **[採礦圖例]** 中，有些數字會被捨入，不過，NODE_DISTRIBUTION 資料表和 **[採礦圖例]** 基本上包含相同的值。  
   
  VALUETYPE 資料行中的值會告訴您每個資料列中包含哪種資訊；如果您要以程式設計方式處理結果，哪個比較實用。 下表顯示針對線性迴歸公式輸出的值類型。  
   
@@ -197,13 +185,13 @@ NATURAL PREDICTION JOIN
 |||  
 |-|-|  
 |預測函數|使用方式|  
-|[IsDescendant &#40; DMX &#41;](../../dmx/isdescendant-dmx.md)|確定某個節點是否為模型中另一個節點的子系。|  
-|[IsInNode &#40; DMX &#41;](../../dmx/isinnode-dmx.md)|指示指定的節點是否包含目前案例。|  
-|[PredictHistogram &#40; DMX &#41;](../../dmx/predicthistogram-dmx.md)|傳回指定之資料行的一個或一組預測值。|  
-|[PredictNodeId &#40; DMX &#41;](../../dmx/predictnodeid-dmx.md)|傳回每個案例的 Node_ID。|  
-|[PredictStdev &#40; DMX &#41;](../../dmx/predictstdev-dmx.md)|傳回預測值的標準差。|  
-|[PredictSupport &#40; DMX &#41;](../../dmx/predictsupport-dmx.md)|傳回指定狀態的支援值。|  
-|[PredictVariance &#40; DMX &#41;](../../dmx/predictvariance-dmx.md)|傳回指定之資料行的變異數。|  
+|[IsDescendant & #40; DMX & #41;](../../dmx/isdescendant-dmx.md)|確定某個節點是否為模型中另一個節點的子系。|  
+|[IsInNode & #40; DMX & #41;](../../dmx/isinnode-dmx.md)|指示指定的節點是否包含目前案例。|  
+|[PredictHistogram & #40; DMX & #41;](../../dmx/predicthistogram-dmx.md)|傳回指定之資料行的一個或一組預測值。|  
+|[PredictNodeId & #40; DMX & #41;](../../dmx/predictnodeid-dmx.md)|傳回每個案例的 Node_ID。|  
+|[PredictStdev & #40; DMX & #41;](../../dmx/predictstdev-dmx.md)|傳回預測值的標準差。|  
+|[PredictSupport & #40; DMX & #41;](../../dmx/predictsupport-dmx.md)|傳回指定狀態的支援值。|  
+|[PredictVariance & #40; DMX & #41;](../../dmx/predictvariance-dmx.md)|傳回指定之資料行的變異數。|  
   
  如需所有 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 演算法共用之函數的清單，請參閱[資料採礦演算法 &#40;Analysis Services - 資料採礦&#41;](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)。 如需如何使用這些函數的詳細資訊，請參閱[資料採礦延伸模組 &#40;DMX&#41; 函數參考](../../dmx/data-mining-extensions-dmx-function-reference.md)。  
   
@@ -211,6 +199,6 @@ NATURAL PREDICTION JOIN
  [Microsoft 線性迴歸演算法](../../analysis-services/data-mining/microsoft-linear-regression-algorithm.md)   
  [資料採礦查詢](../../analysis-services/data-mining/data-mining-queries.md)   
  [Microsoft 線性迴歸演算法技術參考](../../analysis-services/data-mining/microsoft-linear-regression-algorithm-technical-reference.md)   
- [線性迴歸模型 &#40; 的採礦模型內容Analysis Services-資料採礦 &#41;](../../analysis-services/data-mining/mining-model-content-for-linear-regression-models-analysis-services-data-mining.md)  
+ [線性迴歸模型 & #40; 的採礦模型內容Analysis Services-資料採礦 & #41;](../../analysis-services/data-mining/mining-model-content-for-linear-regression-models-analysis-services-data-mining.md)  
   
   

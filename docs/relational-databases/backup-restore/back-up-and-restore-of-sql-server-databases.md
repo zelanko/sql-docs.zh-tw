@@ -1,17 +1,14 @@
 ---
-title: "SQL Server 資料庫的備份與還原 | Microsoft Docs"
-ms.custom: 
-ms.date: 07/29/2016
-ms.prod: sql-non-specified
-ms.prod_service: database-engine
-ms.service: 
-ms.component: backup-restore
-ms.reviewer: 
+title: SQL Server 資料庫的備份與還原 | Microsoft Docs
+ms.custom: ''
+ms.date: 03/30/2018
+ms.prod: sql
+ms.prod_service: backup-restore
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- dbe-backup-restore
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: backup-restore
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - disaster recovery [SQL Server], see restoring [SQL Server]
 - backups [SQL Server]
@@ -25,25 +22,24 @@ helpviewer_keywords:
 - Database Engine [SQL Server], backups
 - databases [SQL Server], backups
 ms.assetid: 570a21b3-ad29-44a9-aa70-deb2fbd34f27
-caps.latest.revision: 
+caps.latest.revision: 91
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.workload: Active
-ms.openlocfilehash: 959fea6c816396c70883a47c1d9f00cbd11be9dc
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: f5a985cffb4aa982e598cbaaeb5c8ddb57133fd7
+ms.sourcegitcommit: b5ab9f3a55800b0ccd7e16997f4cd6184b4995f9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 05/23/2018
+ms.locfileid: "34455671"
 ---
 # <a name="back-up-and-restore-of-sql-server-databases"></a>SQL Server 資料庫的備份與還原
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  本文描述備份 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫的優點、基本備份和還原詞彙，並介紹 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的備份和還原策略，以及 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 備份和還原的安全性考量。 
 
-  此主題描述備份 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫的優點、基本備份和還原詞彙，並介紹 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的備份和還原策略，以及 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 備份和還原的安全性考量。 
-  
 > **尋找逐步指示嗎？** 本主題 **未提供如何執行備份的任何特定步驟！** 如果您想要正確實際備份，請將此頁面捲動至 [連結] 區段，並依備份工作組織，以及是否想要使用 SSMS 或 T-SQL。  
   
- SQL Server 備份與還原元件提供基本的防護措施，可保護 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫中所儲存的重要資料。 若要將重大資料遺失的風險降到最低，則需要定期備份資料庫，以保留對資料的修改。 計畫完善的備份和還原策略，可協助保護資料庫免於因各種失敗造成損毀而遺失資料。 藉由還原備份組再復原資料庫，以測試您的策略，讓您準備好有效因應損毀情況。  
+ SQL Server 備份與還原元件提供基本的防護措施，可保護 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫中所儲存的重要資料。 若要將重大資料遺失的風險降到最低，則需要定期備份資料庫，以保留對資料的修改。 計畫完善的備份和還原策略，可協助保護資料庫免於因各種失敗造成損毀而遺失資料。 藉由還原備份組再復原資料庫，以測試您的策略，讓您準備好有效因應損毀情況。
   
  除了儲存備份的本機儲存體之外，SQL Server 也支援備份至與還原自 Windows Azure Blob 儲存體服務。 如需詳細資訊，請參閱 [使用 Microsoft Azure Blob 儲存體服務進行 SQL Server 備份及還原](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)。 針對使用 Microsoft Azure Blob 儲存體服務儲存的資料庫檔案， [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 的 Azure 快照集選項，提供近乎即時的備份及更快速的還原。 如需詳細資訊，請參閱 [Azure 中資料庫檔案的檔案快照集備份](../../relational-databases/backup-restore/file-snapshot-backups-for-database-files-in-azure.md)。  
   
@@ -52,12 +48,9 @@ ms.lasthandoff: 01/18/2018
 
      使用有效的資料庫備份，就可以從多種失敗中復原資料，例如：  
   
-    -   媒體錯誤。  
-  
-    -   使用者錯誤 (例如不小心卸除資料表)。  
-  
-    -   硬體故障 (例如，磁碟機損壞或伺服器永久損毀)。  
-  
+    -   媒體錯誤。    
+    -   使用者錯誤 (例如不小心卸除資料表)。    
+    -   硬體故障 (例如，磁碟機損壞或伺服器永久損毀)。    
     -   天然災害。 藉由對 Windows Azure Blob 儲存體服務使用 SQL Server 備份，就可以在與內部部署位置不同的區域建立異地備份，以便在發生影響內部部署位置的天然災害事件時使用。  
   
 -   此外，資料庫備份對於例行管理很有用，例如，將資料庫從一部伺服器複製到另一部伺服器、設定 [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] 或資料庫鏡像，以及封存。  
@@ -73,7 +66,7 @@ ms.lasthandoff: 01/18/2018
  寫入 SQL Server 備份並從中進行還原的磁碟或磁帶裝置。 SQL Server 備份也可以寫入 Microsoft Azure Blob 儲存體服務，而且會使用 **URL** 格式來指定備份檔案的目的地和名稱。 如需詳細資訊，請參閱 [使用 Microsoft Azure Blob 儲存體服務進行 SQL Server 備份及還原](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)。  
   
 **備份媒體**  
- 已寫入一個或多個備份的一個或多個磁帶或磁碟檔案。  
+ 已寫入一或多個備份的一或多個磁帶或磁碟檔案。  
   
 **資料備份**  
  整個資料庫 (資料庫備份)、部分資料庫 (部分備份) 或是一組資料檔案或檔案群組 (檔案備份) 中資料的備份。  
@@ -105,8 +98,8 @@ ms.lasthandoff: 01/18/2018
  ##  <a name="backup-and-restore-strategies"></a>備份與還原策略  
  備份和還原資料作業必須依特定環境自訂，而且也必須使用可用的資源。 因此，為了可靠地使用備份和還原作業進行復原，您需要擬定備份和還原策略。 設計良好的備份和還原策略可充分提高資料可用性，並使資料損失降至最少，同時考慮到您的特定業務需求。  
   
-#### <a name="important"></a>重要！ 
-**請將資料庫和備份放置於不同的裝置上。否則，如果包含資料庫的裝置故障，備份將無法使用。將資料和備份放置於不同的裝置也可以針對寫入備份和資料庫生產使用強化 I/O 效能。**  
+  > [!IMPORTANT] 
+  > 請將資料庫和備份放置於不同的裝置上。 否則，如果包含資料庫的裝置故障，備份將無法使用。 將資料和備份放置於不同的裝置，也可以針對寫入備份和資料庫生產使用強化 I/O 效能。**  
   
  備份和還原策略包含備份部分與還原部分。 策略的備份部分定義備份的類型和頻率、所需硬體的本質和速度、測試備份的方法，以及儲存備份媒體的位置與方法 (包括安全性考量)。 策略的還原部分定義誰負責執行還原，以及應該如何執行還原，以達到資料庫可用性並將資料損失降到最低的目標。 建議您寫下備份和還原程序，並將文件的副本保留在執行書中。  
   
@@ -152,12 +145,46 @@ ms.lasthandoff: 01/18/2018
    
 >  如需備份期間之並行限制的資訊，請參閱 [備份概觀 &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-overview-sql-server.md)。  
   
- 決定您需要的備份類型以及執行每一類型所需的頻率之後，建議您將一般備份排程為資料庫之資料庫維護計畫的一部分。 如需有關維護計畫以及如何為資料庫備份和記錄備份建立這些計畫的詳細資訊，請參閱＜ [Use the Maintenance Plan Wizard](../../relational-databases/maintenance-plans/use-the-maintenance-plan-wizard.md)＞。  
+ 決定您需要的備份類型以及執行每一類型所需的頻率之後，建議您將一般備份排程為資料庫之資料庫維護計畫的一部分。 如需有關維護計畫以及如何為資料庫備份和記錄備份建立這些計畫的詳細資訊，請參閱＜ [Use the Maintenance Plan Wizard](../../relational-databases/maintenance-plans/use-the-maintenance-plan-wizard.md)＞。
   
 ### <a name="test-your-backups"></a>測試備份！  
- 在您完成備份的測試之前，還不能算是具備還原策略。 您務必要將資料庫副本還原到測試系統，以針對每個資料庫完整測試備份策略。 您必須測試還原您要使用的每個備份類型。  
+ 在您完成備份的測試之前，還不能算是具備還原策略。 您務必要將資料庫副本還原到測試系統，以針對每個資料庫完整測試備份策略。 您必須測試還原您要使用的每個備份類型。
   
- 建議您維護每個資料庫的作業手冊。 這份作業手冊應記載備份位置、備份裝置名稱 (如果有的話)，以及還原測試備份所需的時間量。  
+ 建議您維護每個資料庫的作業手冊。 這份作業手冊應記載備份位置、備份裝置名稱 (如果有的話)，以及還原測試備份所需的時間量。
+
+## <a name="monitor-progress-with-xevent"></a>使用 xEvent 監視進度
+由於資料庫的大小和涉及作業的複雜度，備份和還原作業可能需要相當長的時間。 當任一項作業引發問題時，您可以使用 **backup_restore_progress_trace** 擴充事件來即時監視進度。 如需擴充事件的詳細資訊，請參閱[擴充事件](../extended-events/extended-events.md)。
+
+  >[!WARNING]
+  > 使用 backup_restore_progress_trace 擴充事件可能會造成效能問題，而且會耗用大量的磁碟空間。 請於短時間內使用、小心執行，並且在生產環境中實作之前徹底測試。
+
+
+```sql
+-- Create the backup_restore_progress_trace extended event esssion
+CREATE EVENT SESSION [BackupRestoreTrace] ON SERVER 
+ADD EVENT sqlserver.backup_restore_progress_trace
+ADD TARGET package0.event_file(SET filename=N'BackupRestoreTrace')
+WITH (MAX_MEMORY=4096 KB,EVENT_RETENTION_MODE=ALLOW_SINGLE_EVENT_LOSS,MAX_DISPATCH_LATENCY=5 SECONDS,MAX_EVENT_SIZE=0 KB,MEMORY_PARTITION_MODE=NONE,TRACK_CAUSALITY=OFF,STARTUP_STATE=OFF)
+GO
+
+-- Start the event session  
+ALTER EVENT SESSION [BackupRestoreTrace]  
+ON SERVER  
+STATE = start;  
+GO  
+
+-- Stop the event session  
+ALTER EVENT SESSION [BackupRestoreTrace]  
+ON SERVER  
+STATE = stop;  
+GO  
+```
+
+### <a name="sample-output-from-extended-event"></a>來自擴充事件的範例輸出 
+
+![備份 xevent 輸出的範例](media/back-up-and-restore-of-sql-server-databases/backup-xevent-example.png)
+![還原 xevent 輸出的範例](media/back-up-and-restore-of-sql-server-databases/restore-xevent-example.png)
+ 
   
 ## <a name="more-about-backup-tasks"></a>深入了解備份工作  
 -   [建立維護計畫](../../relational-databases/maintenance-plans/create-a-maintenance-plan.md)  

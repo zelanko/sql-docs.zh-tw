@@ -1,30 +1,26 @@
 ---
-title: "設定 cost threshold for parallelism 伺服器組態選項 | Microsoft Docs"
-ms.custom: 
+title: 設定 cost threshold for parallelism 伺服器組態選項 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/02/2017
-ms.prod: sql-non-specified
-ms.prod_service: database-engine
-ms.service: 
-ms.component: configure-windows
-ms.reviewer: 
+ms.prod: sql
+ms.prod_service: high-availability
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: configuration
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - cost threshold for parallelism option
 ms.assetid: dad21bee-fe28-41f6-9d2f-e6ababfaf9db
-caps.latest.revision: 
+caps.latest.revision: 31
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: f81d5323ba6d967cd81b8fcf0382f32066168a1d
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: f318a0d82a2fc131554f12d0d15f049d588a3928
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="configure-the-cost-threshold-for-parallelism-server-configuration-option"></a>設定 cost threshold for parallelism 伺服器組態選項
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -92,7 +88,7 @@ FROM sys.dm_os_sys_info
   
 2.  按一下 **[進階]** 節點。  
   
-3.  在 **[平行處理原則]**下，將 **[CostThresholdForParallelism]** 選項變更為所需的值。 輸入或選取 0 到 32767 之間的值。  
+3.  在 **[平行處理原則]** 下，將 **[CostThresholdForParallelism]** 選項變更為所需的值。 輸入或選取 0 到 32767 之間的值。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   

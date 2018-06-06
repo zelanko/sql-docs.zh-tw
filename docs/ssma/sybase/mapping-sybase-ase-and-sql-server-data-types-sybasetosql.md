@@ -1,16 +1,15 @@
 ---
-title: "對應 Sybase ASE 和 SQL Server 資料類型 (SybaseToSQL) |Microsoft 文件"
-ms.custom: 
+title: 對應 Sybase ASE 和 SQL Server 資料類型 (SybaseToSQL) |Microsoft 文件
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
 ms.component: ssma-sybase
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ssma
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 applies_to:
 - Azure SQL Database
 - SQL Server
@@ -18,22 +17,21 @@ helpviewer_keywords:
 - Mapping Sybase ASE Schemas to SQL Server Schemas
 - Type Mapping Settings
 ms.assetid: 784365d3-df4e-47ab-8ee0-d8392b52f510
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
-ms.workload: Inactive
-ms.openlocfilehash: 11a73d901763591930c485020f52d525a6163a41
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+manager: craigg
+ms.openlocfilehash: 8015121c04b75b0f99d56503715a43539db8dceb
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="mapping-sybase-ase-and-sql-server-data-types-sybasetosql"></a>對應 Sybase ASE 和 SQL Server 資料類型 (SybaseToSQL)
 Sybase Adaptive Server Enterprise (ASE) 資料庫類型的不同[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或 SQL Azure 資料庫類型。 當您轉換至 ASE 資料庫物件[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或 SQL Azure 物件，您必須指定如何將對應至 ASE 中的資料類型[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或 SQL Azure。 您可以接受預設資料類型對應，或您可以自訂對應，如下列各節中所示。  
   
 ## <a name="default-mappings"></a>預設對應  
-SSMA 會有一組預設的資料類型對應。 如需預設對應的清單，請參閱[專案設定 &#40;型別對應 &#41;&#40;SybaseToSQL &#41;](../../ssma/sybase/project-settings-type-mapping-sybasetosql.md).  
+SSMA 會有一組預設的資料類型對應。 如需預設對應的清單，請參閱[專案設定&#40;類型對應&#41; &#40;SybaseToSQL&#41;](../../ssma/sybase/project-settings-type-mapping-sybasetosql.md)。  
   
 ## <a name="type-mapping-inheritance"></a>型別對應的繼承  
 您可以自訂在專案層級、 物件類別層級 （例如所有預存程序） 或物件層級的型別對應。 設定被繼承自較高的層級中，除非在較低層級覆寫。 例如，如果您將對應**smallmoney**至**money**在專案層級專案中的所有物件會都使用此對應，除非您自訂物件類別層級或物件層級的對應。  
@@ -73,7 +71,7 @@ SSMA 會有一組預設的資料類型對應。 如需預設對應的清單，�
   
         某些類型需要目標資料類型長度。 如果需要，請輸入新的資料長度，以**取代**方塊。  
   
-    5.  按一下 [確定] 。  
+    5.  按一下 **[確定]**。  
   
 3.  若要編輯的資料型別對應，執行下列作業：  
   
@@ -97,9 +95,9 @@ SSMA 會有一組預設的資料類型對應。 如需預設對應的清單，�
   
         您無法移除繼承的對應。 不過，在特定物件或物件類別目錄的自訂對應會覆寫繼承的對應。  
   
-## <a name="next-steps"></a>Next Steps  
+## <a name="next-steps"></a>後續步驟  
 移轉程序的下一個步驟是為[建立評估報表](http://msdn.microsoft.com/en-us/eb996b7c-1eef-4f73-b5e6-2fa6faf7336c)或[轉換 Sybase ASE 資料庫物件，SQL Server 或 SQL Azure 的語法](http://msdn.microsoft.com/en-us/509cb65d-2f54-427a-83d7-37919cc4e3e3)。 如果您建立的評估報告，評估期間自動轉換 Sybase ASE 物件。  
   
-## <a name="see-also"></a>請參閱  
-[Sybase ASE 將資料庫移轉至 SQL Server-Azure SQL DB &#40;SybaseToSQL &#41;](../../ssma/sybase/migrating-sybase-ase-databases-to-sql-server-azure-sql-db-sybasetosql.md)  
+## <a name="see-also"></a>另請參閱  
+[Sybase ASE 資料庫移轉至 SQL Server-Azure SQL DB &#40;SybaseToSQL&#41;](../../ssma/sybase/migrating-sybase-ase-databases-to-sql-server-azure-sql-db-sybasetosql.md)  
   

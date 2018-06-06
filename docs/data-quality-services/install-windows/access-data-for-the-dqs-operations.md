@@ -1,29 +1,31 @@
 ---
-title: "存取用於 DQS 作業的資料 | Microsoft Docs"
-ms.custom: 
+title: 存取用於 DQS 作業的資料 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: data-quality-services
-ms.service: 
 ms.component: install-windows
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: data-quality-services
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- data-quality-services
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: 88dfb9ea-6321-4eaf-b9e4-45d36ef048f6
-caps.latest.revision: "15"
+caps.latest.revision: 15
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.workload: Inactive
-ms.openlocfilehash: bf4ccaec030d6db0db4b3e83b8051e4ca97b5b2f
-ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
+manager: craigg
+ms.openlocfilehash: c20133364867cd111dfca6f2ea1e22bfbe26673a
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="access-data-for-the-dqs-operations"></a>存取用於 DQS 作業的資料
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
   若要使用您的來源資料進行 [!INCLUDE[ssDQSnoversion](../../includes/ssdqsnoversion-md.md)] (DQS) 作業，並匯出已處理的資料，您可以執行下列任一項操作：  
   
 -   將來源資料複製到 DQS_STAGING_DATA 資料庫中的資料表/檢視，然後使用該資料進行 DQS 作業。 您也可以將已處理的資料匯出到 DQS_STAGING_DATA 資料庫的新資料表中。 若要這樣做，您的 Windows 使用者帳戶必須擁有對於 DQS_STAGING_DATA 資料庫的讀取/寫入權限。  

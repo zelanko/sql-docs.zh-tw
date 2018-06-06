@@ -1,33 +1,28 @@
 ---
-title: "支援 SQL Server Analysis Services 表格式模型中的資料來源 |Microsoft 文件"
-ms.custom: 
-ms.date: 02/22/2018
-ms.prod: analysis-services
-ms.prod_service: analysis-services, azure-analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
-ms.assetid: d6c2b1b3-91fc-4175-af25-509946dc7f24
-caps.latest.revision: 
-author: Minewiskan
+title: 支援 SQL Server Analysis Services 表格式 1200年模型中的資料來源 |Microsoft 文件
+ms.date: 05/07/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: tabular-models
+ms.topic: conceptual
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 8eb83ae398449673cfe22caeeaba0a7616cee02f
-ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
+ms.openlocfilehash: 31ef1eb37f85e3e9ec7a7ea7d7eadee03b6c9c20
+ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/10/2018
 ---
-# <a name="data-sources-supported-in-tabular-models"></a>支援表格式模型中的資料來源
+# <a name="data-sources-supported-in-sql-server-analysis-services-tabular-1200-models"></a>支援 SQL Server Analysis Services 中表格式 1200年模型的資料來源
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
-Azure Analysis Services，請參閱[支援 Azure Analysis Services 中的資料來源](https://docs.microsoft.com/azure/analysis-services/analysis-services-datasource)。
+  
+本文說明適用於 SQL Server Analysis Services 在 1200年的表格式模型和較低的相容性層級的資料來源的類型。 
 
-  這篇文章描述可以搭配表格式模型使用的資料來源的類型。  
+若是 1400年相容性層級模型，請參閱[支援 SQL Server Analysis Services 表格式 1400年模型中的資料來源](data-sources-supported-ssas-tabular-1400.md)。
+
+Azure Analysis Services，請參閱[支援 Azure Analysis Services 中的資料來源](https://docs.microsoft.com/azure/analysis-services/analysis-services-datasource)。
   
 ##  <a name="bkmk_supported_ds"></a> 記憶體中的表格式模型支援的資料來源  
 當您安裝 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]時，安裝程式不會安裝所列每種資料來源的提供者。 某些提供者可能會與您的電腦上的其他應用程式安裝。 在其他情況下，您可能需要下載並安裝提供者。  
@@ -73,3 +68,9 @@ Teradata 關聯式資料庫    |  Teradata V2R6 和更新版本     | .Net Data 
 包含不同資料來源中類似資料的資料行是在模型設計師中建立關聯性的基礎。 使用異質性資料來源時，所選擇之資料表應該具有資料行，可對應至包含相同或相似資料的其他資料來源中資料表。  
   
 OLE DB 提供者有時候可能提供大規模資料的效能更佳。 為相同的資料來源在不同的提供者之間選擇時，您應該先嘗試 OLE DB 提供者。  
+
+## <a name="see-also"></a>另請參閱
+
+[支援 SQL Server Analysis Services 中表格式 1400年模型的資料來源](data-sources-supported-ssas-tabular-1400.md)
+
+[Azure Analysis Services 中支援的資料來源](https://docs.microsoft.com/azure/analysis-services/analysis-services-datasource)   

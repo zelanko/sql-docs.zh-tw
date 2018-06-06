@@ -1,16 +1,14 @@
 ---
-title: "SELECT 子句 (Transact-SQL) | Microsoft Docs"
-ms.custom: 
+title: SELECT 子句 (Transact-SQL) | Microsoft Docs
+ms.custom: ''
 ms.date: 08/09/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
 ms.component: t-sql|queries
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: t-sql
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - SELECT Clause
@@ -29,16 +27,15 @@ helpviewer_keywords:
 - $ROWGUID keyword
 - queries [SQL Server], results
 ms.assetid: 2616d800-4853-4cf1-af77-d32d68d8c2ef
-caps.latest.revision: 
+caps.latest.revision: 54
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 34a1dee420dd8e409df2043f3278a32235656ace
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 098b5850d8570e10672518f2c93f8a2faeb8cd66
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="select-clause-transact-sql"></a>SELECT 子句 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -113,7 +110,7 @@ SELECT [ ALL | DISTINCT ]
 >  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 會傳回二進位表示法的使用者自訂類型值。 若要以字串或 XML 格式傳回使用者定義類型值，請使用 [CAST](../../t-sql/functions/cast-and-convert-transact-sql.md) 或 [CONVERT](../../t-sql/functions/cast-and-convert-transact-sql.md)。  
   
  { . | :: }  
- 指定 CLR 使用者自訂類型的方法、屬性或欄位。 使用 . (適用於執行個體 (非靜態) 方法、屬性或欄位)。 如果是靜態方法、屬性或欄位，請使用 ::。 若要叫用 CLR 使用者自訂類型的方法、屬性或欄位，您必須具有類型的 EXECUTE 權限。  
+ 指定 CLR 使用者自訂類型的方法、屬性或欄位。 使用 . 。 如果是靜態方法、屬性或欄位，請使用 ::。 若要叫用 CLR 使用者自訂類型的方法、屬性或欄位，您必須具有類型的 EXECUTE 權限。  
   
  *property_name*  
  這是 *udt_column_name* 的公用屬性。  

@@ -1,27 +1,19 @@
 ---
-title: "建立及自訂 Power Pivot 圖庫 |Microsoft 文件"
-ms.custom: 
-ms.date: 08/31/2015
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
-ms.assetid: b5cd35e0-3d8f-4784-9172-93d60c730321
-caps.latest.revision: 
-author: Minewiskan
+title: 建立及自訂 Power Pivot 圖庫 |Microsoft 文件
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: ppvt-sharepoint
+ms.topic: conceptual
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 11a372ebe9e40bc5800b8a38a35575aa66095dc7
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 3c705a54d24b358593b1f1fafec328e3d2fa6fd9
+ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="create-and-customize-power-pivot-gallery"></a>建立及自訂 Power Pivot 圖庫
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -113,7 +105,7 @@ ms.lasthandoff: 02/15/2018
   
 3.  **SharePoint 2010** ：在 [自訂檢視] 中，按一下 **[修改此檢視]**。  
   
-     **SharePoint 2013** ：在 **[管理檢視]**中，按一下 **[修改檢視]**。  
+     **SharePoint 2013** ：在 **[管理檢視]** 中，按一下 **[修改檢視]**。  
   
 4.  在 [排序] 中，指定將用來決定活頁簿會如何出現在清單中的準則。 依預設，文件會按照加入的順序列出。  
   

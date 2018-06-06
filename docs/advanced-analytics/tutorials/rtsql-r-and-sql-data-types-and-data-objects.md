@@ -1,29 +1,17 @@
 ---
-title: "R 與 SQL 資料類型和資料物件 (SQL 快速入門中的 R) |Microsoft 文件"
-ms.custom: 
-ms.date: 07/26/2017
-ms.reviewer: 
-ms.suite: sql
-ms.prod: machine-learning-services
-ms.prod_service: machine-learning-services
-ms.component: 
-ms.technology: 
-ms.tgt_pltfrm: 
+title: R 與 SQL 資料類型和資料物件 (SQL 快速入門中的 R) |Microsoft 文件
+ms.prod: sql
+ms.technology: machine-learning
+ms.date: 04/15/2018
 ms.topic: tutorial
-dev_langs:
-- R
-- SQL
-ms.assetid: 1a17fc5b-b8c5-498f-b8b1-3b7b43a567e1
-caps.latest.revision: 
-author: jeannt
-ms.author: jeannt
-manager: cgronlund
-ms.workload: On Demand
-ms.openlocfilehash: b0b0f8bd5502dfd70c690dc64d1881c057a97962
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+author: HeidiSteen
+ms.author: heidist
+manager: cgronlun
+ms.openlocfilehash: eeed977c3b942f0c23e4036f514018f54b966b70
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="r-and-sql-data-types-and-data-objects-r-in-sql-quickstart"></a>R 與 SQL 資料類型和資料物件 (SQL 快速入門中的 R)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -284,4 +272,4 @@ STDOUT message(s) from external script: $ Amount       : num  3400 16925 20350 1
 
 在下一個步驟中，您要學習如何將 R 函數套用至 SQL Server 資料。
 
-[使用 R 函式搭配 SQL Server 資料](../../advanced-analytics/tutorials/rtsql-using-r-functions-with-sql-server-data.md)
+[R 函式搭配 SQL Server 資料](../../advanced-analytics/tutorials/rtsql-using-r-functions-with-sql-server-data.md)

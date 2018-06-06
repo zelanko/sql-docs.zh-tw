@@ -1,27 +1,24 @@
 ---
-title: "SQL Server Always On 可用性群組部署模式 |Microsoft 文件"
+title: SQL Server Always On 可用性群組部署模式 |Microsoft 文件
 ms.custom: sql-linux
 ms.date: 10/16/2017
-ms.prod: sql-non-specified
-ms.prod_service: database-engine
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.prod: sql
+ms.component: ''
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: database-engine
-ms.tgt_pltfrm: 
+ms.technology: linux
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: edd75f68-dc62-4479-a596-57ce8ad632e5
-caps.latest.revision: 
+caps.latest.revision: 34
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 25d20ff22474c8df65184cab9ddd0a9f1efb7a8c
-ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
+ms.openlocfilehash: 36115370063292f3a3302dac4596222bb513fb67
+ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/13/2018
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="high-availability-and-data-protection-for-availability-group-configurations"></a>可用性群組組態的高可用性與資料保護
 
@@ -150,7 +147,7 @@ SQL Server 2017 導入了`REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT`叢集資�
 
 例如，可用性群組包含三個同步複本的一個主要複本和兩個同步次要複本。
 
-- `REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT` is 1; (3 / 2 -> 1).
+- `REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT` 為 1。(3 / 2-> 1)。
 
 - 所需的複本，以回應預先升級動作數目為 2;(3-1 = 2)。 
 

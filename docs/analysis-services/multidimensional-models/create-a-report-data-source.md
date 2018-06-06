@@ -1,31 +1,23 @@
 ---
-title: "建立報表資料來源 |Microsoft 文件"
-ms.custom: 
-ms.date: 03/01/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
-ms.assetid: bd6662c7-ffbe-479d-8944-3dc858340998
-caps.latest.revision: 
-author: Minewiskan
+title: 建立報表資料來源 |Microsoft 文件
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: multidimensional-models
+ms.topic: conceptual
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 598c2f0520d8fa9ae1215373b4ac29bd040d7d6c
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: bf4b8048392121c37b6f4f13584aa2fd18a90984
+ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="create-a-report-data-source"></a>建立報表資料來源
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-為了讓 Power View 連接到多維度模型，您必須在 SharePoint 文件庫中建立共用報表資料來源定義，也稱為 .rsds 檔。 .rsds 檔會指定 Analysis Services 伺服器執行個體的名稱、連接類型、連接字串，以及用來連接到多維度模型的認證。 當使用者按下 .rsds 時，新的空白 Power View 報表 (.rdlx 檔) 就會在瀏覽器中開啟。  
+  為了讓 Power View 連接到多維度模型，您必須在 SharePoint 文件庫中建立共用報表資料來源定義，也稱為 .rsds 檔。 .rsds 檔會指定 Analysis Services 伺服器執行個體的名稱、連接類型、連接字串，以及用來連接到多維度模型的認證。 當使用者按下 .rsds 時，新的空白 Power View 報表 (.rdlx 檔) 就會在瀏覽器中開啟。  
   
  若要建立 .rsds 連接，您必須已安裝 SQL Server 2012 (或更新版本) Reporting Services 以及適用於 SharePoint 2010 或 SharePoint 2013 的 Reporting Services 增益集。  
   

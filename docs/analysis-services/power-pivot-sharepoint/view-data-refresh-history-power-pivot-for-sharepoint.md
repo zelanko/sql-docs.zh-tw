@@ -1,36 +1,23 @@
 ---
-title: "檢視資料重新整理記錄 (Power Pivot for SharePoint) |Microsoft 文件"
-ms.custom: 
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
-helpviewer_keywords:
-- unattended data refresh [Analysis Services with SharePoint]
-- data refresh history [Analysis Services with SharePoint]
-- scheduled data refresh [Analysis Services with SharePoint]
-- data refresh [Analysis Services with SharePoint]
-ms.assetid: 4c8d8aa8-794d-4f72-ace3-78d0e688e1a5
-caps.latest.revision: 
-author: Minewiskan
+title: 檢視資料重新整理記錄 (Power Pivot for SharePoint) |Microsoft 文件
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: ppvt-sharepoint
+ms.topic: conceptual
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: fc4dcd60f4a37b1b3f01844369f210a81653160b
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 8b05a5f8fa173699aebe8567a329e7a93ee58975
+ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="view-data-refresh-history-power-pivot-for-sharepoint"></a>檢視資料重新整理記錄 (Power Pivot for SharePoint)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-資料重新整理記錄是 Excel 活頁簿中 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 資料之所有資料重新整理活動的記錄。 資料重新整理作業會依您提供的排程，在 SharePoint 伺服器陣列中 Analysis Services 伺服器執行個體上執行。 根據預設，資料重新整理記錄會保留一年。 但是，伺服器陣列管理員可以為使用量和事件記錄指定不同的保留原則，用來決定資料重新整理記錄的保存時間。  
+  資料重新整理記錄是 Excel 活頁簿中 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 資料之所有資料重新整理活動的記錄。 資料重新整理作業會依您提供的排程，在 SharePoint 伺服器陣列中 Analysis Services 伺服器執行個體上執行。 根據預設，資料重新整理記錄會保留一年。 但是，伺服器陣列管理員可以為使用量和事件記錄指定不同的保留原則，用來決定資料重新整理記錄的保存時間。  
   
  **[!INCLUDE[applies](../../includes/applies-md.md)]**  SharePoint 2013 | SharePoint 2010  
   

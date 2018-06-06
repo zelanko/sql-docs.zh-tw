@@ -1,16 +1,14 @@
 ---
-title: "sp_setnetname (TRANSACT-SQL) |Microsoft 文件"
-ms.custom: 
+title: sp_setnetname (TRANSACT-SQL) |Microsoft 文件
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: system-objects
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_setnetname
@@ -20,16 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_setnetname
 ms.assetid: f416ba81-3835-4588-b0a3-2fe75589490e
-caps.latest.revision: 
+caps.latest.revision: 31
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 7e9f439854cc1d3af3ca5db09981f2eba2af7a4f
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 8671aea34c2a6ffb4e8da9791a535f0dfd0d0baf
+ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="spsetnetname-transact-sql"></a>sp_setnetname (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,10 +45,10 @@ sp_setnetname
 ```  
   
 ## <a name="arguments"></a>引數  
- **@server= '** *伺服器* **'**  
+ **@server = '** *伺服器* **'**  
  這是使用者編寫的遠端預存程序呼叫語法所參考的遠端伺服器名稱。 中的只有一個資料列**sys.servers**必須存在才能使用此*伺服器*。 *server* 是 **sysname**，沒有預設值。  
   
- **@netname='** *network_name* **'**  
+ **@netname ='** *network_name* **'**  
  這是遠端預存程序呼叫的目標電腦網路名稱。 *network_name*是**sysname**，沒有預設值。  
   
  這個名稱必須符合 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 電腦名稱，且這個名稱可以包括 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 識別碼不允許使用的字元。  
@@ -94,10 +91,10 @@ EXEC sp_setnetname 'Win_1','Win-1';
 EXEC Win_1.master.dbo.sp_who;  
 ```  
   
-## <a name="see-also"></a>請參閱  
- [Database Engine 預存程序 &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
+## <a name="see-also"></a>另請參閱  
+ [Database Engine 預存程序&#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
  [sp_addlinkedserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md)   
- [sp_addserver &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/sp-addserver-transact-sql.md)   
+ [sp_addserver &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-addserver-transact-sql.md)   
  [系統預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

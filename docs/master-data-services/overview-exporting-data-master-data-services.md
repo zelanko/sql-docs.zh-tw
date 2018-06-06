@@ -1,34 +1,35 @@
 ---
-title: "概觀：匯出資料 (Master Data Services) | Microsoft Docs"
-ms.custom: 
+title: 概觀：匯出資料 (Master Data Services) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: mds
-ms.service: 
 ms.component: non-specific
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - master-data-services
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - exporting data [Master Data Services]
 - subscription views [Master Data Services]
 - subscription views [Master Data Services], about subscription views
 ms.assetid: 8b74409a-ea70-45f8-84c7-da6905e4901a
-caps.latest.revision: 
+caps.latest.revision: 12
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 1d2a7c7eccfffebd6e3d4000b302c1f9241ddc9d
-ms.sourcegitcommit: 6ac1956307d8255dc544e1063922493b30907b80
+ms.openlocfilehash: 6e2c492f5f719962d791b544cb3577bd84aac18b
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="overview-exporting-data-master-data-services"></a>概觀：匯出資料 (Master Data Services)
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
   本文將介紹訂閱檢視格式類型，以及如何判斷何時因模型物件變更而需要編輯檢視。  
   
  您可以建立訂閱檢視，將 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 資料匯出至訂閱系統 (例如 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)])。 您可以使用訂閱系統來檢視 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 資料庫中的資料。  如需如何建立訂閱檢視的資訊，請參閱 [建立訂閱檢視以匯出資料 &#40;Master Data Services&#41;](../master-data-services/create-a-subscription-view-to-export-data-master-data-services.md)  

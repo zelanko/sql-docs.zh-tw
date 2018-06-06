@@ -1,32 +1,33 @@
 ---
-title: "啟動 dta 命令提示字元公用程式和微調工作負載 |Microsoft 文件"
-ms.custom: 
+title: 啟動 dta 命令提示字元公用程式和微調工作負載 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
 ms.component: dta
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: dbe-query-tuning
-ms.tgt_pltfrm: 
-ms.topic: article
-applies_to: SQL Server 2016
-helpviewer_keywords: Database Engine [SQL Server], tutorials
+ms.technology: performance
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
+applies_to:
+- SQL Server 2016
+helpviewer_keywords:
+- Database Engine [SQL Server], tutorials
 ms.assetid: f34a5acf-1f3b-4484-a770-6470cb925ab0
-caps.latest.revision: "28"
+caps.latest.revision: 28
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: b4adf756444c22146108fead4f607c20c6108dc3
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
-ms.translationtype: MT
+ms.openlocfilehash: 36b48b9a7798acb5ac602bbe8a867e48abb86ac2
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.translationtype: MTE
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/03/2018
 ---
-# <a name="lesson-3-1---starting-the-dta-command-prompt-utility-and-tuning-a-workload"></a>課程 3-1-啟動 dta 命令提示字元公用程式和微調工作負載
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]這項工作會引導您逐步啟動**dta**公用程式，檢視它的說明，然後利用它來微調工作負載從命令提示字元。 它會使用您在 Database Engine Tuning Advisor 圖形化使用者介面 (GUI) 的 [微調工作負載](../../tools/dta/lesson-1-1-tuning-a-workload.md)練習中所建立的 MyScript.sql 工作負載。  
+# <a name="lesson-3-1---starting-the-dta-command-prompt-utility-and-tuning-a-workload"></a>課程 3-1 - 啟動 dta 命令提示字元公用程式和調整工作負載
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+這項工作會帶您逐步啟動 **dta** 公用程式、檢視它的說明，再從命令提示字元之下，利用它來微調工作負載。 它會使用您在 Database Engine Tuning Advisor 圖形化使用者介面 (GUI) 的 [微調工作負載](../../tools/dta/lesson-1-1-tuning-a-workload.md)練習中所建立的 MyScript.sql 工作負載。  
   
 本教學課程使用 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 範例資料庫。 基於安全性的考量，依預設，不會安裝範例資料庫。 若要安裝範例資料庫，請參閱＜ [安裝 SQL Server 範例和範例資料庫](http://sqlserversamples.codeplex.com)＞。  
   

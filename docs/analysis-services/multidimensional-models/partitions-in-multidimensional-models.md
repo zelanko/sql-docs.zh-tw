@@ -1,31 +1,23 @@
 ---
-title: "多維度模型中的分割區 |Microsoft 文件"
-ms.custom: 
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
-ms.assetid: 26e01dc7-fa49-4b1f-99eb-7799d1b4dcd2
-caps.latest.revision: 
-author: Minewiskan
+title: 多維度模型中的分割區 |Microsoft 文件
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: multidimensional-models
+ms.topic: conceptual
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 6984e77d1969db95ac8b8659ba841085ce7ef7c8
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 8efdd2dcf936270a93ffd9cac694fd2aaccbe6e1
+ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="partitions-in-multidimensional-models"></a>多維度模型中的分割區
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-在 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]中， *「分割區」* (Partition) 提供載入量值群組之事實資料的實體儲存體。 系統會自動為每個量值群組建立一個分割區，但通常會建立其他分割區以進一步分割資料，因此處理效能更佳且查詢效能更快。  
+  在 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]中， *「分割區」* (Partition) 提供載入量值群組之事實資料的實體儲存體。 系統會自動為每個量值群組建立一個分割區，但通常會建立其他分割區以進一步分割資料，因此處理效能更佳且查詢效能更快。  
   
  因為可以在一部或多部伺服器上獨立及平行處理分割區，因此處理進行得更有效率。 因為可設定每個分割區使用儲存模式和彙總最佳化，藉此縮短回應時間，因此查詢執行速度更快。 例如，針對包含較新資料的分割區選擇 MOLAP 儲存，通常會比 ROLAP 更快。 同樣地，如果您依日期分割，包含較新資料的分割區，這會比包含較舊資料 (較少存取) 的分割區，具有更高的最佳化。 請注意，改變分割區使用的儲存和彙總設計，會對未來的合併作業造成負面影響。 因此最佳化個別分割區之前，請務必考慮合併是否為分割區管理策略中不可或缺的一部分。  
   
@@ -47,17 +39,17 @@ ms.lasthandoff: 02/15/2018
  彙總是 Cube 資料的預先計算摘要，可幫助啟用 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 以提供快速查詢回應。 您可以透過設定儲存限制、改善效能，或在彙總建立程序執行一段時間後隨時停止，以控制為量值群組建立的彙總數目。 彙總愈多不一定愈好。 每個新彙總都會佔用磁碟空間並增加處理時間。 建議建立彙總以改善 30% 的效能，然後僅在測試或經驗需要時，才增加數目。如需詳細資訊，請參閱[設計彙總 &#40;Analysis Services - 多維度&#41;](../../analysis-services/multidimensional-models/designing-aggregations-analysis-services-multidimensional.md)。  
   
 ## <a name="partition-merging-and-editing"></a>分割區合併和編輯  
- 如果兩個分割區使用相同的彙總設計，您就可以將兩者合併為一個分割區。 例如，假設您有一個依照月份分割的存貨維度，則在每一個月底，您可以合併該月分割區和現有的年初至今的分割區。 如此，可以快速處理和分析當月分割區，而當年剩餘的月份只需要在合併時重新處理即可。 重新處理需要較長的處理時間，所以不需要經常執行。 如需管理分割區合併處理序的詳細資訊，請參閱[Analysis Services &#40; 中的 合併資料分割SSAS-多維度 &#41;](../../analysis-services/multidimensional-models/merge-partitions-in-analysis-services-ssas-multidimensional.md). 若要編輯 cube 分割區使用**資料分割**索引標籤，Cube 設計師中，請參閱[編輯或刪除分割區 &#40;Analysis Services-多維度 &#41;](../../analysis-services/multidimensional-models/edit-or-delete-partitions-analyisis-services-multidimensional.md).  
+ 如果兩個分割區使用相同的彙總設計，您就可以將兩者合併為一個分割區。 例如，假設您有一個依照月份分割的存貨維度，則在每一個月底，您可以合併該月分割區和現有的年初至今的分割區。 如此，可以快速處理和分析當月分割區，而當年剩餘的月份只需要在合併時重新處理即可。 重新處理需要較長的處理時間，所以不需要經常執行。 如需管理分割區合併處理序的詳細資訊，請參閱[Analysis Services & #40; 中的 合併資料分割SSAS-多維度 & #41;](../../analysis-services/multidimensional-models/merge-partitions-in-analysis-services-ssas-multidimensional.md). 若要編輯 cube 分割區使用**資料分割**索引標籤，Cube 設計師中，請參閱[編輯或刪除分割區 & #40;Analysis Services-多維度 & #41;](../../analysis-services/multidimensional-models/edit-or-delete-partitions-analyisis-services-multidimensional.md).  
   
 ## <a name="related-topics"></a>相關主題  
   
 |主題|說明|  
 |-----------|-----------------|  
-|[建立及管理本機分割區 &#40;Analysis Services &#41;](../../analysis-services/multidimensional-models/create-and-manage-a-local-partition-analysis-services.md)|包含如何使用篩選或不含重複資料的不同事實資料表，來分割資料的詳細資訊。|  
-|[設定資料分割儲存體 &#40;Analysis Services-多維度 &#41;](../../analysis-services/multidimensional-models/set-partition-storage-analysis-services-multidimensional.md)|描述如何設定分割區的儲存。|  
-|[編輯或刪除分割區 &#40;Analysis Services-多維度 &#41;](../../analysis-services/multidimensional-models/edit-or-delete-partitions-analyisis-services-multidimensional.md)|描述如何檢視和編輯分割區。|  
-|[合併資料分割中 Analysis Services &#40;SSAS-多維度 &#41;](../../analysis-services/multidimensional-models/merge-partitions-in-analysis-services-ssas-multidimensional.md)|包含如何合併含有不同事實資料表或不同資料配量的分割區，而不會產生重複資料。|  
+|[建立及管理本機分割區 & #40;Analysis Services & #41;](../../analysis-services/multidimensional-models/create-and-manage-a-local-partition-analysis-services.md)|包含如何使用篩選或不含重複資料的不同事實資料表，來分割資料的詳細資訊。|  
+|[設定資料分割儲存體 & #40;Analysis Services-多維度 & #41;](../../analysis-services/multidimensional-models/set-partition-storage-analysis-services-multidimensional.md)|描述如何設定分割區的儲存。|  
+|[編輯或刪除分割區 & #40;Analysis Services-多維度 & #41;](../../analysis-services/multidimensional-models/edit-or-delete-partitions-analyisis-services-multidimensional.md)|描述如何檢視和編輯分割區。|  
+|[合併資料分割中 Analysis Services & #40;SSAS-多維度 & #41;](../../analysis-services/multidimensional-models/merge-partitions-in-analysis-services-ssas-multidimensional.md)|包含如何合併含有不同事實資料表或不同資料配量的分割區，而不會產生重複資料。|  
 |[設定分割區回寫](../../analysis-services/multidimensional-models/set-partition-writeback.md)|提供啟用分割區寫入功能的指示。|  
-|[建立及管理遠端分割區 &#40;Analysis Services &#41;](../../analysis-services/multidimensional-models/create-and-manage-a-remote-partition-analysis-services.md)|描述如何建立及管理遠端分割區。|  
+|[建立及管理遠端分割區 & #40;Analysis Services & #41;](../../analysis-services/multidimensional-models/create-and-manage-a-remote-partition-analysis-services.md)|描述如何建立及管理遠端分割區。|  
   
   

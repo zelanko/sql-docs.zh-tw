@@ -1,27 +1,24 @@
 ---
-title: "使用不含任何參數的 SQL 陳述式 |Microsoft 文件"
-ms.custom: 
+title: 使用不含任何參數的 SQL 陳述式 |Microsoft 文件
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
-ms.component: jdbc
-ms.reviewer: 
+ms.prod: sql
+ms.prod_service: connectivity
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: connectivity
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: 4b0728bd-059b-4b71-895c-999335bc7427
-caps.latest.revision: "10"
+caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
-ms.workload: Inactive
-ms.openlocfilehash: 16983e560714bdfb7046da72b04bc4f57f506df5
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+manager: craigg
+ms.openlocfilehash: bd6fbcc2813fbd1e19078e94e4ba23b002e2818c
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="using-an-sql-statement-with-no-parameters"></a>使用不含參數的 SQL 陳述式
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -34,7 +31,7 @@ ms.lasthandoff: 11/18/2017
   
  如需有關如何使用結果集的詳細資訊，請參閱[JDBC 驅動程式管理結果集](../../connect/jdbc/managing-result-sets-with-the-jdbc-driver.md)。  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [搭配使用陳述式與 SQL](../../connect/jdbc/using-statements-with-sql.md)  
   
   

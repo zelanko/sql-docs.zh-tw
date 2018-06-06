@@ -1,16 +1,14 @@
 ---
-title: "STEquals (geometry 資料型別) | Microsoft Docs"
-ms.custom: 
+title: STEquals (geometry 資料型別) | Microsoft Docs
+ms.custom: ''
 ms.date: 08/03/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
 ms.component: t-sql|spatial-geography
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: t-sql
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - STEquals (geometry Data Type)
@@ -20,16 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - STEquals (geometry Data Type)
 ms.assetid: 808f0e25-9e68-4ba7-9329-07ec950698f3
-caps.latest.revision: 
+caps.latest.revision: 25
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 8e7aadcdf5d0527fe46337f56c5e98017afc4dd7
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: ed87f7664cc30707ecb9954ddcf414b212d64b91
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="stequals-geometry-data-type"></a>STEquals (geometry 資料類型)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -53,7 +50,7 @@ ms.lasthandoff: 01/25/2018
  CLR 傳回類型：**SqlBoolean**  
   
 ## <a name="remarks"></a>Remarks  
- 如果 **geometry** 執行個體的空間參考識別碼 (SRID) 不相符，這個方法一定會傳回 Null。  
+ 如果 **geometry** 執行個體的空間參考識別碼 (SRID) 不相符，這個方法一律會傳回 Null。  
   
 ## <a name="examples"></a>範例  
  下列範例會建立兩個 `geometry` 執行個體 (兩者的 `STGeomFromText()` 相同，但兩者並不完全相同)，並使用 `STEquals()` 來測試其是否相等。  

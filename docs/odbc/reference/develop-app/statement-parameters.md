@@ -1,28 +1,26 @@
 ---
-title: "陳述式參數 |Microsoft 文件"
-ms.custom: 
+title: 陳述式參數 |Microsoft 文件
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
-ms.component: odbc
-ms.reviewer: 
+ms.prod: sql
+ms.prod_service: connectivity
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
-ms.topic: article
-helpviewer_keywords: statement parameters [ODBC]
+ms.technology: connectivity
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
+helpviewer_keywords:
+- statement parameters [ODBC]
 ms.assetid: 58d5b166-2578-4699-a560-1f1e6d86c49a
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
-ms.workload: Inactive
-ms.openlocfilehash: 08d2365291bf6c402ead138d6182c83de5f27896
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+manager: craigg
+ms.openlocfilehash: 3e3c7aa5880c80dff412a69d51cda42d24824e01
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="statement-parameters"></a>陳述式參數
 A*參數*是 SQL 陳述式中的變數。 例如，假設零件資料表中具有名為 PartID、 描述和價格的資料行。 若要將組件不含參數需要建構 SQL 陳述式，例如：  

@@ -1,33 +1,30 @@
 ---
-title: "ADOStreamConstruction 介面 |Microsoft 文件"
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
+title: ADOStreamConstruction 介面 |Microsoft 文件
+ms.prod: sql
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
-ms.custom: 
+ms.technology: connectivity
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 apitype: COM
 f1_keywords:
 - ADOStreamConstruction
 helpviewer_keywords:
 - ADOStreamConstruction interface [ADO]
 ms.assetid: 92f5a939-3e1a-4b14-a9dd-90e6ce2dec74
-caps.latest.revision: 
+caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 87d609abefd972ec6fe3c9443f658ffbcc069511
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 55e7f81233b7cc5cbdf79ea2a71858b3376f46f5
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="adostreamconstruction-interface"></a>ADOStreamConstruction 介面
 **ADOStreamConstruction**介面用來建構 ADO**資料流**從 OLE DB 物件**IStream** C/c + + 應用程式中的物件。  
@@ -75,7 +72,7 @@ adoStrConstruct->put_Stream(pUnk);
 ## <a name="requirements"></a>需求  
  **版本：** ADO 2.0 或更新版本  
   
- **Library:** msado15.dll  
+ **程式庫：** msado15.dll  
   
  **UUID:** 00000283-0000-0010-8000-00AA006D2EA4  
   

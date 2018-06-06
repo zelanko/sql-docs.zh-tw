@@ -1,40 +1,24 @@
 ---
-title: "座標軸會元素 (XMLA) |Microsoft 文件"
-ms.custom: 
-ms.date: 03/16/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services, azure-analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+title: 座標軸會元素 (XMLA) |Microsoft 文件
+ms.date: 05/08/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: xmla
 ms.topic: reference
-apiname: Axes Element
-apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
-apitype: Schema
-applies_to: SQL Server 2016 Preview
-f1_keywords:
-- Axes
-- http://schemas.microsoft.com/analysisservices/2003/engine#Axes
-- microsoft.xml.analysis.axes
-- urn:schemas-microsoft-com:xml-analysis#Axes
-helpviewer_keywords: Axes element
-ms.assetid: 2005d06a-f8a2-4b4f-8c0d-2f7f73eb6f5c
-caps.latest.revision: "21"
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: d8e1f992cd7cf9a6aceb1490d78aa0fba49b7758
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 3a8dfff1c8a551157661bcb1de5700bf51a7f914
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34574910"
 ---
 # <a name="axes-element-xmla"></a>Axes 元素 (XMLA)
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]包含集合[軸](../../../analysis-services/xmla/xml-elements-properties/axis-element-xmla.md)項目代表所包含的軸資料[根](../../../analysis-services/xmla/xml-elements-properties/root-element-xmla.md)項目，會使用[MDDataSet](../../../analysis-services/xmla/xml-data-types/mddataset-data-type-xmla.md)資料型別。  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
+  包含集合[軸](../../../analysis-services/xmla/xml-elements-properties/axis-element-xmla.md)項目代表所包含的軸資料[根](../../../analysis-services/xmla/xml-elements-properties/root-element-xmla.md)項目，會使用[MDDataSet](../../../analysis-services/xmla/xml-data-types/mddataset-data-type-xmla.md)資料型別。  
   
 ## <a name="syntax"></a>語法  
   
@@ -65,7 +49,7 @@ ms.lasthandoff: 01/08/2018
 |子元素|[Axis](../../../analysis-services/xmla/xml-elements-properties/axis-element-xmla.md)|  
   
 ## <a name="remarks"></a>備註  
- 在下**座標軸**項目，**軸**項目會出現在資料集中，由零開始的順序列出。 **AxisFormat** XMLA 屬性設定會決定如何**軸**格式化的項目。 如需有關**AxisFormat**屬性，請參閱[支援 XMLA 屬性 &#40;XMLA &#41;](../../../analysis-services/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties.md).  
+ 在下**座標軸**項目，**軸**項目會出現在資料集中，由零開始的順序列出。 **AxisFormat** XMLA 屬性設定會決定如何**軸**格式化的項目。 如需有關**AxisFormat**屬性，請參閱[支援 XMLA 屬性&#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties.md)。  
   
  軸代表 Tuple 集合，而且集合中的所有 Tuple 都具有相同的維度性。 您可以使用不同的方式來表示集合，而且會產生不同的優點。 例如，下列四個 Tuple 的集合可以表示成二維 Tuple 的集合或兩個一維集合的笛卡兒乘積。  
   
@@ -120,8 +104,8 @@ CrossProduct (
   
  用戶端可使用**AxisFormat**屬性來要求特定表示法。  
   
-## <a name="see-also"></a>請參閱  
- [MDDataSet 資料類型 &#40;XMLA &#41;](../../../analysis-services/xmla/xml-data-types/mddataset-data-type-xmla.md)   
- [屬性 &#40;XMLA &#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
+## <a name="see-also"></a>另請參閱
+ [MDDataSet 資料類型&#40;XMLA&#41;](../../../analysis-services/xmla/xml-data-types/mddataset-data-type-xmla.md)   
+ [屬性&#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
   
   

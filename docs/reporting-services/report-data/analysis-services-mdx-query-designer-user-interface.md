@@ -1,16 +1,15 @@
 ---
-title: "Analysis Services MDX 查詢設計工具使用者介面 | Microsoft Docs"
-ms.custom: 
+title: Analysis Services MDX 查詢設計工具使用者介面 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: report-data
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 f1_keywords:
 - "10012"
 - sql13.rtp.rptdesigner.dataview.asquerydesigner.f1
@@ -18,16 +17,15 @@ helpviewer_keywords:
 - MDX [Reporting Services], creating datasets
 - query designers [Reporting Services]
 ms.assetid: d9c7c0b3-fce4-4a65-b679-408273e6a925
-caps.latest.revision: "38"
+caps.latest.revision: 38
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 6a20a5a33ac90263b1b399ebfa8725a88383f5b8
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: cdf356065bf8ed694323d430b293608d8343e701
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="analysis-services-mdx-query-designer-user-interface"></a>Analysis Services MDX 查詢設計工具使用者介面
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 提供了圖形化查詢設計工具，可用來建立 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 資料來源的多維度運算式 (MDX) 查詢和資料採礦運算式 (DMX) 查詢。 此主題即描述 MDX 查詢設計工具。 如需 DMX 查詢設計工具的詳細資訊，請參閱 [Analysis Services Connection Type for DMX &#40;SSRS&#41;](../../reporting-services/report-data/analysis-services-connection-type-for-dmx-ssrs.md)。  
@@ -104,7 +102,7 @@ ms.lasthandoff: 01/09/2018
 |[查詢] 窗格|顯示查詢文字。|  
 |結果窗格|顯示執行查詢的結果。|  
   
- [中繼資料] 窗格會顯示 **[中繼資料]**、 **[函數]**和 **[範本]**的索引標籤。 從 **[中繼資料]** 索引標籤中，可以將維度、階層、KPI 和量值拖曳至 [MDX 查詢] 窗格中。 從 **[函數]** 索引標籤中，可以將函數拖曳至 [MDX 查詢] 窗格中。 從 **[範本]** 索引標籤中，可以將 MDX 範本加入至 [MDX 查詢] 窗格中。 當您執行查詢時，[結果] 窗格會顯示 MDX 查詢的結果。  
+ [中繼資料] 窗格會顯示 **[中繼資料]**、 **[函數]** 和 **[範本]** 的索引標籤。 從 **[中繼資料]** 索引標籤中，可以將維度、階層、KPI 和量值拖曳至 [MDX 查詢] 窗格中。 從 **[函數]** 索引標籤中，可以將函數拖曳至 [MDX 查詢] 窗格中。 從 **[範本]** 索引標籤中，可以將 MDX 範本加入至 [MDX 查詢] 窗格中。 當您執行查詢時，[結果] 窗格會顯示 MDX 查詢的結果。  
   
  您可以擴充在 [設計] 模式下產生的預設 MDX 查詢，以包含其他成員屬性和資料格屬性。 當您執行查詢時，這些值不會出現在結果集中。 但是，這些值會傳回 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ，而且您可以在報表中使用這些值。 如需詳細資訊，請參閱 [Analysis Services 資料庫的擴充欄位屬性 &#40;SSRS&#41;](../../reporting-services/report-data/extended-field-properties-for-an-analysis-services-database-ssrs.md)。  
   

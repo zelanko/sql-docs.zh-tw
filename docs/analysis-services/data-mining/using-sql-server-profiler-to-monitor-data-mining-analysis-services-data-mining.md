@@ -1,31 +1,23 @@
 ---
-title: "使用 SQL Server Profiler 監視資料採礦 |Microsoft 文件"
-ms.custom: 
-ms.date: 03/01/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
-helpviewer_keywords: Profiler [SQL Server Profiler], Analysis Services
-ms.assetid: 655ac93c-5c5c-4565-914b-915327f7d349
-caps.latest.revision: "15"
-author: Minewiskan
+title: 使用 SQL Server Profiler 監視資料採礦 |Microsoft 文件
+ms.date: 05/08/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: data-mining
+ms.topic: conceptual
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: ed8d92643804b0b73c6d73d304d1cdedfe53b39e
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: a40a02e3fd19ac853c7c4b291bbc3875229c747f
+ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="using-sql-server-profiler-to-monitor-data-mining-analysis-services---data-mining"></a>使用 SQL Server Profiler 監視資料採礦 (Analysis Services - 資料採礦)
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]如果您有必要的權限，您可以使用 SQL Server Profiler 來監視會發出為要求傳送至 SQL Server Analysis Services 執行個體的資料採礦活動。 資料採礦活動可包括模型或結構的處理、預測查詢或內容查詢，或是新模型或結構的建立。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+  如果您有必要的權限，可以使用 SQL Server Profiler 來監視資料採礦活動，這些活動會當做傳送給 SQL Server Analysis Services 執行個體的要求來發行。 資料採礦活動可包括模型或結構的處理、預測查詢或內容查詢，或是新模型或結構的建立。  
   
  SQL Server Profiler 會使用 [追蹤] 監視從多個用戶端傳送的要求，包括 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]、SQL Server Management Studio、Web 服務或是適用於 Excel 的資料採礦增益集，只要這些活動全都使用相同的 SQL Server Analysis Services 執行個體即可。 您必須針對您想要監視的每一個 SQL Server Analysis Services 執行個體建立個別的追蹤。 如需追蹤及如何使用 SQL Server Profiler 的一般資訊，請參閱[使用 SQL Server Profiler 監視 Analysis Services](../../analysis-services/instances/use-sql-server-profiler-to-monitor-analysis-services.md)。  
   
@@ -34,7 +26,7 @@ ms.lasthandoff: 01/08/2018
 ## <a name="using-traces-to-monitor-data-mining"></a>使用追蹤來監視資料採礦  
  當您在追蹤內擷取資訊時，可以指定該資訊是要儲存到檔案中還是 SQL Server 執行個體的資料表中。 不論您用來儲存資料的方法為何，您都可以使用 SQL Server Profiler 來檢視追蹤及根據事件篩選。 下表列出在預設 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 追蹤內對於資料採礦有興趣的一些事件和子類別。  
   
-|EventClass|EventSubclass|描述|  
+|EventClass|EventSubclass|Description|  
 |----------------|-------------------|-----------------|  
 |**查詢開始**<br /><br /> **查詢結束**|**0 - MDXQuery**|包含所有 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 預存程序呼叫的文字。|  
 |**查詢開始**<br /><br /> **查詢結束**|**1 - DMXQuery**|包含資料採礦延伸模組 (DMX) 陳述式的文字和結果。|  
@@ -46,7 +38,7 @@ ms.lasthandoff: 01/08/2018
   
  您也可以藉由檢視追蹤記錄內的命令陳述式，查看用戶端傳送給 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 伺服器之複雜陳述式的語法，包括系統預存程序的呼叫。 此資訊對於偵錯很有幫助，或者您也可以使用有效的陳述式當做範本來建立新的預測查詢或模型。 如需您可以透過追蹤擷取之預存程序呼叫的一些範例，請參閱 [叢集模型查詢範例](../../analysis-services/data-mining/clustering-model-query-examples.md)。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [監視 Analysis Services 執行個體](../../analysis-services/instances/monitor-an-analysis-services-instance.md)   
  [使用 SQL Server 擴充事件監視 Analysis Services](../../analysis-services/instances/monitor-analysis-services-with-sql-server-extended-events.md)  
   

@@ -1,17 +1,16 @@
 ---
-title: "介面區組態 | Microsoft Docs"
-ms.custom: 
+title: 介面區組態 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
 ms.component: security
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - reducing attackable surface area
 - upgrading SQL Server, security
@@ -20,19 +19,19 @@ helpviewer_keywords:
 - attackable surface area [SQL Server]
 - installing SQL Server, security
 ms.assetid: f741169c-1453-4ad2-830b-bf2be27d712f
-caps.latest.revision: 
+caps.latest.revision: 79
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: e16dac870c31a7d409189d29b84f88686a71db21
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 3adc1c1bdc8faf8f0f03c6fc78eb51352c05066a
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="surface-area-configuration"></a>介面區組態
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 在新安裝的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 預設設定中，許多功能都不會啟用。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 為了將可能會遭受惡意使用者攻擊的功能數目最小化，因此會選擇性地只安裝與啟動主要的服務與功能。 系統管理員可在安裝期間變更這些預設值，也可以選擇性地啟用或停用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]之執行中執行個體的功能。 此外，從其他電腦連接時，某些元件可能要等到設定通訊協定之後才能使用。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  在新安裝的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]預設組態中，許多功能都不會啟用。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 為了將可能會遭受惡意使用者攻擊的功能數目最小化，因此會選擇性地只安裝與啟動主要的服務與功能。 系統管理員可在安裝期間變更這些預設值，也可以選擇性地啟用或停用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]之執行中執行個體的功能。 此外，從其他電腦連接時，某些元件可能要等到設定通訊協定之後才能使用。  
   
 > [!NOTE]  
 >  與新安裝不同的是，在升級處理期間不會關閉任何現有的服務或功能，但是在升級完成後可能會套用其他介面區組態選項。  
@@ -67,7 +66,7 @@ ms.lasthandoff: 11/21/2017
   
  若要定期檢查 Facet 的組態，請使用以原則為基礎的管理。 如需原則式管理的詳細資訊，請參閱 [使用原則式管理來管理伺服器](../../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md)。  
   
- 您也可以使用 **sp_configure** 預存程序來設定 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 選項。 如需詳細資訊，請參閱[伺服器組態選項 &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)。  
+ 您也可以使用 **sp_configure** 預存程序來設定 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 選項。 如需詳細資訊，請參閱 [伺服器設定選項 &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)伺服器組態選項。  
   
  變更 [!INCLUDE[ssRS](../../includes/ssrs-md.md)] 的 **EnableIntegrated Security** 屬性時，請使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中的屬性設定。 若要變更 [排程事件和報表傳遞] 屬性以及 [Web 服務和 HTTP 存取] 屬性時，請編輯 **RSReportServer.config** 組態檔。  
   

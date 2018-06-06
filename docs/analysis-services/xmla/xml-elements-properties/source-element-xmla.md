@@ -1,39 +1,24 @@
 ---
-title: "Source 元素 (XMLA) |Microsoft 文件"
-ms.custom: 
-ms.date: 03/06/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services, azure-analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+title: Source 元素 (XMLA) |Microsoft 文件
+ms.date: 05/08/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: xmla
 ms.topic: reference
-apiname: Source Element
-apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
-apitype: Schema
-applies_to: SQL Server 2016 Preview
-f1_keywords:
-- urn:schemas-microsoft-com:xml-analysis#Source
-- http://schemas.microsoft.com/analysisservices/2003/engine#Source
-- microsoft.xml.analysis.source
-helpviewer_keywords: Source element
-ms.assetid: 4d4665ae-e20f-4baf-ab0f-848660caf500
-caps.latest.revision: "17"
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 5e3c02c0702b343ca0271bdc61601631d07dd68f
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 8aaef002e649e01a51b99bd007ae5459e8cdbd97
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34576420"
 ---
 # <a name="source-element-xmla"></a>Source 元素 (XMLA)
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]表示要合併期間的來源資料分割[MergePartitions](../../../analysis-services/xmla/xml-elements-commands/mergepartitions-element-xmla.md)命令。  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
+  表示要合併期間的來源資料分割[MergePartitions](../../../analysis-services/xmla/xml-elements-commands/mergepartitions-element-xmla.md)命令。  
   
 ## <a name="syntax"></a>語法  
   
@@ -84,8 +69,8 @@ ms.lasthandoff: 01/08/2018
 </MergePartitions>  
 ```  
   
-## <a name="see-also"></a>請參閱  
- [目標項目 &#40;XMLA &#41;](../../../analysis-services/xmla/xml-elements-properties/target-element-xmla.md)   
- [屬性 &#40;XMLA &#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
+## <a name="see-also"></a>另請參閱
+ [目標項目&#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/target-element-xmla.md)   
+ [屬性&#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
   
   

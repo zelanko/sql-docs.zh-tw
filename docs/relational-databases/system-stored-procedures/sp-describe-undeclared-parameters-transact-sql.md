@@ -1,16 +1,14 @@
 ---
-title: "sp_describe_undeclared_parameters (TRANSACT-SQL) |Microsoft 文件"
-ms.custom: 
+title: sp_describe_undeclared_parameters (TRANSACT-SQL) |Microsoft 文件
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: system-objects
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_describe_undeclared_parameters
@@ -20,21 +18,21 @@ dev_langs:
 helpviewer_keywords:
 - sp_describe_undeclared_parameters
 ms.assetid: 6f016da6-dfee-4228-8b0d-7cd8e7d5a354
-caps.latest.revision: 
+caps.latest.revision: 22
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: bae5aebe0afe1861251628bd0eb447ab97b226dd
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: fe290d9c7447524a9f1a7afe7f17294970280bb2
+ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="spdescribeundeclaredparameters-transact-sql"></a>sp_describe_undeclared_parameters (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
-  傳回結果集，其中包含有關中未宣告之參數的中繼資料[!INCLUDE[tsql](../../includes/tsql-md.md)]批次。 會考量用於每個參數 **@tsql** 批次，但未在宣告 **@params** 。 傳回的結果集中，針對每一個這類參數包含一個資料列，內含該參數的推算類型資訊。 程序會傳回空的結果集如果 **@tsql** 輸入批次沒有任何參數，除了中所宣告 **@params** 。  
+  傳回結果集，其中包含有關中未宣告之參數的中繼資料[!INCLUDE[tsql](../../includes/tsql-md.md)]批次。 會考量用於每個參數**@tsql**批次，但未在宣告**@params**。 傳回的結果集中，針對每一個這類參數包含一個資料列，內含該參數的推算類型資訊。 程序會傳回空的結果集如果**@tsql**輸入批次沒有任何參數，除了中所宣告**@params**。  
   
  ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -48,11 +46,11 @@ sp_describe_undeclared_parameters
 ```  
   
 ## <a name="arguments"></a>引數  
- [  **@tsql =** ] **'***Transact SQL_batch***'**  
- 一個或多個 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式。 *Transact SQL_batch*可能**nvarchar (***n***)**或**nvarchar （max)**。  
+ [ **@tsql =** ] **'***Transact-SQL_batch***'**  
+ 一個或多個 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式。 *Transact SQL_batch*可能**nvarchar (***n***)** 或**nvarchar （max)**。  
   
  [  **@params =** ] **N'***參數***'**  
- @params提供的參數宣告字串[!INCLUDE[tsql](../../includes/tsql-md.md)]批次，類似於方式 sp_executesql 運作方式。 *參數*可能**nvarchar (***n***)**或**nvarchar （max)**。  
+ @params 提供的參數宣告字串[!INCLUDE[tsql](../../includes/tsql-md.md)]批次，類似於方式 sp_executesql 運作方式。 *參數*可能**nvarchar (***n***)** 或**nvarchar （max)**。  
   
  是一個字串，包含的所有參數都已內嵌在定義*Transact SQL_batch*。 此字串必須是 Unicode 常數或 Unicode 變數。 每個參數定義都由參數名稱和資料類型組成。 n 是指出其他參數定義的預留位置。 如果 Transact-SQL 陳述式或批次陳述式中的不包含參數，@params並非必要。 這個參數的預設值是 NULL。  
   
@@ -71,7 +69,7 @@ sp_describe_undeclared_parameters
 |**name**|**sysname NOT NULL**|包含參數的名稱。|  
 |**suggested_system_type_id**|**int NOT NULL**|包含**system_type_id**做 sys.types 中所指定參數的資料類型。<br /><br /> 針對 CLR 類型，即使**system_type_name**資料行將傳回 NULL，這個資料行將傳回值 240。|  
 |**suggested_system_type_name**|**nvarchar (256) NULL**|包含資料類型名稱。 包含指定給參數之資料類型的引數 (例如長度、有效位數、小數位數)。 如果資料類型是使用者定義的別名類型，這裡就會指定基礎系統類型。 如果它是 CLR 使用者定義資料類型，這個資料行就會傳回 NULL。 如果無法推算參數的類型，則傳回 NULL。|  
-|**suggested_max_length**|**smallint 非 NULL**|請參閱 sys.columns。 如**max_length**資料行描述。|  
+|**suggested_max_length**|**Smallint 非 NULL**|請參閱 sys.columns。 如**max_length**資料行描述。|  
 |**suggested_precision**|**tinyint NOT NULL**|請參閱 sys.columns。 以查看 precision 資料行的說明。|  
 |**suggested_scale**|**tinyint NOT NULL**|請參閱 sys.columns。 以查看 scale 資料行的說明。|  
 |**suggested_user_type_id**|**int NULL**|針對 CLR 和別名類型，會如同 sys.types 中所指定，包含資料行資料類型的 user_type_id。 否則，便為 NULL。|  
@@ -187,7 +185,7 @@ SELECT * FROM t1 WHERE @p1 = dbo.tbl(c1, @p2, @p3)
     SELECT * FROM t WHERE c1 > @p  
     ```  
   
-     在第一個案例中，類型推算演算法會推算**char （30)**的資料類型為@p依據稍早在本主題中的規則。 在第二個案例中，類型推算演算法會推算**varchar(8000)**根據下一節中的一般推算規則。  
+     在第一個案例中，類型推算演算法會推算**char （30)** 的資料類型為@p依據稍早在本主題中的規則。 在第二個案例中，類型推算演算法會推算**varchar(8000)** 根據下一節中的一般推算規則。  
   
 -   一般推算  
   
@@ -201,9 +199,9 @@ SELECT * FROM t1 WHERE @p1 = dbo.tbl(c1, @p2, @p3)
   
     -   **數值 （38，19）** -不考慮其他數值或十進位資料類型。  
   
-    -   **varchar(8000)**， **varchar （max)**， **nvarchar （4000)**，和**nvarchar （max)** -其他字串資料類型 (例如**文字**， **char （8000)**， **nvarchar （30)**等等) 不會被視為。  
+    -   **varchar(8000)**， **varchar （max)**， **nvarchar （4000)**，和**nvarchar （max)** -其他字串資料類型 (例如**文字**， **char （8000)**， **nvarchar （30)** 等等) 不會被視為。  
   
-    -   **varbinary （8000)**和**varbinary （max)** -不考慮其他二進位資料類型 (例如**映像**， **binary(8000)**， **varbinary(30)**等。)。  
+    -   **varbinary （8000)** 和**varbinary （max)** -不考慮其他二進位資料類型 (例如**映像**， **binary(8000)**， **varbinary(30)** 等。)。  
   
     -   **日期**， **time （7)**， **smalldatetime**， **datetime**， **datetime2 （7)**， **datetimeoffset(7)** -其他日期和時間類型，例如**time(4)**，不列入考慮。  
   
@@ -234,11 +232,11 @@ SELECT * FROM t1 WHERE @p1 = dbo.tbl(c1, @p2, @p3)
     SELECT * FROM t WHERE Col_Int = Col_smallint + @p  
     ```  
   
-     在此情況下， **int**和**smallint**產生一個轉換。 所有其他的資料類型都會產生一個以上的轉換。 因為**int**優先於**smallint**， **int**用於@p。 如需有關資料類型優先順序的詳細資訊，請參閱[資料類型優先順序 &#40;TRANSACT-SQL &#41;](../../t-sql/data-types/data-type-precedence-transact-sql.md).  
+     在此情況下， **int**和**smallint**產生一個轉換。 所有其他的資料類型都會產生一個以上的轉換。 因為**int**優先於**smallint**， **int**用於@p。 如需有關資料類型優先順序的詳細資訊，請參閱[資料類型優先順序&#40;TRANSACT-SQL&#41;](../../t-sql/data-types/data-type-precedence-transact-sql.md)。  
   
      只有在依據規則 1 每個候選資格相同的資料類型與具有最高優先順序的資料類型之間發生隱含轉換時，才會套用此規則。 如果沒有隱含轉換，資料類型推算會失敗並出現錯誤。 例如在查詢中`SELECT @p FROM t`，資料類型推算會失敗，因為任何資料類型@p同樣良好。 例如，沒有隱含轉換從**int**至**xml**。  
   
-3.  如果兩個類似的資料類型將依據規則 1，例如**varchar(8000)**和**varchar （max)**越小，資料類型 (**varchar(8000)**) 選擇。 相同原則適用於**nvarchar**和**varbinary**資料型別。  
+3.  如果兩個類似的資料類型將依據規則 1，例如**varchar(8000)** 和**varchar （max)** 越小，資料類型 (**varchar(8000)**) 選擇。 相同原則適用於**nvarchar**和**varbinary**資料型別。  
   
 4.  為執行規則 1，類型推算演算法會偏好特定轉換。 從最佳到最差的轉換順序如下：  
   
@@ -250,7 +248,7 @@ SELECT * FROM t1 WHERE @p1 = dbo.tbl(c1, @p2, @p3)
   
     4.  任何其他轉換。  
   
- 例如，針對查詢`SELECT * FROM t WHERE [Col_varchar(30)] > @p`， **varchar(8000)**因為轉換 (a) 是最佳選擇。 查詢`SELECT * FROM t WHERE [Col_char(30)] > @p`， **varchar(8000)**仍然會選擇，因為它會導致類型 (b) 轉換，另一個選擇 (例如**varchar(4000)**) 會導致類型 (d) 轉換。  
+ 例如，針對查詢`SELECT * FROM t WHERE [Col_varchar(30)] > @p`， **varchar(8000)** 因為轉換 (a) 是最佳選擇。 查詢`SELECT * FROM t WHERE [Col_char(30)] > @p`， **varchar(8000)** 仍然會選擇，因為它會導致類型 (b) 轉換，另一個選擇 (例如**varchar(4000)**) 會導致類型 (d) 轉換。  
   
  最後一個範例中，指定查詢`SELECT NULL + @p`， **int**會選擇@p因為它會產生型別 (c) 轉換。  
   
@@ -279,9 +277,9 @@ WHERE object_id = @id OR NAME = @name',
   
 ```  
   
-## <a name="see-also"></a>請參閱  
- [sp_describe_first_result_set &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md)   
- [sys.dm_exec_describe_first_result_set &#40;TRANSACT-SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-transact-sql.md)   
- [sys.dm_exec_describe_first_result_set_for_object &#40;TRANSACT-SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-for-object-transact-sql.md)  
+## <a name="see-also"></a>另請參閱  
+ [sp_describe_first_result_set &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md)   
+ [sys.dm_exec_describe_first_result_set &#40;Transact SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-transact-sql.md)   
+ [sys.dm_exec_describe_first_result_set_for_object &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-for-object-transact-sql.md)  
   
   

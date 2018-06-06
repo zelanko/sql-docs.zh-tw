@@ -1,15 +1,14 @@
 ---
-title: "部署 CLR 資料庫物件 |Microsoft 文件"
-ms.custom: 
+title: 部署 CLR 資料庫物件 |Microsoft 文件
+ms.custom: ''
 ms.date: 03/16/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
 ms.component: clr
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - deployment script [CLR integration]
@@ -17,20 +16,19 @@ helpviewer_keywords:
 - deploying assemblies [CLR integration]
 - deploying [CLR integration]
 ms.assetid: 00752573-3367-41a7-af98-7b7a29e8e2f2
-caps.latest.revision: 
+caps.latest.revision: 35
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: ac5aa32532c32b3e3066dd4aa3c8cf575e1e83ff
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 353aef3aac9f39217bb98bd551843eb1b69ae885
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="deploying-clr-database-objects"></a>部署 CLR 資料庫物件
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-部署是指您用來散發即將在其他電腦上安裝和執行之已完成應用程式或模組的程序。 您可以使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Studio 來開發 Common Language Runtime (CLR) 資料庫物件並將它們部署至測試伺服器。 或者，您也可以使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework 轉散發檔案 (而非 Visual Studio) 來編譯 Managed 資料庫物件。 一旦編譯完成之後，您就可以使用 Visual Studio 或 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式，將包含 CLR 資料庫物件的組件部署至測試伺服器。 請注意，Visual Studio .NET 2003 無法用於 CLR 整合程式設計或部署。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 包含預先安裝的 .NET Framework，而且 Visual Studio .NET 2003 無法使用 .NET Framework 2.0 組件。  
+  部署是指您用來散發即將在其他電腦上安裝和執行之已完成應用程式或模組的程序。 您可以使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Studio 來開發 Common Language Runtime (CLR) 資料庫物件並將它們部署至測試伺服器。 或者，您也可以使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework 轉散發檔案 (而非 Visual Studio) 來編譯 Managed 資料庫物件。 一旦編譯完成之後，您就可以使用 Visual Studio 或 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式，將包含 CLR 資料庫物件的組件部署至測試伺服器。 請注意，Visual Studio .NET 2003 無法用於 CLR 整合程式設計或部署。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 包含預先安裝的 .NET Framework，而且 Visual Studio .NET 2003 無法使用 .NET Framework 2.0 組件。  
   
  一旦 CLR 方法已經在測試伺服器上測試並驗證之後，您就可以使用部署指令碼，將它們散發至實際伺服器。 您可以手動產生部署指令碼，也可以使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 來產生部署指令碼 (請參閱本主題後面的程序)。  
   
@@ -64,7 +62,7 @@ ms.lasthandoff: 02/09/2018
   
  `vbc /target:library C:\helloworld.vb`  
   
- 這些命令會啟動 Visual C# 或 Visual Basic 編譯器使用**/目標**選項來指定要建立的程式庫 DLL。  
+ 這些命令會啟動 Visual C# 或 Visual Basic 編譯器使用 **/目標**選項來指定要建立的程式庫 DLL。  
   
 1.  解決所有建立錯誤和警告，然後再將組件部署至測試伺服器。  
   
@@ -93,15 +91,15 @@ ms.lasthandoff: 02/09/2018
   
 1.  開啟 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 並連接至已註冊要部署之 Managed 組件或資料庫物件的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體。  
   
-2.  在**物件總管 中**，依序展開**\<伺服器名稱 >**和**資料庫**樹狀結構。 以滑鼠右鍵按一下 已註冊，請選取 managed 的資料庫物件的所在之資料庫**工作**，然後選取**產生指令碼**。 指令碼精靈隨即開啟。  
+2.  在**物件總管 中**，依序展開**\<伺服器名稱 >** 和**資料庫**樹狀結構。 以滑鼠右鍵按一下 已註冊，請選取 managed 的資料庫物件的所在之資料庫**工作**，然後選取**產生指令碼**。 指令碼精靈隨即開啟。  
   
 3.  從清單方塊中選取資料庫，然後按一下**下一步**。  
   
 4.  在**選擇指令碼選項**] 窗格中，按一下 [**下一步**，或變更的選項，然後按一下**下一步**。  
   
-5.  在**[選擇物件類型**] 窗格中，選擇要部署的資料庫物件的類型。 按一下 **[下一步]**。  
+5.  在 **[選擇物件類型**] 窗格中，選擇要部署的資料庫物件的類型。 按一下 **[下一步]**。  
   
-6.  在選取每個物件類型**[選擇物件類型**] 窗格中，**選擇\<類型 >**窗格會顯示。 在這個窗格中，您可以從該資料庫物件類型 (已在指定的資料庫中註冊) 的所有執行個體中選擇。 選取一個或多個物件，然後按一下**下一步**。  
+6.  在選取每個物件類型 **[選擇物件類型**] 窗格中，**選擇\<類型 >** 窗格會顯示。 在這個窗格中，您可以從該資料庫物件類型 (已在指定的資料庫中註冊) 的所有執行個體中選擇。 選取一個或多個物件，然後按一下**下一步**。  
   
 7.  **輸出選項**窗格時，就全部所需的資料庫物件已選取型別。 選取**指令碼至檔案**並指定指令碼的檔案路徑。 選取 **[下一步]**。 檢閱您的選擇，然後按一下**完成**。 此時，部署指令碼就會儲存至指定的檔案路徑。  
   

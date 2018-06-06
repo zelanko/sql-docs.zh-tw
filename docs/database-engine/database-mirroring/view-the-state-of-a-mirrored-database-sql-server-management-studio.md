@@ -1,33 +1,32 @@
 ---
-title: "檢視鏡像資料庫的狀態 (SQL Server Management Studio) | Microsoft Docs"
-ms.custom: 
+title: 檢視鏡像資料庫的狀態 (SQL Server Management Studio) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
-ms.prod_service: database-engine
-ms.service: 
+ms.prod: sql
+ms.prod_service: high-availability
 ms.component: database-mirroring
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: dbe-high-availability
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: high-availability
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - states [SQL Server], database mirroring
 - database mirroring [SQL Server], states
 ms.assetid: 544f4194-253e-4c57-96ca-31c16301434f
-caps.latest.revision: "25"
+caps.latest.revision: 25
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 1db44478e3b6c8d51e6d66e9dd5a95b7c5059926
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: e0bdfdc0f78cda06af9b44a313c82c5f97e4b2fb
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="view-the-state-of-a-mirrored-database-sql-server-management-studio"></a>檢視鏡像資料庫的狀態 (SQL Server Management Studio)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 在資料庫鏡像工作階段中，您可以在 [資料庫屬性] 對話方塊的 [鏡像] 頁面上檢視狀態。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  在資料庫鏡像工作階段中，您可以在 [資料庫屬性] 對話方塊的 [鏡像] 頁面上檢視狀態。  
   
 ### <a name="to-view-the-status-of-a-database-mirroring-session"></a>若要檢視資料庫鏡像工作階段的狀態  
   

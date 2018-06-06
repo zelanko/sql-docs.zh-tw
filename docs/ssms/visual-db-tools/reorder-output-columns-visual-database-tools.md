@@ -1,33 +1,32 @@
 ---
-title: "重新排列輸出資料行順序 (Visual Database Tools) | Microsoft Docs"
-ms.custom: 
+title: 重新排列輸出資料行順序 (Visual Database Tools) | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
 ms.component: ssms-visual-db
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: tools-ssms
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ssms
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - reordering output columns [SQL Server]
 - output columns [SQL Server]
 ms.assetid: 76462885-de4a-4290-a26b-90696d3671f4
-caps.latest.revision: "4"
+caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 71ffb0ab16e76744574fef6df256f3c9e2c4d685
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.openlocfilehash: 97241195cf713996c0b2fd6e54417b2d0eeb210d
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="reorder-output-columns-visual-database-tools"></a>重新排列輸出資料行順序 (Visual Database Tools)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 資料行新增至選取查詢中的順序，決定資料行出現在結果中的順序。 第一個加入的資料行會出現在結果的最左側，接著是第二個資料行，依此類推。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+資料行加入選取查詢中的順序，決定資料行出現在結果中的順序。 第一個加入的資料行會出現在結果的最左側，接著是第二個資料行，依此類推。  
   
 如果您建立了更新或插入查詢，加入資料行的順序會影響資料處理的順序。  
   

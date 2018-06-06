@@ -1,30 +1,19 @@
 ---
-title: "使用 sqlrutils 套件為 R 程式碼產生 R 預存程序 | Microsoft Docs"
-ms.custom: 
-ms.date: 02/28/2017
-ms.reviewer: 
-ms.suite: sql
-ms.prod: machine-learning-services
-ms.prod_service: machine-learning-services
-ms.component: r
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
-dev_langs:
-- R
-ms.assetid: d8739f16-ac26-4f69-870c-51c77cf286d3
-caps.latest.revision: 
-author: jeannt
-ms.author: jeannt
-manager: cgronlund
-ms.workload: Inactive
-ms.openlocfilehash: 2a119867b30b0d3ff8a0abb0b32e8017e5663969
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+title: 為使用 sqlrutils 封裝的 R 程式碼產生 R 預存程序 |Microsoft 文件
+ms.prod: sql
+ms.technology: machine-learning
+ms.date: 04/15/2018
+ms.topic: conceptual
+author: HeidiSteen
+ms.author: heidist
+manager: cgronlun
+ms.openlocfilehash: 2b327391b7a21e340b30f2bc5fbf27481168266e
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 04/16/2018
 ---
-# <a name="generating-an-r-stored-procedure-for-r-code-using-the-sqlrutils-package"></a>使用 sqlrutils 套件為 R 程式碼產生 R 預存程序
+# <a name="generate-an-r-stored-procedure-for-r-code-using-the-sqlrutils-package"></a>為使用 sqlrutils 封裝的 R 程式碼產生 R 預存程序
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 **sqlrutils** 套件提供一種機制，讓 R 使用者將其 R 指令碼放入 T-SQL 預存程序、註冊具有資料庫的這個預存程序，以及從 R 開發環境執行預存程序。 

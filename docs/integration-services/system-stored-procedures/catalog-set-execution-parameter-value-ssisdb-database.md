@@ -1,28 +1,26 @@
 ---
-title: "catalog.set_execution_parameter_value (SSISDB 資料庫) | Microsoft Docs"
-ms.custom: 
+title: catalog.set_execution_parameter_value (SSISDB 資料庫) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/03/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 ms.assetid: 055d86c9-befd-4e63-acb1-6dfe833549d2
-caps.latest.revision: 
+caps.latest.revision: 20
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: e3d621273b3b45b25158d494fd9bee3d7241e1d3
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 169f6158795b7289a1df7ed7651369936d9ad404
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="catalogsetexecutionparametervalue-ssisdb-database"></a>catalog.set_execution_parameter_value (SSISDB 資料庫)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -84,7 +82,7 @@ catalog.set_execution_parameter_value [ @execution_id = execution_id
 |-----------|-----------------|  
 |0|無<br /><br /> 關閉記錄功能。 只記錄封裝執行狀態。|  
 |@shouldalert|[基本]<br /><br /> 記錄所有事件，自訂和診斷事件除外。 這是預設值。|  
-|2|[效能]<br /><br /> 只記錄效能統計資料，以及 OnError 和 OnWarning 事件。|  
+|2|效能<br /><br /> 只記錄效能統計資料，以及 OnError 和 OnWarning 事件。|  
 |3|「詳細資訊」<br /><br /> 記錄所有事件，包括自訂和診斷事件。 <br />自訂事件，包括 Integration Services 工作所記錄的那些事件。 如需詳細資訊，請參閱[自訂訊息以進行記錄](../../integration-services/performance/integration-services-ssis-logging.md#custom_messages)|  
 |4|執行階段歷程<br /><br /> 收集追蹤資料流程中歷程所需的資料。|  
 |100|自訂記錄層次<br /><br /> 指定 CUSTOMIZED_LOGGING_LEVEL 參數中的設定。 如需可指定值的詳細資訊，請參閱 [catalog.create_customized_logging_level](../../integration-services/system-stored-procedures/catalog-create-customized-logging-level.md)。<br /><br /> 如需自訂記錄層次的詳細資訊，請參閱[在 SSIS 伺服器上啟用套件執行的記錄功能](../../integration-services/performance/integration-services-ssis-logging.md#server_logging)。|  

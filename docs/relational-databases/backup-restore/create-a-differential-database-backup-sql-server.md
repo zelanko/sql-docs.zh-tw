@@ -1,36 +1,33 @@
 ---
-title: "建立差異資料庫備份 (SQL Server) | Microsoft 文件"
-ms.custom: 
+title: 建立差異資料庫備份 (SQL Server) | Microsoft 文件
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
-ms.prod_service: database-engine
-ms.service: 
-ms.component: backup-restore
-ms.reviewer: 
+ms.prod: sql
+ms.prod_service: backup-restore
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- dbe-backup-restore
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: backup-restore
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - full differential backups [SQL Server]
 - database backups [SQL Server], full differential backups
 - backing up databases [SQL Server], full differential backups
 - backups [SQL Server], creating
 ms.assetid: 70f49794-b217-4519-9f2a-76ed61fa9f99
-caps.latest.revision: 
+caps.latest.revision: 34
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 2f568192e2fce6140bdbd1a5dc6033666b61497c
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: c439b85eaddb1d3d7748321a394628818d906dae
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="create-a-differential-database-backup-sql-server"></a>建立差異資料庫備份 (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 或 [!INCLUDE[tsql](../../includes/tsql-md.md)] 在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中建立差異資料庫備份。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中建立差異資料庫備份。  
   
  **本主題的章節**  
   
@@ -98,7 +95,7 @@ ms.lasthandoff: 01/18/2018
   
 9. 指定備份組會在何時過期：  
   
-    -   若要讓備份組在特定的天數後過期，請按一下 [之後]\(預設選項)，然後輸入備份組建立之後將會過期的天數。 這個值可以是 0 到 99999 天，0 天表示備份組永遠不會過期。  
+    -   若要讓備份組在特定的天數後過期，請按一下 [之後] \(預設選項)，然後輸入備份組建立之後將會過期的天數。 這個值可以是 0 到 99999 天，0 天表示備份組永遠不會過期。  
   
          預設值會在 [伺服器屬性] 對話方塊 ([資料庫設定] 頁面) 的 [預設備份媒體保留 (以天為單位)] 選項中設定。 若要存取，請以滑鼠右鍵按一下物件總管中的伺服器名稱並選取 [屬性]，然後選取 [資料庫設定] 頁面。  
   
@@ -126,14 +123,14 @@ ms.lasthandoff: 01/18/2018
   
     -   **[完成後驗證備份]**。  
   
-    -   **[寫入媒體之前執行總和檢查碼]**及/或 **[發生總和檢查碼錯誤時繼續]**。 如需總和檢查碼的詳細資訊，請參閱[在備份和還原期間可能的媒體錯誤 &#40;SQL Server&#41;](../../relational-databases/backup-restore/possible-media-errors-during-backup-and-restore-sql-server.md)。  
+    -   **[寫入媒體之前執行總和檢查碼]** 及/或 **[發生總和檢查碼錯誤時繼續]**。 如需總和檢查碼的詳細資訊，請參閱[在備份和還原期間可能的媒體錯誤 &#40;SQL Server&#41;](../../relational-databases/backup-restore/possible-media-errors-during-backup-and-restore-sql-server.md)。  
   
 14. 如果是備份至磁帶機 (在 [一般] 頁面的 [目的地] 區段中指定)，[備份後卸載磁帶] 選項會啟用供選擇。 按一下這個選項會啟動 **[卸載之前倒轉磁帶]** 選項。  
   
     > [!NOTE]  
     >  除非您備份的是交易記錄檔 (依 [一般] 頁面的 [備份類型] 區段中的指定)，否則 [交易記錄檔] 區段中的選項為非使用中。  
   
-15. [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)] 和更新的版本支援 [備份壓縮](../../relational-databases/backup-restore/backup-compression-sql-server.md)。 依預設，備份壓縮與否取決於 **備份壓縮預設** 伺服器組態選項的值。 不過，不論目前的伺服器層級預設值為何，您都可以透過核取 **[壓縮備份]**壓縮備份，而且可以透過核取 **[不要壓縮備份]**防止壓縮。  
+15. [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)] 和更新的版本支援 [備份壓縮](../../relational-databases/backup-restore/backup-compression-sql-server.md)。 依預設，備份壓縮與否取決於 **備份壓縮預設** 伺服器組態選項的值。 不過，不論目前的伺服器層級預設值為何，您都可以透過核取 **[壓縮備份]** 壓縮備份，而且可以透過核取 **[不要壓縮備份]** 防止壓縮。  
   
      **檢視目前的 backup compression default**  
   

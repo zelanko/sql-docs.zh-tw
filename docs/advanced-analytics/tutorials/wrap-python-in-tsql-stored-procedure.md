@@ -1,29 +1,17 @@
 ---
-title: "Python 程式碼包裝在預存程序 |Microsoft 文件"
-titleSuffix: SQL Server
-ms.custom: 
-ms.date: 02/28/2018
-ms.reviewer: 
-ms.suite: sql
-ms.prod: machine-learning-services
-ms.prod_service: machine-learning-services
-ms.component: 
-ms.technology: 
-ms.tgt_pltfrm: 
+title: Python 程式碼包裝在預存程序 |Microsoft 文件
+ms.prod: sql
+ms.technology: machine-learning
+ms.date: 04/15/2018
 ms.topic: tutorial
-applies_to:
-- SQL Server 2017
-dev_langs:
-- Python
-caps.latest.revision: 
-author: jeannt
-ms.author: jeannt
-manager: cgronlund
-ms.openlocfilehash: 11b5b649a942b1d1804b799426530a1b82ee9458
-ms.sourcegitcommit: ab25b08a312d35489a2c4a6a0d29a04bbd90f64d
+author: HeidiSteen
+ms.author: heidist
+manager: cgronlun
+ms.openlocfilehash: 3b7ffeac0dfe1e441f188aae67e28004e294fc3e
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="wrap-python-code-in-a-stored-procedure"></a>Python 程式碼包裝在預存程序
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -43,10 +31,10 @@ ms.lasthandoff: 03/08/2018
 2. 建立此專案中，新的資料庫和變更的內容程式**查詢**視窗，以使用新的資料庫。
 
     ```sql
-    CREATE DATABASE sqlpy;
-    GO;
-    USE sqlpy;
-    GO;
+    CREATE DATABASE sqlpy
+    GO
+    USE sqlpy
+    GO
     ```
 
     > [!TIP] 

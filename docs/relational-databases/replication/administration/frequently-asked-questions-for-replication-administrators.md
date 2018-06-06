@@ -1,31 +1,29 @@
 ---
-title: "複寫管理員的常見問題集 | Microsoft Docs"
-ms.custom: 
+title: 複寫管理員的常見問題集 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
 ms.component: replication
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - administering replication, frequently asked questions
 - replication [SQL Server], administering
 ms.assetid: 5a9e4ddf-3cb1-4baf-94d6-b80acca24f64
-caps.latest.revision: 
+caps.latest.revision: 59
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 5324e1896067491c291d1c838ab787e4deb249f2
-ms.sourcegitcommit: ab25b08a312d35489a2c4a6a0d29a04bbd90f64d
+ms.openlocfilehash: fd85694c8b2678d85b66db6c84b89a409fa0fc4a
+ms.sourcegitcommit: df382099ef1562b5f2d1cd506c1170d1db64de41
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 05/12/2018
 ---
 # <a name="frequently-asked-questions-for-replication-administrators"></a>複寫管理員的常見問題集
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -141,7 +139,7 @@ ms.lasthandoff: 03/08/2018
   
 -   針對使用字元模式快照集之發行集內的發行項 (用於非[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 訂閱者和 [!INCLUDE[ssEW](../../../includes/ssew-md.md)] 訂閱者)：依預設，會將擁有者保留空白。 擁有者預設為與散發代理程式或合併代理程式用於連接到訂閱者之帳戶相關聯的擁有者。  
   
- 物件擁有者可以透過 [發行項屬性 -\<發行項>] 對話方塊和透過下列預存程序變更︰**sp_addarticle**、**sp_addmergearticle**、**sp_changearticle** 和 **sp_changemergearticle**。 如需詳細資訊，請參閱[檢視和修改發行集屬性](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md)、[定義發行項](../../../relational-databases/replication/publish/define-an-article.md)和[檢視和修改發行項屬性](../../../relational-databases/replication/publish/view-and-modify-article-properties.md)。  
+ 物件擁有者可以透過 [發行項屬性 -\<發行項>]**** 對話方塊和透過下列預存程序變更︰**sp_addarticle**、**sp_addmergearticle**、**sp_changearticle** 和 **sp_changemergearticle**。 如需詳細資訊，請參閱[檢視和修改發行集屬性](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md)、[定義發行項](../../../relational-databases/replication/publish/define-an-article.md)和[檢視和修改發行項屬性](../../../relational-databases/replication/publish/view-and-modify-article-properties.md)。  
   
 ### <a name="how-can-grants-on-the-subscription-database-be-configured-to-match-grants-on-the-publication-database"></a>如何將訂閱資料庫中的授權設定為與發行集資料庫中的授權相符？  
  依預設，複寫不執行訂閱資料庫中的 GRANT 陳述式。 如果您要使訂閱資料庫中的授權與發行集資料庫中的授權相符，請使用以下其中一種方法：  
@@ -166,7 +164,7 @@ ms.lasthandoff: 03/08/2018
 ## <a name="database-maintenance"></a>資料庫維護  
   
 ### <a name="why-cant-i-run-truncate-table-on-a-published-table"></a>為何我無法在已發行的資料表中執行 TRUNCATE TABLE？  
- TRUNCATE TABLE 是不會引發觸發程序的非記錄式作業。 因為複寫無法追蹤由此作業導致的變更，所以不允許執行此作業：異動複寫透過交易記錄追蹤變更；合併式複寫透過已發行資料表上的觸發程序追蹤變更。  
+ TRUNCATE TABLE 是不會記錄個別資料列刪除，也不會引發 DML 觸發程序的 DDL 陳述式。 因為複寫無法追蹤由此作業導致的變更，所以不允許執行此作業：異動複寫透過交易記錄追蹤變更；合併式複寫透過已發行資料表上的 DML 觸發程序追蹤變更。  
   
 ### <a name="what-is-the-effect-of-running-a-bulk-insert-command-on-a-replicated-database"></a>在已複寫資料庫中執行大量插入命令有什麼效果？  
  對於異動複寫，大量插入將被追蹤並同其他插入一樣進行複寫。 對於合併式複寫，您必須確定正確更新變更追蹤中繼資料。  

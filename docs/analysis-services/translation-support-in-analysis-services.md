@@ -1,34 +1,19 @@
 ---
-title: "Analysis Services 中的翻譯支援 |Microsoft 文件"
-ms.custom: 
-ms.date: 03/01/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services, azure-analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
-helpviewer_keywords:
-- Business Intelligence Development Studio, translations [Analysis Services]
-- translations [Analysis Services], about translations
-- object translations [Analysis Services]
-- language identifiers [Analysis Services]
-- attribute translations [Analysis Services]
-- translations [Analysis Services]
-ms.assetid: 018471e0-3c82-49ec-aa16-467fb58a6d5f
-caps.latest.revision: "34"
-author: Minewiskan
+title: Analysis Services 中的翻譯支援 |Microsoft 文件
+ms.date: 05/08/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: ''
+ms.topic: conceptual
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: fc97336300fef2dd621f1f151ff39a04cc3fbfe6
-ms.sourcegitcommit: 82c9868b5bf95e5b0c68137ba434ddd37fc61072
+ms.openlocfilehash: 882434c2bd0a194a2ecbe21a62d3b22964b30f09
+ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/22/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="translation-support-in-analysis-services"></a>Analysis Services 中的翻譯支援
 [!INCLUDE[ssas-appliesto-sqlas-aas](../includes/ssas-appliesto-sqlas-aas.md)]
@@ -53,8 +38,8 @@ ms.lasthandoff: 01/22/2018
   
 ## <a name="see-also"></a>另請參閱  
  [Analysis Services 的全球化案例](../analysis-services/globalization-scenarios-for-analysis-services.md)   
- [語言和定序 &#40;Analysis Services &#41;](../analysis-services/languages-and-collations-analysis-services.md)   
+ [語言和定序 & #40;Analysis Services & #41;](../analysis-services/languages-and-collations-analysis-services.md)   
  [設定或變更資料行定序](../relational-databases/collations/set-or-change-the-column-collation.md)   
- [全球化秘訣和最佳作法 &#40;Analysis Services &#41;](../analysis-services/globalization-tips-and-best-practices-analysis-services.md)  
+ [全球化秘訣和最佳作法 & #40;Analysis Services & #41;](../analysis-services/globalization-tips-and-best-practices-analysis-services.md)  
   
   

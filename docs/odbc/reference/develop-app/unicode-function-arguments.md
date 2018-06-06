@@ -1,30 +1,27 @@
 ---
-title: "Unicode 函式引數 |Microsoft 文件"
-ms.custom: 
+title: Unicode 函式引數 |Microsoft 文件
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
-ms.component: odbc
-ms.reviewer: 
+ms.prod: sql
+ms.prod_service: connectivity
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: connectivity
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - Unicode [ODBC], functions
 - functions [ODBC], Unicode functions
 ms.assetid: eafe8c7e-f6d2-44d7-99ee-cf2148a30f4f
-caps.latest.revision: "11"
+caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
-ms.workload: Inactive
-ms.openlocfilehash: 5675d39ff68b3ddd9231a90a54fd19793bd829be
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+manager: craigg
+ms.openlocfilehash: ab660a9af95d6232f22c98a868da8fed9ebb0cae
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="unicode-function-arguments"></a>Unicode 函式引數
 ODBC 3.5 （或更新版本） 驅動程式管理員支援 ANSI 和 Unicode 版本的所有函式接受字元字串或 SQLPOINTER 在其引數的指標。 Unicode 函式會實作為函式 (且尾碼為*W*)，而不做巨集。 ANSI 函式 (或後置字元不可以呼叫的目標*A*) 等於目前的 ODBC API 函式。  
@@ -71,7 +68,7 @@ ODBC 3.5 （或更新版本） 驅動程式管理員支援 ANSI 和 Unicode 版�
 |**SQLInstallDriver**||  
   
 > [!NOTE]  
->  已被取代的函式具有 Unicode-ANSI 對應支援，因為 ODBC 3*.x*驅動程式管理員支援重新編譯 ODBC 2。*x*應用程式與 UNICODE **#define**。  
+>  已被取代的函式具有 Unicode-ANSI 對應支援，因為 ODBC 3 *.x*驅動程式管理員支援重新編譯 ODBC 2。*x*應用程式與 UNICODE **#define**。  
   
  此章節包含下列主題。  
   

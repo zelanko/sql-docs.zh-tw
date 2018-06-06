@@ -1,16 +1,15 @@
 ---
-title: "sp_changepublication (TRANSACT-SQL) |Microsoft 文件"
-ms.custom: 
+title: sp_changepublication (TRANSACT-SQL) |Microsoft 文件
+ms.custom: ''
 ms.date: 08/29/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - sp_changepublication
 ms.assetid: c36e5865-25d5-42b7-b045-dc5036225081
-caps.latest.revision: 
+caps.latest.revision: 42
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: f05323e102e4f68d7281dd517eaee00abfcdcdc7
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: e86b9a77a7b84a54b0e452a2e93dae9167492167
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="spchangepublication-transact-sql"></a>sp_changepublication (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,7 +48,7 @@ sp_changepublication [ [ @publication = ] 'publication' ]
 ```  
   
 ## <a name="arguments"></a>引數  
- [  **@publication =** ] **'***發行集***'**  
+ [ **@publication =** ] **'***publication***'**  
  這是發行集的名稱。 *發行集*是**sysname**，預設值是 NULL。  
   
  [  **@property =** ] **'***屬性***'**  
@@ -61,7 +59,7 @@ sp_changepublication [ [ @publication = ] 'publication' ]
   
  下表描述可變更的發行集屬性及這些屬性值的限制。  
   
-|屬性|值|Description|  
+|屬性|Value|Description|  
 |--------------|-----------|-----------------|  
 |**allow_anonymous**|**true**|可以針對給定的發行集建立匿名訂閱和*immediate_sync*也必須是**true**。 點對點發行集的這個項目不能變更。|  
 ||**false**|不能建立給定發行集的匿名訂閱。 點對點發行集的這個項目不能變更。|  
@@ -106,7 +104,7 @@ sp_changepublication [ [ @publication = ] 'publication' ]
 |**pre_snapshot_script**||指定在初始同步處理期間，套用所有其他複寫的物件指令碼和資料之前，散發代理程式所執行之 [!INCLUDE[tsql](../../includes/tsql-md.md)] 指令碼檔案的位置。|  
 |**publish_to_ActiveDirectory**|**true**|這個參數已被取代，支援它的目的，只是為了與舊版的指令碼相容。 您不能再將發行集資訊加入 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Active Directory 中。|  
 ||**false**|從 Active Directory 中移除發行集資訊。|  
-|**類型**|**sql**|利用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 來儲存交易。 只有在沒有使用中的訂閱時，才能改變這個屬性。<br /><br /> 注意： 支援使用[!INCLUDE[msCoName](../../includes/msconame-md.md)]已停用訊息佇列。 指定的值是**msmq**如*值*會導致錯誤。|  
+|**queue_type**|**sql**|利用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 來儲存交易。 只有在沒有使用中的訂閱時，才能改變這個屬性。<br /><br /> 注意： 支援使用[!INCLUDE[msCoName](../../includes/msconame-md.md)]已停用訊息佇列。 指定的值是**msmq**如*值*會導致錯誤。|  
 |**repl_freq**|**連續**|發行所有記錄式交易的輸出。|  
 ||**快照集**|只發行已排程的同步處理事件。|  
 |**replicate_ddl**|**1**|複寫在發行者端執行的資料定義語言 (DDL) 陳述式。 非 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 發行集的這個屬性不能變更。|  
@@ -118,8 +116,8 @@ sp_changepublication [ [ @publication = ] 'publication' ]
 ||**false**|快照集檔案會儲存在所指定的替代位置*alt_snapshot_folder*。|  
 |**status**|**使用中**|當建立發行集時，訂閱者可以立即使用發行集資料。 不支援 Oracle 發行者使用這個值。|  
 ||**非使用中**|當建立發行集時，訂閱者無法使用發行集資料。 不支援 Oracle 發行者使用這個值。|  
-|**sync_method**|**原生**|當同步處理訂閱時，使用所有資料表的原生模式大量複製輸出。|  
-||**字元**|當同步處理訂閱時，使用所有資料表的字元模式大量複製輸出。|  
+|**sync_method**|**native**|當同步處理訂閱時，使用所有資料表的原生模式大量複製輸出。|  
+||**character**|當同步處理訂閱時，使用所有資料表的字元模式大量複製輸出。|  
 ||**並行**|使用所有資料表的原生模式大量複製程式輸出，但在快照集的產生程序中，不鎖定資料表。 這個項目對快照式複寫無效。|  
 ||**concurrent_c**|使用所有資料表的字元模式大量複製程式輸出，但在快照集的產生程序中，不鎖定資料表。 這個項目對快照式複寫無效。|  
 |**taskid**||這個屬性已被取代，不再受到支援。|  
@@ -138,7 +136,7 @@ sp_changepublication [ [ @publication = ] 'publication' ]
   - **0**指定發行項的變更不會使訂閱重新初始化。 如果預存程序偵測到變更需要重新初始化現有的訂閱，就會發生錯誤，且不會進行任何變更。  
   - **1**指定發行項的變更會使現有的訂閱重新初始化，並提供發生訂閱重新初始化的權限。  
   
-[  **@publisher**  =] **'***發行者***'**  
+[ **@publisher** = ] **'***publisher***'**  
  指定非 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 發行者。 *發行者*是**sysname**，預設值是 NULL。  
   
   > [!NOTE]  
@@ -177,11 +175,11 @@ sp_changepublication [ [ @publication = ] 'publication' ]
 ## <a name="permissions"></a>Permissions  
  只有成員**sysadmin**固定的伺服器角色或**db_owner**固定的資料庫角色可以執行**sp_changepublication**。  
   
-## <a name="see-also"></a>請參閱＜  
- [檢視和修改發行集屬性](../../relational-databases/replication/publish/view-and-modify-publication-properties.md)   
+## <a name="see-also"></a>另請參閱  
+ [檢視及修改發行集屬性](../../relational-databases/replication/publish/view-and-modify-publication-properties.md)   
  [變更發行集與發行項屬性](../../relational-databases/replication/publish/change-publication-and-article-properties.md)   
- [sp_addpublication &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/sp-addpublication-transact-sql.md)   
- [sp_droppublication &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/sp-droppublication-transact-sql.md)   
+ [sp_addpublication &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpublication-transact-sql.md)   
+ [sp_droppublication &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-droppublication-transact-sql.md)   
  [sp_helppublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helppublication-transact-sql.md)   
  [複寫預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  
   

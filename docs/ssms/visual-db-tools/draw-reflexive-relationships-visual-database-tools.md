@@ -1,34 +1,33 @@
 ---
-title: "繪製自反關聯性 (Visual Database Tools) | Microsoft Docs"
-ms.custom: 
+title: 繪製自反關聯性 (Visual Database Tools) | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
 ms.component: ssms-visual-db
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: tools-ssms
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ssms
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - drawing reflexive relationships
 - reflexive relationships
 - database diagrams [SQL Server], relationships
 ms.assetid: e218363f-faec-46d5-9904-a537fbcc994d
-caps.latest.revision: "4"
+caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: d4a9e68575020594a0290beb2fd2117ba2ec5b15
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.openlocfilehash: 23788a9913ec6157fd46cb4c12490ed05fb071a0
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="draw-reflexive-relationships-visual-database-tools"></a>繪製自反關聯性 (Visual Database Tools)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 您可建立自反關聯性 (Reflexive Relationship)，將資料表中的一或多個資料行與相同資料表中的其他資料行連結。 例如，假設 `employee` 資料表包含 `emp_id` 資料行和 `mgr_id` 資料行。 由於每位經理同時兼具員工的身分，您可繪製一條從資料表至其本身的關聯線，將這兩個資料行相關聯。 此關聯性可確保每個加入資料表的經理識別碼，都與現有員工識別碼相符。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+您可建立自反關聯性 (Reflexive Relationship)，將資料表中的一或多個資料行與相同資料表中的其他資料行連結。 例如，假設 `employee` 資料表包含 `emp_id` 資料行和 `mgr_id` 資料行。 由於每位經理同時兼具員工的身分，您可繪製一條從資料表至其本身的關聯線，將這兩個資料行相關聯。 此關聯性可確保每個加入資料表的經理識別碼，都與現有員工識別碼相符。  
   
 在建立關聯性之前，必須先為您的資料表定義主索引鍵或唯一的條件約束。 然後，將主索引鍵資料行關聯至相符的資料行。 建立關聯性之後，相符的資料行會成為資料表的外部索引鍵。  
   

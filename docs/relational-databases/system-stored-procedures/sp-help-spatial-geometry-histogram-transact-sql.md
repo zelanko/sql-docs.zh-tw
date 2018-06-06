@@ -1,16 +1,14 @@
 ---
-title: "sp_help_spatial_geometry_histogram (TRANSACT-SQL) |Microsoft 文件"
-ms.custom: 
+title: sp_help_spatial_geometry_histogram (TRANSACT-SQL) |Microsoft 文件
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: system-objects
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_help_spatial_geometry_histogram
@@ -20,16 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_help_spatial_geometry_histogram
 ms.assetid: 036aaf61-df3e-40f7-aa4e-62983c5a37bd
-caps.latest.revision: 
+caps.latest.revision: 17
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 5acd841815df5329fe79624174c00e2694e65781
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: d12665106633cbbdf46284089ef5f7eb79d7ccbf
+ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="sphelpspatialgeometryhistogram-transact-sql"></a>sp_help_spatial_geometry_histogram (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -75,7 +72,7 @@ sp_help_spatial_geometry_histogram [ @tabname =] 'tabname'
  這是 Y 最大值週框方塊屬性。 *ymax*是**float**，沒有預設值。  
   
  [  **@sample =** ] **'***範例***'**  
- 這是所用之資料表的百分比。 有效值介於 0 到 100 之間。 *範例*是**float**。 預設值為 100。  
+ 這是所用之資料表的百分比。 有效值為從 0 到 100 之間。 *範例*是**float**。 預設值為 100。  
   
 ## <a name="property-valuereturn-value"></a>屬性值/傳回值  
  會傳回資料表值。 下列方格描述資料表的資料行內容。  
@@ -161,7 +158,7 @@ sp_help_spatial_geometry_histogram [ @tabname =] 'tabname'
   
  `GO`  
   
-## <a name="see-also"></a>請參閱  
- [空間索引預存程序 &#40;TRANSACT-SQL &#41;](http://msdn.microsoft.com/library/1be0f34e-3d5a-4a1f-9299-bd482362ec7a)  
+## <a name="see-also"></a>另請參閱  
+ [空間索引預存程序&#40;Transact SQL&#41;](http://msdn.microsoft.com/library/1be0f34e-3d5a-4a1f-9299-bd482362ec7a)  
   
   

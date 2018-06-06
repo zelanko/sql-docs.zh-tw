@@ -1,16 +1,14 @@
 ---
-title: "sp_validname (TRANSACT-SQL) |Microsoft 文件"
-ms.custom: 
+title: sp_validname (TRANSACT-SQL) |Microsoft 文件
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: system-objects
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_validname
@@ -20,16 +18,16 @@ dev_langs:
 helpviewer_keywords:
 - sp_validname
 ms.assetid: d51c53c2-1332-407f-b725-4983f2e710eb
-caps.latest.revision: 
+caps.latest.revision: 32
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 00dc003905fb90ae819bc49eba68aeee2f1cdbb1
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: bb61ed8782ecea8109799bbb1ba6596323913c49
+ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="spvalidname-transact-sql"></a>sp_validname (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -47,7 +45,7 @@ sp_validname [@name =] 'name'
 ```  
   
 ## <a name="arguments"></a>引數  
- [  **@name=** ] **'***名稱***'**  
+ [ **@name=** ] **'***name***'**  
  名稱[識別碼](../../relational-databases/databases/database-identifiers.md)用來檢查有效性。 *名稱*是**sysname**，沒有預設值。 *名稱*不能是 NULL、 不可為空字串，也不可包含二進位零字元。  
   
  [  **@raise_error=** ] *raise_error*  
@@ -57,14 +55,14 @@ sp_validname [@name =] 'name'
  0 (成功) 或 1 (失敗)  
   
 ## <a name="permissions"></a>Permissions  
- 需要 **public** 角色的成員資格。  
+ 需要 **public** 角色中的成員資格。  
   
-## <a name="see-also"></a>請參閱  
- [Database Engine 預存程序 &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
+## <a name="see-also"></a>另請參閱  
+ [Database Engine 預存程序&#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
  [資料類型 &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)   
- [NCHAR &#40;TRANSACT-SQL &#41;](../../t-sql/functions/nchar-transact-sql.md)   
- [nchar 和 nvarchar &#40;TRANSACT-SQL &#41;](../../t-sql/data-types/nchar-and-nvarchar-transact-sql.md)   
- [ntext、 text，映像 &#40;TRANSACT-SQL &#41;](../../t-sql/data-types/ntext-text-and-image-transact-sql.md)   
+ [NCHAR &#40;Transact-SQL&#41;](../../t-sql/functions/nchar-transact-sql.md)   
+ [nchar 和 nvarchar &#40;Transact SQL&#41;](../../t-sql/data-types/nchar-and-nvarchar-transact-sql.md)   
+ [ntext、 text 和 image &#40;Transact SQL&#41;](../../t-sql/data-types/ntext-text-and-image-transact-sql.md)   
  [系統預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

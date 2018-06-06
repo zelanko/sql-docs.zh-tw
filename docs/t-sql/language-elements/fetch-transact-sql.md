@@ -1,16 +1,14 @@
 ---
 title: FETCH (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
 ms.component: t-sql|language-elements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: t-sql
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - FETCH
@@ -26,16 +24,15 @@ helpviewer_keywords:
 - SCROLL option
 - row fetching [SQL Server]
 ms.assetid: 5d68dac2-f91b-4342-bb4e-209ee132665f
-caps.latest.revision: 
+caps.latest.revision: 43
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: Active
-ms.openlocfilehash: fae1e085c26c2bcbc6b2605187b4554dba414642
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 7abb27f973c2759a5065769a578b1c8e15fe305f
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="fetch-transact-sql"></a>FETCH (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -73,10 +70,10 @@ FETCH
  傳回資料指標中的最後一個資料列，使它成為目前資料列。  
   
  ABSOLUTE { *n*| @*nvar*}  
- 如果 *n* 或 @*nvar* 是正數，便會從資料指標前端傳回 *n* 個資料列，使傳回的資料列成為新的目前資料列。 如果 *n* 或 @*nvar* 是負數，便會在資料指標結尾之前傳回 *n* 個資料列，使傳回的資料列成為新的目前資料列。 如果 *n* 或 @*nvar* 是 0，則不會傳回任何資料列。 *n* 必須是整數常數，而 @*nvar* 必須是 **smallint**、**tinyint** 或 **int**。  
+ 如果 *n* 或 @*nvar* 是正數，則會從資料指標前端傳回 *n* 個資料列，使傳回的資料列成為新的目前資料列。 如果 *n* 或 @*nvar* 是負數，則會在資料指標結尾之前傳回 *n* 個資料列，使傳回的資料列成為新的目前資料列。 如果 *n* 或 @*nvar* 是 0，則不會傳回任何資料列。 *n* 必須是整數常數，而 @*nvar* 必須是 **smallint**、**tinyint** 或 **int**。  
   
  RELATIVE { *n*| @*nvar*}  
- 如果 *n* 或 @*nvar* 是正數，便會在目前資料列之後傳回 *n* 個資料列，使傳回的資料列成為新的目前資料列。 如果 *n* 或 @*nvar* 是負數，便會在目前資料列之前傳回 *n* 個資料列，使傳回的資料列成為新的目前資料列。 如果 *n* 或 @*nvar* 是 0，便會傳回目前資料列。 在針對資料指標執行的第一項提取上，如果在指定 FETCH RELATIVE 時將 *n* 或 @*nvar* 設為負數或 0，就不會傳回任何資料列。 *n* 必須是整數常數，而 @*nvar* 必須是 **smallint**、**tinyint** 或 **int**。  
+ 如果 *n* 或 @*nvar* 是正數，則會在目前資料列之後傳回 *n* 個資料列，使傳回的資料列成為新的目前資料列。 如果 *n* 或 @*nvar* 是負數，則會在目前資料列之前傳回 *n* 個資料列，使傳回的資料列成為新的目前資料列。 如果 *n* 或 @*nvar* 是 0，則會傳回目前資料列。 在針對資料指標執行的第一項提取上，如果在指定 FETCH RELATIVE 時將 *n* 或 @*nvar* 設為負數或 0，就不會傳回任何資料列。 *n* 必須是整數常數，而 @*nvar* 必須是 **smallint**、**tinyint** 或 **int**。  
   
  GLOBAL  
  指定 *cursor_name* 是全域資料指標。  
@@ -137,7 +134,7 @@ GO
 ```  
   
 ### <a name="b-using-fetch-to-store-values-in-variables"></a>B. 利用 FETCH 將值儲存在變數中  
- 下列範例類似於範例 A，不過，`FETCH` 陳述式的輸出是儲存在本機變數中，而不是直接傳回給用戶端。 `PRINT` 陳述式將各個變數組成單一字串，再將它們傳回用戶端。  
+ 下列範例類似於範例 A，不過，`FETCH` 陳述式的輸出是儲存在本機變數中，而不是直接傳回給用戶端。 `PRINT` 陳述式會將各個變數組成單一字串，並將它們傳回給用戶端。  
   
 ```  
 USE AdventureWorks2012;  

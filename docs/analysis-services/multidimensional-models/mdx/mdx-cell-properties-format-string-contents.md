@@ -1,37 +1,23 @@
 ---
-title: "FORMAT_STRING 內容 (MDX) |Microsoft 文件"
-ms.custom: 
-ms.date: 03/13/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
-helpviewer_keywords:
-- formats [Analysis Services], string values
-- VALUE property
-- formats [Analysis Services], numeric values
-- FORMATTED_VALUE property
-- FORMAT_STRING contents
-ms.assetid: c354c938-0328-4b8e-adc5-3b52fd2a7152
-caps.latest.revision: 
-author: Minewiskan
+title: FORMAT_STRING 內容 (MDX) |Microsoft 文件
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: mdx
+ms.topic: conceptual
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: b2e191b852e9d68c9f5e3790e38b9a15f5759324
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 9b7ccd9881b4efe187b0cfc3cd5d5087817c7331
+ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="mdx-cell-properties---formatstring-contents"></a>MDX 資料格屬性 FORMAT_STRING 內容
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
-**FORMAT_STRING** 資料格屬性可格式化 **VALUE** 資料格屬性，建立 **FORMATTED_VALUE** 資料格屬性的值。 **FORMAT_STRING** 資料格屬性能處理原始的字串及原始數值，對該值套用格式運算式，以傳回格式化的 **FORMATTED_VALUE** 資料格屬性值。 下列資料表詳述了用來處理字串和數值的語法和格式字元。  
+  **FORMAT_STRING** 資料格屬性可格式化 **VALUE** 資料格屬性，建立 **FORMATTED_VALUE** 資料格屬性的值。 **FORMAT_STRING** 資料格屬性能處理原始的字串及原始數值，對該值套用格式運算式，以傳回格式化的 **FORMATTED_VALUE** 資料格屬性值。 下列資料表詳述了用來處理字串和數值的語法和格式字元。  
   
 ## <a name="string-values"></a>字串值  
  字串的格式運算式可以有一個區段或以分號 (;) 分隔的兩個區段。  
@@ -79,7 +65,7 @@ ms.lasthandoff: 02/15/2018
 |---------------|-----------------|  
 |無|顯示沒有格式的數字。|  
 |**0**|代表會顯示數字或零 (0) 的數字預留位置。<br /><br /> 如果數值在格式字串中 0 出現的位置有一個數字，格式值便會顯示該數字。 否則，格式值就會在那個位置顯示一個零。<br /><br /> 如果該數值比格式字串中零的位數還少 (在小數點任何一邊)，格式值便會在開頭或尾端顯示零。<br /><br /> 如果該數值小數點右邊的位數比格式運算式小數點右邊零的位數還多，那麼格式值便會將數值四捨五入到與零相同的小數位數。<br /><br /> 如果該數值小數點左邊的位數比格式運算式小數點左邊零的位數還多，那麼格式值就會顯示未經修改的額外位數。|  
-|**#**|代表會顯示數字或零的數字預留位置。<br /><br /> 如果運算式在格式字串中 (**#**) 數字符號出現的位置有一個數字，格式值便會顯示該數字。 否則，格式值就會在那個位置顯示一個零。<br /><br /> 這個 (**#**數字符號的運作方式就像零(**0**) 數字預留位置，不同的是如果該數值在小數點任何一邊的位數，跟格式運算式在小數點任何一邊上有的 **#** 字元位數相同或較少時，就無法在開頭及尾端顯示零。|  
+|**#**|代表會顯示數字或零的數字預留位置。<br /><br /> 如果運算式在格式字串中 (**#**) 數字符號出現的位置有一個數字，格式值便會顯示該數字。 否則，格式值就會在那個位置顯示一個零。<br /><br /> 這個 (**#** 數字符號的運作方式就像零(**0**) 數字預留位置，不同的是如果該數值在小數點任何一邊的位數，跟格式運算式在小數點任何一邊上有的 **#** 字元位數相同或較少時，就無法在開頭及尾端顯示零。|  
 |**。**|代表可決定在小數點左、右要顯示幾位數字的小數預留位置。<br /><br /> 如果格式運算式在句號 (**#**.**) 左邊只有 (**) 數字符號那麼小於 1 的數值將是以小數點為開頭。 若要在小數點數字開頭顯示一個零，請使用零 (0) 做為小數點左邊的第一個數字預留位置。<br /><br /> 在格式化輸出中實際做為小數預留位置的字元，將依電腦系統所能辨識的數字格式而有所不同。<br /><br /> 注意：在某些地區設定中，是用逗點做為小數點。|  
 |**%**|代表百分比預留位置。 運算式會乘以 100。 百分比字元 (**%**) 會插入格式字串中出現百分比的位置。|  
 |**,**|代表 千位分節點，一個數值中小數點左邊有四位以上位數時，可用以區分百位以上的千位數字。<br /><br /> 如果格式中包含的千位分節點以數字預留位置 (**0** 或 **#**) 括住，是在指定千位分節點的標準用法。<br /><br /> 小數點左邊 (不論有沒有指定小數點) 緊接著兩個相鄰的千位分節點，或一個千位分節點，表示「將數值除以 1000 來進位，視需要四捨五入」。 例如，您可以使用格式字串 "**##0**,,"，將一億表示為 100。 小於 1 百萬的數字顯示為 0。 兩個相鄰的千位分節點不是緊接在小數點左邊，都會視為指定要使用千位分節點。<br /><br /> 在格式化輸出中實際做為千位分節點的字元，將依電腦系統所能辨識的數字格式而有所不同。<br /><br /> 注意：在某些地區設定中，是用句點做為千位分節點。|  
@@ -87,7 +73,7 @@ ms.lasthandoff: 02/15/2018
 |**/**|代表日期分隔符號，其會在格式化日期值的時候區隔年、月、日。<br /><br /> 在格式化輸出中實際做為日期分隔符號使用的字元，是由電腦上的系統設定來決定。<br /><br /> 注意：在某些地區設定中，可能是使用其他字元做為日期分隔符號。|  
 |**E- E+ e- e+**|代表科學格式。<br /><br /> 如果格式運算式在 **E-****E+**, **e-** **e+** 的右邊含有至少一位數字預留位置 (**0** 或 **#**)，格式值會被顯示為科學格式，而 E 或 e 會被插入數值與數值的指數之間。 右邊預留位置的數字位數決定了指數的數字位數。 使用 **E-** 或 **e-** 會在負指數旁邊加上負號。 使用 **E+** 或 **e+** 會在正指數旁邊加上正號。|  
 |**- + $ ( )**|顯示實際字元。<br /><br /> 若要顯示未在以上列出的字元，請在該字元前面加上一個反斜線**\\**) 或以雙引號 (**" "**) 括住。|  
-|**\\**|顯示格示字串中的下一個字元。<br /><br /> 若要以實際字元來顯示一個有特殊義意的字元，請在該字元前面加上一個反斜線 (**\\**)。 反斜線本身不會被顯示。 使用反斜線就和使用雙引號把反斜線後面的字元括起來是一樣的。 若要顯示一個反斜線，請使用兩個反斜線 (**\\\\**)。 無法顯示為實際字元的字元範例包括以下字元：<br /><br /> <br /><br /> 日期格式及時間格式字元—**a**, **c**, **d**, **h**, **m**, **n**, **p**, **q**, **s**, **t**, **w**, **y**, **/**和 **:**<br /><br /> 數值格式字元—**#**、 **0**、 **%**, **E**、 **e**、 **逗號 (,)**及 **句號 (.)**<br /><br /> 字串格式字元—**@**、 **&**、 **\<**、 **>** **!**|  
+|**\\**|顯示格示字串中的下一個字元。<br /><br /> 若要以實際字元來顯示一個有特殊義意的字元，請在該字元前面加上一個反斜線 (**\\**)。 反斜線本身不會被顯示。 使用反斜線就和使用雙引號把反斜線後面的字元括起來是一樣的。 若要顯示一個反斜線，請使用兩個反斜線 (**\\\\**)。 無法顯示為實際字元的字元範例包括以下字元：<br /><br /> <br /><br /> 日期格式及時間格式字元—**a**, **c**、 **d**、 **h**、 **m**、 **n**, **p**、 **q**、 **s**、 **t**、 **w**、 **y**、 **/** 和 **:**<br /><br /> 數值格式字元—**#**、 **0**、 **%**, **E**、 **e**、 **逗號 (,)** 及 **句號 (.)**<br /><br /> 字串格式字元—**@**、 **&**、 **\<**、 **>** **!**|  
 |**"ABC"**|顯示雙引號 (**" "**) 內的字串。<br /><br /> 若要在程式碼中包括格式中的字串，請使用 Chr(**34**) 來括住文字。 (雙引號的字元碼是 **34**。)|  
   
 ### <a name="named-numeric-formats"></a>具名數值格式  
@@ -157,8 +143,8 @@ ms.lasthandoff: 02/15/2018
   
 ## <a name="see-also"></a>另請參閱  
  [LANGUAGE 及 FORMAT_STRING FORMATTED_VALUE 上](../../../analysis-services/multidimensional-models/mdx/mdx-cell-properties-formatted-value-property.md)   
- [使用資料格屬性 &#40;MDX &#41;](../../../analysis-services/multidimensional-models/mdx/mdx-cell-properties-using-cell-properties.md)   
- [建立和使用屬性值 &#40;MDX &#41;](http://msdn.microsoft.com/library/0cafb269-03c8-4183-b6e9-220f071e4ef2)   
- [MDX 查詢基礎觀念 &#40;Analysis Services &#41;](../../../analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services.md)  
+ [使用資料格屬性 & #40;MDX & #41;](../../../analysis-services/multidimensional-models/mdx/mdx-cell-properties-using-cell-properties.md)   
+ [建立和使用屬性值 & #40;MDX & #41;](http://msdn.microsoft.com/library/0cafb269-03c8-4183-b6e9-220f071e4ef2)   
+ [MDX 查詢基礎觀念 & #40;Analysis Services & #41;](../../../analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services.md)  
   
   

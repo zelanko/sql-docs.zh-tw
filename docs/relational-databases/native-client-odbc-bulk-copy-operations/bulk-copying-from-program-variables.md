@@ -1,15 +1,14 @@
 ---
-title: "從程式變數大量複製 |Microsoft 文件"
-ms.custom: 
+title: 從程式變數大量複製 |Microsoft 文件
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
 ms.component: native-client-odbc-bulk-copy-operations
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - bulk copy [ODBC], program variables
@@ -20,16 +19,16 @@ helpviewer_keywords:
 - ODBC, bulk copy operations
 - program variables [ODBC]
 ms.assetid: e4284a1b-7534-4b34-8488-b8d05ed67b8c
-caps.latest.revision: 
+caps.latest.revision: 31
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 255e91a51f92c09f8ed1ba872cb5c8bdc052fd52
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 5e0bcb033e4e99bdba8dc7167d3823e103c9cfd9
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="bulk-copying-from-program-variables"></a>從程式變數中大量複製
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -91,7 +90,7 @@ ms.lasthandoff: 01/25/2018
 |SQL_GUID|SQL_C_GUID|SQLUNIQUEID|**uniqueidentifier**|  
 |SQL_INTERVAL_|SQL_C_CHAR|SQLCHARACTER|**char**|  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]不會不會有簽署**tinyint**、 不帶正負號**smallint**，或不帶正負號**int**資料型別。 若要移轉這些資料類型時，請避免遺失資料的值，建立[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]使用下一個最大整數資料類型的資料表。 若要避免使用者之後加入原始資料類型所允許之範圍以外的值，請將規則套用到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料行，將可允許的值限制為原始來源中受到該資料類型所支援的範圍：  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不會不會有簽署**tinyint**、 不帶正負號**smallint**，或不帶正負號**int**資料型別。 若要移轉這些資料類型時，請避免遺失資料的值，建立[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]使用下一個最大整數資料類型的資料表。 若要避免使用者之後加入原始資料類型所允許之範圍以外的值，請將規則套用到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料行，將可允許的值限制為原始來源中受到該資料類型所支援的範圍：  
   
 ```  
 CREATE TABLE Sample_Ints(STinyIntCol   SMALLINT,  
@@ -111,7 +110,7 @@ sp_bindrule USmallInt_Rule, 'Sample_Ints.USmallIntCol'
 GO  
 ```  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]不直接支援間隔資料型別。 應用程式可以不過，儲存為字元字串中的間隔逸出序列[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]字元資料行。 應用程式可以讀取它們供日後使用，但是它們不能在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式中使用。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不直接支援間隔資料型別。 應用程式可以不過，儲存為字元字串中的間隔逸出序列[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]字元資料行。 應用程式可以讀取它們供日後使用，但是它們不能在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式中使用。  
   
  大量複製函數可用來快速將資料載入[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，已從 ODBC 資料來源讀取。 使用[SQLBindCol](../../relational-databases/native-client-odbc-api/sqlbindcol.md)來繫結結果集至程式變數的資料行，然後使用**bcp_bind**要繫結相同的程式變數大量複製作業。 呼叫[SQLFetchScroll](../../relational-databases/native-client-odbc-api/sqlfetchscroll.md)或**SQLFetch**再從 ODBC 資料來源擷取資料列，到程式變數，並呼叫[bcp_sendrow](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-sendrow.md)將資料大量複製從程式變數到[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
   
@@ -120,6 +119,6 @@ GO
  您無法讀取資料，從[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]到程式變數使用大量複製; 沒有類似"bcp_readrow"函數。 您只能將應用程式中的資料傳送到伺服器。  
   
 ## <a name="see-also"></a>另請參閱  
- [執行大量複製作業 &#40; ODBC &#41;](../../relational-databases/native-client-odbc-bulk-copy-operations/performing-bulk-copy-operations-odbc.md)  
+ [執行大量複製作業&#40;ODBC&#41;](../../relational-databases/native-client-odbc-bulk-copy-operations/performing-bulk-copy-operations-odbc.md)  
   
   

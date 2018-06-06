@@ -1,30 +1,28 @@
 ---
-title: "發行集屬性、訂閱選項 | Microsoft Docs"
-ms.custom: 
+title: 發行集屬性、訂閱選項 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
 ms.component: replication
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 f1_keywords:
 - sql13.rep.newpubwizard.pubproperties.subscriptionoptions.f1
 ms.assetid: 31abd605-b273-419d-86df-d0ecf539a507
-caps.latest.revision: 
+caps.latest.revision: 39
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: a2b1050183fa56189cb4985d3c19283d9e5d7b3c
-ms.sourcegitcommit: ab25b08a312d35489a2c4a6a0d29a04bbd90f64d
+ms.openlocfilehash: 451273b019c91d7bf92ae2f277bb4a7b69e668b8
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="publication-properties-subscription-options"></a>發行集屬性，訂閱選項
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -71,7 +69,7 @@ ms.lasthandoff: 03/08/2018
  僅限[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 和更新版本。 決定是否允許使用備份檔案來初始化訂閱。 如需詳細資訊，請參閱 [Initialize a Transactional Subscription Without a Snapshot](../../relational-databases/replication/initialize-a-transactional-subscription-without-a-snapshot.md)中手動初始化訂閱。  
   
  **允許非 SQL Server 訂閱者**  
- 僅限[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 和更新版本。 決定發行集是否支援非[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 訂閱者。 將此選項設定為 **[True]** ，就會將其他發行集屬性設定為支援非[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 訂閱者。 如果訂閱已存在，此選項會是唯讀的；如果 **[允許立即更新訂閱]** 、 **[允許佇列更新訂閱]**或 **[允許點對點訂閱]**設定為 **[True]** ，則此選項無法設定為 **[True]**。 如需詳細資訊，請參閱 [Non-SQL Server Subscribers](../../relational-databases/replication/non-sql/non-sql-server-subscribers.md)。  
+ 僅限[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 和更新版本。 決定發行集是否支援非[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 訂閱者。 將此選項設定為 **[True]** ，就會將其他發行集屬性設定為支援非[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 訂閱者。 如果訂閱已存在，此選項會是唯讀的；如果 **[允許立即更新訂閱]** 、 **[允許佇列更新訂閱]** 或 **[允許點對點訂閱]** 設定為 **[True]** ，則此選項無法設定為 **[True]**。 如需詳細資訊，請參閱 [Non-SQL Server Subscribers](../../relational-databases/replication/non-sql/non-sql-server-subscribers.md)。  
   
 ### <a name="data-transformation"></a>資料轉換  
  **允許資料轉換**  
@@ -98,13 +96,13 @@ ms.lasthandoff: 03/08/2018
  決定訂閱者資料的變更是否可先排入佇列，稍後再複寫至發行者。 此選項是唯讀的，只有在建立發行集時才能啟用更新訂閱。 如需詳細資訊，請參閱 [Updatable Subscriptions for Transactional Replication](../../relational-databases/replication/transactional/updatable-subscriptions-for-transactional-replication.md)。  
   
  **集中報告衝突**  
- 決定是否只在發行者端報告資料變更的衝突，或在發行者和訂閱者兩端都報告 (需要啟用 **[允許佇列更新訂閱]**選項)。 此選項是唯讀的；針對使用新增發行集精靈所建立的發行集，預設為 **[True]** ，而且在發行集建立後就無法變更。 **[True]** 值表示衝突只會在發行者端報告。 衝突只能在其報告處檢視。  
+ 決定是否只在發行者端報告資料變更的衝突，或在發行者和訂閱者兩端都報告 (需要啟用 **[允許佇列更新訂閱]** 選項)。 此選項是唯讀的；針對使用新增發行集精靈所建立的發行集，預設為 **[True]** ，而且在發行集建立後就無法變更。 **[True]** 值表示衝突只會在發行者端報告。 衝突只能在其報告處檢視。  
   
  **衝突解決原則**  
- 指定當訂閱者的變更和發行者的變更發生衝突時，所要採取的動作 (需要啟用 **[允許佇列更新訂閱]**選項)。 如需詳細資訊，請參閱 [Queued Updating Conflict Detection and Resolution](../../relational-databases/replication/transactional/updatable-subscriptions-queued-updating-conflict-resolution.md)。  
+ 指定當訂閱者的變更和發行者的變更發生衝突時，所要採取的動作 (需要啟用 **[允許佇列更新訂閱]** 選項)。 如需詳細資訊，請參閱 [Queued Updating Conflict Detection and Resolution](../../relational-databases/replication/transactional/updatable-subscriptions-queued-updating-conflict-resolution.md)。  
   
  **佇列類型**  
- 決定是否使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 佇列或 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Message Queuing (MSMQ) 將訂閱者端的變更排入佇列，直到可以套用至發行者為止 (需要啟用 **[允許佇列更新訂閱]**選項)。 此選項只適用於 [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]。更新版本一律會使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料表執行佇列。  
+ 決定是否使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 佇列或 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Message Queuing (MSMQ) 將訂閱者端的變更排入佇列，直到可以套用至發行者為止 (需要啟用 **[允許佇列更新訂閱]** 選項)。 此選項只適用於 [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]。更新版本一律會使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料表執行佇列。  
   
 ## <a name="options-for-merge-publications"></a>合併式發行集的選項  
   
@@ -123,7 +121,7 @@ ms.lasthandoff: 03/08/2018
  僅限[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 和更新版本。 決定是否事先計算哪些資料列屬於哪些資料分割，來最佳化同步處理。 如果發行集符合預先計算資料分割的準則，此設定就會預設為 **[True]** 。 如需詳細資訊，請參閱[使用預先計算的資料分割最佳化參數化篩選效能](../../relational-databases/replication/merge/parameterized-filters-optimize-for-precomputed-partitions.md)。  
   
  **最佳化同步處理**  
- 決定是否在每一個訂閱者端儲存其他中繼資料，來最佳化合併處理。 預先計算的資料分割已取代此最佳化方式；只有在 **[預先計算資料分割]** 設定為 **[False]** 時， **[最佳化同步處理]**選項才適用。 如需詳細資訊，請參閱 [Parameterized Row Filters](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)。  
+ 決定是否在每一個訂閱者端儲存其他中繼資料，來最佳化合併處理。 預先計算的資料分割已取代此最佳化方式；只有在 **[預先計算資料分割]** 設定為 **[False]** 時， **[最佳化同步處理]** 選項才適用。 如需詳細資訊，請參閱 [Parameterized Row Filters](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)。  
   
 ### <a name="merge-processes"></a>合併處理  
  **限制並行處理**  

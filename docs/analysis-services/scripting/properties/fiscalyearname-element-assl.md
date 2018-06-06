@@ -1,36 +1,23 @@
 ---
-title: "FiscalYearName 元素 (ASSL) |Microsoft 文件"
-ms.custom: 
-ms.date: 03/06/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+title: FiscalYearName 元素 (ASSL) |Microsoft 文件
+ms.date: 5/8/2018
+ms.prod: sql
+ms.custom: assl
+ms.reviewer: owend
+ms.technology: analysis-services
 ms.topic: reference
-apiname: FiscalYearName Element
-apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
-apitype: Schema
-applies_to: SQL Server 2016 Preview
-f1_keywords: FiscalYearName
-helpviewer_keywords: FiscalYearName element
-ms.assetid: ce613a21-6890-4796-aac5-b029eca46255
-caps.latest.revision: "30"
-author: Minewiskan
+author: minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 422c6047fff4a3441f257a77d5a1a75a46d1dfc9
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 15ddcfd13eb7f09ca590075dab37e3471064c0b4
+ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="fiscalyearname-element-assl"></a>FiscalYearName 元素 (ASSL)
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]定義用於會計年度名稱的命名慣例[TimeBinding](../../../analysis-services/scripting/data-type/timebinding-data-type-assl.md)項目。  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+  定義用於會計年度名稱的命名慣例[TimeBinding](../../../analysis-services/scripting/data-type/timebinding-data-type-assl.md)項目。  
   
 ## <a name="syntax"></a>語法  
   
@@ -45,7 +32,7 @@ ms.lasthandoff: 01/08/2018
   
 ## <a name="element-characteristics"></a>元素特性  
   
-|特性|描述|  
+|特性|說明|  
 |--------------------|-----------------|  
 |資料類型和長度|字串 (列舉)|  
 |預設值|*NextCalendarYearName*|  
@@ -61,14 +48,14 @@ ms.lasthandoff: 01/08/2018
 ## <a name="remarks"></a>備註  
  這個元素的值限制為下表所列的其中一個字串。  
   
-|ReplTest1|描述|  
+|Value|Description|  
 |-----------|-----------------|  
 |*CalendarYearName*|指派目前日曆年度的名稱給會計年度。|  
 |*NextCalendarYearName*|指派下一個日曆年度的名稱給會計年度。|  
   
  列舉型別對應至允許的值**FiscalYearName**在 「 分析管理物件 (AMO) 物件模型而言， <xref:Microsoft.AnalysisServices.FiscalYearName>。  
   
-## <a name="see-also"></a>請參閱  
- [屬性 &#40;ASSL &#41;](../../../analysis-services/scripting/properties/properties-assl.md)  
+## <a name="see-also"></a>另請參閱  
+ [屬性 & #40;ASSL & #41;](../../../analysis-services/scripting/properties/properties-assl.md)  
   
   

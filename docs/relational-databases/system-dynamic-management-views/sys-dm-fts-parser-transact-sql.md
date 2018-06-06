@@ -1,16 +1,12 @@
 ---
-title: "sys.dm_fts_parser (TRANSACT-SQL) |Microsoft 文件"
-ms.custom: 
+title: sys.dm_fts_parser (TRANSACT-SQL) |Microsoft 文件
+ms.custom: ''
 ms.date: 06/10/2016
-ms.prod: sql-non-specified
-ms.prod_service: database-engine
-ms.service: 
-ms.component: dmv's
-ms.reviewer: 
+ms.prod: sql
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: system-objects
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.dm_fts_parser_TSQL
@@ -23,16 +19,15 @@ helpviewer_keywords:
 - sys.dm_fts_parser dynamic management function
 - troubleshooting [SQL Server], full-text search
 ms.assetid: 2736d376-fb9d-4b28-93ef-472b7a27623a
-caps.latest.revision: 
+caps.latest.revision: 37
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 97e1eb8f7c4b37e8f1d3bb84ff7b1607712f729c
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 717e97ca38fdc68b0ba807f546a253793234375b
+ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 05/23/2018
 ---
 # <a name="sysdmftsparser-transact-sql"></a>sys.dm_fts_parser (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -77,12 +72,12 @@ sys.dm_fts_parser('query_string', lcid, stoplist_id, accent_sensitivity)
 |-----------------|---------------|-----------------|  
 |關鍵字 (keyword)|**varbinary(128)**|斷詞工具所傳回之給定關鍵字的十六進位表示法。 這個表示法是用來將關鍵字儲存在全文檢索索引中。 這個值不是人們可讀取，但它可用於傳回全文檢索索引的內容，例如其他動態管理檢視與給定的關鍵字來輸出傳回[sys.dm_fts_index_keywords](../../relational-databases/system-dynamic-management-views/sys-dm-fts-index-keywords-transact-sql.md)和[sys.dm_fts_index_keywords_by_document](../../relational-databases/system-dynamic-management-views/sys-dm-fts-index-keywords-by-document-transact-sql.md)。<br /><br /> **注意：** OxFF 代表指出檔案或資料集的結尾的特殊字元。|  
 |group_id|**int**|包含可用於區分從中產生給定詞彙之邏輯群組的整數值。 例如，'`Server AND DB OR FORMSOF(THESAURUS, DB)"`' 會使用英文產生下列 group_id 值：<br /><br /> 1： 伺服器<br />2: DB<br />3: DB|  
-|phrase_id|**int**|包含可用於區分斷詞工具發出複合字 (例如 full-text) 之替代形式所處情況的整數值。 有時候，如果存在複合字 ('multi-million')，斷詞工具就會發出替代形式。 這些替代形式 (片語) 有時必須加以區別。<br /><br /> 例如，'`multi-million`' 會使用英文產生下列 phrase_id 值：<br /><br /> 1。`multi`<br />1。`million`<br />2`multimillion`|  
-|occurrence|**int**|指出剖析結果中每個詞彙的順序。 例如，若為 "`SQL Server query processor`" 片語，occurrence 就會使用英文針對此片語中的詞彙包含下列 occurrence 值：<br /><br /> 1。`SQL`<br />2`Server`<br />3`query`<br />4 個`processor`|  
+|phrase_id|**int**|包含可用於區分斷詞工具發出複合字 (例如 full-text) 之替代形式所處情況的整數值。 有時候，如果存在複合字 ('multi-million')，斷詞工具就會發出替代形式。 這些替代形式 (片語) 有時必須加以區別。<br /><br /> 例如，'`multi-million`' 會使用英文產生下列 phrase_id 值：<br /><br /> 1。 `multi`<br />1。 `million`<br />2 `multimillion`|  
+|occurrence|**int**|指出剖析結果中每個詞彙的順序。 例如，若為 "`SQL Server query processor`" 片語，occurrence 就會使用英文針對此片語中的詞彙包含下列 occurrence 值：<br /><br /> 1。 `SQL`<br />2 `Server`<br />3 `query`<br />4 個 `processor`|  
 |special_term|**nvarchar(4000)**|包含斷詞工具所發出之詞彙特性的相關資訊，它有下列幾種：<br /><br /> 完全相符<br /><br /> 非搜尋字<br /><br /> 句子的結尾<br /><br /> 段落的結尾<br /><br /> 章節的結尾|  
 |display_term|**nvarchar(4000)**|包含關鍵字的人們可讀取形式。 如同設計成存取全文檢索索引內容的函數，由於非正規化限制，所以這個顯示的詞彙可能不會與原始詞彙完全相同。 不過，它的精確程度應該足以協助您從原始輸入中識別出該詞彙。|  
 |expansion_type|**int**|包含給定詞彙之展開本質的相關資訊，它有下列幾種：<br /><br /> 0 = 單一字詞大小寫<br /><br /> 2 = 字形展開<br /><br /> 4 = 同義字展開/取代<br /><br /> 例如，假設同義字定義當做 `jog` 之展開執行的情況：<br /><br /> `<expansion>`<br /><br /> `<sub>run</sub>`<br /><br /> `<sub>jog</sub>`<br /><br /> `</expansion>`<br /><br /> `FORMSOF (FREETEXT, run)` 一詞會產生下列輸出：<br /><br /> `run` 而且 expansion_type=0<br /><br /> `runs` 而且 expansion_type=2<br /><br /> `running` 而且 expansion_type=2<br /><br /> `ran` 而且 expansion_type=2<br /><br /> `jog` 而且 expansion_type=4|  
-|source_term|**nvarchar(4000)**|從中產生或剖析給定詞彙的詞彙或片語。 例如，'"`word breakers" AND stemmers'` 的查詢會使用英文產生下列 source_term 值：<br /><br /> `word breakers`如 display_term`word`<br />`word breakers`如 display_term`breakers`<br />`stemmers`如 display_term`stemmers`|  
+|source_term|**nvarchar(4000)**|從中產生或剖析給定詞彙的詞彙或片語。 例如，'"`word breakers" AND stemmers'` 的查詢會使用英文產生下列 source_term 值：<br /><br /> `word breakers` 如 display_term`word`<br />`word breakers` 如 display_term`breakers`<br />`stemmers` 如 display_term`stemmers`|  
   
 ## <a name="remarks"></a>備註  
  **sys.dm_fts_parser**支援的語法和功能的全文檢索述詞，例如[CONTAINS](../../t-sql/queries/contains-transact-sql.md)和[FREETEXT](../../t-sql/queries/freetext-transact-sql.md)，和函式，例如[CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md)和[FREETEXTTABLE](../../relational-databases/system-functions/freetexttable-transact-sql.md)。  
@@ -170,7 +165,7 @@ SELECT * FROM sys.dm_fts_parser(N'français', 1036, 5, 1);
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [全文檢索搜尋及語意搜尋動態管理檢視與函數 &#40;TRANSACT-SQL &#41;](../../relational-databases/system-dynamic-management-views/full-text-and-semantic-search-dynamic-management-views-functions.md)   
+ [全文檢索搜尋和語意搜尋動態管理檢視與函數&#40;Transact SQL&#41;](../../relational-databases/system-dynamic-management-views/full-text-and-semantic-search-dynamic-management-views-functions.md)   
  [全文檢索搜尋](../../relational-databases/search/full-text-search.md)   
  [設定及管理搜尋的斷詞工具與字幹分析器](../../relational-databases/search/configure-and-manage-word-breakers-and-stemmers-for-search.md)   
  [設定及管理全文檢索搜尋的同義字檔案](../../relational-databases/search/configure-and-manage-thesaurus-files-for-full-text-search.md)   

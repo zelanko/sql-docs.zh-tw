@@ -1,32 +1,28 @@
 ---
-title: "交易記錄 (SQL Server) | Microsoft Docs"
-ms.custom: 
+title: 交易記錄 (SQL Server) | Microsoft Docs
+ms.custom: ''
 ms.date: 01/04/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
-ms.component: logs
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- dbe-transaction-log
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: supportability
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - transaction logs [SQL Server], about
 - databases [SQL Server], transaction logs
 - logs [SQL Server], transaction logs
 ms.assetid: d7be5ac5-4c8e-4d0a-b114-939eb97dac4d
-caps.latest.revision: 
-author: JennieHubbard
-ms.author: jhubbard
+caps.latest.revision: 65
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.workload: Active
-ms.openlocfilehash: 24b9cf5cb7fd7a8359b7a946219b5e4a5eb5c037
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.openlocfilehash: 877c48ecbe9befaf0bb04f34a866dd8fee6671bc
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="the-transaction-log-sql-server"></a>交易記錄 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -97,7 +93,7 @@ ms.lasthandoff: 02/12/2018
  如需詳細資訊，請參閱本主題稍後的[可能會延遲記錄截斷的因素](#FactorsThatDelayTruncation)。  
   
 > [!NOTE]
-> 記錄截斷並不會讓實體記錄檔變小。 若要減少實體記錄檔的實體大小，則必須壓縮記錄檔。 如需有關壓縮實體記錄檔大小的詳細資訊，請參閱＜ [Manage the Size of the Transaction Log File](../../relational-databases/logs/manage-the-size-of-the-transaction-log-file.md)＞。  
+> 記錄截斷並不會讓實體記錄檔變小。 若要減少實體記錄檔的實體大小，則必須壓縮記錄檔。 如需有關壓縮實體記錄檔大小的詳細資訊，請參閱＜ [管理交易記錄檔的大小](../../relational-databases/logs/manage-the-size-of-the-transaction-log-file.md)＞。  
 > 不過，請記住[可能會延遲記錄截斷的因素](#FactorsThatDelayTruncation)。 如果壓縮記錄檔之後再次需要儲存空間，交易記錄檔將再次成長，並且會因此在記錄檔成長作業期間，導入效能額外負荷。
   
 ##  <a name="FactorsThatDelayTruncation"></a> Factors that can delay log truncation  

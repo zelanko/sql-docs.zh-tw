@@ -1,38 +1,37 @@
 ---
-title: "PHP Driver for SQL Server Support for LocalDB |Microsoft 文件"
-ms.custom: 
-ms.date: 02/03/2017
-ms.prod: sql-non-specified
-ms.reviewer: 
+title: LocalDB 的支援 |Microsoft 文件
+ms.custom: ''
+ms.date: 03/26/2018
+ms.prod: sql
+ms.reviewer: ''
 ms.suite: sql
 ms.prod_service: drivers
 ms.component: php
-ms.technology: drivers
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: connectivity
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: d315ad6a-0d50-4093-80c2-2f11217237c2
-caps.latest.revision: "14"
+caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
-ms.workload: Inactive
-ms.openlocfilehash: 4dcf9e36eb3928bc606053bdfda441520155864a
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+manager: craigg
+ms.openlocfilehash: 92be589df4038d152f07445d7cd5fa4ffafc935b
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
-# <a name="php-driver-for-sql-server-support-for-localdb"></a>PHP Driver for SQL Server Support for LocalDB (PHP Driver for SQL Server 對 LocalDB 的支援)
+# <a name="support-for-localdb"></a>LocalDB 的支援
 
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-從開始[!INCLUDE[ssSQL11](../../includes/sssql11_md.md)]，輕量版[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]名為 LocalDB，將可使用。 本主題將討論如何連接到 LocalDB 執行個體中的資料庫。
+LocalDB 是輕量版[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]其中已經提供自[!INCLUDE[ssSQL11](../../includes/sssql11_md.md)]。 本主題將討論如何連接到 LocalDB 執行個體中的資料庫。
 
 ## <a name="remarks"></a>備註
 
 如需有關 LocalDB，包括如何安裝 LocalDB 和設定 LocalDB 執行個體，請參閱[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]上的線上叢書 》 主題[!INCLUDE[ssSQL11](../../includes/sssql11_md.md)]Express LocalDB。
 
-總而言之，LocalDB 可讓您：
+簡單地說，LocalDB 可讓您：
 
 -   使用**sqllocaldb.exe 我**探索預設執行個體的名稱。
 
@@ -81,8 +80,8 @@ $conn = new PDO( 'sqlsrv:server=(localdb)\\myInstance;'
     . 'database=myData', NULL, NULL);
 ```
 
-您可以下載從 LocalDB [SQL Server 2012 功能套件頁面](http://go.microsoft.com/fwlink/?LinkID=236805)，或從[!INCLUDE[ssSQL11](../../includes/sssql11_md.md)]Express edition。 如果您將使用 sqlcmd.exe 來修改 LocalDB 執行個體中的資料，您必須從 sqlcmd [!INCLUDE[ssSQL11](../../includes/sssql11_md.md)]，您可以從命令列公用程式下載中取得[!INCLUDE[ssSQL11](../../includes/sssql11_md.md)]功能套件頁面。
+如需安裝 LocalDB 的指示，請參閱[LocalDB 文件](../../database-engine/configure-windows/sql-server-2016-express-localdb.md)。 如果您使用 sqlcmd.exe 來修改 LocalDB 執行個體中的資料時，您將需要[sqlcmd 公用程式](../../tools/sqlcmd-utility.md)。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-[連接到伺服器](../../connect/php/connecting-to-the-server.md)
+[連線到伺服器](../../connect/php/connecting-to-the-server.md)

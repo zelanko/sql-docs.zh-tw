@@ -1,36 +1,33 @@
 ---
-title: "ODBC 資料來源的子機碼 |Microsoft 文件"
-ms.custom: 
+title: ODBC 資料來源的子機碼 |Microsoft 文件
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
-ms.component: odbc
-ms.reviewer: 
+ms.prod: sql
+ms.prod_service: connectivity
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: connectivity
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - subkeys [ODBC], for data sources
 - data sources [ODBC], subkeys
 - registry entries for data sources [ODBC], subkeys
 ms.assetid: 0a8ccb80-c573-4418-84e5-f04a2b0e2ac1
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
-ms.workload: Inactive
-ms.openlocfilehash: 3141bf0b16c6be579bf76a77b13e240ad5befef4
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+manager: craigg
+ms.openlocfilehash: e81fe6cc77d92a8fde7530c1f79381025a05856b
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="odbc-data-sources-subkey"></a>ODBC 資料來源子機碼
 ODBC 資料來源的子機碼下的值清單的資料來源。 這些值的格式為下表所示。  
   
-|[屬性]|資料類型|data|  
+|名稱|資料類型|資料|  
 |----------|---------------|----------|  
 |*資料來源名稱*|REG_SZ|*驅動程式說明*|  
   

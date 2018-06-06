@@ -1,16 +1,15 @@
 ---
-title: "sp_vupgrade_replication (TRANSACT-SQL) |Microsoft 文件"
-ms.custom: 
+title: sp_vupgrade_replication (TRANSACT-SQL) |Microsoft 文件
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - sp_vupgrade_replication
 ms.assetid: d2c0ed66-07d1-4adc-82e5-a654376879bc
-caps.latest.revision: 
+caps.latest.revision: 30
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: d07f50261726675d921f39226cd97f9b163b1f7f
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: c12d5f2b9ffbbf2d3d1d3ce11b76e32a3f3ed12f
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="spvupgradereplication-transact-sql"></a>sp_vupgrade_replication (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -51,13 +49,13 @@ sp_vupgrade_replication [ [@login=] 'login' ]
   
 ## <a name="arguments"></a>引數  
  [  **@login=**] **'***登入***'**  
- 這是在散發資料庫中建立新的系統物件時，所用的系統管理員登入。 *登入*是**sysname**，預設值是 NULL。 如果這個參數不需要*security_mode*設**1**，也就是 Windows 驗證。  
+ 這是在散發資料庫中建立新的系統物件時，所用的系統管理員登入。 *login* 是預設值為 NULL 的 **sysname**。 如果這個參數不需要*security_mode*設**1**，也就是 Windows 驗證。  
   
 > [!NOTE]  
 >  當您升級到 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 和更新版本時，會忽略這個參數。  
   
  [  **@password=**] **'***密碼***'**  
- 這是在散發資料庫中建立新的系統物件時，所用的系統管理員密碼。 *密碼*是**sysname**，預設值是**'** （空字串）。 如果這個參數不需要*security_mode*設**1**，也就是 Windows 驗證。  
+ 這是在散發資料庫中建立新的系統物件時，所用的系統管理員密碼。 *密碼*是**sysname**，預設值是 **'** （空字串）。 如果這個參數不需要*security_mode*設**1**，也就是 Windows 驗證。  
   
 > [!NOTE]  
 >  當您升級到 SQL [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 和更新版本時，會忽略這個參數。  
@@ -85,7 +83,7 @@ sp_vupgrade_replication [ [@login=] 'login' ]
 ## <a name="permissions"></a>Permissions  
  只有成員**sysadmin**固定的伺服器角色可以執行**sp_vupgrade_replication**。  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [複寫預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)   
  [驗證複寫的資料](../../relational-databases/replication/validate-replicated-data.md)  
   

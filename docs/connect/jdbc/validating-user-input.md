@@ -1,27 +1,24 @@
 ---
-title: "驗證使用者輸入 |Microsoft 文件"
-ms.custom: 
+title: 驗證使用者輸入 |Microsoft 文件
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
-ms.component: jdbc
-ms.reviewer: 
+ms.prod: sql
+ms.prod_service: connectivity
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: connectivity
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: 8aa867b0-e6f0-49eb-93d3-817ae2ed8f77
-caps.latest.revision: "11"
+caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
-ms.workload: Inactive
-ms.openlocfilehash: a00eafc9f72910f05c1850b25bba5e91a4e276a6
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+manager: craigg
+ms.openlocfilehash: 438f65ae8ec719339297b62e9bef7c347a063a1b
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="validating-user-input"></a>驗證使用者輸入
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -32,7 +29,7 @@ ms.lasthandoff: 11/18/2017
   
  多個 SQL 資料隱碼以及如何避免這樣的詳細資訊，請參閱 < SQL 資料隱碼 」 中,[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]線上叢書 》。 如需有關驗證預存程序參數的詳細資訊，請參閱 「 預存程序 ([!INCLUDE[ssDE](../../includes/ssde_md.md)]) 」 以及從屬主題中的[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]線上叢書 》。  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [保護 JDBC Driver 應用程式](../../connect/jdbc/securing-jdbc-driver-applications.md)  
   
   

@@ -1,32 +1,29 @@
 ---
-title: "Microsoft OLE DB 簡單提供者 |Microsoft 文件"
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
+title: Microsoft OLE DB 簡單提供者 |Microsoft 文件
+ms.prod: sql
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
-ms.custom: 
+ms.technology: connectivity
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - simple provider [ADO]
 - providers [ADO], OLE DB simple provider
 - OLE DB simple provider [ADO]
 ms.assetid: 1e7dc6f0-482c-4103-8187-f890865e40fc
-caps.latest.revision: 
+caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: ae0672fc209e2a31608a36fdef6757bef8d60cf6
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 5e757ad77f0312d682027d2363944db552217eba
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="microsoft-ole-db-simple-provider-overview"></a>Microsoft OLE DB 簡單提供者概觀
 Microsoft OLE DB 簡單提供者 (OSP) 可讓 ADO 存取任何資料的提供者已寫入使用[OLE DB 簡單提供者 (OSP) 工具組](http://msdn.microsoft.com/en-us/6e7b7931-9e4a-4151-ae51-672abd3f84a6)。 簡單的提供者被用來存取資料來源需要唯一基本的 OLE DB 支援，例如記憶體中陣列或 XML 文件。

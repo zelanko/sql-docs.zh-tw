@@ -1,17 +1,17 @@
 ---
-title: "使用強式名稱自訂組件 | Microsoft Docs"
-ms.custom: 
+title: 使用強式名稱自訂組件 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
-ms.service: 
 ms.component: custom-assemblies
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 helpviewer_keywords:
 - AllowPartiallyTrustedCallersAttribute attribute
 - strong-named custom assemblies [Reporting Services]
@@ -19,16 +19,15 @@ helpviewer_keywords:
 - assemblies [Reporting Services], strong names
 - custom assemblies [Reporting Services], strong-named
 ms.assetid: ca9f19d7-6e86-46f2-b9ad-9bf807eaa52e
-caps.latest.revision: "35"
+caps.latest.revision: 35
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 48121789fa42eb738904f64124d2b3925a98571a
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 965c75a16e02d6561da2cf326a74f585e5e8be3a
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="using-strong-named-custom-assemblies"></a>使用強式名稱自訂組件
   強式名稱會識別組件，並且含括組件的文字名稱、四部分的版本號碼、文化特性資訊 (若有提供)、公用金鑰，以及儲存在組件資訊清單中的數位簽章。 強式名稱可唯一識別 Common Language Runtime (CLR) 並確保二進位的完整性。  

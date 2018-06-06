@@ -1,16 +1,15 @@
 ---
-title: "sysmergepublications (TRANSACT-SQL) |Microsoft 文件"
-ms.custom: 
+title: sysmergepublications (TRANSACT-SQL) |Microsoft 文件
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
 ms.component: system-tables
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -22,16 +21,15 @@ dev_langs:
 helpviewer_keywords:
 - sysmergepublications system table
 ms.assetid: 7f82c6c3-22d1-47c0-a92b-4d64b98cc455
-caps.latest.revision: 
+caps.latest.revision: 42
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 95059187ddd567212027d73dbd361e1ee9d2e7a7
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 40763216075a551c244e72b0516e7ff2383ff913
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sysmergepublications-transact-sql"></a>sysmergepublications (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -72,13 +70,13 @@ ms.lasthandoff: 11/21/2017
 |**keep_before_values**|**int**|指定這個發行集是否進行最佳化的同步處理：<br /><br /> **0** = 同步處理未最佳化，而且會驗證傳送給所有訂閱者的資料分割，分割區中的資料變更時。<br /><br /> **1** = 同步處理最佳化，並僅有變更的資料分割中的資料列的 「 訂閱者 」 會受到影響。|  
 |**allow_subscription_copy**|**bit**|指定是否已啟用複製訂閱資料庫的能力。 **0**表示不允許複製。|  
 |**allow_synctoalternate**|**bit**|指定是否允許替代的同步處理夥伴與這個發行者同步。 **0**表示不允許同步夥伴。|  
-|**validate_subscriber_info**|**nvarchar （500)**|列出用於擷取訂閱者資訊以及驗證訂閱者參數化資料列篩選器準則的函數。|  
+|**validate_subscriber_info**|**nvarchar(500)**|列出用於擷取訂閱者資訊以及驗證訂閱者參數化資料列篩選器準則的函數。|  
 |**ad_guidname**|**sysname**|指定發行集是否在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Active Directory 中發行。 有效的 GUID 指定發行集發行在 Active Directory 中，GUID 是對應的 Active Directory 發行集物件**objectGUID**。 如果是 NULL，發行集就不會發行在 Active Directory 中。|  
 |**backward_comp_level**|**int**|資料庫相容性層級。 可以是下列其中一個值：<br /><br /> **90** = [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)].<br /><br /> **100** = [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)].|  
 |**max_concurrent_merge**|**int**|允許使用的最大並行合併處理序數目。 值為**0**的這個屬性表示是在任何給定時間執行的並行合併處理序數目沒有限制。 這個屬性會設定能夠針對合併式發行集來同時執行的並行合併處理序的數目限制。 如果排程同時執行的快照集處理序數目超出允許執行的值，超出的作業便會放在佇列中，等到目前在執行中的合併處理序完成為止。|  
 |**max_concurrent_dynamic_snapshots**|**int**|允許針對合併式發行集來執行的最大並行已篩選資料快照集工作階段數目。 如果**0**，能夠同時針對發行集，在任何給定時間執行的並行已篩選的資料快照集工作階段的最大數目沒有限制。 這個屬性會設定能夠針對合併式發行集來同時執行的並行快照集處理序的數目限制。 如果排程同時執行的快照集處理序數目超出允許執行的值，超出的作業便會放在佇列中，等到目前在執行中的合併處理序完成為止。|  
 |**use_partition_groups**|**smallint**|指定發行集是否使用預先計算的資料分割。|  
-|**dynamic_filters_function_list**|**nvarchar （500)**|發行集的參數化資料列篩選器所用的函數清單 (用分號分隔)。|  
+|**dynamic_filters_function_list**|**nvarchar(500)**|發行集的參數化資料列篩選器所用的函數清單 (用分號分隔)。|  
 |**partition_id_eval_proc**|**sysname**|指定訂閱者的合併代理程式為了判斷指派的資料分割識別碼而執行的程序名稱。|  
 |**publication_number**|**smallint**|指定識別欄位提供的 2 位元組對應**pubid**。 **pubid**是全域唯一識別碼是發行集，而發行集的數目是只在指定的資料庫中是唯一。|  
 |**replicate_ddl**|**int**|指出是否支援發行集的結構描述複寫。<br /><br /> **0** = DDL 陳述式不會複寫。<br /><br /> **1** = DDL 複寫在發行者端執行的陳述式。<br /><br /> 如需詳細資訊，請參閱[對發行集資料庫進行結構描述變更](../../relational-databases/replication/publish/make-schema-changes-on-publication-databases.md)。|  
@@ -86,20 +84,20 @@ ms.lasthandoff: 11/21/2017
 |**dynamic_snapshot_queue_timeout**|**int**|指定在使用參數化篩選時，訂閱者必須在佇列中等待快照集產生程序開始的分鐘數。|  
 |**dynamic_snapshot_ready_timeout**|**int**|指定在使用參數化篩選時，訂閱者等待快照集產生程序完成的分鐘數。|  
 |**散發者**|**sysname**|發行集散發者的名稱。|  
-|**snapshot_jobid**|**binary （16)**|識別在訂閱者能夠起始快照集產生程序時，產生快照集的代理程式作業。|  
+|**snapshot_jobid**|**binary(16)**|識別在訂閱者能夠起始快照集產生程序時，產生快照集的代理程式作業。|  
 |**allow_web_synchronization**|**bit**|指定是否要將發行集啟用 Web 同步處理，其中**1**表示發行集啟用 Web 同步處理。|  
-|**web_synchronization_url**|**nvarchar （500)**|指定 Web 同步處理所用的網際網路 URL 預設值。|  
-|**allow_partition_realignment**|**bit**|指出當修改發行者的資料列造成資料分割的變更時，是否要將刪除動作傳給訂閱者。<br /><br /> **0** = 從舊的資料分割會保留在訂閱者，其中這項資料在 「 發行者 」 上所做的變更將不會複寫到這個訂閱者，但在 「 訂閱者 」 上所做的變更會複寫到 「 發行者 」 上。<br /><br /> **1** = 刪除導引到 「 訂閱者 」，以反映資料分割變更的結果來移除已不在訂閱者資料分割的資料。<br /><br /> 如需詳細資訊，請參閱[sp_addmergepublication &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md).<br /><br /> 附註： 保留的資料，「 訂閱者 」 時，這個值是**0**應該處理方式，如同它是唯讀; 不過，這不會嚴格強制執行複寫系統。|  
+|**web_synchronization_url**|**nvarchar(500)**|指定 Web 同步處理所用的網際網路 URL 預設值。|  
+|**allow_partition_realignment**|**bit**|指出當修改發行者的資料列造成資料分割的變更時，是否要將刪除動作傳給訂閱者。<br /><br /> **0** = 從舊的資料分割會保留在訂閱者，其中這項資料在 「 發行者 」 上所做的變更將不會複寫到這個訂閱者，但在 「 訂閱者 」 上所做的變更會複寫到 「 發行者 」 上。<br /><br /> **1** = 刪除導引到 「 訂閱者 」，以反映資料分割變更的結果來移除已不在訂閱者資料分割的資料。<br /><br /> 如需詳細資訊，請參閱[sp_addmergepublication &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md)。<br /><br /> 附註： 保留的資料，「 訂閱者 」 時，這個值是**0**應該處理方式，如同它是唯讀; 不過，這不會嚴格強制執行複寫系統。|  
 |**retention_period_unit**|**tinyint**|定義用來定義時的單位*保留*，它可以是下列值之一：<br /><br /> **0** = 日。<br /><br /> **1** = 週。<br /><br /> **2** = 月。<br /><br /> **3** = 年。|  
 |**decentralized_conflicts**|**int**|指出是否將衝突記錄儲存在造成衝突的訂閱者端：<br /><br /> **0** = 將衝突記錄不會儲存在 「 訂閱者 」。<br /><br /> **1** = 將衝突記錄儲存在 「 訂閱者 」。|  
 |**generation_leveling_threshold**|**int**|指定某個層代中包含的變更數目。 層代是指傳遞給發行者或訂閱者的變更集合。|  
 |**automatic_reinitialization_policy**|**bit**|指出在自動重新初始化之前，是否從訂閱者上傳變更。<br /><br /> **1** = 上傳變更從訂閱者的自動重新初始化發生之前。<br /><br /> **0** = 在自動重新初始化之前不會上傳變更。|  
   
-## <a name="see-also"></a>請參閱＜  
- [複寫資料表 &#40;TRANSACT-SQL &#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
- [複寫檢視 &#40;TRANSACT-SQL &#41;](../../relational-databases/system-views/replication-views-transact-sql.md)   
- [sp_addmergepublication &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md)   
+## <a name="see-also"></a>另請參閱  
+ [複寫資料表&#40;Transact SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
+ [複寫檢視&#40;Transact SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)   
+ [sp_addmergepublication &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md)   
  [sp_changemergepublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql.md)   
- [sp_helpmergepublication &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/sp-helpmergepublication-transact-sql.md)  
+ [sp_helpmergepublication &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpmergepublication-transact-sql.md)  
   
   

@@ -1,35 +1,34 @@
 ---
-title: "檢視記錄傳送報表 (SQL Server Management Studio) | Microsoft Docs"
-ms.custom: 
+title: 檢視記錄傳送報表 (SQL Server Management Studio) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/04/2017
-ms.prod: sql-non-specified
-ms.prod_service: database-engine
-ms.service: 
+ms.prod: sql
+ms.prod_service: high-availability
 ms.component: log-shipping
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: dbe-high-availability
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: high-availability
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - viewing log shipping reports
 - displaying log shipping reports
 - log shipping [SQL Server], monitoring
 - log shipping [SQL Server], viewing reports
 ms.assetid: 3b549f2f-3683-45e5-b8e8-8095276c41ab
-caps.latest.revision: "18"
+caps.latest.revision: 18
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: abc94b43ffca65db5e37f32a8efd707f2b142042
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 48d35294501c51e888da121a50165763e1fe66ba
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="view-the-log-shipping-report-sql-server-management-studio"></a>檢視記錄傳送報表 (SQL Server Management Studio)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 本主題說明如何檢視 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中的「交易記錄傳送狀態」報表。 您可以在監視伺服器、主要伺服器或次要伺服器執行狀態報表。 若要查看有關記錄傳送組態的最完整資訊，請在監視伺服器執行個體中檢視報表。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  此主題說明如何檢視 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中的「交易記錄傳送狀態」報表。 您可以在監視伺服器、主要伺服器或次要伺服器執行狀態報表。 若要查看有關記錄傳送組態的最完整資訊，請在監視伺服器執行個體中檢視報表。  
   
  此報表會顯示您所連接的伺服器執行個體中，有可用狀態的任何記錄傳送活動的狀態。 如果該伺服器執行個體牽涉到不同角色的多個組態 (例如，當做某個資料庫的監視伺服器，但同時又是另一個資料庫的次要伺服器)，則顯示的結果將包含每一個角色觀點的所有組態資訊。 如果預存程序可以透過給定的記錄傳送組態連接到監視伺服器執行個體，報表便可以顯示該組態的額外狀態。  
   

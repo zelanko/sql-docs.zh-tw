@@ -1,16 +1,15 @@
 ---
-title: "namespace-uri 函數 (XQuery) |Microsoft 文件"
-ms.custom: 
+title: namespace-uri 函數 (XQuery) |Microsoft 文件
+ms.custom: ''
 ms.date: 08/09/2016
-ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
-ms.service: 
+ms.prod: sql
+ms.prod_service: sql
 ms.component: xquery
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,16 +19,15 @@ helpviewer_keywords:
 - fn:namespace-uri function
 - namespace-uri function
 ms.assetid: 9b48d216-26c8-431d-9ab4-20ab187917f4
-caps.latest.revision: 
+caps.latest.revision: 14
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: d765c32fc0387a1aff755a59d454f9b5797eb297
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 0107819414ce52418b369401feecff73441b63bd
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="functions-on-nodes---namespace-uri"></a>節點的命名空間 uri 相關函數
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -51,11 +49,11 @@ fn:namespace-uri($arg as node()?) as xs:string
   
 -   如果省略此引數，預設值就是內容節點。  
   
--   在 SQL Server， **fn:namespace-uri()**不只可以在內容相依述詞的內容中使用的引數。 具體而言，它只能在括號 ([ ]) 內使用。  
+-   在 SQL Server， **fn:namespace-uri()** 不只可以在內容相依述詞的內容中使用的引數。 具體而言，它只能在括號 ([ ]) 內使用。  
   
--   如果*$arg*是空的序列，則傳回零長度字串。  
+-   如果 *$arg*是空的序列，則傳回零長度字串。  
   
--   如果*$arg*是項目或屬性節點，其擴充 QName 不在命名空間，此函式會傳回零長度字串  
+-   如果 *$arg*是項目或屬性節點，其擴充 QName 不在命名空間，此函式會傳回零長度字串  
   
 ## <a name="examples"></a>範例  
  本主題提供 XQuery 範例，針對 XML 執行個體儲存在各種**xml**類型 AdventureWorks 資料庫中的資料行。  
@@ -87,7 +85,7 @@ http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuI
 ```  
   
 ### <a name="b-using-namespace-uri-without-argument-in-a-predicate"></a>B. 使用述詞中沒有引數的 namespace-uri()  
- 以下查詢是針對已指定 CatalogDescription 類型的 xml 資料行而指定。 運算式會將命名空間 URI 為 `http://www.adventure-works.com/schemas/OtherFeatures` 的所有元素節點傳回。 命名空間-**uri （)**函式已指定沒有引數，並使用內容節點。  
+ 以下查詢是針對已指定 CatalogDescription 類型的 xml 資料行而指定。 運算式會將命名空間 URI 為 `http://www.adventure-works.com/schemas/OtherFeatures` 的所有元素節點傳回。 命名空間-**uri （)** 函式已指定沒有引數，並使用內容節點。  
   
 ```  
 SELECT CatalogDescription.query('  
@@ -112,10 +110,10 @@ WHERE ProductModelID=19
 ### <a name="implementation-limitations"></a>實作限制  
  以下為其限制：  
   
--   **Namespace-uri （)**函式傳回類型 xs: string，而不是 xs: anyuri 的執行個體。  
+-   **Namespace-uri （)** 函式傳回類型 xs: string，而不是 xs: anyuri 的執行個體。  
   
 ## <a name="see-also"></a>另請參閱  
  [在節點上的函式](http://msdn.microsoft.com/library/09a8affa-3341-4f50-aebc-fdf529e00c08)   
- [本機名稱函式 &#40;XQuery &#41;](../xquery/functions-on-nodes-local-name.md)  
+ [local-name 函數&#40;XQuery&#41;](../xquery/functions-on-nodes-local-name.md)  
   
   

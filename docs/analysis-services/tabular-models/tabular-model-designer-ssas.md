@@ -1,31 +1,21 @@
 ---
-title: "表格式模型設計師 |Microsoft 文件"
-ms.date: 10/19/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services, azure-analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.custom: 
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords:
-- sql13.ASVS.BIDTOOLSET.TOPLEVSEMMODUIENTRY.F1
-ms.assetid: 45735c57-2a95-4e45-8994-7242df6c9c5f
-caps.latest.revision: 
-author: Minewiskan
+title: SQL Server Data Tools 中的表格式模型設計師 |Microsoft 文件
+ms.date: 05/07/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: tabular-models
+ms.topic: conceptual
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 98eb6a35d2dba7c71dcd857ffdfbe08c6e8bd17c
-ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
+ms.openlocfilehash: 98c836650ef00b283718ddf22834f7e4d4a56e0f
+ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/10/2018
 ---
-# <a name="tabular-model-designer-ssas"></a>表格式模型設計師 (SSAS)
+# <a name="tabular-model-designer"></a>表格式模型設計師
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
 此表格式模型設計師是與 Microsoft [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]整合之 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]的一部分，具有特別用來開發專業表格式模型方案的額外專案類型範本。  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 可從 Web 免費下載安裝。 如需詳細資訊，請參閱[下載 SQL Server Data Tools (SSDT)](../../ssdt/download-sql-server-data-tools-ssdt.md)。    
   
@@ -140,6 +130,5 @@ ms.lasthandoff: 02/23/2018
   
 ## <a name="see-also"></a>另請參閱  
  [表格式模型專案](../../analysis-services/tabular-models/tabular-model-projects-ssas-tabular.md)   
- [屬性](../../analysis-services/tabular-models/properties-ssas-tabular.md)  
   
   

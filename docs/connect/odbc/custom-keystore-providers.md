@@ -1,27 +1,24 @@
 ---
-title: "自訂金鑰存放區提供者 |Microsoft 文件"
-ms.custom: 
+title: 自訂金鑰存放區提供者 |Microsoft 文件
+ms.custom: ''
 ms.date: 07/12/2017
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
-ms.component: odbc
-ms.reviewer: 
+ms.prod: sql
+ms.prod_service: connectivity
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: connectivity
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: a6166d7d-ef34-4f87-bd1b-838d3ca59ae7
-caps.latest.revision: "1"
+caps.latest.revision: 1
 ms.author: v-chojas
-manager: jhubbard
+manager: craigg
 author: MightyPen
-ms.workload: Inactive
-ms.openlocfilehash: 4c6f936ee92c23f38c78dc219be25ef051e02bb0
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: 0d3a3b25ca2ead96d23b0d367ab633d900951de8
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="custom-keystore-providers"></a>自訂金鑰存放區提供者
 [!INCLUDE[Driver_ODBC_Download](../../includes/driver_odbc_download.md)]
@@ -639,6 +636,6 @@ FoundProv:
 
 ```
 
-## <a name="see-also"></a>請參閱＜
+## <a name="see-also"></a>另請參閱
 
 [使用 ODBC 驅動程式搭配使用一律加密](../../connect/odbc/using-always-encrypted-with-the-odbc-driver.md)

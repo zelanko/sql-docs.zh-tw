@@ -1,16 +1,14 @@
 ---
-title: "query() 方法 (xml 資料類型) | Microsoft Docs"
-ms.custom: 
+title: query() 方法 (xml 資料類型) | Microsoft Docs
+ms.custom: ''
 ms.date: 07/26/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-database
-ms.service: 
 ms.component: t-sql|xml
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: t-sql
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - TSQL
@@ -18,16 +16,15 @@ helpviewer_keywords:
 - query method
 - query() method
 ms.assetid: f48f6f7b-219f-463a-bf36-bc10f21afaeb
-caps.latest.revision: 
+caps.latest.revision: 28
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: Active
-ms.openlocfilehash: 4ec43116cf548df0a6f3541ab882635331f1b395
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 82f56308ec18e2c3b8bde437e2d776f9daf05120
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="query-method-xml-data-type"></a>query() 方法 (xml 資料類型)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -109,15 +106,16 @@ declare namespace wm="http://schemas.microsoft.com/sqlserver/2004/07/adventure-w
  注意 query() 與 exist() 方法兩個都會宣告 PD 前置詞。 在此情況下，您可以使用 WITH XMLNAMESPACES 先定義前置詞並在查詢中使用它。  
   
 ```  
-WITH XMLNAMESPACES (  
+WITH XMLNAMESPACES 
+(  
    'http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription' AS PD,  
-   'http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelWarrAndMain' AS wm)  
-SELECT CatalogDescription.query('  
-<Product ProductModelID="{ /PD:ProductDescription[1]/@ProductModelID }" />  
-') as Result  
+   'http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelWarrAndMain' AS WM
+)  
+SELECT CatalogDescription.query('<Product ProductModelID="{ /PD:ProductDescription[1]/@ProductModelID }" />')
+       AS Result  
 FROM Production.ProductModel  
-where CatalogDescription.exist('  
-     /PD:ProductDescription/PD:Features/wm:Warranty ') = 1  
+WHERE CatalogDescription.exist('/PD:ProductDescription/PD:Features/WM:Warranty ') = 1;
+
 ```  
   
 ## <a name="see-also"></a>另請參閱  

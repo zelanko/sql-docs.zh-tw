@@ -1,30 +1,29 @@
 ---
-title: "getVersionColumns 方法 (SQLServerDatabaseMetaData) |Microsoft 文件"
-ms.custom: 
+title: getVersionColumns 方法 (SQLServerDatabaseMetaData) |Microsoft 文件
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
-ms.component: jdbc
-ms.reviewer: 
+ms.prod: sql
+ms.prod_service: connectivity
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
-ms.topic: article
-apiname: SQLServerDatabaseMetaData.getVersionColumns
-apilocation: sqljdbc.jar
+ms.technology: connectivity
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
+apiname:
+- SQLServerDatabaseMetaData.getVersionColumns
+apilocation:
+- sqljdbc.jar
 apitype: Assembly
 ms.assetid: 6dd275d3-d9b2-4db7-938a-d4406c940a7a
-caps.latest.revision: "14"
+caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
-ms.workload: Inactive
-ms.openlocfilehash: 6adf8973efd40728df1604dcef9b4a87736be72c
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+manager: craigg
+ms.openlocfilehash: 722fd20c9210b14cb503ab3a0189815fa3cc83dd
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="getversioncolumns-method-sqlserverdatabasemetadata"></a>getVersionColumns 方法 (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -41,11 +40,11 @@ public java.sql.ResultSet getVersionColumns(java.lang.String catalog,
 ```  
   
 #### <a name="parameters"></a>參數  
- *類別目錄*  
+ *catalog*  
   
  A**字串**，其中包含目錄名稱。  
   
- *結構描述*  
+ *schema*  
   
  A**字串**，包含結構描述名稱模式。  
   
@@ -66,14 +65,14 @@ public java.sql.ResultSet getVersionColumns(java.lang.String catalog,
   
 |名稱|型別|Description|  
 |----------|----------|-----------------|  
-|SCOPE|**短**|JDBC 驅動程式不支援。|  
+|SCOPE|**short**|JDBC 驅動程式不支援。|  
 |COLUMN_NAME|**字串**|資料行名稱。|  
-|DATA_TYPE|**短**|來自 java.sql.Types 的 SQL 資料型別。|  
+|DATA_TYPE|**short**|來自 java.sql.Types 的 SQL 資料型別。|  
 |TYPE_NAME|**字串**|資料類型的名稱。|  
 |COLUMN_SIZE|**int**|資料行的有效位數。|  
 |BUFFER_LENGTH|**int**|資料行長度 (以位元組為單位)。|  
-|DECIMAL_DIGITS|**短**|資料行的小數位數。|  
-|PSEUDO_COLUMN|**短**|指出資料行是否為虛擬資料行。 它可能是下列其中一個值：<br /><br /> versionColumnUnknown (0)<br /><br /> versionColumnNotPseudo (1)<br /><br /> versionColumnPseudo (2)|  
+|DECIMAL_DIGITS|**short**|資料行的小數位數。|  
+|PSEUDO_COLUMN|**short**|指出資料行是否為虛擬資料行。 它可能是下列其中一個值：<br /><br /> versionColumnUnknown (0)<br /><br /> versionColumnNotPseudo (1)<br /><br /> versionColumnPseudo (2)|  
   
 > [!NOTE]  
 >  多個 getVersionColumns 方法所傳回的資料的詳細資訊，請參閱 「 sp_datatype_info (TRANSACT-SQL) 」，在[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]線上叢書 》。  
@@ -104,7 +103,7 @@ public static void executeGetVersionColumns(Connection con) {
 }  
 ```  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [SQLServerDatabaseMetaData 方法](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   
  [SQLServerDatabaseMetaData 成員](../../../connect/jdbc/reference/sqlserverdatabasemetadata-members.md)   
  [SQLServerDatabaseMetaData 類別](../../../connect/jdbc/reference/sqlserverdatabasemetadata-class.md)  

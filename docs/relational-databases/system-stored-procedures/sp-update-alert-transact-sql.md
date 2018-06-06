@@ -1,16 +1,14 @@
 ---
-title: "sp_update_alert (TRANSACT-SQL) |Microsoft 文件"
-ms.custom: 
+title: sp_update_alert (TRANSACT-SQL) |Microsoft 文件
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: system-objects
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_update_alert_TSQL
@@ -20,16 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_update_alert
 ms.assetid: 4bbaeaab-8aca-4c9e-abc1-82ce73090bd3
-caps.latest.revision: 
+caps.latest.revision: 34
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 7d39736eed19992c5fa20bb1231aed3bcb20e3b0
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: a7715e354208953dc62e4a161a44f195babf92f3
+ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="spupdatealert-transact-sql"></a>sp_update_alert (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -75,13 +72,13 @@ sp_update_alert
  [ **@new_name =**] **'***new_name***'**  
  警示的新名稱。 名稱必須是唯一的。 *new_name*是**sysname**，預設值是 NULL。  
   
- [ **@enabled =**] *enabled*  
+ [  **@enabled =**]*啟用*  
  指定是否啟用警示 (**1**) 或未啟用 (**0**)。 *啟用*是**tinyint**，預設值是 NULL。 您必須啟用警示，才能引發警示。  
   
  [ **@message_id =**] *message_id*  
  警示定義的新訊息或錯誤號碼。 一般而言， *message_id*對應中的錯誤代碼**sysmessages**資料表。 *message_id*是**int**，預設值是 NULL。 警示的嚴重性層級設定時，才可以使用識別碼的訊息**0**。  
   
- [ **@severity =**] *severity*  
+ [  **@severity =**]*嚴重性*  
  新的嚴重性層級 (從**1**透過**25**) 警示定義。 任何[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]傳送至 Windows 應用程式記錄檔且含有指定嚴重性的訊息都會啟動警示。 *嚴重性*是**int**，預設值是 NULL。 警示的訊息識別碼設定為時，才可以使用嚴重性層級**0**。  
   
  [ **@delay_between_responses =**] *delay_between_responses*  
@@ -138,12 +135,12 @@ sp_update_alert
  已保留。  
   
  [ **@performance_condition =**] **'***performance_condition***'**  
- 值，表示格式**'***itemcomparatorvalue***'**。 *performance_condition*是**nvarchar （512)**，預設值是 NULL，這些元素組成。  
+ 值，表示格式 **'***itemcomparatorvalue***'**。 *performance_condition*是**nvarchar （512)**，預設值是 NULL，這些元素組成。  
   
 |格式元素|Description|  
 |--------------------|-----------------|  
 |*項目*|計數器的效能物件、效能計數器或具名執行個體|  
-|*Comparator*|其中一個運算子：  **>** ，  **<** ，**=**|  
+|*Comparator*|其中一個運算子： **>**， **<**， **=**|  
 |*值*|計數器的數值|  
   
  [ **@category_name =**] **'***category***'**  

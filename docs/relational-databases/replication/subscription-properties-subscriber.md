@@ -1,32 +1,31 @@
 ---
-title: "訂閱屬性 - 訂閱者 | Microsoft Docs"
-ms.custom: 
+title: 訂閱屬性 - 訂閱者 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
 ms.component: replication
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 f1_keywords:
 - sql13.rep.newsubwizard.subproperties.subscriber.f1
 helpviewer_keywords:
 - Subscription Properties dialog box
 ms.assetid: bef66929-3234-4a45-8ec4-3b271519d07a
-caps.latest.revision: 
+caps.latest.revision: 25
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: eb2d94f889cd593e07331f19fd09ef29d94479b8
-ms.sourcegitcommit: ab25b08a312d35489a2c4a6a0d29a04bbd90f64d
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 055577c76f40d2138f74e0366032be37330775e6
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="subscription-properties---subscriber"></a>訂閱屬性 - 訂閱者
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -83,7 +82,7 @@ ms.lasthandoff: 03/08/2018
   
 ## <a name="options-for-merge-subscriptions"></a>合併訂閱的選項  
  **資料分割定義 (HOST_NAME)**  
- 針對使用參數化篩選的發行集，合併式複寫會在同步處理過程中評估兩個系統函數之一 (如果篩選參考兩個函數，則兩個都會評估)，以決定訂閱者應接收的資料： **SUSER_SNAME()** 或 **HOST_NAME()**。 依預設， **HOST_NAME()** 會傳回執行合併代理程式之電腦的名稱，但是您可以在新增訂閱精靈中覆寫這個值。 如需參數化篩選與覆寫 **HOST_NAME()**的詳細資訊，請參閱＜ [Parameterized Row Filters](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)＞。  
+ 針對使用參數化篩選的發行集，合併式複寫會在同步處理過程中評估兩個系統函數之一 (如果篩選參考兩個函數，則兩個都會評估)，以決定訂閱者應接收的資料： **SUSER_SNAME()** 或 **HOST_NAME()**。 依預設， **HOST_NAME()** 會傳回執行合併代理程式之電腦的名稱，但是您可以在新增訂閱精靈中覆寫這個值。 如需參數化篩選與覆寫 **HOST_NAME()** 的詳細資訊，請參閱＜ [Parameterized Row Filters](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)＞。  
   
  **[訂閱類型]** 和 **[優先權]**  
  顯示訂閱是客訂閱或主訂閱 (建立了訂閱之後就無法再變更)。 主訂閱可以將資料重新發行至其他訂閱者，並且可以指派衝突解決的優先權。  
@@ -98,7 +97,7 @@ ms.lasthandoff: 03/08/2018
   
  如果針對 **[使用 Web 同步處理]** 選取 **[True]**：  
   
--   在 **[Web 伺服器位址]**中輸入 IIS 伺服器的完整位址。  
+-   在 **[Web 伺服器位址]** 中輸入 IIS 伺服器的完整位址。  
   
 -   按一下 **[Web 伺服器連接]** 資料列，然後按一下屬性按鈕 (**...**)，即可設定或變更訂閱者連接到 IIS 伺服器的帳戶。  
   

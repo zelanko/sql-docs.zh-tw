@@ -1,30 +1,29 @@
 ---
-title: "executeUpdate 方法 （java.lang.String，int） |Microsoft 文件"
-ms.custom: 
+title: executeUpdate 方法 （java.lang.String，int） |Microsoft 文件
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
-ms.component: jdbc
-ms.reviewer: 
+ms.prod: sql
+ms.prod_service: connectivity
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
-ms.topic: article
-apiname: SQLServerStatement.executeUpdate (java.lang.String, int)
-apilocation: sqljdbc.jar
+ms.technology: connectivity
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
+apiname:
+- SQLServerStatement.executeUpdate (java.lang.String, int)
+apilocation:
+- sqljdbc.jar
 apitype: Assembly
 ms.assetid: 4c52a20e-527e-4d14-9a5a-4cd195aac8ed
-caps.latest.revision: "13"
+caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
-ms.workload: Inactive
-ms.openlocfilehash: 3226c9c4ae102a80708fb5a020f9e9a9a32cdf5e
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+manager: craigg
+ms.openlocfilehash: 7c173fa5ed1c2d431038cb6ffd8b917d1d521e27
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="executeupdate-method-javalangstring-int"></a>executeUpdate 方法 (java.lang.String, int)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -42,9 +41,9 @@ public final int executeUpdate(java.lang.String sql,
 #### <a name="parameters"></a>參數  
  *sql*  
   
- A**字串**，其中包含 SQL 陳述式。  
+ 包含 SQL 陳述式的**字串**。  
   
- *旗標*  
+ *flag*  
   
  **Int**值，指出是否自動產生的索引鍵可供使用。 這個值一定是下面其中一個常數：  
   
@@ -53,7 +52,7 @@ public final int executeUpdate(java.lang.String sql,
  NO_GENERATED_KEYS  
   
 ## <a name="return-value"></a>傳回值  
- **Int** ，指出資料列受到影響或 0 的數目，如果使用 DDL 陳述式。  
+ **int** 會指出受影響的資料列數目，如果是使用 DDL 陳述式，則為 0。  
   
 ## <a name="exceptions"></a>例外狀況  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
@@ -61,10 +60,10 @@ public final int executeUpdate(java.lang.String sql,
 ## <a name="remarks"></a>備註  
  這個 executeUpdate 方法是由 java.sql.Statement 介面中的 executeUpdate 方法指定。  
   
- 如果執行預存程序會導致更新計數大於一，或是產生多個結果集，使用[執行](../../../connect/jdbc/reference/execute-method-sqlserverstatement.md)方法才能執行預存程序。  
+ 如果執行預存程序產生的更新計數大於一或是產生一個以上的結果集，請使用 [execute](../../../connect/jdbc/reference/execute-method-sqlserverstatement.md) 方法執行預存程序。  
   
-## <a name="see-also"></a>請參閱＜  
- [executeUpdate 方法 &#40;SQLServerStatement &#41;](../../../connect/jdbc/reference/executeupdate-method-sqlserverstatement.md)   
+## <a name="see-also"></a>另請參閱  
+ [executeUpdate 方法 &#40;SQLServerStatement&#41;](../../../connect/jdbc/reference/executeupdate-method-sqlserverstatement.md)   
  [SQLServerStatement 成員](../../../connect/jdbc/reference/sqlserverstatement-members.md)   
  [SQLServerStatement 類別](../../../connect/jdbc/reference/sqlserverstatement-class.md)  
   

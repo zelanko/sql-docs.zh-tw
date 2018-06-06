@@ -1,16 +1,14 @@
 ---
-title: "CHOOSE (TRANSACT-SQL) |Microsoft 文件"
-ms.custom: 
+title: CHOOSE (Transact-SQL) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
 ms.component: t-sql|functions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: t-sql
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - CHOOSE
@@ -20,18 +18,17 @@ dev_langs:
 helpviewer_keywords:
 - CHOOSE function
 ms.assetid: 1c382c83-7500-4bae-bbdc-c1dbebd3d83f
-caps.latest.revision: 
+caps.latest.revision: 13
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Active
-ms.openlocfilehash: 96e231ed5770e44018dac403e0ac895d85f00393
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: b6a89d1e317c8118ba212b823be5ce4b6cab5c1e
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/03/2018
 ---
-# <a name="logical-functions---choose-transact-sql"></a>邏輯函數的CHOOSE (TRANSACT-SQL)
+# <a name="logical-functions---choose-transact-sql"></a>邏輯函式 - CHOOSE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
   在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中從數值清單傳回指定之索引的項目。  
@@ -46,18 +43,18 @@ CHOOSE ( index, val_1, val_2 [, val_n ] )
 ```  
   
 ## <a name="arguments"></a>引數  
- *索引*  
+ *index*  
  表示以 1 為基底之索引到其後之項目清單中的整數運算式。  
   
- 如果提供的索引值具有數值資料類型以外**int**，則值會隱含地轉換成整數。 如果索引值超過數值陣列的界限，則 CHOOSE 會傳回 null。  
+ 如果已提供的索引值具有數值資料類型，而非 **int**，則此數值會隱含地轉換成整數。 如果索引值超過數值陣列的界限，則 CHOOSE 會傳回 null。  
   
- *val_1...val_n*  
+ *val_1 … val_n*  
  任何資料類型的逗號分隔值清單。  
   
 ## <a name="return-types"></a>傳回類型  
  從通過功能的類型集中，傳回優先順序最高的資料類型。 如需詳細資訊，請參閱[資料類型優先順序 &#40;Transact-SQL&#41;](../../t-sql/data-types/data-type-precedence-transact-sql.md)。  
   
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>Remarks  
  CHOOSE 作用類似陣列中的索引，其中的陣列是由跟隨索引引數的引數所組成。 其中 time-precision 引數會決定傳回值的秒數有效位數。  
   
 ## <a name="examples"></a>範例  
@@ -129,7 +126,7 @@ Sales Representative                               2007-07-01 Summer
   
 ```  
   
-## <a name="see-also"></a>請參閱＜  
- [IIF &#40;TRANSACT-SQL &#41;](../../t-sql/functions/logical-functions-iif-transact-sql.md)  
+## <a name="see-also"></a>另請參閱  
+ [IIF &#40;Transact-SQL&#41;](../../t-sql/functions/logical-functions-iif-transact-sql.md)  
   
   

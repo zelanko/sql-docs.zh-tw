@@ -1,17 +1,13 @@
 ---
-title: "檢查 System Configuration Checker 的參數 | Microsoft Docs"
-ms.custom: 
+title: 檢查 System Configuration Checker 的參數 | Microsoft Docs
+ms.custom: ''
 ms.date: 09/05/2017
-ms.prod: sql-non-specified
-ms.prod_service: database-engine
-ms.service: 
-ms.component: install-windows
-ms.reviewer: 
+ms.prod: sql
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- setup-install
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: install
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - installing SQL Server, system configuration checks
 - failed system configuration checks [SQL Server]
@@ -25,15 +21,15 @@ helpviewer_keywords:
 - configuration checkers [SQL Server]
 - Setup [SQL Server], system configuration checker
 ms.assetid: 8e712c15-6bfa-4d71-b303-9526101e5594
-caps.latest.revision: 
+caps.latest.revision: 46
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 7d9eef68fb49a95a04c95ccdb4ef91b978a277f4
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: d042a56707533efa61e752a5821e8fe13656a6ba
+ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="check-parameters-for-the-system-configuration-checker"></a>檢查 System Configuration Checker 的參數
 

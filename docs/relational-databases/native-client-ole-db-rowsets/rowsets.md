@@ -1,15 +1,14 @@
 ---
-title: "資料列集 |Microsoft 文件"
-ms.custom: 
+title: 資料列集 |Microsoft 文件
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
 ms.component: native-client-ole-db-rowsets
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - rowsets [OLE DB], about rowsets
@@ -18,16 +17,17 @@ helpviewer_keywords:
 - OLE DB rowsets, about rowsets
 - rowsets [OLE DB]
 ms.assetid: 5e7b3cbe-3670-4e18-8172-2226e0b6b142
-caps.latest.revision: 
+caps.latest.revision: 31
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: fe964e8e0cadaee2118540714f6e8a9c43763748
-ms.sourcegitcommit: a0aa5e611a0e6ebb74ac1e2f613e8916dc7a7617
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 1d12a7c6dfc3a63d20a16a4a4361ffd46e4f8972
+ms.sourcegitcommit: 2d93cd115f52bf3eff3069f28ea866232b4f9f9e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/24/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34708486"
 ---
 # <a name="rowsets"></a>資料列集
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -35,7 +35,7 @@ ms.lasthandoff: 01/24/2018
 
   資料列集是一組資料列，其中包含資料的資料行。 資料列集是能讓所有 OLE DB 資料提供者公開表格形式結果集資料的核心物件。  
   
- 取用者使用建立工作階段之後**:: Createsession**方法中，取用者可以使用**IOpenRowset**或**IDBCreateCommand**上要建立資料列集的工作階段的介面。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者支援這兩種介面。 此處描述這兩種方法。  
+ 取用者使用建立工作階段之後 **:: Createsession**方法中，取用者可以使用**IOpenRowset**或**IDBCreateCommand**若要建立資料列集的工作階段上的介面。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者支援這兩種介面。 此處描述這兩種方法。  
   
 -   建立資料列集呼叫**iopenrowset:: Openrowset**方法。  
   
@@ -57,19 +57,19 @@ ms.lasthandoff: 01/24/2018
   
 -   [以 IOpenRowset 建立資料列集](../../relational-databases/native-client-ole-db-rowsets/creating-a-rowset-with-iopenrowset.md)  
   
--   [使用 icommand:: Execute 建立資料列集](../../relational-databases/native-client-ole-db-rowsets/creating-rowsets-with-icommand-execute.md)  
+-   [使用 ICommand:: Execute 建立資料列集](../../relational-databases/native-client-ole-db-rowsets/creating-rowsets-with-icommand-execute.md)  
   
 -   [資料列集屬性和行為](../../relational-databases/native-client-ole-db-rowsets/rowset-properties-and-behaviors.md)  
   
 -   [資料列集和 SQL Server 資料指標](../../relational-databases/native-client-ole-db-rowsets/rowsets-and-sql-server-cursors.md)  
   
--   [提取資料列](../../relational-databases/native-client-ole-db-rowsets/fetching-rows.md)  
+-   [擷取資料列](../../relational-databases/native-client-ole-db-rowsets/fetching-rows.md)  
   
--   [擷取單一資料列使用 irow 來](../../relational-databases/native-client-ole-db-rowsets/fetching-a-single-row-with-irow.md)  
+-   [使用 IRow 擷取單一資料列](../../relational-databases/native-client-ole-db-rowsets/fetching-a-single-row-with-irow.md)  
   
 -   [書籤](../../relational-databases/native-client-ole-db-rowsets/bookmarks.md)  
   
--   [更新資料集中的資料列集](../../relational-databases/native-client-ole-db-rowsets/updating-data-in-rowsets.md)  
+-   [更新資料列集中的資料](../../relational-databases/native-client-ole-db-rowsets/updating-data-in-rowsets.md)  
   
 ## <a name="see-also"></a>另請參閱  
  [SQL Server Native Client &#40;OLE DB&#41;](../../relational-databases/native-client/ole-db/sql-server-native-client-ole-db.md)  

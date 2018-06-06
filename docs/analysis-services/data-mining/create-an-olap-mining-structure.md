@@ -1,31 +1,23 @@
 ---
-title: "建立 OLAP 採礦結構 |Microsoft 文件"
-ms.custom: 
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
-ms.assetid: 21cbdc9d-d33c-4026-b9ef-1be2bd92b3b1
-caps.latest.revision: 
-author: Minewiskan
+title: 建立 OLAP 採礦結構 |Microsoft 文件
+ms.date: 05/01/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: data-mining
+ms.topic: conceptual
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: d321050e1568a505e6b3550d3af07fc176ddb566
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 2a4721bf42a3c223905d982e8be6a470983beb06
+ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="create-an-olap-mining-structure"></a>建立 OLAP 採礦結構
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-建立以 OLAP Cube 或其他多維度資料存放區為根據的資料採礦模型有許多優點。 OLAP 方案已經包含妥善組織、清理和適當格式化的大量資料，但是這種資料的複雜性在於使用者不太可能根據隨選探索找到有意義的模式。 資料採礦讓您能夠探索新的相互關聯性，並提供可採取動作的洞察力。  
+  建立以 OLAP Cube 或其他多維度資料存放區為根據的資料採礦模型有許多優點。 OLAP 方案已經包含妥善組織、清理和適當格式化的大量資料，但是這種資料的複雜性在於使用者不太可能根據隨選探索找到有意義的模式。 資料採礦讓您能夠探索新的相互關聯性，並提供可採取動作的洞察力。  
   
  本主題描述如何根據現有多維度方案中的維度和相關量值來建立 OLAP 採礦結構。  
   
@@ -80,7 +72,7 @@ ms.lasthandoff: 02/15/2018
   
      使用 **[選取巢狀資料表資料行]** 對話方塊，從您想要用於分析的新維度中選擇屬性和量值。 您也必須指定巢狀屬性是否會用於預測。  
   
-     在您加入可能需要的所有巢狀屬性之後，請回到 **[指定採礦模型資料行使用方式]**頁面，並按 **[下一步]**。  
+     在您加入可能需要的所有巢狀屬性之後，請回到 **[指定採礦模型資料行使用方式]** 頁面，並按 **[下一步]**。  
   
 8.  **指定資料行的內容和資料類型**：現在您已經加入將用於分析的所有資料，而且您必須針對每一個屬性指定 *「資料類型」* 和 *「內容類型」* 。  
   
@@ -117,7 +109,7 @@ ms.lasthandoff: 02/15/2018
 |----------|---------------------|---------------|  
 |將成員組成群集|依據客戶成員屬性、客戶購買的產品和客戶花費的金額，來分割客戶維度。|[!INCLUDE[msCoName](../../includes/msconame-md.md)] 群集演算法|  
 |尋找特別的或異常的成員|依據銷售量、收益、商店位置和商店大小，在商店維度中識別特別的或異常的商店。|[!INCLUDE[msCoName](../../includes/msconame-md.md)] 決策樹演算法|  
-|尋找特別的或異常的資料格|識別一段時間內與典型趨勢相反的商店銷售。|[!INCLUDE[msCoName](../../includes/msconame-md.md)] 時間序列演算法|  
+|尋找特別的或異常的資料格|識別一段時間內與典型趨勢相反的商店銷售。|[!INCLUDE[msCoName](../../includes/msconame-md.md)]時間序列演算法|  
 |尋找相互關聯|識別與伺服器停機時間相關的因素，包括區域、機器類型、作業系統或購買日期。|[!INCLUDE[msCoName](../../includes/msconame-md.md)] 貝氏機率分類演算法|  
   
 ##  <a name="bkmk_Filters"></a>配量 Cube 與。篩選模型的比較  
@@ -145,7 +137,7 @@ ms.lasthandoff: 02/15/2018
   
  例如，如果案例資料所使用的主要維度為「客戶」，您可能會將相關維度當作「產品」維度加入，因為您預期客戶在一段期間內可能已訂購多個產品，而且此 Cube 已經透過訂單事實資料表將每一個客戶連結到多個產品。  
   
- 您可在精靈的 **[指定採礦模型資料行使用方式]** 頁面上，按一下 **[加入巢狀資料表]**來加入巢狀資料表。 隨即開啟一個對話方塊，引導您選擇相關維度及任何量值的程序。 案例和巢狀維度必須與外部索引鍵相關，而且量值必須使用案例或巢狀資料表中已經包含的其中一個屬性。 不幸的是，這些限制對於縮小範圍並沒有很大的用處，所以您必須謹慎來選取只對模型化有用處的屬性。  
+ 您可在精靈的 **[指定採礦模型資料行使用方式]** 頁面上，按一下 **[加入巢狀資料表]** 來加入巢狀資料表。 隨即開啟一個對話方塊，引導您選擇相關維度及任何量值的程序。 案例和巢狀維度必須與外部索引鍵相關，而且量值必須使用案例或巢狀資料表中已經包含的其中一個屬性。 不幸的是，這些限制對於縮小範圍並沒有很大的用處，所以您必須謹慎來選取只對模型化有用處的屬性。  
   
  對於您加入至巢狀資料表的每一個屬性或量值而言，您都必須指定巢狀屬性是否將用於預測，其方法是在 **[選取巢狀資料表資料行]** 對話方塊中選取 **[可預測]** 或 **[輸入]** 。 如果您未選取任何選項，該資料將會加入至採礦結構，但是不會用於分析。  
   
@@ -156,11 +148,11 @@ ms.lasthandoff: 02/15/2018
  能夠以這樣的方式使用巢狀資料表資料是 SQL Server 資料採礦的一項功能，此功能特別強大，而且在 Cube 中，使用相關資料子集的機率幾乎沒有限制。  
   
 ##  <a name="bkmk_DMDimension"></a> 了解資料採礦維度和鑽研  
- **[允許使用鑽研]**選項可讓您針對基礎 Cube 資料執行查詢，同時讓您瀏覽模型。 該資料不會包含在新的資料採礦維度中，但是 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 資料庫可以使用資料繫結來擷取來源 Cube 中的資訊。  
+ **[允許使用鑽研]** 選項可讓您針對基礎 Cube 資料執行查詢，同時讓您瀏覽模型。 該資料不會包含在新的資料採礦維度中，但是 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 資料庫可以使用資料繫結來擷取來源 Cube 中的資訊。  
   
- **[建立採礦模型維度]**選項可讓您在現有的 Cube 中產生新的維度，該維度包含演算法所發現的模式。 新維度中的階層大部分是由模型類型所決定。 例如，叢集模型的表示法相當平面，階層的頂端有 (全部) 節點，而每一個叢集會在下一層。 相反地，為決策樹模型建立的維度可能會有非常深入的階層，表示樹狀結構的分支。  
+ **[建立採礦模型維度]** 選項可讓您在現有的 Cube 中產生新的維度，該維度包含演算法所發現的模式。 新維度中的階層大部分是由模型類型所決定。 例如，叢集模型的表示法相當平面，階層的頂端有 (全部) 節點，而每一個叢集會在下一層。 相反地，為決策樹模型建立的維度可能會有非常深入的階層，表示樹狀結構的分支。  
   
- **[使用採礦模型維度建立 Cube]**選項可讓您將新的資料採礦維度匯出到新的 Cube 中。 在資料採礦維度上鑽研所需的任何物件都會自動併入。  
+ **[使用採礦模型維度建立 Cube]** 選項可讓您將新的資料採礦維度匯出到新的 Cube 中。 在資料採礦維度上鑽研所需的任何物件都會自動併入。  
   
 > [!WARNING]  
 >  只有以下的模型類型才支援資料採礦維度的建立：以 Microsoft 叢集演算法、Microsoft 決策樹演算法或 Microsoft 關聯演算法為根據的模型。  

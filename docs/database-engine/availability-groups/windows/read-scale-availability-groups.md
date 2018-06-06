@@ -1,27 +1,24 @@
 ---
-title: "讀取級別可用性群組 | Microsoft Docs"
-ms.custom: 
+title: 讀取級別可用性群組 | Microsoft Docs
+ms.custom: ''
 ms.date: 10/24/2017
-ms.prod: sql-non-specified
-ms.prod_service: database-engine
-ms.service: 
-ms.component: availability-groups
-ms.reviewer: 
+ms.prod: sql
+ms.prod_service: high-availability
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: dbe-high-availability
-ms.tgt_pltfrm: 
-ms.topic: article
-ms.assetid: 
-caps.latest.revision: "9"
+ms.technology: high-availability
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
+ms.assetid: ''
+caps.latest.revision: 9
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: d2d3eb4751cee7ab0258554f3b176b73a7cd12e5
-ms.sourcegitcommit: c41e1bf5a53e96855b4424de4e0897153070bb28
+ms.openlocfilehash: dca3919c6ec8b74342122a750da6d4b77e37d93c
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="read-scale-availability-groups"></a>讀取級別可用性群組
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -52,7 +49,7 @@ ms.lasthandoff: 11/28/2017
 
 
 
-## <a name="next-steps"></a>後續的步驟 
+## <a name="next-steps"></a>後續步驟 
 
 [在 Linux 上設定讀取級別可用性群組](../../../linux/sql-server-linux-availability-group-configure-rs.md)
 

@@ -1,33 +1,30 @@
 ---
-title: "命令和 CommandText 屬性範例 （VC + +） |Microsoft 文件"
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
+title: 命令和 CommandText 屬性範例 （VC + +） |Microsoft 文件
+ms.prod: sql
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
-ms.custom: 
+ms.technology: connectivity
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - CommandText property [ADOX], VC++ example
 - Command property [ADOX], VC++ example
 ms.assetid: 5a007b9a-be11-4fba-96db-6252993f97b8
-caps.latest.revision: 
+caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 84972ea0e0c3da5c2a2b789bb922b57d3b3df3e8
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 6ddeaf3cdf7d98fdc12efb0d9aa90815e0b3338e
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="command-and-commandtext-properties-example-vc"></a>命令和 CommandText 屬性範例 （VC + +）
 下列程式碼示範如何使用[命令](../../../ado/reference/adox-api/command-property-adox.md)来更新的程序文字屬性。  

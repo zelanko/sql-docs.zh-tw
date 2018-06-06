@@ -1,31 +1,28 @@
 ---
-title: RDS Scenario | Microsoft Docs
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
+title: RDS 案例 |Microsoft 文件
+ms.prod: sql
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
-ms.custom: 
+ms.technology: connectivity
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - address book application scenario [ADO]
 - RDS scenarios [ADO]
 ms.assetid: a7dcad87-aaf0-4b02-9660-472f8469761c
-caps.latest.revision: 
+caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 05bd95fc39fe21b5df9edfaa876a69d5935de9b2
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: bf193da58e2f849981a9d1f0c11885dfc40e7be2
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="rds-scenario"></a>RDS 案例
 > [!IMPORTANT]
@@ -48,9 +45,9 @@ ms.lasthandoff: 02/09/2018
   
 -   HTML 命令按鈕，建立查詢，清除搜尋欄位，請更新資料庫中 「 員工 」 資訊、 取消暫止的變更，並瀏覽的方格中顯示的資料列。  
   
--   DHTML 資料繫結來顯示資料查詢所傳回的比對後端資料庫 (透過**.RDSDataControl**資料繫結物件) 資料表中。  
+-   DHTML 資料繫結來顯示資料查詢所傳回的比對後端資料庫 (透過 **.RDSDataControl**資料繫結物件) 資料表中。  
   
--   VBScript 常式連接每個先前所述的元素，並允許它們互動。 VBScript 程式碼也會用來初始化**.RDSDataControl**物件，並以動態方式在 HTML 表格的名稱建立資料行標題**.RDSDataControl**資料錄集欄位。  
+-   VBScript 常式連接每個先前所述的元素，並允許它們互動。 VBScript 程式碼也會用來初始化 **.RDSDataControl**物件，並以動態方式在 HTML 表格的名稱建立資料行標題 **.RDSDataControl**資料錄集欄位。  
   
  請從步驟的連結，步驟來設定和執行案例，以及深入了解案例的運作方式。  
   

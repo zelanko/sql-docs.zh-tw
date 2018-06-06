@@ -1,16 +1,15 @@
 ---
-title: "sysmergesubscriptions (TRANSACT-SQL) |Microsoft 文件"
-ms.custom: 
+title: sysmergesubscriptions (TRANSACT-SQL) |Microsoft 文件
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
 ms.component: system-tables
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -22,16 +21,15 @@ dev_langs:
 helpviewer_keywords:
 - sysmergesubscriptions system table
 ms.assetid: 6adc78da-991d-4c08-98c3-ecb4762e0e99
-caps.latest.revision: 
+caps.latest.revision: 22
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: cd713b90c4d295eee99953c6561e9a7d057fc39b
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 2af51b3b46c9e4a939106ed32ed378d0d5e6cee1
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sysmergesubscriptions-transact-sql"></a>sysmergesubscriptions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -69,11 +67,11 @@ ms.lasthandoff: 11/21/2017
 |cleanedup_unsent_changes|**bit**|識別在訂閱者端已清除尚未傳送之變更的中繼資料。|  
 |replica_version|**int**|識別訂閱所屬之訂閱者的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本，它可以是下列其中一個值：<br /><br /> **90** = [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]<br /><br /> **100** = [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]|  
 |supportability_mode|**int**|僅供內部使用。|  
-|application_name|**nvarchar （128)**|僅供內部使用。|  
+|application_name|**nvarchar(128)**|僅供內部使用。|  
 |subscriber_number|**int**|僅供內部使用。|  
 |last_makegeneration_datetime|**datetime**|最後一個**datetime** 「 發行者 」 所執行之 makegeneration 處理序。 如需詳細資訊，請參閱中的-MakeGenerationInterval 參數[複寫合併代理程式](../../relational-databases/replication/agents/replication-merge-agent.md)。|  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [複寫資料表 &#40;Transact-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)  
   
   

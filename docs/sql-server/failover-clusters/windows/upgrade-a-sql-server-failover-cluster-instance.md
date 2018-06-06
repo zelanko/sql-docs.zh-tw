@@ -1,34 +1,32 @@
 ---
-title: "升級 SQL Server 容錯移轉叢集執行個體 | Microsoft Docs"
-ms.custom: 
+title: 升級 SQL Server 容錯移轉叢集執行個體 | Microsoft Docs
+ms.custom: ''
 ms.date: 10/01/2017
-ms.prod: sql-non-specified
-ms.prod_service: database-engine
-ms.service: 
-ms.component: failover-clusters
-ms.reviewer: 
+ms.prod: sql
+ms.prod_service: high-availability
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: dbe-high-availability
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: high-availability
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - upgrading failover clusters
 - clusters [SQL Server], upgrading
 - failover clustering [SQL Server], upgrading
 ms.assetid: daac41fe-7d0b-4f14-84c2-62952ad8cbfa
-caps.latest.revision: "47"
+caps.latest.revision: 47
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
-ms.workload: On Demand
-ms.openlocfilehash: 48d80ca9c0e939f0d70cac411014b41cc1e777b4
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+manager: craigg
+ms.openlocfilehash: a4326012731d0237a118a8f44f1d3486d9bc881f
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="upgrade-a-sql-server-failover-cluster-instance"></a>升級 SQL Server 容錯移轉叢集執行個體
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 支援將 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 容錯移轉叢集升級為新版的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]、新的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Service Pack 或累積更新，或在所有容錯移轉叢集節點上個別安裝至新的 Windows Service Pack 或累積更新，而且停機限制為單次手動容錯移轉 (回復為原始主要複本時則為兩次手動容錯移轉)。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 支援將 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 容錯移轉叢集升級至新版本的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]、新的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Service Pack 或累積更新，或在所有容錯移轉叢集節點上個別安裝至新的 Windows Service Pack 或累積更新時，可將停機時間限制為僅單一手動容錯移轉 (回復為原始主要複本時則為兩次手動容錯移轉)。  
   
  [!INCLUDE[winblue-server-2-md](../../../includes/winblue-server-2-md.md)] 之前的作業系統不支援升級容錯移轉叢集的 Windows 作業系統。 若要升級在 [!INCLUDE[winblue-server-2-md](../../../includes/winblue-server-2-md.md)] 或以上版本上執行的叢集節點，請參閱[執行輪流升級或更新](#perform-a-rolling-upgrade-or-update)。  
   
@@ -48,7 +46,7 @@ ms.lasthandoff: 12/05/2017
   
 -   在容錯移轉叢集升級期間，停機時間僅包含容錯移轉時間以及執行升級指令碼所需的時間。 在開始升級程序之前，如果您遵循下方的容錯移轉叢集輪流升級程序，且所有節點都符合必要條件，就可將停機時間降至最低。 在記憶體最佳化資料表使用中時升級 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 將會花費額外時間。 如需詳細資訊，請參閱 [Plan and Test the Database Engine Upgrade Plan](../../../database-engine/install-windows/plan-and-test-the-database-engine-upgrade-plan.md)。  
   
-## <a name="prerequisites"></a>必要條件  
+## <a name="prerequisites"></a>Prerequisites  
  在開始之前，請檢閱以下重要資訊：  
   
 -   [支援的版本和版本升級](../../../database-engine/install-windows/supported-version-and-edition-upgrades.md)︰確認您可從 Windows 作業系統版本和 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 版本升級至 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]。 例如，您無法直接從 SQL Server 2005 容錯移轉叢集執行個體升級至 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]，也無法升級在 [!INCLUDE[winxpsvr-md](../../../includes/winxpsvr-md.md)] 上執行的容錯移轉叢集。  
@@ -68,7 +66,7 @@ ms.lasthandoff: 12/05/2017
   
  若要在升級程序期間控制叢集節點的容錯移轉行為，請從命令提示字元執行升級作業，然後使用 /FAILOVERCLUSTERROLLOWNERSHIP 參數。 如需詳細資訊，請參閱 [從命令提示字元安裝 SQL Server](../../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md)。  
   
-## <a name="next-steps"></a>後續的步驟  
+## <a name="next-steps"></a>後續步驟  
  [使用安裝精靈升級 SQL Server &#40;安裝程式&#41;](../../../database-engine/install-windows/upgrade-sql-server-using-the-installation-wizard-setup.md)   
  [從命令提示字元安裝 SQL Server](../../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md)   
  [升級 SQL Server 容錯移轉叢集執行個體 &#40;安裝程式&#41;](../../../sql-server/failover-clusters/windows/upgrade-a-sql-server-failover-cluster-instance-setup.md)  

@@ -1,34 +1,34 @@
 ---
-title: "匯出 (DMX) |Microsoft 文件"
-ms.custom: 
+title: 匯出 (DMX) |Microsoft 文件
+ms.custom: ''
 ms.date: 03/02/2016
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
 ms.component: data-mining
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
-f1_keywords: EXPORT
-dev_langs: DMX
+f1_keywords:
+- EXPORT
+dev_langs:
+- DMX
 helpviewer_keywords:
 - exporting mining models
 - exporting mining structures
 - mining structures [DMX], exporting
 - EXPORT statement
 ms.assetid: 97617071-e560-4080-81af-a80276fc0823
-caps.latest.revision: "39"
+caps.latest.revision: 39
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: cc1b2baa40c0e8b6b40a5dddf2c336a4141b4810
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 2d3aa62213e15dbc7ca826a55e8b901fc5b9d038
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="export-dmx"></a>EXPORT (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -49,7 +49,7 @@ EXPORT <object type> <object name>[, <object name>] [<object type> <object name>
  *物件名稱*  
  選擇性。 要匯出的物件名稱。  
   
- *檔名*  
+ *filename*  
  要當成字串匯出之檔案的名稱和位置。  
   
 ## <a name="remarks"></a>備註  
@@ -71,11 +71,11 @@ EXPORT MINING STRUCTURE [Targeted Mailing], [Forecasting] MINING MODEL Associati
 EXPORT MINING MODEL [Association] TO 'C:\Association_NEW.abf' WITH DEPENDENCIES  
 ```  
   
-## <a name="see-also"></a>請參閱  
- [資料採礦延伸模組 &#40; DMX &#41;資料定義陳述式](../dmx/dmx-statements-data-definition.md)   
- [資料採礦延伸模組 &#40; DMX &#41;資料操作陳述式](../dmx/dmx-statements-data-manipulation.md)   
- [資料採礦延伸模組 &#40; DMX &#41;陳述式參考](../dmx/data-mining-extensions-dmx-statements.md)   
- [匯入 &#40; DMX &#41;](../dmx/import-dmx.md)   
- [匯出及匯入資料採礦物件](../analysis-services/data-mining/export-and-import-data-mining-objects.md)  
+## <a name="see-also"></a>另請參閱  
+ [資料採礦延伸模組&#40;DMX&#41;資料定義陳述式](../dmx/dmx-statements-data-definition.md)   
+ [資料採礦延伸模組&#40;DMX&#41;資料操作陳述式](../dmx/dmx-statements-data-manipulation.md)   
+ [資料採礦延伸模組 & #40; DMX & #41;陳述式參考](../dmx/data-mining-extensions-dmx-statements.md)   
+ [匯入&AMP;#40;DMX&AMP;#41;](../dmx/import-dmx.md)   
+ [匯出和匯入資料採礦物件](../analysis-services/data-mining/export-and-import-data-mining-objects.md)  
   
   

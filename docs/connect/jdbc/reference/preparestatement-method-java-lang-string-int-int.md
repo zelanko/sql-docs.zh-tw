@@ -1,30 +1,29 @@
 ---
-title: "prepareStatement 方法 （java.lang.String，int，int） |Microsoft 文件"
-ms.custom: 
+title: prepareStatement 方法 （java.lang.String，int，int） |Microsoft 文件
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
-ms.component: jdbc
-ms.reviewer: 
+ms.prod: sql
+ms.prod_service: connectivity
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
-ms.topic: article
-apiname: SQLServerConnection.prepareStatement (java.lang.String, int, int)
-apilocation: sqljdbc.jar
+ms.technology: connectivity
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
+apiname:
+- SQLServerConnection.prepareStatement (java.lang.String, int, int)
+apilocation:
+- sqljdbc.jar
 apitype: Assembly
 ms.assetid: 5bb96dbe-f673-41b5-911b-8f661cca071a
-caps.latest.revision: "9"
+caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
-ms.workload: Inactive
-ms.openlocfilehash: 1f95cff779202f7dc5c03855b098ca78b6fe43eb
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+manager: craigg
+ms.openlocfilehash: bd55769be660f3244f805af1b3ab5e06f94b069c
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="preparestatement-method-javalangstring-int-int"></a>prepareStatement 方法 (java.lang.String, int, int)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -62,7 +61,7 @@ public java.sql.PreparedStatement prepareStatement(java.lang.String sSql,
 ## <a name="remarks"></a>備註  
  這個 prepareStatement 方法是由 java.sql.Connection 介面中的 prepareStatement 方法指定。  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [SQLServerConnection 方法](../../../connect/jdbc/reference/sqlserverconnection-methods.md)   
  [SQLServerConnection 成員](../../../connect/jdbc/reference/sqlserverconnection-members.md)   
  [SQLServerConnection 類別](../../../connect/jdbc/reference/sqlserverconnection-class.md)  

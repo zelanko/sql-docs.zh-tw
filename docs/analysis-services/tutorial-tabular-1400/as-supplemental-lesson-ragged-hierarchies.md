@@ -1,27 +1,19 @@
 ---
-title: "Analysis Services 教學課程，補充課程： 不完全階層 |Microsoft 文件"
-description: "描述如何在 Analysis Services 教學課程中修正不完全的階層。"
-ms.prod_service: analysis-services, azure-analysis-services
-services: analysis-services
-ms.suite: pro-bi
-documentationcenter: 
-author: Minewiskan
-manager: kfile
-editor: 
-tags: 
-ms.assetid: 
-ms.service: analysis-services
-ms.devlang: NA
-ms.topic: get-started-article
-ms.tgt_pltfrm: NA
-ms.workload: na
-ms.date: 02/20/2018
+title: Analysis Services 教學課程，補充課程： 不完全階層 |Microsoft 文件
+ms.date: 05/08/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: tabular-models
+ms.topic: tutorial
 ms.author: owend
-ms.openlocfilehash: ebadf3498d7047873bfcd79099a02c387618367e
-ms.sourcegitcommit: 7ed8c61fb54e3963e451bfb7f80c6a3899d93322
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: bc5a2164576e2e6142d8835dad6f6c114b7a9c5b
+ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/20/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="supplemental-lesson---ragged-hierarchies"></a>補充課程-不完全階層
 
@@ -72,12 +64,12 @@ ms.lasthandoff: 02/20/2018
     =[FirstName] & " " & [MiddleName] & " " & [LastName]
     ```
 
-    **Level1** 
+    **階層 1** 
     ```
     =LOOKUPVALUE(DimEmployee[FullName],DimEmployee[EmployeeKey],PATHITEM([Path],1,1)) 
     ```
 
-    **Level2** 
+    **層級 2** 
     ```
     =LOOKUPVALUE(DimEmployee[FullName],DimEmployee[EmployeeKey],PATHITEM([Path],2,1)) 
     ```

@@ -1,16 +1,14 @@
 ---
-title: "靜態 SQL |Microsoft 文件"
-ms.custom: 
+title: 靜態 SQL |Microsoft 文件
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
-ms.component: odbc
-ms.reviewer: 
+ms.prod: sql
+ms.prod_service: connectivity
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: connectivity
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - static SQL [ODBC]
 - SQL [ODBC], embedded SQL
@@ -19,16 +17,15 @@ helpviewer_keywords:
 - embedded SQL [ODBC]
 - SQL [ODBC], static SQL
 ms.assetid: 667d92ec-fed9-4028-81d4-bb9ba867356a
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
-ms.workload: Inactive
-ms.openlocfilehash: 249d3114af6631b56dd5d5106564f3912072ab29
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+manager: craigg
+ms.openlocfilehash: ff2144ae69c48098324bc0b97ca9c33d5159adc3
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="static-sql"></a>靜態 SQL
 所示的內嵌的 SQL[內嵌的 SQL 範例](../../odbc/reference/embedded-sql-example.md)稱為靜態 SQL。 在程式中的 SQL 陳述式都是靜態的因為呼叫靜態 SQL也就是說，不會變更每次執行程式。 上一節所述，這些陳述式會編譯編譯程式的其餘部分時。  

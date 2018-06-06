@@ -1,16 +1,14 @@
 ---
 title: ASSEMBLYPROPERTY (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 07/24/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-database
-ms.service: 
 ms.component: t-sql|functions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: t-sql
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - ASSEMBLYPROPERTY_TSQL
@@ -21,21 +19,20 @@ helpviewer_keywords:
 - ASSEMBLYPROPERTY statement
 - assemblies [CLR integration], properties
 ms.assetid: cf03d1b1-724c-48bf-a8df-3fe2586b150a
-caps.latest.revision: 
-author: barbkess
-ms.author: barbkess
+caps.latest.revision: 40
+author: edmacauley
+ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: a38d9f773e010ab779204d7c92b351d88c0d08f7
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: c3d4a88658827c557ff7813e0579bf097a5c95b4
+ms.sourcegitcommit: d2573a8dec2d4102ce8882ee232cdba080d39628
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="assemblyproperty-transact-sql"></a>ASSEMBLYPROPERTY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-傳回組件屬性的相關資訊。
+此函數傳回組件屬性的相關資訊。
   
 ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -47,10 +44,10 @@ ASSEMBLYPROPERTY('assembly_name', 'property_name')
   
 ## <a name="arguments"></a>引數  
 *assembly_name*  
-這是組件的名稱。
+組件的名稱。
   
 *property_name*  
-這是要擷取相關資訊的屬性名稱。 *property_name* 可以是下列其中一個值。
+針對要擷取相關資訊的屬性，此屬性的名稱。 *property_name* 可為以下其中一個值：
   
 |ReplTest1|描述|  
 |---|---|
@@ -69,7 +66,7 @@ ASSEMBLYPROPERTY('assembly_name', 'property_name')
 **sql_variant**
   
 ## <a name="examples"></a>範例  
-下列範例會假設已在 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 資料庫中註冊 `HelloWorld` 組件。 如需詳細資訊，請參閱 [Hello World 範例](http://msdn.microsoft.com/library/fed6c358-f5ee-4d4c-9ad6-089778383ba7)。
+下列範例假設 `HelloWorld` 組件是已在 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 資料庫中註冊的組件。 如需詳細資訊，請參閱 [Hello World 範例](http://msdn.microsoft.com/library/fed6c358-f5ee-4d4c-9ad6-089778383ba7)。
   
 ```sql
 USE AdventureWorks2012;  

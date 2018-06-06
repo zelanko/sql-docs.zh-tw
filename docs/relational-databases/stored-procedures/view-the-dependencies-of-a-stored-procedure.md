@@ -1,36 +1,35 @@
 ---
-title: "檢視預存程序的相依性 | Microsoft 文件"
-ms.custom: 
+title: 檢視預存程序的相依性 | Microsoft 文件
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
 ms.component: stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-stored-Procs
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - stored procedures [SQL Server], dependencies
 - displaying stored procedure dependencies
 - viewing stored procedure dependencies
 ms.assetid: 6ae0a369-1bc7-4ae4-be89-2b483697cd1f
-caps.latest.revision: 
+caps.latest.revision: 26
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: e353ad945f88b477997f92638cd4612a9663b168
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 119236e5dc06f1c8df5412e05ab810c824e5cb84
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="view-the-dependencies-of-a-stored-procedure"></a>檢視預存程序的相依性
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-本主題描述如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 來檢視 [!INCLUDE[tsql](../../includes/tsql-md.md)] 中的預存程序相依性。  
+  本主題描述如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 來檢視 [!INCLUDE[tsql](../../includes/tsql-md.md)] 中的預存程序相依性。  
   
 ##  <a name="Top"></a>   
 -   **開始之前：**[限制事項](#Restrictions)、[安全性](#Security)  
@@ -81,7 +80,7 @@ ms.lasthandoff: 02/03/2018
  系統函數： **sys.dm_sql_referencing_entities**  
  此函數用來顯示相依於程序的物件。  
   
-1.  在 **[物件總管]**中，連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的執行個體，然後展開該執行個體。  
+1.  在 **[物件總管]** 中，連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的執行個體，然後展開該執行個體。  
   
 2.  展開 **[資料庫]**，展開程序所屬的資料庫。  
   
@@ -125,7 +124,7 @@ ms.lasthandoff: 02/03/2018
  系統函數： **sys.dm_sql_referenced_entities**  
  此函數用來顯示程序所相依的物件。  
   
-1.  在 **[物件總管]**中，連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的執行個體，然後展開該執行個體。  
+1.  在 **[物件總管]** 中，連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的執行個體，然後展開該執行個體。  
   
 2.  展開 **[資料庫]**，展開程序所屬的資料庫。  
   
@@ -171,7 +170,7 @@ ms.lasthandoff: 02/03/2018
  此檢視可用來顯示程序相依的物件或相依於程序的物件。  
   
  顯示相依於程序的物件。  
- 1.  在 **[物件總管]**中，連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的執行個體，然後展開該執行個體。  
+ 1.  在 **[物件總管]** 中，連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的執行個體，然後展開該執行個體。  
   
 2.  展開 **[資料庫]**，展開程序所屬的資料庫。  
   
@@ -222,7 +221,7 @@ ms.lasthandoff: 02/03/2018
     ```  
   
  顯示程序所相依的物件。  
- 1.  在 **[物件總管]**中，連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的執行個體，然後展開該執行個體。  
+ 1.  在 **[物件總管]** 中，連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的執行個體，然後展開該執行個體。  
   
 2.  展開 **[資料庫]**，展開程序所屬的資料庫。  
   

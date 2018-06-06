@@ -1,15 +1,14 @@
 ---
-title: "繫結參數 |Microsoft 文件"
-ms.custom: 
+title: 繫結參數 |Microsoft 文件
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
 ms.component: native-client-odbc-queries
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - SQL Server Native Client ODBC driver, parameters
@@ -22,16 +21,16 @@ helpviewer_keywords:
 - ODBC applications, parameters
 - bound parameter markers [SQL Server Native Client]
 ms.assetid: d6c69739-8f89-475f-a60a-b2f6c06576e2
-caps.latest.revision: 
+caps.latest.revision: 31
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: eec7675fc0fa0261e877d45da86bbcd2280f0237
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 6d51c8cb13a4a8bd2e9cc14e8208c6d9e0e0084f
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="using-statement-parameters---binding-parameters"></a>使用陳述式參數的繫結參數
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -65,7 +64,7 @@ ms.lasthandoff: 01/25/2018
   
  使用時，才會支援具名的參數[!INCLUDE[tsql](../../includes/tsql-md.md)] **EXECUTE**陳述式或 ODBC CALL 逸出序列執行預存程序。  
   
- 如果**SQL_DESC_NAME**設定預存程序參數，在查詢中的所有預存程序參數也應該設定**SQL_DESC_NAME**。  如果常值會使用在預存程序呼叫中，其中參數已**SQL_DESC_NAME**設定，則常值應該使用格式*' 名稱*=*值*'，其中*名稱*是預存程序的參數名稱 (例如， @p1)。 如需詳細資訊，請參閱[依名稱 （具名參數） 的繫結參數](http://go.microsoft.com/fwlink/?LinkId=167215)。  
+ 如果**SQL_DESC_NAME**設定預存程序參數，在查詢中的所有預存程序參數也應該設定**SQL_DESC_NAME**。  如果常值會使用在預存程序呼叫中，其中參數已**SQL_DESC_NAME**設定，則常值應該使用格式 *' 名稱*=*值*'，其中*名稱*是預存程序的參數名稱 (例如， @p1)。 如需詳細資訊，請參閱[依名稱 （具名參數） 的繫結參數](http://go.microsoft.com/fwlink/?LinkId=167215)。  
   
 ## <a name="see-also"></a>另請參閱  
  [使用陳述式參數](../../relational-databases/native-client-odbc-queries/using-statement-parameters.md)  

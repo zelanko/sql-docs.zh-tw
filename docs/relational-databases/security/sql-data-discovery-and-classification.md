@@ -1,30 +1,28 @@
 ---
-title: "SQL 資料探索與分類 | Microsoft Docs"
-description: "SQL 資料探索與分類"
-services: sql-server
-documentationcenter: 
+title: SQL 資料探索與分類 | Microsoft Docs
+description: SQL 資料探索與分類
+documentationcenter: ''
 author: giladm
 manager: shaik
 ms.reviewer: carlrab
 ms.assetid: 89c2a155-c2fb-4b67-bc19-9b4e03c6d3bc
-ms.service: sql-server
+ms.service: sql-database
+ms.prod_service: sql-database,sql
 ms.custom: security
-ms.workload: data-management
 ms.tgt_pltfrm: na
-ms.devlang: na
 ms.topic: article
 ms.date: 02/13/2018
 ms.author: giladm
-ms.openlocfilehash: 1d9694136e275f402be8467acd5f9e79bf9fbb0d
-ms.sourcegitcommit: 4edac878b4751efa57601fe263c6b787b391bc7c
+ms.openlocfilehash: 8900faccfda82e759ee6f31009682eb632df7509
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/19/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sql-data-discovery-and-classification"></a>SQL 資料探索與分類
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-資料探索與分類引進內建至 SQL Server Management Studio (SSMS) 的新工具，以**探索**、**分類**、**標示**和**報告**您資料庫中的敏感性資料。
+資料探索與分類引進內建至 SQL Server Management Studio (SSMS) 的新工具，以**探索**、**分類**、**標示**和 & **報告**您資料庫中的敏感性資料。
 探索和分類最敏感的資料 (商務、財務、醫療、PII 等等) 可以扮演組織資訊保護成長的關鍵角色。 它可以作為下列的基礎結構：
 * 協助符合資料隱私權標準和法規合規性需求 (例如 GDPR)。
 * 控制存取以及強化包含高敏感性資料之資料庫/資料行的安全性。

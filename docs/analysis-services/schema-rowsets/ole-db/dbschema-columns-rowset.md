@@ -1,39 +1,28 @@
 ---
-title: "DBSCHEMA_COLUMNS 資料列集 |Microsoft 文件"
-ms.custom: 
-ms.date: 03/04/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+title: DBSCHEMA_COLUMNS 資料列集 |Microsoft 文件
+ms.date: 05/03/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: schema-rowsets
 ms.topic: reference
-apiname: DBSCHEMA_COLUMNS
-apitype: NA
-applies_to: SQL Server 2016 Preview
-helpviewer_keywords: DBSCHEMA_COLUMNS rowset
-ms.assetid: 653bdd07-a533-4a99-8b6a-6e5c7322e1f3
-caps.latest.revision: "40"
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 32df882f6f6b34c4cd5049713240460c62324ddb
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 2bb1fec6a1633f545f0c65feda93c7e19c649a6e
+ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="dbschemacolumns-rowset"></a>DBSCHEMA_COLUMNS 資料列集
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]提供符合提供之限制準則的所有資料行的資料行資訊。  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+  為所有符合提供之限制準則的資料行提供資料行資訊。  
   
 ## <a name="rowset-columns"></a>資料列集資料行  
  **DBSCHEMA_COLUMNS**資料列集包含下列資料行。  
   
-|資料行名稱|類型指標|長度|描述|  
+|資料行名稱|類型指標|長度|Description|  
 |-----------------|--------------------|------------|-----------------|  
 |**TABLE_CATALOG 排列**|**DBTYPE_WSTR**||資料庫的名稱。|  
 |**TABLE_SCHEMA**|**DBTYPE_WSTR**||不支援。|  
@@ -78,7 +67,7 @@ ms.lasthandoff: 01/08/2018
 |**COLUMN_NAME**|**DBTYPE_WSTR**|選擇性|  
 |**COLUMN_OLAP_TYPE**|**DBTYPE_WSTR**|選擇性|  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [OLE DB 結構描述資料列集](../../../analysis-services/schema-rowsets/ole-db/ole-db-schema-rowsets.md)  
   
   

@@ -1,56 +1,56 @@
 ---
-title: "備份和還原資料庫，使用 SQL Operations Studio （預覽） |Microsoft 文件"
-description: "了解如何備份和還原資料庫，使用 SQL Operations Studio （預覽）"
+title: 使用 SQL Operations Studio （預覽）備份和還原資料庫 |Microsoft 文件
+description: 使用 SQL Operations Studio （預覽）備份和還原資料庫
 ms.custom: tools|sos
 ms.date: 11/15/2017
-ms.prod: sql-non-specified
-ms.reviewer: alayu; erickang; sstein
+ms.prod: sql
+ms.reviewer: alayu; sstein
 ms.suite: sql
 ms.prod_service: sql-tools
 ms.component: sos
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: tutorial
-author: erickangMSFT
-ms.author: erickang
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 46ef55aa54275e356eff9674aac10a27b36d758e
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 22a453caa9d29432381da6861a0f0c4e3e61d77e
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34582450"
 ---
-# <a name="backup-and-restore-using-includename-sosincludesname-sos-shortmd"></a>備份及還原使用[!INCLUDE[name-sos](../includes/name-sos-short.md)]
+# <a name="backup-and-restore-using-includename-sosincludesname-sos-shortmd"></a>使用[!INCLUDE[name-sos](../includes/name-sos-short.md)]備份及還原
 
-您可以在本教學課程，了解如何使用[!INCLUDE[name-sos](../includes/name-sos-short.md)]至：
+您可以在本教學課程，了解如何使用[!INCLUDE[name-sos](../includes/name-sos-short.md)]:
 > [!div class="checklist"]
 > * 備份資料庫 
 > * 檢視備份狀態
 > * 產生用來執行備份的指令碼
 > * 還原資料庫
-> * 檢視的還原工作的狀態
+> * 檢視還原工作的狀態
 
 ## <a name="prerequisites"></a>必要條件
 
-本教學課程需要 SQL Server *TutorialDB*。 若要建立*TutorialDB*資料庫，請完成下列快速入門的其中一個：
+本教學課程需要 SQL Server *TutorialDB*。 若要建立*TutorialDB*資料庫，請完成下列其中一項快速入門教學：
 
-- [連接及查詢 SQL Server 使用[!INCLUDE[name-sos-short](../includes/name-sos-short.md)]](quickstart-sql-server.md)
+- [使用 [!INCLUDE[name-sos-short](../includes/name-sos-short.md)] 連接及查詢 SQL Server](quickstart-sql-server.md)
 
 
 ## <a name="backup-a-database"></a>備份資料庫
 
-1. 開啟 TutorialDB 資料庫儀表板 (開啟**伺服器**[資訊看板] (**CTRL + G**)，依序展開**資料庫**，以滑鼠右鍵按一下**TutorialDB**，選取**管理**)。 
+1. 開啟 TutorialDB 資料庫儀表板 (開啟**伺服器**[資訊看板] (**CTRL + G**)，展開**資料庫**，以滑鼠右鍵點選 **TutorialDB** ，選取**管理**)。 
 
 2. 開啟**Backup database**對話方塊 (按一下**備份**上**工作**widget)。
 
    ![工作小工具](./media/tutorial-backup-restore-sql-server/tasks.png)
 
-3. 本教學課程使用的預設備份選項，所以按**備份**。
+3. 本教學課程使用預設的備份選項，所以按一下**備份**。
    ![備份對話方塊](./media/tutorial-backup-restore-sql-server/backup-dialog.png)
 
-按一下後**備份**、 **Backup database**對話方塊消失，開始備份程序。
+按一下**備份**後，**Backup database** 對話方塊消失並開始備份程序。
 
-## <a name="view-the-backup-status-and-view-the-backup-script"></a>檢視備份狀態，並檢視備份指令碼
+## <a name="view-the-backup-status-and-view-the-backup-script"></a>檢視備份狀態與檢視備份指令碼
 
 1. 開啟**工作歷程記錄**[資訊看板] 上按一下 [時鐘] 圖示*動作列*或按**CTRL + T**。
 
@@ -77,7 +77,7 @@ ms.lasthandoff: 12/21/2017
 
 4. 按一下**還原**
 
-5. 若要檢視還原作業的狀態，請按一下**CTRL + T**開啟**工作歷程記錄**[資訊看板]。
+5. 若要檢視的還原作業的狀態，請按**CTRL + T**開啟**工作歷程記錄**[資訊看板]。
 
    ![還原](./media/tutorial-backup-restore-sql-server/task-history-restore.png)
 
@@ -88,5 +88,5 @@ ms.lasthandoff: 12/21/2017
 > * 檢視備份狀態
 > * 產生用來執行備份的指令碼
 > * 還原資料庫
-> * 檢視的還原工作的狀態
+> * 檢視還原工作的狀態
 

@@ -1,33 +1,31 @@
 ---
-title: "緩時變維度精靈 F1 說明 | Microsoft Docs"
-ms.custom: 
+title: 緩時變維度精靈 F1 說明 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
 ms.component: data-flow
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - Slowly Changing Dimension Wizard
 ms.assetid: e4d62b73-77c5-4b26-9b6d-d5f245768fc8
-caps.latest.revision: 
+caps.latest.revision: 19
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 7d5e2b892c6619082a9df165aa3a30ab92a95f20
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: bbf758b1e5c13013b85dd7b3b55daaf411e00c6e
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="slowly-changing-dimension-wizard-f1-help"></a>緩時變維度精靈 F1 說明
-  使用 **[緩時變維度精靈]** ，以設定將資料載入至各種類型的緩時變維度。 此章節提供 **[緩時變維度精靈]**之頁面的 F1 說明。 下表描述此章節的主題。  
+  使用 **[緩時變維度精靈]** ，以設定將資料載入至各種類型的緩時變維度。 此章節提供 **[緩時變維度精靈]** 之頁面的 F1 說明。 下表描述此章節的主題。  
   
  若要深入了解這個精靈，請參閱＜ [Slowly Changing Dimension Transformation](../../../integration-services/data-flow/transformations/slowly-changing-dimension-transformation.md)＞。  
   

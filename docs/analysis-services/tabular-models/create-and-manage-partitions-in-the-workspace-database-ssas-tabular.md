@@ -1,33 +1,23 @@
 ---
-title: "建立及管理工作空間資料庫中的資料分割 |Microsoft 文件"
-ms.custom: 
-ms.date: 02/22/2018
-ms.prod: analysis-services
-ms.prod_service: analysis-services, azure-analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords:
-- sql13.asvs.bidtoolset.partitionmgr.f1
-ms.assetid: 0b3027d6-652b-4eb3-a197-58b25df65218
-caps.latest.revision: 
-author: Minewiskan
+title: 建立及管理工作空間資料庫中的資料分割 |Microsoft 文件
+ms.date: 05/07/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: tabular-models
+ms.topic: conceptual
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: bc056913fefe9b6847c0aad96957290a3e00d560
-ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
+ms.openlocfilehash: 3912002c016508b36f200f2786e2d5f00e05c48b
+ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="create-and-manage-partitions-in-the-workspace-database"></a>建立及管理工作空間資料庫中的資料分割 
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
-分割區會將一個資料表分割成多個邏輯部分。 每個資料分割可以不受其他資料分割的影響，單獨處理 (重新整理) 或平行處理。 資料分割可以改善大型資料庫的可調適性和管理能力。 依預設，每個資料表都包含一個資料分割，其中包含所有資料行。 本主題中的工作說明如何使用 **中的** [資料分割管理員] [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]  
+  分割區會將一個資料表分割成多個邏輯部分。 每個資料分割可以不受其他資料分割的影響，單獨處理 (重新整理) 或平行處理。 資料分割可以改善大型資料庫的可調適性和管理能力。 依預設，每個資料表都包含一個資料分割，其中包含所有資料行。 本主題中的工作描述如何建立及管理模型工作空間資料庫中的資料分割使用**資料分割管理員** 對話方塊中[!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]  
   
  將模型部署至其他 Analysis Services 執行個體之後，資料庫管理員即可使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 來建立及管理 (已部署) 模型中的資料分割。 如需詳細資訊，請參閱[建立及管理表格式模型資料分割](../../analysis-services/tabular-models/create-and-manage-tabular-model-partitions-ssas-tabular.md)。  
   
@@ -43,9 +33,9 @@ ms.lasthandoff: 02/23/2018
   
 2.  按一下 **[資料表]** 功能表，然後按一下 **[資料分割]**。  
   
-3.  在 **[資料分割管理員]**的 **[資料表]** 清單方塊中，確認或選取要資料分割的資料表，然後按一下 **[新增]**。  
+3.  在 **[資料分割管理員]** 的 **[資料表]** 清單方塊中，確認或選取要資料分割的資料表，然後按一下 **[新增]**。  
   
-4.  在 **[資料分割名稱]**中，輸入資料分割的名稱。 依預設，每個新資料分割的預設資料分割名稱是以累加的方式進行編號。  
+4.  在 **[資料分割名稱]** 中，輸入資料分割的名稱。 依預設，每個新資料分割的預設資料分割名稱是以累加的方式進行編號。  
   
 5.  您可使用資料表預覽模式或使用查詢編輯器模式所建立的 SQL 查詢，選取資料分割中要包含的資料列及資料行。  
   
@@ -55,15 +45,15 @@ ms.lasthandoff: 02/23/2018
   
 ###  <a name="bkmk_copy"></a> 複製資料分割  
   
-1.  在 **[資料分割管理員]**的 **[資料表]** 清單方塊中，確認或選取含有要複製之資料分割的資料表。  
+1.  在 **[資料分割管理員]** 的 **[資料表]** 清單方塊中，確認或選取含有要複製之資料分割的資料表。  
   
 2.  在 **[資料分割]** 清單中，選取要複製的資料分割，然後按一下 **[複製]**。  
   
-3.  在 **[資料分割名稱]**中，輸入資料分割的新名稱。  
+3.  在 **[資料分割名稱]** 中，輸入資料分割的新名稱。  
   
 ###  <a name="bkmk_delete"></a> 若要刪除資料分割  
   
-1.  在 **[資料分割管理員]**的 **[資料表]** 清單方塊中，確認或選取含有要刪除之資料分割的資料表。  
+1.  在 **[資料分割管理員]** 的 **[資料表]** 清單方塊中，確認或選取含有要刪除之資料分割的資料表。  
   
 2.  在 **[資料分割]** 清單中，選取要刪除的資料分割，然後按一下 **[刪除]**。  
   

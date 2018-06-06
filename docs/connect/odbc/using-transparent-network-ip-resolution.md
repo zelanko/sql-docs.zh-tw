@@ -1,27 +1,24 @@
 ---
-title: "使用透明網路 IP 解析 |Microsoft 文件"
-ms.custom: 
+title: 使用透明網路 IP 解析 |Microsoft 文件
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
-ms.component: odbc
-ms.reviewer: 
+ms.prod: sql
+ms.prod_service: connectivity
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: connectivity
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: d255208f-d486-4ad3-8080-61c6e0261825
-caps.latest.revision: "2"
+caps.latest.revision: 2
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
-ms.workload: Inactive
-ms.openlocfilehash: 0db2d2b8dfc796b8c2dc696d66264745182ab39a
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+manager: craigg
+ms.openlocfilehash: 2d76e50b4761e8d1a32bbcfc4606778f96513ed1
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="using-transparent-network-ip-resolution"></a>使用透明網路 IP 解析
 [!INCLUDE[Driver_ODBC_Download](../../includes/driver_odbc_download.md)]
@@ -32,7 +29,7 @@ ms.lasthandoff: 11/18/2017
 * 1： 嘗試以平行方式進行的所有 Ip
 * 2： 嘗試進行的所有 Ip，依序
 
-|則 TransparentNetworkIPResolution|MultiSubnetFailover|行為|
+|TransparentNetworkIPResolution|MultiSubnetFailover|行為|
 |:-:|:-:|:-:|
 |(預設值)|(預設值)|0|
 |(預設值)|已啟用|1|
@@ -52,12 +49,12 @@ ms.lasthandoff: 11/18/2017
 
 `SQL_COPT_SS_TNIR`預先連接屬性可讓應用程式來控制此以程式設計方式設定：
 
-連接屬性|   大小/類型|  預設值| 值| Description
+連接屬性|   大小/類型|  預設值| Value| Description
 -|-|-|-|-
 `SQL_COPT_SS_TNIR` (1249)| `SQL_IS_INTEGER`或`SQL_IS_UINTEGER`| `SQL_IS_ON`(1), `SQL_IS_OFF`(0)|`SQL_IS_ON`|啟用或停用 TNIR。
 
 <a name="for-more-information-about-multisubnetfailover-see-odbc-driver-on-linux-and-macos---high-availability-and-disaster-recoveryconnectodbclinux-macodbc-driver-on-linux-support-for-high-availability-disaster-recoverymd"></a>如需 MultiSubnetFailover 的詳細資訊，請參閱[ODBC Driver on Linux 及 macOS-高可用性和災害復原](../../connect/odbc/linux-mac/odbc-driver-on-linux-support-for-high-availability-disaster-recovery.md)
 --------------------------------------------------
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
 * [Windows 上的 Microsoft ODBC Driver for SQL Server](../../connect/odbc/windows/microsoft-odbc-driver-for-sql-server-on-windows.md)
 * [SQL Server 多重子網路叢集 (SQL Server)](https://msdn.microsoft.com/library/ff878716.aspx#RelatedContent)

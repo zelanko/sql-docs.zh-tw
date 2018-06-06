@@ -1,30 +1,25 @@
 ---
 title: MSSQLSERVER_33085 | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 04/04/2017
-ms.prod: sql-non-specified
-ms.prod_service: database-engine
-ms.service: 
-ms.component: errors-events
-ms.reviewer: 
+ms.prod: sql
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: supportability
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 helpviewer_keywords:
 - 33085 (Database Engine error)
 ms.assetid: c27b8d1d-668a-4ba8-8b61-25a5ebbc5485
-caps.latest.revision: 
-author: edmacauley
-ms.author: edmaca
+caps.latest.revision: 9
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 8cef0b5c3cdec02a7e7a32488032ad6ba77428e1
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: fffb759d4914935334925744cb9ed818bc655542
+ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="mssqlserver33085"></a>MSSQLSERVER_33085
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -33,7 +28,7 @@ ms.lasthandoff: 11/21/2017
   
 |||  
 |-|-|  
-|產品名稱|SQL Server|  
+|產品名稱|[SQL Server]|  
 |事件識別碼|33085|  
 |事件來源|MSSQLSERVER|  
 |元件|SQLEngine|  
@@ -43,9 +38,9 @@ ms.lasthandoff: 11/21/2017
 ## <a name="explanation"></a>說明  
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 無法使用錯誤訊息中所列的密碼編譯提供者。 此密碼編譯提供者不支援所需的方法。 錯誤的狀態表示找不到哪一個方法。  
   
-|State|Description|  
+|State|描述|  
 |---------|---------------|  
-|1|SqlCryptInitializeProvider|  
+|@shouldalert|SqlCryptInitializeProvider|  
 |2|SqlCryptFreeProvider|  
 |3|SqlCryptOpenSession|  
 |4|SqlCryptCloseSession|  

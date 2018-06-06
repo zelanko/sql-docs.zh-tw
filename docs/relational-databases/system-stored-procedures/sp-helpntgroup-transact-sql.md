@@ -1,16 +1,14 @@
 ---
-title: "sp_helpntgroup (TRANSACT-SQL) |Microsoft 文件"
-ms.custom: 
+title: sp_helpntgroup (TRANSACT-SQL) |Microsoft 文件
+ms.custom: ''
 ms.date: 06/10/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: system-objects
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_helpntgroup
@@ -20,16 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_helpntgroup
 ms.assetid: 02b4f7c1-480a-436c-8bae-7a2488be45d2
-caps.latest.revision: 
+caps.latest.revision: 26
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 512dd5980e0d80859862b071eb10f1011808950f
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: d47be90ed518d818dfc731121215935f30bf9a1f
+ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="sphelpntgroup-transact-sql"></a>sp_helpntgroup (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,7 +43,7 @@ sp_helpntgroup [ [ @ntname= ] 'name' ]
 ```  
   
 ## <a name="arguments"></a>引數  
- [  **@ntname =** ] **'***名稱***'**  
+ [ **@ntname =** ] **'***name***'**  
  這是 Windows 群組的名稱。 *名稱*是**sysname**，預設值是 NULL。 *名稱*必須是有效的 Windows 群組與目前資料庫的存取權。 如果*名稱*未指定，具有目前資料庫存取權的所有 Windows 群組是否都包含在輸出中。  
   
 ## <a name="return-code-values"></a>傳回碼值  
@@ -65,7 +62,7 @@ sp_helpntgroup [ [ @ntname= ] 'name' ]
  若要查看清單[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]角色在目前資料庫中，使用**sp_helprole**。  
   
 ## <a name="permissions"></a>Permissions  
- 需要 **public** 角色的成員資格。  
+ 需要 **public** 角色中的成員資格。  
   
 ## <a name="examples"></a>範例  
  下列範例會印出具有目前資料庫存取權的 Windows 群組清單。  
@@ -74,10 +71,10 @@ sp_helpntgroup [ [ @ntname= ] 'name' ]
 EXEC sp_helpntgroup;  
 ```  
   
-## <a name="see-also"></a>請參閱  
- [安全性預存程序 &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
+## <a name="see-also"></a>另請參閱  
+ [安全性預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
  [sp_grantdbaccess &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-grantdbaccess-transact-sql.md)   
- [sp_helprole &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/sp-helprole-transact-sql.md)   
+ [sp_helprole &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-helprole-transact-sql.md)   
  [sp_revokedbaccess &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-revokedbaccess-transact-sql.md)   
  [系統預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   

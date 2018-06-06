@@ -1,16 +1,14 @@
 ---
-title: "sp_depends (TRANSACT-SQL) |Microsoft 文件"
-ms.custom: 
+title: sp_depends (TRANSACT-SQL) |Microsoft 文件
+ms.custom: ''
 ms.date: 03/16/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: system-objects
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_depends
@@ -20,16 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_depends
 ms.assetid: d9934590-c6ae-4936-91c3-146055ef2c57
-caps.latest.revision: 
+caps.latest.revision: 41
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: f10445e28fd8f0a23d5dcf3f11208cbb733bcc49
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: cc84911c1280ef3a4d82c8ba291073eca75d89a9
+ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="spdepends-transact-sql"></a>sp_depends (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -37,7 +34,7 @@ ms.lasthandoff: 11/27/2017
   顯示有關資料庫物件相依性的資訊，例如相依於資料表或檢視的檢視和程序，以及檢視或程序所相依的資料表或檢視。 不會報告對於目前資料庫外之物件的參考。  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]使用[sys.dm_sql_referencing_entities](../../relational-databases/system-dynamic-management-views/sys-dm-sql-referencing-entities-transact-sql.md)和[sys.dm_sql_referenced_entities](../../relational-databases/system-dynamic-management-views/sys-dm-sql-referenced-entities-transact-sql.md)改為。  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] 使用[sys.dm_sql_referencing_entities](../../relational-databases/system-dynamic-management-views/sys-dm-sql-referencing-entities-transact-sql.md)和[sys.dm_sql_referenced_entities](../../relational-databases/system-dynamic-management-views/sys-dm-sql-referenced-entities-transact-sql.md)改為。  
   
  ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -70,25 +67,25 @@ sp_depends [ @objname = ] '<object>'
 ## <a name="result-sets"></a>結果集  
  **sp_depends**顯示兩個結果集。  
   
- 下列結果集顯示的物件所在*\<物件 >*而定。  
+ 下列結果集顯示的物件所在*\<物件 >* 而定。  
   
 |資料行名稱|資料類型|Description|  
 |-----------------|---------------|-----------------|  
 |**name**|**nvarchar (257** **)**|相依性存在的項目名稱。|  
-|**型別**|**nvarchar(16)**|項目的類型。|  
+|**type**|**nvarchar(16)**|項目的類型。|  
 |**更新**|**nvarchar(7)**|是否更新項目。|  
-|**選取**|**nvarchar （8)**|是否在 SELECT 陳述式中使用這個項目。|  
-|**資料行**|**sysname**|存在相依性的資料行或參數。|  
+|**選取**|**nvarchar(8)**|是否在 SELECT 陳述式中使用這個項目。|  
+|**column**|**sysname**|存在相依性的資料行或參數。|  
   
  下列結果集會顯示相依於物件*\<物件 >*。  
   
 |資料行名稱|資料類型|Description|  
 |-----------------|---------------|-----------------|  
 |**name**|**nvarchar (257** **)**|相依性存在的項目名稱。|  
-|**型別**|**nvarchar(16)**|項目的類型。|  
+|**type**|**nvarchar(16)**|項目的類型。|  
   
 ## <a name="permissions"></a>Permissions  
- 需要 **public** 角色的成員資格。  
+ 需要 **public** 角色中的成員資格。  
   
 ## <a name="examples"></a>範例  
   
@@ -108,11 +105,11 @@ EXEC sp_depends @objname = N'Sales.Customer' ;
 EXEC sp_depends @objname = N'AdventureWorks2012.Production.iWorkOrder' ;  
 ```  
   
-## <a name="see-also"></a>請參閱  
- [Database Engine 預存程序 &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
+## <a name="see-also"></a>另請參閱  
+ [Database Engine 預存程序&#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
  [EXECUTE &#40;Transact-SQL&#41;](../../t-sql/language-elements/execute-transact-sql.md)   
  [sp_help &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-transact-sql.md)   
  [系統預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
- [sys.sql_dependencies &#40;TRANSACT-SQL &#41;](../../relational-databases/system-catalog-views/sys-sql-dependencies-transact-sql.md)  
+ [sys.sql_dependencies &#40;Transact SQL&#41;](../../relational-databases/system-catalog-views/sys-sql-dependencies-transact-sql.md)  
   
   

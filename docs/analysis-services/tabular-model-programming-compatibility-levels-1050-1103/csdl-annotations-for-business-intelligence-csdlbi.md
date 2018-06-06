@@ -1,29 +1,19 @@
 ---
-title: "CSDL 註解，商業智慧 (CSDLBI) |Microsoft 文件"
-ms.custom: 
-ms.date: 03/07/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+title: CSDL 註解，商業智慧 (CSDLBI) |Microsoft 文件
+ms.date: 05/07/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: tabular-models
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
-ms.assetid: bf6f372a-bc67-45ea-a771-b2dc5b0527e5
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: dfc70006520f0d4a9e47661de5c065aecf59356f
-ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
+ms.openlocfilehash: 72559f9d1282f9d95ba2a875023e7a89a1afcfe1
+ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="csdl-annotations-for-business-intelligence-csdlbi"></a>商業智慧的 CSDL 註解 (CSDLBI)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -32,13 +22,7 @@ ms.lasthandoff: 02/23/2018
 ## <a name="understanding-the-role-of-csdl"></a>了解 CSDL 的角色  
  概念結構定義語言 (CSDL) 是一種 XML 語言，描述實體、關聯性與功能。 CSDL 會定義為實體資料架構的一部分。 BI 註解是延伸模組，其設計在於支援使用 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 的資料模型。  
   
- 雖然 CSDL 符合實體資料架構標準，但您不需要了解實體關聯性模型，也不需要任何特殊工具來建置表格式模型或以模型為基礎的報表。 您會透過使用用戶端工具 (例如 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]，或像是 AMO 這類應用程式開發介面) 建立模型，並且將模型部署至伺服器。 用戶端會使用模型定義檔連接至模型，通常該檔案會發佈至可供報表設計師與報表取用者使用的 SharePoint 文件庫。 如需詳細資訊，請參閱下列連結：  
-  
--   [表格式模型方案](../../analysis-services/tabular-models/tabular-model-solutions-ssas-tabular.md)  
-  
--   [表格式模型方案部署](../../analysis-services/tabular-models/tabular-model-solution-deployment-ssas-tabular.md)  
-  
--   [Power Pivot BI 語意模型連接 &#40;.bism&#41;](../../analysis-services/power-pivot-sharepoint/power-pivot-bi-semantic-model-connection-bism.md)  
+ 雖然 CSDL 符合實體資料架構標準，但您不需要了解實體關聯性模型，也不需要任何特殊工具來建置表格式模型或以模型為基礎的報表。 您會透過使用用戶端工具 (例如 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]，或像是 AMO 這類應用程式開發介面) 建立模型，並且將模型部署至伺服器。  
   
  CSDLBI 結構描述是 Analysis Services 伺服器為回應用戶端 (例如 [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)]) 的模型定義要求而產生的。 用戶端應用程式將 XML 查詢傳送至裝載模型資料的 Analysis Services 伺服器。 然後伺服器使用 CSDLBI 註解傳送包含模型中實體定義的 XML 訊息，以做為回應。 接著報表用戶端會使用此資訊來呈現模型中所提供的欄位、彙總以及量值。 CSDLBI 註解也會提供有關如何分組、排序與格式化資料的資訊。  
   

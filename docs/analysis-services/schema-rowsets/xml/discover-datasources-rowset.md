@@ -1,34 +1,23 @@
 ---
-title: "DISCOVER_DATASOURCES 資料列集 |Microsoft 文件"
-ms.custom: 
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+title: DISCOVER_DATASOURCES 資料列集 |Microsoft 文件
+ms.date: 05/03/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: schema-rowsets
 ms.topic: reference
-apiname: DISCOVER_DATASOURCES
-apitype: NA
-applies_to: SQL Server 2016 Preview
-helpviewer_keywords: DISCOVER_DATASOURCES rowset
-ms.assetid: f3ff26ab-a447-416b-ba54-1716df2283de
-caps.latest.revision: "39"
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: d52c95835c5583bd4b8a01a416131aaa7166f385
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 9e316e1e8927acb5dcb99046a8d53034126052ce
+ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="discoverdatasources-rowset"></a>DISCOVER_DATASOURCES 資料列集
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]傳回 XML for Analysis (XMLA) 提供者資料來源所提供的伺服器或 Web 服務的清單。 從應用程式 Web 伺服器的 URL 傳回發行的資料來源。 用戶端可以連接至此清單中的其中一個資料來源。  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+  傳回可用於伺服器或 Web 服務的 XML for Analysis (XMLA) 提供者資料來源清單。 從應用程式 Web 伺服器的 URL 傳回發行的資料來源。 用戶端可以連接至此清單中的其中一個資料來源。  
   
  如果您呼叫[探索](../../../analysis-services/xmla/xml-elements-methods-discover.md)方法**DISCOVER_DATASOURCES**中的列舉值[RequestType](../../../analysis-services/xmla/xml-elements-properties/requesttype-element-xmla.md)項目，**探索**方法會傳回**DISCOVER_DATASOURCES**資料列集。  
   
@@ -39,7 +28,7 @@ ms.lasthandoff: 01/08/2018
   
  **DISCOVER_DATASOURCES**資料列集包含下列資料行。  
   
-|資料行名稱|類型指標|限制|描述|  
+|資料行名稱|類型指標|限制|Description|  
 |-----------------|--------------------|-----------------|-----------------|  
 |**DataSourceName**|**DBTYPE_WSTR**|是|資料的來源名稱，例如**Adventure Works**。|  
 |**DataSourceDescription**|**DBTYPE_WSTR**||發行者輸入的資料來源描述。<br /><br /> 可能會傳回**NULL**。|  
@@ -59,12 +48,12 @@ ms.lasthandoff: 01/08/2018
   
  下表將提供可識別此資料列集的 GUID 和字串值。  
   
-|引數|ReplTest1|  
+|引數|值|  
 |--------------|-----------|  
 |GUID|06c03d41-f66d-49f3-b1b8-987f7af4cf18|  
 |ADOMDNAME|DataSources|  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [XML for Analysis 結構描述資料列集](../../../analysis-services/schema-rowsets/xml/xml-for-analysis-schema-rowsets.md)  
   
   

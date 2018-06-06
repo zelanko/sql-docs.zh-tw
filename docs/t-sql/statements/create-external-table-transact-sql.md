@@ -1,16 +1,14 @@
 ---
 title: CREATE EXTERNAL TABLE (Transact-SQL) | Microsoft Docs
-ms.custom: 
-ms.date: 11/27/2017
-ms.prod: sql-non-specified
+ms.custom: ''
+ms.date: 5/14/2018
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
 ms.component: t-sql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: t-sql
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - CREATE_EXTERNAL_TABLE
@@ -23,16 +21,16 @@ helpviewer_keywords:
 - External, table create
 - PolyBase, external table
 ms.assetid: 6a6fd8fe-73f5-4639-9908-2279031abdec
-caps.latest.revision: 
-author: barbkess
-ms.author: barbkess
+caps.latest.revision: 30
+author: edmacauley
+ms.author: edmaca
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 146fd91bfab0ceb5d9b289ef9be6c7446c77f073
-ms.sourcegitcommit: f0c5e37c138be5fb2cbb93e9f2ded307665b54ea
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 0ea81621b94490c267b6d7c9f3e010bd22279610
+ms.sourcegitcommit: 0cc2cb281e467a13a76174e0d9afbdcf4ccddc29
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/24/2018
+ms.lasthandoff: 05/15/2018
 ---
 # <a name="create-external-table-transact-sql"></a>CREATE EXTERNAL TABLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
@@ -135,9 +133,10 @@ CREATE EXTERNAL TABLE [ database_name . [ schema_name ] . | schema_name. ] table
   
 <reject_options> ::=  
 {  
-    | REJECT_TYPE = value | percentage  
-    | REJECT_VALUE = reject_value  
-    | REJECT_SAMPLE_VALUE = reject_sample_value  
+    | REJECT_TYPE = value | percentage,  
+    | REJECT_VALUE = reject_value,  
+    | REJECT_SAMPLE_VALUE = reject_sample_value,
+    | REJECTED_ROW_LOCATION = '\REJECT_Directory'
   
 }  
 ```  
@@ -182,6 +181,12 @@ CREATE EXTERNAL TABLE [ database_name . [ schema_name ] . | schema_name. ] table
   
  LOCATION =  '*folder_or_filepath*'  
  指定位於 Hadoop 或 Azure Blob 儲存體中之實際資料的資料夾或檔案路徑，以及檔案名稱。 位置會從根資料夾開始；根資料夾是在外部資料來源中指定的資料位置。  
+
+
+在 SQL Server 中，CREATE EXTERNAL TABLE 陳述式會建立尚未存在的路徑和資料夾。 您接著可以使用 INSERT INTO 將資料從本機 SQL Server 資料表匯出至外部資料來源。 如需詳細資訊，請參閱 [Polybase 查詢](/sql/relational-databases/polybase/polybase-queries)。 
+
+在 SQL 資料倉儲和 Analytics Platform System 中，[CREATE EXTERNAL TABLE AS SELECT](create-external-table-as-select-transact-sql.md) 陳述式會建立不存在的路徑和資料夾。 在這兩個產品中，CREATE EXTERNAL TABLE 不會建立路徑和資料夾。
+
   
  若您將 LOCATION 指定為資料夾，會從外部資料表中選取的 PolyBase 查詢，將會從該資料夾及其所有子資料夾中擷取檔案。 PolyBase 和 Hadoop 相同，並不會傳回隱藏的資料夾。 它也不會傳回檔案名稱是以底線 (_) 或句號 (.) 開始的檔案。  
   
@@ -230,7 +235,8 @@ CREATE EXTERNAL TABLE [ database_name . [ schema_name ] . | schema_name. ] table
 > [!NOTE]  
 >  由於 PolyBase 會不時計算失敗的資料列百分比，因此實際的失敗資料列百分比可能超出 *reject_value*。  
   
- 範例  
+
+範例  
   
  此範例說明三個 REJECT 選項彼此如何互動。 例如，如果 REJECT_TYPE = percentage、REJECT_VALUE = 30 且 REJECT_SAMPLE_VALUE = 100，就可能發生下列案例：  
   
@@ -243,6 +249,13 @@ CREATE EXTERNAL TABLE [ database_name . [ schema_name ] . | schema_name. ] table
 -   失敗資料列的百分比在重新計算後為 50%。 失敗資料列的百分比已超出 30% 的拒絕值。  
   
 -   PolyBase 查詢在嘗試傳回前 200 個資料列後，會因被拒絕的資料列達 50% 而失敗。 請注意，相符的資料列會在 PolyBase 查詢偵測到超出拒絕閾值之前傳回。  
+  
+REJECTED_ROW_LOCATION = *Directory Location*
+  
+  指定外部資料來源中，已拒絕資料列和相應錯誤檔案應寫入的目錄。
+若指定的路徑不存在，PolyBase 會為您建立一個目錄。 會建立名稱為 “_rejectedrows” 的子目錄。“_” 字元可確保該目錄從其他資料處理逸出，除非已明確在位置參數中指名。 在此目錄中，會有一個根據載入提交時間建立的資料夾，格式為 YearMonthDay -HourMinuteSecond (例如 20180330-173205)。 在此資料中寫入了兩種類型的檔案，分別是 _reason 檔案與資料檔案。 
+
+原因檔案與資料檔案均具有與 CTAS 陳述式相關的 queryID。 因為資料與原因檔案在不同的檔案中，所以對應的檔案會具有相符的尾碼。 
   
  分區外部資料表選項  
  針對[彈性資料庫查詢](https://azure.microsoft.com/documentation/articles/sql-database-elastic-query-overview/)指定外部資料來源 (非 SQL Server 資料來源) 及發佈方法。  

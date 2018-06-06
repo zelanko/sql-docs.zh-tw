@@ -1,17 +1,16 @@
 ---
-title: "SQL Server 索引設計指南 | Microsoft Docs"
-ms.custom: 
-ms.date: 12/1/2017
-ms.prod: sql-non-specified
+title: SQL Server 索引架構和設計指南 | Microsoft Docs
+ms.custom: ''
+ms.date: 04/03/2018
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
 ms.component: relational-databases-misc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - index design guide
 - index design guidance
@@ -24,21 +23,21 @@ helpviewer_keywords:
 - sql server index design guide
 - sql server index design guidance
 ms.assetid: 11f8017e-5bc3-4bab-8060-c16282cfbac1
-caps.latest.revision: 
+caps.latest.revision: 3
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: c11d217a3818d872071bb466ac2221e2c8adc3f7
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 911e983816453ede6a40375aad7e09bf399567b0
+ms.sourcegitcommit: b5ab9f3a55800b0ccd7e16997f4cd6184b4995f9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 05/23/2018
 ---
-# <a name="sql-server-index-design-guide"></a>SQL Server 索引設計指南
+# <a name="sql-server-index-architecture-and-design-guide"></a>SQL Server 索引架構和設計指南
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-設計不良的索引與不足的索引是資料庫應用程式瓶頸的主要原因。 設計有效的索引是達到良好資料庫和應用程式效能最重要的一點。 本 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 索引設計指南包含的資訊和最佳做法，可以協助您設計符合應用程式需求的有效索引。  
+設計不良的索引與不足的索引是資料庫應用程式瓶頸的主要原因。 設計有效的索引是達到良好資料庫和應用程式效能最重要的一點。 本 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 索引設計指南包含索引架構的資訊和最佳做法，可協助您設計符合應用程式需求的有效索引。  
     
 本指南假設讀者對 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]中提供的索引類型有概略的認識。 如需索引類型的一般描述，請參閱 [Index Types](../relational-databases/indexes/indexes.md)(索引類型)。  
 
@@ -61,7 +60,7 @@ ms.lasthandoff: 02/09/2018
 ##  <a name="Basics"></a> 索引設計基本概念  
  索引是一種與資料表或檢視有關的磁碟內存或記憶體內部結構，它會加快從該資料表或檢視中擷取資料列的速度。 索引中包含從資料表或檢視中一或多個資料行建出的索引鍵。 若為磁碟內存索引，這些索引鍵儲存在結構 (B 型樹狀結構) 中，讓 SQL Server 可以快速有效地尋找與索引鍵值相關的一或多個資料列。  
 
- 索引會將資料儲存為以資料列和資料行按邏輯組織的資料表，實際儲存為*資料列存放區* <sup>1</sup>　的資料列取向資料格式，或*[資料行存放區](#columnstore_index)*的資料行取向資料格式。  
+ 索引會將資料儲存為以資料列和資料行按邏輯組織的資料表，實際儲存為*資料列存放區* <sup>1</sup>　的資料列取向資料格式，或*[資料行存放區](#columnstore_index)* 的資料行取向資料格式。  
     
  為資料庫選擇正確的索引及工作負載時，往往很難在查詢速度與更新成本之間取得平衡。 範圍較小的索引，或是索引的索引鍵中包含較少的資料行，所需的磁碟空間與維護負擔相對較小。 相反的，如果索引範圍較大，能涵蓋的查詢就更多。 在找到最有效率的索引之前，可能需要先試過數種不同的設計。 索引可以新增、修改和卸除，不會影響資料庫結構描述或應用程式的設計。 所以，不要吝於嘗試各種不同的索引。  
   
@@ -121,7 +120,7 @@ ms.lasthandoff: 02/09/2018
   
 -   讓叢集索引保持短小的索引鍵。 此外，對唯一或非 Null 資料行建立叢集索引，會有幫助。  
   
--   **ntext**、 **text**、 **image**、 **varchar(max)**、 **nvarchar(max)**或 **varbinary(max)** 資料類型的資料行無法指定為索引鍵資料行。 但是， **varchar(max)**、 **nvarchar(max)**、 **varbinary(max)**和 **xml** 資料類型則可參與非叢集索引，作為非索引鍵之索引資料行。 如需詳細資訊，請參閱本指南中的 [內含資料行的索引](#Included_Columns)一節。  
+-   **ntext**、 **text**、 **image**、 **varchar(max)**、 **nvarchar(max)** 或 **varbinary(max)** 資料類型的資料行無法指定為索引鍵資料行。 但是， **varchar(max)**、 **nvarchar(max)**、 **varbinary(max)** 和 **xml** 資料類型則可參與非叢集索引，作為非索引鍵之索引資料行。 如需詳細資訊，請參閱本指南中的 [內含資料行的索引](#Included_Columns)一節。  
   
 -   **xml** 資料類型只可以是 XML 索引的索引鍵資料行。 如需詳細資訊，請參閱 [XML 索引 &#40;SQL Server&#41;](../relational-databases/xml/xml-indexes-sql-server.md)。 SQL Server 2012 SP1 導入了新的 XML 索引類型，稱為「選擇性 XML 索引」。 這個新索引可改善 SQL Server 中儲存為 XML 之資料的查詢效能，讓大型 XML 資料工作負載的索引編製更快速，並透過降低索引本身的儲存成本，改善延展性。 如需詳細資訊，請參閱[選擇性 XML 索引 &#40;SXI&#41;](../relational-databases/xml/selective-xml-indexes-sxi.md)。  
   
@@ -456,7 +455,7 @@ INCLUDE (AddressLine1, AddressLine2, City, StateProvinceID);
   
 -   頁面上可以放入的索引資料列變少。 這將使得 I/O 的作業增加而降低快取的效率。  
   
--   必須有更多磁碟空間才能儲存索引。 尤其是，新增 **varchar(max)**、 **nvarchar(max)**、 **varbinary(max)**或 **xml** 資料類型作為非索引鍵之索引資料行，將大幅增加磁碟空間的需求。 這是因為資料行的值複製到索引的分葉層級。 因此，它們會同時存在於索引與基底資料表中。  
+-   必須有更多磁碟空間才能儲存索引。 尤其是，新增 **varchar(max)**、 **nvarchar(max)**、 **varbinary(max)** 或 **xml** 資料類型作為非索引鍵之索引資料行，將大幅增加磁碟空間的需求。 這是因為資料行的值複製到索引的分葉層級。 因此，它們會同時存在於索引與基底資料表中。  
   
 -   維護索引時，會增加修改、插入、更新或刪除基礎資料表或索引檢視的時間。  
   
@@ -630,7 +629,7 @@ WHERE b = CONVERT(Varbinary(4), 1);
 
 *columnstore index* 是使用單欄式資料格式 (稱為「資料行存放區」) 來儲存、擷取及管理資料的一項技術。 如需詳細資訊，請參閱[資料行存放區索引概觀](../relational-databases/indexes/columnstore-indexes-overview.md)。 
 
-**適用於**： [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 至 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]。
+如需版本資訊，請參閱[資料行存放區索引 - 新增功能](/sql/relational-databases/indexes/columnstore-indexes-what-s-new)。
 
 ### <a name="columnstore-index-architecture"></a>資料行存放區索引架構
 
@@ -649,7 +648,7 @@ WHERE b = CONVERT(Varbinary(4), 1);
 
 資料行存放區索引也會以資料列存放區格式實際儲存某些資料列，其稱為差異存放區。 差異存放區 (也稱為差異資料列群組) 是一種保存空間，用來保存數量太少而沒有資格壓縮到資料行存放區的資料列。 每個差異資料列群組都會實作為叢集 B 型樹狀結構索引。 
 
-- 「差異存放區」是一種保存空間，用來保存數量太少而無法壓縮到資料行存放區的資料列。 差異存放區是資料列存放區。 
+- **差異存放區**是一種保存空間，用來保存數量太少而無法壓縮到資料行存放區的資料列。 差異存放區會以資料列存放區格式儲存資料列。 
   
 #### <a name="operations-are-performed-on-rowgroups-and-column-segments"></a>作業是在資料列群組和資料行區段上執行
 
@@ -799,11 +798,11 @@ WHERE b = CONVERT(Varbinary(4), 1);
   
 以下是在 CREATE TABLE 陳述式之外建立雜湊索引的語法範例︰  
   
-    ```sql
-    ALTER TABLE MyTable_memop  
-    ADD INDEX ix_hash_Column2 UNIQUE  
-    HASH (Column2) WITH (BUCKET_COUNT = 64);
-    ``` 
+```sql
+ALTER TABLE MyTable_memop  
+ADD INDEX ix_hash_Column2 UNIQUE  
+HASH (Column2) WITH (BUCKET_COUNT = 64);
+``` 
 
 ### <a name="row-versions-and-garbage-collection"></a>資料列版本和記憶體回收  
 在記憶體最佳化資料表中，當資料列受到 `UPDATE` 影響時，資料表會建立資料列的更新版本。 在更新交易期間，其他工作階段或許能夠讀取舊版資料列，藉此避免發生與資料列鎖定相關聯的效能低落。  
@@ -852,9 +851,9 @@ Bw 型樹狀結構中的索引頁可視需要從儲存單一資料列成長，�
 
 ![hekaton_tables_23f](../relational-databases/in-memory-oltp/media/HKNCI_Split.gif "分割頁面")
 
-**步驟 1：**配置兩個新的頁面 P1 和 P2，並將資料列從舊的 P1 頁面分割到這些新的頁面，包括新插入的資料列。 頁面對應表中新的位置是用來儲存頁面 P2 的實體位址。 P1 和 P2 這些頁面目前還無法存取任何並行作業。 此外，已設定從 P1 到 P2 的邏輯指標。 接著，在一個不可部分完成的步驟中更新頁面對應表，將指標從舊的 P1 變更為新的 P1。 
+**步驟 1：** 配置兩個新的頁面 P1 和 P2，並將資料列從舊的 P1 頁面分割到這些新的頁面，包括新插入的資料列。 頁面對應表中新的位置是用來儲存頁面 P2 的實體位址。 P1 和 P2 這些頁面目前還無法存取任何並行作業。 此外，已設定從 P1 到 P2 的邏輯指標。 接著，在一個不可部分完成的步驟中更新頁面對應表，將指標從舊的 P1 變更為新的 P1。 
 
-**步驟 2：**非分葉頁面指向 P1，但是沒有從非分葉頁面指向 P2 的直接指標。 只能透過 P1 連線到 P2。 若要從非分葉頁面建立 P2 的指標，請配置新的非分葉頁面 (內部索引頁)、複製所有舊的非分葉頁面的資料列，再新增新的資料列指向 P2。 完成後，在一個不可部分完成的步驟中更新頁面對應表，將指標從舊的非分葉頁面變更為新的非分葉頁面。
+**步驟 2：** 非分葉頁面指向 P1，但是沒有從非分葉頁面指向 P2 的直接指標。 只能透過 P1 連線到 P2。 若要從非分葉頁面建立 P2 的指標，請配置新的非分葉頁面 (內部索引頁)、複製所有舊的非分葉頁面的資料列，再新增新的資料列指向 P2。 完成後，在一個不可部分完成的步驟中更新頁面對應表，將指標從舊的非分葉頁面變更為新的非分葉頁面。
 
 #### <a name="merge-page"></a>合併頁面
 當 `DELETE` 作業產生的頁面小於頁面大小上限 (目前為 8 KB) 的 10%，或只有單一資料列時，該頁面就會合併到接續的頁面中。
@@ -865,11 +864,11 @@ Bw 型樹狀結構中的索引頁可視需要從儲存單一資料列成長，�
 
 ![hekaton_tables_23g](../relational-databases/in-memory-oltp/media/HKNCI_Merge.gif "合併頁面")
 
-**步驟 1：**建立代表索引鍵值 10 (藍色三角形) 的差異頁面，它在非分葉頁面 Pp1 中的指標設定為新的差異頁面。 另建立特殊的合併差異頁面 (綠色三角形)，連結指向差異頁面。 在這個階段，任何並行交易都看不到這兩種頁面 (差異頁面和合併差異頁面)。 在某個不可部分完成的步驟中，頁面對應表中的分葉層級頁 P1 的指標會更新指向合併差異頁面。 這個步驟之後，Pp1 中的索引鍵值 10 項目現在會指向合併差異頁面。 
+**步驟 1：** 建立代表索引鍵值 10 (藍色三角形) 的差異頁面，它在非分葉頁面 Pp1 中的指標設定為新的差異頁面。 另建立特殊的合併差異頁面 (綠色三角形)，連結指向差異頁面。 在這個階段，任何並行交易都看不到這兩種頁面 (差異頁面和合併差異頁面)。 在某個不可部分完成的步驟中，頁面對應表中的分葉層級頁 P1 的指標會更新指向合併差異頁面。 這個步驟之後，Pp1 中的索引鍵值 10 項目現在會指向合併差異頁面。 
 
-**步驟 2：**必須移除非分葉頁面 Pp1 中代表索引鍵值 7 的資料列，並更新索引鍵值 10 項目指向 P1。 若要這樣做，要配置新的非分葉頁面 Pp2，並複製 Pp1 中除代表索引鍵值 7 以外的所有資料列，然後更新索引鍵值 10 的資料列指向頁面 P1。 完成之後，在一個不可部分完成的步驟中，更新指向 Pp1 的頁面對應表項目指向 Pp2。 無法再連線到 Pp1。 
+**步驟 2：** 必須移除非分葉頁面 Pp1 中代表索引鍵值 7 的資料列，並更新索引鍵值 10 項目指向 P1。 若要這樣做，要配置新的非分葉頁面 Pp2，並複製 Pp1 中除代表索引鍵值 7 以外的所有資料列，然後更新索引鍵值 10 的資料列指向頁面 P1。 完成之後，在一個不可部分完成的步驟中，更新指向 Pp1 的頁面對應表項目指向 Pp2。 無法再連線到 Pp1。 
 
-**步驟 3：**合併分葉層級頁面 P2 和 P1，並移除差異頁面。 若要這樣做，要配置新的頁面 P3，合併 P1 和 P2 的資料列，在新的 P3 中包含差異頁面變更。 然後，在一個不可部分完成的步驟中，更新指向 P1 頁面的頁面對應表項目指向頁面 P3。 
+**步驟 3：** 合併分葉層級頁面 P2 和 P1，並移除差異頁面。 若要這樣做，要配置新的頁面 P3，合併 P1 和 P2 的資料列，在新的 P3 中包含差異頁面變更。 然後，在一個不可部分完成的步驟中，更新指向 P1 頁面的頁面對應表項目指向頁面 P3。 
 
 ### <a name="performance-considerations"></a>效能考量
 
@@ -882,6 +881,11 @@ Bw 型樹狀結構中的索引頁可視需要從儲存單一資料列成長，�
 > 當非叢集索引索引鍵資料行中的某個資料行有許多重複的值時，效能會因為更新、插入及刪除而降低。 在此情況下，改善效能的其中一種方法就是在非叢集索引中加入其他資料行。
 
 ##  <a name="Additional_Reading"></a> 其他閱讀資料  
+[CREATE INDEX &#40;Transact-SQL&#41;](../t-sql/statements/create-index-transact-sql.md)    
+[ALTER INDEX &#40;Transact-SQL&#41;](../t-sql/statements/alter-index-transact-sql.md)   
+[CREATE XML INDEX &#40;Transact-SQL&#41;](../t-sql/statements/create-xml-index-transact-sql.md)  
+[CREATE SPATIAL INDEX &#40;Transact-SQL&#41;](../t-sql/statements/create-spatial-index-transact-sql.md)     
+[重新組織與重建索引](../relational-databases/indexes/reorganize-and-rebuild-indexes.md)         
 [＜使用 SQL Server 2008 索引檢視提升效能＞](http://msdn.microsoft.com/library/dd171921(v=sql.100).aspx)  
 [Partitioned Tables and Indexes](../relational-databases/partitions/partitioned-tables-and-indexes.md)  
 [建立主索引鍵](../relational-databases/tables/create-primary-keys.md)    
@@ -891,8 +895,5 @@ Bw 型樹狀結構中的索引頁可視需要從儲存單一資料列成長，�
 [記憶體最佳化的資料表動態管理檢視 &#40;Transact-SQL&#41;](../relational-databases/system-dynamic-management-views/memory-optimized-table-dynamic-management-views-transact-sql.md)   
 [索引相關的動態管理檢視和函式 &#40;Transact-SQL&#41;](../relational-databases/system-dynamic-management-views/index-related-dynamic-management-views-and-functions-transact-sql.md)       
 [計算資料行的索引](../relational-databases/indexes/indexes-on-computed-columns.md)   
-[索引和 ALTER TABLE](../t-sql/statements/alter-table-transact-sql.md#indexes-and-alter-table)   
-[CREATE INDEX &#40;Transact-SQL&#41;](../t-sql/statements/create-index-transact-sql.md)    
-[ALTER INDEX &#40;Transact-SQL&#41;](../t-sql/statements/alter-index-transact-sql.md)   
-[CREATE XML INDEX &#40;Transact-SQL&#41;](../t-sql/statements/create-xml-index-transact-sql.md)  
-[CREATE SPATIAL INDEX &#40;Transact-SQL&#41;](../t-sql/statements/create-spatial-index-transact-sql.md)  
+[索引和 ALTER TABLE](../t-sql/statements/alter-table-transact-sql.md#indexes-and-alter-table)      
+[自適性索引重組](http://github.com/Microsoft/tigertoolbox/tree/master/AdaptiveIndexDefrag)      

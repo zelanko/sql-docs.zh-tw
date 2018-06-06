@@ -1,27 +1,25 @@
 ---
-title: "Oracle 結構描述對應至 SQL Server 結構描述 (OracleToSQL) |Microsoft 文件"
-ms.prod: sql-non-specified
+title: Oracle 結構描述對應至 SQL Server 結構描述 (OracleToSQL) |Microsoft 文件
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
 ms.component: ssma-oracle
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ssma
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: 0edeaa08-9c5d-4e3a-bc15-b9a1f0c8a9dc
-caps.latest.revision: "8"
+caps.latest.revision: 8
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
-ms.workload: On Demand
-ms.openlocfilehash: 025f3f049b5efccb83e13d5baebacbe8b0fa2a1c
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 030f43c1d44a10b3fb299083fd1c84c71558450f
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="mapping-oracle-schemas-to-sql-server-schemas-oracletosql"></a>Oracle 結構描述對應至 SQL Server 結構描述 (OracleToSQL)
 在 Oracle 中，每個資料庫有一或多個結構描述。 根據預設，SSMA 會移轉 Oracle 結構描述中的所有物件[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]名為結構描述的資料庫。 不過，您可以自訂 Oracle 結構描述之間的對應和[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]資料庫。  
@@ -65,10 +63,10 @@ SSMA，在您可以將 Oracle 結構描述對應到任何可用[!INCLUDE[ssNoVer
   
 1.  結構描述對應索引標籤下選取任何資料列，然後按一下**重設為預設**還原為預設的資料庫和結構描述。  
   
-## <a name="next-steps"></a>Next Steps  
+## <a name="next-steps"></a>後續步驟  
 如果您想要分析的 Oracle 物件到轉換[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]物件，您可以[建立轉換報告](http://msdn.microsoft.com/en-us/4de9bcf6-1346-4740-87f9-7f24a8226357)。 您可以在否則[轉換 Oracle 資料庫物件定義](http://msdn.microsoft.com/en-us/e021182d-31da-443d-b110-937f5db27272)到[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]物件定義。  
   
-## <a name="see-also"></a>請參閱  
-[連接到 SQL Server &#40; OracleToSQL &#41;](../../ssma/oracle/connecting-to-sql-server-oracletosql.md)  
-[將 Oracle 資料庫移轉至 SQL Server &#40; OracleToSQL &#41;](../../ssma/oracle/migrating-oracle-databases-to-sql-server-oracletosql.md)  
+## <a name="see-also"></a>另請參閱  
+[連接到 SQL Server &#40;OracleToSQL&#41;](../../ssma/oracle/connecting-to-sql-server-oracletosql.md)  
+[SQL server 資料庫移轉 Oracle &#40;OracleToSQL&#41;](../../ssma/oracle/migrating-oracle-databases-to-sql-server-oracletosql.md)  
   

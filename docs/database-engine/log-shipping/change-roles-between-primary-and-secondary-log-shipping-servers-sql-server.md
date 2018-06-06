@@ -1,16 +1,15 @@
 ---
-title: "變更主要與次要記錄傳送伺服器間的角色 (SQL Server) | Microsoft Docs"
-ms.custom: 
+title: 變更主要與次要記錄傳送伺服器間的角色 (SQL Server) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
-ms.prod_service: database-engine
-ms.service: 
+ms.prod: sql
+ms.prod_service: high-availability
 ms.component: log-shipping
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: dbe-high-availability
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: high-availability
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - log shipping [SQL Server], role changes
 - secondary data files [SQL Server], roles changed between
@@ -19,19 +18,19 @@ helpviewer_keywords:
 - log shipping [SQL Server], failover
 - failover [SQL Server], log shipping
 ms.assetid: 2d7cc40a-47e8-4419-9b2b-7c69f700e806
-caps.latest.revision: "20"
+caps.latest.revision: 20
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: b8208251edaeccba14b4da06e44f053893d0c5aa
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: fe50ad794c1ccc03df4aed0465b12de1cf2ce3b0
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="change-roles-between-primary-and-secondary-log-shipping-servers-sql-server"></a>變更主要與次要記錄傳送伺服器間的角色 (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 將 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 記錄傳送設定容錯移轉到次要伺服器之後，您可以設定次要資料庫作為主要資料庫。 接著，您就可以視需要交換主要與次要資料庫。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  將 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 記錄傳送組態容錯移轉到次要伺服器之後，您可以設定次要資料庫做為主要資料庫。 接著，您就可以視需要交換主要與次要資料庫。  
   
 ## <a name="performing-the-initial-role-change"></a>執行初始角色變更  
  初次想要容錯移轉到次要資料庫，並將它作為主要資料庫時，您必須採取一連串的步驟。 遵循並完成這些初始步驟之後，您就可以輕輕鬆鬆交換主要資料庫與次要資料庫間的角色。  

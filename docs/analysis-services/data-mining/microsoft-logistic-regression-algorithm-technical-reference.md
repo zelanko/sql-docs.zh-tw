@@ -1,40 +1,23 @@
 ---
-title: "Microsoft 羅吉斯迴歸演算法技術參考 |Microsoft 文件"
-ms.custom: 
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
-helpviewer_keywords:
-- logistic regression [Analysis Services]
-- MAXIMUM_INPUT_ATTRIBUTES parameter
-- HOLDOUT_PERCENTAGE parameter
-- MAXIMUM_OUTPUT_ATTRIBUTES parameter
-- MAXIMUM_STATES parameter
-- SAMPLE_SIZE parameter
-- regression algorithms [Analysis Services]
-- HOLDOUT_SEED parameter
-ms.assetid: cf32f1f3-153e-476f-91a4-bb834ec7c88d
-caps.latest.revision: 
-author: Minewiskan
+title: Microsoft 羅吉斯迴歸演算法技術參考 |Microsoft 文件
+ms.date: 05/08/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: data-mining
+ms.topic: conceptual
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: fd3dee20e57342542e271cfb3f153b1c35c0764d
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: ffe5299530f75706a5d7c348bd39d5cc2e883641
+ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="microsoft-logistic-regression-algorithm-technical-reference"></a>Microsoft 羅吉斯迴歸演算法技術參考
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-[!INCLUDE[msCoName](../../includes/msconame-md.md)] 羅吉斯迴歸演算法是 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 類神經網路演算法的演變，其中 *HIDDEN_NODE_RATIO* 參數設為 0。 此設定會建立不包含隱藏層的類神經網路模型，而這相等於羅吉斯迴歸。  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 羅吉斯迴歸演算法是 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 類神經網路演算法的演變，其中 *HIDDEN_NODE_RATIO* 參數設為 0。 此設定會建立不包含隱藏層的類神經網路模型，而這相等於羅吉斯迴歸。  
   
 ## <a name="implementation-of-the-microsoft-logistic-regression-algorithm"></a>Microsoft 羅吉斯迴歸演算法的實作  
  假設可預測資料行只包含兩個狀態，但您仍然想要執行迴歸分析，使輸入資料行與可預測資料行將包含特定狀態的機率相關。 下列圖表說明如果您指定 1 和 0 給可預測資料行的狀態時將得到的結果，請計算資料行將包含特定狀態的機率，並對輸入屬性執行線性迴歸。  
@@ -162,7 +145,7 @@ WHERE NODE_TYPE = 23
 ## <a name="see-also"></a>另請參閱  
  [Microsoft 羅吉斯迴歸演算法](../../analysis-services/data-mining/microsoft-logistic-regression-algorithm.md)   
  [線性迴歸模型查詢範例](../../analysis-services/data-mining/linear-regression-model-query-examples.md)   
- [羅吉斯迴歸模型 &#40; 的採礦模型內容Analysis Services-資料採礦 &#41;](../../analysis-services/data-mining/mining-model-content-for-logistic-regression-models.md)   
+ [羅吉斯迴歸模型 & #40; 的採礦模型內容Analysis Services-資料採礦 & #41;](../../analysis-services/data-mining/mining-model-content-for-logistic-regression-models.md)   
  [Microsoft 類神經網路演算法](../../analysis-services/data-mining/microsoft-neural-network-algorithm.md)  
   
   

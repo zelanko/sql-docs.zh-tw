@@ -1,30 +1,29 @@
 ---
-title: "在 SQL Server 容錯移轉叢集上安裝用戶端工具 | Microsoft Docs"
-ms.custom: 
+title: 在 SQL Server 容錯移轉叢集上安裝用戶端工具 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
-ms.prod_service: database-engine
-ms.service: 
-ms.component: failover-clusters
-ms.reviewer: 
+ms.prod: sql
+ms.prod_service: high-availability
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: setup-install
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- setup-install
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: 3c82d510-9798-46be-bebb-cac9bef56936
-caps.latest.revision: "9"
+caps.latest.revision: 9
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
-ms.workload: Inactive
-ms.openlocfilehash: 6ceab14497f719a8bac3ee44c855f7f1f870d0d6
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+manager: craigg
+ms.openlocfilehash: 6dda1566cd61d972b3c1a1fd632b669a41f50de0
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="install-client-tools-on-a-sql-server-failover-cluster"></a>在 SQL Server 容錯移轉叢集上安裝用戶端工具
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 之類的用戶端工具是在相同機器上所有執行個體通用的共用功能。 這些功能與可以並排安裝的支援 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 版本回溯相容。 在一個節點上一次只能存在一個版本的用戶端工具。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 之類的用戶端工具是在相同機器上所有執行個體通用的共用功能。 這些功能與可以並排安裝的支援 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 版本回溯相容。 在一個節點上一次只能存在一個版本的用戶端工具。  
   
  如果在安裝 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 叢集的第一個節點期間安裝 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 用戶端工具，則會使用 [加入節點]，將這些用戶端工具自動加入至稍後可能會加入至 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體的所有節點。  
   

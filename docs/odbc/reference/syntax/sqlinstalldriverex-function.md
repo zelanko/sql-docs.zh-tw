@@ -1,32 +1,33 @@
 ---
-title: "SQLInstallDriverEx 函式 |Microsoft 文件"
-ms.custom: 
+title: SQLInstallDriverEx 函式 |Microsoft 文件
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
-ms.component: odbc
-ms.reviewer: 
+ms.prod: sql
+ms.prod_service: connectivity
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
-ms.topic: article
-apiname: SQLInstallDriverEx
-apilocation: sqlsrv32.dll
+ms.technology: connectivity
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
+apiname:
+- SQLInstallDriverEx
+apilocation:
+- sqlsrv32.dll
 apitype: dllExport
-f1_keywords: SQLInstallDriverEx
-helpviewer_keywords: SQLInstallDriverEx function [ODBC]
+f1_keywords:
+- SQLInstallDriverEx
+helpviewer_keywords:
+- SQLInstallDriverEx function [ODBC]
 ms.assetid: 1dd74544-f4e9-46e1-9b5f-c11d84fdab4c
-caps.latest.revision: "16"
+caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
-ms.workload: Inactive
-ms.openlocfilehash: 4179bf04131f256c5a37cb01c079035a569a07af
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+manager: craigg
+ms.openlocfilehash: 4c4ba55c94f36052d525c79c3c472e7e5c28d6a1
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sqlinstalldriverex-function"></a>SQLInstallDriverEx 函式
 **一致性**  
@@ -87,7 +88,7 @@ BOOL SQLInstallDriverEx(
 ## <a name="diagnostics"></a>診斷  
  當**SQLInstallDriverEx**傳回 FALSE，相關聯 *\*pfErrorCode*可以取得值，藉由呼叫**SQLInstallerError**。 下表列出 *\*pfErrorCode*可以傳回的值**SQLInstallerError** ，並說明每個內容中的這個函式。  
   
-|*\*pfErrorCode*|錯誤|描述|  
+|*\*pfErrorCode*|錯誤|Description|  
 |---------------------|-----------|-----------------|  
 |ODBC_ERROR_GENERAL_ERR|一般安裝程式發生錯誤|發生錯誤，其中沒有特定的安裝程式錯誤。|  
 |ODBC_ERROR_INVALID_BUFF_LEN|無效的緩衝區長度|*LpszPathOut*引數不是大小足以包含 輸出路徑。 緩衝區會包含已截斷的路徑。<br /><br /> *CbPathOutMax*引數為 0，和*常見*已 ODBC_INSTALL_COMPLETE。|  
@@ -101,9 +102,9 @@ BOOL SQLInstallDriverEx(
 ## <a name="comments"></a>註解  
  *LpszDriver*引數是一份關鍵字-值組表單中的屬性。 每一對 null 位元組，以終止，並將整個清單終止 null 位元組。 （也就是兩個 null 位元組標記清單的結尾）。此清單的格式如下所示：  
   
- *驅動程式 desc*  **\\** 0Driver**=***驅動程式 DLL-檔名* **\\** 0 [安裝程式**=***安裝程式-DLL filename***\\**0]  
+ *驅動程式 desc* **\\**0Driver**=***驅動程式 DLL-檔名***\\**0 [安裝程式**=***安裝程式-DLL filename***\\**0]  
   
- [*驅動程式-attr-keyword1***=***value1***\\**0] [*keyword2-attr 驅動程式-*  **=**  *value2***\\**0]... **\\** 0  
+ [*驅動程式-attr-keyword1***=*** value1 ***\\**0] [* 驅動程式-attr-keyword2***=*** value2 ***\\**0]...**\\**0  
   
  \0 所在 null 位元組和*驅動程式-attr-keywordn*任何驅動程式屬性的關鍵字。 關鍵字必須出現在指定的順序。 例如，假設格式化的文字檔案的驅動程式具有不同的驅動程式和安裝程式的 Dll，而且可以使用.txt 和.csv 副檔名的檔案。 *LpszDriver*引數，此驅動程式的可能，如下所示：  
   

@@ -1,27 +1,24 @@
 ---
-title: "getCharacterStream 方法 (long，long) (SQLServerNClob) |Microsoft 文件"
-ms.custom: 
+title: getCharacterStream 方法 (long，long) (SQLServerNClob) |Microsoft 文件
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
-ms.component: jdbc
-ms.reviewer: 
+ms.prod: sql
+ms.prod_service: connectivity
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: connectivity
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: 5a8028bc-c877-4668-b662-0746d462040e
-caps.latest.revision: "14"
+caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
-ms.workload: Inactive
-ms.openlocfilehash: ee42e6ef541b8f3c8298d467b6eb72237016efb4
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+manager: craigg
+ms.openlocfilehash: 3d54808511d4bdfe6c464cd6deee989757521266
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="getcharacterstream-method-long-long-sqlservernclob"></a>getCharacterStream 方法 (long, long) (SQLServerNClob)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -41,7 +38,7 @@ public java.io.Reader getCharacterStream(long pos,
   
  A**長**，表示要擷取之部分值的第一個字元的位移。  
   
- *length*  
+ *長度*  
   
  A**長**，表示要擷取之部分值的字元長度。  
   
@@ -54,8 +51,8 @@ public java.io.Reader getCharacterStream(long pos,
 ## <a name="remarks"></a>備註  
  GetCharacterStream 方法 java.sql.NClob 介面中所指定這個 getCharacterStream 方法。  
   
-## <a name="see-also"></a>請參閱＜  
- [getCharacterStream 方法 &#40;SQLServerNClob &#41;](../../../connect/jdbc/reference/getcharacterstream-method-sqlservernclob.md)   
+## <a name="see-also"></a>另請參閱  
+ [getCharacterStream 方法&#40;SQLServerNClob&#41;](../../../connect/jdbc/reference/getcharacterstream-method-sqlservernclob.md)   
  [SQLServerNClob 方法](../../../connect/jdbc/reference/sqlservernclob-methods.md)   
  [SQLServerNClob 成員](../../../connect/jdbc/reference/sqlservernclob-members.md)   
  [SQLServerNClob 類別](../../../connect/jdbc/reference/sqlservernclob-class.md)  

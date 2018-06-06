@@ -1,32 +1,28 @@
 ---
-title: "管理交易記錄檔的大小 | Microsoft Docs"
-ms.custom: 
+title: 管理交易記錄檔的大小 | Microsoft Docs
+ms.custom: ''
 ms.date: 01/05/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
-ms.component: logs
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- dbe-transaction-log
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: supportability
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - transaction logs [SQL Server], size management
 - manage log size
 - log size, manage
 ms.assetid: 3a70e606-303f-47a8-96d4-2456a18d4297
-caps.latest.revision: 
-author: JennieHubbard
-ms.author: jhubbard
+caps.latest.revision: 23
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.workload: Active
-ms.openlocfilehash: e9b13884c2c086265fa0a76dda9f98f4caba2abb
-ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
+ms.openlocfilehash: e4558680d089b0da1c756524e3cdab5d38c4ba74
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="manage-the-size-of-the-transaction-log-file"></a>管理交易記錄檔的大小
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -103,9 +99,9 @@ ms.lasthandoff: 02/23/2018
   
       |Version|預設值|  
       |-------------|--------------------|  
-      |從下列版本起 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]|資料 64 MB。 記錄檔 64 MB。|  
-      |從下列版本起 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]|資料 1 MB。 記錄檔 10%。|  
-      |下列版本以前 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]|資料 10%。 記錄檔 10%。|  
+      |從 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 開始|資料 64 MB。 記錄檔 64 MB。|  
+      |從 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 開始|資料 1 MB。 記錄檔 10%。|  
+      |[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 之前|資料 10%。 記錄檔 10%。|  
 
 -   小型的成長增量可能會產生太多小型 [VLF](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch)，且可能會降低效能。 若要判斷指定執行個體中所有資料庫的目前交易記錄大小的最佳 VLF 分佈，以及達到所需大小的必要成長增量，請參閱此[指令碼](http://github.com/Microsoft/tigertoolbox/tree/master/Fixing-VLFs)。
 

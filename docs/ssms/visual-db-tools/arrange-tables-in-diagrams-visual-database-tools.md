@@ -1,34 +1,33 @@
 ---
-title: "排列圖表中的資料表 (Visual Database Tools) | Microsoft Docs"
-ms.custom: 
+title: 排列圖表中的資料表 (Visual Database Tools) | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
 ms.component: ssms-visual-db
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: tools-ssms
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ssms
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - organizing database diagram objects [SQL Server]
 - database diagrams [SQL Server], arranging objects
 - arranging database diagram objects
 ms.assetid: 25c6f3f5-aaef-42a5-ad00-1786436db2a6
-caps.latest.revision: "4"
+caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 17005e89a1711440b916815615dc86ef0c680313
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.openlocfilehash: ab085de682376961ba228fa19001ef04de8de73a
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="arrange-tables-in-diagrams-visual-database-tools"></a>排列圖表中的資料表 (Visual Database Tools)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 您可快速地排列資料庫圖表中的資料表，以清楚地查看每個資料表與關聯性。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+您可快速地排列資料庫圖表中的資料表，以清楚地查看每個資料表與關聯性。  
   
 ### <a name="to-arrange-tables-in-diagrams"></a>若要排列圖表中的資料表  
   

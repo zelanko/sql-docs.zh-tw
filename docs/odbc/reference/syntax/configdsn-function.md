@@ -1,32 +1,33 @@
 ---
-title: "ConfigDSN 函式 |Microsoft 文件"
-ms.custom: 
+title: ConfigDSN 函式 |Microsoft 文件
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
-ms.component: odbc
-ms.reviewer: 
+ms.prod: sql
+ms.prod_service: connectivity
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
-ms.topic: article
-apiname: ConfigDSN
-apilocation: sqlsrv32.dll
+ms.technology: connectivity
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
+apiname:
+- ConfigDSN
+apilocation:
+- sqlsrv32.dll
 apitype: dllExport
-f1_keywords: ConfigDSN
-helpviewer_keywords: ConfigDSN [ODBC]
+f1_keywords:
+- ConfigDSN
+helpviewer_keywords:
+- ConfigDSN [ODBC]
 ms.assetid: 01ced74e-c575-4a25-83f5-bd7d918123f8
-caps.latest.revision: "12"
+caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
-ms.workload: Inactive
-ms.openlocfilehash: b82eb128f125415d3dbdb24ffc616dbeccc5e938
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+manager: craigg
+ms.openlocfilehash: 7a8b75fb1b87a4f6199999e5d5e33d8cd0083bac
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="configdsn-function"></a>ConfigDSN 函式
 **一致性**  
@@ -71,7 +72,7 @@ BOOL ConfigDSN(
 ## <a name="diagnostics"></a>診斷  
  當**ConfigDSN**傳回 FALSE，相關聯 *\*pfErrorCode*值由呼叫張貼至安裝程式錯誤緩衝區**SQLPostInstallerError**和可以藉由呼叫取得**SQLInstallerError**。 下表列出 *\*pfErrorCode*可以傳回的值**SQLInstallerError** ，並說明每個內容中的這個函式。  
   
-|*\*pfErrorCode*|錯誤|描述|  
+|*\*pfErrorCode*|錯誤|Description|  
 |---------------------|-----------|-----------------|  
 |ODBC_ERROR_INVALID_HWND|無效的視窗控制代碼|*HwndParent*引數無效。|  
 |ODBC_ERROR_INVALID_KEYWORD_VALUE|無效的關鍵字-值配對|*LpszAttributes*引數包含語法錯誤。|  
@@ -83,7 +84,7 @@ BOOL ConfigDSN(
 ## <a name="comments"></a>註解  
  **ConfigDSN**為關鍵字-值組表單中的屬性清單，安裝程式 DLL 的接收連接資訊。 每一對 null 位元組，以終止，並將整個清單終止 null 位元組。 （也就是兩個 null 位元組標記清單的結尾）。關鍵字-值配對中的等號前後不能有空格。 **ConfigDSN**可以接受關鍵字不是有效的關鍵字**SQLBrowseConnect**和**SQLDriverConnect**。 **ConfigDSN**並不一定支援所有的關鍵字是有效的關鍵字**SQLBrowseConnect**和**SQLDriverConnect**。 (**ConfigDSN**不接受**驅動程式**關鍵字。)所用的關鍵字**ConfigDSN**函式必須支援重新建立資料來源使用安裝程式的自動安裝程式功能所需的所有選項。 當使用**ConfigDSN**值和連接字串值相同，應該使用相同的關鍵字。  
   
- 在**SQLBrowseConnect**和**SQLDriverConnect**，這些關鍵字，而且其值不應該包含**[] {} （)，;？\*= ！ @**字元和值**DSN**關鍵字不能只包含空格。 因為登錄文法中，關鍵字和資料來源名稱不能包含反斜線 (\\) 字元。  
+ 在**SQLBrowseConnect**和**SQLDriverConnect**，這些關鍵字，而且其值不應該包含 **[]{}（)，;？\*= ！ @** 字元和值**DSN**關鍵字不能只包含空格。 因為登錄文法中，關鍵字和資料來源名稱不能包含反斜線 (\\) 字元。  
   
  **ConfigDSN**應該呼叫**SQLValidDSN**以檢查資料來源名稱的長度，並驗證確定名稱中包含任何無效字元。 如果資料來源名稱長度超過 SQL_MAX_DSN_LENGTH 或包含無效的字元， **SQLValidDSN**會傳回錯誤和**ConfigDSN**會傳回錯誤。 也會檢查資料來源名稱的長度所**SQLWriteDSNToIni**。  
   

@@ -1,16 +1,15 @@
 ---
-title: sys.sp_rda_reconcile_indexes (Transact-SQL) | Microsoft Docs
-ms.custom: 
+title: sys.sp_rda_reconcile_indexes (TRANSACT-SQL) |Microsoft 文件
+ms.custom: ''
 ms.date: 06/10/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-stretch
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_rda_reconcile_indexes
@@ -20,18 +19,17 @@ dev_langs:
 helpviewer_keywords:
 - sys.sp_rda_reconcile_indexes stored procedure
 ms.assetid: 96b31ab9-bf84-46d6-9990-81f5c51f885a
-caps.latest.revision: 
+caps.latest.revision: 9
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 9a8fd2d58b8df3555da488e9a90b750c9ff583a7
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 3f020a11a0fa41d7cbd939279058e9292c5d488c
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 05/03/2018
 ---
-# <a name="syssprdareconcileindexes-transact-sql"></a>sys.sp_rda_reconcile_indexes (Transact-SQL)
+# <a name="syssprdareconcileindexes-transact-sql"></a>sys.sp_rda_reconcile_indexes (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   若要先協調遠端資料表上的索引的結構描述工作排入佇列。 這項工作已順利完成之後，遠端資料表已存在於本機的已啟用 Stretch 的資料表相同的索引。  

@@ -1,16 +1,14 @@
 ---
-title: "彙總函式 (Transact-SQL) | Microsoft Docs"
-ms.custom: 
+title: 彙總函式 (Transact-SQL) | Microsoft Docs
+ms.custom: ''
 ms.date: 01/16/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
 ms.component: t-sql|functions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: t-sql
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - TSQL
@@ -20,25 +18,25 @@ helpviewer_keywords:
 - summarizing functions
 - aggregate functions [SQL Server]
 ms.assetid: 0c06ae42-eb0a-4d77-9d74-aa1e7f344009
-caps.latest.revision: 
+caps.latest.revision: 30
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Active
-ms.openlocfilehash: 74cc3903f4d5e10718c2d4488e4c3b8da4448b80
-ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 16d4f225a9be5478016a6549f9cad01b67255210
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="aggregate-functions-transact-sql"></a>彙總函式 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-彙總函式會根據一組值來執行計算，再傳回單一值。 除了 COUNT，彙總函式會忽略 Null 值。 彙總函式經常用來搭配 SELECT 陳述式的 GROUP BY 子句使用。
+彙總函式會根據一組值來執行計算，並傳回單一值。 除了 `COUNT` 之外，彙總函式會忽略 Null 值。 彙總函式經常用來搭配 SELECT 陳述式的 GROUP BY 子句使用。
   
-所有彙總函式都具有決定性。 這表示每當彙總函式是使用一組特定輸入值來進行呼叫時，它們都會傳回相同的值。 如需函數確定性的詳細資訊，請參閱[決定性與非決定性函數](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md)。 [OVER 子句](../../t-sql/queries/select-over-clause-transact-sql.md)可能會遵照所有的彙總函式，但是 GROUPING 和 GROUPING_ID 除外。
+所有彙總函式都具有決定性。 換句話說，使用一組特定輸入值呼叫時，彙總函式會在每次呼叫時傳回相同的值。 如需函式確定性的詳細資訊，請參閱[決定性和非決定性函式](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md)。 [OVER 子句](../../t-sql/queries/select-over-clause-transact-sql.md)可能會遵循所有彙總函式，但 GROUPING 和 GROUPING_ID 函式除外。
   
-只有下列情況才能利用彙總函式來作為運算式：
+只有在下列情況下，才能使用彙總函式作為運算式：
 -   SELECT 陳述式的選取清單 (子查詢或外部查詢)。  
 -   HAVING 子句。  
   

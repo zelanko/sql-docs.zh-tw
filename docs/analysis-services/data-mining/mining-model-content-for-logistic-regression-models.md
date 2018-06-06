@@ -1,35 +1,23 @@
 ---
-title: "羅吉斯迴歸模型的採礦模型內容 |Microsoft 文件"
-ms.custom: 
-ms.date: 03/07/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
-helpviewer_keywords:
-- logistic regression [Analysis Services]
-- mining model content, logistic regression models
-- regression algorithms [Analysis Services]
-ms.assetid: 69cc0b86-e8bc-4d6c-903e-85724f5c0396
-caps.latest.revision: 
-author: Minewiskan
+title: 羅吉斯迴歸模型的採礦模型內容 |Microsoft 文件
+ms.date: 05/08/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: data-mining
+ms.topic: conceptual
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 5490990412aa4883d575a1fc65fee7e29db06dde
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 8d5aab960b1987a0c076504b4e2858403a2ecb99
+ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="mining-model-content-for-logistic-regression-models"></a>Mining Model Content for Logistic Regression Models
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-本主題描述使用 Microsoft 羅吉斯迴歸演算法的模型專用的採礦模型內容。 如需如何解譯所有模型類型共用的統計資料與結構的說明，以及與採礦模型內容相關的一般詞彙說明，請參閱[採礦模型內容 &#40;Analysis Services - 資料採礦&#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)。  
+  本主題描述使用 Microsoft 羅吉斯迴歸演算法的模型專用的採礦模型內容。 如需如何解譯所有模型類型共用的統計資料與結構的說明，以及與採礦模型內容相關的一般詞彙說明，請參閱[採礦模型內容 &#40;Analysis Services - 資料採礦&#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)。  
   
 ## <a name="understanding-the-structure-of-a-logistic-regression-model"></a>了解羅吉斯迴歸模型的結構  
  羅吉斯迴歸模型是使用 Microsoft 類神經網路演算法建立的，其參數會強迫模型刪除隱藏的節點。 因此，羅吉斯迴歸模型的完整結構幾乎與類神經網路的結構相同：每個模型都有代表模型及其中繼資料的單一父節點，以及一個特殊的臨界統計資料節點 (NODE_TYPE = 24)，提供模型中所使用之輸入的名數性統計資料。  
@@ -40,7 +28,7 @@ ms.lasthandoff: 02/15/2018
   
  ![羅吉斯迴歸模型內容結構](../../analysis-services/data-mining/media/skt-modelcontentstructure-logregc.gif "的羅吉斯迴歸模型內容結構")  
   
- 根據預設，羅吉斯迴歸模型顯示在 **[Microsoft 類神經網路檢視器]**中。 您可以利用這個自訂的檢視器，篩選輸入屬性及其值，並以圖形方式查看這些屬性和值如何影響輸出。 檢視器中的工具提示會顯示與每個成對輸入和輸出值相關聯的機率與增益。 如需詳細資訊，請參閱 [使用 Microsoft 類神經網路檢視器瀏覽模型](../../analysis-services/data-mining/browse-a-model-using-the-microsoft-neural-network-viewer.md)。  
+ 根據預設，羅吉斯迴歸模型顯示在 **[Microsoft 類神經網路檢視器]** 中。 您可以利用這個自訂的檢視器，篩選輸入屬性及其值，並以圖形方式查看這些屬性和值如何影響輸出。 檢視器中的工具提示會顯示與每個成對輸入和輸出值相關聯的機率與增益。 如需詳細資訊，請參閱 [使用 Microsoft 類神經網路檢視器瀏覽模型](../../analysis-services/data-mining/browse-a-model-using-the-microsoft-neural-network-viewer.md)。  
   
  若要探討輸入和子網路的結構以及查看詳細的統計資料，您可以使用 Microsoft 一般內容樹狀檢視器。 您可以按一下任何節點將其展開並查看其子節點，或檢視包含在節點中的加權和其他統計資料。  
   

@@ -1,34 +1,31 @@
 ---
-title: "還原資料庫 (檔案頁面) | Microsoft 文件"
-ms.custom: 
+title: 還原資料庫 (檔案頁面) | Microsoft 文件
+ms.custom: ''
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
-ms.prod_service: database-engine
-ms.service: 
-ms.component: backup-restore
-ms.reviewer: 
+ms.prod: sql
+ms.prod_service: backup-restore
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- dbe-backup-restore
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: backup-restore
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 f1_keywords:
 - sql13.swb.restoredb.files.f1
 - sql13.swb.restoredb.files.f1 in the code
 ms.assetid: 714c36ea-a9f9-43a4-99f9-a6f73d1baf8e
-caps.latest.revision: 
+caps.latest.revision: 16
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: dff6aada8273e1e994ce321213cee66ae0b0bbb0
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 14411c1f06a25ace27823f2b0890c89fa5009cf8
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="restore-database-files-page"></a>還原資料庫 (檔案頁面)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 使用 [還原資料庫] 對話方塊的 [檔案] 頁面，管理資料庫中已選擇要還原的特定檔案。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  使用 **[還原資料庫]** 對話方塊的 **[檔案]** 頁面，管理資料庫中已選擇要還原的特定檔案。  
   
 ## <a name="options"></a>選項。  
   

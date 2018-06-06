@@ -1,30 +1,28 @@
 ---
-title: "功能表命令和其他的快速鍵 (Sybase 到 SQL) |Microsoft 文件"
-ms.custom: 
+title: 功能表命令和其他的快速鍵 (Sybase 到 SQL) |Microsoft 文件
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
 ms.component: ssma-sybase
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ssma
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: 1ca622b2-55d8-4666-b80a-8d9791cd3d3b
-caps.latest.revision: "4"
+caps.latest.revision: 4
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
-ms.workload: Inactive
-ms.openlocfilehash: bc86f038488652df0bee371d695f5b21ce105147
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+manager: craigg
+ms.openlocfilehash: b02ec727dabf9db7ce614ee804ca6df619bd01b5
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="menu-commands-and-other-shortcut-keys-sybase-to-sql"></a>功能表命令和其他的快速鍵 (Sybase 到 SQL)
 下列章節說明的鍵盤快速鍵，來存取功能表命令和其他 Sybase 應用程式使用不同的 SSMA 對話方塊中的快速鍵。  
@@ -206,6 +204,6 @@ ms.lasthandoff: 12/21/2017
 |啟動 快速諮詢。|CTRL + SHIFT + 空間|  
 |移至宣告。|F12|  
   
-## <a name="see-also"></a>請參閱  
-[攠摝坫 &#40;Sybase 到 SQL &#41;](../../ssma/sybase/shortcut-keys-sybase-to-sql.md)  
+## <a name="see-also"></a>另請參閱  
+[攠摝坫&#40;Sybase To SQL&#41;](../../ssma/sybase/shortcut-keys-sybase-to-sql.md)  
   

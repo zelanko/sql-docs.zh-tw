@@ -1,16 +1,13 @@
 ---
-title: sys.dm_sql_referencing_entities (Transact-SQL) | Microsoft Docs
-ms.custom: 
+title: sys.dm_sql_referencing_entities (TRANSACT-SQL) |Microsoft 文件
+ms.custom: ''
 ms.date: 06/10/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
-ms.component: dmv's
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: system-objects
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.dm_sql_referencing_entities
@@ -22,16 +19,16 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_sql_referencing_entities dynamic management function
 ms.assetid: c16f8f0a-483f-4feb-842e-da90426045ae
-caps.latest.revision: 
+caps.latest.revision: 33
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 35e2f1be36365c2b1f5c8801a9e0d7749c70de7d
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: adf5f058b8eb39f4eecfd13d922ba723664a73a0
+ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 05/23/2018
 ---
 # <a name="sysdmsqlreferencingentities-transact-sql"></a>sys.dm_sql_referencing_entities (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -76,7 +73,7 @@ sys.dm_sql_referencing_entities (
  *< Referenced_class >* :: = {物件 |型別 |XML_SCHEMA_COLLECTION |PARTITION_FUNCTION 的情況}  
  這是受參考實體的類別。 每個陳述式只能指定一個類別。  
   
- *< referenced_class >*是**nvarchar**(60)。  
+ *< referenced_class >* 是**nvarchar**(60)。  
   
 ## <a name="table-returned"></a>傳回的資料表  
   
@@ -109,7 +106,7 @@ sys.dm_sql_referencing_entities (
 |-----------------|------------------------|-----------------------|  
 |Table|是*|是|  
 |檢視|是|是|  
-|[!INCLUDE[tsql](../../includes/tsql-md.md)] 預存程序 * *|是|是|  
+|[!INCLUDE[tsql](../../includes/tsql-md.md)] 預存程序**|是|是|  
 |CLR 預存程序|否|是|  
 |[!INCLUDE[tsql](../../includes/tsql-md.md)] 使用者定義函數|是|是|  
 |CLR 使用者定義函數|否|是|  
@@ -124,7 +121,7 @@ sys.dm_sql_referencing_entities (
 |XML 結構描述集合|否|是|  
 |分割區函數|否|是|  
   
- \*資料表參考時，才會追蹤當做參考實體[!INCLUDE[tsql](../../includes/tsql-md.md)]模組、 使用者定義型別或定義中的計算資料行、 CHECK 條件約束或 DEFAULT 條件約束的 XML 結構描述集合。  
+ \* 資料表參考時，才會追蹤當做參考實體[!INCLUDE[tsql](../../includes/tsql-md.md)]模組、 使用者定義型別或定義中的計算資料行、 CHECK 條件約束或 DEFAULT 條件約束的 XML 結構描述集合。  
   
  ** 所包含之整數值大於 1 的編號預存程序不會當做參考或受參考的實體進行追蹤。  
   

@@ -1,28 +1,27 @@
 ---
-title: "常數 (Microsoft Drivers for PHP for SQL Server) |Microsoft 文件"
-ms.custom: 
+title: 常數 (Microsoft Drivers for PHP for SQL Server) |Microsoft 文件
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
+ms.prod: sql
+ms.prod_service: connectivity
 ms.component: php
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
-ms.topic: article
-helpviewer_keywords: constants
+ms.technology: connectivity
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
+helpviewer_keywords:
+- constants
 ms.assetid: 9727c944-b645-48d6-9012-18dbde35ee3c
-caps.latest.revision: "72"
+caps.latest.revision: 72
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
-ms.workload: Inactive
-ms.openlocfilehash: 63f2812cc7c2aa19099a90518a3322084c1a94b3
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+manager: craigg
+ms.openlocfilehash: a09ba7744f03fca15bb60db7979d31bb141f75c2
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="constants-microsoft-drivers-for-php-for-sql-server"></a>常數 (Microsoft Drivers for PHP for SQL Server)
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -30,7 +29,7 @@ ms.lasthandoff: 11/18/2017
 本主題討論 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]所定義的常數。  
   
 ## <a name="pdosqlsrv-driver-constants"></a>PDO_SQLSRV 驅動程式常數  
-[PDO 網站](http://go.microsoft.com/fwlink/?LinkID=187441) 上列出的常數在 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]中是有效的。  
+上列出的常數[PDO 網站](http://php.net/manual/book.pdo.php)中有效[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]。  
   
 以下說明 PDO_SQLSRV 驅動程式中的 Microsoft 特定常數。  
   
@@ -57,7 +56,7 @@ Pdo:: SQLSRV_ATTR_ENCODING 屬性可以傳遞至[pdostatement:: Setattribute](..
 |PDO_SQLSRV 驅動程式常數|Description|  
 |-------------------------------|---------------|  
 |PDO::SQLSRV_ENCODING_BINARY|資料是來自伺服器的原始位元組資料流，未執行編碼或轉譯。<br /><br />對 PDO::setAttribute 而言無效。|  
-|PDO::SQLSRV_ENCODING_SYSTEM|資料是 8 位元字元，如同在系統上設定之 Windows 地區設定的字碼頁所指定。 系統會以單一位元組問號 (?) 字元取代任何多位元組字元或未對應到此字碼頁的字元。|  
+|PDO::SQLSRV_ENCODING_SYSTEM|資料是 8 位元字元，如同在系統上設定之 Windows 地區設定的字碼頁所指定。 以單一位元組問號 （？） 字元取代任何多位元組字元或未對應到此字碼頁的字元。|  
 |PDO::SQLSRV_ENCODING_UTF8|資料採用 UTF-8 編碼。 這是預設編碼。|  
 |PDO::SQLSRV_ENCODING_DEFAULT|如果在連接期間指定，則使用 PDO::SQLSRV_ENCODING_SYSTEM。<br /><br />如果是在準備陳述式中指定的，則使用連接的編碼。|  
   
@@ -70,7 +69,7 @@ PDO::SQLSRV_ATTR_QUERY_TIMEOUT 屬性是任何代表逾時期間 (秒) 的非負
 您可以使用 PDO::SQLSRV_ATTR_DIRECT_QUERY 屬性，選取直接查詢執行或備妥的陳述式執行。 Pdo:: SQLSRV_ATTR_DIRECT_QUERY 可以設定的[pdo:: prepare](../../connect/php/pdo-prepare.md)或[pdo:: setattribute](../../connect/php/pdo-setattribute.md)。 如需 pdo:: SQLSRV_ATTR_DIRECT_QUERY 的詳細資訊，請參閱[的直接陳述式執行和已備妥 PDO_SQLSRV 驅動程式中的陳述式執行](../../connect/php/direct-statement-execution-prepared-statement-execution-pdo-sqlsrv-driver.md)。  
 
 ### <a name="handling-numeric-fetches"></a>處理數值提取
-PDO::SQLSRV_ATTR_FETCHES_NUMERIC_TYPE 屬性可以用來處理數值擷取資料行和數值 SQL 型別 （位元、 整數、 smallint、 tinyint、 float 和 real）。 PDO::SQLSRV_ATTR_FETCHES_NUMERIC_TYPE 設為 true 時，整數資料行的結果將會表示為 int，而 SQL 浮動且 reals 會表示為浮點數。 此屬性可以設定與[pdostatement:: Setattribute](../../connect/php/pdostatement-setattribute.md)。 
+PDO::SQLSRV_ATTR_FETCHES_NUMERIC_TYPE 屬性可以用來處理數值擷取資料行和數值 SQL 型別 （位元、 整數、 smallint、 tinyint、 float 和 real）。 PDO::SQLSRV_ATTR_FETCHES_NUMERIC_TYPE 設為 true 時，整數資料行的結果會以表示 int，而 SQL 浮動和 reals 會表示為浮點數。 此屬性可以設定與[pdostatement:: Setattribute](../../connect/php/pdostatement-setattribute.md)。 
 
 
 ## <a name="sqlsrv-driver-constants"></a>SQLSRV 驅動程式常數  
@@ -79,7 +78,7 @@ PDO::SQLSRV_ATTR_FETCHES_NUMERIC_TYPE 屬性可以用來處理數值擷取資料
 ### <a name="err-constants"></a>ERR 常數  
 下表列出用來指定的常數[sqlsrv_errors](../../connect/php/sqlsrv-errors.md)傳回錯誤、 警告還是兩者。  
   
-|值|Description|  
+|Value|Description|  
 |---------|---------------|  
 |SQLSRV_ERR_ALL|傳回上次呼叫 **sqlsrv** 函數時產生的錯誤和警告。 這是預設值。|  
 |SQLSRV_ERR_ERRORS|傳回上次呼叫 **sqlsrv** 函數時產生的錯誤。|  
@@ -136,22 +135,22 @@ PDO::SQLSRV_ATTR_FETCHES_NUMERIC_TYPE 屬性可以用來處理數值擷取資料
 |SQLSRV_PARAM_OUT|表示輸出參數。|  
   
 ### <a name="phptype-constants"></a>PHPTYPE 常數  
-下表列出用來說明 PHP 資料類型的常數。 如需 PHP 資料類型的相關資訊，請參閱 [PHP 類型](http://go.microsoft.com/fwlink/?LinkId=104881)。  
+下表列出用來說明 PHP 資料類型的常數。 PHP 資料類型的相關資訊，請參閱[PHP 類型](http://php.net/manual/en/language.types.php)。  
   
 |SQLSRV 常數|PHP 資料類型|  
 |-------------------|-----------------|  
 |SQLSRV_PHPTYPE_INT|Integer|  
 |SQLSRV_PHPTYPE_DATETIME|Datetime|  
 |SQLSRV_PHPTYPE_FLOAT|Float|  
-|SQLSRV_PHPTYPE_STREAM ($編碼<sup>1</sup>)|STREAM|  
-|SQLSRV_PHPTYPE_STRING ($編碼<sup>1</sup>)|字串|  
+|SQLSRV_PHPTYPE_STREAM($encoding<sup>1</sup>)|STREAM|  
+|SQLSRV_PHPTYPE_STRING($encoding<sup>1</sup>)|字串|  
   
 1. **SQLSRV_PHPTYPE_STREAM**和**SQLSRV_PHPTYPE_STRING**接受的參數會指定資料流的編碼方式。 下表包含是可接受之參數的 SQLSRV 常數，以及對應編碼的描述。  
   
 |SQLSRV 常數|Description|  
 |-------------------|---------------|  
 |SQLSRV_ENC_BINARY|資料會以原始位元組資料流形式從伺服器傳回，而不需執行編碼或轉譯。|  
-|SQLSRV_ENC_CHAR|資料會以如同在系統上設定之 Windows 地區設定的字碼頁中指定的 8 位元字元傳回。 系統會以單一位元組問號 (?) 字元取代任何多位元組字元或未對應到此字碼頁的字元。<br /><br />這是預設編碼。|  
+|SQLSRV_ENC_CHAR|資料會以如同在系統上設定之 Windows 地區設定的字碼頁中指定的 8 位元字元傳回。 以單一位元組問號 （？） 字元取代任何多位元組字元或未對應到此字碼頁的字元。<br /><br />這是預設編碼。|  
 |"UTF-8"|資料會以 UTF-8 編碼傳回。 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]1.1 版已加入此常數。 如需 utf-8 支援的詳細資訊，請參閱[如何： 傳送及擷取 utf-8 資料使用內建 utf-8 支援](../../connect/php/how-to-send-and-retrieve-utf-8-data-using-built-in-utf-8-support.md)。|  
   
 > [!NOTE]  
@@ -160,12 +159,12 @@ PDO::SQLSRV_ATTR_FETCHES_NUMERIC_TYPE 屬性可以用來處理數值擷取資料
 如需這些常數的詳細資訊，請參閱 [如何：指定 PHP 資料類型](../../connect/php/how-to-specify-php-data-types.md)、 [如何：使用 SQLSRV 驅動程式以資料流的形式擷取字元資料](../../connect/php/how-to-retrieve-character-data-as-a-stream-using-the-sqlsrv-driver.md)。  
   
 ### <a name="sqltype-constants"></a>SQLTYPE 常數  
-下表列出用來說明 SQL Server 資料類型的常數。 某些常數會類似函式，而且可能需要對應的參數有效位數、 小數位數和 （或） 長度。  當繫結參數，應使用類似函式的常數。 型別比較所需的標準 （非函式類似） 常數。 SQL Server 資料類型的相關資訊，請參閱[資料類型 (TRANSACT-SQL)。](http://go.microsoft.com/fwlink/?LinkId=104883) 如需有效位數、 小數位數和長度的資訊，請參閱[有效位數、 小數位數和長度 (TRANSACT-SQL)。](http://go.microsoft.com/fwlink/?LinkId=104885)  
+下表列出用來說明 SQL Server 資料類型的常數。 某些常數會類似函式，而且可能需要對應的參數有效位數、 小數位數和 （或） 長度。  當繫結參數，應使用類似函式的常數。 型別比較所需的標準 （非函式類似） 常數。 SQL Server 資料類型的相關資訊，請參閱[資料類型 (TRANSACT-SQL)。](../../t-sql/data-types/data-types-transact-sql.md) 如需有效位數、 小數位數和長度的資訊，請參閱[有效位數、 小數位數和長度 (TRANSACT-SQL)。](../../t-sql/data-types/precision-scale-and-length-transact-sql.md)  
   
 |SQLSRV 常數|SQL Server 資料類型|  
 |-------------------|------------------------|  
 |SQLSRV_SQLTYPE_BIGINT|bigint|  
-|SQLSRV_SQLTYPE_BINARY|binary|  
+|SQLSRV_SQLTYPE_BINARY|BINARY|  
 |SQLSRV_SQLTYPE_BIT|bit|  
 |SQLSRV_SQLTYPE_CHAR|char<sup>5</sup>|  
 |SQLSRV_SQLTYPE_CHAR($charCount)|char|  
@@ -180,7 +179,7 @@ PDO::SQLSRV_ATTR_FETCHES_NUMERIC_TYPE 屬性可以用來處理數值擷取資料
 |SQLSRV_SQLTYPE_INT|int|  
 |SQLSRV_SQLTYPE_MONEY|money| 
 |SQLSRV_SQLTYPE_NCHAR|nchar<sup>5</sup>|   
-|SQLSRV_SQLTYPE_NCHAR($charCount)|nchar|  
+|SQLSRV_SQLTYPE_NCHAR($charCount)|NCHAR|  
 |SQLSRV_SQLTYPE_NUMERIC|數值<sup>5</sup>|
 |SQLSRV_SQLTYPE_NUMERIC($precision, $scale)|numeric|  
 |SQLSRV_SQLTYPE_NVARCHAR|nvarchar<sup>5</sup>|  

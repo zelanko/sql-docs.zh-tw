@@ -1,16 +1,13 @@
 ---
-title: "sys.dm_os_buffer_descriptors (TRANSACT-SQL) |Microsoft 文件"
-ms.custom: 
+title: sys.dm_os_buffer_descriptors (TRANSACT-SQL) |Microsoft 文件
+ms.custom: ''
 ms.date: 08/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
-ms.component: dmv's
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: system-objects
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.dm_os_buffer_descriptors_TSQL
@@ -22,16 +19,16 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_os_buffer_descriptors dynamic management view
 ms.assetid: 012aab95-8888-4f35-9ea3-b5dff6e3f60f
-caps.latest.revision: 
+caps.latest.revision: 48
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 1c03bbdbe271500ecf417fe3b5c125304001a05e
-ms.sourcegitcommit: 6b1618aa3b24bf6759b00a820e09c52c4996ca10
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 3bae01f30cf7b6af860004f69effb4df44cf3c8b
+ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 05/23/2018
 ---
 # <a name="sysdmosbufferdescriptors-transact-sql"></a>sys.dm_os_buffer_descriptors (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -40,7 +37,7 @@ ms.lasthandoff: 03/15/2018
   
  當資料頁是從磁碟讀取時，此頁面會複製到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 緩衝集區，而且會經由快取提供重複使用。 每個快取資料頁都具有一個緩衝區描述項。 緩衝區描述項會以唯一的方式識別由 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體目前快取的每個資料頁。 sys.dm_os_buffer_descriptors 會為所有使用者和系統資料庫傳回快取頁面。 其中包括與資源資料庫相關聯的頁面。  
   
-> **注意：**呼叫從[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]或[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]，使用名稱**sys.dm_pdw_nodes_os_buffer_descriptors**。  
+> **注意：** 呼叫從[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]或[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]，使用名稱**sys.dm_pdw_nodes_os_buffer_descriptors**。  
 
 |資料行名稱|資料類型|Description|  
 |-----------------|---------------|-----------------|  
@@ -59,9 +56,10 @@ ms.lasthandoff: 03/15/2018
 |pdw_node_id|**int**|**適用於**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]， [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 此發行版本上的節點識別碼。|  
   
 ## <a name="permissions"></a>Permissions  
+
 在[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]，需要`VIEW SERVER STATE`權限。   
-在[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]Premium 層需要`VIEW DATABASE STATE`資料庫的權限。 在[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]標準和基本層，需要**伺服器管理員**或**Azure Active Directory 系統管理員**帳戶。  
-  
+在[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]，需要`VIEW DATABASE STATE`資料庫的權限。   
+   
 ## <a name="remarks"></a>備註  
  sys.dm_os_buffer_descriptors 會傳回正由 Resource 資料庫的頁面。 sys.dm_os_buffer_descriptors 不會傳回可用或奪取分頁，或頁面讀取時發生錯誤的相關資訊。  
   
@@ -122,7 +120,7 @@ ORDER BY cached_pages_count DESC;
  
  [SQL Server 作業系統相關的動態管理檢視&#40;Transact SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)   
  [Resource 資料庫](../../relational-databases/databases/resource-database.md)   
- [sys.dm_os_buffer_pool_extension_configuration &#40;TRANSACT-SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-buffer-pool-extension-configuration-transact-sql.md)  
+ [sys.dm_os_buffer_pool_extension_configuration & #40;TRANSACT-SQL & #41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-buffer-pool-extension-configuration-transact-sql.md)  
   
   
 

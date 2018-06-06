@@ -1,16 +1,14 @@
 ---
-title: "managed_backup.sp_backup_config_basic (TRANSACT-SQL) |Microsoft 文件"
-ms.custom: 
+title: managed_backup.sp_backup_config_basic (TRANSACT-SQL) |Microsoft 文件
+ms.custom: ''
 ms.date: 10/03/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: system-objects
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_backup_config_basic_TSQL
@@ -23,24 +21,23 @@ helpviewer_keywords:
 - managed_backup.sp_backup_config_basic
 - sp_backup_config_basic
 ms.assetid: 3ad73051-ae9a-4e41-a889-166146e5508f
-caps.latest.revision: 
+caps.latest.revision: 15
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 51507869caef7a8738381881f22f6cf9f1005144
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 8f8f6a2bb437982bdc40c70b9e53c6c864dbc5b4
+ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 05/04/2018
 ---
-# <a name="managedbackupspbackupconfigbasic-transact-sql"></a>managed_backup.sp_backup_config_basic (Transact-SQL)
+# <a name="managedbackupspbackupconfigbasic-transact-sql"></a>managed_backup.sp_backup_config_basic (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   設定[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]特定資料庫或執行個體的基本設定[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
   
 > [!NOTE]  
->  此程序可以呼叫自己建立基本的受管理備份設定。 不過，如果您打算新增進階的功能或自訂排程，先進行這些設定使用[managed_backup.sp_backup_config_advanced &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/managed-backup-sp-backup-config-advanced-transact-sql.md)和[managed_backup.sp_backup_config_schedule &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/managed-backup-sp-backup-config-schedule-transact-sql.md)之前啟用此程序的受管理的備份。  
+>  此程序可以呼叫自己建立基本的受管理備份設定。 不過，如果您打算新增進階的功能或自訂排程，先進行這些設定使用[managed_backup.sp_backup_config_advanced &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-stored-procedures/managed-backup-sp-backup-config-advanced-transact-sql.md)和[managed_backup.sp_backup_config_schedule &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-stored-procedures/managed-backup-sp-backup-config-schedule-transact-sql.md)之前啟用此程序的受管理的備份。  
    
  ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -69,10 +66,10 @@ EXEC managed_backup.sp_backup_config_basic
  備份檔案的保留期限，以天數為單位。 @storage_url為 int。 這是必要的參數設定時[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]第一次的執行個體上[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 變更時[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]組態，這是選擇性參數。 如果未指定，則會保留現有的組態值。  
   
  @credential_name  
- 用來驗證 Windows Azure 儲存體帳戶之 SQL 認證的名稱。 @credentail_name是**SYSNAME**。 當指定，備份會儲存至分頁 blob。 如果這個參數是 NULL，則備份將儲存為區塊 blob。 已被取代的分頁 blob 的備份，因此最好使用新的區塊 blob 備份功能。 用來變更[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]組態時為選擇性參數。 如果未指定，會保留現有的組態值。  
+ 用來驗證 Windows Azure 儲存體帳戶之 SQL 認證的名稱。 @credentail_name 是**SYSNAME**。 當指定，備份會儲存至分頁 blob。 如果這個參數是 NULL，則備份將儲存為區塊 blob。 已被取代的分頁 blob 的備份，因此最好使用新的區塊 blob 備份功能。 用來變更[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]組態時為選擇性參數。 如果未指定，會保留現有的組態值。  
   
 > [!WARNING]  
->  **@credential_name** 此時不支援參數。 支援只備份至區塊 blob，需要此參數為 NULL。  
+>  **@credential_name**此時不支援參數。 支援只備份至區塊 blob，需要此參數為 NULL。  
   
 ## <a name="return-code-value"></a>傳回碼值  
  0 (成功) 或 1 (失敗)  

@@ -1,28 +1,24 @@
 ---
-title: "Microsoft ODBC Driver for SQL Server on Windows |Microsoft 文件"
-ms.custom: 
+title: Microsoft ODBC Driver for SQL Server on Windows |Microsoft 文件
+ms.custom: ''
 ms.date: 02/14/2018
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
-ms.component: odbc
-ms.reviewer: 
+ms.prod: sql
+ms.prod_service: connectivity
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- drivers
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: connectivity
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: b10cfc22-6a2c-4707-a456-0dcec317982b
-caps.latest.revision: 
+caps.latest.revision: 37
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
-ms.workload: Active
-ms.openlocfilehash: 990665bcb7091b61bc8579a1a33e30c3cc56874e
-ms.sourcegitcommit: 7ed8c61fb54e3963e451bfb7f80c6a3899d93322
+manager: craigg
+ms.openlocfilehash: e5d818e4ce5c267432e6e456e11720f546ebaa19
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/20/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="microsoft-odbc-driver-for-sql-server-on-windows"></a>Windows 上適用於 SQL Server 的 Microsoft ODBC 驅動程式
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -35,7 +31,7 @@ Microsoft ODBC Driver for SQL Server 可以用來建立新的應用程式。 您
 
 | 版本       | 支援的功能      |
 | ------------- |---------------| 
-| Microsoft ODBC Driver 17 for SQL Server | <ul><li>永遠加密的 BCP API 的支援</li><li>新的連接字串屬性 UseFMTONLY 會導致驅動程式需要暫存資料表的特殊案例中使用傳統的中繼資料</li>
+| Microsoft ODBC Driver for SQL Server 17 | <ul><li>永遠加密的 BCP API 的支援</li><li>新的連接字串屬性 UseFMTONLY 會導致驅動程式需要暫存資料表的特殊案例中使用傳統的中繼資料</li>
 | Microsoft ODBC Driver 13.1 for SQL Server     | <ul><li>永遠加密</li><li>Azure AD 驗證</li><li>AlwaysOn 可用性群組 (AG)</li></ul>   | 
 | Microsoft ODBC Driver 13 for SQL Server      | <ul><li>國際化網域名稱 (IDN)</li></ul> |
 | Microsoft ODBC Driver 11 for SQL Server | <ul><li>可感知驅動程式的連接共用</li><li>連接恢復功能</li><li>非同步執行 （輪詢方法）</li></ul> |    
@@ -50,7 +46,7 @@ Microsoft ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_m
 -   [非同步執行 &#40;通知方法&#41; 範例](../../../connect/odbc/windows/asynchronous-execution-notification-method-sample.md)  
 -   [Windows ODBC 驅動程式中的連接恢復功能](../../../connect/odbc/windows/connection-resiliency-in-the-windows-odbc-driver.md)  
 -   [使用 ODBC 驅動程式搭配使用一律加密](../../../connect/odbc/using-always-encrypted-with-the-odbc-driver.md)
--   [使用 Azure Active Directory 的 ODBC 驅動程式](../../../connect/odbc/using-azure-active-directory.md) 
+-   [搭配 ODBC 驅動程式使用 Azure Active Directory](../../../connect/odbc/using-azure-active-directory.md) 
 -   [使用透明網路 IP 解析](../../../connect/odbc/using-transparent-network-ip-resolution.md)   
 
 ## <a name="community"></a>社群  

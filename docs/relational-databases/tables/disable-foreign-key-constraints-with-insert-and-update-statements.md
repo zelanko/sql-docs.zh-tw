@@ -1,17 +1,14 @@
 ---
-title: "停用 INSERT 和 UPDATE 陳述式的外部索引鍵條件約束 | Microsoft Docs"
-ms.custom: 
+title: 停用 INSERT 和 UPDATE 陳述式的外部索引鍵條件約束 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
-ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
-ms.component: tables
-ms.reviewer: 
+ms.prod: sql
+ms.prod_service: table-view-index, sql-database, sql-data-warehouse, pdw
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- dbe-tables
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: table-view-index
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - constraints [SQL Server], foreign keys
 - foreign keys [SQL Server], disabling constraints
@@ -19,21 +16,21 @@ helpviewer_keywords:
 - UPDATE statement [SQL Server], foreign key constraints
 - INSERT statement [SQL Server], foreign key constraints
 ms.assetid: 029168d7-085e-4b13-9b86-5644b67c6e24
-caps.latest.revision: 
+caps.latest.revision: 18
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: a7f0a16a4a3f1fedb67210e5e4ae096659112cc5
-ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: f516accaa507a1bb4f1bcce42e42f20c21a85fc3
+ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="disable-foreign-key-constraints-with-insert-and-update-statements"></a>停用 INSERT 和 UPDATE 陳述式的外部索引鍵條件約束
 [!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
 
-  您可以使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ，在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中停用 INSERT 和 UPDATE 交易期間的外部索引鍵條件約束。 如果您確知新資料將違反現有條件約束，或是條件約束只適用於已經在資料庫中的資料，請使用此選項。  
+  您可以使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ，在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中停用 INSERT 和 UPDATE 交易期間的外部索引鍵條件約束。 如果您確知新資料不會違反現有條件約束，或是條件約束只適用於已經在資料庫中的資料，請使用此選項。  
   
  **本主題內容**  
   
@@ -63,11 +60,11 @@ ms.lasthandoff: 01/18/2018
   
 #### <a name="to-disable-a-foreign-key-constraint-for-insert-and-update-statements"></a>若要停用 INSERT 和 UPDATE 陳述式的外部索引鍵條件約束  
   
-1.  在 **[物件總管]**中，展開含有條件約束的資料表，然後展開 **[索引鍵]** 資料夾。  
+1.  在 **[物件總管]** 中，展開含有條件約束的資料表，然後展開 **[索引鍵]** 資料夾。  
   
 2.  以滑鼠右鍵按一下條件約束，然後選取 **[修改]**。  
   
-3.  在 **[資料表設計工具]**底下的方格中，按一下 **[強制使用外部索引鍵條件約束]** ，然後從下拉式功能表中選取 **[否]** 。  
+3.  在 **[資料表設計工具]** 底下的方格中，按一下 **[強制使用外部索引鍵條件約束]** ，然後從下拉式功能表中選取 **[否]** 。  
   
 4.  按一下 [ **關閉**]。  
   
@@ -75,7 +72,7 @@ ms.lasthandoff: 01/18/2018
   
 #### <a name="to-disable-a-foreign-key-constraint-for-insert-and-update-statements"></a>若要停用 INSERT 和 UPDATE 陳述式的外部索引鍵條件約束  
   
-1.  在 **[物件總管]**中，連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的執行個體。  
+1.  在 **[物件總管]** 中，連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的執行個體。  
   
 2.  在標準列上，按一下 **[新增查詢]**。  
   

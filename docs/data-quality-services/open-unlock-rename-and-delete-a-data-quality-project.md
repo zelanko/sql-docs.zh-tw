@@ -1,35 +1,38 @@
 ---
-title: "開啟、解除鎖定、重新命名和刪除資料品質專案 | Microsoft Docs"
-ms.custom: 
+title: 開啟、解除鎖定、重新命名和刪除資料品質專案 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: data-quality-services
-ms.service: 
 ms.component: data-quality-services
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: data-quality-services
-ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords: sql13.dqs.dqproject.opendqproject.f1
+ms.technology:
+- data-quality-services
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
+f1_keywords:
+- sql13.dqs.dqproject.opendqproject.f1
 helpviewer_keywords:
 - data quality project,delete
 - data quality project,rename
 - data quality project,unlock
 - data quality project,open
 ms.assetid: de8a2b04-4673-4beb-b4cf-96a28cdf3a93
-caps.latest.revision: "9"
+caps.latest.revision: 9
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.workload: Inactive
-ms.openlocfilehash: c46bc57e30a9d6b119e708ad3a93aabb4183b7fd
-ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
+manager: craigg
+ms.openlocfilehash: e0c3a8c66481b3c87ea263d4362335cedd452b83
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="open-unlock-rename-and-delete-a-data-quality-project"></a>開啟、解除鎖定、重新命名和刪除資料品質專案
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
   此主題描述如何使用 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 管理資料品質專案，例如開啟、解除鎖定、重新命名和刪除資料品質專案。  
   
 ##  <a name="BeforeYouBegin"></a> 開始之前  
@@ -64,9 +67,9 @@ ms.lasthandoff: 01/19/2018
   
 4.  隨即以上次活動關閉時的相同狀態來開啟資料品質專案。 資料品質專案具有以下狀態：  
   
-    -   如果是 **[清理]** 活動，資料品質專案可以擁有以下狀態： **[清理 - 對應]**、 **[清理 - 清理]**、 **[清理 - 管理和檢視結果]**和 **[清理 - 匯出]**。  
+    -   如果是 **[清理]** 活動，資料品質專案可以擁有以下狀態： **[清理 - 對應]**、 **[清理 - 清理]**、 **[清理 - 管理和檢視結果]** 和 **[清理 - 匯出]**。  
   
-    -   如果是 **[比對]** 活動，資料品質專案可以擁有以下狀態： **[比對 - 對應]**、 **[比對 - 比對]**、 **[比對 - 生存]**和 **[比對 - 匯出]**。  
+    -   如果是 **[比對]** 活動，資料品質專案可以擁有以下狀態： **[比對 - 對應]**、 **[比對 - 比對]**、 **[比對 - 生存]** 和 **[比對 - 匯出]**。  
   
 ##  <a name="Unlock"></a> 解除鎖定資料品質專案  
  當您建立資料品質專案時，它處於已鎖定狀態，以防止其他使用者使用或修改。 如果您希望其他使用者使用您的資料品質專案，在您完成工作之後必須解除鎖定資料品質專案。 鎖定的專案會顯示鎖定符號。  

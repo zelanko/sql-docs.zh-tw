@@ -1,32 +1,29 @@
 ---
-title: "記錄和資料流 |Microsoft 文件"
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
+title: 記錄和資料流 |Microsoft 文件
+ms.prod: sql
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
-ms.custom: 
+ms.technology: connectivity
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - streams [ADO]
 - streams [ADO], about streams
 - records [ADO]
 ms.assetid: 4d68868e-2611-4b5c-9a89-7caa5f753151
-caps.latest.revision: 
+caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 68af92a054b9c891849118df1802543d79432ef1
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 3d083594f9dd54cee0f1c9c70f6fdfe14d32e49a
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="records-and-streams"></a>記錄和資料流
 目前提供 ADO[資料錄集](../../../ado/reference/ado-api/recordset-object-ado.md)物件做為存取資料來源，例如關聯式資料庫中的資訊的主要方法。 不過，某些提供者支援[記錄](../../../ado/reference/ado-api/record-object-ado.md)和[資料流](../../../ado/reference/ado-api/stream-object-ado.md)替代或互補的物件與資料提供者都可以管理的物件。 如需詳細資訊，在**記錄**行為，請參閱您的提供者文件。  

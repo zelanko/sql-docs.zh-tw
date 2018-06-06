@@ -1,17 +1,16 @@
 ---
-title: "資料庫檔案立即初始化 | Microsoft 文件"
-ms.custom: 
+title: 資料庫檔案立即初始化 | Microsoft 文件
+ms.custom: ''
 ms.date: 01/09/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
 ms.component: databases
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - initializing files [SQL Server]
 - instant file initialization [SQL Server]
@@ -20,19 +19,19 @@ helpviewer_keywords:
 - IFI [SQL Server]
 - database instant file initialization [SQL Server]
 ms.assetid: 1ad468f5-4f75-480b-aac6-0b01b048bd67
-caps.latest.revision: 
+caps.latest.revision: 33
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: Active
-ms.openlocfilehash: 43b4084e91c08bfe870807196261e4be9b934872
-ms.sourcegitcommit: 3206a31870f8febab7d1718fa59fe0590d4d45db
+ms.openlocfilehash: 0f51ea699c269ddb237f4582d4f368dd76cdc149
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/24/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="database-file-initialization"></a>資料庫檔案初始化
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 系統會將資料和記錄檔初始化，以覆寫磁碟上先前刪除之檔案中所遺留的任何現有資料。 當您執行下列作業之一時，會先將資料檔和記錄檔清空 (填入 0)，藉以初始化檔案：  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+系統會將資料和記錄檔初始化，以覆寫磁碟上先前刪除之檔案中所遺留的任何現有資料。 當您執行下列作業之一時，會先將資料檔和記錄檔清空 (填入 0)，藉以初始化檔案：  
   
 - 建立資料庫。  
 - 將資料或記錄檔新增至現有的資料庫。  

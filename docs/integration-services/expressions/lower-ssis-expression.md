@@ -1,33 +1,31 @@
 ---
-title: "LOWER (SSIS 運算式) | Microsoft Docs"
-ms.custom: 
+title: LOWER (SSIS 運算式) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
 ms.component: expressions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - converting uppercase to lowercase
 - LOWER function
 - uppercase characters [Integration Services]
 - lowercase characters
 ms.assetid: 109328e1-5604-40ff-895e-f2e7c13fff41
-caps.latest.revision: 
+caps.latest.revision: 33
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 07d55876e2b7f5070c1c39122d5392f8f9af8678
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: f46e2bc3a876c4b097d0c2d5337781de48fd9dfa
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="lower-ssis-expression"></a>LOWER (SSIS 運算式)
   傳回將大寫字元轉換為小寫字元之後的字元運算式。  

@@ -1,39 +1,24 @@
 ---
-title: "Member 元素 (XMLA) |Microsoft 文件"
-ms.custom: 
-ms.date: 03/06/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services, azure-analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+title: Member 元素 (XMLA) |Microsoft 文件
+ms.date: 05/08/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: xmla
 ms.topic: reference
-apiname: Member Element
-apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
-apitype: Schema
-applies_to: SQL Server 2016 Preview
-f1_keywords:
-- urn:schemas-microsoft-com:xml-analysis#Member
-- microsoft.xml.analysis.member
-- http://schemas.microsoft.com/analysisservices/2003/engine#Member
-helpviewer_keywords: Member element
-ms.assetid: 5cc33a1f-192e-4821-a4ef-9a5f2bb7a9f0
-caps.latest.revision: "11"
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 82690ec66dfcb96787ea592a8d32c3826ee8776f
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 1c962452675a0c1c91a3573546f0763060dfb44e
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34575650"
 ---
 # <a name="member-element-xmla"></a>Member 元素 (XMLA)
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]表示父系中的單一成員[成員](../../../analysis-services/xmla/xml-elements-properties/members-element-xmla.md)或[Tuple](../../../analysis-services/xmla/xml-elements-properties/tuple-element-xmla.md)項目。  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
+  表示父系中的單一成員[成員](../../../analysis-services/xmla/xml-elements-properties/members-element-xmla.md)或[Tuple](../../../analysis-services/xmla/xml-elements-properties/tuple-element-xmla.md)項目。  
   
 ## <a name="syntax"></a>語法  
   
@@ -88,7 +73,7 @@ ms.lasthandoff: 01/08/2018
 ## <a name="remarks"></a>備註  
  **成員**元素包含找出並顯示指定的階層內的成員所需的資訊。 父**成員**項目，由已指定階層**階層**父項目的屬性。 父**Tuple**項目，使用指定的階層**階層**屬性**成員**項目。  
   
-## <a name="see-also"></a>請參閱  
- [屬性 &#40;XMLA &#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
+## <a name="see-also"></a>另請參閱
+ [屬性&#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
   
   

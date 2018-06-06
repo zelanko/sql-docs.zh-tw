@@ -1,33 +1,31 @@
 ---
-title: "運算子 (SSIS 運算式) | Microsoft Docs"
-ms.custom: 
+title: 運算子 (SSIS 運算式) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
 ms.component: expressions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - SSIS, operators
 - SQL Server Integration Services, operators
 - operators [Integration Services]
 - expressions [Integration Services], operators
 ms.assetid: 33df3a3d-1f5c-429b-a3b9-52b7d8689089
-caps.latest.revision: 
+caps.latest.revision: 35
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: e38f6c1b3238371219c4be55d8da8d5c9b019bb2
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 6d5d676ed2b32827c16b70dab4c447d7029ed806
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="operators-ssis-expression"></a>運算子 (SSIS 運算式)
   本節描述運算式語言提供的運算子，以及運算式評估工具使用的運算子優先順序和關聯性。  

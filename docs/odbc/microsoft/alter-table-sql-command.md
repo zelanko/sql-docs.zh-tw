@@ -1,28 +1,26 @@
 ---
-title: "ALTER TABLE 的 SQL 命令 |Microsoft 文件"
-ms.custom: 
+title: ALTER TABLE 的 SQL 命令 |Microsoft 文件
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
-ms.component: odbc
-ms.reviewer: 
+ms.prod: sql
+ms.prod_service: connectivity
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
-ms.topic: article
-helpviewer_keywords: alter table [ODBC]
+ms.technology: connectivity
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
+helpviewer_keywords:
+- alter table [ODBC]
 ms.assetid: 3a01a291-f4d9-43bc-a725-5a95546ff364
-caps.latest.revision: "8"
+caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
-ms.workload: Inactive
-ms.openlocfilehash: 1bf0849ee91170b09ab927363dafda28bff474c2
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+manager: craigg
+ms.openlocfilehash: 255ce0a4e9e06f2cdd20dd8d1e707b7f7823e6bd
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="alter-table---sql-command"></a>ALTER TABLE 的 SQL 命令
 以程式設計方式修改資料表的結構。  
@@ -81,7 +79,7 @@ ALTER TABLE TableName1
   
  *nFieldWidth*和*nPrecision*也會被忽略 D、 G、 I、 L、 M、 P、 T 與 Y 型別。 根據預設， *nPrecision*不是零 （任何小數位數），如果*nPrecision*不包含 B、 F 或 N 類型。  
   
- NULL &#124;不是 NULL  
+ NULL &#124; NOT NULL  
  允許或避免在欄位中的 null 值。  
   
  如果您省略 NULL 和 NOT NULL、 SET NULL 的目前設定會決定欄位中是否允許 null 值。 不過，如果您省略 NULL 和 NOT NULL，而且包含主索引鍵或唯一的子句，SET NULL 的目前設定會被忽略，欄位不是預設為 NULL。  
@@ -196,6 +194,6 @@ CREATE TABLE mytable (char1 C(10), char2 C(10) NOCPTRANS,;
   
  如果您修改的資料表是在資料庫中，ALTER TABLE-SQL 需要獨佔使用的資料庫。 若要開啟用於專用資料庫，包含獨佔開啟資料庫中。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [建立資料表的 SQL 命令](../../odbc/microsoft/create-table-sql-command.md)   
  [INDEX 命令](../../odbc/microsoft/index-command.md)

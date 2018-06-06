@@ -1,16 +1,14 @@
 ---
-title: "sp_setapprole (TRANSACT-SQL) |Microsoft 文件"
-ms.custom: 
+title: sp_setapprole (TRANSACT-SQL) |Microsoft 文件
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: system-objects
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_setapprole
@@ -20,16 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_setapprole
 ms.assetid: cf0901c0-5f90-42d4-9d5b-8772c904062d
-caps.latest.revision: 
+caps.latest.revision: 42
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: cc1376391dcf0fefd0fb621d73817b8257b95bf9
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: ac733afa3f8afef74a9d6affb16e0f9dbcd5b4a9
+ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="spsetapprole-transact-sql"></a>sp_setapprole (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -62,7 +59,7 @@ sp_setapprole [ @rolename = ] 'role',
 > [!IMPORTANT]  
 >  ODBC**加密**函式不會提供加密。 您不應該依賴這個函數來保護透過網路傳輸的密碼。 若要透過網路傳輸這項資訊，請使用 SSL 或 IPSec。  
   
- **@encrypt= 'none'**  
+ **@encrypt = 'none'**  
  指定不使用模糊化。 密碼會以純文字格式傳遞至 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 這是預設值。  
   
  **@encrypt= 'odbc'**  
@@ -72,7 +69,7 @@ sp_setapprole [ @rolename = ] 'role',
  指定是否要建立 Cookie。 **true**會隱含地轉換成 1。 **false**隱含地轉換成 0。  
   
  [  **@cookie =** ]  **@cookie輸出**  
- 指定輸出參數要包含該 Cookie。 才會產生 cookie 的值 **@fCreateCookie** 是**true**。 **varbinary （8000)**  
+ 指定輸出參數要包含該 Cookie。 才會產生 cookie 的值**@fCreateCookie**是**true**。 **varbinary(8000)**  
   
 > [!NOTE]  
 >  **sp_setapprole** 的 Cookie **OUTPUT** 參數目前記載成 **varbinary(8000)** ，這是正確的長度上限。 但目前的實作會傳回 **varbinary(50)**。 應用程式應繼續保留**varbinary （8000)** ，讓應用程式能夠繼續正常運作的 cookie 傳回大小如有增加未來的版本。  
@@ -122,11 +119,11 @@ SELECT USER_NAME();
 GO   
 ```  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [系統預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
- [安全性預存程序 &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
- [建立應用程式角色 &#40;TRANSACT-SQL &#41;](../../t-sql/statements/create-application-role-transact-sql.md)   
- [DROP APPLICATION ROLE &#40;TRANSACT-SQL &#41;](../../t-sql/statements/drop-application-role-transact-sql.md)   
- [sp_unsetapprole &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/sp-unsetapprole-transact-sql.md)  
+ [安全性預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
+ [CREATE APPLICATION ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-application-role-transact-sql.md)   
+ [DROP APPLICATION ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-application-role-transact-sql.md)   
+ [sp_unsetapprole &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-unsetapprole-transact-sql.md)  
   
   

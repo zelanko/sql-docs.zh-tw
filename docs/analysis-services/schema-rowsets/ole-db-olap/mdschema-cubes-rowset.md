@@ -1,39 +1,28 @@
 ---
-title: "MDSCHEMA_CUBES 資料列集 |Microsoft 文件"
-ms.custom: 
-ms.date: 03/06/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+title: MDSCHEMA_CUBES 資料列集 |Microsoft 文件
+ms.date: 05/03/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: schema-rowsets
 ms.topic: reference
-apiname: MDSCHEMA_CUBES
-apitype: NA
-applies_to: SQL Server 2016 Preview
-helpviewer_keywords: MDSCHEMA_CUBES rowset
-ms.assetid: 5f1b63d4-aa3f-48c6-b866-7ffd91675044
-caps.latest.revision: "32"
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 4b23f8bda8cc2aa410ddc04225420ff6372be3e4
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: da0fc34fedcd6980f8dd19e199314fc1295c78bb
+ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="mdschemacubes-rowset"></a>MDSCHEMA_CUBES 資料列集
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]描述資料庫內的 cube 的結構。  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+  描述資料庫內 Cube 的結構。  
   
 ## <a name="rowset-columns"></a>資料列集資料行  
  **MDSCHEMA_CUBES**資料列集包含下列資料行。  
   
-|資料行名稱|類型指標|描述|  
+|資料行名稱|類型指標|Description|  
 |-----------------|--------------------|-----------------|  
 |**CATALOG_NAME**|**DBTYPE_WSTR**|資料庫的名稱。|  
 |**SCHEMA_NAME**|**DBTYPE_WSTR**|不支援。|  
@@ -67,7 +56,7 @@ ms.lasthandoff: 01/08/2018
 |**CUBE_SOURCE**|**DBTYPE_UI2**|（選擇性）預設限制為 1 的值。 點陣圖，其中一個有效的值：<br /><br /> 1 CUBE<br /><br /> 2 DIMENSION (維度)|  
 |**基底 Cube_Name**|**DBTYPE_WSTR**|選擇性。|  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [OLE DB for OLAP 結構描述資料列集](../../../analysis-services/schema-rowsets/ole-db-olap/ole-db-for-olap-schema-rowsets.md)  
   
   

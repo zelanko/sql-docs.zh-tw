@@ -1,31 +1,28 @@
 ---
-title: "DBMS 架構驅動程式 |Microsoft 文件"
-ms.custom: 
+title: DBMS 架構驅動程式 |Microsoft 文件
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
-ms.component: odbc
-ms.reviewer: 
+ms.prod: sql
+ms.prod_service: connectivity
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: connectivity
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - drivers [ODBC], DBMS-based drivers
 - DBMS-based drivers [ODBC]
 - ODBC architecture [ODBC], drivers
 ms.assetid: e2208ee0-4cd6-4f0d-bb71-a0b54f7d9330
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
-ms.workload: Inactive
-ms.openlocfilehash: 7c841b4404132e4fe385c9c3aa6fd12bdd2eb8a0
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+manager: craigg
+ms.openlocfilehash: bb73a903d1e286e018c326b675a6bd914db0e367
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="dbms-based-drivers"></a>DBMS 架構驅動程式
 DBMS 架構驅動程式會搭配如 Oracle 或 SQL Server 提供驅動程式使用的獨立資料庫引擎的資料來源。 這些驅動程式透過獨立的引擎; 存取實體的資料也就是它們提交 SQL 陳述式，並從引擎中擷取結果。  
@@ -36,4 +33,4 @@ DBMS 架構驅動程式會搭配如 Oracle 或 SQL Server 提供驅動程式使�
   
  下圖顯示三個不同的組態，DBMS 架構驅動程式。 在第一個組態，驅動程式和資料來源位於同一部電腦上。 在第二個，驅動程式和資料來源位於不同的電腦上。 在第三個，驅動程式和資料來源位於不同機器上，閘道位於其間，位於另一個的電腦上。  
   
- ![三種 DBMS 的設定 &#45; 根據的 drivers](../../odbc/reference/media/pr07.gif "pr07")
+ ![三種的 DBMS 設定&#45;基礎驅動程式](../../odbc/reference/media/pr07.gif "pr07")

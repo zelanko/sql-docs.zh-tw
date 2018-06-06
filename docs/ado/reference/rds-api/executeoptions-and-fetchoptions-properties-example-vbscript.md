@@ -1,39 +1,36 @@
 ---
-title: "ExecuteOptions 和 FetchOptions 屬性範例 (VBScript) |Microsoft 文件"
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
+title: ExecuteOptions 和 FetchOptions 屬性範例 (VBScript) |Microsoft 文件
+ms.prod: sql
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
-ms.custom: 
+ms.technology: connectivity
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 dev_langs:
 - VB
 helpviewer_keywords:
 - FetchOptions property [ADO], VBScript example
 - ExecuteOptions property [ADO]
 ms.assetid: 753a4a3d-0fba-40b8-86e7-50b34182ca69
-caps.latest.revision: 
+caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 4661e07e0760a6b42ba23464143d11512f1f4da6
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 1e848a71bdf1080cf320e9d9255e5a60827ffabc
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="executeoptions-and-fetchoptions-properties-example-vbscript"></a>ExecuteOptions 和 FetchOptions 屬性範例 (VBScript)
 > [!IMPORTANT]
 >  從 Windows 8 和 Windows Server 2012 開始，RDS 伺服器元件已不再包含在 Windows 作業系統中 (請參閱 < Windows 8 和[Windows Server 2012 相容性手冊](https://www.microsoft.com/en-us/download/details.aspx?id=27416)如需詳細資訊)。 Windows 的未來版本將移除 RDS 用戶端元件。 請避免在新的開發工作中使用這項功能，並規劃修改目前使用這項功能的應用程式。 使用 RDS 的應用程式應該移轉到[WCF 資料服務](http://go.microsoft.com/fwlink/?LinkId=199565)。  
   
- 下列程式碼示範如何設定[ExecuteOptions](../../../ado/reference/rds-api/executeoptions-property-rds.md)和[FetchOptions](../../../ado/reference/rds-api/fetchoptions-property-rds.md)在設計階段屬性。 如果未設定， **ExecuteOptions**預設為**adcExecSync**。 這個設定指出，當**.RDS重新整理**呼叫方法時，就會在目前的呼叫執行緒上執行它，也就是，以同步方式。 剪下和貼上下列程式碼，[記事本] 或其他文字編輯器，並將它儲存成**ExecuteOptionsDesignVBS.asp**。  
+ 下列程式碼示範如何設定[ExecuteOptions](../../../ado/reference/rds-api/executeoptions-property-rds.md)和[FetchOptions](../../../ado/reference/rds-api/fetchoptions-property-rds.md)在設計階段屬性。 如果未設定， **ExecuteOptions**預設為**adcExecSync**。 這個設定指出，當 **.RDS重新整理**呼叫方法時，就會在目前的呼叫執行緒上執行它，也就是，以同步方式。 剪下和貼上下列程式碼，[記事本] 或其他文字編輯器，並將它儲存成**ExecuteOptionsDesignVBS.asp**。  
   
 ```  
 <!-- BeginExecuteOptionsDesignVBS -->  

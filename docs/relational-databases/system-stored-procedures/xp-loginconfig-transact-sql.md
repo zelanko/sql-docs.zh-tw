@@ -1,16 +1,14 @@
 ---
-title: "xp_loginconfig (TRANSACT-SQL) |Microsoft 文件"
-ms.custom: 
+title: xp_loginconfig (TRANSACT-SQL) |Microsoft 文件
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: system-objects
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - xp_loginconfig_TSQL
@@ -20,16 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - xp_loginconfig
 ms.assetid: d380e799-2857-408a-bcbf-5e73a8e6aa5a
-caps.latest.revision: 
+caps.latest.revision: 38
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: c3e070b1a6ba44a1f2a9c626745c0c7543446095
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 950a01041db936c83a5a3c799f1055ab3996aa34
+ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="xploginconfig-transact-sql"></a>xp_loginconfig (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -52,7 +49,7 @@ xp_loginconfig ['config_name']
  **'** *config_name* **'**  
  這是您要顯示的組態值。 如果*config_name*是未指定，會報告所有的組態值。 *config_name*是**sysname**，預設值是 NULL，而且可以是下列值之一。  
   
-|值|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |**登入模式**|登入安全性模式。 可能的值為**混合**和**Windows 驗證**。<br /><br /> 取代者：<br /><br /> `SELECT SERVERPROPERTY('IsIntegratedSecurityOnly'); GO`|  
 |**預設登入**|信任連接之授權使用者 (沒有相符登入名稱的使用者) 的預設 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入識別碼名稱。 預設登入是**客體**。 提供這個值的目的，是為了與舊版相容。|  
@@ -99,11 +96,11 @@ EXEC xp_loginconfig 'login mode';
 GO  
 ```  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [sp_denylogin &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-denylogin-transact-sql.md)   
  [sp_grantlogin &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-grantlogin-transact-sql.md)   
  [系統預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [sp_revokelogin &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-revokelogin-transact-sql.md)   
- [xp_logininfo &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/xp-logininfo-transact-sql.md)  
+ [xp_logininfo &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/xp-logininfo-transact-sql.md)  
   
   

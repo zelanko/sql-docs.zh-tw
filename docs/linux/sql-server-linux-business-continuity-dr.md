@@ -1,26 +1,24 @@
 ---
-title: "SQL Server on Linux 的災害復原 |Microsoft 文件"
-description: 
+title: SQL Server on Linux 的災害復原 |Microsoft 文件
+description: ''
 author: allanhirt
 ms.author: mihaelab
 ms.reviewer: mikeray
 manager: craigg
 ms.date: 10/02/2017
 ms.topic: article
-ms.prod: sql-non-specified
-ms.prod_service: database-engine
-ms.service: 
-ms.component: 
+ms.prod: sql
+ms.component: ''
 ms.suite: sql
 ms.custom: sql-linux
-ms.technology: database-engine
+ms.technology: linux
 ms.assetid: c75717c8-c677-4033-8ca6-d0ac93aee04d
-ms.workload: Inactive
-ms.openlocfilehash: dc4dd8e56ed1c933931c7e372dc55c8913d601d4
-ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
+monikerRange: '>= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 16e1e72175db963452d1dc53b704a15602821905
+ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/13/2018
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="business-continuity-and-database-recovery---sql-server-on-linux"></a>商務持續性和資料庫復原-您的 SQL Server on Linux
 

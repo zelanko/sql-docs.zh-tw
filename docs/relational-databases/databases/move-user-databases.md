@@ -1,17 +1,16 @@
 ---
-title: "移動使用者資料庫 | Microsoft Docs"
-ms.custom: 
+title: 移動使用者資料庫 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
 ms.component: databases
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - disaster recovery [SQL Server], moving database files
 - database files [SQL Server], moving
@@ -27,19 +26,19 @@ helpviewer_keywords:
 - planned database relocations [SQL Server]
 - databases [SQL Server], moving
 ms.assetid: ad9a4e92-13fb-457d-996a-66ffc2d55b79
-caps.latest.revision: 
+caps.latest.revision: 37
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: Active
-ms.openlocfilehash: eb72a2d6947406c8fc14d40571ada79151668422
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: f0c778e19a51e9b09f8ffd25fafd8b630c161d68
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="move-user-databases"></a>移動使用者資料庫
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，您可以在 [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md) 陳述式的 FILENAME 子句中指定新的檔案位置，以便將使用者資料庫的資料、記錄和全文檢索目錄檔案移到新位置。 這種方法適用於在相同的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體內移動資料庫檔案。 若要將資料庫移到另一個 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體或移到另一個伺服器，請使用 [備份和還原](../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md) 或 [卸離和附加作業](../../relational-databases/databases/move-a-database-using-detach-and-attach-transact-sql.md)。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中，您可以在 [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md) 陳述式的 FILENAME 子句中指定新的檔案位置，以便將使用者資料庫的資料、記錄和全文檢索目錄檔案移到新位置。 這種方法適用於在相同的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體內移動資料庫檔案。 若要將資料庫移到另一個 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體或移到另一個伺服器，請使用 [備份和還原](../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md) 或 [卸離和附加作業](../../relational-databases/databases/move-a-database-using-detach-and-attach-transact-sql.md)。  
   
 ## <a name="considerations"></a>考量  
  將資料庫移動到其他伺服器執行個體，以提供一致的經驗給使用者和應用程式時，您可能必須為資料庫重新建立部分或全部的中繼資料。 如需詳細資訊，請參閱 [在另一個伺服器執行個體上提供可用的資料庫時，管理中繼資料 &#40;SQL Server&#41;](../../relational-databases/databases/manage-metadata-when-making-a-database-available-on-another-server.md)。  
@@ -90,7 +89,7 @@ ms.lasthandoff: 01/18/2018
     ALTER DATABASE database_name MODIFY FILE ( NAME = logical_name , FILENAME = 'new_path\os_file_name' );  
     ```  
   
-2.  停止 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的執行個體或關閉系統以執行維護。 如需詳細資訊，請參閱 [Start, Stop, Pause, Resume, Restart the Database Engine, SQL Server Agent, or SQL Server Browser Service](../../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md)。  
+2.  停止 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的執行個體或關閉系統以執行維護。 如需詳細資訊，請參閱 [啟動、停止、暫停、繼續、重新啟動 Database Engine、SQL Server Agent 或 SQL Server Browser 服務](../../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md)。  
   
 3.  將一個或多個檔案移到新位置。  
   
@@ -126,7 +125,7 @@ ms.lasthandoff: 01/18/2018
         NET START MSSQL$instancename /f /T3608  
         ```  
   
-     如需詳細資訊，請參閱 [Start, Stop, Pause, Resume, Restart the Database Engine, SQL Server Agent, or SQL Server Browser Service](../../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md)。  
+     如需詳細資訊，請參閱 [啟動、停止、暫停、繼續、重新啟動 Database Engine、SQL Server Agent 或 SQL Server Browser 服務](../../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md)。  
   
 3.  對於要移動的每個檔案，使用 **sqlcmd** 命令或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 來執行下列陳述式。  
   

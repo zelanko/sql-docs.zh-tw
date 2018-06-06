@@ -1,11 +1,11 @@
 ---
-title: "線上索引作業的指導方針 | Microsoft Docs"
-ms.custom: 
-ms.date: 07/10/2017
-ms.prod: sql-non-specified
-ms.reviewer: 
-ms.technology: dbe-indexes
-ms.tgt_pltfrm: 
+title: 線上索引作業的指導方針 | Microsoft Docs
+ms.custom: ''
+ms.date: 05/14/2018
+ms.prod: sql
+ms.reviewer: ''
+ms.technology: table-view-index
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - clustered indexes, online operations
@@ -15,20 +15,18 @@ helpviewer_keywords:
 - nonclustered indexes [SQL Server], online operations
 - transaction logs [SQL Server], indexes
 ms.assetid: d82942e0-4a86-4b34-a65f-9f143ebe85ce
-caps.latest.revision: 
-author: barbkess
-ms.author: barbkess
-manager: jhubbard
+caps.latest.revision: 64
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.suite: sql
-ms.prod_service: database-engine, sql-database
-ms.service: 
-ms.component: indexes
-ms.workload: On Demand
-ms.openlocfilehash: 2c5e3f669cd2789676e334beedb4e8ee410c5cd6
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.prod_service: table-view-index, sql-database
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 7762c5e00dde9e317cc1a1521385faad4c7d1d49
+ms.sourcegitcommit: 6fd8a193728abc0a00075f3e4766a7e2e2859139
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 05/17/2018
 ---
 # <a name="guidelines-for-online-index-operations"></a>線上索引作業的指導方針
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -113,6 +111,19 @@ ms.lasthandoff: 01/18/2018
 - 對於更新繁重的工作負載，您可能會遇到輸送量降低情況 (我們的測試顯示小於 10% 的降低情況)。
 
 一般而言，可繼續和不可繼續的線上索引重建之間的磁碟重組品質沒有差異。
+
+## <a name="online-default-options"></a>線上預設選項 
+
+> [!IMPORTANT]
+> 這些選項處於公開預覽狀態。
+
+您可以透過設定 ELEVATE_ONLINE 或 ELEVATE_RESUMABLE 資料庫範圍設定選項，在資料庫層級設定線上或可繼續的預設選項。 使用這些預設選項，您可以避免不小心執行讓資料庫資料表離線的作業。 這兩個選項都會使引擎自動將某些作業提升為線上或可繼續執行。  
+您可以使用 [ALTER DATABASE SCOPED CONFIGURATION](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md) 命令，將選項設為 FAIL_UNSUPPORTED、WHEN_SUPPORTED 或 OFF。 您可以為線上和可繼續設定不同的值。 
+
+ELEVATE_ONLINE 和 ELEVATE_RESUMABLE 僅適用於分別支援線上和可繼續語法的 DDL 陳述式。 例如，如果您嘗試建立 ELEVATE_ONLINE=FAIL_UNSUPORTED 的 XML 索引，由於 XML 索引不支援 ONLINE= 語法，因此會離線執行作業。 該選項只會影響未指定 ONLINE 或 RESUMABLE 選項所送出的 DDL 陳述式。 例如，藉由送出 ONLINE=OFF 或 RESUMABLE=OFF 的陳述式，使用者可以覆寫 FAIL_UNSUPPORTED 設定，並離線及/或以不可繼續的方式執行陳述式。 
+ 
+> [!NOTE]
+> ELEVATE_ONLINE 和 ELEVATE_RESUMABLE 不適用於 XML 索引作業。 
  
 ## <a name="related-content"></a>相關內容  
  [線上索引作業如何運作](../../relational-databases/indexes/how-online-index-operations-work.md)  

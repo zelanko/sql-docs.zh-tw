@@ -1,30 +1,29 @@
 ---
-title: "空間索引概觀 | Microsoft Docs"
-ms.custom: 
+title: 空間索引概觀 | Microsoft Docs
+ms.custom: ''
 ms.date: 09/12/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
 ms.component: spatial
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-spatial
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - spatial indexes [SQL Server]
 ms.assetid: b1ae7b78-182a-459e-ab28-f743e43f8293
-caps.latest.revision: 
+caps.latest.revision: 28
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 97c9aa05a5dc7eba5a47a616f15ba5e4faca0b16
-ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: a9c73a6851fe5e1e538af9ebe15f2be8a0d43f4c
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="spatial-indexes-overview"></a>空間索引概觀
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -107,7 +106,7 @@ ms.lasthandoff: 02/23/2018
   
  例如，以上圖為例，圖中顯示一個八邊形完全納入層級 1 方格的資料格 15。 在此圖中，已經鑲嵌資料格 15，將此八邊形分解成九個層級 2 的資料格。 這個圖假設每個物件的資料格限制為 9 以上 (含)。 但是，如果每個物件的資料格限制為 8 以下 (含)，將不會鑲嵌資料格 15，而且此物件只會計算該資料格 15。  
   
- 根據預設，每一物件的資料格限制為 16 個資料格，這會在大多數空間索引的空間和精確度之間提供令人滿意的取捨。 但是，[CREATE SPATIAL INDEX](../../t-sql/statements/create-spatial-index-transact-sql.md)[!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式支援 CELLS_PER_OBJECT**=***n* 子句，該子句可讓您指定 1 和 8192 之間 (含) 的每個物件的資料格限制。  
+ 根據預設，每一物件的資料格限制為 16 個資料格，這會在大多數空間索引的空間和精確度之間提供令人滿意的取捨。 但是，[CREATE SPATIAL INDEX](../../t-sql/statements/create-spatial-index-transact-sql.md)[!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式支援 CELLS_PER_OBJECT**=***n* 子句，該子句可讓您指定 1 和 8192 之間 (含) 每個物件的資料格限制。  
   
 > [!NOTE]  
 >  空間索引的 **cells_per_object** 設定可以在 [sys.spatial_index_tessellations](../../relational-databases/system-catalog-views/sys-spatial-index-tessellations-transact-sql.md) 目錄檢視中看到。  

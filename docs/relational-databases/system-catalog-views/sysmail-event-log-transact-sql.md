@@ -1,16 +1,14 @@
 ---
-title: "sysmail_event_log (TRANSACT-SQL) |Microsoft 文件"
-ms.custom: 
+title: sysmail_event_log (TRANSACT-SQL) |Microsoft 文件
+ms.custom: ''
 ms.date: 06/10/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
 ms.component: system-catalog-views
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: system-objects
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sysmail_event_log
@@ -20,16 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - sysmail_event_log database mail view
 ms.assetid: 440bc409-1188-4175-afc4-c68e31e44fed
-caps.latest.revision: 
+caps.latest.revision: 16
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 9dca8c14d7ea9fefbe566d7f0770b395df48bf25
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: b6c43f41415f97d87cddaf2c7b57e1e8250aa65f
+ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="sysmaileventlog-transact-sql"></a>sysmail_event_log (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -57,7 +54,7 @@ ms.lasthandoff: 02/03/2018
  您必須是成員**sysadmin**固定的伺服器角色或**DatabaseMailUserRole**來存取此檢視的資料庫角色。 成員**DatabaseMailUserRole**人員不屬於**sysadmin**角色，只能看到他們所提交的電子郵件的事件。  
   
 ## <a name="see-also"></a>另請參閱  
- [sysmail_faileditems &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sysmail-faileditems-transact-sql.md)   
+ [sysmail_faileditems &#40;Transact SQL&#41;](../../relational-databases/system-catalog-views/sysmail-faileditems-transact-sql.md)   
  [Database Mail 外部程式](../../relational-databases/database-mail/database-mail-external-program.md)  
   
   

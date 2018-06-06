@@ -1,27 +1,25 @@
 ---
-title: "在行動報表中新增資料格 | Reporting Services | Microsoft Docs"
-ms.custom: 
+title: 在行動報表中新增資料格 | Reporting Services | Microsoft Docs
+ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
-ms.service: 
 ms.component: mobile-reports
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: fe98a970-90d3-44d1-9189-9141c237f141
-caps.latest.revision: "4"
+caps.latest.revision: 4
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 656c40ea8c8bc7d20fd2fe9de0a189f451731ae5
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 0c08955e837eec891a44982f930c6e76eb8b4671
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="add-data-grids-to-mobile-reports--reporting-services"></a>將資料格加入行動報表 | Reporting Services
 有時候，資料本身就是最佳的視覺效果。 深入了解用於顯示 [!INCLUDE[SS_MobileReptPub_Long](../../includes/ss-mobilereptpub-long.md)] 中資料的三種「資料格」或資料表：

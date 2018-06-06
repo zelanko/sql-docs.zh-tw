@@ -1,39 +1,23 @@
 ---
-title: "附加和卸離 Analysis Services 資料庫 |Microsoft 文件"
-ms.custom: 
-ms.date: 03/06/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords:
-- sql13.asvs.ssmsimbi.AttachDatabase.f1
-- sql13.asvs.ssms.attachdatabase.f1
-- sql13.asvs.ssmsimbi.DetachDatabase.f1
-- sql13.asvs.ssms.detachdatabase.f1
-helpviewer_keywords:
-- databases [Analysis Services], attach
-- databases [Analysis Services], detach
-ms.assetid: 41887413-2d47-49b8-8614-553cb799fb18
-caps.latest.revision: 
-author: Minewiskan
+title: 附加和卸離 Analysis Services 資料庫 |Microsoft 文件
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: multidimensional-models
+ms.topic: conceptual
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 4abef02a67a334486b123a2ed29b8119e7a29f8b
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 7779a0ecac1a8a5d1e53b186e5b221477e20bdf9
+ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="attach-and-detach-analysis-services-databases"></a>附加和卸離 Analysis Services 資料庫
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-通常在很多情況下， [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 資料庫管理員 (dba) 會想要讓資料庫保持離線一段時間，然後在相同或不同的伺服器執行個體上，讓該資料庫恢復連線狀態。 這些情況通常是由商務需求所驅使，例如將資料庫移至不同的磁碟以提升效能、取得讓資料庫成長的空間，或升級產品。 不論是哪一種情況， **Attach** 和 **Detach** 命令都可讓 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] dba 輕鬆地將資料庫保持離線並恢復連線狀態。  
+  通常在很多情況下， [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 資料庫管理員 (dba) 會想要讓資料庫保持離線一段時間，然後在相同或不同的伺服器執行個體上，讓該資料庫恢復連線狀態。 這些情況通常是由商務需求所驅使，例如將資料庫移至不同的磁碟以提升效能、取得讓資料庫成長的空間，或升級產品。 不論是哪一種情況， **Attach** 和 **Detach** 命令都可讓 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] dba 輕鬆地將資料庫保持離線並恢復連線狀態。  
   
 ## <a name="attach-and-detach-commands"></a>Attach 和 Detach 命令  
  **Attach** 命令可讓您將離線的資料庫恢復連線狀態。 您可以將資料庫附加至原始伺服器執行個體或其他執行個體。 當您附加資料庫時，使用者可以指定資料庫的 **[ReadWriteMode]** 設定。 **Detach** 命令可讓您中斷資料庫與伺服器的連線。  

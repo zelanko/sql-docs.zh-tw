@@ -1,32 +1,33 @@
 ---
-title: "SQLFetchScroll 函數 |Microsoft 文件"
-ms.custom: 
+title: SQLFetchScroll 函數 |Microsoft 文件
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
-ms.component: odbc
-ms.reviewer: 
+ms.prod: sql
+ms.prod_service: connectivity
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
-ms.topic: article
-apiname: SQLFetchScroll
-apilocation: sqlsrv32.dll
+ms.technology: connectivity
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
+apiname:
+- SQLFetchScroll
+apilocation:
+- sqlsrv32.dll
 apitype: dllExport
-f1_keywords: SQLFetchScroll
-helpviewer_keywords: SQLFetchScroll function [ODBC]
+f1_keywords:
+- SQLFetchScroll
+helpviewer_keywords:
+- SQLFetchScroll function [ODBC]
 ms.assetid: c0243667-428c-4dda-ae91-3c307616a1ac
-caps.latest.revision: "30"
+caps.latest.revision: 30
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
-ms.workload: Inactive
-ms.openlocfilehash: df50946b183bcd7072f12f67b8f0293ac5eef080
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+manager: craigg
+ms.openlocfilehash: 439639255cc41fc22f94c5a1605dee8fc68a06ad
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sqlfetchscroll-function"></a>SQLFetchScroll 函數
 **一致性**  
@@ -85,15 +86,15 @@ SQLRETURN SQLFetchScroll(
   
  針對所有這些 Sqlstate 可傳回 SQL_SUCCESS_WITH_INFO 或 SQL_ERROR （除了 01xxx Sqlstate)，如果上一個或多個，但不是全部資料列的多重資料列的作業，就會發生錯誤，而且如果發生錯誤時，會傳回 SQL_ERROR，會傳回 SQL_SUCCESS_WITH_INFO單一資料列作業。  
   
-|SQLSTATE|錯誤|描述|  
+|SQLSTATE|錯誤|Description|  
 |--------------|-----------|-----------------|  
 |01000|一般警告|特定驅動程式告知性訊息。 （函式會傳回 SQL_SUCCESS_WITH_INFO）。|  
 |01004|字串資料，右邊遭截斷|字串或資料行所傳回的二進位資料會導致非空白的字元或二進位資料為非 NULL 的截斷。 如果是字串值，它就是向右截斷。|  
-|01S01|資料列中的錯誤|擷取一或多個資料列時發生錯誤。<br /><br /> (如果 ODBC 3 時，會傳回此 SQLSTATE*.x*應用程式使用 ODBC 2*.x*驅動程式，可以忽略它。)|  
+|01S01|資料列中的錯誤|擷取一或多個資料列時發生錯誤。<br /><br /> (如果 ODBC 3 時，會傳回此 SQLSTATE *.x*應用程式使用 ODBC 2 *.x*驅動程式，可以忽略它。)|  
 |01S06|嘗試擷取結果集傳回第一個資料列集之前|要求的資料列集重疊時 Sqlfetchscroll SQL_FETCH_PRIOR、 目前的位置已超出第一個資料列，且目前的資料列數目小於或等於資料列集大小的結果集的開頭。<br /><br /> 要求的資料列集重疊時 Sqlfetchscroll SQL_FETCH_PRIOR、 目前的位置已超過結果集的結尾，資料列集大小大於結果集大小的結果集的開頭。<br /><br /> 要求的資料列集重疊時 Sqlfetchscroll 即 sql_fetch_relative 但、 FetchOffset 是負值，而且 FetchOffset 的絕對值小於或等於資料列集大小的結果集的開頭。<br /><br /> 要求的資料列集重疊時 Sqlfetchscroll 即 SQL_FETCH_ABSOLUTE、 FetchOffset 是負值，而且 FetchOffset 的絕對值大於結果集大小的結果集的開頭，但小於或等於資料列集大小。<br /><br /> （函式會傳回 SQL_SUCCESS_WITH_INFO）。|  
 |01S07|小數位數截斷|傳回資料行的資料已遭截斷。 數值資料類型已截斷的數字的小數部分。 時間、 時間戳記，和間隔資料型別包含時間元件，已截斷的小數部分的時間。<br /><br /> （函式會傳回 SQL_SUCCESS_WITH_INFO）。|  
 |07006|受限制的資料類型屬性違規|結果集中的資料行的資料值無法轉換成資料類型所指定*TargetType*中**SQLBindCol**。<br /><br /> 資料類型為 SQL_C_BOOKMARK，繫結資料行 0，並且 SQL_ATTR_USE_BOOKMARKS 陳述式屬性設定為 SQL_UB_VARIABLE。<br /><br /> 資料類型為 SQL_C_VARBOOKMARK，繫結資料行 0 和 SQL_ATTR_USE_BOOKMARKS 陳述式屬性未設定為 SQL_UB_VARIABLE。|  
-|07009|無效的描述元索引|驅動程式為 ODBC 2*.x*不支援的驅動程式**SQLExtendedFetch**，和資料行繫結中指定的資料行編號為 0。<br /><br /> 資料行 0 已繫結，且 SQL_ATTR_USE_BOOKMARKS 陳述式屬性設定為 SQL_UB_OFF。|  
+|07009|無效的描述元索引|驅動程式為 ODBC 2 *.x*不支援的驅動程式**SQLExtendedFetch**，和資料行繫結中指定的資料行編號為 0。<br /><br /> 資料行 0 已繫結，且 SQL_ATTR_USE_BOOKMARKS 陳述式屬性設定為 SQL_UB_OFF。|  
 |08S01|通訊連結失敗|功能已完成處理之前，驅動程式和驅動程式已連線到資料來源之間的通訊連結失敗。|  
 |22001|字串資料，右邊遭截斷|可變長度的書籤，傳回的資料行已截斷。|  
 |22002|需要指標變數，但是未提供|NULL 的資料提取到資料行的*StrLen_or_IndPtr*設定**SQLBindCol** (或所設定的 SQL_DESC_INDICATOR_PTR **SQLSetDescField**或**SQLSetDescRec**) 為 null 指標。|  
@@ -164,7 +165,7 @@ SQLRETURN SQLFetchScroll(
   
 |條件|新的資料列集的第一個資料列|  
 |---------------|-----------------------------|  
-|*開始之前*|@shouldalert|  
+|*開始之前*|1|  
 |*CurrRowsetStart + RowsetSize*[1]  *\<= LastResultRow*|*CurrRowsetStart + RowsetSize*[1]|  
 |*CurrRowsetStart + RowsetSize*[1]*> LastResultRow*|*結束後*|  
 |*結束後*|*結束後*|  
@@ -195,8 +196,8 @@ SQLRETURN SQLFetchScroll(
 |*(之前啟動和 FetchOffset > 0)或者 (之後結束和 FetchOffset < 0)*|*--* <sup>[1]</sup>|  
 |*BeforeStart 和 FetchOffset < = 0*|*開始之前*|  
 |*CurrRowsetStart = 1 AND FetchOffset < 0*|*開始之前*|  
-|*CurrRowsetStart > 1 AND CurrRowsetStart + FetchOffset < 1 AND &#124;FetchOffset &#124;> RowsetSize* <sup>[3]</sup>|*開始之前*|  
-|*CurrRowsetStart > 1 AND CurrRowsetStart + FetchOffset < 1 AND &#124;FetchOffset &#124;< = RowsetSize* <sup>[3]</sup>|*1* <sup>[2]</sup>|  
+|*CurrRowsetStart > 1 AND CurrRowsetStart + FetchOffset < 1 AND &#124; FetchOffset &#124; > RowsetSize* <sup>[3]</sup>|*開始之前*|  
+|*CurrRowsetStart > 1 AND CurrRowsetStart + FetchOffset < 1 AND &#124; FetchOffset &#124; < = RowsetSize* <sup>[3]</sup>|*1* <sup>[2]</sup>|  
 |*1 < = CurrRowsetStart + FetchOffset \<= LastResultRow*|*CurrRowsetStart + FetchOffset*|  
 |*CurrRowsetStart + FetchOffset > LastResultRow*|*結束後*|  
 |*之後結束和 FetchOffset > = 0*|*結束後*|  
@@ -212,9 +213,9 @@ SQLRETURN SQLFetchScroll(
   
 |條件|新的資料列集的第一個資料列|  
 |---------------|-----------------------------|  
-|*FetchOffset < 0 AND &#124;FetchOffset &#124;< = LastResultRow*|*LastResultRow + FetchOffset + 1*|  
-|*FetchOffset < 0 AND &#124;FetchOffset &#124;> LastResultRow AND &#124;FetchOffset &#124;> RowsetSize* <sup>[2]</sup>|*開始之前*|  
-|*FetchOffset < 0 AND &#124;FetchOffset &#124;> LastResultRow AND &#124;FetchOffset &#124;< = RowsetSize* <sup>[2]</sup>|*1* <sup>[1]</sup>|  
+|*FetchOffset < 0 AND &#124; FetchOffset &#124; < = LastResultRow*|*LastResultRow + FetchOffset + 1*|  
+|*FetchOffset < 0 AND &#124; FetchOffset &#124; > LastResultRow AND &#124; FetchOffset &#124; > RowsetSize* <sup>[2]</sup>|*開始之前*|  
+|*FetchOffset < 0 AND &#124; FetchOffset &#124; > LastResultRow AND &#124; FetchOffset &#124; < = RowsetSize* <sup>[2]</sup>|*1* <sup>[1]</sup>|  
 |*FetchOffset = 0*|*開始之前*|  
 |*1 < = FetchOffset \<= LastResultRow*|*FetchOffset*|  
 |*FetchOffset > LastResultRow*|*結束後*|  
@@ -289,9 +290,9 @@ SQLFetchScroll(hstmt, SQL_FETCH_RELATIVE, 0);
 |插入資料列 21 歲到 22 之間的資料列|PRIOR|0|11 到 20|  
 |插入資料列 20 和 21 之間的資料列|PRIOR|0|12 到 20，插入的資料列|  
 |刪除資料列 21|RELATIVE|0|22 到 31<sup>[2]</sup>|  
-|刪除資料列 21|RELATIVE|@shouldalert|22 到 31|  
+|刪除資料列 21|RELATIVE|1|22 到 31|  
 |插入資料列 21 歲到 22 之間的資料列|RELATIVE|0|21，插入資料列，22 到 29|  
-|插入資料列 21 歲到 22 之間的資料列|RELATIVE|@shouldalert|22 到 31|  
+|插入資料列 21 歲到 22 之間的資料列|RELATIVE|1|22 到 31|  
 |刪除資料列 21|ABSOLUTE|21|22 到 31<sup>[2]</sup>|  
 |刪除資料列 22|ABSOLUTE|21|21，23 到 31|  
 |插入資料列 21 歲到 22 之間的資料列|ABSOLUTE|22|插入的資料列，22 到 29|  
@@ -333,7 +334,7 @@ SQLFetchScroll(hstmt, SQL_FETCH_RELATIVE, 0);
 ## <a name="sqlfetchscroll-and-odbc-2x-drivers"></a>SQLFetchScroll 和 ODBC 2.x 驅動程式  
  當應用程式呼叫**SQLFetchScroll** ODBC 2.x 驅動程式，驅動程式管理員會對應至這個呼叫**SQLExtendedFetch**。 將傳遞的引數的下列值**SQLExtendedFetch**。  
   
-|SQLExtendedFetch 引數|ReplTest1|  
+|SQLExtendedFetch 引數|Value|  
 |-------------------------------|-----------|  
 |StatementHandle|在 StatementHandle **SQLFetchScroll**。|  
 |Sqlfetchscroll|中的 Sqlfetchscroll **SQLFetchScroll**。|  
@@ -365,6 +366,6 @@ SQLFetchScroll(hstmt, SQL_FETCH_RELATIVE, 0);
 |定位資料指標，重新整理此資料列集中，或更新或刪除在結果集中的資料|[SQLSetPos 函式](../../../odbc/reference/syntax/sqlsetpos-function.md)|  
 |設定陳述式屬性|[SQLSetStmtAttr 函式](../../../odbc/reference/syntax/sqlsetstmtattr-function.md)|  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [ODBC 應用程式開發介面參考](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [ODBC 標頭檔](../../../odbc/reference/install/odbc-header-files.md)

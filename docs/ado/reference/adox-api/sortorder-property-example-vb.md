@@ -1,32 +1,29 @@
 ---
-title: "SortOrder 屬性範例 (VB) |Microsoft 文件"
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
+title: SortOrder 屬性範例 (VB) |Microsoft 文件
+ms.prod: sql
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
-ms.custom: 
+ms.technology: connectivity
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 dev_langs:
 - VB
 helpviewer_keywords:
 - SortOrder property [ADOX]
 ms.assetid: d9502254-d89b-4bcb-94f1-6418f89e7f30
-caps.latest.revision: 
+caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 5c65caf4436eead9a18df18b29b5d509691c0240
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 22c3955934e7e3030251bbb80165edaa6fee159f
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sortorder-property-example-vb"></a>SortOrder 屬性範例 (VB)
 這個範例會示範[SortOrder](../../../ado/reference/adox-api/sortorder-property-adox.md)屬性[資料行](../../../ado/reference/adox-api/column-object-adox.md)，已附加至[資料行](../../../ado/reference/adox-api/columns-collection-adox.md)集合[索引](../../../ado/reference/adox-api/index-object-adox.md)。 程式碼中的國家/地區資料行附加遞增索引**員工**然後資料表顯示的記錄。 然後程式碼中的國家/地區資料行附加遞減索引**員工**資料表，並會顯示記錄一次。 遞增和遞減索引之間的差異會顯示。  

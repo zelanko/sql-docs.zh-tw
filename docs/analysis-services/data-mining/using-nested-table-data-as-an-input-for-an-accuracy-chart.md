@@ -1,42 +1,29 @@
 ---
-title: "使用巢狀的資料表資料做為輸入，精確度圖表 |Microsoft 文件"
-ms.custom: 
-ms.date: 03/01/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
-helpviewer_keywords:
-- Mining Accuracy Chart [Analysis Services], nested tables
-- Mining Accuracy Chart [Analysis Services], input tables
-- nested tables
-- adding nested tables
-ms.assetid: 162e0686-ada3-4dd3-9151-9589926e6613
-caps.latest.revision: 
-author: Minewiskan
+title: 使用巢狀的資料表資料做為輸入，精確度圖表 |Microsoft 文件
+ms.date: 05/08/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: data-mining
+ms.topic: conceptual
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: d2602a79fd7a9beeffb6057428c71dec7a14f0e0
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 68ab3e189bcf0637003f4ddae41e5f0209988241
+ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="using-nested-table-data-as-an-input-for-an-accuracy-chart"></a>使用巢狀資料表當做精確度圖表的輸入
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-當您使用外部資料測試採礦模型的精確度時，如果採礦模型包含巢狀資料表，則外部資料必須也包含案例資料表和相關聯的巢狀資料表。  
+  當您使用外部資料測試採礦模型的精確度時，如果採礦模型包含巢狀資料表，則外部資料必須也包含案例資料表和相關聯的巢狀資料表。  
   
  本主題描述如何處理用於模型測試的巢狀資料表、如何對應模式和外部資料中的巢狀與案例資料表，以及如何將篩選套用至巢狀資料表。  
   
  在處理巢狀資料表時，請牢記以下要訣：  
   
--   如果選取了 **[使用採礦模型測試案例]** 或 **[使用採礦結構測試案例]**選項，就不需要指定案例資料表或巢狀資料表。 使用這些選項時，測試資料的定義會儲存在採礦結構中，而且當您建立精確度圖表時會自動選取測試資料。  
+-   如果選取了 **[使用採礦模型測試案例]** 或 **[使用採礦結構測試案例]** 選項，就不需要指定案例資料表或巢狀資料表。 使用這些選項時，測試資料的定義會儲存在採礦結構中，而且當您建立精確度圖表時會自動選取測試資料。  
   
 -   如果資料來源中的案例與巢狀資料表之間已經有關聯性存在，則採礦結構中的資料行會自動對應到輸入資料表中的同名資料行。  
   
@@ -48,7 +35,7 @@ ms.lasthandoff: 02/15/2018
   
 2.  選取 **[採礦精確度圖表]** 索引標籤，然後選取 **[輸入選擇]** 索引標籤。  
   
-3.  在 **[選取要用於精確度圖表的資料集]**中選取 **[指定不同的資料集]**選項。  
+3.  在 **[選取要用於精確度圖表的資料集]** 中選取 **[指定不同的資料集]** 選項。  
   
 4.  按一下瀏覽按鈕 **(…)**，即可從目前伺服器上的資料來源檢視清單選擇外部資料集。  
   

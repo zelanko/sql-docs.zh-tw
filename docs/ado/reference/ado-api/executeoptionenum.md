@@ -1,33 +1,30 @@
 ---
-title: ExecuteOptionEnum | Microsoft Docs
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
+title: 執行方式 |Microsoft 文件
+ms.prod: sql
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
-ms.custom: 
+ms.technology: connectivity
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 apitype: COM
 f1_keywords:
 - ExecuteOptionEnum
 helpviewer_keywords:
 - ExecuteOptionEnum enumeration [ADO]
 ms.assetid: 68bfa83a-5df4-4bef-8736-0f88ae8c29ea
-caps.latest.revision: 
+caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 8e4d901326e801d9c6724dfd05d7a14bb7acd8b7
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: f139ca30fc6fa8a23d93934e6b7cf5bd665ead69
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="executeoptionenum"></a>ExecuteOptionEnum
 指定提供者如何執行命令。  
@@ -43,7 +40,7 @@ ms.lasthandoff: 02/09/2018
 |**adOptionUnspecified**|-1|表示未指定命令。|  
   
 ## <a name="adowfc-equivalent"></a>ADO/WFC 對等項目  
- Package: **com.ms.wfc.data**  
+ 封裝： **com.ms.wfc.data**  
   
 |常數|  
 |--------------|  

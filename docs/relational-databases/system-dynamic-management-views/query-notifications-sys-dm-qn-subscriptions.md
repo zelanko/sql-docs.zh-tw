@@ -1,16 +1,12 @@
 ---
-title: sys.dm_qn_subscriptions (Transact-SQL) | Microsoft Docs
-ms.custom: 
+title: sys.dm_qn_subscriptions (TRANSACT-SQL) |Microsoft 文件
+ms.custom: ''
 ms.date: 03/15/2017
-ms.prod: sql-non-specified
-ms.prod_service: database-engine
-ms.service: 
-ms.component: dmv's
-ms.reviewer: 
+ms.prod: sql
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: system-objects
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - dm_qn_subscriptions
@@ -22,16 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_qn_subscriptions dynamic management view
 ms.assetid: a3040ce6-f5af-48fc-8835-c418912f830c
-caps.latest.revision: 
+caps.latest.revision: 26
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 2fdc34ae033de8baf0173bc7c86bd0fe05c7668f
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: e3f6886a16b8b1d87c2864ed93fd8be764700dc5
+ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 05/23/2018
 ---
 # <a name="query-notifications---sysdmqnsubscriptions"></a>查詢通知-sys.dm_qn_subscriptions
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,7 +39,7 @@ ms.lasthandoff: 02/03/2018
 |**database_id**|**int**|執行通知查詢的資料庫識別碼。 這個資料庫會儲存與這項訂閱有關的資訊。|  
 |**sid**|**varbinary(85)**|建立和擁有這項訂閱之伺服器主體的安全性識別碼。|  
 |**object_id**|**int**|儲存訂閱參數相關資訊的內部資料表識別碼。|  
-|**created**|**datetime**|建立訂閱的日期和時間。|  
+|**建立**|**datetime**|建立訂閱的日期和時間。|  
 |**timeout**|**int**|訂閱的逾時 (以秒為單位)。 通知會標示為在過了這個時間之後引發。<br /><br /> 附註： 實際的引發時間可能大於指定的逾時。不過，如果在指定的逾時時間之後，但在訂閱引發之前，執行一項變更讓訂閱無效，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會讓引發作業發生在變更時。|  
 |**status**|**int**|指出訂閱的狀態。 如需狀態碼的清單，請參閱＜備註＞底下的表格。|  
   
@@ -140,7 +135,7 @@ GO
   
 ## <a name="see-also"></a>另請參閱  
  [動態管理檢視與函數 &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
- [查詢通知相關的動態管理檢視 &#40;TRANSACT-SQL &#41;](http://msdn.microsoft.com/library/92eb22d8-33f3-4c17-b32e-e23acdfbd8f4)   
- [KILL QUERY NOTIFICATION SUBSCRIPTION &#40;TRANSACT-SQL &#41;](../../t-sql/language-elements/kill-query-notification-subscription-transact-sql.md)  
+ [查詢通知相關的動態管理檢視&#40;Transact SQL&#41;](http://msdn.microsoft.com/library/92eb22d8-33f3-4c17-b32e-e23acdfbd8f4)   
+ [KILL QUERY NOTIFICATION SUBSCRIPTION &#40;Transact SQL&#41;](../../t-sql/language-elements/kill-query-notification-subscription-transact-sql.md)  
   
   

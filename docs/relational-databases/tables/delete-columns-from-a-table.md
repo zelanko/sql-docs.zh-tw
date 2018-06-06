@@ -1,33 +1,30 @@
 ---
-title: "從資料表中刪除資料行 | Microsoft 文件"
-ms.custom: 
+title: 從資料表中刪除資料行 | Microsoft 文件
+ms.custom: ''
 ms.date: 04/11/2017
-ms.prod: sql-non-specified
-ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
-ms.component: tables
-ms.reviewer: 
+ms.prod: sql
+ms.prod_service: table-view-index, sql-database, sql-data-warehouse, pdw
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- dbe-tables
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: table-view-index
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - columns [SQL Server], deleting
 - removing columns
 - deleting columns
 - dropping columns
 ms.assetid: 0d8f6e4f-bc71-4fa3-8615-74249c8e072d
-caps.latest.revision: 
+caps.latest.revision: 16
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: Active
-ms.openlocfilehash: 57897bbf048817c930984a58a244525ceb4a48ee
-ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 124c4cb808902507b8d549fcf5a30631e4f23151
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="delete-columns-from-a-table"></a>從資料表中刪除資料行
 [!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
@@ -35,7 +32,7 @@ ms.lasthandoff: 01/18/2018
   本主題描述如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ，在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中刪除資料表資料行。  
   
 > [!CAUTION]  
->  當您從資料表中刪除資料行時，就會從資料庫中刪除該資料行以及它所包含的所有資料。 這個動作無法恢復。  
+>  當您從資料表中刪除資料行時，會刪除其本身及其其所包含的所有資料。
   
  **本主題內容**  
   
@@ -67,7 +64,7 @@ ms.lasthandoff: 01/18/2018
   
 #### <a name="to-delete-columns-by-using-object-explorer"></a>若要使用物件總管來刪除資料行  
   
-1.  在 **[物件總管]**中，連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的執行個體。  
+1.  在 **[物件總管]** 中，連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的執行個體。  
   
 2.  在 [物件總管] 中，尋找您想要從中刪除資料行的資料表，然後展開以公開資料行名稱。 
 
@@ -89,7 +86,7 @@ ms.lasthandoff: 01/18/2018
   
 #### <a name="to-delete-columns"></a>若要刪除資料行  
   
-1.  在 **[物件總管]**中，連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的執行個體。  
+1.  在 **[物件總管]** 中，連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的執行個體。  
   
 2.  在標準列上，按一下 **[新增查詢]**。  
   

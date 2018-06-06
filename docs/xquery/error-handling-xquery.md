@@ -1,16 +1,15 @@
 ---
-title: "錯誤處理 (XQuery) |Microsoft 文件"
-ms.custom: 
+title: 錯誤處理 (XQuery) |Microsoft 文件
+ms.custom: ''
 ms.date: 03/17/2017
-ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
-ms.service: 
+ms.prod: sql
+ms.prod_service: sql
 ms.component: xquery
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -22,16 +21,15 @@ helpviewer_keywords:
 - XQuery, error handling
 - dynamic errors [XQuery]
 ms.assetid: 7dee3c11-aea0-4d10-9126-d54db19448f2
-caps.latest.revision: 
+caps.latest.revision: 29
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 76839b7a31bc6468cc397c9d6255af5660bcfcd5
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: c7277c122c76ef2aa9ff6c82b4693faed6b409ab
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="error-handling-xquery"></a>錯誤處理 (XQuery)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -54,7 +52,7 @@ ms.lasthandoff: 02/09/2018
  因為 () 是對應到 False，所以在動態錯誤在述詞內發生的情況下，經常不會引發錯誤而未改變語意。 但是，在某些情況下，傳回 () 而非動態錯誤，可能會導致非預期的結果。 以下是說明此點的範例。  
   
 ### <a name="example-using-the-avg-function-with-a-string"></a>範例：搭配字串使用 avg() 函數  
- 在下列範例中， [avg 函數](../xquery/aggregate-functions-avg.md)呼叫以計算三個值的平均值。 其中一個值是一個字串。 因為此例中的 XML 執行個體不具類型，所以其內含的所有資料都屬於不具類型的不可部份完成類型。 **Avg （)**函式的第一次會轉換這些值**xs: double**之前計算平均值。 不過，此值， `"Hello"`，無法轉換成**xs: double**並建立動態錯誤。 在此情況下，而不是傳回動態錯誤，轉型的`"Hello"`至**xs: double**會導致空的序列。 **Avg （)**函式會忽略此值，計算平均值的兩個值，然後傳回 150。  
+ 在下列範例中， [avg 函數](../xquery/aggregate-functions-avg.md)呼叫以計算三個值的平均值。 其中一個值是一個字串。 因為此例中的 XML 執行個體不具類型，所以其內含的所有資料都屬於不具類型的不可部份完成類型。 **Avg （)** 函式的第一次會轉換這些值**xs: double**之前計算平均值。 不過，此值， `"Hello"`，無法轉換成**xs: double**並建立動態錯誤。 在此情況下，而不是傳回動態錯誤，轉型的`"Hello"`至**xs: double**會導致空的序列。 **Avg （)** 函式會忽略此值，計算平均值的兩個值，然後傳回 150。  
   
 ```  
 DECLARE @x xml  
@@ -67,7 +65,7 @@ SELECT @x.query('avg(//*)')
 ```  
   
 ### <a name="example-using-the-not-function"></a>範例：使用 not 函數  
- 當您使用[無法運作](../xquery/functions-on-boolean-values-not-function.md)述詞，例如`/SomeNode[not(Expression)]`，而且運算式導致動態錯誤，空的序列將會傳回而非錯誤。 套用**not （)**空序列傳回 True，而非錯誤。  
+ 當您使用[無法運作](../xquery/functions-on-boolean-values-not-function.md)述詞，例如`/SomeNode[not(Expression)]`，而且運算式導致動態錯誤，空的序列將會傳回而非錯誤。 套用**not （)** 空序列傳回 True，而非錯誤。  
   
 ### <a name="example-casting-a-string"></a>範例：轉換字串  
  在以下範例中，會將常值字串 "NaN" 轉換成 xs:string，然後再轉換成 xs:double。 結果會是一個空白資料列集。 雖然無法順利將字串 "NaN" 轉換成 xs:double，但是因為此字串會先轉換成 xs:string，所以此點要到執行階段才會確定。  
@@ -89,7 +87,7 @@ GO
 ```  
   
 #### <a name="implementation-limitations"></a>實作限制  
- **Fn:error()**函式不支援。  
+ **Fn:error()** 函式不支援。  
   
 ## <a name="see-also"></a>另請參閱  
  [XQuery 語言參考 &#40;SQL Server&#41;](../xquery/xquery-language-reference-sql-server.md)   

@@ -1,35 +1,23 @@
 ---
-title: "篩選資料表中的資料 |Microsoft 文件"
-ms.custom: 
-ms.date: 03/01/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services, azure-analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords:
-- sql13.asvs.bidtoolset.notallitemsshowing.f1
-- sql13.asvs.bidtoolset.autofiltermenu.f1
-- sql13.asvs.bidtoolset.customfilterdb.f1
-ms.assetid: 3223059d-f525-4835-bf88-ebc195d9dbdc
-caps.latest.revision: 
-author: Minewiskan
+title: 篩選資料表中的資料 |Microsoft 文件
+ms.date: 05/07/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: tabular-models
+ms.topic: conceptual
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: c9b9fbee486fe2817a34c589041e1e8566585b96
-ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
+ms.openlocfilehash: 65b3e9bfc1b4e3c8a246d2732484d835065e82bb
+ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="filter-data-in-a-table"></a>篩選資料表中的資料 
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
-您可以在匯入資料時套用篩選，以控制要載入資料表的資料列。 匯入資料之後，您就無法刪除個別的資料列。 但是，您可以套用自訂篩選來控制資料列的顯示方式。 不符合篩選準則的資料列則會隱藏起來。 您可以依一個或多個資料行進行篩選。 篩選會加總，也就是說，每一個額外的篩選都會以目前的篩選為基礎，並進一步減少資料子集。  
+  您可以在匯入資料時套用篩選，以控制要載入資料表的資料列。 匯入資料之後，您就無法刪除個別的資料列。 但是，您可以套用自訂篩選來控制資料列的顯示方式。 不符合篩選準則的資料列則會隱藏起來。 您可以依一個或多個資料行進行篩選。 篩選會加總，也就是說，每一個額外的篩選都會以目前的篩選為基礎，並進一步減少資料子集。  
   
 > [!NOTE]  
 >  篩選預覽視窗會限制顯示的不同值數量。 如果超出限制，將顯示一則訊息。  

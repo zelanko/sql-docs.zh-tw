@@ -1,16 +1,14 @@
 ---
-title: "sp_fkeys (TRANSACT-SQL) |Microsoft 文件"
-ms.custom: 
+title: sp_fkeys (TRANSACT-SQL) |Microsoft 文件
+ms.custom: ''
 ms.date: 09/08/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: system-objects
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_fkeys
@@ -20,16 +18,16 @@ dev_langs:
 helpviewer_keywords:
 - sp_fkeys
 ms.assetid: 18110444-d38d-4cff-90d2-d1fc6236668b
-caps.latest.revision: 
+caps.latest.revision: 32
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 511266de529055263470af2de8c463369d7f3c6e
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: fdb582cf8e77e61d7723ea1c6ed2e854ef8f6940
+ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="spfkeys-transact-sql"></a>sp_fkeys (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -51,18 +49,18 @@ sp_fkeys [ @pktable_name = ] 'pktable_name'
   
 ## <a name="arguments"></a>引數  
  [ @pktable_name=] '*b l e _*'  
- 這是用來傳回目錄資訊的資料表名稱，含主索引鍵。 *b l e _*是**sysname**，預設值是 NULL。 不支援萬用字元的模式比對。 這個參數或*fktable_name*必須提供參數，或兩者。  
+ 這是用來傳回目錄資訊的資料表名稱，含主索引鍵。 *b l e _* 是**sysname**，預設值是 NULL。 不支援萬用字元的模式比對。 這個參數或*fktable_name*必須提供參數，或兩者。  
   
  [ @pktable_owner=] '*pktable_owner*'  
  是用來傳回目錄資訊之資料表 （含主索引鍵） 的擁有者名稱。 *pktable_owner*是**sysname**，預設值是 NULL。 不支援萬用字元的模式比對。 如果*pktable_owner*未指定，套用基礎 dbms 的預設資料表可見性規則。  
   
- 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，如果目前使用者擁有一份含指定名稱的資料表，就會傳回這份資料表的資料行。 如果*pktable_owner*未指定目前使用者並未擁有含有指定的資料表和*b l e _*，程序會尋找具有指定的資料表*ble_*資料庫擁有者所擁有。 如果資料表存在，就會傳回它的資料行。  
+ 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，如果目前使用者擁有一份含指定名稱的資料表，就會傳回這份資料表的資料行。 如果*pktable_owner*未指定目前使用者並未擁有含有指定的資料表和*b l e _*，程序會尋找具有指定的資料表*ble_* 資料庫擁有者所擁有。 如果資料表存在，就會傳回它的資料行。  
   
  [ @pktable_qualifier =] '*pktable_qualifier*'  
  這是資料表 (含主索引鍵) 限定詞的名稱。 *pktable_qualifier*是 sysname，預設值是 NULL。 各種 DBMS 產品都支援三部分的資料表命名 (*q*)。 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，這個限定詞代表資料庫名稱。 在某些產品中，它代表資料表之資料庫環境的伺服器名稱。  
   
  [ @fktable_name=] '*fktable_name*'  
- 這是用來傳回目錄資訊之資料表 (含外部索引鍵) 的名稱。 *fktable_name*是 sysname，預設值是 NULL。 不支援萬用字元的模式比對。 這個參數或*b l e _*必須提供參數，或兩者。  
+ 這是用來傳回目錄資訊之資料表 (含外部索引鍵) 的名稱。 *fktable_name*是 sysname，預設值是 NULL。 不支援萬用字元的模式比對。 這個參數或*b l e _* 必須提供參數，或兩者。  
   
  [ @fktable_owner =] '*fktable_owner*'  
  這是用來傳回目錄資訊之資料表 (含外部索引鍵) 的擁有者名稱。 *fktable_owner*是**sysname**，預設值是 NULL。 不支援萬用字元的模式比對。 如果*fktable_owner*未指定，套用基礎 dbms 的預設資料表可見性規則。  
@@ -119,17 +117,17 @@ EXEC sp_fkeys @pktable_name = N'Department'
     ,@pktable_owner = N'HumanResources';  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>範例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]和[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>範例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
  下列範例會擷取 `DimDate` 資料庫之 `AdventureWorksPDW2012` 資料表的外部索引鍵清單。 會傳回任何資料列，因為[!INCLUDE[ssDW](../../includes/ssdw-md.md)]不支援的外部索引鍵。  
   
 ```sql  
 EXEC sp_fkeys @pktable_name = N'DimDate;  
 ```  
   
-## <a name="see-also"></a>請參閱＜  
- [目錄預存程序 &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/catalog-stored-procedures-transact-sql.md)   
+## <a name="see-also"></a>另請參閱  
+ [目錄預存程序&#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/catalog-stored-procedures-transact-sql.md)   
  [系統預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
- [sp_pkeys &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/sp-pkeys-transact-sql.md)  
+ [sp_pkeys &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-pkeys-transact-sql.md)  
   
   
 

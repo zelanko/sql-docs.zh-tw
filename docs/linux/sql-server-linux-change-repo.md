@@ -1,24 +1,21 @@
 ---
-title: "設定 SQL Server on Linux 的儲存機制 |Microsoft 文件"
-description: "請檢查並設定在 Linux 上的 SQL Server 2017 來源儲存機制。 來源儲存機制會影響安裝和升級期間會套用的 SQL Server 的版本。"
+title: 設定 SQL Server on Linux 的儲存機制 |Microsoft 文件
+description: 請檢查並設定在 Linux 上的 SQL Server 2017 來源儲存機制。 來源儲存機制會影響安裝和升級期間會套用的 SQL Server 的版本。
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.date: 02/14/2018
 ms.topic: article
-ms.prod: sql-non-specified
-ms.prod_service: database-engine
-ms.service: 
-ms.component: 
+ms.prod: sql
+ms.component: ''
 ms.suite: sql
 ms.custom: sql-linux
-ms.technology: database-engine
-ms.workload: Active
-ms.openlocfilehash: 33f02349d10cfd0ada76325c378d0259ec931002
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.technology: linux
+ms.openlocfilehash: 63cb2f56852a668bc48aa85cd31a72a2b583463b
+ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="configure-repositories-for-installing-and-upgrading-sql-server-on-linux"></a>設定安裝與升級 SQL Server on Linux 的儲存機制
 
@@ -66,7 +63,7 @@ ms.lasthandoff: 02/15/2018
 ### <a name="check-for-previously-configured-repositories-rhel"></a>請檢查先前設定的儲存機制 (RHEL)
 先確認是否已註冊的 SQL Server 儲存機制。
 
-1. 檢視中的檔案**/etc/yum.repos.d**目錄使用下列命令：
+1. 檢視中的檔案 **/etc/yum.repos.d**目錄使用下列命令：
 
    ```bash
    sudo ls /etc/yum.repos.d
@@ -94,7 +91,7 @@ sudo rm -rf /etc/yum.repos.d/mssql-server.repo
 ### <a name="configure-new-repository-rhel"></a>設定新的儲存機制 (RHEL)
 設定要用於 SQL Server 安裝與升級新的儲存機制。 使用下列命令之一來設定您選擇的儲存機制。
 
-| Repository | Command |
+| Repository | 命令 |
 |---|---|
 | **CU** | `sudo curl -o /etc/yum.repos.d/mssql-server.repo https://packages.microsoft.com/config/rhel/7/mssql-server-2017.repo` |
 | **GDR** | `sudo curl -o /etc/yum.repos.d/mssql-server.repo https://packages.microsoft.com/config/rhel/7/mssql-server-2017-gdr.repo` |
@@ -125,7 +122,7 @@ sudo rm -rf /etc/yum.repos.d/mssql-server.repo
 ### <a name="configure-new-repository-sles"></a>設定新的儲存機制 (SLES)
 設定要用於 SQL Server 安裝與升級新的儲存機制。 使用下列命令之一來設定您選擇的儲存機制。
 
-| Repository | Command |
+| Repository | 命令 |
 |---|---|
 | **CU** | `sudo zypper addrepo -fc https://packages.microsoft.com/config/sles/12/mssql-server-2017.repo` |
 | **GDR** | `sudo zypper addrepo -fc https://packages.microsoft.com/config/sles/12/mssql-server-2017-gdr.repo` |
@@ -136,7 +133,7 @@ sudo rm -rf /etc/yum.repos.d/mssql-server.repo
 ### <a name="check-for-previously-configured-repositories-ubuntu"></a>請檢查先前設定的儲存機制 (Ubuntu)
 先確認是否已註冊的 SQL Server 儲存機制。
 
-1. 檢視的內容**/etc/apt/sources.list**檔案。
+1. 檢視的內容 **/etc/apt/sources.list**檔案。
 
    ```bash
    sudo cat /etc/apt/sources.list
@@ -164,7 +161,7 @@ sudo rm -rf /etc/yum.repos.d/mssql-server.repo
 
 2. 使用下列命令之一來設定您選擇的儲存機制。
 
-   | Repository | Command |
+   | Repository | 命令 |
    |---|---|
    | **CU** | `sudo add-apt-repository "$(curl https://packages.microsoft.com/config/ubuntu/16.04/mssql-server-2017.list)"` |
    | **GDR** | `sudo add-apt-repository "$(curl https://packages.microsoft.com/config/ubuntu/16.04/mssql-server-2017-gdr.list)"` |

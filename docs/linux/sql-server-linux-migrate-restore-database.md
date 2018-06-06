@@ -1,25 +1,22 @@
 ---
-title: "從 Windows 的 SQL Server 資料庫移轉至 Linux |Microsoft 文件"
-description: "本教學課程會示範如何取得 Windows 上的 SQL Server 資料庫備份，並將它還原到執行 SQL Server 2017 Linux 機器。"
+title: 從 Windows 的 SQL Server 資料庫移轉至 Linux |Microsoft 文件
+description: 本教學課程會示範如何取得 Windows 上的 SQL Server 資料庫備份，並將它還原到執行 SQL Server 2017 Linux 機器。
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.date: 08/16/2017
 ms.topic: article
-ms.prod: sql-non-specified
-ms.prod_service: database-engine
-ms.service: 
-ms.component: 
+ms.prod: sql
+ms.component: ''
 ms.suite: sql
 ms.custom: sql-linux
-ms.technology: database-engine
+ms.technology: linux
 ms.assetid: 9ac64d1a-9fe5-446e-93c3-d17b8f55a28f
-ms.workload: On Demand
-ms.openlocfilehash: f68f5aae50460dc1e39a24ac1213ac477c96d552
-ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
+ms.openlocfilehash: 559ae24a819cfff1172d1829ef3ca5e679a40122
+ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/13/2018
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="migrate-a-sql-server-database-from-windows-to-linux-using-backup-and-restore"></a>從 Windows 的 SQL Server 資料庫移轉至 Linux 使用備份與還原
 
@@ -108,7 +105,7 @@ SQL Server 的備份和還原功能會從 SQL Server 在 Windows 上的資料庫
 
 ## <a name="move-the-backup-file-before-restoring"></a>將備份檔案還原之前
 
-此時，備份檔案是在使用者的主目錄中的 Linux 伺服器上。 之前將資料庫還原到 SQL Server，您必須將備份放的子目錄中**/var/opt/mssql**。
+此時，備份檔案是在使用者的主目錄中的 Linux 伺服器上。 之前將資料庫還原到 SQL Server，您必須將備份放的子目錄中 **/var/opt/mssql**。
 
 1. 相同 Windows 撞工作階段中，從遠端連線到您的目標 Linux 機器，與**ssh**。 下列範例會連接到 Linux 機器**192.0.2.9**身分**user1**。
 
@@ -149,7 +146,7 @@ SQL Server 的備份和還原功能會從 SQL Server 在 Windows 上的資料庫
 > [!NOTE]
 > 下列步驟會使用**sqlcmd**工具。 如果您尚未安裝 SQL Server 工具，請參閱[Linux 上的安裝 SQL Server 命令列工具](sql-server-linux-setup-tools.md)。
 
-1. 在相同的終端機中，啟動**sqlcmd**。 下列範例會連接到本機的 SQL Server 執行個體與**SA**使用者。 輸入的密碼，出現提示時，或藉由新增指定的密碼**-P**參數。
+1. 在相同的終端機中，啟動**sqlcmd**。 下列範例會連接到本機的 SQL Server 執行個體與**SA**使用者。 輸入的密碼，出現提示時，或藉由新增指定的密碼 **-P**參數。
 
    ```bash
    sqlcmd -S localhost -U SA

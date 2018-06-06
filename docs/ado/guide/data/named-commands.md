@@ -1,31 +1,28 @@
 ---
-title: "名為命令 |Microsoft 文件"
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
+title: 名為命令 |Microsoft 文件
+ms.prod: sql
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
-ms.custom: 
+ms.technology: connectivity
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - named commands [ADO]
 - commands [ADO]
 ms.assetid: 5a0ec8f9-5ba3-4f9f-b80d-2073aa049586
-caps.latest.revision: 
+caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 4e00f320409602e33ba250f4943b782ec7ea9a96
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 823ee61431555d978fb33aa0f9a58264af1ce2c1
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="named-commands"></a>具名的命令
 [建立和執行簡單的命令](../../../ado/guide/data/creating-and-executing-a-simple-command.md)示範一種方法執行命令。 還有另一個方法： 您可以讓一個具名的命令，然後呼叫這個具名命令直接依據**連接**物件 (指派給**ActiveConnection**屬性**命令**物件)。 將名稱指派給命名命令表示**名稱**屬性**命令**物件。 例如，  

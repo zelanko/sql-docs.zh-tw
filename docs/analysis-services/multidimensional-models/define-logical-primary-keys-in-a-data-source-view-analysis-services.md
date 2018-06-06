@@ -1,36 +1,23 @@
 ---
-title: "資料來源檢視 (Analysis Services) 中定義邏輯主索引鍵 |Microsoft 文件"
-ms.custom: 
-ms.date: 03/01/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
-helpviewer_keywords:
-- removing logical primary keys
-- logical primary keys [SQL Server]
-- deleting logical primary keys
-- data source views [Analysis Services], logical primary keys
-ms.assetid: 172bc267-c637-4caa-bf55-0ba198d30b1e
-caps.latest.revision: 
-author: Minewiskan
+title: 資料來源檢視 (Analysis Services) 中定義邏輯主索引鍵 |Microsoft 文件
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: multidimensional-models
+ms.topic: conceptual
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: ab3e26fdddc257e2ddf8edd450c412bbabb7c557
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 90684f55414fa9e3f0d68a8ec90884fdae4d2c0a
+ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="define-logical-primary-keys-in-a-data-source-view-analysis-services"></a>在資料來源檢視中定義邏輯主索引鍵 (Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-[資料來源檢視精靈] 和資料來源檢視設計師會自動根據基礎資料庫資料表，針對加入到資料來源檢視中的資料表定義主索引鍵。  
+  [資料來源檢視精靈] 和資料來源檢視設計師會自動根據基礎資料庫資料表，針對加入到資料來源檢視中的資料表定義主索引鍵。  
   
  您有時候可能需要手動定義資料來源檢視中的主索引鍵。 例如，基於效能或設計考量，資料來源中的資料表可能並未明確定義主索引鍵資料行。 具名查詢和檢視也可能會省略資料表的主索引鍵資料行。 如果資料表、檢視或具名查詢沒有定義實體主索引鍵，您可以在資料來源檢視設計師中，以手動方式在資料表、檢視或具名查詢中定義邏輯主索引鍵。  
   
@@ -53,6 +40,6 @@ ms.lasthandoff: 02/15/2018
   
 ## <a name="see-also"></a>另請參閱  
  [多維度模型中的資料來源檢視](../../analysis-services/multidimensional-models/data-source-views-in-multidimensional-models.md)   
- [在資料來源檢視 &#40; 中定義具名的計算Analysis Services &#41;](../../analysis-services/multidimensional-models/define-named-calculations-in-a-data-source-view-analysis-services.md)  
+ [在資料來源檢視 & #40; 中定義具名的計算Analysis Services & #41;](../../analysis-services/multidimensional-models/define-named-calculations-in-a-data-source-view-analysis-services.md)  
   
   

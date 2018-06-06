@@ -1,30 +1,29 @@
 ---
-title: "使用 Azure Active Directory 驗證連線 |Microsoft 文件"
-ms.custom: 
+title: 使用 Azure Active Directory 驗證連線 |Microsoft 文件
+ms.custom: ''
 ms.date: 01/19/2018
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
-ms.component: jdbc
-ms.technology:
-- drivers
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.prod: sql
+ms.prod_service: connectivity
+ms.technology: connectivity
+ms.topic: conceptual
 ms.assetid: 9c9d97be-de1d-412f-901d-5d9860c3df8c
-caps.latest.revision: 
+caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
-ms.workload: On Demand
-ms.openlocfilehash: 28c8e53032cacb6620aeb304c228c35deec9e7a6
-ms.sourcegitcommit: 9d0467265e052b925547aafaca51e5a5e93b7e38
+manager: craigg
+ms.openlocfilehash: d6df50936da3d8b31ec3bc7ecd62212fa6987c4d
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/02/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="connecting-using-azure-active-directory-authentication"></a>使用 Azure Active Directory 驗證連線
+
+[!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
+
 本文章提供有關如何開發使用 SQL Server 的 Microsoft JDBC Driver 6.0 （或更高） 的 Azure Active Directory 驗證功能的 Java 應用程式的資訊。
 
 您可以使用 Azure Active Directory (AAD) 驗證，連接到 Azure SQL Database v12 的機制使用 Azure Active Directory 中的身分識別。 使用 Azure Active Directory 驗證來集中管理身分識別的資料庫使用者，以及 SQL Server 驗證的替代方案。 JDBC 驅動程式可讓您連接到 Azure SQL DB JDBC 連接字串中指定您的 Azure Active Directory 認證。 如需如何設定 Azure Active Directory 驗證的詳細資訊，請造訪[連接到 SQL 資料庫使用 Azure Active Directory 驗證](https://azure.microsoft.com/documentation/articles/sql-database-aad-authentication/)。 
@@ -212,17 +211,16 @@ You have successfully logged on as: <your user name>
 1.  Azure Active Directory 中建立應用程式帳戶，為您的服務。
     1. 登入 Azure 管理入口網站
     2. 按一下左側導覽中的 Azure Active Directory
-    3. 按一下您要註冊範例應用程式的目錄租用戶。 這必須是相同的目錄與您的資料庫 （裝載您資料庫的伺服器） 相關聯。
-    4. 按一下 [應用程式] 索引標籤。
-    5. 抽屜，按一下 [新增]。
-    6. 按一下 [新增我的組織開發的應用程式]。
-    7. 輸入 mytokentest 作為應用程式的易記名稱，選取 「 Web 應用程式和/或 Web API 」，然後再按下一步。
-    8. 假設此應用程式協助程式/服務並不是 web 應用程式，它並沒有登入 URL 或應用程式識別碼 URI。 針對這兩個欄位中，輸入 http://mytokentest
-    9. 雖然仍在 Azure 入口網站中，按一下 應用程式的 設定 索引標籤
-    10. 尋找用戶端識別碼值，並將它複製擱置在一旁，您稍後設定您的應用程式 (例如，a4bbfe26-dbaa-4fec-8ef5-223d229f647d) 時。 請參閱下列快照集。
-    11. 下一節 「 金鑰 」，選取金鑰的持續時間、 儲存組態，並複製的索引鍵，供日後使用。 這是用戶端密碼。
-    12. 底部，按一下 「 檢視在端點上 」，並複製下 「 OAUTH 2.0 授權端點 」 的 URL 以供稍後使用。 這是 STS 的 URL。
-
+    3. 按一下 「 應用程式註冊 」 索引標籤。
+    4. 抽屜按一下 「 新的應用程式註冊 」。
+    5. 輸入 mytokentest 作為應用程式的易記名稱，選取 「 Web 應用程式/應用程式開發介面 」。
+    6. 我們不需要登入 URL。 只是提供的任何項目: 「http://mytokentest"。
+    7. 按一下底部的 [建立]。
+    9. 仍在 Azure 入口網站中，按一下您的應用程式的 [設定] 索引標籤，開啟 [屬性] 索引標籤。
+    10. 找出 「 應用程式識別碼 」 （也稱為用戶端識別碼） 值，並將它複製擱置在一旁，您稍後設定您的應用程式 (例如，1846943b-ad04-4808-aa13-4702d908b5c1) 時。 請參閱下列快照集。
+    11. 下一節 「 金鑰 」，建立一個機碼 [名稱] 欄位中填入、 選取金鑰的持續時間和儲存設定 （將保留空白的 [值] 欄位）。 [值] 欄位應該是在儲存之後，自動填入，複製產生的值。 這是用戶端密碼。
+    12. 按一下左側面板上的 Azure Active Directory。 在 「 應用程式註冊 」 到 「 結束點 」 索引標籤。複製下 「 OATH 2.0 權杖端點 」 的 URL，這是您 STS 的 URL。
+    
     ![JDBC_AAD_Token](../../connect/jdbc/media/jdbc_aad_token.png)  
 2. 登入您 Azure SQL Server 使用者資料庫，做為 Azure Active Directory 系統管理員，以及使用 T-SQL 命令佈建應用程式主體之自主的資料庫使用者。 請參閱[連接到 SQL Database 或 SQL 資料倉儲使用 Azure Active Directory 驗證](https://azure.microsoft.com/documentation/articles/sql-database-aad-authentication/)如需有關如何建立 Azure Active Directory 系統管理員 」 和 「 自主的資料庫使用者。
 
@@ -254,7 +252,7 @@ public class TokenBasedExample {
         // Retrieve the access token from the AD.
         String spn = "https://database.windows.net/";
         String stsurl = "https://login.microsoftonline.com/..."; // Replace with your STS URL.
-        String clientId = "a4bbfe26-dbaa-4fec-8ef5-223d229f647d"; // Replace with your client ID.
+        String clientId = "1846943b-ad04-4808-aa13-4702d908b5c1"; // Replace with your client ID.
         String clientSecret = "..."; // Replace with your client secret.
 
         AuthenticationContext context = new AuthenticationContext(stsurl, false, Executors.newFixedThreadPool(1));

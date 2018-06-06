@@ -1,16 +1,15 @@
 ---
-title: "Reporting Services 記錄檔和來源 | Microsoft Docs"
-ms.custom: 
+title: Reporting Services 記錄檔和來源 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: report-server
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - troubleshooting [Reporting Services], log files
 - logs [Reporting Services]
@@ -19,16 +18,15 @@ helpviewer_keywords:
 - report server log files
 - files [Reporting Services], logs
 ms.assetid: 80ef0acc-cbef-49d0-87e7-844e3ce19604
-caps.latest.revision: "49"
+caps.latest.revision: 49
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 7b36566dce410fff0122e66c735a3058061e2af8
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 8d2bbaf2046f8cf62264005e787938a8d61fee6a
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="reporting-services-log-files-and-sources"></a>Reporting Services 記錄檔和來源
   報表伺服器和報表伺服器環境會使用各種記錄目的地，以記錄有關伺服器作業與狀態的資訊。 記錄有兩個基本的類別目錄，也就是執行記錄和追蹤記錄。 執行記錄包含有關報表執行統計資料、稽核、效能診斷與最佳化的資訊。 追蹤記錄是有關錯誤訊息與一般診斷的資訊。  
@@ -46,7 +44,7 @@ ms.lasthandoff: 01/09/2018
 |[Windows 應用程式記錄檔](../../reporting-services/report-server/windows-application-log.md)|Microsoft Windows 應用程式記錄包含有關報表伺服器事件的資訊。|  
 |Windows 效能記錄|Windows 效能記錄包含報表伺服器的效能資料。 您可以建立效能記錄，然後選擇計數器來決定要收集的資料。 如需詳細資訊，請參閱＜ [Monitoring Report Server Performance](../../reporting-services/report-server/monitoring-report-server-performance.md)＞。|  
 |SQL Server 安裝程式記錄檔|記錄檔也是在安裝期間建立。 如果安裝失敗，或雖然成功但出現警告或其他訊息，您可以檢查記錄檔來排除問題。 如需詳細資訊，請參閱＜ [View and Read SQL Server Setup Log Files](../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)＞。|  
-|IIS 記錄|由 Microsoft Internet Information Services (IIS) 建立的記錄檔 如需詳細資訊，請參閱 [如何在 Internet Information Services (IIS) 中啟用記錄](http://support.microsoft.com/kb/313437) (http://support.microsoft.com/kb/313437)。|  
+|IIS 記錄|由 Microsoft Internet Information Services (IIS) 建立的記錄檔 如需詳細資訊，請參閱[如何在 Internet Information Services (IIS) 中啟用記錄](http://support.microsoft.com/kb/313437) (http://support.microsoft.com/kb/313437)。|  
   
 ## <a name="see-also"></a>另請參閱  
  [Reporting Services 報表伺服器 &#40;原生模式&#41;](../../reporting-services/report-server/reporting-services-report-server-native-mode.md)   

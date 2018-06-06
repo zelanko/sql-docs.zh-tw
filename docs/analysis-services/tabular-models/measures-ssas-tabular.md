@@ -1,30 +1,23 @@
 ---
-title: "量值 |Microsoft 文件"
-ms.custom: 
-ms.date: 04/10/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services, azure-analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
-ms.assetid: 27ec8f99-e9ef-44c9-a83f-f7c88e128ad3
-caps.latest.revision: "19"
-author: Minewiskan
+title: 量值 |Microsoft 文件
+ms.date: 05/07/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: tabular-models
+ms.topic: conceptual
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 41834c6a734417d6851e055cc63e7e8f89aea954
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: cbd53d9d49c937967e88cefa95750dca41631876
+ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/10/2018
 ---
-# <a name="measures"></a>量值
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]在表格式模型中，量值是在報表用戶端使用的 DAX 公式建立的計算。 量值會以使用者在報表用戶端應用程式中選取的欄位、篩選及交叉分析篩選器為依據來計算。  
+# <a name="measures"></a>[量值]
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
+  在表格式模型中，量值是透過報表用戶端內使用的 DAX 公式所建立的計算。 量值會以使用者在報表用戶端應用程式中選取的欄位、篩選及交叉分析篩選器為依據來計算。  
   
 ##  <a name="bkmk_understanding"></a> 優點  
  量值可以用標準彙總函式 (例如 AVERAGE、COUNT 或 SUM) 做為基礎，或者，您也可以使用 DAX 自行定義公式。 除了公式以外，每個量值都具備由量值資料類型定義的屬性，如名稱、資料表詳細資料、格式及小數位數。  
@@ -76,7 +69,7 @@ Sum of TotalProfit: =SUM([TotalProfit])
 ##  <a name="bkmk_properties"></a> 量值屬性  
  每個量值都有定義的屬性。 您可在 [屬性] 視窗中，編輯量值屬性以及相關聯的資料行屬性。 量值具有下列屬性：  
   
-|屬性|預設設定|描述|  
+|屬性|預設設定|Description|  
 |--------------|---------------------|-----------------|  
 |**說明**|空白|量值的說明。 報表用戶端中不會顯示量值說明。|  
 |**格式**|在公式運算式中，自動從參考資料行的資料類型來判斷。|量值的格式。 例如，貨幣或百分比。|  
@@ -90,11 +83,11 @@ Sum of TotalProfit: =SUM([TotalProfit])
   
 ##  <a name="bkmk_rel_tasks"></a> Related tasks  
   
-|主題|描述|  
+|主題|Description|  
 |-----------|-----------------|  
 |[建立及管理量值](../../analysis-services/tabular-models/create-and-manage-measures-ssas-tabular.md)|描述如何使用模型設計師中的量值方格，建立及管理量值。|  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [Kpi](../../analysis-services/tabular-models/kpis-ssas-tabular.md)   
  [建立及管理 Kpi](../../analysis-services/tabular-models/create-and-manage-kpis-ssas-tabular.md)   
  [導出資料行](../../analysis-services/tabular-models/ssas-calculated-columns.md)  

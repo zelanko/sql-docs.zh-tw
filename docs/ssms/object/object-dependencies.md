@@ -1,31 +1,31 @@
 ---
-title: "物件相依性 | Microsoft 文件"
-ms.custom: 
+title: 物件相依性 | Microsoft 文件
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
 ms.component: ssms-objects
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: tools-ssms
-ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords: sql13.swb.common.objectdependencies.f1
+ms.technology: ssms
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
+f1_keywords:
+- sql13.swb.common.objectdependencies.f1
 ms.assetid: c63d1160-3f3d-45df-99be-6fe081125fb5
-caps.latest.revision: "4"
+caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 05c3d4333e6debffe471ff7ba8d917f3dcd203d3
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.openlocfilehash: a7fae20ced8820f16353c8e8cc4633dda078b3a0
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="object-dependencies"></a>物件相依性
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 某些資料庫物件與其他資料庫物件具有相依性。 例如，檢視和預存程序必須相依於特定資料表，這些資料表中包含檢視或程序所傳回的資料。 目前物件的 **物件相依性 (一般頁面)** 列出必須存在，物件才能正常運作的資料庫物件，以及相依於所選物件的物件。 參考自身定義中之其他物件，並將定義儲存在系統目錄中的物件稱為 *參考實體*。 受其他物件參考的物件稱為 *被參考的實體*。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+某些資料庫物件與其他資料庫物件具有相依性。 例如，檢視和預存程序必須相依於特定資料表，這些資料表中包含檢視或程序所傳回的資料。 目前物件的 **物件相依性 (一般頁面)** 列出必須存在，物件才能正常運作的資料庫物件，以及相依於所選物件的物件。 參考自身定義中之其他物件，並將定義儲存在系統目錄中的物件稱為 *參考實體*。 受其他物件參考的物件稱為 *被參考的實體*。  
   
 目前物件的 **物件相依性 (進階頁面)** 列出相依於此物件的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 資料庫物件及 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion_md.md)] 物件。 這些物件可能會儲存在不同的伺服器上。  
   

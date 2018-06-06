@@ -1,31 +1,24 @@
 ---
-title: "SortPropertiesPosition 元素 (XML) |Microsoft 文件"
-ms.custom: 
-ms.date: 03/04/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services, azure-analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+title: SortPropertiesPosition 元素 (XML) |Microsoft 文件
+ms.date: 05/08/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: xmla
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
-ms.assetid: 68b040a7-ab16-46f5-8610-21db07df9181
-caps.latest.revision: "6"
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: d0492dae363abe5fb9acdb2c989297f808251302
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 855857e0c4b1a9cb554fcbaa61935809ad9c71e0
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34576340"
 ---
 # <a name="sortpropertiesposition-element-xml"></a>SortPropertiesPosition 元素 (XML)
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]包含的項目集合中項目的位置的相關資訊。  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
+  包含有關元素在元素集合中的位置資訊。  
   
 ## <a name="syntax"></a>語法  
   

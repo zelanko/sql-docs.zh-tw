@@ -1,16 +1,14 @@
 ---
 title: TOP (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/16/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
 ms.component: t-sql|queries
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: t-sql
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - TOP_TSQL
@@ -23,16 +21,16 @@ helpviewer_keywords:
 - TOP clause, about TOP clause
 - queries [SQL Server], results
 ms.assetid: da983c0a-06c5-4cf8-a6a4-7f9d66f34f2c
-caps.latest.revision: 
+caps.latest.revision: 60
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: Active
-ms.openlocfilehash: 926de1152e7c1223441d9ac85da11246049e31ea
-ms.sourcegitcommit: 4edac878b4751efa57601fe263c6b787b391bc7c
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 26eda1bce8b9f7775b2cada2e9633115020e94fb
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/19/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="top-transact-sql"></a>TOP (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -88,7 +86,7 @@ ms.lasthandoff: 02/19/2018
 ## <a name="interoperability"></a>互通性  
  TOP 運算式不會影響因觸發程序而執行的陳述式。 在觸發程序中，**inserted** 和 **deleted** 資料表只會傳回真正受 INSERT、UPDATE、MERGE 或 DELETE 陳述式影響的資料列。 例如，如果因使用 TOP 子句的 INSERT 陳述式而引發 INSERT TRIGGER，  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 允許透過檢視更新資料列。 由於 TOP 子句可包含在檢視表定義中，因此，如果資料列不再符合 TOP 運算式的需求，部分資料列可能會因更新而在檢視表中消失。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 允許透過檢視表更新資料列。 由於 TOP 子句可包含在檢視表定義中，因此，如果資料列不再符合 TOP 運算式的需求，部分資料列可能會因更新而在檢視表中消失。  
   
  在 MERGE 陳述式中指定時，當整個來源資料表和整個目標資料表聯結在一起，並且移除不符合插入、更新或刪除動作的聯結資料列「之後」，才會套用 TOP 子句。 TOP 子句會進一步將聯結的資料列數減少為指定的值，而且插入、更新或刪除動作會依照未排序的方式套用到剩餘的聯結資料列。 也就是說，將資料列散發到 WHEN 子句中定義的動作時，沒有任何特定順序。 例如，如果指定 TOP (10) 會影響 10 個資料列，在這些資料列中，可能會更新 7 個及插入 3 個，或者可能會刪除 1 個、更新 5 個及插入 4 個，依此類推。 因為 MERGE 陳述式會針對來源和目標資料表執行完整資料表掃描，所以當使用 TOP 子句，藉由建立多個批次來修改大型資料表時，I/O 效能可能會受到影響。 在此狀況中，請務必確保所有後續批次都是以新的資料列為目標。  
   

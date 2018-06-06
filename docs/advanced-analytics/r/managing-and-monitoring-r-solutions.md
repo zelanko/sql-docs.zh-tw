@@ -1,27 +1,18 @@
 ---
-title: "管理和監視的機器學習解決方案 |Microsoft 文件"
-ms.custom:
-- SQL2016_New_Updated
-ms.date: 07/26/2016
-ms.reviewer: 
-ms.suite: sql
-ms.prod: machine-learning-services
-ms.prod_service: machine-learning-services
-ms.component: r
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
-ms.assetid: d455f22a-190f-4a28-9088-98a843cd5db2
-caps.latest.revision: 
-author: jeannt
-ms.author: jeannt
-manager: cgronlund
-ms.workload: Inactive
-ms.openlocfilehash: 248b3b27a8df1320eb809c4cd537a12cefe4eacb
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+title: 管理及監視 SQL Server 中的機器學習解決方案 |Microsoft 文件
+ms.prod: sql
+ms.technology: machine-learning
+ms.date: 04/15/2018
+ms.topic: conceptual
+author: HeidiSteen
+ms.author: heidist
+manager: cgronlun
+ms.openlocfilehash: 4806224a1606fff58f63f6083fa577aa4066c795
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34585700"
 ---
 # <a name="managing-and-monitoring-machine-learning-solutions"></a>管理和監視的機器學習解決方案
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -48,7 +39,7 @@ ms.lasthandoff: 02/11/2018
 
 + [Python 安全性概觀](../python/security-overview-sql-server-python-services.md)
 
-+ [安裝和管理 R 封裝](../../advanced-analytics/r-services/installing-and-managing-r-packages.md)
++ [在 SQL Server 中的預設 R，並將 Python 封裝](installing-and-managing-r-packages.md)
 
 ## <a name="configuration-and-management"></a>設定和管理
 
@@ -63,7 +54,5 @@ ms.lasthandoff: 02/11/2018
 如需詳細資訊，請參閱下列資源：
 
 + [資源管理針對 R 服務](../r/resource-governance-for-r-services.md)
-
-+ [監視 R Services](../r/monitoring-r-services.md)
 
 + [設定及管理進階分析擴充功能](../r/configure-and-manage-advanced-analytics-extensions.md)

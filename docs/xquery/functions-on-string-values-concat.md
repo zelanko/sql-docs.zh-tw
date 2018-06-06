@@ -1,16 +1,15 @@
 ---
-title: "concat 函數 (XQuery) |Microsoft 文件"
-ms.custom: 
+title: concat 函數 (XQuery) |Microsoft 文件
+ms.custom: ''
 ms.date: 03/09/2017
-ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
-ms.service: 
+ms.prod: sql
+ms.prod_service: sql
 ms.component: xquery
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,16 +19,15 @@ helpviewer_keywords:
 - fn:concat function
 - concat function [XQuery]
 ms.assetid: d50afd20-a297-445e-be9e-13b48017e7ca
-caps.latest.revision: 
+caps.latest.revision: 32
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 5f4970f431b3929268414fd78d7e834d7a835919
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 8be65777bb65ad54735ad6bdf43ea88608355c5b
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="functions-on-string-values---concat"></a>針對字串值-concat 函數
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -53,7 +51,7 @@ fn:concat ($string as xs:string?
  函式至少需要兩個引數。 如果引數是空白時序，將以零長度的字串處理。  
   
 ## <a name="supplementary-characters-surrogate-pairs"></a>補充字元 (Surrogate 字組)  
- XQuery 函式中 Surrogate 字組的行為相依於資料庫相容性層級，而且在某些情況下，還相依於函式的預設命名空間 URI。 如需詳細資訊，請參閱主題中的 「 XQuery 函式是 Surrogate 感知 」 區段[SQL Server 2016 中對於 Database Engine 功能的突破性變更](../database-engine/breaking-changes-to-database-engine-features-in-sql-server-2016.md)。 另請參閱[ALTER DATABASE 相容性層級 &#40;TRANSACT-SQL &#41;](../t-sql/statements/alter-database-transact-sql-compatibility-level.md)和[Collation and Unicode Support](../relational-databases/collations/collation-and-unicode-support.md)。  
+ XQuery 函式中 Surrogate 字組的行為相依於資料庫相容性層級，而且在某些情況下，還相依於函式的預設命名空間 URI。 如需詳細資訊，請參閱主題中的 「 XQuery 函式是 Surrogate 感知 」 區段[SQL Server 2016 中對於 Database Engine 功能的突破性變更](../database-engine/breaking-changes-to-database-engine-features-in-sql-server-2016.md)。 另請參閱[ALTER DATABASE 相容性層級&#40;TRANSACT-SQL&#41; ](../t-sql/statements/alter-database-transact-sql-compatibility-level.md)和[Collation and Unicode Support](../relational-databases/collations/collation-and-unicode-support.md)。  
   
 ## <a name="examples"></a>範例  
  本主題提供 XQuery 範例，針對 XML 執行個體儲存在各種**xml**類型資料行中的 AdventureWorks 範例資料庫。  
@@ -92,7 +90,7 @@ WHERE  PD.ProductModelID=28
 <Product ProductModelID="28" ProductModelName="Road-450">1 year-parts and labor</Product>  
 ```  
   
- 下列查詢會擷取特定產品的資訊。 下列查詢會擷取儲存 XML 目錄描述的所有產品之相同資訊。 **Exist （)**方法**xml** WHERE 子句會傳回 True，則資料列中的 XML 文件中的資料類型 <`ProductDescription`> 項目。  
+ 下列查詢會擷取特定產品的資訊。 下列查詢會擷取儲存 XML 目錄描述的所有產品之相同資訊。 **Exist （)** 方法**xml** WHERE 子句會傳回 True，則資料列中的 XML 文件中的資料類型 <`ProductDescription`> 項目。  
   
 ```  
 WITH XMLNAMESPACES (  
@@ -114,7 +112,7 @@ WHERE CatalogDescription.exist('//pd:ProductDescription ') = 1
   
 ```  
   
- 請注意，所傳回的布林值**exist （)**方法**xml**與 1 比較類型。  
+ 請注意，所傳回的布林值**exist （)** 方法**xml**與 1 比較類型。  
   
 ### <a name="implementation-limitations"></a>實作限制  
  以下為其限制：  

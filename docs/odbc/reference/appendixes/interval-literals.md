@@ -1,31 +1,28 @@
 ---
-title: "間隔常值 |Microsoft 文件"
-ms.custom: 
+title: 間隔常值 |Microsoft 文件
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
-ms.component: odbc
-ms.reviewer: 
+ms.prod: sql
+ms.prod_service: connectivity
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: connectivity
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - data types [ODBC], interval data types
 - interval literals [ODBC]
 - interval data type [ODBC], literals
 ms.assetid: f9e6c3c7-4f98-483f-89d8-ebc5680f021b
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
-ms.workload: Inactive
-ms.openlocfilehash: 0ee22a6f808dd1b97d0d865229c78cbf26808fba
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+manager: craigg
+ms.openlocfilehash: e86666c4b956b0f926644f0470d7bdf6e8d8dbff
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="interval-literals"></a>間隔常值
 ODBC 需要所有的驅動程式支援所有 C 間隔資料型別 SQL_CHAR 或 SQL_VARCHAR 資料類型的轉換。 如果基礎資料來源不支援間隔資料類型，不過，驅動程式必須知道為了支援這些轉換的正確格式 SQL_CHAR 欄位中的值。 同樣地，ODBC 需要應該有任何的 ODBC C 類型可轉換成 SQL_CHAR 或 SQL_VARCHAR，讓驅動程式必須知道何種格式字元的欄位中儲存的間隔。 本章節描述間隔常值，用以驗證 SQL_CHAR 欄位，或從 C 間隔資料類型轉換期間需要的驅動程式寫入器的語法。  

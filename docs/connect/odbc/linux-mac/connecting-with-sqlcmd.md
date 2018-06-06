@@ -1,28 +1,26 @@
 ---
-title: "使用 sqlcmd 連接 |Microsoft 文件"
-ms.custom: 
+title: 使用 sqlcmd 連接 |Microsoft 文件
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
-ms.component: odbc
-ms.reviewer: 
+ms.prod: sql
+ms.prod_service: connectivity
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
-ms.topic: article
-helpviewer_keywords: sqlcmd
+ms.technology: connectivity
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
+helpviewer_keywords:
+- sqlcmd
 ms.assetid: 61a2ec0d-1bcb-4231-bea0-cff866c21463
-caps.latest.revision: "45"
+caps.latest.revision: 45
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
-ms.workload: On Demand
-ms.openlocfilehash: c08f390860a35ccbd5dd743317a52df80c05ef52
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+manager: craigg
+ms.openlocfilehash: c330fd329f28fa7d89b62b9af6bb8d4bb67c2bc4
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="connecting-with-sqlcmd"></a>使用 sqlcmd 連接
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -68,21 +66,21 @@ sqlcmd –Sxxx.xxx.xxx.xxx –Uxxx -Pxxx
   
 - -k 移除或取代控制字元。  
   
-- **-K***application_intent*  
-宣告連接到伺服器時的應用程式工作負載類型。 目前唯一支援的值是 **ReadOnly**。 如果**-K**未指定，則`sqlcmd`不支援 AlwaysOn 可用性群組中的次要複本的連接能力。 如需詳細資訊，請參閱[ODBC Driver on Linux 及 macOS-高可用性和災害復原](../../../connect/odbc/linux-mac/odbc-driver-on-linux-support-for-high-availability-disaster-recovery.md)。  
+- **-K * * * application_intent*  
+宣告連接到伺服器時的應用程式工作負載類型。 目前唯一支援的值是 **ReadOnly**。 如果 **-K**未指定，則`sqlcmd`不支援 AlwaysOn 可用性群組中的次要複本的連接能力。 如需詳細資訊，請參閱[ODBC Driver on Linux 及 macOS-高可用性和災害復原](../../../connect/odbc/linux-mac/odbc-driver-on-linux-support-for-high-availability-disaster-recovery.md)。  
   
 > [!NOTE]  
-> CTP for SUSE Linux 不支援**-K** 。 不過，您可以指定**ApplicationIntent = ReadOnly**關鍵字的 DSN 檔案中傳遞至`sqlcmd`。 如需詳細資訊，請參閱 」 中的 DSN 支援`sqlcmd`和`bcp`"本主題的結尾。  
+> CTP for SUSE Linux 不支援 **-K** 。 不過，您可以指定**ApplicationIntent = ReadOnly**關鍵字的 DSN 檔案中傳遞至`sqlcmd`。 如需詳細資訊，請參閱 」 中的 DSN 支援`sqlcmd`和`bcp`"本主題的結尾。  
   
 - -l*逾時*指定之前的秒數`sqlcmd`登入逾時，當您嘗試連接到伺服器。
 
 - -m *error_level*控制哪些錯誤訊息會傳送至 stdout。  
   
-- **-M***multisubnet_failover*  
+- **-M * * * multisubnet_failover*  
 在連接到 [!INCLUDE[ssSQL11](../../../includes/sssql11_md.md)] 可用性群組的可用性群組接聽程式或 [!INCLUDE[ssSQL11](../../../includes/sssql11_md.md)] 容錯移轉叢集執行個體時，一律指定 **-M**。 **-M**提供容錯移轉，連線至 （目前） 使用中伺服器更快速的偵測。 如果未指定 **–M** ，則會關閉 **-M** 。 如需有關[!INCLUDE[ssHADR](../../../includes/sshadr_md.md)]，請參閱[ODBC Driver on Linux 及 macOS-高可用性和災害復原](../../../connect/odbc/linux-mac/odbc-driver-on-linux-support-for-high-availability-disaster-recovery.md)。  
   
 > [!NOTE]  
-> CTP for SUSE Linux 不支援**-M** 。 不過，您可以指定**MultiSubnetFailover = Yes**關鍵字的 DSN 檔案中傳遞至`sqlcmd`。 如需詳細資訊，請參閱 」 中的 DSN 支援`sqlcmd`和`bcp`"本主題的結尾。  
+> CTP for SUSE Linux 不支援 **-M** 。 不過，您可以指定**MultiSubnetFailover = Yes**關鍵字的 DSN 檔案中傳遞至`sqlcmd`。 如需詳細資訊，請參閱 」 中的 DSN 支援`sqlcmd`和`bcp`"本主題的結尾。  
   
 - -N 加密連接。  
   
@@ -94,7 +92,7 @@ sqlcmd –Sxxx.xxx.xxx.xxx –Uxxx -Pxxx
   
 - -q *commandline_query*執行查詢時`sqlcmd`啟動，但不是會在查詢完成執行時結束。  
 
-- -Q *commandline_query*執行查詢時`sqlcmd`啟動。 `sqlcmd`查詢完成時，就會結束。  
+- -Q *commandline_query*執行查詢時`sqlcmd`啟動。 `sqlcmd` 查詢完成時，就會結束。  
 
 - -r 重新導向錯誤訊息至 stderr。
 
@@ -102,7 +100,7 @@ sqlcmd –Sxxx.xxx.xxx.xxx –Uxxx -Pxxx
   
 - -s *column_separator_char*指定資料行分隔符號字元。  
 
-- -S [*protocol*:] *server*[**,***port*]  
+- -S [*通訊協定*:]*伺服器*[**，* * * 連接埠*]  
 指定的執行個體[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]連線，或如果-D 是使用，資料來源名稱。 ODBC driver on Linux 及 macOS 需要-s。 請注意， **tcp**是唯一有效的通訊協定。  
   
 - -t *query_timeout*指定的命令 （或 SQL 陳述式） 逾時之前的秒數。  
@@ -214,22 +212,22 @@ sqlcmd –Sxxx.xxx.xxx.xxx –Uxxx -Pxxx
 
 -   **ApplicationIntent = ReadOnly**  
 
--   **資料庫 =***database_name*  
+-   **資料庫 = * * * database_name*  
   
 -   **驅動程式 = ODBC Driver 11 for SQL Server**或**驅動程式 = ODBC Driver 13 for SQL Server**
   
 -   **MultiSubnetFailover = Yes**  
   
--   **Server =***server_name_or_IP_address*  
+-   **Server = * * * server_name_or_IP_address*  
   
 -   **Trusted_Connection=yes**|**no**  
   
 Dsn 中的驅動程式項目為必要項，但若要連接到伺服器，`sqlcmd`或`bcp`需要的伺服器項目中的值。  
 
-如果在 DSN 中指定相同的選項和`sqlcmd`或`bcp`命令列命令列選項會覆寫 DSN 中使用的值。 例如，如果 DSN 有 DATABASE 項目和`sqlcmd`命令列包含**-d**，傳遞給的值**-d**用。 如果**Trusted_Connection = yes** DSN，會使用驗證的 Kerberos 和使用者名稱中指定 (**– U**) 和密碼 (**– P**)，如果提供，會被忽略。
+如果在 DSN 中指定相同的選項和`sqlcmd`或`bcp`命令列命令列選項會覆寫 DSN 中使用的值。 例如，如果 DSN 有 DATABASE 項目和`sqlcmd`命令列包含 **-d**，傳遞給的值 **-d**用。 如果**Trusted_Connection = yes** DSN，會使用驗證的 Kerberos 和使用者名稱中指定 (**– U**) 和密碼 (**– P**)，如果提供，會被忽略。
 
 叫用的現有指令碼`isql`可以修改成使用`sqlcmd`藉由定義下列別名： `alias isql="sqlcmd –D"`。  
 
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
 [使用連接**bcp**](../../../connect/odbc/linux-mac/connecting-with-bcp.md)  
  

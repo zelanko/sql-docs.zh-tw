@@ -1,30 +1,28 @@
 ---
-title: "提供來源查詢 (SQL Server 匯入和匯出精靈) | Microsoft Docs"
-ms.custom: 
+title: 提供來源查詢 (SQL Server 匯入和匯出精靈) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/16/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
 ms.component: import-export-data
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 f1_keywords:
 - sql13.dts.impexpwizard.providesourcequery.f1
 ms.assetid: c8cbd07e-b9c3-422f-94b8-d6fc8cf31cf5
-caps.latest.revision: 
+caps.latest.revision: 61
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 4399fdeb68ee0768ac083e0193ae0513b221021d
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 77a6cbbc88e7ba0077b7cb68e013e4b7e8251c08
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="provide-a-source-query-sql-server-import-and-export-wizard"></a>提供來源查詢 (SQL Server 匯入和匯出精靈)
 如果您指定您想要提供查詢以選取要複製的資料，則 [ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 匯入和匯出精靈] 會顯示 [提供來源查詢] 。 在此頁面上，您可以撰寫和測試 SQL 查詢，以選取要從資料來源複製到目的地的資料。 您也可以貼上已儲存查詢的文字，或從檔案載入查詢文字。
@@ -64,7 +62,10 @@ WHERE CommissionPct > 0.015
  使用 [開啟] 對話方塊，選取包含 SQL 查詢文字的已儲存檔案。 選取檔案就會將該檔案的文字複製到 [SQL 陳述式]  文字方塊中。  
  
 ## <a name="excelQueries"></a> 提供 Excel 的來源查詢
-### <a name="specify-excel-objects-in-queries"></a>在查詢中指定 Excel 物件
+
+> [!IMPORTANT]
+> 如需連接至 Excel 檔案，以及將資料從 Excel 檔案載入或載入至 Excel 檔案的限制與已知問題的詳細資訊，請參閱[使用 SQL Server Integration Services (SSIS) 將資料從 Excel 載入或載入至 Excel](../load-data-to-from-excel-with-ssis.md)。
+
 有三種您可以查詢的 Excel 物件。
 -   **工作表。** 若要查詢工作表，請在工作表名稱結尾加上 $ 字元，並以分隔符號括住字串，例如 **[Sheet1$]**。
 
@@ -83,9 +84,6 @@ WHERE CommissionPct > 0.015
     ```sql
     SELECT * FROM [Sheet1$A1:B4]
     ```
-
-### <a name="prepare-the-excel-source-data"></a>準備 Excel 來源資料
-無論是指定工作表或範圍為來源資料表，驅動程式會讀取「連續的」  資料格區塊，從工作表或範圍左上角的第一個非空白資料格開始。 結果就是來源資料中不能有空白的資料列。 例如，資料行標頭和資料列之間不能有空白的資料列。 如果工作表頂端在資料上方有某個標題後面有空白的資料列，您就無法查詢工作表。 在 Excel 中，您必須將名稱指派給資料範圍，並查詢命名範圍而不是工作表。
 
 ## <a name="whats-next"></a>下一步  
  在撰寫並測試選取要複製資料的 SQL 查詢之後，下一個頁面會取決於您資料的目的地。  

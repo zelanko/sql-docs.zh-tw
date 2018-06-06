@@ -1,28 +1,25 @@
 ---
-title: "資料行存放區索引 - 設計指導 | Microsoft Docs"
-ms.custom: 
+title: 資料行存放區索引 - 設計指導 | Microsoft Docs
+ms.custom: ''
 ms.date: 12/1/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
-ms.component: indexes
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: table-view-index
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: fc3e22c2-3165-4ac9-87e3-bf27219c820f
-caps.latest.revision: 
-author: barbkess
-ms.author: barbkess
+caps.latest.revision: 16
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 879b9942203bdf6d889fa649c1888335335d2d64
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: f4b49040b94f04625a027ec07a490117aebed278
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="columnstore-indexes---design-guidance"></a>資料行存放區索引 - 設計指導
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -99,7 +96,7 @@ ms.lasthandoff: 02/12/2018
   
 *   免除個別資料倉儲的需要。 傳統上，公司會在資料列存放區資料表上執行交易，再將資料載入不同的資料倉儲執行分析。 如果工作負載很多，您可以在交易式資料表上建立非叢集資料行存放區索引，以避免載入處理序與個別的資料倉儲。
 
-  [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 提供數種策略，以讓此案例效能更高。 您可以啟用非叢集資料行存放區索引，而不需變更您的 OLTP 應用程式，因此可以輕鬆試用。 
+  [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 提供數種策略，可讓這個案例更有效能。 您可以啟用非叢集資料行存放區索引，而不需變更您的 OLTP 應用程式，因此可以輕鬆試用。 
 
 若要新增額外的處理資源，請在可讀取的次要複本上執行分析。 使用可讀取次要複本時，可以區隔交易式工作負載和分析工作負載的處理。 
 
@@ -196,7 +193,7 @@ ms.lasthandoff: 02/12/2018
 若要針對下列項目，建立空的資料行存放區索引：
 
 * [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]，請參閱 [CREATE TABLE (Transact-SQL)](../../t-sql/statements/create-table-transact-sql.md)。
-* [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]，請參閱 [CREATE TABLE (Azure SQL 資料倉儲)](../../t-sql/statements/create-table-as-select-azure-sql-data-warehouse.md)。
+* [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]，參考 [CREATE TABLE (Azure SQL 資料倉儲)](../../t-sql/statements/create-table-as-select-azure-sql-data-warehouse.md)。
 
 如需如何將現有的資料列存放區堆積或 B 型樹狀結構索引轉換成叢集資料行存放區索引，或建立非叢集資料行存放區索引的詳細資訊，請參閱 [CREATE COLUMNSTORE INDEX (Transact-SQL)](../../t-sql/statements/create-columnstore-index-transact-sql.md)。
 

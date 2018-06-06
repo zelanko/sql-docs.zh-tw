@@ -1,36 +1,34 @@
 ---
-title: "記憶體內部 OLTP (記憶體內部最佳化) | Microsoft Docs"
-ms.custom: 
+title: 記憶體內部 OLTP (記憶體內部最佳化) | Microsoft Docs
+ms.custom: ''
 ms.date: 11/22/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
 ms.component: in-memory-oltp
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine-imoltp
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: in-memory-oltp
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - In-Memory OLTP
 - memory-optimized tables
 ms.assetid: e1d03d74-2572-4a55-afd6-7edf0bc28bdb
-caps.latest.revision: 
+caps.latest.revision: 106
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Active
-ms.openlocfilehash: 3403b3680edb3aa984def52b514d599c50852127
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 54fa82bd4f225847214211cf3549858bf9bf3182
+ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="in-memory-oltp-in-memory-optimization"></a>In-Memory OLTP (記憶體中最佳化)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
- [!INCLUDE[hek_2](../../includes/hek-2-md.md)] 可大幅提升交易處理、資料擷取和資料載入及暫時性資料案例的效能。  若要跳至快速測試您自己的記憶體最佳化資料表和原生編譯預存程序所需的基本程式碼和知識，請參閱
+ [!INCLUDE[hek_2](../../includes/hek-2-md.md)] 可大幅提升交易處理、資料擷取和資料載入，以及暫時性資料案例的效能。  若要跳至快速測試您自己的記憶體最佳化資料表和原生編譯預存程序所需的基本程式碼和知識，請參閱
  -  [快速入門 1：可讓 Transact-SQL 擁有更快效能的記憶體內部 OLTP 技術](../../relational-databases/in-memory-oltp/survey-of-initial-areas-in-in-memory-oltp.md)。  
  
 一段 17 分鐘的影片，可說明記憶體內部 OLTP 並示範效能優點：
@@ -52,7 +50,7 @@ ms.lasthandoff: 02/12/2018
 > [!NOTE]  
 >  **現在就試試看**  
 >   
->  記憶體內部 OLTP 適用於 Premium Azure SQL Database 中。 若要開始使用記憶體內部 OLTP 以及 Azure SQL Database 中的資料行存放區，請參閱 [在 SQL Database 中使用記憶體內部技術最佳化效能](https://azure.microsoft.com/documentation/articles/sql-database-in-memory/)。  
+>  記憶體內部 OLTP 在「進階」和「商務關鍵」層 Azure SQL 資料庫和彈性集區中提供。 若要開始使用記憶體內部 OLTP 以及 Azure SQL Database 中的資料行存放區，請參閱 [在 SQL Database 中使用記憶體內部技術最佳化效能](https://azure.microsoft.com/documentation/articles/sql-database-in-memory/)。  
   
 
 ## <a name="in-this-section"></a>本節內容  

@@ -1,16 +1,14 @@
 ---
-title: "dbo.sysjobschedules (TRANSACT-SQL) |Microsoft 文件"
-ms.custom: 
+title: dbo.sysjobschedules (TRANSACT-SQL) |Microsoft 文件
+ms.custom: ''
 ms.date: 08/09/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
 ms.component: system-tables
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: system-objects
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - dbo.sysschedules_TSQL
@@ -22,16 +20,15 @@ dev_langs:
 helpviewer_keywords:
 - sysschedules system table
 ms.assetid: 4cac9237-7a69-4035-bb3e-928b76aad698
-caps.latest.revision: 
+caps.latest.revision: 17
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 9e402dfb4c7643c0f52965cfb69414810c0db21c
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 877abbc8fb58fbb3a824bb711e0adbb13618f453
+ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="dbosysschedules-transact-sql"></a>dbo.sysschedules (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -51,7 +48,7 @@ ms.lasthandoff: 02/03/2018
 |**freq_interval**|**int**|執行作業的天數。 值而定**freq_type**。 預設值是**0**，這表示**freq_interval**未使用。 請參閱下方的資料表可能的值和其效果。|  
 |**freq_subday_type**|**int**|單位**freq_subday_interval**。 以下是可能的值和它們的描述。<br /><br /> <br /><br /> **1** ： 在指定的時間<br /><br /> **2** ： 秒<br /><br /> **4** ： 分鐘<br /><br /> **8** ： 時數|  
 |**freq_subday_interval**|**int**|數目**freq_subday_type**期間每次執行作業之間發生。|  
-|**freq_relative_interval**|**int**|當**freq_interval**如果就會發生在每月**freq_interval**是**32** （每月相對）。 可以是下列其中一個值：<br /><br /> **0** = **freq_relative_interval** is unused<br /><br /> **1** = 第一個<br /><br /> **2** = Second<br /><br /> **4** = 第三個<br /><br /> **8** = 第四個<br /><br /> **16** = 最後一個|  
+|**freq_relative_interval**|**int**|當**freq_interval**如果就會發生在每月**freq_interval**是**32** （每月相對）。 可以是下列其中一個值：<br /><br /> **0** = **freq_relative_interval**未使用<br /><br /> **1** = 第一個<br /><br /> **2** = 第二個<br /><br /> **4** = 第三個<br /><br /> **8** = 第四個<br /><br /> **16** = 最後一個|  
 |**freq_recurrence_**<br /><br /> **factor**|**int**|作業的排程執行之間的週數或月數。 **freq_type**才會使用**freq_type**是**8**， **16**，或**32**。 如果此資料行包含**0**， **freq_type**未使用。|  
 |**active_start_date**|**int**|可以開始執行作業的日期。 日期格式為 YYYYMMDD。 NULL 表示今天的日期。|  
 |**active_end_date**|**int**|可以停止執行作業的日期。 日期格式為 YYYYMMDD。|  
@@ -65,13 +62,13 @@ ms.lasthandoff: 02/03/2018
 |-------------------------|------------------------------|  
 |**1** （一次）|**freq_interval**未使用 (**0**)|  
 |**4** （每天）|每個**freq_interval**天|  
-|**8** （每週）|**freq_interval**是下列一或多個項目：<br /><br /> **1** = 星期日<br /><br /> **2** = Monday<br /><br /> **4** = 星期二<br /><br /> **8** = 星期三<br /><br /> **16** = 星期四<br /><br /> **32** = Friday<br /><br /> **64** = 星期六|  
+|**8** （每週）|**freq_interval**是下列一或多個項目：<br /><br /> **1** = 星期日<br /><br /> **2** = 星期一<br /><br /> **4** = 星期二<br /><br /> **8** = 星期三<br /><br /> **16** = 星期四<br /><br /> **32** = 星期五<br /><br /> **64** = 星期六|  
 |**16** （每月）|在**freq_interval**每月的日|  
-|**32** （每月，相對）|**freq_interval**是下列其中之一：<br /><br /> **1** = 星期日<br /><br /> **2** = Monday<br /><br /> **3** = 星期二<br /><br /> **4** = 星期三<br /><br /> **5** = 星期四<br /><br /> **6** = 星期五<br /><br /> **7** = 星期六<br /><br /> **8** = 日<br /><br /> **9** = 工作日<br /><br /> **10** = 週末|  
+|**32** （每月，相對）|**freq_interval**是下列其中之一：<br /><br /> **1** = 星期日<br /><br /> **2** = 星期一<br /><br /> **3** = 星期二<br /><br /> **4** = 星期三<br /><br /> **5** = 星期四<br /><br /> **6** = 星期五<br /><br /> **7** = 星期六<br /><br /> **8** = 日<br /><br /> **9** = 工作日<br /><br /> **10** = 週末|  
 |**64** （SQL Server Agent 服務啟動時啟動）|**freq_interval**未使用 (**0**)|  
 |**128** （在電腦閒置時執行）|**freq_interval**未使用 (**0**)|  
   
 ## <a name="see-also"></a>另請參閱  
- [dbo.sysschedules &#40;TRANSACT-SQL &#41;](../../relational-databases/system-tables/dbo-sysjobschedules-transact-sql.md)  
+ [dbo.sysschedules & #40;TRANSACT-SQL & #41;](../../relational-databases/system-tables/dbo-sysjobschedules-transact-sql.md)  
   
   

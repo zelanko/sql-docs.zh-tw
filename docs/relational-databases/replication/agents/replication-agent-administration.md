@@ -1,17 +1,16 @@
 ---
-title: "複寫代理程式管理 | Microsoft Docs"
-ms.custom: 
+title: 複寫代理程式管理 | Microsoft Docs
+ms.custom: ''
 ms.date: 08/24/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
 ms.component: replication
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - Snapshot Agent, administering
 - Log Reader Agent, administering
@@ -25,16 +24,15 @@ helpviewer_keywords:
 - replication [SQL Server], administering
 - independent agents [SQL Server replication]
 ms.assetid: f27186b8-b1b2-4da0-8b2b-91f632c2ab7e
-caps.latest.revision: 
+caps.latest.revision: 48
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 23903fc135bdc5aaf539c6550a7679f42e9449aa
-ms.sourcegitcommit: ab25b08a312d35489a2c4a6a0d29a04bbd90f64d
+ms.openlocfilehash: b2607af48ae1f542ce314a0aebca1ec3463921fe
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="replication-agent-administration"></a>複寫代理程式管理
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -96,8 +94,8 @@ ms.lasthandoff: 03/08/2018
 |清除作業|描述|預設排程|  
 |------------------|-----------------|----------------------|  
 |代理程式記錄清除：散發|從散發資料庫移除複寫代理程式的記錄。|每 10 分鐘執行|  
-|散發清除：散發|從散發資料庫移除複寫的交易。 停用在最長散發保留期限內未同步的訂閱。|每 10 分鐘執行|  
-|到期的訂閱清除|偵測並移除散發資料庫中到期的訂閱。|每天早上 1:00 執行|  
+|散發清除：散發|從散發資料庫移除複寫的交易。 |每 10 分鐘執行|  
+|到期的訂閱清除|偵測並移除散發資料庫中到期的訂閱。 在散發者上，停用在最長散發保留期限內未同步處理的訂閱。|每天早上 1:00 執行| 
 |重新初始化資料驗證失敗的訂閱|偵測使資料驗證失敗的所有訂閱，並將其標示為重新初始化。 下次「合併代理程式」或「散發代理程式」執行時，將在「訂閱者」端套用新的快照集。|沒有預設排程 (依預設值未啟動)|  
 |複寫代理程式檢查|偵測並未動態記錄歷程的複寫代理程式。 如果作業步驟失敗，則其會寫入 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows 事件記錄檔。|每十分鐘執行一次。|  
 |散發的複寫監視重新整理器|重新整理「複寫監視器」使用的快取查詢。|連續執行。|  

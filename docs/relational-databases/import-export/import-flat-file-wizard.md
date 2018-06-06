@@ -1,28 +1,27 @@
 ---
-title: "將一般檔案匯入 SQL | Microsoft Docs"
-ms.custom: 
-ms.date: 09/25/2017
-ms.prod: sql-non-specified
+title: 將一般檔案匯入 SQL | Microsoft Docs
+ms.custom: ''
+ms.date: 09/26/2017
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
 ms.component: import-export
 ms.reviewer: douglasl
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 f1_keywords:
 - sql13.swb.importflatfile.f1
 author: yualan
 ms.author: alayu
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: db507927ac37d8f960f5090c774c6a52fa0d0243
-ms.sourcegitcommit: 4a462c7339dac7d3951a4e1f6f7fb02a3e01b331
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 00ff0d0eb75ea6ad78135ac85d93494d77b8c581
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/07/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="import-flat-file-to-sql-wizard"></a>將一般檔案匯入 SQL 精靈
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -39,8 +38,8 @@ PROSE 會分析輸入檔中的資料模式，來推斷資料行名稱、類型�
 
 > [!VIDEO https://channel9.msdn.com/Shows/Data-Exposed/Introducing-the-new-Import-Flat-File-Wizard-in-SSMS-173/player]
 
-## <a name="prerequisites"></a>必要條件
-只有 SQL Server Management Studio (SSMS) v17.3 或更新版本才提供此功能。 請確認目前使用的是最新版本。 您可以於[此處](https://docs.microsoft.com/en-us/sql/ssms/download-sql-server-management-studio-ssms)找到最新版本。
+## <a name="prerequisites"></a>Prerequisites
+只有 SQL Server Management Studio (SSMS) v17.3 或更新版本才提供此功能。 請確認目前使用的是最新版本。 您可以於[這裡](https://docs.microsoft.com/en-us/sql/ssms/download-sql-server-management-studio-ssms)找到最新版本。
  
 ## <a id="started"></a>使用者入門
 若要存取 [匯入一般檔案精靈]，請遵循這些步驟進行：
@@ -51,10 +50,10 @@ PROSE 會分析輸入檔中的資料模式，來推斷資料行名稱、類型�
 
 ![精靈功能表](media/import-flat-file-wizard/importffmenu.png)
 
-若要深入了解精靈的各種不同功能，請參考接下來的教學課程。
+若要深入了解精靈的不同功能，請參照下列教學課程：
 
 ## <a name="tutorial"></a>教學課程
-在本課程中，您可隨意使用自己的一般檔案。 否則，本教學課程會使用下方來自 Excel 的 CSV，您也可任意複製。 若您使用此 CSV，請將其標題命名為 **example.csv**，並記得將其儲存為 CSV，並置於方便的位置 (例如桌面)。
+在本課程中，您可隨意使用自己的一般檔案。 否則，本教學課程會使用下方來自 Excel 的 CSV，您也可任意複製。 如果您使用此 CSV，請將其標題命名為 **example.csv**，並記得將其儲存為 CSV，並置於方便的位置 (例如桌面)。
 
 ![精靈 Excel](media/import-flat-file-wizard/importffexample.png)
 
@@ -97,7 +96,7 @@ PROSE 會分析輸入檔中的資料模式，來推斷資料行名稱、類型�
 ## <a name="learn-more"></a>深入了解
 
 深入了解精靈。
-
+ 
 - **深入了解匯入其他來源。** 若想要匯入一般檔案之外的項目，請參閱 [ SQL Server 匯入及匯出精靈](https://docs.microsoft.com/en-us/sql/integration-services/import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard)。
 - **深入了解連線至一般檔案來源。** 若想要尋找連線至一般檔案來源的詳細資訊，請參閱[連線至一般檔案資料來源](https://docs.microsoft.com/en-us/sql/integration-services/import-export-data/connect-to-a-flat-file-data-source-sql-server-import-and-export-wizard)。
 - **深入了解 PROSE。** 若想尋找此精靈使用之智慧型架構的概觀，請參閱 [PROSE SDK](https://microsoft.github.io/prose/)。

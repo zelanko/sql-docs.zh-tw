@@ -1,16 +1,14 @@
 ---
-title: "REVOKE 端點權限 (Transact-SQL) | Microsoft Docs"
-ms.custom: 
+title: REVOKE 端點權限 (Transact-SQL) | Microsoft Docs
+ms.custom: ''
 ms.date: 08/10/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-database
-ms.service: 
 ms.component: t-sql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: t-sql
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - TSQL
@@ -19,16 +17,15 @@ helpviewer_keywords:
 - REVOKE statement, endpoints
 - permissions [SQL Server], endpoints
 ms.assetid: 826f513e-9ad0-46b9-87ad-7525713638c8
-caps.latest.revision: 
+caps.latest.revision: 24
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: a02fa4d0d19e52599b8b148410e099f989afe4f3
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 481b343377ef09d875c48f0ba59f4be4386382e5
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="revoke-endpoint-permissions-transact-sql"></a>REVOKE 端點權限 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -59,7 +56,7 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ]
  指定可以授與的端點權限。 如需權限清單，請參閱這個主題稍後的「備註」一節。  
   
  ON ENDPOINT **::***endpoint_name*  
- 指定要授與其權限的端點。 範圍限定詞 (**::**) 為必要項目。  
+ 指定要授與其權限的端點。 範圍限定詞 (**::**) 是必要項。  
   
  { FROM | TO } \<server_principal> 指定要撤銷其權限的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入。  
   
@@ -93,7 +90,7 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ]
 ## <a name="remarks"></a>Remarks  
  只有在目前資料庫是 **master** 的情況下，才能夠撤銷伺服器範圍的權限。  
   
- 您可以在 [sys.endpoints](../../relational-databases/system-catalog-views/sys-endpoints-transact-sql.md) 目錄檢視中，看到有關端點的資訊。 您可以在 [sys.server_permissions](../../relational-databases/system-catalog-views/sys-server-permissions-transact-sql.md) 目錄檢視中，看到有關伺服器權限的資訊，且可以在 [sys.server_principals](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md) 目錄檢視中，看到有關伺服器主體的資訊。  
+ 您可以在 [sys.endpoints](../../relational-databases/system-catalog-views/sys-endpoints-transact-sql.md) 目錄檢視中，看到有關端點的資訊。 您可以在 [sys.server_permissions](../../relational-databases/system-catalog-views/sys-server-permissions-transact-sql.md) 目錄檢視中，看到伺服器權限的資訊，並在 [sys.server_principals](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md) 目錄檢視中，看到有關伺服器主體的資訊。  
   
  端點是伺服器層級的安全性實體。 下表所列的是可以撤銷之最特定且最有限的端點權限，並列出利用隱含方式來併入這些權限的較通用權限。  
   

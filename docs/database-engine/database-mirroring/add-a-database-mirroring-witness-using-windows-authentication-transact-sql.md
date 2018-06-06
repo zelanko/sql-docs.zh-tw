@@ -1,36 +1,33 @@
 ---
-title: "使用 Windows 驗證新增資料庫鏡像見證 (Transact-SQL) | Microsoft Docs"
-ms.custom: 
+title: 使用 Windows 驗證新增資料庫鏡像見證 (Transact-SQL) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/07/2017
-ms.prod: sql-non-specified
-ms.prod_service: database-engine
-ms.service: 
+ms.prod: sql
+ms.prod_service: high-availability
 ms.component: database-mirroring
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- dbe-high-availability
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: high-availability
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - witness [SQL Server], establishing
 - Windows authentication [SQL Server]
 - database mirroring [SQL Server], witness
 ms.assetid: bf5e87df-91a4-49f9-ae88-2a6dcf644510
-caps.latest.revision: 
+caps.latest.revision: 51
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 5909ba97271614b39e0b899a257f62c1658cfe09
-ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
+ms.openlocfilehash: ca7ab8872d8205ae7120913a7c481b3422f05f3b
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="add-a-database-mirroring-witness-using-windows-authentication-transact-sql"></a>使用 Windows 驗證加入資料庫鏡像見證 (Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-為設定資料庫的見證，資料庫擁有者會指派 Database Engine 執行個體給見證伺服器的角色。 見證伺服器執行個體可以與主體或鏡像伺服器執行個體在相同電腦上執行，但是這會大幅地減少自動容錯移轉的強固性。  
+  為設定資料庫的見證，資料庫擁有者會指派 Database Engine 執行個體給見證伺服器的角色。 見證伺服器執行個體可以與主體或鏡像伺服器執行個體在相同電腦上執行，但是這會大幅地減少自動容錯移轉的強固性。  
   
  我們強烈建議見證應該位在另一台電腦上。 給定的伺服器可以參與具有相同或不同夥伴的多個並行資料庫鏡像工作階段。 一個給定的伺服器可以在某些工作階段中是夥伴，在其他工作階段中是見證。  
   
@@ -41,7 +38,7 @@ ms.lasthandoff: 02/23/2018
   
 ### <a name="to-establish-a-witness"></a>若要建立見證  
   
-1.  在見證伺服器執行個體上，確定資料庫鏡像有端點存在。 不管要支援的鏡像工作階段有多少個，伺服器執行個體都必須只有一個資料庫鏡像端點。 如果您打算將這個伺服器執行個體專門作為資料庫鏡像工作階段中的見證，請指派見證角色給端點 (ROLE**=**WITNESS)。 如果您打算使用這個伺服器執行個體，作為一或多個其他資料庫鏡像工作階段中的夥伴，請將端點的角色指派為 ALL。  
+1.  在見證伺服器執行個體上，確定資料庫鏡像有端點存在。 不管要支援的鏡像工作階段有多少個，伺服器執行個體都必須只有一個資料庫鏡像端點。 如果您打算將這個伺服器執行個體專門作為資料庫鏡像工作階段中的見證，請指派見證角色給端點 (ROLE**=** WITNESS)。 如果您打算使用這個伺服器執行個體，作為一或多個其他資料庫鏡像工作階段中的夥伴，請將端點的角色指派為 ALL。  
   
      若要執行 SET WITNESS 陳述式，資料庫鏡像工作階段必須已經啟動 (在夥伴之間)，而且見證端點的 STATE 必須設為 STARTED。  
   
@@ -66,7 +63,7 @@ ms.lasthandoff: 02/23/2018
   
      伺服器網路位址的語法如下：  
   
-     TCP**://**\<*system-address>***:**\<*port>*  
+     TCP **://**\<*system-address>***:**\<* port>*  
   
      其中 \<系統位址> 是清楚識別目的地電腦系統的字串，\<通訊埠> 是夥伴伺服器執行個體之鏡像端點使用的通訊埠編號。 如需詳細資訊，請參閱 [指定伺服器網路位址 &#40;資料庫鏡像&#41;](../../database-engine/database-mirroring/specify-a-server-network-address-database-mirroring.md)。  
   

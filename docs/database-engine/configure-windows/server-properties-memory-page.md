@@ -1,31 +1,30 @@
 ---
-title: "伺服器屬性 (記憶體頁面) | Microsoft Docs"
-ms.custom: 
+title: 伺服器屬性 (記憶體頁面) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/08/2016
-ms.prod: sql-non-specified
-ms.prod_service: database-engine
-ms.service: 
-ms.component: configure-windows
-ms.reviewer: 
+ms.prod: sql
+ms.prod_service: high-availability
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: database-engine
-ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords: sql13.swb.serverproperties.memory.f1
+ms.technology: configuration
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
+f1_keywords:
+- sql13.swb.serverproperties.memory.f1
 ms.assetid: 46a77d4e-ab92-49d3-a14b-423462e50715
-caps.latest.revision: "45"
+caps.latest.revision: 45
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 57a2f7e2b4f0a75cf212d79284b85c00eda92d81
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: d0ef063330e48f28b25bef55c467140fa0326534
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="server-properties---memory-page"></a>伺服器屬性 - 記憶體頁面
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 使用此頁面來檢視或修改伺服器記憶體選項。 **[最小伺服器記憶體]** 設定為 0 且 **[最大伺服器記憶體]** 設為 2147483647 MB 時， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 就可在任何特定時間利用最佳的記憶體數量，但受作業系統和其他應用程式目前所使用的記憶體數量所限制。 隨著電腦與 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的負載有所變更，記憶體的配置也會變更。 您可以進一步將這個動態記憶體配置限制為下列所指定的最小值和最大值。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  使用此頁面來檢視或修改伺服器記憶體選項。 **[最小伺服器記憶體]** 設定為 0 且 **[最大伺服器記憶體]** 設為 2147483647 MB 時， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 就可在任何特定時間利用最佳的記憶體數量，但受作業系統和其他應用程式目前所使用的記憶體數量所限制。 隨著電腦與 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的負載有所變更，記憶體的配置也會變更。 您可以進一步將這個動態記憶體配置限制為下列所指定的最小值和最大值。  
   
 ## <a name="options"></a>選項。  
  **最小伺服器記憶體 (以 MB 為單位)**  

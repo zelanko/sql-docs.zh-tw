@@ -1,30 +1,27 @@
 ---
-title: "建立資料表陳述式的限制 |Microsoft 文件"
-ms.custom: 
+title: 建立資料表陳述式的限制 |Microsoft 文件
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
-ms.component: odbc
-ms.reviewer: 
+ms.prod: sql
+ms.prod_service: connectivity
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: connectivity
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - CREATE TABLE statement limitations [ODBC]
 - ODBC SQL grammar, CREATE TABLE statement limitations
 ms.assetid: c5067855-20c9-456f-8d63-f375b4297f2e
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
-ms.workload: Inactive
-ms.openlocfilehash: 0d8f73082a87978bf735e2e44f97987ba34ffbb5
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+manager: craigg
+ms.openlocfilehash: b7b54b56afb585aa1158394117ebae6cc78116de
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="create-table-statement-limitations"></a>建立資料表陳述式的限制
 使用 Microsoft Access、 Microsoft Excel 或 Paradoxdriver 時，文字或二進位資料行長度未指定 （或指定為 0），資料行的長度會設定為 255。  

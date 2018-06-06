@@ -1,15 +1,13 @@
 ---
-title: "SQL Server Profiler 對話方塊 |Microsoft 文件"
-ms.custom: 
+title: SQL Server Profiler 對話方塊 |Microsoft 文件
+ms.custom: ''
 ms.date: 07/07/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
-ms.component: sql-server-profiler
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: database-engine
-ms.tgt_pltfrm: 
+ms.technology: profiler
+ms.tgt_pltfrm: ''
 ms.topic: reference
 f1_keywords:
 - sql13.pro.traceproperties.general.f1;
@@ -43,23 +41,23 @@ helpviewer_keywords:
 - Replay Configuration dialog box
 - Find dialog box
 ms.assetid: e57b9160-4b78-4353-abb2-bfdbdf523d7a
-caps.latest.revision: "23"
+caps.latest.revision: 23
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 284333202ee48153b0de4d513502e35edc73acaf
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
-ms.translationtype: MT
+ms.openlocfilehash: 5bd72cc0de57f33c69101ba2d5f387ed45bae4c6
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.translationtype: MTE
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sql-server-profiler-dialog-boxes"></a>SQL Server Profiler 對話方塊
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Microsoft[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]是工具，可擷取[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]來自伺服器的事件。 事件會儲存於追蹤檔案中，稍後在嘗試診斷問題時，可以用來進行分析或是重新執行特定的一連串步驟。 以下是中命令和設定可用之對話方塊的[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+Microsoft [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 是一種會從伺服器擷取 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 事件的工具。 事件會儲存於追蹤檔案中，稍後在嘗試診斷問題時，可以用來進行分析或是重新執行特定的一連串步驟。 以下是中命令和設定可用之對話方塊的[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]。  
 ## <a name="trace-properties"></a>追蹤屬性
 ### <a name="general-tab"></a>一般索引標籤
 使用 **[追蹤屬性]** 對話方塊的 **[一般]** 索引標籤，來檢視或指定追蹤的屬性。  
-|項目|Description
+|項目|描述
 |---|---
 |**追蹤名稱** |指定追蹤的名稱。  
 |**追蹤提供者名稱**|顯示要追蹤之 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的執行個體名稱。 此欄位自動以連接時指定的伺服器名稱來擴展。 若要變更追蹤提供者的名稱，請按一下 **[取消]** 以關閉對話方塊，並啟動新追蹤。  
@@ -72,13 +70,13 @@ ms.lasthandoff: 01/17/2018
 |**啟用檔案換用**|選取以啟用其他檔案的建立，以在達到檔案大小上限時接受追蹤資料。 每個新檔案名稱皆包含原始 .trc 檔案名稱，並循序編號。 例如，一旦達到檔案大小上限， **NewTrace.trc** 隨即關閉，並開啟新檔案 **NewTrace_1.trc**，接著是 **NewTrace_2.trc**等等。 依預設，將追蹤儲存至檔案時，檔案換用為已啟用。  
 |**伺服器處理追蹤資料**|指定執行追蹤的伺服器應處理追蹤資料。 使用此選項會降低追蹤所造成的效能負擔。 如果選取此選項，即使在負荷過重的狀況下仍不會略過任何事件。 如果清除此核取方塊，則 SQL Server Profiler 會執行此處理，而在負荷過重的狀況下有可能不追蹤某些事件。  
 |**儲存至資料表**|將追蹤資料擷取到資料庫資料表。 儲存追蹤資料對日後檢閱與分析很有用。 不過，將追蹤資料儲存至資料表，可能導致儲存追蹤的伺服器負擔過重。 可能的話，不要將追蹤資料表儲存在被追蹤的同一部伺服器上。  
-|**目的地資料表**|選取將追蹤資料儲存至資料庫資料表之後，您可以選取此圖示以變更資料表名稱。  
+|**目的資料表**|選取將追蹤資料儲存至資料庫資料表之後，您可以選取此圖示以變更資料表名稱。  
 | **設定最大資料列數 (單位: 千)**|指定儲存資料的最大資料列數。 預設為 1000 個資料列。 
 |**啟用追蹤停止時間**|設定追蹤結束與自動關閉的日期和時間。 
 
 ### <a name="events-selection-tab"></a>事件選取範圍索引標籤
 使用 **[追蹤屬性]** 對話方塊的 **[事件選取範圍]** 索引標籤，來檢視或指定追蹤的事件和資料行。  
-|項目|Description
+|項目|描述
 |---|---
 |[事件] 資料行|選取或清除事件資料行中的核取方塊，來指定追蹤的事件。 依事件類別目錄所組織的**事件** 。 範本中所指定的事件類別會自動選取。 如需詳細資訊，請參閱 [SQL Server Event Class Reference](../../relational-databases/event-classes/sql-server-event-class-reference.md)。  
 |資料行|核取對應到所需事件和資料行的方塊，來指定追蹤的資料行。 依預設，針對追蹤內所包含的每個事件，都會核取所有相關的事件資料行。  
@@ -90,8 +88,8 @@ ms.lasthandoff: 01/17/2018
 
 ## <a name="trace-template-properties"></a>追蹤範本屬性 
 ### <a name="new-general-tab"></a>新 （一般索引標籤）
-使用 **[追蹤範本屬性]** 對話方塊的 **[一般]** 索引標籤，以使用下列選項來建立新的追蹤範本。 若要存取此對話方塊，請在[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]**檔案**功能表上，指向**範本**，然後按一下 **新增**。
-|項目|Description
+使用 **[追蹤範本屬性]** 對話方塊的 **[一般]** 索引標籤，以使用下列選項來建立新的追蹤範本。 若要存取此對話方塊，請在 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] [檔案] 功能表上，指向 [範本]，然後按一下 [新增]。
+|項目|描述
 |---|---
 |**選取伺服器類型**|指定將要使用此範本的伺服器類型。  
 |**新範本名稱**|提供範本的描述性名稱。  
@@ -100,7 +98,7 @@ ms.lasthandoff: 01/17/2018
 
 ### <a name="edit-general-tab"></a>編輯 （一般索引標籤）
  使用 **[追蹤範本屬性]** 對話方塊的 **[一般]** 索引標籤，以使用下列選項來檢視或編輯現有的追蹤範本。 若要存取此對話方塊，請在 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] **[檔案]** 功能表上指向 **[範本]**，然後按一下 **[編輯範本]**。  
-|項目|Description
+|項目|描述
 |---|---
 |**選取伺服器類型**|指定將要使用此範本的伺服器類型。  
 |**選取範本名稱**|選取您要編輯的範本。  
@@ -108,7 +106,7 @@ ms.lasthandoff: 01/17/2018
 
 ### <a name="events-selection-tab"></a>事件選取範圍索引標籤
 使用 **[追蹤範本屬性]** 對話方塊的 **[事件選取範圍]** 索引標籤，來檢視、編輯或指定要包含在 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 追蹤範本中的事件類別和資料行。  
-|項目|Description
+|項目|描述
 |---|---
 |[事件] 資料行|選取或清除事件資料行中的核取方塊，來指定應追蹤的事件。 依事件類別目錄所組織的事件。 如果選取 **[一般]** 索引標籤上的 **[以現有的範本作為新範本的基礎]** ，就會根據指定的範本自動選取事件。 如需有關事件類別的詳細資訊，請參閱＜ [SQL Server Event Class Reference](../../relational-databases/event-classes/sql-server-event-class-reference.md)＞。  
 |資料行|勾選對應到所需事件和資料行的方塊，來指定應追蹤的資料行。 依預設，如果已勾選對應到事件的核取方塊，追蹤所包含之每個事件的所有相關事件資料行也都會被勾選。 如果勾選 **[一般]** 索引標籤上的 **[以現有的範本作為新範本的基礎]** ，就會根據指定的範本自動選取資料行和篩選。  
@@ -121,7 +119,7 @@ ms.lasthandoff: 01/17/2018
 ### <a name="general-tab"></a>一般索引標籤
 使用 **[追蹤檔案屬性]** 對話方塊的 **[一般]** 索引標籤，來檢視追蹤檔案的屬性。  
 若要檢視此視窗，請開啟追蹤檔案。 接著在 **[檔案]** 功能表上，按一下 **[屬性]**。  
-|項目|Description
+|項目|描述
 |---|---
 |**檔案名稱**|就會顯示追蹤檔案的路徑與名稱。  
 |**追蹤提供者名稱**|顯示追蹤之 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的執行個體名稱。  
@@ -133,7 +131,7 @@ ms.lasthandoff: 01/17/2018
 ### <a name="events-selection-tab"></a>事件選取範圍索引標籤
 使用 **[追蹤檔案範本屬性]** 對話方塊的 **[事件選取範圍]** 索引標籤，以檢視追蹤的資料行屬性，或者從追蹤移除資料行。  
 若要檢視此視窗，請開啟追蹤檔案。 接著在 **[檔案]** 功能表上，按一下 **[屬性]**，然後按一下 **[事件選取範圍]** 索引標籤。  
-|項目|Description
+|項目|描述
 |---|---
 |[事件] 資料行|檢視依事件類別目錄所組織的追蹤事件。 起初會選取追蹤內的所有事件。 勾選方塊或勾選事件的資料行即可選取事件。 如果勾選事件方塊，就會選取所有適用於該事件的資料行。 如果勾選事件的資料行，就會勾選事件，也會自動勾選任何其他必要的資料行。 如果您正在檢視追蹤檔案或資料表，清除事件或資料行的核取方塊會減少追蹤視窗中的可見資料量，以便進行分析。 您也可以變更資料行篩選，來減少追蹤視窗中的可見資料量。 如需有關事件類別的詳細資訊，請參閱＜ [SQL Server Event Class Reference](../../relational-databases/event-classes/sql-server-event-class-reference.md)＞。  
 |資料行|檢視追蹤的資料行。 依預設，針對追蹤內所包含的每個事件，都會勾選追蹤內的所有相關資料行。  
@@ -146,7 +144,7 @@ ms.lasthandoff: 01/17/2018
 ### <a name="events-selection-tab"></a>事件選取範圍索引標籤
 使用 **[追蹤資料表屬性]** 對話方塊的 **[事件選取範圍]** 索引標籤，即可檢視追蹤的事件和資料行屬性，或從追蹤中移除事件或資料行。  
 若要檢視此視窗，請使用 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 來開啟追蹤資料表。 接著在 **[檔案]** 功能表上按一下 **[屬性]**，然後按一下 **[事件選取範圍]** 索引標籤。  
-|項目|Description
+|項目|描述
 |---|---
 |[事件] 資料行|檢視依事件類別目錄所組織的追蹤事件。 勾選方塊或勾選事件的資料行即可選取事件。 如果勾選事件方塊，就會選取所有適用於該事件的資料行。 如果勾選事件的資料行，就會勾選事件，也會自動勾選任何其他必要的資料行。 如果您正在檢視追蹤檔案或資料表，清除事件或資料行的核取方塊會減少追蹤視窗中的可見資料量，以便進行分析。 您也可以變更資料行篩選，來減少追蹤視窗中的可見資料量。 如需有關事件類別的詳細資訊，請參閱＜ [SQL Server Event Class Reference](../../relational-databases/event-classes/sql-server-event-class-reference.md)＞。  
 |其他資料行|檢視追蹤的資料行。 依預設，針對追蹤內所包含的每個事件，都會勾選追蹤內的所有相關資料行。  
@@ -166,67 +164,67 @@ ms.lasthandoff: 01/17/2018
 ## <a name="toolsoptions-general-options-page"></a>工具/選項 （一般選項頁面）
 使用 [一般選項] 對話方塊來檢視或指定下列選項。  
 ### <a name="display-options"></a>顯示選項  
-|項目|Description
+|項目|描述
 |---|---
 |**字型名稱**|顯示追蹤期間在追蹤結果方格中所使用的字型名稱。  
 |**字型大小**|顯示追蹤期間在追蹤結果方格中所使用的字型大小。  
 |**選擇字型**|開啟變更字型設定值的對話方塊。  
-|**使用地區設定顯示日期和時間值**|顯示此電腦之地區設定中所設定的日期和時間值。 如果未選取此選項，就會以 Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]所用的固定格式來顯示日期和時間值，其中包含毫秒。 請注意，切換此核取方塊可變更時間資料行的顯示格式，例如**StartTime**和**EndTime**。 但是，此操作不會變更語言事件或遠端程序呼叫 (RPC) 中的 **DateTime** 值參數。  
+|**使用地區設定顯示日期和時間值**|顯示此電腦之地區設定中所設定的日期和時間值。 如果未選取此選項，就會以 Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]所用的固定格式來顯示日期和時間值，其中包含毫秒。 請注意，切換此核取方塊可變更時間資料行的顯示格式，例如 **StartTime** 和 **EndTime**。 但是，此操作不會變更語言事件或遠端程序呼叫 (RPC) 中的 **DateTime** 值參數。  
 |**顯示 [持續時間] 資料行中的值 (以百萬分之一秒為單位)。**|以百萬分之一秒顯示追蹤的 [持續時間] 資料行中的值。 依預設，[持續時間] 資料行會以毫秒為單位顯示值。  
 ### <a name="tracing-options"></a>追蹤選項  
-|項目|Description
+|項目|描述
 |---|---
 |**進行連接後立即啟動追蹤**|建立連接後立即使用預設範本開始追蹤。  
 |**提供者版本變更時，更新追蹤定義**|更新提供者時，將最新追蹤定義套用至 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 依預設，不會核取此項目。 這會強制 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 查詢伺服器的追蹤定義並在磁碟上重新建立 (如果已存在) 檔案。  
 ### <a name="file-rollover-options"></a>檔案換用選項  
-|項目|Description
+|項目|描述
 |---|---
 |**依序載入所有換用檔案，不另外提示**|開啟追蹤檔案時自動載入換用檔案。 如果在追蹤時建立多個檔案，則選取此選項會自動載入所有的換用檔案。  
 |**載入換用檔案之前先提示**|在開啟追蹤檔案時，讓 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 在加入換用檔案之前給您提示。  
 |**永不載入後續的換用檔案**|開啟追蹤檔案時，[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 永不載入後續的換用檔案。  
 ### <a name="replay-options"></a>重新執行選項  
-|項目|Description
+|項目|描述
 |---|---
 |**預設重新執行執行緒數目**|指定要同時使用的重新執行執行緒的數目。 數字愈高會在重新執行時使用愈多資源，但是會增加重新執行並行。  
 |**預設健全狀況監視器等候間隔 (秒)**|指定重新執行的等候間隔秒數。 預設值為 3600 秒 (1 小時)。 此設定會影響允許執行緒執行的時間量，超過之後會被健全狀況監視器結束。  
 |**預設健全狀況監視器輪詢間隔 (秒)**|指定重新執行期間健全狀況監視器輪詢間隔秒數。 預設值為 60 秒。 此值可以讓使用者設定健全狀況監視器輪詢是否有應結束之候選者的頻率。
-## <a name="source-table-database-engine-tuning-advisor-select-workload-table"></a>來源資料表 （Database Engine Tuning Advisor 選取工作負載資料表）
+## <a name="source-table-database-engine-tuning-advisor-select-workload-table"></a>來源資料表 (Database Engine Tuning Advisor 選取工作負載資料表)
 Microsoft SQL Server Profiler 和 Tuning Advisor 使用此對話方塊來選取資料表。  
 - 在 Profiler 中，使用 [來源資料表] 對話方塊以指定追蹤資料表的來源資料表。 此資料表是追蹤載入的來源，並且可以檢視或使用其內容來重新執行追蹤。  
 - 在 Tuning Advisor 中，使用 [選取工作負載資料表] 對話方塊，來選取包含 Profiler 追蹤資訊的資料庫資料表用來作為微調工作負載，或在啟動微調分析之前預覽資料表內容。  
 
-|項目|Description
+|項目|描述
 |---|---
-|**SQL Server**|指定目前連接的 SQL Server 執行個體。 此欄位會自動擴展且無法更新。  
-|**資料庫**|指定追蹤資料表所在的資料庫。  
-|**擁有者**|指定追蹤資料表的擁有者。 此欄位會自動擴展為 **dbo**。  
+|**[SQL Server]**|指定目前連接的 SQL Server 執行個體。 此欄位會自動擴展且無法更新。  
+|**[資料庫備份]**|指定追蹤資料表所在的資料庫。  
+|**[擁有者]**|指定追蹤資料表的擁有者。 此欄位會自動擴展為 **dbo**。  
 |**Table**|指定從中讀取追蹤的追蹤資料表名稱。  
 ## <a name="destination-table"></a>目的資料表
 使用 **[目的地資料表]** 對話方塊，來指定您要儲存追蹤的資料表。  
-|項目|Description
+|項目|描述
 |---|---
-|**SQL Server**|指定目前連接之 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的執行個體。 此欄位會自動擴展且無法更新。 若要變更伺服器，請按一下 **[取消]** ，並連接到您要儲存追蹤資料表之 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的執行個體。  
-|**資料庫**|指定您要儲存追蹤資料表的資料庫。  
-|**擁有者**|指定追蹤資料表的擁有者。 此欄位會自動擴展為 **dbo**。  
+|**[SQL Server]**|指定目前連接之 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的執行個體。 此欄位會自動擴展且無法更新。 若要變更伺服器，請按一下 **[取消]** ，並連接到您要儲存追蹤資料表之 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的執行個體。  
+|**[資料庫備份]**|指定您要儲存追蹤資料表的資料庫。  
+|**[擁有者]**|指定追蹤資料表的擁有者。 此欄位會自動擴展為 **dbo**。  
 |**Table**|指定您要儲存追蹤的資料表名稱。  
-## <a name="replay-configuration"></a>重新執行組態
+## <a name="replay-configuration"></a>重新執行設定
 ### <a name="basic-replay-options"></a>基本重新執行選項
 在 **[重新執行組態]** 對話方塊中，使用 **[基本重新執行選項]** 頁面來指定如何重新執行追蹤檔案或資料表。  
 若要檢視這個視窗，請使用 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 開啟包含用以重新執行的適當事件之追蹤檔案或資料表。 如需詳細資訊，請參閱 [Replay Requirements](../../tools/sql-server-profiler/replay-requirements.md)。 在追蹤檔案或資料表開啟期間，請在 **[重新執行]** 功能表上按一下 **[啟動]**，然後連接到想要重新執行追蹤的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的執行個體。  
-|項目|Description
+|項目|描述
 |---|---
 |**重新執行伺服器**|顯示要連接以重新執行的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的執行個體。  
 |**變更...**|啟動 [連接到伺服器] 對話方塊，以連接到另一部伺服器。  
-|**儲存至檔案** |將重新執行結果儲存至檔案。 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]顯示標準檔案對話方塊中，您可以在其中指定要儲存檔案的位置。  
+|**儲存至檔案** |將重新執行結果儲存至檔案。 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 會顯示標準檔案對話方塊，您可以在此指定檔案的儲存位置。  
 |**儲存至資料表**|將重新執行結果儲存至資料表。 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 會顯示資料表選取項目對話方塊，您可以在此指定資料表的儲存位置。  
 |**重新執行執行緒的數目**|指定要同時使用的重新執行執行緒的數目。 較高的數目會在重新執行期間消耗較多資源，但是重新執行速度較快而且更並行。  
 |**依照追蹤的順序重新執行事件**|循序重新執行事件。 如果您正在重新執行追蹤以偵錯，請使用此選項。  
 |**使用多執行緒重新執行事件** |並行重新執行事件。 此選項比循序重新執行事件還快，但是會停用偵錯。 事件會依其系統處理序識別碼 (SPID) 來排序。  
-|**顯示重新執行結果**|在 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 中顯示重新執行結果。 
+|**顯示重新執行結果**|在 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]中顯示重新執行結果。 
 ### <a name="advanced-replay-options"></a>進階重新執行選項
 在 [重新執行組態] 對話方塊中，使用 [進階重新執行選項] 索引標籤來指定如何重新執行追蹤檔案。  
 若要檢視這個視窗，請使用 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 開啟包含用以重新執行的適當事件之追蹤檔案或資料表。 如需詳細資訊，請參閱 [Replay Requirements](../../tools/sql-server-profiler/replay-requirements.md)。 在追蹤檔案或資料表開啟期間，請在 [重新執行] 功能表上按一下 [啟動]，連接到想要重新執行追蹤之 SQL Server 的執行個體，然後按一下 [進階重新執行選項] 索引標籤。  
-|項目|Description
+|項目|描述
 |---|---
 |**重新執行系統 SPID**|指定 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 是否重新執行系統處理序識別碼 (SPID)。  
 |**只重新執行一個 SPID**|只重新執行與選取之 SPID 相關的來源追蹤檔案中的活動。  
@@ -241,10 +239,10 @@ Microsoft SQL Server Profiler 和 Tuning Advisor 使用此對話方塊來選取�
 ## <a name="find-dialog-box"></a>尋找對話方塊
 使用 [尋找] 對話方塊，即可針對追蹤搜尋特定字元或文字。 若要取消進行中的搜尋，請按下 ESC 鍵。  
  若要在 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 中開啟此對話方塊，請在 [編輯] 功能表上按一下 [尋找]**Find**。  
-|項目|Description
+|項目|描述
 |---|---
 |**尋找目標**|輸入您想要搜尋的文字。 搜尋會找出其中包含指定字串的字串。 例如，搜尋 "Completed" 會與 "SQL:BatchCompleted" 相符。 不支援萬用字元 (*、? 等等)。  
-|**在資料行中搜尋**|按一下資料行搜尋，或按一下**\<所有資料行 >**來搜尋追蹤中的所有資料行。  
+|**在資料行中搜尋**|按一下要搜尋的資料行，或按一下 [\<所有資料行>] 即可搜尋追蹤中的所有資料行。  
 |**大小寫須相符**|尋找與 [尋找目標] 方塊中的大小寫相同的文字。 清除此核取方塊，即可在追蹤中同時尋找大寫與小寫文字字元的範例。  
 |**全字拼寫須相符**|將搜尋限制為整個文字。 清除 [全字拼寫須相符] 核取方塊來搜尋文字內的所有字元。  
 |**找下一個**|尋找 [尋找目標] 方塊中之字元的下一個範例。  
@@ -258,9 +256,9 @@ Microsoft SQL Server Profiler 和 Tuning Advisor 使用此對話方塊來選取�
 若要存取此對話方塊，請開啟現有的追蹤檔案或資料表，然後按一下 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] [檔案] 功能表上的 [屬性]。 在 **[追蹤屬性]** 對話方塊中，按一下 **[事件選取範圍]** 索引標籤，然後按一下 **[組織資料行]**。 在建立新的追蹤時，您也可以按一下 **[事件選取範圍]** 索引標籤上的 **[組織資料行]** 。  
 將 [群組] 之下的資料行名稱移至追蹤視窗中的群組或彙總事件類別。
 - 若要彙總事件，請將一個資料行移至 **[群組]**。 這會使特定類型的所有事件，都摺疊在追蹤視窗顯示中的事件類別類型名稱之下。 加號 (**+**) 會出現在事件類別名稱的左邊。 按一下加號即可展開事件類別類型並檢視所有事件。 按一下 **[檢視]** 功能表上的 **[彙總檢視]** 或 **[群組檢視]** ，您可以設定開啟或關閉彙總和群組。
-- 若要群組事件，請將多個資料行移至 **[群組]**。 這會使特定類型的所有事件群組在追蹤視窗顯示中，但是不會將事件摺疊在每個事件類別類型名稱之下。 按一下 [檢視] 功能表上的 **[群組檢視]** ，您可以在群組檢視和非群組檢視之間來回切換。 當多個資料行移至 **[群組]**時，不能使用切換至 **[彙總檢視]** 的選項。
+- 若要群組事件，請將多個資料行移至 **[群組]**。 這會使特定類型的所有事件群組在追蹤視窗顯示中，但是不會將事件摺疊在每個事件類別類型名稱之下。 按一下 [檢視] 功能表上的 **[群組檢視]** ，您可以在群組檢視和非群組檢視之間來回切換。 當多個資料行移至 **[群組]** 時，不能使用切換至 **[彙總檢視]** 的選項。
 
-|項目|Description
+|項目|描述
 |---|---
 |**資料行**|可移至 [群組] 的資料行清單。 按一下 [資料行] 左邊的加號 (**+**) 即可展開清單。  
 |**向上**|選取資料行之後，按一下 [向上] 將資料行向上移至 [群組]。 您也可以按一下 **[向上]** ，來重新排列追蹤視窗所顯示的資料行。  
@@ -271,14 +269,14 @@ Microsoft SQL Server Profiler 和 Tuning Advisor 使用此對話方塊來選取�
  >如果是字串類型資料的資料行，篩選準則將會顯示為 LIKE 或 NOT LIKE 字串值。  
 
 ## <a name="select-template-name"></a>選取範本名稱
-使用 **[選取範本名稱]** 對話方塊，即可選取現有的 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 追蹤範本以匯出至作業系統上的檔案。 您也可使用這個對話方塊，在編輯現有的追蹤範本時，選取或輸入不同的名稱來儲存追蹤範本。 若要在匯出範本時存取這個對話方塊，請在 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] **[檔案]** 功能表上，指向 **[範本]**，然後按一下 **[匯出範本]**。 若要在變更範本名稱時存取這個對話方塊，請在 **[檔案]** 功能表上，依序指向 **[範本]**和 **[編輯範本]**，然後按一下 **[另存新檔]**。  
-|項目|Description
+使用 **[選取範本名稱]** 對話方塊，即可選取現有的 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 追蹤範本以匯出至作業系統上的檔案。 您也可使用這個對話方塊，在編輯現有的追蹤範本時，選取或輸入不同的名稱來儲存追蹤範本。 若要在匯出範本時存取這個對話方塊，請在 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] **[檔案]** 功能表上，指向 **[範本]**，然後按一下 **[匯出範本]**。 若要在變更範本名稱時存取這個對話方塊，請在 **[檔案]** 功能表上，依序指向 **[範本]** 和 **[編輯範本]**，然後按一下 **[另存新檔]**。  
+|項目|描述
 |---|---
 |**伺服器類型**|選取您想要從中選擇範本的伺服器類型。 這個選項只適用於匯出範本時。  
 |**範本名稱**|輸入新的範本名稱，或從清單中選取範本名稱。 如果正在匯出範本，您只能從清單中選取範本名稱。 
 
 ## <a name="see-also"></a>另請參閱 
-[SQL Server Profiler](../../tools/sql-server-profiler/sql-server-profiler.md)   
+[[SQL Server Profiler]](../../tools/sql-server-profiler/sql-server-profiler.md)   
 [伺服器效能與活動監視](../../relational-databases/performance/server-performance-and-activity-monitoring.md)  
   
   

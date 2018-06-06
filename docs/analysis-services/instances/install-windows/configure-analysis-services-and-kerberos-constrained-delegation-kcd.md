@@ -1,31 +1,23 @@
 ---
-title: "設定 Analysis Services 及 Kerberos 限制委派 (KCD) |Microsoft 文件"
-ms.custom: 
-ms.date: 03/20/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
-ms.assetid: 0006e143-d3ba-4d10-a415-e42c45e2bb0a
-caps.latest.revision: 
-author: Minewiskan
+title: 設定 Analysis Services 及 Kerberos 限制委派 (KCD) |Microsoft 文件
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: ''
+ms.topic: conceptual
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 9f1a5ab2c98e45d705be57658238077d88daefb5
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: be9fde53d440ff82a34fafce3230cdfbf85f2897
+ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="configure-analysis-services-and-kerberos-constrained-delegation-kcd"></a>設定 Analysis Services 及 Kerberos 限制委派 (KCD)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
-Kerberos 限制委派 (KCD) 是驗證通訊協定，您可使用 Windows 驗證對其進行設定，在整個環境的服務間委派用戶端認證。 KCD 需要其他基礎結構 (例如網域控制站)，以及您環境的其他組態。 某些在 SharePoint 2016 使用 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 和 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 資料的案例會需要 KCD。 在 SharePoint 2016 中，Excel Services 已從 SharePoint 伺服器陣列外移到不同的新伺服器： **Office Online Server**。 因為 Office Online Server 是獨立的，所以對於在典型雙躍點案例中委派用戶端認證的方法，其需求漸增。  
+  Kerberos 限制委派 (KCD) 是驗證通訊協定，您可使用 Windows 驗證對其進行設定，在整個環境的服務間委派用戶端認證。 KCD 需要其他基礎結構 (例如網域控制站)，以及您環境的其他組態。 某些在 SharePoint 2016 使用 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 和 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 資料的案例會需要 KCD。 在 SharePoint 2016 中，Excel Services 已從 SharePoint 伺服器陣列外移到不同的新伺服器： **Office Online Server**。 因為 Office Online Server 是獨立的，所以對於在典型雙躍點案例中委派用戶端認證的方法，其需求漸增。  
   
 ## <a name="overview"></a>概觀  
  KCD 可讓帳戶模擬另一個帳戶，以提供資源的存取權。 進行模擬的帳戶可以是指派給 Web 應用程式的服務帳戶或網頁伺服器的電腦帳戶，而受模擬的帳戶必須是要求資源存取權的使用者帳戶。 KCD 會在服務層級運作，讓模擬的帳戶可將存取權授與伺服器上選取的服務，同時拒絕讓相同伺服器上的其他服務或其他伺服器上的服務進行存取。  

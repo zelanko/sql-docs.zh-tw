@@ -1,30 +1,29 @@
 ---
-title: "getObject 方法 （int，java.util.Map） |Microsoft 文件"
-ms.custom: 
+title: getObject 方法 （int，java.util.Map） |Microsoft 文件
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
-ms.component: jdbc
-ms.reviewer: 
+ms.prod: sql
+ms.prod_service: connectivity
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
-ms.topic: article
-apiname: SQLServerCallableStatement.getObject (int, java.util.Map)
-apilocation: sqljdbc.jar
+ms.technology: connectivity
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
+apiname:
+- SQLServerCallableStatement.getObject (int, java.util.Map)
+apilocation:
+- sqljdbc.jar
 apitype: Assembly
 ms.assetid: 164532be-7ed6-40fa-a273-dece4c8d72c4
-caps.latest.revision: "15"
+caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
-ms.workload: Inactive
-ms.openlocfilehash: e8d96cc3e1ea30bd42ca820ffa40437802908e73
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+manager: craigg
+ms.openlocfilehash: edaea99a49f6c6230cd03a8060c02140ae036475
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="getobject-method-int-javautilmap"></a>getObject 方法 (int, java.util.Map)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -32,7 +31,7 @@ ms.lasthandoff: 11/18/2017
   擷取指定之參數的值為 Java 程式語言中使用給定的參數索引，並透過給定的 Map 物件中的物件。  
   
 > [!NOTE]  
->  這個方法目前不支援由[!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)]。 因此，使用這個方法時一定會傳回預設對應。  
+>  [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] 目前不支援這個方法。 因此，使用這個方法時一定會傳回預設對應。  
   
 ## <a name="syntax"></a>語法  
   
@@ -45,7 +44,7 @@ public java.lang.Object getObject(int index,
 #### <a name="parameters"></a>參數  
  *索引*  
   
- **Int** ，指出參數索引。  
+ 指出參數索引的 **int**。  
   
  *對應*  
   
@@ -74,8 +73,8 @@ public java.lang.Object getObject(int index,
   
 -   將會以 microsoft.sql.DateTimeOffset 物件的形式傳回 datetimeoffset 型別的值。  
   
-## <a name="see-also"></a>請參閱＜  
- [getObject 方法 &#40;SQLServerCallableStatement &#41;](../../../connect/jdbc/reference/getobject-method-sqlservercallablestatement.md)   
+## <a name="see-also"></a>另請參閱  
+ [getObject 方法&#40;SQLServerCallableStatement&#41;](../../../connect/jdbc/reference/getobject-method-sqlservercallablestatement.md)   
  [SQLServerCallableStatement 成員](../../../connect/jdbc/reference/sqlservercallablestatement-members.md)   
  [SQLServerCallableStatement 類別](../../../connect/jdbc/reference/sqlservercallablestatement-class.md)  
   

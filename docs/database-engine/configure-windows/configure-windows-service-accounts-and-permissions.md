@@ -1,17 +1,14 @@
 ---
-title: "設定 Windows 服務帳戶與權限 | Microsoft Docs"
-ms.custom: 
-ms.date: 11/15/2017
-ms.prod: sql-non-specified
-ms.prod_service: database-engine
-ms.service: 
-ms.component: configure-windows
-ms.reviewer: 
+title: 設定 Windows 服務帳戶與權限 | Microsoft Docs
+ms.custom: ''
+ms.date: 05/08/2018
+ms.prod: sql
+ms.prod_service: high-availability
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: configuration
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - startup service states [SQL Server]
 - Setup [SQL Server], user accounts
@@ -53,16 +50,15 @@ helpviewer_keywords:
 - manual startup state [SQL Server]
 - accounts [SQL Server], user
 ms.assetid: 309b9dac-0b3a-4617-85ef-c4519ce9d014
-caps.latest.revision: 
+caps.latest.revision: 207
 author: MikeRayMSFT
-ms.author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
-ms.workload: Active
-ms.openlocfilehash: 32412d70d3dcf52fb467c5c4854526feb2fafe9d
-ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
+ms.openlocfilehash: 59306ab48061fe2c759b4cb2dac784e7a24cb325
+ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="configure-windows-service-accounts-and-permissions"></a>設定 Windows 服務帳戶與權限
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -75,6 +71,7 @@ ms.lasthandoff: 02/23/2018
   
 |||  
 |-|-|  
+|SQL Server 2017|C:\Windows\SysWOW64\SQLServerManager14.msc| 
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016|C:\Windows\SysWOW64\SQLServerManager13.msc|  
 |[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|C:\Windows\SysWOW64\SQLServerManager12.msc|  
 |[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]|C:\Windows\SysWOW64\SQLServerManager11.msc|  
@@ -137,19 +134,20 @@ ms.lasthandoff: 02/23/2018
 |---------------|------------------------------------|----------------------------------------------------------------|  
 |[!INCLUDE[ssDE](../../includes/ssde-md.md)]|[NETWORK SERVICE](#Network_Service)|[虛擬帳戶](#VA_Desc)*|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent|[NETWORK SERVICE](#Network_Service)|[虛擬帳戶](#VA_Desc)*|  
-|[!INCLUDE[ssAS](../../includes/ssas-md.md)]|[NETWORK SERVICE](#Network_Service)|[虛擬帳戶](#VA_Desc)*|  
+|[!INCLUDE[ssAS](../../includes/ssas-md.md)]|[NETWORK SERVICE](#Network_Service)|[虛擬帳戶](#VA_Desc)* **|  
 |[!INCLUDE[ssIS](../../includes/ssis-md.md)]|[NETWORK SERVICE](#Network_Service)|[虛擬帳戶](#VA_Desc)*|  
 |[!INCLUDE[ssRS](../../includes/ssrs-md.md)]|[NETWORK SERVICE](#Network_Service)|[虛擬帳戶](#VA_Desc)*|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay Controller|[NETWORK SERVICE](#Network_Service)|[虛擬帳戶](#VA_Desc)*|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay Client|[NETWORK SERVICE](#Network_Service)|[虛擬帳戶](#VA_Desc)*|  
 |FD 啟動器 (全文檢索搜尋)|[LOCAL SERVICE](#Local_Service)|[虛擬帳戶](#VA_Desc)|  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 瀏覽器|[LOCAL SERVICE](#Local_Service)|[LOCAL SERVICE](#Local_Service)|  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser|[LOCAL SERVICE](#Local_Service)|[LOCAL SERVICE](#Local_Service)|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] VSS Writer|[LOCAL SYSTEM](#Local_System)|[LOCAL SYSTEM](#Local_System)|  
 |[!INCLUDE[rsql_extensions](../../includes/rsql-extensions-md.md)]|NTSERVICE\MSSQLLaunchpad|NTSERVICE\MSSQLLaunchpad|  
 |PolyBase 引擎  |[NETWORK SERVICE](#Network_Service) |[NETWORK SERVICE](#Network_Service)  |
 |PolyBase 資料移動服務 |[NETWORK SERVICE](#Network_Service) |[NETWORK SERVICE](#Network_Service)  |
   
- * 需要 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 電腦外部的資源時， [!INCLUDE[msCoName](../../includes/msconame-md.md)] 建議您使用受管理的服務帳戶 (MSA)，並且為帳戶設定所需的最低權限。  
+ * 需要 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 電腦外部的資源時， [!INCLUDE[msCoName](../../includes/msconame-md.md)] 建議您使用受管理的服務帳戶 (MSA)，並且為帳戶設定所需的最低權限。   
+ ** 安裝在網域控制站上，不支援作為服務帳戶的虛擬帳戶。
   
  **SQL Server 容錯移轉叢集執行個體**
   
@@ -161,7 +159,7 @@ ms.lasthandoff: 02/23/2018
 |[!INCLUDE[ssIS](../../includes/ssis-md.md)]|[NETWORK SERVICE](#Network_Service)|[虛擬帳戶](#VA_Desc)|  
 |[!INCLUDE[ssRS](../../includes/ssrs-md.md)]|[NETWORK SERVICE](#Network_Service)|[虛擬帳戶](#VA_Desc)|  
 |FD 啟動器 (全文檢索搜尋)|[LOCAL SERVICE](#Local_Service)|[虛擬帳戶](#VA_Desc)|  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 瀏覽器|[LOCAL SERVICE](#Local_Service)|[LOCAL SERVICE](#Local_Service)|  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser|[LOCAL SERVICE](#Local_Service)|[LOCAL SERVICE](#Local_Service)|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] VSS Writer|[LOCAL SYSTEM](#Local_System)|[LOCAL SYSTEM](#Local_System)|  
 
 ####  <a name="Changing_Accounts"></a> 變更帳戶內容
@@ -188,7 +186,7 @@ ms.lasthandoff: 02/23/2018
   
     若要針對 SQL Server 2014 或更新版本使用群組受管理的服務帳戶，作業系統必須是 Windows Server 2012 R2 或更新版本。 Windows Server 2012 R2 的伺服器需要套用 [KB 2998082](http://support.microsoft.com/kb/2998082) ，以便服務可以在變更密碼之後立即登入，不會中斷。  
   
-    如需詳細資訊，請參閱 [群組受管理的服務帳戶](http://technet.microsoft.com/library/hh831782.aspx)。  
+    如需詳細資訊，請參閱[群組受控服務帳戶](http://technet.microsoft.com/library/hh831782.aspx)  
       
     > [!NOTE]  
     >  網域系統管理員必須先在 Active Directory 中建立群組受管理的服務帳戶， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝程式才能將其用於 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服務。  
@@ -207,7 +205,7 @@ ms.lasthandoff: 02/23/2018
     |[!INCLUDE[ssDE](../../includes/ssde-md.md)] 服務的預設執行個體|**NT SERVICE\MSSQLSERVER**|  
     |名為 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 之 **之**服務的具名執行個體|**NT SERVICE\MSSQL$PAYROLL**|  
     |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 預設執行個體上的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|**NT SERVICE\SQLSERVERAGENT**|  
-    |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 之 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 之 **之**|**NT SERVICE\SQLAGENT$PAYROLL**|  
+    |名為[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體上的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 之 **執行個體上的**Agent 服務|**NT SERVICE\SQLAGENT$PAYROLL**|  
   
  如需受管理的服務帳戶和虛擬帳戶的詳細資訊，請參閱[服務帳戶的逐步指南](http://technet.microsoft.com/library/dd548356\(WS.10\).aspx)的**受管理的服務帳戶和虛擬帳戶概念**一節，以及[受管理的服務帳戶常見問題集 (FAQ)](http://technet.microsoft.com/library/ff641729\(WS.10\).aspx)。  
   
@@ -295,7 +293,7 @@ ms.lasthandoff: 02/23/2018
   
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服務|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝程式授與的權限|
 |---------------------------------------|------------------------------------------------------------|
-|**[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]：**<br /><br /> (所有權利都會授與個別服務 SID。 預設執行個體： **NT SERVICE\MSSQLSERVER**。 具名執行個體： **NT SERVICE\MSSQL$**InstanceName)。|**以服務方式登入** (SeServiceLogonRight)<br /><br /> **取代處理序層級 Token** (SeAssignPrimaryTokenPrivilege)<br /><br /> **略過周遊檢查** (SeChangeNotifyPrivilege)<br /><br /> **調整處理序的記憶體配額** (SeIncreaseQuotaPrivilege)<br /><br /> 啟動 SQL 寫入器的權限<br /><br /> 讀取事件記錄檔服務的權限<br /><br /> 讀取遠端程序呼叫服務的權限|  
+|**[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]：**<br /><br /> (所有權利都會授與個別服務 SID。 預設執行個體： **NT SERVICE\MSSQLSERVER**。 具名執行個體： **NT SERVICE\MSSQL$** InstanceName)。|**以服務方式登入** (SeServiceLogonRight)<br /><br /> **取代處理序層級 Token** (SeAssignPrimaryTokenPrivilege)<br /><br /> **略過周遊檢查** (SeChangeNotifyPrivilege)<br /><br /> **調整處理序的記憶體配額** (SeIncreaseQuotaPrivilege)<br /><br /> 啟動 SQL 寫入器的權限<br /><br /> 讀取事件記錄檔服務的權限<br /><br /> 讀取遠端程序呼叫服務的權限|  
 |**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent：** \*<br /><br /> (所有權利都會授與個別服務 SID。 預設執行個體： **NT Service\SQLSERVERAGENT**。 具名執行個體：**NT Service\SQLAGENT$***InstanceName*。)|**以服務方式登入** (SeServiceLogonRight)<br /><br /> **取代處理序層級 Token** (SeAssignPrimaryTokenPrivilege)<br /><br /> **略過周遊檢查** (SeChangeNotifyPrivilege)<br /><br /> **調整處理序的記憶體配額** (SeIncreaseQuotaPrivilege)|  
 |**[!INCLUDE[ssAS](../../includes/ssas-md.md)]：**<br /><br /> (所有權利都會授與本機 Windows 群組。 預設執行個體：**SQLServerMSASUser$***ComputerName***$MSSQLSERVER**。 具名執行個體：**SQLServerMSASUser$***ComputerName***$***InstanceName*。 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 執行個體：**SQLServerMSASUser$***ComputerName***$***PowerPivot*。)|**以服務方式登入** (SeServiceLogonRight)<br /><br /> 僅限表格式：<br /><br /> **增加處理程序工作組** (SeIncreaseWorkingSetPrivilege)<br /><br /> **調整處理序的記憶體配額** (SeIncreaseQuotaSizePrivilege)<br /><br /> **鎖定記憶體中的分頁** (SeLockMemoryPrivilege) – 其只有在分頁完全關閉時才需要。<br /><br /> 僅限容錯移轉叢集安裝：<br /><br /> **增加排程優先順序** (SeIncreaseBasePriorityPrivilege)|  
 |**[!INCLUDE[ssRS](../../includes/ssrs-md.md)]：**<br /><br /> (所有權利都會授與個別服務 SID。 預設執行個體：**NT SERVICE\ReportServer**。 具名執行個體：**NT SERVICE\\ReportServer$***InstanceName*。)|**以服務方式登入** (SeServiceLogonRight)|  
@@ -476,7 +474,7 @@ ms.lasthandoff: 02/23/2018
   
 ###  <a name="WMI"></a> WMI  
 
-Windows Management Instrumentation (WMI) 必須能夠連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]。 為支援此功能，會在**中提供 Windows WMI 提供者 (**NT SERVICE\winmgmt [!INCLUDE[ssDE](../../includes/ssde-md.md)]) 的個別服務 SID。  
+Windows Management Instrumentation (WMI) 必須能夠連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]。 為支援此功能，會在**中提供 Windows WMI 提供者 (** NT SERVICE\winmgmt [!INCLUDE[ssDE](../../includes/ssde-md.md)]) 的個別服務 SID。  
   
  SQL WMI 提供者需要下列權限：  
   
@@ -636,7 +634,7 @@ Windows Management Instrumentation (WMI) 必須能夠連接到 [!INCLUDE[ssDE](.
   
 -   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 瀏覽器  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser  
   
 -   SQL 寫入器  
   

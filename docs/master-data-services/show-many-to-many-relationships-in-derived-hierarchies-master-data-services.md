@@ -1,30 +1,31 @@
 ---
-title: "在衍生階層 (Master Data Services) 中顯示多對多關聯性 | Microsoft Docs"
-ms.custom: 
+title: 在衍生階層 (Master Data Services) 中顯示多對多關聯性 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: mds
-ms.service: 
 ms.component: non-specific
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - master-data-services
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: 8b2a9c43-40e0-48f7-a6a9-325beb9f27da
-caps.latest.revision: 
+caps.latest.revision: 13
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: e97bda2761c85e690bf43e568371d7dc25584b41
-ms.sourcegitcommit: 6ac1956307d8255dc544e1063922493b30907b80
+ms.openlocfilehash: 927935747b0e9e343a5b7d8642ccc35d7a1fd189
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="show-many-to-many-relationships-in-derived-hierarchies-master-data-services"></a>在衍生階層 (Master Data Services) 中顯示多對多關聯性
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
   衍生階層 (DH) 顯示一對多關聯性，現今也可以顯示多對多關聯性。  
   
 ## <a name="many-to-many-m2m-relationships"></a>多對多 (M2M) 關聯性  
@@ -56,7 +57,7 @@ ms.lasthandoff: 03/05/2018
   
  ![mds_hierarchies_available_entities_and_hierarchies](../master-data-services/media/mds-hierarchies-available-entities-and-hierarchies.PNG "mds_hierarchies_available_entities_and_hierarchies")  
   
- 同樣地，我們看到子系可出現在多個父系下︰培訓課程 **1 {Master Data Services 101}** 同時出現在 **6 {Hillman, Reinout N}** 和 **40 {Ford, Jeffrey L}**之下。  
+ 同樣地，我們看到子系可出現在多個父系下︰培訓課程 **1 {Master Data Services 101}** 同時出現在 **6 {Hillman, Reinout N}** 和 **40 {Ford, Jeffrey L}** 之下。  
   
  對應實體 **ClassRegistration** 的成員不會在衍生階層內的任何位置出現。 其僅用來定義階層中父系和子系成員之間的關聯性。  
   
@@ -79,7 +80,7 @@ ms.lasthandoff: 03/05/2018
 ### <a name="M2MSample"></a> 範例模型中的 M2M 關聯性  
 如需 M2M 關聯性的示範，請檢視 [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)]隨附之 Customer 範例模型中的 Region Climate 衍生階層。   
   
-如下圖所示，建立此關聯性模型的層級名稱是 ![mds_Number1](../master-data-services/media/mds-number1.png)**Climate (透過 RegionClimate.Region 進行對應)**。 ![mds_Number2](../master-data-services/media/mds-number2.png)**預覽** 會顯示依相關聯氣候類型分組的地區。 這是 M2M 關聯性，原因是有與多個氣候 (父系) 相關聯的地區 (子成員)。 例如， ![mds_Number3](../master-data-services/media/mds-number3.png)**APCR {Asia Pacific}** 是與 ![mds_Number4](../master-data-services/media/mds-number4.png)**A {Tropical}** 和 ![mds_Number5](../master-data-services/media/mds-number5.png)**B {Dry}**相關聯。  
+如下圖所示，建立此關聯性模型的層級名稱是 ![mds_Number1](../master-data-services/media/mds-number1.png)**Climate (透過 RegionClimate.Region 進行對應)**。 ![mds_Number2](../master-data-services/media/mds-number2.png)**預覽** 會顯示依相關聯氣候類型分組的地區。 這是 M2M 關聯性，原因是有與多個氣候 (父系) 相關聯的地區 (子成員)。 例如， ![mds_Number3](../master-data-services/media/mds-number3.png)**APCR {Asia Pacific}** 是與 ![mds_Number4](../master-data-services/media/mds-number4.png)**A {Tropical}** 和 ![mds_Number5](../master-data-services/media/mds-number5.png)**B {Dry}** 相關聯。  
   
 ![mds_M2MRelationship_Example_CustomerModel](../master-data-services/media/mds-m2mrelationship-example-customermodel.png)  
   

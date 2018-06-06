@@ -1,16 +1,14 @@
 ---
-title: "dbo.sysschedules (TRANSACT-SQL) |Microsoft 文件"
-ms.custom: 
+title: dbo.sysschedules (TRANSACT-SQL) |Microsoft 文件
+ms.custom: ''
 ms.date: 08/09/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
 ms.component: system-tables
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: system-objects
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sysjobschedules
@@ -22,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - sysjobschedules system table
 ms.assetid: ccdafec7-2a9b-4356-bffb-1caa3a12db59
-caps.latest.revision: 
+caps.latest.revision: 32
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 272a950b77f541172b3c76ce4b5d597b9e908dee
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 2818512730a99bf7352c87f7d651d3084870767f
+ms.sourcegitcommit: 2d93cd115f52bf3eff3069f28ea866232b4f9f9e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "33252703"
 ---
 # <a name="dbosysjobschedules-transact-sql"></a>dbo.sysjobschedules (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,7 +38,7 @@ ms.lasthandoff: 02/03/2018
   
 > **注意：** **sysjobschedules**資料表重新整理每隔 20 分鐘，這可能會影響傳回的值**sp_help_jobschedule**預存程序。  
   
-|資料行名稱|資料類型|Description|  
+|資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |**schedule_id**|**int**|排程的識別碼。|  
 |**job_id**|**uniqueidentifier**|作業的識別碼。|  
@@ -48,6 +46,6 @@ ms.lasthandoff: 02/03/2018
 |**next_run_time**|**int**|排程執行作業的時間。 時間格式為 HHMMSS，使用 24 小時制。|  
   
 ## <a name="see-also"></a>另請參閱  
- [dbo.sysjobschedules &#40;TRANSACT-SQL &#41;](../../relational-databases/system-tables/dbo-sysschedules-transact-sql.md)  
+ [dbo.sysjobschedules &#40;Transact SQL&#41;](../../relational-databases/system-tables/dbo-sysschedules-transact-sql.md)  
   
   

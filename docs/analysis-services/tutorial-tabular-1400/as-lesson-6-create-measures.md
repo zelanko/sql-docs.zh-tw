@@ -1,27 +1,19 @@
 ---
-title: "Analysis Services 教學課程第 6 課： 建立量值 |Microsoft 文件"
-description: "描述如何在 Analysis Services 教學課程專案中建立量值。"
-ms.prod_service: analysis-services, azure-analysis-services
-services: analysis-services
-ms.suite: pro-bi
-documentationcenter: 
-author: Minewiskan
-manager: kfile
-editor: 
-tags: 
-ms.assetid: 
-ms.service: analysis-services
-ms.devlang: NA
-ms.topic: get-started-article
-ms.tgt_pltfrm: NA
-ms.workload: na
-ms.date: 02/20/2018
+title: Analysis Services 教學課程第 6 課： 建立量值 |Microsoft 文件
+ms.date: 05/08/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: tabular-models
+ms.topic: tutorial
 ms.author: owend
-ms.openlocfilehash: b4de99f18366afefaeb5411e0fc5454d378b87f7
-ms.sourcegitcommit: 7ed8c61fb54e3963e451bfb7f80c6a3899d93322
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: 61ead234a52f258f2c535f85c0992523b5b4e146
+ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/20/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="create-measures"></a>建立量值
 
@@ -57,7 +49,7 @@ ms.lasthandoff: 02/20/2018
   
     請注意左上資料格現在包含量值名稱， **DaysCurrentQuarterToDate**，後面接著結果**92**。 結果無關此時因為沒有使用者篩選已經套用。
     
-      ![as-lesson6-newmeasure](../tutorial-tabular-1400/media/as-lesson6-newmeasure.png) 
+      ![做為 lesson6 newmeasure](../tutorial-tabular-1400/media/as-lesson6-newmeasure.png) 
     
     不同於導出資料行，量值公式與您可以輸入量值名稱，後面接著冒號，後面接著公式的運算式。
 

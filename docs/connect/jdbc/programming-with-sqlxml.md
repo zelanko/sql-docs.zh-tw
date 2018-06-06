@@ -1,27 +1,24 @@
 ---
-title: "使用 SQLXML 進行程式設計 |Microsoft 文件"
-ms.custom: 
+title: 使用 SQLXML 進行程式設計 |Microsoft 文件
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
-ms.component: jdbc
-ms.reviewer: 
+ms.prod: sql
+ms.prod_service: connectivity
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: connectivity
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: 4d2cc57c-7293-4d92-b8b1-525e2b35f591
-caps.latest.revision: "23"
+caps.latest.revision: 23
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
-ms.workload: Inactive
-ms.openlocfilehash: 7b69bbf94ea08bbd7452cc577cee896777947d74
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+manager: craigg
+ms.openlocfilehash: e5cb6d2d44b9988dda28d5e9bd10db0d96467ff6
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="programming-with-sqlxml"></a>使用 SQLXML 進行程式設計
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -56,14 +53,14 @@ ms.lasthandoff: 11/18/2017
   
 |方法名稱|Getter SQLXML 物件<br /><br /> (可讀取)|Setter SQLXML 物件<br /><br /> (可寫入)|  
 |-----------------|-------------------------------------------|-------------------------------------------|  
-|CallableStatement.setSQLXML()|不支援|支援|  
-|CallableStatement.setObject()|不支援|支援|  
-|PreparedStatement.setSQLXML()|不支援|支援|  
-|Preparedstatement.setobject （)|不支援|支援|  
-|ResultSet.updateSQLXML()|不支援|支援|  
-|ResultSet.updateObject()|不支援|支援|  
-|ResultSet.getSQLXML()|支援|不支援|  
-|CallableStatement.getSQLXML()|支援|不支援|  
+|CallableStatement.setSQLXML()|不支援|Supported|  
+|CallableStatement.setObject()|不支援|Supported|  
+|PreparedStatement.setSQLXML()|不支援|Supported|  
+|Preparedstatement.setobject （)|不支援|Supported|  
+|ResultSet.updateSQLXML()|不支援|Supported|  
+|ResultSet.updateObject()|不支援|Supported|  
+|ResultSet.getSQLXML()|Supported|不支援|  
+|CallableStatement.getSQLXML()|Supported|不支援|  
   
  如上表所示，setter SQLXML 方法無法使用可讀取的 SQLXML 物件。同樣地，getter 方法無法使用可寫入的 SQLXML 物件。  
   
@@ -105,7 +102,7 @@ ms.lasthandoff: 11/18/2017
 ## <a name="adaptive-buffering-and-sqlxml-support"></a>適應性緩衝和 SQLXML 支援  
  SQLXML 物件所傳回的二進位和字元資料流會遵循適應性或完整緩衝模式。 反之，如果 XML 剖析器不是資料流，它們就不會遵循適應性或完整設定。 如需有關適應性緩衝的詳細資訊，請參閱[使用適應性緩衝](../../connect/jdbc/using-adaptive-buffering.md)。  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [支援 XML 資料](../../connect/jdbc/supporting-xml-data.md)  
   
   

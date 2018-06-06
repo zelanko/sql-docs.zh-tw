@@ -1,29 +1,22 @@
 ---
-title: "如何執行即時計分或 SQL Server 中的原生計分 |Microsoft 文件"
-ms.custom: 
-ms.date: 11/09/2017
-ms.reviewer: 
-ms.suite: sql
-ms.prod: machine-learning-services
-ms.prod_service: machine-learning-services
-ms.component: r
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
-author: jeannt
-ms.author: jeannt
-manager: cgronlund
-ms.workload: Inactive
-ms.openlocfilehash: 9287a85017df7b05b3b354a855811ea528a3ad79
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+title: 如何執行即時計分或 SQL Server Machine Learning 中的原生計分 |Microsoft 文件
+ms.prod: sql
+ms.technology: machine-learning
+ms.date: 04/15/2018
+ms.topic: conceptual
+author: HeidiSteen
+ms.author: heidist
+manager: cgronlun
+ms.openlocfilehash: 91928b20316ec8555c7f309f134d083dea5c7569
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="how-to-perform-realtime-scoring-or-native-scoring-in-sql-server"></a>如何執行即時計分或 SQL Server 中的原生計分
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-本主題提供如何執行即時計分和 SQL Server 2017 和 SQL Server 2016 中的原生計分功能的指示和範例程式碼。 同時即時計分和原生計分的目標是要提升以小型批次計分作業的效能。
+本文章提供如何執行即時計分和 SQL Server 2017 和 SQL Server 2016 中的原生計分功能的指示和範例程式碼。 同時即時計分和原生計分的目標是要提升以小型批次計分作業的效能。
 
 同時即時計分和原生計分設計為可讓您使用的機器學習模型，而不需要安裝。您只需要為取得預先定型的模型，以相容的格式，並將它儲存在 SQL Server 資料庫。
 
@@ -178,7 +171,7 @@ go
 
 本章節描述設定所需的步驟**即時**預測，並提供如何從 T-SQL 呼叫函式的範例。
 
-### <a name ="bkmk_enableRtScoring"></a>步驟 1。 啟用即時計分程序
+### <a name ="bkmk_enableRtScoring"></a> 步驟 1。 啟用即時計分程序
 
 您必須啟用每個資料庫，您想要用於計分這項的功能。 伺服器系統管理員應該執行的命令列公用程式，RegisterRExt.exe 隨附 RevoScaleR 封裝。
 
@@ -202,7 +195,7 @@ go
 3. RegisterRExt.exe 會建立下列物件：
 
     + 信任的組件
-    + 預存程序`sp_rxPredict`
+    + 預存程序 `sp_rxPredict`
     + 新的資料庫角色， `rxpredict_users`。 資料庫管理員可以使用此角色，授與使用即時計分功能的使用者權限。
 
 4. 加入的任何使用者需要執行`sp_rxPredict`至新的角色。
@@ -221,7 +214,7 @@ model <- rxSerializeModel(model.name, realtimeScoringOnly = TRUE)
 
 ### <a name="step-3-call-sprxpredict"></a>步驟 3： 呼叫 sp_rxPredict
 
-您呼叫 sp\_rxPredict，就像其他任何預存程序。 在目前版本中，預存程序會採用只有兩個參數：  _@model_ 的二進位格式，模型和 _@inputData_ 用於計分的資料定義為有效的 SQL 查詢.
+您呼叫 sp\_rxPredict，就像其他任何預存程序。 在目前版本中，預存程序會採用只有兩個參數： _@model_的二進位格式，模型和_@inputData_用於計分的資料定義為有效的 SQL 查詢.
 
 二進位格式中都相同，以供預測函式，因為您可以使用前面範例中模型和資料的資料表。
 
@@ -246,7 +239,7 @@ EXEC sp_rxPredict
 
 ## <a name="disable-realtime-scoring"></a>停用即時計分
 
-若要停用即時計分功能，請開啟提升權限的命令提示字元並執行下列命令：`RegisterRExt.exe /uninstallrts /database:<database_name> [/instance:name]`
+若要停用即時計分功能，請開啟提升權限的命令提示字元並執行下列命令： `RegisterRExt.exe /uninstallrts /database:<database_name> [/instance:name]`
 
 ## <a name="realtime-scoring-in-microsoft-r-server-or-machine-learning-server"></a>即時 Microsoft R Server 或 Server 機器學習的計分方法
 

@@ -1,32 +1,29 @@
 ---
-title: "ADO 程式碼範例在 Microsoft JScript |Microsoft 文件"
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
+title: ADO 程式碼範例在 Microsoft JScript |Microsoft 文件
+ms.prod: sql
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
-ms.custom: 
+ms.technology: connectivity
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 dev_langs:
 - JScript
 helpviewer_keywords:
 - ADO code examples, JScript
 ms.assetid: 228b978d-eef1-4e30-928a-005b2f77ef14
-caps.latest.revision: 
+caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 40bbf8b39fb1da60418c43074926b5115e6e1448
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: ef0f2f2e7238fde0655de5df584492e22afecb0f
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ado-code-examples-in-microsoft-jscript"></a>在 Microsoft JScript ADO 程式碼範例
 若要了解如何使用 ADO 方法、 屬性和事件在 JScript 中撰寫時，使用下列程式碼範例。  

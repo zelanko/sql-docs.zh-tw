@@ -1,31 +1,28 @@
 ---
-title: "DBMS 架構驅動程式診斷的範例 |Microsoft 文件"
-ms.custom: 
+title: DBMS 架構驅動程式診斷的範例 |Microsoft 文件
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
-ms.component: odbc
-ms.reviewer: 
+ms.prod: sql
+ms.prod_service: connectivity
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: connectivity
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - DBMS-based driver diagnostic [ODBC]
 - diagnostic information [ODBC], examples
 - error messages [ODBC], diagnostic messages
 ms.assetid: a80d54b0-43ff-4dfd-b6cb-f4694a5ed765
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
-ms.workload: Inactive
-ms.openlocfilehash: 84fa35f438b3dc852d2b8b7ae043e5c1f6402ec5
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+manager: craigg
+ms.openlocfilehash: 2d2f26421a71edad627dcc4d89c854dbafa78766
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="dbms-based-driver-diagnostic-example"></a>DBMS 架構驅動程式診斷的範例
 DBMS 架構驅動程式將要求傳送至 DBMS，並傳回至應用程式透過驅動程式管理員的資訊。 驅動程式會是介面的驅動程式管理員元件，因為它已格式化，並傳回引數**SQLGetDiagRec**。  

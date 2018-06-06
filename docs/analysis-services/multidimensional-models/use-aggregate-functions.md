@@ -1,31 +1,23 @@
 ---
-title: "使用彙總函式 |Microsoft 文件"
-ms.custom: 
-ms.date: 03/06/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
-helpviewer_keywords: aggregate functions [Analysis Services]
-ms.assetid: c42166ef-b75c-45f4-859c-09a3e9617664
-caps.latest.revision: "28"
-author: Minewiskan
+title: 使用彙總函式 |Microsoft 文件
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: multidimensional-models
+ms.topic: conceptual
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: b22f964bbc9659187cf67320951b75d93cb89331
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: d4e30b5670e7a9a02fdfa9f3bbfad6889e83b562
+ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="use-aggregate-functions"></a>使用彙總函式
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]當維度用來配量的量值時，量值是一起該維度包含的階層彙總。 而總和行為則視指定給量值的彙總函式而定 對於大多數包含數值資料的量值而言，彙總函式是 **Sum**。 量值的值會依據所使用的階層層級而加總為不同的數量。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+  當維度用於配量量值時，量值會與該維度所含的階層一起彙總。 而總和行為則視指定給量值的彙總函式而定 對於大多數包含數值資料的量值而言，彙總函式是 **Sum**。 量值的值會依據所使用的階層層級而加總為不同的數量。  
   
  在 Analysis Services 中，您建立的每個量值都有一個彙總函數可以決定量值的作業。 預先定義的彙總類型包括 **Sum**、**Min**、**Max**、**Count****Distinct Count** 及更多其他特殊函數。 或者，您如需透過複雜或自訂的公式執行彙總，可以建置 MDX 計算，而不使用預先建置的彙總函數。 例如，若您要定義百分比值的量值，可以在 MDX 中使用導出量值。 請參閱 [CREATE MEMBER 陳述式 &#40;MDX&#41;](../../mdx/mdx-data-definition-create-member.md)。  
   
@@ -71,9 +63,9 @@ ms.lasthandoff: 01/08/2018
   
  計算成員的相異計數量值是以事實資料表中的外部索引鍵資料行為根據  (也就是說，此量值的**來源資料行**屬性會識別此資料行。)這個資料行會聯結可識別相異計數量值所計算之成員的維度資料表資料行。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [量值和量值群組](../../analysis-services/multidimensional-models/measures-and-measure-groups.md)   
- [MDX 函數參考 &#40;MDX &#41;](../../mdx/mdx-function-reference-mdx.md)   
+ [MDX 函數參考 & #40;MDX & #41;](../../mdx/mdx-function-reference-mdx.md)   
  [定義局部加總行為](../../analysis-services/multidimensional-models/define-semiadditive-behavior.md)  
   
   

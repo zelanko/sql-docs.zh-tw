@@ -1,16 +1,12 @@
 ---
-title: sys.dm_exec_session_wait_stats (Transact-SQL) | Microsoft Docs
-ms.custom: 
-ms.date: 02/01/2017
-ms.prod: sql-non-specified
-ms.prod_service: database-engine
-ms.service: 
-ms.component: dmv's
-ms.reviewer: 
+title: sys.dm_exec_session_wait_stats (TRANSACT-SQL) |Microsoft 文件
+ms.custom: ''
+ms.date: 04/24/2018
+ms.prod: sql
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: system-objects
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.dm_exec_session_wait_stats
@@ -20,21 +16,20 @@ f1_keywords:
 helpviewer_keywords:
 - sys.dm_exec_session_wait_stats
 ms.assetid: df84842a-71eb-4fda-b448-5953cf9985dc
-caps.latest.revision: 
+caps.latest.revision: 6
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 73dcc552a70ba68d7beff38ed0476b1970feefca
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 4d5932d5fa878f3816c636b6106c2723a40834be
+ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 05/23/2018
 ---
-# <a name="sysdmexecsessionwaitstats-transact-sql"></a>sys.dm_exec_session_wait_stats (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+# <a name="sysdmexecsessionwaitstats-transact-sql"></a>sys.dm_exec_session_wait_stats (TRANSACT-SQL)
+[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-  傳回每個工作階段中執行的執行緒所遇到的所有等候的相關資訊。 您可以使用此檢視來診斷效能問題[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]工作階段以及特定查詢和批次。  此檢視會傳回工作階段會針對彙總的相同資訊[sys.dm_os_wait_stats &#40;TRANSACT-SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md)但提供**session_id**以及數字。  
+  傳回每個工作階段中執行的執行緒所遇到的所有等候的相關資訊。 您可以使用此檢視來診斷效能問題[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]工作階段以及特定查詢和批次。  此檢視會傳回工作階段會針對彙總的相同資訊[sys.dm_os_wait_stats &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md)但提供**session_id**以及數字。  
   
 **適用於**： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])。  
   
@@ -50,13 +45,13 @@ ms.lasthandoff: 02/03/2018
 ## <a name="remarks"></a>備註  
  此 DMV 在開啟工作階段時，或重設工作階段時，會重設工作階段的資訊 (如果連接共用)，  
   
- 等候類型的相關資訊，請參閱[sys.dm_os_wait_stats &#40;TRANSACT-SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md).  
+ 等候類型的相關資訊，請參閱[sys.dm_os_wait_stats &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md)。  
   
 ## <a name="permissions"></a>Permissions  
  如果使用者具有**VIEW SERVER STATE**伺服器上的權限，使用者會看到所有執行的工作階段的執行個體上[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]; 否則使用者會看到目前工作階段。  
   
 ## <a name="see-also"></a>另請參閱  
  [動態管理檢視與函數 &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
- [SQL Server 作業系統相關的動態管理檢視 &#40;TRANSACT-SQL &#41;](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)   
+ [SQL Server 作業系統相關的動態管理檢視&#40;Transact SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)   
  [sys.dm_os_wait_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md)  
  

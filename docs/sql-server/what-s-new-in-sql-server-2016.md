@@ -1,35 +1,33 @@
 ---
-title: "SQL Server 2016 的新功能"
-ms.custom: 
+title: SQL Server 2016 的新功能
+ms.custom: ''
 ms.date: 07/21/2017
-ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
-ms.service: 
+ms.prod: sql
+ms.prod_service: sql
 ms.component: sql-non-specified
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - server-general
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 keywords:
-- "sql server 新功能"
+- sql server 新功能
 helpviewer_keywords:
 - new features [SQL Server]
 - SQL Server, what's new
 - SQL Server 2008 what's new
 - what's new [SQL Server]
 ms.assetid: 6a428023-e3cc-4626-a88a-4c13ccbd7db0
-caps.latest.revision: 
+caps.latest.revision: 224
 author: craigg-msft
 ms.author: craigg
-manager: jhubbard
-ms.workload: Active
-ms.openlocfilehash: 075ad5ecefdef03acb8428cc199c35f6116c442b
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+manager: craigg
+ms.openlocfilehash: c75528700e090c125f90aad47213d1a2e5332c30
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="whats-new-in-sql-server-2016"></a>SQL Server 2016 中的新功能
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]  
@@ -63,7 +61,7 @@ ms.lasthandoff: 02/15/2018
 請參閱[資料庫引擎](../database-engine/configure-windows/what-s-new-in-sql-server-2016-database-engine.md)。
 ## <a name="sql-server-2016-analysis-services-ssas"></a>SQL Server 2016 Analysis Services (SSAS)
 SQL Server 2016 Analysis Services 針對以「1200 (含) 相容性層級」為基礎的表格式模型資料庫，能提供更佳的效能、撰寫功能、資料庫管理、篩選、處理及其他優化。
-- **[SQL Server R 服務](../advanced-analytics/r-services/what-s-new-in-sql-server-r-services.md)**能將用於統計分析的 R 程式設計語言整合到 SQL Server 中。 
+- **[SQL Server R 服務](../advanced-analytics/r-services/what-s-new-in-sql-server-r-services.md)** 能將用於統計分析的 R 程式設計語言整合到 SQL Server 中。 
 - 新的「資料庫一致性檢查程式 (DBCC)」會在內部執行，以偵測可能的資料損毀問題。
 - 可即時查詢外部資料而不需事先匯入的「直接查詢」功能，現已支援更多資料來源，包括 Azure SQL、Oracle 和 Teradata。 
 - 許多新的「DAX (資料存取運算式) 函式」。
@@ -111,7 +109,9 @@ Microsoft 在此版本中徹底翻新了 Reporting Services。
 - [SQL Server 版本支援的功能](https://msdn.microsoft.com/library/cc645993.aspx)
 - [安裝 SQL Server 2016 的硬體與軟體需求](../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)
 - [從安裝精靈安裝 SQL Server 2016](../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md)
-- [安裝程式和服務安裝](http://msdn.microsoft.com/library/6df72a78-6b36-4bc1-948e-04b4ebe46094)    
+- [安裝程式和服務安裝](http://msdn.microsoft.com/library/6df72a78-6b36-4bc1-948e-04b4ebe46094)
 - [新的 SQL PowerShell 模組](https://blogs.technet.microsoft.com/dataplatforminsider/2016/06/30/sql-powershell-july-2016-update/)
 
 [!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]
+
+[!INCLUDE[contribute-to-content](../includes/paragraph-content/contribute-to-content.md)]

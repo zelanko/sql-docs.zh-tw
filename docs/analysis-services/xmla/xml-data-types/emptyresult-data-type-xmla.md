@@ -1,39 +1,24 @@
 ---
-title: "EmptyResult 資料類型 (XMLA) |Microsoft 文件"
-ms.custom: 
-ms.date: 03/03/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services, azure-analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+title: EmptyResult 資料類型 (XMLA) |Microsoft 文件
+ms.date: 05/08/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: xmla
 ms.topic: reference
-apiname: EmptyResult Data Type
-apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
-apitype: Schema
-applies_to: SQL Server 2016 Preview
-f1_keywords:
-- http://schemas.microsoft.com/analysisservices/2003/engine#EmptyResult
-- olapxmla_EmptyResult
-- urn:schemas-microsoft-com:xml-analysis#EmptyResult
-helpviewer_keywords: EmptyResult data type
-ms.assetid: 63818123-acbb-4220-9d60-1aa20a7326a1
-caps.latest.revision: "28"
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: d9eb4f523fb783e9ded2e1a1d9d9c26e220331c5
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 7155c03203ad852573318056ab4e194fe19e7113
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34573900"
 ---
 # <a name="emptyresult-data-type-xmla"></a>EmptyResult 資料類型 (XMLA)
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]定義衍生的資料類型，表示[根](../../../analysis-services/xmla/xml-elements-properties/root-element-xmla.md)不傳回資料來源的項目[探索](../../../analysis-services/xmla/xml-elements-methods-discover.md)或[Execute](../../../analysis-services/xmla/xml-elements-methods-execute.md)方法呼叫。  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
+  定義衍生的資料類型，表示[根](../../../analysis-services/xmla/xml-elements-properties/root-element-xmla.md)不傳回資料來源的項目[探索](../../../analysis-services/xmla/xml-elements-methods-discover.md)或[Execute](../../../analysis-services/xmla/xml-elements-methods-execute.md)方法呼叫。  
   
  **命名空間**描述 urn:-microsoft-schemas-microsoft-com:-xml-analysis: empty  
   
@@ -73,7 +58,7 @@ ms.lasthandoff: 01/08/2018
 </return>  
 ```  
   
-## <a name="see-also"></a>請參閱  
- [XML 資料類型 &#40;XMLA &#41;](../../../analysis-services/xmla/xml-data-types/xml-data-types-xmla.md)  
+## <a name="see-also"></a>另請參閱
+ [XML 資料型別&#40;XMLA&#41;](../../../analysis-services/xmla/xml-data-types/xml-data-types-xmla.md)  
   
   

@@ -1,37 +1,37 @@
 ---
-title: "建立及自訂鍵盤快速鍵，在 SQL Operations Studio （預覽） |Microsoft 文件"
-description: "了解如何建立及自訂 SQL Operations Studio （預覽） 中的鍵盤快速鍵。"
+title: 建立及自訂鍵盤快速鍵，在 SQL Operations Studio （預覽） |Microsoft 文件
+description: 了解如何建立及自訂 SQL Operations Studio （預覽） 中的鍵盤快速鍵。
 ms.custom: tools|sos
 ms.date: 11/15/2017
-ms.prod: sql-non-specified
-ms.reviewer: alayu; erickang; sstein
+ms.prod: sql
+ms.reviewer: alayu; sstein
 ms.suite: sql
 ms.prod_service: sql-tools
 ms.component: sos
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: a96204723bd56a63ec23841ede47b5844fbad313
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 692d07af3e94eea9c255a5cb464dacd710eddbbb
+ms.sourcegitcommit: 6fd8a193728abc0a00075f3e4766a7e2e2859139
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+
+ms.lasthandoff: 05/17/2018
 ---
-# <a name="keyboard-shortcuts-in-includename-sosincludesname-sosmd"></a>中的鍵盤快速鍵[!INCLUDE[name-sos](../includes/name-sos.md)]
+# <a name="keyboard-shortcuts-in-includename-sosincludesname-sosmd"></a>中的鍵盤快速鍵 [!INCLUDE[name-sos](../includes/name-sos.md)]
 
 這篇文章提供快速檢視、 編輯和建立鍵盤快速鍵中的步驟[!INCLUDE[name-sos](../includes/name-sos-short.md)]。
 
-因為 [!INCLUDE[name-sos](../includes/name-sos-short.md)] 的按鍵繫結功能繼承自 Visual Studio Code，有關使用不同鍵盤配置等進階自訂內容的詳細資訊，請見 [Visual Studio Code 的按鍵繫結](https://code.visualstudio.com/docs/getstarted/keybindings) 文章。某些按鍵功能可能無法使用 (例如，[!INCLUDE[name-sos](../includes/name-sos-short.md)] 中不支援按鍵對應延伸模組)。
+因為 [!INCLUDE[name-sos](../includes/name-sos-short.md)] 的按鍵繫結功能繼承自 Visual Studio Code，有關使用不同鍵盤配置等進階自訂內容的詳細資訊，請見 [Visual Studio Code 的按鍵繫結](https://code.visualstudio.com/docs/getstarted/keybindings) 文章。 某些按鍵功能可能無法使用 (例如，[!INCLUDE[name-sos](../includes/name-sos-short.md)] 中不支援按鍵對應延伸模組)。
 
 
 ## <a name="open-the-keyboard-shortcuts-editor"></a>開啟 鍵盤快速鍵編輯器
 
 若要檢視所有目前定義的鍵盤快速鍵：
 
-從 **檔案** 功能表開啟 **鍵盤快速鍵** 編輯器：**檔案** > **喜好設定** > **鍵盤快速鍵** (Mac：**[!INCLUDE[name-sos](../includes/name-sos-short.md)]** > **喜好設定** > **鍵盤快速鍵**)。
+從 **檔案** 功能表開啟 **鍵盤快速鍵** 編輯器：**檔案**  >  **喜好設定**  >  **鍵盤快速鍵** (Mac：**[!INCLUDE[name-sos](../includes/name-sos-short.md)]**  >  **喜好設定**  >  **鍵盤快速鍵**)。
 
 除了顯示目前的按鍵組合**鍵盤快速鍵**編輯器列出可用命令沒有定義的鍵盤快速鍵。 **鍵盤快速鍵**編輯器可讓您輕鬆地變更、 移除、 重設，並定義新的按鍵組合。  
 
@@ -48,7 +48,7 @@ ms.lasthandoff: 12/21/2017
 
    ![編輯鍵盤快速鍵](media/keyboard-shortcuts/change-keybinding.png)
 
-1. 按下所需的組合鍵，然後按下 **Enter** 儲存。 
+1. 按下所需的組合鍵，然後按下 **Enter** 儲存。  
 
    ![儲存鍵盤快速鍵](media/keyboard-shortcuts/save-keybinding.png)
 
@@ -60,6 +60,4 @@ ms.lasthandoff: 12/21/2017
 
    ![建立鍵盤快速鍵](media/keyboard-shortcuts/add-keybinding.png)
 
-1. 按下想要的按鍵組合，然後按下 **Enter** 儲存。
-
-
+1. 按下所需的組合鍵，然後按下 **Enter** 儲存。 

@@ -1,16 +1,15 @@
 ---
-title: "NumberOfProps 屬性 （ClientNetworkProtocol 類別） |Microsoft 文件"
-ms.custom: 
+title: NumberOfProps 屬性 （ClientNetworkProtocol 類別） |Microsoft 文件
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
 ms.component: wmi
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - NumberOfProps Property (ClientNetworkProtocol Class)
@@ -20,20 +19,19 @@ apitype: MOFDef
 helpviewer_keywords:
 - NumberOfProps property
 ms.assetid: 9c508bc5-c7a4-4db1-b3bf-c7098c66435a
-caps.latest.revision: 
-author: JennieHubbard
-ms.author: jhubbard
+caps.latest.revision: 34
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 4b3ee4120259cb80755b1148e3d771487ce13866
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.openlocfilehash: 77baccff2e4748929ab4751f4080a164311543c5
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="numberofprops-property-clientnetworkprotocol-class"></a>NumberOfProps 屬性 (ClientNetworkProtocol 類別)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
-取得屬性的用戶端數目的網路通訊協定所指定[SetOrderValue 方法 （ClientNetworkProtocol 類別）](../../../relational-databases/wmi-provider-configuration-classes/clientnetworkprotocol-class/setordervalue-method-clientnetworkprotocol-class.md)。  
+  取得屬性的用戶端數目的網路通訊協定所指定[SetOrderValue 方法 （ClientNetworkProtocol 類別）](../../../relational-databases/wmi-provider-configuration-classes/clientnetworkprotocol-class/setordervalue-method-clientnetworkprotocol-class.md)。  
   
 ## <a name="syntax"></a>語法  
   

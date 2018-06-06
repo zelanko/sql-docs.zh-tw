@@ -1,34 +1,30 @@
 ---
-title: "Hash Warning 事件類別 | Microsoft Docs"
-ms.custom: 
+title: Hash Warning 事件類別 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
-ms.prod_service: database-engine, sql-database
-ms.service: 
-ms.component: event-classes
-ms.reviewer: 
+ms.prod: sql
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: supportability
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - Hash Warning event class
 ms.assetid: cb93c620-4be9-4362-8bf0-af3f2048bdaf
-caps.latest.revision: 
+caps.latest.revision: 39
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 7e3d82475509a6707001787ff1c08ab66636292c
-ms.sourcegitcommit: 7e9380e53341755df13fce130ab3287918a8e44c
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: add64ff3832d95c4a16a097a22f420423c1dc09c
+ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/21/2018
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="hash-warning-event-class"></a>Hash Warning 事件類別
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-Hash Warning 事件類別可用來監視在雜湊作業期間發生雜湊遞迴或雜湊停止 (Hash Bailout) 的時間。  
+  Hash Warning 事件類別可用來監視在雜湊作業期間發生雜湊遞迴或雜湊停止 (Hash Bailout) 的時間。  
   
  當建立輸入不符合可用記憶體時，會發生雜湊遞迴，因而將輸入分割為多個需要個別處理的資料分割。 如果這些資料分割中仍有任何資料分割不符合可用記憶體，則這些資料分割會再分為子資料分割，仍是需要個別處理。 這個分割處理會繼續進行，直到每個資料分割都符合可用記憶體或達到最大遞迴等級為止 (顯示於 IntegerData 資料行)。  
   

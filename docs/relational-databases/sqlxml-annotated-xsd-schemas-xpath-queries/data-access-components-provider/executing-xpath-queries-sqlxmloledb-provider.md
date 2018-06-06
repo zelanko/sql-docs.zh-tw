@@ -1,16 +1,14 @@
 ---
-title: "執行 XPath 查詢 （SQLXMLOLEDB 提供者） |Microsoft 文件"
-ms.custom: 
+title: 執行 XPath 查詢 （SQLXMLOLEDB 提供者） |Microsoft 文件
+ms.custom: ''
 ms.date: 03/16/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
 ms.component: sqlxml
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- dbe-xml
-ms.tgt_pltfrm: 
+ms.technology: xml
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - SQLXMLOLEDB Provider, executing XPath queries
@@ -19,20 +17,20 @@ helpviewer_keywords:
 - XPath queries [SQLXML], SQLXMLOLEDB Provider
 - Mapping Schema property
 ms.assetid: 19063222-dc9c-48ae-a55f-778103674a9e
-caps.latest.revision: 
+caps.latest.revision: 30
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 3e8015e532b518c01800d433c7dd28bdb12883fa
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: a5cad9cb9284353aa856b45bad2fa6a14ad126d5
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="executing-xpath-queries-sqlxmloledb-provider"></a>執行 XPath 查詢 (SQLXMLOLEDB 提供者)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-此範例示範如何使用下列 SQLXMLOLEDB 提供者專屬的屬性：  
+  此範例示範如何使用下列 SQLXMLOLEDB 提供者專屬的屬性：  
   
 -   **ClientSideXML**  
   
@@ -40,7 +38,7 @@ ms.lasthandoff: 02/12/2018
   
 -   **對應結構描述**  
   
- 在這個範例 ADO 應用程式中，已針對 XSD 對應結構描述 (MySchema.xml) 指定了 XPath 查詢 (root)。 結構描述有**\<連絡人 >**具有項目**ContactID**， **FirstName**，和**LastName**屬性。 在此結構描述中，系統會進行預設對應：元素名稱會對應至具有相同名稱的資料表，而且屬於簡單類型的屬性會對應至具有相同名稱的資料行。  
+ 在這個範例 ADO 應用程式中，已針對 XSD 對應結構描述 (MySchema.xml) 指定了 XPath 查詢 (root)。 結構描述有**\<連絡人 >** 具有項目**ContactID**， **FirstName**，和**LastName**屬性。 在此結構描述中，系統會進行預設對應：元素名稱會對應至具有相同名稱的資料表，而且屬於簡單類型的屬性會對應至具有相同名稱的資料行。  
   
 ```  
 <xsd:schema xmlns:xsd='http://www.w3.org/2001/XMLSchema'  

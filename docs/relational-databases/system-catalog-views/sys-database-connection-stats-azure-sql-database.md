@@ -1,16 +1,15 @@
 ---
-title: "sys.database_connection_stats (Azure SQL Database) |Microsoft 文件"
-ms.custom: 
+title: sys.database_connection_stats (Azure SQL Database) |Microsoft 文件
+ms.custom: ''
 ms.date: 03/25/2016
-ms.prod: 
+ms.prod: ''
 ms.prod_service: sql-database
-ms.reviewer: 
+ms.reviewer: ''
 ms.service: sql-database
 ms.component: system-catalog-views
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: system-objects
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.database_connection_stats
@@ -23,23 +22,23 @@ helpviewer_keywords:
 - sys.database_connection_stats
 - database_connection_stats
 ms.assetid: 5c8cece0-63b0-4dee-8db7-6b43d94027ec
-caps.latest.revision: 
+caps.latest.revision: 13
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 16a713efdc16c13ce50f1f7b2465df55568df194
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+monikerRange: = azuresqldb-current || = sqlallproducts-allversions
+ms.openlocfilehash: 2de813bc474d59deb417b5aec1e1d02b5e9f5967
+ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="sysdatabaseconnectionstats-azure-sql-database"></a>sys.database_connection_stats (Azure SQL Database)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
 
-  包含統計資料[!INCLUDE[ssSDS](../../includes/sssds-md.md)]資料庫**連線**事件，提供資料庫連接成功和失敗的概觀。 如需有關連接性事件的詳細資訊，請參閱中的事件類型[sys.event_log &#40;Azure SQL Database &#41;](../../relational-databases/system-catalog-views/sys-event-log-azure-sql-database.md).  
+  包含統計資料[!INCLUDE[ssSDS](../../includes/sssds-md.md)]資料庫**連線**事件，提供資料庫連接成功和失敗的概觀。 如需有關連接性事件的詳細資訊，請參閱中的事件類型[sys.event_log &#40;Azure SQL Database&#41;](../../relational-databases/system-catalog-views/sys-event-log-azure-sql-database.md)。  
   
-|統計資料|類型|Description|  
+|統計資料|型別|Description|  
 |---------------|----------|-----------------|  
 |**database_name**|**sysname**|資料庫的名稱。|  
 |**start_time**|**datetime2**|彙總間隔開始的 UTC 日期和時間。 這個時間永遠是 5 分鐘的倍數。 例如：<br /><br /> '2011-09-28 16:00:00'<br />'2011-09-28 16:05:00'<br />'2011-09-28 16:10:00'|  
@@ -62,7 +61,7 @@ ms.lasthandoff: 11/21/2017
 |`Database1`|`2012-02-05 11:00:00`|`2012-02-05 11:05:00`|`0`|`7`|`7`|`0`|`0`|  
   
 ### <a name="interval-starttime-and-endtime"></a>間隔的 start_time 和 end_time  
- 在事件發生時，事件是否包含在彙總間隔*上*或*之後***start_time**和*之前***end_time**對於該間隔。 例如，正巧發生在 `2012-10-30 19:25:00.0000000` 的事件只會納入到以下所示的第二段間隔：  
+ 在事件發生時，事件是否包含在彙總間隔*上*或*之後 * * * start_time** 和*之前 * * * end_time** 對於該間隔。 例如，正巧發生在 `2012-10-30 19:25:00.0000000` 的事件只會納入到以下所示的第二段間隔：  
   
 ```  
   
@@ -80,7 +79,7 @@ start_time                    end_time
 ### <a name="errors-not-included"></a>不包括錯誤  
  這個檢視可能不會包括所有連接和錯誤資訊：  
   
--   這個檢視不包括所有[!INCLUDE[ssSDS](../../includes/sssds-md.md)]資料庫可能發生的錯誤，只有在 事件類型的指定[sys.event_log &#40;Azure SQL Database &#41;](../../relational-databases/system-catalog-views/sys-event-log-azure-sql-database.md).  
+-   這個檢視不包括所有[!INCLUDE[ssSDS](../../includes/sssds-md.md)]資料庫可能發生的錯誤，只有在 事件類型的指定[sys.event_log &#40;Azure SQL Database&#41;](../../relational-databases/system-catalog-views/sys-event-log-azure-sql-database.md)。  
   
 -   如果在 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 資料中心內發生機器故障，則事件資料表中可能會遺漏邏輯伺服器的少量資料。  
   
@@ -98,7 +97,7 @@ FROM sys.database_connection_stats
 WHERE start_time>='2011-09-25:12:00:00' and end_time<='2011-09-28 12:00:00';  
 ```  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [疑難排解 Windows Azure SQL Database](http://msdn.microsoft.com/library/windowsazure/ee730906.aspx)  
   
   

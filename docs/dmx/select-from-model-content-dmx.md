@@ -1,35 +1,34 @@
 ---
-title: "SELECT FROM&lt;模型&gt;。內容 (DMX) |Microsoft 文件"
-ms.custom: 
+title: SELECT FROM&lt;模型&gt;。內容 (DMX) |Microsoft 文件
+ms.custom: ''
 ms.date: 03/02/2016
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
 ms.component: data-mining
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - SELECT
 - FROM
 - Content
-dev_langs: DMX
+dev_langs:
+- DMX
 helpviewer_keywords:
 - schema rowsets [Analysis Services], data mining
 - SELECT FROM <model>.CONTENT statement
 ms.assetid: a270b33f-77be-41fa-9340-2f6cb0dd75e5
-caps.latest.revision: "43"
+caps.latest.revision: 43
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: 24b5a1884994050874cbfd24afbae84b773620d1
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: c68fe4831c0fcbae281eae4ca3ed823d737267cd
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="select-from-ltmodelgtcontent-dmx"></a>SELECT FROM&lt;模型&gt;。內容 (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -62,14 +61,14 @@ SELECT [FLATTENED] [TOP <n>] <expression list> FROM <model>.CONTENT
  選擇性。 傳回純量值的運算式。  
   
 ## <a name="remarks"></a>備註  
- The **SELECT FROM** *\<model>***.內容**陳述式會傳回每個演算法特定的內容。 例如，您可能想要使用自訂應用程式中關聯規則模型之所有規則的描述。 您可以使用**SELECT FROM\<模型 >。內容**陳述式來傳回模型之 NODE_RULE 資料行中的值。  
+ **SELECT FROM** *\<模型 > * * *。內容** 陳述式會傳回每個演算法特定的內容。 例如，您可能想要使用自訂應用程式中關聯規則模型之所有規則的描述。 您可以使用**SELECT FROM\<模型 >。內容**陳述式來傳回模型之 NODE_RULE 資料行中的值。  
   
  下表列出包含在採礦模型內容中的資料行。  
   
 > [!NOTE]  
->  演算法可能對資料行有不同的解譯，以便正確地表示內容。 如需採礦模型內容的每個演算法，以及如何解譯與查詢採礦模型內容的每個模型類型的提示的說明，請參閱[採礦模型內容 &#40;Analysis Services-資料採礦 &#41;](../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md).  
+>  演算法可能對資料行有不同的解譯，以便正確地表示內容。 如需採礦模型內容的每個演算法，以及如何解譯與查詢採礦模型內容的每個模型類型的提示的說明，請參閱[採礦模型內容&#40;Analysis Services-資料採礦&#41;](../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)。  
   
-|CONTENT 資料列集資料行|描述|  
+|CONTENT 資料列集資料行|Description|  
 |---------------------------|-----------------|  
 |MODEL_CATALOG|目錄名稱。 如果提供者不支援目錄，則為 NULL。|  
 |MODEL_SCHEMA|不合格的結構描述名稱。 如果提供者不支援結構描述，則為 NULL。|  
@@ -77,7 +76,7 @@ SELECT [FLATTENED] [TOP <n>] <expression list> FROM <model>.CONTENT
 |ATTRIBUTE_NAME|對應至節點之屬性的名稱。|  
 |NODE_NAME|節點的名稱。|  
 |NODE_UNIQUE_NAME|模型內節點的唯一名稱。|  
-|NODE_TYPE|代表節點類型的整數。 執行個體時提供 SQL Server 登入。|  
+|NODE_TYPE|代表節點類型的整數。 。|  
 |NODE_GUID|節點 GUID。 如果沒有 GUID，則為 NULL。|  
 |NODE_CAPTION|與節點相關聯的標籤或標題。 主要用於顯示用途。 如果標題不存在，就會傳回 NODE_NAME。|  
 |CHILDREN_CARDINALITY|節點擁有的子系數目。|  
@@ -136,9 +135,9 @@ WHERE NODE_TYPE = 26
   
 |MODEL_NAME|NODE_DISTRIBUTION.ATTRIBUTE_NAME|NODE_DISTRIBUTION.ATTRIBUTE_VALUE|NODE_DISTRIBUTION.SUPPORT|NODE_DISTRIBUTION.PROBABILITY|NODE_DISTRIBUTION.VARIANCE|NODE_DISTRIBUTION.VALUETYPE|  
 |-----------------|----------------------------------------|-----------------------------------------|--------------------------------|------------------------------------|---------------------------------|----------------------------------|  
-|TM_NaiveBayes|Bike Buyer|Missing|0|0|0|@shouldalert|  
+|TM_NaiveBayes|Bike Buyer|遺漏|0|0|0|1|  
 |TM_NaiveBayes|Bike Buyer|0|6556|0.506685215240745|0||  
-|TM_NaiveBayes|Bike Buyer|@shouldalert|6383|0.493314784759255|0||  
+|TM_NaiveBayes|Bike Buyer|1|6383|0.493314784759255|0||  
   
  下列範例示範如何使用子 SELECT 陳述式，從巢狀資料表僅傳回某些資料行。 您可以使用巢狀資料表之資料表名稱的別名來簡化顯示，如下所示。  
   
@@ -154,13 +153,13 @@ WHERE NODE_TYPE = 26
   
 |MODEL_NAME|t.ATTRIBUTE_NAME|t.ATTRIBUTE_VALUE|t.SUPPORT|  
 |-----------------|-----------------------|------------------------|---------------|  
-|TM_NaiveBayes|Bike Buyer|Missing|0|  
+|TM_NaiveBayes|Bike Buyer|遺漏|0|  
 |TM_NaiveBayes|Bike Buyer|0|6556|  
-|TM_NaiveBayes|Bike Buyer|@shouldalert|6383|  
+|TM_NaiveBayes|Bike Buyer|1|6383|  
   
-## <a name="see-also"></a>請參閱  
- [SELECT &#40; DMX &#41;](../dmx/select-dmx.md)   
- [資料採礦延伸模組 &#40; DMX &#41;資料操作陳述式](../dmx/dmx-statements-data-manipulation.md)   
- [資料採礦延伸模組 &#40;DMX&#41; 陳述式參考](../dmx/data-mining-extensions-dmx-statements.md)  
+## <a name="see-also"></a>另請參閱  
+ [選取&AMP;#40;DMX&AMP;#41;](../dmx/select-dmx.md)   
+ [資料採礦延伸模組&#40;DMX&#41;資料操作陳述式](../dmx/dmx-statements-data-manipulation.md)   
+ [資料採礦延伸模組 & #40; DMX & #41;陳述式參考](../dmx/data-mining-extensions-dmx-statements.md)  
   
   

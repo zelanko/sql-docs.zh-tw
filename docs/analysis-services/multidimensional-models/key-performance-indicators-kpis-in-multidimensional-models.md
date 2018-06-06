@@ -1,40 +1,23 @@
 ---
-title: "關鍵效能指標 (Kpi) 多維度模型中的 |Microsoft 文件"
-ms.custom: 
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
-helpviewer_keywords:
-- viewing Key Performance Indicators
-- Key Performance Indicators [Analysis Services]
-- KPIs [Analysis Services]
-- OLAP objects [Analysis Services], performance indicators
-- weights [Analysis Services]
-- displaying Key Performance Indicators
-- parent KPIs [Analysis Services]
-- child KPIs
-ms.assetid: 73aee2da-da30-44f1-829c-0a4c078a7768
-caps.latest.revision: 
-author: Minewiskan
+title: 關鍵效能指標 (Kpi) 多維度模型中的 |Microsoft 文件
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: multidimensional-models
+ms.topic: conceptual
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 396ac061fca578b06766830948001387c65b036e
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 7b7c036b09113711315ada3120538b5117931be7
+ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="key-performance-indicators-kpis-in-multidimensional-models"></a>多維度模型中的關鍵效能指標 (KPI)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-在商務用語中，關鍵效能指標 (KPI) 是量測商務成就的可量化度量。  
+  在商務用語中，關鍵效能指標 (KPI) 是量測商務成就的可量化度量。  
   
  在 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]中，關鍵效能指標是用來評估商務成就的計算集合，這些計算與 Cube 中的量值群組相關。 一般來說，這些計算是多維度運算式 (MDX) 運算式或導出成員的結合。 KPI 也有其他中繼資料，這些中繼資料會提供有關用戶端應用程式應該如何顯示 KPI 計算結果的資訊。  
   
@@ -67,7 +50,7 @@ ms.lasthandoff: 02/15/2018
 ## <a name="parent-kpis"></a>父 KPI  
  組織可追蹤不同層級的不同商業標準。 例如，只有兩或三個 KPI 可用來量測全公司的商業成就，但這些公司的整體性 KPI 可以用公司內的事業單位所追蹤的其他三或四個 KPI 為基礎。 同時，公司內的事業單位可使用不同的統計資料來計算相同的 KPI，然後再將結果積存到公司的整體性 KPI。  
   
- [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 可讓您定義 KPI 之間的父子式關聯性。 此父子式關聯性可讓子 KPI 的結果用於計算父 KPI 的結果。 用戶端應用程式也可以使用此關聯性來適當地顯示父 KPI 和子 KPI。  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]可讓您定義 Kpi 之間的父子式關聯性。 此父子式關聯性可讓子 KPI 的結果用於計算父 KPI 的結果。 用戶端應用程式也可以使用此關聯性來適當地顯示父 KPI 和子 KPI。  
   
 ## <a name="weights"></a>加權  
  子 KPI 也可指派加權。 加權可讓 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 在計算父 KPI 值時，按比例調整子 KPI 的結果。  

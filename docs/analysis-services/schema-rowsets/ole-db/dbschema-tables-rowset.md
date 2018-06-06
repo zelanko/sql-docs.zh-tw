@@ -1,39 +1,28 @@
 ---
-title: "DBSCHEMA_TABLES 資料列集 |Microsoft 文件"
-ms.custom: 
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+title: DBSCHEMA_TABLES 資料列集 |Microsoft 文件
+ms.date: 05/03/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: schema-rowsets
 ms.topic: reference
-apiname: DBSCHEMA_TABLES
-apitype: NA
-applies_to: SQL Server 2016 Preview
-helpviewer_keywords: DBSCHEMA_TABLES rowset
-ms.assetid: 14c16e6b-0aff-4ad1-b98f-cdb7df0f8d73
-caps.latest.revision: "31"
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: e823aca2ca72fe756fe41cabf49fe61f26cec106
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 06fc718e4d4bde23bfee4240e89d77bcde3bbf50
+ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="dbschematables-rowset"></a>DBSCHEMA_TABLES 資料列集
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]識別的量值群組和維度內公開為資料表[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]。  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+  識別的量值群組和維度內公開為資料表[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]。  
   
 ## <a name="rowset-columns"></a>資料列集資料行  
  **DBSCHEMA_TABLES**資料列集包含下列資料行。  
   
-|資料行名稱|類型指標|長度|描述|  
+|資料行名稱|類型指標|長度|Description|  
 |-----------------|--------------------|------------|-----------------|  
 |**TABLE_CATALOG 排列**|**DBTYPE_WSTR**|255|這個物件所屬之目錄的名稱。|  
 |**TABLE_SCHEMA**|**DBTYPE_WSTR**|255|此物件所屬 Cube 的名稱。|  
@@ -59,7 +48,7 @@ ms.lasthandoff: 01/08/2018
 |**TABLE_TYPE**|**DBTYPE_WSTR**|選擇性|  
 |**TABLE_OLAP_TYPE**|**DBTYPE_WSTR**|選擇性|  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [OLE DB 結構描述資料列集](../../../analysis-services/schema-rowsets/ole-db/ole-db-schema-rowsets.md)  
   
   

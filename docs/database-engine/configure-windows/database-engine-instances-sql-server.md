@@ -1,30 +1,28 @@
 ---
-title: "資料庫引擎執行個體 (SQL Server) | Microsoft Docs"
-ms.custom: 
+title: 資料庫引擎執行個體 (SQL Server) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
-ms.prod_service: database-engine
-ms.service: 
-ms.component: configure-windows
-ms.reviewer: 
+ms.prod: sql
+ms.prod_service: high-availability
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: database-engine
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: configuration
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: af9ae643-9866-4014-b36f-11ab556a773e
-caps.latest.revision: "15"
+caps.latest.revision: 15
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 64065e9cf9ce2429ba98b8ca46bac3b000020d6b
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 34db3b2fe4d33fd7680fe22ecca31f5885742916
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="database-engine-instances-sql-server"></a>Database Engine 執行個體 (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] 執行個體是作為作業系統服務執行之 **sqlservr.exe** 可執行檔的複本。 每個執行個體都會管理數個系統資料庫以及一個或多個使用者資料庫。 每部電腦都可以執行多個 [!INCLUDE[ssDE](../../includes/ssde-md.md)]執行個體。 應用程式會連接至執行個體，以在執行個體所管理的資料庫中執行工作。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  [!INCLUDE[ssDE](../../includes/ssde-md.md)] 執行個體是作為作業系統服務執行之 **sqlservr.exe** 可執行檔的複本。 每個執行個體都會管理數個系統資料庫以及一個或多個使用者資料庫。 每部電腦都可以執行多個 [!INCLUDE[ssDE](../../includes/ssde-md.md)]執行個體。 應用程式會連接至執行個體，以在執行個體所管理的資料庫中執行工作。  
   
 ## <a name="instances"></a>執行個體  
  [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的執行個體是做為服務來操作，而該服務可處理所有應用程式要求，以使用執行個體所管理之任何資料庫中的資料。 這是來自應用程式之連接要求 (登入) 的目標。 如果應用程式和執行個體位在不同的電腦上，則此連接會透過網路連接來執行。 如果應用程式和執行個體位在相同的電腦上，則 SQL Server 連接可以網路連接或記憶體中的連接形式來執行。 連接完成時，應用程式會透過與執行個體的連接來傳送 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式。 此執行個體會根據資料庫中的資料和物件將 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式解析為作業，而且如果已將必要的權限授與登入認證，則會執行工作。 任何擷取的資料以及任何訊息 (例如錯誤) 都會傳回給應用程式。  

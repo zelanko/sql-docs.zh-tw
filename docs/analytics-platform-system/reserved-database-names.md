@@ -1,28 +1,21 @@
 ---
-title: "保留的資料庫名稱 (SQL Server PDW)"
-author: barbkess
-ms.author: barbkess
-manager: jhubbard
-ms.prod: analytics-platform-system
-ms.prod_service: mpp-data-warehouse
-ms.service: 
-ms.component: 
-ms.technology: mpp-data-warehouse
-ms.custom: 
-ms.date: 01/13/2017
-ms.reviewer: na
-ms.suite: sql
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: 92b0ffb2-0dcb-413f-bc0e-85e9e3e50f92
-caps.latest.revision: "5"
-ms.openlocfilehash: 809bbe11366deb54f5a08d9cf8b404f58ce9383f
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+title: 保留的資料庫名稱-Parallel Data Warehouse |Microsoft 文件
+description: 保留 Analytics Platform System 平行資料倉儲中的資料庫名稱。
+author: mzaman1
+manager: craigg
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
+ms.openlocfilehash: 713927c6c0b32cb87353b39e562e3a6ab1a94132
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/19/2018
 ---
-# <a name="reserved-database-names"></a>保留的資料庫名稱
+# <a name="reserved-database-names-in-parallel-data-warehouse"></a>平行資料倉儲中保留的資料庫名稱
 保留的資料庫名稱是無法指派給 SQL Server PDW 中的使用者資料庫的名稱。  
   
 保留的資料庫名稱清單：  
@@ -41,13 +34,13 @@ ms.lasthandoff: 12/21/2017
   
 -   pdwtempdb2  
   
--   : DWConfiguration  
+-   DWConfiguration  
   
 -   DWDiagnostics  
   
 -   DWQueue  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
 <!-- MISSING LINKS 
 [Database Administration &#40;SQL Server PDW&#41;](../sqlpdw/database-administration-sql-server-pdw.md)  
 -->

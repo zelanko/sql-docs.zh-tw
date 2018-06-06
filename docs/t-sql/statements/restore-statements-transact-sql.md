@@ -1,16 +1,14 @@
 ---
 title: RESTORE (Transact-SQL) | Microsoft Docs
-ms.custom: 
-ms.date: 08/09/2016
-ms.prod: sql-non-specified
+ms.custom: ''
+ms.date: 03/30/2018
+ms.prod: sql
 ms.prod_service: sql-database
-ms.service: 
 ms.component: t-sql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: t-sql
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - RESTORE DATABASE
@@ -42,19 +40,19 @@ helpviewer_keywords:
 - transaction log backups [SQL Server], RESTORE statement
 - RESTORE LOG, see RESTORE statement
 ms.assetid: 877ecd57-3f2e-4237-890a-08f16e944ef1
-caps.latest.revision: 
-author: barbkess
-ms.author: barbkess
+caps.latest.revision: 248
+author: edmacauley
+ms.author: edmaca
 manager: craigg
-ms.workload: Active
-ms.openlocfilehash: edafff7cc70224c67ef970ca4c13e47cce113f23
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 1edf0ff22f56446faf5fa316723c4b2a525534cb
+ms.sourcegitcommit: d2573a8dec2d4102ce8882ee232cdba080d39628
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="restore-statements-transact-sql"></a>RESTORE 陳述式 (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
 
   還原利用 BACKUP 命令取得的備份。 此命令可讓您執行以下還原案例：  
   
@@ -70,6 +68,8 @@ ms.lasthandoff: 01/25/2018
   
 -   將資料庫還原到資料庫快照集所擷取的時間點。  
   
+[!INCLUDE[ssMIlimitation](../../includes/sql-db-mi-limitation.md)]
+
  如需有關 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 還原案例的詳細資訊，請參閱[還原和復原概觀 &#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md)。  如需有關引數描述的詳細資訊，請參閱 [RESTORE 引數 &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-arguments-transact-sql.md)。   從另一個執行個體還原資料庫時，請考慮 [在另一個伺服器執行個體上提供可用的資料庫時，管理中繼資料 (SQL Server)](../../relational-databases/databases/manage-metadata-when-making-a-database-available-on-another-server.md)中的資訊。
   
 > **注意：**如需有關從 Windows Azure Blob 儲存體服務進行還原的詳細資訊，請參閱[使用 Microsoft Azure Blob 儲存體服務進行 SQL Server 備份及還原](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)。  
@@ -132,7 +132,7 @@ RESTORE DATABASE { database_name | @database_name_var }
 [;]  
   
 --To Restore a Transaction Log:  
-RESTORE LOG { database_name | @database_name_var }   
+RESTORE LOG { database_name | @database_name_var }  -- Does not apply to SQL Database Managed Instance 
  [ <file_or_filegroup_or_pages> [ ,...n ] ]  
  [ FROM <backup_device> [ ,...n ] ]   
  [ WITH   
@@ -155,7 +155,10 @@ FROM DATABASE_SNAPSHOT = database_snapshot_name
 {   
    { logical_backup_device_name |  
       @logical_backup_device_name_var }  
- | { DISK | TAPE | URL } = { 'physical_backup_device_name' |  
+ | { DISK    -- Does not apply to SQL Database Managed Instance
+     | TAPE  -- Does not apply to SQL Database Managed Instance
+     | URL   -- Applies to SQL Server and SQL Database Managed Instance
+   } = { 'physical_backup_device_name' |  
       @physical_backup_device_name_var }   
 }   
 Note: URL is the format used to specify the location and the file name for the Windows Azure Blob. Although Windows Azure storage is a service, the implementation is similar to disk and tape to allow for a consistent and seemless restore experince for all the three devices.  
@@ -194,7 +197,7 @@ Note: URL is the format used to specify the location and the file name for the W
 --Monitoring Options  
  | STATS [ = percentage ]   
   
---Tape Options  
+--Tape Options. Does not apply to SQL Database Managed Instance
  | { REWIND | NOREWIND }   
  | { UNLOAD | NOUNLOAD }   
   
@@ -334,7 +337,32 @@ Note: URL is the format used to specify the location and the file name for the W
  還原資料庫會清除 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的計畫快取。 清除計畫快取會導致重新編譯所有後續執行計畫，而且可能會導致查詢效能突然暫時下降。 針對每次清除計畫快取的快取存放區，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 錯誤記錄檔會包含下列參考訊息：「由於某些資料庫維護或重新設定作業，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的 '%s' 快取存放區 (計畫快取的一部分) 發生 %d 次快取存放區排清」。 只要在該時間間隔內快取發生排清，這個訊息就會每五分鐘記錄一次。  
   
  若要還原可用性資料庫，請先將資料庫還原至 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體，然後再將資料庫新增至可用性群組。  
-  
+
+## <a name="general-remarks---sql-database-managed-instance"></a>一般備註 - SQL Database 受控執行個體
+
+如果是非同步的還原，即使用戶端連線中斷，還是會繼續還原。 如果您的連線中斷，可以檢查 [sys.dm_operation_status](../../relational-databases/system-dynamic-management-views/sys-dm-operation-status-azure-sql-database.md) 檢視以取得還原作業 (以及建立和卸除資料庫) 的狀態。 
+
+會設定/覆寫下列資料庫選項，且稍後無法變更：
+
+- NEW_BROKER (如果未在 .bak 檔案中啟用訊息代理程式)
+- ENABLE_BROKER (如果未在 .bak 檔案中啟用訊息代理程式)
+- AUTO_CLOSE=OFF (如果 .bak 檔案中的資料庫具有 AUTO_CLOSE=ON)
+- RECOVERY FULL (如果 .bak 檔案中的資料庫具有 SIMPLE 或 BULK_LOGGED 復原模式)
+- 新增記憶體最佳化檔案群組，並呼叫 XTP，如果它不在原始 .bak 檔案中的話。 任何現有的記憶體最佳化檔案群組都已重新命名為 XTP
+- SINGLE_USER 和 RESTRICTED_USER 選項轉換為 MULTI_USER
+
+## <a name="limitations---sql-database-managed-instance"></a>限制 - SQL Database 受控執行個體
+以下是適用的限制：
+
+- 無法還原包含多個備份組的 .BAK 檔案。
+- 無法還原包含多個記錄檔的 .BAK 檔案。
+- 如果 .bak 包含 FILESTREAM 資料，則還原將會失敗。
+- 目前無法還原包含具有使用中記憶體內物件之資料庫的備份。
+- 目前無法還原在某處有使用中記憶體內物件存在之資料庫的備份。
+- 目前無法還原唯讀模式之資料庫的備份。 即將移除這項限制。
+
+如需詳細資訊，請參閱[受控執行個體](/azure/sql-database/sql-database-managed-instance)
+
 ## <a name="interoperability"></a>互通性  
   
 ### <a name="database-settings-and-restoring"></a>資料庫設定和還原  
@@ -426,7 +454,7 @@ Note: URL is the format used to specify the location and the file name for the W
   
 -   E. [使用 BACKUP 和 RESTORE 來複製資料庫](#copying_db_using_bnr)  
   
--   F. [使用 STOPAT 來還原至時間點](#restoring_to_pit_using_STOPAT)  
+-   F. [使用 STOPAT 還原至時間點](#restoring_to_pit_using_STOPAT)  
   
 -   G. [將交易記錄還原至標記](#restoring_transaction_log_to_mark)  
   
@@ -468,7 +496,7 @@ RESTORE DATABASE AdventureWorks2012
   
  [&#91;範例頂端&#93;](#examples)  
   
-###  <a name="restoring_db_using_RESTART"></a> C. 使用 RESTART 語法來還原資料庫  
+###  <a name="restoring_db_using_RESTART"></a> C. 使用 RESTART 語法還原資料庫  
  下列範例會利用 `RESTART` 選項來重新啟動因伺服器斷電而中斷的 `RESTORE` 作業。  
   
 ```  
@@ -500,7 +528,7 @@ RESTORE LOG AdventureWorks2012
   
  [&#91;範例頂端&#93;](#examples)  
   
-###  <a name="copying_db_using_bnr"></a> E. 使用 BACKUP 和 RESTORE 來複製資料庫  
+###  <a name="copying_db_using_bnr"></a> E. 使用 BACKUP 和 RESTORE 複製資料庫  
  下列範例使用 `BACKUP` 和 `RESTORE` 陳述式建立 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 資料庫的副本。 `MOVE` 陳述式會使資料和記錄檔還原到指定的位置。 `RESTORE FILELISTONLY` 陳述式是用來決定資料庫中所要還原的檔案數目及名稱。 新資料庫複本的名稱是 `TestDB`。 如需詳細資訊，請參閱 [RESTORE FILELISTONLY &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md)。  
   
 ```  
@@ -519,7 +547,7 @@ GO
   
  [&#91;範例頂端&#93;](#examples)  
   
-###  <a name="restoring_to_pit_using_STOPAT"></a> F. 使用 STOPAT 來還原至時間點  
+###  <a name="restoring_to_pit_using_STOPAT"></a> F. 使用 STOPAT 還原至時間點  
  下列範例會將資料庫還原至 `12:00 AM` `April 15, 2020` 時的狀態，並顯示含有多個記錄備份的還原作業。 在備份裝置 `AdventureWorksBackups`上，要還原的完整資料庫備份是裝置上的第三個備份組 (`FILE = 3`)，第一個記錄備份是第四個備份組 (`FILE = 4`)，而第二個記錄備份是第五個備份組 (`FILE = 5`)。  
   
 ```  
@@ -540,7 +568,7 @@ RESTORE DATABASE AdventureWorks2012 WITH RECOVERY;
   
  [&#91;範例頂端&#93;](#examples)  
   
-###  <a name="restoring_transaction_log_to_mark"></a> G. 將交易記錄還原至標記  
+###  <a name="restoring_transaction_log_to_mark"></a> G. 將交易記錄還原到標記  
  下列範例會將交易記錄還原到名為 `ListPriceUpdate`的標示交易中之標示。  
   
 ```  

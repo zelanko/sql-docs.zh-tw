@@ -1,35 +1,32 @@
 ---
-title: "修改 XML 索引 |Microsoft Docs"
-ms.custom: 
+title: 修改 XML 索引 |Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
 ms.component: xml
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- dbe-xml
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: xml
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - XML indexes [SQL Server], modifying
 - modifying indexes
 ms.assetid: 24d50fe1-c6ec-49e6-91a3-9791851ba53d
-caps.latest.revision: 
+caps.latest.revision: 12
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 34e1087b5a9588c9e6ff608ed1e0919a6910aa43
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.openlocfilehash: 87e16b7c52a01b3755a5e7fb7d232f937470953c
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="modify-xml-indexes"></a>修改 XML 索引
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
-[ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md)[!INCLUDE[tsql](../../includes/tsql-md.md)] DDL 陳述式可用來修改現有的 XML 和非 XML 索引。 然而，並非所有的 ALTER INDEX 選項都可供 XML 索引使用。 在修改 XML 索引時，下列選項是無效的：  
+  [ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md)[!INCLUDE[tsql](../../includes/tsql-md.md)] DDL 陳述式可用來修改現有的 XML 和非 XML 索引。 然而，並非所有的 ALTER INDEX 選項都可供 XML 索引使用。 在修改 XML 索引時，下列選項是無效的：  
   
 -   重建和設定選項 IGNORE_DUP_KEY 對於 XML 索引是無效的。 對於次要 XML 索引，重建選項 ONLINE 必須設定為 OFF。 在 ALTER INDEX 陳述式中不允許使用 DROP_EXISTING 選項。  
   

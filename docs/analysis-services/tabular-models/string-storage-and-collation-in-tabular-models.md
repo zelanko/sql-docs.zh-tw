@@ -1,31 +1,23 @@
 ---
-title: "字串儲存體和表格式模型中的定序 |Microsoft 文件"
-ms.custom: 
-ms.date: 02/21/2018
-ms.prod: analysis-services
-ms.prod_service: analysis-services, azure-analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
-ms.assetid: 8516f0ad-32ee-4688-a304-e705143642ca
-caps.latest.revision: 
-author: Minewiskan
+title: 字串儲存體和表格式模型中的定序 |Microsoft 文件
+ms.date: 05/07/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: tabular-models
+ms.topic: conceptual
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: f84b7fb415372066b820119280dd3728d340322d
-ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
+ms.openlocfilehash: 38a79073648bdab889913050118d7318ca3f536b
+ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="string-storage-and-collation-in-tabular-models"></a>字串儲存體和表格式模型中的定序
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
-字串 (文字值) 以高度壓縮的格式儲存在表格式模型中；由於此壓縮，您在擷取整個或部分字串時可能會得到意外結果。 此外，因為字串地區設定和定序是繼承自階層結構上最接近的父物件，所以如果未明確定義字串語言，父物件的地區設定和定序可能會影響各字串的儲存方式以及字串是唯一還是與父定序所定義的相似字串合併。  
+  字串 (文字值) 以高度壓縮的格式儲存在表格式模型中；由於此壓縮，您在擷取整個或部分字串時可能會得到意外結果。 此外，因為字串地區設定和定序是繼承自階層結構上最接近的父物件，所以如果未明確定義字串語言，父物件的地區設定和定序可能會影響各字串的儲存方式以及字串是唯一還是與父定序所定義的相似字串合併。  
   
  本文描述的字串會壓縮和儲存的機制，並提供的定序和語言如何影響表格式模型中文字公式的結果範例。  
   

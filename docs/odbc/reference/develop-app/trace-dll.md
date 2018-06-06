@@ -1,30 +1,27 @@
 ---
-title: "追蹤 DLL |Microsoft 文件"
-ms.custom: 
+title: 追蹤 DLL |Microsoft 文件
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
-ms.component: odbc
-ms.reviewer: 
+ms.prod: sql
+ms.prod_service: connectivity
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: connectivity
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - trace DLLs [ODBC]
 - tracing options [ODBC], trace DLLs
 ms.assetid: 5ab99bd3-cdc3-4e2c-8827-932d1fcb6e00
-caps.latest.revision: "8"
+caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
-ms.workload: Inactive
-ms.openlocfilehash: f7eb679c8d7182dd0edd3a96caafa824a8722962
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+manager: craigg
+ms.openlocfilehash: fe4eaee86f6b1f47f2ce97fda2960409c2ac2d5a
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="trace-dll"></a>追蹤 DLL
 執行追蹤的 DLL 是一個 ODBC 核心元件。 追蹤目前提供跖秷 DLL 中的 Windows SDK，ODBC 元件 DLL，並已收錄 Microsoft Data Access Components (MDAC) SDK。 因此，登錄項目、 介面和追蹤 DLL 的範例程式碼使用。 這個 DLL 可追蹤 ODBC 使用者或協力廠商所產生的 DLL 所取代。 自訂追蹤 DLL 應該具備不同原始範例追蹤 DLL 的名稱。 追蹤 Dll 必須安裝在系統目錄中，或它們將無法載入。 連接字串不會傳遞至追蹤 DLL 由驅動程式管理員。  

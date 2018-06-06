@@ -1,34 +1,23 @@
 ---
-title: "授與 Analysis Services 執行個體伺服器系統管理員權限 |Microsoft 文件"
-ms.custom: 
-ms.date: 03/03/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
-helpviewer_keywords:
-- administrator rights [Analysis Services]
-- server-wide administrative permissions [Analysis Services]
-ms.assetid: 20d1234b-a457-4a84-ae08-fe356870c466
-caps.latest.revision: 
-author: Minewiskan
+title: 授與 Analysis Services 執行個體伺服器系統管理員權限 |Microsoft 文件
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: ''
+ms.topic: conceptual
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 9caf9a17a4513c6261cad876ffb7aadce1c8ff09
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: dac4df875c8a620f735822e73215f86f17a88c3d
+ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="grant-server-admin-rights-to-an--analysis-services-instance"></a>將伺服器系統管理員權限授與 Analysis Services 執行個體
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 執行個體內伺服器管理員角色的成員對於該執行個體中的所有 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 物件和資料具有不受限制的存取權。 使用者必須是伺服器管理員角色的成員，才能執行整個伺服器範圍的工作，例如建立資料庫或處理資料庫、修改伺服器屬性或啟動追蹤 (但處理事件不算)。  
+  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 執行個體內伺服器管理員角色的成員對於該執行個體中的所有 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 物件和資料具有不受限制的存取權。 使用者必須是伺服器管理員角色的成員，才能執行整個伺服器範圍的工作，例如建立資料庫或處理資料庫、修改伺服器屬性或啟動追蹤 (但處理事件不算)。  
   
  在安裝 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 時，會建立角色成員資格。 執行安裝程式的使用者可以將自己新增至角色，或新增其他使用者。 您必須先指定至少一位系統管理員，安裝程式才可讓您繼續進行。  
   
@@ -37,7 +26,7 @@ ms.lasthandoff: 02/15/2018
  安裝後，您可以修改角色成員資格來新增需要服務完整權限的任何其他使用者。 您也可以使用分析管理物件 (AMO) 來管理伺服器角色。 如需詳細資訊，請參閱[使用分析管理物件 &#40;AMO&#41; 來開發](../../analysis-services/multidimensional-models/analysis-management-objects/developing-with-analysis-management-objects-amo.md)。  
   
 > [!NOTE]  
->  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 提供在伺服器、資料庫和物件層級進行處理和查詢的逐漸細微角色的進度。 如需如何使用這些角色的指示，請參閱[角色與權限 &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/roles-and-permissions-analysis-services.md)。  
+>  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 提供在伺服器、 資料庫和物件層級進行處理和查詢的逐漸細微角色的進度。 如需如何使用這些角色的指示，請參閱[角色與權限 &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/roles-and-permissions-analysis-services.md)。  
   
 ## <a name="modify-server-role-membership"></a>修改伺服器角色成員資格  
   

@@ -1,31 +1,32 @@
 ---
-title: "分類的 Web 服務作業 (Master Data Services) | Microsoft Docs"
-ms.custom: 
+title: 分類的 Web 服務作業 (Master Data Services) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/15/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: mds
-ms.service: 
 ms.component: develop
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 applies_to:
 - SQL Server 2016 Preview
 ms.assetid: e3f346b5-7e26-481d-9821-1846e2e91289
-caps.latest.revision: 
+caps.latest.revision: 7
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 2ae71d17925d069a8bf7211b0692b6787467dbea
-ms.sourcegitcommit: 6ac1956307d8255dc544e1063922493b30907b80
+ms.openlocfilehash: 3244a0a42dcff0c6c4f94e7df01974b5a4d6fd64
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="categorized-web-service-operations-master-data-services"></a>分類的 Web 服務作業 (Master Data Services)
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
   [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] Web 服務包含一組完整的作業，這組作業可讓您撰寫程式碼以控制 [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] 透過其使用者介面所執行的所有功能。 這些 Web 服務作業是透過 <xref:Microsoft.MasterDataServices.IService> 介面定義，並當做 <xref:Microsoft.MasterDataServices.ServiceClient> 類別中的方法實作。 本主題將 Web 服務作業分為概念性類別目錄，以協助您了解如何使用 Web 服務 API。  
   
 ## <a name="model-operations"></a>模型作業  

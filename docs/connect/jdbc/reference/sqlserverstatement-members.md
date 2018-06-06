@@ -1,27 +1,24 @@
 ---
-title: "SQLServerStatement 成員 |Microsoft 文件"
-ms.custom: 
+title: SQLServerStatement 成員 |Microsoft 文件
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
-ms.component: jdbc
-ms.reviewer: 
+ms.prod: sql
+ms.prod_service: connectivity
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: connectivity
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: 828cbaa9-ea7a-4986-95c3-5ba0d7d01d83
-caps.latest.revision: "28"
+caps.latest.revision: 28
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
-ms.workload: Inactive
-ms.openlocfilehash: 5cdce6c1ac993fc36b861e9ec6d87926e1a7661a
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+manager: craigg
+ms.openlocfilehash: 77161ec9693615eb50d4e62fb9cd1f6f185d23fe
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sqlserverstatement-members"></a>SQLServerStatement 成員
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -45,11 +42,11 @@ ms.lasthandoff: 11/18/2017
 |名稱|Description|  
 |----------|-----------------|  
 |[addBatch](../../../connect/jdbc/reference/addbatch-method-sqlserverstatement.md)|將給定的 SQL 命令加入至目前命令清單中，這個[SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md)物件。|  
-|[[取消]](../../../connect/jdbc/reference/cancel-method-sqlserverstatement.md)|取消目前正由此執行的 SQL 陳述式[SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md)物件。|  
+|[cancel](../../../connect/jdbc/reference/cancel-method-sqlserverstatement.md)|取消目前正由此執行的 SQL 陳述式[SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md)物件。|  
 |[clearBatch](../../../connect/jdbc/reference/clearbatch-method-sqlserverstatement.md)|清空目前的 SQL 命令清單，這個[SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md)物件。|  
 |[clearWarnings](../../../connect/jdbc/reference/clearwarnings-method-sqlserverstatement.md)|清除所有警告，則會報告這[SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md)物件。|  
 |[關閉](../../../connect/jdbc/reference/close-method-sqlserverstatement.md)|釋放這個[SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md)物件的資料庫和 JDBC 資源，立即而非等待它們由系統自動釋放。|  
-|[執行](../../../connect/jdbc/reference/execute-method-sqlserverstatement.md)|執行給定的 SQL 陳述式，此陳述式可傳回多個結果。|  
+|[execute](../../../connect/jdbc/reference/execute-method-sqlserverstatement.md)|執行給定的 SQL 陳述式，此陳述式可傳回多個結果。|  
 |[executeBatch](../../../connect/jdbc/reference/executebatch-method-sqlserverstatement.md)|將命令批次提交到要執行的資料庫。 如果所有命令都成功執行，則傳回更新計數陣列。|  
 |[executeQuery](../../../connect/jdbc/reference/executequery-method-sqlserverstatement.md)|執行給定的 SQL 陳述式，並傳回單一[SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md)物件。|  
 |[executeUpdate](../../../connect/jdbc/reference/executeupdate-method-sqlserverstatement.md)|執行可能是 INSERT、UPDATE、MERGE 或 DELETE 陳述式的給定 SQL 陳述式，否則會是不傳回任何項目的 SQL 陳述式，例如 SQL DDL 陳述式。|  
@@ -68,7 +65,7 @@ ms.lasthandoff: 11/18/2017
 |[getResultSetType](../../../connect/jdbc/reference/getresultsettype-method-sqlserverstatement.md)|擷取結果集類型為[SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md)這由所產生的物件[SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md)物件。|  
 |[getUpdateCount](../../../connect/jdbc/reference/getupdatecount-method-sqlserverstatement.md)|擷取目前結果當做更新計數。|  
 |[getWarnings](../../../connect/jdbc/reference/getwarnings-method-sqlserverstatement.md)|擷取由呼叫所報告的第一個警告[SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md)物件。|  
-|[isClosed](../../../connect/jdbc/reference/isclosed-method-sqlserverstatement.md)|指出是否此[SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md)物件已遭關閉。|  
+|[IsClosed](../../../connect/jdbc/reference/isclosed-method-sqlserverstatement.md)|指出是否此[SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md)物件已遭關閉。|  
 |[isPoolable](../../../connect/jdbc/reference/ispoolable-method-sqlserverstatement.md)|傳回值，這個值指出陳述式是否可以加入至使用者提供的陳述式集區。|  
 |[isWrapperFor](../../../connect/jdbc/reference/iswrapperfor-method-sqlserverstatement.md)|指出這個陳述式物件是否為指定之介面的包裝函式。|  
 |[setCursorName](../../../connect/jdbc/reference/setcursorname-method-sqlserverstatement.md)|將 SQL 資料指標名稱設定為給定的字串，此字串將由後續 execute 方法使用。|  
@@ -89,7 +86,7 @@ ms.lasthandoff: 11/18/2017
 |java.lang.Object|clone, equals, getClass, hashCode, notify, notifyAll, toString, wait|  
 |java.sql.Wrapper|isWrapperFor, unwrap|  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [SQLServerStatement 類別](../../../connect/jdbc/reference/sqlserverstatement-class.md)  
   
   

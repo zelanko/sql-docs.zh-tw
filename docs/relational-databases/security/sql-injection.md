@@ -1,33 +1,31 @@
 ---
-title: "SQL 資料隱碼 | Microsoft Docs"
-ms.custom: 
+title: SQL 資料隱碼 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/16/2017
-ms.prod: sql-non-specified
-ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
-ms.component: security
-ms.reviewer: 
+ms.prod: sql
+ms.prod_service: security, sql-database, sql-data-warehouse, pdw
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- dbe-security
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: security
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - SQL Injection
 ms.assetid: eb507065-ac58-4f18-8601-e5b7f44213ab
-caps.latest.revision: 
+caps.latest.revision: 7
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 5de3575bfac8b2e13e6d02835d5355b1e6b78cfa
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: ce44acb34b3566526ed19bd9dadccc942618bab2
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sql-injection"></a>SQL 資料隱碼
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] SQL 插入式攻擊會將惡意程式碼插入字串中，然後將這些字串傳遞給 SQL Server 的執行個體進行剖析和執行。 建構 SQL 陳述式的任何程序都應該經過檢閱，以確認有無插入弱點，因為 SQL Server 會執行收到的所有語法有效查詢。 即使是參數化資料也可能被技術純熟又執意操作的攻擊者操縱。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+  SQL 插入式攻擊是指將惡意程式碼插入字串中，然後將這些字串傳遞至 SQL Server 的執行個體進行剖析和執行。 建構 SQL 陳述式的任何程序都應該經過檢閱，以確認有無插入弱點，因為 SQL Server 會執行收到的所有語法有效查詢。 即使是參數化資料也可能被技術純熟又執意操作的攻擊者操縱。  
   
 ## <a name="how-sql-injection-works"></a>SQL 插入如何運作  
  SQL 資料隱碼的主要形式是將程式碼直接插入與 SQL 命令串連並執行的使用者輸入變數。 不直接的攻擊會將惡意程式碼插入用於資料表中儲存目的之字串，或插入做為中繼資料。 當儲存的字串在以後串連成動態 SQL 指令時，就會執行惡意程式碼。  
@@ -98,7 +96,7 @@ SELECT * FROM OrdersTable WHERE ShipCity = 'Redmond';drop table OrdersTable--'
 |---------------------|------------------------------|  
 |**;**|查詢分隔符號。|  
 |**'**|字元資料字串分隔符號。|  
-|**--**|字元資料字串分隔符號。<br />。|  
+|**--**|字元資料字串分隔符號。<br />執行個體時提供 SQL Server 登入。|  
 |**/\*** ... **\*/**|註解分隔符號。 伺服器不會評估 **/\*** 和 **\*/** 之間的文字。|  
 |**xp_**|用在目錄擴充預存程序名稱的開頭，如 `xp_cmdshell`。|  
   

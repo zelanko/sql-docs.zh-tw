@@ -1,16 +1,14 @@
 ---
-title: "sysmail_help_account_sp (TRANSACT-SQL) |Microsoft 文件"
-ms.custom: 
+title: sysmail_help_account_sp (TRANSACT-SQL) |Microsoft 文件
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: system-objects
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sysmail_help_account_sp_TSQL
@@ -20,16 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - sysmail_help_account_sp
 ms.assetid: 87c7c39c-8e05-4e68-9272-45f908809c3b
-caps.latest.revision: 
+caps.latest.revision: 48
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: b811fef9f1c2a89590e1e03f4fbe1b214ddc902d
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 44565c08931c4485ab621f2be285b5f2fb471a69
+ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="sysmailhelpaccountsp-transact-sql"></a>sysmail_help_account_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -71,7 +68,7 @@ sysmail_help_account_sp [ [ @account_id = ] account_id | [ @account_name = ] 'ac
 |**servername**|**sysname**|帳戶的電子郵件伺服器名稱。|  
 |**port**|**int**|電子郵件伺服器所用的通訊埠編號。|  
 |**username**|**nvarchar(128)**|如果電子郵件伺服器使用驗證的話，用來登入電子郵件伺服器的使用者名稱。 當**username**是 NULL 時，Database Mail 不使用此帳戶的驗證。|  
-|**use_default_credentials**|**bit**|指定是否要使用 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 的認證將郵件傳送至 SMTP 伺服器。 **use_default_credentials** bit，沒有預設值。 當此參數是 1 時，Database Mail 會使用 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 服務的認證。 此參數為 0 時，Database Mail 會使用 **@username** 和 **@password** 在 SMTP 伺服器進行驗證。 如果 **@username** 和 **@password** 是 NULL，則 Database Mail 會使用匿名驗證。 在指定此參數之前，請洽詢 SMTP 管理員。|  
+|**use_default_credentials**|**bit**|指定是否要使用 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 的認證將郵件傳送至 SMTP 伺服器。 **use_default_credentials** bit，沒有預設值。 當此參數是 1 時，Database Mail 會使用 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 服務的認證。 此參數為 0 時，Database Mail 會使用**@username**和**@password**在 SMTP 伺服器進行驗證。 如果**@username**和**@password**是 NULL，則 Database Mail 會使用匿名驗證。 在指定此參數之前，請洽詢 SMTP 管理員。|  
 |**enable_ssl**|**bit**|指定 Database Mail 是否使用安全通訊端層 (SSL) 加密通訊。 如果 SMTP 伺服器上需要 SSL，則使用此選項。 **enable_ssl** bit，沒有預設值。 1 表示 Database Mail 會使用 SSL 加密通訊。 0 表示 Database Mail 傳送郵件時不使用 SSL 加密。|  
   
 ## <a name="remarks"></a>備註  
@@ -120,6 +117,6 @@ account_id  name                         description                            
 ## <a name="see-also"></a>另請參閱  
  [Database Mail](../../relational-databases/database-mail/database-mail.md)   
  [建立 Database Mail 帳戶](../../relational-databases/database-mail/create-a-database-mail-account.md)   
- [Database Mail 預存程序 &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/database-mail-stored-procedures-transact-sql.md)  
+ [Database Mail 預存程序&#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/database-mail-stored-procedures-transact-sql.md)  
   
   

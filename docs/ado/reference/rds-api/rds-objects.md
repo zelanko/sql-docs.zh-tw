@@ -1,30 +1,28 @@
 ---
-title: "RDS 物件 |Microsoft 文件"
-ms.technology:
-- drivers
-ms.custom: 
+title: RDS 物件 |Microsoft 文件
+ms.technology: connectivity
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.component: reference
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - objects [ADO], RDS
 - RDS objects [ADO]
 ms.assetid: f2ac8b3b-f968-41c4-a504-7aee3538b7c7
-caps.latest.revision: 
+caps.latest.revision: 18
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: aac19cd0fadb642ba8b18550694e1b54dba46d87
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 4425704de152325e65de05bc31cb5976b4a2239c
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="rds-objects"></a>RDS 物件
 > [!IMPORTANT]
@@ -34,7 +32,7 @@ ms.lasthandoff: 02/09/2018
 |-|-|  
 |[DataControl (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)|將繫結的資料查詢**資料錄集**至一或多個控制項 （例如，文字方塊中，方格控制項或下拉式方塊） 顯示**資料錄集**網頁上的資料。<br /><br /> **DataControl**物件而言是安全的指令碼。|  
 |[DataFactory (RDSServer)](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)|提供讀取/寫入資料的存取權的實作方式指定用戶端應用程式的資料來源。<br /><br /> **DataFactory**物件不是安全的。|  
-|[DataSpace (RDS)](../../../ado/reference/rds-api/dataspace-object-rds.md)|建立自訂商務物件位於中介層上的用戶端 proxy。<br /><br /> **DataSpace**物件而言是安全的指令碼。|  
+|[資料空間 (RDS)](../../../ado/reference/rds-api/dataspace-object-rds.md)|建立自訂商務物件位於中介層上的用戶端 proxy。<br /><br /> **DataSpace**物件而言是安全的指令碼。|  
 |[IRDSService 介面 (RDS)](../../../ado/reference/rds-api/irdsservice-interface-rds.md)|公開[InvokeService (RDS)](../../../ado/reference/rds-api/invokeservice-rds.md)方法，用來傳回所要求介面的指標上更適用的版本的物件。|  
   
 ## <a name="see-also"></a>另請參閱  

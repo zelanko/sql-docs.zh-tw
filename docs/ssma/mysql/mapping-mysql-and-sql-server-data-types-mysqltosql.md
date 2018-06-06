@@ -1,16 +1,15 @@
 ---
-title: "對應 MySQL 及 SQL Server 資料類型 (MySQLToSQL) |Microsoft 文件"
-ms.prod: sql-non-specified
+title: 對應 MySQL 及 SQL Server 資料類型 (MySQLToSQL) |Microsoft 文件
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
 ms.component: ssma-mysql
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ssma
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 applies_to:
 - Azure SQL Database
 - SQL Server
@@ -18,22 +17,21 @@ helpviewer_keywords:
 - Mapping, customize data type mapping
 - Mapping, Type mapping
 ms.assetid: 14f98054-13b4-4231-a6b0-2452f3b9941d
-caps.latest.revision: "15"
+caps.latest.revision: 15
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
-ms.workload: Inactive
-ms.openlocfilehash: 265030255071cb9292cf5604320d98c447173928
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+manager: craigg
+ms.openlocfilehash: d35530153b4e26f865b6fd8fefa102718752dafa
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="mapping-mysql-and-sql-server-data-types-mysqltosql"></a>對應 MySQL 及 SQL Server 資料類型 (MySQLToSQL)
 MySQL 資料庫類型的不同[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或 SQL Azure 資料庫類型。 當您轉換至的 MySQL 資料庫物件[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或 SQL Azure 物件，您必須指定如何對應資料類型從 MySQL 至[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或 SQL Azure。 您可以接受預設資料類型對應，或您可以自訂對應，如下列程序中所示。  
   
 ## <a name="default-mappings"></a>預設對應  
-SSMA 會有一組預設的資料類型對應。 如需預設對應的清單，請參閱[專案設定 &#40;型別對應 &#41;&#40;MySQLToSQL &#41;](../../ssma/mysql/project-settings-type-mapping-mysqltosql.md).  
+SSMA 會有一組預設的資料類型對應。 如需預設對應的清單，請參閱[專案設定&#40;類型對應&#41; &#40;MySQLToSQL&#41;](../../ssma/mysql/project-settings-type-mapping-mysqltosql.md)。  
   
 ## <a name="type-mapping-inheritance"></a>型別對應的繼承  
 您可以自訂在專案層級、 物件類別層級 （例如所有預存程序） 或物件層級的型別對應。 設定被繼承自較高的層級中，除非它們在較低層級覆寫。 例如，如果您將對應**smallint**至**int**在專案層級專案中的所有物件會都使用此對應，除非您自訂物件或類別層級的對應。  
@@ -91,6 +89,6 @@ SSMA 會有一組預設的資料類型對應。 如需預設對應的清單，�
 ## <a name="next-step"></a>下一個步驟  
 移轉程序的下一個步驟是為[建立評估報表](http://msdn.microsoft.com/en-us/2a56a003-3b0f-453a-963c-00c9e40933ec)或[轉換 MySQL 資料庫物件為 SQL Server 或 SQL Azure 的語法](http://msdn.microsoft.com/en-us/ac21850b-fb32-4704-9985-5759b7c688c7)。 如果您建立報表時，在評估期間自動轉換 MySQL 物件。  
   
-## <a name="see-also"></a>請參閱  
-[將 MySQL 資料庫移轉至 SQL Server-Azure SQL DB &#40;MySQLToSql &#41;](../../ssma/mysql/migrating-mysql-databases-to-sql-server-azure-sql-db-mysqltosql.md)  
+## <a name="see-also"></a>另請參閱  
+[移轉的 MySQL 資料庫到 SQL Server-Azure SQL DB &#40;MySQLToSql&#41;](../../ssma/mysql/migrating-mysql-databases-to-sql-server-azure-sql-db-mysqltosql.md)  
   

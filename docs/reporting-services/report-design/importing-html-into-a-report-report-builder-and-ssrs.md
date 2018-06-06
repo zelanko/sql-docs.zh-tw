@@ -1,27 +1,25 @@
 ---
-title: "將 HTML 匯入至報表 (報表產生器及 SSRS) | Microsoft Docs"
-ms.custom: 
+title: 將 HTML 匯入至報表 (報表產生器及 SSRS) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: report-design
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: dd0410ea-8839-4e8c-9944-8cdfe5465591
-caps.latest.revision: "10"
+caps.latest.revision: 10
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: a2ec424333d0b7bc277c3ecc884f58a853c0397b
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: d1635b53a1a5deffc2289820682d608cedded4bc
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="importing-html-into-a-report-report-builder-and-ssrs"></a>將 HTML 匯入至報表 (報表產生器及 SSRS)
   您可以使用文字方塊來將從資料集的欄位所擷取的 HTML 格式文字插入至報表。 文字可以來自任何評估為正確格式之 HTML 的簡單或複雜運算式。 格式化的文字可以轉譯為所有受支援的輸出格式，包括 PDF 在內。  
@@ -72,7 +70,7 @@ ms.lasthandoff: 01/09/2018
   
     -   相對 CSS 長度單位會被忽略，而且不受支援。 不支援的單位包括 em、ex、px、%、rem。  
   
-     如需 CSS 單位的詳細資訊，請參閱 [CSS Values and Units Reference](http://msdn.microsoft.com/library/ms531211\(VS.85\).aspx) (CSS 值和單位參考) (http://msdn.microsoft.com/library/ms531211(VS.85).aspx)。  
+     如需有關 CSS 單位的詳細資訊，請參閱： [CSS 值和單位參考](http://msdn.microsoft.com/library/ms531211\(VS.85\).aspx) (http://msdn.microsoft.com/library/ms531211(VS.85).aspx)。  
   
 -   色彩  
   

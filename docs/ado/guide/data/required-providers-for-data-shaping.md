@@ -1,31 +1,28 @@
 ---
-title: "所需資料成形的提供者 |Microsoft 文件"
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
+title: 所需資料成形的提供者 |Microsoft 文件
+ms.prod: sql
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
-ms.custom: 
+ms.technology: connectivity
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - providers [ADO], data shaping
 - data shaping [ADO], providers required
 ms.assetid: d49d48d2-ac2d-4c11-895c-5a149b444620
-caps.latest.revision: 
+caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 577c377c4c8022272ffb7c55507d3fdc378aa440
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 049f635c9566a72bb84a7cef18aa62b80746c21b
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="required-providers-for-data-shaping"></a>提供者所需的資料成形
 資料成形時，通常會需要兩個提供者。 服務提供者[for OLE DB Data Shaping Service](../../../ado/guide/appendixes/microsoft-data-shaping-service-for-ole-db-ado-service-provider.md)、 提供用來形成功能和資料提供者，例如 SQL Server 的 OLE DB 提供者的資料、 提供資料列的資料來填入形狀[資料錄集](../../../ado/reference/ado-api/recordset-object-ado.md).  
@@ -34,7 +31,7 @@ ms.lasthandoff: 02/09/2018
   
  資料提供者的名稱可以指定的值為**資料提供者**動態屬性，它會加入**連接**物件[屬性](../../../ado/reference/ado-api/properties-collection-ado.md)集合Data Shaping Service 的 OLE DB 或連接字串關鍵字"**資料提供者 = * * * 提供者*"。  
   
- 如果任何資料提供者，則需要**資料錄集**不會擴展 (例如，就像優質**資料錄集**會建立資料行與新的關鍵字)。 在此情況下，指定 「**資料提供者 =**none;"。  
+ 如果任何資料提供者，則需要**資料錄集**不會擴展 (例如，就像優質**資料錄集**會建立資料行與新的關鍵字)。 在此情況下，指定 「**資料提供者 =** none;"。  
   
 ## <a name="example"></a>範例  
   

@@ -1,31 +1,23 @@
 ---
-title: "使用 「 Cube 精靈 」 建立 Cube |Microsoft 文件"
-ms.custom: 
-ms.date: 03/01/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
-helpviewer_keywords: cubes [Analysis Services], creating
-ms.assetid: d46d659c-3a4e-4364-94ac-f5eb6ba0ec25
-caps.latest.revision: "13"
-author: Minewiskan
+title: 使用 「 Cube 精靈 」 建立 Cube |Microsoft 文件
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: multidimensional-models
+ms.topic: conceptual
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: cc4f9a10dec881cca5a9f3834a626a4f2cf598c6
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: d682ada2175d94f7b077bfe06626885862d45e21
+ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="create-a-cube-using-the-cube-wizard"></a>使用 Cube 精靈來建立 Cube
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]您可以使用 Cube 精靈 」 中建立新的 cube [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+  您可以使用 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 中的 [Cube 精靈] 來建立新的 Cube。  
   
 ### <a name="to-create-a-new-cube"></a>建立新的 Cube  
   
@@ -42,7 +34,7 @@ ms.lasthandoff: 01/08/2018
   
     2.  在 [量值群組資料表] 清單中，選取將用來建立量值群組的資料表。  
   
-    3.  按 [下一步] 。  
+    3.  按一下 **[下一步]**。  
   
 4.  在 [選取量值] 頁面上，選取您要包含在 Cube 中的量值，然後按一下 [下一步]。  
   

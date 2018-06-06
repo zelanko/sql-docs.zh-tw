@@ -1,31 +1,31 @@
 ---
-title: "色彩對話方塊 (Visual Database Tools) | Microsoft Docs"
-ms.custom: 
+title: 色彩對話方塊 (Visual Database Tools) | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
 ms.component: ssms-visual-db
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: tools-ssms
-ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords: VS.ToolsOptions.FontsAndColors.ColorPicker
+ms.technology: ssms
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
+f1_keywords:
+- VS.ToolsOptions.FontsAndColors.ColorPicker
 ms.assetid: 89a19608-f24c-41fa-a1a9-6e2e2cd952fa
-caps.latest.revision: "3"
+caps.latest.revision: 3
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: f94edb00fc680bdfb3731e2d492c79e2f7cb09f2
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.openlocfilehash: 5e77921c7510cf02c0e9e66b7c89ab736117de38
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="color-dialog-box-visual-database-tools"></a>色彩對話方塊 (Visual Database Tools)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] [色彩] 對話方塊會傳回使用者所選取之色彩的 RGB 值。 使用者可從一組由顯示驅動程式所判斷的基本色彩或一組自訂色彩中進行選取。 請從基本色彩中進行選取，或建立自訂色彩。 按一下色彩矩陣，或輸入 [色調]、[濃度]、[亮度]、[紅]、[綠] 和 [藍] 方塊，即可定義色彩。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[色彩] 對話方塊會傳回使用者所選取之色彩的 RGB 值。 使用者可從一組由顯示驅動程式所判斷的基本色彩或一組自訂色彩中進行選取。 請從基本色彩中進行選取，或建立自訂色彩。 按一下色彩矩陣，或輸入 [色調]、[濃度]、[亮度]、[紅]、[綠] 和 [藍] 方塊，即可定義色彩。  
   
 ## <a name="options"></a>選項。  
 **基本色彩**  

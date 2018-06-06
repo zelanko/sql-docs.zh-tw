@@ -1,32 +1,29 @@
 ---
-title: "認可及回復的交易 |Microsoft 文件"
-ms.custom: 
+title: 認可及回復的交易 |Microsoft 文件
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
-ms.component: odbc
-ms.reviewer: 
+ms.prod: sql
+ms.prod_service: connectivity
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: connectivity
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - rolling back transactions [ODBC]
 - committing transactions [ODBC]
 - transactions [ODBC], rolling back
 - transactions [ODBC], committing
 ms.assetid: 800f2c1a-6f79-4ed1-830b-aa1a62ff5165
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
-ms.workload: Inactive
-ms.openlocfilehash: 534c6181a1634eb4963bc4f448939f335d821e5f
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+manager: craigg
+ms.openlocfilehash: af1cadd835060cd6518b7e20c979702847d0b072
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="committing-and-rolling-back-transactions"></a>認可及回復的交易
 若要認可或回復交易，在手動認可模式下，應用程式呼叫**SQLEndTran**。 通常支援交易的 Dbms 的驅動程式來實作此函式執行**認可**或**復原**陳述式。 驅動程式管理員不會呼叫**SQLEndTran**時連接處於自動認可模式，它只會傳回 SQL_SUCCESS，即使應用程式會嘗試回復交易。 因為不支援交易的 Dbms 的驅動程式永遠會在自動認可模式下，它們可以實作**SQLEndTran**傳回 SQL_SUCCESS，而不需要執行任何項目，或未實作。  

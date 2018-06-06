@@ -1,17 +1,13 @@
 ---
-title: "以指令碼變數使用 sqlcmd | Microsoft Docs"
-ms.custom: 
+title: 以指令碼變數使用 sqlcmd | Microsoft Docs
+ms.custom: ''
 ms.date: 08/09/2016
-ms.prod: sql-non-specified
-ms.prod_service: sql-tools
-ms.service: 
-ms.component: ssms-scripting
-ms.reviewer: 
+ms.prod: sql
+ms.technology: scripting
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 dev_langs:
 - TSQL
 helpviewer_keywords:
@@ -21,19 +17,20 @@ helpviewer_keywords:
 - sqlcmd utility, scripts
 - setvar command
 ms.assetid: 793495ca-cfc9-498d-8276-c44a5d09a92c
-caps.latest.revision: 
-author: mightypen
+caps.latest.revision: 47
+author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 50548a9c34ff3c55c22e5492b807e338bcd4ccc2
-ms.sourcegitcommit: a0aa5e611a0e6ebb74ac1e2f613e8916dc7a7617
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 2129a6836705ef32e43b6aeb908be33cef93edec
+ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/24/2018
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="sqlcmd---use-with-scripting-variables"></a>sqlcmd - 搭配指令碼變數使用
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 用於指令碼中的變數稱為指令碼變數。 指令碼變數可讓一個指令碼使用於多個狀況中。 例如，如果您想要針對多個伺服器執行一個指令碼，而不針對每個伺服器修改指令碼，您可以使用指令碼變數來代表伺服器名稱。 只要變更提供給指令碼變數的伺服器名稱，相同的指令碼就可以在不同的伺服器上執行。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+  用於指令碼中的變數稱為指令碼變數。 指令碼變數可讓一個指令碼使用於多個狀況中。 例如，如果您想要針對多個伺服器執行一個指令碼，而不針對每個伺服器修改指令碼，您可以使用指令碼變數來代表伺服器名稱。 只要變更提供給指令碼變數的伺服器名稱，相同的指令碼就可以在不同的伺服器上執行。  
   
  指令碼變數可以使用 **setvar** 命令來明確定義，或使用 **sqlcmd-v** 選項來隱含定義。  
   

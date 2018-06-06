@@ -1,31 +1,28 @@
 ---
-title: "桌面資料庫驅動程式架構 |Microsoft 文件"
-ms.custom: 
+title: 桌面資料庫驅動程式架構 |Microsoft 文件
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
-ms.component: odbc
-ms.reviewer: 
+ms.prod: sql
+ms.prod_service: connectivity
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: connectivity
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - Jet-based ODBC drivers [ODBC], architecture
 - ODBC desktop database drivers [ODBC], architecture
 - desktop database drivers [ODBC], architecture
 ms.assetid: 8b4d13f7-ab37-40b4-a9c6-145e7385352f
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
-ms.workload: Inactive
-ms.openlocfilehash: 3f5c7b12e5413441476e70dc63fe9d3da9284635
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+manager: craigg
+ms.openlocfilehash: b54a98aea619949ab51d20dd599fdc0fe3e71321
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="desktop-database-drivers-architecture"></a>桌面資料庫驅動程式架構
 這些驅動程式專為使用 Microsoft Windows 95 上或更新版本中，或 Windows NT 4.0 和 Windows 2000。 只有 32 位元應用程式支援 Windows 95 或更新版本。16 位元和 32 位元應用程式都支援 Windows NT 4.0 和 Windows 2000。  
@@ -37,13 +34,13 @@ ms.lasthandoff: 12/21/2017
   
  在 Windows 95 或更新版本的應用程式/驅動程式架構是：  
   
- ![應用程式 &#47; 驅動程式架構： Windows 95 和更新版本](../../odbc/microsoft/media/odbcjetarch1.gif "ODBCJetArch1")  
+ ![應用程式&#47;驅動程式架構： Windows 95 和更新版本](../../odbc/microsoft/media/odbcjetarch1.gif "ODBCJetArch1")  
   
  不支援這些驅動程式在 Windows 95 上的 16 位元應用程式的使用。  
   
  是 Windows NT 4.0 和 Windows 2000 上的應用程式/驅動程式架構：  
   
- ![應用程式 &#47; 驅動程式架構： NT 4.0 和 Windows 2000](../../odbc/microsoft/media/odbcjetarch2.gif "ODBCJetArch2")  
+ ![應用程式&#47;驅動程式架構： NT 4.0 和 Windows 2000](../../odbc/microsoft/media/odbcjetarch2.gif "ODBCJetArch2")  
   
  桌面資料庫驅動程式是兩層式驅動程式。 在兩層式組態中，驅動程式不會執行剖析、 驗證、 最佳化及執行查詢的程序。 相反地，Microsoft Jet 執行這些工作。 它會處理 ODBC API 呼叫，並做為 SQL 引擎。 Microsoft Jet 變得有一個整數、 密不可分的部分驅動程式： 它隨附於驅動程式，且位於與驅動程式，即使在電腦上的沒有其他應用程式會使用它。  
   

@@ -1,16 +1,15 @@
 ---
-title: "使目標伺服器脫離主要伺服器 | Microsoft Docs"
-ms.custom: 
+title: 使目標伺服器脫離主要伺服器 | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
 ms.component: ssms-agent
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: tools-ssms
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ssms
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Agent jobs, target servers
 - target servers [SQL Server], defecting
@@ -18,19 +17,24 @@ helpviewer_keywords:
 - master servers [SQL Server], defecting target servers
 - defecting target servers
 ms.assetid: a6da262b-7b38-4ce4-bfd6-6a557c6e8a84
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: d1dbca0c49ac22ad09037a63d780a0ece0c0e7ce
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: df10e43d1b039fbc9bd7a56a66ace4cc2eba1741
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="defect-a-target-server-from-a-master-server"></a>使目標伺服器脫離主要伺服器
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 本主題描述如何使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)]、[!INCLUDE[tsql](../../includes/tsql_md.md)] 或 SQL Server 管理物件 (SMO) 在 [!INCLUDE[ssCurrent](../../includes/sscurrent_md.md)]中從主伺服器脫離目標伺服器。 請從目標伺服器執行這個程序。  
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+
+> [!IMPORTANT]  
+> [Azure SQL Database 受控執行個體](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)目前支援多數 (但非全部) 的 SQL Server Agent 功能。 如需詳細資料，請參閱 [Azure SQL Database 受控執行個體與 SQL Server 之間的 T-SQL 差異](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)。
+
+本主題描述如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent_md.md)]、[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] 或 SQL Server 管理物件 (SMO) 在 [!INCLUDE[tsql](../../includes/tsql_md.md)] 中從主伺服器脫離目標伺服器。 請從目標伺服器執行這個程序。  
   
 **本主題內容**  
   
@@ -57,7 +61,7 @@ ms.lasthandoff: 01/17/2018
   
 #### <a name="to-defect-a-target-server-from-a-master-server"></a>若要使目標伺服器脫離主伺服器  
   
-1.  在 **[物件總管]**中，展開設定為目標伺服器的伺服器。  
+1.  在 **[物件總管]** 中，展開設定為目標伺服器的伺服器。  
   
 2.  以滑鼠右鍵按一下 **[SQL Server Agent]**，指向 **[多伺服器管理]**，然後按一下 **[脫離]**。  
   

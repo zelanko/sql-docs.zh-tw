@@ -1,16 +1,15 @@
 ---
-title: "字串函數 (XQuery) |Microsoft 文件"
-ms.custom: 
+title: 字串函數 (XQuery) |Microsoft 文件
+ms.custom: ''
 ms.date: 03/09/2017
-ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
-ms.service: 
+ms.prod: sql
+ms.prod_service: sql
 ms.component: xquery
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,21 +19,20 @@ helpviewer_keywords:
 - string function
 - fn:string function
 ms.assetid: 7baa2959-9340-429b-ad53-3df03d8e13fc
-caps.latest.revision: 
+caps.latest.revision: 27
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 3cb540206adb2878f78874c7188acaa5c3f17b52
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: c20973cdaa3b3d80124a9713a104d7294d6c20f2
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="data-accessor-functions---string-xquery"></a>資料存取子函式的字串 (XQuery)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  傳回的值*$arg*表示為字串。  
+  傳回的值 *$arg*表示為字串。  
   
 ## <a name="syntax"></a>語法  
   
@@ -50,13 +48,13 @@ fn:string($arg as item()?) as xs:string
   
 ## <a name="remarks"></a>備註  
   
--   如果*$arg*是空的序列，則傳回零長度字串。  
+-   如果 *$arg*是空的序列，則傳回零長度字串。  
   
--   如果*$arg*是一個節點，此函式傳回的字串值使用字串值存取子所取得的節點。 這定義在 W3C XQuery 1.0 及 XPath 2.0 Data Model 規格中。  
+-   如果 *$arg*是一個節點，此函式傳回的字串值使用字串值存取子所取得的節點。 這定義在 W3C XQuery 1.0 及 XPath 2.0 Data Model 規格中。  
   
--   如果*$arg*不可部分完成的值，此函數會傳回相同的字串轉換為運算式所傳回**xs: string**， *$arg*，明時除外。  
+-   如果 *$arg*不可部分完成的值，此函數會傳回相同的字串轉換為運算式所傳回**xs: string**， *$arg*，明時除外。  
   
--   如果類型*$arg*是**xs: anyuri**，URI 會轉換成字串，但不逸出特殊字元。  
+-   如果類型 *$arg*是**xs: anyuri**，URI 會轉換成字串，但不逸出特殊字元。  
   
 -   實行中， **fn: string**不只可以在內容相依述詞的內容中使用的引數。 具體而言，它只能在括號 ([ ]) 內使用。  
   
@@ -88,7 +86,7 @@ WHERE ProductModelID=19
 </PD:Features>  
 ```  
   
- 如果您指定**string （)**函式，您會收到指定的節點的字串值。  
+ 如果您指定**string （)** 函式，您會收到指定的節點的字串值。  
   
 ```  
 SELECT CatalogDescription.query('  
@@ -107,7 +105,7 @@ These are the product highlights.
 ```  
   
 ### <a name="b-using-the-string-function-on-various-nodes"></a>B. 在不同節點上使用字串函數  
- 在以下範例中，XML 執行個體會指定給一個 xml 類型變數。 指定查詢以說明套用的結果**string （)**對不同節點。  
+ 在以下範例中，XML 執行個體會指定給一個 xml 類型變數。 指定查詢以說明套用的結果**string （)** 對不同節點。  
   
 ```  
 declare @x xml  

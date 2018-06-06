@@ -1,34 +1,32 @@
 ---
-title: "SqlDataRecord 物件 |Microsoft 文件"
-ms.custom: 
+title: SqlDataRecord 物件 |Microsoft 文件
+ms.custom: ''
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
 ms.component: clr
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - SqlDataRecord object
 - custom result sets [CLR integration]
 ms.assetid: 2ed667fb-749c-4280-a8fb-650643683c8f
-caps.latest.revision: 
+caps.latest.revision: 25
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: d9fa7d4465af4de1534e220ffa06d39cf854c3b8
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 414d1bfd7ac105c5c99bc7b6d1a64bbe40ca0f7f
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sqldatarecord-object"></a>SqlDataRecord 物件
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-**SqlDataRecord**物件都代表單一資料列的資料，以及其相關的中繼資料。  
+  **SqlDataRecord**物件都代表單一資料列的資料，以及其相關的中繼資料。  
   
  Managed 預存程序可能會傳送給用戶端的結果集不是來自**SqlDataReader**。 **SqlDataRecord**類別以及**SendResultsStart**， **SendResultsRow**，和**SendResultsEnd**方法**SqlPipe**物件，可讓自訂結果集給用戶端傳送的預存程序。  
   

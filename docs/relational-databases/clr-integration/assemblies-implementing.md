@@ -1,33 +1,31 @@
 ---
-title: "實作組件 |Microsoft 文件"
-ms.custom: 
+title: 實作組件 |Microsoft 文件
+ms.custom: ''
 ms.date: 03/16/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
 ms.component: clr
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - assemblies [CLR integration], implementing
 ms.assetid: c228d7bf-a906-4f37-a057-5d464d962ff8
-caps.latest.revision: 
+caps.latest.revision: 33
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 3739ec98683810b683bf644912268d22efe6e261
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 9ba5a73921a2690c10f1b2610c6fb071824baf89
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="assemblies---implementing"></a>-實作組件
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-本主題提供下列部分的資訊，協助您實作和使用資料庫中的組件：  
+  本主題提供下列部分的資訊，協助您實作和使用資料庫中的組件：  
   
 -   建立組件  
   
@@ -46,7 +44,7 @@ ms.lasthandoff: 02/09/2018
   
  **若要使用 SQL Server Management Studio 建立組件**  
   
--   [組件屬性 &#40;一般頁面 &#41;](../../relational-databases/clr-integration/assemblies-properties.md)  
+-   [組件屬性&#40;[一般] 頁面&#41;](../../relational-databases/clr-integration/assemblies-properties.md)  
   
 ## <a name="modifying-assemblies"></a>修改組件  
  組件是使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ALTER ASSEMBLY 陳述式在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 中修改，或使用 Assembly Assisted Editor 在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中修改。 當您要執行下列動作時可以修改組件：  
@@ -65,7 +63,7 @@ ms.lasthandoff: 02/09/2018
   
  **若要使用 SQL Server Management Studio 修改組件**  
   
--   [組件屬性 &#40;一般頁面 &#41;](../../relational-databases/clr-integration/assemblies-properties.md)  
+-   [組件屬性&#40;[一般] 頁面&#41;](../../relational-databases/clr-integration/assemblies-properties.md)  
   
 ## <a name="dropping-disabling-and-enabling-assemblies"></a>卸除、停用和啟用組件  
  使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] DROP ASSEMBLY 陳述式或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 卸除組件。  
@@ -84,7 +82,7 @@ ms.lasthandoff: 02/09/2018
   
 -   [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)  
   
-##  <a name="_managing"></a>管理組件版本  
+##  <a name="_managing"></a> 管理組件版本  
  在將組件上傳至 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體時，組件是在資料庫系統目錄中儲存和管理。 中的組件定義所做的任何變更[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]應該傳播至儲存在資料庫目錄中的組件。  
   
  當您必須修改組件時，您必須發出 ALTER ASSEMBLY 陳述式來更新資料庫中的組件。 這將會使組件更新至保存其實作的最新 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 模組副本。  
@@ -93,14 +91,14 @@ ms.lasthandoff: 02/09/2018
   
 -   透過 [!INCLUDE[tsql](../../includes/tsql-md.md)] 函數或方法直接或間接參考組件中的方法之保存的計算資料行。  
   
--   CLR 使用者定義型別的相依於組件和型別實作的資料行**UserDefined** (非**原生**) 序列化格式。  
+-   相依於組件的 CLR 使用者定義型別資料行，以及實作 **UserDefined** (非**原生**) 序列化格式之類型的資料行。  
   
 > [!CAUTION]  
 >  在未指定 WITH UNCHECKED DATA 的情況下，如果新組件版本影響資料表、索引或其他永續性站台中現有的資料，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 將嘗試阻止 ALTER ASSEMBLY 執行。 不過，當 CLR 組件更新時，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 並不保證計算資料行、索引、索引檢視或運算式都會與基礎常式及類型保持一致。 執行 ALTER ASSEMBLY 時請小心，以確定運算式結果與儲存在組件中以該運算式為基礎的值之間相符。  
   
  只有成員**db_owner**和**db_ddlowner**固定的資料庫角色可以執行使用 WITH UNCHECKED DATA 子句執行 ALTER ASSEMBLY。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 張貼訊息至 Windows 應用程式事件記錄檔未選取資料表中的資料已修改 組件。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 接著會在有未檢查的資料時，標示任何包含與組件相依的資料之資料表。 **Has_unchecked_assembly_data**資料行**sys.tables**目錄檢視包含資料表，其中包含未選取的資料，以 0 代表沒有未檢查資料的值 1。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會在 Windows 應用程式事件記錄公佈訊息，說明已使用資料表中未檢查的資料修改過組件。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 接著會在有未檢查的資料時，標示任何包含與組件相依的資料之資料表。 **Has_unchecked_assembly_data**資料行**sys.tables**目錄檢視包含資料表，其中包含未選取的資料，以 0 代表沒有未檢查資料的值 1。  
   
  若要解決未檢查資料的完整性，請針對具有每個資料表執行 DBCC CHECKDB WITH EXTENDED_LOGICAL_CHECKS 未檢查的資料。 如果 DBCC CHECKDB WITH EXTENDED_LOGICAL_CHECKS 失敗，則必須刪除無效或修改的組件程式碼，來解決問題的資料表資料列，並接著發出其他 ALTER ASSEMBLY 陳述式。  
   
@@ -120,7 +118,7 @@ ms.lasthandoff: 02/09/2018
 -   [ALTER ASSEMBLY &#40;Transact-SQL&#41;](../../t-sql/statements/alter-assembly-transact-sql.md)  
   
 ## <a name="see-also"></a>另請參閱  
- [組件 &#40; Database engine&#41;](../../relational-databases/clr-integration/assemblies-database-engine.md)   
+ [組件 & #40; Database engine& #41;](../../relational-databases/clr-integration/assemblies-database-engine.md)   
  [取得組件的相關資訊](../../relational-databases/clr-integration/assemblies-getting-information.md)  
   
   

@@ -1,38 +1,36 @@
 ---
-title: "如何： 擷取使用 SQLSRV 驅動程式的 I/O 參數 |Microsoft 文件"
-ms.custom: 
-ms.date: 01/19/2017
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
-ms.component: php
-ms.reviewer: 
+title: 如何： 擷取使用 SQLSRV 驅動程式的 I/O 參數 |Microsoft 文件
+ms.custom: ''
+ms.date: 04/12/2018
+ms.prod: sql
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
-ms.topic: article
-helpviewer_keywords: stored procedure support
+ms.technology: connectivity
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
+helpviewer_keywords:
+- stored procedure support
 ms.assetid: 9a7c5f60-67f9-4968-a3a8-c256ee481da2
-caps.latest.revision: "15"
+caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
-ms.workload: Inactive
-ms.openlocfilehash: 76423ca2d960951ecdc7a58181393eed792ab756
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+manager: craigg
+ms.openlocfilehash: 57143ae8694bba2bdeae3ff552b2ebb089ce6536
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34563926"
 ---
 # <a name="how-to-retrieve-input-and-output-parameters-using-the-sqlsrv-driver"></a>How to: Retrieve Input and Output Parameters Using the SQLSRV Driver
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-本主題示範如何使用 SQLSRV 驅動程式呼叫將其中一個參數定義為輸入/輸出參數的預存程序，以及如何擷取結果。 請注意，在擷取輸出或輸入/輸出參數時，必須先取用預存程序所傳回的所有結果，傳回的參數值才可供存取。  
+本主題示範如何使用 SQLSRV 驅動程式呼叫將其中一個參數定義為輸入/輸出參數的預存程序，以及如何擷取結果。 當擷取輸出或輸入/輸出參數，預存程序所傳回的所有結果必須都取用傳回的參數值才可供存取。  
   
 > [!NOTE]  
 > 初始化或更新為 **null**、 **DateTime**或資料流類型的變數，無法作為輸出參數。  
   
-## <a name="example"></a>範例  
+## <a name="example-1"></a>範例 1
 下列範例會呼叫從指定員工的可用休假時數中扣除掉已用休假時數的預存程序。 代表已用休假時數的變數 *$vacationHrs*，會傳遞至預存程序做為輸入參數。 在更新可用休假時數之後，預存程序會使用相同的參數傳回剩餘休假時數。  
   
 > [!NOTE]  
@@ -41,9 +39,9 @@ ms.lasthandoff: 11/18/2017
 預存程序會傳回兩個結果，因為[sqlsrv_next_result](../../connect/php/sqlsrv-next-result.md)必須讓輸出參數的值可執行預存程序完成之後呼叫。 在呼叫**sqlsrv_next_result**， *$vacationHrs*包含預存程序所傳回的輸出參數的值。  
   
 > [!NOTE]  
-> 使用標準語法呼叫預存程序，是建議的做法。 如需關於標準語法的詳細資訊，請參閱 [呼叫預存程序](http://go.microsoft.com/fwlink/?linkid=119517)。  
+> 使用標準語法呼叫預存程序，是建議的做法。 如需關於標準語法的詳細資訊，請參閱[呼叫預存程序](../../relational-databases/native-client-odbc-stored-procedures/calling-a-stored-procedure.md)。  
   
-此範例假設本機電腦上已安裝 SQL Server 和 [AdventureWorks](http://go.microsoft.com/fwlink/?LinkID=67739) 資料庫。 從命令列執行範例時，所有輸出都會寫入至主控台。  
+此範例假設 SQL Server 和[AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works)資料庫安裝在本機電腦上。 從命令列執行範例時，所有輸出都會寫入至主控台。  
   
 ```  
 <?php  
@@ -104,7 +102,7 @@ $employeeId = 4;
 $vacationHrs = 8;  
 $params = array(   
                  array($employeeId, SQLSRV_PARAM_IN),  
-                 array($vacationHrs, SQLSRV_PARAM_INOUT)  
+                 array(&$vacationHrs, SQLSRV_PARAM_INOUT)  
                );  
   
 /* Execute the query. */  
@@ -126,9 +124,41 @@ sqlsrv_free_stmt( $stmt3);
 sqlsrv_close( $conn);  
 ?>  
 ```  
-  
+
+> [!NOTE]
+> Bigint 型別，繫結輸入/輸出參數，如果值可能會超出範圍時[整數](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md)，您必須指定為 SQLSRV_SQLTYPE_BIGINT 它 SQL 的欄位類型。 否則，它可能會導致 「 超出範圍的值 」 例外狀況。
+
+## <a name="example-2"></a>範例 2
+此程式碼範例示範如何將大型的 bigint 值做為輸入/輸出參數繫結。  
+
+```
+<?php
+$serverName = "(local)";
+$connectionInfo = array("Database"=>"testDB");  
+$conn = sqlsrv_connect($serverName, $connectionInfo);  
+if ($conn === false) {  
+    echo "Could not connect.\n";  
+    die(print_r(sqlsrv_errors(), true));  
+}  
+
+// Assume the stored procedure spTestProcedure exists, which retrieves a bigint value of some large number
+// e.g. 9223372036854
+$bigintOut = 0;
+$outSql = "{CALL spTestProcedure (?)}";
+$stmt = sqlsrv_prepare($conn, $outSql, array(array(&$bigintOut, SQLSRV_PARAM_INOUT, null, SQLSRV_SQLTYPE_BIGINT)));
+sqlsrv_execute($stmt);
+echo "$bigintOut\n";   // Expect 9223372036854
+
+sqlsrv_free_stmt($stmt);  
+sqlsrv_close($conn);  
+
+?>
+```
+
 ## <a name="see-also"></a>另請參閱  
-[如何：使用 SQLSRV 驅動程式指定參數方向](../../connect/php/how-to-specify-parameter-direction-using-the-sqlsrv-driver.md)  
-[如何：使用 SQLSRV 驅動程式擷取輸出參數](../../connect/php/how-to-retrieve-output-parameters-using-the-sqlsrv-driver.md)  
+[如何：使用 SQLSRV 驅動程式指定參數方向](../../connect/php/how-to-specify-parameter-direction-using-the-sqlsrv-driver.md)
+
+[如何：使用 SQLSRV 驅動程式擷取輸出參數](../../connect/php/how-to-retrieve-output-parameters-using-the-sqlsrv-driver.md)
+
 [擷取資料](../../connect/php/retrieving-data.md)  
   

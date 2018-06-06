@@ -1,32 +1,29 @@
 ---
-title: "從 Microsoft Excel 中存取 Visual FoxPro 資料來源 |Microsoft 文件"
-ms.custom: 
+title: 從 Microsoft Excel 中存取 Visual FoxPro 資料來源 |Microsoft 文件
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
-ms.component: odbc
-ms.reviewer: 
+ms.prod: sql
+ms.prod_service: connectivity
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: connectivity
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - FoxPro ODBC driver [ODBC], Excel
 - Visual FoxPro data [ODBC], Excel
 - Visual FoxPro data [ODBC], accessing
 - Visual FoxPro ODBC driver [ODBC], Excel
 ms.assetid: 2c143020-0403-4592-80e0-84229f3d40be
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
-ms.workload: Inactive
-ms.openlocfilehash: 67f350bf1070e7b35b6538f4d3fb56a866b728c0
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+manager: craigg
+ms.openlocfilehash: 2519467ff807e40d1ec63414690d45ad8cde8f4b
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="accessing-a-visual-foxpro-data-source-from-microsoft-excel"></a>從 Microsoft Excel 中存取 Visual FoxPro 資料來源
 如果您有安裝 Microsoft 查詢時，您可以在連接到 Visual FoxPro 資料的 Microsoft Excel 中建立資料來源。  

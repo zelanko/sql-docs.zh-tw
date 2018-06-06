@@ -1,28 +1,22 @@
 ---
-title: "取得和設定的 APS PDW 備份伺服器"
-author: barbkess
-ms.author: barbkess
-manager: jhubbard
-ms.prod: analytics-platform-system
-ms.prod_service: mpp-data-warehouse
-ms.service: 
-ms.component: 
-ms.suite: sql
-ms.custom: 
-ms.technology: mpp-data-warehouse
-description: "設定非應用裝置的 Windows 系統做為備份的伺服器，用於備份和還原功能 Analytics Platform System (APS) 和 SQL Server Parallel Data Warehouse (PDW)。"
-ms.date: 10/20/2016
-ms.topic: article
-caps.latest.revision: "20"
-ms.assetid: f8b769fe-c864-4d65-abcb-a9a287061702
-ms.openlocfilehash: 760537abd7e3227cc2245c429d0a0c13f7609f8b
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+title: 取得和設定備份的伺服器-Parallel Data Warehouse |Microsoft 文件
+description: 本文說明如何將非應用裝置的 Windows 系統設定為備份伺服器的備份和還原功能 Analytics Platform System (APS) 以及 Parallel Data Warehouse (PDW) 搭配使用。
+author: mzaman1
+manager: craigg
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
+ms.openlocfilehash: 4464857e2b1e71a96f87e95d45df0577df987176
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/19/2018
 ---
-# <a name="acquire-and-configure-a-backup-server"></a>取得和設定備份伺服器
-本主題描述如何將非應用裝置的 Windows 系統設定為與 Analytics Platform System (AP) 的備份和還原功能搭配使用的備份伺服器和 SQL Server Parallel Data Warehouse (PDW)。  
+# <a name="acquire-and-configure-a-backup-server-for-parallel-data-warehouse"></a>取得和設定備份伺服器的平行處理資料倉儲
+本文說明如何將非應用裝置的 Windows 系統設定為備份伺服器的備份和還原功能 Analytics Platform System (APS) 以及 Parallel Data Warehouse (PDW) 搭配使用。  
   
   
 ## <a name="Basics"></a>備份伺服器的基本概念  
@@ -136,12 +130,12 @@ FROM DISK = '\\10.172.14.255\backups\yearly\Invoices2013Full'
   
 ### <a name="manage-network-credentials"></a>管理網路認證  
   
-備份目錄的網路存取根據標準的 Windows 檔案共用的安全性。 之前執行的備份，您必須建立或指定要用於驗證 PDW 備份目錄的 Windows 帳戶。 此 windows 帳戶必須擁有存取、 建立和寫入備份目錄的權限。  
+對備份目錄的網路存取權是根據標準 Windows 檔案共用安全性。 之前執行的備份，您必須建立或指定要用於驗證 PDW 備份目錄的 Windows 帳戶。 此 Windows 帳戶必須具備備份目錄之存取、建立及寫入權限。  
   
 > [!IMPORTANT]  
-> 若要減少資料的安全性風險，建議您指定一個 Windows 帳戶，只為了執行備份和還原作業。 允許此帳戶擁有權限的備份位置和其他無處可去。  
+> 為了降低您資料的安全性風險，建議您指定一個專門用來執行備份和還原作業的 Windows 帳戶。 請讓此帳戶僅擁有備份位置的權限。  
   
-若要將使用者名稱和密碼儲存在 PDW 中，使用[sp_pdw_add_network_credentials](../relational-databases/system-stored-procedures/sp-pdw-add-network-credentials-sql-data-warehouse.md)預存程序。 PDW 使用 Windows 認證管理員來儲存和加密使用者名稱和密碼的控制節點及計算節點。 認證不會備份資料庫命令一起備份。  
+若要將使用者名稱和密碼儲存在 PDW 中，使用[sp_pdw_add_network_credentials](../relational-databases/system-stored-procedures/sp-pdw-add-network-credentials-sql-data-warehouse.md)預存程序。 PDW 使用 Windows 認證管理員來儲存和加密使用者名稱和密碼的控制節點及計算節點。 備份認證時，不會使用 BACKUP DATABASE 命令來備份。  
   
 若要移除 PDW 網路認證，請使用[sp_pdw_remove_network_credentials](../relational-databases/system-stored-procedures/sp-pdw-remove-network-credentials-sql-data-warehouse.md)預存程序。  
   
@@ -154,6 +148,6 @@ FROM DISK = '\\10.172.14.255\backups\yearly\Invoices2013Full'
 - 需要登入連接。 
 - 在載入伺服器上，設定下列群組原則選項中安全性 \ 原則 \ 安全性選項： Microsoft 網路用戶端： 數位簽章通訊 （自動）： 已啟用。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
 [備份與還原](backup-and-restore-overview.md)  
   

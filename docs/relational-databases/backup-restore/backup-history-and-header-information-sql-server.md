@@ -1,17 +1,14 @@
 ---
-title: "備份記錄與標頭資訊 (SQL Server) | Microsoft Docs"
-ms.custom: 
+title: 備份記錄與標頭資訊 (SQL Server) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/17/2017
-ms.prod: sql-non-specified
-ms.prod_service: database-engine
-ms.service: 
-ms.component: backup-restore
-ms.reviewer: 
+ms.prod: sql
+ms.prod_service: backup-restore
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- dbe-backup-restore
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: backup-restore
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - backup headers [SQL Server]
 - history tables [SQL Server]
@@ -36,19 +33,19 @@ helpviewer_keywords:
 - restore history tables [SQL Server]
 - listing backed up files
 ms.assetid: 799b9934-0ec2-4f43-960b-5c9653f18374
-caps.latest.revision: 
+caps.latest.revision: 54
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: a44dc24eff94398ce3c33bab9d38ba58ab79ccaa
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: cd442f668c272795321a93d23faf2ae832673788
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="backup-history-and-header-information-sql-server"></a>備份記錄與標頭資訊 (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 在伺服器執行個體上的所有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 備份與還原作業的完整記錄都會儲存在 **msdb** 資料庫中。 本主題介紹備份與還原記錄資料表，以及用於存取備份記錄的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式。 本主題也會討論何時列出資料庫和交易記錄檔最有用，以及媒體標頭資訊與備份標頭資訊這兩者的使用時機。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  在伺服器執行個體上的所有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 備份與還原作業的完整記錄都會儲存在 **msdb** 資料庫中。 本主題介紹備份與還原記錄資料表，以及用於存取備份記錄的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式。 本主題也會討論何時列出資料庫和交易記錄檔最有用，以及媒體標頭資訊與備份標頭資訊這兩者的使用時機。  
   
 > [!IMPORTANT]  
 >  若要管理遺失備份和還原記錄最近變更的風險，請經常備份 **msdb** 。 如需必須備份哪些系統資料庫的相關資訊，請參閱[系統資料庫的備份與還原 &#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-and-restore-of-system-databases-sql-server.md)。  

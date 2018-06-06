@@ -1,33 +1,31 @@
 ---
-title: "轉換設定 (MySQLToSQL) |Microsoft 文件"
-ms.prod: sql-non-specified
+title: 轉換設定 (MySQLToSQL) |Microsoft 文件
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
 ms.component: ssma-mysql
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ssma
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: f551cf6e-1575-4206-9cca-975b5b43a6b8
-caps.latest.revision: "10"
+caps.latest.revision: 10
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
-ms.workload: Inactive
-ms.openlocfilehash: d19688f630a71ff111a755b6810379b06fd129d3
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+manager: craigg
+ms.openlocfilehash: 13a3bfc9f8fe001d31b1d231438cece9752e08df
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="conversion-settings-mysqltosql"></a>轉換設定 (MySQLToSQL)
-**'設定'**索引標籤可讓使用者設定節點層級設定。 [] 索引標籤會位於下列 Metabase 節點：  
+**'設定'** 索引標籤可讓使用者設定節點層級設定。 [] 索引標籤會位於下列 Metabase 節點：  
   
 -   資料庫節點  
   
@@ -54,7 +52,7 @@ ms.lasthandoff: 12/21/2017
   
 1.  **函式轉換設定：**  
   
-    1.  此索引標籤包含**'Force 函式轉換'**選項。 此選項可以有下列四個值之一：  
+    1.  此索引標籤包含 **'Force 函式轉換'** 選項。 此選項可以有下列四個值之一：  
   
         -   根據專案設定 [繼承] 轉換  
   
@@ -80,10 +78,10 @@ ms.lasthandoff: 12/21/2017
   
         -   根據專案設定轉換  
   
-    2.  如果**'Yes'**，這項設定會禁止 ROWID 輔助的資料行建立目標資料表上建立。  
+    2.  如果 **'Yes'**，這項設定會禁止 ROWID 輔助的資料行建立目標資料表上建立。  
   
     3.  使用者所做的設定會儲存在重疊的喜好設定檔案上按一下**套用** 按鈕。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
 [專案設定 （轉換） (MySQL to SQL)](http://msdn.microsoft.com/en-us/7ad5fe44-6445-4ba8-a457-5af792631f11)  
   

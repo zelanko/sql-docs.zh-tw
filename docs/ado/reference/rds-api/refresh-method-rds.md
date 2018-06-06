@@ -1,16 +1,15 @@
 ---
-title: "重新整理方法 (RDS) |Microsoft 文件"
-ms.technology:
-- drivers
-ms.custom: 
+title: 重新整理方法 (RDS) |Microsoft 文件
+ms.technology: connectivity
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.component: reference
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 apitype: COM
 f1_keywords:
 - Refresh
@@ -19,16 +18,15 @@ f1_keywords:
 helpviewer_keywords:
 - Refresh method [RDS]
 ms.assetid: c90a8050-0ff4-4c83-9925-261f2f2ccfe9
-caps.latest.revision: 
+caps.latest.revision: 17
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 26182bb5f3ec1d60b66e5c16bf403a1f427c8b87
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: e86c8965180eb6cec2fda86a2c5141d0c3e6fa75
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="refresh-method-rds"></a>重新整理方法 (RDS)
 重新查詢中指定的資料來源[連接](../../../ado/reference/rds-api/connect-property-rds.md)屬性和更新的查詢結果。  
@@ -48,7 +46,7 @@ DataControl.Refresh
  物件變數，表示[.RDSDataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md)物件。  
   
 ## <a name="remarks"></a>備註  
- 您必須設定[連接](../../../ado/reference/rds-api/connect-property-rds.md)，[伺服器](../../../ado/reference/rds-api/server-property-rds.md)，和[SQL](../../../ado/reference/rds-api/sql-property.md)屬性才能使用**重新整理**方法。 與相關聯的表單上的所有資料繫結控制項**.RDSDataControl**物件會反映新的記錄集。 已存在的任何[資料錄集](../../../ado/reference/ado-api/recordset-object-ado.md)釋放物件，並會捨棄任何未儲存的變更。 **重新整理**方法會自動將第一筆記錄目前的記錄。  
+ 您必須設定[連接](../../../ado/reference/rds-api/connect-property-rds.md)，[伺服器](../../../ado/reference/rds-api/server-property-rds.md)，和[SQL](../../../ado/reference/rds-api/sql-property.md)屬性才能使用**重新整理**方法。 與相關聯的表單上的所有資料繫結控制項 **.RDSDataControl**物件會反映新的記錄集。 已存在的任何[資料錄集](../../../ado/reference/ado-api/recordset-object-ado.md)釋放物件，並會捨棄任何未儲存的變更。 **重新整理**方法會自動將第一筆記錄目前的記錄。  
   
  最好呼叫**重新整理**方法定期當您使用的資料。 如果您擷取資料，並再將它用戶端電腦上，保留一段時間，則可能會變成過期。 有可能，您所做的任何變更將會失敗，因為其他人可能已變更的記錄和送出之前，您的變更。  
   

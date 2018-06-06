@@ -1,32 +1,33 @@
 ---
-title: "SQLForeignKeys 函數 |Microsoft 文件"
-ms.custom: 
+title: SQLForeignKeys 函數 |Microsoft 文件
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
-ms.component: odbc
-ms.reviewer: 
+ms.prod: sql
+ms.prod_service: connectivity
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
-ms.topic: article
-apiname: SQLForeignKeys
-apilocation: sqlsrv32.dll
+ms.technology: connectivity
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
+apiname:
+- SQLForeignKeys
+apilocation:
+- sqlsrv32.dll
 apitype: dllExport
-f1_keywords: SQLForeignKeys
-helpviewer_keywords: SQLForeignKeys function [ODBC]
+f1_keywords:
+- SQLForeignKeys
+helpviewer_keywords:
+- SQLForeignKeys function [ODBC]
 ms.assetid: 07f3f645-f643-4d39-9a10-70a72f24e608
-caps.latest.revision: "24"
+caps.latest.revision: 24
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
-ms.workload: Inactive
-ms.openlocfilehash: ba8f395a556d976f2698ce9646db2e830e7a69aa
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+manager: craigg
+ms.openlocfilehash: c5e90ce8d272b7345a9cd6f450df6293c63d4151
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sqlforeignkeys-function"></a>SQLForeignKeys 函數
 **一致性**  
@@ -119,7 +120,7 @@ SQLRETURN SQLForeignKeys(
 ## <a name="diagnostics"></a>診斷  
  當**SQLForeignKeys**會傳回 SQL_ERROR 或 SQL_SUCCESS_WITH_INFO，相關聯的 SQLSTATE 值可以藉由呼叫取得**SQLGetDiagRec**與*HandleType*的 SQL_HANDLE_STMT 和*處理*的*StatementHandle*。 下表列出通常所傳回的 SQLSTATE 值**SQLForeignKeys** ，並說明這個函式; 每個內容中的標記法 」 (DM) 」 之前描述的驅動程式管理員傳回的 Sqlstate。 每個 SQLSTATE 值相關聯的傳回碼是 SQL_ERROR，除非有說明，否則為。  
   
-|SQLSTATE|錯誤|描述|  
+|SQLSTATE|錯誤|Description|  
 |--------------|-----------|-----------------|  
 |01000|一般警告|特定驅動程式告知性訊息。 （函式會傳回 SQL_SUCCESS_WITH_INFO）。|  
 |08S01|通訊連結失敗|功能已完成處理之前，驅動程式和驅動程式已連線到資料來源之間的通訊連結失敗。|  
@@ -161,7 +162,7 @@ SQLRETURN SQLForeignKeys(
   
  下列資料行已重新命名為 ODBC 3*。 x。* 因為應用程式繫結的資料行編號的資料行名稱變更不會影響回溯相容性。  
   
-|ODBC 2.0 資料行|ODBC 3*.x*資料行|  
+|ODBC 2.0 資料行|ODBC 3 *.x*資料行|  
 |---------------------|-----------------------|  
 |PKTABLE_QUALIFIER|PKTABLE_CAT|  
 |PKTABLE_OWNER|PKTABLE_SCHEM|  
@@ -172,7 +173,7 @@ SQLRETURN SQLForeignKeys(
   
 |資料行名稱|資料行編號|資料類型|註解|  
 |-----------------|-------------------|---------------|--------------|  
-|PKTABLE_CAT (ODBC 1.0)|@shouldalert|Varchar|主索引鍵資料表的目錄名稱。如果不適用於資料來源，則為 NULL。 如果驅動程式支援目錄對於某些資料表，但不適用於其他項目，例如當驅動程式會從不同的 Dbms 擷取資料，它會傳回空字串 ("") 沒有目錄這些資料表。|  
+|PKTABLE_CAT (ODBC 1.0)|1|Varchar|主索引鍵資料表的目錄名稱。如果不適用於資料來源，則為 NULL。 如果驅動程式支援目錄對於某些資料表，但不適用於其他項目，例如當驅動程式會從不同的 Dbms 擷取資料，它會傳回空字串 ("") 沒有目錄這些資料表。|  
 |PKTABLE_SCHEM (ODBC 1.0)|2|Varchar|主索引鍵資料表的結構描述名稱。如果不適用於資料來源，則為 NULL。 如果驅動程式支援的結構描述對於某些資料表，但不適用於其他項目，例如當驅動程式會從不同的 Dbms 擷取資料，它會傳回空字串 ("") 並沒有結構描述這些資料表。|  
 |B L E _ (ODBC 1.0)|3|Varchar 不是 NULL|主索引鍵資料表名稱。|  
 |PKCOLUMN_NAME (ODBC 1.0)|4|Varchar 不是 NULL|主索引鍵資料行名稱。 驅動程式傳回的資料行沒有名稱為空字串。|  
@@ -181,8 +182,8 @@ SQLRETURN SQLForeignKeys(
 |FKTABLE_NAME (ODBC 1.0)|7|Varchar 不是 NULL|外部索引鍵資料表名稱。|  
 |FKCOLUMN_NAME (ODBC 1.0)|8|Varchar 不是 NULL|外部索引鍵的資料行名稱。 驅動程式傳回的資料行沒有名稱為空字串。|  
 |KEY_SEQ 來排序 (ODBC 1.0)|9|Smallint 非 NULL|（從 1 開始） 的索引鍵資料行順序編號。|  
-|UPDATE_RULE (ODBC 1.0)|10|Smallint|當 SQL 作業是套用至外部索引鍵的動作**更新**。 可以有下列值之一。 （參考的資料表是具有主索引鍵的資料表，參考資料表是具有外部索引鍵的資料表）。<br /><br /> SQL_NO_ACTION： 更新被參考資料表的主索引鍵時，參考資料表的外部索引鍵也會更新。<br /><br /> SQL_NO_ACTION： 如果更新的主索引鍵參考的資料表會造成 「 懸吊參考 」 參考資料表中的 （也就是參考資料表中的資料列會有沒有對應項目中參考的資料表），就會拒絕更新。 如果參考資料表的外部索引鍵更新會導致值設為所參考之資料表的主索引鍵的值不存在，則會拒絕更新。 (這個動作等同於 ODBC 2 SQL_RESTRICT 動作*.x*。)<br /><br /> SQL_SET_NULL： 當參考資料表中的一個或多個資料列更新的方式，會變更的主索引鍵的一個或多個元件時，元件的參考資料表中的外部索引鍵對應至主索引鍵已變更的元件會設定為 NULL 參考資料表的所有相符的資料列中。<br /><br /> SQL_SET_DEFAULT： 當參考資料表中的一個或多個資料列更新的方式，會變更的主索引鍵的一個或多個元件時，參考資料表中的外部索引鍵對應至主索引鍵已變更元件的元件設定為參考資料表的所有相符的資料列中的適用的預設值。<br /><br /> 如果不適用於資料來源，則為 NULL。|  
-|DELETE_RULE (ODBC 1.0)|11|Smallint|當 SQL 作業是套用至外部索引鍵的動作**刪除**。 可以有下列值之一。 （參考的資料表是具有主索引鍵的資料表，參考資料表是具有外部索引鍵的資料表）。<br /><br /> SQL_NO_ACTION： 刪除參考的資料表中的資料列時，參考資料表中的所有相符資料列會一併刪除。<br /><br /> SQL_NO_ACTION： 如果刪除資料列，在參考的資料表會造成 「 懸吊參考 」 參考資料表中的 （也就是參考資料表中的資料列會有沒有對應項目中參考的資料表），就會拒絕更新。 (這個動作等同於 ODBC 2 SQL_RESTRICT 動作*.x*。)<br /><br /> SQL_SET_NULL： 參考的資料表中的一個或多個資料列刪除時，每個元件的參考資料表的外部索引鍵設為 NULL 參考資料表的所有相符的資料列中。<br /><br /> SQL_SET_DEFAULT： 參考的資料表中的一個或多個資料列刪除時，每個元件的參考資料表的外部索引鍵會設定為適用的預設值在參考資料表的所有相符的資料列。<br /><br /> 如果不適用於資料來源，則為 NULL。|  
+|UPDATE_RULE (ODBC 1.0)|10|Smallint|當 SQL 作業是套用至外部索引鍵的動作**更新**。 可以有下列值之一。 （參考的資料表是具有主索引鍵的資料表，參考資料表是具有外部索引鍵的資料表）。<br /><br /> SQL_NO_ACTION： 更新被參考資料表的主索引鍵時，參考資料表的外部索引鍵也會更新。<br /><br /> SQL_NO_ACTION： 如果更新的主索引鍵參考的資料表會造成 「 懸吊參考 」 參考資料表中的 （也就是參考資料表中的資料列會有沒有對應項目中參考的資料表），就會拒絕更新。 如果參考資料表的外部索引鍵更新會導致值設為所參考之資料表的主索引鍵的值不存在，則會拒絕更新。 (這個動作等同於 ODBC 2 SQL_RESTRICT 動作 *.x*。)<br /><br /> SQL_SET_NULL： 當參考資料表中的一個或多個資料列更新的方式，會變更的主索引鍵的一個或多個元件時，元件的參考資料表中的外部索引鍵對應至主索引鍵已變更的元件會設定為 NULL 參考資料表的所有相符的資料列中。<br /><br /> SQL_SET_DEFAULT： 當參考資料表中的一個或多個資料列更新的方式，會變更的主索引鍵的一個或多個元件時，參考資料表中的外部索引鍵對應至主索引鍵已變更元件的元件設定為參考資料表的所有相符的資料列中的適用的預設值。<br /><br /> 如果不適用於資料來源，則為 NULL。|  
+|DELETE_RULE (ODBC 1.0)|11|Smallint|當 SQL 作業是套用至外部索引鍵的動作**刪除**。 可以有下列值之一。 （參考的資料表是具有主索引鍵的資料表，參考資料表是具有外部索引鍵的資料表）。<br /><br /> SQL_NO_ACTION： 刪除參考的資料表中的資料列時，參考資料表中的所有相符資料列會一併刪除。<br /><br /> SQL_NO_ACTION： 如果刪除資料列，在參考的資料表會造成 「 懸吊參考 」 參考資料表中的 （也就是參考資料表中的資料列會有沒有對應項目中參考的資料表），就會拒絕更新。 (這個動作等同於 ODBC 2 SQL_RESTRICT 動作 *.x*。)<br /><br /> SQL_SET_NULL： 參考的資料表中的一個或多個資料列刪除時，每個元件的參考資料表的外部索引鍵設為 NULL 參考資料表的所有相符的資料列中。<br /><br /> SQL_SET_DEFAULT： 參考的資料表中的一個或多個資料列刪除時，每個元件的參考資料表的外部索引鍵會設定為適用的預設值在參考資料表的所有相符的資料列。<br /><br /> 如果不適用於資料來源，則為 NULL。|  
 |FK_NAME (ODBC 2.0)|12|Varchar|外部索引鍵的名稱。 如果不適用於資料來源，則為 NULL。|  
 |PK_NAME (ODBC 2.0)|13|Varchar|主索引鍵的名稱。 如果不適用於資料來源，則為 NULL。|  
 |延遲性 (ODBC 3.0)|14|Smallint|SQL_INITIALLY_DEFERRED，SQL_INITIALLY_IMMEDIATE，SQL_NOT_DEFERRABLE。|  
@@ -206,19 +207,19 @@ SQLRETURN SQLForeignKeys(
   
 |TABLE_NAME|COLUMN_NAME|KEY_SEQ|  
 |-----------------|------------------|--------------|  
-|訂單|ORDERID|@shouldalert|  
+|訂單|ORDERID|1|  
   
  接下來，此範例會呼叫**SQLForeignKeys** ORDERS 資料表的主索引鍵的參考其他資料表中取得的外部索引鍵。 結果集都有一個資料列。下表中，會顯示重要的資料行。  
   
 |PKTABLE_NAME|PKCOLUMN_NAME|FKTABLE_NAME|FKCOLUMN_NAME|KEY_SEQ|  
 |-------------------|--------------------|-------------------|--------------------|--------------|  
-|訂單|CUSTID|線條|CUSTID|@shouldalert|  
+|訂單|CUSTID|線條|CUSTID|1|  
   
  最後，此範例會呼叫**SQLForeignKeys**取得 ORDERS 資料表中的其他資料表的主索引鍵參考的外部索引鍵。 結果集都有一個資料列。下表中，會顯示重要的資料行。  
   
 |PKTABLE_NAME|PKCOLUMN_NAME|FKTABLE_NAME|FKCOLUMN_NAME|KEY_SEQ|  
 |-------------------|--------------------|-------------------|--------------------|--------------|  
-|客戶|CUSTID|訂單|CUSTID|@shouldalert|  
+|客戶|CUSTID|訂單|CUSTID|1|  
   
 ```  
 #define TAB_LEN SQL_MAX_TABLE_NAME_LEN + 1  
@@ -331,6 +332,6 @@ SQLFreeStmt(hstmt, SQL_DROP);
 |傳回主索引鍵資料行|[SQLPrimaryKeys 函式](../../../odbc/reference/syntax/sqlprimarykeys-function.md)|  
 |傳回資料表的統計資料和索引|[SQLStatistics 函式](../../../odbc/reference/syntax/sqlstatistics-function.md)|  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [ODBC 應用程式開發介面參考](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [ODBC 標頭檔](../../../odbc/reference/install/odbc-header-files.md)

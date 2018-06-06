@@ -1,29 +1,27 @@
 ---
-title: ADO History | Microsoft Docs
-ms.custom: 
+title: ADO 記錄 |Microsoft 文件
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
+ms.tgt_pltfrm: ''
+ms.prod: sql
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology: "“drivers”"
-ms.topic: article
+ms.technology: connectivity
+ms.topic: conceptual
 helpviewer_keywords:
 - ADO, what's new
 ms.assetid: 667673f2-3151-432b-894a-3fc60b704ea4
-caps.latest.revision: 
+caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 4e76e56b9d1840d4e6e1f42acd10b3b9226a61d4
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: cc6116c80af9ae7ca6a6504a1caa2d912b0d3731
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ado-features-for-each-release"></a>每個版本的 ADO 功能
 本主題列出每個版本的 ADO、 ADO MD 和 ADOX 所引進的新功能。
@@ -37,13 +35,13 @@ ms.lasthandoff: 02/09/2018
  *硬碟機存取不允許外部受信任的區域。*
 在跨網域指令碼包含信任的網站，會停用下列作業： **Stream.SaveToFile**， **Stream.LoadFromFile**， **Recordset.Save**，和**Recordset.Open**，用來搭配**adCmdFile**旗標或與 Microsoft OLE DB 持續性提供者 (MSPersist)。
 
- **Recordset.Open** *，***Recordset.Save** *，***Stream.SaveToFile** *，和* **Stream.LoadFromFile***在僅限實體檔案上作業。* 
+ **Recordset.Open** *，***Recordset.Save** *，***Stream.SaveToFile** *，和***Stream.LoadFromFile***在僅限實體檔案上作業。*
 這些方法現在會確認檔案控制代碼指向實際的檔案。
 
- **Recordset.ActiveCommand***會傳回錯誤時叫用從 HTML/ASP 網頁。* 
+ **Recordset.ActiveCommand***會傳回錯誤時叫用從 HTML/ASP 網頁。*
 這可防止**命令**誤用物件。
 
- *數目***資料錄集***傳回巢狀***圖形***命令有上限。* 
+ *數目***資料錄集***傳回巢狀***圖形***命令有上限。*
 巢狀的 shape 命令現在會傳回最多 512 個**資料錄集**。 這表示**圖形**命令不再任意深度巢狀。 相反地，層級的深度上限為 512，每個命令會產生單一 （子系） 如果**資料錄集**。 如果在任何層級，**圖形**命令會傳回多個**資料錄集**，最大的層級的深度會小於 512。
 
 ## <a name="ado-27"></a>ADO 2.7
@@ -67,7 +65,7 @@ ms.lasthandoff: 02/09/2018
  *單一資料列結果集*ADO**記錄**物件現在可以開啟命令字串或**命令**從提供者會傳回一個資料列的物件。 這會導致與 MDAC 2.6 提供者的改善效能。 請參閱[Open 方法 （ADO 資料錄）](../../ado/reference/ado-api/open-method-ado-record.md)。
 
 ## <a name="ado-25"></a>ADO 2.5
- **記錄***物件*ADO 2.5 導入了**記錄**物件來代表，並管理從一個資料列**資料錄集**或資料提供者或物件將半結構化的資料，例如檔案或目錄的封裝。
+ **記錄***物件*ADO 2.5 導入了**記錄**物件來代表，並管理從一個資料列**資料錄集**或資料提供者，或封裝物件半結構化的資料，例如檔案或目錄。
 
  **資料流***物件*ADO 2.5 也導入了**資料流**物件以代表二進位或文字資料的資料流。
 

@@ -1,32 +1,33 @@
 ---
-title: "SQLBindCol 函數 |Microsoft 文件"
-ms.custom: 
+title: SQLBindCol 函數 |Microsoft 文件
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
-ms.component: odbc
-ms.reviewer: 
+ms.prod: sql
+ms.prod_service: connectivity
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
-ms.topic: article
-apiname: SQLBindCol
-apilocation: sqlsrv32.dll
+ms.technology: connectivity
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
+apiname:
+- SQLBindCol
+apilocation:
+- sqlsrv32.dll
 apitype: dllExport
-f1_keywords: SQLBindCol
-helpviewer_keywords: SQLBindCol function [ODBC]
+f1_keywords:
+- SQLBindCol
+helpviewer_keywords:
+- SQLBindCol function [ODBC]
 ms.assetid: 41a37655-84cd-423f-9daa-e0b47b88dc54
-caps.latest.revision: "37"
+caps.latest.revision: 37
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
-ms.workload: On Demand
-ms.openlocfilehash: 4b2031680faefcdf0b701ad8065b9d90cd8678f8
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+manager: craigg
+ms.openlocfilehash: f51f8da589db04b44ab31a493d97fe3d94b3b6d7
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sqlbindcol-function"></a>SQLBindCol 函數
 **一致性**  
@@ -63,11 +64,11 @@ SQLRETURN SQLBindCol(
  您也可以指定擴充的 C 資料類型。 如需詳細資訊，請參閱[ODBC 中的 C 資料類型](../../../odbc/reference/develop-app/c-data-types-in-odbc.md)。  
   
  *TargetValuePtr*  
- [延遲的輸入/輸出]要繫結至資料行的資料緩衝區的指標。 **SQLFetch**和**SQLFetchScroll**這個緩衝區中傳回的資料。 **SQLBulkOperations**這會傳回資料的緩衝區時*作業*是 SQL_FETCH_BY_BOOKMARK; 它會從這個擷取的資料緩衝區時*作業*SQL_ADD 或 SQL_UPDATE_BY_BOOKMARK. **SQLSetPos**這會傳回資料的緩衝區時*作業*是 SQL_REFRESH; 它會擷取資料，從這個緩衝時*作業*是 SQL_UPDATE。  
+ [延遲的輸入/輸出]要繫結至資料行的資料緩衝區的指標。 **SQLFetch**和**SQLFetchScroll**這個緩衝區中傳回的資料。 **SQLBulkOperations**這會傳回資料的緩衝區時*作業*是 SQL_FETCH_BY_BOOKMARK; 它會從這個擷取的資料緩衝區時*作業*SQL_ADD 或 SQL_UPDATE_BY_BOOKMARK。 **SQLSetPos**這會傳回資料的緩衝區時*作業*是 SQL_REFRESH; 它會擷取資料，從這個緩衝時*作業*是 SQL_UPDATE。  
   
  如果*TargetValuePtr*為 null 指標，此驅動程式會解除繫結資料行的資料緩衝區。 應用程式可以解除繫結的所有資料行藉由呼叫**SQLFreeStmt** SQL_UNBIND 選項。 應用程式可以解除繫結資料行的資料緩衝區，但仍有繫結資料行的長度/指標緩衝區，如果*TargetValuePtr*引數在呼叫**SQLBindCol**為 null 指標，但*StrLen_or_IndPtr*引數是有效的值。  
   
- *Columnsize*  
+ *BufferLength*  
  [輸入]長度 **TargetValuePtr*以位元組為單位的緩衝區。  
   
  驅動程式會使用*Columnsize*來避免結尾寫入\* *TargetValuePtr*它會傳回可變長度的資料，例如字元或二進位資料時，緩衝。 請注意驅動程式在它傳回至字元資料時，會計算 null 結束字元\* *TargetValuePtr*。 **TargetValuePtr*因此必須包含空格的 null 終止字元或驅動程式將會截斷資料。  
@@ -115,7 +116,7 @@ SQLRETURN SQLBindCol(
 ## <a name="diagnostics"></a>診斷  
  當**SQLBindCol**會傳回 SQL_ERROR 或 SQL_SUCCESS_WITH_INFO，相關聯的 SQLSTATE 值可以藉由呼叫取得**SQLGetDiagRec**與*HandleType* SQL_ 的HANDLE_STMT 和*處理*的*StatementHandle*。 下表列出通常所傳回的 SQLSTATE 值**SQLBindCol** ，並說明這個函式; 每個內容中的標記法 」 (DM) 」 之前描述的驅動程式管理員傳回的 Sqlstate。 每個 SQLSTATE 值相關聯的傳回碼是 SQL_ERROR，除非有說明，否則為。  
   
-|SQLSTATE|錯誤|描述|  
+|SQLSTATE|錯誤|Description|  
 |--------------|-----------|-----------------|  
 |01000|一般警告|特定驅動程式告知性訊息。 （函式會傳回 SQL_SUCCESS_WITH_INFO）。|  
 |07006|受限制的資料類型屬性違規|(DM) *ColumnNumber*引數為 0，而*TargetType*引數不是 SQL_C_BOOKMARK 或 SQL_C_VARBOOKMARK。|  
@@ -132,7 +133,7 @@ SQLRETURN SQLBindCol(
 |IM001|驅動程式不支援此函式|(DM) 驅動程式相關聯*StatementHandle*不支援此函式。|  
   
 ## <a name="comments"></a>註解  
- **SQLBindCol**來建立關聯，或*繫結，*結果中的資料行設定為資料緩衝區和應用程式的長度/指標緩衝區。 當應用程式呼叫**SQLFetch**， **SQLFetchScroll**，或**SQLSetPos**來提取資料，此驅動程式傳回的資料繫結的資料行中指定的緩衝區詳細資訊，請參閱[SQLFetch 函數](../../../odbc/reference/syntax/sqlfetch-function.md)。 當應用程式呼叫**SQLBulkOperations**更新或插入資料列或**SQLSetPos**更新的資料列，驅動程式會擷取資料繫結的資料行，從指定的緩衝區; 如需詳細資訊請參閱[SQLBulkOperations 函式](../../../odbc/reference/syntax/sqlbulkoperations-function.md)或[SQLSetPos 函數](../../../odbc/reference/syntax/sqlsetpos-function.md)。 如需繫結的詳細資訊，請參閱[擷取結果 （基本）](../../../odbc/reference/develop-app/retrieving-results-basic.md)。  
+ **SQLBindCol**來建立關聯，或*繫結，* 結果中的資料行設定為資料緩衝區和應用程式的長度/指標緩衝區。 當應用程式呼叫**SQLFetch**， **SQLFetchScroll**，或**SQLSetPos**來提取資料，此驅動程式傳回的資料繫結的資料行中指定的緩衝區詳細資訊，請參閱[SQLFetch 函數](../../../odbc/reference/syntax/sqlfetch-function.md)。 當應用程式呼叫**SQLBulkOperations**更新或插入資料列或**SQLSetPos**更新的資料列，驅動程式會擷取資料繫結的資料行，從指定的緩衝區; 如需詳細資訊請參閱[SQLBulkOperations 函式](../../../odbc/reference/syntax/sqlbulkoperations-function.md)或[SQLSetPos 函數](../../../odbc/reference/syntax/sqlsetpos-function.md)。 如需繫結的詳細資訊，請參閱[擷取結果 （基本）](../../../odbc/reference/develop-app/retrieving-results-basic.md)。  
   
  請注意，資料行不需要繫結至從中擷取資料。 應用程式也可以呼叫**SQLGetData**來擷取資料行的資料。 雖然可以在資料列和呼叫某些資料行繫結**SQLGetData**代表其他項目，這受限於一些限制。 如需詳細資訊，請參閱[SQLGetData](../../../odbc/reference/syntax/sqlgetdata-function.md)。  
   
@@ -237,12 +238,12 @@ SQLRETURN SQLBindCol(
   
  其中公式的變數定義如下表所述。  
   
-|變數|描述|  
+|變數|Description|  
 |--------------|-----------------|  
 |*繫結位址*|使用指定的資料緩衝區的位址*TargetValuePtr*引數中的**SQLBindCol**。<br /><br /> 使用指定的長度/指標緩衝區的位址*StrLen_or_IndPtr*引數中的**SQLBindCol**。 如需詳細資訊，請參閱 」 描述元和 SQLBindCol 」 一節中的 [其他意見]。<br /><br /> 如果繫結的位址會是 0，會傳回任何資料值，即使先前公式計算出來的位址不是零。|  
 |*繫結位移*|如果使用資料列取向的繫結時，儲存在位址的值指定 SQL_ATTR_ROW_BIND_OFFSET_PTR 陳述式屬性。<br /><br /> 如果使用資料行取向的繫結或 SQL_ATTR_ROW_BIND_OFFSET_PTR 陳述式屬性的值是 null 指標，*繫結位移*為 0。|  
 |*資料列數目*|1 為基底的資料列集中的資料列數目。 單一資料列擷取，也就是預設值，這會是 1。|  
-|*項目大小*|繫結的陣列中項目的大小。<br /><br /> 如果使用資料行取向的繫結時，這是**sizeof(SQLINTEGER)**長度/指標緩衝區。 它是在資料緩衝區的值*Columnsize*引數中的**SQLBindCol**如果資料類型是可變長度，以及資料類型的大小的資料類型為固定長度。<br /><br /> 如果使用資料列取向的繫結時，這是資料和長度/指標緩衝區的 SQL_ATTR_ROW_BIND_TYPE 陳述式屬性的值。|  
+|*項目大小*|繫結的陣列中項目的大小。<br /><br /> 如果使用資料行取向的繫結時，這是**sizeof(SQLINTEGER)** 長度/指標緩衝區。 它是在資料緩衝區的值*Columnsize*引數中的**SQLBindCol**如果資料類型是可變長度，以及資料類型的大小的資料類型為固定長度。<br /><br /> 如果使用資料列取向的繫結時，這是資料和長度/指標緩衝區的 SQL_ATTR_ROW_BIND_TYPE 陳述式屬性的值。|  
   
 ## <a name="descriptors-and-sqlbindcol"></a>描述項和 SQLBindCol  
  下列章節說明如何**SQLBindCol**互動描述元。  
@@ -382,6 +383,6 @@ int main() {
 |擷取部分或全部的資料行|[SQLGetData 函式](../../../odbc/reference/syntax/sqlgetdata-function.md)|  
 |傳回結果集資料行|[SQLNumResultCols 函式](../../../odbc/reference/syntax/sqlnumresultcols-function.md)|  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [ODBC 應用程式開發介面參考](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [ODBC 標頭檔](../../../odbc/reference/install/odbc-header-files.md)

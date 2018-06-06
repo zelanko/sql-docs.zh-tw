@@ -1,31 +1,30 @@
 ---
-title: "SQL Graph 架構 |Microsoft 文件"
-ms.custom: 
+title: SQL Graph 架構 |Microsoft 文件
+ms.custom: ''
 ms.date: 04/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
 ms.component: graphs
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 helpviewer_keywords:
 - SQL graph
 - SQL graph, architecture
-ms.assetid: 
-caps.latest.revision: 
+ms.assetid: ''
+caps.latest.revision: 1
 author: shkale-msft
-ms.author: shkale;barbkess
+ms.author: shkale
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: b8652d59a4a2a6ad980c2d7659940ac0552bfeed
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+monikerRange: = azuresqldb-current || >= sql-server-2017 || = sqlallproducts-allversions
+ms.openlocfilehash: 7cfba1fc79e44bb28a433c3b31fe5f4236037d6e
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sql-graph-architecture"></a>SQL Graph 架構  
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
@@ -143,7 +142,7 @@ ms.lasthandoff: 02/12/2018
 |CREATE TABLE |[CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-sql-graph.md)|`CREATE TABLE ` 現在已延伸到支援建立 AS 節點或 AS 邊緣資料表。 請注意，邊緣資料表可能會或可能沒有任何使用者定義屬性。  |
 |ALTER TABLE    |[ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)|節點與邊緣資料表可以更改關聯式資料表，使用的相同方式`ALTER TABLE`。 使用者可以新增或修改使用者定義資料行、 索引或條件約束。 不過，改變內部的圖表資料行，例如`$node_id`或`$edge_id`，將會產生錯誤。  |
 |CREATE INDEX   |[CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md)  |使用者可以在虛擬資料行和節點與邊緣資料表中的使用者定義資料行上建立索引。 支援所有的索引類型，包括叢集和非叢集資料行存放區索引。  |
-|DROP TABLE |[DROP TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-table-transact-sql.md)  |節點與邊緣資料表可以卸除相同的方式，使用關聯式資料表`DROP TABLE`。 不過，在此版本中，有任何條件約束，以確保沒有邊緣指向已刪除的節點，並不支援重疊的邊緣、 刪除節點或節點資料表時刪除。 建議您，如果節點卸除資料表，使用者會中斷任何邊緣連接到該節點資料表中手動維護完整性圖形的節點。  |
+|DROP TABLE |[卸除資料表&#40;Transact SQL&#41;](../../t-sql/statements/drop-table-transact-sql.md)  |節點與邊緣資料表可以卸除相同的方式，使用關聯式資料表`DROP TABLE`。 不過，在此版本中，有任何條件約束，以確保沒有邊緣指向已刪除的節點，並不支援重疊的邊緣、 刪除節點或節點資料表時刪除。 建議您，如果節點卸除資料表，使用者會中斷任何邊緣連接到該節點資料表中手動維護完整性圖形的節點。  |
 
 
 ### <a name="data-manipulation-language-dml-statements"></a>資料操作語言 (DML) 陳述式
@@ -159,7 +158,7 @@ ms.lasthandoff: 02/12/2018
 |工作   |相關主題  |注意
 |---  |---  |---  |
 |SELECT |[SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)|節點和邊緣會儲存為資料表在內部，因此節點與邊緣資料表才支援大部分的 SQL Server 或 Azure SQL Database 的資料表上支援的作業  |
-|MATCH  | [比對 &#40;TRANSACT-SQL &#41;](../../t-sql/queries/match-sql-graph.md)|相符項目內建引進以支援模式比對和周遊圖表。  |
+|MATCH  | [比對&#40;Transact SQL&#41;](../../t-sql/queries/match-sql-graph.md)|相符項目內建引進以支援模式比對和周遊圖表。  |
 
 
 

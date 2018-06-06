@@ -1,27 +1,24 @@
 ---
-title: "瞭解並行控制 |Microsoft 文件"
-ms.custom: 
+title: 瞭解並行控制 |Microsoft 文件
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
-ms.component: jdbc
-ms.reviewer: 
+ms.prod: sql
+ms.prod_service: connectivity
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: connectivity
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: 98b7dabe-9b12-4e1d-adeb-e5b5cb0c96f3
-caps.latest.revision: "24"
+caps.latest.revision: 24
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
-ms.workload: Inactive
-ms.openlocfilehash: 1d56f2e4266bdae1a51325bc540fe38af5908721
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+manager: craigg
+ms.openlocfilehash: 71ca87537cef389ac6cedb47b21a39ce76ba1b97
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="understanding-concurrency-control"></a>瞭解並行控制
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -48,10 +45,10 @@ ms.lasthandoff: 11/18/2017
 |原因|Description|補救方法|  
 |-----------|-----------------|------------|  
 |使用 JDBC 2.0 (或更新版本) 語法沒有建立陳述式|JDBC 2.0 推出建立陳述式的新方法。 如果使用 JDBC 1.0 語法，結果集預設為唯讀。|建立陳述式時，指定結果集類型與並行。|  
-|使用 TYPE_SCROLL_INSENSITIVE 建立陳述式|[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]建立靜態快照集資料指標。 這會與基礎資料表資料列中斷連接，以防資料指標遭到其他使用者更新資料列。|搭配 CONCUR_UPDATABLE 使用 TYPE_SCROLL_SENSITIVE、TYPE_SS_SCROLL_KEYSET、TYPE_SS_SCROLL_DYNAMIC 或 TYPE_FORWARD_ONLY 以防建立靜態資料指標。|  
+|使用 TYPE_SCROLL_INSENSITIVE 建立陳述式|[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 建立靜態快照集資料指標。 這會與基礎資料表資料列中斷連接，以防資料指標遭到其他使用者更新資料列。|搭配 CONCUR_UPDATABLE 使用 TYPE_SCROLL_SENSITIVE、TYPE_SS_SCROLL_KEYSET、TYPE_SS_SCROLL_DYNAMIC 或 TYPE_FORWARD_ONLY 以防建立靜態資料指標。|  
 |資料表設計會避開 KEYSET 或 DYNAMIC 資料指標|基礎資料表沒有唯一索引鍵，讓[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]來唯一識別資料列。|將唯一的索引鍵加入到資料表中即可提供每個資料列的唯一識別。|  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [使用 JDBC Driver 管理結果集](../../connect/jdbc/managing-result-sets-with-the-jdbc-driver.md)  
   
   

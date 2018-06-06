@@ -1,16 +1,14 @@
 ---
-title: "sp_create_removable (TRANSACT-SQL) |Microsoft 文件"
-ms.custom: 
+title: sp_create_removable (TRANSACT-SQL) |Microsoft 文件
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: system-objects
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_create_removable
@@ -20,16 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_create_removable
 ms.assetid: 06e36ae5-f70d-4a26-9a7f-ee4b9360b355
-caps.latest.revision: 
+caps.latest.revision: 31
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: e7b5a66828c1ee49734e720137d3a0ededc0098e
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 7ac999e58a6c88d8a121d7708b6fc9e954cf7419
+ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="spcreateremovable-transact-sql"></a>sp_create_removable (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -71,27 +68,27 @@ sp_create_removable
  [ **@sysphysical=** ] **'***sysphysical***'**  
  這是實體名稱。 其中包括系統目錄資料表所在檔案的完整路徑。 *sysphysical*是**nvarchar （260)**。  
   
- [ **@syssize=** ] *syssize*  
+ [  **@syssize=** ] *syssize*  
  這是系統目錄資料表所在檔案的大小 (以 MB 為單位)。 *syssize*是**int**。最小值*syssize*為 1。  
   
  [ **@loglogical=** ] **'***loglogical***'**  
  這是交易記錄所在檔案的邏輯名稱。 *loglogical*是**sysname**。  
   
- [ **@logphysical=** ] **'***logphysical***'**  
+ [  **@logphysical=** ] **'***logphysical***'**  
  這是實體名稱。 其中包括交易記錄所在檔案的完整路徑。 *logphysical*是**nvarchar （260)**。  
   
- [ **@logsize=** ] *logsize*  
+ [  **@logsize=** ] *logsize*  
  這是交易記錄所在檔案的大小 (以 MB 為單位)。 *logsize*是**int**。最小值*logsize*為 1。  
   
- [ **@datalogical1=** ] **'***datalogical***'**  
+ [  **@datalogical1=** ] **'***datalogical***'**  
  這是資料表所在檔案的邏輯名稱。 *datalogical*是**sysname**。  
   
  必須有 1 至 16 個資料檔。 當預期資料庫較大，必須分散到多個磁碟時，通常會建立一個以上的資料檔。  
   
- [ **@dataphysical1=** ] **'***dataphysical***'**  
+ [  **@dataphysical1=** ] **'***dataphysical***'**  
  這是實體名稱。 其中包括資料表所在檔案的完整路徑。 *dataphysical*是**nvarchar （260)**。  
   
- [ **@datasize1=** ] **'***datasize***'**  
+ [  **@datasize1=** ] **'***datasize***'**  
  這是資料表所在檔案的大小 (以 MB 為單位)。 *datasize*是**int**。最小值*datasize*為 1。  
   
 ## <a name="return-code-values"></a>傳回碼值  
@@ -137,9 +134,9 @@ EXEC sp_create_removable 'inventory',
   
 ## <a name="see-also"></a>另請參閱  
  [資料庫卸離與附加 &#40;SQL Server&#41;](../../relational-databases/databases/database-detach-and-attach-sql-server.md)   
- [sp_certify_removable &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-certify-removable-transact-sql.md)   
+ [sp_certify_removable &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-certify-removable-transact-sql.md)   
  [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)   
- [sp_dbremove &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dbremove-transact-sql.md)   
+ [sp_dbremove &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-dbremove-transact-sql.md)   
  [sp_detach_db &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-detach-db-transact-sql.md)   
  [sp_helpfile &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpfile-transact-sql.md)   
  [sp_helpfilegroup &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpfilegroup-transact-sql.md)   

@@ -1,27 +1,25 @@
 ---
-title: "使用 SQLSRV 驅動程式以資料流的形式擷取資料 |Microsoft 文件"
-ms.custom: 
+title: 使用 SQLSRV 驅動程式以資料流的形式擷取資料 |Microsoft 文件
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
+ms.prod: sql
+ms.prod_service: connectivity
 ms.component: php
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: connectivity
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: 17dc9129-04cd-430c-b5b3-82824116425d
-caps.latest.revision: "18"
+caps.latest.revision: 18
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
-ms.workload: Inactive
-ms.openlocfilehash: 53ff9f5cc78e1ccaec74425a47ac39bfca996aae
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+manager: craigg
+ms.openlocfilehash: 32164c9beb05293249eafef76de29dcf3c356182
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="retrieving-data-as-a-stream-using-the-sqlsrv-driver"></a>使用 SQLSRV 驅動程式以資料流形式擷取資料
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -36,7 +34,7 @@ ms.lasthandoff: 11/18/2017
   
 2.  使用 [sqlsrv_fetch](../../connect/php/sqlsrv-fetch.md) 移至結果集內的下一個資料列。  
   
-3.  使用 [sqlsrv_get_field](../../connect/php/sqlsrv-get-field.md) 擷取資料列中的欄位。 指定的資料是使用資料流的形式擷取**SQLSRV_PHPTYPE_STREAM (<encoding>)**做為函數呼叫中的第三個參數。 下表列出用來指定編碼及其描述的常數：  
+3.  使用 [sqlsrv_get_field](../../connect/php/sqlsrv-get-field.md) 擷取資料列中的欄位。 指定的資料是使用資料流的形式擷取**SQLSRV_PHPTYPE_STREAM (<encoding>)** 做為函數呼叫中的第三個參數。 下表列出用來指定編碼及其描述的常數：  
   
     |SQLSRV 常數|Description|  
     |-------------------|---------------|  
@@ -48,13 +46,14 @@ ms.lasthandoff: 11/18/2017
   
 ## <a name="in-this-section"></a>本節內容  
   
-|主題|描述|  
+|主題|Description|  
 |---------|---------------|  
 |[使用 SQLSRV 驅動程式支援資料流的資料類型](../../connect/php/data-types-with-stream-support-using-the-sqlsrv-driver.md)|列出可以資料流的形式擷取的 SQL Server 資料類型。|  
 |[如何：使用 SQLSRV 驅動程式以資料流的形式擷取字元資料](../../connect/php/how-to-retrieve-character-data-as-a-stream-using-the-sqlsrv-driver.md)|示範如何以資料流的形式擷取字元資料。|  
 |[如何：使用 SQLSRV 驅動程式以資料流形式擷取二進位資料](../../connect/php/how-to-retrieve-binary-data-as-a-stream-using-the-sqlsrv-driver.md)|示範如何以資料流的形式擷取二進位資料。|  
   
 ## <a name="see-also"></a>另請參閱  
-[擷取資料](../../connect/php/retrieving-data.md)  
+[擷取資料](../../connect/php/retrieving-data.md)
+
 [常數 &#40;Microsoft Drivers for PHP for SQL Server&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md)  
   

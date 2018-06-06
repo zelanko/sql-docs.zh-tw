@@ -1,32 +1,29 @@
 ---
-title: "使用長度與指標值 |Microsoft 文件"
-ms.custom: 
+title: 使用長度與指標值 |Microsoft 文件
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
-ms.component: odbc
-ms.reviewer: 
+ms.prod: sql
+ms.prod_service: connectivity
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: connectivity
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - data buffers [ODBC], length
 - length/indicator buffers [ODBC]
 - length of data buffers [ODBC]
 - buffers [ODBC], length
 ms.assetid: 849792f1-cb1e-4bc2-b568-c0aff0b66199
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
-ms.workload: Inactive
-ms.openlocfilehash: 6012ca2f1b307f475839c7357e813817e222051e
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+manager: craigg
+ms.openlocfilehash: c1a59b47c8394187f094b8d7c5e1f15611a8f8ea
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="using-length-and-indicator-values"></a>使用長度與指標值
 長度/指標緩衝區用來傳遞資料緩衝區或例如 SQL_NULL_DATA 表示資料為 NULL 的特殊指標中資料的位元組長度。 根據函式，會使用它，是 SQLINTEGER 或 SQLSMALLINT 定義長度/指標緩衝區。 因此，需要單一引數來描述它。 如果資料緩衝區 nondeferred 輸入的緩衝區，這個引數包含資料本身的位元組長度或指標值。 它通常會命名為*StrLen_or_Ind*或類似的名稱。 例如，下列程式碼呼叫**SQLPutData**傳遞緩衝區的資料; 位元組長度 (*ValueLen*) 因為直接傳遞資料緩衝區 (*ValuePtr*) 是輸入的緩衝區中。  
@@ -58,7 +55,7 @@ SQLGetData(hstmt, 1, SQL_C_CHAR, ValuePtr, sizeof(ValuePtr), &ValueLenOrInd);
   
  下列的長度是有效的長度/指標值：  
   
--   *n*其中 *n*  > 0。  
+-   *n*，其中*n* > 0。  
   
 -   0.  
   

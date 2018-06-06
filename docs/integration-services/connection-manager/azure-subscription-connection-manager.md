@@ -1,31 +1,29 @@
 ---
-title: "Azure 訂用帳戶連線管理員 | Microsoft Docs"
-ms.custom: 
+title: Azure 訂用帳戶連線管理員 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/02/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
 ms.component: connection-manager
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 f1_keywords:
 - sql13.dts.designer.afpsubscrconn.f1
 - sql14.dts.designer.afpsubscrconn.f1
 ms.assetid: e1225327-c308-4c50-8f44-c411f52ef378
-caps.latest.revision: 
+caps.latest.revision: 11
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 494d60bbf70d31c5bec944d5ad2c1e543d5c7b53
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 124036eed95daf8e52735af3a48d0663786c03ef
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="azure-subscription-connection-manager"></a>Azure 訂用帳戶連線管理員
   **Azure 訂用帳戶連線管理員** 可使用您指定的屬性值，即 Azure 訂用帳戶識別碼和管理憑證，讓 SSIS 封裝連接到 Azure 訂用帳戶。  

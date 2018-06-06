@@ -1,31 +1,23 @@
 ---
-title: "使用者自訂成員屬性 (MDX) |Microsoft 文件"
-ms.custom: 
-ms.date: 03/03/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
-helpviewer_keywords: custom member properties [MDX]
-ms.assetid: b64cc581-e784-42c4-bec8-932abd687423
-caps.latest.revision: "33"
-author: Minewiskan
+title: 使用者自訂成員屬性 (MDX) |Microsoft 文件
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: mdx
+ms.topic: conceptual
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 08576f10739533850f04a9e64fa052bf7c6bfeec
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 77ae7cf92c9384b2be79048c860ef6a8b0476535
+ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="mdx-member-properties---user-defined-member-properties"></a>MDX 成員屬性使用者自訂成員屬性
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]使用者自訂成員屬性可以加入至特定維度的層級稱為屬性關聯性。 階層的 **(All)** 層級或階層本身無法加入使用者定義成員屬性。  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+  使用者自訂成員屬性可以做為屬性關聯性，增加到維度中的特定具名層級。 階層的 **(All)** 層級或階層本身無法加入使用者定義成員屬性。  
   
 ## <a name="creating-user-defined-member-properties"></a>建立使用者自訂成員屬性  
  您可以透過使用者介面或以程式設計的方式，將使用者自訂成員屬性增加到伺服器維度或 Cube：  
@@ -71,8 +63,8 @@ FROM [Adventure Works]
   
  如需建立導出成員的詳細資訊，請參閱[在 MDX 中建立導出成員 &#40;MDX&#41;](../../../analysis-services/multidimensional-models/mdx/mdx-calculated-members-building-calculated-members.md)。  
   
-## <a name="see-also"></a>請參閱  
- [使用成員屬性 &#40;MDX&#41;](../../../analysis-services/multidimensional-models/mdx/mdx-member-properties.md)   
- [屬性 &#40;MDX &#41;](../../../mdx/properties-mdx.md)  
+## <a name="see-also"></a>另請參閱  
+ [使用成員屬性 & #40;MDX & #41;](../../../analysis-services/multidimensional-models/mdx/mdx-member-properties.md)   
+ [屬性 & #40;MDX & #41;](../../../mdx/properties-mdx.md)  
   
   

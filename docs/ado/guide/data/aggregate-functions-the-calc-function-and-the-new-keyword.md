@@ -1,33 +1,30 @@
 ---
-title: "彙總函式、 CALC 函式和 NEW 關鍵字 |Microsoft 文件"
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
+title: 彙總函式、 CALC 函式和 NEW 關鍵字 |Microsoft 文件
+ms.prod: sql
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
-ms.custom: 
+ms.technology: connectivity
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - data shaping [ADO], functions
 - CALC function [ADO]
 - NEW keyword [ADO]
 - aggregate functions [ADO]
 ms.assetid: 0590b466-2a36-49a2-868e-028ef5e49394
-caps.latest.revision: 
+caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: c3b7e33486bc8a5cc283a101893aec4287062c2f
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 1e3af3e37caacae09f4ee57bc251f7ebcabfb04e
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="aggregate-functions-the-calc-function-and-the-new-keyword"></a>彙總函式、 CALC 函式和 NEW 關鍵字
 資料成形支援下列函數。 要處理指派章節包含的資料行的名稱是*章別名*。  
@@ -39,9 +36,9 @@ ms.lasthandoff: 02/09/2018
 |SUM (*章別名*。*資料行名稱*)|計算指定的資料行中的所有值的總和。|  
 |AVG (*章別名*。*資料行名稱*)|計算指定的資料行中的所有值的平均值。|  
 |最大值 (*章別名*。*資料行名稱*)|計算指定的資料行中的最大值。|  
-|MIN(*chapter-alias*.*column-name*)|計算指定的資料行中的最小值。|  
+|MIN (*章別名*。*資料行名稱*)|計算指定的資料行中的最小值。|  
 |計數 (*章別名*[。*資料行名稱*])|計算指定的別名中的資料列數目。 如果指定資料行，則該資料行的非 Null 唯一資料列會包含在計數中。|  
-|STDEV(*chapter-alias*.*column-name*)|計算標準差，指定資料行中。|  
+|Stdev 函數 (*章別名*。*資料行名稱*)|計算標準差，指定資料行中。|  
 |任何 (*章別名*。*資料行名稱*)|指定的資料行的值。 任何在資料行的值是相同的章節中的所有資料列時，才有可預測的值。<br /><br /> **請注意**資料行不包含所有一章中的資料列的相同值，如果 SHAPE 命令任意傳回其中一個值的任何函式的值。|  
   
 |計算的運算式|Description|  
@@ -50,7 +47,7 @@ ms.lasthandoff: 02/09/2018
   
 |NEW 關鍵字|Description|  
 |-----------------|-----------------|  
-|NEW *field-type* [(*width* &#124; *scale* &#124; *precision* &#124; *error* [, *scale* &#124; *error*])]|加入空白資料行指定的型別**資料錄集**。|  
+|新*欄位類型*[(*寬度* &#124; *標尺* &#124; *精確度* &#124; *錯誤*[，*標尺* &#124; *錯誤*])]|加入空白資料行指定的型別**資料錄集**。|  
   
  *欄位類型*傳遞包含新的關鍵字可以是任何一個下列資料類型。  
   

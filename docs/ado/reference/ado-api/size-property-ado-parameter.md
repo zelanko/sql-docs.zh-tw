@@ -1,33 +1,30 @@
 ---
-title: "Size 屬性 （ADO 參數） |Microsoft 文件"
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
+title: Size 屬性 （ADO 參數） |Microsoft 文件
+ms.prod: sql
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
-ms.custom: 
+ms.technology: connectivity
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 apitype: COM
 f1_keywords:
 - _Parameter::Size
 helpviewer_keywords:
 - Size property [ADO Parameter]
 ms.assetid: e6bad449-ebdb-4dd3-886a-9e6f1e7ee5d2
-caps.latest.revision: 
+caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 1959316966e284ab1f7880d6afcaa4820c009556
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: faa4e918d291f9d6dc095f05a40b6d71729bb5da
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="size-property-ado-parameter"></a>Size 屬性 （ADO 參數）
 指出的大小上限，以位元組或字元，[參數](../../../ado/reference/ado-api/parameter-object.md)物件。  

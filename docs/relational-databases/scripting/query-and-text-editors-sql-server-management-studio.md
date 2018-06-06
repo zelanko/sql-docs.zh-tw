@@ -1,17 +1,13 @@
 ---
-title: "查詢與文字編輯器 (SQL Server Management Studio) | Microsoft Docs"
-ms.custom: 
+title: 查詢與文字編輯器 (SQL Server Management Studio) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
-ms.prod_service: sql-tools
-ms.service: 
-ms.component: ssms-scripting
-ms.reviewer: 
+ms.prod: sql
+ms.technology: scripting
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 f1_keywords:
 - VS.TextEditor
 helpviewer_keywords:
@@ -30,19 +26,20 @@ helpviewer_keywords:
 - scripts [SQL Server], SQL Server Management Studio
 - queries [SQL Server], SQL Server Management Studio
 ms.assetid: 062051e4-4b77-4969-98ae-d2547c24ce3e
-caps.latest.revision: 
+caps.latest.revision: 53
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: e57fd3d81be5bdacbdce4d237e5240a52321e29a
-ms.sourcegitcommit: a0aa5e611a0e6ebb74ac1e2f613e8916dc7a7617
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: db76bac6cdbdf863d85895f4743c954eff2fef3e
+ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/24/2018
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="query-and-text-editors-sql-server-management-studio"></a>查詢與文字編輯器 (SQL Server Management Studio)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 您可以使用其中一個 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 編輯器，以互動方式編輯及測試 [!INCLUDE[tsql](../../includes/tsql-md.md)]、MDX、DMX 或 XML/A 指令碼，或者編輯 XML 或純文字檔。 每個編輯器都會得到一項特定語言專用服務的支援，會將關鍵字著上顏色，且會進行語法和用法錯誤的檢查。 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 查詢編輯器含有 [!INCLUDE[tsql](../../includes/tsql-md.md)] 偵錯工具，可讓您用來協助修正 [!INCLUDE[tsql](../../includes/tsql-md.md)] 程式碼的問題。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+  您可以使用其中一個 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 編輯器，以互動方式編輯及測試 [!INCLUDE[tsql](../../includes/tsql-md.md)]、MDX、DMX 或 XML/A 指令碼，或者編輯 XML 或純文字檔。 每個編輯器都會得到一項特定語言專用服務的支援，會將關鍵字著上顏色，且會進行語法和用法錯誤的檢查。 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 查詢編輯器含有 [!INCLUDE[tsql](../../includes/tsql-md.md)] 偵錯工具，可讓您用來協助修正 [!INCLUDE[tsql](../../includes/tsql-md.md)] 程式碼的問題。  
   
 ## <a name="sql-server-management-studio-editors"></a>SQL Server Management Studio 編輯器  
  [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 的四個編輯器共用一個常見架構。 文字編輯器實作基本的功能層級，並可以當做文字檔的基本編輯器使用。 其他三個編輯器 (查詢編輯器) 將此基本功能擴充到包含可定義 SQL Server 支援的其中一種語言之語法的語言服務。 查詢編輯器也會針對 IntelliSense 和偵錯等編輯器功能，實作不同的支援層級。 這些查詢編輯器包括用來建立包含 Transact-SQL 和 XQuery 陳述式之指令碼的 Database Engine 查詢編輯器、MDX 語言適用的 MDX 編輯器、DMX 語言適用的 DMX 編輯器，以及 XML for Analysis 語言適用的 XML/A 編輯器。  
@@ -65,7 +62,7 @@ ms.lasthandoff: 01/24/2018
  在「編輯器」中的文字或程式碼左側顯示行號。 您可以瀏覽至特定行號。  
   
  **自動換行**  
- 將很長的文字行或程式碼行分成數行來顯示，您便可以看到該文字行或程式碼行中的所有文字。 自動換行不會影響文字執行或列印時所呈現的方式。 請在 **[工具]**的 **[選項]** 對話方塊之 [文字編輯器]、[所有語言]、[一般] 頁面上，或在特定編輯器頁面上，開啟 [自動換行]。  
+ 將很長的文字行或程式碼行分成數行來顯示，您便可以看到該文字行或程式碼行中的所有文字。 自動換行不會影響文字執行或列印時所呈現的方式。 請在 **[工具]** 的 **[選項]** 對話方塊之 [文字編輯器]、[所有語言]、[一般] 頁面上，或在特定編輯器頁面上，開啟 [自動換行]。  
   
 ## <a name="code-editor-components"></a>程式碼編輯器元件  
  程式碼編輯器除了包含與文字和 XML 編輯器共用的功能之外，還包含下列功能：  

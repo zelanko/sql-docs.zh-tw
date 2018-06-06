@@ -1,16 +1,14 @@
 ---
-title: "RESTORE 引數 (Transact-SQL) | Microsoft Docs"
-ms.custom: 
+title: RESTORE 引數 (Transact-SQL) | Microsoft Docs
+ms.custom: ''
 ms.date: 09/05/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-database
-ms.service: 
 ms.component: t-sql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: t-sql
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - TSQL
@@ -18,21 +16,20 @@ helpviewer_keywords:
 - RESTORE statement, arguments
 - RESTORE statement
 ms.assetid: 4bfe5734-3003-4165-afd4-b1131ea26e2b
-caps.latest.revision: 
-author: barbkess
-ms.author: barbkess
+caps.latest.revision: 154
+author: edmacauley
+ms.author: edmaca
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: db010db48a42113c147751021404ac0dbc29ecaf
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: f16195a10c186e406571f65d8d79e2809f23dbad
+ms.sourcegitcommit: d2573a8dec2d4102ce8882ee232cdba080d39628
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="restore-statements---arguments-transact-sql"></a>RESTORE 陳述式 - 引數 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  此主題說明 RESTORE {DATABASE|LOG} 陳述式及一組相關的輔助陳述式 (RESTORE FILELISTONLY、RESTORE HEADERONLY、RESTORE LABELONLY、RESTORE REWINDONLY 和 RESTORE VERIFYONLY) 之＜語法＞小節所描述的引數。 大部份引數都只得到這六個引數其中一部份的支援。 在每個引數的描述中，都會指出引數所得到的支援。  
+  此主題說明 RESTORE {DATABASE|LOG} 陳述式及一組相關的輔助陳述式 (RESTORE FILELISTONLY、RESTORE HEADERONLY、RESTORE LABELONLY、RESTORE REWINDONLY 和 RESTORE VERIFYONLY) 之＜語法＞章節所描述的引數。 大部份引數都只得到這六個引數其中一部份的支援。 在每個引數的描述中，都會指出引數所得到的支援。  
   
  ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -72,7 +69,7 @@ ms.lasthandoff: 01/25/2018
  { *database_name* | **@***database_name_var*}  
  **支援者：**  [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md)  
   
- 這是記錄或完整資料庫要還原到其中的資料庫。 如果這個名稱是以變數 (**@***database_name_var*) 的形式提供，您還可以將這個名稱指定為字串常數 (**@***database_name_var* = *database*_*name*) ，或指定為字元字串資料類型的變數，但 **ntext** 或 **text** 資料類型除外。  
+ 這是記錄或完整資料庫要還原到其中的資料庫。 如果這個名稱是以變數 (**@***database_name_var*) 的形式提供，您還可以將這個名稱指定為字串常數 (**@***database_name_var* = *database*_* name*) ，或指定為字元字串資料類型的變數，但 **ntext** 或 **text** 資料類型除外。  
   
  \<file_or_filegroup_or_page> [ **,**...*n* ]  
  **支援者：**  [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md)  
@@ -98,7 +95,7 @@ FILEGROUP **=** { *logical_filegroup_name* | **@***logical_filegroup_name_var* }
 READ_WRITE_FILEGROUPS  
  選取所有讀寫檔案群組。 如果您有唯讀檔案群組要在讀寫檔案群組之後，在唯讀檔案群組之前還原，這個選項特別有用。  
   
-PAGE = **'***file***:***page* [ **,**...*n* ]**'**  
+PAGE = **'***file***:***page* [ **,**...* n* ]**'**  
  指定要進行分頁還原 (只有使用完整或大量記錄復原模式的資料庫，才能支援分頁還原) 的一或多個頁面清單。 其值如下：  
   
 PAGE  
@@ -135,7 +132,7 @@ FROM { \<backup_device> [ **,**...*n* ]| \<database_snapshot> } 通常指定要�
   
  { *logical_backup_device_name* | **@***logical_backup_device_name_var* } 這是用來還原資料庫的 **sp_addumpdevice** 所建立備份裝置的邏輯名稱，它必須遵照識別碼的規則。如果備份裝置名稱是以變數 (**@***logical_backup_device_name_var*) 的方式來提供，您可以將這個名稱指定為字串常數 (**@***logical_backup_device_name_var* = *logical_backup_device_name*)，或指定為字元字串資料類型的變數，但 **ntext** 或 **text** 資料類型除外。  
   
- {DISK | TAPE } **=** { **'***physical_backup_device_name***'** | **@***physical_backup_device_name_var* } 可讓您從具名磁碟或磁帶裝置還原備份。您應該用裝置的實際名稱 (例如，完整路徑和檔案名稱) 來指定磁碟和磁帶的裝置類型：`DISK ='Z:\SQLServerBackups\AdventureWorks.bak'` 或 `TAPE ='\\\\.\TAPE0'`。如果備份裝置名稱是以變數 (**@***physical_backup_device_name_var*) 的方式來指定，您可以將這個名稱指定為字串常數 (**@***physical_backup_device_name_var* = '*physcial_backup_device_name*')，或指定為字元字串資料類型的變數，但 **ntext** 或 **text** 資料類型除外。  
+ {DISK | TAPE } **=** { **'***physical_backup_device_name***'** | **@***physical_backup_device_name_var* } 可讓您從具名磁碟或磁帶裝置還原備份。您應該用裝置的實際名稱 (例如，完整路徑和檔案名稱) 來指定磁碟和磁帶的裝置類型：`DISK ='Z:\SQLServerBackups\AdventureWorks.bak'` 或 `TAPE ='\\\\.\TAPE0'`。如果備份裝置名稱是以變數 (**@***physical_backup_device_name_var*) 的方式來指定，您可以將這個名稱指定為字串常數 (**@***physical_backup_device_name_var* = '* physcial_backup_device_name*')，或指定為字元字串資料類型的變數，但 **ntext** 或 **text** 資料類型除外。  
   
  如果所用的網路伺服器是用 UNC 名稱 (必須包含機器名稱)，請指定磁碟裝置類型。 如需如何使用通用命名慣例 (UNC) 名稱的詳細資訊，請參閱[備份裝置 &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-devices-sql-server.md)。  
   
@@ -247,7 +244,7 @@ MOVE **'***logical_file_name_in_backup***'** TO **'***operating_system_file_name
   
  如果您計畫將資料庫重新放置在相同的伺服器中，或將它複製到不同的伺服器時，使用 RESTORE VERIFYONLY 陳述式，您可能需要 MOVE 選項，才能確認目標有足夠的空間，以及識別與現有檔案可能發生的衝突。  
   
- 如需詳細資訊，請參閱[使用備份與還原複製資料庫](../../relational-databases/databases/copy-databases-with-backup-and-restore.md)。  
+ 如需詳細資訊，請參閱 [使用備份與還原複製資料庫](../../relational-databases/databases/copy-databases-with-backup-and-restore.md)。  
   
 CREDENTIAL  
  **支援者：**  [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md)、[RESTORE FILELISTONLY](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md)、[RESTORE HEADERONLY](../../t-sql/statements/restore-statements-headeronly-transact-sql.md)、[RESTORE LABELONLY](../../t-sql/statements/restore-statements-labelonly-transact-sql.md) 與 [RESTORE VERIFYONLY](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md)。  
@@ -290,7 +287,7 @@ RESTRICTED_USER
  這些選項會在包含要還原之備份的備份組上運作。  
   
 FILE **=**{ *backup_set_file_number* | **@***backup_set_file_number* }  
- **支援者：**  [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md)、[RESTORE FILELISTONLY](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md)、[RESTORE HEADERONLY](../../t-sql/statements/restore-statements-headeronly-transact-sql.md) 及 [RESTORE VERIFYONLY](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md)。  
+ **支援者：**  [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md)、[RESTORE FILELISTONLY](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md)、[RESTORE HEADERONLY](../../t-sql/statements/restore-statements-headeronly-transact-sql.md) 與 [RESTORE VERIFYONLY](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md)。  
   
  識別要還原的備份組。 例如， *backup_set_file_number* 為 **1** ，表示備份媒體的第一個備份組； *backup_set_file_number* 為 **2** ，表示第二個備份組。 您可以使用 *RESTORE HEADERONLY* 陳述式來取得備份組的 [backup_set_file_number](../../t-sql/statements/restore-statements-headeronly-transact-sql.md) 。  
   
@@ -354,7 +351,7 @@ FILE **=**{ *backup_set_file_number* | **@***backup_set_file_number* }
   
  指定要用於還原作業的 I/O 緩衝區總數。 您可以指定任何正整數，不過，緩衝區的數目很大時，可能會因為 Sqlservr.exe 處理序中的虛擬位址空間不足而造成「記憶體不足」錯誤。  
   
- 緩衝區使用的總空間可由下列公式判斷：*buffercount***\****maxtransfersize*。  
+ 緩衝區使用的總空間可由下列公式判斷：*buffercount***\**** maxtransfersize*。  
   
  MAXTRANSFERSIZE **=** { *maxtransfersize* | **@***maxtransfersize_variable* }  
  **支援者：**  [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md)  
@@ -494,7 +491,7 @@ FILE **=**{ *backup_set_file_number* | **@***backup_set_file_number* }
   
  您可以在 STOPAT、STOPATMARK 或 STOPBEFOREMARK 子句中指定目標復原點，藉以將資料庫還原至特定時間點或交易。 指定的時間或交易一律是從記錄備份中還原。 在還原順序的每個 RESTORE LOG 陳述式中，您必須在相同的 STOPAT、STOPATMARK 或 STOPBEFOREMARK 子句中指定目標時間或交易。  
   
- 您必須先還原其端點早於目標復原點的完整資料庫備份，當做時間點還原的先決條件。 若要協助您識別要還原哪個資料庫備份，可以選擇性地在 RESTORE DATABASE 陳述式中指定 WITH STOPAT、STOPATMARK 或 STOPBEFOREMARK 子句，以便在資料庫備份太接近指定的目標時間時引發錯誤。 不過，系統一定會還原完整的資料備份，即使它包含目標時間也一樣。  
+ 您必須先還原其端點早於目標復原點的完整資料庫備份，當做時間點還原的必要條件。 若要協助您識別要還原哪個資料庫備份，可以選擇性地在 RESTORE DATABASE 陳述式中指定 WITH STOPAT、STOPATMARK 或 STOPBEFOREMARK 子句，以便在資料庫備份太接近指定的目標時間時引發錯誤。 不過，系統一定會還原完整的資料備份，即使它包含目標時間也一樣。  
   
 > [!NOTE]  
 >  RESTORE_DATABASE 與 RESTORE_LOG 時間點 WITH 選項類似，但是只有 RESTORE LOG 可支援 *mark_name* 引數。  
@@ -511,7 +508,7 @@ FILE **=**{ *backup_set_file_number* | **@***backup_set_file_number* }
   
  如需詳細資訊，請參閱[將 SQL Server 資料庫還原至某個時間點 &#40;完整復原模式&#41;](../../relational-databases/backup-restore/restore-a-sql-server-database-to-a-point-in-time-full-recovery-model.md)。  
   
- STOPATMARK **=** { **'***mark_name***'** | **'**lsn:*lsn_number***'** } [ AFTER **'***datetime***'** ]  
+ STOPATMARK **=** { **'***mark_name***'** | **'** lsn:*lsn_number***'** } [ AFTER **'***datetime***'** ]  
  指定復原至指定的復原點。 雖然指定的交易包含在復原中，但除非最初實際產生這項交易時已認可這項交易，否則便不會認可它。  
   
  RESTORE DATABASE 和 RESTORE LOG 都支援 *lsn_number* 參數。 這個參數會指定記錄序號。  
@@ -525,7 +522,7 @@ FILE **=**{ *backup_set_file_number* | **@***backup_set_file_number* }
   
  如需詳細資訊，請參閱[使用標示的異動以一致的方式復原相關資料庫 &#40;完整復原模式&#41;](../../relational-databases/backup-restore/use-marked-transactions-to-recover-related-databases-consistently.md) 和[復原到記錄序號 &#40;SQL Server&#41;](../../relational-databases/backup-restore/recover-to-a-log-sequence-number-sql-server.md)。  
   
- STOPBEFOREMARK **=** { **'***mark_name***'** | **'**lsn:*lsn_number***'** } [ AFTER **'***datetime***'** ]  
+ STOPBEFOREMARK **=** { **'***mark_name***'** | **'** lsn:*lsn_number***'** } [ AFTER **'***datetime***'** ]  
  指定復原至指定的復原點。 指定的交易不會包含在復原中，而且會在使用 WITH RECOVERY 時回復。  
   
  RESTORE DATABASE 和 RESTORE LOG 都支援 *lsn_number* 參數。 這個參數會指定記錄序號。  
@@ -546,7 +543,7 @@ FILE **=**{ *backup_set_file_number* | **@***backup_set_file_number* }
   
 -   [RESTORE LABELONLY &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-labelonly-transact-sql.md)  
   
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>Remarks  
  如需其他備註的詳細資訊，請參閱下列主題：  
   
 -   [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)  

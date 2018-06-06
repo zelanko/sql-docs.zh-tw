@@ -1,16 +1,14 @@
 ---
 title: CREATE TYPE (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 04/11/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
 ms.component: t-sql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: t-sql
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sql13.swb.sysdatatype.properties.f1
@@ -29,16 +27,15 @@ helpviewer_keywords:
 - alias data types [SQL Server], creating
 - data types [SQL Server], creating
 ms.assetid: 2202236b-e09f-40a1-bbc7-b8cff7488905
-caps.latest.revision: 
+caps.latest.revision: 92
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Active
-ms.openlocfilehash: 145f60bcec81e8a29761a44146df025f66a21b80
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: a284d0d144b4cdc091a866d4c660d6a84ad0c2dc
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="create-type-transact-sql"></a>CREATE TYPE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -230,17 +227,17 @@ column_name <data_type>
  您必須指定資料行和資料表索引，做為 CREATE TABLE 陳述式的一部分。 記憶體最佳化資料表不支援 CREATE INDEX 和 DROP INDEX。  
   
  MEMORY_OPTIMIZED  
- **適用對象**：[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 以及 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。  
+ **適用於**：[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 以及 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。  
   
  指出資料表類型是否為記憶體最佳化。 此選項預設關閉；資料表 (類型) 不是記憶體最佳化的資料表 (類型)。 記憶體最佳化的資料表類型是記憶體最佳化的使用者資料表，其結構描述保存在磁碟上，類似於其他使用者資料表。  
   
  BUCKET_COUNT  
- **適用對象**：[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 以及 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。  
+ **適用於**：[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 以及 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。  
   
  指出應該在雜湊索引中建立的貯體數目。 雜湊索引中 BUCKET_COUNT 的最大值是 1,073,741,824。 如需貯體計數的詳細資訊，請參閱[經記憶體最佳化之資料表上的索引](../../relational-databases/in-memory-oltp/indexes-for-memory-optimized-tables.md)。 *bucket_count* 為必要的引數。  
   
  HASH  
- **適用對象**：[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 以及 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。  
+ **適用於**：[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 以及 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。  
   
  表示已建立雜湊索引。 只有記憶體最佳化的資料表才支援雜湊索引。  
   
@@ -270,6 +267,12 @@ column_name <data_type>
   
 ## <a name="permissions"></a>Permissions  
  需要目前資料庫的 CREATE TYPE 權限，以及 *schema_name*的 ALTER 權限。 如果未指定 *schema_name* ，則套用用來判斷目前使用者之結構描述的預設名稱解析規則。 如果指定 *assembly_name*，則使用者必須擁有該組件，或必須有在該組件上的 REFERENCES 權限。  
+
+ 如果將 CREATE TABLE 陳述式中的任何資料行定義成使用者定義型別，則需要使用者定義型別的 REFERENCES 權限。
+ 
+   >[!NOTE]
+  > 一位使用者建立一張資料表，裡面有一個資料行採用使用者定義的型別，這位使用者需要 REFERENCES 權限。
+  > 如果此資料表必須建立在 TempDB 中，則每次建立資料表**之前**，必須必須明確授與 REFERENCES 權限，或者此資料類型和 REFERENCES 權限需要加入至模型資料庫。 如果這樣做，則 TempDB 便永遠能取得此資料類型和權限。 否則，當 SQL Server 重新啟動時，使用者定義的資料類型和權限就會消失。 如需詳細資訊，請參閱 [CREATE TABLE](https://docs.microsoft.com/sql/t-sql/statements/create-table-transact-sql?view=sql-server-2017#permissions-1)。
   
 ## <a name="examples"></a>範例  
   

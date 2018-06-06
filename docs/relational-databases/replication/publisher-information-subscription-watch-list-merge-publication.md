@@ -1,30 +1,28 @@
 ---
-title: "發行者資訊，訂閱監看清單 (合併式發行集) | Microsoft Docs"
-ms.custom: 
+title: 發行者資訊，訂閱監看清單 (合併式發行集) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/07/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
 ms.component: replication
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 f1_keywords:
 - sql13.rep.monitor.publisherinfo.subscriptionssummary.merge.f1
 ms.assetid: 4ec956bf-5cef-4377-a1d1-8c7f0107a6cb
-caps.latest.revision: 
+caps.latest.revision: 32
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: a13986fd9ff7bc9788737d6c8f39b3e8190ca2ee
-ms.sourcegitcommit: ab25b08a312d35489a2c4a6a0d29a04bbd90f64d
+ms.openlocfilehash: f24a549196cfe7d795a4ae0b0f8b278cc3eb008a
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="publisher-information-subscription-watch-list-merge-publication"></a>發行者資訊，訂閱監看清單 (合併式發行集)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -72,7 +70,7 @@ ms.lasthandoff: 03/08/2018
   
  當給定訂閱有一個以上的狀態時，排序順序也會決定要顯示哪一個值。 例如，若訂閱有錯誤而且即將過期，則 [狀態]  資料行會顯示 [錯誤] 。  
   
- **[效能嚴重不足]**、 **[長時間執行的合併]**、 **[即將過期/已過期]**和 **[未初始化的訂閱]** 等狀態值均為警告。 如果有顯示警告，則 **[狀態]** 資料行也會顯示代理程式是否為同步處理。 例如，狀態可能是 **[正在同步處理，效能嚴重不足]**。  
+ **[效能嚴重不足]**、 **[長時間執行的合併]**、 **[即將過期/已過期]** 和 **[未初始化的訂閱]** 等狀態值均為警告。 如果有顯示警告，則 **[狀態]** 資料行也會顯示代理程式是否為同步處理。 例如，狀態可能是 **[正在同步處理，效能嚴重不足]**。  
   
  只有設定臨界值時，才會顯示 **[即將過期/已過期]** 和 **[長時間執行的合併]** 狀態值。 只有在相同連接類型 (撥號或 LAN) 的訂閱經過五次同步處理之後，才會顯示 **[效能嚴重不足]** 的狀態值。 如需效能測量和設定閾值的資訊，請參閱[使用複寫監視器監視效能](../../relational-databases/replication/monitor/monitor-performance-with-replication-monitor.md)和[在複寫監視器中設定閾值和警告](../../relational-databases/replication/monitor/set-thresholds-and-warnings-in-replication-monitor.md)。  
   
@@ -113,7 +111,7 @@ ms.lasthandoff: 03/08/2018
  合併代理程式在上次同步處理期間執行的時間量。 如果合併代理程式目前正在進行同步處理，則時間代表經過時間，如果合併代理程式先前已同步處理，則時間代表總共花費的時間。  
   
  **[連接]**  
- 訂閱者和發行者之間的連接類型。 可能的值為 **[LAN]**、 **[撥號]**和 **[網際網路]**。 如果訂閱使用 Web 同步處理，則會顯示 **[網際網路]** 值。  
+ 訂閱者和發行者之間的連接類型。 可能的值為 **[LAN]**、 **[撥號]** 和 **[網際網路]**。 如果訂閱使用 Web 同步處理，則會顯示 **[網際網路]** 值。  
   
 ## <a name="see-also"></a>另請參閱  
  [啟動複寫監視器](../../relational-databases/replication/monitor/start-the-replication-monitor.md)   

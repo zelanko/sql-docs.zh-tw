@@ -1,16 +1,14 @@
 ---
-title: "將資料從 C 轉換成 SQL 資料類型 |Microsoft 文件"
-ms.custom: 
+title: 將資料從 C 轉換成 SQL 資料類型 |Microsoft 文件
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
-ms.component: odbc
-ms.reviewer: 
+ms.prod: sql
+ms.prod_service: connectivity
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: connectivity
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - converting data from c to SQL types [ODBC], about converting
 - converting data from c to SQL types [ODBC]
@@ -22,16 +20,15 @@ helpviewer_keywords:
 - data conversions from C to SQL types [ODBC]
 - C data types [ODBC], converting to SQL types
 ms.assetid: ee0afe78-b58f-4d34-ad9b-616bb23653bd
-caps.latest.revision: "9"
+caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
-ms.workload: Inactive
-ms.openlocfilehash: bb1d1c07f1453886fd91159eabad97dc90b9b191
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+manager: craigg
+ms.openlocfilehash: f08f4294b5b6c44c54d9f577ec423f7d298181a0
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="converting-data-from-c-to-sql-data-types"></a>將資料從 C 轉換成 SQL 資料類型
 當應用程式呼叫**SQLExecute**或**SQLExecDirect**，驅動程式會針對與任何參數繫結，擷取資料**SQLBindParameter**從儲存體中的位置應用程式。 當應用程式呼叫**SQLSetPos**，驅動程式擷取更新的資料，或從繫結的資料行加入作業**SQLBindCol**。 在應用程式資料在執行中參數，如傳送參數資料與**SQLPutData**。 如果有必要，驅動程式會將資料轉換所指定之資料類型從*ValueType*引數中的**SQLBindParameter**所指定的資料型別*ParameterType*引數中的**SQLBindParameter**，然後將資料傳送至資料來源。  

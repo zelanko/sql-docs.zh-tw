@@ -1,30 +1,31 @@
 ---
-title: "OPENROWSET (DMX) |Microsoft 文件"
-ms.custom: 
+title: OPENROWSET (DMX) |Microsoft 文件
+ms.custom: ''
 ms.date: 03/02/2016
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
 ms.component: data-mining
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
-f1_keywords: OPENROWSET
-dev_langs: DMX
-helpviewer_keywords: OPENROWSET statement
+f1_keywords:
+- OPENROWSET
+dev_langs:
+- DMX
+helpviewer_keywords:
+- OPENROWSET statement
 ms.assetid: 8c8b61b4-2bf6-46c7-8976-51484004dc22
-caps.latest.revision: "34"
+caps.latest.revision: 34
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: 2a3a7f8e9cbfcb6791cee28bb412be0ff51fc5df
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: f7ed5b65bf1f8ecf01d6b01939311de562eb85b3
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltsource-data-querygt---openrowset"></a>&lt;來源資料查詢&gt;-OPENROWSET
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -63,9 +64,9 @@ OPENROWSET
 )  
 ```  
   
-## <a name="see-also"></a>請參閱  
- [&#60; 來源資料查詢 &#62;](../dmx/source-data-query.md)   
- [資料採礦延伸模組 &#40; DMX &#41;資料操作陳述式](../dmx/dmx-statements-data-manipulation.md)   
- [資料採礦延伸模組 &#40;DMX&#41; 陳述式參考](../dmx/data-mining-extensions-dmx-statements.md)  
+## <a name="see-also"></a>另請參閱  
+ [&#60;來源資料查詢&#62;](../dmx/source-data-query.md)   
+ [資料採礦延伸模組&#40;DMX&#41;資料操作陳述式](../dmx/dmx-statements-data-manipulation.md)   
+ [資料採礦延伸模組 & #40; DMX & #41;陳述式參考](../dmx/data-mining-extensions-dmx-statements.md)  
   
   

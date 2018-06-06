@@ -1,25 +1,22 @@
 ---
-title: "開始使用 SQL Server on Linux 的效能功能 |Microsoft 文件"
-description: "本文章提供 Linux 使用者是 SQL Server 的新的 SQL Server 效能功能的簡介。 許多這些範例用於所有平台，但這篇文章的內容是 Linux。"
+title: 開始使用 SQL Server on Linux 的效能功能 |Microsoft 文件
+description: 本文章提供 Linux 使用者是 SQL Server 的新的 SQL Server 效能功能的簡介。 許多這些範例用於所有平台，但這篇文章的內容是 Linux。
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.date: 03/17/2017
 ms.topic: article
-ms.prod: sql-non-specified
-ms.prod_service: database-engine
-ms.service: 
-ms.component: 
+ms.prod: sql
+ms.component: ''
 ms.suite: sql
-ms.technology: database-engine
+ms.technology: linux
 ms.assetid: 60036d26-4797-4872-9a9e-3552841c61be
 ms.custom: sql-linux
-ms.workload: Inactive
-ms.openlocfilehash: 73b452cf99016b4b4f38c7debacadf32a270421d
-ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
+ms.openlocfilehash: 91a83740d83cb6e121d8ea413cf6322f75b68dff
+ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/13/2018
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="walkthrough-for-the-performance-features-of-sql-server-on-linux"></a>SQL Server on Linux 的效能功能的逐步解說
 
@@ -28,7 +25,7 @@ ms.lasthandoff: 02/13/2018
 如果您是 SQL Server 的新的 Linux 使用者時，下列工作會引導您完成一些效能功能。 這些不是唯一或特定 Linux，但是它有助於讓您了解區域，若要進一步調查。 在每個範例中，為該區域的深度文件提供的連結。
 
 > [!NOTE]
-> 下列範例會使用 AdventureWorks 範例資料庫。 如需有關如何取得並安裝這個範例資料庫的指示，請參閱[從 Windows 的 SQL Server 資料庫還原至 Linux](sql-server-linux-migrate-restore-database.md)。
+> 下列範例使用 AdventureWorks 範例資料庫。 如需有關如何取得並安裝這個範例資料庫的指示，請參閱[從 Windows 的 SQL Server 資料庫還原至 Linux](sql-server-linux-migrate-restore-database.md)。
 
 ## <a name="create-a-columnstore-index"></a>建立資料行存放區索引
 資料行存放區索引是一種技術來儲存及查詢大型單欄式資料格式，稱為資料行存放區中的資料存放區。  

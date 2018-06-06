@@ -1,16 +1,14 @@
 ---
 title: IDENTITY (Function) (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-database
-ms.service: 
 ms.component: t-sql|functions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: t-sql
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - IDENTITY_TSQL
@@ -24,16 +22,15 @@ helpviewer_keywords:
 - columns [SQL Server], creating
 - identity columns [SQL Server], IDENTITY function
 ms.assetid: ebec77eb-fc02-4feb-b6c5-f0098d43ccb6
-caps.latest.revision: 
+caps.latest.revision: 23
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 70fbbbae7e04331130346702c8f974669d53942a
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: c3bd578e42141de98839b61444a1112d3773247c
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="identity-function-transact-sql"></a>IDENTITY (函數) (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -60,7 +57,7 @@ IDENTITY (data_type [ , seed , increment ] ) AS column_name
  這是要指派給資料表中第一個資料列的整數值。 每個後續的資料列都會被指派下一個識別值，也就是最後一個 IDENTITY 值加上 *increment* 值。 如果既未指定 *seed*，也未指定 *increment*，則兩者都會預設為 1。  
   
  *increment*  
- 為要新增至資料表中後續資料列之 *seed* 值的整數值。  
+ 這是要新增至資料表中後續資料列之 *seed* 值的整數值。  
   
  *column_name*  
  這是要插入新資料表之資料行的名稱。  

@@ -1,17 +1,16 @@
 ---
-title: "sp_execute_remote (Azure SQL Database) |Microsoft 文件"
-ms.custom: 
+title: sp_execute_remote (Azure SQL Database) |Microsoft 文件
+ms.custom: ''
 ms.date: 02/01/2017
-ms.prod: 
+ms.prod: ''
 ms.prod_service: sql-database
-ms.reviewer: 
+ms.reviewer: ''
 ms.service: sql-database
 ms.component: system-stored-procedures
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: system-objects
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 f1_keywords:
 - sp_execute_remote
 - sp_execute_remote_TSQL
@@ -19,16 +18,16 @@ helpviewer_keywords:
 - remote execution
 - queries, remote execution
 ms.assetid: ca89aa4c-c4c1-4c46-8515-a6754667b3e5
-caps.latest.revision: 
+caps.latest.revision: 17
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: a63fcd61563499894205c3cc55323480e8a805d7
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+monikerRange: = azuresqldb-current || = sqlallproducts-allversions
+ms.openlocfilehash: 4e80528b6a8ce0e6f470a0fc5fbc0152ee8f8007
+ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="spexecuteremote-azure-sql-database"></a>sp_execute_remote (Azure SQL Database)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -51,19 +50,19 @@ sp_execute_remote [ @data_source_name = ] datasourcename
 ```  
   
 ## <a name="arguments"></a>引數  
- [ @data_source_name = ] *datasourcename*  
- 識別執行陳述式的外部資料來源。 請參閱[建立外部資料來源 &#40;TRANSACT-SQL &#41;](../../t-sql/statements/create-external-data-source-transact-sql.md). 外部資料來源可以是類型的"RDBMS 」 或 「 對包含 SHARD_MAP_MANAGER"。  
+ [ @data_source_name =] *datasourcename*  
+ 識別執行陳述式的外部資料來源。 請參閱[建立外部資料來源&#40;TRANSACT-SQL&#41;](../../t-sql/statements/create-external-data-source-transact-sql.md)。 外部資料來源可以是類型的"RDBMS 」 或 「 對包含 SHARD_MAP_MANAGER"。  
   
- [ @stmt= ] *statement*  
- 是 Unicode 字串，包含[!INCLUDE[tsql](../../includes/tsql-md.md)]陳述式或批次。 @stmt 必須是 Unicode 常數或 Unicode 變數。 不允許使用比較複雜的 Unicode 運算式，如用 + 運算子來串連兩個字串。 不允許使用字元常數。 如果指定了 Unicode 常數，它必須在前面加上**N**。例如，Unicode 常數**N'SP_WHO '**有效，但字元常數**'sp_who'**不是。 字串大小只受到可用資料庫伺服器記憶體的限制。 在 64 位元伺服器上限制為 2 GB，最大的大小字串的大小是**nvarchar （max)**。  
+ [ @stmt=]*陳述式*  
+ 是 Unicode 字串，包含[!INCLUDE[tsql](../../includes/tsql-md.md)]陳述式或批次。 @stmt 必須是 Unicode 常數或 Unicode 變數。 不允許使用比較複雜的 Unicode 運算式，如用 + 運算子來串連兩個字串。 不允許使用字元常數。 如果指定了 Unicode 常數，它必須在前面加上**N**。例如，Unicode 常數**N'SP_WHO '** 有效，但字元常數 **'sp_who'** 不是。 字串大小只受到可用資料庫伺服器記憶體的限制。 在 64 位元伺服器上限制為 2 GB，最大的大小字串的大小是**nvarchar （max)**。  
   
 > [!NOTE]  
 >  @stmt 可以包含參數具有相同的形式的變數名稱，例如： `N'SELECT * FROM HumanResources.Employee WHERE EmployeeID = @IDParameter'`  
   
  在 @stmt 參數定義清單和參數值清單中，@params 所包含的每個參數都必須有對應的項目。  
   
- [ @params= ] N'@*parameter_name**data_type* [ ,... *n* ] '  
- 這是包含 @stmt 的所有內嵌參數定義的字串。此字串必須是 Unicode 常數或 Unicode 變數。 每個參數定義都由參數名稱和資料類型組成。 *n* 是指出其他參數定義的預留位置。 指定在每個參數@stmtmust中定義@params。 如果 @stmt 中的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式或批次不包含參數，就不需要 @params。 這個參數的預設值是 NULL。  
+ [ @params=] N'@*parameter_name * * data_type* [，...*n* ] '  
+ 這是包含 @stmt 的所有內嵌參數定義的字串。此字串必須是 Unicode 常數或 Unicode 變數。 每個參數定義都由參數名稱和資料類型組成。 *n*是指出其他參數定義的預留位置。 指定在每個參數@stmtmust中定義@params。 如果 @stmt 中的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式或批次不包含參數，就不需要 @params。 這個參數的預設值是 NULL。  
   
  [ @param1= ] '*value1*'  
  這是參數字串所定義的第一個參數的值。 這個值可以是 Unicode 常數或 Unicode 變數。 @stmt 所包含的每個參數都必須有提供的參數值。當 @stmt 中的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式或批次沒有參數時，便不需要值。  
@@ -83,11 +82,11 @@ sp_execute_remote [ @data_source_name = ] datasourcename
 ## <a name="remarks"></a>備註  
  `sp_execute_remote` 上述語法 」 一節中所述，必須以特定順序輸入參數。 如果未按順序輸入參數，就會出現錯誤訊息。  
   
- `sp_execute_remote` 具有相同的行為[EXECUTE &#40;TRANSACT-SQL &#41;](../../t-sql/language-elements/execute-transact-sql.md)批次和名稱的範圍。 TRANSACT-SQL 陳述式或批次中 sp_execute_remote  *@stmt*  sp_execute_remote 陳述式執行之前，不會編譯參數。  
+ `sp_execute_remote` 具有相同的行為[EXECUTE &#40;TRANSACT-SQL&#41; ](../../t-sql/language-elements/execute-transact-sql.md)批次和名稱的範圍。 TRANSACT-SQL 陳述式或批次中 sp_execute_remote *@stmt* sp_execute_remote 陳述式執行之前，不會編譯參數。  
   
  `sp_execute_remote` 將額外的資料行加入至名為 '$ShardName'，其中包含產生資料列的遠端資料庫名稱的結果集。  
   
- `sp_execute_remote` 可以使用類似於[sp_executesql &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/sp-executesql-transact-sql.md).  
+ `sp_execute_remote` 可以使用類似於[sp_executesql &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-executesql-transact-sql.md)。  
   
 ## <a name="examples"></a>範例  
 ### <a name="simple-example"></a>簡單範例  

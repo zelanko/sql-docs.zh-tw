@@ -1,30 +1,29 @@
 ---
-title: "專案 (SQL Server Management Studio) | Microsoft Docs"
-ms.custom: 
+title: 專案 (SQL Server Management Studio) | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
 ms.component: ssms-solutions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: tools-ssms
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ssms
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: c13af859-ca66-4e43-b76a-0650ac6566c0
-caps.latest.revision: "4"
+caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 6aee221e94bfddd9ef968d5868c07ae2d9291d91
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.openlocfilehash: f2329d95d6f93ad639d85ce85f3d1f35752eaef0
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="projects-sql-server-management-studio"></a>專案 (SQL Server Management Studio)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio_md.md)] 專案是邏輯關聯之指令碼和檔案的集合，它們可以儲存在一起，以便進行資料庫的管理和開發。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[ssManStudio](../../includes/ssmanstudio_md.md)] 專案是邏輯關聯之指令碼和檔案的集合，它們可以儲存在一起，以便進行資料庫的管理和開發。  
   
 ## <a name="script-project-overview"></a>指令碼專案概觀  
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 指令碼專案會顯示在 [!INCLUDE[ssManStudio](../../includes/ssmanstudio_md.md)]的方案總管元件中。 指令碼專案可以包含零或多個專案檔。 您可以將專案加入方案中，或在方案內組合多個專案。  

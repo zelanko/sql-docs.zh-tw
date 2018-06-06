@@ -1,32 +1,30 @@
 ---
-title: "使用僅限下載的發行項最佳化合併式複寫效能 | Microsoft Docs"
-ms.custom: 
+title: 使用僅限下載的發行項最佳化合併式複寫效能 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
 ms.component: replication
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - merge replication [SQL Server replication], download-only articles
 - articles [SQL Server replication], download-only
 - download-only articles
 ms.assetid: 8851faa6-e6df-4ea5-a6ea-2a3471680fa3
-caps.latest.revision: 
+caps.latest.revision: 37
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 3a90afaf76e63356582b137b8f43a9002d4c27fe
-ms.sourcegitcommit: ab25b08a312d35489a2c4a6a0d29a04bbd90f64d
+ms.openlocfilehash: e3b8384afc96be2b71a1f2c51bbfbbd35920562e
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="optimize-merge-replication-performance-with-download-only-articles"></a>使用僅限下載的發行項最佳化合併式複寫效能
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -49,10 +47,10 @@ ms.lasthandoff: 03/08/2018
   
  僅限下載的發行項結合客訂閱一起使用：如果發行項被設計為僅限下載，則將無法在使用客訂閱的「訂閱者」端插入、更新或刪除這個發行項的資料列。 使用主訂閱類型的「發行者」與「訂閱者」 (一般是重新發行資料到其他「訂閱者」的「訂閱者」) 可插入、更新和刪除資料。 如需用戶端訂閱的詳細資訊，請參閱[訂閱發行集](../../../relational-databases/replication/subscribe-to-publications.md)。  
   
- 若要指定發行項為僅限下載，請參閱＜ [Specify That a Merge Table Article is Download-Only](../../../relational-databases/replication/publish/specify-that-a-merge-table-article-is-download-only.md)＞。  
+ 若要指定發行項為僅限下載，請參閱＜ [將合併資料表發行項指定為僅限下載](../../../relational-databases/replication/publish/specify-that-a-merge-table-article-is-download-only.md)＞。  
   
 ## <a name="using-different-article-types-in-your-applications"></a>在應用程式中使用不同的發行項類型  
- 透過了解應用程式的需求，您可以在最具彈性與最佳效能之間權衡取捨。 例如，在「發行者」端與「訂閱者」端有大量衝突與變更處理的應用程式，將使用由標準發行項組成的發行集。 某些應用程式，例如銷售人員自動化應用程式，含有一些可能發生衝突的發行項，以及另一些做為查閱資料表的發行項，可被指定為僅限下載。 資料項目應用程式 (例如銷售系統各點和現場服務自動化應用程式) 通常使用嚴格地分割資料這一方式來消除衝突，來自某個「訂閱者」的資料決不會流到其他「訂閱者」處。 在這些情況下，不重疊資料分割的組合、僅限下載的發行項和預先計算的資料分割會提供最佳的效能和延展性。 如需不重疊資料分割和預先計算資料分割的詳細資訊，請參閱＜ [Parameterized Row Filters](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)＞。  
+ 透過了解應用程式的需求，您可以在最具彈性與最佳效能之間權衡取捨。 例如，在「發行者」端與「訂閱者」端有大量衝突與變更處理的應用程式，將使用由標準發行項組成的發行集。 某些應用程式，例如銷售人員自動化應用程式，含有一些可能發生衝突的發行項，以及另一些做為查閱資料表的發行項，可被指定為僅限下載。 資料項目應用程式 (例如銷售系統各點和現場服務自動化應用程式) 通常使用嚴格地分割資料這一方式來消除衝突，來自某個「訂閱者」的資料決不會流到其他「訂閱者」處。 在這些情況下，不重疊資料分割的組合、僅限下載的發行項和預先計算的資料分割會提供最佳的效能和延展性。 如需不重疊資料分割和預先計算資料分割的詳細資訊，請參閱＜ [参数化行过滤器](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)＞。  
   
 ## <a name="see-also"></a>另請參閱  
  [合併式複寫的發行項選項](../../../relational-databases/replication/merge/article-options-for-merge-replication.md)   

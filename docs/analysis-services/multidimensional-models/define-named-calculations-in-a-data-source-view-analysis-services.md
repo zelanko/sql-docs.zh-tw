@@ -1,35 +1,23 @@
 ---
-title: "在資料來源檢視 (Analysis Services) 中定義具名的計算 |Microsoft 文件"
-ms.custom: 
-ms.date: 03/01/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
-helpviewer_keywords:
-- modifying named calculations
-- data source views [Analysis Services], named calculations
-- named calculations [Analysis Services]
-ms.assetid: 729e7b12-6185-4b73-8bcb-cfe459b15355
-caps.latest.revision: 
-author: Minewiskan
+title: 在資料來源檢視 (Analysis Services) 中定義具名的計算 |Microsoft 文件
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: multidimensional-models
+ms.topic: conceptual
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 62d9d96f3d0fc373ba83149789487706fe8354c7
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 8f0324dc3b2b2c5f250cb6c49a136a5fb7e2a06e
+ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="define-named-calculations-in-a-data-source-view-analysis-services"></a>在資料來源檢視中定義具名計算 (Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-具名計算是以導出資料行表示的 SQL 運算式。 此運算式的顯示和行為如同資料表中的資料行一樣。 具名計算可讓您在資料來源檢視中擴充現有資料表或檢視表的關聯式結構描述，而不必修改基礎資料來源中的資料表或檢視表。 請考量下列範例：  
+  具名計算是以導出資料行表示的 SQL 運算式。 此運算式的顯示和行為如同資料表中的資料行一樣。 具名計算可讓您在資料來源檢視中擴充現有資料表或檢視表的關聯式結構描述，而不必修改基礎資料來源中的資料表或檢視表。 請考量下列範例：  
   
 -   建立衍生自事實資料表之多個資料行的單一具名計算 (例如透過將稅率乘以銷售價格來建立「稅額」)。  
   
@@ -91,6 +79,6 @@ FROM
  當您嘗試刪除具名計算時，會出現一個提示，此提示會列出將會因為此刪除動作而變成無效之專案或資料庫中定義的物件清單。 仔細檢閱清單，再刪除計算。  
   
 ## <a name="see-also"></a>另請參閱  
- [在資料來源檢視 &#40; 中定義具名的查詢Analysis Services &#41;](../../analysis-services/multidimensional-models/define-named-queries-in-a-data-source-view-analysis-services.md)  
+ [在資料來源檢視 & #40; 中定義具名的查詢Analysis Services & #41;](../../analysis-services/multidimensional-models/define-named-queries-in-a-data-source-view-analysis-services.md)  
   
   

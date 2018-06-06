@@ -1,16 +1,14 @@
 ---
-title: "sp_syspolicy_rename_policy (TRANSACT-SQL) |Microsoft 文件"
-ms.custom: 
+title: sp_syspolicy_rename_policy (TRANSACT-SQL) |Microsoft 文件
+ms.custom: ''
 ms.date: 08/09/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: system-objects
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_syspolicy_rename_policy_TSQL
@@ -20,16 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_syspolicy_rename_policy
 ms.assetid: ce2b07f5-23b1-4f49-8e7b-c18cf3f3d45b
-caps.latest.revision: 
+caps.latest.revision: 8
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 5d82827cfd7a0d7ceaf9988e4fb8fa6a26d11976
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 167ebb066fb7fe7e125aafb395c913c0e11a7ed7
+ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="spsyspolicyrenamepolicy-transact-sql"></a>sp_syspolicy_rename_policy (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -51,7 +48,7 @@ sp_syspolicy_rename_policy { [ @name = ] 'name' | [ @policy_id = ] policy_id }
  [ **@name=** ] **'***name***'**  
  這是您要重新命名的原則名稱。 *名稱*是**sysname**，而且必須指定如果*policy_id*是 NULL。  
   
- [ **@policy_id=** ] *policy_id*  
+ [  **@policy_id=** ] *policy_id*  
  這是您要重新命名的原則識別碼。 *policy_id*是**int**，而且必須指定如果*名稱*是 NULL。  
   
  [ **@new_name=** ] **'***new_name***'**  
@@ -82,6 +79,6 @@ GO
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [以原則為基礎的管理預存程序 &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/policy-based-management-stored-procedures-transact-sql.md)  
+ [原則式管理預存程序&#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/policy-based-management-stored-procedures-transact-sql.md)  
   
   

@@ -1,28 +1,27 @@
 ---
-title: "連接到 SQL Server (OracleToSQL) |Microsoft 文件"
-ms.prod: sql-non-specified
+title: 連接到 SQL Server (OracleToSQL) |Microsoft 文件
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
 ms.component: ssma-oracle
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
-ms.topic: article
-helpviewer_keywords: Connecting to SQL Server,Synchronizing SQL Server Metadata
+ms.technology: ssma
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
+helpviewer_keywords:
+- Connecting to SQL Server,Synchronizing SQL Server Metadata
 ms.assetid: 1b2a8059-1829-4904-a82f-9c06de1e245f
-caps.latest.revision: "16"
+caps.latest.revision: 16
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
-ms.workload: Inactive
-ms.openlocfilehash: 1b550ddd57803772be53832ba8feb840021c5732
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 11a24da859c53107498111c6dc4d511cccd1b800
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="connecting-to-sql-server-oracletosql"></a>連接到 SQL Server (OracleToSQL)
 若要將 Oracle 資料庫移轉至[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]2005 年[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]2008年[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]2008 R2 或[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]2012年或[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]2014，您必須連接到任一目標執行個體的[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]。 SSMA 連線時，取得執行個體中的所有資料庫的相關中繼資料[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]並顯示資料庫中繼資料中的[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]中繼資料總管。 SSMA 會儲存有關哪一個執行個體資訊[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]您已連線，但不會儲存密碼。  
@@ -47,7 +46,7 @@ ms.lasthandoff: 12/21/2017
 ## <a name="establishing-a-sql-server-connection"></a>建立 SQL Server 連接  
 轉換到 Oracle 資料庫物件之前[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]語法中，您必須連接到執行個體[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]您要移轉的 Oracle 資料庫。  
   
-當您定義的連接屬性時，您也可以指定其中將移轉物件和資料的資料庫。 連線之後，您可以自訂這個對應 Oracle 結構描述層級[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]。 如需詳細資訊，請參閱[對應至 SQL Server 結構描述 &#40; OracleToSQL &#41; Oracle 結構描述](../../ssma/oracle/mapping-oracle-schemas-to-sql-server-schemas-oracletosql.md)。  
+當您定義的連接屬性時，您也可以指定其中將移轉物件和資料的資料庫。 連線之後，您可以自訂這個對應 Oracle 結構描述層級[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]。 如需詳細資訊，請參閱[對應至 SQL Server 結構描述的 Oracle 結構描述&#40;OracleToSQL&#41;](../../ssma/oracle/mapping-oracle-schemas-to-sql-server-schemas-oracletosql.md)。  
   
 > [!IMPORTANT]  
 > 您嘗試連接到之前[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]，請確定執行個體[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]正在執行，而且可接受連接。  
@@ -115,14 +114,14 @@ ms.lasthandoff: 12/21/2017
 ## <a name="next-step"></a>下一個步驟  
 移轉的下一個步驟取決於您專案的需求：  
   
--   若要自訂 Oracle 結構描述之間的對應和[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]資料庫和結構描述，請參閱[對應 Oracle 結構描述至 SQL Server 結構描述 &#40; OracleToSQL &#41;](../../ssma/oracle/mapping-oracle-schemas-to-sql-server-schemas-oracletosql.md)。  
+-   若要自訂 Oracle 結構描述之間的對應和[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]資料庫和結構描述，請參閱[對應至 SQL Server 結構描述的 Oracle 結構描述&#40;OracleToSQL&#41;](../../ssma/oracle/mapping-oracle-schemas-to-sql-server-schemas-oracletosql.md)。  
   
--   若要自訂專案的組態選項，請參閱[設定專案選項 &#40; OracleToSQL &#41;](../../ssma/oracle/setting-project-options-oracletosql.md)。  
+-   若要自訂專案的組態選項，請參閱[設定專案選項&#40;OracleToSQL&#41;](../../ssma/oracle/setting-project-options-oracletosql.md)。  
   
--   若要自訂的來源和目標資料類型對應，請參閱[對應 Oracle 和 SQL Server 資料類型 &#40; OracleToSQL &#41;](../../ssma/oracle/mapping-oracle-and-sql-server-data-types-oracletosql.md)。  
+-   若要自訂的來源和目標資料類型對應，請參閱[對應 Oracle 和 SQL Server 資料類型&#40;OracleToSQL&#41;](../../ssma/oracle/mapping-oracle-and-sql-server-data-types-oracletosql.md)。  
   
--   如果您不需要執行任何這些工作，您可以將轉換成的 Oracle 資料庫物件定義[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]物件定義。 如需詳細資訊，請參閱[轉換 Oracle 結構描述 &#40; OracleToSQL &#41;](../../ssma/oracle/converting-oracle-schemas-oracletosql.md)。  
+-   如果您不需要執行任何這些工作，您可以將轉換成的 Oracle 資料庫物件定義[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]物件定義。 如需詳細資訊，請參閱[轉換 Oracle 結構描述&#40;OracleToSQL&#41;](../../ssma/oracle/converting-oracle-schemas-oracletosql.md)。  
   
-## <a name="see-also"></a>請參閱  
-[將 Oracle 資料庫移轉至 SQL Server &#40; OracleToSQL &#41;](../../ssma/oracle/migrating-oracle-databases-to-sql-server-oracletosql.md)  
+## <a name="see-also"></a>另請參閱  
+[SQL server 資料庫移轉 Oracle &#40;OracleToSQL&#41;](../../ssma/oracle/migrating-oracle-databases-to-sql-server-oracletosql.md)  
   

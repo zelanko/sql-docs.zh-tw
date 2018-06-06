@@ -1,16 +1,14 @@
 ---
-title: "覆寫間隔資料類型的前置和秒數有效位數 |Microsoft 文件"
-ms.custom: 
+title: 覆寫間隔資料類型的前置和秒數有效位數 |Microsoft 文件
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
-ms.component: odbc
-ms.reviewer: 
+ms.prod: sql
+ms.prod_service: connectivity
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: connectivity
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - data types [ODBC], interval data types
 - precision [ODBC], interval data types
@@ -19,16 +17,15 @@ helpviewer_keywords:
 - interval leading precision [ODBC]
 - interval precision [ODBC]
 ms.assetid: 3d65493f-dce7-4d29-9f59-c63a4e47918c
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
-ms.workload: Inactive
-ms.openlocfilehash: 70ae232ed09ab7bd04a2474b5798dd4ed581df39
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+manager: craigg
+ms.openlocfilehash: ca22fe0d3153fc5ea4f0c5594ff537d65d60c066
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="overriding-default-leading-and-seconds-precision-for-interval-data-types"></a>覆寫間隔資料類型的預設前置和秒數有效位數
 當 ARD 的 SQL_DESC_TYPE 欄位設定為日期時間或間隔 C 類型時，藉由呼叫**SQLBindCol**或**SQLSetDescField**，SQL_DESC_PRECISION 欄位 （其中包含間隔秒數有效位數） 設定為下列的預設值：  

@@ -1,30 +1,28 @@
 ---
-title: "專案設定 （移轉） (MySQLToSQL) |Microsoft 文件"
-ms.prod: sql-non-specified
+title: 專案設定 （移轉） (MySQLToSQL) |Microsoft 文件
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
 ms.component: ssma-mysql
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ssma
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: 2a3cba9e-cd54-4a8b-b858-8fc4cf2580d9
-caps.latest.revision: "14"
+caps.latest.revision: 14
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
-ms.workload: Inactive
-ms.openlocfilehash: 97ea6eb0162b544f3c0666042b0ae70a5783fe43
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+manager: craigg
+ms.openlocfilehash: b540d746440dd699821c2105b8d1f50ac5a3a831
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="project-settings-migration-mysqltosql"></a>專案設定 （移轉） (MySQLToSQL)
 [移轉] 頁面的**專案設定**對話方塊包含自訂如何 SSMA 移轉從 MySQL 至 SQL Server 資料的設定。  
@@ -35,7 +33,7 @@ ms.lasthandoff: 12/21/2017
   
 -   若要指定目前的專案中，設定**工具**功能表上，選取**專案設定**，按一下 **一般**左的窗格中，然後再按一下底部**移轉**。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
   
 ### <a name="bulk-copy"></a>大量複製  
   

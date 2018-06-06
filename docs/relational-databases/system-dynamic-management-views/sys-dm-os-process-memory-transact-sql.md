@@ -1,16 +1,13 @@
 ---
-title: sys.dm_os_process_memory (Transact-SQL) | Microsoft Docs
-ms.custom: 
+title: sys.dm_os_process_memory (TRANSACT-SQL) |Microsoft 文件
+ms.custom: ''
 ms.date: 03/15/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-data-warehouse, pdw
-ms.service: 
-ms.component: dmv's
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: system-objects
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.dm_os_process_memory_TSQL
@@ -22,16 +19,16 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_os_process_memory dynamic management view
 ms.assetid: e838130c-95d4-4605-9e3b-eb0ab71cd250
-caps.latest.revision: 
+caps.latest.revision: 23
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 3031089c848bf8afeac9eeb464dee551aecd771e
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 5732a15fe8fe2d30f6f9c693e66258c0de4b44d3
+ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 05/23/2018
 ---
 # <a name="sysdmosprocessmemory-transact-sql"></a>sys.dm_os_process_memory (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
@@ -53,7 +50,7 @@ ms.lasthandoff: 02/03/2018
 |**total_virtual_address_space_kb**|**bigint**|指出虛擬位址空間之使用者模式部分的大小總計。 不可為 Null。|  
 |**virtual_address_space_reserved_kb**|**bigint**|指出處理序所保留的虛擬位址空間的總數。 不可為 Null。|  
 |**virtual_address_space_committed_kb**|**bigint**|指出已經認可或對應至實體頁面的已保留虛擬位址空間數量。 不可為 Null。|  
-|**virtual_address_space_available_kb**|**bigint**|指出目前可用的虛擬位址空間數量。 不可為 Null。<br /><br /> **注意：**釋放小於可存在配置資料粒度的區域。 這些區域無法用於配置。|  
+|**virtual_address_space_available_kb**|**bigint**|指出目前可用的虛擬位址空間數量。 不可為 Null。<br /><br /> **注意：** 釋放小於可存在配置資料粒度的區域。 這些區域無法用於配置。|  
 |**page_fault_count**|**bigint**|指出由 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 處理序所造成的分頁錯誤數目。 不可為 Null。|  
 |**memory_utilization_percentage**|**int**|指定位於工作集之認可記憶體的百分比。 不可為 Null。|  
 |**available_commit_limit_kb**|**bigint**|指出可供處理序認可的記憶體數量。 不可為 Null。|  
@@ -64,11 +61,12 @@ ms.lasthandoff: 02/03/2018
 ## <a name="permissions"></a>Permissions  
  在[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]需要在伺服器上的 VIEW SERVER STATE 權限。  
   
- 在[!INCLUDE[ssSDS](../../includes/sssds-md.md)]Premium 層需要資料庫的 VIEW DATABASE STATE 權限。 在[!INCLUDE[ssSDS](../../includes/sssds-md.md)]標準和基本層需要[!INCLUDE[ssSDS](../../includes/sssds-md.md)]系統管理員帳戶。  
+在[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]，需要`VIEW SERVER STATE`權限。   
+在[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]，需要`VIEW DATABASE STATE`資料庫的權限。   
   
 ## <a name="see-also"></a>另請參閱  
  [動態管理檢視與函數 &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
- [SQL Server 作業系統相關的動態管理檢視 &#40;TRANSACT-SQL &#41;](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)  
+ [SQL Server 作業系統相關的動態管理檢視&#40;Transact SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)  
   
   
 

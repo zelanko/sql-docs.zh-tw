@@ -1,34 +1,33 @@
 ---
-title: "授與預存程序的權限 | Microsoft Docs"
-ms.custom: 
+title: 授與預存程序的權限 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
 ms.component: stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-stored-Procs
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - stored procedures [SQL Server], permissions
 ms.assetid: a7d15816-a788-4099-ad91-dc4b26618299
-caps.latest.revision: 
+caps.latest.revision: 23
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: Active
-ms.openlocfilehash: 14558f85d08268fa90f2bf1520b4ac672255501d
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 32344fd2ccaae9b8773c2cf4d00c5dd66ba26164
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="grant-permissions-on-a-stored-procedure"></a>授與預存程序的權限
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-本主題描述如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ，在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中授與預存程序的權限。 權限可以授與資料庫中現有的使用者、資料庫角色或應用程式角色。  
+  本主題描述如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ，在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中授與預存程序的權限。 權限可以授與資料庫中現有的使用者、資料庫角色或應用程式角色。  
   
  **本主題內容**  
   
@@ -65,11 +64,11 @@ ms.lasthandoff: 02/03/2018
   
 3.  展開 [預存程序]，以滑鼠右鍵按一下要授與權限的程序，然後按一下 [屬性]。  
   
-4.  在 **[預存程序屬性]**上選取 **[權限]** 頁面。  
+4.  在 **[預存程序屬性]** 上選取 **[權限]** 頁面。  
   
 5.  若要將權限授與使用者、資料庫角色或應用程式角色，請按一下 **[搜尋]**。  
   
-6.  在 **[選取使用者或角色]**中，按一下 **[物件類型]** ，以加入或清除想要的使用者和角色。  
+6.  在 **[選取使用者或角色]** 中，按一下 **[物件類型]** ，以加入或清除想要的使用者和角色。  
   
 7.  按一下 **[瀏覽]** 顯示使用者或角色的清單。 選取要獲得權限授與的使用者或角色。  
   

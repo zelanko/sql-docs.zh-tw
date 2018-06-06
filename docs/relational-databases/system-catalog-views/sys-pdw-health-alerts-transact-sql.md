@@ -1,30 +1,28 @@
 ---
-title: "sys.pdw_health_alerts (TRANSACT-SQL) |Microsoft 文件"
-ms.custom: 
+title: sys.pdw_health_alerts (TRANSACT-SQL) |Microsoft 文件
+ms.custom: ''
 ms.date: 03/03/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: pdw
-ms.service: 
 ms.component: system-catalog-views
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: system-objects
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: 49c01e5f-ee47-41a0-871d-35a759f50851
-caps.latest.revision: 
-author: barbkess
-ms.author: barbkess
+caps.latest.revision: 7
+author: ronortloff
+ms.author: rortloff
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 28a38f60127100d80a7f9c52caa9851597403c45
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+monikerRange: '>= aps-pdw-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 6f8281d520f64580af8432dbf2004227ce628d41
+ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 05/04/2018
 ---
-# <a name="syspdwhealthalerts-transact-sql"></a>sys.pdw_health_alerts (Transact-SQL)
+# <a name="syspdwhealthalerts-transact-sql"></a>sys.pdw_health_alerts (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
 
   不同的警示，可能發生在系統; 的存放區屬性這是類別目錄資料表中的警示。  
@@ -32,10 +30,10 @@ ms.lasthandoff: 02/03/2018
 |資料行名稱|資料類型|Description|範圍|  
 |-----------------|---------------|-----------------|-----------|  
 |alert_id|**int**|警示的唯一識別碼。<br /><br /> 此檢視的索引鍵。|NOT NULL|  
-|component_id|**int**|此警示適用於元件的識別碼。 元件是一般元件的識別碼，例如 「 電源提供 」，並不是安裝所特有。 請參閱[sys.pdw_health_components &#40;TRANSACT-SQL &#41;](../../relational-databases/system-catalog-views/sys-pdw-health-components-transact-sql.md).|NOT NULL|  
+|component_id|**int**|此警示適用於元件的識別碼。 元件是一般元件的識別碼，例如 「 電源提供 」，並不是安裝所特有。 請參閱[sys.pdw_health_components &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-pdw-health-components-transact-sql.md)。|NOT NULL|  
 |alert_name|**nvarchar(255)**|警示的名稱。|NOT NULL|  
-|state|**nvarchar(32)**|警示的狀態。|NOT NULL<br /><br /> 可能的值如下：<br /><br /> 'Operational'<br /><br /> 'NonOperational'<br /><br /> ' 降級 '<br /><br /> 「 失敗 」|  
-|severity|**nvarchar(32)**|警示的嚴重性。|NOT NULL<br /><br /> 可能的值如下：<br /><br /> ' 資訊 '<br /><br /> 'Warning'<br /><br /> 「 錯誤 」|  
+|state|**nvarchar(32)**|警示的狀態。|NOT NULL<br /><br /> 可能的值如下：<br /><br /> ' Operational'<br /><br /> '為' 非作業的狀態。<br /><br /> ' 降級 '<br /><br /> 「 失敗 」|  
+|severity|**nvarchar(32)**|警示的嚴重性。|NOT NULL<br /><br /> 可能的值如下：<br /><br /> ' 資訊 '<br /><br /> 「 警告 」<br /><br /> 「 錯誤 」|  
 |型別|**nvarchar(32)**|警示類型。|NOT NULL<br /><br /> 可能的值如下：<br /><br /> StatusChange-裝置狀態已變更。<br /><br /> 臨界值的值已超過臨界值。|  
 |description|**nvarchar(4000)**|警示的描述。|NOT NULL|  
 |condition (條件)|**nvarchar(255)**|輸入時，使用 = 臨界值。 定義警示的臨界值的計算方式。|NULL|  

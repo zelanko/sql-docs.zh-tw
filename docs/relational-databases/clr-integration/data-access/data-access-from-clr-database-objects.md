@@ -1,15 +1,14 @@
 ---
-title: "從 CLR 資料庫物件的資料存取 |Microsoft 文件"
-ms.custom: 
+title: 從 CLR 資料庫物件的資料存取 |Microsoft 文件
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
 ms.component: clr
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - common language runtime [SQL Server], data access
@@ -25,20 +24,19 @@ helpviewer_keywords:
 - SqlClient provider
 - in-process data access providers [CLR integration]
 ms.assetid: 9a0f4dee-71c1-42e9-a85e-52382807010f
-caps.latest.revision: 
+caps.latest.revision: 41
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 8a1132744c7d58581c1d5d60b5fca1cbd5e9fc66
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 85229a6a5475e2b3e1b033cd070a13a008825951
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="data-access-from-clr-database-objects"></a>從 CLR 資料庫物件進行資料存取
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-Common language runtime (CLR) 常式可以輕鬆存取資料的執行個體中儲存[!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]執行個體中，以及儲存在遠端執行個體中的資料。 常式可以存取的特定資料取決於藉以執行程式碼的使用者內容。 從 CLR 資料庫物件中的資料存取使用.NET Framework Data Provider for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]，也稱為**SqlClient**。 這與開發人員從 Managed 用戶端與中間層應用程式存取 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 資料所使用的提供者相同。 因為這個緣故，您可以利用 ADO.NET 的知識和**SqlClient**用戶端和中介層應用程式中。  
+  Common language runtime (CLR) 常式可以輕鬆存取資料的執行個體中儲存[!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]執行個體中，以及儲存在遠端執行個體中的資料。 常式可以存取的特定資料取決於藉以執行程式碼的使用者內容。 從 CLR 資料庫物件中的資料存取使用.NET Framework Data Provider for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]，也稱為**SqlClient**。 這與開發人員從 Managed 用戶端與中間層應用程式存取 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 資料所使用的提供者相同。 因為這個緣故，您可以利用 ADO.NET 的知識和**SqlClient**用戶端和中介層應用程式中。  
   
 > [!NOTE]  
 >  根據預設，執行資料存取不允許使用使用者定義型別方法與使用者定義函數。 您必須設定**DataAccess**屬性**SqlMethodAttribute**或**SqlFunctionAttribute**至**DataAccessKind.Read**啟用從使用者定義型別 (UDT) 方法或使用者定義函式的唯讀資料存取。 資料修改作業無法從 UDT 或使用者定義函數進行，如果嘗試進行，則會在執行階段擲回例外狀況。  

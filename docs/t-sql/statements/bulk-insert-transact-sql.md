@@ -1,16 +1,14 @@
 ---
 title: BULK INSERT (Transact-SQL) | Microsoft Docs
-ms.custom: 
-ms.date: 01/04/2017
-ms.prod: sql-non-specified
+ms.custom: ''
+ms.date: 04/09/2018
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
 ms.component: t-sql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: t-sql
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - BULK_TSQL
@@ -29,22 +27,23 @@ helpviewer_keywords:
 - bulk importing [SQL Server], BULK INSERT statement
 - file importing [SQL Server]
 ms.assetid: be3984e1-5ab3-4226-a539-a9f58e1e01e2
-caps.latest.revision: 
+caps.latest.revision: 153
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Active
-ms.openlocfilehash: ec29eaa73339980516f4a3de4b67fa195953d80a
-ms.sourcegitcommit: 7673ad0e84a6de69420e19247a59e39ca751a8aa
+ms.openlocfilehash: 6388c41cf93e79b215927fbec6a2e31a4ef6ed3f
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/03/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="bulk-insert-transact-sql"></a>BULK INSERT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   依照 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中使用者指定的格式，將資料檔案匯入資料庫資料表或檢視表中  
-  
+
+[!INCLUDE[ssMIlimitation](../../includes/sql-db-mi-limitation.md)]
+
  ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>語法  
@@ -123,9 +122,12 @@ BULK INSERT
 > [!NOTE]  
 >  MAXERRORS 選項不適用於條件約束檢查。  
   
- CODEPAGE **=** { **'**ACP**'** | **'**OEM**'** | **'**RAW**'** | **'***code_page***'** }  
+ CODEPAGE **=** { **'** ACP **'** | **'** OEM **'** | **'** RAW **'** | **'***code_page***'** }  
  指定資料檔案中之資料的字碼頁。 只有當資料包含字元值大於 **127** 或小於 **32** 的 **char**、**varchar** 或 **text** 資料行時，CODEPAGE 才會相關。  
-  
+
+> [!IMPORTANT]
+> 在 Linux 上，CODEPAGE 不是支援的選項。
+
 > [!NOTE]  
 >  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 建議您在[格式檔案](../../relational-databases/import-export/use-a-format-file-to-bulk-import-data-sql-server.md)中，針對每一個資料行各指定一個定序名稱。  
   

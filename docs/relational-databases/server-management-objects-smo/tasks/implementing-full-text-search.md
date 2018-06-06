@@ -1,29 +1,28 @@
 ---
-title: "實作全文檢索搜尋 |Microsoft 文件"
-ms.custom: 
+title: 實作全文檢索搜尋 |Microsoft 文件
+ms.custom: ''
 ms.date: 08/06/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
 ms.component: smo
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - full-text search [SMO]
 ms.assetid: 9ce9ad9c-f671-4760-90b5-e0c8ca051473
-caps.latest.revision: 
+caps.latest.revision: 47
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: fe4843e762233eae4e85be8662b1291b794c59a7
-ms.sourcegitcommit: cb2f9d4db45bef37c04064a9493ac2c1d60f2c22
+monikerRange: = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 2f3ebf00ddb3cecd9413bb2780369b33b720dd43
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/12/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="implementing-full-text-search"></a>實作全文檢索搜尋
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
@@ -35,7 +34,7 @@ ms.lasthandoff: 01/12/2018
  首先，請呼叫 <xref:Microsoft.SqlServer.Management.Smo.FullTextCatalog> 建構函式並指定目錄名稱，以在資料庫上建立全文檢索目錄。 接著再呼叫建構函式，並指定要在其上建立全文檢索索引的資料表，以建立全文檢索索引。 接下來可以使用 <xref:Microsoft.SqlServer.Management.Smo.FullTextIndexColumn> 物件並且提供資料表內資料行的名稱，以加入全文檢索索引的索引資料行。 然後再將 <xref:Microsoft.SqlServer.Management.Smo.FullTextIndex.CatalogName%2A> 屬性設定為已建立的目錄。 最後呼叫 <xref:Microsoft.SqlServer.Management.Smo.FullTextIndex.Create%2A> 方法，並在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體上建立全文檢索索引。  
   
 ## <a name="example"></a>範例  
- 如果要使用所提供的任何程式碼範例，您必須選擇建立應用程式用的程式設計環境、程式設計範本，及程式設計語言。 如需詳細資訊，請參閱[建立 Visual C# 35。在 Visual Studio.NET 中的 SMO 專案](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)。  
+ 如果要使用所提供的任何程式碼範例，您必須選擇建立應用程式用的程式設計環境、程式設計範本，及程式設計語言。 如需詳細資訊，請參閱[建立 Visual C&#35; SMO Project in Visual Studio](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)。  
   
 ## <a name="creating-a-full-text-search-service-in-visual-basic"></a>在 Visual Basic 中建立全文檢索搜尋服務  
  此程式碼範例會針對 [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal-md.md)] 範例資料庫中的 `ProductCategory` 資料表建立全文檢索搜尋目錄。 然後在 `ProductCategory` 資料表的 Name 資料行上建立全文檢索搜尋索引。 全文檢索搜尋索引需要資料行上已定義了唯一索引。  

@@ -1,16 +1,14 @@
 ---
-title: "用來還原、復原、管理備份的 RESTORE 陳述式 (Transact-SQL) | Microsoft Docs"
-ms.custom: 
-ms.date: 03/17/2017
-ms.prod: sql-non-specified
+title: 用來還原、復原、管理備份的 RESTORE 陳述式 (Transact-SQL) | Microsoft Docs
+ms.custom: ''
+ms.date: 03/30/2018
+ms.prod: sql
 ms.prod_service: sql-database
-ms.service: 
 ms.component: t-sql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: t-sql
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - TSQL
@@ -24,22 +22,24 @@ helpviewer_keywords:
 - file restores [SQL Server], RESTORE statement
 - transaction log backups [SQL Server], RESTORE statement
 ms.assetid: fb29a151-f312-4f85-b857-5deeca0de8ce
-caps.latest.revision: 
-author: barbkess
-ms.author: barbkess
+caps.latest.revision: 15
+author: edmacauley
+ms.author: edmaca
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: d756c4fb9f299abe88ef46c14726f613e8f66497
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 003f3adce58a228e4965f91c1104ff33b60b8398
+ms.sourcegitcommit: d2573a8dec2d4102ce8882ee232cdba080d39628
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="restore-statements-for-restoring-recovering-and-managing-backups-transact-sql"></a>用來還原、復原和管理備份的 RESTORE 陳述式 (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdbmi-xxxx-xxx-md.md )]
 
   此章節描述備份所用的 RESTORE 陳述式。 除了用來還原和復原備份的主要 RESTORE {DATABASE | LOG} 陳述式之外，還有許多輔助的 RESTORE 陳述式可協助您管理備份和計畫還原順序。 輔助的 RESTORE 命令包括：RESTORE FILELISTONLY、RESTORE HEADERONLY、RESTORE LABELONLY、RESTORE REWINDONLY 和 RESTORE VERIFYONLY。  
   
+[!INCLUDE[ssMIlimitation](../../includes/sql-db-mi-limitation.md)]
+
 > [!IMPORTANT]  
 >  在舊版的 SQL Server 中，任何使用者都可以使用 RESTORE FILELISTONLY、RESTORE HEADERONLY、RESTORE LABELONLY 和 RESTORE VERIFYONLY 等 Transact-SQL 陳述式來取得有關備份組及備份裝置的資訊。 因為這些陳述式會揭露有關備份檔案內容的資訊，所以在 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 和更新的版本中，這些陳述式需要 CREATE DATABASE 權限。 與舊版相較，這項需求更能完整地保障備份檔案及備份資訊的安全。 如需這個權限的相關資訊，請參閱 [GRANT 資料庫權限 &#40;Transact-SQL&#41;](../../t-sql/statements/grant-database-permissions-transact-sql.md)。  
   

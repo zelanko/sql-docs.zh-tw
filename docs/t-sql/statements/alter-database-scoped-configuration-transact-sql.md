@@ -1,17 +1,15 @@
 ---
 title: ALTER DATABASE SCOPED CONFIGURATION (Transact-SQL) | Microsoft Docs
-ms.custom: 
-ms.date: 01/04/2018
-ms.prod: sql-non-specified
+ms.custom: ''
+ms.date: 05/142018
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
 ms.component: t-sql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: t-sql
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 f1_keywords:
 - ALTER_DATABASE_SCOPED_CONFIGURATION
 - ALTER_DATABASE_SCOPED_CONFIGURATION_TSQL
@@ -24,21 +22,20 @@ helpviewer_keywords:
 - ALTER DATABASE SCOPED CONFIGURATION statement
 - configuration [SQL Server], ALTER DATABASE SCOPED CONFIGURATION statement
 ms.assetid: 63373c2f-9a0b-431b-b9d2-6fa35641571a
-caps.latest.revision: 
+caps.latest.revision: 32
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: f9eb68c07f9e163dfba699627e41ea825b041540
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 1fc2b483ff3a3b4a60d02c281041bb403485aaa2
+ms.sourcegitcommit: 6fd8a193728abc0a00075f3e4766a7e2e2859139
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 05/17/2018
 ---
 # <a name="alter-database-scoped-configuration-transact-sql"></a>ALTER DATABASE SCOPED CONFIGURATION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-  此陳述式可啟用數個**個別資料庫**層級的資料庫組態設定。 在 [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] 及從 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 開始的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中都有提供此陳述式。 這些設定包括：  
+  此陳述式可啟用數個**個別資料庫**層級的資料庫組態設定。 在 [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)] 及從 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 開始的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中都有提供此陳述式。 這些設定包括：  
   
 - 清除程序快取。  
 - 針對主要資料庫將 MAXDOP 參數設定為任意值 (1、2、...，以最適用於該特定資料庫的值為準)，並且針對所使用的所有次要資料庫 (例如，用於報告查詢) 設定不同的值 (例如 0)。  
@@ -46,8 +43,11 @@ ms.lasthandoff: 01/25/2018
 - 在資料庫層級啟用或停用參數探測。
 - 在資料庫層級啟用或停用查詢最佳化。
 - 在資料庫層級啟用或停用識別快取。
-- 允許或不允許在第一次編譯批次時，將已編譯的計劃虛設常式儲存在快取中。    
-  
+- 允許或不允許在第一次編譯批次時，將已編譯的計劃虛設常式儲存在快取中。  
+- 啟用或停用原生編譯 T-SQL 模組的執行統計資料收集。
+- 為支援 ONLINE= syntax 的 DDL 陳述式啟用或停用預設為連線的選項。
+- 為支援 RESUMABLE= syntax 的 DDL 陳述式啟用或停用預設可繼續的選項。 
+
  ![連結圖示](../../database-engine/configure-windows/media/topic-link.gif "連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>語法  
@@ -69,6 +69,10 @@ ALTER DATABASE SCOPED CONFIGURATION
     | QUERY_OPTIMIZER_HOTFIXES = { ON | OFF | PRIMARY}
     | IDENTITY_CACHE = { ON | OFF }
     | OPTIMIZE_FOR_AD_HOC_WORKLOADS = { ON | OFF }
+    | XTP_PROCEDURE_EXECUTION_STATISTICS = { ON | OFF } 
+    | XTP_QUERY_EXECUTION_STATISTICS = { ON | OFF }    
+    | ELEVATE_ONLINE = { OFF | WHEN_SUPPORTED | FAIL_UNSUPPORTED } 
+    | ELEVATE_RESUMABLE = { OFF | WHEN_SUPPORTED | FAIL_UNSUPPORTED }  
 }  
 ```  
   
@@ -133,7 +137,7 @@ CLEAR PROCEDURE_CACHE
 
 IDENTITY_CACHE **=** { **ON** | OFF }  
 
-**適用於**：[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 和 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 
+**適用於**：[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 
 
 在資料庫層級啟用或停用識別快取。 預設值為 **ON**。 識別快取可用來改善含有識別資料行之資料表上的 INSERT 效能。 若要避免因伺服器意外重新啟動或容錯移轉至次要伺服器，而導致識別資料行值不連貫，請停用 IDENTITY_CACHE 選項。 此選項類似於現有的[追蹤旗標 272](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)差異在於此選項可以在資料庫層級設定，而不僅止於在伺服器層級設定。   
 
@@ -142,9 +146,61 @@ IDENTITY_CACHE **=** { **ON** | OFF }
 
 OPTIMIZE_FOR_AD_HOC_WORKLOADS **=** { ON | **OFF** }  
 
-**適用於**：[!INCLUDE[ssSDS](../../includes/sssds-md.md)] 
+**適用於**：[!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)] 
 
 允許或不允許在第一次編譯批次時，將已編譯的計劃虛設常式儲存在快取中。 預設值為 OFF。 針對資料庫啟用 OPTIMIZE_FOR_AD_HOC_WORKLOADS 資料庫範圍組態之後，在第一次編譯批次時，就會將已編譯的計劃虛設常式儲存在快取中。 與完整的已編譯計劃大小相比，計劃虛設常式的記憶體耗用量較少。  如果再次編譯或執行某個批次，就會移除已編譯的計劃虛設常式，並以完整的已編譯計劃取代。
+
+XTP_PROCEDURE_EXECUTION_STATISTICS  **=** { ON | **OFF** }  
+
+**適用於**：[!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)] 
+
+在目前的資料庫上啟用或停用原生編譯 T-SQL 模組的模組層級執行統計資料收集。 預設值為 OFF。 執行統計資料會反映在 [sys.dm_exec_procedure_stats](../../relational-databases/system-dynamic-management-views/sys-dm-exec-procedure-stats-transact-sql.md)。
+
+如果這個選項是 ON，或已透過 [sp_xtp_control_proc_exec_stats](../../relational-databases/system-stored-procedures/sys-sp-xtp-control-proc-exec-stats-transact-sql.md) 啟用統計資料收集，則會收集原生編譯 T-SQL 模組的模組層級執行統計資料。
+
+XTP_QUERY_EXECUTION_STATISTICS  **=** { ON | **OFF** }  
+
+**適用於**：[!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]
+
+在目前的資料庫上啟用或停用原生編譯 T-SQL 模組的陳述式層級執行統計資料收集。 預設值為 OFF。 執行統計資料會反映在 [sys.dm_exec_query_stats](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-stats-transact-sql.md) 和[查詢存放區](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)。
+
+如果這個選項是 ON，或已透過 [sp_xtp_control_query_exec_stats](../../relational-databases/system-stored-procedures/sys-sp-xtp-control-query-exec-stats-transact-sql.md) 啟用統計資料收集，則會收集原生編譯 T-SQL 模組的陳述式層級執行統計資料。
+
+如需原生編譯 T-SQL 模組效能監控的詳細資料，請參閱[監視原生編譯預存程序的效能](../../relational-databases/in-memory-oltp/monitoring-performance-of-natively-compiled-stored-procedures.md)。
+
+ELEVATE_ONLINE = { OFF | WHEN_SUPPORTED | FAIL_UNSUPPORTED }
+
+**適用於**：[!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)] (功能處於公開預覽階段)
+
+可讓您選取選項，讓引擎自動將支援的作業提升至線上。 預設為 OFF，這表示除非在陳述式中指定，否則不會將作業提升至線上。 [sys.database_scoped_configurations](../../relational-databases/system-catalog-views/sys-database-scoped-configurations-transact-sql.md) 會反映 ELEVATE_ONLINE 目前的值。 這些選項將僅適用於線上普遍支援的作業。  
+
+FAIL_UNSUPPORTED
+
+此值會將所有支援的 DLL 作業提升至 ONLINE。 不支援線上執行的作業將會失敗並擲回警告。
+
+WHEN_SUPPORTED  
+
+此值會提升支援 ONLINE 的作業。 不支援線上的作業將離線執行。
+
+> [!NOTE]
+> 您可以在指定 ONLINE 選項的情形下提交陳述式，進而覆寫預設設定。 
+ 
+ELEVATE_RESUMABLE= { OFF | WHEN_SUPPORTED | FAIL_UNSUPPORTED }
+
+**適用於**：[!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)] (功能處於公開預覽階段)
+
+可讓您選取選項，讓引擎自動將支援的作業提升至可繼續。 預設為 OFF，這表示除非在陳述式中指定，否則不會將作業提升至可繼續。 [sys.database_scoped_configurations](../../relational-databases/system-catalog-views/sys-database-scoped-configurations-transact-sql.md) 會反映 ELEVATE_RESUMABLE 目前的值。 這些選項僅適用於可繼續普遍支援的作業。 
+
+FAIL_UNSUPPORTED
+
+此值會將所有支援的 DLL 作業提升至 RESUMABLE。 不支援可繼續執行的作業會失敗並擲回警告。
+
+WHEN_SUPPORTED  
+
+此值會提升支援 RESUMABLE 的作業。 不支援可繼續的作業會在非可繼續的情況下執行。  
+
+> [!NOTE]
+> 您可以在指定 RESUMABLE 選項的情形下提交陳述式，進而覆寫預設設定。 
 
 ##  <a name="Permissions"></a> 權限  
  需要資料庫上的 ALTER ANY DATABASE SCOPE CONFIGURATION   
@@ -187,6 +243,15 @@ OPTIMIZE_FOR_AD_HOC_WORKLOADS **=** { ON | **OFF** }
 **DacFx**  
   
  由於 ALTER DATABASE SCOPED CONFIGURATION 是 Azure SQL Database 及從 SQL Server 2016 開始之 SQL Server 的新功能且會影響資料庫結構描述，因此無法將資料庫結構的匯出項目 (不論是否含有資料) 匯入至舊版 SQL Server，例如 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 或 [!INCLUDE[ssSQLv14](../../includes/sssqlv14-md.md)]。 例如，從使用此新功能的 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 或 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 資料庫匯出至 [DACPAC](https://msdn.microsoft.com/library/ee210546.aspx#Anchor_3) 或 [BACPAC](https://msdn.microsoft.com/library/ee210546.aspx#Anchor_4) 的匯出項目，將無法匯入至舊版伺服器。  
+
+**ELEVATE_ONLINE** 
+
+此選項僅適用於支援 WITH(ONLINE= syntax) 的 DDL 陳述式。 不會影響 XML 索引 
+
+**ELEVATE_RESUMABLE**
+
+此選項僅適用於支援 WITH(ONLINE= syntax) 的 DDL 陳述式。 不會影響 XML 索引 
+
   
 ## <a name="metadata"></a>中繼資料  
 
@@ -289,6 +354,26 @@ ALTER DATABASE SCOPED CONFIGURATION SET IDENTITY_CACHE=OFF ;
 ALTER DATABASE SCOPED CONFIGURATION SET OPTIMIZE_FOR_AD_HOC_WORKLOADS = ON;
 ```
 
+### <a name="i--set-elevateonline"></a>I.  設定 ELEVATE_ONLINE 
+
+**適用於**：[!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)] (功能處於公開預覽階段)
+ 
+此範例會將 ELEVATE_ONLINE 設定為 FAIL_UNSUPPORTED。  tsqlCopy 
+
+```sql
+ALTER DATABASE SCOPED CONFIGURATION SET ELEVATE_ONLINE=FAIL_UNSUPPORTED ;
+```  
+
+### <a name="j-set-elevateresumable"></a>J. 設定 ELEVATE_RESUMABLE 
+
+**適用於**：[!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)] (功能處於公開預覽階段)
+
+此範例會將 ELEVEATE_RESUMABLE 設定為 WHEN_SUPPORTED。  tsqlCopy 
+
+```sql
+ALTER DATABASE SCOPED CONFIGURATION SET ELEVATE_RESUMABLE=WHEN_SUPPORTED ;  
+``` 
+
 ## <a name="additional-resources"></a>其他資源
 
 ### <a name="maxdop-resources"></a>MAXDOP 資源 
@@ -307,6 +392,14 @@ ALTER DATABASE SCOPED CONFIGURATION SET OPTIMIZE_FOR_AD_HOC_WORKLOADS = ON;
 * [追蹤旗標](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)
 * [SQL Server 查詢最佳化工具 Hotfix 追蹤旗標 4199 服務模型](https://support.microsoft.com/en-us/kb/974006)
 
+### <a name="elevateonline-resources"></a>ELEVATE_ONLINE 資源 
+
+- [線上索引作業的指導方針](../../relational-databases/indexes/guidelines-for-online-index-operations.md) 
+
+### <a name="elevateresumable-resources"></a>ELEVATE_RESUMABLE 資源 
+
+- [線上索引作業的指導方針](../../relational-databases/indexes/guidelines-for-online-index-operations.md) 
+ 
 ## <a name="more-information"></a>詳細資訊  
  [sys.database_scoped_configurations](../../relational-databases/system-catalog-views/sys-database-scoped-configurations-transact-sql.md)   
  [sys.configurations](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md)   

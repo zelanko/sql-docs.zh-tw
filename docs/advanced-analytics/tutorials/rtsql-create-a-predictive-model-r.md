@@ -1,29 +1,17 @@
 ---
-title: "建立預測模型 (SQL 快速入門中的 R) |Microsoft 文件"
-ms.custom: 
-ms.date: 07/26/2017
-ms.reviewer: 
-ms.suite: sql
-ms.prod: machine-learning-services
-ms.prod_service: machine-learning-services
-ms.component: 
-ms.technology: 
-ms.tgt_pltfrm: 
+title: 建立預測模型 (SQL 快速入門中的 R) |Microsoft 文件
+ms.prod: sql
+ms.technology: machine-learning
+ms.date: 04/15/2018
 ms.topic: tutorial
-dev_langs:
-- R
-- SQL
-ms.assetid: 6eb78a80-5791-438f-9ca6-d142ab5d9bb1
-caps.latest.revision: 
-author: jeannt
-ms.author: jeannt
-manager: cgronlund
-ms.workload: On Demand
-ms.openlocfilehash: 1b40295452da5b7da34a31e6825630da9c6c4861
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+author: HeidiSteen
+ms.author: heidist
+manager: cgronlun
+ms.openlocfilehash: 3a56ddd95f0282550662cc559ff5a393d0bd236b
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="create-a-predictive-model-r-in-sql-quickstart"></a>建立預測模型 (SQL 快速入門中的 R)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -141,7 +129,7 @@ EXEC sp_execute_external_script
 
 -- Save the generated model
 INSERT INTO [dbo].[stopping_distance_models] (model_name, model)
-VALUES (' latest model', @model)
+VALUES ('latest model', @model)
 ```
 
 **結果**
@@ -152,7 +140,7 @@ VALUES (' latest model', @model)
 
 請記住這些規則使用的 SQL 參數與 R 變數中的`sp_execute_external_script`:
 
-+ 名稱中所有的 SQL 參數對應至 R 指令碼會列出 _@params_ 引數。
++ 名稱中所有的 SQL 參數對應至 R 指令碼會列出_@params_引數。
 + 若要輸出這其中一個參數，請在 _@params_ 清單中新增 OUTPUT 關鍵字。
 + 列出對應的參數之後，請緊接在 _@params_ 清單之後，逐行提供 SQL 參數與 R 變數的對應。
 
@@ -160,6 +148,6 @@ VALUES (' latest model', @model)
 
 既然您已有模型，您將了解如何從該模型產生預測並繪製結果。
 
-[從模型預測並繪製](../tutorials/rtsql-predict-and-plot-from-model.md)
+[從模型預測及繪製](../tutorials/rtsql-predict-and-plot-from-model.md)
 
 

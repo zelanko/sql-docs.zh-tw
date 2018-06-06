@@ -1,16 +1,15 @@
 ---
-title: "sp_replicationdboption (TRANSACT-SQL) |Microsoft 文件"
-ms.custom: 
+title: sp_replicationdboption (TRANSACT-SQL) |Microsoft 文件
+ms.custom: ''
 ms.date: 03/07/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - sp_replicationdboption
 ms.assetid: d021864e-3f21-4d1a-89df-6c1086f753bf
-caps.latest.revision: 
+caps.latest.revision: 32
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 584c9ed9f4a9d0e00bcbd0de05788a1841189899
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 9a88d295f6ae5ff0fcfab7121a4057dd84f75957
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="spreplicationdboption-transact-sql"></a>sp_replicationdboption (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -56,12 +54,12 @@ sp_replicationdboption [ @dbname= ] 'db_name'
  [**@optname=**] **'***optname***'**  
  這是要啟用或停用的複寫資料庫選項。 *optname*是**sysname**，而且可以是下列值之一。  
   
-|值|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |**合併式發行**|可用於合併式發行集的資料庫。|  
 |**發行**|資料庫可用於其他類型的發行集。|  
 |**訂閱**|資料庫是訂閱資料庫。|  
-|**與備份同步**|啟用資料庫的協調備份。 如需詳細資訊，請參閱[的異動複寫 &#40; 啟用協調備份複寫 TRANSACT-SQL 程式設計 &#41;](../../relational-databases/replication/administration/enable-coordinated-backups-for-transactional-replication.md).|  
+|**與備份同步**|啟用資料庫的協調備份。 如需詳細資訊，請參閱[異動複寫啟用協調備份&#40;Replication TRANSACT-SQL Programming&#41;](../../relational-databases/replication/administration/enable-coordinated-backups-for-transactional-replication.md)。|  
   
  [  **@value=**] **'***值***'**  
  這是指要啟用或停用給定的複寫資料庫選項。 *值*是**sysname**，而且可以是**true**或**false**。 當這個值是**false**和*optname*是**合併式發行**，也會卸除合併發行資料庫的訂閱。  
@@ -85,12 +83,12 @@ sp_replicationdboption [ @dbname= ] 'db_name'
 ## <a name="permissions"></a>Permissions  
  只有成員**sysadmin**固定的伺服器角色可以執行**sp_replicationdboption**。  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [設定發行和散發](../../relational-databases/replication/configure-publishing-and-distribution.md)   
  [Create a Publication](../../relational-databases/replication/publish/create-a-publication.md)   
  [刪除發行集](../../relational-databases/replication/publish/delete-a-publication.md)   
  [停用發行和散發](../../relational-databases/replication/disable-publishing-and-distribution.md)   
- [sys.sysdatabases &#40;TRANSACT-SQL &#41;](../../relational-databases/system-compatibility-views/sys-sysdatabases-transact-sql.md)   
+ [sys.sysdatabases &#40;Transact SQL&#41;](../../relational-databases/system-compatibility-views/sys-sysdatabases-transact-sql.md)   
  [複寫預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  
   
   

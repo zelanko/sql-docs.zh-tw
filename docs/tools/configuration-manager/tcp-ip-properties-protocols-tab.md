@@ -1,38 +1,34 @@
 ---
-title: "TCP/IP 屬性 （通訊協定索引標籤） |Microsoft 文件"
-ms.custom: 
+title: TCP/IP 屬性 （通訊協定索引標籤） |Microsoft 文件
+ms.custom: ''
 ms.date: 08/24/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
-ms.component: configuration-manager
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: configuration
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - TCP/IP [SQL Server], configuration options
 ms.assetid: 007638fc-3a24-4460-adbe-545ded5d6f88
-caps.latest.revision: 
+caps.latest.revision: 38
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: f83362998d192f3910a8da5da7d351a8c32ff538
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
-ms.translationtype: MT
+ms.openlocfilehash: 34f6d026e29da596afaa6c812a726a64fb7e828f
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.translationtype: MTE
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="tcpip-properties-protocols-tab"></a>TCP/IP 屬性 (通訊協定索引標籤)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
-使用 [TCP/IP 屬性] 對話方塊來設定 TCP/IP 通訊協定的選項。 按一下左窗格中的 [TCP/IP]，在詳細資料窗格中顯示個別的 IP 位址組態。  
+  使用 [TCP/IP 屬性] 對話方塊來設定 TCP/IP 通訊協定的選項。 按一下左窗格中的 [TCP/IP]，在詳細資料窗格中顯示個別的 IP 位址組態。  
   
  Microsoft SQL Server 必須重新啟動之後，變更才能生效。  
   
-## <a name="options"></a>選項  
+## <a name="options"></a>選項。  
  **已啟用**  
  可能的值為 [是] 和 [否]。  
   
@@ -47,6 +43,6 @@ ms.lasthandoff: 02/03/2018
   
 ## <a name="see-also"></a>另請參閱  
  [選擇網路通訊協定](https://msdn.microsoft.com/library/ms187892(v=sql.130).aspx)   
- [建立有效的連接字串使用 TCP IP](creating-a-valid-connection-string-using-tcp-ip.md)  
+ [Creating a Valid Connection String Using TCP IP](creating-a-valid-connection-string-using-tcp-ip.md)  
   
   

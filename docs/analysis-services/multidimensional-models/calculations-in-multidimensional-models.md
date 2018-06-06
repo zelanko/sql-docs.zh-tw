@@ -1,42 +1,23 @@
 ---
-title: "多維度模型中的計算 |Microsoft 文件"
-ms.custom: 
-ms.date: 03/01/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
-helpviewer_keywords:
-- calculations [Analysis Services], creating
-- deleting calculations
-- calculations [Analysis Services], scripts
-- Cube Designer
-- modifying scripts
-- removing calculations
-- calculations [Analysis Services], deleting
-- scripts [Analysis Services], calculations
-- cubes [Analysis Services], calculations
-- solve orders [Analysis Services]
-ms.assetid: c21b3459-9bef-45a2-aba5-c992eba5b66e
-caps.latest.revision: 
-author: Minewiskan
+title: 多維度模型中的計算 |Microsoft 文件
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: multidimensional-models
+ms.topic: conceptual
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 8b82aa83deb8d2b428972fb65a64383c6a3d7271
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: b51dc3cbb0ad98b5f14fdd278c03dc54b43a6b9d
+ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="calculations-in-multidimensional-models"></a>多維度模型中的計算
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-使用 [Cube 設計師] 的 [計算] 索引標籤來建立導出成員、命名集，和其他多維度運算式 (MDX) 計算。  
+  使用 [Cube 設計師] 的 [計算] 索引標籤來建立導出成員、命名集，和其他多維度運算式 (MDX) 計算。  
   
  [計算] 索引標籤具有下列三個窗格：  
   

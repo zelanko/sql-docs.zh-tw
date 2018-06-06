@@ -1,31 +1,28 @@
 ---
-title: "SQLSTATE 對應 |Microsoft 文件"
-ms.custom: 
+title: SQLSTATE 對應 |Microsoft 文件
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
-ms.component: odbc
-ms.reviewer: 
+ms.prod: sql
+ms.prod_service: connectivity
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: connectivity
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - compatibility [ODBC], SQLSTATE
 - backward compatibility [ODBC], SQLSTATE
 - SQLSTATE [ODBC]
 ms.assetid: 6e6cabcf-a204-40eb-b77d-8a0c4a5e8524
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
-ms.workload: On Demand
-ms.openlocfilehash: 68b514cd35e7da713f6e38a01c25d5d64d621794
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+manager: craigg
+ms.openlocfilehash: 8226e7fa29cf94b4eff222022d4a94895dcd0e82
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sqlstate-mappings"></a>SQLSTATE 對應
 本主題會討論 ODBC 2 SQLSTATE 值。*x*和 ODBC 3。*x*。 如需有關 ODBC 3 的詳細資訊。*x* SQLSTATE 值，請參閱[附錄 a: ODBC 錯誤碼](../../../odbc/reference/appendixes/appendix-a-odbc-error-codes.md)。  
@@ -34,7 +31,7 @@ ms.lasthandoff: 12/21/2017
   
  當 ODBC 2。*x*應用程式會升級到 ODBC 3。*x*應用程式，應用程式必須變更為預期 ODBC 3。*x* Sqlstate 而不是 ODBC 2。*x* Sqlstate。 下表列出 ODBC 3。*x* Sqlstate 的每個 ODBC 2。*x* SQLSTATE 對應至。  
   
- 當 SQL_ATTR_ODBC_VERSION 環境屬性設定為 SQL_OV_ODBC2 時，驅動程式就會公佈 ODBC 2。*x*而不是 ODBC 3 的 Sqlstate。*x* Sqlstate 時**SQLGetDiagField**或**SQLGetDiagRec**呼叫。 特定對應由注意 ODBC 2*.x*對應至 ODBC 3 的下列資料表的資料行 1 中的 SQLSTATE。*x*資料行 2 中的 SQLSTATE。  
+ 當 SQL_ATTR_ODBC_VERSION 環境屬性設定為 SQL_OV_ODBC2 時，驅動程式就會公佈 ODBC 2。*x*而不是 ODBC 3 的 Sqlstate。*x* Sqlstate 時**SQLGetDiagField**或**SQLGetDiagRec**呼叫。 特定對應由注意 ODBC 2 *.x*對應至 ODBC 3 的下列資料表的資料行 1 中的 SQLSTATE。*x*資料行 2 中的 SQLSTATE。  
   
 |ODBC 2。*x* SQLSTATE|ODBC 3。*x* SQLSTATE|註解|  
 |-------------------------|-------------------------|--------------|  

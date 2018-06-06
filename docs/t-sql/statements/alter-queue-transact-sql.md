@@ -1,16 +1,14 @@
 ---
 title: ALTER QUEUE (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 05/01/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-database
-ms.service: 
 ms.component: t-sql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: t-sql
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - ALTER_QUEUE_TSQL
@@ -26,16 +24,15 @@ helpviewer_keywords:
 - unavailable queues [SQL Server]
 - activation stored procedures [Service Broker]
 ms.assetid: d54aa325-8761-4cd4-8da7-acf33df12296
-caps.latest.revision: 
-author: barbkess
-ms.author: barbkess
+caps.latest.revision: 49
+author: edmacauley
+ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 7f97bd0a341ecc5e960c94c4c8bdabe30b572fd9
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 886011326e3c9ed7b3b297f503a5bf185a5a237b
+ms.sourcegitcommit: d2573a8dec2d4102ce8882ee232cdba080d39628
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="alter-queue-transact-sql"></a>ALTER QUEUE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -157,7 +154,7 @@ WITH
  指定以目前使用者的身分來執行預存程序。 (執行此 ALTER QUEUE 陳述式的資料庫主體)。  
   
  '*user_name*'  
- 這是指定用來執行預存程序的使用者名稱。 *user_name* 必須是指定為 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 識別碼的有效 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用者。 目前的使用者必須擁有指定的 *user_name* 之 IMPERSONATE 權限。  
+ 這是指定用來執行預存程序的使用者名稱。 *user_name* 必須是指定為 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 識別碼的有效 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用者。 目前的使用者必須擁有指定之 *user_name* 的 IMPERSONATE 權限。  
   
  OWNER  
  指定以佇列擁有者的身分來執行預存程序。  

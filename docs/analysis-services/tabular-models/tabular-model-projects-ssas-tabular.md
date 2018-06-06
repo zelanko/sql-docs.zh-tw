@@ -1,31 +1,23 @@
 ---
-title: "表格式模型專案 |Microsoft 文件"
-ms.custom: 
-ms.date: 03/01/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services, azure-analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
-ms.assetid: 15358811-22a6-43b1-b1a7-9c974e8367b9
-caps.latest.revision: 
-author: Minewiskan
+title: 表格式模型專案 |Microsoft 文件
+ms.date: 05/07/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: tabular-models
+ms.topic: conceptual
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: f47168e56a317cac989cb4bcb09ef2a9ebe8b164
-ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
+ms.openlocfilehash: 8866b53bd944a40c7af6b1dda8a3dff84afbdd58
+ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="tabular-model-projects"></a>表格式模型專案 
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
-若要建立新的表格式模型，您必須先在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中建立新的表格式模型專案。 當您安裝 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]時，會提供三種商業智慧專案範本，供您建立表格式模型專案。 每個專案範本都提供一個架構，以便開始撰寫模型。 本節中的主題描述如何使用專案範本，建立新的表格式模型。  
+  若要建立新的表格式模型，您必須先在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中建立新的表格式模型專案。 當您安裝 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]時，會提供三種商業智慧專案範本，供您建立表格式模型專案。 每個專案範本都提供一個架構，以便開始撰寫模型。 本節中的主題描述如何使用專案範本，建立新的表格式模型。  
   
 ## <a name="related-tasks"></a>相關工作  
   

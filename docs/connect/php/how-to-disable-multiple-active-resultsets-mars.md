@@ -1,30 +1,28 @@
 ---
-title: "如何： 停用 Multiple Active Resultsets (MARS) |Microsoft 文件"
-ms.custom: 
+title: 如何： 停用 Multiple Active Resultsets (MARS) |Microsoft 文件
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
+ms.prod: sql
+ms.prod_service: connectivity
 ms.component: php
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: connectivity
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - multiple active result sets, disabling
 - MARS, disabling
 ms.assetid: 1912ad05-d0a4-40ff-8888-0d85bb36a807
-caps.latest.revision: "20"
+caps.latest.revision: 20
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
-ms.workload: Inactive
-ms.openlocfilehash: 9080cc699cde672fc023bafe05f1da7ce70d1df4
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+manager: craigg
+ms.openlocfilehash: 0d2611113e8004237ae2e1c27be1e27353f78a2e
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="how-to-disable-multiple-active-resultsets-mars"></a>如何：停用 Multiple Active Resultsets (MARS)。
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -87,6 +85,6 @@ $conn = null;
 ?>  
 ```  
   
-## <a name="see-also"></a>請參閱＜  
-[連接到伺服器](../../connect/php/connecting-to-the-server.md)  
+## <a name="see-also"></a>另請參閱  
+[連線到伺服器](../../connect/php/connecting-to-the-server.md)  
   

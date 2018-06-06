@@ -1,17 +1,14 @@
 ---
-title: "設定 user connections 伺服器組態選項 | Microsoft Docs"
-ms.custom: 
+title: 設定 user connections 伺服器組態選項 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/02/2017
-ms.prod: sql-non-specified
-ms.prod_service: database-engine
-ms.service: 
-ms.component: configure-windows
-ms.reviewer: 
+ms.prod: sql
+ms.prod_service: high-availability
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: configuration
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - simultaneous connections [SQL Server]
 - user connections option [SQL Server]
@@ -19,16 +16,15 @@ helpviewer_keywords:
 - maximum number of simultaneous user connections
 - connections [SQL Server], simultaneous
 ms.assetid: 53beee6e-59fe-4276-9abb-8f1cec2a3508
-caps.latest.revision: 
+caps.latest.revision: 29
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.workload: Active
-ms.openlocfilehash: 51eb56b34a8f3aa18ab0a115954e7a4004aca74e
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 8e06f9c776811fab5dc2a8f8f9748dde1402e0f7
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="configure-the-user-connections-server-configuration-option"></a>設定 user connections 伺服器組態選項
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -77,7 +73,7 @@ ms.lasthandoff: 02/03/2018
   
 2.  按一下 **[連接]** 節點。  
   
-3.  在 **[連接]**下的 **[並行連接的最大數目]** 方塊中，輸入或選取 0 至 32767 之間的值，以設定可同時連接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體的最大使用者數目。  
+3.  在 **[連接]** 下的 **[並行連接的最大數目]** 方塊中，輸入或選取 0 至 32767 之間的值，以設定可同時連接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體的最大使用者數目。  
   
 4.  重新啟動 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
   

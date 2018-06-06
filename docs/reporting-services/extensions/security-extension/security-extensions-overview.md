@@ -1,29 +1,29 @@
 ---
-title: "安全性延伸模組概觀 | Microsoft Docs"
-ms.custom: 
+title: 安全性延伸模組概觀 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
-ms.service: 
 ms.component: extensions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
-helpviewer_keywords: security [Reporting Services], extensions
+applies_to:
+- SQL Server 2016 Preview
+helpviewer_keywords:
+- security [Reporting Services], extensions
 ms.assetid: 24ccd795-6506-457c-93ac-6a9dd6bb9a46
-caps.latest.revision: "22"
+caps.latest.revision: 22
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: e07a4bbc62bf15d03887b12912fea2e216ad28ef
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 0aa92c8538efae252aa205a38aa6f5eb2c542c90
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="security-extensions-overview"></a>安全性延伸模組概觀
   [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 安全性延伸模組會啟用使用者或群組的驗證和授權；也就是說，它會讓不同的使用者登入到報表伺服器，並根據其識別執行不同的工作或作業。 依預設，[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 會使用 Windows 架構的驗證延伸模組，此模組使用 Windows 帳戶通訊協定來確認宣稱在系統上具有帳戶之使用者的識別。 以 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 會使用以角色為基礎的安全性系統來授權使用者。 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 以角色為基礎的安全性模型類似於其他技術以角色為基礎的安全性模型。  

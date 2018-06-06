@@ -1,27 +1,25 @@
 ---
-title: "新增分頁符號 (報表產生器及 SSRS) | Microsoft Docs"
-ms.custom: 
+title: 新增分頁符號 (報表產生器及 SSRS) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: report-design
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: 3846cd48-2787-47e9-b13b-7fc45a205f68
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: f264f0fc3f601ba9433f5ec591674bfa03b07779
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 41dbc6f3609ac6ff16baf67995e8ee348019ce0b
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="add-a-page-break-report-builder-and-ssrs"></a>加入分頁符號 (報表產生器及 SSRS)
   您可以在資料區內的矩形、資料區或群組中加入分頁符號，以控制每頁的資料量。 加入分頁符號可以改善已發行報表的效能，因為在檢視報表時，只有每個頁面上的項目需要進行處理。 當整個報表只有單一頁面時，必須先將所有的項目進行處理，才能檢視報表。  
@@ -33,7 +31,7 @@ ms.lasthandoff: 01/09/2018
   
 1.  在設計介面上，以滑鼠右鍵按一下資料區域的角控點，然後按一下 [Tablix 屬性]。  
   
-2.  在 **[一般]** 索引標籤的 **[分頁符號選項]**下方，選取下列其中一個選項：  
+2.  在 **[一般]** 索引標籤的 **[分頁符號選項]** 下方，選取下列其中一個選項：  
   
     -   **在前方加入分頁符號**— 如果要在資料表之前加入分頁符號，請選取此選項。  
   
@@ -45,7 +43,7 @@ ms.lasthandoff: 01/09/2018
   
 1.  在設計介面上，以滑鼠右鍵按一下要新增分頁符號的矩形，然後按一下 [矩形屬性]。  
   
-2.  在 **[一般]** 索引標籤的 **[分頁符號選項]**下方，選取下列其中一個選項：  
+2.  在 **[一般]** 索引標籤的 **[分頁符號選項]** 下方，選取下列其中一個選項：  
   
     -   **在前方加入分頁符號**— 如果要在矩形之前加入分頁符號，請選取此選項。  
   

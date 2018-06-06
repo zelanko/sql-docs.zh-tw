@@ -1,27 +1,26 @@
 ---
-title: "SQL Server 的 Microsoft ADO.NET |Microsoft 文件"
-ms.custom: 
+title: SQL Server 的 Microsoft ADO.NET |Microsoft 文件
+ms.custom: ''
 ms.date: 08/08/2017
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
+ms.prod: sql
+ms.prod_service: connectivity
 ms.component: ado-net
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: connectivity
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: 5e467fce-7237-4678-bafa-a16f32323d0c
-caps.latest.revision: "9"
+caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
-ms.workload: On Demand
-ms.openlocfilehash: 54a5cdcd7341972d2f2e5b2e4e3e5fe3e3fe2531
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+manager: craigg
+ms.openlocfilehash: 7f8d8ee2ecca5db774ed31f25f85a150f0fc6b20
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34563906"
 ---
 # <a name="microsoft-adonet-for-sql-server"></a>Microsoft ADO.NET for SQL Server
 
@@ -29,7 +28,7 @@ ms.lasthandoff: 11/18/2017
 
 ADO.NET 是 .NET 語言的核心資料存取技術。 使用 System.Data.SqlClient 命名空間可存取 SQL Server，或使用來自其他供應商的提供者來存取其存放區。 使用 System.Data.Odbc 或 System.Data.Oledb 可從使用其他資料存取技術的 .NET 語言存取資料。 當您在客戶端應用程式中需要離線資料快取時可使用 System.Data.Dataset。 其同時提供在 Web 服務中相當實用的本機持續性和 XML 功能。  
   
-## <a name="getting-started"></a>快速入門  
+## <a name="getting-started"></a>使用者入門  
 * [步驟 1︰設定 ADO.NET 開發的開發環境](step-1-configure-development-environment-for-ado-net-development.md)  
 * [步驟 2︰建立 ADO.NET 開發的 SQL 資料庫](step-2-create-a-sql-database-for-ado-net-development.md)  
 * [步驟 3︰使用 ADO.NET 連接到 SQL 的概念證明](step-3-proof-of-concept-connecting-to-sql-using-ado-net.md)  
@@ -47,7 +46,7 @@ ADO.NET 是 .NET 語言的核心資料存取技術。 使用 System.Data.SqlClie
 ## <a name="more-samples"></a>更多的範例  
 * [ADO.NET 程式碼範例](https://msdn.microsoft.com/library/dw70f090.aspx)  
 * [在 Windows 上的.NET Framework 使用者入門](https://www.microsoft.com/sql-server/developer-get-started/csharp/win/)
-* [開始使用.NET Core macOS](https://www.microsoft.com/sql-server/developer-get-started/csharp/mac/)
+* [開始使用.NET Core macOS](https://www.microsoft.com/sql-server/developer-get-started/csharp/macos/)
 * [開始使用.NET 核心上 Ubuntu](https://www.microsoft.com/sql-server/developer-get-started/csharp/ubuntu/)
 * [開始使用.NET 核心上 Red Hat Enterprise Linux (RHEL)](https://www.microsoft.com/sql-server/developer-get-started/csharp/rhel/)
   

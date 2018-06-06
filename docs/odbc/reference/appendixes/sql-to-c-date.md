@@ -1,31 +1,28 @@
 ---
-title: "SQL 到 c： 日期 |Microsoft 文件"
-ms.custom: 
+title: SQL 到 c： 日期 |Microsoft 文件
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
-ms.component: odbc
-ms.reviewer: 
+ms.prod: sql
+ms.prod_service: connectivity
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: connectivity
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - converting data from SQL to C types [ODBC], date
 - date data type [ODBC]
 - data conversions from SQL to C types [ODBC], date
 ms.assetid: 703c7960-9cf4-4d7a-9920-53b29c184f97
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
-ms.workload: Inactive
-ms.openlocfilehash: 87a62501d4d03073d8c43b2f791ceffeec9b0b30
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+manager: craigg
+ms.openlocfilehash: d99ebd45ffa463ccfd66bd751dd7415b35a8f5d1
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sql-to-c-date"></a>SQL 到 c： 日期
 日期的 ODBC SQL 資料類型的識別項是：  
@@ -36,10 +33,10 @@ ms.lasthandoff: 12/21/2017
   
 |C 類型識別碼|測試|**TargetValuePtr*|**StrLen_or_IndPtr*|SQLSTATE|  
 |-----------------------|----------|------------------------|----------------------------|--------------|  
-|SQL_C_CHAR|*Columnsize* > 字元位元組長度<br /><br /> 11 < = *Columnsize* < = 字元位元組長度<br /><br /> *Columnsize* < 11|data<br /><br /> 截斷的資料<br /><br /> 未定義|10<br /><br /> 以位元組為單位的資料長度<br /><br /> 未定義|n/a<br /><br /> 01004<br /><br /> 22003|  
-|SQL_C_WCHAR|*Columnsize* > 字元長度<br /><br /> 11 < = *Columnsize* < = 字元長度<br /><br /> *Columnsize* < 11|data<br /><br /> 截斷的資料<br /><br /> 未定義|10<br /><br /> 以字元為單位的資料長度<br /><br /> 未定義|n/a<br /><br /> 01004<br /><br /> 22003|  
-|SQL_C_BINARY|資料的位元組長度 < = *Columnsize*<br /><br /> 資料的位元組長度 > *Columnsize*|data<br /><br /> 未定義|以位元組為單位的資料長度<br /><br /> 未定義|n/a<br /><br /> 22003|  
-|SQL_C_TYPE_DATE|無 [a]|data|6 [c]|n/a|  
+|SQL_C_CHAR|*Columnsize* > 字元位元組長度<br /><br /> 11 < = *Columnsize* < = 字元位元組長度<br /><br /> *Columnsize* < 11|資料<br /><br /> 截斷的資料<br /><br /> 未定義|10<br /><br /> 以位元組為單位的資料長度<br /><br /> 未定義|n/a<br /><br /> 01004<br /><br /> 22003|  
+|SQL_C_WCHAR|*Columnsize* > 字元長度<br /><br /> 11 < = *Columnsize* < = 字元長度<br /><br /> *Columnsize* < 11|資料<br /><br /> 截斷的資料<br /><br /> 未定義|10<br /><br /> 以字元為單位的資料長度<br /><br /> 未定義|n/a<br /><br /> 01004<br /><br /> 22003|  
+|SQL_C_BINARY|資料的位元組長度 < = *Columnsize*<br /><br /> 資料的位元組長度 > *Columnsize*|資料<br /><br /> 未定義|以位元組為單位的資料長度<br /><br /> 未定義|n/a<br /><br /> 22003|  
+|SQL_C_TYPE_DATE|無 [a]|資料|6 [c]|n/a|  
 |SQL_C_TYPE_TIMESTAMP|無 [a]|資料 [b]|16 [c]|n/a|  
   
  [a] 的值*Columnsize*會忽略這項轉換。 驅動程式假設大小 **TargetValuePtr*是 C 資料類型的大小。  

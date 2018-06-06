@@ -1,16 +1,14 @@
 ---
-title: "sys.sp_cdc_enable_table (TRANSACT-SQL) |Microsoft 文件"
-ms.custom: 
+title: sys.sp_cdc_enable_table (TRANSACT-SQL) |Microsoft 文件
+ms.custom: ''
 ms.date: 03/15/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: system-objects
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.sp_cdc_enable_table_TSQL
@@ -24,16 +22,15 @@ helpviewer_keywords:
 - sys.sp_cdc_enable_table
 - sp_cdc_enable_table
 ms.assetid: 26150c09-2dca-46ad-bb01-3cb3165bcc5d
-caps.latest.revision: 
+caps.latest.revision: 42
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 43e2866c70c60e8b7c7b7f1eaffabebf53a98ebe
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 0ed70b21e667a1738433335e3e3c869c3b410523
+ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="sysspcdcenabletable-transact-sql"></a>sys.sp_cdc_enable_table (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -79,7 +76,7 @@ sys.sp_cdc_enable_table
   
  如果未指定，名稱會衍生自來源結構描述名稱加上來源資料表名稱格式*schemaname_sourcename*。 *capture_instance*不能超過 100 個字元，而且必須是唯一的資料庫中。 指定或衍生， *capture_instance*修剪字串右邊的任何空白字元。  
   
- 一個來源資料表最多可以有兩個擷取執行個體。 如需詳細資訊，請參閱[sys.sp_cdc_help_change_data_capture &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-help-change-data-capture-transact-sql.md).  
+ 一個來源資料表最多可以有兩個擷取執行個體。 如需詳細資訊，請參閱[sys.sp_cdc_help_change_data_capture &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-help-change-data-capture-transact-sql.md)。  
   
  [  **@supports_net_changes =** ] *supports_net_changes*  
  指出是否要針對這個擷取執行個體來啟用查詢淨變更的支援。 *supports_net_changes*是**元**預設值是 1，表示資料表有主索引鍵，或者資料表沒有唯一索引，已由使用識別@index_name參數。 否則，此參數的預設值是 0。  
@@ -90,17 +87,17 @@ sys.sp_cdc_enable_table
   
  如果*supports_net_changes*設為 1， *index_name*必須加以指定、 或的來源資料表必須具有已定義的主索引鍵。  
   
- [  **@index_name =** ] **'***index_name*'  
+ [  **@index_name =** ] **' * * * index_name*'  
  要用來唯一識別來源資料表中之資料列的唯一索引名稱。 *index_name*是**sysname**而且可以是 NULL。 如果指定， *index_name*必須是有效的唯一索引，來源資料表上。 如果*index_name*指定，則識別的索引資料行的優先順序高於任何定義的主索引鍵資料行做為資料表的唯一資料列識別碼。  
   
  [  **@captured_column_list =** ] **'***captured_column_list***'**  
- 識別要包含在變更資料表中的來源資料表資料行。 *captured_column_list*是**nvarchar （max)**而且可以是 NULL。 如果是 NULL，則所有資料行都會包含在變更資料表中。  
+ 識別要包含在變更資料表中的來源資料表資料行。 *captured_column_list*是**nvarchar （max)** 而且可以是 NULL。 如果是 NULL，則所有資料行都會包含在變更資料表中。  
   
  資料行名稱必須是來源資料表中的有效資料行。 主索引鍵索引中定義的資料行或資料行中所參考之索引定義*index_name*必須包含在內。  
   
  *captured_column_list*是以逗號分隔清單的資料行名稱。 清單內的個別資料行名稱可以選擇性地使用雙引號 ("") 或方括號 ([]) 括住。 如果資料行名稱包含內嵌逗號，資料行名稱就必須括住。  
   
- *captured_column_list*不能包含下列保留的資料行名稱： **__ $start_lsn**， **__ $end_lsn**， **__ $seqval**， **__$operation**，和**__ $update_mask**。  
+ *captured_column_list*不能包含下列保留的資料行名稱： **__ $start_lsn**， **__ $end_lsn**， **__ $seqval**， **__ $作業**，和 **__ $update_mask**。  
   
  [  **@filegroup_name =** ] **'***filegroup_name***'**  
  這是要用於針對擷取執行個體所建立之變更資料表的檔案群組。 *filegroup_name*是**sysname**而且可以是 NULL。 如果指定， *filegroup_name*必須定義目前的資料庫。 如果是 NULL，就會使用預設的檔案群組。  
@@ -171,11 +168,11 @@ EXEC sys.sp_cdc_enable_table
 GO  
 ```  
   
-## <a name="see-also"></a>請參閱  
- [sys.sp_cdc_disable_table &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-disable-table-transact-sql.md)   
- [sys.sp_cdc_help_change_data_capture &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-help-change-data-capture-transact-sql.md)   
- [cdc.fn_cdc_get_all_changes_&#60; capture_instance& &#62; &#40;TRANSACT-SQL &#41;](../../relational-databases/system-functions/cdc-fn-cdc-get-all-changes-capture-instance-transact-sql.md)   
- [cdc.fn_cdc_get_net_changes_&#60; capture_instance& &#62;&#40;TRANSACT-SQL &#41;](../../relational-databases/system-functions/cdc-fn-cdc-get-net-changes-capture-instance-transact-sql.md)   
- [sys.sp_cdc_help_jobs &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-help-jobs-transact-sql.md)  
+## <a name="see-also"></a>另請參閱  
+ [sys.sp_cdc_disable_table &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-disable-table-transact-sql.md)   
+ [sys.sp_cdc_help_change_data_capture &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-help-change-data-capture-transact-sql.md)   
+ [cdc.fn_cdc_get_all_changes_&#60;capture_instance&#62;  &#40;Transact-SQL&#41;](../../relational-databases/system-functions/cdc-fn-cdc-get-all-changes-capture-instance-transact-sql.md)   
+ [cdc.fn_cdc_get_net_changes_&#60;capture_instance&#62; &#40;Transact-SQL&#41;](../../relational-databases/system-functions/cdc-fn-cdc-get-net-changes-capture-instance-transact-sql.md)   
+ [sys.sp_cdc_help_jobs &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-help-jobs-transact-sql.md)  
   
   

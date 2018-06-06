@@ -1,16 +1,15 @@
 ---
-title: "AliasName 屬性 （SqlServerAlias 類別） |Microsoft 文件"
-ms.custom: 
+title: AliasName 屬性 （SqlServerAlias 類別） |Microsoft 文件
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
 ms.component: wmi
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - AliasName Property (SqlServerAlias Class)
@@ -19,20 +18,19 @@ apilocation:
 helpviewer_keywords:
 - AliasName property
 ms.assetid: 5c4c88f3-c1cf-471a-9d91-f47657933e2f
-caps.latest.revision: 
-author: JennieHubbard
-ms.author: jhubbard
+caps.latest.revision: 31
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: fbf19bdd5162120d5aef48c4379b56fc89307c61
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.openlocfilehash: 3929b1aea1cd0008d0c7c5ec94ce909c7a2b40fb
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="aliasname-property-sqlserveralias-class"></a>AliasName 屬性 (SqlServerAlias 別名)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
-取得伺服器連接別名的名稱。  
+  取得伺服器連接別名的名稱。  
   
 ## <a name="syntax"></a>語法  
   

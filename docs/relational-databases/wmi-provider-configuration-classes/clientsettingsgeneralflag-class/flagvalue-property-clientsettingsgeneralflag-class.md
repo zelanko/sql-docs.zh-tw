@@ -1,16 +1,15 @@
 ---
-title: "FlagValue 屬性 （ClientSettingsGeneralFlag 類別） |Microsoft 文件"
-ms.custom: 
+title: FlagValue 屬性 （ClientSettingsGeneralFlag 類別） |Microsoft 文件
+ms.custom: ''
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
 ms.component: wmi
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - FlagValue Property (ClientSettingsGeneralFlag Class)
@@ -20,20 +19,19 @@ apitype: MOFDef
 helpviewer_keywords:
 - FlagValue property
 ms.assetid: 7af9e5b2-1b99-4eea-8a49-1129c0d46086
-caps.latest.revision: 
-author: JennieHubbard
-ms.author: jhubbard
+caps.latest.revision: 14
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 15d82423c606c301b02c59cfe2040b05412f0b9d
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.openlocfilehash: 19c7fd0909fd554fb32f4c79240be9ed0c0f3234
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="flagvalue-property-clientsettingsgeneralflag-class"></a>FlagValue 屬性 (ClientSettingsGeneralFlag 類別)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
-取得旗標的值。  
+  取得旗標的值。  
   
 ## <a name="syntax"></a>語法  
   

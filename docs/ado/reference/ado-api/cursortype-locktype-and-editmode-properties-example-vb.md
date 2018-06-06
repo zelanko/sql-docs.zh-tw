@@ -1,17 +1,15 @@
 ---
-title: "CursorType、 LockType 和 EditMode 屬性範例 (VB) |Microsoft 文件"
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
+title: CursorType、 LockType 和 EditMode 屬性範例 (VB) |Microsoft 文件
+ms.prod: sql
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
-ms.custom: 
+ms.technology: connectivity
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 dev_langs:
 - VB
 helpviewer_keywords:
@@ -19,16 +17,15 @@ helpviewer_keywords:
 - CursorType property [ADO], Visual Basic example
 - LockType property [ADO], Visual Basic example
 ms.assetid: 2cb4a304-f40a-4897-8b93-82c2d8e93500
-caps.latest.revision: 
+caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 56d778c210b196621d846fce5b06596571c01b8a
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 207ef59f8dd2263fcc3f32aee1ba63270bdcda61
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="cursortype-locktype-and-editmode-properties-example-vb"></a>CursorType、 LockType 和 EditMode 屬性範例 (VB)
 此範例示範設定[CursorType](../../../ado/reference/ado-api/cursortype-property-ado.md)和[LockType](../../../ado/reference/ado-api/locktype-property-ado.md)屬性之前開啟[資料錄集](../../../ado/reference/ado-api/recordset-object-ado.md)。 它也會顯示的值[EditMode](../../../ado/reference/ado-api/editmode-property.md)在各種情況下的屬性。 若要執行此程序需要 EditModeOutput 函式。  

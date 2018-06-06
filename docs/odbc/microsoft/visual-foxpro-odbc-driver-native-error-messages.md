@@ -1,31 +1,28 @@
 ---
-title: "Visual FoxPro ODBC 驅動程式原生的錯誤訊息 |Microsoft 文件"
-ms.custom: 
+title: Visual FoxPro ODBC 驅動程式原生的錯誤訊息 |Microsoft 文件
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
-ms.component: odbc
-ms.reviewer: 
+ms.prod: sql
+ms.prod_service: connectivity
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: connectivity
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - error messages [ODBC], Visual FoxPro ODBC driver
 - Visual FoxPro ODBC driver [ODBC], error messages
 - FoxPro ODBC driver [ODBC], error messages
 ms.assetid: 7b2622e8-ccee-4853-9171-4fb10de0461d
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
-ms.workload: Inactive
-ms.openlocfilehash: 9bc0b106b88eee6335514723aa083aef44bd5b66
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+manager: craigg
+ms.openlocfilehash: 2beecfb394e25edc71a8e9a37aa5d0c187052fc2
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="visual-foxpro-odbc-driver-native-error-messages"></a>Visual FoxPro ODBC 驅動程式原生的錯誤訊息
 下表列出原生 Visual FoxPro ODBC 驅動程式的錯誤訊息。  
@@ -34,7 +31,7 @@ ms.lasthandoff: 12/21/2017
   
 |||  
 |-|-|  
-|@shouldalert|無法使用功能。|  
+|1|無法使用功能。|  
 |2|輸入/輸出作業失敗。|  
 |3|找不到可用的控制代碼。|  
 |5|使用未配置的控制代碼。|  
@@ -108,7 +105,7 @@ ms.lasthandoff: 12/21/2017
 |206|遞迴巨集定義。|  
 |209|線條是太長。|  
 |210|允許執行巢狀層級超過。|  
-|211|IF &#124;其他 &#124;遺失 ENDIF 陳述式。|  
+|211|IF &#124; ELSE &#124; ENDIF 陳述式遺漏。|  
 |212|結構的巢狀結構是太深。|  
 |213|遺漏關鍵字正在 FOR...ENDFOR 或執行案例...ENDCASE 命令結構。|  
 |219|命令包含無法辨識的片語或關鍵字。|  

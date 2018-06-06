@@ -1,16 +1,13 @@
 ---
-title: sys.dm_exec_distributed_sql_requests (Transact-SQL) | Microsoft Docs
-ms.custom: 
+title: sys.dm_exec_distributed_sql_requests (TRANSACT-SQL) |Microsoft 文件
+ms.custom: ''
 ms.date: 03/15/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-data-warehouse, pdw
-ms.service: 
-ms.component: dmv's
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: system-objects
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - DM_EXEC_DISTRIBUTED_SQL_REQUESTS_TSQL
@@ -24,16 +21,16 @@ helpviewer_keywords:
 - sys.dm_exec_distributed_requests management view
 - dm_exec_distributed_requests management view
 ms.assetid: d065dc01-35d4-472f-9554-53ac41e7d104
-caps.latest.revision: 
+caps.latest.revision: 8
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 5ae66757f7d7977ab91420267d6c45be205d72c4
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 8c1a818498ba0527511d82f1df31003a03e394ff
+ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 05/23/2018
 ---
 # <a name="sysdmexecdistributedsqlrequests-transact-sql"></a>sys.dm_exec_distributed_sql_requests (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-pdw-md.md)]
@@ -42,12 +39,12 @@ ms.lasthandoff: 02/03/2018
   
 |資料行名稱|資料類型|Description|範圍|  
 |-----------------|---------------|-----------------|-----------|  
-|execution_id|**nvarchar(32)**|execution_id 和 step_index 便會產生這份檢視的索引鍵。 與要求相關聯的唯一數值識別碼。|請參閱中的識別碼[sys.dm_exec_requests &#40;TRANSACT-SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)|  
-|step_index|**int**|此分佈是一部分的查詢步驟索引。|請參閱在 step_index [sys.dm_exec_distributed_request_steps &#40;TRANSACT-SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-distributed-request-steps-transact-sql.md).|  
-|compute_node_id|**int**|此步驟中所代表的作業類型。|請參閱在 compute_node_id [sys.dm_exec_compute_nodes &#40;TRANSACT-SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-compute-nodes-transact-sql.md).|  
+|execution_id|**nvarchar(32)**|execution_id 和 step_index 便會產生這份檢視的索引鍵。 與要求相關聯的唯一數值識別碼。|請參閱中的識別碼[sys.dm_exec_requests &#40;Transact SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)|  
+|step_index|**int**|此分佈是一部分的查詢步驟索引。|請參閱在 step_index [sys.dm_exec_distributed_request_steps &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-distributed-request-steps-transact-sql.md)。|  
+|compute_node_id|**int**|此步驟中所代表的作業類型。|請參閱在 compute_node_id [sys.dm_exec_compute_nodes &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-compute-nodes-transact-sql.md)。|  
 |distribution_id|**int**|執行步驟的地方。|設定為-1 可執行在節點範圍散發範圍的要求。|  
 |status|**nvarchar(32)**|此步驟的狀態|作用中、 已取消、 已完成、 失敗、 排入佇列|  
-|error_id|**nvarchar(36)**|如果有的話，這個步驟中，與相關的錯誤的唯一識別碼|請參閱識別碼[sys.dm_exec_compute_node_errors &#40;TRANSACT-SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-compute-node-errors-transact-sql.md)，如果沒有發生錯誤則為 NULL。|  
+|error_id|**nvarchar(36)**|如果有的話，這個步驟中，與相關的錯誤的唯一識別碼|請參閱識別碼[sys.dm_exec_compute_node_errors &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-compute-node-errors-transact-sql.md)，如果沒有發生錯誤則為 NULL。|  
 |start_time|**datetime**|在步驟開始執行的時間|較小或等於目前的時間，大於或等於 end_compile_time 這個步驟所屬的查詢。|  
 |end_time|**datetime**|在此步驟中完成執行、 已取消，或失敗的時間。|較小或等於目前的時間，大於或等於 start_time，針對目前在執行中的步驟設定為 NULL，或是排入佇列。|  
 |total_elapsed_time|**int**|已執行的查詢步驟，以毫秒為單位的時間總數量|介於 0 到 end_time 和 start_time 之間的差異。 0 代表佇列的步驟。|  
@@ -58,6 +55,6 @@ ms.lasthandoff: 02/03/2018
 ## <a name="see-also"></a>另請參閱  
  [PolyBase，疑難排解動態管理檢視](http://msdn.microsoft.com/library/ce9078b7-a750-4f47-b23e-90b83b783d80)   
  [動態管理檢視與函數 &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
- [資料庫相關動態管理檢視 &#40;TRANSACT-SQL &#41;](../../relational-databases/system-dynamic-management-views/database-related-dynamic-management-views-transact-sql.md)  
+ [與資料庫相關動態管理檢視&#40;Transact SQL&#41;](../../relational-databases/system-dynamic-management-views/database-related-dynamic-management-views-transact-sql.md)  
   
   

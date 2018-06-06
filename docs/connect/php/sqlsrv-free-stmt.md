@@ -1,32 +1,31 @@
 ---
-title: "sqlsrv_free_stmt |Microsoft 文件"
-ms.custom: 
+title: sqlsrv_free_stmt | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
+ms.prod: sql
+ms.prod_service: connectivity
 ms.component: php
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
-ms.topic: article
-apiname: sqlsrv_free_stmt
+ms.technology: connectivity
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
+apiname:
+- sqlsrv_free_stmt
 apitype: NA
 helpviewer_keywords:
 - sqlsrv_free_stmt
 - API Reference, sqlsrv_free_stmt
 ms.assetid: 3c71f432-36ad-41e1-8ac7-587c82539448
-caps.latest.revision: "21"
+caps.latest.revision: 21
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
-ms.workload: Inactive
-ms.openlocfilehash: 74a114457d5f4ce3c65af6583f6ed08c0b85d007
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+manager: craigg
+ms.openlocfilehash: 8a57257fcaddfc1b5e520c99de0c217a7a57a6a1
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sqlsrvfreestmt"></a>sqlsrv_free_stmt
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -50,7 +49,7 @@ sqlsrv_free_stmt( resource $stmt)
 > **Null** 是此函數的有效參數。 這可讓函數在指令碼中多次呼叫。 例如，如果您釋放中錯誤狀況的陳述式，並在指令碼結尾一次釋放，第二個呼叫**sqlsrv_free_stmt**會傳回**true**因為第一次呼叫**sqlsrv_free_stmt** （在錯誤狀況下） 將陳述式資源設**null**。  
   
 ## <a name="example"></a>範例  
-下列範例會建立陳述式資源、執行簡單查詢，並呼叫 **sqlsrv_free_stmt** 以釋出所有與陳述式相關聯的資源。 此範例假設本機電腦上已安裝 SQL Server 和 [AdventureWorks](http://go.microsoft.com/fwlink/?LinkID=67739) 資料庫。 從命令列執行範例時，所有輸出都會寫入至主控台。  
+下列範例會建立陳述式資源、執行簡單查詢，並呼叫 **sqlsrv_free_stmt** 以釋出所有與陳述式相關聯的資源。 此範例假設 SQL Server 和[AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works)資料庫安裝在本機電腦上。 從命令列執行範例時，所有輸出都會寫入至主控台。  
   
 ```  
 <?php  
@@ -88,6 +87,8 @@ sqlsrv_close( $conn);
   
 ## <a name="see-also"></a>另請參閱  
 [SQLSRV 驅動程式 API 參考](../../connect/php/sqlsrv-driver-api-reference.md)  
+
 [關於文件中的程式碼範例](../../connect/php/about-code-examples-in-the-documentation.md)  
+
 [sqlsrv_cancel](../../connect/php/sqlsrv-cancel.md)  
   

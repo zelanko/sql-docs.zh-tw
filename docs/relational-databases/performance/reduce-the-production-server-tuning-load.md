@@ -1,17 +1,14 @@
 ---
-title: "降低生產伺服器的微調負載 | Microsoft Docs"
-ms.custom: 
+title: 降低生產伺服器的微調負載 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
-ms.component: performance
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: performance
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - overhead [Database Engine Tuning Advisor]
 - tuning overhead [SQL Server]
@@ -21,19 +18,20 @@ helpviewer_keywords:
 - production servers [SQL Server]
 - offload tuning overhead [SQL Server]
 ms.assetid: bb95ecaf-444a-4771-a625-e0a91c8f0709
-caps.latest.revision: 
+caps.latest.revision: 39
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 17d4f6a412677dbdfa580baeec777ed069cdc7d1
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 3259e4348aa9a36e929560d0233d8c6df698c108
+ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="reduce-the-production-server-tuning-load"></a>降低生產伺服器的微調負載
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] Tuning Advisor 會仰賴查詢最佳化工具來分析工作負載以及提出微調建議。 針對實際伺服器執行這項分析會增加伺服器負載，而且可能會在微調工作階段期間減損伺服器效能。 除了實際伺服器以外，您可以使用測試伺服器來減少微調工作階段期間對伺服器負載造成的影響。  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+  [!INCLUDE[ssDE](../../includes/ssde-md.md)] Tuning Advisor 會仰賴查詢最佳化工具來分析工作負載以及提出微調建議。 針對實際伺服器執行這項分析會增加伺服器負載，而且可能會在微調工作階段期間減損伺服器效能。 除了實際伺服器以外，您可以使用測試伺服器來減少微調工作階段期間對伺服器負載造成的影響。  
   
 ## <a name="how-database-engine-tuning-advisor-uses-a-test-server"></a>Database Engine Tuning Advisor 使用測試伺服器的方式  
  測試伺服器的傳統使用方式是，將生產伺服器上所有的資料都複製到測試伺服器上，然後微調測試伺服器，再於生產伺服器上實作建議項目。 這項程序可避免對生產伺服器造成效能上的影響，但卻不是最好的解決方案。 例如，從生產伺服器複製大量資料到測試伺服器，會耗用大量的時間與資源。 此外，測試伺服器硬體不太可能和生產伺服器所部署的硬體一樣強大。 微調處理所依賴的是查詢最佳化工具，而它所產生的建議有部份卻是依據基礎硬體。 如果測試與實際伺服器的硬體不同， [!INCLUDE[ssDE](../../includes/ssde-md.md)] Tuning Advisor 建議的品質就會受到影響。  

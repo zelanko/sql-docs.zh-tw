@@ -1,28 +1,27 @@
 ---
-title: "第 3 課：定義資料驅動訂閱 | Microsoft Docs"
-ms.custom: 
+title: 第 3 課：定義資料驅動訂閱 | Microsoft Docs
+ms.custom: ''
 ms.date: 05/26/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
-ms.service: 
 ms.component: reporting-services
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
-applies_to: SQL Server 2016
+applies_to:
+- SQL Server 2016
 ms.assetid: 89197b9b-7502-4fe2-bea3-ed7943eebf3b
-caps.latest.revision: "50"
+caps.latest.revision: 50
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 94e39c709c030c29d88bd874b279024c60f57fd7
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: e17d01c4ec9d288a3385c96645a3a8080487a201
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="lesson-3-defining-a-data-driven-subscription"></a>Lesson 3: Defining a Data-Driven Subscription
 在這個 [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] 教學課程中，您將利用 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 入口網站資料驅動訂閱頁面來連接訂閱資料來源、建立擷取訂閱資料的查詢，以及將結果集對應至報表和傳遞選項。  
@@ -46,7 +45,7 @@ ms.lasthandoff: 01/09/2018
 ## <a name="schedule"></a>[排程]
 1. 在 [排程] 區段中，按一下 [報表特定排程]。
 2. 按一下 [編輯排程]。
-3.  在 **[排程詳細資料]**中，按一下 **[一次]**。  
+3.  在 **[排程詳細資料]** 中，按一下 **[一次]**。  
 4.  請指定現在以後的幾分鐘做為開始時間。  
 5.  按一下 **[套用]**。
 ## <a name="destination"></a>目的地  
@@ -65,7 +64,7 @@ ms.lasthandoff: 01/09/2018
  ## <a name="credentials"></a>認證
  1. 選取 [使用以下認證]。
  2. 選取 [Windows 使用者名稱與密碼]。
- 3.  在 **[使用者名稱]** 和 **[密碼]**中，輸入網域使用者名稱和密碼。 指定 **[使用者名稱]**時，請同時包括網域和使用者帳戶。
+ 3.  在 **[使用者名稱]** 和 **[密碼]** 中，輸入網域使用者名稱和密碼。 指定 **[使用者名稱]** 時，請同時包括網域和使用者帳戶。
      > [!NOTE]  
     > 用於連接至訂閱者資料來源的認證不會傳回給 [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]。 如果您稍後修改了訂閱，就必須重新輸入用於連接到資料來源的密碼。
 ## <a name="query"></a>查詢      

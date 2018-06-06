@@ -1,28 +1,26 @@
 ---
-title: "執行陳述式 |Microsoft 文件"
-ms.custom: 
+title: 執行陳述式 |Microsoft 文件
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
-ms.component: odbc
-ms.reviewer: 
+ms.prod: sql
+ms.prod_service: connectivity
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
-ms.topic: article
-helpviewer_keywords: SQL statements [ODBC], executing
+ms.technology: connectivity
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
+helpviewer_keywords:
+- SQL statements [ODBC], executing
 ms.assetid: e5f0d2ee-0453-4faf-b007-12978dd300a1
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
-ms.workload: Inactive
-ms.openlocfilehash: ddb265060dc0714ce4eafaa09ce336d289697309
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+manager: craigg
+ms.openlocfilehash: c111620b2f06e7b2eacb159d7cf1c8817bd27c59
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="executing-a-statement"></a>執行陳述式
 有四種方式執行的陳述式，在編譯 （預備） 資料庫引擎和使用者定義時，取決於：  

@@ -1,27 +1,26 @@
 ---
-title: "新的日期和時間功能與舊版 SQL Server (OLE DB) |Microsoft 文件"
-ms.custom: 
+title: 新的日期和時間功能與舊版 SQL Server (OLE DB) |Microsoft 文件
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
 ms.component: native-client-ole-db-date-time
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 96976bac-018c-47cc-b1b2-fa9605eb55e5
-caps.latest.revision: 
+caps.latest.revision: 27
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 63d848005d0a1745070caf209f52f49dd80db1d2
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 5cb50889a9cb584e5f22d5f2e77960dba567fda1
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="new-date-and-time-features-with-previous-sql-server-versions-ole-db"></a>新的日期和時間功能與舊版 SQL Server (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -45,7 +44,7 @@ ms.lasthandoff: 01/25/2018
 |DBTYPE_DBTIME||Time(7)|失敗 – 無效的時間間隔。|確定|  
 |DBTYPE_DBTIMESTAMP|||失敗 – 無效的時間間隔。|確定|  
 |DBTYPE_DBTIMESTAMP||Datetime2(3)|確定|確定|  
-|DBTYPE_DBTIMESTAMP||Datetime2(7)|確定|確定|  
+|DBTYPE_DBTIMESTAMP||Datetime2 （7)|確定|確定|  
 |DBTYPE_DBDATE|Smalldatetime|日期|確定|確定|  
 |DBTYPE_DBTIMESTAMP|||時間欄位會設定為零。|如果時間欄位為非零，IRowsetChange 將會因為字串截斷而失敗。|  
 |DBTYPE_DBTIME||Time(0)|確定|確定|  
@@ -167,12 +166,12 @@ ms.lasthandoff: 01/25/2018
  如果在連接上有從緩衝區類型到伺服器版本之伺服器類型的支援用戶端轉換，則可以使用所有用戶端緩衝區類型。 在此內容中*伺服器類型*表示 icommandwithparameters:: Setparameterinfo，所指定，或如果尚未呼叫 icommandwithparameters:: Setparameterinfo 隱含的緩衝區類型的型別。 也就是說，DBTYPE_DBTIME2 和 DBTYPE_DBTIMESTAMPOFFSET 可以搭配下層伺服器使用，或者當 DataTypeCompatibility=80 時，如果用戶端成功轉換到支援的伺服器類型，也可以這麼做。 當然，如果伺服器類型不正確，當伺服器無法隱含地轉換到實際的伺服器類型時，仍然可能會回報錯誤。  
   
 ## <a name="sspropinitdatatypecompatibility-behavior"></a>SSPROP_INIT_DATATYPECOMPATIBILITY 行為  
- 當 SSPROP_INIT_DATATYPECOMPATIBILITY 設定為 SSPROPVAL_DATATYPECOMPATIBILITY_SQL2000 時，新的日期/時間類型和相關聯的中繼資料似乎用戶端下層用戶端，請依照中所述[大量複製變更增強型日期和時間類型 &#40; OLE DB 和 ODBC &#41;](../../relational-databases/native-client-odbc-date-time/bulk-copy-changes-for-enhanced-date-and-time-types-ole-db-and-odbc.md).  
+ 當 SSPROP_INIT_DATATYPECOMPATIBILITY 設定為 SSPROPVAL_DATATYPECOMPATIBILITY_SQL2000 時，新的日期/時間類型和相關聯的中繼資料似乎用戶端下層用戶端，請依照中所述[大量複製變更增強型日期 / 時間類型&#40;OLE DB 和 ODBC&#41;](../../relational-databases/native-client-odbc-date-time/bulk-copy-changes-for-enhanced-date-and-time-types-ole-db-and-odbc.md)。  
   
 ## <a name="comparability-for-irowsetfind"></a>IRowsetFind 的相容性  
  新的日期/時間類型允許使用所有比較運算子，因為它們會顯示為字串類型，而非日期/時間類型。  
   
 ## <a name="see-also"></a>另請參閱  
- [日期和時間增強功能 &#40; OLE DB &#41;](../../relational-databases/native-client-ole-db-date-time/date-and-time-improvements-ole-db.md)  
+ [日期和時間增強功能 & #40; OLE DB & #41;](../../relational-databases/native-client-ole-db-date-time/date-and-time-improvements-ole-db.md)  
   
   

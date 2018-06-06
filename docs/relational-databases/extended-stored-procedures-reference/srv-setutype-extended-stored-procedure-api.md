@@ -1,16 +1,15 @@
 ---
-title: "srv_setutype (擴充預存程序 API) | Microsoft Docs"
-ms.custom: 
+title: srv_setutype (擴充預存程序 API) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
 ms.component: extended-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - srv_setutype
@@ -22,16 +21,15 @@ dev_langs:
 helpviewer_keywords:
 - srv_setutype
 ms.assetid: 6160f15d-1b68-411e-ab6d-491ec288f264
-caps.latest.revision: 
+caps.latest.revision: 31
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 9dc2615a5e44a404f3bf78939392b16e8cdd394b
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
-ms.translationtype: MT
+ms.openlocfilehash: 7e715772e9af3f259d2fc97bc636fbbf8ea9e981
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="srvsetutype-extended-stored-procedure-api"></a>srv_setutype (擴充預存程序 API)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -70,7 +68,7 @@ user_type
 ## <a name="returns"></a>傳回值  
  SUCCEED 或 FAIL。 如果此資料行不存在，則會傳回 FAIL。  
   
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>Remarks  
  一個資料行有兩個資料類型：其實際資料類型與其使用者定義資料類型。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會使用使用者定義資料類型來儲存資料行的實際使用者定義資料類型，以及資料行描述資訊 (如果有的話)，例如資料行的可 NULL 性和可更新性。  
   
  利用 **srv_describe** 定義 *column* 時，以及最後一個資料列送出之前，可以呼叫 **srv_setutype** 函式。  

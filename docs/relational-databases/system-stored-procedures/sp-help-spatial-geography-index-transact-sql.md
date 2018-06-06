@@ -1,16 +1,14 @@
 ---
-title: "sp_help_spatial_geography_index (TRANSACT-SQL) |Microsoft 文件"
-ms.custom: 
+title: sp_help_spatial_geography_index (TRANSACT-SQL) |Microsoft 文件
+ms.custom: ''
 ms.date: 06/10/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: system-objects
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_help_spatial_geography_index
@@ -20,16 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_help_spatial_geography_index procedure
 ms.assetid: c9bf5675-eafc-4d71-bfdb-da963384fa0c
-caps.latest.revision: 
+caps.latest.revision: 13
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 11b7354ee38138d991ab1127db8960d255a57223
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: f2f06d0955d8f7febece5cc98c0719131554e764
+ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="sphelpspatialgeographyindex-transact-sql"></a>sp_help_spatial_geography_index (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -60,7 +57,7 @@ sp_help_spatial_geography_index [ @tabname =] 'tabname'
 ## <a name="remarks"></a>備註  
   
 ## <a name="example"></a>範例  
- 下列範例會使用`sp_help_spatial_geography_index`調查**geography**空間索引**SIndx_SpatialTable_geography_col2**資料表上定義**該索引是針對**中的給定的查詢範例 **@qs** 。 這個範例只會傳回指定索引的核心屬性。  
+ 下列範例會使用`sp_help_spatial_geography_index`調查**geography**空間索引**SIndx_SpatialTable_geography_col2**資料表上定義**該索引是針對**中的給定的查詢範例**@qs**。 這個範例只會傳回指定索引的核心屬性。  
   
 ```  
 declare @qs geography  
@@ -72,7 +69,7 @@ exec sp_help_spatial_geography_index 'geography_col', 'SIndx_SpatialTable_geogra
   
 ## <a name="requirements"></a>需求  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [空間索引預存程序](http://msdn.microsoft.com/library/1be0f34e-3d5a-4a1f-9299-bd482362ec7a)   
  [sp_help_spatial_geography_index](../../relational-databases/system-stored-procedures/sp-help-spatial-geography-index-transact-sql.md)   
  [空間索引概觀](../../relational-databases/spatial/spatial-indexes-overview.md)   

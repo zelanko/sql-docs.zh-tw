@@ -1,26 +1,17 @@
 ---
-title: "擴充事件監視預測陳述式 |Microsoft 文件"
-titleSuffix: SQL Server
-ms.custom: 
-ms.date: 03/01/2018
-ms.prod: machine-learning-services
-ms.prod_service: machine-learning-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
-author: jeannt
-ms.author: jeannt
-manager: cgronlund
-ms.workload: Inactive
-ms.openlocfilehash: 0e2847690a8d63753c9246995211d0705128f7ab
-ms.sourcegitcommit: ab25b08a312d35489a2c4a6a0d29a04bbd90f64d
+title: 擴充事件監視預測陳述式 |Microsoft 文件
+ms.prod: sql
+ms.technology: machine-learning
+ms.date: 04/15/2018
+ms.topic: conceptual
+author: HeidiSteen
+ms.author: heidist
+manager: cgronlun
+ms.openlocfilehash: 9f56544416d88cc56fed13833667bf689f395693
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="extended-events-for-monitoring-predict-statements"></a>擴充的事件監視預測陳述式
 

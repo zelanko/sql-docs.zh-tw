@@ -1,16 +1,13 @@
 ---
-title: "sys.dm_clr_properties (TRANSACT-SQL) |Microsoft 文件"
-ms.custom: 
+title: sys.dm_clr_properties (TRANSACT-SQL) |Microsoft 文件
+ms.custom: ''
 ms.date: 03/15/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, pdw
-ms.service: 
-ms.component: dmv's
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: system-objects
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.dm_clr_properties
@@ -22,16 +19,16 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_clr_properties dynamic management view
 ms.assetid: 220d062f-d117-46e7-a448-06fe48db8163
-caps.latest.revision: 
+caps.latest.revision: 26
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 77f8652347f0093b84be4853880bb504defc3b6c
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+monikerRange: '>= aps-pdw-2016 || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: f95f4d1596d84648034b51833738a26817f5e96b
+ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 05/23/2018
 ---
 # <a name="sysdmclrproperties-transact-sql"></a>sys.dm_clr_properties (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-pdw-md.md)]
@@ -66,7 +63,7 @@ ms.lasthandoff: 02/03/2018
   
  **未載入 Mscoree**和**載入 Mscoree**狀態顯示在伺服器啟動時，主控 CLR 初始化的進程，而且不可能會出現。  
   
- **利用 mscoree 鎖定 CLR 版本**其中主控的 CLR 未使用，因此，它擁有尚未初始化，可能會看到狀態。 初始化主控的 CLR 的第一次在 DDL 陳述式 (例如[CREATE ASSEMBLY &#40;TRANSACT-SQL &#41;](../../t-sql/statements/create-assembly-transact-sql.md)) 或執行 managed 的資料庫物件。  
+ **利用 mscoree 鎖定 CLR 版本**其中主控的 CLR 未使用，因此，它擁有尚未初始化，可能會看到狀態。 初始化主控的 CLR 的第一次在 DDL 陳述式 (例如[CREATE ASSEMBLY &#40;TRANSACT-SQL&#41;](../../t-sql/statements/create-assembly-transact-sql.md)) 或執行 managed 的資料庫物件。  
   
  **初始化 CLR**狀態表示已成功初始化主控的 CLR。 請注意，這並不會指出是否已啟用使用者 CLR 程式碼執行。 如果使用者 CLR 程式碼的執行是第一次啟用和停用使用[!INCLUDE[tsql](../../includes/tsql-md.md)] [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)預存程序，則狀態值仍會**初始化 CLR**。  
   
@@ -78,10 +75,10 @@ ms.lasthandoff: 02/03/2018
  屬性和值，這個檢視可能會在未來的版本中變更[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]CLR 整合功能的增強而。  
   
 ## <a name="permissions"></a>Permissions  
- 在[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]需要在伺服器上的 VIEW SERVER STATE 權限。  
   
- 在[!INCLUDE[ssSDS](../../includes/sssds-md.md)]Premium 層需要資料庫的 VIEW DATABASE STATE 權限。 在[!INCLUDE[ssSDS](../../includes/sssds-md.md)]標準和基本層需要[!INCLUDE[ssSDS](../../includes/sssds-md.md)]系統管理員帳戶。  
-  
+在[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]，需要`VIEW SERVER STATE`權限。   
+在[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]，需要`VIEW DATABASE STATE`資料庫的權限。   
+
 ## <a name="examples"></a>範例  
  下列範例會擷取有關主控 CLR 的資訊：  
   
@@ -92,6 +89,6 @@ FROM sys.dm_clr_properties;
   
 ## <a name="see-also"></a>另請參閱  
  [動態管理檢視與函數 &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
- [Common Language Runtime 相關動態管理檢視 &#40;TRANSACT-SQL &#41;](../../relational-databases/system-dynamic-management-views/common-language-runtime-related-dynamic-management-views-transact-sql.md)  
+ [Common Language Runtime 相關的動態管理檢視&#40;Transact SQL&#41;](../../relational-databases/system-dynamic-management-views/common-language-runtime-related-dynamic-management-views-transact-sql.md)  
   
   

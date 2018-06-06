@@ -1,17 +1,16 @@
 ---
-title: "序號 | Microsoft Docs"
-ms.custom: 
+title: 序號 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
 ms.component: sequence-numbers
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - sequence number object, overview
 - sequence [Database Engine]
@@ -19,20 +18,20 @@ helpviewer_keywords:
 - sequence numbers [SQL Server]
 - sequence number object
 ms.assetid: c900e30d-2fd3-4d5f-98ee-7832f37e79d1
-caps.latest.revision: 
-author: BYHAM
-ms.author: rickbyh
+caps.latest.revision: 31
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 4369c402254e0b0de8082c1670171b834585b2d5
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: f4c3b9bf5a98c2986e3acb1760154ba61eb97763
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sequence-numbers"></a>序號
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-序列是使用者定義的結構描述繫結物件，該物件會根據建立順序所使用的規格產生數值序列。 數值序列是在定義的間隔依照遞增或遞減順序來產生，而且可依照要求循環 (重複)。 與識別欄位不同的是，順序不會與資料表產生關聯。 應用程式會參考順序物件，以擷取它的下一個值。 順序與資料表之間的關聯性是由應用程式所控制。 使用者應用程式可以參考順序物件，並協調跨越多個資料列和資料表的值索引鍵。  
+  序列是使用者定義的結構描述繫結物件，該物件會根據建立順序所使用的規格產生數值序列。 數值序列是在定義的間隔依照遞增或遞減順序來產生，而且可依照要求循環 (重複)。 與識別欄位不同的是，順序不會與資料表產生關聯。 應用程式會參考順序物件，以擷取它的下一個值。 順序與資料表之間的關聯性是由應用程式所控制。 使用者應用程式可以參考順序物件，並協調跨越多個資料列和資料表的值索引鍵。  
   
  順序是使用 **CREATE SEQUENCE** 陳述式所建立，與資料表無關。 有一些選項可讓您控制遞增、最大和最小值、起點、自動重新啟動功能與快取以改善效能。 如需有關這些選項的詳細資訊，請參閱 [CREATE SEQUENCE](../../t-sql/statements/create-sequence-transact-sql.md)。  
   
@@ -395,7 +394,7 @@ GO
   
 ```  
   
- [!INCLUDE[tsql](../../includes/tsql-md.md)] 使用 `SELECT *` 的陳述式將收到新的資料行作為最後一個資料行，而非第一個資料行。 如果這是無法接受的資料行，您就必須建立全新的資料表、將資料移入其中，然後重新建立新資料表的權限。  
+ 使用 `SELECT *` 的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式將收到新的資料行做為最後一個資料行，而非第一個資料行。 如果這是無法接受的資料行，您就必須建立全新的資料表、將資料移入其中，然後重新建立新資料表的權限。  
   
 ## <a name="related-content"></a>相關內容  
  [CREATE SEQUENCE &#40;Transact-SQL&#41;](../../t-sql/statements/create-sequence-transact-sql.md)  

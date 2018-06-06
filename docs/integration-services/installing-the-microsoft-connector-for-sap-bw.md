@@ -1,32 +1,34 @@
 ---
-title: "安裝 Microsoft Connector for SAP BW | Microsoft Docs"
-ms.custom: 
+title: 安裝 Microsoft Connector for SAP BW | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
 ms.component: non-specific
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: 3bfb9023-9597-4f59-9085-4b9057e7702e
-caps.latest.revision: 
+caps.latest.revision: 11
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: f1d2716714e810143e17d3435c61de394e82b9bc
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: ff25703ca0524f9318c10bafdeff6900312e0764
+ms.sourcegitcommit: b5ab9f3a55800b0ccd7e16997f4cd6184b4995f9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 05/23/2018
+ms.locfileid: "34455212"
 ---
 # <a name="installing-the-microsoft-connector-for-sap-bw"></a>安裝 Microsoft Connector for SAP BW
   適用於 SQL Server 2016 的 [!INCLUDE[msCoName](../includes/msconame-md.md)] Connector for SAP BW 是 SQL Server 2016 Feature Pack 的元件。 若要安裝 Connector for SAP BW 及其文件，請從 [SQL Server 2016 Feature Pack 網頁](http://go.microsoft.com/fwlink/?LinkId=746297)下載並執行安裝程式。  
-  
+
+> [!IMPORTANT]
+> Microsoft 不打算提供更新版本的 Connector for SAP BW。 Microsoft 並未擁有 SAP BW 元件的原始碼，它是由協力廠商所開發，因此無法更新。 請考慮從 Microsoft ISV 夥伴，例如 [Theobald Software](https://theobald-software.com/en/xtract-is-productinfo.html)，購買最新的 SAP 連線元件。 Microsoft 的 ISV 夥伴針對 SSIS 已調整其 SAP 連線元件，以便在 Azure 中安裝。
+
 > [!IMPORTANT]  
 >  Microsoft Connector for SAP BW 的文件假設使用者已熟悉 SAP Netweaver BW 環境。 如需有關 SAP Netweaver BW 的詳細資訊，或有關如何設定 SAP Netweaver BW 物件與處理序的詳細資訊，請參閱 SAP 文件集。  
   

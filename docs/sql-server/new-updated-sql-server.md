@@ -1,20 +1,22 @@
 ---
-title: "已更新 - SQL Server 文件 | Microsoft Docs"
-description: "針對 SQL Server，顯示文件最新變更之已更新內容的程式碼片段。"
+title: 已更新 - SQL Server 文件 | Microsoft Docs
+description: 針對 SQL Server，顯示文件最新變更之已更新內容的程式碼片段。
 manager: craigg
 author: MightyPen
 ms.author: genemi
 ms.topic: article
 ms.custom: UpdArt.exe
 ms.suite: sql
+ms.technology: release-landing
+ms.prod: sql
 ms.prod_service: sql-non-specified
 ms.component: sql-server
-ms.date: 02/03/2018
-ms.openlocfilehash: d819ecfc22e3a8e27fdfe7263b1d545298ca5055
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.date: 04/28/2018
+ms.openlocfilehash: 9ccf32a232b501bb3184786af0c48dc7214b1936
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="new-and-recently-updated-sql-server-docs"></a>新文章和最近更新的文章：SQL Server 文件
 
@@ -28,7 +30,7 @@ Microsoft 幾乎每天都會在其 [Docs.Microsoft.com](http://docs.microsoft.co
 
 
 
-- 更新日期範圍：&nbsp;**2017 年 12 月 3 日**&nbsp;-至-&nbsp;**2018 年 2 月 3 日**
+- *更新日期範圍：* &nbsp; **2018-02-03** &nbsp; 至 &nbsp; **2018-04-28**
 - *主旨區域：*&nbsp;**SQL Server**。
 
 
@@ -41,7 +43,8 @@ Microsoft 幾乎每天都會在其 [Docs.Microsoft.com](http://docs.microsoft.co
 下列連結會跳至最近新增的新文章。
 
 
-1. [升級在 Windows Server 2008/2008 R2/2012 叢集上執行的 SQL Server 執行個體](failover-clusters/windows/upgrade-sql-server-failover-cluster-instance-2008-2012.md)
+1. [如何參與 SQL Server 文件](sql-server-docs-contribute.md)
+2. [SQL Server 隱私權補充](sql-server-privacy.md)
 
 
 
@@ -67,7 +70,9 @@ Microsoft 幾乎每天都會在其 [Docs.Microsoft.com](http://docs.microsoft.co
 
 此壓縮清單提供＜摘要＞一節中所有更新文章的連結。
 
-1. [SQL Server 離線說明和說明檢視器](#TitleNum_1)
+1. [SQL Server 2012 Service Pack 版本資訊](#TitleNum_1)
+2. [SQL Server 2016 版本資訊](#TitleNum_2)
+3. [SQL Server 文件](#TitleNum_3)
 
 
 
@@ -78,51 +83,110 @@ Microsoft 幾乎每天都會在其 [Docs.Microsoft.com](http://docs.microsoft.co
 
 <a name="TitleNum_1"/>
 
-### <a name="1-nbsp-sql-server-offline-help-and-help-viewersql-server-help-installationmd"></a>1.&nbsp; [SQL Server 離線說明和說明檢視器](sql-server-help-installation.md)
+### <a name="1-nbsp-sql-server-2012-service-pack-release-notessql-server-2012-sp4-release-notesmd"></a>1.&nbsp; [SQL Server 2012 Service Pack 版本資訊](sql-server-2012-sp4-release-notes.md)
 
-更新日期：2017 年 12 月 19 日 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+*更新日期：2018-04-25* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  ([下一個](#TitleNum_2))
 
-<!-- Source markdown line 67.  ms.author= "craigg".  -->
+<!-- Source markdown line 57.  ms.author= craigg.  -->
 
 &nbsp;
 
 
-<!-- git diff --ignore-all-space --unified=0 ea491fdc173a54fb4cdb3dfa2e26bd206d1cc45d 22444427a48064b76088d19d1ffae0a885bfe2a7  (PR=4338  ,  Filename=sql-server-help-installation.md  ,  Dirpath=docs\sql-server\  ,  MergeCommitSha40=f2fde1c324466530f92006561a9a29decb711e1b) -->
+<!-- git diff --ignore-all-space --unified=0 ce108992ea942b4a11f30d67a1a52d7f26868caa a6269ba2cb2d3b3b54aebf5087dc4d513e476a96  (PR=5676  ,  Filename=sql-server-2012-sp4-release-notes.md  ,  Dirpath=docs\sql-server\  ,  MergeCommitSha40=a85a46312acf8b5a59a8a900310cf088369c4150) -->
 
 
 
-   說明檢視器會開啟至 [管理內容] 索引標籤。
+- **自動軟體式 NUMA 資料分割** - 在 SQL 2014 SP2 中，於伺服器層級啟用追蹤旗標 8079 時會導入「自動[軟體式 NUMA](https://msdn.microsoft.com/library/ms345357(SQL.120).aspx)」資料分割。 在啟動期間啟用追蹤旗標 8079 時，SQL Server 2014 SP2 會查閱硬體配置，並在系統報告每個 NUMA 節點上有 8 個或更多個 CPU 時自動設定軟體式 NUMA。 自動軟體式 NUMA 會以感知超執行緒 (HT/邏輯處理器) 的方式運作。 其他節點的分割和建立可藉由增加接聽程式數目、調整以及網路和加密功能，來調整背景處理的規模。 建議先使用自動軟體式 NUMA 測試工作負載的效能，再於生產環境中將它開啟。
 
-2. 若要安裝最新說明內容套件，請選擇 [安裝來源] 下方的 [線上]。
-
-   ![HelpViewer2_ManageContent_OnlineSource](../sql-server/media/sql-server-help-installation/helpviewer2-managecontent-onlinesource.png)
-
-   >[!NOTE]
-   > 若要從磁碟進行安裝 (SQL Server 2014 說明)，請選擇 [安裝來源] 下的 [磁碟]，並指定磁碟位置。
-
-   [管理內容] 索引標籤上的 [本機存放區路徑] 會顯示本機電腦上安裝內容的位置。 如果您想要變更位置，請按一下 [移動]，並在 [到] 欄位中輸入不同資料夾路徑，然後按一下 [確定]。
-   如果說明安裝在變更本機存放區路徑後失敗，請關閉並重新開啟說明檢視器，並確保新的位置出現在本機存放區路徑中，然後重試安裝。
-
-3. 按一下您想要安裝的每個內容套件 (書籍) 旁邊的 [新增]。
-   若要安裝所有 SQL Server 說明內容，請新增 SQL Server 下的全部 13 本書籍。
-
-4. 按一下右下方的 [更新]。
-   會使用新增的書籍自動更新左側的說明目錄。
-
-   ![HelpViewer2_ManageContent_AddContent](../sql-server/media/sql-server-help-installation/helpviewer2-managecontent-addcontent.png)
-
-> [!NOTE]
-> 並非 SQL Server 目錄中的所有頂端節點標題都完全符合對應可下載說明書籍的名稱。 TOC 標題對應至書籍名稱，如下所示：
-
-| 內容窗格 | SQL Server 書籍 |
-|-----|-----|
-|Analysis Services 語言參考 | Analysis Services (MDX) 語言參考|
-|Data Analysis Expressions (DAX) 參考 | Data Analysis Expressions (DAX) 參考|
-|資料採礦延伸模組 (DMX) 參考 | 資料採礦延伸模組 (DMX) 參考|
-|適用於 SQL Server 的開發人員指南 | SQL Server 開發人員參考資料|
-|下載 SQL Server Management Studio | Transact-SQL|
+**Service Pack 3 版本資訊**
 
 
+**下載頁面**
+
+- [SQL Server 2012 SP3 Feature Pack](http://go.microsoft.com/fwlink/?linkid=615935)
+- [SQL Server 2012 SP3 Express](http://go.microsoft.com/fwlink/?linkid=692144)
+
+如需詳細資訊以根據您目前安裝的版本識別要下載的檔案名稱與位置，請參閱 [SQL Server 2012 Service Pack 3 版本資訊](https://support.microsoft.com/help/3072779/sql-server-2012-service-pack-3-release-information)中的＜選取正確的下載檔案＞一節。
+
+**Service Pack 2 版本資訊**
+
+
+**下載頁面**
+
+- [SQL Server 2012 SP2 Feature Pack](http://go.microsoft.com/fwlink/?LinkID=401008)
+- [SQL Server 2012 SP2 Express](http://go.microsoft.com/fwlink/?LinkID=401007)
+
+使用下表，根據您目前安裝的版本來識別要下載的檔案位置與名稱。 下載頁面會提供系統需求與基本安裝指示。
+
+|如果您目前安裝的版本是...|而且您想要...|下載並安裝...|
+
+
+
+&nbsp;
+
+&nbsp;
+
+---
+
+<a name="TitleNum_2"/>
+
+### <a name="2-nbsp-sql-server-2016-release-notessql-server-2016-release-notesmd"></a>2.&nbsp; [SQL Server 2016 版本資訊](sql-server-2016-release-notes.md)
+
+*更新日期：2018-04-27* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  ([上一個](#TitleNum_1) | [下一個](#TitleNum_3))
+
+<!-- Source markdown line 25.  ms.author= craigg.  -->
+
+&nbsp;
+
+
+<!-- git diff --ignore-all-space --unified=0 a15210866acf524dae49f3a7fd7957c9ffa6a78a 7257cb2017779242cbb8fa2b562f4b102502e942  (PR=5695  ,  Filename=sql-server-2016-release-notes.md  ,  Dirpath=docs\sql-server\  ,  MergeCommitSha40=d1c114b98fea55d2d4829dffdb25daf1b3f73dc2) -->
+
+
+
+  本文描述 SQL Server 2016 版 (包括 Service Pack) 的限制和問題。 如需新功能的相關資訊，請參閱 [SQL Server 2016 的新功能](https://docs.microsoft.com/sql/sql-server/what-s-new-in-sql-server-2016)。
+
+- 從**[評估中心](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016)** 下載 SQL Server 2016
+- Azure 虛擬機器小型：擁有 Azure 帳戶嗎？  接著前往 **[這裡](https://azure.microsoft.com/marketplace/partners/microsoft/sqlserver2016sp1standardwindowsserver2016/)** 來啟動已安裝 SQL Server 2016 SP1 的虛擬機器。
+- 下載 SSMS：如要取得最新版的 SQL Server Management Studio，請參閱 **[下載 SQL Server Management Studio (SSMS)]**。
+
+**<a name="bkmk_2016sp2"></a>SQL Server 2016 Service Pack 2 (SP2)**
+
+
+SQL Server 2016 SP2 包含 2016 SP1 之後發行的所有累計更新，截至並且包含 CU8。
+
+- [下載 Microsoft SQL Server 2016 Service Pack 2 (SP2)](https://go.microsoft.com/fwlink/?linkid=869608)
+- 如需完整的更新清單，請參閱 [SQL Server 2016 Service Pack 2 版本資訊](https://support.microsoft.com/help/4052908/sql-server-2016-service-pack-2-release-information)
+
+
+
+&nbsp;
+
+&nbsp;
+
+---
+
+<a name="TitleNum_3"/>
+
+### <a name="3-nbsp-sql-server-documentationsql-server-technical-documentationmd"></a>3.&nbsp; [SQL Server 文件](sql-server-technical-documentation.md)
+
+*更新日期：2018-04-27* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  ([上一個](#TitleNum_2))
+
+<!-- Source markdown line 77.  ms.author= craigg.  -->
+
+&nbsp;
+
+
+<!-- git diff --ignore-all-space --unified=0 0262010ba39785a6d46b42f8469fb17701f13008 c69a83236391d039381a93c65ebbb2efa53e11b8  (PR=5695  ,  Filename=sql-server-technical-documentation.md  ,  Dirpath=docs\sql-server\  ,  MergeCommitSha40=d1c114b98fea55d2d4829dffdb25daf1b3f73dc2) -->
+
+
+
+
+<!-- : : : m-r -->
+**試用 SQL Server！**
+- 從評估中心下載：[下載 SQL Server for Windows](http://go.microsoft.com/fwlink/?LinkID=829477)
+- 從評估中心下載：下載 SQL Server Management Studio (SSMS)
+- 從評估中心下載：下載 SQL Server Data Tools (SSDT)
+- 建立虛擬機器：[取得含 SQL Server 的虛擬機器](https://azure.microsoft.com/services/virtual-machines/sql-server/?wt.mc_id=sqL16_vm)
 
 
 
@@ -133,40 +197,36 @@ Microsoft 幾乎每天都會在其 [Docs.Microsoft.com](http://docs.microsoft.co
 本節會在我們的公開 GitHub 存放庫中，列出與其他主題區中最近更新的文章十分相似的文章：[MicrosoftDocs/sql-docs](https://github.com/MicrosoftDocs/sql-docs/)。
 
 
+
 #### <a name="subject-areas-that-do-have-new-or-recently-updated-articles"></a>具有新文章或最近更新文章的主題區
 
-
-- [新文章 + 更新文章 (1+3)：&nbsp;**Advanced Analytics for SQL** 文件](../advanced-analytics/new-updated-advanced-analytics.md)
-- [新文章 + 更新文章 (0+1)：&nbsp;**Analytics Platform System for SQL** 文件](../analytics-platform-system/new-updated-analytics-platform-system.md)
-- [新文章 + 更新文章 (0+1)：&nbsp;**連線到 SQL** 文件](../connect/new-updated-connect.md)
-- [新文章 + 更新文章 (0+1)：&nbsp;**Database Engine for SQL** 文件](../database-engine/new-updated-database-engine.md)
-- [新文章 + 更新文章 (12+1)：**Integration Services for SQL**  文件](../integration-services/new-updated-integration-services.md)
-- [新文章 + 更新文章 (6+2)：&nbsp;**Linux for SQL** 文件](../linux/new-updated-linux.md)
-- [新文章 + 更新文章 (15+0)：**PowerShell for SQL** 文件](../powershell/new-updated-powershell.md)
-- [新文章 + 更新文章 (2+9)：&nbsp;**Relational Databases for SQL** 文件](../relational-databases/new-updated-relational-databases.md)
-- [新文章 + 更新文章 (1+0)：&nbsp;**Reporting Services for SQL** 文件](../reporting-services/new-updated-reporting-services.md)
-- [新文章 + 更新文章 (1+1)：&nbsp;**SQL Operations Studio** 文件](../sql-operations-studio/new-updated-sql-operations-studio.md)
-- [新文章 + 更新文章 (1+1)：&nbsp;**Microsoft SQL Server** 文件](../sql-server/new-updated-sql-server.md)
-- [新文章 + 更新文章 (0+1)：&nbsp;**SQL Server Data Tools (SSDT)** 文件](../ssdt/new-updated-ssdt.md)
-- [新文章 + 更新文章 (1+2)：&nbsp;**SQL Server Management Studio (SSMS)** 文件](../ssms/new-updated-ssms.md)
-- [新文章 + 更新文章 (0+2)：&nbsp;**Transact-SQL** 文件](../t-sql/new-updated-t-sql.md)
+- [新文章 + 更新文章 (11+6)：&nbsp; &nbsp;**Advanced Analytics for SQL** 文件](../advanced-analytics/new-updated-advanced-analytics.md)
+- [新文章 + 更新文章 (18+0)：&nbsp; &nbsp;**Analysis Services for SQL** 文件](../analysis-services/new-updated-analysis-services.md)
+- [新文章 + 更新文章 (218+14)：**連線到 SQL** 文件](../connect/new-updated-connect.md)
+- [新文章 + 更新文章 (14+0)：&nbsp; &nbsp;**SQL 資料庫引擎**文件](../database-engine/new-updated-database-engine.md)
+- [新文章 + 更新文章 (3+2)：&nbsp; &nbsp; **Integration Services for SQL** 文件](../integration-services/new-updated-integration-services.md)
+- [新文章 + 更新文章 (3+3)：&nbsp; &nbsp; **Linux for SQL** 文件](../linux/new-updated-linux.md)
+- [新文章 + 更新文章 (7+10)：&nbsp; &nbsp;**SQL 的關聯式資料庫**文件](../relational-databases/new-updated-relational-databases.md)
+- [新文章 + 更新文章 (0+2)：&nbsp; &nbsp; **Reporting Services for SQL** 文件](../reporting-services/new-updated-reporting-services.md)
+- [新文章 + 更新文章 (1+3)：&nbsp; &nbsp; **SQL Operations Studio** 文件](../sql-operations-studio/new-updated-sql-operations-studio.md)
+- [新文章 + 更新文章 (2+3)：&nbsp; &nbsp; **Microsoft SQL Server** 文件](../sql-server/new-updated-sql-server.md)
+- [新文章 + 更新文章 (1+1)：&nbsp; &nbsp; **SQL Server Data Tools (SSDT)** 文件](../ssdt/new-updated-ssdt.md)
+- [新文章 + 更新文章 (5+2)：&nbsp; &nbsp; **SQL Server Management Studio (SSMS)** 文件](../ssms/new-updated-ssms.md)
+- [新文章 + 更新文章 (0+2)：&nbsp; &nbsp; **Transact-SQL** 文件](../t-sql/new-updated-t-sql.md)
+- [新文章 + 更新文章 (1+1)：&nbsp; &nbsp; **SQL 工具**文件](../tools/new-updated-tools.md)
 
 
 
 #### <a name="subject-areas-that-do-not-have-any-new-or-recently-updated-articles"></a>沒有新文章或最近更新文章的主題區
 
-
-- [新文章 + 更新文章 (0+0)：**SQL 資料移轉小幫手 (DMA)** 文件](../dma/new-updated-dma.md)
-- [新文章 + 更新文章 (0+0)：**ActiveX Data Objects (ADO) for SQL** 文件](../ado/new-updated-ado.md)
-- [新文章 + 更新文章 (0+0)：**SQL Analysis Services** 文件](../analysis-services/new-updated-analysis-services.md)
+- [新文章 + 更新文章 (0+0)：**SQL 的分析平台系統**文件](../analytics-platform-system/new-updated-analytics-platform-system.md)
 - [新文章 + 更新文章 (0+0)：**Data Quality Services for SQL** 文件](../data-quality-services/new-updated-data-quality-services.md)
 - [新文章 + 更新文章 (0+0)：**SQL 資料採礦延伸模組 (DMX)** 文件](../dmx/new-updated-dmx.md)
 - [新文章 + 更新文章 (0+0)：**SQL Master Data Services (MDS)** 文件](../master-data-services/new-updated-master-data-services.md)
 - [新文章 + 更新文章 (0+0)：**SQL 多維度運算式 (MDX)** 文件](../mdx/new-updated-mdx.md)
 - [新文章 + 更新文章 (0+0)：**SQL ODBC (開放式資料庫連接)** 文件](../odbc/new-updated-odbc.md)
-- [新文章 + 更新文章 (0+0)：**SQL 範例**文件](../sample/new-updated-sample.md)
+- [新文章 + 更新文章 (0+0)：**PowerShell for SQL** 文件](../powershell/new-updated-powershell.md)
+- [新文章 + 更新文章 (0+0)：**SQL 範例**文件](../samples/new-updated-samples.md)
 - [新文章 + 更新文章 (0+0)：**SQL Server 移轉小幫手 (SSMA)** 文件](../ssma/new-updated-ssma.md)
-- [新文章 + 更新文章 (0+0)：**SQL 的工具** 文件](../tools/new-updated-tools.md)
 - [新文章 + 更新文章 (0+0)：**XQuery for SQL** 文件](../xquery/new-updated-xquery.md)
-
 

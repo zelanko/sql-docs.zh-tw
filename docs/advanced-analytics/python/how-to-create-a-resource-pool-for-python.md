@@ -1,31 +1,19 @@
 ---
-title: "How To Create a Resource Pool for Python |Microsoft 文件"
-ms.custom: 
-ms.date: 04/18/2017
-ms.reviewer: 
-ms.suite: sql
-ms.prod: machine-learning-services
-ms.prod_service: machine-learning-services
-ms.component: python
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
-author: jeannt
-ms.author: jeannt
-manager: cgronlund
-ms.workload: Inactive
-ms.openlocfilehash: 49b617099953fca2eb981676eee7236406a55ece
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+title: 如何建立資源集區的 SQL Server Machine learning Python |Microsoft 文件
+ms.prod: sql
+ms.technology: machine-learning
+ms.date: 04/15/2018
+ms.topic: conceptual
+author: HeidiSteen
+ms.author: heidist
+manager: cgronlun
+ms.openlocfilehash: f46706968d09d41aaca7f28a64a1f004152237ce
+ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 05/10/2018
 ---
-# <a name="how-to-create-a-resource-pool-for-python"></a>How To Create a Resource Pool for Python
+# <a name="how-to-create-a-resource-pool-for-python"></a>如何建立資源集區的 Python
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 本節尚在開發中。
-
-> [!NOTE]
-> Python 支援是 SQL Server 2017 中的新功能，而且只在發行前版本。 尋找推出的詳細資訊。
-
-一般情況下，您可以監視任何外部指令碼，包括執行 Python 的其中一個，使用相同架構所提供的 SQL Server 2016 中的 R 指令碼資源控管。 如需詳細資訊，請參閱[資源管理針對 R](../r/resource-governance-for-r-services.md)。

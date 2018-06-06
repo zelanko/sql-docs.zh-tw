@@ -1,16 +1,15 @@
 ---
-title: "DMX 的 Analysis Services 連線類型 (SSRS) | Microsoft Docs"
-ms.custom: 
+title: DMX 的 Analysis Services 連線類型 (SSRS) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: report-data
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - parameters [Reporting Services], DMX
 - Data Mining Prediction [Reporting Services]
@@ -20,16 +19,15 @@ helpviewer_keywords:
 - data mining [Reporting Services]
 - passing parameters [Reporting Services]
 ms.assetid: 2de825e9-6d8a-4128-add0-da15dc6cea3e
-caps.latest.revision: "64"
+caps.latest.revision: 64
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 14ff9f92d3582bbad4af7d3252d2e2ae6ce170bd
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 9293053b1a3a0043b3573c1efc55f4a825ce78a5
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="analysis-services-connection-type-for-dmx-ssrs"></a>Analysis Services Connection Type for DMX (SSRS)
   當您使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 資料來源建立資料集時，報表設計師會在偵測到有效的 Cube 時顯示多維度運算式 (MDX) 查詢設計工具。 如果未偵測到任何 Cube，但是有提供資料採礦模型，報表設計師會顯示資料採礦延伸模組 (DMX) 查詢設計工具。 若要在 MDX 與 DMX 設計工具之間切換，請按一下工具列上的 [命令類型 DMX] (![變更為 DMX 查詢語言檢視](../../reporting-services/report-data/media/rsqdicon-commandtypedmx.gif "變更為 DMX 查詢語言檢視")) 按鈕。 使用 DMX 查詢設計工具，透過圖形元素以互動方式建立 DMX 查詢。 若要使用 DMX 查詢設計工具，您指定的資料來源必須已經具有提供資料的資料採礦模型。 查詢結果會轉換成扁平化的資料列集，以提供報表使用。  

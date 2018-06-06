@@ -1,31 +1,30 @@
 ---
-title: "角色切換後針對登入和作業進行管理 (SQL Server) | Microsoft Docs"
-ms.custom: 
+title: 角色切換後針對登入和作業進行管理 (SQL Server) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
-ms.prod_service: database-engine
-ms.service: 
-ms.component: failover-clusters
-ms.reviewer: 
+ms.prod: sql
+ms.prod_service: high-availability
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: dbe-high-availability
-ms.tgt_pltfrm: 
-ms.topic: article
-helpviewer_keywords: role switching [SQL Server]
+ms.technology: high-availability
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
+helpviewer_keywords:
+- role switching [SQL Server]
 ms.assetid: fc2fc949-746f-40c7-b5d4-3fd51ccfbd7b
-caps.latest.revision: "25"
+caps.latest.revision: 25
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
-ms.workload: Inactive
-ms.openlocfilehash: ff1ff9689876177cb55aaeea6689e49a478fd6d2
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+manager: craigg
+ms.openlocfilehash: 94f3340c0184142baefb5bde981e71a74e56b6a9
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="management-of-logins-and-jobs-after-role-switching-sql-server"></a>角色切換後針對登入和作業進行管理 (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 針對 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫部署高可用性或災害復原解決方案時，為該資料庫儲存的相關資訊務必完整重現於 **master** 或 **msdb** 資料庫中。 這類相關資訊通常包括主要/主體資料庫的各項作業，以及需要連接到該資料庫的使用者或處理序的登入。 您應將此資訊複寫於裝載次要/鏡像資料庫的任何 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體上。 可能的話，最好在角色切換之後，以程式設計方式在新的主要/主體資料庫上重現此資訊。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  針對 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫部署高可用性或災害復原解決方案時，為該資料庫儲存的相關資訊務必完整重現於 **master** 或 **msdb** 資料庫中。 這類相關資訊通常包括主要/主體資料庫的各項作業，以及需要連接到該資料庫的使用者或處理序的登入。 您應將此資訊複寫於裝載次要/鏡像資料庫的任何 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體上。 可能的話，最好在角色切換之後，以程式設計方式在新的主要/主體資料庫上重現此資訊。  
   
 ## <a name="logins"></a>登入  
  您應該在裝載資料庫副本的每個伺服器執行個體上，重現對主體資料庫具有存取權限的登入。 當主要/主體角色切換時，只有其登入存在於新的主要/主體伺服器執行個體上的使用者才能存取新的主要/主體資料庫。 凡是未在新的主要/主體伺服器執行個體上定義登入的使用者都將遭到遺棄，以致無法存取資料庫。  
@@ -42,7 +41,7 @@ ms.lasthandoff: 12/05/2017
   
  如需詳細資訊，請參閱 Database Engine 部落格文章： [Orphaned Users with Database Mirroring and Log Shipping](http://blogs.msdn.com/b/sqlserverfaq/archive/2009/04/13/orphaned-users-with-database-mirroring-and-log-shipping.aspx) (孤立的使用者與資料庫鏡像及記錄傳送)。  
   
-## <a name="jobs"></a>作業  
+## <a name="jobs"></a>中稱為  
  像是備份工作這類的工作，也需要特別注意。 通常在角色切換之後，資料庫擁有者或系統管理員必須為新的主要/主體資料庫重新建立各項作業。  
   
  一旦原先的主要/主體伺服器執行個體已可使用，您便應該刪除前述 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體上的原始作業。 請注意，由於目前的鏡像資料庫是在 RESTORING 狀態以致無法使用，該資料庫上的作業都將失敗。  

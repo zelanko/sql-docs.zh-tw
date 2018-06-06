@@ -1,35 +1,31 @@
 ---
-title: "個別儲存 Showplan XML Statistics Profile 事件 (SQL Server Profiler) | Microsoft Docs"
-ms.custom: 
+title: 個別儲存 Showplan XML Statistics Profile 事件 (SQL Server Profiler) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
-ms.prod_service: database-engine
-ms.service: 
-ms.component: performance
-ms.reviewer: 
+ms.prod: sql
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: performance
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - Showplan XML events
 - saving Showplan XML events
 - events [SQL Server], Showplan XML
 ms.assetid: df393f13-d538-4d94-8155-9c2fdf5f755d
-caps.latest.revision: 
+caps.latest.revision: 20
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 6a3f8e743eabbd8e084aeb28e26ccaa548adb1ba
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 163991cab48d19e65493878c0c8a39023b7a4e4d
+ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="save-showplan-xml-statistics-profile-events-separately-sql-server-profiler"></a>個別儲存 Showplan XML Statistics Profile 事件 (SQL Server Profiler)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 本主題描述如何使用 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]，將在追蹤中擷取的 **Showplan XML Statistics Profile** 事件儲存到個別的 .SQLPlan 檔案中。 您可以在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中開啟 **Showplan XML Statistics Profile** 事件檔案，以便檢視每個事件的圖形化執行計畫。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  此主題描述如何使用 **，將在追蹤中所擷取的** Showplan XML Statistics Profile [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]事件，儲存至個別的 .SQLPlan 檔案中。 您可以在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中開啟 **Showplan XML Statistics Profile** 事件檔案，以便檢視每個事件的圖形化執行計畫。  
   
 ## <a name="save-showplan-xml-statistics-profile-events-separately"></a>個別儲存 Showplan XML Statistics Profile 事件  
   
@@ -46,7 +42,7 @@ ms.lasthandoff: 01/18/2018
   
 4. 執行下列其中之一：  
   
-    -   若要將追蹤擷取至檔案，請選取 [儲存至檔案] 核取方塊。 在 **[設定最大檔案大小]**中指定一個值。  
+    -   若要將追蹤擷取至檔案，請選取 [儲存至檔案] 核取方塊。 在 **[設定最大檔案大小]** 中指定一個值。  
   
          (選擇性) 選取 **[啟用檔案換用]** 與 **[伺服器處理追蹤資料]** 核取方塊。 
   

@@ -1,28 +1,26 @@
 ---
-title: "SET COLLATE 命令 |Microsoft 文件"
-ms.custom: 
+title: SET COLLATE 命令 |Microsoft 文件
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
-ms.component: odbc
-ms.reviewer: 
+ms.prod: sql
+ms.prod_service: connectivity
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
-ms.topic: article
-helpviewer_keywords: set collate command [ODBC]
+ms.technology: connectivity
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
+helpviewer_keywords:
+- set collate command [ODBC]
 ms.assetid: 00efbcd4-fea8-4061-86a5-82de413cb753
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
-ms.workload: Inactive
-ms.openlocfilehash: 735e28da49e0c8a9dc3a12d9a29d107209ec99dd
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+manager: craigg
+ms.openlocfilehash: f1ce3b75134da55286f40dc77cf6f6ba7de7e5b6
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="set-collate-command"></a>SET COLLATE 命令
 指定字元欄位的定序順序中後續索引和排序作業。  
@@ -38,7 +36,7 @@ SET COLLATE TO cSequenceName
  *cSequenceName*  
  指定定序序列。 下表將詳述可用的定序序列選項。  
   
-|選項。|語言|  
+|選項|語言|  
 |-------------|--------------|  
 |荷蘭文|荷蘭文|  
 |GENERAL|英文、 法文、 德文、 現代西班牙文、 葡萄牙文和其他西歐語言|  
@@ -78,5 +76,5 @@ SET COLLATE TO cSequenceName
   
  例如，如果索引建立設定定序設定為一般的設定自動分頁稍後在變更設定為西班牙文，索引會保留一般的定序序列。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [ODBC Visual FoxPro 設定對話方塊](../../odbc/microsoft/odbc-visual-foxpro-setup-dialog-box.md)

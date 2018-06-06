@@ -1,32 +1,29 @@
 ---
-title: "成員範例 (VBScript) |Microsoft 文件"
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
+title: 成員範例 (VBScript) |Microsoft 文件
+ms.prod: sql
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
-ms.custom: 
+ms.technology: connectivity
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 dev_langs:
 - VB
 helpviewer_keywords:
 - Members collection [ADO MD], VBScript example
 ms.assetid: 87bbd4ad-bb1a-4123-93ef-99ef47fd970b
-caps.latest.revision: 
+caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 828d41ee052041edd1a10445444c3a543b12436a
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 575ecde16c4779c099d9b7565fe3ac5bba859b84
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="members-example-vbscript"></a>成員範例 (VBScript)
 這個範例會使用 MDX 查詢字串擷取 OLAP 資料並將產生的資料格集寫入一個 HTML 資料表結構，使用多維度資料格集資料行跨越功能。  

@@ -1,31 +1,28 @@
 ---
-title: "型式圖形文法 |Microsoft 文件"
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
+title: 型式圖形文法 |Microsoft 文件
+ms.prod: sql
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
-ms.custom: 
+ms.technology: connectivity
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - shape commands [ADO], shape grammar
 - data shaping [ADO], shape grammar
 ms.assetid: ea691475-0f03-4abe-a785-b77e77712d1d
-caps.latest.revision: 
+caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: f9eb99feba381701f7e590add3906cd0285b2720
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: d3658526e3b63069f3fce0dc1431804b5304070b
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="formal-shape-grammar"></a>型式圖形文法
 這是建立任何圖形命令的正式文法：  
@@ -49,26 +46,26 @@ ms.lasthandoff: 02/09/2018
 |詞彙|定義|  
 |----------|----------------|  
 |\<shape-command>|SHAPE [\<table-exp> [[AS] \<alias>]][\<shape-action>]|  
-|\<table-exp>|{\<provider-command-text>} &#124;<br /><br /> (\<shape 命令 >) &#124;<br /><br /> 資料表\<加上引號名稱 > &#124;<br /><br /> \<quoted-name>|  
-|\<shape-action>|附加\<別名欄位清單 > &#124;<br /><br /> 計算\<別名欄位清單 > [依\<欄位清單 >]|  
-|\<aliased-field-list>|\<aliased-field> [, \<aliased-field...>]|  
-|\<aliased-field>|\<field-exp> [[AS] \<alias>]|  
-|\<field-exp>|(\<關聯 exp >) &#124;<br /><br /> \<calculated-exp> &#124;<br /><br /> \<aggregate-exp> &#124;<br /><br /> \<new-exp>|  
-|<relation_exp>|\<table-exp> [[AS] \<alias>]<br /><br /> RELATE \<relation-cond-list>|  
-|\<relation-cond-list>|\<relation-cond> [, \<relation-cond>...]|  
-|\<relation-cond>|\<field-name> TO \<child-ref>|  
-|\<child-ref>|\<欄位名稱 > &#124;<br /><br /> PARAMETER \<param-ref>|  
+|\<table-exp>|{\<提供者命令文字 >}&#124;<br /><br /> (\<shape 命令 >)&#124;<br /><br /> 資料表\<加上引號名稱 >&#124;<br /><br /> \<加上引號名稱 >|  
+|\<shape-action>|附加\<別名欄位清單 >&#124;<br /><br /> 計算\<別名欄位清單 > [依\<欄位清單 >]|  
+|\<aliased-field-list>|\<別名欄位 > [，\<別名欄位 … >]|  
+|\<別名欄位 >|\<field-exp> [[AS] \<alias>]|  
+|\<field-exp>|(\<關聯 exp >)&#124;<br /><br /> \<計算 exp >&#124;<br /><br /> \<彙總 exp >&#124;<br /><br /> \<new-exp>|  
+|<relation_exp>|\<資料表 exp > [[AS]\<別名 >]<br /><br /> 有關\<關聯體清單 >|  
+|\<relation-cond-list>|\<關聯性條件 > [，\<關聯體 >...]|  
+|\<關聯性條件 >|\<欄位名稱 > TO\<子 ref >|  
+|\<child-ref>|\<欄位名稱 >&#124;<br /><br /> 參數\<param ref >|  
 |\<param-ref>|\<number>|  
-|\<field-list>|\<field-name> [, \<field-name>]|  
-|\<aggregate-exp>|SUM (\<限定欄位名稱 >) &#124;<br /><br /> AVG (\<限定欄位名稱 >) &#124;<br /><br /> MIN (\<限定欄位名稱 >) &#124;<br /><br /> 最大值 (\<限定欄位名稱 >) &#124;<br /><br /> 計數 (\<限定別名 > &#124;\<限定名稱 >) &#124;<br /><br /> STDEV(\<qualified-field-name>) &#124;<br /><br /> ANY(\<qualified-field-name>)|  
+|\<field-list>|\<欄位名稱 > [，\<欄位名稱 >]|  
+|\<aggregate-exp>|SUM (\<限定欄位名稱 >)&#124;<br /><br /> AVG (\<限定欄位名稱 >)&#124;<br /><br /> MIN (\<限定欄位名稱 >)&#124;<br /><br /> 最大值 (\<限定欄位名稱 >)&#124;<br /><br /> 計數 (\<限定別名 > &#124; \<限定名稱 >)&#124;<br /><br /> Stdev 函數 (\<限定欄位名稱 >)&#124;<br /><br /> 任何 (\<限定欄位名稱 >)|  
 |\<calculated-exp>|CALC(\<expression>)|  
 |\<qualified-field-name>|\<alias>.[\<alias>...]\<field-name>|  
-|\<alias>|\<quoted-name>|  
+|\<別名 >|\<加上引號名稱 >|  
 |\<field-name>|\<加上引號名稱 > [[AS]\<別名 >]|  
-|\<quoted-name>|"\<string>" &#124;<br /><br /> '\<string>' &#124;<br /><br /> [\<string>] &#124;<br /><br /> \<name>|  
+|\<加上引號名稱 >|"\<string>" &#124;<br /><br /> '\<字串 >'&#124;<br /><br /> [\<string>] &#124;<br /><br /> \<名稱 >|  
 |\<qualified-name>|alias[.alias...]|  
-|\<name>|alpha [alpha &#124; 數字 &#124; _ &#124; # &#124;: &#124;...]|  
-|\<number>|digit [digit...]|  
+|\<名稱 >|alpha [alpha&#124;位數&#124;_ &#124; # &#124; : &#124; ...]|  
+|\<number>|數字 [數字...]|  
 |\<new-exp>|新\<欄位類型 > [(\<數字 > [，\<數目 >])]|  
 |\<field-type>|OLE DB 或 ADO 資料類型。|  
 |\<string>|unicode 字元 [unicode 字元...]|  

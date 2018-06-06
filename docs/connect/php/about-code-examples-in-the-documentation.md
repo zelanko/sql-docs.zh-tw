@@ -1,44 +1,41 @@
 ---
-title: "關於文件中的程式碼範例 |Microsoft 文件"
-ms.custom: 
-ms.date: 01/19/2017
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
+title: 關於文件中的程式碼範例 |Microsoft 文件
+ms.custom: ''
+ms.date: 03/26/2018
+ms.prod: sql
+ms.prod_service: connectivity
 ms.component: php
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: connectivity
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: 3f035c37-0f2e-47d4-94e0-a10774402e82
-caps.latest.revision: "31"
+caps.latest.revision: 31
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
-ms.workload: Inactive
-ms.openlocfilehash: 4e9218af7938f3d60548a145936ba1645d4db824
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+manager: craigg
+ms.openlocfilehash: 3b3f6112d56dbb8989438730f50b11e733f71ed7
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="about-code-examples-in-the-documentation"></a>關於文件中的程式碼範例
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
+## <a name="remarks-about-the-code-examples"></a>關於程式碼範例的 < 備註 >
 執行 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] 文件中的程式碼範例時，須留意幾項要點：  
   
--   幾乎所有範例都假設已在本機電腦上安裝 SQL Server 2005 或更新版本 (如果使用 3.1 版，則為 SQL Server 2008 或更新版本) 和 AdventureWorks 資料庫。  
+-   幾乎所有範例都假設 SQL Server 2008 或更新版本和 AdventureWorks 資料庫安裝在本機電腦上。  
   
     如需如何下載 SQL Server 免費版和試用版的相關資訊，請參閱 [SQL Server](http://go.microsoft.com/fwlink/?LinkID=120193)。  
   
-    如需如何下載 AdventureWorks 資料庫的相關資訊，請參閱 [Microsoft SQL Server 範例和社群專案](http://go.microsoft.com/fwlink/?LinkID=67739)。  
-  
-    如需如何安裝 AdventureWorks 資料庫的相關資訊，請參閱 [逐步解說：安裝 AdventureWorks 資料庫](http://go.microsoft.com/fwlink/?LinkID=65819)。  
+    如需如何下載並安裝 AdventureWorks 資料庫的資訊，請參閱[SQL Server 範例 Github 儲存機制中的 AdventureWorks 頁面](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works)。
   
 -   本文件中幾乎所有的程式碼範例均應從命令列執行，如此可讓所有程式碼範例的測試自動化。 如需如何從命令列執行 PHP 的相關資訊，請參閱 [從命令列使用 PHP](http://php.net/manual/en/features.commandline.php)。  
   
--   雖然撰寫成從命令列執行，但每個範例都可以從瀏覽器呼叫而執行，且無須對指令碼進行任何變更。 若要達到最理想的輸出格式，以取代每個"\n""\<\/b >"中每個範例，再予以叫用從瀏覽器。  
+-   雖然範例是從命令列執行，每個範例可以呼叫執行，它從瀏覽器不進行任何變更的指令碼。 若要妥善格式化輸出，以取代每個"\n""\<\/b >"之前從瀏覽器叫用每個範例中。  
   
 -   為了讓每個範例專注在其重點上，我們並未在所有範例中執行正確的錯誤處理。 建議您檢查任何對 **sqlsrv** 函數或 PDO 方法的呼叫是否有錯誤，並根據應用程式的需求予以處理。  
   
@@ -58,5 +55,5 @@ ms.lasthandoff: 11/18/2017
     如需關於處理錯誤和警告的詳細資訊，請參閱 [處理錯誤和警告](../../connect/php/handling-errors-and-warnings.md)。  
   
 ## <a name="see-also"></a>另請參閱  
-[PHP SQL 驅動程式概觀](../../connect/php/overview-of-the-php-sql-driver.md)
+[Microsoft Drivers for PHP for SQL Server 的概觀](../../connect/php/overview-of-the-php-sql-driver.md)
   

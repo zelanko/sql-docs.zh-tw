@@ -1,38 +1,23 @@
 ---
-title: "在資料來源檢視設計師 (Analysis Services) 中使用圖表 |Microsoft 文件"
-ms.custom: 
-ms.date: 03/01/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords:
-- sql13.asvs.dsvdesigner.findtable.f1
-- sql13.asvs.dsvdesigner.diagramorganizerpane.f1
-- sql13.asvs.dsvdesigner.diagrampane.f1
-helpviewer_keywords:
-- data source views [Analysis Services], diagrams
-- diagrams [Analysis Services]
-ms.assetid: 491fdd22-2326-4f27-a0dd-0a02faae3fd8
-caps.latest.revision: 
-author: Minewiskan
+title: 在資料來源檢視設計師 (Analysis Services) 中使用圖表 |Microsoft 文件
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: multidimensional-models
+ms.topic: conceptual
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 96015431ceabb705a04ed7fc73a1879a7c496d8d
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: d105d9a9d446d1868fc6999953cbbfdc90c90715
+ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="work-with-diagrams-in-data-source-view-designer-analysis-services"></a>在資料來源檢視設計工具中使用圖表 (Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-資料來源檢視 (DSV) 圖表是 DSV 中物件的視覺表示法。 您可以使用圖表以互動方式加入、隱藏、刪除或修改特定物件。 您也可以在相同的 DSV 中建立多個圖表，將注意集中在物件子集。  
+  資料來源檢視 (DSV) 圖表是 DSV 中物件的視覺表示法。 您可以使用圖表以互動方式加入、隱藏、刪除或修改特定物件。 您也可以在相同的 DSV 中建立多個圖表，將注意集中在物件子集。  
   
  若要變更圖表窗格中出現的圖表區域，請按一下窗格右下角之四個方向的箭頭，然後將選擇方塊拖曳至縮圖圖表上方，直到選取要出現在圖表窗格中的區域為止。  
   
@@ -97,6 +82,6 @@ ms.lasthandoff: 02/15/2018
   
 ## <a name="see-also"></a>另請參閱  
  [多維度模型中的資料來源檢視](../../analysis-services/multidimensional-models/data-source-views-in-multidimensional-models.md)   
- [資料來源檢視設計工具 &#40;Analysis Services-多維度資料 &#41;](http://msdn.microsoft.com/library/6f40a074-761f-440b-a999-09b755bd86ce)  
+ [資料來源檢視設計工具 & #40;Analysis Services-多維度資料 & #41;](http://msdn.microsoft.com/library/6f40a074-761f-440b-a999-09b755bd86ce)  
   
   

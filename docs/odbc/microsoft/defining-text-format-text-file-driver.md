@@ -1,30 +1,27 @@
 ---
-title: "定義文字格式 （文字檔案驅動程式） |Microsoft 文件"
-ms.custom: 
+title: 定義文字格式 （文字檔案驅動程式） |Microsoft 文件
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
-ms.component: odbc
-ms.reviewer: 
+ms.prod: sql
+ms.prod_service: connectivity
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: connectivity
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - text format [ODBC]
 - text file driver [ODBC], text format
 ms.assetid: 3af46dad-52cc-4d5c-a27e-6315d65a74e6
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
-ms.workload: Inactive
-ms.openlocfilehash: 77ccccd8ea0a26c48f5d817ea5b9c0163d8a3cb6
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+manager: craigg
+ms.openlocfilehash: 4b8d87785ccb63796698e164b36728301d3c35e5
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="defining-text-format-text-file-driver"></a>定義文字格式 （文字檔案驅動程式）
 使用文字驅動程式時，您可以使用**定義文字格式**對話方塊，即可在選取的檔案中定義的資料行的格式。 此對話方塊可讓您指定每個資料表的結構描述。 這項資訊會寫入 Schema.ini 檔中的資料來源目錄。 每個文字資料來源目錄建立個別的 Schema.ini 檔案。  
@@ -34,9 +31,9 @@ ms.lasthandoff: 12/21/2017
   
  下列選項位於**定義文字格式**對話方塊：  
   
-|選項|[資訊]|  
+|選項|資訊|  
 |------------|-----------------|  
-|**[加入]**|將使用中的值的資料行**資料型別**，**名稱**，和**寬度**從對話方塊中，且如果適用的話，日期分隔符號值從 Schema.ini。|  
+|**加入**|將使用中的值的資料行**資料型別**，**名稱**，和**寬度**從對話方塊中，且如果適用的話，日期分隔符號值從 Schema.ini。|  
 |**字元**|**ANSI**或**OEM**。 OEM 獌穧非 ANSI 字元集。 如果在選取項目的格式，這預設為 OEM**資料表**清單尚未先前定義的這個對話方塊。|  
 |**資料行名稱的標頭**|指出是否要做為資料行名稱的第一個資料列，選取資料表的資料行。 任一**TRUE**或**FALSE**。 預設為 false 的 選取的項目格式**資料表**清單尚未先前定義的這個對話方塊。|  
 |**資料行**|列出選取之資料表中每個資料行的資料行名稱。 資料行的順序會反映在資料表中資料行的順序。 如果尚未選取檔案中，會啟用此清單**資料表**清單。|  

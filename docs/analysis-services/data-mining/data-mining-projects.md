@@ -1,31 +1,23 @@
 ---
-title: "資料採礦專案 |Microsoft 文件"
-ms.custom: 
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
-ms.assetid: 543d70fc-34d2-42dd-8d6d-0543109f94d0
-caps.latest.revision: 
-author: Minewiskan
+title: 資料採礦專案 |Microsoft 文件
+ms.date: 05/01/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: data-mining
+ms.topic: conceptual
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: f545d90cd695eef78f4ae8b33eef7f2f32e9439f
-ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
+ms.openlocfilehash: 1e7a4ea87642ba31693eeea6ea17bedb14c20a24
+ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="data-mining-projects"></a>資料採礦專案
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-資料採礦專案為 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 方案的一部分。 在設計過程中，您在此專案中建立的物件可當做工作空間資料庫的一部分來測試及查詢。 當您希望使用者能夠查詢或瀏覽專案中的物件時，您必須將此專案部署到以多維度模式執行的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 執行個體。  
+  資料採礦專案為 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 方案的一部分。 在設計過程中，您在此專案中建立的物件可當做工作空間資料庫的一部分來測試及查詢。 當您希望使用者能夠查詢或瀏覽專案中的物件時，您必須將此專案部署到以多維度模式執行的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 執行個體。  
   
  本主題為您提供理解及建立資料採礦專案所需的基本資訊。  
   
@@ -204,7 +196,7 @@ ms.lasthandoff: 02/23/2018
   
   
 ##  <a name="bkmk_API"></a> 以程式設計方式存取資料採礦物件  
- [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 提供數個工具，讓您以程式設計的方式來使用資料採礦專案和專案中的物件。 DMX 語言提供的陳述式可讓您用來建立資料來源和資料來源檢視，以及建立、定型和使用資料採礦結構和模型。 如需詳細資訊，請參閱[資料採礦延伸模組 &#40;DMX&#41; 參考](../../dmx/data-mining-extensions-dmx-reference.md)。  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]提供數個工具，可用來以程式設計方式使用資料採礦專案和專案中的物件。 DMX 語言提供的陳述式可讓您用來建立資料來源和資料來源檢視，以及建立、定型和使用資料採礦結構和模型。 如需詳細資訊，請參閱[資料採礦延伸模組 &#40;DMX&#41; 參考](../../dmx/data-mining-extensions-dmx-reference.md)。  
   
  您也可以使用 Analysis Services 指令碼語言 (ASSL) 或使用分析管理物件 (AMO) 來執行這些工作。 如需詳細資訊，請參閱 [在 Analysis Services 中使用 XMLA 進行開發](../../analysis-services/multidimensional-models-scripting-language-assl-xmla/developing-with-xmla-in-analysis-services.md)。  
   
@@ -215,7 +207,7 @@ ms.lasthandoff: 02/23/2018
 |工作|主題|  
 |-----------|------------|  
 |描述如何處理採礦結構資料行|[建立關聯式採礦結構](../../analysis-services/data-mining/create-a-relational-mining-structure.md)|  
-|提供有關如何加入新的採礦模型及處理結構和模型的詳細資訊|[將採礦模型加入結構 &#40;Analysis Services-資料採礦 &#41;](../../analysis-services/data-mining/add-mining-models-to-a-structure-analysis-services-data-mining.md)|  
+|提供有關如何加入新的採礦模型及處理結構和模型的詳細資訊|[將採礦模型加入結構 & #40;Analysis Services-資料採礦 & #41;](../../analysis-services/data-mining/add-mining-models-to-a-structure-analysis-services-data-mining.md)|  
 |提供資源的連結，這些資源可幫助您自訂演算法來建立採礦模型|[自訂採礦模型和結構](../../analysis-services/data-mining/customize-mining-models-and-structure.md)|  
 |提供有關每一個採礦模型檢視器之資訊的連結|[資料採礦模型檢視器](../../analysis-services/data-mining/data-mining-model-viewers.md)|  
 |了解如何建立增益圖、收益圖或分類矩陣，或是測試採礦結構|[測試和驗證 &#40;資料採礦&#41;](../../analysis-services/data-mining/testing-and-validation-data-mining.md)|  
@@ -224,7 +216,7 @@ ms.lasthandoff: 02/23/2018
   
 ## <a name="see-also"></a>另請參閱  
  [資料採礦設計師](../../analysis-services/data-mining/data-mining-designer.md)   
- [建立使用 SQL Server Data Tools &#40; 多維度模型SSDT &#41;](../../analysis-services/multidimensional-models/creating-multidimensional-models-using-sql-server-data-tools-ssdt.md)   
+ [建立使用 SQL Server Data Tools & #40; 多維度模型SSDT & #41;](../../analysis-services/multidimensional-models/creating-multidimensional-models-using-sql-server-data-tools-ssdt.md)   
  [工作空間資料庫](../../analysis-services/tabular-models/workspace-database-ssas-tabular.md)  
   
   

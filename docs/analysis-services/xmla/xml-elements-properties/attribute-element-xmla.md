@@ -1,39 +1,24 @@
 ---
-title: "屬性元素 (XMLA) |Microsoft 文件"
-ms.custom: 
-ms.date: 03/06/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services, azure-analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+title: 屬性元素 (XMLA) |Microsoft 文件
+ms.date: 05/08/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: xmla
 ms.topic: reference
-apiname: Attribute Element
-apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
-apitype: Schema
-applies_to: SQL Server 2016 Preview
-f1_keywords:
-- http://schemas.microsoft.com/analysisservices/2003/engine#Attribute
-- microsoft.xml.analysis.attribute
-- urn:schemas-microsoft-com:xml-analysis#Attribute
-helpviewer_keywords: Attribute element
-ms.assetid: 0df9cf44-dc5f-4234-8a5a-daac8aabc0d6
-caps.latest.revision: "17"
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: d8441c406aac47d1c67bc8f24f049c6073043261
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: f32b81a122fe82e2874c763bf68154f03ea75e49
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34574860"
 ---
 # <a name="attribute-element-xmla"></a>Attribute 元素 (XMLA)
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]定義或篩選中之屬性的成員父[插入](../../../analysis-services/xmla/xml-elements-commands/insert-element-xmla.md)，[更新](../../../analysis-services/xmla/xml-elements-commands/update-element-xmla.md)，或[卸除](../../../analysis-services/xmla/xml-elements-commands/drop-element-xmla.md)命令會執行。  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
+  定義或篩選中之屬性的成員父[插入](../../../analysis-services/xmla/xml-elements-commands/insert-element-xmla.md)，[更新](../../../analysis-services/xmla/xml-elements-commands/update-element-xmla.md)，或[卸除](../../../analysis-services/xmla/xml-elements-commands/drop-element-xmla.md)命令會執行。  
   
 ## <a name="syntax"></a>語法  
   
@@ -79,8 +64,8 @@ ms.lasthandoff: 01/08/2018
 ## <a name="remarks"></a>備註  
  **Attribute** 元素會定義分別由 **Insert**、 **Update**或 **Drop** 命令插入、更新或刪除的屬性成員。 因為只能針對單一屬性成員運作這些命令一次[屬性](../../../analysis-services/xmla/xml-elements-properties/attributes-element-xmla.md)集合**插入**，**更新**，和**卸除**命令只能包含一個**屬性**項目。 不過， **Attributes** 和 **Where** 命令之 **Drop** 元素的 **Update** 集合可以包含一個以上的 **Attribute** 元素，如此您就可以篩選要在可寫入維度中卸除或更新的屬性。  
   
-## <a name="see-also"></a>請參閱  
- [屬性 &#40;XMLA &#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)   
+## <a name="see-also"></a>另請參閱
+ [屬性&#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)   
  [可寫入維度](../../../analysis-services/multidimensional-models-olap-logical-dimension-objects/write-enabled-dimensions.md)  
   
   

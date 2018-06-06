@@ -1,17 +1,16 @@
 ---
-title: "XML 工作 | Microsoft Docs"
-ms.custom: 
+title: XML 工作 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
 ms.component: control-flow
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 f1_keywords:
 - sql13.dts.designer.xmltask.f1
 - sql13.dts.designer.xmltask.general.f1
@@ -19,16 +18,15 @@ helpviewer_keywords:
 - XML [Integration Services]
 - XML task [Integration Services]
 ms.assetid: 9f761846-390e-46d5-9db7-858943d40849
-caps.latest.revision: 
+caps.latest.revision: 59
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: d8826d464d7cdbfab3e17e2cca9b61ceed0ae304
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: cfddb1861284e64267e310b98f0011e49284a8c9
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="xml-task"></a>XML 工作
   XML 工作用於處理 XML 資料。 使用此工作，封裝可以擷取 XML 文件、使用「可延伸樣式表語言轉換」(XSLT) 樣式表和 XPath 運算式將作業套用到文件、合併多個文件，或者驗證、比較更新的文件，並將其儲存至檔案和變數。  
@@ -154,12 +152,12 @@ ms.lasthandoff: 01/25/2018
   
 |ReplTest1|描述|  
 |-----------|-----------------|  
-|**Validate**|針對「文件類型定義」(DTD) 或「XML 結構描述定義」(XSD) 結構描述來驗證 XML 文件。 選取此選項會在 **[驗證]**區段中顯示動態選項。|  
-|**XSLT**|在 XML 文件上執行 XSL 轉換。 選取此選項會在 **[XSLT]**區段中顯示動態選項。|  
-|**XPATH**|執行 XPath 查詢和評估。 選取此選項會在 **[XPATH]**區段中顯示動態選項。|  
-|**合併式**|合併兩份 XML 文件。 選取此選項會在 **[合併]**區段中顯示動態選項。|  
-|**Diff**|比較兩份 XML 文件。 選取此選項會在 **[Diff]**區段中顯示動態選項。|  
-|**修補**|套用 Diff 作業的輸出，以建立新文件。 選取此選項會在 **[修補]**區段中顯示動態選項。|  
+|**Validate**|針對「文件類型定義」(DTD) 或「XML 結構描述定義」(XSD) 結構描述來驗證 XML 文件。 選取此選項會在 **[驗證]** 區段中顯示動態選項。|  
+|**XSLT**|在 XML 文件上執行 XSL 轉換。 選取此選項會在 **[XSLT]** 區段中顯示動態選項。|  
+|**XPATH**|執行 XPath 查詢和評估。 選取此選項會在 **[XPATH]** 區段中顯示動態選項。|  
+|**合併式**|合併兩份 XML 文件。 選取此選項會在 **[合併]** 區段中顯示動態選項。|  
+|**Diff**|比較兩份 XML 文件。 選取此選項會在 **[Diff]** 區段中顯示動態選項。|  
+|**修補**|套用 Diff 作業的輸出，以建立新文件。 選取此選項會在 **[修補]** 區段中顯示動態選項。|  
   
  **SourceType**  
  選取 XML 文件的來源類型。 這個屬性具有下表中所列的選項。  
@@ -211,7 +209,7 @@ ms.lasthandoff: 01/25/2018
 |ReplTest1|描述|  
 |-----------|-----------------|  
 |**DTD**|使用文件類型定義 (DTD)。|  
-|**XSD**|使用 XML 結構描述定義 (XSD) 結構描述。 選取此選項會在 **[ValidationType]**區段中顯示動態選項。|  
+|**XSD**|使用 XML 結構描述定義 (XSD) 結構描述。 選取此選項會在 **[ValidationType]** 區段中顯示動態選項。|  
   
  **FailOnValidationFail**  
  指定無法驗證文件時作業是否失敗。  

@@ -1,30 +1,28 @@
 ---
-title: "SSMA For Sybase (SybaseToSQL) 中的新 GUI 功能 |Microsoft 文件"
-ms.custom: 
+title: SSMA For Sybase (SybaseToSQL) 中的新 GUI 功能 |Microsoft 文件
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
 ms.component: ssma-sybase
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ssma
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: d3c60e8c-f0a7-4590-8ece-c68ceaeaea4a
-caps.latest.revision: "4"
+caps.latest.revision: 4
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
-ms.workload: Inactive
-ms.openlocfilehash: c65710ff7ff0a89a326a4c7d5594d23fd660b8cb
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+manager: craigg
+ms.openlocfilehash: 0654347616b91764e455d00ad1b6fd8f6684ad91
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="new-gui-features-in-ssma-for-sybase-sybasetosql"></a>SSMA For Sybase (SybaseToSQL) 中的新 GUI 功能
 本章節描述 SSMA 使用者介面的新功能。  

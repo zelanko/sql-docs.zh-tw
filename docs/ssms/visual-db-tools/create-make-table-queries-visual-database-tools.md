@@ -1,16 +1,15 @@
 ---
-title: "建立製成資料表查詢 (Visual Database Tools) | Microsoft Docs"
-ms.custom: 
+title: 建立製成資料表查詢 (Visual Database Tools) | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
 ms.component: ssms-visual-db
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: tools-ssms
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ssms
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - queries [SQL Server], types
 - table creation [SQL Server], Make Table query
@@ -18,19 +17,19 @@ helpviewer_keywords:
 - Make Table query
 - adding tables
 ms.assetid: 4493cffa-7b2d-4c24-8ef0-d49329198972
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: acfdff6b986b32d36f8b81ce17e9962bf04a2883
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.openlocfilehash: d1edb9d9834489b1bb1626009deacc6a6a82a6eb
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="create-make-table-queries-visual-database-tools"></a>建立製成資料表查詢 (Visual Database Tools)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 您可以使用製成資料表查詢 (Make Table Query)，將資料列複製到新的資料表中；這種方法非常適合用來建立要使用的資料子集，或是將資料表的內容從其中一個資料庫複製到另一個資料庫。 製成資料表查詢與插入結果查詢相似，但前者會建立用來複製資料列的新資料表。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+您可以使用製成資料表查詢 (Make Table Query)，將資料列複製到新的資料表中；這種方法非常適合用來建立要使用的資料子集，或是將資料表的內容從其中一個資料庫複製到另一個資料庫。 製成資料表查詢與插入結果查詢相似，但前者會建立用來複製資料列的新資料表。  
   
 建立製成資料表查詢時，請指定：  
   

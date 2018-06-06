@@ -1,36 +1,33 @@
 ---
-title: "陳述式轉換 |Microsoft 文件"
-ms.custom: 
+title: 陳述式轉換 |Microsoft 文件
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
-ms.component: odbc
-ms.reviewer: 
+ms.prod: sql
+ms.prod_service: connectivity
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: connectivity
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - transitioning states [ODBC], statement
 - state transitions [ODBC], statement
 - statement transitions [ODBC]
 ms.assetid: 3d70e0e3-fe83-4b4d-beac-42c82495a05b
-caps.latest.revision: "8"
+caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
-ms.workload: Inactive
-ms.openlocfilehash: 50a20cb922b3f608a9d16cd24d5c288b096e01ca
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+manager: craigg
+ms.openlocfilehash: 5f20ec0efb42e877695c44f4d62c4ffc1ae79806
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="statement-transitions"></a>陳述式轉換
 ODBC 陳述式具有下列狀態。  
   
-|State|描述|  
+|State|Description|  
 |-----------|-----------------|  
 |S0|未配置的陳述式。 （C4、 C5 或 C6，必須是連接狀態。 如需詳細資訊，請參閱[連接轉換](../../../odbc/reference/appendixes/connection-transitions.md)。)|  
 |S1|配置陳述式。|  
@@ -329,7 +326,7 @@ ODBC 陳述式具有下列狀態。
   
  [1] 這個資料列會顯示轉換時*選項*已 SQL_CLOSE。  
   
- [2] 這個資料列會顯示轉換時*選項*SQL_UNBIND 或 SQL_RESET_PARAMS。 如果*選項*引數以前是 SQL_DROP 與基礎驅動程式的 ODBC 3*.x*驅動程式，驅動程式管理員對應到呼叫**SQLFreeHandle**與*HandleType*設定為 SQL_HANDLE_STMT。 如需詳細資訊，請參閱轉換資料表[SQLFreeHandle](../../../odbc/reference/syntax/sqlfreehandle-function.md)。  
+ [2] 這個資料列會顯示轉換時*選項*SQL_UNBIND 或 SQL_RESET_PARAMS。 如果*選項*引數以前是 SQL_DROP 與基礎驅動程式的 ODBC 3 *.x*驅動程式，驅動程式管理員對應到呼叫**SQLFreeHandle**與*HandleType*設定為 SQL_HANDLE_STMT。 如需詳細資訊，請參閱轉換資料表[SQLFreeHandle](../../../odbc/reference/syntax/sqlfreehandle-function.md)。  
   
 ## <a name="sqlgetconnectattr"></a>SQLGetConnectAttr  
   

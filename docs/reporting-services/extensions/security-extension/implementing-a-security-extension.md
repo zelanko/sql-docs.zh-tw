@@ -1,33 +1,32 @@
 ---
-title: "實作安全性延伸模組 | Microsoft Docs"
-ms.custom: 
+title: 實作安全性延伸模組 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
-ms.service: 
 ms.component: extensions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 helpviewer_keywords:
 - security [Reporting Services], extensions
 - forms-based authentication [Reporting Services]
 - custom authentication [Reporting Services]
 - extensions [Reporting Services], custom security
 ms.assetid: d2327e7c-0d48-49e3-bcd9-3bba4e67a68b
-caps.latest.revision: "40"
+caps.latest.revision: 40
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 8ea0868671791715dd9312eacdc9d8a75e1da7fc
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 8b6a81d2171a013af5b02684ca0e4e1f2372ac5f
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="implementing-a-security-extension"></a>實作安全性延伸模組
   [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows 驗證是保護 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 中的報表之主要系統。 不過，在某些情況下，您可能需要擴充 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 安全性系統，以配合企業中的自訂安全性。 您可以使用 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] API 提供的開發平台來完成這項動作。 本節將提供 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 中安全性延伸模組的概觀。  

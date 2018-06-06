@@ -1,25 +1,22 @@
 ---
-title: "開始使用 Linux 上的 SQL Server 安全性 |Microsoft 文件"
-description: "本文說明常見的安全性動作。"
+title: 開始使用 Linux 上的 SQL Server 安全性 |Microsoft 文件
+description: 本文說明常見的安全性動作。
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.date: 10/02/2017
 ms.topic: article
-ms.prod: sql-non-specified
-ms.prod_service: database-engine
-ms.service: 
-ms.component: 
+ms.prod: sql
+ms.component: ''
 ms.suite: sql
-ms.technology: database-engine
+ms.technology: linux
 ms.assetid: ecc72850-8b01-492e-9a27-ec817648f0e0
 ms.custom: sql-linux
-ms.workload: Inactive
-ms.openlocfilehash: 8000ee26dd5118d4380f4e2ab33d39aa96967466
-ms.sourcegitcommit: a8311ec5ad8313e85e6989f70c5ff9ef120821d6
+ms.openlocfilehash: 0d7f2244a20f117d2886cdee59d54adfa4029721
+ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="walkthrough-for-the-security-features-of-sql-server-on-linux"></a>SQL Server on Linux 的安全性功能的逐步解說
 

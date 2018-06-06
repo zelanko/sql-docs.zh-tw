@@ -1,16 +1,14 @@
 ---
-title: "sp_purge_jobhistory (TRANSACT-SQL) |Microsoft 文件"
-ms.custom: 
+title: sp_purge_jobhistory (TRANSACT-SQL) |Microsoft 文件
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: system-objects
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_purge_jobhistory_TSQL
@@ -20,16 +18,16 @@ dev_langs:
 helpviewer_keywords:
 - sp_purge_jobhistory
 ms.assetid: 237f9bad-636d-4262-9bfb-66c034a43e88
-caps.latest.revision: 
+caps.latest.revision: 33
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 7f50228e089d71a6cf3a8d74225e1e26f42844fd
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 9c998f8b105ed0f85eb6637a3f861e435af4471e
+ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="sppurgejobhistory-transact-sql"></a>sp_purge_jobhistory (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -56,9 +54,9 @@ sp_purge_jobhistory
 >  成員**sysadmin**固定伺服器角色或成員的**SQLAgentOperatorRole**固定的資料庫角色可以執行**sp_purge_jobhistory**但未指定*job_name*或*job_id*。 當**sysadmin**使用者未指定這些引數，所指定的時間內會刪除所有本機作業和多伺服器作業的作業記錄*oldest_date*。 當**SQLAgentOperatorRole**使用者未指定這些引數，所指定的時間內會刪除所有本機作業的作業記錄*oldest_date*。  
   
  [ **@job_id=** ] *job_id*  
- 這是要刪除記錄之作業的作業識別碼。 *job_id*是**uniqueidentifier**，預設值是 NULL。 任一*job_id*或*job_name*必須指定，但不可同時指定兩者。 請參閱說明中的注意事項 **@job_name** 如需有關資訊**sysadmin**或**SQLAgentOperatorRole**使用者可以使用這個引數。  
+ 這是要刪除記錄之作業的作業識別碼。 *job_id*是**uniqueidentifier**，預設值是 NULL。 任一*job_id*或*job_name*必須指定，但不可同時指定兩者。 請參閱說明中的注意事項**@job_name**如需有關資訊**sysadmin**或**SQLAgentOperatorRole**使用者可以使用這個引數。  
   
- [ **@oldest_date** = ] *oldest_date*  
+ [ **@oldest_date** =] *oldest_date*  
  要保留在記錄中的最舊記錄。 *oldest_date*是**datetime**，預設值是 NULL。 當*oldest_date*指定，則**sp_purge_jobhistory**只會移除比指定的值還舊的記錄。  
   
 ## <a name="return-code-values"></a>傳回碼值  
@@ -107,9 +105,9 @@ GO
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [sp_help_job &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-job-transact-sql.md)   
- [sp_help_jobhistory &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-jobhistory-transact-sql.md)   
+ [sp_help_job &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-job-transact-sql.md)   
+ [sp_help_jobhistory &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-jobhistory-transact-sql.md)   
  [系統預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
- [GRANT 物件權限 &#40;TRANSACT-SQL &#41;](../../t-sql/statements/grant-object-permissions-transact-sql.md)  
+ [GRANT 物件權限 &#40;Transact-SQL&#41;](../../t-sql/statements/grant-object-permissions-transact-sql.md)  
   
   

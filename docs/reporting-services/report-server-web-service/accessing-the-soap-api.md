@@ -1,17 +1,17 @@
 ---
-title: "存取 SOAP API | Microsoft Docs"
-ms.custom: 
+title: 存取 SOAP API | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
-ms.service: 
 ms.component: report-server-web-service
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 helpviewer_keywords:
 - XML Web service [Reporting Services], WSDL
 - Web service [Reporting Services], SOAP
@@ -24,16 +24,15 @@ helpviewer_keywords:
 - Report Server Web service, WSDL
 - referencing WSDL
 ms.assetid: 63bb870a-4dbf-46bd-8921-78f8ebe5fd75
-caps.latest.revision: "38"
+caps.latest.revision: 38
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: ea6fb5b31ac0a95eb287d52d865b718a45aaf652
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: c7c892b8953edfe61c555d1988c3aa73aae8383d
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="accessing-the-soap-api"></a>存取 SOAP API
   報表伺服器 Web 服務透過 HTTP 使用簡易物件存取通訊協定 (SOAP)，並在用戶端程式與報表伺服器之間當做通訊介面。 Web 服務提供兩個端點 (一個用於報表執行，一個用於報表管理)，並且含有方法以及一組您可用以存取完整功能的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 之複雜類型的物件。 若要呼叫服務，您必須參考 Reporting Services Web 服務描述語言 (WSDL)。  

@@ -1,37 +1,35 @@
 ---
-title: "連接至 DB2 (DB2ToSQL) |Microsoft 文件"
-ms.prod: sql-non-specified
+title: 連接至 DB2 (DB2ToSQL) |Microsoft 文件
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
 ms.component: ssma-db2
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ssma
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: 9d485fd0-ab5d-402a-a59a-e9982a61b7de
-caps.latest.revision: "4"
+caps.latest.revision: 4
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
-ms.workload: Inactive
-ms.openlocfilehash: e08da1c1922fce1154ec4ca16cd99a757ff973bd
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+manager: craigg
+ms.openlocfilehash: 09d4e69aefa89ed9930badc575be4fdc302d5f35
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="connect-to-db2-db2tosql"></a>連接至 DB2 (DB2ToSQL)
 使用**連接到 DB2**對話方塊連接到您想要移轉的 DB2 資料庫。  
   
 若要存取此對話方塊，請在**檔案**功能表上，選取**連接到 DB2**。 如果您之前已連線，則命令是**重新連接至 DB2**。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
 **提供者**  
 選取連接至 DB2 資料庫的資料存取提供者。 可用的提供者是 DB2 用戶端提供者和 OLE DB 提供者。 預設值是 DB2 用戶端提供者。  
   
@@ -65,7 +63,7 @@ ms.lasthandoff: 12/21/2017
   
 這是標準模式選項。  
   
-**User name**  
+**使用者名稱**  
 輸入 SSMA 將用來連接到 DB2 資料庫的使用者名稱。  
   
 **密碼**  

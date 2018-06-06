@@ -1,30 +1,23 @@
 ---
-title: "Invoke-ascmd 指令程式 |Microsoft 文件"
-ms.custom: 
-ms.date: 03/07/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services, azure-analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+title: Invoke-ascmd 指令程式 |Microsoft 文件
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: powershell
 ms.topic: reference
-ms.assetid: 2896b74a-3911-4b3f-89ab-bb375bdb34d8
-caps.latest.revision: "15"
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: dd40b6d9f777fbea8d12f804b01b537d0ad846ce
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: cf570da0e7be70fda804a3f17d11f6c8498c1605
+ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="invoke-ascmd-cmdlet"></a>Invoke-ASCmd 指令程式
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]讓資料庫管理員能夠執行 XMLA 指令碼、 多維度運算式 (MDX)、 資料採礦延伸模組 (DMX) 陳述式或 Tabular Model Scripting Language (TMSL) 指令碼。  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
+  讓資料庫管理員能夠執行 XMLA 指令碼、多維度運算式 (MDX)、資料採礦延伸模組 (DMX) 陳述式或表格式模型指令碼語言 (TMSL) 指令碼。  
   
  在 SQL Server 2016 Analysis Services 執行個體上，只有表格式伺服器模式才支援 TMSL。  
   
@@ -35,7 +28,7 @@ ms.lasthandoff: 01/08/2018
   
  `Invoke-ASCmd –InputFile <string> [-Server <string>] [-Database <string>] [-Credential <PSCredential>] [-ConnectionTimeout <int>] [-QueryTimeout <int>] [-Variable <string[]>] [-TraceFile <string>] [-TraceFileFormat <TraceFileFormatOption>] [-TraceFileDelimiter <string>] [-TraceTimeout <int>] [-TraceLevel <TraceLevelOption>] [<CommonParameters>]`  
   
-## <a name="description"></a>描述  
+## <a name="description"></a>Description  
  Invoke-ASCmd 指令程式可以執行包含在輸入檔中的查詢或指令碼。  
   
  若是 XMLA，支援下列命令：Alter、Backup、Batch、BeginTransaction、Cancel、ClearCache、CommitTransaction、Create、Delete、DesignAggregations、Drop、Insert、Lock、MergePartitions、NotifyTableChange、Process、Restore、RollbackTransaction、Statement (用來執行 MDX 查詢和 DMX 陳述式)、Subscribe、Synchronize、Unlock、Update、UpdateCells。  
@@ -68,7 +61,7 @@ ms.lasthandoff: 01/08/2018
 |接受管線輸入？|false|  
 |接受萬用字元？|false|  
   
-### <a name="-server-string"></a>伺服器\<字串 >  
+### <a name="-server-string"></a>-Server \<string>  
  指定指令程式將會連接並執行的 Analysis Services 執行個體。 如果沒有提供伺服器名稱，將會建立 localhost 的連接。 若為預設執行個體，請單獨指定伺服器名稱。 若為具名執行個體，請使用格式 servername\instancename。 若為 HTTP 連接，請使用格式 http[s]://server[:port]/virtualdirectory/msmdpump.dll。  
   
 |||  
@@ -204,7 +197,7 @@ ms.lasthandoff: 01/08/2018
 |||  
 |-|-|  
 |輸入|PSObject|  
-|輸出|String|  
+|輸出|字串|  
   
 ## <a name="example-1-xmla-input-file"></a>範例 1 (XMLA 輸入檔)  
   

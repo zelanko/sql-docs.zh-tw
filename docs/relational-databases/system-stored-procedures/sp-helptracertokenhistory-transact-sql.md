@@ -1,16 +1,15 @@
 ---
-title: "sp_helptracertokenhistory (TRANSACT-SQL) |Microsoft 文件"
-ms.custom: 
+title: sp_helptracertokenhistory (TRANSACT-SQL) |Microsoft 文件
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - sp_helptracertokenhistory
 ms.assetid: 96910d1c-be76-43eb-9c93-4477e6761749
-caps.latest.revision: 
+caps.latest.revision: 26
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 3ad9a67f66222ff87753056ea1b27b2ad83e6e8d
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 6cab0dacd02e57cead03cdb0aeef35a385afb349
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sphelptracertokenhistory-transact-sql"></a>sp_helptracertokenhistory (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -53,7 +51,7 @@ sp_helptracertokenhistory [ @publication = ] 'publication'
  這是追蹤 Token 插入其中之發行集的名稱。 *發行集*是**sysname**，沒有預設值。  
   
  [  **@tracer_id=** ] *tracer_id*  
- 中之追蹤 token 識別碼[MStracer_tokens &#40;TRANSACT-SQL &#41;](../../relational-databases/system-tables/mstracer-tokens-transact-sql.md)記錄傳回資訊的資料表。 *tracer_id*是**int**，沒有預設值。  
+ 中之追蹤 token 識別碼[MStracer_tokens &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-tables/mstracer-tokens-transact-sql.md)記錄傳回資訊的資料表。 *tracer_id*是**int**，沒有預設值。  
   
  [  **@publisher=** ] **'***發行者***'**  
  發行者的名稱。 *發行者*是**sysname**，預設值是 NULL。  
@@ -80,7 +78,7 @@ sp_helptracertokenhistory [ @publication = ] 'publication'
 ## <a name="remarks"></a>備註  
  **sp_helptracertokenhistory**用於異動複寫中。  
   
- 執行[sp_helptracertokens &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/sp-helptracertokens-transact-sql.md)取得發行集的追蹤 token 清單。  
+ 執行[sp_helptracertokens &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-stored-procedures/sp-helptracertokens-transact-sql.md)取得發行集的追蹤 token 清單。  
   
  結果集中的 NULL 值表示無法計算延遲統計資料。 這是因為散發者端或某個訂閱者端尚未收到追蹤 Token。  
   
@@ -90,8 +88,8 @@ sp_helptracertokenhistory [ @publication = ] 'publication'
 ## <a name="permissions"></a>Permissions  
  只有成員**sysadmin**固定伺服器角色、 **db_owner**在發行集資料庫中，固定資料庫角色或**db_owner**固定的資料庫或**replmonitor**散發資料庫中的角色可以執行**sp_helptracertokenhistory**。  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [針對異動複寫測量延遲及驗證連線](../../relational-databases/replication/monitor/measure-latency-and-validate-connections-for-transactional-replication.md)   
- [sp_deletetracertokenhistory &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/sp-deletetracertokenhistory-transact-sql.md)  
+ [sp_deletetracertokenhistory &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-deletetracertokenhistory-transact-sql.md)  
   
   

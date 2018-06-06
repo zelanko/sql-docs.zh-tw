@@ -1,16 +1,14 @@
 ---
-title: "容錯移轉叢集和 AlwaysOn 可用性群組 (SQL Server) | Microsoft Docs"
-ms.custom: 
+title: 容錯移轉叢集和 AlwaysOn 可用性群組 (SQL Server) | Microsoft Docs
+ms.custom: ''
 ms.date: 07/02/2017
-ms.prod: sql-non-specified
-ms.prod_service: database-engine
-ms.service: 
-ms.component: availability-groups
-ms.reviewer: 
+ms.prod: sql
+ms.prod_service: high-availability
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: dbe-high-availability
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: high-availability
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - clustering [SQL Server]
 - Availability Groups [SQL Server], WSFC clusters
@@ -19,19 +17,20 @@ helpviewer_keywords:
 - failover clustering [SQL Server], AlwaysOn Availability Groups
 - Availability Groups [SQL Server], Failover Cluster Instances
 ms.assetid: 613bfbf1-9958-477b-a6be-c6d4f18785c3
-caps.latest.revision: "48"
+caps.latest.revision: 48
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.workload: Active
-ms.openlocfilehash: dd664120017d7e498fd2930281380c718e98aaa9
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+monikerRange: '>= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 4df759c9abc55c6f8c987fdf294bdb417b97524c
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="failover-clustering-and-always-on-availability-groups-sql-server"></a>容錯移轉叢集和 AlwaysOn 可用性群組 (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
    [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] (也就是 [!INCLUDE[sssql11](../../../includes/sssql11_md.md)] 中所引進的高可用性和災害復原解決方案) 需要 Windows Server 容錯移轉叢集 (WSFC)。 此外，雖然 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 不依賴 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 容錯移轉叢集，但是您可以使用容錯移轉叢集執行個體 (FCI) 來裝載可用性群組的可用性複本。 請務必了解每個叢集技術的角色，也要知道設計您的 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 環境時所必須考量的事項。  
   
@@ -60,11 +59,6 @@ ms.lasthandoff: 01/18/2018
   
  如需在 Windows Server 容錯移轉叢集 (WSFC) 節點上執行 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 以及 WSFC 仲裁的資訊，請參閱 [SQL Server 的 Windows Server 容錯移轉叢集&#40;WSFC&#41; ](../../../sql-server/failover-clusters/windows/windows-server-failover-clustering-wsfc-with-sql-server.md)。  
   
-### <a name="cross-cluster-migration-of-always-on-availability-groups-for-os-upgrade"></a>針對作業系統升級進行 AlwaysOn 可用性群組的跨叢集移轉  
- 從 [!INCLUDE[ssSQL11SP1](../../../includes/sssql11sp1-md.md)]開始， [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 對於部署至新的 Windows Server 容錯移轉叢集 (WSFC) 叢集的情況，支援跨叢集移轉可用性群組。 跨叢集移轉是指以最短的停機時間，將一個可用性群組或一批可用性群組移到新的目的地 WSFC 叢集。 跨叢集移轉程序可讓您在升級至 [!INCLUDE[win8srv](../../../includes/win8srv-md.md)] 叢集的同時，維護您的服務等級協定 (SLA)。 [!INCLUDE[ssSQL11SP1](../../../includes/sssql11sp1-md.md)] (或更新版本) 必須針對目的地 WSFC 叢集上的 AlwaysOn 安裝及啟用。 跨叢集移轉是否成功，取決於目的地 WSFC 叢集整套計畫和準備工作。  
-  
- 如需詳細資訊，請參閱 [針對作業系統升級進行 AlwaysOn 可用性群組的跨叢集移轉](http://msdn.microsoft.com/library/jj873730.aspx)。  
-  
 ##  <a name="SQLServerFC"></a> [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 容錯移轉叢集執行個體 (FCI) 和可用性群組  
  您可以藉由實作 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 容錯移轉叢集連同 WSFC 叢集，在伺服器執行個體層級設定容錯移轉的第二層。 可用性複本可由 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 獨立執行個體或 FCI 執行個體所裝載。 只有一個 FCI 夥伴可以裝載給定可用性群組的複本。 在 FCI 上執行可用性複本時，可用性群組的可能擁有者清單只包含使用中 FCI 節點。  
   
@@ -90,7 +84,7 @@ ms.lasthandoff: 01/18/2018
  **可用性群組的容錯移轉原則設定適用於所有複本，無論複本裝載於獨立執行個體或 FCI 執行個體。  
   
 > [!NOTE]  
->  如需適用不同 **版本之容錯移轉叢集和** AlwaysOn 可用性群組 **內** 節點數目 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]的詳細資訊，請參閱 [SQL Server 2012 版本支援的功能](http://go.microsoft.com/fwlink/?linkid=232473) (http://go.microsoft.com/fwlink/?linkid=232473)。  
+>  如需適用不同 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 版本之容錯移轉叢集和 **AlwaysOn 可用性群組**內**節點數目**的詳細資訊，請參閱 [SQL Server 2012 版本支援的功能](http://go.microsoft.com/fwlink/?linkid=232473) (http://go.microsoft.com/fwlink/?linkid=232473)。  
   
 ### <a name="considerations-for-hosting-an-availability-replica-on-an-fci"></a>FCI 裝載可用性複本的考量  
   

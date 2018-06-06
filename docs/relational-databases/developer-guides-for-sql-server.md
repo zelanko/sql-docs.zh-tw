@@ -1,32 +1,32 @@
 ---
-title: "適用於 SQL Server 的開發人員指南 | Microsoft Docs"
+title: 適用於 SQL Server 的開發人員指南 | Microsoft Docs
 ms.date: 10/19/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, analysis-services, integration-services, reporting-services, master-data-services
-ms.service: 
 ms.component: relational-databases-misc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.custom: 
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.custom: ''
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 f1_keywords:
 - sql13.portal.DevRef.f1
 ms.assetid: e60866bf-c726-479e-8a38-6bced16f527c
-caps.latest.revision: 
+caps.latest.revision: 24
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: eac97b7988a9e929578863e97fad9ecd8c20070f
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 955314ec1957d7e37b85a3da1f680a04496eebbb
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="developer-guides-for-sql-server"></a>適用於 SQL Server 的開發人員指南
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] 透過使用程式設計模型和介面的自訂程式碼，整合幾乎所有的 SQL Server 功能。 每個功能區域都會包括用於資料收集、資料存取、伺服器管理或資料視覺化的原生和受管理 API。  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+  透過使用程式設計模型和介面的自訂程式碼，整合幾乎所有的 SQL Server 功能。 每個功能區域都會包括用於資料收集、資料存取、伺服器管理或資料視覺化的原生和受管理 API。  
   
 ## <a name="sql-server-developer-edition-free"></a>SQL Server Developer Edition (免費！)
 

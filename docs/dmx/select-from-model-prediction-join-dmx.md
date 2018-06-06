@@ -1,15 +1,14 @@
 ---
-title: "SELECT FROM&lt;模型&gt;預測 JOIN (DMX) |Microsoft 文件"
-ms.custom: 
+title: SELECT FROM&lt;模型&gt;預測 JOIN (DMX) |Microsoft 文件
+ms.custom: ''
 ms.date: 03/02/2016
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
 ms.component: data-mining
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - PREDICTION
@@ -18,7 +17,8 @@ f1_keywords:
 - join
 - FROM
 - PREDICTION JOIN
-dev_langs: DMX
+dev_langs:
+- DMX
 helpviewer_keywords:
 - prediction joins [DMX]
 - PREDICTION JOIN statement
@@ -27,16 +27,15 @@ helpviewer_keywords:
 - singleton query predictions [DMX]
 - SELECT FROM <model> PREDICTION JOIN statement
 ms.assetid: 7ca37fec-4a50-4d79-b1d6-1c7c12176946
-caps.latest.revision: "43"
+caps.latest.revision: 43
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: 77afa48b63dd145406cdead7e7b0b0bf675aedb5
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 7014d546d0484dcd5d741844a98c8060f925c96c
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="select-from-ltmodelgt-prediction-join-dmx"></a>SELECT FROM&lt;模型&gt;預測 JOIN (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -111,7 +110,7 @@ FROM <model> | <sub select> [NATURAL] PREDICTION JOIN
   
 -   家裡有兩個小孩  
   
- 查詢使用 TM Decision Tree 採礦模型和關於主體的已知的特性，會傳回布林值，描述個人是否購買自行車，以及一組表格式值，傳回[PredictHistogram &#40; DMX &#41;](../dmx/predicthistogram-dmx.md)函式，說明如何進行預測。  
+ 查詢使用 TM Decision Tree 採礦模型和關於主體的已知的特性，會傳回布林值，描述個人是否購買自行車，以及一組表格式值，傳回[PredictHistogram &#40;DMX&#41; ](../dmx/predicthistogram-dmx.md)函式，說明如何進行預測。  
   
 ```  
 SELECT  
@@ -185,7 +184,7 @@ ORDER BY [LastName] ASC
   
 -   Mountain-200  
   
- [預測 &#40; DMX &#41;](../dmx/predict-dmx.md)函式是多型態類型，並可以搭配所有模型類型。 您可以使用 value3 做為函數的引數，以限制查詢所傳回的項目數目。 **選取**遵循 NATURAL PREDICTION JOIN 子句的清單提供要用於預測做為輸入的值。  
+ [預測&#40;DMX&#41; ](../dmx/predict-dmx.md)函式是多型態類型，並可以搭配所有模型類型。 您可以使用 value3 做為函數的引數，以限制查詢所傳回的項目數目。 **選取**遵循 NATURAL PREDICTION JOIN 子句的清單提供要用於預測做為輸入的值。  
   
 ```  
 SELECT FLATTENED  
@@ -208,10 +207,10 @@ NATURAL PREDICTION JOIN
   
  包含可預測屬性 `[v Assoc Seq Line Items]` 的資料行是資料表資料行，因此，查詢會傳回包含巢狀資料表的單一資料行。 根據預設，巢狀資料表資料行的名稱為 `Expression`。 如果您的提供者不支援階層式資料列集，您可以使用**FLATTENED**關鍵字，讓結果更容易檢視，在此範例所示。  
   
-## <a name="see-also"></a>請參閱  
- [SELECT &#40; DMX &#41;](../dmx/select-dmx.md)   
- [資料採礦延伸模組 &#40; DMX &#41;資料定義陳述式](../dmx/dmx-statements-data-definition.md)   
- [資料採礦延伸模組 &#40; DMX &#41;資料操作陳述式](../dmx/dmx-statements-data-manipulation.md)   
- [資料採礦延伸模組 &#40;DMX&#41; 陳述式參考](../dmx/data-mining-extensions-dmx-statements.md)  
+## <a name="see-also"></a>另請參閱  
+ [選取&AMP;#40;DMX&AMP;#41;](../dmx/select-dmx.md)   
+ [資料採礦延伸模組&#40;DMX&#41;資料定義陳述式](../dmx/dmx-statements-data-definition.md)   
+ [資料採礦延伸模組&#40;DMX&#41;資料操作陳述式](../dmx/dmx-statements-data-manipulation.md)   
+ [資料採礦延伸模組 & #40; DMX & #41;陳述式參考](../dmx/data-mining-extensions-dmx-statements.md)  
   
   

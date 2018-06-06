@@ -1,16 +1,14 @@
 ---
-title: "sp_OAGetErrorInfo (TRANSACT-SQL) |Microsoft 文件"
-ms.custom: 
+title: sp_OAGetErrorInfo (TRANSACT-SQL) |Microsoft 文件
+ms.custom: ''
 ms.date: 03/16/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: system-objects
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_OAGetErrorInfo_TSQL
@@ -20,16 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_OAGetErrorInfo
 ms.assetid: ceecea08-456f-4819-85d9-ecc9647d7187
-caps.latest.revision: 
+caps.latest.revision: 16
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 7b4477349f95fc286fce553f81e449162d8de511
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: b272cbcc6fc8221dede3b4a1274032926910186a
+ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="spoageterrorinfo-transact-sql"></a>sp_OAGetErrorInfo (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -93,7 +90,7 @@ sp_OAGetErrorInfo [ objecttoken ]
 |-----------------------|------------------|  
 |**不正確的變數類型 (0x80020008)**|資料型別[!INCLUDE[tsql](../../includes/tsql-md.md)]值傳遞為方法參數不符合[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]做為方法參數傳遞的方法參數或 NULL 值的資料類型。|  
 |**未知的名稱 (0x8002006)**|找不到指定物件的指定屬性或方法名稱。|  
-|**無效的類別字串 (0x800401f3)**|指定的 ProgID 或 CLSID 未登錄為 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的 OLE 物件。 必須先登錄自訂 OLE automation 伺服程式，他們可以使用具現化**sp_OACreate**。 作法是使用同處理序 (.dll) 伺服器的 Regsvr32.exe 公用程式或**/REGSERVER**本機 (.exe) 伺服器的命令列參數。|  
+|**無效的類別字串 (0x800401f3)**|指定的 ProgID 或 CLSID 未登錄為 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的 OLE 物件。 必須先登錄自訂 OLE automation 伺服程式，他們可以使用具現化**sp_OACreate**。 作法是使用同處理序 (.dll) 伺服器的 Regsvr32.exe 公用程式或 **/REGSERVER**本機 (.exe) 伺服器的命令列參數。|  
 |**伺服器執行失敗 (0x80080005)**|指定的 OLE 物件已登錄成本機 OLE 伺服器 (.exe 檔)，但找不到或無法啟動 .exe 檔。|  
 |**指定的模組找不到 (0x8007007e)**|指定的 OLE 物件已登錄成同處理序 OLE 伺服器 (.dll 檔)，但找不到或無法載入 .dll 檔。|  
 |**類型不符 (0x80020005)**|用來儲存傳回的屬性值或方法傳回值之 [!INCLUDE[tsql](../../includes/tsql-md.md)] 本機變數的資料類型不符合屬性或方法傳回值的 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 資料類型。 或要求了屬性或方法的傳回值，但它沒有傳回值。|  
@@ -128,8 +125,8 @@ BEGIN
 END;  
 ```  
   
-## <a name="see-also"></a>請參閱  
- [OLE Automation 預存程序 &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/ole-automation-stored-procedures-transact-sql.md)   
+## <a name="see-also"></a>另請參閱  
+ [OLE Automation 預存程序&#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/ole-automation-stored-procedures-transact-sql.md)   
  [OLE Automation 範例指令碼](../../relational-databases/stored-procedures/ole-automation-sample-script.md)  
   
   

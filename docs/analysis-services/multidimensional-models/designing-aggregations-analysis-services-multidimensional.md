@@ -1,34 +1,23 @@
 ---
-title: "設計彙總 (Analysis Services-多維度) |Microsoft 文件"
-ms.custom: 
-ms.date: 03/04/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
-helpviewer_keywords:
-- aggregations [Analysis Services], partitions
-- partitions [Analysis Services], aggregations
-ms.assetid: 3072b7e0-6961-42ad-a287-16f391f2cec4
-caps.latest.revision: 
-author: Minewiskan
+title: 設計彙總 (Analysis Services-多維度) |Microsoft 文件
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: multidimensional-models
+ms.topic: conceptual
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 71e50fc874562cceddc91b454a246b29370cf7c7
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: c720b45a0ac674282ad78bafd5dcd67bba8b60cc
+ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="designing-aggregations-analysis-services---multidimensional"></a>設計彙總 (Analysis Services - 多維度)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-彙總是 Cube 資料的預先計算摘要，可幫助啟用 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 以提供快速查詢回應。  
+  彙總是 Cube 資料的預先計算摘要，可幫助啟用 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 以提供快速查詢回應。  
   
  若要設定分割區的儲存選項和設計彙總，請使用彙總設計精靈。 此精靈一次操作一個量值群組的單一分割區，因此您可以為每一個分割區選取不同的選項和設計。 此精靈會逐步引導您設定分割區的儲存和設計彙總。 如需設定儲存的詳細資訊，請參閱。  
   

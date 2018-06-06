@@ -1,16 +1,15 @@
 ---
-title: "教學課程：擁有權鏈結和內容切換 | Microsoft 文件"
-ms.custom: 
+title: 教學課程：擁有權鏈結和內容切換 | Microsoft 文件
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
 ms.component: tutorial
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: get-started-article
 applies_to:
 - SQL Server 2016
@@ -18,16 +17,15 @@ helpviewer_keywords:
 - context switching [SQL Server], tutorials
 - ownership chains [SQL Server]
 ms.assetid: db5d4cc3-5fc5-4cf5-afc1-8d4edc1d512b
-caps.latest.revision: 
+caps.latest.revision: 16
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: b473f9f36e66de356c92e627114c934022b37838
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 22aa54280e01854e44b8b3d64eefbd797eb98276
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="tutorial-ownership-chains-and-context-switching"></a>Tutorial: Ownership Chains and Context Switching
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -105,7 +103,7 @@ GRANT CREATE PROCEDURE
 GO  
 ```  
   
-如需 GRANT 陳述式的詳細資訊，請參閱 [GRANT &#40;Transact-SQL&#41;](../t-sql/statements/grant-transact-sql.md)。 如需預存程序的詳細資訊，請參閱[預存程序 &#40;Database Engine&#41;](../relational-databases/stored-procedures/stored-procedures-database-engine.md)。 如需所有 [!INCLUDE[ssDE](../includes/ssde-md.md)] 權限的海報，請參閱 [http://go.microsoft.com/fwlink/?LinkId=229142](http://go.microsoft.com/fwlink/?LinkId=229142)。  
+如需 GRANT 陳述式的詳細資訊，請參閱 [GRANT &#40;Transact-SQL&#41;](../t-sql/statements/grant-transact-sql.md)。 如需預存程序的詳細資訊，請參閱[預存程序 &#40;Database Engine&#41;](../relational-databases/stored-procedures/stored-procedures-database-engine.md)。 如需所有 [!INCLUDE[ssDE](../includes/ssde-md.md)] 權限的海報，請參閱 [https://aka.ms/sql-permissions-poster](https://aka.ms/sql-permissions-poster)。  
   
 ## <a name="2-create-a-stored-procedure-to-access-data"></a>2.建立預存程序來存取資料  
 若要在資料庫內切換內容，請使用 EXECUTE AS 陳述式。 EXECUTE AS 則需要 IMPERSONATE 權限。  

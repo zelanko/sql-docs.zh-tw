@@ -1,28 +1,21 @@
 ---
-title: "還原 Master 資料庫 (Analytics Platform System)"
-author: barbkess
-ms.author: barbkess
-manager: jhubbard
-ms.prod: analytics-platform-system
-ms.prod_service: mpp-data-warehouse
-ms.service: 
-ms.component: 
-ms.technology: mpp-data-warehouse
-ms.custom: 
-ms.date: 01/05/2017
-ms.reviewer: na
-ms.suite: sql
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: 7870021a-0d89-422e-b8ea-1cc95b45c139
-caps.latest.revision: "11"
-ms.openlocfilehash: b82ef65734b6953c085436d5322e7bf42ef979b4
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+title: 還原 master 資料庫-Analytics Platform System |Microsoft 文件
+description: 還原 master 資料庫中 Analytics Platform System。
+author: mzaman1
+manager: craigg
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
+ms.openlocfilehash: 184184f332225e76e152c2d909cfff788b4fea91
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/19/2018
 ---
-# <a name="restore-the-master-database"></a>還原 Master 資料庫
+# <a name="restore-the-master-database-in-analytics-platform-system"></a>還原 master 資料庫中 Analytics Platform System
 **還原 Master**頁面的 SQL Server PDW 組態管理員可讓您從備份還原 master 資料庫。  
   
 ## <a name="before-you-begin"></a>開始之前  
@@ -32,7 +25,7 @@ ms.lasthandoff: 12/21/2017
   
 ## <a name="to-restore-the-master-database"></a>還原 master 資料庫  
   
-1.  啟動 Configuration Manager。 如需詳細資訊，請參閱[啟動組態管理員 &#40;Analytics Platform System &#41;](launch-the-configuration-manager.md).  
+1.  啟動 Configuration Manager。 如需詳細資訊，請參閱[啟動 Configuration Manager &#40;Analytics Platform System&#41;](launch-the-configuration-manager.md)。  
   
 2.  在左窗格的 Configuration Manager 中，按一下 **還原 Master**。  
   

@@ -1,32 +1,30 @@
 ---
-title: "發行項屬性 - &lt;發行項&gt; | Microsoft Docs"
-ms.custom: 
+title: 發行項屬性 - &lt;發行項&gt; | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
 ms.component: replication
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 f1_keywords:
 - sql13.rep.newpubwizard.articleproperties.f1
 helpviewer_keywords:
 - Article Properties dialog box
 ms.assetid: 6dd601a4-1233-43d9-a9f0-bc8d84e5d188
-caps.latest.revision: 
+caps.latest.revision: 38
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 7595219fb959841de041650f7c8f104af464cc19
-ms.sourcegitcommit: ab25b08a312d35489a2c4a6a0d29a04bbd90f64d
+ms.openlocfilehash: 12c255b06cd56ff27f1ada7f3ca0f0fa36113407
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="article-properties---ltarticlegt"></a>發行項屬性 - &lt;發行項&gt;
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -61,7 +59,7 @@ ms.lasthandoff: 03/08/2018
   
 -   針對每個結構描述，請使用和結構描述相同的名稱，將使用者加入至訂閱資料庫。  
   
- **[將 XML 轉換為 NTEXT]**、 **[將 MAX 資料類型轉換為 NTEXT 和 IMAGE]**、 **[將新的日期時間轉換為 NVARCHAR]**、 **[將檔案資料流轉換為 MAX 資料類型]**、 **[將大的 CLR 轉換為 MAX 資料類型]**、 **[將 hierarchyId 轉換為 MAX 資料類型]**和 **[將空間轉換為 MAX 資料類型]**。  
+ **[將 XML 轉換為 NTEXT]**、 **[將 MAX 資料類型轉換為 NTEXT 和 IMAGE]**、 **[將新的日期時間轉換為 NVARCHAR]**、 **[將檔案資料流轉換為 MAX 資料類型]**、 **[將大的 CLR 轉換為 MAX 資料類型]**、 **[將 hierarchyId 轉換為 MAX 資料類型]** 和 **[將空間轉換為 MAX 資料類型]**。  
  決定是否要依照描述的方式轉換資料類型和屬性。 如果您要將這些資料類型複寫至舊版 **，請指定** [True] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]值。 這樣做可確保系統會在訂閱者端正確處理它們。  
   
  **目的地物件名稱**  
@@ -116,7 +114,7 @@ ms.lasthandoff: 03/08/2018
  **追蹤層級**  
  決定是否將相同資料列或相同資料行的變更視為衝突。  
   
- **[確認 INSERT 權限]**、 **[確認 UPDATE 權限]**和 **[確認 DELETE 權限]**  
+ **[確認 INSERT 權限]**、 **[確認 UPDATE 權限]** 和 **[確認 DELETE 權限]**  
  在同步處理期間，決定是否檢查訂閱者登入在發行集資料庫之已發行的資料表上有 INSERT、UPDATE 或 DELETE 權限。 預設值為 **[False]** ，因為合併式複寫並不需要取得這些權限；存取已發行的資料表是透過發行集存取清單 (PAL) 控制。 如需 PAL 的詳細資訊，請參閱[保護發行者](../../relational-databases/replication/security/secure-the-publisher.md)。  
   
  如果您要允許一或多個訂閱者上傳某些變更到已發行的資料，而非其他的資料時，您可以要求檢查權限。 例如，您可以將訂閱者加入至 PAL，但是不在發行集資料庫的資料表上給予訂閱者任何權限。 接著，您可以將 [確認 DELETE 權限] 設定為 **[True]**：訂閱者能夠上傳插入和更新，但無法上傳刪除。  
@@ -150,7 +148,7 @@ ms.lasthandoff: 03/08/2018
  在此對話方塊的 **[陳述式傳遞]** 區段中，如果發行項在交易式發行集內，且您選取使用預存程序將變更傳播到訂閱者 (預設值)，請選取是否也要將這些程序複製到每個訂閱者。 如果您選取 **[False]**，則必須手動複製程序，否則散發代理程式在嘗試傳遞變更時將會失敗。  
   
  **目的地物件擁有者**  
- 如果您輸入 **[dbo]**以外的值：  
+ 如果您輸入 **[dbo]** 以外的值：  
   
 -   針對執行 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 或更新版本的訂閱者，您必須確定在訂閱者端使用和輸入之值相同的名稱來建立結構描述。 如需詳細資訊，請參閱 [CREATE SCHEMA &#40;Transact-SQL&#41;](../../t-sql/statements/create-schema-transact-sql.md)。  
   

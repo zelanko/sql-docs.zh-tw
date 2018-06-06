@@ -1,34 +1,31 @@
 ---
-title: "&lt;xsd:simpleType&gt; 宣告的值 | Microsoft 文件"
-ms.custom: 
+title: '&lt;xsd:simpleType&gt; 宣告的值 | Microsoft 文件'
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
 ms.component: xml
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- dbe-xml
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: xml
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - xsd:simpleType declarations
 ms.assetid: 557b972d-3af9-40bf-8382-72b05c9de1c1
-caps.latest.revision: 
+caps.latest.revision: 14
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 6a7f0988718d6dcb5f96c52eeaa818fc4c315464
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.openlocfilehash: 88285809430b9865183ba94181fca3ec54179f0e
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="values-for-ltxsdsimpletypegt-declarations"></a>&lt;xsd:simpleType&gt; 宣告的值
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
-下表根據所有可辨識的 XSD 簡單類型列舉，簡述適用的限制。  
+  下表根據所有可辨識的 XSD 簡單類型列舉，簡述適用的限制。  
   
  此外，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不支援 **\<xsd:simpleType>** 宣告中的 NaN 值。 伺服器將會拒絕包含 NaN 值的結構描述。  
   

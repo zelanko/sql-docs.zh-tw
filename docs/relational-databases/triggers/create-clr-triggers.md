@@ -1,36 +1,34 @@
 ---
-title: "建立 CLR 觸發程序 | Microsoft Docs"
-ms.custom: 
+title: 建立 CLR 觸發程序 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/16/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
 ms.component: triggers
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-dml
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - CRL triggers
 - DML triggers, CLR triggers
 - DDL triggers, CLR triggers
 ms.assetid: 31f41703-134d-49fc-9850-76c297351c2c
-caps.latest.revision: 
+caps.latest.revision: 27
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 20b895e85805f7688da2338697fe952675e85ceb
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 4c09adf155120de6cb150bdf7d97c37b2e17e177
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="create-clr-triggers"></a>建立 CLR 觸發程序
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
-在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，您可以在內部建立資料庫物件，這些物件是透過使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] Common Language Runtime (CLR) 建立的組件所撰寫的。 可以使用 CLR 所提供之豐富程式設計模型的資料庫物件，包括 DML 觸發程序、DDL 觸發程序、預存程序、函數、彙總函式以及類型。  
+  在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，您可以在內部建立資料庫物件，這些物件是透過使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] Common Language Runtime (CLR) 建立的組件所撰寫的。 可以使用 CLR 所提供之豐富程式設計模型的資料庫物件，包括 DML 觸發程序、DDL 觸發程序、預存程序、函數、彙總函式以及類型。  
   
  在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中建立 CLR 觸發程序 (DML 或 DDL) 包含下列步驟：  
   

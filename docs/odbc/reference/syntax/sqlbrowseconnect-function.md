@@ -1,32 +1,33 @@
 ---
-title: "SQLBrowseConnect 函數 |Microsoft 文件"
-ms.custom: 
+title: SQLBrowseConnect 函數 |Microsoft 文件
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
-ms.component: odbc
-ms.reviewer: 
+ms.prod: sql
+ms.prod_service: connectivity
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
-ms.topic: article
-apiname: SQLBrowseConnect
-apilocation: sqlsrv32.dll
+ms.technology: connectivity
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
+apiname:
+- SQLBrowseConnect
+apilocation:
+- sqlsrv32.dll
 apitype: dllExport
-f1_keywords: SQLBrowseConnect
-helpviewer_keywords: SQLBrowseConnect function [ODBC]
+f1_keywords:
+- SQLBrowseConnect
+helpviewer_keywords:
+- SQLBrowseConnect function [ODBC]
 ms.assetid: b7f1be66-e6c7-4790-88ec-62b7662103c0
-caps.latest.revision: "36"
+caps.latest.revision: 36
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
-ms.workload: Inactive
-ms.openlocfilehash: 10470316e18dcedd1c3cd36c6f837a7deb4ceba3
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+manager: craigg
+ms.openlocfilehash: 66daf3ce016b8688ada1d584865a97675a7dbc01
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sqlbrowseconnect-function"></a>SQLBrowseConnect 函數
 **一致性**  
@@ -63,7 +64,7 @@ SQLRETURN SQLBrowseConnect(
   
  如果*OutConnectionString*是 NULL， *StringLength2Ptr*仍會傳回的總字元數 （不含字元資料 null 結束字元） 可用來傳回緩衝區中所指*OutConnectionString*。  
   
- *Columnsize*  
+ *BufferLength*  
  [輸入]長度，以字元為單位的 **OutConnectionString*緩衝區。  
   
  *StringLength2Ptr*  
@@ -75,12 +76,12 @@ SQLRETURN SQLBrowseConnect(
 ## <a name="diagnostics"></a>診斷  
  當**SQLBrowseConnect**傳回 SQL_ERROR、 SQL_SUCCESS_WITH_INFO 或 SQL_NEED_DATA，相關聯的 SQLSTATE 值可以藉由呼叫取得**SQLGetDiagRec**與*HandleType*利用 SQL_HANDLE_STMT 的和*ConnectionHandle 的控制代碼*。 下表列出通常所傳回的 SQLSTATE 值**SQLBrowseConnect** ，並說明這個函式; 每個內容中的標記法 」 (DM) 」 之前描述的驅動程式管理員傳回的 Sqlstate。 每個 SQLSTATE 值相關聯的傳回碼是 SQL_ERROR，除非有說明，否則為。  
   
-|SQLSTATE|錯誤|描述|  
+|SQLSTATE|錯誤|Description|  
 |--------------|-----------|-----------------|  
 |01000|一般警告|特定驅動程式告知性訊息。 （函式會傳回 SQL_SUCCESS_WITH_INFO）。|  
 |01004|字串資料，右邊遭截斷|緩衝區\* *OutConnectionString*仍不夠大，無法傳回整個瀏覽結果連接字串，所以已截斷字串。 緩衝區 **StringLength2Ptr*包含未截斷的瀏覽結果連接字串的長度。 （函式會傳回 SQL_NEED_DATA）。|  
 |01S00|無效的連接字串屬性|瀏覽要求的連接字串中指定無效的屬性關鍵字 (*InConnectionString*)。 （函式會傳回 SQL_NEED_DATA）。<br /><br /> 瀏覽要求的連接字串中指定一個屬性的關鍵字 (*InConnectionString*) 時，不適用於目前的連接層級。 （函式會傳回 SQL_NEED_DATA）。|  
-|01S02 的警告|值已變更|驅動程式不支援指定的值*ValuePtr*引數中的**SQLSetConnectAttr**置換相似的值。 （函式會傳回 SQL_SUCCESS_WITH_INFO）。|  
+|01S02|值已變更|驅動程式不支援指定的值*ValuePtr*引數中的**SQLSetConnectAttr**置換相似的值。 （函式會傳回 SQL_SUCCESS_WITH_INFO）。|  
 |08001|無法建立連線的用戶端|驅動程式無法建立與資料來源的連接。|  
 |08002|使用中的連接名稱|(DM) 指定的連接必須已經用來建立與資料來源的連接和連接為開啟。|  
 |08004|伺服器拒絕連線|資料來源的拒絕連線的建立實作定義理由。|  
@@ -113,9 +114,13 @@ SQLRETURN SQLBrowseConnect(
 ## <a name="inconnectionstring-argument"></a>InConnectionString 引數  
  瀏覽要求的連接字串的語法如下：  
   
- *連接字串*:: =*屬性*[;] &#124;*屬性*;*連接 stringattribute* :: =*屬性關鍵字*=*屬性值*&#124;驅動程式 = [{]*屬性值 [*}]*屬性關鍵字*:: = DSN &#124;UID &#124;PWD &#124;*驅動程式-定義-屬性-keywordattribute-值*:: =*字元-stringdriver-定義-屬性-關鍵字*:: =*識別碼*  
+ *連接字串*:: =*屬性*[`;`] &#124; *屬性* `;` *連接字串*;<br>
+ *屬性*:: =*屬性關鍵字*`=`*屬性值* &#124; `DRIVER=`[`{`]*屬性 / 值*[`}`]<br>
+ *屬性關鍵字*:: = `DSN` &#124; `UID` &#124; `PWD` &#124; *驅動程式-定義-屬性-關鍵字*<br>
+ *屬性值*:: =*字元字串*<br>
+ *驅動程式-定義-屬性-關鍵字*:: =*識別碼*<br>
   
- 其中*字元字串*有零個或多個字元。*識別碼*有一或多個字元。*屬性關鍵字*不區分大小寫。*屬性值*可能會區分大小寫，以及值**DSN**關鍵字並沒有包含單獨的空白個數。 因為連接字串和初始設定檔案文法、 關鍵字和屬性值包含字元**[] {} （)，;？\*= ！ @**應該予以避免。 在 系統資訊的文法，因為關鍵字和資料來源名稱不能包含反斜線 (\\) 字元。 ODBC 2。*x*驅動程式，驅動程式關鍵字的屬性值前後需要加括號。  
+ 其中*字元字串*有零個或多個字元。*識別碼*有一或多個字元。*屬性關鍵字*不區分大小寫。*屬性值*可能會區分大小寫，以及值**DSN**關鍵字並沒有包含單獨的空白個數。 因為連接字串和初始設定檔案文法、 關鍵字和屬性值包含字元 **[]{}（)，;？\*= ！ @** 應該予以避免。 在 系統資訊的文法，因為關鍵字和資料來源名稱不能包含反斜線 (\\) 字元。 ODBC 2。*x*驅動程式，驅動程式關鍵字的屬性值前後需要加括號。  
   
  如果瀏覽要求的連接字串中重複任何關鍵字，驅動程式會使用第一個出現的關鍵字相關聯的值。 如果**DSN**和**驅動程式**關鍵字包含在相同的瀏覽要求連接字串、 驅動程式管理員和驅動程式會使用第一個出現任何關鍵字。  
   
@@ -124,9 +129,13 @@ SQLRETURN SQLBrowseConnect(
 ## <a name="outconnectionstring-argument"></a>OutConnectionString 引數  
  瀏覽結果連接字串是連接屬性的清單。 連接屬性是由屬性關鍵字和對應的屬性值所組成。 瀏覽結果連接字串的語法如下：  
   
- *連接字串*:: =*屬性*[;] &#124;*屬性*;*連接 stringattribute* :: = [\*]*屬性關鍵字 = 屬性 valueattribute 關鍵字*:: = *ODBC 屬性關鍵字*&#124;*driver-defined-attribute-keywordODBC-attribute-keyword* = {UID &#124;PWD} [:*當地語系化識別碼*]*驅動程式-定義-屬性-關鍵字*:: =*識別碼*[:*當地語系化識別碼*]*屬性值*:: = {*屬性值清單*} &#124; 嗎？ （大括號是常值，驅動程式傳回）。*屬性值清單*:: =*字元字串*[:*當地語系化的字元字串*] &#124;*字元字串*[:*當地語系化的字元字串*]，*屬性值清單*  
+ *連接字串*:: =*屬性*[`;`] &#124; *屬性* `;` *連接字串*<br>
+ *屬性*:: = [`*`]*屬性關鍵字*`=`*屬性值*<br>
+ *屬性關鍵字*:: = *ODBC 屬性關鍵字* &#124; *驅動程式-定義-屬性-關鍵字*<br>
+ *ODBC 屬性關鍵字*= {`UID` &#124; `PWD`} [`:`*當地語系化識別碼*]*驅動程式-定義-屬性-關鍵字*:: = *識別碼*[`:`*當地語系化識別碼*]*屬性值*:: = `{` *屬性值清單* `}` &#124; `?` （大括號是常值，驅動程式傳回）。<br>
+ *屬性值清單*:: =*字元字串*[`:`*當地語系化的字元字串*] &#124; *字元字串*[`:`*當地語系化的字元字串*] `,` *屬性值清單*<br>
   
- 其中*字元字串*和*當地語系化的字元字串*有零個或多個字元。*識別碼*和*當地語系化識別碼*有一或多個字元。*屬性關鍵字*不區分大小寫; 和*屬性值*可能區分大小寫。 因為連接字串和初始設定檔案文法、 關鍵字、 當地語系化的識別項，與屬性值包含字元**[] {} （)，;？\*= ！ @**應該予以避免。 在 系統資訊的文法，因為關鍵字和資料來源名稱不能包含反斜線 (\\) 字元。  
+ 其中*字元字串*和*當地語系化的字元字串*有零個或多個字元。*識別碼*和*當地語系化識別碼*有一或多個字元。*屬性關鍵字*不區分大小寫; 和*屬性值*可能區分大小寫。 因為連接字串和初始設定檔案文法、 關鍵字、 當地語系化的識別項，與屬性值包含字元 **[]{}（)，;？\*= ！ @** 應該予以避免。 在 系統資訊的文法，因為關鍵字和資料來源名稱不能包含反斜線 (\\) 字元。  
   
  瀏覽結果連接字串語法是根據下列的語意規則：  
   
@@ -138,7 +147,7 @@ SQLRETURN SQLBrowseConnect(
   
 -   *ODBC 屬性關鍵字*和*驅動程式-定義-屬性-關鍵字*包含關鍵字的當地語系化或易記版本。 這可能會使用應用程式做為對話方塊中的標籤。 不過， **UID**， **PWD**，或*識別碼*單獨時，必須使用瀏覽要求字串傳遞至驅動程式。  
   
--   {*屬性值清單*} 無效，實際值的列舉型別對應*屬性關鍵字*。 請注意，大括號 （{}） 不會指出選項; 清單則會傳回由驅動程式。 例如，它可能是伺服器名稱的清單或清單的資料庫名稱。  
+-   {*屬性值清單*} 無效，實際值的列舉型別對應*屬性關鍵字*。 請注意，在大括號 ({}) 並不表示選擇清單，則驅動程式傳回。 例如，它可能是伺服器名稱的清單或清單的資料庫名稱。  
   
 -   如果*屬性值*是一個單一的問號 （？），單一值會對應至*屬性關鍵字*。 例如，UID = JohnS;PWD = 色的芝麻。  
   
@@ -286,6 +295,6 @@ int main() {
 |傳回的驅動程式描述和屬性|[SQLDrivers 函式](../../../odbc/reference/syntax/sqldrivers-function.md)|  
 |釋放連接控制代碼|[SQLFreeHandle 函式](../../../odbc/reference/syntax/sqlfreehandle-function.md)|  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [ODBC 應用程式開發介面參考](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [ODBC 標頭檔](../../../odbc/reference/install/odbc-header-files.md)

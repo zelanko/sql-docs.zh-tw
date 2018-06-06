@@ -1,27 +1,24 @@
 ---
-title: "setNCharacterStream 方法來讀取器物件-長 |Microsoft 文件"
-ms.custom: 
+title: setNCharacterStream 方法來讀取器物件-長 |Microsoft 文件
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
-ms.component: jdbc
-ms.reviewer: 
+ms.prod: sql
+ms.prod_service: connectivity
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: connectivity
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: af9a1ba8-7980-43fa-88e5-14f6cc5e897c
-caps.latest.revision: "20"
+caps.latest.revision: 20
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
-ms.workload: Inactive
-ms.openlocfilehash: 291c94f63ebc86869682e769ef93b93c86f60ffc
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+manager: craigg
+ms.openlocfilehash: 4c3cae5b4e79d1ae63cb9cf64eacabb9fa16e922
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="setncharacterstream-method-javalangstring-javaioreader-long"></a>setNCharacterStream 方法 (java.lang.String, java.io.Reader, long)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -40,13 +37,13 @@ public final void setNCharacterStream(java.lang.String parameterName,
 #### <a name="parameters"></a>參數  
  *參數名稱*  
   
- A**字串**，指出參數名稱。  
+ 指出參數名稱的**字串**。  
   
  *value*  
   
  讀取器物件。  
   
- *length*  
+ *長度*  
   
  A**長**，指出資料流中的字元數。  
   
@@ -60,10 +57,10 @@ public final void setNCharacterStream(java.lang.String parameterName,
   
  如果資料流的長度就是不同於以指定的內容*長度*參數，JDBC 驅動程式會擲回例外狀況時更新或插入資料列。  
   
- 如果資料流長度未知，*長度*參數可能會設定為-1，指出驅動程式應該接受資料流，無論其長度為何。 針對 sqljdbc4.jar，我們建議您使用 JDBC 4.0 方法[setNCharacterStream 方法 &#40;java.lang.String、 java.io.Reader &#41;](../../../connect/jdbc/reference/setncharacterstream-method-java-lang-string-java-io-reader.md)應用程式要更新的資料流長度的資料行未知的。  
+ 如果資料流長度未知，*長度*參數可能會設定為-1，指出驅動程式應該接受資料流，無論其長度為何。 針對 sqljdbc4.jar，我們建議您使用 JDBC 4.0 方法[setNCharacterStream 方法&#40;java.lang.String，java.io.Reader&#41; ](../../../connect/jdbc/reference/setncharacterstream-method-java-lang-string-java-io-reader.md)應用程式要更新的資料流長度的資料行未知的。  
   
-## <a name="see-also"></a>請參閱＜  
- [setNCharacterStream 方法 &#40;SQLServerCallableStatement &#41;](../../../connect/jdbc/reference/setncharacterstream-method-sqlservercallablestatement.md)   
+## <a name="see-also"></a>另請參閱  
+ [setNCharacterStream 方法&#40;SQLServerCallableStatement&#41;](../../../connect/jdbc/reference/setncharacterstream-method-sqlservercallablestatement.md)   
  [SQLServerCallableStatement 成員](../../../connect/jdbc/reference/sqlservercallablestatement-members.md)  
   
   

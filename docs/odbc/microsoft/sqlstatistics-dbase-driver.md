@@ -1,36 +1,33 @@
 ---
-title: "SQLStatistics (dBASE 驅動程式) |Microsoft 文件"
-ms.custom: 
+title: SQLStatistics (dBASE 驅動程式) |Microsoft 文件
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
-ms.component: odbc
-ms.reviewer: 
+ms.prod: sql
+ms.prod_service: connectivity
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: connectivity
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - SQLStatistics function [ODBC], dBASE Driver
 - DBase driver [ODBC], SQLStatistics
 ms.assetid: 631cec1b-66b7-4103-b9a7-ffd81da3c442
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
-ms.workload: Inactive
-ms.openlocfilehash: 6a7388c515df32c52c51cbda9c5349689ad770f3
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+manager: craigg
+ms.openlocfilehash: cdf146a28104cf74b0f28881b54dec228c7ae65a
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sqlstatistics-dbase-driver"></a>SQLStatistics (dBASE 驅動程式)
 > [!NOTE]  
 >  本主題提供 dBASE 驅動程式特定資訊。 如需此函式的一般資訊，請參閱底下的適當主題[ODBC 應用程式開發介面參考](../../odbc/reference/syntax/odbc-api-reference.md)。  
   
-|「資料行」|註解|  
+|資料行|註解|  
 |------------|--------------|  
 |TABLE_QUALIFIER|目錄的路徑。<br /><br /> 模式比對中不支援*szTableQualifier*引數。|  
 |TABLE_OWNER|因為擁有者名稱不支援此資料行就會傳回 NULL。|  

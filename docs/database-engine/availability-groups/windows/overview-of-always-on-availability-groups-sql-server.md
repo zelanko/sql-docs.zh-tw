@@ -1,16 +1,14 @@
 ---
-title: "AlwaysOn 可用性群組概觀 (SQL Server) | Microsoft Docs"
-ms.custom: 
+title: AlwaysOn 可用性群組概觀 (SQL Server) | Microsoft Docs
+ms.custom: ''
 ms.date: 05/17/2016
-ms.prod: sql-non-specified
-ms.prod_service: database-engine
-ms.service: 
-ms.component: availability-groups
-ms.reviewer: 
+ms.prod: sql
+ms.prod_service: high-availability
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: dbe-high-availability
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: high-availability
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - secondary databases [SQL Server], in availability group
 - primary databases [SQL Server], in availability group
@@ -18,21 +16,21 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], data movement
 - Availability Groups [SQL Server]
 ms.assetid: 04fd9d95-4624-420f-a3be-1794309b3a47
-caps.latest.revision: "121"
+caps.latest.revision: 121
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.workload: Active
-ms.openlocfilehash: 22f2cac063d651a2c5eb2867e54a64515b1472e1
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 43a7535395f42349e08d2d04d8b76def1a64306c
+ms.sourcegitcommit: b3bb41424249de198f22d9c6d40df4996f083aa6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 05/17/2018
+ms.locfileid: "34300236"
 ---
 # <a name="overview-of-always-on-availability-groups-sql-server"></a>AlwaysOn 可用性群組概觀 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
- > 如需舊版 SQL Server 的相關內容，請參閱 [AlwaysOn 可用性群組概觀 (SQL Server)](https://msdn.microsoft.com/en-US/library/ff877884(SQL.120).aspx)。
+ > 如需舊版 SQL Server 的相關內容，請參閱 [Always On 可用性群組概觀 (SQL Server)](https://msdn.microsoft.com/en-US/library/ff877884(SQL.120).aspx)。
 
  此主題介紹在 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 中設定與管理一個或多個可用性群組的 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]中心概念。 如需可用性群組所提供的優點摘要以及 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 術語的概觀，請參閱 [AlwaysOn 可用性群組 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md)。  
   
@@ -86,7 +84,7 @@ ms.lasthandoff: 01/18/2018
   
 -   **非同步認可模式**  
   
-     使用此可用性模式的可用性複本就是所謂的「非同步認可複本」。 在非同步認可模式下，主要複本會認可交易，而不等候確認非同步認可次要複本已經強行寫入記錄。 非同步認可模式會將次要資料庫上的交易延遲降至最低，但允許這些資料庫落後主要資料庫，因此可能會發生資料遺失。  
+     使用此可用性模式的可用性複本就是所謂的「非同步認可複本」(Asynchronous-Commit Replica)。 在非同步認可模式下，主要複本會認可交易，而不等候確認非同步認可次要複本已經強行寫入記錄。 非同步認可模式會將次要資料庫上的交易延遲降至最低，但允許這些資料庫落後主要資料庫，因此可能會發生資料遺失。  
   
 -   **同步認可模式**  
   

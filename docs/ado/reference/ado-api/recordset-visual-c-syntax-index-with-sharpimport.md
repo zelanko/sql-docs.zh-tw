@@ -1,33 +1,30 @@
 ---
-title: "資料錄集 （Visual c + + 語法索引與 #import） |Microsoft 文件"
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
+title: '資料錄集 （Visual c + + 語法索引與 #import） |Microsoft 文件'
+ms.prod: sql
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
-ms.custom: 
+ms.technology: connectivity
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 apitype: COM
 dev_langs:
 - C++
 helpviewer_keywords:
 - 'Recordset collection [ADO], Visual C++ syntax index with #import'
 ms.assetid: fe41da71-b607-4329-94da-60964b8efcdc
-caps.latest.revision: 
+caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 0f396510de52ce581f91690b9839627870cba1c3
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 38823d46e6a7cd8e0d95dfcca6a5da6cb2f52703
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="recordset-visual-c-syntax-index-with-import"></a>資料錄集 （Visual c + + 語法索引與 #import）
 ## <a name="methods"></a>方法  

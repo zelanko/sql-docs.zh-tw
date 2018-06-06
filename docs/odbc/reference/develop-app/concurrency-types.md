@@ -1,16 +1,14 @@
 ---
-title: "並行類型 |Microsoft 文件"
-ms.custom: 
+title: 並行類型 |Microsoft 文件
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
-ms.component: odbc
-ms.reviewer: 
+ms.prod: sql
+ms.prod_service: connectivity
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: connectivity
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - transactions [ODBC], concurrency control
 - concurrency control [ODBC]
@@ -18,16 +16,15 @@ helpviewer_keywords:
 - optimistic concurrency [ODBC]
 - read-only concurrency control [ODBC]
 ms.assetid: 46762ae5-17dd-4777-968e-58156f470fe1
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
-ms.workload: Inactive
-ms.openlocfilehash: 8f911bf93a0a61e911ef0795059fbbaadd2cfff7
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+manager: craigg
+ms.openlocfilehash: 6b5970995d3b8f881b62556b0f12eac96d302760
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="concurrency-types"></a>並行類型
 若要解決此問題的資料指標中的並行減少，ODBC 會公開資料指標並行的四種不同的類型：  

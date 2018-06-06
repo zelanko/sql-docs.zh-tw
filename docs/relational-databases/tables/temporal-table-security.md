@@ -1,28 +1,25 @@
 ---
-title: "時態表安全性 | Microsoft Docs"
-ms.custom: 
+title: 時態表安全性 | Microsoft Docs
+ms.custom: ''
 ms.date: 02/21/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
-ms.component: tables
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- dbe-tables
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: table-view-index
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: 60e5d6f6-a26d-4bba-aada-42e382bbcd38
-caps.latest.revision: 
+caps.latest.revision: 9
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 5c86f951c3e6f8d553ea61ed959cac6ade235b54
-ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 8ee27537dd58803a79291ea75a47e51d1cd53936
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="temporal-table-security"></a>時態表安全性
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -75,9 +72,6 @@ ms.lasthandoff: 01/18/2018
   
 ## <a name="security-of-select-statement"></a>SELECT 陳述式的安全性  
  對於不會影響記錄資料表的**SELECT** 陳述式， **SELECT** 權限會維持不變。 對於會影響記錄資料表的 **SELECT** 陳述式，在目前資料表和記錄資料表上都需要 **SELECT** 權限。  
-  
-## <a name="did-this-article-help-you-were-listening"></a>這篇文章對您有幫助嗎？ 我們會持續聽取您的意見  
- 您要尋找哪些資訊？找到了嗎？ 我們會持續聽取您的意見來改進內容。 請將您的意見傳送到 [sqlfeedback@microsoft.com](mailto:sqlfeedback@microsoft.com?subject=Your%20feedback%20about%20the%20Temporal%20Table%20Security%20page)  
   
 ## <a name="see-also"></a>另請參閱  
  [時態表](../../relational-databases/tables/temporal-tables.md)   

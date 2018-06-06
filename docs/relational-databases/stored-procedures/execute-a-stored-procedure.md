@@ -1,17 +1,16 @@
 ---
-title: "執行預存程序 | Microsoft Docs"
-ms.custom: 
+title: 執行預存程序 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/16/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
 ms.component: stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-stored-Procs
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 f1_keywords:
 - sql13.swb.executeprocedure.general.f1
 - sql13.swb.executeprocedure.f1
@@ -22,16 +21,16 @@ helpviewer_keywords:
 - stored procedures [SQL Server], executing
 - user-defined stored procedures [SQL Server]
 ms.assetid: a0b1337d-2059-4872-8c62-3f967d8b170f
-caps.latest.revision: 
+caps.latest.revision: 38
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: Active
-ms.openlocfilehash: c4052a34b4365de0382e7a8118f743231b8f4873
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 422273339e93fa5804b6cd0f5b3c4d2f1a7f833f
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="execute-a-stored-procedure"></a>執行預存程序
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -75,7 +74,7 @@ ms.lasthandoff: 02/03/2018
   
 -   執行系統預存程序  
   
-     系統程序會以 **sp_**前置詞開頭。 由於這些程序會以邏輯的方式出現在所有使用者和系統定義的資料庫中，因此可以從任何資料庫中執行，而不必完整限定程序名稱。 不過，我們建議您使用結構描述將所有系統程序名稱限定為 **sys** 結構描述名稱，以避免名稱衝突。 下列範例示範呼叫系統程序的建議方法。  
+     系統程序會以 **sp_** 前置詞開頭。 由於這些程序會以邏輯的方式出現在所有使用者和系統定義的資料庫中，因此可以從任何資料庫中執行，而不必完整限定程序名稱。 不過，我們建議您使用結構描述將所有系統程序名稱限定為 **sys** 結構描述名稱，以避免名稱衝突。 下列範例示範呼叫系統程序的建議方法。  
   
     ```sql  
     EXEC sys.sp_who;  
@@ -141,7 +140,7 @@ ms.lasthandoff: 02/03/2018
   
 1.  在 [物件總管] 中，連接到 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]的執行個體，展開該執行個體，然後展開 [資料庫] 。  
   
-2.  依序展開您要的資料庫、 **[可程式性]**和 **[預存程序]**。  
+2.  依序展開您要的資料庫、 **[可程式性]** 和 **[預存程序]**。  
   
 3.  以滑鼠右鍵按一下您要的使用者定義預存程序，然後按一下 [執行預存程序]。  
   

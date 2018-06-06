@@ -1,31 +1,23 @@
 ---
-title: "設定量值群組屬性 |Microsoft 文件"
-ms.custom: 
-ms.date: 03/07/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
-helpviewer_keywords: properties [Analysis Services], measure groups
-ms.assetid: fa66bdb6-60b8-413c-ac2a-00e4d09f60a2
-caps.latest.revision: "17"
-author: Minewiskan
+title: 設定量值群組屬性 |Microsoft 文件
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: multidimensional-models
+ms.topic: conceptual
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: f7cf2328a6f93ed1c7fe17034af1b42b53baaa39
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: eed879fa9bdeab12398f53d424bb5eaf8aea5bc7
+ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="configure-measure-group-properties"></a>設定量值群組屬性
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]量值群組具有可讓您定義量值群組的運作方式的屬性。  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+  量值群組有一些屬性可讓您定義量值群組的運作方式。  
   
 ## <a name="measure-group-properties"></a>量值群組屬性  
  量值群組屬性會決定整個量值群組的行為，以及設定量值群組內量值之某些屬性的預設行為。  
@@ -38,7 +30,7 @@ ms.lasthandoff: 01/08/2018
 |**ErrorConfiguration**|用於處理重複索引鍵、未知索引鍵、Null 索引鍵、錯誤限制、偵測到錯誤時的動作和錯誤記錄檔的可設定錯誤處理設定。 請參閱[設定 Cube、資料分割和維度處理時發生錯誤 &#40;SSAS - 多維度&#41;](../../analysis-services/multidimensional-models/error-configuration-for-cube-partition-and-dimension-processing.md)。|  
 |**EstimatedRows**|指定事實資料表中的估計資料列數目。|  
 |**EstimatedSize**|指定量值群組的估計大小 (以位元組為單位)。|  
-|**ID**|指定物件的識別碼。|  
+|**識別碼**|指定物件的識別碼。|  
 |**IgnoreUnrelatedDimensions**|決定當查詢中包含與量值群組不相關的維度成員時，是否將不相關的維度強制在其最上層。 預設設定是 **True**。|  
 |**名稱**|量值的名稱。 此屬性是唯讀的。|  
 |**ProactiveCaching**|用於處理重複索引鍵、未知索引鍵、Null 索引鍵、錯誤限制、偵測到錯誤時的動作和錯誤記錄檔的可設定錯誤處理設定。|  

@@ -1,30 +1,28 @@
 ---
-title: "MySQL 及 SQL Server 字元對應設定 (MySQLToSQL) |Microsoft 文件"
-ms.prod: sql-non-specified
+title: MySQL 及 SQL Server 字元對應設定 (MySQLToSQL) |Microsoft 文件
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
 ms.component: ssma-mysql
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ssma
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: 20b3f22e-16a2-4a87-b4eb-c277be6bf5c8
-caps.latest.revision: "4"
+caps.latest.revision: 4
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
-ms.workload: Inactive
-ms.openlocfilehash: c9b3fc89548b10593cb16e2a70c93afe9b56350e
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+manager: craigg
+ms.openlocfilehash: 5c31cdc9bab3881452c3a03cc0a97cc382481587
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="mapping-mysql-and-sql-server-character-set-mysqltosql"></a>MySQL 及 SQL Server 字元對應設定 (MySQLToSQL)
 字元集 (Charset) 可以指定之 MySQL 字元資料類型、 運算式和常值。  
@@ -36,7 +34,7 @@ ms.lasthandoff: 12/21/2017
   
 -   與一般 SQL Server 字元類型 (CHAR/VARCHAR)  
   
-1.  **國家 （地區)**目標資料庫字元資料類型為：  
+1.  **國家 （地區)** 目標資料庫字元資料類型為：  
   
     1.  **nchar**  
   

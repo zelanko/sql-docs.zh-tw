@@ -1,34 +1,30 @@
 ---
-title: "Showplan Text (未編碼) 事件類別 | Microsoft 文件"
-ms.custom: 
+title: Showplan Text (未編碼) 事件類別 | Microsoft 文件
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
-ms.prod_service: database-engine, sql-database
-ms.service: 
-ms.component: event-classes
-ms.reviewer: 
+ms.prod: sql
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: supportability
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - Showplan Text (Unencoded) event class
 ms.assetid: 0aad4563-8caf-4971-92af-55992bc5ff2c
-caps.latest.revision: 
+caps.latest.revision: 28
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 68cce941d242102c6818e00d3ce28023d5aef21b
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: e0a59d1092f143a0b6380677963b7ef145f0a270
+ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="showplan-text-unencoded-event-class"></a>Showplan Text (未編碼) 事件類別
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-當 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行 SQL 陳述式時，會發生 Showplan Text (未編碼) 事件類別。 除了會將事件資訊格式設定為字串而非二進位資料外，此事件類別與 Showplan Text 事件類別相同。  
+  當 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行 SQL 陳述式時，會發生 Showplan Text (未編碼) 事件類別。 除了會將事件資訊格式設定為字串而非二進位資料外，此事件類別與 Showplan Text 事件類別相同。  
   
  包含的資訊是 Showplan All、Showplan XML 或 Showplan XML Statistics Profile 事件類別中可用資訊的子集。  
   

@@ -1,16 +1,15 @@
 ---
-title: "e (TRANSACT-SQL) |Microsoft 文件"
-ms.custom: 
+title: e (TRANSACT-SQL) |Microsoft 文件
+ms.custom: ''
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - sp_help_peerconflictdetection
 ms.assetid: 59e04107-5eaa-44a1-beb6-ac4f2dbbcb28
-caps.latest.revision: 
+caps.latest.revision: 13
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 43221792e6f2b29ac86fc6d4ef70376ba4896c49
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 10490c69dd5d278d7d298dc8ebd4b10ff8106be9
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sphelppeerconflictdetection-transact-sql"></a>sp_help_peerconflictdetection (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,10 +45,10 @@ sp_help_peerconflictdetection [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>引數  
- [ @publication=] '*發行集*'  
+ [ @publication= ] '*publication*'  
  這是要傳回資訊的發行集名稱。 *發行集*是**sysname**，沒有預設值。  
   
- [ @timeout=]*逾時*  
+ [ @timeout= ] *timeout*  
  指定此程序等候拓撲中每個節點之回應的時間長度 (以秒為單位)，過了這段期間將會逾時。 如果拓撲中有唯讀訂閱者，指定逾時值是無效的。 唯讀訂閱者絕對不會回應來自這個程序的呼叫。 *逾時*是**int**，預設值是 60。  
   
 ## <a name="result-sets"></a>結果集  
@@ -71,9 +69,9 @@ sp_help_peerconflictdetection [ @publication = ] 'publication'
 ## <a name="permissions"></a>Permissions  
  需要系統管理員 (sysadmin) 固定伺服器角色或 db_owner 固定資料庫角色中的成員資格。  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [點對點複寫中的衝突偵測](../../relational-databases/replication/transactional/peer-to-peer-conflict-detection-in-peer-to-peer-replication.md)   
- [Peer-to-Peer Transactional Replication](../../relational-databases/replication/transactional/peer-to-peer-transactional-replication.md)   
+ [點對點異動複寫](../../relational-databases/replication/transactional/peer-to-peer-transactional-replication.md)   
  [複寫預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  
   
   

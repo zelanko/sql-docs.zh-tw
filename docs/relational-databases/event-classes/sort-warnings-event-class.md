@@ -1,34 +1,30 @@
 ---
-title: "Sort Warnings 事件類別 | Microsoft 文件"
-ms.custom: 
+title: Sort Warnings 事件類別 | Microsoft 文件
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
-ms.prod_service: database-engine, sql-database
-ms.service: 
-ms.component: event-classes
-ms.reviewer: 
+ms.prod: sql
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: supportability
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - Sort Warnings event class
 ms.assetid: 2ee479c8-66e4-45e9-a4c9-49d418e25a72
-caps.latest.revision: 
+caps.latest.revision: 31
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 1d4516aaaeb429ae735251a272dc77b1f6ba4edb
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 7bf11715befc4dac7813e8d08afaec074b042710
+ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="sort-warnings-event-class"></a>Sort Warnings 事件類別
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-Sort Warnings 事件類別指出不適合在記憶體中的排序作業。 不包括關於索引建立的排序作業，只包括在查詢中 (例如在 SELECT 陳述式中所用的 ORDER BY 子句) 的排序作業。  
+  Sort Warnings 事件類別指出不適合在記憶體中的排序作業。 不包括關於索引建立的排序作業，只包括在查詢中 (例如在 SELECT 陳述式中所用的 ORDER BY 子句) 的排序作業。  
   
  如果關於排序作業的查詢產生 Sort Warnings 事件類別，而 EventSubClass 資料行值為 2，就會影響到查詢的效能，因為資料上的多個行程都要求將資料排序。 請進一步調查查詢以判定是否能刪除排序作業。  
   

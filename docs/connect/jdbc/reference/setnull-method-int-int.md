@@ -1,30 +1,29 @@
 ---
-title: "setNull 方法 （int，int） |Microsoft 文件"
-ms.custom: 
+title: setNull 方法 （int，int） |Microsoft 文件
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
-ms.component: jdbc
-ms.reviewer: 
+ms.prod: sql
+ms.prod_service: connectivity
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
-ms.topic: article
-apiname: SQLServerPreparedStatement.setNull (int, int)
-apilocation: sqljdbc.jar
+ms.technology: connectivity
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
+apiname:
+- SQLServerPreparedStatement.setNull (int, int)
+apilocation:
+- sqljdbc.jar
 apitype: Assembly
 ms.assetid: 7e7f08e9-278a-495a-8ce3-ca173d055021
-caps.latest.revision: "8"
+caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
-ms.workload: Inactive
-ms.openlocfilehash: 7b0c220199ea686774fa320fda5d0a7af977620e
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+manager: craigg
+ms.openlocfilehash: 4f3ef8a3f9460178a86e26ffa79bb40b97cd5df3
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="setnull-method-int-int"></a>setNull 方法 (int, int)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -54,8 +53,8 @@ public final void setNull(int index,
 ## <a name="remarks"></a>備註  
  SetNull 方法 java.sql.PreparedStatement 介面中所指定此 setNull 方法。  
   
-## <a name="see-also"></a>請參閱＜  
- [setNull 方法 &#40;SQLServerPreparedStatement &#41;](../../../connect/jdbc/reference/setnull-method-sqlserverpreparedstatement.md)   
+## <a name="see-also"></a>另請參閱  
+ [setNull 方法&#40;SQLServerPreparedStatement&#41;](../../../connect/jdbc/reference/setnull-method-sqlserverpreparedstatement.md)   
  [SQLServerPreparedStatement 成員](../../../connect/jdbc/reference/sqlserverpreparedstatement-members.md)   
  [SQLServerPreparedStatement 類別](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md)  
   

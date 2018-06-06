@@ -1,31 +1,30 @@
 ---
-title: "分散式可用性群組 (SQL Server) | Microsoft Docs"
-ms.custom: 
+title: 分散式可用性群組 (SQL Server) | Microsoft Docs
+ms.custom: ''
 ms.date: 01/12/2018
-ms.prod: sql-non-specified
-ms.prod_service: database-engine
-ms.service: 
-ms.component: availability-groups
-ms.reviewer: 
+ms.prod: sql
+ms.prod_service: high-availability
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: dbe-high-availability
-ms.tgt_pltfrm: 
-ms.topic: article
-helpviewer_keywords: Availability Groups [SQL Server], distributed
-ms.assetid: 
-caps.latest.revision: 
+ms.technology: high-availability
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
+helpviewer_keywords:
+- Availability Groups [SQL Server], distributed
+ms.assetid: ''
+caps.latest.revision: ''
 author: allanhirt
 ms.author: mikeray
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: b91fb1cb4699158b69db18a9a86e407f1de97cc6
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 4ce87751cb0f279b74a19159ceb966d8cadaec52
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="distributed-availability-groups"></a>分散式可用性群組
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 分散式可用性群組是 SQL Server 2016 中引進的新功能，為現有 AlwaysOn 可用性群組功能的變異。 本文釐清分散式可用性群組的某些層面，並補充現有 [SQL Server 文件](https://docs.microsoft.com/en-us/sql/sql-server/sql-server-technical-documentation)。
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+分散式可用性群組是 SQL Server 2016 中引進的新功能，為現有 AlwaysOn 可用性群組功能的變異。 本文釐清分散式可用性群組的某些層面，並補充現有 [SQL Server 文件](https://docs.microsoft.com/en-us/sql/sql-server/sql-server-technical-documentation)。
 
 > [!NOTE]
 > "DAG" 不是「分散式可用性群組」的官方縮寫，因為這個縮寫已用於「Exchange 資料庫可用性群組」功能。 此 Exchange 功能與 SQL Server 可用性群組或分散式可用性群組無關。
@@ -53,6 +52,9 @@ ms.lasthandoff: 01/18/2018
 
 > [!NOTE]
 > SQL Server 2016 中的分散式可用性群組只支援使用 FORCE_FAILOVER_ALLOW_DATA_LOSS 選項從某個可用性群組容錯移轉至另一個可用性群組。
+
+> [!NOTE]
+> 搭配使用異動複寫與分散式可用性群組時，無法將轉寄站複本設定為發行者。
 
 ## <a name="sql-server-version-and-edition-requirements-for-distributed-availability-groups"></a>分散式可用性群組的 SQL Server 版本需求
 

@@ -1,16 +1,14 @@
 ---
-title: "升級 Analysis Services | Microsoft Docs"
-ms.custom: 
+title: 升級 Analysis Services | Microsoft Docs
+ms.custom: ''
 ms.date: 09/12/2017
-ms.prod: sql-non-specified
-ms.prod_service: database-engine
-ms.service: 
-ms.component: install-windows
-ms.reviewer: 
+ms.prod: sql
+ms.prod_service: install
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - upgrading databases
 - databases [Analysis Services], upgrading
@@ -22,15 +20,15 @@ helpviewer_keywords:
 - installing Analysis Services, upgrading
 - SSAS, upgrading
 ms.assetid: a131d329-386e-4470-aaa9-ffcde4e5ec0c
-caps.latest.revision: 
+caps.latest.revision: 79
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.openlocfilehash: eb0bcf7a72e59e58bdd4f980c5be175c2a0affdd
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: a337d1d86133c2ff441afa17c65ce783273fc3d6
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="upgrade-analysis-services"></a>升級 Analysis Services
 

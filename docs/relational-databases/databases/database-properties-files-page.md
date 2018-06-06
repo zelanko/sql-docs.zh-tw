@@ -1,33 +1,32 @@
 ---
-title: "資料庫屬性 (檔案頁面) | Microsoft 文件"
-ms.custom: 
+title: 資料庫屬性 (檔案頁面) | Microsoft 文件
+ms.custom: ''
 ms.date: 03/09/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
 ms.component: databases
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 f1_keywords:
 - sql13.swb.databaseproperties.files.f1
 ms.assetid: 3c030e51-db82-4b43-b1e5-8547ddd3de87
-caps.latest.revision: 
+caps.latest.revision: 42
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 2d68409591b5243ecf56b8c5707c61a5a7c33493
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: ad314609fbd0515bef138f28358421b3656515d6
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="database-properties-files-page"></a>資料庫屬性 (檔案頁面)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 使用此頁面來建立新的資料庫，或者檢視或修改選取之資料庫的屬性。 此主題適用於現有資料庫的 [資料庫屬性 (檔案頁面)]，以及 [新增資料庫 (一般頁面)]。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  使用此頁面來建立新的資料庫，或者檢視或修改選取之資料庫的屬性。 此主題適用於現有資料庫的 [資料庫屬性 (檔案頁面)]，以及 [新增資料庫 (一般頁面)]。  
   
 ## <a name="uielement-list"></a>UIElement 清單  
  **資料庫名稱**  
@@ -46,7 +45,7 @@ ms.lasthandoff: 01/18/2018
  輸入或修改檔案的名稱。  
   
  **檔案類型**  
- 從清單中選取檔案類型。 檔案類型可以是 **[資料]**、 **[記錄檔]**或 **[FILESTREAM 資料]**。 您無法修改現有檔案的檔案類型。  
+ 從清單中選取檔案類型。 檔案類型可以是 **[資料]**、 **[記錄檔]** 或 **[FILESTREAM 資料]**。 您無法修改現有檔案的檔案類型。  
   
  如果您要將檔案 (容器) 加入至記憶體最佳化檔案群組，請選取 [FILESTREAM 資料]。  
   

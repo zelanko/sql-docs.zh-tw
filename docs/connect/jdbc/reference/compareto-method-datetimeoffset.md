@@ -1,27 +1,24 @@
 ---
-title: "compareTo 方法 (DateTimeOffset) |Microsoft 文件"
-ms.custom: 
+title: compareTo 方法 (DateTimeOffset) |Microsoft 文件
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
-ms.component: jdbc
-ms.reviewer: 
+ms.prod: sql
+ms.prod_service: connectivity
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: connectivity
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: e4cf2ea4-0fe9-40ce-ba79-f2a2b616997e
-caps.latest.revision: "12"
+caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
-ms.workload: Inactive
-ms.openlocfilehash: 8ecd77b1080f1a5c49059f65e857d56c8d582b1b
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+manager: craigg
+ms.openlocfilehash: 3e2953d21306cf69582e2744c4fb96e13e0098d6
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="compareto-method-datetimeoffset"></a>compareTo 方法 (DateTimeOffset)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -50,7 +47,7 @@ public int compareTo(DateTimeOffset other)
 ## <a name="remarks"></a>備註  
  當兩個**DateTimeOffset**物件在 GMT 具有相同的時間，根據位移的物件沒有其他順序。  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [DateTimeOffset 類別](../../../connect/jdbc/reference/datetimeoffset-class.md)   
  [DateTimeOffset 成員](../../../connect/jdbc/reference/datetimeoffset-members.md)  
   

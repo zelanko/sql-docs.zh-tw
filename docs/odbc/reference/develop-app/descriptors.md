@@ -1,32 +1,29 @@
 ---
-title: "描述元 |Microsoft 文件"
-ms.custom: 
+title: 描述元 |Microsoft 文件
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
-ms.component: odbc
-ms.reviewer: 
+ms.prod: sql
+ms.prod_service: connectivity
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: connectivity
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - descriptors [ODBC]
 - descriptors [ODBC], about descriptors
 - descriptor handles [ODBC]
 - handles [ODBC], descriptor
 ms.assetid: ef2cbb93-cd00-40f8-b1d2-5f5723a991aa
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
-ms.workload: Inactive
-ms.openlocfilehash: 78f53c07a036719b669e3c14192eda5da3ead55e
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+manager: craigg
+ms.openlocfilehash: e02316233f7e0c9722da90f4c2562282ce19bce9
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="descriptors"></a>描述元
 描述項處理是指資料結構，可保存資料行或動態參數的相關資訊。  

@@ -1,30 +1,28 @@
 ---
-title: "重新整理從資料庫 (MySQLToSQL) |Microsoft 文件"
-ms.prod: sql-non-specified
+title: 重新整理從資料庫 (MySQLToSQL) |Microsoft 文件
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
 ms.component: ssma-mysql
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ssma
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: 59a6db8f-2db6-4071-9005-928a7231de92
-caps.latest.revision: "4"
+caps.latest.revision: 4
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
-ms.workload: Inactive
-ms.openlocfilehash: 18656f8929e52d23e10ccc5fafe8139544bf44a5
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+manager: craigg
+ms.openlocfilehash: 48f6be5540fa8c703e56c7326dd015df17a72ff5
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="refresh-from-database-mysqltosql"></a>從資料庫 (MySQLToSQL) 重新整理
 **從資料庫重新整理** 對話方塊可讓您選取要重新整理從 MySQL 資料庫的物件。 在對話方塊中的資料列會以色彩標示在中繼資料的狀態：  
@@ -37,15 +35,15 @@ ms.lasthandoff: 12/21/2017
   
 -   如果物件是新的 MySQL 資料庫中，資料列是粉紅色。  
   
-您可以指定預設物件中的重新整理設定**專案設定** 對話方塊。 如需詳細資訊，請參閱[專案設定 &#40;同步處理 &#41;&#40;MySQLToSQL &#41;](../../ssma/mysql/project-settings-synchronization-mysqltosql.md)  
+您可以指定預設物件中的重新整理設定**專案設定** 對話方塊。 如需詳細資訊，請參閱[專案設定&#40;同步&#41; &#40;MySQLToSQL&#41;](../../ssma/mysql/project-settings-synchronization-mysqltosql.md)  
   
 若要存取**從資料庫重新整理**對話方塊中，以滑鼠右鍵按一下物件中的 MySQL 中繼資料總管] 按一下 [**從資料庫重新整理**。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
   
 |||  
 |-|-|  
-|**詞彙**|**定義**|  
+|**詞彙**|**[定義]**|  
 |**摺疊 （-）**|摺疊以隱藏個別物件的所有物件群組。|  
 |**展開 （+）**|展開以顯示個別物件的所有物件群組。|  
 |**隱藏/顯示相等的物件**|如果物件中繼資料相同的 SSMA 和 MySQL 資料庫中，會隱藏從清單中的物件。|  

@@ -1,16 +1,14 @@
 ---
-title: "sp_clean_db_free_space (TRANSACT-SQL) |Microsoft 文件"
-ms.custom: 
+title: sp_clean_db_free_space (TRANSACT-SQL) |Microsoft 文件
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: system-objects
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_clean_db_free_space_TSQL
@@ -21,16 +19,16 @@ helpviewer_keywords:
 - sp_clean_db_free_space
 - ghost records
 ms.assetid: faa96f7e-be92-47b1-8bc5-4dbba5331655
-caps.latest.revision: 
+caps.latest.revision: 12
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 28035865fa180e9b1e379a0fbb3843956e162ccf
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 4e8f84f3539ea192a132282eee280f26ba80da5d
+ms.sourcegitcommit: e37f017cbebb22ad9d12e4daf863190933a4d8a1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34689256"
 ---
 # <a name="spcleandbfreespace-transact-sql"></a>sp_clean_db_free_space (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -80,7 +78,8 @@ EXEC sp_clean_db_free_space
 @dbname = N'AdventureWorks2012' ;  
 ```  
   
-## <a name="see-also"></a>請參閱  
- [Database Engine 預存程序 &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)  
+## <a name="see-also"></a>另請參閱  
+ [Database Engine 預存程序&#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)
+ <br>[準刪除清除程序指南](../ghost-record-cleanup-process-guide.md) 
   
   

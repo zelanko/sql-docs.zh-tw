@@ -1,41 +1,23 @@
 ---
-title: "多維度模型資料存取 (Analysis Services-多維度資料) |Microsoft 文件"
-ms.custom: 
-ms.date: 03/17/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
-helpviewer_keywords:
-- SSAS, data access interfaces
-- objects [Analysis Services], data access interfaces
-- Analysis Services data access interfaces
-- data retrieval [Analysis Services]
-- retrieving data
-- metadata [Analysis Services]
-- data access interfaces [Analysis Services]
-- manipulating objects [Analysis Services]
-- Analysis Services data access interfaces, about data access interfaces
-ms.assetid: 46388efb-3c78-47a2-b5c9-5a69ff394d03
-caps.latest.revision: 
-author: Minewiskan
+title: 多維度模型資料存取 (Analysis Services-多維度資料) |Microsoft 文件
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: mdx
+ms.topic: conceptual
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 8e1271ca7bf45132f07a9a94ddef70bf5379084f
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 5bbf66795c7ac21b0c638aadffaa7bd2ab0a5974
+ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="multidimensional-model-data-access-analysis-services---multidimensional-data"></a>多維度模型資料存取 (Analysis Services - 多維度資料)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
-使用本主題中的資訊了解如何使用程式設計方法、指令碼或用戶端應用程式 (其中包含的內建支援可連接至網路上的 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 伺服器) 存取 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 多維度資料。  
+  使用本主題中的資訊了解如何使用程式設計方法、指令碼或用戶端應用程式 (其中包含的內建支援可連接至網路上的 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 伺服器) 存取 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 多維度資料。  
   
  本主題包含下列幾節：  
   
@@ -76,11 +58,11 @@ ms.lasthandoff: 02/15/2018
   
  [使用 MDX 查詢多維度資料](../../../analysis-services/multidimensional-models/mdx/querying-multidimensional-data-with-mdx.md)  
   
- [MDX &#40; 中的重要概念Analysis Services &#41;](../../../analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services.md)  
+ [MDX & #40; 中的重要概念Analysis Services & #41;](../../../analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services.md)  
   
  [MDX 查詢基礎觀念 &#40;Analysis Services&#41;](../../../analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services.md)  
   
- [MDX 指令碼基礎觀念 &#40;Analysis Services &#41;](../../../analysis-services/multidimensional-models/mdx/mdx-scripting-fundamentals-analysis-services.md)  
+ [MDX 指令碼基礎觀念 & #40;Analysis Services & #41;](../../../analysis-services/multidimensional-models/mdx/mdx-scripting-fundamentals-analysis-services.md)  
   
 ##  <a name="bkmk_api"></a> 程式設計介面  
  如果您要建立使用多維度資料的自訂應用程式，您存取資料的方法最有可能分成下列其中一個類別：  
@@ -104,7 +86,7 @@ ms.lasthandoff: 02/15/2018
   
 ## <a name="see-also"></a>另請參閱  
  [連接到 Analysis Services](../../../analysis-services/instances/connect-to-analysis-services.md)   
- [開發使用 Analysis Services 指令碼語言 &#40;ASSL &#41;](../../../analysis-services/multidimensional-models/scripting-language-assl/developing-with-analysis-services-scripting-language-assl.md)   
+ [使用 Analysis Services 開發的指令碼語言&#40;ASSL&#41;](../../../analysis-services/multidimensional-models/scripting-language-assl/developing-with-analysis-services-scripting-language-assl.md)   
  [使用 Analysis Services 中的 XMLA 進行開發](../../../analysis-services/multidimensional-models-scripting-language-assl-xmla/developing-with-xmla-in-analysis-services.md)   
  [表格式模型資料存取](../../../analysis-services/tabular-models/tabular-model-data-access.md)  
   

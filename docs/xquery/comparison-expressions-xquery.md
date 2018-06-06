@@ -1,16 +1,15 @@
 ---
-title: "比較運算式 (XQuery) |Microsoft 文件"
-ms.custom: 
+title: 比較運算式 (XQuery) |Microsoft 文件
+ms.custom: ''
 ms.date: 08/09/2016
-ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
-ms.service: 
+ms.prod: sql
+ms.prod_service: sql
 ms.component: xquery
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - XML
@@ -22,16 +21,15 @@ helpviewer_keywords:
 - comparison operators [XQuery]
 - value comparison operators
 ms.assetid: dc671348-306f-48ef-9e6e-81fc3c7260a6
-caps.latest.revision: 
+caps.latest.revision: 40
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: dfaf22d056759c6dc9350bec0bd265d1909d46b5
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: f80838771b36f59f58203dfc687957ea2f208522
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="comparison-expressions-xquery"></a>比較運算式 (XQuery)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -178,7 +176,7 @@ WHERE ProductModelID=19
   
 -   \<大小 > 項目值與指定不可部分完成的值，「 小型 」。  
   
--   請注意，因為值運算子只適用於不可部份完成值， **data （)**隱含地利用函數來擷取節點值。 也就是，`data($P/PD:Size) eq "small"` 會產生相同的結果。  
+-   請注意，因為值運算子只適用於不可部份完成值， **data （)** 隱含地利用函數來擷取節點值。 也就是，`data($P/PD:Size) eq "small"` 會產生相同的結果。  
   
  以下是結果：  
   
@@ -227,9 +225,9 @@ ProductModelID       Result
   
  這些是根據文件順序所做的比較：  
   
--   `<<`: **Operand 1**前面**operand 2**文件順序。  
+-   `<<` : **Operand 1**前面**operand 2**文件順序。  
   
--   `>>`: **Operand 1**遵循**operand 2**文件順序。  
+-   `>>` : **Operand 1**遵循**operand 2**文件順序。  
   
  下列查詢會傳回 True，如果產品目錄描述中的\<擔保 > 元素之前出現\<維護 > 特定產品的文件順序中的項目。  
   
@@ -247,14 +245,14 @@ where ProductModelID=19
   
  請注意下列項目是從上一個查詢而來：  
   
--   **Value （)**方法**xml**資料型別用於查詢。  
+-   **Value （)** 方法**xml**資料型別用於查詢。  
   
--   查詢的布林值的結果會轉換成**nvarchar （10)**後傳回。  
+-   查詢的布林值的結果會轉換成**nvarchar （10)** 後傳回。  
   
 -   此查詢會傳回 True。  
   
 ## <a name="see-also"></a>另請參閱  
- [型別系統 &#40;XQuery &#41;](../xquery/type-system-xquery.md)   
+ [類型系統&#40;XQuery&#41;](../xquery/type-system-xquery.md)   
  [XQuery 運算式](../xquery/xquery-expressions.md)  
   
   

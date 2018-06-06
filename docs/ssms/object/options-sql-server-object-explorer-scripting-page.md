@@ -1,33 +1,32 @@
 ---
-title: "選項 (SQL Server 物件總管 - 指令碼頁面) | Microsoft Docs"
-ms.custom: 
+title: 選項 (SQL Server 物件總管 - 指令碼頁面) | Microsoft Docs
+ms.custom: ''
 ms.date: 08/01/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
 ms.component: ssms-objects
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: tools-ssms
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ssms
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 f1_keywords:
 - VS.ToolsOptionsPages.ObjectExplorerScripting
 - VS.ToolsOptionsPages.Sql_Server_Object_Explorer.ObjectExplorerScripting
 ms.assetid: 6105aec9-1b72-4cb2-bd24-fc35f6d95240
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 2d2e378f807925b467f0ec01575678a31e548360
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.openlocfilehash: 037dce27c8c237b28a5575de76d0f9adb36a4054
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="options-sql-server-object-explorer---scripting-page"></a>選項 (SQL Server 物件總管 - 指令碼頁面)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 使用此頁面設定指定碼選項，以在物件總管之物件操作功能表的下列命令中使用：  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+使用此頁面設定指定碼選項，以在**物件總管**之物件操作功能表的下列命令中使用：  
   
 -   使用者資料表與檢視的 [編輯] 命令。  
   

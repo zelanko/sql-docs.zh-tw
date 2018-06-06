@@ -1,30 +1,27 @@
 ---
-title: "教學課程：SQL Server 備份及還原至 Windows Azure Blob 儲存體服務 | Microsoft 文件"
-ms.custom: 
-ms.date: 02/16/2017
-ms.prod: sql-non-specified
+title: 教學課程：SQL Server 備份及還原至 Windows Azure Blob 儲存體服務 | Microsoft 文件
+ms.custom: ''
+ms.date: 04/09/2018
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
 ms.component: tutorial
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- dbe-query-tuning
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: performance
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 applies_to:
 - SQL Server 2016 Preview
 ms.assetid: 9e1d94ce-2c93-45d1-ae2a-2a7d1fa094c4
-caps.latest.revision: 
+caps.latest.revision: 11
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 01e2469b6dc300c8ac03a8b8ccdd622a7ee599b7
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 5aec79dad9d34b8cdd77938b312ca990665c29bb
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service"></a>教學課程：SQL Server 備份及還原至 Azure Blob 儲存體服務
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -39,7 +36,7 @@ ms.lasthandoff: 02/09/2018
 [第 2 課：建立 SQL Server 認證](http://msdn.microsoft.com/library/64f8805c-1ddc-4c96-a47c-22917d12e1ab)  
 在這一課，您會建立認證以儲存用來存取 Azure 儲存體帳戶的安全性資訊。  
   
-[第 3 課：將完整資料庫備份寫入 Azure Blob 儲存體服務](http://msdn.microsoft.com/library/454c8296-64e9-46ed-b141-5ebfbc8a4fe2)  
+[第 3 課：將完整資料庫備份寫入 Azure Blob 儲存體服務](https://technet.microsoft.com/en-us/library/jj720552&#40;v=sql.110&#41;.aspx)  
 在這一課，您會發出 T-SQL 陳述式，以便將 AdventureWorks2012 資料庫的備份寫入 Azure Blob 儲存體服務。  
   
 [第 4 課：從完整資料庫備份執行還原](http://msdn.microsoft.com/library/580f76e6-9802-4abc-9043-db6de592c733)  

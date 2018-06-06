@@ -1,17 +1,15 @@
 ---
-title: "事件類型 |Microsoft 文件"
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
+title: 事件類型 |Microsoft 文件
+ms.prod: sql
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
-ms.custom: 
+ms.technology: connectivity
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - EventComplete event [ADO]
 - events [ADO], types
@@ -19,16 +17,15 @@ helpviewer_keywords:
 - complete events [ADO]
 - WillEvent event [ADO]
 ms.assetid: f3327ea0-635a-43d4-bd78-c1674f62f1a2
-caps.latest.revision: 
+caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 52d78d1a6ae1fc2ccb34ee6b8d810f1ca5ba1c22
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 3d093fbea3d4c4c6410f19b842ba8907aaa2229e
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="types-of-events"></a>事件類型
 有兩種事件的基本類型。 「 將事件 」 呼叫作業開始之前，通常包含在其名稱中的 」 將"— 比方說， **WillChangeRecordset**或**WillConnect**。 通常已經完成事件後呼叫的事件其名稱中包含 「 完成 」 — 比方說， **RecordChangeComplete**或**ConnectComplete**。 例外狀況存在 — 例如**InfoMessage** — 但相關聯的作業已完成之後，這些會發生。  

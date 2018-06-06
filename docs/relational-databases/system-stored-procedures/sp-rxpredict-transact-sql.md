@@ -1,15 +1,14 @@
 ---
-title: sp_rxPredict | Microsoft Docs
-ms.custom: 
+title: sp_rxPredict |Microsoft 文件
+ms.custom: ''
 ms.date: 07/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_rxPredict
@@ -21,19 +20,18 @@ helpviewer_keywords:
 author: jeannt
 ms.author: jeannt
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: f4e397cf366cc0f12b738a369556e91de3e83878
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: ede8232f36f42cc2b9758bdee8f50457ebd58dfe
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sprxpredict"></a>sp_rxPredict  
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
 產生預存的模型為基礎的預測的值。
 
-提供在機器學習模型，以接近即時的計分。 `sp_rxPredict`提供的包裝函式為預存程序`rxPredict`函式在[RevoScaleR](https://docs.microsoft.com/r-server/r-reference/revoscaler/revoscaler)和[MicrosoftML](https://docs.microsoft.com/r-server/r-reference/microsoftml/microsoftml-package)。 它以 C + 撰寫，而且特別適合計分作業。 它支援這兩個 R 或 Python 機器學習模型。
+提供在機器學習模型，以接近即時的計分。 `sp_rxPredict` 提供的包裝函式為預存程序`rxPredict`函式在[RevoScaleR](https://docs.microsoft.com/r-server/r-reference/revoscaler/revoscaler)和[MicrosoftML](https://docs.microsoft.com/r-server/r-reference/microsoftml/microsoftml-package)。 它以 C + 撰寫，而且特別適合計分作業。 它支援這兩個 R 或 Python 機器學習模型。
 
 **本主題適用於**:  
 - SQL Server 2017  
@@ -98,9 +96,9 @@ EXEC sp_rxPredict @model = @model,
 @inputData = N'SELECT * FROM data';
 ```
 
-除了有效的 SQL 查詢，在輸入資料 *@inputData* 必須在預存的模型中包含資料行與資料行相容。
+除了有效的 SQL 查詢，在輸入資料*@inputData*必須在預存的模型中包含資料行與資料行相容。
 
-`sp_rxPredict`僅支援下列.NET 資料行類型： 雙精確度、 float、 short、 ushort、 long、 ulong 和字串。 您可能需要篩選出您的輸入資料中不支援的型別，才能將它用於即時計分。 
+`sp_rxPredict` 僅支援下列.NET 資料行類型： 雙精確度、 float、 short、 ushort、 long、 ulong 和字串。 您可能需要篩選出您的輸入資料中不支援的型別，才能將它用於即時計分。 
 
   如需對應的 SQL 型別資訊，請參閱[SQL CLR 類型對應](https://msdn.microsoft.com/library/bb386947.aspx)或[對應 CLR 參數資料](../clr-integration-database-objects-types-net-framework/mapping-clr-parameter-data.md)。
 

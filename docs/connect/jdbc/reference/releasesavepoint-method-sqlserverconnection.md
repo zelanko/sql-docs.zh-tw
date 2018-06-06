@@ -1,30 +1,29 @@
 ---
-title: "releaseSavepoint 方法 (SQLServerConnection) |Microsoft 文件"
-ms.custom: 
+title: releaseSavepoint 方法 (SQLServerConnection) |Microsoft 文件
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
-ms.component: jdbc
-ms.reviewer: 
+ms.prod: sql
+ms.prod_service: connectivity
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
-ms.topic: article
-apiname: SQLServerConnection.releaseSavepoint
-apilocation: sqljdbc.jar
+ms.technology: connectivity
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
+apiname:
+- SQLServerConnection.releaseSavepoint
+apilocation:
+- sqljdbc.jar
 apitype: Assembly
 ms.assetid: b6b625ea-c7ce-4a32-a9e0-6d2b4321bfd8
-caps.latest.revision: "13"
+caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
-ms.workload: Inactive
-ms.openlocfilehash: bc863dc3a4c2be757c2ee0ba86413d7b0e9d3649
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+manager: craigg
+ms.openlocfilehash: 63704b974e2eb83c77a075d4ffba1d8498f2c7e9
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="releasesavepoint-method-sqlserverconnection"></a>releaseSavepoint 方法 (SQLServerConnection)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -32,7 +31,7 @@ ms.lasthandoff: 11/18/2017
   移除指定[SQLServerSavepoint](../../../connect/jdbc/reference/sqlserversavepoint-class.md)物件從目前的交易。  
   
 > [!NOTE]  
->  這個方法目前不支援由[!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)]。  
+>  [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] 目前不支援這個方法。  
   
 ## <a name="syntax"></a>語法  
   
@@ -52,7 +51,7 @@ public void releaseSavepoint(java.sql.Savepoint savepoint)
 ## <a name="remarks"></a>備註  
  ReleaseSavepoint 方法 java.sql.Connection 介面中所指定此 releaseSavepoint 方法。  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [SQLServerConnection 成員](../../../connect/jdbc/reference/sqlserverconnection-members.md)   
  [SQLServerConnection 類別](../../../connect/jdbc/reference/sqlserverconnection-class.md)  
   

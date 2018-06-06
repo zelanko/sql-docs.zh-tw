@@ -1,16 +1,14 @@
 ---
-title: "s (TRANSACT-SQL) |Microsoft 文件"
-ms.custom: 
+title: s (TRANSACT-SQL) |Microsoft 文件
+ms.custom: ''
 ms.date: 07/22/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: system-objects
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_filestream_force_garbage_collection
@@ -21,18 +19,17 @@ helpviewer_keywords:
 - FILESTREAM [SQL Server]
 - sp_filestream_force_garbage_collection
 ms.assetid: 9d1efde6-8fa4-42ac-80e5-37456ffebd0b
-caps.latest.revision: 
+caps.latest.revision: 28
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: d424bb470ac9da5edc6b314e62ffaa2e1e72b923
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 5cd74006b394f7412f7ec2d3c6bfacb36f701cf1
+ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 05/04/2018
 ---
-# <a name="filestream-and-filetable---spfilestreamforcegarbagecollection"></a>Filestream 和 FileTable-s
+# <a name="spfilestreamforcegarbagecollection-transact-sql"></a>sp_filestream_force_garbage_collection (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   強制執行 FILESTREAM 記憶體回收行程，刪除任何不必要的 FILESTREAM 檔案。  
@@ -56,7 +53,7 @@ sp_filestream_force_garbage_collection
 >  *dbname*是**sysname**。 如果未指定，則假設目前的資料庫。  
   
  **@filename** = *logical_file_name*  
- 指定要執行記憶體回收行程之 FILESTREAM 容器的邏輯名稱。 **@filename**是選擇性的。 如果未不指定任何邏輯檔名，則記憶體回收行程會清除指定之資料庫中的所有 FILESTREAM 容器。  
+ 指定要執行記憶體回收行程之 FILESTREAM 容器的邏輯名稱。 **@filename** 是選擇性的。 如果未不指定任何邏輯檔名，則記憶體回收行程會清除指定之資料庫中的所有 FILESTREAM 容器。  
   
 ## <a name="return-code-values"></a>傳回碼值  
   
@@ -113,6 +110,10 @@ EXEC sp_filestream_force_garbage_collection @dbname = N'FSDB',
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [SQL Server 2008 中的 FILESTREAM 儲存體](http://go.microsoft.com/fwlink/?LinkId=209156)  
+[Filestream](../../relational-databases/blob/filestream-sql-server.md)
+<br>[Filetable](../../relational-databases/blob/filetables-sql-server.md)
+<br>[Filestream 及 FileTable 動態管理檢視 (Transact-SQL)](../system-dynamic-management-views/filestream-and-filetable-dynamic-management-views-transact-sql.md)
+<br>[Filestream 和 FileTable 目錄檢視 (Transact-SQL)](../system-catalog-views/filestream-and-filetable-catalog-views-transact-sql.md)
+<br>[sp_kill_filestream_non_transacted_handles (TRANSACT-SQL)](filestream-and-filetable-sp-kill-filestream-non-transacted-handles.md)
   
   

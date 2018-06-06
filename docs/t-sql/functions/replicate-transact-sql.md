@@ -1,16 +1,14 @@
 ---
 title: REPLICATE (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/13/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
 ms.component: t-sql|functions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: t-sql
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - REPLICATE_TSQL
@@ -22,16 +20,16 @@ helpviewer_keywords:
 - REPLICATE function
 - repeating character expressions
 ms.assetid: 0cd467fb-3f22-471a-892c-0039d9f7fa1a
-caps.latest.revision: 
+caps.latest.revision: 42
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Active
-ms.openlocfilehash: 574f4d115708075ddb8f2a4c2987f97508ae24cb
-ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 08baab316c698db378ab636af990cbc719735cac
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="replicate-transact-sql"></a>REPLICATE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -51,7 +49,7 @@ REPLICATE ( string_expression ,integer_expression )
  這是字元字串或二進位資料類型的運算式。 *string_expression* 可以是字元或二進位資料。  
   
 > [!NOTE]  
->  如果 *string_expression* 的類型不是 **varchar(max)** 或 **nvarchar(max)**則 REPLICATE 會將傳回值截斷為 8,000 位元組。 若要傳回大於 8,000 位元組的值，*string_expression* 必須明確轉換成適當的大數值資料類型。  
+>  如果 *string_expression* 的類型不是 **varchar(max)** 或 **nvarchar(max)** 則 REPLICATE 會將傳回值截斷為 8,000 位元組。 若要傳回大於 8,000 位元組的值，*string_expression* 必須明確轉換成適當的大數值資料類型。  
   
  *integer_expression*  
  這是任何整數類型的運算式，包括 **bigint**。 如果 *integer_expression* 是負數，則會傳回 Null。  

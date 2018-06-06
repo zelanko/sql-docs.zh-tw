@@ -1,32 +1,33 @@
 ---
-title: "SQLColumnPrivileges 函數 |Microsoft 文件"
-ms.custom: 
+title: SQLColumnPrivileges 函數 |Microsoft 文件
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
-ms.component: odbc
-ms.reviewer: 
+ms.prod: sql
+ms.prod_service: connectivity
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
-ms.topic: article
-apiname: SQLColumnPrivileges
-apilocation: sqlsrv32.dll
+ms.technology: connectivity
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
+apiname:
+- SQLColumnPrivileges
+apilocation:
+- sqlsrv32.dll
 apitype: dllExport
-f1_keywords: SQLColumnPrivileges
-helpviewer_keywords: SQLColumnPrivileges function [ODBC]
+f1_keywords:
+- SQLColumnPrivileges
+helpviewer_keywords:
+- SQLColumnPrivileges function [ODBC]
 ms.assetid: ef233d9a-6ed5-4986-9d42-5e0b1a79fb6e
-caps.latest.revision: "20"
+caps.latest.revision: 20
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
-ms.workload: Inactive
-ms.openlocfilehash: 5058ae7c097858469db0aad57509f013e68db7ca
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+manager: craigg
+ms.openlocfilehash: ae5170239706601def7efcb251e4def31f938b21
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sqlcolumnprivileges-function"></a>SQLColumnPrivileges 函數
 **一致性**  
@@ -63,7 +64,7 @@ SQLRETURN SQLColumnPrivileges(
  *NameLength1*  
  [輸入]中的字元長度 **CatalogName*。  
   
- *SchemaName*  
+ *schemaName*  
  [輸入]結構描述名稱。 如果驅動程式支援的結構描述，對於某些資料表，但不適用於其他人使用，例如當驅動程式會擷取資料的不同 Dbms，空字串 ("") 表示沒有結構描述的資料表。 *SchemaName*不能包含字串的搜尋模式。  
   
  如果 SQL_ATTR_METADATA_ID 陳述式屬性設定為 SQL_TRUE， *SchemaName*會被視為識別項。 如果是 SQL_FALSE， *SchemaName*是一般的引數; 將它視為常值，和其案例很重要。  
@@ -93,7 +94,7 @@ SQLRETURN SQLColumnPrivileges(
 ## <a name="diagnostics"></a>診斷  
  當**SQLColumnPrivileges**會傳回 SQL_ERROR 或 SQL_SUCCESS_WITH_INFO，相關聯的 SQLSTATE 值可能會取得藉由呼叫**SQLGetDiagRec**與*HandleType*利用 SQL_HANDLE_STMT 的和*處理*的*StatementHandle*。 下表列出通常所傳回的 SQLSTATE 值**SQLColumnPrivileges** ，並說明這個函式; 每個內容中的標記法 」 (DM) 」 位於驅動程式傳回的 Sqlstate 的說明管理員。 每個 SQLSTATE 值相關聯的傳回碼是 SQL_ERROR，除非有說明，否則為。  
   
-|SQLSTATE|錯誤|描述|  
+|SQLSTATE|錯誤|Description|  
 |--------------|-----------|-----------------|  
 |01000|一般警告|特定驅動程式告知性訊息。 （函式會傳回 SQL_SUCCESS_WITH_INFO）。|  
 |08S01|通訊連結失敗|功能已完成處理之前，驅動程式和驅動程式已連線到資料來源之間的通訊連結失敗。|  
@@ -138,7 +139,7 @@ SQLRETURN SQLColumnPrivileges(
   
 |資料行名稱|資料行編號|資料類型|註解|  
 |-----------------|-------------------|---------------|--------------|  
-|TABLE_CAT (ODBC 1.0)|@shouldalert|Varchar|類別目錄識別碼;如果不適用於資料來源，則為 NULL。 如果驅動程式支援目錄對於某些資料表，但不適用於其他項目，例如當驅動程式會從不同的 Dbms 擷取資料，它會傳回空字串 ("") 沒有目錄這些資料表。|  
+|TABLE_CAT (ODBC 1.0)|1|Varchar|類別目錄識別碼;如果不適用於資料來源，則為 NULL。 如果驅動程式支援目錄對於某些資料表，但不適用於其他項目，例如當驅動程式會從不同的 Dbms 擷取資料，它會傳回空字串 ("") 沒有目錄這些資料表。|  
 |再依據 TABLE_SCHEM 排列 (ODBC 1.0)|2|Varchar|結構描述識別碼。如果不適用於資料來源，則為 NULL。 如果驅動程式支援的結構描述對於某些資料表，但不適用於其他項目，例如當驅動程式會從不同的 Dbms 擷取資料，它會傳回空字串 ("") 並沒有結構描述這些資料表。|  
 |TABLE_NAME (ODBC 1.0)|3|Varchar 不是 NULL|資料表識別碼。|  
 |COLUMN_NAME (ODBC 1.0)|4|Varchar 不是 NULL|資料行名稱。 驅動程式傳回的資料行沒有名稱為空字串。|  
@@ -162,6 +163,6 @@ SQLRETURN SQLColumnPrivileges(
 |傳回針對資料表或資料表的權限|[SQLTablePrivileges 函式](../../../odbc/reference/syntax/sqltableprivileges-function.md)|  
 |傳回一份資料表中的資料來源|[SQLTables 函式](../../../odbc/reference/syntax/sqltables-function.md)|  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [ODBC 應用程式開發介面參考](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [ODBC 標頭檔](../../../odbc/reference/install/odbc-header-files.md)

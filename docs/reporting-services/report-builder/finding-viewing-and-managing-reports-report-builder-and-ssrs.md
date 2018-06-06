@@ -1,27 +1,25 @@
 ---
-title: "尋找、檢視和管理報表 (報表產生器及 SSRS) | Microsoft Docs"
-ms.custom: 
+title: 尋找、檢視和管理報表 (報表產生器及 SSRS) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: report-builder
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: 5599300d-6bcd-4704-aba5-fa98e01c78a9
-caps.latest.revision: "11"
+caps.latest.revision: 11
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: ca04c9558b827539bdb6dac8431a768e8d68f414
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: d5928b1e7bc5850c2a235bb07f9ce87ec877c44c
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="finding-viewing-and-managing-reports-report-builder-and-ssrs-"></a>尋找、檢視和管理報表 (報表產生器及 SSRS)
   在報表產生器中，您可以瀏覽報表伺服器或 SharePoint 網站上的資料夾，以便尋找報表、共用資料來源、模型，以及其他相關的報表項目，並瀏覽電腦以尋找本機報表。 為了更容易尋找報表，報表產生器會維護一份最近使用之伺服器及網站的清單，而且可以直接存取電腦檔案系統中的 [桌面]、[我的文件] 和 [我的電腦] 資料夾。  
@@ -96,7 +94,7 @@ ms.lasthandoff: 01/09/2018
   
 |選項|結果|  
 |------------|------------|  
-|瀏覽器視窗上的**[重新整理]** 按鈕。|顯示儲存在工作階段快取中的報表。 使用者開啟報表時，便會建立工作階段快取。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 會使用瀏覽器工作階段，在報表開啟時維持一致的檢視方式。|  
+|瀏覽器視窗上的 **[重新整理]** 按鈕。|顯示儲存在工作階段快取中的報表。 使用者開啟報表時，便會建立工作階段快取。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 會使用瀏覽器工作階段，在報表開啟時維持一致的檢視方式。|  
 |![報表工具列上的瀏覽器重新整理按鈕](../../reporting-services/media/htmlviewer-refresh.GIF "報表工具列上的瀏覽器重新整理按鈕")|當您按一下報表工具列的 **[重新整理]** 按鈕時，報表伺服器會重新執行查詢，如果報表為視需要執行，還會更新報表資料。 如果報表已快取或為快照集， **[重新整理]** 會顯示儲存在報表伺服器資料庫中的報表。|  
 |CTRL+F5 組合鍵|與按一下報表工具列的 **[重新整理]** 按鈕的結果相同。|  
   

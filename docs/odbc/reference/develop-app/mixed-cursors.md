@@ -1,16 +1,14 @@
 ---
-title: "混合資料指標 |Microsoft 文件"
-ms.custom: 
+title: 混合資料指標 |Microsoft 文件
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
-ms.component: odbc
-ms.reviewer: 
+ms.prod: sql
+ms.prod_service: connectivity
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: connectivity
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - mixed cursors [ODBC]
 - cursors [ODBC], dynamic
@@ -19,16 +17,15 @@ helpviewer_keywords:
 - cursors [ODBC], key-set driven
 - cursors [ODBC], mixed
 ms.assetid: 9beb2db9-0b6d-491d-9529-d64e64e59014
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
-ms.workload: Inactive
-ms.openlocfilehash: 3ca9ad7c2c1f085cf3a74ab8b824ef7c4d6df2e6
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+manager: craigg
+ms.openlocfilehash: 52018d329255d05df03e1dc9e070225a84dbd97d
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="mixed-cursors"></a>混合的資料指標
 混合的資料指標為索引鍵集驅動資料指標和動態資料指標的組合。 它用於結果集是太大，無法適當地儲存整個結果集的金鑰。 混合的資料指標是藉由建立小於整個結果集，但大於資料列集索引鍵集實作。  

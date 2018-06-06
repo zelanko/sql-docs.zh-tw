@@ -1,36 +1,23 @@
 ---
-title: "基本 MDX 指令碼 (MDX) |Microsoft 文件"
-ms.custom: 
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
-helpviewer_keywords:
-- default MDX scripts
-- statements [MDX]
-- expressions [MDX], scripts
-- scripts [MDX], about scripts
-ms.assetid: 83d9afda-7d34-42b5-8f28-20172a905f23
-caps.latest.revision: 
-author: Minewiskan
+title: 基本 MDX 指令碼 (MDX) |Microsoft 文件
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: mdx
+ms.topic: conceptual
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 22da0a7df618db320214f19a73e2047ea4b37922
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 2bebee1057180259c9813d7a650594c0c6d4736d
+ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="the-basic-mdx-script-mdx"></a>基本 MDX 指令碼 (MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
-多維度運算式 (MDX) 指令碼可在 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 中定義 Cube 的計算處理序。 MDX 指令碼有以下兩種類型：  
+  多維度運算式 (MDX) 指令碼可在 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 中定義 Cube 的計算處理序。 MDX 指令碼有以下兩種類型：  
   
  **預設的 MDX 指令碼**  
  當您建立 Cube 時， [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 會為那個 Cube 建立預設的 MDX 指令碼。 此指令碼會定義整個 Cube 的計算行程。  
@@ -97,7 +84,7 @@ ms.lasthandoff: 02/15/2018
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [MDX 語言參考 &#40;MDX &#41;](../../../mdx/mdx-language-reference-mdx.md)   
- [MDX 指令碼基礎觀念 &#40;Analysis Services &#41;](../../../analysis-services/multidimensional-models/mdx/mdx-scripting-fundamentals-analysis-services.md)  
+ [MDX 語言參考 & #40;MDX & #41;](../../../mdx/mdx-language-reference-mdx.md)   
+ [MDX 指令碼基礎觀念 & #40;Analysis Services & #41;](../../../analysis-services/multidimensional-models/mdx/mdx-scripting-fundamentals-analysis-services.md)  
   
   

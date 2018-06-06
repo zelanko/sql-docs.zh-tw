@@ -1,33 +1,24 @@
 ---
-title: "第 12 課： 建立角色 |Microsoft 文件"
-ms.custom: 
-ms.date: 03/27/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services, azure-analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: get-started-article
-applies_to: SQL Server 2016
-ms.assetid: 984face4-00fc-46d3-8ae1-9755bf737bdf
-caps.latest.revision: "17"
-author: Minewiskan
+title: 第 12 課： 建立角色 |Microsoft 文件
+ms.date: 05/08/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: tabular-models
+ms.topic: tutorial
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 12a11fce82fbb0ec3e75ee9908f07372e5cbb086
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 7ec7afeddeeb4aae53f1368f55e2af5ec3ffcd0e
+ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="lesson-11-create-roles"></a>第 11 課： 建立角色
 [!INCLUDE[ssas-appliesto-sql2016-later-aas](../includes/ssas-appliesto-sql2016-later-aas.md)]
 
-在這一課，您將建立角色。 角色會藉由僅限身為角色成員的 Windows 使用者存取的方式，提供模型資料庫物件和資料安全性。 每個角色都會定義一項權限：「無」、「讀取」、「讀取和處理」、「處理」或「系統管理員」。 可以使用 角色管理員模型撰寫期間定義角色。 部署模型之後，您可以使用 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]管理角色。 若要進一步了解，請參閱[角色](../analysis-services/tabular-models/roles-ssas-tabular.md)。  
+在這一課，您將建立角色。 角色會藉由僅限身為角色成員的 Windows 使用者存取的方式，提供模型資料庫物件和資料安全性。 每個角色都會定義一項權限：「無」、「讀取」、「讀取和處理」、「處理」或「系統管理員」。 可以使用 角色管理員模型撰寫期間定義角色。 部署模型之後，您可以使用 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 管理角色。 若要進一步了解，請參閱[角色](../analysis-services/tabular-models/roles-ssas-tabular.md)。  
   
 > [!NOTE]  
 > 建立角色不是完成本教學課程的必要工作。 根據預設，您目前用來登入的帳戶將擁有模型的系統管理員權限。 不過，若要讓其他使用者在您的組織使用報表用戶端來瀏覽此模型中，您必須建立至少一個角色具有讀取權限，並將這些使用者新增為成員。  
@@ -44,7 +35,7 @@ ms.lasthandoff: 01/08/2018
   
 完成本課程的估計時間： **15 分鐘**  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>必要條件  
 本主題是表格式模型教學課程的一部分，必須依序完成。 然後再執行工作，在這一課，您應已完成上一課：[第 10 課： 建立資料分割](../analysis-services/lesson-10-create-partitions.md)。  
   
 ## <a name="create-roles"></a>建立角色  

@@ -1,16 +1,14 @@
 ---
-title: "sp_configure (TRANSACT-SQL) |Microsoft 文件"
-ms.custom: 
+title: sp_configure (TRANSACT-SQL) |Microsoft 文件
+ms.custom: ''
 ms.date: 03/16/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, pdw
-ms.service: 
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: system-objects
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_configure
@@ -20,24 +18,26 @@ dev_langs:
 helpviewer_keywords:
 - sp_configure
 ms.assetid: d18b251d-b37a-4f5f-b50c-502d689594c8
-caps.latest.revision: 
+caps.latest.revision: 60
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Active
-ms.openlocfilehash: d6ff78066f307e70f37880eb57e2430774c242ae
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 05074a051f39e8b2dd81314ed6e230868c410c49
+ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="spconfigure-transact-sql"></a>sp_configure (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-pdw-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/t-sql-appliesto-ss-asdbmi-xxxx-pwd-md.md)]
 
-  顯示或變更目前伺服器的全域組態設定。  
+  顯示或變更目前伺服器的全域組態設定。
+
+[!INCLUDE[ssMIlimitation](../../includes/sql-db-mi-limitation.md)]
   
 > [!NOTE]  
->  資料庫層級組態選項，請參閱[ALTER DATABASE SCOPED CONFIGURATION &#40;TRANSACT-SQL &#41;](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md). 若要設定軟體 NUMA，請參閱[軟體 NUMA &#40;SQL Server &#41;](../../database-engine/configure-windows/soft-numa-sql-server.md).  
+>  資料庫層級組態選項，請參閱[ALTER DATABASE SCOPED CONFIGURATION &#40;TRANSACT-SQL&#41;](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)。 若要設定軟體 NUMA，請參閱[NUMA &#40;SQL Server&#41;](../../database-engine/configure-windows/soft-numa-sql-server.md)。  
   
  ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -69,7 +69,7 @@ RECONFIGURE
  [ **@configname=** ] **'***option_name***'**  
  這是組態選項的名稱。 *option_name* is **varchar(35)**，預設值為 NULL。 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 會識別任何屬於組態名稱一部分的唯一字串。 若未指定，就會傳回完整的選項清單。  
   
- 如需有關可用組態選項及其設定的資訊，請參閱[伺服器組態選項 &#40;SQL Server &#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md).  
+ 如需有關可用組態選項及其設定的資訊，請參閱[伺服器組態選項&#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)。  
   
  [ **@configvalue=** ] **'***value***'**  
  這是新的組態設定。 *value* 是 **int**，預設值是 NULL。 最大值會隨著個別選項而不同。  
@@ -89,8 +89,8 @@ RECONFIGURE
 |**name**|**nvarchar(35)**|組態選項的名稱。|  
 |**minimum**|**int**|組態選項的最小值。|  
 |**maximum**|**int**|組態選項的最大值。|  
-|**config_value**|**int**|組態選項已設定使用的值**sp_configure** (中的值**sys.configurations.value**)。 如需有關這些選項的詳細資訊，請參閱[伺服器組態選項 &#40;SQL Server &#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)和[sys.configurations &#40;TRANSACT-SQL &#41;](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md).|  
-|**run_value**|**int**|目前執行中的組態選項的值 (值**sys.configurations.value_in_use**)。<br /><br /> 如需詳細資訊，請參閱[sys.configurations &#40;TRANSACT-SQL &#41;](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md).|  
+|**config_value**|**int**|組態選項已設定使用的值**sp_configure** (中的值**sys.configurations.value**)。 如需有關這些選項的詳細資訊，請參閱[伺服器組態選項&#40;SQL Server&#41; ](../../database-engine/configure-windows/server-configuration-options-sql-server.md)和[sys.configurations &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md)。|  
+|**run_value**|**int**|目前執行中的組態選項的值 (值**sys.configurations.value_in_use**)。<br /><br /> 如需詳細資訊，請參閱[sys.configurations &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md)。|  
   
 ## <a name="remarks"></a>備註  
  使用**sp_configure**來顯示或變更伺服器層級設定。 若要變更資料庫層級的設定，請使用 ALTER DATABASE。 若要變更只影響目前使用者工作階段的設定，請使用 SET 陳述式。  
@@ -110,15 +110,15 @@ RECONFIGURE
 > [!NOTE]  
 >  如果指定*值*太高的選項， **run_value**資料行會反映出事實，[!INCLUDE[ssDE](../../includes/ssde-md.md)]已預設為動態記憶體，而不是使用不正確的設定。  
   
- 如需詳細資訊，請參閱[RECONFIGURE &#40;TRANSACT-SQL &#41;](../../t-sql/language-elements/reconfigure-transact-sql.md).  
+ 如需詳細資訊，請參閱[重新設定&#40;TRANSACT-SQL&#41;](../../t-sql/language-elements/reconfigure-transact-sql.md)。  
   
-## <a name="advanced-options"></a>進階選項  
+## <a name="advanced-options"></a>[進階選項]  
  部分組態選項，例如**親和性遮罩**和**復原間隔**，指定為進階選項。 依預設，這些選項無法檢視和變更。 若要使用它們，請設定**ShowAdvancedOptions**組態選項設為 1。  
   
- 如需有關組態選項及其設定的詳細資訊，請參閱[伺服器組態選項 &#40;SQL Server &#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md).  
+ 如需有關組態選項及其設定的詳細資訊，請參閱[伺服器組態選項&#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)。  
   
 ## <a name="permissions"></a>Permissions  
- 不含參數或只含第一個參數之 **sp_configure** 上的執行權限預設會授與所有使用者。 若要執行**sp_configure**兩個參數來變更組態選項或執行 RECONFIGURE 陳述式，您必須取得 ALTER SETTINGS 伺服器層級權限。 **系統管理員 (sysadmin)** 及 **serveradmin** 固定伺服器角色會隱含 ALTER SETTINGS 權限。  
+ 不含參數或只含第一個參數的 **sp_configure** 上的執行權限會依預設授予所有使用者。 若要執行**sp_configure**兩個參數來變更組態選項或執行 RECONFIGURE 陳述式，您必須取得 ALTER SETTINGS 伺服器層級權限。 **系統管理員 (sysadmin)** 及 **serveradmin** 固定伺服器角色會隱含 ALTER SETTINGS 權限。  
   
 ## <a name="examples"></a>範例  
   
@@ -168,10 +168,10 @@ EXEC sp_configure @configname='hadoop connectivity';
 ```  
   
 ### <a name="e-set-hadoop-connectivity"></a>E. 設定 Hadoop 連接  
- 設定 Hadoop 連接性，需要一些額外的步驟，除了執行 sp_configure。 完整程序，請參閱[CREATE EXTERNAL DATA SOURCE &#40;TRANSACT-SQL &#41;](../../t-sql/statements/create-external-data-source-transact-sql.md).  
+ 設定 Hadoop 連接性，需要一些額外的步驟，除了執行 sp_configure。 完整程序，請參閱[CREATE EXTERNAL DATA SOURCE &#40;TRANSACT-SQL&#41;](../../t-sql/statements/create-external-data-source-transact-sql.md)。  
   
-## <a name="see-also"></a>請參閱＜  
- [RECONFIGURE &#40;Transact-SQL&#41;](../../t-sql/language-elements/reconfigure-transact-sql.md)   
+## <a name="see-also"></a>另請參閱  
+ [RECONFIGURE & #40;TRANSACT-SQL & #41;](../../t-sql/language-elements/reconfigure-transact-sql.md)   
  [SET 陳述式 &#40;Transact-SQL&#41;](../../t-sql/statements/set-statements-transact-sql.md)   
  [伺服器組態選項 &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)   
  [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)   

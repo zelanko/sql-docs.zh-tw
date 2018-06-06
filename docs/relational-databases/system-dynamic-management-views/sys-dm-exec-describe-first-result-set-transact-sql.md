@@ -1,16 +1,13 @@
 ---
-title: sys.dm_exec_describe_first_result_set (Transact-SQL) | Microsoft Docs
-ms.custom: 
+title: t (TRANSACT-SQL) |Microsoft 文件
+ms.custom: ''
 ms.date: 06/10/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
-ms.component: dmv's
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: system-objects
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.dm_exec_describe_first_result_set
@@ -20,23 +17,23 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_exec_describe_first_result_set catalog view
 ms.assetid: 6ea88346-0bdb-4f0e-9f1f-4d85e3487d23
-caps.latest.revision: 
+caps.latest.revision: 25
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 05555f2e64b191a43738c145e9c3029f8afe8cd5
-ms.sourcegitcommit: 7ed8c61fb54e3963e451bfb7f80c6a3899d93322
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 60e1bc6b899861958aba64b0eede3ceb2ab9e94b
+ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/20/2018
+ms.lasthandoff: 05/23/2018
 ---
 # <a name="sysdmexecdescribefirstresultset-transact-sql"></a>sys.dm_exec_describe_first_result_set (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
   此動態管理函數接受[!INCLUDE[tsql](../../includes/tsql-md.md)]做為參數的陳述式，並說明第一個結果集的陳述式的中繼資料。  
   
- **sys.dm_exec_describe_first_result_set**有相同的結果集定義，並以[sys.dm_exec_describe_first_result_set_for_object &#40;TRANSACT-SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-for-object-transact-sql.md) ，類似於[sp_describe_first_result_set &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md).  
+ **sys.dm_exec_describe_first_result_set**有相同的結果集定義，並以[sys.dm_exec_describe_first_result_set_for_object &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-for-object-transact-sql.md) ，類似於[sp_describe_first_result_set &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md)。  
   
 
  ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
@@ -50,12 +47,12 @@ sys.dm_exec_describe_first_result_set(@tsql, @params, @include_browse_informatio
   
 ## <a name="arguments"></a>引數  
  *@tsql*  
- 一個或多個 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式。 *Transact SQL_batch*可能**nvarchar (***n***)**或**nvarchar （max)**。  
+ 一個或多個 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式。 *Transact SQL_batch*可能**nvarchar (***n***)** 或**nvarchar （max)**。  
   
  *@params*  
- @params 提供的參數宣告字串[!INCLUDE[tsql](../../includes/tsql-md.md)]批次，類似於 sp_executesql。 參數可以是**nvarchar （n)**或**nvarchar （max)**。  
+ @params 提供的參數宣告字串[!INCLUDE[tsql](../../includes/tsql-md.md)]批次，類似於 sp_executesql。 參數可以是**nvarchar （n)** 或**nvarchar （max)**。  
   
- 是一個字串，包含的所有參數都已內嵌在定義[!INCLUDE[tsql](../../includes/tsql-md.md)] *_batch*。 此字串必須是 Unicode 常數或 Unicode 變數。 每個參數定義都由參數名稱和資料類型組成。 *n* 是指出其他參數定義的預留位置。 指定陳述式中每個參數必須定義在@params。 如果[!INCLUDE[tsql](../../includes/tsql-md.md)]陳述式或批次陳述式中的不包含參數，@params並非必要。 這個參數的預設值是 NULL。  
+ 是一個字串，包含的所有參數都已內嵌在定義[!INCLUDE[tsql](../../includes/tsql-md.md)] *_batch*。 此字串必須是 Unicode 常數或 Unicode 變數。 每個參數定義都由參數名稱和資料類型組成。 *n*是指出其他參數定義的預留位置。 指定陳述式中每個參數必須定義在@params。 如果[!INCLUDE[tsql](../../includes/tsql-md.md)]陳述式或批次陳述式中的不包含參數，@params並非必要。 這個參數的預設值是 NULL。  
   
  *@include_browse_information*  
  如果設定為 1，就會分析每個查詢，如同查詢上有 FOR BROWSE 選項一樣。 會傳回其他索引鍵資料行和來源資料表資訊。  
@@ -108,7 +105,7 @@ sys.dm_exec_describe_first_result_set(@tsql, @params, @include_browse_informatio
 |**error_type_desc**|**nvarchar(60)**|包含簡短大寫字串，表示要傳回的錯誤。 對應到 error_type。 請參閱備註下的清單。|  
   
 ## <a name="remarks"></a>備註  
- 此函式使用相同的演算法為**sp_describe_first_result_set**。 如需詳細資訊，請參閱[sp_describe_first_result_set &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md).  
+ 此函式使用相同的演算法為**sp_describe_first_result_set**。 如需詳細資訊，請參閱[sp_describe_first_result_set &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md)。  
   
  下表列出錯誤類型及其說明。  
   
@@ -132,7 +129,7 @@ sys.dm_exec_describe_first_result_set(@tsql, @params, @include_browse_informatio
  需要執行權限@tsql引數。  
   
 ## <a name="examples"></a>範例  
- 本主題中的其他範例[sp_describe_first_result_set &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md)可改寫以使用**sys.dm_exec_describe_first_result_set**。  
+ 本主題中的其他範例[sp_describe_first_result_set &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md)可改寫以使用**sys.dm_exec_describe_first_result_set**。  
   
 ### <a name="a-returning-information-about-a-single-transact-sql-statement"></a>A. 傳回單一 Transact-SQL 陳述式的相關資訊  
  下列程式碼會傳回 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式結果的相關資訊。  
@@ -176,8 +173,8 @@ GO
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [sp_describe_first_result_set &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md)   
- [sp_describe_undeclared_parameters &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-describe-undeclared-parameters-transact-sql.md)   
+ [sp_describe_first_result_set &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md)   
+ [sp_describe_undeclared_parameters &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-describe-undeclared-parameters-transact-sql.md)   
  [sys.dm_exec_describe_first_result_set_for_object &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-for-object-transact-sql.md)  
   
   

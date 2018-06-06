@@ -1,34 +1,25 @@
 ---
-title: "資源管理針對 SQL Server 中的機器學習 |Microsoft 文件"
-ms.custom: 
-ms.date: 11/16/2017
-ms.reviewer: 
-ms.suite: sql
-ms.prod: machine-learning-services
-ms.prod_service: machine-learning-services
-ms.component: r
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
-ms.assetid: 18c9978a-aa55-42bd-9ab3-8097030888c9
-caps.latest.revision: 
-author: jeannt
-ms.author: jeannt
-manager: cgronlund
-ms.workload: Inactive
-ms.openlocfilehash: d1eb0f1cce23d084516b5446d39274ac3078b0b8
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+title: 資源管理針對 SQL Server 中的機器學習 |Microsoft 文件
+ms.prod: sql
+ms.technology: machine-learning
+ms.date: 04/15/2018
+ms.topic: conceptual
+author: HeidiSteen
+ms.author: heidist
+manager: cgronlun
+ms.openlocfilehash: abe130ef7e465326999e0c71ce01e88dfa6269a3
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="resource-governance-for-machine-learning-in-sql-server"></a>SQL Server 中的機器學習資源管理
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 本文章提供 SQL Server 中的功能，幫助配置和 R 和 Python 指令碼所使用的資源之間取得平衡的資源管理的概觀。
 
-**適用於：** [!INCLUDE[sscurrent-md](../../includes/sscurrent-md.md)]
- [!INCLUDE[rsql-productnamenew-md](../../includes/rsql-productnamenew-md.md)]和 [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] [!INCLUDE[rsql-productname-md](../../includes/rsql-productname-md.md)]
+**適用於：**[!INCLUDE[sscurrent-md](../../includes/sscurrent-md.md)]
+[!INCLUDE[rsql-productnamenew-md](../../includes/rsql-productnamenew-md.md)] 和 [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] [!INCLUDE[rsql-productname-md](../../includes/rsql-productname-md.md)]
 
 ## <a name="goals-of-resource-governance-for-machine-learning"></a>機器學習資源控管的目標
 
@@ -90,7 +81,7 @@ SQL Server 支援三種類型的預設資源集區：
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝程式中對外部指令碼的支援是選擇性的。 即使在安裝之後機器學習功能，執行外部指令碼的功能預設是 OFF，而您必須手動重新設定屬性，並重新啟動以啟用指令碼執行的執行個體。
 
-因此，如果需要立即緩解資源問題或安全性問題，系統管理員可以立即使用停用任何外部指令碼執行[sp_configure &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)並設定的屬性`external scripts enabled`為 FALSE 或 0。
+因此，如果需要立即緩解資源問題或安全性問題，系統管理員可以立即使用停用任何外部指令碼執行[sp_configure &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)設定屬性和`external scripts enabled`為 FALSE 或 0。
   
 ## <a name="see-also"></a>另請參閱
 

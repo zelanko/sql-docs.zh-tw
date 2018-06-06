@@ -1,24 +1,17 @@
 ---
-title: "原生計分 |Microsoft 文件"
-ms.custom: 
-ms.date: 09/19/2017
-ms.prod: machine-learning-services
-ms.prod_service: machine-learning-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
-author: jeannt
-ms.author: jeannt
-manager: cgronlund
-ms.openlocfilehash: 14e2a86b3f85f5dd1cfec7ac634b6801bb0f319b
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+title: 原生計分 |Microsoft 文件
+ms.prod: sql
+ms.technology: machine-learning
+ms.date: 04/15/2018
+ms.topic: conceptual
+author: HeidiSteen
+ms.author: heidist
+manager: cgronlun
+ms.openlocfilehash: e08cb48335f956298c387e2a621a8e8de7a91a98
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="native-scoring"></a>原生計分
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -99,7 +92,7 @@ _計分_是兩個步驟的程序。 首先，您可以指定預先定型的模�
 + 在此模型必須事先使用其中一個支援定型**rx**演算法。 如需詳細資訊，請參閱[支援演算法](#bkmk_native_supported_algos)。
 + 使用 Microsoft R Server 9.1.0 中提供新的序列化函式必須儲存模型。 序列化函式已最佳化為支援快速計分。
 
-### <a name="bkmk_native_supported_algos"></a>支援原生計分的演算法
+### <a name="bkmk_native_supported_algos"></a> 支援原生計分的演算法
 
 + RevoScaleR 模型
 

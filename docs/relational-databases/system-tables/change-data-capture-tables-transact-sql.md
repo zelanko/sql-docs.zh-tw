@@ -1,30 +1,27 @@
 ---
-title: "變更資料擷取資料表 (TRANSACT-SQL) |Microsoft 文件"
-ms.custom: 
+title: 變更資料擷取資料表 (TRANSACT-SQL) |Microsoft 文件
+ms.custom: ''
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
 ms.component: system-tables
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: system-objects
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - TSQL
 ms.assetid: a4372d0b-50ca-4e58-80f6-2ed3cb52a84a
-caps.latest.revision: 
+caps.latest.revision: 14
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 680ccf7eb66d7a70b14432521e299a85f516b9b5
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: c0317e1c163dacac41968d9c3f17c851cd3be7b5
+ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="change-data-capture-tables-transact-sql"></a>異動資料擷取資料表 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,11 +47,11 @@ ms.lasthandoff: 11/21/2017
  [cdc.index_columns](../../relational-databases/system-tables/cdc-index-columns-transact-sql.md)  
  針對每一個與變更資料表相關聯的索引資料行，各傳回一個資料列。  
   
- [dbo.cdc_jobs &#40;TRANSACT-SQL &#41;](../../relational-databases/system-tables/dbo-cdc-jobs-transact-sql.md)  
+ [dbo.cdc_jobs &#40;Transact SQL&#41;](../../relational-databases/system-tables/dbo-cdc-jobs-transact-sql.md)  
  傳回異動資料擷取代理程式作業的組態參數。  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [異動資料擷取預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/change-data-capture-stored-procedures-transact-sql.md)   
- [異動資料擷取函數 &#40;TRANSACT-SQL &#41;](../../relational-databases/system-functions/change-data-capture-functions-transact-sql.md)  
+ [變更資料擷取函數&#40;Transact SQL&#41;](../../relational-databases/system-functions/change-data-capture-functions-transact-sql.md)  
   
   

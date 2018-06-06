@@ -1,16 +1,15 @@
 ---
-title: "sp_helpdistributiondb (TRANSACT-SQL) |Microsoft 文件"
-ms.custom: 
+title: sp_helpdistributiondb (TRANSACT-SQL) |Microsoft 文件
+ms.custom: ''
 ms.date: 03/03/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - sp_helpdistributiondb
 ms.assetid: a2917020-26d1-4011-99f8-9212d120fd2d
-caps.latest.revision: 
+caps.latest.revision: 26
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 040970c34e8154538135e355744746e3ee1e3cb6
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 02065dbaa89a16c0d00ce8737bb79f29c5256495
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sphelpdistributiondb-transact-sql"></a>sp_helpdistributiondb (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,7 +45,7 @@ sp_helpdistributiondb [ [ @database= ] 'database_name' ]
   
 ## <a name="arguments"></a>引數  
  [  **@database=**] **'***database_name***'**  
- 這是要傳回屬性的資料庫名稱。 *database_name*是**sysname**，預設值是 **%** 與散發者，並在其上相關聯的所有資料庫的使用者有權限。  
+ 這是要傳回屬性的資料庫名稱。 *database_name*是**sysname**，預設值是**%** 與散發者，並在其上相關聯的所有資料庫的使用者有權限。  
   
 ## <a name="result-sets"></a>結果集  
   
@@ -76,11 +74,11 @@ sp_helpdistributiondb [ [ @database= ] 'database_name' ]
 ## <a name="permissions"></a>Permissions  
  成員**db_owner**固定的資料庫角色或**replmonitor**散發資料庫中的角色及使用散發資料庫的發行集的發行集存取清單中的使用者可以執行**sp_helpdistributiondb**傳回檔案的相關資訊。 成員**公用**角色可以執行**sp_helpdistributiondb**來傳回他們可存取的散發資料庫的非檔案相關資訊。  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [檢視及修改散發者和發行者屬性](../../relational-databases/replication/view-and-modify-distributor-and-publisher-properties.md)   
- [sp_adddistributiondb &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/sp-adddistributiondb-transact-sql.md)   
- [sp_changedistributiondb &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/sp-changedistributiondb-transact-sql.md)   
- [sp_dropdistributiondb &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/sp-dropdistributiondb-transact-sql.md)   
+ [sp_adddistributiondb &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-adddistributiondb-transact-sql.md)   
+ [sp_changedistributiondb &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-changedistributiondb-transact-sql.md)   
+ [sp_dropdistributiondb &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropdistributiondb-transact-sql.md)   
  [系統預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

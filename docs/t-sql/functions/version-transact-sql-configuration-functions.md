@@ -1,16 +1,14 @@
 ---
 title: '@@VERSION (Transact-SQL) | Microsoft Docs'
-ms.custom: 
-ms.date: 09/18/2017
-ms.prod: sql-non-specified
+ms.custom: ''
+ms.date: 03/20/2018
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
 ms.component: t-sql|functions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: t-sql
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - '@@VERSION'
@@ -23,16 +21,16 @@ helpviewer_keywords:
 - versions [SQL Server], @@VERSION
 - processors [SQL Server], types
 ms.assetid: 385ba80e-7c28-41a5-9cdb-5648f3785983
-caps.latest.revision: 
+caps.latest.revision: 40
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Active
-ms.openlocfilehash: 9f2a03af933d739760944f72aaea935e8bb3e682
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 1d44d9755cca86af446449c14c90117be1e45043
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="x40x40version---transact-sql-configuration-functions"></a>&#x40;&#x40;Version - Transact SQL Configuration Functions
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -69,15 +67,23 @@ ms.lasthandoff: 11/21/2017
   
  傳回 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 的下列資訊。  
   
--   版本 - "Windows Azure SQL Database"  
+-   版本 - "Microsoft SQL Azure"  
   
--   產品層級 - "(CTP)" 或 "(RTM)"  
+-   產品層級 - "(RTM)"  
   
 -   產品版本  
   
 -   建置日期  
   
 -   著作權聲明  
+
+> [!NOTE]  
+> 我們了解由 @@VERSION 所回報的產品版本對於 Azure SQL Database 而言並不正確的問題。 Azure SQL Database 所執行的 SQL Server 資料庫引擎之版本，一定會領先於 SQL Server 的內部部署版本，且會包含最新的安全性修正。 這表示修補程式等級一律會與 SQL Server 的內部部署版本對等或領先，且在 SQL Server 中提供的最新功能，在 Azure SQL Database 中也會提供。
+>
+> 若要以程式設計方式判斷引擎版本，請使用 SELECT SERVERPROPERTY('EngineEdition')。 此查詢對獨立資料庫會傳回 '5'，且對 Azure SQL Database 中的受控執行個體會傳回 '8'。 
+>
+> 解決此問題之後，將會更新文件。
+
   
 ## <a name="examples"></a>範例  
   

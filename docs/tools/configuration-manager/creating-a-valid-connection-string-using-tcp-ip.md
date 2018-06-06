@@ -1,17 +1,14 @@
 ---
-title: "建立有效的連接字串使用 TCP IP |Microsoft 文件"
-ms.custom: 
+title: 使用 TCP IP 建立有效的連接字串 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
-ms.component: configuration-manager
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: configuration
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - connection strings [Database Engine]
 - ports [SQL Server], connecting to
@@ -19,20 +16,19 @@ helpviewer_keywords:
 - connection strings [Database Engine], TCP/IP
 - aliases [SQL Server], TCP/IP
 ms.assetid: ee5dbc2c-1fc6-42bd-bdf5-efa792557934
-caps.latest.revision: 
+caps.latest.revision: 31
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 869aff413da127fac11244e8d2613696c963c323
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
-ms.translationtype: MT
+ms.openlocfilehash: f604651f6b457801b799df81d6cde6d29e79e5d0
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.translationtype: MTE
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="creating-a-valid-connection-string-using-tcp-ip"></a>使用 TCP IP 建立有效的連接字串
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
-若要使用 TCP/IP 建立有效的連接字串，您必須：  
+  若要使用 TCP/IP 建立有效的連接字串，您必須：  
   
 -   指定 **別名名稱**。  
   
@@ -40,14 +36,14 @@ ms.lasthandoff: 02/03/2018
   
 -   在 **[通訊協定]** 中指定 **[TCP/IP]**。  
   
--   (選擇性) 在 **[通訊埠編號]**中輸入通訊埠編號。 預設值為 1433，也就是伺服器上 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 預設執行個體的通訊埠編號。 若要連接到具名執行個體或未接聽通訊埠 1433 的預設執行個體，您必須提供通訊埠編號，或是啟動 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser 服務。 如需設定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser 服務的資訊，請參閱 [SQL Server Browser 服務](../../tools/configuration-manager/sql-server-browser-service.md)。  
+-   (選擇性) 在 **[通訊埠編號]** 中輸入通訊埠編號。 預設值為 1433，也就是伺服器上 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 預設執行個體的通訊埠編號。 若要連接到具名執行個體或未接聽通訊埠 1433 的預設執行個體，您必須提供通訊埠編號，或是啟動 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser 服務。 如需設定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser 服務的資訊，請參閱 [SQL Server Browser 服務](../../tools/configuration-manager/sql-server-browser-service.md)。  
   
  在連接時， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 元件會從登錄中讀取指定之別名名稱的伺服器、通訊協定與通訊埠值，並以 `tcp:<servername>[\<instancename>],<port>` 或 `tcp:<IPAddress>[\<instancename>],<port>`格式建立連接字串。  
   
 > [!NOTE]  
->  根據預設， [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 防火牆會關閉通訊埠 1433。 因為[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]通訊連接埠 1433年，您必須重新開啟通訊埠如果[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]設定為接聽內送的用戶端連接使用 TCP/IP。 如需設定防火牆的相關資訊，請參閱《 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 線上叢書》中的＜如何：設定防火牆供 SQL Server 存取＞，或請檢閱您的防火牆文件集。  
+>  根據預設， [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 防火牆會關閉通訊埠 1433。 由於 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 是透過連接埠 1433 來進行通訊，因此如果 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 設定為使用 TCP/IP 來接聽內送的用戶端連接，您就必須重新開啟該通訊埠。 如需設定防火牆的相關資訊，請參閱《 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 線上叢書》中的＜如何：設定防火牆供 SQL Server 存取＞，或請檢閱您的防火牆文件集。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 完整支援 Internet Protocol 第 4 版 (IPv4) 和 Internet Protocol 第 6 版 (IPv6)。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]組態管理員可以接受 IPv4 和 IPv6 格式的 IP 位址。 如需有關 IPv6 的資訊，請參閱《 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 線上叢書》中的＜使用 IPv6 連接＞。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 完整支援 Internet Protocol 第 4 版 (IPv4) 和 Internet Protocol 第 6 版 (IPv6)。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 組態管理員可以接受 IPv4 和 IPv6 格式的 IP 位址。 如需有關 IPv6 的資訊，請參閱《 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 線上叢書》中的＜使用 IPv6 連接＞。  
   
 ## <a name="connecting-to-the-local-server"></a>連接到本機伺服器  
  連接到與用戶端在同一部電腦上執行的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 時，可以使用 `(local)` 做為伺服器名稱。 但不建議這麼做，因為會造成模糊不清，但是若確實知道用戶端正在預期的電腦上執行，這就很有用。 例如，為行動式、非連接的使用者 (例如銷售人員) 建立應用程式 (亦即 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 將會在膝上型電腦上執行並儲存專案資料) 時，連接到 `(local)` 的用戶端一律會連接到在膝上型電腦上執行的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 可以使用字詞 `localhost` 或句點 (**.**) 來取代 `(local)`。  
@@ -177,8 +173,8 @@ Server             .\<instancename>
 >  如需指定網路通訊協定作為 **sqlcmd** 參數的資訊，請參閱《 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 線上叢書》中的＜如何：使用 sqlcmd.exe 連接到 Database Engine＞。  
   
 ## <a name="see-also"></a>另請參閱  
- [建立使用共用的記憶體通訊協定有效連接字串](../../tools/configuration-manager/creating-a-valid-connection-string-using-shared-memory-protocol.md)   
- [建立有效的連接字串使用具名的管道](http://msdn.microsoft.com/library/90930ff2-143b-4651-8ae3-297103600e4f)   
+ [使用共用記憶體通訊協定建立有效的連接字串](../../tools/configuration-manager/creating-a-valid-connection-string-using-shared-memory-protocol.md)   
+ [使用具名管道建立有效的連接字串](http://msdn.microsoft.com/library/90930ff2-143b-4651-8ae3-297103600e4f)   
  [選擇網路通訊協定](http://msdn.microsoft.com/library/6565fb7d-b076-4447-be90-e10d0dec359a)  
   
   

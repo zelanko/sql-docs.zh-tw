@@ -1,16 +1,14 @@
 ---
-title: "在 XPath 查詢 (SQLXML 4.0) 中指定布林運算子 |Microsoft 文件"
-ms.custom: 
+title: 在 XPath 查詢 (SQLXML 4.0) 中指定布林運算子 |Microsoft 文件
+ms.custom: ''
 ms.date: 03/17/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
 ms.component: sqlxml
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- dbe-xml
-ms.tgt_pltfrm: 
+ms.technology: xml
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - XPath operators [SQLXML]
@@ -19,25 +17,25 @@ helpviewer_keywords:
 - XPath queries [SQLXML], Boolean operators
 - operators [SQLXML]
 ms.assetid: 9928cff5-62ac-42aa-96bf-2e09a1df0bc3
-caps.latest.revision: 
+caps.latest.revision: 25
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 90e324d5d10d7043bb95471e87c2b664a46d0398
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 9c3f061db3f431f87c5f2a214776558c3f6d69a8
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="specifying-boolean-operators-in-xpath-queries-sqlxml-40"></a>在 XPath 查詢中指定布林運算子 (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-下列範例顯示如何在 XPath 查詢中指定布林運算子。 此範例中的 XPath 查詢會針對 SampleSchema1.xml 中包含的對應結構描述來指定。 如需此範例結構描述資訊，請參閱[範例註解式 XSD 結構描述的 XPath 範例 &#40;SQLXML 4.0 &#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md).  
+  下列範例顯示如何在 XPath 查詢中指定布林運算子。 此範例中的 XPath 查詢會針對 SampleSchema1.xml 中包含的對應結構描述來指定。 如需此範例結構描述資訊，請參閱[範例註解式 XSD 結構描述的 XPath 範例 & #40;SQLXML 4.0 & #41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md).  
   
 ## <a name="examples"></a>範例  
   
 ### <a name="a-specify-the-or-boolean-operator"></a>A. 指定 OR 布林運算子  
- 此 XPath 查詢會傳回**\<客戶 >**的內容節點的項目子系**CustomerID**屬性值為 13 / 31:  
+ 此 XPath 查詢會傳回**\<客戶 >** 的內容節點的項目子系**CustomerID**屬性值為 13 / 31:  
   
 ```  
 /child::Customer[attribute::CustomerID="13" or attribute::CustomerID="31"]  
@@ -49,7 +47,7 @@ ms.lasthandoff: 02/12/2018
 /Customer[@CustomerID="13" or @CustomerID="31"]  
 ```  
   
- 在述詞中，`attribute`是軸和`CustomerID`是節點測試 (TRUE 如果**CustomerID**是**\<屬性 >**  節點，因為 **\<屬性 >**節點是主要節點**屬性**軸)。 述詞篩選條件**\<客戶 >**項目，並傳回只有滿足條件的述詞中指定。  
+ 在述詞中，`attribute`是軸和`CustomerID`是節點測試 (TRUE 如果**CustomerID**是**\<屬性 >**  節點，因為 **\<屬性 >** 節點是主要節點**屬性**軸)。 述詞篩選條件**\<客戶 >** 項目，並傳回只有滿足條件的述詞中指定。  
   
 ##### <a name="to-test-the-xpath-queries-against-the-mapping-schema"></a>針對對應的結構描述測試 XPath 查詢  
   

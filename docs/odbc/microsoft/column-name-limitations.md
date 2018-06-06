@@ -1,30 +1,27 @@
 ---
-title: "資料行名稱限制 |Microsoft 文件"
-ms.custom: 
+title: 資料行名稱限制 |Microsoft 文件
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
-ms.component: odbc
-ms.reviewer: 
+ms.prod: sql
+ms.prod_service: connectivity
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: connectivity
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - desktop database drivers [ODBC], column names
 - ODBC desktop database drivers [ODBC], column names
 ms.assetid: 5a339f61-c52f-40ad-8deb-d785f72753d4
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
-ms.workload: On Demand
-ms.openlocfilehash: 91fe107bf25d2ec2702778475af9f366af22a120
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+manager: craigg
+ms.openlocfilehash: 3f3f384b9a2080ab683c8148effe7c6a9a13fcd6
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="column-name-limitations"></a>資料行名稱限制
 資料行名稱可以包含任何有效的字元 （例如，空格）。 如果資料行名稱可以包含字母、 數字和底線以外的任何字元，名稱必須括在後引號 （'） 分隔。  
@@ -33,7 +30,7 @@ ms.lasthandoff: 12/21/2017
   
  使用 dBASE 驅動程式時，就會將使用 ASCII 值大於 127 的字元轉換成底線。  
   
- 使用 Microsoft Excel 驅動程式時，如果資料行名稱存在，它們必須是第一列。 在 Microsoft Excel 中會使用名稱"！"字元必須括在後引號 （'）。 "！"字元轉換成"$"字元，因為"！"字元以回復括住的名稱，即使是不合法的 ODBC 名稱中。 其他有效的 Microsoft Excel 字元 (除非縱線字元 (&#124;)) 可用資料行的名稱，包括空格。 分隔的識別碼必須用 Microsoft Excel 的資料行名稱，來加上空格。 未指定資料行名稱會取代驅動程式產生的名稱，例如，"Col1"的第一個資料行。  
+ 使用 Microsoft Excel 驅動程式時，如果資料行名稱存在，它們必須是第一列。 在 Microsoft Excel 中會使用名稱"！"字元必須括在後引號 （'）。 "！"字元轉換成"$"字元，因為"！"字元以回復括住的名稱，即使是不合法的 ODBC 名稱中。 其他有效的 Microsoft Excel 字元 (除非縱線字元 (&#124;)) 可用於資料行名稱，包括空格。 分隔的識別碼必須用 Microsoft Excel 的資料行名稱，來加上空格。 未指定資料行名稱會取代驅動程式產生的名稱，例如，"Col1"的第一個資料行。  
   
  縱線字元 (&#124;) 不能在資料行名稱是否或不以回復括住名稱。  
   

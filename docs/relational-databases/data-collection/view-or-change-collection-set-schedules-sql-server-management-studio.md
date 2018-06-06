@@ -1,17 +1,13 @@
 ---
-title: "檢視或變更收集組排程 (SQL Server Management Studio) | Microsoft 文件"
-ms.custom: 
+title: 檢視或變更收集組排程 (SQL Server Management Studio) | Microsoft 文件
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
-ms.prod_service: database-engine
-ms.service: 
-ms.component: data-collection
-ms.reviewer: 
+ms.prod: sql
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: supportability
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 f1_keywords:
 - sql13.swb.dc.collectionsetprop.uploads.f1
 - sql13.swb.dc.collectionsetprop.description.f1
@@ -22,20 +18,19 @@ helpviewer_keywords:
 - collection sets [SQL Server], viewing schedules
 - schedules [SQL Server], viewing collection set
 ms.assetid: 26336c98-78c5-414f-8d6a-574fc3af60c4
-caps.latest.revision: 
-author: stevestein
-ms.author: sstein
+caps.latest.revision: 26
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 8f58af1ebf8e039b935c235ef35118a62f725053
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.openlocfilehash: 3e0633f95e2179cacb62c811365878485be61d3a
+ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="view-or-change-collection-set-schedules-sql-server-management-studio"></a>檢視或變更收集組排程 (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-您可以使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]來檢視或變更收集組排程。  
+  您可以使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]來檢視或變更收集組排程。  
   
  收集模式 (快取或非快取) 可決定您要如何對排程進行變更。 快取模式會使用個別的排程來進行收集和上傳。 非快取模式會使用相同的排程來進行收集和上傳。 每一個系統資料收集組的收集模式類型如下：  
   
@@ -47,13 +42,13 @@ ms.lasthandoff: 02/12/2018
   
 ### <a name="to-view-collection-set-schedules"></a>若要檢視收集組排程  
   
-1.  在 [物件總管] 中，依序展開 **[管理]** 節點、 **[資料收集]**和 **[系統資料收集組]**。  
+1.  在 [物件總管] 中，依序展開 **[管理]** 節點、 **[資料收集]** 和 **[系統資料收集組]**。  
   
 2.  以滑鼠右鍵按一下收集組名稱，然後按一下 [屬性] 開啟 [[資料收集組屬性]](#CollectionSet) 對話方塊。  
   
 ### <a name="to-change-the-schedules-for-a-cached-mode-collection-set"></a>若要變更快取模式收集組的排程  
   
-1.  在 [物件總管] 中，依序展開 **[管理]** 節點、 **[資料收集]**和 **[系統資料收集組]**。  
+1.  在 [物件總管] 中，依序展開 **[管理]** 節點、 **[資料收集]** 和 **[系統資料收集組]**。  
   
 2.  以滑鼠右鍵按一下使用快取模式的收集組，例如 [查詢統計資料]，然後按一下 [屬性] 開啟 [[資料收集組屬性]](#CollectionSet) 對話方塊。  
   
@@ -86,7 +81,7 @@ ms.lasthandoff: 02/12/2018
   
 ### <a name="to-change-the-schedule-for-a-non-cached-mode-collection-set"></a>若要變更非快取模式收集組的排程  
   
-1.  在 [物件總管] 中，依序展開 **[管理]** 節點、 **[資料收集]**和 **[系統資料收集組]**。  
+1.  在 [物件總管] 中，依序展開 **[管理]** 節點、 **[資料收集]** 和 **[系統資料收集組]**。  
   
 2.  以滑鼠右鍵按一下使用非快取模式的收集組 (例如 [磁碟使用量])，然後按一下 [屬性] 開啟 [[資料收集組屬性]](#CollectionSet) 對話方塊。  
   

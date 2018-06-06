@@ -1,37 +1,23 @@
 ---
-title: "將自訂彙總加入維度 |Microsoft 文件"
-ms.custom: 
-ms.date: 03/01/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
-helpviewer_keywords:
-- dimensions [Analysis Services], Business Intelligence enhancements
-- Business Intelligence enhancements [Analysis Services], custom aggregations
-- aggregations [Analysis Services], custom
-- unary operators
-- custom aggregations [Analysis Services]
-ms.assetid: 3199a6c2-a06d-47b9-bd1c-604dbb085318
-caps.latest.revision: 
-author: Minewiskan
+title: 將自訂彙總加入維度 |Microsoft 文件
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: multidimensional-models
+ms.topic: conceptual
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 9188ba67de899aa9bb63f1593da9e67c140a4cc2
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: cbe5c4a1f043ccc8e7f442213b8b024a3920663e
+ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="bi-wizard---add-a-custom-aggregation-to-a-dimension"></a>BI 精靈-將自訂彙總加入維度中
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-將自訂彙總增強功能加入至 Cube 或維度中，以不同的一元運算子取代與維度成員相關聯的預設彙總。 此增強功能指定維度資料表中的一元運算子資料行，它定義父子式階層中的成員積存。 一元運算子是在父子式階層的父屬性上作用。  
+  將自訂彙總增強功能加入至 Cube 或維度中，以不同的一元運算子取代與維度成員相關聯的預設彙總。 此增強功能指定維度資料表中的一元運算子資料行，它定義父子式階層中的成員積存。 一元運算子是在父子式階層的父屬性上作用。  
   
 > [!NOTE]  
 >  只有以現有的資料來源為基礎的維度，才可使用自訂彙總。 對於沒有使用資料來源建立的維度，在加入自訂彙總之前，您必須執行結構描述產生精靈來建立資料來源檢視。  
@@ -47,6 +33,6 @@ ms.lasthandoff: 02/15/2018
 ## <a name="adding-custom-aggregation-unary-operator"></a>加入自訂彙總 (一元運算子)  
  在第二個 **[指定一元運算子]** 頁面上，您可以指定自訂彙總的父屬性，以及維度資料表中供一元運算子使用的來源資料行。 **[父屬性]** 列出其 **Usage** 屬性已設為 **Parent**的屬性。 如果有一個以上的父屬性，請選擇對應到您要使用之父子式階層關聯性的父屬性。 如果沒有列出父屬性，表示該維度不含有效的父子式階層。  
   
- 在 **[來源資料行]**中，您可以選取包含一元運算子的字串資料行。 (此選取項目設定父屬性上的 **UnaryOperatorColumn** 屬性)。維度資料表也應該有指定一元積存運算子的字串資料行。 此資料行的字串值應包含有效彙總運算子。 如果資料列空白，會正常計算相對應的成員。 如果資料行中的公式無效，當擷取使用該成員的資料格值時，會發生執行階段錯誤。 如需詳細資訊，請參閱 [父子式維度中的一元運算子](../../analysis-services/multidimensional-models/parent-child-dimension-attributes-unary-operators.md)。  
+ 在 **[來源資料行]** 中，您可以選取包含一元運算子的字串資料行。 (此選取項目設定父屬性上的 **UnaryOperatorColumn** 屬性)。維度資料表也應該有指定一元積存運算子的字串資料行。 此資料行的字串值應包含有效彙總運算子。 如果資料列空白，會正常計算相對應的成員。 如果資料行中的公式無效，當擷取使用該成員的資料格值時，會發生執行階段錯誤。 如需詳細資訊，請參閱 [父子式維度中的一元運算子](../../analysis-services/multidimensional-models/parent-child-dimension-attributes-unary-operators.md)。  
   
   

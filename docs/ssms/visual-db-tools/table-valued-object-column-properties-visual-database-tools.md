@@ -1,31 +1,31 @@
 ---
-title: "資料表值物件 (資料行) 屬性 (Visual Database Tools) | Microsoft Docs"
-ms.custom: 
+title: 資料表值物件 (資料行) 屬性 (Visual Database Tools) | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
 ms.component: ssms-visual-db
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: tools-ssms
-ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords: vdt.designers.properties.QueryViewColumn
+ms.technology: ssms
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
+f1_keywords:
+- vdt.designers.properties.QueryViewColumn
 ms.assetid: 212d9bcd-aded-4313-a6b9-d7e2270e5954
-caps.latest.revision: "4"
+caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 72f33dceec5940d9b34aa9f7e2c44b4b903d4211
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.openlocfilehash: bf33f123011b7c2a2d5f958ec225cfffcf03a8c2
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="table-valued-object-column-properties-visual-database-tools"></a>資料表值物件 (資料行) 屬性 (Visual Database Tools)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 在查詢和檢視表設計工具的 [圖表] 窗格中，選取資料表值物件中的資料行時，就會出現這些屬性。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+在查詢和檢視表設計工具的 [圖表] 窗格中，選取資料表值物件中的資料行時，就會出現這些屬性。  
   
 > [!NOTE]  
 > 此主題中的屬性，是依類別目錄的順序排列，而非依字母排列。  

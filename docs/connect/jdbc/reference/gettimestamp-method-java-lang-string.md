@@ -1,30 +1,29 @@
 ---
-title: "getTimestamp 方法 (java.lang.String) |Microsoft 文件"
-ms.custom: 
+title: getTimestamp 方法 (java.lang.String) |Microsoft 文件
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
-ms.component: jdbc
-ms.reviewer: 
+ms.prod: sql
+ms.prod_service: connectivity
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
-ms.topic: article
-apiname: SQLServerCallableStatement.getTimestamp (java.lang.String)
-apilocation: sqljdbc.jar
+ms.technology: connectivity
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
+apiname:
+- SQLServerCallableStatement.getTimestamp (java.lang.String)
+apilocation:
+- sqljdbc.jar
 apitype: Assembly
 ms.assetid: 4d5174db-365c-4476-9472-7871578ef34c
-caps.latest.revision: "10"
+caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
-ms.workload: Inactive
-ms.openlocfilehash: 9604724eeb60a5b7cc229e9616369f17ff859974
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+manager: craigg
+ms.openlocfilehash: a5aa22363251036aeb10f738a369be61a40f6f34
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="gettimestamp-method-javalangstring"></a>getTimestamp 方法 (java.lang.String)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -41,7 +40,7 @@ public java.sql.Timestamp getTimestamp(java.lang.String sCol)
 #### <a name="parameters"></a>參數  
  *sCol*  
   
- A**字串**，其中包含參數名稱。  
+ 包含參數名稱的**字串**。  
   
 ## <a name="return-value"></a>傳回值  
  時間戳記的物件。  
@@ -54,8 +53,8 @@ public java.sql.Timestamp getTimestamp(java.lang.String sCol)
   
  這個方法會傳回值，只能從[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] **datetime**和**smalldatetime**資料行。  
   
-## <a name="see-also"></a>請參閱＜  
- [getTimestamp 方法 &#40;SQLServerCallableStatement &#41;](../../../connect/jdbc/reference/gettimestamp-method-sqlservercallablestatement.md)   
+## <a name="see-also"></a>另請參閱  
+ [getTimestamp 方法&#40;SQLServerCallableStatement&#41;](../../../connect/jdbc/reference/gettimestamp-method-sqlservercallablestatement.md)   
  [SQLServerCallableStatement 成員](../../../connect/jdbc/reference/sqlservercallablestatement-members.md)   
  [SQLServerCallableStatement 類別](../../../connect/jdbc/reference/sqlservercallablestatement-class.md)  
   

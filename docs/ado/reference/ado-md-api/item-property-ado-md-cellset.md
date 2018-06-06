@@ -1,17 +1,15 @@
 ---
-title: "項目屬性 （ADO MD 資料格集） |Microsoft 文件"
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
+title: 項目屬性 （ADO MD 資料格集） |Microsoft 文件
+ms.prod: sql
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
-ms.custom: 
+ms.technology: connectivity
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 apitype: COM
 f1_keywords:
 - Item
@@ -19,16 +17,15 @@ f1_keywords:
 helpviewer_keywords:
 - Item property [ADO MD]
 ms.assetid: 0e93d79b-b12e-4e98-889e-c2dfcca20fd0
-caps.latest.revision: 
+caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: f3fa95d6c1441fe81db90d868e08717ff39d37fe
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 7f22f8195a082ffe1333efe46a270fb1e18057ad
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="item-property-ado-md-cellset"></a>項目屬性 （ADO MD 資料格集）
 擷取從資料格[資料格集](../../../ado/reference/ado-md-api/cellset-object-ado-md.md)使用其座標。  

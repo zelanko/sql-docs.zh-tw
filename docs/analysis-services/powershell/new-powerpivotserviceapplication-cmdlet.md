@@ -1,31 +1,23 @@
 ---
-title: New-PowerPivotServiceApplication cmdlet | Microsoft Docs
-ms.custom: 
-ms.date: 03/01/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+title: New-powerpivotserviceapplication 指令程式 |Microsoft 文件
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: powershell
 ms.topic: reference
-ms.assetid: 7bb2a2d2-04c8-43d4-a0fc-e8339ea22138
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 59b91b7bfc168b0722d5b8d37f74e521557c4416
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 5be9914dfb9361af2067cbef469f2ef6737b4fb7
+ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="new-powerpivotserviceapplication-cmdlet"></a>New-PowerPivotServiceApplication 指令程式
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-建立新的 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 服務應用程式。  
+  建立新的 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 服務應用程式。  
 
 >[!NOTE] 
 >這份文件可能包含過時的資訊和範例。 使用 Get-help cmdlet 取得最新。
@@ -67,7 +59,7 @@ New-PowerPivotServiceApplication [-ServiceApplicationName] <string> [-DatabaseSe
 |接受管線輸入？|false|  
 |接受萬用字元？|false|  
   
-### <a name="-databasename-string"></a>-DatabaseName \<string>  
+### <a name="-databasename-string"></a>-DatabaseName\<字串 >  
  指定儲存應用程式資料之 SQL Server 關聯式資料庫的名稱。 請務必指定對應於應用程式的名稱，以便更輕鬆地識別其用途。 您可以建立新的資料庫，或針對所建立的新應用程式，指定現有的 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 服務應用程式資料庫。  
   
 |||  
@@ -91,7 +83,7 @@ New-PowerPivotServiceApplication [-ServiceApplicationName] <string> [-DatabaseSe
 |接受管線輸入？|false|  
 |接受萬用字元？|false|  
   
-### <a name="commonparameters"></a>\<CommonParameters>  
+### <a name="commonparameters"></a>\<一般參數 >  
  這個指令程式支援一般參數：Verbose、Debug、ErrorAction、ErrorVariable、WarningAction、WarningVariable、OutBuffer 和 OutVariable。 如需詳細資訊，請參閱 [About_CommonParameters](http://go.microsoft.com/fwlink/?linkID=227825)。  
   
 ## <a name="inputs-and-outputs"></a>輸入和輸出  

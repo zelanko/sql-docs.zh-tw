@@ -1,27 +1,24 @@
 ---
-title: "使用 SSL 加密 |Microsoft 文件"
-ms.custom: 
+title: 使用 SSL 加密 |Microsoft 文件
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
-ms.component: jdbc
-ms.reviewer: 
+ms.prod: sql
+ms.prod_service: connectivity
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: connectivity
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: 8e566243-2f93-4b21-8065-3c8336649309
-caps.latest.revision: "32"
+caps.latest.revision: 32
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
-ms.workload: On Demand
-ms.openlocfilehash: 2ca2c1c7b566b70b82a70b939c5495e76ce4612a
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+manager: craigg
+ms.openlocfilehash: 5444946843576f87b6887d2bc9446d0a93d5106d
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="using-ssl-encryption"></a>使用 SSL 加密
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -47,7 +44,7 @@ ms.lasthandoff: 11/18/2017
 |[使用 SSL 加密連接](../../connect/jdbc/connecting-with-ssl-encryption.md)|描述如何連接到[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]使用新的 SSL 特定連接屬性的資料庫。|  
 |[設定 SSL 加密的用戶端](../../connect/jdbc/configuring-the-client-for-ssl-encryption.md)|描述如何在用戶端設定預設的信任存放區，以及如何將私用憑證匯入到用戶端電腦的信任存放區中。|  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [保護 JDBC Driver 應用程式](../../connect/jdbc/securing-jdbc-driver-applications.md)  
   
   

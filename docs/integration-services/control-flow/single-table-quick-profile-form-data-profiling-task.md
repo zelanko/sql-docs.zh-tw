@@ -1,32 +1,30 @@
 ---
-title: "單一資料表快速分析表單 (資料分析工作) | Microsoft Docs"
-ms.custom: 
+title: 單一資料表快速分析表單 (資料分析工作) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
 ms.component: control-flow
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 f1_keywords:
 - sql13.dts.designer.dataprofilingtask.quickprofile.f1
 helpviewer_keywords:
 - Data Profiling Task Editor
 ms.assetid: d2fac9ce-730e-474e-961a-69406b633778
-caps.latest.revision: 
+caps.latest.revision: 20
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: dc9d58ae7577204988fefcf0364c48a8a2695201
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 5c4314afd154ff063d960f77ba282b7cf3f28b08
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="single-table-quick-profile-form-data-profiling-task"></a>單一資料表快速分析表單 (資料分析工作)
   您可以使用 **[單一資料表快速分析表單]** 來快速地設定資料分析工作，以便使用預設設定分析單一資料表或檢視表。  
@@ -50,9 +48,9 @@ ms.lasthandoff: 01/25/2018
 |**資料行值散發設定檔**|使用選取之資料表或檢視表中所有適用資料行的預設設定來計算資料行值散發設定檔。<br /><br /> 這個設定檔會報告選取之資料行中的所有相異值，以及該資料表中每個值所代表之資料列的百分比。 這個設定檔也可以報告代表超過資料表中指定之資料列百分比的值。 這個設定檔可協助您識別資料中的問題，例如某個資料行中相異值的數目不正確。 如需此設定檔的詳細資訊，請參閱[資料行值散發設定檔要求選項 &#40;資料分析工作&#41;](../../integration-services/control-flow/column-value-distribution-profile-request-options-data-profiling-task.md)。|  
 |**資料行長度散發設定檔**|使用選取之資料表或檢視表中所有適用資料行的預設設定來計算資料行長度散發設定檔。<br /><br /> 這個設定檔會報告選取之資料行中字串值的所有相異長度，以及該資料表中每個長度所代表之資料列的百分比。 這個設定檔可協助您識別資料中的問題，例如無效的值。 如需設定此設定檔的詳細資訊，請參閱[資料行長度散發設定檔要求選項 &#40;資料分析工作&#41;](../../integration-services/control-flow/column-length-distribution-profile-request-options-data-profiling-task.md)。|  
 |**資料行模式設定檔**|使用選取之資料表或檢視表中所有適用資料行的預設設定來計算資料行模式設定檔。<br /><br /> 這個設定檔會報告一組規則運算式，其中涵蓋了字串資料行中的值。 這個設定檔可協助您識別資料中的問題，例如無效的字串。 這個設定檔也可以建議未來可用於驗證新值的規則運算式。 如需設定此設定檔的詳細資訊，請參閱[資料行模式設定檔要求選項 &#40;資料分析工作&#41;](../../integration-services/control-flow/column-pattern-profile-request-options-data-profiling-task.md)。|  
-|**候選索引鍵設定檔**|針對包含最多可達到在 **[最多可達 N 個資料行索引鍵]**中指定之資料行數目的資料行組合，計算候選索引鍵設定檔。<br /><br /> 這個設定檔會報告資料行或資料行集合是否適合當做選取之資料表的索引鍵。 這個設定檔也可協助您識別資料中的問題，例如潛在索引鍵資料行中重複的值。 如需設定此設定檔的詳細資訊，請參閱[候選索引鍵設定檔要求選項 &#40;資料分析工作&#41;](../../integration-services/control-flow/candidate-key-profile-request-options-data-profiling-task.md)。|  
+|**候選索引鍵設定檔**|針對包含最多可達到在 **[最多可達 N 個資料行索引鍵]** 中指定之資料行數目的資料行組合，計算候選索引鍵設定檔。<br /><br /> 這個設定檔會報告資料行或資料行集合是否適合當做選取之資料表的索引鍵。 這個設定檔也可協助您識別資料中的問題，例如潛在索引鍵資料行中重複的值。 如需設定此設定檔的詳細資訊，請參閱[候選索引鍵設定檔要求選項 &#40;資料分析工作&#41;](../../integration-services/control-flow/candidate-key-profile-request-options-data-profiling-task.md)。|  
 |**[最多可達 N 個資料行索引鍵]**|選取要在可能的組合中當做資料表或檢視表之索引鍵進行測試的資料行數目上限。 預設值是 1。 最大值為 1000。 例如，選取 3 種測試：一個資料行、兩個資料行和三個資料行的索引鍵組合。|  
-|**功能相依性設定檔**|針對包含最多可達到在 **[最多可達 N 個資料行當做行列式資料行]**中指定之資料行數目的行列式資料行組合，計算功能相依性設定檔。<br /><br /> 這個設定檔會報告某個資料行 (相依資料行) 中的值相依於另一個資料行或資料行集合 (行列式資料行) 中之值的程度。 這個設定檔也可協助您識別資料中的問題，例如無效的值。 如需設定此設定檔的詳細資訊，請參閱[功能相依性設定檔要求選項 &#40;資料分析工作&#41;](../../integration-services/control-flow/functional-dependency-profile-request-options-data-profiling-task.md)。|  
+|**功能相依性設定檔**|針對包含最多可達到在 **[最多可達 N 個資料行當做行列式資料行]** 中指定之資料行數目的行列式資料行組合，計算功能相依性設定檔。<br /><br /> 這個設定檔會報告某個資料行 (相依資料行) 中的值相依於另一個資料行或資料行集合 (行列式資料行) 中之值的程度。 這個設定檔也可協助您識別資料中的問題，例如無效的值。 如需設定此設定檔的詳細資訊，請參閱[功能相依性設定檔要求選項 &#40;資料分析工作&#41;](../../integration-services/control-flow/functional-dependency-profile-request-options-data-profiling-task.md)。|  
 |**[最多可達 N 個資料行當做行列式資料行]**|選取要在可能的組合中當做行列式資料行進行測試的資料行數目上限。 預設值是 1。 最大值為 1000。 ˥Ƃ，選取 2 種測試組合，其中單一資料行或兩個資料行組合是另一個 (相依) 資料行的行列式資料行。|  
   
 > [!NOTE]  

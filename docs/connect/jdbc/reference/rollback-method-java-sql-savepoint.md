@@ -1,30 +1,29 @@
 ---
-title: "rollback 方法 (java.sql.Savepoint) |Microsoft 文件"
-ms.custom: 
+title: rollback 方法 (java.sql.Savepoint) |Microsoft 文件
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
-ms.component: jdbc
-ms.reviewer: 
+ms.prod: sql
+ms.prod_service: connectivity
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
-ms.topic: article
-apiname: SQLServerConnection.rollback (java.sql.Savepoint)
-apilocation: sqljdbc.jar
+ms.technology: connectivity
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
+apiname:
+- SQLServerConnection.rollback (java.sql.Savepoint)
+apilocation:
+- sqljdbc.jar
 apitype: Assembly
 ms.assetid: d5dbd9ef-194f-4130-bfcc-7901a4fa8ded
-caps.latest.revision: "10"
+caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
-ms.workload: Inactive
-ms.openlocfilehash: a5cfacae92cab68332640e21b2fa0cdb3c085c36
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+manager: craigg
+ms.openlocfilehash: 94d600baca8089496b29fbc136f756cca878ab1e
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="rollback-method-javasqlsavepoint"></a>rollback 方法 (java.sql.Savepoint)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -39,7 +38,7 @@ public void rollback(java.sql.Savepoint s)
 ```  
   
 #### <a name="parameters"></a>參數  
- *s*  
+ *S*  
   
  要回復到儲存點物件。  
   
@@ -51,8 +50,8 @@ public void rollback(java.sql.Savepoint s)
   
  只有當已經停用自動認可模式時，才應該使用這個方法。  
   
-## <a name="see-also"></a>請參閱＜  
- [rollback 方法 &#40;SQLServerConnection &#41;](../../../connect/jdbc/reference/rollback-method-sqlserverconnection.md)   
+## <a name="see-also"></a>另請參閱  
+ [rollback 方法&#40;SQLServerConnection&#41;](../../../connect/jdbc/reference/rollback-method-sqlserverconnection.md)   
  [SQLServerConnection 成員](../../../connect/jdbc/reference/sqlserverconnection-members.md)   
  [SQLServerConnection 類別](../../../connect/jdbc/reference/sqlserverconnection-class.md)  
   

@@ -1,16 +1,14 @@
 ---
 title: datetime2 (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 7/23/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
 ms.component: t-sql|data-types
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: t-sql
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - datetime2
@@ -24,16 +22,16 @@ helpviewer_keywords:
 - data types [SQL Server], date and time
 - datetime2 data type [SQL Server]
 ms.assetid: 868017f3-214f-43ef-8536-cc1632a2288f
-caps.latest.revision: 
+caps.latest.revision: 58
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Active
-ms.openlocfilehash: 70a3f27fc59fcc904679040029e47f312017dbe3
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: b4288b84c0ee47af3be54a71bb69e66f6c4ae552
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="datetime2-transact-sql"></a>datetime2 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -107,7 +105,7 @@ SELECT @datetime2 AS '@datetime2', @date AS '@date';
 --2016-12-21 00:00:00.0000000 2016-12-21
 ```  
   
-當轉換來自 **time(n)** 時，會複製時間元件，而日期元件會設定為 '1900-01-01'。 下列範例顯示將 `time(7)` 值轉換成 `datetime2` 值的結果。  
+從 **time(n)** 轉換時，會複製時間元件，而日期元件會設定為 '1900-01-01'。 下列範例顯示將 `time(7)` 值轉換成 `datetime2` 值的結果。  
   
 ```sql
 DECLARE @time time(7) = '12:10:16.1234567';
@@ -121,7 +119,7 @@ SELECT @datetime2 AS '@datetime2', @time AS '@time';
 --1900-01-01 12:10:16.1234567 12:10:16.1234567
 ```  
   
-當轉換來自 **smalldatetime**，會複製小時和分鐘。 秒和小數秒數會設定為 0。 下列程式碼顯示將 `smalldatetime` 值轉換成 `datetime2` 值的結果。  
+從 **smalldatetime** 轉換時，會複製小時和分鐘。 秒和小數秒數會設定為 0。 下列程式碼顯示將 `smalldatetime` 值轉換成 `datetime2` 值的結果。  
   
 ```sql
 DECLARE @smalldatetime smalldatetime = '12-01-16 12:32';
@@ -135,7 +133,7 @@ SELECT @datetime2 AS '@datetime2', @smalldatetime AS '@smalldatetime';
 --2016-12-01 12:32:00.0000000 2016-12-01 12:32:00 
 ```  
   
-當轉換來自 **datetimeoffset(n)**，會複製日期和時間元件。 時區則會被截斷。 下列範例顯示將 `datetimeoffset(7)` 值轉換成 `datetime2` 值的結果。  
+從 **datetimeoffset(n)** 轉換時，會複製日期和時間元件。 時區則會被截斷。 下列範例顯示將 `datetimeoffset(7)` 值轉換成 `datetime2` 值的結果。  
   
 ```sql
 DECLARE @datetimeoffset datetimeoffset(7) = '2016-10-23 12:45:37.1234567 +10:0';
@@ -199,11 +197,11 @@ SELECT
   
 |資料類型|輸出|  
 |---|---|
-|**time**|12:35:29。 1234567|  
+|**time**|12:35:29. 1234567|  
 |**date**|2007-05-08|  
 |**smalldatetime**|2007-05-08 12:35:00|  
 |**datetime**|2007-05-08 12:35:29.123|  
-|**datetime2**|2007-05-08 12:35:29。 1234567|  
+|**datetime2**|2007-05-08 12:35:29. 1234567|  
 |**datetimeoffset**|2007-05-08 12:35:29.1234567 +12:15|  
   
 ## <a name="see-also"></a>另請參閱

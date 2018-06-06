@@ -1,122 +1,118 @@
 ---
-title: "預設的 SQL Server 上的機器學習服務封裝程式庫 |Microsoft 文件"
-ms.custom: 
-ms.date: 02/19/2018
-ms.reviewer: 
-ms.suite: sql
-ms.prod: machine-learning-services
-ms.prod_service: machine-learning-services
-ms.component: r
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
-dev_langs:
-- R
-ms.assetid: 4d426cf6-a658-4d9d-bfca-4cdfc8f1567f
-caps.latest.revision: 
-author: jeannt
-ms.author: jeannt
-manager: cgronlund
-ms.workload: On Demand
-ms.openlocfilehash: d871795effaace791541b4a1f751f8f9e3845b82
-ms.sourcegitcommit: c08d665754f274e6a85bb385adf135c9eec702eb
+title: 預設 SQL Server R 和 SQL Server 機器學習中的 R，並將 Python 封裝程式庫 |Microsoft 文件
+description: SQL Server R 服務，R Server 機器學習服務 （資料庫），與機器學習伺服器 （獨立） 所安裝的 R，並將 Python 封裝
+ms.prod: sql
+ms.technology: machine-learning
+ms.date: 05/29/2018
+ms.topic: conceptual
+author: HeidiSteen
+ms.author: heidist
+manager: cgronlun
+ms.openlocfilehash: 9362d6e9dc98f80beabc301f43e755b205b40a10
+ms.sourcegitcommit: 2d93cd115f52bf3eff3069f28ea866232b4f9f9e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34707286"
 ---
-# <a name="default-package-libraries-for-machine-learning-on-sql-server"></a>預設 SQL Server 上的機器學習服務封裝程式的庫
+# <a name="default-r-and-python-packages-in-sql-server"></a>在 SQL Server 中的預設 R，並將 Python 封裝
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-這篇文章描述 R，並將 Python 與 SQL Server 一起安裝的預設程式庫。 本文提供的預設位置，這些文件庫，並說明如何判斷哪些封裝和 R 的版本或 Python 安裝每個執行個體文件庫中。
+本文列出與 SQL Server 以及如何尋找封裝程式庫一起安裝的 R，並將 Python 封裝。  
 
-## <a name="using-the-default-instance-library"></a>使用預設執行個體文件庫
+## <a name="r-package-list-for-sql-server"></a>SQL Server 的 R 封裝清單
 
-當您安裝 SQL server 的機器學習服務時，在您安裝的每種語言的執行個體層級建立單一封裝程式庫。 SQL Server 無法存取封裝安裝到其他文件庫。
+安裝 R 封裝與[SQL Server 2016 R Services](../install/sql-r-services-windows-install.md)和[SQL Server 2017 機器學習服務](../install/sql-machine-learning-services-windows-install.md)當您在安裝期間選取 R 功能。 
 
-如果您從遠端用戶端連線到伺服器，您想要 server 計算內容中執行任何 R 或 Python 程式碼可以使用安裝在執行個體文件庫中的封裝。
+Packages         | 2016 | 2017 | 描述 |
+|----------------|--------------|--------------|-------------|
+| [RevoScaleR](https://docs.microsoft.com/r-server/r-reference/revoscaler/revoscaler)  | 8.0.3 | 9.2 | 用於遠端計算內容資料流的資料匯入和轉換、 模型、 視覺化和分析 rx 函式的平行執行。 |
+| [sqlrutils](https://docs.microsoft.com/machine-learning-server/r-reference/sqlrutils/sqlrutils) | 8.0.3 | 9.2 |使用預存程序包括 R 指令碼。 |
+| [MicrosoftML](https://docs.microsoft.com/r-server/r-reference/microsoftml/microsoftml-package)| n.a. | 9.2 | 新增機器學習演算法中。 | 
+| [olapR](https://docs.microsoft.com/machine-learning-server/r-reference/olapr/olapr) | n.a.  | 9.2 | 用於在 r 中撰寫 MDX 陳述式 |
 
-若要保護伺服器資產，預設執行個體的程式庫會安裝到受保護的資料夾已向 SQL Server，而且可以只由電腦管理員修改。 如果您不是電腦的擁有者，您可能需要從系統管理員才能安裝封裝至這個文件庫中取得的權限。 
+MicrosoftML 和 olapR 可用預設會在 SQL Server 2017 機器學習服務。 SQL Server 2016 R 服務執行個體上，您可以加入到這些封裝[元件升級](use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md)。 元件升級也會取得您的封裝的較新版本 （例如，較新版本的 RevoScaleR 包含函式的 SQL Server 上的封裝管理）。
 
-即使您擁有電腦時，您應該先將封裝新增至執行個體文件庫來考慮任何特定的 R 或 Python 封裝在伺服器環境的實用性。 請考慮因素，例如大小的封裝檔案，並且需要進行多個版本，以及封裝是否需要網路或網際網路存取。
+## <a name="python-package-list-for-sql-server"></a>SQL Server 的 Python 封裝清單
 
-### <a name="sql-server"></a>SQL Server
+在安裝時，僅適用於 SQL Server 2017 Python 封裝所[SQL Server 2017 機器學習服務](../install/sql-machine-learning-services-windows-install.md)並選取 [Python] 功能。
 
-|版本 | 執行個體名稱|預設路徑|
-|------|------|------|
-| SQL Server 2016 |預設執行個體|`C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\R_SERVICES\library`|
-| SQL Server 2016 |具名執行個體 (named instance) |`C:\Program Files\Microsoft SQL Server\MSSQL13.<instance_name>\R_SERVICES\library`|
-| SQL Server 2017 with R|預設執行個體 |`C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\R_SERVICES\library` |
-| SQL Server 2017 with R|具名執行個體 (named instance)|`C:\Program Files\Microsoft SQL Server\MSSQL14.MyNamedInstance\R_SERVICES\library` |
-| SQL Server 2017 使用 Python |預設執行個體 |`C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\PYTHON_SERVICES\library` |
-| SQL Server 2017 使用 Python|具名執行個體 (named instance)|`C:\Program Files\Microsoft SQL Server\MSSQL14.<instance_name>\PYTHON_SERVICES\library` |
+| Packages         | 2017    |  描述 |
+| -----------------|-------------|------------|
+| [revoscalepy](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/revoscalepy-package) | 9.2 | 用於遠端計算內容資料流的資料匯入和轉換、 模型、 視覺化和分析 rx 函式的平行執行。 |
+| [microsoftml](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/microsoftml-package) | 9.2 | 以 Python 新增機器學習演算法。 |
 
-### <a name="r-server-standalone-or-machine-learning-server-standalone"></a>R 伺服器 （獨立） 或機器學習伺服器 （獨立）
+## <a name="open-source-r-in-your-installation"></a>您的安裝中的開放原始碼 R
 
-獨立伺服器安裝使用 SQL Server 安裝程式時下, 表列出的二進位檔的預設路徑。 
+R 的支援包括開放原始碼，以便您可以呼叫基底 R 函數，並安裝其他的開放原始碼和第三方封裝。 R 語言支援包含核心功能，例如**基底**， **stats**， **utils**，和其他人。 R 的基底安裝也包含許多的範例資料集，以及標準的 R 工具，像是**RGui** （輕量型互動式編輯器） 和**RTerm** （R 命令提示字元）。 
+
+在安裝中包含的開放原始碼 R 的分配[Microsoft R 開啟 (MRO)](https://mran.microsoft.com/open)。 MRO 將值加入至基底 R 所包括的其他開放原始碼套件，例如[Intel Math Kernel Library](https://en.wikipedia.org/wiki/Math_Kernel_Library)。
+
+下表摘要說明 R MRO 使用 SQL Server 安裝程式所提供的版本。
+
+|版本             | R 版本       |
+|--------------------|-----------------|
+| [SQL Server 2016 R Services](../install/sql-r-services-windows-install.md) | 3.2.2   | 
+| [SQL Server 2017 機器學習服務](../install/sql-machine-learning-services-windows-install.md) | 3.3.3 |
+
+您應該永遠不會以手動方式覆寫 SQL Server 安裝程式安裝在網站上的較新版本的 R 的版本。 Microsoft R 封裝以特定版本的 r 修改您的安裝可能造成不穩定它。
+
+## <a name="open-source-python-in-your-installation"></a>在您的安裝中的開放原始碼 Python
+
+SQL Server 2017 加入 Python 元件。 當您選取的 Python 語言選項時，安裝 Anaconda 4.2 發佈。 除了 Python 程式碼程式庫，標準安裝包含範例資料、 單元測試及範例指令碼。 
+
+SQL Server 2017 機器學習為 R 和 Python 支援第一次的釋放。
+
+|版本             | Anaconda 版本| Microsoft 封裝    |
+|--------------------|-----------------|-----------------------|
+| SQL Server 2017 Machine Learning 服務  | 4.2 透過 Python 3.5 | revoscalepy microsoftml |
+
+您應該永遠不會以手動方式覆寫 SQL Server 安裝程式安裝在網站上的較新版本的 Python 的版本。 Microsoft Python 封裝為基礎的 Anaconda 特定版本。 修改您的安裝可能造成不穩定它。
+
+## <a name="component-upgrades"></a>元件升級
+
+初始安裝之後，R 和 Python 封裝重新整理透過 service pack 和累計更新，但是完整版本升級時，才可以由*繫結*現代的生命週期支援原則。 繫結變更服務模型。 根據預設，初始安裝之後，R 封裝會重新整理透過 service pack 和累計更新。 其他封裝及核心 R 元件的完整版本升級僅能透過產品升級 （從 SQL Server 2016 到 SQL Server 2017) 或透過繫結 R 支援 Microsoft 機器學習服務伺服器。 如需詳細資訊，請參閱[中 SQL Server 升級 R 和 Python 元件](use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md)。
+
+## <a name="package-library-location"></a>封裝程式庫位置
+
+當您安裝 SQL server 的機器學習服務時，在您安裝的每種語言的執行個體層級建立單一封裝程式庫。 在 Windows 中，執行個體的程式庫是受保護的資料夾，向 SQL Server。
+
+所有的指令碼或程式碼，執行中的 SQL Server 上資料庫必須從執行個體文件庫載入函式。 SQL Server 無法存取封裝安裝到其他文件庫。 這適用於遠端的用戶端。 從遠端用戶端連線到伺服器，當您想要 server 計算內容中執行任何 R 或 Python 程式碼只能使用安裝執行個體文件庫中的封裝。
+
+若要保護伺服器資產，可以只由電腦管理員修改預設執行個體文件庫。 如果您不是電腦的擁有者，您可能需要從系統管理員才能安裝封裝至這個文件庫中取得的權限。 
+
+#### <a name="file-path-for-in-database-engine-instances"></a>在 Database engine 執行個體的檔案路徑
+
+下表顯示的檔案位置的 R，並將 Python 版本和資料庫引擎執行個體組合。 MSSQL13 表示 SQL Server 2016，並且僅 R。 MSSQL14 指出 SQL Server 2017，而且 R 和 Python 的資料夾。 
+
+檔案路徑也會包含執行個體名稱。 SQL Server 安裝[資料庫引擎執行個體](../../database-engine/configure-windows/database-engine-instances-sql-server.md)當做預設執行個體 (MSSQLSERVER) 或使用者定義的具名執行個體。 如果 SQL Server 安裝為具名執行個體，您會看到該名稱後面附加，如下所示： `MSSQL13.<instance_name>`。
+
+|版本和語言  | 預設路徑|
+|----------------------|------------|
+| SQL Server 2016 |C:\Program Files\Microsoft SQL Server\MSSQL13。MSSQLSERVER\R_SERVICES\library|
+| R 與 SQL Server 2017|C:\Program Files\Microsoft SQL Server\MSSQL14。MSSQLSERVER\R_SERVICES\library |
+| SQL Server 2017 使用 Python |C:\Program Files\Microsoft SQL Server\MSSQL14。MSSQLSERVER\PYTHON_SERVICES\Lib\site 封裝 |
+
+
+#### <a name="file-path-for-standalone-server-installations"></a>獨立伺服器安裝的檔案路徑
+
+安裝 SQL Server 2016 R 伺服器 （獨立） 或 SQL Server 2017 機器學習伺服器 （獨立） 伺服器時下, 表列出的二進位檔的預設路徑。 
 
 |版本| 安裝|預設路徑|
-|------|------|------|
-| SQL Server 2016|R Server (Standalone)| |`C:\Program Files\Microsoft SQL Server\130\R_SERVER`|
-|SQL Server 2017|機器學習服務伺服器，以 R |`C:\Program Files\Microsoft SQL Server\130\R_SERVER`|
-|SQL Server 2017|機器學習服務伺服器，使用 Python |`C:\Program Files\Microsoft SQL Server\130\PYTHON_SERVER`|
+|-------|-------------|------------|
+| SQL Server 2016|R Server (Standalone)| C:\Program Files\Microsoft SQL Server\130\R_SERVER|
+|SQL Server 2017|機器學習服務伺服器，以 R |C:\Program Files\Microsoft SQL Server\140\R_SERVER|
+|SQL Server 2017|機器學習服務伺服器，使用 Python |C:\Program Files\Microsoft SQL Server\140\PYTHON_SERVER|
 
-如果您安裝 Microsoft R 伺服器或使用不同的 Windows installer 的機器學習伺服器時，預設路徑會不同： 通常，就像`C:\Program Files\Microsoft\R Server\R_SERVER`。 如需詳細資訊，請參閱：
- 
-+ [安裝機器學習適用於 Windows 的伺服器](https://docs.microsoft.com/machine-learning-server/install/machine-learning-server-windows-install)
-+ [安裝 R Server 9.1 適用於 Windows](https://docs.microsoft.com/machine-learning-server/install/r-server-install-windows)
+> [!NOTE]
+> 如果您發現有類似的子資料夾名稱和檔案的其他資料夾，您可能會有 Microsoft R Server 的獨立安裝或[Machine Learning 伺服器](https://docs.microsoft.com/machine-learning-server/)。 這些伺服器產品有不同的安裝程式與路徑 （也就是 C:\Program Files\Microsoft\R Server\R_SERVER 或 C:\Program Files\Microsoft\ML SERVER\R_SERVER）。 如需詳細資訊，請參閱[安裝機器學習 Server for Windows](https://docs.microsoft.com/machine-learning-server/install/machine-learning-server-windows-install)或[適用於 Windows 安裝 R Server 9.1](https://docs.microsoft.com/machine-learning-server/install/r-server-install-windows)。
 
-## <a name="what-is-included-in-a-default-installation"></a>在預設安裝中包含的內容
+## <a name="next-steps"></a>後續的步驟
 
-本章節提供預設安裝的 R 或 Python 功能的摘要。
-
-### <a name="default-r-installation-for-sql-server"></a>SQL Server 的預設 R 安裝
-
-根據預設 R**基底**已安裝的套件。 基底套件包含這類封裝所提供的核心功能`stats`和`utils`。
-
-R 的基底安裝也包含許多的範例資料集，以及標準的 R 工具，例如 RGui （輕量型互動式編輯器） 和 RTerm （R 命令提示字元）。
-
-SQL Server 2016 中 SQL Server 2017 R 的安裝也包含**RevoScaleR**封裝，相關的增強的封裝和提供者，可支援遠端計算內容資料流中，平行執行 rx 函式，並許多其他功能。
-
-若要升級的 RevoScaleR 封裝，請使用繫結來升級機器學習服務元件，或修補或升級至較新版的 SQL Server 執行個體。
-
-+ 如需增強的 R 功能的概觀，請參閱[需機器學習伺服器](https://docs.microsoft.com/machine-learning-server/what-is-microsoft-r-server)
-
-+ 若要下載到用戶端電腦上的 RevoScaleR 程式庫，安裝[Microsoft R 用戶端](https://docs.microsoft.com/machine-learning-server/r-client/what-is-microsoft-r-client)
-
-### <a name="default-python-installation-for-sql-server"></a>預設 SQL Server 的 Python 安裝
-
-如果您選取的機器學習功能和 Python 語言選項時，會安裝 Anaconda 發佈。 確切的版本取決於您已安裝的 SQL Server 的版本，不論您已升級使用機器學習 Server 安裝程式的執行個體。
-
-|版本| Anaconda 版本| 其他變更|
-|------|------|------|
-| SQL Server 2017 RTM| 3.5.2| 新： revoscalepy|
-| 透過機器學習伺服器 9.2.1 2017 年 9 月的更新| Anaconda 4.2| revoscalepy 的更新 |
-| SQL Server 2017 CU3| Anaconda 4.2| revoscalepy 的更新 |
-
-除了 Python 程式碼程式庫，標準安裝包含範例資料、 單元測試及範例指令碼。
-
-## <a name="restrictions-and-known-issues"></a>限制與已知的問題
-
-執行 SQL Server 中的任何解決方案可以使用**只**安裝在執行個體相關聯的預設程式庫中的封裝。
-
-如果您使用繫結來升級執行個體中的 R 元件，可以變更執行個體文件庫的路徑。 請務必確認由 SQL Server 目前使用的程式庫的路徑。
-
-## <a name="administrative-permissions-required-for-package-installation"></a>封裝安裝所需的系統管理權限
-
-封裝安裝所需的權限已變更 SQL Server 2016 和 SQL Server 2017 之間。
-
-+ 在 SQL Server 2016 中，系統管理存取權，才能安裝新的 R 封裝。
-
-+ 在 SQL Server 2017，系統管理員身分安裝封裝，R 和 Python，您可以繼續，這可能是最簡單的方法。
-
-    DDL 陳述式，建立外部程式庫可讓資料庫管理員，而不使用的 R 工具安裝封裝。 
-
-    如果您使用的封裝管理功能的機器學習伺服器時，您可以使用 RevoScaleR 安裝 R 封裝，在資料庫層級。 資料庫管理員必須啟用功能，並再授與使用者的能力是根據每個資料庫來安裝自己的封裝。 如需詳細資訊，請參閱[啟用封裝管理使用 Ddl](r-package-how-to-enable-or-disable.md)。
-
-### <a name="user-libraries-are-not-supported"></a>不支援使用者文件庫
-
-使用者無法安裝封裝到安全的位置通常求助於安裝套件使用者程式庫。 不過，這是不可能在 SQL Server 環境中。即使檔案系統存取權通常會在伺服器上限制。
-
-即使您擁有系統管理員權限及存取伺服器上的使用者文件資料夾時，執行 SQL Server 中的外部指令碼執行階段無法存取安裝預設執行個體文件庫之外的任何封裝。
-
-如需有關如何解決問題的相關使用者程式庫的秘訣，請參閱[封裝安裝在使用者程式庫](packages-installed-in-user-libraries.md)。
++ [取得封裝資訊](determine-which-packages-are-installed-on-sql-server.md)
++ [安裝新的 R 封裝](install-additional-r-packages-on-sql-server.md)
++ [安裝新的 Python 封裝](../python/install-additional-python-packages-on-sql-server.md)
++ [啟用遠端 R 封裝管理](r-package-how-to-enable-or-disable.md)
++ [適用於 R 封裝管理的 RevoScaleR 函式](use-revoscaler-to-manage-r-packages.md)
++ [R 封裝同步處理](package-install-uninstall-and-sync.md)
++ [本機 R 封裝存放庫的 miniCRAN](create-a-local-package-repository-using-minicran.md)

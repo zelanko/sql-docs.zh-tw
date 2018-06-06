@@ -1,16 +1,15 @@
 ---
-title: "srv_sendmsg (擴充預存程序 API) | Microsoft Docs"
-ms.custom: 
+title: srv_sendmsg (擴充預存程序 API) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/03/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
 ms.component: extended-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - srv_sendmsg
@@ -22,16 +21,15 @@ dev_langs:
 helpviewer_keywords:
 - srv_sendmsg
 ms.assetid: efcb50b9-f8ff-4121-bf67-05830171b928
-caps.latest.revision: 
+caps.latest.revision: 30
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 5ac42768779bb196ee1200f35289f4f4dc5da836
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
-ms.translationtype: MT
+ms.openlocfilehash: 31c558a3deb0080c11b8ba4f055f7341fd1a4443
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="srvsendmsg-extended-stored-procedure-api"></a>srv_sendmsg (擴充預存程序 API)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -112,7 +110,7 @@ msglen
 ## <a name="returns"></a>傳回值  
  SUCCEED 或 FAIL  
   
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>Remarks  
  這個函數會將錯誤或參考用訊息傳送給用戶端。 將會針對每一個要傳送的訊息呼叫此函數一次。  
   
  在使用 **srv_sendrow** 傳送所有資料列 (如果有的話) 之前或之後，都可以依照任何順序使用 **srv_sendmsg** 將訊息傳送給用戶端。 必須在使用 **srv_senddone** 傳送完成狀態以前將所有訊息 (如果有的話) 傳送給用戶端。  

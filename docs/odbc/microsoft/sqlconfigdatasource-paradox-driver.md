@@ -1,30 +1,27 @@
 ---
-title: "SQLConfigDataSource （Paradox 驅動程式） |Microsoft 文件"
-ms.custom: 
+title: SQLConfigDataSource （Paradox 驅動程式） |Microsoft 文件
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
-ms.component: odbc
-ms.reviewer: 
+ms.prod: sql
+ms.prod_service: connectivity
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: connectivity
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - SQLConfigDataSource function [ODBC], Paradox Driver
 - Paradox driver [ODBC], SQLConfigDataSource
 ms.assetid: 59e84c4e-debe-49d7-b97b-84c736b0c793
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
-ms.workload: Inactive
-ms.openlocfilehash: d1c567bd1490c41822b3df89f04c0d907b0f1a92
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+manager: craigg
+ms.openlocfilehash: b308748a351617808ca74863c681e562a9df74a6
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sqlconfigdatasource-paradox-driver"></a>SQLConfigDataSource （Paradox 驅動程式）
 > [!NOTE]  
@@ -32,7 +29,7 @@ ms.lasthandoff: 12/21/2017
   
  **SQLConfigDataSource**函式，用於新增、 修改或刪除資料來源以動態方式使用下列關鍵字。  
   
-|關鍵字|描述|  
+|關鍵字|Description|  
 |-------------|-----------------|  
 |COLLATINGSEQUENCE|欄位排序順序。<br /><br /> 序列使用 Paradox 驅動程式時，可以是 ASCII （預設值）、 國際、 瑞典文-芬蘭文或挪威文丹麥文。<br /><br /> 這會設定為相同的選項**定序順序**安裝程式 對話方塊中。|  
 |DBQ|資料庫檔案的名稱。<br /><br /> 這會設定為相同的選項**資料庫**安裝程式 對話方塊中。|  

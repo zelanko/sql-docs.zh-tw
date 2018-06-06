@@ -1,37 +1,19 @@
 ---
-title: "程式設計 AMO 基礎物件 |Microsoft 文件"
-ms.custom: 
-ms.date: 02/14/2018
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- server objects [AMO]
-- programming [AMO]
-- AMO, database objects
-- AMO, server objects
-- Analysis Management Objects, server objects
-- database objects [AMO]
-- Analysis Management Objects, database objects
-ms.assetid: 3f1ab656-f3bc-432d-8b6d-cdf204e5be10
-caps.latest.revision: 
-author: Minewiskan
+title: 程式設計 AMO 基礎物件 |Microsoft 文件
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: amo
+ms.topic: conceptual
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: bcbf7e3c05fb0166324e1953b5656e8038ec682f
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 7d1a41e3682023862c69cc74bf961f279f99689e
+ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="programming-amo-fundamental-objects"></a>程式設計 AMO 基礎物件
   基礎物件通常是簡單且直接的物件。 通常會建立和具現化這些物件，然後當不再需要時，使用者會將它們中斷連接。 基礎類別包括下列物件：<xref:Microsoft.AnalysisServices.Server>、<xref:Microsoft.AnalysisServices.Database>、<xref:Microsoft.AnalysisServices.DataSource> 和 <xref:Microsoft.AnalysisServices.DataSourceView>。 在 AMO 基礎物件中唯一屬於複雜物件的是 <xref:Microsoft.AnalysisServices.DataSourceView>，這需要詳細資料以建立代表資料來源檢視的抽象模型。  
@@ -219,7 +201,7 @@ static string CreateDataSource(Database db, string strDataSourceName, string str
 }  
 ```  
   
-##  <a name="DSV">DataSourceView 物件</a>  
+##  <a name="DSV"></a> DataSourceView 物件  
  <xref:Microsoft.AnalysisServices.DataSourceView> 物件負責保存 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 的結構描述模型。 對於保存結構描述的 <xref:Microsoft.AnalysisServices.DataSourceView> 物件，必須先建構結構描述。 結構描述會從 System.Data 命名空間，透過 DataSet 物件建構。  
   
  下列範例程式碼將建立部分的結構描述，此結構描述會包含在以 AdventureWorks 為基礎的 Analysis Services 範例專案中。 此範例會建立資料表、計算資料行、關聯和複合關聯的結構描述定義。 結構描述是保存的資料集。  
@@ -563,7 +545,7 @@ static void AddCompositeRelation(DataSourceView dsv, String fkTableName, String 
  <xref:Microsoft.AnalysisServices>   
  [AMO 類別簡介](../../../analysis-services/multidimensional-models/analysis-management-objects/amo-classes-introduction.md)   
  [AMO 基礎類別](../../../analysis-services/multidimensional-models/analysis-management-objects/amo-fundamental-classes.md)   
- [邏輯架構 &#40;Analysis Services-多維度資料 &#41;](../../../analysis-services/multidimensional-models/olap-logical/understanding-microsoft-olap-logical-architecture.md)   
- [資料庫物件 &#40;Analysis Services-多維度資料 &#41;](../../../analysis-services/multidimensional-models/olap-logical/database-objects-analysis-services-multidimensional-data.md)  
+ [邏輯架構 & #40;Analysis Services-多維度資料 & #41;](../../../analysis-services/multidimensional-models/olap-logical/understanding-microsoft-olap-logical-architecture.md)   
+ [資料庫物件 & #40;Analysis Services-多維度資料 & #41;](../../../analysis-services/multidimensional-models/olap-logical/database-objects-analysis-services-multidimensional-data.md)  
   
   

@@ -1,26 +1,24 @@
 ---
-title: "使用 Windows 驗證連線至資料來源和檔案共用 | Microsoft Docs"
+title: 使用 Windows 驗證連線至資料來源和檔案共用 | Microsoft Docs
 ms.date: 02/05/2018
-ms.topic: article
-ms.prod: sql-non-specified
+ms.topic: conceptual
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
 ms.component: lift-shift
 ms.suite: sql
-ms.custom: 
+ms.custom: ''
 ms.technology:
 - integration-services
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 87f8b79fd8e950038658c13b502f5f26ac9a8f87
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 0a0f1b6936644f2cae9cee469cb763696786a628
+ms.sourcegitcommit: 0cc2cb281e467a13a76174e0d9afbdcf4ccddc29
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 05/15/2018
 ---
-# <a name="connect-to-on-premises-data-sources-and-azure-file-shares-with-windows-authentication"></a>使用 Windows 驗證連線至內部部署資料來源和 Azure 檔案共用
+# <a name="connect-to-on-premises-data-sources-and-azure-file-shares-with-windows-authentication-in-ssis"></a>在 SSIS 中使用 Windows 驗證來連線至內部部署資料來源和 Azure 檔案共用
 本文描述如何在 Azure SQL Database 上設定 SSIS 目錄以執行套件，這些套件會使用 Windows 驗證來連線至內部部署資料來源和 Azure 檔案共用。 無論是在內部部署和 Azure 虛擬機器上及 Azure 檔案中，您都可以使用 Windows 驗證來連線至與 Azure SSIS Integration Runtime 相同虛擬網路中的資料來源。
 
 > [!WARNING]

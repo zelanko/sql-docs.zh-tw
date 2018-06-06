@@ -1,27 +1,24 @@
 ---
-title: "setCharacterStream 方法 （java.lang.String，java.io.Reader，long） |Microsoft 文件"
-ms.custom: 
+title: setCharacterStream 方法 （java.lang.String，java.io.Reader，long） |Microsoft 文件
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
-ms.component: jdbc
-ms.reviewer: 
+ms.prod: sql
+ms.prod_service: connectivity
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: connectivity
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: 54fb2f13-f8d8-47b5-bec1-4a5af3e86a84
-caps.latest.revision: "19"
+caps.latest.revision: 19
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
-ms.workload: Inactive
-ms.openlocfilehash: 11788cf04694341635c078ba42d11eb1bf4fc4f8
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+manager: craigg
+ms.openlocfilehash: 4253de4038b1505a3befdbbf80f47c9f210735ad
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="setcharacterstream-method-javalangstring-javaioreader-long"></a>setCharacterStream 方法 (java.lang.String, java.io.Reader, long)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -40,13 +37,13 @@ public final void setCharacterStream(java.lang.String parameterName
 #### <a name="parameters"></a>參數  
  *參數名稱*  
   
- A**字串**，其中包含參數名稱。  
+ 包含參數名稱的**字串**。  
   
- *讀取器*  
+ *reader*  
   
  包含 Unicode 資料的讀取器物件。  
   
- *length*  
+ *長度*  
   
  A**長**，指出資料流中的字元數。  
   
@@ -60,8 +57,8 @@ public final void setCharacterStream(java.lang.String parameterName
   
  如果資料流長度未知，*長度*參數可能會設定為-1，指出驅動程式應該接受資料流，無論其長度為何。 針對 sqljdbc4.jar，我們建議您使用 JDBC 4.0 方法[setCharacterStream 方法 （java.lang.String，java.io.Reader）](../../../connect/jdbc/reference/setcharacterstream-method-java-lang-string-java-io-reader.md)應用程式要從長度未知的資料流的資料行的更新。  
   
-## <a name="see-also"></a>請參閱＜  
- [setCharacterStream 方法 &#40;SQLServerCallableStatement &#41;](../../../connect/jdbc/reference/setcharacterstream-method-sqlservercallablestatement.md)   
+## <a name="see-also"></a>另請參閱  
+ [setCharacterStream 方法&#40;SQLServerCallableStatement&#41;](../../../connect/jdbc/reference/setcharacterstream-method-sqlservercallablestatement.md)   
  [SQLServerCallableStatement 成員](../../../connect/jdbc/reference/sqlservercallablestatement-members.md)  
   
   

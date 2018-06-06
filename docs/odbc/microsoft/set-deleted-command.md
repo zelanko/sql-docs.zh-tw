@@ -1,28 +1,26 @@
 ---
-title: "SET 刪除命令 |Microsoft 文件"
-ms.custom: 
+title: SET 刪除命令 |Microsoft 文件
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
-ms.component: odbc
-ms.reviewer: 
+ms.prod: sql
+ms.prod_service: connectivity
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
-ms.topic: article
-helpviewer_keywords: SET DELETED command [ODBC]
+ms.technology: connectivity
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
+helpviewer_keywords:
+- SET DELETED command [ODBC]
 ms.assetid: 6b5e0086-156d-471d-8e7f-6c5fa9686cd5
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
-ms.workload: Inactive
-ms.openlocfilehash: 50364dfbbebb7b16b1438e3e17e0e1bbabc30cef
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+manager: craigg
+ms.openlocfilehash: 74cd0c5752728320acf09768d876bae37b6e193b
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="set-deleted-command"></a>SET 刪除命令
 指定是否標示為刪除的記錄會被處理，以及是否可用於其他命令。  
@@ -47,5 +45,5 @@ SET DELETED ON | OFF
 > [!IMPORTANT]  
 >  如果命令的預設範圍是目前的記錄，或包含單一記錄的範圍，則會忽略設定刪除。 索引一律會忽略設定刪除，並將索引資料表中的所有記錄。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [DELETE - SQL 命令](../../odbc/microsoft/delete-sql-command.md)

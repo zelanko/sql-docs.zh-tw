@@ -1,17 +1,16 @@
 ---
-title: "匯入 BACPAC 檔案以建立新的使用者資料庫 | Microsoft Docs"
-ms.custom: 
+title: 匯入 BACPAC 檔案以建立新的使用者資料庫 | Microsoft Docs
+ms.custom: ''
 ms.date: 01/31/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
 ms.component: data-tier-applications
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-data-tier-apps
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 f1_keywords:
 - sql13.swb. importdac.results.f1
 - sql13.swb.importdac.settings.f1
@@ -29,19 +28,20 @@ helpviewer_keywords:
 - Migrate database
 - DAC
 ms.assetid: 736d8d9a-39f1-4bf8-b81f-2e56c134d12e
-caps.latest.revision: 
+caps.latest.revision: 25
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: d92da3c51843ee10b0c781bb400109abf04fefab
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 1fc8a3a20efb5ac5c9741e71342f005a3984888b
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="import-a-bacpac-file-to-create-a-new-user-database"></a>匯入 BACPAC 檔案以建立新的使用者資料庫
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] 匯入資料層應用程式 (DAC) 檔案 (.bacpac 檔案)，可在新的[!INCLUDE[ssDE](../../includes/ssde-md.md)]執行個體上，建立原始資料庫連同其資的複本，或將該檔案匯入 [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]。 匯出-匯入作業可以進行合併以在執行個體之間移轉 DAC 或資料庫，或建立邏輯備份 (例如建立 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]中所部署資料庫的內部部署複本)。  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+  匯入資料層應用程式 (DAC) 檔案 (.bacpac 檔案)，可在新的 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 執行個體上，建立原始資料庫連同其資的複本，或將該檔案匯入 [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]。 匯出-匯入作業可以進行合併以在執行個體之間移轉 DAC 或資料庫，或建立邏輯備份 (例如建立 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]中所部署資料庫的內部部署複本)。  
   
 ## <a name="before-you-begin"></a>開始之前  
  匯入程序會使用兩個階段來建立新的 DAC。  
@@ -75,7 +75,7 @@ ms.lasthandoff: 01/17/2018
   
 1.  連接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體 (不論是內部部署或在 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]中)。  
   
-2.  在 **[物件總管]**的 **[資料庫]**上按一下滑鼠右鍵，然後選取 **[匯入資料層應用程式]** 功能表項目啟動精靈。  
+2.  在 **[物件總管]** 的 **[資料庫]** 上按一下滑鼠右鍵，然後選取 **[匯入資料層應用程式]** 功能表項目啟動精靈。  
   
 3.  完成精靈對話方塊：  
   
@@ -109,7 +109,7 @@ ms.lasthandoff: 01/17/2018
   
 -   **從 Azure 匯入** - 從 Microsoft Azure 容器匯入 BACPAC 檔案。 您必須連接到 Microsoft Azure 容器，才能驗證此選項。 請注意，此選項也會要求您指定暫存檔的本機目錄。 暫存檔將建立在指定的位置，而且作業完成之後，將保留在該位置。  
   
-     瀏覽 Azure 時，您可以在單一帳戶中的容器之間切換。 您必須指定單一 .bacpac 檔案，才能繼續進行匯入作業。 請注意，您可以依照 **[名稱]**、 **[大小]**或 **[修改日期]**排序資料行。  
+     瀏覽 Azure 時，您可以在單一帳戶中的容器之間切換。 您必須指定單一 .bacpac 檔案，才能繼續進行匯入作業。 請注意，您可以依照 **[名稱]**、 **[大小]** 或 **[修改日期]** 排序資料行。  
   
      若要繼續進行，請指定要匯入的 .bacpac 檔案，然後按一下 **[開啟]**。  
   

@@ -1,33 +1,32 @@
 ---
-title: "連接到 Microsoft Azure 儲存體 | Microsoft Docs"
-ms.custom: 
+title: 連接到 Microsoft Azure 儲存體 | Microsoft Docs
+ms.custom: ''
 ms.date: 07/12/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
 ms.component: ssms-f1
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: tools-ssms
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ssms
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 f1_keywords:
 - sql13.swb.windowsazurestorage.connect.f1
 - SQL13.SWB.WINDOWSAZURESTORAGE.CONNECT.F1
-ms.assetid: 
-caps.latest.revision: "4"
+ms.assetid: ''
+caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: f6948e2719018550a07b9b20087bcfc255ef72cb
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.openlocfilehash: 2c43f3a3e6c717947859e9cbfc1b2de0197129c2
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="connect-to-microsoft-azure-storage"></a>連接到 Microsoft Azure 儲存體
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 使用 [Windows Azure 儲存體連線] 對話方塊可以指定儲存體帳戶並且驗證 Windows Azure 的連線。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+使用 [Windows Azure 儲存體連接] 對話方塊可以指定儲存體帳戶並且驗證 Windows Azure 的連接。  
   
 ## <a name="options"></a>選項。  
 請指定有關 Windows Azure 帳戶的下列資訊，然後按一下 [下一步] 繼續進行。  

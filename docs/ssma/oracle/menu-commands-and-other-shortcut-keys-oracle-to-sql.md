@@ -1,27 +1,25 @@
 ---
-title: "功能表命令和其他的快速鍵 (Oracle 到 SQL) |Microsoft 文件"
-ms.prod: sql-non-specified
+title: 功能表命令和其他的快速鍵 (Oracle 到 SQL) |Microsoft 文件
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
 ms.component: ssma-oracle
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ssma
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: fc00e683-189e-4765-b280-84927d635126
-caps.latest.revision: "4"
+caps.latest.revision: 4
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
-ms.workload: Inactive
-ms.openlocfilehash: b6bdfbc11f7e458cb93fbf0af7a159526fe29d7f
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 090f24ff2535a8bdd4a3b57886b9c2a92d7695e6
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="menu-commands-and-other-shortcut-keysoracle-to-sql"></a>功能表命令和其他的快速鍵 (Oracle 到 SQL)
 下列章節說明的鍵盤快速鍵，來存取功能表命令與其他 Oracle 應用程式使用不同的 SSMA 對話方塊中的快速鍵。  
@@ -203,6 +201,6 @@ ms.lasthandoff: 12/21/2017
 |啟動 快速諮詢。|CTRL + SHIFT + 空間|  
 |移至宣告。|F12|  
   
-## <a name="see-also"></a>請參閱  
-[攠摝坫 &#40; SQL server&#41; Oracle](../../ssma/oracle/shortcut-keys-oracle-to-sql.md)  
+## <a name="see-also"></a>另請參閱  
+[攠摝坫&#40;Oracle To SQL&#41;](../../ssma/oracle/shortcut-keys-oracle-to-sql.md)  
   

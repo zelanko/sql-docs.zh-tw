@@ -1,30 +1,20 @@
 ---
-title: "彙總 (MDX) |Microsoft 文件"
-ms.custom: 
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: language-reference
-f1_keywords: AGGREGATE
-dev_langs: kbMDX
-helpviewer_keywords: Aggregate function
-ms.assetid: 9d5e0966-74d1-4cc8-b9f9-47e4dc65d165
-caps.latest.revision: "52"
-author: Minewiskan
+title: 彙總 (MDX) |Microsoft 文件
+ms.date: 05/30/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: mdx
+ms.topic: reference
 ms.author: owend
-manager: erikre
-ms.workload: On Demand
-ms.openlocfilehash: 9ae3eb300df4b0dccd02e6e3ec7034feaa8913e7
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: 31fc7fe749d8e14f0e18ea88128d984875cdaa31
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34578420"
 ---
 # <a name="aggregate-mdx"></a>Aggregate (MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -132,16 +122,16 @@ WHERE ([Geography].[State-Province].x,
     [Measures].[Declining Reseller Sales])  
 ```  
   
-## <a name="see-also"></a>請參閱  
- [PeriodsToDate &#40;MDX &#41;](../mdx/periodstodate-mdx.md)   
- [子系 &#40;MDX &#41;](../mdx/children-mdx.md)   
- [Hierarchize &#40;MDX &#41;](../mdx/hierarchize-mdx.md)   
- [計數 &#40;設定 &#41;&#40;MDX &#41;](../mdx/count-set-mdx.md)   
- [篩選 &#40;MDX &#41;](../mdx/filter-mdx.md)   
- [AddCalculatedMembers &#40;MDX &#41;](../mdx/addcalculatedmembers-mdx.md)   
- [DrilldownLevel &#40;MDX &#41;](../mdx/drilldownlevel-mdx.md)   
- [屬性 &#40;MDX &#41;](../mdx/properties-mdx.md)   
- [PrevMember &#40;MDX &#41;](../mdx/prevmember-mdx.md)   
- [MDX 函數參考 &#40;MDX &#41;](../mdx/mdx-function-reference-mdx.md)  
+## <a name="see-also"></a>另請參閱  
+ [PeriodsToDate &#40;MDX&#41;](../mdx/periodstodate-mdx.md)   
+ [子系&#40;MDX&#41;](../mdx/children-mdx.md)   
+ [Hierarchize &#40;MDX&#41;](../mdx/hierarchize-mdx.md)   
+ [計數&#40;設定&#41; &#40;MDX&#41;](../mdx/count-set-mdx.md)   
+ [篩選&#40;MDX&#41;](../mdx/filter-mdx.md)   
+ [AddCalculatedMembers &#40;MDX&#41;](../mdx/addcalculatedmembers-mdx.md)   
+ [DrilldownLevel &#40;MDX&#41;](../mdx/drilldownlevel-mdx.md)   
+ [屬性&#40;MDX&#41;](../mdx/properties-mdx.md)   
+ [PrevMember &#40;MDX&#41;](../mdx/prevmember-mdx.md)   
+ [MDX 函數參考&#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

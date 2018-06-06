@@ -1,16 +1,14 @@
 ---
-title: "ODBC 和標準 CLI |Microsoft 文件"
-ms.custom: 
+title: ODBC 和標準 CLI |Microsoft 文件
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
-ms.component: odbc
-ms.reviewer: 
+ms.prod: sql
+ms.prod_service: connectivity
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: connectivity
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - ODBC [ODBC], CLI
 - CLI [ODBC]
@@ -18,16 +16,15 @@ helpviewer_keywords:
 - call-level interface [ODBC]
 - call-level interface [ODBC], about call-level interface
 ms.assetid: 79b9c268-16ac-4b80-b451-f9dcd8c02ca4
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
-ms.workload: Inactive
-ms.openlocfilehash: 8133a266e81a1711947af9acb34a89b861a32b16
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+manager: craigg
+ms.openlocfilehash: 2335d0eb5033ca6b32130503b4bd9a11f180c9c5
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="odbc-and-the-standard-cli"></a>ODBC 和標準 CLI
 ODBC 對齊下列規格和處理的呼叫層級介面 (CLI) 標準。 （ODBC 功能是每個這些標準的超集）。  
@@ -40,7 +37,7 @@ ODBC 對齊下列規格和處理的呼叫層級介面 (CLI) 標準。 （ODBC �
   
 -   若要開啟 群組和 ISO CLI 規格所撰寫的應用程式將會使用 ODBC 3。*x*驅動程式或標準相容的驅動程式編譯時與 ODBC 3。*x*標頭檔，並連結到 ODBC 3。*x*程式庫，以及當它所獲得的存取權的驅動程式透過 ODBC 3。*x*驅動程式管理員。  
   
--   寫入的 Open Group 和 ISO CLI 規格的驅動程式將會使用 ODBC 3*.x*應用程式或標準相容的應用程式編譯時與 ODBC 3*.x*標頭檔和連結ODBC 3*.x*文件庫和應用程式時取得存取權的驅動程式透過 ODBC 3*.x*驅動程式管理員。 (如需詳細資訊，請參閱[符合標準的應用程式和驅動程式](../../odbc/reference/develop-app/standards-compliant-applications-and-drivers.md)。  
+-   寫入的 Open Group 和 ISO CLI 規格的驅動程式將會使用 ODBC 3 *.x*應用程式或標準相容的應用程式編譯時與 ODBC 3 *.x*標頭檔和連結ODBC 3 *.x*文件庫和應用程式時取得存取權的驅動程式透過 ODBC 3 *.x*驅動程式管理員。 (如需詳細資訊，請參閱[符合標準的應用程式和驅動程式](../../odbc/reference/develop-app/standards-compliant-applications-and-drivers.md)。  
   
  核心介面的一致性層級包含 ISO CLI 中的所有功能以及在開啟 CLI 中群組的所有 nonoptional 功能。 開啟群組 CLI 個選擇性功能會出現在較高的介面一致性層級。 因為所有的 ODBC 3。*x*驅動程式所需的核心介面的一致性層級中支援的功能，下列條件成立：  
   

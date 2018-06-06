@@ -1,26 +1,24 @@
 ---
-title: "自動初始化 AlwaysOn 可用性群組 | Microsoft Docs"
-ms.custom: 
-ms.date: 08/23/2017
-ms.prod: sql-non-specified
-ms.prod_service: database-engine
-ms.service: 
-ms.component: availability-groups
-ms.reviewer: 
+title: 自動初始化 AlwaysOn 可用性群組 | Microsoft Docs
+ms.custom: ''
+ms.date: 03/26/2018
+ms.prod: sql
+ms.prod_service: high-availability
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: dbe-high-availability
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: high-availability
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: 67c6a601-677a-402b-b3d1-8c65494e9e96
-caps.latest.revision: "18"
+caps.latest.revision: 18
 author: MikeRayMSFT
 ms.author: v-saume
 manager: craigg
-ms.openlocfilehash: aa2ce39b4cf932d5659adb2ccc1a85b4ff547cac
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 5cb1573bc000783cd0f6ab9e1f928cfc34564c51
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="automatically-initialize-always-on-availability-group"></a>自動初始化 AlwaysOn 可用性群組
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -169,6 +167,12 @@ FROM sys.dm_hadr_automatic_seeding
 ```sql
 SELECT * FROM sys.dm_hadr_physical_seeding_stats;
 ```
+
+兩個資料行 *total_disk_io_wait_time_ms* 和 *total_network_wait_time_ms* 皆可用於判斷自動植入流程中的效能瓶頸。 這兩個資料行也會出現在 *hadr_physical_seeding_progress* 擴充事件中。
+
+**total_disk_io_wait_time_ms** 代表備份/還原執行緒在等待磁碟期間所花費的時間。 此值從開始植入作業即開始累積。 如果磁碟未就緒可讀取或寫入備份串流，則備份/還原執行緒會轉為睡眠狀態，且會每隔一秒喚醒一次來檢查磁碟是否已備妥。
+        
+**total_network_wait_time_ms** 對於主要複本和次要複本來說意義不同。 對於主要複本來說，此計數器代表網路流量控制時間。 對於次要複本來說，則代表還原執行緒等待訊息可以寫入磁碟的時間。
 
 ### <a name="diagnose-database-initialization-using-automatic-seeding-in-the-error-log"></a>使用錯誤記錄檔中的自動植入來診斷資料庫初始化
 

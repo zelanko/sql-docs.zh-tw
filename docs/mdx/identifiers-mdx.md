@@ -1,17 +1,17 @@
 ---
-title: "識別項 (MDX) |Microsoft 文件"
-ms.custom: 
+title: 識別項 (MDX) |Microsoft 文件
+ms.custom: ''
 ms.date: 03/02/2016
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
-dev_langs: kbMDX
+dev_langs:
+- kbMDX
 helpviewer_keywords:
 - formats [Analysis Services]
 - Multidimensional Expressions [Analysis Services], identifiers
@@ -21,16 +21,15 @@ helpviewer_keywords:
 - regular identifiers [MDX]
 - formats [Analysis Services], identifiers
 ms.assetid: 739a8a67-bef3-4b56-961d-ee96cfc36b5b
-caps.latest.revision: "32"
+caps.latest.revision: 32
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: 9b45b45da18ea7c9047609ffb47bc5a698e43a21
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: a04d387c0ee40d825fddf3c50f02793e722cdbc8
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="identifiers-mdx"></a>識別碼 (MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -61,7 +60,7 @@ ms.lasthandoff: 01/08/2018
   
     -   底線 (_)。  
   
-3.  識別碼絕不能是 MDX 保留關鍵字。 MDX 中的保留關鍵字不區分大小寫。 如需詳細資訊，請參閱[保留關鍵字 &#40;MDX 語法 &#41;](../mdx/reserved-keywords-mdx-syntax.md).  
+3.  識別碼絕不能是 MDX 保留關鍵字。 MDX 中的保留關鍵字不區分大小寫。 如需詳細資訊，請參閱[保留關鍵字&#40;MDX 語法&#41;](../mdx/reserved-keywords-mdx-syntax.md)。  
   
 4.  不允許內嵌的空格或特殊字元。  
   
@@ -139,9 +138,9 @@ ms.lasthandoff: 01/08/2018
   
  此外，前例中的 Measures 識別碼已經進行分隔，以示範如何分隔多個識別碼。  
   
-## <a name="see-also"></a>請參閱  
- [MDX 語言參考 &#40;MDX &#41;](../mdx/mdx-language-reference-mdx.md)   
- [MDX 查詢基礎觀念 &#40;Analysis Services &#41;](../analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services.md)   
- [MDX 語法元素 &#40;MDX &#41;](../mdx/mdx-syntax-elements-mdx.md)  
+## <a name="see-also"></a>另請參閱  
+ [MDX 語言參考 & #40;MDX & #41;](../mdx/mdx-language-reference-mdx.md)   
+ [MDX 查詢基礎觀念 & #40;Analysis Services & #41;](../analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services.md)   
+ [MDX 語法元素&#40;MDX&#41;](../mdx/mdx-syntax-elements-mdx.md)  
   
   

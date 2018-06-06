@@ -1,30 +1,31 @@
 ---
-title: "使用 SQL Server 中的 JSON | Microsoft Docs"
-ms.custom: 
+title: 使用 SQL Server 中的 JSON | Microsoft Docs
+ms.custom: ''
 ms.date: 02/19/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.component: json
-ms.reviewer: 
+ms.reviewer: douglasl
 ms.suite: sql
 ms.technology:
 - dbe-json
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: get-started-article
 helpviewer_keywords:
 - JSON
 - JSON, built-in support
 ms.assetid: c9a4e145-33c3-42b2-a510-79813e67806a
-caps.latest.revision: 
-author: douglaslMS
-ms.author: douglasl
+caps.latest.revision: 47
+author: jovanpop-msft
+ms.author: jovanpop
 manager: craigg
-ms.workload: Active
-ms.openlocfilehash: 8ce81acc4134e1b8b9570d2eb871e1beb5565673
-ms.sourcegitcommit: ab25b08a312d35489a2c4a6a0d29a04bbd90f64d
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 360e15e879672fd3fb0568cad22e29e36a0ac45c
+ms.sourcegitcommit: b3bb41424249de198f22d9c6d40df4996f083aa6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 05/17/2018
+ms.locfileid: "34300566"
 ---
 # <a name="json-data-in-sql-server"></a>SQL Server 中的 JSON 資料
 [!INCLUDE[appliesto-ss2016-asdb-xxxx-xxx-md.md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -65,11 +66,11 @@ SQL Server 中的 JSON 函數可讓您將 NoSQL 與關聯式概念結合在同�
 
 ### <a name="extract-values-from-json-text-and-use-them-in-queries"></a>從 JSON 文字中擷取值，然後在查詢中使用它們
 如有儲存在資料庫資料表中的 JSON 文字，您可以使用下列內建函式來讀取或修改 JSON 文字中的值：  
-  
--   **JSON_VALUE** 可從 JSON 字串擷取純量值。
--   **JSON_QUERY** 可從 JSON 字串擷取物件或陣列。
--   **ISJSON** 可測試字串是否包含有效的 JSON。
--   **JSON_MODIFY** 變更 JSON 字串中的值。
+    
+-   [ISJSON (Transact-SQL)](../../t-sql/functions/isjson-transact-sql.md) 可測試字串是否包含有效的 JSON。
+-   [JSON_VALUE (Transact-SQL)](../../t-sql/functions/json-value-transact-sql.md) 可從 JSON 字串擷取純量值。
+-   [JSON_QUERY (Transact-SQL)](../../t-sql/functions/json-query-transact-sql.md) 可從 JSON 字串擷取物件或陣列。
+-   [JSON_MODIFY (Transact-SQL)](../../t-sql/functions/json-modify-transact-sql.md) 變更 JSON 字串中的值。
 
 **範例**
   
@@ -93,13 +94,19 @@ ORDER BY JSON_VALUE(jsonCol,'$.info.address.PostCode')
 如需詳細資訊，請參閱[使用內建函式驗證、查詢及變更 JSON 資料 (SQL Server)](../../relational-databases/json/validate-query-and-change-json-data-with-built-in-functions-sql-server.md)、[JSON_VALUE (Transact-SQL)](../../t-sql/functions/json-value-transact-sql.md) 和 [JSON_QUERY (Transact-SQL)](../../t-sql/functions/json-query-transact-sql.md)。  
   
 ### <a name="change-json-values"></a>變更 JSON 值
-如果您必須修改部分 JSON 文字，可以使用 **JSON_MODIFY** 函式來更新 JSON 字串中的屬性值，並傳回更新的 JSON 字串。 下列範例示範在包含 JSON 的變數中更新屬性的值：  
+如果您必須修改部分 JSON 文字，可以使用 [JSON_MODIFY (Transact-SQL)](../../t-sql/functions/json-modify-transact-sql.md) 函式來更新 JSON 字串中的屬性值，並傳回更新的 JSON 字串。 下列範例示範在包含 JSON 的變數中更新屬性的值：  
   
 ```sql  
-DECLARE @jsonInfo NVARCHAR(MAX)
-
-SET @jsonInfo=JSON_MODIFY(@jsonInfo,'$.info.address[0].town','London') 
+DECLARE @json NVARCHAR(MAX);
+SET @json = '{"info":{"address":[{"town":"Belgrade"},{"town":"Paris"},{"town":"Madrid"}]}';
+SET @json = JSON_MODIFY(@jsonInfo,'$.info.address[1].town','London');
+SELECT modifiedJson = @json;
 ```  
+**結果**  
+
+|modifiedJson|  
+|--------|  
+|{"info":{"address":[{"town":"Belgrade"},{"town":"London"},{"town":"Madrid"}]}|  
   
 ### <a name="convert-json-collections-to-a-rowset"></a>將 JSON 集合轉換為資料列集
 您不需要自訂查詢語言也能在 SQL Server 中查詢 JSON。 您可以使用標準的 T-SQL 查詢 JSON 資料。 如果您必須建立 JSON 資料的查詢或報表，可以呼叫 **OPENJSON** 資料列集函式，輕鬆地將 JSON 資料轉換成資料列和資料行。 如需詳細資訊，請參閱[使用 OPENJSON 將 JSON 資料轉換成資料列和資料行 (SQL Server)](../../relational-databases/json/convert-json-data-to-rows-and-columns-with-openjson-sql-server.md)。  
@@ -137,7 +144,41 @@ FROM OPENJSON(@json)
 - JSON 文字中必須有在路徑中指定指定屬性值的選擇性 **嚴格** 前置詞。
 
 如需詳細資訊，請參閱[使用 OPENJSON 將 JSON 資料轉換成資料列和資料行 (SQL Server)](../../relational-databases/json/convert-json-data-to-rows-and-columns-with-openjson-sql-server.md) 和 [OPENJSON (Transact-SQL)](../../t-sql/functions/openjson-transact-sql.md)。  
+
+JSON 文件可能會有不能直接對應到標準關聯式資料行的子項目和階層式資料。 在此情況下，您可以藉由聯結父實體和子陣列來壓平合併 JSON 階層。
+
+在下列範例中，陣列中的第二個物件具有代表人員技能的子陣列。 每個子物件都可以使用其他 `OPENJSON` 函式呼叫加以剖析： 
+
+```sql  
+DECLARE @json NVARCHAR(MAX)
+SET @json =  
+N'[  
+       { "id" : 2,"info": { "name": "John", "surname": "Smith" }, "age": 25 },  
+       { "id" : 5,"info": { "name": "Jane", "surname": "Smith", "skills": ["SQL", "C#", "Azure"] }, "dob": "2005-11-04T12:00:00" }  
+ ]'  
+   
+SELECT *  
+FROM OPENJSON(@json)  
+  WITH (id int 'strict $.id',  
+        firstName nvarchar(50) '$.info.name', lastName nvarchar(50) '$.info.surname',  
+        age int, dateOfBirth datetime2 '$.dob',
+    skills nvarchar(max) '$.skills' as json) 
+    outer apply openjson( a.skills ) 
+                     with ( skill nvarchar(8) '$' ) as b
+```  
+第一個 `OPENJSON` 傳回的 **skills** 陣列作為原始的 JSON 文字片段，並使用 `APPLY` 運算子傳遞給另一個 `OPENJSON` 函式。 第二個 `OPENJSON` 函式會剖析 JSON 陣列並傳回字串值作為單一資料行資料列集，與第一個 `OPENJSON` 的結果聯結。 下表顯示此查詢的結果：
+
+**結果**  
   
+|id|firstName|lastName|age|dateOfBirth|skill|  
+|--------|---------------|--------------|---------|-----------------|----------|  
+|2|John|Smith|25|||  
+|5|Jane|Smith||2005-11-04T12:00:00|SQL| 
+|5|Jane|Smith||2005-11-04T12:00:00|C#|
+|5|Jane|Smith||2005-11-04T12:00:00|Azure|
+
+`OUTER APPLY OPENJSON` 會聯結第一個層級的實體和子陣列，並傳回壓平合併的結果集。 因為「聯結」的緣故，每個技能都會重複第二個資料列。
+
 ### <a name="convert-sql-server-data-to-json-or-export-json"></a>將 SQL Server 資料轉換為 JSON 或匯出 JSON
 將 **FOR JSON** 子句加入至 **SELECT** 陳述式，以將 SQL Server 資料或 SQL 查詢結果格式化為 JSON。 使用 **FOR JSON** 將您用戶端應用程式的 JSON 輸出格式設定委派給 SQL Server。 如需詳細資訊，請參閱[使用 FOR JSON 將查詢結果格式化為 JSON (SQL Server)](../../relational-databases/json/format-query-results-as-json-with-for-json-sql-server.md)。  
   
@@ -172,7 +213,31 @@ FOR JSON PATH
 ```  
   
 如需詳細資訊，請參閱[使用 FOR JSON 將查詢結果格式化為 JSON (SQL Server)](../../relational-databases/json/format-query-results-as-json-with-for-json-sql-server.md) 和 [FOR 子句 (Transact-SQL)](../../t-sql/queries/select-for-clause-transact-sql.md)。  
-  
+
+## <a name="use-cases-for-json-data-in-sql-server"></a>SQL Server 中 JSON 資料的使用案例
+
+SQL Server 與 Azure SQL Database 中的 JSON 支援，可讓您能結合關聯式概念與 NoSQL 概念。 您可以輕鬆地將關聯式資料轉換為半結構化的資料，反之亦然。 但 JSON 並非取代現有的關聯式模型。 以下是一些受益於 SQL Server 與 SQL Database 中 JSON 支援的特定使用案例。 如需詳細資訊，請參閱 [SQL Server 中的 JSON – 使用案例](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2018/01/31/json-in-sql-server-use-cases/)。
+
+### <a name="simplify-complex-data-models"></a>簡化複雜的資料模型
+
+請考慮將您的資料模型去除正規化，用 JSON 欄位來取代多個子資料表。 如需詳細資訊，請參閱[使用去除正規化模型來簡化資料存取](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2018/01/24/simplify-data-access-using-de-normalized-models/)。
+
+### <a name="store-retail-and-e-commerce-data"></a>儲存零售及電子商務資料
+
+將具有各式各樣變化特質的產品相關資訊，儲存在非正規化模型中以保留彈性。 如需詳細資訊，請參閱[使用 JSON 於 SQL Server 中設計產品類別目錄](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2015/12/21/designing-product-catalogs-in-sql-server-2016-using-json/)以及[編製 JSON 產品類別目錄中資料的索引](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2015/12/21/indexing-data-in-json-product-catalogs/)。
+
+### <a name="process-log-and-telemetry-data"></a>處理記錄檔與遙測資料
+
+載入、查詢及分析儲存為 JSON 檔案的記錄資料，同時具備 TRANSACT-SQL 語言的所有功能。 如需詳細資訊，請參閱 [SQL Server 中的 JSON – 使用案例](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2018/01/31/json-in-sql-server-use-cases/)內的*記錄與遙測資料分析*。
+
+### <a name="store-semi-structured-iot-data"></a>儲存半結構化的 IoT 資料
+
+當您需要即時的 IoT 資料分析時，請將內送資料直接載入資料庫，而非將其暫置於儲存體位置。 如需詳細資訊，請參閱[使用 Azure SQL Database 中的 Azure IoT 資料](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2018/01/23/working-with-azure-iot-data-in-azure-sql-database/)。
+
+### <a name="simplify-rest-api-development"></a>簡化 REST API 開發
+
+輕鬆地將您資料庫中的關聯式資料，轉換為支援您的網站之 REST API 所使用的 JSON 格式。 如需詳細資訊，請參閱[利用 SQL Server 簡化現代化單一頁面應用程式的 REST API 開發](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2018/01/29/simplify-rest-api-development-modern-single-page-apps-sql-server/)。
+
 ## <a name="combine-relational-and-json-data"></a>合併關聯式資料和 JSON 資料
 SQL Server 提供混合模型，讓您使用標準 Transact-SQL 語言儲存兼處理關聯式與 JSON 資料。 您可以使用完整的 Transact-SQL 在資料表中組織 JSON 文件的集合、建立它們之間的關聯性、結合儲存於資料表中的強類型純量資料行和儲存於 JSON 資料行中的彈性索引鍵/值組，以及在一或多個資料表中查詢純量和 JSON 值。
  
@@ -184,12 +249,15 @@ JSON 文字儲存在 varchar 或 nvarchar 資料行中，並建立成純文字�
 
 ## <a name="store-and-index-json-data-in-sql-server"></a>在 SQL Server 中儲存 JSON 資料並編製索引
 
+JSON 是文字格式，因此 JSON 文件都可以儲存在 SQL Database 的 `NVARCHAR` 資料行中。 因為所有 SQL Server 子系統都支援 `NVARCHAR` 類型，所以您可以將 JSON 文件放在具有 **CLUSTERED COLUMNSTORE** 索引的資料表、**記憶體最佳化**資料表，或可以使用 OPENROWSET 或 Polybase 讀取的外部檔案中。
+
 若要深入了解在 SQL Server 中將 JSON 儲存、編製索引和最佳化的選項，請參閱下列文章：
 -   [將 JSON 文件儲存在 SQL Server 或 SQL Database](store-json-documents-in-sql-tables.md)
 -   [索引 JSON 資料](index-json-data.md)
 -   [使用記憶體內部 OLTP 最佳化 JSON 處理](optimize-json-processing-with-in-memory-oltp.md)
 
 ### <a name="load-json-files-into-sql-server"></a>將 JSON 檔案載入 SQL Server  
+
 您可以將儲存在檔案中的資訊格式化為標準 JSON 或以行分隔的 JSON。 SQL Server 可匯入 JSON 檔案的內容，使用 **OPENJSON** 或 **JSON_VALUE** 函式對其剖析，並將其載入資料表。  
   
 -   如果您的 JSON 文件儲存於本機檔案、共用網路磁碟機，或可透過 SQL Server 存取的 Azure 檔案位置，您就能使用大量匯入將 JSON 資料載入 SQL Server。 如需此案例的詳細資訊，請參閱[使用 OPENROWSET (BULK) 將 JSON 檔案匯入 SQL Server](http://blogs.msdn.com/b/sqlserverstorageengine/archive/2015/10/07/importing-json-files-into-sql-server-using-openrowset-bulk.aspx)。  
@@ -324,7 +392,7 @@ FOR JSON AUTO
 > [!VIDEO https://channel9.msdn.com/Shows/Data-Exposed/Using-JSON-in-SQL-Server-2016-and-Azure-SQL-Database/player]
 
 *使用 SQL Server 以 JSON 函數建置 REST API*
-> [!VIDEO https://www.youtube.com/watch?v=0m6GXF3-5WI]
+> [!VIDEO https://www.youtube.com/embed/0m6GXF3-5WI]
 
 ### <a name="reference-articles"></a>參考文章  
   

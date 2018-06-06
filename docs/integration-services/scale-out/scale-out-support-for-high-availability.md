@@ -1,36 +1,36 @@
 ---
-title: "SQL Server Integration Services (SSIS) Scale Out 高可用性支援 | Microsoft Docs"
+title: SQL Server Integration Services (SSIS) Scale Out 高可用性支援 | Microsoft Docs
 ms.description: This article describes how to configure SSIS Scale Out for high availability
-ms.custom: 
+ms.custom: ''
 ms.date: 12/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
 ms.component: scale-out
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
-ms.topic: article
-caps.latest.revision: 
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
+caps.latest.revision: 1
 author: haoqian
 ms.author: haoqian
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 906edbe80e7c762cdd9a271218d790edc9da8f5b
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 8cd79327b3733de9f7463f1d5f9d8f924b58a46b
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="scale-out-support-for-high-availability"></a>高可用性的 Scale Out 支援
 
 在 SSIS Scale Out 中，Scale Out Worker 端高可用性的提供是透過執行含多個 Scale Out Worker 的套件。
 
-Scale Out Master 端高可用性則是使用 [AlwaysOn for SSIS 目錄](../catalog/ssis-catalog.md#always-on-for-ssis-catalog-ssisdb)和 Windows 容錯移轉叢集所達成。在此解決方案中，一個 Windows 容錯移轉叢集中會裝載多個 Scale Out Master 執行個體。 關閉主要節點上的 Scale Out Master 服務或 SSISDB 時，次要節點上的服務或 SSISDB 會繼續接受使用者要求，並與 Scale Out Worker 通訊。 
+使用 [SSIS 目錄的 AlwaysOn](../catalog/ssis-catalog.md#always-on-for-ssis-catalog-ssisdb) 和 Windows 容錯移轉叢集可在 Scale Out Master 端達到高可用性。 在此解決方案中，多個 Scale Out Master 執行個體裝載於 Windows 容錯移轉叢集中。 關閉主要節點上的 Scale Out Master 服務或 SSISDB 時，次要節點上的服務或 SSISDB 會繼續接受使用者要求，並與 Scale Out Worker 通訊。
 
-若要設定 Scale Out Master 端高可用性，請執行下列動作：
+或者，使用 SQL Server 容錯移轉叢集執行個體，即可在 Scale Out Master 端達到高可用性。 請參閱 [Scale Out 透過 SQL Server 容錯移轉叢集執行個體支援高可用性](scale-out-failover-cluster-instance.md)。
+
+若要使用 AlwaysOn for SSIS 目錄在 Scale Out Master 端設定高可用性，請執行下列動作：
 
 ## <a name="1-prerequisites"></a>1.Prerequisites
 設定 Windows 容錯移轉叢集。 如需相關指示，請參閱[安裝適用於 Windows Server 2012 的容錯移轉叢集功能和工具](http://blogs.msdn.com/b/clustering/archive/2012/04/06/10291601.aspx)部落格文章。 在所有叢集節點上安裝功能和工具。

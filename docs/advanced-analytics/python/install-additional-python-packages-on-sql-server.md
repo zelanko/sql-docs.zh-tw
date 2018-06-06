@@ -1,43 +1,33 @@
 ---
-title: "SQL Server 上安裝新的 Python 封裝 |Microsoft 文件"
-ms.date: 02/20/2018
-ms.reviewer: 
-ms.suite: sql
-ms.prod: machine-learning-services
-ms.prod_service: machine-learning-services
-ms.component: python
-ms.technology:
-- r-services
-ms.tgt_pltfrm: 
-ms.topic: article
-ms.assetid: 21456462-e58a-44c3-9d3a-68b4263575d7
-caps.latest.revision: 
-author: jeannt
-ms.author: jeannt
-manager: cgronlund
-ms.workload: On Demand
-ms.openlocfilehash: f9ac8a72618cb432134d8fd87b0664b720085730
-ms.sourcegitcommit: c08d665754f274e6a85bb385adf135c9eec702eb
+title: 在 SQL Server 機器學習上安裝新的 Python 封裝 |Microsoft 文件
+description: 將新的 Python 封裝加入至 SQL Server 2017 機器學習服務 （資料庫） 和機器學習伺服器 （獨立）
+ms.prod: sql
+ms.technology: machine-learning
+ms.date: 05/10/2018
+ms.topic: conceptual
+author: HeidiSteen
+ms.author: heidist
+manager: cgronlun
+ms.openlocfilehash: fa1ed2612fb88653a7259af0675b496fac4a6723
+ms.sourcegitcommit: df382099ef1562b5f2d1cd506c1170d1db64de41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 05/12/2018
 ---
 # <a name="install-new-python-packages-on-sql-server"></a>SQL Server 上安裝新的 Python 封裝
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-本文說明如何在 SQL Server 2017 的執行個體上安裝新的 Python 封裝。
+本文說明如何在 SQL Server 2017 機器學習服務的執行個體上安裝新的 Python 封裝。 一般情況下，安裝新套件的程序是類似於標準的 Python 環境。 不過，一些額外的步驟所需，如果伺服器沒有網際網路連線。
 
-一般情況下，安裝新套件的程序是類似於標準的 Python 環境。 不過，一些額外的步驟所需，如果伺服器沒有網際網路連線。
-
-如需了解封裝的安裝位置，或者哪些封裝已安裝的說明，請參閱[檢視安裝的 R 或 Python 封裝](../r/determine-which-packages-are-installed-on-sql-server.md)。
+如需了解封裝的安裝位置，或者哪些封裝已安裝的說明，請參閱[取得 R 或 Python 封裝資訊](../r/determine-which-packages-are-installed-on-sql-server.md)。
 
 ## <a name="prerequisites"></a>필수 구성 요소
 
-+ 您必須安裝機器學習服務 （資料庫） 與 Python 語言選項。 如需指示，請參閱[Python 機器學習服務設定](setup-python-machine-learning-services.md)。
++ 您必須安裝 SQL Server 2017 機器學習服務 （資料庫） 與 Python 語言選項。 如需指示，請參閱[安裝 SQL Server 2017 機器學習服務 （資料庫）](../install/sql-machine-learning-services-windows-install.md)。
 
 + 每個伺服器執行個體中，您必須安裝個別封裝的副本。 封裝無法執行個體之間共用。
 
-+ 決定使用 Python 3.5 和 Windows 環境中，您想要使用的封裝是否會運作。 
++ 套件必須放在 Windows 上符合規定及執行的 Python 3.5。 
 
 + 評估封裝是否適合用來在 SQL Server 環境中使用。 通常資料庫伺服器支援多個服務和應用程式，而且檔案系統上的資源可能會限制，以及連線到伺服器。 在許多情況下是完全封鎖網際網路存取。
 
@@ -64,7 +54,7 @@ ms.lasthandoff: 02/28/2018
 
 + 如果您沒有網際網路存取的伺服器上安裝 Python 封裝，您必須 WHL 檔案下載到另一部電腦，並將它複製到伺服器。
 
-    例如，在個別電腦上，您可以下載 WHL 檔案從這個站台[https://cntk.ai/PythonWheel/CPU-Only](https://cntk.ai/PythonWheel/CPU-Only/cntk-2.1-cp35-cp35m-win_amd64.whl)，然後將檔案複製`cntk-2.1-cp35-cp35m-win_amd64.whl`到 SQL Server 電腦上的本機資料夾。
+    例如，在個別電腦上，您可以下載 WHL 檔案從這個站台[ https://cntk.ai/PythonWheel/CPU-Only ](https://cntk.ai/PythonWheel/CPU-Only/cntk-2.1-cp35-cp35m-win_amd64.whl)，然後將檔案複製`cntk-2.1-cp35-cp35m-win_amd64.whl`到 SQL Server 電腦上的本機資料夾。
 
 + SQL Server 2017 使用 Python 3.5。 
 
@@ -90,11 +80,11 @@ ms.lasthandoff: 02/28/2018
 
 + 如果您習慣使用 Python 命令列，使用 PIP.exe 來安裝新的封裝。 您可以找到**pip**安裝程式中的`Scripts`子資料夾。 
 
-    如果您收到錯誤，`pip`無法辨識為內部或外部命令，您可以加入的 PATH 變數中 Windows 的 Python 可執行檔和 Python 指令碼資料夾的路徑。
+  SQL Server 安裝程式不會新增指令碼至系統路徑。 如果您收到錯誤，`pip`無法辨識為內部或外部命令，您可以將指令碼 資料夾加入 PATH 變數視窗中。
 
-    完整路徑**指令碼**預設安裝中的資料夾如下所示：
+  完整路徑**指令碼**預設安裝中的資料夾如下所示：
 
-    `C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\PYTHON_SERVICES\Scripts`
+    C:\Program Files\Microsoft SQL Server\MSSQL14。MSSQLSERVER\PYTHON_SERVICES\Scripts
 
 + 如果您正在使用 Visual Studio 2017 或 Visual Studio 2015 的 Python 擴充功能，您可以執行`pip install`從**Python 環境**視窗。 按一下**封裝**，並在文字方塊中，提供的名稱或要安裝之封裝的位置。 您不需要輸入`pip install`; 它會為您自動填入。 
 
@@ -133,13 +123,13 @@ import cntk as cntk
 cntk._version_
 ```
 
-##  <a name="how-to-view-installed-packages-using-conda"></a>如何檢視已安裝的封裝使用 conda
+## <a name="list-installed-packages-using-conda"></a>列出已安裝的封裝使用 conda
 
 有不同的方式，您可以取得已安裝的封裝清單。 例如，您可以檢視已安裝的封裝中**Python 環境**的 Visual Studio 視窗。
 
-如果您使用 Python 命令列，您可以使用**conda**封裝管理員，就會包含與 SQL Server 安裝程式新增 Anaconda Python 環境。
+如果您使用 Python 命令列，您可以使用**Pip**或**conda**封裝管理員 中，隨附於 SQL Server 安裝程式新增 Anaconda Python 環境。
 
-若要檢視已安裝目前的環境中的 Python 封裝，請從命令提示字元執行這個命令：
+假設您將指令碼 資料夾加入 PATH 環境變數，列出 Python 環境中的封裝管理員命令提示字元中執行此命令。 否則，請參閱[取得 R，並將 Python 封裝資訊](../r/determine-which-packages-are-installed-on-sql-server.md#pip-conda)如何在 SQL Server 中執行的 Python 工具上的指標。
 
 ```python
 conda list

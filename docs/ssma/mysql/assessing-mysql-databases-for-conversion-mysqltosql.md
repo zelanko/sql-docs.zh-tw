@@ -1,31 +1,30 @@
 ---
-title: "評估 MySQL 資料庫轉換 (MySQLToSQL) |Microsoft 文件"
-ms.prod: sql-non-specified
+title: 評估 MySQL 資料庫轉換 (MySQLToSQL) |Microsoft 文件
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
 ms.component: ssma-mysql
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ssma
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 applies_to:
 - Azure SQL Database
 - SQL Server
-helpviewer_keywords: Assessment reports
+helpviewer_keywords:
+- Assessment reports
 ms.assetid: 2a56a003-3b0f-453a-963c-00c9e40933ec
-caps.latest.revision: "10"
+caps.latest.revision: 10
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
-ms.workload: Inactive
-ms.openlocfilehash: 73019709b3ce9b40dc05f678cc64d33305504213
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+manager: craigg
+ms.openlocfilehash: 5f87a1260e038cb1421f969983a698989dc66a61
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="assessing-mysql-databases-for-conversion-mysqltosql"></a>評估的 MySQL 資料庫轉換 (MySQLToSQL)
 在您載入的物件，並將資料移轉至之前[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或 SQL Azure，您應該決定如何複雜移轉，以及多少時間會移轉。 SSMA 可以建立顯示成功轉換的物件百分比的評估報告。 SSMA 也可讓您檢視特定的問題，導致轉換失敗。  
@@ -83,13 +82,13 @@ SSMA 轉換至選取的 MySQL 資料庫物件時它會建立此評估報表，[!
   
 -   更新 MySQL 語法 SSMA 中。 您可以更新僅適用於程序和函式的語法。 若要更新的語法，MySQL 中繼資料總管 窗格中選取的物件，請按一下**SQL**索引標籤，然後再修改的 SQL 程式碼。 當您離開此項目時，系統會提示您儲存更新的語法。 您可以檢視報告的錯誤物件上**報表** 索引標籤。  
   
--   在 MySQL，您可以修改 MySQL 物件，以移除或修改程式碼有問題。 若要更新的程式碼載入 SSMA，您必須更新的中繼資料。 如需詳細資訊，請參閱[連接到 MySQL &#40;MySQLToSQL &#41;](../../ssma/mysql/connecting-to-mysql-mysqltosql.md).  
+-   在 MySQL，您可以修改 MySQL 物件，以移除或修改程式碼有問題。 若要更新的程式碼載入 SSMA，您必須更新的中繼資料。 如需詳細資訊，請參閱[連接至 MySQL &#40;MySQLToSQL&#41;](../../ssma/mysql/connecting-to-mysql-mysqltosql.md)。  
   
 -   您可以從移轉排除的物件。 在[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或 SQL Azure 中繼資料總管和 MySQL 中繼資料總管，清除項目旁邊的核取方塊之前物件載入[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或 SQL Azure 和從 MySQL 移轉資料。  
   
 ## <a name="next-step"></a>下一個步驟  
-[轉換的 MySQL 資料庫 &#40;MySQLToSQL &#41;](../../ssma/mysql/converting-mysql-databases-mysqltosql.md)  
+[將 MySQL 資料庫轉換&#40;MySQLToSQL&#41;](../../ssma/mysql/converting-mysql-databases-mysqltosql.md)  
   
-## <a name="see-also"></a>請參閱  
-[將 MySQL 資料庫移轉至 SQL Server-Azure SQL DB &#40;MySQLToSql &#41;](../../ssma/mysql/migrating-mysql-databases-to-sql-server-azure-sql-db-mysqltosql.md)  
+## <a name="see-also"></a>另請參閱  
+[移轉的 MySQL 資料庫到 SQL Server-Azure SQL DB &#40;MySQLToSql&#41;](../../ssma/mysql/migrating-mysql-databases-to-sql-server-azure-sql-db-mysqltosql.md)  
   

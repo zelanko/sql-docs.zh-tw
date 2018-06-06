@@ -1,31 +1,23 @@
 ---
-title: "設定資料行的資料類型 |Microsoft 文件"
-ms.custom: 
-ms.date: 03/01/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services, azure-analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
-ms.assetid: 34e2d508-7b64-4503-a4f0-c6c6ad5f8a44
-caps.latest.revision: 
-author: Minewiskan
+title: 設定資料行的資料類型 |Microsoft 文件
+ms.date: 05/07/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: tabular-models
+ms.topic: conceptual
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: d40df86ee45154243d854dea65162b49a5e6352e
-ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
+ms.openlocfilehash: 18aa18d9c9ee7fbc0291d9961e144263053710dd
+ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="set-the-data-type-of-a-column"></a>設定資料行的資料類型 
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
-當您將資料匯入或貼上模型時，模型設計師會自動偵測並套用資料類型。 將資料加入至模型之後，您可以手動修改資料行的資料類型，以變更資料儲存的方式。 如果您只要變更資料顯示方式的格式，而不要變更其儲存方式，可以只變更該顯示格式。  
+  當您將資料匯入或貼上模型時，模型設計師會自動偵測並套用資料類型。 將資料加入至模型之後，您可以手動修改資料行的資料類型，以變更資料儲存的方式。 如果您只要變更資料顯示方式的格式，而不要變更其儲存方式，可以只變更該顯示格式。  
   
 ### <a name="to-change-the-data-type-or-display-format-for-a-column"></a>若要變更資料行的資料類型或顯示格式  
   

@@ -1,32 +1,29 @@
 ---
-title: "選擇資料來源或驅動程式 |Microsoft 文件"
-ms.custom: 
+title: 選擇資料來源或驅動程式 |Microsoft 文件
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
-ms.component: odbc
-ms.reviewer: 
+ms.prod: sql
+ms.prod_service: connectivity
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: connectivity
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - connecting to driver [ODBC], selecting driver
 - connecting to data source [ODBC], selecting data source
 - data sources [ODBC], selecting
 - ODBC drivers [ODBC], selecting
 ms.assetid: 10aaf570-01ab-4478-8339-bdde2a5e3dd1
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
-ms.workload: Inactive
-ms.openlocfilehash: 496b9a40dfa1beb27144eead8d8ab9b03056b000
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+manager: craigg
+ms.openlocfilehash: d3e9c5964d529fa70bd82c3aec7d25a42cb10c08
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="choosing-a-data-source-or-driver"></a>選擇資料來源或驅動程式
 資料來源或應用程式所使用的驅動程式是有時候硬式編碼應用程式中。 比方說，自訂撰寫的應用程式所要傳送 MIS 部門會包含這些資料來源的名稱，到另一個資料來源資料，應用程式只會無法搭配任何其他資料來源。 另一個範例是垂直應用程式，例如其中一個用於訂單項目。 這類應用程式一律使用相同的資料來源，具有預先定義的結構描述的應用程式知道。  

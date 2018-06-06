@@ -1,16 +1,14 @@
 ---
-title: "STDisjoint (geometry 資料類型) | Microsoft Docs"
-ms.custom: 
+title: STDisjoint (geometry 資料類型) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
 ms.component: t-sql|spatial-geography
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: t-sql
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - STDisjoint_TSQL
@@ -20,16 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - STDisjoint (geometry Data Type)
 ms.assetid: 90acdb21-e826-4d81-afe8-45a71f33282a
-caps.latest.revision: 
+caps.latest.revision: 19
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 8257a4a8d3e73d3afd59f9d0774ecc5fb055428f
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 078778f3207e9b380fc8df5f9b79bce8d23c4b43
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="stdisjoint-geometry-data-type"></a>STDisjoint (geometry 資料類型)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -45,7 +42,7 @@ ms.lasthandoff: 01/25/2018
   
 ## <a name="arguments"></a>引數  
  *other_geometry*  
- 這是要與進行 `STDisjoint()` 叫用的執行個體做比較的另一個 **geometry** 執行個體。  
+ 這是要與叫用 `STDisjoint()` 所在之執行個體相比較的另一個 **geometry** 執行個體。  
   
 ## <a name="return-types"></a>傳回類型  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 傳回類型：**bit**  

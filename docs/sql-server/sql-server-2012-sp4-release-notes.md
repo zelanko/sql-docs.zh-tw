@@ -1,27 +1,24 @@
 ---
-title: "SQL Server 2012 Service Pack 版本資訊 | Microsoft Docs"
-ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
-ms.service: 
-ms.component: sql-non-specified
-ms.technology: server-general
-ms.custom: 
+title: SQL Server 2012 Service Pack 版本資訊 | Microsoft Docs
+ms.prod: sql
+ms.prod_service: sql
+ms.technology: supportability
+ms.custom: ''
 ms.date: 2/26/2018
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: 67cb8b3e-3d82-47f4-840d-0f12a3bff565
-caps.latest.revision: 
 author: craigg-msft
 ms.author: craigg
 manager: jhubbard
-ms.workload: Inactive
-ms.openlocfilehash: e0aa6379b2d0a0675c0ebc999e3fcee603d5b5fb
-ms.sourcegitcommit: 6e819406554efbd17bbf84cf210d8ebeddcf772d
+monikerRange: = sql-server-2014 || = sqlallproducts-allversions
+ms.openlocfilehash: 5396011be5ce84816d83a4c85da120cb896b44bd
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sql-server-2012-service-pack-release-notes"></a>SQL Server 2012 Service Pack 版本資訊
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -152,7 +149,7 @@ Service Pack 僅於線上提供，安裝媒體上並不提供，並可依下列�
 3.  按一下 [PowerPivot 圖庫] 。  
   
 #### <a name="to-use-powerpivot-for-excel-with-excel-2013-you-must-use-the-add-in-that-is-installed-with-excel"></a>若要使用 PowerPivot for Excel 搭配 Excel 2013，您必須使用與 Excel 一起安裝的增益集  
-**問題** ：在 Office 2010 中，PowerPivot for Excel 是可從 [http://www.microsoft.com/bi/powerpivot.aspx](http://www.microsoft.com/bi/powerpivot.aspx)下載的獨立增益集。 或者，您也可以從 [Microsoft 下載中心](http://www.microsoft.com/download/details.aspx?id=29074)下載此增益集。 請注意，目前可供下載的 PowerPivot 增益集有兩種版本：第一種版本隨附於 SQL Server 2008 R2，而另一種版本則隨附於 SQL Server 2012。 不過，如果是 Office 2013，PowerPivot for Excel 隨附於 Office，而且會在您安裝 Excel 時一併安裝。 雖然 SQL Server 2008 R2 和 SQL Server 2012 版本的 PowerPivot for Excel 2010 與 Excel 2013 不相容，不過如果您想要讓 Excel 2010 與 Excel 2013 並存執行，仍然可以在用戶端電腦上安裝 PowerPivot for Excel 2010。 換言之，這兩種 Excel 版本可以共存，因此對應的 PowerPivot 增益集也可以。  
+**問題**：在 Office 2010 中，PowerPivot for Excel 是可從 [http://www.microsoft.com/bi/powerpivot.aspx](http://www.microsoft.com/bi/powerpivot.aspx) 下載的獨立增益集。 或者，您也可以從 [Microsoft 下載中心](http://www.microsoft.com/download/details.aspx?id=29074)下載此增益集。 請注意，目前可供下載的 PowerPivot 增益集有兩種版本：第一種版本隨附於 SQL Server 2008 R2，而另一種版本則隨附於 SQL Server 2012。 不過，如果是 Office 2013，PowerPivot for Excel 隨附於 Office，而且會在您安裝 Excel 時一併安裝。 雖然 SQL Server 2008 R2 和 SQL Server 2012 版本的 PowerPivot for Excel 2010 與 Excel 2013 不相容，不過如果您想要讓 Excel 2010 與 Excel 2013 並存執行，仍然可以在用戶端電腦上安裝 PowerPivot for Excel 2010。 換言之，這兩種 Excel 版本可以共存，因此對應的 PowerPivot 增益集也可以。  
   
 **因應措施**：若要使用 PowerPivot for Excel 2013，您必須啟用 COM 增益集。 在 Excel 2013 中，選取 [檔案] | [選項] | [增益集]。在 [管理] 下拉式方塊中，選取 [COM 增益集]，然後按一下 [執行]。 在 [COM 增益集] 中，選取 [Microsoft Office PowerPivot for Excel 2013]  ，然後按一下 [確定] 。  
   

@@ -1,16 +1,15 @@
 ---
-title: "sp_getdefaultdatatypemapping (TRANSACT-SQL) |Microsoft 文件"
-ms.custom: 
+title: sp_getdefaultdatatypemapping (TRANSACT-SQL) |Microsoft 文件
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - sp_getdefaultdatatypemapping
 ms.assetid: b8401de1-f135-41d0-ba79-ce8fe1f48c00
-caps.latest.revision: 
+caps.latest.revision: 18
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: db6ba2bdd02ed4ce9fe7b93132669d4f46ce40b9
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 9acad164a82b8506ecceebeab01fb5f4c03b75b6
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="spgetdefaultdatatypemapping-transact-sql"></a>sp_getdefaultdatatypemapping (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -60,10 +58,10 @@ sp_getdefaultdatatypemapping [ @source_dbms = ] 'source_dbms'
 ```  
   
 ## <a name="arguments"></a>引數  
- [  **@source_dbms** =] **'***source_dbms***'**  
+ [ **@source_dbms**=] **'***source_dbms***'**  
  這是對應資料類型的來源 DBMS 名稱。 *source_dbms*是**sysname**，而且可以是下列值之一：  
   
-|值|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |**MSSQLSERVER**|來源是一個 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫。|  
 |**ORACLE**|來源是一個 Oracle 資料庫。|  
@@ -73,7 +71,7 @@ sp_getdefaultdatatypemapping [ @source_dbms = ] 'source_dbms'
  [  **@source_version=** ] **'***source_version***'**  
  這是來源 DBMS 的版本號碼。 *source_version*是**varchar （10)**，預設值是 NULL。  
   
- [  **@source_type** =] **'***source_type***'**  
+ [ **@source_type**=] **'***source_type***'**  
  這是來源 DBMS 中的資料類型。 *source_type*是**sysname**，沒有預設值。  
   
  [  **@source_length=** ] *source_length*  
@@ -88,10 +86,10 @@ sp_getdefaultdatatypemapping [ @source_dbms = ] 'source_dbms'
  [  **@source_nullable=** ] *source_nullable*  
  這是指來源 DBMS 中的資料類型是否支援 NULL 值。 *source_nullable*是**元**，預設值是**1**，這表示支援 NULL 值。  
   
- [  **@destination_dbms**  =] **'***destination_dbms***'**  
+ [ **@destination_dbms** =] **'***destination_dbms***'**  
  這是目的地 DBMS 的名稱。 *destination_dbms*是**sysname**，而且可以是下列值之一：  
   
-|值|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |**MSSQLSERVER**|目的地是一個 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫。|  
 |**ORACLE**|目的地是一個 Oracle 資料庫。|  
@@ -100,10 +98,10 @@ sp_getdefaultdatatypemapping [ @source_dbms = ] 'source_dbms'
   
  您必須指定這個參數。  
   
- [  **@destination_version** =] **'***destination_version***'**  
+ [ **@destination_version**=] **'***destination_version***'**  
  這是目的地 DBMS 的產品版本。 *destination_version*是**varchar （10)**，預設值是 NULL。  
   
- [  **@destination_type** =] **'***destination_type***'**輸出  
+ [ **@destination_type**=] **'***destination_type***'** 輸出  
  這是目的地 DBMS 中列出的資料類型。 *destination_type*是**sysname**，預設值是 NULL。  
   
  [  **@destination_length=** ] *destination_length*輸出  
@@ -112,13 +110,13 @@ sp_getdefaultdatatypemapping [ @source_dbms = ] 'source_dbms'
  [  **@destination_precision=** ] *destination_precision*輸出  
  這是目的地 DBMS 之資料類型的有效位數。 *destination_precision*是**bigint**，預設值是 NULL。  
   
- [  **@destination_scale=** ] *destination_scale***輸出**  
+ [  **@destination_scale=** ] *destination_scale * * * 輸出**  
  這是目的地 DBMS 之資料類型的小數位數。 *destination_scale*是**int**，預設值是 NULL。  
   
- [  **@destination_nullable=** ] *destination_nullable***輸出**  
+ [  **@destination_nullable=** ] *destination_nullable * * * 輸出**  
  這是指目的地 DBMS 中的資料類型是否支援 NULL 值。 *destination_nullable*是**元**，預設值是 NULL。 **1**表示支援 NULL 值。  
   
- [  **@dataloss=** ] *dataloss***輸出**  
+ [  **@dataloss=** ] *dataloss * * * 輸出**  
  這是指對應是否可能遺失資料。 *dataloss*是**元**，預設值是 NULL。 **1**表示資料遺失的可能性。  
   
 ## <a name="return-code-values"></a>傳回碼值  
@@ -132,9 +130,9 @@ sp_getdefaultdatatypemapping [ @source_dbms = ] 'source_dbms'
 ## <a name="permissions"></a>Permissions  
  只有成員**sysadmin**固定的伺服器角色可以執行**sp_getdefaultdatatypemapping**。  
   
-## <a name="see-also"></a>請參閱＜  
- [sp_helpdatatypemap &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/sp-helpdatatypemap-transact-sql.md)   
- [sp_setdefaultdatatypemapping &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/sp-setdefaultdatatypemapping-transact-sql.md)   
+## <a name="see-also"></a>另請參閱  
+ [sp_helpdatatypemap &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpdatatypemap-transact-sql.md)   
+ [sp_setdefaultdatatypemapping &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-setdefaultdatatypemapping-transact-sql.md)   
  [Data Type Mapping for Oracle Publishers](../../relational-databases/replication/non-sql/data-type-mapping-for-oracle-publishers.md)   
  [IBM DB2 Subscribers](../../relational-databases/replication/non-sql/ibm-db2-subscribers.md)   
  [Oracle 訂閱者](../../relational-databases/replication/non-sql/oracle-subscribers.md)  

@@ -1,17 +1,16 @@
 ---
-title: "查閱轉換 | Microsoft Docs"
-ms.custom: 
+title: 查閱轉換 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
 ms.component: data-flow
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 f1_keywords:
 - sql13.dts.designer.lookuptrans.f1
 - sql13.dts.designer.lookuptransformation.general.f1
@@ -26,16 +25,15 @@ helpviewer_keywords:
 - lookups [Integration Services]
 - exact matches [Integration Services]
 ms.assetid: de1cc8de-e7af-4727-b5a5-a1f0a739aa09
-caps.latest.revision: 
+caps.latest.revision: 106
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 5530fc22bd6657e3cf0888d2cca8bc8d92b01895
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 0681beed559734ecaee000a45be3bc19447d9eeb
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="lookup-transformation"></a>查閱轉換
   「查閱」轉換會藉由聯結輸入資料行中的資料與參考資料集中的資料行來執行查閱。 您可以使用查閱在相關資料表中存取以通用資料行中的值為基礎的其他資訊。  
@@ -70,7 +68,7 @@ ms.lasthandoff: 01/25/2018
   
 -   如果參考資料表中有多個相符項目，「查閱」轉換將只傳回查閱查詢所傳回的第一個相符項目。 如果找到多個相符項目，則「查閱」轉換只會在已設定為將所有參考資料集載入至快取時才產生錯誤或警告。 在這種情況下，「查閱」轉換會在轉換填滿快取時偵測到多個相符項目時產生警告。  
   
- 聯結可以是複合聯結，表示您可以將轉換輸入中的多個資料行聯結至參考資料集中的資料行。 轉換支援聯結任何資料類型的資料行，但 DT_R4、DT_R8、DT_TEXT、DT_NTEXT 或 DT_IMAG 除外。 如需詳細資訊，請參閱 [Integration Services Data Types](../../../integration-services/data-flow/integration-services-data-types.md)。  
+ 聯結可以是複合聯結，表示您可以將轉換輸入中的多個資料行聯結至參考資料集中的資料行。 轉換支援聯結任何資料類型的資料行，但 DT_R4、DT_R8、DT_TEXT、DT_NTEXT 或 DT_IMAG 除外。 如需詳細資訊，請參閱 [Integration Services 資料類型](../../../integration-services/data-flow/integration-services-data-types.md)。  
   
  通常參考資料集的值會加入至轉換輸出。 例如，「查閱」轉換可從使用輸出資料行之值的資料表擷取產品名稱，然後將產品名稱加入至轉換輸出。 參考資料表的值可取代資料行的值，或者可加入至新的資料行。  
   
@@ -169,7 +167,7 @@ ms.lasthandoff: 01/25/2018
  **指定如何處理無相符項目的資料列**  
  選取選項以處理沒有至少符合參考資料集中一個項目的資料列。  
   
- 當您選取 **[將資料列重新導向無相符結果輸出]**時，資料列會重新導向無相符結果輸出，且不當做錯誤處理。 無法使用 **[查閱轉換編輯器]** 對話方塊的 **[錯誤輸出]** 頁面上的 **[錯誤]** 選項。  
+ 當您選取 **[將資料列重新導向無相符結果輸出]** 時，資料列會重新導向無相符結果輸出，且不當做錯誤處理。 無法使用 **[查閱轉換編輯器]** 對話方塊的 **[錯誤輸出]** 頁面上的 **[錯誤]** 選項。  
   
  從 **[指定如何處理無相符項目的資料列]** 清單方塊中選取任何其他選項時，會將資料列當做錯誤處理。 可以使用 **[錯誤輸出]** 頁面上的 **[錯誤]** 選項。  
   
@@ -188,7 +186,7 @@ ms.lasthandoff: 01/25/2018
  **新增**  
  使用 [快取連線管理員編輯器] 對話方塊來建立新的連線。  
   
- 當您在 **[查閱轉換編輯器]**對話方塊的 [一般] 頁面上選取 **[完整快取]**、 **[部分快取]**或 **[無快取]**以及 **[OLE DB 連接管理員]** 時，可以使用下列選項。  
+ 當您在 **[查閱轉換編輯器]** 對話方塊的 [一般] 頁面上選取 **[完整快取]**、 **[部分快取]** 或 **[無快取]** 以及 **[OLE DB 連接管理員]** 時，可以使用下列選項。  
   
  **[無快取]**  
  從清單中選取現有的 OLE DB 連線管理員，或按一下 [新增] 來建立新連線。  
@@ -200,7 +198,7 @@ ms.lasthandoff: 01/25/2018
  從清單中選取現有的資料表或檢視，或按一下 [新增] 來建立新的資料表。  
   
 > [!NOTE]  
->  如果在 **[查閱轉換編輯器]** 的 **[進階]**頁面上指定 SQL 陳述式，則該 SQL 陳述式會覆寫並取代此處所選取的資料表名稱。 如需詳細資訊，請參閱 [查閱轉換編輯器 &#40;進階頁面&#41;](../../../integration-services/data-flow/transformations/lookup-transformation-editor-advanced-page.md)＞。  
+>  如果在 **[查閱轉換編輯器]** 的 **[進階]** 頁面上指定 SQL 陳述式，則該 SQL 陳述式會覆寫並取代此處所選取的資料表名稱。 如需詳細資訊，請參閱 [查閱轉換編輯器 &#40;進階頁面&#41;](../../../integration-services/data-flow/transformations/lookup-transformation-editor-advanced-page.md)＞。  
   
  **新增**  
  使用 [建立資料表] 對話方塊建立新的資料表。  

@@ -1,36 +1,23 @@
 ---
-title: "從採礦結構移除資料行 |Microsoft 文件"
-ms.custom: 
-ms.date: 03/13/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
-helpviewer_keywords:
-- mining structures [Analysis Services], columns
-- removing columns
-- deleting columns
-- columns [data mining], mining structure columns
-ms.assetid: 41073ffe-9351-416b-9f0c-62634bc213f9
-caps.latest.revision: 
-author: Minewiskan
+title: 從採礦結構移除資料行 |Microsoft 文件
+ms.date: 05/08/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: data-mining
+ms.topic: conceptual
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: e9ef642c3d82331b3bbf9443a0f65181566dfe8c
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: bd8691d8ec0cc1546e27e8195e7d0bbc20709f59
+ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="remove-columns-from-a-mining-structure"></a>從採礦結構中移除資料行
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-在建立採礦結構之後，您可以使用資料採礦設計師，從採礦結構中移除資料行。 移除採礦結構資料行的原因可能包含下列：  
+  在建立採礦結構之後，您可以使用資料採礦設計師，從採礦結構中移除資料行。 移除採礦結構資料行的原因可能包含下列：  
   
 -   採礦結構包含某個資料行的多個複本並且您想要在模型中避免使用重複資料。  
   

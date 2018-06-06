@@ -1,33 +1,30 @@
 ---
-title: "提供者和 DefaultDatabase 屬性範例 （VC + +） |Microsoft 文件"
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
+title: 提供者和 DefaultDatabase 屬性範例 （VC + +） |Microsoft 文件
+ms.prod: sql
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
-ms.custom: 
+ms.technology: connectivity
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - provider property [ADO], VC++ example
 - DefaultDatabase property [ADO], VC++ example
 ms.assetid: d9868c99-425a-4b10-af67-1929ed513fda
-caps.latest.revision: 
+caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 4ba904b64819f50cfaf404ec3690a9b0db76d75c
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: dfa6d9521b403ae23cffbe8605072ed346bd5229
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="provider-and-defaultdatabase-properties-example-vc"></a>提供者和 DefaultDatabase 屬性範例 （VC + +）
 這個範例會示範[提供者](../../../ado/reference/ado-api/provider-property-ado.md)開啟三個屬性[連接](../../../ado/reference/ado-api/connection-object-ado.md)物件，使用不同的提供者。 它也會使用[DefaultDatabase](../../../ado/reference/ado-api/defaultdatabase-property.md)屬性來設定的預設資料庫的 Microsoft ODBC 提供者。  

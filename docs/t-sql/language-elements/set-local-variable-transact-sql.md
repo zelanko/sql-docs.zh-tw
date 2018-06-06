@@ -1,16 +1,14 @@
 ---
 title: SET @local_variable (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/16/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
 ms.component: t-sql|language-elements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: t-sql
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - TSQL
@@ -20,16 +18,16 @@ helpviewer_keywords:
 - SET statement, @local_variable
 - local variables [SQL Server]
 ms.assetid: d410e06e-061b-4c25-9973-b2dc9b60bd85
-caps.latest.revision: 
+caps.latest.revision: 52
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: Active
-ms.openlocfilehash: 56f38e166249f13bb50d1bf0188a5066da52ea78
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: f4dd56e5ebe54462a0ee8e4efeb7c1d1e47bf023
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="set-localvariable-transact-sql"></a>SET @local_variable (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -176,7 +174,7 @@ SET @local_variable {+= | -= | *= | /= | %= | &= | ^= | |= } expression
  防止利用這個資料指標來更新。 UPDATE 或 DELETE 陳述式中的 WHERE CURRENT OF 子句無法參考這個資料指標。 這個選項會覆寫要更新之資料指標的預設功能。 這個關鍵字有別於先前的 READ_ONLY，READ 和 ONLY 之間是空格，而不是底線。  
   
  UPDATE [OF *column_name*[ **,**... *n* ] ]  
- 在資料指標內定義可更新的資料行。 如果提供了 OF *column_name* [**,**...*n*]，便只允許修改列出的資料行。 如果未提供任何清單，除非資料指標已定義為 READ_ONLY，否則，可以更新所有資料行。  
+ 在資料指標內定義可更新的資料行。 如果提供 OF *column_name* [**,**...*n*]，則只允許修改所列出的資料行。 如果未提供任何清單，除非資料指標已定義為 READ_ONLY，否則，可以更新所有資料行。  
   
 ## <a name="remarks"></a>Remarks  
  在宣告變數之後，會將它初始化成 NULL。 請利用 SET 陳述式，將非 NULL 值指派給宣告的變數。 將值指派給變數的 SET 陳述式會傳回單一值。 當您初始化多個變數時，每個區域變數都要使用個別的 SET 陳述式。  

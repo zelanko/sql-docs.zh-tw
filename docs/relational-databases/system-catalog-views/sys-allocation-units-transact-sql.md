@@ -1,16 +1,14 @@
 ---
-title: "sys.allocation_units (TRANSACT-SQL) |Microsoft 文件"
-ms.custom: 
+title: sys.allocation_units (TRANSACT-SQL) |Microsoft 文件
+ms.custom: ''
 ms.date: 06/10/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
 ms.component: system-catalog-views
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: system-objects
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.allocation_units_TSQL
@@ -22,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - sys.allocation_units catalog view
 ms.assetid: ec9de780-68fd-4551-b70b-2d3ab3709b3e
-caps.latest.revision: 
+caps.latest.revision: 44
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: ae268f41550268aab1afb03b587d2fd5e735e911
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 4fdaaf57b5883d85441b6abcc5e8b468b26e1726
+ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="sysallocationunits-transact-sql"></a>sys.allocation_units (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -42,7 +40,7 @@ ms.lasthandoff: 11/27/2017
 |-----------------|---------------|-----------------|  
 |allocation_unit_id|**bigint**|配置單位的識別碼。 在資料庫中，這是唯一的。|  
 |型別|**tinyint**|配置單位的類型：<br /><br /> 0 = 已卸除<br /><br /> 1 = 同資料列資料 (除 LOB 資料類型之外的所有資料類型)<br /><br /> 2 = 大型物件 (LOB) 資料 (**文字**， **ntext**，**映像**， **xml**，大數值類型以及 CLR 使用者定義型別)<br /><br /> 3 = 資料列溢位資料|  
-|type_desc|**nvarchar （60)**|配置單位類型的描述：<br /><br /> **卸除**<br /><br /> **IN_ROW_DATA**<br /><br /> **如果是 LOB_DATA**<br /><br /> **ROW_OVERFLOW_DATA**|  
+|type_desc|**nvarchar(60)**|配置單位類型的描述：<br /><br /> **卸除**<br /><br /> **IN_ROW_DATA**<br /><br /> **如果是 LOB_DATA**<br /><br /> **ROW_OVERFLOW_DATA**|  
 |container_id|**bigint**|與配置單位相關聯的儲存體容器識別碼。<br /><br /> 如果 type = 1 或 3，則 container_id = sys.partitions.hobt_id。<br /><br /> 如果 type 是 2，則 container_id = sys.partitions.partition_id。<br /><br /> 0 = 標示要延遲卸除的配置單位|  
 |data_space_id|**int**|這個配置單位所在的檔案群組識別碼。|  
 |total_pages|**bigint**|這個配置單位所配置或保留的總頁數。|  
@@ -53,11 +51,11 @@ ms.lasthandoff: 11/27/2017
 >  當您卸除或重建大型索引時，或卸除或截斷大型資料表時，[!INCLUDE[ssDE](../../includes/ssde-md.md)] 會延遲取消配置實際的頁面及其相關聯鎖定，直到認可交易之後。 延遲的卸除作業並不會立即釋出已配置的空間。 因此，在卸除或截斷大型物件之後，sys.allocation_units 傳回的值不一定能反映實際可用的磁碟空間。  
   
 ## <a name="permissions"></a>Permissions  
- 需要 **public** 角色的成員資格。 如需相關資訊，請參閱 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)。  
+ 需要 **public** 角色中的成員資格。 如需相關資訊，請參閱 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)。  
   
-## <a name="see-also"></a>請參閱  
- [sys.partitions &#40;TRANSACT-SQL &#41;](../../relational-databases/system-catalog-views/sys-partitions-transact-sql.md)   
- [物件目錄檢視 &#40;TRANSACT-SQL &#41;](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
- [目錄檢視 &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)  
+## <a name="see-also"></a>另請參閱  
+ [sys.partitions &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-partitions-transact-sql.md)   
+ [物件目錄檢視 &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
+ [目錄檢視 &#40;。TRANSACT-SQL &#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)  
   
   

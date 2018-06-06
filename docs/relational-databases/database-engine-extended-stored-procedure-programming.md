@@ -1,15 +1,14 @@
 ---
-title: "Database Engine 擴充預存程序程式設計 | Microsoft 文件"
-ms.custom: 
+title: Database Engine 擴充預存程序程式設計 | Microsoft 文件
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
 ms.component: relational-databases-misc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - extended stored procedures [SQL Server], programming
@@ -18,16 +17,15 @@ helpviewer_keywords:
 - macros [SQL Server]
 - Extended Stored Procedure API [SQL Server]
 ms.assetid: 158a6765-0542-4e84-b5ab-f173d946ef5e
-caps.latest.revision: 
-author: JennieHubbard
-ms.author: jhubbard
+caps.latest.revision: 37
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 1da67999b5c0ae02606d83dfe47c194b2b4499ff
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.openlocfilehash: 8562691280fe5866344415dcca5391b64ecc21a4
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="database-engine-extended-stored-procedure-programming"></a>資料庫引擎擴充預存程序程式設計
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

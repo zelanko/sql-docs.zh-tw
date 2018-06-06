@@ -1,16 +1,15 @@
 ---
-title: "設定報表伺服器來進行遠端管理 | Microsoft Docs"
+title: 設定報表伺服器來進行遠端管理 | Microsoft Docs
 ms.date: 09/14/2015
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: report-server
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.custom: 
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.custom: ''
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - Reporting Services Configuration tool
 - WMI provider [Reporting Services], remote configuration
@@ -18,16 +17,15 @@ helpviewer_keywords:
 - report servers [Reporting Services], configuring
 - remote server administration [Reporting Services]
 ms.assetid: 8c7f145f-3ac2-4203-8cd6-2a4694395d09
-caps.latest.revision: "11"
+caps.latest.revision: 11
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 77dfb20f08e02c035cc4898fa9a5157dadd03f41
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 4a76d3c8635716d072ac977ddf54989ec10b22f5
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="configure-a-report-server-for-remote-administration"></a>設定報表伺服器來進行遠端管理
   在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]中，您可以在本機或遠端設定報表伺服器執行個體。 若要設定遠端報表伺服器執行個體，您可以使用 Reporting Services 組態工具，或是撰寫使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Windows Management Instrumentation (WMI) 提供者的自訂程式碼。 Reporting Services 組態工具提供了 WMI 提供者的圖形介面，好讓您不需要撰寫程式碼就可以設定報表伺服器。 當您啟動這個工具時，可以指定要連接的遠端伺服器。  
@@ -52,7 +50,7 @@ ms.lasthandoff: 01/09/2018
 ## <a name="tasks"></a>工作  
  啟用遠端報表伺服器組態的工作包括以下項目：  
   
--   在 Windows 防火牆中啟用通訊埠，以允許報表伺服器和 SQL Server Database Engine 執行個體所使用的通訊埠要求。  請參閱＜ [Configure a Firewall for Report Server Access](../../reporting-services/report-server/configure-a-firewall-for-report-server-access.md) ＞和＜ [Configure a Windows Firewall for Database Engine Access](../../database-engine/configure-windows/configure-a-windows-firewall-for-database-engine-access.md)＞。  
+-   在 Windows 防火牆中啟用通訊埠，以允許報表伺服器和 SQL Server Database Engine 執行個體所使用的通訊埠要求。  請參閱＜ [設定供報表伺服器存取的防火牆](../../reporting-services/report-server/configure-a-firewall-for-report-server-access.md) ＞和＜ [設定用於 Database Engine 存取的 Windows 防火牆](../../database-engine/configure-windows/configure-a-windows-firewall-for-database-engine-access.md)＞。  
   
 -   啟用與主控報表伺服器資料庫之 Database Engine 執行個體之間的遠端連接。 如果要設定報表伺服器資料庫連接及管理加密金鑰，必須要有遠端連接；  
   
@@ -110,9 +108,9 @@ ms.lasthandoff: 01/09/2018
   
 6.  按一下 **[COM 安全設定]**。  
   
-7.  在 **[啟動和啟用權限]**中，按一下 **[編輯限制]**。  
+7.  在 **[啟動和啟用權限]** 中，按一下 **[編輯限制]**。  
   
-8.  如果您沒有在 **[啟動權限]**中看到您的名稱，請按一下 **[新增]**。  
+8.  如果您沒有在 **[啟動權限]** 中看到您的名稱，請按一下 **[新增]**。  
   
 9. 輸入您的使用者帳戶名稱，然後按一下 **[確定]**。  
   
@@ -144,7 +142,7 @@ ms.lasthandoff: 01/09/2018
   
 12. 按一下 **[新增]**，然後輸入將用來管理伺服器的使用者帳戶。  
   
-13. 在 **[允許]** 一欄中，選取 **[啟用帳戶]**、 **[遠端啟用]**及 **[讀取安全性]**，然後按一下 **[確定]**。  
+13. 在 **[允許]** 一欄中，選取 **[啟用帳戶]**、 **[遠端啟用]** 及 **[讀取安全性]**，然後按一下 **[確定]**。  
   
 ## <a name="see-also"></a>另請參閱  
  [Reporting Services 組態管理員 &#40;原生模式&#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)  

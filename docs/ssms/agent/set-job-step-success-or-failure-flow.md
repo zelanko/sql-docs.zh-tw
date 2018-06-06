@@ -1,35 +1,39 @@
 ---
-title: "設定作業步驟成功或失敗的流程 | Microsoft Docs"
-ms.custom: 
+title: 設定作業步驟成功或失敗的流程 | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
 ms.component: ssms-agent
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: tools-ssms
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ssms
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Agent jobs, action flow logic
 - successful jobs [SQL Server]
 - failed jobs [SQL Server]
 - jobs [SQL Server Agent], action flow logic
 ms.assetid: 23041ccf-8a07-41d3-85b9-c449a54b7e1e
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: da1f795a7f31a39550e1833fcd4e51021aba4c5a
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 82081372cc3f5567eba788676a32e554d1f9ef18
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="set-job-step-success-or-failure-flow"></a>設定作業步驟成功或失敗的流程
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 建立 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent 作業時，您可以指定作業執行期間發生失敗時，[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 應採取什麼動作。 決定每個作業步驟成功或失敗時， [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 應採取的動作。 接著，依照下列程序使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent 來設定作業步驟動作流程。  
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+
+> [!IMPORTANT]  
+> [Azure SQL Database 受控執行個體](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)目前支援多數 (但非全部) 的 SQL Server Agent 功能。 如需詳細資料，請參閱 [Azure SQL Database 受控執行個體與 SQL Server 之間的 T-SQL 差異](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)。
+
+建立 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent 作業時，您可以指定作業執行期間發生失敗時， [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 應採取什麼動作。 決定每個作業步驟成功或失敗時， [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 應採取的動作。 接著，依照下列程序使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent 來設定作業步驟動作流程。  
   
 -   **開始之前：**  
   
@@ -52,7 +56,7 @@ ms.lasthandoff: 01/17/2018
   
 #### <a name="to-set-job-step-success-or-failure-flow"></a>若要設定作業步驟成功或失敗的流程  
   
-1.  在 **[物件總管]**中，展開 **[SQL Server Agent]**，然後展開 **[作業]**。  
+1.  在 **[物件總管]** 中，展開 **[SQL Server Agent]**，然後展開 **[作業]**。  
   
 2.  以滑鼠右鍵按一下要刪除的作業，然後按一下 [屬性]。  
   
@@ -70,7 +74,7 @@ ms.lasthandoff: 01/17/2018
   
     -   在 **[輸出檔]** 方塊中，輸入要寫入指令碼輸出的輸出檔名稱。 根據預設，每次執行作業步驟時都會覆寫此檔案。 如果您不想要覆寫輸出檔，請選取 **[將輸出附加至現有檔案]**。  
   
-    -   若要將作業步驟記錄至資料庫資料表，請選取 **[記錄至資料表]** 。 根據預設，每次執行作業步驟時都會覆寫此資料表內容。 如果您不想要覆寫資料表內容，請選取 **[將輸出附加至資料表的現有項目]**。 作業步驟執行之後，您可以按一下 **[檢視]**以檢視這個資料表的內容。  
+    -   若要將作業步驟記錄至資料庫資料表，請選取 **[記錄至資料表]** 。 根據預設，每次執行作業步驟時都會覆寫此資料表內容。 如果您不想要覆寫資料表內容，請選取 **[將輸出附加至資料表的現有項目]**。 作業步驟執行之後，您可以按一下 **[檢視]** 以檢視這個資料表的內容。  
   
     -   如果您希望步驟的記錄中包含輸出，請選取 **[包含步驟輸出於記錄中]** 。 只有無錯誤時，才會顯示輸出。 另外，輸出可能被截斷。  
   
@@ -80,7 +84,7 @@ ms.lasthandoff: 01/17/2018
   
 #### <a name="to-set-job-step-success-or-failure-flow"></a>若要設定作業步驟成功或失敗的流程  
   
-1.  在 **[物件總管]**中，連接到 [!INCLUDE[ssDE](../../includes/ssde_md.md)]的執行個體。  
+1.  在 **[物件總管]** 中，連接到 [!INCLUDE[ssDE](../../includes/ssde_md.md)]的執行個體。  
   
 2.  在標準列上，按一下 **[新增查詢]**。  
   

@@ -1,31 +1,29 @@
 ---
-title: "線上執行索引作業 | Microsoft Docs"
-ms.custom: 
+title: 線上執行索引作業 | Microsoft Docs
+ms.custom: ''
 ms.date: 02/17/2017
-ms.prod: sql-non-specified
-ms.reviewer: 
-ms.technology: dbe-indexes
-ms.tgt_pltfrm: 
+ms.prod: sql
+ms.reviewer: ''
+ms.technology: table-view-index
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - index online operations [SQL Server]
 - online index operations
 - ONLINE option
 ms.assetid: 1e43537c-bf67-4db3-9908-3cb45c6fdaa1
-caps.latest.revision: 
-author: barbkess
-ms.author: barbkess
-manager: jhubbard
+caps.latest.revision: 32
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.suite: sql
-ms.prod_service: database-engine, sql-database
-ms.service: 
-ms.component: indexes
-ms.workload: On Demand
-ms.openlocfilehash: 351514dddb4e1491465192e1e535ec104d578a95
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.prod_service: table-view-index, sql-database
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 732c0510f2744df1dd361fa5e32077c571d47c9c
+ms.sourcegitcommit: d2573a8dec2d4102ce8882ee232cdba080d39628
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="perform-index-operations-online"></a>線上執行索引作業
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -86,7 +84,7 @@ ms.lasthandoff: 01/18/2018
   
 5.  以滑鼠右鍵按一下要線上重建的索引，然後選取 [屬性]。  
   
-6.  在 **[選取頁面]**底下，選取 **[選項]**。  
+6.  在 **[選取頁面]** 底下，選取 **[選項]**。  
   
 7.  選取 **[允許線上 DML 處理]**，然後從清單中選取 **[True]** 。  
   
@@ -100,7 +98,7 @@ ms.lasthandoff: 01/18/2018
   
 #### <a name="to-create-rebuild-or-drop-an-index-online"></a>若要線上建立、重建或卸除索引  
   
-1.  在 **[物件總管]**中，連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的執行個體。  
+1.  在 **[物件總管]** 中，連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的執行個體。  
   
 2.  在標準列上，按一下 **[新增查詢]**。  
   

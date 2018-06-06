@@ -1,35 +1,23 @@
 ---
-title: "Optionality 元素 (ASSL) |Microsoft 文件"
-ms.custom: 
-ms.date: 03/06/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+title: Optionality 元素 (ASSL) |Microsoft 文件
+ms.date: 5/8/2018
+ms.prod: sql
+ms.custom: assl
+ms.reviewer: owend
+ms.technology: analysis-services
 ms.topic: reference
-apiname: Optionality Element
-apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
-apitype: Schema
-applies_to: SQL Server 2016 Preview
-helpviewer_keywords: Optionality element
-ms.assetid: 6cd2ef0a-6fbe-4462-ab27-4cdfeb33f8ab
-caps.latest.revision: "13"
-author: Minewiskan
+author: minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: d492b93ecd83aa511c5df62f4bd11d683bb95943
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 779a2e7f83cdd5c49d7a723c31d67224d987670f
+ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="optionality-element-assl"></a>Optionality 元素 (ASSL)
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]表示之成員的選擇性[AttributeRelationship](../../../analysis-services/scripting/objects/attributerelationship-element-assl.md)項目。  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+  表示之成員的選擇性[AttributeRelationship](../../../analysis-services/scripting/objects/attributerelationship-element-assl.md)項目。  
   
 ## <a name="syntax"></a>語法  
   
@@ -44,7 +32,7 @@ ms.lasthandoff: 01/08/2018
   
 ## <a name="element-characteristics"></a>元素特性  
   
-|特性|描述|  
+|特性|說明|  
 |--------------------|-----------------|  
 |資料類型和長度|字串 (列舉)|  
 |預設值|*強制性*|  
@@ -60,15 +48,15 @@ ms.lasthandoff: 01/08/2018
 ## <a name="remarks"></a>備註  
  這個元素的值限制為下表所列的其中一個字串。  
   
-|ReplTest1|描述|  
+|值|Description|  
 |-----------|-----------------|  
 |*強制性*|每一個成員相關聯的屬性必須為至少一個成員屬性中擁有相關聯**AttributeRelationship**項目。|  
 |*選擇性*|相關屬性中的每個成員並沒有至少一個成員屬性中擁有相關聯**AttributeRelationship**項目。|  
   
  列舉型別對應至允許的值**基數**在 「 分析管理物件 (AMO) 物件模型而言， <xref:Microsoft.AnalysisServices.Optionality>。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [屬性和屬性階層](../../../analysis-services/multidimensional-models-olap-logical-dimension-objects/attributes-and-attribute-hierarchies.md)   
- [屬性 &#40;ASSL &#41;](../../../analysis-services/scripting/properties/properties-assl.md)  
+ [屬性 & #40;ASSL & #41;](../../../analysis-services/scripting/properties/properties-assl.md)  
   
   

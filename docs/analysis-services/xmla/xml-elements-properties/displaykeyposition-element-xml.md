@@ -1,31 +1,24 @@
 ---
-title: "DisplayKeyPosition 元素 (XML) |Microsoft 文件"
-ms.custom: 
-ms.date: 03/06/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services, azure-analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+title: DisplayKeyPosition 元素 (XML) |Microsoft 文件
+ms.date: 05/08/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: xmla
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
-ms.assetid: 345a24e6-186c-4570-baf2-7bfe9b7b4cc1
-caps.latest.revision: "6"
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 7c331f8a3bb2b7555e5a755c6e84a228a0ee7a03
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: aa40fe551e7e5a07c7794f8d741166958f1e84c8
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34574820"
 ---
 # <a name="displaykeyposition-element-xml"></a>DisplayKeyPosition 元素 (XML)
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]包含的項目集合中項目的位置的相關資訊。  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
+  包含有關元素在元素集合中的位置資訊。  
   
 ## <a name="syntax"></a>語法  
   

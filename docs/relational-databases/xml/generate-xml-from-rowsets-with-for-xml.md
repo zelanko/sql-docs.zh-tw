@@ -1,34 +1,31 @@
 ---
-title: "使用 FOR XML 從資料列集產生 XML | Microsoft Docs"
-ms.custom: 
+title: 使用 FOR XML 從資料列集產生 XML | Microsoft Docs
+ms.custom: ''
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
 ms.component: xml
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- dbe-xml
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: xml
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - FOR XML clause, generating XML from rowsets
 ms.assetid: d061c0f1-3de9-4ad1-bbca-ce45d064b6c8
-caps.latest.revision: 
+caps.latest.revision: 10
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: d13b19fe7661d9091654517b36b37bf306e3282c
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.openlocfilehash: 6ebe3216692f8a42bdb805c01bbc20f5255f78c3
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="generate-xml-from-rowsets-with-for-xml"></a>使用 FOR XML 從資料列集產生 XML
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
-您可以使用 FOR XML 搭配新的 **TYPE** 指示詞，以從資料列集產生 **xml** 資料類型執行個體。  
+  您可以使用 FOR XML 搭配新的 **TYPE** 指示詞，以從資料列集產生 **xml** 資料類型執行個體。  
   
  其結果可以指派給 **xml** 資料類型資料行、變數或參數。 此外，還可以將 FOR XML 巢狀化，以產生任何階層式結構。 與 FOR XML EXPLICIT 相較，這樣撰寫巢狀 FOR XML 更為方便，但是對於較深的階層，其效能可能沒那麼好。 FOR XML 也導入了一種新的 PATH 模式。 這種新模式可以在資料行值出現的 XML 樹狀結構中指定路徑。  
   

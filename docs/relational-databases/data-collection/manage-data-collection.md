@@ -1,38 +1,33 @@
 ---
-title: "管理資料收集 | Microsoft Docs"
-ms.custom: 
+title: 管理資料收集 | Microsoft Docs
+ms.custom: ''
 ms.date: 07/18/2016
-ms.prod: sql-non-specified
-ms.prod_service: database-engine
-ms.service: 
-ms.component: data-collection
-ms.reviewer: 
+ms.prod: sql
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: supportability
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 keywords:
-- "資料收集"
+- 資料收集
 helpviewer_keywords:
 - data collection [SQL Server]
 - data collector [SQL Server], Transact-SQL
 - data collector [SQL Server], SQL Server Management Studio
 ms.assetid: bc137daa-9f37-4c01-9766-8b7350c75af8
-caps.latest.revision: 
-author: stevestein
-ms.author: sstein
+caps.latest.revision: 26
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: f48b2043f77c301cebdc6750d6445063ff121946
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.openlocfilehash: 777204c7192a9b74f8730f47898a3fb175b5c322
+ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="manage-data-collection"></a>管理資料收集
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-您可以使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 或 [!INCLUDE[tsql](../../includes/tsql-md.md)] 預存程序和函數來管理資料收集的不同層面，例如啟用或停用資料收集、變更收集組的組態，或是檢視管理資料倉儲中的資料。  
+ 您可以使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 或 [!INCLUDE[tsql](../../includes/tsql-md.md)] 預存程序和函數來管理資料收集的不同層面，例如啟用或停用資料收集、變更收集組的組態，或是檢視管理資料倉儲中的資料。  
   
 ## <a name="manage-data-collection-using-ssms"></a>使用 SSMS 管理資料收集  
  您可以在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中使用物件總管來執行與資料收集器相關的下列工作：  

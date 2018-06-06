@@ -1,29 +1,25 @@
 ---
-title: "在物件總管中管理事件工作階段 | Microsoft Docs"
-ms.custom: 
+title: 在物件總管中管理事件工作階段 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
-ms.component: extended-events
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-- xevents
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: xevents
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: 16849e38-d3fb-414d-8dcb-797b5ffce6ee
-caps.latest.revision: 
+caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: ab9dc4ffedbe8fce18260d24e14ad7475f1dacc6
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: a5a41ca578e22b2af628e8740acbb58395fb24ec
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="manage-event-sessions-in-the-object-explorer"></a>在物件總管中管理事件工作階段
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -46,7 +42,7 @@ ms.lasthandoff: 02/12/2018
  如需有關建立「擴充事件」工作階段的詳細資訊，請參閱＜ [Create an Extended Events Session](http://msdn.microsoft.com/library/34b1e95a-a80e-4aca-9201-abde47f2ca74)＞。  
   
 ## <a name="starting-or-stopping-an-extended-events-session"></a>啟動或停止擴充事件工作階段  
- 您可以透過 **[查詢編輯器]** (使用 **ALTER EVENT SESSION** 陳述式) 或使用 **[物件總管]** 的 **[擴充事件]**節點來啟動或停止「擴充事件」工作階段。  
+ 您可以透過 **[查詢編輯器]** (使用 **ALTER EVENT SESSION** 陳述式) 或使用 **[物件總管]** 的 **[擴充事件]** 節點來啟動或停止「擴充事件」工作階段。  
   
  當您停止事件工作階段時，此工作階段不再列為 sys.dm_xe_sessions 動態管理檢視 (DMV) 中的使用中工作階段。 但是，工作階段定義會保持不變，而且您可以重新啟動工作階段。 若要完全移除工作階段定義，您必須刪除工作階段。  
   
@@ -72,16 +68,16 @@ STATE = STOP
 ```  
   
 ### <a name="start-or-stop-an-extended-events-session-in-object-explorer"></a>在物件總管中啟動或停止擴充事件工作階段  
- 若要在 **[物件總管]**中啟動或停止「擴充事件」工作階段，請依序展開 **[管理]**、 **[擴充事件]**和 **[工作階段]** 節點、以滑鼠右鍵按一下工作階段，然後按一下 **[啟動工作階段]** 或 **[停止工作階段]**。  
+ 若要在 **[物件總管]** 中啟動或停止「擴充事件」工作階段，請依序展開 **[管理]**、 **[擴充事件]** 和 **[工作階段]** 節點、以滑鼠右鍵按一下工作階段，然後按一下 **[啟動工作階段]** 或 **[停止工作階段]**。  
   
 ## <a name="export-an-extended-events-session-template"></a>匯出擴充事件工作階段範本  
- 您可以使用 **[物件總管]**來匯出「擴充事件」工作階段，並將它儲存為 .xml 範本檔案。 例如，您可能會想要匯出工作階段，然後使用 **[新增工作階段精靈]** 或 **[新增工作階段]** 精靈，將範本套用到新的事件工作階段。  
+ 您可以使用 **[物件總管]** 來匯出「擴充事件」工作階段，並將它儲存為 .xml 範本檔案。 例如，您可能會想要匯出工作階段，然後使用 **[新增工作階段精靈]** 或 **[新增工作階段]** 精靈，將範本套用到新的事件工作階段。  
   
  當您匯出工作階段時，請務必將範本檔案儲存到使用 NTFS 檔案系統的位置，而且要將存取限制為被授權能夠檢視資訊的使用者。  
   
- 若要在 **[物件總管]**中匯出「擴充事件」工作階段：  
+ 若要在 **[物件總管]** 中匯出「擴充事件」工作階段：  
   
-1.  依序展開 **[管理]**、 **[擴充事件]**和 **[工作階段]** 節點。  
+1.  依序展開 **[管理]**、 **[擴充事件]** 和 **[工作階段]** 節點。  
   
 2.  以滑鼠右鍵按一下您想要匯出的工作階段，然後選取 [匯出工作階段]。  
   
@@ -90,7 +86,7 @@ STATE = STOP
      如果您將檔案儲存至預設 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 範本位置，當您使用 **[新增工作階段精靈]** 和 **[新增工作階段]** 對話方塊時，此範本將顯示在預先定義範本的下拉式清單中。  
   
 ## <a name="import-an-extended-events-session-template"></a>匯入擴充事件工作階段範本  
- 您可以使用 **[物件總管]**來匯入「擴充事件」工作階段的範本。 例如，您可能會想要這樣做，以便根據從另一個 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體匯出的範本建立工作階段。  
+ 您可以使用 **[物件總管]** 來匯入「擴充事件」工作階段的範本。 例如，您可能會想要這樣做，以便根據從另一個 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體匯出的範本建立工作階段。  
   
  若要匯入「擴充事件」工作階段，您必須擁有必要的 **ALTER ANY EVENT SESSION** 權限。  
   
@@ -98,7 +94,7 @@ STATE = STOP
   
  若要匯入「擴充事件」工作階段：  
   
-1.  在 **[物件總管]**中，依序展開 **[管理]**和 **[擴充事件]** 節點。  
+1.  在 **[物件總管]** 中，依序展開 **[管理]** 和 **[擴充事件]** 節點。  
   
 2.  以滑鼠右鍵按一下 [工作階段]，然後選取 [新增工作階段]。  
   
@@ -115,7 +111,7 @@ STATE = STOP
   
  若要編輯「擴充事件」工作階段：  
   
-1.  在 **[物件總管]**中，依序展開 **[管理]**、 **[擴充事件]**和 **[工作階段]** 節點。  
+1.  在 **[物件總管]** 中，依序展開 **[管理]**、 **[擴充事件]** 和 **[工作階段]** 節點。  
   
 2.  以滑鼠右鍵按一下工作階段，然後選取 [屬性]。  
   
@@ -133,7 +129,7 @@ STATE = STOP
   
 -   在 [查詢編輯器] 中使用 **DROP EVENT SESSION**。  
   
--   在 **[物件總管]**中。  
+-   在 **[物件總管]** 中。  
   
  當您刪除事件工作階段時，便會移除所有組態資訊，而且工作階段定義不會再出現在 sys.server_event_sessions 目錄檢視中。  
   
@@ -142,9 +138,9 @@ STATE = STOP
   
  若要刪除「擴充事件」工作階段，您必須擁有 ALTER ANY EVENT SESSION 權限。  
   
- 若要在 **[物件總管]**中刪除「擴充事件」工作階段：  
+ 若要在 **[物件總管]** 中刪除「擴充事件」工作階段：  
   
-1.  依序展開 **[管理]**、 **[擴充事件]**和 **[工作階段]** 節點。  
+1.  依序展開 **[管理]**、 **[擴充事件]** 和 **[工作階段]** 節點。  
   
 2.  以滑鼠右鍵按一下工作階段，然後選取 [刪除]。  
   

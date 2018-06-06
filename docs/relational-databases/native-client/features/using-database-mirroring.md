@@ -1,15 +1,14 @@
 ---
-title: "使用資料庫鏡像 |Microsoft 文件"
-ms.custom: 
+title: 使用資料庫鏡像 |Microsoft 文件
+ms.custom: ''
 ms.date: 03/16/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
 ms.component: native-client|features
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - database mirroring [SQL Server], interoperability
@@ -20,16 +19,16 @@ helpviewer_keywords:
 - SQL Server Native Client ODBC driver, database mirroring
 - SQL Server Native Client OLE DB provider, database mirroring
 ms.assetid: 71b15712-7972-4465-9274-e0ddc271eedc
-caps.latest.revision: 
+caps.latest.revision: 55
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 63e362b186725b5e9adf15721fcfd4154be3148d
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 17367de4b2594834c6758213f54be06023b1381b
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="using-database-mirroring"></a>使用資料庫鏡像
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -39,7 +38,7 @@ ms.lasthandoff: 01/25/2018
 > [!NOTE]  
 >  [!INCLUDE[ssNoteDepFutureAvoid](../../../includes/ssnotedepfutureavoid-md.md)]使用[!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]改為。  
   
- 在 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 中導入的資料庫鏡像是一套增加資料庫可用性與資料冗餘的方案。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client 會提供隱含支援資料庫鏡像，這樣開發人員不需要撰寫任何程式碼或採取其他任何動作，為資料庫設定之後。  
+ 在 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 中導入的資料庫鏡像是一套增加資料庫可用性與資料冗餘的方案。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 會提供隱含支援資料庫鏡像，這樣開發人員不需要撰寫任何程式碼或採取其他任何動作，為資料庫設定之後。  
   
  資料庫鏡像，是根據每個資料庫來實作時，會保留一份[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]待命伺服器上的實際執行資料庫。 此伺服器為熱或暖待命伺服器，端視資料庫鏡像工作階段的組態和狀態而定。 熱待命伺服器支援不會遺失任何已認可交易的快速容錯移轉，而暖待命伺服器支援強制服務 (資料可能會遺失)。  
   
@@ -52,7 +51,7 @@ ms.lasthandoff: 01/25/2018
  指定鏡像資料庫名稱時，可以使用別名。  
   
 > [!NOTE]  
->  初始連接嘗試次數和可以嘗試重新連線至鏡像資料庫的相關資訊，請參閱[用戶端連接至資料庫鏡像工作階段 &#40;SQL Server &#41;](../../../database-engine/database-mirroring/connect-clients-to-a-database-mirroring-session-sql-server.md).  
+>  初始連接嘗試次數和可以嘗試重新連線至鏡像資料庫的相關資訊，請參閱[用戶端連接至資料庫鏡像工作階段&#40;SQL Server&#41;](../../../database-engine/database-mirroring/connect-clients-to-a-database-mirroring-session-sql-server.md)。  
   
 ## <a name="programming-considerations"></a>程式設計考量  
  當主體資料庫伺服器失敗時，用戶端應用程式會在回應 API 呼叫時收到錯誤，這表示與資料庫的連接已經中斷。 發生這個情況時，對於資料庫的任何未認可變更都會遺失，而且目前的交易會回復。 如果發生這個情況，應用程式應該關閉連接 (或釋出資料來源物件) 然後再重新開啟它。 此連接會以透明的方式重新導向鏡像資料庫，現在當做主體伺服器使用。  

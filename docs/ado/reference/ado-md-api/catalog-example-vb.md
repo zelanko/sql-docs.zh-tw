@@ -1,32 +1,29 @@
 ---
-title: "目錄 (VB) 範例 |Microsoft 文件"
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
+title: 目錄 (VB) 範例 |Microsoft 文件
+ms.prod: sql
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
-ms.custom: 
+ms.technology: connectivity
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 dev_langs:
 - VB
 helpviewer_keywords:
 - Catalog object, Visual Basic example
 ms.assetid: 3aae1107-2f81-413c-8eda-ef96c3df1b8a
-caps.latest.revision: 
+caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 3f981ccb40e0357b3df75ab134db136dd5388788
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 58f73e76b0d26128a57fdf157e3a9f3f268ea0f4
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="catalog-example-vb"></a>目錄 (VB) 範例
 這個 Visual Basic 專案中建立新的 cube 使用 MDX。 然後，並說明 Microsoft Word 文件中之 cube 的結構。  

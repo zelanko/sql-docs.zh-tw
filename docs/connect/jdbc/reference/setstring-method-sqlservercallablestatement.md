@@ -1,30 +1,29 @@
 ---
-title: "setString 方法 (SQLServerCallableStatement) |Microsoft 文件"
-ms.custom: 
+title: setString 方法 (SQLServerCallableStatement) |Microsoft 文件
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
-ms.component: jdbc
-ms.reviewer: 
+ms.prod: sql
+ms.prod_service: connectivity
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
-ms.topic: article
-apiname: SQLServerCallableStatement.setString
-apilocation: sqljdbc.jar
+ms.technology: connectivity
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
+apiname:
+- SQLServerCallableStatement.setString
+apilocation:
+- sqljdbc.jar
 apitype: Assembly
 ms.assetid: f38b97b5-d4f0-4f74-a33d-740241a85842
-caps.latest.revision: "13"
+caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
-ms.workload: Inactive
-ms.openlocfilehash: bb2a0b29e765c2160e4fa21e78f6b19a707a9c0b
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+manager: craigg
+ms.openlocfilehash: 1a2fa007aa6edfc764534f745029ae6107edd6d6
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="setstring-method-sqlservercallablestatement"></a>setString 方法 (SQLServerCallableStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -44,7 +43,7 @@ public void setString(java.lang.String sCol,
   
  A**字串**，其中包含參數的名稱。  
   
- *s*  
+ *S*  
   
  A**字串**值。  
   
@@ -56,7 +55,7 @@ public void setString(java.lang.String sCol,
   
  執行字串到二進位的轉換時，才[!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)]知道目標類型是二進位。 在 JDBC 驅動程式不知道基礎類型的情況下，它會通過**字串**常值和傳回伺服器錯誤，如果伺服器無法執行轉換。  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [SQLServerCallableStatement 成員](../../../connect/jdbc/reference/sqlservercallablestatement-members.md)   
  [SQLServerCallableStatement 類別](../../../connect/jdbc/reference/sqlservercallablestatement-class.md)  
   

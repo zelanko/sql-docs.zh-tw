@@ -1,24 +1,21 @@
 ---
-title: "建立及設定可用性群組的 SQL Server on Linux |Microsoft 文件"
-description: "本教學課程會示範如何建立及設定可用性群組的 SQL Server on Linux。"
+title: 建立及設定可用性群組的 SQL Server on Linux |Microsoft 文件
+description: 本教學課程會示範如何建立及設定可用性群組的 SQL Server on Linux。
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.date: 12/11/2017
 ms.topic: article
-ms.prod: sql-non-specified
-ms.prod_service: database-engine
-ms.service: 
-ms.component: 
+ms.prod: sql
+ms.component: ''
 ms.suite: sql
 ms.custom: sql-linux
-ms.technology: database-engine
-ms.workload: On Demand
-ms.openlocfilehash: 4e1190fea92c1e84ce38bd46040a8b5fcdd532d7
-ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
+ms.technology: linux
+ms.openlocfilehash: 549b34aa918f65da20c3398e1d38491841b5c6fc
+ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/13/2018
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="create-and-configure-an-availability-group-for-sql-server-on-linux"></a>建立及設定可用性群組的 SQL Server on Linux
 
@@ -426,7 +423,7 @@ sudo systemctl restart mssql-server
     ALTER AVAILABILITY GROUP [<AGName>] JOIN WITH (CLUSTER_TYPE = EXTERNAL);
     
     GO
-    ```
+   ```
 
 #### <a name="example-two--three-replicas-with-read-only-routing-external-cluster-type"></a>範例二 – 三個複本的唯讀路由 （外部叢集類型）
 

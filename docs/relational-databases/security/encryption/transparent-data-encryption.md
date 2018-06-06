@@ -1,17 +1,16 @@
 ---
-title: "透明資料加密 (TDE) | Microsoft 文件"
-ms.custom: 
+title: 透明資料加密 (TDE) | Microsoft 文件
+ms.custom: ''
 ms.date: 03/09/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
 ms.component: security
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - Transparent Data Encryption
 - database encryption key, about
@@ -21,16 +20,16 @@ helpviewer_keywords:
 - Transparent Data Encryption, about
 - encryption [SQL Server], transparent data encryption
 ms.assetid: c75d0d4b-4008-4e71-9a9d-cee2a566bd3b
-caps.latest.revision: 
+caps.latest.revision: 75
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 0dc91fd8963b438902ee29ffb64d6cac0bb2d2f9
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 270c13eeb22078db8ae2ca1b65fd049d969f174a
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="transparent-data-encryption-tde"></a>透明資料加密 (TDE)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -59,7 +58,7 @@ ms.lasthandoff: 11/21/2017
   
  **適用於 [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] 的資訊**  
   
- 在搭配使用 TDE 與 [!INCLUDE[sqldbesa](../../../includes/sqldbesa-md.md)] V12 時，[!INCLUDE[ssSDS](../../../includes/sssds-md.md)] 會自動為您建立儲存在主要資料庫中的伺服器層級憑證。 若要在 [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] 上移動 TDE 資料庫，您必須解密資料庫、移動資料庫，然後在目的地 [!INCLUDE[ssSDS](../../../includes/sssds-md.md)]上重新啟用 TDE。 如需在 [!INCLUDE[ssSDS](../../../includes/sssds-md.md)]上使用 TDE 的逐步解說，請參閱 [Transparent Data Encryption with Azure SQL Database](../../../relational-databases/security/encryption/transparent-data-encryption-azure-sql.md)＞。  
+ 在搭配使用 TDE 與 [!INCLUDE[sqldbesa](../../../includes/sqldbesa-md.md)] V12 時， [!INCLUDE[ssSDS](../../../includes/sssds-md.md)]會自動為您建立儲存在主要資料庫中的伺服器層級憑證。 若要在 [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] 上移動 TDE 資料庫，您必須解密資料庫、移動資料庫，然後在目的地 [!INCLUDE[ssSDS](../../../includes/sssds-md.md)]上重新啟用 TDE。 如需在 [!INCLUDE[ssSDS](../../../includes/sssds-md.md)]上使用 TDE 的逐步解說，請參閱 [Transparent Data Encryption with Azure SQL Database](../../../relational-databases/security/encryption/transparent-data-encryption-azure-sql.md)＞。  
   
  **適用於 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的資訊**  
   

@@ -1,29 +1,20 @@
 ---
-title: "NonEmpty (MDX) |Microsoft 文件"
-ms.custom: 
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: language-reference
-dev_langs: kbMDX
-helpviewer_keywords: NonEmpty function
-ms.assetid: dfbfa747-3175-405c-aa5b-15c187b06338
-caps.latest.revision: "17"
-author: Minewiskan
+title: NonEmpty (MDX) |Microsoft 文件
+ms.date: 05/30/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: mdx
+ms.topic: reference
 ms.author: owend
-manager: erikre
-ms.workload: On Demand
-ms.openlocfilehash: a17e8cf51ac2c2a8bac98315b85f53421d7c3c4b
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: 4a718a7e75a9b31b7d35cdc33883c97739aee68c
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34580280"
 ---
 # <a name="nonempty-mdx"></a>NonEmpty (MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -48,7 +39,7 @@ NONEMPTY(set_expression1 [,set_expression2])
  在第二個集合中的 Tuple 評估後，這個函數會傳回第一個指定集合中非空的 Tuple。 **NonEmpty**函式會考慮到計算並且保留重複的 tuple。 如果沒有提供第二個集合，則會在 Cube 中屬性階層和量值之成員的目前座標內容中，評估運算式。  
   
 > [!NOTE]  
->  使用此函式而不是已被取代[NonEmptyCrossjoin &#40;MDX &#41;](../mdx/nonemptycrossjoin-mdx.md)函式。  
+>  使用此函式而不是已被取代[NonEmptyCrossjoin &#40;MDX&#41; ](../mdx/nonemptycrossjoin-mdx.md)函式。  
   
 > [!IMPORTANT]  
 >  非空的是 Tuple 所參考之資料格參考的特性，而不是 Tuple 本身的特性。  
@@ -96,11 +87,11 @@ NONEMPTY(set_expression1 [,set_expression2])
   
  `FROM [Adventure Works]`  
   
-## <a name="see-also"></a>請參閱  
- [DefaultMember &#40;MDX &#41;](../mdx/defaultmember-mdx.md)   
- [篩選 &#40;MDX &#41;](../mdx/filter-mdx.md)   
- [IsEmpty &#40;MDX &#41;](../mdx/isempty-mdx.md)   
- [MDX 函數參考 &#40;MDX &#41;](../mdx/mdx-function-reference-mdx.md)   
- [NonEmptyCrossjoin &#40;MDX &#41;](../mdx/nonemptycrossjoin-mdx.md)  
+## <a name="see-also"></a>另請參閱  
+ [DefaultMember &#40;MDX&#41;](../mdx/defaultmember-mdx.md)   
+ [篩選&#40;MDX&#41;](../mdx/filter-mdx.md)   
+ [IsEmpty &#40;MDX&#41;](../mdx/isempty-mdx.md)   
+ [MDX 函數參考&#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)   
+ [NonEmptyCrossjoin &#40;MDX&#41;](../mdx/nonemptycrossjoin-mdx.md)  
   
   

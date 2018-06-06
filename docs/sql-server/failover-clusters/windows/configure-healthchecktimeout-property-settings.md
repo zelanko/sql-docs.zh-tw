@@ -1,30 +1,28 @@
 ---
-title: "設定 HealthCheckTimeout 屬性設定 | Microsoft Docs"
-ms.custom: 
+title: 設定 HealthCheckTimeout 屬性設定 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/09/2017
-ms.prod: sql-non-specified
-ms.prod_service: database-engine
-ms.service: 
-ms.component: failover-clusters
-ms.reviewer: 
+ms.prod: sql
+ms.prod_service: high-availability
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: dbe-high-availability
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: high-availability
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: 3bbeb979-e6fc-4184-ad6e-cca62108de74
-caps.latest.revision: "31"
+caps.latest.revision: 31
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
-ms.workload: Inactive
-ms.openlocfilehash: 0165e046d479cab6f541dbc7cd81787ebd0accf6
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+manager: craigg
+ms.openlocfilehash: 853cab8e896f3114684ebd4efd9563b16a4414a1
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="configure-healthchecktimeout-property-settings"></a>設定 HealthCheckTimeout 屬性設定
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] HealthCheckTimeout 設定會用來指定將 AlwaysOn 容錯移轉叢集執行個體 (FCI) 回報為沒有回應之前，SQL Server 資源 DLL 應該等候 [sp_server_diagnostics](../../../relational-databases/system-stored-procedures/sp-server-diagnostics-transact-sql.md) 預存程序傳回資訊的時間長度 (以毫秒為單位)。 針對逾時設定值所做的變更會立即生效，且不需要重新啟動 SQL Server 資源。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  HealthCheckTimeout 設定會用來指定將 AlwaysOn 容錯移轉叢集執行個體 (FCI) 回報為沒有回應之前，SQL Server 資源 DLL 應該等候 [sp_server_diagnostics](../../../relational-databases/system-stored-procedures/sp-server-diagnostics-transact-sql.md) 預存程序傳回資訊的時間長度 (以毫秒為單位)。 針對逾時設定值所做的變更會立即生效，且不需要重新啟動 SQL Server 資源。  
   
 -   **開始之前：**[限制事項](#Limits)、[安全性](#Security)  
   
@@ -37,14 +35,14 @@ ms.lasthandoff: 12/05/2017
   
 ###  <a name="Security"></a> 安全性  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> 權限  
  需要 ALTER SETTINGS 及 VIEW SERVER STATE 權限。  
   
 ##  <a name="PowerShellProcedure"></a> 使用 PowerShell  
   
 ##### <a name="to-configure-healthchecktimeout-settings"></a>設定 HealthCheckTimeout 設定  
   
-1.  透過 **[以系統管理員身分執行]**來啟動更高權限的 Windows PowerShell。  
+1.  透過 **[以系統管理員身分執行]** 來啟動更高權限的 Windows PowerShell。  
   
 2.  匯入 **FailoverClusters** 模組來啟用叢集指令程式。  
   
@@ -86,7 +84,7 @@ Get-ClusterResource $fci | Set-ClusterParameter HealthCheckTimeout 60000
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
  使用 [ALTER SERVER CONFIGURATION](../../../t-sql/statements/alter-server-configuration-transact-sql.md)[!INCLUDE[tsql](../../../includes/tsql-md.md)] 陳述式可以指定 HealthCheckTimeOut 屬性值。  
   
-###  <a name="TsqlExample"></a> 範例 (Transact-SQL)  
+###  <a name="TsqlExample"></a> 範例 &#40;Transact-SQL&#41;  
  下列範例會將 HealthCheckTimeout 選項設定為 15,000 毫秒 (15 秒)。  
   
 ```  

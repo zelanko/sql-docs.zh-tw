@@ -1,34 +1,31 @@
 ---
-title: "JDBC driver 的國際功能 |Microsoft 文件"
-ms.custom: 
+title: JDBC driver 的國際功能 |Microsoft 文件
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
-ms.component: jdbc
-ms.reviewer: 
+ms.prod: sql
+ms.prod_service: connectivity
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: connectivity
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: bbb74a1d-9278-401f-9530-7b5f45aa79de
-caps.latest.revision: "40"
+caps.latest.revision: 40
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
-ms.workload: Inactive
-ms.openlocfilehash: f323a5728aa9f63ba5283a34694c1e00baa0bb91
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+manager: craigg
+ms.openlocfilehash: 1fd4eb01d7ab8aa2314dfb8f45e0bd08c3b49488
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="international-features-of-the-jdbc-driver"></a>JDBC Driver 的國際功能
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
   國際化功能[!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]如下：  
   
--   支援針對相同語言的完整當地語系化體驗[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]  
+-   支援針對相同語言的完整當地語系化體驗 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]  
   
 -   支援區分地區設定的 Java 語言轉換[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]資料  
   
@@ -68,7 +65,7 @@ ms.lasthandoff: 11/18/2017
 > [!NOTE]  
 >  為非 Windows 平台所撰寫的大部分解析程式軟體，均以網際網路 DSN 標準為基礎，因此，最有可能為 IDN 使用 Punycode 格式，而私人網路上的 Windows DNS 伺服器，則可設定為允許在每部伺服器上使用 UTF-8 字元。  如需詳細資訊，請參閱[Unicode 字元支援](https://technet.microsoft.com/library/cc738403(v=ws.10).aspx)。  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [JDBC Driver 概觀](../../connect/jdbc/overview-of-the-jdbc-driver.md)  
   
   

@@ -1,30 +1,29 @@
 ---
-title: "Master Data Services 的安裝工作 | Microsoft Docs"
-ms.custom: 
+title: Master Data Services 的安裝工作 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/24/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: mds
-ms.service: 
-ms.component: install-windows
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- setup-install
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: install
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: bb7aa3e7-8807-42c8-884f-0e41d7a20837
-caps.latest.revision: 
+caps.latest.revision: 32
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 9a0b5d444d3f1f28d4453a8c266b19beaf080440
-ms.sourcegitcommit: 6ac1956307d8255dc544e1063922493b30907b80
+ms.openlocfilehash: 7a1c9515612719a749dedd5a796a57c5d25b4d82
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="installation-tasks-for-master-data-services"></a>Master Data Services 的安裝工作
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
   本文概述安裝工作以及指示的連結。 如需安裝和設定 Master Data Services 的逐步解說，請參閱 [Master Data Services 安裝和組態](../../master-data-services/master-data-services-installation-and-configuration.md)。 
   
 -   [安裝前工作](#preinstall)：安裝 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]之前，先確認系統需求。  

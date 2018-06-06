@@ -1,29 +1,27 @@
 ---
-title: "ADO 簡介 |Microsoft 文件"
-ms.custom: 
+title: ADO 簡介 |Microsoft 文件
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
+ms.tgt_pltfrm: ''
+ms.prod: sql
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology: "“drivers”"
-ms.topic: article
+ms.technology: connectivity
+ms.topic: conceptual
 helpviewer_keywords:
 - ADO, programming
 ms.assetid: c5b3a134-de22-4e9c-9489-9a1cc7a5dcfa
-caps.latest.revision: 
+caps.latest.revision: 14
 author: MightyPen
-ms.author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: f20d7d3a90d524cbb452fc081a9a6cdcaa1ebe0d
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: b9e278ead8b81bc0afef38e3dba87a25d8764076
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ado-overview-and-benefits"></a>ADO 概觀和優點
 ActiveX Data Objects (ADO) 是高階、 以方便使用 OLE DB 介面。 OLE DB 是各種資料存放區的低層級、 高效能介面。 ADO 和 OLE DB 使用關聯式 （表格式） 與非關聯式 (階層式或資料流) 資料。

@@ -1,30 +1,27 @@
 ---
-title: "指定資料表中的計算資料行 | Microsoft Docs"
-ms.custom: 
+title: 指定資料表中的計算資料行 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
-ms.component: tables
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- dbe-tables
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: table-view-index
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - computed columns, define
 ms.assetid: 731a4576-09c1-47f0-a8f6-edd0b55679f4
-caps.latest.revision: 
+caps.latest.revision: 19
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: Active
-ms.openlocfilehash: 95980febab6a2801ca2f751a0cadd22f14991c59
-ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: ae7d0dd3dc6e7e3d77b2ea452f205fc8f8e1fd85
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="specify-computed-columns-in-a-table"></a>指定資料表中的計算資料行
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -62,7 +59,7 @@ ms.lasthandoff: 02/23/2018
   
 ###  <a name="NewColumn"></a> 若要加入新的計算資料行  
   
-1.  在 **[物件總管]**中，展開要在其中加入新的計算資料行的資料表。 以滑鼠右鍵按一下 [資料行]，然後選取 [新增資料行]。  
+1.  在 **[物件總管]** 中，展開要在其中加入新的計算資料行的資料表。 以滑鼠右鍵按一下 [資料行]，然後選取 [新增資料行]。  
   
 2.  輸入資料行名稱並接受預設資料類型 (**nchar**(10))。 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 會判斷計算資料行的資料類型，方法是將資料類型優先順序規則套用至公式中指定的運算式。 例如，如果公式參考 **money** 類型的資料行以及 **int**類型的資料行，則計算資料行會是 **money** 類型，因為該資料類型的優先順序較高。 如需詳細資訊，請參閱[資料類型優先順序 &#40;Transact-SQL&#41;](../../t-sql/data-types/data-type-precedence-transact-sql.md)。  
   

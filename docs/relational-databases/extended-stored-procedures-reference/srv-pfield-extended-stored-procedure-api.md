@@ -1,16 +1,15 @@
 ---
-title: "srv_pfield (擴充預存程序 API) | Microsoft Docs"
-ms.custom: 
+title: srv_pfield (擴充預存程序 API) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
 ms.component: extended-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - srv_pfield
@@ -22,16 +21,15 @@ dev_langs:
 helpviewer_keywords:
 - srv_pfield
 ms.assetid: a61e4c1f-e65b-48ea-a7d1-3e1544af389d
-caps.latest.revision: 
+caps.latest.revision: 32
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 157bf19237d3b2dcf64a1401823c746fd2849cf0
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
-ms.translationtype: MT
+ms.openlocfilehash: b99afab30584db1a13444f2d259ffafa0459c967
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="srvpfield-extended-stored-procedure-api"></a>srv_pfield (擴充預存程序 API)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -64,7 +62,7 @@ len
  *field*  
  指定連接上要傳回的資料。  
   
-|Value|傳回值|  
+|ReplTest1|傳回值|  
 |-----------|-------------|  
 |SRV_APPLNAME|用戶端建立連接時所提供的應用程式名稱。|  
 |SRV_BCPFLAG|如果用戶端正在準備進行大量複製作業，則為 TRUE 的旗標，否則為 FALSE 的旗標。|  

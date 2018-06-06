@@ -1,34 +1,29 @@
 ---
-title: "使用 SQL Server Profiler 建立 SQL 追蹤收集組 | Microsoft 文件"
-ms.custom: 
+title: 使用 SQL Server Profiler 建立 SQL 追蹤收集組 | Microsoft 文件
+ms.custom: ''
 ms.date: 03/07/2017
-ms.prod: sql-non-specified
-ms.prod_service: database-engine
-ms.service: 
-ms.component: data-collection
-ms.reviewer: 
+ms.prod: sql
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: supportability
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - SQL Trace collector set
 ms.assetid: b6941dc0-50f5-475d-82eb-ce7c68117489
-caps.latest.revision: 
-author: stevestein
-ms.author: sstein
+caps.latest.revision: 19
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: a45938e5b0c204a59d512d4b4f994832293fa120
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.openlocfilehash: 77d12f8026e33eecb3288ef462b4ce6e91d7f2c8
+ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="use-sql-server-profiler-to-create-a-sql-trace-collection-set"></a>使用 SQL Server Profiler 建立 SQL 追蹤收集組
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中，您可以利用 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 的伺服器端追蹤功能來匯出追蹤定義，以便用來建立使用一般 SQL 追蹤收集器類型的收集組。 這個程序可以分成兩個部分：  
+  在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中，您可以利用 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 的伺服器端追蹤功能來匯出追蹤定義，以便用來建立使用一般 SQL 追蹤收集器類型的收集組。 這個程序可以分成兩個部分：  
   
 1.  建立和匯出 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 追蹤。  
   

@@ -1,32 +1,20 @@
 ---
-title: "SCOPE 陳述式 (MDX) |Microsoft 文件"
-ms.custom: 
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: language-reference
-f1_keywords: SCOPE
-dev_langs: kbMDX
-helpviewer_keywords:
-- scope [MDX]
-- SCOPE statement
-ms.assetid: ceab459d-b601-4468-b3fc-4f5bb4a1805f
-caps.latest.revision: "38"
-author: Minewiskan
+title: SCOPE 陳述式 (MDX) |Microsoft 文件
+ms.date: 05/30/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: mdx
+ms.topic: reference
 ms.author: owend
-manager: erikre
-ms.workload: On Demand
-ms.openlocfilehash: 018b08ba8c45393e77101cf56d098c1dd176ce9c
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: 4c390d13d2f916dc287646f85def1513f910b635
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34579960"
 ---
 # <a name="mdx-scripting---scope"></a>MDX 指令碼-範圍
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -126,7 +114,7 @@ Scope
 End Scope ;     
 ```  
   
-## <a name="see-also"></a>請參閱  
- [MDX 指令碼陳述式 &#40;MDX &#41;](../mdx/mdx-scripting-statements-mdx.md)  
+## <a name="see-also"></a>另請參閱  
+ [MDX 指令碼陳述式&#40;MDX&#41;](../mdx/mdx-scripting-statements-mdx.md)  
   
   

@@ -1,17 +1,16 @@
 ---
-title: "建立資料庫使用者 | Microsoft Docs"
-ms.custom: 
+title: 建立資料庫使用者 | Microsoft Docs
+ms.custom: ''
 ms.date: 04/24/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
 ms.component: security
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 f1_keywords:
 - sql13.swb.user.securables.f1
 - SQL13.SWB.DATABASEUSER.GENERAL.F1
@@ -26,16 +25,16 @@ helpviewer_keywords:
 - users [SQL Server], adding
 - mapping database users
 ms.assetid: 782798d3-9552-4514-9f58-e87be4b264e4
-caps.latest.revision: 
+caps.latest.revision: 31
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Active
-ms.openlocfilehash: 8603380bf11b7bcfb47cc0efe59e52feaa5292de
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 042659861435f0deacf885dc5ec4c382f47a328f
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="create-a-database-user"></a>建立資料庫使用者
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -69,7 +68,7 @@ ms.lasthandoff: 11/21/2017
   
  使用者做為安全性主體時，可以將權限授與使用者。 使用者的範圍為資料庫。 若要連接到 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]執行個體上的特定資料庫，則登入必須對應到資料庫使用者。 資料庫內的權限是對資料庫使用者授與或拒絕，而不是登入。  
   
-##  <a name="Permissions"></a> Permissions  
+##  <a name="Permissions"></a> 權限  
  需要資料庫的 **ALTER ANY USER** 權限。  
   
 ##  <a name="SSMSProcedure"></a> 使用 SSMS 建立使用者  
@@ -101,7 +100,7 @@ ms.lasthandoff: 11/21/2017
      輸入新使用者的名稱。 如果您已經從 [使用者類型] 清單中選擇 [Windows 使用者]，也可以按一下省略符號 (...) 開啟 [選取使用者或群組] 對話方塊。  
   
      **登入名稱**  
-     輸入使用者的登入。 或者，按一下省略符號 (...)，開啟 [選取登入] 對話方塊。 如果您從**[使用者類型]** 清單中選取 **[有登入的 SQL 使用者]** 或 **[Windows 使用者]** ， **[登入名稱]** 就是可用的。  
+     輸入使用者的登入。 或者，按一下省略符號 (...)，開啟 [選取登入] 對話方塊。 如果您從 **[使用者類型]** 清單中選取 **[有登入的 SQL 使用者]** 或 **[Windows 使用者]** ， **[登入名稱]** 就是可用的。  
   
      [密碼] 與 [確認密碼]  
      針對在資料庫上進行驗證的使用者輸入密碼。  
@@ -110,22 +109,22 @@ ms.lasthandoff: 11/21/2017
      輸入使用者的預設語言。  
   
      **預設的結構描述**  
-     輸入將擁有此使用者建立之物件的結構描述。 或者，按一下省略符號 (...)，開啟 [選取結構描述] 對話方塊。 如果您從**[使用者類型]** 清單中選取 **[有登入的 SQL 使用者]**, **[沒有登入的 SQL 使用者]**或 **[Windows 使用者]** ， **[預設結構描述]** 就是可用的。  
+     輸入將擁有此使用者建立之物件的結構描述。 或者，按一下省略符號 (...)，開啟 [選取結構描述] 對話方塊。 如果您從 **[使用者類型]** 清單中選取 **[有登入的 SQL 使用者]**, **[沒有登入的 SQL 使用者]** 或 **[Windows 使用者]** ， **[預設結構描述]** 就是可用的。  
   
      **憑證名稱**  
-     輸入要用於資料庫使用者的憑證。 或者，按一下省略符號 (...)，開啟 [選取憑證] 對話方塊。 如果您從**[使用者類型]** 清單中選取 **[對應到憑證的使用者]** ， **[憑證名稱]** 就是可用的。  
+     輸入要用於資料庫使用者的憑證。 或者，按一下省略符號 (...)，開啟 [選取憑證] 對話方塊。 如果您從 **[使用者類型]** 清單中選取 **[對應到憑證的使用者]** ， **[憑證名稱]** 就是可用的。  
   
      **非對稱金鑰名稱**  
-     輸入要用於資料庫使用者的金鑰。 或者，按一下省略符號 (...)，開啟 [選取非對稱金鑰] 對話方塊。 如果您從**[使用者類型]** 清單中選取 **[對應到非對稱金鑰的使用者]** ， **[非對稱金鑰名稱]** 就是可用的。  
+     輸入要用於資料庫使用者的金鑰。 或者，按一下省略符號 (...)，開啟 [選取非對稱金鑰] 對話方塊。 如果您從 **[使用者類型]** 清單中選取 **[對應到非對稱金鑰的使用者]** ， **[非對稱金鑰名稱]** 就是可用的。  
   
 6.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
 ### <a name="additional-options"></a>其他選項  
- **[資料庫使用者 - 新增]** 對話方塊也在其他四個頁面上提供選項： **[擁有的結構描述]**、 **[成員資格]**、 **[安全性實體]**和 **[擴充屬性]**。  
+ **[資料庫使用者 - 新增]** 對話方塊也在其他四個頁面上提供選項： **[擁有的結構描述]**、 **[成員資格]**、 **[安全性實體]** 和 **[擴充屬性]**。  
   
--   **[擁有的結構描述]** 頁面列出新資料庫使用者可擁有的所有可能結構描述。 若要在資料庫使用者中加入或移除結構描述，請在 **[這個使用者擁有的結構描述]**底下選取或清除結構描述旁邊的核取方塊。  
+-   **[擁有的結構描述]** 頁面列出新資料庫使用者可擁有的所有可能結構描述。 若要在資料庫使用者中加入或移除結構描述，請在 **[這個使用者擁有的結構描述]** 底下選取或清除結構描述旁邊的核取方塊。  
   
--   **[成員資格]** 頁面列出新資料庫使用者可擁有的所有可能的資料庫角色成員資格。 若要在資料庫使用者中加入或移除角色，請在 **[資料庫角色成員資格]**底下選取或清除角色旁邊的核取方塊。  
+-   **[成員資格]** 頁面列出新資料庫使用者可擁有的所有可能的資料庫角色成員資格。 若要在資料庫使用者中加入或移除角色，請在 **[資料庫角色成員資格]** 底下選取或清除角色旁邊的核取方塊。  
   
 -   **[安全性實體]** 頁面列出所有可能的安全性實體以及可授與登入的安全性實體權限。  
   
@@ -143,16 +142,16 @@ ms.lasthandoff: 11/21/2017
      **省略符號 (...)**  
      按一下 [值] 後面的省略符號 (...)，開啟 [擴充屬性的值] 對話方塊。 在這個較大的位置輸入或檢視擴充屬性的值。 如需詳細資訊，請參閱＜ [擴充屬性的值對話方塊](http://msdn.microsoft.com/library/ms189353.aspx)＞。  
   
-     **Delete**  
+     **刪除**  
      移除選取的擴充屬性。  
   
 ##  <a name="TsqlProcedure"></a> 使用 T-SQL 建立使用者  
     
-1.  在 **[物件總管]**中，連接到 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]的執行個體。  
+1.  在 **[物件總管]** 中，連接到 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]的執行個體。  
   
 2.  在 [標準]  列上，按一下 [新增查詢] 。  
   
-3.  將下列範例複製並貼入查詢視窗中，然後按一下 **[執行]**。  
+3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]**。  
   
     ```  
     -- Creates the login AbolrousHazem with password '340$Uuxwp7Mcxo7Khy'.  

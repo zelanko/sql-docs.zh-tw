@@ -1,30 +1,27 @@
 ---
-title: "驅動程式架構概觀 |Microsoft 文件"
-ms.custom: 
+title: 驅動程式架構概觀 |Microsoft 文件
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
-ms.component: odbc
-ms.reviewer: 
+ms.prod: sql
+ms.prod_service: connectivity
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: connectivity
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - Visual FoxPro ODBC driver [ODBC], architecture
 - FoxPro ODBC driver [ODBC], architecture
 ms.assetid: ef5a91cd-158e-40bf-b5a8-8ba535c4705e
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
-ms.workload: Inactive
-ms.openlocfilehash: 2778161fa117e164a4c49e57a5511b0682507b37
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+manager: craigg
+ms.openlocfilehash: 0f9c5d4720e126c6d496754201889b862b508e90
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="driver-architecture-overview"></a>驅動程式架構概觀
 Microsoft Visual FoxPro ODBC 驅動程式是 32 位元驅動程式，可讓您開啟和查詢 Microsoft Visual FoxPro 資料庫或透過開啟資料庫連接 (ODBC) 介面 FoxPro 資料表。 您可以存取 FoxPro 資料使用下列類型的應用程式：  

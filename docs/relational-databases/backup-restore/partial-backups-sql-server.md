@@ -1,36 +1,33 @@
 ---
-title: "部分備份 (SQL Server) | Microsoft Docs"
-ms.custom: 
+title: 部分備份 (SQL Server) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
-ms.prod_service: database-engine
-ms.service: 
-ms.component: backup-restore
-ms.reviewer: 
+ms.prod: sql
+ms.prod_service: backup-restore
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- dbe-backup-restore
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: backup-restore
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - full backups [SQL Server]
 - partial backups [SQL Server]
 - READ_WRITE_FILEGROUPS option
 - database backups [SQL Server], about backing up databases
 ms.assetid: fe6b6bb1-38d0-46c4-bab8-31df14e8999c
-caps.latest.revision: 
+caps.latest.revision: 46
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: a8ffcd43862395fb967b7bd444cc0d2455128113
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 33251a84013e47546ab149e4744eee9918f744f1
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="partial-backups-sql-server"></a>部分備份 (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 所有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 復原模式皆支援部分備份，因此本主題與所有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫都有關。 但是，部分備份設計為在簡單復原模式下用以改善備份超大型資料庫 (其中包含一個或多個唯讀檔案群組) 時的彈性。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  所有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 復原模式皆支援部分備份，因此本主題與所有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫都有關。 但是，部分備份設計為在簡單復原模式下用以改善備份超大型資料庫 (其中包含一個或多個唯讀檔案群組) 時的彈性。  
   
  每當您想要排除唯讀檔案群組時，部分備份就十分有用。 *「部分備份」* (Partial backup) 與完整資料庫備份類似，但部分備份不包含所有檔案群組。 然而，若為讀寫資料庫，則部分備份包含主要檔案群組、每個讀寫檔案群組，以及 (選擇性地) 一個或多個唯讀檔案中的資料。 唯讀資料庫的部分備份只包含主要檔案群組。  
   

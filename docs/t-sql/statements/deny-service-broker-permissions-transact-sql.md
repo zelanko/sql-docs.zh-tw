@@ -1,16 +1,14 @@
 ---
-title: "DENY Service Broker 權限 (Transact-SQL) | Microsoft Docs"
-ms.custom: 
+title: DENY Service Broker 權限 (Transact-SQL) | Microsoft Docs
+ms.custom: ''
 ms.date: 06/09/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-database
-ms.service: 
 ms.component: t-sql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: t-sql
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - TSQL
@@ -26,16 +24,15 @@ helpviewer_keywords:
 - contracts [Service Broker], permissions
 - services [Service Broker], permissions
 ms.assetid: 7c6de71b-865c-41db-9413-ad9b3562e579
-caps.latest.revision: 
-author: barbkess
-ms.author: barbkess
+caps.latest.revision: 22
+author: edmacauley
+ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 100c447d3a258ecf8a590173a7c0ef161f0fad3e
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 1db9fcfc9be2c8db8380f5ecd1f3d21b68ec36b8
+ms.sourcegitcommit: d2573a8dec2d4102ce8882ee232cdba080d39628
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="deny-service-broker-permissions-transact-sql"></a>DENY Service Broker 權限 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -65,19 +62,19 @@ DENY permission  [ ,...n ] ON
  指定 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 安全性實體可以拒絕的權限。 如需權限清單，請參閱這個主題稍後的「備註」一節。  
   
  CONTRACT **::***contract_name*  
- 指定正在拒絕權限的合約。 必須具備範圍限定詞 **::**。  
+ 指定正在拒絕權限的合約。 範圍限定詞 **::** 為必要項目。  
   
  MESSAGE TYPE **::***message_type_name*  
- 指定正在拒絕權限的訊息類型。 必須具備範圍限定詞 **::**。  
+ 指定正在拒絕權限的訊息類型。 範圍限定詞 **::** 為必要項目。  
   
  REMOTE SERVICE BINDING **::***remote_binding_name*  
- 指定正在拒絕權限的遠端服務繫結。 必須具備範圍限定詞 **::**。  
+ 指定正在拒絕權限的遠端服務繫結。 範圍限定詞 **::** 為必要項目。  
   
  ROUTE **::***route_name*  
- 指定正在拒絕權限的路由。 必須具備範圍限定詞 **::**。  
+ 指定正在拒絕權限的路由。 範圍限定詞 **::** 為必要項目。  
   
  SERVICE **::***message_type_name*  
- 指定正在拒絕權限的服務。 必須具備範圍限定詞 **::**。  
+ 指定正在拒絕權限的服務。 範圍限定詞 **::** 為必要項目。  
   
  *database_principal*  
  指定要拒絕其權限的主體。 它有下列幾種：  

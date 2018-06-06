@@ -1,16 +1,14 @@
 ---
 title: CREATE EVENT NOTIFICATION (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-database
-ms.service: 
 ms.component: t-sql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: t-sql
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - CREATE_EVENT_NOTIFICATION_TSQL
@@ -26,16 +24,15 @@ helpviewer_keywords:
 - events [SQL Server], notifications
 - event notifications [SQL Server], creating
 ms.assetid: dbbff0e8-9e25-4f12-a1ba-e12221d16ac2
-caps.latest.revision: 
+caps.latest.revision: 64
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: e171027878b85c0df5ce25756f2a223675d21feb
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: 00939442ed98e69daf12b8450fce7a98586ea9b1
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="create-event-notification-transact-sql"></a>CREATE EVENT NOTIFICATION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -97,9 +94,9 @@ TO SERVICE 'broker_service' , { 'broker_instance_specifier' | 'current database'
  當 CREATE EVENT NOTIFICATION 陳述式完成時，透過將所涵蓋的事件類型加入 **sys.events** 目錄檢視中，*event_group* 也可以作為巨集。  
   
  **'** *broker_service* **'**  
- 指定接收事件執行個體資料的目標服務。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會針對事件通知，開啟一或多個與目標服務的交談。 此服務必須遵照相同的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 事件訊息類型和用來傳送訊息的合約。  
+ 指定接收事件執行個體資料的目標服務。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會針對事件通知，開啟一或多項與目標服務的交談。 這項服務必須遵照相同的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 事件訊息類型和用來傳送訊息的合約。  
   
- 交談會維持開啟狀態，直到卸除事件通知為止。 特定錯誤可能使交談提早關閉。 明確地結束部分或所有交談，可以防止目標服務接收其他訊息。  
+ 這項交談會維持開啟狀態，直到卸除事件通知為止。 特定錯誤可能使交談提早關閉。 明確地結束部分或所有交談，可以防止目標服務接收其他訊息。  
   
  { **'***broker_instance_specifier***'** | **'current database'** }  
  對已經解析的 *broker_service* 指定 Service Broker 執行個體。 您可以透過查詢 **sys.databases** 目錄檢視的 **service_broker_guid** 資料行，來取得特定 Service Broker 的值。 使用 **'current database'** 來指定目前資料庫中的 Service Broker 執行個體。 **'current database'** 是不區分大小寫的字串常值。  
@@ -110,7 +107,7 @@ TO SERVICE 'broker_service' , { 'broker_instance_specifier' | 'current database'
 ## <a name="remarks"></a>Remarks  
  [!INCLUDE[ssSB](../../includes/sssb-md.md)] 包括事件通知專用的訊息類型和合約。 因此，您不需要建立 Service Broker 起始服務，因為已有指定了下列合約名稱的 Service Broker 起始服務：`http://schemas.microsoft.com/SQL/Notifications/PostEventNotification`  
   
- 接收事件通知的目標服務必須遵照這個預先存在的合約。  
+ 接收事件通知的目標服務必須遵照這項預先存在的合約。  
   
 > [!IMPORTANT]  
 >  [!INCLUDE[ssSB](../../includes/sssb-md.md)] 對話安全性。 對話安全性必須根據完整安全性模型，以手動方式加以設定。 如需詳細資訊，請參閱[設定事件通知的對話安全性](../../relational-databases/service-broker/configure-dialog-security-for-event-notifications.md)。  
@@ -140,7 +137,7 @@ TO SERVICE 'broker_service' , { 'broker_instance_specifier' | 'current database'
 >  若要複製及執行這些範例，您需要使用電腦和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體中的 GUID 來取代這個 GUID。 如同上面的＜引數＞一節所說明，您可以透過查詢 sys.databases 目錄檢視的 service_broker_guid 資料行，以取得 **'***broker_instance_specifier***'**。  
   
 ### <a name="a-creating-an-event-notification-that-is-server-scoped"></a>A. 建立以伺服器為範圍的事件通知  
- 下列範例會利用 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 來建立設定目標服務所需要的物件。 目標服務會參考事件通知專用的起始服務之訊息類型和合約。 之後，每當 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體發生 `Object_Created` 追蹤事件時，都會在這個傳送通知的目標服務上建立一個事件通知。  
+ 下列範例會利用 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 來建立設定目標服務所需要的物件。 目標服務會參考事件通知專用的起始服務之訊息類型和合約。 之後，每當 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體發生 `Object_Created` 追蹤事件時，都會在這個傳送通知的目標服務上建立一項事件通知。  
   
 ```sql  
 --Create a queue to receive messages.  
@@ -167,7 +164,7 @@ TO SERVICE 'NotifyService',
 ```  
   
 ### <a name="b-creating-an-event-notification-that-is-database-scoped"></a>B. 建立以資料庫為範圍的事件通知  
- 下列範例會在前一個範例的相同目標服務上，建立一個事件通知。 在 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 範例資料庫發生 `ALTER_TABLE` 事件之後，都會引發事件通知。  
+ 下列範例會在前一個範例的相同目標服務上，建立一項事件通知。 在 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 範例資料庫發生 `ALTER_TABLE` 事件之後，都會引發事件通知。  
   
 ```sql  
 CREATE EVENT NOTIFICATION Notify_ALTER_T1  

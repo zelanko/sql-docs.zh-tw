@@ -1,27 +1,24 @@
 ---
-title: "疑難排解連線 |Microsoft 文件"
-ms.custom: 
+title: 疑難排解連線 |Microsoft 文件
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
-ms.component: jdbc
-ms.reviewer: 
+ms.prod: sql
+ms.prod_service: connectivity
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: connectivity
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: bfba0b49-2e1f-411d-a625-d25fad9ea12d
-caps.latest.revision: "23"
+caps.latest.revision: 23
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
-ms.workload: On Demand
-ms.openlocfilehash: 1566b30797b45a0eaa40491658f4fc3381c683f9
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+manager: craigg
+ms.openlocfilehash: 5f7f46aa17ca8fba97c4c17d6efdfee8358448a5
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="troubleshooting-connectivity"></a>連接性疑難排解
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -32,7 +29,7 @@ ms.lasthandoff: 11/18/2017
   
 -   未啟用 TCP/IP [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]，或指定的伺服器或連接埠號碼不正確。 確認[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]會接聽指定的伺服器和連接埠上的 TCP/IP。 可能會報告類似以下的例外狀況：「登入失敗。 TCP/IP 連接至主機已失敗。」 此訊息會指出下列其中一項：  
   
-    -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]已安裝但 TCP/IP 尚未安裝做為網路通訊協定[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]使用[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]網路公用程式[!INCLUDE[ssVersion2000](../../includes/ssversion2000_md.md)]，或[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]適用之 Configuration Manager[!INCLUDE[ssVersion2005](../../includes/ssversion2005_md.md)]和更新版本。  
+    -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 已安裝但 TCP/IP 尚未安裝做為網路通訊協定[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]使用[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]網路公用程式[!INCLUDE[ssVersion2000](../../includes/ssversion2000_md.md)]，或[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]適用之 Configuration Manager[!INCLUDE[ssVersion2005](../../includes/ssversion2005_md.md)]和更新版本。  
   
     -   TCP/IP 已安裝為[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]通訊協定，但它並未接聽在 JDBC 連接 URL 中指定的連接埠。 預設連接埠為 1433，但[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]，可以在產品安裝，以接聽任何通訊埠設定。 請確定[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]通訊埠 1433年上接聽。 或者，如果已變更通訊埠，則請確定 JDBC 連接 URL 中所指定的通訊埠符合已變更的通訊埠。 如需 JDBC 連接 Url 的詳細資訊，請參閱[建立連接 URL](../../connect/jdbc/building-the-connection-url.md)。  
   
@@ -48,7 +45,7 @@ ms.lasthandoff: 11/18/2017
   
 -   當您使用[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]驗證，JDBC 驅動程式會要求[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]會隨[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]驗證，但不是預設值。 請確定您安裝或設定您的執行個體時，會包含此選項[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]。  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [診斷 JDBC 驅動程式的問題](../../connect/jdbc/diagnosing-problems-with-the-jdbc-driver.md)   
  [使用 JDBC Driver 連接到 SQL Server](../../connect/jdbc/connecting-to-sql-server-with-the-jdbc-driver.md)  
   

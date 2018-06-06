@@ -1,31 +1,29 @@
 ---
-title: "目的地小幫手 | Microsoft Docs"
-ms.custom: 
+title: 目的地小幫手 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
 ms.component: data-flow
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 f1_keywords:
 - sql13.dts.designer.destinationassistant.f1
 - sql13.DTS.DESIGNER.DESTINATIONASSIST.F1
 ms.assetid: 10a40921-a2c2-4ac8-be28-311f8500fbf6
-caps.latest.revision: 
+caps.latest.revision: 13
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 62e4fb6f0d7f368ec96f647ee7befa8826a7812c
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 2167b2baba2c1dd866808fc190690b862e9d9e04
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="destination-assistant"></a>Destination Assistant
   目的地小幫手元件有助於建立目的地元件和連線管理員。 該元件位於 SSIS 工具箱的 **[我的最愛]** 區段中。  

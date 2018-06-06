@@ -1,33 +1,31 @@
 ---
-title: "使用控制流程套件組件以在各套件間重複使用控制流程 | Microsoft Docs"
-ms.custom: 
+title: 使用控制流程套件組件以在各套件間重複使用控制流程 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
 ms.component: non-specific
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 f1_keywords:
 - sql13.dts.designer.toolboxcontrolflowtemplate.f1
 - sql13.dts.designer.addcopyexistingtemplate.f1
 - sql13.dts.designer.addcopyexistingpackagepart.f1
 - sql13.dts.designer.packagepart.general.f1
 ms.assetid: 1edc91d9-1fab-4fe5-aed3-6f581fe32c18
-caps.latest.revision: 
+caps.latest.revision: 14
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: ce2aeb6c2900004ea99d6bfeb9d9ff06f8a81114
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: f9272ce373bbd59b76104b4437f55a98ec89d429
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="reuse-control-flow-across-packages-by-using-control-flow-package-parts"></a>使用控制流程封裝組件在封裝之間重複使用控制流程
   將常用的控制流程工作或容器儲存到獨立的組件檔案 (“.dtsxp” 檔案)，並使用控制流程封裝組件在一或多個封裝中多次重複使用。 這個再使用性讓 SSIS 封裝的設計和維護變得更容易。  

@@ -1,31 +1,23 @@
 ---
-title: "後續安裝組態 (Analysis Services) |Microsoft 文件"
-ms.custom: 
-ms.date: 03/03/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining - "setup-install"
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: get-started-article
-ms.assetid: 7f4417b2-0efb-4361-a79e-fa56e43ee054
-caps.latest.revision: 
-author: Minewiskan
+title: 後續安裝組態 (Analysis Services) |Microsoft 文件
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: ''
+ms.topic: conceptual
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 92eb00cbcfbc07ebb8b55445a246c1df04c06feb
-ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
+ms.openlocfilehash: 00c6986fdb3cba910df98165d64afdb154ded68d
+ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="post-install-configuration-analysis-services"></a>後續安裝組態 (Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-安裝 Analysis Services 之後，還必須進一步設定才能讓伺服器可完整運作並可供一般使用。 本節將介紹完成安裝所需的這些額外設定工作。 視連接需求而定，您可能還必須設定驗證 (請參閱 [連接到 Analysis Services](../../analysis-services/instances/connect-to-analysis-services.md))。  
+  安裝 Analysis Services 之後，還必須進一步設定才能讓伺服器可完整運作並可供一般使用。 本節將介紹完成安裝所需的這些額外設定工作。 視連接需求而定，您可能還必須設定驗證 (請參閱 [連接到 Analysis Services](../../analysis-services/instances/connect-to-analysis-services.md))。  
   
  之後，如果您的資料庫已就緒可供部署，就必須執行額外的工作。 也就是說，您必須為資料庫設定角色成員資格讓使用者能存取資料、設計資料庫備份和復原策略，以及判斷是否需要排程處理工作負載來定期重新整理資料。 可以在這些連結中找到資料庫部署和管理的詳細資訊：[多維度模型資料庫](../../analysis-services/multidimensional-models/multidimensional-model-databases-ssas.md)和[表格式模型資料庫](../../analysis-services/tabular-models/tabular-model-databases-ssas-tabular.md)。  
   

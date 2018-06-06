@@ -1,31 +1,31 @@
 ---
-title: "選擇搜尋資料夾對話方塊 (Visual Studio) | Microsoft Docs"
-ms.custom: 
+title: 選擇搜尋資料夾對話方塊 (Visual Studio) | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
 ms.component: ssms-menu
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: tools-ssms
-ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords: vs.lookin
+ms.technology: ssms
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
+f1_keywords:
+- vs.lookin
 ms.assetid: 2eaba888-68b2-4bc1-8f62-e96e710c3db9
-caps.latest.revision: "4"
+caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 7b0bddd8bb76fa236f84cc4229b6da5ff979b2aa
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.openlocfilehash: 20843ef85241c596c756d7bc0ad45776168d7105
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="choose-search-folders-dialog-box-visual-studio"></a>選擇搜尋資料夾對話方塊 (Visual Studio)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 允許您組合、儲存和修訂您個人之搜尋資料夾的命名集，並指定要搜尋的順序。 若要顯示此對話方塊，請選取位於 [檔案中尋找] 或 [檔案中取代]，[尋找和取代] 視窗上之 [查詢] 下拉式清單旁的 [瀏覽 (...)] 按鈕。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+允許您組合、儲存和修訂您個人之搜尋資料夾的命名集，並指定要搜尋的順序。 若要顯示此對話方塊，請選取位於 [檔案中尋找] 或 [檔案中取代]，[尋找和取代] 視窗上之 [查詢] 下拉式清單旁的 [瀏覽 (...)] 按鈕。  
   
 在 [選取的資料夾] 清單中新增資料夾，在 [資料夾集] 欄位中鍵入此資料夾集的名稱，並按一下 [套用] 以便儲存。 之後可以從 [檔案中尋找] 和 [檔案中取代] 的 [查詢] 下拉式清單中，依名稱選擇此自訂搜尋範圍。 若要從 [查詢] 清單中移除自訂資料夾集，請在 [資料夾集] 欄位中選取其名稱，並按一下 [刪除]。  
   

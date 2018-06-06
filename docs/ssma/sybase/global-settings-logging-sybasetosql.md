@@ -1,44 +1,42 @@
 ---
-title: "全域設定 （記錄） (SybaseToSQL) |Microsoft 文件"
-ms.custom: 
+title: 全域設定 （記錄） (SybaseToSQL) |Microsoft 文件
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
 ms.component: ssma-sybase
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ssma
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: 4cb4da20-3b99-4aae-8c80-329ee23e796e
-caps.latest.revision: "4"
+caps.latest.revision: 4
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
-ms.workload: Inactive
-ms.openlocfilehash: 97e9648a60828b42eb9cde0c14e5ab923a08eff9
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+manager: craigg
+ms.openlocfilehash: d877237074380414a630aa4585415ddd8bffcad6
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="global-settings-logging-sybasetosql"></a>全域設定 （記錄） (SybaseToSQL)
 使用**通用設定**對話方塊來指定 SSMA 的記錄設定。 一般而言，您需要在使用產品支援時，才變更這些設定。  
   
 若要存取此對話方塊，請在**工具**功能表上，選取**通用設定**，然後按一下 **記錄**在左窗格底部的按鈕。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
 **訊息層級**  
 底下的下列選項可用**訊息層級**:  
   
-|選項|描述|  
+|選項|Description|  
 |----------|---------------|  
 |**[所有類別目錄]**|用來設定下列選項的所有的記錄層級。|  
-|**收集器**|會收集有關來源結構描述的中繼資料，並將它儲存至專案。|  
+|**Collector**|會收集有關來源結構描述的中繼資料，並將它儲存至專案。|  
 |**轉換程式**|將來源資料庫物件，例如資料表和預存程序的結構轉換成對應[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]結構。|  
 |**資料遷移程式**|將資料從來源資料庫遷移[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]。|  
 |**格式器**|產生指令碼轉換子的子元件[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]結構描述。|  

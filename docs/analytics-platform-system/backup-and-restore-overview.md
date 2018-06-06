@@ -1,28 +1,22 @@
 ---
-title: "備份與還原"
-author: barbkess
-ms.author: barbkess
-manager: jhubbard
-ms.prod: analytics-platform-system
-ms.prod_service: mpp-data-warehouse
-ms.service: 
-ms.component: 
-ms.suite: sql
-ms.custom: 
-ms.technology: mpp-data-warehouse
-description: "說明資料如何備份和還原運作的 SQL Server Parallel Data Warehouse (PDW)。"
-ms.date: 10/20/2016
-ms.topic: article
-ms.assetid: d4669957-270a-4e50-baf3-14324ca63049
-caps.latest.revision: 
-ms.openlocfilehash: 06863b600ed62d795db82aa5aa3ae5c88578833a
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+title: 備份和還原-Parallel Data Warehouse |Microsoft 文件
+description: 說明資料如何備份和還原運作 Parallel Data Warehouse (PDW)。 備份和還原作業可用於災害復原。 備份與還原也可用來將資料庫從一個工具複製到另一部應用裝置。
+author: mzaman1
+manager: craigg
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
+ms.openlocfilehash: 118b9ced12e01ac6655d85969bb61717f2b31e0b
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 04/19/2018
 ---
 # <a name="backup-and-restore"></a>備份與還原
-說明資料如何備份和還原運作的 SQL Server Parallel Data Warehouse (PDW)。 備份和還原作業可用於災害復原。 備份與還原也可用來將資料庫從一個工具複製到另一部應用裝置。  
+說明資料如何備份和還原運作 Parallel Data Warehouse (PDW)。 備份和還原作業可用於災害復原。 備份與還原也可用來將資料庫從一個工具複製到另一部應用裝置。  
     
 ## <a name="BackupRestoreBasics"></a>備份和還原的基本概念  
 PDW*資料庫備份*應用裝置資料庫，使其可以用於將原始的資料庫還原至應用裝置的格式儲存的複本。  
@@ -35,7 +29,7 @@ The [master database](master-database.md) is a SMP SQL Server database. It is ba
 
 -->
   
-PDW 備份與還原應用裝置資料庫使用 SQL Server 備份技術。 若要使用備份壓縮預先設定 SQL Server 備份選項。 您無法設定備份的選項，例如壓縮、 總和檢查碼、 區塊大小和緩衝區計數。  
+PDW 備份與還原應用裝置資料庫使用 SQL Server 備份技術。 若要使用備份壓縮預先設定 SQL Server 備份選項。 您無法設定壓縮、總和檢查碼、區塊大小及緩衝區計數等備份選項。  
   
 資料庫備份會儲存一或多個備份伺服器上，這存在於客戶網路。  PDW 寫入使用者資料庫備份以平行方式直接來自計算節點一個備份伺服器，並直接從伺服器備份還原使用者資料庫備份，以平行方式，用於運算節點。  
   
@@ -46,7 +40,7 @@ PDW 備份與還原應用裝置資料庫使用 SQL Server 備份技術。 若要
   
 完整資料庫備份是整個 PDW 資料庫的備份。 這是預設的備份類型。 使用者資料庫的完整備份包含資料庫使用者與資料庫角色。 備份 master 包含登入。  
   
-差異備份中包含的所有變更上次完整備份。 差異備份通常會比完整備份的時間，並且可以更頻繁地執行。 當多個差異備份根據相同的完整備份時，每個差異會包含的所有變更在先前的差異。  
+差異備份中包含的所有變更上次完整備份。 差異備份所花費的時間通常比完整備份少，因此可以較頻繁地執行。 當多個差異備份根據相同的完整備份時，每個差異會包含的所有變更在先前的差異。  
   
 例如，您可以建立每週完整備份和每日差異備份。 若要還原使用者資料庫，完整備份和最後一個差異 （如果有的話） 必須還原。  
   
@@ -123,11 +117,11 @@ PDW 備份與還原應用裝置資料庫使用 SQL Server 備份技術。 若要
   
 ## <a name="restoring-to-an-appliance-with-a-larger-number-of-compute-nodes"></a>還原至具有較大數目的運算節點應用裝置  
   
-將備份還原到具有較大數目的運算節點的應用裝置會逐漸增加配置的資料庫大小成比例的運算節點數目。  
+將備份還原至具有較多計算節點的應用裝置時，會讓已配置的資料庫大小依計算節點數目比例成長。  
   
 例如，從 2 節點應用裝置 (30 GB，每個節點) 的 60 GB 資料庫還原至 6 節點應用裝置中，SQL Server PDW 就會建立 180 GB 資料庫 （6 節點具有 30 GB 每個節點） 6 節點應用裝置上。 SQL Server PDW 一開始將資料庫還原到比對來源的設定，2 個節點，然後轉散發到所有的 6 節點資料。  
   
-轉散發之後每個計算節點會包含實際的資料比較少，較小的來源應用裝置上每個計算節點的更多可用空間。 若要將更多資料加入至資料庫中使用額外的空間。 如果還原的資料庫大小大於您需要您可以使用[ALTER DATABASE](../t-sql/statements/alter-database-parallel-data-warehouse.md)壓縮資料庫檔案大小。  
+在轉散發之後，與較小型的來源應用裝置相比，每個計算節點將會包含較少的實際資料和較多的可用空間。 請使用額外的空間將更多資料新增至資料庫。 如果還原的資料庫大小大於您需要您可以使用[ALTER DATABASE](../t-sql/statements/alter-database-parallel-data-warehouse.md)壓縮資料庫檔案大小。  
   
 ## <a name="related-tasks"></a>相關工作  
   

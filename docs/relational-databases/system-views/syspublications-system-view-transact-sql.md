@@ -1,16 +1,15 @@
 ---
-title: "syspublications （系統檢視） (TRANSACT-SQL) |Microsoft 文件"
-ms.custom: 
+title: syspublications （系統檢視） (TRANSACT-SQL) |Microsoft 文件
+ms.custom: ''
 ms.date: 03/17/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
 ms.component: system-views
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -22,16 +21,15 @@ dev_langs:
 helpviewer_keywords:
 - syspublications view
 ms.assetid: e5f57c32-efc0-4455-a74f-684dc2ae51f8
-caps.latest.revision: 
+caps.latest.revision: 20
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 6b67197861029cbd9b16e1c829e4570540ca377f
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 65634b15e901b260b4d0498aed9c1b2759170686
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="syspublications-system-view-transact-sql"></a>syspublications (系統檢視) (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,7 +42,7 @@ ms.lasthandoff: 02/03/2018
 |**name**|**sysname**|與發行集相關聯的唯一名稱。|  
 |**pubid**|**int**|提供發行集唯一識別碼的識別欄位。|  
 |**repl_freq**|**tinyint**|複寫頻率：<br /><br /> **0** = 以交易為基礎 （交易式）。<br /><br /> **1** = 已排程的資料表重新整理 （快照集）。|  
-|**status**|**tinyint**|發行集狀態：<br /><br /> **0** = Inactive.<br /><br /> **1** = 使用。|  
+|**status**|**tinyint**|發行集狀態：<br /><br /> **0** = 非使用中。<br /><br /> **1** = 使用。|  
 |**sync_method**|**tinyint**|同步處理方法：<br /><br /> **0** = 原生大量複製程式公用程式 (BCP)。<br /><br /> **1** = 字元 BCP。<br /><br /> **3** = concurrent，表示使用原生 BCP，但在快照集期間，不鎖定資料表。<br /><br /> **4** = Concurrent_c，表示使用的字元 BCP，但資料表未鎖定的快照集期間。|  
 |**snapshot_jobid**|**binary(16)**|識別已排程要產生初始快照集的代理程式作業。|  
 |**independent_agent**|**bit**|指定這個發行集是否有獨立的散發代理程式。<br /><br /> **0** = 發行集使用共用的散發代理程式，以及每一組發行者資料庫/訂閱者資料庫都有單一共用代理程式。<br /><br /> **1** = 沒有獨立的散發代理程式，針對這個發行集。|  
@@ -56,12 +54,12 @@ ms.lasthandoff: 02/03/2018
 |**immediate_sync_ready**|**bit**|指出快照集代理程式是否已產生快照集，且快照集是否已備妥，可供新的訂閱使用。 它只對立即更新發行集有意義。 **1**表示快照集已就緒。|  
 |**allow_sync_tran**|**bit**|指定是否允許發行集使用立即更新訂閱。 **1**表示允許立即更新訂閱。|  
 |**autogen_sync_procs**|**bit**|指定是否在發行者端產生立即更新訂閱的同步處理預存程序。 **1**表示在發行者端產生它。|  
-|**retention**|**int**|在散發資料庫中維護發行集變更的時間量 (以小時為單位)。|  
+|**保留**|**int**|在散發資料庫中維護發行集變更的時間量 (以小時為單位)。|  
 |**allow_queued_tran**|**bit**|指定是否已啟用在訂閱者端將變更放入佇列中，直到可以在發行者端套用這些變更為止。 如果**1**，「 訂閱者 」 端的變更會排入佇列。|  
 |**snapshot_in_defaultfolder**|**bit**|指定是否將快照集檔案儲存在預設資料夾中。 如果**0**，快照集檔案已儲存在所指定的替代位置*alternate_snapshot_folder*。 如果是 1，便可以在預設資料夾中找到快照集檔案。|  
 |**alt_snapshot_folder**|**nvarchar(510)**|指定快照集替代資料夾的位置。|  
-|**pre_snapshot_script**|**nvarchar(510)**|指定指向**.sql**檔案位置。 在訂閱者端套用快照集時，散發代理程式會在執行任何複寫的物件指令碼之前，先執行前快照集 (pre-snapshot) 指令碼。|  
-|**post_snapshot_script**|**nvarchar(510)**|指定指向**.sql**檔案位置。 在初始同步處理期間，散發代理程式會先套用所有其他複寫的物件指令碼和資料，然後才執行後快照集 (post-snapshot) 指令碼。|  
+|**pre_snapshot_script**|**nvarchar(510)**|指定指向 **.sql**檔案位置。 在訂閱者端套用快照集時，散發代理程式會在執行任何複寫的物件指令碼之前，先執行前快照集 (pre-snapshot) 指令碼。|  
+|**post_snapshot_script**|**nvarchar(510)**|指定指向 **.sql**檔案位置。 在初始同步處理期間，散發代理程式會先套用所有其他複寫的物件指令碼和資料，然後才執行後快照集 (post-snapshot) 指令碼。|  
 |**compress_snapshot**|**bit**|指定可寫入快照集*alt_snapshot_folder*位置是壓縮成[!INCLUDE[msCoName](../../includes/msconame-md.md)]CAB 格式。 **1**表示將壓縮快照集。|  
 |**ftp_address**|**sysname**|散發者之 FTP 服務的網路位址。 指定發行集快照集檔案所在的位置，以便散發代理程式能夠加以收取。|  
 |**ftp_port**|**int**|散發者的 FTP 服務通訊埠編號。 指定發行集快照集檔案所在的位置，以便散發代理程式能夠加以收取。|  
@@ -83,10 +81,10 @@ ms.lasthandoff: 02/03/2018
 |**originator_id**|**smallint**|針對衝突偵測的目的，識別點對點複寫拓撲中的每個節點。 如需詳細資訊，請參閱 [Conflict Detection in Peer-to-Peer Replication](../../relational-databases/replication/transactional/peer-to-peer-conflict-detection-in-peer-to-peer-replication.md)。|  
   
 ## <a name="see-also"></a>另請參閱  
- [複寫資料表 &#40;TRANSACT-SQL &#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
+ [複寫資料表&#40;Transact SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [複寫預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)   
- [sp_addpublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpublication-transact-sql.md)   
+ [sp_addpublication &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpublication-transact-sql.md)   
  [sp_changepublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md)   
- [sp_helppublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helppublication-transact-sql.md)  
+ [sp_helppublication &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-helppublication-transact-sql.md)  
   
   

@@ -1,17 +1,15 @@
 ---
-title: "傳輸安全性 - 資料庫鏡像 - AlwaysOn 可用性 | Microsoft Docs"
-ms.custom: 
+title: 傳輸安全性 - 資料庫鏡像 - AlwaysOn 可用性 | Microsoft Docs
+ms.custom: ''
 ms.date: 05/17/2016
-ms.prod: sql-non-specified
-ms.prod_service: database-engine
-ms.service: 
+ms.prod: sql
+ms.prod_service: high-availability
 ms.component: database-mirroring
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- dbe-high-availability
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: high-availability
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - sessions [SQL Server], database mirroring
 - cryptography [SQL Server], database mirroring
@@ -22,16 +20,15 @@ helpviewer_keywords:
 - transport security
 - database mirroring [SQL Server], security
 ms.assetid: 49239d02-964e-47c0-9b7f-2b539151ee1b
-caps.latest.revision: 
+caps.latest.revision: 59
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: ff841106e99cd34bedd1d93e106fb04d452b411f
-ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
+ms.openlocfilehash: 88bbb9d536694df7e33ea0190c91319e4c2bbe37
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="transport-security---database-mirroring---always-on-availability"></a>傳輸安全性 - 資料庫鏡像 - AlwaysOn 可用性
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -58,7 +55,7 @@ ms.lasthandoff: 02/23/2018
   
 -   如果 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體會以服務的形式在不同的網域帳戶底下執行 (在相同或受信任的網域中)，您就必須在其他每個伺服器執行個體的 **master** 中建立每個帳戶的登入，而且該登入必須被授與端點的 CONNECT 權限。  
   
--   如果 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體會以網路服務帳戶的身分執行，您就必須在每個其他伺服器的 **master** 中建立每個主機電腦帳戶的登入 (*DomainName***\\***ComputerName$* )，而且該登入必須被授與端點的 CONNECT 權限。 這是因為在 Network Service 帳戶底下執行的伺服器執行個體會使用主機電腦的網域帳戶進行驗證。  
+-   如果 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體會以網路服務帳戶的身分執行，您就必須在每個其他伺服器的 **master** 中建立每個主機電腦帳戶的登入 (*DomainName***\\*** ComputerName$* )，而且該登入必須被授與端點的 CONNECT 權限。 這是因為在 Network Service 帳戶底下執行的伺服器執行個體會使用主機電腦的網域帳戶進行驗證。  
   
 > [!NOTE]  
 >  如需使用 Windows 驗證設定資料庫鏡像工作階段的範例，請參閱[範例：使用 Windows 驗證設定資料庫鏡像 &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/example-setting-up-database-mirroring-using-windows-authentication-transact-sql.md)。  

@@ -1,35 +1,32 @@
 ---
-title: "使用現有的階層式資料填入資料表 | Microsoft Docs"
-ms.custom: 
+title: 使用現有的階層式資料填入資料表 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
-ms.component: tables
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: table-view-index
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 applies_to:
 - SQL Server 2016
 helpviewer_keywords:
 - HierarchyID
 ms.assetid: fd943d84-dbe6-4a05-912b-c88164998d80
-caps.latest.revision: 
+caps.latest.revision: 23
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 09e5072fb37f7791f3f597ab3d2a6e382e302e47
-ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
+ms.openlocfilehash: 5d69702ab9c87a41a87b1c9ead6dd8c567f197c5
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="lesson-1-2---populating-a-table-with-existing-hierarchical-data"></a>第 1-2 課：使用現有的階層式資料填入資料表
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)] 此工作會建立一個新的資料表，並以 **EmployeeDemo** 資料表中的資料填入該資料表。 此工作的步驟如下：  
+[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+此工作會建立一個新的資料表，並以 **EmployeeDemo** 資料表中的資料填入該資料表。 此工作的步驟如下：  
   
 -   建立包含 **hierarchyid** 資料行的新資料表。 此資料行可以取代現有的 **EmployeeID** 和 **ManagerID** 資料行。 不過，您將會保留這些資料行。 這是因為現有的應用程式可能會參考這些資料行，而且這些資料行也可以在轉換後，協助您了解資料。 資料表定義指定 **OrgNode** 為主索引鍵，其會要求該資料行所包含的值不得重複。 **OrgNode** 資料行上的叢集索引將以 **OrgNode** 順序儲存資料。  
   
@@ -42,7 +39,7 @@ ms.lasthandoff: 01/18/2018
 -   在 [查詢編輯器] 視窗中，執行下列程式碼以建立名稱為 **HumanResources.NewOrg**的新資料表：  
   
     ```  
-    CREATE TABLE NewOrg  
+    CREATE TABLE HumanResources.NewOrg  
     (  
       OrgNode hierarchyid,  
       EmployeeID int,  
@@ -83,9 +80,8 @@ ms.lasthandoff: 01/18/2018
     INSERT #Children (EmployeeID, ManagerID, Num)  
     SELECT EmployeeID, ManagerID,  
       ROW_NUMBER() OVER (PARTITION BY ManagerID ORDER BY ManagerID)   
-    FROM EmployeeDemo  
-    GO  
-  
+    FROM HumanResources.EmployeeDemo  
+    GO 
     ```  
   
 2.  檢閱 **#Children** 資料表。 請注意 **Num** 資料行如何包含每個主管的序號。  
@@ -97,31 +93,24 @@ ms.lasthandoff: 01/18/2018
     ```  
   
     [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
-  
-    `EmployeeID ManagerID Num`  
-  
-    `---------- --------- ---`  
-  
-    `1        NULL       1`  
-  
-    `2         1         1`  
-  
-    `3         1         2`  
-  
-    `4         2         1`  
-  
-    `5         2         2`  
-  
-    `6         2         3`  
-  
-    `7         3         1`  
-  
-    `8         3         2`  
-  
-    `9         4         1`  
-  
-    `10        4         2`  
-  
+
+    ```
+    EmployeeID  ManagerID   Num
+    1   NULL    1
+    2   1   1
+    16  1   2
+    25  1   3
+    234 1   4
+    263 1   5
+    273 1   6
+    3   2   1
+    4   3   1
+    5   3   2
+    6   3   3
+    7   3   4
+    ```
+
+
 3.  填入 **NewOrg** 資料表。 使用 GetRoot 和 ToString 方法，將 **Num** 值串連到 **hierarchyid** 格式，然後以產生的階層式值更新 **OrgNode** 資料行：  
   
     ```  
@@ -131,7 +120,7 @@ ms.lasthandoff: 01/18/2018
     SELECT hierarchyid::GetRoot() AS OrgNode, EmployeeID   
     FROM #Children AS C   
     WHERE ManagerID IS NULL   
-  
+
     UNION ALL   
     -- This section provides values for all nodes except the root  
     SELECT   
@@ -141,23 +130,21 @@ ms.lasthandoff: 01/18/2018
     JOIN paths AS p   
        ON C.ManagerID = P.EmployeeID   
     )  
-    INSERT NewOrg (OrgNode, O.EmployeeID, O.LoginID, O.ManagerID)  
+    INSERT HumanResources.NewOrg (OrgNode, O.EmployeeID, O.LoginID, O.ManagerID)  
     SELECT P.path, O.EmployeeID, O.LoginID, O.ManagerID  
-    FROM EmployeeDemo AS O   
+    FROM HumanResources.EmployeeDemo AS O   
     JOIN Paths AS P   
        ON O.EmployeeID = P.EmployeeID  
-    GO  
-  
+    GO 
     ```  
   
 4.  將 **hierarchyid** 資料行轉換為字元格式時，會比較容易了解該資料行。 執行下列程式碼 (其中包含 **OrgNode** 資料行之兩種表示法)，以檢閱 **NewOrg** 資料表中的資料：  
   
     ```  
     SELECT OrgNode.ToString() AS LogicalNode, *   
-    FROM NewOrg   
+    FROM HumanResources.NewOrg   
     ORDER BY LogicalNode;  
     GO  
-  
     ```  
   
     **LogicalNode** 資料行會將 **hierarchyid** 資料行轉換為更容易讀取之代表階層的文字格式。 在其餘工作中，您將使用 `ToString()` 方法，顯示 **hierarchyid** 資料行的邏輯格式。  

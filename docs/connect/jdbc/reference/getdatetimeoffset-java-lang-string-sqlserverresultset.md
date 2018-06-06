@@ -1,27 +1,24 @@
 ---
-title: "getDateTimeOffset(java.lang.string) (SQLServerResultSet) |Microsoft 文件"
-ms.custom: 
+title: getDateTimeOffset(java.lang.string) (SQLServerResultSet) |Microsoft 文件
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
-ms.component: jdbc
-ms.reviewer: 
+ms.prod: sql
+ms.prod_service: connectivity
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: connectivity
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: e585927c-0dee-43fd-b71e-c9f1701790bd
-caps.latest.revision: "15"
+caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
-ms.workload: Inactive
-ms.openlocfilehash: 53fc39ebd1b6b158822624e1126d5af9b8570a7c
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+manager: craigg
+ms.openlocfilehash: 3c85793304acfbd8ffe8ce115dd95b7ad84085fc
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="getdatetimeoffsetjavalangstring-sqlserverresultset"></a>getDateTimeOffset(java.lang.string) (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -51,7 +48,7 @@ public microsoft.sql.DateTimeOffset getDateTimeOffset(String columnName)
 ## <a name="remarks"></a>備註  
  您可以更新[DateTimeOffset 類別](../../../connect/jdbc/reference/datetimeoffset-class.md)值與[sqlserverresultset.updatedatetimeoffset 來](../../../connect/jdbc/reference/updatedatetimeoffset-sqlserverresultset.md)。  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [SQLServerResultSet 成員](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
  [SQLServerResultSet 類別](../../../connect/jdbc/reference/sqlserverresultset-class.md)  
   

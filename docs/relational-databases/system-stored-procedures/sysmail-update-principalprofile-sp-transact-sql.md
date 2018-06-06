@@ -1,16 +1,14 @@
 ---
-title: "sysmail_update_principalprofile_sp (TRANSACT-SQL) |Microsoft 文件"
-ms.custom: 
+title: sysmail_update_principalprofile_sp (TRANSACT-SQL) |Microsoft 文件
+ms.custom: ''
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: system-objects
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sysmail_update_principalprofile_sp
@@ -20,16 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - sysmail_update_principalprofile_sp
 ms.assetid: 9fe96e9a-4758-4e4a-baee-3e1217c4426c
-caps.latest.revision: 
+caps.latest.revision: 46
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 7539eb785bc0ae03a68b8a734b89012a29590d3d
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: a86fc4775ee1096d72451ace855bb19a1094c3c5
+ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="sysmailupdateprincipalprofilesp-transact-sql"></a>sysmail_update_principalprofile_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -54,7 +51,7 @@ sysmail_update_principalprofile_sp { @principal_id = principal_id | @principal_n
  [ **@principal_name** = ] **'***principal_name***'**  
  資料庫使用者或角色中的名稱**msdb**要更新之關聯的資料庫。 *principal_name*是**sysname**，預設值是 NULL。 任一*principal_id*或*principal_name*可指定。  
   
- [ **@profile_id** = ] *profile_id*  
+ [ **@profile_id** =] *profile_id*  
  要變更之關聯的設定檔識別碼。 *profile_id*是**int**，預設值是 NULL。 任一*profile_id*或*profile_name*必須指定。  
   
  [ **@profile_name** = ] **'***profile_name***'**  
@@ -74,7 +71,7 @@ sysmail_update_principalprofile_sp { @principal_id = principal_id | @principal_n
   
  當關聯的主體名稱是**公用**或關聯的主體識別碼是**0**，這個預存程序變更公用設定檔。 只能有一個預設公用設定檔。  
   
- 當 **@is_default** 是 '**1**' 且主體為多個設定檔相關聯，指定的設定檔會成為主體的預設設定檔。 先前是預設設定檔的設定檔仍會關聯於這個主體，但已不再是預設設定檔。  
+ 當**@is_default**是 '**1**' 且主體為多個設定檔相關聯，指定的設定檔會成為主體的預設設定檔。 先前是預設設定檔的設定檔仍會關聯於這個主體，但已不再是預設設定檔。  
   
  預存程序**sysmail_update_principalprofile_sp**處於**msdb**資料庫，擁有者是**dbo**結構描述。 此程序必須利用三部分名稱來執行，如果目前的資料庫不是**msdb**。  
   
@@ -107,6 +104,6 @@ EXECUTE msdb.dbo.sysmail_update_principalprofile_sp
 ## <a name="see-also"></a>另請參閱  
  [Database Mail](../../relational-databases/database-mail/database-mail.md)   
  [Database Mail 組態物件](../../relational-databases/database-mail/database-mail-configuration-objects.md)   
- [Database Mail 預存程序 &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/database-mail-stored-procedures-transact-sql.md)  
+ [Database Mail 預存程序&#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/database-mail-stored-procedures-transact-sql.md)  
   
   

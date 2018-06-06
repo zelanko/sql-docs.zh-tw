@@ -1,28 +1,25 @@
 ---
-title: "擷取數值資料的 SQL_NUMERIC_STRUCT |Microsoft 文件"
-description: "C/c + + 使用 ODBC 使用 SQL_NUMERIC_STRUCT，相關 SQL_C_NUMERIC 擷取 SQL Server 數值資料類型。"
-documentationCenter: 
+title: 擷取數值資料的 SQL_NUMERIC_STRUCT |Microsoft 文件
+description: C/c + + 使用 ODBC 使用 SQL_NUMERIC_STRUCT，相關 SQL_C_NUMERIC 擷取 SQL Server 數值資料類型。
+documentationCenter: ''
 authors: MightyPen
-manager: jhubbard
-editor: 
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
-ms.component: odbc
+manager: craigg
+editor: ''
+ms.prod: sql
+ms.prod_service: connectivity
 ms.suite: sql
 ms.technology: dbe-data-tier-apps
 ms.devlang: C++
-ms.topic: article
-ms.custom: 
+ms.topic: conceptual
+ms.custom: ''
 ms.tgt_pltfrm: NA
-ms.workload: Inactive
 ms.date: 07/13/2017
 ms.author: genemi
-ms.openlocfilehash: 1a49585e1bf9d0f871a80f8bf386102b5cac8f0a
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 57bd5ffbe1adb9c0ecbefda8d99434767ed6c3e0
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="retrieve-numeric-data-with-sqlnumericstruct"></a>擷取數值資料的 SQL\_數值\_結構
 

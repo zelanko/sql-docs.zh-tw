@@ -1,33 +1,30 @@
 ---
-title: CommandTypeEnum | Microsoft Docs
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
+title: CommandTypeEnum |Microsoft 文件
+ms.prod: sql
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
-ms.custom: 
+ms.technology: connectivity
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 apitype: COM
 f1_keywords:
 - CommandTypeEnum
 helpviewer_keywords:
 - CommandTypeEnum enumeration [ADO]
 ms.assetid: 4b1feb9c-a855-40fe-a906-efe688687e9f
-caps.latest.revision: 
+caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 11150cb69914cf5438d46cc15238b38465ddfa30
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 5d15cf7ce3c4af4d6bb4072dd3070298a846e825
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="commandtypeenum"></a>CommandTypeEnum
 指定應如何解譯為命令引數。  
@@ -45,7 +42,7 @@ ms.lasthandoff: 02/09/2018
 |**adCmdTableDirect**|512|評估**CommandText**做為所有傳回的資料行的資料表名稱。 搭配**Recordset.Open**或**Requery**只。 若要使用[搜尋](../../../ado/reference/ado-api/seek-method.md)方法，**資料錄集**必須以開啟**adCmdTableDirect**。<br /><br /> 此值不能與結合[的執行方式](../../../ado/reference/ado-api/executeoptionenum.md)值**adAsyncExecute**。|  
   
 ## <a name="adowfc-equivalent"></a>ADO/WFC 對等項目  
- Package: **com.ms.wfc.data**  
+ 封裝： **com.ms.wfc.data**  
   
 |常數|  
 |--------------|  

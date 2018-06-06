@@ -1,16 +1,15 @@
 ---
-title: "sp_ivindexhasnullcols (TRANSACT-SQL) |Microsoft 文件"
-ms.custom: 
+title: sp_ivindexhasnullcols (TRANSACT-SQL) |Microsoft 文件
+ms.custom: ''
 ms.date: 03/04/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - sp_ivindexhasnullcols
 ms.assetid: ed2cde63-37e1-43cf-b6ba-3b6114a0f797
-caps.latest.revision: 
+caps.latest.revision: 29
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 3dbdbe2a627eb49dbd2ab71bef5bc102f1b157d7
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 4431ae915c43d6ceb96200c3ebbf6aa976dd4ff3
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="spivindexhasnullcols-transact-sql"></a>sp_ivindexhasnullcols (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,10 +45,10 @@ sp_ivindexhasnullcols [ @viewname = ] 'view_name'
 ```  
   
 ## <a name="arguments"></a>引數  
- [  **@viewname** =] **'***view_name***'**  
+ [ **@viewname**=] **'***view_name***'**  
  這是要驗證的檢視名稱。 *view_name*是**sysname**，沒有預設值。  
   
- [  **@fhasnullcols** =] *field_has_null_columns*輸出  
+ [ **@fhasnullcols**=] *field_has_null_columns*輸出  
  這是一個旗標，用來指示檢視索引是否有允許 NULL 的資料行。 *view_name*是**sysname**，沒有預設值。 傳回值的**1**檢視索引是否允許 NULL 的資料行。 傳回值的**0**如果檢視不包含允許 null 值的資料行。  
   
 > [!NOTE]  
@@ -67,7 +65,7 @@ sp_ivindexhasnullcols [ @viewname = ] 'view_name'
 ## <a name="permissions"></a>Permissions  
  只有成員**sysadmin**固定的伺服器角色或**db_owner**固定的資料庫角色可以執行**sp_ivindexhasnullcols**。  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [系統預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

@@ -1,27 +1,25 @@
 ---
-title: "進階物件選取項目 (OracleToSQL) |Microsoft 文件"
-ms.prod: sql-non-specified
+title: 進階物件選取項目 (OracleToSQL) |Microsoft 文件
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
 ms.component: ssma-oracle
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ssma
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: c978fba4-c953-4ed0-a21d-1b38e7225552
-caps.latest.revision: "4"
+caps.latest.revision: 4
 author: Shamikg
 ms.author: Shamikg
 manager: v-pelars
-ms.workload: Inactive
-ms.openlocfilehash: 967e803d7827b987cd6b457b9e6737138fec144d
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 03f32f9754c7263a478c43d88590ae8421fee4a2
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="advanced-object-selection--oracletosql"></a>進階的物件選取項目 (OracleToSQL)
 **進階物件部分**對話方塊可讓您篩選資料庫物件，使用字串和子字串中的物件名稱，然後選取或取消選取這些物件。 SSMA 會執行轉換並移轉作業選取的物件。  
@@ -32,7 +30,7 @@ ms.lasthandoff: 12/21/2017
   
 使用此對話方塊之前，您可以強制 SSMA 載入轉換結構描述，或儲存專案的所有中繼資料。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
 **請檢查所有的項目**  
 將所有項目旁的核取記號。 在 [中繼資料總管] 會立即選取這些項目。  
   

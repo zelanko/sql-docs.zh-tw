@@ -1,16 +1,14 @@
 ---
-title: "系統需求 （Visual FoxPro ODBC 驅動程式） |Microsoft 文件"
-ms.custom: 
+title: 系統需求 （Visual FoxPro ODBC 驅動程式） |Microsoft 文件
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
-ms.component: odbc
-ms.reviewer: 
+ms.prod: sql
+ms.prod_service: connectivity
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: connectivity
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - Visual FoxPro ODBC driver [ODBC], accessing Visual FoxPro data
 - Visual FoxPro data [ODBC], accessing
@@ -20,16 +18,15 @@ helpviewer_keywords:
 - Visual FoxPro ODBC driver [ODBC], installing
 - FoxPro ODBC driver [ODBC], installing
 ms.assetid: fb4d5157-9a3e-43bf-97b5-7a614558652c
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
-ms.workload: On Demand
-ms.openlocfilehash: ed926636cbfb7c31c9a6312abf296a7d1e4f0993
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+manager: craigg
+ms.openlocfilehash: c5bfa53ccd87aa1e690c62843a0f47b9a6da4585
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="system-requirements-visual-foxpro-odbc-driver"></a>系統需求 （Visual FoxPro ODBC 驅動程式）
 安裝的系統需求提供的最小作業系統和已成功安裝驅動程式所需的磁碟空間。 安裝驅動程式之後，您可以選取您想要存取 Visual FoxPro 資料使用的特定應用程式軟體。  

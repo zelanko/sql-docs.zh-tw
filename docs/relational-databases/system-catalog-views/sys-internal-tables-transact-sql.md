@@ -1,16 +1,14 @@
 ---
-title: "sys.internal_tables (TRANSACT-SQL) |Microsoft 文件"
-ms.custom: 
+title: sys.internal_tables (TRANSACT-SQL) |Microsoft 文件
+ms.custom: ''
 ms.date: 06/10/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
 ms.component: system-catalog-views
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: system-objects
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.internal_tables
@@ -23,16 +21,15 @@ helpviewer_keywords:
 - internal tables
 - sys.internal_tables catalog view
 ms.assetid: a5821c70-f150-4676-8476-3a31f7403dca
-caps.latest.revision: 
+caps.latest.revision: 52
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: cc5ab8560914be149128c55f563bc9e5b422d4d5
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: fe0991279a517f10d3a00f56bc056aa6f0588ef7
+ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="sysinternaltables-transact-sql"></a>sys.internal_tables (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,9 +41,9 @@ ms.lasthandoff: 11/21/2017
   
 |資料行名稱|資料類型|Description|  
 |-----------------|---------------|-----------------|  
-|**\<從 sys.objects 繼承的資料行 >**||如需這個檢視所繼承的資料行的清單，請參閱[sys.objects &#40;TRANSACT-SQL &#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md).|  
+|**\<從 sys.objects 繼承的資料行 >**||如需這個檢視所繼承的資料行的清單，請參閱[sys.objects &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)。|  
 |**internal_type**|**tinyint**|內部資料表的類型：<br /><br /> 201 = **queue_messages**<br /><br /> 202 = **xml_index_nodes**<br /><br /> 203 = **fulltext_catalog_freelist**<br /><br /> 205 = **query_notification**<br /><br /> 206 = **service_broker_map**<br /><br /> 207 = **extended_indexes** （例如，空間索引）<br /><br /> 208 = **filestream_tombstone**<br /><br /> 209 = **change_tracking**<br /><br /> 210 = **tracked_committed_transactions**|  
-|**internal_type_desc**|**nvarchar （60)**|內部資料表類型的描述：<br /><br /> QUEUE_MESSAGES<br /><br /> XML_INDEX_NODES<br /><br /> FULLTEXT_CATALOG_FREELIST<br /><br /> FULLTEXT_CATALOG_MAP<br /><br /> QUERY_NOTIFICATION<br /><br /> SERVICE_BROKER_MAP<br /><br /> EXTENDED_INDEXES<br /><br /> FILESTREAM_TOMBSTONE<br /><br /> CHANGE_TRACKING<br /><br /> TRACKED_COMMITTED_TRANSACTIONS|  
+|**internal_type_desc**|**nvarchar(60)**|內部資料表類型的描述：<br /><br /> QUEUE_MESSAGES<br /><br /> XML_INDEX_NODES<br /><br /> FULLTEXT_CATALOG_FREELIST<br /><br /> FULLTEXT_CATALOG_MAP<br /><br /> QUERY_NOTIFICATION<br /><br /> SERVICE_BROKER_MAP<br /><br /> EXTENDED_INDEXES<br /><br /> FILESTREAM_TOMBSTONE<br /><br /> CHANGE_TRACKING<br /><br /> TRACKED_COMMITTED_TRANSACTIONS|  
 |**sys.internal_tables**|**int**|父系的識別碼，不論是否以結構描述為範圍，都是如此。 否則，在沒有父系的狀況下，便是 0。<br /><br /> **queue_messages** = **object_id**的佇列<br /><br /> **xml_index_nodes** = **object_id** xml 索引<br /><br /> **fulltext_catalog_freelist** = **fulltext_catalog_id**的全文檢索目錄<br /><br /> **fulltext_index_map** = **object_id**的全文檢索索引<br /><br /> **query_notification**，或**service_broker_map** = 0<br /><br /> **extended_indexes** = **object_id**的擴充索引，例如，空間索引<br /><br /> **object_id**資料表追蹤已啟用的哪一個資料表的 = **change_tracking**|  
 |**parent_minor_id**|**int**|父系的次要識別碼。<br /><br /> **xml_index_nodes** = **index_id** XML 索引<br /><br /> **extended_indexes** = **index_id**的擴充索引，例如，空間索引<br /><br /> 0 = **queue_messages**， **fulltext_catalog_freelist**， **fulltext_index_map**， **query_notification**， **service_broker_map**，或**change_tracking**|  
 |**lob_data_space_id**|**int**|非零值是存放這份資料表的大型物件 (LOB) 之資料空間 (檔案群組或資料分割結構描述) 的識別碼。|  
@@ -180,8 +177,8 @@ WHERE internal_type_desc = 'SERVICE_BROKER_MAP';
 GO  
 ```  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [目錄檢視 &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
- [物件目錄檢視 &#40;TRANSACT-SQL &#41;](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)  
+ [物件目錄檢視&#40;Transact SQL&#41;](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)  
   
   

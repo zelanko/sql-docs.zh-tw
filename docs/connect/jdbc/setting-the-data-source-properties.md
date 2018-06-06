@@ -1,27 +1,24 @@
 ---
-title: "設定資料來源屬性 |Microsoft 文件"
-ms.custom: 
+title: 設定資料來源屬性 |Microsoft 文件
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
-ms.component: jdbc
-ms.reviewer: 
+ms.prod: sql
+ms.prod_service: connectivity
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: connectivity
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: f3363d05-07fc-4bf8-ae5e-2a7a968808ad
-caps.latest.revision: "20"
+caps.latest.revision: 20
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
-ms.workload: Inactive
-ms.openlocfilehash: 77550572f392ddce8c442106bda7456fda08dd53
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+manager: craigg
+ms.openlocfilehash: 13a305b676d43a13ae731bcc98dd3f517a5bf733
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="setting-the-data-source-properties"></a>設定資料來源屬性
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -32,7 +29,7 @@ ms.lasthandoff: 11/18/2017
   
  如需有關[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]資料來源，請參閱[SQLServerDataSource](../../connect/jdbc/reference/sqlserverdatasource-class.md)類別。 如需如何使用 SQLServerDataSource 類別建立連接的範例[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]資料庫，請參閱[資料來源範例](../../connect/jdbc/data-source-sample.md)。  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [使用 JDBC Driver 連接到 SQL Server](../../connect/jdbc/connecting-to-sql-server-with-the-jdbc-driver.md)  
   
   

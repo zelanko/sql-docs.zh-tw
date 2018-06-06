@@ -1,24 +1,21 @@
 ---
-title: "將 SQL Server 資料庫還原在 Docker 中 |Microsoft 文件"
-description: "此教學課程顯示如何還原新的 Linux Docker 容器中的 SQL Server 資料庫備份。"
+title: 將 SQL Server 資料庫還原在 Docker 中 |Microsoft 文件
+description: 此教學課程顯示如何還原新的 Linux Docker 容器中的 SQL Server 資料庫備份。
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.date: 10/02/2017
 ms.topic: article
-ms.prod: sql-non-specified
-ms.prod_service: database-engine
-ms.service: 
-ms.component: 
+ms.prod: sql
+ms.component: ''
 ms.suite: sql
 ms.custom: sql-linux
-ms.technology: database-engine
-ms.workload: Inactive
-ms.openlocfilehash: ea1aa01f3917c0d6ee4423861a3bf4fb985f53fa
-ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
+ms.technology: linux
+ms.openlocfilehash: dbab0dd07db4859c83a827285e810ee818c3aeb8
+ms.sourcegitcommit: b5ab9f3a55800b0ccd7e16997f4cd6184b4995f9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/13/2018
+ms.lasthandoff: 05/23/2018
 ---
 # <a name="restore-a-sql-server-database-in-a-linux-docker-container"></a>Linux Docker 容器中的 SQL Server 資料庫還原
 
@@ -35,12 +32,12 @@ ms.lasthandoff: 02/13/2018
 
 ## <a name="prerequisites"></a>필수 구성 요소
 
-* Docker 引擎 1.8 + 任何支援 Mac/Windows Linux 發佈或 Docker。 如需詳細資訊，請參閱[安裝 Docker](https://docs.docker.com/engine/installation/)。
-* 最小值為 2 GB 的磁碟空間
-* 最小值為 2 GB 的 RAM
-* [SQL Server on Linux 的系統需求](sql-server-linux-setup.md#system)。
+* 在任何支援的 Linux 發行版本或適用於 Mac/Windows 上的 Docker 安裝 Docker 引擎 1.8 以上版本。 如需詳細資訊，請參閱[安裝 Docker](https://docs.docker.com/engine/installation/)。
+* 至少 2 GB 的磁碟空間
+* 至少 2 GB 的記憶體
+* [Linux 上的 SQL Server 系統需求](sql-server-linux-setup.md#system)。
 
-## <a name="pull-and-run-the-container-image"></a>提取和執行容器映像
+## <a name="pull-and-run-the-container-image"></a>提取及執行容器映像
 
 1. 開啟 bash 終端機 Linux/Mac 上的或在 Windows 上的提高權限的 PowerShell 工作階段。
 
@@ -76,9 +73,9 @@ ms.lasthandoff: 02/13/2018
     此命令會建立 SQL Server 2017 容器 Developer edition （預設值）。 SQL Server 連接埠**1433年**公開主機做為連接埠上**1401年**。 選擇性`-v sql1data:/var/opt/mssql`參數會建立名為的資料磁碟區容器**sql1ddata**。 這用來保存資料的 SQL Server 所建立。
 
    > [!NOTE]
-   > 執行容器中的實際執行 SQL Server 版本的程序有些許不同。 如需詳細資訊，請參閱[容器映像執行生產](sql-server-linux-configure-docker.md#production)。 如果您使用相同的容器名稱和連接埠，本逐步解說的其餘部分仍可使用實際執行的容器。
+   > 執行容器中的實際執行 SQL Server 版本的程序有些許不同。 如需詳細資訊，請參閱[執行生產容器映像](sql-server-linux-configure-docker.md#production)。 如果您使用相同的容器名稱和連接埠，本逐步解說的其餘部分仍可使用實際執行的容器。
 
-1. 若要檢視您的 Docker 容器，請使用`docker ps`命令。
+1. 若要檢視 Docker 容器，請使用 `docker ps` 命令。
 
     ```bash
     sudo docker ps -a
@@ -97,7 +94,7 @@ ms.lasthandoff: 02/13/2018
    941e1bdf8e1d        microsoft/mssql-server-linux   "/bin/sh -c /opt/m..."   About an hour ago   Up About an hour    0.0.0.0:1401->1433/tcp   sql1
    ```
 
-## <a name="change-the-sa-password"></a>變更 SA 的密碼
+## <a name="change-the-sa-password"></a>變更 SA 密碼
 
 [!INCLUDE [Change docker password](../includes/sql-server-linux-change-docker-password.md)]
 
@@ -126,7 +123,7 @@ ms.lasthandoff: 02/13/2018
    curl -OutFile "wwi.bak" "https://github.com/Microsoft/sql-server-samples/releases/download/wide-world-importers-v1.0/WideWorldImporters-Full.bak"
    ```
 
-1. 使用**docker cp** ，將備份檔案複製到容器中**/var/opt/mssql/backup**目錄。
+1. 使用**docker cp** ，將備份檔案複製到容器中 **/var/opt/mssql/backup**目錄。
 
    ```bash
    sudo docker cp wwi.bak sql1:/var/opt/mssql/backup
@@ -141,7 +138,7 @@ ms.lasthandoff: 02/13/2018
 備份檔案現在位於容器內。 還原之前備份，請務必知道的邏輯檔案名稱及備份內的檔案類型。 下列 TRANSACT-SQL 命令檢查備份及還原使用執行**sqlcmd**容器中。
 
 > [!TIP]
-> 本教學課程使用**sqlcmd**的容器，因為容器會隨附預先安裝此工具。 不過，您也可以執行 TRANSACT-SQL 陳述式與其他用戶端工具以外的容器，例如[Visual Studio Code](sql-server-linux-develop-use-vscode.md)或[SQL Server Management Studio](sql-server-linux-develop-use-ssms.md)。 若要連接，請使用主機連接埠對應至容器中的通訊埠 1433年。 在此範例中，這就是**localhost，1401年**主機電腦上和**Host_IP_Address，1401年**遠端。
+> 本教學課程使用**sqlcmd**的容器，因為容器會隨附預先安裝此工具。 不過，您也可以執行 TRANSACT-SQL 陳述式與其他用戶端工具以外的容器，例如[Visual Studio Code](sql-server-linux-develop-use-vscode.md)或[SQL Server Management Studio](sql-server-linux-manage-ssms.md)。 若要連接，請使用主機連接埠對應至容器中的通訊埠 1433年。 在此範例中，這就是**localhost，1401年**主機電腦上和**Host_IP_Address，1401年**遠端。
 
 1. 執行**sqlcmd**列出邏輯檔案名稱和路徑，在備份的容器。 做法是使用**RESTORE FILELISTONLY** TRANSACT-SQL 陳述式。
 
@@ -291,7 +288,7 @@ docker exec -it sql1 /opt/mssql-tools/bin/sqlcmd `
 
 您已還原資料庫至容器之後，您也可以定期建立資料庫備份，在執行的容器。 步驟的上一個步驟，但以相反，請遵循類似的模式。
 
-1. 使用**備份資料庫**TRANSACT-SQL 命令，在容器中建立的資料庫備份。 本教學課程中建立新的備份檔案， **wwi_2.bak**，在先前建立**/var/opt/mssql/backup**目錄。
+1. 使用**備份資料庫**TRANSACT-SQL 命令，在容器中建立的資料庫備份。 本教學課程中建立新的備份檔案， **wwi_2.bak**，在先前建立 **/var/opt/mssql/backup**目錄。
 
    ```bash
    sudo docker exec -it sql1 /opt/mssql-tools/bin/sqlcmd \
@@ -340,7 +337,7 @@ docker exec -it sql1 /opt/mssql-tools/bin/sqlcmd `
 
 ## <a name="use-the-persisted-data"></a>使用必要的資料
 
-除了製作資料庫備份對於保護資料，您也可以使用資料磁碟區容器。 建立本教學課程開頭**sql1**容器`-v sql1data:/var/opt/mssql`參數。 **Sql1data**資料磁碟區容器保存**/var/opt/mssql**資料即使在移除此容器。 下列的步驟完全移除**sql1**容器，然後建立新的容器， **sql2**，以保存資料。
+除了製作資料庫備份對於保護資料，您也可以使用資料磁碟區容器。 建立本教學課程開頭**sql1**容器`-v sql1data:/var/opt/mssql`參數。 **Sql1data**資料磁碟區容器保存 **/var/opt/mssql**資料即使在移除此容器。 下列的步驟完全移除**sql1**容器，然後建立新的容器， **sql2**，以保存資料。
 
 1. 停止**sql1**容器。
 

@@ -1,16 +1,15 @@
 ---
-title: "指定單一資料行的多重搜尋條件 | Microsoft Docs"
-ms.custom: 
+title: 指定單一資料行的多重搜尋條件 | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
 ms.component: ssms-visual-db
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: tools-ssms
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ssms
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - search criteria [SQL Server], multiple conditions
 - multiple search conditions
@@ -18,19 +17,19 @@ helpviewer_keywords:
 - OR operator
 - AND, Criteria pane
 ms.assetid: 2c006e36-56b1-4992-89b4-c6c0b19808f3
-caps.latest.revision: "3"
+caps.latest.revision: 3
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: cd90bbb2b7a07ae4cf2c8224a8b299cec7774593
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.openlocfilehash: 413acd5ec5d84e2935f56f344f844b07e1e7c267
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="specify-multiple-search-conditions-for-one-column-visual-database-tools"></a>指定單一資料行的多重搜尋條件 (Visual Database Tools)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 在一些執行個體中，可能要套用許多搜尋條件至相同的資料行。 例如，您可能要：  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+在一些執行個體中，可能要套用許多搜尋條件至相同的資料行。 例如，您可能要：  
   
 -   搜尋 `employee` 資料表中幾個不同的名稱，或在不同薪資範圍的員工。 這種搜尋需要 OR 條件。  
   

@@ -1,36 +1,23 @@
 ---
-title: "PerspectiveMeasureGroup 資料類型 (ASSL) |Microsoft 文件"
-ms.custom: 
-ms.date: 03/07/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+title: PerspectiveMeasureGroup 資料類型 (ASSL) |Microsoft 文件
+ms.date: 05/03/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: assl
 ms.topic: reference
-apiname: PerspectiveMeasureGroup Data Type
-apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
-apitype: Schema
-applies_to: SQL Server 2016 Preview
-f1_keywords: PerspectiveMeasureGroup
-helpviewer_keywords: PerspectiveMeasureGroup data type
-ms.assetid: 5927120d-f30e-4f87-8523-6d17012817d7
-caps.latest.revision: "35"
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 1aef76e75c60fb71968f70cb672da9cce3cc8215
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: fefbfbde4a3fd8ac0f50d826a72f0fc58498437b
+ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="perspectivemeasuregroup-data-type-assl"></a>PerspectiveMeasureGroup 資料類型 (ASSL)
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]定義代表量值群組中的相關資訊的基本資料類型[觀點來看](../../../analysis-services/scripting/objects/perspective-element-assl.md)項目。  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+  定義代表量值群組中的相關資訊的基本資料類型[觀點來看](../../../analysis-services/scripting/objects/perspective-element-assl.md)項目。  
   
 ## <a name="syntax"></a>語法  
   
@@ -45,7 +32,7 @@ ms.lasthandoff: 01/08/2018
   
 ## <a name="data-type-characteristics"></a>資料類型特性  
   
-|特性|描述|  
+|特性|說明|  
 |--------------------|-----------------|  
 |基底資料類型|無|  
 |衍生資料類型|無|  
@@ -63,7 +50,7 @@ ms.lasthandoff: 01/08/2018
   
  分析管理物件 (AMO) 物件模型中的對應元素是<xref:Microsoft.AnalysisServices.PerspectiveMeasureGroup>。  
   
-## <a name="see-also"></a>請參閱  
- [Analysis Services 指令碼語言 XML 資料類型 &#40;ASSL &#41;](../../../analysis-services/scripting/data-type/analysis-services-scripting-language-xml-data-types-assl.md)  
+## <a name="see-also"></a>另請參閱  
+ [Analysis Services 指令碼語言 XML 資料類型 & #40;ASSL & #41;](../../../analysis-services/scripting/data-type/analysis-services-scripting-language-xml-data-types-assl.md)  
   
   

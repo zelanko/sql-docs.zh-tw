@@ -1,17 +1,16 @@
 ---
-title: "設定 Web 同步處理 | Microsoft Docs"
-ms.custom: 
+title: 設定 Web 同步處理 | Microsoft Docs
+ms.custom: ''
 ms.date: 01/10/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
 ms.component: replication
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 f1_keywords:
 - SQL10.REP.CONFIGWEBSYNCWIZARD.SNAPSHARE.F1
 - SQL13.REP.CONFIGWEBSYNCWIZARD.SNAPSHARE.F1
@@ -35,16 +34,15 @@ helpviewer_keywords:
 - Web synchronization, security best practices
 - Web synchronization, configuring
 ms.assetid: 21f8e4d4-cd07-4856-98f0-9c9890ebbc82
-caps.latest.revision: 
+caps.latest.revision: 74
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 6ac1123e75ef9b3ae6e79a2b8099b4de7572b2e3
-ms.sourcegitcommit: ab25b08a312d35489a2c4a6a0d29a04bbd90f64d
+ms.openlocfilehash: e806f794a378672b28aa2334eda1afe076bd2ab9
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="configure-web-synchronization"></a>[設定 Web 同步處理]
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -106,11 +104,11 @@ ms.lasthandoff: 03/08/2018
   
 #### <a name="to-increase-maximum-worker-processes-in-iis-7"></a>若要在 IIS 7 中增加工作者處理序數上限  
   
-1.  在 **[Internet Information Services (IIS) 管理員]**中，展開本機伺服器節點，然後按一下 **[應用程式集區]** 節點。  
+1.  在 **[Internet Information Services (IIS) 管理員]** 中，展開本機伺服器節點，然後按一下 **[應用程式集區]** 節點。  
   
 2.  選取與 Web 同步處理網站相關聯的應用程式集區，然後按一下 **[動作]** 窗格上的 **[進階設定]** 。  
   
-3.  在 [進階設定] 對話方塊的 **[處理序模型]** 標題底下，按一下標示為 **[工作者處理序數上限]**的列。 變更屬性值，然後按一下 **[確定]**。  
+3.  在 [進階設定] 對話方塊的 **[處理序模型]** 標題底下，按一下標示為 **[工作者處理序數上限]** 的列。 變更屬性值，然後按一下 **[確定]**。  
   
 ## <a name="configuring-the-publication"></a>設定發行集  
  若要使用 Web 同步處理，請採用您建立標準合併拓撲的相同方式來建立發行集。 如需詳細資訊，請參閱[發行資料和資料庫物件](../../relational-databases/replication/publish/publish-data-and-database-objects.md)。  

@@ -1,28 +1,26 @@
 ---
-title: "查閱 InfoObject | Microsoft Docs"
-ms.custom: 
+title: 查閱 InfoObject | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
 ms.component: data-flow
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: e7f4c132-a5ec-49d8-a964-45775432731f
-caps.latest.revision: 
+caps.latest.revision: 10
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 9dfd4fa6aecb1769a5e7ed2838cc1fb0b39f04f1
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 20ae53246cc057d7a454363269a51e839639e355
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="look-up-infoobject"></a>查閱 InfoObject
   使用 [查閱 InfoObject] 對話方塊可以查閱 SAP Netweaver BW 系統中定義的 InfoObject。 出現可用的 InfoObject 清單時，請選取您要的 InfoObject，然後 SAP BW 目的地就會將必要的值填入相關聯的選項。  
@@ -38,7 +36,7 @@ ms.lasthandoff: 02/15/2018
   
 2.  在 [資料流程] 索引標籤上，按兩下 SAP BW 目的地。  
   
-3.  在 **[SAP BW 目的地編輯器]**中，按一下 **[連接管理員]** 開啟編輯器的 **[連接管理員]** 頁面。  
+3.  在 **[SAP BW 目的地編輯器]** 中，按一下 **[連接管理員]** 開啟編輯器的 **[連接管理員]** 頁面。  
   
 4.  在 [連線管理員] 頁面的 [建立 SAP BW 物件] 群組方塊中，選取下列其中一個選項：  
   

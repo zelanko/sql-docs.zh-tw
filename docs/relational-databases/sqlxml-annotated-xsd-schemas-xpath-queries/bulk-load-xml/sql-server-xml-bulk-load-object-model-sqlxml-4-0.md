@@ -1,16 +1,14 @@
 ---
-title: "SQL Server XML 大量載入物件模型 (SQLXML 4.0) |Microsoft 文件"
-ms.custom: 
+title: SQL Server XML 大量載入物件模型 (SQLXML 4.0) |Microsoft 文件
+ms.custom: ''
 ms.date: 03/16/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
 ms.component: sqlxml
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- dbe-xml
-ms.tgt_pltfrm: 
+ms.technology: xml
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - bulk load [SQLXML], object model
@@ -34,27 +32,27 @@ helpviewer_keywords:
 - Execute method
 - XML Bulk Load [SQLXML], object model
 ms.assetid: a9efbbde-ed2b-4929-acc1-261acaaed19d
-caps.latest.revision: 
+caps.latest.revision: 27
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 5b954b9690d8e6f67995a45336296e2ff1f404f1
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 43ca8f3b345f5db9c0d11217caef744e9172bd22
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sql-server-xml-bulk-load-object-model-sqlxml-40"></a>SQL Server XML 大量載入物件模型 (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] XML 大量載入物件模型會包含 SQLXMLBulkLoad 物件。 這個物件支援下列方法和屬性。  
+  Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] XML 大量載入物件模型會包含 SQLXMLBulkLoad 物件。 這個物件支援下列方法和屬性。  
   
 ## <a name="methods"></a>方法  
  Execute  
  使用當做參數提供的結構描述檔案和資料檔案 (或資料流) 大量載入資料。  
   
 ## <a name="properties"></a>屬性  
- BulkLoad  
+ 大量載入  
  指定是否應該執行大量載入。 這個屬性相當實用，如果您想要產生 （請參閱遵循 SchemaGen、 SGDropTables 和 SGUseID 屬性） 的結構描述並不會執行大量載入。 這是布林屬性。 當屬性設定為 TRUE 時，XML 大量載入會執行。 設定為 FALSE 時，XML 大量載入則不會執行。  
   
  預設值為 TRUE。  
@@ -140,7 +138,7 @@ Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] XML 大�
  預設值為 FALSE。  
   
  SGUseID  
- 指定是否在對應結構描述中的屬性，識別為**識別碼**型別可以用於建立資料表時建立 PRIMARY KEY 條件約束。 SchemaGen 屬性設定為 TRUE 時，請使用這個屬性。 SGUseID 為 TRUE 時，如果 SchemaGen 公用程式會使用屬性的**dt: type ="id"**指定為主要索引鍵資料行，並建立資料表時將適當的主索引鍵條件約束。  
+ 指定是否在對應結構描述中的屬性，識別為**識別碼**型別可以用於建立資料表時建立 PRIMARY KEY 條件約束。 SchemaGen 屬性設定為 TRUE 時，請使用這個屬性。 SGUseID 為 TRUE 時，如果 SchemaGen 公用程式會使用屬性的**dt: type ="id"** 指定為主要索引鍵資料行，並建立資料表時將適當的主索引鍵條件約束。  
   
  預設值為 FALSE。  
   

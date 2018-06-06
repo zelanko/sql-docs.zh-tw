@@ -1,17 +1,15 @@
 ---
 title: CONCAT_WS (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 07/24/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
 ms.component: t-sql|functions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: t-sql
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 f1_keywords:
 - CONCAT_WS
 - CONCAT_WS_TSQL
@@ -20,21 +18,21 @@ dev_langs:
 helpviewer_keywords:
 - CONCAT_WS function
 ms.assetid: f1375fd7-a2fd-48bf-922a-4f778f0deb1f
-caps.latest.revision: 
+caps.latest.revision: 5
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Active
-ms.openlocfilehash: 7d7932c1887c82b2a10702f9054706e4cf9bce71
-ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
+monikerRange: = azuresqldb-current || >= sql-server-2017 || = sqlallproducts-allversions
+ms.openlocfilehash: e1a3d184ccdd0a1716fdace286b2bb8ed6a6cae6
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="concatws-transact-sql"></a>CONCAT_WS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
 
-將可變數量的引數與第 1 個引數中指定的分隔符號串連。 (`CONCAT_WS` 指出 *與分隔符號的串連*。)
+此函式會傳回透過以端對端方式串連 (或聯結) 兩個以上字串值所產生的字串。 它使用第一個函數引數中指定的分隔符號來分隔這些串連的字串值。 (`CONCAT_WS` 指出 *與分隔符號的串連*。)
 
 ##  <a name="syntax"></a>語法   
 ```sql
@@ -43,16 +41,16 @@ CONCAT_WS ( separator, argument1, argument1 [, argumentN]… )
 
 ## <a name="arguments"></a>引數   
 separator  
-這是屬於任何類型的運算式 (`nvarchar``varchar``nchar`或 `char`)。
+屬於任何類型的運算式 (`char`'、`nchar`'、`nvarchar` 或 `varchar`)。
 
 引數1、引數2、引數*N*  
-這是任何類型的運算式。
+任意類型的運算式。
 
 ## <a name="return-types"></a>傳回類型
-字串。 長度及類型取決於輸入。
+長度和類型取決於輸入的字串值。
 
 ## <a name="remarks"></a>Remarks   
-`CONCAT_WS` 會採用可變數量的引數，並用第一個引數當作分隔符號，將它們串連成單一字串。 其必須有分隔符號且至少有兩個引數，否則會引發錯誤。 所有引數皆會以隱含方式轉換為字串類型，然後再行串連。 
+`CONCAT_WS` 會採用可變數量的字串引數，並將其串連 (聯結) 成單一字串。 它使用第一個函數引數中指定的分隔符號來分隔這些串連的字串值。 `CONCAT_WS` 需要分隔引數和至少兩個其他字串值引數。否則，`CONCAT_WS` 會引發錯誤。 `CONCAT_WS` 會在串連之前將所有引數隱含地轉換成字串類型。 
 
 隱含轉換成字串會遵循現有的資料類型轉換規則。 如需行為和資料類型轉換的詳細資訊，請參閱 [CONCAT (Transact-SQL)](../../t-sql/functions/concat-transact-sql.md)。
 
@@ -60,16 +58,16 @@ separator
 
 `CONCAT_WS` 會忽略 `SET CONCAT_NULL_YIELDS_NULL {ON|OFF}` 字串。
 
-如果所有引數都是 Null，會傳回類型為 `varchar(1)` 的空白字串。 
+如果 `CONCAT_WS` 收到全部都是 NULL 值的引數，則會傳回 varchar(1) 類型的空字串。
 
-Null 值在串連期間會被忽略，而且不添加分隔符號。 這有助於串連通常有空白值之字串的常見案例，例如第二個位址欄位。 請參閱範例 B。
+Null 值在串連期間會被 `CONCAT_WS` 忽略，而且不添加分隔符號。 因此，`CONCAT_WS` 可以乾淨地處理可能有「空白」值 - 例如，第二個地址欄位的字串串連。 如需詳細資訊，請參閱範例 B。
 
-如果您的案例需要包含 Null 值和分隔符號，請參閱使用 `ISNULL` 函數的範例 C。
+如果案例牽涉到被分隔符號隔開的 Null 值，請考慮使用 `ISNULL` 函數。 如需詳細資訊，請參閱範例 C。
 
 ## <a name="examples"></a>範例   
 
 ### <a name="a--concatenating-values-with-separator"></a>A.  使用分隔符號串連值
-下列範例會從 sys.databases 資料表中串連三個資料行，並用 `- `分隔值。   
+此範例會從 sys.databases 資料表中串連三個資料行，並用 `- ` 隔開每個值。   
 
 ```sql
 SELECT CONCAT_WS( ' - ', database_id, recovery_model_desc, containment_desc) AS DatabaseInfo
@@ -87,7 +85,7 @@ FROM sys.databases;
 
 
 ### <a name="b--skipping-null-values"></a>B.  跳過 NULL 值
-下列範例會忽略引數清單中的 `NULL` 值。
+此範例會忽略引數清單中的 `NULL` 值。
 
 ```sql
 SELECT CONCAT_WS(',','1 Microsoft Way', NULL, NULL, 'Redmond', 'WA', 98052) AS Address;
@@ -102,7 +100,7 @@ Address
 ```
 
 ### <a name="c--generating-csv-file-from-table"></a>C.  從資料表產生 CSV 檔案
-下列範例使用逗號作為分隔符號，並新增歸位字元以便造成資料行分隔的值格式。
+此範例使用逗號 `,` 作為分隔符號值，並在結果集的資料行分隔值格式中新增歸位字元 `char(13)`。
 
 ```sql
 SELECT 
@@ -121,7 +119,7 @@ DatabaseInfo
 4,SIMPLE,NONE 
 ```
 
-CONCAT_WS 將忽略資料行中的 NULL 值。 如果某些資料行可為 Null，將它與 `ISNULL` 函數包裝在一起，並提供類似下列範例中的預設值：
+CONCAT_WS 會忽略資料行中的 NULL 值。 使用 `ISNULL` 函數來包裝可為 Null 的資料行，並提供預設值。 如需詳細資訊，請參閱此範例：
 
 ```sql
 SELECT 

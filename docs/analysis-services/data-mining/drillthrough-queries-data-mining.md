@@ -1,35 +1,23 @@
 ---
-title: "鑽研查詢 （資料採礦） |Microsoft 文件"
-ms.custom: 
-ms.date: 03/06/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
-helpviewer_keywords:
-- AllowDrillThrough property
-- drillthrough [Analysis Services]
-- drillthrough [DMX]
-ms.assetid: 246c784b-1b0c-4f0b-96f7-3af265e67051
-caps.latest.revision: 
-author: Minewiskan
+title: 鑽研查詢 （資料採礦） |Microsoft 文件
+ms.date: 05/01/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: data-mining
+ms.topic: conceptual
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 2ac1295dcbea5ff575cb0d1d5ab918bad03c6fd0
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: e8b3afda19fbbf084223d0f597fe2893dce17049
+ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="drillthrough-queries-data-mining"></a>鑽研查詢 (資料採礦)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-*「鑽研查詢」* (Drillthrough query) 可讓您傳送查詢至採礦模型，以擷取基礎案例或結構的詳細資料。 如果您想要檢視用來定型模型的案例與用來測試模型的案例，或者您想要查看案例資料的其他詳細資料，鑽研就很有用。  
+  *「鑽研查詢」* (Drillthrough query) 可讓您傳送查詢至採礦模型，以擷取基礎案例或結構的詳細資料。 如果您想要檢視用來定型模型的案例與用來測試模型的案例，或者您想要查看案例資料的其他詳細資料，鑽研就很有用。  
   
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 資料採礦提供了兩種不同的鑽研選項：  
   
@@ -102,8 +90,8 @@ ms.lasthandoff: 02/15/2018
 |----------|----------|  
 |描述在資料採礦設計師中使用鑽研的程序|[從採礦模型鑽研到案例資料](../../analysis-services/data-mining/drill-through-to-case-data-from-a-mining-model.md)|  
 |改變現有的採礦模型以允許鑽研|[針對採礦模型啟用鑽研](../../analysis-services/data-mining/enable-drillthrough-for-a-mining-model.md)|  
-|使用 DMX WITH DRILLTHROUGH 子句，在採礦結構上啟用鑽研|[建立採礦結構 &#40; DMX &#41;](../../dmx/create-mining-structure-dmx.md)|  
-|如需有關指派套用至採礦結構和採礦模型之權限的詳細資訊|[授與權限的資料採礦結構和模型 &#40;Analysis Services &#41;](../../analysis-services/multidimensional-models/grant-permissions-on-data-mining-structures-and-models-analysis-services.md)|  
+|使用 DMX WITH DRILLTHROUGH 子句，在採礦結構上啟用鑽研|[建立採礦結構 & #40; DMX & #41;](../../dmx/create-mining-structure-dmx.md)|  
+|如需有關指派套用至採礦結構和採礦模型之權限的詳細資訊|[授與權限的資料採礦結構和模型 & #40;Analysis Services & #41;](../../analysis-services/multidimensional-models/grant-permissions-on-data-mining-structures-and-models-analysis-services.md)|  
   
 ## <a name="see-also"></a>另請參閱  
  [資料採礦模型檢視器](../../analysis-services/data-mining/data-mining-model-viewers.md)   

@@ -1,33 +1,23 @@
 ---
-title: "資料行屬性 |Microsoft 文件"
-ms.custom: 
-ms.date: 02/21/2018
-ms.prod: analysis-services
-ms.prod_service: analysis-services, azure-analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords:
-- sql13.asvs.bidtoolset.columnprop.f1
-ms.assetid: 4046c1a3-46c7-47db-b355-52e9c2f23671
-caps.latest.revision: 
-author: Minewiskan
+title: 資料行屬性 |Microsoft 文件
+ms.date: 05/07/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: tabular-models
+ms.topic: conceptual
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: b4198d0d71f5c0d14c12391426f4ac4397ede93c
-ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
+ms.openlocfilehash: 4da1159bfc4582705710735c53300d9c51627398
+ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="column-properties"></a>資料行屬性 
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
-這篇文章描述表格式模型資料行屬性。  
+  這篇文章描述表格式模型資料行屬性。  
   
 >  [!NOTE]  
 >  所有的相容性層級不支援某些屬性。    

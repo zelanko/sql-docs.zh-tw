@@ -1,16 +1,14 @@
 ---
-title: "AlwaysOn 容錯移轉叢集執行個體 (SQL Server) | Microsoft Docs"
-ms.custom: 
+title: AlwaysOn 容錯移轉叢集執行個體 (SQL Server) | Microsoft Docs
+ms.custom: ''
 ms.date: 01/18/2017
-ms.prod: sql-non-specified
-ms.prod_service: database-engine
-ms.service: 
-ms.component: failover-clusters
-ms.reviewer: 
+ms.prod: sql
+ms.prod_service: high-availability
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: dbe-high-availability
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: high-availability
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - clustering [SQL Server]
 - high availability [SQL Server], failover clustering
@@ -22,21 +20,20 @@ helpviewer_keywords:
 - failover clustering [SQL Server]
 - AlwaysOn [SQL Server], see failover clustering [SQL Server]
 ms.assetid: 86a15b33-4d03-4549-8ea2-b45e4f1baad7
-caps.latest.revision: "80"
+caps.latest.revision: 80
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
-ms.workload: Active
-ms.openlocfilehash: bfe05c5095d83cdf0963a6e3a7c04687462e4092
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+manager: craigg
+ms.openlocfilehash: 00f2d409dee8dc9327c8d2ca94b6d679567ea5c1
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="always-on-failover-cluster-instances-sql-server"></a>AlwaysOn 容錯移轉叢集執行個體 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-  AlwaysOn 容錯移轉叢集執行個體是 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] AlwaysOn 產品的一部分，會利用 Windows Server 容錯移轉叢集 (WSFC) 功能，透過伺服器執行個體層級 (「容錯移轉叢集執行個體」(FCI)) 的備援提供本機高可用性。 FCI 是跨 Windows Server 容錯移轉叢集 (WSFC) 節點且可能跨多個子網路安裝的單一 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體。 在網路上，FCI 看似單一電腦上的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體，但是 FCI 提供容錯移轉，可以在目前的 WSFC 節點無法使用時，從該節點容錯移轉到另一個節點。  
+  AlwaysOn 容錯移轉叢集執行個體是 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] AlwaysOn 產品的一部分，會利用 Windows Server 容錯移轉叢集 (WSFC) 功能，透過伺服器執行個體層級 (「容錯移轉叢集執行個體 (FCI)」) 的備援提供本機高可用性。 FCI 是跨 Windows Server 容錯移轉叢集 (WSFC) 節點且可能跨多個子網路安裝的單一 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體。 在網路上，FCI 看似單一電腦上的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體，但是 FCI 提供容錯移轉，可以在目前的 WSFC 節點無法使用時，從該節點容錯移轉到另一個節點。  
   
  FCI 可以利用[可用性群組](../../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md)提供資料庫層級的遠端災害復原。 如需詳細資訊，請參閱[容錯移轉叢集和可用性群組 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/failover-clustering-and-always-on-availability-groups-sql-server.md)。  
  
@@ -140,7 +137,7 @@ ms.lasthandoff: 12/05/2017
  SQL Server 二進位檔  
  產品二進位檔案會在 FCI 的每個節點上本機安裝，此程序類似於 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 獨立安裝。 不過，在啟動期間，這些服務並不會自動啟動，而是透過 WSFC 進行管理。  
   
- 儲存空間  
+ Storage  
  FCI 與可用性群組相反，前者必須在 FCI 的所有節點之間使用共用儲存體，以供資料庫和記錄檔儲存。 共用儲存體可以採用 WSFC 叢集磁碟、SAN 磁碟、儲存空間直接存取 (S2D) 或 SMB 檔案共用的形式。 如此一來，每當發生容錯移轉時，FCI 中的所有節點都有相同的執行個體資料檢視。 不過，這表示共用儲存體是潛在的單一失敗點，而 FCI 仰賴基礎儲存方案以確保資料保護。  
   
  網路名稱  

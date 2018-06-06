@@ -1,16 +1,13 @@
 ---
 title: DBCC CHECKIDENT (Transact-SQL) | Microsoft Docs
-ms.custom: 
-ms.date: 07/16/2017
-ms.prod: sql-non-specified
+ms.custom: ''
+ms.date: 05/10/2018
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
-ms.component: t-sql|database-console-commands
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: t-sql
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - CHECKIDENT
@@ -31,19 +28,18 @@ helpviewer_keywords:
 - identity values [SQL Server], reseeding
 - reporting current identity values
 ms.assetid: 2c00ee51-2062-4e47-8b19-d90f524c6427
-caps.latest.revision: 
-author: barbkess
-ms.author: barbkess
+caps.latest.revision: 63
+author: uc-msft
+ms.author: umajay
 manager: craigg
-ms.workload: Active
-ms.openlocfilehash: ffe0d85efb5f67e75a84c0012ba351bd01568bb8
-ms.sourcegitcommit: aebbfe029badadfd18c46d5cd6456ea861a4e86d
+ms.openlocfilehash: 001a830d517bc7472fe7d3eb761ecfb18b2b3063
+ms.sourcegitcommit: feff98b3094a42f345a0dc8a31598b578c312b38
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/11/2018
 ---
 # <a name="dbcc-checkident-transact-sql"></a>DBCC CHECKIDENT (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
 
   在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中檢查指定之資料表目前的識別值，必要的話，會變更識別值。 您也可以使用 DBCC CHECKIDENT，手動設定識別欄位的新目前識別值。  
    

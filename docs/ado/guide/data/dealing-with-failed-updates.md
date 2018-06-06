@@ -1,30 +1,27 @@
 ---
-title: "處理失敗的更新 |Microsoft 文件"
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
+title: 處理失敗的更新 |Microsoft 文件
+ms.prod: sql
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
-ms.custom: 
+ms.technology: connectivity
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - updates [ADO], dealing with failed updates
 ms.assetid: 299c37bd-19ff-4261-8571-b9665687e075
-caps.latest.revision: 
+caps.latest.revision: 3
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 651657c12d33b7a55c8ec74a4da8665a0edddaac
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 1cd4088f20c949cd3a732b43cd5d9312c04387ef
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="dealing-with-failed-updates"></a>處理失敗的更新
 更新已結束但發生錯誤，當您解決錯誤的方式取決於本質和錯誤的嚴重性和應用程式的邏輯。 不過，如果資料庫與其他使用者共用，常見的錯誤將會有其他人修改欄位，然後再進行。 這種類型的錯誤稱為衝突。 ADO 會偵測這種情況，並報告錯誤。  

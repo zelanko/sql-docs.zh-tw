@@ -1,35 +1,33 @@
 ---
-title: "資料移轉報告 (AccessToSQL) |Microsoft 文件"
-ms.prod: sql-non-specified
+title: 資料移轉報告 (AccessToSQL) |Microsoft 文件
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
 ms.component: ssma-access
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ssma
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: b090b327-cec6-4d9a-a670-8f96e8ff0046
-caps.latest.revision: "4"
+caps.latest.revision: 4
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
-ms.workload: Inactive
-ms.openlocfilehash: 7711df7c7bfa26e548068f21a8ad8b77c888db7e
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+manager: craigg
+ms.openlocfilehash: 65c7dc7ea2a28a8960fe498a1a03bb338a1e41f6
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="data-migration-report-accesstosql"></a>資料移轉報告 (AccessToSQL)
 **資料移轉報告** 對話方塊隨即出現之後您將資料移轉至, [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
 **狀態**  
 顯示來源的資料移轉到目標資料庫的狀態。  
   

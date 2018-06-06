@@ -1,41 +1,36 @@
 ---
-title: "資料行存放區索引 - 新功能 | Microsoft Docs"
-ms.custom: 
-ms.date: 12/1/2017
-ms.prod: sql-non-specified
+title: 資料行存放區索引 - 新功能 | Microsoft Docs
+ms.custom: ''
+ms.date: 03/20/2018
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
-ms.component: indexes
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
-ms.topic: article
-ms.assetid: 1fe5ea05-5b19-45a4-9b7a-8ae5ca367897
-caps.latest.revision: 
-author: barbkess
-ms.author: barbkess
+ms.technology: table-view-index
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 74b0f562bc50496df5fdbf88edac546e503d8718
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 65999c781c4e13dc42b40c6e47ecd82a18a5fead
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="columnstore-indexes---what39s-new"></a>資料行存放區索引 - 新功能
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  每個版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 以及最新版的 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] Premium Edition、[!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 都有資料行存放區功能摘要。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的每個版本以及 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]、[!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 的最新版本，皆可使用資料行存放區功能的摘要。  
 
  > [!NOTE]
- > 針對 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]，資料行存放區索引僅適用於 Premium Edition。
+ > 若是 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]，SQL Database 進階層、標準層 - S3 及更新版本，和所有 vCore 層可使用資料行存放區索引。 若是 SQL Server (2016 SP1 及更新版本)，則所有版本皆可使用資料行存放區索引。 若是 SQL Server (2016 SP1 及更早的版本)，則只有 Enterprise Edition 才可使用資料行存放區索引。
  
 ## <a name="feature-summary-for-product-releases"></a>產品版本的功能摘要  
  本表會摘要說明資料行存放區索引的重要功能以及提供它們的產品。  
 
-|資料行存放區索引功能|[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]|[!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]|[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] Premium Edition|[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]|  
+|資料行存放區索引功能|[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]|[!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]|[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]|[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]|  
 |-------------------------------|---------------------------|---------------------------|---------------------------|--------------------------------------------|-------------------------|---|  
 |批次執行多執行緒查詢|是|是|是|是|是|是| 
 |批次執行單一執行緒查詢|||是|是|是|是|  
@@ -61,7 +56,7 @@ ms.lasthandoff: 02/12/2018
  [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 新增這些新功能。
 
 ### <a name="functional"></a>功能
-- [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 在叢集資料行存放區索引中支援非保存計算資料行。 叢集資料行存放區索引不支援保存的資料行。您無法在具有計算資料行的資料行存放區索引上建立非叢集索引。 
+- [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 支援叢集資料行存放區索引中的非保存計算資料行。 叢集資料行存放區索引不支援保存的資料行。您無法在具有計算資料行的資料行存放區索引上建立非叢集索引。 
 
 ## [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]  
  [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 會加入索引鍵增強功能，以改善資料行存放區索引的效能和彈性。 這些改善會強化資料倉儲案例，並進行即時作業分析。  
@@ -121,12 +116,13 @@ ms.lasthandoff: 02/12/2018
   
 ### <a name="limitations"></a>限制  
   
--   B-tree 索引在叢集資料行存放區索引上定義時，MERGE 就會停用。  
+
+  
 -   至於記憶體中資料表，資料行存放區索引必須包含所有的資料行，而資料行存放區索引不能有篩選的條件。  
 -   至於記憶體中資料表，針對資料行存放區索引的查詢只能在 InterOP 模式中執行，不是在記憶體中原生模式中執行。 支援平行執行。  
   
 ## [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]  
- [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 將叢集資料行存放區索引作為主要的儲存體格式。 這允許一般的負載以及更新、刪除和插入作業。  
+ [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 引進叢集資料行存放區索引，作為主要的儲存體格式。 這允許一般的負載以及更新、刪除和插入作業。  
   
 -   資料表可以使用叢集資料行存放區索引作為主要的資料表儲存體。 資料表上不允許其他索引，但是叢集資料行存放區索引是可以更新的，所以您可以執行一般的載入並對個別資料列進行變更。  
 -   非叢集資料行存放區索引繼續保有在 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 中的相同功能，但現在可在批次模式中執行其他運算子。 而除非重建和使用資料分割切換，否則仍然不能更新。 只有磁碟資料表支援非叢集資料行存放區索引，記憶體中資料表不支援。  
@@ -135,7 +131,7 @@ ms.lasthandoff: 02/12/2018
 -   這些運算子可在批次模式下執行多執行緒查詢︰scan、filter、project、join、group by 和 union all。  
   
 ## [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]  
- [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 將非叢集資料行存放區索引作為資料列存放區資料表和批次處理的另一個索引類型，以查詢資料行存放區資料。  
+ [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 引進非叢集資料行存放區索引，作為資料列存放區資料表的另一個索引類型和批次處理資料行存放區資料的查詢。  
   
 -   資料列存放區資料表可以有一個非叢集資料行存放區索引。  
 -   資料行存放區索引是唯讀的。 建立資料行存放區索引之後，您無法執行 `INSERT`、`DELETE` 和 `UPDATE` 作業來更新資料表；若要執行這些作業，您必須卸除索引，並更新資料表，然後重建資料行存放區索引。 您可以切換資料分割，在資料表中載入其他資料。 資料分割切換的優點是您可以載入資料，卻不用卸除和重建資料行存放區索引。  

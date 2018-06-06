@@ -1,30 +1,29 @@
 ---
-title: "getColumnPrivileges 方法 (SQLServerDatabaseMetaData) |Microsoft 文件"
-ms.custom: 
+title: getColumnPrivileges 方法 (SQLServerDatabaseMetaData) |Microsoft 文件
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
-ms.component: jdbc
-ms.reviewer: 
+ms.prod: sql
+ms.prod_service: connectivity
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
-ms.topic: article
-apiname: SQLServerDatabaseMetaData.getColumnPrivileges
-apilocation: sqljdbc.jar
+ms.technology: connectivity
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
+apiname:
+- SQLServerDatabaseMetaData.getColumnPrivileges
+apilocation:
+- sqljdbc.jar
 apitype: Assembly
 ms.assetid: 4ab6a671-9573-4b95-8c23-364306c60d25
-caps.latest.revision: "16"
+caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
-ms.workload: Inactive
-ms.openlocfilehash: e2d0e071acf8df933f42fb1adea31ad759763096
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+manager: craigg
+ms.openlocfilehash: 54f6ef742ac4d61e195e33590d7bdee6ebbc0739
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="getcolumnprivileges-method-sqlserverdatabasemetadata"></a>getColumnPrivileges 方法 (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -42,11 +41,11 @@ public java.sql.ResultSet getColumnPrivileges(java.lang.String catalog,
 ```  
   
 #### <a name="parameters"></a>參數  
- *類別目錄*  
+ *catalog*  
   
  A**字串**，其中包含目錄名稱。  
   
- *結構描述*  
+ *schema*  
   
  A**字串**，其中包含結構描述名稱。  
   
@@ -109,7 +108,7 @@ public static void executeGetColumnPrivileges(Connection con) {
 }  
 ```  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [SQLServerDatabaseMetaData 方法](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   
  [SQLServerDatabaseMetaData 成員](../../../connect/jdbc/reference/sqlserverdatabasemetadata-members.md)   
  [SQLServerDatabaseMetaData 類別](../../../connect/jdbc/reference/sqlserverdatabasemetadata-class.md)  

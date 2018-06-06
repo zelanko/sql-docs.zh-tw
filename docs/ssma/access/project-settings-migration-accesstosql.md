@@ -1,16 +1,15 @@
 ---
-title: "專案設定 （移轉） (AccessToSQL) |Microsoft 文件"
-ms.prod: sql-non-specified
+title: 專案設定 （移轉） (AccessToSQL) |Microsoft 文件
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
 ms.component: ssma-access
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ssma
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 applies_to:
 - Azure SQL Database
 - SQL Server
@@ -18,16 +17,15 @@ helpviewer_keywords:
 - Migration settings
 - Project Settings dialog box, Migration
 ms.assetid: 4caebc9c-8680-4b99-a8fa-89c43161c95d
-caps.latest.revision: "14"
+caps.latest.revision: 14
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
-ms.workload: Inactive
-ms.openlocfilehash: d3ffb7f8fe3a50fc940bb3030fd2bed518006b01
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+manager: craigg
+ms.openlocfilehash: 3fe26ecc9d250982206121d33b35ee5c975e376f
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="project-settings-migration-accesstosql"></a>專案設定 （移轉） (AccessToSQL)
 移轉專案設定可讓您設定如何將資料移轉到[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或 SQL Azure。  
@@ -38,7 +36,7 @@ ms.lasthandoff: 12/21/2017
   
 -   使用**預設專案設定**對話方塊來設定所有專案的組態選項。 若要移轉設定中，存取在**工具**功能表上，選取**預設專案設定**，選取 專案類型中的**移轉的目標版本**您想要存取的設定，請按一下下拉式方塊**一般**左的窗格中，然後再按一下底部**移轉**。  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
 **檢查條件約束**  
 指定將資料加入至資料表時，SSMA 是否應該檢查條件約束。  
   
@@ -87,7 +85,7 @@ ms.lasthandoff: 12/21/2017
 **取代不受支援的日期**  
 指定是否 SSMA 應該更正存取日期早於最舊的[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]datetime 日期 (01 1753 年 1 月)。  
   
--   若要保留目前的日期值，請選取**不執行任何動作**。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]不會接受之前 01 年 1 月 1753年的日期的日期時間資料行中。 如果您使用較舊的日期，您必須將日期時間值轉換為字元的值。  
+-   若要保留目前的日期值，請選取**不執行任何動作**。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 不會接受之前 01 年 1 月 1753年的日期的日期時間資料行中。 如果您使用較舊的日期，您必須將日期時間值轉換為字元的值。  
   
 -   若要將之前 01 年 1 月 1753年的日期轉換成 NULL，選取**取代 NULL**。  
   
@@ -96,6 +94,6 @@ ms.lasthandoff: 12/21/2017
 **批次大小**  
 資料移轉期間使用的批次大小。 每個批次之後，會記錄交易。 根據預設，所有配置的批次大小為 10000。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
 [使用者介面 Reference(Access)](http://msdn.microsoft.com/en-us/af24c303-4a41-449b-9c86-d6558a97e839)  
   

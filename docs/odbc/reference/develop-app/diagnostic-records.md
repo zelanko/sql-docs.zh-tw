@@ -1,16 +1,14 @@
 ---
-title: "診斷記錄 |Microsoft 文件"
-ms.custom: 
+title: 診斷記錄 |Microsoft 文件
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
-ms.component: odbc
-ms.reviewer: 
+ms.prod: sql
+ms.prod_service: connectivity
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: connectivity
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - diagnostic information [ODBC], diagnostic records
 - handles [ODBC], diagnostic records
@@ -18,16 +16,15 @@ helpviewer_keywords:
 - status records [ODBC]
 - diagnostic records [ODBC]
 ms.assetid: 92c73f9b-3ed7-410d-9cec-2771004aae60
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
-ms.workload: Inactive
-ms.openlocfilehash: df08adfc15a2ad80bac007a65ce4ed9304194f20
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+manager: craigg
+ms.openlocfilehash: d6395d87e5691dc33b5a08267ef83c459f94c0d1
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="diagnostic-records"></a>診斷記錄
 與每個環境產生關聯，連接、 陳述式和描述項控制代碼會*診斷記錄*。 這些記錄會包含最後一個呼叫的函式，使用特定的控制代碼的診斷資訊。 另一個函式呼叫使用該控制代碼時，會取代記錄。 可以一次儲存的診斷記錄的數目沒有限制。  

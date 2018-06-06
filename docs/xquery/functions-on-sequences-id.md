@@ -1,16 +1,15 @@
 ---
-title: "id 函數 (XQuery) |Microsoft 文件"
-ms.custom: 
+title: id 函數 (XQuery) |Microsoft 文件
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
-ms.service: 
+ms.prod: sql
+ms.prod_service: sql
 ms.component: xquery
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,21 +19,20 @@ helpviewer_keywords:
 - fn:id function
 - id function
 ms.assetid: de99fc60-d0ad-4117-a17d-02bdde6512b4
-caps.latest.revision: 
+caps.latest.revision: 19
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 341693aa368bc92e5176570711541ab6c217cb88
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: b31e1dc2894511d56cf8809396853dbb0a2e8329
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="functions-on-sequences---id"></a>函式上順序-識別碼
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  傳回含有 xs: id 值的一或多個 xs: idref 值中提供的值相符的元素節點序列*$arg*。  
+  傳回含有 xs: id 值的一或多個 xs: idref 值中提供的值相符的元素節點序列 *$arg*。  
   
 ## <a name="syntax"></a>語法  
   
@@ -58,7 +56,7 @@ fn:id($arg as xs:IDREF*) as element()*
 ### <a name="a-retrieving-elements-based-on-the-idref-attribute-value"></a>A. 根據 IDREF 屬性值擷取元素  
  下列範例是根據 IDREF 經理屬性來使用 fn:id 以擷取 <`employee`> 元素。 在此範例中，經理屬性是 IDREF 類型屬性，而且 eid 屬性是 ID 類型屬性。  
   
- 為特定的經理屬性值， **id （)**函數會尋找 <`employee`> 元素，其 ID 類型屬性值符合輸入的 IDEF 值。 換句話說，針對特定員工， **id （)**函式會傳回員工的經理。  
+ 為特定的經理屬性值， **id （)** 函數會尋找 <`employee`> 元素，其 ID 類型屬性值符合輸入的 IDEF 值。 換句話說，針對特定員工， **id （)** 函式會傳回員工的經理。  
   
  在範例中執行了下列動作：  
   
@@ -109,7 +107,7 @@ Go
 ### <a name="b-retrieving-elements-based-on-the-orderlist-idrefs-attribute-value"></a>B. 根據 OrderList IDREFS 屬性值擷取元素  
  在下列範例中，<`Customer`> 元素的 OrderList 屬性是 IDREFS 類型屬性。 它列出特定客戶的 id 順序。 對於每個 id 順序，在 <`Customer`> 之下有一個 <`Order`> 元素子系以提供順序值。  
   
- 查詢運算式 `data(CustOrders:Customers/Customer[1]/@OrderList)[1]` 會從第一個客戶的 IDRES 清單擷取第一個值。 此值接著會傳遞至**id （)**函式。 函數接著會尋找 <`Order`> 元素，它的 OrderID 屬性值符合輸入**id （)**函式。  
+ 查詢運算式 `data(CustOrders:Customers/Customer[1]/@OrderList)[1]` 會從第一個客戶的 IDRES 清單擷取第一個值。 此值接著會傳遞至**id （)** 函式。 函數接著會尋找 <`Order`> 元素，它的 OrderID 屬性值符合輸入**id （)** 函式。  
   
 ```  
 drop xml schema collection SC  
@@ -187,7 +185,7 @@ select @x.query('declare namespace CustOrders="Customers";
   
 -   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 不支援的兩個引數版本**id （)**。  
   
--   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 需要的引數類型**id （)**是 xs: idref * 的子類型。  
+-   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 需要的引數類型**id （)** 是 xs: idref * 的子類型。  
   
 ## <a name="see-also"></a>另請參閱  
  [序列的相關函數](http://msdn.microsoft.com/library/672d2795-53ab-49c2-bf24-bc81a47ecd3f)  

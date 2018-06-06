@@ -1,30 +1,28 @@
 ---
-title: "檢閱資料類型對應 (SQL Server 匯入和匯出精靈) | Microsoft Docs"
-ms.custom: 
+title: 檢閱資料類型對應 (SQL Server 匯入和匯出精靈) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/16/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
 ms.component: import-export-data
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 f1_keywords:
 - sql13.dts.impexpwizard.reviewissues.f1
 ms.assetid: 0625c4f9-b8ff-4593-b884-39398b9d43af
-caps.latest.revision: 
+caps.latest.revision: 43
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 8f9c2ddd8834d5ff3dbef2d0aff725343fae4f41
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 6552bb3f8b4294fed3a14eaaf71dab1575380dad
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="review-data-type-mapping-sql-server-import-and-export-wizard"></a>檢閱資料類型對應 (SQL Server 匯入和匯出精靈)
 如果您所指定的資料類型對應在 [資料行對應]  對話方塊的 [對應]  清單中失敗，則 [ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 匯入和匯出精靈] 會顯示 [檢閱資料類型對應]  頁面。 在這個頁面上，您可以檢閱精靈必須執行才能讓來源資料與目的地相容之資料類型轉換的詳細資訊。 這項資訊包括視覺提示，可區別預期會成功的轉換與可能導致錯誤或截斷的資料類型轉換。 針對每個轉換，您可以決定是否要接受精靈所建議的轉換，而且可以指定如何處理發生的任何錯誤。   

@@ -1,16 +1,15 @@
 ---
-title: "設計資料庫圖表 (Visual Database Tools) | Microsoft Docs"
-ms.custom: 
+title: 設計資料庫圖表 (Visual Database Tools) | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
 ms.component: ssms-visual-db
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: tools-ssms
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ssms
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 f1_keywords:
 - vdtsql.chm:65536
 - vdt.DatabaseDesigner
@@ -20,19 +19,19 @@ helpviewer_keywords:
 - database diagrams [SQL Server], designing
 - diagrams [SQL Server], designing
 ms.assetid: 6d2c14e1-3d73-4d10-ae5b-7f2b5d6c4ea8
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 9bfd3d66d47acfb4a2603dbf786ae121ffcd5b04
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.openlocfilehash: 2b84ab228993294300fa02c65e76e562bea345c6
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="design-database-diagrams-visual-database-tools"></a>設計資料庫圖表 (Visual Database Tools)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 「資料庫設計工具」為視覺化工具，可讓您設計連線的資料庫，並將該資料庫視覺化。 設計資料庫時，您可以使用資料庫設計工具建立、編輯或刪除資料表、資料行、索引鍵、索引、關聯性和條件約束。 若要以視覺化方式呈現資料庫，可以建立一或多個圖表說明該資料庫中部分或全部的資料表、資料行、索引鍵和關聯性。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+「資料庫設計工具」為視覺化工具，可讓您設計連接的資料庫，並將該資料庫視覺化。 設計資料庫時，您可以使用資料庫設計工具建立、編輯或刪除資料表、資料行、索引鍵、索引、關聯性和條件約束。 若要以視覺化方式呈現資料庫，可以建立一或多個圖表說明該資料庫中部分或全部的資料表、資料行、索引鍵和關聯性。  
   
 ![說明資料表關聯性的資料庫圖表](../../ssms/visual-db-tools/media/dv3w7c1.gif "說明資料表關聯性的資料庫圖表")  
   

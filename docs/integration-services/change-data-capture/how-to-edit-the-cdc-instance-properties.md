@@ -1,28 +1,26 @@
 ---
-title: "如何編輯 CDC 執行個體屬性 | Microsoft Docs"
-ms.custom: 
+title: 如何編輯 CDC 執行個體屬性 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
 ms.component: change-data-capture
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: 7a6c719a-3735-43b7-b3ab-dfadd325eca2
-caps.latest.revision: 
+caps.latest.revision: 6
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 4ac08b5b7b44ad9338a722e0dd4fd35ca20fd35a
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 8a480e8353f501e7bd1ba7ff86df25e5ec736469
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="how-to-edit-the-cdc-instance-properties"></a>如何編輯 CDC 執行個體屬性
   此程序描述如何使用 CDC 設計工具主控台來編輯 CDC 執行個體的組態屬性。  

@@ -1,28 +1,19 @@
 ---
-title: "Analysis Services 中表格式模型的相容性層級 |Microsoft 文件"
-ms.custom: 
-ms.date: 10/16/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services, azure-analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords: sql13.asvs.bidtoolset.versioncompat.f1
-ms.assetid: 8943d78d-4a73-4be8-ad14-3d428f5abd06
-caps.latest.revision: "27"
-author: Minewiskan
+title: Analysis Services 中表格式模型的相容性層級 |Microsoft 文件
+ms.date: 05/07/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: tabular-models
+ms.topic: conceptual
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 4dcc372bb9eac9887a06923cf517e4375ec1bbcb
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: fd70a673744d2e401e8a28f6ce2c533434e1c75e
+ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="compatibility-level-for-analysis-services-tabular-models"></a>Analysis Services 表格式模型的相容性層級
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -34,7 +25,7 @@ ms.lasthandoff: 01/08/2018
 1400 相容性層級中的主要功能包括：
 
 *  新的基礎結構進行資料連接，並匯入到表格式模型支援 TOM Api 和 TMSL 指令碼。 這可讓其他資料來源，例如 Azure Blob 儲存體的支援。 其他資料來源將會包含在未來更新中。
-*  資料轉換和資料 mashup 功能，方法是使用 取得資料 和 M 的運算式。
+*  資料轉換和資料 mashup 功能，方法是使用 SSDT 中取得資料] 和 [M 的運算式。
 *  量值現在支援詳細資料列具有的屬性，啟用 BI 工具，例如 Microsoft Excel 向下鑽研到詳細資料，從彙總的報表的 DAX 運算式。 例如，當使用者檢視區域和月份的總銷售額，則可以檢視相關聯的訂單詳細資料。 
 *  資料表和資料行的名稱，除了中資料的物件層級安全性。
 *  不完全階層的增強的支援。
@@ -48,10 +39,10 @@ ms.lasthandoff: 01/08/2018
 |**相容性層級**|**伺服器版本**| 
 |1400|Azure Analysis Services、 SQL Server 2017 |  
 |1200|Azure Analysis Services、 SQL Server 2017，SQL Server 2016| 
-|1103|SQL Server 2017 *，SQL Server 2016、 SQL Server 2014、 SQL Server 2012 SP1|  
+|1103|SQL Server 2017*, SQL Server 2016, SQL Server 2014, SQL Server 2012 SP1|  
 |1100|SQL Server 2017 *，SQL Server 2016、 SQL Server 2014、 SQL Server 2012 SP1、 SQL Server 2012| 
 
-\*在 SQL Server 2017 已被取代 1100年和 1103年相容性層級。
+\* 在 SQL Server 2017 已被取代 1100年和 1103年相容性層級。
   
 ## <a name="set-compatibility-level"></a>設定相容性層級 
  在建立新的表格式模型專案中 SQL Server Data Tools (SSDT)，您可以指定相容性層級上**表格式模型設計師**對話方塊。 

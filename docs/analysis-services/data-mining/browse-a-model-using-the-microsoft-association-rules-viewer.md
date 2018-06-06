@@ -1,41 +1,23 @@
 ---
-title: "瀏覽模型，使用 Microsoft 關聯規則檢視器 |Microsoft 文件"
-ms.custom: 
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
-helpviewer_keywords:
-- itemsets [Analysis Services]
-- mining models [Analysis Services], associations
-- mining model content, viewing
-- rules [Data Mining]
-- Association Rules Viewer [Analysis Services]
-- market basket analysis [Analysis Services]
-- associations [Analysis Services]
-- Microsoft Association Rules Viewer
-- dependencies [Analysis Services]
-ms.assetid: 538fc01b-8eb1-467a-9b66-3cd57cf7489f
-caps.latest.revision: 
-author: Minewiskan
+title: 瀏覽模型，使用 Microsoft 關聯規則檢視器 |Microsoft 文件
+ms.date: 05/01/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: data-mining
+ms.topic: conceptual
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 09920ddad20ef91c6e2fd86c7ab0b9e70a20f85c
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 8eeedec727fe33b577b7bd382a8b69371428e563
+ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="browse-a-model-using-the-microsoft-association-rules-viewer"></a>使用 Microsoft 關聯規則檢視器瀏覽模型
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 中的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 關聯規則檢視器會顯示以 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 關聯演算法建立的採礦模型。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 關聯演算法是用於建立資料採礦模型的關聯演算法，這些模型可用於購物籃分析。 如需有關這個演算法的詳細資訊，請參閱＜ [Microsoft Association Algorithm](../../analysis-services/data-mining/microsoft-association-algorithm.md)＞。  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 中的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 關聯規則檢視器會顯示以 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 關聯演算法建立的採礦模型。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 關聯演算法是用於建立資料採礦模型的關聯演算法，這些模型可用於購物籃分析。 如需有關這個演算法的詳細資訊，請參閱＜ [Microsoft Association Algorithm](../../analysis-services/data-mining/microsoft-association-algorithm.md)＞。  
   
  以下是使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 關聯演算法的主要原因：  
   
@@ -60,7 +42,7 @@ ms.lasthandoff: 02/15/2018
  每一個索引標籤會包含 **[顯示完整名稱]** 核取方塊，您可以使用它在規則或項目集內顯示或隱藏從中產生項目集的資料表。  
   
 ###  <a name="BKMK_Itemsets"></a> 項目集  
- **[項目集]** 索引標籤會顯示被模型識別為經常湊在一起的項目集清單。 索引標籤會顯示具有下列資料行的方格： **[案例數]**、 **[大小]**和 **[項目集]**。 如需有關案例數的詳細資訊，請參閱＜ [Microsoft Association Algorithm](../../analysis-services/data-mining/microsoft-association-algorithm.md)＞。 **[大小]** 資料行會顯示項目集內的項目數目。 **[項目集]** 資料行會顯示模型探索的實際項目集。 您可以使用 **[顯示]** 清單來控制項目集的格式，您可以將它設定為下列選項：  
+ **[項目集]** 索引標籤會顯示被模型識別為經常湊在一起的項目集清單。 索引標籤會顯示具有下列資料行的方格： **[案例數]**、 **[大小]** 和 **[項目集]**。 如需有關案例數的詳細資訊，請參閱＜ [Microsoft Association Algorithm](../../analysis-services/data-mining/microsoft-association-algorithm.md)＞。 **[大小]** 資料行會顯示項目集內的項目數目。 **[項目集]** 資料行會顯示模型探索的實際項目集。 您可以使用 **[顯示]** 清單來控制項目集的格式，您可以將它設定為下列選項：  
   
 -   **顯示屬性名稱和值**  
   
@@ -75,7 +57,7 @@ ms.lasthandoff: 02/15/2018
  [回到頁首](#BKMK_ViewerTabs)  
   
 ###  <a name="BKMK_Rules"></a> 規則  
- **[規則]** 索引標籤會顯示關聯演算法探索的規則。 **[規則]** 索引標籤有一個方格包含下列資料行： **[機率]**、 **[重要性]**和 **[規則]**。 機率是描述發生規則之結果的可能性。 重要性是設計來測量規則的效益。 雖然規則發生的機率很高，但規則的效益本身可能不重要。 重要性資料行會描述這方面。 例如，若每一個項目集包含屬性的特定狀態，則預測狀態的規則只是一般規則，即使機率很高也一樣。 重要性愈高，規則就愈重要。  
+ **[規則]** 索引標籤會顯示關聯演算法探索的規則。 **[規則]** 索引標籤有一個方格包含下列資料行： **[機率]**、 **[重要性]** 和 **[規則]**。 機率是描述發生規則之結果的可能性。 重要性是設計來測量規則的效益。 雖然規則發生的機率很高，但規則的效益本身可能不重要。 重要性資料行會描述這方面。 例如，若每一個項目集包含屬性的特定狀態，則預測狀態的規則只是一般規則，即使機率很高也一樣。 重要性愈高，規則就愈重要。  
   
  您可以使用 **[最小機率]** 和 **[最低重要性]** 來篩選規則，類似您在 **[項目集]** 索引標籤上可執行的篩選。您也可以使用 **[篩選規則]** ，依據規則包含的屬性狀態來篩選規則。  
   

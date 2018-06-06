@@ -1,27 +1,25 @@
 ---
-title: "資料移轉設定 (OracleToSQL) |Microsoft 文件"
-ms.prod: sql-non-specified
+title: 資料移轉設定 (OracleToSQL) |Microsoft 文件
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
 ms.component: ssma-oracle
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ssma
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: 91f7f558-025d-4f4d-ac2c-aa095e7d1ace
-caps.latest.revision: "3"
+caps.latest.revision: 3
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
-ms.workload: Inactive
-ms.openlocfilehash: b75d8a1f6453e5cbb33b1c60f948e5425f173eff
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 0b86e2f40bd4cfb4734b4cc7167e16cf2fb350ee
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="data-migration-settings-oracletosql"></a>資料移轉設定 (OracleToSQL)
   
@@ -58,6 +56,6 @@ ms.lasthandoff: 12/21/2017
   
 -   **取消：**按一下**取消**進行變更之前，還原目前的設定。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
 [Oracle 資料移轉至 SQL Server](http://msdn.microsoft.com/en-us/e23c5268-41ed-4e55-9fe7-a11376202a13)  
   

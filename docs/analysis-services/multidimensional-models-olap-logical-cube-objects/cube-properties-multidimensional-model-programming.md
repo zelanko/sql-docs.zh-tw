@@ -1,59 +1,28 @@
 ---
-title: "Cube 內容-多維度模型程式設計 |Microsoft 文件"
-ms.custom: 
-ms.date: 03/17/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- Collation property
-- ID property
-- ErrorConfiguration property
-- cubes [Analysis Services], properties
-- Description property
-- DefaultMeasure property
-- ProcessingMode property
-- AggregationPrefix property
-- EstimatedRows property
-- Visible property
-- StorageLocation property
-- StorageMode property
-- ScriptErrorHandlingMode property
-- Source property
-- ScriptCacheProcessingMode property
-- Language property
-- Name property
-- properties [Analysis Services], cubes
-- ProcessingPriority property
-- ProactiveCaching property
-ms.assetid: 72ca3387-620d-4473-8e23-7fe1f2b3d5bf
-caps.latest.revision: 
-author: Minewiskan
+title: Cube 內容-多維度模型程式設計 |Microsoft 文件
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: olap
+ms.topic: conceptual
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 0d22d6fd46939b435cc0a8a6f25268aea0a192d6
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 85453133ab9facd9f3ed56ad98fa2761ac527e40
+ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="cube-properties---multidimensional-model-programming"></a>Cube 內容-多維度模型程式設計
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-Cube 有許多屬性，您可以設定這些屬性來影響整個 Cube 的行為。 這些屬性都摘要在下表中：  
+  Cube 有許多屬性，您可以設定這些屬性來影響整個 Cube 的行為。 這些屬性都摘要在下表中：  
   
 > [!NOTE]  
 >  有些屬性是在建立 Cube 時自動設定，且無法變更。  
   
- 如需如何設定 cube 屬性的詳細資訊，請參閱[Cube 設計工具 &#40;Analysis Services-多維度資料 &#41;](http://msdn.microsoft.com/library/a6692467-da88-4312-8b03-d812f2ae5a96).  
+ 如需如何設定 cube 屬性的詳細資訊，請參閱[Cube 設計師&#40;Analysis Services-多維度資料&#41;](http://msdn.microsoft.com/library/a6692467-da88-4312-8b03-d812f2ae5a96)。  
   
 |屬性|Description|  
 |--------------|-----------------|  
@@ -80,6 +49,6 @@ Cube 有許多屬性，您可以設定這些屬性來影響整個 Cube 的行為
 >  如需有關如何處理 null 值和其他資料完整性問題時如何設定 ErrorConfiguration 屬性值的詳細資訊，請參閱[Analysis Services 2005 中處理資料完整性問題](http://go.microsoft.com/fwlink/?LinkId=81891)。  
   
 ## <a name="see-also"></a>另請參閱  
- [主動式快取 &#40;分割區 &#41;](../../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-proactive-caching.md)  
+ [主動式快取 & #40;分割區 & #41;](../../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-proactive-caching.md)  
   
   

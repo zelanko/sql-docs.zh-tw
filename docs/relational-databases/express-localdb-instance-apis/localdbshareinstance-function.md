@@ -1,16 +1,15 @@
 ---
-title: "LocalDBShareInstance 函數 |Microsoft 文件"
-ms.custom: 
+title: LocalDBShareInstance 函數 |Microsoft 文件
+ms.custom: ''
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
 ms.component: localdb
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - LocalDBShareInstance
@@ -18,20 +17,19 @@ apilocation:
 - sqluserinstance.dll
 apitype: DLLExport
 ms.assetid: 21eb3b9a-7d32-455b-89bb-f624198cd202
-caps.latest.revision: 
-author: JennieHubbard
-ms.author: jhubbard
+caps.latest.revision: 9
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 35d269d5e0114d44e2ff631b2bddd4df1bf22c24
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.openlocfilehash: e57ff8210a9676920805b655c7c2fa44c27f3c28
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="localdbshareinstance-function"></a>LocalDBShareInstance 函數
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-使用指定的共用名稱，與電腦的其他使用者共用指定的 SQL Server Express LocalDB 執行個體。  
+  使用指定的共用名稱，與電腦的其他使用者共用指定的 SQL Server Express LocalDB 執行個體。  
   
  **標頭檔：** sqlncli.h  
   

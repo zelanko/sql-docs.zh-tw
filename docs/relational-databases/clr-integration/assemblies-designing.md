@@ -1,34 +1,32 @@
 ---
-title: "設計組件 |Microsoft 文件"
-ms.custom: 
+title: 設計組件 |Microsoft 文件
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
 ms.component: clr
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - designing assemblies [SQL Server]
 - assemblies [CLR integration], designing
 ms.assetid: 9c07f706-6508-41aa-a4d7-56ce354f9061
-caps.latest.revision: 
+caps.latest.revision: 29
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: d5e491f922a034a55cb65e432e0c005f6cc18fc0
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 33519a8494be8f6a062227b81999f58c4f053071
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="assemblies---designing"></a>組件的設計
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-此主題描述以下在設計組件時應該考慮的因數：  
+  此主題描述以下在設計組件時應該考慮的因數：  
   
 -   封裝組件  
   
@@ -41,7 +39,7 @@ ms.lasthandoff: 02/09/2018
   
  將程式碼封裝到組件時，應該要考慮以下事項：  
   
--   CLR 使用者定義型別及相依於 CLR 使用者自訂函數的索引，會導致保留的資料放在相依於組件的資料庫中。 資料庫中有相依於組件的保存資料時，修改組件的程式碼通常更為複雜。 因此，一般最好將保存資料相依性所依賴的程式碼 (例如，使用者定義型別及使用使用者自訂函數的索引)，跟沒有這類保存資料相依性的程式碼分開。 如需詳細資訊，請參閱[實作的組件](../../relational-databases/clr-integration/assemblies-implementing.md)和[ALTER ASSEMBLY &#40;TRANSACT-SQL &#41;](../../t-sql/statements/alter-assembly-transact-sql.md).  
+-   CLR 使用者定義型別及相依於 CLR 使用者自訂函數的索引，會導致保留的資料放在相依於組件的資料庫中。 資料庫中有相依於組件的保存資料時，修改組件的程式碼通常更為複雜。 因此，一般最好將保存資料相依性所依賴的程式碼 (例如，使用者定義型別及使用使用者自訂函數的索引)，跟沒有這類保存資料相依性的程式碼分開。 如需詳細資訊，請參閱[實作的組件](../../relational-databases/clr-integration/assemblies-implementing.md)和[ALTER ASSEMBLY &#40;TRANSACT-SQL&#41;](../../t-sql/statements/alter-assembly-transact-sql.md)。  
   
 -   如果有段 Managed 程式碼需要更高的權限，最好將那個程式碼跟不需要較高權限的程式碼分隔，放在個別的組件。  
   
@@ -64,7 +62,7 @@ ms.lasthandoff: 02/09/2018
  此外，指定 UNSAFE 可讓組件中的程式碼，執行 CLR 檢查器視為類型安全的作業。 這些作業可能會以未受控制的方式，存取 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 處理序空間的記憶體緩衝區。 UNSAFE 組件也可能會破壞 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 Common Language Runtime 的安全性系統。 UNSAFE 權限應只能由經驗豐富的開發人員或系統管理員，授與高度信任的組件。 只有成員**sysadmin**固定的伺服器角色可以建立 UNSAFE 組件。  
   
 ## <a name="restrictions-on-assemblies"></a>組件的限制  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] managed 程式碼，以確保它們可以可靠和可擴充的方式執行的組件中放置一些限制。 這代表不會允許在 SAFE 及 EXTERNAL_ACCESS 組件中，執行會危害伺服器強固性的特定作業。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 對組件中的 Managed 程式碼有特定限制，以確保能以可靠且可擴充的方式執行程式碼。 這代表不會允許在 SAFE 及 EXTERNAL_ACCESS 組件中，執行會危害伺服器強固性的特定作業。  
   
 ### <a name="disallowed-custom-attributes"></a>不允許的自訂屬性  
  不能以下列自訂屬性註解組件：  
@@ -124,7 +122,7 @@ System.Configuration
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [組件 &#40; Database engine&#41;](../../relational-databases/clr-integration/assemblies-database-engine.md)   
+ [組件 & #40; Database engine& #41;](../../relational-databases/clr-integration/assemblies-database-engine.md)   
  [CLR 整合安全性](../../relational-databases/clr-integration/security/clr-integration-security.md)  
   
   

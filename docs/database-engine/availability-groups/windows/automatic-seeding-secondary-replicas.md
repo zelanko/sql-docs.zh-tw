@@ -1,31 +1,28 @@
 ---
-title: "自動植入次要複本 (SQL Server) | Microsoft Docs"
-description: "使用自動植入來初始化次要複本。"
+title: 自動植入次要複本 (SQL Server) | Microsoft Docs
+description: 使用自動植入來初始化次要複本。
 services: data-lake-analytics
-ms.custom: 
+ms.custom: ''
 ms.date: 09/25/2017
-ms.prod: sql-non-specified
-ms.prod_service: database-engine
-ms.service: 
-ms.component: availability-groups
-ms.reviewer: 
+ms.prod: sql
+ms.prod_service: high-availability
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- dbe-high-availability
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: high-availability
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - Automatic seeding [SQL Server], secondary replica
-ms.assetid: 
-caps.latest.revision: 
+ms.assetid: ''
+caps.latest.revision: ''
 author: allanhirt
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 60bb5a01191de574b7fcac4eb11d73190c94aac8
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 9a9c3487822eec82ebf294c01650a2296dcec5ce
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="automatic-seeding-for-secondary-replicas"></a>自動植入次要複本
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

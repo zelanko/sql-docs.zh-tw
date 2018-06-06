@@ -1,16 +1,15 @@
 ---
-title: "LocalDBUnshareInstance 函數 |Microsoft 文件"
-ms.custom: 
+title: LocalDBUnshareInstance 函數 |Microsoft 文件
+ms.custom: ''
 ms.date: 03/03/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
 ms.component: localdb
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - LocalDBUnshareInstance
@@ -18,20 +17,19 @@ apilocation:
 - sqluserinstance.dll
 apitype: DLLExport
 ms.assetid: 54012ccb-eded-43f7-8ea5-da5ce79224c6
-caps.latest.revision: 
-author: JennieHubbard
-ms.author: jhubbard
+caps.latest.revision: 9
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 955212bb6a4c87f51cd1eb238252ce732b0c1bd7
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.openlocfilehash: 1cc1928d77176d00b7d3b5dccb03c5fce4116dd9
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="localdbunshareinstance-function"></a>LocalDBUnshareInstance 函數
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-停止共用指定的 SQL Server Express LocalDB 執行個體。  
+  停止共用指定的 SQL Server Express LocalDB 執行個體。  
   
  **標頭檔：** sqlncli.h  
   

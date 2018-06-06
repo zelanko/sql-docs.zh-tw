@@ -1,36 +1,33 @@
 ---
-title: "IntelliSense 所支援的 Transact-SQL 語法 | Microsoft 文件"
-ms.custom: 
+title: IntelliSense 所支援的 Transact-SQL 語法 | Microsoft 文件
+ms.custom: ''
 ms.date: 03/16/2017
-ms.prod: sql-non-specified
-ms.prod_service: sql-tools
-ms.service: 
-ms.component: ssms-scripting
-ms.reviewer: 
+ms.prod: sql
+ms.technology: scripting
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 dev_langs:
 - TSQL
 helpviewer_keywords:
 - Transact-SQL IntelliSense
 - IntelliSense [SQL Server], Transact-SQL syntax
 ms.assetid: 194e8f4f-fd7e-4f32-a169-f23531128004
-caps.latest.revision: 
+caps.latest.revision: 28
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 0775b58cc86f349e94ae2305fa058a1edfe42370
-ms.sourcegitcommit: a0aa5e611a0e6ebb74ac1e2f613e8916dc7a7617
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 5f5050b0def51df6ded38aa69c9eb8d45f2ccd70
+ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/24/2018
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="transact-sql-syntax-supported-by-intellisense"></a>IntelliSense 所支援的 Transact-SQL 語法
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 本主題描述 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中 IntelliSense 所支援的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式和語法。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+  此主題描述 [!INCLUDE[tsql](../../includes/tsql-md.md)] 中 IntelliSense 所支援的 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]陳述式和語法。  
   
 ## <a name="statements-supported-by-intellisense"></a>IntelliSense 所支援的陳述式  
  在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]中，IntelliSense 僅支援最常用的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式。 某些一般的 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 查詢編輯器條件可能會讓 IntelliSense 無法運作。 如需詳細資訊，請參閱[疑難排解 IntelliSense &#40;SQL Server Management Studio&#41;](../../relational-databases/scripting/troubleshooting-intellisense.md)。  
@@ -137,6 +134,6 @@ GO
 SELECT   
 ```  
   
- 在您輸入 `SELECT`之後，IntelliSense 就會列出 **[PrimaryKeyCol]**、 **[FirstNameCol]**和 **[LastNameCol]** 當做選取清單中的可能元素，即使該指令碼尚未執行而且 `MyTable` 尚未存在 `MyTestDB`中也一樣。  
+ 在您輸入 `SELECT`之後，IntelliSense 就會列出 **[PrimaryKeyCol]**、 **[FirstNameCol]** 和 **[LastNameCol]** 當做選取清單中的可能元素，即使該指令碼尚未執行而且 `MyTable` 尚未存在 `MyTestDB`中也一樣。  
   
   

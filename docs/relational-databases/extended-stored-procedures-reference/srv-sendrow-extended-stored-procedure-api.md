@@ -1,16 +1,15 @@
 ---
-title: "srv_sendrow (擴充預存程序 API) | Microsoft Docs"
-ms.custom: 
+title: srv_sendrow (擴充預存程序 API) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/03/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
 ms.component: extended-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - srv_sendrow
@@ -22,16 +21,15 @@ dev_langs:
 helpviewer_keywords:
 - srv_sendrow
 ms.assetid: a08f608a-10e6-4bff-9b48-0d02e8026cdb
-caps.latest.revision: 
+caps.latest.revision: 31
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 903cbdee1744d480c25fd849eadcd5123b8b7223
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
-ms.translationtype: MT
+ms.openlocfilehash: d11bf28b93ecd53a3c9b4afd12a2e7bd2300afef
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="srvsendrow-extended-stored-procedure-api"></a>srv_sendrow (擴充預存程序 API)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -57,7 +55,7 @@ srvproc
 ## <a name="returns"></a>傳回值  
  SUCCEED 或 FAIL。  
   
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>Remarks  
  系統會針對傳送到用戶端的每個資料列，呼叫 **srv_sendrow** 函式一次。 所有資料列都必須在使用 **srv_sendmsg**、**srv_status** 或 **srv_senddone** 傳送任何訊息、狀態值或完成狀態之前，傳送到用戶端。  
   
  傳送已經使用 **srv_describe** 定義其所有資料行的資料列時，會使擴充預存程序 API 應用程式引發參考用錯誤訊息，並將 FAIL 傳回到用戶端。 在此情況下，不會傳送資料列。  

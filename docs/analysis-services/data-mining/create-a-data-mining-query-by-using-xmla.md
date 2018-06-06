@@ -1,31 +1,23 @@
 ---
-title: "使用 XMLA 建立資料採礦查詢 |Microsoft 文件"
-ms.custom: 
-ms.date: 03/04/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
-helpviewer_keywords: content queries [DMX]
-ms.assetid: 8f6b6008-006c-4792-9bd1-64c30dc3fd41
-caps.latest.revision: "11"
-author: Minewiskan
+title: 使用 XMLA 建立資料採礦查詢 |Microsoft 文件
+ms.date: 05/01/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: data-mining
+ms.topic: conceptual
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: fa60ad8ee91839e04c424c5fe2d23723e495bbd4
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: a786279915b38abb93941d7485f2b8c3a3413d6f
+ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="create-a-data-mining-query-by-using-xmla"></a>使用 XMLA 建立資料採礦查詢
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]您可以建立各種不同的查詢，針對資料採礦物件使用 AMO、 DMX 或 XML/A  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+  您可以使用 AMO、DMX 或 XML/A 來針對資料採礦物件建立各種查詢。  
   
  XML 用於 Analysis Services 伺服器與所有用戶端之間的通訊。 因此，雖然一般而言，使用 DMX 建立內容查詢更為容易，但是您可以使用 XML/A 中的 DISCOVER 和 COMMAND 陳述式撰寫查詢，方法是，使用支援 SOAP 通訊協定的用戶端，或在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中建立 XML/A 查詢。  
   
@@ -49,7 +41,7 @@ ms.lasthandoff: 01/08/2018
   
      在 [結果] 窗格中會傳回結構描述資料列集的清單，其中包含目前執行個體提供之所有資料列集的資料列集名稱和資料列集資料行。  
   
-2.  在**查詢** 窗格中，放置游標之後**\<限制清單 >**按下 ENTER 即可加入新的一行。  
+2.  在**查詢** 窗格中，放置游標之後**\<限制清單 >** 按下 ENTER 即可加入新的一行。  
   
 3.  將游標置於空白行和型別 **\<SchemaName > DMSCHEMA_MINING_MODEL_CONTENT\</SchemaName >**  
   
@@ -103,8 +95,8 @@ ms.lasthandoff: 01/08/2018
   
      [結果] 窗格會顯示結構描述定義，以及指定之模型的值。  
   
-## <a name="see-also"></a>請參閱  
- [採礦模型內容 &#40;Analysis Services - 資料採礦&#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)   
+## <a name="see-also"></a>另請參閱  
+ [採礦模型內容 & #40;Analysis Services-資料採礦 & #41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)   
  [資料採礦結構描述資料列集](../../analysis-services/schema-rowsets/data-mining/data-mining-schema-rowsets.md)  
   
   

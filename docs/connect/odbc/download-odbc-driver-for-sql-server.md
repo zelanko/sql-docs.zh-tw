@@ -1,32 +1,28 @@
 ---
-title: "下載 ODBC Driver for SQL Server |Microsoft 文件"
-ms.custom: 
+title: 下載 ODBC Driver for SQL Server |Microsoft 文件
+ms.custom: ''
 ms.date: 03/13/2018
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
-ms.component: odbc
-ms.reviewer: 
+ms.prod: sql
+ms.prod_service: connectivity
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- drivers
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: connectivity
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: 53b09784-bb9d-4fd4-99d3-0492b3308ac4
-caps.latest.revision: 
+caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
-ms.workload: Active
-ms.openlocfilehash: afd906dfbfe11310747cb8876e8e0e217854d5e3
-ms.sourcegitcommit: 6b1618aa3b24bf6759b00a820e09c52c4996ca10
+manager: craigg
+ms.openlocfilehash: 1dd3008422b71d2ddc84b4e79318a1a16f70379e
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="download-odbc-driver-for-sql-server"></a>下載 ODBC Driver for SQL Server
 
-## <a name="microsoft-odbc-driver-17-for-sql-server"></a>Microsoft ODBC Driver 17 for SQL Server
+## <a name="microsoft-odbc-driver-17-for-sql-server"></a>Microsoft ODBC Driver for SQL Server 17
 
 ### <a name="windows"></a>視窗
 
@@ -43,8 +39,8 @@ ms.lasthandoff: 03/15/2018
 - [RedHat 6.rpm 套件 (msodbcsql17-*)](https://packages.microsoft.com/rhel/6.8/prod/)
 
 #### <a name="suse"></a>Suse
-- [SuSE 12 .rpm packages (msodbcsql17-*)](https://packages.microsoft.com/sles/12/prod/)
-- [SuSE 11 .rpm packages (msodbcsql17-*)](https://packages.microsoft.com/sles/11/prod/)
+- [SuSE 12.rpm 封裝 (msodbcsql17-*)](https://packages.microsoft.com/sles/12/prod/)
+- [SuSE 11.rpm 封裝 (msodbcsql17-*)](https://packages.microsoft.com/sles/11/prod/)
 
 #### <a name="ubuntu"></a>Ubuntu
 - [Ubuntu 17.10.deb 封裝](https://packages.microsoft.com/ubuntu/17.10/prod/pool/main/m/msodbcsql17/)
@@ -73,8 +69,8 @@ ms.lasthandoff: 03/15/2018
 - [RedHat 6.rpm 套件 (msodbcsql-*)](https://packages.microsoft.com/rhel/6.8/prod/)
 
 #### <a name="suse"></a>Suse
-- [SuSE 12 .rpm packages (msodbcsql-*)](https://packages.microsoft.com/sles/12/prod/)
-- [SuSE 11 .rpm packages (msodbcsql-*)](https://packages.microsoft.com/sles/11/prod/)
+- [SuSE 12.rpm 封裝 (msodbcsql-*)](https://packages.microsoft.com/sles/12/prod/)
+- [SuSE 11.rpm 封裝 (msodbcsql-*)](https://packages.microsoft.com/sles/11/prod/)
 
 #### <a name="ubuntu"></a>Ubuntu
 - [Ubuntu 17.04.deb 封裝](https://packages.microsoft.com/ubuntu/17.04/prod/pool/main/m/msodbcsql/)

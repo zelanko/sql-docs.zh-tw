@@ -1,17 +1,14 @@
 ---
-title: "使用 SQLGetDiagRec 和 SQLGetDiagField |Microsoft 文件"
-ms.custom: 
+title: 使用 SQLGetDiagRec 和 SQLGetDiagField |Microsoft 文件
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
-ms.component: odbc
-ms.reviewer: 
+ms.prod: sql
+ms.prod_service: connectivity
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- drivers
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: connectivity
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - diagnostic information [ODBC], SqlGetDiagField
 - SQLGetDiagField function [ODBC], and SQLGetDiagRec
@@ -19,16 +16,15 @@ helpviewer_keywords:
 - diagnostic information [ODBC], SqlGetDiagRec
 - retrieving diagnostic information [ODBC]
 ms.assetid: 4f486bb1-fad8-4064-ac9d-61f2de85b68b
-caps.latest.revision: 
+caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
-ms.workload: Inactive
-ms.openlocfilehash: db4a853206e402228eb9d76dca72a421444ed042
-ms.sourcegitcommit: 4edac878b4751efa57601fe263c6b787b391bc7c
+manager: craigg
+ms.openlocfilehash: 555bc3ba25ba895b54384acb8772a4b4293e61c1
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/19/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="using-sqlgetdiagrec-and-sqlgetdiagfield"></a>使用 SQLGetDiagRec 和 SQLGetDiagField
 應用程式呼叫**SQLGetDiagRec**或**SQLGetDiagField**擷取診斷資訊。 這些函式接受環境、 連接、 陳述式或描述元的控制代碼，並從上一次使用該控制代碼的函式傳回診斷。 新的函式呼叫使用該控制代碼時，會捨棄登入特定的控制代碼的診斷。 如果函式傳回多個診斷記錄，應用程式呼叫這些函式多次。狀態記錄的總數藉由呼叫擷取**SQLGetDiagField** SQL_DIAG_NUMBER 選項使用的標頭記錄 （記錄 0）。  

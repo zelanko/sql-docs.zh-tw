@@ -1,28 +1,26 @@
 ---
-title: "教學課程：使用 OData 來源 | Microsoft Docs"
-ms.custom: 
+title: 教學課程：使用 OData 來源 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
 ms.component: data-flow
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: 2c64cf8b-5edb-48df-8ffe-697096258f71
-caps.latest.revision: 
+caps.latest.revision: 6
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 4721c9e3854aba63a2d38209212435e2b0f5f4e1
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: fefca580838b5331bb1dea488082c1b6cd080131
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="tutorial-using-the-odata-source"></a>教學課程：使用 OData 來源
   本教學課程將逐步引導您進行從範例 **Northwind** OData 服務 (http://services.odata.org/V3/Northwind/Northwind.svc/) 擷取 **Employees** 集合，然後將該集合載入一般檔案的程序。  
@@ -51,7 +49,7 @@ ms.lasthandoff: 01/25/2018
   
 5.  按一下 **[新增]** ，加入新的 OData 連接管理員。  
   
-6.  輸入 **[服務文件位置]**的 OData 服務 URL。 此 URL 可以是服務文件的 URL，或是特定摘要或實體的 URL。 針對本教學課程的用途，輸入下列服務文件的 URL：[http://services.odata.org/V3/Northwind/Northwind.svc/](http://services.odata.org/V3/Northwind/Northwind.svc/)。  
+6.  輸入 **[服務文件位置]** 的 OData 服務 URL。 此 URL 可以是服務文件的 URL，或是特定摘要或實體的 URL。 針對本教學課程的用途，輸入服務文件的 URL：[http://services.odata.org/V3/Northwind/Northwind.svc/](http://services.odata.org/V3/Northwind/Northwind.svc/)。  
   
 7.  確認已選取 **[Windows 驗證]** 做為用來存取 OData 服務的 **[驗證]** 。 **[Windows 驗證]** 預設為選取狀態。  
   
@@ -61,13 +59,13 @@ ms.lasthandoff: 01/25/2018
   
 10. 從 [集合] 下拉式清單中選取 **Employees**。  
   
-11. 針對 **[查詢選項]**輸入任何其他 OData 查詢選項或篩選。 例如， `$orderby=CompanyName&$top=100`。 針對本教學課程的用途，輸入 `$top=5`。  
+11. 針對 **[查詢選項]** 輸入任何其他 OData 查詢選項或篩選。 例如， `$orderby=CompanyName&$top=100`。 針對本教學課程的用途，輸入 `$top=5`。  
   
 12. 按一下 **[預覽]** 預覽資料。  
   
 13. 按一下左側功能窗格中的 **[資料行]** ，切換至 **[資料行]** 頁面。  
   
-14. 透過選取核取方塊的方式，從 **[可用的外部資料行]**選取 **[EmployeeID]**、 **[FirstName]** 和 **[LastName]** 。  
+14. 透過選取核取方塊的方式，從 **[可用的外部資料行]** 選取 **[EmployeeID]**、 **[FirstName]** 和 **[LastName]** 。  
   
 15. 按一下 **[確定]** ，關閉 **[OData 來源編輯器]** 對話方塊。  
   

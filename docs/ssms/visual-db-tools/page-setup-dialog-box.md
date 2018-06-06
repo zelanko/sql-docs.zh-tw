@@ -1,31 +1,31 @@
 ---
-title: "版面設定對話方塊 | Microsoft Docs"
-ms.custom: 
+title: 版面設定對話方塊 | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
 ms.component: ssms-visual-db
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: tools-ssms
-ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords: vs.PageSetup
+ms.technology: ssms
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
+f1_keywords:
+- vs.PageSetup
 ms.assetid: 03deb946-34c6-48b1-b639-5e888f47bddb
-caps.latest.revision: "4"
+caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 8ff85dabb4dc02737ccd0379435c85c87902a8dc
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.openlocfilehash: 0099048b3de1461971e115ea3cfff0d1ff9d95e6
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="page-setup-dialog-box"></a>版面設定對話方塊
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 您可以選取 [頁面設定] 對話方塊中的選項，自訂您的頁面設計。 提供的選項取決於您針對編輯安裝與啟用的語言。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+您可以選取 [頁面設定] 對話方塊中的選項，自訂您的頁面設計。 提供的選項取決於您針對編輯安裝與啟用的語言。  
   
 ## <a name="paper"></a>紙張  
 **大小**  

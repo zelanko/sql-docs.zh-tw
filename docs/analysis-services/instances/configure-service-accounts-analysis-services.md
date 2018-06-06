@@ -1,36 +1,23 @@
 ---
-title: "設定服務帳戶 (Analysis Services) |Microsoft 文件"
-ms.custom: 
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
-helpviewer_keywords:
-- security [Analysis Services], logon accounts
-- logon accounts [Analysis Services]
-- accounts [Analysis Services]
-- logon accounts [Analysis Services], about logon accounts
-ms.assetid: b481bd51-e077-42f6-8598-ce08c1a38716
-caps.latest.revision: 
-author: Minewiskan
+title: 設定服務帳戶 (Analysis Services) |Microsoft 文件
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: ''
+ms.topic: conceptual
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 090f81a3668e91ce8c18e10a1bb7ee5fccc52365
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: dff21ebf96bf957a7f390b8dea0010fa0396ff7d
+ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="configure-service-accounts-analysis-services"></a>設定服務帳戶 (Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-[設定 Windows 服務帳戶與權限](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)中記載如何佈建適用於整個產品範圍的帳戶，該主題提供適用於所有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服務 (包括 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]) 的全方位服務帳戶資訊。 如需了解有效的帳戶類型、由安裝程式指派的 Windows 權限、檔案系統權限、登錄權限等，請參閱該主題。  
+  [設定 Windows 服務帳戶與權限](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)中記載如何佈建適用於整個產品範圍的帳戶，該主題提供適用於所有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服務 (包括 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]) 的全方位服務帳戶資訊。 如需了解有效的帳戶類型、由安裝程式指派的 Windows 權限、檔案系統權限、登錄權限等，請參閱該主題。  
   
  本主題提供 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]的補充資訊，包含表格式和叢集安裝所需的其他權限。 其中也涵蓋支援伺服器作業所需的權限。 例如，您可以在服務帳戶底下設定要排除的處理和查詢作業 - 在這個情況下，您將需要授與其他權限來讓這個動作生效。  
   
@@ -81,7 +68,7 @@ ms.lasthandoff: 02/15/2018
   
 1.  執行 GPEDIT.msc | 本機電腦原則 | 電腦組態 | Windows 設定 | 安全性設定 | 本機原則 | 使用者權限指派。  
   
-2.  檢閱包含 **SQLServerMSASUser$**的現有原則。 這是可以在已安裝 Analysis Services 的電腦上找到的本機安全性群組。 Windows 權限和檔案資料夾權限都會授與這個安全性群組。 按兩下 **[以服務方式登入]** 原則，以查看在系統上指定安全性群組的方式。 安全性群組的完整名稱會根據您是否安裝 Analysis Services 來做為具名執行個體而改變。 新增帳戶權限時，請使用這個安全性群組，而不要使用實際的服務帳戶。  
+2.  檢閱包含 **SQLServerMSASUser$** 的現有原則。 這是可以在已安裝 Analysis Services 的電腦上找到的本機安全性群組。 Windows 權限和檔案資料夾權限都會授與這個安全性群組。 按兩下 **[以服務方式登入]** 原則，以查看在系統上指定安全性群組的方式。 安全性群組的完整名稱會根據您是否安裝 Analysis Services 來做為具名執行個體而改變。 新增帳戶權限時，請使用這個安全性群組，而不要使用實際的服務帳戶。  
   
 3.  若要在 GPEDIT 中新增帳戶權限，請以滑鼠右鍵按一下 **[增加處理程序工作組]** ，然後選取 **[屬性]**。  
   
@@ -95,7 +82,7 @@ ms.lasthandoff: 02/15/2018
   
     -   SQL01-WIN12\SQL01-WIN12$SQLServerMSASUser$TABULAR  
   
-6.  針對 **[調整處理序的記憶體配額]**重複執行，以及選擇性地針對 **[鎖定記憶體中的分頁]** 或 **[提升排程優先權]**重複執行。  
+6.  針對 **[調整處理序的記憶體配額]** 重複執行，以及選擇性地針對 **[鎖定記憶體中的分頁]** 或 **[提升排程優先權]** 重複執行。  
   
 > [!NOTE]  
 >  舊版安裝程式不小心將 Analysis Services 服務帳戶加入 **Performance Log Users** 群組。 雖然已修正此缺點，但是現有的安裝可能會具有此不必要的群組成員資格。 由於 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 服務帳戶不需要 **[Performance Log Users]** 群組中的成員資格，因此您可以從群組中移除。  
@@ -132,7 +119,7 @@ ms.lasthandoff: 02/15/2018
 3.  使用 [電腦管理員]  |  |  | [MSASxx.MSSQLServer] | []  |  ，確認已將資料夾安全性屬性授與步驟 2 中的安全性群組。  
   
 > [!NOTE]  
->  請勿移除或修改 SID。 若要還原不小心刪除的個別服務 SID，請參閱 [http://support.microsoft.com/kb/2620201](http://support.microsoft.com/kb/2620201)。  
+>  請勿移除或修改 SID。 若要還原不小心刪除的個別服務 SID，請參閱[ http://support.microsoft.com/kb/2620201 ](http://support.microsoft.com/kb/2620201)。  
   
  **更多關於個別服務 SID 的資訊**  
   
@@ -143,7 +130,7 @@ ms.lasthandoff: 02/15/2018
  由於 SID 是不可變的，因此，不論您變更服務帳戶的頻率為何，都能永遠使用服務安裝期間建立的檔案系統 ACL。 身為新增的安全性措施，ACL 透過 SID 指定權限，即使其他服務在相同帳戶下執行，也能確保只有一個服務執行個體存取程式可執行檔和資料夾，因此可提高安全性。  
   
 ##  <a name="bkmk_tasks"></a> 為特定伺服器作業授與其他 Analysis Services 權限  
- [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 會在用來啟動 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]之服務帳戶 (或登入帳戶) 的安全性內容中執行一些工作，並在要求工作之使用者的安全性內容中執行其他工作。  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]服務帳戶 （或登入帳戶） 用來啟動的安全性內容中執行一些工作[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]，並要求工作之使用者的安全性內容中執行其他工作。  
   
  下表描述支援以服務帳戶執行工作所需的其他權限。  
   

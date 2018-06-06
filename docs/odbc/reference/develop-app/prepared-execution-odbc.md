@@ -1,31 +1,28 @@
 ---
-title: "備妥的執行 ODBC |Microsoft 文件"
-ms.custom: 
+title: 備妥的執行 ODBC |Microsoft 文件
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
-ms.component: odbc
-ms.reviewer: 
+ms.prod: sql
+ms.prod_service: connectivity
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: connectivity
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - prepared execution [ODBC]
 - SQL statements [ODBC], prepared execution
 - SQL statements [ODBC], executing
 ms.assetid: f08c8a98-31ee-48b2-9dbf-6f31c2166dbb
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
-ms.workload: Inactive
-ms.openlocfilehash: 6a4f91eb2e4e255007fef3f93504872f791499e7
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+manager: craigg
+ms.openlocfilehash: 1e03123e34834033b4c53fb1eb5818f6c78def82
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="prepared-execution-odbc"></a>備妥的執行 ODBC
 備妥的執行是有效的方式執行的陳述式一次以上。 第一次編譯的陳述式，或*備妥，*成存取計畫。 就執行一或多次於稍後存取計劃。 如需存取計劃的詳細資訊，請參閱[處理 SQL 陳述式](../../../odbc/reference/processing-a-sql-statement.md)。  

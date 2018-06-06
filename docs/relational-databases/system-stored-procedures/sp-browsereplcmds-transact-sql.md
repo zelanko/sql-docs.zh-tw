@@ -1,16 +1,15 @@
 ---
-title: "sp_browsereplcmds (TRANSACT-SQL) |Microsoft 文件"
-ms.custom: 
+title: sp_browsereplcmds (TRANSACT-SQL) |Microsoft 文件
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - sp_browsereplcmds
 ms.assetid: 30abcb41-1d18-4f43-a692-4c80914c0450
-caps.latest.revision: 
+caps.latest.revision: 34
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 9e7a2a18736c95d11447d2330ffbe48c99da3a2f
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 19c4c3b162d882f3d7a31701ad2cc838fcaaed74
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="spbrowsereplcmds-transact-sql"></a>sp_browsereplcmds (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -69,7 +67,7 @@ sp_browsereplcmds [ [ @xact_seqno_start = ] 'xact_seqno_start' ]
  指定如果具有指定的命令*article_id*會傳回。 *article_id*是**int**，預設值是 NULL。  
   
  [  **@command_id =**] *command_id*  
- 是中的命令位置[MSrepl_commands &#40;TRANSACT-SQL &#41;](../../relational-databases/system-tables/msrepl-commands-transact-sql.md)要解碼。 *command_id*是**int**，預設值是 NULL。 如果指定，所有其他參數也必須指定，和*xact_seqno_start*必須與相同*xact_seqno_end*。  
+ 是中的命令位置[MSrepl_commands &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-tables/msrepl-commands-transact-sql.md)要解碼。 *command_id*是**int**，預設值是 NULL。 如果指定，所有其他參數也必須指定，和*xact_seqno_start*必須與相同*xact_seqno_end*。  
   
  [  **@agent_id =**] *agent_id*  
  指定只傳回特定複寫代理程式的命令。 *agent_id*是**int**，預設值是 NULL。  
@@ -84,17 +82,17 @@ sp_browsereplcmds [ [ @xact_seqno_start = ] 'xact_seqno_start' ]
   
 |資料行名稱|資料類型|Description|  
 |-----------------|---------------|-----------------|  
-|**xact_seqno**|**varbinary （16)**|命令的序號。|  
+|**xact_seqno**|**varbinary(16)**|命令的序號。|  
 |**originator_srvname**|**sysname**|引發交易的伺服器。|  
 |**originator_db**|**sysname**|引發交易的資料庫。|  
 |**article_id**|**int**|發行項的識別碼。|  
-|**型別**|**int**|命令的類型。|  
+|**type**|**int**|命令的類型。|  
 |**部分指令**|**bit**|指出這是否為部分命令。|  
 |**hashkey**|**int**|僅供內部使用。|  
 |**originator_publication_id**|**int**|引發交易的發行集識別碼。|  
 |**originator_db_version**|**int**|引發交易的資料庫版本。|  
-|**originator_lsn**|**varbinary （16)**|識別命令在原始發行集中的記錄序號 (LSN)。 用於點對點異動複寫中。|  
-|命令|**nvarchar （1024)**|[!INCLUDE[tsql](../../includes/tsql-md.md)] 命令。|  
+|**originator_lsn**|**varbinary(16)**|識別命令在原始發行集中的記錄序號 (LSN)。 用於點對點異動複寫中。|  
+|**command**|**nvarchar(1024)**|[!INCLUDE[tsql](../../includes/tsql-md.md)] 命令。|  
 |**command_id**|**int**|中的命令識別碼[MSrepl_commands](../../relational-databases/system-tables/msrepl-commands-transact-sql.md)。|  
   
  在結果集中，較長的命令可能會分成許多資料列。  
@@ -105,9 +103,9 @@ sp_browsereplcmds [ [ @xact_seqno_start = ] 'xact_seqno_start' ]
 ## <a name="permissions"></a>Permissions  
  只有成員**sysadmin**固定伺服器角色或成員的**db_owner**或**replmonitor**散發資料庫上的固定的資料庫角色可以執行**sp_browsereplcmds**。  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [sp_replcmds &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-replcmds-transact-sql.md)   
- [sp_replshowcmds &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/sp-replshowcmds-transact-sql.md)   
+ [sp_replshowcmds &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-replshowcmds-transact-sql.md)   
  [系統預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

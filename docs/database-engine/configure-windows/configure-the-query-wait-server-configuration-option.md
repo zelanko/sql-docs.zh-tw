@@ -1,32 +1,28 @@
 ---
-title: "設定 query wait 伺服器組態選項 | Microsoft Docs"
-ms.custom: 
+title: 設定 query wait 伺服器組態選項 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/02/2017
-ms.prod: sql-non-specified
-ms.prod_service: database-engine
-ms.service: 
-ms.component: configure-windows
-ms.reviewer: 
+ms.prod: sql
+ms.prod_service: high-availability
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: configuration
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - queries [SQL Server], timing out
 - time [SQL Server], query wait time
 - query wait option [SQL Server]
 ms.assetid: 0fc4aa01-65a3-4a33-9ef4-caca41add238
-caps.latest.revision: 
+caps.latest.revision: 26
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: c3851530283ba7b2f25984bb7dca73fb562b3151
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: d34f383a15088c3770019db396cc3130892882ef
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="configure-the-query-wait-server-configuration-option"></a>設定 query wait 伺服器組態選項
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -71,7 +67,7 @@ ms.lasthandoff: 02/03/2018
   
 2.  按一下 **[進階]** 節點。  
   
-3.  在 **[平行處理原則]**下方，為 **query wait** 選項輸入想要的值。  
+3.  在 **[平行處理原則]** 下方，為 **query wait** 選項輸入想要的值。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   

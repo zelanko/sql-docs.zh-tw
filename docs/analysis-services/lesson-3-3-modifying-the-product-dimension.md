@@ -1,29 +1,19 @@
 ---
-title: "修改 [產品] 維度 |Microsoft 文件"
-ms.custom: 
-ms.date: 03/04/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: get-started-article
-applies_to:
-- SQL Server 2016
-ms.assetid: 8e3ffecd-7f40-41a8-8735-bc9858a310cb
-caps.latest.revision: 
-author: Minewiskan
+title: 修改 [產品] 維度 |Microsoft 文件
+ms.date: 05/08/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: multidimensional-models
+ms.topic: tutorial
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 8bbed44f2b02b0d94678513185dbf682a537e9e5
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: b35f1712af9d501ff35a92cecb0eeea068d9aac0
+ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="lesson-3-3---modifying-the-product-dimension"></a>課程 3-3-修改 [產品] 維度
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -192,7 +182,7 @@ ms.lasthandoff: 02/15/2018
 [修改 Date 維度](../analysis-services/lesson-3-4-modifying-the-date-dimension.md)  
   
 ## <a name="see-also"></a>另請參閱  
-[在資料來源檢視 &#40; 中定義具名的計算Analysis Services &#41;](../analysis-services/multidimensional-models/define-named-calculations-in-a-data-source-view-analysis-services.md)  
+[在資料來源檢視 & #40; 中定義具名的計算Analysis Services & #41;](../analysis-services/multidimensional-models/define-named-calculations-in-a-data-source-view-analysis-services.md)  
 [建立使用者定義階層](../analysis-services/multidimensional-models/user-defined-hierarchies-create.md)  
 [設定屬性階層的 &#40;全部&#41; 層級](../analysis-services/multidimensional-models/database-dimensions-configure-the-all-level-for-attribute-hierarchies.md)  
   

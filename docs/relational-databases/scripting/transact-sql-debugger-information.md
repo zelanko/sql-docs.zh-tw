@@ -1,17 +1,13 @@
 ---
-title: "Transact-SQL 偵錯工具資訊 | Microsoft 文件"
-ms.custom: 
+title: Transact-SQL 偵錯工具資訊 | Microsoft 文件
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
-ms.prod_service: sql-tools
-ms.service: 
-ms.component: ssms-scripting
-ms.reviewer: 
+ms.prod: sql
+ms.technology: scripting
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - Transact-SQL debugger, Locals Window
 - Transact-SQL debugger, Watch Window
@@ -20,19 +16,20 @@ helpviewer_keywords:
 - Transact-SQL debugger, QuickWatch
 - Transact-SQL debugger, viewing information
 ms.assetid: b99819cc-f388-41a1-b304-36e78ce24147
-caps.latest.revision: 
+caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 4222cf4e92319b12779251750805c9e888776873
-ms.sourcegitcommit: a0aa5e611a0e6ebb74ac1e2f613e8916dc7a7617
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 410deeb7e51bffc27b5ae4a76beaa029653c1f07
+ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/24/2018
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="transact-sql-debugger---information"></a>Transact-SQL 偵錯工具 - 資訊
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] 每當偵錯工具在特定的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式上暫停執行作業時，您就可以使用各種偵錯工具視窗來檢視目前的執行狀態。  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+  每當偵錯工具在特定的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式上暫停執行作業時，您就可以使用各種偵錯工具視窗來檢視目前的執行狀態。  
   
 ## <a name="debugger-windows"></a>偵錯工具視窗  
  在偵錯工具模式中，偵錯工具會在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 主視窗的底部開啟兩個視窗。 偵錯工具會在這兩個視窗中顯示其所有資訊。 每個偵錯工具視窗都具有一些可讓您選取的索引標籤，以便控制哪一組資訊要顯示在視窗中。 左側的偵錯工具視窗包含 [區域變數]、[監看式 1]、[監看式 2]、[監看式 3] 和 [監看式 4] 索引標籤。 右側的偵錯工具視窗包含 [呼叫堆疊]、[執行緒]、[中斷點]、[命令視窗] 和 [輸出] 索引標籤。  

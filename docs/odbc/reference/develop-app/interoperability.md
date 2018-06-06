@@ -1,30 +1,27 @@
 ---
-title: "互通性 |Microsoft 文件"
-ms.custom: 
+title: 互通性 |Microsoft 文件
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
-ms.component: odbc
-ms.reviewer: 
+ms.prod: sql
+ms.prod_service: connectivity
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: connectivity
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - interoperability [ODBC]
 - interoperability [ODBC], about interoperability
 ms.assetid: 43b7c849-9d59-4002-9977-9e2c8730b859
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
-ms.workload: Inactive
-ms.openlocfilehash: b797bcf1e8e5521ea2b4fd57a68969b3f04e802d
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+manager: craigg
+ms.openlocfilehash: 486bfc2b144e8b228197b7b813af7aaebfe5b837
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="interoperability"></a>互通性
 *互通性*是對操作上有許多不同的 Dbms 單一應用程式的能力。 需要撰寫泛型、 可互通的應用程式是一種主要的因素，導致 ODBC 的開發。 不過，互通性並不是簡單的路徑，接著再從 「 不具互通性 」 到 「 完全互通。 」 路徑有多個分支，而且每個需要的功能、 速度、 程式碼複雜度和開發時間之間的取捨。  

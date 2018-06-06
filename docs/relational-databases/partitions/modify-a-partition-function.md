@@ -1,31 +1,31 @@
 ---
-title: "修改資料分割函式 | Microsoft Docs"
-ms.custom: 
+title: 修改資料分割函式 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
 ms.component: partitions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-partition
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: ae5bfc09-f27a-4ea9-9518-485278b11674
-caps.latest.revision: 
+caps.latest.revision: 11
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: b2466c376c36403ec9f529e6dfb6b9242c10a7a3
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: b7b0639e19c4a1fcce079b9c660176b00c1508ae
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="modify-a-partition-function"></a>修改資料分割函數
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] 您可以使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] ，在資料分割資料表或索引的資料分割函數中，加上或減去指定的資料分割數 (遞增為 1)，藉以變更 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中資料表或索引的資料分割方式。 若要加入資料分割，可以將現有資料分割「拆解」為兩個資料分割，並重新定義新資料分割的界限。 若要卸除資料分割，可以將兩個資料分割的界限「合併」成為一個。 最後這個動作會重新擴展一個資料分割，並使另一個資料分割成為未指派。  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+  您可以使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] ，在資料分割資料表或索引的資料分割函數中，加上或減去指定的資料分割數 (遞增為 1)，藉以變更 [!INCLUDE[tsql](../../includes/tsql-md.md)]中資料表或索引的資料分割方式。 若要加入資料分割，可以將現有資料分割「拆解」為兩個資料分割，並重新定義新資料分割的界限。 若要卸除資料分割，可以將兩個資料分割的界限「合併」成為一個。 最後這個動作會重新擴展一個資料分割，並使另一個資料分割成為未指派。  
   
 > [!CAUTION]  
 >  多份資料表或索引可以使用相同的資料分割函數。 當您修改資料分割函數時，將會在單一交易中影響所有資料表或索引。 修改之前，請先檢查資料分割函數的相依性。  
@@ -95,7 +95,7 @@ ms.lasthandoff: 01/18/2018
   
 #### <a name="to-split-a-single-partition-into-two-partitions"></a>若要將單一資料分割拆解成兩個資料分割  
   
-1.  在 **[物件總管]**中，連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的執行個體。  
+1.  在 **[物件總管]** 中，連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的執行個體。  
   
 2.  在標準列上，按一下 **[新增查詢]**。  
   
@@ -120,7 +120,7 @@ ms.lasthandoff: 01/18/2018
   
 #### <a name="to-merge-two-partitions-into-one-partition"></a>若要將兩個資料分割合併成一個資料分割  
   
-1.  在 **[物件總管]**中，連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的執行個體。  
+1.  在 **[物件總管]** 中，連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的執行個體。  
   
 2.  在標準列上，按一下 **[新增查詢]**。  
   

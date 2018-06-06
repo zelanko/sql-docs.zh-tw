@@ -1,30 +1,29 @@
 ---
-title: "Analysis Services 與 AlwaysOn 可用性群組 | Microsoft Docs"
-ms.custom: 
+title: Analysis Services 與 AlwaysOn 可用性群組 | Microsoft Docs
+ms.custom: ''
 ms.date: 05/17/2016
-ms.prod: sql-non-specified
-ms.prod_service: database-engine
-ms.service: 
-ms.component: availability-groups
-ms.reviewer: 
+ms.prod: sql
+ms.prod_service: high-availability
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: dbe-high-availability
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: high-availability
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: 14d16bfd-228c-4870-b463-a283facda965
-caps.latest.revision: "12"
+caps.latest.revision: 12
 author: MikeRayMSFT
 ms.author: mikeray
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: 3f6c3afd409b4c1d7ddf2ad5e099078dfa5238f8
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+monikerRange: '>= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 4a5bb795ae4d5c772e34f3ef4483934994799cb0
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="analysis-services-with-always-on-availability-groups"></a>Analysis Services 與 AlwaysOn 可用性群組
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
   AlwaysOn 可用性群組是預先定義的 SQL Server 關聯式資料庫集合，會在條件觸發任何一個資料庫的容錯移轉時一起容錯移轉，將要求重新導向至相同可用性群組中其他執行個體上的鏡像資料庫。 如果使用可用性群組做為高可用性解決方案，則可以使用該群組中的資料庫做為 Analysis Services 表格式或多維度解決方案的資料來源。 使用可用性資料庫時，下列所有 Analysis Services 作業都會如預期般運作：處理或匯入資料、直接查詢關聯式資料 (使用 ROLAP 儲存或 DirectQuery 模式)，以及回寫。  
   
@@ -64,7 +63,7 @@ ms.lasthandoff: 11/20/2017
     > [!NOTE]  
     >  這些步驟摘錄自[設定可用性複本上的唯讀存取 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/configure-read-only-access-on-an-availability-replica-sql-server.md)，文中提供執行這項工作的其他資訊和替代指示。  
   
-2.  依序展開 [AlwaysOn 高可用性] 節點和 [可用性群組] 節點。  
+2.  依序展開 [Always On 高可用性] 節點和 [可用性群組] 節點。  
   
 3.  按一下要變更複本的可用性群組。 展開 **[可用性複本]**。  
   
@@ -201,7 +200,7 @@ ms.lasthandoff: 11/20/2017
   
 4.  在 [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)] 中，連接至次要複本。  
   
-5.  依序展開 [AlwaysOn 高可用性] 節點和 [可用性群組] 節點。  
+5.  依序展開 [Always On 高可用性] 節點和 [可用性群組] 節點。  
   
 6.  以滑鼠右鍵按一下要容錯移轉的可用性群組，然後選取 [容錯移轉] 命令。 這會啟動 [容錯移轉可用性群組精靈]。 使用精靈選擇複本，以做為新的主要複本。  
   

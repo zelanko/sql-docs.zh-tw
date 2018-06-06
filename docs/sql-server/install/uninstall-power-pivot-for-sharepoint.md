@@ -1,29 +1,25 @@
 ---
-title: "解除安裝 Power Pivot for SharePoint | Microsoft Docs"
-ms.custom: 
+title: 解除安裝 Power Pivot for SharePoint | Microsoft Docs
+ms.custom: ''
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
 ms.component: install
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- setup-install
-- setup-install
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: setup-install
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: 3941a2f0-0d0c-4d1a-8618-7a6a7751beac
-caps.latest.revision: 
-author: MikeRayMSFT
-ms.author: mikeray
-manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: 1fb719e205eaf63498bb4c2ab5c25138123b82d4
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+caps.latest.revision: 27
+author: markingmyname
+ms.author: maghan
+manager: kfile
+ms.openlocfilehash: 437b8dcba0034bc1ab82778f54a0658824de8c09
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="uninstall-power-pivot-for-sharepoint"></a>解除安裝 PowerPivot for SharePoint
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -90,7 +86,7 @@ ms.lasthandoff: 02/09/2018
   
 2.  選取 **[移除功能、服務、應用程式和方案]** ，然後按一下 **[確定]**。  
   
-3.  或者，將視窗展開為全螢幕。 您應該會在視窗底部看到一個按鈕列，其中包含 **[驗證]**、 **[執行]**和 **[結束]** 命令。  
+3.  或者，將視窗展開為全螢幕。 您應該會在視窗底部看到一個按鈕列，其中包含 **[驗證]**、 **[執行]** 和 **[結束]** 命令。  
   
 4.  檢閱工作清單中的每個動作以了解每個動作的用途。  
   
@@ -108,7 +104,7 @@ ms.lasthandoff: 02/09/2018
   
 6.  按一下 **[驗證]** 來檢查每個動作是否有效。 如果無法使用 **[驗證]** ，表示所有動作都適用於您的系統。  
   
-7.  按一下 **[執行]** ，執行適用於此工作的所有動作。 只有在通過驗證檢查的情況下，才可以使用**[執行]** 。 當您按一下 **[執行]**時，會出現下列警告，提醒您動作是在批次模式下處理：「工具中標示為有效的所有組態設定都會套用到 SharePoint 伺服器陣列。 您要繼續嗎?」  
+7.  按一下 **[執行]** ，執行適用於此工作的所有動作。 只有在通過驗證檢查的情況下，才可以使用 **[執行]** 。 當您按一下 **[執行]** 時，會出現下列警告，提醒您動作是在批次模式下處理：「工具中標示為有效的所有組態設定都會套用到 SharePoint 伺服器陣列。 您要繼續嗎?」  
   
 8.  按一下 **[是]** 繼續。  
   

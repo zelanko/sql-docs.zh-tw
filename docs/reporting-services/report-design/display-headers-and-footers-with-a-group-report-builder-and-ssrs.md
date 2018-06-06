@@ -1,27 +1,25 @@
 ---
-title: "與群組一起顯示頁首和頁尾 (報表產生器及 SSRS) | Microsoft Docs"
-ms.custom: 
+title: 與群組一起顯示頁首和頁尾 (報表產生器及 SSRS) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: report-design
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: 8eb7d648-4df2-491a-96cb-99e55629d617
-caps.latest.revision: "8"
+caps.latest.revision: 8
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 92f7c462be75d4557ab44216af1beb14d101029e
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 3068cf6494dfc790f2990f8e872dd9365e3594f5
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="display-headers-and-footers-with-a-group-report-builder-and-ssrs"></a>與群組一起顯示頁首和頁尾 (報表產生器及 SSRS)
   您可以協助控制靜態資料列 (例如群組頁首或頁尾) 是否會與動態資料列 (與 Tablix 資料區中的群組有關聯) 一起轉譯。  
@@ -30,7 +28,7 @@ ms.lasthandoff: 01/09/2018
   
  若要控制與巢狀群組相關聯之動態資料列和資料行的轉譯行為，或與標籤或小計相關聯之靜態資料列和資料行的轉譯行為，您必須設定 Tablix 成員的屬性。 Tablix 成員代表靜態或動態資料列或資料行。 靜態成員會重複一次。 例如，總計資料列就是靜態資料列。 動態成員會針對每個群組執行個體重複一次。 例如，與具有群組運算式 [Territory] 之群組相關聯的資料列會針對領域的每個唯一值重複一次。 如需 Tablix 成員的詳細資訊，請參閱 [Tablix 資料區資料格、資料列及資料行 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/tablix-data-region-cells-rows-and-columns-report-builder-and-ssrs.md)。  
   
- 您可以在 [群組] 窗格中選取 Tablix 成員，然後在 [屬性] 窗格中設定 **[KeepWithGroup]**、 **[KeepTogether]**和 **[RepeatOnNewPage]** 屬性。 使用 **[KeepWithGroup]** 可在與群組相同的頁面上顯示群組頁首和頁尾。 使用 **[KeepTogether]** 可以與某個群組的資料列或資料行一併顯示靜態成員。 使用 **[RepeatOnNewPage]** 可在至少顯示一個 **[KeepWithGroup]** 值所指定的完整資料列群組成員執行個體的每一頁上，重複群組頁首或頁尾。 資料行群組成員不支援**[RepeatOnNewPage]** 。  
+ 您可以在 [群組] 窗格中選取 Tablix 成員，然後在 [屬性] 窗格中設定 **[KeepWithGroup]**、 **[KeepTogether]** 和 **[RepeatOnNewPage]** 屬性。 使用 **[KeepWithGroup]** 可在與群組相同的頁面上顯示群組頁首和頁尾。 使用 **[KeepTogether]** 可以與某個群組的資料列或資料行一併顯示靜態成員。 使用 **[RepeatOnNewPage]** 可在至少顯示一個 **[KeepWithGroup]** 值所指定的完整資料列群組成員執行個體的每一頁上，重複群組頁首或頁尾。 資料行群組成員不支援 **[RepeatOnNewPage]** 。  
   
 > [!NOTE]  
 >  **KeepWithGroup**、**KeepTogether** 和 **RepeatOnNewPage** 是群組成員屬性，可以使用 [群組] 窗格的 [進階模式] 設定。 如需詳細資訊，請參閱[群組窗格 &#40;報表產生器&#41;](../../reporting-services/report-design/grouping-pane-report-builder.md)。  

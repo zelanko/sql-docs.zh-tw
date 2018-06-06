@@ -1,31 +1,28 @@
 ---
-title: "支援並行存取模型 （Visual FoxPro ODBC 驅動程式） |Microsoft 文件"
-ms.custom: 
+title: 支援並行存取模型 （Visual FoxPro ODBC 驅動程式） |Microsoft 文件
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
-ms.component: odbc
-ms.reviewer: 
+ms.prod: sql
+ms.prod_service: connectivity
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: connectivity
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - Visual FoxPro ODBC driver [ODBC], concurrency
 - concurrency models [ODBC]
 - FoxPro ODBC driver [ODBC], concurrency
 ms.assetid: c39ed963-3af1-4888-8631-6083692ddcd7
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
-ms.workload: Inactive
-ms.openlocfilehash: 769c6efaf95b1642209fa46b292822914261b826
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+manager: craigg
+ms.openlocfilehash: 43ce790a912c78df9a0ef63e2172e69274ebb199
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="supported-concurrency-model-visual-foxpro-odbc-driver"></a>支援並行存取模型 （Visual FoxPro ODBC 驅動程式）
 Visual FoxPro ODBC 驅動程式支援*唯讀並行*。 您的應用程式可以呼叫[SQLSetStmtOption](../../odbc/microsoft/sqlsetstmtoption-visual-foxpro-odbc-driver.md) SQL_CONCUR_READ_ONLY 的 SQL_CONCURRENCY 選項。  

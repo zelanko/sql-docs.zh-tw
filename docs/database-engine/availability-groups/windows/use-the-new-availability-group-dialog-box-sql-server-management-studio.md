@@ -1,31 +1,30 @@
 ---
-title: "使用新增可用性群組對話方塊 (SQL Server Management Studio) | Microsoft Docs"
-ms.custom: 
+title: 使用新增可用性群組對話方塊 (SQL Server Management Studio) | Microsoft Docs
+ms.custom: ''
 ms.date: 05/17/2016
-ms.prod: sql-non-specified
-ms.prod_service: database-engine
-ms.service: 
-ms.component: availability-groups
-ms.reviewer: 
+ms.prod: sql
+ms.prod_service: high-availability
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: dbe-high-availability
-ms.tgt_pltfrm: 
-ms.topic: article
-helpviewer_keywords: Availability Groups [SQL Server], creating
+ms.technology: high-availability
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
+helpviewer_keywords:
+- Availability Groups [SQL Server], creating
 ms.assetid: 1b0a6421-fbd4-4bb4-87ca-657f4782c433
-caps.latest.revision: "40"
+caps.latest.revision: 40
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 2ada1178bcc31ba9ce5217ddc1e1a1cd771f851a
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 9b6fc2746ab71011d50a563a489178dc0ef4b7dc
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="use-the-new-availability-group-dialog-box-sql-server-management-studio"></a>使用新增可用性群組對話方塊 (SQL Server Management Studio)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 本主題描述如何使用 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 的 [新增可用性群組] 對話方塊，在已啟用 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 功能的 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 執行個體上建立 AlwaysOn 可用性群組。 *「可用性群組」* (Availability Group) 會定義當做單一單位容錯移轉的一組使用者資料庫，以及支援容錯移轉的一組容錯移轉夥伴 (也稱為 *「可用性複本」*(Availability Replica))。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  此主題描述如何使用 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 的 [新增可用性群組] 對話方塊，在已啟用 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 功能的 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 執行個體建立 AlwaysOn 可用性群組。 *「可用性群組」* (Availability Group) 會定義當做單一單位容錯移轉的一組使用者資料庫，以及支援容錯移轉的一組容錯移轉夥伴 (也稱為 *「可用性複本」*(Availability Replica))。  
   
 > [!NOTE]  
 >  如需可用性群組的簡介，請參閱 [AlwaysOn 可用性群組概觀 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)。  
@@ -85,7 +84,7 @@ ms.lasthandoff: 01/18/2018
   
 5.  在 **[一般]** 頁面上，使用 **[可用性群組名稱]** 欄位輸入新可用性群組的名稱。 這個名稱必須是有效的 SQL Server 識別碼，而且在 WSFC 叢集的所有可用性群組中是唯一的。 可用性群組名稱的最大長度為 128 個字元。  
   
-6.  在 **[可用性資料庫]** 方格中，按一下 **[加入]** 並輸入要屬於此可用性群組的本機資料庫名稱。 為每個要加入的資料庫重複此步驟。 當您按一下 **[確定]**時，對話方塊會驗證指定的資料庫是否符合屬於可用性群組的必要條件。 如需這些必要條件的相關資訊，請參閱 [AlwaysOn 可用性群組的必要條件、限制和建議 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md)。  
+6.  在 **[可用性資料庫]** 方格中，按一下 **[加入]** 並輸入要屬於此可用性群組的本機資料庫名稱。 為每個要加入的資料庫重複此步驟。 當您按一下 **[確定]** 時，對話方塊會驗證指定的資料庫是否符合屬於可用性群組的必要條件。 如需這些必要條件的相關資訊，請參閱 [AlwaysOn 可用性群組的必要條件、限制和建議 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md)。  
   
 7.  在 **[可用性資料庫]** 方格中，按一下 **[加入]** 並輸入要裝載次要複本的伺服器執行個體名稱。 此對話方塊不會嘗試連接到這些執行個體。 如果您指定不正確的伺服器名稱，次要複本會加入但無法連接。  
   

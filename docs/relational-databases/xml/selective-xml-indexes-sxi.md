@@ -1,32 +1,29 @@
 ---
-title: "選擇性 XML 索引 (SXI) | Microsoft Docs"
-ms.custom: 
+title: 選擇性 XML 索引 (SXI) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
 ms.component: xml
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- dbe-xml
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: xml
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: 598ecdcd-084b-4032-81b2-eed6ae9f5d44
-caps.latest.revision: 
+caps.latest.revision: 9
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 3e845dd3ae91488060e72ad75c3f60d7dc0c7977
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.openlocfilehash: 1bc3e5c4f5476fe97a096a2e1a1e4ca9748f709e
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="selective-xml-indexes-sxi"></a>選擇性 XML 索引 (SXI)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
-選擇性 XML 索引是除了一般 XML 索引之外，另一種可供您使用 XML 索引類型。 選擇性 XML 索引功能的目標如下：  
+  選擇性 XML 索引是除了一般 XML 索引之外，另一種可供您使用 XML 索引類型。 選擇性 XML 索引功能的目標如下：  
   
 -   改善 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中所儲存 XML 資料的查詢效能。  
   

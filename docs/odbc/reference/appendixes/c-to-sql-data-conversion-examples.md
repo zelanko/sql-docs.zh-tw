@@ -1,35 +1,32 @@
 ---
-title: "SQL 資料轉換範例的 C |Microsoft 文件"
-ms.custom: 
+title: SQL 資料轉換範例的 C |Microsoft 文件
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
-ms.component: odbc
-ms.reviewer: 
+ms.prod: sql
+ms.prod_service: connectivity
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: connectivity
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - converting data from c to SQL types [ODBC], examples
 - data conversions from C to SQL types [ODBC], examples
 ms.assetid: 9f390afc-d8b8-4286-b559-98b3b8781f3d
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
-ms.workload: Inactive
-ms.openlocfilehash: 7d3270b142cb857876a558122b670bb329e08c93
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+manager: craigg
+ms.openlocfilehash: fcba6d92970d0e0b5490f4c24506fe8bb2951217
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="c-to-sql-data-conversion-examples"></a>SQL 資料轉換範例 C
 下列範例說明如何驅動程式將 C 資料轉換成 SQL 資料：  
   
-|C 類型識別碼|C 資料值|SQL 類型<br /><br /> 識別碼 (identifier)|「資料行」<br /><br /> 長度|SQL 資料<br /><br /> value|SQLSTATE|  
+|C 類型識別碼|C 資料值|SQL 類型<br /><br /> 識別碼 (identifier)|資料行<br /><br /> 長度|SQL 資料<br /><br /> value|SQLSTATE|  
 |-----------------------|------------------|-----------------------------|-----------------------|------------------------|--------------|  
 |SQL_C_CHAR|abcdef\0 [a]|SQL_CHAR|6|abcdef|n/a|  
 |SQL_C_CHAR|abcdef\0 [a]|SQL_CHAR|5|abcde|22001|  

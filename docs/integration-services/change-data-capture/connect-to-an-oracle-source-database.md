@@ -1,30 +1,28 @@
 ---
-title: "連線到 Oracle 來源資料庫 | Microsoft Docs"
-ms.custom: 
+title: 連線到 Oracle 來源資料庫 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
 ms.component: change-data-capture
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 f1_keywords:
 - oraDb
 ms.assetid: 220cf555-0db2-443c-8f87-8e413f3ca731
-caps.latest.revision: 
+caps.latest.revision: 8
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 6d8007bd54b9ee8612d9b65a0864b3271427f0b8
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 1c81c8db6c0f91493f9bef023c6e09b5c00f9648
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="connect-to-an-oracle-source-database"></a>連接到 Oracle 來源資料庫
   使用 [Oracle 來源] 頁面可提供連接至 Oracle 來源資料庫所需的資訊。 此 CDC 執行個體將會讀取您所連接之 Oracle 資料庫的重做記錄。  

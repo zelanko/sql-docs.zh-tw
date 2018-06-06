@@ -1,17 +1,16 @@
 ---
-title: "檢視篩選資訊 (Transact-SQL) | Microsoft 文件"
-ms.custom: 
+title: 檢視篩選資訊 (Transact-SQL) | Microsoft 文件
+ms.custom: ''
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
 ms.component: sql-trace
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - displaying filter information
 - filters [SQL Server], viewing
@@ -19,19 +18,19 @@ helpviewer_keywords:
 - traces [SQL Server], filters
 - viewing filter information
 ms.assetid: b7e52c13-8c83-47c2-8cd0-af7a49eceb5c
-caps.latest.revision: 
-author: MikeRayMSFT
-ms.author: mikeray
+caps.latest.revision: 20
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 4052c5d227c32a512061ef053f5e300337feaab8
-ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
+ms.openlocfilehash: 2c3927a2b0a1b19d7dfba057672dd5d275c6e671
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="view-filter-information-transact-sql"></a>檢視篩選資訊 (Transact-SQL)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 本主題描述如何使用內建函式來檢視追蹤篩選資訊。  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  此主題描述如何使用內建函數來檢視追蹤篩選資訊。  
   
 ### <a name="to-view-filter-information"></a>若要檢視篩選資訊  
   

@@ -1,34 +1,30 @@
 ---
-title: "Audit Login GDR 事件類別 | Microsoft Docs"
-ms.custom: 
+title: Audit Login GDR 事件類別 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
-ms.prod_service: database-engine, sql-database
-ms.service: 
-ms.component: event-classes
-ms.reviewer: 
+ms.prod: sql
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: supportability
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - Audit Login GDR event class
 ms.assetid: cc0560d9-bbb9-4263-a1f3-827c80167f8c
-caps.latest.revision: 
+caps.latest.revision: 33
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: c151cb15d32b0e5f53d49164db6831050cb1b050
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: fd85302bb9c043730248c1b99fb881d4a50f2f43
+ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="audit-login-gdr-event-class"></a>Audit Login GDR 事件類別
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-只要加入或移除 **Windows 登入權限，就會發生** Audit Login GDR [!INCLUDE[msCoName](../../includes/msconame-md.md)] 事件類別。 此事件類別供 **sp_grantlogin**、 **sp_revokelogin**和 **sp_denylogin** 預存程序使用。  
+  只要加入或移除 **Windows 登入權限，就會發生** Audit Login GDR [!INCLUDE[msCoName](../../includes/msconame-md.md)] 事件類別。 此事件類別供 **sp_grantlogin**、 **sp_revokelogin**和 **sp_denylogin** 預存程序使用。  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的未來版本可能會移除這個事件類別。 建議您改用 **Audit Server Principal Management** 事件類別。  
   

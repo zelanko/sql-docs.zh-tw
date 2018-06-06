@@ -1,28 +1,26 @@
 ---
-title: "Excel 自訂屬性 | Microsoft Docs"
-ms.custom: 
+title: Excel 自訂屬性 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
 ms.component: data-flow
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: bdcc72b8-8950-47bd-88bf-5db6d48cc6bf
-caps.latest.revision: 
+caps.latest.revision: 8
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 0c52f5c78afff62eaad9d837c86d32112a25bd0a
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 0eb452faf4039c82e0bf3d4dedfa8f2ae49b56b5
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="excel-custom-properties"></a>Excel 自訂屬性
   **來源自訂屬性**  
@@ -33,7 +31,7 @@ ms.lasthandoff: 01/25/2018
   
 |屬性名稱|資料類型|描述|  
 |-------------------|---------------|-----------------|  
-|AccessMode|Integer|用來存取資料庫的模式。 可能的值包括 **[開啟資料列集]**、 **[來自變數的開啟資料列集]**、 **[SQL 命令]**和 **[來自變數的 SQL 命令]**。 預設值為 **[開啟資料列集]**。|  
+|AccessMode|Integer|用來存取資料庫的模式。 可能的值包括 **[開啟資料列集]**、 **[來自變數的開啟資料列集]**、 **[SQL 命令]** 和 **[來自變數的 SQL 命令]**。 預設值為 **[開啟資料列集]**。|  
 |CommandTimeout|Integer|命令逾時之前的秒數。值為 0 表示無限逾時。<br /><br /> **注意**：雖然您無法在 [Excel 來源編輯器] 中使用這個屬性，但是可以使用 [進階編輯器] 來設定這個屬性。|  
 |[OpenRowset]|String|用來開啟資料列集之資料庫物件的名稱。|  
 |OpenRowsetVariable|String|變數，其中包含用來開啟資料列集之資料庫物件的名稱。|  
@@ -69,5 +67,6 @@ ms.lasthandoff: 01/25/2018
   
 ## <a name="see-also"></a>另請參閱  
  [Common Properties](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
+ [使用 SQL Server Integration Services (SSIS) 將資料從 Excel 載入或載入至 Excel](../load-data-to-from-excel-with-ssis.md)
   
   

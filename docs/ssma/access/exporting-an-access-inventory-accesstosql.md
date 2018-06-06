@@ -1,16 +1,15 @@
 ---
-title: "匯出存取清查 (AccessToSQL) |Microsoft 文件"
-ms.prod: sql-non-specified
+title: 匯出存取清查 (AccessToSQL) |Microsoft 文件
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
 ms.component: ssma-access
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ssma
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 applies_to:
 - Azure SQL Database
 - SQL Server
@@ -24,16 +23,15 @@ helpviewer_keywords:
 - inventories of Access databases
 - querying exported metadata
 ms.assetid: 7e1941fb-3d14-4265-aff6-c77a4026d0ed
-caps.latest.revision: "18"
+caps.latest.revision: 18
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
-ms.workload: Inactive
-ms.openlocfilehash: 7f1ca36e752e0df28ca4b1fb3dcc7dff6f8895cf
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+manager: craigg
+ms.openlocfilehash: 7d0877666e13f490463e77ec30bf7792367747d9
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="exporting-an-access-inventory-accesstosql"></a>匯出存取清查 (AccessToSQL)
 如果您有多個存取資料庫，而且您不確定要將移轉至哪些[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]，您可以匯出專案中的所有存取資料庫的清查。 您可以檢閱，然後查詢來判斷哪一個資料庫並移轉這些資料庫中的物件的清查中繼資料。 這個清查可讓您快速尋找問題解答，如下所示：  
@@ -100,7 +98,7 @@ SSMA 會將匯出有關存取資料庫、 資料表、 資料行、 索引、 �
   
     您可以使用**全選**和**全部清除**加以選取或清除所有的資料庫清單頂端的按鈕。 您也可以按住 CTRL 鍵以選取多個資料列，或按住 SHIFT 鍵向選取的資料列範圍。  
   
-7.  按 [下一步] 。  
+7.  按一下 **[下一步]**。  
   
 8.  在確認頁面上，按一下 **完成**。  
   
@@ -124,7 +122,7 @@ SSMA 會將匯出有關存取資料庫、 資料表、 資料行、 索引、 �
   
 5.  在**驗證**下拉式功能表，選取要用於連線的驗證類型。 若要使用目前的 Windows 帳戶，請選取**Windows 驗證**。 若要使用[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]登入，選取**SQL Server 驗證**，然後提供使用者名稱和密碼。  
   
-如需有關連接到[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]，請參閱[連接到 SQL Server &#40;AccessToSQL &#41;](../../ssma/access/connecting-to-sql-server-accesstosql.md).  
+如需有關連接到[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]，請參閱[連接到 SQL Server &#40;AccessToSQL&#41;](../../ssma/access/connecting-to-sql-server-accesstosql.md)。  
   
 **若要匯出清查資訊**  
   
@@ -236,6 +234,6 @@ WHERE ColumnName LIKE '%salary%';
 ```  
 如果您不知道資料行名稱，您可以撰寫查詢來傳回所有資料行。 若要這樣做，請從上一個查詢移除 WHERE 子句。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
 [準備移轉的 Access 資料庫](http://msdn.microsoft.com/en-us/9b80a9e0-08e7-4b4d-b5ec-cc998d3f5114)  
   

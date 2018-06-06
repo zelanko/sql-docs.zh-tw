@@ -1,38 +1,19 @@
 ---
-title: "AMO 其他類別和方法 |Microsoft 文件"
-ms.custom: 
-ms.date: 02/14/2018
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- restores [AMO]
-- AMO, backup and restore
-- capture logs [AMO]
-- AmoException class [AMO]
-- Analysis Management Objects, backup and restore
-- assembly objects [AMO]
-- traces [AMO]
-- backups [AMO]
-ms.assetid: 60ed5cfa-3a03-4161-8271-0a71a3ae363b
-caps.latest.revision: 
-author: Minewiskan
+title: AMO 其他類別和方法 |Microsoft 文件
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: amo
+ms.topic: conceptual
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 5ae261375e96cf6bfa322262b0b13653b9534331
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: d77d216ae3390162221e8808fc6047d5c9c35e13
+ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="amo-other-classes-and-methods"></a>AMO 其他類別和方法
   本節包含一般類別不是 OLAP 或資料採礦特有以及屬於管理或管理中的物件時很有幫助[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]。 這些類別涵蓋如預存程序、追蹤、例外狀況以及備份與還原等功能。  
@@ -53,7 +34,7 @@ ms.lasthandoff: 02/15/2018
   
  ![AMO 其他類別](../../../analysis-services/multidimensional-models/analysis-management-objects/media/amo-otherclasses.gif "AMO 其他類別")  
   
-##  <a name="Assembly">組件物件</a>  
+##  <a name="Assembly"></a>組件物件  
  建立 <xref:Microsoft.AnalysisServices.Assembly> 物件的方式是將它加入伺服器的組件集合，然後使用 Update 方法將 <xref:Microsoft.AnalysisServices.Assembly> 物件更新到伺服器。  
   
  若要移除 <xref:Microsoft.AnalysisServices.Assembly> 物件，必須使用 <xref:Microsoft.AnalysisServices.Assembly> 物件的 Drop 方法來卸除它。 從資料庫的組件集合移除 <xref:Microsoft.AnalysisServices.Assembly> 物件並不會卸除組件，它只會讓您無法在應用程式中看到組件，直到下次執行應用程式為止。  
@@ -116,7 +97,7 @@ ms.lasthandoff: 02/15/2018
   
 -   **密碼**，如果不是空白，指定伺服器將加密備份檔案。  
   
-##  <a name="Traces">追蹤物件</a>  
+##  <a name="Traces"></a>追蹤物件  
  追蹤是用於監視、重新執行和管理 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 執行個體的架構。 像 [!INCLUDE[ssSqlProfiler](../../../includes/sssqlprofiler-md.md)] 等用戶端應用程式會訂閱追蹤，而且伺服器會按照追蹤定義的指定將追蹤事件傳送回去。  
   
  每個事件由事件類別描述。 事件類別描述所產生的事件類型。 在事件類別中，事件子類別描述更細的分類層級。 每個事件由若干資料行描述。 在所有事件中，描述追蹤事件的資料行都是一致的，而且符合 SQL 追蹤結構。 記錄在每一個資料行中的資訊，可能會因事件類別而不同，也就是，每個追蹤都有一組預先定義的資料行，但是資料行的意義可能會隨事件類別而不同。 例如，TextData 資料行是用以記錄所有陳述式事件的原始 ASSL。  
@@ -155,14 +136,14 @@ ms.lasthandoff: 02/15/2018
   
 6.  繼續執行您的應用程式。  
   
-##  <a name="CaptureLog">CaptureLog 類別和 CaptureXML 屬性</a>  
+##  <a name="CaptureLog"></a>CaptureLog 類別和 CaptureXML 屬性  
  AMO 執行的所有動作都會當做 XMLA 訊息傳送到伺服器。 AMO 提供不需 SOAP 標頭即可擷取所有這些訊息的方法。 如需詳細資訊，請參閱[簡介 AMO 類別](../../../analysis-services/multidimensional-models/analysis-management-objects/amo-classes-introduction.md)。 CaptureLog 是 AMO 中用以編寫物件與作業之指令碼的機制，將會使用 XMLA 來編寫物件與作業的指令碼。  
   
  若要開始擷取 XML，請將 CaptureXML 伺服器物件屬性必須設為**true**。 接著所有要傳送到伺服器的動作都會在 CaptureLog 類別中開始擷取，而不必將動作傳送到伺服器。 CaptureLog 被視為類別，因為它有 Clear 這個可用來清除擷取記錄的方法。  
   
  若要讀取記錄，請取得字串集合並開始對字串反覆運算。 另外，您可以使用伺服器物件方法 ConcatenateCaptureLog，將所有的記錄串連成一個字串。 ConcatenateCaptureLog 有三個參數，其中有兩個是必要的。 必要的參數*異動*，是布林類型，和*平行*，是布林類型。 如果*異動*設**true**，它會指出因為在單一交易，而不是每個命令視為個別交易，將建立的 XML 批次檔。 如果*平行*設**true**，它會指出以並行執行，而不是依序將記錄的批次檔中的所有命令，為都記錄。  
   
-##  <a name="AMO">AMOException 例外狀況類別</a>  
+##  <a name="AMO"></a>AMOException 例外狀況類別  
  您可以使用 AMOException 例外狀況類別，輕鬆地擷取應用程式中由 AMO 擲回的例外狀況。  
   
  AMO 在找到不同的問題時將會擲回例外狀況。 下表列出 AMO 所處理的例外狀況種類。 例外狀況是從 <xref:Microsoft.AnalysisServices.AmoException> 類別衍生。  
@@ -178,7 +159,7 @@ ms.lasthandoff: 02/15/2018
 ## <a name="see-also"></a>另請參閱  
  <xref:Microsoft.AnalysisServices>   
  [AMO 類別簡介](../../../analysis-services/multidimensional-models/analysis-management-objects/amo-classes-introduction.md)   
- [邏輯架構 &#40;Analysis Services-多維度資料 &#41;](../../../analysis-services/multidimensional-models/olap-logical/understanding-microsoft-olap-logical-architecture.md)   
- [資料庫物件 &#40;Analysis Services-多維度資料 &#41;](../../../analysis-services/multidimensional-models/olap-logical/database-objects-analysis-services-multidimensional-data.md)  
+ [邏輯架構 & #40;Analysis Services-多維度資料 & #41;](../../../analysis-services/multidimensional-models/olap-logical/understanding-microsoft-olap-logical-architecture.md)   
+ [資料庫物件 & #40;Analysis Services-多維度資料 & #41;](../../../analysis-services/multidimensional-models/olap-logical/database-objects-analysis-services-multidimensional-data.md)  
   
   

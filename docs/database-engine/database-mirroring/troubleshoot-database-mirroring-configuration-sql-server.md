@@ -1,37 +1,34 @@
 ---
-title: "針對資料庫鏡像組態進行疑難排解 (SQL Server) | Microsoft Docs"
-ms.custom: 
+title: 針對資料庫鏡像組態進行疑難排解 (SQL Server) | Microsoft Docs
+ms.custom: ''
 ms.date: 05/17/2016
-ms.prod: sql-non-specified
-ms.prod_service: database-engine
-ms.service: 
+ms.prod: sql
+ms.prod_service: high-availability
 ms.component: database-mirroring
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- dbe-high-availability
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: high-availability
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - database mirroring [SQL Server], deployment
 - endpoints [SQL Server], database mirroring
 - database mirroring [SQL Server], troubleshooting
 - troubleshooting [SQL Server], database mirroring
 ms.assetid: 87d3801b-dc52-419e-9316-8b1f1490946c
-caps.latest.revision: 
+caps.latest.revision: 69
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 3f3862958324bbd92c14921c03b0fa76f7dc7fc1
-ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
+ms.openlocfilehash: 952d19ba01dd8bef424138e569fbe05a9d75040c
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="troubleshoot-database-mirroring-configuration-sql-server"></a>疑難排解資料庫鏡像組態 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-本主題提供資訊以協助您對設定資料庫鏡像工作階段的問題進行疑難排解。  
+  本主題提供資訊以協助您對設定資料庫鏡像工作階段的問題進行疑難排解。  
   
 > [!NOTE]  
 >  確定您符合所有 [資料庫鏡像的必要條件](../../database-engine/database-mirroring/prerequisites-restrictions-and-recommendations-for-database-mirroring.md)。  

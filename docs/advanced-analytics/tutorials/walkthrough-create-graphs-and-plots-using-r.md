@@ -1,29 +1,18 @@
 ---
-title: "建立圖形和繪圖使用 SQL 與 R （逐步解說） |Microsoft 文件"
-ms.date: 11/10/2017
-ms.reviewer: 
-ms.suite: sql
-ms.prod: machine-learning-services
-ms.prod_service: machine-learning-services
-ms.component: 
-ms.technology: 
-ms.tgt_pltfrm: 
+title: 建立圖形和繪圖使用 SQL 與 R （逐步解說） |Microsoft 文件
+ms.prod: sql
+ms.technology: machine-learning
+ms.date: 04/15/2018
 ms.topic: tutorial
-applies_to:
-- SQL Server 2016
-dev_langs:
-- R
-ms.assetid: 5f70f0a6-fd4a-410f-9f44-1605503f77ec
-caps.latest.revision: 
-author: jeannt
-ms.author: jeannt
-manager: cgronlund
-ms.workload: On Demand
-ms.openlocfilehash: 2a1572cf1bc6f8e3f6aff99255e5805bf977978d
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+author: HeidiSteen
+ms.author: heidist
+manager: cgronlun
+ms.openlocfilehash: 4d4b573bc2aa0cc48e7c158edafa0dd604e6fc87
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34585470"
 ---
 # <a name="create-graphs-and-plots-using-sql-and-r-walkthrough"></a>建立圖形和繪圖使用 SQL 與 R （逐步解說）
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -109,8 +98,8 @@ ms.lasthandoff: 02/11/2018
 
 ## <a name="next-lesson"></a>下一課
 
-[建立使用 R 和 SQL 資料功能](/walkthrough-create-data-features.md)
+[建立使用 R 和 SQL 資料功能](walkthrough-create-data-features.md)
 
 ## <a name="previous-lesson"></a>上一課
 
-[使用 R 的資料摘要](/walkthrough-view-and-summarize-data-using-r.md)
+[使用 R 的資料摘要](walkthrough-view-and-summarize-data-using-r.md)

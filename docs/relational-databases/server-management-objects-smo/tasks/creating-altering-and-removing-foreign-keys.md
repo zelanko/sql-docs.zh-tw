@@ -1,29 +1,28 @@
 ---
-title: "建立、 改變和移除外部索引鍵 |Microsoft 文件"
-ms.custom: 
+title: 建立、 改變和移除外部索引鍵 |Microsoft 文件
+ms.custom: ''
 ms.date: 08/06/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
 ms.component: smo
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - foreign keys [SMO]
 ms.assetid: d43c8dca-bb6b-4a41-8a79-c96fd546fc91
-caps.latest.revision: 
+caps.latest.revision: 52
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 015a01acc3316e4eccc1c4b93ec77388d0b057ab
-ms.sourcegitcommit: cb2f9d4db45bef37c04064a9493ac2c1d60f2c22
+monikerRange: = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: fb86a1463eef4a4e438a2bda7b329c9d78a46c6f
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/12/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="creating-altering-and-removing-foreign-keys"></a>建立、改變和移除外部索引鍵
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
@@ -35,7 +34,7 @@ ms.lasthandoff: 01/12/2018
  代表外部索引鍵資料行會列於**資料行**物件的屬性<xref:Microsoft.SqlServer.Management.Smo.ForeignKey>物件。 外部索引鍵所參考的主索引鍵由<xref:Microsoft.SqlServer.Management.Smo.ForeignKey.ReferencedKey%2A>屬性中指定的資料表中<xref:Microsoft.SqlServer.Management.Smo.ForeignKey.ReferencedTable%2A>屬性。  
   
 ## <a name="example"></a>範例  
- 如果要使用所提供的任何程式碼範例，您必須選擇建立應用程式用的程式設計環境、程式設計範本，及程式設計語言。 如需詳細資訊，請參閱[建立 Visual C# 35。在 Visual Studio.NET 中的 SMO 專案](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)。  
+ 如果要使用所提供的任何程式碼範例，您必須選擇建立應用程式用的程式設計環境、程式設計範本，及程式設計語言。 如需詳細資訊，請參閱[建立 Visual C&#35; SMO Project in Visual Studio](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)。  
   
 ## <a name="creating-altering-and-removing-a-foreign-key-in-visual-basic"></a>在 Visual Basic 中建立、改變和移除外部索引鍵  
  此程式碼範例示範如何在某個資料表的一個或多個資料行以及另一個資料表的主要索引鍵資料行之間，建立外部索引鍵關聯性。  

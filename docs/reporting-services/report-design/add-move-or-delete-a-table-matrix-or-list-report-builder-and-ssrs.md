@@ -1,27 +1,25 @@
 ---
-title: "新增、移動或刪除資料表、矩陣或清單 (報表產生器及 SSRS) | Microsoft Docs"
-ms.custom: 
+title: 新增、移動或刪除資料表、矩陣或清單 (報表產生器及 SSRS) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: report-design
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: 4b97c470-cde0-4bb1-a46e-5f5f5553feaa
-caps.latest.revision: "8"
+caps.latest.revision: 8
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: eed251030c22506725ceace9dacc5100f911e12d
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 989e39e411129bef0af9b1af14548286927c2655
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="add-move-or-delete-a-table-matrix-or-list-report-builder-and-ssrs"></a>加入、移動或刪除資料表、矩陣或清單 (報表產生器及 SSRS)
   在 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 分頁報表中，資料區會顯示報表資料集中的資料。 資料區包括資料表、矩陣、清單、圖表和量測計。 若要讓某個資料區以巢狀結構的方式置於另一個資料區內，請個別加入每一個資料區，然後將子資料區拖曳到父資料區。  
@@ -40,7 +38,7 @@ ms.lasthandoff: 01/09/2018
   
 ## <a name="to-add-a-data-region"></a>若要加入資料區  
   
-1.  在 **[功能區]**的 **[資料區域]** 群組中，按一下要加入的資料區。  
+1.  在 **[功能區]** 的 **[資料區域]** 群組中，按一下要加入的資料區。  
   
 2.  按一下設計介面，然後拖曳滑鼠來建立一個方塊，這就是您想要的資料區大小。  
   

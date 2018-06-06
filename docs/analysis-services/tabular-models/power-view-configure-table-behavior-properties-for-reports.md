@@ -1,35 +1,25 @@
 ---
-title: "設定 Power View 報表的資料表行為屬性 |Microsoft 文件"
-ms.custom: 
-ms.date: 03/01/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services, azure-analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords:
-- sql13.asvs.bidtoolset.tablebehavior.f1
-ms.assetid: 1386aae0-1d73-4a50-9c69-ae12405d855c
-caps.latest.revision: 
-author: Minewiskan
+title: 設定 Power View 報表的資料表行為屬性 |Microsoft 文件
+ms.date: 05/07/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: tabular-models
+ms.topic: conceptual
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 23fcfac88cb0ab2a1ba390d003039b11bdf8bfc3
-ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
+ms.openlocfilehash: 13d2213746c79a396d681796cb863174248f54ff
+ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="power-view---configure-table-behavior-properties-for-reports"></a>Power View-設定報表的資料表行為屬性
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
-如果您要將表格式模型當作 [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] 的資料模型使用，可以設定資料表行為屬性，在更細微的層級公開詳細資料列。 設定資料表行為屬性會變更詳細資料列的群組行為，並讓識別資訊 (例如姓名、相片識別碼或標誌影像) 在圖格、卡片和圖表版面配置中有更好的預設位置。  
+  如果您要將表格式模型當作 [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] 的資料模型使用，可以設定資料表行為屬性，在更細微的層級公開詳細資料列。 設定資料表行為屬性會變更詳細資料列的群組行為，並讓識別資訊 (例如姓名、相片識別碼或標誌影像) 在圖格、卡片和圖表版面配置中有更好的預設位置。  
   
- [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] 不同於其他報表應用程式，因為它會在報表設計期間自動群組項目，方法是根據您所使用的呈現格式來評估您將哪些資料行放在報表欄位清單中。 在大多數情況下，預設群組行為會產生最佳的結果。 但對於某些資料表 (主要是包含詳細資料的資料表)，預設群組行為有時會將不應群組的資料列群組在一起。 如果是這類資料表，您可以設定屬性來變更評估群組的方式。  
+ [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)]不同於其他報表應用程式，它會自動群組項目在報表設計期間藉由評估您正在使用哪些資料行放在報表欄位清單的呈現格式中。 在大多數情況下，預設群組行為會產生最佳的結果。 但對於某些資料表 (主要是包含詳細資料的資料表)，預設群組行為有時會將不應群組的資料列群組在一起。 如果是這類資料表，您可以設定屬性來變更評估群組的方式。  
   
  建議針對個別資料列為主要目的的資料表 (例如員工或客戶記錄)，設定資料表行為屬性。 反之，某些資料表不會受惠於這些屬性，包括做為查閱資料表的資料表 (例如，日期資料表、產品目錄資料表或部門資料表，這類資料表包含相當少量的資料列和資料行)，或包含只在進行摘要時產生重點之資料列的摘要資料表 (例如，依性別、年齡或地理位置積存的人口普查資料)。 對於查閱和摘要資料表，預設群組行為會產生最佳的結果。  
   

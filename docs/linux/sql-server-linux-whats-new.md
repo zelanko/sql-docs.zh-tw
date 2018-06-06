@@ -1,25 +1,22 @@
 ---
-title: "新功能 SQL Server on Linux 2017 |Microsoft 文件"
-description: "本文章重點說明在 Linux 上的 SQL Server 2017 的新功能。"
+title: 新功能 SQL Server on Linux 2017 |Microsoft 文件
+description: 本文章重點說明在 Linux 上的 SQL Server 2017 的新功能。
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.date: 02/20/2018
 ms.topic: article
-ms.prod: sql-non-specified
-ms.prod_service: database-engine
-ms.service: 
-ms.component: 
+ms.prod: sql
+ms.component: ''
 ms.suite: sql
 ms.custom: sql-linux
-ms.technology: database-engine
+ms.technology: linux
 ms.assetid: 456b6f31-6b97-4e31-80ab-b40151ec4868
-ms.workload: On Demand
-ms.openlocfilehash: fd7f69a8cb21fa8aaabb518f9b3d1d178606a685
-ms.sourcegitcommit: f0c5e37c138be5fb2cbb93e9f2ded307665b54ea
+ms.openlocfilehash: f0e20a06faed4b2d6cda1b80f5be9d41aa2c14f1
+ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/24/2018
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="whats-new-for-sql-server-2017-on-linux"></a>在 Linux 上的 SQL Server 2017 的新功能
 
@@ -28,7 +25,7 @@ ms.lasthandoff: 02/24/2018
 本文描述在 Linux 上執行的 SQL Server 2017 可用服務的主要功能。
 
 > [!NOTE]
-> 除了在本文中的這些功能，累計更新定期發行後發行 GA 版本。 這些累積更新提供許多改善和修正程式。 如需最新 CU 版本資訊，請參閱[http://aka.ms/sql2017cu](http://aka.ms/sql2017cu)。 如需下載套件和已知的問題，請參閱[版本資訊](sql-server-linux-release-notes.md)。
+> 除了在本文中的這些功能，累計更新定期發行後發行 GA 版本。 這些累積更新提供許多改善和修正程式。 如需最新 CU 版本資訊，請參閱[ http://aka.ms/sql2017cu ](http://aka.ms/sql2017cu)。 如需下載套件和已知的問題，請參閱[版本資訊](sql-server-linux-release-notes.md)。
 
 ## <a name="sql-server-database-engine"></a>SQL Server Database Engine
 

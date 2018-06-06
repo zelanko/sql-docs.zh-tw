@@ -1,17 +1,17 @@
 ---
-title: "結構和使用方式的 DMX 預測查詢 |Microsoft 文件"
-ms.custom: 
+title: 結構和使用方式的 DMX 預測查詢 |Microsoft 文件
+ms.custom: ''
 ms.date: 03/02/2016
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
 ms.component: data-mining
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
-dev_langs: DMX
+dev_langs:
+- DMX
 helpviewer_keywords:
 - prediction joins [DMX]
 - empty prediction joins [DMX]
@@ -22,16 +22,15 @@ helpviewer_keywords:
 - singleton query predictions [DMX]
 - Data Mining Extensions [Analysis Services], prediction queries
 ms.assetid: 098bdaa6-9e7d-4e13-a9aa-eb17ce1750e6
-caps.latest.revision: "37"
+caps.latest.revision: 37
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: 5f25d8ecd230ca4d2e7aa6a694536e71f5dd0f4e
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 6f4e5d0f723851776340d3435c05e382c88552ae
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="structure-and-usage-of-dmx-prediction-queries"></a>DMX 預測查詢的結構和使用方式
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -82,18 +81,18 @@ ms.lasthandoff: 01/08/2018
   
  **ON**元素會對應至外部資料集中的資料行的採礦模型中定義的資料行。 如果是建立空白預測聯結查詢或自然預測聯結，不必包含這個元素。  
   
- 您可以使用**其中**子句篩選預測查詢的結果。 您可以使用**頂端**或**ORDER BY**子句選取最可能的預測。 如需有關使用這些子句的詳細資訊，請參閱[SELECT &#40; DMX &#41;](../dmx/select-dmx.md)。  
+ 您可以使用**其中**子句篩選預測查詢的結果。 您可以使用**頂端**或**ORDER BY**子句選取最可能的預測。 如需有關使用這些子句的詳細資訊，請參閱[選取&#40;DMX&#41;](../dmx/select-dmx.md)。  
   
- 預測陳述式之語法的詳細資訊，請參閱[SELECT FROM &#60; 模式 &#62;預測聯結 &#40; DMX &#41;](../dmx/select-from-model-prediction-join-dmx.md)和[SELECT FROM &#60; 模型 &#62; &#40; DMX &#41;](../dmx/select-from-model-dmx.md)。  
+ 預測陳述式之語法的詳細資訊，請參閱[SELECT FROM&#60;模型&#62;PREDICTION JOIN &#40;DMX&#41; ](../dmx/select-from-model-prediction-join-dmx.md)和[SELECT FROM&#60;模型&#62; &#40;DMX&#41;](../dmx/select-from-model-dmx.md).  
   
-## <a name="see-also"></a>請參閱  
- [資料採礦延伸模組 &#40; DMX &#41;參考](../dmx/data-mining-extensions-dmx-reference.md)   
- [資料採礦延伸模組 &#40; DMX &#41;函數參考](../dmx/data-mining-extensions-dmx-function-reference.md)   
- [資料採礦延伸模組 &#40; DMX &#41;運算子參考](../dmx/data-mining-extensions-dmx-operator-reference.md)   
- [資料採礦延伸模組 &#40; DMX &#41;陳述式參考](../dmx/data-mining-extensions-dmx-statements.md)   
- [資料採礦延伸模組 &#40; DMX &#41;語法慣例](../dmx/data-mining-extensions-dmx-syntax-conventions.md)   
- [資料採礦延伸模組 &#40; DMX &#41;語法元素](../dmx/data-mining-extensions-dmx-syntax-elements.md)   
- [一般預測函數 &#40; DMX &#41;](../dmx/general-prediction-functions-dmx.md)   
+## <a name="see-also"></a>另請參閱  
+ [資料採礦延伸模組 & #40; DMX & #41;參考](../dmx/data-mining-extensions-dmx-reference.md)   
+ [資料採礦延伸模組&#40;DMX&#41;函數參考](../dmx/data-mining-extensions-dmx-function-reference.md)   
+ [資料採礦延伸模組&#40;DMX&#41;運算子參考](../dmx/data-mining-extensions-dmx-operator-reference.md)   
+ [資料採礦延伸模組 & #40; DMX & #41;陳述式參考](../dmx/data-mining-extensions-dmx-statements.md)   
+ [資料採礦延伸模組&#40;DMX&#41;語法慣例](../dmx/data-mining-extensions-dmx-syntax-conventions.md)   
+ [資料採礦延伸模組&#40;DMX&#41;語法元素](../dmx/data-mining-extensions-dmx-syntax-elements.md)   
+ [一般預測函數&#40;DMX&#41;](../dmx/general-prediction-functions-dmx.md)   
  [了解 DMX Select 陳述式](../dmx/understanding-the-dmx-select-statement.md)  
   
   

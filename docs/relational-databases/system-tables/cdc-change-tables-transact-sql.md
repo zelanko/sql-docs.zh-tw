@@ -1,16 +1,14 @@
 ---
-title: "cdc.change_tables (TRANSACT-SQL) |Microsoft 文件"
-ms.custom: 
+title: cdc.change_tables (TRANSACT-SQL) |Microsoft 文件
+ms.custom: ''
 ms.date: 06/10/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
 ms.component: system-tables
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: system-objects
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - cdc.change_tables
@@ -20,16 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - cdc.change_tables
 ms.assetid: 3525a5f5-8d8b-46a8-b334-4b7cd9fb7c21
-caps.latest.revision: 
+caps.latest.revision: 23
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: dd28fa79040f39fd62c33b15478d18ed34766a8f
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 393d28472bcb71f3fe5812e3a22431ea04ec7893
+ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cdcchangetables-transact-sql"></a>cdc.change_tables (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -51,7 +48,7 @@ ms.lasthandoff: 11/21/2017
 |**create_date**|**datetime**|啟用來源資料表的日期。|  
 |**partition_switch**|**bit**|指出是否**SWITCH PARTITION**命令**ALTER TABLE**可以針對啟用異動資料擷取的資料表來執行。 0 表示已封鎖資料分割切換。 非資料分割的資料表一律傳回 1。|  
   
-## <a name="see-also"></a>請參閱＜  
- [sys.sp_cdc_help_change_data_capture &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-help-change-data-capture-transact-sql.md)  
+## <a name="see-also"></a>另請參閱  
+ [sys.sp_cdc_help_change_data_capture &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-help-change-data-capture-transact-sql.md)  
   
   

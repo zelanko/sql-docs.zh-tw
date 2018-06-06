@@ -1,31 +1,28 @@
 ---
-title: "程序呼叫逸出序列 |Microsoft 文件"
-ms.custom: 
+title: 程序呼叫逸出序列 |Microsoft 文件
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
-ms.component: odbc
-ms.reviewer: 
+ms.prod: sql
+ms.prod_service: connectivity
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: connectivity
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - escape sequences [ODBC], procedure call
 - procedure call escape sequence [ODBC]
 - ODBC escape sequences [ODBC], procedure call
 ms.assetid: 269fbab0-e5f2-4a98-86c0-2d7b647acaae
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
-ms.workload: Inactive
-ms.openlocfilehash: 080c74baca0cd641b14de3746657b4bfb09bc6dc
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+manager: craigg
+ms.openlocfilehash: e5279794a7f18df2ce2d56210e3ab1373af5cde7
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="procedure-call-escape-sequence"></a>程序呼叫逸出序列
 ODBC 使用逸出序列的程序呼叫。 此逸出序列語法如下所示：  
@@ -38,7 +35,7 @@ ODBC 使用逸出序列的程序呼叫。 此逸出序列語法如下所示：
   
  &#124;*起始 esc ODBC 端*[？ =] 呼叫*程序 ODBC esc 結束字元*  
   
- *程序*:: =*程序名稱*&#124;*程序名稱*(*程序參數清單*)  
+ *程序*:: =*程序名稱* &#124; *程序名稱*(*程序參數清單*)  
   
  *程序識別項*:: =*使用者定義名稱*  
   
@@ -64,7 +61,7 @@ ODBC 使用逸出序列的程序呼叫。 此逸出序列語法如下所示：
   
  &#124;*程序參數*，*程序參數清單*  
   
- *程序參數*:: =*動態參數*&#124;*常值*&#124;*空白字串*  
+ *程序參數*:: =*動態參數* &#124; *常值* &#124; *空白字串*  
   
  *空白字串*:: =  
   

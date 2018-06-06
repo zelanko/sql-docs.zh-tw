@@ -1,29 +1,28 @@
 ---
-title: "使用 irow:: Getcolumns (OLE DB) 提取資料行 |Microsoft 文件"
-ms.custom: 
+title: '使用 irow:: Getcolumns (OLE DB) 提取資料行 |Microsoft 文件'
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
 ms.component: native-client-ole-db-how-to
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - IRow interface
 ms.assetid: a4f79906-da0e-42f2-b0e9-812c29f39e48
-caps.latest.revision: 
+caps.latest.revision: 20
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 05062593bf7f02acccbd5fd338c0fdafe32e4f9e
-ms.sourcegitcommit: a0aa5e611a0e6ebb74ac1e2f613e8916dc7a7617
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 2f26fd5bdf8be6ed69039cf51a7f05715edcc7e4
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/24/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="fetch-columns-using-irowgetcolumns-ole-db"></a>使用 IRow::GetColumns 提取資料行 (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -35,7 +34,7 @@ ms.lasthandoff: 01/24/2018
   
 -   如何提取資料行的群組 (依序)。  
   
--   如何存取兩次資料行。 第一次會先取得實際的資料行寬度，然後再存取實際的資料。 在 DBCOLUMNACCESS 結構中，如果**pData** unll 和**cbMaxLen**為 0，呼叫**IRow**-**> GetColumns()**傳回實際的資料行長度。 在此情況下， **IRow]-> [GetColumns()**可以再次呼叫相同的資料行，擷取實際的資料上。  
+-   如何存取兩次資料行。 第一次會先取得實際的資料行寬度，然後再存取實際的資料。 在 DBCOLUMNACCESS 結構中，如果**pData** unll 和**cbMaxLen**為 0，呼叫**IRow**-**> GetColumns()** 傳回實際的資料行長度。 在此情況下， **IRow]-> [GetColumns()** 可以再次呼叫相同的資料行，擷取實際的資料上。  
   
 > [!IMPORTANT]  
 >  盡可能使用 Windows 驗證。 如果無法使用 Windows 驗證，請提示使用者在執行階段輸入認證。 請避免將認證儲存在檔案中。 如果您必須保存認證，則應該用 [Win32 crypto API](http://go.microsoft.com/fwlink/?LinkId=64532) 加密這些認證。  

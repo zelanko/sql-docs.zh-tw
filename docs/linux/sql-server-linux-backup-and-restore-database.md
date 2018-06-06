@@ -1,25 +1,22 @@
 ---
-title: "備份和還原在 Linux 上的 SQL Server 資料庫 |Microsoft 文件"
-description: "瞭解如何備份和還原在 Linux 上的 SQL Server 資料庫。"
+title: 備份和還原在 Linux 上的 SQL Server 資料庫 |Microsoft 文件
+description: 瞭解如何備份和還原在 Linux 上的 SQL Server 資料庫。
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.date: 11/14/2017
 ms.topic: article
-ms.prod: sql-non-specified
-ms.prod_service: database-engine
-ms.service: 
-ms.component: 
+ms.prod: sql
+ms.component: ''
 ms.suite: sql
 ms.custom: sql-linux
-ms.technology: database-engine
+ms.technology: linux
 ms.assetid: d30090fb-889f-466e-b793-5f284fccc4e6
-ms.workload: On Demand
-ms.openlocfilehash: 96450590b55a6cb9cf6fcf517380bc25a13c1431
-ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
+ms.openlocfilehash: 6e4699fb2ffadc3aaad73c4032073ff8567c856c
+ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/13/2018
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="backup-and-restore-sql-server-databases-on-linux"></a>在 Linux 上的備份和還原 SQL Server 資料庫
 
@@ -104,7 +101,7 @@ SQL Server 完成資料庫備份。
 
 1. 在 SSMS 中以滑鼠右鍵按一下**資料庫**按一下**還原資料庫...**. 
 
-1. 在下**來源**按一下**裝置：**然後按一下省略符號 （...）。
+1. 在下**來源**按一下**裝置：** 然後按一下省略符號 （...）。
 
 1. 找出您的資料庫備份檔案並按一下**確定**。 
 

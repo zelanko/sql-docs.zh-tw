@@ -1,16 +1,14 @@
 ---
-title: "標準的程式設計介面 |Microsoft 文件"
-ms.custom: 
+title: 標準的程式設計介面 |Microsoft 文件
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
-ms.prod_service: drivers
-ms.service: 
-ms.component: odbc
-ms.reviewer: 
+ms.prod: sql
+ms.prod_service: connectivity
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: connectivity
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - ODBC [ODBC], database access
 - SQL [ODBC], database access
@@ -18,16 +16,15 @@ helpviewer_keywords:
 - standardizing database access [ODBC], programming interface
 - programming interface standardization [ODBC]
 ms.assetid: a2fa727e-51f2-4123-ae25-0ee28e611231
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
-ms.workload: Inactive
-ms.openlocfilehash: 79cfb261e4ee433043794c864e7e02d93586c881
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+manager: craigg
+ms.openlocfilehash: e820b626ce8e4f207885b8c7e5dd5cdc7050f960
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="standard-programming-interface"></a>標準的程式設計介面
 程式設計介面，可能是標準化的最明顯候選項目。 事實上，當開發 ODBC 時，ANSI 和 ISO 已經提供標準的內嵌 SQL 與 SQL 模組。 雖然沒有標準存在於資料庫 CLI，SQL 存取群組 — 資料庫供應商的產業協會 — 已考慮是否要建立一個。組件的 ODBC 稍後變成其工作的基礎。  

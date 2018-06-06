@@ -1,39 +1,38 @@
 ---
-title: "監視 SQL Server 夥伴 | Microsoft Docs"
-description: "具有 Server 監視解決方案的協力廠商夥伴清單。"
+title: 監視 SQL Server 夥伴 | Microsoft Docs
+description: 具有 Server 監視解決方案的協力廠商夥伴清單。
 services: sql-server
 documentationcenter: NA
 author: MikeRayMSFT
-manager: jhubbard
-editor: 
-ms.assetid: 
-ms.service: 
+manager: craigg
+editor: ''
+ms.assetid: ''
 ms.component: sql-non-specified
 ms.suite: sql
 ms.devlang: NA
 ms.topic: article
 ms.tgt_pltfrm: NA
-ms.workload: sql-server
-ms.custom: 
+ms.custom: ''
 ms.date: 11/02/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
 ms.author: mikeray
-ms.openlocfilehash: 0ddac5bf809c836c194e7b0f187a24e4ed060abe
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: f9c0dbc7ddcd40f8dbd859711c32dc4f9ff79f71
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sql-server-monitoring-partners"></a>SQL Server 監視夥伴
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 若要監視您的 SQL Server 服務，您可以從各種領先業界的工具中選擇。 本文章特別介紹提供 Microsoft SQL Server 監視解決方案支援的 Microsoft 夥伴公司。
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+若要監視您的 SQL Server 服務，您可以從各種領先業界的工具中選擇。 本文章特別介紹提供 Microsoft SQL Server 監視解決方案支援的 Microsoft 夥伴公司。
 
 <!--
 |![PartnerShortName][1] |**PartnerShortName**<br>PartnerShortName Brief description of the type of products that partner provides. <br><br>List of supported versions of SQL Server, OS, OS platforms/distros Server 2005 SP4 – SQL Server 2016 on Windows |[Datasheet][PartnerShortName_datasheet]<br>[Marketplace][PartnerShortName_marketplace]<br>[Website][PartnerShortName_website]<br>[Twitter][PartnerShortName_twitter]<br>[Video][PartnerShortName_youtube]|[![veem_video](./media/partner-hadr-sql-server/PartnerShortName_video.png)](https://www.youtube.com/channel/**************)
 -->
 
 ## <a name="microsoft-monitoring-partners"></a>Microsoft 監視夥伴
-| Partner | Description | 連結 |
+| Partner | 描述 | 連結 |
 | --- | --- | --- | --- |
 |[![idera][1]][idera_website] |**IDERA**<br>SQL 診斷管理員是功能強大的效能監視和診斷解決方案，會主動從中央主控台警示系統管理員 SQL Server 環境內部的健康情況、效能和可用性問題。<br><br>[系統需求][idera_requirements]|<!--[Marketplace][idera_marketplace]<br>-->[網站][idera_website]<br>[Twitter][idera_twitter]<br>[影片][idera_youtube] | |
 |[![quest][3]][quest_website] |**Quest**<br>SQL Server Enterprise 上的 Spotlight - 提供 SQL Server 環境無與倫比的監視、診斷和最佳化，確保尖峰效能不間斷。 Spotlight 可讓您存取所需的詳細資料，讓您的 SQL Server 資料庫發揮最佳狀態。 取得健康情況和效能的直覺式概觀、自動化的警示和動作，以及行動裝置支援。|[Marketplace][quest_marketplace]<br>[網站][quest_website]<br>[影片][quest_video] | |
@@ -43,7 +42,7 @@ ms.lasthandoff: 12/05/2017
 
 
 
-## <a name="next-steps"></a>後續的步驟
+## <a name="next-steps"></a>後續步驟
 若要深入了解我們的其他夥伴，請參閱[高可用性和災害復原夥伴][hadr_partners]、[管理夥伴][management_partners]及[開發夥伴][dev_partners]。
 
 <!--Image references-->

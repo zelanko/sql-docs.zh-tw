@@ -1,16 +1,14 @@
 ---
 title: RAISERROR (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 02/21/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
 ms.component: t-sql|language-elements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: t-sql
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - RAISERROR
@@ -31,16 +29,16 @@ helpviewer_keywords:
 - CATCH block
 - messages [SQL Server], RAISERROR statement
 ms.assetid: 483588bd-021b-4eae-b4ee-216268003e79
-caps.latest.revision: 
+caps.latest.revision: 73
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: Active
-ms.openlocfilehash: af9f82f9b550ecd366c10562199c606bf8ff0c9c
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: d9e89081eadae06a6dd14ae9a4d5e273657146f3
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="raiserror-transact-sql"></a>RAISERROR (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -126,10 +124,10 @@ RAISERROR ( { msg_str | @local_variable }
 >  這些類型規格的基礎乃是原本為 C 標準程式庫中 **printf** 函數所定義的規格。 用於 RAISERROR 訊息字串的類型規格對應到 [!INCLUDE[tsql](../../includes/tsql-md.md)] 資料類型，而用於 **printf** 的規格對應到 C 語言資料類型。 當 [!INCLUDE[tsql](../../includes/tsql-md.md)] 沒有類似於相關聯 C 資料類型的資料類型時，RAISERROR 不支援用於 **printf** 的類型規格。 例如，RAISERROR 不支援指標的 *%p* 規格，因為 [!INCLUDE[tsql](../../includes/tsql-md.md)] 沒有指標資料類型。  
   
 > [!NOTE]  
->  若要轉換 [!INCLUDE[tsql](../../includes/tsql-md.md)]**bigint** 資料類型的值，請指定 **%I64d**。  
+>  若要轉換 [!INCLUDE[tsql](../../includes/tsql-md.md)] **bigint** 資料型別的值，請指定 **%I64d**。  
   
- **@** *local_variable*  
- 這是任何有效字元資料類型的變數，其中包含採用與 *msg_str* 相同方法格式化的字串。 **@***local_variable* 必須是 **char** 或 **varchar**，或者必須能夠隱含轉換為這兩種資料類型。  
+ *@local_variable*  
+ 這是任何有效字元資料類型的變數，其中包含採用與 *msg_str* 相同方法格式化的字串。 *@local_variable* 必須是 **char** 或 **varchar**，或能隱含地轉換成這些資料型別。  
   
  *severity*  
  這是與這則訊息相關聯的使用者自訂嚴重性層級。 當利用 *msg_id* 來引發使用 sp_addmessage 建立的使用者自訂訊息時，RAISERROR 上指定的嚴重性會覆寫 sp_addmessage 中指定的嚴重性。  

@@ -1,34 +1,37 @@
 ---
 title: SQL Server Agent | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
 ms.component: ssms-agent
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: tools-ssms
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ssms
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Agent, about SQL Server Agent
 - automatic administration steps
 ms.assetid: 8d1dc600-aabb-416f-b3af-fbc9fccfd0ec
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: Active
-ms.openlocfilehash: 67b44d5e9057cc9ede6cdece28b23ae3ab8bf037
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 6eacddc4432560bcde519602dd26c2b472b37041
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sql-server-agent"></a>SQL Server Agent
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent 是 Microsoft Windows 服務，它會執行排程的管理工作 (在 [!INCLUDE[ssCurrent](../../includes/sscurrent_md.md)] 中稱為 「作業」(Job))。  
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+
+> [!IMPORTANT]  
+> [Azure SQL Database 受控執行個體](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)目前支援多數 (但非全部) 的 SQL Server Agent 功能。 如需詳細資料，請參閱 [Azure SQL Database 受控執行個體與 SQL Server 之間的 T-SQL 差異](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)。
+
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent 是 Microsoft Windows 服務，它會執行排程的管理工作 (在 *中稱為* 「作業」 [!INCLUDE[ssCurrent](../../includes/sscurrent_md.md)](Job))。  
   
 **本主題內容**  
   
@@ -127,7 +130,7 @@ ms.lasthandoff: 01/17/2018
 **msdb**中 **SQLAgentUserRole**、 **SQLAgentReaderRole** 與 **SQLAgentOperatorRole**固定資料庫角色的成員，以及 **系統管理員 (sysadmin)** 固定伺服器角色的成員，都具有存取 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent 的權限。 不屬於以上任一角色的成員，都無法使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent。 如需 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent 所使用角色的詳細資訊，請參閱 [實作 SQL Server Agent 安全性](../../ssms/agent/implement-sql-server-agent-security.md)。  
   
 ### <a name="subsystems"></a>子系統  
-子系統是預先定義的物件，代表作業步驟可用的功能。 每個 Proxy 都具有一或多個子系統的存取權。 子系統可提供安全性，因為它們會將 Proxy 可用的功能存取加以分隔。 每種作業步驟都可在 Proxy 的內容中執行，除了 [!INCLUDE[tsql](../../includes/tsql_md.md)] 作業步驟以外； [!INCLUDE[tsql](../../includes/tsql_md.md)] 作業步驟使用 EXECUTE AS 命令來設定安全性內容。  
+子系統是預先定義的物件，代表作業步驟可用的功能。 每個 Proxy 都具有一或多個子系統的存取權。 子系統可提供安全性，因為它們會將 Proxy 可用的功能存取加以分隔。 每種作業步驟都可在 Proxy 的內容中執行，除了 [!INCLUDE[tsql](../../includes/tsql_md.md)] 作業步驟以外； [!INCLUDE[tsql](../../includes/tsql_md.md)] 作業步驟使用 EXECUTE AS 命令來設定作業擁有者的安全性內容。  
   
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 定義了下表所列的子系統：  
   

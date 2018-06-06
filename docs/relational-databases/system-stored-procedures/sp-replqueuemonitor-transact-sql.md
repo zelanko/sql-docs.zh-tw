@@ -1,16 +1,15 @@
 ---
-title: "sp_replqueuemonitor (TRANSACT-SQL) |Microsoft 文件"
-ms.custom: 
+title: sp_replqueuemonitor (TRANSACT-SQL) |Microsoft 文件
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - sp_replqueuemonitor
 ms.assetid: 6909a3f1-43a2-4df5-a6a5-9e6f347ac841
-caps.latest.revision: 
+caps.latest.revision: 25
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: bd29cdd9e22873dd7d10db99078f25ce7e15d55f
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 8c1d4737d5f1502d98a58f268b58c93cf71d71ab
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="spreplqueuemonitor-transact-sql"></a>sp_replqueuemonitor (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,22 +48,22 @@ sp_replqueuemonitor [ @publisher = ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>引數  
- [  **@publisher**  =] **'***發行者***'**  
+ [ **@publisher** = ] **'***publisher***'**  
  這是發行者的名稱。 *發行者*是**sysname**，預設值是 NULL。 必須設定伺服器的發行作業。 所有發行者都是 NULL。  
   
- [  **@publisherdb**  =] **'***publisher_db***'** ]  
+ [ **@publisherdb** =] **'***publisher_db***'** ]  
  這是發行集資料庫的名稱。 *publisher_db*是**sysname**，預設值是 NULL。 所有發行集資料庫都是 NULL。  
   
- [  **@publication**  =] **'***發行集***'** ]  
+ [ **@publication** =] **'***發行集***'** ]  
  這是發行集的名稱。 *發行集*是**sysname**，預設值是 NULL。 所有發行集都是 NULL。  
   
- [  **@tranid**  =] **'***tranid***'** ]  
+ [ **@tranid** =] **'***tranid***'** ]  
  這是交易識別碼。 *tranid*是**sysname**，預設值是 NULL。 所有交易都是 NULL。  
   
  [**@queuetype=** ] **'***queuetype***'** ]  
  這是儲存交易的佇列類型。 *queuetype*是**tinyint**預設值是**0**，而且可以是下列值之一。  
   
-|值|描述|  
+|Value|描述|  
 |-----------|-----------------|  
 |**0**|所有佇列類型|  
 |**1**|訊息佇列|  
@@ -80,7 +78,7 @@ sp_replqueuemonitor [ @publisher = ] 'publisher'
 ## <a name="permissions"></a>Permissions  
  只有成員**sysadmin**固定的伺服器角色或**db_owner**固定的資料庫角色可以執行**sp_replqueuemonitor**。  
   
-## <a name="see-also"></a>請參閱＜  
+## <a name="see-also"></a>另請參閱  
  [Updatable Subscriptions for Transactional Replication](../../relational-databases/replication/transactional/updatable-subscriptions-for-transactional-replication.md)   
  [系統預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   

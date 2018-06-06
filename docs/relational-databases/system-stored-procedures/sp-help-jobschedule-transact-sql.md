@@ -1,16 +1,14 @@
 ---
-title: "sp_help_jobschedule (TRANSACT-SQL) |Microsoft 文件"
-ms.custom: 
+title: sp_help_jobschedule (TRANSACT-SQL) |Microsoft 文件
+ms.custom: ''
 ms.date: 08/09/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: system-objects
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_help_jobschedule
@@ -20,16 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_help_jobschedule
 ms.assetid: 2cded902-9272-4667-ac4b-a4f95a9f008e
-caps.latest.revision: 
+caps.latest.revision: 34
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 87131f3a5347f24593798bbb81e9f81494897593
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: edaebbc89b6422bd529963dc851371747f7d22be
+ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="sphelpjobschedule-transact-sql"></a>sp_help_jobschedule (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -58,13 +55,13 @@ sp_help_jobschedule { [ @job_id = ] job_id | [ @job_name = ] 'job_name' }
   
 > **注意：**任一*job_id*或*job_name*必須指定，但不可同時指定兩者。  
   
- [ **@schedule_name=** ] **'***schedule_name***'**  
+ [  **@schedule_name=** ] **'***schedule_name***'**  
  作業的排程項目名稱。 *schedule_name*是**sysname**，預設值是 NULL。  
   
  [ **@schedule_id=** ] *schedule_id*  
  作業的排程項目識別碼。 *schedule_id*是**int**，預設值是 NULL。  
   
- [ **@include_description=** ] *include_description*  
+ [  **@include_description=** ] *include_description*  
  指定結果集中是否要包含排程的描述。 *include_description*是**元**，預設值是**0**。 當*include_description*是**0**，排程的描述不包含在結果集中。 當*include_description*是**1**，排程的描述包含在結果集中。  
   
 ## <a name="return-code-values"></a>傳回碼值  
@@ -77,11 +74,11 @@ sp_help_jobschedule { [ @job_id = ] job_id | [ @job_name = ] 'job_name' }
 |**schedule_id**|**int**|排程識別碼。|  
 |**schedule_name**|**sysname**|排程的名稱。|  
 |**enabled**|**int**|是否要啟用排程 (**1**) 或未啟用 (**0**)。|  
-|**freq_type**|**int**|指出作業執行時間的值。<br /><br /> **1** = Once<br /><br /> **4** = 每天<br /><br /> **8** = 每週<br /><br /> **16** = 每月<br /><br /> **32** = 每月，相對於**freq_interval**<br /><br /> **64** = 時執行**SQLServerAgent**服務啟動。|  
-|**freq_interval**|**int**|執行作業的天數。 值取決於值**freq_type**。 如需詳細資訊，請參閱[sp_add_schedule &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md).|  
-|**freq_subday_type**|**int**|單位**freq_subday_interval**。 如需詳細資訊，請參閱[sp_add_schedule &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md).|  
-|**freq_subday_interval**|**int**|數目**freq_subday_type**期間每次執行作業之間發生。 如需詳細資訊，請參閱[sp_add_schedule &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md).|  
-|**freq_relative_interval**|**int**|排程作業的次數**freq_interval**中每個月。 如需詳細資訊，請參閱[sp_add_schedule &#40;TRANSACT-SQL &#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md).|  
+|**freq_type**|**int**|指出作業執行時間的值。<br /><br /> **1** = 一次<br /><br /> **4** = 每天<br /><br /> **8** = 每週<br /><br /> **16** = 每月<br /><br /> **32** = 每月，相對於**freq_interval**<br /><br /> **64** = 時執行**SQLServerAgent**服務啟動。|  
+|**freq_interval**|**int**|執行作業的天數。 值取決於值**freq_type**。 如需詳細資訊，請參閱[sp_add_schedule &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md)。|  
+|**freq_subday_type**|**int**|單位**freq_subday_interval**。 如需詳細資訊，請參閱[sp_add_schedule &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md)。|  
+|**freq_subday_interval**|**int**|數目**freq_subday_type**期間每次執行作業之間發生。 如需詳細資訊，請參閱[sp_add_schedule &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md)。|  
+|**freq_relative_interval**|**int**|排程作業的次數**freq_interval**中每個月。 如需詳細資訊，請參閱[sp_add_schedule &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md)。|  
 |**freq_recurrence_factor**|**int**|排程執行作業的間隔月數。|  
 |**active_start_date**|**int**|排程的開始日期。|  
 |**active_end_date**|**int**|排程的結束日期。|  
@@ -154,9 +151,9 @@ GO
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [sp_add_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md)   
- [sp_delete_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-schedule-transact-sql.md)   
- [sp_update_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-update-schedule-transact-sql.md)   
+ [sp_add_schedule &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md)   
+ [sp_delete_schedule &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-schedule-transact-sql.md)   
+ [sp_update_schedule &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-update-schedule-transact-sql.md)   
  [系統預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

@@ -1,35 +1,39 @@
 ---
-title: "設定使用者可建立及管理 SQL Server Agent 作業 | Microsoft Docs"
-ms.custom: 
+title: 設定使用者可建立及管理 SQL Server Agent 作業 | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
 ms.component: ssms-agent
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: tools-ssms
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ssms
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Agent jobs, user configuration
 - jobs [SQL Server Agent], user configuration
 - SQLAgentUserRole database role
 - proxy accounts [SQL Server Agent]
 ms.assetid: 67897e3e-b7d0-43dd-a2e2-2840ec4dd1ef
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: Active
-ms.openlocfilehash: fa136889563dc44e7fd40391feae2cb5ddffa541
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: cf124f37dfd22fb4116d0556d0b66c4caa469f1d
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="configure-a-user-to-create-and-manage-sql-server-agent-jobs"></a>Configure a User to Create and Manage SQL Server Agent Jobs
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] 本主題描述如何設定使用者，以建立或執行 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent 作業。  
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+
+> [!IMPORTANT]  
+> [Azure SQL Database 受控執行個體](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)目前支援多數 (但非全部) 的 SQL Server Agent 功能。 如需詳細資料，請參閱 [Azure SQL Database 受控執行個體與 SQL Server 之間的 T-SQL 差異](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)。
+
+本主題描述如何設定使用者，以建立或執行 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent 作業。  
   
 -   **開始之前**  [安全性](#Security)  
   
@@ -48,7 +52,7 @@ ms.lasthandoff: 01/17/2018
 ## <a name="SSMS"></a>使用 SQL Server Management Studio  
 **若要將 SQL 登入或 msdb 角色加入 SQL Server Agent 固定資料庫角色中**  
   
-1.  在 **[物件總管]**中展開伺服器。  
+1.  在 **[物件總管]** 中展開伺服器。  
   
 2.  展開 **[安全性]**，再展開 **[登入]**。  
   
@@ -56,11 +60,11 @@ ms.lasthandoff: 01/17/2018
   
 4.  在 **[登入屬性]** 對話方塊的 **[使用者對應]** 頁面上，選取包含 **msdb**的資料列。  
   
-5.  在 **[資料庫角色成員資格對象: msdb]**底下，核取適當的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent 固定資料庫角色。  
+5.  在 **[資料庫角色成員資格對象: msdb]** 底下，核取適當的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent 固定資料庫角色。  
   
 **若要設定 Proxy 帳戶來建立及管理 SQL Server Agent 作業步驟**  
   
-1.  在 **[物件總管]**中展開伺服器。  
+1.  在 **[物件總管]** 中展開伺服器。  
   
 2.  展開 **[SQL Server Agent]**。  
   

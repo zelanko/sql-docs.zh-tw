@@ -1,25 +1,23 @@
 ---
-title: "Reporting Services SharePoint 模式的 PowerShell Cmdlet | Microsoft Docs"
-ms.custom: 
+title: Reporting Services SharePoint 模式的 PowerShell Cmdlet | Microsoft Docs
+ms.custom: ''
 ms.date: 09/25/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: report-server-sharepoint
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 7b2d501e76e281716d1d88f858d6642c3a0a1ef5
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 2ccff01afbd9e51f0754ceaecf885b36a5b28f9b
+ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="powershell-cmdlets-for-reporting-services-sharepoint-mode"></a>Reporting Services SharePoint 模式的 PowerShell Cmdlet
 
@@ -104,7 +102,7 @@ ms.lasthandoff: 01/09/2018
 |Get-SPRSDatabaseRightsScript|針對 Reporting Services 服務應用程式將資料庫權限指令碼輸出到畫面。 它會提示您提供所需的使用者和資料庫，然後傳回您可執行以修改權限的 Transact SQL。 然後您就可以在 SQL Server Management Studio 中執行這個指令碼。|  
 |Get-SPRSDatabaseUpgradeScript|將資料庫升級指令碼輸出至畫面。 指令碼會將 Reporting Services 服務應用程式資料庫升級至目前 Reporting Services 安裝的資料庫版本。|  
   
-## <a name="reporting-services-custom-runctionality-cmdlets"></a>Reporting Services 自訂功能 Cmdlet
+## <a name="reporting-services-custom-functionality-cmdlets"></a>Reporting Services 自訂功能 Cmdlet
   
 |指令程式|描述|  
 |------------|-----------------|  

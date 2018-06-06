@@ -1,16 +1,14 @@
 ---
-title: "sys.fn_hadr_distributed_ag_replica (TRANSACT-SQL) |Microsoft 文件"
-ms.custom: 
+title: sys.fn_hadr_distributed_ag_replica (TRANSACT-SQL) |Microsoft 文件
+ms.custom: ''
 ms.date: 03/16/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
 ms.component: system-functions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: 
+ms.technology: system-objects
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.fn_hadr_distributed_ag_replica
@@ -22,18 +20,17 @@ dev_langs:
 helpviewer_keywords:
 - sys.fn_hadr_distributed_ag_replica
 ms.assetid: a1e5f9cb-c350-4bb4-a04f-7394f6f25d62
-caps.latest.revision: 
+caps.latest.revision: 12
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: f53f1eac87a7b02197412283e8413849c1450f86
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: ba68c331ee4fea313bd0186516d5cc9675758c20
+ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 05/04/2018
 ---
-# <a name="sysfnhadrdistributedagreplica-transact-sql"></a>sys.fn_hadr_distributed_ag_replica (Transact-SQL)
+# <a name="sysfnhadrdistributedagreplica-transact-sql"></a>sys.fn_hadr_distributed_ag_replica (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   用來對應至本機可用性群組的分散式的可用性群組中的複本。  
@@ -75,10 +72,10 @@ GO
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [AlwaysOn 可用性群組功能 &#40;TRANSACT-SQL &#41;](../../relational-databases/system-functions/always-on-availability-groups-functions-transact-sql.md)   
- [AlwaysOn 可用性群組 &#40;SQL Server &#41;](../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md)   
- [分散式的可用性群組 &#40;AlwaysOn 可用性群組 &#41;](../../database-engine/availability-groups/windows/distributed-availability-groups-always-on-availability-groups.md)  
+ [AlwaysOn 可用性群組功能&#40;Transact SQL&#41;](../../relational-databases/system-functions/always-on-availability-groups-functions-transact-sql.md)   
+ [AlwaysOn 可用性群組 & #40;SQL Server & #41;](../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md)   
+ [分散式可用性群組&#40;AlwaysOn 可用性群組&#41;](../../database-engine/availability-groups/windows/distributed-availability-groups-always-on-availability-groups.md)  
  [建立可用性群組 &#40;TRANSACT-SQL&#41;](../../t-sql/statements/create-availability-group-transact-sql.md)   
- [ALTER 可用性群組 &#40;TRANSACT-SQL &#41;](../../t-sql/statements/alter-availability-group-transact-sql.md)  
+ [ALTER 可用性群組 & #40;TRANSACT-SQL & #41;](../../t-sql/statements/alter-availability-group-transact-sql.md)  
   
   
