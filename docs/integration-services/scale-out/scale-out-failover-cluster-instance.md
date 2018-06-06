@@ -16,11 +16,12 @@ caps.latest.revision: 1
 author: haoqian
 ms.author: haoqian
 manager: craigg
-ms.openlocfilehash: bd9c61743812b386d4bcf420debfce6e83fb0778
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d11bd76d4bc8f811cbaa4ea34258b56aaf6d6763
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34470240"
 ---
 # <a name="scale-out-support-for-high-availability-via-sql-server-failover-cluster-instance"></a>Scale Out 透過 SQL Server 容錯移轉叢集執行個體支援高可用性
 
@@ -62,7 +63,7 @@ ms.lasthandoff: 05/03/2018
 ![上線](media/bring-online.PNG)
 
 > [!NOTE]
-> 如果您想要分別容錯移轉 SSISDB 和 Scale Out Master 服務，請遵循 [7.設定 Windows 容錯移轉叢集的 Scale Out Master 服務角色](scale-out-support-for-high-availability.md#7-configure-the-scale-out-master-service-role-of-the-windows-failover-cluster)
+> 如果您想要分別容錯移轉 SSISDB 和 Scale Out Master 服務，請遵循 [7.設定 Windows 容錯移轉叢集的 Scale Out Master 服務角色](scale-out-support-for-high-availability.md#7-configure-the-scale-out-master-service-role-of-the-windows-server-failover-cluster)
 
 ## <a name="7-install-scale-out-workers"></a>7.安裝 Scale Out Worker
 在背景工作節點上安裝 Scale Out Worker。 在安裝期間，為主要端點指定 https://[Sql Server 網路名稱]:[主要連接埠]。 

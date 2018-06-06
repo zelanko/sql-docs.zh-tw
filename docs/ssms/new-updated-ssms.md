@@ -12,11 +12,12 @@ ms.prod: sql
 ms.prod_service: sql-non-specified
 ms.component: ssms
 ms.date: 04/28/2018
-ms.openlocfilehash: 1ce446219f71baca0f4cdedc835fca929b572a0f
-ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.openlocfilehash: 75c3dafdfea93a1cb16b9101d187c208e6de2796
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34585910"
 ---
 # <a name="new-and-recently-updated-sql-server-management-studio-ssms-for-sql-server"></a>新文章和最近更新的文章：SQL Server Management Studio (SSMS) for SQL Server
 
@@ -132,7 +133,7 @@ SQL Database 受控執行個體：
 
 **Integration Services (IS)**
 
-- 新增支援以部署套件至 [SQL Database 受控執行個體](docs/ssms/https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)。
+- 新增支援以部署套件至 [SQL Database 受控執行個體](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)。
 
 
 

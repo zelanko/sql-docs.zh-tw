@@ -29,11 +29,12 @@ caps.latest.revision: 31
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.openlocfilehash: 8c8bcc69ebec0eb94e48358434c11265802b93a1
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: a1d39082b0baa47577fb4315a7b16d182b39b3ae
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34585800"
 ---
 # <a name="susersid-transact-sql"></a>SUSER_SID (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -78,7 +79,7 @@ SUSER_SID ( [ 'login' ] [ , Param2 ] )
  下列範例會傳回目前安全性內容的安全性識別碼 (SID)。  
   
 ```  
-SELECT SUSER_SID('sa');  
+SELECT SUSER_SID();  
 ```  
   
 ### <a name="b-using-susersid-with-a-specific-login"></a>B. 搭配特定登入使用 SUSER_SID  

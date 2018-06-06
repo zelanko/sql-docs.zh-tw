@@ -1,7 +1,7 @@
 ---
 title: 功能參考 (Reporting Services) | Microsoft Docs
 ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 05/24/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.component: reporting-services
@@ -20,11 +20,12 @@ caps.latest.revision: 28
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 7feb24933727c6d107404888f5c3fa5ca58a6a74
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: e6eace09048fd6ba2399e5314d6868efd9e7baf7
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34550079"
 ---
 # <a name="feature-reference-reporting-services"></a>功能參考 (Reporting Services)
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 包含可用於建立、管理及檢視報表的數個工具和應用程式。 此章節提供描述這些工具和應用程式之對話方塊、網頁以及精靈的特定主題。  
@@ -34,9 +35,6 @@ ms.lasthandoff: 05/03/2018
 ## <a name="in-this-section"></a>本節內容  
  [報表設計師 F1 說明](../reporting-services/tools/report-designer-f1-help.md)  
  提供報表設計師與其相關對話方塊、報表精靈和影像精靈的說明。  
-  
- [報表管理員 F1 說明](http://msdn.microsoft.com/library/e0137273-85b8-45f0-83e5-38a50481768f)  
- 提供報表管理員的說明，報表管理員是用於管理單一報表伺服器執行個體的 Web 應用程式  
   
  [Reporting Services 組態管理員說明主題](http://msdn.microsoft.com/library/7b6fb18e-ec39-4661-88e3-977ed64e2c82)  
  提供用於部署及管理報表伺服器執行個體之 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 組態工具的說明。  

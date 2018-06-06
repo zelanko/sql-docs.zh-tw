@@ -3,12 +3,9 @@ title: 設定 Windows 防火牆以允許 SQL Server 存取 | Microsoft Docs
 ms.custom: ''
 ms.date: 05/17/2017
 ms.prod: sql
-ms.prod_service: database-engine
-ms.component: install
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- setup-install
+ms.technology: install
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -26,14 +23,15 @@ helpviewer_keywords:
 - netsh to open firewall ports
 ms.assetid: f55c6a0e-b6bd-4803-b51a-f3a419803024
 caps.latest.revision: 48
-author: MikeRayMSFT
-ms.author: mikeray
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: aa7b14005bacef0d094abd18bfe7e4d2e2e81665
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 100c84e221b7add9eab09cd7b2b0bf4c3ab0669b
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34772594"
 ---
 # <a name="configure-the-windows-firewall-to-allow-sql-server-access"></a>Configure the Windows Firewall to Allow SQL Server Access
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -88,7 +86,7 @@ ms.lasthandoff: 05/03/2018
   
 -   **netsh**  
   
-     系統管理員可以使用 **netsh.exe** 工具，在命令提示字元中設定及監視 Windows 電腦，或是利用批次檔執行此作業**。** 藉由使用 **netsh** 工具，您可以指示輸入適當協助程式的內容命令，讓協助程式執行該命令。 協助程式為一動態連結程式庫 (.dll) 檔案，可為一或多項服務、公用程式或通訊協定提供組態、監視與支援，從而延伸 **netsh** 工具的功能。 所有支援 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的作業系統都有防火牆協助程式。 [!INCLUDE[firstref_longhorn](../../includes/firstref-longhorn-md.md)] 也提供進階防火牆協助程式，稱為 **advfirewall**。 本文不會討論使用 **netsh** 的詳細資料。 不過，您可以使用 **netsh**設定本文所描述的許多組態選項。 例如，在命令提示字元中執行下列指令碼，即可開啟  
+     系統管理員可以使用 **netsh.exe** 工具，在命令提示字元中設定及監視 Windows 電腦，或是利用批次檔執行此作業 **。** 藉由使用 **netsh** 工具，您可以指示輸入適當協助程式的內容命令，讓協助程式執行該命令。 協助程式為一動態連結程式庫 (.dll) 檔案，可為一或多項服務、公用程式或通訊協定提供組態、監視與支援，從而延伸 **netsh** 工具的功能。 所有支援 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的作業系統都有防火牆協助程式。 [!INCLUDE[firstref_longhorn](../../includes/firstref-longhorn-md.md)] 也提供進階防火牆協助程式，稱為 **advfirewall**。 本文不會討論使用 **netsh** 的詳細資料。 不過，您可以使用 **netsh**設定本文所描述的許多組態選項。 例如，在命令提示字元中執行下列指令碼，即可開啟  
   
     ```  
     netsh firewall set portopening protocol = TCP port = 1433 name = SQLPort mode = ENABLE scope = SUBNET profile = CURRENT  

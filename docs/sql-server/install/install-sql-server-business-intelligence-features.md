@@ -3,11 +3,9 @@ title: 安裝 SQL Server 2016 Business Intelligence 功能 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/02/2016
 ms.prod: sql
-ms.prod_service: database-engine
-ms.component: install
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: setup-install
+ms.technology: install
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 67399b24-e48a-49f3-9dd4-32d78c6a2ece
@@ -15,11 +13,12 @@ caps.latest.revision: 27
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 202ea2f4a22cb10d535e254b7a7e33921d929634
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: fd04cdfc45360c2c44de4da4b4950e956450b4bc
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34772474"
 ---
 # <a name="install-sql-server-business-intelligence-features"></a>安裝 SQL Server Business Intelligence 功能
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]

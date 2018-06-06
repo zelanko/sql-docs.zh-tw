@@ -3,7 +3,6 @@ title: 選擇資料庫引擎升級方法 | Microsoft Docs
 ms.custom: ''
 ms.date: 07/19/2017
 ms.prod: sql
-ms.prod_service: install
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
@@ -12,14 +11,15 @@ ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 5e57a427-2e88-4ef6-b142-4ccad97bcecc
 caps.latest.revision: 23
-author: MikeRayMSFT
-ms.author: mikeray
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: f3ac9ae5a47adce9d5c46de99d00d7463becd590
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 9504b667d4bf6a3e955ca3c1f048a1238bbbd024
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34771444"
 ---
 # <a name="choose-a-database-engine-upgrade-method"></a>選擇資料庫引擎升級方法
 
@@ -101,7 +101,7 @@ ms.lasthandoff: 05/03/2018
   
      ![附加儲存體使用備份和還原的新安裝升級方法](../../database-engine/install-windows/media/new-installation-upgrade-method-using-backup-and-restore-for-attached-storage.png "附加儲存體使用備份和還原的新安裝升級方法")  
   
--   **SAN 儲存體環境：**若您的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 環境使用 SAN 儲存體，下圖及圖中連結會引導您完成 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 新安裝升級的必要步驟。  
+-   **SAN 儲存體環境：** 若您的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 環境使用 SAN 儲存體，下圖及圖中連結會引導您完成 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 新安裝升級的必要步驟。  
   
      ![SAN 儲存體使用卸離和附加的新安裝升級方法](../../database-engine/install-windows/media/new-installation-upgrade-method-using-detach-and-attach-for-san-storage.png "SAN 儲存體使用卸離和附加的新安裝升級方法")  
   

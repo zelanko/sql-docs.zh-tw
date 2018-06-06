@@ -3,7 +3,6 @@ title: 分散式可用性群組 (SQL Server) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/12/2018
 ms.prod: sql
-ms.prod_service: high-availability
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: high-availability
@@ -14,17 +13,18 @@ helpviewer_keywords:
 ms.assetid: ''
 caps.latest.revision: ''
 author: allanhirt
-ms.author: mikeray
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 4ce87751cb0f279b74a19159ceb966d8cadaec52
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 0b2f8ba15720726e177884aa4481fb43dae6084f
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34769334"
 ---
 # <a name="distributed-availability-groups"></a>分散式可用性群組
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-分散式可用性群組是 SQL Server 2016 中引進的新功能，為現有 AlwaysOn 可用性群組功能的變異。 本文釐清分散式可用性群組的某些層面，並補充現有 [SQL Server 文件](https://docs.microsoft.com/en-us/sql/sql-server/sql-server-technical-documentation)。
+分散式可用性群組是 SQL Server 2016 中引進的新功能，為現有 AlwaysOn 可用性群組功能的變異。 本文釐清分散式可用性群組的某些層面，並補充現有 [SQL Server 文件](https://docs.microsoft.com/sql/sql-server/sql-server-technical-documentation)。
 
 > [!NOTE]
 > "DAG" 不是「分散式可用性群組」的官方縮寫，因為這個縮寫已用於「Exchange 資料庫可用性群組」功能。 此 Exchange 功能與 SQL Server 可用性群組或分散式可用性群組無關。
@@ -48,7 +48,7 @@ ms.lasthandoff: 05/03/2018
 
 ![分散式可用性群組和其資料移動][2]
 
-將 AG 2 的主要複本設為接受插入、更新和刪除的唯一方式，是從 AG 1 手動容錯移轉分散式可用性群組。 在上圖中，因為 AG 1 包含資料庫的可寫入複本，所以發出容錯移轉時會將 AG 2 設為可處理插入、更新和刪除的可用性群組。 如需如何將某個分散式可用性群組容錯移轉至另一個可用性群組的資訊，請參閱[容錯移轉至次要可用性群組]( https://docs.microsoft.com/en-us/sql/database-engine/availability-groups/windows/distributed-availability-groups-always-on-availability-groups)。
+將 AG 2 的主要複本設為接受插入、更新和刪除的唯一方式，是從 AG 1 手動容錯移轉分散式可用性群組。 在上圖中，因為 AG 1 包含資料庫的可寫入複本，所以發出容錯移轉時會將 AG 2 設為可處理插入、更新和刪除的可用性群組。 如需如何將某個分散式可用性群組容錯移轉至另一個可用性群組的資訊，請參閱[容錯移轉至次要可用性群組]( https://docs.microsoft.com/sql/database-engine/availability-groups/windows/distributed-availability-groups-always-on-availability-groups)。
 
 > [!NOTE]
 > SQL Server 2016 中的分散式可用性群組只支援使用 FORCE_FAILOVER_ALLOW_DATA_LOSS 選項從某個可用性群組容錯移轉至另一個可用性群組。
@@ -90,7 +90,7 @@ ms.lasthandoff: 05/03/2018
 
 如果將這兩個 WSFC 叢集加入相同的網域 (非叢集網路)，則在您建立分散式可用性群組時不需要執行特殊作業。 針對未加入相同網域的可用性群組和 WSFC 叢集，使用憑證讓分散式可用性群組運作，這種方式與建立可用性群組作為網域獨立的可用性群組的方式極為相同。 若要查看如何設定分散式可用性群組的憑證，請遵循[建立網域獨立的可用性群組](domain-independent-availability-groups.md#create-a-domain-independent-availability-group)下的步驟 3-13。
 
-使用分散式可用性群組時，每個基礎可用性群組中的主要複本都必須要有對方的憑證。 如果您已經有未使用憑證的端點，請使用 [ALTER ENDPOINT](https://docs.microsoft.com/en-us/sql/t-sql/statements/alter-endpoint-transact-sql) 重新設定這些端點，以反映憑證的使用。
+使用分散式可用性群組時，每個基礎可用性群組中的主要複本都必須要有對方的憑證。 如果您已經有未使用憑證的端點，請使用 [ALTER ENDPOINT](https://docs.microsoft.com/sql/t-sql/statements/alter-endpoint-transact-sql) 重新設定這些端點，以反映憑證的使用。
 
 ## <a name="distributed-availability-group-usage-scenarios"></a>分散式可用性群組使用案例
 
@@ -106,7 +106,7 @@ ms.lasthandoff: 05/03/2018
 
 ![傳統多網站可用性群組][4]
 
-分散式可用性群組針對跨多個資料中心的可用性群組，提供更具彈性的部署案例。 您甚至可以使用過去使用[記錄傳送]( https://docs.microsoft.com/en-us/sql/database-engine/log-shipping/about-log-shipping-sql-server)這類功能的分散式可用性群組。 不過，與傳統可用性群組不同，分散式可用性群組不能延遲套用交易。 這表示可用性群組或分散式可用性群組對於錯誤地更新或刪除資料的人為錯誤沒有任何幫助。
+分散式可用性群組針對跨多個資料中心的可用性群組，提供更具彈性的部署案例。 您甚至可以使用過去使用[記錄傳送]( https://docs.microsoft.com/sql/database-engine/log-shipping/about-log-shipping-sql-server)這類功能的分散式可用性群組。 不過，與傳統可用性群組不同，分散式可用性群組不能延遲套用交易。 這表示可用性群組或分散式可用性群組對於錯誤地更新或刪除資料的人為錯誤沒有任何幫助。
 
 分散式可用性群組是鬆散偶合的，在此情況下，表示它們不需要單一 WSFC 叢集，而且它們是由 SQL Server 進行維護。 因為 WSFC 叢集是個別進行維護，而且兩個可用性群組之間的同步處理主要不同步，所以可以更輕鬆地在另一個網站上設定災害復原。 每個可用性群組中的主要複本都會同步處理其專屬次要複本。
 
@@ -149,7 +149,7 @@ ms.lasthandoff: 05/03/2018
 
 在這兩個上述範例中，這三個可用性群組最多可能共會有 27 個複本，而且全部都可以用於唯讀查詢。 
 
-[唯讀路由]( https://docs.microsoft.com/en-us/sql/database-engine/availability-groups/windows/configure-read-only-routing-for-an-availability-group-sql-server)無法完全與分散式可用性群組搭配運作。 具體來說：
+[唯讀路由]( https://docs.microsoft.com/sql/database-engine/availability-groups/windows/configure-read-only-routing-for-an-availability-group-sql-server)無法完全與分散式可用性群組搭配運作。 具體來說：
 
 1. 唯讀路由可加以設定，並用於分散式可用性群組的主要可用性群組。 
 2. 唯讀路由可加以設定，但無法用於分散式可用性群組的次要可用性群組。 查詢若使用接聽程式連線到次要可用性群組，則會全部移至次要可用性群組的主要複本。 否則，您必須設定每個複本都允許次要複本的所有連接，並直接存取它們。 不過，如果次要可用性群組在容錯移轉之後成為主要，則可以使用唯讀路由。 在 SQL Server 2016 更新或 SQL Server 的未來版本中，可能會變更此行為。
@@ -157,7 +157,7 @@ ms.lasthandoff: 05/03/2018
 
 ## <a name="initialize-secondary-availability-groups-in-a-distributed-availability-group"></a>初始化分散式可用性群組中的次要可用性群組
 
-分散式可用性群組過去是使用[自動植入]( https://docs.microsoft.com/en-us/sql/database-engine/availability-groups/windows/automatically-initialize-always-on-availability-group)所設計，而自動植入是用來初始化第二個可用性群組上主要複本的主要方法。 如果您執行下列作業，才能對第二個可用性群組的主要複本進行完整資料庫還原：
+分散式可用性群組過去是使用[自動植入]( https://docs.microsoft.com/sql/database-engine/availability-groups/windows/automatically-initialize-always-on-availability-group)所設計，而自動植入是用來初始化第二個可用性群組上主要複本的主要方法。 如果您執行下列作業，才能對第二個可用性群組的主要複本進行完整資料庫還原：
 
 1. 使用 WITH NORECOVERY 還原資料庫備份。
 2. 若有必要，請使用 WITH NORECOVERY 還原正確的交易記錄備份。
@@ -168,7 +168,7 @@ ms.lasthandoff: 05/03/2018
 
 * 第二個可用性群組之主要複本上的 `sys.dm_hadr_automatic_seeding` 中所顯示的輸出，會將 `current_state` 顯示為 FAILED，且原因為「植入檢查訊息逾時」。
 
-* 第二個可用性群組之主要複本上的目前 SQL Server 記錄會顯示植入已運作，並且已同步處理 [LSN]( https://docs.microsoft.com/en-us/sql/relational-databases/sql-server-transaction-log-architecture-and-management-guide)。
+* 第二個可用性群組之主要複本上的目前 SQL Server 記錄會顯示植入已運作，並且已同步處理 [LSN]( https://docs.microsoft.com/sql/relational-databases/sql-server-transaction-log-architecture-and-management-guide)。
 
 * 第一個可用性群組之主要複本上的 `sys.dm_hadr_automatic_seeding` 中所顯示的輸出，會將 current_state 顯示為 COMPLETED。 
 

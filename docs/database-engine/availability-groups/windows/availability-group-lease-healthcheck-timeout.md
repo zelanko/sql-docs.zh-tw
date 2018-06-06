@@ -9,14 +9,15 @@ ms.technology: high-availability
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: ''
-author: MikeRayMSFT
-ms.author: mikeray
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 9433c4ab54b51663979118d27f665b16cae7150a
-ms.sourcegitcommit: 6fd8a193728abc0a00075f3e4766a7e2e2859139
+ms.openlocfilehash: 33a986a55104e770ea8058737b03187a7b4b7e99
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/17/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34769174"
 ---
 # <a name="mechanics-and-guidelines-of-lease-cluster-and-health-check-timeouts"></a>租用、叢集和健全狀況檢查逾時的機制和方針 
 

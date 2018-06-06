@@ -3,7 +3,6 @@ title: 升級 Master Data Services | Microsoft Docs
 ms.custom: ''
 ms.date: 07/21/2017
 ms.prod: sql
-ms.prod_service: install
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
@@ -12,14 +11,15 @@ ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 9c3543f3-3eb9-455d-a9bf-f17e9506ad21
 caps.latest.revision: 31
-author: MikeRayMSFT
-ms.author: mikeray
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 216ea0f5416dd45f428d9cda336e7b5c194195c6
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d8f4c6cdf3c59d82f9fd61228de2410bdef23daa
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34771904"
 ---
 # <a name="upgrade-master-data-services"></a>升級 Master Data Services
 
@@ -153,9 +153,9 @@ ms.lasthandoff: 05/03/2018
 3.  升級 MDS 資料庫結構描述，並建立 Web 應用程式，以及建立新 Web 應用程式與升級之 MDS 資料庫的關聯。 如需指示，請參閱 [升級但不包含 Database Engine 升級](#noengine)中的步驟 2-4  
   
 ## <a name="troubleshooting"></a>疑難排解  
- **問題：**當您開啟 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]、[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]、[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 或 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] Web 應用程式時，會顯示「用戶端版本與資料庫版本不相容」錯誤訊息。  
+ **問題：** 當您開啟 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]、[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]、[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 或 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] Web 應用程式時，會顯示「用戶端版本與資料庫版本不相容」錯誤訊息。  
   
- **解決方法：**當 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]、[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]、[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 或 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] Master Data Manager Web 應用程式嘗試存取已升級到 [!INCLUDE[ssSQL16](../../includes/sssqlv14-md.md)] Master Data Services 的資料庫時，就會發生此問題。 您必須改用 [!INCLUDE[ssSQL16](../../includes/sssqlv14-md.md)] Web 應用程式。  
+ **解決方法：** 當 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]、[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]、[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 或 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] Master Data Manager Web 應用程式嘗試存取已升級到 [!INCLUDE[ssSQL16](../../includes/sssqlv14-md.md)] Master Data Services 的資料庫時，就會發生此問題。 您必須改用 [!INCLUDE[ssSQL16](../../includes/sssqlv14-md.md)] Web 應用程式。  
   
  如果您升級 MDS 資料庫結構描述時，未在 IIS 中停止 [MDS 應用程式集區] 然後再重新啟動，也可能會發生此問題。 重新啟動 [MDS 應用程式集區] 即可更正此問題。  
   

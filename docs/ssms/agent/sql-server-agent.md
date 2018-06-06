@@ -19,11 +19,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 6eacddc4432560bcde519602dd26c2b472b37041
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 80b6776f555fd5bdaa8ed4c4977dc5193a27eba2
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34708936"
 ---
 # <a name="sql-server-agent"></a>SQL Server Agent
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -119,7 +120,7 @@ ms.lasthandoff: 05/03/2018
 > [!IMPORTANT]  
 > [呼叫器] 和 [Net Send] 選項會從 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 未來版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent 移除。 請避免在新的開發工作中使用這些功能，並規劃修改目前使用這些功能的應用程式。  
   
-若要使用電子郵件或呼叫器來傳送通知給操作員，則必須設定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent 以使用 Database Mail。 如需詳細資訊，請參閱 [Database Mail](http://msdn.microsoft.com/en-us/9e4563dd-4799-4b32-a78a-048ea44a44c1)。  
+若要使用電子郵件或呼叫器來傳送通知給操作員，則必須設定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent 以使用 Database Mail。 如需詳細資訊，請參閱 [Database Mail](http://msdn.microsoft.com/9e4563dd-4799-4b32-a78a-048ea44a44c1)。  
   
 您可以將操作員定義成一群人員的別名。 用這種方法，可以同時告知具有該別名的所有成員。 如需詳細資訊，請參閱 [運算子](../../ssms/agent/operators.md)。  
   
@@ -181,9 +182,9 @@ ms.lasthandoff: 05/03/2018
 |描述指定 SQL Server Agent 服務之帳戶的考量。|[選取 SQL Server Agent 服務的帳戶](../../ssms/agent/select-an-account-for-the-sql-server-agent-service.md)|  
 |描述如何使用 SQL Server Agent 錯誤記錄檔。|[SQL Server Agent 錯誤記錄檔](../../ssms/agent/sql-server-agent-error-log.md)|  
 |描述如何使用效能物件。|[使用效能物件](../../ssms/agent/use-performance-objects.md)|  
-|描述維護計畫精靈，它是一個公用程式，可協助您用來建立作業、警示和操作員來自動化管理 SQL Server 的執行個體。|[使用維護計畫精靈](http://msdn.microsoft.com/en-us/db65c726-9892-480c-873b-3af29afcee44)|  
+|描述維護計畫精靈，它是一個公用程式，可協助您用來建立作業、警示和操作員來自動化管理 SQL Server 的執行個體。|[使用維護計畫精靈](http://msdn.microsoft.com/db65c726-9892-480c-873b-3af29afcee44)|  
 |描述如何使用 SQL Server Agent 自動化管理工作。|[自動化管理工作 &#40;SQL Server Agent&#41;](../../ssms/agent/automated-administration-tasks-sql-server-agent.md)|  
   
 ## <a name="see-also"></a>另請參閱  
-[介面區組態](http://msdn.microsoft.com/en-us/f741169c-1453-4ad2-830b-bf2be27d712f)  
+[介面區組態](http://msdn.microsoft.com/f741169c-1453-4ad2-830b-bf2be27d712f)  
   

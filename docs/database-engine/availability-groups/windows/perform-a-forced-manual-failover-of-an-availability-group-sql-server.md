@@ -3,7 +3,6 @@ title: 執行可用性群組的強制手動容錯移轉 (SQL Server) | Microsoft
 ms.custom: ''
 ms.date: 05/17/2016
 ms.prod: sql
-ms.prod_service: high-availability
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: high-availability
@@ -16,14 +15,15 @@ helpviewer_keywords:
 - failover [SQL Server], AlwaysOn Availability Groups
 ms.assetid: 222288fe-ffc0-4567-b624-5d91485d70f0
 caps.latest.revision: 83
-author: MikeRayMSFT
-ms.author: mikeray
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: fa61e85b6e8db7a1e3dc967230ea2c939c13f2cb
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: b2561d24c8d229a74ab4bf3379338c4ba41ae335
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34769564"
 ---
 # <a name="perform-a-forced-manual-failover-of-an-availability-group-sql-server"></a>執行可用性群組的強制手動容錯移轉 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -223,7 +223,7 @@ ms.lasthandoff: 05/03/2018
   
 1.  強制容錯移轉之後，您容錯移轉的目標次要複本會變成新的主要複本。 不過，若要讓該可用性複本可供用戶端存取，您可能需要重新設定 WSFC 仲裁，或調整可用性群組的可用性模式組態，如下所示：  
   
-    -   **如果您容錯移轉 [!INCLUDE[ssFosAuto](../../../includes/ssfosauto-md.md)] 的外部：**請調整 WSFC 節點的仲裁投票，以反映您的新可用性群組設定。 如果裝置目標次要複本的 WSFC 節點沒有 WSFC 仲裁投票，可能需要強制 WSFC 仲裁。  
+    -   **如果您容錯移轉 [!INCLUDE[ssFosAuto](../../../includes/ssfosauto-md.md)] 的外部：** 請調整 WSFC 節點的仲裁投票，以反映您的新可用性群組設定。 如果裝置目標次要複本的 WSFC 節點沒有 WSFC 仲裁投票，可能需要強制 WSFC 仲裁。  
   
         > [!NOTE]  
         >  只有在使用自動容錯移轉將兩個可用性複本 (包括先前的主要複本) 設定成同步認可模式時， [!INCLUDE[ssFosAuto](../../../includes/ssfosauto-md.md)] 才會存在。  
@@ -236,7 +236,7 @@ ms.lasthandoff: 05/03/2018
   
         -   [在無仲裁情況下強制啟動 WSFC 叢集](../../../sql-server/failover-clusters/windows/force-a-wsfc-cluster-to-start-without-a-quorum.md)  
   
-    -   **如果您容錯移轉到 [!INCLUDE[ssFosSync](../../../includes/ssfossync-md.md)] 外部：**建議您考慮針對新的主要複本和剩餘的次要複本，調整可用性模式與容錯移轉模式，以反映您所需的同步認可及自動容錯移轉設定。  
+    -   **如果您容錯移轉到 [!INCLUDE[ssFosSync](../../../includes/ssfossync-md.md)] 外部：** 建議您考慮針對新的主要複本和剩餘的次要複本，調整可用性模式與容錯移轉模式，以反映您所需的同步認可及自動容錯移轉設定。  
   
         > [!NOTE]  
         >  只有在目前的主要複本設定成同步認可模式， [!INCLUDE[ssFosSync](../../../includes/ssfossync-md.md)] 才會存在。  

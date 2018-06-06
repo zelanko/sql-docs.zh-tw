@@ -29,11 +29,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: a27a9ab2ddf78950e3609776427e752e65e1643a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 44f41f19766120e741e23753ea1b919cf8e25df0
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34582050"
 ---
 # <a name="-addition-transact-sql"></a>+ (加法) (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -78,7 +79,7 @@ GO
   
 SET NOCOUNT ON  
 DECLARE @startdate datetime, @adddays int;  
-SET @startdate = ''January 10, 1900 12:00 AM';  
+SET @startdate = 'January 10, 1900 12:00 AM';  
 SET @adddays = 5;  
 SET NOCOUNT OFF;  
 SELECT @startdate + 1.25 AS 'Start Date',   

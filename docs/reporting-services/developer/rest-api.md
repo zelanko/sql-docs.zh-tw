@@ -1,7 +1,7 @@
 ---
 title: 使用 Reporting Services 的 REST API 進行開發 | Microsoft Docs
 ms.description: The REST API provides programmatic access to the objects in a SQL Server 2017 Reporting Services report server catalog.
-ms.date: 10/19/2017
+ms.date: 05/25/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.component: developer
@@ -14,11 +14,12 @@ ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 5a180e19628ad832b970026422e9b03e7373ecfb
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 8f2f0959639736379bc28c6add71d09769352fed
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34553829"
 ---
 # <a name="develop-with-the-rest-apis-for-reporting-services"></a>使用 Reporting Services 的 REST API 進行開發
 
@@ -27,6 +28,8 @@ ms.lasthandoff: 05/03/2018
 Microsoft SQL Server 2017 Reporting Services 支援具象狀態傳輸 (REST) API。 REST API 是支援一組 HTTP 作業 (方法) 的服務端點，提供報表伺服器中資源的建立、擷取、更新或刪除權限。
 
 REST API 可透過程式設計方式存取 SQL Server 2017 Reporting Services 報表伺服器目錄中的物件。 物件的範例包括資料夾、報表、KPI、資料來源、資料集、重新整理計劃、訂閱等等。 例如，您可以使用 REST API 巡覽資料夾階層、探索資料夾內容或下載報表定義。 您也可以建立、更新及刪除物件。 使用物件的範例包括上傳報表、執行重新整理計劃、刪除資料夾等等。
+
+[!INCLUDE [GDPR-related guidance](../../includes/gdpr-hybrid-note.md)]
 
 ## <a name="components-of-a-rest-api-requestresponse"></a>REST API 要求/回應的元件
 

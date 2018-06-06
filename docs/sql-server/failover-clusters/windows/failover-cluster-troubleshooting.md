@@ -3,7 +3,6 @@ title: 容錯移轉叢集疑難排解 | Microsoft Docs
 ms.custom: ''
 ms.date: 10/21/2015
 ms.prod: sql
-ms.prod_service: high-availability
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: high-availability
@@ -14,15 +13,15 @@ helpviewer_keywords:
 - failover clustering, troubleshooting
 - cluster troubleshooting
 ms.assetid: 84012320-5a7b-45b0-8feb-325bf0e21324
-caps.latest.revision: 12
-author: MikeRayMSFT
-ms.author: mikeray
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 03a5f0599ef3851b77e298f2f14ec1a857816eee
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 38748bfc0ff21b9920ba554e6d7e0e89d5020e95
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34772527"
 ---
 # <a name="failover-cluster-troubleshooting"></a>容錯移轉叢集疑難排解
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -94,7 +93,7 @@ ms.lasthandoff: 05/03/2018
 ### <a name="problem-sql-server-cannot-log-on-to-the-network-after-it-migrates-to-another-node"></a>問題：SQL Server 無法在移轉至另一個節點之後登入至網路  
  **問題 1：**[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]服務帳戶無法與網域控制站聯繫。  
   
- **解決方式 1：**檢查您的事件記錄檔，尋找是否有網路問題的相關記錄 (例如：網路卡失敗或 DNS 問題)。 確認您可以偵測到 (ping) 您的網域控制站。  
+ **解決方式 1：** 檢查您的事件記錄檔，尋找是否有網路問題的相關記錄 (例如：網路卡失敗或 DNS 問題)。 確認您可以偵測到 (ping) 您的網域控制站。  
   
  **問題 2：**[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 服務帳戶密碼在所有叢集節點上並不相同，或節點並未重新啟動從失敗節點移轉的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 服務。  
   

@@ -3,7 +3,6 @@ title: 升級 Analysis Services | Microsoft Docs
 ms.custom: ''
 ms.date: 09/12/2017
 ms.prod: sql
-ms.prod_service: install
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: ''
@@ -24,11 +23,12 @@ caps.latest.revision: 79
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.openlocfilehash: a337d1d86133c2ff441afa17c65ce783273fc3d6
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 235ed4172275df440f86df47d72f9eed0a1f0a5d
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34772584"
 ---
 # <a name="upgrade-analysis-services"></a>升級 Analysis Services
 

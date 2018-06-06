@@ -20,12 +20,12 @@ author: jovanpop-msft
 ms.author: jovanpop
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 360e15e879672fd3fb0568cad22e29e36a0ac45c
-ms.sourcegitcommit: b3bb41424249de198f22d9c6d40df4996f083aa6
+ms.openlocfilehash: 86b80d4706adbbf298df34a74d6c923bb4f56161
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/17/2018
-ms.locfileid: "34300566"
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34586020"
 ---
 # <a name="json-data-in-sql-server"></a>SQL Server 中的 JSON 資料
 [!INCLUDE[appliesto-ss2016-asdb-xxxx-xxx-md.md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -72,6 +72,7 @@ SQL Server 中的 JSON 函數可讓您將 NoSQL 與關聯式概念結合在同�
 -   [JSON_QUERY (Transact-SQL)](../../t-sql/functions/json-query-transact-sql.md) 可從 JSON 字串擷取物件或陣列。
 -   [JSON_MODIFY (Transact-SQL)](../../t-sql/functions/json-modify-transact-sql.md) 變更 JSON 字串中的值。
 
+
 **範例**
   
 在下列範例中，查詢會使用來自資料表的關聯式資料和 JSON 資料 (儲存在名為 `jsonCol` 的資料行中)：  
@@ -98,8 +99,8 @@ ORDER BY JSON_VALUE(jsonCol,'$.info.address.PostCode')
   
 ```sql  
 DECLARE @json NVARCHAR(MAX);
-SET @json = '{"info":{"address":[{"town":"Belgrade"},{"town":"Paris"},{"town":"Madrid"}]}';
-SET @json = JSON_MODIFY(@jsonInfo,'$.info.address[1].town','London');
+SET @json = '{"info":{"address":[{"town":"Belgrade"},{"town":"Paris"},{"town":"Madrid"}]}}';
+SET @json = JSON_MODIFY(@json,'$.info.address[1].town','London');
 SELECT modifiedJson = @json;
 ```  
 **結果**  

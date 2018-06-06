@@ -3,7 +3,6 @@ title: 指定可用性群組選項頁面 (新增可用性群組精靈/新增資�
 ms.custom: ''
 ms.date: 05/17/2016
 ms.prod: sql
-ms.prod_service: high-availability
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: high-availability
@@ -14,14 +13,15 @@ f1_keywords:
 - sql13.swb.adddatabasewizard.specifyagname.f1
 ms.assetid: dcb6374d-becb-4c6c-b88c-5a8273f8aa38
 caps.latest.revision: 13
-author: MikeRayMSFT
-ms.author: mikeray
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 15e1bd524eea2496f4d4ad9a9cff034c13b309a9
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 1938b41ea4d23bc92e0c18a5a5ec7ccbcd2f8b8e
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34771344"
 ---
 # <a name="specify-availability-group-options-page"></a>指定可用性群組選項頁面
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -45,7 +45,7 @@ ms.lasthandoff: 05/03/2018
       
       使用時機是將可用性群組裝載於叢集技術未針對讀取規模和負載平衡所管理的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體時。 適用於 [!INCLUDE[sssqlv14](../../../includes/sssqlv14-md.md)] 和更新版本。 
  
-   **資料庫層級健全狀況偵測：**核取此方塊，以啟用可用性群組的資料庫層級健全狀況偵測 (DB_FAILOVER) 選項。 資料庫健全狀況偵測注意到資料庫不再處於線上狀態、發生錯誤，以及觸發可用性群組的自動容錯移轉。 請參閱 [SQL Server AlwaysOn 資料庫健全狀況偵測容錯移轉選項](sql-server-always-on-database-health-detection-failover-option.md)。
+   **資料庫層級健全狀況偵測：** 核取此方塊，以啟用可用性群組的資料庫層級健全狀況偵測 (DB_FAILOVER) 選項。 資料庫健全狀況偵測注意到資料庫不再處於線上狀態、發生錯誤，以及觸發可用性群組的自動容錯移轉。 請參閱 [SQL Server AlwaysOn 資料庫健全狀況偵測容錯移轉選項](sql-server-always-on-database-health-detection-failover-option.md)。
 
 
 選取資料庫頁面 (新增可用性群組精靈和加入資料庫精靈)  

@@ -17,11 +17,12 @@ caps.latest.revision: 11
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 118ed7d8af90aa23cb310e2eadfbdfc89c921f75
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 285bdb7031d205cb30b0ee76560a9ee9b00f5fb4
+ms.sourcegitcommit: 6fe7b5e8818bd0d94fce693c560d63cc6883d76f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34758078"
 ---
 # <a name="examples-using-path-mode"></a>範例：使用 PATH 模式
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -300,17 +301,17 @@ GO
 USE AdventureWorks2012;  
 GO  
 SELECT ProductModelID     AS "@ProductModelID",  
-       Name               S "@ProductModelName",  
+       Name               AS "@ProductModelName",  
       (SELECT ProductID AS "data()"  
        FROM   Production.Product  
        WHERE  Production.Product.ProductModelID =   
               Production.ProductModel.ProductModelID  
-       FOR XML PATH ('')) S "@ProductIDs",  
+       FOR XML PATH ('')) AS "@ProductIDs",  
        (SELECT Name AS "ProductName"  
        FROM   Production.Product  
        WHERE  Production.Product.ProductModelID =   
               Production.ProductModel.ProductModelID  
-        FOR XML PATH ('')) as "ProductNames"  
+        FOR XML PATH ('')) AS "ProductNames"  
 FROM   Production.ProductModel  
 WHERE  ProductModelID= 7 or ProductModelID=9  
 FOR XML PATH('ProductModelData');  

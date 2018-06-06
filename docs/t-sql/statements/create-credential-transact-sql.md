@@ -29,11 +29,12 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: b02629d9e51740907fdb1698e50bc9e8c241d26c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d1dbc4b6f4cf3dcb464f8e402bfd9d2579e63078
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34582020"
 ---
 # <a name="create-credential-transact-sql"></a>CREATE CREDENTIAL (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
@@ -148,7 +149,7 @@ EXEC ('CREATE CREDENTIAL Azure_EKM_TDE_cred
 ### <a name="d-creating-a-credential-using-a-sas-token"></a>D. 使用 SAS 權杖建立認證  
  **適用於**：[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 到 [目前的版本](http://go.microsoft.com/fwlink/p/?LinkId=299658)。  
   
- 下列範例會使用 SAS 權杖來建立共用存取簽章憑證。  如需在 Azure 容器上建立預存存取原則和共用存取簽章，再使用共用存取簽章來建立認證的教學課程，請參閱[教學課程：搭配使用 Azure Blob 儲存體服務和 SQL Server 2016 資料庫](Tutorial:%20Using%20the%20Microsoft%20Azure%20Blob%20storage%20service%20with%20SQL%20Server%202016%20databases.md)。  
+ 下列範例會使用 SAS 權杖來建立共用存取簽章憑證。  如需在 Azure 容器上建立預存存取原則和共用存取簽章，再使用共用存取簽章來建立認證的教學課程，請參閱[教學課程：搭配使用 Azure Blob 儲存體服務和 SQL Server 2016 資料庫](../../relational-databases/tutorial-use-azure-blob-storage-service-with-sql-server-2016.md)。  
   
 > [!IMPORTANT]  
 >  **CREDENTIAL NAME** 引數要求名稱與容器路徑相符，開頭為 https，而且不包含尾端斜線。 **IDENTITY** 引數需要名稱 *SHARED ACCESS SIGNATURE*。 **SECRET** 引數需要共用存取簽章權杖。  

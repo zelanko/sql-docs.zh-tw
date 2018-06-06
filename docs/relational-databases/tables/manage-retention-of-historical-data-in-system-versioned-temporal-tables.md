@@ -15,11 +15,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: e612894249f42ef081f989eda29b3d2f8900cc80
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 924fa0d289c7225587962c9551d445d348f73939
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34563806"
 ---
 # <a name="manage-retention-of-historical-data-in-system-versioned-temporal-tables"></a>管理系統設定版本之時態表中的歷程記錄資料保留
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -53,7 +54,7 @@ ms.lasthandoff: 05/03/2018
   
 > **注意：**  Stretch Database 方法僅適用於 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] ，不適用於 [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]。  
   
- [Stretch Database](../../sql-server/stretch-database/stretch-database.md) 中的 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 能以透明的方式將歷程記錄資料移轉到 Azure。 若要提升安全性，您可以使用 SQL Server 的 [一律加密](https://msdnstage.redmond.corp.microsoft.com/library/mt163865.aspx) 功能為移動中的資料加密。 此外，您還可以使用 [資料列層級安全性](../../relational-databases/security/row-level-security.md) 和其他先進的 SQL Server 安全性功能來搭配 Temporal 和 Stretch Database，藉此保護資料。  
+ [Stretch Database](../../sql-server/stretch-database/stretch-database.md) 中的 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 能以透明的方式將歷程記錄資料移轉到 Azure。 若要提升安全性，您可以使用 SQL Server 的 [一律加密](https://msdn.microsoft.com/library/mt163865.aspx) 功能為移動中的資料加密。 此外，您還可以使用 [資料列層級安全性](../../relational-databases/security/row-level-security.md) 和其他先進的 SQL Server 安全性功能來搭配 Temporal 和 Stretch Database，藉此保護資料。  
   
  透過 Stretch Database 方法，您可以將部分或所有時態歷程記錄資料表延展到 Azure，而 SQL Server 將會以無訊息的方式將歷程記錄資料移動到 Azure。 讓歷程記錄資料表具備延展功能，不會變更您與時態表在資料修改和時態查詢等方面的互動方式。  
   
@@ -428,7 +429,7 @@ COMMIT;
 ```  
 
 ## <a name="using-temporal-history-retention-policy-approach"></a>使用時態歷程記錄保留原則方法
-> **注意：**時態歷程記錄保留原則的方法適用於 [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] 和 SQL Server 2017 (從 CTP 1.3 開始)。  
+> **注意：** 時態歷程記錄保留原則的方法適用於 [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] 和 SQL Server 2017 (從 CTP 1.3 開始)。  
 
 時態歷程記錄保留可在不同的資料表層級上設定，讓使用者建立彈性的過時原則。 套用暫時保留很簡單：只需要在資料表建立或結構描述變更期間設定一個參數。
 
