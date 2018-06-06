@@ -27,7 +27,7 @@ ms.locfileid: "34473822"
 
 ## <a name="may-2018-may-public-preview"></a>2018 年 5 月版（ 5 月公開預覽）
 
-發行日期： 2018 年 5 月 7 日，    
+發行日期： 2018 年 5 月 7 日    
 版本： 0.29.3
 
 *5月公開預覽版*著重於穩定性及 bug 修正。 此版本包含下列重點：  
@@ -44,8 +44,8 @@ ms.locfileid: "34473822"
    - 修正[問題 821](https://github.com/Microsoft/sqlopsstudio/issues/821): sqlopsstudio.deb 封裝相依性
    - 修正[問題 1260](https://github.com/Microsoft/sqlopsstudio/issues/1260)： 關鍵字 'distinct' 非反白顯示
    - 修正[問題 1332](https://github.com/Microsoft/sqlopsstudio/issues/1332)： 編輯資料還原不適用於資料列
-   - 修正[問題 1215](https://github.com/Microsoft/sqlopsstudio/issues/1215): SQL 代理程式擴充功能和狀態列
-   - 修正[問題 1316](https://github.com/Microsoft/sqlopsstudio/issues/1316): SQL 代理程式不要調整大小之後變更視窗大小
+   - 修正[問題 1215](https://github.com/Microsoft/sqlopsstudio/issues/1215): SQL Agent擴充功能和狀態列
+   - 修正[問題 1316](https://github.com/Microsoft/sqlopsstudio/issues/1316): 在視窗大小改變後，SQL Agent 不會隨之調整大小
 
 
 如需詳細資訊，請參閱[變更記錄](https://github.com/Microsoft/sqlopsstudio/blob/master/CHANGELOG.md)，和[版本](https://github.com/Microsoft/sqlopsstudio/releases)。
@@ -54,13 +54,13 @@ ms.locfileid: "34473822"
 
 ## <a name="april-2018-april-public-preview"></a>2018 年 4 月版 （ 4 月公開預覽）
 
-發行日期： 2018 年 4 月 25 日，  
+發行日期： 2018 年 4 月 25 日   
 版本： 0.28.6
 
 *4 月公開預覽版*包含 bug 修正和增強功能。 
 
 - SQL 代理程式預覽擴充功能的增強功能。
-- 改善大型和受保護的檔案來儲存受保護的系統管理員的支援和 > 在 SQL 作業 Studio 256 M 檔案。
+- 為了在SQL Operations Studio儲存受管理員保護且大小大於256M的檔案，改善大型且受保護的檔案支援。
 - 若要同時使用多個開啟的終端機分割整合式的終端機。
 - 降低的安裝磁碟上檔案計數呎列印更快的安裝和啟動時間。
 - 繼續以修正 GitHub 問題：
@@ -76,15 +76,15 @@ ms.locfileid: "34473822"
    - 修正[問題 1069](https://github.com/Microsoft/sqlopsstudio/issues/1069)： 連接對話方塊顯示時最初顯示的所需的伺服器錯誤。
    - 修正[問題 1070](https://github.com/Microsoft/sqlopsstudio/issues/1070)： 伺服器群組現在需要按兩下以展開。
    - 修正[問題 1072](https://github.com/Microsoft/sqlopsstudio/issues/1072)： 選取控制項的背景是半透明效果。
-   - 修正[問題 1115](https://github.com/Microsoft/sqlopsstudio/issues/1115)： 修正所有的高對比 SQL 作業 Studio 中的協助工具問題。
-   - 修正[問題 1101](https://github.com/Microsoft/sqlopsstudio/issues/1101)： 擴充功能無法升級 」 下載手動"連結會移至錯誤的位置。
+   - 修正[問題 1115](https://github.com/Microsoft/sqlopsstudio/issues/1115)： 修正所有的高對比 SQL Operations Studio 中的協助工具問題。
+   - 修正[問題 1101](https://github.com/Microsoft/sqlopsstudio/issues/1101)： 擴充功能無法升級[下載手動]連結會移至錯誤的位置。
    - 修正[問題 1103](https://github.com/Microsoft/sqlopsstudio/issues/1103)： 無法在 [首頁] 索引標籤上運作的 V 捲軸。
    - 修正[問題 1104](https://github.com/Microsoft/sqlopsstudio/issues/1104): SQL 延伸模組索引標籤停止運作。
 
 
 4 月公開預覽的重點為 Visual Studio Code 1.21 平台來源程式碼重新整理。 這會從先前的 1.19 同步處理點帶入多項更新至核心編輯器和工作臺。 以下為部分範例：
 
-- [新的通知 UI](https://code.visualstudio.com/updates/v1_21#_new-notifications-ui) -輕鬆地管理與檢閱 SQL 作業 Studio 通知。
+- [新的通知 UI](https://code.visualstudio.com/updates/v1_21#_new-notifications-ui) -輕鬆地管理與檢閱 SQL Operations Studio 通知。
 - [整合終端機分割](https://code.visualstudio.com/updates/v1_21#_split-terminals)-一次使用多個開啟的終端機。
 - [儲存大型和受保護的檔案](https://code.visualstudio.com/updates/v1_20#_save-files-that-need-admin-privileges)-儲存受保護的系統管理員和 > 在 SQL 作業 Studio 256 M 檔案。
 - [改善大型檔案支援](https://code.visualstudio.com/updates/v1_21#_text-buffer-improvements)-大型檔案的文字緩衝區最佳化。
@@ -92,27 +92,27 @@ ms.locfileid: "34473822"
 - [全域程式碼片段](https://code.visualstudio.com/updates/v1_20#_global-snippets)層建立程式碼片段，您可以跨所有檔案類型使用。
 - [總管 中複選](https://code.visualstudio.com/updates/v1_20#_multi-select-in-the-explorer)-多個檔案上一次執行的動作。
 - [錯誤和警告，在 [總管]](https://code.visualstudio.com/updates/v1_20#_error-indicators-in-the-explorer) -可以快速地瀏覽至您的程式碼基底中的錯誤。
-- [拖曳和卸除、 複製和貼上整個 windows](https://code.visualstudio.com/updates/v1_21#_better-drag-and-drop-support) -在開啟的 SQL 作業 Studio 視窗之間移動檔案。
+- [拖曳和卸除、 複製和貼上整個 windows](https://code.visualstudio.com/updates/v1_21#_better-drag-and-drop-support) -在開啟的 SQL Operations Studio 視窗之間移動檔案。
 - [Git 子模組支援](https://code.visualstudio.com/updates/v1_20#_git-submodules)-巢狀的 Git 儲存機制上的執行 Git 作業。
 - [終端機螢幕讀取器支援](https://code.visualstudio.com/updates/v1_20#_screen-reader-support)-整合式終端機現在有 「 螢幕的讀取器最佳化 」 模式。
 - [置中的編輯器配置](https://code.visualstudio.com/updates/v1_21#_centered-editor-layout)-將您的程式碼檢視螢幕面積最大化。
 - [水平的搜尋結果 （預覽）](https://code.visualstudio.com/updates/v1_21#_horizontal-search) -您可以在水平台中現在檢視搜尋結果。
 
-如需詳細資訊，簽出[Visual Studio 程式碼年 2 月版本資訊](https://code.visualstudio.com/updates/v1_21)，而[Visual Studio 程式碼年 1 月版本資訊](https://code.visualstudio.com/updates/v1_20)。
+如需詳細資訊，簽出[Visual Studio Code 2 月版本資訊](https://code.visualstudio.com/updates/v1_21)，而[Visual Studio Code 1 月版本資訊](https://code.visualstudio.com/updates/v1_20)。
 
 如需詳細資訊，請參閱[變更記錄](https://github.com/Microsoft/sqlopsstudio/blob/master/CHANGELOG.md)。
 
 ## <a name="march-2018-march-public-preview"></a>2018 年 3 月版 （3 月公開預覽）
 
-發行日期： 2018 年 3 月 28 日，  
+發行日期： 2018 年 3 月 28 日  
 版本： 0.27.3
 
-*3 月公用預覽版*繼續處理最上層的 GitHub 問題而重點在於提升擴充性故事。 特別啟用擴充功能管理員，改善儀表板管理，並提供 SQL 代理程式和 insights 擴充功能。 此版本包含下列增強功能：
+*3 月公用預覽版*繼續處理最上層的 GitHub 問題而重點在於提升擴充性故事。 特別啟用擴充功能管理員，改善儀表板管理，並提供 SQL Agent和 insights 擴充功能。 此版本包含下列增強功能：
 
 - 增強的支援索引標籤式的深入資訊和組態窗格的儀表板擴充性模型。
    - 擴充管理員可讓簡單擷取的延伸模組。
-   - 從[whoisactive.com](http://www.whoisactive.com)擴充儀表板 sp_whoisactive 。
-   - 如需詳細資訊，請參閱[擴充功能的 SQL 作業 Studio](extensions.md)。
+   - 來自 [whoisactive.com](http://www.whoisactive.com) 的 sp_whoisactive 擴充儀表板。
+   - 如需詳細資訊，請參閱[擴充功能的 SQL Operations Studio](extensions.md)。
 - 請加入更多[連線和物件總管 中的擴充性 Api](https://github.com/Microsoft/sqlopsstudio/wiki/Extensibility-API)管理。
 - 若要修正重要影響的客戶繼續[GitHub 問題](https://github.com/Microsoft/sqlopsstudio/issues)。
 
@@ -143,7 +143,7 @@ ms.locfileid: "34473822"
 
 ## <a name="january-2018-january-public-preview"></a>2018 年 1 月 （ 1 月公開預覽）
 
-發行日期： 2018 年 1 月 17 日，  
+發行日期： 2018 年 1 月 17 日  
 版本： 0.25.4
 
 *1 月公用預覽*含有一些功能建議和高優先順序的 bug 修正。 此版本包含下列增強功能：
@@ -160,7 +160,7 @@ ms.locfileid: "34473822"
 
 ## <a name="december-2017-december-public-preview"></a>2017 年 12 月（12 月公開預覽）
 
-發行日期： 2017 年 12 月 19，  
+發行日期： 2017 年 12 月 19 日  
 版本： 0.24.1
 
 *年 12 月公用預覽*跨所有功能區域，以及下列增強功能包括數個 bug 修正：
@@ -177,7 +177,7 @@ ms.locfileid: "34473822"
 
 ## <a name="november-2017"></a>2017 年 11 月
 
-發行日期： 2017 年 11 月 15 日，  
+發行日期： 2017 年 11 月 15 日  
 版本： 0.23.6
 
 - 初始版本的[!INCLUDE[name-sos](../includes/name-sos-short.md)]。
