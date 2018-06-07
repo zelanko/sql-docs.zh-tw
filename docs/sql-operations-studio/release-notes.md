@@ -1,4 +1,4 @@
-﻿---
+---
 title: Microsoft SQL Operations Studio (preview) 版本資訊 |Microsoft 文件
 description: Microsoft SQL Operations Studio (preview) 版本資訊
 ms.custom: tools|sos
