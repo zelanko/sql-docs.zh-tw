@@ -1,4 +1,4 @@
-# [XML 元素 - 屬性](xml-elements-properties.md)
+# [XMLA 元素的屬性](xml-elements-properties.md)
 
 # [AllowOverwrite 元素 (XMLA)](allowoverwrite-element-xmla.md)
 # [ApplyCompression 元素 (XMLA)](applycompression-element-xmla.md)

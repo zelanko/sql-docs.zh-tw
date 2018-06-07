@@ -3,8 +3,7 @@
 # [轉換](data-type-conversion-database-engine.md)  
 # [優先順序](data-type-precedence-transact-sql.md)  
 # [同義字](data-type-synonyms-transact-sql.md)  
-# [有效位數、小數位數和長度](precision-scale-and-length-transact-sql.md)  
-# [bit](bit-transact-sql.md)  
+# [有效位數、小數位數和長度](precision-scale-and-length-transact-sql.md)    
 # [cursor](cursor-transact-sql.md)  
 # [日期和時間](date-and-time-types.md)  
 ## [date](date-transact-sql.md)  
@@ -27,6 +26,7 @@
 ## [Write (資料庫引擎)](write-database-engine.md)  
 
 # [數值](numeric-types.md)  
+## [bit](bit-transact-sql.md)
 ## [decimal 和 numeric](decimal-and-numeric-transact-sql.md)  
 ## [float 和 real](float-and-real-transact-sql.md)  
 ## [int、bigint、smallint 和 tinyint](int-bigint-smallint-and-tinyint-transact-sql.md)  

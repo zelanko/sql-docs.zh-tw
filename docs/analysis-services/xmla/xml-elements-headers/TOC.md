@@ -1,4 +1,4 @@
-# [XML 元素 - 標頭](xml-elements-headers.md)
+# [XMLA 元素-標頭](xml-elements-headers.md)
 
 # [BeginSession 元素 (XMLA)](beginsession-element-xmla.md)
 # [EndSession 元素 (XMLA)](endsession-element-xmla.md)

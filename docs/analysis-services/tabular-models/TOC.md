@@ -107,4 +107,3 @@
 
 ## [從 Power Pivot 還原](restore-from-power-pivot.md)  
 
-# [表格式模型資料存取](tabular-model-data-access.md)  
