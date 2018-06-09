@@ -3,8 +3,6 @@ title: 使用者介面參考 (SybaseToSQL) |Microsoft 文件
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-sybase
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: ssma
@@ -18,18 +16,19 @@ caps.latest.revision: 9
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: c157057dfb313c52ea4c3988f1c73a7449e7292e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: e5a7a8d163592b8234c99c7608c70da64cbc6fb0
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34779554"
 ---
 # <a name="user-interface-reference-sybasetosql"></a>使用者介面參考 (SybaseToSQL)
 本節包含說明主題[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]移轉小幫手 (SSMA) 的 Sybase。  
   
 ## <a name="in-this-section"></a>本節內容  
   
-|主題|Description|  
+|主題|描述|  
 |---------|---------------|  
 |[進階物件選取項目&#40;SybaseToSQL&#41;](../../ssma/sybase/advanced-object-selection-sybasetosql.md)|使用**進階物件選取**對話方塊來尋找資料庫物件所使用的篩選準則，然後選取或清除這些物件。|  
 |[評估報表&#40;SybaseToSQL&#41;](../../ssma/sybase/assessment-report-sybasetosql.md)|使用評估報表來檢視 Sybase Adaptive Server Enterprise (ASE) 物件的轉換結果[!INCLUDE[tsql](../../includes/tsql_md.md)]語法，並以估計的時間和移轉到的複雜性[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或 SQL Azure。|  

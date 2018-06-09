@@ -3,8 +3,6 @@ title: 將 Sybase ASE 資料庫移轉至 SQL Server-Azure SQL DB |Microsoft 文�
 ms.custom: ''
 ms.date: 11/30/2017
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-sybase
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: ssma
@@ -18,11 +16,12 @@ caps.latest.revision: 7
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 8c097aa322f7ffe68f7cb886119162c2fc56d14f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 6fa8c916324af8baebe5c0a7832c4118c2991787
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34779064"
 ---
 # <a name="migrating-sap-ase-databases-to-sql-server---azure-sql-database-sybasetosql"></a>SAP ASE 資料庫移轉到 SQL Server-Azure SQL Database (SybaseToSQL)
 SQL Server 移轉小幫手 (SSMA) 的 SAP Adaptive Server Enterprise (ASE) 是一種完整的環境，可協助您快速 SAP ASE 資料庫移轉至[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或 Azure SQL Database。 藉由使用 SAP ASE SSMA，檢閱資料庫物件和資料，評估要移轉的資料庫，資料庫將物件移轉為[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或 Azure SQL Database，然後再移轉資料至[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或 Azure SQL Database。  

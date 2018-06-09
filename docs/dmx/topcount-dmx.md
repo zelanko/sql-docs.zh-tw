@@ -1,31 +1,20 @@
 ---
 title: TopCount (DMX) |Microsoft 文件
-ms.custom: ''
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.component: data-mining
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: language-reference
-f1_keywords:
-- TOPCOUNT
-dev_langs:
-- DMX
-helpviewer_keywords:
-- TopCount function
-ms.assetid: cbe031c9-4ff0-45df-9810-ebaebacf161d
-caps.latest.revision: 40
-author: Minewiskan
+ms.date: 06/07/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: dmx
+ms.topic: conceptual
 ms.author: owend
-manager: erikre
-ms.openlocfilehash: 48a53d01219290dd50bd192a6ee2adf5b51ad7b6
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: 182c83cf6b2850941c2f21924395c0ebe160db01
+ms.sourcegitcommit: 8f0faa342df0476884c3238e36ae3d9634151f87
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/07/2018
+ms.locfileid: "34842771"
 ---
 # <a name="topcount-dmx"></a>TopCount (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -70,7 +59,7 @@ SELECT (SELECT 'Women''s Mountain Shorts' as [Model]) AS [v Assoc Seq Line Items
   
  範例結果：  
   
-|模型|$SUPPORT|$PROBABILITY|$ADJUSTEDPROBABILITY|  
+|[模型]|$SUPPORT|$PROBABILITY|$ADJUSTEDPROBABILITY|  
 |-----------|--------------|------------------|--------------------------|  
 |Sport-100|4334|0.291283016|0.252695851|  
 |Water Bottle|2866|0.192620472|0.175205052|  
@@ -106,7 +95,7 @@ NATURAL PREDICTION JOIN
   
  範例結果：  
   
-|模型|$SUPPORT|$PROBABILITY|$ADJUSTEDPROBABILITY|  
+|[模型]|$SUPPORT|$PROBABILITY|$ADJUSTEDPROBABILITY|  
 |-----------|--------------|------------------|--------------------------|  
 |Sport-100|4334|0.29…|0.25…|  
 |Water Bottle|2866|0.19…|0.17…|  

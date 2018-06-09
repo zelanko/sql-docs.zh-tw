@@ -1,38 +1,20 @@
 ---
 title: 建立採礦模型 (DMX) |Microsoft 文件
-ms.custom: ''
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.component: data-mining
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: language-reference
-f1_keywords:
-- CREATE MINING MODEL
-- CREATE
-- CREATE_MINING_MODEL
-dev_langs:
-- DMX
-helpviewer_keywords:
-- RELATED TO column
-- mining models [Analysis Services], creating
-- column definition lists [DMX]
-- parameter lists [DMX]
-- SESSION clause
-- CREATE MINING MODEL statement
-ms.assetid: 43e4b591-7b34-494c-9b2d-7f0fe69af788
-caps.latest.revision: 57
-author: Minewiskan
+ms.date: 06/07/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: dmx
+ms.topic: conceptual
 ms.author: owend
-manager: erikre
-ms.openlocfilehash: b496ad8ea528345fed110c388c1ffa632c6b0cb3
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: b1bf442083845359affea6237a7c994ae1229fa9
+ms.sourcegitcommit: 8f0faa342df0476884c3238e36ae3d9634151f87
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/07/2018
+ms.locfileid: "34842631"
 ---
 # <a name="create-mining-model-dmx"></a>CREATE MINING MODEL (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -113,13 +95,13 @@ CREATE MINING MODEL <model> FROM PMML <xml string>
   
  如需可用於定義資料行之資料類型、內容類型、資料行散發及模型旗標的清單，請參閱下列主題：  
   
--   [資料類型 & #40; 資料採礦 & #41;](../analysis-services/data-mining/data-types-data-mining.md)  
+-   [資料型別&#40;資料採礦&#41;](../analysis-services/data-mining/data-types-data-mining.md)  
   
--   [內容類型 & #40; 資料採礦 & #41;](../analysis-services/data-mining/content-types-data-mining.md)  
+-   [內容類型&#40;資料採礦&#41;](../analysis-services/data-mining/content-types-data-mining.md)  
   
 -   [資料行散發&#40;資料採礦&#41;](../analysis-services/data-mining/column-distributions-data-mining.md)  
   
--   [模型旗標 & #40; 資料採礦 & #41;](../analysis-services/data-mining/modeling-flags-data-mining.md)  
+-   [模型旗標&#40;資料採礦&#41;](../analysis-services/data-mining/modeling-flags-data-mining.md)  
   
  您可以在陳述式中加入子句，以描述兩個資料行之間的關聯性。 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 支援下列使用\<資料行關聯性 > 子句。  
   
@@ -128,7 +110,7 @@ CREATE MINING MODEL <model> FROM PMML <xml string>
   
  使用預測子句描述如何使用預測資料行。 下表描述兩個可能的子句。  
   
-|\<預測 > 子句|Description|  
+|\<預測 > 子句|描述|  
 |---------------------------|-----------------|  
 |**PREDICT**|這個資料行可以依模型預測，也可以在輸入案例中提供以預測其他可預測資料行的值。|  
 |**PREDICT_ONLY**|這個資料行可以依模型預測，但是其值不能用於輸入案例中以預測其他可預測資料行的值。|  
@@ -208,6 +190,6 @@ USING Microsoft_Time_Series (PERIODICITY_HINT = '{12}', FORECAST_METHOD = 'ARTXP
 ## <a name="see-also"></a>另請參閱  
  [資料採礦延伸模組&#40;DMX&#41;資料定義陳述式](../dmx/dmx-statements-data-definition.md)   
  [資料採礦延伸模組&#40;DMX&#41;資料操作陳述式](../dmx/dmx-statements-data-manipulation.md)   
- [資料採礦延伸模組 & #40; DMX & #41;陳述式參考](../dmx/data-mining-extensions-dmx-statements.md)  
+ [資料採礦延伸模組 &#40;DMX&#41; 陳述式參考](../dmx/data-mining-extensions-dmx-statements.md)  
   
   

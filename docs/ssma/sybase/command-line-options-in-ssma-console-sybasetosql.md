@@ -3,8 +3,6 @@ title: SSMA 主控台 (SybaseToSQL) 中的命令列選項 |Microsoft 文件
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-sybase
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: ssma
@@ -20,11 +18,12 @@ caps.latest.revision: 11
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 7ca88b6398fd6f46eb4fef7ee38a4d0da5eca85f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 4d55867d0563f5f805212806bc3710abaf7804f7
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34778304"
 ---
 # <a name="command-line-options-in-ssma-console-sybasetosql"></a>SSMA 主控台 (SybaseToSQL) 中的命令列選項
 Microsoft 提供一組強固的執行及控制 SSMA 活動的命令列選項。 這可確保各節詳細說明相同。  
@@ -92,7 +91,7 @@ Microsoft 提供一組強固的執行及控制 SSMA 活動的命令列選項。 
 ### <a name="xml-output-option--xxmloutput-xmloutputfile"></a>XML 輸出選項:-x / xmloutput [xmloutputfile]  
 此命令用來輸出至主控台或至 xml 檔案的 xml 格式的命令輸出訊息。  
   
-有兩個選項可用來 xmloutput，viz..,:  
+有兩個選項可用來 xmloutput，viz。。，：  
   
 -   如果 xmloutput 切換之後提供的檔案路徑，則檔案會重新導向輸出。  
   

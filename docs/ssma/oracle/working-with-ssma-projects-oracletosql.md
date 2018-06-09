@@ -1,8 +1,6 @@
 ---
 title: 使用 SSMA 專案 (OracleToSQL) |Microsoft 文件
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-oracle
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -17,11 +15,12 @@ caps.latest.revision: 11
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
-ms.openlocfilehash: 854d604680082375bba1d7fe5cca77d264ea7c9d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: b1b28a2a9b6bf9210aa23d0f7914693f938bbf53
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34778054"
 ---
 # <a name="working-with-ssma-projects-oracletosql"></a>使用 SSMA 專案 (OracleToSQL)
 若要將 Oracle 資料庫移轉至[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]，您先建立 SSMA 專案。 專案是檔案，包含下列資訊：  
@@ -104,7 +103,7 @@ SSMA 會包含數項設定來轉換和載入資料庫物件時，移轉資料，
   
         儲存中繼資料，可能需要幾分鐘的時間。 如果您不想儲存中繼資料，但是不選取任何核取方塊。  
   
-    2.  按一下 [ **儲存** ] 按鈕。  
+    2.  按一下**儲存** 按鈕。  
   
         SSMA 會剖析 Oracle 結構描述，並將中繼資料儲存到專案檔。  
   
