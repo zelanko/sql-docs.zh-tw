@@ -13,7 +13,7 @@ ms.openlocfilehash: 4644b8775212eae0cb6d912df9bc415c5fc96ec7
 ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/02/2018
+ms.lasthandoff: 06/04/2018
 ms.locfileid: "34573940"
 ---
 # <a name="batch-element-xmla"></a>Batch 元素 (XMLA)

@@ -1,34 +1,20 @@
 ---
 title: SELECT FROM&lt;模型&gt;。內容 (DMX) |Microsoft 文件
-ms.custom: ''
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.component: data-mining
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: language-reference
-f1_keywords:
-- SELECT
-- FROM
-- Content
-dev_langs:
-- DMX
-helpviewer_keywords:
-- schema rowsets [Analysis Services], data mining
-- SELECT FROM <model>.CONTENT statement
-ms.assetid: a270b33f-77be-41fa-9340-2f6cb0dd75e5
-caps.latest.revision: 43
-author: Minewiskan
+ms.date: 06/07/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: dmx
+ms.topic: conceptual
 ms.author: owend
-manager: erikre
-ms.openlocfilehash: c68fe4831c0fcbae281eae4ca3ed823d737267cd
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: e00a7f272362a103e94d8cac686201ce79c06322
+ms.sourcegitcommit: 8f0faa342df0476884c3238e36ae3d9634151f87
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/07/2018
+ms.locfileid: "34842661"
 ---
 # <a name="select-from-ltmodelgtcontent-dmx"></a>SELECT FROM&lt;模型&gt;。內容 (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -68,7 +54,7 @@ SELECT [FLATTENED] [TOP <n>] <expression list> FROM <model>.CONTENT
 > [!NOTE]  
 >  演算法可能對資料行有不同的解譯，以便正確地表示內容。 如需採礦模型內容的每個演算法，以及如何解譯與查詢採礦模型內容的每個模型類型的提示的說明，請參閱[採礦模型內容&#40;Analysis Services-資料採礦&#41;](../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)。  
   
-|CONTENT 資料列集資料行|Description|  
+|CONTENT 資料列集資料行|描述|  
 |---------------------------|-----------------|  
 |MODEL_CATALOG|目錄名稱。 如果提供者不支援目錄，則為 NULL。|  
 |MODEL_SCHEMA|不合格的結構描述名稱。 如果提供者不支援結構描述，則為 NULL。|  
@@ -76,7 +62,7 @@ SELECT [FLATTENED] [TOP <n>] <expression list> FROM <model>.CONTENT
 |ATTRIBUTE_NAME|對應至節點之屬性的名稱。|  
 |NODE_NAME|節點的名稱。|  
 |NODE_UNIQUE_NAME|模型內節點的唯一名稱。|  
-|NODE_TYPE|代表節點類型的整數。 。|  
+|NODE_TYPE|代表節點類型的整數。 執行個體時提供 SQL Server 登入。|  
 |NODE_GUID|節點 GUID。 如果沒有 GUID，則為 NULL。|  
 |NODE_CAPTION|與節點相關聯的標籤或標題。 主要用於顯示用途。 如果標題不存在，就會傳回 NODE_NAME。|  
 |CHILDREN_CARDINALITY|節點擁有的子系數目。|  
@@ -135,9 +121,9 @@ WHERE NODE_TYPE = 26
   
 |MODEL_NAME|NODE_DISTRIBUTION.ATTRIBUTE_NAME|NODE_DISTRIBUTION.ATTRIBUTE_VALUE|NODE_DISTRIBUTION.SUPPORT|NODE_DISTRIBUTION.PROBABILITY|NODE_DISTRIBUTION.VARIANCE|NODE_DISTRIBUTION.VALUETYPE|  
 |-----------------|----------------------------------------|-----------------------------------------|--------------------------------|------------------------------------|---------------------------------|----------------------------------|  
-|TM_NaiveBayes|Bike Buyer|遺漏|0|0|0|1|  
+|TM_NaiveBayes|Bike Buyer|Missing|0|0|0|@shouldalert|  
 |TM_NaiveBayes|Bike Buyer|0|6556|0.506685215240745|0||  
-|TM_NaiveBayes|Bike Buyer|1|6383|0.493314784759255|0||  
+|TM_NaiveBayes|Bike Buyer|@shouldalert|6383|0.493314784759255|0||  
   
  下列範例示範如何使用子 SELECT 陳述式，從巢狀資料表僅傳回某些資料行。 您可以使用巢狀資料表之資料表名稱的別名來簡化顯示，如下所示。  
   
@@ -153,13 +139,13 @@ WHERE NODE_TYPE = 26
   
 |MODEL_NAME|t.ATTRIBUTE_NAME|t.ATTRIBUTE_VALUE|t.SUPPORT|  
 |-----------------|-----------------------|------------------------|---------------|  
-|TM_NaiveBayes|Bike Buyer|遺漏|0|  
+|TM_NaiveBayes|Bike Buyer|Missing|0|  
 |TM_NaiveBayes|Bike Buyer|0|6556|  
-|TM_NaiveBayes|Bike Buyer|1|6383|  
+|TM_NaiveBayes|Bike Buyer|@shouldalert|6383|  
   
 ## <a name="see-also"></a>另請參閱  
  [選取&AMP;#40;DMX&AMP;#41;](../dmx/select-dmx.md)   
  [資料採礦延伸模組&#40;DMX&#41;資料操作陳述式](../dmx/dmx-statements-data-manipulation.md)   
- [資料採礦延伸模組 & #40; DMX & #41;陳述式參考](../dmx/data-mining-extensions-dmx-statements.md)  
+ [資料採礦延伸模組 &#40;DMX&#41; 陳述式參考](../dmx/data-mining-extensions-dmx-statements.md)  
   
   

@@ -13,7 +13,7 @@ ms.openlocfilehash: bea00c5b5fdff010d667db19ef3af28284ce3ed9
 ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/02/2018
+ms.lasthandoff: 06/04/2018
 ms.locfileid: "34575780"
 ---
 # <a name="key-element-xmla"></a>Key 元素 (XMLA)

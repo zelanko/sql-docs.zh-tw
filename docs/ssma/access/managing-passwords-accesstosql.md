@@ -1,8 +1,6 @@
 ---
 title: 管理密碼 (AccessToSQL) |Microsoft 文件
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-access
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -18,11 +16,12 @@ caps.latest.revision: 13
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: b147ba97ef56ad9fa944ec18a4d9859f02ef3105
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: aee540eecc4635dc699de9db217f417485a5a0ac
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34773854"
 ---
 # <a name="managing-passwords-accesstosql"></a>管理密碼 (AccessToSQL)
 本節是關於保護資料庫的密碼和匯入或將它們匯出到伺服器的程序：  
@@ -42,7 +41,7 @@ SSMA 可讓您保護您的資料庫的密碼。
   
     以純文字密碼不安全。 因此，您將會遇到下列警告訊息中的主控台輸出： *"伺服器&lt;伺服器識別碼&gt;密碼會提供不安全的純文字形式 SSMA 主控台應用程式提供的選項來保護密碼加密，請參閱說明檔的詳細資訊的 SSMA – securepassword 選項。 」*  
   
-    **加密的密碼：**指定的密碼，在此情況下，是以加密形式儲存 ProtectedStorage.ssma 在本機電腦。  
+    **加密的密碼：** 指定的密碼，在此情況下，是以加密形式儲存 ProtectedStorage.ssma 在本機電腦。  
   
     -   **保護密碼**  
   

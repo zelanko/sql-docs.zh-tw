@@ -1,19 +1,21 @@
 ---
-title: 課程 4 請建立資料功能使用 T-SQL |Microsoft 文件
+title: 課程 4 請建立資料功能使用 T-SQL 函式 （SQL Server 機器學習） |Microsoft 文件
+description: 教學課程顯示如何在 SQL Server 中內嵌 R 預存程序和 T-SQL 函數
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 04/15/2018
+ms.date: 06/07/2018
 ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 7007d418b14e2c965252ca2a4f7bc3c529e63173
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 98182e8e602b8bba8ca7d7fd58cf23f3fcaaa435
+ms.sourcegitcommit: b52b5d972b1a180e575dccfc4abce49af1a6b230
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35249541"
 ---
-# <a name="lesson-4-create-data-features-using-t-sql"></a>第 4 課： 建立使用 T-SQL 資料功能
+# <a name="lesson-4-create-data-features-using-r-and-t-sql"></a>第 4 課： 建立使用 R 和 T-SQL 資料功能
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 這篇文章是有關如何在 SQL Server 中使用 R 的 SQL 開發人員的教學課程的一部分。
@@ -125,4 +127,4 @@ ms.lasthandoff: 04/16/2018
 
 ## <a name="previous-lesson"></a>上一課
 
-[第 3 課： 探索和視覺化資料](../tutorials/sqldev-explore-and-visualize-the-data.md)
+[第 3 課： 探索和視覺化的資料，使用 R 和預存程序](../tutorials/sqldev-explore-and-visualize-the-data.md)

@@ -1,8 +1,6 @@
 ---
 title: 評估報表 (AccessToSQL) |Microsoft 文件
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-access
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -21,18 +19,19 @@ caps.latest.revision: 14
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: d5d2d79c47dd1a819e602e55aad36844445e6c79
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: c9a7cdcd7df17e17b61ec867da6ea02f9bb1c5c3
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34773264"
 ---
 # <a name="assessment-report-accesstosql"></a>評估報表 (AccessToSQL)
 評估報表視窗中顯示的資料庫物件的轉換結果[!INCLUDE[tsql](../../includes/tsql_md.md)]語法，並且也可幫助您評估複雜度及成本的移轉專案。  
   
 若要建立評估報表中，選取來源中繼資料總管，在轉換的物件上按一下滑鼠右鍵**資料庫**，然後選取**建立報表**。 您也會自動顯示這份報表之後您將結構描述的轉換。 不過，報表名稱將會轉換報告。 如需詳細資訊，請參閱[專案設定 (GUI) （SSMA 常見）](http://msdn.microsoft.com/en-us/cf06baf1-8714-48a3-95dc-781f6ca53693)。  
   
-## <a name="options"></a>選項  
+## <a name="options"></a>選項。  
 **總管窗格**  
 包含評估報表中的物件階層。 展開資料夾，以檢視個別物件和子元件。 當您按一下類別或物件時，該類別或物件的轉換統計資料會出現在 [詳細資料] 窗格中。  
   

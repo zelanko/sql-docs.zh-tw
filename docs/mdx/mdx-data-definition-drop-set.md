@@ -1,6 +1,6 @@
 ---
 title: DROP SET 陳述式 (MDX) |Microsoft 文件
-ms.date: 05/30/2018
+ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: mdx
@@ -9,15 +9,15 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 2455736ffd186b64fa5dcac750896e73a4b4854f
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.openlocfilehash: 26c5ebe206ed9d8530a7158b464e974920dd878e
+ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/02/2018
-ms.locfileid: "34579440"
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34742017"
 ---
 # <a name="mdx-data-definition---drop-set"></a>MDX 資料定義拖放組
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
 
   移除命名集。  
   

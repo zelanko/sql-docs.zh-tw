@@ -13,7 +13,7 @@ ms.openlocfilehash: d1bf63b2e3db0add86927c2f624a01fafa31e3d7
 ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/02/2018
+ms.lasthandoff: 06/04/2018
 ms.locfileid: "34574500"
 ---
 # <a name="rollbacktransaction-element-xmla"></a>RollbackTransaction 元素 (XMLA)

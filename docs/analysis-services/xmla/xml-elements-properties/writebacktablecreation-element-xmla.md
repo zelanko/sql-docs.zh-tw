@@ -13,7 +13,7 @@ ms.openlocfilehash: e04f44d9caa3ae51ea141997e83de54524000fee
 ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/02/2018
+ms.lasthandoff: 06/04/2018
 ms.locfileid: "34576850"
 ---
 # <a name="writebacktablecreation-element-xmla"></a>WritebackTableCreation 元素 (XMLA)

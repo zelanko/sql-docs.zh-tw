@@ -11,7 +11,7 @@ ms.openlocfilehash: 559309a29944f20f8c006ccc92769f0b2824e3b3
 ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/02/2018
+ms.lasthandoff: 06/04/2018
 ms.locfileid: "34585960"
 ---
 # <a name="sql-server-machine-learning-and-r-services-in-database"></a>SQL Server 機器學習和 R 服務 （資料庫）

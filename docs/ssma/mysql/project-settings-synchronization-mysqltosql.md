@@ -1,8 +1,6 @@
 ---
 title: 專案設定 （同步處理） (MySQLToSQL) |Microsoft 文件
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-mysql
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -18,11 +16,12 @@ caps.latest.revision: 3
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: d40f9d8fdab09b242143ee859b01a79a0974943b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 16ddb4db77140eb57c893d68d954b538db2f418a
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34776194"
 ---
 # <a name="project-settings-synchronization-mysqltosql"></a>專案設定 （同步處理） (MySQLToSQL)
 同步處理**專案設定**可讓您設定 MySQL 資料庫物件如何同步處理與 SQL Server 資料庫物件。  
@@ -35,7 +34,7 @@ ms.lasthandoff: 05/03/2018
   
 -   若要指定目前的專案中，設定**工具**功能表上，按一下**專案設定**，然後按一下 **同步處理**在左窗格底部。  
   
-## <a name="options"></a>選項  
+## <a name="options"></a>選項。  
   
 ##### <a name="misc"></a>其他  
   

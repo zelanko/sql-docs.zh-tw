@@ -1,6 +1,6 @@
 ---
 title: 預測 (MDX) |Microsoft 文件
-ms.date: 05/30/2018
+ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: mdx
@@ -9,15 +9,15 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 238da79ca85c3b0a59d3a043fbd2ca7caecd020f
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.openlocfilehash: ca47db953df9889cb1d72d0add45f2b0ed681980
+ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/02/2018
-ms.locfileid: "34580980"
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34742607"
 ---
 # <a name="predict-mdx"></a>Predict (MDX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
 
     
 > [!CAUTION]  

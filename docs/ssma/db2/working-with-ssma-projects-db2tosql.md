@@ -1,8 +1,6 @@
 ---
 title: 使用 SSMA 專案 (DB2ToSQL) |Microsoft 文件
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-db2
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -18,11 +16,12 @@ caps.latest.revision: 7
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: e4526d78daa021731c09a04a6704c9a66411e178
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: c0f9cf55498ec5637b18f542ea079517571640b0
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34775554"
 ---
 # <a name="working-with-ssma-projects-db2tosql"></a>使用 SSMA 專案 (DB2ToSQL)
 若要將 DB2 資料庫移轉至[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]，您先建立 SSMA 專案。 專案是檔案，包含下列資訊：  
@@ -103,7 +102,7 @@ SSMA 包含數項設定將轉換和載入資料庫物件、 移轉資料，並�
   
         儲存中繼資料，可能需要幾分鐘的時間。 如果您不想儲存中繼資料，但是不選取任何核取方塊。  
   
-    2.  按一下 [ **儲存** ] 按鈕。  
+    2.  按一下**儲存** 按鈕。  
   
         SSMA 會剖析 DB2 結構描述，並將中繼資料儲存到專案檔。  
   

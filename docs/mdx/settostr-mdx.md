@@ -1,6 +1,6 @@
 ---
 title: SetToStr (MDX) |Microsoft 文件
-ms.date: 05/30/2018
+ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: mdx
@@ -9,15 +9,15 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: b1a6cd7d87e0eb582c06a402a98a2294996ac12c
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.openlocfilehash: 57e74eb1c7db4aebdd01fde8fc48a425d7affa55
+ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/02/2018
-ms.locfileid: "34581580"
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34743297"
 ---
 # <a name="settostr-mdx"></a>SetToStr (MDX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
 
   傳回對應至指定集合的多維度運算式 (MDX) 格式化字串。  
   

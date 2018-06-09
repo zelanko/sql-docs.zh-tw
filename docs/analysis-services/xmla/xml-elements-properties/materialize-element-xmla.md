@@ -13,7 +13,7 @@ ms.openlocfilehash: 7da58f377b05521cfe9682ac4e8e6b97278500b9
 ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/02/2018
+ms.lasthandoff: 06/04/2018
 ms.locfileid: "34575630"
 ---
 # <a name="materialize-element-xmla"></a>Materialize 元素 (XMLA)

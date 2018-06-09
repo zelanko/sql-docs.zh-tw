@@ -1,8 +1,6 @@
 ---
 title: 連接至 DB2 (DB2ToSQL) |Microsoft 文件
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-db2
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -18,18 +16,19 @@ caps.latest.revision: 4
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 09d4e69aefa89ed9930badc575be4fdc302d5f35
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 050c3e5755b86fc1928e6d44292e7e2fb82f5c0e
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34775124"
 ---
 # <a name="connect-to-db2-db2tosql"></a>連接至 DB2 (DB2ToSQL)
 使用**連接到 DB2**對話方塊連接到您想要移轉的 DB2 資料庫。  
   
 若要存取此對話方塊，請在**檔案**功能表上，選取**連接到 DB2**。 如果您之前已連線，則命令是**重新連接至 DB2**。  
   
-## <a name="options"></a>選項  
+## <a name="options"></a>選項。  
 **提供者**  
 選取連接至 DB2 資料庫的資料存取提供者。 可用的提供者是 DB2 用戶端提供者和 OLE DB 提供者。 預設值是 DB2 用戶端提供者。  
   

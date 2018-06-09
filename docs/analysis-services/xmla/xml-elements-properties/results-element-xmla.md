@@ -13,7 +13,7 @@ ms.openlocfilehash: 7fc64d6b31f1b05d8bf5b4d1c80d75dff0583e86
 ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/02/2018
+ms.lasthandoff: 06/04/2018
 ms.locfileid: "34576160"
 ---
 # <a name="results-element-xmla"></a>results 元素 (XMLA)

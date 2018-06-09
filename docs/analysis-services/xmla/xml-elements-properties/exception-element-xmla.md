@@ -13,7 +13,7 @@ ms.openlocfilehash: d3e542534b85d0f87b689b196001e9a00fe49b15
 ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/02/2018
+ms.lasthandoff: 06/04/2018
 ms.locfileid: "34578230"
 ---
 # <a name="exception-element-xmla"></a>Exception 元素 (XMLA)

@@ -1,8 +1,6 @@
 ---
 title: 加入和移除存取資料庫檔案 (AccessToSQL) |Microsoft 文件
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-access
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -37,11 +35,12 @@ caps.latest.revision: 15
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: e2fbd70bf6427b7f5dbe694f4abd2fed2f28b4b6
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: f88f27de2202679147ad3b3f0b3e1a3765292d88
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34773564"
 ---
 # <a name="adding-and-removing-access-database-files-accesstosql"></a>加入和移除 Access 資料庫檔案 (AccessToSQL)
 若要存取將資料移轉至[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或 SQL Azure，您必須加入一個或多個 Access 資料庫的 SSMA 專案。 這些資料庫必須 Access 97 或更新版本。 如果您的資料庫從舊版的存取權，您必須將資料庫轉換為較新版本。 您這麼做，開啟並儲存資料庫 Access 97 或更新版本中，您將它們加入 SSMA 之前。  
@@ -92,7 +91,7 @@ ms.lasthandoff: 05/03/2018
   
     您可以使用**全選**和**全部清除**加以選取或清除所有的資料庫清單頂端的按鈕。 您可以按住 CTRL 鍵以選取多個資料庫，或按住 SHIFT 鍵向選取的資料庫的範圍。  
   
-7.  按一下 **[下一步]**。  
+7.  按 [下一步] 。  
   
 8.  在確認頁面上，按一下 **完成**。  
   

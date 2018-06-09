@@ -13,7 +13,7 @@ ms.openlocfilehash: 5f99f4c0ddf212d2fac33abd08c33ccf3dbe7998
 ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/02/2018
+ms.lasthandoff: 06/04/2018
 ms.locfileid: "34576480"
 ---
 # <a name="synchronizesecurity-element-xmla"></a>SynchronizeSecurity 元素 (XMLA)

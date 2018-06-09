@@ -1,8 +1,6 @@
 ---
 title: 專案設定 （轉換） (DB2ToSQL) |Microsoft 文件
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-db2
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -18,11 +16,12 @@ caps.latest.revision: 8
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 64f014daf9dc81362b55931729bf33ac97fa105e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 31f00a9fbc779ae0054a04a9890fcca9a0be33a9
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34775604"
 ---
 # <a name="project-settings-conversion-db2tosql"></a>專案設定 （轉換） (DB2ToSQL)
 [轉換] 頁面的**專案設定**對話方塊包含自訂 SSMA 如何轉換 DB2 語法來設定[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]語法。  
@@ -40,9 +39,9 @@ ms.lasthandoff: 05/03/2018
   
 當您選取中的轉換模式**模式** 方塊中，SSMA 會套用下列設定：  
   
-**預設/開放式模式：**否  
+**預設/開放式模式：** 否  
   
-**完整模式：**否  
+**完整模式：** 否  
   
 ## <a name="miscellaneous-options"></a>其他選項  
   
@@ -69,20 +68,20 @@ SSMA 會將轉換 ROWNUM 運算式，它會將運算式轉換成 TOP 子句，�
   
 當您選取中的轉換模式**模式** 方塊中，SSMA 會套用下列設定：  
   
-**預設全模式：**否  
+**預設全模式：** 否  
   
 **開放式模式：** [是]  
   
 ### <a name="default-schema-mapping"></a>預設結構描述對應  
 此設定指定如何將 DB2 結構描述對應至 SQL Server 結構描述。 此設定中有兩個選項：  
   
-1.  **資料庫的結構描述：**在此模式 DB2 結構描述 'sch1' 會對應至 SQL Server 資料庫 'sch1' 中 'dbo' SQL Server 結構描述預設。  
+1.  **資料庫的結構描述：** 在此模式 DB2 結構描述 'sch1' 會對應至 SQL Server 資料庫 'sch1' 中 'dbo' SQL Server 結構描述預設。  
   
-2.  **結構描述的結構描述：**在此模式 DB2 結構描述 'sch1' 會對應至 [連接] 對話方塊中提供的預設 SQL Server 資料庫中的 'sch1' SQL Server 結構描述的預設。  
+2.  **結構描述的結構描述：** 在此模式 DB2 結構描述 'sch1' 會對應至 [連接] 對話方塊中提供的預設 SQL Server 資料庫中的 'sch1' SQL Server 結構描述的預設。  
   
 當您選取中的轉換模式**模式** 方塊中，SSMA 會套用下列設定：  
   
-**預設/Optimistic/完整模式：**到資料庫的結構描述  
+**預設/Optimistic/完整模式：** 到資料庫的結構描述  
   
 ### <a name="conversion-ways-of-merge-statement"></a>MERGE 陳述式的轉換方式  
   
@@ -95,7 +94,7 @@ SSMA 會將轉換 ROWNUM 運算式，它會將運算式轉換成 TOP 子句，�
   
 當您選取中的轉換模式**模式** 方塊中，SSMA 會套用下列設定：  
   
-**預設/Optimistic/完整模式：**使用 MERGE 陳述式  
+**預設/Optimistic/完整模式：** 使用 MERGE 陳述式  
   
 ### <a name="convert-calls-to-subprograms-that-use-default-arguments"></a>將使用預設引數的子的呼叫轉換  
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 函式不支援函式呼叫中省略參數。 此外，[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]函數和程序不支援做為預設參數值的運算式。  
@@ -119,7 +118,7 @@ SSMA 會將轉換 ROWNUM 運算式，它會將運算式轉換成 TOP 子句，�
   
 **預設全模式：** [是]  
   
-**開放式模式：**否  
+**開放式模式：** 否  
   
 ### <a name="convert-forall-statement-to-while-statement"></a>FORALL 陳述式轉換成 WHILE 陳述式  
 定義如何 SSMA 會將 FORALL 迴圈 PL/SQL 集合項目上。  
@@ -130,7 +129,7 @@ SSMA 會將轉換 ROWNUM 運算式，它會將運算式轉換成 TOP 子句，�
   
 當您選取中的轉換模式**模式** 方塊中，SSMA 會套用下列設定：  
   
-**預設/開放式模式：**否  
+**預設/開放式模式：** 否  
   
 **完整模式：** [是]  
   
@@ -143,7 +142,7 @@ DB2 可讓建立 foreign key 條件約束，其中 SET NULL 不執行動作，�
   
 當您選取中的轉換模式**模式** 方塊中，SSMA 會套用下列設定：  
   
-**預設開放式/全模式：**否  
+**預設開放式/全模式：** 否  
   
 ### <a name="convert-function-calls-to-procedure-calls"></a>轉換程序呼叫的函式呼叫  
 某些 DB2 函式定義為自發交易，或包含不是有效的陳述式[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]。 在這些情況下，SSMA 會建立的程序和程序的包裝函式的函式。 已轉換的函式呼叫的實作程序。  
@@ -158,7 +157,7 @@ SSMA 可以將呼叫包裝函式的函式轉換的程序呼叫。 這會更容�
   
 當您選取中的轉換模式**模式** 方塊中，SSMA 會套用下列設定：  
   
-**預設/Optimistic/完整模式：**盡可能  
+**預設/Optimistic/完整模式：** 盡可能  
   
 ### <a name="convert-lock-table-statements"></a>轉換鎖定 TABLE 陳述式  
 SSMA 可以將許多鎖定資料表陳述式轉換成資料表提示中。 SSMA 無法轉換包含資料分割，SUBPARTITION，任何鎖定 TABLE 陳述式@dblink，並且使用 NOWAIT 子句，並會將標示為這類陳述式，並轉換的錯誤訊息。  
@@ -218,7 +217,7 @@ SSMA 可轉換成 DB2 SUBSTR 函式呼叫[!INCLUDE[ssNoVersion](../../includes/s
   
 **預設/開放式模式：** [是]  
   
-**完整模式：**否  
+**完整模式：** 否  
   
 ### <a name="convert-subtypes"></a>轉換的子類型  
 SSMA 可以轉換 PL/SQL 子類型有兩種：  
@@ -229,7 +228,7 @@ SSMA 可以轉換 PL/SQL 子類型有兩種：
   
 當您選取中的轉換模式**模式** 方塊中，SSMA 會套用下列設定：  
   
-**預設開放式/全模式：**否  
+**預設開放式/全模式：** 否  
   
 ### <a name="convert-synonyms"></a>轉換同義字  
 可以移轉下列 DB2 物件的同義字到[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]:  
@@ -271,9 +270,9 @@ SSMA 可以將 DB2 TO_CHAR(date, format) 轉換成 sysdb 資料庫中的程序�
   
 當您選取中的轉換模式**模式** 方塊中，SSMA 會套用下列設定：  
   
-**預設/Optimistic 模式：**使用 TO_CHAR_DATE 函式  
+**預設/Optimistic 模式：** 使用 TO_CHAR_DATE 函式  
   
-**完整模式：**使用 TO_CHAR_DATE_LS 函式 （NLS 照護）  
+**完整模式：** 使用 TO_CHAR_DATE_LS 函式 （NLS 照護）  
   
 ### <a name="convert-transaction-processing-statements"></a>轉換的交易處理陳述式  
 SSMA 可以轉換 DB2 交易處理陳述式：  
@@ -306,7 +305,7 @@ SSMA 可以模擬 DB2 ORDER BY 行為，藉由檢查 NULL 值。 它然後先排
   
 當您選取中的轉換模式**模式** 方塊中，SSMA 會套用下列設定：  
   
-**預設/開放式模式：**否  
+**預設/開放式模式：** 否  
   
 **完整模式：** [是]  
   
@@ -329,7 +328,7 @@ SSMA 可以模擬 DB2 ORDER BY 行為，藉由檢查 NULL 值。 它然後先排
   
 當您選取中的轉換模式**模式** 方塊中，SSMA 會套用下列設定：  
   
-**預設開放式/全模式：**錯誤  
+**預設開放式/全模式：** 錯誤  
   
 ### <a name="generate-rowid-column"></a>產生 ROWID 資料行  
 SSMA 當建立資料表中的[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]，它可以建立 ROWID 資料行。 當您移轉資料時，每個資料列會取得 newid （） 函數所產生的新 UNIQUEIDENTIFIER 值。  
@@ -345,7 +344,7 @@ SSMA 當建立資料表中的[!INCLUDE[ssNoVersion](../../includes/ssnoversion_m
   
 當您選取中的轉換模式**模式** 方塊中，SSMA 會套用下列設定：  
   
-**預設/Optimistic 模式：**加入 ROWID 資料行的資料表與觸發程序  
+**預設/Optimistic 模式：** 加入 ROWID 資料行的資料表與觸發程序  
   
 **完整模式：** [是]  
   
@@ -365,7 +364,7 @@ SSMA 當建立資料表中的[!INCLUDE[ssNoVersion](../../includes/ssnoversion_m
   
 當您選取中的轉換模式**模式** 方塊中，SSMA 會套用下列設定：  
   
-**預設開放式/全模式：**內嵌  
+**預設開放式/全模式：** 內嵌  
   
 ### <a name="use-isnull-in-string-concatenation"></a>字串串連中使用 ISNULL  
 DB2 和[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]字串串連的方式包含 NULL 值時傳回不同的結果。 DB2 會將 NULL 值，像是空的字元集。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 會傳回 NULL。  
@@ -385,7 +384,7 @@ ISNULL 陳述式用於取代函式呼叫，以模擬 DB2 行為。 此設定有�
   
 當您選取中的轉換模式**模式** 方塊中，SSMA 會套用下列設定：  
   
-**預設/開放式模式：**否  
+**預設/開放式模式：** 否  
   
 **完整模式：** [是]  
   
@@ -398,7 +397,7 @@ CONCAT 函式呼叫使用 ISNULL 陳述式來模擬 DB2 行為。 此設定有�
   
 當您選取中的轉換模式**模式** 方塊中，SSMA 會套用下列設定：  
   
-**預設/開放式模式：**否  
+**預設/開放式模式：** 否  
   
 **完整模式：** [是]  
   
@@ -412,7 +411,7 @@ CONCAT 函式呼叫使用 ISNULL 陳述式來模擬 DB2 行為。 此設定有�
   
 **預設/開放式模式：** [是]  
   
-**完整模式：**否  
+**完整模式：** 否  
   
 ### <a name="use-selectfor-xml-when-converting-selectinto-for-record-variable"></a>使用 SELECT...FOR XML 轉換時選取...記錄變數的 INTO  
 指定是否產生 XML 結果集，當您選取放入記錄變數中。  
@@ -423,7 +422,7 @@ CONCAT 函式呼叫使用 ISNULL 陳述式來模擬 DB2 行為。 此設定有�
   
 當您選取中的轉換模式**模式** 方塊中，SSMA 會套用下列設定：  
   
-**預設開放式/全模式：**否  
+**預設開放式/全模式：** 否  
   
 ## <a name="returning-clause-conversion"></a>傳回子句轉換  
   

@@ -1,6 +1,6 @@
 ---
 title: CREATE SET 陳述式 (MDX) |Microsoft 文件
-ms.date: 05/30/2018
+ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: mdx
@@ -9,15 +9,15 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 999f62b3d43c48169eb0607c406bd7bdc12bee62
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.openlocfilehash: 4d1e58d016649c3c21a056a82315bd0d0fb3564f
+ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/02/2018
-ms.locfileid: "34579340"
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34741687"
 ---
 # <a name="mdx-data-definition---create-set"></a>MDX 資料定義-建立設定
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
 
   使用目前 Cube 的工作階段範圍來建立命名集。  
   
@@ -93,7 +93,7 @@ SELECT [Core Products] ON 0
  指定查詢 Cube 的使用者看不到集合。  
   
 ## <a name="standard-properties"></a>標準屬性  
- 每個集合都有一組預設屬性。 當用戶端應用程式連接至[!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]的預設屬性是直接或可以受到支援，由系統管理員決定。  
+ 每個集合都有一組預設屬性。 當用戶端應用程式連接至[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]的預設屬性是直接或可以受到支援，由系統管理員決定。  
   
 |屬性識別碼|意義|  
 |-------------------------|-------------|  

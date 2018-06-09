@@ -13,7 +13,7 @@ ms.openlocfilehash: 2365cee01941d32ae01a7be5f5e4d44bf15e2734
 ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/02/2018
+ms.lasthandoff: 06/04/2018
 ms.locfileid: "34576310"
 ---
 # <a name="propertylist-element---supported-xmla-properties"></a>PropertyList 元素-支援 XMLA 屬性

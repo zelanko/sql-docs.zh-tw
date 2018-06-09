@@ -1,6 +1,6 @@
 ---
 title: 維度 (MDX) |Microsoft 文件
-ms.date: 05/30/2018
+ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: mdx
@@ -9,15 +9,15 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: af73d6f08432a63a207c06d361354d6e45b6a07d
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.openlocfilehash: cee82f3baa95df1d8636e314bfbb0798efe9527a
+ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/02/2018
-ms.locfileid: "34577930"
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34741667"
 ---
 # <a name="dimension-mdx"></a>Dimension (MDX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
 
   傳回含有特定成員、層級或階層的階層。  
   

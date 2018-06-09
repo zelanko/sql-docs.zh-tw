@@ -1,8 +1,6 @@
 ---
 title: 匯出存取清查 (AccessToSQL) |Microsoft 文件
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-access
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -27,11 +25,12 @@ caps.latest.revision: 18
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 7d0877666e13f490463e77ec30bf7792367747d9
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: eb5d6e4bcd3699d99dd512ea766087a33f2adf45
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34773534"
 ---
 # <a name="exporting-an-access-inventory-accesstosql"></a>匯出存取清查 (AccessToSQL)
 如果您有多個存取資料庫，而且您不確定要將移轉至哪些[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]，您可以匯出專案中的所有存取資料庫的清查。 您可以檢閱，然後查詢來判斷哪一個資料庫並移轉這些資料庫中的物件的清查中繼資料。 這個清查可讓您快速尋找問題解答，如下所示：  
@@ -98,7 +97,7 @@ SSMA 會將匯出有關存取資料庫、 資料表、 資料行、 索引、 �
   
     您可以使用**全選**和**全部清除**加以選取或清除所有的資料庫清單頂端的按鈕。 您也可以按住 CTRL 鍵以選取多個資料列，或按住 SHIFT 鍵向選取的資料列範圍。  
   
-7.  按一下 **[下一步]**。  
+7.  按 [下一步] 。  
   
 8.  在確認頁面上，按一下 **完成**。  
   

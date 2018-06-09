@@ -1,8 +1,6 @@
 ---
 title: 資料移轉設定 (DB2ToSQL) |Microsoft 文件
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-db2
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -18,11 +16,12 @@ caps.latest.revision: 4
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 54f7f3b8c7c5158a51ac54cc7c7bf53568268d20
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 9b5d6ad21b98229d79ebcedddfe16c98cbc2d706
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34774974"
 ---
 # <a name="data-migration-settings-db2tosql"></a>資料移轉設定 (DB2ToSQL)
   
@@ -55,9 +54,9 @@ ms.lasthandoff: 05/03/2018
   
 有兩個按鈕出現的 viz。:  
   
--   **套用：**按一下**套用**來套用設定，已變更。  
+-   **套用：** 按一下**套用**來套用設定，已變更。  
   
--   **取消：**按一下**取消**進行變更之前，還原目前的設定。  
+-   **取消：** 按一下**取消**進行變更之前，還原目前的設定。  
   
 ## <a name="see-also"></a>另請參閱  
 [將 DB2 資料移轉至 SQL Server](http://msdn.microsoft.com/en-us/86cbd39f-6dac-409a-9ce1-7dd54403f84b)  

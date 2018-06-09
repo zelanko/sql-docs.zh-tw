@@ -13,7 +13,7 @@ ms.openlocfilehash: 4953981e7657706a986e9a2407f6786ff676a854
 ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/02/2018
+ms.lasthandoff: 06/04/2018
 ms.locfileid: "34575600"
 ---
 # <a name="location-element-xmla"></a>Location 元素 (XMLA)

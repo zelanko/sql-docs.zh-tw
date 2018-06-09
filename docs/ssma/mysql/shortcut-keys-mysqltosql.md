@@ -1,8 +1,6 @@
 ---
 title: 攠摝坫 (MySQLToSQL) |Microsoft 文件
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-mysql
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -18,11 +16,12 @@ caps.latest.revision: 3
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: c8d57e5e83579adb0afbdefa2bc9172ad8434eed
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 39f7c04d180a5604a94721c4c4f3993ac81d9c25
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34776559"
 ---
 # <a name="shortcut-keys-mysqltosql"></a>攠摝坫 (MySQLToSQL)
 您可以使用鍵盤快速鍵來瀏覽 SSMA 應用程式。 如需詳細資訊，請參閱下列主題。  

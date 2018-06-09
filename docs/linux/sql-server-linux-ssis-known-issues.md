@@ -5,24 +5,25 @@ author: leolimsft
 ms.author: lle
 ms.reviewer: douglasl
 manager: craigg
-ms.date: 10/02/2017
+ms.date: 06/06/2018
 ms.topic: article
 ms.prod: sql
 ms.component: ''
 ms.suite: sql
 ms.custom: sql-linux
 ms.technology: linux
-ms.openlocfilehash: 8e666a50f90a390307f00e8fd310f965fb7a50b7
-ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
+ms.openlocfilehash: 33f798fd3b7816cae61137292392cb9cca729ec7
+ms.sourcegitcommit: cfe5b2af733e7801558b441b4b9427cfe4c26435
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/19/2018
+ms.lasthandoff: 06/06/2018
+ms.locfileid: "34822201"
 ---
 # <a name="limitations-and-known-issues-for-ssis-on-linux"></a>限制與已知的問題適用於 Linux 上的 SSIS
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-本文說明目前的限制與已知的問題 SQL Server Integration Services (SSIS) 在 Linux 上。
+這篇文章描述限制與已知的問題 SQL Server Integration Services (SSIS) 在 Linux 上。
 
 ## <a name="general-limitations-and-known-issues"></a>一般的限制與已知的問題
 
@@ -41,11 +42,9 @@ ms.lasthandoff: 05/19/2018
 
 ## <a name="components"></a> 支援和不支援的元件
 
-Linux 支援下列的內建 Integration Services 元件。 下表中所述，其中部分可以具有 Linux 平台上的限制。
+Linux 支援下列的內建 Integration Services 元件。 其中部分 Linux 平台上有限制。 此處未列出的內建元件不支援在 Linux 上。
 
-此處未列出的內建元件不支援在 Linux 上。
-
-### <a name="supported-control-flow-tasks"></a>支援的控制流程工作
+## <a name="supported-control-flow-tasks"></a>支援的控制流程工作
 - 大量插入工作
 - 資料流程工作
 - 資料分析工作
@@ -54,9 +53,9 @@ Linux 支援下列的內建 Integration Services 元件。 下表中所述，其
 - 運算式工作
 - FTP 工作
 - Web 服務工作
-- XML Task
+- XML 工作
 
-### <a name="control-flow-tasks-supported-with-limitations"></a>支援有限制的控制流程工作
+## <a name="control-flow-tasks-supported-with-limitations"></a>支援有限制的控制流程工作
 
 | 工作 | 限制 |
 |------------|---|
@@ -67,16 +66,34 @@ Linux 支援下列的內建 Integration Services 元件。 下表中所述，其
 | 傳送資料庫工作 | 不支援 UNC 路徑。 |
 | | |
 
-### <a name="supported-control-flow-containers"></a>支援的控制流程容器
+## <a name="supported-and-unsupported-maintenance-plan-tasks"></a>支援和不支援的維護計畫工作
+
+在 SQL Server 維護計畫中，您通常可以使用各種不同的 SSIS 工作。
+
+在 Linux 上不支援下列的維護計畫工作：
+- 通知操作員
+- 執行 SQL Server Agent 作業
+
+在 Linux 上支援下列的維護計畫工作：
+- 檢查資料庫完整性
+- 壓縮資料庫
+- 重新組織索引
+- 重建索引
+- 更新統計資料
+- 清除歷程記錄
+- 備份資料庫
+- T-SQL 陳述式
+
+## <a name="supported-control-flow-containers"></a>支援的控制流程容器
 - 時序容器
 - For 迴圈容器
 - Foreach 迴圈容器
 
-### <a name="supported-data-flow-sources-and-destinations"></a>支援的資料流來源和目的地
+## <a name="supported-data-flow-sources-and-destinations"></a>支援的資料流來源和目的地
 - 原始檔案來源和目的地
 - XML 來源
 
-### <a name="data-flow-sources-and-destinations-supported-with-limitations"></a>資料流程來源和目的地支援有限制
+## <a name="data-flow-sources-and-destinations-supported-with-limitations"></a>資料流程來源和目的地支援有限制
 
 | 元件 | 限制 |
 |------------|---|
@@ -87,7 +104,7 @@ Linux 支援下列的內建 Integration Services 元件。 下表中所述，其
 | OLE DB 來源和目的地 | 只支援 SQL Server Native Client 11.0 和 Microsoft OLE DB Provider for SQL Server。 |
 | | |
 
-### <a name="supported-data-flow-transformations"></a>支援的資料流程轉換
+## <a name="supported-data-flow-transformations"></a>支援的資料流程轉換
 - Aggregate
 - 稽核
 - 平衡型資料散發者
@@ -112,7 +129,7 @@ Linux 支援下列的內建 Integration Services 元件。 下表中所述，其
 - Union All
 - 取消樞紐
 
-### <a name="data-flow-transformations-supported-with-limitations"></a>資料流程轉換支援有限制
+## <a name="data-flow-transformations-supported-with-limitations"></a>資料流程轉換支援有限制
 
 | 元件 | 限制 |
 |------------|---|
@@ -120,7 +137,7 @@ Linux 支援下列的內建 Integration Services 元件。 下表中所述，其
 | 指令碼元件 | 只支援標準的.NET Framework Api。 |
 | | |
 
-### <a name="supported-and-unsupported-log-providers"></a>支援和不支援的記錄提供者
+## <a name="supported-and-unsupported-log-providers"></a>支援和不支援的記錄提供者
 Windows 事件記錄檔提供者以外所有 Linux 上支援的內建的 SSIS 記錄提供者。
 
 SQL Server 記錄提供者僅支援 SQL 驗證。不支援 Windows 驗證。

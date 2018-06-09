@@ -13,7 +13,7 @@ ms.openlocfilehash: 803ec660944663c7f40f1b7c9dddc118b8b6b76c
 ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/02/2018
+ms.lasthandoff: 06/04/2018
 ms.locfileid: "34575400"
 ---
 # <a name="folders-element-xmla"></a>Folders 元素 (XMLA)

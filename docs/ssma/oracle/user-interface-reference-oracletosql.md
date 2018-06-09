@@ -1,8 +1,6 @@
 ---
 title: 使用者介面參考 (OracleToSQL) |Microsoft 文件
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-oracle
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -15,11 +13,12 @@ caps.latest.revision: 10
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
-ms.openlocfilehash: bf07df733aad0657fa24791eb8b0ca4a01def782
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 981fd5efeda156774de298be5f45d5a9387279e1
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34778124"
 ---
 # <a name="user-interface-reference-oracletosql"></a>使用者介面參考 (OracleToSQL)
 本節包含說明主題[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]移轉小幫手 (SSMA) for Oracle。  
@@ -29,7 +28,7 @@ ms.lasthandoff: 05/03/2018
   
 |||  
 |-|-|  
-|主題|Description|  
+|主題|描述|  
 |[進階物件選取項目&#40;OracleToSQL&#41;](../../ssma/oracle/advanced-object-selection-oracletosql.md)|使用**進階物件選取**對話方塊來尋找資料庫物件所使用的篩選準則，然後選取或清除這些物件。|  
 |[評估報表&#40;OracleToSQL&#41;](../../ssma/oracle/assessment-report-oracletosql.md)|使用評估報表來檢視 Oracle 物件要轉換的結果[!INCLUDE[tsql](../../includes/tsql_md.md)]語法，並以估計的時間和移轉到的複雜性[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]。|  
 |[連接到 Oracle &#40;OracleToSQL&#41;](../../ssma/oracle/connect-to-oracle-oracletosql.md)|使用**Connect to Oracle**對話方塊連接到您想要移轉的 Oracle 資料庫。|  

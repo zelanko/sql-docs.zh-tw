@@ -13,7 +13,7 @@ ms.openlocfilehash: 49238b50457a586bbf23cc75ee454003c57ac04e
 ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/02/2018
+ms.lasthandoff: 06/04/2018
 ms.locfileid: "34575020"
 ---
 # <a name="statement-element-xmla"></a>Statement 元素 (XMLA)

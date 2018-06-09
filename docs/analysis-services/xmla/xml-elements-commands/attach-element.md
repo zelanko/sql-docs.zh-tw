@@ -13,7 +13,7 @@ ms.openlocfilehash: fa13ada270ffe7c7d7a1290dd3645efae5f4c6a1
 ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/02/2018
+ms.lasthandoff: 06/04/2018
 ms.locfileid: "34574060"
 ---
 # <a name="attach-element"></a>Attach 元素

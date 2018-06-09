@@ -9,10 +9,10 @@ author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
 ms.openlocfilehash: 8f7b0ee2b623f6a208a92823948bf0295bae33f6
-ms.sourcegitcommit: 2d93cd115f52bf3eff3069f28ea866232b4f9f9e
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/01/2018
+ms.lasthandoff: 06/04/2018
 ms.locfileid: "34707496"
 ---
 # <a name="use-r-package-managers-to-install-r-packages-on-sql-server"></a>若要在 SQL Server 上安裝 R 封裝中使用 R 封裝管理員

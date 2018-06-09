@@ -1,7 +1,7 @@
 ---
 title: 在資料移轉小幫手 (SQL Server) 的新 |Microsoft 文件
 ms.custom: ''
-ms.date: 02/02/2018
+ms.date: 06/01/2018
 ms.prod: sql
 ms.prod_service: dma
 ms.reviewer: ''
@@ -17,15 +17,22 @@ caps.latest.revision: ''
 author: HJToland3
 ms.author: jtoland
 manager: craigg
-ms.openlocfilehash: 2468bb700588310a397530f27c6c6d6960e75b06
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 1d7d749aae4b5086e44961f9fbcb6967269ccf1c
+ms.sourcegitcommit: 6fe7b5e8818bd0d94fce693c560d63cc6883d76f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34758118"
 ---
 # <a name="whats-new-in-data-migration-assistant"></a>在資料移轉小幫手最新消息
-
 本主題列出新增的項目在每個版本中的資料移轉小幫手 (DMA)。
+
+## <a name="dma-v35"></a>DMA v3.5
+DMA 的 v3.5 版本包含下列功能：
+- 大幅改良效能，移轉到 Azure SQL Database （基準測試表示處理程序四次較快與 DMA 的較早版本）。
+- 記憶體耗用量最佳化來改善移轉工作流程的穩定性。
+- 略過的能力評估結構描述和資料移轉期間 （如果您已經執行評估並解決任何重大結構描述物件，在移轉之前）。
+- 地址的修正損毀時執行舊版的 SQL Server 版本升級時提供無效的網路共用路徑以將備份檔案，此工具的問題內部部署至更新版本或 Azure Vm 上的 SQL Server。
 
 ## <a name="dma-v34"></a>DMA v3.4
 DMA 的 v3.4 版本包含下列功能：
@@ -36,44 +43,39 @@ DMA 的 v3.4 版本包含下列功能：
 DMA v3.3 發行可讓移轉至新版的 SQL Server 2017，在 Windows 和 Linux 上的內部部署 SQL Server 執行個體。 雖然 Windows 和 Linux 的整體移轉工作流程中都相同，適用於 Linux 移至 SQL Server 2017 會需要幾個額外的考量。
 
 ### <a name="specifying-the-back-up-path"></a>指定備份路徑
-Linux 和 Windows 使用不同的路徑格式。 如此一來，若要在 Linux 上的 SQL Server 2017 移轉會要求使用者提供的實體檔案的位置路徑的 Windows 和 Linux 版本。 這是根據實體檔案的位置不同的方式達成。
+Linux 和 Windows 使用不同的路徑格式。 如此一來，若要在 Linux 上的 SQL Server 2017 移轉會要求使用者提供的實體檔案的位置路徑的 Windows 和 Linux 版本。 您可以根據實體檔案的位置不同的方式提供兩個版本的路徑。
 如果實體備份檔案是執行的電腦上：
 - Linux，請使用 'samba' 共用與網路上的其他電腦共用檔案。
--   Windows 中，使用 'mnt' 命令來掛接到執行 Linux 的電腦上的共用。
+- Windows 中，使用 'mnt' 命令來掛接到執行 Linux 的電腦上的共用。
 
 > [!NOTE]
 > 請使用 'samba' 共用或 'mnt' 命令的詳細資料已超出本文的範圍。
 
 ### <a name="migrating-windows-logins"></a>移轉的 Windows 登入
-雖然在 Linux 上的 SQL Server 2017 正式支援的 Active Directory (AD) 登入移轉，它會需要額外設定才能順利運作。 請參閱主題[Active Directory 驗證與 SQL Server on Linux](https://docs.microsoft.com/en-us/sql/linux/sql-server-linux-active-directory-authentication)針對設定 SQL Server 2017 on Linux 上的 Active Directory 登入的詳細資訊。 在此之後安裝程式完成時，您可以如往常般在移轉 Active Directory 登入。 使用標準 SQL 驗證的運作方式如預期般無須進行任何額外的設定。
+雖然在 Linux 上的 SQL Server 2017 正式支援的 Active Directory (AD) 登入移轉，它會需要額外設定才能順利運作。 請參閱主題[Active Directory 驗證與 SQL Server on Linux](https://docs.microsoft.com/en-us/sql/linux/sql-server-linux-active-directory-authentication)針對設定 SQL Server 2017 on Linux 上的 Active Directory 登入的詳細資訊。 執行之後所需的設定，設定完成後，您可以如往常般在移轉 Active Directory 登入。 使用標準 SQL 驗證的運作方式如預期般無須進行任何額外的設定。
 
 ## <a name="dma-v32"></a>DMA v3.2
 DMA 的 v3.2 版本包含下列功能：
 
 - 結構描述和資料移轉會啟用內部部署 SQL Server 資料庫從 Azure SQL Database 與新的移轉工作流程。
-
 - 在結構描述移轉至 Azure SQL Database 時，DMA 指令碼來源資料庫物件、 如何修正任何可能發生的相容性問題，提供指引，並將您的結構描述部署到 Azure。
 
 ## <a name="dma-v31"></a>DMA v3.1
 DMA 的 v3.1 版本包含下列功能：
 
 - Azure SQL Database 資料庫定序，以改善的評估建議使用不支援的系統預存程序和 CLR 物件。
-
 - 相容性層級 130、 120、 110 和 100 移轉到 Azure SQL Database 時的評估指引。
 
 ## <a name="dma-v30"></a>DMA v3.0
 DMA v3.0 發行擴充 Azure SQL 資料庫評估，以提供完整的建議來協助修正的相關問題：
 
 - 移轉封鎖問題。
-
 - 部分或不支援的功能和函式。
 
 ## <a name="dma-v21"></a>DMA v2.1
 DMA 的 v2.1 版本包含下列功能：
 - 支援命令列執行自動安裝模式，這樣可協助您評估執行大規模的評估。 如需詳細資料，請參閱主題[執行資料移轉小幫手從命令列](dma-commandline.md)。
-
 - 當使用者啟動並關閉 DMA 的效能改進。
-
 - 設定 SQL 連接逾時的能力。如需詳細資料，請參閱主題[組態設定，資料移轉小幫手](dma-configurationsettings.md)。
 
 ## <a name="dma-v20"></a>DMA v2.0
@@ -82,17 +84,14 @@ DMA 的 v2.0 發行版本包含改良的 Stretch 資料庫功能建議，以提�
 ## <a name="dma-v10"></a>DMA v1.0
 DMA 的 v1.0 版本是初始版本中，並提供：
 - 探索可能會影響升級為 SQL Server 的內部部署版本的問題。 相容性問題，以描述任何發現與它們分成下列領域：
-    -   重大變更
+    - 重大變更
     - 行為變更
     - 已被取代的功能
-
 - 探索的資料庫可以受益於升級的目標 SQL Server 平台的新功能。 功能的建議事項，以描述任何發現與它們分成下列領域：
     - 效能
     - Security
-    - 儲存空間
-
+    - Storage
 -   若要執行評估的現代化使用者體驗。
 
 ## <a name="see-also"></a>另請參閱
-
 [資料移轉小幫手的概觀](../dma/dma-overview.md)

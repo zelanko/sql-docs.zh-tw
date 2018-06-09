@@ -1,6 +1,6 @@
 ---
 title: IsGeneration (MDX) |Microsoft 文件
-ms.date: 05/30/2018
+ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: mdx
@@ -9,15 +9,15 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 938ed8cbfab24643ceb1294a3831290c43e1bb5c
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.openlocfilehash: a726470f89f2d3ea1677259e849735a09909a42d
+ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/02/2018
-ms.locfileid: "34578640"
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34740077"
 ---
 # <a name="isgeneration-mdx"></a>IsGeneration (MDX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
 
   傳回指定的成員是否在指定的生成集內。  
   

@@ -1,6 +1,6 @@
 ---
 title: 序數 (MDX) |Microsoft 文件
-ms.date: 05/30/2018
+ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: mdx
@@ -9,15 +9,15 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 61c5c3c4bbb2f04f1ebb9743e18eb8088632eab0
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.openlocfilehash: 83036ec2ee0fa69c9ebb8cc2a905361eeae0aafa
+ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/02/2018
-ms.locfileid: "34581260"
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34742667"
 ---
 # <a name="ordinal-mdx"></a>Ordinal (MDX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
 
   傳回與層級有關以零為基準的序號。  
   

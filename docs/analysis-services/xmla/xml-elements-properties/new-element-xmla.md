@@ -13,7 +13,7 @@ ms.openlocfilehash: 1ed98ed9c42d8cecddb07941855403925b1de6b8
 ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/02/2018
+ms.lasthandoff: 06/04/2018
 ms.locfileid: "34575920"
 ---
 # <a name="new-element-xmla"></a>New 元素 (XMLA)

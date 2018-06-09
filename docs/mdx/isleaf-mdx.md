@@ -1,6 +1,6 @@
 ---
 title: IsLeaf (MDX) |Microsoft 文件
-ms.date: 05/30/2018
+ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: mdx
@@ -9,15 +9,15 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: a04964b0fe2512c008d376d8758c2d4106394133
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.openlocfilehash: 13b609d0abb7d032828dca78b185652ad138977b
+ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/02/2018
-ms.locfileid: "34578720"
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34741267"
 ---
 # <a name="isleaf-mdx"></a>IsLeaf (MDX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
 
   傳回指定的成員是否為分葉成員。  
   

@@ -1,8 +1,6 @@
 ---
 title: 專案設定 （移轉） (MySQLToSQL) |Microsoft 文件
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-mysql
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -18,11 +16,12 @@ caps.latest.revision: 14
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: b540d746440dd699821c2105b8d1f50ac5a3a831
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: c9d1ca803dd1d85f2629ca746794149cd14e0def
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34776214"
 ---
 # <a name="project-settings-migration-mysqltosql"></a>專案設定 （移轉） (MySQLToSQL)
 [移轉] 頁面的**專案設定**對話方塊包含自訂如何 SSMA 移轉從 MySQL 至 SQL Server 資料的設定。  
@@ -33,7 +32,7 @@ ms.lasthandoff: 05/03/2018
   
 -   若要指定目前的專案中，設定**工具**功能表上，選取**專案設定**，按一下 **一般**左的窗格中，然後再按一下底部**移轉**。  
   
-## <a name="options"></a>選項  
+## <a name="options"></a>選項。  
   
 ### <a name="bulk-copy"></a>大量複製  
   
@@ -72,7 +71,7 @@ ms.lasthandoff: 05/03/2018
 |詞彙|定義|  
 |--------|--------------|  
 |**擴充的資料移轉選項**|顯示個別的詳細資料 索引標籤中的每個資料表的額外資料移轉選項。<br /><br />**預設模式**： 隱藏<br /><br />**開放式模式**： 隱藏<br /><br />**完整模式**： 隱藏|  
-|**錯誤時**|發生錯誤時，請停止資料移轉。 它有三個選項：<br /><br />**停止移轉：**停止資料移轉作業<br /><br />**繼續進行下一個資料表：**會停止目前的資料表資料移轉並繼續進行下一個<br /><br />**繼續進行下一個批次：**會停止目前的批次的資料移轉並繼續進行下一個<br /><br />**預設模式**： 繼續進行下一個批次<br /><br />**開放式模式**： 繼續進行下一個批次<br /><br />**完整模式**： 繼續進行下一個批次|  
+|**錯誤時**|發生錯誤時，請停止資料移轉。 它有三個選項：<br /><br />**停止移轉：** 停止資料移轉作業<br /><br />**繼續進行下一個資料表：** 會停止目前的資料表資料移轉並繼續進行下一個<br /><br />**繼續進行下一個批次：** 會停止目前的批次的資料移轉並繼續進行下一個<br /><br />**預設模式**： 繼續進行下一個批次<br /><br />**開放式模式**： 繼續進行下一個批次<br /><br />**完整模式**： 繼續進行下一個批次|  
   
 ### <a name="parallel-data-migration"></a>平行處理資料移轉  
   

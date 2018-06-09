@@ -13,7 +13,7 @@ ms.openlocfilehash: 794e33d6270ef9540396fd7d2f38a08ccab4c8d2
 ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/02/2018
+ms.lasthandoff: 06/04/2018
 ms.locfileid: "34578130"
 ---
 # <a name="root-element-xmla"></a>root 元素 (XMLA)

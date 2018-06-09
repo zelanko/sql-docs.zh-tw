@@ -13,7 +13,7 @@ ms.openlocfilehash: 0d528567e22c3ba19b49eefff10d886703a0d29a
 ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/02/2018
+ms.lasthandoff: 06/04/2018
 ms.locfileid: "34576490"
 ---
 # <a name="readwritemode-element"></a>ReadWriteMode 元素

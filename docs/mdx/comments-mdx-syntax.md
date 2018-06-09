@@ -1,6 +1,6 @@
 ---
 title: 註解 （MDX 語法） |Microsoft 文件
-ms.date: 05/30/2018
+ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: mdx
@@ -9,21 +9,21 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: c2a5c543ca5f611c671566dcbdac16f2248a59af
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.openlocfilehash: 17693d0dc76dd6cb8b3a4d0c3ead9f95c0599580
+ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/02/2018
-ms.locfileid: "34578450"
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34740757"
 ---
 # <a name="comments-mdx-syntax"></a>程式註解 (MDX 語法)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
 
   註解是程式碼中不會執行的文字字串。 (註解也稱為備註)。 您可以使用註解來說明程式碼，或是把要診斷的部份多維度運算式 (MDX) 陳述式及指令碼暫時停用。 使用註解來說明程式碼，可使未來的程式碼維護工作更加容易。 您可以經常使用註解記錄程式名稱、作者姓名，以及主要程式碼變更的日期。 您也可以使用註解描述複雜的計算或說明撰寫程式的方法。  
   
  MDX 中的註解要遵循下列指導方針：  
   
--   您可以在註解中使用所有英數字元或符號。 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 會忽略註解內的所有字元。  
+-   您可以在註解中使用所有英數字元或符號。  會忽略註解內的所有字元。  
   
 -   陳述式或指令碼中的註解並無長度上限。 一個註解可以由一或多行組成。  
   

@@ -26,7 +26,7 @@ ms.openlocfilehash: e0c1c14aaeff26111ebb66ce8aa77f9a25b599ba
 ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/02/2018
+ms.lasthandoff: 06/04/2018
 ms.locfileid: "34563896"
 ---
 # <a name="sqlsrvquery"></a>sqlsrv_query

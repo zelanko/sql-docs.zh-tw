@@ -1,8 +1,6 @@
 ---
 title: 資料移轉設定 (OracleToSQL) |Microsoft 文件
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-oracle
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -15,11 +13,12 @@ caps.latest.revision: 3
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
-ms.openlocfilehash: 0b86e2f40bd4cfb4734b4cc7167e16cf2fb350ee
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 8632b8a9c7101ae6773a4e149eaa9453c4b639fe
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34777084"
 ---
 # <a name="data-migration-settings-oracletosql"></a>資料移轉設定 (OracleToSQL)
   
@@ -52,9 +51,9 @@ ms.lasthandoff: 05/03/2018
   
 有兩個按鈕出現的 viz。:  
   
--   **套用：**按一下**套用**來套用設定，已變更。  
+-   **套用：** 按一下**套用**來套用設定，已變更。  
   
--   **取消：**按一下**取消**進行變更之前，還原目前的設定。  
+-   **取消：** 按一下**取消**進行變更之前，還原目前的設定。  
   
 ## <a name="see-also"></a>另請參閱  
 [Oracle 資料移轉至 SQL Server](http://msdn.microsoft.com/en-us/e23c5268-41ed-4e55-9fe7-a11376202a13)  
