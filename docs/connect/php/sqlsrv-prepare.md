@@ -26,7 +26,7 @@ ms.openlocfilehash: d05dadf16e96589c2f16b7d31580cab61650b9e6
 ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/02/2018
+ms.lasthandoff: 06/04/2018
 ms.locfileid: "34563916"
 ---
 # <a name="sqlsrvprepare"></a>sqlsrv_prepare

@@ -11,7 +11,7 @@ ms.openlocfilehash: 1f7ba3b4acde90d9e416eb092ac80cb0dfcbba8a
 ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/02/2018
+ms.lasthandoff: 06/04/2018
 ms.locfileid: "34585640"
 ---
 # <a name="create-a-local-r-package-repository-using-minicran"></a>建立使用 miniCRAN 本機 R 封裝儲存機制

@@ -13,7 +13,7 @@ ms.openlocfilehash: a6ac13074f48b832cae25a27fe8d4232368160aa
 ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/02/2018
+ms.lasthandoff: 06/04/2018
 ms.locfileid: "34576470"
 ---
 # <a name="tablenotifications-element-xmla"></a>TableNotifications 元素 (XMLA)

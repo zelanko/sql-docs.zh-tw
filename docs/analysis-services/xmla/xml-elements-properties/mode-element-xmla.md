@@ -13,7 +13,7 @@ ms.openlocfilehash: 12e792c51b2f6feb3edb4e01c12dcf4809e2d4d4
 ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/02/2018
+ms.lasthandoff: 06/04/2018
 ms.locfileid: "34575750"
 ---
 # <a name="mode-element-xmla"></a>Mode 元素 (XMLA)

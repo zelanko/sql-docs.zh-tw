@@ -13,7 +13,7 @@ ms.openlocfilehash: 68d5b3a5e1e381b1fb65a12c0aa77adf318a36b8
 ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/02/2018
+ms.lasthandoff: 06/04/2018
 ms.locfileid: "34575160"
 ---
 # <a name="errorconfiguration-element-xmla"></a>ErrorConfiguration 元素 (XMLA)

@@ -11,7 +11,7 @@ ms.openlocfilehash: 4806224a1606fff58f63f6083fa577aa4066c795
 ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/02/2018
+ms.lasthandoff: 06/04/2018
 ms.locfileid: "34585700"
 ---
 # <a name="managing-and-monitoring-machine-learning-solutions"></a>管理和監視的機器學習解決方案

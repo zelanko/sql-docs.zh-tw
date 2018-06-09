@@ -1,26 +1,28 @@
 ---
-title: 第 1 課下載範例資料 |Microsoft 文件
+title: 第 1 課下載範例資料和指令碼會內嵌 R （SQL Server 機器學習） |Microsoft 文件
+description: 教學課程顯示如何在 SQL Server 中內嵌 R 預存程序和 T-SQL 函數
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 04/15/2018
+ms.date: 06/07/2018
 ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: a87d307dafa733e449c6ec893ece21645fe65640
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 74a60a95da4fb701f3862c36e35a4bada6ef933b
+ms.sourcegitcommit: b52b5d972b1a180e575dccfc4abce49af1a6b230
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35249831"
 ---
-# <a name="lesson-1-download-the-sample-data"></a>第 1 課： 下載範例資料
+# <a name="lesson-1-download-data-and-scripts"></a>第 1 課： 下載資料和指令碼
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 這篇文章是有關如何在 SQL Server 中使用 R 的 SQL 開發人員的教學課程的一部分。
 
 在此步驟中，您將下載的範例資料集和[!INCLUDE[tsql](../../includes/tsql-md.md)]指令碼會用於本教學課程中的檔案。 GitHub 上共用資料和指令碼檔案，但 PowerShell 指令碼會下載至您所選擇的本機目錄的資料和指令碼檔案。
 
-## <a name="download-the-data-and-scripts"></a>下載的資料和指令碼
+## <a name="download-tutorial-files-from-github"></a>從 Github 下載教學課程檔案
 
 1.  開啟 Windows PowerShell 命令主控台。
   
@@ -64,4 +66,4 @@ ms.lasthandoff: 04/16/2018
 
 ## <a name="previous-lesson"></a>上一課
 
-[資料庫中的 SQL 開發人員的 R 分析](../tutorials/sqldev-in-database-r-for-sql-developers.md)
+[適用於 SQL 開發人員的內嵌的 R 分析](../tutorials/sqldev-in-database-r-for-sql-developers.md)

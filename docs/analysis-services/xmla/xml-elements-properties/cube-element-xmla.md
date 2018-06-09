@@ -13,7 +13,7 @@ ms.openlocfilehash: 21af1af7b08f1270742ce291848128d3347d94bc
 ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/02/2018
+ms.lasthandoff: 06/04/2018
 ms.locfileid: "34574810"
 ---
 # <a name="cube-element-xmla"></a>Cube 元素 (XMLA)

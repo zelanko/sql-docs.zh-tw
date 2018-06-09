@@ -19,7 +19,7 @@ ms.openlocfilehash: dabdabb4b3a4d20884004909dfaab0272f2e9c43
 ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/02/2018
+ms.lasthandoff: 06/04/2018
 ms.locfileid: "34563866"
 ---
 # <a name="pdostatementexecute"></a>PDOStatement::execute

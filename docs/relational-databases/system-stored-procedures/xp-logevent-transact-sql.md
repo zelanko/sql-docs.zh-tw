@@ -26,7 +26,7 @@ ms.openlocfilehash: 251dfca05a27d78618a4f3dbff5cbecd02ee5813
 ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/02/2018
+ms.lasthandoff: 06/04/2018
 ms.locfileid: "34582030"
 ---
 # <a name="xplogevent-transact-sql"></a>xp_logevent (Transact-SQL)

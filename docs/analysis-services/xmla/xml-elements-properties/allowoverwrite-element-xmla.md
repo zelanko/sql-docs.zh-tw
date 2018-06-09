@@ -13,7 +13,7 @@ ms.openlocfilehash: 76ba7c6b3046e5298a346cb84472de3ba090e2bc
 ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/02/2018
+ms.lasthandoff: 06/04/2018
 ms.locfileid: "34577520"
 ---
 # <a name="allowoverwrite-element-xmla"></a>AllowOverwrite 元素 (XMLA)

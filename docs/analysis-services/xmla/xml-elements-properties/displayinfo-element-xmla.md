@@ -13,7 +13,7 @@ ms.openlocfilehash: 307a48d0d84b66b57519532f90c007e9f99b2afa
 ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/02/2018
+ms.lasthandoff: 06/04/2018
 ms.locfileid: "34574850"
 ---
 # <a name="displayinfo-element-xmla"></a>DisplayInfo 元素 (XMLA)

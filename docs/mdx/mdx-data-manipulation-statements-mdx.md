@@ -1,6 +1,6 @@
 ---
 title: MDX 資料操作陳述式 (MDX) |Microsoft 文件
-ms.date: 05/30/2018
+ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: mdx
@@ -9,15 +9,15 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 06bb35dfa41fc9a1984e33e7c1a636ffafe25979
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.openlocfilehash: 27db322b7031b7040c3d78536552db257d41cff3
+ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/02/2018
-ms.locfileid: "34579700"
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34742487"
 ---
 # <a name="mdx-data-manipulation-statements-mdx"></a>MDX 資料操作陳述式 (MDX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
 
   在多維度運算式 (MDX) 中，資料管理陳述式可擷取和管理多維度物件的資料。 下表列出 MDX 中的資料管理陳述式。  
   

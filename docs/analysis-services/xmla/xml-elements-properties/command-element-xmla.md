@@ -13,7 +13,7 @@ ms.openlocfilehash: 2f941b50c8e2f6d23fc65d96a3f4eaa61075e76e
 ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/02/2018
+ms.lasthandoff: 06/04/2018
 ms.locfileid: "34574990"
 ---
 # <a name="command-element-xmla"></a>Command 元素 (XMLA)

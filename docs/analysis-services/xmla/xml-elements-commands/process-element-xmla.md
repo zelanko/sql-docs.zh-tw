@@ -13,7 +13,7 @@ ms.openlocfilehash: 2d3b8aaeacec6ebf24c88f8b7b4fe733c064e54c
 ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/02/2018
+ms.lasthandoff: 06/04/2018
 ms.locfileid: "34575850"
 ---
 # <a name="process-element-xmla"></a>Process 元素 (XMLA)

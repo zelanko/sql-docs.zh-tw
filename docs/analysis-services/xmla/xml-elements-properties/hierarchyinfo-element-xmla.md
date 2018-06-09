@@ -13,7 +13,7 @@ ms.openlocfilehash: 0f1e54f999e7a59809f4a02b769b4e6af6a41cf3
 ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/02/2018
+ms.lasthandoff: 06/04/2018
 ms.locfileid: "34579220"
 ---
 # <a name="hierarchyinfo-element-xmla"></a>HierarchyInfo 元素 (XMLA)

@@ -13,7 +13,7 @@ ms.openlocfilehash: 119a702b28956c5570d30e3692b7d7339f49486f
 ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/02/2018
+ms.lasthandoff: 06/04/2018
 ms.locfileid: "34580010"
 ---
 # <a name="where-element-xmla"></a>Where 元素 (XMLA)

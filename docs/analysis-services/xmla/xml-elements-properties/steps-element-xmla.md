@@ -13,7 +13,7 @@ ms.openlocfilehash: 8b72837dc2f873bfc0ad13a7cf95b0d1012e8a4c
 ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/02/2018
+ms.lasthandoff: 06/04/2018
 ms.locfileid: "34577590"
 ---
 # <a name="steps-element-xmla"></a>Steps 元素 (XMLA)

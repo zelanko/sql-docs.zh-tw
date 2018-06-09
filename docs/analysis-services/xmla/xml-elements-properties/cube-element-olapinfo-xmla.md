@@ -13,7 +13,7 @@ ms.openlocfilehash: 579d36c96efcc4084f725d39c2af3cdddecd98d1
 ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/02/2018
+ms.lasthandoff: 06/04/2018
 ms.locfileid: "34574890"
 ---
 # <a name="cube-element-olapinfo-xmla"></a>Cube 元素 (OlapInfo) (XMLA)

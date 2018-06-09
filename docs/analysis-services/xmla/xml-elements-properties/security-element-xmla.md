@@ -13,7 +13,7 @@ ms.openlocfilehash: c4ea0e1f9bfab567c792bdd7b233bea038e87f54
 ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/02/2018
+ms.lasthandoff: 06/04/2018
 ms.locfileid: "34576241"
 ---
 # <a name="security-element-xmla"></a>Security 元素 (XMLA)

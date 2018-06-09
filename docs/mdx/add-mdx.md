@@ -1,6 +1,6 @@
 ---
 title: + （新增）(MDX) |Microsoft 文件
-ms.date: 05/30/2018
+ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: mdx
@@ -9,15 +9,15 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: b13784b757241cc99ee58bec949348017b048e64
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.openlocfilehash: 59031a14dd4c844aa8b0540d640e683c9d2f0894
+ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/02/2018
-ms.locfileid: "34576970"
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34739707"
 ---
 # <a name="-add-mdx"></a>+ (加) (MDX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
 
   執行兩個數目相加的算術運算。  
   

@@ -13,7 +13,7 @@ ms.openlocfilehash: 5466ee4ed04b7890718e5d613cbade3f37cd6929
 ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/02/2018
+ms.lasthandoff: 06/04/2018
 ms.locfileid: "34576410"
 ---
 # <a name="sources-element-xmla"></a>Sources 元素 (XMLA)

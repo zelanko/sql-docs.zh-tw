@@ -13,7 +13,7 @@ ms.openlocfilehash: cf053ce660091fa9b47048e9dccb9b7f470acaad
 ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/02/2018
+ms.lasthandoff: 06/04/2018
 ms.locfileid: "34575350"
 ---
 # <a name="isdefaultimage-element-xml"></a>IsDefaultImage 元素 (XML)

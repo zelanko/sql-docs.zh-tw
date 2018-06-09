@@ -1,6 +1,6 @@
 ---
 title: ClosingPeriod (MDX) |Microsoft 文件
-ms.date: 05/30/2018
+ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: mdx
@@ -9,15 +9,15 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 3d082ec7958ab1b29b5b42108d6f9c5c78fc3470
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.openlocfilehash: c6c9dea03a4b09ae4dcbe66e6712a542b1920ce0
+ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/02/2018
-ms.locfileid: "34577360"
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34740297"
 ---
 # <a name="closingperiod-mdx"></a>ClosingPeriod (MDX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
 
   傳回成員，該成員是指定層級上已指定之成員的下階中最後一個同層級。  
   

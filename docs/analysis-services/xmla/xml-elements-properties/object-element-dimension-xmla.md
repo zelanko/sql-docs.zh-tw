@@ -13,7 +13,7 @@ ms.openlocfilehash: 6b321a6c26edb4f569b4174d64a0a50b8ac23ae6
 ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/02/2018
+ms.lasthandoff: 06/04/2018
 ms.locfileid: "34575760"
 ---
 # <a name="object-element-dimension-xmla"></a>Object 元素 (Dimension) (XMLA)

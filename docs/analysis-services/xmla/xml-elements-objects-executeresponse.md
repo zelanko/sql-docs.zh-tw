@@ -13,7 +13,7 @@ ms.openlocfilehash: a1ff44c8e2fb23e40aac30e70c73b4d260145bfd
 ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/02/2018
+ms.lasthandoff: 06/04/2018
 ms.locfileid: "34576280"
 ---
 # <a name="xml-elements---objects---executeresponse"></a>XML 項目物件-ExecuteResponse

@@ -11,7 +11,7 @@ ms.openlocfilehash: 23fed22efe90a91905c4b36c967ad5fa72717b3f
 ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/02/2018
+ms.lasthandoff: 06/04/2018
 ms.locfileid: "34585870"
 ---
 # <a name="install-sql-server-2017-machine-learning-services-in-database-on-windows"></a>安裝 SQL Server 2017 機器學習在 Windows 上的服務 （資料庫） 

@@ -13,7 +13,7 @@ ms.openlocfilehash: 88e7cf2387c8ee45936b5de21f529e142142d02c
 ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/02/2018
+ms.lasthandoff: 06/04/2018
 ms.locfileid: "34575960"
 ---
 # <a name="parallel-element-xmla"></a>Parallel Element (XMLA)

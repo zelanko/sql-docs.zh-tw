@@ -13,7 +13,7 @@ ms.openlocfilehash: f8add6457eaf01e863b0752dd9a1e2c51ee5ec9a
 ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/02/2018
+ms.lasthandoff: 06/04/2018
 ms.locfileid: "34576100"
 ---
 # <a name="productlabel-element"></a>ProductLabel 元素

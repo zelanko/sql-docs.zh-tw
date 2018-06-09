@@ -13,7 +13,7 @@ ms.openlocfilehash: bc4a30e8c2886c97157e121fb3f70f892457e1ca
 ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/02/2018
+ms.lasthandoff: 06/04/2018
 ms.locfileid: "34574100"
 ---
 # <a name="commonidentifierposition-element-xml"></a>CommonIdentifierPosition 元素 (XML)
