@@ -50,7 +50,7 @@ DATEDIFF_BIG ( datepart , startdate , enddate )
   
 ## <a name="arguments"></a>引數  
 *datepart*  
-指定所跨越之界限類型的 *startdate* 和 *enddate* 的一部分。 `DATEDIFF_BIG` 不會接受使用者定義變數對等項目。 此表格會列出所有有效的 *datepart* 引數。
+指定所跨越界限類型之 *startdate* 和 *enddate* 的一部分。 `DATEDIFF_BIG` 不會接受使用者定義變數對等項目。 此表格會列出所有有效的 *datepart* 引數。
 
 > [!NOTE]
 > `DATEDIFF_BIG` 不會接受 *datepart* 引數的使用者定義變數對等項目。

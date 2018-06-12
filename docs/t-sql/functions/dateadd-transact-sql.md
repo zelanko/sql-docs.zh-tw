@@ -89,7 +89,7 @@ DATEADD (datepart , number , date )
 + **smalldatetime**
 + **time**
 
-針對 *date*，`DATEADD` 會接受資料行運算式、運算式、字串常值或使用者定義變數。 字串常值必須解析成 **datetime**。 請使用四位數年份以避免模糊不清的問題。 如需兩位數年份的資訊，請參閱[設定兩位數年份的截止伺服器組態選項](../../database-engine/configure-windows/configure-the-two-digit-year-cutoff-server-configuration-option.md)。
+針對 *date*，`DATEADD` 會接受資料行運算式、運算式、字串常值或使用者定義變數。 字串常值必須解析成 **datetime**。 請使用四位數年份以避免模糊不清的問題。 如需兩位數年份的資訊，請參閱[設定兩位數年份的截止伺服器設定選項](../../database-engine/configure-windows/configure-the-two-digit-year-cutoff-server-configuration-option.md)。
   
 ## <a name="return-types"></a>傳回類型
 *date* 引數資料類型會變成 `DATEADD` 傳回值的資料類型，但字串常值的 *date* 值除外。 對於字串常值，`DATEADD` 會傳回 **datetime** 值。 如果字串常值的秒數小數位數超過三個小數位數位置 (.nnn)，或者字串常值包含時區時差部分，`DATEADD` 就會引發錯誤。
