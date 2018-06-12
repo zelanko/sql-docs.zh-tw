@@ -28,11 +28,12 @@ caps.latest.revision: 89
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.openlocfilehash: 3a59000dabcaddbcb096fd715d1f6168dfbb7930
-ms.sourcegitcommit: df382099ef1562b5f2d1cd506c1170d1db64de41
+ms.openlocfilehash: 1a52042015340454ed33c4883a2b6efcd387b526
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/12/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34689136"
 ---
 # <a name="alter-database-transact-sql-compatibility-level"></a>ALTER DATABASE (Transact-SQL) 相容性層級
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -172,7 +173,7 @@ SELECT name, compatibility_level FROM sys.databases;
 |包含聯結運算子的批次模式查詢適合用於三個實體聯結演算法，包括巢狀迴圈、雜湊聯結，以及合併聯結。 如果聯結輸入的基數估計不正確，可能會選取不適當的聯結演算法。 如果發生此問題，將會降低效能，且不適當的聯結演算法將會保持在使用中，直到快取的計畫重新編譯為止。|有一個額外的聯結運算子，稱為**自適性聯結**。 如果外部組件聯結輸入的基數估計不正確，可能會選取不適當的聯結演算法。 如果發生此問題且陳述式符合自適性聯結的條件，將會動態為較小的聯結輸入使用巢狀迴圈，為較大的聯結輸入使用雜湊聯結，不需要重新編譯。 |
 |參考資料行存放區索引的簡單式計畫不符合批次模式執行的條件。 |系統會捨棄參考資料行存放區索引的簡單式計畫，有利於符合批次模式執行條件的計畫。|
 |`sp_execute_external_script` UDX 運算子只能在資料列模式中執行。|`sp_execute_external_script` UDX 運算子符合批次模式執行的條件。|  
-|多重陳述式資料表值函式 (TVF) 沒有交錯執行 |交錯執行多重陳述式 TVF 以提升計畫品質。 |
+|多重陳述式資料表值函式 (TVF) 沒有交錯執行 |交錯執行多重陳述式 TVF 以提升計畫品質。|
 
 SQL Server 2017 之前的 SQL Server 較早版本中，追蹤旗標 4199 之下的修正程式現在已經預設啟用。 具備相容性模式 140。 追蹤旗標 4199 將仍然適用於在 SQL Server 2017 之後發行的新查詢最佳化工具修正程式。 如需有關追蹤旗標 4199 的詳細資訊，請參閱[追蹤旗標 4199](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md#4199)。  
   
@@ -181,16 +182,17 @@ SQL Server 2017 之前的 SQL Server 較早版本中，追蹤旗標 4199 之下�
 
 |相容性層級設定為 120 或更低|相容性層級設定為 130|  
 |--------------------------------------------------|-----------------------------------------|  
-|Insert-select 陳述式中的 Insert 是單一執行緒。|Insert-select 陳述式中的 Insert 是多執行緒，或可以有平行計畫。|  
+|INSERT-SELECT 陳述式中的 INSERT 是單一執行緒。|INSERT-SELECT 陳述式中的 INSERT 是多執行緒，或可以有平行計畫。|  
 |針對經記憶體最佳化的資料表進行的查詢會執行單一執行緒。|針對經記憶體最佳化的資料表進行的查詢，現在可以有平行計畫。|  
-|已導入 SQL 2014 基數估計工具 **CardinalityEstimationModelVersion="120"**|進一步的基數估計 ( CE) 改進與可從查詢計畫中看到的基數估計模型 130。 **CardinalityEstimationModelVersion="130"**|  
-|批次模式與資料列模式會隨資料行存放區索引而改變<br /><br /> 在具有資料行存放區索引的資料表上執行的排序會以資料列模式執行<br /><br /> 視窗型函式彙總會以資料列模式 (例如 `LAG` 或 `LEAD`) 運作<br /><br /> 使用多個不同子句在資料行存放區資料表上進行的查詢會以資料列模式運作<br /><br /> 在 MAXDOP 1 之下執行，或以資料列模式執行的序列計畫 | 批次模式與資料列模式會隨資料行存放區索引而改變<br /><br /> 在具有資料行存放區索引的表格上進行的排序現在會以批次模式運作<br /><br /> 視窗型彙總現在會以批次模式 (例如`LAG` 或 `LEAD`) 運作<br /><br /> 使用多個不同子句在資料行存放區資料表上進行的查詢會以批次模式運作<br /><br /> 在 Maxdop1 下執行，或以批次模式執行序列計畫|  
-| 統計資料可以自動更新。 | 自動更新統計資料的邏輯在大型資料表上會更積極。  在實務上，這應該會減少客戶已經看到在查詢上發生效能問題的案例，其中的問題在於新插入的資料列會受到頻繁查詢，但統計資料卻尚未更新以包含那些值。 |  
-| 追蹤 2371 在 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 中預設為「關閉」。 | [追蹤 2371](https://blogs.msdn.microsoft.com/psssql/2016/10/04/default-auto-statistics-update-threshold-change-for-sql-server-2016/) 在 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 中預設為「開啟」。 追蹤旗標 2371 會告知自動統計資料更新程式，在擁有很多資料列的資料表中，以較小但更聰明的資料列子集方式進行取樣。 <br/> <br/> 其中一項改進是在樣本中包含更多最近插入的資料列。 <br/> <br/> 另一項改進是讓查詢在更新統計資料程序執行時執行，而不是封鎖查詢。 |  
-| 對於層級 120，統計資料會由*單一*執行緒程序進行取樣。 | 對於層級 130，統計資料則會由*多*執行緒程序進行取樣。 |  
-| 其限制為 253 個傳入外部索引鍵。 | 指定資料表最多可由 10,000 個傳入外部索引鍵或類似參考進行參考。 相關限制，請參閱 [Create Foreign Key Relationships](../../relational-databases/tables/create-foreign-key-relationships.md)。 |  
+|已導入 SQL 2014 基數估計工具 **CardinalityEstimationModelVersion="120"**|進一步的基數估計 ( CE) 改進與可從查詢計畫中看到的基數估計模型 130。 **CardinalityEstimationModelVersion="130"**| 
+|批次模式與資料列模式會隨資料行存放區索引而改變：<br /><ul><li>在具有資料行存放區索引的資料表上執行的排序會以資料列模式執行 <li>視窗型函式彙總會以資料列模式 (例如 `LAG` 或 `LEAD`) 運作 <li>使用多個不同子句在資料行存放區資料表上進行的查詢會以資料列模式運作 <li>在 MAXDOP 1 之下執行，或以資料列模式執行的序列計畫</li></ul>| 批次模式與資料列模式會隨資料行存放區索引而改變：<br /><ul><li>在具有資料行存放區索引的表格上進行的排序現在會以批次模式運作 <li>視窗型彙總現在會以批次模式 (例如`LAG` 或 `LEAD`) 運作 <li>使用多個不同子句在資料行存放區資料表上進行的查詢會以批次模式運作 <li>在 MAXDOP 1 下執行的查詢，或以批次模式執行序列計畫</li></ul>|  
+|統計資料可以自動更新。 | 自動更新統計資料的邏輯在大型資料表上會更積極。  在實務上，這應該會減少客戶已經看到在查詢上發生效能問題的案例，其中的問題在於新插入的資料列會受到頻繁查詢，但統計資料卻尚未更新以包含那些值。 |  
+|追蹤 2371 在 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 中預設為「關閉」。 | [追蹤 2371](https://blogs.msdn.microsoft.com/psssql/2016/10/04/default-auto-statistics-update-threshold-change-for-sql-server-2016/) 在 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 中預設為「開啟」。 追蹤旗標 2371 會告知自動統計資料更新程式，在擁有很多資料列的資料表中，以較小但更聰明的資料列子集方式進行取樣。 <br/> <br/> 其中一項改進是在樣本中包含更多最近插入的資料列。 <br/> <br/> 另一項改進是讓查詢在更新統計資料程序執行時執行，而不是封鎖查詢。 |  
+|對於層級 120，統計資料會由*單一*執行緒程序進行取樣。|對於層級 130，統計資料則會由*多*執行緒程序進行取樣。 |  
+|其限制為 253 個傳入外部索引鍵。| 指定資料表最多可由 10,000 個傳入外部索引鍵或類似參考進行參考。 相關限制，請參閱 [Create Foreign Key Relationships](../../relational-databases/tables/create-foreign-key-relationships.md)。 |  
 |允許使用已被取代的 MD2、MD4、MD5、SHA 和 SHA1 雜湊演算法。|只允許使用 SHA2_256 和 SHA2_512 雜湊演算法。|
 ||[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 包括在某些資料類型轉換和某些不常見作業中的改善。 如需詳細資料，請參閱[處理某些資料類型和不常見作業的 SQL Server 2016 改進 (機器翻譯)](https://support.microsoft.com/help/4010261/sql-server-2016-improvements-in-handling-some-data-types-and-uncommon)。|
+|STRING_SPLIT 函式無法使用。|STRING_SPLIT 函式適用於相容性層級 130 或以上。 如果您的資料庫相容性層級低於 130，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 將找不到且無法執行 STRING_SPLIT 函式。|
   
 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 之前的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 較早版本中，追蹤旗標 4199 之下的修正程式現在已經預設啟用。 具備相容性模式 130。 追蹤旗標 4199 將仍然適用於在 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 之後發行的新查詢最佳化工具修正程式。 若要在 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 中使用較舊的查詢最佳化工具，您必須選取相容性層級 110。 如需有關追蹤旗標 4199 的詳細資訊，請參閱[追蹤旗標 4199](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md#4199)。  
   

@@ -19,11 +19,12 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: ead5689c2edb47f4ce2699e6b94bff53957ce9fd
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: a9471302da92abb2b4fef27a6d321a8ec41b01af
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34550699"
 ---
 # <a name="always-encrypted-cryptography"></a>永遠加密的密碼編譯
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -37,7 +38,7 @@ ms.lasthandoff: 05/03/2018
   
  資料行加密金鑰 (CEK) 是受到 CMK 保護的內容加密金鑰 (也就是用來保護資料的金鑰)。  
   
- 所有的 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] CMK 存放區提供者都會使用 RSA 搭配最佳非對稱加密填補 (RSA-OAEP)，並利用 A.2.1 節中 RFC 3447 所指定的預設參數，來加密 CEK。 這些預設參數會使用 SHA-1 的雜湊函數，以及搭配 SHA-1 的 MGF1 遮罩產生函數。  
+ 所有的 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] CMK 存放區提供者都會使用 RSA 搭配最佳非對稱加密填補 (RSA-OAEP)，並利用 A.2.1 節中 RFC 8017 所指定的預設參數，來加密 CEK。 這些預設參數會使用 SHA-1 的雜湊函數，以及搭配 SHA-1 的 MGF1 遮罩產生函數。  
   
 ## <a name="data-encryption-algorithm"></a>資料加密演算法  
  「永遠加密」會使用 **AEAD_AES_256_CBC_HMAC_SHA_256** 演算法來加密資料庫中的資料。  

@@ -24,16 +24,17 @@ caps.latest.revision: 34
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.openlocfilehash: 98b08c914c0eb74e55d2d3c8a9e032432391a054
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d0ac0821494677a42766c340f4d1e75ff9661711
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34779484"
 ---
 # <a name="decryptbyasymkey-transact-sql"></a>DECRYPTBYASYMKEY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  利用非對稱金鑰為資料解密。  
+此函式會使用非對稱金鑰為加密資料解密。  
   
  ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -47,28 +48,28 @@ DecryptByAsymKey (Asym_Key_ID , { 'ciphertext' | @ciphertext }
   
 ## <a name="arguments"></a>引數  
  *Asym_Key_ID*  
- 這是資料庫中的非對稱金鑰識別碼。 *Asym_Key_ID* 為 **int**。  
+資料庫中的非對稱金鑰識別碼。 *Asym_Key_ID* 具有 **int** 資料類型。  
   
  *ciphertext*  
- 這是已經利用非對稱金鑰加密的資料字串。  
+以非對稱金鑰加密的資料字串。  
   
  @ciphertext  
- 為 **varbinary** 類型的變數，其中包含已使用非對稱金鑰加密的資料。  
+**varbinary** 類型的變數，其中包含以非對稱金鑰加密的資料。  
   
  *Asym_Key_Password*  
- 這是為資料庫中非對稱金鑰加密所用的密碼。  
+用來加密資料庫中非對稱金鑰的密碼。  
   
 ## <a name="return-types"></a>傳回類型  
- **varbinary**，大小上限為 8,000 位元組。  
+**varbinary**，大小上限為 8,000 個位元組。  
   
 ## <a name="remarks"></a>Remarks  
- 相對於利用對稱金鑰來加密/解密，利用非對稱金鑰來加密/解密的成本相當高。 如果您是使用大型資料集 (例如，資料表中的使用者資料)，不建議您使用非對稱金鑰。  
+相較於對稱式加密/解密，非對稱金鑰加密/解密具有較高的成本。 使用大型資料集時 (例如儲存在資料表中的使用者資料)，建議開發人員避免非對稱金鑰加密/解密。  
   
 ## <a name="permissions"></a>Permissions  
- 需要非對稱金鑰的 CONTROL 權限。  
+`DECRYPTBYASYMKEY` 需要非對稱金鑰的 CONTROL 權限。  
   
 ## <a name="examples"></a>範例  
- 下列範例將為已經利用非對稱金鑰 `JanainaAsymKey02` 加密的加密文字解密，該金鑰儲存在 `AdventureWorks2012.ProtectedData04` 中。 傳回的資料則是利用非對稱金鑰 `JanainaAsymKey02` 解密，而該金鑰已經利用密碼 `pGFD4bb925DGvbd2439587y` 進行解密。 純文字會轉換成 **nvarchar** 類型。  
+此範例會解密原本以非對稱金鑰 `JanainaAsymKey02` 來加密的加密文字。 `AdventureWorks2012.ProtectedData04` 會儲存此非對稱金鑰。 此範例會以非對稱金鑰 `JanainaAsymKey02` 來解密傳回的資料。 此範例使用密碼 `pGFD4bb925DGvbd2439587y` 來解密此非對稱金鑰。 此範例會將傳回的純文字轉換成 **nvarchar** 類型。  
   
 ```  
 SELECT CONVERT(nvarchar(max),  

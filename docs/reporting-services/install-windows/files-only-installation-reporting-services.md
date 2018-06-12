@@ -1,7 +1,7 @@
 ---
 title: 僅限檔案安裝 (Reporting Services) | Microsoft Docs
 ms.custom: ''
-ms.date: 03/30/2016
+ms.date: 05/24/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.component: install-windows
@@ -18,16 +18,17 @@ caps.latest.revision: 22
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: bc565586474384f09f2f8ea0df40abfd545c3078
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: f91b55021b3e270a76c5772aa0819830f3519daa
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34550659"
 ---
 # <a name="files-only-installation-reporting-services"></a>僅限檔案安裝 (Reporting Services)
   「僅限檔案安裝」是指安裝程式會建立 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 程式檔案的資料夾結構、將檔案複製到磁碟、在本機電腦上註冊報表伺服器服務、設定服務帳戶、授與檔案權限給此服務帳戶，並註冊 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] WMI 提供者的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 安裝。  
   
- 僅限檔案安裝包含以下 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 功能：報表伺服器服務 (主控報表伺服器 Web 服務、背景處理應用程式和報表管理員)、報表產生器、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 組態工具和 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 命令列公用程式 (rsconfig.exe、rskeymgmt.exe 和 rs.exe)。 它不會套用到類似 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 或 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]的共用功能。如果您想要安裝這些功能，必須將其指定為個別項目。  
+ 僅限檔案安裝包含以下 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 功能：報表伺服器服務 (主控報表伺服器 Web 服務和背景處理應用程式)、報表產生器、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 組態工具和 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 命令列公用程式 (rsconfig.exe、rskeymgmt.exe 和 rs.exe)。 它不會套用到類似 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 或 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]的共用功能。如果您想要安裝這些功能，必須將其指定為個別項目。  
   
  與其他安裝模式相較之下，當安裝程式完成時，在僅限檔案模式下安裝的報表伺服器將不會運作。 您必須使用 [Reporting Services 設定管理員 &#40;原生模式&#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md) 進行其他組態設定，才能讓報表伺服器在線上工作。  
   

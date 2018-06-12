@@ -36,18 +36,19 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: c597985b34d078dbd640e680b5e9cf904d81567d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 5c989b3d9d2f35f4270f997b2ac169c72c402a68
+ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34744037"
 ---
 # <a name="datediff-transact-sql"></a>DATEDIFF (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-傳回跨越指定 *startdate* 和 *enddate* 之指定 *datepart* 界限的計數 (帶正負號的整數)。
+此函式會傳回跨越指定 *startdate* 和 *enddate* 之指定 datepart 界限的計數 (作為帶正負號的整數值)。
   
-針對較大的差異，請參閱 [DATEDIFF_BIG &#40;Transact-SQL&#41;](../../t-sql/functions/datediff-big-transact-sql.md)。 如需所有 [!INCLUDE[tsql](../../includes/tsql-md.md)] 日期和時間資料類型與函數的概觀，請參閱[日期和時間資料類型與函數 &#40;Transact-SQL&#41;](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md)。
+如需處理 *startdate* 與 *enddate* 值之間較大差異的函式，請參閱 [DATEDIFF_BIG &#40;Transact-SQL&#41;](../../t-sql/functions/datediff-big-transact-sql.md)。 如需所有 [!INCLUDE[tsql](../../includes/tsql-md.md)] 日期和時間資料類型與函式的概觀，請參閱[日期和時間資料類型與函式 &#40;Transact-SQL&#41;](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md)。
   
 ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -59,7 +60,7 @@ DATEDIFF ( datepart , startdate , enddate )
   
 ## <a name="arguments"></a>引數  
 *datepart*  
-這是指定所跨越之界限類型的 *startdate* 和 *enddate* 的一部分。 下表列出所有有效的 *datepart* 引數。 使用者自訂變數對等項目無效。
+指定所跨越界限類型之 *startdate* 和 *enddate* 的一部分。 `DATEDIFF` 不會接受使用者定義變數對等項目。 此表格會列出所有有效的 *datepart* 引數。
   
 |*datepart*|縮寫|  
 |---|---|
@@ -77,9 +78,16 @@ DATEDIFF ( datepart , startdate , enddate )
 |**nanosecond**|**ns**|  
   
 *startdate*  
-這是可解析成 **time**、**date**、**smalldatetime**、**datetime**、**datetime2** 或 **datetimeoffset** 值的運算式。 *date* 可以是運算式、資料行運算式、使用者定義的變數或字串常值。 *startdate* 會從 *enddate* 減去。
+可解析成下列其中一個值的運算式：
+
++ **date**
++ **datetime**
++ **datetimeoffset**
++ **datetime2** 
++ **smalldatetime**
++ **time**
   
-若要避免模糊不清，請使用四位數年份。 如需兩位數年份的詳細資訊，請參閱[設定 two digit year cutoff 伺服器組態選項](../../database-engine/configure-windows/configure-the-two-digit-year-cutoff-server-configuration-option.md)。
+請使用四位數年份以避免模糊不清。 如需兩位數年份值的資訊，請參閱[設定兩位數年份的截止伺服器設定選項](../../database-engine/configure-windows/configure-the-two-digit-year-cutoff-server-configuration-option.md)。
   
 *enddate*  
 請參閱＜*startdate*＞。
@@ -89,22 +97,22 @@ DATEDIFF ( datepart , startdate , enddate )
   
 ## <a name="return-value"></a>傳回值  
   
--   每個 *datepart* 及其縮寫都會傳回相同的值。  
+-   每個特定 *datepart* 和該 *datepart* 的縮寫會傳回相同的值。  
   
-如果傳回值超出 **int** 的範圍 (-2,147,483,648 到 +2,147,483,647)，便會傳回錯誤。 針對 **millisecond**，*startdate* 和 *enddate* 最大的差異為 24 天 20 小時 31 分鐘 23.647 秒。 針對 **second**，最大的差異為 68 年。
+針對超出 **int** 範圍 (-2,147,483,648 到 +2,147,483,647) 的傳回值，`DATEDIFF` 會傳回錯誤。  針對 **millisecond**，*startdate* 和 *enddate* 最大的差異為 24 天 20 小時 31 分鐘 23.647 秒。 針對 **second**，最大的差異為 68 年。
   
-如果 *startdate* 和 *enddate* 都只獲指派時間值，且 *datepart* 不是時間 *datepart*，則會傳回 0。
+如果 *startdate* 和 *enddate* 都只獲指派時間值，且 *datepart* 不是時間 *datepart*，`DATEDIFF` 會傳回 0。
   
-*startdate* 或 *enddate* 的時區時差元件不會用於計算傳回值。
+`DATEDIFF` 不會使用 *startdate* 或 *enddate* 的時區時差元件來計算傳回值。
   
-由於 [smalldatetime](../../t-sql/data-types/smalldatetime-transact-sql.md) 的精確度只有到分鐘，因此當 **smalldatetime** 值用於 *startdate* 或 *enddate* 時，秒和毫秒就一律會在傳回值中設定為 0。
+由於 [smalldatetime](../../t-sql/data-types/smalldatetime-transact-sql.md) 的精確度只有到分鐘，因此當 *startdate* 或 *enddate* 具有 **smalldatetime** 值時，秒和毫秒就一律會在傳回值中設定為 0。
   
-如果您只有將時間值指派給日期資料類型的變數，則遺漏日期部分的值就會設定為預設值：1900-01-01。 如果您只有將日期值指派給時間或日期資料類型的變數，則遺漏時間部分的值就會設定為預設值：00:00:00。 如果 *startdate* 或 *enddate* 其中之一只有時間部分，而另一個只有日期部分，則遺漏的時間和日期部分都會設定為預設值。
+如果您只有將時間值指派給日期資料類型變數，`DATEDIFF` 會將遺漏日期部分的值設定為預設值：1900-01-01。 如果您只有將日期值指派給時間或日期資料類型的變數，`DATEDIFF` 會將遺漏時間部分的值設定為預設值：00:00:00。 如果 *startdate* 或 *enddate* 其中之一只有時間部分，而另一個只有日期部分，`DATEDIFF` 會將遺漏的時間和日期部分設定為預設值。
   
-如果 *startdate* 和 *enddate* 具有不同的日期資料類型，而且其中一個項目的時間部分或小數秒數有效位數超過另一個項目，則另一個項目的遺漏部分就會設定為 0。
+如果 *startdate* 和 *enddate* 具有不同的日期資料類型，而且其中一個項目的時間部分或小數秒數有效位數超過另一個項目，`DATEDIFF` 會將另一個項目的遺漏部分設定為 0。
   
 ## <a name="datepart-boundaries"></a>datepart 界限  
-下列陳述式具有相同的 *startdate* 和相同的 *enddate*。 這些日期都很接近而且時間差距為 .0000001 秒。 每個陳述式中 *startdate* 與 *enddate* 之間的差異會跨越其 *datepart* 的日曆或時間界限。 每個陳述式都會傳回 1。 如果這個範例使用不同的年份，而且 *startdate* 和 *enddate* 都在相同的日曆週中，則 **week** 的傳回值將是 0。
+下列陳述式具有相同的 *startdate* 和相同的 *enddate* 值。 這些日期都很接近而且時間差距為 .0000001 秒。 每個陳述式中 *startdate* 與 *enddate* 之間的差異會跨越其 *datepart* 的日曆或時間界限。 每個陳述式都會傳回 1。 如果 *startdate* 和 *enddate* 具有不同的年份值，但具有相同的日曆週值，`DATEDIFF` 會針對 *datepart* **week** 傳回 0。
   
 ```sql
 SELECT DATEDIFF(year, '2005-12-31 23:59:59.9999999', '2006-01-01 00:00:00.0000000');
@@ -120,17 +128,17 @@ SELECT DATEDIFF(millisecond, '2005-12-31 23:59:59.9999999', '2006-01-01 00:00:00
 ```
   
 ## <a name="remarks"></a>Remarks  
-DATEDIFF 可用於選取清單、WHERE、HAVING、GROUP BY 和 ORDER BY 子句中。
+您可以在 SELECT <list>、WHERE、HAVING、GROUP BY 和 ORDER BY 子句中使用 `DATEDIFF`。
   
-DATEDIFF 會以隱含的方式，將字串常值轉換為 **datetime2** 類型。 這表示，將日期當做字串傳遞時，DATEDIFF 不支援 YDM 格式。 您必須明確地將字串轉換為 **datetime** 或 **smalldatetime** 類型，才能使用 YDM 格式。
+`DATEDIFF` 會以隱含的方式，將字串常值轉換為 **datetime2** 類型。 這表示，將日期當作字串傳遞時，`DATEDIFF` 不支援 YDM 格式。 您必須明確地將字串轉換為 **datetime** 或 **smalldatetime** 類型，才能使用 YDM 格式。
   
-指定 SET DATEFIRST 對 DATEDIFF 沒有任何作用。 DATEDIFF 一定會使用星期天當做一週的第一天，以確保此函數具決定性。
+指定 SET DATEFIRST 對 `DATEDIFF` 沒有任何作用。 `DATEDIFF` 一律會使用星期天當作一週的第一天，以確保此函式以具決定性的方式運作。
   
 ## <a name="examples"></a>範例  
-下列範例會使用不同的運算式類型，當作 *startdate* 和 *enddate* 參數的引數。
+這些範例會使用不同的運算式類型，當作 *startdate* 和 *enddate* 參數的引數。
   
 ### <a name="a-specifying-columns-for-startdate-and-enddate"></a>A. 指定 startdate 和 enddate 的資料行  
-下列範例會計算資料表中兩個資料行之間的日期已跨越的天數界限。
+此範例會計算資料表的兩個資料行日期之間跨越界限的天數。
   
 ```sql
 CREATE TABLE dbo.Duration  
@@ -146,7 +154,7 @@ FROM dbo.Duration;
 ```  
   
 ### <a name="b-specifying-user-defined-variables-for-startdate-and-enddate"></a>B. 指定 startdate 和 enddate 的使用者自訂變數  
-下列範例會使用使用者定義的變數，當作 *startdate* 和 *enddate* 的引數。
+在此範例中，會以使用者定義的變數作為 *startdate* 和 *enddate* 的引數。
   
 ```sql
 DECLARE @startdate datetime2 = '2007-05-05 12:10:09.3312722';  
@@ -155,14 +163,14 @@ SELECT DATEDIFF(day, @startdate, @enddate);
 ```  
   
 ### <a name="c-specifying-scalar-system-functions-for-startdate-and-enddate"></a>C. 指定 startdate 和 enddate 的純量系統函數  
-下列範例會使用純量系統函數，當作 *startdate* 和 *enddate* 的引數。
+此範例會使用純量系統函數，當作 *startdate* 和 *enddate* 的引數。
   
 ```sql
 SELECT DATEDIFF(millisecond, GETDATE(), SYSDATETIME());  
 ```  
   
 ### <a name="d-specifying-scalar-subqueries-and-scalar-functions-for-startdate-and-enddate"></a>D. 指定 startdate 和 enddate 的純量子查詢和純量函數  
-下列範例會使用純量子查詢和純量函數，當作 *startdate* 和 *enddate* 的引數。
+此範例會使用純量子查詢和純量函數，當作 *startdate* 和 *enddate* 的引數。
   
 ```sql
 USE AdventureWorks2012;  
@@ -172,7 +180,7 @@ SELECT DATEDIFF(day,(SELECT MIN(OrderDate) FROM Sales.SalesOrderHeader),
 ```  
   
 ### <a name="e-specifying-constants-for-startdate-and-enddate"></a>E. 指定 startdate 和 enddate 的常數  
-下列範例會使用字元常數，當作 *startdate* 和 *enddate* 的引數。
+此範例會使用字元常數，當作 *startdate* 和 *enddate* 的引數。
   
 ```sql
 SELECT DATEDIFF(day, '2007-05-07 09:53:01.0376635'  
@@ -180,7 +188,7 @@ SELECT DATEDIFF(day, '2007-05-07 09:53:01.0376635'
 ```  
   
 ### <a name="f-specifying-numeric-expressions-and-scalar-system-functions-for-enddate"></a>F. 指定 enddate 的數值運算式和純量系統函數  
-下列範例會使用數值運算式 `(GETDATE ()+ 1)` 和純量系統函數 `GETDATE` 與 `SYSDATETIME`，當作 *enddate* 的引數。
+此範例會使用數值運算式 `(GETDATE ()+ 1)` 和純量系統函數 `GETDATE` 與 `SYSDATETIME`，當作 *enddate* 的引數。
   
 ```sql
 USE AdventureWorks2012;  
@@ -197,7 +205,7 @@ GO
 ```  
   
 ### <a name="g-specifying-ranking-functions-for-startdate"></a>G. 指定 startdate 的排名函數  
-下列範例會使用排名函數，當作 *startdate* 的引數。
+此範例會使用次序函數，當作 *startdate* 的引數。
   
 ```sql
 USE AdventureWorks2012;  
@@ -215,7 +223,7 @@ WHERE TerritoryID IS NOT NULL
 ```  
   
 ### <a name="h-specifying-an-aggregate-window-function-for-startdate"></a>H. 指定 startdate 的彙總視窗函數  
-下列範例會使用彙總區間函式，當作 *startdate* 的引數。
+此範例會使用彙總視窗函式，當作 *startdate* 的引數。
   
 ```sql
 USE AdventureWorks2012;  
@@ -231,10 +239,10 @@ GO
 ```  
   
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>範例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
-下列範例會使用不同的運算式類型，當作 *startdate* 和 *enddate* 參數的引數。
+這些範例會使用不同的運算式類型，當作 *startdate* 和 *enddate* 參數的引數。
   
 ### <a name="i-specifying-columns-for-startdate-and-enddate"></a>I. 指定 startdate 和 enddate 的資料行  
-下列範例會計算資料表中兩個資料行之間的日期已跨越的天數界限。
+此範例會計算資料表的兩個資料行日期之間跨越界限的天數。
   
 ```sql
 CREATE TABLE dbo.Duration (  
@@ -249,7 +257,7 @@ FROM dbo.Duration;
 ```  
   
 ### <a name="j-specifying-scalar-subqueries-and-scalar-functions-for-startdate-and-enddate"></a>J. 指定 startdate 和 enddate 的純量子查詢和純量函數  
-下列範例會使用純量子查詢和純量函數，當作 *startdate* 和 *enddate* 的引數。
+此範例會使用純量子查詢和純量函數，當作 *startdate* 和 *enddate* 的引數。
   
 ```sql
 -- Uses AdventureWorks  
@@ -261,7 +269,7 @@ FROM dbo.DimEmployee;
 ```  
   
 ### <a name="k-specifying-constants-for-startdate-and-enddate"></a>K. 指定 startdate 和 enddate 的常數  
-下列範例會使用字元常數，當作 *startdate* 和 *enddate* 的引數。
+此範例會使用字元常數，當作 *startdate* 和 *enddate* 的引數。
   
 ```sql
 -- Uses AdventureWorks  
@@ -271,7 +279,7 @@ SELECT TOP(1) DATEDIFF(day, '2007-05-07 09:53:01.0376635'
 ```  
   
 ### <a name="l-specifying-ranking-functions-for-startdate"></a>L. 指定 startdate 的排名函數  
-下列範例會使用排名函數，當作 *startdate* 的引數。
+此範例會使用次序函數，當作 *startdate* 的引數。
   
 ```sql
 -- Uses AdventureWorks  
@@ -283,7 +291,7 @@ FROM dbo.DimEmployee;
 ```  
   
 ### <a name="m-specifying-an-aggregate-window-function-for-startdate"></a>M. 指定 startdate 的彙總視窗函數  
-下列範例會使用彙總區間函式，當作 *startdate* 的引數。
+此範例會使用彙總視窗函式，當作 *startdate* 的引數。
   
 ```sql
 -- Uses AdventureWorks  

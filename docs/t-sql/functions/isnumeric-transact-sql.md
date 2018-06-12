@@ -28,11 +28,12 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: e28633c4c373d37c4ba1d8cf18e4e1e9d0a385fe
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 20567e713ac7a53cd506fb2447be51cd525877f3
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34582070"
 ---
 # <a name="isnumeric-transact-sql"></a>ISNUMERIC (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -55,15 +56,15 @@ ISNUMERIC ( expression )
  **int**  
   
 ## <a name="remarks"></a>Remarks  
- 當輸入運算式評估為有效數值資料類型時，ISNUMERIC 就會傳回 1，否則便傳回 0。 有效數值資料類型包括下列各種類型：  
-  
-|||  
-|-|-|  
-|**int**|**numeric**|  
-|**bigint**|**money**|  
-|**smallint**|**smallmoney**|  
-|**tinyint**|**float**|  
-|**decimal**|**real**|  
+ 當輸入運算式評估為有效數值資料類型時，ISNUMERIC 就會傳回 1，否則便傳回 0。 有效的[數值資料類型](../../t-sql/data-types/numeric-types.md)包括下列各種類型：  
+
+|||
+|-|-|
+| [精確數值](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md) | **bigint**、**int**、**smallint**、**tinyint**、**bit** |
+| [固定有效位數](../../t-sql/data-types/decimal-and-numeric-transact-sql.md) | **decimal**、**numeric** |
+| [Approximate](../../t-sql/data-types/float-and-real-transact-sql.md) | **float**、**real** |
+| [貨幣值](../../t-sql/data-types/money-and-smallmoney-transact-sql.md) | **money**、 **smallmoney** |
+
   
 > [!NOTE]  
 >  ISNUMERIC 會針對某些不是數字的字元傳回 1，例如加號 (+)、減號 (-) 和有效貨幣符號 (如錢幣符號 ($))。 如需貨幣符號的完整清單，請參閱 [money 和 smallmoney &#40;TRANSACT-SQL&#41;](../../t-sql/data-types/money-and-smallmoney-transact-sql.md)。  

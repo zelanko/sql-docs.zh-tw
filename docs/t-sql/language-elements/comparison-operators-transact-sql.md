@@ -25,11 +25,12 @@ caps.latest.revision: 35
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 5e0e5538d69caf96e7eb8864de177d14e99ce642
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 46cf351f2a85523737988b93a57fce51924c4ae7
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34563696"
 ---
 # <a name="comparison-operators-transact-sql"></a>比較運算子 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -53,7 +54,7 @@ ms.lasthandoff: 05/03/2018
   
  **Boolean** 資料類型和其他 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料類型不同，不能將它指定為資料表資料行或變數的資料類型，且無法在結果集中傳回。  
   
- 當 SET ANSI_NULLS 是 ON 時，有一或兩個 NULL 運算式的運算子會傳回 UNKNOWN。 當 SET ANSI_NULLS 是 OFF 時，如果兩個運算式都是 NULL，除了等於 (=) 運算子會傳回 TRUE，也適用相同的規則。 例如，當 SET ANSI_NULLS 是 OFF 時，NULL = NULL 會傳回 TRUE。  
+ 當 SET ANSI_NULLS 是 ON 時，有一或兩個 NULL 運算式的運算子會傳回 UNKNOWN。 當 SET ANSI_NULLS 是 OFF 時，會套用相同的規則，但等於 (=) 和不等於 (<>) 運算子除外。 當 SET ANSI_NULLS 是 OFF 時，這些運算子會將 NULL 視為已知值，等同於任何其他 NULL，並且只會傳回 TRUE 或 FALSE (絶不會是 UNKNOWN)。  
   
  在 WHERE 子句中使用含 **Boolean** 資料類型的運算式，來篩選符合搜尋條件，且在 IF 和 WHILE 之類流程控制語言陳述式中的資料列，例如：  
   

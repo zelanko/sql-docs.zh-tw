@@ -19,11 +19,12 @@ caps.latest.revision: 19
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 270c8dafa42e45ecac226edda71237edc44c27f8
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d7fa5a31e0ffaafdff982fdfb64fd6f260624f70
+ms.sourcegitcommit: 99e355b71ff2554782f6bc8e0da86e6d9e3e0bef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34799818"
 ---
 # <a name="remote-blob-store-rbs-sql-server"></a>遠端 Blob 存放區 (RBS) (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -42,7 +43,7 @@ ms.lasthandoff: 05/03/2018
 ### <a name="efficient-blob-management"></a>有效率的 BLOB 管理  
  數個 RBS 功能都支援管理已儲存的 BLOB：  
   
--   BLOB 使用 ACID (不可部分完成、一致、隔離、持久) 交易進行管理。  
+-   BLOB 使用 ACID (不可部分完成、一致、可隔離、持久) 交易進行管理。  
   
 -   BLOB 會組織成集合。  
   

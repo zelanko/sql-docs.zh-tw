@@ -19,11 +19,12 @@ caps.latest.revision: 29
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 89b69f14e131453519bbaae77f16d629444eb169
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: bcd7a5a51aa9f7a3e4e2dfc84dd76e05a950e897
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34473902"
 ---
 # <a name="sql-server-memory-manager-object"></a>SQL Server 的 Memory Manager 物件
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -40,7 +41,7 @@ ms.lasthandoff: 05/03/2018
 |----------------------------------------|-----------------|  
 |**Connection Memory (KB)**|指定伺服器用來維護連線的動態記憶體總數。|  
 |**Database Cache Memory (KB)**|指定伺服器目前用於資料庫頁面快取的記憶體數量。|  
-|**External benefit of memory**|記憶體外部值 (單位: 毫秒/每頁/每毫秒)，乘以 100 億並截斷為整數。| 
+|**External benefit of memory**| 將記憶體新增至特定快取之性能優勢的內部估計。 此為引擎用來平衡快取之間的記憶體使用量，並且在對具有非預期快取成長的情況下進行疑難排解時很有幫助。 該值根據內部計算呈現為整數。 | 
 |**Free Memory (KB)**|指定伺服器目前不使用的已認可記憶體數量。|  
 |**Granted Workspace Memory (KB)**|指定目前授權來執行雜湊、排序、大量複製及建立索引作業等類處理序的記憶體總數。|  
 |**Lock Blocks**|指定目前伺服器上使用中的鎖定區塊數 (定期重新整理)。 鎖定區塊代表個別的鎖定資源，例如資料表、分頁或資料列。|  

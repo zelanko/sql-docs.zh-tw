@@ -1,7 +1,7 @@
 ---
 title: 建立原生模式報表伺服器資料庫 (SSRS 設定管理員) | Microsoft Docs
 ms.custom: ''
-ms.date: 05/24/2017
+ms.date: 05/24/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.component: install-windows
@@ -18,11 +18,12 @@ caps.latest.revision: 12
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 20b53dc4af07f18f4bcb9161e786b3542b162e37
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 507308300934270e9008f775b4da6221278c2d18
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34550509"
 ---
 # <a name="create-a-native-mode-report-server-database"></a>建立原生模式報表伺服器資料庫
 
@@ -118,7 +119,7 @@ ms.lasthandoff: 05/03/2018
   
 7.  檢閱 [摘要] 頁面上的資訊，以確認設定都正確無誤，然後選取 [下一步]。  
   
-8.  選取 [報表伺服器 URL] 頁面或 [報表管理員 URL] 頁面上的 URL 來確認連接。 必須有定義 URL，這項測試才有效。 如果報表伺服器資料庫連接有效，您將會在瀏覽器視窗中看到報表伺服器資料夾階層或報表管理員。 如需詳細資訊，請參閱《 [線上叢書》的](../../reporting-services/install-windows/verify-a-reporting-services-installation.md) 驗證 Reporting Services 安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
+8.  選取 [報表伺服器 URL] 頁面上的 URL 來確認連線。 必須有定義 URL，這項測試才有效。 如果報表伺服器資料庫連線有效，您將會看到報表伺服器資料夾階層。 如需詳細資訊，請參閱《 [線上叢書》的](../../reporting-services/install-windows/verify-a-reporting-services-installation.md) 驗證 Reporting Services 安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
 
 ## <a name="change-database-credentials"></a>變更資料庫認證
 

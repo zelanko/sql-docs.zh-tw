@@ -26,19 +26,20 @@ caps.latest.revision: 35
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.openlocfilehash: 9d9652c25875fb1edb5d09e4e283fd7393b523a6
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: b7bace7aa0f07dd42230c7d626aa9b34adb5dfb1
+ms.sourcegitcommit: 6fe7b5e8818bd0d94fce693c560d63cc6883d76f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34758088"
 ---
 # <a name="appname-transact-sql"></a>APP_NAME (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-函數，傳回目前工作階段的應用程式名稱 (如果應用程式設定名稱值)。
+此函式會傳回目前工作階段的應用程式名稱 (如果應用程式設定該名稱值)。
   
 > [!IMPORTANT]  
->  用戶端提供應用程式名稱，且該應用程式名稱值未以任何方式驗證。 請勿在安全性檢查的任何環節中使用 **APP_NAME**。  
+>  用戶端提供應用程式名稱，且 `APP_NAME` 未以任何方式驗證應用程式名稱。 請勿在安全性檢查的任何環節中使用 `APP_NAME`。  
   
 ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -53,12 +54,12 @@ APP_NAME  ( )
 **nvarchar(128)**
   
 ## <a name="remarks"></a>Remarks  
-使用 **APP_NAME** 來區別不同的應用程式，作為針對那些應用程式執行不同動作的方法。 例如，**APP_NAME** 可以區別不同的應用程式，以允許每個應用程式使用不同的日期格式。 它也可允許傳回到特定應用程式的參考資訊。
+使用 `APP_NAME` 來區別不同的應用程式，作為針對那些應用程式執行不同動作的方法。 例如，`APP_NAME` 可以區別不同的應用程式，以允許每個應用程式使用不同的日期格式。 它也可允許傳回到特定應用程式的參考資訊。
   
 若要在 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 中設定應用程式名稱，請在 [連線到資料庫引擎] 對話方塊中按一下 [選項]。 在 [Additional Connection Parameters] (其他連線參數) 索引標籤中，以 `;app='application_name'` 格式提供 **app** 屬性
   
 ## <a name="example"></a>範例  
-此範例檢查起始此處理序的用戶端應用程式是否為 `SQL Server Management Studio` 工作階段，並提供 US 或 ANSI 格式的日期。
+此範例會檢查起始這個處理序的用戶端應用程式是否為 `SQL Server Management Studio` 工作階段。 然後，它會提供 US 或 ANSI 格式的日期值。
   
 ```sql
 USE AdventureWorks2012;  

@@ -39,11 +39,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 1f9df0c2da8892d380635f8949f10625baf9fda3
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: fdc629623e8de28a0aaf18d384ba2e9db3a63269
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34585950"
 ---
 # <a name="from-transact-sql"></a>FROM (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -367,7 +368,7 @@ ON (p.ProductID = v.ProductID);
  *table_alias*  
  這是輸出資料表的別名名稱。 必須指定 *pivot_table_alias*。  
   
- UNPIVOT \< unpivot_clause >  
+ UNPIVOT \<unpivot_clause>  
  指定將輸入資料表從 *column_list* 中的多個資料行縮減成一個名為 *pivot_column* 的單一資料行。 如需有關 PIVOT 和 UNPIVOT 的詳細資訊，請參閱[使用 PIVOT 和 UNPIVOT](../../t-sql/queries/from-using-pivot-and-unpivot.md)。  
   
  AS OF \<date_time>  

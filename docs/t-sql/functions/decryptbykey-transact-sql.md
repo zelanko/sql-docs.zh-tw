@@ -25,16 +25,17 @@ caps.latest.revision: 39
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.openlocfilehash: 57a2175b3c4096ab9af7203d7f7d3733947f8e78
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 7f9e1e678fba7a2b2d24a85f4d57f1112b3d4cb8
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34779474"
 ---
 # <a name="decryptbykey-transact-sql"></a>DECRYPTBYKEY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  使用對稱金鑰為資料解密。  
+此函式會使用對稱金鑰為資料解密。  
   
  ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -47,38 +48,36 @@ DecryptByKey ( { 'ciphertext' | @ciphertext }
 ```  
   
 ## <a name="arguments"></a>引數  
- *ciphertext*  
- 這是已經利用金鑰加密的資料。 *ciphertext* 為 **varbinary**。  
+*ciphertext*  
+**varbinary** 類型的變數，其中包含以金鑰加密的資料。  
   
- **@ciphertext**  
- 為 **varbinary** 類型的變數，其中包含已利用金鑰加密的資料。  
+**@ciphertext**  
+**varbinary** 類型的變數，其中包含以金鑰加密的資料。  
   
  *add_authenticator*  
- 指出驗證器是否要與純文字一起加密。 必須是加密資料時傳遞至 EncryptByKey 的相同值。 *add_authenticator* 為 **int**。  
+指出原始加密程序是否隨純文字一同包含及加密驗證器。 必須符合資料加密期間傳遞至 [ENCRYPTBYKEY (Transact-SQL)](./encryptbykey-transact-sql.md) 的值。 *add_authenticator* 具有 **int** 資料類型。  
   
  *authenticator*  
- 這是要產生驗證器的資料。 必須符合已提供給 EncryptByKey 的值。 *authenticator* 為 **sysname**。  
-  
- **@authenticator**  
- 這是含有要產生驗證器之資料的變數。 必須符合已提供給 EncryptByKey 的值。  
-  
+作為驗證器產生基礎使用的資料。 必須符合提供給 [ENCRYPTBYKEY (Transact-SQL)](./encryptbykey-transact-sql.md) 的值。 *authenticator* 具有 **sysname** 資料類型。  
+
+**@authenticator**  
+含有驗證器從中產生之資料的變數。 必須符合提供給 [ENCRYPTBYKEY (Transact-SQL)](./encryptbykey-transact-sql.md) 的值。 *@authenticator* 具有 **sysname** 資料類型。  
+
 ## <a name="return-types"></a>傳回類型  
- **varbinary**，大小上限為 8,000 位元組。
- 
-如果未開啟用於加密資料的對稱金鑰，或「加密文字」是 NULL，則會傳回 NULL。
+**varbinary**，大小上限為 8,000 個位元組。 如果未開啟用於資料加密的對稱金鑰，或「加密文字」為 NULL，則 `DECRYPTBYKEY` 會傳回 NULL。  
   
 ## <a name="remarks"></a>Remarks  
- DecryptByKey 使用對稱金鑰。 這個對稱金鑰必須已在資料庫中開啟。 同時可以開啟多個金鑰。 為加密文字解密之前，您不需立即開啟金鑰。  
+`DECRYPTBYKEY` 使用對稱金鑰。 資料庫必須已開啟此對稱金鑰。 `DECRYPTBYKEY` 允許同時開啟多個金鑰。 加密文字解密之前，您不需要立即開啟金鑰。  
   
- 對稱加密和解密相當快速，而且很適合處理大量資料。  
+對稱式加密和解密運作起來通常較快，而且非常適合涉及大量資料的作業。  
   
 ## <a name="permissions"></a>Permissions  
- 要求對稱金鑰已經在目前的工作階段中開啟。 如需詳細資訊，請參閱 [ SYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/open-symmetric-key-transact-sql.md)。  
+目前的工作階段中必須已開啟對稱金鑰。 如需詳細資訊，請參閱 [OPEN SYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/open-symmetric-key-transact-sql.md)。  
   
 ## <a name="examples"></a>範例  
   
 ### <a name="a-decrypting-by-using-a-symmetric-key"></a>A. 使用對稱金鑰來解密  
- 下列範例是利用對稱金鑰為加密文字解密。  
+此範例會使用對稱金鑰來解密加密文字。  
   
 ```  
 -- First, open the symmetric key with which to decrypt the data.  
@@ -98,7 +97,7 @@ GO
 ```  
   
 ### <a name="b-decrypting-by-using-a-symmetric-key-and-an-authenticating-hash"></a>B. 使用對稱金鑰和驗證雜湊來解密  
- 下列範例會為隨驗證器一同加密的資料解密。  
+此範例會解密原本隨驗證器一同加密的資料。  
   
 ```  
 -- First, open the symmetric key with which to decrypt the data  

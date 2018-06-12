@@ -16,16 +16,17 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 3d199b9822d591c10f1f4d9af232b9f74d7e8a81
-ms.sourcegitcommit: d2573a8dec2d4102ce8882ee232cdba080d39628
+ms.openlocfilehash: b17fcc15be4c8faf496c469bb1e46fe2c6d42012
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34550489"
 ---
 # <a name="alter-database-parallel-data-warehouse"></a>ALTER DATABASE (平行處理資料倉儲)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
 
-  修改適用於[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]中的複寫資料表、分散式資料表和交易記錄的資料庫大小上限選項。 在資料庫的大小成長或壓縮時，使用此陳述式來管理它的磁碟空間配置。  
+  修改適用於[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]中的複寫資料表、分散式資料表和交易記錄的資料庫大小上限選項。 在資料庫的大小成長或壓縮時，使用此陳述式來管理它的磁碟空間配置。 本主題也會描述在平行處理資料倉儲中設定資料庫選項的相關語法。 
   
  ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例 &#40;Transact-SQL&#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -42,7 +43,10 @@ ALTER DATABASE database_name
     AUTOGROW = { ON | OFF }  
     | REPLICATED_SIZE = size [GB]  
     | DISTRIBUTED_SIZE = size [GB]  
-    | LOG_SIZE = size [GB]  
+    | LOG_SIZE = size [GB]
+    | SET AUTO_CREATE_STATISTICS { ON | OFF }
+    | SET AUTO_UPDATE_STATISTICS { ON | OFF } 
+    | SET AUTO_UPDATE_STATISTICS_ASYNC { ON | OFF }
 }  
   
 <db_encryption_option> ::=  
@@ -67,10 +71,33 @@ ALTER DATABASE database_name
   
  ENCRYPTION { ON | OFF }  
  設定資料庫要加密 (ON) 或是不要加密 (OFF)。 只有在將 [sp_pdw_database_encryption](http://msdn.microsoft.com/5011bb7b-1793-4b2b-bd9c-d4a8c8626b6e) \(英文\) 設為 **1** 時，才能針對[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]設定加密。 您必須先建立資料庫加密金鑰，才能設定透明資料加密。 如需資料庫加密的詳細資訊，請參閱[透明資料加密 &#40;TDE&#41;](../../relational-databases/security/encryption/transparent-data-encryption.md)。  
+
+ SET AUTO_CREATE_STATISTICS { ON | OFF } 自動建立統計資料選項 AUTO_CREATE_STATISTICS 為 ON 時，查詢最佳化工具就會視需要針對查詢述詞中的個別資料行來建立統計資料，以便改善查詢計劃的基數估計值。 這些單一資料行統計資料是針對在現有統計資料物件中尚未具有長條圖的資料行建立的。
+
+ 若為升級至 AU7 之後建立的新資料庫，預設值是 ON。 若為在升級之前建立的資料庫，預設值是 OFF。 
+
+ 如需統計資料的詳細資訊，請參閱[統計資料](/sql/relational-databases/statistics/statistics)
+
+ SET AUTO_UPDATE_STATISTICS { ON | OFF } 自動更新統計資料選項 AUTO_UPDATE_STATISTICS 為 ON 時，查詢最佳化工具會判斷統計資料何時過期，然後在查詢使用統計資料時加以更新。 當作業插入、更新、刪除或合併變更資料表或索引檢視表中的資料分佈之後，統計資料就會變成過期。 查詢最佳化工具會計算自從上次更新統計資料以來資料修改的次數，並且比較修改次數與臨界值，藉以判斷統計資料可能過期的時間。 此臨界值是以資料表或索引檢視表中的資料列數目為基礎。
+
+ 若為升級至 AU7 之後建立的新資料庫，預設值是 ON。 若為在升級之前建立的資料庫，預設值是 OFF。 
+
+ 如需統計資料的詳細資訊，請參閱[統計資料](/sql/relational-databases/statistics/statistics)。
+
+
+ SET AUTO_UPDATE_STATISTICS_ASYNC { ON | OFF } 非同步統計資料更新選項 AUTO_UPDATE_STATISTICS_ASYNC 會決定查詢最佳化工具要使用同步或非同步統計資料更新。 AUTO_UPDATE_STATISTICS_ASYNC 選項會套用至針對索引所建立的統計資料物件、查詢述詞中的單一資料行，以及使用CREATE STATISTICS 陳述式所建立的統計資料。
+
+ 若為升級至 AU7 之後建立的新資料庫，預設值是 ON。 若為在升級之前建立的資料庫，預設值是 OFF。 
+
+ 如需統計資料的詳細資訊，請參閱[統計資料](/sql/relational-databases/statistics/statistics)。
+
   
 ## <a name="permissions"></a>Permissions  
  需要資料庫上的 ALTER 權限。  
   
+## <a name="error-messages"></a>錯誤訊息
+如果已停用自動統計資料，而且您嘗試改變統計資料設定，PDW 會產生錯誤「PDW　不支援此選項」。 系統管理員可以藉由啟用功能參數 [AutoStatsEnabled](../../analytics-platform-system/appliance-feature-switch.md) 來啟用自動統計資料。
+
 ## <a name="general-remarks"></a>一般備註  
  REPLICATED_SIZE、DISTRIBUTED_SIZE 和 LOG_SIZE 的值可以大於、等於或小於資料庫的目前值。  
   
@@ -78,6 +105,8 @@ ALTER DATABASE database_name
  成長和壓縮作業很近似。 產生的實際大小會因大小參數而異。  
   
  [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]不會以不可部分完成之作業的形式來執行 ALTER DATABASE 陳述式。 如果陳述式在執行期間中止，系統將會保留已發生的變更。  
+
+只有在系統管理員啟用了自動統計資料時，統計資料設定才會作用。如果您是系統管理員，請使用功能參數 [AutoStatsEnabled](../../analytics-platform-system/appliance-feature-switch.md) 來啟用或停用自動統計資料。 
   
 ## <a name="locking-behavior"></a>鎖定行為  
  在 DATABASE 物件上採取共用鎖定。 您無法改變有另一個使用者正在讀取或寫入的資料庫。 這包括已在資料庫上發出 [USE](http://msdn.microsoft.com/158ec56b-b822-410f-a7c4-1a196d4f0e15) \(英文\) 陳述式的工作階段。  
@@ -165,6 +194,29 @@ ALTER DATABASE CustomerSales
 ALTER DATABASE CustomerSales  
     SET ( LOG_SIZE = 10 GB );  
 ```  
+
+### <a name="e-check-for-current-statistics-values"></a>E. 檢查目前的統計資料值
+
+下列查詢會傳回所有資料庫目前的統計資料值。 值 1 表示開啟此功能，而 0 表示關閉此功能。
+
+```sql
+SELECT NAME,
+    is_auto_create_stats_on,
+    is_auto_update_stats_on,
+    is_auto_update_stats_async_on
+FROM sys.databases;
+```
+### <a name="f-enable-auto-create-and-auto-update-stats-for-a-database"></a>F. 啟用資料庫的自動建立與自動更新統計資料
+使用下列陳述式，針對資料庫 CustomerSales 以自動且非同步的方式啟用建立和更新統計資料功能。  這會視需要建立和更新單一資料行統計資料，以建立高品質的查詢計劃。
+
+```sql
+ALTER DATABASE CustomerSales
+    SET AUTO_CREATE_STATISTICS ON;
+ALTER DATABASE CustomerSales
+    SET AUTO_UPDATE_STATISTICS ON; 
+ALTER DATABASE CustomerSales
+    SET AUTO_UPDATE_STATISTICS_ASYNC ON;
+```
   
 ## <a name="see-also"></a>另請參閱  
  [CREATE DATABASE &#40;平行處理資料倉儲&#41;](../../t-sql/statements/create-database-parallel-data-warehouse.md)   

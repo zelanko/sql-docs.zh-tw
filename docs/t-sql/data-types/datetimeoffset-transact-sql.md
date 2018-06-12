@@ -28,11 +28,12 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 5a86b7102b60c5485afe849f32d32cf8f369f159
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 71483471c764f9af60208be2acd79bc77c89717b
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34550839"
 ---
 # <a name="datetimeoffset-transact-sql"></a>datetimeoffset (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -134,7 +135,7 @@ SELECT @datetimeoffset AS '@datetimeoffset ', @date AS 'date';
   
 ```  
   
-當轉換成 **time(n)** 時，時、分、秒和毫秒都會複製。 時區值則會被截斷。 如果 **datetimeoffset(n)** 值的有效位數大於 **time(n)** 值的有效位數，此值將會四捨五入。 下列程式碼顯示將 `datetimeoffset(4)` 值轉換成 `time(3)` 值的結果。
+如果轉換成 **time(n)**，時、分、秒和毫秒都會複製。 時區值則會被截斷。 如果 **datetimeoffset(n)** 值的有效位數大於 **time(n)** 值的有效位數，此值將會四捨五入。 下列程式碼顯示將 `datetimeoffset(4)` 值轉換成 `time(3)` 值的結果。
   
 ```sql
 DECLARE @datetimeoffset datetimeoffset(4) = '12-10-25 12:32:10.1237 +01:0';  

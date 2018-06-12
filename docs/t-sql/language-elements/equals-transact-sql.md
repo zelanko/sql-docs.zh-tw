@@ -26,11 +26,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 77947f8263b66f1b7f26e8ee5a5d52a4d019aeb2
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 97d24445d506a41675822f13d0a23d4e03edac3d
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34563746"
 ---
 # <a name="-equals-transact-sql"></a>= (等於) (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -53,15 +54,15 @@ expression = expression
  布林  
   
 ## <a name="remarks"></a>Remarks  
- 當您比較兩個 NULL 運算式時，結果會隨著 `ANSI_NULLS` 設定而不同：  
+ 當您使用 NULL 運算式進行比較時，結果會隨著 `ANSI_NULLS` 設定而不同：  
   
--   如果將 `ANSI_NULLS` 設為 ON，結果會是 NULL，依照 ANSI 慣例，NULL (或未知) 值不等於另一個 NULL 或未知值。  
+-   如果 `ANSI_NULLS` 設定為 ON，任何與 NULL 的比較結果為 UNKNOWN，其遵循 ANSI 慣例：NULL 是未知的值，而且無法與任何其他值 (包括其他的 NULL) 進行比較。  
   
--   如果將 `ANSI_NULLS` 設為 OFF，NULL 與 NULL 的比較結果便是 TRUE。  
+-   如果 `ANSI_NULLS` 設定為 OFF，比較 NULL 與 NULL 的結果為 TRUE，而比較 NULL 與任何其他值的結果為 FALSE。  
 
 如需詳細資訊，請參閱 [SET ANSI_NULLS &#40;Transact-SQL&#41;](../../t-sql/statements/set-ansi-nulls-transact-sql.md)。
   
- 任何種類的 NULL 值 (未知) 與非 NULL 值比較，一律會產生 FALSE。  
+ 在大部分情況下，導致 UNKNOWN 的布林運算式運作方式類似於 FALSE，但並非在所有的情況下都是如此。 如需詳細資訊，請參閱 [NULL 與 UNKNOWN &#40;Transact-SQL&#41;](../../t-sql/language-elements/null-and-unknown-transact-sql.md) 和 [NOT &#40;Transact-SQL&#41; ](../../t-sql/language-elements/not-transact-sql.md)。  
   
   
 ## <a name="examples"></a>範例  

@@ -22,11 +22,12 @@ caps.latest.revision: 38
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: c851283cd546038c11700ed111282a9aa1a039ad
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 22bc1b365e04c5e06e6278974346b1626434a24b
+ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34744067"
 ---
 # <a name="insert-xml-dml"></a>insert (XML DML)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -133,7 +134,7 @@ GO
 ```  
   
 ### <a name="c-inserting-attributes-into-a-document"></a>C. 將屬性插入文件中  
- 下列範例說明如何將屬性插入文件中。首先，將文件指派給 **xml** 類型變數。 然後，使用一連串 **insert** XML DML 陳述式，將屬性插入文件中。 在每一個屬性插入之後，SELECT 陳述式會顯示結果。  
+ 下列範例說明如何將屬性插入文件。 首先，將文件指派給 **xml** 類型的變數。 然後，使用一連串 **insert** XML DML 陳述式，將屬性插入文件中。 在每一個屬性插入之後，SELECT 陳述式會顯示結果。  
   
 ```  
 USE AdventureWorks;  

@@ -59,11 +59,12 @@ caps.latest.revision: 136
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 1a5246b1d7d6a00e4500c95bae20fb2975bbebc9
-ms.sourcegitcommit: bac61a04d11fdf61deeb03060e66621c0606c074
+ms.openlocfilehash: 484d0e3c9fccd0e65041665eef523dbf92311399
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/14/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34470289"
 ---
 # <a name="hints-transact-sql---query"></a>提示 (Transact-SQL) - 查詢
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -276,12 +277,15 @@ ms.lasthandoff: 05/14/2018
 *  'ENABLE_HIST_AMENDMENT_FOR_ASC_KEYS'  
  為需要基數估計的任何開頭索引資料行，啟用自動產生的快速統計資料 (長條圖修正)。 在查詢編譯時會調整用來預估基數的長條圖，以計算此資料行的實際最大值或最小值。 這與[追蹤旗標](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 4139 相同。 
 *  'ASSUME_JOIN_PREDICATE_DEPENDS_ON_FILTERS'  
- 在 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 或更新版本的查詢最佳化工具[基數估計](../../relational-databases/performance/cardinality-estimation-sql-server.md)模型下，導致 SQL Server 使用簡易內含項目假設產生計畫，而不使用預設的基底內含項目假設。 這與[追蹤旗標](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 9476 相同。 
-*  'FORCE_DEFAULT_CARDINALITY_ESTIMATION'  
+ 在 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 或更新版本的查詢最佳化工具[基數估計](../../relational-databases/performance/cardinality-estimation-sql-server.md)模型下，導致 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用簡易內含項目假設產生計畫，而不使用預設的基底內含項目假設。 這與[追蹤旗標](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 9476 相同。 
+*  'FORCE_DEFAULT_CARDINALITY_ESTIMATION'    
  強制查詢最佳化工具使用對應至目前資料庫相容性層級的[基數估計](../../relational-databases/performance/cardinality-estimation-sql-server.md)模型。 使用此提示可覆寫[資料庫範圍設定](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md) LEGACY_CARDINALITY_ESTIMATION=ON 設定或[追蹤旗標](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 9481。
-* 'DISABLE_INTERLEAVED_EXECUTION_TVF' 會停用多重陳述式資料表值函式的交錯式執行。
-* 'DISABLE_BATCH_MODE_MEMORY_GRANT_FEEDBACK' 會停用批次模式記憶體授與意見反應。
-* 'DISABLE_BATCH_MODE_ADAPTIVE_JOINS' 會停用批次模式自適性聯結。
+*  'DISABLE_INTERLEAVED_EXECUTION_TVF'   
+ 停用交錯執行多重陳述式資料表值函式。 如需詳細資訊，請參閱[交錯執行多重陳述式資料表值函式](../../relational-databases/performance/adaptive-query-processing.md#interleaved-execution-for-multi-statement-table-valued-functions)。
+*  'DISABLE_BATCH_MODE_MEMORY_GRANT_FEEDBACK'     
+ 停用批次模式記憶體授與意見反應。 如需詳細資訊，請參閱[批次模式記憶體授與意見反應](../../relational-databases/performance/adaptive-query-processing.md#batch-mode-memory-grant-feedback)。
+*  'DISABLE_BATCH_MODE_ADAPTIVE_JOINS'     
+ 停用批次模式自適性聯結。 如需詳細資訊，請參閱[批次模式自適性聯結](../../relational-databases/performance/adaptive-query-processing.md#batch-mode-adaptive-joins)。
  
 > [!TIP]
 > 提示名稱不區分大小寫。
@@ -328,7 +332,7 @@ TABLE HINT **(***exposed_object_name* [ **,** \<table_hint> [ [**,** ]...*n* ] ]
 -   動態管理檢視  
 -   具名子查詢  
   
- 對於不具任何現有資料表提示的查詢，也可將 INDEX、FORCESCAN 和 FORCESEEK 資料表提示指定為查詢提示，或以其取代查詢中現有的 INDEX、FORCESCAN 或 FORCESEEK 提示。 除非查詢已有指定資料表提示的 WITH 子句，否則不可使用 INDEX、FORCESCAN 和 FORCESEEK 以外的資料表提示做為查詢提示。 在此情況下，也必須在 OPTION 子句中使用 TABLE HINT 將相符的提示指定為查詢提示，以保留此查詢的語意。 例如，如果查詢包含資料表提示 NOLOCK，則計劃指南的 **@hints** 參數中的 OPTION 子句也必須包含 NOLOCK 提示。 請參閱範例 K。如果在 OPTION 子句中使用 TABLE HINT 指定 INDEX、FORCESCAN 或 FORCESEEK 以外的資料表提示，但是沒有相符的查詢提示 (反之亦然)，則會引發錯誤 8702 (指出 OPTION 子句可能會造成查詢語意變更) 並導致查詢失敗。  
+對於不具任何現有資料表提示的查詢，也可將 INDEX、FORCESCAN 和 FORCESEEK 資料表提示指定為查詢提示，或以其取代查詢中現有的 INDEX、FORCESCAN 或 FORCESEEK 提示。 除非查詢已有指定資料表提示的 WITH 子句，否則不可使用 INDEX、FORCESCAN 和 FORCESEEK 以外的資料表提示做為查詢提示。 在此情況下，也必須在 OPTION 子句中使用 TABLE HINT 將相符的提示指定為查詢提示，以保留此查詢的語意。 例如，如果查詢包含資料表提示 NOLOCK，則計劃指南的 **@hints** 參數中的 OPTION 子句也必須包含 NOLOCK 提示。 請參閱範例 K。如果在 OPTION 子句中使用 TABLE HINT 指定 INDEX、FORCESCAN 或 FORCESEEK 以外的資料表提示，但是沒有相符的查詢提示 (反之亦然)，則會引發錯誤 8702 (指出 OPTION 子句可能會造成查詢語意變更) 並導致查詢失敗。  
   
 ## <a name="examples"></a>範例  
   

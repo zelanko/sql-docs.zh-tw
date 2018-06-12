@@ -1,6 +1,6 @@
 ---
 title: 排程 Azure 中的 SSIS 套件 | Microsoft Docs
-ms.date: 05/09/2018
+ms.date: 05/29/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.prod_service: integration-services
@@ -12,35 +12,32 @@ ms.technology:
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 4bfad00425848189d88bd780296db00ec810b37c
-ms.sourcegitcommit: 0cc2cb281e467a13a76174e0d9afbdcf4ccddc29
+ms.openlocfilehash: 62980562b7f89293177307cd4c3ad02f54e977f0
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/15/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34585840"
 ---
 # <a name="schedule-the-execution-of-an-ssis-package-in-azure"></a>排程 Azure 中的 SSIS 套件執行
-您可以選擇下列其中一個排程選項，來排程執行 Azure SQL Database 伺服器的 SSISDB 目錄資料庫上所儲存的套件：
--   [SQL Server Management Studio (SSMS) 中的排程選項](#ssms)
--   [Azure Data Factory 執行 SSIS 套件活動](#execute)
--   [Azure Data Factory SQL Server 預存程序活動](#storedproc)
--   [SQL Database 彈性作業](#elastic)
--   [SQL Server Agent](#agent)
+您可以選擇本文中所述的其中一個選項，來排程部署到 Azure SQL Database 伺服器上 SSISDB 目錄資料庫的 SSIS 套件執行。 您可以直接排程套件，或間接排程套件作為 Azure Data Factory 管線的一部分。 如需 Azure 上的 SSIS 概觀，請參閱[將 SQL Server Integration Services 工作負載隨即轉移至雲端](ssis-azure-lift-shift-ssis-packages-overview.md)。
+
+- 直接排程套件
+
+  - [使用 SQL Server Management Studio (SSMS) 中的排程選項進行排程](#ssms)
+
+  - [SQL Database 彈性作業](#elastic)
+
+  - [SQL Server Agent](#agent)
+
+- [間接排程套件作為 Azure Data Factory 管線的一部分](#activity)
+
 
 ## <a name="ssms"></a> 使用 SSMS 排程套件
 
 在 SQL Server Management Studio (SSMS) 中，您可以在部署到 SSIS 目錄資料庫 (SSISDB) 的套件上按一下滑鼠右鍵，然後選取 [排程] 以開啟 [新增排程] 對話方塊。 如需詳細資訊，請參閱[使用 SSMS 排程 Azure 上的 SSIS 套件執行](ssis-azure-schedule-packages-ssms.md)。
 
 此功能需要 SQL Server Management Studio 17.7 版或更高版本。 若要取得最新版的 SSMS，請參閱[下載 SQL Server Management Studio (SSMS)](../../ssms/download-sql-server-management-studio-ssms.md)。
-
-## <a name="execute"></a> 使用執行 SSIS 套件活動排程套件
-
-如需如何使用 Azure Data Factory 中的執行 SSIS 套件活動來排程 SSIS 套件的資訊，請參閱[在 Azure Data Factory 中使用 SSIS 活動執行 SSIS 套件](https://docs.microsoft.com/azure/data-factory/how-to-invoke-ssis-package-ssis-activity)。
-
-## <a name="storedproc"></a> 使用預存程序活動排程套件
-
-如需如何使用 Azure Data Factory 中的預存程序活動來排程 SSIS 套件的資訊，請參閱[在 Azure Data Factory 中使用預存程序活動執行 SSIS 套件](https://docs.microsoft.com/azure/data-factory/how-to-invoke-ssis-package-stored-procedure-activity)。
-
-針對 Data Factory 第 1 版，請參閱[在 Azure Data Factory 中使用預存程序活動執行 SSIS 套件](https://docs.microsoft.com/azure/data-factory/v1/how-to-invoke-ssis-package-stored-procedure-activity)。
 
 ## <a name="elastic"></a> 使用 SQL Database 彈性作業排程套件
 
@@ -88,7 +85,9 @@ EXEC jobs.sp_update_job @job_name='ExecutePackageJob', @enabled=1,
     @schedule_interval_type='Minutes', @schedule_interval_count=60 
 ```
 
-## <a name="agent"></a> 使用 SQL Server Agent 排程套件
+## <a name="agent"></a> 使用 SQL Server Agent 在內部部署排程套件
+
+如需 SQL Server Agent 的詳細資訊，請參閱[套件的 SQL Server Agent 作業](../packages/sql-server-agent-jobs-for-packages.md)。
 
 ### <a name="prerequisite---create-a-linked-server"></a>必要條件 - 建立連結的伺服器
 
@@ -158,7 +157,24 @@ EXEC jobs.sp_update_job @job_name='ExecutePackageJob', @enabled=1,
 
 6.  完成設定和排程作業。
 
-## <a name="next-steps"></a>後續步驟
-如需 SQL Server Agent 的詳細資訊，請參閱[套件的 SQL Server Agent 作業](../packages/sql-server-agent-jobs-for-packages.md)。
+## <a name="activity"></a> 排程套件作為 Azure Data Factory 管線的一部分
 
-如需在 SQL Database 上彈性作業的詳細資訊，請參閱[管理相應放大的雲端資料庫](https://docs.microsoft.com/azure/sql-database/sql-database-elastic-jobs-overview)。
+您可以使用觸發程序來執行將執行 SSIS 套件的 Azure Data Factory 管線，藉以間接排程套件。
+
+若要排程 Data Factory 管線，請使用下列其中一個觸發程序：
+
+- [排程觸發程序](https://docs.microsoft.com/azure/data-factory/how-to-create-schedule-trigger)
+
+- [輪轉視窗觸發程序](https://docs.microsoft.com/azure/data-factory/how-to-create-tumbling-window-trigger)
+
+- [事件架構觸發程序](https://docs.microsoft.com/azure/data-factory/how-to-create-event-trigger)
+
+若要執行 SSIS 套件作為 Data Factory 管線的一部分，請使用下列其中一個活動：
+
+- [執行 SSIS 套件活動](https://docs.microsoft.com/azure/data-factory/how-to-invoke-ssis-package-ssis-activity)。
+
+- [預存程序活動](https://docs.microsoft.com/azure/data-factory/how-to-invoke-ssis-package-stored-procedure-activity)。
+
+## <a name="next-steps"></a>後續步驟
+
+檢閱執行部署到 Azure 之 SSIS 套件的選項。 如需詳細資訊，請參閱[在 Azure 中執行 SSIS 套件](ssis-azure-run-packages.md)。

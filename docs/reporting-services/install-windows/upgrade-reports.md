@@ -1,7 +1,7 @@
 ---
-title: 升級報表 | Microsoft Docs
+title: 升級報表 (SSRS) | Microsoft Docs
 ms.custom: ''
-ms.date: 05/30/2017
+ms.date: 06/04/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.component: install-windows
@@ -24,27 +24,26 @@ caps.latest.revision: 70
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 3ae563ddf9c21fc0add692493504dd7ccbdd09fb
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 569a67511ecf28a4e9800182f823719d47e61120
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34771824"
 ---
-# <a name="upgrade-reports"></a>Upgrade Reports
+# <a name="upgrade-reports-ssrs"></a>升級報表 (SSRS)
 
 [!INCLUDE[ssrs-appliesto-sql2016-preview](../../includes/ssrs-appliesto-sql2016-preview.md)]
 
-  報表定義 (.rdl) 檔案會藉由下列方式自動升級：  
+報表定義 (.rdl) 檔案會藉由下列方式自動升級：  
   
--   當您在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]的報表設計師中開啟報表時，報表定義將會升級為目前支援的 RDL 結構描述。 在專案屬性中指定 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]、 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]、 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]或 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 報表伺服器時，報表定義會儲存在與目標伺服器相容的結構描述中。  
+-   當您在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 的報表設計師中開啟分頁報表時，報表定義將會升級為目前支援的 RDL 結構描述。 在專案屬性中指定 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]、 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]、 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]或 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 報表伺服器時，報表定義會儲存在與目標伺服器相容的結構描述中。  
   
 -   將 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 安裝升級為 [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] 安裝時，已經發行到報表伺服器的現有報表和快照集會在初次處理時，編譯並自動升級為新的結構描述。 如果無法自動升級報表，則會使用回溯相容性模式來處理報表。 報表定義會保留在原本的結構描述中。  
   
- 當您直接將報表定義檔案上傳到報表伺服器或 SharePoint 網站時，報表並不會升級。 在 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 中升級報表定義是升級 .rdl 檔的唯一方式。  
-  
  在本機或報表伺服器上升級報表之後，您可能會發現其他錯誤、警告和訊息。 這是內部報表物件模型的變更和處理元件的結果，造成偵測到報表中的根本問題時出現訊息。 如需詳細資訊，請參閱 [Reporting Services Backward Compatibility](../../reporting-services/reporting-services-backward-compatibility.md)。  
   
- 如需 [!INCLUDE 之新功能的詳細資訊，請參閱[ssRSCurrent](../what-s-new-in-sql-server-reporting-services-ssrs.md)。  
+ 如需 [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] 新功能的詳細資訊，請參閱 [SQL Server Reporting Services (SSRS) 的新功能](../what-s-new-in-sql-server-reporting-services-ssrs.md)。  
 
 ##  <a name="bkmk_versionsupported"></a> 升級支援的版本  
  在任何舊版 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 中建立的報表都可以升級。 這包括以下版本：  
@@ -109,7 +108,7 @@ ms.lasthandoff: 05/03/2018
  如需針對報表伺服器、[!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 或報表識別目前 RDL 命名空間的資訊，請參閱[尋找報表定義結構描述版本 &#40;SSRS&#41;](../../reporting-services/reports/find-the-report-definition-schema-version-ssrs.md)。  
   
 ### <a name="upgrading-reports-on-a-report-server"></a>升級報表伺服器上的報表  
- 當 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]、 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]、 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]或 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 報表第一次在已經升級為 [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] 報表伺服器的報表伺服器上執行時，此報表會自動升級為目前報表伺服器所支援的報表定義命名空間。 報表在升級之前可能已經存在於報表伺服器上，或者報表可能已經透過報表管理員上傳，或是在 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]或 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]中從報表設計師發行到報表伺服器。  
+ 當 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]、 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]、 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]或 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 報表第一次在已經升級為 [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] 報表伺服器的報表伺服器上執行時，此報表會自動升級為目前報表伺服器所支援的報表定義命名空間。 報表在升級之前可能已經存在於報表伺服器上，或者報表可能已經透過入口網站上傳，或是在 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]、[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]、[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]、[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 或 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 中從報表設計師發佈到報表伺服器。  
   
  下表列出報表伺服器針對報表中特定類型的 CRI 所執行的升級動作。  
   

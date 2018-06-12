@@ -1,7 +1,7 @@
 ---
 title: 建立文件引導模式 (報表產生器及 SSRS) | Microsoft Docs
 ms.custom: ''
-ms.date: 05/30/2017
+ms.date: 05/24/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.component: report-design
@@ -15,11 +15,12 @@ caps.latest.revision: 13
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 237c1aedf1400dfa7aaa5a380030d81ed93b2f85
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 6d417f39deeb44e38eba83ca6a3f34c4dd6e822c
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34550409"
 ---
 # <a name="create-a-document-map-report-builder-and-ssrs"></a>建立文件引導模式 (報表產生器及 SSRS)
 
@@ -83,7 +84,7 @@ ms.lasthandoff: 05/03/2018
 ##  <a name="HideMapWhenViewRpt"></a>   
 #### <a name="to-hide-the-document-map-when-you-view-a-report"></a>在檢視報表時隱藏文件引導模式  
   
-1.  在報表管理員中，瀏覽至具有文件引導模式的報表。  
+1.  在 Web 入口網站中，瀏覽至具有文件引導模式的報表。  
   
      例如，以 [!INCLUDE[ssSampleDBUserInputNonLocal](../../includes/sssampledbuserinputnonlocal-md.md)] 範例報表為例，下列 URL 會指定名為 Product Catalog 的報表。  
   
@@ -111,7 +112,7 @@ ms.lasthandoff: 05/03/2018
   
      若要使用這個 URL，請複製它，並移除所有分行符號。  
   
-4.  在報表管理員中貼上此 URL，然後按 ENTER 鍵。 報表便會執行，而且文件引導模式會隱藏起來。  
+4.  在 Web 入口網站中貼上此 URL，然後按 ENTER 鍵。 報表便會執行，而且文件引導模式會隱藏起來。  
   
 > [!NOTE]  
 >  如需有關下載範例報表的詳細資訊，請參閱 [報表產生器與報表設計師範例報表](http://go.microsoft.com/fwlink/?LinkId=198283)。  

@@ -13,20 +13,20 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.date: 02/13/2018
 ms.author: giladm
-ms.openlocfilehash: 8900faccfda82e759ee6f31009682eb632df7509
-ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.openlocfilehash: a797824724677745d33936ef570abe12f5b15b8d
+ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34743967"
 ---
 # <a name="sql-data-discovery-and-classification"></a>SQL 資料探索與分類
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 資料探索與分類引進內建至 SQL Server Management Studio (SSMS) 的新工具，以**探索**、**分類**、**標示**和 & **報告**您資料庫中的敏感性資料。
-探索和分類最敏感的資料 (商務、財務、醫療、PII 等等) 可以扮演組織資訊保護成長的關鍵角色。 它可以作為下列的基礎結構：
-* 協助符合資料隱私權標準和法規合規性需求 (例如 GDPR)。
+探索和分類最敏感的資料 (商務、財務、醫療等等) 可以扮演組織資訊保護成長的關鍵角色。 它可以作為下列的基礎結構：
+* 協助符合資料隱私權標準。
 * 控制存取以及強化包含高敏感性資料之資料庫/資料行的安全性。
-
 
 > [!NOTE]
 > **SQL Server 2008 和更新版本支援**資料探索與分類。 針對 Azure SQL Database，請參閱 [Azure SQL Database 資料探索與分類](https://go.microsoft.com/fwlink/?linkid=866265)。
@@ -94,7 +94,57 @@ ms.lasthandoff: 05/03/2018
     ![瀏覽窗格][10]
 
 
-## <a id="subheading-3"></a>後續步驟
+## <a id="subheading-3"></a>存取分類中繼資料
+
+「資訊類型」和「敏感度標籤」的分類中繼資料會儲存在下列擴充屬性中： 
+* sys_information_type_name
+* sys_sensitivity_label_name
+
+您可以使用擴充屬性目錄檢視 [sys.extended_properties](https://docs.microsoft.com/en-us/sql/relational-databases/system-catalog-views/extended-properties-catalog-views-sys-extended-properties) 來存取中繼資料。
+
+下列程式碼範例會傳回所有的分類資料行，以及其對應的分類：
+
+```sql
+SELECT
+    schema_name(O.schema_id) AS schema_name,
+    O.NAME AS table_name,
+    C.NAME AS column_name,
+    information_type,
+    sensitivity_label 
+FROM
+    (
+        SELECT
+            IT.major_id,
+            IT.minor_id,
+            IT.information_type,
+            L.sensitivity_label 
+        FROM
+        (
+            SELECT
+                major_id,
+                minor_id,
+                value AS information_type 
+            FROM sys.extended_properties 
+            WHERE NAME = 'sys_information_type_name'
+        ) IT 
+        FULL OUTER JOIN
+        (
+            SELECT
+                major_id,
+                minor_id,
+                value AS sensitivity_label 
+            FROM sys.extended_properties 
+            WHERE NAME = 'sys_sensitivity_label_name'
+        ) L 
+        ON IT.major_id = L.major_id AND IT.minor_id = L.minor_id
+    ) EP
+    JOIN sys.objects O
+    ON  EP.major_id = O.object_id 
+    JOIN sys.columns C 
+    ON  EP.major_id = C.object_id AND EP.minor_id = C.column_id
+```
+
+## <a id="subheading-4"></a>後續步驟
 
 針對 Azure SQL Database，請參閱 [Azure SQL Database 的資料探索與分類](https://go.microsoft.com/fwlink/?linkid=866265)。
 
@@ -106,7 +156,8 @@ ms.lasthandoff: 05/03/2018
 <!--Anchors-->
 [SQL Data Discovery & Classification overview]: #subheading-1
 [Discovering, classifying & labeling sensitive columns]: #subheading-2
-[Next Steps]: #subheading-3
+[Accessing the classification metadata]: #subheading-3
+[Next Steps]: #subheading-4
 
 <!--Image references-->
 [1]: ./media/sql-data-discovery-and-classification/1_data_classification_explorer_menu.png

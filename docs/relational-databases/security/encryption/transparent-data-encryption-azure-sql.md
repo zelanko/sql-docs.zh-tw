@@ -16,11 +16,12 @@ ms.topic: conceptual
 ms.date: 05/08/2018
 ms.author: rebeccaz
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: b88dfeac58ef9c00307b2cfee35aca3ea0549f02
-ms.sourcegitcommit: feff98b3094a42f345a0dc8a31598b578c312b38
+ms.openlocfilehash: c6d5134ac7760ce9156124ad8c7efd864da81878
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/11/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34462366"
 ---
 # <a name="transparent-data-encryption-for-sql-database-and-data-warehouse"></a>SQL Database 和資料倉儲的透明資料加密
 [!INCLUDE[appliesto-xx-asdb-asdw-xxx-md](../../../includes/appliesto-xx-asdb-asdw-xxx-md.md)]

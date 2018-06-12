@@ -29,6 +29,7 @@
 ## [連接到檔案及檔案共用](lift-shift/ssis-azure-files-file-shares.md)
 ## [在 Azure 中連線到 SSISDB](lift-shift/ssis-azure-connect-to-catalog-database.md)
 ## [驗證部署到 Azure 的套件](lift-shift/ssis-azure-validate-packages.md)
+## [在 Azure 中執行套件](lift-shift/ssis-azure-run-packages.md)
 ## [在 Azure 中排程套件](lift-shift/ssis-azure-schedule-packages.md)
 ## [在 Azure 中以 SSMS 排程套件](lift-shift/ssis-azure-schedule-packages-ssms.md)
 
@@ -72,6 +73,7 @@
 # [查詢](integration-services-ssis-queries.md)
 # [Transactions](integration-services-transactions.md)
 # [部署套件](packages/deploy-integration-services-ssis-projects-and-packages.md)
+# [執行套件](packages/run-integration-services-ssis-packages.md)
 # [Scale Out](scale-out/integration-services-ssis-scale-out.md)
 
 # [目錄和伺服器](catalog/integration-services-ssis-server-and-catalog.md)

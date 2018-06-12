@@ -27,11 +27,12 @@ caps.latest.revision: 152
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 0791b05bdb2526da5d744c067b2f221f6cf4e1be
-ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
+ms.openlocfilehash: 981391e55cc73844ee8c6f7c4975b38305e350fc
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34585920"
 ---
 # <a name="alter-availability-group-transact-sql"></a>ALTER AVAILABILITY GROUP (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -58,7 +59,8 @@ ALTER AVAILABILITY GROUP group_name
    | GRANT CREATE ANY DATABASE  
    | DENY CREATE ANY DATABASE  
    | FAILOVER  
-   | FORCE_FAILOVER_ALLOW_DATA_LOSS   | ADD LISTENER ‘dns_name’ ( <add_listener_option> )  
+   | FORCE_FAILOVER_ALLOW_DATA_LOSS  
+   | ADD LISTENER ‘dns_name’ ( <add_listener_option> )  
    | MODIFY LISTENER ‘dns_name’ ( <modify_listener_option> )  
    | RESTART LISTENER ‘dns_name’  
    | REMOVE LISTENER ‘dns_name’  
@@ -129,7 +131,7 @@ ALTER AVAILABILITY GROUP group_name
 <modify_availability_group_spec>::=  
  <ag_name> WITH  
     (  
-       LISTENER = 'TCP://system-address:port'  
+       LISTENER_URL = 'TCP://system-address:port'  
        | AVAILABILITY_MODE = { SYNCHRONOUS_COMMIT | ASYNCHRONOUS_COMMIT }  
        | SEEDING_MODE = { AUTOMATIC | MANUAL }  
     )  
@@ -473,15 +475,15 @@ ALTER AVAILABILITY GROUP group_name
 >  NetBIOS 只會辨識 DNS 名稱中的前 15 個字元。 如果您有兩個由相同 Active Directory 所控制的 WSFC 叢集，而且嘗試使用超過 15 個字元的名稱以及完全相同的 15 個字元前置詞，在這兩個叢集中建立可用性群組接聽程式，就會收到一則錯誤，指出系統無法讓虛擬網路名稱資源上線。 如需有關 DNS 名稱之前置詞命名規則的詳細資訊，請參閱＜ [指派網域名稱](http://technet.microsoft.com/library/cc731265\(WS.10\).aspx)＞。  
   
  JOIN AVAILABILITY GROUP ON  
- 加入*分散式可用性群組*。 當您建立分散式可用性群組時，叢集上建立所在的可用性群組就是主要可用性群組。 加入該分散式可用性群組的可用性群組是次要可用性群組。  
+ 加入*分散式可用性群組*。 當您建立分散式可用性群組時，叢集上建立所在的可用性群組就是主要可用性群組。 當您執行 JOIN　時，本機伺服器執行個體的可用性群組會是次要可用性群組。  
   
  \<ag_name>  
  指定組成半組分散式可用性群組的可用性群組名稱。  
   
- LISTENER **='** TCP **://***system-address***:***port***'**  
+ LISTENER_URL **='** TCP **://***system-address***:***port***'**  
  指定與可用性群組相關聯之接聽程式的 URL 路徑。  
   
- LISTENER 子句是必要的。  
+ LISTENER_URL 子句是必要的。  
   
  **'** TCP **://***system-address***:***port***'**  
  指定與可用性群組相關聯之接聽程式的 URL。 URL 參數如下所示：  
@@ -490,7 +492,7 @@ ALTER AVAILABILITY GROUP group_name
  這是能明確識別接聽程式的字串，例如系統名稱、完整網域名稱或 IP 位址。  
   
  *port*  
- 這是與可用性群組之鏡像端點相關聯的連接埠號碼。 請注意，這不是接聽程式的連接埠。  
+ 這是與可用性群組之鏡像端點相關聯的連接埠號碼。 請注意，這不是接聽程式所設定之用戶端連線的連接埠。  
   
  AVAILABILITY_MODE **=** { SYNCHRONOUS_COMMIT | ASYNCHRONOUS_COMMIT }  
  指定在主要複本可以認可指定主要資料庫上的交易之前，主要複本是否必須等候次要可用性群組認可將記錄檔記錄強化 (寫入) 至磁碟。  

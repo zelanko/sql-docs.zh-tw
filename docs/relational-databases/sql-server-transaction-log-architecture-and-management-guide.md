@@ -27,11 +27,12 @@ author: rothja
 ms.author: jroth
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 23119e2fafd68797b15a9baf525d52906f311178
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: c6cd03ce43fd2b0a2fd454681e64edbd49e5f87a
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34467974"
 ---
 # <a name="sql-server-transaction-log-architecture-and-management-guide"></a>SQL Server 交易記錄架構與管理指南
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -138,7 +139,7 @@ ms.lasthandoff: 05/03/2018
   
  若要了解預寫記錄檔的運作方式，您一定要知道如何將修改的資料寫入磁碟。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 會維護緩衝快取，當需要擷取資料時，就可以將資料頁讀取到其中。 當緩衝快取中的頁面被修改時，不會立即重新寫入磁碟；而是將頁面標示為「中途」。 在實際將資料頁寫入磁碟之前，可以進行多次邏輯寫入。 每次邏輯寫入時，都會有交易記錄插入至記載修改的記錄快取中。 記錄檔記錄必須在關聯的中途分頁從緩衝區快取移除而寫入至磁碟之前，先寫入磁碟中。 檢查點處理序會定期掃描緩衝快取，檢查是否有內含來自指定資料庫之頁面的緩衝區，並將所有中途分頁寫入磁碟。 藉由建立一個點來確保所有中途分頁都已寫入磁碟中，檢查點可讓稍後的復原節省時間。  
   
- 將緩衝區快取中之修改資料頁面寫入磁碟中的動作稱為清除頁面。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 含有防止中途分頁在寫入相關聯記錄檔記錄之前遭到清除的邏輯。 記錄會在交易被認可後寫入磁碟中。  
+ 將緩衝區快取中之修改資料頁面寫入磁碟中的動作稱為清除頁面。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 含有防止中途分頁在寫入相關聯記錄檔記錄之前遭到清除的邏輯。 記錄檔記錄會在記錄檔緩衝區清除後寫入磁碟中。  交易認可後或記錄檔緩衝區已滿時會發生此情況。  
   
 ##  <a name="Backups"></a> 交易記錄備份  
  本章節提出有關如何備份和還原 (套用) 交易記錄的概念。 在完整和大量記錄復原模式下，進行交易記錄 (「記錄備份」) 的例行備份，對復原資料而言是必要的。 您可以在任何完整備份正在執行的同時備份記錄。 如需復原模型的詳細資訊，請參閱 [SQL Server 資料庫的備份與還原](../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md)。  

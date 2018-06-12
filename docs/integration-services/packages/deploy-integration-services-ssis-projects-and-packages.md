@@ -1,7 +1,7 @@
 ---
 title: 部署 Integration Services (SSIS) 專案和套件 | Microsoft Docs
 ms.custom: ''
-ms.date: 03/01/2017
+ms.date: 06/04/2018
 ms.prod: sql
 ms.prod_service: integration-services
 ms.component: packages
@@ -24,11 +24,12 @@ caps.latest.revision: 21
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 16a9dda229e7f5c99dbc97fa7d827df74d79649f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 9cdefcfcec0c273cfb662966895fc49b09c4460e
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34772138"
 ---
 # <a name="deploy-integration-services-ssis-projects-and-packages"></a>部署 Integration Services (SSIS) 專案和封裝
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 支援兩種部署模型：專案部署模型和舊版封裝部署模型。 專案部署模型可讓您將專案部署至 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 伺服器。  
@@ -36,8 +37,13 @@ ms.lasthandoff: 05/03/2018
 如需舊版封裝部署模型的詳細資訊，請參閱[舊版封裝部署 &#40;SSIS&#41;](../../integration-services/packages/legacy-package-deployment-ssis.md)。  
   
 > [!NOTE]  
->  [!INCLUDE[ssISversion11](../../includes/ssisversion11-md.md)] 引進專案部署模型。 如果您使用此模型，您就無法在未部署整個專案的情況下部署一或多個封裝。 [!INCLUDE[ssISversion13](../../includes/ssisversion13-md.md)] 引進累加封裝部署功能，可讓您部署一個或多個封裝，而不需部署整個專案。  
-  
+>  [!INCLUDE[ssISversion11](../../includes/ssisversion11-md.md)]引進專案部署模型。 在此部署模型中，您無法在未部署整個專案的情況下部署一或多個套件。 [!INCLUDE[ssISversion13](../../includes/ssisversion13-md.md)] 引進套件部署模型，可讓您在未部署整個專案的情況下部署一或多個套件。  
+
+> [!NOTE]
+> 本文描述如何在一般情況下部署 SSIS 套件，以及如何在內部部署部署套件。 您也可以將 SSIS 套件部署到下列平台：
+> - **Microsoft Azure 雲端**。 如需詳細資訊，請參閱[將 SQL Server Integration Services 工作負載隨即轉移至雲端](../lift-shift/ssis-azure-lift-shift-ssis-packages-overview.md)。
+> - **Linux**。 如需詳細資訊，請參閱[使用 SSIS 在 Linux 上擷取、轉換和載入資料](../../linux/sql-server-linux-migrate-ssis.md)。
+
 ## <a name="compare-project-deployment-model-and-legacy-package-deployment-model"></a>專案部署模型與舊版封裝部署模型的比較  
  您為專案選擇的部署模型類型，會決定可用於該專案的開發及管理選項。 下表顯示使用專案部署模型與使用封裝部署模型之間的差異和相似性。  
   
@@ -272,7 +278,7 @@ static void Main()
   
 2.  如果專案和所有封裝通過相容性測試，則按一下 **[確定]** 以轉換封裝。  
   
-> **注意：**若要將專案轉換為專案部署模型，請使用 [Integration Services 專案轉換精靈]。 如需相關資訊，請參閱 [Integration Services Project Conversion Wizard](deploy-integration-services-ssis-projects-and-packages.md)。  
+> **注意：** 若要將專案轉換為專案部署模型，請使用 [Integration Services 專案轉換精靈]。 如需相關資訊，請參閱 [Integration Services Project Conversion Wizard](deploy-integration-services-ssis-projects-and-packages.md)。  
 
 ## <a name="integration-services-deployment-wizard"></a>Integration Services 部署精靈
   [Integration Services 部署精靈] 支援兩種部署模型：

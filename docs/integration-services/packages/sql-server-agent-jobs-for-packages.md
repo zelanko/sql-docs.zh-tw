@@ -1,7 +1,7 @@
 ---
 title: 套件的 SQL Server Agent 作業 | Microsoft Docs
 ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 06/04/2018
 ms.prod: sql
 ms.prod_service: integration-services
 ms.component: packages
@@ -21,15 +21,21 @@ caps.latest.revision: 54
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 9cb26adf331696cb98901c6c9db387dc4d47f052
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d262b623566f84b1ce5f8595560d4db6b646de97
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34772494"
 ---
 # <a name="sql-server-agent-jobs-for-packages"></a>封裝的 SQL Server Agent 作業
   您可以使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent，自動化並排程 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 封裝的執行。 您可以排程部署到 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 伺服器，並且儲存到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 封裝存放區及檔案系統的封裝。  
-  
+ 
+> [!NOTE]
+> 本文描述如何在一般情況下排程 SSIS 套件，以及如何在內部部署排程套件。 您也可以在下列平台上執行及排程 SSIS 套件：
+> - **Microsoft Azure 雲端**。 如需詳細資訊，請參閱[將 SQL Server Integration Services 工作負載隨即轉移至雲端](../lift-shift/ssis-azure-lift-shift-ssis-packages-overview.md)和[在 Azure 中排程 SSIS 套件執行](../lift-shift/ssis-azure-schedule-packages.md)。
+> - **Linux**。 如需詳細資訊，請參閱[使用 SSIS 在 Linux 上擷取、轉換和載入資料](../../linux/sql-server-linux-migrate-ssis.md)和[使用 Cron 在 Linux 上排程 SQL Server Integration Services 套件執行](../../linux/sql-server-linux-schedule-ssis-packages.md)。
+
 ## <a name="sections-in-this-topic"></a>本主題的章節  
  本主題包含下列幾節：  
   
@@ -138,7 +144,7 @@ ms.lasthandoff: 05/03/2018
   
      **下表描述根據您選取的封裝來源，可供作業步驟使用的組態選項。**  
   
-    > **重要：**如果套件受到密碼保護，當您按一下 [新增作業步驟] 對話方塊的 [一般] 頁面上的任何索引標籤時 ([套件] 索引標籤除外)，會需要在顯示的 [套件密碼] 對話方塊中輸入密碼。 否則，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 作業將無法執行封裝。  
+    > **重要：** 如果套件受到密碼保護，當您按一下 [新增作業步驟] 對話方塊的 [一般] 頁面上的任何索引標籤時 ([套件] 索引標籤除外)，會需要在顯示的 [套件密碼] 對話方塊中輸入密碼。 否則，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 作業將無法執行封裝。  
   
      **封裝來源**：SSIS 目錄  
   
@@ -178,7 +184,7 @@ ms.lasthandoff: 05/03/2018
   
 9. 按一下 [確定]，儲存設定並關閉 [新增作業步驟] 對話方塊。  
   
-    > **注意：**對於儲存在 [SSIS 目錄] 中的套件，如果有未解析的參數或連接管理員屬性設定，則會停用 [確定] 按鈕。 當您使用包含在伺服器環境變數中的值設定參數或屬性，而且符合下列其中一項條件時，未解析的設定就會發生。  
+    > **注意：** 對於儲存在 [SSIS 目錄] 中的套件，如果有未解析的參數或連接管理員屬性設定，則會停用 [確定] 按鈕。 當您使用包含在伺服器環境變數中的值設定參數或屬性，而且符合下列其中一項條件時，未解析的設定就會發生。  
     >   
     >  未選取 [組態] 索引標籤的 [環境] 核取方塊。  
     >   
