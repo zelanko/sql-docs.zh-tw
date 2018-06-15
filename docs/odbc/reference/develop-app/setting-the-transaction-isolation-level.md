@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32912493"
 ---
 # <a name="setting-the-transaction-isolation-level"></a>設定交易隔離層級
 若要設定交易隔離等級，應用程式會使用 SQL_ATTR_TXN_ISOLATION 連接屬性。 如果資料來源不支援要求的隔離等級，驅動程式或資料來源就可以設定較高的層級。 若要判斷何種交易隔離層級的資料來源支援並預設隔離等級時，應用程式呼叫**SQLGetInfo**與 SQL_TXN_ISOLATION_OPTION 和 SQL_DEFAULT_TXN_ISOLATION 選項，分別。  

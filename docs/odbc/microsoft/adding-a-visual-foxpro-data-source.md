@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32899045"
 ---
 # <a name="adding-a-visual-foxpro-data-source"></a>加入 Visual FoxPro 資料來源
 若要存取 Visual FoxPro 資料從您的應用程式，您必須使用資料來源。 您可以建立資料來源，如下所示：  

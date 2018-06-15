@@ -14,6 +14,7 @@ ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/10/2018
+ms.locfileid: "34045322"
 ---
 # <a name="roles"></a>角色
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -59,7 +60,7 @@ ms.lasthandoff: 05/10/2018
   
  只有具有「讀取」及「讀取和處理」權限的角色，才可以定義資料列篩選。 根據預設，如果特定資料表未定義資料列篩選，除非從其他資料表套用交叉篩選，否則具有「讀取」或「讀取和處理」權限的角色成員將可以查詢資料表中的所有資料列。  
   
- 定義特定資料表的資料列篩選之後，必須評估為 TRUE/FALSE 值的 DAX 公式即會定義該特定角色成員可以查詢的資料列。 無法查詢 DAX 公式中未包含的資料列。 例如，對於 Sales 角色成員來說 (具有下列資料列篩選運算式 *=Customers [Country] = “USA”*的 Customers 資料表)，Sales 角色成員只能看到美國的客戶。  
+ 定義特定資料表的資料列篩選之後，必須評估為 TRUE/FALSE 值的 DAX 公式即會定義該特定角色成員可以查詢的資料列。 無法查詢 DAX 公式中未包含的資料列。 例如，對於 Sales 角色成員來說 (具有下列資料列篩選運算式 *=Customers [Country] = “USA”* 的 Customers 資料表)，Sales 角色成員只能看到美國的客戶。  
   
  資料列篩選會套用至指定的資料列及相關的資料列。 當資料表具有多個關聯性時，篩選會對作用中關聯性套用安全性。 資料列篩選會與針對相關資料表定義的其他資料列篩選進行交叉篩選，例如：  
   

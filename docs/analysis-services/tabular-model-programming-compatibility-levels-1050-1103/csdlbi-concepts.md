@@ -14,6 +14,7 @@ ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/10/2018
+ms.locfileid: "34045232"
 ---
 # <a name="csdlbi-concepts"></a>CSDLBI 概念
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -126,23 +127,23 @@ ms.lasthandoff: 05/10/2018
   
  另外，Cube 的表示法非常類似表格式模型資料庫的表示法。 Cube 名稱和 Cube 會對應表格式資料庫名稱和資料庫識別碼。  
   
- **維度：**維度會以 CSDLBI 表示為實體 （資料表） 的資料行和屬性。 請注意，即使未包含在檢視方塊中，包含在模型中的維度仍將表示在 CSDL 輸出中，標示為**隱藏**。  
+ **維度：** 維度會以 CSDLBI 表示為實體 （資料表） 的資料行和屬性。 請注意，即使未包含在檢視方塊中，包含在模型中的維度仍將表示在 CSDL 輸出中，標示為**隱藏**。  
   
- **檢視方塊：**用戶端可以要求個別檢視方塊的 CSDL。 如需詳細資訊，請參閱[DISCOVER_CSDL_METADATA 資料列集](../../analysis-services/schema-rowsets/xml/discover-csdl-metadata-rowset.md)。  
+ **檢視方塊：** 用戶端可以要求個別檢視方塊的 CSDL。 如需詳細資訊，請參閱[DISCOVER_CSDL_METADATA 資料列集](../../analysis-services/schema-rowsets/xml/discover-csdl-metadata-rowset.md)。  
   
- **階層：**支援階層，並且以 CSDLBI 表示為一組層級。  
+ **階層：** 支援階層，並且以 CSDLBI 表示為一組層級。  
   
- **成員：**的支援已新增的預設成員，預設值會自動加入 CSDLBI 輸出。  
+ **成員：** 的支援已新增的預設成員，預設值會自動加入 CSDLBI 輸出。  
   
- **導出成員：**多維度模型支援導出的成員的子系**所有**含單一真實成員。  
+ **導出成員：** 多維度模型支援導出的成員的子系**所有**含單一真實成員。  
   
  **維度屬性：** CSDLBI 輸出中，維度屬性都支援，而且會自動標記為非彙總。  
   
  **Kpi:** CSDLBI 1.1 版中支援 Kpi，但表示法已變更。 KPI 之前是量值的屬性。 在 1.1 版中，KPI 元素可以加入至量值  
   
- **新屬性：**已加入以支援 DirectQuery 模型的其他屬性。  
+ **新屬性：** 已加入以支援 DirectQuery 模型的其他屬性。  
   
- **限制：**不支援資料格安全性。  
+ **限制：** 不支援資料格安全性。  
   
 ## <a name="see-also"></a>另請參閱  
  [Business Intelligence & #40; 的 CSDL 註解CSDLBI & #41;](../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/csdl-annotations-for-business-intelligence-csdlbi.md)  

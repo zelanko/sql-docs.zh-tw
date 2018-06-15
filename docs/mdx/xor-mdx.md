@@ -1,6 +1,6 @@
 ---
 title: XOR (MDX) |Microsoft 文件
-ms.date: 05/30/2018
+ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: mdx
@@ -9,15 +9,15 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: eb0a91faaec7e5c2b6a7b2289e65989ba19b33e3
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.openlocfilehash: f9115fc1e226e05c788206706d59a5435bfd1c5d
+ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/02/2018
-ms.locfileid: "34581870"
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34743847"
 ---
 # <a name="xor-mdx"></a>XOR (MDX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
 
   在兩個數值運算式上執行邏輯排除。  
   

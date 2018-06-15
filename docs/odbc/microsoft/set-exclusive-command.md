@@ -21,6 +21,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32900373"
 ---
 # <a name="set-exclusive-command"></a>SET 獨佔命令
 指定是否開啟檔案資料表，以取得獨佔或共用網路上使用。  

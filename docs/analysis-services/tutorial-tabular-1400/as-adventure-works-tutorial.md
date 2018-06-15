@@ -14,6 +14,7 @@ ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/10/2018
+ms.locfileid: "34044572"
 ---
 # <a name="tabular-modeling-1400-compatibility-level"></a>表格式模型化 （1400年相容性層級）
 
@@ -47,7 +48,7 @@ ms.lasthandoff: 05/10/2018
 
 -   [Azure SQL 資料倉儲](https://docs.microsoft.com/azure/sql-data-warehouse/create-data-warehouse-portal)與**AdventureWorksDW 範例資料庫**，或具有內部部署 SQL Server 資料倉儲[AdventureWorksDW 範例資料庫](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks)。 安裝時 AdventureWorksDW 資料庫到在內部部署 SQL Server 資料倉儲，使用對應的範例資料庫版本與伺服器版本。 
 
-    **重要事項：**如果您在內部部署 SQL Server 資料倉儲，安裝範例資料庫，並將您的模型部署到 Azure Analysis Services 伺服器，[在內部部署資料閘道](https://docs.microsoft.com/azure/analysis-services/analysis-services-gateway)需要。
+    **重要事項：** 如果您在內部部署 SQL Server 資料倉儲，安裝範例資料庫，並將您的模型部署到 Azure Analysis Services 伺服器，[在內部部署資料閘道](https://docs.microsoft.com/azure/analysis-services/analysis-services-gateway)需要。
 
 -   最新版[SQL Server Data Tools (SSDT)](https://msdn.microsoft.com/library/mt204009.aspx)。 或者，如果您已經有 Visual Studio 2017，您可以下載並安裝[Microsoft Analysis Services 專案](https://marketplace.visualstudio.com/items?itemName=ProBITools.MicrosoftAnalysisServicesModelingProjects)(功能 VSIX) 封裝。 此教學課程中，參考 SSDT 和 Visual Studio 的意義相同。 
 

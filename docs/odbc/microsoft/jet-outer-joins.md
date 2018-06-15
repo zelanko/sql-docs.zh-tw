@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32898903"
 ---
 # <a name="jet-outer-joins"></a>Jet： 外部聯結
 SELECT 陳述式可以包含外部聯結子句的清單。 支援巢狀外部聯結。 如需有關外部聯結的詳細資訊，請參閱*Microsoft Jet 資料庫引擎程式設計人員指南*。

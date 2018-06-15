@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32902003"
 ---
 # <a name="bookmark-support-visual-foxpro-odbc-driver"></a>書籤支援 （Visual FoxPro ODBC 驅動程式）
 Visual FoxPro ODBC 驅動程式支援簡單的書籤。 當您呼叫[SQLGetInfo](../../odbc/microsoft/sqlgetinfo-visual-foxpro-odbc-driver.md)與 SQL_BOOKMARK_PERSISTENCE*資訊類型*，則傳回值是 SQL_BP_SCROLL。  
