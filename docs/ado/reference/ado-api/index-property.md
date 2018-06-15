@@ -2,7 +2,6 @@
 title: Index 屬性 |Microsoft 文件
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,11 +19,12 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 01e7883719900e85fdb7227f50c90ed265f73c30
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: fe083fa971ad3ce6566d51326ce35163f446838a
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35279172"
 ---
 # <a name="index-property"></a>Index 屬性
 表示索引的目前作用中的名稱[資料錄集](../../../ado/reference/ado-api/recordset-object-ado.md)物件。  

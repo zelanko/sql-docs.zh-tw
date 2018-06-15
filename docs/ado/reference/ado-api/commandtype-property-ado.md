@@ -2,7 +2,6 @@
 title: CommandType 屬性 (ADO) |Microsoft 文件
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,11 +19,12 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 2008231e7daba12fbbabf81ce5e0e6b79b41cd80
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 015ad28b7cffbb97c14c8ac9b5b287a36f14b2f9
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35276887"
 ---
 # <a name="commandtype-property-ado"></a>CommandType 屬性 (ADO)
 表示的類型[命令](../../../ado/reference/ado-api/command-object-ado.md)物件。  

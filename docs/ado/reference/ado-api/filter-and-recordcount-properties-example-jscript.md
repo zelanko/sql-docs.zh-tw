@@ -2,7 +2,6 @@
 title: 篩選器和 RecordCount 屬性範例 (JScript) |Microsoft 文件
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,11 +19,12 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: cf3f3b971a2dca5a9b51467f42ae028c70ec0793
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 656c981dd242ad7f11768aac0bb79c7214845c06
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35278607"
 ---
 # <a name="filter-and-recordcount-properties-example-jscript"></a>篩選器和 RecordCount 屬性範例 (JScript)
 這個範例會開啟**資料錄集**Northwind 資料庫然後再使用的公司資料表[篩選](../../../ado/reference/ado-api/filter-property.md)以限制顯示的記錄為供應商 欄位則是以字母開頭的屬性D.剪下並貼到 [記事本] 或其他文字編輯器，下列程式碼，然後將它儲存成**FilterJS.asp**。  
@@ -152,7 +152,7 @@ BODY {
 <!-- EndFilterJS -->  
 ```  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [篩選屬性](../../../ado/reference/ado-api/filter-property.md)   
  [RecordCount 屬性 (ADO)](../../../ado/reference/ado-api/recordcount-property-ado.md)   
  [Recordset 物件 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

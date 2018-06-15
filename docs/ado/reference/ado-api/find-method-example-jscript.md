@@ -2,7 +2,6 @@
 title: 尋找方法範例 (JScript) |Microsoft 文件
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,11 +18,12 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 4671755b8ebbe5cf69a0341604f931902dea2d0e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 067f8c214d3ebf1f90871108444b666e0da77bfb
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35278637"
 ---
 # <a name="find-method-example-jscript"></a>尋找方法範例 (JScript)
 這個範例會使用[資料錄集](../../../ado/reference/ado-api/recordset-object-ado.md)物件的[尋找](../../../ado/reference/ado-api/find-method-ado.md)方法來找出並顯示在公司***Northwind***資料庫名稱開頭為字母 G.剪下並貼上下列程式碼，以 [記事本] 或其他文字編輯器，並將它儲存成**FindJS.asp**。  

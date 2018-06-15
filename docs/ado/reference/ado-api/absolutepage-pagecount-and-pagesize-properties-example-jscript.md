@@ -2,7 +2,6 @@
 title: AbsolutePage、 PageCount 和 PageSize 屬性範例 (JScript) |Microsoft 文件
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -21,11 +20,12 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d665b39f1f80756270c1f1843476b153a6309949
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 5f165a920b1703d75792da45100eaf848bdb7e08
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35274779"
 ---
 # <a name="absolutepage-pagecount-and-pagesize-properties-example-jscript"></a>AbsolutePage、 PageCount 和 PageSize 屬性範例 (JScript)
 此範例示範 AbsolutePage、 PageCount 和 PageSize 屬性。 剪下並貼到 [記事本] 或其他文字編輯器，下列程式碼，然後將它儲存成**AbsolutePageJS.asp**。  

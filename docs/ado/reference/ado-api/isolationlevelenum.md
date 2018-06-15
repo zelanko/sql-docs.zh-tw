@@ -2,7 +2,6 @@
 title: IsolationLevelEnum |Microsoft 文件
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,16 +19,17 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a22b958066b681f70187dc5e49fcd36752f510b7
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 8fbf9db6b578bc886862069ddc31bc07f18d673b
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35279157"
 ---
 # <a name="isolationlevelenum"></a>IsolationLevelEnum
 指定的交易隔離層級[連接](../../../ado/reference/ado-api/connection-object-ado.md)物件。  
   
-|常數|Value|Description|  
+|常數|ReplTest1|描述|  
 |--------------|-----------|-----------------|  
 |**adXactUnspecified**|-1|表示提供者會使用不同的隔離等級比指定，但無法判斷層級。|  
 |**adXactChaos**|16|表示暫止的變更，更高隔離性的交易不會覆寫。|  

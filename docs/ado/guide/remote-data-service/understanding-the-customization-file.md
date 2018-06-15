@@ -2,7 +2,6 @@
 title: 了解的自訂檔案 |Microsoft 文件
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -17,11 +16,12 @@ caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 99a565fe6ee25f1fb8d0911b80c0b629c02b3cdf
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: a80667371709c4035a4a45fa4e322d59f03f5bc7
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35274577"
 ---
 # <a name="understanding-the-customization-file"></a>了解自訂檔
 方括號所組成的自訂檔案中的每個區段標頭 (**[]**) 包含型別和參數。 四個區段類型以常值字串**連接**， **sql**， **userlist**，或**記錄**。 常值字串、 預設值，指定使用者的識別項，或不提供參數。  
@@ -45,7 +45,7 @@ identifier
   
  區段標頭有下列的部分。  
   
-|部分|Description|  
+|部分|描述|  
 |----------|-----------------|  
 |**connect**|修改連接字串常值字串。|  
 |**sql**|修改命令字串常值字串。|  

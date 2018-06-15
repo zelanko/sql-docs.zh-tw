@@ -2,7 +2,6 @@
 title: 執行，請重新查詢，並清除方法範例 （VC + +） |Microsoft 文件
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -21,11 +20,12 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a87b1e55fb17ca9d1bb6cc7435cc8d27e5babf19
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: ef62e7ad551b0e94642348c09b743eeb0bec8925
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35278087"
 ---
 # <a name="execute-requery-and-clear-methods-example-vc"></a>執行，請重新查詢，並清除方法範例 （VC + +）
 這個範例會示範**Execute**方法執行時同時從[命令](../../../ado/reference/ado-api/command-object-ado.md)物件和[連接](../../../ado/reference/ado-api/connection-object-ado.md)物件。 它也會使用[Requery](../../../ado/reference/ado-api/requery-method.md)方法來擷取目前資料中的[資料錄集](../../../ado/reference/ado-api/recordset-object-ado.md)，而[清除](../../../ado/reference/ado-api/clear-method-ado.md)方法，以清除的內容[錯誤](../../../ado/reference/ado-api/errors-collection-ado.md)集合。 若要執行這個範例需要的 ExecuteCommand 和 PrintOutput 函式。  

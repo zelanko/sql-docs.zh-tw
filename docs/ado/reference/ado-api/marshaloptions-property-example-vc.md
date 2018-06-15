@@ -2,7 +2,6 @@
 title: MarshalOptions 屬性範例 （VC + +） |Microsoft 文件
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,11 +18,12 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: c74cce11aa7aef2e5907ea41a0b2bb6952b5593c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: efb7b9e10c1cf89d95c066986ae29f7edd9e7f97
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35279297"
 ---
 # <a name="marshaloptions-property-example-vc"></a>MarshalOptions 屬性範例 （VC + +）
 這個範例會使用[MarshalOptions](../../../ado/reference/ado-api/marshaloptions-property-ado.md)屬性來指定哪些資料列會傳送至伺服器，所有資料列或只修改資料列。  

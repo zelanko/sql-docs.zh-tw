@@ -2,7 +2,6 @@
 title: ADO 物件與介面 |Microsoft 文件
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -18,11 +17,12 @@ caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 047e1a7a0cafee0b562edc5b3ec47f9f4dd3989d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 4251e50ad3f31ccf79b66e4ae4d302723fd6e840
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35275607"
 ---
 # <a name="ado-objects-and-interfaces"></a>ADO 物件與介面
 以表示這些物件之間的關聯性[ADO 物件模型](../../../ado/reference/ado-api/ado-object-model.md)。  
@@ -36,7 +36,7 @@ ms.lasthandoff: 05/03/2018
 |[ADORecordsetConstruction](../../../ado/reference/ado-api/adorecordsetconstruction-interface.md)|建構 ADO**資料錄集**從 OLE DB 物件**資料列集**C/c + + 應用程式中的物件。|  
 |[ADOStreamConstruction 介面](../../../ado/reference/ado-api/adostreamconstruction-interface.md)|建構 ADO**資料流**從 OLE DB 物件**IStream** C/c + + 應用程式中的物件。|  
 |[Command](../../../ado/reference/ado-api/command-object-ado.md)|定義您想要執行對資料來源的特定命令。<br /><br /> **命令**物件不是安全的。|  
-|[連接](../../../ado/reference/ado-api/connection-object-ado.md)|代表資料來源的開啟連接。<br /><br /> **連接**物件而言是安全的指令碼。|  
+|[[連接]](../../../ado/reference/ado-api/connection-object-ado.md)|代表資料來源的開啟連接。<br /><br /> **連接**物件而言是安全的指令碼。|  
 |[IDSOShapeExtensions 介面](../../../ado/reference/ado-api/idsoshapeextensions-interface.md)|SHAPE 提供者取得基礎 OLEDB 資料來源物件。|  
 |[錯誤](../../../ado/reference/ado-api/error-object.md)|包含關於涉及提供者的單一作業相關的資料存取錯誤的詳細資料。<br /><br /> **錯誤**物件不是安全的。|  
 |[欄位](../../../ado/reference/ado-api/field-object.md)|代表具有通用的資料類型的資料行。|  

@@ -2,7 +2,6 @@
 title: 連接 (ADO-WFC 語法) |Microsoft 文件
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -18,11 +17,12 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 97512b15ac6aeefd8a757776e9ede01ed02d11bd
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: fb4fb9792fc59c6206328b23f97b9b2f3257228b
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35276847"
 ---
 # <a name="connection-ado---wfc-syntax"></a>連接 (ADO-WFC 語法)
 ## <a name="package-commswfcdata"></a>封裝 com.ms.wfc.data  

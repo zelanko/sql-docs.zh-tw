@@ -2,7 +2,6 @@
 title: 篩選器和 RecordCount 屬性範例 (VB) |Microsoft 文件
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,11 +19,12 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 21e800cb39d13abe904e02ff2ca23a1eb8936ee1
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 9d467ae897108f248991bc8eb8ac21461c22065c
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35278666"
 ---
 # <a name="filter-and-recordcount-properties-example-vb"></a>篩選器和 RecordCount 屬性範例 (VB)
 此範例中開啟[資料錄集](../../../ado/reference/ado-api/recordset-object-ado.md)中的 「 發行者 」 資料表上***Pubs***資料庫。 然後它會使用[篩選](../../../ado/reference/ado-api/filter-property.md)屬性來限制要在特定國家/地區中的這些 「 發行者 」 的可見記錄的數目。 **RecordCount**屬性用來顯示篩選和已篩選資料錄集之間的差異。  

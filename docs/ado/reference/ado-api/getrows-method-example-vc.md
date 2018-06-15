@@ -2,7 +2,6 @@
 title: GetRows 方法範例 （VC + +） |Microsoft 文件
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,11 +18,12 @@ caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 1a22412b6ffdcbc2884292f482996973dd99158a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d3f4af181439ea74b0f55f49e97f19e955eec517
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35278867"
 ---
 # <a name="getrows-method-example-vc"></a>GetRows 方法範例 （VC + +）
 這個範例會使用[GetRows](../../../ado/reference/ado-api/getrows-method-ado.md)方法來擷取指定的數目的資料列從[資料錄集](../../../ado/reference/ado-api/recordset-object-ado.md)，並使用產生的資料填入陣列。 **GetRows**方法會傳回所需的資料列數少於兩個案例中： 如果任一個[EOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md)已達到，或如果**GetRows**嘗試擷取記錄其他使用者刪除。 此函數會傳回**False**第二種情況發生時，才。 若要執行此程序需要 GetRowsOK 函式。  
@@ -232,7 +232,7 @@ void PrintComError(_com_error &e) {
 }  
 ```  
   
- Input  
+ 輸入  
   
 ```  
 2  

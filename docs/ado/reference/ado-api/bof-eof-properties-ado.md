@@ -2,7 +2,6 @@
 title: BOF，EOF 屬性 (ADO) |Microsoft 文件
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -22,11 +21,12 @@ caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 369d6a3b4d069ed67ccc4c4d217aa257c20c79b1
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 36399bf938371a464426b3092dcc95b0ceaa9e09
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35276147"
 ---
 # <a name="bof-eof-properties-ado"></a>BOF，EOF 屬性 (ADO)
 -   **BOF**表示目前的記錄位置是在第一筆記錄之前[資料錄集](../../../ado/reference/ado-api/recordset-object-ado.md)物件。  
@@ -55,7 +55,7 @@ ms.lasthandoff: 05/03/2018
 |------|-----------------------------|---------------------------------|------------|-----------------------------|  
 |**BOF**=**True**， **EOF**=**False**|Allowed|錯誤|錯誤|Allowed|  
 |**BOF**=**False**， **EOF**=**，則為 True**|Allowed|Allowed|錯誤|錯誤|  
-|同時**，則為 True**|錯誤|錯誤|錯誤|錯誤|  
+|同時 **，則為 True**|錯誤|錯誤|錯誤|錯誤|  
 |同時**False**|Allowed|Allowed|Allowed|Allowed|  
   
  允許**移動**方法不保證方法將會成功找到某筆記錄; 它僅表示呼叫指定**移動**方法不會產生錯誤。  
@@ -64,10 +64,10 @@ ms.lasthandoff: 05/03/2018
   
 ||BOF|EOF|  
 |------|---------|---------|  
-|**MoveFirst**， **MoveLast**|設定為**，則為 True**|設定為**，則為 True**|  
+|**MoveFirst**， **MoveLast**|設定為 **，則為 True**|設定為 **，則為 True**|  
 |**移動**0|沒有變更|沒有變更|  
-|**MovePrevious**，**移動**< 0|設定為**，則為 True**|沒有變更|  
-|**MoveNext**，**移動**> 0|沒有變更|設定為**，則為 True**|  
+|**MovePrevious**，**移動**< 0|設定為 **，則為 True**|沒有變更|  
+|**MoveNext**，**移動**> 0|沒有變更|設定為 **，則為 True**|  
   
 ## <a name="applies-to"></a>適用於  
  [Recordset 物件 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  

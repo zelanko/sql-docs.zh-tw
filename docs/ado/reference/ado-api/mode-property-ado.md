@@ -2,7 +2,6 @@
 title: 模式屬性 (ADO) |Microsoft 文件
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -22,11 +21,12 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e1aa3910a07fd1e24aeab7429234c1d7211eb6f2
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 5122d4587674e643090b4291fb3487322d9f71c0
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35279347"
 ---
 # <a name="mode-property-ado"></a>模式屬性 (ADO)
 表示可用的權限中修改資料[連接](../../../ado/reference/ado-api/connection-object-ado.md)，[記錄](../../../ado/reference/ado-api/record-object-ado.md)，或[資料流](../../../ado/reference/ado-api/stream-object-ado.md)物件。  

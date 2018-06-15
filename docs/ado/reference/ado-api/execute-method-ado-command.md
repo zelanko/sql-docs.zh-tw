@@ -2,7 +2,6 @@
 title: Execute 方法 （ADO 命令中） |Microsoft 文件
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -21,11 +20,12 @@ caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 8936219aa3d8e75a43efcc51936ac23916c51d96
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 09ce33d4fa2f6ac63fc19ce711fe88fcf717d049
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35278117"
 ---
 # <a name="execute-method-ado-command"></a>Execute 方法 （ADO 命令中）
 執行查詢、 SQL 陳述式或預存程序中指定[CommandText](../../../ado/reference/ado-api/commandtext-property-ado.md)或[CommandStream](../../../ado/reference/ado-api/commandstream-property-ado.md)屬性[命令物件](../../../ado/reference/ado-api/command-object-ado.md)。  
@@ -47,7 +47,7 @@ Set recordset = command.Execute( RecordsAffected, Parameters, Options )
  *參數*  
  選擇性。 A **Variant**搭配輸入的字串或資料流中指定的參數值的陣列**CommandText**或**CommandStream**。 （輸出參數不會傳回正確的值，這個引數傳遞時）。  
   
- *選項。*  
+ *選項*  
  選擇性。 A**長**值，指出提供者應該如何評估[CommandText](../../../ado/reference/ado-api/commandtext-property-ado.md)或[CommandStream](../../../ado/reference/ado-api/commandstream-property-ado.md)屬性[命令](../../../ado/reference/ado-api/command-object-ado.md)物件。 可以是所使用的位元遮罩值[CommandTypeEnum](../../../ado/reference/ado-api/commandtypeenum.md)及/或[的執行方式](../../../ado/reference/ado-api/executeoptionenum.md)值。 例如，您可以使用**adCmdText**和**adExecuteNoRecords**組合，如果您想要評估的值的 ADO **CommandText**屬性做為文字，並表示命令應該捨棄，並不會傳回執行命令文字時，可能會產生任何記錄。  
   
 > [!NOTE]
