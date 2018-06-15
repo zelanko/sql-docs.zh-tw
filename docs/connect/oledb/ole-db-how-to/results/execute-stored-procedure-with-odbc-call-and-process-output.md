@@ -2,10 +2,10 @@
 title: 執行預存程序使用 ODBC 呼叫並處理輸出 |Microsoft 文件
 description: 處理傳回碼和輸出參數使用 SQL Server 的 OLE DB 驅動程式
 ms.custom: ''
-ms.date: 03/26/2018
+ms.date: 06/14/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: ole-db-how-to
+ms.component: oledb|ole-db-how-to
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: connectivity
@@ -17,14 +17,17 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 5c7b5119e2f8dd00076e0e746ccf3352371c503f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 89e08882d06111e02057a95586c4f38c27b8db76
+ms.sourcegitcommit: e1bc8c486680e6d6929c0f5885d97d013a537149
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/15/2018
+ms.locfileid: "35665558"
 ---
 # <a name="execute-stored-procedure-with-odbc-call-and-process-output"></a>執行預存程序使用 ODBC 呼叫並處理輸出
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+
+[!INCLUDE[Driver_OLEDB_Download](../../../../includes/driver_oledb_download.md)]
 
   [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] 預存程序可以有整數傳回碼和輸出參數。 傳回碼和輸出參數會在來自伺服器的最後一個封包中傳送，因此要等到完全釋放資料列集之後才可供應用程式使用。 如果命令傳回多個結果，輸出參數資料可用時**imultipleresults:: Getresult**傳回 DB_S_NORESULT 或是**IMultipleResults**介面完全釋放時何者先發生。  
   
@@ -359,6 +362,6 @@ GO
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [處理結果的如何主題 & #40; OLE DB & #41;](../../../oledb/ole-db-how-to/results/processing-results-how-to-topics-ole-db.md)  
+ [處理結果使用說明主題&#40;OLE DB&#41;](../../../oledb/ole-db-how-to/results/processing-results-how-to-topics-ole-db.md)  
   
   

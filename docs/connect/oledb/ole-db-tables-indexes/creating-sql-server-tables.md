@@ -5,7 +5,6 @@ ms.custom: ''
 ms.date: 03/26/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: ole-db-tables-indexes
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: connectivity
@@ -20,11 +19,12 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 5497a74c256282fd14f7c5301f7eea4cfa9aa596
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 6b26077abc7d714ffebdf36068a2f3d5fc081d7e
+ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35306777"
 ---
 # <a name="creating-sql-server-tables"></a>建立 SQL Server 資料表
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -55,7 +55,7 @@ ms.lasthandoff: 05/03/2018
   
  DBCOLUMNDESC 中的資料行屬性解譯如下。  
   
-|屬性識別碼|Description|  
+|屬性識別碼|描述|  
 |-----------------|-----------------|  
 |DBPROP_COL_AUTOINCREMENT|R/W：讀取/寫入<br /><br /> 預設值：VARIANT_FALSE 描述：在建立的資料行上設定識別屬性。 對於 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]，識別屬性適用於資料表內的單一資料行。 針對多個單一資料行產生錯誤，SQL Server OLE DB 驅動程式會嘗試在伺服器上建立資料表時將屬性設定為 VARIANT_TRUE。<br /><br /> [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Identity 屬性只適用於**整數**，**數值**，和**十進位**類型在標尺為 0。 任何其他資料類型的資料行上將屬性設定為 VARIANT_TRUE 會產生錯誤，當 SQL Server OLE DB 驅動程式會嘗試在伺服器上建立資料表。<br /><br /> 當 DBPROP_COL_AUTOINCREMENT 和 DBPROP_COL_NULLABLE 同時為 VARIANT_TRUE，SQL Server OLE DB 驅動程式會傳回 DB_S_ERRORSOCCURRED 和*dwOption* DBPROP_COL_NULLABLE 不是 dbpropoptions_required 時。 當 DBPROP_COL_AUTOINCREMENT 和 DBPROP_COL_NULLABLE 同時為 VARIANT_TRUE 會傳回 DB_E_ERRORSOCCURRED， *dwOption* DBPROP_COL_NULLABLE 等於 dbpropoptions_required 時。 資料行定義[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]identity 屬性和 DBPROP_COL_NULLABLE *dwStatus*成員設定為 DBPROPSTATUS_CONFLICTING。|  
 |DBPROP_COL_DEFAULT|R/W：讀取/寫入<br /><br /> 預設值：無<br /><br /> 描述：建立資料行的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] DEFAULT 條件約束。<br /><br /> *VValue* DBPROP 成員可以是任何類型的數字。 *VValue.vt*成員應該指定資料行的資料類型相容的類型。 例如，對於定義為 DBTYPE_WSTR 的資料行而言，將 BSTR N/A 定義為預設值是相容符合。 定義為 DBTYPE_R8 會產生錯誤，當 SQL Server OLE DB 驅動程式會嘗試在伺服器上建立資料表的資料行上定義相同的預設值。|  
@@ -67,7 +67,7 @@ ms.lasthandoff: 05/03/2018
   
  當取用者呼叫**itabledefinition:: Createtable**，SQL Server OLE DB 驅動程式會將解譯資料表屬性，如下所示。  
   
-|屬性識別碼|Description|  
+|屬性識別碼|描述|  
 |-----------------|-----------------|  
 |DBPROP_TBL_TEMPTABLE|R/W：讀取/寫入<br /><br /> 預設值： VARIANT_FALSE 描述： 根據預設，SQL Server OLE DB 驅動程式會建立由取用者命名的資料表。 當 VARIANT_TRUE、 OLE DB 驅動程式的 SQL Server 會產生取用者的暫存資料表名稱。 取用者集*Createtable*參數**CreateTable**為 NULL。 *PpTableID*參數必須包含有效的指標。|  
   

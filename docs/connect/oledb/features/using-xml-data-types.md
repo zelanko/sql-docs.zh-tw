@@ -2,7 +2,7 @@
 title: 使用 XML 資料類型 |Microsoft 文件
 description: 使用 OLE DB 驅動程式中的 XML 資料類型，適用於 SQL Server
 ms.custom: ''
-ms.date: 03/26/2018
+ms.date: 06/12/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.component: oledb|features
@@ -34,16 +34,19 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: f36165da3be9c540166486059cdc0ee150532657
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d6ec0009a986e2abd56ac00c1e01826f3ed001f7
+ms.sourcegitcommit: 354ed9c8fac7014adb0d752518a91d8c86cdce81
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/14/2018
+ms.locfileid: "35612173"
 ---
 # <a name="using-xml-data-types"></a>使用 XML 資料類型
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
 
-  [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]導入**xml**資料型別，可讓您儲存 XML 文件和片段中[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]資料庫。 **Xml**資料類型是中的內建資料型別[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]，而且在某些方面類似於其他內建類型，例如**int**和**varchar**。 您可以使用其他內建類型， **xml**資料類型當做建立資料表時的資料行類型; 當做變數類型、 參數類型或函數傳回的類型; 或者在 CAST 和 CONVERT 函數。  
+[!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
+
+  [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 導入**xml**資料型別，可讓您儲存 XML 文件和片段中[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]資料庫。 **Xml**資料類型是中的內建資料型別[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]，而且在某些方面類似於其他內建類型，例如**int**和**varchar**。 您可以使用其他內建類型， **xml**資料類型當做建立資料表時的資料行類型; 當做變數類型、 參數類型或函數傳回的類型; 或者在 CAST 和 CONVERT 函數。  
   
 ## <a name="programming-considerations"></a>程式設計考量  
  XML 可以是自我描述的，因為它可以選擇性地包含指定文件編碼的 XML 標頭，例如：  
@@ -89,13 +92,13 @@ ms.lasthandoff: 05/03/2018
 |DBTYPE_XML|通過<sup>6,7</sup>|錯誤<sup>1</sup>|確定<sup>11，6</sup>|錯誤<sup>8</sup>|  
 |DBTYPE_BYTES|通過<sup>6,7</sup>|N/A<sup>2</sup>|確定<sup>11，6</sup>|N/A <sup>2</sup>|  
 |DBTYPE_WSTR|通過<sup>6，10</sup>|N/A <sup>2</sup>|確定<sup>4、 6、 12</sup>|N/A <sup>2</sup>|  
-|DBTYPE_BSTR|通過<sup>6，10</sup>|N/A <sup>2</sup>|OK <sup>3</sup>|N/A <sup>2</sup>|  
+|DBTYPE_BSTR|通過<sup>6，10</sup>|N/A <sup>2</sup>|確定<sup>3</sup>|N/A <sup>2</sup>|  
 |DBTYPE_STR|確定<sup>6、 9、 10</sup>|N/A <sup>2</sup>|確定<sup>5、 6、 12</sup>|N/A <sup>2</sup>|  
 |DBTYPE_IUNKNOWN|位元組資料流透過**ISequentialStream**<sup>7</sup>|N/A <sup>2</sup>|位元組資料流透過**ISequentialStream**<sup>11</sup>|N/A <sup>2</sup>|  
-|DBTYPE_VARIANT (VT_UI1 &#124; VT_ARRAY)|通過<sup>6,7</sup>|N/A <sup>2</sup>|해당 사항 없음|N/A <sup>2</sup>|  
-|DBTYPE_VARIANT (VT_BSTR)|通過<sup>6，10</sup>|N/A <sup>2</sup>|OK<sup>3</sup>|N/A <sup>2</sup>|  
+|DBTYPE_VARIANT (VT_UI1 &AMP;#124; VT_ARRAY)|通過<sup>6,7</sup>|N/A <sup>2</sup>|不適用|N/A <sup>2</sup>|  
+|DBTYPE_VARIANT (VT_BSTR)|通過<sup>6，10</sup>|N/A <sup>2</sup>|確定<sup>3</sup>|N/A <sup>2</sup>|  
   
- <sup>1</sup>如果的伺服器類型與指定 DBTYPE_XML 以外**icommandwithparameters:: Setparameterinfo**和存取子類型為 DBTYPE_XML，陳述式執行時，就會發生錯誤 （DB_E_ERRORSOCCURRED，參數狀態為 DBSTATUS_E_BADACCESSOR）; 否則將資料傳送到伺服器，但是伺服器會傳回錯誤，指出從 XML 到參數的資料類型的隱含轉換。  
+ <sup>1</sup>如果的伺服器類型與指定 DBTYPE_XML 以外**icommandwithparameters:: Setparameterinfo**和存取子類型為 DBTYPE_XML，陳述式執行時，就會發生錯誤 (DB_E_ERRORSOCCURRED，參數狀態為 DBSTATUS_E_BADACCESSOR）;否則資料會傳送到伺服器，但是伺服器會傳回錯誤，指出從 XML 到參數的資料類型的隱含轉換。  
   
  <sup>2</sup>超出本文的範圍。  
   
@@ -140,7 +143,7 @@ ms.lasthandoff: 05/03/2018
 #### <a name="the-columns-and-procedureparameters-schema-rowsets"></a>COLUMNS 和 PROCEDURE_PARAMETERS 結構描述資料列集  
  COLUMNS 和 PROCEDURE_PARAMETERS 結構描述資料列的新增項目包括下列資料行：  
   
-|資料行名稱|類型|Description|  
+|資料行名稱|類型|描述|  
 |-----------------|----------|-----------------|  
 |SS_XML_SCHEMACOLLECTION_CATALOGNAME|DBTYPE_WSTR|定義 XML 結構描述集合所在目錄的名稱。 非 XML 資料行或不具類型的 XML 資料行是 NULL。|  
 |SS_XML_SCHEMACOLLECTION_SCHEMANAME|DBTYPE_WSTR|定義 XML 結構描述集合所在結構描述的名稱。 非 XML 資料行或不具類型的 XML 資料行是 NULL。|  
@@ -152,7 +155,7 @@ ms.lasthandoff: 05/03/2018
 #### <a name="the-ssxmlschema-schema-rowset"></a>SS_XMLSCHEMA 結構描述資料列集  
  用戶端推出新的結構描述資料列集 SS_XMLSCHEMA 來擷取 XML 結構描述資訊。 SS_XMLSCHEMA 資料列集包含下列資料行：  
   
-|資料行名稱|類型|Description|  
+|資料行名稱|類型|描述|  
 |-----------------|----------|-----------------|  
 |SCHEMACOLLECTION_CATALOGNAME|DBTYPE_WSTR|XML 集合所屬的目錄。|  
 |SCHEMACOLLECTION_SCHEMANAME|DBTYPE_WSTR|XML 集合所屬的結構描述。|  
@@ -172,7 +175,7 @@ ms.lasthandoff: 05/03/2018
 #### <a name="the-dbpropsetsqlserverparameter-property-set"></a>DBPROPSET_SQLSERVERPARAMETER 屬性集  
  為了支援**xml**資料類型到 OLE DB、 OLE DB 驅動程式的 SQL Server 會實作新的 DBPROPSET_SQLSERVERPARAMETER 屬性集，其中包含下列值。  
   
-|名稱|型別|Description|  
+|[屬性]|類型|描述|  
 |----------|----------|-----------------|  
 |SSPROP_PARAM_XML_SCHEMACOLLECTION_CATALOGNAME|DBTYPE_WSTR|定義 XML 結構描述集合所在目錄 (資料庫) 的名稱。 SQL 三部分名稱識別碼的一部分。|  
 |SSPROP_PARAM_XML_SCHEMACOLLECTION_SCHEMANAME|DBTYPE_WSTR|結構描述集合內，XML 結構描述的名稱。 SQL 三部分名稱識別碼的一部分。|  
@@ -181,7 +184,7 @@ ms.lasthandoff: 05/03/2018
 #### <a name="the-dbpropsetsqlservercolumn-property-set"></a>DBPROPSET_SQLSERVERCOLUMN 屬性集  
  若要支援中的資料表建立**ITableDefinition**介面、 OLE DB 驅動程式的 SQL Server 會將三個新的資料行加入到 DBPROPSET_SQLSERVERCOLUMN 屬性集。  
   
-|名稱|型別|Description|  
+|[屬性]|類型|描述|  
 |----------|----------|-----------------|  
 |SSPROP_COL_XML_SCHEMACOLLECTION_CATALOGNAME|VT_BSTR|如果是具類型的 XML 資料行，這個屬性是指定儲存 XML 結構描述所在之目錄名稱的字串。 如果是其他資料行類型，這個屬性會傳回空字串。|  
 |SSPROP_COL_XML_SCHEMACOLLECTION_SCHEMANAME|VT_BSTR|如果是具類型的 XML 資料行，這個屬性是指定定義此資料行之 XML 結構描述名稱的字串。|  
@@ -201,7 +204,7 @@ ms.lasthandoff: 05/03/2018
 #### <a name="the-icolumnsrowset-interface"></a>IColumnsRowset 介面  
  OLE DB 驅動程式的 SQL Server 會加入下列[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-專屬的資料行所傳回的資料列集**icolumnrowset:: Getcolumnsrowset**方法。 這些資料行包含 XML 結構描述集合的三部分名稱。 對於非 XML 資料行或不具類型的 XML 資料行，所有三個資料行都會使用 NULL 的預設值。  
   
-|資料行名稱|類型|Description|  
+|資料行名稱|類型|描述|  
 |-----------------|----------|-----------------|  
 |DBCOLUMN_SS_XML_SCHEMACOLLECTION_CATALOGNAME|DBTYPE_WSTR|XML 結構描述集合所屬的目錄，<br /><br /> 否則為 NULL。|  
 |DBCOLUMN_SS_XML_SCHEMACOLLECTION_SCHEMANAME|DBTYPE_WSTR|XML 結構描述集合所屬的結構描述， 否則為 NULL。|  
@@ -232,6 +235,6 @@ ms.lasthandoff: 05/03/2018
   
 ## <a name="see-also"></a>另請參閱  
  [SQL Server 功能的 OLE DB 驅動程式](../../oledb/features/oledb-driver-for-sql-server-features.md)    
- [ISSCommandWithParameters & #40; OLE DB & #41;](../../oledb/ole-db-interfaces/isscommandwithparameters-ole-db.md)  
+ [ISSCommandWithParameters &#40;OLE DB&#41;](../../oledb/ole-db-interfaces/isscommandwithparameters-ole-db.md)  
   
   

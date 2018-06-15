@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: python
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: connectivity
@@ -15,16 +14,17 @@ caps.latest.revision: 3
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 5a27f3beb1772e994bfa0d25f9db7711163ae527
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 190e77afb7d56a092a476db29c086f1a6987efe5
+ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35309537"
 ---
 # <a name="python-sql-driver---pymssql"></a>Python SQL 驅動程式-pymssql
 [!INCLUDE[Driver_Python_Download](../../../includes/driver_python_download.md)]
 
-## <a name="getting-started"></a>快速入門
+## <a name="getting-started"></a>使用者入門
 
 * [步驟 1︰設定 pymssql Python 開發的開發環境](../../../connect/python/pymssql/step-1-configure-development-environment-for-pymssql-python-development.md)  
 * [步驟 2︰建立 pymssql Python 開發的 SQL 資料庫](../../../connect/python/pymssql/step-2-create-a-sql-database-for-pymssql-python-development.md)  

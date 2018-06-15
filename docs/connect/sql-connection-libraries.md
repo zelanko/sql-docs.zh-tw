@@ -2,7 +2,6 @@
 title: Microsoft SQL 資料庫的連線庫 |Microsoft 文件
 description: 提供的模組可讓連接到 Microsoft SQL Server 和 Azure SQL Database 中，從各種不同的程式設計語言的用戶端下載的連結。
 author: MightyPen
-ms.component: connect
 ms.suite: sql
 ms.prod: sql
 ms.prod_service: connectivity
@@ -11,11 +10,12 @@ ms.custom: ''
 ms.topic: article
 ms.date: 04/10/2018
 ms.author: genemi
-ms.openlocfilehash: 212558cc1a9715e971e19fd4e637dcd6c089e1bc
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 2bb62d323ce3675a49dbd8abd11a19df2c82dcf9
+ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35310097"
 ---
 # <a name="connection-modules-for-microsoft-sql-databases"></a>Microsoft SQL 資料庫的連接模組
 
@@ -23,7 +23,7 @@ ms.lasthandoff: 05/03/2018
 
 - Linux (Ubuntu)
 - MacOS
-- 視窗
+- Windows
 
 #### <a name="oop-to-relational-mismatch"></a>OOP 到關聯式的不相符
 

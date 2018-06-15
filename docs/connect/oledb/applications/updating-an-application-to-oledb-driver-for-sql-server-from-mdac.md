@@ -2,7 +2,7 @@
 title: OLE DB 驅動程式將應用程式更新 SQL server 的 MDAC |Microsoft 文件
 description: 更新 MDAC 從 SQL Server 的 OLE DB 驅動程式的應用程式
 ms.custom: ''
-ms.date: 03/26/2018
+ms.date: 06/12/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.component: oledb|applications
@@ -20,18 +20,19 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 907e1c08f422809a04d3e3c8846d91f7982bb7ea
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 11597ed3b7cd80cae8604291bd8b662bf6a9ed80
+ms.sourcegitcommit: 354ed9c8fac7014adb0d752518a91d8c86cdce81
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/14/2018
+ms.locfileid: "35612103"
 ---
 # <a name="updating-an-application-to-ole-db-driver-for-sql-server-from-mdac"></a>更新 MDAC 從 SQL Server 的 OLE DB 驅動程式的應用程式
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  有一些與 OLE DB 驅動程式的 SQL Server 和 Microsoft Data Access Components (MDAC); 之間的差異從 Windows Vista 開始，資料存取元件現在稱為 Windows Data Access Components （或 Windows DAC）。 雖然這兩者都提供原生資料存取[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]資料庫、 OLE DB 驅動程式的 SQL Server 特別設計來公開的新功能[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]，而同時維護與舊版的回溯相容性。   
+  有一些與 OLE DB 驅動程式的 SQL Server 和 Microsoft Data Access Components (MDAC); 之間的差異從 Windows Vista 開始，資料存取元件現在稱為 Windows Data Access Components （或 Windows DAC）。 雖然這兩者都提供原生資料存取[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]資料庫、 OLE DB 驅動程式的 SQL Server 已設計為可公開 （expose） 的新功能[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]，而同時維護與舊版的回溯相容性。   
 
  此外，雖然 MDAC 包含元件使用 OLE DB、 ODBC 和 ActiveX Data Objects (ADO)、 OLE DB 驅動程式的 SQL Server 只會實作 OLE DB （雖然 ADO 可以存取 OLE DB 驅動程式的功能，適用於 SQL Server）。  
 
@@ -39,13 +40,13 @@ ms.lasthandoff: 05/03/2018
 
 -   使用 ADO 來存取 SQL Server 的 OLE DB 驅動程式的使用者可能會發現較少的篩選功能與存取 SQL OLE DB 提供者。  
 
--   如果 ADO 應用程式使用 SQL Server 的 OLE DB 驅動程式，而嘗試更新計算資料行，將會報告錯誤。 在使用 MDAC 時，已接受更新但是被忽略。  
+-   如果 ADO 應用程式使用 SQL Server 的 OLE DB 驅動程式，而嘗試更新計算資料行，將會報告錯誤。 使用 MDAC 時，更新已接受，但會忽略。  
 
 -   OLE DB 驅動程式的 SQL Server 是單一獨立的動態連結程式庫 (DLL) 檔案。 公開的介面已保留為最少量，這樣不但可便於散發，同時也可限制安全性風險。  
 
 -   支援只 OLE DB 介面。  
 
--   SQL Server 名稱，OLE DB 驅動程式會與搭配 MDAC 使用不同的。  
+-   SQL Server 名稱，OLE DB 驅動程式會與搭配 MDAC 使用的名稱不同。  
 
 -   使用 SQL Server 的 OLE DB 驅動程式時，使用 MDAC 元件所提供的使用者可存取功能。 這包括但不限於以下項目：連接共用、ADO 支援和用戶端資料指標支援。 當使用這些功能時，OLE DB 驅動程式的 SQL Server 會提供只有資料庫連線。 MDAC 會提供類似追蹤、管理控制項和效能計數器的功能。  
 
@@ -63,7 +64,7 @@ ms.lasthandoff: 05/03/2018
 
 -   OLE DB 驅動程式的 SQL Server 有更嚴格的錯誤檢查要比 MDAC，這表示，不符合嚴格的 OLE DB 規格的某些應用程式可能會有不同的行為。 例如，SQLOLEDB 提供者未強制執行規則的參數名稱開頭必須 ' @' 會針對結果參數，但 SQL Server OLE DB 驅動程式執行。  
 
--   OLE DB 驅動程式的 SQL Server 行為與 MDAC 不同中對於失敗連接方面。 例如，MDAC 會傳回快取的屬性值之連接失敗，而 OLE DB 驅動程式的 SQL Server 報告的錯誤呼叫的應用程式。  
+-   OLE DB 驅動程式的 SQL Server 行為與 MDAC 不同有關連接失敗。 例如，MDAC 會傳回快取的屬性值之連接失敗，而 OLE DB 驅動程式的 SQL Server 報告的錯誤呼叫的應用程式。  
 
 -   OLE DB 驅動程式的 SQL Server 不會產生 Visual Studio Analyzer 事件，而是產生 Windows 追蹤事件。  
 
@@ -75,7 +76,7 @@ ms.lasthandoff: 05/03/2018
 
 -   SQL Server OLE DB 驅動程式會傳回同義字中 TABLES 和 TABLE_INFO 結構描述資料列集，而且 TABLE_TYPE 會設定為同義字。  
 
--   傳回值的資料型別**varchar （max)**， **nvarchar （max)**， **varbinary （max)**， **xml**， **udt**，或其他大型物件類型不會傳回至用戶端的版本早於[!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]。 如果您想要使用這些類型當做傳回值，您必須使用適用於 SQL Server 的 OLE DB 驅動程式。  
+-   傳回值的資料型別**varchar （max)**， **nvarchar （max)**， **varbinary （max)**， **xml**， **udt**，或其他大型物件類型不能傳回給用戶端版本早於[!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]。 如果您想要使用這些類型當做傳回值，您必須使用適用於 SQL Server 的 OLE DB 驅動程式。  
 
 -   MDAC 允許下列陳述式，執行手動和隱含交易的開頭但 OLE DB 驅動程式的 SQL Server 則不然。 它們必須在自動認可模式中執行。  
 
@@ -89,7 +90,7 @@ ms.lasthandoff: 05/03/2018
 
     -   終止  
 
-    -   備份  
+    -   Backup  
 
 -   當 MDAC 應用程式連接到 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 時，[!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 中導入的資料類型將會以 [!INCLUDE[ssVersion2000](../../../includes/ssversion2000-md.md)] 相容的資料類型形式出現，如下表所示。  
 
@@ -107,7 +108,7 @@ ms.lasthandoff: 05/03/2018
 
 -   如果您使用 OLE DB 呼叫來開始交易時，沒有 OLE DB 驅動程式的 SQL Server 和 MDAC; 之間的行為差異交易會立即開始使用 OLE DB 驅動程式的 SQL Server，但交易將會開始之後初次存取資料庫使用 MDAC。 這會影響預存程序和批次的行為，因為[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]需要@TRANCOUNT批次或預存程序完成執行時啟動批次或預存程序之後，必須相同。  
 
--   使用 OLE DB 驅動程式的 SQL Server，ITransactionLocal::BeginTransaction 會導致立即開始交易。 當使用 MDAC 時，交易會延遲到應用程式執行陳述式之後才開始，這需要交易處於隱含交易模式中。 如需詳細資訊，請參閱 [SET IMPLICIT_TRANSACTIONS &#40;Transact-SQL&#41;](../../../t-sql/statements/set-implicit-transactions-transact-sql.md)。  
+-   使用 OLE DB 驅動程式的 SQL Server，ITransactionLocal::BeginTransaction 會導致立即開始交易。 使用 MDAC 應用程式執行需要交易處於隱含交易模式的陳述式之前延遲交易的開始。 如需詳細資訊，請參閱 [SET IMPLICIT_TRANSACTIONS &#40;Transact-SQL&#41;](../../../t-sql/statements/set-implicit-transactions-transact-sql.md)。  
 
 
  SQL Server 和 MDAC 支援這兩個 OLE DB 驅動程式讀取認可的交易隔離資料列版本設定，但只有 OLE DB 驅動程式使用 SQL Server 支援快照集交易隔離。 (在程式設計的詞彙中，使用資料列版本設定的讀取認可交易隔離與讀取認可的交易相同)。  

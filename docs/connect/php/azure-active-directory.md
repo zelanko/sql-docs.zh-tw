@@ -3,7 +3,6 @@ title: Azure Active Directory |Microsoft 文件
 ms.date: 07/13/2017
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: php
 ms.suite: sql
 ms.custom: ''
 ms.technology: connectivity
@@ -11,11 +10,12 @@ ms.topic: conceptual
 author: david-puglielli
 ms.author: v-dapugl
 manager: v-hakaka
-ms.openlocfilehash: bfb4c78f7a32c1205256f7a0d44bd9526fabdc27
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 224fa4f0746c45f9651b4714593e28f719b4d1ab
+ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35306997"
 ---
 # <a name="connect-using-azure-active-directory-authentication"></a>使用 Azure Active Directory 驗證進行連接
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -24,7 +24,7 @@ ms.lasthandoff: 05/03/2018
 
 若要使用 Azure AD，**驗證**關鍵字。 值，**驗證**可能需要在下表中說明。
 
-|關鍵字|值|Description|
+|關鍵字|值|描述|
 |-|-|-|
 |**驗證**|未設定 （預設值）|驗證模式取決於其他關鍵字。 如需詳細資訊，請參閱 [Connection Options](../../connect/php/connection-options.md)。 |
 ||`SqlPassword`|SQL Server 執行個體 （這可能是 Azure 的執行個體） 直接驗證使用者名稱和密碼。 使用者名稱和密碼必須傳遞至連接字串使用**UID**和**PWD**關鍵字。 |

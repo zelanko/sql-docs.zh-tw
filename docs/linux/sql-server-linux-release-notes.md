@@ -12,11 +12,12 @@ ms.suite: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: 1314744f-fcaf-46db-800e-2918fa7e1b6c
-ms.openlocfilehash: 07782a5b8290b41a5a11557c503fcbfd0736790b
-ms.sourcegitcommit: a9da0abd3e17fbcd6339980d7331d0418cdada53
+ms.openlocfilehash: f853cb623bee0fcd27d5cc7e6203610ed1603335
+ms.sourcegitcommit: 354ed9c8fac7014adb0d752518a91d8c86cdce81
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/24/2018
+ms.lasthandoff: 06/14/2018
+ms.locfileid: "35611973"
 ---
 # <a name="release-notes-for-sql-server-2017-on-linux"></a>在 Linux 上的 SQL Server 2017 的版本資訊
 
@@ -31,7 +32,7 @@ ms.lasthandoff: 05/24/2018
 | Red Hat Enterprise Linux 7.3 或 7.4 工作站、 伺服器和桌面 | XFS 或 EXT4 | [安裝指南](quickstart-install-connect-red-hat.md) | 
 | SUSE Enterprise Linux Server v12 SP2 | XFS 或 EXT4 | [安裝指南](quickstart-install-connect-suse.md) |
 | Ubuntu 16.04LTS | XFS 或 EXT4 | [安裝指南](quickstart-install-connect-ubuntu.md) | 
-| Docker 引擎 1.8 + Windows、 Mac 或 Linux 上 | 해당 사항 없음 | [安裝指南](quickstart-install-connect-docker.md) | 
+| Docker 引擎 1.8 + Windows、 Mac 或 Linux 上 | 不適用 | [安裝指南](quickstart-install-connect-docker.md) | 
 
 > [!TIP]
 > 如需詳細資訊，請檢閱[系統需求](sql-server-linux-setup.md#system)for SQL Server on Linux。 SQL Server 2017 最新的支援原則，請參閱[Microsoft SQL Server 的技術支援人員原則](https://support.microsoft.com/help/4047326/support-policy-for-microsoft-sql-server)。
@@ -215,6 +216,7 @@ sudo systemctl start mssql-server
 | &nbsp; | Stretch DB |
 | &nbsp; | PolyBase |
 | &nbsp; | 合作對象第 3 層連線與分散式的查詢 |
+| &nbsp; | SQL Server 以外的資料來源的連結的伺服器 |
 | &nbsp; | 系統擴充預存程序 （XP_CMDSHELL 等等） |
 | &nbsp; | Filetable，FILESTREAM |
 | &nbsp; | CLR 組件與 EXTERNAL_ACCESS 或 UNSAFE 權限設定 |
@@ -225,7 +227,7 @@ sudo systemctl start mssql-server
 | &nbsp; | 異動資料擷取 |
 | &nbsp; | 受管理備份 |
 | **高可用性** | 資料庫鏡像  |
-| **安全性** | 可延伸金鑰管理 |
+| **Security** | 可延伸金鑰管理 |
 | &nbsp; | 連結伺服器的 AD 驗證 | 
 | &nbsp; | 可用性群組 (Ag) 的 AD 驗證 | 
 | &nbsp; | 第 3 個合作對象 AD 工具 (Centrify，Vintela，Powerbroker) | 

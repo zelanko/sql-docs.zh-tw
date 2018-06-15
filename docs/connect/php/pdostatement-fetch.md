@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: php
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: connectivity
@@ -15,11 +14,12 @@ caps.latest.revision: 19
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 6fefb85430b6bf3b98d15a884130e1db1d2cdfa8
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 499175b3e75c27b82df93ef84f8b17a049265356
+ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35308417"
 ---
 # <a name="pdostatementfetch"></a>PDOStatement::fetch
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -46,7 +46,7 @@ $*cursor_offset*: 選用 （整數） 符號，用於指定的資料列時所要
 ## <a name="remarks"></a>備註  
 在呼叫提取時，資料指標會自動前進。 下表包含可能的 $ 清單*fetch_style*值。  
   
-|$*fetch_style*|Description|  
+|$*fetch_style*|描述|  
 |-------------------|---------------|  
 |PDO::FETCH_ASSOC|指定依資料行名稱編製索引的陣列。|  
 |PDO::FETCH_BOTH|指定依資料行名稱且以 0 起始而編製索引的陣列。 這是預設值。|  
@@ -61,7 +61,7 @@ $*cursor_offset*: 選用 （整數） 符號，用於指定的資料列時所要
   
 如果資料指標是可捲動的 (PDO::ATTR_CURSOR = PDO::CURSOR_SCROLL)，則提取會在結果集界限內移動資料指標。 下表包含可能的 $ 清單*cursor_orientation*值。  
   
-|$*cursor_orientation*|Description|  
+|$*cursor_orientation*|描述|  
 |--------------------------|---------------|  
 |PDO::FETCH_ORI_NEXT|擷取下一個資料列。 這是預設值。|  
 |PDO::FETCH_ORI_PRIOR|擷取上一個資料列。|  

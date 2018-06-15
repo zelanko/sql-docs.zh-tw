@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: php
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: connectivity
@@ -21,11 +20,12 @@ caps.latest.revision: 34
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 43cb1b1a028d645c6c1de6e89c292c475eb00dc5
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 14b23030980978a4d72d1b9afb405cb7e8cfd630
+ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35309387"
 ---
 # <a name="sqlsrvfieldmetadata"></a>sqlsrv_field_metadata
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -45,10 +45,10 @@ sqlsrv_field_metadata( resource $stmt)
 ## <a name="return-value"></a>傳回值  
 陣列的 **array** ，或為 **false**。 此陣列包含結果集內各欄位的一個陣列。 每個子陣列都有如下表中所述的索引鍵。 如果擷取欄位中繼資料發生錯誤，則會傳回 **false** 。  
   
-|索引鍵|Description|  
+|索引鍵|描述|  
 |-------|---------------|  
-|名稱|欄位所對應的資料行名稱。|  
-|型別|對應至 SQL 類型的數值。|  
+|[屬性]|欄位所對應的資料行名稱。|  
+|類型|對應至 SQL 類型的數值。|  
 |大小|字元類型 (char(n)、varchar(n)、nchar(n)、nvarchar(n)、XML) 之欄位的字元數目。 二進位類型 (binary(n)、varbinary(n)、UDT) 之欄位的位元組數目。 **NULL** 適用於其他 SQL Server 資料類型。|  
 |有效位數|變數有效位數 (real、numeric、decimal、datetime2、datetimeoffset 和 time) 之類型的有效位數。 **NULL** 適用於其他 SQL Server 資料類型。|  
 |小數位數|變數小數位數 (numeric、decimal、datetime2、datetimeoffset 和 time) 之類型的小數位數。 **NULL** 適用於其他 SQL Server 資料類型。|  
@@ -56,35 +56,35 @@ sqlsrv_field_metadata( resource $stmt)
   
 下表提供有關每個子陣列的索引鍵的詳細資訊 (如需這些類型的詳細資訊，請參閱 SQL Server 文件)：  
   
-|SQL Server 2008 資料類型|型別|最小/最大的有效位數|最小/最大的小數位數|大小|  
+|SQL Server 2008 資料類型|類型|最小/最大的有效位數|最小/最大的小數位數|大小|  
 |-----------------------------|--------|----------------------|------------------|--------|  
-|bigint|SQL_BIGINT (-5)|||8|  
+|BIGINT|SQL_BIGINT (-5)|||8|  
 |BINARY|SQL_BINARY (-2)|||0 < *n* < 8000 <sup>1</sup>|  
 |bit|SQL_BIT (-7)||||  
 |char|SQL_CHAR (1)|||0 < *n* < 8000 <sup>1</sup>|  
-|date|SQL_TYPE_DATE (91)|10/10|0/0||  
-|datetime|SQL_TYPE_TIMESTAMP (93)|23/23|3/3||  
+|日期|SQL_TYPE_DATE (91)|10/10|0/0||  
+|DATETIME|SQL_TYPE_TIMESTAMP (93)|23/23|3/3||  
 |datetime2|SQL_TYPE_TIMESTAMP (93)|19/27|0/7||  
 |datetimeoffset|SQL_SS_TIMESTAMPOFFSET (-155)|26/34|0/7||  
-|decimal|SQL_DECIMAL (3)|1/38|0/有效位數值||  
-|float|SQL_FLOAT (6)|4/8|||  
+|Decimal|SQL_DECIMAL (3)|1/38|0/有效位數值||  
+|FLOAT|SQL_FLOAT (6)|4/8|||  
 |image|SQL_LONGVARBINARY (-4)|||2 GB|  
-|int|SQL_INTEGER (4)||||  
+|ssNoversion|SQL_INTEGER (4)||||  
 |money|SQL_DECIMAL (3)|19/19|4/4||  
 |NCHAR|SQL_WCHAR (-8)|||0 < *n* < 4000 <sup>1</sup>|  
 |ntext|SQL_WLONGVARCHAR (-10)|||1 GB|  
-|numeric|SQL_NUMERIC (2)|1/38|0/有效位數值||  
-|nvarchar|SQL_WVARCHAR (-9)|||0 < *n* < 4000 <sup>1</sup>|  
-|real|SQL_REAL (7)|4/4|||  
+|NUMERIC|SQL_NUMERIC (2)|1/38|0/有效位數值||  
+|NVARCHAR|SQL_WVARCHAR (-9)|||0 < *n* < 4000 <sup>1</sup>|  
+|REAL|SQL_REAL (7)|4/4|||  
 |smalldatetime|SQL_TYPE_TIMESTAMP (93)|16/16|0/0||  
-|smallint|SQL_SMALLINT (5)|||2 個位元組|  
+|SMALLINT|SQL_SMALLINT (5)|||2 個位元組|  
 |Smallmoney|SQL_DECIMAL (3)|10/10|4/4||  
 |text|SQL_LONGVARCHAR (-1)|||2 GB|  
 |time|SQL_SS_TIME2 (-154)|8/16|0/7||  
-|timestamp|SQL_BINARY (-2)|||8 個位元組|  
+|TIMESTAMP|SQL_BINARY (-2)|||8 個位元組|  
 |tinyint|SQL_TINYINT (-6)|||1 個位元組|  
 |udt|SQL_SS_UDT (-151)|||變數|  
-|uniqueidentifier|SQL_GUID (-11)|||16|  
+|UNIQUEIDENTIFIER|SQL_GUID (-11)|||16|  
 |varbinary|SQL_VARBINARY (-3)|||0 < *n* < 8000 <sup>1</sup>|  
 |varchar|SQL_VARCHAR (12)|||0 < *n* < 8000 <sup>1</sup>|  
 |xml|SQL_SS_XML (-152)|||0|  

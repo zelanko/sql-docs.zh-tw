@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 07/10/2017
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: php
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: connectivity
@@ -15,11 +14,12 @@ caps.latest.revision: 28
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 70bc35baf6121a7a9339064f68d8252b48db22e6
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 717657cabc469488565985e3e37d111bb9d592b8
+ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35308157"
 ---
 # <a name="pdoprepare"></a>PDO::prepare
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -46,7 +46,7 @@ $*statement*：一個包含 SQL 陳述式的字串。
   
 下表列出可能*key_pair*值。  
   
-|索引鍵|Description|  
+|索引鍵|描述|  
 |-------|---------------|  
 |PDO::ATTR_CURSOR|指定資料指標行為。 預設值為 PDO::CURSOR_FWDONLY。 PDO::CURSOR_SCROLL 是靜態資料指標。<br /><br />例如， `array( PDO::ATTR_CURSOR => PDO::CURSOR_FWDONLY )`。<br /><br />如果您使用 PDO::CURSOR_SCROLL，則可以使用 PDO::SQLSRV_ATTR_CURSOR_SCROLL_TYPE，其說明如下。<br /><br />請參閱[資料指標類型&#40;PDO_SQLSRV 驅動程式&#41;](../../connect/php/cursor-types-pdo-sqlsrv-driver.md)如需有關結果集和 PDO_SQLSRV 驅動程式中的資料指標。|  
 |PDO::ATTR_EMULATE_PREPARES|Pdo:: ATTR_EMULATE_PREPARES 時，已備妥的陳述式中的預留位置取代為繫結參數。 完整的 SQL 陳述式沒有替代然後會傳送到在執行資料庫。 <br /><br />Pdo:: ATTR_EMULATE_PREPARES 可以用來略過 SQL Server 中的某些限制。 例如，SQL Server 不支援具名或位置參數一些 TRANSACT-SQL 子句中。 此外，SQL Server 已繫結 2100年參數的限制。<br /><br />您可以將 pdo:: ATTR_EMULATE_PREPARES 屬性設為 true。 例如：<br /><br />`PDO::ATTR_EMULATE_PREPARES => true`<br /><br />根據預設，此屬性設為 false。<br /><br />**注意** ：當您使用 `PDO::ATTR_EMULATE_PREPARES => true`時，參數化查詢的安全性將沒有效用。 您的應用程式應確定繫結至參數的資料不包含惡意的 TRANSACT-SQL 程式碼。<br /><br />**限制：**： 參數未繫結使用資料庫的參數化的查詢功能，因為不支援 input_output 和輸出參數。|  
@@ -62,7 +62,7 @@ array(PDO::ATTR_CURSOR => PDO::CURSOR_SCROLL, PDO::SQLSRV_ATTR_CURSOR_SCROLL_TYP
   
 下表顯示可能的 PDO::SQLSRV_ATTR_CURSOR_SCROLL_TYPE 值。  
   
-|Value|Description|  
+|ReplTest1|描述|  
 |---------|---------------|  
 |PDO::SQLSRV_CURSOR_BUFFERED|建立用戶端 (緩衝) 靜態資料指標。 如需用戶端資料指標的詳細資訊，請參閱[資料指標類型&#40;PDO_SQLSRV 驅動程式&#41;](../../connect/php/cursor-types-pdo-sqlsrv-driver.md)。|  
 |PDO::SQLSRV_CURSOR_DYNAMIC|建立伺服器端 (無緩衝) 動態資料指標，它可讓您以任何順序存取資料列，且會反映資料庫中的變更。|  

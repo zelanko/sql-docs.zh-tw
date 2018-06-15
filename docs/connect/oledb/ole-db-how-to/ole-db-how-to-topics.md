@@ -2,9 +2,10 @@
 title: OLE DB 的使用說明主題 |Microsoft 文件
 description: OLE DB 的使用說明主題
 ms.custom: ''
-ms.date: 03/26/2018
+ms.date: 06/14/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.component: oledb|ole-db-how-to
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: connectivity
@@ -15,15 +16,17 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 846fe498ad0a245c7b3b61a4fdd361839399a17d
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: HT
+ms.openlocfilehash: d26d126d8a25c59fa30b9ac7a51e33bcdb3f0f97
+ms.sourcegitcommit: e1bc8c486680e6d6929c0f5885d97d013a537149
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35304527"
+ms.lasthandoff: 06/15/2018
+ms.locfileid: "35665898"
 ---
 # <a name="ole-db-how-to-topics"></a>OLE DB 的使用說明主題
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+
+[!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
   若要使用 SQL Server 的 OLE DB 驅動程式，您必須了解如何連接到伺服器、 執行命令，以及處理結果。  
   
