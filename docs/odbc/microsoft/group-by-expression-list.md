@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32898493"
 ---
 # <a name="group-by-expression-list"></a>GROUP BY 運算式清單
 GROUP BY 支援的運算式清單，以及資料行名稱。 有 GROUP BY 子句的 SELECT 陳述式的選取清單只可包含 GROUP BY 子句中的運算式，或 set 函式。

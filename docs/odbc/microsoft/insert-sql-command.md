@@ -21,6 +21,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32900685"
 ---
 # <a name="insert---sql-command"></a>插入的 SQL 命令
 將記錄附加至資料表，其中包含指定的欄位值的結尾。  

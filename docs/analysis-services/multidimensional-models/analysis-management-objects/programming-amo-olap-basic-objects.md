@@ -14,6 +14,7 @@ ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/10/2018
+ms.locfileid: "34024665"
 ---
 # <a name="programming-amo-olap-basic-objects"></a>設計 AMO OLAP 基本物件的程式
   建立複雜的 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 物件既簡單又直接，但是需要注意細節。 本主題說明 OLAP 基本物件的程式設計詳細資料。 本主題包含下列幾節：  

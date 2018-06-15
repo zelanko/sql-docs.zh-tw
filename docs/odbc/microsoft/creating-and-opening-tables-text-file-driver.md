@@ -21,6 +21,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32899623"
 ---
 # <a name="creating-and-opening-tables-text-file-driver"></a>建立及開啟資料表 （文字檔案驅動程式）
 使用文字驅動程式時，會使用在 Odbcinst.ini 中指定的格式來建立新的資料表。 如果未指定，CSVDELIMITED 格式來建立資料表。 根據預設，預設為 11 個字元的整數資料行，浮點數資料行預設為 22 個字元。 日期資料行使用 YYYY MM DD 的格式。 CHAR 和 LONGCHAR 資料行是在 CREATE 陳述式中指定的寬度。

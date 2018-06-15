@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32899263"
 ---
 # <a name="like-predicate-limitations"></a>像述詞限制
 如果資料行中的長度超過 255 個字元，LIKE 比較會根據只有前 255 個字元。  

@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32864333"
 ---
 # <a name="default-trace-enabled-server-configuration-option"></a>預設追蹤已啟用伺服器組態選項
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -52,7 +53,7 @@ GO
 ```  
   
 ## <a name="configuring"></a>進行設定  
- 設為 1 時， **default trace enabled** 選項會啟用 **「預設的追蹤」**功能。 這個選項的預設值是 1 (ON)。 設為 0 則會關閉追蹤功能。  
+ 設為 1 時， **default trace enabled** 選項會啟用 **「預設的追蹤」** 功能。 這個選項的預設值是 1 (ON)。 設為 0 則會關閉追蹤功能。  
   
  **default trace enabled** 屬於進階選項。 如果您要使用 **sp_configure** 系統預存程序來變更設定，只有在 [顯示進階選項] 設定為 1 時，才能變更 [預設追蹤已啟用] 選項。 設定會立即生效，伺服器不必重新啟動。  
   

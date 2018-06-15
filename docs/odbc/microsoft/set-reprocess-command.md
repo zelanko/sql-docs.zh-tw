@@ -21,6 +21,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32903583"
 ---
 # <a name="set-reprocess-command"></a>SET 重新處理命令
 指定多少次，或如何的長度，鎖定的嘗試失敗後鎖定檔案或記錄。  

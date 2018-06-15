@@ -19,6 +19,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32851503"
 ---
 # <a name="frequently-asked-questions-faq-for-odbc-linux-and-macos"></a>常見問題集 (FAQ) 適用於 ODBC Linux 和 macOS
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]

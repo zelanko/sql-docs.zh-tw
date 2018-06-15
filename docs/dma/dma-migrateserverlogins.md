@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32865453"
 ---
 # <a name="migrating-sql-server-logins-using-data-migration-assistant"></a>使用資料移轉小幫手移轉 SQL Server 登入
 

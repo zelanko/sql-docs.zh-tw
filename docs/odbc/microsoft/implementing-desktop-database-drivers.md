@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32901164"
 ---
 # <a name="implementing-desktop-database-drivers"></a>實作桌面資料庫驅動程式
 ODBC 資料來源管理員線上說明中可以找到指示和有關如何實作和設定 Microsoft ODBC 桌面資料庫驅動程式的技術提示。 可以存取此檔案，從驅動程式安裝常式期間[Microsoft ODBC 資料來源管理員](../../odbc/admin/odbc-data-source-administrator.md)。  

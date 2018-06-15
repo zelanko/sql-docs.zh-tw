@@ -25,6 +25,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32899553"
 ---
 # <a name="creating-mailing-labels-in-microsoft-word-using-visual-foxpro-data"></a>建立郵件使用 Visual FoxPro 資料的 Microsoft Word 中的標籤
 您可以使用 Microsoft Word 中的 Visual FoxPro 資料 Windows 95 或 Windows 98 的文件。 例如，您可能要從 Visual FoxPro 資料表中儲存的客戶資訊建立郵寄標籤。  

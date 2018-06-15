@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32900603"
 ---
 # <a name="other-dbase-driver-programming-details"></a>其他 dBASE 驅動程式程式設計詳細資料
 > [!NOTE]  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32898103"
 ---
 # <a name="connecting-to-a-visual-foxpro-data-source"></a>連接至 Visual FoxPro 資料來源
 您可以連接至 Visual FoxPro 資料來源使用您的 Microsoft Office 應用程式或 SQL 應用程式開發介面。  

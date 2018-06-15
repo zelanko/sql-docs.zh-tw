@@ -27,6 +27,7 @@ ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33261584"
 ---
 # <a name="spnotifyoperator-transact-sql"></a>sp_notify_operator (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -60,7 +61,7 @@ sp_notify_operator
  [ **@name=** ] **'***name***'**  
  這是訊息所要送往的操作員名稱。 *名稱*是**nvarchar （128)**，預設值是 NULL。 其中一個*識別碼*或*名稱*必須指定。  
   
-> **注意：**電子郵件地址必須定義運算子，才能接收訊息。  
+> **注意：** 電子郵件地址必須定義運算子，才能接收訊息。  
   
  [ **@subject=** ] **'***subject***'**  
  電子郵件訊息的主旨。 *主旨*是**nvarchar （256)** 沒有預設值。  

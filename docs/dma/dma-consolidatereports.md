@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32869643"
 ---
 # <a name="consolidate-assessment-reports-data-migration-assistant"></a>合併的評估報告 （資料移轉小幫手）
 

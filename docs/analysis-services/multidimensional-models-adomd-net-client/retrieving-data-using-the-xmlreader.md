@@ -14,6 +14,7 @@ ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/10/2018
+ms.locfileid: "34022205"
 ---
 # <a name="retrieving-data-using-the-xmlreader"></a>使用 XmlReader 擷取資料
   **XmlReader**類別，一部分**System.Xml** Microsoft.NET Framework 類別庫的命名空間是類似於<xref:Microsoft.AnalysisServices.AdomdClient.AdomdDataReader>類別， **XmlReader**類別也提供快速、 非快取、 順向的資料存取。 如果不需要取得資料使用的記憶體中的分析檢視<xref:Microsoft.AnalysisServices.AdomdClient.CellSet>物件**XmlReader**物件也非常適合用以擷取 XML 資料，特別是針對大量資料。 因為**XmlReader**串流資料， **XmlReader**不必擷取和之前公開給呼叫端的資料快取的所有資料，因為可以則<xref:Microsoft.AnalysisServices.AdomdClient.CellSet>物件用來轉換XML for Analysis 回應的分析物件模型表示法。  

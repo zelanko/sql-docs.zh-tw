@@ -21,6 +21,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32902543"
 ---
 # <a name="delete---sql-command"></a>刪除 SQL 命令
 將標示為刪除的記錄。  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32866523"
 ---
 # <a name="run-data-migration-assistant-from-the-command-line"></a>從命令列執行資料移轉小幫手
 2.1 版和更新版本，當您安裝資料移轉小幫手，它也會安裝在 dmacmd.exe *%programfiles%\\Microsoft 資料移轉小幫手\\*。 使用 dmacmd.exe 來評估您的資料庫，以自動模式，並輸出結果以 JSON 或 CSV 檔案。 在評估數個資料庫或大型資料庫時，這是特別有用。 
