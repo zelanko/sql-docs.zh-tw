@@ -2,7 +2,6 @@
 title: RecordStatusEnum |Microsoft 文件
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,16 +19,17 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 0b46c441bf8b54103c8a3b277e1ef21f18cdfca6
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 0f61d0d948730cfb39cd2c0429eb53dcab311fe5
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35281227"
 ---
 # <a name="recordstatusenum"></a>RecordStatusEnum
 指定[狀態](../../../ado/reference/ado-api/status-property-ado-recordset.md)的批次更新和其他的大量作業的記錄。  
   
-|常數|Value|Description|  
+|常數|ReplTest1|描述|  
 |--------------|-----------|-----------------|  
 |**adRecCanceled**|0x100|表示記錄已不會儲存因為操作已經取消。|  
 |**adRecCantRelease**|0x400|表示因為現有的記錄已鎖定，已不會儲存新的記錄。|  

@@ -2,7 +2,6 @@
 title: 資料列集屬性 (ADO) |Microsoft 文件
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -24,11 +23,12 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: c9e5310f52345537b5062e8bb497589ceb61da9e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 1c28d9b4398c0ef17067117ee392ff52aeef5e8f
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35281287"
 ---
 # <a name="rowset-property-ado"></a>資料列集屬性 (ADO)
 取得或設定 OLE DB**資料列集**物件上從 / **ADORecordsetConstruction**物件。 當您使用 put_Rowset 時，資料列集就會轉換成 ADO**資料錄集**物件。  

@@ -2,7 +2,6 @@
 title: 狀態屬性 (ADO) |Microsoft 文件
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,11 +19,12 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b4e254a4d13f4a210c174e3ef5b8181dd24cefd7
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: c7224efc2976873ff0326aa23a18df1cccbce230
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35282027"
 ---
 # <a name="state-property-ado"></a>State 屬性 (ADO)
 物件的狀態是否已開啟或關閉表示所有適用的物件。 如果物件執行非同步的方法，指出是否連接、 執行，或擷取物件的目前狀態。  

@@ -1,11 +1,8 @@
 ---
 title: '資料流 （Visual c + + 語法的索引與 #import） |Microsoft 文件'
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
-ms.component: ado
-ms.technology:
-- drivers
+ms.prod_service: connectivity
+ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -22,11 +19,12 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 63685be47dadc710d95229bfddfd19962464122b
-ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
-ms.translationtype: HT
+ms.openlocfilehash: fea3e137b670eacf3a769d4f5cb7bd89648788f6
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35282537"
 ---
 # <a name="stream-visual-c-syntax-index-with-import"></a>資料流 （Visual c + + 語法的索引與 #import）
 ## <a name="methods"></a>方法  

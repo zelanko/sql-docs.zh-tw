@@ -2,7 +2,6 @@
 title: Size 屬性 （ADO 參數） |Microsoft 文件
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,11 +19,12 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: faa4e918d291f9d6dc095f05a40b6d71729bb5da
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 4c33004000e4f8f3099a53777a2941c442901ba7
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35281857"
 ---
 # <a name="size-property-ado-parameter"></a>Size 屬性 （ADO 參數）
 指出的大小上限，以位元組或字元，[參數](../../../ado/reference/ado-api/parameter-object.md)物件。  

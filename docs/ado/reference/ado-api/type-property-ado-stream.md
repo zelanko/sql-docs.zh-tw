@@ -2,7 +2,6 @@
 title: 型別屬性 （ADO 資料流） |Microsoft 文件
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -22,11 +21,12 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 97c244062e7b84da33ae8d437f0f09a1e3dfd302
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: b334a6f6feab4e8a9a491624a5a3a43d2bd333ff
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35282767"
 ---
 # <a name="type-property-ado-stream"></a>型別屬性 （ADO 資料流）
 表示包含的資料類型[資料流](../../../ado/reference/ado-api/stream-object-ado.md)（二進位或文字）。  

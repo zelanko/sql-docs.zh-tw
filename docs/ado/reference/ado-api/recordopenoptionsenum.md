@@ -2,7 +2,6 @@
 title: RecordOpenOptionsEnum |Microsoft 文件
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,16 +19,17 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: c7372e17fb7e18cec3cbb25a1850433e41e918a7
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 0795d6eb942f10a97be1acda77954ae43fd4f2e4
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35281257"
 ---
 # <a name="recordopenoptionsenum"></a>RecordOpenOptionsEnum
 指定選項，開啟[記錄](../../../ado/reference/ado-api/record-object-ado.md)。 這些值可能會合併使用或者。  
   
-|常數|Value|Description|  
+|常數|ReplTest1|描述|  
 |--------------|-----------|-----------------|  
 |**adDelayFetchFields**|0x8000|表示欄位相關聯的提供者**記錄**需要一開始，擷取，但是可以在第一次嘗試存取該欄位擷取。 此旗標，如果沒有所指定的預設行為是來擷取所有**記錄**物件欄位。|  
 |**adDelayFetchStream**|0x4000|指出提供者的預設資料流相關聯**記錄**需要一開始擷取。 預設行為，此旗標，如果沒有所指定是要擷取相關聯的預設資料流**記錄**物件。|  

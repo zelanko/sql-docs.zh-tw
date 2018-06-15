@@ -2,7 +2,6 @@
 title: SchemaEnum |Microsoft 文件
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,11 +19,12 @@ caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 5cdc032d770f587e8c78c4df0f195d9535688888
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 5f10586341f780615c3955c32a9b02f9913ff2e8
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35281557"
 ---
 # <a name="schemaenum"></a>SchemaEnum
 指定的結構描述類型**資料錄集**， [OpenSchema](../../../ado/reference/ado-api/openschema-method.md)方法擷取。  
@@ -38,10 +38,10 @@ ms.lasthandoff: 05/03/2018
   
  ADO 會產生結構描述類似的結果為常數， **adSchemaDBInfoKeywords**和**adSchemaDBInfoLiterals**。 建立 ADO**資料錄集**，然後以分別傳回的值填入每個資料列**IDBInfo::GetKeywords**和**IDBInfo::GetLiteralInfo**方法。 這些方法的相關資訊，可以找到中[IDBInfo](http://msdn.microsoft.com/en-us/3f5ad97f-3fc6-4f21-b691-f6911e4007f3)的 OLE DB 程式設計人員參考 > 一節。  
   
-|常數|Value|Description|條件約束資料行|  
+|常數|ReplTest1|描述|條件約束資料行|  
 |--------------|-----------|-----------------|------------------------|  
 |**adSchemaAsserts**|0|傳回給定使用者所擁有的判斷提示在目錄中定義。<br /><br /> （判斷提示資料列集）|CONSTRAINT_CATALOG CONSTRAINT_SCHEMA CONSTRAINT_NAME|  
-|**adSchemaCatalogs**|1|傳回可從 DBMS 存取目錄相關聯的實體屬性。<br /><br /> （目錄資料列集）|CATALOG_NAME|  
+|**adSchemaCatalogs**|@shouldalert|傳回可從 DBMS 存取目錄相關聯的實體屬性。<br /><br /> （目錄資料列集）|CATALOG_NAME|  
 |**adSchemaCharacterSets**|2|傳回指定的使用者可以存取的字集目錄中定義。<br /><br /> （CHARACTER_SETS 資料列集）|CHARACTER_SET_CATALOG CHARACTER_SET_SCHEMA CHARACTER_SET_NAME|  
 |**adSchemaCheckConstraints**|5|傳回的檢查條件約束定義類別目錄中給定使用者所擁有。<br /><br /> (CHECK_CONSTRAINTS)資料列集）|CONSTRAINT_CATALOG CONSTRAINT_SCHEMA CONSTRAINT_NAME|  
 |**adSchemaCollations**|3|傳回字元的定序在目錄中定義可指定使用者存取。<br /><br /> （定序資料列集）|COLLATION_CATALOG COLLATION_SCHEMA SYS.DATABASES|  

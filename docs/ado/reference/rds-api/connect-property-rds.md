@@ -2,7 +2,6 @@
 title: 連接屬性 (RDS) |Microsoft 文件
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -18,11 +17,12 @@ caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b517d0d6a04d74901c51e43bce4b8c45b61280e4
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: b27c5586ec1854f54a6d074c60ace87f1fb31e65
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35287377"
 ---
 # <a name="connect-property-rds"></a>屬性 (RDS) 連接
 表示要從中執行的查詢和更新作業的資料庫名稱。  

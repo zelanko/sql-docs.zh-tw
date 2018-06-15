@@ -2,7 +2,6 @@
 title: 在 Visual Basic，Scripting Edition ADO MD 程式碼範例 |Microsoft 文件
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,11 +18,12 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 8af56e1a67775e6caa491d56d1736ac3d5e9c5d2
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 2aefeda6b4ddc08bce593d7c868dee304b7a25c9
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35283237"
 ---
 # <a name="ado-md-code-examples-in-visual-basic-scripting-edition"></a>在 Visual Basic，Scripting Edition ADO MD 程式碼範例
 此範例需要 Microsoft 網際網路資訊伺服器 4.0 的 Microsoft Active Server Pages (ASP)。  
