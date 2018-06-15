@@ -2,9 +2,10 @@
 title: SQL Server 應用程式建立 OLE DB 驅動程式 |Microsoft 文件
 description: 建立 OLE DB 驅動程式的 SQL Server 應用程式
 ms.custom: ''
-ms.date: 03/26/2018
+ms.date: 06/14/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.component: oledb|oledb-driver-for-sql-server
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: connectivity
@@ -17,15 +18,17 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: a0232f6354b0084c665641b630672bba4adb04bf
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: HT
+ms.openlocfilehash: 09cd1243859ef11dccf4a86084aa919a3cc5624a
+ms.sourcegitcommit: e1bc8c486680e6d6929c0f5885d97d013a537149
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35304497"
+ms.lasthandoff: 06/15/2018
+ms.locfileid: "35665308"
 ---
 # <a name="creating-an-ole-db-driver-for-sql-server-application"></a>SQL Server 應用程式建立 OLE DB 驅動程式
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+
+[!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
   建立 OLE DB 驅動程式的 SQL Server 應用程式包含下列步驟：  
   

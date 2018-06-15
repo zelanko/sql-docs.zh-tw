@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 08/08/2017
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: python
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: connectivity
@@ -15,21 +14,22 @@ caps.latest.revision: 2
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 253a4f16b5e5319ff4d805a8fb16114f534bee02
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 1491e68ea318f8a37f0f959f9432d410e0179a18
+ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35309847"
 ---
 # <a name="step-1-configure-development-environment-for-pyodbc-python-development"></a>步驟 1： 設定 pyodbc Python 開發的開發環境
 
-## <a name="windows"></a>視窗  
+## <a name="windows"></a>Windows  
 使用 Python-pyodbc Windows 上，以連接到 SQL 資料庫：
   
 1. **下載 Python 安裝程式**  
   如果您的電腦沒有 Python 請加以安裝。 移[Python 下載頁面](https://www.python.org/downloads/windows/)及下載適當的安裝程式。 如範例中，如果您是在 64 位元的電腦，下載 Python 2.7 或 3.5 (x64) 安裝程式。  
   
-2. **安裝 Python**安裝程式下載後，執行下列動作：。 按兩下檔案以啟動安裝程式。 b. 選取語言，並同意這些條款。 c. 遵循螢幕上的指示和 Python 應該安裝在電腦上。 d. 您可以確認也就是 Python 安裝，請前往 C:\Python27 或 C:\Python35 與執行 python-v 或 py-v （用於 3.x) 
+2. **安裝 Python**安裝程式下載後，執行下列動作：。 按兩下檔案以啟動安裝程式。 B. 選取語言，並同意這些條款。 c. 遵循螢幕上的指示和 Python 應該安裝在電腦上。 d. 您可以確認也就是 Python 安裝，請前往 C:\Python27 或 C:\Python35 與執行 python-v 或 py-v （用於 3.x) 
       
 3. [**安裝 Microsoft ODBC 驅動程式**](../../sql-connection-libraries.md#anchor-20-drivers-relational-access)
   

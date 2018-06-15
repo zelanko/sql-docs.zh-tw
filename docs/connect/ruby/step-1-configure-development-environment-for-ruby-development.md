@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ruby
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: connectivity
@@ -15,11 +14,12 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: c8b4cd36a78952e8d783e79388ede49287e5e0f7
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: eb14bee9528ad23b212bb0a7ffbbba02e1c39678
+ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35309697"
 ---
 # <a name="step-1-configure-development-environment-for-ruby-development"></a>步驟 1： 設定適用於拼音開發的開發環境
 您必須設定開發環境的必要條件，才能開發使用 SQL Server 的 Ruby 驅動程式的應用程式。    
@@ -27,15 +27,15 @@ ms.lasthandoff: 05/03/2018
 請注意 Ruby 驅動程式會使用 TDS 通訊協定，SQL Server 和 Azure SQL Database 中的預設會啟用。  不需要進行其他組態設定。  
   
   
-## <a name="windows"></a>視窗  
+## <a name="windows"></a>Windows  
   
 1.  **下載後安裝程式**  
 如果您的電腦沒有 Ruby 請加以安裝。 新的拼音使用者，我們建議您針對使用拼音 2.2.X 安裝程式。 這些資料行會提供穩定的語言和廣泛的封裝 （珍貴） 相容，並且更新清單。 移[拼音下載頁面](http://rubyinstaller.org/downloads/)及下載適當的 2.1.x 版安裝程式。 如範例中，如果您是在 64 位元的電腦，下載 Ruby 2.1.6 (x64) 安裝程式。   
   
 2.  **安裝 Ruby**  
 安裝程式下載後，執行下列作業：  
-a. 按兩下檔案以啟動安裝程式。  
-b. 選取語言，並同意這些條款。  
+A. 按兩下檔案以啟動安裝程式。  
+B. 選取語言，並同意這些條款。  
 c.  在 [安裝設定] 畫面中，選取這兩個新增 Ruby 可執行檔路徑和關聯需要.rb 和.rbw 檔案這拼音項安裝旁邊的核取方塊。  
   
 3.  **下載拼音 DevKit**  
@@ -43,8 +43,8 @@ c.  在 [安裝設定] 畫面中，選取這兩個新增 Ruby 可執行檔路徑
   
 4.  **安裝拼音 DevKit**  
 下載完成之後，執行下列作業：  
-a. 按兩下該檔案。 將會要求您解壓縮檔案的位置。  
-b. 按一下"..."按鈕，然後選取 「 C:\DevKit"。 您可能必須先建立這個資料夾，依序按一下 建立新資料夾 」。  
+A. 按兩下該檔案。 將會要求您解壓縮檔案的位置。  
+B. 按一下"..."按鈕，然後選取 「 C:\DevKit"。 您可能必須先建立這個資料夾，依序按一下 建立新資料夾 」。  
 c. 按一下 [確定]，並接著 「 擷取 」，請將檔案解壓縮。  
   
 5. **開啟 cmd.exe**  

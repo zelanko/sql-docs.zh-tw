@@ -2,10 +2,10 @@
 title: 大量複製變更對增強的日期和時間類型 (OLE DB) |Microsoft 文件
 description: 增強型的日期和時間類型 (OLE DB) 的大量複製變更
 ms.custom: ''
-ms.date: 03/26/2018
+ms.date: 06/14/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: ole-db-date-time
+ms.component: oledb|ole-db-date-time
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: connectivity
@@ -16,14 +16,17 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 50917ad4c9d6184c32e8681c9b6bc455f5c61abc
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 7f4ead57eb84257a4c57b345bd3a4857a85ded2e
+ms.sourcegitcommit: e1bc8c486680e6d6929c0f5885d97d013a537149
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/15/2018
+ms.locfileid: "35666398"
 ---
 # <a name="bulk-copy-changes-for-enhanced-date-and-time-types-ole-db"></a>增強型的日期和時間類型 (OLE DB) 的大量複製變更
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+
+[!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
   本文描述 SQL Server 的 OLE DB 驅動程式中支援大量複製功能的日期/時間增強功能。  
   
@@ -32,9 +35,9 @@ ms.lasthandoff: 05/03/2018
   
 |檔案儲存類型|主檔案資料類型|提示的回應: 「 輸入欄位 < field_name > 檔案儲存類型 [\<預設 >]:"|  
 |-----------------------|-------------------------|-----------------------------------------------------------------------------------------------------|  
-|Datetime|SQLDATETIME|d|  
+|DATETIME|SQLDATETIME|d|  
 |Smalldatetime|SQLDATETIM4|D|  
-|日期|SQLDATE|de|  
+|date|SQLDATE|de|  
 |Time|SQLTIME|te|  
 |Datetime2|SQLDATETIME2|d2|  
 |Datetimeoffset|SQLDATETIMEOFFSET|do|  
@@ -73,9 +76,9 @@ ms.lasthandoff: 05/03/2018
   
 |檔案儲存類型|儲存體大小 (以位元組為單位)|  
 |-----------------------|---------------------------|  
-|datetime|8|  
+|DATETIME|8|  
 |smalldatetime|4|  
-|date|3|  
+|日期|3|  
 |time|6|  
 |datetime2|9|  
 |datetimeoffset|11|  
@@ -84,11 +87,11 @@ ms.lasthandoff: 05/03/2018
 ## <a name="bcp-types-in-msoledbsqlh"></a>Msoledbsql.h 中的 BCP 類型  
  下列類型 msoledbsql.h 中定義。 這些類型會隨*eUserDataType* ibcpsession:: Bcpcolfmt OLE DB 中的參數。  
   
-|檔案儲存類型|主檔案資料類型|輸入用於 ibcpsession:: Bcpcolfmt msoledbsql.h|Value|  
+|檔案儲存類型|主檔案資料類型|輸入用於 ibcpsession:: Bcpcolfmt msoledbsql.h|ReplTest1|  
 |-----------------------|-------------------------|-----------------------------------------------------------|-----------|  
-|Datetime|SQLDATETIME|BCP_TYPE_SQLDATETIME|0x3d|  
+|DATETIME|SQLDATETIME|BCP_TYPE_SQLDATETIME|0x3d|  
 |Smalldatetime|SQLDATETIM4|BCP_TYPE_SQLDATETIM4|0x3a|  
-|日期|SQLDATE|BCP_TYPE_SQLDATE|0x28|  
+|date|SQLDATE|BCP_TYPE_SQLDATE|0x28|  
 |Time|SQLTIME|BCP_TYPE_SQLTIME|0x29|  
 |Datetime2|SQLDATETIME2|BCP_TYPE_SQLDATETIME2|0x2a|  
 |Datetimeoffset|SQLDATETIMEOFFSET|BCP_TYPE_SQLDATETIMEOFFSET|0x2b|  
@@ -98,25 +101,25 @@ ms.lasthandoff: 05/03/2018
   
  **OLE DB 注意**IBCPSession 所執行的下列轉換。 IRowsetFastLoad 中所定義，請使用 OLE DB 轉換[轉換從用戶端到伺服器執行](../../oledb/ole-db-date-time/conversions-performed-from-client-to-server.md)。 請注意，datetime 值會捨入為一秒的 1/300，而 smalldatetime 值在執行以下所描述的用戶端轉換之後，會將其秒數設定為零。 Datetime 捨入會透過小時和分鐘 (但非日期) 傳播。  
   
-|目標 --><br /><br /> 來源|date|time|smalldatetime|datetime|datetime2|datetimeoffset|char|wchar|  
+|目標 --><br /><br /> 來源|日期|time|smalldatetime|DATETIME|datetime2|datetimeoffset|char|wchar|  
 |------------------------|----------|----------|-------------------|--------------|---------------|--------------------|----------|-----------|  
-|日期|1|-|1, 6|1, 6|1, 6|1、 5、 6|1, 3|1, 3|  
-|Time|해당 사항 없음|1, 10|1，7 10|1，7 10|1，7 10|1、 5、 7、 10|1, 3|1, 3|  
-|Smalldatetime|1, 2|1、 4、 10|1|1|1, 10|1、 5、 10|1, 11|1, 11|  
-|Datetime|1, 2|1、 4、 10|1, 12|1|1, 10|1、 5、 10|1, 11|1, 11|  
+|date|@shouldalert|-|1, 6|1, 6|1, 6|1、 5、 6|1, 3|1, 3|  
+|Time|不適用|1, 10|1，7 10|1，7 10|1，7 10|1、 5、 7、 10|1, 3|1, 3|  
+|Smalldatetime|1, 2|1、 4、 10|@shouldalert|@shouldalert|1, 10|1、 5、 10|1, 11|1, 11|  
+|DATETIME|1, 2|1、 4、 10|1, 12|@shouldalert|1, 10|1、 5、 10|1, 11|1, 11|  
 |Datetime2|1, 2|1、 4、 10|1, 12|1, 10|1, 10|1、 5、 10|1, 3|1, 3|  
 |Datetimeoffset|1, 2, 8|1、 4、 8、 10|1、 8、 10|1、 8、 10|1、 8、 10|1, 10|1, 3|1, 3|  
-|Char/wchar (date)|9|-|9、 6、 12|9、 6、 12|9、 6|9、 5、 6|해당 사항 없음|해당 사항 없음|  
-|Char/wchar (time)|-|9, 10|9、 7、 10、 12|9、 7、 10、 12|9、 7、 10|9、 5、 7、 10|해당 사항 없음|해당 사항 없음|  
-|Char/wchar (datetime)|9, 2|9、 4、 10|9、 10、 12|9、 10、 12|9, 10|9、 5、 10|해당 사항 없음|해당 사항 없음|  
-|Char/wchar (datetimeoffset)|9, 2, 8|9、 4、 8、 10|9、 8、 10、 12|9、 8、 10、 12|9、 8、 10|9, 10|해당 사항 없음|N/A|  
+|Char/wchar (date)|9|-|9、 6、 12|9、 6、 12|9、 6|9、 5、 6|不適用|不適用|  
+|Char/wchar (time)|-|9, 10|9、 7、 10、 12|9、 7、 10、 12|9、 7、 10|9、 5、 7、 10|不適用|不適用|  
+|Char/wchar (datetime)|9, 2|9、 4、 10|9、 10、 12|9、 10、 12|9, 10|9、 5、 10|不適用|不適用|  
+|Char/wchar (datetimeoffset)|9, 2, 8|9、 4、 8、 10|9、 8、 10、 12|9、 8、 10、 12|9、 8、 10|9, 10|不適用|不適用|  
   
 #### <a name="key-to-symbols"></a>符號的索引鍵  
   
 |符號|意義|  
 |------------|-------------|  
 |-|不支援轉換。<br />|  
-|1|如果提供的資料不是有效的就會發佈錯誤。 對於 datetimeoffset 值，即使沒有要求轉換為 UTC，此時間部分在轉換到 UTC 之後仍然必須在範圍內。 這是因為 TDS 和伺服器永遠會以 UTC 的 datetimeoffset 值，正規化時間。 因此，用戶端必須確認時間元件在轉換為 UTC 之後，仍然位於支援的範圍內。|  
+|@shouldalert|如果提供的資料不是有效的就會發佈錯誤。 對於 datetimeoffset 值，即使沒有要求轉換為 UTC，此時間部分在轉換到 UTC 之後仍然必須在範圍內。 這是因為 TDS 和伺服器永遠會以 UTC 的 datetimeoffset 值，正規化時間。 因此，用戶端必須確認時間元件在轉換為 UTC 之後，仍然位於支援的範圍內。|  
 |2|忽略時間元件。|  
 |3|如果發生資料遺失的截斷，就會發佈錯誤。 對於 datetime2，小數秒的位數 (小數位數) 會根據下表，從目的地資料行的大小決定。 對於大於資料表中範圍的資料行大小，會隱含小數位數 9。 此轉換應該最多允許九個小數秒位數，也就是 OLE DB 所允許的最大值。<br /><br /> **類型：** DBTIME2<br /><br /> **隱含的小數位數 0** 8<br /><br /> **隱含的小數位數 1..9** 1..9<br /><br /> <br /><br /> **類型：** DBTIMESTAMP<br /><br /> **隱含的小數位數 0:** 19<br /><br /> **隱含的小數位數 1..9:** 21..29<br /><br /> <br /><br /> **類型：** DBTIMESTAMPOFFSET<br /><br /> **隱含的小數位數 0:** 26<br /><br /> **隱含的小數位數 1..9:** 28..36|  
 |4|忽略日期元件。|  
@@ -128,9 +131,9 @@ ms.lasthandoff: 05/03/2018
 |10|用戶端與伺服器之間的轉換中，如果截斷時發生資料遺失就會發佈錯誤。 如果此值落在伺服器使用之 UTC 範圍所代表的範圍外，也可能發生這個錯誤。 如果在從伺服器轉換為用戶端時發生秒或小數秒的截斷，只會有一個警告。|  
 |11|用戶端與伺服器之間的轉換中，如果截斷時發生資料遺失就會發佈錯誤。|
 |12|秒數會設定為零，而小數秒會遭到捨棄。 不可能發生截斷錯誤。|  
-|해당 사항 없음|系統會維持現有 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 和舊有的行為。|  
+|不適用|系統會維持現有 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 和舊有的行為。|  
   
 ## <a name="see-also"></a>另請參閱     
- [日期和時間增強功能 & #40; OLE DB & #41;](../../oledb/ole-db-date-time/date-and-time-improvements-ole-db.md)  
+ [日期和時間增強功能&#40;OLE DB&#41;](../../oledb/ole-db-date-time/date-and-time-improvements-ole-db.md)  
   
   

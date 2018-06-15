@@ -2,10 +2,10 @@
 title: OLE DB 驅動程式的 SQL Server 程式設計 |Microsoft 文件
 description: SQL Server 程式設計的 OLE DB 驅動程式
 ms.custom: ''
-ms.date: 03/26/2018
+ms.date: 06/12/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: ole-db
+ms.component: oledb|ole-db
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: connectivity
@@ -22,14 +22,15 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: ad7e7f4f62e66e5d72cd939fb37b4335a45932d8
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 53b88cb2ecd2b74d8ea1a4670a5fbd34abbb1723
+ms.sourcegitcommit: 354ed9c8fac7014adb0d752518a91d8c86cdce81
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/14/2018
+ms.locfileid: "35612183"
 ---
 # <a name="ole-db-driver-for-sql-server-programming"></a>SQL Server 程式設計的 OLE DB 驅動程式
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
@@ -43,7 +44,7 @@ ms.lasthandoff: 05/03/2018
   
 -   [建立 OLE DB Driver for SQL Server 應用程式](../../oledb/ole-db-driver/creating-a-oledb-driver-for-sql-server-application.md)  
   
--   [資料來源物件 & #40; OLE DB & #41;](../../oledb/ole-db-data-source-objects/data-source-objects-ole-db.md)  
+-   [資料來源物件&#40;OLE DB&#41;](../../oledb/ole-db-data-source-objects/data-source-objects-ole-db.md)  
   
 -   [命令](../../oledb/ole-db-commands/commands.md)  
   
@@ -51,23 +52,23 @@ ms.lasthandoff: 05/03/2018
   
 -   [預存程序](../../oledb/ole-db/stored-procedures.md)  
   
--   [Blob 與 OLE 物件](../../oledb/ole-db-blobs/blobs-and-ole-objects.md)  
+-   [BLOB 與 OLE 物件](../../oledb/ole-db-blobs/blobs-and-ole-objects.md)  
   
 -   [資料表和索引](../../oledb/ole-db-tables-indexes/tables-and-indexes.md)  
   
--   [資料類型 & #40; OLE DB & #41;](../../oledb/ole-db-data-types/data-types-ole-db.md)  
+-   [資料型別&#40;OLE DB&#41;](../../oledb/ole-db-data-types/data-types-ole-db.md)  
   
 -   [結構描述資料列集支援&#40;OLE DB&#41;](../../oledb/ole-db/schema-rowset-support-ole-db.md)  
   
 -   [資料表值參數&#40;OLE DB&#41;](../../oledb/ole-db-table-valued-parameters/table-valued-parameters-ole-db.md)  
   
--   [日期和時間增強功能 & #40; OLE DB & #41;](../../oledb/ole-db-date-time/date-and-time-improvements-ole-db.md)  
+-   [日期和時間增強功能&#40;OLE DB&#41;](../../oledb/ole-db-date-time/date-and-time-improvements-ole-db.md)  
   
 -   [大型 CLR 使用者定義型別&#40;OLE DB&#41;](../../oledb/ole-db/large-clr-user-defined-types-ole-db.md)  
   
 -   [FILESTREAM 支援](../../oledb/features/filestream-support.md)  
   
--   [交易](../../oledb/ole-db-transactions/transactions.md)  
+-   [Transactions](../../oledb/ole-db-transactions/transactions.md)  
   
 -   [錯誤](../../oledb/ole-db-errors/errors.md)  
   
