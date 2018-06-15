@@ -41,6 +41,7 @@ ms.sourcegitcommit: d2573a8dec2d4102ce8882ee232cdba080d39628
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33702244"
 ---
 # <a name="create-endpoint-transact-sql"></a>CREATE ENDPOINT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -57,7 +58,7 @@ ms.lasthandoff: 05/07/2018
   
      在這個部分，您定義端點上支援的裝載。 裝載可以是下列數個支援類型之一：[!INCLUDE[tsql](../../includes/tsql-md.md)]、Service Broker 及資料庫鏡像。 在這個部分，您還會併入特定語言資訊。  
   
-> **注意：**已移除 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 中的原生 XML Web Service (SOAP/HTTP 端點)。  
+> **注意：** 已移除 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 中的原生 XML Web Service (SOAP/HTTP 端點)。  
   
  ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   

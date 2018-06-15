@@ -14,6 +14,7 @@ ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/10/2018
+ms.locfileid: "34020125"
 ---
 # <a name="retrieving-metadata---working-with-adomdnet-object-model"></a>擷取中繼資料-使用 ADOMD.NET 物件模型
   ADOMD.NET 提供的物件模型，可檢視分析資料來源所包含的 Cube 與從屬物件。 不過，並非指定的分析資料來源之所有中繼資料，都可透過物件模型取得。 物件模型只能存取對用戶端應用程式而言最為實用並加以顯示的資訊，以允許使用者以互動方式建構命令。 因為要顯示的中繼資料之複雜性已降低，所以 ADOMD.NET 物件模型使用起來較容易。  

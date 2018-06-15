@@ -14,6 +14,7 @@ ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31539598"
 ---
 # <a name="processing-and-storage-capacity-in-analytics-platform-system"></a>處理和儲存體容量 Analytics Platform System
 您的業務需求決定數目資料擴充單元，以及您需要在您 Analytics Platform System (APS) 的應用裝置中的計算節點磁碟的大小。 您可以使用這些處理和儲存體的計算，引導您購買與規劃決策的容量。  

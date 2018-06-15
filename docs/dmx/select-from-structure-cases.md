@@ -1,33 +1,20 @@
 ---
 title: SELECT FROM&lt;結構&gt;。案例 |Microsoft 文件
-ms.custom: ''
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.component: data-mining
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: language-reference
-f1_keywords:
-- SELECT
-- CASES
-- FROM
-dev_langs:
-- DMX
-helpviewer_keywords:
-- SELECT FROM <structure> statements
-ms.assetid: 36f50213-14dc-42da-b899-20240b781e1a
-caps.latest.revision: 15
-author: Minewiskan
+ms.date: 06/07/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: dmx
+ms.topic: conceptual
 ms.author: owend
-manager: erikre
-ms.openlocfilehash: ea905e78ee2e1c86882981ed54defca0d8ac65d2
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: f473cb42230aec0b5e40fb59fe10b2f34013ba2f
+ms.sourcegitcommit: 8f0faa342df0476884c3238e36ae3d9634151f87
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/07/2018
+ms.locfileid: "34842101"
 ---
 # <a name="select-from-ltstructuregtcases"></a>SELECT FROM&lt;結構&gt;。案例
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -106,6 +93,6 @@ WHERE IsTestCase();
  [選取&AMP;#40;DMX&AMP;#41;](../dmx/select-dmx.md)   
  [資料採礦延伸模組&#40;DMX&#41;資料定義陳述式](../dmx/dmx-statements-data-definition.md)   
  [資料採礦延伸模組&#40;DMX&#41;資料操作陳述式](../dmx/dmx-statements-data-manipulation.md)   
- [資料採礦延伸模組 & #40; DMX & #41;陳述式參考](../dmx/data-mining-extensions-dmx-statements.md)  
+ [資料採礦延伸模組 &#40;DMX&#41; 陳述式參考](../dmx/data-mining-extensions-dmx-statements.md)  
   
   

@@ -14,6 +14,7 @@ ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/10/2018
+ms.locfileid: "34014925"
 ---
 # <a name="deploying-sql-server-2016-powerpivot-and-power-view-in-sharepoint-2016"></a>在 SharePoint 2016 中部署 SQL Server 2016 PowerPivot 和 Power View
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]

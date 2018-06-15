@@ -13,5 +13,6 @@ ms.sourcegitcommit: d6881107b51e1afe09c2d8b88b98d075589377de
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 03/28/2018
+ms.locfileid: "30268580"
 ---
 ![否](media/no.png)SQL Server Reporting Services (2017)

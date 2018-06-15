@@ -14,6 +14,7 @@ ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31539758"
 ---
 # <a name="understanding-admin-console-alerts-in-analytics-platform-system"></a>了解 Analytics Platform System 中的管理主控台警示
 應用裝置中會出現警示**管理主控台**和**System Center Operations Manager** (SCOM)。 使用此警示的清單，找出哪些警示需要進一步調查。  

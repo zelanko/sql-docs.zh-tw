@@ -1,43 +1,20 @@
 ---
 title: 資料採礦延伸模組 (DMX) 參考 |Microsoft 文件
-ms.custom: ''
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.component: data-mining
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: language-reference
-dev_langs:
-- DMX
-helpviewer_keywords:
-- DMX [Analysis Services]
-- statements [DMX]
-- Data Mining Extensions [Analysis Services], statements
-- DMX [Analysis Services], about Data Mining Extensions
-- DMX [Analysis Services], statements
-- data definition statements [DMX]
-- predictions [DMX]
-- Data Mining Extensions [Analysis Services]
-- SSAS, DMX
-- queries [DMX], extensions reference
-- SQL Server Analysis Services, DMX
-- OLE DB for Data Mining
-- data manipulation statements [DMX]
-- Data Mining Extensions [Analysis Services], about Data Mining Extensions
-- mining models [Analysis Services], DMX
-ms.assetid: 6d85ca20-de67-4e20-b3b5-b734c6cfcece
-caps.latest.revision: 40
-author: Minewiskan
+ms.date: 06/07/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: dmx
+ms.topic: conceptual
 ms.author: owend
-manager: erikre
-ms.openlocfilehash: 2a9338c6db570ae14e78b0aa7b8c6e891b648385
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: dcf3231fbff0ec4c3ea32e94f7b974a62faf05e6
+ms.sourcegitcommit: 8f0faa342df0476884c3238e36ae3d9634151f87
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/07/2018
+ms.locfileid: "34842821"
 ---
 # <a name="data-mining-extensions-dmx-reference"></a>資料採礦延伸模組 (DMX) 參考
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -119,14 +96,14 @@ ms.lasthandoff: 05/03/2018
   
  您可以使用 DMX 函數，取得在培訓模型過程中探索到的資訊，以及計算新資訊。 這些函數可以用於許多用途，包括傳回描述基礎資料或預測精確度的統計資料，以及傳回預測的擴充說明。  
   
- **如需詳細資訊****資訊：** [了解 DMX Select 陳述式](../dmx/understanding-the-dmx-select-statement.md)，[一般預測函數&#40;DMX&#41;](../dmx/general-prediction-functions-dmx.md)， [結構和使用方式的 DMX 預測查詢](../dmx/structure-and-usage-of-dmx-prediction-queries.md)，[資料採礦延伸模組&#40;DMX&#41;函數參考  ](../dmx/data-mining-extensions-dmx-function-reference.md)  
+ **如需詳細資訊****資訊：** [了解 DMX Select 陳述式](../dmx/understanding-the-dmx-select-statement.md)，[一般預測函數&#40;DMX&#41;](../dmx/general-prediction-functions-dmx.md)， [結構和使用方式的 DMX 預測查詢](../dmx/structure-and-usage-of-dmx-prediction-queries.md)，[資料採礦延伸模組&#40;DMX&#41;函數參考](../dmx/data-mining-extensions-dmx-function-reference.md)  
   
  [回到 DMX 陳述式](#BKMK_DMXStatements)  
   
 ## <a name="see-also"></a>另請參閱  
  [資料採礦延伸模組&#40;DMX&#41;函數參考](../dmx/data-mining-extensions-dmx-function-reference.md)   
  [資料採礦延伸模組&#40;DMX&#41;運算子參考](../dmx/data-mining-extensions-dmx-operator-reference.md)   
- [資料採礦延伸模組 & #40; DMX & #41;陳述式參考](../dmx/data-mining-extensions-dmx-statements.md)   
+ [資料採礦延伸模組&#40;DMX&#41;陳述式參考](../dmx/data-mining-extensions-dmx-statements.md)   
  [資料採礦延伸模組&#40;DMX&#41;語法慣例](../dmx/data-mining-extensions-dmx-syntax-conventions.md)   
  [資料採礦延伸模組&#40;DMX&#41;語法元素](../dmx/data-mining-extensions-dmx-syntax-elements.md)   
  [一般預測函數&#40;DMX&#41;](../dmx/general-prediction-functions-dmx.md)   

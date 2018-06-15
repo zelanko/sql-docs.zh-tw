@@ -14,6 +14,7 @@ ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31539538"
 ---
 # <a name="connect-to-appliance-nodes-in-analytics-platform-system"></a>連線至 Analytics Platform System 中的應用裝置節點
 這篇文章會說明連接到每個節點，Analytics Platform System 應用裝置中的各種方式。  

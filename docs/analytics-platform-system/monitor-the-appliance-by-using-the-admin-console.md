@@ -14,6 +14,7 @@ ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31544980"
 ---
 # <a name="monitor-the-appliance-with-the-admin-console---analytics-platform-system"></a>監視與管理主控台-Analytics Platform System 應用裝置
 系統管理員主控台是 SQL Server PDW web 應用程式，可呈現的應用裝置狀態、 運行狀況和效能資訊。 使用者連線到系統管理員主控台，透過 Internet Explorer。  

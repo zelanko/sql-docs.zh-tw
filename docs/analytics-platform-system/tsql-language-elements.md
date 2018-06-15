@@ -14,6 +14,7 @@ ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31539568"
 ---
 # <a name="t-sql-language-elements-for-parallel-data-warehouse"></a>平行資料倉儲的 T-SQL 語言項目
 T-SQL 語言項目為分析平台 System (APS) SQL Server 平行資料倉儲 (PDW)。

@@ -25,6 +25,7 @@ ms.sourcegitcommit: d2573a8dec2d4102ce8882ee232cdba080d39628
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33702941"
 ---
 # <a name="restore-statements---arguments-transact-sql"></a>RESTORE 陳述式 - 引數 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -90,7 +91,7 @@ FILE **=** { *logical_file_name_in_backup*| **@***logical_file_name_in_backup_va
 FILEGROUP **=** { *logical_filegroup_name* | **@***logical_filegroup_name_var* }  
  命名要包括在資料庫還原中的檔案群組。  
   
- **注意：**只有在指定的檔案群組是唯讀的，且這是部分還原 (也就是使用 WITH PARTIAL) 時，才能在簡單復原模式中使用 FILEGROUP。 任何未還原的讀寫檔案群組都會標示為已解除功能，且以後無法還原到結果資料庫中。  
+ **注意：** 只有在指定的檔案群組是唯讀的，且這是部分還原 (也就是使用 WITH PARTIAL) 時，才能在簡單復原模式中使用 FILEGROUP。 任何未還原的讀寫檔案群組都會標示為已解除功能，且以後無法還原到結果資料庫中。  
   
 READ_WRITE_FILEGROUPS  
  選取所有讀寫檔案群組。 如果您有唯讀檔案群組要在讀寫檔案群組之後，在唯讀檔案群組之前還原，這個選項特別有用。  

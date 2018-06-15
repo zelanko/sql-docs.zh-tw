@@ -14,6 +14,7 @@ ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31539378"
 ---
 # <a name="parallel-data-warehouse-firewall-configuration-in-analytics-platform-system"></a>Analytics Platform System 中的平行資料倉儲防火牆組態
 **防火牆**頁面的 SQL Server PDW 組態管理員可讓您啟用或停用防火牆規則來允許或防止 Analytics Platform System 應用裝置上的特定連接埠存取。  

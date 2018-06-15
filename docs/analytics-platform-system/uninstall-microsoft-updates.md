@@ -14,6 +14,7 @@ ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31538548"
 ---
 # <a name="uninstall-microsoft-updates-in-analytics-platform-system"></a>解除安裝 Microsoft Analytics Platform System 中的更新
 本文說明如何解除安裝先前安裝的 Microsoft update，Analytics Platform System 應用裝置上。  

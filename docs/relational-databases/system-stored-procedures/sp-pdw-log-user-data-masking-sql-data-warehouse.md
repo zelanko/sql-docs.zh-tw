@@ -23,6 +23,7 @@ ms.sourcegitcommit: d2573a8dec2d4102ce8882ee232cdba080d39628
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33701798"
 ---
 # <a name="sppdwloguserdatamasking-sql-data-warehouse"></a>sp_pdw_log_user_data_masking （SQL 資料倉儲）
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -32,7 +33,7 @@ ms.lasthandoff: 05/07/2018
 > [!IMPORTANT]  
 >  [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]活動記錄檔受到**sp_pdw_log_user_data_masking**確定[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]活動記錄檔。 **sp_pdw_log_user_data_masking**不會影響資料庫交易記錄檔，或[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]錯誤記錄檔。  
   
- **背景：**預設組態中[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]活動記錄檔包含完整[!INCLUDE[tsql](../../includes/tsql-md.md)]陳述式，以及在某些情況下可以包含這類作業中所包含的使用者資料**插入**， **更新**，和**選取**陳述式。 如果發生問題的應用裝置上，這可讓分析造成問題而需要在重現問題的原因。 若要防止使用者資料寫入至[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]活動記錄檔中，客戶可以選擇使用這個預存程序開啟使用者資料遮罩。 陳述式仍會寫入[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]活動記錄檔，但所有可能包含使用者資料的陳述式中的常值的遮罩; 某些預先定義的常值取代。  
+ **背景：** 預設組態中[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]活動記錄檔包含完整[!INCLUDE[tsql](../../includes/tsql-md.md)]陳述式，以及在某些情況下可以包含這類作業中所包含的使用者資料**插入**， **更新**，和**選取**陳述式。 如果發生問題的應用裝置上，這可讓分析造成問題而需要在重現問題的原因。 若要防止使用者資料寫入至[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]活動記錄檔中，客戶可以選擇使用這個預存程序開啟使用者資料遮罩。 陳述式仍會寫入[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]活動記錄檔，但所有可能包含使用者資料的陳述式中的常值的遮罩; 某些預先定義的常值取代。  
   
  應用裝置上啟用透明資料加密時，遮罩中的使用者資料的[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]活動記錄檔會自動開啟。  
   

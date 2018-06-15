@@ -14,6 +14,7 @@ ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31544680"
 ---
 # <a name="install-sql-server-operations-manager-scom-management-packs-for-analytics-platform-system"></a>安裝 SQL 伺服器 Operations Manager (SCOM) 管理組件的 Analytics Platform System
 請遵循下列步驟來下載並安裝 SQL Server PDW System Center Operations Manager (SCOM) 管理組件。 監視 SQL Server PDW 從 SCOM 所需的管理組件。  

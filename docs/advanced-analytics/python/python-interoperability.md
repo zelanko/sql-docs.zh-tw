@@ -12,11 +12,12 @@ ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31202570"
 ---
 # <a name="python-interoperability-with-sql-server"></a>Python 與 SQL Server 的互通性
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-本文說明如果您啟用此功能會安裝 Python 元件**機器學習服務 （資料庫）**並選取 Python 語言。
+本文說明如果您啟用此功能會安裝 Python 元件**機器學習服務 （資料庫）** 並選取 Python 語言。
 
 ## <a name="python-components"></a>Python 元件
 

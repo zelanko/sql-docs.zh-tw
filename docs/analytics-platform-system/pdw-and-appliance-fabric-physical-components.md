@@ -14,6 +14,7 @@ ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31538878"
 ---
 # <a name="appliance-physical-components---analytics-platform-system"></a>應用裝置實體元件 Analytics Platform System
 名稱及描述 PDW 和應用裝置網狀架構實體元件。 

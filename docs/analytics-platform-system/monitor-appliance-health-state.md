@@ -14,6 +14,7 @@ ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31539048"
 ---
 # <a name="monitor-appliance-health-state"></a>監視應用裝置健全狀況狀態
 本文說明如何使用管理主控台，或透過直接查詢的平行處理資料倉儲動態管理檢視監視 Analytics Platform System 應用裝置的狀態。 
@@ -84,7 +85,7 @@ ORDER BY
   
 若要查看所有元件的所有屬性，請移除`WHERE  p.property_name = 'Status'`子句。  
   
-**[Update_time]**欄會顯示最後一次輪詢 SQL Server PDW 健康狀態代理程式的元件。  
+**[Update_time]** 欄會顯示最後一次輪詢 SQL Server PDW 健康狀態代理程式的元件。  
   
 > [!CAUTION]  
 > 請務必調查此問題，當元件未被決議 5 分鐘或更久。可能表示有問題軟體的活動訊號警示。  

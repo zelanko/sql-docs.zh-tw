@@ -14,6 +14,7 @@ ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31539508"
 ---
 # <a name="configure-windows-server-update-services-wsus-in-analytics-platform-system"></a>在 Analytics Platform System 中設定 Windows Server Update Services (WSUS)
 這些指示會引導您完成使用 Windows Server Update Services (WSUS) 設定精靈設定 WSUS Analytics Platform System 的步驟。 您需要將 WSUS 設定之前您可以將軟體更新套用至應用裝置。 VMM 虛擬機器應用裝置上已安裝 WSUS。  

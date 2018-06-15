@@ -19,6 +19,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32832363"
 ---
 # <a name="azure-key-vault-sample-version-622"></a>Azure 金鑰保存庫的範例版本 6.2.2
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]

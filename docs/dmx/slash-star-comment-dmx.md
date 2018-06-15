@@ -1,31 +1,20 @@
 ---
 title: Star （註解） (DMX) 的斜線 |Microsoft 文件
-ms.custom: ''
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.component: data-mining
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: language-reference
-dev_langs:
-- DMX
-helpviewer_keywords:
-- commenting characters
-- forward slash-asterisk character pairs
-- /*...*/ (comment)
-ms.assetid: 163976cc-aa47-4eda-bd98-03c1a397f80e
-caps.latest.revision: 15
-author: Minewiskan
+ms.date: 06/07/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: dmx
+ms.topic: conceptual
 ms.author: owend
-manager: erikre
-ms.openlocfilehash: 37858f818ec35e6eb68c13034fc8ca7e56dc0150
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: 1d96c65ea1dd187d5678987447415ca419ad10d7
+ms.sourcegitcommit: 8f0faa342df0476884c3238e36ae3d9634151f87
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/07/2018
+ms.locfileid: "34842291"
 ---
 # <a name="slash-star-comment-dmx"></a>斜線星狀 （註解） (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -44,7 +33,7 @@ ms.lasthandoff: 05/03/2018
  包含註解文字的字串。  
   
 ## <a name="remarks"></a>備註  
- 多行註解必須以 / * 和\*/。  
+ 多行註解必須用 /* 和 \*/ 來表示。  
   
  註解沒有長度上限。  
   

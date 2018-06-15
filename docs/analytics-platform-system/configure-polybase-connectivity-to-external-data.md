@@ -14,6 +14,7 @@ ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31539678"
 ---
 # <a name="configure-polybase-connectivity-to-external-data"></a>設定外部資料的 PolyBase 連線組態
 說明如何連接到外部 Hadoop 或 Microsoft Azure 儲存體 blob 資料來源的平行處理資料倉儲設定 PolyBase。 使用 PolyBase 來執行用來整合多個來源資料，包括 Hadoop、 Azure blob 儲存體和平行處理資料倉儲查詢。  

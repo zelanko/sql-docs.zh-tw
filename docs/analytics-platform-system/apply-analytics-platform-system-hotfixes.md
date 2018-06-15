@@ -14,6 +14,7 @@ ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31544870"
 ---
 # <a name="apply-analytics-platform-system-hotfixes"></a>套用 Analytics Platform System hotfix
 這篇文章會討論如何將 hotfix 套用到 Analytics Platform System 軟體。  

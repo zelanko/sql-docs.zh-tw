@@ -14,6 +14,7 @@ ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31538978"
 ---
 # <a name="monitor-with-system-center-operations-manager---analytics-platform-system"></a>監視與 System Center Operations Manager Analytics Platform System
 您可以使用 System Center Operations Manager (SCOM) 來監視 Analytics Platform System (APS) 的應用裝置。

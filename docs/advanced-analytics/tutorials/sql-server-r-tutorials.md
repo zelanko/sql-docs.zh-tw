@@ -12,6 +12,7 @@ ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31202090"
 ---
 # <a name="sql-server-r-tutorials"></a>SQL Server R 教學課程
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -36,9 +37,9 @@ ms.lasthandoff: 04/16/2018
 
   了解如何使用 RevoScaleR 封裝中的函式。 R 與 SQL Server 和參數之間移動資料計算以符合特定工作的內容。 建立模型和繪圖，和您的開發環境和資料庫伺服器之間移動它們。
 
-  **對象：**資料科學家或開發人員已熟悉 R 語言中，而且想要深入了解增強的 R 封裝以及由 Revolution Analytics 的 Microsoft R 中的函式。
+  **對象：** 資料科學家或開發人員已熟悉 R 語言中，而且想要深入了解增強的 R 封裝以及由 Revolution Analytics 的 Microsoft R 中的函式。
 
-  **需求：**一些基本的 R 知識。 使用 SQL Server R 服務或機器學習服務的 r 伺服器的存取權安裝程式說明，請參閱[必要條件](#bkmk_Prerequisites)。
+  **需求：** 一些基本的 R 知識。 使用 SQL Server R 服務或機器學習服務的 r 伺服器的存取權安裝程式說明，請參閱[必要條件](#bkmk_Prerequisites)。
 
 + [資料庫中的 SQL 開發人員的 R 分析](../tutorials/sqldev-in-database-r-for-sql-developers.md)
 
@@ -48,7 +49,7 @@ ms.lasthandoff: 04/16/2018
 
   **對象：** SQL 開發人員、 應用程式開發人員，或 SQL 專業人員支援 R 解決方案，而且想要了解如何將 R 模型部署到 SQL Server。
 
-  **需求：**任何 R 環境所需。 提供所有的 R 程式碼，而且可以建置完整的解決方案只使用[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]和熟悉的商務智慧和 SQL 開發工具。 不過，R 的一些基本的知識會很有幫助。
+  **需求：** 任何 R 環境所需。 提供所有的 R 程式碼，而且可以建置完整的解決方案只使用[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]和熟悉的商務智慧和 SQL 開發工具。 不過，R 的一些基本的知識會很有幫助。
 
   您必須安裝並啟用之 R 語言 SQL 伺服器的存取權。 安裝程式說明，請參閱[必要條件](#bkmk_Prerequisites)。
 
@@ -58,7 +59,7 @@ ms.lasthandoff: 04/16/2018
 
   了解如何從 T-SQL 呼叫 R 執行階段、 將 R 函式包裝在 SQL 程式碼，以及執行將 R 輸出與 R 模型儲存至 SQL 資料表的預存程序。
 
-  **對象：**為人熟悉的功能，以及想要了解從預存程序呼叫 R 的基本概念。
+  **對象：** 為人熟悉的功能，以及想要了解從預存程序呼叫 R 的基本概念。
 
   **需求：** R 或 SQL 所需的任何知識。 不過，您需要 SQL Server Management Studio 或其他用戶端可以連接到資料庫並執行 T-SQL。 我們建議您免費[MSSQL 擴充 Visual Studio 程式碼](https://marketplace.visualstudio.com/items?itemName=ms-mssql.mssql)如果您不熟悉 T-SQL 查詢。
 
@@ -70,9 +71,9 @@ ms.lasthandoff: 04/16/2018
 
   您將學習如何移動圖形之間[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]和 R 和 T-SQL 中 R 函數的比較特徵設計。 最後，您將學習如何使用中的預測模型[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]批次計分和計分單一資料列。
 
-  **對象：**人士熟悉 R 與 SQL Server Management Studio 之類的開發人員工具。
+  **對象：** 人士熟悉 R 與 SQL Server Management Studio 之類的開發人員工具。
 
-  **需求：**您應該可以存取的 R 開發環境，而且知道如何執行 R 指令。 使用 PowerShell，才能下載 New York City 計程車資料集。 您必須使用 SQL Server R 服務或機器學習服務，使用已啟用的 R 伺服器的存取權。 安裝程式說明，請參閱[必要條件](#bkmk_Prerequisites)。
+  **需求：** 您應該可以存取的 R 開發環境，而且知道如何執行 R 指令。 使用 PowerShell，才能下載 New York City 計程車資料集。 您必須使用 SQL Server R 服務或機器學習服務，使用已啟用的 R 伺服器的存取權。 安裝程式說明，請參閱[必要條件](#bkmk_Prerequisites)。
 
 ## <a name ="bkmk_samples"></a>產品範例
 

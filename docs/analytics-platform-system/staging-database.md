@@ -14,6 +14,7 @@ ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31544652"
 ---
 # <a name="using-a-staging-database-in-parallel-data-warehouse-pdw"></a>使用暫存資料庫中 Parallel Data Warehouse (PDW)
 SQL Server Parallel Data Warehouse (PDW) 會使用暫存資料庫，在載入程序期間暫時儲存資料。 根據預設，SQL Server PDW 會使用目的地資料庫的臨時資料庫，可能會造成資料表片段。 若要減少資料表分散程度，您可以建立使用者定義的暫存資料庫。 或者，當從載入失敗的復原不是問題，您可以使用 fastappend 載入模式以略過暫存資料表和目的地資料表直接載入改進效能。  

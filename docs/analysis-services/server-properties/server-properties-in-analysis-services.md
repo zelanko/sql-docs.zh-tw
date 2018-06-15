@@ -1,6 +1,6 @@
 ---
 title: Server Properties in Analysis Services |Microsoft 文件
-ms.date: 05/03/2018
+ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: ''
@@ -9,22 +9,24 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: dd37fd44c7bfaff5b338602eb18b0d779ee9e777
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: d70f58bfb5dba352d154f18b4c3db675b69147ad
+ms.sourcegitcommit: 6e55a0a7b7eb6d455006916bc63f93ed2218eae1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35238818"
 ---
 # <a name="server-properties-in-analysis-services"></a>Analysis Services 中的伺服器屬性
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
+
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 管理員可以修改 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 執行個體的預設伺服器組態屬性。 每一個執行個體都有自己的組態屬性，與同一部伺服器上的其他執行個體分開設定。  
   
- 若要設定伺服器，請使用 SQL Server Management Studio，或是編輯特定執行個體的 msmdsrv.ini 檔。  
+ 若要設定伺服器，使用 SQL Server Management Studio 或是編輯特定的 SQL Server Analysis Services 執行個體的 msmdsrv.ini 檔。  
  
 SQL Server Management Studio 的 [屬性] 頁會顯示最有可能修改的屬性子集。 完整的屬性清單位在 msmdsrv.ini 檔中。   
   
 > [!NOTE]  
->  在預設安裝中，msmdsrv.ini 檔案位於 \Program Files\Microsoft SQL Server\MSAS13.MSSQLSERVER\OLAP\Config 資料夾中。
+>  在預設 SQL Server Analysis Services 安裝中，可以找到 msmdsrv.ini \Program Files\Microsoft SQL Server\MSAS13 中。MSSQLSERVER\OLAP\Config 資料夾。
 > 
 > 其他會影響伺服器組態的屬性包括 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中的部署組態屬性。 如需這些屬性的詳細資訊，請參閱 [指定方案部署的組態設定](../../analysis-services/multidimensional-models/deployment-script-files-solution-deployment-config-settings.md)。
  
@@ -61,7 +63,7 @@ SQL Server Management Studio 的 [屬性] 頁會顯示最有可能修改的屬�
   
  下列主題說明各種 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 組態屬性：  
   
-|主題|說明|  
+|主題|描述|  
 |-----------|-----------------|  
 |[一般屬性](../../analysis-services/server-properties/general-properties.md)|一般屬性是基本和進階屬性，並且包含定義資料目錄、備份目錄和其他伺服器行為的屬性。|  
 |[資料採礦屬性](../../analysis-services/server-properties/data-mining-properties.md)|資料採礦屬性控制要啟用和停用哪些資料採礦演算法。 依預設，會啟用所有的演算法。| 
@@ -70,7 +72,7 @@ SQL Server Management Studio 的 [屬性] 頁會顯示最有可能修改的屬�
 |[功能屬性](../../analysis-services/server-properties/feature-properties.md)|與產品功能有關的功能屬性，大部分是進階屬性，包含控制伺服器執行個體間之連結的屬性。|  
 |[Filestore 屬性](../../analysis-services/server-properties/filestore-properties.md)|檔案存放區屬性僅供進階使用。 其中包含進階記憶體管理設定。|  
 |[鎖定管理員屬性](../../analysis-services/server-properties/lock-manager-properties.md)|鎖定管理員屬性定義與鎖定和逾時有關的伺服器行為。 這些屬性大部分僅供進階使用。|  
-|[記錄檔內容](../../analysis-services/server-properties/log-properties.md)|記錄屬性控制在伺服器上是否記錄事件、記錄於何處以及如何記錄。 這包含錯誤記錄、例外狀況記錄、飛行記錄器、查詢記錄和追蹤。|  
+|[記錄屬性](../../analysis-services/server-properties/log-properties.md)|記錄屬性控制在伺服器上是否記錄事件、記錄於何處以及如何記錄。 這包含錯誤記錄、例外狀況記錄、飛行記錄器、查詢記錄和追蹤。|  
 |[記憶體屬性](../../analysis-services/server-properties/memory-properties.md)|記憶體屬性控制伺服器如何使用記憶體。 這些屬性主要是供進階使用。|  
 |[網路屬性](../../analysis-services/server-properties/network-properties.md)|網路屬性控制與網路有關的伺服器行為，包含控制壓縮和二進位 XML 的屬性。 這些屬性大部分僅供進階使用。|  
 |[OLAP 屬性](../../analysis-services/server-properties/olap-properties.md)|OLAP 屬性控制 Cube 和維度處理、延遲處理、資料快取，以及查詢行為。 這些包含基本和進階屬性。|  

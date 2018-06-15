@@ -14,6 +14,7 @@ ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31538988"
 ---
 # <a name="acquire-and-configure-a-loading-server-for-parallel-data-warehouse"></a>取得和設定來載入伺服器的平行處理資料倉儲
 本文說明如何取得及載入伺服器設定為在非應用裝置的 Windows 系統提交資料載入至 Parallel Data Warehouse (PDW)。  

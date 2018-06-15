@@ -14,6 +14,7 @@ ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31538718"
 ---
 # <a name="remote-table-copy"></a>遠端資料表複製
 描述如何將資料表從 SQL Server PDW 資料庫複製到遠端 （非應用裝置） SMP SQL Server 資料庫時，用於遠端資料表複製功能。 使用 SQL Server PDW 啟用中樞和支點案例的遠端資料表副本。  

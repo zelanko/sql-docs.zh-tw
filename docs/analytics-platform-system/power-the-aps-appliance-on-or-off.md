@@ -14,6 +14,7 @@ ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31538758"
 ---
 # <a name="power-the-appliance-on-or-off-for-analytics-platform-system"></a>應用裝置開啟或關閉電源的 Analytics Platform System
 本主題描述如何開啟電源，或您正在執行的平行處理資料倉儲，選擇性地執行 HDInsight 區域的分析平台 Systemappliance 關閉電源。 使用本主題當移動 Analytics Platform System 應用裝置時，或電源應用裝置上重大停電後。  

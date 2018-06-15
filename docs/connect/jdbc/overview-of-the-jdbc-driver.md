@@ -19,6 +19,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32832053"
 ---
 # <a name="overview-of-the-jdbc-driver"></a>JDBC Driver 概觀
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]

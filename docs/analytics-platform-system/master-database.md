@@ -14,6 +14,7 @@ ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31538538"
 ---
 # <a name="master-database---parallel-data-warehouse"></a>Master 資料庫-Parallel Data Warehouse
 SQL Server PDW master 資料庫儲存應用裝置層級登入資訊和資料庫目錄。 它是位於 [控制] 節點上的 SQL Server master 資料庫。 因此，它提供類似的功能與 SQL Server PDW 因為主要提供給 SQL Server。  

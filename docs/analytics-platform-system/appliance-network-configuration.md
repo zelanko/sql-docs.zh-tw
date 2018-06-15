@@ -14,6 +14,7 @@ ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31539308"
 ---
 # <a name="appliance-network-configuration-for-analytics-platform-system"></a>Analytics Platform System 應用裝置網路組態
 建置和設定的 IP 位址在所有伺服器和從 IHV 工廠，在適用裝置修正組 Analytics Platform System (APS) 的應用裝置。 一傳遞應用裝置，則必須重新 （乙太網路） 的外部 IP 位址設定為符合特定客戶的資料中心的需求。  

@@ -1,6 +1,6 @@
 ---
 title: 執行緒集區屬性 |Microsoft 文件
-ms.date: 05/03/2018
+ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: ''
@@ -9,19 +9,21 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 34a3387a8792555188b2e0879b99ce62e70070ea
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 47efe6ddd741cb458e5f3c5eda765f2e4e28c86f
+ms.sourcegitcommit: 6e55a0a7b7eb6d455006916bc63f93ed2218eae1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35239248"
 ---
 # <a name="thread-pool-properties"></a>執行緒集區屬性
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
+
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 為許多作業使用多執行緒處理，透過平行執行多個作業改善整體伺服器效能。 為了更有效率地管理執行緒， [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 使用執行緒集區預先配置執行緒，以使下一個作業有可用的執行緒。  
   
- 每個 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 執行個體各自維護一組執行緒集區。 表格式執行個體和多維度執行個體使用執行緒集區的方式不同。 例如，只有多維度執行個體使用 **IOProcess** 執行緒集區。 因此，如同本主題所述， **PerNumaNode** 屬性對於表格式執行個體沒有意義。 在下面的 [屬性參考](#bkmk_propref) 區段中，會呼叫每個屬性的模式需求。
+ 每個 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 執行個體各自維護一組執行緒集區。 表格式執行個體和多維度執行個體使用執行緒集區的方式不同。 例如，只有多維度執行個體使用 **IOProcess** 執行緒集區。 因此， **PerNumaNode**屬性，在本文中所述來說不具意義對於表格式執行個體。 在下面的 [屬性參考](#bkmk_propref) 區段中，會呼叫每個屬性的模式需求。
   
- 本主題包含下列幾節：  
+ 本文包含下列各節：  
   
 -   [Analysis Services 的執行緒管理](#bkmk_threadarch)  
   
@@ -80,38 +82,38 @@ ms.lasthandoff: 05/10/2018
   
  屬性是依照字母順序列出。  
   
-|名稱|型別|Description|預設值|指引|  
+|[屬性]|類型|描述|預設值|指引|  
 |----------|----------|-----------------|-------------|--------------|  
 |**IOProcess** \ **Concurrency**|double|此為雙精確度浮點數值，決定可以一次佇列之執行緒數目的設定目標演算法。|2.0|此為進階屬性，除非在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 技術支援的指導之下，否則不應隨意變更。<br /><br /> 並行可用來初始化執行緒集區，會透過 Windows 的 I/O 完成通訊埠來實作。 如需詳細資料，請參閱 [I/O 完成連接埠](http://msdn.microsoft.com/library/windows/desktop/aa365198\(v=vs.85\).aspx) 。<br /><br /> 僅適用於多維度模型。|  
 |**IOProcess** \ **GroupAffinity**|string|對應至系統上之處理器群組的十六進位值陣列，可用來設定 IOProcess 執行緒集區中的執行緒與每個處理器群組中的邏輯處理器之相似性。|無|您可以使用此屬性來建立自訂相似性。 此屬性預設為空白。<br /><br /> 如需詳細資訊，請參閱＜ [設定 GroupAffinity 將執行緒相似化為處理器群組中的處理器](#bkmk_groupaffinity) ＞。<br /><br /> 僅適用於多維度模型。|  
-|**IOProcess** \ **MaxThreads**|int|此為帶正負號的 32 位元整數，指定要包含在執行緒集區中的執行緒數目上限。|0|0 表示由伺服器決定預設值。 根據預設，伺服器將此值設定為 64，或設定為邏輯處理器數目的 10 倍 (以較高者為準)。 例如，在具有超執行緒的 4 核心系統上，執行緒集區最多為 80 個執行緒。<br /><br /> 如果將此值設定為負值，則伺服器會將該值乘以邏輯處理器的數目。 例如，若在具有 32 個邏輯處理器的伺服器上設定為 -10，最大值是 320 個執行緒。<br /><br /> 最大值會根據您先前定義的任何自訂相似性遮罩而受限於可用的處理器。 例如，如果您已設定執行緒集區相似性使用 32 個處理器的其中 8 個，而您現在將 MaxThreads 設定為 -10，執行緒集區的上限就是 10 乘以 8，即 80 個執行緒。<br /><br /> 此執行緒集區屬性所使用的實際值會在服務啟動時寫入 msmdsrv 記錄檔。<br /><br /> 如需微調執行緒集區設定的詳細資訊，請參閱《 [Analysis Services 操作指南](http://msdn.microsoft.com/library/hh226085.aspx)》。<br /><br /> 僅適用於多維度模型。|  
-|**IOProcess** \ **MinThreads**|int|此為帶正負號的 32 位元整數，指定要預先配置在執行緒集區中的執行緒數目下限。|0|0 表示由伺服器決定預設值。 預設的最小值是 1。<br /><br /> 如果將此值設定為負值，則伺服器會將該值乘以邏輯處理器的數目。<br /><br /> 此執行緒集區屬性所使用的實際值會在服務啟動時寫入 msmdsrv 記錄檔。<br /><br /> 如需微調執行緒集區設定的詳細資訊，請參閱《 [Analysis Services 操作指南](http://msdn.microsoft.com/library/hh226085.aspx)》。<br /><br /> 僅適用於多維度模型。|  
-|**IOProcess** \ **PerNumaNode**|int|此為帶正負號的 32 位元整數，決定為 msmdsrv 處理序建立的執行緒集區數目。|-1|有效值為 -1、0、1、2。<br /><br /> -1 = 伺服器根據 NUMA 節點數目選取不同的 IO 執行緒集區策略。 在具有少於 4 個 NUMA 節點的系統上，伺服器行為與 0 相同 (為系統建立一個 IOProcess 執行緒集區)。 在具有 4 個 (含) 以上節點的系統上，其行為與 1 相同 (為每個節點建立 IOProcess 執行緒集區)。<br /><br /> 0 = 停用每個 NUMA 節點執行緒集區，因此只有一個 IOProcess 執行緒集區供 msmdsrv.exe 處理序使用。<br /><br /> 1 = 為每個 NUMA 節點啟用一個 IOProcess 執行緒集區。<br /><br /> 2 = 為每個邏輯處理器啟用一個 IOProcess 執行緒集區。 每個執行緒集區中的執行緒會相似化為邏輯處理器的 NUMA 節點，並將理想的處理器設為邏輯處理器。<br /><br /> 如需詳細資訊，請參閱＜ [設定 PerNumaNode 將 IO 執行緒相似化為 NUMA 節點中的處理器](#bkmk_pernumanode) ＞。<br /><br /> 僅適用於多維度模型。|  
-|**IOProcess** \ **PriorityRatio**|int|此為帶正負號的 32 位元整數，可用來確保偶爾執行較低優先權的執行緒，即使較高優先權的佇列不是空的。|2|此為進階屬性，除非在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 技術支援的指導之下，否則不應隨意變更。<br /><br /> 僅適用於多維度模型。|  
-|**IOProcess** \ **StackSizeKB**|int|此為帶正負號的 32 位元整數，可在執行緒執行時用於調整記憶體配置。|0|此為進階屬性，除非在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 技術支援的指導之下，否則不應隨意變更。<br /><br /> 僅適用於多維度模型。|  
+|**IOProcess** \ **MaxThreads**|ssNoversion|此為帶正負號的 32 位元整數，指定要包含在執行緒集區中的執行緒數目上限。|0|0 表示由伺服器決定預設值。 根據預設，伺服器將此值設定為 64，或設定為邏輯處理器數目的 10 倍 (以較高者為準)。 例如，在具有超執行緒的 4 核心系統上，執行緒集區最多為 80 個執行緒。<br /><br /> 如果將此值設定為負值，則伺服器會將該值乘以邏輯處理器的數目。 例如，若在具有 32 個邏輯處理器的伺服器上設定為 -10，最大值是 320 個執行緒。<br /><br /> 最大值會根據您先前定義的任何自訂相似性遮罩而受限於可用的處理器。 例如，如果您已設定執行緒集區相似性使用 32 個處理器的其中 8 個，而您現在將 MaxThreads 設定為 -10，執行緒集區的上限就是 10 乘以 8，即 80 個執行緒。<br /><br /> 此執行緒集區屬性所使用的實際值會在服務啟動時寫入 msmdsrv 記錄檔。<br /><br /> 如需微調執行緒集區設定的詳細資訊，請參閱《 [Analysis Services 操作指南](http://msdn.microsoft.com/library/hh226085.aspx)》。<br /><br /> 僅適用於多維度模型。|  
+|**IOProcess** \ **MinThreads**|ssNoversion|此為帶正負號的 32 位元整數，指定要預先配置在執行緒集區中的執行緒數目下限。|0|0 表示由伺服器決定預設值。 預設的最小值是 1。<br /><br /> 如果將此值設定為負值，則伺服器會將該值乘以邏輯處理器的數目。<br /><br /> 此執行緒集區屬性所使用的實際值會在服務啟動時寫入 msmdsrv 記錄檔。<br /><br /> 如需微調執行緒集區設定的詳細資訊，請參閱《 [Analysis Services 操作指南](http://msdn.microsoft.com/library/hh226085.aspx)》。<br /><br /> 僅適用於多維度模型。|  
+|**IOProcess** \ **PerNumaNode**|ssNoversion|此為帶正負號的 32 位元整數，決定為 msmdsrv 處理序建立的執行緒集區數目。|-1|有效值為 -1、0、1、2。<br /><br /> -1 = 伺服器根據 NUMA 節點數目選取不同的 IO 執行緒集區策略。 在具有少於 4 個 NUMA 節點的系統上，伺服器行為與 0 相同 (為系統建立一個 IOProcess 執行緒集區)。 在具有 4 個 (含) 以上節點的系統上，其行為與 1 相同 (為每個節點建立 IOProcess 執行緒集區)。<br /><br /> 0 = 停用每個 NUMA 節點執行緒集區，因此只有一個 IOProcess 執行緒集區供 msmdsrv.exe 處理序使用。<br /><br /> 1 = 為每個 NUMA 節點啟用一個 IOProcess 執行緒集區。<br /><br /> 2 = 為每個邏輯處理器啟用一個 IOProcess 執行緒集區。 每個執行緒集區中的執行緒會相似化為邏輯處理器的 NUMA 節點，並將理想的處理器設為邏輯處理器。<br /><br /> 如需詳細資訊，請參閱＜ [設定 PerNumaNode 將 IO 執行緒相似化為 NUMA 節點中的處理器](#bkmk_pernumanode) ＞。<br /><br /> 僅適用於多維度模型。|  
+|**IOProcess** \ **PriorityRatio**|ssNoversion|此為帶正負號的 32 位元整數，可用來確保偶爾執行較低優先權的執行緒，即使較高優先權的佇列不是空的。|2|此為進階屬性，除非在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 技術支援的指導之下，否則不應隨意變更。<br /><br /> 僅適用於多維度模型。|  
+|**IOProcess** \ **StackSizeKB**|ssNoversion|此為帶正負號的 32 位元整數，可在執行緒執行時用於調整記憶體配置。|0|此為進階屬性，除非在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 技術支援的指導之下，否則不應隨意變更。<br /><br /> 僅適用於多維度模型。|  
 |**Parsing**  \ **Long** \ **Concurrency**|double|此為雙精確度浮點數值，決定可以一次佇列之執行緒數目的設定目標演算法。|2.0|此為進階屬性，除非在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 技術支援的指導之下，否則不應隨意變更。<br /><br /> 並行可用來初始化執行緒集區，會透過 Windows 的 I/O 完成通訊埠來實作。 如需詳細資料，請參閱 [I/O 完成連接埠](http://msdn.microsoft.com/library/windows/desktop/aa365198\(v=vs.85\).aspx) 。|  
 |**Parsing**  \ **Long** \ **GroupAffinity**|string|對應至系統上之處理器群組的十六進位值陣列，可用來設定剖析執行緒與每個處理器群組中的邏輯處理器之相似性。|無|您可以使用此屬性來建立自訂相似性。 此屬性預設為空白。<br /><br /> 如需詳細資訊，請參閱＜ [設定 GroupAffinity 將執行緒相似化為處理器群組中的處理器](#bkmk_groupaffinity) ＞。|  
-|**Parsing**  \ **Long** \ **NumThreads**|int|此為帶正負號的 32 位元整數屬性，其中會定義可為冗長命令建立的執行緒數目。|0|0 表示由伺服器決定預設值。 預設行為會將 **NumThreads** 設定為 4 的絕對值或是邏輯處理器數目的 2 倍 (以較高者為準)。<br /><br /> 如果將此值設定為負值，則伺服器會將該值乘以邏輯處理器的數目。 例如，若在具有 32 個邏輯處理器的伺服器上設定為 -10，最大值是 320 個執行緒。<br /><br /> 最大值會根據您先前定義的任何自訂相似性遮罩而受限於可用的處理器。 例如，如果您已設定執行緒集區相似性使用 32 個處理器的其中 8 個，而您現在將 NumThreads 設定為 -10，執行緒集區的上限就是 10 乘以 8，即 80 個執行緒。<br /><br /> 此執行緒集區屬性所使用的實際值會在服務啟動時寫入 msmdsrv 記錄檔。|  
-|**Parsing**  \ **Long** \ **PriorityRatio**|int|此為帶正負號的 32 位元整數，可用來確保偶爾執行較低優先權的執行緒，即使較高優先權的佇列不是空的。|0|此為進階屬性，除非在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 技術支援的指導之下，否則不應隨意變更。|  
-|**Parsing**  \ **Long** \ **StackSizeKB**|int|此為帶正負號的 32 位元整數，可在執行緒執行時用於調整記憶體配置。|0|此為進階屬性，除非在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 技術支援的指導之下，否則不應隨意變更。|  
+|**Parsing**  \ **Long** \ **NumThreads**|ssNoversion|此為帶正負號的 32 位元整數屬性，其中會定義可為冗長命令建立的執行緒數目。|0|0 表示由伺服器決定預設值。 預設行為會將 **NumThreads** 設定為 4 的絕對值或是邏輯處理器數目的 2 倍 (以較高者為準)。<br /><br /> 如果將此值設定為負值，則伺服器會將該值乘以邏輯處理器的數目。 例如，若在具有 32 個邏輯處理器的伺服器上設定為 -10，最大值是 320 個執行緒。<br /><br /> 最大值會根據您先前定義的任何自訂相似性遮罩而受限於可用的處理器。 例如，如果您已設定執行緒集區相似性使用 32 個處理器的其中 8 個，而您現在將 NumThreads 設定為 -10，執行緒集區的上限就是 10 乘以 8，即 80 個執行緒。<br /><br /> 此執行緒集區屬性所使用的實際值會在服務啟動時寫入 msmdsrv 記錄檔。|  
+|**Parsing**  \ **Long** \ **PriorityRatio**|ssNoversion|此為帶正負號的 32 位元整數，可用來確保偶爾執行較低優先權的執行緒，即使較高優先權的佇列不是空的。|0|此為進階屬性，除非在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 技術支援的指導之下，否則不應隨意變更。|  
+|**Parsing**  \ **Long** \ **StackSizeKB**|ssNoversion|此為帶正負號的 32 位元整數，可在執行緒執行時用於調整記憶體配置。|0|此為進階屬性，除非在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 技術支援的指導之下，否則不應隨意變更。|  
 |**Parsing**  \ **Short** \ **Concurrency**|double|此為雙精確度浮點數值，決定可以一次佇列之執行緒數目的設定目標演算法。|2.0|此為進階屬性，除非在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 技術支援的指導之下，否則不應隨意變更。<br /><br /> 並行可用來初始化執行緒集區，會透過 Windows 的 I/O 完成通訊埠來實作。 如需詳細資料，請參閱 [I/O 完成連接埠](http://msdn.microsoft.com/library/windows/desktop/aa365198\(v=vs.85\).aspx) 。|  
 |**Parsing**  \ **Short** \ **GroupAffinity**|string|對應至系統上之處理器群組的十六進位值陣列，可用來設定剖析執行緒與每個處理器群組中的邏輯處理器之相似性。|無|您可以使用此屬性來建立自訂相似性。 此屬性預設為空白。<br /><br /> 如需詳細資訊，請參閱＜ [設定 GroupAffinity 將執行緒相似化為處理器群組中的處理器](#bkmk_groupaffinity) ＞。|  
-|**Parsing**  \ **Short** \ **NumThreads**|int|此為帶正負號的 32 位元整數屬性，其中會定義可為簡短命令建立的執行緒數目。|0|0 表示由伺服器決定預設值。 預設行為會將 **NumThreads** 設定為 4 的絕對值或是邏輯處理器數目的 2 倍 (以較高者為準)。<br /><br /> 如果將此值設定為負值，則伺服器會將該值乘以邏輯處理器的數目。 例如，若在具有 32 個邏輯處理器的伺服器上設定為 -10，最大值是 320 個執行緒。<br /><br /> 最大值會根據您先前定義的任何自訂相似性遮罩而受限於可用的處理器。 例如，如果您已設定執行緒集區相似性使用 32 個處理器的其中 8 個，而您現在將 NumThreads 設定為 -10，執行緒集區的上限就是 10 乘以 8，即 80 個執行緒。<br /><br /> 此執行緒集區屬性所使用的實際值會在服務啟動時寫入 msmdsrv 記錄檔。|  
-|**Parsing**  \ **Short** \ **PriorityRatio**|int|此為帶正負號的 32 位元整數，可用來確保偶爾執行較低優先權的執行緒，即使較高優先權的佇列不是空的。|0|此為進階屬性，除非在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 技術支援的指導之下，否則不應隨意變更。|  
-|**Parsing**  \ **Short** \ **StackSizeKB**|int|此為帶正負號的 32 位元整數，可在執行緒執行時用於調整記憶體配置。|64 * 邏輯處理器數目|此為進階屬性，除非在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 技術支援的指導之下，否則不應隨意變更。|  
+|**Parsing**  \ **Short** \ **NumThreads**|ssNoversion|此為帶正負號的 32 位元整數屬性，其中會定義可為簡短命令建立的執行緒數目。|0|0 表示由伺服器決定預設值。 預設行為會將 **NumThreads** 設定為 4 的絕對值或是邏輯處理器數目的 2 倍 (以較高者為準)。<br /><br /> 如果將此值設定為負值，則伺服器會將該值乘以邏輯處理器的數目。 例如，若在具有 32 個邏輯處理器的伺服器上設定為 -10，最大值是 320 個執行緒。<br /><br /> 最大值會根據您先前定義的任何自訂相似性遮罩而受限於可用的處理器。 例如，如果您已設定執行緒集區相似性使用 32 個處理器的其中 8 個，而您現在將 NumThreads 設定為 -10，執行緒集區的上限就是 10 乘以 8，即 80 個執行緒。<br /><br /> 此執行緒集區屬性所使用的實際值會在服務啟動時寫入 msmdsrv 記錄檔。|  
+|**Parsing**  \ **Short** \ **PriorityRatio**|ssNoversion|此為帶正負號的 32 位元整數，可用來確保偶爾執行較低優先權的執行緒，即使較高優先權的佇列不是空的。|0|此為進階屬性，除非在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 技術支援的指導之下，否則不應隨意變更。|  
+|**Parsing**  \ **Short** \ **StackSizeKB**|ssNoversion|此為帶正負號的 32 位元整數，可在執行緒執行時用於調整記憶體配置。|64 * 邏輯處理器數目|此為進階屬性，除非在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 技術支援的指導之下，否則不應隨意變更。|  
 |**Process** \ **Concurrency**|double|此為雙精確度浮點數值，決定可以一次佇列之執行緒數目的設定目標演算法。|2.0|此為進階屬性，除非在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 技術支援的指導之下，否則不應隨意變更。<br /><br /> 並行可用來初始化執行緒集區，會透過 Windows 的 I/O 完成通訊埠來實作。 如需詳細資料，請參閱 [I/O 完成連接埠](http://msdn.microsoft.com/library/windows/desktop/aa365198\(v=vs.85\).aspx) 。|  
 |**Process** \ **GroupAffinity**|string|對應至系統上之處理器群組的十六進位值陣列，可用來設定處理執行緒與每個處理器群組中的邏輯處理器之相似性。|無|您可以使用此屬性來建立自訂相似性。 此屬性預設為空白。<br /><br /> 如需詳細資訊，請參閱＜ [設定 GroupAffinity 將執行緒相似化為處理器群組中的處理器](#bkmk_groupaffinity) ＞。|  
-|**Process** \ **MaxThreads**|int|此為帶正負號的 32 位元整數，指定要包含在執行緒集區中的執行緒數目上限。|0|0 表示由伺服器決定預設值。 伺服器預設會將此值設為 64 的絕對值或是邏輯處理器數目 (以較高者為準)。 例如，在啟用超執行緒的 64 核心系統上 (導致 128 個邏輯處理器)，執行緒集區最多為 128 個執行緒。<br /><br /> 如果將此值設定為負值，則伺服器會將該值乘以邏輯處理器的數目。 例如，若在具有 32 個邏輯處理器的伺服器上設定為 -10，最大值是 320 個執行緒。<br /><br /> 最大值會根據您先前定義的任何自訂相似性遮罩而受限於可用的處理器。 例如，如果您已設定執行緒集區相似性使用 32 個處理器的其中 8 個，而您現在將 MaxThreads 設定為 -10，執行緒集區的上限就是 10 乘以 8，即 80 個執行緒。<br /><br /> 此執行緒集區屬性所使用的實際值會在服務啟動時寫入 msmdsrv 記錄檔。<br /><br /> 如需微調執行緒集區設定的詳細資訊，請參閱《 [Analysis Services 操作指南](http://msdn.microsoft.com/library/hh226085.aspx)》。|  
-|**Process** \ **MinThreads**|int|此為帶正負號的 32 位元整數，指定要預先配置在執行緒集區中的執行緒數目下限。|0|0 表示由伺服器決定預設值。 預設的最小值是 1。<br /><br /> 如果將此值設定為負值，則伺服器會將該值乘以邏輯處理器的數目。<br /><br /> 此執行緒集區屬性所使用的實際值會在服務啟動時寫入 msmdsrv 記錄檔。<br /><br /> 如需微調執行緒集區設定的詳細資訊，請參閱《 [Analysis Services 操作指南](http://msdn.microsoft.com/library/hh226085.aspx)》。|  
-|**Process** \ **PriorityRatio**|int|此為帶正負號的 32 位元整數，可用來確保偶爾執行較低優先權的執行緒，即使較高優先權的佇列不是空的。|2|此為進階屬性，除非在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 技術支援的指導之下，否則不應隨意變更。|  
-|**Process** \ **StackSizeKB**|int|此為帶正負號的 32 位元整數，可在執行緒執行時用於調整記憶體配置。|0|此為進階屬性，除非在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 技術支援的指導之下，否則不應隨意變更。|  
+|**Process** \ **MaxThreads**|ssNoversion|此為帶正負號的 32 位元整數，指定要包含在執行緒集區中的執行緒數目上限。|0|0 表示由伺服器決定預設值。 伺服器預設會將此值設為 64 的絕對值或是邏輯處理器數目 (以較高者為準)。 例如，在啟用超執行緒的 64 核心系統上 (導致 128 個邏輯處理器)，執行緒集區最多為 128 個執行緒。<br /><br /> 如果將此值設定為負值，則伺服器會將該值乘以邏輯處理器的數目。 例如，若在具有 32 個邏輯處理器的伺服器上設定為 -10，最大值是 320 個執行緒。<br /><br /> 最大值會根據您先前定義的任何自訂相似性遮罩而受限於可用的處理器。 例如，如果您已設定執行緒集區相似性使用 32 個處理器的其中 8 個，而您現在將 MaxThreads 設定為 -10，執行緒集區的上限就是 10 乘以 8，即 80 個執行緒。<br /><br /> 此執行緒集區屬性所使用的實際值會在服務啟動時寫入 msmdsrv 記錄檔。<br /><br /> 如需微調執行緒集區設定的詳細資訊，請參閱《 [Analysis Services 操作指南](http://msdn.microsoft.com/library/hh226085.aspx)》。|  
+|**Process** \ **MinThreads**|ssNoversion|此為帶正負號的 32 位元整數，指定要預先配置在執行緒集區中的執行緒數目下限。|0|0 表示由伺服器決定預設值。 預設的最小值是 1。<br /><br /> 如果將此值設定為負值，則伺服器會將該值乘以邏輯處理器的數目。<br /><br /> 此執行緒集區屬性所使用的實際值會在服務啟動時寫入 msmdsrv 記錄檔。<br /><br /> 如需微調執行緒集區設定的詳細資訊，請參閱《 [Analysis Services 操作指南](http://msdn.microsoft.com/library/hh226085.aspx)》。|  
+|**Process** \ **PriorityRatio**|ssNoversion|此為帶正負號的 32 位元整數，可用來確保偶爾執行較低優先權的執行緒，即使較高優先權的佇列不是空的。|2|此為進階屬性，除非在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 技術支援的指導之下，否則不應隨意變更。|  
+|**Process** \ **StackSizeKB**|ssNoversion|此為帶正負號的 32 位元整數，可在執行緒執行時用於調整記憶體配置。|0|此為進階屬性，除非在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 技術支援的指導之下，否則不應隨意變更。|  
 |**Query**  \ **Concurrency**|double|此為雙精確度浮點數值，決定可以一次佇列之執行緒數目的設定目標演算法。|2.0|此為進階屬性，除非在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 技術支援的指導之下，否則不應隨意變更。<br /><br /> 並行可用來初始化執行緒集區，會透過 Windows 的 I/O 完成通訊埠來實作。 如需詳細資料，請參閱 [I/O 完成連接埠](http://msdn.microsoft.com/library/windows/desktop/aa365198\(v=vs.85\).aspx) 。|  
 |**Query** \ **GroupAffinity**|string|對應至系統上之處理器群組的十六進位值陣列，可用來設定處理執行緒與每個處理器群組中的邏輯處理器之相似性。|無|您可以使用此屬性來建立自訂相似性。 此屬性預設為空白。<br /><br /> 如需詳細資訊，請參閱＜ [設定 GroupAffinity 將執行緒相似化為處理器群組中的處理器](#bkmk_groupaffinity) ＞。|  
-|**Query**  \ **MaxThreads**|int|此為帶正負號的 32 位元整數，指定要包含在執行緒集區中的執行緒數目上限。|0|0 表示由伺服器決定預設值。 根據預設，伺服器將此值設定為絕對值 10，或設定為邏輯處理器數目的 2 倍 (以較高者為準)。 例如，在具有超執行緒的 4 核心系統上，執行緒數上限為 16。<br /><br /> 如果將此值設定為負值，則伺服器會將該值乘以邏輯處理器的數目。 例如，若在具有 32 個邏輯處理器的伺服器上設定為 -10，最大值是 320 個執行緒。<br /><br /> 最大值會根據您先前定義的任何自訂相似性遮罩而受限於可用的處理器。 例如，如果您已設定執行緒集區相似性使用 32 個處理器的其中 8 個，而您現在將 MaxThreads 設定為 -10，執行緒集區的上限就是 10 乘以 8，即 80 個執行緒。<br /><br /> 此執行緒集區屬性所使用的實際值會在服務啟動時寫入 msmdsrv 記錄檔。<br /><br /> 如需微調執行緒集區設定的詳細資訊，請參閱《 [Analysis Services 操作指南](http://msdn.microsoft.com/library/hh226085.aspx)》。|  
-|**Query** \ **MinThreads**|int|此為帶正負號的 32 位元整數，指定要預先配置在執行緒集區中的執行緒數目下限。|0|0 表示由伺服器決定預設值。 預設的最小值是 1。<br /><br /> 如果將此值設定為負值，則伺服器會將該值乘以邏輯處理器的數目。<br /><br /> 此執行緒集區屬性所使用的實際值會在服務啟動時寫入 msmdsrv 記錄檔。<br /><br /> 如需微調執行緒集區設定的詳細資訊，請參閱《 [Analysis Services 操作指南](http://msdn.microsoft.com/library/hh226085.aspx)》。|  
-|**Query** \ **PriorityRatio**|int|此為帶正負號的 32 位元整數，可用來確保偶爾執行較低優先權的執行緒，即使較高優先權的佇列不是空的。|2|此為進階屬性，除非在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 技術支援的指導之下，否則不應隨意變更。|  
-|**Query**  \ **StackSizeKB**|int|此為帶正負號的 32 位元整數，可在執行緒執行時用於調整記憶體配置。|0|此為進階屬性，除非在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 技術支援的指導之下，否則不應隨意變更。|  
-|**VertiPaq** \ **CPUs**|int|此為帶正負號的 32 位元整數，指定要用於表格式查詢的處理器數目上限。|0|0 表示由伺服器決定預設值。 根據預設，伺服器將此值設定為絕對值 10，或設定為邏輯處理器數目的 2 倍 (以較高者為準)。 例如，在具有超執行緒的 4 核心系統上，執行緒數上限為 16。<br /><br /> 如果將此值設定為負值，則伺服器會將該值乘以邏輯處理器的數目。 例如，若在具有 32 個邏輯處理器的伺服器上設定為 -10，最大值是 320 個執行緒。<br /><br /> 最大值會根據您先前定義的任何自訂相似性遮罩而受限於可用的處理器。 例如，如果您已設定執行緒集區相似性使用 32 個處理器的其中 8 個，而您現在將 MaxThreads 設定為 -10，執行緒集區的上限就是 10 乘以 8，即 80 個執行緒。<br /><br /> 此執行緒集區屬性所使用的實際值會在服務啟動時寫入 msmdsrv 記錄檔。|  
+|**Query**  \ **MaxThreads**|ssNoversion|此為帶正負號的 32 位元整數，指定要包含在執行緒集區中的執行緒數目上限。|0|0 表示由伺服器決定預設值。 根據預設，伺服器將此值設定為絕對值 10，或設定為邏輯處理器數目的 2 倍 (以較高者為準)。 例如，在具有超執行緒的 4 核心系統上，執行緒數上限為 16。<br /><br /> 如果將此值設定為負值，則伺服器會將該值乘以邏輯處理器的數目。 例如，若在具有 32 個邏輯處理器的伺服器上設定為 -10，最大值是 320 個執行緒。<br /><br /> 最大值會根據您先前定義的任何自訂相似性遮罩而受限於可用的處理器。 例如，如果您已設定執行緒集區相似性使用 32 個處理器的其中 8 個，而您現在將 MaxThreads 設定為 -10，執行緒集區的上限就是 10 乘以 8，即 80 個執行緒。<br /><br /> 此執行緒集區屬性所使用的實際值會在服務啟動時寫入 msmdsrv 記錄檔。<br /><br /> 如需微調執行緒集區設定的詳細資訊，請參閱《 [Analysis Services 操作指南](http://msdn.microsoft.com/library/hh226085.aspx)》。|  
+|**Query** \ **MinThreads**|ssNoversion|此為帶正負號的 32 位元整數，指定要預先配置在執行緒集區中的執行緒數目下限。|0|0 表示由伺服器決定預設值。 預設的最小值是 1。<br /><br /> 如果將此值設定為負值，則伺服器會將該值乘以邏輯處理器的數目。<br /><br /> 此執行緒集區屬性所使用的實際值會在服務啟動時寫入 msmdsrv 記錄檔。<br /><br /> 如需微調執行緒集區設定的詳細資訊，請參閱《 [Analysis Services 操作指南](http://msdn.microsoft.com/library/hh226085.aspx)》。|  
+|**Query** \ **PriorityRatio**|ssNoversion|此為帶正負號的 32 位元整數，可用來確保偶爾執行較低優先權的執行緒，即使較高優先權的佇列不是空的。|2|此為進階屬性，除非在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 技術支援的指導之下，否則不應隨意變更。|  
+|**Query**  \ **StackSizeKB**|ssNoversion|此為帶正負號的 32 位元整數，可在執行緒執行時用於調整記憶體配置。|0|此為進階屬性，除非在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 技術支援的指導之下，否則不應隨意變更。|  
+|**VertiPaq** \ **CPUs**|ssNoversion|此為帶正負號的 32 位元整數，指定要用於表格式查詢的處理器數目上限。|0|0 表示由伺服器決定預設值。 根據預設，伺服器將此值設定為絕對值 10，或設定為邏輯處理器數目的 2 倍 (以較高者為準)。 例如，在具有超執行緒的 4 核心系統上，執行緒數上限為 16。<br /><br /> 如果將此值設定為負值，則伺服器會將該值乘以邏輯處理器的數目。 例如，若在具有 32 個邏輯處理器的伺服器上設定為 -10，最大值是 320 個執行緒。<br /><br /> 最大值會根據您先前定義的任何自訂相似性遮罩而受限於可用的處理器。 例如，如果您已設定執行緒集區相似性使用 32 個處理器的其中 8 個，而您現在將 MaxThreads 設定為 -10，執行緒集區的上限就是 10 乘以 8，即 80 個執行緒。<br /><br /> 此執行緒集區屬性所使用的實際值會在服務啟動時寫入 msmdsrv 記錄檔。|  
   |**VertiPaq** \ **GroupAffinity**|string|對應至系統上之處理器群組的十六進位值陣列，可用來設定處理執行緒與每個處理器群組中的邏輯處理器之相似性。|無|您可以使用此屬性來建立自訂相似性。 此屬性預設為空白。<br /><br /> 如需詳細資訊，請參閱＜ [設定 GroupAffinity 將執行緒相似化為處理器群組中的處理器](#bkmk_groupaffinity) ＞。 僅適用於表格式。| 
     
 ##  <a name="bkmk_groupaffinity"></a> 設定 GroupAffinity 將執行緒相似化為處理器群組中的處理器  

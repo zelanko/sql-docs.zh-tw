@@ -14,6 +14,7 @@ ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31544920"
 ---
 # <a name="parallel-data-warehouse-components---analytics-platform-system"></a>平行資料倉儲元件-Analytics Platform System
 此文章說明裝置軟體，以及 Analytics Platform System 的非裝置軟體元件。  

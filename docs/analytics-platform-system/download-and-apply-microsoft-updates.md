@@ -14,6 +14,7 @@ ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31539518"
 ---
 # <a name="download-and-apply-microsoft-updates-for-analytics-platform-system"></a>下載並套用 Microsoft 更新的 Analytics Platform System
 本主題討論如何從 Microsoft Update 類別目錄至 Windows Server Update Services (WSUS) 下載更新，並將這些更新套用至 Analytics Platform System 應用裝置伺服器。 Microsoft Update 將適用於 Windows 和 SQL Server 安裝所有適用的更新。 VMM 虛擬機器應用裝置上安裝 WSUS。  

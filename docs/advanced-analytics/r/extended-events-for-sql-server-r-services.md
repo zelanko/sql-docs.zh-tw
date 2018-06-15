@@ -12,6 +12,7 @@ ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31202680"
 ---
 # <a name="extended-events-for-sql-server-machine-learning-services"></a>SQL Server 機器學習服務的擴充的事件
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -91,7 +92,7 @@ SQL Server 機器學習服務會啟動一些在 SQL Server 處理序外執行的
   
 + **BXLServer**是支援外部指令碼語言，例如 R 或 Python SQL 擴充性的附屬處理序。 BxlServer 的個別執行個體是針對每個外部語言的執行個體啟動。
   
-    若要擷取 BXLServer 的相關事件，加上*.config* R 或 Python 安裝目錄中的檔案。  在預設安裝中，這會是：
+    若要擷取 BXLServer 的相關事件，加上 *.config* R 或 Python 安裝目錄中的檔案。  在預設安裝中，這會是：
      
     **:** `C:\Program Files\Microsoft SQL Server\MSSQL_version_number.MSSQLSERVER\R_SERVICES\library\RevoScaleR\rxLibs\x64`。  
 

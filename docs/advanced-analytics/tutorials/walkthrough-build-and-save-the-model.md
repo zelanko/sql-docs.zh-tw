@@ -12,6 +12,7 @@ ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31204150"
 ---
 # <a name="build-an-r-model-and-save-to-sql-server"></a>建立 R 模型，並儲存至 SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -156,7 +157,7 @@ ms.lasthandoff: 04/16/2018
 
 因為[!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)]可讓您叫用 R 模型使用[!INCLUDE[tsql](../../includes/tsql-md.md)]預存程序，所以可以輕鬆地在用戶端應用程式中使用 R。
 
-不過，您必須將模型儲存至用於生產環境的資料庫，才能從外部應用程式呼叫模型。 在 [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)]中，所定型模型會以二進位形式儲存在 **varbinary(max)**類型的單一資料行中。
+不過，您必須將模型儲存至用於生產環境的資料庫，才能從外部應用程式呼叫模型。 在 [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)]中，所定型模型會以二進位形式儲存在 **varbinary(max)** 類型的單一資料行中。
 
 因此，將定型模型從 R 移至 SQL Server 包含下列步驟：
 

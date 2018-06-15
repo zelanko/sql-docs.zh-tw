@@ -1,31 +1,20 @@
 ---
 title: PredictHistogram (DMX) |Microsoft 文件
-ms.custom: ''
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.component: data-mining
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: language-reference
-f1_keywords:
-- PredictHistogram
-dev_langs:
-- DMX
-helpviewer_keywords:
-- PredictHistogram function
-ms.assetid: 85ffc542-96e7-4f58-aaa3-34d76befcedf
-caps.latest.revision: 34
-author: Minewiskan
+ms.date: 06/07/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: dmx
+ms.topic: conceptual
 ms.author: owend
-manager: erikre
-ms.openlocfilehash: a7b6c9df43d66d69b9dea1e06bea646a6a31d4dc
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: f7e7129985eac09d741ea9d00c551a9507ee92c9
+ms.sourcegitcommit: 8f0faa342df0476884c3238e36ae3d9634151f87
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/07/2018
+ms.locfileid: "34842141"
 ---
 # <a name="predicthistogram-dmx"></a>PredictHistogram (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -103,7 +92,7 @@ NATURAL PREDICTION JOIN
  [PredictStdev &#40;DMX&#41;](../dmx/predictstdev-dmx.md)   
  [PredictSupport &#40;DMX&#41;](../dmx/predictsupport-dmx.md)   
  [PredictVariance &#40;DMX&#41;](../dmx/predictvariance-dmx.md)   
- [資料採礦演算法 &#40;Analysis Services-資料採礦 &#41;](../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
+ [資料採礦演算法&#40;Analysis Services-資料採礦&#41;](../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
  [資料採礦延伸模組&#40;DMX&#41;函數參考](../dmx/data-mining-extensions-dmx-function-reference.md)   
  [函式&#40;DMX&#41;](../dmx/functions-dmx.md)   
  [一般預測函數&#40;DMX&#41;](../dmx/general-prediction-functions-dmx.md)  

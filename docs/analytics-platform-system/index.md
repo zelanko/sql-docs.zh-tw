@@ -14,6 +14,7 @@ ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31544970"
 ---
 # <a name="microsoft-analytics-platform-system"></a>Microsoft Analytics Platform System  
 Microsoft Analytics Platform System (APS) 是專為資料倉儲和巨量資料分析而設計的資料平台，可提供深層資料整合、高速查詢處理、高擴充性儲存體和端對端商業智慧方案的簡易維護。  

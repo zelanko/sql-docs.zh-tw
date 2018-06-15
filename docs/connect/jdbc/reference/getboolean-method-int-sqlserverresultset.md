@@ -24,6 +24,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32831833"
 ---
 # <a name="getboolean-method-int-sqlserverresultset"></a>getBoolean 方法 (int) (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -51,7 +52,7 @@ public boolean getBoolean(int columnIndex)
 ## <a name="remarks"></a>備註  
  GetBoolean 方法 java.sql.ResultSet 介面中所指定此 getBoolean 方法。  
   
- 只有在數字和字元資料類型上才支援這個方法。 它會將值"1"，1，為和"**true**"來**，則為 true**，和值"0"，0，和"**false**"至**false**。 如果是所有其他值，則不會定義這個行為。  
+ 只有在數字和字元資料類型上才支援這個方法。 它會將值"1"，1，為和"**true**"來 **，則為 true**，和值"0"，0，和"**false**"至**false**。 如果是所有其他值，則不會定義這個行為。  
   
 ## <a name="see-also"></a>另請參閱  
  [getBoolean 方法&#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/getboolean-method-sqlserverresultset.md)   
