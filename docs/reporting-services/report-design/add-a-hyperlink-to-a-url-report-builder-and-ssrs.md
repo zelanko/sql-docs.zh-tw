@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33023025"
 ---
 # <a name="add-a-hyperlink-to-a-url-report-builder-and-ssrs"></a>將超連結加入到 URL (報表產生器及 SSRS)
 了解如何將文字方塊、影像、圖表和量測計的超連結動作加入 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)]  分頁報表。 這些連結可以移至其他報表、移至報表中的書籤，或是移至靜態或動態 URL。 

@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33021425"
 ---
 # <a name="customize-the-parameters-pane-in-a-report-report-builder"></a>Customize the Parameters Pane in a Report (Report Builder)
   在報表產生器中使用參數來建立分頁報表時，您可以自訂 [參數] 窗格。 在報表設計檢視中，您可以將參數拖曳到 [參數] 窗格中的特定資料行和資料列。 您可以新增及移除資料行以變更窗格配置。  

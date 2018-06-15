@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33021015"
 ---
 # <a name="display-headers-and-footers-with-a-group-report-builder-and-ssrs"></a>與群組一起顯示頁首和頁尾 (報表產生器及 SSRS)
   您可以協助控制靜態資料列 (例如群組頁首或頁尾) 是否會與動態資料列 (與 Tablix 資料區中的群組有關聯) 一起轉譯。  

@@ -25,6 +25,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33064146"
 ---
 # <a name="bufferwithcurves-geometry-data-type"></a>BufferWithCurves (geometry 資料類型)
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
@@ -66,7 +67,7 @@ SQL Server 傳回類型：**geometry**
 |distance 值|維度類型|傳回的空間類型|  
 |--------------------|---------------------|---------------------------|  
 |distance < 0|零或一維|空的 **GeometryCollection** 執行個體|  
-|distance < 0|二維或以上|具有負數緩衝的 **CurvePolygon** 或 **GeometryCollection** 執行個體。 **注意：**負數緩衝可能會建立空的 **GeometryCollection**|  
+|distance < 0|二維或以上|具有負數緩衝的 **CurvePolygon** 或 **GeometryCollection** 執行個體。 **注意：** 負數緩衝可能會建立空的 **GeometryCollection**|  
 |distance = 0|所有維度|叫用端 **geometry** 執行個體的複本|  
 |distance > 0|所有維度|**CurvePolygon** 或 **GeometryCollection** 執行個體|  
   

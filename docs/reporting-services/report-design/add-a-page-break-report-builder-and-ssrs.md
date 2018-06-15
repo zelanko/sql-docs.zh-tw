@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33019985"
 ---
 # <a name="add-a-page-break-report-builder-and-ssrs"></a>加入分頁符號 (報表產生器及 SSRS)
   您可以在資料區內的矩形、資料區或群組中加入分頁符號，以控制每頁的資料量。 加入分頁符號可以改善已發行報表的效能，因為在檢視報表時，只有每個頁面上的項目需要進行處理。 當整個報表只有單一頁面時，必須先將所有的項目進行處理，才能檢視報表。  

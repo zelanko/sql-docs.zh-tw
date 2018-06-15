@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33018965"
 ---
 # <a name="generate-data-feeds-from-a-report-report-builder-and-ssrs"></a>從報表產生資料摘要 (報表產生器及 SSRS)
 
