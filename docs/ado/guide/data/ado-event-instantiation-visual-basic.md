@@ -2,7 +2,6 @@
 title: ADO 事件具現化： Visual Basic |Microsoft 文件
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -17,11 +16,12 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 27487b6eeda322c7e48036fc994ec497f39d98fe
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 450d26f4624699b407432e6d7e3713494acf1619
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35269997"
 ---
 # <a name="ado-event-instantiation-visual-basic"></a>ADO 事件具現化： Visual Basic
 若要處理在 Microsoft® Visual Basic® 中的 ADO 事件，您必須宣告模組層級變數使用**WithEvents**關鍵字。 變數可以宣告只能為類別模組的一部分，但必須在模組層級中宣告。 這並不限制它看起來，不過，因為 Visual Basic**表單**物件也是類別。 最簡單的方式來處理 ADO 事件是宣告變數使用**WithEvents**。 下列範例會處理**ConnectComplete**事件**連接**物件：  

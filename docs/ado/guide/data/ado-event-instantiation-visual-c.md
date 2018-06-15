@@ -2,7 +2,6 @@
 title: ADO 事件具現化： Visual c + + |Microsoft 文件
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -17,11 +16,12 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 9455000386b7bb64073fec6d07fe106b6ad819dc
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 699432fff2c849f4f89e7cadebe8dd4afabdd8ec
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35271077"
 ---
 # <a name="ado-event-instantiation-visual-c"></a>ADO 事件具現化： Visual c + +
 這是如何在 Microsoft® C++® ADO 事件具現化的圖解描述。 請參閱[ADO 事件模型範例 （VC + +）](../../../ado/reference/ado-api/ado-events-model-example-vc.md)如需完整說明。  

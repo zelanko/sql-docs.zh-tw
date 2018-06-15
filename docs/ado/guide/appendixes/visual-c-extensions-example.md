@@ -2,7 +2,6 @@
 title: Visual c + + 擴充功能範例 |Microsoft 文件
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,11 +19,12 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 420e9a26ff92f515b7b638d859172084a2b5855f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 6543dbf03ab2d81e721c304b1c135509afd081b1
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35270287"
 ---
 # <a name="visual-c-extensions-example"></a>Visual c + + 擴充功能範例
 此程式會顯示是如何從欄位擷取值，將其轉換為 C/c + + 變數。  

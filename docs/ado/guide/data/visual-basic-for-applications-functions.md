@@ -2,7 +2,6 @@
 title: 應用程式函式的 Visual Basic |Microsoft 文件
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,11 +19,12 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 20d9f7f726ac705ebdf93484c5e7ecef5f3ad54d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: f2849bd9164ca145b38aa05aa0357cbc42f2719f
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35273227"
 ---
 # <a name="visual-basic-for-applications-functions"></a>Visual Basic 應用程式函式
 下列 Visual Basic 應用程式函式可以用於資料成形 CALC 運算式：  
@@ -34,11 +34,11 @@ ms.lasthandoff: 05/03/2018
 |Abs|Asc|Atn|CBool|CByte|CCur|  
 |CDate|CDbl|Chr|ChrB|ChrW|Chr$|  
 |ChrB $|CInt|CLng|Cos|CSng|CStr|  
-|Cvar|CVDate|CVErr|日期|Date$|DateAdd|  
+|Cvar|CVDate|CVErr|date|Date$|DateAdd|  
 |DateDiff|DatePart|DateSerial|DateValue|Day|DDB|  
-|錯誤|Error$|Exp|Fix|格式|Format$|  
+|錯誤|Error$|Exp|Fix|[格式]|Format$|  
 |FV|Hex|Hex$|Hour|IIF|InStr|  
-|整數|IPmt|IRR|IsDate|IsEmpty|IsError|  
+|int|IPmt|IRR|IsDate|IsEmpty|IsError|  
 |IsNull|IsNumeric|IsObject|LCase|LCase$|Left|  
 |LeftB|Left$|LeftB $|Len|Log|LTrim|  
 |LTrim$|Mid|Mid$|Minute|MIRR|Month|  
@@ -46,7 +46,7 @@ ms.lasthandoff: 05/03/2018
 |PPmt|PV|QBColor|Rate|RGB|Right|  
 |RightB|Right$|RightB $|Rnd|RTrim|RTrim $|  
 |第二個|Sgn|Sin|SLN|Space|Space$|  
-|Sqr|Str|Str$|StrComp|StrConv|字串|  
+|Sqr|Str|Str$|StrComp|StrConv|String|  
 |String$|SYD|Tan|Time|Time$|Timer|  
 |TimeSerial|TimeValue|Trim|Trim$|TypeName|UCase|  
 |UCase$|Val|VarType|Weekday|Year||  

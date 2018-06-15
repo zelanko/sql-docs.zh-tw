@@ -2,7 +2,6 @@
 title: 處理 ADO 事件 |Microsoft 文件
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,11 +18,12 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 8c8c1bf091c6c41b8700679cce7b696da89e9eff
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 6203797b27f8cd093e41b34b5507e1dcdba94039
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35271427"
 ---
 # <a name="handling-ado-events"></a>處理 ADO 事件
 ADO 事件模型支援發出特定同步和非同步 ADO 作業*事件*，或在作業開始之前或之後完成的通知。 事件是實際的事件處理常式常式，在您的應用程式中定義的呼叫。  

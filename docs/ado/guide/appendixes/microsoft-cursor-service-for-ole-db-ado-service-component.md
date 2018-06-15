@@ -2,7 +2,6 @@
 title: OLE DB （ADO 服務元件） 的 Microsoft 資料指標服務 |Microsoft 文件
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -18,11 +17,12 @@ caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a829fa8510054489bdc8f310941d9526f25b82a9
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d119e537cd400f2bfd69720f17485366c23b4582
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35271327"
 ---
 # <a name="microsoft-cursor-service-for-ole-db-overview"></a>Microsoft 資料指標服務的 OLE DB 概觀
 OLE DB 的資料指標審查補充資料提供者的資料指標支援函數。 如此一來，使用者會感知相當一致的功能，從所有資料提供者。
@@ -60,7 +60,7 @@ Recordset1.Properties.Item("Command Time out") = 50
 > [!NOTE]
 >  動態屬性 DBPROP_SERVERDATAONINSERT 不支援資料指標服務，即使基礎資料提供者支援它。
 
-|屬性名稱|Description|
+|屬性名稱|描述|
 |-------------------|-----------------|
 |自動重新計算 (DBPROP_ADC_AUTORECALC)|建立 Data Shaping Service 的這個值表示頻率的資料錄集的計算和彙總資料行被計算的。 預設值 (值 = 1) 是 Data Shaping Service 判斷的值已變更時重新計算。 如果值為 0，計算或彙總的資料行只會計算一開始建立階層時。|
 |批次大小 (DBPROP_ADC_BATCHSIZE)|表示可以再傳送至資料存放區中批次處理的 update 陳述式數目。 批次中的多個陳述式，儲存的資料較少的來回行程。|
@@ -86,7 +86,7 @@ rs.Properties("Optimize") = True
 ## <a name="built-in-property-behavior"></a>內建屬性行為
  OLE DB 資料指標服務也會影響某些內建屬性的行為。
 
-|屬性名稱|Description|
+|屬性名稱|描述|
 |-------------------|-----------------|
 |[CursorType](../../../ado/reference/ado-api/cursortype-property-ado.md)|補充適用於資料指標的類型**資料錄集**。|
 |[LockType](../../../ado/reference/ado-api/locktype-property-ado.md)|補充適用於鎖定的類型**資料錄集**。 啟用批次更新。|

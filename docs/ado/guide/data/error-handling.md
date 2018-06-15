@@ -2,7 +2,6 @@
 title: 錯誤處理 | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,11 +18,12 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e302e38ee983f8057aa2ce1be321e195abe0afbb
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: db8900b50f4aa73fe674a6829c384a8956c93619
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35270497"
 ---
 # <a name="error-handling"></a>錯誤處理
 ADO 使用數種不同方法來通知發生之錯誤的應用程式。 本章節將討論當您使用 ADO 和您的應用程式接收通知的方式，可以發生之錯誤的類型。 它結束時，會發出有關如何處理這些錯誤的建議。  

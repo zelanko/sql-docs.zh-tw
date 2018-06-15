@@ -2,7 +2,6 @@
 title: Visual c + + 延伸模組用於 ADO |Microsoft 文件
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,11 +19,12 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d27cc7776c59364ebc0b69c4872dc8b78ee51116
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 9c9200939a34f3d1a2af936388acaa6740387416
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35270547"
 ---
 # <a name="visual-c-extensions"></a>Visual c + + 擴充功能
 程式設計 Visual c + + 的 ADO 的慣用的方法使用 **#import**指示詞中所述[Microsoft Visual c + + ADO Programming](../../../ado/guide/appendixes/visual-c-ado-programming.md)。 不過，舊版的 ADO 隨附的 Visual c + + 的程式設計替代方法： Visual c + + 擴充功能。 本章節記載這項功能的人員必須維護 Visual c + + 擴充功能的程式碼，但新的 ADO 程式碼應該使用 # 來撰寫**匯入**。

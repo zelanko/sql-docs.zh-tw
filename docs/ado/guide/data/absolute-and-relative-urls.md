@@ -2,7 +2,6 @@
 title: 絕對和相對 Url |Microsoft 文件
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,14 +18,15 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ba1ab2c9bdc1adbc063cd05e88cf9d0001efb15c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 1af20bd6012b37ee798ad16cd0bf0456458c6083
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35270537"
 ---
 # <a name="absolute-and-relative-urls"></a>絕對和相對 Url
-URL 指定的位置儲存在本機或網路的電腦上的目標。 目標可以是檔案、 目錄、 HTML 網頁、 影像、 程式及等等*。*  
+URL 指定的位置儲存在本機或網路的電腦上的目標。 目標可以是檔案、 目錄、 HTML 網頁、 影像、 程式及等等 *。*  
   
  *絕對 URL*包含要尋找的資源所需的所有資訊。  
   
@@ -46,7 +46,7 @@ URL 指定的位置儲存在本機或網路的電腦上的目標。 目標可以
  指定連至目標目錄序列。 如果*資源*已省略，目標是中的最後一個目錄*路徑*。  
   
  *resource*  
- 如果包含，*資源*是目標，且通常是檔案的名稱。 它可能是*簡單的檔案，*包含單一的二進位資料流的位元組，或*結構化文件，*包含一或多個儲存體和二進位資料流的位元組。  
+ 如果包含，*資源*是目標，且通常是檔案的名稱。 它可能是*簡單的檔案，* 包含單一的二進位資料流的位元組，或*結構化文件，* 包含一或多個儲存體和二進位資料流的位元組。  
   
 ## <a name="url-scheme-registration"></a>URL 配置註冊  
  如果提供者支援的 Url，提供者將會註冊一個或多個 URL 配置。 註冊表示，任何使用結構描述的 Url 會自動叫用已註冊的提供者。 例如， *http*配置已向[Microsoft OLE DB Provider for Internet Publishing](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md)。 ADO 假設所有 Url 中加上 「 http 」 都代表 Web 資料夾或檔案，可與網際網路發行的提供者。 註冊您的提供者結構描述的相關資訊，請參閱您的提供者文件。  
@@ -89,7 +89,7 @@ recordset.Open "", "URL=http://YourServer/Winnt/",,,adCmdTableDirect
 ## <a name="ole-db-provider-supplied-url-schemes"></a>OLE DB 提供者提供的 URL 結構描述  
  完整的 URL 的前置部分是*配置*用來存取 URL 的其餘部分所識別的資源。 範例包括 HTTP （超文字傳輸通訊協定） 和 FTP （檔案傳輸通訊協定）。  
   
- ADO 支援辨識其本身的 URL 結構描述的 OLE DB 提供者。 例如， [Microsoft OLE DB Provider for Internet Publishing](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md)*，*存取 「 發行 」 的 Windows 2000 檔案會辨識現有 HTTP 配置。  
+ ADO 支援辨識其本身的 URL 結構描述的 OLE DB 提供者。 例如， [Microsoft OLE DB Provider for Internet Publishing](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md)*，* 存取 「 發行 」 的 Windows 2000 檔案會辨識現有 HTTP 配置。  
   
 ## <a name="see-also"></a>另請參閱  
  [連接物件 (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)   

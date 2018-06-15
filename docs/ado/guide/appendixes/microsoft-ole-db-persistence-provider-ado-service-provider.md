@@ -2,7 +2,6 @@
 title: Microsoft OLE DB 持續性提供者 （ADO 服務提供者） |Microsoft 文件
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,11 +18,12 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 9c47487547153426b2826792c5af0ad3bbeb7371
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 37144f19abfb60d13a24818d8b47a3531affcc08
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35270387"
 ---
 # <a name="microsoft-ole-db-persistence-provider-overview"></a>Microsoft OLE DB 持續性提供者概觀
 Microsoft OLE DB 持續性提供者可讓您儲存[資料錄集](../../../ado/reference/ado-api/recordset-object-ado.md)物件到檔案，並稍後還原，**資料錄集**檔案中的物件。 結構描述資訊、 資料，並且保留暫止的變更。
@@ -40,7 +40,7 @@ Microsoft OLE DB 持續性提供者可讓您儲存[資料錄集](../../../ado/re
 ## <a name="errors"></a>錯誤
  可以在應用程式中偵測到此提供者所發出的下列錯誤。
 
-|常數|Description|
+|常數|描述|
 |--------------|-----------------|
 |E_BADSTREAM|開啟這個檔案沒有有效的格式 （也就是格式不 ADTG 或 XML）。|
 |E_CANTPERSISTROWSET|**資料錄集**儲存物件具有防止它所儲存的特性。|
@@ -52,7 +52,7 @@ Microsoft OLE DB 持續性提供者可讓您儲存[資料錄集](../../../ado/re
 
  如需有關持續儲存**資料錄集**物件，請參閱[資料錄集持續性](../../../ado/guide/data/more-about-recordset-persistence.md)。
 
- 當資料流用來開啟**資料錄集，**不應該指定以外的任何參數*來源*參數**開啟**方法。
+ 當資料流用來開啟**資料錄集，** 不應該指定以外的任何參數*來源*參數**開啟**方法。
 
 ## <a name="see-also"></a>另請參閱
 [Microsoft OLE DB 持續性提供者 （ADO 服務提供者）](../../../ado/guide/appendixes/microsoft-ole-db-persistence-provider-ado-service-provider.md)

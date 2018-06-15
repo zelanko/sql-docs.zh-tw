@@ -2,7 +2,6 @@
 title: ADO 物件和集合 |Microsoft 文件
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -17,16 +16,17 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 03671824ef02a7316398f1d9b8d51d57845be736
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 3d8b1967071b5dc420577ecbee3f1b124d917057
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35271377"
 ---
 # <a name="ado-objects-and-collections"></a>ADO 物件和集合
 ADO 是由下列九個物件和四個集合所組成。  
   
-|物件或集合|Description|  
+|物件或集合|描述|  
 |--------------------------|-----------------|  
 |**連接**物件|代表資料來源的唯一工作階段。 在用戶端/伺服器資料庫系統，可能相當於實際的網路連線到伺服器。 根據提供者、 某些集合、 方法或屬性所支援的功能**連接**物件可能無法使用。|  
 |**Command** 物件|用來定義特定的命令，例如 SQL 查詢，要針對資料來源執行。|  

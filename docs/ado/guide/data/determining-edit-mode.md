@@ -2,7 +2,6 @@
 title: 判斷編輯模式 |Microsoft 文件
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -18,18 +17,19 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 4532f65823d4aed88c4db05e03571497f8eac6b5
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: e5971234a7e758318acaac80b830d312327e14e8
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35270347"
 ---
 # <a name="determining-edit-mode"></a>判斷編輯模式
 ADO 會維護目前記錄相關聯的編輯緩衝區。 **EditMode**屬性會指出是否已變更到這個緩衝區，或是否會建立新的記錄。 使用**EditMode**來判斷目前記錄的編輯狀態。 您可以測試暫止的變更如果編輯程序已中斷，並判斷是否需要使用**更新**或**CancelUpdate**方法。  
   
  **EditMode**傳回的其中一個**EditModeEnum**下表中列出的常數。  
   
-|常數|Description|  
+|常數|描述|  
 |--------------|-----------------|  
 |**adEditNone**|表示未編輯的作業正在進行中。|  
 |**adEditInProgress**|指出目前記錄中的資料已修改但尚未儲存。|  

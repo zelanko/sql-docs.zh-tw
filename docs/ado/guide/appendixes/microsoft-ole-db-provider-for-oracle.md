@@ -2,7 +2,6 @@
 title: Microsoft OLE DB Provider for Oracle |Microsoft 文件
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,11 +18,12 @@ caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: de312ff17a7d66bf58a5b8f1fb7a6c33aa27acec
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 241a3ac024ef2a15bfe403e49ea9778939d22bc8
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35271097"
 ---
 # <a name="microsoft-ole-db-provider-for-oracle-overview"></a>Microsoft OLE DB Provider for Oracle 概觀
 > [!IMPORTANT]
@@ -51,7 +51,7 @@ MSDAORA
 
  字串，包含這些關鍵字：
 
-|關鍵字|Description|
+|關鍵字|描述|
 |-------------|-----------------|
 |**提供者**|指定 OLE DB Provider for Oracle。|
 |**資料來源**|指定伺服器的名稱。|
@@ -66,7 +66,7 @@ MSDAORA
 
  這些參數是以完整描述[OLE DB 程式設計人員參考](http://msdn.microsoft.com/en-us/3c5e2dd5-35e5-4a93-ac3a-3818bb43bbf8)。 [ADO 動態屬性索引](../../../ado/reference/ado-api/ado-dynamic-property-index.md)提供這些參數名稱和對應的 OLE DB 屬性之間的交互參考。
 
-|매개 변수|Description|
+|參數|描述|
 |---------------|-----------------|
 |**視窗控制代碼**|表示要用於提示您輸入其他資訊的視窗控制代碼。|
 |**地區設定識別碼**|表示唯一 32 位元數字 （例如，1033年），指定與使用者的語言喜好設定。 這些喜好設定指出如何格式化日期和時間，依字母順序排序項目，字串比較時，依此類推。|

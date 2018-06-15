@@ -2,7 +2,6 @@
 title: 判斷支援的項目 |Microsoft 文件
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -18,11 +17,12 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: dd86d96489e59926935567a0f8aa7cb23bf9f3ae
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d6eaf6ed08d6e79f8428e86b983794cb32c6447d
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35270587"
 ---
 # <a name="determining-what-is-supported"></a>判斷支援的項目
 **支援**方法用來判斷是否指定**資料錄集**物件支援特定類型的功能。 它有下列語法：  

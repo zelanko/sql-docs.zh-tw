@@ -2,7 +2,6 @@
 title: '附錄 b: ADO 錯誤 |Microsoft 文件'
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -17,11 +16,12 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: de73e36a55f03f88ceba824d89a2514a8733bb26
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 1f27575e48ddc9b8e1f5e6b3add5700a981ceefe
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35270127"
 ---
 # <a name="appendix-b-ado-error-codes"></a>附錄 b: ADO 錯誤代碼
 請參閱下列主題以取得有關特定錯誤訊息的詳細資訊：

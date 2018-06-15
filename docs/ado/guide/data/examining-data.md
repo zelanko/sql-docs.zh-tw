@@ -2,7 +2,6 @@
 title: 檢查資料 |Microsoft 文件
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,11 +19,12 @@ caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: af64d26a296d53c94fa5ac99496ef591c8180d81
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 14753bac9e8004c77984b00ff490047c62e2c489
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35270943"
 ---
 # <a name="examining-data"></a>檢查資料
 [擷取資料](../../../ado/guide/data/getting-data.md)> 一節說明如何從資料來源擷取資料，做為一或多個**資料錄集**物件。 本節將討論**資料錄集**的詳細資料，包括如何瀏覽**資料錄集**並檢視其資料。  

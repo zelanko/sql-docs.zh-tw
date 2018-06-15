@@ -2,7 +2,6 @@
 title: ADO 錯誤 |Microsoft 文件
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 02/15/2017
@@ -17,11 +16,12 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a36f5b96ac0c04b6315ba5a135bbab0dbe75df2b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: adae5d5247a3d0966ad5685eacc1a6cdebdc5437
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35270847"
 ---
 # <a name="ado-run-time-errors"></a>ADO 執行階段錯誤
 ADO 錯誤會回報到您的程式，為執行階段錯誤。 您可以使用您的程式語言的錯誤截取機制來攔截和處理它們。 例如，在 Visual Basic 中使用**On Error**陳述式。 在 Visual c + + 中，它會取決於您用來存取 ADO 文件庫的方法。 使用 #import， **try catch**區塊。 否則，c + + 程式設計人員必須明確地擷取物件時發生錯誤，藉由呼叫**GetErrorInfo**。 下列 Visual Basic sub 程序示範設限 ADO 錯誤：
