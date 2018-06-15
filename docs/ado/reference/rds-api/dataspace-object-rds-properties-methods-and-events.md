@@ -2,7 +2,6 @@
 title: 資料空間物件 (RDS) 屬性、 方法和事件 |Microsoft 文件
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -18,11 +17,12 @@ caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: c8e6e96b7f52281e9eae5d3b1dc5680bca9d940e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 9525f97848e84057534813605a1bc4bc3c6d946d
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35288385"
 ---
 # <a name="dataspace-object-rds-properties-methods-and-events"></a>資料空間物件 (RDS) 屬性、 方法和事件
 > [!IMPORTANT]

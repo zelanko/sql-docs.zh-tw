@@ -2,7 +2,6 @@
 title: IndexNulls 屬性 (ADOX) |Microsoft 文件
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -24,11 +23,12 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 9200df4424126c06c36aa31b648787035c799486
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 7d32b88053acacbcd9a7c184668f46ee6660022b
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35285997"
 ---
 # <a name="indexnulls-property-adox"></a>IndexNulls 屬性 (ADOX)
 指示其索引欄位中具有 null 值的記錄是否有索引項目。  

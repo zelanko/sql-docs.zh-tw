@@ -5,7 +5,6 @@ ms.custom: ''
 ms.date: 03/26/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: ole-db-rowsets
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: connectivity
@@ -19,18 +18,19 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 35a330703d6664422bf4de80a6ac13e309a83549
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 2526d6279d9ef4c38249b5fd841a0336e418b6df
+ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35306397"
 ---
 # <a name="rowset-properties-and-behaviors"></a>資料列集屬性和行為
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
   這些是 SQL Server 資料列集屬性，OLE DB 驅動程式。  
   
-|屬性識別碼|Description|  
+|屬性識別碼|描述|  
 |-----------------|-----------------|  
 |DBPROP_ABORTPRESERVE|R/W：讀取/寫入<br /><br /> 預設值：VARIANT_FALSE<br /><br /> 描述：中止操作後的資料列集行為取決於此屬性。<br /><br /> VARIANT_FALSE: SQL Server OLE DB 驅動程式，使資料列集失效之後中止作業。 資料列集物件的功能都會幾乎遺失。 它只支援**IUnknown**作業和未處理的資料列與存取子控制代碼的版本。<br /><br /> VARIANT_TRUE: SQL Server OLE DB 驅動程式會維護有效的資料列集。|  
 |DBPROP_ACCESSORDER|R/W：讀取/寫入<br /><br /> 預設值：DBPROPVAL_AO_RANDOM<br /><br /> 描述：存取順序 必須在資料列集上存取資料行的順序。<br /><br /> DBPROPVAL_AO_RANDOM：資料行可以依任何順序進行存取。<br /><br /> DBPROPVAL_AO_SEQUENTIALSTORAGEOBJECTS：當做儲存物件繫結的資料行僅能以資料行序數決定的循序順序進行存取。<br /><br /> DBPROPVAL_AO_SEQUENTIAL：所有資料行都必須以資料行序數決定的循序順序進行存取。|  
@@ -48,7 +48,7 @@ ms.lasthandoff: 05/03/2018
 |DBPROP_COMMITPRESERVE|R/W：讀取/寫入<br /><br /> 預設值：VARIANT_FALSE<br /><br /> 描述：認可作業後的資料列集行為取決於此屬性。<br /><br /> VARIANT_TRUE: SQL Server OLE DB 驅動程式會維護有效的資料列集。<br /><br /> VARIANT_FALSE: SQL Server OLE DB 驅動程式使認可作業之後的資料列集。 資料列集物件的功能都會幾乎遺失。 它只支援**IUnknown**作業和未處理的資料列與存取子控制代碼的版本。|  
 |DBPROP_DEFERRED|R/W：讀取/寫入<br /><br /> 預設值：VARIANT_FALSE<br /><br /> 描述： 設定為 VARIANT_TRUE 時，OLE DB 驅動程式的 SQL Server 會嘗試使用伺服器資料指標的資料列集。 **文字**， **ntext**，和**映像**直到應用程式存取資料行不會從伺服器傳回。|  
 |DBPROP_DELAYSTORAGEOBJECTS|R/W：唯讀<br /><br /> 預設值：VARIANT_FALSE<br /><br /> 描述： SQL Server OLE DB 驅動程式存放區物件上支援立即更新模式。<br /><br /> 對循序資料流物件中的資料所進行之變更會立即提交至 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]。 系統會根據資料列集交易模式認可這些修改。|  
-|DBPROP_HIDDENCOLUMNS|R/W：唯讀<br /><br /> 預設值：VARIANT_FALSE<br /><br /> **描述：**隱藏資料行計數<br /><br /> 如果 DBPROP_UNIQUEROWS 為 VARIANT_TRUE，DBPROP_HIDDENCOLUMNS 屬性會傳回提供者所加入之其他「隱藏」資料行的數目，藉以唯一識別資料列集中的資料列。 這些資料行所傳回**icolumnsinfo:: Getcolumninfo**和**icolumnsrowset:: Getcolumnsrowset**。 不過，它們不包含在傳回的資料列計數*icolumnsinfo:: Getcolumninfo*所傳回的引數**icolumnsinfo:: Getcolumninfo**。<br /><br /> 若要判斷表示中的資料行總數*icolumnsinfo:: Getcolumninfo*所傳回的結構**icolumnsinfo:: Getcolumninfo**，包括隱藏的資料行，取用者會將 DBPROP_ 值要從傳回的資料行的計數 HIDDENCOLUMNS **icolumnsinfo:: Getcolumninfo**中*icolumnsinfo:: Getcolumninfo*。 如果 DBPROP_UNIQUEROWS 為 VARIANT_FALSE，DBPROP_HIDDENCOLUMNS 為零。|  
+|DBPROP_HIDDENCOLUMNS|R/W：唯讀<br /><br /> 預設值：VARIANT_FALSE<br /><br /> **描述：** 隱藏資料行計數<br /><br /> 如果 DBPROP_UNIQUEROWS 為 VARIANT_TRUE，DBPROP_HIDDENCOLUMNS 屬性會傳回提供者所加入之其他「隱藏」資料行的數目，藉以唯一識別資料列集中的資料列。 這些資料行所傳回**icolumnsinfo:: Getcolumninfo**和**icolumnsrowset:: Getcolumnsrowset**。 不過，它們不包含在傳回的資料列計數*icolumnsinfo:: Getcolumninfo*所傳回的引數**icolumnsinfo:: Getcolumninfo**。<br /><br /> 若要判斷表示中的資料行總數*icolumnsinfo:: Getcolumninfo*所傳回的結構**icolumnsinfo:: Getcolumninfo**，包括隱藏的資料行，取用者會將 DBPROP_ 值要從傳回的資料行的計數 HIDDENCOLUMNS **icolumnsinfo:: Getcolumninfo**中*icolumnsinfo:: Getcolumninfo*。 如果 DBPROP_UNIQUEROWS 為 VARIANT_FALSE，DBPROP_HIDDENCOLUMNS 為零。|  
 |DBPROP_IAccessor DBPROP_IColumnsInfo DBPROP_IConvertType DBPROP_IRowset DBPROP_IRowsetInfo|R/W：唯讀<br /><br /> 預設值：VARIANT_TRUE<br /><br /> 描述： SQL Server OLE DB 驅動程式支援這些介面上所有資料列集。|  
 |DBPROP_IColumnsRowset|R/W：讀取/寫入<br /><br /> 預設值：VARIANT_TRUE<br /><br /> 描述： SQL Server 的 OLE DB 驅動程式支援**IColumnsRowset**介面。|  
 |DBPROP_IConnectionPointContainer|R/W：讀取/寫入<br /><br /> 預設值：VARIANT_FALSE<br /><br /> 描述：IConnectionPointContainer。 如果是 VARIANT_TRUE，資料列集支援指定的介面。 如果是 VARIANT_FALSE，資料列集不支援指定的介面。 支援介面的提供者必須支援與包含 VARIANT_TRUE 值之介面相關聯的屬性。 這些屬性主要用於透過 ICommandProperties::SetProperties 來要求介面。|  
@@ -77,7 +77,7 @@ ms.lasthandoff: 05/03/2018
 |DBPROP_OTHERINSERT DBPROP_OTHERUPDATEDELETE DBPROP_OWNINSERT DBPROP_OWNUPDATEDELETE|R/W：讀取/寫入<br /><br /> 預設值：VARIANT_FALSE<br /><br /> 描述： 設定變更可視性屬性會導致 SQL Server 以使用 OLE DB 驅動程式[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]資料指標來支援資料列集。 如需詳細資訊，請參閱[資料列集和 SQL Server 資料指標](../../oledb/ole-db-rowsets/rowsets-and-sql-server-cursors.md)。|  
 |DBPROP_QUICKRESTART|R/W：讀取/寫入<br /><br /> 預設值：VARIANT_FALSE<br /><br /> 描述： 設定為 VARIANT_TRUE 時，SQL Server OLE DB 驅動程式會嘗試使用伺服器資料指標的資料列集。|  
 |DBPROP_REENTRANTEVENTS|R/W：唯讀<br /><br /> 預設值：VARIANT_TRUE<br /><br /> 描述： SQL Server 資料列集，OLE DB 驅動程式可重新進入，而且如果取用者嘗試從通知回撥存取回撥的資料列集的方法可以傳回 DB_E_NOTREENTRANT。|  
-|DBPROP_REMOVEDELETED|R/W：讀取/寫入<br /><br /> 預設值：VARIANT_FALSE<br /><br /> 描述： SQL Server OLE DB 驅動程式改變根據變更的可見性屬性的值[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]資料列集所公開的資料。<br /><br /> VARIANT_TRUE：重新整理資料列集時，取用者或其他 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 使用者刪除的資料列會從資料列集移除。 DBPROP_OTHERINSERT 為 VARIANT_TRUE。<br /><br /> VARIANT_FALSE：重新整理資料列集時，取用者或其他 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 使用者刪除的資料列不會從資料列集移除。 在資料列集中，已刪除之 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 資料列的資料列狀態值為 DBROWSTATUS_E_DELETED。 DBPROP_OTHERINSERT 為 VARIANT_TRUE。<br /><br /> 此屬性僅擁有 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 資料指標所支援的資料列集值。 如需詳細資訊，請參閱[資料列集和 SQL Server 資料指標](../../oledb/ole-db-rowsets/rowsets-and-sql-server-cursors.md)。<br /><br /> 當 DBPROP_REMOVEDELETED 屬性索引鍵集資料指標資料列集上實作時，在提取階段移除已刪除的資料列和很可能讓資料列擷取方法，例如**GetNextRows**和**GetRowsAt，**傳回 S_OK 以及比要求較少的資料列。 請注意，此行為不表示 DB_S_ENDOFROWSET 條件，而且如果有任何剩餘的資料列，所傳回的資料列數目絕不會為零。|  
+|DBPROP_REMOVEDELETED|R/W：讀取/寫入<br /><br /> 預設值：VARIANT_FALSE<br /><br /> 描述： SQL Server OLE DB 驅動程式改變根據變更的可見性屬性的值[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]資料列集所公開的資料。<br /><br /> VARIANT_TRUE：重新整理資料列集時，取用者或其他 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 使用者刪除的資料列會從資料列集移除。 DBPROP_OTHERINSERT 為 VARIANT_TRUE。<br /><br /> VARIANT_FALSE：重新整理資料列集時，取用者或其他 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 使用者刪除的資料列不會從資料列集移除。 在資料列集中，已刪除之 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 資料列的資料列狀態值為 DBROWSTATUS_E_DELETED。 DBPROP_OTHERINSERT 為 VARIANT_TRUE。<br /><br /> 此屬性僅擁有 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 資料指標所支援的資料列集值。 如需詳細資訊，請參閱[資料列集和 SQL Server 資料指標](../../oledb/ole-db-rowsets/rowsets-and-sql-server-cursors.md)。<br /><br /> 當 DBPROP_REMOVEDELETED 屬性索引鍵集資料指標資料列集上實作時，在提取階段移除已刪除的資料列和很可能讓資料列擷取方法，例如**GetNextRows**和**GetRowsAt，** 傳回 S_OK 以及比要求較少的資料列。 請注意，此行為不表示 DB_S_ENDOFROWSET 條件，而且如果有任何剩餘的資料列，所傳回的資料列數目絕不會為零。|  
 |DBPROP_REPORTMULTIPLECHANGES|這個資料列集屬性未實作的 OLE DB 驅動程式適用於 SQL Server。 嘗試讀取或寫入屬性值會產生錯誤。|  
 |DBPROP_RETURNPENDINGINSERTS|R/W：唯讀<br /><br /> 預設值：VARIANT_FALSE<br /><br /> 描述： 呼叫提取資料列的方法時，SQL Server OLE DB 驅動程式不會傳回暫止插入資料列。|  
 |DBPROP_ROWRESTRICT|R/W：唯讀<br /><br /> 預設值：VARIANT_TRUE<br /><br /> 描述： SQL Server 資料列集的 OLE DB 驅動程式不支援根據的資料列的存取權限。 如果**IRowsetChange**介面會公開資料列集， **SetData**取用者可以呼叫方法。|  
@@ -92,7 +92,7 @@ ms.lasthandoff: 05/03/2018
   
  SQL Server OLE DB 驅動程式會定義提供者特有的屬性集 DBPROPSET_SQLSERVERROWSET，如本表所示。  
   
-|屬性識別碼|Description|  
+|屬性識別碼|描述|  
 |-----------------|-----------------|  
 |SSPROP_COLUMN_ID|資料行：ColumnID<br /><br /> R/W：唯讀<br /><br /> 類型： VT_U12 &#124; VT_ARRAY<br /><br /> 預設值：VT_EMPTY<br /><br /> 描述：在目前的 [!INCLUDE[tsql](../../../includes/tsql-md.md)] SELECT 陳述式中，代表 COMPUTE 子句結果資料行之序數位置 (以 1 為基底) 的整數值陣列。 這是等同於 ODBC SQL_CA_SS_COLUMN_ID 屬性的 SQL Server 對等項目，OLE DB 驅動程式。|  
 |SSPROP_DEFERPREPARE|資料行：否<br /><br /> R/W：讀取/寫入<br /><br /> 類型：VT_BOOL<br /><br /> 預設值：VARIANT_TRUE<br /><br /> 描述： VARIANT_TRUE： 在備妥的執行中，命令準備會延遲，直到**icommand:: Execute**稱為或執行中繼屬性作業。 如果此屬性設定為<br /><br /> VARIANT_FALSE： 陳述式時，會準備**icommandprepare:: Prepare**執行。|  

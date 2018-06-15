@@ -2,7 +2,6 @@
 title: NumericScale 屬性 (ADOX) |Microsoft 文件
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -24,11 +23,12 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: fdf5ce61c1be2940b289fc188c9d01123aeffd48
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 7bbe61177e9af6db7d3c663e18afd01b4f2b951e
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35286717"
 ---
 # <a name="numericscale-property-adox"></a>NumericScale 屬性 (ADOX)
 指出資料行中的數字值的小數位數。  

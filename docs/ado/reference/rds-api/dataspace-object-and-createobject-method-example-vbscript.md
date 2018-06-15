@@ -2,7 +2,6 @@
 title: 資料空間物件和 CreateObject 方法範例 (VBScript) |Microsoft 文件
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,11 +19,12 @@ caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: aea09da62ef5d9f60881c6914bf8ac7181c44b20
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 9fd9d098362f45d4ff2d0e7a3bc24d67130a0be9
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35287637"
 ---
 # <a name="dataspace-object-and-createobject-method-example-vbscript"></a>資料空間物件和 CreateObject 方法範例 (VBScript)
 > [!IMPORTANT]

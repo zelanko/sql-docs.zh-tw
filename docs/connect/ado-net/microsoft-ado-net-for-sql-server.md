@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 08/08/2017
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado-net
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: connectivity
@@ -15,12 +14,12 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 7f8d8ee2ecca5db774ed31f25f85a150f0fc6b20
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.openlocfilehash: 11b52720be2b22b3bef6839623e960f205fe509f
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34563906"
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35288877"
 ---
 # <a name="microsoft-adonet-for-sql-server"></a>Microsoft ADO.NET for SQL Server
 

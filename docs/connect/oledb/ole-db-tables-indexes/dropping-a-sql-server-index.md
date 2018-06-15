@@ -5,7 +5,6 @@ ms.custom: ''
 ms.date: 03/26/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: ole-db-tables-indexes
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: connectivity
@@ -21,11 +20,12 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 6c1ce25341ac4d5f092e61f2d8f23d1ea0baaade
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 0c85b9f8d51b7fb5daafff66f52d9164508caf16
+ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35306797"
 ---
 # <a name="dropping-a-sql-server-index"></a>卸除 SQL Server 索引
 
@@ -40,6 +40,6 @@ ms.lasthandoff: 05/03/2018
 ## <a name="see-also"></a>另請參閱  
  [資料表和索引](../../oledb/ole-db-tables-indexes/tables-and-indexes.md)   
  [ALTER TABLE &#40;Transact-SQL&#41;](../../../t-sql/statements/alter-table-transact-sql.md)   
- [卸除索引 &#40;TRANSACT-SQL &#41;](../../../t-sql/statements/drop-index-transact-sql.md)  
+ [DROP INDEX &#40;Transact-SQL&#41;](../../../t-sql/statements/drop-index-transact-sql.md)  
   
   

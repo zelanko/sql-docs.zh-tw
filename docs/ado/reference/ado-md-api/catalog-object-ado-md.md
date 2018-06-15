@@ -2,7 +2,6 @@
 title: 目錄物件 (ADO MD) |Microsoft 文件
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,11 +19,12 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 1c85ae92757056243f513b23696d29fb2c21bc4d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 3cda7947458e9183323de5c3879dd27bf2d1f131
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35283377"
 ---
 # <a name="catalog-object-ado-md"></a>目錄物件 (ADO MD)
 包含多維度結構描述特有的資訊 （也就是 cube 和基礎維度、 階層、 層級和成員） 的多維度資料提供者 (MDP)。  

@@ -5,7 +5,6 @@ ms.custom: ''
 ms.date: 03/26/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: ole-db-blobs
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: connectivity
@@ -16,11 +15,12 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 76168e9574b670036644e2a0920b821a0b526564
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 60e0a907bb82d5772395dc846ce6e0a79a6be951
+ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35305217"
 ---
 # <a name="streaming-support-for-blob-output-parameters"></a>BLOB 輸出參數的串流支援
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -514,6 +514,6 @@ _Exit:
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [Blob 與 OLE 物件](../../oledb/ole-db-blobs/blobs-and-ole-objects.md)  
+ [BLOB 與 OLE 物件](../../oledb/ole-db-blobs/blobs-and-ole-objects.md)  
   
   

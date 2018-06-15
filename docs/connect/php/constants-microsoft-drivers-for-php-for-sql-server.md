@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: php
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: connectivity
@@ -17,11 +16,12 @@ caps.latest.revision: 72
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a09ba7744f03fca15bb60db7979d31bb141f75c2
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 57c52b218406b658ef3f467ee122d51ed32158ad
+ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35307007"
 ---
 # <a name="constants-microsoft-drivers-for-php-for-sql-server"></a>常數 (Microsoft Drivers for PHP for SQL Server)
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -53,7 +53,7 @@ Pdo:: SQLSRV_ATTR_ENCODING 屬性可以傳遞至[pdostatement:: Setattribute](..
   
 可傳遞至 PDO::SQLSRV_ATTR_ENCODING 的值為  
   
-|PDO_SQLSRV 驅動程式常數|Description|  
+|PDO_SQLSRV 驅動程式常數|描述|  
 |-------------------------------|---------------|  
 |PDO::SQLSRV_ENCODING_BINARY|資料是來自伺服器的原始位元組資料流，未執行編碼或轉譯。<br /><br />對 PDO::setAttribute 而言無效。|  
 |PDO::SQLSRV_ENCODING_SYSTEM|資料是 8 位元字元，如同在系統上設定之 Windows 地區設定的字碼頁所指定。 以單一位元組問號 （？） 字元取代任何多位元組字元或未對應到此字碼頁的字元。|  
@@ -78,7 +78,7 @@ PDO::SQLSRV_ATTR_FETCHES_NUMERIC_TYPE 屬性可以用來處理數值擷取資料
 ### <a name="err-constants"></a>ERR 常數  
 下表列出用來指定的常數[sqlsrv_errors](../../connect/php/sqlsrv-errors.md)傳回錯誤、 警告還是兩者。  
   
-|Value|Description|  
+|ReplTest1|描述|  
 |---------|---------------|  
 |SQLSRV_ERR_ALL|傳回上次呼叫 **sqlsrv** 函數時產生的錯誤和警告。 這是預設值。|  
 |SQLSRV_ERR_ERRORS|傳回上次呼叫 **sqlsrv** 函數時產生的錯誤。|  
@@ -87,7 +87,7 @@ PDO::SQLSRV_ATTR_FETCHES_NUMERIC_TYPE 屬性可以用來處理數值擷取資料
 ### <a name="fetch-constants"></a>FETCH 常數  
 下表列出用來指定 [sqlsrv_fetch_array](../../connect/php/sqlsrv-fetch-array.md)所傳回之陣列類型的常數。  
   
-|SQLSRV 常數|Description|  
+|SQLSRV 常數|描述|  
 |-------------------|---------------|  
 |SQLSRV_FETCH_ASSOC|**sqlsrv_fetch_array** 會以關聯陣列的形式傳回下一個資料列。|  
 |SQLSRV_FETCH_BOTH|**sqlsrv_fetch_array** 會以同時具有數值和關聯索引鍵的陣列形式傳回下一個資料列。 這是預設值。|  
@@ -98,7 +98,7 @@ PDO::SQLSRV_ATTR_FETCHES_NUMERIC_TYPE 屬性可以用來處理數值擷取資料
   
 下表列出可做為 **LogSubsystems** 設定值的常數：  
   
-|SQLSRV 常數 （括號括住對等的整數）|Description|  
+|SQLSRV 常數 （括號括住對等的整數）|描述|  
 |----------------------------------------------------------|---------------|  
 |SQLSRV_LOG_SYSTEM_ALL (-1)|開啟所有子系統的記錄。|  
 |SQLSRV_LOG_SYSTEM_CONN (2)|開啟連接活動的記錄。|  
@@ -109,7 +109,7 @@ PDO::SQLSRV_ATTR_FETCHES_NUMERIC_TYPE 屬性可以用來處理數值擷取資料
   
 下表列出可做為 **LogSeverity** 設定值的常數：  
   
-|SQLSRV 常數 （括號括住對等的整數）|Description|  
+|SQLSRV 常數 （括號括住對等的整數）|描述|  
 |----------------------------------------------------------|---------------|  
 |SQLSRV_LOG_SEVERITY_ALL (-1)|指定將會記錄錯誤、警告和通知。|  
 |SQLSRV_LOG_SEVERITY_ERROR (1)|指定將會記錄錯誤。|  
@@ -119,7 +119,7 @@ PDO::SQLSRV_ATTR_FETCHES_NUMERIC_TYPE 屬性可以用來處理數值擷取資料
 ### <a name="nullable-constants"></a>Nullable 常數  
 下表列出可用來判斷資料行是否可為 Null 或這項資訊是否無法使用的常數。 您可以比較 **sqlsrv_field_metadata** 所傳回的 [Nullable](../../connect/php/sqlsrv-field-metadata.md) 索引鍵值，以判斷資料行可為 Null 的狀態。  
   
-|SQLSRV 常數 （括號括住對等的整數）|Description|  
+|SQLSRV 常數 （括號括住對等的整數）|描述|  
 |----------------------------------------------------------|---------------|  
 |SQLSRV_NULLABLE_YES (0)|此資料行可為 null。|  
 |SQLSRV_NULLABLE_NO (1)|資料行不可為 Null。|  
@@ -128,7 +128,7 @@ PDO::SQLSRV_ATTR_FETCHES_NUMERIC_TYPE 屬性可以用來處理數值擷取資料
 ### <a name="param-constants"></a>PARAM 常數  
 下列清單包含在您呼叫 [sqlsrv_query](../../connect/php/sqlsrv-query.md) 或 [sqlsrv_prepare](../../connect/php/sqlsrv-prepare.md)時用來指定參數方向的常數。  
   
-|SQLSRV 常數|Description|  
+|SQLSRV 常數|描述|  
 |-------------------|---------------|  
 |SQLSRV_PARAM_IN|表示輸入參數。|  
 |SQLSRV_PARAM_INOUT|表示雙向參數。|  
@@ -140,14 +140,14 @@ PDO::SQLSRV_ATTR_FETCHES_NUMERIC_TYPE 屬性可以用來處理數值擷取資料
 |SQLSRV 常數|PHP 資料類型|  
 |-------------------|-----------------|  
 |SQLSRV_PHPTYPE_INT|Integer|  
-|SQLSRV_PHPTYPE_DATETIME|Datetime|  
-|SQLSRV_PHPTYPE_FLOAT|Float|  
+|SQLSRV_PHPTYPE_DATETIME|DATETIME|  
+|SQLSRV_PHPTYPE_FLOAT|float|  
 |SQLSRV_PHPTYPE_STREAM($encoding<sup>1</sup>)|STREAM|  
-|SQLSRV_PHPTYPE_STRING($encoding<sup>1</sup>)|字串|  
+|SQLSRV_PHPTYPE_STRING($encoding<sup>1</sup>)|String|  
   
 1. **SQLSRV_PHPTYPE_STREAM**和**SQLSRV_PHPTYPE_STRING**接受的參數會指定資料流的編碼方式。 下表包含是可接受之參數的 SQLSRV 常數，以及對應編碼的描述。  
   
-|SQLSRV 常數|Description|  
+|SQLSRV 常數|描述|  
 |-------------------|---------------|  
 |SQLSRV_ENC_BINARY|資料會以原始位元組資料流形式從伺服器傳回，而不需執行編碼或轉譯。|  
 |SQLSRV_ENC_CHAR|資料會以如同在系統上設定之 Windows 地區設定的字碼頁中指定的 8 位元字元傳回。 以單一位元組問號 （？） 字元取代任何多位元組字元或未對應到此字碼頁的字元。<br /><br />這是預設編碼。|  
@@ -163,38 +163,38 @@ PDO::SQLSRV_ATTR_FETCHES_NUMERIC_TYPE 屬性可以用來處理數值擷取資料
   
 |SQLSRV 常數|SQL Server 資料類型|  
 |-------------------|------------------------|  
-|SQLSRV_SQLTYPE_BIGINT|bigint|  
+|SQLSRV_SQLTYPE_BIGINT|BIGINT|  
 |SQLSRV_SQLTYPE_BINARY|BINARY|  
 |SQLSRV_SQLTYPE_BIT|bit|  
 |SQLSRV_SQLTYPE_CHAR|char<sup>5</sup>|  
 |SQLSRV_SQLTYPE_CHAR($charCount)|char|  
 |SQLSRV_SQLTYPE_DATE|date<sup>4</sup>|  
-|SQLSRV_SQLTYPE_DATETIME|datetime|  
+|SQLSRV_SQLTYPE_DATETIME|DATETIME|  
 |SQLSRV_SQLTYPE_DATETIME2|datetime2<sup>4</sup>|  
 |SQLSRV_SQLTYPE_DATETIMEOFFSET|datetimeoffset<sup>4</sup>|  
 |SQLSRV_SQLTYPE_DECIMAL|十進位<sup>5</sup>|
-|SQLSRV_SQLTYPE_DECIMAL($precision, $scale)|decimal|  
-|SQLSRV_SQLTYPE_FLOAT|float|  
+|SQLSRV_SQLTYPE_DECIMAL($precision, $scale)|Decimal|  
+|SQLSRV_SQLTYPE_FLOAT|FLOAT|  
 |SQLSRV_SQLTYPE_IMAGE|image<sup>1</sup>|  
-|SQLSRV_SQLTYPE_INT|int|  
+|SQLSRV_SQLTYPE_INT|ssNoversion|  
 |SQLSRV_SQLTYPE_MONEY|money| 
 |SQLSRV_SQLTYPE_NCHAR|nchar<sup>5</sup>|   
 |SQLSRV_SQLTYPE_NCHAR($charCount)|NCHAR|  
 |SQLSRV_SQLTYPE_NUMERIC|數值<sup>5</sup>|
-|SQLSRV_SQLTYPE_NUMERIC($precision, $scale)|numeric|  
+|SQLSRV_SQLTYPE_NUMERIC($precision, $scale)|NUMERIC|  
 |SQLSRV_SQLTYPE_NVARCHAR|nvarchar<sup>5</sup>|  
-|SQLSRV_SQLTYPE_NVARCHAR($charCount)|nvarchar|  
+|SQLSRV_SQLTYPE_NVARCHAR($charCount)|NVARCHAR|  
 |SQLSRV_SQLTYPE_NVARCHAR('max')|nvarchar(MAX)|  
 |SQLSRV_SQLTYPE_NTEXT|ntext<sup>2</sup>|  
-|SQLSRV_SQLTYPE_REAL|real|  
+|SQLSRV_SQLTYPE_REAL|REAL|  
 |SQLSRV_SQLTYPE_SMALLDATETIME|smalldatetime|  
-|SQLSRV_SQLTYPE_SMALLINT|smallint|  
-|SQLSRV_SQLTYPE_SMALLMONEY|smallmoney|  
+|SQLSRV_SQLTYPE_SMALLINT|SMALLINT|  
+|SQLSRV_SQLTYPE_SMALLMONEY|SMALLMONEY|  
 |SQLSRV_SQLTYPE_TEXT|text<sup>3</sup>|  
 |SQLSRV_SQLTYPE_TIME|time<sup>4</sup>|  
-|SQLSRV_SQLTYPE_TIMESTAMP|timestamp|  
-|SQLSRV_SQLTYPE_TINYINT|tinyint|  
-|SQLSRV_SQLTYPE_UNIQUEIDENTIFIER|uniqueidentifier|  
+|SQLSRV_SQLTYPE_TIMESTAMP|TIMESTAMP|  
+|SQLSRV_SQLTYPE_TINYINT|TINYINT|  
+|SQLSRV_SQLTYPE_UNIQUEIDENTIFIER|UNIQUEIDENTIFIER|  
 |SQLSRV_SQLTYPE_UDT|UDT|  
 |SQLSRV_SQLTYPE_VARBINARY|varbinary<sup>5</sup>|  
 |SQLSRV_SQLTYPE_VARBINARY($byteCount)|varbinary|  

@@ -2,7 +2,6 @@
 title: ObjectTypeEnum | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,22 +19,23 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: f3654a63d4fc327a2fd3ea6d8ff60c59fba75404
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 4c9cb6239cee3bd6416e587dc77d55e287da68e4
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35286757"
 ---
 # <a name="objecttypeenum"></a>ObjectTypeEnum
 指定要設定權限或擁有權的資料庫物件的類型。  
   
-|常數|Value|Description|  
+|常數|ReplTest1|描述|  
 |--------------|-----------|-----------------|  
 |**adPermObjColumn**|2|物件是資料行。|  
 |**adPermObjDatabase**|3|此物件為資料庫。|  
 |**adPermObjProcedure**|4|此物件為程序。|  
 |**adPermObjProviderSpecific**|-1|此物件為提供者所定義的型別。 如果發生錯誤，將*ObjectType*參數是**adPermObjProviderSpecific**和*ObjectTypeId*未提供。|  
-|**adPermObjTable**|1|物件是資料表。|  
+|**adPermObjTable**|@shouldalert|物件是資料表。|  
 |**adPermObjView**|5|物件是檢視。|  
   
 ## <a name="applies-to"></a>適用於  

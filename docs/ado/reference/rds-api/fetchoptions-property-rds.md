@@ -2,7 +2,6 @@
 title: FetchOptions 屬性 (RDS) |Microsoft 文件
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -18,11 +17,12 @@ caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: dcbb951a5d17c7b7f0d8be540bef5c74e96b101d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: b73931acd678871f05e5aa4022153ded86a830e4
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35288124"
 ---
 # <a name="fetchoptions-property-rds"></a>FetchOptions 屬性 (RDS)
 表示非同步擷取的類型。  
@@ -33,7 +33,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="setting-and-return-values"></a>設定和傳回值  
  設定或傳回下列值之一。  
   
-|常數|Description|  
+|常數|描述|  
 |--------------|-----------------|  
 |**adcFetchUpFront**|所有記錄[資料錄集](../../../ado/reference/ado-api/recordset-object-ado.md)控制項傳回至應用程式之前提取。 完整**資料錄集**之前執行任何動作，它允許應用程式擷取。|  
 |**adcFetchBackground**|控制項可以傳回至應用程式儘速擷取第一個批次的記錄。 後續的讀取**資料錄集**，嘗試存取未擷取第一個批次中的記錄將會延遲，直到實際擷取大的記錄，此時控制項會傳回給應用程式。|  

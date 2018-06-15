@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 01/16/2018
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: php
 ms.suite: sql
 ms.technology: connectivity
 ms.tgt_pltfrm: ''
@@ -17,11 +16,12 @@ helpviewer_keywords:
 author: yitam
 ms.author: v-yitam
 manager: mbarwin
-ms.openlocfilehash: 6fc7e9ad59182c2dede32917b7e54cd353119826
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 32599ca0facc7a35877f6d59573b27209ce68d31
+ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35307677"
 ---
 # <a name="how-to-send-and-retrieve-ascii-data-in-linux-and-macos"></a>如何： 傳送和擷取 ASCII 資料在 Linux 和 macOS 
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

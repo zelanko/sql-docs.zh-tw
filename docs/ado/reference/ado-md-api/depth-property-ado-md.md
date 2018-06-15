@@ -2,7 +2,6 @@
 title: 深度屬性 (ADO MD) |Microsoft 文件
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -21,11 +20,12 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 9dd8164cebbc2a7b3047563485d53e944c06ae01
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: f6c670a1d0a197a51c04b11f6002705a1d5009f8
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35283877"
 ---
 # <a name="depth-property-ado-md"></a>深度屬性 (ADO MD)
 表示層級之間的數字[層級](../../../ado/reference/ado-md-api/level-object-ado-md.md)和階層的根。  

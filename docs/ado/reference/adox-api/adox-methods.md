@@ -2,7 +2,6 @@
 title: ADOX 方法 |Microsoft 文件
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -18,11 +17,12 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: bf7837fb749222fe3083671632758ea04a112728
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: ced2fbeb94aacd1035b28b56a46b10535f17c192
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35284797"
 ---
 # <a name="adox-methods"></a>ADOX 方法
 |||  
@@ -37,7 +37,7 @@ ms.lasthandoff: 05/03/2018
 |[附加 （檢視）](../../../ado/reference/adox-api/append-method-adox-views.md)|將新**檢視**物件**檢視**集合。|  
 |[ChangePassword](../../../ado/reference/adox-api/changepassword-method-adox.md)|變更使用者帳戶的密碼。|  
 |[建立](../../../ado/reference/adox-api/create-method-adox.md)|建立新的目錄。|  
-|[Delete](../../../ado/reference/adox-api/delete-method-adox-collections.md)|從集合中移除物件。|  
+|[刪除](../../../ado/reference/adox-api/delete-method-adox-collections.md)|從集合中移除物件。|  
 |[GetObjectOwner](../../../ado/reference/adox-api/getobjectowner-method-adox.md)|傳回物件的擁有者的目錄中。|  
 |[GetPermissions](../../../ado/reference/adox-api/getpermissions-method-adox.md)|傳回的物件上的群組或使用者的權限。|  
 |[SetObjectOwner](../../../ado/reference/adox-api/setobjectowner-method.md)|指定物件的擁有者的目錄中。|  

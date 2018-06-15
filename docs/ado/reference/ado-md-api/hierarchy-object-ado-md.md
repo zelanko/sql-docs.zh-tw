@@ -2,7 +2,6 @@
 title: Hierarchy 物件 (ADO MD) |Microsoft 文件
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,11 +19,12 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ee43d975b4f173d7cfb8fa819d6cd7e3635aab97
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: f6853d2a3fcc0540f23a914e3e39c8720ce3a317
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35284057"
 ---
 # <a name="hierarchy-object-ado-md"></a>Hierarchy 物件 (ADO MD)
 提供一種方法中的成員[維度](../../../ado/reference/ado-md-api/dimension-object-ado-md.md)可以彙總或 「 彙總 」。 維度可彙總一或多個階層中。  
@@ -42,13 +42,13 @@ ms.lasthandoff: 05/03/2018
   
  **屬性**集合包含提供者提供的屬性。 下表列出可供使用的屬性。 實際的屬性清單可能與不同的提供者實作而定。 請參閱您的提供者，如需更完整清單可用內容的文件。  
   
-|名稱|Description|  
+|[屬性]|描述|  
 |----------|-----------------|  
 |AllMember|彙總套件階層架構中的最高的層級成員。|  
 |CatalogName|此 cube 所屬的目錄的名稱。|  
 |CubeName|Cube 的名稱。|  
 |DefaultMember|此階層的預設成員唯一名稱。|  
-|Description|階層有意義的描述。|  
+|描述|階層有意義的描述。|  
 |DimensionType|此階層所屬的維度的類型。|  
 |DimensionUniqueName|維度的模稜兩可的名稱。|  
 |HierarchyCaption|與階層關聯的標籤或標題。|  

@@ -5,7 +5,6 @@ ms.custom: ''
 ms.date: 03/26/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: ole-db-interfaces
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
@@ -17,16 +16,17 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: edc24c92138ebfa8e1bb72e64a50ed0dc7a2c234
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: c41f484dbbe2877e2d358b3d19ee2b7d33107a56
+ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35304897"
 ---
 # <a name="ibcpsession2bcpsetbulkmode"></a>IBCPSession2::BCPSetBulkMode
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  Ibcpsession2 提供替代[ibcpsession:: Bcpcolfmt & #40; OLE DB & #41;](../../oledb/ole-db-interfaces/ibcpsession-bcpcolfmt-ole-db.md)來指定資料行格式。 與不同的是，它可以設定個別的資料行格式屬性，ibcpsession:: Bcpcolfmt Ibcpsession2 設定的所有屬性。  
+  Ibcpsession2 提供替代[ibcpsession:: Bcpcolfmt &#40;OLE DB&#41; ](../../oledb/ole-db-interfaces/ibcpsession-bcpcolfmt-ole-db.md)來指定資料行格式。 與不同的是，它可以設定個別的資料行格式屬性，ibcpsession:: Bcpcolfmt Ibcpsession2 設定的所有屬性。  
   
 ## <a name="syntax"></a>語法  
   
@@ -42,7 +42,7 @@ HRESULT BCPSetBulkMode (
 ```  
   
 ## <a name="arguments"></a>引數  
- *屬性*  
+ *property*  
  類型為 BYTE 的常數。 如需常數的清單，請參閱＜備註＞一節中的表格。  
   
  *pField*  
@@ -75,7 +75,7 @@ HRESULT BCPSetBulkMode (
   
  下表列出的常數*屬性*參數。  
   
-|屬性|Description|  
+|屬性|描述|  
 |--------------|-----------------|  
 |BCP_OUT_CHARACTER_MODE|指定字元輸出模式。<br /><br /> 對應到 BCP 中的 – c 選項。EXE，以及 ibcpsession:: Bcpcolfmt 與*eUserDataType*屬性設定為**BCP_TYPE_SQLCHARACTER**。|  
 |BCP_OUT_WIDE_CHARACTER_MODE|指定 Unicode 輸出模式。<br /><br /> 對應到 BCP 中的 – w 選項。EXE 和 ibcpsession:: Bcpcolfmt 與*eUserDataType*屬性設定為**BCP_TYPE_SQLNCHAR**。|  
@@ -365,6 +365,6 @@ int main() {
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [IBCPSession2 & #40; OLE DB & #41;](../../oledb/ole-db-interfaces/ibcpsession2-ole-db.md)  
+ [IBCPSession2 &#40;OLE DB&#41;](../../oledb/ole-db-interfaces/ibcpsession2-ole-db.md)  
   
   

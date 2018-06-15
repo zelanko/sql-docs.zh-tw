@@ -2,7 +2,6 @@
 title: Append 方法 （ADOX 索引鍵） |Microsoft 文件
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -21,11 +20,12 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 3e974721f602c4a361af5f4bd582929b217caa38
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 9eaef312977613409453dfa1d876674d6b95c927
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35284817"
 ---
 # <a name="append-method-adox-keys"></a>Append 方法 （ADOX 索引鍵）
 將新[金鑰](../../../ado/reference/adox-api/key-object-adox.md)物件[金鑰](../../../ado/reference/adox-api/keys-collection-adox.md)集合。  
@@ -44,7 +44,7 @@ Keys.Append Key [,KeyType] [,Column] [,RelatedTable] [,RelatedColumn]
  *KeyType*  
  選擇性。 A**長**值，指定索引鍵的類型。 *金鑰*參數會對應至[類型](../../../ado/reference/adox-api/type-property-key-adox.md)屬性**金鑰**物件。  
   
- *[資料行]*  
+ *資料行*  
  選擇性。 A**字串**值，指定要編製索引的資料行名稱。 *資料行*參數對應至值[名稱](../../../ado/reference/adox-api/name-property-adox.md)屬性[資料行](../../../ado/reference/adox-api/column-object-adox.md)物件。  
   
  *RelatedTable*  

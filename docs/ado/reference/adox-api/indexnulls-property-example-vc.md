@@ -2,7 +2,6 @@
 title: IndexNulls 屬性範例 （VC + +） |Microsoft 文件
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,11 +18,12 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 23390e73b92f29cbaff19e2ec3a44db9aa5a2980
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: a401cd927223e38a21ce496ed771cd0e56248635
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35286577"
 ---
 # <a name="indexnulls-property-example-vc"></a>IndexNulls 屬性範例 （VC + +）
 這個範例會示範[IndexNulls](../../../ado/reference/adox-api/indexnulls-property-adox.md)屬性[索引](../../../ado/reference/adox-api/index-object-adox.md)。 程式碼會建立新的索引，並將值設定**IndexNulls**根據使用者輸入。 然後，**索引**附加至**員工**[資料表](../../../ado/reference/adox-api/table-object-adox.md)中*Northwind* [目錄](../../../ado/reference/adox-api/catalog-object-adox.md)。 新**索引**套用至[資料錄集](../../../ado/reference/ado-api/recordset-object-ado.md)根據**員工**資料表，而**資料錄集**開啟。 若要加入新的記錄**員工**資料表，與**Null**中編製索引欄位的值。 是否要顯示這個新的記錄，取決於設定的**IndexNulls**屬性。  

@@ -2,7 +2,6 @@
 title: 程序物件 (ADOX) |Microsoft 文件
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,11 +19,12 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: dd25aeeac87c3bd3bc8aa7b1405815f987d44266
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d4decbe11233f64db4fd51ef0c3a2b923355c375
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35286727"
 ---
 # <a name="procedure-object-adox"></a>程序物件 (ADOX)
 代表預存程序。 使用 ADO 搭配使用時[命令](../../../ado/reference/ado-api/command-object-ado.md)物件**程序**物件可用於加入、 刪除或修改預存程序。  

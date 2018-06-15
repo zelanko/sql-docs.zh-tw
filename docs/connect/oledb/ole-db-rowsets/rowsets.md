@@ -5,7 +5,6 @@ ms.custom: ''
 ms.date: 03/26/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: ole-db-rowsets
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: connectivity
@@ -20,18 +19,19 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: d3f187118cd273712ed8145bbfef3af712091028
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 5e03aa5a887f25e9909ff2c755cfbfa598166475
+ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35306697"
 ---
 # <a name="rowsets"></a>資料列集
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
   資料列集是一組資料列，其中包含資料的資料行。 資料列集是能讓所有 OLE DB 資料提供者公開表格形式結果集資料的核心物件。  
   
- 取用者使用建立工作階段之後 **:: Createsession**方法中，取用者可以使用**IOpenRowset**或**IDBCreateCommand**上要建立資料列集的工作階段的介面。 SQL Server 的 OLE DB 驅動程式支援這兩種介面。 此處描述這兩種方法。  
+ 取用者使用建立工作階段之後 **:: Createsession**方法中，取用者可以使用**IOpenRowset**或**IDBCreateCommand**若要建立資料列集的工作階段上的介面。 SQL Server 的 OLE DB 驅動程式支援這兩種介面。 此處描述這兩種方法。  
   
 -   建立資料列集呼叫**iopenrowset:: Openrowset**方法。  
   
@@ -53,19 +53,19 @@ ms.lasthandoff: 05/03/2018
   
 -   [以 IOpenRowset 建立資料列集](../../oledb/ole-db-rowsets/creating-a-rowset-with-iopenrowset.md)  
   
--   [使用 icommand:: Execute 建立資料列集](../../oledb/ole-db-rowsets/creating-rowsets-with-icommand-execute.md)  
+-   [使用 ICommand:: Execute 建立資料列集](../../oledb/ole-db-rowsets/creating-rowsets-with-icommand-execute.md)  
   
 -   [資料列集屬性和行為](../../oledb/ole-db-rowsets/rowset-properties-and-behaviors.md)  
   
 -   [資料列集和 SQL Server 資料指標](../../oledb/ole-db-rowsets/rowsets-and-sql-server-cursors.md)  
   
--   [提取資料列](../../oledb/ole-db-rowsets/fetching-rows.md)  
+-   [擷取資料列](../../oledb/ole-db-rowsets/fetching-rows.md)  
   
--   [擷取單一資料列使用 irow 來](../../oledb/ole-db-rowsets/fetching-a-single-row-with-irow.md)  
+-   [使用 IRow 擷取單一資料列](../../oledb/ole-db-rowsets/fetching-a-single-row-with-irow.md)  
   
 -   [書籤](../../oledb/ole-db-rowsets/bookmarks.md)  
   
--   [更新資料集中的資料列集](../../oledb/ole-db-rowsets/updating-data-in-rowsets.md)  
+-   [更新資料列集中的資料](../../oledb/ole-db-rowsets/updating-data-in-rowsets.md)  
   
 ## <a name="see-also"></a>另請參閱  
  [OLE DB Driver for SQL Server 程式設計](../../oledb/ole-db/oledb-driver-for-sql-server-programming.md)  

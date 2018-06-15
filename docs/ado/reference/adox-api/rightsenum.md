@@ -2,7 +2,6 @@
 title: RightsEnum |Microsoft 文件
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,16 +19,17 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e6e0e4d3b3a0148b92febfa4e5474774cfcbec79
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 32cd777bad44e0784943aab1c0a4c9ba665f7247
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35286848"
 ---
 # <a name="rightsenum"></a>RightsEnum
 在物件上指定的權限或群組或使用者權限。  
   
-|常數|Value|Description|  
+|常數|ReplTest1|描述|  
 |--------------|-----------|-----------------|  
 |**adRightCreate**|16384 (&AMP; H4000)|使用者或群組擁有權限建立此類型的新物件。|  
 |**adRightDelete**|65536 (&AMP; H10000)|使用者或群組已刪除的資料從物件的權限。 物件，例如**資料表**，使用者有權從記錄中刪除資料值。|  
