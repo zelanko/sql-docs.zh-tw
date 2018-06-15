@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33033265"
 ---
 # <a name="tasks-and-permissions---item-level-tasks"></a>工作和權限 - 項目層級工作
   項目層級工作是與報表、資料夾、報表模型、資源或共用資料來源關聯的權限集合。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 也包括套用至整個報表伺服器網站的系統層級工作。 如需詳細資訊，請參閱 [系統層級工作](../../reporting-services/security/tasks-and-permissions-system-level-tasks.md)。 如需一般工作和權限的詳細資訊，請參閱 [工作和權限](../../reporting-services/security/tasks-and-permissions.md)。  

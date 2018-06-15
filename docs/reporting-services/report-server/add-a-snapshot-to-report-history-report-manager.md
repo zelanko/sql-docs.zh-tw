@@ -26,6 +26,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33025695"
 ---
 # <a name="add-a-snapshot-to-report-history-report-manager"></a>將快照集加入報表記錄 (報表管理員)
   報表記錄是您在經過一段時間後建立之報表快照集的集合。 報表快照集是一種報表，它包含在特定時間點擷取的配置資訊和查詢結果。 報表快照集和視需要報表不同，視需要報表會在您選取報表時取得最新的查詢結果，而報表快照集是依排程處理，並儲存至報表伺服器。 您選取報表快照集以供檢視時，報表伺服器會從報表伺服器資料庫擷取儲存的報表，並顯示建立快照集當時的資料與配置。  
