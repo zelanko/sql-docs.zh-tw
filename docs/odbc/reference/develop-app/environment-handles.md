@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32911433"
 ---
 # <a name="environment-handles"></a>環境控制代碼
 *環境*是全域內容中的，以存取資料; 相關聯的環境會是全域的本質，例如任何資訊：  

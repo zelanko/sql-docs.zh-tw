@@ -30,6 +30,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32939243"
 ---
 # <a name="srvparammaxlen-extended-stored-procedure-api"></a>srv_parammaxlen (擴充預存程序 API)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -66,13 +67,13 @@ n
   
 |新的資料類型|輸入資料長度|  
 |--------------------|-----------------------|  
-|**BITN**|**NULL：**1<br /><br /> **ZERO：**1<br /><br /> **>=255：**N/A<br /><br /> **<255：**N/A|  
-|**BIGVARCHAR**|**NULL：**255<br /><br /> **ZERO：**255<br /><br /> **>=255:** 255<br /><br /> **<255:** 255|  
-|**BIGCHAR**|**NULL：**255<br /><br /> **ZERO：**255<br /><br /> **>=255:** 255<br /><br /> **<255:** 255|  
-|**BIGBINARY**|**NULL：**255<br /><br /> **ZERO：**255<br /><br /> **>=255:** 255<br /><br /> **<255:** 255|  
-|**BIGVARBINARY**|**NULL：**255<br /><br /> **ZERO：**255<br /><br /> **>=255:** 255<br /><br /> **<255:** 255|  
-|**NCHAR**|**NULL：**255<br /><br /> **ZERO：**255<br /><br /> **>=255:** 255<br /><br /> **<255:** 255|  
-|**NVARCHAR**|**NULL：**255<br /><br /> **ZERO：**255<br /><br /> **>=255:** 255<br /><br /> **<255:** 255|  
+|**BITN**|**NULL：** 1<br /><br /> **ZERO：** 1<br /><br /> **>=255：** N/A<br /><br /> **<255：** N/A|  
+|**BIGVARCHAR**|**NULL：** 255<br /><br /> **ZERO：** 255<br /><br /> **>=255:** 255<br /><br /> **<255:** 255|  
+|**BIGCHAR**|**NULL：** 255<br /><br /> **ZERO：** 255<br /><br /> **>=255:** 255<br /><br /> **<255:** 255|  
+|**BIGBINARY**|**NULL：** 255<br /><br /> **ZERO：** 255<br /><br /> **>=255:** 255<br /><br /> **<255:** 255|  
+|**BIGVARBINARY**|**NULL：** 255<br /><br /> **ZERO：** 255<br /><br /> **>=255:** 255<br /><br /> **<255:** 255|  
+|**NCHAR**|**NULL：** 255<br /><br /> **ZERO：** 255<br /><br /> **>=255:** 255<br /><br /> **<255:** 255|  
+|**NVARCHAR**|**NULL：** 255<br /><br /> **ZERO：** 255<br /><br /> **>=255:** 255<br /><br /> **<255:** 255|  
 |**NTEXT**|**NULL：**-1<br /><br /> **ZERO：**-1<br /><br /> **>=255:** -1<br /><br /> **\<255:** -1|  
   
 ## <a name="remarks"></a>Remarks  

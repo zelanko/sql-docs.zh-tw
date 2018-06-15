@@ -24,6 +24,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32903803"
 ---
 # <a name="descriptors-and-desktop-database-drivers"></a>描述元和桌面資料庫驅動程式
 描述元是資料結構，可保存資料行的資料或動態參數的相關資訊。 **SQLGetDescField**可以用來擷取支援下面所列的描述元。 實作參數描述項 (IPD) 不會自動擴展因為**SQLDescribeParam**不支援。 也不支援不是可透過 Jet （例如 SQL_DESC_BASE_TABLE_NAME) 的描述項欄位。  

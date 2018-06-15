@@ -25,6 +25,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32916863"
 ---
 # <a name="odbc-and-the-standard-cli"></a>ODBC 和標準 CLI
 ODBC 對齊下列規格和處理的呼叫層級介面 (CLI) 標準。 （ODBC 功能是每個這些標準的超集）。  

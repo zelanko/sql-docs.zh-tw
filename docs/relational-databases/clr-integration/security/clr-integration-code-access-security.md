@@ -27,6 +27,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32931243"
 ---
 # <a name="clr-integration-code-access-security"></a>CLR 整合程式碼存取安全性
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -62,7 +63,7 @@ ms.lasthandoff: 05/03/2018
   
 |權限|值/描述|  
 |----------------|-----------------------------|  
-|**SecurityPermission**|**執行：**執行 managed 程式碼的權限。|  
+|**SecurityPermission**|**執行：** 執行 managed 程式碼的權限。|  
 |**SqlClientPermission**|**內容連接 = true**，**內容連接 = yes**： 只可以使用內容連接，連接字串只能指定值為"內容連接 = true"或"內容連接 = yes"。<br /><br /> **AllowBlankPassword = false:** 不允許空白密碼。|  
   
 ### <a name="externalaccess"></a>EXTERNAL_ACCESS  
@@ -72,20 +73,20 @@ ms.lasthandoff: 05/03/2018
   
 |權限|值/描述|  
 |----------------|-----------------------------|  
-|**DistributedTransactionPermission**|**不受限制的：**允許分散式交易。|  
-|**DNSPermission**|**不受限制的：**向網域名稱伺服器要求資訊的權限。|  
-|**EnvironmentPermission**|**不受限制的：**完整允許存取系統和使用者環境變數。|  
-|**EventLogPermission**|**管理：**允許下列動作： 建立事件來源、 讀取現有的記錄檔，刪除事件來源或記錄檔、 回應項目、 清除事件記錄檔，接聽事件，以及存取的所有事件記錄檔集合。|  
-|**FileIOPermission**|**不受限制的：**完整存取權的檔案及任何允許的資料夾。|  
-|**KeyContainerPermission**|**不受限制的：**完整允許對金鑰容器存取。|  
+|**DistributedTransactionPermission**|**不受限制的：** 允許分散式交易。|  
+|**DNSPermission**|**不受限制的：** 向網域名稱伺服器要求資訊的權限。|  
+|**EnvironmentPermission**|**不受限制的：** 完整允許存取系統和使用者環境變數。|  
+|**EventLogPermission**|**管理：** 允許下列動作： 建立事件來源、 讀取現有的記錄檔，刪除事件來源或記錄檔、 回應項目、 清除事件記錄檔，接聽事件，以及存取的所有事件記錄檔集合。|  
+|**FileIOPermission**|**不受限制的：** 完整存取權的檔案及任何允許的資料夾。|  
+|**KeyContainerPermission**|**不受限制的：** 完整允許對金鑰容器存取。|  
 |**NetworkInformationPermission**|**存取：** Pinging 被允許。|  
 |**RegistryPermission**|允許讀取權限**HKEY_CLASSES_ROOT**， **HKEY_LOCAL_MACHINE**， **HKEY_CURRENT_USER**， **HKEY_CURRENT_CONFIG**，和**HKEY_USERS。**|  
-|**SecurityPermission**|**判斷提示：**可判斷提示這個程式碼的所有呼叫端具有操作的必要權限的能力。<br /><br /> **ControlPrincipal:** 操作主體物件的能力。<br /><br /> **執行：**執行 managed 程式碼的權限。<br /><br /> **SerializationFormatter:** 能夠提供序列化服務。|  
-|**SmtpPermission**|**存取：**允許的 SMTP 主機連接埠 25 的傳出連接。|  
-|**SocketPermission**|**連接：**允許傳輸位址上的傳出連接 （所有連接埠、 所有通訊協定）。|  
-|**SqlClientPermission**|**不受限制的：**完整允許存取資料來源。|  
-|**StorePermission**|**不受限制的：**完整存取權允許的 X.509 憑證存放區。|  
-|**WebPermission**|**連接：**允許輸出連線到 web 資源。|  
+|**SecurityPermission**|**判斷提示：** 可判斷提示這個程式碼的所有呼叫端具有操作的必要權限的能力。<br /><br /> **ControlPrincipal:** 操作主體物件的能力。<br /><br /> **執行：** 執行 managed 程式碼的權限。<br /><br /> **SerializationFormatter:** 能夠提供序列化服務。|  
+|**SmtpPermission**|**存取：** 允許的 SMTP 主機連接埠 25 的傳出連接。|  
+|**SocketPermission**|**連接：** 允許傳輸位址上的傳出連接 （所有連接埠、 所有通訊協定）。|  
+|**SqlClientPermission**|**不受限制的：** 完整允許存取資料來源。|  
+|**StorePermission**|**不受限制的：** 完整存取權允許的 X.509 憑證存放區。|  
+|**WebPermission**|**連接：** 允許輸出連線到 web 資源。|  
   
 ### <a name="unsafe"></a>UNSAFE  
  UNSAFE 可讓組件無限制存取 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 內外部的資源。 從執行的程式碼**UNSAFE**組件也可以呼叫 unmanaged 程式碼。  

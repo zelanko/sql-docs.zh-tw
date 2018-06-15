@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32917143"
 ---
 # <a name="testing-interoperable-applications"></a>測試可互通的應用程式
 測試可互通的應用程式是使用最佳耗時業務和最糟的情況不可能因為市場上持續出現新的驅動程式。 不過，有合理的程度的測試可能是。 有限或過低的互通性的應用程式只需要針對保證可支援這些驅動程式進行測試。 不過，它們必須經過完整測試對這些驅動程式。  

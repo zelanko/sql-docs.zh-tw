@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32916722"
 ---
 # <a name="translation-dll-function-summary"></a>轉譯 DLL 函式摘要
 下表描述轉譯 DLL 函式。 如需語法和語意，每個函式的詳細資訊，請參閱[轉譯 DLL 函式參考](../../../odbc/reference/syntax/translation-dll-api-reference.md)。  

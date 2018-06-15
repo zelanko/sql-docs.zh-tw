@@ -24,6 +24,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32899443"
 ---
 # <a name="accessing-a-visual-foxpro-data-source-from-microsoft-excel"></a>從 Microsoft Excel 中存取 Visual FoxPro 資料來源
 如果您有安裝 Microsoft 查詢時，您可以在連接到 Visual FoxPro 資料的 Microsoft Excel 中建立資料來源。  

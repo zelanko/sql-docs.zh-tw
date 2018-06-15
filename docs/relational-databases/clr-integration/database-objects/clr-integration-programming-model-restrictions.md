@@ -25,6 +25,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32924543"
 ---
 # <a name="clr-integration-programming-model-restrictions"></a>CLR 整合程式設計模型限制
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -42,9 +43,9 @@ ms.lasthandoff: 05/03/2018
   
 -   此組件是其中一個支援的組件。 如需詳細資訊，請參閱[支援.NET Framework 程式庫](../../../relational-databases/clr-integration/database-objects/supported-net-framework-libraries.md)。  
   
--   您正在使用 **CREATE ASSEMBLY FROM * * *\<位置 >，*都可使用所有參考的組件和其相依性和*\<位置 >*。  
+-   您正在使用 **CREATE ASSEMBLY FROM * * *\<位置 >，* 都可使用所有參考的組件和其相依性和*\<位置 >*。  
   
--   您正在使用 **CREATE ASSEMBLY FROM * * *\<位元組...>，*和所有參考指定空間透過不同的位元組。  
+-   您正在使用 **CREATE ASSEMBLY FROM * * *\<位元組...>，* 和所有參考指定空間透過不同的位元組。  
   
 ### <a name="externalaccess"></a>EXTERNAL_ACCESS  
  所有**EXTERNAL_ACCESS**組件必須符合下列準則：  

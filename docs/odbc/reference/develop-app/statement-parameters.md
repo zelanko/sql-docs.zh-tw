@@ -21,6 +21,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32913953"
 ---
 # <a name="statement-parameters"></a>陳述式參數
 A*參數*是 SQL 陳述式中的變數。 例如，假設零件資料表中具有名為 PartID、 描述和價格的資料行。 若要將組件不含參數需要建構 SQL 陳述式，例如：  

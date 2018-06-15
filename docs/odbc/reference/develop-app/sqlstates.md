@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32913063"
 ---
 # <a name="sqlstates"></a>SQLSTATE
 Sqlstate 會提供警告或錯誤的原因的詳細的資訊。 雖然使用 IM 啟動這些 Sqlstate 特有 ODBC Sqlstate 本手冊中取決於 ISO/IEF CLI 規格中。  

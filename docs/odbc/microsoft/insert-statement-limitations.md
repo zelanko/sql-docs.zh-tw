@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32904453"
 ---
 # <a name="insert-statement-limitations"></a>INSERT 陳述式的限制
 如果太長而無法放入資料行，插入的資料會截斷在右側，而不發出警告。  

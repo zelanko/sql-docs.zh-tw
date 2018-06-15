@@ -21,6 +21,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32899633"
 ---
 # <a name="schema-text-file-driver"></a>結構描述 （文字檔案驅動程式）
 結構描述包含每個資料表 （文字檔） 的相關資訊，在資料來源，包括資料表的格式，掃描以判斷資料行類型，是否要資料表的第一個資料列包含資料行名稱，無論是否使用 OEM 撰寫的原始程式檔的資料列數目或ANSI 字碼頁，以及每個資料行名稱、 資料類型和寬度。

@@ -25,6 +25,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32916383"
 ---
 # <a name="registry-entries-for-data-sources"></a>資料來源的登錄項目
 > [!NOTE]  
@@ -48,7 +49,7 @@ ms.lasthandoff: 05/03/2018
   
  Odbc.ini  
   
- 要使用哪個金鑰取決於資料來源是否*系統資料來源，*所提供給所有使用者，或*使用者資料來源，*提供到目前的使用者。 系統資料來源上的 HKEY_LOCAL_MACHINE 樹狀目錄中，並儲存使用者資料來源是 HKEY_CURRENT_USER 樹狀目錄上。 在其他方面，系統資料來源和使用者資料來源完全相同。  
+ 要使用哪個金鑰取決於資料來源是否*系統資料來源，* 所提供給所有使用者，或*使用者資料來源，* 提供到目前的使用者。 系統資料來源上的 HKEY_LOCAL_MACHINE 樹狀目錄中，並儲存使用者資料來源是 HKEY_CURRENT_USER 樹狀目錄上。 在其他方面，系統資料來源和使用者資料來源完全相同。  
   
  此章節包含下列主題。  
   

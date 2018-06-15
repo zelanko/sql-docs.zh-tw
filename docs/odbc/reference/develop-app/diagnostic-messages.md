@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32911303"
 ---
 # <a name="diagnostic-messages"></a>診斷訊息
 診斷訊息會傳回包含每個的 SQLSTATE。 一些不同的訊息通常會傳回相同的 SQLSTATE。 例如，SQLSTATE 42000 （語法錯誤或存取違規） 會傳回 SQL 語法中的大部分錯誤。 不過，每個語法錯誤很可能透過不同的訊息描述。  

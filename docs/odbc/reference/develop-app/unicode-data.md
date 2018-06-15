@@ -24,6 +24,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32915813"
 ---
 # <a name="unicode-data"></a>Unicode 資料
 提供 SQL Unicode 資料類型來描述存在於以 Unicode 原生上 DBMS 的資料。 C Unicode 資料類型可讓應用程式將資料繫結至 Unicode 的緩衝區。 驅動程式管理員可以將資料轉換的 Unicode C 類型 (SQL_C_WCHAR)，使其從 ANSI 驅動程式的函式。  

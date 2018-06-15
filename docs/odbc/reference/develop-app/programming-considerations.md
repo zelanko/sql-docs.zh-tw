@@ -19,6 +19,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32913413"
 ---
 # <a name="programming-considerations"></a>程式設計考量
 本節簡短討論與撰寫 ODBC 應用程式和驅動程式相關的主題數目。  

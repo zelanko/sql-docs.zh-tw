@@ -29,6 +29,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32946863"
 ---
 # <a name="data-type-mapping-in-itabledefinition"></a>ITableDefinition 中的資料類型對應
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -41,7 +42,7 @@ ms.lasthandoff: 05/03/2018
 |OLE DB 資料類型|SQL Server<br /><br /> 資料類型|其他資訊|  
 |----------------------|------------------------------|----------------------------|  
 |DBTYPE_BOOL|**bit**||  
-|DBTYPE_BYTES|**二進位**， **varbinary**，**映像，**或**varbinary （max)**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者會檢查*ulColumnSize* DBCOLUMNDESC 結構的成員。 根據值和新版[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者會對應至型別**映像**。<br /><br /> 如果值*ulColumnSize*小於最大長度**二進位**資料類型資料行，然後在[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client OLE DB 提供者會檢查 DBCOLUMNDESC *rgPropertySets*成員。 如果 DBPROP_COL_FIXEDLENGTH 是 VARIANT_TRUE， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者會對應至型別**二進位**。 如果屬性的值是 VARIANT_FALSE， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者會對應至型別**varbinary**。 在任一情況，DBCOLUMNDESC *ulColumnSize*成員會決定建立的 SQL Server 資料行的寬度。|  
+|DBTYPE_BYTES|**二進位**， **varbinary**，**映像，** 或**varbinary （max)**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者會檢查*ulColumnSize* DBCOLUMNDESC 結構的成員。 根據值和新版[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者會對應至型別**映像**。<br /><br /> 如果值*ulColumnSize*小於最大長度**二進位**資料類型資料行，然後在[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client OLE DB 提供者會檢查 DBCOLUMNDESC *rgPropertySets*成員。 如果 DBPROP_COL_FIXEDLENGTH 是 VARIANT_TRUE， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者會對應至型別**二進位**。 如果屬性的值是 VARIANT_FALSE， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者會對應至型別**varbinary**。 在任一情況，DBCOLUMNDESC *ulColumnSize*成員會決定建立的 SQL Server 資料行的寬度。|  
 |DBTYPE_CY|**money**||  
 |DBTYPE_DBTIMESTAMP|**datetime**||  
 |DBTYPE_GUID|**uniqueidentifier**||  

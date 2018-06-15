@@ -25,6 +25,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32913933"
 ---
 # <a name="long-data-and-sqlsetpos-and-sqlbulkoperations"></a>Long 資料和 SQLSetPos SQLBulkOperations
 更新資料列時，使用 SQL 陳述式中的參數案例一樣，可以傳送長資料**SQLBulkOperations**或**SQLSetPos**或插入資料列時**SQLBulkOperations**. 資料會使用多個呼叫的組件，以傳送**SQLPutData**。 在執行階段資料會傳送的資料行稱為*資料在執行中資料行*。  

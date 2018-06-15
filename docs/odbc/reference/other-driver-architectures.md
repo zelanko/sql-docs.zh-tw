@@ -25,6 +25,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32916873"
 ---
 # <a name="other-driver-architectures"></a>其他驅動程式架構
 有些 ODBC 驅動程式不完全符合先前所述的架構。 這可能是因為驅動程式執行責任以外的傳統的 ODBC 驅動程式，或不正常的意義上的驅動程式。  

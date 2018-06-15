@@ -30,6 +30,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32922393"
 ---
 # <a name="creating-user-defined-types---requirements"></a>建立使用者定義類型的需求
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -135,7 +136,7 @@ ms.lasthandoff: 05/03/2018
   
 -   保留此類型之計算資料行的功能。  
   
- 請注意，同時**原生**和**UserDefined**序列化格式都支援下列比較運算子時**IsByteOrdered**設**，則為 true**:  
+ 請注意，同時**原生**和**UserDefined**序列化格式都支援下列比較運算子時**IsByteOrdered**設 **，則為 true**:  
   
 -   等於 (=)  
   

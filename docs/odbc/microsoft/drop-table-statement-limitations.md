@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32902320"
 ---
 # <a name="drop-table-statement-limitations"></a>卸除資料表陳述式的限制
 使用 Microsoft Excel 5.0、 7.0、 或 97 驅動程式時，DROP TABLE 陳述式會清除工作表，但不會刪除工作表的名稱。 因為工作表名稱仍存在於活頁簿中，另一個工作表無法建立具有相同名稱。

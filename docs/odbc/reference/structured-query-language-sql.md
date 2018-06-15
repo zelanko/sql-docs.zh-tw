@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32916629"
 ---
 # <a name="structured-query-language-sql"></a>結構化查詢語言 (SQL) (Structured Query Language (SQL))
 一般 DBMS 可讓使用者儲存、 存取及組織且有效率的方式修改資料。 一開始的 Dbms 使用者是程式設計人員。 存取儲存的資料需要 COBOL 之類的程式設計語言中撰寫程式。 這些程式通常已寫入來向非技術性使用者容易使用的介面，同時存取資料本身所需的經驗豐富的程式設計人員的服務。 不會隨便被存取的資料不太實用。  

@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32912059"
 ---
 # <a name="row-wise-binding"></a>資料列取向繫結
 當使用資料列取向繫結時，應用程式定義此結構包含一個或兩個，或在某些情況下三個，每個資料行資料所要傳回的項目。 第一個項目會保存資料值，和第二個項目會保存之長度/指標緩衝區。 指標和長度的值可以儲存在個別的緩衝區的 SQL_DESC_INDICATOR_PTR 和 SQL_DESC_OCTET_LENGTH_PTR 的描述項欄位設為不同的值;如果進行此設定，此結構會包含第三個元素。 應用程式接著會配置這些結構的陣列，其中包含資料列集內有資料列的元素。  

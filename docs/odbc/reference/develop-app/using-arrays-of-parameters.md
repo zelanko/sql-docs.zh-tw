@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32919293"
 ---
 # <a name="using-arrays-of-parameters"></a>使用參數陣列
 若要使用的應用程式會呼叫的參數陣列**SQLSetStmtAttr**與*屬性*則 sql_attr_paramset_size 會以指定的參數集數目的引數。 它會呼叫**SQLSetStmtAttr**與*屬性*SQL_ATTR_PARAMS_PROCESSED_PTR 以指定的位址變數中的驅動程式可以傳回的處理，參數的集合數目的引數包括錯誤設定。 它會呼叫**SQLSetStmtAttr**與*屬性*SQL_ATTR_PARAM_STATUS_PTR 指向用來傳回每個資料列的參數值的狀態資訊的陣列的引數。 驅動程式會將這些位址儲存在它所維護的陳述式的結構。  
@@ -44,7 +45,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="error-processing"></a>錯誤處理  
  如果執行陳述式時發生錯誤，執行函式會傳回錯誤，且資料列數字變數設定為包含錯誤的資料列數。 是否所有資料列除了錯誤組執行或所有資料列之前 （但不是能晚於） 是否會執行設定 「 錯誤時，它可以是資料來源專用。 因為它處理集合參數時，驅動程式會設定目前正在處理的資料列數 SQL_ATTR_PARAMS_PROCESSED_PTR 陳述式屬性所指定的緩衝區。 如果所有將除了執行設定 「 錯誤時，驅動程式將這個緩衝區則 sql_attr_paramset_size 會處理所有資料列之後。  
   
- 如果已設定 SQL_ATTR_PARAM_STATUS_PTR 陳述式屬性， **SQLExecute**或**SQLExecDirect**傳回*參數狀態陣列，*這樣會提供狀態每個參數集。 參數狀態陣列是由應用程式配置，並填入的驅動程式。 其項目會指出是否在 SQL 陳述式執行成功的參數資料列，或是否處理時發生錯誤的參數集。 如果發生錯誤，驅動程式 SQL_PARAM_ERROR 參數狀態陣列中設定對應的值，並傳回 SQL_SUCCESS_WITH_INFO。 應用程式可以檢查狀態陣列來判斷哪些資料列已處理。 使用資料列號碼，應用程式可以通常更正錯誤並繼續處理。  
+ 如果已設定 SQL_ATTR_PARAM_STATUS_PTR 陳述式屬性， **SQLExecute**或**SQLExecDirect**傳回*參數狀態陣列，* 這樣會提供狀態每個參數集。 參數狀態陣列是由應用程式配置，並填入的驅動程式。 其項目會指出是否在 SQL 陳述式執行成功的參數資料列，或是否處理時發生錯誤的參數集。 如果發生錯誤，驅動程式 SQL_PARAM_ERROR 參數狀態陣列中設定對應的值，並傳回 SQL_SUCCESS_WITH_INFO。 應用程式可以檢查狀態陣列來判斷哪些資料列已處理。 使用資料列號碼，應用程式可以通常更正錯誤並繼續處理。  
   
  如何使用參數狀態陣列由呼叫所傳回的 SQL_PARAM_ARRAY_ROW_COUNTS 和 SQL_PARAM_ARRAY_SELECTS 選項**SQLGetInfo**。 如**插入**，**更新**，和**刪除**陳述式，參數狀態陣列填入狀態資訊，如果針對 SQL_PARAM_ARRAY_ 傳回 SQL_PARC_BATCHROW_COUNTS，但不是如果 SQL_PARC_NO_BATCH 傳回。 如**選取**陳述式，參數狀態陣列會自動填入如果 SQL_PAS_BATCH 就會傳回 SQL_PARAM_ARRAY_SELECT，但未傳回 SQL_PAS_NO_BATCH 或 SQL_PAS_NO_SELECT。  
   

@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32907743"
 ---
 # <a name="copying-descriptors"></a>複製的描述元
 **SQLCopyDesc**呼叫函式會將一個描述元欄位複製到另一個描述元。 只有應用程式描述項或 IPD，但不是屬於 IRD 欄位複製。 欄位可以從任何類型的描述元複製。 只有在來源和目標的描述元所定義的欄位會複製。 **SQLCopyDesc**不會複製 SQL_DESC_ALLOC_TYPE 欄位中，因為無法變更的描述元的配置類型。 複製的欄位覆寫現有的欄位。  

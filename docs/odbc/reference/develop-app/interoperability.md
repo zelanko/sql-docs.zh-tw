@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32913043"
 ---
 # <a name="interoperability"></a>互通性
 *互通性*是對操作上有許多不同的 Dbms 單一應用程式的能力。 需要撰寫泛型、 可互通的應用程式是一種主要的因素，導致 ODBC 的開發。 不過，互通性並不是簡單的路徑，接著再從 「 不具互通性 」 到 「 完全互通。 」 路徑有多個分支，而且每個需要的功能、 速度、 程式碼複雜度和開發時間之間的取捨。  

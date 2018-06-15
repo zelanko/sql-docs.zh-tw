@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32914803"
 ---
 # <a name="transaction-support-in-dbmss"></a>Dbms 中的交易支援
 某些資料庫中，例如 dBASE、 Paradox 和 Btrieve，特別是桌面資料庫不支援交易。 支援交易的資料庫，之間，甚至沒有在不同的 SQL 陳述式可以是在交易中的變化。 如需詳細資訊，請參閱中的 SQL_TXN_CAPABLE 選項[SQLGetInfo](../../../odbc/reference/syntax/sqlgetinfo-function.md)函式描述。

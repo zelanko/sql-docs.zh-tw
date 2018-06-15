@@ -21,6 +21,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32904653"
 ---
 # <a name="set-exact-command"></a>SET 確切命令
 指定的規則來比較兩個不同長度的字串。  

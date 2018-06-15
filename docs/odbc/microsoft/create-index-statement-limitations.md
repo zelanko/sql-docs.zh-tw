@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32898933"
 ---
 # <a name="create-index-statement-limitations"></a>建立索引陳述式的限制
 Microsoft Excel 或文字的驅動程式不支援 CREATE INDEX 陳述式。  

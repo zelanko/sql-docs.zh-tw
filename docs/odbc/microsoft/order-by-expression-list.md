@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32904623"
 ---
 # <a name="order-by-expression-list"></a>ORDER BY 運算式清單
 運算式可以使用 ORDER BY 子句中。 例如，下列子句中資料表會依據排序三個索引鍵的運算式： a + b、 c + d 和 e。  

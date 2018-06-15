@@ -21,6 +21,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32933115"
 ---
 # <a name="sql-server-data-files-in-microsoft-azure"></a>Microsoft Azure 中的 SQL Server 資料檔案
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -97,7 +98,7 @@ ON
 ### <a name="installation-prerequisites"></a>安裝必要條件  
  以下是將 SQL Server 資料檔案儲存在 Azure 中的安裝必要條件。  
   
--   **SQL Server 內部部署：**SQL Server 2016 及更新版本包含這項功能。 若要了解如何下載最新版的 SQL Server，請參閱 [SQL Server](http://www.microsoft.com/sql-server/sql-server-downloads)。  
+-   **SQL Server 內部部署：** SQL Server 2016 及更新版本包含這項功能。 若要了解如何下載最新版的 SQL Server，請參閱 [SQL Server](http://www.microsoft.com/sql-server/sql-server-downloads)。  
   
 -   在 Azure 虛擬機器中執行的 SQL Server：如果您要 [將 SQL Server 安裝在 Azure 虛擬機器上](http://azuremarketplace.microsoft.com/marketplace/apps?search=sql%20server&page=1)，請安裝 SQL Server 2016，或是更新現有的執行個體。 同樣地，您也可以使用 SQL Server 2016 平台映像，在 Azure 中建立新的虛擬機器。
 

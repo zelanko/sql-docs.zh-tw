@@ -21,6 +21,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32911953"
 ---
 # <a name="obtaining-descriptor-handles"></a>取得描述項處理
 應用程式當做輸出引數的呼叫中取得的任何明確配置描述項控制代碼**SQLAllocHandle**。 隱含地配置描述項的控制代碼透過呼叫**SQLGetStmtAttr**。

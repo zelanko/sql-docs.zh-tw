@@ -32,10 +32,11 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32963633"
 ---
 # <a name="subscription-expiration-and-deactivation"></a>訂閱逾期與停用
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  如果訂閱在指定 *「保留期限」*內未執行同步處理，則可以停用訂閱或使訂閱過期。 發生的動作依複寫類型及超過的保留期限而定。  
+  如果訂閱在指定 *「保留期限」* 內未執行同步處理，則可以停用訂閱或使訂閱過期。 發生的動作依複寫類型及超過的保留期限而定。  
   
  若要設定保留期限，請參閱[設定訂閱的逾期期限](../../relational-databases/replication/publish/set-the-expiration-period-for-subscriptions.md)、[設定交易式發行集的散發保留期限 &#40;SQL Server Management Studio&#41;](../../relational-databases/replication/set-distribution-retention-period-for-transactional-publications.md) 和[設定發行與散發](../../relational-databases/replication/configure-publishing-and-distribution.md)。  
   

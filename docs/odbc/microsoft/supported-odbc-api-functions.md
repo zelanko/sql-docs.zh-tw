@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32913333"
 ---
 # <a name="supported-odbc-api-functions"></a>支援的 ODBC API 函式
 調節的目的是通知哪些可用功能，從驅動程式的應用程式。 Microsoft ODBC 桌面資料庫驅動程式支援所有的核心和層級 1 函式。  

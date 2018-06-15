@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32914733"
 ---
 # <a name="step-5-commit-the-transaction"></a>步驟 5： 認可交易
 下一個步驟是要認可的交易，在下圖所示。  

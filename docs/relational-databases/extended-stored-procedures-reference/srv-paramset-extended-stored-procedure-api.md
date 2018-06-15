@@ -30,6 +30,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32938803"
 ---
 # <a name="srvparamset-extended-stored-procedure-api"></a>srv_paramset (擴充預存程序 API)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -80,7 +81,7 @@ len
   
 |新的資料類型|傳回資料長度|  
 |--------------------|------------------------|  
-|**BITN**|**NULL：***len* = 0、data = IG、RET = 0<br /><br /> **ZERO：**N/A<br /><br /> **>=255：**N/A<br /><br /> **<255：**N/A|  
+|**BITN**|**NULL：***len* = 0、data = IG、RET = 0<br /><br /> **ZERO：** N/A<br /><br /> **>=255：** N/A<br /><br /> **<255：** N/A|  
 |**BIGVARCHAR**|**NULL：***len* = 0、data = IG、RET = 1<br /><br /> **ZERO：***len* = IG、data = IG、RET = 0<br /><br /> **>=255：***len* = max8k、data = valid、RET = 0<br /><br /> **<255：***len* = <8k、data = valid、RET = 1|  
 |**BIGCHAR**|**NULL：***len* = 0、data = IG、RET = 1<br /><br /> **ZERO：***len* = IG、data = IG、RET = 0<br /><br /> **>=255：***len* = max8k、data = valid、RET = 0<br /><br /> **<255：***len* = <8k、data = valid、RET = 1|  
 |**BIGBINARY**|**NULL：***len* = 0、data = IG、RET = 1<br /><br /> **ZERO：***len* = IG、data = IG、RET = 0<br /><br /> **>=255：***len* = max8k、data = valid、RET = 0<br /><br /> **<255：***len* = <8k、data = valid、RET = 1|  

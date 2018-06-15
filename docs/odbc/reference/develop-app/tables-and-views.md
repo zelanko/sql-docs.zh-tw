@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32914893"
 ---
 # <a name="tables-and-views"></a>資料表和檢視表
 ODBC 函數，在資料表和檢視表是可互換的。 詞彙*資料表*會用於資料表和檢視，除了 where 詞彙*檢視*明確使用。

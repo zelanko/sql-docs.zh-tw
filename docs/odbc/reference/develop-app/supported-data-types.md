@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32915143"
 ---
 # <a name="supported-data-types"></a>支援的資料類型
 Dbms 所支援的資料類型的變化。 應用程式可以藉由呼叫判斷名稱和支援的資料類型的特性**SQLGetTypeInfo**。 寬資料型別名稱中的變化，因為應用程式必須使用所傳回的資料型別名稱**SQLGetTypeInfo**中**CREATE TABLE**陳述式。 如需詳細資訊，請參閱[ODBC 中的資料型別](../../../odbc/reference/develop-app/data-types-in-odbc.md)。

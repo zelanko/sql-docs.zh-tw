@@ -24,6 +24,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32902833"
 ---
 # <a name="hardware-and-software-requirements-odbc"></a>硬體和軟體需求 (ODBC)
 本主題列出使用 ODBC 桌面資料庫驅動程式的需求。  

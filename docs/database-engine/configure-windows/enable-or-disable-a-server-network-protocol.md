@@ -29,6 +29,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32869033"
 ---
 # <a name="enable-or-disable-a-server-network-protocol"></a>啟用或停用伺服器網路通訊協定
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -70,7 +71,7 @@ ms.lasthandoff: 05/03/2018
   
 2.  從工作列啟動 Windows PowerShell，或是依序按一下 [開始]、[所有程式]、[附屬應用程式]、[Windows PowerShell]，然後按一下 [Windows PowerShell]。  
   
-3.  輸入 **sqlps** 來匯入 **Import-Module “sqlps”**模組  
+3.  輸入 **sqlps** 來匯入 **Import-Module “sqlps”** 模組  
   
 4.  執行下列陳述式，即可同時啟用 TCP 和具名管道通訊協定。 請將 `<computer_name>` 取代成執行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的電腦名稱。 如果您要設定具名執行個體，請將 `MSSQLSERVER` 取代成執行個體名稱。  
   

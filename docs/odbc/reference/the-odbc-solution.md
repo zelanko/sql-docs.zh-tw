@@ -24,6 +24,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32918923"
 ---
 # <a name="the-odbc-solution"></a>ODBC 方案
 這個問題，然後是 ODBC 方式標準化資料庫存取權？ 有兩個架構的需求：  

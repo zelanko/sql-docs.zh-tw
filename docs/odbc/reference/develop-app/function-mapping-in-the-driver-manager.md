@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32911803"
 ---
 # <a name="function-mapping-in-the-driver-manager"></a>函式對應驅動程式管理員
 驅動程式管理員支援兩個進入點，接受字串引數的函式。 未裝飾的函式 (**SQLDriverConnect**) 是 ANSI 格式的函式。 以 Unicode 格式裝飾*W* (**SQLDriverConnectW**。)  

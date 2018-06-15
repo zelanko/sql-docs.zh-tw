@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32914653"
 ---
 # <a name="tracing"></a>追蹤
 ODBC 驅動程式管理員有追蹤功能，可讓 ODBC 應用程式記錄或 transcribed 到記錄檔所做的函式呼叫的順序。 追蹤是由追蹤 DLL 可擷取呼叫應用程式和驅動程式管理員，以及驅動程式管理員與驅動程式之間執行。 這種追蹤方法取代了追蹤執行的 ODBC 2 *.x* ODBC 2 中執行的驅動程式管理員和追蹤 *.x*由 ODBC Spy。  

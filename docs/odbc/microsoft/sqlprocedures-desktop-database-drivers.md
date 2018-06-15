@@ -21,6 +21,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32903863"
 ---
 # <a name="sqlprocedures-desktop-database-drivers"></a>SQLProcedures （桌面資料庫驅動程式）
 **SQLProcedures**只會傳回資料列的這些程序，至少一個引數。 沒有任何引數的程序被當做檢視表。  

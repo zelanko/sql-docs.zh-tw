@@ -28,6 +28,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32923343"
 ---
 # <a name="restore-a-database-backup-using-ssms"></a>Restore a Database Backup Using SSMS
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -97,7 +98,7 @@ ms.lasthandoff: 05/03/2018
     
          在 **[來源: 裝置: 資料庫]** 清單方塊中，選取應該還原的資料庫名稱。    
     
-        > **注意：**這份清單只能在選取 [裝置] 時使用。 只有在所選取裝置上有備份的資料庫才可供使用。    
+        > **注意：** 這份清單只能在選取 [裝置] 時使用。 只有在所選取裝置上有備份的資料庫才可供使用。    
      
 4.  在 **[目的地]** 區段中，會將要還原之資料庫的名稱自動填入 **[資料庫]** 方塊。 若要變更資料庫的名稱，請在 **[資料庫]** 方塊中輸入新名稱。    
     
@@ -152,7 +153,7 @@ ms.lasthandoff: 05/03/2018
 
 7.  在 [還原選項] 區段下，核取 [覆寫現有的資料庫 (WITH REPLACE)]。
 
-    > **注意：**未核取此選項可能會導致出現下列錯誤訊息：「System.Data.SqlClient.SqlError: 備份組包含現有的 '`Sales`' 資料庫以外的資料庫備份。 (Microsoft.SqlServer.SmoExtended)」
+    > **注意：** 未核取此選項可能會導致出現下列錯誤訊息：「System.Data.SqlClient.SqlError: 備份組包含現有的 '`Sales`' 資料庫以外的資料庫備份。 (Microsoft.SqlServer.SmoExtended)」
 
 8.  在 [結尾記錄備份] 區段下，取消核取 [還原前先進行結尾記錄備份]。
 
@@ -161,7 +162,7 @@ ms.lasthandoff: 05/03/2018
 
 9.  在 [伺服器連接] 區段下，核取 [關閉目的地資料庫的現有連接]。
 
-    > **注意：**未核取此選項可能會導致出現下列錯誤訊息：「System.Data.SqlClient.SqlError: 無法獲得獨佔存取權，因為資料庫正在使用中。 (Microsoft.SqlServer.SmoExtended)」
+    > **注意：** 未核取此選項可能會導致出現下列錯誤訊息：「System.Data.SqlClient.SqlError: 無法獲得獨佔存取權，因為資料庫正在使用中。 (Microsoft.SqlServer.SmoExtended)」
     
 10. [!INCLUDE[clickOK](../../includes/clickok-md.md)] 
 
@@ -188,7 +189,7 @@ ms.lasthandoff: 05/03/2018
 
 9. [!INCLUDE[clickOK](../../includes/clickok-md.md)] 
 
-    > **注意：**如果您收到下列錯誤訊息：「System.Data.SqlClient.SqlError: 資料庫 "`Sales`" 的記錄結尾尚未備份。 若您不想遺失其中的內容，請使用 BACKUP LOG WITH NORECOVERY 備份記錄。 亦可使用 RESTORE 陳述式的 WITH REPLACE 或 WITH STOPAT 子句，覆寫記錄的內容。 (Microsoft.SqlServer.SmoExtended)」。  
+    > **注意：** 如果您收到下列錯誤訊息：「System.Data.SqlClient.SqlError: 資料庫 "`Sales`" 的記錄結尾尚未備份。 若您不想遺失其中的內容，請使用 BACKUP LOG WITH NORECOVERY 備份記錄。 亦可使用 RESTORE 陳述式的 WITH REPLACE 或 WITH STOPAT 子句，覆寫記錄的內容。 (Microsoft.SqlServer.SmoExtended)」。  
 則您可能未在上述步驟 6 中輸入新的資料庫名稱。  還原通常可以防止意外將資料庫覆寫成不同資料庫。  如果 RESTORE 陳述式中指定的資料庫已經存在於目前伺服器，而且指定的資料庫系列 GUID 與備份組中記錄的資料庫系列 GUID 不同，將不會還原資料庫。 這是重要的防護措施。
 
 ### <a name="d--restore-earlier-disk-backups-to-a-point-in-time"></a>**D.將先前的磁碟備份還原至某個時間點**

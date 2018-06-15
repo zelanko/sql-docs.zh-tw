@@ -24,6 +24,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32916193"
 ---
 # <a name="unicode-applications"></a>Unicode 應用程式
 您可以重新編譯應用程式中有兩種在 Unicode 應用程式：  

@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32915243"
 ---
 # <a name="uses-of-catalog-data"></a>目錄資料的使用
 應用程式會使用各種方式的類別目錄資料。 以下是一些常見用法：  

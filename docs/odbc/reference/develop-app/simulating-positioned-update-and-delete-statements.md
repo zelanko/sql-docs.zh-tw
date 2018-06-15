@@ -25,6 +25,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32913883"
 ---
 # <a name="simulating-positioned-update-and-delete-statements"></a>模擬定位的 Update 和 Delete 陳述式
 如果資料來源不支援定位的 update 以及 delete 陳述式，可以模擬這些驅動程式。 比方說，ODBC 資料指標程式庫會模擬定位的 update 和 delete 陳述式。 模擬定位的 update 和 delete 陳述式的一般策略是要搜尋的項目轉換定位陳述式。 這是藉由取代**WHERE CURRENT OF**子句以搜尋**其中**子句可識別目前的資料列。  

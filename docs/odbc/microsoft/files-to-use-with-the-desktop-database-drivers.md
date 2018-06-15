@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32901214"
 ---
 # <a name="files-to-use-with-the-desktop-database-drivers"></a>桌面資料庫驅動程式搭配使用的檔案
 Microsoft Jet 資料庫引擎，可安裝 ISAM 檔案和 Microsoft ODBC 檔案，會使用 ODBC 桌面資料庫驅動程式。 並非所有需要重新發佈的產品，而不是所有核心元件。  

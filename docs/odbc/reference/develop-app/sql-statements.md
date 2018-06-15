@@ -19,6 +19,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32910523"
 ---
 # <a name="sql-statements"></a>SQL 陳述式
 ODBC 應用程式來執行幾乎所有資料庫存取執行 SQL 陳述式。 這些陳述式的形式 — 硬式編碼或建構在執行的階段，互通性或資料來源專用，依此類推，取決於應用程式的需求。  

@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32912033"
 ---
 # <a name="direct-execution-odbc"></a>直接執行 ODBC
 直接執行是最簡單的方式執行的陳述式。 當提交陳述式執行時，資料來源會將它編譯成存取計劃，，然後執行該存取方案。  

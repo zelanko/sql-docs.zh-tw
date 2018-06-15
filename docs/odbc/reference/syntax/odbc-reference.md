@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32915824"
 ---
 # <a name="odbc-reference"></a>ODBC 參考
 下列主題包含語法與所有 ODBC 函數的語意資訊。  

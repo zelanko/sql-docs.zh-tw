@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32917953"
 ---
 # <a name="unicode-function-arguments"></a>Unicode 函式引數
 ODBC 3.5 （或更新版本） 驅動程式管理員支援 ANSI 和 Unicode 版本的所有函式接受字元字串或 SQLPOINTER 在其引數的指標。 Unicode 函式會實作為函式 (且尾碼為*W*)，而不做巨集。 ANSI 函式 (或後置字元不可以呼叫的目標*A*) 等於目前的 ODBC API 函式。  

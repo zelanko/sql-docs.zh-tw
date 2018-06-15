@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32901795"
 ---
 # <a name="driver-architecture-overview"></a>驅動程式架構概觀
 Microsoft Visual FoxPro ODBC 驅動程式是 32 位元驅動程式，可讓您開啟和查詢 Microsoft Visual FoxPro 資料庫或透過開啟資料庫連接 (ODBC) 介面 FoxPro 資料表。 您可以存取 FoxPro 資料使用下列類型的應用程式：  

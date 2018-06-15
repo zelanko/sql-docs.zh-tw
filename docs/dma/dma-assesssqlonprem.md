@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32870723"
 ---
 # <a name="perform-a-sql-server-migration-assessment"></a>執行 SQL Server 移轉評估
 下列的逐步指示會協助您移轉至內部部署 SQL Server，使用資料移轉小幫手來執行在 Azure VM 或 Azure SQL Database 上的 SQL Server 的執行您的第一次評估。
