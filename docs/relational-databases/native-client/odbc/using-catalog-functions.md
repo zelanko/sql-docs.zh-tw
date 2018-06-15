@@ -28,6 +28,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32950663"
 ---
 # <a name="using-catalog-functions"></a>使用目錄函數
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -51,7 +52,7 @@ ms.lasthandoff: 05/03/2018
   
      傳回連結伺服器中所包含的目錄清單。  
   
- 您擁有連結的伺服器名稱和目錄名稱之後, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC 驅動程式支援使用兩部分名稱從目錄取得資訊*linked_server_name***。***目錄*如*CatalogName*下列 odbc 目錄函數：  
+ 您擁有連結的伺服器名稱和目錄名稱之後, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC 驅動程式支援使用兩部分名稱從目錄取得資訊*linked_server_name ***。*** 目錄*如*CatalogName*下列 odbc 目錄函數：  
   
 -   **SQLColumnPrivileges**  
   
@@ -65,7 +66,7 @@ ms.lasthandoff: 05/03/2018
   
 -   **SQLTables**  
   
- 兩個部分*linked_server_name***。***目錄*也支援*FKCatalogName*和*PKCatalogName*上[SQLForeignKeys](../../../relational-databases/native-client-odbc-api/sqlforeignkeys.md)。  
+ 兩個部分*linked_server_name ***。*** 目錄*也支援*FKCatalogName*和*PKCatalogName*上[SQLForeignKeys](../../../relational-databases/native-client-odbc-api/sqlforeignkeys.md)。  
   
  使用 SQLLinkedServers 和 SQLLinkedCatalogs 需要下列檔案：  
   
