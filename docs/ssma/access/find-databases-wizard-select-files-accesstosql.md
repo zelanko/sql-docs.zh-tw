@@ -1,8 +1,6 @@
 ---
 title: 尋找資料庫精靈 （選取檔案） (AccessToSQL) |Microsoft 文件
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-access
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -20,11 +18,12 @@ caps.latest.revision: 13
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 8bd5b106fbd45311606e0802c51997ad576c8475
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: da8c4f3dbdfb374defe0144ef3accb004ee70b77
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34773514"
 ---
 # <a name="find-databases-wizard-select-files-accesstosql"></a>尋找資料庫精靈 （選取檔案） (AccessToSQL)
 [尋找資料庫精靈] 的 [選取檔案] 頁面上會列出在搜尋中找到的檔案。 若要選取要加入至 SSMA 檔案，請選取包含檔案名稱的資料列。 當您完成選取的檔案，請按一下**下一步**若要檢視 [確認選取] 頁面。  
@@ -33,7 +32,7 @@ ms.lasthandoff: 05/03/2018
   
 若要選取要加入至 SSMA 檔案，請選取檔案名稱旁邊的核取方塊。 當您完成選取的檔案，請按一下**下一步**若要檢視 [完成] 頁面。  
   
-## <a name="options"></a>選項  
+## <a name="options"></a>選項。  
 **全選**  
 選取此核取方塊以選取清單中的所有資料庫。  
   
@@ -43,7 +42,7 @@ ms.lasthandoff: 05/03/2018
 **檔案名稱**  
 顯示將加入 SSMA Access 資料庫檔案的名稱。  
   
-**擁有者**  
+**[擁有者]**  
 顯示檔案的擁有者。  
   
 **檔案路徑**  
