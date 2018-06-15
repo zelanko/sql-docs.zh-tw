@@ -2,7 +2,6 @@
 title: 最佳化屬性範例 （VC + +） |Microsoft 文件
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,11 +18,12 @@ caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: dd78e57693ccd87cd04bb389a119f7a274d2b1e5
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 90d3234b54c4dd0c0c8e51cbade0199b4d67ade1
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35279984"
 ---
 # <a name="optimize-property-example-vc"></a>最佳化屬性範例 （VC + +）
 這個範例會示範[欄位](../../../ado/reference/ado-api/field-object.md)物件動態**最佳化**屬性。 **Zip**欄位**作者**資料表中**Pubs**資料庫未編製索引。 設定[最佳化](../../../ado/reference/ado-api/optimize-property-dynamic-ado.md)屬性**True**上**zip**欄位授權 ADO 來建立可改善效能的索引[尋找](../../../ado/reference/ado-api/find-method-ado.md)方法。  

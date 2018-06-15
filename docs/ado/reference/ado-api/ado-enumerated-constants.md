@@ -2,7 +2,6 @@
 title: ADO 列舉常數 |Microsoft 文件
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -17,11 +16,12 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 151b4e88b3f094cd44ac7078e5d16e0b0730a9e3
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 688cc5fb5a6b6ce0912432b8496dd1e28cb034db
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35275497"
 ---
 # <a name="ado-enumerated-constants"></a>ADO 列舉常數
 若要協助偵錯，ADO 列舉會列出每個常數的值。 不過，這個值只是單純地建議，並從 ADO 發行版本可能會變更為另。 您的程式碼應該僅相依於名稱，而不是實際值，每個列舉常數。  

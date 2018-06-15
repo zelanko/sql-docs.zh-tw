@@ -2,7 +2,6 @@
 title: ADO API 參考 |Microsoft 文件
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -17,11 +16,12 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 12e206c96b9a4e8fedc61fac55fcc99089b952f1
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 2270fec7766396ea846726fc8098e06bbef81809
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35275307"
 ---
 # <a name="ado-api-reference"></a>ADO 應用程式開發介面參考
 ADO 文件的這一節包含每個 ADO 物件、 集合、 屬性、 動態屬性、 方法、 事件和列舉的主題。 此外，它包含一份 ADO 語法索引，以搭配 Microsoft Visual c + + 和 Windows Foundation 類別 (WFC)。  
