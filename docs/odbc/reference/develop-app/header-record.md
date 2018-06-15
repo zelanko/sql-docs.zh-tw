@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32908953"
 ---
 # <a name="header-record"></a>標頭記錄
 欄位標頭記錄中的包含之函式的執行，包括傳回碼、 資料列計數、 狀態記錄的數目和型別執行陳述式的一般資訊。 除非函式會傳回 SQL_INVALID_HANDLE，一定會建立標頭記錄。 如需標頭記錄中欄位的完整清單，請參閱[SQLGetDiagField](../../../odbc/reference/syntax/sqlgetdiagfield-function.md)函式描述。

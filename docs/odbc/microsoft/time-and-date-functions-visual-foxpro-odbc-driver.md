@@ -26,21 +26,22 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32908703"
 ---
 # <a name="time-and-date-functions-visual-foxpro-odbc-driver"></a>時間和日期函式 （Visual FoxPro ODBC 驅動程式）
 下表列出 Visual FoxPro ODBC 驅動程式; 支援 ODBC 時間和日期函數當相同的函式的 Visual FoxPro 文法與 ODBC 語法，會列出 Visual FoxPro 相等。  
   
 |ODBC 文法|Visual FoxPro 文法|  
 |------------------|---------------------------|  
-|CURDATE*（)*|日期*（)*|  
-|CURTIME*（)*|時間*（)*|  
+|CURDATE *（)*|日期 *（)*|  
+|CURTIME *（)*|時間 *（)*|  
 |DAYNAME *(date_exp)*|CDOW *(date_exp)*|  
-|DAYOFMONTH (*date_exp)*|天*（)*|  
+|DAYOFMONTH (*date_exp)*|天 *（)*|  
 |小時 *(time_exp)*||  
 |分鐘 *(time_exp)*||  
 |月份 *(time_exp)*||  
 |MONTHNAME *(date_exp)*|CMONTH *(date_exp)*|  
-|現在*（)*|DATETIME*（)*|  
+|現在 *（)*|DATETIME *（)*|  
 |第二個 *(time_exp)*|秒 *(time_exp)*|  
 |週 *(date_exp)*||  
 |年份 *(date_exp)*||  

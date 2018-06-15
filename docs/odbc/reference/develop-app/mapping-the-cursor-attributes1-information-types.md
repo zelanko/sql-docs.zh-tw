@@ -25,6 +25,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32910543"
 ---
 # <a name="mapping-the-cursor-attributes1-information-types"></a>對應的資料指標 Attributes1 資訊類型
 當 ODBC 3。*x*應用程式會呼叫**SQLGetInfo** ODBC 2 *.x* SQL_XXXX_CURSOR_ATTRIBUTES1 資訊類型的驅動程式 (如動態、 順向的索引鍵集驅動程式，或靜態資料指標） 驅動程式管理員傳回的位元設定取決於 ODBC 2。*x*驅動程式會傳回對應的 ODBC 2。*x*資訊類型。 下表所示，會設定位元。  

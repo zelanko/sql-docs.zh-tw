@@ -24,6 +24,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32908123"
 ---
 # <a name="conformance-levels"></a>一致性層級
 ODBC 驅動程式可讓應用程式存取不同資料來源。 每個驅動程式可讓應用程式在執行階段決定哪些 ODBC 功能和哪些 SQL 文法的驅動程式，而且每個資料來源支援。 這不是設計來搭配單一驅動程式或一組小型、 已知的驅動程式，因為這些應用程式可以直接寫入該驅動程式或驅動程式的功能的應用程式的需求。 若要協助應用程式探索驅動程式和資料來源的功能，兩個區域的一致性是否可用： SQL 文法與 ODBC 介面。  

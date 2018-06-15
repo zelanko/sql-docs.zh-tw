@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32908343"
 ---
 # <a name="argument-value-checks"></a>引數的值檢查
 驅動程式管理員會檢查下列類型的引數。 除非另有註明，否則驅動程式管理員會傳回 SQL_ERROR 引數的值中的錯誤。  
