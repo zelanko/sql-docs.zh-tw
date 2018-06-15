@@ -18,6 +18,7 @@ ms.sourcegitcommit: 6fd8a193728abc0a00075f3e4766a7e2e2859139
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/17/2018
+ms.locfileid: "34235578"
 ---
 # <a name="dashboards-in-includename-sosincludesname-sos-shortmd"></a>儀表板 [!INCLUDE[name-sos](../includes/name-sos-short.md)]
 

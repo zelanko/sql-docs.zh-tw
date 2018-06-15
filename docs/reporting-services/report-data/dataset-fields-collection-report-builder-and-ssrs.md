@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33023005"
 ---
 # <a name="dataset-fields-collection-report-builder-and-ssrs"></a>資料集欄位集合 (報表產生器及 SSRS)
   資料集欄位代表資料連接中的資料。 欄位可以代表數值或非數值資料。 範例包括銷售量、總銷售額、客戶名稱、資料庫識別碼、URL、影像、空間資料及電子郵件地址。 在設計介面上，欄位會以報表項目 (如文字方塊、資料表和圖表) 中的運算式形式出現。  

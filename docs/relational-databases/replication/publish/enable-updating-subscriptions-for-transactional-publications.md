@@ -25,6 +25,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32964283"
 ---
 # <a name="enable-updating-subscriptions-for-transactional-publications"></a>啟用交易式發行集的可更新訂閱
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -49,7 +50,7 @@ ms.lasthandoff: 05/03/2018
   
 2.  在 **[代理程式安全性]** 頁面上，為「佇列讀取器代理程式」、「快照集代理程式」和「記錄讀取器代理程式」指定安全性設定。 如需「佇列讀取器代理程式」執行時使用帳戶所需權限的詳細資訊，請參閱＜ [Replication Agent Security Model](../../../relational-databases/replication/security/replication-agent-security-model.md)＞。  
   
-    > **注意：**即使您僅使用立即更新訂閱，也會設定「佇列讀取器代理程式」。  
+    > **注意：** 即使您僅使用立即更新訂閱，也會設定「佇列讀取器代理程式」。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
  當您以程式設計方式使用複寫預存程序來建立交易式發行集時，可以啟用立即訂閱或佇列更新訂閱。  

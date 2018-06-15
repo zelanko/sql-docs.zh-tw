@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33021345"
 ---
 # <a name="embed-an-image-in-a-report-report-builder-and-ssrs"></a>在報表中內嵌影像 (報表產生器及 SSRS)
   報表可以包含內嵌影像。 內嵌影像可確保影像隨時可供報表使用，但是可能會影響報表定義 (定義報表的檔案) 的大小。 內嵌在報表中的影像會列在 [報表資料] 窗格中。  

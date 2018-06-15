@@ -25,6 +25,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33024655"
 ---
 # <a name="report-parameters-methods"></a>報表參數方法
   您可以使用這些方法來設定和擷取報表的參數。  

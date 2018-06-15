@@ -28,6 +28,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32993455"
 ---
 # <a name="spaddarticle-transact-sql"></a>sp_addarticle (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -201,7 +202,7 @@ sp_addarticle [ @publication = ] 'publication'
 |**0x200**|複寫外部索引鍵條件約束。 如果參考的資料表不是發行集的一部份，便不會複寫發行資料表的所有外部索引鍵條件約束。 *不支援 Oracle 發行者*。|  
 |**0x400**|複寫 CHECK 條件約束。 *不支援 Oracle 發行者*。|  
 |**0x800**|複寫預設值。 *不支援 Oracle 發行者*。|  
-|**0x1000**|複寫資料行層級定序。<br /><br /> **注意：**這個選項應該設定 Oracle 發行者 」 來啟用區分大小寫的比較。|  
+|**0x1000**|複寫資料行層級定序。<br /><br /> **注意：** 這個選項應該設定 Oracle 發行者 」 來啟用區分大小寫的比較。|  
 |**0x2000**|複寫與已發行之發行項來源物件相關聯的擴充屬性。 *不支援 Oracle 發行者*。|  
 |**0x4000**|複寫 UNIQUE 條件約束。 也會複寫任何相關條件約束的索引，即使選項**0x10**和**0x40**未啟用。|  
 |**0x8000**|這個選項對於 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 發行者無效。|  
@@ -291,10 +292,10 @@ sp_addarticle [ @publication = ] 'publication'
 >  *auto_identity_range*已被取代，提供回溯相容性。 您應該使用*identityrangemanagementoption*指定識別範圍管理選項。 如需詳細資訊，請參閱[複寫識別資料欄](../../relational-databases/replication/publish/replicate-identity-columns.md)。  
   
  [  **@pub_identity_range =** ] *pub_identity_range*  
- 如果發行項會控制在發行者端的範圍大小*identityrangemanagementoption*設**自動**或*auto_identity_range*設**，則為 true**. *pub_identity_range*是**bigint**，預設值是 NULL。 *不支援 Oracle 發行者*。  
+ 如果發行項會控制在發行者端的範圍大小*identityrangemanagementoption*設**自動**或*auto_identity_range*設 **，則為 true**. *pub_identity_range*是**bigint**，預設值是 NULL。 *不支援 Oracle 發行者*。  
   
  [  **@identity_range =** ] *identity_range*  
- 如果發行項的控制訂閱者端的範圍大小*identityrangemanagementoption*設**自動**或*auto_identity_range*設**，則為 true**. *identity_range*是**bigint**，預設值是 NULL。 使用時機*auto_identity_range*設**true**。 *不支援 Oracle 發行者*。  
+ 如果發行項的控制訂閱者端的範圍大小*identityrangemanagementoption*設**自動**或*auto_identity_range*設 **，則為 true**. *identity_range*是**bigint**，預設值是 NULL。 使用時機*auto_identity_range*設**true**。 *不支援 Oracle 發行者*。  
   
  [  **@threshold =** ]*臨界值*  
  這是一個百分比值，用於控制散發代理程式指派新識別範圍的時機。 當指定的百分比值中*閾值*是使用，散發代理程式會建立新的識別範圍。 *閾值*是**bigint**，預設值是 NULL。 時使用*identityrangemanagementoption*設**自動**或*auto_identity_range*設**true**。 *不支援 Oracle 發行者*。  

@@ -28,6 +28,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32993848"
 ---
 # <a name="spchangepublication-transact-sql"></a>sp_changepublication (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -87,7 +88,7 @@ sp_changepublication [ [ @publication = ] 'publication' ]
 ||**false**|發行集不支援非 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 訂閱者。 非 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 發行集的這個屬性不能變更。|  
 |**enabled_for_internet**|**true**|啟用發行集的網際網路功能，以及可以利用檔案傳輸通訊協定 (FTP)，將快照集檔案傳送給訂閱者。 發行集的同步處理檔案會放在下列目錄中：C:\Program Files\Microsoft SQL Server\MSSQL\Repldata\ftp。 *ftp_address*不能是 NULL。 非 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 發行集的這個屬性不能變更。|  
 ||**false**|不啟用發行集的網際網路功能。 非 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 發行集的這個屬性不能變更。|  
-|**enabled_for_p2p**|**true**|發行集支援點對點複寫。 非 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 發行集的這個屬性不能變更。<br /> 若要設定**enabled_for_p2p**至**true**，適用下列限制：<br /> - **allow_anonymous**必須**false**<br /> - **allow_dts**必須**false**。<br /> - **allow_initialize_from_backup**必須**，則為 true**<br /> - **allow_queued_tran**必須**false**。<br /> - **allow_sync_tran**必須**false**。<br /> - **enabled_for_het_sub**必須**false**。<br /> - **independent_agent**必須**true**。<br /> - **repl_freq**必須**連續**。<br /> - **replicate_ddl**必須**1**。|  
+|**enabled_for_p2p**|**true**|發行集支援點對點複寫。 非 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 發行集的這個屬性不能變更。<br /> 若要設定**enabled_for_p2p**至**true**，適用下列限制：<br /> - **allow_anonymous**必須**false**<br /> - **allow_dts**必須**false**。<br /> - **allow_initialize_from_backup**必須 **，則為 true**<br /> - **allow_queued_tran**必須**false**。<br /> - **allow_sync_tran**必須**false**。<br /> - **enabled_for_het_sub**必須**false**。<br /> - **independent_agent**必須**true**。<br /> - **repl_freq**必須**連續**。<br /> - **replicate_ddl**必須**1**。|  
 ||**false**|發行集不支援點對點複寫。 非 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 發行集的這個屬性不能變更。|  
 |**ftp_address**||發行集快照集檔案的 FTP 存取位置。 非 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 發行集的這個屬性不能變更。|  
 |**ftp_login**||用來連接到 FTP 服務的使用者名稱，允許使用 ANONYMOUS 值。 非 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 發行集的這個屬性不能變更。|  
@@ -98,7 +99,7 @@ sp_changepublication [ [ @publication = ] 'publication' ]
 ||**false**|只有在新訂閱存在時，才會建立同步處理檔案。 在訂閱之後，快照集代理程式啟動和完成之前，訂閱者無法接收同步處理檔案。|  
 |**independent_agent**|**true**|發行集有它自己專用的散發代理程式。|  
 ||**false**|發行集使用共用的散發代理程式，每一組發行者/訂閱資料庫都有共用的代理程式。|  
-|**p2p_continue_onconflict**|**true**|散發代理程式會在偵測到衝突時繼續處理變更。<br /> **注意：**我們建議您使用的預設值`FALSE`。 當此選項設定為`TRUE`，散發代理程式嘗試聚合拓撲中的資料，藉由套用衝突的資料列從節點具有最高訂閱者識別碼。 但是，這個方法無法保證聚合。 您應該確定在偵測到衝突之後，拓撲是一致的。 如需詳細資訊，請參閱＜ [Conflict Detection in Peer-to-Peer Replication](../../relational-databases/replication/transactional/peer-to-peer-conflict-detection-in-peer-to-peer-replication.md)＞中的「處理衝突」。|  
+|**p2p_continue_onconflict**|**true**|散發代理程式會在偵測到衝突時繼續處理變更。<br /> **注意：** 我們建議您使用的預設值`FALSE`。 當此選項設定為`TRUE`，散發代理程式嘗試聚合拓撲中的資料，藉由套用衝突的資料列從節點具有最高訂閱者識別碼。 但是，這個方法無法保證聚合。 您應該確定在偵測到衝突之後，拓撲是一致的。 如需詳細資訊，請參閱＜ [Conflict Detection in Peer-to-Peer Replication](../../relational-databases/replication/transactional/peer-to-peer-conflict-detection-in-peer-to-peer-replication.md)＞中的「處理衝突」。|  
 ||**false**|散發代理程式會在偵測到衝突時停止處理變更。|  
 |**post_snapshot_script**||指定在初始同步處理期間，套用所有其他複寫的物件指令碼和資料之後，散發代理程式所執行之 [!INCLUDE[tsql](../../includes/tsql-md.md)] 指令碼檔案的位置。|  
 |**pre_snapshot_script**||指定在初始同步處理期間，套用所有其他複寫的物件指令碼和資料之前，散發代理程式所執行之 [!INCLUDE[tsql](../../includes/tsql-md.md)] 指令碼檔案的位置。|  

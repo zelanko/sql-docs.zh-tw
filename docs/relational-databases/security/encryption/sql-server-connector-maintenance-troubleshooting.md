@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32973873"
 ---
 # <a name="sql-server-connector-maintenance-amp-troubleshooting"></a>SQL Server 連接器維護和疑難排解
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -42,14 +43,14 @@ ms.lasthandoff: 05/03/2018
   
  針對 TDE，以下是達成此目的的方法：  
   
--   **在 PowerShell 中：**使用不同於金鑰保存庫的現有 TDE 非對稱金鑰名稱來建立新的非對稱金鑰。  
+-   **在 PowerShell 中：** 使用不同於金鑰保存庫的現有 TDE 非對稱金鑰名稱來建立新的非對稱金鑰。  
   
     ```powershell  
     Add-AzureRmKeyVaultKey -VaultName 'ContosoDevKeyVault' `  
       -Name 'Key2' -Destination 'Software'  
     ```  
   
--   **使用 [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)] 或 sqlcmd.exe：**使用下列陳述式 (如第 3 節步驟 3 所示)。  
+-   **使用 [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)] 或 sqlcmd.exe：** 使用下列陳述式 (如第 3 節步驟 3 所示)。  
   
      匯入新的非對稱金鑰。  
   

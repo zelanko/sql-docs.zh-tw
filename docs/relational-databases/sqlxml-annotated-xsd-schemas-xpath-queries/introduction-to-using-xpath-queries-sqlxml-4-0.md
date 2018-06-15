@@ -25,6 +25,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32972443"
 ---
 # <a name="introduction-to-using-xpath-queries-sqlxml-40"></a>使用 XPath 查詢的簡介 (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -51,7 +52,7 @@ ms.lasthandoff: 05/03/2018
 </root>  
 ```  
   
- 本文件**\<客戶 >** 是元素節點， **cid**是屬性節點，和**「 重要 」**是文字節點。  
+ 本文件**\<客戶 >** 是元素節點， **cid**是屬性節點，和 **「 重要 」** 是文字節點。  
   
  XPath 是一種圖表導覽語言，可用來從 XML 文件中選取一組節點。 每個 XPath 運算子都會根據前一個 XPath 運算子所選取的節點集來選取節點集。 例如，提供一組**\<客戶 >** 節點，XPath 可以選取所有**\<順序 >** 節點**日期**屬性值為 **"7/14/1999"**。 產生的節點集會包含訂單日期為 7/14/1999 的所有訂單。  
   

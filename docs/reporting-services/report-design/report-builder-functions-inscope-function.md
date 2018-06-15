@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33023895"
 ---
 # <a name="report-builder-functions---inscope-function"></a>報表產生器函式 - InScope 函式
   指出某個項目目前的執行個體是否在指定的範圍內。  

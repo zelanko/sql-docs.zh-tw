@@ -29,6 +29,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33010615"
 ---
 # <a name="working-with-the-wmi-provider-for-configuration-management"></a>針對組態管理使用 WMI 提供者
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,7 +49,7 @@ ms.lasthandoff: 05/03/2018
   
  其中 `instance_name` 預設為 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 預設安裝中的 `MSSQLSERVER`。  
   
- **注意：**如果您透過 Windows 防火牆，您必須確定已適當地設定您的電腦連接。 請參閱 「 透過 Windows 防火牆連線 」 文件中的 Windows Management Instrumentation 文件上[!INCLUDE[msCoName](../../includes/msconame-md.md)]MSDN[網站](http://go.microsoft.com/fwlink/?linkid=15426)。  
+ **注意：** 如果您透過 Windows 防火牆，您必須確定已適當地設定您的電腦連接。 請參閱 「 透過 Windows 防火牆連線 」 文件中的 Windows Management Instrumentation 文件上[!INCLUDE[msCoName](../../includes/msconame-md.md)]MSDN[網站](http://go.microsoft.com/fwlink/?linkid=15426)。  
   
 ## <a name="permissions-and-server-authentication"></a>權限和伺服器驗證  
  若要存取組態管理的 WMI 提供者，用戶端 WMI 管理指令碼必須在目標電腦的管理員內容中執行。 您在要管理的電腦上必須是本機 Windows 管理員群組的成員。  

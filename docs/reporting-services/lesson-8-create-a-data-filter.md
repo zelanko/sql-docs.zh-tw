@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33016985"
 ---
 # <a name="lesson-8-create-a-data-filter"></a>第 8 課：建立資料篩選
 在父報表上加入鑽研動作後，下一步是要針對您為子報表定義的資料表建立資料篩選。  

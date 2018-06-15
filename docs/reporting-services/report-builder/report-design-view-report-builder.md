@@ -31,6 +31,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33022305"
 ---
 # <a name="report-design-view-report-builder"></a>報表設計檢視 (報表產生器)
   [報表產生器] 視窗的設計目的是要協助您輕鬆地組織報表資源和快速地建立所需的編頁報表。 設計介面位於視窗中央，並且具有功能區和窗格。 設計介面是您可以加入和組織報表項目的位置。 本文所說明的窗格可用來加入、選取並組織報表資源，以及變更報表項目屬性。  

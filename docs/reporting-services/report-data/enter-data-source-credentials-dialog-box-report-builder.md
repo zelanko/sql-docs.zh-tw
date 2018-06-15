@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33018675"
 ---
 # <a name="enter-data-source-credentials-dialog-box-report-builder"></a>輸入資料來源認證對話方塊 (報表產生器)
   使用 [輸入資料來源認證] 對話方塊，即可提供認證，讓您可以從資料來源擷取資料。  

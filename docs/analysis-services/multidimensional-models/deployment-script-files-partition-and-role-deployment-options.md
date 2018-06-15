@@ -14,6 +14,7 @@ ms.sourcegitcommit: b3bb41424249de198f22d9c6d40df4996f083aa6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/17/2018
+ms.locfileid: "34300416"
 ---
 # <a name="deployment-script-files---partition-and-role-deployment-options"></a>部署指令碼檔案的磁碟分割和角色部署選項
 [!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]

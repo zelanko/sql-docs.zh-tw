@@ -24,6 +24,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32973843"
 ---
 # <a name="move-a-tde-protected-database-to-another-sql-server"></a>將 TDE 保護的資料庫移至另一個 SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -254,7 +255,7 @@ ms.lasthandoff: 05/03/2018
      顯示選取之資料庫檔案的路徑。 路徑可以用手動的方式編輯。  
   
      **訊息**  
-     顯示空白訊息或**「找不到檔案」**超連結。  
+     顯示空白訊息或 **「找不到檔案」** 超連結。  
   
 ###  <a name="TsqlMove"></a> 使用 Transact-SQL  
   

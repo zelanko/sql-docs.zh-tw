@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33019105"
 ---
 # <a name="add-or-remove-a-page-header-or-footer-report-builder-and-ssrs"></a>加入或移除頁首或頁尾 (報表產生器及 SSRS)
   您可以將靜態文字、影像、線條、矩形和框線加入至頁首或頁尾。 如果您想要在頁首或頁尾放入變數或計算的資料，可以在文字方塊中放置運算式和資料繫結影像。  

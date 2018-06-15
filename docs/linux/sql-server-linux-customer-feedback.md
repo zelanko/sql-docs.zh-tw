@@ -15,6 +15,7 @@ ms.sourcegitcommit: df382099ef1562b5f2d1cd506c1170d1db64de41
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/12/2018
+ms.locfileid: "34074291"
 ---
 # <a name="customer-feedback-for-sql-server-on-linux"></a>SQL Server on Linux 的客戶意見反應
 

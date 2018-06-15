@@ -17,6 +17,7 @@ ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/19/2018
+ms.locfileid: "34322939"
 ---
 # <a name="bulk-copy-data-with-bcp-to-sql-server-on-linux"></a>SQL Server on Linux 的 bcp 大量複製資料
 
