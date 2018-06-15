@@ -32,6 +32,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33077905"
 ---
 # <a name="type-casting-rules-in-xquery"></a>XQuery 中的類型轉換規則
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -153,7 +154,7 @@ min(xs:integer("1"), xs:double("1.1"))
   
 -   內建衍生的數值類型可升級至其基本類型。 例如，**整數**可升級至**十進位**。  
   
--   A**十進位**可升級至**float、**和**float**可升級至**double**。  
+-   A**十進位**可升級至**float、** 和**float**可升級至**double**。  
   
  因為隱含轉換只允許數值類型，所以下列類型是不允許的：  
   

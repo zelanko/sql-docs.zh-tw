@@ -31,6 +31,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32956143"
 ---
 # <a name="administer-servers-by-using-policy-based-management"></a>使用原則式管理來管理伺服器
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -78,7 +79,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="terms"></a>詞彙  
  **原則式管理 Managed 目標**：以原則式管理所管理的實體，例如 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 的執行個體、資料庫、資料表或索引。 伺服器執行個體中的所有目標都會構成目標階層。 目標集是指將一組目標篩選套用至目標階層所產生的目標集，例如 HumanResources 結構描述所擁有之資料庫中的所有資料表。  
   
- **原則式管理 Facet：**為特定 Managed 目標類型建立行為或特性建立模型的一組邏輯屬性。 屬性的數目和特性會建立在 Facet 中，而且只能由 Facet 的建立者加入或移除。 一個目標類型可以實作一或多個管理 Facet，而一個管理 Facet 可以由一或多個目標類型實作。 Facet 的某些屬性只能套用至特定版本。  
+ **原則式管理 Facet：** 為特定 Managed 目標類型建立行為或特性建立模型的一組邏輯屬性。 屬性的數目和特性會建立在 Facet 中，而且只能由 Facet 的建立者加入或移除。 一個目標類型可以實作一或多個管理 Facet，而一個管理 Facet 可以由一或多個目標類型實作。 Facet 的某些屬性只能套用至特定版本。  
   
  **以原則為基礎的管理條件**  
  一種布林運算式，可指定以原則為基礎之管理 Managed 目標所允許的一組狀態 (與管理 Facet 有關)。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會在評估條件時嘗試觀察定序。 當 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 定序不完全符合 Windows 定序時，請測試您的條件，以決定演算法如何解決衝突。  

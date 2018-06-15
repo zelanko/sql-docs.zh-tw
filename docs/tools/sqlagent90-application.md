@@ -23,9 +23,10 @@ ms.author: sstein
 manager: craigg
 ms.openlocfilehash: bbc6f3a3b463b27108f7e5601078416ea3267973
 ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MTE
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33076785"
 ---
 # <a name="sqlagent90-application"></a>sqlagent90 應用程式
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
