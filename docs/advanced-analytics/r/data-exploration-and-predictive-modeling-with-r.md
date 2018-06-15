@@ -12,6 +12,7 @@ ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31203060"
 ---
 # <a name="data-exploration-and-predictive-modeling-with-r-in-sql-server"></a>資料探索和預測模型，以在 SQL Server 中的 R
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -67,9 +68,9 @@ RevoScaleR 封裝也支援變更 *「執行內容」*(execution context)。 這�
 
 在開發 R 解決方案時，請務必下載 Microsoft R 用戶端。 此免費下載包含支援遠端運算內容以及可擴充 alorithms 所需的程式庫：
 
-+ **[!INCLUDE[rsql_rro-noversion](../../includes/rsql-rro-noversion-md.md)]：**一個 R 執行階段發行版本及一組可提升標準 R 作業效能的套件，例如 Intel Math Kernel Library。  
++ **[!INCLUDE[rsql_rro-noversion](../../includes/rsql-rro-noversion-md.md)]：** 一個 R 執行階段發行版本及一組可提升標準 R 作業效能的套件，例如 Intel Math Kernel Library。  
   
-+ **RevoScaleR：**一個可讓您將計算推送到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的 R 套件。 [!INCLUDE[rsql_rre-noversion](../../includes/rsql-rre-noversion-md.md)]隨附的可調式新封裝和 R 函數來克服這些挑戰。 它也包含一組常見的 R 函數，這些函數已經過重新設計，可提供更佳的效能和延展性。 您可以依據 **rx** 前置詞識別這些改良的函數。 它也包含適用於各種來源的增強型資料提供者；這些函數的前面會加上 **Rx**。
++ **RevoScaleR：** 一個可讓您將計算推送到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的 R 套件。 [!INCLUDE[rsql_rre-noversion](../../includes/rsql-rre-noversion-md.md)]隨附的可調式新封裝和 R 函數來克服這些挑戰。 它也包含一組常見的 R 函數，這些函數已經過重新設計，可提供更佳的效能和延展性。 您可以依據 **rx** 前置詞識別這些改良的函數。 它也包含適用於各種來源的增強型資料提供者；這些函數的前面會加上 **Rx**。
 
 您可以使用任何支援 R，例如的 Windows 架構的程式碼編輯器[!INCLUDE[rsql_rtvs](../../includes/rsql-rtvs-md.md)]或 RStudio。 [!INCLUDE[rsql_rro-noversion](../../includes/rsql-rro-noversion-md.md)] 的下載也包含適用於 R 的常見命令列工具，例如 RGui.exe。
 

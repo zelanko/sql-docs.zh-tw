@@ -14,6 +14,7 @@ ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31538668"
 ---
 # <a name="appliance-monitoring-for-analytics-platform-system"></a>應用裝置的監視 Analytics Platform System
 此應用裝置的監視指南描述的工具和監視 Analytics Platform System 應用裝置的工作。  
