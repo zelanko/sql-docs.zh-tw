@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32910423"
 ---
 # <a name="escape-sequences"></a>逸出序列
 ODBC 定義逸出序列，其中包含日期、 時間、 時間戳記和日期時間間隔常值的純量函式呼叫，標準文法**像**述詞的逸出字元、 外部聯結，以及程序呼叫。 互通的應用程式應該使用盡可能這些順序。  

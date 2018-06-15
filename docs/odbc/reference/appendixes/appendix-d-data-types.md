@@ -24,6 +24,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32906203"
 ---
 # <a name="appendix-d-data-types"></a>附錄 d： 資料類型
 ODBC 定義兩組資料類型： SQL 資料類型和 C 資料類型。 SQL 資料類型表示資料儲存在資料來源的資料類型。 C 資料類型表示資料儲存在應用程式緩衝區中的資料類型。  

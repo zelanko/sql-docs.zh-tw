@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32905283"
 ---
 # <a name="calling-sqlsetpos-to-insert-data"></a>呼叫 SQLSetPos 插入資料
 當 ODBC 2。*x*應用程式使用 ODBC 3 *.x*驅動程式呼叫**SQLSetPos**與*作業*SQL_ADD，驅動程式管理員的引數未對應至這個呼叫**SQLBulkOperations**。 如果 ODBC 3 *.x*驅動程式應該使用的應用程式，會呼叫**SQLSetPos** SQL_ADD，與驅動程式應該支援這項操作。  

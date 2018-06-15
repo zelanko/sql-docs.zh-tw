@@ -24,6 +24,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32910613"
 ---
 # <a name="sql-to-c-day-time-intervals"></a>SQL 到 c： 日期時間間隔
 日期時間間隔 ODBC SQL 資料類型的識別項是：  

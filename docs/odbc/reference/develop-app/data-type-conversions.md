@@ -25,6 +25,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32911933"
 ---
 # <a name="data-type-conversions"></a>資料類型轉換
 資料可以從一個類型中轉換到另一個，其中一個四次： 當資料傳送從一個應用程式變數到另一個 (C 到 C)，當應用程式變數中的資料傳送至陳述式參數 (C to SQL) 中傳回結果集資料行中的資料時應用程式變數 (SQL 到 C)，並將資料時從一個資料來源資料行轉移至另一個 (SQL to SQL)。  

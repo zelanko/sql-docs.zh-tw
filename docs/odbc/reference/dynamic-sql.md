@@ -26,6 +26,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32916893"
 ---
 # <a name="dynamic-sql"></a>動態 SQL
 靜態 SQL 都適用於許多情況下，雖然還有無法事先判斷資料存取的應用程式類別。 例如，假設試算表可讓使用者輸入的查詢，試算表然後傳送給 DBMS 來擷取資料。 此查詢的內容很明顯地不知道程式設計人員寫入試算表程式時。  

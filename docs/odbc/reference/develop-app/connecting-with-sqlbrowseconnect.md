@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32909904"
 ---
 # <a name="connecting-with-sqlbrowseconnect"></a>使用 SQLBrowseConnect 連接
 **SQLBrowseConnect**、 like **SQLDriverConnect**，會使用連接字串。 不過，透過使用**SQLBrowseConnect**，應用程式可以在執行階段建構完整的連接字串。 這可以讓應用程式執行兩個動作：  

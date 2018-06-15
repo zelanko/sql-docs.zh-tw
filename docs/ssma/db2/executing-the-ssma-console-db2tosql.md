@@ -1,8 +1,6 @@
 ---
 title: 執行 SSMA 主控台 (DB2ToSQL) |Microsoft 文件
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-db2
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -18,11 +16,12 @@ caps.latest.revision: 7
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 6d9625334272ee1e5addd8838055ff57f56635d7
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: abfd3a12482d71f808887b1f3f987d0bd1582c76
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34774804"
 ---
 # <a name="executing-the-ssma-console-db2tosql"></a>執行 SSMA 主控台 (DB2ToSQL)
 Microsoft 提供一組強大的指令碼檔案命令來執行及控制 SSMA 活動。 這可確保各節詳細說明相同。 主控台應用程式會使用某些標準的指令碼檔案命令做為列舉這一節。  
@@ -166,7 +165,7 @@ force-load-source/target-database
   
   metabase="<source/target>"/>  
 ```  
-或  
+中的多個  
   
 ```xml  
 <force-load>  
@@ -279,7 +278,7 @@ generate-assessment-report
   
 />  
 ```  
-或  
+中的多個  
   
 ```xml  
 <generate-assessment-report  
@@ -351,7 +350,7 @@ convert-schema
   
 />  
 ```  
-或  
+中的多個  
   
 ```xml  
 <convert-schema  
@@ -417,7 +416,7 @@ convert-schema
   
 </migrate-data>  
 ```  
-或  
+中的多個  
   
 ```xml  
 <migrate-data  
@@ -527,7 +526,7 @@ convert-schema
   
 />  
 ```  
-或  
+中的多個  
   
 ```xml  
 <synchronize-target  
@@ -536,7 +535,7 @@ convert-schema
   
    object-type="<object-category>"/>  
 ```  
-或  
+中的多個  
   
 ```xml  
 <synchronize-target>  
@@ -592,7 +591,7 @@ convert-schema
   
 />  
 ```  
-或  
+中的多個  
   
 ```xml  
 <refresh-from-database  
@@ -601,7 +600,7 @@ convert-schema
   
    object-type="<object-category>"/>  
 ```  
-或  
+中的多個  
   
 ```xml  
 <refresh-from-database>  
@@ -651,7 +650,7 @@ save-as-script
   
 />  
 ```  
-或  
+中的多個  
   
 ```xml  
 <save-as-script  
@@ -690,7 +689,7 @@ convert-sql-statement
   
 -   `write-summary-report-to` 指定要產生報表的路徑。 如果只提及的資料夾路徑，然後檔案名稱**ConvertSQLReport.XML**建立。 （選擇性的屬性）  
   
-    報表建立了 2 子類別，取得進一步的 viz..,:  
+    報表建立了 2 子類別，取得進一步的 viz。。，：  
   
     -   報告錯誤 （="true/false"，預設值為"false"（選擇性的屬性））。  
   
@@ -727,7 +726,7 @@ convert-sql-statement
   
 </convert-sql-statement>  
 ```  
-或  
+中的多個  
   
 ```  
 <convert-sql-statement  
@@ -750,7 +749,7 @@ convert-sql-statement
   
    sql-files="<folder-name>\*.sql" />  
 ```  
-或  
+中的多個  
   
 ```  
 <convert-sql-statement  

@@ -25,6 +25,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32913359"
 ---
 # <a name="duplicated-features"></a>重複的功能
 下列的 ODBC 2。*x* ODBC 3 已有重複的函式。*x*函式。 如此一來，ODBC 2。*x* ODBC 3 中的函式已被取代。*x*。 ODBC 3。*x*函式指取代函式。  

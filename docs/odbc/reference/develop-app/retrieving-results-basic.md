@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32913003"
 ---
 # <a name="retrieving-results-basic"></a>擷取結果 （基本）
 A*結果集*是一組符合特定準則的資料來源上的資料列。 它是概念性的資料表，從查詢結果，且應用程式可使用以表格形式。 **選取**陳述式、 目錄函數和一些程序建立結果集。 在下列範例中，第一個 SQL 陳述式會建立包含所有資料列和 「 訂單 」 資料表中的所有資料行的結果集和第二個 SQL 陳述式會建立包含訂單、 銷售人員，以及狀態資料行 Orders 資料表中資料列的結果集中的狀態為開啟：  

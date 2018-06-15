@@ -1,8 +1,6 @@
 ---
 title: 對應來源和目標資料庫 (AccessToSQL) |Microsoft 文件
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-access
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -26,11 +24,12 @@ caps.latest.revision: 17
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: ade8c301a8cb519c22413a4db9a236f58f5dd870
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: eb290594fc878a2df4cd6345ce6f9cc8f86ff51d
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34773824"
 ---
 # <a name="mapping-source-and-target-databases-accesstosql"></a>對應來源和目標資料庫 (AccessToSQL)
 當您連接到[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或 SQL Azure，您需要指定移轉的目標資料庫。 如果您有多個存取資料庫可以將其對應至多個[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]資料庫 （或結構描述），或在連接的 SQL Azure 資料庫的多個結構描述。  
@@ -61,11 +60,11 @@ SSMA 可讓您對應至每個存取資料庫[!INCLUDE[ssNoVersion](../../include
   
 -   對應至 SQL Server  
   
-您可以將來源資料庫對應到任何目標資料庫。 依預設，來源資料庫都會對應到目標[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]與您已經連接使用 SSMA 的資料庫。 如果正在對應之目標資料庫不存在於[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]，則會以訊息提示您**」 資料庫及/或結構描述不存在於目標[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]中繼資料。它會建立同步處理期間。您要繼續嗎？ 」** 按一下 [是]。 同樣地，您可以將對應結構描述不存在目標結構描述[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]同步處理期間所建立的資料庫。  
+您可以將來源資料庫對應到任何目標資料庫。 依預設，來源資料庫都會對應到目標[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]與您已經連接使用 SSMA 的資料庫。 如果正在對應之目標資料庫不存在於[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]，則會以訊息提示您 **」 資料庫及/或結構描述不存在於目標[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]中繼資料。它會建立同步處理期間。您要繼續嗎？ 」** 按一下 [是]。 同樣地，您可以將對應結構描述不存在目標結構描述[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]同步處理期間所建立的資料庫。  
   
 -   對應至 SQL Azure  
   
-您可以將來源資料庫對應至連接的目標[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]資料庫或連接的目標中的任何結構描述[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]資料庫。 如果您將來源結構描述對應至連接的目標資料庫底下的任何非現有結構描述，則系統將提示您使用訊息**」 結構描述不存在於目標中繼資料。它會建立同步處理期間。您要繼續嗎？"** 按一下 [是]。  
+您可以將來源資料庫對應至連接的目標[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]資料庫或連接的目標中的任何結構描述[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]資料庫。 如果您將來源結構描述對應至連接的目標資料庫底下的任何非現有結構描述，則系統將提示您使用訊息 **」 結構描述不存在於目標中繼資料。它會建立同步處理期間。您要繼續嗎？"** 按一下 [是]。  
   
 ## <a name="reverting-to-your-initial-database-and-schema"></a>還原到您的初始資料庫和結構描述  
 如果您自訂的 Access 資料庫之間的對應和[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或 SQL Azure 資料庫和結構描述，您可以還原回您指定當您連接到資料庫對應[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或 SQL Azure。  

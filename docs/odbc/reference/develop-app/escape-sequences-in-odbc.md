@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32911353"
 ---
 # <a name="escape-sequences-in-odbc"></a>在 ODBC 中的逸出序列
 數字的語言功能，例如外部聯結和純量函式呼叫，通常是由 Dbms 實作。 不過，這些功能的語法通常 DBMS 專屬的即使標準語法定義各種標準組織所。 因為這個緣故，ODBC 會定義包含下列語言功能的標準語法的逸出序列：  

@@ -26,6 +26,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32912183"
 ---
 # <a name="declaring-the-application39s-odbc-version"></a>宣告應用程式&#39;s 的 ODBC 版本
 應用程式配置連接之前，它必須設定 SQL_ATTR_ODBC_VERSION 環境屬性。 這個屬性會指出應用程式遵循 ODBC 2。*x*或 ODBC 3。*x*規格，使用下列項目：  

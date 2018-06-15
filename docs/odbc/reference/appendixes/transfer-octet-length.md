@@ -24,6 +24,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32909755"
 ---
 # <a name="transfer-octet-length"></a>傳輸八位元長度
 傳輸八位元長度的資料行是資料轉送到其預設 C 資料類型時，應用程式傳回的位元組數目上限。 字元資料傳輸八位元長度不包含 null 結束字元的空間。 資料行的傳輸八位元長度可能不同於資料儲存在資料來源上所需的位元組數目。  

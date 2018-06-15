@@ -26,6 +26,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32914103"
 ---
 # <a name="mapping-deprecated-functions"></a>對應已被取代的函式
 本章節描述如何已被取代的函式會對應由 ODBC 3 *.x*驅動程式管理員，以保證與舊版相容的 ODBC 3 *.x*搭配 ODBC 2 的驅動程式。*x*應用程式。 驅動程式管理員會執行此應用程式的版本不限的對應。 因為每個 ODBC 2。*x*下列清單中的函式會對應至對應的 ODBC 3 *.x*函式呼叫在 ODBC 3 時 *.x*驅動程式，而 ODBC 3 *.x*驅動程式不需要實作 ODBC 2。*x*函式。  

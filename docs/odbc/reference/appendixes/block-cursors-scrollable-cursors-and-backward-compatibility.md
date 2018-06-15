@@ -25,6 +25,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32913633"
 ---
 # <a name="block-cursors-scrollable-cursors-and-backward-compatibility"></a>區塊資料指標，可捲動的資料指標和回溯相容性
 兩者的存在**SQLFetchScroll**和**SQLExtendedFetch**代表分割 ODBC 之間應用程式設計介面 (API)，這是集合的函式中的第一個清除應用程式呼叫和服務提供者介面 (SPI)，這是集合的函式的驅動程式實作。 這種分割是必要的讓 ODBC 3。*x*，它會使用**SQLFetchScroll**，bealigned 標準，也必須相容於 ODBC 2。*x*，它會使用**SQLExtendedFetch**。  

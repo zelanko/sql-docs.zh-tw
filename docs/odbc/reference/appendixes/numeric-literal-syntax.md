@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32907263"
 ---
 # <a name="numeric-literal-syntax"></a>數值常值的語法
 在 ODBC 中的數值常值會使用下列語法：  

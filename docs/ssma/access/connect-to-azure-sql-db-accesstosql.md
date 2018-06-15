@@ -1,7 +1,6 @@
 ---
 title: 連接到 Azure SQL DB (AccessToSQL) |Microsoft 文件
 ms.prod: sql
-ms.prod_service: sql-tools
 ms.date: 01/19/2017
 ms.reviewer: ''
 ms.suite: sql
@@ -18,23 +17,24 @@ caps.latest.revision: 17
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: a789b00930a68280a314072725a5d902d9dfe240
-ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
+ms.openlocfilehash: d61eab04dffa1723c6d77a118033eee535a917e2
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/19/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34773444"
 ---
 # <a name="connect-to-azure-sql-db-accesstosql"></a>連接到 Azure SQL DB (AccessToSQL)
 使用 [連線到 SQL Azure] 對話方塊中，連接到您想要移轉 SQL Azure 資料庫。  
   
 若要存取此對話方塊，請在**檔案**功能表上，選取**連接到 SQL Azure**。 如果您之前已連線，則命令是**重新連接到 SQL Azure。**  
   
-## <a name="options"></a>選項  
+## <a name="options"></a>選項。  
 **伺服器名稱**  
   
 選取或輸入伺服器名稱來連接到 SQL Azure。  
   
-**資料庫**  
+**[資料庫備份]**  
   
 選取、 輸入或**瀏覽**資料庫名稱。  
   

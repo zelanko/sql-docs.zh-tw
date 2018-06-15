@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32909523"
 ---
 # <a name="generic-applications"></a>泛型應用程式
 泛型應用程式有時會執行硬式編碼工作，例如試算表從資料庫擷取資料。 它們也可能會執行各種不同的使用者定義的工作，例如允許使用者輸入並執行 SQL 陳述式的一般查詢應用程式。 什麼泛型應用程式具有共通點是，它們必須使用各種不同的 Dbms 和，開發人員不知道事先這些 Dbms 將會。  

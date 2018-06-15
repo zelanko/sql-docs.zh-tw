@@ -19,6 +19,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32908743"
 ---
 # <a name="constructing-sql-statements"></a>建構 SQL 陳述式
 SQL 陳述式可用於建構中有三種： 硬式編碼在開發期間，在執行階段，建構或直接輸入的使用者。  

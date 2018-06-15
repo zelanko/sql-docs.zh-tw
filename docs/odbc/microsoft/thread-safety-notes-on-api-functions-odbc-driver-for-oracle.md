@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32905625"
 ---
 # <a name="thread-safety-notes-on-api-functions-odbc-driver-for-oracle"></a>執行緒安全附註的 API 函式 （如 Oracle 的 ODBC 驅動程式）
 > [!IMPORTANT]  

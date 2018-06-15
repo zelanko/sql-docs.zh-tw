@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32911523"
 ---
 # <a name="quoted-identifiers"></a>引號的識別碼
 SQL 陳述式中包含特殊字元或相符的關鍵字的識別項必須括在*識別碼引號字元*; 這類字元括住的識別項稱為*引號識別項*(也稱為*分隔識別碼*以 sql-92)。 比方說，在下列引用 Accounts Payable 識別碼**選取**陳述式：  

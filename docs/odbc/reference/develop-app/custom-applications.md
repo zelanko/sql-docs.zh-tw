@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32908383"
 ---
 # <a name="custom-applications"></a>自訂應用程式
 自訂應用程式通常會執行特定工作的幾個 Dbms。 例如，應用程式可能會擷取單一的 DBMS 資料和產生報表，或它可能會傳送數個 Dbms 之間的資料。 什麼這些應用程式有通用是這些 Dbms 已知寫入應用程式之前，不太可能會變更應用程式生命週期。  

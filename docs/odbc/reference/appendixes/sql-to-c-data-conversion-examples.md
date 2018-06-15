@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32911783"
 ---
 # <a name="sql-to-c-data-conversion-examples"></a>SQL 到 C 資料轉換範例
 下表所示的範例將說明如何驅動程式將 SQL 資料轉換成 C 資料：  

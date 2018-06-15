@@ -24,6 +24,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32911843"
 ---
 # <a name="descriptor-field-conformance"></a>描述項欄位一致性
 下表指出每個 ODBC 描述項標頭欄位，這是妥善定義的一致性層級。  

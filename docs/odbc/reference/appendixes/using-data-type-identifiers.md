@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32907673"
 ---
 # <a name="using-data-type-identifiers"></a>使用資料類型識別碼
 應用程式使用資料類型識別碼有兩種： 描述其緩衝區，以驅動程式，以及擷取的結果集從驅動程式，以便決定要用來儲存資料緩衝處理的 C 類型相關的中繼資料。 應用程式呼叫下列函數來執行這些工作：  

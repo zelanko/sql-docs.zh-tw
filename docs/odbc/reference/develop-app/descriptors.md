@@ -24,6 +24,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32908813"
 ---
 # <a name="descriptors"></a>描述元
 描述項處理是指資料結構，可保存資料行或動態參數的相關資訊。  

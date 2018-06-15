@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32906393"
 ---
 # <a name="sqlfreestmt-mapping"></a>SQLFreeStmt 對應
 當應用程式呼叫**SQLFreeStmt**與*選項*引數到 ODBC 3 SQL_DROP *.x*驅動程式，會呼叫  

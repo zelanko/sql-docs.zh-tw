@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32907343"
 ---
 # <a name="interval-literal-syntax"></a>間隔常值的語法
 下列語法用於間隔 ODBC 中的常值。  

@@ -25,6 +25,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32909313"
 ---
 # <a name="diagnostic-records"></a>診斷記錄
 與每個環境產生關聯，連接、 陳述式和描述項控制代碼會*診斷記錄*。 這些記錄會包含最後一個呼叫的函式，使用特定的控制代碼的診斷資訊。 另一個函式呼叫使用該控制代碼時，會取代記錄。 可以一次儲存的診斷記錄的數目沒有限制。  

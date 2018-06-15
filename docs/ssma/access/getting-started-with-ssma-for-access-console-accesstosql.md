@@ -1,8 +1,6 @@
 ---
 title: SSMA for 入門存取主控台 (AccessToSQL) |Microsoft 文件
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-access
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -18,11 +16,12 @@ caps.latest.revision: 21
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 60c9a1775c1d5acf9f3c4b26d061d991941d07d6
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: c37a486c560a5dc0cb6298f93b4486accc18354b
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34773914"
 ---
 # <a name="getting-started-with-ssma-for-access-console-accesstosql"></a>SSMA for 入門存取主控台 (AccessToSQL)
 本章節描述的程序啟動並開始使用存取主控台應用程式。 亦會使用的慣例典型的 SSMA 主控台輸出視窗中。  
@@ -60,7 +59,7 @@ Windows 系統上已成功啟動主控台之後，您可以在 bob_ws 上工作�
   
 下表中的主控台輸出的色彩解譯：  
   
-|Color|Description|  
+|Color|描述|  
 |---------|---------------|  
 |紅色|執行期間發生嚴重錯誤|  
 |灰色|日期和時間戳記，訊息給使用者|  

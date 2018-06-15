@@ -25,6 +25,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32911813"
 ---
 # <a name="calling-sqlsetpos"></a>呼叫 SQLSetPos
 在 ODBC 2。*x*，資料列狀態陣列的指標是以引數**SQLExtendedFetch**。 呼叫更新版本已更新資料列狀態陣列**SQLSetPos**。 有些驅動程式有依賴這個陣列不會變更之間的事實**SQLExtendedFetch**和**SQLSetPos**。 在 ODBC 3。*x*狀態陣列的指標是描述項欄位，因此應用程式可以輕鬆地將它變更為指向不同的陣列。 這可以是 ODBC 3 時的問題。*x*應用程式使用 ODBC 2。*x*驅動程式，但呼叫**SQLSetStmtAttr**陣列狀態指標設定，然後會呼叫**SQLFetchScroll**來提取資料。 驅動程式管理員將它對應為一連串的呼叫**SQLExtendedFetch**。 下列程式碼，就通常會引發錯誤時，驅動程式管理員會將對應第二個**SQLSetStmtAttr**使用 ODBC 2 時呼叫 *.x*驅動程式：  

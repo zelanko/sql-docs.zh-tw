@@ -25,6 +25,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32913853"
 ---
 # <a name="unsupported-visual-foxpro-commands-and-functions-visual-foxpro-odbc-driver"></a>不支援 Visual FoxPro 命令與函式 （Visual FoxPro ODBC 驅動程式）
 下表列出 FoxPro 命令與不支援 Visual FoxPro ODBC 驅動程式，但 Microsoft® Visual FoxPro® 所支援的函式。  

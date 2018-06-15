@@ -29,6 +29,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32914063"
 ---
 # <a name="converting-data-from-sql-to-c-data-types"></a>將資料從 SQL 轉換成 C 資料類型
 當應用程式呼叫**SQLFetch**， **SQLFetchScroll**，或**SQLGetData**，驅動程式會從資料來源擷取資料。 如果有需要，它會將資料轉換中的驅動程式擷取它所指定之資料類型的資料型別*TargetType*引數中的**SQLBindCol**或**SQLGetData。** 最後，它將資料儲存在所指位置*TargetValuePtr*引數中的**SQLBindCol**或**SQLGetData** （和 ARD 的 SQL_DESC_DATA_PTR 欄位）。  

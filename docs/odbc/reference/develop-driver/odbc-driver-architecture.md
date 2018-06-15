@@ -21,6 +21,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32917323"
 ---
 # <a name="odbc-driver-architecture"></a>ODBC 驅動程式架構
 驅動程式撰寫者必須知道驅動程式架構，可能會影響是否應用程式可以使用 DBMS 專屬 SQL。  

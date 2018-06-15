@@ -26,6 +26,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32911293"
 ---
 # <a name="buffers"></a>緩衝區
 緩衝區是用來在應用程式和驅動程式之間傳遞資料的應用程式任何的記憶體片段。 例如，應用程式緩衝區可以與其產生關聯，或*結合*結果集資料行與**SQLBindCol**。 擷取每個資料列，因為在這些緩衝區中的每個資料行就會傳回資料。 *輸入緩衝區*用來將資料傳遞至驅動程式; 應用程式*輸出緩衝區*用來從驅動程式應用程式將資料傳回。  

@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32912193"
 ---
 # <a name="retrieving-results-advanced"></a>擷取結果 （進階）
 應用程式可以指定位移，加入繫結的資料緩衝區的位址和對應的長度/指標緩衝區位址時**SQLBulkOperations**， **SQLFetch**， **SQLFetchScroll**，或**SQLSetPos**呼叫。 這些加入作業的結果判斷這些作業中使用的位址。  

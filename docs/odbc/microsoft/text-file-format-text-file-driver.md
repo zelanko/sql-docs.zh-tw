@@ -24,6 +24,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32911073"
 ---
 # <a name="text-file-format-text-file-driver"></a>文字檔案格式 （文字檔案驅動程式）
 ODBC 文字驅動程式支援分隔和固定寬度文字檔。 文字檔案是由選擇性標頭行，零或多個文字行所組成。  

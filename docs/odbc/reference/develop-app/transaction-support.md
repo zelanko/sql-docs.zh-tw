@@ -21,6 +21,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32915513"
 ---
 # <a name="transaction-support"></a>交易支援
 交易程度是支援的驅動程式定義。 ODBC 被設計來管理多個更新，其資料不需要在單一使用者或桌面資料庫上實作。 此外，某些支援交易的資料庫進行，只讓資料操作語言 (DML) 陳述式的 SQL。沒有限制或特殊交易語意有關使用資料定義語言 (DDL) 使用中交易時。 也就是可能對資料表的多個同時更新，但對變更的數目與定義的資料表在交易期間的交易支援。  

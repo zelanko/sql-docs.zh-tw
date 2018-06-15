@@ -19,6 +19,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32905789"
 ---
 # <a name="guidelines-for-interval-and-numeric-data-types"></a>間隔和數值資料類型的方針
 下列各節將解決間隔和數值資料類型。  

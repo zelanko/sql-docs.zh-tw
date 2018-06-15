@@ -1,8 +1,6 @@
 ---
 title: 專案設定 (Azure SQL DB) (AccessToSQL) |Microsoft 文件
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-access
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -21,11 +19,12 @@ caps.latest.revision: 11
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 73703f251d64f69a40d6d60337254eebc033458a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 9d1666bf70cb07e616995dbd8f14fe4522cadc99
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34774114"
 ---
 # <a name="project-settings-azure-sql-db-accesstosql"></a>專案設定 (Azure SQL DB) (AccessToSQL)
 SQL Azure 專案設定可讓您設定 新增連接對話方塊中，而且也允許 活動訊號機制實作 SQL Azure 連接中的 SQL Azure 資料庫尾碼。  
@@ -36,7 +35,7 @@ SQL Azure 窗格位於**專案設定**和**預設專案設定**對話方塊。
   
 -   您可以使用預設專案設定 對話方塊來設定所有專案的組態選項。 若要存取 SQL Azure 的設定，在**工具**功能表上，選取**DefaultProject 設定**，在中，選取專案類型為"SQL Azure"**移轉的目標版本**下拉式方塊，以存取設定，在 SQL Azure 窗格中，按一下**一般**底部的左的窗格，然後選取**SQL Azure**。  
   
-## <a name="options"></a>選項  
+## <a name="options"></a>選項。  
   
 ## <a name="connectivity"></a>連接性  
 **活動訊號間隔時間**  

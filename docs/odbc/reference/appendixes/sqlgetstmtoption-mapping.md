@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32907383"
 ---
 # <a name="sqlgetstmtoption-mapping"></a>SQLGetStmtOption 對應
 當應用程式呼叫**SQLGetStmtOption** ODBC 3 *.x*不支援呼叫它的驅動程式  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32911363"
 ---
 # <a name="features-to-watch-for"></a>監看式的功能
 本章節描述一些應用程式開發人員通常需要，授與的功能。 事實上，這些功能相當廣泛的支援和 Dbms; 之間的支援方式無法為它們的程式碼是可能會導致在互通的應用程式中的問題。  

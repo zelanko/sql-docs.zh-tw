@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32911503"
 ---
 # <a name="hard-coded-sql-statements"></a>硬式編碼的 SQL 陳述式
 通常執行固定的工作的應用程式會包含硬式編碼的 SQL 陳述式。 例如，訂單輸入系統可能會使用清單開啟銷售訂單的下列呼叫：  

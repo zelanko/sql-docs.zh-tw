@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32907103"
 ---
 # <a name="parameter-markers"></a>參數標記
 根據 sql-92 規格，應用程式無法將參數標記放在下列位置中。 如需更完整清單，請參閱 sql-92 規格。  

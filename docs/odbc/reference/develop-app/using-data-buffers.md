@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32914863"
 ---
 # <a name="using-data-buffers"></a>使用資料緩衝區
 資料緩衝區會描述三組資訊： 其類型、 位址及位元組長度。 每當函式需要這項資訊的其中一個，而不會還不知道它，它具有與應用程式將其傳遞的引數。  

@@ -25,6 +25,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32915955"
 ---
 # <a name="embedded-sql"></a>內嵌的 SQL
 第一種技術，將 SQL 陳述式傳送至 DBMS 內嵌 SQL。 SQL 不使用變數和流程控制陳述式，因為它通常作為資料庫次語言，可以加入至傳統的程式設計語言，例如 C 或 COBOL 中撰寫的程式。 這是內嵌式 SQL 的中心概念： 放置在主機中程式設計語言撰寫的程式中的 SQL 陳述式。 簡言之，下列技術可用於主機語言中嵌入 SQL 陳述式：  

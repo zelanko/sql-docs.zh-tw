@@ -27,6 +27,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32907123"
 ---
 # <a name="supported-set-commands-visual-foxpro-odbc-driver"></a>支援的 SET 命令 （Visual FoxPro ODBC 驅動程式）
 您的應用程式可以傳送下列 Visual FoxPro**設定**到資料來源的命令：  

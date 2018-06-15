@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32910403"
 ---
 # <a name="batch-processing"></a>批次處理
 支援的 SQL 陳述式的批次不廣泛，，因此可互通的應用程式的使用方式有條件地或完全無法執行。 如需詳細資訊，請參閱[執行批次](../../../odbc/reference/develop-app/executing-batches.md)。

@@ -26,6 +26,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32916533"
 ---
 # <a name="processing-a-sql-statement"></a>處理 SQL 陳述式
 之前討論的技術以程式設計方式使用 SQL 時，就必須討論 SQL 陳述式的處理方式。 所需的步驟通用於所有三種技術，雖然每個技術執行它們在不同的時間。 下圖顯示的步驟涉及在處理 SQL 陳述式，在這個章節的其餘部分將會討論。  

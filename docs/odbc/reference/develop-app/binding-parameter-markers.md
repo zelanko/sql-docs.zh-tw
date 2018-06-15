@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32913323"
 ---
 # <a name="binding-parameter-markers"></a>繫結參數標記
 藉由呼叫應用程式繫結的參數**SQLBindParameter**。 **SQLBindParameter**將一個參數繫結一次。 有了它，應用程式指定下列工作：  

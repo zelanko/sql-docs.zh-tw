@@ -1,8 +1,6 @@
 ---
 title: 開始使用 SQL Server 移轉小幫手存取 |Microsoft 文件
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-access
 ms.custom: ''
 ms.date: 08/15/2017
 ms.reviewer: ''
@@ -27,11 +25,12 @@ caps.latest.revision: 24
 author: Shamikg
 ms.author: Shamikg
 manager: murato
-ms.openlocfilehash: 450057d8167423b07a729a4bd05c65e67a533b37
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 2c9195abaee31950fae9d26eb64f01d38ffa0447
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34773964"
 ---
 # <a name="getting-started-with-sql-server-migration-assistant-for-access-accesstosql"></a>開始使用 SQL Server 移轉小幫手存取 (AccessToSQL)
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 移轉小幫手 (SSMA) 的存取可讓您快速地轉換到存取資料庫物件[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或 Azure SQL DB 物件上傳到產生的物件[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或 Azure SQL DB、 從存取移轉資料和[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或 Azure SQL DB。 如果有必要，您也可以將連結來存取資料表[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或 Azure SQL DB 資料表，好讓您可以繼續使用現有的存取前端應用程式與[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或 Azure SQL DB。  
@@ -123,11 +122,11 @@ SSMA 會有兩個工具列： 專案工具列和移轉工具列。
 ### <a name="menus"></a>功能表  
 SSMA 會包含下列功能表：  
   
-|功能表|Description|  
+|功能表|描述|  
 |--------|---------------|  
 |**檔案**|「 移轉精靈 」，使用專案中，加入和移除存取資料庫檔案，以及連接到包含指令[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或 Azure SQL DB。|  
 |**編輯**|包含用來尋找及處理的詳細資料頁面中，例如，將複製的文字命令[!INCLUDE[tsql](../../includes/tsql_md.md)]從 [SQL 詳細資料] 窗格。 若要開啟**管理書籤**對話方塊中的，編輯 功能表中，按一下 管理書籤。 在對話方塊中，您會看到一份現有書籤。 您可以使用對話方塊右側的按鈕，來管理這些書籤。|  
-|**檢視**|包含**同步處理中繼資料瀏覽器**命令。 這會同步處理存取中繼資料總管 之間的物件和[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或 Azure SQL DB 中繼資料總管。 還會包含命令來顯示和隱藏**輸出**和**錯誤清單**窗格和選項**配置**管理版面配置。|  
+|**[檢視]**|包含**同步處理中繼資料瀏覽器**命令。 這會同步處理存取中繼資料總管 之間的物件和[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或 Azure SQL DB 中繼資料總管。 還會包含命令來顯示和隱藏**輸出**和**錯誤清單**窗格和選項**配置**管理版面配置。|  
 |**工具**|包含命令來建立報表、 匯出的資料、 物件和資料移轉，連結資料表，並提供存取全域和專案設定 對話方塊。|  
 |**說明**|提供存取至 SSMA 協助和**有關** 對話方塊。|  
   

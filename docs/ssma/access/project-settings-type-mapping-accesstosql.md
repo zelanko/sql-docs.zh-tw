@@ -1,8 +1,6 @@
 ---
 title: 專案設定 （型別對應） (AccessToSQL) |Microsoft 文件
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-access
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -25,11 +23,12 @@ caps.latest.revision: 16
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 072d8aaf4582237cc60a3e3e6d76b02a86dc27c2
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: bd5bc6a0db71d2836c068a261681d813bc2011b3
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34774464"
 ---
 # <a name="project-settings-type-mapping-accesstosql"></a>專案設定 （型別對應） (AccessToSQL)
 型別對應的專案設定可讓您設定的 SSMA 專案的預設型別對應。 您也可以指定個別的資料庫物件的型別對應。 如需詳細資訊，請參閱[對應來源和目標資料型別](http://msdn.microsoft.com/en-us/b362a075-16e7-423f-b63f-e1e9f02844a9)。  
@@ -40,7 +39,7 @@ ms.lasthandoff: 05/03/2018
   
 -   使用**預設專案設定**對話方塊來設定所有專案的組態選項。 若要存取的型別對應設定，在**工具**功能表上，選取**預設專案設定**，選取移轉專案類型設定為需要從變更 / 檢視**移轉的目標版本**下拉式清單，然後按一下 **型別對應**的左窗格中。  
   
-## <a name="options"></a>選項  
+## <a name="options"></a>選項。  
 **來源類型**  
 存取的資料類型對應。  
   
@@ -68,7 +67,7 @@ ms.lasthandoff: 05/03/2018
 |**text[\*..\*]**|**nvarchar[\*]**|  
 |**文字 [\*..\*]** ： 適用於 Access 97|**varchar[\*]**|  
   
-**加入**  
+**[加入]**  
 按一下以新增的資料類型對應清單。  
   
 **編輯**  

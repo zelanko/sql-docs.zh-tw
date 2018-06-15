@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32912443"
 ---
 # <a name="keyset-driven-cursors"></a>索引鍵集驅動資料指標
 索引鍵集驅動資料指標的介於靜態和動態資料指標偵測變更的能力。 類似靜態資料指標，它不一定偵測的變更的成員資格和順序的結果集。 動態資料指標，例如它沒有結果集 （受限於由 SQL_ATTR_TXN_ISOLATION 連接屬性設定的交易隔離等級） 來偵測變更的資料列的值。  

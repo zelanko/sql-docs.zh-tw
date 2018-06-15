@@ -21,6 +21,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32905083"
 ---
 # <a name="create-table---sql-command"></a>建立資料表的 SQL 命令
 建立具有指定的欄位的資料表。  
@@ -123,12 +124,12 @@ CREATE TABLE mytable (char1 C(10), char2 C(10) NOCPTRANS,;
  資料表可以有多個候選項目索引。  
   
  外部索引鍵*eExpression4*標記*TagName4*[NODUP]  
- 建立外部 （非主要） 索引，並建立父資料表之關聯性。 *eExpression4*指定外部索引鍵的運算式，並*TagName4*指定建立外部索引鍵標記名稱*。* 索引標籤名稱可以包含最多 10 個字元。 包含 NODUP 建立外部索引候選的索引。  
+ 建立外部 （非主要） 索引，並建立父資料表之關聯性。 *eExpression4*指定外部索引鍵的運算式，並*TagName4*指定建立外部索引鍵標記名稱 *。* 索引標籤名稱可以包含最多 10 個字元。 包含 NODUP 建立外部索引候選的索引。  
   
  您可以建立多個外部索引的索引的資料表，但外部索引的索引運算式必須指定資料表中的不同欄位。  
   
  參考*TableName3*[標記*TagName5*]  
- 指定要建立持續性的關聯性的父資料表。 Include 標記*TagName5*建立父資料表的索引標籤為基礎的關聯性。 索引標籤名稱可以包含最多 10 個字元。 根據預設，如果您省略標記*TagName5，*建立使用父資料表的主索引鍵關聯性。  
+ 指定要建立持續性的關聯性的父資料表。 Include 標記*TagName5*建立父資料表的索引標籤為基礎的關聯性。 索引標籤名稱可以包含最多 10 個字元。 根據預設，如果您省略標記*TagName5，* 建立使用父資料表的主索引鍵關聯性。  
   
  請檢查*eExpression2*[錯誤*cMessageText2*]  
  指定資料表驗證規則。 錯誤*cMessageText2*指定資料表驗證規則執行時，Visual FoxPro 會顯示錯誤訊息。 瀏覽視窗中變更或編輯視窗的資料時，只會顯示訊息。  

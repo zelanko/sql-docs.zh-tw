@@ -25,6 +25,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32914093"
 ---
 # <a name="what-the-driver-does"></a>驅動程式的用途
 下表摘要說明哪些函式和陳述式屬性 ODBC 3 *.x*驅動程式應該實作區塊和可捲動資料指標。  

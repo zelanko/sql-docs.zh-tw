@@ -26,6 +26,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32915476"
 ---
 # <a name="updating-rows-by-bookmark-with-sqlbulkoperations"></a>使用 SQLBulkOperations 更新資料列的書籤
 當更新的資料列的書籤， **SQLBulkOperations**可更新之資料表的一個或多個資料列的資料來源。 資料列識別的繫結的書籤資料行中的書籤。 資料列會更新每個繫結資料行 （除非資料行的長度/指標緩衝區中的值是 SQL_COLUMN_IGNORE） 使用應用程式緩衝區中的資料。 未繫結的資料行不會更新。  

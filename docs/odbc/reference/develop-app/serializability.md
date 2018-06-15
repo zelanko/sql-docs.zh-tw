@@ -24,6 +24,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32913623"
 ---
 # <a name="serializability"></a>可序列化能力
 在理想情況下，應該是交易*序列化*。 交易都稱為是否同時執行交易的結果相同的循序執行這些結果可序列化 — 也就是一個接著一個。 它並不重要交易第一次，執行只有該結果並不會反映任何混用的交易。  

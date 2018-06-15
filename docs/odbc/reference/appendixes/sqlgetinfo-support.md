@@ -23,13 +23,14 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32912483"
 ---
 # <a name="sqlgetinfo-support"></a>SQLGetInfo 支援
 當 ODBC 2。*x*應用程式會呼叫**SQLGetInfo** ODBC 3 *.x*驅動程式，*資訊類型*必須支援下表中的引數。  
   
 |*資訊類型*|傳回值|  
 |----------------|-------------|  
-|SQL_ALTER_TABLE (ODBC 2.0)**附註：**此資訊類型未被取代; 已被取代的右邊資料行中的位元遮罩。|列舉中的子句 SQLINTEGER 位元遮罩**ALTER TABLE**資料來源所支援的陳述式。<br /><br /> 下列的位元遮罩用來判斷支援哪些子句：<br /><br /> SQL_AT_DROP_COLUMN = 支援卸除資料行的能力。 這會導致 cascade 還是限制行為是驅動程式定義的。 (ODBC 2.0)<br /><br /> SQL_AT_ADD_COLUMN = 新增支援單一的 ALTER TABLE 陳述式中的多個資料行的能力。 此位元不能與其他 SQL_AT_ADD_COLUMN_XXX 位元或 SQL_AT_CONSTRAINT_XXX 位元合併。 (ODBC 2.0)|  
+|SQL_ALTER_TABLE (ODBC 2.0)**附註：** 此資訊類型未被取代; 已被取代的右邊資料行中的位元遮罩。|列舉中的子句 SQLINTEGER 位元遮罩**ALTER TABLE**資料來源所支援的陳述式。<br /><br /> 下列的位元遮罩用來判斷支援哪些子句：<br /><br /> SQL_AT_DROP_COLUMN = 支援卸除資料行的能力。 這會導致 cascade 還是限制行為是驅動程式定義的。 (ODBC 2.0)<br /><br /> SQL_AT_ADD_COLUMN = 新增支援單一的 ALTER TABLE 陳述式中的多個資料行的能力。 此位元不能與其他 SQL_AT_ADD_COLUMN_XXX 位元或 SQL_AT_CONSTRAINT_XXX 位元合併。 (ODBC 2.0)|  
 |SQL_FETCH_DIRECTION (ODBC 1.0)<br /><br /> ODBC 1.0; 中導入的資訊類型它引進的版本會標示每一個位元遮罩。|SQLINTEGER 位元遮罩列舉支援的提取方向選項。<br /><br /> 下列的位元遮罩可用搭配旗標來判斷支援哪些選項：<br /><br /> SQL_FD_FETCH_NEXT (ODBC 1.0) SQL_FD_FETCH_FIRST (ODBC 1.0) SQL_FD_FETCH_LAST (ODBC 1.0) SQL_FD_FETCH_PRIOR (ODBC 1.0) SQL_FD_FETCH_ABSOLUTE (ODBC 1.0) SQL_FD_FETCH_RELATIVE (ODBC 1.0) SQL_FD_FETCH_BOOKMARK (ODBC 2.0)|  
 |SQL_LOCK_TYPES (ODBC 2.0)|列舉支援的鎖定 SQLINTEGER 位元遮罩類型*fLock*引數中的**SQLSetPos**。<br /><br /> 下列的位元遮罩可用搭配旗標來判斷支援哪些鎖定類型：<br /><br /> SQL_LCK_NO_CHANGE SQL_LCK_EXCLUSIVE SQL_LCK_UNLOCK|  
 |SQL_ODBC_API_CONFORMANCE (ODBC 1.0)|SQLSMALLINT 值，表示 ODBC 一致性層級。<br /><br /> SQL_OAC_NONE = 無<br /><br /> SQL_OAC_LEVEL1 = 支援層級 1<br /><br /> SQL_OAC_LEVEL2 = 支援層級 2|  

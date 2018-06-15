@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32913356"
 ---
 # <a name="c-to-sql-character"></a>SQL 到 C： 字元
 ODBC C 資料類型之字元的識別項是：  

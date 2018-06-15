@@ -24,6 +24,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32906863"
 ---
 # <a name="parameter-data-types"></a>參數資料類型
 即使每個參數指定**SQLBindParameter**會定義使用 SQL 資料類型，SQL 陳述式的參數有任何內建資料類型。 因此，參數標記可以包含在 SQL 陳述式才可以從另一個陳述式中運算元推斷其資料類型。 例如，在算術運算式嗎？ + 從具名資料行 COLUMN1 所代表的資料類型可以推斷 COLUMN1，參數的資料類型。 如果無法判別資料類型，應用程式無法使用參數標記。  

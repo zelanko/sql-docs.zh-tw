@@ -27,6 +27,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32912433"
 ---
 # <a name="compatibility-matrix"></a>相容性比較表
 下表描述的相容性的應用程式和驅動程式，本節先前定義的類型。  

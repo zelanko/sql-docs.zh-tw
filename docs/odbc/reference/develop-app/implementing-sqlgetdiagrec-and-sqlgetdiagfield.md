@@ -25,6 +25,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32911186"
 ---
 # <a name="implementing-sqlgetdiagrec-and-sqlgetdiagfield"></a>實作 SQLGetDiagRec 和 SQLGetDiagField
 **SQLGetDiagRec**和**SQLGetDiagField**由驅動程式管理員和每個驅動程式。 驅動程式管理員和每個驅動程式負責維護每個環境、 連接、 陳述式，以及描述項處理的診斷記錄，釋放這些記錄，另一個函式呼叫時使用控制代碼或控制代碼會釋出。  

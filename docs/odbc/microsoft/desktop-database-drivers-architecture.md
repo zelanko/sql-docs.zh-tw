@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32904973"
 ---
 # <a name="desktop-database-drivers-architecture"></a>桌面資料庫驅動程式架構
 這些驅動程式專為使用 Microsoft Windows 95 上或更新版本中，或 Windows NT 4.0 和 Windows 2000。 只有 32 位元應用程式支援 Windows 95 或更新版本。16 位元和 32 位元應用程式都支援 Windows NT 4.0 和 Windows 2000。  

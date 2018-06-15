@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32909553"
 ---
 # <a name="connection-handles"></a>連接控制代碼
 A*連接*驅動程式和資料來源所組成。 連接控制代碼識別每個連接。 連接控制代碼會定義要使用哪一個驅動程式不僅要使用該驅動程式與資料來源。 在區段程式碼會實作 ODBC （驅動程式管理員或驅動程式） 中，在連接控制代碼識別結構，其中包含連接資訊，如下所示：  

@@ -19,6 +19,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32908563"
 ---
 # <a name="connecting-to-a-data-source-or-driver"></a>連接到資料來源或驅動程式
 應用程式可以連接到任何驅動程式和資料來源數目。 這些可以是各種不同的驅動程式和資料來源、 相同的驅動程式與各種資料來源或甚至相同驅動程式與資料來源的多個連接。  

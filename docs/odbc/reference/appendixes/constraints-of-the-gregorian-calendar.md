@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32905433"
 ---
 # <a name="constraints-of-the-gregorian-calendar"></a>西曆的條件約束
 日期和日期時間資料類型和尾端欄位間隔資料型別，必須符合西曆的條件約束。 這些條件約束如下所示：  
