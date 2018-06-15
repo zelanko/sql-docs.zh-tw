@@ -31,6 +31,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32946983"
 ---
 # <a name="diagnostic-records-and-fields"></a>診斷記錄和欄位
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

@@ -14,6 +14,7 @@ ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/10/2018
+ms.locfileid: "34026215"
 ---
 # <a name="programming-amo-fundamental-objects"></a>程式設計 AMO 基礎物件
   基礎物件通常是簡單且直接的物件。 通常會建立和具現化這些物件，然後當不再需要時，使用者會將它們中斷連接。 基礎類別包括下列物件：<xref:Microsoft.AnalysisServices.Server>、<xref:Microsoft.AnalysisServices.Database>、<xref:Microsoft.AnalysisServices.DataSource> 和 <xref:Microsoft.AnalysisServices.DataSourceView>。 在 AMO 基礎物件中唯一屬於複雜物件的是 <xref:Microsoft.AnalysisServices.DataSourceView>，這需要詳細資料以建立代表資料來源檢視的抽象模型。  

@@ -25,6 +25,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32942863"
 ---
 # <a name="implicit-cursor-conversions-odbc"></a>隱含資料指標轉換 (ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

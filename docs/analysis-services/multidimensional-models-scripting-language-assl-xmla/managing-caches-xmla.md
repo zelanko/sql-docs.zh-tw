@@ -14,6 +14,7 @@ ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/10/2018
+ms.locfileid: "34022765"
 ---
 # <a name="managing-caches-xmla"></a>管理快取 (XMLA)
   您可以使用[ClearCache](../../analysis-services/xmla/xml-elements-commands/clearcache-element-xmla.md) XML for Analysis (XMLA) 清除指定的維度或是資料分割的快取中的命令。 清除快取會強制[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]重建該物件的快取。  
