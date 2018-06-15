@@ -2,7 +2,6 @@
 title: 中介圖形 COMPUTE 子句 |Microsoft 文件
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,11 +18,12 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 8c8879e50269271392186e0f7e941551760671b0
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: b576c0ac9da230cd945623679e72727895ec4fc7
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35271987"
 ---
 # <a name="intervening-shape-compute-clauses"></a>中介圖形 COMPUTE 子句
 它是有效的父系和子系之間的一或多個 COMPUTE 子句嵌入圖形參數化的命令，如下列範例所示：  

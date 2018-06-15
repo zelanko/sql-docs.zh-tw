@@ -2,7 +2,6 @@
 title: Microsoft OLE DB Provider for SQL Server |Microsoft 文件
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,16 +18,17 @@ caps.latest.revision: 19
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: bbe50621dc248a3f11368717bbe9423b5a8b59e3
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: ca737ed49349cc87e378fbd891ec224155147acc
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35271637"
 ---
 # <a name="microsoft-ole-db-provider-for-sql-server-overview"></a>Microsoft OLE DB Provider for SQL Server 概觀
 Microsoft OLE DB Provider for SQL Server，SQLOLEDB，可讓 ADO 存取 Microsoft SQL Server。
 
-**注意：**不建議使用這個驅動程式，開發新項目。 新的 OLE DB 提供者會呼叫[Microsoft OLE DB 驅動程式的 SQL Server](../../../connect/oledb/oledb-driver-for-sql-server.md) (MSOLEDBSQL) 這會更新為最新的伺服器功能從現在開始。
+**注意：** 不建議使用這個驅動程式，開發新項目。 新的 OLE DB 提供者會呼叫[Microsoft OLE DB 驅動程式的 SQL Server](../../../connect/oledb/oledb-driver-for-sql-server.md) (MSOLEDBSQL) 這會更新為最新的伺服器功能從現在開始。
 
 ## <a name="connection-string-parameters"></a>連接字串參數
  若要連接到此提供者，設定*提供者*引數[ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md)屬性：
@@ -50,7 +50,7 @@ User ID=MyUserID;Password=MyPassword;"
 
  字串，包含這些關鍵字：
 
-|關鍵字|Description|
+|關鍵字|描述|
 |-------------|-----------------|
 |**提供者**|指定 SQL Server 的 OLE DB 提供者。|
 |**資料來源**或**伺服器**|指定伺服器的名稱。|
@@ -64,9 +64,9 @@ User ID=MyUserID;Password=MyPassword;"
 ## <a name="provider-specific-connection-parameters"></a>提供者特有的連接參數
  提供者支援數個提供者特有的連接參數，除了由 ADO 所定義。 使用 ADO 連接屬性，這些提供者特有的屬性可以設定透過[屬性](../../../ado/reference/ado-api/properties-collection-ado.md)集合[連接](../../../ado/reference/ado-api/connection-object-ado.md)或可設定的一部分**ConnectionString**.
 
-|매개 변수|Description|
+|參數|描述|
 |---------------|-----------------|
-|Trusted_Connection|表示使用者驗證模式。 這可以設定為**是**或**否**。 預設值是 **否**。 如果這個屬性設定為**是**，SQLOLEDB 會使用 Microsoft Windows NT 驗證模式來授權使用者存取所指定的 SQL Server 資料庫**位置**和[資料來源](../../../ado/reference/ado-api/datasource-property-ado.md)屬性值。 如果這個屬性設定為**否**，SQLOLEDB 會使用混合模式來授權使用者存取 SQL Server 資料庫。 SQL Server 登入和密碼在指定**使用者識別碼**和**密碼**屬性。|
+|Trusted_Connection|表示使用者驗證模式。 這可以設定為**是**或**否**。 預設值是**否**。 如果這個屬性設定為**是**，SQLOLEDB 會使用 Microsoft Windows NT 驗證模式來授權使用者存取所指定的 SQL Server 資料庫**位置**和[資料來源](../../../ado/reference/ado-api/datasource-property-ado.md)屬性值。 如果這個屬性設定為**否**，SQLOLEDB 會使用混合模式來授權使用者存取 SQL Server 資料庫。 SQL Server 登入和密碼在指定**使用者識別碼**和**密碼**屬性。|
 |目前的語言|表示 SQL Server 語言名稱。 識別系統訊息選取與格式所使用的語言。 語言必須安裝在 SQL Server 中的其他方式開啟連接將會失敗。|
 |網路位址|指出所指定的 SQL 伺服器的網路位址**位置**屬性。|
 |網路程式庫|表示用來與 SQL Server 通訊的網路程式庫 (DLL) 名稱。 名稱不得包含路徑或 .dll 副檔名。 預設值是由 SQL Server 用戶端設定中提供。|
@@ -118,7 +118,7 @@ EXECUTE SalesByCategory 'Produce', '1995'
 
 -   MDAC 2.7、 MDAC 2.8 和 Windows Data Access Components (Windows DAC) 6.0，OLE DB Provider for SQL Server 支援**sql_variant**型別。 OLE DB Provider for ODBC 則否。
 
--   **Sql_variant**型別沒有完全符合**DBTYPE_VARIANT**資料型別。  **Sql_variant**型別支援幾個新的子類型不支援**DBTYPE_VARIANT、**包括**GUID**， **ANSI** (非 UNICODE)字串，並**BIGINT**。 除了使用子類型稍早所列的正常運作。
+-   **Sql_variant**型別沒有完全符合**DBTYPE_VARIANT**資料型別。  **Sql_variant**型別支援幾個新的子類型不支援**DBTYPE_VARIANT、** 包括**GUID**， **ANSI** (非 UNICODE)字串，並**BIGINT**。 除了使用子類型稍早所列的正常運作。
 
 -   **Sql_variant**子型別**數值**不符**DBTYPE_DECIMAL**的大小。
 
@@ -183,7 +183,7 @@ EXECUTE SalesByCategory 'Produce', '1995'
 |ORDER BY 選取清單中的資料行|DBPROP_ORDERBYCOLUMNSINSELECT|
 |輸出參數使用|DBPROP_OUTPUTPARAMETERAVAILABILITY|
 |傳址存取子|DBPROP_BYREFACCESSORS|
-|密碼|DBPROP_AUTH_PASSWORD|
+|[密碼]|DBPROP_AUTH_PASSWORD|
 |保存安全性資訊|DBPROP_AUTH_PERSIST_SENSITIVE_AUTHINFO|
 |持續性的識別碼型別|DBPROP_PERSISTENTIDTYPE|
 |準備中止行為|DBPROP_PREPAREABORTBEHAVIOR|

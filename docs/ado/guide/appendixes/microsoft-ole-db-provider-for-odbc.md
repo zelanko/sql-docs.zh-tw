@@ -2,7 +2,6 @@
 title: Microsoft OLE DB Provider for ODBC |Microsoft 文件
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -18,11 +17,12 @@ caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 612ca78e6af181aaf3e2d3b1eb16ae5fea7eec3c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: f539df9c19bacbe449479f45d5e7fd4fe59613d5
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35271627"
 ---
 # <a name="microsoft-ole-db-provider-for-odbc-overview"></a>Microsoft OLE DB Provider for ODBC 概觀
 ADO 或 RDS 程式設計人員，理想的世界中就是每個資料來源會公開 OLE DB 介面，可讓 ADO 無法呼叫直接將資料來源。 雖然越來越多個資料庫廠商實作的 OLE DB 介面，但某些資料來源不是尚未公開這種方式。 不過，現今使用的大部分 DBMS 系統可以透過 ODBC 存取。
@@ -53,7 +53,7 @@ MSDASQL
 
  字串，包含這些關鍵字：
 
-|關鍵字|Description|
+|關鍵字|描述|
 |-------------|-----------------|
 |**提供者**|指定的 OLE DB provider for ODBC。|
 |**DSN**|指定資料來源名稱。|
@@ -96,7 +96,7 @@ DATABASE=database; UID=MyUserID; PWD=MyPassword"
 ## <a name="provider-specific-connection-properties"></a>提供者特定連接屬性
  OLE DB provider for ODBC 會將數個屬性，[屬性](../../../ado/reference/ado-api/properties-collection-ado.md)集合**連接**物件。 下表列出這些屬性與對應的 OLE DB 屬性名稱，在括號中。
 
-|屬性名稱|Description|
+|屬性名稱|描述|
 |-------------------|-----------------|
 |可存取的程序 (KAGPROP_ACCESSIBLEPROCEDURES)|指出使用者是否具有存取預存程序。|
 |可存取的資料表 (KAGPROP_ACCESSIBLETABLES)|指出使用者是否有使用權限來執行對資料庫資料表的 SELECT 陳述式。|
@@ -123,7 +123,7 @@ DATABASE=database; UID=MyUserID; PWD=MyPassword"
 ## <a name="provider-specific-recordset-and-command-properties"></a>提供者特定資料錄集和命令屬性
  OLE DB provider for ODBC 會將數個屬性，**屬性**集合**資料錄集**和**命令**物件。 下表列出這些屬性與對應的 OLE DB 屬性名稱，在括號中。
 
-|屬性名稱|Description|
+|屬性名稱|描述|
 |-------------------|-----------------|
 |查詢為基礎的更新/刪除/插入 (KAGPROP_QUERYBASEDUPDATES)|指出是否執行更新、 刪除和插入使用 SQL 查詢。|
 |ODBC 並行類型 (KAGPROP_CONCURRENCY)|表示用來減少兩個使用者嘗試同時存取相同的資料從資料來源所造成潛在問題的方法。|
@@ -205,12 +205,12 @@ DATABASE=database; UID=MyUserID; PWD=MyPassword"
 |方法|ForwardOnly|動態|索引鍵集|靜態|
 |------------|-----------------|-------------|------------|------------|
 |[AddNew](../../../ado/reference/ado-api/addnew-method-ado.md)|是|是|是|是|
-|[[取消]](../../../ado/reference/ado-api/cancel-method-ado.md)|是|是|是|是|
+|[取消](../../../ado/reference/ado-api/cancel-method-ado.md)|是|是|是|是|
 |[CancelBatch](../../../ado/reference/ado-api/cancelbatch-method-ado.md)|是|是|是|是|
 |[CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md)|是|是|是|是|
 |[複製](../../../ado/reference/ado-api/clone-method-ado.md)|否|否|是|是|
 |[關閉](../../../ado/reference/ado-api/close-method-ado.md)|是|是|是|是|
-|[Delete](../../../ado/reference/ado-api/delete-method-ado-recordset.md)|是|是|是|是|
+|[刪除](../../../ado/reference/ado-api/delete-method-ado-recordset.md)|是|是|是|是|
 |[GetRows](../../../ado/reference/ado-api/getrows-method-ado.md)|是|是|是|是|
 |[[移動]](../../../ado/reference/ado-api/move-method-ado.md)|是|是|是|是|
 |[MoveFirst](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|是|是|是|是|
@@ -264,7 +264,7 @@ DATABASE=database; UID=MyUserID; PWD=MyPassword"
 |資料列大小上限|DBPROP_MAXROWSIZE|
 |資料列大小上限包括 BLOB|DBPROP_MAXROWSIZEINCLUDESBLOB|
 |在選取的最大資料表|DBPROP_MAXTABLESINSELECT|
-|模式|DBPROP_INIT_MODE|
+|[模式]|DBPROP_INIT_MODE|
 |多個參數集|DBPROP_MULTIPLEPARAMSETS|
 |多個結果|DBPROP_MULTIPLERESULTS|
 |多個儲存體物件|DBPROP_MULTIPLESTORAGEOBJECTS|
@@ -277,7 +277,7 @@ DATABASE=database; UID=MyUserID; PWD=MyPassword"
 |開啟資料列集支援|DBPROP_OPENROWSETSUPPORT|
 |ORDER BY 選取清單中的資料行|DBPROP_ORDERBYCOLUMNSINSELECT|
 |輸出參數使用|DBPROP_OUTPUTPARAMETERAVAILABILITY|
-|密碼|DBPROP_AUTH_PASSWORD|
+|[密碼]|DBPROP_AUTH_PASSWORD|
 |傳址存取子|DBPROP_BYREFACCESSORS|
 |保存安全性資訊|DBPROP_AUTH_PERSIST_SENSITIVE_AUTHINFO|
 |持續性的識別碼型別|DBPROP_PERSISTENTIDTYPE|

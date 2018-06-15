@@ -2,7 +2,6 @@
 title: 使用 Visual c + + 擴充功能 |Microsoft 文件
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,11 +19,12 @@ caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a1c832cff45ad5998918c6f5f67927e49bc9d4e9
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 06e2d13c589d4dc88f3a148122322f483c49d2fb
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35271587"
 ---
 # <a name="visual-c-extensions"></a>Visual c + + 擴充功能
 ## <a name="the-iadorecordbinding-interface"></a>IADORecordBinding 介面
@@ -114,11 +114,11 @@ Update(CADORecordBinding *binding)
 ### <a name="end-binding-entries"></a>結束繫結項目
  **END_ADO_BINDING**()
 
-|매개 변수|Description|
+|參數|描述|
 |---------------|-----------------|
 |*類別*|類別定義的繫結項目和 C/c + + 變數。|
 |*Ordinal*|序號，從一個、 算起的**資料錄集**欄位對應至您的 C/c + + 變數。|
-|*DataType*|C/c + + 變數的對等的 ADO 資料類型 (請參閱[DataTypeEnum](../../../ado/reference/ado-api/datatypeenum.md)取得一份有效的資料類型)。 值**資料錄集**欄位會被轉換成這個資料類型，如有必要。|
+|*資料類型*|C/c + + 變數的對等的 ADO 資料類型 (請參閱[DataTypeEnum](../../../ado/reference/ado-api/datatypeenum.md)取得一份有效的資料類型)。 值**資料錄集**欄位會被轉換成這個資料類型，如有必要。|
 |*Buffer*|C/c + + 變數的名稱位置**資料錄集**欄位將會儲存。|
 |*大小*|以位元組為單位的大小上限*緩衝區*。 如果*緩衝區*將包含可變長度字串，讓有終止零的空間。|
 |*狀態*|會指出變數的名稱是否的內容*緩衝區*有效，以及是否要的欄位轉換*DataType*成功。<br /><br /> 最重要的兩個值，這個變數會**adFldOK**，這表示轉換是否成功; 和**adFldNull**，這表示欄位的值會是變數類型 VT_NULL 並不只是空的。<br /><br /> 可能值*狀態*會列在下一個資料表中，「 狀態值 」。|
@@ -132,10 +132,10 @@ Update(CADORecordBinding *binding)
 
  設定資料時,*狀態*可能會設定為**adFldNull**表示**資料錄集**梇糔飶為 null。
 
-|常數|Value|Description|
+|常數|ReplTest1|描述|
 |--------------|-----------|-----------------|
 |**adFldOK**|0|傳回非 null 的欄位值。|
-|**adFldBadAccessor**|1|繫結無效。|
+|**adFldBadAccessor**|@shouldalert|繫結無效。|
 |**adFldCantConvertValue**|2|由於符號不符或資料溢位以外的原因而無法轉換值。|
 |**adFldNull**|3|當取得某個欄位時，表示傳回了 null 值。<br /><br /> 當設定的欄位，表示欄位應設**NULL**欄位無法編碼時**NULL**本身 （例如，字元陣列或整數）。|
 |**adFldTruncated**|4|已截斷可變長度的資料或數字。|

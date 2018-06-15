@@ -2,7 +2,6 @@
 title: 使用多維度資料 |Microsoft 文件
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -17,11 +16,12 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 1d7b5257bf0161c4064f1f25be5c223f46787e4f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 22d98e754952d8140e84d18c2d35f0e56698b8cd
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35273577"
 ---
 # <a name="working-with-multidimensional-data"></a>使用多維度資料
 A*資料格集*是多維度資料查詢的結果。 它包含的軸，通常是四個以上的座標軸和通常只有兩個或三個集合。 *軸*是用來尋找或篩選在 cube 中的特定值的一個或多個維度成員集合。  

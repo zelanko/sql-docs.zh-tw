@@ -2,7 +2,6 @@
 title: ADO 的擴充功能資料定義語言和安全性 (ADOX) |Microsoft 文件
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,11 +14,12 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 3a00d4241ee228c490da22c09ab75eb7756eb04f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 9d5fc5a65421a5f7a80113444b385eba18a8b072
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35273367"
 ---
 # <a name="ado-extensions-for-data-definition-language-and-security-adox"></a>ADO 的擴充功能資料定義語言和安全性 (ADOX)
 此章節包含下列主題。  

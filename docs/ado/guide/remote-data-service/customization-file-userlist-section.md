@@ -2,7 +2,6 @@
 title: 自訂檔案 UserList 區段 |Microsoft 文件
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -18,11 +17,12 @@ caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 2f27f83f6b3753ad5298a869e5d8891af089e4ea
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: dcf8649af2695fa354659f13e891521eb14f39cb
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35273827"
 ---
 # <a name="customization-file-userlist-section"></a>自訂檔案 UserList > 一節
 **Userlist**區段屬於**連接**區段中具有相同的區段*識別碼*參數。  
@@ -38,7 +38,7 @@ ms.lasthandoff: 05/03/2018
  *userName* **=**   
  ***accessRights***  
   
-|部分|Description|  
+|部分|描述|  
 |----------|-----------------|  
 |*userName*|*使用者名*採用此連接的人員。 有效的使用者名稱使用 IIS 建立**Service Manager**對話方塊。|  
 |***accessRights***|其中一個的下列存取權限：<br /><br /> -   **NoAccess** -使用者無法存取資料來源。<br />-   **ReadOnly** — 使用者可以讀取的資料來源。<br />-   **ReadWrite** — 使用者可讀取或寫入至資料來源。|  

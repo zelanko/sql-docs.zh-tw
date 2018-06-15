@@ -2,7 +2,6 @@
 title: 非參數化命令的作業 |Microsoft 文件
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -18,11 +17,12 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b468d55f9085c5201c1720887087b3ace94a6069
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 8aa3ed637aa9206921f6da91f0218f67faf0154a
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35272277"
 ---
 # <a name="operation-of-non-parameterized-commands"></a>非參數化命令的作業
 對於非參數化命令，會執行所有的提供者命令和**資料錄集**命令執行期間所建立。 如果命令以同步方式，執行所有**資料錄集**會完全擴展。 如果選取非同步擴展模式，則填入的狀態**資料錄集**母體擴展模式和大小而定**資料錄集**。  

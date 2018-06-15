@@ -2,7 +2,6 @@
 title: 保存資料 |Microsoft 文件
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,20 +19,21 @@ caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d3f4fed35b629f8dd1eae89c42895fb8a780c4cb
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 438a09dd8f835653f9b2c76d73b7ce7f4583c1a5
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35272197"
 ---
 # <a name="persisting-data"></a>保存資料
 可攜式電腦 （例如，使用膝上型電腦） 已產生可以在連線或中斷連線狀態中執行的應用程式的需求。 ADO 已新增對此支援，讓開發人員能夠儲存用戶端資料指標**資料錄集**至磁碟，並稍後重新載入它。  
   
  有幾種的情況中，您可以使用這種類型的功能，包括下列：  
   
--   **出差：**旅進行應用程式，務必提供了可進行變更，並加入新的記錄，然後可以稍後重新連線到資料庫並認可。  
+-   **出差：** 旅進行應用程式，務必提供了可進行變更，並加入新的記錄，然後可以稍後重新連線到資料庫並認可。  
   
--   **不常更新查閱：**通常應用程式中，資料表做為查閱 — 例如，狀態稅資料表。 它們不常更新，且處於唯讀狀態。 而不是這項資料從伺服器重新讀取每次啟動應用程式時，應用程式可以直接將資料載入本機保存從**資料錄集**。  
+-   **不常更新查閱：** 通常應用程式中，資料表做為查閱 — 例如，狀態稅資料表。 它們不常更新，且處於唯讀狀態。 而不是這項資料從伺服器重新讀取每次啟動應用程式時，應用程式可以直接將資料載入本機保存從**資料錄集**。  
   
  在 ADO 中，來儲存及載入**資料錄集**，使用**Recordset.Save**和**Recordset.Open(,,,adCmdFile)** 方法上之 ADO**資料錄集**物件。  
   

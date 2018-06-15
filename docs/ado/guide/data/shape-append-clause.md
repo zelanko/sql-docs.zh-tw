@@ -2,7 +2,6 @@
 title: 圖形 APPEND 子句 |Microsoft 文件
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,11 +18,12 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 78a1b524d54f77fc5bdcc894c4948ca3139cf334
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: a7c54daeed05260bd7e6abd804830ce8dac1807d
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35272577"
 ---
 # <a name="shape-append-clause"></a>圖形 APPEND 子句
 圖形命令 APPEND 子句將附加的資料行或資料行，以**資料錄集**。 通常，這些資料行是章節資料行，參考子系**資料錄集**。  
@@ -34,7 +34,7 @@ ms.lasthandoff: 05/03/2018
 SHAPE [parent-command [[AS] parent-alias]] APPEND column-list  
 ```  
   
-## <a name="description"></a>Description  
+## <a name="description"></a>描述  
  這個子句的部分如下所示：  
   
  *parent-command*  
@@ -94,7 +94,7 @@ SHAPE [parent-command [[AS] parent-alias]]
  參考附加至父代的章節資料行別名。  
   
 > [!NOTE]
->  *"父資料行*TO*子資料行 」*子句其實是一個清單，其中每個定義的關聯性以逗號分隔  
+>  *"父資料行*TO*子資料行 」* 子句其實是一個清單，其中每個定義的關聯性以逗號分隔  
   
 > [!NOTE]
 >  子句之後附加關鍵字其實是一個清單，其中每個子句以逗號分隔，並定義要附加至父代的另一個資料行。  

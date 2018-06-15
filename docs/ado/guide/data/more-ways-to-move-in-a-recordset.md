@@ -2,7 +2,6 @@
 title: 更多方法來移動資料錄集中 |Microsoft 文件
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -21,11 +20,12 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 21c9c99d9e168d73a333fe001b56dcdf845339f7
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 894ab6b4daba13d6d57dda178f45bf07fc8a8f8d
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35272127"
 ---
 # <a name="more-ways-to-move-in-a-recordset"></a>更多方法來移動資料錄集中
 下列四種方法可用來移動，或在捲動**資料錄集**: [MoveFirst、 MoveLast、 MoveNext 和 MovePrevious](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)。 （其中某些方法是在順向資料指標上無法使用）。  
