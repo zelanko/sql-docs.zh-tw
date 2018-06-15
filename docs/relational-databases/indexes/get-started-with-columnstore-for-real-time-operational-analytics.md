@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32940583"
 ---
 # <a name="get-started-with-columnstore-for-real-time-operational-analytics"></a>開始使用資料行存放區進行即時作業分析
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -202,7 +203,7 @@ CREATE NONCLUSTERED COLUMNSTORE index t_colstor_cci on t_colstor (accountkey, ac
   
  以下是建議的最佳做法：  
   
--   **插入/查詢工作負載︰**如果您的工作負載主要是插入資料並加以查詢，則建議的選項是預設為 0 的 COMPRESSION_DELAY。 將 1 百萬個資料列插入單一差異資料列群組之後，即會壓縮最新插入的資料列。  
+-   **插入/查詢工作負載︰** 如果您的工作負載主要是插入資料並加以查詢，則建議的選項是預設為 0 的 COMPRESSION_DELAY。 將 1 百萬個資料列插入單一差異資料列群組之後，即會壓縮最新插入的資料列。  
     這類工作負載的部分範例是，當您需要在 Web 應用程式中分析按一下模式時所進行的 (a) 傳統 DW 工作負載 (b) 按一下資料流分析。  
   
 -   **OLTP 工作負載︰** 如果工作負載是大量的 DML (也就是大量的更新、刪除和插入混合)，您可能會看到資料行存放區索引片段，方法是檢查 DMV sys. dm_db_column_store_row_group_physical_stats。 如果您看到最近壓縮的資料列群組中有 > 10% 的資料列標示為已刪除，您可以使用 COMPRESSION_DELAY 選項，在資料列變成能夠壓縮時，新增時間延遲。 例如，針對您的工作負載，如果最新插入的資料列假設在 60 分鐘內會保持「熱」(也就是多次取得更新)，您應該選擇讓 COMPRESSION_DELAY 為 60。  

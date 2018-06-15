@@ -3,8 +3,6 @@ title: 新的專案 (SybaseToSQL) |Microsoft 文件
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-sybase
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: ssma
@@ -18,16 +16,17 @@ caps.latest.revision: 6
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 651b4f434f2d8c42836bc22002cbb2f43aea4318
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 9c7b69fdbf09e76b75f4dd203fba356b5eda34c9
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34779104"
 ---
 # <a name="new-project-sybasetosql"></a>新的專案 (SybaseToSQL)
 使用**新專案**對話方塊來建立新的 SSMA 專案。 若要存取**新專案**對話方塊中，於**檔案**功能表上，按一下 **新專案**。  
   
-## <a name="options"></a>選項  
+## <a name="options"></a>選項。  
 **名稱**  
 輸入專案的名稱。 SSMA 會將附加檔案的副檔名。  
   

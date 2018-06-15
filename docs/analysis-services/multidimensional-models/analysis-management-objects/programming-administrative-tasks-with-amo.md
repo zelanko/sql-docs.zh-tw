@@ -14,6 +14,7 @@ ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/10/2018
+ms.locfileid: "34020815"
 ---
 # <a name="programming-administrative-tasks-with-amo"></a>使用 AMO 進行管理工作的程式設計
   分析管理物件 (AMO) 是從用戶端應用程式使用的程式設計程式庫，可管理 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]。 在本章節中，您將了解如何使用 AMO 物件進行程式設計。  

@@ -1,8 +1,6 @@
 ---
 title: 開始使用 SSMA for MySQL (MySQLToSQL) |Microsoft 文件
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-mysql
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -22,11 +20,12 @@ caps.latest.revision: 19
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 191ff0505de357b4a76579e2797ceaeb636faf1a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: f3192db5033a9d20ca21d21d7b0d2c8f3d1550b6
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34776534"
 ---
 # <a name="getting-started-with-ssma-for-mysql-mysqltosql"></a>開始使用 SSMA for MySQL (MySQLToSQL)
 SQL Server 移轉小幫手 (SSMA) 的 MySQL 可讓您快速將 MySQL 資料庫結構描述轉換成 SQL Server 或 Azure SQL DB 結構描述，將產生的結構描述上傳到 SQL Server 或 Azure SQL DB、 和資料從 MySQL 移轉至 SQL Server 或 Azure SQL DB。  
@@ -118,7 +117,7 @@ SSMA 會有兩個工具列： 專案工具列和移轉工具列。
 |**功能表**|**說明**|  
 |**檔案**|包含用來處理專案、 連接至 MySQL，以及連接到 SQL Server 或 Azure SQL DB 命令。|  
 |**編輯**|包含用來尋找及處理的詳細資料頁面中的文字命令。 若要開啟**管理書籤**對話方塊中的，編輯 功能表上按一下 管理書籤。 在對話方塊中您會看到一份現有書籤。 您可以使用對話方塊右側的按鈕，來管理這些書籤。|  
-|**檢視**|包含**同步處理中繼資料瀏覽器**命令。 會同步處理 MySQL 中繼資料總管和 SQL Server 或 Azure SQL DB 中繼資料總管 之間的物件。 還會包含命令來顯示和隱藏**輸出**和**錯誤清單**窗格和選項**配置**管理版面配置。|  
+|**[檢視]**|包含**同步處理中繼資料瀏覽器**命令。 會同步處理 MySQL 中繼資料總管和 SQL Server 或 Azure SQL DB 中繼資料總管 之間的物件。 還會包含命令來顯示和隱藏**輸出**和**錯誤清單**窗格和選項**配置**管理版面配置。|  
 |**工具**|包含建立報表、 將結構描述轉換、 重新整理從資料庫，移轉物件和資料，以及將儲存為指令碼命令。 也提供存取**通用設定]、 [預設的專案設定**和**專案設定**對話方塊。|  
 |**說明**|提供存取至 SSMA 協助和**有關** 對話方塊。|  
   

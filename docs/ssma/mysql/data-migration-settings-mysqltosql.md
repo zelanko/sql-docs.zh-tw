@@ -1,8 +1,6 @@
 ---
 title: 資料移轉設定 (MySQLToSQL) |Microsoft 文件
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-mysql
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -18,11 +16,12 @@ caps.latest.revision: 9
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: bd5108c0a3d9c7e63b247be36d28ba71f5ac2337
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: b00ea42e99670a2da51fbacb571f63f4c1c7585d
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34775924"
 ---
 # <a name="data-migration-settings-mysqltosql"></a>資料移轉設定 (MySQLToSQL)
   
@@ -55,9 +54,9 @@ ms.lasthandoff: 05/03/2018
   
 有兩個按鈕出現的 viz。:  
   
--   **套用：**按一下**套用**來套用設定，已變更。  
+-   **套用：** 按一下**套用**來套用設定，已變更。  
   
--   **取消：**按一下**取消**進行變更之前，還原目前的設定。  
+-   **取消：** 按一下**取消**進行變更之前，還原目前的設定。  
   
 ## <a name="see-also"></a>另請參閱  
 [將 MySQL 資料移轉至 SQL Server/SQL Azure](http://msdn.microsoft.com/en-us/a6a7f4d6-68aa-4a38-93bf-53eba0d7dc82)  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32917333"
 ---
 # <a name="translation-dll-api-reference"></a>轉譯 DLL API 參考
 本章節描述轉譯 DLL 應用程式開發介面，其中包含兩個函式的語法： **SQLDriverToDataSource**和**SQLDataSourceToDriver**。 這些函式必須包含在驅動程式執行轉譯的 DLL。  

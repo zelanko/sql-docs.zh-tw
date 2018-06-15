@@ -24,6 +24,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32918523"
 ---
 # <a name="the-driver-manager"></a>驅動程式管理員
 *驅動程式管理員*是管理應用程式和驅動程式之間通訊的程式庫。 例如，Microsoft® Windows® 平台上，驅動程式管理員是動態連結程式庫 (DLL) 由 Microsoft 所撰寫，且使用者的可轉散發套件的 MDAC 2.8 SP1 sdk 可轉散發。  

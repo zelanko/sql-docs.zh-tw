@@ -1,8 +1,6 @@
 ---
 title: 載入已轉換成 SQL Server (OracleToSQL) 資料庫物件 |Microsoft 文件
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-oracle
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -18,11 +16,12 @@ caps.latest.revision: 10
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
-ms.openlocfilehash: a6e65bb6c795cb5216bf32889b6dfe7eb75c2a53
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 26ac7029947dcf826c19851b5988b5e898783f7c
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34777614"
 ---
 # <a name="loading-converted-database-objects-into-sql-server-oracletosql"></a>載入已轉換成 SQL Server (OracleToSQL) 資料庫物件
 Oracle 結構描述轉換至 SQL Server 之後，您可以載入 SQL Server 來產生資料庫物件。 您可以讓 SSMA 建立物件，或您可以編寫物件指令碼，並自行執行指令碼。 此外，SSMA 可讓您更新 SQL Server 資料庫的實際內容目標中繼資料。  
@@ -80,7 +79,7 @@ Oracle 結構描述轉換至 SQL Server 之後，您可以載入 SQL Server 來�
   
 **若要修改指令碼**  
   
-1.  在[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)]**檔案** 功能表上，指向 **開啟** ，然後按一下 **檔案**。  
+1.  在[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)]**檔案**功能表上，指向**開啟**，然後按一下 **檔案**。  
   
 2.  在**開啟**對話方塊中，選取您的指令碼檔案，然後按一下 [確定]。
   
@@ -95,7 +94,7 @@ Oracle 結構描述轉換至 SQL Server 之後，您可以載入 SQL Server 來�
   
 **執行指令碼**  
   
-1.  在[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)]**檔案** 功能表上，指向 **開啟** ，然後按一下 **檔案**。  
+1.  在[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)]**檔案**功能表上，指向**開啟**，然後按一下 **檔案**。  
   
 2.  在**開啟**對話方塊，並選取您的指令碼檔案，然後按一下 [確定]  
   

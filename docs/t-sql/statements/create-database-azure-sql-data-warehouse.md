@@ -22,6 +22,7 @@ ms.sourcegitcommit: d2573a8dec2d4102ce8882ee232cdba080d39628
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33702571"
 ---
 # <a name="create-database-azure-sql-data-warehouse"></a>CREATE DATABASE (Azure SQL 資料倉儲)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md.md)]
@@ -65,11 +66,11 @@ CREATE DATABASE database_name [ COLLATE collation_name ]
 *MAXSIZE*  
 預設為 245,760 GB (240 TB)。  
 
-**適用於：**最佳化彈性效能層級
+**適用於：** 最佳化彈性效能層級
 
 資料庫的允許大小上限。 資料庫不可增大超過 MAXSIZE。 
 
-**適用於：**最佳化計算效能層級
+**適用於：** 最佳化計算效能層級
 
 資料庫中資料列存放區資料的允許大小上限。 儲存在資料列存放區資料表的資料、資料行存放區索引的差異存放區，或叢集資料行存放區索引的非叢集索引，不可增大超過 MAXSIZE。  壓縮成資料行存放區格式的資料大小沒有大小限制，因此不受 MAXSIZE 限制。
   

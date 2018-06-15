@@ -3,8 +3,6 @@ title: 管理密碼 (SybaseToSQL) |Microsoft 文件
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-sybase
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: ssma
@@ -22,11 +20,12 @@ caps.latest.revision: 12
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 61af7aec304c285957297b40bae955a632c11a9e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 6b1d217626534a864fd893ffc0157f6331b92f03
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34778946"
 ---
 # <a name="managing-passwords-sybasetosql"></a>管理密碼 (SybaseToSQL)
 本節是關於保護資料庫的密碼和匯入或將它們匯出到伺服器的程序：  
@@ -46,7 +45,7 @@ SSMA 可讓您保護您的資料庫的密碼。
   
     以純文字密碼不安全。 因此，您將會遇到下列警告訊息中的主控台輸出： *"伺服器&lt;伺服器識別碼&gt;密碼會提供不安全的純文字形式 SSMA 主控台應用程式提供的選項來保護密碼加密，請參閱說明檔的詳細資訊的 SSMA – securepassword 選項。 」*  
   
-    **加密的密碼：**指定的密碼，在此情況下，是以加密形式儲存 ProtectedStorage.ssma 在本機電腦。  
+    **加密的密碼：** 指定的密碼，在此情況下，是以加密形式儲存 ProtectedStorage.ssma 在本機電腦。  
   
     -   **保護密碼**  
   
@@ -82,7 +81,7 @@ SSMA 可讓您保護您的資料庫的密碼。
   
         執行`SSMAforSybaseConsole.exe`與`–securepassword`和`–remove`在將伺服器識別碼，若要移除加密的密碼從本機電腦上存在的受保護的儲存體檔案傳遞的命令列參數。  
   
-        範例：  
+        範例  
         
             C:\SSMA\SSMAforSybaseConsole.EXE –securepassword –remove all
             C:\SSMA\SSMAforSybaseConsole.EXE –securepassword –remove "source_1,target_1"  
@@ -91,7 +90,7 @@ SSMA 可讓您保護您的資料庫的密碼。
   
         執行`SSMAforSybaseConsole.exe`與`–securepassword`和`–list`切換在命令列，列出所有已加密密碼的伺服器識別碼。  
   
-        範例：  
+        範例  
         
             C:\SSMA\SSMAforSybaseConsole.EXE –securepassword –list  
   
@@ -102,7 +101,7 @@ SSMA 可讓您保護您的資料庫的密碼。
 ## <a name="exporting-or-importing-encrypted-passwords"></a>匯出或匯入加密的密碼  
 SSMA 主控台應用程式可讓您將加密的資料庫密碼存在於本機電腦上的檔案中匯出至受保護的檔案，反之亦然。 它可協助進行獨立的加密的密碼的電腦。 匯出功能會讀取伺服器識別碼及密碼從本機受保護的儲存體，並將資訊儲存在加密的檔案。 系統會提示使用者輸入受保護檔案的密碼。 請確定輸入的密碼長度 8 個字元以上。 此受保護的檔案分散到不同的電腦是可攜式的。 匯入功能讀取受保護的檔案從伺服器識別碼和密碼資訊。 使用者就會提示輸入密碼的受保護的檔案，並將資訊附加到本機受保護的儲存體。  
   
-範例：  
+範例  
 
     Export password
     
@@ -120,7 +119,7 @@ SSMA 主控台應用程式可讓您將加密的資料庫密碼存在於本機電
     
     Please confirm password: xxxxxxxx  
   
-範例：  
+範例  
 
     Import an encrypted password
     

@@ -14,6 +14,7 @@ ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/10/2018
+ms.locfileid: "34024755"
 ---
 # <a name="amo-olap-classes"></a>AMO OLAP 類別
   分析管理物件 (AMO) OLAP 類別可協助您建立、修改、刪除和處理 Cube、維度及相關的物件，例如關鍵效能指標 (KPI)、動作和主動式快取。  

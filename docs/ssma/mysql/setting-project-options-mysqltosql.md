@@ -1,8 +1,6 @@
 ---
 title: 設定專案選項 (MySQLToSQL) |Microsoft 文件
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-mysql
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -20,11 +18,12 @@ caps.latest.revision: 12
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: dbe36fd3276ae6a5de2f5f41a8694fa9331d75a0
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 5cbaeadbc97a178f3c90f43e26fc13cde416ecc5
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34776644"
 ---
 # <a name="setting-project-options-mysqltosql"></a>設定專案選項 (MySQLToSQL)
 每個 SSMA 專案，您可以設定專案層級的選項。 這些選項會指定物件的轉換方式、 如何移轉資料和來源資料類型如何對應至目標資料類型。  您將物件轉換成 SQL Server 或 SQL Azure，或將資料移轉至 SQL Server 或 SQL Azure 之前，請確認組態選項都適用於專案。  
@@ -46,11 +45,11 @@ SSMA 會有五種專案設定：
   
 專案設定可以設定四種方式：  
   
--   預設值  
+-   預設  
   
 -   開放式  
   
--   [完整]  
+-   完整  
   
 -   Custom  
   
@@ -85,7 +84,7 @@ SSMA，在您可以設定所有專案的預設設定。 這些設定會儲存 SS
   
     3.  若要指定自訂設定，請選取或輸入新的設定或值。  
   
-3.  按一下  **確定** 儲存設定。  
+3.  按一下**確定**儲存設定。  
   
 您也可以自訂目前專案的設定。 取得目前的專案檔儲存設定。  
   
@@ -99,7 +98,7 @@ SSMA，在您可以設定所有專案的預設設定。 這些設定會儲存 SS
   
     2.  若要指定自訂的模式，請選取**自訂**從**模式**下拉式清單方塊。 然後選取適當的專案設定。  
   
-3.  按一下  **確定** 儲存設定。  
+3.  按一下**確定**儲存設定。  
   
 ## <a name="next-step"></a>下一個步驟  
 移轉的下一個步驟取決於您專案的需求：  

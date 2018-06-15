@@ -3,8 +3,6 @@ title: 資料移轉設定 (SybaseToSQL) |Microsoft 文件
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-sybase
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: ssma
@@ -18,11 +16,12 @@ caps.latest.revision: 3
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 6554f9afa87bea6b4d9950676b277b39810a3ea9
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 7ad5dddac98c6d70f94f22ba268c890de162bcc3
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34779154"
 ---
 # <a name="data-migration-settings-sybasetosql"></a>資料移轉設定 (SybaseToSQL)
   
@@ -55,9 +54,9 @@ ms.lasthandoff: 05/03/2018
   
 有兩個按鈕出現的 viz。:  
   
--   **套用：**按一下**套用**來套用設定，已變更。  
+-   **套用：** 按一下**套用**來套用設定，已變更。  
   
--   **取消：**按一下**取消**進行變更之前，還原目前的設定。  
+-   **取消：** 按一下**取消**進行變更之前，還原目前的設定。  
   
 ## <a name="see-also"></a>另請參閱  
 [Sybase 資料移轉至 SQL Server/SQL Azure](http://msdn.microsoft.com/en-us/54a39f5e-9250-4387-a3ae-eae47c799811)  
