@@ -1,41 +1,20 @@
 ---
 title: 插入 (DMX) |Microsoft 文件
-ms.custom: ''
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.component: data-mining
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: language-reference
-f1_keywords:
-- INSERT INTO
-- INSERT
-- INSERT_INTO
-dev_langs:
-- DMX
-helpviewer_keywords:
-- SKIP (DMX)
-- mapped model columns element
-- source data query element
-- <mapped model columns> element
-- <source data query> element
-- INSERT INTO statement
-- mining models [Analysis Services], processing
-- training mining models
-- mining structures [DMX], processing
-ms.assetid: 85eed207-396c-4a95-a74e-2acc1abc7e2c
-caps.latest.revision: 49
-author: Minewiskan
+ms.date: 06/07/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: dmx
+ms.topic: conceptual
 ms.author: owend
-manager: erikre
-ms.openlocfilehash: f76a649664d5240d31b1fa5b69a5d3045a59de26
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: 16732c1d889f7125d71d01bd0804b4202daceb7e
+ms.sourcegitcommit: 8f0faa342df0476884c3238e36ae3d9634151f87
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/07/2018
+ms.locfileid: "34842651"
 ---
 # <a name="insert-into-dmx"></a>INSERT INTO (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -86,7 +65,7 @@ INSERT INTO [MINING MODEL] <model>
 ||不處理採礦結構。|處理採礦模型與採礦結構。|  
 ||採礦結構包含其他的採礦模型。|處理失敗。 您必須重新處理結構與相關聯的採礦模型。|  
 |INSERT INTO MINING STRUCTURE*\<結構 >*|處理或不處理採礦結構。|處理採礦結構與相關聯的採礦模型。|  
-|INSERT INTO MINING MODEL*\<模型 >* （包含來源查詢）<br /><br /> 或<br /><br /> INSERT INTO MINING STRUCTURE*\<結構 >* （包含來源查詢）|結構或模型早已包含內容。|處理失敗。 您必須先使用執行此作業中，清除物件[刪除&#40;DMX&#41;](../dmx/delete-dmx.md)。|  
+|INSERT INTO MINING MODEL*\<模型 >* （包含來源查詢）<br /><br /> 中的多個<br /><br /> INSERT INTO MINING STRUCTURE*\<結構 >* （包含來源查詢）|結構或模型早已包含內容。|處理失敗。 您必須先使用執行此作業中，清除物件[刪除&#40;DMX&#41;](../dmx/delete-dmx.md)。|  
   
 ## <a name="mapped-model-columns"></a>對應的模型資料行  
  使用\<對應模型資料行 > 項目，您可以在採礦模型中對應資料來源的資料行的資料行。 \<對應模型資料行 > 項目具有下列格式：  
@@ -144,6 +123,6 @@ AS [Models]
 ## <a name="see-also"></a>另請參閱  
  [資料採礦延伸模組&#40;DMX&#41;資料定義陳述式](../dmx/dmx-statements-data-definition.md)   
  [資料採礦延伸模組&#40;DMX&#41;資料操作陳述式](../dmx/dmx-statements-data-manipulation.md)   
- [資料採礦延伸模組 & #40; DMX & #41;陳述式參考](../dmx/data-mining-extensions-dmx-statements.md)  
+ [資料採礦延伸模組 &#40;DMX&#41; 陳述式參考](../dmx/data-mining-extensions-dmx-statements.md)  
   
   

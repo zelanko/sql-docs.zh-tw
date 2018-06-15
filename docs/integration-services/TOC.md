@@ -1,7 +1,7 @@
 # [SQL Server Integration Services](sql-server-integration-services.md)
 
 # 概觀
-## [SQL Server 2016 Integration Services 的新功能](what-s-new-in-integration-services-in-sql-server-2016.md)
+## [SQL Server 2016 Integration Services 中的新增功能](what-s-new-in-integration-services-in-sql-server-2016.md)
 ## [SQL Server 2017 中的 Integration Services 新增功能](what-s-new-in-integration-services-in-sql-server-2017.md)
 ## [新文章及更新的文章](new-updated-integration-services.md)
 ## [SQL Server 各版本支援的 Integration Services 功能](integration-services-features-supported-by-the-editions-of-sql-server.md)
@@ -26,8 +26,8 @@
 # [在 Azure 中部署和執行套件](lift-shift/ssis-azure-lift-shift-ssis-packages-overview.md)
 ## [教學課程 - 在 Azure 中部署和執行套件](lift-shift/ssis-azure-deploy-run-monitor-tutorial.md)
 ## [使用 Windows 驗證連線到資料](lift-shift/ssis-azure-connect-with-windows-auth.md)
-## [連接到檔案及檔案共用](lift-shift/ssis-azure-files-file-shares.md)
-## [在 Azure 中連線到 SSISDB](lift-shift/ssis-azure-connect-to-catalog-database.md)
+## [儲存檔案及連線至檔案共用](lift-shift/ssis-azure-files-file-shares.md)
+## [連線到 Azure 中的 SSIS 目錄](lift-shift/ssis-azure-connect-to-catalog-database.md)
 ## [驗證部署到 Azure 的套件](lift-shift/ssis-azure-validate-packages.md)
 ## [在 Azure 中執行套件](lift-shift/ssis-azure-run-packages.md)
 ## [在 Azure 中排程套件](lift-shift/ssis-azure-schedule-packages.md)
@@ -71,15 +71,15 @@
 # [運算式](../integration-services/expressions/integration-services-ssis-expressions.md)
 # [事件處理常式](integration-services-ssis-event-handlers.md)
 # [查詢](integration-services-ssis-queries.md)
-# [Transactions](integration-services-transactions.md)
+# [交易](integration-services-transactions.md)
 # [部署套件](packages/deploy-integration-services-ssis-projects-and-packages.md)
 # [執行套件](packages/run-integration-services-ssis-packages.md)
-# [Scale Out](scale-out/integration-services-ssis-scale-out.md)
+# [相應放大](scale-out/integration-services-ssis-scale-out.md)
 
 # [目錄和伺服器](catalog/integration-services-ssis-server-and-catalog.md)
 # [服務 (舊版)](../integration-services/service/integration-services-service-ssis-service.md)
-# [Security](../integration-services/security/security-overview-integration-services.md)
-# [[效能]](../integration-services/performance/monitor-running-packages-and-other-operations.md)
+# [安全性](../integration-services/security/security-overview-integration-services.md)
+# [效能](../integration-services/performance/monitor-running-packages-and-other-operations.md)
 # [疑難排解](../integration-services/troubleshooting/troubleshoot-integration-services-ssis-packages.md)
 # [系統檢視表](../integration-services/system-views/views-integration-services-catalog.md)
 # [系統預存程序](../integration-services/system-stored-procedures/stored-procedures-integration-services-catalog.md)
@@ -93,13 +93,13 @@
 ## [Integration Services 程式設計概觀](integration-services-programming-overview.md)
 ## [了解同步和非同步轉換](understanding-synchronous-and-asynchronous-transformations.md)
 ## [以程式設計方式使用連線管理員](working-with-connection-managers-programmatically.md)
-## [使用指令碼來擴充套件](../integration-services/extending-packages-scripting/extending-packages-with-scripting.md)
-## [使用自訂物件來擴充套件](../integration-services/extending-packages-custom-objects/extending-packages-with-custom-objects.md)
+## [使用指令碼來延伸套件](../integration-services/extending-packages-scripting/extending-packages-with-scripting.md)
+## [使用自訂物件來延伸套件](../integration-services/extending-packages-custom-objects/extending-packages-with-custom-objects.md)
 ## [以程式設計方式建置套件](../integration-services/building-packages-programmatically/adding-connections-programmatically.md)
 ## [以程式設計方式執行和管理套件](../integration-services/run-manage-packages-programmatically/running-and-managing-packages-programmatically.md)
 # [Integration Services 語言參考](integration-services-language-reference.md)
 
-# [Azure Feature Pack for Integration Services (SSIS)](azure-feature-pack-for-integration-services-ssis.md)
+# [適用於 Integration Services (SSIS)  的 Azure Feature Pack](azure-feature-pack-for-integration-services-ssis.md)
 
 # [Integration Services (SSIS) 中的 Hadoop 和 HDFS 支援](hadoop-and-hdfs-support-in-integration-services-ssis.md)
 
@@ -110,7 +110,7 @@
 # [從 Excel 匯入或匯出至 Excel](load-data-to-from-excel-with-ssis.md)
 # [將資料載入 SQL 資料倉儲中](load-data-to-sql-data-warehouse.md)
 
-# [Change data capture](../integration-services/change-data-capture/change-data-capture-ssis.md)
+# [變更資料擷取](../integration-services/change-data-capture/change-data-capture-ssis.md)
 
 # [Microsoft Connector for SAP BW](microsoft-connector-for-sap-bw.md)
 ## [安裝 Microsoft Connector for SAP BW](installing-the-microsoft-connector-for-sap-bw.md)
@@ -151,13 +151,13 @@
 #### [課程 4-4 - 新增一般檔案目的地](lesson-4-4-adding-a-flat-file-destination.md)
 #### [課程 4-5 - 測試課程 4 的教學課程套件](lesson-4-5-testing-the-lesson-4-tutorial-package.md)
 
-### [課程 5：新增套件部署模型的套件組態](lesson-5-add-ssis-package-configurations-for-the-package-deployment-model.md)
+### [課程 5：新增套件部署模型的套件設定](lesson-5-add-ssis-package-configurations-for-the-package-deployment-model.md)
 #### [課程 5-1 - 複製課程 4 的套件](lesson-5-1-copying-the-lesson-4-package.md)
-#### [課程 5-2 - 啟用和設定套件組態](lesson-5-2-enabling-and-configuring-package-configurations.md)
-#### [課程 5-3 - 修改目錄屬性組態值](lesson-5-3-modifying-the-directory-property-configuration-value.md)
+#### [課程 5-2 - 啟用和設定套件設定](lesson-5-2-enabling-and-configuring-package-configurations.md)
+#### [課程 5-3 - 修改目錄屬性設定值](lesson-5-3-modifying-the-directory-property-configuration-value.md)
 #### [課程 5-4 - 測試課程 5 的教學課程套件](lesson-5-4-testing-the-lesson-5-tutorial-package.md)
 
-### [課程 6：搭配專案部屬模型使用參數](lesson-6-using-parameters-with-the-project-deployment-model-in-ssis.md)
+### [課程 6：搭配專案部署模型使用參數](lesson-6-using-parameters-with-the-project-deployment-model-in-ssis.md)
 #### [課程 6-1 - 複製課程 5 的套件](lesson-6-1-copying-the-lesson-5-package.md)
 #### [課程 6-2 - 將專案轉換成專案部署模型](lesson-6-2-converting-the-project-to-the-project-deployment-model.md)
 #### [課程 6-3 - 測試課程 6 的套件](lesson-6-3-testing-the-lesson-6-package.md)
@@ -168,7 +168,7 @@
 #### [課程 1-1 - 建立工作資料夾和環境變數](lesson-1-1-creating-working-folders-and-environment-variables.md)
 #### [課程 1-2 - 建立部署專案](lesson-1-2-creating-the-deployment-project.md)
 #### [課程 1-3 - 新增套件和其他檔案](lesson-1-3-adding-packages-and-other-files.md)
-#### [課程 1-4 - 新增套件組態](lesson-1-4-adding-package-configurations.md)
+#### [課程 1-4 - 新增套件設定](lesson-1-4-adding-package-configurations.md)
 #### [課程 1-5 - 測試更新的套件](lesson-1-5-testing-the-updated-packages.md)
 
 ### [課程 2：建立部署套件組合](lesson-2-create-the-deployment-bundle-in-ssis.md)
