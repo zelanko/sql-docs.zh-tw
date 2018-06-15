@@ -32,6 +32,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33055358"
 ---
 # <a name="objectproperty-transact-sql"></a>OBJECTPROPERTY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -117,7 +118,7 @@ OBJECTPROPERTY ( id , property )
 |IsUniqueCnst|任何結構描述範圍物件|UNIQUE 條件約束。<br /><br /> 1 = True<br /><br /> 0 = False|  
 |IsUserTable|Table|使用者自訂資料表。<br /><br /> 1 = True<br /><br /> 0 = False|  
 |IsView|檢視|檢視表。<br /><br /> 1 = True<br /><br /> 0 = False|  
-|OwnerId|任何結構描述範圍物件|物件的擁有者。<br /><br /> **注意：**結構描述擁有者不一定是物件擁有者。 例如，子物件 (其 *parent_object_id* 非 Null) 一律會傳回與父系相同的擁有者識別碼。<br /><br /> 非 Null = 物件擁有者的資料庫使用者識別碼。|  
+|OwnerId|任何結構描述範圍物件|物件的擁有者。<br /><br /> **注意：** 結構描述擁有者不一定是物件擁有者。 例如，子物件 (其 *parent_object_id* 非 Null) 一律會傳回與父系相同的擁有者識別碼。<br /><br /> 非 Null = 物件擁有者的資料庫使用者識別碼。|  
 |TableDeleteTrigger|Table|資料表有 DELETE 觸發程序。<br /><br /> >1 = 屬於指定類型的第一個觸發程序識別碼。|  
 |TableDeleteTriggerCount|Table|資料表有指定數目的 DELETE 觸發程序。<br /><br /> >0 = DELETE 觸發程序的數目。|  
 |TableFullTextMergeStatus|Table|**適用於**： [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。<br /><br /> 資料表是否具有目前正在合併的全文檢索索引。<br /><br /> 0 = 資料表沒有全文檢索索引，或是全文檢索索引並未合併。<br /><br /> 1 = 全文檢索索引正在合併。|  

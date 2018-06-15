@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33029968"
 ---
 # <a name="msreportserverinstance-properties---version"></a>MSReportServer_Instance 屬性 - Version
   以 Major.Minor.Build.Revision 的格式傳回報表伺服器的版本。 唯讀。  

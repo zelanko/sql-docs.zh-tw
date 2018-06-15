@@ -25,6 +25,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33028625"
 ---
 # <a name="reporting-services-properties---report-server-system-properties"></a>Reporting Services 屬性 - 報表伺服器系統屬性
   下列系統屬性名稱會保留。 您無法建立具有相同名稱的使用者定義屬性。 您可以使用 Web 服務方法，來讀取或是修改大部分屬性。  

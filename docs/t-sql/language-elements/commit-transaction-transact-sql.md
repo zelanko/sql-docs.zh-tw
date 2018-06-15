@@ -39,6 +39,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33063715"
 ---
 # <a name="commit-transaction-transact-sql"></a>COMMIT TRANSACTION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-pdw-md.md)]
@@ -66,17 +67,17 @@ COMMIT [ TRAN | TRANSACTION ]
   
 ## <a name="arguments"></a>引數  
  *transaction_name*  
- **適用於：**SQL Server 和 Azure SQL Database
+ **適用於：** SQL Server 和 Azure SQL Database
  
  [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 會忽略這個項目。 *transaction_name* 會指定先前的 BEGIN TRANSACTION 所指派的交易名稱。 *transaction_name*必須符合識別碼的規則，但不能超出 32 個字元。 *transaction_name* 可用來向程式設計人員指出 COMMIT TRANSACTION 與哪個巢狀 BEGIN TRANSACTION 關聯，協助提升可讀性。  
   
  *@tran_name_variable*  
- **適用於：**SQL Server 和 Azure SQL Database  
+ **適用於：** SQL Server 和 Azure SQL Database  
  
 這是包含有效交易名稱之使用者定義變數的名稱。 此變數必須以 char、varchar、nchar 或 nvarchar 資料類型來宣告。 如果超出 32 個字元傳給變數，只會使用 32 個字元；其餘字元會截斷。  
   
  DELAYED_DURABILITY  
- **適用於：**SQL Server 和 Azure SQL Database   
+ **適用於：** SQL Server 和 Azure SQL Database   
 
  要求這筆交易以延遲持久性認可的選項。 如果資料庫已經使用 `DELAYED_DURABILITY = DISABLED` 或 `DELAYED_DURABILITY = FORCED` 更改，則會忽略要求。 如需詳細資訊，請參閱[控制交易持久性](../../relational-databases/logs/control-transaction-durability.md)主題。  
   
@@ -99,7 +100,7 @@ COMMIT [ TRAN | TRANSACTION ]
 ## <a name="examples"></a>範例  
   
 ### <a name="a-committing-a-transaction"></a>A. 認可交易  
-**適用於：**SQL Server、Azure SQL Database、Azure SQL 資料倉儲，以及平行處理資料倉儲   
+**適用於：** SQL Server、Azure SQL Database、Azure SQL 資料倉儲，以及平行處理資料倉儲   
 
 下列範例會刪除作業候選項。 此範例使用 AdventureWorks。 
   
@@ -111,7 +112,7 @@ COMMIT TRANSACTION;
 ```  
   
 ### <a name="b-committing-a-nested-transaction"></a>B. 認可巢狀交易  
-**適用於：**SQL Server 和 Azure SQL Database    
+**適用於：** SQL Server 和 Azure SQL Database    
 
 此範例會建立一份資料表，並產生三個層級的巢狀交易，再認可巢狀交易。 雖然每個 `COMMIT TRANSACTION` 陳述式都有 *transaction_name* 參數，但是 `COMMIT TRANSACTION` 與 `BEGIN TRANSACTION` 陳述式之間並沒有關聯性。 *transaction_name* 參數只是用來輔助可讀性，協助程式設計人員確認已編寫適當認可數目的程式碼來將 `@@TRANCOUNT` 減量到 0，以便認可外部交易。 
   

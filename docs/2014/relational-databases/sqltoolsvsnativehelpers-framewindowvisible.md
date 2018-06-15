@@ -20,6 +20,7 @@ ms.sourcegitcommit: d2573a8dec2d4102ce8882ee232cdba080d39628
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "34424063"
 ---
 # <a name="framewindowvisible"></a>FrameWindowVisible
   指定特定視窗框架是否可見的屬性。 Helper 方法是從 Managed 程式碼使用。  

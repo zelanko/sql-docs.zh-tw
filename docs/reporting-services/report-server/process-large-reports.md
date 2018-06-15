@@ -26,6 +26,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33028045"
 ---
 # <a name="process-large-reports"></a>處理大型報表
   大型報表會造成一定的處理挑戰，若要正確執行，就需要特定的組態。 除非將大型報表設定成支援分頁，否則不應視需要執行大型報表。  
