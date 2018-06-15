@@ -2,7 +2,6 @@
 title: RDS 程式設計模型與物件 |Microsoft 文件
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -18,11 +17,12 @@ caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 32cd0b412e06f591eee69581e1e7ea8f871cab7f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: c9501b819e664e4b0841140f6b3d835773d2e2ed
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35274077"
 ---
 # <a name="rds-programming-model-with-objects"></a>RDS 與物件的程式設計模型
 RDS 的目標為存取和更新的媒介，例如 IIS 透過資料來源。 程式設計模型指定的活動所需達成此目標的序列。 物件模型中指定的物件，其方法和屬性會影響的程式設計模型。  

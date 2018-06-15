@@ -2,7 +2,6 @@
 title: AddNew 方法範例 （VC + +） |Microsoft 文件
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,11 +18,12 @@ caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 3c83162803d11d9c31c47287017870aab85c4033
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 99cc0315c6617c7aa3b2850d588c9d45e3badab2
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35275237"
 ---
 # <a name="addnew-method-example-vc"></a>AddNew 方法範例 （VC + +）
 這個範例會使用[AddNew](../../../ado/reference/ado-api/addnew-method-ado.md)方法來建立具有指定名稱的新記錄。  
