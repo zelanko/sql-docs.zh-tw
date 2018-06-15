@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33020385"
 ---
 # <a name="create-and-modify-embedded-data-sources"></a>建立和修改內嵌資料來源
   內嵌資料來源是定義在報表定義中，而且只能供該報表使用。  

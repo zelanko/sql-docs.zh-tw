@@ -29,6 +29,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33054445"
 ---
 # <a name="columnproperty-transact-sql"></a>COLUMNPROPERTY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -56,7 +57,7 @@ COLUMNPROPERTY ( id , column , property )
 |ReplTest1|描述|傳回的值|  
 |---|---|---|
 |**AllowsNull**|允許 Null 值|1：TRUE<br /><br /> 0：FALSE<br /><br /> NULL：無效的輸入。|  
-|**ColumnId**|對應於 **sys.columns.column_id** 的資料行識別碼值。|資料行識別碼<br /><br /> **注意：**當查詢多個資料行時，資料行識別碼值順序可能會有間距。|  
+|**ColumnId**|對應於 **sys.columns.column_id** 的資料行識別碼值。|資料行識別碼<br /><br /> **注意：** 當查詢多個資料行時，資料行識別碼值順序可能會有間距。|  
 |**FullTextTypeColumn**|資料表中保存 *column* 之文件類型資訊的 TYPE COLUMN。|此函式的第二個參數所傳遞之資料行名稱運算式的全文檢索 TYPE COLUMN 識別碼。|  
 |**GeneratedAlwaysType**|是系統產生的資料行值。 對應到 **sys.columns.generated_always_type**|**適用於**： [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。<br /><br /> 0：不一律會產生<br /><br /> 1：一律作為資料列開頭產生<br /><br /> 2：一律作為資料列結尾產生|  
 |**IsColumnSet**|資料行是資料行集。 如需詳細資訊，請參閱 [使用資料行集](../../relational-databases/tables/use-column-sets.md)。|1：TRUE<br /><br /> 0：FALSE<br /><br /> NULL：無效的輸入。|  

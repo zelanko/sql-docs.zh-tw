@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33022345"
 ---
 # <a name="previewing-reports-in-report-builder"></a>在報表產生器中預覽報表
   當您建立 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 報表時，這對經常預覽報表以確認報表如預期般顯示相當有幫助。 若要預覽報表，按一下 **[執行]**。 報表隨即在預覽模式下呈現。  

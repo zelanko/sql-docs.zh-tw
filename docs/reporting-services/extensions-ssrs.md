@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33017515"
 ---
 # <a name="extensions-ssrs"></a>延伸模組 (SSRS)
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 中的報表伺服器會使用延伸模組，以模塊化其接受用於驗證、資料處理、報表轉譯及報表傳遞的輸入或輸出類型。 這可讓現有的 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 安裝輕鬆地利用產業中的新軟體標準，例如新驗證結構，或是自訂資料來源類型。 報表伺服器支援自訂驗證延伸模組、資料處理延伸模組、報表處理延伸模組、轉譯延伸模組和傳遞延伸模組，以及在 RSReportServer.config 組態檔中適用於使用者的可設定延伸模組。 例如，您可以限制報表檢視器允許使用的匯出格式。 報表伺服器至少需要一個驗證延伸模組、資料處理延伸模組和轉譯延伸模組。 傳遞與報表處理延伸模組是選擇性的，但是您若要支援報表散發或自訂控制項，則是必要的。  

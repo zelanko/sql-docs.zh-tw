@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33025955"
 ---
 # <a name="report-builder-functions---aggregate-function"></a>報表產生器函式 - Aggregate 函式
   傳回指定之運算式的自訂彙總，由資料提供者定義。  

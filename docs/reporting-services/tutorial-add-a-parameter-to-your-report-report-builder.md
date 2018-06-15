@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33037225"
 ---
 # <a name="tutorial-add-a-parameter-to-your-report-report-builder"></a>教學課程：將參數加入至報表 (報表產生器)
 在本教學課程中，您可以將參數新增至 [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] 分頁報表，讓報表讀者可以篩選報表資料中的一或多個值。 
@@ -187,7 +188,7 @@ ms.lasthandoff: 05/03/2018
   
 5.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-6.  按一下 **[執行]** 預覽報表。 報表檢視器會顯示提示**商店識別碼？**如*@StoreID*。  
+6.  按一下 **[執行]** 預覽報表。 報表檢視器會顯示提示**商店識別碼？** 如*@StoreID*。  
   
 7.  在報表檢視器工具列上，就在 Store ID 旁，輸入 **200**，然後按一下 **[檢視報表]**。  
   

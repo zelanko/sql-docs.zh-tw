@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33036135"
 ---
 # <a name="tutorial-format-text-report-builder"></a>教學課程：格式化文字 (報表產生器)
 

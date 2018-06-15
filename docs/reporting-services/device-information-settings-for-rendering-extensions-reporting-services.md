@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33015975"
 ---
 # <a name="device-information-settings-for-rendering-extensions-reporting-services"></a>轉譯延伸模組的裝置資訊設定 (Reporting Services)
   在 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]中，裝置資訊設定會用於將轉譯參數傳遞給轉譯延伸模組。 每一個轉譯延伸模組都會接受一組特定的設定。  

@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33019345"
 ---
 # <a name="change-a-chart-type-report-builder-and-ssrs"></a>變更圖表類型 (報表產生器及 SSRS)
 當您先將圖表插入 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 分頁報表時，[選取圖表類型] 對話方塊隨即出現。 如果您取消此對話方塊，預設會加入直條圖圖表類型。  

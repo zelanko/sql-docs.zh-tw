@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33015985"
 ---
 # <a name="lesson-2-specifying-connection-information-reporting-services"></a>第 2 課：指定連接資訊 (Reporting Services)
 將  分頁報表報表新增至教學課程專案第 1 課之後，您需要定義 *「資料來源」*[!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)]，這是讓報表從關聯式資料庫、多維度資料庫或其他來源存取資料所用的連線資訊。  

@@ -25,6 +25,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33046195"
 ---
 # <a name="registered-servers-f1-help"></a>已註冊的伺服器 F1 說明
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -68,7 +69,7 @@ ms.lasthandoff: 05/03/2018
  **記住密碼**  
  請儲存您輸入的密碼。 唯有已按一下 **[基本驗證]** 或 **[表單驗證]** 時，才能使用此選項。  
   
-> **注意：**如果您已儲存密碼而要停止儲存密碼，請清除此核取方塊，然後按一下 [儲存]。  
+> **注意：** 如果您已儲存密碼而要停止儲存密碼，請清除此核取方塊，然後按一下 [儲存]。  
   
  **已註冊的伺服器名稱**  
  您要在 [已註冊的伺服器] 上顯示的名稱。 此名稱不需與 **[伺服器名稱]** 方塊中的名稱相符。  

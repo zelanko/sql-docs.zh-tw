@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33031465"
 ---
 # <a name="reporting-services-in-sql-server-management-studio-ssrs"></a>SQL Server Management Studio (SSRS) 中的 Reporting Services
   報表伺服器管理員可以使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 執行下列作業：  

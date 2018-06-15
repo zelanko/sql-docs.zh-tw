@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33018695"
 ---
 # <a name="report-sections-dialog-box-report-builder"></a>報表區段對話方塊 (報表產生器)
   當您開啟報表時，報表產生器會驗證此報表只包含一個報表定義語言 (RDL) **\<Section>** 項目。 不支援開啟具有多個 **\<Section>** 項目的報表。  

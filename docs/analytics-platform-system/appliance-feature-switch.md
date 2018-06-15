@@ -14,6 +14,7 @@ ms.sourcegitcommit: fc3cd23685c6b9b6972d6a7bab2cc2fc5ebab5f2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/25/2018
+ms.locfileid: "34550893"
 ---
 #<a name="appliance-feature-switch"></a>應用裝置功能切換
 **功能切換**頁面顯示 Analytics Platform System AU7 導入的兩個功能參數資訊。 若要更新或啟用/停用功能與 Analytics Platform System 設定使用此頁面。 功能參數值的變更需要重新啟動服務。

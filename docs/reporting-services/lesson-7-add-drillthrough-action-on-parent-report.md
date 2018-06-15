@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33015285"
 ---
 # <a name="lesson-7-add-drillthrough-action-on-parent-report"></a>第 7 課：在父報表上加入鑽研動作
 將 ReportViewer 控制項加入至網站應用程式後，下一步是要在父報表上加入鑽研動作。  
