@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32900233"
 ---
 # <a name="api-conformance-level-odbc-driver-for-oracle"></a>API 的一致性層級 （如 Oracle 的 ODBC 驅動程式）
 > [!IMPORTANT]  

@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32901053"
 ---
 # <a name="native-error"></a>原生錯誤
 正由桌面資料庫驅動程式所產生的原生錯誤碼。 由 Microsoft Jet 產生負數錯誤碼。 如需詳細資訊，請參閱*Microsoft Jet 資料庫引擎程式設計人員指南*。

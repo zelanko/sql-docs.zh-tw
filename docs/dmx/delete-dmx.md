@@ -1,36 +1,20 @@
 ---
 title: 刪除 (DMX) |Microsoft 文件
-ms.custom: ''
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.component: data-mining
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: language-reference
-f1_keywords:
-- DELETE
-dev_langs:
-- DMX
-helpviewer_keywords:
-- DELETE statement [DMX]
-- mining structures [DMX], clearing
-- clearing mining models
-- deleting mining models
-- mining models [Analysis Services], clearing
-- deleting mining structures
-ms.assetid: 5a8204c3-a3df-4d97-9c1d-d997d24c70e3
-caps.latest.revision: 35
-author: Minewiskan
+ms.date: 06/07/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: dmx
+ms.topic: conceptual
 ms.author: owend
-manager: erikre
-ms.openlocfilehash: 4537efcd717b43465e12eadff4d567a179841ed2
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: e5b11bda21fe877af419442cb8b98acd4d29c21b
+ms.sourcegitcommit: 8f0faa342df0476884c3238e36ae3d9634151f87
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/07/2018
+ms.locfileid: "34841271"
 ---
 # <a name="delete-dmx"></a>DELETE (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -59,9 +43,9 @@ DELETE FROM [MINING STRUCTURE] <structure>[.CONTENT]|[.CASES]
   
 |引數|結果|  
 |---------------|------------|  
-|DELETE FROM MINING STRUCTURE*\<結構 >*<br /><br /> 或<br /><br /> DELETE FROM MINING STRUCTURE*\<結構 >*。內容|在採礦結構上執行 ProcessClear。 清除採礦結構及其相關聯的採礦模型中所有的內容。|  
+|DELETE FROM MINING STRUCTURE*\<結構 >*<br /><br /> 中的多個<br /><br /> DELETE FROM MINING STRUCTURE*\<結構 >*。內容|在採礦結構上執行 ProcessClear。 清除採礦結構及其相關聯的採礦模型中所有的內容。|  
 |DELETE FROM MINING STRUCTURE*\<結構 >*。案例|在採礦結構上執行 ProcessClearStructureOnly。 清除採礦結構中所有的內容，但是相關聯的採礦模型則保持不變。 清除採礦結構之後，在相關聯之採礦模型上的鑽研將會失敗。|  
-|從採礦模型 刪除*\<模型 >*<br /><br /> 或<br /><br /> 從採礦模型 刪除*\<模型 >*。內容|採礦模型上執行 ProcessClear，但會保留資料庫中的狀態值。 狀態值是資料行的可能狀態。 例如，性別資料行的狀態值為男性與女性。|  
+|從採礦模型 刪除*\<模型 >*<br /><br /> 中的多個<br /><br /> 從採礦模型 刪除*\<模型 >*。內容|採礦模型上執行 ProcessClear，但會保留資料庫中的狀態值。 狀態值是資料行的可能狀態。 例如，性別資料行的狀態值為男性與女性。|  
   
  如需有關處理類型的詳細資訊，請參閱[型別項目&#40;XMLA&#41;](../analysis-services/xmla/xml-elements-properties/type-element-xmla.md)。  
   
@@ -75,6 +59,6 @@ DELETE FROM NB_Sample.CONTENT
 ## <a name="see-also"></a>另請參閱  
  [資料採礦延伸模組&#40;DMX&#41;資料定義陳述式](../dmx/dmx-statements-data-definition.md)   
  [資料採礦延伸模組&#40;DMX&#41;資料操作陳述式](../dmx/dmx-statements-data-manipulation.md)   
- [資料採礦延伸模組 & #40; DMX & #41;陳述式參考](../dmx/data-mining-extensions-dmx-statements.md)  
+ [資料採礦延伸模組 &#40;DMX&#41; 陳述式參考](../dmx/data-mining-extensions-dmx-statements.md)  
   
   

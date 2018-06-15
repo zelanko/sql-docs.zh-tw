@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32868213"
 ---
 # <a name="migrate-on-premises-sql-server-using-data-migration-assistant"></a>移轉內部部署 SQL Server 使用的資料移轉小幫手
 

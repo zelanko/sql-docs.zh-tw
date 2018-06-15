@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32897673"
 ---
 # <a name="correlation-names"></a>相互關聯名稱
 完全支援相互關聯名稱，包括資料表清單中。 例如，下列字串中 E1 是名為 Emp 資料表相互關聯名稱：  
