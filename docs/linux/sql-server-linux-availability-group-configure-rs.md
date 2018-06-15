@@ -17,6 +17,7 @@ ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/19/2018
+ms.locfileid: "34323299"
 ---
 # <a name="configure-a-sql-server-availability-group-for-read-scale-on-linux"></a>SQL Server 可用性群組設定為向外延展讀取 on Linux
 

@@ -28,6 +28,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33078025"
 ---
 # <a name="type-system---sequence-type-matching"></a>類型系統的序列類型比對
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -429,7 +430,7 @@ RETURN
   
 -   在元素測試中，類型名稱後面必須發生指標 (**？**)。  
   
--   **element （ElementName，TypeName）**不支援。  
+-   **element （ElementName，TypeName）** 不支援。  
   
 -   **項目 (\*，TypeName)** 不支援。  
   

@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33026965"
 ---
 # <a name="update-a-resource-report-manager"></a>更新資源 (報表管理員)
   您可以使用新版本來取代舊版本，以此方式更新資源。 資源是一些項目，儲存在包含您上傳之檔案中之內容的報表伺服器上。 您可以將新的或不同的檔案內容匯入現有的資源，以取代現有的資源。 更新資源提供一種方式，可以更新內容，同時保留資源的現有屬性與安全性設定。  

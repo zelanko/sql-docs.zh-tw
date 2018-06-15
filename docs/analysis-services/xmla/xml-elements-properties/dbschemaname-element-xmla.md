@@ -13,7 +13,7 @@ ms.openlocfilehash: 2a91af2de915ac4147e8e10a9aa3469a7cbbe63a
 ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/02/2018
+ms.lasthandoff: 06/04/2018
 ms.locfileid: "34577870"
 ---
 # <a name="dbschemaname-element-xmla"></a>DbSchemaName 元素 (XMLA)

@@ -33,6 +33,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33016864"
 ---
 # <a name="understanding-security-policies"></a>了解安全性原則
   報表伺服器所執行的任何程式碼都必須屬於特定程式碼存取安全性原則的一部分。 這些安全性原則包含將辨識項對應至一組具名使用權限集合的程式碼群組。 通常，程式碼群組會與為該群組中程式碼指定允許權限的具名使用權限集合產生關聯。 執行階段會使用受信任主應用程式或載入程式所提供的辨識項來決定程式碼所屬的程式碼群組，以及因此授與程式碼的權限。 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 會遵守 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] Common Language Runtime (CLR) 所定義的安全性原則架構。 下列各節將描述 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 中的各種程式碼類型以及與它們相關聯的原則規則。  

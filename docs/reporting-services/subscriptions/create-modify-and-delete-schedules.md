@@ -32,6 +32,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33035215"
 ---
 # <a name="create-modify-and-delete-schedules"></a>Create, Modify, and Delete Schedules
   使用本主題可讓您了解如何建立、修改和刪除 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 共用排程。  若要管理原生模式的共用排程，請使用 Web 入口網站中的 [排程] 頁面或 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]中的 [共用排程] 資料夾。 如果是 SharePoint 模式，請使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 服務應用程式的管理頁面。  
@@ -65,7 +66,7 @@ ms.lasthandoff: 05/03/2018
   
  如果您修改共用排程，就可以在進行變更之前暫停它。 當您繼續排程時，變更便會生效。  
 
-1.  在 Web 入口網站中，按一下工具列中的 [設定] ![ssrs_portal_settings_gear](../../reporting-services/subscriptions/media/ssrs-portal-settings-gear.png)。 **注意：**如果無法使用 [網站設定]，您就沒有存取網站設定的權限。
+1.  在 Web 入口網站中，按一下工具列中的 [設定] ![ssrs_portal_settings_gear](../../reporting-services/subscriptions/media/ssrs-portal-settings-gear.png)。 **注意：** 如果無法使用 [網站設定]，您就沒有存取網站設定的權限。
 2.  click **[站台設定]**。  
 3.  按一下 **[排程]**。  
 4.  按一下 **[新增排程]**。 若要修改現有的排程，請按一下排程的名稱。  

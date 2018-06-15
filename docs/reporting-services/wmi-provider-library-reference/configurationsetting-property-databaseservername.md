@@ -27,6 +27,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33030575"
 ---
 # <a name="configurationsetting-property---databaseservername"></a>ConfigurationSetting 屬性 - DatabaseServerName
   指定安裝報表伺服器資料庫之伺服器的名稱。 讀取/寫入  
