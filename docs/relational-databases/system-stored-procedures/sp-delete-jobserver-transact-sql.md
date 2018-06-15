@@ -27,6 +27,7 @@ ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33246189"
 ---
 # <a name="spdeletejobserver-transact-sql"></a>sp_delete_jobserver (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -54,7 +55,7 @@ sp_delete_jobserver { [ @job_id = ] job_id | [ @job_name = ] 'job_name' } ,
 >  任一*job_id*或*job_name*必須指定; 不可同時指定兩者。  
   
  [ **@server_name=** ] **'***server***'**  
- 要從指定作業中移除的目標伺服器名稱。 *伺服器*是**nvarchar （30)**，沒有預設值。 *伺服器*可以**（本機）**或遠端目標伺服器的名稱。  
+ 要從指定作業中移除的目標伺服器名稱。 *伺服器*是**nvarchar （30)**，沒有預設值。 *伺服器*可以 **（本機）** 或遠端目標伺服器的名稱。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  **0** （成功） 或**1** （失敗）  

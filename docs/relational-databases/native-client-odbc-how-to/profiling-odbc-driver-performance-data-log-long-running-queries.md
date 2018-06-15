@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32946693"
 ---
 # <a name="profiling-odbc-driver-performance-data---log-long-running-queries"></a>程式碼剖析的 ODBC 驅動程式效能資料的記錄長時間執行的查詢
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -47,7 +48,7 @@ ms.lasthandoff: 05/03/2018
   
 6.  選取**將長時間執行的查詢儲存到記錄檔**。 在方塊中，放置應該記錄其長時間執行查詢之檔案的名稱。 （選擇性） 按一下**瀏覽**瀏覽檔案系統的查詢記錄。  
   
-7.  設定查詢逾時間隔，以毫秒為單位，在**長時間查詢的時間 （毫秒）**方塊。  
+7.  設定查詢逾時間隔，以毫秒為單位，在**長時間查詢的時間 （毫秒）** 方塊。  
   
 ### <a name="to-log-long-running-queries-data-programmatically"></a>以程式設計方式記錄長時間執行的查詢資料  
   

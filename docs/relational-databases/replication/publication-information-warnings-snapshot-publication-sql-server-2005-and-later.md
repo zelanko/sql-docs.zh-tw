@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32960223"
 ---
 # <a name="publication-information-warnings-snapshot-publication-sql-server-2005-and-later"></a>發行集資訊，警告 (快照式發行集，SQL Server 2005 和更新的版本)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

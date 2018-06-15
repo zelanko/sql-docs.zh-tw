@@ -25,6 +25,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32914013"
 ---
 # <a name="sqldescribecol-and-sqlcolattribute"></a>SQLDescribeCol 和 SQLColAttribute
 **SQLDescribeCol**和**SQLColAttribute**用來擷取結果集中繼資料。 這兩個函數之間的差異在於**SQLDescribeCol**一律會傳回相同的五項時的資訊 （資料行的名稱、 資料類型、 有效位數、 小數位數和 null 屬性）， **SQLColAttribute**傳回單一的應用程式要求的資訊。 不過， **SQLColAttribute**可以傳回更豐富的選取範圍的中繼資料，包括資料行的區分大小寫，顯示大小、 可更新性，以及搜尋能力。  

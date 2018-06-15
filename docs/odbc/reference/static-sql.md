@@ -26,6 +26,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32915175"
 ---
 # <a name="static-sql"></a>靜態 SQL
 所示的內嵌的 SQL[內嵌的 SQL 範例](../../odbc/reference/embedded-sql-example.md)稱為靜態 SQL。 在程式中的 SQL 陳述式都是靜態的因為呼叫靜態 SQL也就是說，不會變更每次執行程式。 上一節所述，這些陳述式會編譯編譯程式的其餘部分時。  

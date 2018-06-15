@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32915253"
 ---
 # <a name="step-4b-fetch-the-row-count"></a>步驟 4b： 擷取資料列計數
 下一個步驟是提取資料列計數，在下圖所示。  

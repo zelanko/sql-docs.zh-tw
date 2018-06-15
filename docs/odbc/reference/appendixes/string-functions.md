@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32914043"
 ---
 # <a name="string-functions"></a>字串函數
 下表列出字串操作函數。 應用程式就可以判斷驅動程式支援的字串函式呼叫**SQLGetInfo**與*資訊類型*SQL_STRING_FUNCTIONS。  

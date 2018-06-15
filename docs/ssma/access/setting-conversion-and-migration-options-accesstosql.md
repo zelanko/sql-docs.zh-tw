@@ -1,8 +1,6 @@
 ---
 title: 設定轉換和移轉選項 (AccessToSQL) |Microsoft 文件
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-access
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -25,11 +23,12 @@ caps.latest.revision: 20
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 61814a4d5f4b62c3f7262c7c249b165dd8a99571
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 7d727866a07be1f796eb81b9e26a755fd7991560
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34774174"
 ---
 # <a name="setting-conversion-and-migration-options-accesstosql"></a>設定轉換和移轉選項 (AccessToSQL)
 每個 SSMA 專案，您可以設定專案層級的選項。 這些選項會指定物件的轉換方式、 如何移轉資料和來源資料類型如何對應至目標資料類型。 轉換物件之前[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或 SQL Azure 移轉資料或[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或 SQL Azure，請確認您的組態選項都適用於專案。  
@@ -67,7 +66,7 @@ SSMA，在您可以設定所有專案的預設設定。 這些設定會儲存 SS
   
     -   若要指定自訂的模式，請選取**自訂**中**模式**方塊中，選取左窗格中的選項、 按一下 設定或右窗格中的值，然後選取或輸入新的設定或值。  
   
-3.  按一下  **確定** 儲存設定。  
+3.  按一下**確定**儲存設定。  
   
 您也可以自訂設定目前的專案。 這些設定會儲存到目前的專案檔。  
   
@@ -81,7 +80,7 @@ SSMA，在您可以設定所有專案的預設設定。 這些設定會儲存 SS
   
     -   若要指定自訂的模式，請選取**自訂**中**模式**方塊中，選取左窗格中的選項、 按一下 設定或右窗格中的值，然後選取或輸入新的設定或值。  
   
-3.  按一下  **確定** 儲存設定。  
+3.  按一下**確定**儲存設定。  
   
 ## <a name="next-steps"></a>後續步驟  
 移轉的下一個步驟取決於您專案的需求：  

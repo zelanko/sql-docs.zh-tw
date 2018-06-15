@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32909163"
 ---
 # <a name="sqlctchar"></a>SQL_C_TCHAR
 SQL_C_TCHAR 類型識別碼無法實際識別的資料類型。它是存在於標頭檔的 Unicode 轉換巨集。 取代為 SQL_C_CHAR 或 SQL_C_WCHAR 根據 UNICODE 設定 **#define**。 它可用於傳送的字元資料就會編譯為 ANSI 和 Unicode 應用程式的應用程式。

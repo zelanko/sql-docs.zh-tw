@@ -21,6 +21,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32952773"
 ---
 # <a name="sql-server-native-client"></a>SQL Server Native Client
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -28,7 +29,7 @@ ms.lasthandoff: 05/03/2018
 
 SNAC、 或 SQL Server Native Client，是已經用於交換使用適用於 SQL Server，請參閱 ODBC 和 OLE DB 驅動程式的詞彙。
 
-**注意：**不建議使用這個驅動程式，開發新項目。 新的 OLE DB 提供者會呼叫[Microsoft OLE DB 驅動程式的 SQL Server](../../connect/oledb/oledb-driver-for-sql-server.md) (MSOLEDBSQL) 這會更新為最新的伺服器功能從現在開始。
+**注意：** 不建議使用這個驅動程式，開發新項目。 新的 OLE DB 提供者會呼叫[Microsoft OLE DB 驅動程式的 SQL Server](../../connect/oledb/oledb-driver-for-sql-server.md) (MSOLEDBSQL) 這會更新為最新的伺服器功能從現在開始。
 
 
 **如需詳細資訊，並下載 SNAC 或 ODBC 驅動程式，請造訪[所說明的 SNAC 生命週期](https://blogs.msdn.microsoft.com/sqlreleaseservices/snac-lifecycle-explained/)。**
