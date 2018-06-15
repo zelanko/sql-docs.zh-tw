@@ -12,11 +12,12 @@ ms.suite: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: ''
-ms.openlocfilehash: 26868cfd136f3d06366a47ec7d52fa17e3c8fe39
-ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
+ms.openlocfilehash: ddbe5f25cf3153b3354425fd426798e7061bdf36
+ms.sourcegitcommit: 99e355b71ff2554782f6bc8e0da86e6d9e3e0bef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/19/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34799808"
 ---
 # <a name="always-on-availability-group-failover-on-linux"></a>在 Linux 上的 alwayson 可用性群組容錯移轉
 
@@ -71,7 +72,7 @@ ms.lasthandoff: 05/19/2018
 - **RHEL/Ubuntu 範例**
 
    ```bash
-   sudo pcs constraint --full
+   sudo pcs constraint list --full
    ```
 
 - **SLES 範例**
@@ -80,35 +81,17 @@ ms.lasthandoff: 05/19/2018
    crm config show
    ```
 
-移除位置限制式，以便日後 （包含自動容錯移轉） 的容錯移轉成功。 
-
-若要移除條件約束，請執行下列命令： 
-
-- **RHEL/Ubuntu 範例**
-
-   在此範例中`ag_cluster-master`是容錯移轉的資源名稱。 
-
-   ```bash
-   sudo pcs resource clear ag_cluster-master 
-   ```
-
-- **SLES 範例**
-
-   在此範例中`ag_cluster`是容錯移轉的資源名稱。 
-
-   ```bash
-   crm resource clear ag_cluster
-   ```
-
-或者，您可以執行下列命令以移除位置條件約束。  
+取得建立的手動容錯移轉由於條件約束的範例。 
+ `Enabled on: Node1 (score:INFINITY) (role: Master) (id:cli-prefer-ag_cluster-master)`
 
 - **RHEL/Ubuntu 範例**
 
-   在下列命令中，`cli-prefer-ag_cluster-master` 是需要移除的條件約束識別碼。 `sudo pcs constraint --full` 會傳回此識別碼。 
-
+   在下列命令中，`cli-prefer-ag_cluster-master` 是需要移除的條件約束識別碼。 `sudo pcs constraint list --full` 會傳回此識別碼。 
+   
    ```bash
    sudo pcs constraint remove cli-prefer-ag_cluster-master  
    ```
+   
 - **SLES 範例**
 
    下列命令`cli-prefer-ms-ag_cluster`是條件約束的識別碼。 `crm config show` 會傳回此識別碼。 

@@ -3,8 +3,6 @@ title: 使用 SSMA 專案 (SybaseToSQL) |Microsoft 文件
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-sybase
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: ssma
@@ -18,11 +16,12 @@ caps.latest.revision: 10
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 58b7ff093b11c844b295173b9be205443382edde
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 82691f362769b0bb5f929cf74678f125ce219c5a
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34779524"
 ---
 # <a name="working-with-ssma-projects-sybasetosql"></a>使用 SSMA 專案 (SybaseToSQL)
 若要將 Sybase Adaptive Server Enterprise (ASE) 資料庫移轉至[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或 SQL Azure，您先建立 SSMA 專案。 專案是包含您想要移轉至 ASE 資料庫的相關中繼資料的檔案[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或 SQL Azure，目標執行個體的相關中繼資料[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或 SQL Azure 移轉的物件和資料，將會接收[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或 SQL Azure 連接資訊，以及專案設定。  
@@ -104,7 +103,7 @@ SSMA 包含數個選項來轉換和載入資料庫物件時，移轉資料，並
   
         儲存中繼資料，可能需要幾分鐘的時間。 如果不想此時儲存中繼資料，請勿選取任何核取方塊。  
   
-    2.  按一下 [ **儲存** ] 按鈕。  
+    2.  按一下**儲存** 按鈕。  
   
         SSMA 會剖析 Sybase ASE 結構描述，並將中繼資料儲存到專案檔。  
   

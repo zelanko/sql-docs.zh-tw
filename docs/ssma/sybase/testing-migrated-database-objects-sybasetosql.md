@@ -3,8 +3,6 @@ title: 測試移轉的資料庫物件 (SybaseToSQL) |Microsoft 文件
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-sybase
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: ssma
@@ -18,11 +16,12 @@ caps.latest.revision: 7
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 02cc2deb2721759f938ba8e0244f46b4464b86fa
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 6f95ab1a14679d919a11fcc5a0c26554ac6120f2
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34779404"
 ---
 # <a name="testing-migrated-database-objects-sybasetosql"></a>測試移轉的資料庫物件 (SybaseToSQL)
 Microsoft SQL Server 移轉小幫手 Sybase 軟體測試人員 （SSMA 軟體測試人員） 的自動測試轉換資料庫物件和所做的 SSMA 資料移轉。 所有 SSMA 的移轉步驟都完成之後，請確認已轉換的物件運作的方式相同，而且已正確地傳送的所有資料使用 SSMA 軟體測試人員。  
@@ -53,7 +52,7 @@ SSMA 軟體測試人員執行測試 Sybase 和 SQL Server 中的與其對應項�
 > [!NOTE]  
 > 注意 ！ 絕對不要使用實際系統上的 SSMA 軟體測試人員。 測試人員執行期間會修改來源結構描述和資料。 同時，可能無法針對部分類型的測試的程式碼的完整還原為原始狀態。  
   
-## <a name="prerequisites"></a>필수 구성 요소  
+## <a name="prerequisites"></a>必要條件  
 如果您想要使用 SSMA Tester，安裝 SSMA Sybase 延伸模組組件**安裝軟體測試人員資料庫**選項開啟。  
   
 此外，請確認下列各項：  
@@ -64,7 +63,7 @@ SSMA 軟體測試人員執行測試 Sybase 和 SQL Server 中的與其對應項�
   
 請注意，目前版本的 SSMA Tester 不支援平行執行由不同使用者在相同的來源或目標伺服器上。  
   
-## <a name="getting-started"></a>快速入門  
+## <a name="getting-started"></a>使用者入門  
 [建立測試案例&#40;SybaseToSQL&#41;](../../ssma/sybase/creating-test-cases-sybasetosql.md)  
   
 ## <a name="see-also"></a>另請參閱  
