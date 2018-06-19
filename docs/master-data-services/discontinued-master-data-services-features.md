@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: mds
-ms.component: non-specific
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
@@ -16,11 +15,12 @@ caps.latest.revision: 18
 author: leolimsft
 ms.author: lle
 manager: erikre
-ms.openlocfilehash: 4cc32a6685148c834dbdcf74c48f8d99ac3b3620
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: c4ded7c0074eb7086e555882fecd0a95d4107225
+ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35330522"
 ---
 # <a name="discontinued-master-data-services-features"></a>已停止的 Master Data Services 功能
 

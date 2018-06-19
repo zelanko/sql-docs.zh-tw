@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: connection-manager
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -20,11 +18,12 @@ caps.latest.revision: 16
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 6fd155c0d1e196c31b340c6364ce66db4acefb49
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 5f69d97d9772fbb969da1fc6ccb52840fba98c9b
+ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35334612"
 ---
 # <a name="connect-to-a-dbase-or-other-dbf-file"></a>連接到 dBASE 或其他 DBF 檔案
   您可以經由使用 OLE DB 連接管理員，並選取 Microsoft OLE DB Provider for Jet 4.0，連接到 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 封裝中的 dBASE 或其他 .DBF 資料庫檔案。  

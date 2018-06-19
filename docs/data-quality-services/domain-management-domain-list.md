@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 11/08/2011
 ms.prod: sql
 ms.prod_service: data-quality-services
-ms.component: data-quality-services
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
@@ -18,11 +17,12 @@ caps.latest.revision: 13
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: a734a28998bd55a69a4be4010d08352a5131cef1
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 5697d440ccc3525b77c1593aac4defc7cb2157b7
+ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35310877"
 ---
 # <a name="domain-management-domain-list"></a>定義域管理：定義域清單
 
@@ -34,7 +34,7 @@ ms.lasthandoff: 05/03/2018
   
 ### <a name="domains-list"></a>定義域清單  
  **網域**  
- 此清單會顯示知識庫中的所有定義域。 您在右窗格中的索引標籤式頁面上執行的作業都將針對此清單中選取的定義域執行。 如需詳細資訊，請參閱  
+ 此清單會顯示知識庫中的所有定義域。 您在右窗格中的索引標籤式頁面上執行的作業都將針對此清單中選取的定義域執行。 如需相關資訊，請參閱  
   
  **建立複合定義域**  
  在知識庫中建立新的複合定義域。 此命令將會顯示 **[建立複合定義域]** 對話方塊。 若要使用此命令，請以滑鼠右鍵按一下定義域，或是按一下定義域清單上方的圖示。 如需相關資訊，請參閱 [建立複合定義域](../data-quality-services/create-a-composite-domain.md)。  

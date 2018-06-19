@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 05/18/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
-ms.component: install-windows
 ms.reviewer: ''
 ms.suite: pro-bi
 ms.technology: ''
@@ -19,11 +18,12 @@ caps.latest.revision: 15
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 2f5459ca526980c9a77fe79ecb482f0b2c1ce0bb
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 3bbfb174e1226cc9a514e3293ef313fa942d8b6d
+ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35321997"
 ---
 # <a name="about-url-reservations-and-registration--ssrs-configuration-manager"></a>關於 URL 保留項目和註冊 (SSRS 組態管理員)
   Reporting Services 應用程式的 URL 會當做 URL 保留項目定義在 HTTP.SYS 中。 URL 保留項目會定義 Web 應用程式之 URL 端點的語法。 當您在報表伺服器上設定應用程式時，會同時針對報表伺服器 Web 服務和報表管理員定義 URL 保留項目。 當您透過安裝程式或 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 組態工具設定 URL 時，將會自動為您建立 URL 保留項目：  
@@ -56,7 +56,7 @@ ms.lasthandoff: 05/03/2018
   
  *「URL 保留」* 是建立 Web 應用程式的 URL 端點，並將其儲存在 HTTP.SYS 中的一項程序。 HTTP.SYS 是所有定義於電腦上之 URL 保留項目的通用儲存機制，而且會定義一組通用規則來保證唯一的 URL 保留項目。  
   
- 當此服務啟動時，就會發生*「URL 註冊」* 。 於是會建立要求佇列，而且 HTTP.SYS 會開始將要求路由傳送到該佇列。 必須先註冊 URL 端點之後，導向該端點的要求才會加入此佇列中。 當報表伺服器服務啟動時，它將會註冊保留給所有啟用之應用程式使用的所有 URL。 這表示必須啟用此 Web 服務，才會發生註冊。 如果您在原則式管理之 Reporting Services 的介面區組態 Facet 中，將 [WebServiceAndHTTPAccessEnabled] 屬性設定為 [False]，當此服務啟動時，將不會註冊此 Web 服務的 URL。  
+ 當此服務啟動時，就會發生 *「URL 註冊」* 。 於是會建立要求佇列，而且 HTTP.SYS 會開始將要求路由傳送到該佇列。 必須先註冊 URL 端點之後，導向該端點的要求才會加入此佇列中。 當報表伺服器服務啟動時，它將會註冊保留給所有啟用之應用程式使用的所有 URL。 這表示必須啟用此 Web 服務，才會發生註冊。 如果您在原則式管理之 Reporting Services 的介面區組態 Facet 中，將 [WebServiceAndHTTPAccessEnabled] 屬性設定為 [False]，當此服務啟動時，將不會註冊此 Web 服務的 URL。  
   
  如果您停止此服務或是回收此 Web 服務或 [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] 應用程式定義域，URL 會取消註冊。 如果您在此服務執行時修改 URL 保留項目，報表伺服器將會立即回收應用程式定義域，好讓舊的 URL 可以取消註冊，並使用新的 URL。  
   

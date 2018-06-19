@@ -28,11 +28,12 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 2c86af3c5e32a92b3210327881cdc140f6fe7d20
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: db844700627b7eb1cbc9266a667d1dadad47d3e2
+ms.sourcegitcommit: b52b5d972b1a180e575dccfc4abce49af1a6b230
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35249561"
 ---
 # <a name="decimal-and-numeric-transact-sql"></a>decimal 和 numeric (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -50,7 +51,7 @@ p (有效位數)
 >  Informatica 只支援 16 個有效數字，無論指定的有效位數和小數位數為何。  
   
 *s* (小數位數)  
-小數點右側所能儲存的十進位數。 這個數字會從 *p* 中減去，以判斷小數點左邊的最大位數。 小數點右側所能儲存的最大十進位數。 小數位數必須是從 0 到 *p* 的值。 只有在指定了有效位數時，才能指定小數位數。 預設小數位數是 0；因此，0 <= *s* \<= *p*。 最大儲存體大小會隨著有效位數而不同。
+小數點右側所能儲存的十進位數。 這個數字會從 *p* 中減去，以判斷小數點左邊的最大位數。 小數位數必須是從 0 到 *p* 的值。 只有在指定了有效位數時，才能指定小數位數。 預設小數位數是 0；因此，0 <= *s* \<= *p*。 最大儲存體大小會隨著有效位數而不同。
   
 |有效位數|儲存體位元組|  
 |---|---|

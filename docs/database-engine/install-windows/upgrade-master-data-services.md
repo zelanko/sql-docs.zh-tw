@@ -5,8 +5,7 @@ ms.date: 07/21/2017
 ms.prod: sql
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 9c3543f3-3eb9-455d-a9bf-f17e9506ad21
@@ -14,12 +13,12 @@ caps.latest.revision: 31
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: d8f4c6cdf3c59d82f9fd61228de2410bdef23daa
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: 3295485f0c5b660da4a9eb5efaea65fa67fdf28c
+ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34771904"
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35312667"
 ---
 # <a name="upgrade-master-data-services"></a>升級 Master Data Services
 

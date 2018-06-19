@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 06/04/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: install-windows
 ms.reviewer: ''
 ms.suite: pro-bi
 ms.technology: ''
@@ -24,12 +23,12 @@ caps.latest.revision: 70
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 569a67511ecf28a4e9800182f823719d47e61120
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: 183606badd9953a7f6fdd8a9e1792f386802e9c2
+ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34771824"
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35322777"
 ---
 # <a name="upgrade-reports-ssrs"></a>升級報表 (SSRS)
 

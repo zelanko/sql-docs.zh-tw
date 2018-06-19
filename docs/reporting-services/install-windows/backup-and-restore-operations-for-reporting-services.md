@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 05/24/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: install-windows
 ms.reviewer: ''
 ms.suite: pro-bi
 ms.technology: ''
@@ -24,12 +23,12 @@ caps.latest.revision: 43
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 1e6c08911263e73e308392573dc90128351e275d
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.openlocfilehash: 6f814ac12f0a33ec56854547ca41a5044d8c5b5f
+ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34550059"
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35321957"
 ---
 # <a name="backup-and-restore-operations-for-reporting-services"></a>Reporting Services 的備份與還原作業
 
