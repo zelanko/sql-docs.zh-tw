@@ -3,12 +3,9 @@ title: 還原服務主要金鑰 | Microsoft 文件
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
-ms.prod_service: database-engine
-ms.component: security
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: security
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -16,15 +13,15 @@ helpviewer_keywords:
 - service master key [SQL Server], restoring
 ms.assetid: 14bdbbbe-d384-4692-b670-4243d2466fe1
 caps.latest.revision: 17
-author: edmacauley
-ms.author: edmaca
+author: aliceku
+ms.author: aliceku
 manager: craigg
-ms.openlocfilehash: 38c2da3d1ad701174d88bf040f9b3b9d0e2d8573
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 37eef9b8630dc5bc1c0c3dedf6c6d6c54d0ee4a6
+ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32966743"
+ms.lasthandoff: 06/18/2018
+ms.locfileid: "35697319"
 ---
 # <a name="restore-the-service-master-key"></a>還原服務主要金鑰
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

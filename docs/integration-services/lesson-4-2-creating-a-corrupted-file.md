@@ -4,13 +4,11 @@ ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: tutorial
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
-ms.topic: get-started-article
+ms.topic: tutorial
 applies_to:
 - SQL Server 2016
 ms.assetid: cd0b18dc-66c3-4d88-86ef-8e40cb660fae
@@ -18,11 +16,12 @@ caps.latest.revision: 23
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 4f2088f0c99586609b5a95c5cd5a30bbf6a75bcf
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 017b2b117d8ca43cc9772575343f4047786f63bd
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35406550"
 ---
 # <a name="lesson-4-2---creating-a-corrupted-file"></a>課程 4-2 - 建立損毀的檔案
 若要示範組態和轉換錯誤的處理，您必須建立處理時會造成元件失敗的範例一般檔案。  

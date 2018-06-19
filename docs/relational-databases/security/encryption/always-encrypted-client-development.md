@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 07/29/2016
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.component: security
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: security
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
@@ -19,12 +17,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: f34940fce129a4a2d4921751d7691af99c071f9b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: b6cd19272cc7c8c3f7129b3089c7ae575350b52e
+ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32965783"
+ms.lasthandoff: 06/18/2018
+ms.locfileid: "35698249"
 ---
 # <a name="always-encrypted-client-development"></a>永遠加密 (用戶端開發)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

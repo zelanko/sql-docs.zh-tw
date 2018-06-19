@@ -21,12 +21,12 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2017 || = sqlallproducts-allversions
-ms.openlocfilehash: 7c270729aa66c05f835cba507884e8d5cda102d0
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: dca31c161bbfa87eb87bb99222389c6a7d92109a
+ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33063557"
+ms.lasthandoff: 06/18/2018
+ms.locfileid: "35700999"
 ---
 # <a name="stringagg-transact-sql"></a>STRING_AGG (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
@@ -45,16 +45,15 @@ STRING_AGG ( expression, separator ) [ <order_clause> ]
 ```
 
 ## <a name="arguments"></a>引數 
+*expression*  
+這是任何類型的[運算式](../../t-sql/language-elements/expressions-transact-sql.md)。 在串連期間，運算式會轉換成 `NVARCHAR` 或 `VARCHAR` 類型。 非字串類型會轉換成 `NVARCHAR` 類型。
 
 *separator*  
 這是 `NVARCHAR` 或 `VARCHAR` 類型的[運算式](../../t-sql/language-elements/expressions-transact-sql.md)，用來作為串連字串的分隔符號。 這可以是常值或變數。 
 
-*expression*  
-這是任何類型的[運算式](../../t-sql/language-elements/expressions-transact-sql.md)。 在串連期間，運算式會轉換成 `NVARCHAR` 或 `VARCHAR` 類型。 非字串類型會轉換成 `NVARCHAR` 類型。
-
-
 <order_clause>   
 選擇性地使用 `WITHIN GROUP` 子句指定串連結果的順序：
+
 ```
 WITHIN GROUP ( ORDER BY <order_by_expression_list> [ ASC | DESC ] )
 ```   
@@ -77,7 +76,6 @@ WITHIN GROUP ( ORDER BY <order_by_expression_list> [ ASC | DESC ] )
 
 
 ## <a name="remarks"></a>Remarks  
- 
 `STRING_AGG` 是一種彙總函式，此函數可擷取資料列中的所有運算式，並將它們串連成單一字串。 運算式值會以隱含方式轉換為字串類型，然後再行串連。 隱含轉換成字串會遵循現有的資料類型轉換規則。 如需有關資料類型轉換的詳細資訊，請參閱 [CAST 和 CONVERT (Transact-SQL)](../../t-sql/functions/cast-and-convert-transact-sql.md)。 
 
 如果輸入運算式為 `VARCHAR` 類型，則分隔符號不得為 `NVARCHAR` 類型。 
@@ -85,7 +83,6 @@ WITHIN GROUP ( ORDER BY <order_by_expression_list> [ ASC | DESC ] )
 系統會忽略 Null 值，而且不會加入對應的分隔符號。 若要傳回 Null 值的預留位置，請使用 `ISNULL` 函數，如範例 B 中所示。
 
 `STRING_AGG` 可在任何相容性層級使用。
-
 
 ## <a name="examples"></a>範例 
 
@@ -105,7 +102,6 @@ FROM Person.Person;
 > [!NOTE]  
 >  如果使用 Management Studio 查詢編輯器，[以方格顯示結果] 選項將無法實作歸位字元。 請切換至 [以文字顯示結果] 以正確地查看結果集。   
 
-
 ### <a name="b-generate-list-of-names-separated-with-comma-without-null-values"></a>B. 產生以逗號分隔且不含 NULL 值的名稱清單   
 下列範例會將 Null 值取代為 'N/A'，並在單一結果資料格中傳回以逗號分隔的名稱。  
 ```sql
@@ -114,15 +110,12 @@ FROM Person.Person;
 ```
 
 [!INCLUDE[ssResult_md](../../includes/ssresult-md.md)]
- 
 
 |Csv | 
 |--- |
 |John,N/A,Mike,Peter,N/A,N/A,Alice,Bob |  
 
-
 ### <a name="c-generate-comma-separated-values"></a>C. 產生以逗號分隔的值 
-
 ```sql   
 SELECT 
 STRING_AGG(CONCAT(FirstName, ' ', LastName, ' (', ModifiedDate, ')'), CHAR(13)) 
@@ -137,10 +130,8 @@ FROM Person.Person;
 
 > [!NOTE]  
 >  如果使用 Management Studio 查詢編輯器，[以方格顯示結果] 選項將無法實作歸位字元。 請切換至 [以文字顯示結果] 以正確地查看結果集。   
- 
 
 ### <a name="d-return-news-articles-with-related-tags"></a>D. 傳回具有相關標籤的新聞文章 
-
 文件及其標籤會分成不同的資料表。 開發人員希望針對每篇文章傳回單一資料列，並提供所有相關的標籤。 使用下列查詢： 
 ```sql
 SELECT a.articleId, title, STRING_AGG (tag, ',') as tags 
@@ -159,7 +150,6 @@ GROUP BY a.articleId, title;
 |177 |Dogs continue to be more popular than cats |polls,animals| 
 
 ### <a name="e-generate-list-of-emails-per-towns"></a>E. 產生每個鄉鎮的電子郵件清單
-
 下列查詢會尋找員工的電子郵件地址，並依鄉鎮分組： 
 ```sql
 SELECT town, STRING_AGG (email, ';') AS emails 
@@ -177,7 +167,6 @@ GROUP BY town;
 在電子郵件資料行中傳回的電子郵件，可以直接用來傳送電子郵件給於部分特定鄉鎮工作的人員群組。 
 
 ### <a name="f-generate-a-sorted-list-of-emails-per-towns"></a>F. 產生每個鄉鎮的排序電子郵件清單   
-   
 與上一個範例類似，下列查詢會尋找員工的電子郵件地址，依鄉鎮分組，並以字母順序排序電子郵件：   
 ```sql
 SELECT town, 
@@ -192,7 +181,6 @@ GROUP BY town;
 |--- |--- |
 |Seattle |catherine0@adventure-works.com;kim2@adventure-works.com;syed0@adventure-works.com |
 |LA |hazem0@adventure-works.com;sam1@adventure-works.com |
-
 
 ## <a name="see-also"></a>另請參閱  
  [CONCAT &#40;Transact-SQL&#41;](../../t-sql/functions/concat-transact-sql.md)  

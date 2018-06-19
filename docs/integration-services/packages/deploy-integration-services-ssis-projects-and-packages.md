@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/04/2018
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: packages
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -24,12 +22,12 @@ caps.latest.revision: 21
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 9cdefcfcec0c273cfb662966895fc49b09c4460e
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: 5efe57352b1c3ddbbdc1a4db0eb64ba8a27af65f
+ms.sourcegitcommit: 9e83f308008c9e0da505a6064f652c638b8dfe76
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34772138"
+ms.lasthandoff: 06/13/2018
+ms.locfileid: "35513013"
 ---
 # <a name="deploy-integration-services-ssis-projects-and-packages"></a>部署 Integration Services (SSIS) 專案和封裝
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 支援兩種部署模型：專案部署模型和舊版封裝部署模型。 專案部署模型可讓您將專案部署至 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 伺服器。  
@@ -152,7 +150,7 @@ ms.locfileid: "34772138"
   
      -或-  
   
-     在命令提示字元中，從 **%ProgramFiles%\Microsoft SQL Server\110\DTS\Binn** 執行 **isdeploymentwizard.exe**。 64 位元的電腦上的 **%ProgramFiles(x86)%\Microsoft SQL Server\100\DTS\Binn** 也有提供 32 位元版本的工具。  
+     在命令提示字元中，從 **%ProgramFiles%\Microsoft SQL Server\130\DTS\Binn** 執行 **isdeploymentwizard.exe**。 64 位元的電腦上的 **%ProgramFiles(x86)%\Microsoft SQL Server\130\DTS\Binn**也有提供 32 位元版本的工具。  
   
 2.  在 [選取來源] 頁面上，按一下 [專案部署檔案] 以選取專案的部署檔案。  
   

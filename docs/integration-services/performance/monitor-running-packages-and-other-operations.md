@@ -1,14 +1,12 @@
 ---
 title: 監視執行中套件和其他作業 | Microsoft Docs
-ms.custom: ''
+ms.custom: supportability
 ms.date: 06/04/2018
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: performance
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -19,12 +17,12 @@ caps.latest.revision: 14
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: e2b5a991661e3aa53de611a0cf78e04b2a6d23b5
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: 5e3a7c929dd3335c5200efc3d4009ba05053f84a
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34772142"
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35403120"
 ---
 # <a name="monitor-running-packages-and-other-operations"></a>監視執行封裝和其他作業
   您可以使用下列其中一項或多項工具，監視 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 執行封裝、專案驗證及其他作業。 某些工具 (例如資料點選) 僅適用於部署到 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 伺服器的專案。  

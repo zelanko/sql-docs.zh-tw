@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: data-flow
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -18,11 +16,12 @@ caps.latest.revision: 11
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: e43d77d15fb417d201e07d389d00df0be7aad145
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 646c2baeb42bbfc122455bd9c5981f0399d781b8
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35407100"
 ---
 # <a name="sap-bw-source-editor-connection-manager-page"></a>SAP BW 來源編輯器 (連接管理員頁面)
   使用 **[SAP BW 來源編輯器]** 的 **[連接管理員]** 頁面可以選取 SAP BW 來源的 SAP BW 連接管理員。 在這個頁面上，您也可以選取執行模式以及從 SAP Netweaver BW 系統中擷取資料所用的參數。  

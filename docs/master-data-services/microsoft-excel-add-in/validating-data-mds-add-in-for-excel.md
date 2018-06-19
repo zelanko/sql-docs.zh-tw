@@ -1,14 +1,12 @@
 ---
 title: 驗證資料 (適用於 Excel 的 MDS 增益集) | Microsoft Docs
-ms.custom: ''
+ms.custom: microsoft-excel-add-in
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: mds
-ms.component: microsoft-excel-add-in
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 71eda98f-01a4-4fff-8246-be3133782523
@@ -16,11 +14,12 @@ caps.latest.revision: 9
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: ab8cf0017260edd45a7538191689cd47198f8a05
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 94fd34fa9224f7de468a6e89dd91c20903e96cb8
+ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35335782"
 ---
 # <a name="validating-data-mds-add-in-for-excel"></a>驗證資料 (適用於 Excel 的 MDS 增益集)
 

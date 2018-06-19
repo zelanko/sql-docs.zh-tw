@@ -3,12 +3,10 @@ title: 檢視 SQL Server Audit 記錄 | Microsoft 文件
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
-ms.prod_service: database-engine
-ms.component: security
+ms.prod_service: security
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: security
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -20,12 +18,12 @@ caps.latest.revision: 12
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.openlocfilehash: 049515ab4d056cab71238ddd94f20d38b80dec7f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: aed3791847966ce55d0f48b45e2682f6aeb04a70
+ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32966358"
+ms.lasthandoff: 06/18/2018
+ms.locfileid: "35698749"
 ---
 # <a name="view-a-sql-server-audit-log"></a>檢視 SQL Server Audit 記錄
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

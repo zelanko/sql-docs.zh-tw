@@ -13,19 +13,18 @@ ms.suite: sql
 ms.prod_service: sql-database, sql-data-warehouse
 ms.service: sql-database
 ms.custom: ''
-ms.component: security
 ms.tgt_pltfrm: ''
 ms.devlang: na
 ms.topic: article
 ms.date: 08/07/2017
 ms.author: ryzhang26
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: cee667b6f92c19c03cd670537d09dc5ccc7b03f3
-ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.openlocfilehash: 45dc9d4d9f4681fde06f75e8fa666c6584bcf863
+ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32619269"
+ms.lasthandoff: 06/18/2018
+ms.locfileid: "35696739"
 ---
 # <a name="rotate-the-transparent-data-encryption-tde-protector-using-powershell"></a>使用 PowerShell 輪替透明資料加密 (TDE) 保護裝置 
 [!INCLUDE[appliesto-xx-asdb-asdw-xxx-md](../../../includes/appliesto-xx-asdb-asdw-xxx-md.md)]

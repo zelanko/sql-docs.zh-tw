@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: connection-manager
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -18,11 +16,12 @@ caps.latest.revision: 17
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 194c86088c8770fc74f8c7543616d79021031f1c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: b9b12b83685f60d366f5236ab3fdc977b5c479b5
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35402340"
 ---
 # <a name="lookup-transformation-full-cache-mode---ole-db-connection-manager"></a>查閱轉換完整快取模式 - OLE DB 連線管理員
   您可以將查閱轉換設定為使用完整快取模式以及 OLE DB 連接管理員。 在完整快取模式中，參考資料集會在查閱轉換執行之前載入快取。  
@@ -74,7 +73,7 @@ ms.lasthandoff: 05/03/2018
     >  「查閱」轉換會自動對應具有相同名稱和相同資料類型的資料行。  
   
     > [!NOTE]  
-    >  資料行必須具有要對應的相符資料類型。 如需相關資訊，請參閱 [Integration Services Data Types](../../integration-services/data-flow/integration-services-data-types.md)。  
+    >  資料行必須具有要對應的相符資料類型。 如需詳細資訊，請參閱 [Integration Services 資料類型](../../integration-services/data-flow/integration-services-data-types.md)。  
   
 11. 執行下列工作，以便在輸出中包含查閱資料行：  
   

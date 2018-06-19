@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/20/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: change-data-capture
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: db5c718a-6e7f-48ec-82a3-9d5b131716e5
@@ -16,12 +14,12 @@ caps.latest.revision: 6
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 0a8bf44c84b25c1633914fb2516446e4136b7133
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 2925595facabb0e213d7d9d756d3d593643be270
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32873143"
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35401720"
 ---
 # <a name="how-to-work-with-cdc-services"></a>如何使用 CDC 服務
   這個程序描述如何使用 CDC 服務組態主控台來準備 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體，以便使用 Oracle CDC 服務及建立新的 CDC 服務。  

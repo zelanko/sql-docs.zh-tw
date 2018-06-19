@@ -4,27 +4,25 @@ ms.custom: ''
 ms.date: 02/29/2016
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.component: security
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: security
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Always Encrypted, cryptography system
 ms.assetid: ae8226ff-0853-4716-be7b-673ce77dd370
 caps.latest.revision: 11
-author: edmacauley
-ms.author: edmaca
+author: aliceku
+ms.author: aliceku
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: a9471302da92abb2b4fef27a6d321a8ec41b01af
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.openlocfilehash: 44c1b31a59c804bfea3f2515591a6f87f6c07e71
+ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34550699"
+ms.lasthandoff: 06/18/2018
+ms.locfileid: "35698149"
 ---
 # <a name="always-encrypted-cryptography"></a>永遠加密的密碼編譯
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

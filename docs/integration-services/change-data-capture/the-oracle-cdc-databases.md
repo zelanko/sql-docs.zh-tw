@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: change-data-capture
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: a96486e9-f79b-4b24-bfaf-56203dd0e435
@@ -16,11 +14,12 @@ caps.latest.revision: 17
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: bf36c117d636579d0f2048b67cd903eca224cc3d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 7095024d2b7636b600fe1e905b335b866b1f30ba
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35411540"
 ---
 # <a name="the-oracle-cdc-databases"></a>Oracle CDC 資料庫
   Oracle CDC 執行個體與目標 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體上同名的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫有關聯。 此資料庫稱為 Oracle CDC 資料庫 (或 CDC 資料庫)。  

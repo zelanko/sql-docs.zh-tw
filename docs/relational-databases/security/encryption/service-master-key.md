@@ -3,12 +3,9 @@ title: 服務主要金鑰 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
-ms.prod_service: database-engine
-ms.component: security
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: security
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -16,15 +13,15 @@ helpviewer_keywords:
 - service master key [SQL Server], about service master key
 ms.assetid: 85f2095d-2590-4f59-8a29-7e100edd02bb
 caps.latest.revision: 18
-author: edmacauley
-ms.author: edmaca
+author: aliceku
+ms.author: aliceku
 manager: craigg
-ms.openlocfilehash: 6209e169742252f4c3f84c7f0b9b014b4eabe9ba
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: c666dd9aa749dbb448ebd6a874ca0ce0c9037af4
+ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32966093"
+ms.lasthandoff: 06/18/2018
+ms.locfileid: "35701099"
 ---
 # <a name="service-master-key"></a>服務主要金鑰
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

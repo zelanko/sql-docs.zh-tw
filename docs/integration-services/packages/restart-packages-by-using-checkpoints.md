@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: packages
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -20,11 +18,12 @@ caps.latest.revision: 54
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: daae51399d0366cf11f751c7abc17601c8d5e2c3
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d2694e985acff1f3d520647f1db171c3b61471b2
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35409290"
 ---
 # <a name="restart-packages-by-using-checkpoints"></a>使用檢查點來重新啟動封裝
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 可以從失敗點重新啟動失敗的封裝，而無需重新執行整個封裝。 如果封裝設定為使用檢查點，則封裝執行的相關資訊會寫入檢查點檔案。 當失敗的封裝重新執行時，檢查點檔案會用於從失敗點重新啟動封裝。 如果封裝順利執行，則會刪除檢查點檔案，然後在下次封裝執行時重新建立檢查點檔案。  

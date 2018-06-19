@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: data-flow
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -18,11 +16,12 @@ caps.latest.revision: 50
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 2a159f57e4315cba3f9eb3ee2d27cfffb94fb6f5
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d97d2aeabc624d2d13ed4ed6e6ae515b314bbb1e
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35409200"
 ---
 # <a name="set-the-properties-of-a-data-flow-component"></a>設定資料流程元件的屬性
   若要設定資料流程元件的屬性 (包括來源、目的地和轉換)，請使用下列其中一個功能：  
@@ -253,7 +252,7 @@ ms.lasthandoff: 05/03/2018
 |屬性|資料類型|描述|  
 |--------------|---------------|-----------------|  
 |CodePage|Integer|指定字串資料的字碼頁不是 Unicode。|  
-|DataType|整數 (列舉)|資料行的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 資料類型。 如需相關資訊，請參閱 [Integration Services Data Types](../../integration-services/data-flow/integration-services-data-types.md)。|  
+|DataType|整數 (列舉)|資料行的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 資料類型。 如需詳細資訊，請參閱 [Integration Services 資料類型](../../integration-services/data-flow/integration-services-data-types.md)。|  
 |長度|Integer|資料行的長度 (以字元為測量單位)。|  
 |有效位數|Integer|數值資料行的有效位數。|  
 |小數位數|Integer|數值資料行的小數位數。|  

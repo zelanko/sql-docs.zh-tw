@@ -21,7 +21,7 @@
 <!-- ### [DMVs for Python](python/dmvs-for-python.md)-->
 <!-- ### [Resource Governance for Python](python/resource-governance-for-python.md)-->
 
-# 安裝 
+# Install 
 
 ## [資料庫內分析](install/sql-machine-learning-services-windows-install.md)
 ## [獨立伺服器](install/sql-machine-learning-standalone-windows-install.md)
@@ -69,13 +69,13 @@
 #### [分析本機計算內容中的資料](tutorials/deepdive-analyze-data-in-local-compute-context.md)
 #### [在 SQL Server 與 XDF 檔案之間移動資料](tutorials/deepdive-move-data-between-sql-server-and-xdf-file.md)
 #### [建立簡單的模擬](tutorials/deepdive-create-a-simple-simulation.md)
-### [預存程序和函式中內嵌的 R](tutorials/sqldev-in-database-r-for-sql-developers.md)
-#### [1-取得資料和指令碼](tutorials/sqldev-download-the-sample-data.md)
-#### [2-設定環境](r/sqldev-import-data-to-sql-server-using-powershell.md)
-#### [3-在預存程序中使用 R 的資料視覺化](tutorials/sqldev-explore-and-visualize-the-data.md)
-#### [4-建立 T-SQL 函式中使用 R 資料功能](tutorials/sqldev-create-data-features-using-t-sql.md)
-#### [5-訓練並儲存至 SQL](r/sqldev-train-and-save-a-model-using-t-sql.md)
-#### [6-預測結果](tutorials/sqldev-operationalize-the-model.md)
+### [在系統預存程序和函數中內嵌的 R](tutorials/sqldev-in-database-r-for-sql-developers.md)
+#### [1 - 取得資料和指令碼](tutorials/sqldev-download-the-sample-data.md)
+#### [2 - 設定環境](r/sqldev-import-data-to-sql-server-using-powershell.md)
+#### [3 - 在預存程序中使用 R 將資料視覺化](tutorials/sqldev-explore-and-visualize-the-data.md)
+#### [4 -在 T-SQL 函數中使用 R 來建立資料特徵](tutorials/sqldev-create-data-features-using-t-sql.md)
+#### [5 - 定型及儲存至 SQL](r/sqldev-train-and-save-a-model-using-t-sql.md)
+#### [6 - 預測結果](tutorials/sqldev-operationalize-the-model.md)
 
 ## [Python](tutorials/sql-server-python-tutorials.md)
 ### [Python：使用 T-SQL 執行 Python](tutorials/run-python-using-t-sql.md)
@@ -94,7 +94,7 @@
 
 # [操作說明](r/sql-server-machine-learning-tasks.md)
 
-## 封裝管理
+## 套件管理
 ### [預設封裝](r/installing-and-managing-r-packages.md)
 ### [取得封裝資訊](r/determine-which-packages-are-installed-on-sql-server.md)
 ### [安裝新的 Python 封裝](python/install-additional-python-packages-on-sql-server.md)
@@ -104,8 +104,8 @@
 #### [使用 RevoScaleR](r/use-revoscaler-to-manage-r-packages.md)
 ##### [啟用遠端 R 封裝管理](r/r-package-how-to-enable-or-disable.md)
 ##### [同步 R 套件](r/package-install-uninstall-and-sync.md)
-#### [建立 miniCRAN 儲存機制](r/create-a-local-package-repository-using-minicran.md)
-#### [使用 R 封裝的秘訣](r/packages-installed-in-user-libraries.md)
+#### [建立 miniCRAN 存放庫](r/create-a-local-package-repository-using-minicran.md)
+#### [使用 R 套件的祕訣](r/packages-installed-in-user-libraries.md)
 
 ## 資料探索及模型化
 ### [R 程式庫和資料類型](r/r-libraries-and-data-types.md)
@@ -134,7 +134,7 @@
 ### [修改 SQL Server Machine Learning 服務的使用者帳戶集區](r/modify-the-user-account-pool-for-sql-server-r-services.md)
 ### [新增 SQLRUserGroup 作為資料庫使用者](r/add-sqlrusergroup-to-database.md)
 ### [使用 Web 服務部署及取用模型](operationalization-with-mrsdeploy.md)
-### [管理與監控解決方案](r/managing-and-monitoring-r-solutions.md
+### [管理與監視解決方案](r/managing-and-monitoring-r-solutions.md)
 ### [Machine Learning 服務的資源管理](r/resource-governance-for-r-services.md)
 ### [建立機器學習的資源集區](r/how-to-create-a-resource-pool-for-r.md)
 ### [Machine Learning 服務的擴充事件](r/extended-events-for-sql-server-r-services.md)
@@ -159,7 +159,7 @@
 ## [設定虛擬機器](r/installing-sql-server-r-services-on-an-azure-virtual-machine.md)
 ## [疑難排解](machine-learning-troubleshooting-faq.md)
 ### [資料收集](data-collection-ml-troubleshooting-process.md)
-### [安裝和升級的錯誤](r/upgrade-and-installation-faq-sql-server-r-services.md)
+### [安裝和升級錯誤](r/upgrade-and-installation-faq-sql-server-r-services.md)
 ### [啟動控制板和外部指令碼執行錯誤](common-issues-external-script-execution.md)
 ### [R 指令碼錯誤](r-script-execution-errors.md)
 
@@ -170,4 +170,4 @@
 
 ## 論壇
 ### [[SQL Server]](https://social.msdn.microsoft.com/Forums/sqlserver/home?category=sqlserver)
-### [機器學習伺服器](https://social.msdn.microsoft.com/Forums/home?forum=MicrosoftR)
+### [Machine Learning Server](https://social.msdn.microsoft.com/Forums/home?forum=MicrosoftR)

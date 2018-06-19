@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/20/2017
 ms.prod: sql
 ms.prod_service: mds
-ms.component: non-specific
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
@@ -18,11 +17,12 @@ caps.latest.revision: 7
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: c26a495f590d7543401edceee6438bc7c84da384
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: cd7665da936022d4e9dc184b7b5ff5fbfa5b3665
+ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35335522"
 ---
 # <a name="create-database-mail-profile-and-account-dialog-box"></a>建立 Database Mail 設定檔和帳戶對話方塊
 
@@ -48,7 +48,7 @@ ms.lasthandoff: 05/03/2018
 |**電子郵件地址**|輸入帳戶之電子郵件地址的名稱。 這是寄出電子郵件的電子郵件地址，而且必須使用以下格式： *email_name*@*domain_name*。 範例電子郵件地址為 sales@contoso.com。|  
 |**顯示名稱**|選擇性設定。 輸入要在這個帳戶所送出的電子郵件訊息上顯示的名稱。 範例顯示名稱為 Contoso 業務小組。|  
 |**回覆電子郵件地址**|選擇性設定。 輸入將用來回覆這個帳戶所送出之電子郵件訊息的電子郵件地址。 範例回覆電子郵件地址為 admin@contoso.com。|  
-|**SMTP 伺服器**|輸入帳戶用來傳送電子郵件的 SMTP 伺服器名稱或 IP 位址。 範例 SMTP 伺服器格式為 **smtp.***<公司名稱>***.com**。如需相關說明，請洽詢您的郵件管理員。|  
+|**SMTP 伺服器**|輸入帳戶用來傳送電子郵件的 SMTP 伺服器名稱或 IP 位址。 範例 SMTP 伺服器格式為 **smtp.***<公司名稱>***.com**。 如需相關說明，請洽詢您的郵件管理員。|  
 |**通訊埠編號**|輸入此帳戶之 SMTP 伺服器的通訊埠編號。 預設 SMTP 通訊埠為 25。|  
 |**這個伺服器需要安全連接 (SSL)**|使用安全通訊端層 (SSL) 將通訊加密。|  
   

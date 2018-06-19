@@ -3,12 +3,10 @@ title: 密碼原則 | Microsoft Docs
 ms.custom: ''
 ms.date: 09/25/2015
 ms.prod: sql
-ms.prod_service: database-engine
-ms.component: security
+ms.prod_service: security
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: security
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -38,12 +36,12 @@ caps.latest.revision: 41
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.openlocfilehash: d18b86b39eb0cab53a4335d4f9102697deae1989
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 9239f8e213cdcaf97675946d7a5f56b9eb34b066
+ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32968873"
+ms.lasthandoff: 06/18/2018
+ms.locfileid: "35699639"
 ---
 # <a name="password-policy"></a>密碼原則
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

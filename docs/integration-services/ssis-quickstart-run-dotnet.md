@@ -1,23 +1,21 @@
 ---
 title: 使用 .NET 程式碼執行 SSIS 專案 (C#) | Microsoft Docs
 ms.date: 05/21/2018
-ms.topic: conceptual
+ms.topic: quickstart
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: quick-start
 ms.suite: sql
 ms.custom: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 78ab97bd62ffcc564fbc1ef707f4ad5d1f7b2033
-ms.sourcegitcommit: b5ab9f3a55800b0ccd7e16997f4cd6184b4995f9
+ms.openlocfilehash: 256e8b022406a589bc31d595e4cc3b3fb052570d
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34455242"
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35410480"
 ---
 # <a name="run-an-ssis-package-with-c-code-in-a-net-app"></a>在 .NET 應用程式中使用 C# 程式碼執行 SSIS 套件
 本快速入門示範如何撰寫 C# 程式碼，來連線到資料庫伺服器並執行 SSIS 套件。
@@ -30,9 +28,9 @@ ms.locfileid: "34455242"
 
 Azure SQL Database 伺服器會接聽連接埠 1433。 如果您要嘗試透過公司防火牆連線至 Azure SQL Database 伺服器，則必須在公司防火牆中開啟此連接埠，讓您成功連線。
 
-## <a name="for-azure-sql-database-get-the-connection-info"></a>若是 Azure SQL Database，請取得連線資訊
+## <a name="for-azure-sql-database-get-the-connection-info"></a>針對 Azure SQL Database，請取得連線資訊
 
-若要在 Azure SQL Database 執行套件，請取得連線至 SSIS 目錄資料庫 (SSISDB) 所需的連線資訊。 在下列程序中，您需要完整伺服器名稱和登入資訊。
+若要在 Azure SQL Database 上執行套件，請取得連線至 SSIS 目錄資料庫 (SSISDB) 所需的連線資訊。 在下列程序中，您需要完整伺服器名稱和登入資訊。
 
 1. 登入 [Azure 入口網站](https://portal.azure.com/)。
 2. 從左側功能表中選取 [SQL 資料庫]，然後選取 [SQL 資料庫] 頁面上的 SSISDB 資料庫。 

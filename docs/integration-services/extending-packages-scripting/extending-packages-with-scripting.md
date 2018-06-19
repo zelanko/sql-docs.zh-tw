@@ -7,7 +7,7 @@ ms.prod_service: integration-services
 ms.component: extending-packages-scripting
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: reference
 applies_to:
@@ -21,11 +21,12 @@ caps.latest.revision: 40
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 913c73dda06bda9a00e2eceebcdf74c70d88901f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 8465b0500ae313a66b9750080f0194fb95dce75b
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35407880"
 ---
 # <a name="extending-packages-with-scripting"></a>使用指令碼擴充封裝
   如果您發現 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 的內建元件不符合需求，可以透過撰寫自己的延伸模組，擴充 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 的功能。 您有兩個完全不同的選項可擴充封裝：其一是在指令碼工作與指令碼元件所提供的強大包裝函數中撰寫程式碼；其二則是可以從 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 物件模型提供的基底類別衍生，從頭建立自訂 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 延伸模組。  
@@ -47,7 +48,7 @@ ms.lasthandoff: 05/03/2018
  [以指令碼工作來擴充套件](../../integration-services/extending-packages-scripting/task/extending-the-package-with-the-script-task.md)  
  討論如何透過使用指令碼工作建立自訂工作。 通常會在每個封裝執行時呼叫工作，或是在封裝開啟每個資料來源時呼叫一次。  
   
- [使用指令碼元件擴充資料流程](../../integration-services/extending-packages-scripting/data-flow-script-component/extending-the-data-flow-with-the-script-component.md)  
+ [以指令碼元件來擴充資料流程](../../integration-services/extending-packages-scripting/data-flow-script-component/extending-the-data-flow-with-the-script-component.md)  
  討論如何透過使用指令碼元件建立自訂資料流程來源、轉換和目的地。 資料流程元件通常會為處理的每個資料列呼叫一次。  
   
 ## <a name="reference"></a>參考  

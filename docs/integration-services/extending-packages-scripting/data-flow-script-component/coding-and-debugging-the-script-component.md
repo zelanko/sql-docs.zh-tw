@@ -7,7 +7,7 @@ ms.prod_service: integration-services
 ms.component: extending-packages-scripting
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: reference
 applies_to:
@@ -28,11 +28,12 @@ caps.latest.revision: 66
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 0d45c217f4a7f6ed93f6688f931362339859d058
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: afda6527d2ef2f0903347bb92001166037ddf4f7
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35408020"
 ---
 # <a name="coding-and-debugging-the-script-component"></a>指令碼元件的程式碼撰寫和偵錯
   在 [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 設計師中，指令碼元件有中繼資料設計與程式碼設計兩種模式。 當您開啟 [指令碼轉換編輯器] 時，元件就會進入中繼資料設計模式，您可在其中設定中繼資料及元件屬性。 在您於中繼資料設計模式設定好指令碼元件的屬性和輸入及輸出後，就可以切換到程式碼設計模式編寫自訂的指令碼。 如需中繼資料設計模式和程式碼設計模式的詳細資訊，請參閱[在指令碼元件編輯器中設定指令碼元件](../../../integration-services/extending-packages-scripting/data-flow-script-component/configuring-the-script-component-in-the-script-component-editor.md)。  

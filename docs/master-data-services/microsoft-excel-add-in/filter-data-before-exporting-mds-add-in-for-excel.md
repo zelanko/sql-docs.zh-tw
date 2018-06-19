@@ -1,14 +1,12 @@
 ---
 title: 在匯出之前篩選資料 (適用於 Excel 的 MDS 增益集) | Microsoft Docs
-ms.custom: ''
+ms.custom: microsoft-excel-add-in
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: mds
-ms.component: microsoft-excel-add-in
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 9e30eae0-776b-4a09-aac3-0c0249d92ca5
@@ -16,11 +14,12 @@ caps.latest.revision: 10
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: c7bf4cc233d1583749eb31fce8bbb32d88004150
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 110771dc83b9c2e902738c2a9ce10bcfb118428b
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35405520"
 ---
 # <a name="filter-data-before-exporting-mds-add-in-for-excel"></a>在匯出之前篩選資料 (適用於 Excel 的 MDS 增益集)
 

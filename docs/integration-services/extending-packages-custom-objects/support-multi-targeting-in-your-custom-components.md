@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: extending-packages-custom-objects
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 applies_to:
@@ -18,11 +16,12 @@ caps.latest.revision: 6
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: c94edaab7910c8f7cc86e1eafd51eb189429477b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 6c861f692dee1cb2fa56e5cbc4128ce4c617e500
+ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35335962"
 ---
 # <a name="support-multi-targeting-in-your-custom-components"></a>支援自訂元件中的多目標
  您現在可以在 SQL Server Data Tools (SSDT) 中使用 SSIS 設計工具，來建立、維護和執行目標為 SQL Server 2016、SQL Server 2014 或 SQL Server 2012 的套件。 若要取得 SSDT for Visual Studio 2015，請參閱[下載最新的 SQL Server Data Tools](../../ssdt/download-sql-server-data-tools-ssdt.md)。 

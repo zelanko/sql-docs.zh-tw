@@ -12,15 +12,16 @@ ms.tgt_pltfrm: NA
 ms.custom: loading
 ms.date: 04/04/2018
 ms.author: douglasl
-ms.openlocfilehash: e627fdad03bf3159a0ed9c730381fde53c86ee9f
-ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.openlocfilehash: e5b34e72447d74875e67a0f1a71fb749a8c3d416
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35402530"
 ---
 # <a name="load-data-from-sql-server-to-azure-sql-data-warehouse-with-sql-server-integration-services-ssis"></a>使用 SQL Server Integration Services (SSIS) 將資料從 SQL Server 載入 Azure SQL 資料倉儲
 
-建立 SQL Server Integration Services (SSIS) 套件，以將資料從 SQL Server 載入 [Azure SQL 資料倉儲](/azure/sql-data-warehouse/index.md)。 您也可以選擇在資料通過 SSIS 資料流程時，對它們進行架構重組、轉換及清理。
+建立 SQL Server Integration Services (SSIS) 套件，以將資料從 SQL Server 載入 [Azure SQL 資料倉儲](/azure/sql-data-warehouse/index)。 您也可以選擇在資料通過 SSIS 資料流程時，對它們進行架構重組、轉換及清理。
 
 在本教學課程中，您將會：
 

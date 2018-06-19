@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: expressions
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -22,11 +20,12 @@ caps.latest.revision: 51
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 4a9987da3e1fc745a5ba823fe56e93f2185a30ee
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: c592f50ab6f58af87089c28fdfb48e65bf885a11
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35408360"
 ---
 # <a name="integration-services-ssis-expressions"></a>Integration Services (SSIS) 運算式
   運算式是產生單一資料值的符號組合 (識別碼、常值、函數和運算子)。 簡單的運算式可以是單一常數、變數或函數。 通常運算式都比較複雜，更常使用多個運算子和函數，並參考多個資料行和變數。 在 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]中，運算式可用於定義 CASE 陳述式的條件、建立和更新資料行中的值、指派值到變數、在執行階段更新或擴展屬性、定義優先順序條件約束中的條件約束和提供「For 迴圈」容器所使用的運算式。  
