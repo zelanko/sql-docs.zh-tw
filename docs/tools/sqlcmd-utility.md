@@ -33,11 +33,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 96ade458ea294f3f2cfe051449578acd97ff2fe5
-ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
-ms.translationtype: MTE
+ms.openlocfilehash: 4f9ee992655b127b1ad3b25a7cf89aa9da80b4fd
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/19/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34582130"
 ---
 # <a name="sqlcmd-utility"></a>sqlcmd 工用程式
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -185,7 +186,7 @@ sqlcmd
  宣告連接到伺服器時的應用程式工作負載類型。 目前唯一支援的值是 **ReadOnly**。 若未指定 **-K** ，sqlcmd 公用程式將無法支援在 AlwaysOn 可用性群組中連接至次要複本。 如需詳細資訊，請參閱[使用中次要：可讀取的次要複本 (AlwaysOn 可用性群組)](../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)  
   
  **-M** *multisubnet_failover*  
- 在連線到 SQL Server 可用性群組的可用性群組接聽程式或 SQL Server 容錯移轉叢集執行個體時，一律指定 **-M**。 **-M** 可提供對 (目前) 作用中伺服器更快速的偵測與連接。 如果未指定 **–M** ，則會關閉 **-M** 。 如需詳細資訊 [！包含[Hadr](../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md)，[建立和設定可用性群組&#40;SQL Server&#41;](../database-engine/availability-groups/windows/creation-and-configuration-of-availability-groups-sql-server.md)，[容錯移轉叢集和 Alwayson 可用性群組 (SQL Server)] (https://msdn.microsoft.comlibrary/ff929171.aspx，和 [使用中次要： 可讀取的次要複本 (Alwayson 可用性群組）] (https://msdn.microsoft.com/library/ff878253.aspx。  
+ 在連線到 SQL Server 可用性群組的可用性群組接聽程式或 SQL Server 容錯移轉叢集執行個體時，一律指定 **-M**。 **-M** 可提供對 (目前) 作用中伺服器更快速的偵測與連接。 如果未指定 **–M** ，則會關閉 **-M** 。 如需詳細資訊 [！包含[Hadr](../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md)，[建立和設定可用性群組&#40;SQL Server&#41;](../database-engine/availability-groups/windows/creation-and-configuration-of-availability-groups-sql-server.md)，[容錯移轉叢集和 Alwayson 可用性群組 (SQL Server)](https://msdn.microsoft.com/library/ff929171.aspx)，和[使用中次要： 可讀取的次要複本 (Alwayson 可用性群組）](https://msdn.microsoft.com/library/ff878253.aspx)。  
   
  **-N**  
  用戶端會用這個參數要求加密的連接。  
