@@ -1,14 +1,12 @@
 ---
 title: 套用商務規則 (適用於 Excel 的 MDS 增益集) | Microsoft Docs
-ms.custom: ''
+ms.custom: microsoft-excel-add-in
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: mds
-ms.component: microsoft-excel-add-in
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: cd106345-f561-4966-88d3-a69139b2bd78
@@ -16,11 +14,12 @@ caps.latest.revision: 7
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 556b7888ace2d511f9342b348447dd357e42810b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 3d567df9e64c994255fa51da2f47fb2ac451d695
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35404890"
 ---
 # <a name="apply-business-rules-mds-add-in-for-excel"></a>套用商務規則 (適用於 Excel 的 MDS 增益集)
 

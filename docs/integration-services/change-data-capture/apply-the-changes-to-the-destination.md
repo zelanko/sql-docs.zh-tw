@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: change-data-capture
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -18,11 +16,12 @@ caps.latest.revision: 24
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 9d8ec7ffc3d743a83a8a6a13ff51165cf05a15e4
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 8450e3aa348b3474e3ed5359c799675e8c34c3af
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35408570"
 ---
 # <a name="apply-the-changes-to-the-destination"></a>將變更套用到目的地
   在執行累加式變更資料載入之 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 封裝的資料流程中，第三個工作，也就是最後一個工作是將變更套用到您的目的地。 您將需要一個元件來套用插入、一個元件來套用更新，以及一個元件來套用刪除。  

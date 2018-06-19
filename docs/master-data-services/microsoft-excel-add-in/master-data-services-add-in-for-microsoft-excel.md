@@ -1,14 +1,12 @@
 ---
 title: 適用於 Microsoft Excel 的 Master Data Services 增益集 | Microsoft Docs
-ms.custom: ''
+ms.custom: microsoft-excel-add-in
 ms.date: 07/25/2017
 ms.prod: sql
 ms.prod_service: mds
-ms.component: microsoft-excel-add-in
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 33d9c8fc-9602-494d-b9ab-8f0f42785974
@@ -16,11 +14,12 @@ caps.latest.revision: 30
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 0538d64dfddfc3bf9db6bcb2eacf750a8126876a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 4caa29be4b948e2e756c057348c1aef7ec9feef6
+ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35334872"
 ---
 # <a name="master-data-services-add-in-for-microsoft-excel"></a>適用於 Microsoft Excel 的 Master Data Services 增益集
 

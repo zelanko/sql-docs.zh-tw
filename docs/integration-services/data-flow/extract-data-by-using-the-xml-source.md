@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: data-flow
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -20,11 +18,12 @@ caps.latest.revision: 21
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 98d2a8dea6122eb049ab76da7d17cf477f1aaea1
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 881cd45e4c3b6e3a8840a4e363add0d3790a4699
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35400220"
 ---
 # <a name="extract-data-by-using-the-xml-source"></a>使用 XML 來源來擷取資料
   若要加入和設定 XML 來源，封裝必須至少含有一個「資料流程」工作。  

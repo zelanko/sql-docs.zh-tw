@@ -4,10 +4,9 @@ ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: extending-packages-scripting
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: xml
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: reference
 applies_to:
@@ -22,11 +21,12 @@ caps.latest.revision: 39
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 194f4ded206617e7cb97e3cffb85f02019b5bb3d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: f88d4e3527330c57b3053a80b4885bbd919a6905
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35407200"
 ---
 # <a name="comparing-the-script-task-and-the-script-component"></a>比較指令碼工作和指令碼元件
   在 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 套件中，[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 設計師之 [控制流程] 視窗所提供的指令碼工作與 [資料流程] 視窗所提供的指令碼元件，其用途大不相同。 該工作是一般目的之控制流程工具，而該元件則是做為資料流程中的來源、轉換或是目的地。 不過，儘管其目的不同，指令碼工作與指令碼元件在所使用的程式碼編寫工具以及提供給開發人員的封裝中之物件方面，有一些相似之處。 了解其相似性與差異性可協助您更有效率地使用工作與元件。  
@@ -59,6 +59,6 @@ ms.lasthandoff: 05/03/2018
   
 ## <a name="see-also"></a>另請參閱  
  [以指令碼工作擴充套件](../../integration-services/extending-packages-scripting/task/extending-the-package-with-the-script-task.md)   
- [使用指令碼元件擴充資料流程](../../integration-services/extending-packages-scripting/data-flow-script-component/extending-the-data-flow-with-the-script-component.md)   
+ [以指令碼元件來擴充資料流程](../../integration-services/extending-packages-scripting/data-flow-script-component/extending-the-data-flow-with-the-script-component.md)   
   
   

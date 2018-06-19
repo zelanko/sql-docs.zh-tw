@@ -3,12 +3,10 @@ title: SQL Server Audit 動作群組和動作 | Microsoft Docs
 ms.custom: ''
 ms.date: 10/19/2016
 ms.prod: sql
-ms.prod_service: database-engine
-ms.component: security
+ms.prod_service: security
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: security
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -27,12 +25,12 @@ caps.latest.revision: 46
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.openlocfilehash: deef1b6db596acc7462fbd67eaae827fec759640
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 11b8b1a668c5e071dbec3291337b9ef9174010f8
+ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32973673"
+ms.lasthandoff: 06/18/2018
+ms.locfileid: "35698809"
 ---
 # <a name="sql-server-audit-action-groups-and-actions"></a>SQL Server Audit 動作群組和動作
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

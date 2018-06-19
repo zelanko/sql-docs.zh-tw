@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: data-flow
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -18,11 +16,12 @@ caps.latest.revision: 10
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 0e8f5dbf87ec79db858d550636c542173cb66883
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: ac66951374390b1d2b148295c1097dc5faee6a91
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35403830"
 ---
 # <a name="sap-bw-source-editor-advanced-page"></a>SAP BW 來源編輯器 (進階頁面)
   使用 [SAP BW 來源編輯器] 的 [進階] 頁面可以指定字串轉換規則和逾時期限，也可以重設特定要求識別碼的狀態。  

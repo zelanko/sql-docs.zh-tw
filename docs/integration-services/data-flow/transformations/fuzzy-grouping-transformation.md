@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: data-flow
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -34,11 +32,12 @@ caps.latest.revision: 58
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 94fd84ce9a46537fb90caa47e869f96167493bdc
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 0772e8230673a23412d880aef729d0a278c448bb
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35401620"
 ---
 # <a name="fuzzy-grouping-transformation"></a>模糊群組轉換
   「模糊群組」轉換會透過識別可能重複的資料列並選取用於標準化資料的標準資料列，執行資料清除工作。  
@@ -48,7 +47,7 @@ ms.lasthandoff: 05/03/2018
   
  「模糊群組」轉換需要連接到 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的執行個體，以建立轉換演算法執行其工作所需的暫存 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 資料表。 連接必須解析為具有在資料庫中建立資料表之權限的使用者。  
   
- 若要設定轉換，您必須選取要在識別重複項目時使用的輸入資料行，還必須為每個資料行選取相符類型 (模糊或完全)。 完全相符保證只會將該資料行中具有相同值的那些資料列分組。 完全比對可套用到任何 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 資料類型的資料行，但 DT_TEXT、DT_NTEXT 和 DT_IMAGE 除外。 模糊相符會將有近似相同值的資料列分組。 資料之近似比對的方法以使用者指定的相似度分數為基礎。 只有具有 DT_WSTR 和 DT_STR 資料類型的資料行可用於模糊比對。 如需詳細資訊，請參閱 [Integration Services Data Types](../../../integration-services/data-flow/integration-services-data-types.md)。  
+ 若要設定轉換，您必須選取要在識別重複項目時使用的輸入資料行，還必須為每個資料行選取相符類型 (模糊或完全)。 完全相符保證只會將該資料行中具有相同值的那些資料列分組。 完全比對可套用到任何 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 資料類型的資料行，但 DT_TEXT、DT_NTEXT 和 DT_IMAGE 除外。 模糊相符會將有近似相同值的資料列分組。 資料之近似比對的方法以使用者指定的相似度分數為基礎。 只有具有 DT_WSTR 和 DT_STR 資料類型的資料行可用於模糊比對。 如需詳細資訊，請參閱 [Integration Services 資料類型](../../../integration-services/data-flow/integration-services-data-types.md)。  
   
  轉換輸出包括所有輸入資料行、一或多個具有標準化資料的資料行，以及包含相似度分數的資料行。 分數是介於 0 到 1 之間的十進位值。 標準資料列的分數是 1。 模糊群組中其他資料列的分數指出資料列與標準資料列的相符程度。 分數愈接近於 1，資料列與標準資料列的相符程度就愈高。 如果模糊群組包括的資料列是與標準資料列完全重複的資料列，則這些資料列的分數也是 1。 轉換不會移除重複的資料列，而是建立一個將標準資料列與相似資料列產生關聯的索引鍵，將這些重複的資料列分組。  
   

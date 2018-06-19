@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/20/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: import-export-data
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 3d7c5a38-18d3-4cc9-a241-04422cb250d3
@@ -16,11 +14,12 @@ caps.latest.revision: 10
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 7a21c4b78fdd7632e6e4b39a38c8f22bd3c2b84a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: b07dc7322a8bc09ecd344aef76163b911c06c866
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35411291"
 ---
 # <a name="connect-to-a-mysql-data-source-sql-server-import-and-export-wizard"></a>連線至 MySQL 資料來源 (SQL Server 匯入和匯出精靈)
 本主題示範如何透過 [SQL Server 匯入和匯出精靈] 的 [選擇資料來源] 或 [選擇目的地] 頁面，連線至 **MySQL** 資料來源。 您可以使用數個資料提供者來連線至 MySQL。

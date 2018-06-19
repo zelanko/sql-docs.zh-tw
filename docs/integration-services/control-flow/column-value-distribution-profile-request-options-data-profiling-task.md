@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: control-flow
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -18,11 +16,12 @@ caps.latest.revision: 22
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d0fb3daaeaac3afc27abfacee4c9f596baaa01e9
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: f6460f20104e73a3a941a5fdda0145a5bd2124f1
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35405620"
 ---
 # <a name="column-value-distribution-profile-request-options-data-profiling-task"></a>資料行值散發設定檔要求選項 (資料分析工作)
   您可以使用 [設定檔要求] 頁面的 [要求屬性] 窗格，針對要求窗格中選取的 [資料行值散發設定檔要求] 設定選項。 資料行值散發設定檔會報告選取之資料行中的所有相異值，以及該資料表中每個值所代表之資料列的百分比。 此設定檔也可以報告代表超過資料表中指定之資料列百分比的值。 這個設定檔可協助您識別資料中的問題，例如某個資料行中相異值的數目不正確。 舉例來說，您分析了「美國州名」資料行並發現超過 50 個相異值。  

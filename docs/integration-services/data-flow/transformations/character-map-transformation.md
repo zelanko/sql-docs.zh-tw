@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: data-flow
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -24,11 +22,12 @@ caps.latest.revision: 42
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 688dd10c3aa1ad8b985aa3b140bc81115310cb5a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: a6d60fcbff7a6878b757997b2ddec8ae16066b92
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35403230"
 ---
 # <a name="character-map-transformation"></a>字元對應轉換
   「字元對應」轉換會套用字串函數，例如從小寫轉換成大寫、字元資料。 此轉換只能在字串資料類型的資料行資料上操作。  

@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.component: security
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: security
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -17,16 +15,16 @@ helpviewer_keywords:
 - EKM, described
 ms.assetid: 9bfaf500-2d1e-4c02-b041-b8761a9e695b
 caps.latest.revision: 46
-author: edmacauley
-ms.author: edmaca
+author: aliceku
+ms.author: aliceku
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: e00a78719febd9a452da5cd85220f2fb091ffa9b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 691eb3f13844fcb9229fab12f583c21cc5bdc8b8
+ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32973983"
+ms.lasthandoff: 06/18/2018
+ms.locfileid: "35695309"
 ---
 # <a name="extensible-key-management-ekm"></a>可延伸金鑰管理 (EKM)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

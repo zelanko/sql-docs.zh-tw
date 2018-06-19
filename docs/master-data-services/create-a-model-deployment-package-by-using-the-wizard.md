@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: mds
-ms.component: non-specific
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
@@ -20,11 +19,12 @@ caps.latest.revision: 8
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: ed423dbb14b49ca80117a3f89fa552d507e758a3
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 53ca9a8d7354e51b692f4e2fc03fb16745cdd941
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35409681"
 ---
 # <a name="create-a-model-deployment-package-by-using-the-wizard"></a>使用精靈建立模型部署封裝
 

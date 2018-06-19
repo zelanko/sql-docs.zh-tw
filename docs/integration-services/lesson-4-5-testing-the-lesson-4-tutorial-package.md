@@ -4,13 +4,11 @@ ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: tutorial
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
-ms.topic: get-started-article
+ms.topic: tutorial
 applies_to:
 - SQL Server 2016
 ms.assetid: 5f18df92-0248-4858-836b-c8b02f0e0439
@@ -18,11 +16,12 @@ caps.latest.revision: 23
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 7d123192e2115c909af8afaec1237360fcb9e7a7
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: a492b151590bf13ab95d6f34c718ded9d3b0b1a2
+ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35335472"
 ---
 # <a name="lesson-4-5---testing-the-lesson-4-tutorial-package"></a>第 4-5 課 - 測試課程 4 的教學課程封裝
 在執行階段，損毀的檔案 Currency_BAD.txt 將無法在 [貨幣索引鍵查閱] 轉換中產生相符者。 因為 [貨幣索引鍵查閱] 的錯誤輸出現在已設定為將失敗的資料列重新導向至新的失敗資料列目的地，所以該元件不會失敗，且封裝會順利執行。 所有失敗的錯誤資料列會寫入至 ErrorOutput.txt。  

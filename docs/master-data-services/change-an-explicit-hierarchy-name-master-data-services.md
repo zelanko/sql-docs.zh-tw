@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: mds
-ms.component: non-specific
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
@@ -18,11 +17,12 @@ caps.latest.revision: 6
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 4a58453e1cb1830e58b8efffb028d27047fce5a0
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 93e5e3c47dd1d15b9613df817b6ce6e063bf29ab
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35407860"
 ---
 # <a name="change-an-explicit-hierarchy-name-master-data-services"></a>變更明確階層名稱 (Master Data Services)
 

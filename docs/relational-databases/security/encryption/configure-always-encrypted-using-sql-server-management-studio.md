@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 11/30/2016
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.component: security
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: security
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -23,12 +21,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 7ace7cc5ca437a6ad67c5f7bf8cd138e470d0047
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 3b9a96caf26665ae2c51d64a55df14d3f91e3488
+ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32973803"
+ms.lasthandoff: 06/18/2018
+ms.locfileid: "35697929"
 ---
 # <a name="configure-always-encrypted-using-sql-server-management-studio"></a>使用 SQL Server Management Studio 設定永遠加密
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

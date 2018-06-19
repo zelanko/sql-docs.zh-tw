@@ -3,12 +3,10 @@ title: 將 SQL Server Audit 事件寫入安全性記錄檔 | Microsoft Docs
 ms.custom: ''
 ms.date: 09/21/2017
 ms.prod: sql
-ms.prod_service: database-engine
-ms.component: security
+ms.prod_service: security
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: security
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -21,12 +19,12 @@ caps.latest.revision: 19
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.openlocfilehash: 401da6b1db47b518aa0bbf2f715e6044cf891c59
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: ca28490bf729b47494eca6b5281f269ecab5247c
+ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32968213"
+ms.lasthandoff: 06/18/2018
+ms.locfileid: "35695069"
 ---
 # <a name="write-sql-server-audit-events-to-the-security-log"></a>將 SQL Server Audit 事件寫入安全性記錄檔  
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

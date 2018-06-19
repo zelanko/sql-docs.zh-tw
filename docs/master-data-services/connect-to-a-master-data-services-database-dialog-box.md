@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/20/2017
 ms.prod: sql
 ms.prod_service: mds
-ms.component: non-specific
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
@@ -18,11 +17,12 @@ caps.latest.revision: 10
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: b9694018882f65f3b530c1dfc4a880787b9c18a3
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 1fc8f606319a825855b404da45e85782ba29bc2e
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35401460"
 ---
 # <a name="connect-to-a-master-data-services-database-dialog-box"></a>連接到 Master Data Services 資料庫對話方塊
 

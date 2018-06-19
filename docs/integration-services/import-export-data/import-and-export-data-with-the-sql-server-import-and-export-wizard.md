@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 10/17/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: import-export-data
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -29,11 +27,12 @@ caps.latest.revision: 160
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d1478cd130bf6cea79d2a731bd214d13b402d393
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: c97ea19edfb53ddbf09316fa61f0ad6f97743cf6
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35402140"
 ---
 # <a name="import-and-export-data-with-the-sql-server-import-and-export-wizard"></a>使用 SQL Server 匯入和匯出精靈來匯入或匯出資料
 

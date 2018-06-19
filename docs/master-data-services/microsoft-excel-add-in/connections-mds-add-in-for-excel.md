@@ -1,14 +1,12 @@
 ---
 title: 連接 (適用於 Excel 的 MDS 增益集) | Microsoft Docs
-ms.custom: ''
+ms.custom: microsoft-excel-add-in
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: mds
-ms.component: microsoft-excel-add-in
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 2f2b2f9d-7744-460e-83cd-56d34ea70ff0
@@ -16,11 +14,12 @@ caps.latest.revision: 12
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: f9fa5384a5c6df4f8ae67e362d854403a75ddcff
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 4ad16ca27692fd165313b9adfe8f02cfe01254b6
+ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35333762"
 ---
 # <a name="connections-mds-add-in-for-excel"></a>連接 (適用於 Excel 的 MDS 增益集)
 

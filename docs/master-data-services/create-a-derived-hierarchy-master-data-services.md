@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: mds
-ms.component: non-specific
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
@@ -19,11 +18,12 @@ caps.latest.revision: 7
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 4cb1325d0e02997ea2f06f71513eb2e6859960c6
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 3adb69f210d01de248ebf3d13a959a9f421264ab
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35404490"
 ---
 # <a name="create-a-derived-hierarchy-master-data-services"></a>建立衍生階層 (Master Data Services)
 

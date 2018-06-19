@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
 ms.prod_service: mds
-ms.component: non-specific
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
@@ -23,11 +22,12 @@ caps.latest.revision: 9
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 8c240d0338f9f9063ff51c9bd969c54bd8c61b76
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 7fe91c605f019688bd250af578d9457aee4a96b0
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35406840"
 ---
 # <a name="database-logins-users-and-roles-master-data-services"></a>資料庫登入、使用者和角色 (Master Data Services)
 

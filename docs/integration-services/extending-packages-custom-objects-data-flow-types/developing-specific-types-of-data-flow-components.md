@@ -4,10 +4,9 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: extending-packages-custom-objects-data-flow-types
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: reference
 applies_to:
@@ -24,11 +23,12 @@ caps.latest.revision: 41
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 267972e722cd736e0bef90d8a439993f85808741
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d1cf79980bfd6c9e0b9c66038f1748e99db1c828
+ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35333042"
 ---
 # <a name="developing-specific-types-of-data-flow-components"></a>開發特定類型的資料流程元件
   本節涵蓋開發來源元件、具有同步輸出的轉換元件、具有非同步輸出的轉換元件以及目的地元件的細節。  

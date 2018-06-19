@@ -1,14 +1,12 @@
 ---
 title: 安全性概觀 (Integration Services) | Microsoft Docs
-ms.custom: ''
+ms.custom: security
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: security
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -26,11 +24,12 @@ caps.latest.revision: 73
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: ed6f966592e816b5fe5ca5c7c5bf15b7e610af93
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: e4c6a5c0334798aeae16b4e6dc6f43c7d3209b0f
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35410750"
 ---
 # <a name="security-overview-integration-services"></a>安全性概觀 (Integration Services)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 中的安全性包含幾層，提供了豐富且具彈性的安全性環境。 這些安全性階層包括使用數位簽章、封裝屬性、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫角色，以及作業系統權限。 這些安全性功能中，絕大部分都屬於識別與存取控制的類別。  

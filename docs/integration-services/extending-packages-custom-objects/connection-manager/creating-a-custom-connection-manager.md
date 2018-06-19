@@ -4,10 +4,9 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: extending-packages-custom-objects
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: reference
 applies_to:
@@ -19,11 +18,12 @@ caps.latest.revision: 25
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: e450637d05b303af6858cd7a36d4270e4faa4a1d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d5d6f0ab3611de91388d1efb28cc8f07cb668840
+ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35329382"
 ---
 # <a name="creating-a-custom-connection-manager"></a>建立自訂連接管理員
   建立自訂連接管理員的步驟，與建立 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 之其他自訂物件的步驟類似：  

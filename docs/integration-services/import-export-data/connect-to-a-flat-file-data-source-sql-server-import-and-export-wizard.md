@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 02/17/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: import-export-data
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: d7e7067b-f5a5-482f-b97e-9d82fe8e9f76
@@ -16,11 +14,12 @@ caps.latest.revision: 8
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 73e11ad9c4da2f1a87eb7c148b9a37688273c8ce
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: ffe74a41067f146ed94289f04f81fe5681933b87
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35404420"
 ---
 # <a name="connect-to-a-flat-file-data-source-sql-server-import-and-export-wizard"></a>連線至一般檔案資料來源 (SQL Server 匯入和匯出精靈)
 本主題示範如何透過 [SQL Server 匯入和匯出精靈] 的 [選擇資料來源] 或 [選擇目的地] 頁面，連線至**一般檔案** (文字檔) 資料來源。 針對一般檔案，精靈的這兩個頁面會呈現不同的選項集，因此，本主題會分別描述一般檔案來源和一般檔案目的地。
@@ -214,7 +213,7 @@ ms.lasthandoff: 05/03/2018
 |**InputColumnWidth**|指定儲存為位元組計數的值；針對 Unicode 檔案，此值是字元計數。 分隔資料行將忽略這個值。<br /><br /> **注意** ︰在物件模型中，這個屬性的名稱為 ColumnWidth。|
 |**DataPrecision**|指定數值資料的有效位數。 有效位數是指位數的數目。|
 |**DataScale**|指定數值資料的小數位數。 小數位數是指小數位數的數目。|
-|**DataType**|從可用的資料類型清單中選取。<br/>如需相關資訊，請參閱 [Integration Services Data Types](../../integration-services/data-flow/integration-services-data-types.md)。|
+|**DataType**|從可用的資料類型清單中選取。<br/>如需詳細資訊，請參閱 [Integration Services 資料類型](../../integration-services/data-flow/integration-services-data-types.md)。|
 |**OutputColumnWidth**|指定儲存為位元組計數的值；針對 Unicode 檔案，此值將對應至字元計數。 在資料流程工作中，這個值將用來替一般檔案來源設定輸出資料行寬度。 在物件模型中，這個屬性的名稱為 MaximumWidth。|  
 |**TextQualified**|指出文字資料是否會由文字限定詞字元 (例如引號字元) 括住。<br /><br /> True：一般檔案中的文字資料是限定的。 False：一般檔案中的文字資料是非限定的。|  
   

@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: mds
-ms.component: non-specific
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
@@ -16,11 +15,12 @@ caps.latest.revision: 13
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 8018658f61b944c1cced2b1c5f3e499da16744ed
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 455f8c4c409a5314fb24f4f41c75641c0128cfa7
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35404661"
 ---
 # <a name="changesets-master-data-services"></a>變更集 (Master Data Services)
 

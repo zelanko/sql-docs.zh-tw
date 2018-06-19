@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: data-flow
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -34,11 +32,12 @@ caps.latest.revision: 61
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: b3ad1facda17ffa7bdc57f2202f06414225d0669
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: a7e734e0492d677b166b862836f3c3785d8d74c3
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35401570"
 ---
 # <a name="term-extraction-transformation"></a>詞彙擷取轉換
   「詞彙擷取」轉換會從轉換輸入資料行的文字中擷取詞彙，然後將這些詞彙寫入轉換輸出資料行。 轉換只適用於英文字，它使用自己的英文字典和有關英文的語言資訊。  
@@ -201,7 +200,7 @@ ms.lasthandoff: 05/03/2018
  提供輸出資料行的名稱，其中將包含每個所擷取詞彙的分數。  
   
  **設定錯誤輸出**  
- 使用 [設定錯誤輸出](http://msdn.microsoft.com/library/5f8da390-fab5-44f8-b268-d8fa313ce4b9) 對話方塊，即可指定造成錯誤之資料列的錯誤處理。  
+ 使用 [[設定錯誤輸出]](http://msdn.microsoft.com/library/5f8da390-fab5-44f8-b268-d8fa313ce4b9) 對話方塊，即可指定造成錯誤之資料列的錯誤處理。  
   
 ## <a name="term-extraction-transformation-editor-exclusion-tab"></a>詞彙擷取轉換編輯器 (排除索引標籤)
   使用 **[詞彙擷取轉換編輯器]** 對話方塊的 **[排除]** 索引標籤，可設定排除資料表的連接，並指定包含排除詞彙的資料行。  
@@ -223,7 +222,7 @@ ms.lasthandoff: 05/03/2018
  選取包含排除詞彙之資料表或檢視中的資料行。  
   
  **設定錯誤輸出**  
- 使用 [設定錯誤輸出](http://msdn.microsoft.com/library/5f8da390-fab5-44f8-b268-d8fa313ce4b9) 對話方塊，即可指定造成錯誤之資料列的錯誤處理。  
+ 使用 [[設定錯誤輸出]](http://msdn.microsoft.com/library/5f8da390-fab5-44f8-b268-d8fa313ce4b9) 對話方塊，即可指定造成錯誤之資料列的錯誤處理。  
   
 ## <a name="term-extraction-transformation-editor-advanced-tab"></a>詞彙擷取轉換編輯器 (進階索引標籤)
   使用 [詞彙擷取轉換編輯器] 對話方塊的 [進階] 索引標籤，即可指定擷取的屬性，例如頻率、長度和是否擷取單字或片語。  

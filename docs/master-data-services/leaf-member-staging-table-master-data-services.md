@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 04/01/2016
 ms.prod: sql
 ms.prod_service: mds
-ms.component: non-specific
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
@@ -19,11 +18,12 @@ caps.latest.revision: 14
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 99434b57d96c317c857ab41217d044b1f18623e3
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 5bcb004e029680069959d6cbefc5481c6488dd74
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35410840"
 ---
 # <a name="leaf-member-staging-table-master-data-services"></a>分葉成員暫存資料表 (Master Data Services)
 

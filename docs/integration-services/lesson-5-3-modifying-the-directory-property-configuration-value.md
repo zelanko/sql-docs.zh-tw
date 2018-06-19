@@ -4,25 +4,23 @@ ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: tutorial
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
-ms.topic: get-started-article
+ms.topic: tutorial
 applies_to:
 - SQL Server 2016
 ms.assetid: ba2a091f-361c-4331-afe2-53b465164c36
-caps.latest.revision: 29
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 0489101f98bcb4815e0c42e61763c894e61aeb00
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 63233be39af3f6edfa46102d56446bd42cc185b1
+ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35328512"
 ---
 # <a name="lesson-5-3---modifying-the-directory-property-configuration-value"></a>課程 5-3 - 修改 Directory 屬性組態值
 在這項工作中，您會修改儲存在 SSISTutorial.dtsConfig 檔案中有關套件層級變數 `User::varFolderName`之 Value 屬性的組態設定。 這個變數會更新 Foreach 迴圈容器的 Directory 屬性。 修改過的值將指向您在上一項工作中建立的 **新範例資料** 資料夾。 在修改組態設定及執行套件之後，該變數將使用從組態檔擴展的值而不是原本設定在套件中的目錄值來更新 Directory 屬性。  

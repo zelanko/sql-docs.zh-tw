@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: non-specific
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -21,11 +19,12 @@ caps.latest.revision: 51
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: b19b2e2027c5ad8a2338832d5f057f631fdfc505
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 4e5394069da6b9d17243690267e89176ee625fa8
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35407090"
 ---
 # <a name="integration-services-transactions"></a>Integration Services 交易
   封裝使用交易將工作執行的資料庫動作繫結至原子單位，這樣可以保持資料的完整性。 所有 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 容器類型 (封裝、For 迴圈、Foreach 迴圈和時序容器，以及封裝每個工作的工作主機) 皆可設定成使用交易。 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 提供三個設定交易的選項，分別是 **NotSupported**、 **Supported**及 **Required**。  

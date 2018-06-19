@@ -3,27 +3,24 @@ title: 備份服務主要金鑰 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
-ms.prod_service: database-engine
-ms.component: security
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: security
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - service master key [SQL Server], exporting
 ms.assetid: f60b917c-6408-48be-b911-f93b05796904
 caps.latest.revision: 18
-author: edmacauley
-ms.author: edmaca
+author: aliceku
+ms.author: aliceku
 manager: craigg
-ms.openlocfilehash: fe8ce2eebf4f2d0bdbbea3b859bac23e1018f97e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: b70b415b8bdb760e40bb7390d3df645b43a1e096
+ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32966483"
+ms.lasthandoff: 06/18/2018
+ms.locfileid: "35697199"
 ---
 # <a name="back-up-the-service-master-key"></a>備份服務主要金鑰
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

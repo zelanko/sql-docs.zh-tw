@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 04/02/2018
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: import-export-data
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -18,11 +16,12 @@ caps.latest.revision: 96
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 8a5ebd644020b4c2bb6e07aff74e11e4e2474338
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 3a9f320bd5f88b91b3807b440db82ab2f6a76e3e
+ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35330802"
 ---
 # <a name="select-source-tables-and-views-sql-server-import-and-export-wizard"></a>選取來源資料表和檢視 (SQL Server 匯入和匯出精靈)
   指定要複製整個資料表或提供查詢之後，[ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 匯入和匯出精靈] 會顯示 [選取來源資料表和檢視表] 。 在此頁面上，您可以選取想要複製的現有資料表和檢視。 接著，將來源資料表對應到新的或現有目的資料表。 您也可以選擇檢閱個別資料行的對應，以及預覽範例資料。
