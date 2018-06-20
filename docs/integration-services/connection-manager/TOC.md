@@ -1,8 +1,5 @@
 # [概觀](integration-services-ssis-connections.md)  
 # [資料來源](data-sources.md)  
-# [連線至 Access 資料庫](connect-to-an-access-database.md)  
-# [連線至 dBASE 或其他 DBF 檔案](connect-to-a-dbase-or-other-dbf-file.md)  
-# [連線至 Excel 活頁簿](connect-to-an-excel-workbook.md)  
 # [ADO 連線管理員](ado-connection-manager.md)  
 # [ADO.NET 連線管理員](ado-net-connection-manager.md)  
 # [Analysis Services 連線管理員](analysis-services-connection-manager.md)  
