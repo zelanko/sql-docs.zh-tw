@@ -19,11 +19,11 @@ ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/17/2018
 ---
-# <a name="manage-servers-and-databases-with-insight-widgets-in-includename-sosincludesname-sos-shortmd"></a>サーバーとデータベースを [!INCLUDE[name-sos](../includes/name-sos-short.md)] の Insight ウィジェットで管理する
+# <a name="manage-servers-and-databases-with-insight-widgets-in-includename-sosincludesname-sos-shortmd"></a>在 [!INCLUDE[name-sos](../includes/name-sos-short.md)] 使用 insight 小工具管理資料庫與伺服器
 
-Insight ウィジェットはサーバーとデータベースの監視に使用する TRANSACT-SQL (T-SQL) クエリを実行し、洞察に富んだ視覚エフェクトに変えます。 
+Insight 小工具採用您所用的 Transact-SQL (T-SQL) 查詢，以監控伺服器與資料庫並將它們轉換為可深入解析的視覺圖表。 
 
-Insights は、サーバーとデータベースの監視ダッシュ ボードに追加するカスタマイズ可能なチャートおよびグラフです。 サーバーおよびデータベースの概要の洞察を表示し、詳細情報を掘り下げ、独自に定義した管理操作を起動します。 
+Insights 是可以新增至伺服器與資料庫監控儀表板的客製圖表與圖形。一目了然地檢視您的伺服器與資料庫，進而深入了解更多細節，並啟動您自定義的管理操作。
 
 您可以建立類似下列範例的絕佳伺服器和資料庫管理儀表板：
 
