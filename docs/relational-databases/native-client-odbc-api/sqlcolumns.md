@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: native-client-odbc-api
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: ''
@@ -19,12 +18,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: e735efbd7aa155d8f4618afffc203cf4558fe9ee
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: ca8fab6d42ab562caa4fd0da380094ed42409d0d
+ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32947323"
+ms.lasthandoff: 06/18/2018
+ms.locfileid: "35695679"
 ---
 # <a name="sqlcolumns"></a>SQLColumns
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -43,7 +42,7 @@ ms.locfileid: "32947323"
   
  下表列出結果集傳回的資料行：  
   
-|資料行名稱|Description|  
+|資料行名稱|描述|  
 |-----------------|-----------------|  
 |DATA_TYPE|傳回 SQL_VARCHAR、 SQL_VARBINARY 或 SQL_WVARCHAR 如**varchar （max)** 資料型別。|  
 |TYPE_NAME|傳回"varchar"、"varbinary"或"nvarchar" **varchar （max)**， **varbinary （max)**，和**nvarchar （max)** 資料型別。|  
@@ -72,23 +71,23 @@ ms.locfileid: "32947323"
 |SS_IS_COMPUTED|Smallint|對於 TABLE_TYPE 中的資料行，如果資料行為計算資料行，這是 SQL_TRUE，否則為 SQL_FALSE。|  
 |SS_IS_IDENTITY|Smallint|如果資料行是識別資料行，則為 SQL_TRUE，否則為 SQL_FALSE。|  
   
- 如需有關資料表值參數的詳細資訊，請參閱[資料表值參數 & #40; ODBC & #41;](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md)。  
+ 如需有關資料表值參數的詳細資訊，請參閱[資料表值參數&#40;ODBC&#41;](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md)。  
   
 ## <a name="sqlcolumns-support-for-enhanced-date-and-time-features"></a>增強型日期和時間功能的 SQLColumns 支援  
  傳回日期/時間類型之值的相關資訊，請參閱[目錄中繼資料](../../relational-databases/native-client-odbc-date-time/metadata-catalog.md)。  
   
- 如需詳細資訊，請參閱[日期和時間增強功能 & #40; ODBC & #41;](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)。  
+ 如需詳細資訊，請參閱[日期和時間增強功能&#40;ODBC&#41;](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)。  
   
 ## <a name="sqlcolumns-support-for-large-clr-udts"></a>大型 CLR UDT 的 SQLColumns 支援  
- **SQLColumns**支援大型 CLR 使用者定義型別 (Udt)。 如需詳細資訊，請參閱[Large CLR User-Defined 類型 & #40; ODBC & #41;](../../relational-databases/native-client/odbc/large-clr-user-defined-types-odbc.md)。  
+ **SQLColumns**支援大型 CLR 使用者定義型別 (Udt)。 如需詳細資訊，請參閱[Large CLR User-Defined 類型&#40;ODBC&#41;](../../relational-databases/native-client/odbc/large-clr-user-defined-types-odbc.md)。  
   
 ## <a name="sqlcolumns-support-for-sparse-columns"></a>疏鬆資料行的 SQLColumns 支援  
  兩個[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]特定資料行已加入到結果集的 SQLColumns:  
   
-|資料行名稱|資料類型|Description|  
+|資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
-|SS_IS_SPARSE|**smallint**|如果資料行為疏鬆資料行，這是 SQL_TRUE，否則為 SQL_FALSE。|  
-|SS_IS_COLUMN_SET|**smallint**|如果資料行是**column_set**資料行，這是 SQL_TRUE，否則 SQL_FALSE。|  
+|SS_IS_SPARSE|**Smallint**|如果資料行為疏鬆資料行，這是 SQL_TRUE，否則為 SQL_FALSE。|  
+|SS_IS_COLUMN_SET|**Smallint**|如果資料行是**column_set**資料行，這是 SQL_TRUE，否則 SQL_FALSE。|  
   
  依照 ODBC 規格，SS_IS_SPARSE 和 SS_IS_COLUMN_SET 會出現所有的驅動程式專用資料行已加入至之前[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]版本早於[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]，以及 ODBC 本身所託管的所有資料行之後。  
   

@@ -2,7 +2,7 @@
 title: 當使用 SQL Server 的 OLE DB 驅動程式 |Microsoft 文件
 description: 當使用 SQL Server 的 OLE DB 驅動程式
 ms.custom: ''
-ms.date: 03/26/2018
+ms.date: 06/14/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.component: oledb
@@ -18,15 +18,15 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: b3fa8f071055f33bb256d3b28ed4aaa807f093a8
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 1aaca043dc057f6f7cc07322e6bf75822a8ebe8b
+ms.sourcegitcommit: 03ba89937daeab08aa410eb03a52f1e0d212b44f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32856233"
+ms.lasthandoff: 06/16/2018
+ms.locfileid: "35690101"
 ---
 # <a name="when-to-use-ole-db-driver-for-sql-server"></a>當使用 SQL Server 的 OLE DB 驅動程式
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../includes/driver_oledb_download.md)]
 
