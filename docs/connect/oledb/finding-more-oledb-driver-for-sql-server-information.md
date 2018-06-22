@@ -2,7 +2,7 @@
 title: 尋找更多的 OLE DB 驅動程式的 SQL Server 資訊 |Microsoft 文件
 description: 何處可以找到多個 OLE DB 驅動程式的 SQL Server 資訊
 ms.custom: ''
-ms.date: 03/26/2018
+ms.date: 06/14/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.component: oledb
@@ -17,15 +17,15 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 088c6853cb190e9e19cc8edc032e5fd2baa787dc
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: dca26d61ca49a0e7e3baa0e4f8304311d90668a6
+ms.sourcegitcommit: 03ba89937daeab08aa410eb03a52f1e0d212b44f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32853573"
+ms.lasthandoff: 06/16/2018
+ms.locfileid: "35689781"
 ---
 # <a name="finding-more-ole-db-driver-for-sql-server-information"></a>如需 SQL Server 資訊尋找更多的 OLE DB 驅動程式
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../includes/driver_oledb_download.md)]
 

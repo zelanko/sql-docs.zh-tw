@@ -2,9 +2,10 @@
 title: 'Issabort:: Abort (OLE DB) |Microsoft 文件'
 description: ISSAbort::Abort (OLE DB)
 ms.custom: ''
-ms.date: 03/26/2018
+ms.date: 06/14/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.component: oledb|ole-db-interfaces
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
@@ -19,15 +20,17 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 0c7d30e8132d245958e7ef6f7f09e642a2da960c
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
+ms.openlocfilehash: 39f56dd6c058c82783c8cff786e210884cd3bf0c
+ms.sourcegitcommit: 03ba89937daeab08aa410eb03a52f1e0d212b44f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35305377"
+ms.lasthandoff: 06/16/2018
+ms.locfileid: "35690261"
 ---
 # <a name="issabortabort-ole-db"></a>ISSAbort::Abort (OLE DB)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+
+[!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
   取消目前的資料列集加上與目前命令相關聯之任何批次處理的命令。  
   
@@ -43,9 +46,9 @@ HRESULT Abort(void);
 ```  
   
 ## <a name="remarks"></a>備註  
- 如果要中止的命令位於預存程序，將會終止執行預存程序 （以及任何程序，必須呼叫該程序），以及包含預存程序呼叫的命令批次。 如果伺服器正在傳送結果集，用戶端，將會停止傳送。 如果用戶端不想使用結果集，則呼叫**issabort:: Abort**釋放資料列集將會加速資料列集的版本中，但如果沒有開啟的交易，而且 XACT_ABORT 為 ON，將會回復交易之前時**issabort:: Abort**稱為  
+ 如果要中止的命令位於預存程序，將會終止執行預存程序 （以及任何程序，必須呼叫該程序），以及包含預存程序呼叫的命令批次。 如果伺服器正在傳送結果集，用戶端，將會停止傳送。 如果用戶端不想使用結果集，則呼叫**issabort:: Abort**之前釋放資料列集將會加速資料列集的版本中，但如果沒有開啟的交易，而且 XACT_ABORT 為 ON，將會回復交易時**Issabort:: Abort**稱為  
   
- 之後**issabort:: Abort**傳回 S_OK 時，相關聯**IMultipleResults**介面進入無法使用的狀態並將 db_e_canceled 傳回到所有方法呼叫 (除了所定義的方法**IUnknown**介面) 直到釋放它為止。 如果**IRowset**有取自**IMultipleResults**之前呼叫**中止**，它也會進入無法使用的狀態並將 db_e_canceled 傳回到所有方法呼叫 (除了所定義的方法**IUnknown**介面和**irowset:: Releaserows**) 直到成功呼叫之後釋放它為止**issabort:: Abort**。  
+ 之後**issabort:: Abort**傳回 S_OK 時，相關聯**IMultipleResults**介面進入無法使用的狀態並將 db_e_canceled 傳回到所有方法呼叫 (除了所定義的方法**IUnknown**介面) 直到釋放它為止。 如果**IRowset**有取自**IMultipleResults**之前呼叫**中止**、 進入無法使用的狀態，並傳回 DB_E_CANCELED 所有方法呼叫 （除了所定義的方法**IUnknown**介面和**irowset:: Releaserows**) 直到成功呼叫之後釋放它為止**issabort:: Abort**.  
   
 > [!NOTE]  
 >  開頭為[!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]，如果伺服器 XACT_ABORT 狀態上，執行**issabort:: Abort**會終止並回復任何目前隱含或明確的交易時連接到[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]。 舊版 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 將不會中止目前的交易。  
