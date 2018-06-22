@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: native-client-odbc-api
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: ''
@@ -19,12 +18,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 38a0226ddced763a74c697c31cc6c0f381783d20
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: a78384ed53aa08c509daa0c02e329082ca5debe1
+ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32944323"
+ms.lasthandoff: 06/18/2018
+ms.locfileid: "35697579"
 ---
 # <a name="sqlgetstmtattr"></a>SQLGetStmtAttr
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -40,7 +39,7 @@ ms.locfileid: "32944323"
 ## <a name="sqlsoptssnocountstatus"></a>SQL_SOPT_SS_NOCOUNT_STATUS  
  SQL_SOPT_SS_NOCOUNT_STATUS 屬性指出 NOCOUNT 目前的設定選項，可控制是否[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]報告受到陳述式的資料列數時[SQLRowCount](../../relational-databases/native-client-odbc-api/sqlrowcount.md)呼叫。 *ValuePtr*值屬於類型是 SQLLEN。  
   
-|Value|Description|  
+|ReplTest1|描述|  
 |-----------|-----------------|  
 |SQL_NC_OFF|NOCOUNT 為 OFF。 SQLRowCount 傳回受影響的資料列數目。|  
 |SQL_NC_ON|NOCOUNT 為 ON。 SQLRowCount 不傳回受到影響的資料列數和傳回的值為 0。|  
@@ -55,7 +54,7 @@ ms.locfileid: "32944323"
 ## <a name="sqlgetstmtattr-and-table-valued-parameters"></a>SQLGetStmtAttr 和資料表值參數  
  SQLGetStmtAttr 可以呼叫使用資料表值參數時，取得應用程式參數描述項 (APD) 中的 SQL_SOPT_SS_PARAM_FOCUS 值。 如需有關 SQL_SOPT_SS_PARAM_FOCUS 的詳細資訊，請參閱[SQLSetStmtAttr](../../relational-databases/native-client-odbc-api/sqlsetstmtattr.md)。  
   
- 如需有關資料表值參數的詳細資訊，請參閱[資料表值參數 & #40; ODBC & #41;](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md)。  
+ 如需有關資料表值參數的詳細資訊，請參閱[資料表值參數&#40;ODBC&#41;](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md)。  
   
 ## <a name="see-also"></a>另請參閱  
  [SQLSetStmtAttr 函數](http://go.microsoft.com/fwlink/?LinkId=59370)   

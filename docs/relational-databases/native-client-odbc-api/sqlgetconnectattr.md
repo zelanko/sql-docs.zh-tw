@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: native-client-odbc-api
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: ''
@@ -19,12 +18,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 36e0a367dfbdacb16dbd37ddbae68789f82b8781
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: a4d71d73a5abe3b36764df7e973add335a42978a
+ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32948563"
+ms.lasthandoff: 06/18/2018
+ms.locfileid: "35698979"
 ---
 # <a name="sqlgetconnectattr"></a>SQLGetConnectAttr
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -40,7 +39,7 @@ ms.locfileid: "32948563"
 > [!NOTE]  
 >  標準 ODBC 連接屬性 SQL_ATTR_CONNECTION_DEAD 會傳回最新的連接狀態。 這可能不是目前的連接狀態。  
   
-|Value|Description|  
+|ReplTest1|描述|  
 |-----------|-----------------|  
 |SQL_CD_TRUE|已經遺失與伺服器的連接。|  
 |SQL_CD_FALSE|連接已開啟，而且可用來處理陳述式。|  
@@ -56,7 +55,7 @@ ms.locfileid: "32948563"
   
  如需詳細資訊，請參閱[存取擴充事件記錄檔中的診斷資訊](../../relational-databases/native-client/features/accessing-diagnostic-information-in-the-extended-events-log.md)。  
   
-|Value|Description|  
+|ReplTest1|描述|  
 |-----------|-----------------|  
 |SQL_ERROR|連接失敗。|  
 |SQL_SUCCESS|此連接已成功。 輸出緩衝區中將可以找到用戶端連接識別碼。|  
@@ -64,7 +63,7 @@ ms.locfileid: "32948563"
 ## <a name="sqlcoptssperfdata"></a>SQL_COPT_SS_PERF_DATA  
  SQL_COPT_SS_PERF_DATA 屬性會傳回 SQLPERF 結構的指標，其中包含目前的驅動程式效能統計資料。 **SQLGetConnectAttr**如果未啟用效能記錄，將會傳回 NULL。 此驅動程式不會動態更新 SQLPERF 結構中的統計資料。 呼叫**SQLGetConnectAttr**每當效能統計資料需要重新整理。  
   
-|Value|Description|  
+|ReplTest1|描述|  
 |-----------|-----------------|  
 |NULL|未啟用效能記錄。|  
 |任何其他值|SQLPERF 結構的指標。|  
@@ -75,7 +74,7 @@ ms.locfileid: "32948563"
 ## <a name="sqlcoptssuserdata"></a>SQL_COPT_SS_USER_DATA  
  SQL_COPT_SS_USER_DATA 屬性會擷取使用者-資料指標。 使用者資料會儲存在用戶端擁有的記憶體中，而且針對每個連接記錄下來。 如果尚未設定使用者-資料指標，便會傳回 SQL_UD_NOTSET (一種 NULL 指標)。  
   
-|Value|Description|  
+|ReplTest1|描述|  
 |-----------|-----------------|  
 |SQL_UD_NOTSET|不會設定任何使用者-資料指標。|  
 |任何其他值|使用者資料的指標。|  
@@ -87,12 +86,12 @@ ms.locfileid: "32948563"
   
  如果尚未設定 SQL_COPT_SS_SERVER_SPN 或 SQL_COPT_SS_FAILOVER_PARTNER，就會傳回預設值 (空字串)。  
   
- 如需有關 Spn 的詳細資訊，請參閱[服務主要名稱 & #40;Spn & #41;用戶端連接 & #40; ODBC & #41;](../../relational-databases/native-client/odbc/service-principal-names-spns-in-client-connections-odbc.md).  
+ 如需有關 Spn 的詳細資訊，請參閱[服務主要名稱&#40;Spn&#41;用戶端連接中&#40;ODBC&#41;](../../relational-databases/native-client/odbc/service-principal-names-spns-in-client-connections-odbc.md)。  
   
 ## <a name="see-also"></a>另請參閱  
  [SQLGetConnectAttr 函數](http://go.microsoft.com/fwlink/?LinkId=59347)   
  [ODBC API 實作詳細資料](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)   
- [SET QUOTED_IDENTIFIER & #40;TRANSACT-SQL & #41;](../../t-sql/statements/set-quoted-identifier-transact-sql.md)   
+ [SET QUOTED_IDENTIFIER &#40;Transact-SQL&#41;](../../t-sql/statements/set-quoted-identifier-transact-sql.md)   
  [SET ANSI_NULLS &#40;Transact-SQL&#41;](../../t-sql/statements/set-ansi-nulls-transact-sql.md)   
  [SET ANSI_PADDING &#40;Transact-SQL&#41;](../../t-sql/statements/set-ansi-padding-transact-sql.md)   
  [SET ANSI_WARNINGS &#40;Transact SQL&#41;](../../t-sql/statements/set-ansi-warnings-transact-sql.md)  

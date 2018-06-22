@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: clr
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
-ms.tgt_pltfrm: ''
+ms.technology: reference
 ms.topic: reference
 dev_langs:
 - TSQL
@@ -21,12 +19,12 @@ caps.latest.revision: 56
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 9c4883867e93c1f8a9e782f1e0a70d8ca6f53160
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 83dbc743bc6c11e0ab6e197426f5012573b8badf
+ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32918793"
+ms.lasthandoff: 06/18/2018
+ms.locfileid: "35694189"
 ---
 # <a name="managing-clr-integration-assemblies"></a>管理 CLR 整合組件
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -34,10 +32,10 @@ ms.locfileid: "32918793"
   
  組件資訊會儲存在**sys.assembly_files**資料庫已安裝的組件中的資料表。 **Sys.assembly_files**資料表包含下列資料行。  
   
-|資料行|Description|  
+|「資料行」|描述|  
 |------------|-----------------|  
 |assembly_id|為組件定義的識別項。 此號碼會指派給與同一組件相關的所有物件。|  
-|name|物件的名稱。|  
+|NAME|物件的名稱。|  
 |file_id|數字，識別每個物件，與相關聯的第一個物件指定**assembly_id**給定值為 1。 如果多個物件具有相同相關**assembly_id**，則每個後續**file_id**值都會遞增 1。|  
 |content|組件或檔案的十六進位表示法。|  
   

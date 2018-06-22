@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: native-client|features
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: ''
@@ -36,18 +35,18 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: e3d2cf487958f09af1825456f605a9f73a44e27e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 59beafe13efd6d4dc9064d73e4ff9924fa571815
+ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32957493"
+ms.lasthandoff: 06/18/2018
+ms.locfileid: "35695969"
 ---
 # <a name="using-xml-data-types"></a>使用 XML 資料類型
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../../includes/snac-deprecated.md)]
 
-  [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]導入**xml**資料型別，可讓您儲存 XML 文件和片段中[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]資料庫。 **Xml**資料類型是中的內建資料型別[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]，而且在某些方面類似於其他內建類型，例如**int**和**varchar**。 您可以使用其他內建類型， **xml**資料類型當做建立資料表時的資料行類型; 當做變數類型、 參數類型或函數傳回的類型; 或者在 CAST 和 CONVERT 函數。  
+  [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 導入**xml**資料型別，可讓您儲存 XML 文件和片段中[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]資料庫。 **Xml**資料類型是中的內建資料型別[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]，而且在某些方面類似於其他內建類型，例如**int**和**varchar**。 您可以使用其他內建類型， **xml**資料類型當做建立資料表時的資料行類型; 當做變數類型、 參數類型或函數傳回的類型; 或者在 CAST 和 CONVERT 函數。  
   
 ## <a name="programming-considerations"></a>程式設計考量  
  XML 可以是自我描述的，因為它可以選擇性地包含指定文件編碼的 XML 標頭，例如：  
@@ -74,10 +73,10 @@ ms.locfileid: "32957493"
   
  **ISequentialStream**應該是用於擷取大型 XML 文件。 用於其他大數值類型的相同技術也適用於 XML。 如需詳細資訊，請參閱[使用大型值型別](../../../relational-databases/native-client/features/using-large-value-types.md)。  
   
- 也可以擷取資料列集中的 XML，類型的資料行中儲存的資料，來插入或更新應用程式，透過的一般介面例如**irow:: Getcolumns**， **irowchange::**，和**icommand:: Execute**。 同樣地擷取的情況下，應用程式可以傳遞的文字字串或**ISequentialStream**至[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client OLE DB 提供者。  
+ 也可以擷取資料列集中的 XML，類型的資料行中儲存的資料，來插入或更新應用程式，透過的一般介面例如**irow:: Getcolumns**， **irowchange::**，和**Icommand:: Execute**。 同樣地擷取的情況下，應用程式可以傳遞的文字字串或**ISequentialStream**至[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client OLE DB 提供者。  
   
 > [!NOTE]  
->  若要將 XML 資料字串格式，透過**ISequentialStream**介面，您必須取得**ISequentialStream**藉由指定 DBTYPE_IUNKNOWN，並設定其*pObject*繫結中的 null 引數。  
+>  若要將 XML 資料字串格式，透過**ISequentialStream**介面，您必須取得**ISequentialStream**藉由指定 DBTYPE_IUNKNOWN，並設定其*pObject*要繫結中的 null 引數。  
   
  當擷取的 XML 資料因為取用者緩衝區太小而遭到截斷時，可以會將長度傳回為 0xffffffff，這表示長度不明。 這與當做串流至用戶端，而不先傳送實際資料長度資訊之資料類型的實作一致。 在某些情況下的實際長度可能會傳回提供者已經緩衝整個值，例如當**irowset:: Getdata**和執行資料轉換。  
   
@@ -93,13 +92,13 @@ ms.locfileid: "32957493"
 |DBTYPE_XML|通過<sup>6,7</sup>|錯誤<sup>1</sup>|確定<sup>11，6</sup>|錯誤<sup>8</sup>|  
 |DBTYPE_BYTES|通過<sup>6,7</sup>|N/A<sup>2</sup>|確定<sup>11，6</sup>|N/A <sup>2</sup>|  
 |DBTYPE_WSTR|通過<sup>6，10</sup>|N/A <sup>2</sup>|確定<sup>4、 6、 12</sup>|N/A <sup>2</sup>|  
-|DBTYPE_BSTR|通過<sup>6，10</sup>|N/A <sup>2</sup>|OK <sup>3</sup>|N/A <sup>2</sup>|  
+|DBTYPE_BSTR|通過<sup>6，10</sup>|N/A <sup>2</sup>|確定<sup>3</sup>|N/A <sup>2</sup>|  
 |DBTYPE_STR|確定<sup>6、 9、 10</sup>|N/A <sup>2</sup>|確定<sup>5、 6、 12</sup>|N/A <sup>2</sup>|  
 |DBTYPE_IUNKNOWN|位元組資料流透過**ISequentialStream**<sup>7</sup>|N/A <sup>2</sup>|位元組資料流透過**ISequentialStream**<sup>11</sup>|N/A <sup>2</sup>|  
-|DBTYPE_VARIANT (VT_UI1 &#124; VT_ARRAY)|通過<sup>6,7</sup>|N/A <sup>2</sup>|해당 사항 없음|N/A <sup>2</sup>|  
-|DBTYPE_VARIANT (VT_BSTR)|通過<sup>6，10</sup>|N/A <sup>2</sup>|OK<sup>3</sup>|N/A <sup>2</sup>|  
+|DBTYPE_VARIANT (VT_UI1 &AMP;#124; VT_ARRAY)|通過<sup>6,7</sup>|N/A <sup>2</sup>|不適用|N/A <sup>2</sup>|  
+|DBTYPE_VARIANT (VT_BSTR)|通過<sup>6，10</sup>|N/A <sup>2</sup>|確定<sup>3</sup>|N/A <sup>2</sup>|  
   
- <sup>1</sup>如果的伺服器類型與指定 DBTYPE_XML 以外**icommandwithparameters:: Setparameterinfo**和存取子類型為 DBTYPE_XML，陳述式執行時，就會發生錯誤 （DB_E_ERRORSOCCURRED，參數狀態為 DBSTATUS_E_BADACCESSOR）; 否則將資料傳送到伺服器，但是伺服器會傳回錯誤，指出從 XML 到參數的資料類型的隱含轉換。  
+ <sup>1</sup>如果的伺服器類型與指定 DBTYPE_XML 以外**icommandwithparameters:: Setparameterinfo**和存取子類型為 DBTYPE_XML，陳述式執行時，就會發生錯誤 (DB_E_ERRORSOCCURRED，參數狀態為 DBSTATUS_E_BADACCESSOR）;否則資料會傳送到伺服器，但是伺服器會傳回錯誤，指出從 XML 到參數的資料類型的隱含轉換。  
   
  <sup>2</sup>超出本主題的範圍。  
   
@@ -139,12 +138,12 @@ ms.locfileid: "32957493"
  DBTYPE_IUNKNOWN 是支援的繫結 (如上表所示)，但是在 DBTYPE_XML 和 DBTYPE_IUNKNOWN 之間沒有進行任何轉換。 DBTYPE_IUNKNOWN 可能無法搭配 DBTYPE_BYREF 使用。  
   
 ### <a name="ole-db-rowset-additions-and-changes"></a>OLE DB 資料列集的加入和變更  
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]原生用戶端加入新的值，或變更到許多核心 OLE DB 結構描述資料列。  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 原生用戶端加入新的值，或變更到許多核心 OLE DB 結構描述資料列。  
   
 #### <a name="the-columns-and-procedureparameters-schema-rowsets"></a>COLUMNS 和 PROCEDURE_PARAMETERS 結構描述資料列集  
  COLUMNS 和 PROCEDURE_PARAMETERS 結構描述資料列集的加入項目包含下列資料行。  
   
-|資料行名稱|類型|Description|  
+|資料行名稱|類型|描述|  
 |-----------------|----------|-----------------|  
 |SS_XML_SCHEMACOLLECTION_CATALOGNAME|DBTYPE_WSTR|定義 XML 結構描述集合所在目錄的名稱。 對於非 XML 資料行或不具類型的 XML 資料行，此為 NULL。|  
 |SS_XML_SCHEMACOLLECTION_SCHEMANAME|DBTYPE_WSTR|定義 XML 結構描述集合所在結構描述的名稱。 對於非 XML 資料行或不具類型的 XML 資料行，此為 NULL。|  
@@ -156,7 +155,7 @@ ms.locfileid: "32957493"
 #### <a name="the-ssxmlschema-schema-rowset"></a>SS_XMLSCHEMA 結構描述資料列集  
  用戶端推出新的結構描述資料列集 SS_XMLSCHEMA 來擷取 XML 結構描述資訊。 SS_XMLSCHEMA 資料列集包含下列資料行。  
   
-|資料行名稱|類型|Description|  
+|資料行名稱|類型|描述|  
 |-----------------|----------|-----------------|  
 |SCHEMACOLLECTION_CATALOGNAME|DBTYPE_WSTR|XML 集合所屬的目錄。|  
 |SCHEMACOLLECTION_SCHEMANAME|DBTYPE_WSTR|XML 集合所屬的結構描述。|  
@@ -171,12 +170,12 @@ ms.locfileid: "32957493"
 |DBSCHEMA_XML_COLLECTIONS|4|SCHEMACOLLECTION_CATALOGNAME<br /><br /> SCHEMACOLLECTION_SCHEMANAME<br /><br /> SCHEMACOLLECTIONNAME<br /><br /> TARGETNAMESPACEURI|  
   
 ### <a name="ole-db-property-set-additions-and-changes"></a>OLE DB 屬性集的加入和變更  
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]原生用戶端加入新的值或變更加入到許多核心 OLE DB 屬性集。  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 原生用戶端加入新的值或變更加入到許多核心 OLE DB 屬性集。  
   
 #### <a name="the-dbpropsetsqlserverparameter-property-set"></a>DBPROPSET_SQLSERVERPARAMETER 屬性集  
  為了支援**xml**透過 OLE DB 資料型別[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client 會實作新的 DBPROPSET_SQLSERVERPARAMETER 屬性集，其中包含下列值。  
   
-|名稱|型別|Description|  
+|[屬性]|類型|描述|  
 |----------|----------|-----------------|  
 |SSPROP_PARAM_XML_SCHEMACOLLECTION_CATALOGNAME|DBTYPE_WSTR|定義 XML 結構描述集合所在目錄 (資料庫) 的名稱。 SQL 三部分名稱識別碼的一部分。|  
 |SSPROP_PARAM_XML_SCHEMACOLLECTION_SCHEMANAME|DBTYPE_WSTR|結構描述集合內，XML 結構描述的名稱。 SQL 三部分名稱識別碼的一部分。|  
@@ -185,7 +184,7 @@ ms.locfileid: "32957493"
 #### <a name="the-dbpropsetsqlservercolumn-property-set"></a>DBPROPSET_SQLSERVERCOLUMN 屬性集  
  若要支援中的資料表建立**ITableDefinition**介面， [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 會將三個新的資料行加入到 DBPROPSET_SQLSERVERCOLUMN 屬性集。  
   
-|名稱|型別|Description|  
+|[屬性]|類型|描述|  
 |----------|----------|-----------------|  
 |SSPROP_COL_XML_SCHEMACOLLECTION_CATALOGNAME|VT_BSTR|如果是具類型的 XML 資料行，這個屬性是指定儲存 XML 結構描述所在之目錄名稱的字串。 如果是其他資料行類型，這個屬性會傳回空字串。|  
 |SSPROP_COL_XML_SCHEMACOLLECTION_SCHEMANAME|VT_BSTR|如果是具類型的 XML 資料行，這個屬性是指定定義此資料行之 XML 結構描述名稱的字串。|  
@@ -194,18 +193,18 @@ ms.locfileid: "32957493"
  如同 SSPROP_PARAM 值，這些所有屬性都是選擇性的，而且預設為空。 只有在指定 SSPROP_COL_XML_SCHEMACOLLECTIONNAME 時，才可能指定 SSPROP_COL_XML_SCHEMACOLLECTION_CATALOGNAME 和 SSPROP_COL_XML_SCHEMACOLLECTION_SCHEMANAME。 將 XML 傳遞到伺服器時，如果包含這些值，系統會針對目前的資料庫檢查這些值是否存在 (有效性)，並針對結構描述檢查執行個體資料。 在所有情況下，這些值必須全部為空或全部填入，才會有效。  
   
 ### <a name="ole-db-interface-additions-and-changes"></a>OLE DB 介面的加入和變更  
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]原生用戶端加入新的值，或變更到許多核心 OLE DB 介面。  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 原生用戶端加入新的值，或變更到許多核心 OLE DB 介面。  
   
 #### <a name="the-isscommandwithparameters-interface"></a>ISSCommandWithParameters 介面  
- 為了支援**xml**透過 OLE DB 資料型別[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client 會實作一些變更包括加入[ISSCommandWithParameters](../../../relational-databases/native-client-ole-db-interfaces/isscommandwithparameters-ole-db.md)介面。 這個新介面繼承自核心的 OLE DB 介面**ICommandWithParameters**。 除了繼承自的三種方法**ICommandWithParameters**;**GetParameterInfo**， **MapParameterNames**，和**SetParameterInfo**;**ISSCommandWithParameters**提供[GetParameterProperties](../../../relational-databases/native-client-ole-db-interfaces/isscommandwithparameters-getparameterproperties-ole-db.md)和[SetParameterProperties](../../../relational-databases/native-client-ole-db-interfaces/isscommandwithparameters-setparameterproperties-ole-db.md)用來處理伺服器特定資料類型的方法。  
+ 為了支援**xml**透過 OLE DB 資料型別[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client 會實作一些變更包括加入[ISSCommandWithParameters](../../../relational-databases/native-client-ole-db-interfaces/isscommandwithparameters-ole-db.md)介面。 這個新介面繼承自核心的 OLE DB 介面**ICommandWithParameters**。 除了繼承自的三種方法**ICommandWithParameters**;**GetParameterInfo**， **MapParameterNames**，和**SetParameterInfo**;**ISSCommandWithParameters**提供[GetParameterProperties](../../../relational-databases/native-client-ole-db-interfaces/isscommandwithparameters-getparameterproperties-ole-db.md)和[SetParameterProperties](../../../relational-databases/native-client-ole-db-interfaces/isscommandwithparameters-setparameterproperties-ole-db.md)用來處理伺服器特定的方法資料型別。  
   
 > [!NOTE]  
 >  **ISSCommandWithParameters**介面也可使用新的 ssparamprops 結構。  
   
 #### <a name="the-icolumnsrowset-interface"></a>IColumnsRowset 介面  
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client 會將加入下列[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-專屬的資料行所傳回的資料列集**icolumnrowset:: Getcolumnsrowset**方法。 這些資料行包含 XML 結構描述集合的三部分名稱。 對於非 XML 資料行或不具類型的 XML 資料行，所有三個資料行都會使用 NULL 的預設值。  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 會將加入下列[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-專屬的資料行所傳回的資料列集**icolumnrowset:: Getcolumnsrowset**方法。 這些資料行包含 XML 結構描述集合的三部分名稱。 對於非 XML 資料行或不具類型的 XML 資料行，所有三個資料行都會使用 NULL 的預設值。  
   
-|資料行名稱|類型|Description|  
+|資料行名稱|類型|描述|  
 |-----------------|----------|-----------------|  
 |DBCOLUMN_SS_XML_SCHEMACOLLECTION_CATALOGNAME|DBTYPE_WSTR|XML 結構描述集合所屬的目錄，<br /><br /> 否則為 NULL。|  
 |DBCOLUMN_SS_XML_SCHEMACOLLECTION_SCHEMANAME|DBTYPE_WSTR|XML 結構描述集合所屬的結構描述， 否則為 NULL。|  
@@ -225,7 +224,7 @@ ms.locfileid: "32957493"
   
  如果是 DBTYPE_BSTR、DBTYPE_WSTR 或 DBTYPE_VARIANT，提供者會將位於取用者緩衝區中的 XML 執行個體儲存到適當的資料行中。  
   
- 如果 DBTYPE_IUNKNOWN/ISequentialStream，如果取用者未指定任何儲存物件時，取用者必須建立**ISequentialStream**事先物件繫結物件時，XML 文件，然後將物件傳遞給提供者透過**irowsetchange:: Setdata**方法。 取用者也可以建立儲存體物件、 將 pObject 引數設定為 IID_ISequentialStream、 建立**ISequentialStream**物件，然後再傳遞**ISequentialStream**物件**irowsetchange:: Setdata**方法。 在這兩種情況下，提供者可以擷取 XML 物件透過**ISequentialStream**物件，並將其插入到適當的資料行。  
+ 如果 DBTYPE_IUNKNOWN/ISequentialStream，如果取用者未指定任何儲存物件時，取用者必須建立**ISequentialStream**事先物件、 繫結物件時，XML 文件，並接著將物件透過提供者**irowsetchange:: Setdata**方法。 取用者也可以建立儲存體物件、 將 pObject 引數設定為 IID_ISequentialStream、 建立**ISequentialStream**物件，然後再傳遞**ISequentialStream**物件**Irowsetchange:: Setdata**方法。 在這兩種情況下，提供者可以擷取 XML 物件透過**ISequentialStream**物件，並將其插入到適當的資料行。  
   
 #### <a name="the-irowsetupdate-interface"></a>IRowsetUpdate 介面  
  **IRowsetUpdate**介面提供延遲更新的功能。 提供給資料列集的資料不供其他交易直到取用者呼叫**irowsetupdate: Update**方法。  
@@ -278,6 +277,6 @@ ms.locfileid: "32957493"
   
 ## <a name="see-also"></a>另請參閱  
  [SQL Server Native Client 功能](../../../relational-databases/native-client/features/sql-server-native-client-features.md)   
- [ISSCommandWithParameters & #40; OLE DB & #41;](../../../relational-databases/native-client-ole-db-interfaces/isscommandwithparameters-ole-db.md)  
+ [ISSCommandWithParameters &#40;OLE DB&#41;](../../../relational-databases/native-client-ole-db-interfaces/isscommandwithparameters-ole-db.md)  
   
   
