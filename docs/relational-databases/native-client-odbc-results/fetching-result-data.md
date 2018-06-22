@@ -7,7 +7,7 @@ ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.component: native-client-odbc-results
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: connectivity
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -23,17 +23,16 @@ helpviewer_keywords:
 - SQL Server Native Client ODBC driver, data types
 - SQLGetData function
 ms.assetid: b289c7fb-5017-4d7e-a2d3-19401e9fc4cd
-caps.latest.revision: 31
 author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 2909c4472a4ab8dee56c37da3cdf23db1ee3e512
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 1cb4046f669a3d35de7c99b0d1d754bd85f067f6
+ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32946813"
+ms.lasthandoff: 06/18/2018
+ms.locfileid: "35695870"
 ---
 # <a name="fetching-result-data"></a>提取結果資料
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -65,7 +64,7 @@ ms.locfileid: "32946813"
   
  使用 SQL_C_DEFAULT 來指定 C 變數的類型時請務必小心。 SQL_C_DEFAULT 指定 C 變數的類型必須符合資料行或參數的 SQL 資料類型。 如果指定 SQL_C_DEFAULT **ntext**， **nchar**，或**nvarchar**資料行中，Unicode 資料會傳回到應用程式。 如果尚未撰寫應用程式的程式碼來處理 Unicode 資料，這可能會導致各種問題。 相同類型的問題可能會發生**uniqueidentifier** (SQL_GUID) 資料類型。  
   
- **文字**， **ntext**，和**映像**資料通常太大而無法放入單一程式變數，且通常會以處理**SQLGetData**而不是**SQLBindCol**。 使用伺服器資料指標， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驅動程式已完成最佳化，不傳送未繫結資料**文字**， **ntext**，或**映像**於資料行在擷取資料列的時間。 **文字**， **ntext**，或**映像**不實際擷取資料從伺服器應用程式問題直到**SQLGetData**資料行。  
+ **文字**， **ntext**，和**映像**資料通常太大而無法放入單一程式變數，且通常會以處理**SQLGetData**而不是**SQLBindCol**。 使用伺服器資料指標， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驅動程式已完成最佳化，不傳送未繫結資料**文字**， **ntext**，或**映像**於資料行在擷取資料列的時間。 **文字**， **ntext**，或**映像**不實際擷取資料從伺服器應用程式問題直到**SQLGetData**的資料行。  
   
  此最佳化可以套用至應用程式，讓沒有**文字**， **ntext**，或**映像**使用者上下捲動資料指標時，會顯示資料。 使用者選取的資料列之後，應用程式可以呼叫**SQLGetData**擷取**文字**， **ntext**，或**映像**資料。 這樣就不用傳送**文字**， **ntext**，或**映像**任何資料列的資料不會選取 使用者和也不用傳送非常大量的資料。  
   
