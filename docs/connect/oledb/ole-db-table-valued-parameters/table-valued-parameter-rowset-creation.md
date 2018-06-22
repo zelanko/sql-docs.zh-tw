@@ -2,9 +2,10 @@
 title: 資料表值參數資料列集建立 |Microsoft 文件
 description: 靜態和動態的資料表值參數資料列集建立
 ms.custom: ''
-ms.date: 03/26/2018
+ms.date: 06/14/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.component: oledb|ole-db-table-valued-parameters
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: connectivity
@@ -15,15 +16,17 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: b756e3573af050f1fd998c0861308855e456bd10
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
+ms.openlocfilehash: 8879c56eae2f5691a27a6261cc12ca3ad9c4cebc
+ms.sourcegitcommit: 03ba89937daeab08aa410eb03a52f1e0d212b44f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35307427"
+ms.lasthandoff: 06/16/2018
+ms.locfileid: "35690251"
 ---
 # <a name="table-valued-parameter-rowset-creation"></a>建立資料表值參數資料列集
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+
+[!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
   雖然取用者可以提供資料表值參數的任何資料列集物件，但是一般的資料列集物件都會針對後端資料存放區來實作，因此所提供的效能會受到限制。 基於這個理由，SQL Server OLE DB 驅動程式會讓取用者建立記憶體中的資料之上的特製化的資料列集物件。 此特殊的記憶體中資料列集物件是一種新的 COM 物件，稱為資料表值參數資料列集。 它會提供類似參數集的功能。  
   

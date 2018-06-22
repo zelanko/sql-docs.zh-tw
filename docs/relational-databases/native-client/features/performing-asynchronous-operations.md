@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: native-client|features
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: ''
@@ -25,12 +24,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 1b433851601bb3bbe1a9bd339b4af2b0835c1673
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 8e3880ec512f04adca7b84ec362b99d13e071cfd
+ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32953263"
+ms.lasthandoff: 06/18/2018
+ms.locfileid: "35702689"
 ---
 # <a name="performing-asynchronous-operations"></a>執行非同步作業
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -196,6 +195,6 @@ if (hr == DB_S_ASYNCHRONOUS)
 ## <a name="see-also"></a>另請參閱  
  [SQL Server Native Client 功能](../../../relational-databases/native-client/features/sql-server-native-client-features.md)   
  [資料列集屬性和行為](../../../relational-databases/native-client-ole-db-rowsets/rowset-properties-and-behaviors.md)   
- [ISSAsynchStatus & #40; OLE DB & #41;](../../../relational-databases/native-client-ole-db-interfaces/issasynchstatus-ole-db.md)  
+ [ISSAsynchStatus &#40;OLE DB&#41;](../../../relational-databases/native-client-ole-db-interfaces/issasynchstatus-ole-db.md)  
   
   
