@@ -4,10 +4,9 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: native-client-ole-db-rowsets
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: connectivity
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -22,12 +21,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 75e51224ca4921b45a3606dbd6bbab49cb6824d1
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 64ac951a3df348910f368c5944196d45c11c95c4
+ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32955993"
+ms.lasthandoff: 06/18/2018
+ms.locfileid: "35703309"
 ---
 # <a name="rowsets-and-sql-server-cursors"></a>資料列集和 SQL Server 資料指標
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -69,7 +68,7 @@ ms.locfileid: "32955993"
   
  下列資料列集屬性會指引 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料指標。 某些屬性可以安全地與其他屬性合併在一起。 例如，顯示 DBPROP_IRowsetScroll 和 DBPROP_IRowsetChange 屬性的資料列集將會是一個顯示立即更新行為的書籤資料列集。 其他屬性互斥。 例如，顯示 DBPROP_OTHERINSERT 的資料列集不能包含書籤。  
   
-|屬性識別碼|Value|資料列集行為|  
+|屬性識別碼|ReplTest1|資料列集行為|  
 |-----------------|-----------|---------------------|  
 |DBPROP_SERVERCURSOR|VARIANT_TRUE|無法透過資料列集來更新 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料。 資料列集是循序的，只支援順向捲動和提取。 支援相對資料列定位。 命令文字可以包含 ORDER BY 子句。|  
 |DBPROP_CANSCROLLBACKWARDS 或 DBPROP_CANFETCHBACKWARDS|VARIANT_TRUE|無法透過資料列集來更新 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料。 此資料列集支援一個方向的捲動和提取。 支援相對資料列定位。 命令文字可以包含 ORDER BY 子句。|  
@@ -98,7 +97,7 @@ ms.locfileid: "32955993"
   
  若要使用某種類型的資料指標模型，請找出對應至此資料指標模型的資料行，並尋找此資料行中具有 'T' 值的所有資料列集屬性。 將這些資料列集屬性設定為 VARIANT_TRUE，以便使用特定的資料指標模型。 具有 '-' 值的資料列集屬性可以設定為 VARIANT_TRUE 或 VARIANT_FALSE。  
   
-|資料列集屬性/資料指標模型|預設值<br /><br /> result<br /><br /> 集合<br /><br /> (RO)|快速<br /><br /> 順<br /><br /> 向<br /><br /> (RO)|靜態<br /><br /> (RO)|索引鍵集<br /><br /> 驅動<br /><br /> (RO)|  
+|資料列集屬性/資料指標模型|預設<br /><br /> result<br /><br /> 集合<br /><br /> (RO)|快速<br /><br /> 順<br /><br /> 向<br /><br /> (RO)|靜態<br /><br /> (RO)|索引鍵集<br /><br /> 驅動<br /><br /> (RO)|  
 |--------------------------------------|-------------------------------------------|--------------------------------------------|-----------------------|----------------------------------|  
 |DBPROP_SERVERCURSOR|F|T|T|T|  
 |DBPROP_DEFERRED|F|F|-|-|  
