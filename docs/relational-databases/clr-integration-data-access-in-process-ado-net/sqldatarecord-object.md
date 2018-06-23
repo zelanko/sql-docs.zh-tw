@@ -4,10 +4,9 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: clr
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: reference
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -18,12 +17,12 @@ caps.latest.revision: 25
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 414d1bfd7ac105c5c99bc7b6d1a64bbe40ca0f7f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 0ed9098863a661a9016fd2ee47808da35e25953e
+ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32918293"
+ms.lasthandoff: 06/18/2018
+ms.locfileid: "35701159"
 ---
 # <a name="sqldatarecord-object"></a>SqlDataRecord 物件
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

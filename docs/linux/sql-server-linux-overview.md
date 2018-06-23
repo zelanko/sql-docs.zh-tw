@@ -4,7 +4,7 @@ description: 本文描述 SQL Server 如何在 Linux 上執行，並提供如何
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 05/24/2018
+ms.date: 06/20/2018
 ms.topic: article
 ms.prod: sql
 ms.component: ''
@@ -12,12 +12,12 @@ ms.suite: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: 9dcc6a90-0add-42c2-815b-862e4e2a21ac
-ms.openlocfilehash: 2c67e5d1563ef2420f45ec4b1d0093de888dd157
-ms.sourcegitcommit: a9da0abd3e17fbcd6339980d7331d0418cdada53
+ms.openlocfilehash: 16ea8b69f1d55e5b338931f0531bdf8a2e037707
+ms.sourcegitcommit: 8c040e5b4e8c7d37ca295679410770a1af4d2e1f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/24/2018
-ms.locfileid: "34473843"
+ms.lasthandoff: 06/21/2018
+ms.locfileid: "36311686"
 ---
 # <a name="sql-server-on-linux"></a>Linux 上的 SQL Server
 
