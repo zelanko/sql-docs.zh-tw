@@ -1,0 +1,159 @@
+---
+title: LookupSet 函式 (報表產生器及 SSRS) | Microsoft Docs
+ms.custom: ''
+ms.date: 06/13/2017
+ms.prod: sql-server-2014
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- reporting-services-native
+ms.tgt_pltfrm: ''
+ms.topic: article
+ms.assetid: 7685acfd-1c8d-420c-993c-903236fbe1ff
+caps.latest.revision: 7
+author: douglaslM
+ms.author: douglasl
+manager: mblythe
+ms.openlocfilehash: c7721c5cc57392f1e9968b4b59cb01ba07916f00
+ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36133888"
+---
+# <a name="lookupset-function-report-builder-and-ssrs"></a>LookupSet 函數 (報表產生器及 SSRS)
+  從包含名稱/值組的資料集傳回符合指定之名稱的值組。  
+  
+> [!NOTE]  
+>  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
+  
+## <a name="syntax"></a>語法  
+  
+```  
+  
+LookupSet(source_expression, destination_expression, result_expression, dataset)  
+```  
+  
+#### <a name="parameters"></a>參數  
+ *source_expression*  
+ (`Variant`) - 在目前範圍中評估並指定要查閱之名稱或索引鍵的運算式。 例如， `=Fields!ID.Value`。  
+  
+ *destination_expression*  
+ (`Variant`) - 針對資料集中的每個資料列評估並指定要比對之名稱或索引鍵的運算式。 例如， `=Fields!CustomerID.Value`。  
+  
+ *result_expression*  
+ (`Variant`) 會針對資料集中的資料列評估的運算式其中*source_expression* = *destination_expression*，並指定要擷取的值。 例如， `=Fields!PhoneNumber.Value`。  
+  
+ *資料集 (dataset)*  
+ 指定報表中資料集名稱的常數。 例如，"ContactInformation"。  
+  
+## <a name="return"></a>傳回  
+ 傳回`VariantArray`，或`Nothing`如果沒有相符項目。  
+  
+## <a name="remarks"></a>備註  
+ 使用`LookupSet`擷取名稱/值組的指定資料集中的一組值 1 對多關聯性。 例如，資料表中的客戶識別碼，您可以使用`LookupSet`擷取該客戶的未繫結至資料區域的資料集的所有相關的電話號碼。  
+  
+ `LookupSet` 會執行下列動作：  
+  
+-   評估目前範圍中的來源運算式。  
+  
+-   根據指定之資料集的定序，在已經套用篩選之後針對指定之資料集的每一個資料列評估目的地運算式。  
+  
+-   在每一個符合來源運算式和目的地運算式的項目上，針對資料集中的該資料列評估結果運算式。  
+  
+-   傳回結果運算式值的集合。  
+  
+ 若要從具有一對一關聯性之名稱/值組的資料集中，擷取指定名稱的單一值，請使用 [Lookup 函式 &#40;報表產生器及 SSRS&#41;](report-builder-functions-lookup-function.md)。 若要呼叫`Lookup`針對一組值中，使用[Multilookup 函式&#40;報表產生器及 SSRS&#41;](report-builder-functions-multilookup-function.md)。  
+  
+ 系統會套用下列限制：  
+  
+-   當套用所有篩選運算式之後，便會評估 `LookupSet`。  
+  
+-   只支援一層的查閱。 來源、目的地或結果運算式不能包含查閱函數的參考。  
+  
+-   來源和目的地運算式必須評估為相同的資料類型。  
+  
+-   來源、目的地和結果運算式無法包含報表或群組變數的參考。  
+  
+-   `LookupSet` 無法使用以運算式為下列報表項目：  
+  
+    -   資料來源的動態連接字串。  
+  
+    -   資料集中的導出欄位。  
+  
+    -   資料集中的查詢參數。  
+  
+    -   資料集中的篩選。  
+  
+    -   報表參數。  
+  
+    -   Report.Language 屬性。  
+  
+ 如需詳細資訊，請參閱[彙總函式參考 &#40;報表產生器及 SSRS&#41;](report-builder-functions-aggregate-functions-reference.md) 和[總計、彙總與內建集合的運算式範圍 &#40;報表產生器及 SSRS&#41;](expression-scope-for-totals-aggregates-and-built-in-collections.md)。  
+  
+## <a name="example"></a>範例  
+ 在下列範例中，假設資料表繫結至一個資料集，此資料集包含銷售領域識別碼 TerritoryGroupID。 另一個資料集 "Stores" 包含領域中所有商店的清單，並包含領域識別碼 ID 和 StoreName 商店的名稱。  
+  
+ 在下列運算式中，`LookupSet` 會比較 "Stores" 資料集中每一個資料列的 TerritoryGroupID 值與 ID。 在每次比對中，該資料列的 StoreName 欄位值都會加入至結果集。  
+  
+```  
+=LookupSet(Fields!TerritoryGroupID.Value, Fields!ID.Value, Fields!StoreName.Value, "Stores")  
+```  
+  
+## <a name="example"></a>範例  
+ 因為`LookupSet`傳回集合的物件，您無法直接在文字方塊中顯示結果運算式。 您可以將集合中每一個物件的值串連起來當做一個字串。  
+  
+ 使用[!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]函式`Join`從一組物件建立分隔的字串。 使用逗號當做分隔符號，在單一行中結合這些物件。 在某些轉譯器中，您可能會使用 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 換行字元 (`vbCrLF`) 當作分隔符號，在新行中列出每一個值。  
+  
+ 它會當做 Value 屬性的文字方塊中，使用時，下列運算式會使用`Join`建立清單。  
+  
+```  
+=Join(LookupSet(Fields!TerritoryGroupID.Value, Fields!ID.Value, Fields!StoreName.Value, "Stores"),",")  
+```  
+  
+## <a name="example"></a>範例  
+ 如果是只轉譯幾次的文字方塊，您可能會選擇加入自訂程式碼產生 HTML，以便在文字方塊中顯示值。 文字方塊中的 HTML 需要額外的處理，所以如果是轉譯好幾千次的文字方塊，這並不是一個好的選擇。  
+  
+ 將下列 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 函數複製到報表定義中的程式碼區塊。 **MakeList** 會採用 *result_expression* 中所傳回的物件陣列，並使用 HTML 標記建立未排序的清單。 **Length** 會傳回此物件陣列中的項目數。  
+  
+```  
+Function MakeList(ByVal items As Object()) As String  
+   If items Is Nothing Then  
+      Return Nothing  
+   End If  
+  
+   Dim builder As System.Text.StringBuilder =   
+      New System.Text.StringBuilder()  
+   builder.Append("<ul>")  
+  
+   For Each item As Object In items  
+      builder.Append("<li>")  
+      builder.Append(item)  
+   Next  
+   builder.Append("</ul>")  
+  
+   Return builder.ToString()  
+End Function  
+  
+Function Length(ByVal items as Object()) as Integer  
+   If items is Nothing Then  
+      Return 0  
+   End If  
+   Return items.Length  
+End Function  
+```  
+  
+## <a name="example"></a>範例  
+ 若要產生 HTML，您必須呼叫此函數。 將下列運算式貼到文字方塊的 Value 屬性中，並將文字的標記類型設定為 HTML。 如需詳細資訊，請參閱[將 HTML 新增至報表 &#40;報表產生器及 SSRS&#41;](add-html-into-a-report-report-builder-and-ssrs.md)。  
+  
+```  
+=Code.MakeList(LookupSet(Fields!TerritoryGroupID.Value, Fields!ID.Value, Fields!StoreName.Value, "Stores"))  
+```  
+  
+## <a name="see-also"></a>另請參閱  
+ [運算式會在報表中使用&#40;報表產生器和 SSRS&#41;](expression-uses-in-reports-report-builder-and-ssrs.md)   
+ [運算式範例 &#40;報表產生器及 SSRS&#41;](expression-examples-report-builder-and-ssrs.md)   
+ [運算式中的資料類型 &#40;報表產生器及 SSRS&#41;](expressions-report-builder-and-ssrs.md)   
+ [Expression Scope for Totals，Aggregates，and Built-in Collections&#40;報表產生器和 SSRS&#41;](expression-scope-for-totals-aggregates-and-built-in-collections.md)  
+  
+  

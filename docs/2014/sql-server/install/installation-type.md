@@ -1,0 +1,40 @@
+---
+title: 安裝類型 |Microsoft 文件
+ms.custom: ''
+ms.date: 06/13/2017
+ms.prod: sql-server-2014
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: ''
+ms.topic: article
+ms.assetid: 0420c555-7a3b-42b9-8651-0b4f5bcb0008
+caps.latest.revision: 10
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: 8b153d75c308a59a20ce5097b191f37fa92ed94c
+ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36131639"
+---
+# <a name="installation-type"></a>安裝類型
+  使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝精靈的 [安裝類型] 頁面，即可指定要安裝新的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體，或是將功能加入至現有的執行個體。  
+  
+## <a name="options"></a>選項。  
+ 選取指定您選擇的選項按鈕：  
+  
+-   執行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的新安裝  
+  
+-   將功能加入到現有的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體  
+  
+     如果您選取將功能加入至現有執行個體的選項，請使用下拉式清單來選取要更新的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體。  
+  
+ 您可以單獨將 SysPrep 支援的功能 ([!INCLUDE[ssDE](../../includes/ssde-md.md)] 和 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]) 加入至備妥的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]映像。 當備妥的執行個體完成之後，您就可以加入其他 SysPrep 不支援的功能。  
+  
+ **注意** ：在容錯移轉叢集執行個體安裝完成之後，您就無法將功能加入至其中。 若要將 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 功能加入至現有的容錯移轉叢集，您必須執行新的安裝來安裝個別的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體。  
+  
+  

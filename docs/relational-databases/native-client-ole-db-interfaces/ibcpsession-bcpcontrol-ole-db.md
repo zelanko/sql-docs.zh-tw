@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: native-client-ole-db-interfaces
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: connectivity
 ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
@@ -22,12 +20,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 808ab79ea75bb191b496411d5088e7a23b692daf
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 8304b0797a4c9abcf01ce81f778920aba33ba445
+ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32948163"
+ms.lasthandoff: 06/18/2018
+ms.locfileid: "35701929"
 ---
 # <a name="ibcpsessionbcpcontrol-ole-db"></a>IBCPSession::BCPControl (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -51,7 +49,7 @@ HRESULT BCPControl(
   
  可能值*eOption*是：  
   
-|選項|Description|  
+|選項|描述|  
 |------------|-----------------|  
 |BCP_OPTION_ABORT|停止已經進行的大量複製作業。 您可以呼叫**BCPControl**方法*eOption*用 bcp_option_abort 的引數，從另一個執行緒停止正在執行的大量複製作業。 *IValue*會忽略引數。|  
 |BCP_OPTION_BATCH|每一批次中的資料列數目。 預設值為 0，表示資料擷取時，會指出資料表中的所有資料列，或資料複製到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 時，會指出使用者資料檔案中的所有資料列。 小於 1 的值會將 BCP_OPTION_BATCH 重設為預設值。|  
