@@ -4,10 +4,9 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: native-client-odbc-date-time
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: connectivity
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -18,12 +17,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: d1e307f12de6f298381e1e314a343eaece6353ad
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: a44722f571f8cd0a9ac0cecdd0dd9a0a1254bd5b
+ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32947873"
+ms.lasthandoff: 06/18/2018
+ms.locfileid: "35702859"
 ---
 # <a name="datetime-data-type-conversions-from-c-to-sql"></a>datetime 資料類型從 C 轉換成 SQL
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -36,20 +35,20 @@ ms.locfileid: "32947873"
 |||||||||  
 |-|-|-|-|-|-|-|-|  
 ||SQL_TYPE_DATE|SQL_TYPE_TIME|SQL_SS_TIME2|SQL_TYPE_TIMESTAMP|SQL_SS_TIMSTAMPOFFSET|SQL_CHAR|SQL_WCHAR|  
-|SQL_C_DATE|1|-|-|1,6|1,5,6|1,13|1,13|  
-|SQL_C_TIME|-|1|1|1,7|1,5,7|1,13|1,13|  
+|SQL_C_DATE|@shouldalert|-|-|1,6|1,5,6|1,13|1,13|  
+|SQL_C_TIME|-|@shouldalert|@shouldalert|1,7|1,5,7|1,13|1,13|  
 |SQL_C_SS_TIME2|-|1,3|1,10|1,7|1,5,7|1,13|1,13|  
-|SQL_C_BINARY(SQL_SS_TIME2_STRUCT)|해당 사항 없음|해당 사항 없음|1,10,11|해당 사항 없음|不適用|不適用|해당 사항 없음|  
+|SQL_C_BINARY(SQL_SS_TIME2_STRUCT)|不適用|不適用|1,10,11|不適用|不適用|不適用|不適用|  
 |SQL_C_TYPE_TIMESTAMP|1,2|1,3,4|1,4,10|1,10|1,5,10|1,13|1,13|  
 |SQL_C_SS_TIMESTAMPOFFSET|1,2,8|1,3,4,8|1,4,8,10|1,8,10|1,10|1,13|1,13|  
-|SQL_C_BINARY(SQL_SS_TIMESTAMPOFFSET_STRUCT)|해당 사항 없음|不適用|不適用|해당 사항 없음|1,10,11|해당 사항 없음|해당 사항 없음|  
-|SQL_C_CHAR/SQL_WCHAR (date)|9|9|9|9,6|9,5,6|해당 사항 없음|해당 사항 없음|  
-|SQL_C_CHAR/SQL_WCHAR (time2)|9|9,3|9,10|9,7,10|9,5,7,10|해당 사항 없음|해당 사항 없음|  
-|SQL_C_CHAR/SQL_WCHAR (datetime)|9,2|9,3,4|9,4,10|9,10|9,5,10|해당 사항 없음|해당 사항 없음|  
-|SQL_C_CHAR/SQL_WCHAR (datetimeoffset)|9,2,8|9,3,4,8|9,4,8,10|9,8,10|9,10|해당 사항 없음|해당 사항 없음|  
-|SQL_C_BINARY(SQL_DATE_STRUCT)|1,11|해당 사항 없음|不適用|不適用|不適用|不適用|해당 사항 없음|  
-|SQL_C_BINARY(SQL_TIME_STRUCT)|해당 사항 없음|不適用|不適用|不適用|不適用|不適用|해당 사항 없음|  
-|SQL_C_BINARY(SQL_TIMESTAMP_STRUCT)|해당 사항 없음|不適用|不適用|不適用|不適用|不適用|N/A|  
+|SQL_C_BINARY(SQL_SS_TIMESTAMPOFFSET_STRUCT)|不適用|不適用|不適用|不適用|1,10,11|不適用|不適用|  
+|SQL_C_CHAR/SQL_WCHAR (date)|9|9|9|9,6|9,5,6|不適用|不適用|  
+|SQL_C_CHAR/SQL_WCHAR (time2)|9|9,3|9,10|9,7,10|9,5,7,10|不適用|不適用|  
+|SQL_C_CHAR/SQL_WCHAR (datetime)|9,2|9,3,4|9,4,10|9,10|9,5,10|不適用|不適用|  
+|SQL_C_CHAR/SQL_WCHAR (datetimeoffset)|9,2,8|9,3,4,8|9,4,8,10|9,8,10|9,10|不適用|不適用|  
+|SQL_C_BINARY(SQL_DATE_STRUCT)|1,11|不適用|不適用|不適用|不適用|不適用|不適用|  
+|SQL_C_BINARY(SQL_TIME_STRUCT)|不適用|不適用|不適用|不適用|不適用|不適用|不適用|  
+|SQL_C_BINARY(SQL_TIMESTAMP_STRUCT)|不適用|不適用|不適用|不適用|不適用|不適用|不適用|  
   
 ## <a name="key-to-symbols"></a>符號的索引鍵  
   
@@ -87,7 +86,7 @@ ms.locfileid: "32947873"
   
     ||||  
     |-|-|-|  
-    |型別|隱含的小數位數<br /><br /> 0|隱含的小數位數<br /><br /> 1..9|  
+    |類型|隱含的小數位數<br /><br /> 0|隱含的小數位數<br /><br /> 1..9|  
     |SQL_C_TYPE_TIMESTAMP|19|21..29|  
   
      不過對於 SQL_C_TYPE_TIMESTAMP，如果可以用三位數代表小數秒而不會造成資料遺失，而且資料行大小為 23 以上，則會產生完整的三位數小數秒。 此行為可確保使用舊版 ODBC 驅動程式所開發之應用程式的回溯相容性。  
@@ -99,6 +98,6 @@ ms.locfileid: "32947873"
 -   **N/A**： 現有[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]，而會保留舊有的行為。  
   
 ## <a name="see-also"></a>另請參閱  
- [日期和時間增強功能 & #40; ODBC & #41;](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)  
+ [日期和時間增強功能&#40;ODBC&#41;](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)  
   
   
