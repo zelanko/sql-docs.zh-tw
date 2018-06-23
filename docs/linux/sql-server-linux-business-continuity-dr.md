@@ -1,7 +1,7 @@
 ---
 title: SQL Server on Linux 的災害復原 |Microsoft 文件
 description: ''
-author: allanhirt
+author: MikeRayMSFT
 ms.author: mihaelab
 ms.reviewer: mikeray
 manager: craigg
@@ -14,12 +14,12 @@ ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: c75717c8-c677-4033-8ca6-d0ac93aee04d
 monikerRange: '>= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 16e1e72175db963452d1dc53b704a15602821905
-ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
+ms.openlocfilehash: 24db7c4b1b1e76d9f16b8d33203fe8556d3dba96
+ms.sourcegitcommit: 7d2b34c64f97206861ec9ad8d6a6201ac20a4af1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/19/2018
-ms.locfileid: "34320409"
+ms.lasthandoff: 06/20/2018
+ms.locfileid: "36297484"
 ---
 # <a name="business-continuity-and-database-recovery---sql-server-on-linux"></a>商務持續性和資料庫復原-您的 SQL Server on Linux
 

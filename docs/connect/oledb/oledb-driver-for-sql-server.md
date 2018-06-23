@@ -1,11 +1,11 @@
 ---
-title: SQL Server 的 OLE DB 驅動程式 |Microsoft 文件
-description: SQL Server 的 OLE DB 驅動程式
+title: Microsoft OLE DB Driver for SQL Server |Microsoft 文件
+description: Microsoft OLE DB Driver for SQL Server
 ms.custom: ''
-ms.date: 03/26/2018
+ms.date: 06/14/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: OLE DB Driver
+ms.component: oledb
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: connectivity
@@ -22,15 +22,15 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 7aef3dc362cfd83d1767f759b30cddde263d319f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 1fba5146cd663c2d7c312bb6a5c689162c1489ac
+ms.sourcegitcommit: a6596c62f607041c4402f7d5b41a232fca257c14
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32859453"
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36240820"
 ---
-# <a name="ole-db-driver-for-sql-server"></a>SQL Server 的 OLE DB 驅動程式
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+# <a name="microsoft-ole-db-driver-for-sql-server"></a>Microsoft OLE DB Driver for SQL Server
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../includes/driver_oledb_download.md)]
 
