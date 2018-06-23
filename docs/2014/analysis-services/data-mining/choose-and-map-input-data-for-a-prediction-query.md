@@ -1,0 +1,127 @@
+---
+title: 選擇和對應輸入的資料的預測查詢 |Microsoft 文件
+ms.custom: ''
+ms.date: 06/13/2017
+ms.prod: sql-server-2014
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- analysis-services
+ms.tgt_pltfrm: ''
+ms.topic: article
+helpviewer_keywords:
+- tables [Analysis Services], prediction queries
+- Mining Model Prediction [Analysis Services], input tables
+ms.assetid: 00d330a0-879d-4da0-9f29-53c288116f4d
+caps.latest.revision: 15
+author: Minewiskan
+ms.author: owend
+manager: mblythe
+ms.openlocfilehash: 5637d509b348f96c5993706e9cd4e7a73dfa85e0
+ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36033440"
+---
+# <a name="choose-and-map-input-data-for-a-prediction-query"></a>為預測查詢選擇和對應輸入資料
+  從採礦模型建立預測時，通常是透過饋送新資料至模型  (時間序列模型是例外，它只能根據歷程記錄資料進行預測)。若要提供新資料給模型，您必須確保資料是做為資料來源檢視的一部分提供。 如果您事先知道哪些資料要用於預測，可以將資料包含在用於建立模型的資料來源檢視中。 否則，您可能需要建立新的資料來源檢視。 如需詳細資訊，請參閱 [Data Source Views in Multidimensional Models](../multidimensional-models/data-source-views-in-multidimensional-models.md)(多維度模型中的資料來源檢視)。  
+  
+ 有時候，所需資料可能包含在一對多聯結中的多個資料表內。 當資料用於關聯模型或時序叢集模型，而其中所用的案例資料表連結至包含產品或交易詳細資料的巢狀資料表時，就是這種情況。 如果您的模型使用案例巢狀資料表結構，則用於預測的資料也必須具有案例巢狀資料表結構。  
+  
+> [!WARNING]  
+>  您無法加入新的資料行或是對應不同資料來源檢視中的資料行。 您所選的資料來源檢視必須包含預測查詢所需的所有資料行。  
+  
+ 在您識別包含將用於預測之資料的資料表之後，必須將外部資料中的資料行對應至採礦模型中的資料行。 例如，如果您的模型根據人口統計和問卷調查回應來預測客戶購買行為，則您的輸入資料應包含通常與模型資料對應的資訊。 不需要每個單一資料行都有對應的資料，但對應的資料行越多，預測效果就越好。 如果您嘗試對應具有不同資料類型的資料行，系統可能會顯示錯誤訊息。 在此情況下，您可以在資料來源檢視中定義命名計算，將新的資料行資料轉型或轉換為模型所需的資料類型。 如需詳細資訊，請參閱 [Define Named Calculations in a Data Source View &#40;Analysis Services&#41;](../multidimensional-models/define-named-calculations-in-a-data-source-view-analysis-services.md) (在資料來源檢視中定義具名計算 (Analysis Services))。  
+  
+ 在您選擇要用於預測的資料時，所選資料來源中的某些資料行可能會根據名稱相似度和相符的資料類型，自動對應至採礦模型資料行。 您可以使用 **[採礦模型預測]** 中的 **[修改對應]** 對話方塊變更對應的資料行、刪除不適當的對應，或為現有資料行建立新對應。 [採礦模型預測] 設計介面也支援連接的拖放編輯。  
+  
+-   若要建立新的連接，只需在 [採礦模型] 資料表中選取資料行，並將其拖曳到 [選取輸入資料表] 資料表中的對應資料行。  
+  
+-   若要移除連接，請選取連接線並按下 DELETE 鍵。  
+  
+ 下列程序描述如何使用 **[指定巢狀聯結]** 對話方塊來修改案例資料表和巢狀資料表之間已建立的聯結 (當做預測查詢的輸入)。  
+  
+### <a name="select-an-input-table"></a>選取輸入資料表  
+  
+1.  在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 中，於資料採礦設計師中之 [採礦精確度圖表] 的 [選取輸入資料表] 資料表上，按一下 [選取案例資料表]。  
+  
+     就會開啟 **[選取資料表]** 對話方塊，供您選取包含查詢作為基礎之資料的資料表。  
+  
+2.  在 **[選取資料表]** 對話方塊中，從 **[資料來源]** 清單裡選取一個資料來源。  
+  
+3.  在 [資料表/檢視名稱] 之下，選取包含您要用來測試模型之資料的資料表。  
+  
+4.  按一下 [確定] 。  
+  
+     採礦結構中的資料行，會自動對應到輸入資料表中之名稱相同的資料行。  
+  
+### <a name="change-the-way-that-input-data-is-mapped-to-the-model"></a>變更輸入資料對應至模型的方式  
+  
+1.  在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]的資料採礦設計師中，選取 **[採礦模型預測]** 索引標籤。  
+  
+2.  在 **[採礦模型]** 功能表上，選取 **[修改連接]**。  
+  
+     **[修改對應]** 對話方塊會開啟。 在此對話方塊中， **[採礦模型資料行]** 資料行會在選取的採礦結構中列出資料行。 [資料表資料行] 資料行會在外部資料來源中，列出您在 [選取輸入資料表] 對話方塊中選擇的資料行。 外部資料來源中的資料行會對應到採礦模型中的資料行。  
+  
+3.  在 **[資料表資料行]** 之下，選取對應到您要對應之目標採礦模型的資料列。  
+  
+4.  從外部資料來源的可用資料行清單中，選取新的資料行。 選取清單中的空白項目來刪除資料行對應。  
+  
+5.  按一下 [確定] 。  
+  
+     新的資料行對應會在設計師中顯示。  
+  
+### <a name="remove-a-relationship-between-input-tables"></a>移除輸入資料表之間的關聯性  
+  
+1.  在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 的資料採礦設計師中，[採礦模型預測] 索引標籤的 [選取輸入資料表] 資料表上，按一下 [修改聯結]。  
+  
+     **[指定巢狀聯結]** 對話方塊就會開啟。  
+  
+2.  選取關聯性。  
+  
+3.  按一下 **[移除關聯性]**。  
+  
+4.  按一下 [確定] 。  
+  
+     即移除案例資料表和巢狀資料表之間的關聯性。  
+  
+### <a name="create-a-new-relationship-between-input-tables"></a>建立輸入資料表之間的新關聯性  
+  
+1.  在資料採礦設計師的 [採礦模型預測] 索引標籤中，於 [選取輸入資料表] 資料表上，按一下 [修改聯結]。  
+  
+     **[指定巢狀聯結]** 對話方塊就會開啟。  
+  
+2.  按一下 **[加入關聯性]**。  
+  
+     **[建立關聯性]** 對話方塊就會開啟。  
+  
+3.  在 **[來源資料行]** 中選取巢狀資料表的索引鍵。  
+  
+4.  在 **[目的地資料行]** 中選取案例資料表的索引鍵。  
+  
+5.  在 **[建立關聯性]** 對話方塊中按一下 **[確定]** 。  
+  
+6.  在 **[指定巢狀聯結]** 對話方塊中按一下 **[確定]** 。  
+  
+     即在案例資料表和巢狀資料表之間建立新的關聯性。  
+  
+### <a name="add-a-nested-table-to-the-input-tables-of-a-prediction-query"></a>加入巢狀資料表至預測查詢的輸入資料表  
+  
+1.  在資料採礦設計師的 **[採礦模型預測]** 索引標籤上，按一下 **[選取案例資料表]** 來開啟 **[選取資料表]** 對話方塊。  
+  
+    > [!NOTE]  
+    >  在指定案例資料表之前，無法新增巢狀資料表至輸入。 如果使用巢狀資料表，用於預測的採礦模型也需要使用巢狀資料表。  
+  
+2.  在 **[選取資料表]** 對話方塊中，從 **[資料來源]** 清單選取資料來源，然後在資料來源檢視中選取包含案例資料的資料表。 [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+  
+3.  按一下 **[選取巢狀資料表]** 來開啟 **[選取資料表]** 對話方塊。  
+  
+4.  在 **[選取資料表]** 對話方塊中，從 **[資料來源]** 清單選取資料來源，然後在資料來源檢視中選取包含巢狀資料的資料表。 [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+  
+     如果關聯性已經存在，採礦模型中的資料行就會自動對應到輸入資料表中的同名資料行。 您可以按一下 **[修改聯結]**，這會開啟 **[建立關聯性]** 對話方塊，在其中修改巢狀資料表和案例資料表之間的關聯性。  
+  
+## <a name="see-also"></a>另請參閱  
+ [預測查詢&#40;資料採礦&#41;](prediction-queries-data-mining.md)  
+  
+  
