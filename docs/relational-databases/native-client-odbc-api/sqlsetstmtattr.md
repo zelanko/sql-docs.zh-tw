@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: native-client-odbc-api
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: ''
@@ -19,12 +18,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 7074fcf6c6616c878b0cd4021aabb4359c2a40dc
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 3bf9b7e907bbc00febe4ef86b17bf266408b131e
+ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32947443"
+ms.lasthandoff: 06/18/2018
+ms.locfileid: "35702809"
 ---
 # <a name="sqlsetstmtattr"></a>SQLSetStmtAttr
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -45,7 +44,7 @@ ms.locfileid: "32947443"
   
  如需詳細資訊，請參閱[備妥的陳述式資料表值參數中繼資料](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameter-metadata-for-prepared-statements.md)。  
   
- 如需有關資料表值參數的詳細資訊，請參閱[資料表值參數 & #40; ODBC & #41;](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md)。  
+ 如需有關資料表值參數的詳細資訊，請參閱[資料表值參數&#40;ODBC&#41;](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md)。  
   
 ## <a name="sqlsetstmtattr-support-for-sparse-columns"></a>疏鬆資料行的 SQLSetStmtAttr 支援  
  SQLSetStmtAttr 可以用於設定 SQL_SOPT_SS_NAME_SCOPE。 如需詳細資訊，請參閱 sql_sopt_ss_name_scope 」 一節中，本主題稍後的。如需有關疏鬆資料行的詳細資訊，請參閱[疏鬆資料行支援&#40;ODBC&#41;](../../relational-databases/native-client/odbc/sparse-columns-support-odbc.md)。  
@@ -56,7 +55,7 @@ ms.locfileid: "32947443"
 ### <a name="sqlsoptsscursoroptions"></a>SQL_SOPT_SS_CURSOR_OPTIONS  
  SQL_SOPT_SS_CURSOR 屬性會指定驅動程式是否會在資料指標上使用驅動程式專屬的效能選項。 [SQLGetData](../../relational-databases/native-client-odbc-api/sqlgetdata.md)設定這些選項時，不允許。 預設值為 SQL_CO_OFF。 *ValuePtr*值屬於類型是 SQLLEN。  
   
-|*ValuePtr*值|Description|  
+|*ValuePtr*值|描述|  
 |----------------------|-----------------|  
 |SQL_CO_OFF|預設值。 停用快速順向、 唯讀資料指標與自動擷取，同時也啟用**SQLGetData**順向、 唯讀資料指標。 當 SQL_SOPT_SS_CURSOR_OPTIONS 設定為 SQL_CO_OFF 時，資料指標類型將不會變更。 也就是說，快速順向資料指標仍是快速順向資料指標。 若要變更的資料指標類型，應用程式必須立即設定不同的資料指標類型使用**SQLSetStmtAttr**/SQL_ATTR_CURSOR_TYPE。|  
 |SQL_CO_FFO|啟用快速順向、 唯讀資料指標，會停用**SQLGetData**順向、 唯讀資料指標。|  
@@ -70,7 +69,7 @@ ms.locfileid: "32947443"
 ### <a name="sqlsoptssdeferprepare"></a>SQL_SOPT_SS_DEFER_PREPARE  
  SQL_SOPT_SS_DEFER_PREPARE 屬性會決定是否是立即準備陳述式，或延後到**SQLExecute**， [SQLDescribeCol](../../relational-databases/native-client-odbc-api/sqldescribecol.md)或[SQLDescribeParam](../../relational-databases/native-client-odbc-api/sqldescribeparam.md)執行。 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0 和先前版本中，會忽略此屬性 (沒有延遲準備)。 *ValuePtr*值屬於類型是 SQLLEN。  
   
-|*ValuePtr*值|Description|  
+|*ValuePtr*值|描述|  
 |----------------------|-----------------|  
 |SQL_DP_ON|預設值。 在呼叫[SQLPrepare 函數](http://go.microsoft.com/fwlink/?LinkId=59360)，陳述式準備會延遲，直到**SQLExecute**稱為或中繼屬性作業 (**SQLDescribeCol**或**SQLDescribeParam**) 執行。|  
 |SQL_DP_OFF|在準備陳述式儘速**SQLPrepare**執行。|  
@@ -80,7 +79,7 @@ ms.locfileid: "32947443"
   
  *ValuePtr*值屬於類型是 SQLLEN。  
   
-|*ValuePtr*值|Description|  
+|*ValuePtr*值|描述|  
 |----------------------|-----------------|  
 |SQL_RE_OFF|預設值。 此驅動程式不會使用用戶端地區設定，將日期、時間和貨幣資料轉換成字元字串資料。|  
 |SQL_RE_ON|將日期、時間和貨幣資料轉換成字元字串資料時，此驅動程式會使用用戶端地區設定。|  
@@ -95,7 +94,7 @@ ms.locfileid: "32947443"
 ### <a name="sqlsoptsstextptrlogging"></a>SQL_SOPT_SS_TEXTPTR_LOGGING  
  SQL_SOPT_SS_TEXTPTR_LOGGING 屬性切換包含的資料行上的作業記錄**文字**或**映像**資料。 *ValuePtr*值屬於類型是 SQLLEN。  
   
-|*ValuePtr*值|Description|  
+|*ValuePtr*值|描述|  
 |----------------------|-----------------|  
 |SQL_TL_OFF|停用上執行的作業記錄**文字**和**映像**資料。|  
 |SQL_TL_ON|預設值。 啟用記錄上執行的作業**文字**和**映像**資料。|  
@@ -103,7 +102,7 @@ ms.locfileid: "32947443"
 ### <a name="sqlsoptsshiddencolumns"></a>SQL_SOPT_SS_HIDDEN_COLUMNS  
  SQL_SOPT_SS_HIDDEN_COLUMNS 屬性會在結果集中公開 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SELECT FOR BROWSE 陳述式內隱藏的資料行。 此驅動程式預設不會公開這些資料行。 *ValuePtr*值屬於類型是 SQLLEN。  
   
-|*ValuePtr*值|Description|  
+|*ValuePtr*值|描述|  
 |----------------------|-----------------|  
 |SQL_HC_OFF|預設值。 FOR BROWSE 資料行會從結果集隱藏起來。|  
 |SQL_HC_ON|公開 FOR BROWSE 資料行。|  
@@ -137,7 +136,7 @@ ms.locfileid: "32947443"
   
  SQL_SOPT_SS_NAME_SCOPE 的類型是 SQLULEN。  
   
-|*ValuePtr*值|Description|  
+|*ValuePtr*值|描述|  
 |----------------------|-----------------|  
 |SQL_SS_NAME_SCOPE_TABLE|預設值。<br /><br /> 使用資料表值參數時，指出應該傳回實際資料表的中繼資料。<br /><br /> SQLColumns 使用疏鬆資料行功能時，會傳回不是成員的疏鬆資料行**column_set**。|  
 |SQL_SS_NAME_SCOPE_TABLE_TYPE|表示應用程式需要資料表類型 (而非實際資料表) 的中繼資料 (目錄函數應該傳回資料表類型的中繼資料)。 應用程式接著會傳遞做為資料表值參數的 TYPE_NAME *TableName*參數。|  

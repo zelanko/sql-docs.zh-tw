@@ -3,11 +3,9 @@ title: 對應 CLR 參數資料 |Microsoft 文件
 ms.custom: ''
 ms.date: 08/01/2016
 ms.prod: sql
-ms.prod_service: database-engine
-ms.component: clr
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: reference
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -31,12 +29,12 @@ caps.latest.revision: 71
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 23e4350f5bc8f639ccb529bc28927ca93261ce09
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 5b1965107b1215a1a03817c7fc048ddc50ab8346
+ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32923503"
+ms.lasthandoff: 06/18/2018
+ms.locfileid: "35696569"
 ---
 # <a name="mapping-clr-parameter-data"></a>對應 CLR 參數資料
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -116,8 +114,8 @@ AS EXTERNAL NAME TestStoredProc.StoredProcedures.PriceSum
 |||  
 |-|-|  
 |**CLR 資料類型 (SQL Server)**|**SQL Server 資料類型**|  
-|**小數點**|smallmoney|  
-|**SqlMoney**|smallmoney|  
+|**小數點**|SMALLMONEY|  
+|**SqlMoney**|SMALLMONEY|  
 |**小數點**|money|  
 |**DateTime**|smalldatetime|  
 |**SQLDateTime**|smalldatetime|  
@@ -129,6 +127,6 @@ AS EXTERNAL NAME TestStoredProc.StoredProcedures.PriceSum
 |加入**SqlGeography**， **SqlGeometry**，和**SqlHierarchyId**對應資料表中的類型。|  
   
 ## <a name="see-also"></a>另請參閱  
- [.NET Framework 中的 SQL Server 資料類型](../../relational-databases/clr-integration-database-objects-types-net-framework/sql-server-data-types-in-the-net-framework.md)  
+ [.NET Framework 的 SQL Server 資料類型](../../relational-databases/clr-integration-database-objects-types-net-framework/sql-server-data-types-in-the-net-framework.md)  
   
   
