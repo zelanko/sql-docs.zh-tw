@@ -4,10 +4,9 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: native-client-ole-db-blobs
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: connectivity
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - SQL Server Native Client OLE DB provider, BLOBs
 - large data, OLE objects
 ms.assetid: 9d0c524b-22b0-475a-9ff5-5a69a6393b46
-caps.latest.revision: 40
 author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: e23fa666cda37c573d55071739ecfe3df7c7c6d1
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: ac496025b9131e026d29920450d9ad2b45cc52be
+ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32947013"
+ms.lasthandoff: 06/18/2018
+ms.locfileid: "35701459"
 ---
 # <a name="setting-large-data"></a>設定大型資料
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -60,7 +58,7 @@ ms.locfileid: "32947013"
   
 5.  呼叫**GetNextRows**到下一個資料列提取到資料列集。 呼叫**GetData**來讀取的資料列集中的資料。  
   
-6.  建立包含資料 （以及長度指標），儲存物件，然後呼叫**irowsetchange:: Setdata** (或**irowsetchange:: Insertrow**) 使用的繫結 BLOB 資料行，以設定資料的存取子。  
+6.  建立包含資料 （以及長度指標），儲存物件，然後呼叫**irowsetchange:: Setdata** (或**irowsetchange:: Insertrow**) 使用的繫結設定的 BLOB 資料行的存取子資料。  
   
 ## <a name="example"></a>範例  
  這個範例會示範如何設定 BLOB 資料。 此範例會建立一個資料表、加入範例記錄、在資料列集中提取該記錄，然後設定 BLOB 欄位的值：  
@@ -728,6 +726,6 @@ Exit:
   
 ## <a name="see-also"></a>另請參閱  
  [Blob 與 OLE 物件](../../relational-databases/native-client-ole-db-blobs/blobs-and-ole-objects.md)   
- [使用大型值型別](../../relational-databases/native-client/features/using-large-value-types.md)  
+ [使用大型實值型別](../../relational-databases/native-client/features/using-large-value-types.md)  
   
   
