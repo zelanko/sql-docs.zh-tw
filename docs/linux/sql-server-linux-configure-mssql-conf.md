@@ -4,7 +4,7 @@ description: 本文說明如何在 Linux 上設定 SQL Server 2017 設定使用 
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 02/20/2018
+ms.date: 06/22/2018
 ms.topic: article
 ms.prod: sql
 ms.component: ''
@@ -12,12 +12,12 @@ ms.suite: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: 06798dff-65c7-43e0-9ab3-ffb23374b322
-ms.openlocfilehash: 6369c3144a9ce641765358621027729ce235f69d
-ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
+ms.openlocfilehash: 9506096746c0f93b147f8040bbd7066e99d69bad
+ms.sourcegitcommit: 23e71a8afba194e0893f31532db0aaa29288acb2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/19/2018
-ms.locfileid: "34324049"
+ms.lasthandoff: 06/23/2018
+ms.locfileid: "36329483"
 ---
 # <a name="configure-sql-server-on-linux-with-the-mssql-conf-tool"></a>設定 SQL Server on Linux mssql conf 工具
 
@@ -98,7 +98,10 @@ ms.locfileid: "34324049"
 
 ## <a id="customerfeedback"></a> 設定客戶意見反應
 
-**Telemetry.customerfeedback**是否 SQL Server 會傳送給 Microsoft 的意見反應或未設定變更。 根據預設，這個值設為**true**。 若要變更的值，執行下列命令：
+**Telemetry.customerfeedback**是否 SQL Server 會傳送給 Microsoft 的意見反應或未設定變更。 根據預設，這個值設為**true**適用於所有版本。 若要變更的值，執行下列命令：
+
+> [!IMPORTANT]
+> 您可以關閉客戶的意見反應免費版本的 SQL Server Express，開發人員。
 
 1. 以具有 root 身分執行 mssql conf 指令碼**設定**命令**telemetry.customerfeedback**。 下列範例藉由指定關閉客戶的意見反應**false**。
 
@@ -112,7 +115,7 @@ ms.locfileid: "34324049"
    sudo systemctl restart mssql-server
    ```
 
-如需詳細資訊，請參閱[客戶的意見反應的 SQL Server on Linux](sql-server-linux-customer-feedback.md)。
+如需詳細資訊，請參閱[客戶的意見反應的 SQL Server on Linux](sql-server-linux-customer-feedback.md)和[SQL Server 隱私權聲明](http://go.microsoft.com/fwlink/?LinkID=868444)。
 
 ## <a id="datadir"></a> 變更預設資料或記錄檔的目錄位置
 
@@ -353,7 +356,7 @@ ms.locfileid: "34324049"
 
     下表列出可能**coredump.coredumptype**值。
 
-    | 型別 | Description |
+    | 類型 | 描述 |
     |-----|-----|
     | **迷你** | 迷你是最小的傾印檔案類型。 它使用 Linux 系統資訊來決定執行緒和處理序中的模組。 傾印包含只有主機環境執行緒堆疊和模組。 它不包含間接記憶體參考或全域變數。 |
     | **miniplus** | MiniPlus 迷你，類似，但它包含額外的記憶體。 其了解 SQLPAL 和主機環境中，傾印中加入下列的記憶體區域的內部資訊：</br></br> -各種全域變數</br> -所有以上 64 TB 的記憶體</br> -All 名為區域中找到 **/proc/$ pid/對應**</br> 間接記憶體與執行緒堆疊</br> 執行緒的資訊</br> 關聯 Teb 的和 Peb 的</br> 模組資訊</br> VMM 和 VAD 樹狀結構 |
@@ -470,7 +473,7 @@ sudo systemctl restart mssql-server
 
 下列選項會設定 TLS 在 Linux 上執行的 SQL Server 執行個體。
 
-|選項 |Description |
+|選項 |描述 |
 |--- |--- |
 |**network.forceencryption** |如果是 1，然後[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]會強制所有連線必須加密。 根據預設，此選項為 0。 |
 |**network.tlscert** |憑證的絕對路徑檔[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]用於 TLS。 範例：`/etc/ssl/certs/mssql.pem`憑證檔案必須是可由 mssql 帳戶存取。 Microsoft 建議限制對檔案使用存取`chown mssql:mssql <file>; chmod 400 <file>`。 |
