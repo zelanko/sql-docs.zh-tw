@@ -1,0 +1,53 @@
+---
+title: 查詢處理事件的類別目錄 |Microsoft 文件
+ms.custom: ''
+ms.date: 06/13/2017
+ms.prod: sql-server-2014
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- analysis-services
+ms.tgt_pltfrm: ''
+ms.topic: article
+ms.assetid: a94b3198-be85-4935-845d-1cd4e121fc94
+caps.latest.revision: 5
+author: Minewiskan
+ms.author: owend
+manager: mblythe
+ms.openlocfilehash: ddcdd85807e9b77c5baf91cc7bb6fd4418f8316b
+ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36136290"
+---
+# <a name="query-processing-events-category"></a>查詢處理事件類別目錄
+  查詢處理事件類別目錄具有下表所描述的事件類別。  
+  
+|**Event Class**|**事件識別碼**|**說明**|  
+|---------------------|------------------|---------------------|  
+|查詢 Subcube|11|查詢 Subcube 以用於基於使用方式的最佳化。|  
+|查詢 Subcube 詳細資訊|12|查詢 Subcube 的詳細資訊。 開啟時，這個事件可能會對效能造成負面影響。|  
+|從彙總取得資料|60|藉由從彙總取得資料來回答查詢。 開啟時，這個事件可能會對效能造成負面影響。|  
+|從快取取得資料|61|藉由從其中一個快取取得資料來回答查詢。 開啟時，這個事件可能會對效能造成負面影響。|  
+|查詢 Cube 開始|70|收集自從啟動追蹤之後的所有查詢 Cube 開始事件。|  
+|查詢 Cube 結束|71|收集自從啟動追蹤之後的所有查詢 Cube 結束事件。|  
+|計算非空白開始|72|計算非空白開始。|  
+|計算非空白目前|73|計算非空白目前。|  
+|計算非空白結束|74|計算非空白結束。|  
+|序列化結果開始|75|序列化結果開始。|  
+|序列化結果目前|76|序列化結果目前。|  
+|序列化結果結束|77|序列化結果結束。|  
+|執行 MDX 指令碼開始|78|執行 MDX 指令碼開始。|  
+|執行 MDX 指令碼目前|79|執行 MDX 指令碼目前。|  
+|執行 MDX 指令碼結束|80|執行 MDX 指令碼結束。|  
+|查詢維度|81|查詢維度。|  
+|VertiPaq SE 查詢開始|82|VertiPaq SE 查詢|  
+|VertiPaq SE 查詢結束|83|VertiPaq SE 查詢|  
+  
+ 如需有關每個查詢處理事件類別相關聯之資料行的詳細資訊，請參閱＜ [Query Processing Events Data Columns](query-processing-events-data-columns.md)＞。  
+  
+## <a name="see-also"></a>另請參閱  
+ [Analysis Services 追蹤事件](analysis-services-trace-events.md)  
+  
+  

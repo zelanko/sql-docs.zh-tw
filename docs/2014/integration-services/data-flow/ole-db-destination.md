@@ -24,18 +24,15 @@ caps.latest.revision: 77
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
-ms.openlocfilehash: 5ead833d28c31a1c34da1ce6e2182cbaa418f156
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
-ms.translationtype: HT
+ms.openlocfilehash: f6b3cbdff4e837facc8a6cd2c2b0498ae6bf92a7
+ms.sourcegitcommit: d463f543e8db4a768f8e9736ff28fedb3fb17b9f
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36031265"
+ms.lasthandoff: 06/22/2018
+ms.locfileid: "36324702"
 ---
 # <a name="ole-db-destination"></a>OLE DB 目的地
   OLE DB 目的地會使用資料庫的資料表、檢視或 SQL 命令將資料載入各種符合 OLE DB 標準的資料庫。 例如，OLE DB 來源可以將資料載入至 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office Access 和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫的資料表中。  
-  
-> [!NOTE]  
->  如果資料來源為 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office Excel 2007，則資料來源需要舊版 Excel 以外的連線管理員。 如需詳細資訊，請參閱 [連接至 Excel 活頁簿](../connection-manager/connect-to-an-excel-workbook.md)。  
   
  OLE DB 目的地提供用於載入資料的五種不同資料存取模式：  
   

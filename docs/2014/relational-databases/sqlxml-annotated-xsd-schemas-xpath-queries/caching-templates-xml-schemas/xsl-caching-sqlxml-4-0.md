@@ -1,0 +1,51 @@
+---
+title: XSL 快取 (SQLXML 4.0) |Microsoft 文件
+ms.custom: ''
+ms.date: 06/13/2017
+ms.prod: sql-server-2014
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- database-engine
+- docset-sql-devref
+ms.tgt_pltfrm: ''
+ms.topic: reference
+helpviewer_keywords:
+- registry keys [SQLXML]
+- cache [SQLXML]
+- XSL caching [SQLXML]
+ms.assetid: 91994142-32f0-4d8d-a8cf-eb0d8b1f1999
+caps.latest.revision: 21
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: b95f2970c7d1d9848d6b58c4feaeb462c084d369
+ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36036523"
+---
+# <a name="xsl-caching-sqlxml-40"></a>XSL 快取 (SQLXML 4.0)
+  快取 XSL 樣式表可以改善效能。 第一次執行之後，如果 XSL 快取設定為 ON，XSL 樣式表仍保持在記憶體中；這樣可以改善後續處理的效能。 預設值是 ON。  
+  
+ 您可以在登錄中加入下列機碼來設定 XSL 快取大小：  
+  
+```  
+HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\MSSQLServer\Client\SQLXML4\XSLCacheSize  
+```  
+  
+> [!CAUTION]  
+>  [!INCLUDE[ssNoteRegistry](../../../includes/ssnoteregistry-md.md)]  
+  
+ XSL 快取大小應該根據可用的記憶體以及您要使用的 XSL 樣式表數目來設定。 預設值是**XSLCacheSize**大小為 31。 如果 XSL 存取速度似乎緩慢，您可以增加快取大小，或者如果記憶體不足，則減少快取大小。  
+  
+ 如需更好的效能，建議您設定**XSLCacheSize**比您通常使用的 XSL 樣式表數目高。 如果**XSLCacheSize**是小於的數目 XSL 樣式的表，在效能降低的 XSL 樣式表增加而增加數字。 **XSLCacheSize**可以設為上限 128。  
+  
+ 每次使用快取的 XSL 樣式表時，就會檢查 XSL 檔的修改時間以判斷該 XSL 檔是否需要重新整理。 這是因為磁碟副本比快取副本新的緣故。  
+  
+## <a name="see-also"></a>另請參閱  
+ [範本快取&#40;SQLXML 4.0&#41;](template-caching-sqlxml-4-0.md)   
+ [結構描述快取&#40;SQLXML 4.0&#41;](schema-caching-sqlxml-4-0.md)  
+  
+  
