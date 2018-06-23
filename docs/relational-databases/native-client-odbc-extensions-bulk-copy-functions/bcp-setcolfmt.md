@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: native-client-odbc-extensions-bulk-copy-functions
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: connectivity
 ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
@@ -24,12 +22,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: ad3993a22e0b2ec2091b0d37598f9cd6546d34aa
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 69183e2c4b9343a822727dd2f56baf978a4d7de1
+ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32947783"
+ms.lasthandoff: 06/18/2018
+ms.locfileid: "35701479"
 ---
 # <a name="bcpsetcolfmt"></a>bcp_setcolfmt
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -60,10 +58,10 @@ RETCODE bcp_setcolfmt (
  *field*  
  這是要設定屬性的序數資料行編號。  
   
- *屬性*  
+ *property*  
  這是其中一個屬性常數。 屬性常數會在這個資料表中定義。  
   
-|屬性|Value|Description|  
+|屬性|ReplTest1|描述|  
 |--------------|-----------|-----------------|  
 |BCP_FMT_TYPE|BYTE|這是使用者檔案中，此資料行的資料類型。 如果與資料庫資料表中，對應資料行的資料類型不同，大量複製就會轉換資料 (如果可能的話)。<br /><br /> BCP_FMT_TYPE 參數是透過 sqlncli.h 中的 SQL Server 資料類型 Token，而非透過 ODBC C 資料類型列舉值列舉。 例如，您可以使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 專屬類型 SQLCHARACTER 來指定字元字串 ODBC type SQL_C_CHAR。<br /><br /> 若要指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料類型的預設資料表示法，將此參數設定為 0。<br /><br /> 從 SQL Server 大量複製到檔案中，當 BCP_FMT_TYPE 為 SQLDECIMAL 或 sqlnumeric 時，如果來源資料行不是**十進位**或**數值**，會使用預設有效位數和小數位數。 否則，如果來源資料行是**十進位**或**數值**，使用的有效位數和小數位數的來源資料行。|  
 |BCP_FMT_INDICATOR_LEN|INT|這是指標 (前置詞) 的位元組長度。<br /><br /> 這是資料行資料內，長度/null 指標的長度 (以位元組為單位)。 有效的指標長度值為 0 (不使用指標時)、1、2 或 4。<br /><br /> 若要指定預設大量複製指標使用率，將此參數設定為 SQL_VARLEN_DATA。<br /><br /> 這些指標會出現在任何資料正前方的記憶體中，以及所套用之資料正前方的資料檔案中。<br /><br /> 如果使用多種指定資料檔案資料行長度的方式 (例如指標和最大資料行長度，或指標和結束字元順序)，大量複製會選擇導致複製最少量資料的方式。<br /><br /> 大量複製在不透過使用者操作來調整資料格式時所產生的資料檔案，會在資料行資料長度可以改變，或資料行可以當做值接受 NULL 時包含指標。|  
@@ -117,7 +115,7 @@ RETCODE bcp_setcolfmt (
 ## <a name="bcpsetcolfmt-support-for-enhanced-date-and-time-features"></a>bcp_setcolfmt 對於增強型日期和時間功能的支援  
  搭配日期/時間類型之 BCP_FMT_TYPE 屬性類型為當做中所指定[增強型日期和時間類型的大量複製變更&#40;OLE DB 和 ODBC&#41;](../../relational-databases/native-client-odbc-date-time/bulk-copy-changes-for-enhanced-date-and-time-types-ole-db-and-odbc.md)。  
   
- 如需詳細資訊，請參閱[日期和時間增強功能 & #40; ODBC & #41;](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)。  
+ 如需詳細資訊，請參閱[日期和時間增強功能&#40;ODBC&#41;](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)。  
   
 ## <a name="see-also"></a>另請參閱  
  [大量複製函數](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/sql-server-driver-extensions-bulk-copy-functions.md)  

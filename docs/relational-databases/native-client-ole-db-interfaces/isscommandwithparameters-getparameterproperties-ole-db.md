@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: native-client-ole-db-interfaces
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: connectivity
 ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
@@ -22,12 +20,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 713169c273466260872ba29d65ab9c691dc5baf6
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: c96abfb3a15580222a94bd490793cd17b7d13e14
+ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32949003"
+ms.lasthandoff: 06/18/2018
+ms.locfileid: "35703649"
 ---
 # <a name="isscommandwithparametersgetparameterproperties-ole-db"></a>ISSCommandWithParameters::GetParameterProperties (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -49,10 +47,10 @@ HRESULT GetParameterProperties(
  中包含的 SSPARAMPROPS 結構數目的記憶體指標，傳回*prgParamProperties*。  
   
  *prgParamProperties*[out]  
- 藉其傳回 SSPARAMPROPS 結構陣列的記憶體指標。 提供者會為結構配置記憶體，並將位址傳回給這個記憶體中;取用者釋放此記憶體與**imalloc:: Free**當它不再需要的結構。 然後再呼叫**imalloc:: Free**如*prgParamProperties*，取用者也必須呼叫**Vvalue**如*vValue*屬性之每個 DBPROP 結構，以避免記憶體流失的情況下在變數包含參考類型 （例如 BSTR。)如果*pcParams*零輸出或發生錯誤 DB_E_ERRORSOCCURRED 之外，提供者不會配置任何記憶體，並確定*prgParamProperties*輸出上的 null 指標。  
+ 藉其傳回 SSPARAMPROPS 結構陣列的記憶體指標。 提供者會為結構配置記憶體，並將位址傳回給這個記憶體中;取用者釋放此記憶體與**imalloc:: Free**當它不再需要的結構。 然後再呼叫**imalloc:: Free**如*prgParamProperties*，取用者也必須呼叫**Vvalue**如*vValue*屬性每個 DBPROP 結構，以避免記憶體流失情況下在變數包含參考類型 （例如 BSTR。)如果*pcParams*零輸出或發生錯誤 DB_E_ERRORSOCCURRED 之外，提供者不會配置任何記憶體，並確定*prgParamProperties*輸出上的 null 指標。  
   
 ## <a name="return-code-values"></a>傳回碼值  
- **GetParameterProperties**方法會傳回相同的錯誤碼與核心 OLE DB **icommandproperties:: Getproperties**無法引發 DB_S_ERRORSOCCURRED 和 DB_E_ERRORSOCCURED 之外除外的方法。  
+ **GetParameterProperties**方法會傳回相同的錯誤碼與核心 OLE DB **icommandproperties:: Getproperties**無法方法，除了 DB_S_ERRORSOCCURRED 和 DB_E_ERRORSOCCURED 之外引發。  
   
 ## <a name="remarks"></a>備註  
  **Getparameterinfo**行為一致，相對於**GetParameterInfo**。 如果[isscommandwithparameters::](../../relational-databases/native-client-ole-db-interfaces/isscommandwithparameters-setparameterproperties-ole-db.md)或**SetParameterInfo**尚未呼叫或呼叫 cparams 等於零， **GetParameterInfo**衍生參數資訊，並傳回此。 如果**isscommandwithparameters::** 或**SetParameterInfo**至少一個參數，在呼叫**Getparameterinfo**傳回這些參數的屬性為其**isscommandwithparameters::** 已呼叫。 如果**isscommandwithparameters::** 之後呼叫**Getparameterinfo**或**GetParameterInfo**，後續呼叫**Getparameterinfo**覆寫這些參數的值傳回的**isscommandwithparameters::** 已呼叫。  
@@ -69,13 +67,13 @@ HRESULT GetParameterProperties(
   
  `};`  
   
-|成員|Description|  
+|成員|描述|  
 |------------|-----------------|  
 |*iOrdinal*|所傳遞參數的序數。|  
 |*cPropertySets*|的 DBPROPSET 結構數目中*rgPropertySets*。|  
 |*rgPropertySets*|藉其傳回 DBPROPSET 結構陣列的記憶體指標。|  
   
 ## <a name="see-also"></a>另請參閱  
- [ISSCommandWithParameters & #40; OLE DB & #41;](../../relational-databases/native-client-ole-db-interfaces/isscommandwithparameters-ole-db.md)  
+ [ISSCommandWithParameters &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-interfaces/isscommandwithparameters-ole-db.md)  
   
   

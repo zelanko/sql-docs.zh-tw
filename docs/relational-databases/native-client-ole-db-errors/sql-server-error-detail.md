@@ -4,10 +4,9 @@ ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: native-client-ole-db-errors
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: connectivity
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -18,17 +17,16 @@ helpviewer_keywords:
 - OLE DB error handling, error details
 - ISQLServerErrorInfo interface
 ms.assetid: 51500ee3-3d78-47ec-b90f-ebfc55642e06
-caps.latest.revision: 28
 author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 7dbaa5d805b8b1102e07b0e63bf269129077e539
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: b4b70a652ace8f7ccaf89ed23434ebed15410102
+ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32945143"
+ms.lasthandoff: 06/18/2018
+ms.locfileid: "35701989"
 ---
 # <a name="sql-server-error-detail"></a>SQL Server 錯誤詳細資料
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -38,7 +36,7 @@ ms.locfileid: "32945143"
   
  有兩種方式以取得存取權**ISQLServerErrorInfo**介面。  
   
- 取用者可以呼叫**ierrorrecords:: Getcustomererrorobject**取得**ISQLServerErrorInfo**指標，如下列程式碼範例所示。 (沒有不需要取得**ISQLErrorInfo。**)同時**ISQLErrorInfo**和**ISQLServerErrorInfo**是自訂的 OLE DB 錯誤物件，其中**ISQLServerErrorInfo**被用來取得伺服器錯誤資訊，包括程序名稱和行號之類的詳細資料的介面。  
+ 取用者可以呼叫**ierrorrecords:: Getcustomererrorobject**取得**ISQLServerErrorInfo**指標，如下列程式碼範例所示。 (沒有不需要取得**ISQLErrorInfo。**)同時**ISQLErrorInfo**和**ISQLServerErrorInfo**是自訂的 OLE DB 錯誤物件，其中**ISQLServerErrorInfo**被用來取得資訊的介面伺服器錯誤，包括程序名稱和行號之類的詳細資料。  
   
 ```  
 // Get the SQL Server custom error object.  
@@ -53,7 +51,7 @@ if(FAILED(hr=pIErrorRecords->GetCustomErrorObject(
   
  SSERRORINFO 結構成員會依下列方式由取用者解譯。  
   
-|成員|Description|  
+|成員|描述|  
 |------------|-----------------|  
 |*pwszMessage*|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 錯誤訊息。 在傳回的字串相同**ierrorinfo:: Getdescription**。|  
 |*pwszServer*|工作階段的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體名稱。|  
@@ -65,6 +63,6 @@ if(FAILED(hr=pIErrorRecords->GetCustomErrorObject(
   
 ## <a name="see-also"></a>另請參閱  
  [錯誤](../../relational-databases/native-client-ole-db-errors/errors.md)   
- [RAISERROR & #40;TRANSACT-SQL & #41;](../../t-sql/language-elements/raiserror-transact-sql.md)  
+ [RAISERROR &#40;Transact-SQL&#41;](../../t-sql/language-elements/raiserror-transact-sql.md)  
   
   

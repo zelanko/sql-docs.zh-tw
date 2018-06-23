@@ -26,11 +26,12 @@ author: jovanpop-msft
 ms.author: jovanpop
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2017 || = sqlallproducts-allversions
-ms.openlocfilehash: 148c1d6573b0731b0b3dc4361dfafb8d98de7048
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.openlocfilehash: ff9639268b4b7db33cd36f0cb6dc9d0407379ade
+ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2018
+ms.lasthandoff: 06/18/2018
+ms.locfileid: "35702229"
 ---
 # <a name="sysdmdbtuningrecommendations-transact-sql"></a>sys.dm\_db\_微調\_建議 (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
@@ -39,14 +40,14 @@ ms.lasthandoff: 05/23/2018
   
  在 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]，動態管理檢視不可以公開可能會影響資料庫內含項目的資訊或公開有關使用者可存取之其他資料庫的資訊。 為了避免公開此資訊，包含不屬於連接租用戶之資料的每個資料列都會被篩選出來。
 
-| **資料行名稱** | **資料類型** | **說明** |
+| **資料行名稱** | **Data type** | **說明** |
 | --- | --- | --- |
 | **name** | **nvarchar(4000)** | 建議的唯一名稱。 |
 | **type** | **nvarchar(4000)** | 產生的建議，例如自動微調選項的名稱 `FORCE_LAST_GOOD_PLAN` |
 | **reason** | **nvarchar(4000)** | 為什麼提供這項建議的原因。 |
 | **valid\_since** | **datetime2** | 第一次產生這項建議。 |
 | **最後一個\_重新整理** | **datetime2** | 最後一次產生這項建議。 |
-| **狀態** | **nvarchar(4000)** | JSON 文件描述建議事項的狀態。 可用的欄位如下：<br />-   `currentValue` -建議的目前狀態。<br />-   `reason` – 說明建議處於目前狀態的常數。|
+| **state** | **nvarchar(4000)** | JSON 文件描述建議事項的狀態。 可用的欄位如下：<br />-   `currentValue` -建議的目前狀態。<br />-   `reason` – 說明建議處於目前狀態的常數。|
 | **is\_executable\_action** | **bit** | 1 = 建議可以針對透過資料庫來執行[!INCLUDE[tsql_md](../../includes/tsql_md.md)]指令碼。<br />0 = 無法針對資料庫執行的建議事項 (例如： 資訊只有或已還原的建議) |
 | **是\_revertable\_動作** | **bit** | 1 = 建議可以自動監控和 Database engine 所還原。<br />0 = 建議無法自動監控和還原。 大部分&quot;可執行檔&quot;動作將會是&quot;revertable&quot;。 |
 | **execute\_action\_start\_time** | **datetime2** | 套用建議的日期。 |
@@ -64,7 +65,7 @@ ms.lasthandoff: 05/23/2018
  所傳回的資訊`sys.dm_db_tuning_recommendations`資料庫引擎會識別可能發生的查詢效能低下，並不會保存時，會更新。 建議會保留只[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]重新啟動。 如果想要保留在伺服器回收之後，資料庫管理員應該定期製作微調建議的備份副本。 
 
  `currentValue` 欄位中`state`資料行可能會有下列值：
- | 狀態 | Description |
+ | [狀態] | 描述 |
  |--------|-------------|
  | `Active` | 建議是使用中和未套用。 使用者可以使用建議指令碼，並手動執行它。 |
  | `Verifying` | 建議由套用[!INCLUDE[ssde_md](../../includes/ssde_md.md)]和內部驗證程序的比較與迴歸的計劃強制執行的計畫的效能。 |
@@ -74,7 +75,7 @@ ms.lasthandoff: 05/23/2018
 
 中的 JSON 文件`state`資料行包含描述為何中的目前狀態的建議動作的原因。 在 [原因] 欄位中的值可能是： 
 
-| Reason | Description |
+| Reason | 描述 |
 |--------|-------------|
 | `SchemaChanged` | 建議過期，因為參考的資料表結構描述變更。 |
 | `StatisticsChanged`| 建議過期，因為被參考的資料表上統計資料變更。 |
@@ -91,9 +92,9 @@ ms.lasthandoff: 05/23/2018
  在詳細資料資料行的統計資料不會顯示執行階段計畫統計資料 （例如，目前 CPU 時間）。 建議的詳細資料所攝取的迴歸偵測和描述為何[!INCLUDE[ssde_md](../../includes/ssde_md.md)]識別效能變差。 使用`regressedPlanId`和`recommendedPlanId`查詢[查詢存放區目錄檢視](../../relational-databases/performance/how-query-store-collects-data.md)尋找確切執行階段計畫的統計資料。
 
 ## <a name="using-tuning-recommendations-information"></a>使用微調建議的資訊  
- 若要取得的 T-SQL 指令碼會修正此問題，您可以使用下列查詢：  
+您可以使用下列查詢取得[!INCLUDE[tsql](../../includes/tsql-md.md)]指令碼，將會修正此問題：  
  
-```
+```sql
 SELECT name, reason, score,
         JSON_VALUE(details, '$.implementationDetails.script') as script,
         details.* 

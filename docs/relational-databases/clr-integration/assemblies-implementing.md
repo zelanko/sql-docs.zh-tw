@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: clr
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
-ms.tgt_pltfrm: ''
+ms.technology: reference
 ms.topic: reference
 helpviewer_keywords:
 - assemblies [CLR integration], implementing
@@ -17,12 +15,12 @@ caps.latest.revision: 33
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 9ba5a73921a2690c10f1b2610c6fb071824baf89
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: dd0f474a0d71f0cb760f12a0c743696fddeac191
+ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32921283"
+ms.lasthandoff: 06/18/2018
+ms.locfileid: "35695169"
 ---
 # <a name="assemblies---implementing"></a>-實作組件
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -119,7 +117,7 @@ ms.locfileid: "32921283"
 -   [ALTER ASSEMBLY &#40;Transact-SQL&#41;](../../t-sql/statements/alter-assembly-transact-sql.md)  
   
 ## <a name="see-also"></a>另請參閱  
- [組件 & #40; Database engine& #41;](../../relational-databases/clr-integration/assemblies-database-engine.md)   
+ [組件&#40;Database Engine&#41;](../../relational-databases/clr-integration/assemblies-database-engine.md)   
  [取得組件的相關資訊](../../relational-databases/clr-integration/assemblies-getting-information.md)  
   
   

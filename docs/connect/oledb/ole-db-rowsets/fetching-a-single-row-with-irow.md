@@ -2,9 +2,10 @@
 title: 擷取單一資料列使用 irow 來 |Microsoft 文件
 description: 擷取 SQL server 使用 IRow 介面的 OLE DB 驅動程式的單一資料列
 ms.custom: ''
-ms.date: 03/26/2018
+ms.date: 06/14/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.component: oledb|ole-db-rowsets
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: connectivity
@@ -20,15 +21,17 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 7c75eabde5d5691980e0470efd753715015b3011
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
+ms.openlocfilehash: 21123e4d9918216f9b23ca2c7304bdcb1be2b0c7
+ms.sourcegitcommit: 03ba89937daeab08aa410eb03a52f1e0d212b44f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35306387"
+ms.lasthandoff: 06/16/2018
+ms.locfileid: "35690041"
 ---
 # <a name="fetching-a-single-row-with-irow"></a>使用 IRow 來提取單一資料列
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+
+[!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
   **IRow**介面實作 OLE DB 驅動程式中的，針對 SQL Server 已經過簡化，以提升效能。 **IRow**允許直接存取單一資料列物件的資料行。 如果您事先知道命令執行的結果將會產生一個資料列， **IRow**會擷取該資料列的資料行。 如果結果集包含多個資料列， **IRow**會公開 （expose) 的第一個資料列。  
   

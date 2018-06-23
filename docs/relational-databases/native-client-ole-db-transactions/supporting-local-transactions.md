@@ -4,10 +4,9 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: native-client-ole-db-transactions
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: connectivity
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -23,12 +22,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 59755ef9ebb3813ea78c354234dc5df3be8ea1ae
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 6d05f258ab240c6a9f4d3ecd34aa41755d6ba81c
+ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32953853"
+ms.lasthandoff: 06/18/2018
+ms.locfileid: "35695109"
 ---
 # <a name="supporting-local-transactions"></a>支援本機交易
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -42,7 +41,7 @@ ms.locfileid: "32953853"
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者支援**itransactionlocal:: Starttransaction**參數，如下所示。  
   
-|매개 변수|Description|  
+|參數|描述|  
 |---------------|-----------------|  
 |*isoLevel*[in]|與此交易搭配使用的隔離等級。 在本機交易， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者支援下列：<br /><br /> **ISOLATIONLEVEL_UNSPECIFIED**<br /><br /> **ISOLATIONLEVEL_CHAOS**<br /><br /> **ISOLATIONLEVEL_READUNCOMMITTED**<br /><br /> **ISOLATIONLEVEL_READCOMMITTED**<br /><br /> **ISOLATIONLEVEL_REPEATABLEREAD**<br /><br /> **ISOLATIONLEVEL_CURSORSTABILITY**<br /><br /> **ISOLATIONLEVEL_REPEATABLEREAD**<br /><br /> **ISOLATIONLEVEL_SERIALIZABLE 的情況下**<br /><br /> **ISOLATIONLEVEL_ISOLATED**<br /><br /> **ISOLATIONLEVEL_SNAPSHOT**<br /><br /> <br /><br /> 注意︰ 開頭[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]，ISOLATIONLEVEL_SNAPSHOT 都是有效的*isoLevel*是否啟用資料庫的版本控制的引數。 不過，如果使用者嘗試執行執行陳述式，而未啟用版本控制且/或資料庫不是唯讀的，則會發生錯誤。 此外，如果 ISOLATIONLEVEL_SNAPSHOT 指定為將會發生 XACT_E_ISOLATIONLEVEL 錯誤*isoLevel*連線到的版本時[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]早於[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]。|  
 |*isoFlags*[in]|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者會傳回錯誤，而任何非零的值。|  
@@ -51,7 +50,7 @@ ms.locfileid: "32953853"
   
  若是本機交易， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者會實作**itransaction:: Abort**參數，如下所示。  
   
-|매개 변수|Description|  
+|參數|描述|  
 |---------------|-----------------|  
 |*pboidReason*[in]|如果設定，則略過。 可以安全地成為 NULL。|  
 |*fRetaining*[in]|當為 TRUE 時，就會針對工作階段隱含地開始新的交易。 此交易必須由取用者認可或結束。 若為 FALSE， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者會還原到自動認可模式工作階段。|  
@@ -59,7 +58,7 @@ ms.locfileid: "32953853"
   
  若是本機交易， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者會實作**itransaction:: Commit**參數，如下所示。  
   
-|매개 변수|Description|  
+|參數|描述|  
 |---------------|-----------------|  
 |*fRetaining*[in]|當為 TRUE 時，就會針對工作階段隱含地開始新的交易。 此交易必須由取用者認可或結束。 若為 FALSE， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者會還原到自動認可模式工作階段。|  
 |*grfTC*[in]|不支援非同步和第一階段傳回是[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client OLE DB 提供者。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者 XACT_E_NOTSUPPORTED xacttc_sync 的任何值傳回 XACT_E_NOTSUPPORTED。|  

@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 04/04/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: native-client|features
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: ''
@@ -16,12 +15,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 193226bd9ef0b21771479e245c69cd4ea2402a08
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d4ca109f20ec60baba09920639a80970abb248c7
+ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32957373"
+ms.lasthandoff: 06/18/2018
+ms.locfileid: "35700109"
 ---
 # <a name="sql-server-native-client-support-for-high-availability-disaster-recovery"></a>高可用性/災害復原的 SQL Server Native Client 支援
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -99,7 +98,7 @@ ms.locfileid: "32957373"
   
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC 應用程式可以使用三個函數的其中一個進行連接：  
   
-|函數|Description|  
+|函數|描述|  
 |--------------|-----------------|  
 |[SQLBrowseConnect](../../../relational-databases/native-client-odbc-api/sqlbrowseconnect.md)|**SQLBrowseConnect** 傳回的伺服器清單不包括 VNN。 您只會看到伺服器清單，無從得知伺服器是否為獨立伺服器或是 Windows Server 容錯移轉叢集 (WSFC) 中，包含兩個或多個已啟用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 之 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 執行個體的主要或次要伺服器。 如果您連接到伺服器而且發生失敗狀況，可能是因為您已經連接到伺服器，而且 **ApplicationIntent** 設定與伺服器組態不相容。<br /><br /> 因為 **SQLBrowseConnect** 無法辨識 Windows Server 容錯移轉叢集 (WSFC) 中，包含兩個或多個已啟用 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 之 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體的伺服器，所以 **SQLBrowseConnect** 會忽略 **MultiSubnetFailover** 連接字串關鍵字。|  
 |[SQLConnect](../../../relational-databases/native-client-odbc-api/sqlconnect.md)|**SQLConnect** 可透過資料來源名稱 (DSN) 或連接屬性來支援 **ApplicationIntent** 和 **MultiSubnetFailover** 。|  

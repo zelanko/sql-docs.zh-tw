@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/20/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: clr
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
-ms.tgt_pltfrm: ''
+ms.technology: reference
 ms.topic: reference
 helpviewer_keywords:
 - managed code [SQL Server]
@@ -23,12 +21,12 @@ caps.latest.revision: 64
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 5462a7407a06364ddc4a1587271d6987c233acf4
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: ebc2a886b525d356dadaa665e0d1815fb6e97d91
+ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32920733"
+ms.lasthandoff: 06/18/2018
+ms.locfileid: "35701699"
 ---
 # <a name="common-language-runtime-integration-overview"></a>Common Language Runtime 整合概觀
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
