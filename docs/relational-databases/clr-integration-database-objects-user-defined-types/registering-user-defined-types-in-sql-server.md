@@ -3,11 +3,9 @@ title: 註冊 SQL Server 中的使用者定義型別 |Microsoft 文件
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
-ms.prod_service: database-engine
-ms.component: clr
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: reference
 ms.tgt_pltfrm: ''
 ms.topic: reference
 dev_langs:
@@ -38,12 +36,12 @@ caps.latest.revision: 25
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: c008844b49d907eb03e2358327f0f71959495675
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 942f6c1fa0b6888aa936bfd4b557c570529e9894
+ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32922843"
+ms.lasthandoff: 06/18/2018
+ms.locfileid: "35697819"
 ---
 # <a name="registering-user-defined-types-in-sql-server"></a>在 SQL Server 中註冊使用者定義型別
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -65,14 +63,14 @@ ms.locfileid: "32922843"
 5.  從**建置**功能表上，選取**部署**。 如此將會在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫中註冊組件並建立型別。  
   
 ## <a name="using-transact-sql-to-deploy-udts"></a>使用 Transact-SQL 部署 UDT  
- 您可以使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] CREATE ASSEMBLY 語法，於要使用 UDT 的資料庫中註冊組件。 它會儲存於資料庫系統資料表內部，而非檔案系統外部。 如果 UDT 與外部組件相關，也必須將它們載入資料庫。 CREATE TYPE 陳述式可在要使用 UDT 的資料庫內建立 UDT。 如需詳細資訊，請參閱[CREATE ASSEMBLY & #40;TRANSACT-SQL & #41;](../../t-sql/statements/create-assembly-transact-sql.md)和[建立類型 & #40;TRANSACT-SQL & #41;](../../t-sql/statements/create-type-transact-sql.md).  
+ 您可以使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] CREATE ASSEMBLY 語法，於要使用 UDT 的資料庫中註冊組件。 它會儲存於資料庫系統資料表內部，而非檔案系統外部。 如果 UDT 與外部組件相關，也必須將它們載入資料庫。 CREATE TYPE 陳述式可在要使用 UDT 的資料庫內建立 UDT。 如需詳細資訊，請參閱[CREATE ASSEMBLY &#40;TRANSACT-SQL&#41; ](../../t-sql/statements/create-assembly-transact-sql.md)和[CREATE TYPE &#40;TRANSACT-SQL&#41;](../../t-sql/statements/create-type-transact-sql.md)。  
   
 ### <a name="using-create-assembly"></a>使用 CREATE ASSEMBLY  
  CREATE ASSEMBLY 語法會在要使用 UDT 的資料庫中註冊組件。 一旦註冊此組件，它就不具有相依性。  
   
  不允許在給定資料庫內建立同一組件的多個版本。 但是，根據給定資料庫中的文化特性建立相同組件的多個版本是可行的。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會根據 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體內所註冊的不同名稱來區分某個組件的多個文化特性版本。 如需詳細資訊，請參閱 .NET Framework SDK 中的＜建立和使用強式名稱的組件＞。  
   
- 當使用 SAFE 或 EXTERNAL_ACCESS 權限集合執行 CREATE ASSEMBLY 時，系統會檢查組件，以確定它可進行驗證且型別是安全的。 如果您省略指定使用權限集合，則會假設為 SAFE。 系統不會檢查使用 UNSAFE 權限集合的程式碼。 如需組件的權限集的詳細資訊，請參閱[設計組件](../../relational-databases/clr-integration/assemblies-designing.md)。  
+ 當使用 SAFE 或 EXTERNAL_ACCESS 權限集合執行 CREATE ASSEMBLY 時，系統會檢查組件，以確定它可進行驗證且型別是安全的。 如果您省略指定使用權限集合，則會假設為 SAFE。 系統不會檢查使用 UNSAFE 權限集合的程式碼。 如需有關組件權限集合的詳細資訊，請參閱[設計組件](../../relational-databases/clr-integration/assemblies-designing.md)。  
   
 #### <a name="example"></a>範例  
  下列[!INCLUDE[tsql](../../includes/tsql-md.md)]陳述式註冊中的將 Point 組件[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中**AdventureWorks**具有 SAFE 權限集合。 如果省略 WITH PERMISSION_SET 子句，將會使用 SAFE 權限集合註冊該組件。  
@@ -98,7 +96,7 @@ FROM 0xfeac4 … 21ac78
 > [!NOTE]  
 >  CREATE TYPE 語法也用於建立原生[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]別名資料類型，而且用來取代**sp_addtype**做為建立別名資料類型。 CREATE TYPE 語法中的某些選擇性引數會參考建立 UDT，且不適用於建立別名資料類型 (如基底類型)。  
   
- 如需詳細資訊，請參閱[CREATE TYPE & #40;TRANSACT-SQL & #41;](../../t-sql/statements/create-type-transact-sql.md).  
+ 如需詳細資訊，請參閱[CREATE TYPE &#40;TRANSACT-SQL&#41;](../../t-sql/statements/create-type-transact-sql.md)。  
   
 #### <a name="example"></a>範例  
  下列[!INCLUDE[tsql](../../includes/tsql-md.md)]陳述式會建立**點**型別。 使用兩部分命名語法指定外部名稱*AssemblyName*。*UDTName*。  
@@ -153,7 +151,7 @@ SELECT o.name AS major_name, o.type_desc AS major_type_desc
  一旦在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫中建立 UDT，便無法對其進行修改，但可以改變此型別所依據的組件。 在大多數情況下，您必須使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] DROP TYPE 陳述式從資料庫中移除 UDT、對基礎組件進行變更，並使用 ALTER ASSEMBLY 陳述式將其重新載入。 然後需要重新建立 UDT 及一切相依物件。  
   
 ### <a name="example"></a>範例  
- 當您變更並重新編譯 UDT 組件中的原始程式碼之後，可以使用 ALTER ASSEMBLY 陳述式。 它會將此 .dll 檔案複製到伺服器，並重新繫結至新的組件。 如需完整語法，請參閱[ALTER ASSEMBLY & #40;TRANSACT-SQL & #41;](../../t-sql/statements/alter-assembly-transact-sql.md).  
+ 當您變更並重新編譯 UDT 組件中的原始程式碼之後，可以使用 ALTER ASSEMBLY 陳述式。 它會將此 .dll 檔案複製到伺服器，並重新繫結至新的組件。 如需完整語法，請參閱[ALTER ASSEMBLY &#40;TRANSACT-SQL&#41;](../../t-sql/statements/alter-assembly-transact-sql.md)。  
   
  下列 [!INCLUDE[tsql](../../includes/tsql-md.md)] ALTER ASSEMBLY 陳述式會從指定的磁碟位置重新載入 Point.dll 組件。  
   

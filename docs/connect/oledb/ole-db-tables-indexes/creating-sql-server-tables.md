@@ -2,9 +2,10 @@
 title: 建立 SQL Server 資料表 |Microsoft 文件
 description: 建立使用 SQL Server 的 OLE DB 驅動程式的 SQL Server 資料表
 ms.custom: ''
-ms.date: 03/26/2018
+ms.date: 06/14/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.component: oledb|ole-db-tables-indexes
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: connectivity
@@ -19,15 +20,17 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 6b26077abc7d714ffebdf36068a2f3d5fc081d7e
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
+ms.openlocfilehash: d9c2e60b177a38e684eb92c1b406e091b575d675
+ms.sourcegitcommit: 03ba89937daeab08aa410eb03a52f1e0d212b44f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35306777"
+ms.lasthandoff: 06/16/2018
+ms.locfileid: "35689591"
 ---
 # <a name="creating-sql-server-tables"></a>建立 SQL Server 資料表
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+
+[!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
   SQL Server OLE DB 驅動程式會公開**itabledefinition:: Createtable**函式，讓取用者建立[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]資料表。 取用者會使用**CreateTable**來建立取用者命名的永久資料表或永久或暫存資料表具有 for SQL Server OLE DB 驅動程式所產生的唯一名稱。  
   
@@ -62,7 +65,7 @@ ms.locfileid: "35306777"
 |DBPROP_COL_DESCRIPTION|R/W：讀取/寫入<br /><br /> 預設值：無<br /><br /> 描述： DBPROP_COL_DESCRIPTION 資料行屬性是不會實作 OLE DB 驅動程式的 SQL Server。<br /><br /> *DwStatus*取用者嘗試寫入屬性值時，DBPROP 結構的成員會傳回 DBPROPSTATUS_NOTSUPPORTED。<br /><br /> 將屬性設定不會構成嚴重錯誤的 OLE DB 驅動程式的 SQL Server。 如果其他所有參數值都有效，則會建立 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 資料表。|  
 |DBPROP_COL_FIXEDLENGTH|R/W：讀取/寫入<br /><br /> 預設值：VARIANT_FALSE<br /><br /> 描述： SQL Server OLE DB 驅動程式會使用 DBPROP_COL_FIXEDLENGTH 來決定資料類型對應，取用者使用定義的資料行資料類型時*wType* DBCOLUMNDESC 的成員。 如需詳細資訊，請參閱[ITableDefinition 中的資料類型對應](../../oledb/ole-db-data-types/data-type-mapping-in-itabledefinition.md)。|  
 |DBPROP_COL_NULLABLE|R/W：讀取/寫入<br /><br /> 預設值：無<br /><br /> 描述： 在建立資料表時，SQL Server OLE DB 驅動程式會指出是否在設定屬性，資料行是否應該接受 null 值。 未設定屬性時，資料行是否能夠接受 NULL 做為值取決於 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ANSI_NULLS 預設資料庫選項。<br /><br /> SQL Server OLE DB 驅動程式是符合 ISO 的提供者。 已連接的工作階段會表現 ISO 行為。 如果取用者沒有設定 DBPROP_COL_NULLABLE，資料行接受 Null 值。|  
-|DBPROP_COL_PRIMARYKEY|R/W：讀取/寫入<br /><br /> 預設值： VARIANT_FALSE 描述： 當 VARIANT_TRUE 時，SQL Server OLE DB 驅動程式會建立資料行的主索引鍵條件約束。<br /><br /> 定義為資料行屬性時，只有單一資料行可以決定條件約束。 針對多個單一資料行傳回錯誤，SQL Server OLE DB 驅動程式嘗試建立時設定屬性 VARIANT_TRUE[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]資料表。<br /><br /> 注意： 取用者可以使用**iindexdefinition:: Createindex**建立兩個或多個資料行上的主索引鍵條件約束。<br /><br /> 當 DBPROP_COL_PRIMARYKEY 和 DBPROP_COL_UNIQUE 同時為 VARIANT_TRUE，SQL Server OLE DB 驅動程式會傳回 DB_S_ERRORSOCCURRED 和*dwOption* DBPROP_COL_UNIQUE 不是 dbpropoptions_required 時。<br /><br /> 當 DBPROP_COL_PRIMARYKEY 和 DBPROP_COL_UNIQUE 同時為 VARIANT_TRUE 會傳回 DB_E_ERRORSOCCURRED， *dwOption* DBPROP_COL_UNIQUE 等於 dbpropoptions_required 時。 資料行定義[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]identity 屬性，而 DBPROP_COL_PRIMARYKEY *dwStatus*成員設定為 DBPROPSTATUS_CONFLICTING。<br /><br /> 當 DBPROP_COL_PRIMARYKEY 和 DBPROP_COL_NULLABLE 同時為 VARIANT_TRUE，SQL Server OLE DB 驅動程式會傳回錯誤。<br /><br /> SQL Server OLE DB 驅動程式會傳回從錯誤[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]取用者嘗試建立無效的資料行上主索引鍵條件約束[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]資料型別。 無法使用建立的資料行上定義 PRIMARY KEY 條件約束[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]資料型別**元**，**文字**， **ntext**，和**映像**。|  
+|DBPROP_COL_PRIMARYKEY|R/W：讀取/寫入<br /><br /> 預設值： VARIANT_FALSE 描述： 當 VARIANT_TRUE 時，SQL Server OLE DB 驅動程式會建立資料行的主索引鍵條件約束。<br /><br /> 定義為資料行屬性時，只有單一資料行可以決定條件約束。 針對多個單一資料行傳回錯誤，SQL Server OLE DB 驅動程式嘗試建立時設定屬性 VARIANT_TRUE[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]資料表。<br /><br /> 注意： 取用者可以使用**iindexdefinition:: Createindex**建立兩個或多個資料行上的主索引鍵條件約束。<br /><br /> 當 DBPROP_COL_PRIMARYKEY 和 DBPROP_COL_UNIQUE 同時為 VARIANT_TRUE，SQL Server OLE DB 驅動程式會傳回 DB_S_ERRORSOCCURRED 和*dwOption* DBPROP_COL_UNIQUE 不是 dbpropoptions_required 時。<br /><br /> 當 DBPROP_COL_PRIMARYKEY 和 DBPROP_COL_UNIQUE 同時為 VARIANT_TRUE 會傳回 DB_E_ERRORSOCCURRED， *dwOption* DBPROP_COL_UNIQUE 等於 dbpropoptions_required 時。 資料行定義[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]identity 屬性，而 DBPROP_COL_PRIMARYKEY *dwStatus*成員設定為 DBPROPSTATUS_CONFLICTING。<br /><br /> 當 DBPROP_COL_PRIMARYKEY 和 DBPROP_COL_NULLABLE 同時為 VARIANT_TRUE，SQL Server OLE DB 驅動程式會傳回錯誤。<br /><br /> SQL Server OLE DB 驅動程式會傳回從錯誤[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]取用者嘗試建立無效的資料行上主索引鍵條件約束[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]資料型別。 無法使用建立的資料行上定義 PRIMARY KEY 條件約束[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]資料型別**元**，**文字**， **ntext**，和**映像**.|  
 |DBPROP_COL_UNIQUE|R/W：讀取/寫入<br /><br /> 預設值：VARIANT_FALSE 描述：將 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] UNIQUE 條件約束套用到資料行。<br /><br /> 定義為資料行屬性時，僅會在單一資料行上套用條件約束。 取用者可以使用**iindexdefinition:: Createindex**来套用的兩個或多個資料行的合計值上唯一的條件約束。<br /><br /> 當 DBPROP_COL_PRIMARYKEY 和 DBPROP_COL_UNIQUE 同時為 VARIANT_TRUE，SQL Server OLE DB 驅動程式會傳回 DB_S_ERRORSOCCURRED 和*dwOption*不是 dbpropoptions_required 時。<br /><br /> 當 DBPROP_COL_PRIMARYKEY 和 DBPROP_COL_UNIQUE 同時為 VARIANT_TRUE 會傳回 DB_E_ERRORSOCCURRED 和*dwOption*等於 dbpropoptions_required 時。 資料行定義[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]identity 屬性，而 DBPROP_COL_PRIMARYKEY *dwStatus*成員設定為 DBPROPSTATUS_CONFLICTING。<br /><br /> 當 DBPROP_COL_NULLABLE 和 DBPROP_COL_UNIQUE 同時為 VARIANT_TRUE，SQL Server OLE DB 驅動程式會傳回 DB_S_ERRORSOCCURRED 和*dwOption*不是 dbpropoptions_required 時。<br /><br /> 當 DBPROP_COL_NULLABLE 和 DBPROP_COL_UNIQUE 同時為 VARIANT_TRUE 會傳回 DB_E_ERRORSOCCURRED 和*dwOption*等於 dbpropoptions_required 時。 資料行定義[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]identity 屬性和 DBPROP_COL_NULLABLE *dwStatus*成員設定為 DBPROPSTATUS_CONFLICTING。<br /><br /> SQL Server OLE DB 驅動程式會傳回從錯誤[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]取用者嘗試建立唯一條件約束無效的資料行上[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]資料型別。 無法建立與資料行上定義 UNIQUE 條件約束[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]**元**資料型別。|  
   
  當取用者呼叫**itabledefinition:: Createtable**，SQL Server OLE DB 驅動程式會將解譯資料表屬性，如下所示。  

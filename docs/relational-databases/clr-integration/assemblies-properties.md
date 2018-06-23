@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: clr
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
-ms.tgt_pltfrm: ''
+ms.technology: reference
 ms.topic: reference
 f1_keywords:
 - sql13.swb.assemblies.general.f1
@@ -17,18 +15,18 @@ caps.latest.revision: 22
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 174e823ab1ffa0dcca61d20a875b2fbc7b8c679b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 2eaea8f9b417a11134fb59108c83d452f1954fcd
+ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32918733"
+ms.lasthandoff: 06/18/2018
+ms.locfileid: "35701189"
 ---
 # <a name="assemblies---properties"></a>組件-屬性
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   使用此頁面來檢視或修改組件的屬性。  
   
-## <a name="options"></a>選項  
+## <a name="options"></a>選項。  
  **組件名稱**  
  顯示組件名稱，此名稱永遠符合 CLR 組件的名稱。  
   
@@ -51,7 +49,7 @@ ms.locfileid: "32918733"
  **強式名稱**  
  顯示**True**經過數位簽署的組件，如果**False**如果它尚未經過數位簽署。  
   
- **版本**  
+ **版本(Version)**  
  顯示組件的版本號碼。  
   
 ## <a name="see-also"></a>另請參閱  
