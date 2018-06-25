@@ -38,7 +38,7 @@ ms.locfileid: "36146895"
 |**MarginLeft**|為報表所設定的左邊界值 (以英吋為單位)。 您必須包含的整數或十進位值，後面接著"in"(例如， `1in`)。 這個值會覆寫報表的原始設定。|  
 |**MarginRight**|為報表所設定的右邊界值 (以英吋為單位)。 您必須包含的整數或十進位值，後面接著"in"(例如， `1in`)。 這個值會覆寫報表的原始設定。|  
 |**MarginTop**|為報表所設定的上邊界值 (以英吋為單位)。 您必須包含的整數或十進位值，後面接著"in"(例如， `1in`)。 這個值會覆寫報表的原始設定。|  
-|**OutputFormat**|其中一個[!INCLUDE[ndptecgdiexpanded](../includes/ndptecgdiexpanded-md.md)]([!INCLUDE[ndptecgdi](../includes/ndptecgdi-md.md)]) 支援的輸出格式： `BMP`， `EMF`， `GIF`， `JPEG`， `PNG`，或`TIFF`。|  
+|**OutputFormat**|其中一個[!INCLUDE[ndptecgdiexpanded](../includes/ndptecgdiexpanded-md.md)] ([!INCLUDE[ndptecgdi](../includes/ndptecgdi-md.md)]) 支援的輸出格式： `BMP`， `EMF`， `GIF`， `JPEG`， `PNG`，或`TIFF`。|  
 |**PageHeight**|為報表所設定的頁面高度 (以英吋為單位)。 您必須包含的整數或十進位值，後面接著"in"(例如， `11in`)。 這個值會覆寫報表的原始設定。|  
 |**PageWidth**|為報表所設定的頁面寬度 (以英吋為單位)。 您必須包含的整數或十進位值，後面接著"in"(例如， `8.5in`)。 這個值會覆寫報表的原始設定。|  
 |**PrintDpiX**|輸出影像的水平解析度。 預設值是 `300`。 適用於增強型中繼檔 (`EMF`) 輸出格式。|  
