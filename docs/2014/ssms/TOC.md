@@ -6,6 +6,7 @@
 ### [SQL Server Management Studio Web 瀏覽器](sql-server-management-studio-web-browser.md)
 ### [外部工具對話方塊](external-tools-dialog-box.md)
 ### [引數對話方塊](arguments-dialog-box.md)
+### [外部工具的引數](use-of-sql-server-features-and-capabilities-wwi-oltp.md)
 ### [屬性視窗 (Management Studio)](properties-window-management-studio.md)
 ### [使用工具箱](use-the-toolbox.md)
 ## [SQL Server Management Studio 中的功能](../database-engine/features-in-sql-server-management-studio.md)

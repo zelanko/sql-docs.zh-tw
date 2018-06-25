@@ -69,7 +69,8 @@
 ## [SQL Server 管理物件 (SMO) 程式設計指南 +](server-management-objects-smo/sql-server-management-objects-smo-programming-guide.md)
 ## [Windows Management Instrumentation](../database-engine/dev-guide/windows-management-instrumentation.md)
 ## [設定管理的 WMI 提供者概念 +](wmi-provider-configuration/wmi-provider-for-configuration-management.md)
-
+## [SqlToolsVSNativeHelpers](sqltoolsvsnativehelpers.md)
+### [FrameWindowVisible](sqltoolsvsnativehelpers-framewindowvisible.md)
 # [Database Engine 教學課程](database-engine-tutorials.md)
 ## [教學課程：Database Engine 使用者入門](tutorial-getting-started-with-the-database-engine.md)
 ### [第 1 課：連接到資料庫引擎](lesson-1-connecting-to-the-database-engine.md)

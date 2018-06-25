@@ -53,6 +53,7 @@
 ### [伺服器多個屬性 (記錄頁面)](server-properties-history-page.md)
 ### [伺服器屬性 (記錄頁面)](server-properties-logging-page.md)
 ### [伺服器屬性 (安全性頁面)](server-properties-security-page-reporting-services.md)
+### [伺服器屬性 (進階頁面)](server-properties-advanced-page-reporting-services.md)
 ### [系統角色屬性](system-role-properties-management-studio.md)
 ### [使用者角色屬性](user-role-properties-management-studio.md)
 # [報表產生器](report-builder-authoring-environment-ssrs.md)
