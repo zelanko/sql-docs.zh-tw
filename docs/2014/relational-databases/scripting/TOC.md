@@ -37,6 +37,7 @@
 ### [選項 (查詢結果/SQL Server/以方格顯示結果頁面)](../../database-engine/options-query-results-sql-server-results-to-grid-page.md)
 ### [選項 (查詢結果/SQL Server/以文字顯示結果頁面)](../../database-engine/options-query-results-sql-server-results-to-text-page.md)
 ### [選項 (查詢結果-SQL Server-多伺服器)](../../database-engine/options-query-results-sql-server-multi-server.md)
+### [選項 (查詢執行/Analysis Server/一般頁面)](../../database-engine/options-query-execution-analysis-server-general-page.md)
 ### [選項 (查詢結果/Analysis Server/一般頁面)](../../database-engine/options-query-results-analysis-server-general-page.md)
 ### [選項 (查詢結果和相依性服務頁面)](../../database-engine/options-query-results-and-dependency-services-page.md)
 ## [開啟編輯器 (SQL Server Management Studio)](open-an-editor-sql-server-management-studio.md)

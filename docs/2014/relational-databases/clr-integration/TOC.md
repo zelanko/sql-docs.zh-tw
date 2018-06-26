@@ -58,6 +58,7 @@
 ## [存取目前交易](../clr-integration-data-access-transactions/accessing-the-current-transaction.md)
 ## [使用 System.Transactions](../clr-integration-data-access-transactions/using-system-transactions.md)
 ## [交易存留期間](../clr-integration-data-access-transactions/transaction-lifetimes.md)
+# [從 CLR 資料庫物件進行 XML 序列化](../../database-engine/dev-guide/xml-serialization-from-clr-database-objects.md)
 # [CLR 整合安全性](security/clr-integration-security.md)
 ## [CLR 整合程式碼存取安全性](security/clr-integration-code-access-security.md)
 ## [CLR 整合安全性中的連結](../../database-engine/dev-guide/links-in-clr-integration-security.md)
