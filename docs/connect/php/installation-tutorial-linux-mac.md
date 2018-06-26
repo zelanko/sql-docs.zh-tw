@@ -328,7 +328,7 @@ function FormatErrors( $errors )
 }
 ?>
 ```
-指向您的瀏覽器http://localhost/testsql.php(http://localhost:8080/testsql.php macOS 上)。 您現在應該能夠連線到您的 SQL Server/Azure SQL database。
+指向您的瀏覽器 http://localhost/testsql.php (http://localhost:8080/testsql.php macOS 上)。 您現在應該能夠連線到您的 SQL Server/Azure SQL database。
 
 ## <a name="see-also"></a>另請參閱  
 [開始使用 Microsoft Drivers for PHP for SQL Server](../../connect/php/getting-started-with-the-php-sql-driver.md)
