@@ -23,16 +23,17 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: d74e96029a7f28e6547c74c34bc5de9e0b656d8d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 45446ffcf04092574737640fd338a35f04497181
+ms.sourcegitcommit: 6e55a0a7b7eb6d455006916bc63f93ed2218eae1
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35239028"
 ---
 # <a name="datefromparts-transact-sql"></a>DATEFROMPARTS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
 
-傳回指定之年、月、日的 **date** 值。
+此函式會傳回對應至指定年份、月份和日期值的 **date** 值。
   
 ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -56,12 +57,12 @@ DATEFROMPARTS ( year, month, day )
 **date**
   
 ## <a name="remarks"></a>Remarks  
-**DATEFROMPARTS** 會傳回 **date** 值，其中日期部分會設為指定的年、月、日，而時間部分則會設為預設值。 如果引數無效，將會引發錯誤。 如果要求的引數為 null，即會傳回 null。
+`DATEFROMPARTS` 會傳回 **date** 值，其中日期部分會設為指定的年、月、日，而時間部分則會設為預設值。 若引數無效，`DATEFROMPARTS` 會引發錯誤。 如果至少一個必要引數具有 Null 值，則 `DATEFROMPARTS` 會傳回 Null。
   
-函數可以在 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 伺服器和更新版伺服器上以遠端方式進行。 它在版本低於 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 的伺服器上無法以遠端方式運作。
+此函式可以遠端處理到 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 伺服器及更新版本。 它無法遠端處理到版本低於 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 的伺服器。
   
 ## <a name="examples"></a>範例  
-以下範例示範 **DATEFROMPARTS** 函式。
+此範例示範 `DATEFROMPARTS` 函式的運作。
   
 ```sql
 SELECT DATEFROMPARTS ( 2010, 12, 31 ) AS Result;  
