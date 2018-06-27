@@ -88,12 +88,12 @@ caps.latest.revision: 255
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: d6f0416cb5e49cb04da00d7f816d3e888e221a78
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: 8a2fee1a2a0c4f52138cdbeb1580926b21eae89c
+ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34771504"
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "35999874"
 ---
 # <a name="install-sql-server-from-the-command-prompt"></a>從命令提示字元安裝 SQL Server
 
@@ -196,7 +196,7 @@ ms.locfileid: "34771504"
 |-----------------------------------------|---------------|-----------------|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝程式控制|/ACTION<br /><br /> **必要**|指出安裝工作流程的必要參數。<br /><br /> 支援的值： **Install**。|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 安裝程式控制|/IACCEPTSQLSERVERLICENSETERMS<br /><br /> **只有當您針對自動安裝指定了 /Q 或 /QS 參數時，才需要使用此參數。**|確認接受授權條款的必要參數。|  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] R 安裝程式控制|/IACCEPTPYTHONOPENLICENSETERMS <br /><br /> **只有當您針對包含 Anaconda Python 套件的自動安裝指定 /Q 或 /QS 參數時，才需要使用此參數。**|確認接受授權條款的必要參數。| 
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Python 安裝程式控制|/IACCEPTPYTHONLICENSETERMS <br /><br /> **只有當您針對包含 Anaconda Python 套件的自動安裝指定 /Q 或 /QS 參數時，才需要使用此參數。**|確認接受授權條款的必要參數。| 
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] R 安裝程式控制|/IACCEPTROPENLICENSETERMS <br /><br /> **只有當您針對包含 Microsoft R Open 套件的自動安裝指定 /Q 或 /QS 參數時，才需要使用此參數。**|確認接受授權條款的必要參數。| 
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝程式控制|/ENU<br /><br /> **選擇性**|當安裝媒體包含英文以及與作業系統對應之語言的語言套件時，使用此參數在當地語系化的作業系統上安裝英文版的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝程式控制|/UpdateEnabled<br /><br /> **選擇性**|指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝程式是否應該探索及包含產品更新。 有效值為 True 和 False 或 1 和 0。 根據預設， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝程式會包含找到的更新。|  

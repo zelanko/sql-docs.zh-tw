@@ -26,18 +26,19 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 54121ef549fb76639ec526b3128ffa8abfd7a849
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 9f63145f4a828507660b4401c3c52e79f9e49153
+ms.sourcegitcommit: 6e55a0a7b7eb6d455006916bc63f93ed2218eae1
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35239278"
 ---
 # <a name="denserank-transact-sql"></a>DENSE_RANK (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  傳回結果集分割區內之資料列次序，次序中沒有任何間距。 資料列次序是一個加上相關資料列前面之相異次序的數目。  
+此函式會傳回結果集分割區內每個資料列的次序，次序值中沒有任何間距。 特定資料列的次序是一加上該特定資料列前面之相異次序值的數目。  
   
- ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>語法  
   
@@ -47,25 +48,25 @@ DENSE_RANK ( ) OVER ( [ <partition_by_clause> ] < order_by_clause > )
   
 ## <a name="arguments"></a>引數  
  \<partition_by_clause>  
- 將 [FROM](../../t-sql/queries/from-transact-sql.md) 子句所產生的結果集分割成套用 DENSE_RANK 函式的分割區。 如需 PARTITION BY 的語法，請參閱 [OVER 子句 &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md)。  
+首先將 [FROM](../../t-sql/queries/from-transact-sql.md) 子句產生的結果集分割成分割區，然後將 `DENSE_RANK` 函式套用至每個分割區。 如需 `PARTITION BY` 語法，請參閱 [OVER 子句 &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md)。  
   
  \<order_by_clause>  
- 決定將 DENSE_RANK 函數套用於分割區中之資料列的順序。  
+決定將 `DENSE_RANK` 函式套用至分割區中資料列的順序。  
   
 ## <a name="return-types"></a>傳回類型  
  **bigint**  
   
 ## <a name="remarks"></a>Remarks  
- 如果在相同分割區中，針對某個次序聯結了兩個或更多資料列，每個聯結的資料列都會收到相同的次序。 例如，如果兩位超級業務員有相同的 SalesYTD 值，他們的次序便都是第一。 SalesYTD 次高的業務員之次序便是第二。 這便是在這個資料列之前的相異資料列數加一。 因此，DENSE_RANK 函數所傳回的數目不會有間距，次序一律是連續的。  
+如果同一個分割區中有兩個或多個資料列具有相同的次序值，每個資料列會收到相同的次序。 例如，如果兩位頂尖銷售人員有相同的 SalesYTD 值，他們的次序值便都是一。 SalesYTD 次高之銷售人員的次序值便是二。 這會比相關資料列前面之相異資料列數目多出一。 因此，`DENSE_RANK` 函式所傳回的數目不會有間距，次序值一律是連續的。  
   
- 整個查詢的排序順序決定了資料列在結果中的出現順序。 這暗示著次序編號第一的資料列，並不一定是分割區中的第一個資料列。  
+整個查詢的排序順序決定資料列在結果集中的順序。 這暗示著次序編號第一的資料列，並不一定是分割區中的第一個資料列。  
   
- DENSE_RANK 不具決定性。 如需詳細資訊，請參閱 [決定性與非決定性函數](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md)。  
+`DENSE_RANK` 不具決定性。 如需詳細資訊，請參閱[決定性與非決定性函數](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md)。  
   
 ## <a name="examples"></a>範例  
   
 ### <a name="a-ranking-rows-within-a-partition"></a>A. 排序分割區中的資料列  
- 下列範例會根據庫存產品數量來排列指定庫存位置的庫存產品次序。 `LocationID` 分割結果集，而 `Quantity` 邏輯地排序結果集。 請注意產品 494 和 495 具相同的數量。 因為它們綁在一起，且它們同時排名為一。  
+此範例會根據庫存產品數量依指定庫存位置來排列庫存產品。 `DENSE_RANK` 會依 `LocationID` 分割結果集，並依 `Quantity` 以邏輯方式排序結果集。 請注意產品 494 和 495 具相同的數量。 因為它們具有相同的數量值，所以其次序值都是一。  
   
 ```  
 USE AdventureWorks2012;  
@@ -102,7 +103,7 @@ ProductID   Name                               LocationID Quantity Rank
 ```  
   
 ### <a name="b-ranking-all-rows-in-a-result-set"></a>B. 排序結果集中的所有資料列  
- 下列範例會依員工薪水的排序傳回前 10 位員工。 因為沒有指定 PARTITION BY 子句，所以 DENSE_RANK 函數會套用到結果集中的所有資料列。  
+此範例會依員工薪水的排序傳回前 10 位員工。 因為 `SELECT` 陳述式沒有指定 `PARTITION BY` 子句，所以 `DENSE_RANK` 函式會套用至所有結果集資料列。  
   
 ```  
 USE AdventureWorks2012;  
@@ -130,7 +131,14 @@ BusinessEntityID Rate                  RankBySalary
 ```  
   
 ## <a name="c-four-ranking-functions-used-in-the-same-query"></a>C. 在相同查詢中使用的四個次序函式  
- 下列範例顯示在相同查詢中使用的四個排名函數。 如需特定函數的範例，請參閱每種排名函數。  
+此範例會顯示四個次序函式
+
++ [DENSE_RANK()](./dense-rank-transact-sql.md)
++ [NTILE()](./ntile-transact-sql.md)
++ [RANK()](./rank-transact-sql.md)
++ [ROW_NUMBER()](./row-number-transact-sql.md)
+
+可用於相同的查詢中。 如需函式特定範例，請參閱每個次序函式。  
   
 ```  
 USE AdventureWorks2012;  
@@ -172,7 +180,7 @@ WHERE TerritoryID IS NOT NULL AND SalesYTD <> 0;
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>範例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="d-ranking-rows-within-a-partition"></a>D：在分割區內排列資料列次序  
- 下列範例會根據其總銷售額，排列每個銷售領域內的銷售代表。 資料列集由 `SalesTerritoryGroup` 來進行資料分割，依照 `SalesAmountQuota` 來排序。  
+此範例會根據其總銷售額，排列每個銷售領域內的銷售代表。 `DENSE_RANK` 會依 `SalesTerritoryGroup` 分割資料列集，並依 `SalesAmountQuota` 排序結果集。  
   
 ```  
 -- Uses AdventureWorks  
@@ -183,7 +191,7 @@ FROM dbo.DimEmployee AS e
 INNER JOIN dbo.FactSalesQuota AS sq ON e.EmployeeKey = sq.EmployeeKey  
 INNER JOIN dbo.DimSalesTerritory AS st ON e.SalesTerritoryKey = st.SalesTerritoryKey  
 WHERE SalesPersonFlag = 1 AND SalesTerritoryGroup != N'NA'  
-GROUP BY LastName,SalesTerritoryGroup;  
+GROUP BY LastName, SalesTerritoryGroup;  
 ```  
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  

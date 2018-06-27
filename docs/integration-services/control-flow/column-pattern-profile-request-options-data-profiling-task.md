@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: control-flow
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -18,11 +16,12 @@ caps.latest.revision: 24
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 97ebf10bb9ae1a30a7f66ba5b984e0c08ee5ac24
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: aaddf1fab037c2bccec6f3bfc5411ba6156ee75b
+ms.sourcegitcommit: fd9c33b93c886dcb00a48967b6c245631fd559bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/14/2018
+ms.locfileid: "35619475"
 ---
 # <a name="column-pattern-profile-request-options-data-profiling-task"></a>資料行模式設定檔要求選項 (資料分析工作)
   您可以使用 [設定檔要求] 頁面的 [要求屬性] 窗格，針對要求窗格中選取的 [資料行模式設定檔要求] 設定選項。 資料行模式設定檔會報告一組規則運算式，其中涵蓋了字串資料行中值的指定百分比。 這個設定檔可協助您識別資料中的問題，例如無效的字串，而且可以建議未來可用於驗證新值的規則運算式。 舉例來說，「美國郵遞區號」資料行的模式設定檔可能會產生規則運算式 \d{5}-\d{4}、\d{5} 和 \d{9}。 如果您看見其他規則運算式，表示您的資料可能包含無效或格式錯誤的值。  

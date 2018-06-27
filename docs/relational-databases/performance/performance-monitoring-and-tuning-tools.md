@@ -22,11 +22,12 @@ caps.latest.revision: 37
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 185096f5e4d9a2722d720fe37549f22cd5e608e7
-ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
+ms.openlocfilehash: 29c01064646de4f80bd11f6a7536d895368b6e52
+ms.sourcegitcommit: 155f053fc17ce0c2a8e18694d9dd257ef18ac77d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/19/2018
+ms.lasthandoff: 06/06/2018
+ms.locfileid: "34811962"
 ---
 # <a name="performance-monitoring-and-tuning-tools"></a>效能監視及微調工具
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -41,6 +42,8 @@ ms.lasthandoff: 05/19/2018
 |[監視資源使用狀況 &#40;系統監視器&#41;](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)|「系統監視器」主要會追蹤資源使用量 (例如使用中的緩衝區管理員分頁要求的數目)，讓您可以使用預先定義的物件和計數器監視伺服器效能和活動，或使用者定義的計數器來監視事件。 「系統監視器」(Microsoft Windows NT 4.0 中的「效能監視器」) 收集關於事件的計數和比率而非資料 (例如：記憶體使用量、使用中交易的數目、被封鎖的鎖定數目或是 CPU 活動)。 您可以設定特定計數器的臨界值來產生提醒操作員的警示。<br /><br /> 「系統監視器」可在 Microsoft Windows Server 與 Windows 作業系統上運作。 它可以監視 (從遠端或本機) Windows NT 4.0 或更新版本上的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體。<br /><br /> [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 與「系統監視器」之間最主要的差異在於 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 監視 Database Engine 事件，而「系統監視器」則監視與伺服器處理序關聯的資源使用情形。|  
 |[開啟活動監視器 &#40;SQL Server Management Studio&#41;](../../relational-databases/performance-monitor/open-activity-monitor-sql-server-management-studio.md)|[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中的「活動監視器」對於目前活動的特定檢視非常有用，並會以圖形方式顯示以下相關資訊：<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體上執行的處理序。<br /><br /> 已封鎖的處理序。<br /><br /> 鎖定。<br /><br /> 使用者活動。|  
 |[即時查詢統計資料](../../relational-databases/performance/live-query-statistics.md)|顯示有關查詢執行步驟的即時統計資料。 因為這份資料是執行查詢時提供，所以這些執行統計資料在偵錯查詢效能問題方面非常有用。|  
+|[擴充事件](../../relational-databases/extended-events/extended-events.md)|「擴充事件」是一種使用極少量效能資源的一種輕量型效能監視系統。 擴充事件提供兩個圖形化使用者介面 ([新增工作階段精靈] 和 [新增工作階段])，用以建立、修改、顯示及分析您的工作階段資料。|  
+|[執行相關的動態管理檢視和函式 &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)|執行相關的 DMV 可讓您可以檢查與執行相關的資訊。|
 |[SQL 追蹤](../../relational-databases/sql-trace/sql-trace.md)|[!INCLUDE[tsql](../../includes/tsql-md.md)] 建立、篩選和定義追蹤的預存程序：<br /><br /> [sp_trace_create &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-create-transact-sql.md)<br /><br /> [sp_trace_generateevent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-generateevent-transact-sql.md)<br /><br /> [sp_trace_setevent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)<br /><br /> [sp_trace_setfilter &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setfilter-transact-sql.md)<br /><br /> [sp_trace_setstatus &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setstatus-transact-sql.md)|  
 |錯誤記錄檔|Windows 應用程式事件記錄檔針對發生於 Windows Server 和 Windows 作業系統上的事件，以及在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 與全文檢索搜尋中的事件，提供一個概括性的資訊。 記錄檔包含有關 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中事件的相關資訊，這些資訊無法從別處取得。 您可以使用錯誤記錄檔中的資訊來進行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]相關問題的疑難排解。|  
 |[系統預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)|下列 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 系統預存程序針對許多監視工作提供了強大的替代方式：<br /><br /> [sp_who &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-who-transact-sql.md)：<br />                    報告目前的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用者與處理序的相關快照資訊，此資訊包括目前正在執行的陳述式以及陳述式是否遭封鎖。<br /><br /> [sp_lock &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-lock-transact-sql.md)：<br />                    報告與鎖定有關的快照集資訊，包括鎖定所套用的物件識別碼、索引識別碼、鎖定類型與鎖定套用的類型或資源。<br /><br /> [sp_spaceused &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-spaceused-transact-sql.md)： <br />                    顯示目前資料表 (或是整個資料庫) 使用的磁碟空間估計量。<br /><br /> [sp_monitor &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-monitor-transact-sql.md)：<br />                    顯示統計資料，包括 CPU 使用率、I/O 使用情形與自從上次執行 **sp_monitor** 之後所經過的閒置時間。|  
@@ -52,14 +55,14 @@ ms.lasthandoff: 05/19/2018
 ## <a name="choosing-a-monitoring-tool"></a>選擇監視工具  
  監視工具的選擇依據要監視的事件與活動而定。  
   
-|事件或活動|SQL Server Profiler|Distributed Replay|系統監視器|活動監視器|Transact-SQL|錯誤記錄檔|  
-|-----------------------|-------------------------|------------------------|--------------------|----------------------|-------------------|----------------|  
-|趨勢分析|是||是||||  
-|重新執行擷取的事件|是 (從單一電腦)|是 (從多部電腦)|||||  
-|特定的監視|是|||是|是|是|  
-|產生警示|||是||||  
-|圖形介面|是||是|是||是|  
-|在自訂應用程式中使用|是*||||是||  
+|事件或活動|擴充事件|SQL Server Profiler|Distributed Replay|系統監視器|活動監視器|Transact-SQL|錯誤記錄檔|  
+|-----------------------|-----------------------|-------------------------|------------------------|--------------------|----------------------|-------------------|----------------|  
+|趨勢分析|是|是||是||||  
+|重新執行擷取的事件||是 (從單一電腦)|是 (從多部電腦)|||||  
+|特定的監視||是|||是|是|是|  
+|產生警示||||是||||  
+|圖形介面|是|是||是|是||是|  
+|在自訂應用程式中使用|是|是*||||是||  
   
  *使用 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 系統預存程序。  
   

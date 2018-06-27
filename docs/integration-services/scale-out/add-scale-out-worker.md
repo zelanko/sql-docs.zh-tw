@@ -1,26 +1,25 @@
 ---
 title: 使用 Scale Out Manager 加入 SSIS Scale Out Worker | Microsoft Docs
-ms.description: This article describes how to add an SSIS Scale Out Worker to an existing Scale Out environment by using Scale Out Manager.
-ms.custom: ''
+description: 本文描述如何使用 Scale Out Manager 將 SSIS Scale Out Worker 新增至現有的 Scale Out 環境。
+ms.custom: performance
 ms.date: 12/19/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: scale-out
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 caps.latest.revision: 1
 author: haoqian
 ms.author: haoqian
 manager: craigg
-ms.openlocfilehash: 2de6918bf7cb795ba1871b4ac56068c719e721d9
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: f4f9f055cefe4e3212066ea06868e88e399eaf36
+ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35335902"
 ---
 # <a name="add-a-scale-out-worker-with-scale-out-manager"></a>使用 Scale Out Manager 加入 Scale Out Worker
 

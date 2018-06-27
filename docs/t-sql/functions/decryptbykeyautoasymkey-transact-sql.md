@@ -22,12 +22,12 @@ caps.latest.revision: 23
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.openlocfilehash: 05ab6a324d1193c301539780b55bdbd5494c3524
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: 6c42d3aea3b73f5afae90e5f7612e9c3d65bfc22
+ms.sourcegitcommit: 6e55a0a7b7eb6d455006916bc63f93ed2218eae1
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34779544"
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35238958"
 ---
 # <a name="decryptbykeyautoasymkey-transact-sql"></a>DECRYPTBYKEYAUTOASYMKEY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -53,8 +53,7 @@ DecryptByKeyAutoAsymKey ( akey_ID , akey_password
  *akey_password*  
 保護非對稱金鑰的密碼。 如果以資料庫主要金鑰保護非對稱私密金鑰，則 *akey_password* 可以有 NULL 值。 *akey_password* 具有 **nvarchar** 資料類型。  
   
- '*ciphertext*'  
-以金鑰加密的資料。 *ciphertext* 具有 **varbinary** 資料類型。  
+ *ciphertext* 以金鑰加密的資料。 *ciphertext* 具有 **varbinary** 資料類型。  
   
  @ciphertext  
 **varbinary** 類型的變數，其中包含以對稱金鑰加密的資料。  
@@ -71,18 +70,27 @@ DecryptByKeyAutoAsymKey ( akey_ID , akey_password
  @authenticator  
 含有驗證器從中產生之資料的變數。 必須符合提供給 [ENCRYPTBYKEY (Transact-SQL)](./encryptbykey-transact-sql.md) 的值。 *@authenticator* 具有 **sysname** 資料類型。  
   
+@add_authenticator  
+指出原始加密程序是否隨純文字一同包含及加密驗證器的變數。 必須符合資料加密期間傳遞至 [ENCRYPTBYKEY (Transact-SQL)](./encryptbykey-transact-sql.md) 的值。 *@add_authenticator* 具有 **int** 資料類型。  
+
+*authenticator*  
+作為驗證器產生基礎使用的資料。 必須符合提供給 [ENCRYPTBYKEY (Transact-SQL)](./encryptbykey-transact-sql.md) 的值。 *authenticator* 具有 **sysname** 資料類型。
+
+@authenticator  
+含有驗證器從中產生之資料的變數。 必須符合提供給 [ENCRYPTBYKEY (Transact-SQL)](./encryptbykey-transact-sql.md) 的值。 *@authenticator* 具有 **sysname** 資料類型。  
+
 ## <a name="return-types"></a>傳回類型  
 **varbinary**，大小上限為 8,000 個位元組。  
   
 ## <a name="remarks"></a>Remarks  
-`DECRYPTBYKEYAUTOASYMKEY` 結合 OPEN SYMMETRIC KEY 和 DecryptByKey 的功能。 可以在單一作業中為對稱金鑰解密，然後使用該金鑰為加密文字解密。  
+`DECRYPTBYKEYAUTOASYMKEY` 會結合 `OPEN SYMMETRIC KEY` 和 `DECRYPTBYKEY` 的功能。 在單一作業中，它會先將對稱金鑰解密，再使用該金鑰將加密文字解密。  
   
 ## <a name="permissions"></a>Permissions  
 需要對稱金鑰的 `VIEW DEFINITION` 權限和非對稱金鑰的 `CONTROL` 權限。  
   
-## <a name="examples"></a>範例  
-此範例示範如何使用 `DECRYPTBYKEYAUTOASYMKEY` 來簡化解密程式碼。 此程式碼應該在還沒有資料庫主要金鑰的 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 資料庫上執行。  
-  
+## <a name="examples"></a>範例
+此範例示範 `DECRYPTBYKEYAUTOASYMKEY` 如何簡化解密程式碼。 此程式碼應該在還沒有資料庫主要金鑰的 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 資料庫上執行。  
+
 ```  
 --Create the keys and certificate.  
 USE AdventureWorks2012;  

@@ -27,17 +27,18 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: d17356f6730db14e85b9ab3c8186f4b474525608
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 87e80452c46d74c819affb9e9dd2695ec2789115
+ms.sourcegitcommit: b52b5d972b1a180e575dccfc4abce49af1a6b230
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35249521"
 ---
 # <a name="errorseverity-transact-sql"></a>ERROR_SEVERITY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  傳回造成執行 TRY…CATCH 建構的 CATCH 區塊之錯誤的嚴重性。  
-  
+此函式會在發生錯誤且該錯誤造成執行 TRY…CATCH 建構的 CATCH 區塊時，傳回錯誤的嚴重性值。  
+
  ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>語法  
@@ -50,22 +51,21 @@ ERROR_SEVERITY ( )
  **int**  
   
 ## <a name="return-value"></a>傳回值  
- 當它在 CATCH 區塊中被呼叫時，會傳回造成執行 CATCH 區塊之錯誤訊息的嚴重性。  
-  
- 如果是在 CATCH 區塊範圍之外呼叫，便傳回 NULL。  
+在發生錯誤的 CATCH 區塊中呼叫時，`ERROR_SEVERITY` 會傳回造成執行 `CATCH` 區塊之錯誤的嚴重性值。  
+
+如果是在 CATCH 區塊範圍之外呼叫，則 `ERROR_SEVERITY` 會傳回 NULL。  
   
 ## <a name="remarks"></a>Remarks  
- 可以在 CATCH 區塊範圍內的任何位置呼叫 ERROR_SEVERITY。  
+`ERROR_SEVERITY` 支援在 CATCH 區塊範圍內的任何位置呼叫。  
   
- ERROR_SEVERITY 不論它執行多少次，也不論是在 CATCH 區塊範圍內的任何位置執行，都會傳回錯誤嚴重性。 這有別於 @@ERROR 之類的函式，因為其只會在緊接於發生錯誤的陳述式之後的陳述式中，或在 CATCH 區塊的第一個陳述式中傳回錯誤號碼。  
+不論執行多少次，或在 `CATCH` 區塊範圍內的哪個位置執行，`ERROR_SEVERITY` 都會傳回錯誤的錯誤嚴重性值。 這有別於 @@ERROR 之類的函式，它們只會在緊接於發生錯誤的陳述式之後的陳述式中，傳回錯誤號碼。  
   
- 在巢狀 CATCH 區塊中，ERROR_SEVERITY 會傳回參考它的 CATCH 區塊範圍特定的錯誤嚴重性。 例如，外部 TRY...CATCH 建構的 CATCH 區塊可能會有巢狀的 TRY...CATCH 建構。 在巢狀 CATCH 區塊內，ERROR_SEVERITY 會從叫用巢狀 CATCH 區塊的錯誤傳回嚴重性。 如果 ERROR_SEVERITY 是在外部 CATCH 區塊中執行，它會從叫用 CATCH 區塊的錯誤傳回嚴重性。  
+`ERROR_SEVERITY` 通常會在巢狀 `CATCH` 區塊中作業。 `ERROR_SEVERITY` 會傳回參考該 `CATCH` 區塊之 `CATCH` 區塊範圍特定的錯誤嚴重性值。 例如，外部 TRY...CATCH 建構的 `CATCH` 區塊可能會有內部 `TRY...CATCH` 建構。 在該內部 `CATCH` 區塊內，`ERROR_SEVERITY` 會傳回叫用內部 `CATCH` 區塊之錯誤的嚴重性值。 如果 `ERROR_SEVERITY` 是在外部 `CATCH` 區塊中執行，它會傳回叫用該外部 `CATCH` 區塊之錯誤的錯誤嚴重性值。  
   
-## <a name="examples"></a>範例  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>範例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="a-using-errorseverity-in-a-catch-block"></a>A. 在 CATCH 區塊中使用 ERROR_SEVERITY  
- 下列範例顯示將會產生除以零之錯誤的 `SELECT` 陳述式。 它會傳回錯誤的嚴重性。  
-  
+此範例會顯示產生除以零之錯誤的預存程序。 `ERROR_SEVERITY` 會傳回該錯誤的嚴重性值。  
 ```  
   
 BEGIN TRY  
@@ -76,11 +76,22 @@ BEGIN CATCH
     SELECT ERROR_SEVERITY() AS ErrorSeverity;  
 END CATCH;  
 GO  
+
+-----------
+
+(0 row(s) affected)
+
+ErrorSeverity
+-------------
+16
+
+(1 row(s) affected)
+
 ```  
   
 ### <a name="b-using-errorseverity-in-a-catch-block-with-other-error-handling-tools"></a>B. 在含有其他錯誤處理工具的 CATCH 區塊中使用 ERROR_SEVERITY  
- 下列範例顯示將會產生除以零之錯誤的 `SELECT` 陳述式。 錯誤的相關訊息會隨同嚴重性而一起傳回。  
-  
+此範例會顯示產生除以零之錯誤的 `SELECT` 陳述式。 預存程序會傳回錯誤的相關資訊。  
+
 ```  
   
 BEGIN TRY  
@@ -97,28 +108,17 @@ BEGIN CATCH
         ERROR_MESSAGE() AS ErrorMessage;  
 END CATCH;  
 GO  
-```  
-  
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>範例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
-  
-### <a name="c-using-errorseverity-in-a-catch-block-with-other-error-handling-tools"></a>C. 在含有其他錯誤處理工具的 CATCH 區塊中使用 ERROR_SEVERITY  
- 下列範例顯示將會產生除以零之錯誤的 `SELECT` 陳述式。 錯誤的相關訊息會隨同嚴重性而一起傳回。  
-  
-```  
-  
-BEGIN TRY  
-    -- Generate a divide-by-zero error.  
-    SELECT 1/0;  
-END TRY  
-BEGIN CATCH  
-    SELECT  
-        ERROR_NUMBER() AS ErrorNumber,  
-        ERROR_SEVERITY() AS ErrorSeverity,  
-        ERROR_STATE() AS ErrorState,  
-        ERROR_PROCEDURE() AS ErrorProcedure,  
-        ERROR_MESSAGE() AS ErrorMessage;  
-END CATCH;  
-GO  
+
+-----------
+
+(0 row(s) affected)
+
+ErrorNumber ErrorSeverity ErrorState  ErrorProcedure  ErrorLine   ErrorMessage
+----------- ------------- ----------- --------------- ----------- ----------------------------------
+8134        16            1           NULL            4           Divide by zero error encountered.
+
+(1 row(s) affected)
+
 ```  
   
 ## <a name="see-also"></a>另請參閱  

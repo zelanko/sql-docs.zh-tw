@@ -1,32 +1,32 @@
 ---
-title: 連線至 Azure 中的 SSIS 目錄資料庫 (SSISDB) | Microsoft Docs
+title: 連線至 Azure 中的 SSIS 目錄 (SSISDB) | Microsoft Docs
+description: 尋找連線至 Azure SQL Database 伺服器上裝載之 SSIS 目錄 (SSISDB) 所需的連線資訊。
 ms.date: 09/25/2017
 ms.topic: conceptual
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: lift-shift
 ms.suite: sql
 ms.custom: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: ef69dc52b041541b89052038cadad94b9fa2f45c
-ms.sourcegitcommit: b5ab9f3a55800b0ccd7e16997f4cd6184b4995f9
+ms.openlocfilehash: 00e2c2e9ce845a6775ea4baee458253ba5e1162c
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35405670"
 ---
-# <a name="connect-to-the-ssis-catalog-database-ssisdb-in-azure"></a>連線至 Azure 中的 SSIS 目錄資料庫 (SSISDB)
+# <a name="connect-to-the-ssis-catalog-ssisdb-in-azure"></a>連線至 Azure 中的 SSIS 目錄 (SSISDB)
 
-取得連線至 Azure SQL Database 伺服器上裝載之 SSIS 目錄資料庫 (SSISDB) 所需的連線資訊。 您需要下列項目來進行連線：
+尋找連線至 Azure SQL Database 伺服器上裝載之 SSIS 目錄 (SSISDB) 所需的連線資訊。 您需要下列項目來進行連線：
 - 完整伺服器名稱
 - 資料庫名稱
 - 登入資訊 
 
 > [!IMPORTANT]
-> 目前，需要在 Azure Data Factory 第 2 版中建立 Azure-SSIS Integration Runtime，才能在 Azure SQL Database 上建立 SSISDB 目錄資料庫。 它是在 Azure 上執行 SSIS 套件的 Azure-SSIS IR。 如需詳細資訊，請參閱[將 SSIS 套件部署到 Azure ](https://docs.microsoft.com/azure/data-factory/tutorial-create-azure-ssis-runtime-portal)。 
+> 目前，需要在 Azure Data Factory 第 2 版中建立 Azure-SSIS Integration Runtime，才能在 Azure SQL Database 上建立 SSISDB 目錄資料庫。 Azure-SSIS IR 是在 Azure 上執行 SSIS 套件的執行階段環境。 如需處理序的逐步解說，請參閱[在 Azure 中部署和執行 SSIS 套件](https://docs.microsoft.com/azure/data-factory/tutorial-create-azure-ssis-runtime-portal)。 
 
 ## <a name="prerequisites"></a>Prerequisites
 開始之前，請確定您有 17.2 版或更新版本的 SQL Server Management Studio (SSMS)。 如果 SSISDB 目錄資料庫託管在 SQL Database 受控執行個體 (預覽) 上，請確定您具有 17.6 版或更新版本的 SSMS。 若要下載最新版的 SSMS，請參閱[下載 SQL Server Management Studio (SSMS)](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms)。
@@ -71,4 +71,4 @@ ms.lasthandoff: 05/23/2018
 ## <a name="next-steps"></a>後續步驟
 - 部署套件。 如需詳細資訊，請參閱[使用 SQL Server Management Studio (SSMS) 部署 SSIS 專案](../ssis-quickstart-deploy-ssms.md)。
 - 執行套件。 如需詳細資訊，請參閱[使用 SQL Server Management Studio (SSMS) 執行 SSIS 套件](../ssis-quickstart-run-ssms.md)。
-- 排程套件。 如需詳細資訊，請參閱[排程 Azure 上的 SSIS 套件執行](ssis-azure-schedule-packages.md)
+- 排程套件。 如需詳細資訊，請參閱[在 Azure 中排程 SSIS 套件](ssis-azure-schedule-packages.md)

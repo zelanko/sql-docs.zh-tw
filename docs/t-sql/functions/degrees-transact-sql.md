@@ -24,16 +24,17 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: da5dd2d0e7e3135097fd7993e9ebf75c64c15739
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 3cc037faa43eefed7af80e0e5a9fb51a917471b6
+ms.sourcegitcommit: 6e55a0a7b7eb6d455006916bc63f93ed2218eae1
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35239146"
 ---
 # <a name="degrees-transact-sql"></a>DEGREES (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  針對以弧度指定的角度，傳回對應的角度。  
+此函式會針對以弧度指定的角度，傳回對應的角度 (以度數為單位)。  
   
  ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -45,13 +46,13 @@ DEGREES ( numeric_expression )
   
 ## <a name="arguments"></a>引數  
  *numeric_expression*  
- 這是精確數值或近似數值資料類型類別的[運算式](../../t-sql/language-elements/expressions-transact-sql.md)，但 **bit** 資料類型除外。  
+精確數值或近似數值資料型別類別的[運算式](../../t-sql/language-elements/expressions-transact-sql.md)，但 **bit** 資料型別除外。  
   
 ## <a name="return-code-values"></a>傳回碼值  
- 傳回與 *numeric_expression*相同的類型。  
+傳回其資料類型符合 *numeric_expression* 之資料類型的值。  
   
 ## <a name="examples"></a>範例  
- 下列範例會傳回 PI/2 弧度中的角度度數。  
+此範例會傳回 PI/2 弧度中的角度度數。  
   
 ```  
 SELECT 'The number of degrees in PI/2 radians is: ' +   
@@ -70,5 +71,3 @@ The number of degrees in PI/2 radians is 90
 ## <a name="see-also"></a>另請參閱  
  [數學函數 &#40;Transact-SQL&#41;](../../t-sql/functions/mathematical-functions-transact-sql.md)  
   
-  
-

@@ -22,12 +22,12 @@ caps.latest.revision: 21
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 9d8c3441f219017125b755b498a534317a1fca01
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.openlocfilehash: e8b3b6eccf11b959ae04a4d0888bd1bf76bfe869
+ms.sourcegitcommit: 73ca0313b185e730579f09f9bc32a852c9dd2ef4
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34550479"
+ms.lasthandoff: 06/13/2018
+ms.locfileid: "35452178"
 ---
 # <a name="tutorial-configure-replication-between-two-fully-connected-servers-transactional"></a>教學課程：設定兩個完全連線的伺服器之間的複寫 (異動)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -142,7 +142,8 @@ ms.locfileid: "34550479"
 
 ![[啟動] 按鈕，以及狀態訊息中表示快照集代理程式有執行的狀態訊息](media/tutorial-replicating-data-between-continuously-connected-servers/startsnapshotagent.png)
      
-若您在此處看到錯誤，請參閱[針對快照集代理程式錯誤進行疑難排解](../../troubleshooters/replication/troubleshoot-tran-repl-errors.md#find-errors-with-the-snapshot-agent)。 
+若您在此處看到錯誤，請參閱[針對快照集代理程式錯誤進行疑難排解](troubleshoot-tran-repl-errors.md#find-errors-with-the-snapshot-agent)。
+
 
   
 ### <a name="add-the-distribution-agent-login-to-the-pal"></a>將散發代理程式新增至 PAL  
@@ -239,7 +240,7 @@ ms.locfileid: "34550479"
 
 如需詳細資訊，請參閱： 
 - [針對異動複寫測量延遲及驗證連線](../../relational-databases/replication/monitor/measure-latency-and-validate-connections-for-transactional-replication.md)
-- [針對交易式複寫同步錯誤進行疑難排解](../../troubleshooters/replication/troubleshoot-tran-repl-errors.md)
+- [尋找具有異動複寫代理程式的錯誤](troubleshoot-tran-repl-errors.md)
 
 
 ## <a name="next-steps"></a>後續步驟
@@ -249,5 +250,3 @@ ms.locfileid: "34550479"
 
 > [!div class="nextstepaction"]
 > [教學課程：設定伺服器和行動用戶端之間的複寫 (合併)](tutorial-replicating-data-with-mobile-clients.md)
-
-  

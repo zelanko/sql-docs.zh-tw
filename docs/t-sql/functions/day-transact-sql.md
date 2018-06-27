@@ -28,18 +28,19 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 8c248e735b25dbdbc2f7bd263698007acfc8600e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 50e6d900b90d777514859601c4b211e4e0e3b5d0
+ms.sourcegitcommit: 6e55a0a7b7eb6d455006916bc63f93ed2218eae1
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35238978"
 ---
 # <a name="day-transact-sql"></a>DAY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-傳回代表指定 *date* 之日 (月份中的日期) 的整數。
+此函式會傳回整數，代表指定 *date* 的日期 (當月的日期)。
   
-如需所有 [!INCLUDE[tsql](../../includes/tsql-md.md)] 日期和時間資料類型與函數的概觀，請參閱[日期和時間資料類型與函數 &#40;Transact-SQL&#41;](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md)。
+如需所有 [!INCLUDE[tsql](../../includes/tsql-md.md)] 日期和時間資料類型與函式的概觀，請參閱[日期和時間資料類型與函式 &#40;Transact-SQL&#41;](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md)。
   
 ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -51,7 +52,16 @@ DAY ( date )
   
 ## <a name="arguments"></a>引數  
 *date*  
-這是可解析成 **time**、**date**、**smalldatetime**、**datetime**、**datetime2** 或 **datetimeoffset** 值的運算式。 *date* 引數可以是運算式、資料行運算式、使用者定義變數或字串常值。
+可解析成下列其中一個資料類型的運算式：
+
++ **date**
++ **datetime**
++ **datetimeoffset**
++ **datetime2** 
++ **smalldatetime**
++ **time**
+
+針對 *date*，`DAY` 會接受資料行運算式、運算式、字串常值或使用者定義變數。
   
 ## <a name="return-type"></a>傳回類型  
 **int**
@@ -59,16 +69,16 @@ DAY ( date )
 ## <a name="return-value"></a>傳回值  
 DAY 會與 [DATEPART](../../t-sql/functions/datepart-transact-sql.md) (**day**, *date*) 傳回相同的值。
   
-如果 *date* 僅包含時間部分，傳回值就是 1 (基底日期)。
+如果 *date* 僅包含時間部分，`DAY` 會傳回 1 (基底日期)。
   
 ## <a name="examples"></a>範例  
-下列陳述式會傳回 `30`。 這是日數。
+此陳述式會傳回 `30` (日期數值本身)。
   
 ```sql
 SELECT DAY('2015-04-30 01:01:01.1234567');  
 ```  
   
-下列陳述式會傳回 `1900, 1, 1`。 *date* 的引數是數字 `0`。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會將 `0` 解譯為 1900 年 1 月 1 日。
+此陳述式會傳回 `1900, 1, 1`。 *date* 引數的數值為 `0`。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會將 `0` 解譯為 1900 年 1 月 1 日。
   
 ```sql
 SELECT YEAR(0), MONTH(0), DAY(0);  

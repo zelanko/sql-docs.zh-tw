@@ -27,16 +27,17 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 1c2a2e92fdef5cae1b2404d18c2c5fb18b3de1ba
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 5701576503c09275408389ae1f5259bcf7d06ce6
+ms.sourcegitcommit: 6e55a0a7b7eb6d455006916bc63f93ed2218eae1
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35239298"
 ---
 # <a name="dbname-transact-sql"></a>DB_NAME (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-傳回資料庫名稱。
+此函式會傳回指定資料庫的名稱。
   
 ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -48,21 +49,23 @@ DB_NAME ( [ database_id ] )
   
 ## <a name="arguments"></a>引數  
 *database_id*  
-這是所要傳回的資料庫識別碼 (ID)。 *database_id* 為沒有預設值的 **int**。 如果未指定任何識別碼，則傳回目前資料庫的名稱。
+
+`DB_NAME` 會傳回其名稱之資料庫的識別碼 (ID)。 如果 `DB_NAME` 呼叫省略 *database_id*，`DB_NAME` 會傳回目前資料庫的名稱。
   
 ## <a name="return-types"></a>傳回類型
 **nvarchar(128)**
   
 ## <a name="permissions"></a>Permissions  
-如果 **DB_NAME** 的呼叫者不是資料庫的擁有者，而且該資料庫不是 **master** 或 **tempdb**，那麼要查看對應資料列所需具備的最低權限，就是 ALTER ANY DATABASE 或 VIEW ANY DATABASE 伺服器層級權限，或是 **master** 資料庫中的 CREATE DATABASE 權限。 呼叫端所連接的資料庫，永遠可以在 **sys.databases**中進行檢視。
+
+如果 `DB_NAME` 的呼叫端未擁有特定非 **master** 或非 **tempdb** 資料庫，至少需要 `ALTER ANY DATABASE` 或 `VIEW ANY DATABASE` 伺服器層級權限才能查看對應的 `DB_ID` 資料列。 針對 **master** 資料庫，`DB_ID` 至少需要 `CREATE DATABASE` 權限。 呼叫端所連線的資料庫一律會出現在 **sys.databases** 中。
   
 > [!IMPORTANT]  
->  根據預設，公用角色具備 VIEW ANY DATABASE 權限，允許所有登入查看資料庫資訊。 若要封鎖登入，使其不具備偵測資料庫的能力，請撤銷公用的 VIEW ANY DATABASE 權限，或拒絕個別登入的 VIEW ANY DATABASE 權限。  
+>  根據預設，公用角色具備 `VIEW ANY DATABASE` 權限，允許所有登入查看資料庫資訊。 若要防止登入偵測資料庫，請 `REVOKE` 公用 `VIEW ANY DATABASE` 權限，或 `DENY` 個別登入的 `VIEW ANY DATABASE` 權限。
   
 ## <a name="examples"></a>範例  
   
 ### <a name="a-returning-the-current-database-name"></a>A. 傳回目前資料庫名稱  
-下列範例會傳回目前資料庫的名稱。
+此範例會傳回目前資料庫的名稱。
   
 ```sql
 SELECT DB_NAME() AS [Current Database];  
@@ -70,7 +73,7 @@ GO
 ```  
   
 ### <a name="b-returning-the-database-name-of-a-specified-database-id"></a>B. 傳回指定資料庫識別碼的資料庫名稱  
-下列範例會傳回資料庫識別碼 `3` 的資料庫名稱。
+此範例會傳回資料庫識別碼 `3` 的資料庫名稱。
   
 ```sql
 USE master;  
@@ -88,7 +91,7 @@ SELECT DB_NAME() AS [Current Database];
 ```  
   
 ### <a name="d-return-the-name-of-a-database-by-using-the-database-id"></a>D. 使用資料庫識別碼傳回資料庫的名稱  
-下列範例會傳回每個資料庫的資料庫名稱及 database_id。
+此範例會傳回每個資料庫的資料庫名稱及 database_id。
   
 ```sql
 SELECT DB_NAME(database_id) AS [Database], database_id  

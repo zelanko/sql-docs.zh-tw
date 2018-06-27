@@ -1,26 +1,25 @@
 ---
 title: 在 Azure 中部署和執行 SSIS 套件 | Microsoft Docs
+description: 了解如何將 SQL Server Integration Services (SSIS) 專案部署至 Azure SQL Database 上的 SSIS 目錄、執行套件
 ms.date: 5/22/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: lift-shift
 ms.suite: sql
 ms.custom: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d482a7e8c3cf75be0cb87b35323c5fbc472a3f7b
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.openlocfilehash: ac3ee68b47e3ae70c3b6d149d75b68d50b093309
+ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34585630"
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35335832"
 ---
-# <a name="deploy-and-run-an-ssis-package-in-azure"></a>在 Azure 中部署和執行 SSIS 套件
-本教學課程示範如何將 SQL Server Integration Services 專案部署至 Azure SQL Database 上的 SSISDB 目錄資料庫、在 Azure SSIS Integration Runtime 中執行套件，以及監視執行中的套件。
+# <a name="tutorial-deploy-and-run-a-sql-server-integration-services-ssis-package-in-azure"></a>教學課程：在 Azure 中部署和執行 SQL Server Integration Services (SSIS) 套件
+本教學課程示範如何將 SQL Server Integration Services (SSIS) 專案部署至 Azure SQL Database 中的 SSIS 目錄、在 Azure SSIS Integration Runtime 中執行套件，以及監視執行中的套件。
 
 ## <a name="prerequisites"></a>Prerequisites
 

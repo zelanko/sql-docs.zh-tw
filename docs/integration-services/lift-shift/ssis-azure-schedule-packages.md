@@ -1,26 +1,26 @@
 ---
 title: 排程 Azure 中的 SSIS 套件 | Microsoft Docs
+description: 提供可用於排程部署到 Azure SQL Database 之 SSIS 套件執行的方法概觀。
 ms.date: 05/29/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: lift-shift
 ms.suite: sql
 ms.custom: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 62980562b7f89293177307cd4c3ad02f54e977f0
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.openlocfilehash: 53417e2f5431bd040c7b3a6be381e93c858d128e
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34585840"
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35411580"
 ---
-# <a name="schedule-the-execution-of-an-ssis-package-in-azure"></a>排程 Azure 中的 SSIS 套件執行
-您可以選擇本文中所述的其中一個選項，來排程部署到 Azure SQL Database 伺服器上 SSISDB 目錄資料庫的 SSIS 套件執行。 您可以直接排程套件，或間接排程套件作為 Azure Data Factory 管線的一部分。 如需 Azure 上的 SSIS 概觀，請參閱[將 SQL Server Integration Services 工作負載隨即轉移至雲端](ssis-azure-lift-shift-ssis-packages-overview.md)。
+# <a name="schedule-the-execution-of-sql-server-integration-services-ssis-packages-deployed-in-azure"></a>排程部署於 Azure 中的 SQL Server Integration Services (SSIS) 套件執行
+
+您可以選擇本文中所述的其中一個方法，來排程部署到 Azure SQL Database 伺服器上 SSISDB 目錄的 SSIS 套件執行。 您可以直接排程套件，或間接排程套件作為 Azure Data Factory 管線的一部分。 如需 Azure 上的 SSIS 概觀，請參閱[將 SQL Server Integration Services 工作負載隨即轉移至雲端](ssis-azure-lift-shift-ssis-packages-overview.md)。
 
 - 直接排程套件
 
@@ -35,7 +35,7 @@ ms.locfileid: "34585840"
 
 ## <a name="ssms"></a> 使用 SSMS 排程套件
 
-在 SQL Server Management Studio (SSMS) 中，您可以在部署到 SSIS 目錄資料庫 (SSISDB) 的套件上按一下滑鼠右鍵，然後選取 [排程] 以開啟 [新增排程] 對話方塊。 如需詳細資訊，請參閱[使用 SSMS 排程 Azure 上的 SSIS 套件執行](ssis-azure-schedule-packages-ssms.md)。
+在 SQL Server Management Studio (SSMS) 中，您可以在部署到 SSIS 目錄資料庫 (SSISDB) 的套件上按一下滑鼠右鍵，然後選取 [排程] 以開啟 [新增排程] 對話方塊。 如需詳細資訊，請參閱[在 Azure 中以 SSMS 排程 SSIS 套件](ssis-azure-schedule-packages-ssms.md)。
 
 此功能需要 SQL Server Management Studio 17.7 版或更高版本。 若要取得最新版的 SSMS，請參閱[下載 SQL Server Management Studio (SSMS)](../../ssms/download-sql-server-management-studio-ssms.md)。
 

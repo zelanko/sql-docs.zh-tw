@@ -25,16 +25,17 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 2e5ab09ee3ae088382fee86a8add2aa112d9efa1
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 804b07e53f5aeecf6b3d0789effb2b227013b32e
+ms.sourcegitcommit: 6e55a0a7b7eb6d455006916bc63f93ed2218eae1
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35239154"
 ---
 # <a name="difference-transact-sql"></a>DIFFERENCE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  傳回一個整數值來指示兩個字元運算式之 SOUNDEX 值之間的差異。  
+此函式會傳回整數值，以測量兩個不同字元運算式的 [SOUNDEX()](./soundex-transact-sql.md) 值之間的差異。  
   
  ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -45,19 +46,19 @@ DIFFERENCE ( character_expression , character_expression )
 ```  
   
 ## <a name="arguments"></a>引數  
- *character_expression*  
- 為字元資料的英數[運算式](../../t-sql/language-elements/expressions-transact-sql.md)。 *character_expression* 可以是常數、變數或資料行。  
+*character_expression*  
+字元資料的英數[運算式](../../t-sql/language-elements/expressions-transact-sql.md)。 *character_expression* 可以是常數、變數或資料行。  
   
 ## <a name="return-types"></a>傳回類型  
- **int**  
-  
+**int**  
+ 
 ## <a name="remarks"></a>Remarks  
- 傳回的整數是相同 SOUNDEX 值中的字元數。 傳回值的範圍是 0 到 4：0 表示相似度弱或沒有相似度，4 表示相似性強或值相同。  
+`DIFFERENCE` 會比較兩個不同的 `SOUNDEX` 值，然後傳回整數值。 這個值會測量 `SOUNDEX` 值相符的程度，級別從 0 到 4。 值為 0 表示 SOUNDEX 值之間相似性弱或完全不相似；4 表示 SOUNDEX 值高度相似，或甚至完全相符。  
   
- DIFFERENCE 和 SOUNDEX 會區分定序。  
+`DIFFERENCE` 和 `SOUNDEX` 會區分定序。  
   
 ## <a name="examples"></a>範例  
- 在下列範例的第一部份中，比較兩個非常相似的字串之 `SOUNDEX` 值。 針對 Latin1_General 定序，`DIFFERENCE` 會傳回 `4` 的值。 在下列範例的第二部分中，會比較兩個非常不同的字串之 `SOUNDEX` 值。針對 Latin1_General 定序，`DIFFERENCE` 會傳回 `0` 的值。  
+此範例的第一部分會比較兩個非常相似之字串的 `SOUNDEX` 值。 針對 Latin1_General 定序，`DIFFERENCE` 會傳回 `4` 的值。 範例的第二部分會比較兩個非常不同的字串之 `SOUNDEX` 值，而且針對 Latin1_General 定序，`DIFFERENCE` 會傳回 `0` 的值。  
   
 ```  
 -- Returns a DIFFERENCE value of 4, the least possible difference.  

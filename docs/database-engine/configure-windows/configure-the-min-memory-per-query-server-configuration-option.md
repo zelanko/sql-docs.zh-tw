@@ -14,21 +14,23 @@ helpviewer_keywords:
 - minimum query memory
 - queries [SQL Server], memory
 - min memory per query option
+- min memory grant
 ms.assetid: ecd3fb79-b4a6-432f-9ef5-530e0d42d5a6
 caps.latest.revision: 28
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 5b81b6ada1e8be2c88d7956ff5f56ba904ea417a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: e68c2617af6a2828e1183733ee53fdd142747f66
+ms.sourcegitcommit: 155f053fc17ce0c2a8e18694d9dd257ef18ac77d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/06/2018
+ms.locfileid: "34811912"
 ---
 # <a name="configure-the-min-memory-per-query-server-configuration-option"></a>設定 min memory per query 伺服器組態選項
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-  此主題描述如何使用 **或** ，在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中設定 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] min memory per query [!INCLUDE[tsql](../../includes/tsql-md.md)]伺服器組態選項。 **每個查詢的最小記憶體** 選項會指定為執行查詢所配置的最小記憶體數量 (以 KB 為單位)。 例如，如果將 **min memory per query** 設成 2,048 KB，就可以保證查詢至少有這些記憶體量可使用。 預設值為 1,024 KB。 最小值是 512 KB，最大值則是 2,147,483,647 KB (2 GB)。  
+  此主題描述如何使用 **或** ，在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中設定 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] min memory per query [!INCLUDE[tsql](../../includes/tsql-md.md)]伺服器組態選項。 **每個查詢的最小記憶體** 選項會指定為執行查詢所配置的最小記憶體數量 (以 KB 為單位)。 這也稱為最小記憶體授與。 例如，如果將 **min memory per query** 設成 2,048 KB，就可以保證查詢至少有這些記憶體量可使用。 預設值為 1,024 KB。 最小值是 512 KB，最大值則是 2,147,483,647 KB (2 GB)。  
   
  **本主題內容**  
   
@@ -60,8 +62,10 @@ ms.lasthandoff: 05/03/2018
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 查詢處理器會嘗試判斷要配置給查詢的最佳記憶體數量。 min memory per query 選項可讓系統管理員指定任何單一查詢所接收的最小記憶體數量。 若查詢中含有大量資料的雜湊和排序作業，則這些查詢通常會接收比此值更多的記憶體。 提高 min memory per query 的值也許可以改善一些小型至中型查詢的效能，但這樣做也可能導致競用記憶體資源的情形增加。 每個查詢的最小記憶體選項包含為排序作業所配置的記憶體。  
 
--    因為查詢必須等到其可取得要求的最小記憶體，或是等到超過查詢等待伺服器設定選項中指定的值為止，所以請勿將每個查詢的最小記憶體伺服器設定選項設得太大，特別是在非常忙碌的系統上。 如果可用的記憶體多於執行所需的指定最小值，那麼只要記憶體可以有效地供查詢使用，查詢就會利用額外的記憶體。 
-  
+-    因為查詢必須等到<sup>1</sup>其可取得要求的最小記憶體，或是等到超過查詢等候伺服器設定選項中指定的值為止，所以請勿將 min memory per query 伺服器設定選項設得太高，特別是在非常忙碌的系統上。 如果可用的記憶體多於執行所需的指定最小值，那麼只要記憶體可以有效地供查詢使用，查詢就會利用額外的記憶體。     
+
+<sup>1</sup> 在此情況下，等候類型通常是 RESOURCE_SEMAPHORE。 如需詳細資訊，請參閱 [sys.dm_os_wait_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md)。
+
 ###  <a name="Security"></a> 安全性  
   
 ####  <a name="Permissions"></a> 權限  
@@ -107,6 +111,8 @@ GO
  [RECONFIGURE &#40;Transact-SQL&#41;](../../t-sql/language-elements/reconfigure-transact-sql.md)   
  [伺服器組態選項 &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)   
  [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)   
- [設定 index create memory 伺服器組態選項](../../database-engine/configure-windows/configure-the-index-create-memory-server-configuration-option.md)  
+ [設定 index create memory 伺服器設定選項](../../database-engine/configure-windows/configure-the-index-create-memory-server-configuration-option.md)     
+ [sys.dm_os_wait_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md)     
+ [sys.dm_exec_query_memory_grants &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-memory-grants-transact-sql.md)
   
   

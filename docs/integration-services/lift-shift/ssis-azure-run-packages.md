@@ -1,28 +1,26 @@
 ---
 title: 在 Azure 中執行 SSIS 套件 | Microsoft Docs
-ms.description: Provides an overview of the available methods for running packages deployed to Azure SQL Database.
+description: 提供可用於執行部署到 Azure SQL Database 之 SSIS 套件的方法概觀。
 ms.date: 05/29/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: lift-shift
 ms.suite: sql
 ms.custom: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: e4d733b49f8353fc430f90161ef25c352c8cac8f
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.openlocfilehash: 2d3c70085117e7d10aac5a7e29bde2448d383efe
+ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34586081"
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35330152"
 ---
-# <a name="run-an-ssis-package-in-azure"></a>在 Azure 中執行 SSIS 套件
+# <a name="run-sql-server-integration-services-ssis-packages-deployed-in-azure"></a>執行部署於 Azure 中的 SQL Server Integration Services (SSIS) 套件
 
-您可以選擇本文中所述的其中一個選項，來執行部署到 Azure SQL Database 伺服器上 SSISDB 目錄資料庫的 SSIS 套件。 您可以直接執行套件，或將套件當作 Azure Data Factory 管線的一部分來執行。 如需 Azure 上的 SSIS 概觀，請參閱[將 SQL Server Integration Services 工作負載隨即轉移至雲端](ssis-azure-lift-shift-ssis-packages-overview.md)。
+您可以選擇本文中所述的其中一個方法，來執行部署到 Azure SQL Database 伺服器上 SSISDB 目錄的 SSIS 套件。 您可以直接執行套件，或將套件當作 Azure Data Factory 管線的一部分來執行。 如需 Azure 上 SSIS 的概觀，請參閱[在 Azure 中部署和執行 SSIS 套件](ssis-azure-lift-shift-ssis-packages-overview.md)。
 
 - 直接執行套件
 
@@ -81,4 +79,4 @@ ms.locfileid: "34586081"
 
 ## <a name="next-steps"></a>後續步驟
 
-深入了解排程部署到 Azure 之 SSIS 套件的選項。 如需詳細資訊，請參閱[在 Azure 中排程 SSIS 套件執行](ssis-azure-schedule-packages.md)。
+深入了解排程部署到 Azure 之 SSIS 套件的選項。 如需詳細資訊，請參閱[在 Azure 中排程 SSIS 套件](ssis-azure-schedule-packages.md)。

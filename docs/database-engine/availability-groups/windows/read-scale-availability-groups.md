@@ -13,12 +13,12 @@ caps.latest.revision: 9
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: ee88654a69d926c2d467876d9e9e7c4f824d0b49
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: 649ff605e47f9a47ec68767b8654e0497fc0345c
+ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34769414"
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "35999994"
 ---
 # <a name="read-scale-availability-groups"></a>讀取級別可用性群組
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -52,7 +52,8 @@ ms.locfileid: "34769414"
 ## <a name="next-steps"></a>後續步驟
 
 [在 Linux 上設定讀取級別可用性群組](../../../linux/sql-server-linux-availability-group-configure-rs.md)
-[在 Windows 上設定讀取級別可用性群組](configure-read-scale-availability-groups.md)
+
+[在 Windows 上設定讀取級別可用性群組](../../../database-engine/availability-groups/windows/configure-read-scale-availability-groups.md)
 
 ## <a name="see-also"></a>另請參閱
 
