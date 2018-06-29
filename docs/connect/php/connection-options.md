@@ -33,7 +33,7 @@ ms.locfileid: "35307237"
 |ApplicationIntent|String|宣告連接到伺服器時的應用程式工作負載類型。 可能的值為 ReadOnly 和 ReadWrite。<br /><br />如需有關[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]支援[!INCLUDE[ssHADR](../../includes/sshadr_md.md)]，請參閱[支援高可用性、 災害復原](../../connect/php/php-driver-for-sql-server-support-for-high-availability-disaster-recovery.md)。|ReadWrite|  
 |AttachDBFileName|String|指定伺服器所應附加的資料庫檔案。|未設定值。|  
 |驗證|其中一個下列字串：<br /><br />'SqlPassword'<br /><br />'ActiveDirectoryPassword'|指定驗證模式。|未設定。|  
-|CharacterSet<br /><br />(PDO_SQLSRV 驅動程式不支援)|String|指定用來將資料傳送至伺服器的字元集。<br /><br />可能的值為 SQLSRV_ENC_CHAR 和 UTF-8。 如需詳細資訊，請參閱 [How to: Send and Retrieve UTF-8 Data Using Built-In UTF-8 Support](../../connect/php/how-to-send-and-retrieve-utf-8-data-using-built-in-utf-8-support.md)。|SQLSRV_ENC_CHAR|  
+|CharacterSet<br /><br />(PDO_SQLSRV 驅動程式不支援)|String|指定用來將資料傳送至伺服器的字元集。<br /><br />可能的值為 SQLSRV_ENC_CHAR 和 UTF-8。 如需詳細資訊，請參閱 [如何：使用內建的 UTF-8 支援傳送及接收 UTF-8 資料](../../connect/php/how-to-send-and-retrieve-utf-8-data-using-built-in-utf-8-support.md)。|SQLSRV_ENC_CHAR|  
 |ColumnEncryption<br /><br />（僅支援在 Windows 中）|**啟用**或**已停用**|指定是否啟用 「 永遠加密 」 功能。 |已停用|  
 |ConnectionPooling|1 或 **true** 表示開啟連接共用。<br /><br />0 或 **false** 表示關閉連接共用。|指定是否從連接集區指派連接 (1 或**true**) 與否 (0 或**false**)。<sup>1</sup>|**true** (1)|  
 |ConnectRetryCount|介於 0 和 255 之間 （含） 之間的整數|嘗試重新建立後才放棄中斷的連線的數目上限。 根據預設，一次進行以重新建立連線時中斷。 值為 0 表示沒有重新連線將會嘗試。|@shouldalert|  
@@ -66,7 +66,7 @@ ms.locfileid: "35307237"
 
 4. 要連接的 *UID* 驗證進行連接時， *PWD* 和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 屬性都必須設定。  
 
-許多支援的索引鍵都是 ODBC 連接字串屬性。 如需 ODBC 連接字串資訊，請參閱[Using Connection String Keywords with SQL Native Client](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md)。  
+許多支援的索引鍵都是 ODBC 連接字串屬性。 如需 ODBC 連接字串的相關資訊，請參閱 [搭配 SQL Native Client 使用連接字串關鍵字](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md)。  
 
 ## <a name="see-also"></a>另請參閱  
 [連線到伺服器](../../connect/php/connecting-to-the-server.md)  
