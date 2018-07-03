@@ -35,7 +35,7 @@ ms.lasthandoff: 05/03/2018
 
 如需連接到 Azure SQL Database 的連接字串的詳細資訊，請參閱：
 
-- [使用.NET 核心 (C#) 來查詢 Azure SQL database](http://docs.microsoft.com/azure/sql-database/sql-database-connect-query-dotnet-core)。
+- [使用.NET Core (C#) 來查詢 Azure SQL database](http://docs.microsoft.com/azure/sql-database/sql-database-connect-query-dotnet-core)。
 - 附近的其他語言的相關內容，上述資料表中發行項是其他 Azure SQL Database。 例如，請參閱[查詢 Azure SQL database 使用 PHP](http://docs.microsoft.com/azure/sql-database/sql-database-connect-query-php)。
 
 
