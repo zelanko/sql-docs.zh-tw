@@ -23,7 +23,7 @@ ms.author: Pedro.Lopes
 manager: craigg
 ms.openlocfilehash: 40aeb07deacbc5e1341f3d38abf5595986cedd48
 ms.sourcegitcommit: 354ed9c8fac7014adb0d752518a91d8c86cdce81
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 06/14/2018
 ms.locfileid: "35612243"

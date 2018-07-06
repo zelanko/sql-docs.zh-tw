@@ -24,7 +24,7 @@ ms.author: jhubbard
 manager: jhubbard
 ms.openlocfilehash: 7f7c5746a34ca40d567886cce6bce4b9b8aceb76
 ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 06/19/2018
 ms.locfileid: "36133699"
