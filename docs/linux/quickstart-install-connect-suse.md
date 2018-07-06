@@ -17,6 +17,7 @@ ms.sourcegitcommit: b5ab9f3a55800b0ccd7e16997f4cd6184b4995f9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/23/2018
+ms.locfileid: "34455347"
 ---
 # <a name="quickstart-install-sql-server-and-create-a-database-on-suse-linux-enterprise-server"></a>快速入門： 安裝 SQL Server 和 SUSE Linux Enterprise Server 上建立資料庫
 
@@ -27,7 +28,7 @@ ms.lasthandoff: 05/23/2018
 > [!TIP]
 > 本教學課程需要使用者輸入和網際網路連線。 如果您有興趣[自動](sql-server-linux-setup.md#unattended)或[離線](sql-server-linux-setup.md#offline)安裝程序，請參閱[SQL Server on Linux 的安裝指南](sql-server-linux-setup.md)。
 
-## <a name="prerequisites"></a>필수 구성 요소
+## <a name="prerequisites"></a>先決條件
 
 您必須具有的 SLES v12 SP2 機器**至少 2 GB**的記憶體。 檔案系統必須是**XFS**或**EXT4**。 其他檔案系統，例如**BTRFS**，不受支援。
 

@@ -28,7 +28,7 @@ ms.locfileid: "34455286"
 > [!TIP]
 > 本教學課程需要使用者輸入和網際網路連線。 如果您有興趣[自動](sql-server-linux-setup.md#unattended)或[離線](sql-server-linux-setup.md#offline)安裝程序，請參閱[SQL Server on Linux 的安裝指南](sql-server-linux-setup.md)。
 
-## <a name="prerequisites"></a>필수 구성 요소
+## <a name="prerequisites"></a>先決條件
 
 您必須擁有的 Ubuntu 16.04 機器**至少 2 GB**的記憶體。
 
