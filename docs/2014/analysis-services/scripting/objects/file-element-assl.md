@@ -1,5 +1,5 @@
 ---
-title: 檔案元素 (ASSL) |Microsoft 文件
+title: 檔案元素 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - File element
 ms.assetid: 21c70707-d2f8-4040-9acb-cbce23076bcc
 caps.latest.revision: 31
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 645882666ba82f965fddff9e1c886e97ff092a90
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 03b78545b1df04192a69dffa1a49733509b99700
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36031503"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37155350"
 ---
 # <a name="file-element-assl"></a>File 元素 (ASSL)
-  撰寫的檔案會定義[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] [ClrAssembly](../data-type/assembly-data-type-assl.md)項目。  
+  定義的其中一個 compose 檔案[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] [ClrAssembly](../data-type/assembly-data-type-assl.md)項目。  
   
 ## <a name="syntax"></a>語法  
   
@@ -60,11 +60,11 @@ ms.locfileid: "36031503"
 |子元素|無|  
   
 ## <a name="remarks"></a>備註  
- 對應目的父代的項目`Files`在 「 分析管理物件 (AMO) 物件模型而言， <xref:Microsoft.AnalysisServices.ClrAssemblyFile>。  
+ 對應至父系的元素`Files`在 「 分析管理物件 (AMO) 物件模型是<xref:Microsoft.AnalysisServices.ClrAssemblyFile>。  
   
 ## <a name="see-also"></a>另請參閱  
- [Server 元素&#40;ASSL&#41;](server-element-assl.md)   
- [Database 元素&#40;ASSL&#41;](database-element-assl.md)   
+ [伺服器項目&#40;ASSL&#41;](server-element-assl.md)   
+ [資料庫項目&#40;ASSL&#41;](database-element-assl.md)   
  [Assemblies 元素&#40;ASSL&#41;](../collections/assemblies-element-assl.md)   
  [Assembly 項目&#40;ASSL&#41;](assembly-element-assl.md)   
  [ClrAssembly 資料類型&#40;ASSL&#41;](../data-type/assembly-data-type-assl.md)   

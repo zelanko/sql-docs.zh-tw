@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 topic_type:
 - apiref
 helpviewer_keywords:
 - Audit Broker Login event class
 ms.assetid: af9b1153-2791-40ef-a95c-50923cd0cc97
 caps.latest.revision: 29
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 540c16fa077178cc3c72a963c4cc4f167e9be384
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: d341f0b04b73c3edfa636e1e059a375965f7481d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36023347"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37258724"
 ---
 # <a name="audit-broker-login-event-class"></a>Audit Broker 登入事件類別
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會建立 **Audit Broker Login** 事件，以報告與 Service Broker 傳輸安全性相關的稽核訊息。  
@@ -59,7 +59,7 @@ ms.locfileid: "36023347"
   
 |ID|子類別|描述|  
 |--------|--------------|-----------------|  
-|@shouldalert|Login Success|Login Success 事件是用以報告已成功完成相鄰的 Broker 登入處理序。|  
+|1|Login Success|Login Success 事件是用以報告已成功完成相鄰的 Broker 登入處理序。|  
 |2|Login Protocol Error|Login Protocol Error 事件是用以報告 Broker 所收到的訊息格式正確，但對於登入處理序目前的狀態無效。 此訊息可能已遺失或未按照順序送出。|  
 |3|Message Format Error|Message Format Error 事件是用以報告 Broker 所收到訊息與預期的格式不符。 該訊息可能已損毀，或是 SQL Server 以外的程式可能有傳送訊息給 Service Broker 所使用的通訊埠。|  
 |4|Negotiate Failure|Negotiate Failure 事件是用以報告本機 Broker 與遠端 Broker 支援驗證的互斥層級。|  

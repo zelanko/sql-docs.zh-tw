@@ -1,12 +1,12 @@
 ---
-title: IBCPSession::BCPDone (OLE DB) |Microsoft 文件
+title: IBCPSession::BCPDone (OLE DB) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: connectivity
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
@@ -20,12 +20,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: da9cd1408c12e055a10a208021de1e16dac9d9eb
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: d57e507beb03a28f9e0f7e0b676b8393ace4a125
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35694547"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37421497"
 ---
 # <a name="ibcpsessionbcpdone-ole-db"></a>IBCPSession::BCPDone (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -41,7 +41,7 @@ HRESULT BCPDone(void);
 ```  
   
 ## <a name="remarks"></a>備註  
- 沒有其他作業可上呼叫[IBCPSession](../../relational-databases/native-client-ole-db-interfaces/ibcpsession-ole-db.md)之後呼叫的介面**BCPDone**方法。 唯一的辦法就是呼叫[ibcpsession:: Bcpinit](../../relational-databases/native-client-ole-db-interfaces/ibcpsession-bcpinit-ole-db.md)方法以啟始新的大量複製作業。 這是類似於呼叫[irowsetfastload:: Commit](../../relational-databases/native-client-ole-db-interfaces/irowsetfastload-commit-ole-db.md)方法。  
+ 可呼叫任何其他作業[IBCPSession](../../relational-databases/native-client-ole-db-interfaces/ibcpsession-ole-db.md)之後呼叫的介面**BCPDone**方法。 唯一的辦法就是呼叫[ibcpsession:: Bcpinit](../../relational-databases/native-client-ole-db-interfaces/ibcpsession-bcpinit-ole-db.md) ; 方法來啟始新的大量複製作業。 這是類似於呼叫[irowsetfastload:: Commit](../../relational-databases/native-client-ole-db-interfaces/irowsetfastload-commit-ole-db.md)方法。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  S_OK  
@@ -51,7 +51,7 @@ HRESULT BCPDone(void);
  此方法的呼叫是非預期的。 例如， **BCPInit**方法不會呼叫這個方法之前呼叫。  
   
 ## <a name="example"></a>範例  
- 這個範例示範如何使用**IBCPSession**介面。  
+ 此範例示範如何使用**IBCPSession**介面。  
   
  在執行這個範例之前，必須先執行以下 [!INCLUDE[tsql](../../includes/tsql-md.md)]：  
   
@@ -69,7 +69,7 @@ insert into fltest values (4, 4, 0xFAD)
   
  您應該使用 BCP，透過下列命令將這份資料新增回資料表中：  
   
- **bcp master 資料庫...在 outfile.dat-n-T-S fltest** *伺服器*  
+ **bcp 主要...在 outfile.dat-n-T-S fltest** *伺服器*  
   
  編譯此範例時，將會需要指定 sqlncli11.lib。  
   

@@ -1,12 +1,12 @@
 ---
-title: 資料指標行為 |Microsoft 文件
+title: 資料指標行為 |Microsoft Docs
 ms.custom: ''
 ms.date: 10/24/2016
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -25,12 +25,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 353fde7548431b354c6e101545b67a924e553b66
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: fe80b8d324ff47721a0fb41a60292a867df33cab
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35700509"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37424527"
 ---
 # <a name="cursor-behaviors"></a>資料指標行為
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -47,10 +47,10 @@ ms.locfileid: "35700509"
 |SQL_NONSCROLLABLE 和 SQL_INSENSITIVE|預設結果集 (順向、唯讀)|  
 |SQL_NONSCROLLABLE 和 SQL_UNSPECIFIED|預設結果集 (順向、唯讀)|  
   
- 以版本為基礎的開放式並行存取需要**時間戳記**基礎資料表中的資料行。 如果沒有在資料表上要求以版本為基礎的開放式並行存取控制，則**時間戳記**資料行中，伺服器會使用值為基礎開放式並行存取。  
+ 以版本為基礎的開放式並行存取需要**時間戳記**基礎資料表中的資料行。 如果沒有在資料表上要求以版本為基礎的開放式並行存取控制**時間戳記**資料行中，伺服器會使用值為基礎開放式並行存取。  
   
 ## <a name="scrollability"></a>可捲動性  
- 當 SQL_ATTR_CURSOR_SCROLLABLE 設定為 SQL_SCROLLABLE 時，資料指標支援的所有不同值*Sqlfetchscroll*參數[SQLFetchScroll](../../relational-databases/native-client-odbc-api/sqlfetchscroll.md)。 當 SQL_ATTR_CURSOR_SCROLLABLE 設定為 SQL_NONSCROLLABLE 時，資料指標只支援*Sqlfetchscroll* SQL_FETCH_NEXT 的值。  
+ 當 SQL_ATTR_CURSOR_SCROLLABLE 設定為 SQL_SCROLLABLE 時，資料指標支援所有不同的值，如*Sqlfetchscroll*的參數[SQLFetchScroll](../../relational-databases/native-client-odbc-api/sqlfetchscroll.md)。 當 SQL_ATTR_CURSOR_SCROLLABLE 設定為 SQL_NONSCROLLABLE 時，資料指標僅支援*Sqlfetchscroll* SQL_FETCH_NEXT 的值。  
   
 ## <a name="sensitivity"></a>敏感度  
  當 SQL_ATTR_CURSOR_SENSITIVITY 設定為 SQL_SENSITIVE 時，資料指標會將目前使用者所進行或其他使用者所認可的資料修改反映出來。 當 SQL_ATTR_CURSOR_SENSITIVITY 設定為 SQL_INSENSITIVE 時，資料指標不會反映資料修改。  

@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - IIS 7 server configuration [SQL Server replication]
 - Web synchronization, IIS 7 servers
 ms.assetid: c201fe2c-0a76-44e5-a233-05e14cd224a6
 caps.latest.revision: 10
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: ecd40b90af7ecff8e3b249957cce6b90589acefd
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: b4766702bb0e9dd82c5e74bc1018894ab90b63a2
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36031854"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37158279"
 ---
 # <a name="configure-iis-7-for-web-synchronization"></a>針對 Web 同步處理設定 IIS 7
   本主題中的程序將逐步引導您完成手動設定 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Internet Information Services (IIS) 7 及更新版本的程序，以搭配使用 Web 同步處理，並進行合併式複寫。 
@@ -58,7 +58,7 @@ IIS 5.0 版開始支援 Web 同步處理。 IIS 7.0 版或更新版本不提供 
   
 4.  註冊 replisapi.dll：  
   
-    1.  按一下 **[開始]**，然後按一下 **[執行]**。 在**開啟**方塊中，輸入`cmd`，然後按一下 **確定**。  
+    1.  按一下 **[開始]**，然後按一下 **[執行]**。 在 **開放**方塊中，輸入`cmd`，然後按一下**確定**。  
   
     2.  在步驟 1 中建立的目錄中，執行下列命令：  
   
@@ -70,7 +70,7 @@ IIS 5.0 版開始支援 Web 同步處理。 IIS 7.0 版或更新版本不提供 
   
     1.  在 **[Internet Information Services (IIS) 管理員]** 的 **[連線]** 窗格中，以滑鼠右鍵按一下 **[預設的網站]**，然後選取 **[新增虛擬目錄]**。  
   
-    2.  如**別名**，輸入`SQLReplication`。  
+    2.  針對**別名**，輸入`SQLReplication`。  
   
     3.  針對 [實體路徑]，輸入 **\<磁碟機>:\Inetpub\SQLReplication\\**，然後按一下 [確定]。  
   
@@ -82,13 +82,13 @@ IIS 5.0 版開始支援 Web 同步處理。 IIS 7.0 版或更新版本不提供 
   
     3.  在 **[動作]** 窗格中，按一下 **[新增模組對應]**。  
   
-    4.  如**要求**路徑中，輸入`replisapi.dll`。  
+    4.  針對**要求**路徑，請輸入`replisapi.dll`。  
   
     5.  從 **[模組]** 下拉式清單中選取 **[IsapiModule]**。  
   
     6.  針對 [可執行檔]，輸入 **\<磁碟機>:\Inetpub\SQLReplication\replisapi.dll**。  
   
-    7.  如**名稱**，輸入`Replisapi`。  
+    7.  針對**名稱**，輸入`Replisapi`。  
   
     8.  按一下 **[要求限制]** 按鈕、按一下 **[存取]** 索引標籤，然後按一下 **[執行]**。  
   

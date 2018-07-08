@@ -1,12 +1,12 @@
 ---
-title: 刪除資料來源 (ODBC) |Microsoft 文件
+title: 刪除資料來源 (ODBC) |Microsoft Docs
 ms.custom: ''
 ms.date: 08/01/2016
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: connectivity
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -17,12 +17,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: c914989c04226991f0df573b60bea0b69ff15802
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: 02ca5ac7ea78f771e24fb13a97f125885bc0ce2a
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35703209"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37417811"
 ---
 # <a name="configuring-the-sql-server-odbc-driver---delete-a-data-source"></a>設定 SQL Server ODBC 驅動程式-刪除資料來源
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -30,17 +30,17 @@ ms.locfileid: "35703209"
 
   在搭配 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 或更新版本使用 ODBC 應用程式以前，您必須知道如何在舊版 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 上升級目錄預存程序的版本，以及加入、刪除和測試資料來源。  
   
-  您可以刪除資料來源使用 ODBC 管理員，以程式設計方式 (使用[SQLConfigDataSource](../../relational-databases/native-client-odbc-api/sqlconfigdatasource.md))，或刪除檔案 （如果是檔案資料來源名稱）。  
+  您可以使用 ODBC 管理員，以程式設計方式刪除資料來源 (利用[SQLConfigDataSource](../../relational-databases/native-client-odbc-api/sqlconfigdatasource.md))，或藉由刪除檔案 （如果檔案資料來源名稱）。  
   
 ### <a name="to-delete-a-data-source-by-using-odbc-administrator"></a>使用 ODBC 管理員刪除資料來源  
   
-1.  在**控制台**，開啟**系統管理工具**，然後按兩下  **ODBC 資料來源 （64 位元）** 或**ODBC 資料來源 （32 位元）**. 或者，您也可以從命令提示字元執行 odbcad32.exe。  
+1.  在 **控制台**，開啟**系統管理工具**，然後按兩下  **ODBC 資料來源 （64 位元）** 或**ODBC 資料來源 （32 位元）**. 或者，您也可以從命令提示字元執行 odbcad32.exe。  
   
-2.  按一下**使用者 DSN**，**系統 DSN**，或**檔案 DSN**  索引標籤。  
+2.  按一下 [**使用者 DSN**，**系統 DSN**，或**檔案 DSN** ] 索引標籤。  
   
 3.  選取要刪除的資料來源。  
   
-4.  按一下**移除**，然後確認刪除。  
+4.  按一下 **移除**，然後確認刪除。  
   
 ## <a name="example"></a>範例  
  若要以程式設計方式刪除資料來源，請呼叫[SQLConfigDataSource](../../relational-databases/native-client-odbc-api/sqlconfigdatasource.md)使用 ODBC_REMOVE_DSN 或 ODBC_REMOVE_SYS_DSN 做為第二個參數。  
@@ -65,6 +65,6 @@ int main() {
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [加入資料來源&#40;ODBC&#41;](../../relational-databases/native-client-odbc-how-to/configuring-the-sql-server-odbc-driver-add-a-data-source.md)  
+ [新增資料來源&#40;ODBC&#41;](../../relational-databases/native-client-odbc-how-to/configuring-the-sql-server-odbc-driver-add-a-data-source.md)  
   
   

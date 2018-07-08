@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Recordset destination
 ms.assetid: a7b143dc-8008-404f-83b0-b45ffbca6029
 caps.latest.revision: 11
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: a513f196b0dc099f890225048e4e96adab51d285
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: db88be22f9bb3e92739957bfaf0f4b827e49f61d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36023814"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37277354"
 ---
 # <a name="use-a-recordset-destination"></a>使用資料錄集目的地
   資料錄集目的地不會將資料儲存到外部資料來源， 而是將資料儲存到資料類型為 `Object` 之 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 封裝變數內儲存的資料錄集記憶體中。 當資料錄集目的地儲存資料之後，您通常要使用具有 Foreach ADO 列舉值的 Foreach 迴圈容器來一次處理資料錄集的一個資料列。 Foreach ADO 列舉值會將目前資料列的每一資料行值儲存到個別封裝變數之中。 接著，您在 Foreach 迴圈容器中設定的工作會讀取這些變數中的值，然後對它們執行一些動作。  
@@ -41,7 +41,7 @@ ms.locfileid: "36023814"
   
 1.  在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中，建立或開啟 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 封裝。  
   
-2.  建立變數，將會包含資料錄集儲存到記憶體中資料錄集目的地，並將變數的類型設定為`Object`。  
+2.  建立變數，會包含儲存到資料錄集目的地中，記憶體中資料錄集，並將變數的類型設定為`Object`。  
   
 3.  建立其他適當類型的變數，在其中加入您要使用之資料錄集的每一資料行值。  
   
@@ -72,21 +72,21 @@ ms.locfileid: "36023814"
   
 3.  在 [變數] 視窗中建立變數，用以保存資料錄集和目前資料列的資料行值：  
   
-    1.  建立變數，名為， `BonusRecordset`，並將其類型設定為`Object`。  
+    1.  建立名為的變數`BonusRecordset`，並將其類型設定為`Object`。  
   
          `BonusRecordset`變數會保存資料錄集。  
   
-    2.  建立變數，名為， `EmailAddress`，並將其類型設定為`String`。  
+    2.  建立名為的變數`EmailAddress`，並將其類型設定為`String`。  
   
          `EmailAddress`變數會保存銷售人員的電子郵件地址。  
   
-    3.  建立變數，名為， `FirstName`，並將其類型設定為`String`。  
+    3.  建立名為的變數`FirstName`，並將其類型設定為`String`。  
   
          `FirstName`變數會保存銷售人員的名字。  
   
-    4.  建立變數，名為， `Bonus`，並將其類型設定為`Double`。  
+    4.  建立名為的變數`Bonus`，並將其類型設定為`Double`。  
   
-         `Bonus`變數會保存的銷售人員的獎金金額。  
+         `Bonus`變數會保存銷售人員的獎金金額。  
   
 #### <a name="to-configure-the-connection-managers"></a>設定連接管理員  
   
@@ -125,7 +125,7 @@ ms.locfileid: "36023814"
   
 5.  開啟資料錄集目的地編輯器，並依照下列設定來設定目的地：  
   
-    1.  在**元件屬性**索引標籤上，針對`VariableName`屬性選取`User::BonusRecordset`。  
+    1.  在上**元件屬性**索引標籤上，如`VariableName`屬性選取`User::BonusRecordset`。  
   
     2.  在 [輸入資料行] 索引標籤上，選取可用的全部三個資料行。  
   
@@ -135,9 +135,9 @@ ms.locfileid: "36023814"
   
 2.  開啟 Foreach 迴圈編輯器，依照下列設定來設定容器：  
   
-    1.  在**集合** 頁面上，針對**列舉值**，選取**Foreach ADO 列舉值**，以及**ADO 物件來源變數**，選取`User::BonusRecordset`.  
+    1.  上**集合**頁面上，如**列舉值**，選取**Foreach ADO 列舉值**，以及**ADO 物件來源變數**，選取`User::BonusRecordset`.  
   
-    2.  在**變數對應**頁面上，將`User::EmailAddress`至索引 0、`User::FirstName`至索引 1，和`User::Bonus`索引 2。  
+    2.  在 **變數對應**頁面上，將`User::EmailAddress`到索引 0、`User::FirstName`到索引 1，和`User::Bonus`到索引 2。  
   
 3.  在 [控制流程] 索引標籤上的 Foreach 迴圈容器中，加入傳送郵件工作。  
   

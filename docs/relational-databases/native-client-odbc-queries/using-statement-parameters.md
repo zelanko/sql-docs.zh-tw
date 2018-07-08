@@ -1,12 +1,12 @@
 ---
-title: 使用陳述式參數 |Microsoft 文件
+title: 使用陳述式參數 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: connectivity
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -22,12 +22,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 7741fc9a8b4de583055a5afccb0bc31d54b50406
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: b2533a645d18fbcfc14408c1a22b14f32641bd4b
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35698499"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37418817"
 ---
 # <a name="using-statement-parameters"></a>使用陳述式參數
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -39,9 +39,9 @@ ms.locfileid: "35698499"
   
 -   增強建構查詢準則時的使用者互動。  
   
--   管理**文字**， **ntext**，和**映像**資料和[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-特有的 C 資料類型。  
+-   管理**文字**， **ntext**，並**映像**資料和[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-特有的 C 資料類型。  
   
- 例如，**部分**資料表有資料行名為**PartID**，**描述**，和**價格**。 加入某個部分而不含參數時，需要建構如下的 SQL 陳述式：  
+ 比方說，**組件**資料表包含名為的資料行**PartID**，**描述**，以及**價格**。 加入某個部分而不含參數時，需要建構如下的 SQL 陳述式：  
   
 ```  
 INSERT INTO Parts (PartID, Description, Price) VALUES (2100, 'Drive shaft', 50.00)  

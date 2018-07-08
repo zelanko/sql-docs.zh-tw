@@ -1,27 +1,26 @@
 ---
-title: 全文檢索索引屬性 （一般頁面） |Microsoft 文件
+title: 全文檢索索引屬性 （一般頁面） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-search
+ms.technology: search
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.fulltextsearch.fulltextindexproperties.general.f1
 ms.assetid: f4dff61c-8c2f-4ff9-abe4-70a34421448f
 caps.latest.revision: 27
 author: craigg-msft
 ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 67fd5637e190d58cdcab186643d5233bb89b1b5e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 825b7e357d5904108b9dd4cbdec9533e89313c83
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36031978"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37149929"
 ---
 # <a name="full-text-index-properties-general-page"></a>全文檢索索引屬性 (一般頁面)
   **若要檢視或變更全文檢索索引的可修改的屬性**  
@@ -58,7 +57,7 @@ ms.locfileid: "36031978"
   
  5 = 全文檢索索引在調整執行速度或暫停。  
   
- **使用中全文檢索索引。**  
+ **作用中的全文檢索索引**  
  指出資料表是否具有使用中全文檢索索引。  
   
  1 = True  
@@ -69,7 +68,7 @@ ms.locfileid: "36031978"
  全文檢索索引所屬的檔案群組。  
   
  **全文檢索索引停用字詞表**  
- 目前與全文檢索索引產生關聯的停用字詞表。 停用字詞表是一份[停用字詞](../relational-databases/search/full-text-search.md)。 與全文檢索索引相關聯的停用字詞表 (如果有的話) 會套用至該索引上的全文檢索查詢。 您也可以選取從索引移除停用字詞表 **\<OFF >** 從清單中，或者您也可以選取不同停用字詞表。**\<系統 >** 表示系統停用字詞表。  
+ 目前與全文檢索索引產生關聯的停用字詞表。 停用字詞表是一份[停用字詞](../relational-databases/search/full-text-search.md)。 與全文檢索索引相關聯的停用字詞表 (如果有的話) 會套用至該索引上的全文檢索查詢。 您也可以選取從索引移除停用字詞表 **\<OFF >** 從清單中，或者您可以選取不同停用字詞表; **\<SYSTEM >** 表示系統停用字詞表。  
   
  **若要建立停用字詞表**  
   
@@ -78,7 +77,7 @@ ms.locfileid: "36031978"
  **搜尋屬性清單**  
  目前與此全文檢索索引相關聯的搜尋屬性清單 (如果有的話)。 搜尋屬性清單會指定關聯全文檢索索引擴展時所包含的一組文件屬性。 如需詳細資訊，請參閱 [使用搜索屬性清單搜索文件屬性](../relational-databases/search/search-document-properties-with-search-property-lists.md)。  
   
- **\<關閉 >** 表示沒有目前沒有搜尋屬性清單與索引相關聯。 您也可以選取從索引移除目前搜尋屬性清單**\<關閉 >** 從清單中，或從清單中選取不同的搜尋屬性清單。 這裡只會列出目前資料庫中的搜尋屬性清單。  
+ **\<關閉 >** 表示目前沒有與索引相關聯的搜尋屬性清單。 您也可以選取從索引移除目前的搜尋屬性清單**\<關閉 >** 從清單中，或從清單中選取不同的搜尋屬性清單。 這裡只會列出目前資料庫中的搜尋屬性清單。  
   
 > [!NOTE]  
 >  您可以將特定的搜尋屬性清單與相同資料庫中的多個全文檢索索引相關聯。  
@@ -90,9 +89,9 @@ ms.locfileid: "36031978"
  **資料表全文檢索項目計數**  
  表示已順利建立全文檢索索引的資料列數。  
   
- 這個屬性會對應至`TableFulltextItemCount`屬性傳回的 OBJECTPROPERTYEX[!INCLUDE[tsql](../includes/tsql-md.md)]函式。  
+ 此屬性會對應至`TableFulltextItemCount`屬性傳回的 OBJECTPROPERTYEX[!INCLUDE[tsql](../includes/tsql-md.md)]函式。  
   
- **處理資料表全文檢索文件**  
+ **已處理的資料表全文檢索文件**  
  顯示全文檢索索引啟動之後已經處理的資料列數。 在建立全文檢索搜尋索引的資料表中，單一資料列的所有資料行都會被視為單一文件的一部分來建立索引。 不會計算已刪除的資料列。  
   
 |||  
@@ -143,7 +142,7 @@ ms.locfileid: "36031978"
 |||  
 |-|-|  
 |**Full**|在資料表的完整母體擴展期間，系統會針對所有資料列建立索引項目。|  
-|**累加**|累加母體擴展會針對在上一次母體擴展之後或進行時加入、刪除或修改的資料列，更新全文檢索索引。 執行累加母體擴展需要基底資料表中包含的資料行`timestamp`資料型別。|  
+|**增量**|累加母體擴展會針對在上一次母體擴展之後或進行時加入、刪除或修改的資料列，更新全文檢索索引。 執行累加母體擴展，基底資料表必須包含的資料行`timestamp`資料型別。|  
 |**Update**|每當修改基底資料表中的資料時，就會更新全文檢索索引。|  
   
 ## <a name="see-also"></a>另請參閱  

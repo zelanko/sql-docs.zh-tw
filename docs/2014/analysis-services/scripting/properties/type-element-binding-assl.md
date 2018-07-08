@@ -1,5 +1,5 @@
 ---
-title: 輸入元素 (Binding) (ASSL) |Microsoft 文件
+title: 輸入元素 (Binding) (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - Type element
 ms.assetid: b5f5c485-dc83-4d66-a8d2-e96e96d068f9
 caps.latest.revision: 32
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: b07c1d781bfdade9228b6c5991b2eb56585cbe85
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 4bcf3e96c38dd4c2941d2d6256a62559ab3491eb
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36031301"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37148169"
 ---
 # <a name="type-element-binding-assl"></a>Type 元素 (Binding) (ASSL)
   包含屬性繫結的類型。  
@@ -64,7 +64,7 @@ ms.locfileid: "36031301"
 ## <a name="remarks"></a>備註  
  這個元素的值限制為下表所列的其中一個字串。  
   
-|ReplTest1|描述|  
+|值|描述|  
 |-----------|-----------------|  
 |*全部*|所有層級|  
 |*索引鍵*|成員索引鍵|  
@@ -76,7 +76,7 @@ ms.locfileid: "36031301"
 |*CustomRollup*|自訂積存公式|  
 |*CustomRollupProperties*|自訂積存屬性|  
   
- 對應至父系的項目`Type`在 「 分析管理物件 (AMO) 物件模型是<xref:Microsoft.AnalysisServices.AttributeBinding>和<xref:Microsoft.AnalysisServices.CubeAttributeBinding>。  
+ 對應至父系的元素`Type`在 「 分析管理物件 (AMO) 物件模型所<xref:Microsoft.AnalysisServices.AttributeBinding>和<xref:Microsoft.AnalysisServices.CubeAttributeBinding>。  
   
 ## <a name="see-also"></a>另請參閱  
  [繫結資料型別&#40;ASSL&#41;](../data-type/binding-data-type-assl.md)   

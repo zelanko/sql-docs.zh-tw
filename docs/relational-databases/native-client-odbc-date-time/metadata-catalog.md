@@ -1,12 +1,12 @@
 ---
-title: 目錄中繼資料 |Microsoft 文件
+title: 目錄中繼資料 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: connectivity
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -17,21 +17,21 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: cd2567eac8a3bc7624af9b980c76eb2b7c6720bc
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: 457f25d5429eccf2c253bb6b39fbae40b43d100a
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35700379"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37420377"
 ---
-# <a name="metadata---catalog"></a>中繼資料的類別目錄
+# <a name="metadata---catalog"></a>中繼資料-目錄
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
-  本主題說明所傳回的資料行中繼資料**SQLColumns**和**SQLProcedureColumns**，資料類型所傳回的中繼資料和**SQLGetTypeInfo**。  
+  本主題描述傳回的資料行中繼資料**SQLColumns**並**SQLProcedureColumns**，並將資料類型所傳回的中繼資料**SQLGetTypeInfo**。  
   
 ## <a name="remarks"></a>備註  
- 下列資料行值會傳回日期/時間類型**SQLColumns**和**SQLProcedureColumns**。  
+ 下列資料行值會傳回日期/時間類型所**SQLColumns**並**SQLProcedureColumns**。  
   
 |參數類型|日期|time|smalldatetime|DATETIME|datetime2|datetimeoffset|  
 |--------------------|----------|----------|-------------------|--------------|---------------|--------------------|  
@@ -45,7 +45,7 @@ ms.locfileid: "35700379"
 |CHAR_OCTET_LENGTH|NULL|NULL|NULL|NULL|NULL|NULL|  
 |SS_DATA_TYPE|0|0|111|111|0|0|  
   
- 下列資料行值會傳回日期/時間類型**SQLGetTypeInfo**:  
+ 下列資料行值會傳回日期/時間類型所**SQLGetTypeInfo**:  
   
 |參數類型|日期|time|smalldatetime|DATETIME|datetime2|datetimeoffset|  
 |--------------------|----------|----------|-------------------|--------------|---------------|--------------------|  

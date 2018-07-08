@@ -1,5 +1,5 @@
 ---
-title: 程式例外狀況訊息方塊 |Microsoft 文件
+title: 程式例外狀況訊息方塊 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,18 +15,18 @@ helpviewer_keywords:
 - displaying exception message box
 ms.assetid: c771985b-149c-459a-b3cb-7b15fde01150
 caps.latest.revision: 21
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: a6d5e6112822b1191894c633b89f8b2d54b95e6f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 52a24c53fcb7efa367b089b4cf5baa0731d7ad5a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36030863"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37151329"
 ---
 # <a name="program-exception-message-box"></a>程式例外狀況訊息方塊
-  您可以在應用程式中使用例外狀況訊息方塊，以提供更有效地控制訊息經驗所提供比<xref:System.Windows.Forms.MessageBox>類別。 如需詳細資訊，請參閱[例外狀況訊息方塊程式設計](../../../2014/database-engine/dev-guide/exception-message-box-programming.md)。 如需如何取得及部署例外狀況訊息方塊.dll 的資訊，請參閱[例外狀況訊息方塊應用程式部署到](../../../2014/database-engine/dev-guide/deploying-an-exception-message-box-application.md)。  
+  您可以在應用程式中使用例外狀況訊息方塊，以提供更有效地控制訊息經驗所提供比<xref:System.Windows.Forms.MessageBox>類別。 如需詳細資訊，請參閱 <<c0> [ 例外狀況訊息方塊程式設計](../../../2014/database-engine/dev-guide/exception-message-box-programming.md)。 如需有關如何取得及部署例外狀況訊息方塊.dll 的資訊，請參閱 <<c0> [ 例外狀況訊息方塊將應用程式部署](../../../2014/database-engine/dev-guide/deploying-an-exception-message-box-application.md)。  
   
 ## <a name="procedure"></a>程序  
   
@@ -38,7 +38,7 @@ ms.locfileid: "36030863"
   
 3.  建立 try-catch 區塊來處理預期的例外狀況。  
   
-4.  內`catch`封鎖，請建立的執行個體<xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBox>類別。 傳遞<xref:System.Exception>物件由`try` - `catch`區塊。  
+4.  內`catch`區塊中，建立的執行個體<xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBox>類別。 傳遞<xref:System.Exception>處理物件`try` - `catch`區塊。  
   
 5.  （選擇性）設定一或多個下列屬性<xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBox>:  
   
@@ -52,7 +52,7 @@ ms.locfileid: "36030863"
   
 6.  呼叫 <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBox.Show%2A> 方法。 傳遞例外狀況訊息方塊所屬的父視窗。  
   
-7.  （選擇性）記下的值傳回<xref:System.Windows.Forms.DialogResult>列舉型別，如果您需要決定的按鈕使用者按下。  
+7.  （選擇性）請記下的值傳回<xref:System.Windows.Forms.DialogResult>列舉型別，如果您需要判斷的按鈕使用者按下。  
   
 #### <a name="to-display-the-exception-message-box-without-an-exception"></a>顯示沒有例外狀況的例外狀況訊息方塊  
   
@@ -68,7 +68,7 @@ ms.locfileid: "36030863"
   
     -   <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBox.Caption%2A> - 例外狀況訊息方塊的對話方塊標題。  
   
-    -   <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBox.DefaultButton%2A> - <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBoxDefaultButton> 列舉，指定例外狀況訊息方塊的對話方塊的預設按鈕。  
+    -   <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBox.DefaultButton%2A> - <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBoxDefaultButton> 列舉，指定例外狀況訊息方塊的對話方塊中的 [預設] 按鈕。  
   
     -   <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBox.Options%2A> - <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBoxOptions> 列舉，用於控制例外狀況訊息方塊的其他行為。  
   
@@ -76,7 +76,7 @@ ms.locfileid: "36030863"
   
 5.  呼叫 <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBox.Show%2A> 方法。 傳遞例外狀況訊息方塊所屬的父視窗。  
   
-6.  （選擇性）請注意傳回的值<xref:System.Windows.Forms.DialogResult>列舉型別，如果您需要決定的按鈕使用者按下。  
+6.  （選擇性）請注意傳回的值<xref:System.Windows.Forms.DialogResult>列舉型別，如果您需要判斷的按鈕使用者按下。  
   
 #### <a name="to-display-the-exception-message-box-with-customized-buttons"></a>顯示具有自訂按鈕的例外狀況訊息方塊  
   
@@ -86,31 +86,31 @@ ms.locfileid: "36030863"
   
 3.  以下列兩種方式中的一種來建立 <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBox> 類別的執行個體：  
   
-    -   傳遞<xref:System.Exception>物件由`try` - `catch`區塊。  
+    -   傳遞<xref:System.Exception>處理物件`try` - `catch`區塊。  
   
     -   傳遞訊息文字當做<xref:System.String>值。  
   
-4.  設定下列其中一個值<xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBox.Buttons%2A>:  
+4.  下列其中一個值的集合<xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBox.Buttons%2A>:  
   
-    -   <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBoxButtons.AbortRetryIgnore> -顯示**中止**，**重試**，和**忽略**按鈕。  
+    -   <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBoxButtons.AbortRetryIgnore> -顯示**中止**，**重試一次**，並**忽略**按鈕。  
   
     -   <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBoxButtons.Custom> -顯示自訂按鈕。  
   
     -   <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBoxButtons.OK> -顯示**確定** 按鈕。  
   
-    -   <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBoxButtons.OKCancel> -顯示**確定**和**取消**按鈕。  
+    -   <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBoxButtons.OKCancel> -顯示 **[確定]** 並**取消**按鈕。  
   
-    -   <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBoxButtons.RetryCancel> -顯示**重試**和**取消**按鈕。  
+    -   <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBoxButtons.RetryCancel> -顯示**重試**並**取消**按鈕。  
   
-    -   <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBoxButtons.YesNo> -顯示**是**和**否**按鈕。  
+    -   <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBoxButtons.YesNo> -顯示 **[是]** 並**No**按鈕。  
   
-    -   <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBoxButtons.YesNoCancel> -顯示**是**，**否**，和**取消**按鈕。  
+    -   <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBoxButtons.YesNoCancel> -顯示 **[是]**， **No**，並**取消**按鈕。  
   
-5.  （選擇性）如果您使用自訂按鈕時，呼叫其中一個多載的<xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBox.SetButtonText%2A>方法，以指定最多五個自訂按鈕的文字。  
+5.  （選擇性）如果您使用自訂按鈕時，呼叫其中一個多載<xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBox.SetButtonText%2A>方法，以指定最多五個自訂按鈕的文字。  
   
 6.  呼叫 <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBox.Show%2A> 方法。 傳遞例外狀況訊息方塊所屬的父視窗。  
   
-7.  （選擇性）請注意傳回的值<xref:System.Windows.Forms.DialogResult>列舉型別，如果您需要決定的按鈕使用者按下。 如果您使用自訂按鈕時，請注意值<xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBoxDialogResult>如<xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBox.CustomDialogResult%2A>屬性來判斷您的自訂按鈕，使用者按下。  
+7.  （選擇性）請注意傳回的值<xref:System.Windows.Forms.DialogResult>列舉型別，如果您需要判斷的按鈕使用者按下。 如果您使用自訂按鈕時，請記下的值<xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBoxDialogResult>針對<xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBox.CustomDialogResult%2A>屬性來判斷自訂按鈕使用者按下。  
   
 #### <a name="to-allow-users-to-decide-whether-to-show-the-exception-message-box"></a>讓使用者決定是否顯示例外狀況訊息方塊  
   
@@ -120,15 +120,15 @@ ms.locfileid: "36030863"
   
 3.  以下列兩種方式中的一種來建立 <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBox> 類別的執行個體：  
   
-    -   傳遞<xref:System.Exception>物件由`try` - `catch`區塊。  
+    -   傳遞<xref:System.Exception>處理物件`try` - `catch`區塊。  
   
     -   傳遞訊息文字當做<xref:System.String>值。  
   
-4.  設定<xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBox.ShowCheckbox%2A>屬性`true`。  
+4.  設定<xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBox.ShowCheckbox%2A>屬性設`true`。  
   
-5.  （選擇性）指定文字以要求使用者決定是否顯示例外狀況訊息方塊，再為<xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBox.CheckboxText%2A>。 預設的文字為「不要再顯示此訊息」。  
+5.  （選擇性）指定文字以要求使用者決定是否要顯示的例外狀況訊息方塊再次<xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBox.CheckboxText%2A>。 預設的文字為「不要再顯示此訊息」。  
   
-6.  如果您需要保留使用者的決策，只會針對應用程式的執行期間，設定的值<xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBox.IsCheckboxChecked%2A>全域<xref:System.Boolean>變數。 在建立例外狀況訊息方塊的執行個體之前，請先評估此值。  
+6.  如果您需要保留使用者的決定，只會針對應用程式的執行期間，設定的值<xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBox.IsCheckboxChecked%2A>全域<xref:System.Boolean>變數。 在建立例外狀況訊息方塊的執行個體之前，請先評估此值。  
   
 7.  如果需要永久儲存使用者的決定，請進行下列步驟：  
   

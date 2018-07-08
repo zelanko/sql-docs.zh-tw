@@ -1,5 +1,5 @@
 ---
-title: 設定資料檢視器 （散佈圖索引標籤） |Microsoft 文件
+title: 設定資料檢視器 （散佈圖索引標籤） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.configuredataviewer.scatterplot.f1
 helpviewer_keywords:
 - Configure Data Viewer dialog box
 ms.assetid: 960c351a-ccb9-4e52-acd4-442246a3a328
 caps.latest.revision: 25
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 6eeee165ebc37809a60366dd7a7b98efeb9aac14
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 1015e87db60ba8d7aaac41292f0253cfe7cc3b25
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36031480"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37150969"
 ---
 # <a name="configure-data-viewer-scatter-plot-tab"></a>設定資料檢視器 (散佈圖索引標籤)
   使用 [設定資料檢視器] 對話方塊的 [散佈圖 (x,y)] 索引標籤，即可指定兩個資料行相對繪製成圖形。 散佈圖會將來自兩個數值資料行的資料值相對繪製成圖形。 每一筆資料記錄都變成圖中的一個點。 圖表只會反映一個緩衝區的內容。  

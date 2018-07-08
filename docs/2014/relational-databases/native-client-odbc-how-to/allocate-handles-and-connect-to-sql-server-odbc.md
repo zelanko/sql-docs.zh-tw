@@ -1,13 +1,11 @@
 ---
-title: 配置控制代碼並連接到 SQL Server (ODBC) |Microsoft 文件
+title: 配置控制代碼並連接到 SQL Server (ODBC) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -16,15 +14,15 @@ helpviewer_keywords:
 - handles [ODBC], about handles
 ms.assetid: 6172cd52-9c9a-467d-992f-def07f3f3bb1
 caps.latest.revision: 29
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: adf51bdb9181030079d8b3f94628a1280299c856
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: ccb7b63b1098e9e6d5dba6ee0a299d2d30ce6f09
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36029812"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37407559"
 ---
 # <a name="allocate-handles-and-connect-to-sql-server-odbc"></a>配置控制代碼並連接到 SQL Server (ODBC)
     
@@ -34,21 +32,21 @@ ms.locfileid: "36029812"
   
 2.  加入 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驅動程式專屬的標頭檔 Odbcss.h。  
   
-3.  呼叫[SQLAllocHandle](http://go.microsoft.com/fwlink/?LinkId=58396)與`HandleType`SQL_HANDLE_ENV 來初始化 ODBC 並配置環境控制代碼。  
+3.  呼叫[SQLAllocHandle](http://go.microsoft.com/fwlink/?LinkId=58396)使用`HandleType`SQL_HANDLE_ENV 來初始化 ODBC 並配置環境控制代碼。  
   
-4.  呼叫[SQLSetEnvAttr](../native-client-odbc-api/sqlsetenvattr.md)與`Attribute`設定為 SQL_ATTR_ODBC_VERSION 並`ValuePtr`設定為 sql_ov_odbc3 時，指出應用程式會使用 ODBC 3.x 格式函式呼叫。  
+4.  呼叫[SQLSetEnvAttr](../native-client-odbc-api/sqlsetenvattr.md)具有`Attribute`設定為 SQL_ATTR_ODBC_VERSION 並`ValuePtr`設定為 sql_ov_odbc3 時，表示應用程式會使用 ODBC 3.x 格式函式呼叫。  
   
-5.  （選擇性） 呼叫[SQLSetEnvAttr](../native-client-odbc-api/sqlsetenvattr.md)來設定其他環境選項或呼叫[SQLGetEnvAttr](http://go.microsoft.com/fwlink/?LinkId=58403)取得環境選項。  
+5.  （選擇性） 呼叫[SQLSetEnvAttr](../native-client-odbc-api/sqlsetenvattr.md)來設定其他環境選項或呼叫[SQLGetEnvAttr](http://go.microsoft.com/fwlink/?LinkId=58403)來取得環境選項。  
   
-6.  呼叫[SQLAllocHandle](http://go.microsoft.com/fwlink/?LinkId=58396)與`HandleType`配置連接控制代碼利用 SQL_HANDLE_DBC。  
+6.  呼叫[SQLAllocHandle](http://go.microsoft.com/fwlink/?LinkId=58396)使用`HandleType`配置連接控制代碼的利用 SQL_HANDLE_DBC。  
   
-7.  （選擇性） 呼叫[SQLSetConnectAttr](../native-client-odbc-api/sqlsetconnectattr.md)設定連接選項，或呼叫[SQLGetConnectAttr](../native-client-odbc-api/sqlgetconnectattr.md)來取得連接選項。  
+7.  （選擇性） 呼叫[SQLSetConnectAttr](../native-client-odbc-api/sqlsetconnectattr.md)來設定連接選項或呼叫[SQLGetConnectAttr](../native-client-odbc-api/sqlgetconnectattr.md)來取得連接選項。  
   
-8.  呼叫要用於連接到現有的資料來源的 SQLConnect [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
+8.  呼叫，用以連接到現有的資料來源的 SQLConnect [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
   
      或  
   
-     呼叫[SQLDriverConnect](../native-client-odbc-api/sqldriverconnect.md)若要使用的連接字串連接到[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
+     呼叫[SQLDriverConnect](../native-client-odbc-api/sqldriverconnect.md)若要使用的連接字串來連接到[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
   
      完整的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 連接字串至少擁有下列其中一種形式：  
   
@@ -61,15 +59,15 @@ ms.locfileid: "36029812"
   
      \- 或 -  
   
-     呼叫[SQLBrowseConnect](../native-client-odbc-api/sqlbrowseconnect.md)反覆進行的方式來建立連接字串，並連接到在多次[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
+     呼叫[SQLBrowseConnect](../native-client-odbc-api/sqlbrowseconnect.md)多次以反覆的方式來建置連接字串，並連接到[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
   
 9. （選擇性） 呼叫[SQLGetInfo](../native-client-odbc-api/sqlgetinfo.md)以取得驅動程式屬性和行為[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]資料來源。  
   
 10. 配置與使用陳述式。  
   
-11. 呼叫中斷 SQLDisconnect[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]並且讓連接控制代碼可以進行新的連接。  
+11. 呼叫中斷 SQLDisconnect[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]並使連接控制代碼可供新的連接。  
   
-12. 呼叫[SQLFreeHandle](../native-client-odbc-api/sqlfreehandle.md)與`HandleType`來釋放連接控制代碼利用 SQL_HANDLE_DBC。  
+12. 呼叫[SQLFreeHandle](../native-client-odbc-api/sqlfreehandle.md)與`HandleType`來釋放連接控制代碼的利用 SQL_HANDLE_DBC。  
   
 13. 利用 SQL_HANDLE_ENV 的 `SQLFreeHandle` 呼叫 `HandleType` 來釋放環境控制代碼。  
   

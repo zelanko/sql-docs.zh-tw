@@ -1,5 +1,5 @@
 ---
-title: ServerMode 元素 |Microsoft 文件
+title: ServerMode 元素 |Microsoft Docs
 ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
@@ -12,15 +12,15 @@ ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: c2f8cb39-dad7-433b-b7b7-fb1625f76a84
 caps.latest.revision: 6
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: 8448e5ac3111f4c1683ae3dd62dcaef992f3f0e7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 4b329f9882b9eff2adf1a79041ea83c51a627f15
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36022480"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37239448"
 ---
 # <a name="servermode-element"></a>ServerMode 元素
   `ServerMode` 伺服器元素指定伺服器的作業模式。  

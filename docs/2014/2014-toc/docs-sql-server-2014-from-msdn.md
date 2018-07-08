@@ -1,29 +1,29 @@
 ---
-title: SQL Server 2014 文件受到 |Microsoft 文件
-description: SQL Server 2014 的 Microsoft 文件會移動之前年 7 月 2018，從這裡文件上的 MSDN 中。
-author: MightyPen
+title: SQL Server 2014 docs 受到 |Microsoft Docs
+description: SQL Server 2014 的 Microsoft 文件將年 7 月 2018，從 MSDN 文件上的此移動。
+author: mightypen
 manager: craigg
-ms.prod-service: sql-database
+ms.prod: sql-server-2014
 ms.custom: ''
 ms.topic: article
 ms.workload: On Demand
 ms.date: 04/26/2018
 ms.author: genemi
 ms.reviewer: sudeepk
-ms.openlocfilehash: c0d3cc7ef6236bb3f41b5e03123be0e0146d452d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+ms.openlocfilehash: 490ff7a8fb55e0ad9c0fd5b3606a9747e8f7b70f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36023461"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37159589"
 ---
-# SQL Server 2014 文件會移至文件
+# SQL Server 2014 的文件即將移往 Docs
 
-本文說明的 Microsoft SQL Server 2014 文件集的發行項在即將進行移動。 這份文件以晚期年 4 月 2018，並移動年 7 月 2018年之前進行。
+本文說明 Microsoft 的 SQL Server 2014 文件文章即將移。 於 2018 年 4 月年底，正在寫入這篇文章，並移動會在 2018 年 7 月之前發生。
 
 ## MSDN 上的 SQL Server 2014 文件的連結
 
-下列連結是儲存在 Microsoft SQL Server 2014 文件及其*MSDN*網站。 前年 7 月 2018，Microsoft 會將移動這些文件集文件至其新*文件*網站：
+下列連結是 SQL Server 2014 文件，Microsoft 已儲存在其*MSDN*網站。 之前在 2018 年 7 月，Microsoft 將其新移動這些文件文章*Docs*網站：
 
 - *SQL Server 2014*
     - [https://msdn.microsoft.com/library/dn197878(v=sql.10).aspx](https://msdn.microsoft.com/library/dn197878(v=sql.10).aspx)
@@ -34,22 +34,22 @@ ms.locfileid: "36023461"
 MSDN 是針對 initialism *Microsoft Developer Network*。
 
 
-## 重新導向程式
+## 重新導向器
 
-過時的 MSDN HTTP 位址會繼續運作在移動之後至少幾年。 重新導向程式就會攔截 MSDN 的要求，並將其對應的新位址，在文件轉寄。不過，在移動之後的下列項目將會成立：
+過時的 MSDN HTTP 位址仍適用於移動後的最少幾年。 重新導向器會攔截 MSDN 要求，並將其對應的新位址，在 Docs 上轉送。不過，移動之後，下列項目會是 true:
 
-- 它將會更好，才能使用新的 HTTP 位址的直接瀏覽文件。
-- Bing 和 Google 尋檢程式會啟動 delist 並且略過舊的 MSDN 位址。
+- 它會直接瀏覽至 Docs 的新 HTTP 位址運作更好。
+- Bing 和 Google 的編目程式會開始為取消列入，並略過舊的 MSDN 位址。
 
 
 ## 在移動之後
 
-若要在移動之後*文件*，根 SQL Server 2014 文件文章的位址會是：
+若要在移動之後*Docs*，根 SQL Server 2014 文件文章的位址會是：
 
 - [https://docs.microsoft.com/sql/?view=sql-server-2014](https://docs.microsoft.com/sql/?view=sql-server-2014)
 
 
 ## 相關連結
 
-- [根文件集文件以取得 SQL Server 2016 和更新版本](https://docs.microsoft.com/sql/?view=sql-server-2016)
+- [SQL Server 2016 和更新版本的根文件文章](https://docs.microsoft.com/sql/?view=sql-server-2016)
 

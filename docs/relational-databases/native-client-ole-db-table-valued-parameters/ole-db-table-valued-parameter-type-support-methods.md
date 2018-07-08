@@ -1,12 +1,12 @@
 ---
-title: OLE DB 資料表值參數類型支援 （方法） |Microsoft 文件
+title: OLE DB 資料表值參數類型支援 （方法） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: connectivity
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -17,12 +17,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 9273a633a6a1c5581dded820e4f06ec8ee5a4b31
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: d06784664ae1211d8fbffb7b8269ea996b6d3857
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35695189"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37409298"
 ---
 # <a name="ole-db-table-valued-parameter-type-support-methods"></a>OLE DB 資料表值參數類型支援 (方法)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -32,19 +32,19 @@ ms.locfileid: "35695189"
   
 |方法|資料表值參數支援|  
 |------------|-------------------------------------|  
-|ITableDefinitionWithConstraints::CreateTableWithConstraints|當您知道資料表值參數的類型資訊，而且想要根據類型資訊來具現化資料表值參數資料列集物件時使用。<br /><br /> 如需詳細資訊，請參閱 < 靜態案例"[資料表值參數資料列集建立](../../relational-databases/native-client-ole-db-table-valued-parameters/table-valued-parameter-rowset-creation.md)。|  
-|IOpenRowset::OpenRowset|當您不知道資料表值參數的類型資訊，而且想要根據從伺服器擷取的中繼資料資訊來具現化資料表值參數資料列集物件時使用。<br /><br /> 如需詳細資訊，請參閱 < 動態案例"[資料表值參數資料列集建立](../../relational-databases/native-client-ole-db-table-valued-parameters/table-valued-parameter-rowset-creation.md)。|  
-|ISSCommandWithParameters::SetParameterInfo|若要指定資料表值參數命令參數，取用者指定為"table"或"DBTYPE_TABLE"參數的型別中*pwszName* DBPARAMBINDINFO 結構的成員。 *UlParamSize*設定為 ~ 0。 如需詳細資訊，請參閱 < 資料表值參數規格 > 中[Executing Commands Containing Table-Valued 參數](../../relational-databases/native-client-ole-db-table-valued-parameters/executing-commands-containing-table-valued-parameters.md)。|  
-|ISSCommandWithParameters::SetParameterProperties|會設定資料表值參數所特有的屬性，例如結構描述名稱、類型名稱、資料行順序和預設資料行。<br /><br /> 取用者指定的參數序數*iOrdinal* SSPARAMPROPS 結構。 所要求的屬性集為 DBPROPSET_SQLSERVERPARAMETER。|  
-|ISSCommandWithParameters::GetParameterInfo|取得指定之命令的所有參數類型。<br /><br /> 資料表值參數， *wType* DBPARAMINFO 結構中的欄位會具有 DBTYPE_TABLE 類型。 *UlParamSize*欄位將設定為 ~ 0，表示長度未知。|  
-|ISSCommandWithParameters::GetParameterProperties|取得 DBTYPE_TABLE 類型之參數的其他類型資訊。<br /><br /> 取用者指定的參數序數*iOrdinal* SSPARAMPROPS 結構的成員。 取用者可以要求任何列在 isscommandwithparameters:: DBPROPSET_SQLSERVERPARAMETER 屬性集裡的屬性。<br /><br /> 因為取用者不知道資料表值參數類型，所以提供者必須將 SSPROP_PARAM_TYPE_TYPENAME、SSPROP_PARAM_TYPE_SCHEMANAME 和 SSPROP_PARAM_TYPE_CATALOGNAME 設定為正確的值。 其餘的 SSPROP_PARAM_TABLE_DEFAULT_COLUMNS 和 SSPROP_PARAM_TABLE_COLUMN_SORT_ORDER 屬性將會有預設值。 取用者已探索到的資料表值參數類型名稱之後，它會使用 iopenrowset:: Openrowset 建立這個資料表值參數，指定名稱的資料表值參數類型的執行個體。 如需詳細資訊，請參閱[資料表值參數類型探索](../../relational-databases/native-client-ole-db-table-valued-parameters/table-valued-parameter-type-discovery.md)。|  
+|ITableDefinitionWithConstraints::CreateTableWithConstraints|當您知道資料表值參數的類型資訊，而且想要根據類型資訊來具現化資料表值參數資料列集物件時使用。<br /><br /> 如需詳細資訊，請參閱 < 靜態案例 > 中[資料表值參數資料列集建立](../../relational-databases/native-client-ole-db-table-valued-parameters/table-valued-parameter-rowset-creation.md)。|  
+|IOpenRowset::OpenRowset|當您不知道資料表值參數的類型資訊，而且想要根據從伺服器擷取的中繼資料資訊來具現化資料表值參數資料列集物件時使用。<br /><br /> 如需詳細資訊，請參閱 < 動態案例 > 中[資料表值參數資料列集建立](../../relational-databases/native-client-ole-db-table-valued-parameters/table-valued-parameter-rowset-creation.md)。|  
+|ISSCommandWithParameters::SetParameterInfo|若要指定資料表值參數命令參數，取用者指定為"table"或"DBTYPE_TABLE"參數的型別中*pwszName* DBPARAMBINDINFO 結構的成員。 *UlParamSize*設定為 ~ 0。 如需詳細資訊，請參閱 「 資料表值參數規格 」 中[Executing Commands Containing Table-Valued 參數](../../relational-databases/native-client-ole-db-table-valued-parameters/executing-commands-containing-table-valued-parameters.md)。|  
+|ISSCommandWithParameters::SetParameterProperties|會設定資料表值參數所特有的屬性，例如結構描述名稱、類型名稱、資料行順序和預設資料行。<br /><br /> 取用者會指定在參數的序數*iOrdinal* SSPARAMPROPS 結構。 所要求的屬性集為 DBPROPSET_SQLSERVERPARAMETER。|  
+|ISSCommandWithParameters::GetParameterInfo|取得指定之命令的所有參數類型。<br /><br /> 資料表值參數，如*wType* DBPARAMINFO 結構中的欄位會具有 DBTYPE_TABLE 類型。 *UlParamSize*欄位將設定為 ~ 0，表示長度未知。|  
+|ISSCommandWithParameters::GetParameterProperties|取得 DBTYPE_TABLE 類型之參數的其他類型資訊。<br /><br /> 取用者會指定在參數的序數*iOrdinal* SSPARAMPROPS 結構的成員。 取用者可以要求任何列在 isscommandwithparameters:: Setparameterproperties DBPROPSET_SQLSERVERPARAMETER 屬性集裡的屬性。<br /><br /> 因為取用者不知道資料表值參數類型，所以提供者必須將 SSPROP_PARAM_TYPE_TYPENAME、SSPROP_PARAM_TYPE_SCHEMANAME 和 SSPROP_PARAM_TYPE_CATALOGNAME 設定為正確的值。 其餘的 SSPROP_PARAM_TABLE_DEFAULT_COLUMNS 和 SSPROP_PARAM_TABLE_COLUMN_SORT_ORDER 屬性將會有預設值。 取用者已經探索資料表值參數類型名稱之後，它會使用 iopenrowset:: Openrowset 建立這個資料表值參數，指定資料表值參數類型名稱的執行個體。 如需詳細資訊，請參閱 <<c0> [ 資料表值參數類型探索](../../relational-databases/native-client-ole-db-table-valued-parameters/table-valued-parameter-type-discovery.md)。|  
 |IRowsetInfo::GetProperties|取得資料表值參數資料列集屬性。 取用者可以使用這些屬性，以最佳方式設定繫結。|  
 |IColumnsRowset::GetColumnsRowset|擷取有關 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料表的中繼資料資訊。 如果是資料表值參數，這個相同介面會提供有關每一個資料行的詳細中繼資料資訊，如下所示：<br /><br /> DBCOLUMN_FLAGS 表示透過 DBCOLUMNFLAGS_ISNULLABLE 位元的 Null 屬性。<br /><br /> DBCOLUMN_ISUNIQUE 會指出此資料行是否為識別欄位。<br /><br /> DBCOLUMN_COMPUTEMODE 會指出此資料行是否為計算資料行。|  
-|IAccessor::CreateAccessor|若要將資料表值參數資料列集物件繫結到命令參數，您建立存取子時其*wType*成員設定為 DBTYPE_TABLE。 DBOBJECT 結構將會包含 IID_IRowset 或中的任何其他有效的資料列集物件介面*iid*成員。 其餘欄位的處理方式類似於 DBTYPE_IUNKNOWN。|  
+|IAccessor::CreateAccessor|若要將資料表值參數資料列集物件繫結到命令參數，您會建立存取子時其*wType*成員設定為 DBTYPE_TABLE。 DBOBJECT 結構將會包含 IID_IRowset 或中的任何其他有效的資料列集物件介面*iid*成員。 其餘欄位的處理方式類似於 DBTYPE_IUNKNOWN。|  
   
 ## <a name="see-also"></a>另請參閱  
  [OLE DB 資料表值參數類型支援](../../relational-databases/native-client-ole-db-table-valued-parameters/ole-db-table-valued-parameter-type-support.md)   
  [資料表值參數資料列集建立](../../relational-databases/native-client-ole-db-table-valued-parameters/table-valued-parameter-rowset-creation.md)   
- [您可以使用資料表值參數&#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-how-to/use-table-valued-parameters-ole-db.md)  
+ [使用資料表值參數&#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-how-to/use-table-valued-parameters-ole-db.md)  
   
   

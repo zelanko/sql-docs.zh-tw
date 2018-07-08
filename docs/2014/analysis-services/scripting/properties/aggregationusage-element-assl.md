@@ -1,5 +1,5 @@
 ---
-title: AggregationUsage 元素 (ASSL) |Microsoft 文件
+title: AggregationUsage 元素 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - AggregationUsage element
 ms.assetid: af0c2e7f-b659-4fbf-9b1a-66128db669a2
 caps.latest.revision: 41
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 0cc9d13ed663b92224584ab57f6f467e3a472d8e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 9a073ca27168bec785d9098d9e6b3ad4974b7018
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36029903"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37259464"
 ---
 # <a name="aggregationusage-element-assl"></a>AggregationUsage 元素 (ASSL)
   控制項如何在彙總設計師[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]設計彙總。  
@@ -64,12 +64,12 @@ ms.locfileid: "36029903"
 ## <a name="remarks"></a>備註  
  這個元素的值限制為下表所列的其中一個字串。  
   
-|ReplTest1|描述|  
+|值|描述|  
 |-----------|-----------------|  
 |*Full*|此 Cube 的每一個彙總都必須包含這個屬性。|  
 |*無*|此 Cube 不應該有任何彙總包含這個屬性。|  
 |*不受限制*|彙總設計師沒有任何限制。|  
-|*預設值*|彙總設計師會套用預設規則根據屬性的型別 (*完整*代表索引鍵， *Unrestricted*供其他人)。|  
+|*預設值*|彙總設計師會套用預設規則根據屬性的型別 (*完整*金鑰*Unrestricted*供其他人)。|  
   
  在「分析管理物件」(AMO) 物件模型中對應至 `AggregationUsage` 允許值的列舉是 <xref:Microsoft.AnalysisServices.AggregationUsage>。  
   

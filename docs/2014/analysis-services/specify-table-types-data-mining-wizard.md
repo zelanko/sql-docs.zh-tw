@@ -1,5 +1,5 @@
 ---
-title: 指定資料表類型 （資料採礦精靈） |Microsoft 文件
+title: 指定資料表類型 （資料採礦精靈） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dm.dmwizard.specifytabletypes.f1
 ms.assetid: 8209a707-faef-4ffc-8991-6c13bb350753
 caps.latest.revision: 22
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 74fdca1f619b063e32e37b29f1ce721666d752d3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 7c753554dcab61c10bacaf4c118d1781ba3d157b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36031727"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37159069"
 ---
 # <a name="specify-table-types-data-mining-wizard"></a>指定資料表類型 (資料採礦精靈)
   使用 [指定資料表類型] 頁面，即可識別要用來定義採礦結構的資料表。 如果未選取資料表，將不會使用它來定義採礦結構。  
@@ -46,7 +46,7 @@ ms.locfileid: "36031727"
   
 ## <a name="see-also"></a>另請參閱  
  [資料採礦精靈 F1 說明&#40;Analysis Services-資料採礦&#41;](data-mining-wizard-f1-help-analysis-services-data-mining.md)   
- [選取資料來源檢視&#40;資料採礦精靈&#41;](select-data-source-view-data-mining-wizard.md)   
+ [選取 [資料來源檢視]&#40;資料採礦精靈&#41;](select-data-source-view-data-mining-wizard.md)   
  [指定定型資料&#40;資料採礦精靈&#41;](specify-the-training-data-data-mining-wizard.md)  
   
   

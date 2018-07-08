@@ -1,5 +1,5 @@
 ---
-title: 使用預設的優先順序條件約束連接工作和容器 |Microsoft 文件
+title: 使用預設的優先順序條件約束連接工作和容器 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - tasks [Integration Services], precedence constraints
 - precedence constraints [Integration Services], connecting tasks
@@ -16,21 +16,21 @@ helpviewer_keywords:
 - containers [Integration Services], precedence constraints
 ms.assetid: 8f31f15f-98ff-4c35-b41f-8b8cfd148d75
 caps.latest.revision: 32
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: cf278d02e1c2eb523964ee07b039b46942c7e9de
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: be0139638720b80428b820e5cb2083c5fbb1a450
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36023818"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37277114"
 ---
 # <a name="connect-tasks-and-containers-by-using-a-default-precedence-constraint"></a>使用預設的優先順序條件約束來連接工作和容器
   優先順序條件約束可以連接兩個可執行檔。 可執行檔可以是任何工作或「For 迴圈」、「Foreach 迴圈」或「時序」容器。 此程序描述如何設定優先順序條件約束的預設行為，及如何使用預設的優先順序條件約束來連接可執行檔。  
   
 ## <a name="creating-default-precedence-constraints"></a>建立預設的優先順序條件約束  
- 當您第一次使用[!INCLUDE[ssIS](../includes/ssis-md.md)]設計師，優先順序條件約束的預設值是`Success`。 請遵循下列步驟來設定「 [!INCLUDE[ssIS](../includes/ssis-md.md)] 設計師」，以便使用優先順序條件約束的其他預設值。  
+ 當您第一次使用[!INCLUDE[ssIS](../includes/ssis-md.md)]設計工具中，優先順序條件約束的預設值是`Success`。 請遵循下列步驟來設定「 [!INCLUDE[ssIS](../includes/ssis-md.md)] 設計師」，以便使用優先順序條件約束的其他預設值。  
   
 #### <a name="to-set-the-default-value-for-precedence-constraints"></a>設定優先順序條件約束的預設值  
   
@@ -60,8 +60,8 @@ ms.locfileid: "36023818"
   
 ## <a name="see-also"></a>另請參閱  
  [優先順序條件約束](control-flow/precedence-constraints.md)   
- [使用快速鍵功能表設定優先順序條件約束的值](../../2014/integration-services/set-the-value-of-a-precedence-constraint-by-using-the-shortcut-menu.md)   
+ [使用快顯功能表設定優先順序條件約束的值](../../2014/integration-services/set-the-value-of-a-precedence-constraint-by-using-the-shortcut-menu.md)   
  [設定優先順序條件約束的屬性](../../2014/integration-services/set-the-properties-of-a-precedence-constraint.md)   
- [優先順序條件約束中使用運算式](../../2014/integration-services/use-an-expression-in-a-precedence-constraint.md)  
+ [在優先順序條件約束中使用運算式](../../2014/integration-services/use-an-expression-in-a-precedence-constraint.md)  
   
   

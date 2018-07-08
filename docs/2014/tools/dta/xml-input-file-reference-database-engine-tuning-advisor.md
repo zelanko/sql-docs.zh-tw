@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - XML
 helpviewer_keywords:
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - XML input files [Database Engine Tuning Advisor]
 ms.assetid: 05e5e5f0-d6df-4336-b18e-e9bc2835a766
 caps.latest.revision: 25
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 7dd0170481a3894334dc01b2974a27ace6b736b4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 7ca9a22a2f6f4732a97387778484aae261fc0848
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36030920"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37183485"
 ---
 # <a name="xml-input-file-reference-database-engine-tuning-advisor"></a>XML 輸入檔參考 (Database Engine Tuning Advisor)
   [!INCLUDE[ssDE](../../includes/ssde-md.md)] Tuning Advisor 可以利用 XML 輸入檔來微調資料庫。 這個 XML 檔會指定微調工作階段要使用哪些資料庫、資料表、工作負載檔或資料表，以及微調選項。 您也可以利用這個檔案來指定使用者指定的組態，以執行「假設」分析。  
@@ -48,7 +48,7 @@ ms.locfileid: "36030920"
   
 -   [DTAInput 元素&#40;DTA&#41;](dtainput-element-dta.md)  
   
--   [Server 元素&#40;DTA&#41;](server-element-dta.md)  
+-   [伺服器項目&#40;DTA&#41;](server-element-dta.md)  
   
 -   [Workload 元素&#40;DTA&#41;](workload-element-dta.md)  
   
@@ -100,27 +100,27 @@ ms.locfileid: "36030920"
   
 -   [建立項目&#40;DTA&#41;](create-element-dta.md)  
   
--   [索引項目&#40;DTA&#41;](index-element-dta.md)  
+-   [編製索引的項目&#40;DTA&#41;](index-element-dta.md)  
   
--   [索引名稱元素&#40;DTA&#41;](name-element-for-index-dta.md)  
+-   [名稱索引的項目&#40;DTA&#41;](name-element-for-index-dta.md)  
   
 -   [索引的 column 元素&#40;DTA&#41;](column-element-for-index-dta.md)  
   
--   [資料行名稱元素&#40;DTA&#41;](name-element-for-column-dta.md)  
+-   [資料行的名稱項目&#40;DTA&#41;](name-element-for-column-dta.md)  
   
 -   [索引的 Filegroup 元素&#40;DTA&#41;](filegroup-element-for-index-dta.md)  
   
 ## <a name="database-elements"></a>資料庫元素  
   
--   [資料庫名稱元素&#40;DTA&#41;](name-element-for-database-dta.md)  
+-   [資料庫的名稱項目&#40;DTA&#41;](name-element-for-database-dta.md)  
   
 -   [資料庫的 schema 元素&#40;DTA&#41;](schema-element-for-database-dta.md)  
   
--   [結構描述名稱元素&#40;DTA&#41;](name-element-for-schema-dta.md)  
+-   [結構描述的名稱項目&#40;DTA&#41;](name-element-for-schema-dta.md)  
   
 -   [資料表結構描述的項目&#40;DTA&#41;](table-element-for-schema-dta.md)  
   
--   [資料表名稱元素&#40;DTA&#41;](name-element-for-table-dta.md)  
+-   [資料表名稱項目&#40;DTA&#41;](name-element-for-table-dta.md)  
   
 ## <a name="see-also"></a>另請參閱  
  [Database Engine Tuning Advisor](../../relational-databases/performance/database-engine-tuning-advisor.md)  

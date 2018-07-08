@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - "10545"
 - "10547"
@@ -18,15 +18,15 @@ f1_keywords:
 - sql12.rtp.rptdesigner.indicatorproperties.validateandstates.f1
 ms.assetid: 2edbd279-be39-4d97-b1b6-ddbc5b17c422
 caps.latest.revision: 10
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 6f01f4c20446507bd63c8bd1c82d6c32355582b5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 30938348fcb78d1afeeeacaead3bb02362a28574
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36030456"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37168309"
 ---
 # <a name="indicators-report-builder-and-ssrs"></a>指標 (報表產生器及 SSRS)
   指標是最小的量測計，看一眼就可傳達單一資料值的狀態。 圖示即使很小，但在視覺上也能有效代表指標及其狀態。  
@@ -107,7 +107,7 @@ ms.locfileid: "36030456"
   
  當您第一次將標記加入至報表時，系統會設定為使用預設值。 接著，您可以變更值，讓指標以您希望的方式描述資料。 您可以變更指標圖示的外觀、指標選擇要使用之圖示的方式，以及變更指標集合所使用的圖示。 如需詳細資訊，請參閱[變更指標圖示和指標集合 &#40;報表產生器及 SSRS&#41;](change-indicator-icons-and-indicator-sets-report-builder-and-ssrs.md)。  
   
- 根據預設，指標會設定為使用百分比做為度量單位，並自動偵測資料中的最小值與最大值。 指標集合中的每個圖示都有一個百分比範圍。 百分比範圍的數目取決於圖示集中的圖示數目，但範圍的大小和循序相同。 例如，如果圖示集有 5 個圖示，則有 5 個百分比範圍，每個大小各為 20%。 第一個從 0 開始並到 20 結束、第二個從 20 開始並到 40 結束，以此類推。 報表上的指標會使用指標集合中的圖示，該指標集合的百分比範圍落在指標資料值所在的範圍中。 您可以變更集合中每個圖示的百分比範圍。 最小值與最大值可以透過提供值或運算式來明確設定。 但您可以將度量單位變更為數值。 在此情況下，您不用指定資料的最小值或最大值。 不過，您只能針對每個圖示提供指標所使用的開始值與結束值。 如需詳細資訊，請參閱[集並設定度量單位&#40;報表產生器及 SSRS&#41;](set-and-configure-measurement-units-report-builder-and-ssrs.md)。  
+ 根據預設，指標會設定為使用百分比做為度量單位，並自動偵測資料中的最小值與最大值。 指標集合中的每個圖示都有一個百分比範圍。 百分比範圍的數目取決於圖示集中的圖示數目，但範圍的大小和循序相同。 例如，如果圖示集有 5 個圖示，則有 5 個百分比範圍，每個大小各為 20%。 第一個從 0 開始並到 20 結束、第二個從 20 開始並到 40 結束，以此類推。 報表上的指標會使用指標集合中的圖示，該指標集合的百分比範圍落在指標資料值所在的範圍中。 您可以變更集合中每個圖示的百分比範圍。 最小值與最大值可以透過提供值或運算式來明確設定。 但您可以將度量單位變更為數值。 在此情況下，您不用指定資料的最小值或最大值。 不過，您只能針對每個圖示提供指標所使用的開始值與結束值。 如需詳細資訊，請參閱 <<c0> [ 集及設定度量單位&#40;報表產生器及 SSRS&#41;](set-and-configure-measurement-units-report-builder-and-ssrs.md)。</c0>  
   
  指標會在指定的範圍內，跨指標資料值進行同步處理，藉以傳達資料值。 根據預設，此範圍是指標的父容器，例如，包含指標的資料表或矩陣。 您可以根據報表的版面配置選擇不同的範圍，來變更指標的同步處理。 指標可以省略同步處理。 如需詳細資訊，請參閱[設定同步處理範圍 &#40;報表產生器及 SSRS&#41;](set-synchronization-scope-report-builder-and-ssrs.md)。  
   
@@ -119,7 +119,7 @@ ms.locfileid: "36030456"
 ##  <a name="SizingIndicatators"></a> 調整指標的大小，將視覺影響最大化  
  除了色彩、方向和形狀之外，您還可以使用大小，將指標的視覺影像最大化。 設想使用指標顯示客戶對於不同類型自行車之滿意度的報表。 根據客戶滿意度，指標所使用的圖示可以設定為不同的大小。 滿意度愈高，出現在報表中的圖示愈大。 下圖顯示自行車銷售的報告，而圖示的大小會反映銷售量。  
   
- 您可以根據指標所使用的欄位值，使用運算式來動態設定星星的大小。 如需詳細資訊，請參閱[指定大小的指標使用運算式&#40;報表產生器及 SSRS&#41;](specify-the-size-of-an-indicator-using-an-expression-report-builder-and-ssrs.md)。  
+ 您可以根據指標所使用的欄位值，使用運算式來動態設定星星的大小。 如需詳細資訊，請參閱 <<c0> [ 指定大小的指標使用運算式&#40;報表產生器及 SSRS&#41;](specify-the-size-of-an-indicator-using-an-expression-report-builder-and-ssrs.md)。</c0>  
   
  若要深入了解撰寫與使用運算式，請參閱[運算式 &#40;報表產生器及 SSRS&#41;](expressions-report-builder-and-ssrs.md)。  
   
@@ -191,22 +191,22 @@ ms.locfileid: "36030456"
 ##  <a name="HowTo"></a> 如何主題  
  本節列出的程序會示範如何加入、變更與刪除指標；如何設定與自訂指標；以及如何使用量測計中的指標。  
   
--   [加入或刪除指標&#40;報表產生器和 SSRS&#41;](add-or-delete-an-indicator-report-builder-and-ssrs.md)  
+-   [新增或刪除指標&#40;報表產生器及 SSRS&#41;](add-or-delete-an-indicator-report-builder-and-ssrs.md)  
   
--   [變更指標圖示和指標集合&#40;報表產生器和 SSRS&#41;](change-indicator-icons-and-indicator-sets-report-builder-and-ssrs.md)  
+-   [變更指標圖示和指標集合&#40;報表產生器及 SSRS&#41;](change-indicator-icons-and-indicator-sets-report-builder-and-ssrs.md)  
   
--   [設定和設定度量單位&#40;報表產生器和 SSRS&#41;](set-and-configure-measurement-units-report-builder-and-ssrs.md)  
+-   [設定度量單位&#40;報表產生器及 SSRS&#41;](set-and-configure-measurement-units-report-builder-and-ssrs.md)  
   
--   [設定同步處理範圍&#40;報表產生器和 SSRS&#41;](set-synchronization-scope-report-builder-and-ssrs.md)  
+-   [設定同步處理範圍&#40;報表產生器及 SSRS&#41;](set-synchronization-scope-report-builder-and-ssrs.md)  
   
--   [指定使用運算式指標大小&#40;報表產生器和 SSRS&#41;](specify-the-size-of-an-indicator-using-an-expression-report-builder-and-ssrs.md)  
+-   [指定大小的指標使用運算式&#40;報表產生器及 SSRS&#41;](specify-the-size-of-an-indicator-using-an-expression-report-builder-and-ssrs.md)  
   
--   [量測計面板中加入指標與量測計&#40;報表產生器和 SSRS&#41;](include-indicators-and-gauges-in-a-gauge-panel-report-builder-and-ssrs.md)  
+-   [量測計面板中加入指標與量測計&#40;報表產生器及 SSRS&#41;](include-indicators-and-gauges-in-a-gauge-panel-report-builder-and-ssrs.md)  
   
   
 ## <a name="see-also"></a>另請參閱  
- [量測計&#40;報表產生器和 SSRS&#41;](gauges-report-builder-and-ssrs.md)   
+ [量測計&#40;報表產生器及 SSRS&#41;](gauges-report-builder-and-ssrs.md)   
  [走勢圖和資料橫條 &#40;報表產生器及 SSRS&#41;](sparklines-and-data-bars-report-builder-and-ssrs.md)   
- [圖表&#40;報表產生器和 SSRS&#41;](charts-report-builder-and-ssrs.md)  
+ [圖表&#40;報表產生器及 SSRS&#41;](charts-report-builder-and-ssrs.md)  
   
   

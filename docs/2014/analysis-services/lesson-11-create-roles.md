@@ -1,5 +1,5 @@
 ---
-title: 第 12 課： 建立角色 |Microsoft 文件
+title: 第 12 課： 建立角色 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 984face4-00fc-46d3-8ae1-9755bf737bdf
 caps.latest.revision: 11
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: jhubbard
-ms.openlocfilehash: 7c3b98fbbcbedca2a8bcdbefcd8e41e5d3d5c60b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 598491865120b2d401b0ca2447701cbebc12ce8d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36023898"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37278504"
 ---
 # <a name="lesson-12-create-roles"></a>第 12 課：建立角色
   在這一課，您將建立角色。 角色會藉由僅限身為角色成員的 Windows 使用者存取的方式，提供模型資料庫物件和資料安全性。 每個角色都會定義一項權限：「無」、「讀取」、「讀取和處理」、「處理」或「系統管理員」。 您可以使用 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]中的 [角色管理員] 對話方塊，在模型撰寫期間定義角色。 部署模型之後，您可以使用 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 管理角色。 如需詳細資訊，請參閱[角色 &#40;SSAS 表格式&#41;](tabular-models/roles-ssas-tabular.md)。  
@@ -39,7 +39,7 @@ ms.locfileid: "36023898"
   
  完成本課程的估計時間： **15 分鐘**  
   
-## <a name="prerequisites"></a>必要條件  
+## <a name="prerequisites"></a>先決條件  
  本主題是表格式模型教學課程的一部分，必須依序完成。 在執行本課中的工作之前，您應已完成上一課： [第 11 課：建立資料分割](lesson-10-create-partitions.md)。  
   
 ## <a name="create-roles"></a>建立角色  
@@ -52,7 +52,7 @@ ms.locfileid: "36023898"
   
      具有「無」權限的新角色就會加入至清單中。  
   
-3.  按一下新角色，然後在**名稱**資料行中，若要將角色重新命名`Internet Sales Manager`。  
+3.  按一下新角色，然後在**名稱**資料行中，重新命名角色`Internet Sales Manager`。  
   
 4.  按一下 [權限] 資料行中的下拉式清單，然後選取 [讀取] 權限。  
   
@@ -70,7 +70,7 @@ ms.locfileid: "36023898"
   
      具有「無」權限的新角色就會加入至清單中。  
   
-3.  按一下新角色，然後在**名稱**資料行中，若要將角色重新命名`Internet Sales US`。  
+3.  按一下新角色，然後在**名稱**資料行中，重新命名角色`Internet Sales US`。  
   
 4.  按一下 [權限] 資料行中的下拉式清單，然後選取 [讀取] 權限。  
   
@@ -92,7 +92,7 @@ ms.locfileid: "36023898"
   
 1.  在 [角色管理員] 對話方塊中，按一下 [新增]。  
   
-2.  按一下新角色，然後在**名稱**資料行中，若要將角色重新命名`Internet Sales Administrator`。  
+2.  按一下新角色，然後在**名稱**資料行中，重新命名角色`Internet Sales Administrator`。  
   
 3.  按一下 [權限] 資料行中的下拉式清單，然後選取 [系統管理員] 權限。  
   

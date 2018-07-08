@@ -1,5 +1,5 @@
 ---
-title: 規劃地圖報表支援 |Microsoft 文件
+title: 對應報表支援規劃 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,26 +8,26 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 5ddc97a7-7ee5-475d-bc49-3b814dce7e19
 caps.latest.revision: 10
-author: douglaslM
+author: maggiesmsft
 ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: cf56a62b3ef129d9d725aa54d05544f776d4f6ac
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 8bfe76929c3f9b50e59cc276385b815973a0d06c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36023730"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37163749"
 ---
 # <a name="plan-for-map-report-support"></a>對應報表支援規劃
-  [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)] 支援使用空間資料來源的地圖報表。 空間資料可以來自 SQL Server 資料庫、ESRI 形狀檔，或是隨著 Reporting Services 或報表產生器一起安裝的地圖庫。 地圖也可以顯示 Bing 地圖底圖的背景。 報表作者可以建立報表，做為動態以及在執行階段擷取或為靜態和內嵌在報表定義中指定空間資料或 Bing 地圖底圖。  
+  [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)] 支援使用空間資料來源的地圖報表。 空間資料可以來自 SQL Server 資料庫、ESRI 形狀檔，或是隨著 Reporting Services 或報表產生器一起安裝的地圖庫。 地圖也可以顯示 Bing 地圖底圖的背景。 報表作者可以建立報表，做為動態，在執行階段擷取或為 static 並內嵌在報表定義中指定空間資料或 Bing 地圖底圖。  
   
 ## <a name="support-for-bing-maps"></a>Bing Map 的支援  
  地圖可以包含顯示 Bing 地圖底圖的背景圖層。 若要檢視具有地圖底圖圖層的已發行報表，報表伺服器必須設定為可從 Bing Maps Web 服務擷取圖格。 如需詳細資訊，請參閱 [RSReportServer Configuration File](report-server/rsreportserver-config-configuration-file.md)。  
   
- 在每個報表中，報表作者也可以指定是否要使用安全通訊端層 (SSL) 連線，自圖格伺服器擷取圖格。 若要這樣做，在圖格圖層的 [屬性] 窗格中，它們必須設定布林值屬性 UseSecureConnection 至`true`。  
+ 在每個報表中，報表作者也可以指定是否要使用安全通訊端層 (SSL) 連線，自圖格伺服器擷取圖格。 若要這樣做，在圖格圖層的 [屬性] 窗格中，它們必須將 usesecureconnection 設定布林屬性設定到`true`。  
   
 > [!NOTE]  
 >  如需有關在報表中使用 Bing 地圖底圖的詳細資訊，請參閱 [其他使用規定](http://go.microsoft.com/fwlink/?LinkId=151371) 和 [隱私權聲明](http://go.microsoft.com/fwlink/?LinkId=151372)。  
@@ -51,9 +51,9 @@ ms.locfileid: "36023730"
   
 -   當地圖資料必須為內嵌的地圖資料時，請調整檢視區置中與縮放比例，以便只包含報表所需的地圖資料。  
   
- 如需詳細資訊，[對應&#40;報表產生器及 SSRS&#41;](report-design/maps-report-builder-and-ssrs.md)。  
+ 如需詳細資訊， [Maps&#40;報表產生器及 SSRS&#41;](report-design/maps-report-builder-and-ssrs.md)。  
   
 ## <a name="see-also"></a>另請參閱  
- [報表疑難排解： 地圖報表&#40;報表產生器和 SSRS&#41;](report-design/troubleshoot-reports-map-reports-report-builder-and-ssrs.md)  
+ [報表疑難排解： 地圖報表&#40;報表產生器及 SSRS&#41;](report-design/troubleshoot-reports-map-reports-report-builder-and-ssrs.md)  
   
   

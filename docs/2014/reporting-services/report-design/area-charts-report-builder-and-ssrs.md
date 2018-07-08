@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 245b236d-1d55-4744-b752-80bd133502aa
 caps.latest.revision: 5
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 7e202fca2b7fbbf982ad1a28241f1ad4d6f985cd
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 84262598ecb49d69eae360b6de3b4e78369e7fc8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36023724"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37260534"
 ---
 # <a name="area-charts-report-builder-and-ssrs"></a>區域圖 (報表產生器及 SSRS)
-  區域圖會將數列顯示成一組用線條連接的點，線條下會有一個全部填滿的區域。 如需有關如何將資料新增至區域圖的詳細資訊，請參閱[圖表&#40;報表產生器及 SSRS&#41;](charts-report-builder-and-ssrs.md)。  
+  區域圖會將數列顯示成一組用線條連接的點，線條下會有一個全部填滿的區域。 如需有關如何將資料新增至區域圖的詳細資訊，請參閱 <<c0> [ 圖表&#40;報表產生器及 SSRS&#41;](charts-report-builder-and-ssrs.md)。</c0>  
   
  下圖顯示堆疊區域圖的範例。 此資料非常適合在堆疊區域圖上顯示，因為此圖表可以顯示所有數列的總計，以及每個數列對於總計所佔據的比例。  
   
@@ -49,7 +49,7 @@ ms.locfileid: "36023724"
   
 -   在一般區域圖中，如果多個數列的值相似，這些區域可能會重疊，而遮蓋到重要資料點的值。 您可以將圖表類型變更為堆疊區域圖 (其設計為顯示區域圖的多個數列) 來解決這個問題。  
   
--   如果您的堆疊區域圖包含間隙，您的資料集可能包含空值，這些值在堆疊區域圖上會顯示為空的區段。 如果您的資料集包含空值，請考慮在圖表上插入空的點。 加入空的點將會在圖表上，以不同的色彩填滿空的區域來表示 Null 或零值。 如需詳細資訊，請參閱[加入空點加入圖表&#40;報表產生器及 SSRS&#41;](add-empty-points-to-a-chart-report-builder-and-ssrs.md)。  
+-   如果您的堆疊區域圖包含間隙，您的資料集可能包含空值，這些值在堆疊區域圖上會顯示為空的區段。 如果您的資料集包含空值，請考慮在圖表上插入空的點。 加入空的點將會在圖表上，以不同的色彩填滿空的區域來表示 Null 或零值。 如需詳細資訊，請參閱 <<c0> [ 新增空白點至圖表&#40;報表產生器及 SSRS&#41;](add-empty-points-to-a-chart-report-builder-and-ssrs.md)。</c0>  
   
 -   區域圖類型在行為上非常類似於直條圖與折線圖。 如果您要在多個數列間進行比較，請考慮改用直條圖。 如果您要分析一段時間的趨勢，則考慮使用折線圖。  
   
@@ -58,6 +58,6 @@ ms.locfileid: "36023724"
  [圖表類型 &#40;報表產生器及 SSRS&#41;](chart-types-report-builder-and-ssrs.md)   
  [折線圖 &#40;報表產生器及 SSRS&#41;](line-charts-report-builder-and-ssrs.md)   
  [變更圖表類型 &#40;報表產生器及 SSRS&#41;](change-a-chart-type-report-builder-and-ssrs.md)   
- [空白和 Null 資料點在圖表中的&#40;報表產生器和 SSRS&#41;](empty-and-null-data-points-in-charts-report-builder-and-ssrs.md)  
+ [空白和 Null 資料點在圖表中的&#40;報表產生器及 SSRS&#41;](empty-and-null-data-points-in-charts-report-builder-and-ssrs.md)  
   
   

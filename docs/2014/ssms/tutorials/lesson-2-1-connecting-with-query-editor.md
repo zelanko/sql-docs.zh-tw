@@ -5,21 +5,19 @@ ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- tools-ssms
+ms.technology: ssms
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 48725f54-a7b6-4b79-948e-965c1fe4eef1
-caps.latest.revision: 25
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 5bc4f72d546e7785b1d57a6460f168e8babe7b6c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 666904837a211b0aa76214155c2d55024175c5c8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36031143"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37148999"
 ---
 # <a name="connecting-with-query-editor"></a>連接查詢編輯器
   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 允許您在未連接伺服器的情況下，撰寫或編輯程式碼。 當伺服器無法使用，或您想節省寶貴的伺服器或網路資源時，這可能很有用。 您也可以在不開啟新 [查詢編輯器] 視窗或重新輸入程式碼的情況下，將查詢編輯器改成連接到新的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體。  

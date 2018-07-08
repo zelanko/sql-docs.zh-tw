@@ -1,5 +1,5 @@
 ---
-title: UnknownMember 元素 (ASSL) |Microsoft 文件
+title: UnknownMember 元素 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - UnknownMember element
 ms.assetid: 5558961e-e3c6-4f4e-817d-5b12b0734c03
 caps.latest.revision: 35
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 85bc7a517642ccc5b4386f65e7b4a9c89d757ce6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 1fdfbaa296a7c83c96a7a41d759d582833d2ed8e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36031099"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37151169"
 ---
 # <a name="unknownmember-element-assl"></a>UnknownMember 元素 (ASSL)
   指出未知的成員是否可見。  
@@ -64,7 +64,7 @@ ms.locfileid: "36031099"
 ## <a name="remarks"></a>備註  
  這個元素的值限制為下表所列的其中一個字串。  
   
-|ReplTest1|描述|  
+|值|描述|  
 |-----------|-----------------|  
 |*可見*|未知的成員存在並顯示出來。|  
 |*隱藏*|未知的成員存在，但不顯示出來。|  

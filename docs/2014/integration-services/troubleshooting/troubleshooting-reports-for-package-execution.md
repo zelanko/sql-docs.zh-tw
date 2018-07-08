@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 8fc476ac-bd69-434e-9636-70776e0b3b6c
 caps.latest.revision: 11
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 23315796addfd43e3c1a97df1b8e9fc912a76011
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 85b549f35c9b6ac2feb41c41fb482f3eead61ccb
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36031049"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37182795"
 ---
 # <a name="troubleshooting-reports-for-package-execution"></a>疑難排解封裝執行的報表
   在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]的目前版本中， [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 提供一些標準報表，可協助您監視和疑難排解已部署至 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 目錄的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 封裝。 其中兩份封裝報表特別有助於您檢視封裝執行狀態以及識別執行失敗的原因。  
@@ -39,7 +39,7 @@ ms.locfileid: "36031049"
 -   **活動 - 所有執行報表**：這份報表會顯示伺服器上已執行之所有 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 執行的摘要。 此摘要會顯示每個執行的資訊，例如狀態、開始時間和結束時間。 每個摘要項目都包含執行詳細資訊的連結，包括執行期間產生的訊息以及效能資料。 就如同 Integration Services 儀表板一樣，您可以將篩選套用至資料表，以縮小顯示的資訊範圍。  
   
 ## <a name="related-tasks"></a>相關工作  
- [檢視 Integration Services 伺服器的報告](../view-reports-for-the-integration-services-server.md)  
+ [檢視 Integration Services 伺服器的報表](../view-reports-for-the-integration-services-server.md)  
   
 ## <a name="related-content"></a>相關內容  
  [Integration Services 伺服器的報表](../reports-for-the-integration-services-server.md)  
