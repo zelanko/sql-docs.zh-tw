@@ -1,5 +1,5 @@
 ---
-title: 第 4 課： 建立時間序列預測使用 DMX |Microsoft 文件
+title: 第 4 課： 建立使用 DMX 的時間序列預測 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 6b883e43-209d-489a-8dc3-9349f88acae8
 caps.latest.revision: 17
 author: minewiskan
 ms.author: owend
-manager: kfile
-ms.openlocfilehash: a345b37d13ade71baad6635cee0508e97d7755eb
-ms.sourcegitcommit: 8c040e5b4e8c7d37ca295679410770a1af4d2e1f
+manager: craigg
+ms.openlocfilehash: afcc3fad2a1d8e9acd4859e51b3b8df78b338bd3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/21/2018
-ms.locfileid: "36312406"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37161629"
 ---
 # <a name="lesson-4-creating-time-series-predictions-using-dmx"></a>第 4 課：使用 DMX 建立時間序列預測
-  在這一課和下一課，您將使用資料採礦延伸模組 (DMX) 建立不同類型的根據您在建立時間序列模型的預測[第 1 課： 建立時間序列採礦模型和採礦結構](../../2014/tutorials/lesson-1-creating-a-time-series-mining-model-and-mining-structure.md)和[第 2 課： 將採礦模型加入至時間序列採礦結構](../../2014/tutorials/lesson-2-adding-mining-models-to-the-time-series-mining-structure.md)。  
+  在這一課和下一課，您會使用資料採礦延伸模組 (DMX) 建立不同類型的 根據您在建立時間序列模型的預測[第 1 課： 建立時間序列採礦模型和採礦結構](../../2014/tutorials/lesson-1-creating-a-time-series-mining-model-and-mining-structure.md)並[第 2 課： 將採礦模型加入至時間序列採礦結構](../../2014/tutorials/lesson-2-adding-mining-models-to-the-time-series-mining-structure.md)。  
   
  有了時間序列模型，您有許多選擇可用來進行預測：  
   
@@ -37,17 +37,17 @@ ms.locfileid: "36312406"
  預設時間序列預測  
  使用[PredictTimeSeries &#40;DMX&#41; ](/sql/dmx/predicttimeseries-dmx)從定型的採礦模型傳回預測指定的數目。  
   
- 例如，請參閱[PredictTimeSeries &#40;DMX&#41; ](/sql/dmx/predicttimeseries-dmx)或[時間序列模型查詢範例](../../2014/analysis-services/data-mining/time-series-model-query-examples.md)。  
+ 例如，請參閱[PredictTimeSeries &#40;DMX&#41; ](/sql/dmx/predicttimeseries-dmx)或是[時間序列模型查詢範例](../../2014/analysis-services/data-mining/time-series-model-query-examples.md)。  
   
  EXTEND_MODEL_CASES  
- 使用[PredictTimeSeries &#40;DMX&#41; ](/sql/dmx/predicttimeseries-dmx)使用 EXTEND_MODEL_CASES 參數加入新資料時，擴充數列，並根據更新的採礦模型建立預測。  
+ 使用[PredictTimeSeries &#40;DMX&#41; ](/sql/dmx/predicttimeseries-dmx)搭配 EXTEND_MODEL_CASES 引數來加入新的資料，請擴充數列，並根據更新的採礦模型建立預測。  
   
  本教學課程包含的範例將示範如何使用 EXTEND_MODEL_CASES。  
   
  REPLACE_MODEL_CASES  
- 使用[PredictTimeSeries &#40;DMX&#41; ](/sql/dmx/predicttimeseries-dmx)搭配 REPLACE_MODEL_CASES 引數，將原始資料取代為新的資料數列，然後建立套用至新的資料採礦模型中的模式為基礎的預測系列。  
+ 使用[PredictTimeSeries &#40;DMX&#41; ](/sql/dmx/predicttimeseries-dmx)搭配 REPLACE_MODEL_CASES 引數，原始資料取代成新的資料數列，然後再建立 採礦模型中的模式套用至新的資料為基礎的預測系列。  
   
- 如需如何使用 REPLACE_MODEL_CASES 的範例，請參閱[第 2 課： 建立預測狀況&#40;中繼資料採礦教學課程&#41;](../../2014/tutorials/lesson-2-building-a-forecasting-scenario-intermediate-data-mining-tutorial.md)。  
+ 如需如何使用 REPLACE_MODEL_CASES 的範例，請參閱 <<c0> [ 第 2 課： 建立預測狀況&#40;中繼資料採礦教學課程&#41;](../../2014/tutorials/lesson-2-building-a-forecasting-scenario-intermediate-data-mining-tutorial.md)。</c0>  
   
 ## <a name="lesson-tasks"></a>課程工作  
  您將在這一課執行下列工作：  
@@ -69,11 +69,11 @@ FROM [<mining model name>]
 WHERE [<criteria>]  
 ```  
   
- 選取清單可包含從模型的資料行，例如產品名稱的行，您要建立預測或預測函數，例如[延隔&#40;DMX&#41; ](/sql/dmx/lag-dmx)或[PredictTimeSeries &#40;DMX&#41;](/sql/dmx/predicttimeseries-dmx)，專門用於時間序列採礦模型。  
+ 選取清單可包含從模型的資料行，例如產品名稱行，您要建立預測或預測函數，例如[Lag &#40;DMX&#41; ](/sql/dmx/lag-dmx)或是[PredictTimeSeries &#40;DMX&#41;](/sql/dmx/predicttimeseries-dmx)，專門用於時間序列採礦模型。  
   
 #### <a name="to-create-a-simple-time-series-prediction-query"></a>若要建立簡單的時間序列預測查詢  
   
-1.  在**物件總管] 中**，以滑鼠右鍵按一下執行個體[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]，指向 [**新查詢**，然後按一下**DMX**。  
+1.  中**物件總管**，以滑鼠右鍵按一下執行個體[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]，指向**新查詢**，然後按一下**DMX**。  
   
      此時會開啟 [查詢編輯器] 且包含新的空白查詢。  
   
@@ -137,22 +137,22 @@ WHERE [<criteria>]
     [ModelRegion] = 'M200 Pacific'  
     ```  
   
-6.  在**檔案**功能表上，按一下 **另存 DMXQuery1.dmx 為**。  
+6.  在 **檔案**功能表上，按一下**另存 DMXQuery1.dmx 為**。  
   
-7.  在**存**對話方塊中，瀏覽至適當的資料夾，並將檔案`SimpleTimeSeriesPrediction.dmx`。  
+7.  在 [**另存新檔**] 對話方塊中，瀏覽至適當的資料夾，並將檔案命名`SimpleTimeSeriesPrediction.dmx`。  
   
-8.  在工具列上，按一下 [ **Execute** ] 按鈕。  
+8.  在工具列上，按一下**Execute**  按鈕。  
   
      此查詢會針對 `WHERE` 子句中指定之產品和區域的兩個組合，每個組合各傳回 6 個預測。  
   
  在下一課中，您將會建立查詢來提供新資料給模型，然後將該項預測的結果與您剛才建立的預測做比較。  
   
 ## <a name="next-task-in-lesson"></a>本課程的下一項工作  
- [第 5 課： 擴充時間序列模型](../../2014/tutorials/lesson-5-extending-the-time-series-model.md)  
+ [第 5 課：擴充時間序列模型](../../2014/tutorials/lesson-5-extending-the-time-series-model.md)  
   
 ## <a name="see-also"></a>另請參閱  
  [PredictTimeSeries &#40;DMX&#41;](/sql/dmx/predicttimeseries-dmx)   
- [Lag &#40;DMX&#41;](/sql/dmx/lag-dmx)   
+ [延隔&#40;DMX&#41;](/sql/dmx/lag-dmx)   
  [時間序列模型查詢範例](../../2014/analysis-services/data-mining/time-series-model-query-examples.md)   
  [第 2 課： 建立預測狀況&#40;中繼資料採礦教學課程&#41;](../../2014/tutorials/lesson-2-building-a-forecasting-scenario-intermediate-data-mining-tutorial.md)  
   

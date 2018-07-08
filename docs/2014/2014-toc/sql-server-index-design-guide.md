@@ -5,26 +5,25 @@ ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
+ms.technology: ''
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: b856ee9a-49e7-4fab-a88d-48a633fce269
 caps.latest.revision: 17
 author: craigg-msft
 ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: fefc4c7df12855615cba104bfb63d8547608c7f0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: bd1bc616c3a897f0c7b3b3ea4fda256b240f75ab
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36023048"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37155419"
 ---
 # SQL Server 索引設計指南
   設計不良的索引與不足的索引是資料庫應用程式瓶頸的主要原因。 設計有效的索引是達到良好資料庫和應用程式效能最重要的一點。 本 SQL Server 索引設計指南包含的資訊和最佳作法，可以協助您設計符合應用程式需求的有效索引。  
   
-**適用於**:[!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)]透過[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]除非明。  
+**適用於**:[!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)]透過[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]除非另有指示。  
   
  本指南假設讀者對 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]中提供的索引類型有概略的認識。 如需索引類型的一般描述，請參閱 [Index Types](http://msdn.microsoft.com/library/ms175049.aspx)(索引類型)。  
   
@@ -55,7 +54,7 @@ ms.locfileid: "36023048"
 ### 索引設計工作  
  下列工作是針對設計索引所建議的策略：  
   
-1.  了解資料庫本身的特性。 例如，這是經常修改資料的線上交易處理 (OLTP) 資料庫嗎？還是包含主要唯讀資料且必須快速處理非常龐大資料集的決策支援系統 (DSS) 或資料倉儲 (OLAP) 資料庫？ 在 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]中， *xVelocity 記憶體最佳化的資料行存放區索引* 特別適合一般資料倉儲資料集。 資料行存放區索引可以加快常用資料倉儲查詢 (如篩選、彙總、群組及星型聯結查詢等) 的速度，大幅改善使用者的資料倉儲經驗。 如需詳細資訊，請參閱[Columnstore Indexes Described](../relational-databases/indexes/columnstore-indexes-described.md)。  
+1.  了解資料庫本身的特性。 例如，這是經常修改資料的線上交易處理 (OLTP) 資料庫嗎？還是包含主要唯讀資料且必須快速處理非常龐大資料集的決策支援系統 (DSS) 或資料倉儲 (OLAP) 資料庫？ 在 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]中， *xVelocity 記憶體最佳化的資料行存放區索引* 特別適合一般資料倉儲資料集。 資料行存放區索引可以加快常用資料倉儲查詢 (如篩選、彙總、群組及星型聯結查詢等) 的速度，大幅改善使用者的資料倉儲經驗。 如需詳細資訊，請參閱 < [Columnstore Indexes Described](../relational-databases/indexes/columnstore-indexes-described.md)。  
   
 2.  了解最常使用的查詢特性。 例如，知道最常使用的查詢會聯結兩個以上的資料表，將有助於判斷要使用的最佳類型索引。  
   
@@ -172,7 +171,7 @@ ORDER BY RejectedQty DESC, ProductID ASC;
   
  此查詢的下列執行計畫，顯示查詢最佳化工具使用了 SORT 運算子，按 ORDER BY 子句所指定的順序傳回結果集。  
   
- ![執行計畫顯示排序運算子使用。](media/indexsort1.gif "執行計畫顯示排序運算子使用。")  
+ ![執行計畫顯示排序運算子使用。](media/indexsort1.gif "執行計畫顯示排序運算子。")  
   
  如果利用符合查詢中 ORDER BY 子句的索引鍵資料行來建立索引，就不需要在查詢計畫中使用 SORT 運算子，因此查詢計畫可以更有效率。  
   
@@ -184,13 +183,13 @@ ON Purchasing.PurchaseOrderDetail
   
  再次執行查詢後，下列執行計畫會顯示已刪除 SORT 運算子，並使用了剛建立的非叢集索引。  
   
- ![執行計畫顯示排序運算子不是](media/insertsort2.gif "執行計畫顯示排序運算子不是")  
+ ![執行計畫顯示排序運算子不會](media/insertsort2.gif "執行計畫顯示排序運算子不會使用")  
   
  [!INCLUDE[ssDE](../includes/ssde-md.md)] 往遞增或遞減方向移動的效率一樣高。 定義為 `(RejectedQty DESC, ProductID ASC)` 的索引，仍可用在 ORDER BY 子句中的資料行排序方向與其相反的查詢中。 例如，具有 ORDER BY 子句 `ORDER BY RejectedQty ASC, ProductID DESC` 的查詢就可以使用此索引。  
   
  排序順序只能針對索引鍵資料行指定。 [sys.index_columns](/sql/relational-databases/system-catalog-views/sys-indexes-transact-sql) 目錄檢視及 INDEXKEY_PROPERTY 函數可回報索引資料行是按遞增還是遞減的順序排序。  
   
- ![搭配回到頁首連結使用的箭號圖示](media/uparrow16x16.gif "搭配回到頁首連結使用的箭號圖示")[在此指南](#Top)  
+ ![搭配 [回到頁首] 連結使用的箭號圖示](media/uparrow16x16.gif "搭配 [回到頁首] 連結使用的箭號圖示")[在此快速入門](#Top)  
   
 ##  <a name="Clustered"></a> 叢集索引設計指導方針  
  叢集索引將資料表中的資料列依其索引鍵值排序與儲存。 因為資料列本身只能以一種順序排序，所以每個資料表只能有一個叢集索引。 除了一些例外之外，每個資料表都應該在資料行上定義叢集索引，以提供下列功能：  
@@ -261,7 +260,7 @@ ON Purchasing.PurchaseOrderDetail
   
      寬索引鍵是由數個資料行或是數個大型資料行所組成。 所有的非叢集索引都使用叢集索引的索引鍵值做為查閱索引鍵。 任何在相同資料表上所定義的非叢集索引將會非常大，因為非叢集索引項目包含叢集索引鍵，同時也包含在該非叢集索引上所定義的索引鍵資料行。  
   
- ![搭配回到頁首連結使用的箭號圖示](media/uparrow16x16.gif "搭配回到頁首連結使用的箭號圖示")[在此指南](#Top)  
+ ![搭配 [回到頁首] 連結使用的箭號圖示](media/uparrow16x16.gif "搭配 [回到頁首] 連結使用的箭號圖示")[在此快速入門](#Top)  
   
 ##  <a name="Nonclustered"></a> 非叢集索引設計指導方針  
  非叢集索引包含了索引鍵值和可指向資料表資料的儲存位置之資料列定位器。 您可以在資料表或索引檢視表上建立多個非叢集索引。 一般而言，應該將非叢集索引設計成可增進常用查詢 (叢集索引未涵蓋的查詢) 的效能。  
@@ -393,7 +392,7 @@ INCLUDE (FileName);
   
     -   將資料行的 Null 屬性從 NOT NULL 變更為 NULL。  
   
-    -   增加的長度`varchar`， `nvarchar`，或`varbinary`資料行。  
+    -   長度增加`varchar`， `nvarchar`，或`varbinary`資料行。  
   
         > [!NOTE]  
         >  這些資料行修改限制也適用索引鍵資料行。  
@@ -430,7 +429,7 @@ INCLUDE (AddressLine1, AddressLine2, City, StateProvinceID);
   
  您必須決定，提高查詢效能，與修改資料時對效能的影響和需要額外磁碟空間，兩者熟輕熟重。  
   
- ![搭配回到頁首連結使用的箭號圖示](media/uparrow16x16.gif "搭配回到頁首連結使用的箭號圖示")[在此指南](#Top)  
+ ![搭配 [回到頁首] 連結使用的箭號圖示](media/uparrow16x16.gif "搭配 [回到頁首] 連結使用的箭號圖示")[在此快速入門](#Top)  
   
 ##  <a name="Unique"></a> 唯一索引設計指導方針  
  唯一索引可保證索引鍵不包含重複值，因此資料表中的每一個資料列在某方面來說是唯一的。 只有當資料具有唯一的特性時，指定唯一索引才有意義。 例如，若要確定 `NationalIDNumber` 資料表中 `HumanResources.Employee` 資料行的值是唯一的，則當主索引鍵是 `EmployeeID`時，請在 `NationalIDNumber` 資料行上建立 UNIQUE 條件約束。 如果使用者試著在該資料行上為不止一位員工輸入相同值，便會顯示錯誤訊息，而且無法輸入重複值。  
@@ -455,7 +454,7 @@ INCLUDE (AddressLine1, AddressLine2, City, StateProvinceID);
   
 -   唯一非叢集索引可有內含的非索引鍵之索引資料行。 如需詳細資訊，請參閱 [內含資料行的索引](#Included_Columns)。  
   
- ![搭配回到頁首連結使用的箭號圖示](media/uparrow16x16.gif "搭配回到頁首連結使用的箭號圖示")[在此指南](#Top)  
+ ![搭配 [回到頁首] 連結使用的箭號圖示](media/uparrow16x16.gif "搭配 [回到頁首] 連結使用的箭號圖示")[在此快速入門](#Top)  
   
 ##  <a name="Filtered"></a> 篩選索引設計指導方針  
  篩選索引是最佳化的非叢集索引，特別適合用來處理會從定義完善之資料子集進行選取的查詢。 篩選索引會使用篩選述詞對資料表中的部分資料列進行索引。 與完整資料表索引相較，設計良好的篩選索引可以提升查詢效能、降低索引維護成本，並降低索引儲存成本。  
@@ -596,7 +595,7 @@ WHERE b = CONVERT(Varbinary(4), 1);
   
  將資料轉換從比較運算子的左側移至右側可能會變更轉換的意義。 在上述範例中，當 CONVERT 運算子新增至右側時，比較作業會從整數比較變更為 `varbinary` 比較。  
   
- ![搭配回到頁首連結使用的箭號圖示](media/uparrow16x16.gif "搭配回到頁首連結使用的箭號圖示")[在此指南](#Top)  
+ ![搭配 [回到頁首] 連結使用的箭號圖示](media/uparrow16x16.gif "搭配 [回到頁首] 連結使用的箭號圖示")[在此快速入門](#Top)  
   
 ##  <a name="Additional_Reading"></a> 其他閱讀資料  
  [＜使用 SQL Server 2008 索引檢視提升效能＞](http://msdn.microsoft.com/library/dd171921(v=sql.100).aspx)  

@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-data-tier-apps
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.deploydacwizard.updateconfiguration.f1
 - sql12.swb.deploydacwizard.selectdac.f1
@@ -23,15 +23,15 @@ helpviewer_keywords:
 - wizard [DAC], deploy
 ms.assetid: c117af35-aa53-44a5-8034-fa8715dc735f
 caps.latest.revision: 31
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 4ede9c252977dbd5044fe4c8a7c154d425341490
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 7041a4e15314f7efa8ea626e41ed705b69faa18c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36023149"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37154529"
 ---
 # <a name="deploy-a-data-tier-application"></a>部署資料層應用程式
   您可以使用精靈或 PowerShell 指令碼，將 DAC 封裝中的資料層應用程式 (DAC) 部署到現有的 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 或 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 執行個體。 部署程序會將 DAC 定義儲存到 **msdb** 系統資料庫 (**中則是** master [!INCLUDE[ssSDS](../../includes/sssds-md.md)]) 來註冊 DAC 執行個體並建立資料庫，然後使用 DAC 內定義的所有資料庫物件來擴展資料庫。  
@@ -111,7 +111,7 @@ ms.locfileid: "36023149"
   
  **描述** - 當撰寫 DAC 或是從資料庫擷取 DAC 時，顯示撰寫之描述的唯讀方塊。  
   
- **\< 先前**-傳回**簡介**頁面。  
+ **\< 先前**-回到**簡介**頁面。  
   
  **下一步 >** - 將進度列顯示為確認選定檔案為有效 DAC 封裝的精靈。  
   
@@ -122,7 +122,7 @@ ms.locfileid: "36023149"
   
  **正在驗證 DAC 的內容** - 報告驗證程序之目前狀態的進度列。  
   
- **\< 先前**-傳回的初始狀態**選取封裝**頁面。  
+ **\< 先前**-回到 的初始狀態**選取封裝**頁面。  
   
  **下一步 >** - 繼續進行最終版本的 [選取封裝] 頁面。  
   
@@ -137,7 +137,7 @@ ms.locfileid: "36023149"
   
  **忽略違反原則** - 使用這個核取方塊可在一個或多個原則條件失敗時繼續部署。 只有當您確定所有失敗的條件都不會阻礙 DAC 作業的成功時，才選取此選項。  
   
- **\< 先前**-傳回**選取封裝**頁面。  
+ **\< 先前**-回到**選取封裝**頁面。  
   
  **下一步 >** - 繼續進行 [更新組態] 頁面。  
   
@@ -162,7 +162,7 @@ ms.locfileid: "36023149"
   
  **記錄檔路徑和名稱:** - 為記錄檔指定完整路徑和檔案名稱。 此方塊中會填入預設路徑和檔案名稱。 在此方塊中編輯字串來變更預設值，或使用 **[瀏覽]** 按鈕導覽至放置記錄檔的資料夾。  
   
- **\< 先前**-傳回**選取 DAC 封裝**頁面。  
+ **\< 先前**-回到**選取 DAC 封裝**頁面。  
   
  **下一步 >** - 繼續進行 [摘要] 頁面。  
   
@@ -173,7 +173,7 @@ ms.locfileid: "36023149"
   
  **將使用以下設定部署您的 DAC** - 檢閱顯示的資訊，以確保採取的動作將會是正確的。 此視窗會顯示您所選取的 DAC 封裝以及您針對部署的 DAC 執行個體所選取的名稱。 此視窗也會顯示當您建立與 DAC 相關聯的資料庫時，將要使用的設定。  
   
- **\< 先前**-會讓您返回**更新組態**頁面，即可變更您的選擇。  
+ **\< 先前**-會讓您回到**更新設定**頁面，即可變更您的選擇。  
   
  **下一步 >** - 部署 DAC，並在 [部署 DAC] 頁面中顯示結果。  
   
@@ -189,7 +189,7 @@ ms.locfileid: "36023149"
  **完成** - 結束精靈。  
   
 ##  <a name="DeployDACPowerShell"></a> 使用 PowerShell  
- **若要在 PowerShell 指令碼中使用 install （） 方法部署 DAC**  
+ **若要使用 PowerShell 指令碼中使用 install （） 方法部署 DAC**  
   
 1.  建立 SMO Server 物件，並將它設為您要部署 DAC 的執行個體。  
   

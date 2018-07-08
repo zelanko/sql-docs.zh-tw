@@ -1,12 +1,12 @@
 ---
-title: 將資料傳送到 FILESTREAM-ISequentialStream Bound to ICommandText |Microsoft 文件
+title: 將資料傳送到 FILESTREAM-ISequentialStream Bound to ICommandText |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: connectivity
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 2225f6ab-a6cf-4c95-8291-2d2a13be7952
@@ -15,12 +15,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 6ca97db5a6e2c4b425cde61375f641082b582d4d
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: e15ea6d968aef52c41c325bebfc6898f28050050
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35698429"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37407617"
 ---
 # <a name="send-data-to-filestream---isequentialstream-bound-to-icommandtext"></a>將資料傳送到 FILESTREAM-ISequentialStream Bound to ICommandText
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -28,10 +28,10 @@ ms.locfileid: "35698429"
 
   此範例會使用繫結至 ICommandText 參數的 ISequentialStream 介面，將介於 4MB 與 4GB 之間的資料傳送到 Filestream 資料行。  
   
- 如需有關 filestream 功能的詳細資訊，請參閱[FILESTREAM 支援&#40;OLE DB&#41;](../../../relational-databases/native-client/ole-db/filestream-support-ole-db.md)。  
+ 如需有關 filestream 功能的詳細資訊，請參閱 < [FILESTREAM 支援&#40;OLE DB&#41;](../../../relational-databases/native-client/ole-db/filestream-support-ole-db.md)。  
   
 ## <a name="example"></a>範例  
- 在編譯和執行此範例之前，啟用 FILESTREAM 支援 ([Enable and Configure FILESTREAM](../../../relational-databases/blob/enable-and-configure-filestream.md))。  
+ 在編譯和執行此範例之前，啟用 FILESTREAM 支援 ([啟用及設定 FILESTREAM](../../../relational-databases/blob/enable-and-configure-filestream.md))。  
   
  請確認您的 INCLUDE 環境變數包含的目錄內含 sqlncli.h。  
   

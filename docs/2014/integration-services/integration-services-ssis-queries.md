@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Query Builder [Integration Services]
 - queries [Integration Services]
@@ -18,13 +18,13 @@ ms.assetid: 8822bd29-4575-46c8-92a0-1a39bc2604c1
 caps.latest.revision: 57
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 4188992529956ca06b22389dc4aadf1cc6ff6b7a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: de0a8c6ab744f668d65c3bc5b1a1775fedfef80c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36023571"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37239168"
 ---
 # <a name="integration-services-ssis-queries"></a>Integration Services (SSIS) 查詢
   「執行 SQL」工作、OLE DB 來源、OLE DB 目的地和「查閱」轉換可使用 SQL 查詢。 在「執行 SQL」工作中，SQL 陳述式可建立、更新和刪除資料庫物件和資料；執行預存程序；以及執行 SELECT 陳述式。 在 OLE DB 來源和「查閱」轉換中的 SQL 陳述式通常都是 SELECT 陳述式或 EXEC 陳述式。 後者最常執行傳回結果集的預存程序。  

@@ -1,5 +1,5 @@
 ---
-title: 使用成員、 Tuple 和集合 (MDX) |Microsoft 文件
+title: 使用成員、 Tuple 和集合 (MDX) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - MDX [Analysis Services], tuples
 - member keys [MDX]
@@ -28,15 +28,15 @@ helpviewer_keywords:
 - set functions [MDX]
 ms.assetid: b6ec2439-caef-46d3-9fd7-5f4526cee334
 caps.latest.revision: 41
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 59e01b56cee5d9e35b066514c2d24129b38b2fd6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: fbd4fa53eb870bc8422dcb80fe019083e773e638
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36023660"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37153259"
 ---
 # <a name="working-with-members-tuples-and-sets-mdx"></a>使用成員、Tuple 和集合 (MDX)
   MDX 提供許多會傳回一或多個成員、Tuple 或集合的函數，或作用於成員、Tuple 或集合的函數。  
@@ -52,7 +52,7 @@ FROM [Adventure Works]
   
 ```  
   
- 您也可以使用`FirstChild`函數來傳回相同的成員，如下列範例所示。  
+ 您也可以使用`FirstChild`函式來傳回相同的成員，如下列範例所示。  
   
 ```  
 SELECT [Date].[Calendar Year].FirstChild on 0  
@@ -130,7 +130,7 @@ FROM [Adventure Works]
  字串函數會作用在 MDX 運算式以傳回字串。 例如，[UniqueName &#40;MDX&#41;](/sql/mdx/uniquename-mdx) 函數會傳回包含維度、階層、層級或成員唯一名稱的字串值。 如需字串函數的詳細資訊，請參閱 [MDX 函數參考 &#40;MDX&#41;](/sql/mdx/mdx-function-reference-mdx)。  
   
 ## <a name="see-also"></a>另請參閱  
- [重要概念，在 MDX 中的&#40;Analysis Services&#41;](../key-concepts-in-mdx-analysis-services.md)   
+ [重要的概念在 MDX 中的&#40;Analysis Services&#41;](../key-concepts-in-mdx-analysis-services.md)   
  [MDX 查詢基礎觀念&#40;Analysis Services&#41;](mdx-query-fundamentals-analysis-services.md)   
  [MDX 函數參考&#40;MDX&#41;](/sql/mdx/mdx-function-reference-mdx)  
   

@@ -1,5 +1,5 @@
 ---
-title: 資料採礦查詢介面 |Microsoft 文件
+title: 資料採礦查詢介面 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - predictions [Analysis Services], DMX prediction queries
 - predictions [DMX]
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - mining models [Analysis Services], DMX
 ms.assetid: a8952427-fd8c-4300-8f62-25f57ac1be0c
 caps.latest.revision: 49
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 3ee9db3934e1f9f89a4bbbb292a4dcea4bc7b7bb
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 07641be25c1e7828238ea4a6dd897240651735ce
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36022526"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37159649"
 ---
 # <a name="data-mining-query-interfaces"></a>資料採礦查詢介面
   資料採礦查詢是以資料採礦延伸模組 (DMX) 語言為基礎。 您可以針對所有預測和模型工作使用 DMX，包括分類、風險分析、產生建議及線性迴歸。 您也可以擷取處理模型時所產生的模式和統計資料。  
@@ -62,10 +62,10 @@ ms.locfileid: "36022526"
 ###  <a name="bkmk_Builder"></a> 預測查詢產生器  
  預測查詢產生器包含在資料採礦設計師 ([!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 和 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 都有提供) 的 [採礦模型預測] 索引標籤中。  
   
- 在使用查詢產生器時，可以使用圖形工具來選取採礦模型、加入新的案例資料以及加入預測函數。 預測查詢產生器包含可用來手動修改查詢的文字編輯器和簡單**結果**窗格，即可檢視查詢的結果。  
+ 在使用查詢產生器時，可以使用圖形工具來選取採礦模型、加入新的案例資料以及加入預測函數。 預測查詢產生器包含可用來手動修改查詢的文字編輯器，以及簡單**結果**窗格，即可檢視查詢的結果。  
   
 ###  <a name="bkmk_QueryEditor"></a> 查詢編輯器  
- 在 查詢編輯器[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]提供工具，您可以用來建置及執行 DMX 查詢。 您可以連接到 SQL Server Analysis Services 的執行個體，然後選取資料庫、採礦結構資料行和採礦模型。 中繼資料總管包含您可以瀏覽的預測函數清單。  
+ 在 查詢編輯器[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]提供的工具，可用來建置及執行 DMX 查詢。 您可以連接到 SQL Server Analysis Services 的執行個體，然後選取資料庫、採礦結構資料行和採礦模型。 中繼資料總管包含您可以瀏覽的預測函數清單。  
   
 ###  <a name="bkmk_Templates"></a> DMX 範本  
  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 提供互動式的 DMX 查詢範本，可用來建立 DMX 查詢。 如果您看不到範本清單，請按一下工具列上的 [檢視]，然後選取 [範本總管]。 若要查看所有 Analysis Services 範本 (包括 DMX、MDX 及 XMLA 的範本)，請按一下 Cube 圖示。  

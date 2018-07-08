@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Data Profiling task [Integration Services], using output in workflow
 ms.assetid: 39a51586-6977-4c45-b80b-0157a54ad510
 caps.latest.revision: 23
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 31c3d3bdcfc2a986fc62ba32e2df443d74d7a8fd
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c35cc475af0b083ce8f4a0f6afcb0c654b9bc266
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36023174"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37164999"
 ---
 # <a name="incorporate-a-data-profiling-task-in-package-workflow"></a>在封裝工作流程中納入資料分析工作
   在早期階段中，資料分析和清除並非自動化處理序的候選項目。 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]中，資料分析工作的輸出通常需要進行視覺化分析和人為判斷，才能決定報告的違規項目是否有意義，或是否為過度報告。 甚至在辨識出資料品質問題之後，您仍然必須仔細地全盤規劃，尋求最佳的清除方法。  
@@ -106,9 +106,9 @@ ms.locfileid: "36023174"
   
 -   在 **[變數]** 視窗中，加入並設定下列兩個封裝變數：  
   
-    -   輸入名稱， `ProfileConnectionName`，針對其中一個變數並將這個變數設為類型**字串**。  
+    -   輸入名稱， `ProfileConnectionName`，針對其中一個變數，並設定這個變數的類型**字串**。  
   
-    -   輸入名稱， `AddressLine2NullRatio`、 其他變數和設定這個變數的類型**Double**。  
+    -   輸入名稱， `AddressLine2NullRatio`、 其他變數並將設定這個變數的類型**Double**。  
   
 ### <a name="configure-the-data-profiling-task"></a>設定資料分析工作  
  您必須以下列方式來設定資料分析工作：  
@@ -146,9 +146,9 @@ ms.locfileid: "36023174"
   
 4.  在 **[指令碼]** 頁面中，選取您慣用的程式語言。 然後，讓這兩個封裝變數可供指令碼使用：  
   
-    1.  如`ReadOnlyVariables`，選取`ProfileConnectionName`。  
+    1.  針對`ReadOnlyVariables`，選取`ProfileConnectionName`。  
   
-    2.  如 **[readwritevariables]**，選取`AddressLine2NullRatio`。  
+    2.  針對**ReadWriteVariables**，選取`AddressLine2NullRatio`。  
   
 5.  選取 **[編輯指令碼]** 以便開啟指令碼開發環境。  
   
@@ -270,9 +270,9 @@ ms.locfileid: "36023174"
 #### <a name="alternative-codereading-the-profile-output-from-a-variable"></a>替代程式碼 - 從變數中讀取設定檔輸出  
  上一個程序說明了如何從檔案載入資料分析工作的輸出。 不過，我們提供了替代方法，可從封裝變數載入這個輸出。 若要從變數載入封裝，您必須針對範例程式碼進行下列變更：  
   
--   呼叫`LoadXml`方法`XmlDocument`類別而不是`Load`方法。  
+-   呼叫`LoadXml`方法`XmlDocument`類別，而不是`Load`方法。  
   
--   在指令碼工作編輯器中，加入包含至工作的設定檔輸出之封裝變數名稱`ReadOnlyVariables`清單。  
+-   在指令碼工作編輯器 」 中，加入包含設定檔輸出至工作的封裝變數的名稱`ReadOnlyVariables`清單。  
   
 -   將變數的字串值傳遞`LoadXML`方法，如下列程式碼範例所示。 (這個範例會使用 "ProfileOutput" 當做包含設定檔輸出之封裝變數的名稱)。  
   
@@ -332,7 +332,7 @@ ms.locfileid: "36023174"
 7.  在將指令碼工作連接至工作流程中下游分支的優先順序條件約束中，撰寫使用變數值來導向工作流程的運算式。  
   
 ## <a name="see-also"></a>另請參閱  
- [安裝程式的資料分析工作](data-profiling-task.md)   
+ [資料分析工作的設定](data-profiling-task.md)   
  [資料設定檔檢視器](data-profile-viewer.md)  
   
   

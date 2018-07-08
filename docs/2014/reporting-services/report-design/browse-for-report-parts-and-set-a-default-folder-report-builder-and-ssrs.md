@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 5cf38068-65d1-4fe8-81f3-a404d8fbc663
 caps.latest.revision: 5
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: e16f84d38d32dc5e55ce3244f09b2e9c5a28f967
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 25c367550ca7efb08bb33e99318ceda2e62b9b11
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36022336"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37240018"
 ---
 # <a name="browse-for-report-parts-and-set-a-default-folder-report-builder-and-ssrs"></a>瀏覽報表組件及設定預設資料夾 (報表產生器及 SSRS)
   建立報表最簡單的方式，就是從報表組件庫將現有的報表組件 (如資料表和圖表) 加入到您的報表。 當您將報表組件加入到報表時，您也會加入此組件運作所必須擁有的所有項目。 例如，顯示資料的所有報表組件都取決於資料集，也就是資料來源的查詢和連接。 當您將報表組件加入至報表之後，您可以盡量修改它。  
@@ -67,10 +67,10 @@ ms.locfileid: "36022336"
  您不需要重新啟動報表產生器，這項設定也會生效。  
   
 ## <a name="see-also"></a>另請參閱  
- [檢查更新或關閉更新&#40;報表產生器和 SSRS&#41;](../check-for-updates-or-turn-updates-off-report-builder-and-ssrs.md)   
- [報表組件&#40;報表產生器和 SSRS&#41;](../report-parts-report-builder-and-ssrs.md)   
+ [檢查更新或關閉更新&#40;報表產生器及 SSRS&#41;](../check-for-updates-or-turn-updates-off-report-builder-and-ssrs.md)   
+ [報表組件&#40;報表產生器及 SSRS&#41;](../report-parts-report-builder-and-ssrs.md)   
  [報表組件和報表產生器中的資料集](../report-data/report-parts-and-datasets-in-report-builder.md)   
- [疑難排解報表組件&#40;報表產生器和 SSRS&#41;](../troubleshoot-report-parts-report-builder-and-ssrs.md)   
- [發行與重新發行報表組件&#40;報表產生器和 SSRS&#41;](publish-and-republish-report-parts-report-builder-and-ssrs.md)  
+ [疑難排解報表組件&#40;報表產生器及 SSRS&#41;](../troubleshoot-report-parts-report-builder-and-ssrs.md)   
+ [發行與重新發行報表組件&#40;報表產生器及 SSRS&#41;](publish-and-republish-report-parts-report-builder-and-ssrs.md)  
   
   

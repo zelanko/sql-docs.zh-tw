@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - authorization [SQL Server replication]
 - cryptography [SQL Server replication]
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - authentication [SQL Server replication]
 ms.assetid: 27828fe4-3b54-4c33-886e-08e8279e34b5
 caps.latest.revision: 44
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: a3ca129d5dd03d788f639a51322ceb999a25e76a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 62567dbbb53db61780f002779abb825e19287578
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36030494"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37148259"
 ---
 # <a name="security-overview-replication"></a>安全性概觀 (複寫)
   基本上，確保複寫環境的安全性也就是要了解您的驗證與授權選項，了解如何適當使用複寫篩選功能，並學習有助於確保各複寫環境安全性的特定方法。 複寫環境包括「散發者」、「發行者」、「訂閱者」和快照集資料夾。 本章描述複寫安全性，但複寫安全性是以 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 安全性和 Windows 安全性為基礎； 因此，您應該了解這項基礎以及複寫安全性的特性。 如需安全性的詳細資訊，請參閱 [SQL Server 安裝的安全性考量](../../../sql-server/install/security-considerations-for-a-sql-server-installation.md)。 如需 Oracle 發行之安全性考量的詳細資訊，請參閱＜ [Design Considerations and Limitations for Oracle Publishers](../non-sql/design-considerations-and-limitations-for-oracle-publishers.md)＞主題中的「複寫安全性模型」一節。  

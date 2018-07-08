@@ -1,12 +1,12 @@
 ---
-title: 如何： 將資料列插入至 Geography 資料行 (ODBC) |Microsoft 文件
+title: 如何： 將資料列插入至 Geography 資料行 (ODBC) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: connectivity
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 0b6516f7-1fc0-4b01-a2d0-add0571070d5
@@ -15,12 +15,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 85f5f086ba32b3056017d0559bb1d5b164f63510
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: cb2de1b6b4b44fd80f50cacd2431f56fc6e1033e
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35697611"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37416847"
 ---
 # <a name="how-to-insert-rows-into-geography-column-odbc"></a>如何：將資料列插入至 Geography 資料行 (ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "35697611"
   
  此範例不適用於 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 之前的任何 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 版本。  
   
- 如需有關空間儲存體的詳細資訊，請參閱[空間資料&#40;SQL Server&#41;](../../relational-databases/spatial/spatial-data-sql-server.md)。  
+ 如需有關空間儲存體的詳細資訊，請參閱 <<c0> [ 空間資料&#40;SQL Server&#41;](../../relational-databases/spatial/spatial-data-sql-server.md)。</c0>  
   
 ## <a name="example"></a>範例  
  第一個 ([!INCLUDE[tsql](../../includes/tsql-md.md)]) 程式碼清單會建立此範例所使用的資料表。  

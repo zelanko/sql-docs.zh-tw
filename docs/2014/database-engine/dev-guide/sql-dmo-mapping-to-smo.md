@@ -1,5 +1,5 @@
 ---
-title: SMO 的 SQL-DMO 對應 |Microsoft 文件
+title: Smo 的 SQL-DMO 對應 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -12,15 +12,15 @@ ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 590f5396-98d5-485e-9b41-728c6ed7cb9d
 caps.latest.revision: 36
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: d99a665366fc9b5df9ff975d47cfa60dccaf4b4e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 54c66973a1cc0ca7f024a696902f694b45778a9a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36022696"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37182815"
 ---
 # <a name="sql-dmo-mapping-to-smo"></a>對 SMO 的 SQL-DMO 對應
   SQL Distributed Management Objects (SQL-DMO) 不再包含在 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 中，SQL-DMO 應用程式應該轉換成使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 管理物件 (SMO)。 SMO 物件模型與 SQL-DMO 相似，因此大部分 SQL-DMO 物件都是以相同名稱對應到 SMO 中的物件。 不過，部分 SQL-DMO 物件已在轉移至 SMO 的過程中變更或是捨棄。 此表列出建議對未直接轉換成 SMO 的 SQL-DMO 物件採取的動作。  

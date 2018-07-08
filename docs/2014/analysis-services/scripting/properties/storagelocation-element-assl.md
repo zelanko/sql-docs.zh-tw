@@ -1,5 +1,5 @@
 ---
-title: StorageLocation 元素 (ASSL) |Microsoft 文件
+title: StorageLocation 元素 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - StorageLocation element
 ms.assetid: ecf8852f-56a1-4fcf-b0d8-d7eebb75e4ed
 caps.latest.revision: 33
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: b6f6d023731126cafaa76cf31598e0bae9fdf1cf
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: fecb1a20c6c436749913ea9f8f83d284cf1000c2
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36023861"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37163529"
 ---
 # <a name="storagelocation-element-assl"></a>StorageLocation 元素 (ASSL)
   包含父元素之內容的檔案系統儲存位置。  
@@ -56,14 +56,14 @@ ms.locfileid: "36023861"
 |上階或父系|預設值|  
 |------------------------|-------------------|  
 |[Cube](../objects/cube-element-assl.md)|無|  
-|[量值群組](../objects/group-element-assl.md)|來自 `StorageLocation` 父元素之 `Cube` 的值。|  
+|[MeasureGroup](../objects/group-element-assl.md)|來自 `StorageLocation` 父元素之 `Cube` 的值。|  
 |[資料分割](../objects/partition-element-assl.md)|來自 `StorageLocation` 父元素之 `MeasureGroup` 的值。|  
   
 ## <a name="element-relationships"></a>元素關聯性  
   
 |關聯性|元素|  
 |------------------|-------------|  
-|父元素|[Cube](../objects/cube-element-assl.md)， [MeasureGroup](../objects/group-element-assl.md)，[磁碟分割](../objects/partition-element-assl.md)|  
+|父元素|[Cube](../objects/cube-element-assl.md)， [MeasureGroup](../objects/group-element-assl.md)，[資料分割](../objects/partition-element-assl.md)|  
 |子元素|無|  
   
 ## <a name="remarks"></a>備註  

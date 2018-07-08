@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine-imoltp
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: c0a704a3-3a31-4c2c-b967-addacda62ef8
 caps.latest.revision: 9
-author: stevestein
-ms.author: sstein
-manager: jhubbard
-ms.openlocfilehash: 3e2eac0fd58bccad20094af9eb5956cb14cef54c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: cdc1b44fda79d5b8ea8f940e18fc3b00240a6752
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36023102"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37229238"
 ---
 # <a name="implementing-identity-in-a-memory-optimized-table"></a>在記憶體最佳化資料表中實作 IDENTITY
   記憶體最佳化資料表支援 IDENTITY(1, 1)。 但是，記憶體最佳化資料表不支援定義為 IDENTITY(x, y) (其中 x != 1 或 y != 1) 的識別欄位。 識別值的因應措施是使用 SEQUENCE 物件 ([序號](../sequence-numbers/sequence-numbers.md))。  

@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - contained_database_authentication_TSQL
 - contained database authentication
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - contained database authentication option
 ms.assetid: b80768d2-ac20-4035-a335-d9adb74b3f6e
 caps.latest.revision: 8
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: fee54a5a0442ed2759268e686b115098ca1c4b66
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: b39c50ae71206f923cb2e8a86ae570da010c7d40
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36023616"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37153049"
 ---
 # <a name="contained-database-authentication-server-configuration-option"></a>自主資料庫驗證伺服器組態選項
   使用  [自主資料庫驗證] 選項，可在 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]執行個體上啟用自主資料庫。  

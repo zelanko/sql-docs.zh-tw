@@ -5,10 +5,9 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-backup-restore
+ms.technology: backup-restore
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.restorefilesandfilegrps.general.f1
 - sql12.swb.restorefilesandfilegrps.options.f1
@@ -18,15 +17,15 @@ helpviewer_keywords:
 - restoring [SQL Server], files
 ms.assetid: 72603b21-3065-4b56-8b01-11b707911b05
 caps.latest.revision: 24
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 233842c88e1d2bebc0fe45a7a992a169168b2300
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 59eb0adb6acd224388528857636b049fa6ecf4bf
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36023371"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37162929"
 ---
 # <a name="restore-files-and-filegroups-sql-server"></a>還原檔案和檔案群組 (SQL Server)
   此主題描述如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ，在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中還原檔案與檔案群組。  

@@ -1,5 +1,5 @@
 ---
-title: 來源資料庫檔案 |Microsoft 文件
+title: 來源資料庫檔案 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.transferdatabasetask.sourcedbfiles.f1
 ms.assetid: 7dc6bfeb-37c1-45e8-a705-a87564922265
 caps.latest.revision: 16
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 9f8914470f3e4ceb25cef90d1ea4eb3116bb7cb7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 9bad26723ccb553144359e77154804cf2ab11982
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36030069"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37160679"
 ---
 # <a name="source-database-files"></a>來源資料庫檔案
   使用 **[來源資料庫檔案]** 對話方塊，即可檢視來源伺服器上的資料庫檔案名稱和位置，或指定傳送資料庫工作的網路檔案共用位置。 如需這項工作的詳細資訊，請參閱 [傳送資料庫工作](control-flow/transfer-database-task.md)。  
@@ -44,7 +44,7 @@ ms.locfileid: "36030069"
   
 ## <a name="see-also"></a>另請參閱  
  [Integration Services 錯誤和訊息參考](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [傳送資料庫工作編輯器&#40;[一般] 頁面&#41;](general-page-of-integration-services-designers-options.md)   
+ [傳送資料庫工作編輯器&#40;一般頁面&#41;](general-page-of-integration-services-designers-options.md)   
  [傳送資料庫工作編輯器&#40;資料庫頁面&#41;](../../2014/integration-services/transfer-database-task-editor-databases-page.md)  
   
   

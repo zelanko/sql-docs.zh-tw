@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.rg.properties.f1
 helpviewer_keywords:
 - Resource Governor, properties
 ms.assetid: de3510df-f792-4a9d-80fa-f198fd36cdc8
 caps.latest.revision: 26
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 4a737671ca1bab075df174ce0e6e67152c78e775
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: da438bf2b53b6bbc9897b3719087fd54a152f641
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36022363"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37230774"
 ---
 # <a name="view-resource-governor-properties"></a>View Resource Governor Properties
   您可以使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中的 [資源管理員屬性] 頁面來建立或設定資源管理員實體，例如資源集區和工作負載群組。  
@@ -58,7 +58,7 @@ ms.locfileid: "36022363"
 ###  <a name="Permissions"></a> 權限  
  檢視資源管理員屬性需要 VIEW SERVER STATER 權限。 資源管理員組態工作需要 CONTROL SERVER 權限。  
   
-##  <a name="ViewRGProp"></a> 檢視資源管理員屬性頁面  
+##  <a name="ViewRGProp"></a> 檢視 Resource Governor 屬性頁面  
  **若要使用下列項目中的 [Resource Governor 屬性] 頁面來檢視 Resource Governor 屬性： [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]**  
   
 1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中，開啟 [物件總管]，然後遞迴地向下展開 **[管理]** 節點至 **[資源管理員]**。  
@@ -94,7 +94,7 @@ ms.locfileid: "36022363"
  **最大記憶體 %**  
  指定在此資源集區中，可供要求所用的伺服器記憶體總量。 範圍是 0 到 100。 預設設定為 100。  
   
- 如需詳細資訊，請參閱[CREATE RESOURCE POOL &#40;TRANSACT-SQL&#41;](/sql/t-sql/statements/create-resource-pool-transact-sql)。  
+ 如需詳細資訊，請參閱 <<c0> [ 建立資源集區&#40;TRANSACT-SQL&#41;](/sql/t-sql/statements/create-resource-pool-transact-sql)。</c0>  
   
  **資源集區的工作負載群組**  
  使用提供的方格，建立或變更工作負載群組的組態。 此方格會填入預先定義的內部與預設群組的資訊。 按一下集區資料列的第一個資料行，選取要進行作業的群組。 若要建立新的工作負載群組，按一下加上了星號 ((**\***) 的資料列。  

@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.transferdatabasetask.f1
 helpviewer_keywords:
@@ -17,13 +17,13 @@ ms.assetid: b9a2e460-cdbc-458f-8df8-06b8b2de3d67
 caps.latest.revision: 26
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 0cb5a9f08218a2533b4d1bcbcec2572b0b929dc4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 931978bdad7e2e82d232af85ee253ca8cae7de91
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36022441"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37239258"
 ---
 # <a name="transfer-database-task"></a>傳送資料庫工作
   「傳送資料庫」工作會在兩個 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的執行個體之間傳送 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]資料庫。 與其他只能透過複製 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 物件來傳送它們的工作不同，「傳送資料庫」工作可以複製或移動資料庫。 這項工作也可用來在同一部伺服器內複製資料庫。  
@@ -42,7 +42,7 @@ ms.locfileid: "36022441"
 ## <a name="execution-value"></a>執行值  
  執行值 (在工作的 `ExecutionValue` 屬性中定義) 會傳回值 1，因為與其他傳送工作不同，「傳送資料庫」工作只能傳送一個資料庫。  
   
- 藉由指定使用者定義變數，以`ExecValueVariable`屬性 「 傳送資料庫 」 工作的錯誤訊息傳送相關的資訊可供其他物件中封裝。 如需詳細資訊，請參閱 [Integration Services &#40;SSIS&#41; 變數](../integration-services-ssis-variables.md)和[在封裝中使用變數](../use-variables-in-packages.md)。  
+ 藉由指派的使用者定義變數`ExecValueVariable`屬性傳送資料庫工作的錯誤訊息傳送相關的資訊以供其他物件在封裝中。 如需詳細資訊，請參閱 [Integration Services &#40;SSIS&#41; 變數](../integration-services-ssis-variables.md)和[在封裝中使用變數](../use-variables-in-packages.md)。  
   
 ## <a name="log-entries"></a>記錄項目  
  「傳送資料庫」工作包含下列自訂記錄項目：  
@@ -75,7 +75,7 @@ ms.locfileid: "36022441"
   
  如需有關可以在「 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師」中設定之屬性的詳細資訊，請按下列其中一個主題：  
   
--   [傳送資料庫工作編輯器&#40;[一般] 頁面&#41;](../general-page-of-integration-services-designers-options.md)  
+-   [傳送資料庫工作編輯器&#40;一般頁面&#41;](../general-page-of-integration-services-designers-options.md)  
   
 -   [傳送資料庫工作編輯器&#40;資料庫頁面&#41;](../transfer-database-task-editor-databases-page.md)  
   

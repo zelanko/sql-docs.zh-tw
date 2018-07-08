@@ -1,12 +1,12 @@
 ---
-title: 建構 SQL 陳述式資料指標 |Microsoft 文件
+title: 建構 SQL 陳述式資料指標 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: connectivity
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -21,18 +21,18 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 7a8e1465528a72ee8a6cbacccc6d5186ff3d7af9
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: 3fc247de8bfc69a1851f8c1bf820a9076cf562ad
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35696329"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37416947"
 ---
 # <a name="constructing-sql-statements-for-cursors"></a>建構資料指標的 SQL 陳述式
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驅動程式會使用伺服器資料指標來實作 ODBC 規格中定義的資料指標功能。 ODBC 應用程式使用中控制資料指標行為[SQLSetStmtAttr](../../relational-databases/native-client-odbc-api/sqlsetstmtattr.md)設定不同的陳述式屬性。 下面是這些屬性及其預設值。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驅動程式會使用伺服器資料指標來實作 ODBC 規格中定義的資料指標功能。 ODBC 應用程式使用中控制資料指標行為[SQLSetStmtAttr](../../relational-databases/native-client-odbc-api/sqlsetstmtattr.md)來設定不同的陳述式屬性。 下面是這些屬性及其預設值。  
   
 |attribute|預設|  
 |---------------|-------------|  
@@ -40,9 +40,9 @@ ms.locfileid: "35696329"
 |SQL_ATTR_CURSOR_TYPE|SQL_CURSOR_FORWARD_ONLY|  
 |SQL_ATTR_CURSOR_SCROLLABLE|SQL_NONSCROLLABLE|  
 |SQL_ATTR_CURSOR_SENSITIVITY|SQL_UNSPECIFIED|  
-|SQL_ATTR_ROW_ARRAY_SIZE|@shouldalert|  
+|SQL_ATTR_ROW_ARRAY_SIZE|1|  
   
- 在執行 SQL 陳述式時，這些選項設定為其預設值時[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client ODBC 驅動程式不使用伺服器資料指標來實作結果集; 不過，它會使用預設結果集。 如果任何這些選項在執行 SQL 陳述式時，變更其預設值[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client ODBC 驅動程式會嘗試使用伺服器資料指標來實作結果集。  
+ 在執行 SQL 陳述式時，這些選項設定為其預設值時[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client ODBC 驅動程式不會使用伺服器資料指標來實作結果集; 不過，它會使用預設結果集。 如果任何這些選項在執行 SQL 陳述式時，變更其預設值[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client ODBC 驅動程式會嘗試使用伺服器資料指標來實作結果集。  
   
  預設結果集支援所有 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式。 使用預設結果集時，可執行的 SQL 陳述式類型沒有任何限制。  
   
@@ -66,7 +66,7 @@ ms.locfileid: "35696329"
   
      包含 FOR BROWSE 或 INTO 關鍵字的 SQL 陳述式。  
   
- 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，如果與其中任何條件相符的 SQL 陳述式是使用伺服器資料指標執行，此伺服器資料指標就會隱含轉換成預設結果集。 之後**SQLExecDirect**或**SQLExecute**傳回 SQL_SUCCESS_WITH_INFO，資料指標屬性就會設定為預設值。  
+ 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，如果與其中任何條件相符的 SQL 陳述式是使用伺服器資料指標執行，此伺服器資料指標就會隱含轉換成預設結果集。 在後**SQLExecDirect**或是**SQLExecute**會傳回 SQL_SUCCESS_WITH_INFO，資料指標屬性就會設定為預設值。  
   
  不符合上述類別目錄的 SQL 陳述式可以使用任何陳述式屬性設定執行。它們的運作方式就如同預設結果集或伺服器資料指標。  
   
@@ -80,7 +80,7 @@ szErrorMsgString: "[Microsoft][SQL Server Native Client][SQL Server]
                Cursor type changed."  
 ```  
   
- 收到此訊息的 ODBC 應用程式可以呼叫[SQLGetStmtAttr](../../relational-databases/native-client-odbc-api/sqlgetstmtattr.md)來判斷目前的資料指標設定。  
+ 收到這則訊息的 ODBC 應用程式可以呼叫[SQLGetStmtAttr](../../relational-databases/native-client-odbc-api/sqlgetstmtattr.md)來判斷目前的資料指標設定。  
   
  如果使用伺服器資料指標時嘗試執行具有多個 SELECT 陳述式的程序，就會產生下列錯誤：  
   

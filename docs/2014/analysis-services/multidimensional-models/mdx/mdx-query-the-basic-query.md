@@ -1,5 +1,5 @@
 ---
-title: 基本 MDX 查詢 (MDX) |Microsoft 文件
+title: 基本 MDX 查詢 (MDX) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - queries [MDX], SELECT statement
 - queries [MDX], about queries
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - cubes [Analysis Services], SELECT statement
 ms.assetid: 4fa5a95a-fec9-4584-875c-dbf030c53e82
 caps.latest.revision: 30
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 9ff060a0f570626052cf8577be60850e689566fc
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: a4bf03ddd4bfbc75a24f68bd4c046ea3eb9d58dd
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36023426"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37155189"
 ---
 # <a name="the-basic-mdx-query-mdx"></a>基本 MDX 查詢 (MDX)
   基本的多維度運算式 (MDX) 查詢是 SELECT 陳述式，為 MDX 中最常使用的查詢。 了解 MDX SELECT 陳述式必須指定結果集的方式、SELECT 陳述式的語法為何，以及如何使用 SELECT 陳述式建立簡單查詢之後，您將完全了解如何使用 MDX 來查詢多維度資料。  
@@ -64,7 +64,7 @@ FROM <SELECT subcube clause>
 [ <SELECT cell property list clause> ]  
 ```  
   
- MDX SELECT 陳述式支援選擇性語法，例如 WITH 關鍵字、使用 MDX 函數建立計算的成員以納入軸或 slicer 軸，以及做為查詢的一部分傳回特定資料格屬性值的能力。 如需有關 MDX SELECT 陳述式的詳細資訊，請參閱[SELECT 陳述式&#40;MDX&#41;](/sql/mdx/mdx-data-manipulation-select)。  
+ MDX SELECT 陳述式支援選擇性語法，例如 WITH 關鍵字、使用 MDX 函數建立計算的成員以納入軸或 slicer 軸，以及做為查詢的一部分傳回特定資料格屬性值的能力。 如需有關 MDX SELECT 陳述式的詳細資訊，請參閱 < [SELECT 陳述式&#40;MDX&#41;](/sql/mdx/mdx-data-manipulation-select)。  
   
 ### <a name="comparing-the-syntax-of-the-mdx-select-statement-to-sql"></a>比較 MDX SELECT 陳述式與 SQL 的語法  
  MDX SELECT 陳述式的語法格式跟 SQL 的語法格式相似。 但是，有幾個基本的相異之處：  
@@ -113,7 +113,7 @@ WHERE ( [Sales Territory].[Southwest] )
  如需詳細範例，請參閱[指定查詢軸的內容 &#40;MDX&#41;](mdx-query-and-slicer-axes-specify-the-contents-of-a-query-axis.md) 和[指定 Slicer 軸的內容 &#40;MDX&#41;](mdx-query-and-slicer-axes-specify-the-contents-of-a-slicer-axis.md)。  
   
 ## <a name="see-also"></a>另請參閱  
- [重要概念，在 MDX 中的&#40;Analysis Services&#41;](../key-concepts-in-mdx-analysis-services.md)   
+ [重要的概念在 MDX 中的&#40;Analysis Services&#41;](../key-concepts-in-mdx-analysis-services.md)   
  [SELECT 陳述式&#40;MDX&#41;](/sql/mdx/mdx-data-manipulation-select)  
   
   

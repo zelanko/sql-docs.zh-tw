@@ -1,5 +1,5 @@
 ---
-title: DatabaseID 元素 (ASSL) |Microsoft 文件
+title: DatabaseID 元素 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - DatabaseID element
 ms.assetid: 6bcf2bd5-b037-4964-bc72-42e0c89f9716
 caps.latest.revision: 8
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: c74e39a1a5696576b77ff9a2eb74e062cb2f3475
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ec07be8832ef048ac6ddc2b6cc92a945ba9e2c2e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36022489"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37161129"
 ---
 # <a name="databaseid-element-assl"></a>DatabaseID 元素 (ASSL)
   識別[資料庫](../objects/database-element-assl.md)元素相關聯的行外[繫結](../data-type/binding-data-type-assl.md)項目。  
@@ -60,7 +60,7 @@ ms.locfileid: "36022489"
 |子元素|無|  
   
 ## <a name="remarks"></a>備註  
- 單行繫結的詳細資訊，請參閱[資料來源和繫結&#40;SSAS 多維度&#41;](../../multidimensional-models/data-sources-and-bindings-ssas-multidimensional.md)。  
+ 如需程式碼外部繫結的詳細資訊，請參閱[資料來源和繫結&#40;SSAS 多維度&#41;](../../multidimensional-models/data-sources-and-bindings-ssas-multidimensional.md)。  
   
 ## <a name="see-also"></a>另請參閱  
  [屬性&#40;ASSL&#41;](properties-assl.md)  

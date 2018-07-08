@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - TSQL
 helpviewer_keywords:
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - ft crawl bandwidth option
 ms.assetid: e5864ad9-92f5-43b5-95de-46d68ded8694
 caps.latest.revision: 24
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: c20c19b64a311144da1540fc08c06ead0db92fe1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 8f4242b94699831815709196fa76d6291ff04597
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36023398"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37159199"
 ---
 # <a name="ft-crawl-bandwidth-server-configuration-option"></a>全文檢索耙梳頻寬伺服器組態選項
   使用 **ft crawl bandwidth** 選項，可指定大型記憶體緩衝區的集區可以成長到多大的大小。 大型記憶體緩衝區的大小是 4 MB。 **max** 參數值指定全文檢索記憶體管理員應該在大型緩衝集區中維持的最大緩衝區數目。 如果 **max** 值為零，則位在大型緩衝集區的緩衝區數目沒有上限。  

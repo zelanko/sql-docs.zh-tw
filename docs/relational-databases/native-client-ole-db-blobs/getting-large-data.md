@@ -1,12 +1,12 @@
 ---
-title: 取得大型資料 |Microsoft 文件
+title: 取得大型資料 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: connectivity
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -19,12 +19,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: f04fb06f29ed9a9e46f749804d92cb4c2fc931eb
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: 4ed32d379c0a0a58af6a4239899af434027a904f
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35699509"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37421557"
 ---
 # <a name="getting-large-data"></a>取得大型資料
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "35699509"
   
 -   ICommand::Execute  
   
- 如果 DBPROP_ACCESSORDER 屬性 （在資料列集屬性群組） 設定為 DBPROPVAL_AO_SEQUENTIAL 或 DBPROPVAL_AO_SEQUENTIALSTORAGEOBJECTS 值的任何一個，取用者應該擷取資料的呼叫中的單一資料列**GetNextRows**方法因為未緩衝處理 BLOB 資料。 如果 DBPROP_ACCESSORDER 的值設定為 DBPROPVAL_AO_RANDOM，取用者可以擷取多個資料列中的資料**GetNextRows**。  
+ 如果 DBPROP_ACCESSORDER 屬性 （在資料列集屬性群組） 設定為 DBPROPVAL_AO_SEQUENTIAL 或 DBPROPVAL_AO_SEQUENTIALSTORAGEOBJECTS 值時，取用者應該擷取單一資料列的資料，在呼叫**GetNextRows**方法因為 BLOB 資料不會進行緩衝。 如果 DBPROP_ACCESSORDER 的值設定為 DBPROPVAL_AO_RANDOM，取用者可以擷取多個資料列中的資料**GetNextRows**。  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者不會擷取從大型資料[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]取用者要求之前。 取用者應該在一個存取子中繫結所有短資料，然後在需要時，使用一或多個暫存的存取子來擷取大型資料值。  
   

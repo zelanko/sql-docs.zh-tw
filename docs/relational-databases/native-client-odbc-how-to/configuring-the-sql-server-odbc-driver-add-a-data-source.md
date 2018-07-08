@@ -1,12 +1,12 @@
 ---
-title: 加入資料來源 (ODBC) |Microsoft 文件
+title: 新增資料來源 (ODBC) |Microsoft Docs
 ms.custom: ''
 ms.date: 08/01/2016
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: connectivity
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -16,28 +16,28 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 4bfc1030cba65196858d05e3c57230b4930b2b21
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: be2aceb1f0b4d868e45219e4705eb12d7aee37c1
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35694469"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37421507"
 ---
-# <a name="configuring-the-sql-server-odbc-driver---add-a-data-source"></a>設定 SQL Server ODBC 驅動程式-加入資料來源
+# <a name="configuring-the-sql-server-odbc-driver---add-a-data-source"></a>設定 SQL Server ODBC 驅動程式-新增資料來源
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
   在搭配 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 或更新版本使用 ODBC 應用程式以前，您必須知道如何在舊版 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 上升級目錄預存程序的版本，以及加入、刪除和測試資料來源。  
   
-  您可以加入資料來源使用 ODBC 管理員，以程式設計方式 (使用[SQLConfigDataSource](../../relational-databases/native-client-odbc-api/sqlconfigdatasource.md))，或藉由建立檔案。  
+  您可以使用 ODBC 管理員，以程式設計方式加入資料來源 (利用[SQLConfigDataSource](../../relational-databases/native-client-odbc-api/sqlconfigdatasource.md))，或藉由建立檔案。  
   
 ### <a name="to-add-a-data-source-by-using-odbc-administrator"></a>使用 ODBC 管理員加入資料來源  
   
-1.  從**控制台**，存取**系統管理工具**然後**ODBC 資料來源 （64 位元）** 或**ODBC 資料來源 （32 位元）**. 或者，您可以叫用 odbcad32.exe。  
+1.  從**控制台中**，存取**系統管理工具**然後**ODBC 資料來源 （64 位元）** 或**ODBC 資料來源 （32 位元）**. 或者，您可以叫用 odbcad32.exe。  
   
-2.  按一下**使用者 DSN**，**系統 DSN**，或**檔案 DSN**索引標籤，然後再按一下**新增**。  
+2.  按一下 **使用者 DSN**，**系統 DSN**，或**檔案 DSN**索引標籤，然後再按**新增**。  
   
-3.  按一下**SQL Server**，然後按一下 **完成**。  
+3.  按一下  **SQL Server**，然後按一下**完成**。  
   
 4.  完成中的步驟**建立新的資料來源至 SQL Server**精靈。  
   

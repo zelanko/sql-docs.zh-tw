@@ -17,15 +17,15 @@ helpviewer_keywords:
 - methods [Reporting Services]
 ms.assetid: 2aa43ce9-f51e-408a-8ce0-b40d3dd62561
 caps.latest.revision: 37
-author: douglaslM
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 7b88c3693de9a0d2318094cd01d3e27044a697eb
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: 982dabf5a880459e785033411ead754f81dbce4b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36022809"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37155619"
 ---
 # <a name="report-server-namespace-management-methods"></a>報表伺服器命名空間管理方法
   報表伺服器管理 Web 服務中包含許多方法，可用來管理報表伺服器資料庫中的報表、資料夾和資源。  

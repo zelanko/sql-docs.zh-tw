@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 00cafed5-1a3c-4ce0-a1fb-ff1e2613f495
 caps.latest.revision: 6
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: e9d85e66cd3ccbfb4c3695f6d7485dbb1a8a9de2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 42d4a6aa9601c7b49cc69a2406550c76134ed6dc
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36029991"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37162029"
 ---
 # <a name="interactive-sort-report-builder-and-ssrs"></a>互動式排序 (報表產生器及 SSRS)
   您可以加入互動式排序按鈕，讓使用者在資料表中切換資料列的遞增和遞減順序，或在矩陣中切換資料列及資料行的遞增和遞減順序。 互動式排序的常見用法為，將排序按鈕加入到每個資料行標頭。 接著，使用者可以選擇排序所依據的資料行。  
@@ -41,7 +41,7 @@ ms.locfileid: "36029991"
   
 -   **是否要同步處理多個資料區的排序：** 您可以設計一份報表，讓使用者切換排序次序時，也排序具有相同上階的其他資料區。  
   
- 如需逐步指示，請參閱[加入至資料表或矩陣的互動式排序&#40;報表產生器及 SSRS&#41;](add-interactive-sort-to-a-table-or-matrix-report-builder-and-ssrs.md)。  
+ 如需逐步指示，請參閱 <<c0> [ 加入至資料表或矩陣的互動式排序&#40;報表產生器及 SSRS&#41;](add-interactive-sort-to-a-table-or-matrix-report-builder-and-ssrs.md)。</c0>  
   
  下表摘要說明您可以使用互動式排序按鈕達到的效果。  
   
@@ -58,11 +58,11 @@ ms.locfileid: "36029991"
 ## <a name="adding-interactive-sort-for-multiple-groups"></a>加入多個群組的互動式排序  
  在每個以單一資料集欄位為基礎之巢狀資料列群組的資料表中，您可以加入互動式排序按鈕，排序父群組值、子群組值或詳細資料列。 不過，您可能想要讓使用者能夠同時依父群組值和子群組值排序資料表，而不必按滑鼠多次。  
   
- 若要這樣做，您必須重新設計資料表，以便針對結合多個欄位的運算式分組。 例如，對於包含存貨計數的資料集，如果原始資料表先依大小，然後依色彩分組，您可以利用結合大小和色彩的群組運算式指定單一群組。 如需詳細資訊，請參閱[加入至資料表或矩陣的互動式排序&#40;報表產生器及 SSRS&#41;](add-interactive-sort-to-a-table-or-matrix-report-builder-and-ssrs.md)。  
+ 若要這樣做，您必須重新設計資料表，以便針對結合多個欄位的運算式分組。 例如，對於包含存貨計數的資料集，如果原始資料表先依大小，然後依色彩分組，您可以利用結合大小和色彩的群組運算式指定單一群組。 如需詳細資訊，請參閱 <<c0> [ 加入至資料表或矩陣的互動式排序&#40;報表產生器及 SSRS&#41;](add-interactive-sort-to-a-table-or-matrix-report-builder-and-ssrs.md)。</c0>  
   
 ## <a name="see-also"></a>另請參閱  
  [在資料區中排序資料 &#40;報表產生器及 SSRS&#41;](sort-data-in-a-data-region-report-builder-and-ssrs.md)   
  [篩選、分組和排序資料 &#40;報表產生器及 SSRS&#41;](filter-group-and-sort-data-report-builder-and-ssrs.md)   
- [將互動式排序加入至資料表或矩陣&#40;報表產生器和 SSRS&#41;](add-interactive-sort-to-a-table-or-matrix-report-builder-and-ssrs.md)  
+ [將互動式排序加入資料表或矩陣&#40;報表產生器及 SSRS&#41;](add-interactive-sort-to-a-table-or-matrix-report-builder-and-ssrs.md)  
   
   

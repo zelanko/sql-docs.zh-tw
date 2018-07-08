@@ -1,12 +1,12 @@
 ---
-title: bcp_collen |Microsoft 文件
+title: bcp_collen |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: connectivity
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
@@ -22,12 +22,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 5561e62386bbfdf370c16281b095db8c498613cc
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: 71ca1b085bdf218fee6c6d7bfa81d31cf193fac7
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35701949"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37426167"
 ---
 # <a name="bcpcollen"></a>bcp_collen
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -59,11 +59,11 @@ RETCODE bcp_collen (
  SUCCEED 或 FAIL。  
   
 ## <a name="remarks"></a>備註  
- **Bcp_collen**函式可讓您複製到資料時，變更特定資料行之程式變數中的資料長度[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]與[bcp_sendrow](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-sendrow.md)。  
+ **Bcp_collen**函式可讓您複製資料時，變更特定資料行之程式變數中的資料長度[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]具有[bcp_sendrow](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-sendrow.md)。  
   
- 資料長度決定一開始，當[bcp_bind](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-bind.md)呼叫。 如果呼叫之間變更的資料長度**bcp_sendrow**和正在使用任何長度前置詞或結束字元，您可以呼叫**bcp_collen**重設長度。 下次呼叫**bcp_sendrow**使用的呼叫所設定的長度**bcp_collen**。  
+ 決定資料長度的一開始，當[bcp_bind](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-bind.md)呼叫。 如果呼叫之間變更的資料長度**bcp_sendrow**正在使用任何長度前置詞或結束字元，您可以呼叫**bcp_collen**重設長度。 下次呼叫**bcp_sendrow**使用的呼叫所設定的長度**bcp_collen**。  
   
- 您必須呼叫**bcp_collen**一次是針對您想要修改的資料長度資料表中每個資料行。  
+ 您必須呼叫**bcp_collen**一次在您想要修改的資料長度的資料表中的每個資料行。  
   
 ## <a name="see-also"></a>另請參閱  
  [大量複製函數](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/sql-server-driver-extensions-bulk-copy-functions.md)  

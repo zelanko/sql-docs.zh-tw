@@ -1,12 +1,12 @@
 ---
-title: 處理 ODBC 錯誤 (ODBC) |Microsoft 文件
+title: 處理 ODBC 錯誤 (ODBC) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: connectivity
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -16,18 +16,18 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 74a37a2aa5be3d437cfdbe286c6176ac2d8f6007
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: 8e6c9c68180d39720449944afeaba191534bab21
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35696179"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37419647"
 ---
 # <a name="process-odbc-errors-odbc"></a>處理 ODBC 錯誤 (ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
-  兩個 ODBC 函數呼叫可以用來擷取 ODBC 訊息： [SQLGetDiagRec](http://go.microsoft.com/fwlink/?LinkId=58402)和[SQLGetDiagField](../../relational-databases/native-client-odbc-api/sqlgetdiagfield.md)。 若要在 **SQLState**、**pfNative** 和 **ErrorMessage** 診斷欄位中取得與主要 ODBC 相關的資訊，請呼叫 [SQLGetDiagRec](http://go.microsoft.com/fwlink/?LinkId=58402)，直到它傳回 SQL_NO_DATA 為止。 對於每個診斷記錄，可以呼叫 [SQLGetDiagField](../../relational-databases/native-client-odbc-api/sqlgetdiagfield.md) 來擷取個別的欄位。 所有驅動程式專用的欄位都必須使用 **SQLGetDiagField** 擷取。  
+  兩個 ODBC 函數呼叫可以用來擷取 ODBC 訊息： [SQLGetDiagRec](http://go.microsoft.com/fwlink/?LinkId=58402)並[SQLGetDiagField](../../relational-databases/native-client-odbc-api/sqlgetdiagfield.md)。 若要在 **SQLState**、**pfNative** 和 **ErrorMessage** 診斷欄位中取得與主要 ODBC 相關的資訊，請呼叫 [SQLGetDiagRec](http://go.microsoft.com/fwlink/?LinkId=58402)，直到它傳回 SQL_NO_DATA 為止。 對於每個診斷記錄，可以呼叫 [SQLGetDiagField](../../relational-databases/native-client-odbc-api/sqlgetdiagfield.md) 來擷取個別的欄位。 所有驅動程式專用的欄位都必須使用 **SQLGetDiagField** 擷取。  
   
  [SQLGetDiagRec](http://go.microsoft.com/fwlink/?LinkId=58402) 和 [SQLGetDiagField](../../relational-databases/native-client-odbc-api/sqlgetdiagfield.md) 是透過 ODBC 驅動程式管理員，而非個別的驅動程式處理。 在成功建立連接之前，ODBC 驅動程式管理員不會快取驅動程式專用的診斷欄位。 在成功連接之前，無法針對驅動程式專用的診斷欄位呼叫 [SQLGetDiagField](../../relational-databases/native-client-odbc-api/sqlgetdiagfield.md)。 這包含 ODBC 連接命令，即使它們傳回 SQL_SUCCESS_WITH_INFO 也一樣。 在下次呼叫 ODBC 函數之前，將無法使用驅動程式專用的診斷欄位。  
   

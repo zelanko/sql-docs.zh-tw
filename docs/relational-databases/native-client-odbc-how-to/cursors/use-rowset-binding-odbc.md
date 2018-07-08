@@ -1,12 +1,12 @@
 ---
-title: 使用資料列集繫結 (ODBC) |Microsoft 文件
+title: 使用資料列集繫結 (ODBC) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: connectivity
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -16,12 +16,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 2ef6f3651cb1cb1c80247f5853b4d4bd05bc13fc
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: 9e67107770c63eb1bb7ab941c3443ca5cbaa697b
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35694439"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37415547"
 ---
 # <a name="use-rowset-binding-odbc"></a>使用資料列集繫結 (ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -36,9 +36,9 @@ ms.locfileid: "35694439"
   
     -   或者，配置 R (或更多) 個資料行緩衝區的陣列來儲存資料長度。  
   
-    -   呼叫[SQLBindCol](../../../relational-databases/native-client-odbc-api/sqlbindcol.md)繫結至資料列集資料行的資料行的資料值和資料長度陣列。  
+    -   呼叫[SQLBindCol](../../../relational-databases/native-client-odbc-api/sqlbindcol.md)到資料行的資料值和資料長度陣列繫結至資料列集資料行。  
   
-2.  呼叫[SQLSetStmtAttr](../../../relational-databases/native-client-odbc-api/sqlsetstmtattr.md)來設定下列屬性：  
+2.  呼叫[SQLSetStmtAttr](../../../relational-databases/native-client-odbc-api/sqlsetstmtattr.md)設定下列屬性：  
   
     -   將 SQL_ATTR_ROW_ARRAY_SIZE 設定為資料列集的資料列數目 (R)。  
   
@@ -50,7 +50,7 @@ ms.locfileid: "35694439"
   
 3.  執行陳述式。  
   
-4.  每次呼叫[SQLFetch](http://go.microsoft.com/fwlink/?LinkId=58401)或[SQLFetchScroll](../../../relational-databases/native-client-odbc-api/sqlfetchscroll.md)擷取 R 個資料列，並會將資料傳輸至繫結的資料行。  
+4.  每次呼叫[SQLFetch](http://go.microsoft.com/fwlink/?LinkId=58401)或是[SQLFetchScroll](../../../relational-databases/native-client-odbc-api/sqlfetchscroll.md)擷取 R 個資料列，並將資料傳送到繫結的資料行。  
   
 ### <a name="to-use-row-wise-binding"></a>使用資料列取向的繫結  
   
@@ -60,7 +60,7 @@ ms.locfileid: "35694439"
   
     -   第二個部分是 SQLINTEGER 變數，可保存資料行狀態指標。  
   
-2.  呼叫[SQLSetStmtAttr](../../../relational-databases/native-client-odbc-api/sqlsetstmtattr.md)來設定下列屬性：  
+2.  呼叫[SQLSetStmtAttr](../../../relational-databases/native-client-odbc-api/sqlsetstmtattr.md)設定下列屬性：  
   
     -   將 SQL_ATTR_ROW_ARRAY_SIZE 設定為資料列集的資料列數目 (R)。  
   
@@ -70,14 +70,14 @@ ms.locfileid: "35694439"
   
     -   將 SQL_ATTR_PARAMS_STATUS_PTR 設定為指向 SQLUSSMALLINT 變數的陣列[R]，以保存資料列狀態指標。  
   
-3.  針對結果集中的每個資料行，呼叫[SQLBindCol](../../../relational-databases/native-client-odbc-api/sqlbindcol.md)以指向它們在步驟 1 中所配置之結構陣列的第一個元素中變數的資料值和資料行的資料長度指標。  
+3.  在結果集中的每一個資料行，呼叫[SQLBindCol](../../../relational-databases/native-client-odbc-api/sqlbindcol.md)以指向它們在步驟 1 中所配置之結構陣列的第一個項目中變數的資料值和資料行的資料長度指標。  
   
 4.  執行陳述式。  
   
-5.  每次呼叫[SQLFetch](http://go.microsoft.com/fwlink/?LinkId=58401)或[SQLFetchScroll](../../../relational-databases/native-client-odbc-api/sqlfetchscroll.md)擷取 R 個資料列，並會將資料傳輸至繫結的資料行。  
+5.  每次呼叫[SQLFetch](http://go.microsoft.com/fwlink/?LinkId=58401)或是[SQLFetchScroll](../../../relational-databases/native-client-odbc-api/sqlfetchscroll.md)擷取 R 個資料列，並將資料傳送到繫結的資料行。  
   
 ## <a name="see-also"></a>另請參閱  
- [使用資料指標的使用說明主題&#40;ODBC&#41;](../../../relational-databases/native-client-odbc-how-to/cursors/using-cursors-how-to-topics-odbc.md)   
+ [使用資料指標使用說明主題&#40;ODBC&#41;](../../../relational-databases/native-client-odbc-how-to/cursors/using-cursors-how-to-topics-odbc.md)   
  [如何實作資料指標](../../../relational-databases/native-client-odbc-cursors/implementation/how-cursors-are-implemented.md)   
  [使用資料指標&#40;ODBC&#41;](../../../relational-databases/native-client-odbc-how-to/cursors/use-cursors-odbc.md)  
   

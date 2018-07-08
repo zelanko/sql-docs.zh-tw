@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-xml
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - testing preprocessor tool
 - xsd:include
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - XML schemas [SQL Server]
 ms.assetid: cde1de5f-077a-4a6d-8a81-1ecb6e10d549
 caps.latest.revision: 25
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 89a439385332e3b5445bad36d33e1bc0f9606f4a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 3f5a572c5c486ccf03edbb5442f5de2cb723bae4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36023055"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37157749"
 ---
 # <a name="preprocess-a-schema-to-merge-included-schemas"></a>前置處理結構描述以合併包含的結構描述
   W3C XSD **include** 元素提供結構描述模組化的支援，在模組化中可以將 XML 結構描述分割成一個以上的實體檔案。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 目前不支援這個元素。 伺服器將會拒絕包含此元素的 XML 結構描述。  

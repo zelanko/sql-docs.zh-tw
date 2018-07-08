@@ -1,5 +1,5 @@
 ---
-title: 角色和權限 (Analysis Services) |Microsoft 文件
+title: 角色和權限 (Analysis Services) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - security [Analysis Services], about security
 - security [Analysis Services - multidimensional data], about security
 ms.assetid: bb885447-868b-4686-853c-8241f63d4370
 caps.latest.revision: 20
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 253cd429c1a5fc5ac231173c88e6ee91b852625a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 506babae85a4b1a04efa7f12b8b40c2527e2e094
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36030634"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37159399"
 ---
 # <a name="roles-and-permissions-analysis-services"></a>角色與權限 (Analysis Services)
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 提供以角色為基礎的授權模型，授與作業、物件和資料的存取權。 所有存取 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 執行個體或資料庫的使用者都必須在角色的內容中進行存取。  
@@ -33,26 +33,26 @@ ms.locfileid: "36030634"
   
  常見作法是建立角色並將成員資格指派為個別作業。 通常模型設計人員會在設計階段加入角色。 如此一來，所有角色定義都會反映在定義模型的專案檔案中。 角色成員資格通常是由資料庫管理員建立可開發、測試及執行為獨立作業的指令碼，稍後在資料庫進入實際執行階段時展開。  
   
- 所有授權都是基於有效的 Windows 使用者識別。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 只使用 Windows 驗證來驗證使用者識別。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 提供任何專屬驗證方法。請參閱[Analysis Services 支援的驗證方法](../instances/authentication-methodologies-supported-by-analysis-services.md)。  
+ 所有授權都是基於有效的 Windows 使用者識別。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 只使用 Windows 驗證來驗證使用者識別。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 提供任何專屬驗證方法。請參閱[支援的 Analysis Services 的驗證方法](../instances/authentication-methodologies-supported-by-analysis-services.md)。  
   
 > [!IMPORTANT]  
 >  每個 Windows 使用者或群組的權限可透過資料庫中的所有角色來加總。 如果一個角色拒絕使用者或群組執行特定工作或檢視特定資料的權限，但另一個角色授與此權限給該使用者或群組，則該使用者或群組將擁有執行此工作或檢視此資料的權限。  
   
 ## <a name="in-this-section"></a>本節內容  
   
--   [物件和作業存取權授權&#40;Analysis Services&#41;](authorizing-access-to-objects-and-operations-analysis-services.md)  
+-   [授與物件和作業存取權&#40;Analysis Services&#41;](authorizing-access-to-objects-and-operations-analysis-services.md)  
   
 -   [授與資料庫權限&#40;Analysis Services&#41;](grant-database-permissions-analysis-services.md)  
   
--   [授與 cube 或模型的權限&#40;Analysis Services&#41;](grant-cube-or-model-permissions-analysis-services.md)  
+-   [授與 cube 或模型權限&#40;Analysis Services&#41;](grant-cube-or-model-permissions-analysis-services.md)  
   
 -   [授與處理權限&#40;Analysis Services&#41;](grant-process-permissions-analysis-services.md)  
   
 -   [授與讀取權限定義物件中繼資料&#40;Analysis Services&#41;](grant-read-definition-permissions-on-object-metadata-analysis-services.md)  
   
--   [授與權限的資料來源物件&#40;Analysis Services&#41;](grant-permissions-on-a-data-source-object-analysis-services.md)  
+-   [在 資料來源物件上的權限授與&#40;Analysis Services&#41;](grant-permissions-on-a-data-source-object-analysis-services.md)  
   
--   [授與權限的資料採礦結構和模型&#40;Analysis Services&#41;](grant-permissions-on-data-mining-structures-and-models-analysis-services.md)  
+-   [資料採礦結構和模型的權限授與&#40;Analysis Services&#41;](grant-permissions-on-data-mining-structures-and-models-analysis-services.md)  
   
 -   [授與維度的權限&#40;Analysis Services&#41;](grant-permissions-on-a-dimension-analysis-services.md)  
   

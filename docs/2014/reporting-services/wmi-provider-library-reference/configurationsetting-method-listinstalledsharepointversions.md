@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - ListInstalledSharePointVersions method
 ms.assetid: 8f0a5e9f-23f1-41e5-9a90-dfec19ef1df7
 caps.latest.revision: 13
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 7d84b3ce6a3277c6dc0eb51321e4e071c6d76f14
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: 41c68f8c0a440aec22079f308cd501c7204b1f41
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36023713"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37157629"
 ---
 # <a name="listinstalledsharepointversions-method-wmi"></a>ListInstalledSharePointVersions 方法 (WMI)
   傳回一組 Token，這些 Token 代表與報表伺服器安裝在同一部電腦上的 Microsoft [!INCLUDE[winSPServ](../../includes/winspserv-md.md)]、[!INCLUDE[offSPServ](../../includes/offspserv-md.md)]、[!INCLUDE[SPF2010](../../includes/spf2010-md.md)] 或 [!INCLUDE[SPS2010](../../includes/sps2010-md.md)] 版本。  

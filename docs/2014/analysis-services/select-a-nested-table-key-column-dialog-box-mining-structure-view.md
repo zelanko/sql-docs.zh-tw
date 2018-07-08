@@ -1,5 +1,5 @@
 ---
-title: 選取巢狀的資料表索引鍵資料行對話方塊 （採礦結構檢視） |Microsoft 文件
+title: 選取巢狀的資料表索引鍵資料行對話方塊 （採礦結構檢視） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dm.miningmodeleditor.structure.addnestedtable.f1
 helpviewer_keywords:
 - Select a Nested Table Key Column dialog box
 ms.assetid: f68b89a7-17df-45f8-ba7f-b458cd9b1ec3
 caps.latest.revision: 23
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: d197434bbff97fa3fab1f1e2031c0b37b69d9ce1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ae03a58af3dd2781ca670137a77baccae3951482
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36023000"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37161109"
 ---
 # <a name="select-a-nested-table-key-column-dialog-box-mining-structure-view"></a>選取巢狀資料表索引鍵資料行對話方塊 (採礦結構檢視)
   使用 **[選取巢狀資料表索引鍵資料行]** 對話方塊，即可指定將作為新巢狀資料表之索引鍵的資料行。 當您結束對話方塊時，會將新資料表加入至包含指定索引鍵資料行的採礦結構。 以滑鼠右鍵按一下結構，然後選取 [加入資料行]，即可將其他資料行加入至巢狀資料表。 視您正在處理 OLAP 採礦模型或是關聯式採礦模型而定，此對話方塊會包含不同的選項。  
@@ -50,6 +50,6 @@ ms.locfileid: "36023000"
  此選項只用於 OLAP 採礦模型。  
   
 ## <a name="see-also"></a>另請參閱  
- [採礦結構檢視&#40;資料採礦模型設計工具&#41;](mining-structure-view-data-mining-model-designer.md)  
+ [採礦結構 檢視&#40;資料採礦模型設計工具&#41;](mining-structure-view-data-mining-model-designer.md)  
   
   

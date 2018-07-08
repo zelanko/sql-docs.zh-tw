@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 topic_type:
 - apiref
 helpviewer_keywords:
 - 'TM: Commit Tran Starting event class'
 ms.assetid: 3e1ac37e-6093-4dc9-9e5d-4270db18b547
 caps.latest.revision: 24
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: dcd4e53fcf3fbda010b039be74bfb713ea00db18
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 78bea47b4faafcc4910521c65bf8a94c149670df
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36030767"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37151219"
 ---
 # <a name="tm-commit-tran-starting-event-class"></a>TM: Commit Tran Starting 事件類別
   TM: Commit Tran Starting 事件類別指出正在啟動 COMMIT TRANSACTION 要求。 要求是從用戶端透過交易管理介面傳送。 EventSubClass 資料行指出在認可目前交易之後，是否會啟動新交易。  
@@ -51,7 +51,7 @@ ms.locfileid: "36030767"
 |SessionLoginName|`nvarchar`|引發工作階段之使用者的登入名稱。 例如，如果您使用 Login1 連接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，並以 Login2 身分執行陳述式，則 SessionLoginName 將顯示 Login1 而 LoginName 則顯示 Login2。 此資料行將同時顯示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 Windows 登入。|64|是|  
 |SPID|`int`|事件發生所在之工作階段的識別碼。|12|是|  
 |StartTime|`datetime`|事件的開始時間 (如果可以取得的話)。|14|是|  
-|TextData|`ntext`|與追蹤中所擷取的事件類別有關的文字值。|@shouldalert|是|  
+|TextData|`ntext`|與追蹤中所擷取的事件類別有關的文字值。|1|是|  
 |TransactionID|`bigint`|由系統指派給交易的識別碼。|4|是|  
 |XactSequence|`bigint`|描述目前交易的 Token。|50|是|  
   

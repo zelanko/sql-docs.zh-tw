@@ -1,5 +1,5 @@
 ---
-title: 重新命名資料表或資料行 (SSAS 表格式) |Microsoft 文件
+title: 重新命名資料表或資料行 (SSAS 表格式) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.bidtoolset.renametableorcolumn.f1
 ms.assetid: 88061a39-c5aa-403d-a52b-7fdb365fc235
 caps.latest.revision: 9
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: d5edfa6b7fc59ed1a417abe22a34ae22e317538d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 4e58496d1a1fc4bc712ba2d5157f004def162c94
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36030139"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37211518"
 ---
 # <a name="rename-a-table-or-column-ssas-tabular"></a>重新命名資料表或資料行 (SSAS 表格式)
   您可以在匯入程序期間，於 **[資料表匯入精靈]** 的 **[選取資料表和檢視表]** 頁面中輸入 **[易記名稱]** 來變更資料表的名稱。 如果在 **[資料表匯入精靈]** 的 **[指定 SQL 查詢]** 頁面上指定查詢來匯入資料，也可以變更資料表和資料行名稱。  

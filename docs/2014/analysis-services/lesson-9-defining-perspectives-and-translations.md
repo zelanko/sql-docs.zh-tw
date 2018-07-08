@@ -1,5 +1,5 @@
 ---
-title: 第 9 課： Defining Perspectives and Translations |Microsoft 文件
+title: 第 9 課： Defining Perspectives and Translations |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: a040fa65-d5d6-4156-9f2c-307a4d18e1a6
 caps.latest.revision: 11
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: jhubbard
-ms.openlocfilehash: 8cfd54ff0c3b5e7c105ccc35b58cd18707b4a485
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d5b9b8889bca7713453e1ce1734ce0a7ea5d3615
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36023008"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37159609"
 ---
 # <a name="lesson-9-defining-perspectives-and-translations"></a>第 9 課：定義檢視方塊和翻譯
   在這一課中，您要學習定義檢視方塊和翻譯。 您可以定義檢視方塊，來減少 Cube 明顯的複雜性，以及定義翻譯，讓使用者自己選擇語言來檢視 Cube 中繼資料。  
@@ -36,7 +36,7 @@ ms.locfileid: "36023008"
  在這項工作中，您要定義和瀏覽特定語言的特定中繼資料翻譯。  
   
 ## <a name="next-lesson"></a>下一課  
- [第 10 課： 定義管理角色](lesson-10-defining-administrative-roles.md)  
+ [第 10 課：定義系統管理角色](lesson-10-defining-administrative-roles.md)  
   
 ## <a name="see-also"></a>另請參閱  
  [Analysis Services 教學課程案例](../analysis-services/analysis-services-tutorial-scenario.md)   

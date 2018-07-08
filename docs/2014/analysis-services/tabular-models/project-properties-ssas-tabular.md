@@ -1,5 +1,5 @@
 ---
-title: 專案屬性 (SSAS 表格式) |Microsoft 文件
+title: 專案屬性 (SSAS 表格式) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.bidtoolset.depservconfig.f1
 - sql12.asvs.bidtoolset.semmodelprojprop.f1
 ms.assetid: 333c1fc0-361c-415a-bd68-4e057f67bcb7
 caps.latest.revision: 29
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 2d1e60f7a649b15fbcfd91300b05465d314a6fba
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d8d8371d2dedf54b82475c2cc6ed5adcfd9b1891
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36023648"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37278014"
 ---
 # <a name="project-properties-ssas-tabular"></a>專案屬性 (SSAS 表格式)
   本主題描述模型專案屬性。 每個表格式模型專案都含有部署選項與部署伺服器選項，可指定專案及模型的部署方式。 例如，模型要部署至的伺服器及部署的模型資料庫名稱。 這些設定不同於模型屬性，後者會影響模型工作空間資料庫。 此處所述的專案屬性位於強制回應屬性對話方塊中，與用於顯示其他屬性類型的屬性視窗不同。 若要在顯示強制回應專案屬性，請在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 方案總管 中，以滑鼠右鍵按一下專案，然後按一下 [屬性]。  
@@ -31,7 +31,7 @@ ms.locfileid: "36023648"
   
 -   [專案屬性](#bkmk_proj_properties)  
   
--   [設定部署選項與部署伺服器屬性設定](#bkmk_conf_proj_settings)  
+-   [若要設定部署選項與部署伺服器屬性設定](#bkmk_conf_proj_settings)  
   
 ##  <a name="bkmk_proj_properties"></a> 專案屬性  
  **部署選項**  
@@ -58,7 +58,7 @@ ms.locfileid: "36023648"
 |--------------|---------------------|-----------------|  
 |**模擬設定**|**預設值**|指定用來連接至執行於 DirectQuery 模式中之模型資料來源的認證。 這些認證不同於用在預設記憶體模式中的模擬認證。 如需詳細資訊，請參閱[模擬 &#40;SSAS 表格式&#41;](impersonation-ssas-tabular.md)。|  
   
-###  <a name="bkmk_conf_proj_settings"></a> 設定部署選項與部署伺服器屬性設定  
+###  <a name="bkmk_conf_proj_settings"></a> 若要設定部署選項與部署伺服器屬性設定  
   
 1.  在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 的方案總管中，以滑鼠右鍵按一下專案，然後按一下 [屬性]。  
   

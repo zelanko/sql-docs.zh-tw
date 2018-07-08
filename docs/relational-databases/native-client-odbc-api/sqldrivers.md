@@ -1,12 +1,12 @@
 ---
-title: SQLDrivers |Microsoft 文件
+title: SQLDrivers |Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 apitype: DLLExport
@@ -18,18 +18,18 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 0333f02cf48c958d0ee77cb0d8e053f84ee0f747
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: d034e5c6bf0f99199dc87e92273f824ab3856d07
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35699449"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37415597"
 ---
 # <a name="sqldrivers"></a>SQLDrivers
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
-  ODBC 驅動程式管理員會傳回所有**SQLDrivers**屬性規格字串。 如需有關屬性字串，而值定義的詳細資訊，請參閱[資料存取和存放開發人員中心](http://go.microsoft.com/fwlink/?LinkId=4173)，或者您可以檢視[ODBC 程式設計人員參考](http://go.microsoft.com/fwlink/?LinkId=45250)線上。  
+  ODBC 驅動程式管理員會傳回所有**SQLDrivers**屬性規格字串。 如需有關屬性字串和值定義的詳細資訊，請參閱[Data Access 和 Storage Developer Center](http://go.microsoft.com/fwlink/?LinkId=4173)，或者，您可以檢視[ODBC 程式設計人員參考](http://go.microsoft.com/fwlink/?LinkId=45250)線上。  
   
 ## <a name="see-also"></a>另請參閱  
  [SQLDrivers](http://go.microsoft.com/fwlink/?LinkId=59341)   

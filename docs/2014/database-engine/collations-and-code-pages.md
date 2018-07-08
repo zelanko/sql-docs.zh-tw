@@ -1,5 +1,5 @@
 ---
-title: Collations and Code Pages |Microsoft 文件
+title: Collations and Code Pages |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine-imoltp
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: c626dcac-0474-432d-acc0-cfa643345372
 caps.latest.revision: 15
 author: stevestein
 ms.author: sstein
-manager: jhubbard
-ms.openlocfilehash: da33b883499f9119c7c23f3c203aca6add6c4d3c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 0632bb70a18930e71319554bba99b0660e986483
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36023874"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37182889"
 ---
 # <a name="collations-and-code-pages"></a>定序和字碼頁
   [!INCLUDE[hek_2](../includes/hek-2-md.md)] 對於記憶體最佳化的資料表中 (var)Char 資料行支援的字碼頁以及用於索引和原生編譯預存程序中支援的定序有一些限制。  
@@ -86,7 +86,7 @@ GO
   
 -   原生編譯的預存程序中的所有運算式和排序作業都必須使用 BIN2 定序。 其含意為，所有的比較與排序作業都是根據字元的 Unicode 字碼指標 (二進位表示法)。 例如，所有排序都區分大小寫 ('Z' 排列在 'a' 之前)。 如有需要，請使用解譯的 [!INCLUDE[tsql](../includes/tsql-md.md)] 進行不區分大小寫的排序和比較。  
   
--   原生編譯的預存程序中不支援 UTF-16 資料截斷。 這表示該 n (var) char (*n*) 值無法轉換成 n (var) char 類型 (*我*)，如果*我* < *n*，如果定序具有 _SC 屬性。 例如，以下範例不受支援：  
+-   原生編譯的預存程序中不支援 UTF-16 資料截斷。 這表示該 n (var) char (*n*) 的值無法轉換成 n (var) char 類型 (*我*)，如果*我* < *n*的話定序具有 _SC 屬性。 例如，以下範例不受支援：  
   
     ```tsql  
     -- column definition using an _SC collation  

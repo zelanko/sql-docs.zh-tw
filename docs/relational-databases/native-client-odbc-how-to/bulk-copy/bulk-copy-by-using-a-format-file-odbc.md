@@ -1,12 +1,12 @@
 ---
-title: 使用格式檔案 (ODBC) 大量複製 |Microsoft 文件
+title: 使用格式檔案 (ODBC) 進行大量複製 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: connectivity
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -17,12 +17,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: ffb61c13b64b086a383b08d5903f0644310b37b3
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: aaca3a02e03a5ec73a0b37c7c8bebc1c1f850c09
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35701369"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37416937"
 ---
 # <a name="bulk-copy-by-using-a-format-file-odbc"></a>使用格式檔案進行大量複製 (ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -192,7 +192,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [大量複製與 SQL Server ODBC 驅動程式如何主題&#40;ODBC&#41;](../../../relational-databases/native-client-odbc-how-to/bulk-copy/bulk-copying-with-the-sql-server-odbc-driver-how-to-topics-odbc.md)   
+ [利用 SQL Server ODBC 驅動程式如何主題大量複製的&#40;ODBC&#41;](../../../relational-databases/native-client-odbc-how-to/bulk-copy/bulk-copying-with-the-sql-server-odbc-driver-how-to-topics-odbc.md)   
  [使用資料檔案與格式檔案](../../../relational-databases/native-client-odbc-bulk-copy-operations/using-data-files-and-format-files.md)  
   
   

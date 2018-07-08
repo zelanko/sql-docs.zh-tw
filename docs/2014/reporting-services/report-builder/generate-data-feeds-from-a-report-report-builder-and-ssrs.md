@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: e68baae2-9f2a-4f13-9179-9ac7f29111c5
 caps.latest.revision: 8
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 62e0dead34079abbceda90dabca6f44c7dbd5126
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 4ee1402202e08ab4ba718238b454f5eb4e548118
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36023063"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37210828"
 ---
 # <a name="generate-data-feeds-from-a-report-report-builder-and-ssrs"></a>從報表產生資料摘要 (報表產生器及 SSRS)
-  您可以從報表產生符合 Atom 資料摘要，然後使用資料摘要中的應用程式，例如[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]用戶端可以取用資料摘要。  
+  您可以從報表產生符合 Atom 資料摘要，然後這類應用程式中，使用資料摘要[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]用戶端可以取用資料摘要。  
   
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Atom 轉譯延伸模組會產生 Atom 服務文件，其中會列出可從報表取得的資料摘要。 此文件至少會列出報表中每個資料區的一個資料摘要。 根據資料區的類型以及該資料區顯示的資料， [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 可能會產生來自某個資料區的多個資料摘要。  
   
@@ -86,6 +86,6 @@ ms.locfileid: "36023063"
 6.  或者，在瀏覽器或者文字編輯器或 XML 編輯器中開啟 .atom 檔。  
   
 ## <a name="see-also"></a>另請參閱  
- [將報表匯出&#40;報表產生器和 SSRS&#41;](export-reports-report-builder-and-ssrs.md)  
+ [匯出報表&#40;報表產生器及 SSRS&#41;](export-reports-report-builder-and-ssrs.md)  
   
   

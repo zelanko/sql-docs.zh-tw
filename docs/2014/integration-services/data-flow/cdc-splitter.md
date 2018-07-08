@@ -8,27 +8,27 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.ssis.designer.cdcsplitter.f1
 ms.assetid: 167bc5c6-fa36-439d-987c-b20acd1a77e2
 caps.latest.revision: 7
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: c0823290f7221f696eaf7c81d4c12d233e1e8b5a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 72dc97b5018e48b12fa460e508d3f9b84e222a39
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36023576"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37148429"
 ---
 # <a name="cdc-splitter"></a>CDC 分隔器
   CDC 分隔器會將 CDC 來源資料流程中變更資料列的單一流程分割為插入、更新和刪除作業的不同資料流程。 資料流程是根據 `__$operation` 變更資料表中的必要資料行 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 及其標準值分割的。  
   
 |作業值|輸出|描述|  
 |------------------------|------------|-----------------|  
-|@shouldalert|DELETE|已刪除的資料列|  
+|1|DELETE|已刪除的資料列|  
 |2|Insert|插入的資料列 (在使用 [Net with Merge (淨 (含合併))] CDC 模式時無法使用)|  
 |3|Update|更新前資料列 (僅在使用 [All with Old Values (全部 (含舊值))] CDC 模式時才可使用)|  
 |4|Update|更新後資料列 (在更新前之後)|  

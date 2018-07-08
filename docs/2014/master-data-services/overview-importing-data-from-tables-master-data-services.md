@@ -1,5 +1,5 @@
 ---
-title: 資料匯入 (Master Data Services) |Microsoft 文件
+title: 匯入資料 (Master Data Services) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,27 +8,27 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - staging process [Master Data Services], about staging process
 - importing data [Master Data Services]
 - staging process [Master Data Services]
 ms.assetid: 181d1e22-379c-45d1-b03c-e1e22ff14164
 caps.latest.revision: 14
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: d386070df790164e11763d0dfc459cb7de2c1a95
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: d1d0810c58b2dd0a899c95a358ddccac601b8380
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36023801"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37162829"
 ---
 # <a name="data-import-master-data-services"></a>資料匯入 (Master Data Services)
-  中的資料建立模型之後[!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]，您可以開始加入資料中的資料進行變更[!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]資料庫。   可以使用 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 暫存資料表、預存程序及主資料管理員。  
+  一旦您已為您的資料來建立模型[!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]，您可以開始新增資料，並進行變更中的資料[!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]資料庫。   可以使用 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 暫存資料表、預存程序及主資料管理員。  
   
- 您也可以使用[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] [!INCLUDE[ssMDSXLS](../includes/ssmdsxls-md.md)]、 將資料加入至 MDS 儲存機制 ([!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]資料庫)。 如需詳細資訊，請參閱[發行資料&#40;MDS 增益集的 Excel&#41;](microsoft-excel-add-in/overview-importing-data-from-excel-mds-add-in-for-excel.md)。  
+ 您也可以使用[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] [!INCLUDE[ssMDSXLS](../includes/ssmdsxls-md.md)]，以將資料加入至 MDS 儲存機制 ([!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]資料庫)。 如需詳細資訊，請參閱 <<c0> [ 發行的資料&#40;MDS 增益集適用於 Excel&#41;](microsoft-excel-add-in/overview-importing-data-from-excel-mds-add-in-for-excel.md)。</c0>  
   
  當您新增及更新資料時，可以執行下列作業。  
   

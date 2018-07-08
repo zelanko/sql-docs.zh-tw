@@ -1,12 +1,12 @@
 ---
-title: bcp_readfmt |Microsoft 文件
+title: bcp_readfmt |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: connectivity
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
@@ -22,12 +22,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 352156802db248e50c42aa56fe8b5782b406fa77
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: 112ad745e44d196d5fba37fbf113e2620d4690e9
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35695129"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37422907"
 ---
 # <a name="bcpreadfmt"></a>bcp_readfmt
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -55,13 +55,13 @@ RETCODE bcp_readfmt (
  SUCCEED 或 FAIL。  
   
 ## <a name="remarks"></a>備註  
- 之後**bcp_readfmt**讀取格式值，它會適當地呼叫[bcp_columns](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-columns.md)和[bcp_colfmt](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-colfmt.md)。 您不需要剖析格式檔案，也不需要進行這些呼叫。  
+ 在後**bcp_readfmt**讀取格式值，它會適當地呼叫[bcp_columns](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-columns.md)並[bcp_colfmt](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-colfmt.md)。 您不需要剖析格式檔案，也不需要進行這些呼叫。  
   
- 若要保存格式檔案，呼叫[bcp_writefmt](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-writefmt.md)。 呼叫**bcp_readfmt**可以參考已儲存的格式。 如需詳細資訊，請參閱[bcp_init](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-init.md)。  
+ 若要保存格式檔案，呼叫[bcp_writefmt](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-writefmt.md)。 若要呼叫**bcp_readfmt**可以參考已儲存的格式。 如需詳細資訊，請參閱 < [bcp_init](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-init.md)。  
   
- 或者，大量複製公用程式 (**bcp**) 可以將使用者定義資料格式儲存在檔案可以參考的**bcp_readfmt**。 如需有關**bcp**公用程式和結構**bcp**資料格式檔案，請參閱[大量匯入和匯出的資料&#40;SQL Server&#41;](../../relational-databases/import-export/bulk-import-and-export-of-data-sql-server.md)。  
+ 或者，大量複製公用程式 (**bcp**) 可以將使用者定義的資料格式儲存在您可以參考的檔案**bcp_readfmt**。 如需詳細資訊**bcp**公用程式和結構**bcp**資料格式檔案，請參閱[大量匯入和匯出的資料 &#40;SQL Server&#41;](../../relational-databases/import-export/bulk-import-and-export-of-data-sql-server.md)。  
   
- **BCPDELAYREADFMT**值*eOption*參數[bcp_control](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-control.md)修改 bcp_readfmt 的行為。  
+ **BCPDELAYREADFMT**的值*eOption*參數[bcp_control](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-control.md)修改 bcp_readfmt 的行為。  
   
 > [!NOTE]  
 >  格式檔案必須已經產生 4.2 版或更新版本的**bcp**公用程式。  

@@ -1,5 +1,5 @@
 ---
-title: 在 Excel (SSAS 表格式) 中進行分析 |Microsoft 文件
+title: 在 Excel (SSAS 表格式) 中進行分析 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 2f17b4df-eea2-48c7-a1f2-a3fb7748c15f
 caps.latest.revision: 18
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 145b3d1fef33361317635676a79302b58e2eca04
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 25e4c20034408acf9413eeb24c4b74dbe5447345
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36023199"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37163415"
 ---
 # <a name="analyze-in-excel-ssas-tabular"></a>在 Excel 中進行分析 (SSAS 表格式)
   [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中的 [在 Excel 中進行分析] 功能，為表格式模型製作者提供了一個在開發期間可快速分析模型專案的方法。 [在 Excel 中進行分析] 功能可開啟 Microsoft Excel、建立模型工作空間資料庫的資料來源連接，以及自動將樞紐分析表加入工作表。 工作空間資料庫物件 (資料表、資料行及量值) 會包含在樞紐分析表欄位清單中做為欄位。 接著，即可在有效使用者或角色及檢視方塊的內容中檢視物件及資料。  

@@ -5,29 +5,27 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-tables
+ms.technology: table-view-index
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - partitioned tables [SQL Server], about partitioned tables
 - partitioned indexes [SQL Server], architecture
 - partitioned tables [SQL Server], architecture
 - partitioned indexes [SQL Server], about partitioned indexes
 ms.assetid: cc5bf181-18a0-44d5-8bd7-8060d227c927
-caps.latest.revision: 44
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: d3c7b474881c87f38211832eb5eb1e68f3b415b4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 85627a122c87c3065fe0bbcd5bfc5cd246a77c9d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36022603"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37154259"
 ---
 # <a name="partitioned-tables-and-indexes"></a>分割資料表與索引
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支援資料表和索引資料分割。 資料分割資料表和索引的資料，已分成可以在資料庫中的多個檔案群組之間分佈的單位。 資料是以水平方式分割，因此資料列的群組可對應至個別的資料分割。 單一索引或資料表的所有分割區必須在同一個資料庫中。 在資料上執行查詢或更新時，資料表或索引會被視為單一邏輯實體。 並非每個 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本都可使用資料分割資料表和索引。 如需所支援的版本功能的清單[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，請參閱[支援的 SQL Server 2014 的版本功能](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支援資料表和索引資料分割。 資料分割資料表和索引的資料，已分成可以在資料庫中的多個檔案群組之間分佈的單位。 資料是以水平方式分割，因此資料列的群組可對應至個別的資料分割。 單一索引或資料表的所有分割區必須在同一個資料庫中。 在資料上執行查詢或更新時，資料表或索引會被視為單一邏輯實體。 並非每個 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本都可使用資料分割資料表和索引。 如需的版本所支援的功能清單[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，請參閱 <<c2> [ 支援的 SQL Server 2014 的版本功能](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)。  
   
 > [!IMPORTANT]  
 >  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 預設最多支援 15,000 個資料分割。 在 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]之前版本中，資料分割數目預設限制為 1,000。在 x86 型系統上，可以建立超過 1000 個資料分割的資料表或索引，但不予支援。  
@@ -49,13 +47,13 @@ ms.locfileid: "36022603"
  下列詞彙適用於資料表和索引資料分割。  
   
  分割區函數  
- 一種資料庫物件，可定義資料表或索引的資料列如何根據某些資料行 (稱為分割資料行) 的值對應至資料分割集。 也就是說，分割區函數會定義資料表擁有的分割區數目，以及分割區界限的定義方式。 比方說，如果資料表包含銷售訂單資料，您可能想要將資料表分割為 12 個 （每月） 分割區根據`datetime`例如銷售日期資料行。  
+ 一種資料庫物件，可定義資料表或索引的資料列如何根據某些資料行 (稱為分割資料行) 的值對應至資料分割集。 也就是說，分割區函數會定義資料表擁有的分割區數目，以及分割區界限的定義方式。 比方說，如果資料表包含銷售訂單資料，您可能想要將資料表分割為 12 個 （每月） 分割區，根據`datetime`例如銷售日期的資料行。  
   
  分割區配置  
  將分割區函數的資料分割對應至一組檔案群組的資料庫物件。 將分割區放在不同檔案群組的主要理由是可以確保能夠對分割區獨立執行備份作業。 這是因為您可以對個別檔案群組執行備份。  
   
  資料分割資料行  
- 分割區函數用於分割資料表或索引的資料表或索引資料行。 參與分割區函數的計算資料行必須明確地標示為 PERSISTED。 適用於所有資料型別都使用索引資料行可以當做分割資料行，除了`timestamp`。 無法指定 `ntext`、`text`、`image`、`xml`、`varchar(max)`、`nvarchar(max)` 或 `varbinary(max)` 資料類型。 此外，也無法指定 Microsoft .NET Framework Common Language Runtime (CLR) 使用者定義型別及別名資料類型資料行。  
+ 分割區函數用於分割資料表或索引的資料表或索引資料行。 參與分割區函數的計算資料行必須明確地標示為 PERSISTED。 索引資料行可用來當做資料分割的資料行，除了做為所有的資料類型的有效值`timestamp`。 無法指定 `ntext`、`text`、`image`、`xml`、`varchar(max)`、`nvarchar(max)` 或 `varbinary(max)` 資料類型。 此外，也無法指定 Microsoft .NET Framework Common Language Runtime (CLR) 使用者定義型別及別名資料類型資料行。  
   
  對齊的索引  
  在與對應資料表相同的分割區配置上建立的索引。 資料表與其索引對齊時，SQL Server 可以在維護資料表及其索引之分割區結構的同時，快速且有效地切換分割區。 索引不需要參與相同的具名分割區函數，即可對齊其基底資料表。 不過，索引和基底資料表的分割區函數本質上必須相同，也就是說 1) 這兩種分割區函數的引數具有相同的資料類型，2) 它們都定義相同數目的分割區，3) 對分割區都定義相同的界限值。  
@@ -85,7 +83,7 @@ ms.locfileid: "36022603"
   
  建立和重建對齊索引所需的執行時間，可能會隨著分割區數目的增加而增加。 建議您不要同時執行多個建立和重建索引命令，這樣做可能會造成效能和記憶體問題。  
   
- SQL Server 執行排序以建立資料分割索引時，會先對每個分割區建立一個排序表。 然後，它建置排序資料表中的個別檔案群組的每個資料分割或`tempdb`，如果指定了 SORT_IN_TEMPDB 索引選項。 每個排序表都需要最小量的記憶體才能建立。 當您在建立對齊基底資料表的資料分割索引時，會使用少量記憶體一次建立一個排序表。 不過，當您在建立非對齊資料分割索引時，則會同時建立排序表。 因此，必須有足夠的記憶體才能處理這些並行排序作業。 分割區的數量越大的話，則需要越多記憶體。 對每個分割區來說，每個排序表的大小下限為 40 個頁面，而每一頁都為 8 KB。 例如，具有 100 個分割區的非對齊資料分割索引，需要足夠的記憶體，才能同時連續排序 4,000 (40 * 100) 頁。 如果有可用的記憶體，則建立作業會成功，但效能會變差。 如果無法使用這個數量的記憶體，建立作業會失敗。 此外，具有 100 個分割區的對齊資料分割索引只需要足夠排序 40 頁的記憶體，因為並不會同時執行排序作業。  
+ SQL Server 執行排序以建立資料分割索引時，會先對每個分割區建立一個排序表。 它接著會建置排序資料表中的個別檔案群組的每個資料分割或`tempdb`，如果指定了 SORT_IN_TEMPDB 索引選項。 每個排序表都需要最小量的記憶體才能建立。 當您在建立對齊基底資料表的資料分割索引時，會使用少量記憶體一次建立一個排序表。 不過，當您在建立非對齊資料分割索引時，則會同時建立排序表。 因此，必須有足夠的記憶體才能處理這些並行排序作業。 分割區的數量越大的話，則需要越多記憶體。 對每個分割區來說，每個排序表的大小下限為 40 個頁面，而每一頁都為 8 KB。 例如，具有 100 個分割區的非對齊資料分割索引，需要足夠的記憶體，才能同時連續排序 4,000 (40 * 100) 頁。 如果有可用的記憶體，則建立作業會成功，但效能會變差。 如果無法使用這個數量的記憶體，建立作業會失敗。 此外，具有 100 個分割區的對齊資料分割索引只需要足夠排序 40 頁的記憶體，因為並不會同時執行排序作業。  
   
  若為對齊和非對齊索引，如果 SQL Server 將平行處理原則的程度套用至多處理器電腦上的建立作業，則記憶體需求會比較大。 這是因為平行處理原則的程度越大，則記憶體需求也越大。 例如，如果 SQL Server 將平行處理原則的程度設為 4，則具有 100 個分割區的非對齊資料分割索引需要四個處理器的足夠記憶體，才能同時排序 4,000 頁或 16,000 頁。 如果已對齊資料分割索引，則記憶體需求會降低為四個處理器排序 40 頁，或 160 (4 * 40) 頁。 您可以使用 MAXDOP 索引選項，以手動方式降低平行處理原則的程度。  
   

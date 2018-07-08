@@ -1,5 +1,5 @@
 ---
-title: 一般屬性頁面，資源 （報表管理員） |Microsoft 文件
+title: 一般屬性頁面，資源 （報表管理員） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 23eed41b-283a-49df-a3aa-062dde8d6354
 caps.latest.revision: 25
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: aff68336e0ca68a315d8b2cdab6bd783c87c5f7f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 269cd82820bb8e07ec1ac66ccc8d3e8b8ceeb43a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36029993"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37164173"
 ---
 # <a name="general-properties-page-resources-report-manager"></a>一般屬性頁面，資源 (報表管理員)
   使用資源的 [一般] 屬性頁面，即可重新命名、刪除、移動或取代資源。 有關誰新增資源或修改屬性的資訊顯示在頁面上方。  

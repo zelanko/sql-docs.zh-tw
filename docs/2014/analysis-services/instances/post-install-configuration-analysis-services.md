@@ -1,5 +1,5 @@
 ---
-title: 後續安裝組態 (Analysis Services) |Microsoft 文件
+title: 後續安裝組態 (Analysis Services) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 7f4417b2-0efb-4361-a79e-fa56e43ee054
 caps.latest.revision: 7
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: df6b8362ed63e5b3ec2b339478b9398fd8a65db8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 1c4f7dea428950957d267c929e36627f40e0b7d9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36023680"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37151649"
 ---
 # <a name="post-install-configuration-analysis-services"></a>後續安裝組態 (Analysis Services)
   安裝 Analysis Services 之後，還必須進一步設定才能讓伺服器可完整運作並可供一般使用。 本節將介紹完成安裝所需的這些額外設定工作。 視連接需求而定，您可能還必須設定驗證 (請參閱 [連接到 Analysis Services](connect-to-analysis-services.md))。  
@@ -46,7 +46,7 @@ ms.locfileid: "36023680"
 ## <a name="see-also"></a>另請參閱  
  [SQL Server 2014 安裝](../../../2014/database-engine/install-windows/installation-for-sql-server.md)   
  [以多維度及資料採礦模式安裝 Analysis Services](../../sql-server/install/install-analysis-services-in-multidimensional-and-data-mining-mode.md)   
- [以表格模式安裝 Analysis Services](install-windows/install-analysis-services.md)   
+ [以表格式模式安裝 Analysis Services](install-windows/install-analysis-services.md)   
  [PowerPivot for SharePoint 2013 安裝](install-windows/install-analysis-services-in-power-pivot-mode.md)  
   
   

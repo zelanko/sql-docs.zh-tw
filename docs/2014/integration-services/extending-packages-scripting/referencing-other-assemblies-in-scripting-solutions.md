@@ -28,13 +28,13 @@ ms.assetid: 9b655bcd-19f6-43d8-9f89-1b4d299c6380
 caps.latest.revision: 67
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 616cf63a80e78449b730f7d9036a3d07afd47115
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d7bfcdd2bf1fd1efe17a0fba93fca3f10b04381e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36023166"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37162979"
 ---
 # <a name="referencing-other-assemblies-in-scripting-solutions"></a>參考指令碼解決方案中的其他組件
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 類別庫提供指令碼開發人員一組強大的工具，以實作 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 封裝中的自訂功能。 指令碼工作和指令碼元件也可以使用自訂 Managed 組件。  
@@ -69,13 +69,13 @@ ms.locfileid: "36023166"
   
 -   `System.Data` 包含 ADO.NET 架構。  
   
--   `System.IO` 提供檔案系統和資料流介面。  
+-   `System.IO` 提供介面給檔案系統和資料流。  
   
 -   `System.Windows.Forms` 提供表單建立。  
   
--   `System.Text.RegularExpressions` 提供使用規則運算式中使用的類別。  
+-   `System.Text.RegularExpressions` 使用規則運算式中提供的類別。  
   
--   `System.Environment` 傳回本機電腦、 目前的使用者和電腦和使用者設定的相關資訊。  
+-   `System.Environment` 傳回本機電腦、 目前使用者以及電腦和使用者設定的相關資訊。  
   
 -   `System.Net` 提供網路通訊。  
   
@@ -87,7 +87,7 @@ ms.locfileid: "36023166"
   
  如需有關 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 的相細資訊，請參閱 MSDN Library。  
   
-![Integration Services 圖示 （小）](../media/dts-16.gif "Integration Services 圖示 （小）")**保持最多 with Integration Services 的日期** <br /> 若要取得 Microsoft 的最新下載、文件、範例和影片以及社群中的精選解決方案，請瀏覽 MSDN 上的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 頁面：<br /><br /> [瀏覽 MSDN 上的 Integration Services 頁面](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 若要得到這些更新的自動通知，請訂閱該頁面上所提供的 RSS 摘要。  
+![Integration Services 圖示 （小）](../media/dts-16.gif "Integration Services 圖示 （小）")**保持最多包含 Integration Services 的日期** <br /> 若要取得 Microsoft 的最新下載、文件、範例和影片以及社群中的精選解決方案，請瀏覽 MSDN 上的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 頁面：<br /><br /> [瀏覽 MSDN 上的 Integration Services 頁面](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 若要得到這些更新的自動通知，請訂閱該頁面上所提供的 RSS 摘要。  
   
 ## <a name="see-also"></a>另請參閱  
  [使用指令碼擴充套件](extending-packages-with-scripting.md)  

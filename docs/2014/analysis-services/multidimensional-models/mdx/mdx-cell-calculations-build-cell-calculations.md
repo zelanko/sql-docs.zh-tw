@@ -1,5 +1,5 @@
 ---
-title: 建置 MDX (MDX) 中的資料格計算 |Microsoft 文件
+title: 建置 MDX (MDX) 中的資料格計算 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - calculated cells [MDX]
 - queries [MDX], cell calculations
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - Multidimensional Expressions [Analysis Services], cell calculations
 ms.assetid: 068aea63-d419-4791-a960-3d74e76f808e
 caps.latest.revision: 30
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 2d9d00541e51cb25c939f881a8b531892c1bf64d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 9b0a689858d4012f360e7f3893cfa844f3ecbdcf
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36030637"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37161349"
 ---
 # <a name="building-cell-calculations-in-mdx-mdx"></a>在 MDX 中建立資料格計算 (MDX)
   多維度運算式 (MDX) 為您提供許多產生導出值的工具，如導出成員、自訂積存與自訂成員。 但是，就此而言光使用這些功能，很難影響一組特定的資料格或單一個資料格。  
@@ -38,7 +38,7 @@ ms.locfileid: "36030637"
   
  就建立的範圍而言，導出資料格類似於其中的命名集與導出成員，可以做為 Cube 的一部份供全域使用，也可以在工作階段或單一查詢的存留期間暫時建立。  
   
--   **查詢範圍** ：若要建立一個導出資料格，把它定義為 MDX 查詢的一部份，而且範圍限制在查詢內，請使用 WITH 關鍵字。 然後您就可以在 MDX SELECT 陳述式內使用導出資料格。 使用這個方法，透過建立導出資料格`WITH`關鍵字可以變更不會干擾 SELECT 陳述式。  
+-   **查詢範圍** ：若要建立一個導出資料格，把它定義為 MDX 查詢的一部份，而且範圍限制在查詢內，請使用 WITH 關鍵字。 然後您就可以在 MDX SELECT 陳述式內使用導出資料格。 使用這個方法，建立使用的導出資料格`WITH`關鍵字可以變更不會干擾 SELECT 陳述式。  
   
      如需如何使用 WITH 關鍵字建立導出成員的詳細資訊，請參閱[建立查詢範圍資料格計算 &#40;MDX&#41;](../../multidimensional-models-olap-logical-cube-objects/calculations.md)。  
   

@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Integration Services, SSIS Designer
 - Business Intelligence Development Studio, Integration Services in
@@ -20,13 +20,13 @@ ms.assetid: 006d68ea-1b5c-4c1e-8079-3910288e012c
 caps.latest.revision: 54
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: ec6a23a1364e76f6f47014c3a4eeef52098e242d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: bfb0e983759304191c9c66b2d2679bccb1b76695
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36022663"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37151099"
 ---
 # <a name="ssis-designer"></a>SSIS 設計師
   [!INCLUDE[ssIS](../includes/ssis-md.md)] 設計師是可以用於建立及維護 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 封裝的圖形工具。 [!INCLUDE[ssIS](../includes/ssis-md.md)][!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 提供的設計師是 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 專案的一部分。  

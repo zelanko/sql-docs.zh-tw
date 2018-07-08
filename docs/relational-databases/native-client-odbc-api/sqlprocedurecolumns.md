@@ -1,12 +1,12 @@
 ---
-title: SQLProcedureColumns |Microsoft 文件
+title: SQLProcedureColumns |Microsoft Docs
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 apitype: DLLExport
@@ -18,24 +18,24 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 75acfcf2d519db920b7fa7f9b4b3115ea4f8c981
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: b30247476b357c94bfdf2d672214fc3a730bcfc4
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35700699"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37407487"
 ---
 # <a name="sqlprocedurecolumns"></a>SQLProcedureColumns
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
-  **SQLProcedureColumns**傳回一個資料列，報告所有的傳回值屬性[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]預存程序。  
+  **SQLProcedureColumns**會傳回一個資料列，報告所有的傳回值屬性[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]預存程序。  
   
- **SQLProcedureColumns**是否存在的值都會傳回 SQL_SUCCESS *CatalogName*， *SchemaName*， *ProcName*，或*ColumnName*參數。 **SQLFetch**這些參數中使用無效值時，傳回 sql_no_data 為止。  
+ **SQLProcedureColumns**或是否有值存在都會傳回 SQL_SUCCESS *CatalogName*， *SchemaName*， *ProcName*，或*ColumnName*參數。 **SQLFetch**無效的值用於這些參數時，會傳回 sql_no_data 為止。  
   
  **SQLProcedureColumns**可以在靜態伺服器資料指標上執行。 嘗試執行**SQLProcedureColumns**上可更新的 （動態或索引鍵集） 資料指標會傳回 SQL_SUCCESS_WITH_INFO，指出資料指標類型已變更。  
   
- 下表列出結果集，以及如何擴充這些處理傳回的資料行**udt**和**xml**資料型別透過[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client ODBC 驅動程式：  
+ 下表列出結果集，以及如何擴充這些來處理傳回的資料行**udt**並**xml**資料類型，透過[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client ODBC 驅動程式：  
   
 |資料行名稱|描述|  
 |-----------------|-----------------|  
@@ -47,7 +47,7 @@ ms.locfileid: "35700699"
 |SS_XML_SCHEMACOLLECTION_NAME|傳回 XML 結構描述集合的名稱。 如果找不到名稱，則此變數包含空字串。|  
   
 ## <a name="sqlprocedurecolumns-and-table-valued-parameters"></a>SQLProcedureColumns 和資料表值參數  
- SQLProcedureColumns 處理資料表值參數的方式，類似於 CLR 使用者定義型別。 在針對資料表值參數傳回的資料列中，資料行包含下列值：  
+ SQLProcedureColumns 處理方式類似 CLR 使用者定義型別中的資料表值參數。 在針對資料表值參數傳回的資料列中，資料行包含下列值：  
   
 |資料行名稱|描述/值|  
 |-----------------|------------------------|  
@@ -71,15 +71,15 @@ ms.locfileid: "35700699"
   
  依照 ODBC 規格規定，SS_TYPE_CATALOG_NAME 和 SS_TYPE_SCHEMA_NAME 會出現在舊版 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中所加入的所有驅動程式專用資料行之前，以及 ODBC 本身所託管的所有資料行之後。  
   
- 如需有關資料表值參數的詳細資訊，請參閱[資料表值參數&#40;ODBC&#41;](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md)。  
+ 如需有關資料表值參數的詳細資訊，請參閱 < [Parameters &#40;ODBC&#41;](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md)。  
   
 ## <a name="sqlprocedurecolumns-support-for-enhanced-date-and-time-features"></a>SQLProcedureColumns 對增強日期和時間功能的支援  
- 針對日期/時間類型傳回的值，請參閱[目錄中繼資料](../../relational-databases/native-client-odbc-date-time/metadata-catalog.md)。  
+ 針對日期/時間類型傳回值，請參閱[Catalog Metadata](../../relational-databases/native-client-odbc-date-time/metadata-catalog.md)。  
   
- 如需詳細資訊，請參閱[日期和時間增強功能&#40;ODBC&#41;](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)。  
+ 如需詳細資訊，請參閱 <<c0> [ 日期和時間改善&#40;ODBC&#41;](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)。</c0>  
   
 ## <a name="sqlprocedurecolumns-support-for-large-clr-udts"></a>SQLProcedureColumns 對大型 CLR UDT 的支援  
- **SQLProcedureColumns**支援大型 CLR 使用者定義型別 (Udt)。 如需詳細資訊，請參閱[Large CLR User-Defined 類型&#40;ODBC&#41;](../../relational-databases/native-client/odbc/large-clr-user-defined-types-odbc.md)。  
+ **SQLProcedureColumns**支援大型 CLR 使用者定義型別 (Udt)。 如需詳細資訊，請參閱 < [Large CLR User-Defined 類型&#40;ODBC&#41;](../../relational-databases/native-client/odbc/large-clr-user-defined-types-odbc.md)。  
   
 ## <a name="see-also"></a>另請參閱  
  [SQLProcedureColumns 函數](http://go.microsoft.com/fwlink/?LinkId=59363)   

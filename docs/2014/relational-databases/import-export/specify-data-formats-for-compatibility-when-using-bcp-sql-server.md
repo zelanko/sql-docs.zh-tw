@@ -5,10 +5,9 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-bulk-import-export
+ms.technology: data-movement
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - bulk exporting [SQL Server], compatibility
 - bulk importing [SQL Server], compatibility
@@ -17,18 +16,18 @@ helpviewer_keywords:
 - bcp utility [SQL Server], compatibility
 ms.assetid: cd5fc8c8-eab1-4165-9468-384f31e53f0a
 caps.latest.revision: 36
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: ede5c38153c30e5b7c528d6b9cd415fa739b94a0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 42266e1f4ab136045c16d1e0f41d6ae802c3f1c7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36022634"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37154539"
 ---
 # <a name="specify-data-formats-for-compatibility-when-using-bcp-sql-server"></a>使用 bcp 指定相容性的資料格式 (SQL Server)
-  本主題描述資料格式屬性、 欄位特定提示，以及儲存欄位的欄位資料的非 xml 格式檔案[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]`bcp`命令。 大量匯出 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料以大量匯入至另一個程式 (例如另一個資料庫程式) 時，了解這些資訊十分有用。 在來源資料表中的預設資料格式 (原生、字元或 Unicode) 可能和另一個程式所預期的資料配置不相容。如果匯出資料時發生了不相容的狀況，您就必須描述資料配置的方式。  
+  本主題描述資料格式屬性、 欄位特定提示，並儲存欄位的欄位資料的非 xml 格式檔案[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]`bcp`命令。 大量匯出 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料以大量匯入至另一個程式 (例如另一個資料庫程式) 時，了解這些資訊十分有用。 在來源資料表中的預設資料格式 (原生、字元或 Unicode) 可能和另一個程式所預期的資料配置不相容。如果匯出資料時發生了不相容的狀況，您就必須描述資料配置的方式。  
   
 > [!NOTE]  
 >  如不熟悉資料匯入或匯出的資料格式，請參閱 [大量匯入或大量匯出的資料格式 &#40;SQL Server&#41;](data-formats-for-bulk-import-or-bulk-export-sql-server.md)。  
@@ -37,7 +36,7 @@ ms.locfileid: "36022634"
   
 -   [bcp 資料格式屬性](#bcpDataFormatAttr)  
   
--   [欄位專用提示的概觀](#FieldSpecificPrompts)  
+-   [欄位特定提示概觀](#FieldSpecificPrompts)  
   
 -   [將欄位逐欄資料儲存在非 XML 格式檔案](#FieldByFieldNonXmlFF)  
   
@@ -48,7 +47,7 @@ ms.locfileid: "36022634"
   
 -   檔案儲存類型  
   
-     *檔案儲存類型* 描述資料如何儲存在資料檔中。 資料可以匯出到資料檔案做為其資料庫資料表類型 （原生格式）、 依其字元表示 （字元格式），或為支援隱含轉換的位置; 任何資料類型例如，複製`smallint`為`int`。 使用者自訂資料類型會依其基底類型匯出。 如需詳細資訊，請參閱 [使用 bcp 時指定檔案儲存類型 &#40;SQL Server&#41;](specify-file-storage-type-by-using-bcp-sql-server.md)。  
+     *檔案儲存類型* 描述資料如何儲存在資料檔中。 資料可以匯出到資料檔案做為其資料庫資料表類型 （原生格式）、 依其字元表示 （字元格式），或做為支援隱含轉換的位置; 任何資料類型例如，複製`smallint`做為`int`。 使用者自訂資料類型會依其基底類型匯出。 如需詳細資訊，請參閱 [使用 bcp 時指定檔案儲存類型 &#40;SQL Server&#41;](specify-file-storage-type-by-using-bcp-sql-server.md)。  
   
 -   前置長度  
   
@@ -63,12 +62,12 @@ ms.locfileid: "36022634"
      針對字元資料欄位，選擇性的結束字元讓您可以標示資料檔中每個欄位的結尾 (使用「欄位結束字元」)，以及每個資料列的結尾 (使用「資料列結束字元」)。 結束字元可讓讀取資料檔的程式知道某個欄位或資料列在何處結束，另一個在何處開始。 如需詳細資訊，請參閱 [指定欄位與資料列結束字元 &#40;SQL Server&#41;](specify-field-and-row-terminators-sql-server.md)。  
   
 ##  <a name="FieldSpecificPrompts"></a> 欄位專用提示字元的概觀  
- 如果互動式`bcp`命令包含**中**或**出**選項，但也不會包含格式檔案參數 (**-f**) 或資料格式參數 （**-n**， **-c**， **-w**，或 **-N**)，在來源或目標資料表中的每個資料行，此命令會針對上述每個提示在開啟的屬性。 在每個提示字元中`bcp`命令提供預設值，根據[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]資料表資料行資料類型。 接受所有提示字元的預設值，會和在命令行上指定原生格式 (**-n**) 產生相同結果。 每個提示都會將預設值顯示於方括號中：[*預設值*]。 按下 ENTER 即可接受顯示的預設值。 若要指定預設以外的值，請在提示字元中輸入新值。  
+ 如果互動式`bcp`命令包含**中**或是**出**選項，但也不會包含格式檔案參數 (**a-f**) 或資料格式參數 （**-n**， **-c**， **-w**，或 **-N**)，來源或目標資料表中的每個資料行，此命令會針對每個先前的提示在開啟的屬性。 在每個提示字元中，`bcp`命令提供的預設值，根據[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]資料表資料行資料類型。 接受所有提示字元的預設值，會和在命令行上指定原生格式 (**-n**) 產生相同結果。 每個提示都會將預設值顯示於方括號中：[*預設值*]。 按下 ENTER 即可接受顯示的預設值。 若要指定預設以外的值，請在提示字元中輸入新值。  
   
 ### <a name="example"></a>範例  
- 下列範例會使用`bcp`命令大量匯出資料`HumanResources.myTeam`資料表以互動方式為`myTeam.txt`檔案。 您必須先建立此資料表，才能執行範例。 如需此資料表及建立方式的相關資訊，請參閱 [HumanResources.myTeam 範例資料表 &#40;SQL Server&#41;](humanresources-myteam-sample-table-sql-server.md)。  
+ 下列範例會使用`bcp`命令，以大量匯出資料，從`HumanResources.myTeam`資料表以互動方式為`myTeam.txt`檔案。 您必須先建立此資料表，才能執行範例。 如需此資料表及建立方式的相關資訊，請參閱 [HumanResources.myTeam 範例資料表 &#40;SQL Server&#41;](humanresources-myteam-sample-table-sql-server.md)。  
   
- 此命令會指定格式檔案都是資料類型，造成`bcp`出現提示詢問資料格式資訊。 在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 命令提示字元中，輸入：  
+ 此命令會指定格式檔案和資料類型，都不造成`bcp`出現提示詢問資料格式資訊。 在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 命令提示字元中，輸入：  
   
 ```  
 bcp AdventureWorks.HumanResources.myTeam out myTeam.txt -T  
@@ -97,7 +96,7 @@ bcp AdventureWorks.HumanResources.myTeam out myTeam.txt -T
  相等的提示字元 (視需要而定) 會依序顯示在每個資料表資料行中。  
   
 ##  <a name="FieldByFieldNonXmlFF"></a> 將逐欄資料儲存至非 XML 格式檔案中  
- 在所有資料表的指定資料行，`bcp`命令會提示您選擇性地產生非 XML 格式檔案來儲存欄位的欄位資訊只提供 （請參閱上述範例中）。 如果您選擇產生格式檔案，則可以隨時匯出該資料表的資料，或將類結構化資料匯入到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
+ 在所有資料表的指定資料行，`bcp`命令會提示您選擇性地產生非 XML 格式檔案，其中儲存欄位的資訊只提供 （請參閱上述範例中）。 如果您選擇產生格式檔案，則可以隨時匯出該資料表的資料，或將類結構化資料匯入到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
   
 > [!NOTE]  
 >  您可以使用格式檔案，從資料檔中將資料大量匯入到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體，或從資料表中大量匯出資料，而不需重新指定格式。 如需詳細資訊，請參閱 [匯入或匯出資料的格式檔案 &#40;SQL Server&#41;](format-files-for-importing-or-exporting-data-sql-server.md)＞。  

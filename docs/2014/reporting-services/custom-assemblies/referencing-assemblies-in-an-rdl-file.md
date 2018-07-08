@@ -18,15 +18,15 @@ helpviewer_keywords:
 - report definition files [Reporting Services]
 ms.assetid: 9a48e552-7d47-4243-9be1-894990c506d9
 caps.latest.revision: 35
-author: douglaslM
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 129e8d896dac89451af46873f97bcdc6074d016f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: 29e2a4698ef09627b4098ab5e28ecbe096d6af30
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36023283"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37153969"
 ---
 # <a name="referencing-assemblies-in-an-rdl-file"></a>參考在 RDL 檔案中的組件
   為了支援報表定義檔案中自訂程式碼組件的用法，在 RDL 規格中加入了兩個報表定義語言 (RDL) 項目：**CodeModules** 項目與 **Classes** 項目。  

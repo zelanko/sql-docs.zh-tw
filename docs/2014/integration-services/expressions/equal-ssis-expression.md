@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - equal operator (==)
 - == (equal operator)
@@ -16,13 +16,13 @@ ms.assetid: 36fd2354-7b93-4c95-9cf3-51ee24568950
 caps.latest.revision: 53
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 0e87c5f2a718bca918b6e05e60a46ff364b7931c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: a14ebea2cea05b050b2a8bca4a51d75784b05190
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36023375"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37158619"
 ---
 # <a name="-equal-ssis-expression"></a>== (等於) (SSIS 運算式)
   執行比較來決定兩個運算式是否相等。 運算式評估工具會在執行比較之前，自動轉換許多資料類型。 如需詳細資訊，請參閱 [Integration Services Data Types in Expressions](integration-services-data-types-in-expressions.md)。  

@@ -1,12 +1,12 @@
 ---
-title: 設定資料指標選項 (ODBC) |Microsoft 文件
+title: 設定資料指標選項 (ODBC) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: connectivity
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -16,18 +16,18 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: cbcfb5e85b2f0b344c1c0ab0d5cf4bfcceaf78f0
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: cef6ecf23924ef5391cb4d3569082d5b635e24fe
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35697659"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37411009"
 ---
 # <a name="set-cursor-options-odbc"></a>設定資料指標選項 (ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../../includes/snac-deprecated.md)]
 
-  若要設定資料指標選項，請呼叫[SQLSetStmtAttr](../../../relational-databases/native-client-odbc-api/sqlsetstmtattr.md)設定或[SQLGetStmtAttr](../../../relational-databases/native-client-odbc-api/sqlgetstmtattr.md)來取得控制資料指標行為的陳述式選項。  
+  若要設定資料指標選項，請呼叫[SQLSetStmtAttr](../../../relational-databases/native-client-odbc-api/sqlsetstmtattr.md)若要設定或[SQLGetStmtAttr](../../../relational-databases/native-client-odbc-api/sqlgetstmtattr.md)來取得控制資料指標行為的陳述式選項。  
   
 |*Attribute*|指定|  
 |-----------------|---------------|  
@@ -64,6 +64,6 @@ retcode = SQLExecDirect(hstmt1, select au_lname from authors", SQL_NTS);
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [執行查詢的使用說明主題&#40;ODBC&#41;](../../../relational-databases/native-client-odbc-how-to/execute-queries/executing-queries-how-to-topics-odbc.md)  
+ [執行查詢使用說明主題&#40;ODBC&#41;](../../../relational-databases/native-client-odbc-how-to/execute-queries/executing-queries-how-to-topics-odbc.md)  
   
   

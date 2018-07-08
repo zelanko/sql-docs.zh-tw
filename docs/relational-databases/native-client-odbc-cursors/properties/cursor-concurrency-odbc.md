@@ -1,12 +1,12 @@
 ---
-title: 資料指標並行 (ODBC) |Microsoft 文件
+title: 資料指標並行 (ODBC) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -19,18 +19,18 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: f4903afcfada430a0f9186c24d2579c25a809543
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: 9bc43656728586f30a2fa07e3ab1903ec00dc6d3
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35697349"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37423897"
 ---
 # <a name="cursor-concurrency-odbc"></a>資料指標並行 (ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../../includes/snac-deprecated.md)]
 
-  資料指標作業跟資料指標類型一樣，會受到應用程式設定之並行選項的影響。 並行選項所使用的 SQL_ATTR_CONCURRENCY 選項設定[SQLSetStmtAttr](../../../relational-databases/native-client-odbc-api/sqlsetstmtattr.md)。 並行類型為：  
+  資料指標作業跟資料指標類型一樣，會受到應用程式設定之並行選項的影響。 並行選項會設定使用的 SQL_ATTR_CONCURRENCY 選項[SQLSetStmtAttr](../../../relational-databases/native-client-odbc-api/sqlsetstmtattr.md)。 並行類型為：  
   
 -   唯讀 (SQL_CONCUR_READONLY)  
   

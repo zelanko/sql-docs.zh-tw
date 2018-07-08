@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 675671ca-e6c9-48a2-82e9-386778f3a49f
 caps.latest.revision: 51
-author: markingmyname
-ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 417c2a44536a4f7a1c9ed9ade7d789e20e024874
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 8599cb6c4390b0e204bde2b02a36729cf3b48dcc
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36029780"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37148719"
 ---
 # <a name="lesson-1-creating-a-report-server-project-reporting-services"></a>第 1 課：建立報表伺服器專案 (Reporting Services)
   若要在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 中建立報表，必須先建立報表伺服器專案，您將在其中儲存報表定義 (.rdl) 檔案以及報表所需的任何其他資源檔案。 然後，您將建立實際的報表定義檔案、定義報表的資料來源、定義資料集，以及定義報表配置。 當您執行報表時，會擷取實際資料並與配置結合，然後轉譯在您的螢幕上，再從螢幕上匯出、列印或儲存資料。  
@@ -28,13 +28,13 @@ ms.locfileid: "36029780"
   
 ### <a name="to-create-a-report-server-project"></a>建立報表伺服器專案  
   
-1.  按一下**啟動**，指向 **所有程式**，指向  [!INCLUDE[ssCurrentUI](../includes/sscurrentui-md.md)]，然後按一下  **SQL Server Data Tools**。 如果這是第一次您開啟[!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]，按一下 **商業智慧設定**預設環境設定。  
+1.  按一下 **開始**，指向**所有程式**，指向[!INCLUDE[ssCurrentUI](../includes/sscurrentui-md.md)]，然後按一下**SQL Server Data Tools**。 如果這是第一次您開啟[!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]，按一下**商業智慧設定**預設環境設定。  
   
 2.  在 **[檔案]** 功能表上，指向 **[開新檔案]**，然後按一下 **[專案]**。  
   
 3.  在 [已安裝的範本] 清單中，按一下 [商業智慧]。  
   
-4.  按一下**報表伺服器專案**。  
+4.  按一下 **報表伺服器專案**。  
   
 5.  在 [名稱] 中，輸入 **Tutorial**。  
   
@@ -49,7 +49,7 @@ ms.locfileid: "36029780"
     > [!NOTE]  
     >  如果看不到方案總管視窗，請在 [檢視] 功能表上按一下方案總管。  
   
-2.  在**加入新項目**對話方塊的 **範本**，按一下 **報表**。  
+2.  在 **加入新項目**對話方塊的 **範本**，按一下 **報表**。  
   
 3.  在 [名稱] 中，輸入 **Sales Orders.rdl** ，然後按一下 [新增] 。  
   
