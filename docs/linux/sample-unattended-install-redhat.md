@@ -1,8 +1,8 @@
 ---
-title: Red Hat Enterprise Linux 上的 SQL Server 的自動的安裝 |Microsoft 文件
-description: SQL Server 指令碼範例在 Red Hat Enterprise Linux 上的自動安裝
-author: edmacauley
-ms.author: edmaca
+title: Red Hat Enterprise Linux 上的 SQL Server 的自動的安裝 |Microsoft Docs
+description: SQL Server 指令碼範例-在 Red Hat Enterprise Linux 上的自動安裝
+author: rothja
+ms.author: jroth
 manager: craigg
 ms.date: 10/02/2017
 ms.topic: article
@@ -11,30 +11,30 @@ ms.component: ''
 ms.suite: sql
 ms.custom: sql-linux
 ms.technology: linux
-ms.openlocfilehash: f9eb7f2e8754a81650f167104d53150f0f0a4d90
-ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
+ms.openlocfilehash: 9412c7ed24bd37d96c1519ea30b96c42a7b53e0c
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/19/2018
-ms.locfileid: "34322909"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37407938"
 ---
 # <a name="sample-unattended-sql-server-installation-script-for-red-hat-enterprise-linux"></a>Red Hat Enterprise Linux 的範例： 無人看管的 SQL Server 安裝指令碼
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-這個範例 Bash 指令碼會安裝 SQL Server 2017 上 Red Hat Enterprise Linux (RHEL) 沒有互動式的輸入。 提供範例的安裝 database engine，SQL Server 命令列工具，SQL Server Agent，並且會執行後續安裝步驟。 您可以選擇性地安裝全文檢索搜尋，並建立系統管理使用者。
+此範例 Bash 指令碼會安裝 SQL Server 2017 上 Red Hat Enterprise Linux (RHEL) 不需要互動式輸入。 它提供的安裝 database engine、 SQL Server 命令列工具，SQL Server Agent 的範例，並執行後續安裝步驟。 或者，您可以安裝全文檢索搜尋，並建立系統管理使用者。
 
 > [!TIP]
-> 如果您不需要自動的安裝指令碼，是遵循最快速的方式安裝 SQL Server [Red Hat 的快速入門](quickstart-install-connect-red-hat.md)。 其他安裝資訊，請參閱[SQL Server on Linux 的安裝指南](sql-server-linux-setup.md)。
+> 如果您不需要自動的安裝指令碼，安裝 SQL Server 的最快方式是遵循[Red Hat 的快速入門](quickstart-install-connect-red-hat.md)。 其他安裝資訊，請參閱[在 Linux 上的 SQL Server 的安裝指引](sql-server-linux-setup.md)。
 
-## <a name="prerequisites"></a>필수 구성 요소
+## <a name="prerequisites"></a>先決條件
 
-- 您需要至少 2 GB 的記憶體來執行 SQL Server on Linux。
-- 檔案系統必須是**XFS**或**EXT4**。 其他檔案系統，例如**BTRFS**，不受支援。
-- 其他系統需求，請參閱[系統需求的 SQL Server on Linux](sql-server-linux-setup.md#system)。
+- 您需要至少 2 GB 的記憶體，在 Linux 上執行 SQL Server。
+- 必須是檔案系統**XFS**或是**EXT4**。 其他檔案系統，例如**BTRFS**，不支援。
+- 如需其他系統需求，請參閱[在 Linux 上的 SQL Server 的系統需求](sql-server-linux-setup.md#system)。
 
 ## <a name="sample-script"></a>範例指令碼
-範例指令碼儲存至檔案，然後進行自訂，取代指令碼中變數的值。 您也可以設定任何指令碼的變數視為環境變數，只要您移除指令碼檔案。
+範例指令碼儲存至檔案，並進行自訂，取代指令碼中的變數值。 您也可以設定任何指令碼變數設為環境變數，只要您移除指令碼檔案。
 
 ```bash
 #!/bin/bash -e
@@ -154,11 +154,11 @@ echo Done!
 
 執行指令碼
 
-1. 貼入慣用的文字編輯器中的範例，然後儲存具有好記的名稱，例如`install_sql.sh`。
+1. 將範例貼到 慣用的文字編輯器，並儲存為令人印象深刻的名稱，例如`install_sql.sh`。
 
-1. 自訂`MSSQL_SA_PASSWORD`， `MSSQL_PID`，以及任何其他您想要變更的變數。
+1. 來自訂`MSSQL_SA_PASSWORD`， `MSSQL_PID`，以及任何其他您想要變更的變數。
 
-1. 將標示為可執行的指令碼
+1. 指令碼標示為可執行檔
 
    ```bash
    chmod +x install_sql.sh
@@ -172,19 +172,19 @@ echo Done!
 
 ## <a name="understanding-the-script"></a>了解指令碼
 
-Bash 指令碼會執行第一件事是設定一些變數。  這些可以是指令碼變數，例如此範例中或環境變數。  變數``` MSSQL_SA_PASSWORD ```是**必要**SQL Server 安裝程式，其他則為自訂建立指令碼的變數。  範例指令碼會執行下列步驟：
+Bash 指令碼會執行第一件事是設定一些變數。  這些可以是指令碼變數，例如此範例中或環境變數。  變數``` MSSQL_SA_PASSWORD ```已**必要**由 SQL Server 安裝，有些則是自訂建立指令碼的變數。  範例指令碼會執行下列步驟：
 
-1. 匯入 Microsoft GPG 公開金鑰。
+1. 匯入公用 Microsoft GPG 金鑰。
 
-1. 註冊 SQL Server 和命令列工具的 Microsoft 儲存機制。
+1. 註冊 Microsoft 存放庫，適用於 SQL Server 和的命令列工具。
 
-1. 更新本機儲存機制
+1. 更新本機存放庫
 
 1. 安裝 SQL Server
 
 1. 設定 SQL Server 與```MSSQL_SA_PASSWORD```並自動接受使用者授權合約。
 
-1. 自動接受使用者授權合約，如 SQL Server 命令列工具，加以安裝，並安裝 unixodbc 開發人員套件。
+1. 自動接受使用者授權合約，如 SQL Server 命令列工具，加以安裝，而且安裝 unixodbc 開發套件。
 
 1. 為了方便使用的路徑中加入 SQL Server 命令列工具。
 
@@ -192,19 +192,19 @@ Bash 指令碼會執行第一件事是設定一些變數。  這些可以是指�
 
 1. 選擇性地安裝 SQL Server 全文檢索搜尋，如果變數```SQL_INSTALL_FULLTEXT```設定。
 
-1. 解除封鎖 tcp 系統在防火牆上，從另一個系統連接到 SQL Server 所需的通訊埠 1433年。
+1. 解除封鎖 tcp 系統在防火牆上，從另一個系統連線至 SQL Server 所需的連接埠 1433年。
 
 1. 選擇性地設定死結追蹤的追蹤旗標。 （需要幾行取消註解）
 
-1. 現在已安裝 SQL Server，才能讓它運作，重新啟動處理程序。
+1. 現在已安裝 SQL Server，才能讓它運作，重新啟動程序。
 
 1. 確認 SQL Server 已正確安裝，同時隱藏任何錯誤訊息。
 
-1. 如果建立新的伺服器系統管理員使用者```SQL_INSTALL_USER```和```SQL_INSTALL_USER_PASSWORD```都設定。
+1. 建立新的伺服器系統管理員使用者，如果```SQL_INSTALL_USER```和```SQL_INSTALL_USER_PASSWORD```同時設定。
 
 ## <a name="next-steps"></a>後續的步驟
 
-簡化多個自動的安裝，然後再建立獨立的 Bash 指令碼設定適當的環境變數。  您可以移除任何變數的範例指令碼會使用，並將它們放在自己 Bash 指令碼。
+簡化多個自動的安裝和建立獨立的 Bash 指令碼，以設定適當的環境變數。  您可以移除任何變數的範例指令碼使用，並將它們放在自己的 Bash 指令碼。
 
 ```bash
 #!/bin/bash
@@ -221,4 +221,4 @@ export SQL_INSTALL_AGENT='y'
 . ./my_script_name.sh
 ```
 
-如需有關 SQL Server on Linux，請參閱[SQL Server on Linux 概觀](sql-server-linux-overview.md)。
+在 Linux 上 SQL Server 的相關資訊，請參閱[SQL Server on Linux 概觀](sql-server-linux-overview.md)。

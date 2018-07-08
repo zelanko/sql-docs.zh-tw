@@ -1,5 +1,5 @@
 ---
-title: 向外延展部署 （原生模式報表伺服器） |Microsoft 文件
+title: 向外延展部署 （原生模式報表伺服器） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,23 +8,23 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - SQL12.rsconfigtool.scaleoutdeployment.F1
 ms.assetid: 4df38294-6f9d-4b40-9f03-1f01c1f0700c
 caps.latest.revision: 8
 author: markingmyname
 ms.author: maghan
-manager: jhubbard
-ms.openlocfilehash: d995052fe279fcc354a3293d881714bb3ec4bcb4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 8038c9cbbce2eeb68b6e23b91fba1d7b0a2e708e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36021751"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37151799"
 ---
 # <a name="scale-out-deployment-native-mode-report-server"></a>向外延展部署 (原生模式報表伺服器)
-  使用**向外延展部署**頁面[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]Configuration Manager 來檢視向外延展部署的初始化狀態，或是將報表伺服器聯結至向外延展部署。 *「向外延展部署」* (Scale-out Deployment) 是指共用單一報表伺服器資料庫的兩個或多個報表伺服器執行個體。  
+  使用**向外延展部署**頁面中[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]Configuration Manager 來檢視向外延展部署的初始化狀態，或將報表伺服器聯結至向外延展部署。 *「向外延展部署」* (Scale-out Deployment) 是指共用單一報表伺服器資料庫的兩個或多個報表伺服器執行個體。  
   
  [!INCLUDE[applies](../../includes/applies-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 原生模式。  
   
@@ -77,7 +77,7 @@ ms.locfileid: "36021751"
   
  做為預防措施，在移除對稱金鑰之前，請先為其建立備份副本。 移除清單中最後一個報表伺服器的加密金鑰之後，該資料庫任何後續的報表伺服器初始化將導入新需求。 這項新需求是初始化報表伺服器之後，您必須還原對稱金鑰的備份副本。 如果您要存取目前報表伺服器資料庫中的加密資料，就必須還原對稱金鑰。  
   
- 如果您不再需要加密資料，或者如果您沒有金鑰的備份副本，則必須刪除加密資料。 如需詳細資訊，請參閱[加密金鑰&#40;SSRS 原生模式&#41;](../../../2014/sql-server/install/encryption-keys-ssrs-native-mode.md)。  
+ 如果您不再需要加密資料，或者如果您沒有金鑰的備份副本，則必須刪除加密資料。 如需詳細資訊，請參閱 <<c0> [ 加密金鑰&#40;SSRS 原生模式&#41;](../../../2014/sql-server/install/encryption-keys-ssrs-native-mode.md)。</c0>  
   
 ## <a name="see-also"></a>另請參閱  
  [將報表伺服器初始化 &#40;SSRS 組態管理員&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-initialize-a-report-server.md)   

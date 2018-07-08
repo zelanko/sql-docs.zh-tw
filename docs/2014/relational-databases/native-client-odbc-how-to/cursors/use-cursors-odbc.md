@@ -1,28 +1,26 @@
 ---
-title: 使用資料指標 (ODBC) |Microsoft 文件
+title: 使用資料指標 (ODBC) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - cursors [ODBC], how to topics
 ms.assetid: c502736f-bca0-45c3-ae25-d2ad52d296bf
 caps.latest.revision: 10
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: f146fa271a31d010dd4ebe0072423195fb299902
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: cfb7dc92b49ec434b9fd4bf407704afbcf795f45
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36136419"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37431637"
 ---
 # <a name="use-cursors-odbc"></a>使用資料指標 (ODBC)
     
@@ -77,6 +75,6 @@ ms.locfileid: "36136419"
      您可以透過設定 SQL_ATTR_CURSOR_TYPE 和 SQL_ATTR_CONCURRENCY，或是設定 SQL_ATTR_CURSOR_SENSITIVITY 和 SQL_ATTR_CURSOR_SCROLLABLE，控制所使用的資料指標類型。 您不應該混合使用這兩種指定資料指標行為的方法。  
   
 ## <a name="see-also"></a>另請參閱  
- [使用資料指標的使用說明主題&#40;ODBC&#41;](using-cursors-how-to-topics-odbc.md)  
+ [使用資料指標使用說明主題&#40;ODBC&#41;](using-cursors-how-to-topics-odbc.md)  
   
   

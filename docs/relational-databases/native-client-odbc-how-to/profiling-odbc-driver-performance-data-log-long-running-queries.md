@@ -1,12 +1,12 @@
 ---
-title: 記錄長時間執行的查詢 (ODBC) |Microsoft 文件
+title: 記錄長時間執行的查詢 (ODBC) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: connectivity
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -17,14 +17,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 9dab917b4adbbb186b916f68f74481b4a3ccbf8b
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: 79bfcc0eb68dd60752078e001c805083d111181f
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35701019"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37431807"
 ---
-# <a name="profiling-odbc-driver-performance-data---log-long-running-queries"></a>程式碼剖析的 ODBC 驅動程式效能資料的記錄長時間執行的查詢
+# <a name="profiling-odbc-driver-performance-data---log-long-running-queries"></a>程式碼剖析的 ODBC 驅動程式效能資料-記錄長時間執行的查詢
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
@@ -35,19 +35,19 @@ ms.locfileid: "35701019"
   
 ### <a name="to-log-long-running-queries-using-odbc-administrator"></a>使用 ODBC 管理員記錄長時間執行的查詢  
   
-1.  在**控制台**，連按兩下**系統管理工具**，然後按兩下 **資料來源 (ODBC)**。 (或者，您也可以從命令提示字元執行 odbcad32.exe)。  
+1.  在 **控制台**，按兩下**系統管理工具**，然後按兩下**資料來源 (ODBC)**。 (或者，您也可以從命令提示字元執行 odbcad32.exe)。  
   
-2.  按一下**使用者 DSN**，**系統 DSN**，或**檔案 DSN**  索引標籤。  
+2.  按一下 [**使用者 DSN**，**系統 DSN**，或**檔案 DSN** ] 索引標籤。  
   
 3.  按一下記錄長時間執行之查詢的資料來源。  
   
-4.  按一下**設定**。  
+4.  按一下 **設定**。  
   
-5.  在 Microsoft SQL Server 設定 DSN 精靈，瀏覽至包含頁面**將長時間執行的查詢儲存到記錄檔**。  
+5.  在 Microsoft SQL Server 設定 DSN 精靈，瀏覽至頁面**記錄檔儲存長時間執行的查詢**。  
   
-6.  選取**將長時間執行的查詢儲存到記錄檔**。 在方塊中，放置應該記錄其長時間執行查詢之檔案的名稱。 （選擇性） 按一下**瀏覽**瀏覽檔案系統的查詢記錄。  
+6.  選取 **記錄檔儲存長時間執行的查詢**。 在方塊中，放置應該記錄其長時間執行查詢之檔案的名稱。 （選擇性） 按一下**瀏覽**來瀏覽檔案系統中的查詢記錄檔。  
   
-7.  設定查詢逾時間隔，以毫秒為單位，在**長時間查詢的時間 （毫秒）** 方塊。  
+7.  設定查詢逾時間隔，以毫秒為單位，在**長時間查詢的時間 （毫秒）**  方塊中。  
   
 ### <a name="to-log-long-running-queries-data-programmatically"></a>以程式設計方式記錄長時間執行的查詢資料  
   
@@ -57,7 +57,7 @@ ms.locfileid: "35701019"
     C:\\Odbcqry.log  
     ```  
   
-2.  呼叫[SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md)與 sql_copt_ss_perf_query_interval 會設定為逾時間隔，以毫秒為單位。  
+2.  呼叫[SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md) sql_copt_ss_perf_query_interval 會與設為逾時間隔，以毫秒為單位。  
   
 3.  呼叫[SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md)利用 SQL_COPT_SS_PERF_QUERY 和 SQL_PERF_START 開始記錄長時間執行的查詢。  
   

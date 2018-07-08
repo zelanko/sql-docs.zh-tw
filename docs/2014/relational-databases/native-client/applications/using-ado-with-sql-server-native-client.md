@@ -1,13 +1,11 @@
 ---
-title: 使用 ADO 搭配 SQL Server Native Client |Microsoft 文件
+title: 使用 ADO 搭配 SQL Server Native Client |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client  - "database-engine" - "docset-sql-devref"
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -17,28 +15,28 @@ helpviewer_keywords:
 - SQLNCLI, ADO
 ms.assetid: 118a7cac-4c0d-44fd-b63e-3d542932d239
 caps.latest.revision: 22
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: d292a0b39de8820fdb58d6c95d7925048d7eb8bf
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 62c8430e36fe0982d4dc8e9ec56e14d124ccd106
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36031000"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37431817"
 ---
 # <a name="using-ado-with-sql-server-native-client"></a>使用 ADO 搭配 SQL Server Native Client
-  若要利用中引進的新功能[!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]例如 multiple active result set (MARS)、 查詢通知、 使用者定義型別 (Udt) 或新**xml**資料類型，使用 activex 控制項的現有應用程式Data Objects (ADO) 應該使用[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client OLE DB 提供者當做其資料存取提供者。  
+  若要利用所引進的新功能[!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]例如 multiple active result set (MARS)、 查詢通知、 使用者定義型別 (Udt) 或新**xml**資料型別，使用 activex 控制項的現有應用程式Data Objects (ADO) 應該使用[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client OLE DB 提供者當做資料存取提供者。  
   
  如果您不需要使用 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 所導入的任何新功能，就不需要使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者。您可以繼續使用目前的資料存取提供者 (通常是 SQLOLEDB)。 如果您要強化現有的應用程式，而且需要使用 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 所導入的新功能，就應該使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者。  
   
 > [!NOTE]  
 >  如果您正在開發新的應用程式，建議您考慮使用 ADO.NET 和 .NET Framework Data Provider for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 來取代 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client，以便存取最新 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 版本的所有新功能。 如需有關 .NET Framework Data Provider for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的詳細資訊，請參閱 ADO.NET 的 .NET Framework SDK 文件集。  
   
- 為了讓 ADO 使用最新 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 版本的新功能，我們已經對 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者新增了一些增強功能，以便擴充 OLE DB 的核心功能。 這些增強功能可讓 ADO 應用程式使用較新[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]功能，並使用兩個資料型別中導入[!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]: **xml**和**udt**。 這些增強功能也會利用增強功能**varchar**， **nvarchar**，和**varbinary**資料型別。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 會將 SSPROP_INIT_DATATYPECOMPATIBILITY 初始化屬性加入至 DBPROPSET_SQLSERVERDBINIT 屬性集，以便使用由 ADO 應用程式與 ADO 相容的方式來公開新的資料類型。 此外， [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者也會定義新的連接字串關鍵字，名為`DataTypeCompatibility`設定連接字串中。  
+ 為了讓 ADO 使用最新 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 版本的新功能，我們已經對 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者新增了一些增強功能，以便擴充 OLE DB 的核心功能。 這些增強功能讓 ADO 應用程式使用較新[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]功能並取用中導入類型的兩個資料[!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]: **xml**並**udt**。 這些增強功能也會利用增強**varchar**， **nvarchar**，並**varbinary**資料型別。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 原生用戶端會將 SSPROP_INIT_DATATYPECOMPATIBILITY 初始化屬性加入至與 ADO 相容的方式來公開新的資料類型，設定用於 ADO 應用程式所使用的 DBPROPSET_SQLSERVERDBINIT 屬性。 颾魤 ㄛ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者也會定義新的連接字串關鍵字，名為`DataTypeCompatibility`設定連接字串中。  
   
 > [!NOTE]  
->  現有的 ADO 應用程式可以使用 SQLOLEDB 提供者來存取並更新 XML、UDT 和大數值文字與二進位欄位值。 新的較大**varchar （max)**， **nvarchar （max)**，和**varbinary （max)** 資料類型會傳回成 ADO 類型**adLongVarChar**，**adLongVarWChar**和**adLongVarBinary**分別。 會傳回 XML 資料行，做為**adLongVarChar**，並會傳回 UDT 資料行，做為**adVarBinary**。 不過，如果您使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者 (SQLNCLI11) 來取代 SQLOLEDB，請務必將 `DataTypeCompatibility` 關鍵字設定為 "80"，以便新的資料類型會正確對應至 ADO 資料類型。  
+>  現有的 ADO 應用程式可以使用 SQLOLEDB 提供者來存取並更新 XML、UDT 和大數值文字與二進位欄位值。 新的較大**varchar （max)**， **nvarchar （max)**，並**varbinary （max)** 資料類型會傳回成 ADO 類型**adLongVarChar**，**adLongVarWChar**並**adLongVarBinary**分別。 會傳回 XML 資料行，作為**adLongVarChar**，和 UDT 資料行會傳回成**adVarBinary**。 不過，如果您使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者 (SQLNCLI11) 來取代 SQLOLEDB，請務必將 `DataTypeCompatibility` 關鍵字設定為 "80"，以便新的資料類型會正確對應至 ADO 資料類型。  
   
 ## <a name="enabling-sql-server-native-client-from-ado"></a>從 ADO 啟用 SQL Server Native Client  
  若要啟用的[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client，ADO 應用程式必須在其連接字串中實作下列關鍵字：  
@@ -47,7 +45,7 @@ ms.locfileid: "36031000"
   
 -   `DataTypeCompatibility=80`  
   
- 如需有關之 ADO 連接字串中支援的關鍵字[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]原生用戶端，請參閱[Using Connection String Keywords with SQL Server Native Client](using-connection-string-keywords-with-sql-server-native-client.md)。  
+ 如需有關 ADO 連接字串中支援的關鍵字[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]原生用戶端，請參閱[搭配 SQL Server Native Client 使用連接字串關鍵字](using-connection-string-keywords-with-sql-server-native-client.md)。  
   
  以下是建立完全啟用成可使用 ADO 連接字串的範例[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]原生用戶端，包括啟用 MARS 功能：  
   
@@ -64,10 +62,10 @@ con.Open
 ```  
   
 ## <a name="examples"></a>範例  
- 下列各節將提供範例，告訴您可以使用 ADO 與[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client OLE DB 提供者。  
+ 下列各節提供範例說明如何使用 ADO 搭配[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client OLE DB 提供者。  
   
 ### <a name="retrieving-xml-column-data"></a>擷取 XML 資料行資料  
- 在此範例中，資料錄集用來擷取及顯示從 XML 資料行中資料[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] **AdventureWorks**範例資料庫。  
+ 在此範例中，資料錄集用來擷取並顯示從 XML 資料行中的資料[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] **AdventureWorks**範例資料庫。  
   
 ```  
 Dim con As New ADODB.Connection  
@@ -103,7 +101,7 @@ Set con = Nothing
 >  XML 資料行不支援資料錄集篩選。 如果已使用，就會傳回錯誤。  
   
 ### <a name="retrieving-udt-column-data"></a>擷取 UDT 資料行資料  
- 在此範例中，**命令**物件用來執行 SQL 查詢可傳回 UDT、 UDT 資料會更新，而且新的資料再插回資料庫。 這個範例假設**點**已經在資料庫中註冊 UDT。  
+ 在此範例中，**命令**物件用來執行可傳回 UDT 的 SQL 查詢、 更新 UDT 資料，和新的資料然後插回資料庫。 這個範例假設**點**資料庫中已註冊 UDT。  
   
 ```  
 Dim con As New ADODB.Connection  
@@ -146,7 +144,7 @@ Set con = Nothing
 ```  
   
 ### <a name="enabling-and-using-mars"></a>啟用並使用 MARS  
- 在此範例中，連接字串建構了啟用透過 MARS [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者，然後這兩個資料錄集物件建立，以便使用相同的連接執行。  
+ 在此範例中，連接字串建構啟用 MARS，透過[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client OLE DB 提供者，則兩個資料錄集物件建立，以便使用相同的連接執行。  
   
 ```  
 Dim con As New ADODB.Connection  
@@ -170,7 +168,7 @@ con.Close
 Set con = Nothing  
 ```  
   
- 在舊版 OLE DB 提供者中，此程式碼會導致系統在第二次執行時建立隱含連接，因為每個單一連接只能開啟一個作用中結果集。 由於隱含連接不會在 OLE DB 連接集區中共用，所以這會產生額外的負擔。 所公開的 MARS 功能[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client OLE DB 提供者，您收到多個作用中結果在單一連接上。  
+ 在舊版 OLE DB 提供者中，此程式碼會導致系統在第二次執行時建立隱含連接，因為每個單一連接只能開啟一個作用中結果集。 由於隱含連接不會在 OLE DB 連接集區中共用，所以這會產生額外的負擔。 所公開的 MARS 功能與[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client OLE DB 提供者，您收到多個作用中結果在單一連接上。  
   
 ## <a name="see-also"></a>另請參閱  
  [使用 SQL Server Native Client 建置應用程式](building-applications-with-sql-server-native-client.md)  

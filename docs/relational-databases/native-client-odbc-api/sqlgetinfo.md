@@ -1,12 +1,12 @@
 ---
-title: SQLGetInfo |Microsoft 文件
+title: SQLGetInfo |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 apitype: DLLExport
@@ -18,12 +18,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 09a31616669daab1ee54012164bf59d06e563692
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: 10f47bc9d185835931afa8a80a7759f33cd79b55
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35696469"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37432767"
 ---
 # <a name="sqlgetinfo"></a>SQLGetInfo
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -31,15 +31,15 @@ ms.locfileid: "35696469"
 
   下表顯示所傳回的值**SQLGetInfo**。 這些值可能會根據連接之伺服器的版本號碼而有所不同。  
   
- **SQLGetInfo**中[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]原生用戶端與**SQLGetInfo**中[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ODBC 驅動程式 (SQLSRV32。DLL) 時**SQLGetInfo**使用 SQL_KEYWORDS 和 0 緩衝區長度呼叫。  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 驅動程式會傳回 SQL_SUCCESS，但是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ODBC 驅動程式則會傳回 SQL_SUCCESS_WITH_INFO。  不過，當使用小於輸出關鍵字字串，則為非零緩衝區長度呼叫**SQLGetInfo**中[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]原生用戶端傳回 SQL_SUCCESS_WITH_INFO 和 SQLState 01004。  
+ **SQLGetInfo**中[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]原生用戶端與不同**SQLGetInfo**在[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ODBC 驅動程式 (SQLSRV32。DLL) 時**SQLGetInfo**使用 SQL_KEYWORDS 和 0 緩衝區長度呼叫。  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 驅動程式會傳回 SQL_SUCCESS，但是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ODBC 驅動程式則會傳回 SQL_SUCCESS_WITH_INFO。  不過，當使用小於輸出關鍵字字串，非零緩衝區長度呼叫**SQLGetInfo**在[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]原生用戶端會傳回 SQL_SUCCESS_WITH_INFO 和 SQLState 01004。  
   
 |fInfoType|rgbInfoValue|  
 |---------------|------------------|  
 |SQL_ACCESSIBLE_PROCEDURES|"Y"|  
 |SQL_ACCESSIBLE_TABLES|"Y"|  
-|SQL_ACTIVE_CONNECTIONS|連接的數目受到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的限制。 驅動程式會傳回 0 這個**SQLGetInfo**要求。|  
-|SQL_ACTIVE_ENVIRONMENTS|環境的數目未受到此驅動程式的限制。 驅動程式會傳回 0 這個**SQLGetInfo**要求。|  
-|SQL_ACTIVE_STATEMENTS|驅動程式會傳回 1 這個**SQLGetInfo**要求。 可供應用程式使用的陳述式控制代碼數目並未受到此驅動程式的限制，但是陳述式控制代碼上的預設執行將會封鎖任何其他控制代碼上的執行。|  
+|SQL_ACTIVE_CONNECTIONS|連接的數目受到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的限制。 驅動程式會傳回 0，這個**SQLGetInfo**要求。|  
+|SQL_ACTIVE_ENVIRONMENTS|環境的數目未受到此驅動程式的限制。 驅動程式會傳回 0，這個**SQLGetInfo**要求。|  
+|SQL_ACTIVE_STATEMENTS|驅動程式會傳回 1，這**SQLGetInfo**要求。 可供應用程式使用的陳述式控制代碼數目並未受到此驅動程式的限制，但是陳述式控制代碼上的預設執行將會封鎖任何其他控制代碼上的執行。|  
 |SQL_ALTER_DOMAIN|FALSE|  
 |SQL_ALTER_TABLE|SQL_AT_ADD_COLUMN SQL_AT_ADD_COLUMN_DEFAULT SQL_AT_ADD_COLUMN_SINGLE SQL_AT_ADD_CONSTRAINT SQL_AT_ADD_TABLE_CONSTRAINTSQL_AT_CONSTRAINT_NAME_DEFINITION SQL_AT_DROP_COLUMN_RESTRICT|  
 |SQL_SQL_CONFORMANCE|SQL_SC_SQL92_ENTRY|  
@@ -56,11 +56,11 @@ ms.locfileid: "35696469"
 |SQL_COLLATION_SEQ|目前針對連接和伺服器指派的定序序列。|  
 |SQL_COLUMN_ALIAS|"Y"|  
 |SQL_CONCAT_NULL_BEHAVIOR|SQL_CB_NULL|  
-|SQL_CONVERT_BIGINT|不支援 ODBC SQL_BIGINT 資料類型的轉換。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驅動程式支援[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **decimal(19,0)** 資料類型當做 ODBC 類型 SQL_DECIMAL。 請參閱底下的 SQL_CONVERT_DECIMAL。|  
+|SQL_CONVERT_BIGINT|不支援 ODBC SQL_BIGINT 資料類型的轉換。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驅動程式支援[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **decimal(19,0)** 資料型別當做 ODBC 類型 SQL_DECIMAL。 請參閱底下的 SQL_CONVERT_DECIMAL。|  
 |SQL_CONVERT_BINARY|SQL_CVT_CHAR SQL_CVT_NUMERIC SQL_CVT_DECIMAL SQL_CVT_INTEGER SQL_CVT_SMALLINT SQL_CVT_VARCHAR SQL_CVT_BINARY SQL_CVT_VARBINARY SQL_CVT_TINYINT SQL_CVT_LONGVARBINARY SQL_CVT_WCHAR SQL_CVT_WVARCHAR|  
 |SQL_CONVERT_BIT|SQL_CVT_CHAR SQL_CVT_NUMERIC SQL_CVT_DECIMAL SQL_CVT_INTEGER SQL_CVT_SMALLINT SQL_CVT_FLOAT SQL_CVT_REAL SQL_CVT_VARCHAR SQL_CVT_BINARY SQL_CVT_VARBINARY SQL_CVT_BIT SQL_CVT_TINYINT SQL_CVT_WCHAR SQL_CVT_WVARCHAR|  
 |SQL_CONVERT_CHAR|SQL_CVT_CHAR SQL_CVT_NUMERIC SQL_CVT_DECIMAL SQL_CVT_INTEGER SQL_CVT_SMALLINT SQL_CVT_FLOAT SQL_CVT_REAL SQL_CVT_VARCHAR SQL_CVT_LONGVARCHAR SQL_CVT_BINARY SQL_CVT_VARBINARY SQL_CVT_BIT SQL_CVT_TINYINT SQL_CVT_TIMESTAMP SQL_CVT_LONGVARBINARY SQL_CVT_WCHAR SQL_CVT_WLONGVARCHAR SQL_CVT_WVARCHAR|  
-|SQL_CONVERT_DATE|不支援 ODBC SQL_TYPE_DATE 資料類型的轉換。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驅動程式支援[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **datetime**資料類型當做 ODBC 類型 SQL_TYPE_TIMESTAMP。 請參閱底下的 SQL_CONVERT_TIMESTAMP。|  
+|SQL_CONVERT_DATE|不支援 ODBC SQL_TYPE_DATE 資料類型的轉換。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驅動程式支援[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **datetime**資料型別當做 ODBC 類型 SQL_TYPE_TIMESTAMP。 請參閱底下的 SQL_CONVERT_TIMESTAMP。|  
 |SQL_CONVERT_DECIMAL|SQL_CVT_CHAR SQL_CVT_NUMERIC SQL_CVT_DECIMAL SQL_CVT_INTEGER SQL_CVT_SMALLINT SQL_CVT_FLOAT SQL_CVT_REAL SQL_CVT_VARCHAR SQL_CVT_BINARY SQL_CVT_VARBINARY SQL_CVT_BIT SQL_CVT_TINYINT SQL_CVT_WCHAR SQL_CVT_WVARCHAR|  
 |SQL_CONVERT_DOUBLE|不支援 ODBC SQL_DOUBLE 資料類型的轉換。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驅動程式支援當做 SQL_FLOAT 的 ODBC SQL_DOUBLE 資料類型。 請參閱底下的 SQL_CONVERT_FLOAT。|  
 |SQL_CONVERT_FLOAT|SQL_CVT_CHAR SQL_CVT_NUMERIC SQL_CVT_DECIMAL SQL_CVT_INTEGER SQL_CVT_SMALLINT SQL_CVT_FLOAT SQL_CVT_REAL SQL_CVT_VARCHAR SQL_CVT_BIT SQL_CVT_TINYINT SQL_CVT_WCHAR SQL_CVT_WVARCHAR|  
@@ -73,7 +73,7 @@ ms.locfileid: "35696469"
 |SQL_CONVERT_NUMERIC|SQL_CVT_CHAR SQL_CVT_NUMERIC SQL_CVT_DECIMAL SQL_CVT_INTEGER SQL_CVT_SMALLINT SQL_CVT_FLOAT SQL_CVT_REAL SQL_CVT_VARCHAR SQL_CVT_BINARY SQL_CVT_VARBINARY SQL_CVT_BIT SQL_CVT_TINYINT SQL_CVT_WCHAR SQL_CVT_WVARCHAR|  
 |SQL_CONVERT_REAL|SQL_CVT_CHAR SQL_CVT_NUMERIC SQL_CVT_DECIMAL SQL_CVT_INTEGER SQL_CVT_SMALLINT SQL_CVT_FLOAT SQL_CVT_REAL SQL_CVT_VARCHAR SQL_CVT_BIT SQL_CVT_TINYINT SQL_CVT_WCHAR SQL_CVT_WVARCHAR|  
 |SQL_CONVERT_SMALLINT|SQL_CVT_CHAR SQL_CVT_NUMERIC SQL_CVT_DECIMAL SQL_CVT_INTEGER SQL_CVT_SMALLINT SQL_CVT_FLOAT SQL_CVT_REAL SQL_CVT_VARCHAR SQL_CVT_BINARY SQL_CVT_VARBINARY SQL_CVT_BIT SQL_CVT_TINYINT SQL_CVT_WCHAR SQL_CVT_WVARCHAR|  
-|SQL_CONVERT_TIME|不支援 ODBC SQL_TYPE_TIME 資料類型的轉換。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驅動程式支援[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **datetime**資料類型當做 ODBC 類型 SQL_TYPE_TIMESTAMP。 請參閱底下的 SQL_CONVERT_TIMESTAMP。|  
+|SQL_CONVERT_TIME|不支援 ODBC SQL_TYPE_TIME 資料類型的轉換。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驅動程式支援[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **datetime**資料型別當做 ODBC 類型 SQL_TYPE_TIMESTAMP。 請參閱底下的 SQL_CONVERT_TIMESTAMP。|  
 |SQL_CONVERT_TIMESTAMP|SQL_CVT_CHAR SQL_CVT_VARCHAR SQL_CVT_BINARY SQL_CVT_VARBINARY SQL_CVT_TIMESTAMP SQL_CVT_WCHAR SQL_CVT_WVARCHAR|  
 |SQL_CONVERT_TINYINT|SQL_CVT_CHAR SQL_CVT_NUMERIC SQL_CVT_DECIMAL SQL_CVT_INTEGER SQL_CVT_SMALLINT SQL_CVT_FLOAT SQL_CVT_REAL SQL_CVT_VARCHAR SQL_CVT_BINARY SQL_CVT_VARBINARY SQL_CVT_BIT SQL_CVT_TINYINT SQL_CVT_WCHAR SQL_CVT_WVARCHAR|  
 |SQL_CONVERT_VARBINARY|SQL_CVT_CHAR SQL_CVT_NUMERIC SQL_CVT_DECIMAL SQL_CVT_INTEGER SQL_CVT_SMALLINT SQL_CVT_VARCHAR SQL_CVT_BINARY SQL_CVT_VARBINARY SQL_CVT_TINYINT SQL_CVT_LONGVARBINARY SQL_CVT_WCHAR SQL_CVT_WVARCHAR|  
@@ -131,7 +131,7 @@ ms.locfileid: "35696469"
 |SQL_KEYWORDS|BREAK BROWSE BULK CHECKPOINT CLUSTERED COMMITTED COMPUTE CONFIRM CONTROLROW DATABASE DBCC DISK DISTRIBUTED DUMMY DUMP ERRLVL ERROREXIT EXIT FILE FILLFACTOR FLOPPY HOLDLOCK IDENTITY_INSERT IDENTITYCOL IF KILL LINENO LOAD MIRROREXIT NONCLUSTERED OFF OFFSETS ONCE OVER PERCENT PERM PERMANENT PLAN PRINT PROC PROCESSEXIT RAISERROR READ READTEXT RECONFIGURE REPEATABLE RETURN ROWCOUNT RULE SAVE SERIALIZABLE SETUSER SHUTDOWN STATISTICS TAPE TEMP TEXTSIZE TRAN TRIGGER TRUNCATE TSEQUEL UNCOMMITTED UPDATETEXT USE WAITFOR WHILE WRITETEXT|  
 |SQL_LIKE_ESCAPE_CLAUSE|"Y"|  
 |SQL_LOCK_TYPES|SQL_LCK_NO_CHANGE|  
-|SQL_MAX_ASYNC_CONCURRENT_STATEMENTS|@shouldalert|  
+|SQL_MAX_ASYNC_CONCURRENT_STATEMENTS|1|  
 |SQL_MAX_BINARY_LITERAL_LEN|131072|  
 |SQL_MAX_CATALOG_NAME_LEN|128|  
 |SQL_MAX_CHAR_LITERAL_LEN|131072|  
@@ -141,7 +141,7 @@ ms.locfileid: "35696469"
 |SQL_MAX_COLUMNS_IN_ORDER_BY|16|  
 |SQL_MAX_COLUMNS_IN_SELECT|4000|  
 |SQL_MAX_COLUMNS_IN_TABLE|250|  
-|SQL_MAX_CONCURRENT_ACTIVITIES|@shouldalert|  
+|SQL_MAX_CONCURRENT_ACTIVITIES|1|  
 |SQL_MAX_CURSOR_NAME_LEN|128|  
 |SQL_MAX_DRIVER_CONNECTIONS|0|  
 |SQL_MAX_IDENTIFIER_LEN|128|  

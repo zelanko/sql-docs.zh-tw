@@ -1,5 +1,5 @@
 ---
-title: StopService 方法 （SqlService 類別） |Microsoft 文件
+title: StopService 方法 （SqlService 類別） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - StopService method
 ms.assetid: ef8e1856-4930-417a-8f52-be470fd3f15c
 caps.latest.revision: 34
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 648b487ae6fe32030aea3c741a4870f416fed13b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+ms.openlocfilehash: 85a5ca367ff5974d4fa79b7376acf11f43c8a038
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36022346"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37148239"
 ---
 # <a name="stopservice-method-sqlservice-class"></a>StopService 方法 (SqlService 類別)
   嘗試將此服務置於已停止狀態。  

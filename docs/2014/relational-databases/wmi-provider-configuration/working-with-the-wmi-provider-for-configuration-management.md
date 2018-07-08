@@ -1,5 +1,5 @@
 ---
-title: 使用組態管理的 WMI 提供者 |Microsoft 文件
+title: 使用組態管理的 WMI 提供者 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -21,15 +21,15 @@ helpviewer_keywords:
 - binding [WMI]
 ms.assetid: 34daa922-7074-41d0-9077-042bb18c222a
 caps.latest.revision: 22
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 757c5bf468ff1c9fb2b5d493121a9e4b7daab144
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+ms.openlocfilehash: e10e77b15dc7641f03f3579db1ef28880ae7ec09
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36022133"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37175385"
 ---
 # <a name="working-with-the-wmi-provider-for-configuration-management"></a>針對組態管理使用 WMI 提供者
   在使用電腦管理的 WMI 提供者進行程式設計之前，請考慮下列事項：  
@@ -48,7 +48,7 @@ ms.locfileid: "36022133"
   
  其中 `instance_name` 預設為 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 預設安裝中的 `MSSQLSERVER`。  
   
- **注意：** 如果您透過 Windows 防火牆，您必須確定已適當地設定您的電腦連接。 請參閱 「 透過 Windows 防火牆連線 」 文件中的 Windows Management Instrumentation 文件上[!INCLUDE[msCoName](../../includes/msconame-md.md)]MSDN[網站](http://go.microsoft.com/fwlink/?linkid=15426)。  
+ **注意：** 如果您要連接通過 Windows 防火牆，您必須先確定您的電腦均正確無誤。 請參閱 「 連線透過 Windows 防火牆 」 文章中的 Windows Management Instrumentation 文件上[!INCLUDE[msCoName](../../includes/msconame-md.md)]MSDN[網站](http://go.microsoft.com/fwlink/?linkid=15426)。  
   
 ## <a name="permissions-and-server-authentication"></a>權限和伺服器驗證  
  若要存取組態管理的 WMI 提供者，用戶端 WMI 管理指令碼必須在目標電腦的管理員內容中執行。 您在要管理的電腦上必須是本機 Windows 管理員群組的成員。  
@@ -57,7 +57,7 @@ ms.locfileid: "36022133"
   
  WMI 管理指令碼可用來更新用來執行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服務的帳戶。  
   
- 安全性憑證受到組態管理的 WMI 提供者支援。 如需有關憑證的詳細資訊，請參閱[加密階層](../security/encryption/encryption-hierarchy.md)。  
+ 安全性憑證受到組態管理的 WMI 提供者支援。 如需有關憑證的詳細資訊，請參閱 <<c0> [ 加密階層](../security/encryption/encryption-hierarchy.md)。  
   
 ## <a name="see-also"></a>另請參閱  
  [SQL Server 組態管理員](../sql-server-configuration-manager.md)  

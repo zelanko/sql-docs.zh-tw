@@ -1,12 +1,12 @@
 ---
-title: 呼叫預存程序 (ODBC) |Microsoft 文件
+title: 呼叫預存程序 (ODBC) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: connectivity
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -17,14 +17,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 02db0bdc13402d91006cbecdb5cfb50f817ee9dd
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: 1b6f189ce8e2a118178c2da6c40a63cf5a8d1834
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35701799"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37431657"
 ---
-# <a name="running-stored-procedures---call-stored-procedures"></a>執行預存程序的呼叫預存程序
+# <a name="running-stored-procedures---call-stored-procedures"></a>執行預存程序-呼叫預存程序
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
@@ -32,7 +32,7 @@ ms.locfileid: "35701799"
   
   當 SQL 陳述式使用 ODBC CALL 逸出子句呼叫預存程序時，Microsoft® SQL Server™ 驅動程式會使用遠端預存程序呼叫 (RPC) 機制將程序傳送到 SQL Server。 RPC 要求會略過 SQL Server 中大部分的陳述式剖析和參數處理，也比使用 Transact-SQL EXECUTE 陳述式來得快。  
   
- 範例應用程式，示範這項功能，請參閱[處理傳回碼和輸出參數&#40;ODBC&#41;](../../relational-databases/native-client-odbc-how-to/running-stored-procedures-process-return-codes-and-output-parameters.md)。  
+ 示範這項功能的範例應用程式，請參閱[程序傳回碼和輸出參數&#40;ODBC&#41;](../../relational-databases/native-client-odbc-how-to/running-stored-procedures-process-return-codes-and-output-parameters.md)。  
   
 ### <a name="to-run-a-procedure-as-an-rpc"></a>將程序當做 RPC 執行  
   
@@ -42,9 +42,9 @@ ms.locfileid: "35701799"
     {? = CALL procname (?,?)}  
     ```  
   
-2.  呼叫[SQLBindParameter](../../relational-databases/native-client-odbc-api/sqlbindparameter.md)針對每個輸入、 輸入/輸出和輸出參數，和程序傳回值 （如果有的話）。  
+2.  呼叫[SQLBindParameter](../../relational-databases/native-client-odbc-api/sqlbindparameter.md)每個輸入、 輸入/輸出和輸出參數，以及程序傳回值 （如果有的話）。  
   
-3.  執行陳述式使用[SQLExecDirect](http://go.microsoft.com/fwlink/?LinkId=58399)。  
+3.  執行陳述式搭配[SQLExecDirect](http://go.microsoft.com/fwlink/?LinkId=58399)。  
   
 > [!NOTE]  
 >  如果應用程式使用 Transact-SQL EXECUTE 語法 (相對於 ODBC CALL 逸出序列) 來提交程序，則 SQL Server ODBC 驅動程式會將程序呼叫當做 SQL 陳述式 (而不是 RPC) 傳遞到 SQL Server。 此外，如果使用 Transact-SQL EXECUTE 陳述式，則不會傳回輸出參數。  

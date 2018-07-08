@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 20b99363-0490-4aa3-9a3d-262f827d81e8
 caps.latest.revision: 11
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 822f4e97f8cfce9e5b5ab63fd091b89f2e545cc9
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 2bfa451cd670ffd126a1b658c7c96aafe12f1cb5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36022322"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37159909"
 ---
 # <a name="local-language-versions-in-sql-server"></a>SQL Server 中的地區語言版本
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支援 Windows 作業系統所支援的所有語言。  
@@ -87,7 +87,7 @@ ms.locfileid: "36022322"
 4.  按一下 **[套用]** 來確認變更，並按一下 **[確定]** 來關閉視窗。  
   
 ## <a name="see-also"></a>另請參閱  
- [硬體 and Software Requirements for Installing SQL Server 2014](hardware-and-software-requirements-for-installing-sql-server.md)   
+ [硬體和 Software Requirements for Installing SQL Server 2014](hardware-and-software-requirements-for-installing-sql-server.md)   
  [安裝 SQL Server 2014](../../database-engine/install-windows/install-sql-server.md)  
   
   

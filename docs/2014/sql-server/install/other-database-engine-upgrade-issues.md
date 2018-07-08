@@ -1,5 +1,5 @@
 ---
-title: 其他 Database Engine 升級問題 |Microsoft 文件
+title: 其他 Database Engine 升級問題 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Database Engine [SQL Server], upgrading
 ms.assetid: 78a1d8e8-fa97-476f-8777-84617d145340
 caps.latest.revision: 42
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: b1c74bf4ffd8cf0eba5cb853cccda80cc0b5d662
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 1fda230ed04ddcac6d4c7c8bb52b73762c23b90f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36022555"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37149999"
 ---
 # <a name="other-database-engine-upgrade-issues"></a>其他 Database Engine 升級問題
   目前的 Upgrade Advisor 版本無法偵測到下列升級問題。 請檢閱下列問題，以便評估它們可能對您系統造成的影響。  
@@ -76,7 +76,7 @@ ms.locfileid: "36022555"
  MERGE 現在是完整的保留關鍵字。 應用程式不能再具有名為 MERGE 的物件 (資料表、資料行等等)。  
   
 ## <a name="rename-cdc-schema"></a>重新命名 CDC 結構描述  
- 有名稱為 CDC 的結構描述。 此結構描述名稱不能用於在**異動資料擷取**啟用資料庫。  
+ 有名稱為 CDC 的結構描述。 此結構描述名稱不能在用於**異動資料擷取**啟用資料庫。  
   
  啟用之前，您必須卸除 CDC 結構描述**異動資料擷取**資料庫。 您可以在升級之前或之後完成此步驟。 若要卸除此結構描述，請使用下列步驟：  
   
@@ -89,6 +89,6 @@ ms.locfileid: "36022555"
 4.  使用 DROP SCHEMA 來卸除 CDC 結構描述。  
   
 ## <a name="see-also"></a>另請參閱  
- [Database Engine 升級問題](../../../2014/sql-server/install/database-engine-upgrade-issues.md)  
+ [資料庫引擎升級問題](../../../2014/sql-server/install/database-engine-upgrade-issues.md)  
   
   
