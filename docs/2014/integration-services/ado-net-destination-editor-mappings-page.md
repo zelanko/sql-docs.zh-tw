@@ -1,5 +1,5 @@
 ---
-title: ADO NET 目的地編輯器 （對應頁面） |Microsoft 文件
+title: ADO NET 目的地編輯器 （對應頁面） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.adonetdest.mappings.f1
 ms.assetid: 842d075f-8b7a-457c-a1a1-a7acbe10e9b7
 caps.latest.revision: 16
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: df49ffc7af511e2c17f46ff96cc9e9102cd1574d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 471edf6bd2971c0ab2ee38bd81543f656923866e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36021973"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37239378"
 ---
 # <a name="ado-net-destination-editor-mappings-page"></a>ADO NET 目的地編輯器 (對應頁面)
   使用 [ADO NET 目的地編輯器] 對話方塊的 [對應] 頁面，即可將輸入資料行對應至目的地資料行。  
@@ -50,7 +50,7 @@ ms.locfileid: "36021973"
  檢視每個可用的目的地資料行，不論是否已經對應。  
   
 ## <a name="see-also"></a>另請參閱  
- [ADO NET 目的地編輯器&#40;連接管理員頁面&#41;](../../2014/integration-services/ado-net-destination-editor-connection-manager-page.md)   
+ [ADO NET 目的地編輯器&#40;連線管理員頁面&#41;](../../2014/integration-services/ado-net-destination-editor-connection-manager-page.md)   
  [ADO NET 目的地編輯器&#40;錯誤輸出頁面&#41;](../../2014/integration-services/ado-net-destination-editor-error-output-page.md)  
   
   

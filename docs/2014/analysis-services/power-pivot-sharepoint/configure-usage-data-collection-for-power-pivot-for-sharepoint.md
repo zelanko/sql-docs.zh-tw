@@ -1,5 +1,5 @@
 ---
-title: 設定使用量資料收集 (PowerPivot for SharePoint |Microsoft 文件
+title: 設定使用量資料收集 (PowerPivot for SharePoint |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,23 +8,23 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 955ca6d6-9d5b-47a4-a87c-59bd23f1bf74
 caps.latest.revision: 6
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: de5ac4920baf8143a575e5697896542eae817c90
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 06dfd95c82aab8e3fed336863c75112728150247
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36024086"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37149750"
 ---
 # <a name="configure-usage-data-collection-for-powerpivot-for-sharepoint"></a>設定使用量資料收集的對象 (PowerPivot for SharePoint
   使用量資料收集是伺服陣列層級的 SharePoint 功能。 PowerPivot for SharePoint 會使用並擴充此系統來支援 PowerPivot 管理儀表板中的報表，以便顯示 PowerPivot 資料與服務的使用方式。 根據您安裝 SharePoint 的方式而定，可能會關閉伺服陣列的使用量資料收集。 伺服陣列管理員必須啟用使用量記錄，以建立會顯示在 PowerPivot 管理儀表板中的使用量資料。  
   
- PowerPivot 管理儀表板中使用量資料的資訊，請參閱[PowerPivot Management Dashboard and Usage Data](power-pivot-management-dashboard-and-usage-data.md)。  
+ 如需有關 PowerPivot 管理儀表板中使用量資料的資訊，請參閱[PowerPivot Management Dashboard and Usage Data](power-pivot-management-dashboard-and-usage-data.md)。  
   
  **本主題內容：**  
   
@@ -40,9 +40,9 @@ ms.locfileid: "36024086"
   
  [指定向使用量資料收集系統報告查詢統計資料的頻率](#ttr)  
   
- [開啟 PowerPivot 服務應用程式頁面，以存取組態設定](#openconfig)  
+ [開啟 [PowerPivot 服務應用程式] 頁面，以存取組態設定](#openconfig)  
   
- [預設的 PowerPivot 使用量資料收集組態](#defaultconfig)  
+ [PowerPivot 使用量資料收集的預設組態](#defaultconfig)  
   
 > [!IMPORTANT]  
 >  使用量資料讓您可深入了解使用者如何存取資料和資源，但它並不保證伺服器作業和使用者存取的資料為可靠且持續性的。 例如，如果重新啟動伺服器，則事件使用量資料將會遺失並且無法復原。 同樣地，如果暫存記錄檔到達大小上限，在清除檔案之前將不會加入任何新資料。 如果您需要稽核功能，請考慮使用 SharePoint 所提供的工作流程與內容類型功能，來為您的伺服陣列建立稽核子系統。 如需詳細資訊，請在網站上尋找產品與社群文件集。  
@@ -63,7 +63,7 @@ ms.locfileid: "36024086"
     |**PowerPivot 連接**|PowerPivot 連接事件是用來監視以使用者身分建立的 PowerPivot 伺服器連接。|  
     |**PowerPivot 載入資料使用量**|PowerPivot 載入資料使用量是用來監視將 PowerPivot 資料載入伺服器記憶體的要求。 從內容資料庫或從快取載入的 PowerPivot 資料檔會產生載入事件。|  
     |**PowerPivot 卸載資料使用量**|PowerPivot 卸載資料使用量是用來監視在一段時間閒置後，卸載 PowerPivot 資料來源的要求。 將 PowerPivot 資料來源快取到磁碟將會報告成卸載事件。|  
-    |**PowerPivot 查詢使用量**|PowerPivot 查詢使用量用來監視查詢處理之資料的時間載入[!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)]執行個體。|  
+    |**PowerPivot 查詢使用量**|PowerPivot 查詢使用量用來監視資料的查詢處理時間中載入[!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)]執行個體。|  
   
     > [!NOTE]  
     >  伺服器健全狀況和資料重新整理作業也會產生使用量資料，但是沒有任何事件與這些處理序相關聯。  
@@ -72,7 +72,7 @@ ms.locfileid: "36024086"
   
 6.  按一下 **[確定]** 儲存您的變更。  
   
-7.  您可以選擇性地指定是否記錄所有的訊息或只記錄錯誤。 如需有關如何節流事件訊息的詳細資訊，請參閱[設定及檢視 SharePoint 記錄檔和診斷記錄&#40;PowerPivot for SharePoint&#41;](configure-and-view-sharepoint-and-diagnostic-logging.md)。  
+7.  您可以選擇性地指定是否記錄所有的訊息或只記錄錯誤。 如需有關如何節流事件訊息的詳細資訊，請參閱 <<c0> [ 設定及檢視 SharePoint 記錄檔和診斷記錄&#40;PowerPivot for SharePoint&#41;](configure-and-view-sharepoint-and-diagnostic-logging.md)。</c0>  
   
 ##  <a name="configdb"></a> 設定記錄檔位置  
  PowerPivot 使用量資料一開始會儲存在本機伺服器的使用量記錄檔中，然後再定期移至 PowerPivot 服務應用程式資料庫。 記錄檔位置是在管理中心內設定的。 預設位置為：  
@@ -108,7 +108,7 @@ ms.locfileid: "36024086"
   
 6.  按一下 **[立即執行]**。  
   
-7.  檢查報表以檢視重新整理資料。 如需詳細資訊，請參閱[PowerPivot Management Dashboard and Usage Data](power-pivot-management-dashboard-and-usage-data.md)。  
+7.  檢查報表以檢視重新整理資料。 如需詳細資訊，請參閱 < [PowerPivot Management Dashboard and Usage Data](power-pivot-management-dashboard-and-usage-data.md)。  
   
 ##  <a name="confighist"></a> 限制儲存使用量資料記錄的時間長度  
  事件 (連接、載入、卸載及視需要的查詢處理) 及資料重新整理 (已排程的資料處理) 都會儲存使用量資料記錄。 雖然使用量資料是透過 SharePoint 使用量資料收集系統來收集，但是會將報表資料移到 PowerPivot 應用程式資料庫及報表資料庫，以獲得較長期的儲存。 使用量資料記錄設定會控制使用量資料在 PowerPivot 應用程式資料庫中保留的時間長度。 相同的限制會同樣地套用至相同 PowerPivot 服務應用程式資料庫中所有類型之儲存的使用量資料。  
@@ -129,7 +129,7 @@ ms.locfileid: "36024086"
   
 3.  按一下 [確定] 。  
   
- 如需有關如何收集和儲存使用量資料的詳細資訊，請參閱[PowerPivot 使用量資料收集](power-pivot-usage-data-collection.md)。  
+ 如需有關如何收集和儲存使用量資料的詳細資訊，請參閱 < [PowerPivot 使用量資料收集](power-pivot-usage-data-collection.md)。  
   
 ##  <a name="qrh"></a> 針對報告目的而定義快速、中等及緩慢的查詢回應類別目錄  
  查詢處理效能是針對預先定義的類別目錄來計算，這些類別目錄會按照完成的時間長度來定義要求-回應循環。 預先定義的類別目錄包括：「簡單式」、「快速」、「預期」、「長時間執行」及「已超過」。 PowerPivot 伺服器的每個要求都會根據完成的時間歸類到其中一個類別目錄。  
@@ -167,7 +167,7 @@ ms.locfileid: "36024086"
   
 3.  按一下 [確定] 。  
   
-##  <a name="openconfig"></a> 開啟 PowerPivot 服務應用程式頁面，以存取組態設定  
+##  <a name="openconfig"></a> 開啟 [PowerPivot 服務應用程式] 頁面，以存取組態設定  
  您必須是伺服陣列或服務系統管理員，才能修改服務應用程式設定。 如果在伺服陣列中定義了多個 PowerPivot 服務應用程式，則必須個別修改每個服務應用程式。  
   
 1.  在 [SharePoint 管理中心] 的 **[應用程式管理]** 中，按一下 **[管理服務應用程式]**。  
@@ -178,7 +178,7 @@ ms.locfileid: "36024086"
   
 4.  在 **[動作]** 中，按一下 **[設定服務應用程式設定]**。 [PowerPivot 服務應用程式設定] 頁面隨即開啟。  
   
-##  <a name="defaultconfig"></a> 預設的 PowerPivot 使用量資料收集組態  
+##  <a name="defaultconfig"></a> PowerPivot 使用量資料收集的預設組態  
  PowerPivot 服務作業的使用量資料收集可以用預設值來啟用，以便在支援 Analysis Services 整合功能的應用程式中可以立即使用它。 預設值包括會觸發使用量資料收集的事件，對儲存使用量資料之時間長度的限制，以及分類查詢回應時間的臨界值。  
   
  下表顯示使用量資料收集組態的預設值。  

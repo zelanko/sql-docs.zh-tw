@@ -1,5 +1,5 @@
 ---
-title: PerspectiveMeasure 資料類型 (ASSL) |Microsoft 文件
+title: PerspectiveMeasure 資料類型 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - PerspectiveMeasure data type
 ms.assetid: 8622ad67-3dcf-48e2-ad4a-c5f0a086eec3
 caps.latest.revision: 32
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: bc66a5fd1e0e8b553bc0b27a384f97a8c0c483e7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 47d8578d2d41d5362b43a514dcb6d20df0999828
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36024074"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37210008"
 ---
 # <a name="perspectivemeasure-data-type-assl"></a>PerspectiveMeasure 資料類型 (ASSL)
   定義代表量值中的相關資訊的基本資料類型[PerspectiveMeasureGroup](perspectivemeasuregroup-data-type-assl.md)項目。  
@@ -57,11 +57,11 @@ ms.locfileid: "36024074"
 |關聯性|元素|  
 |------------------|-------------|  
 |父元素|無|  
-|子元素|[註解](../collections/annotations-element-assl.md)， [MeasureID](../properties/id-element-assl.md)|  
-|衍生的元素|[量值](../objects/measure-element-assl.md)([量值](../collections/measures-element-assl.md)集合[PerspectiveMeasureGroup](perspectivemeasuregroup-data-type-assl.md))|  
+|子元素|[註釋](../collections/annotations-element-assl.md)， [MeasureID](../properties/id-element-assl.md)|  
+|衍生的元素|[量值](../objects/measure-element-assl.md)([量值](../collections/measures-element-assl.md)的集合[PerspectiveMeasureGroup](perspectivemeasuregroup-data-type-assl.md))|  
   
 ## <a name="remarks"></a>備註  
- 分析管理物件 (AMO) 物件模型中的對應元素是<xref:Microsoft.AnalysisServices.PerspectiveMeasure>。  
+ 在 「 分析管理物件 (AMO) 物件模型的對應元素是<xref:Microsoft.AnalysisServices.PerspectiveMeasure>。  
   
 ## <a name="see-also"></a>另請參閱  
  [Analysis Services 指令碼語言 XML 資料類型&#40;ASSL&#41;](analysis-services-scripting-language-xml-data-types-assl.md)  

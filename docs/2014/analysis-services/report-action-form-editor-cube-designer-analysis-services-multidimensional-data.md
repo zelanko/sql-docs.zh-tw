@@ -1,5 +1,5 @@
 ---
-title: 報表動作表單編輯器 （動作索引標籤，Cube 設計工具） (Analysis Services-多維度資料) |Microsoft 文件
+title: 報表動作表單編輯器 （動作索引標籤，Cube 設計師） (Analysis Services-多維度資料) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.cubeeditor.actionexpression.reportaction.f1
 ms.assetid: cebfdd07-e376-46d6-86ef-b6f816a2f360
 caps.latest.revision: 23
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 99948fc9fd66a109ae67b95e351bb0b42bf1d46d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 3b4320fde2f761e75f56e35032676a696a5e9669
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36023659"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37163489"
 ---
 # <a name="report-action-form-editor-actions-tab-cube-designer-analysis-services---multidimensional-data"></a>報表動作表單編輯器 (動作索引標籤，Cube 設計師) (Analysis Services - 多維度資料)
   使用 [Cube 設計師] 中 [動作] 索引標籤的 [報表動作表單編輯器] 窗格，即可修改 [動作組合管理] 中選取的報表動作。  
@@ -36,7 +36,7 @@ ms.locfileid: "36023659"
  **目標類型**  
  選取要與動作相關聯之物件的類型。 伺服器只會將套用至指定類型之物件的動作傳回用戶端。 如果 [條件] 符合，而且選取了下表中指定的物件，用戶端就可以使用動作。  
   
-|ReplTest1|選取的物件|  
+|值|選取的物件|  
 |-----------|---------------------|  
 |屬性成員|依據 [目標物件] 中的屬性，從層級選取成員。<br /><br /> 注意：使用所選屬性的其他使用者階層，會繼承此報表動作。|  
 |資料格|選取了 [目標物件] 中的命名集。 選取 [所有資料格] 即可選取 Cube 中所有的資料格。|  
@@ -67,7 +67,7 @@ ms.locfileid: "36023659"
  **報表格式**  
  選取傳回報表時使用的格式。 下表描述可用的格式。  
   
-|ReplTest1|描述|  
+|值|描述|  
 |-----------|-----------------|  
 |HTML5|報表會以 HTML 5.0 相容的格式傳回。|  
 |HTML3|報表會以 HTML 3.2 相容的格式傳回。|  
@@ -93,7 +93,7 @@ ms.locfileid: "36023659"
   
  下表描述可用的設定。  
   
-|ReplTest1|描述|  
+|值|描述|  
 |-----------|-----------------|  
 |批次|此動作應該當作批次作業或 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 工作的一部分來執行。|  
 |互動式|此動作會在使用者叫用動作時執行。|  
@@ -121,7 +121,7 @@ ms.locfileid: "36023659"
  選取 **[True]** 以指出 **[標題]** 包含一個會傳回字串的 MDX 運算式，字串代表要顯示在用戶端應用程式中的動作標題。 在動作傳回至用戶端應用程式之前，必須先解析 MDX 運算式。  
   
 ## <a name="see-also"></a>另請參閱  
- [動作&#40;Cube 設計師&#41; &#40;Analysis Services-多維度資料&#41;](actions-cube-designer-analysis-services-multidimensional-data.md)   
+ [動作&#40;Cube 設計工具&#41; &#40;Analysis Services-多維度資料&#41;](actions-cube-designer-analysis-services-multidimensional-data.md)   
  [工具列&#40;動作索引標籤，Cube 設計工具&#41; &#40;Analysis Services-多維度資料&#41;](toolbar-actions-tab-cube-designer-analysis-services-multidimensional-data.md)   
  [動作組合管理&#40;動作索引標籤，Cube 設計工具&#41; &#40;Analysis Services-多維度資料&#41;](action-organizer-cube-designer-analysis-services-multidimensional-data.md)   
  [計算工具&#40;動作索引標籤，Cube 設計工具&#41; &#40;Analysis Services-多維度資料&#41;](calculation-tools-actions-cube-designer-analysis-services-multidimensional-data.md)   

@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Management Studio [SQL Server], shortcuts
 - keyboard shortcuts [SQL Server Management Studio]
@@ -21,18 +21,18 @@ helpviewer_keywords:
 - accelerator keys
 ms.assetid: fb4edf3c-71b6-4645-b1d1-ddfdd69f0d7b
 caps.latest.revision: 28
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 8e9331425dc13c81c2304cf43dc8639eee25d861
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: b96c4e3bc6f0b9d1da82d373d4b8c0374331fb2f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36023911"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37149909"
 ---
 # <a name="customize-menus-and-shortcut-keys"></a>自訂功能表與快速鍵
-  鍵盤對應鍵可讓您選取功能表命令或按鈕按 ALT +*\<單一字母 >*。 例如，若要開啟 [編輯] 功能表，請按下 ALT+E。 您可以利用 [自訂] 對話方塊來重新安排和修改工具列按鈕、功能表及功能表命令。 提供的指示將協助您利用滑鼠以及只用鍵盤來變更設定。  
+  鍵盤對應鍵可讓您選取功能表命令或按鈕，按 ALT +*\<單一字母 >*。 例如，若要開啟 [編輯] 功能表，請按下 ALT+E。 您可以利用 [自訂] 對話方塊來重新安排和修改工具列按鈕、功能表及功能表命令。 提供的指示將協助您利用滑鼠以及只用鍵盤來變更設定。  
   
  您可以從 [工具/選項] 對話方塊的 [鍵盤] 頁面上，建立使用 Ctrl 鍵的預存程序鍵盤對應鍵。  
   

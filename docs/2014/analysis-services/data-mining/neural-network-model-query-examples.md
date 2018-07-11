@@ -1,5 +1,5 @@
 ---
-title: 類神經網路模型查詢範例 |Microsoft 文件
+title: 類神經網路模型查詢範例 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - neural network algorithms [Analysis Services]
 - content queries [DMX]
 - neural network model [Analysis Services]
 ms.assetid: 81b06183-620f-4e0c-bc10-532e6a1f0829
 caps.latest.revision: 27
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: ea75ce7875a828dc380f81b334d5b7376d2b38c8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d93967a9f35c7c6817326293f6b2dd12e23780e0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36030150"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37151809"
 ---
 # <a name="neural-network-model-query-examples"></a>Neural Network Model Query Examples
   當您針對資料採礦模型建立查詢時，可以建立內容查詢來提供有關分析期間所發現之模式的詳細資料，或是建立預測查詢來使用模型中的模式，為新的資料進行預測。 例如，類神經網路模型的內容查詢可以擷取模型中繼資料，例如，隱藏層的數目。 或者，預測查詢可以根據輸入建議分類，並選擇性地提供每個分類的機率。  
@@ -69,10 +69,10 @@ WHERE NODE_TYPE = 24
   
 |MODEL_CATALOG|MODEL_NAME|t.ATTRIBUTE_NAME|t.ATTRIBUTE_VALUE|t.SUPPORT|t.PROBABILITY|t.VALUETYPE|  
 |--------------------|-----------------|-----------------------|------------------------|---------------|-------------------|-----------------|  
-|Adventure Works DW Multidimensional 2012|撥接中心 NN|每個問題的平均時間|遺漏|0|0|@shouldalert|  
+|Adventure Works DW Multidimensional 2012|撥接中心 NN|每個問題的平均時間|遺漏|0|0|1|  
 |Adventure Works DW Multidimensional 2012|撥接中心 NN|每個問題的平均時間|< 64.7094100096|11|0.407407407|5|  
   
- 如需結構描述資料列中的資料行在類神經網路模型環境中代表的定義，請參閱[Model Content for Neural Network Models &#40;Analysis Services-Data Mining&#41;](mining-model-content-for-neural-network-models-analysis-services-data-mining.md)。  
+ 如需結構描述資料列中的資料行在類神經網路模型環境中代表的定義，請參閱 < [Mining Model Content for Neural Network Models &#40;Analysis Services-Data Mining&#41;](mining-model-content-for-neural-network-models-analysis-services-data-mining.md)。  
   
 ###  <a name="bkmk_Query2"></a> 範例查詢 2：從結構描述資料列集擷取模型中繼資料  
  您可以藉由查詢資料採礦結構描述資料列集，找到與 DMX 內容查詢所傳回的相同資訊。 不過，結構描述資料列集會提供某些額外的資料行。 下列範例查詢會傳回建立模型的日期、修改日期以及上次處理模型的日期。 此查詢也會傳回不易從模型內容取得的可預測資料行，以及建立模型所使用的參數。 這項資訊對於記錄模型可能相當實用。  
@@ -177,7 +177,7 @@ AND [PARENT_UNIQUE_NAME] = '40000000200000000' FROM [Call Center Default NN].CON
   
  因此，這些結果會告訴您，已經有六個不同的係數 (VALUETYPE = 7) 傳遞給以識別碼 70000000200000000 表示的節點， 這些係數的值位於 ATTRIBUTE_VALUE 資料行中。 您可以使用 ATTRIBUTE_NAME 資料行中的節點識別碼，正確地判斷此係數用於哪個輸入屬性。 例如，節點識別碼 6000000000000000a 表示輸入屬性及值 `Day of Week = 'Tue.'` 。您可以使用節點識別碼來建立查詢，或者可以使用 [Microsoft 一般內容樹狀檢視器](../microsoft-generic-content-tree-viewer-data-mining.md)瀏覽到該節點。  
   
- 同樣地，如果您在輸出層 layer (NODE_TYPE = 23) 中查詢節點的 NODE_DISTRIBUTION 資料表，您可以看到每個輸出值的係數。 不過，在輸出層中，這些指標會回頭參考隱藏層的節點。 如需詳細資訊，請參閱[Model Content for Neural Network Models &#40;Analysis Services-Data Mining&#41;](mining-model-content-for-neural-network-models-analysis-services-data-mining.md)。  
+ 同樣地，如果您在輸出層 layer (NODE_TYPE = 23) 中查詢節點的 NODE_DISTRIBUTION 資料表，您可以看到每個輸出值的係數。 不過，在輸出層中，這些指標會回頭參考隱藏層的節點。 如需詳細資訊，請參閱 < [Mining Model Content for Neural Network Models &#40;Analysis Services-Data Mining&#41;](mining-model-content-for-neural-network-models-analysis-services-data-mining.md)。  
   
 ## <a name="using-a-neural-network-model-to-make-predictions"></a>使用類神經網路模型進行預測  
  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 類神經網路演算法同時支援分類與迴歸。 您可以搭配這些模型使用預測函數來提供新的資料，並建立單一或批次預測。  
@@ -185,7 +185,7 @@ AND [PARENT_UNIQUE_NAME] = '40000000200000000' FROM [Call Center Default NN].CON
 ###  <a name="bkmk_Query5"></a> 範例查詢 5：建立單一預測  
  在類神經網路模型上建立預測查詢最簡單的方式就是使用預測查詢產生器 (可在 **和** 中，資料採礦設計師的 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] [採礦預測] [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]索引標籤上取得)。 您可以在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 類神經網路檢視器中瀏覽模型來篩選感興趣的屬性並檢視趨勢，然後切換到 **[採礦預測]** 索引標籤來建立查詢，並針對這些趨勢預測新的值。  
   
- 例如，您可以瀏覽撥接中心模型來檢視訂單量與其他屬性間的關聯。 若要這樣做，開啟模型，檢視器中，而且**輸入**，選取**\<所有 >**。  接著，為 **[輸出]** 選取 **[訂單數目]**。 為 **[值 1]** 選取代表最多訂單的範圍，並為 **[值 2]** 選取代表最少訂單的範圍。 然後，您可以看一下模型與訂單量關聯的所有屬性。  
+ 例如，您可以瀏覽撥接中心模型來檢視訂單量與其他屬性間的關聯。 若要這樣做，開啟此模型在檢視器中，以及針對**輸入**，選取**\<所有 >**。  接著，為 **[輸出]** 選取 **[訂單數目]**。 為 **[值 1]** 選取代表最多訂單的範圍，並為 **[值 2]** 選取代表最少訂單的範圍。 然後，您可以看一下模型與訂單量關聯的所有屬性。  
   
  透過瀏覽檢視器中的結果，您會發現一週的某幾天訂單量較低，而運算子數目的增加似乎與較高的銷售量互相關聯。 接著，您可以在模型上使用預測查詢來測試 "what if" 假設，並詢問在訂單量低的天數上增加層級 2 運算子的數目是否會增加訂單。 若要這樣做，建立如下的查詢：  
   
@@ -219,7 +219,7 @@ NATURAL PREDICTION JOIN
 |[PredictAdjustedProbability &#40;DMX&#41;](/sql/dmx/predictadjustedprobability-dmx)|傳回加權機率。|  
 |[PredictHistogram &#40;DMX&#41;](/sql/dmx/predicthistogram-dmx)|傳回與目前預測值相關之值的資料表。|  
 |[PredictVariance &#40;DMX&#41;](/sql/dmx/predictvariance-dmx)|傳回預測值的變異數。|  
-|[PredictProbability &#40;DMX&#41;](/sql/dmx/predictprobability-dmx)|傳回預測值的機率。|  
+|[[Predictprobability] &#40;DMX&#41;](/sql/dmx/predictprobability-dmx)|傳回預測值的機率。|  
 |[PredictStdev &#40;DMX&#41;](/sql/dmx/predictstdev-dmx)|傳回預測值的標準差。|  
 |[PredictSupport &#40;DMX&#41;](/sql/dmx/predictsupport-dmx)|若是類神經網路與羅吉斯迴歸模型，則會傳回代表整個模型之定型集大小的單一值。|  
   

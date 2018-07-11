@@ -1,5 +1,5 @@
 ---
-title: IpAddresses 屬性 （ServerNetworkProtocol 類別） |Microsoft 文件
+title: IpAddresses 屬性 （ServerNetworkProtocol 類別） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - IpAddresses property
 ms.assetid: e5d66f7e-9719-436e-b723-12d56f914a05
 caps.latest.revision: 31
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: a9f1d047004ae92ca587f48ad7ccf6319b420e01
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+ms.openlocfilehash: 20979e9647d2d80f7498a5ec517d7403cd0ccf83
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36030242"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37150619"
 ---
 # <a name="ipaddresses-property-servernetworkprotocol-class"></a>IpAddresses 屬性 (ServerNetworkProtocol 類別)
   取得與伺服器網路通訊協定相關聯的 IP 位址。  
@@ -43,10 +43,10 @@ object
   
 ## <a name="parts"></a>組件  
  *object*  
- A`ServerNetworkProtocol`物件的執行個體所使用之網路通訊協定[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]。  
+ A`ServerNetworkProtocol`物件，表示執行個體所使用的網路通訊協定[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]。  
   
 ## <a name="property-valuereturn-value"></a>屬性值/傳回值  
- 陣列[ServerNetworkProtocolIPAdress 類別](../servernetworkprotocolipaddress-class/servernetworkprotocolipaddress-class.md)代表伺服器網路通訊協定所支援的 IP 位址的物件。  
+ 陣列[ServerNetworkProtocolIPAdress 類別](../servernetworkprotocolipaddress-class/servernetworkprotocolipaddress-class.md)代表伺服器網路通訊協定支援的 IP 位址的物件。  
   
 ## <a name="remarks"></a>備註  
   

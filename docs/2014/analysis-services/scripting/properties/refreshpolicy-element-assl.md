@@ -1,5 +1,5 @@
 ---
-title: RefreshPolicy 元素 (ASSL) |Microsoft 文件
+title: RefreshPolicy 元素 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - RefreshPolicy element
 ms.assetid: f4c36280-1a39-4f1c-a3ab-fbeb81742d6d
 caps.latest.revision: 34
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 6d2dc0549eb8151f93c817e9e59bc1a8990fac87
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: cf0aa9478a44e7479b20357ae56317b90801f77f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36021995"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37277614"
 ---
 # <a name="refreshpolicy-element-assl"></a>RefreshPolicy 元素 (ASSL)
-  決定多久維度或量值群組之動態部分 (依指定[持續性](persistence-element-assl.md)項目) 會檢查是否有變更。  
+  決定多久維度或量值群組之動態部分 (依照[持續性](persistence-element-assl.md)項目) 會檢查變更。  
   
 ## <a name="syntax"></a>語法  
   
@@ -68,10 +68,10 @@ ms.locfileid: "36021995"
 ## <a name="remarks"></a>備註  
  這個元素的值限制為下表所列的其中一個字串。  
   
-|ReplTest1|描述|  
+|值|描述|  
 |-----------|-----------------|  
 |*ByQuery*|每個查詢都檢查來源資料是否已經變更。|  
-|*ByInterval*|來源資料，才會檢查是否有變更在所指定的間隔[RefreshInterval](refreshinterval-element-assl.md)。|  
+|*ByInterval*|來源資料只會檢查變更在所指定的間隔[RefreshInterval](refreshinterval-element-assl.md)。|  
   
  在「分析管理物件」(AMO) 物件模型中對應至 `RefreshPolicy` 允許值的列舉是 <xref:Microsoft.AnalysisServices.RefreshPolicy>。  
   

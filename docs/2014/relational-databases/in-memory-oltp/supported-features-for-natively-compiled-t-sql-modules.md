@@ -1,5 +1,5 @@
 ---
-title: 在原生編譯的預存程序中支援建構 |Microsoft 文件
+title: 支援原生編譯的預存程序建構 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine-imoltp
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 05515013-28b5-4ccf-9a54-ae861448945b
 caps.latest.revision: 34
-author: stevestein
-ms.author: sstein
-manager: jhubbard
-ms.openlocfilehash: ab0ce49a3f135d59dba89abc756bf9ee4d7fa198
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 91434af003bdf783ee4f2bd2c946e4a871eac44d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36021954"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37240849"
 ---
 # <a name="supported-constructs-in-natively-compiled-stored-procedures"></a>原生編譯的預存程序中支援的建構
   本主題包含原生編譯的預存程序的支援功能的清單 ([CREATE PROCEDURE &#40;TRANSACT-SQL&#41;](/sql/t-sql/statements/create-procedure-transact-sql)):  
@@ -38,9 +38,9 @@ ms.locfileid: "36021954"
   
 -   [排序的限制](#los)  
   
- 編譯預存程序的原生支援的資料類型的詳細資訊，請參閱[Supported Data Types](supported-data-types-for-in-memory-oltp.md)。  
+ 如編譯預存程序的原生支援的資料類型上的資訊，請參閱 < [Supported Data Types](supported-data-types-for-in-memory-oltp.md)。  
   
- 如需不支援的建構完整資訊，以及如何處理某些原生編譯的預存程序中不支援的功能的相關資訊，請參閱[Migration Issues for Natively Compiled Stored Procedures](migration-issues-for-natively-compiled-stored-procedures.md). 如需不支援功能的詳細資訊，請參閱 [記憶體中的 OLTP 不支援 Transact-SQL 建構](transact-sql-constructs-not-supported-by-in-memory-oltp.md)。  
+ 如需不支援的建構，完整資訊，以及如何處理某些原生編譯的預存程序不支援的功能的相關資訊，請參閱[Migration Issues for Natively Compiled Stored Procedures](migration-issues-for-natively-compiled-stored-procedures.md). 如需不支援功能的詳細資訊，請參閱 [記憶體中的 OLTP 不支援 Transact-SQL 建構](transact-sql-constructs-not-supported-by-in-memory-oltp.md)。  
   
 ##  <a name="pncsp"></a> 原生編譯的預存程序的可程式性  
  支援下列功能：  
@@ -70,7 +70,7 @@ ms.locfileid: "36021954"
 ##  <a name="so"></a> 支援的運算子  
  下列為支援的運算子。  
   
--   [比較運算子&#40;TRANSACT-SQL&#41; ](/sql/t-sql/language-elements/comparison-operators-transact-sql) (例如，>， \<，> =、 和 < =) 都支援條件式 (如果時)。  
+-   [比較運算子&#40;TRANSACT-SQL&#41; ](/sql/t-sql/language-elements/comparison-operators-transact-sql) (例如，>， \<，> =、 和 < =) 所支援的條件 (IF、 時)。  
   
 -   一元運算子 (+、-)。  
   
@@ -112,13 +112,13 @@ ms.locfileid: "36021954"
   
 -   只有 SELECT 查詢支援 CROSS JOIN 和 INNER JOIN。  
   
--   選取清單中支援的運算式和[其中&#40;TRANSACT-SQL&#41; ](/sql/t-sql/queries/where-transact-sql)子句如果他們使用支援的運算子。 如需目前支援的運算子清單，請參閱 [Supported Operators](#so) 。  
+-   選取清單中支援的運算式和[其中&#40;TRANSACT-SQL&#41; ](/sql/t-sql/queries/where-transact-sql)子句，如果他們使用支援的運算子。 如需目前支援的運算子清單，請參閱 [Supported Operators](#so) 。  
   
 -   篩選器述詞 IS [NOT] NULL  
   
 -   從\<記憶體最佳化的資料表 >  
   
--   [GROUP BY &#40;TRANSACT-SQL&#41; ](/sql/t-sql/queries/select-group-by-transact-sql)支援，以及彙總函式 AVG、 計數、 COUNT_BIG、 MIN、 MAX 和 SUM。 nvarchar、char、varchar、varchar、varbinary 和 binary 類型不支援 MIN 和 MAX。 [ORDER BY 子句&#40;TRANSACT-SQL&#41; ](/sql/t-sql/queries/select-order-by-clause-transact-sql)支援[GROUP BY &#40;TRANSACT-SQL&#41; ](/sql/t-sql/queries/select-group-by-transact-sql)如果 ORDER BY 清單中的運算式逐字 GROUP BY 清單中顯示。 例如，支援 GROUP BY a + b ORDER BY a + b，但不支援 GROUP BY a, b ORDER BY a + b。  
+-   [GROUP BY &#40;TRANSACT-SQL&#41; ](/sql/t-sql/queries/select-group-by-transact-sql)支援，以及彙總函式 AVG、 COUNT、 COUNT_BIG、 最小值、 最大值和總和。 nvarchar、char、varchar、varchar、varbinary 和 binary 類型不支援 MIN 和 MAX。 [ORDER BY 子句&#40;TRANSACT-SQL&#41; ](/sql/t-sql/queries/select-order-by-clause-transact-sql)支援[GROUP BY &#40;-&#41; ](/sql/t-sql/queries/select-group-by-transact-sql)如果 ORDER BY 清單中的運算式逐字顯示在 GROUP BY 清單。 例如，支援 GROUP BY a + b ORDER BY a + b，但不支援 GROUP BY a, b ORDER BY a + b。  
   
 -   HAVING，受限於 WHERE 子句相同的運算式限制。  
   
@@ -130,7 +130,7 @@ ms.locfileid: "36021954"
   
 -   SELECT、UPDATE 和 DELETE  
   
--   TOP <sup>1</sup>  
+-   頂端<sup>1</sup>  
   
 -   SELECT 清單中的變數指派。  
   
@@ -138,7 +138,7 @@ ms.locfileid: "36021954"
   
  <sup>1</sup> ORDER BY 和 TOP 支援原生編譯的預存程序，但有一些限制：  
   
--   不支援針對`DISTINCT`中`SELECT`或`ORDER BY`子句。  
+-   不支援`DISTINCT`中`SELECT`或`ORDER BY`子句。  
   
 -   不支援 `WITH TIES` 子句中的 `PERCENT` 或 `TOP`。  
   
@@ -153,7 +153,7 @@ ms.locfileid: "36021954"
   
  不過，與使用變數相較，`TOP` 子句中的常數會產生較好的效能。  
   
- 這些限制不會套用至解譯[!INCLUDE[tsql](../../includes/tsql-md.md)]存取記憶體最佳化資料表上的。  
+ 這些限制不適用於解譯[!INCLUDE[tsql](../../includes/tsql-md.md)]記憶體最佳化資料表上的存取。  
   
 ##  <a name="auditing"></a> 稽核  
  原生編譯預存程序中支援程序層級稽核。 不支援陳述式層級稽核。  
@@ -171,7 +171,7 @@ ms.locfileid: "36021954"
   
 -   OPTIMIZE FOR  
   
- 如需詳細資訊，請參閱[提示&#40;TRANSACT-SQL&#41;](/sql/t-sql/queries/hints-transact-sql)。  
+ 如需詳細資訊，請參閱 <<c0> [ 提示&#40;TRANSACT-SQL&#41;](/sql/t-sql/queries/hints-transact-sql)。</c0>  
   
 ##  <a name="los"></a> 排序的限制  
  在使用 [TOP &#40;Transact-SQL&#41;](/sql/t-sql/queries/top-transact-sql) 和一個 [ORDER BY 子句 &#40;Transact-SQL&#41;](/sql/t-sql/queries/select-order-by-clause-transact-sql) 的查詢中，您可以排序 8000 多個資料列。 但是沒有 [ORDER BY 子句 &#40;Transact-SQL&#41;](/sql/t-sql/queries/select-order-by-clause-transact-sql)，[TOP &#40;Transact-SQL&#41;](/sql/t-sql/queries/top-transact-sql) 最多只能排序 8000 個資料列 (如果有聯結則資料列更少)。  

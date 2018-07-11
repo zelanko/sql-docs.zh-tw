@@ -1,5 +1,5 @@
 ---
-title: 將篩選套用至模型測試資料 |Microsoft 文件
+title: 將篩選套用至模型測試資料 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,27 +8,27 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - input row filtering [SQL Server]
 - filtering input rows [Analysis Services]
 - Mining Accuracy Chart [Analysis Services], filtering input rows
 ms.assetid: 9ccc9a23-5597-4b35-a05f-2fc8eb885147
 caps.latest.revision: 43
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: aa35fdc19ffca67cf82f2f4b2dfa468131dd97d1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: f81b15b5fa36913a54e6529602d903ede426addf
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36024094"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37153279"
 ---
 # <a name="apply-filters-to-model-testing-data"></a>將篩選套用至模型測試資料
   當您指定要用於測試模型的外部資料來源時，可以選擇性地套用篩選，以限制輸入資料。 例如，您可能想要特別針對某個收入範圍的客戶進行預測來測試模型。  
   
- 比方說，在 AdventureWorks 目標郵寄案例中，您可以建立如下的篩選運算式 ProspectiveBuyer，這是包含測試資料的資料表，在下列其中一個，並依收入範圍來限制測試案例：  
+ 比方說，在 AdventureWorks 目標郵寄案例中，您可以建立對 ProspectiveBuyer，也就是包含測試資料的資料表，如下所示的篩選運算式，並依收入範圍來限制測試案例：  
   
  `[YearlyIncome] = '50000'`  
   

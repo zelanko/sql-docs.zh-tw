@@ -1,5 +1,5 @@
 ---
-title: 作用中的作業對話方塊 |Microsoft 文件
+title: Active Operations Dialog Box |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.ssis.ssms.isoperations.executions.f1
 - sql12.ssis.ssms.isoperations.general.f1
 ms.assetid: 5bb0fcd6-0ce9-488a-85b8-25dddaa03cda
 caps.latest.revision: 7
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: adf25cd2194e1a02877c38a15d81d8697427ad76
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: b3c9105d6649443d8ec2d3425f86d609dfe6a2b3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36023821"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37151119"
 ---
 # <a name="active-operations-dialog-box"></a>作用中的作業對話方塊
   使用 **[作用中的作業]** 對話方塊檢視 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 伺服器上目前執行中之 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 作業 (例如，部署、驗證及封裝執行) 的狀態。 此資料儲存在 SSISDB 目錄中。  
@@ -47,11 +47,11 @@ ms.locfileid: "36023821"
   
 ### <a name="options"></a>選項。  
  **型別**  
- 指定作業的類型。 以下是可能的值為**類型**欄位與 TRANSACT-SQL 的 operations_type 資料行中的對應值`catalog.operations`檢視。  
+ 指定作業的類型。 以下是可能的值為**型別**欄位和 TRANSACT-SQL 的 operations_type 資料行中的對應值`catalog.operations`檢視。  
   
 |||  
 |-|-|  
-|初始化 Integration Services|@shouldalert|  
+|初始化 Integration Services|1|  
 |作業清除 (SQL 代理程式作業)|2|  
 |專案版本清理 (SQL 代理程式作業)|3|  
 |部署專案|101|  

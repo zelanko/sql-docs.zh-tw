@@ -1,12 +1,12 @@
 ---
-title: 繫結 vs。文字和影像資料行解除繫結 |Microsoft 文件
+title: 繫結與。Text 和 Image 資料行解除繫結 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: connectivity
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -24,20 +24,20 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 001a15a0242159c98ea07163f708c9f67356c1a2
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: 5dbf3bd249285cb41fd49919ec76f5801e9bc0bd
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35703019"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37416927"
 ---
-# <a name="bound-vs-unbound-text-and-image-columns"></a>繫結 vs。結合的文字和影像資料行
+# <a name="bound-vs-unbound-text-and-image-columns"></a>繫結與。未繫結的 Text 和 Image 資料行
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
-  使用伺服器資料指標， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驅動程式已完成最佳化，不傳送未繫結資料**文字**， **ntext**，或**映像**於資料行時間**SQLFetch**會執行。 **文字**， **ntext**，或**映像**不實際擷取資料從伺服器應用程式問題直到[SQLGetData](../../relational-databases/native-client-odbc-api/sqlgetdata.md)的資料行。  
+  使用伺服器資料指標，當[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client ODBC 驅動程式已最佳化，不傳送未繫結資料**文字**， **ntext**，或**映像**於資料行時間**SQLFetch**會執行。 **文字**， **ntext**，或**映像**不會實際擷取資料從伺服器應用程式問題直到[SQLGetData](../../relational-databases/native-client-odbc-api/sqlgetdata.md)的資料行。  
   
- 可以撰寫許多應用程式，讓沒有**文字**， **ntext**，或**映像**使用者只需向上和向下捲動資料指標中時，會顯示資料。 當使用者選取的資料列，以取得更多詳細資料時，應用程式可以接著呼叫**SQLGetData**擷取**文字**， **ntext**，或**映像**資料。 這將會阻止傳送**文字**， **ntext**，或**映像**資料的任何資料列的使用者未選取，並因此也會阻止傳送非常大大量資料。  
+ 可以撰寫許多應用程式，讓沒有**文字**， **ntext**，或**映像**使用者只要向上和向下捲動資料指標中時，會顯示資料。 當使用者選取的資料列，以取得詳細資料時，應用程式可以接著呼叫**SQLGetData**來擷取**文字**， **ntext**，或**映像**資料。 這將會阻止傳送**文字**， **ntext**，或**映像**資料的任何資料列的使用者未選取，並因此可以阻止傳送非常大大量的資料。  
   
 ## <a name="see-also"></a>另請參閱  
  [管理 Text 和 Image 資料行](../../relational-databases/native-client-odbc-text-image-columns/managing-text-and-image-columns.md)   

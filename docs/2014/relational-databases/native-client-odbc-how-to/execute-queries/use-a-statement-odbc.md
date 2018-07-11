@@ -1,28 +1,26 @@
 ---
-title: 使用陳述式 (ODBC) |Microsoft 文件
+title: 使用陳述式 (ODBC) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - statements [ODBC]
 ms.assetid: f7573f8f-6f21-4e03-8dd5-a5f2ea4878cc
 caps.latest.revision: 14
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 50a4f012b556bb6f54a0b9e672c2f9ff16a44fd2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 5eab640fd0f3a60e3edc1b8708f7c1bb20b25dba
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36021943"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37409037"
 ---
 # <a name="use-a-statement-odbc"></a>使用陳述式 (ODBC)
     
@@ -75,6 +73,6 @@ ms.locfileid: "36021943"
 8.  使用 SQL_HANDLE_STMT 的 *HandleType* 呼叫 [SQLFreeHandle](../../native-client-odbc-api/sqlfreehandle.md)，以釋放陳述式控制代碼。  
   
 ## <a name="see-also"></a>另請參閱  
- [執行查詢的使用說明主題&#40;ODBC&#41;](executing-queries-how-to-topics-odbc.md)  
+ [執行查詢使用說明主題&#40;ODBC&#41;](executing-queries-how-to-topics-odbc.md)  
   
   
