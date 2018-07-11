@@ -1,6 +1,6 @@
 ---
-title: 已更新-SQL 作業 Studio 文件 |Microsoft 文件
-description: 顯示更新的內容，如需 SQL 作業 Studio 中最近變更過的文件的程式碼片段。
+title: 已更新-SQL Operations Studio 文件 |Microsoft 文件
+description: 顯示更新的內容，如需 SQL Operations Studio 中最近變更過的文件的程式碼片段。
 manager: craigg
 author: MightyPen
 ms.author: genemi
@@ -18,7 +18,7 @@ ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
 ---
-# <a name="new-and-recently-updated-sql-operations-studio-docs"></a>新的與最近的更新： SQL 作業 Studio 文件
+# <a name="new-and-recently-updated-sql-operations-studio-docs"></a>新增的與最近的更新： SQL Operations Studio 文件
 
 
 
@@ -30,8 +30,8 @@ ms.lasthandoff: 05/03/2018
 
 
 
-- *日期範圍的更新：* &nbsp; **2018年-02-03** &nbsp; -到- &nbsp; **2018年-04-28**
-- *主旨區域：* &nbsp; **SQL 作業 Studio**。
+- *日期範圍的更新：* &nbsp; **2018-02-03** &nbsp; -到- &nbsp; **2018-04-28**
+- *主旨區域：* &nbsp; **SQL Operations Studio**。
 
 
 
@@ -43,7 +43,7 @@ ms.lasthandoff: 05/03/2018
 下列連結會跳至最近新增的新文章。
 
 
-- [擴充功能的 SQL 作業 Studio （預覽）](extensions.md)
+- [擴充功能的 SQL Operations Studio （預覽）](extensions.md)
 
 <!-- GeneMi:  I MANUALLY replace the ugly !INCLUDE with the name from inside the includes file. -->
 
@@ -70,8 +70,8 @@ ms.lasthandoff: 05/03/2018
 
 此壓縮清單提供＜摘要＞一節中所有更新文章的連結。
 
-1. [下載並安裝 SQL 作業 Studio （預覽）](#TitleNum_1)
-2. [SQL 作業 Studio （預覽） 版本資訊](#TitleNum_2)
+1. [下載並安裝 SQL Operations Studio （預覽）](#TitleNum_1)
+2. [SQL Operations Studio （預覽） 版本資訊](#TitleNum_2)
 3. [教學課程： 將*5 名最慢的查詢*範例資料庫儀表板的小工具](#TitleNum_3)
 
 
@@ -83,9 +83,9 @@ ms.lasthandoff: 05/03/2018
 
 <a name="TitleNum_1"/>
 
-### <a name="1-nbsp-download-and-install-sql-operations-studio-previewdownloadmd"></a>1.&nbsp; [下載並安裝 SQL 作業 Studio （預覽）](download.md)
+### <a name="1-nbsp-download-and-install-sql-operations-studio-previewdownloadmd"></a>1.&nbsp; [下載並安裝 SQL Operations Studio （預覽）](download.md)
 
-*更新日期︰ 2018年-04-25* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ([下一步](#TitleNum_2))
+*更新日期︰ 2018-04-25* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ([下一步](#TitleNum_2))
 
 <!-- Source markdown line 64.  ms.author= "sstein".  -->
 
@@ -124,9 +124,9 @@ ms.lasthandoff: 05/03/2018
 
 <a name="TitleNum_2"/>
 
-### <a name="2-nbsp-sql-operations-studio-preview-release-notesrelease-notesmd"></a>2.&nbsp; [SQL 作業 Studio （預覽） 版本資訊](release-notes.md)
+### <a name="2-nbsp-sql-operations-studio-preview-release-notesrelease-notesmd"></a>2.&nbsp; [SQL Operations Studio （預覽） 版本資訊](release-notes.md)
 
-*更新日期︰ 2018年-04-25* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ([先前](#TitleNum_1) | [下一步](#TitleNum_3))
+*更新日期︰ 2018-04-25* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ([先前](#TitleNum_1) | [下一步](#TitleNum_3))
 
 <!-- Source markdown line 20.  ms.author= "sstein".  -->
 
@@ -137,18 +137,18 @@ ms.lasthandoff: 05/03/2018
 
 
 
-**[下載年 4 月公用預覽]**
+**[下載 4 月公開預覽]**
 
 
-**年 4 月 2018 （年 4 月公用預覽）**
+**2018 年 4 月  （4 月公開預覽）**
 
 
-發行日期： 2018 年 4 月 25，版本： 0.28.6
+發行日期： 2018 年 4 月 25 日，版本： 0.28.6
 
-*4 月公用預覽版*包含 bug 修正和增強功能。
+*4 月公開預覽版*包含 bug 修正和增強功能。
 
 - SQL 代理程式預覽擴充功能的增強功能。
-- 改善大型和受保護的檔案來儲存受保護的系統管理員的支援和 > 在 SQL 作業 Studio 256 M 檔案。
+- 改善大型和受保護的檔案來儲存受保護的系統管理員的支援和 > 在 SQL Operations Studio 256 M 檔案。
 - 若要同時使用多個開啟的終端機分割整合式的終端機。
 - 降低的安裝磁碟上檔案計數呎列印更快的安裝和啟動時間。
 - 繼續以修正 GitHub 問題：
@@ -173,7 +173,7 @@ ms.lasthandoff: 05/03/2018
 
 ### <a name="3-nbsp-tutorial-add-the-five-slowest-queries-sample-widget-to-the-database-dashboardtutorial-qds-sql-servermd"></a>3.&nbsp; [教學課程： 將*5 名最慢的查詢*範例資料庫儀表板的小工具](tutorial-qds-sql-server.md)
 
-*更新日期︰ 2018年-04-25* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ([先前](#TitleNum_2))
+*更新日期︰ 2018-04-25* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ([先前](#TitleNum_2))
 
 <!-- Source markdown line 94.  ms.author= "erickang".  -->
 
@@ -212,39 +212,39 @@ ms.lasthandoff: 05/03/2018
 
 ## <a name="similar-articles-about-new-or-updated-articles"></a>新文章或更新文章的類似文章
 
-本節會在我們的公開 GitHub 存放庫中，列出與其他主題區中最近更新的文章十分相似的文章：[MicrosoftDocs/sql-docs](https://github.com/MicrosoftDocs/sql-docs/)。
+本節會在我們的公開 GitHub 儲存庫中，列出與其他主題區中最近更新的文章十分相似的文章：[MicrosoftDocs/sql-docs](https://github.com/MicrosoftDocs/sql-docs/)。
 
 
 
 #### <a name="subject-areas-that-do-have-new-or-recently-updated-articles"></a>具有新文章或最近更新文章的主題區
 
-- [新 + 更新 (11 + 6): &nbsp; &nbsp; **Advanced Analytics sql**文件](../advanced-analytics/new-updated-advanced-analytics.md)
-- [新 + 更新 (18 + 0): &nbsp; &nbsp; **sql Analysis Services**文件](../analysis-services/new-updated-analysis-services.md)
-- [新 + 更新 (218 + 14):**連接到 SQL**文件](../connect/new-updated-connect.md)
-- [新 + 更新 (14 + 0): &nbsp; &nbsp; **sql 資料庫引擎**文件](../database-engine/new-updated-database-engine.md)
-- [新 + 更新 (3 + 2): &nbsp; &nbsp; **sql Integration Services**文件](../integration-services/new-updated-integration-services.md)
-- [新 + 更新 (3 + 3): &nbsp; &nbsp; **sql Linux**文件](../linux/new-updated-linux.md)
-- [新 + 更新 (7 + 10): &nbsp; &nbsp;**關聯式資料庫供 SQL**文件](../relational-databases/new-updated-relational-databases.md)
-- [新 + 更新 (0 + 2): &nbsp; &nbsp; **Reporting Services SQL**文件](../reporting-services/new-updated-reporting-services.md)
-- [新 + 更新 (1 + 3): &nbsp; &nbsp; **SQL 作業 Studio**文件](../sql-operations-studio/new-updated-sql-operations-studio.md)
-- [新 + 更新 (2 + 3): &nbsp; &nbsp; **Microsoft SQL Server**文件](../sql-server/new-updated-sql-server.md)
-- [新 + 更新 (1 + 1): &nbsp; &nbsp; **SQL Server Data Tools (SSDT)** 文件](../ssdt/new-updated-ssdt.md)
-- [新 + 更新 (5 + 2): &nbsp; &nbsp; **SQL Server Management Studio (SSMS)** 文件](../ssms/new-updated-ssms.md)
-- [新 + 更新 (0 + 2): &nbsp; &nbsp; **TRANSACT-SQL**文件](../t-sql/new-updated-t-sql.md)
-- [新 + 更新 (1 + 1): &nbsp; &nbsp; **Tools for SQL**文件](../tools/new-updated-tools.md)
+- [新增 + 更新 (11 + 6): &nbsp; &nbsp; **Advanced Analytics sql**文件](../advanced-analytics/new-updated-advanced-analytics.md)
+- [新增 + 更新 (18 + 0): &nbsp; &nbsp; **sql Analysis Services**文件](../analysis-services/new-updated-analysis-services.md)
+- [新增 + 更新 (218 + 14):**連接到 SQL**文件](../connect/new-updated-connect.md)
+- [新增 + 更新 (14 + 0): &nbsp; &nbsp; **sql 資料庫引擎**文件](../database-engine/new-updated-database-engine.md)
+- [新增 + 更新 (3 + 2): &nbsp; &nbsp; **sql Integration Services**文件](../integration-services/new-updated-integration-services.md)
+- [新增 + 更新 (3 + 3): &nbsp; &nbsp; **sql Linux**文件](../linux/new-updated-linux.md)
+- [新增 + 更新 (7 + 10): &nbsp; &nbsp;**關聯式資料庫供 SQL**文件](../relational-databases/new-updated-relational-databases.md)
+- [新增 + 更新 (0 + 2): &nbsp; &nbsp; **Reporting Services SQL**文件](../reporting-services/new-updated-reporting-services.md)
+- [新增 + 更新 (1 + 3): &nbsp; &nbsp; **SQL Operations Studio**文件](../sql-operations-studio/new-updated-sql-operations-studio.md)
+- [新增 + 更新 (2 + 3): &nbsp; &nbsp; **Microsoft SQL Server**文件](../sql-server/new-updated-sql-server.md)
+- [新增 + 更新 (1 + 1): &nbsp; &nbsp; **SQL Server Data Tools (SSDT)** 文件](../ssdt/new-updated-ssdt.md)
+- [新增 + 更新 (5 + 2): &nbsp; &nbsp; **SQL Server Management Studio (SSMS)** 文件](../ssms/new-updated-ssms.md)
+- [新增 + 更新 (0 + 2): &nbsp; &nbsp; **TRANSACT-SQL**文件](../t-sql/new-updated-t-sql.md)
+- [新增 + 更新 (1 + 1): &nbsp; &nbsp; **Tools for SQL**文件](../tools/new-updated-tools.md)
 
 
 
 #### <a name="subject-areas-that-do-not-have-any-new-or-recently-updated-articles"></a>沒有新文章或最近更新文章的主題區
 
-- [新 + 更新 (0 + 0): **Analytics Platform System sql**文件](../analytics-platform-system/new-updated-analytics-platform-system.md)
-- [新 + 更新 (0 + 0): **SQL 的 Data Quality Services**文件](../data-quality-services/new-updated-data-quality-services.md)
-- [新 + 更新 (0 + 0):**資料採礦延伸模組 (DMX)，sql**文件](../dmx/new-updated-dmx.md)
+- [新增 + 更新 (0 + 0): **Analytics Platform System sql**文件](../analytics-platform-system/new-updated-analytics-platform-system.md)
+- [新增 + 更新 (0 + 0): **SQL 的 Data Quality Services**文件](../data-quality-services/new-updated-data-quality-services.md)
+- [新增 + 更新 (0 + 0):**資料採礦延伸模組 (DMX)，sql**文件](../dmx/new-updated-dmx.md)
 - [新文章 + 更新文章 (0+0)：**SQL Master Data Services (MDS)** 文件](../master-data-services/new-updated-master-data-services.md)
-- [新 + 更新 (0 + 0):**多維度運算式 (MDX) 的 SQL**文件](../mdx/new-updated-mdx.md)
-- [新 + 更新 (0 + 0): **ODBC （開放式資料庫連接） 的 SQL**文件](../odbc/new-updated-odbc.md)
-- [新 + 更新 (0 + 0):**適用於 SQL PowerShell**文件](../powershell/new-updated-powershell.md)
-- [新 + 更新 (0 + 0):**範例 sql**文件](../samples/new-updated-samples.md)
-- [新 + 更新 (0 + 0): **SQL Server 移轉小幫手 (SSMA)** 文件](../ssma/new-updated-ssma.md)
-- [新 + 更新 (0 + 0): **sql XQuery**文件](../xquery/new-updated-xquery.md)
+- [新增 + 更新 (0 + 0):**多維度運算式 (MDX) 的 SQL**文件](../mdx/new-updated-mdx.md)
+- [新增 + 更新 (0 + 0): **ODBC （開放式資料庫連接） 的 SQL**文件](../odbc/new-updated-odbc.md)
+- [新增 + 更新 (0 + 0):**適用於 SQL PowerShell**文件](../powershell/new-updated-powershell.md)
+- [新增 + 更新 (0 + 0):**範例 sql**文件](../samples/new-updated-samples.md)
+- [新增 + 更新 (0 + 0): **SQL Server 移轉小幫手 (SSMA)** 文件](../ssma/new-updated-ssma.md)
+- [新增 + 更新 (0 + 0): **sql XQuery**文件](../xquery/new-updated-xquery.md)
 
