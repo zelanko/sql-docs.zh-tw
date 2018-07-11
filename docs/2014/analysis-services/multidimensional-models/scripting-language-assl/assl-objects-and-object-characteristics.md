@@ -1,5 +1,5 @@
 ---
-title: ASSL 物件和物件特性 |Microsoft 文件
+title: ASSL 物件和物件特性 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -21,21 +21,21 @@ helpviewer_keywords:
 - expansion [Analysis Services Scripting Language]
 ms.assetid: 6e5c28b5-c0bc-4ccd-82e5-e174bbb71386
 caps.latest.revision: 27
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 5e5f98511df4b952f6598909d1cea2c373ff7476
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 95e2277f9d618dfc13c4fe93ea6a565550ec1e87
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36022023"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37277894"
 ---
 # <a name="assl-objects-and-object-characteristics"></a>ASSL 物件和物件特性
   Analysis Services 指令碼語言 (ASSL) 中的物件會遵循有關物件群組、繼承、命名、擴展和處理的特定指導方針。  
   
 ## <a name="object-groups"></a>物件群組  
- 所有[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]物件都有 XML 表示。 這些物件分為兩個群組：  
+ 所有[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]物件具有的 XML 表示法。 這些物件分為兩個群組：  
   
  **主要物件**  
  主要物件可以獨立建立、改變和刪除。 主要物件包括：  
@@ -95,7 +95,7 @@ ms.locfileid: "36022023"
 |-----------------------|---------------------------|-----------------|  
 |*ReferenceOnly*|否|只會為要求的物件以及為所有包含的主要物件，遞迴地傳回名稱、識別碼和時間戳記。|  
 |*ObjectProperties*|是|展開要求的物件與所含的次要物件，但是不會傳回所含的主要物件。|  
-|*ExpandObject*|否|與相同*ObjectProperties*，但也會傳回名稱、 識別碼和包含的主要物件的時間戳記。|  
+|*ExpandObject*|否|與相同*ObjectProperties*，但也會傳回名稱、 識別碼和所包含的主要物件的時間戳記。|  
 |*ExpandFull*|是|以遞迴方式完全展開要求的物件以及所有包含的物件。|  
   
  這個 ASSL 參考章節描述*ExpandFull*表示法。 所有其他 `ObjectExpansion` 層級都衍生自這個層級。  

@@ -1,12 +1,12 @@
 ---
-title: SQLCloseCursor |Microsoft 文件
+title: SQLCloseCursor |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 apitype: DLLExport
@@ -18,18 +18,18 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 389236f4ede54ac618bac6d9d0fd0687c61a12e4
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: 0cd7119facf1bab9a17a77683239b0002ca7a69c
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35700489"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37429327"
 ---
 # <a name="sqlclosecursor"></a>SQLCloseCursor
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
-  **SQLCloseCursor**取代[SQLFreeStmt](../../relational-databases/native-client-odbc-api/sqlfreestmt.md)與*選項*SQL_CLOSE 的值。 在收到**SQLCloseCursor**、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驅動程式會捨棄暫止的結果集資料列。 請注意，陳述式的資料行和參數繫結 （如果有的話） 會保留不變，與由**SQLCloseCursor**。  
+  **SQLCloseCursor**會取代[SQLFreeStmt](../../relational-databases/native-client-odbc-api/sqlfreestmt.md)具有*選項*SQL_CLOSE 的值。 在收到**SQLCloseCursor**，則[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client ODBC 驅動程式會捨棄暫止的結果集資料列。 請注意，陳述式的資料行和參數繫結 （如果有的話） 會保留而不改變**SQLCloseCursor**。  
   
 ## <a name="see-also"></a>另請參閱  
  [SQLCloseCursor](http://go.microsoft.com/fwlink/?LinkId=59331)   
