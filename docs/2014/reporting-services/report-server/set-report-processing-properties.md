@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - on-demand reports
 - report processing [Reporting Services], execution properties
@@ -20,13 +20,13 @@ ms.assetid: b5cbc453-5986-423e-af44-1f243ef3edb1
 caps.latest.revision: 42
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 375b691b1e0e1202bfa16f6b4919ff454fe65da3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 2d3ffb241dd28b0abff718f742ba9020df98195f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36134338"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37153589"
 ---
 # <a name="set-report-processing-properties"></a>設定報表處理屬性
   報表執行屬性控制處理報表的方式。 您必須針對每個報表個別設定執行屬性。  
@@ -60,7 +60,7 @@ ms.locfileid: "36134338"
  如果有這種情況，報表伺服器就會在下次訂閱排程執行時停用訂閱。 若要重新啟動訂閱，請開啟再儲存訂閱。 當您開啟訂閱，報表伺服器會將訂閱參數值更新為快照集所指定的值。 如需訂用帳戶的詳細資訊，請參閱[訂用帳戶與傳遞 &#40;Reporting Services&#41;](../subscriptions/subscriptions-and-delivery-reporting-services.md)。  
   
 ## <a name="see-also"></a>另請參閱  
- [設定處理選項&#40;的 Reporting Services SharePoint 整合模式&#41;](../set-processing-options-reporting-services-in-sharepoint-integrated-mode.md)   
+ [設定處理選項&#40;Reporting Services SharePoint 整合模式&#41;](../set-processing-options-reporting-services-in-sharepoint-integrated-mode.md)   
  [設定報表執行屬性&#40;報表管理員&#41;](../reports/configure-execution-properties-for-a-report-report-manager.md)   
  [Reporting Services 概念 &#40;SSRS&#41;](../reporting-services-concepts-ssrs.md)   
  [如何：將快照集新增至報表記錄](add-a-snapshot-to-report-history-report-manager.md)   

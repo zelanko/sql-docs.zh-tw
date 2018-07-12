@@ -1,5 +1,5 @@
 ---
-title: 資料採礦專案 |Microsoft 文件
+title: 資料採礦專案 |Microsoft Docs
 ms.custom: ''
 ms.date: 07/17/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 543d70fc-34d2-42dd-8d6d-0543109f94d0
 caps.latest.revision: 23
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 035a8a822ffa49502ec93978b2ce8b619fff9630
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 3e0c9df62ccc0c76dead70001e4ae253ff51cc9b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36133139"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37259714"
 ---
 # <a name="data-mining-projects"></a>資料採礦專案
   資料採礦專案為 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 方案的一部分。 在設計過程中，您在此專案中建立的物件可當做工作空間資料庫的一部分來測試及查詢。 當您希望使用者能夠查詢或瀏覽專案中的物件時，您必須將此專案部署到以多維度模式執行的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 執行個體。  
@@ -33,7 +33,7 @@ ms.locfileid: "36133139"
  如果您在現有方案中建立資料採礦專案，預設會將資料採礦物件部署到與方案檔同名的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 資料庫中。 您可以使用 [專案屬性] 對話方塊來變更這個名稱和目標伺服器。 如需詳細資訊，請參閱[設定 Analysis Services 專案屬性 &#40;SSDT&#41;](../multidimensional-models/configure-analysis-services-project-properties-ssdt.md)。  
   
 > [!WARNING]  
->  若要成功建立及部署專案，您必須能夠存取以 OLAP/資料採礦模式執行的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 執行個體。 您不能開發或部署的執行個體上的資料採礦方案[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]支援表格式模型中，也不能直接從 PowerPivot 活頁簿，或使用記憶體中的資料存放區之表格式模型的資料。 若要判斷您具有的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 執行個體是否可以支援資料採礦，請參閱 [判斷 Analysis Services 執行個體的伺服器模式](../instances/determine-the-server-mode-of-an-analysis-services-instance.md)。  
+>  若要成功建立及部署專案，您必須能夠存取以 OLAP/資料採礦模式執行的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 執行個體。 您無法開發或部署的執行個體上的資料採礦方案[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]支援表格式模型，也不能直接從 PowerPivot 活頁簿，或使用記憶體中的資料存放區之表格式模型的資料。 若要判斷您具有的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 執行個體是否可以支援資料採礦，請參閱 [判斷 Analysis Services 執行個體的伺服器模式](../instances/determine-the-server-mode-of-an-analysis-services-instance.md)。  
   
  在您建立的每一個資料採礦專案中，您將遵循以下步驟進行：  
   
@@ -66,7 +66,7 @@ ms.locfileid: "36133139"
   
  例如，單一資料採礦專案可包含多個資料來源的參考，其中每一個資料來源都支援多個資料來源檢視。 而每一個資料來源檢視可以支援多個採礦結構，每一個採礦結構則有多個相關的採礦模型。  
   
- 此外，您的專案可能會包含外掛程式演算法、自訂組件或自訂預存程序，但是這裡不會描述這些物件。 如需詳細資訊，請參閱[開發人員手冊 》 &#40;Analysis Services&#41;](../analysis-services-developer-documentation.md)。  
+ 此外，您的專案可能會包含外掛程式演算法、自訂組件或自訂預存程序，但是這裡不會描述這些物件。 如需詳細資訊，請參閱 <<c0> [ 開發人員指南&#40;Analysis Services&#41;](../analysis-services-developer-documentation.md)。</c0>  
  
   
 ###  <a name="bkmk_DataSources"></a> Data Sources  
@@ -201,7 +201,7 @@ ms.locfileid: "36133139"
 |工作|主題|  
 |-----------|------------|  
 |描述如何處理採礦結構資料行|[建立關聯式採礦結構](create-a-relational-mining-structure.md)|  
-|提供有關如何加入新的採礦模型及處理結構和模型的詳細資訊|[將採礦模型加入結構&#40;Analysis Services-資料採礦&#41;](add-mining-models-to-a-structure-analysis-services-data-mining.md)|  
+|提供有關如何加入新的採礦模型及處理結構和模型的詳細資訊|[將採礦模型加入結構中&#40;Analysis Services-資料採礦&#41;](add-mining-models-to-a-structure-analysis-services-data-mining.md)|  
 |提供資源的連結，這些資源可幫助您自訂演算法來建立採礦模型|[自訂採礦模型和結構](customize-mining-models-and-structure.md)|  
 |提供有關每一個採礦模型檢視器之資訊的連結|[資料採礦模型檢視器](data-mining-model-viewers.md)|  
 |了解如何建立增益圖、收益圖或分類矩陣，或是測試採礦結構|[測試和驗證&#40;資料採礦&#41;](testing-and-validation-data-mining.md)|  

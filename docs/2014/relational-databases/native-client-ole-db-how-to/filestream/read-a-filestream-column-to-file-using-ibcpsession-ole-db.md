@@ -1,40 +1,38 @@
 ---
-title: FILESTREAM 資料行讀到檔案使用 IBCPSession (OLE DB) |Microsoft 文件
+title: FILESTREAM 資料行讀到檔案中，使用 IBCPSession (OLE DB) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: ab3ce02a-549d-4e01-87b9-d15281fba349
 caps.latest.revision: 6
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 872a6abbb963338b75e77ff2656416da1af8d0e6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 2298503d85090cebc234fcaedc39bb9fee61cf4b
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36035708"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37412867"
 ---
 # <a name="read-a-filestream-column-to-file-using-ibcpsession-ole-db"></a>使用 IBCPSession 將 FILESTREAM 資料行讀到檔案中 (OLE DB)
   此範例會使用 IBCPSession 介面將 Filestream 資料行讀到檔案中，並寫入格式檔案。  
   
- 如需有關 filestream 功能的詳細資訊，請參閱[FILESTREAM 支援&#40;OLE DB&#41;](../../native-client/ole-db/filestream-support-ole-db.md)。  
+ 如需有關 filestream 功能的詳細資訊，請參閱 < [FILESTREAM 支援&#40;OLE DB&#41;](../../native-client/ole-db/filestream-support-ole-db.md)。  
   
 ## <a name="example"></a>範例  
  請確認您的 INCLUDE 環境變數包含的目錄內含 sqlncli.h。  
   
  使用下列其中一個範例來建立此範例讀取的來源資料表：  
   
--   [將資料傳送到 FILESTREAM 資料行使用 ISequentialStream Bound to ICommandText 參數&#40;OLE DB&#41;](send-data-to-filestream-isequentialstream-bound-to-icommandtext.md)  
+-   [將資料傳送至使用 ISequentialStream Bound to ICommandText 參數將 FILESTREAM 資料行&#40;OLE DB&#41;](send-data-to-filestream-isequentialstream-bound-to-icommandtext.md)  
   
--   [將資料傳送到 FILESTREAM 資料行使用 IRowsetFastUpload &#40;OLE DB&#41;](send-data-to-a-filestream-column-using-irowsetfastupload-ole-db.md)  
+-   [將資料傳送至使用 IRowsetFastUpload 將 FILESTREAM 資料行&#40;OLE DB&#41;](send-data-to-a-filestream-column-using-irowsetfastupload-ole-db.md)  
   
  複製第一個程式碼清單並將它貼入名為 ISSHelper.h 的檔案中。  
   

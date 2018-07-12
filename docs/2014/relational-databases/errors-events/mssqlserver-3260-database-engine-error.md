@@ -5,23 +5,22 @@ ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - 3260 (Database Engine error)
 ms.assetid: ed62f86d-90cb-4b04-8bc5-43e0b9ba6141
 caps.latest.revision: 19
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 7d1cc96934797068ee2374df58c3f6de4b2fb93e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: f24a28fe4282166c4fa2b6c49f524a7fcf775cd0
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36037240"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37411587"
 ---
 # <a name="mssqlserver3260"></a>MSSQLSERVER_3260
     

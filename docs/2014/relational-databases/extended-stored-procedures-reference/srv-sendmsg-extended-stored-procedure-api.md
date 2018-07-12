@@ -22,15 +22,15 @@ helpviewer_keywords:
 - srv_sendmsg
 ms.assetid: efcb50b9-f8ff-4121-bf67-05830171b928
 caps.latest.revision: 30
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 34575c3377c806b2671a2bdf92405864d0d5bf1b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: rothja
+ms.author: jroth
+manager: craigg
+ms.openlocfilehash: b7f30a780f0428754af82c6adf57fb1d4efd35fb
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36133490"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37240728"
 ---
 # <a name="srvsendmsg-extended-stored-procedure-api"></a>srv_sendmsg (擴充預存程序 API)
     

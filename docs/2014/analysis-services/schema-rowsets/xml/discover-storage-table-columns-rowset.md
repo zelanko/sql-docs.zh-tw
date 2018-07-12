@@ -1,5 +1,5 @@
 ---
-title: DISCOVER_STORAGE_TABLE_COLUMNS 資料列集 |Microsoft 文件
+title: DISCOVER_STORAGE_TABLE_COLUMNS 資料列集 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -12,15 +12,15 @@ ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 24abb88e-33a9-4ae2-829d-cdef0ff22ec1
 caps.latest.revision: 13
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: b3fed7add23dda2242000dbad63bb6cc2def0fb7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e480f60aa857506a1d192452b299cede3f7161e5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36134812"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37153149"
 ---
 # <a name="discoverstoragetablecolumns-rowset"></a>DISCOVER_STORAGE_TABLE_COLUMNS 資料列集
   提供在資料行層級中，有關 SharePoint 或表格式模式下執行 Analysis Services 資料庫所用儲存體資料表的資訊。  
@@ -32,8 +32,8 @@ ms.locfileid: "36134812"
   
 |**資料行名稱**|**類型指標**|**限制**|**說明**|  
 |---------------------|------------------------|---------------------|---------------------|  
-|`DATABASE_NAME`|`DBTYPE_WSTR`|是|指定包含資料表的資料庫名稱。 如果省略，就會使用目前的資料庫。<br /><br /> `DISCOVER_STORAGE_TABLE_COLUMNS`資料列集可能會限制使用此資料行。|  
-|`CUBE_NAME`|`DBTYPE_WSTR`|是|指定包含資料表的 Cube 或模型。<br /><br /> `DISCOVER_STORAGE_TABLES`資料列集可能會限制使用此資料行。|  
+|`DATABASE_NAME`|`DBTYPE_WSTR`|是|指定包含資料表的資料庫名稱。 如果省略，就會使用目前的資料庫。<br /><br /> `DISCOVER_STORAGE_TABLE_COLUMNS`使用此資料行也可以限制資料列集。|  
+|`CUBE_NAME`|`DBTYPE_WSTR`|是|指定包含資料表的 Cube 或模型。<br /><br /> `DISCOVER_STORAGE_TABLES`使用此資料行也可以限制資料列集。|  
 |`MEASURE_GROUP_NAME`|`DBTYPE_WSTR`|是|量值群組的名稱。|  
 |`DIMENSION_NAME`|`DBTYPE_WSTR`||維度的名稱。|  
 |`ATTRIBUTE_NAME`|`DBTYPE_WSTR`||屬性的名稱。|  
@@ -52,7 +52,7 @@ ms.locfileid: "36134812"
   
  下表將提供可識別此資料列集的 GUID 和字串值。  
   
-|引數|ReplTest1|  
+|引數|值|  
 |--------------|-----------|  
 |GUID|a07ccd44-8148-11d0-87bb-00c04fc33942|  
 |ADOMDNAME|StorageTableColumns|  

@@ -1,5 +1,5 @@
 ---
-title: 交叉驗證公式 |Microsoft 文件
+title: 交叉驗證公式 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: fd1ea582-29a1-4154-8de2-47bab3539b4d
 caps.latest.revision: 8
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 97500036ed4021c0b1c6d907db1c4aa7858c8b68
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 5c41d6570b4e267109fbbf696bba7917b63f33b4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36132107"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37230068"
 ---
 # <a name="cross-validation-formulas"></a>交叉驗證公式
   當您產生交叉驗證報表時，報表會根據採礦模型類型包含每一個模型的精確度量值 (也就是之前用來建立模型的演算法)、可預測屬性的資料類型，以及可預測的屬性值 (如果有的話)。  

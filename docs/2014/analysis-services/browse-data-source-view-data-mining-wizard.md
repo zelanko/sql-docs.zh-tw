@@ -1,5 +1,5 @@
 ---
-title: 瀏覽資料來源檢視 （資料採礦精靈） |Microsoft 文件
+title: 瀏覽資料來源檢視 （資料採礦精靈） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dm.dmwizard.browsedatasourceview.f1
 ms.assetid: d868600a-423c-4892-bb3b-4e6d67798328
 caps.latest.revision: 21
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 14f4bcdb5fea062320138ea90036bbc824f875e8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 24348462faa76777b279576c105c312b333b83f0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36134838"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37155649"
 ---
 # <a name="browse-data-source-view-data-mining-wizard"></a>瀏覽資料來源檢視 (資料採礦精靈)
   使用 [Browse Data Source View (瀏覽資料來源檢視)] 對話方塊，即可檢視您在精靈之 [選取資料來源檢視] 頁面上所選取的資料來源檢視。  
@@ -37,6 +37,6 @@ ms.locfileid: "36134838"
   
 ## <a name="see-also"></a>另請參閱  
  [資料採礦精靈 F1 說明&#40;Analysis Services-資料採礦&#41;](data-mining-wizard-f1-help-analysis-services-data-mining.md)   
- [選取資料來源檢視&#40;資料採礦精靈&#41;](select-data-source-view-data-mining-wizard.md)  
+ [選取 [資料來源檢視]&#40;資料採礦精靈&#41;](select-data-source-view-data-mining-wizard.md)  
   
   

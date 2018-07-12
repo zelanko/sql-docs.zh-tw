@@ -5,23 +5,22 @@ ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - 21892 (Database Engine error)
 ms.assetid: 199818e8-28f4-440e-ad85-7bea88f51153
 caps.latest.revision: 7
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: a7504bdce4c01c379f7eb26a02668eada369b2f0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: a01f07cdfb20ed88a43dbda2b555e819ca725c0b
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36036128"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37414317"
 ---
 # <a name="mssqlserver21892"></a>MSSQLSERVER_21892
     

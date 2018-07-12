@@ -1,13 +1,11 @@
 ---
-title: 增強型的日期和時間類型 （OLE DB 和 ODBC） 為大量複製變更 |Microsoft 文件
+title: 大量複製變更增強型的日期和時間型別 （OLE DB 和 ODBC） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -15,23 +13,23 @@ helpviewer_keywords:
 - bulk copy [ODBC], changes for date/time improvements
 ms.assetid: c29e0f5e-9b3c-42b3-9856-755f4510832f
 caps.latest.revision: 28
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 6eb71199e529d806053b1bbfb363a74c91f1cc6e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 1e33cc7b320f3445d0da6e7f5927fe985a668b77
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36036798"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37430647"
 ---
-# <a name="bulk-copy-changes-for-enhanced-date-and-time-types-ole-db-and-odbc"></a>增強型的日期和時間類型 （OLE DB 和 ODBC） 的大量複製變更
+# <a name="bulk-copy-changes-for-enhanced-date-and-time-types-ole-db-and-odbc"></a>增強型的日期和時間型別 （OLE DB 和 ODBC） 的大量複製變更
   本主題描述可支援大量複製功能的日期/時間增強功能。 本主題中的資訊同時適用於 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 中的 OLE DB 和 ODBC。  
   
 ## <a name="format-files"></a>格式檔案  
  以互動方式建立格式檔案時，下表描述用於指定日期/時間類型與對應主檔資料類型名稱的輸入。  
   
-|檔案儲存類型|主檔案資料類型|提示的回應: 「 輸入欄位 < field_name > 檔案儲存類型 [\<預設 >]:"|  
+|檔案儲存類型|主檔案資料類型|提示的回應: 「 輸入欄位 < field_name > 檔案儲存類型 [\<預設 >]: 」|  
 |-----------------------|-------------------------|-----------------------------------------------------------------------------------------------------|  
 |DATETIME|SQLDATETIME|d|  
 |Smalldatetime|SQLDATETIM4|D|  
@@ -66,9 +64,9 @@ ms.locfileid: "36036798"
 ```  
   
 ## <a name="character-data-files"></a>字元資料類型  
- 在字元資料檔中，日期和時間值的表示如 「 資料格式： 字串和常值 」 一節中所述[ODBC 日期和時間增強功能的資料類型支援](data-type-support-for-odbc-date-and-time-improvements.md)odbc，或[資料類型支援OLE DB 日期和時間增強功能](../native-client-ole-db-date-time/data-type-support-for-ole-db-date-and-time-improvements.md)OLE DB 的。  
+ 在字元資料檔中，日期和時間值的表示如 「 資料格式： 字串和常值 」 一節中所述[資料類型對 ODBC 日期和時間改善支援](data-type-support-for-odbc-date-and-time-improvements.md)若是 ODBC，或[資料類型支援OLE DB 日期和時間改善功能](../native-client-ole-db-date-time/data-type-support-for-ole-db-date-and-time-improvements.md)OLE db。  
   
- 原生資料檔中的四個新類型的日期和時間值會表示為 7 的小數位數的 TDS 表示法 (因為這是支援的最大值[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]和 bcp 資料檔不會儲存這些資料行的小數位數)。 沒有任何變更的現有儲存體`datetime`和`smalldatetime`類型或其表格式資料流 (TDS) 表示法。  
+ 在原生資料檔中的四個新類型的日期和時間值會表示為的 TDS 表示法小數位數 7 的 (因為這是支援的最大[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]而且 bcp 資料檔不會儲存這些資料行的小數位數)。 沒有任何變更到現有的儲存體`datetime`和`smalldatetime`型別或其表格式資料流 (TDS) 表示法。  
   
  對於 OLE DB，不同儲存類型的儲存大小如下所示：  
   
@@ -95,7 +93,7 @@ ms.locfileid: "36036798"
 ## <a name="bcp-types-in-sqlnclih"></a>sqlncli.h 中的 BCP 類型  
  下列類型是在 sqlncli.h 中定義的，可與 ODBC 的 BCP API 延伸模組搭配使用。 這些類型會隨*eUserDataType* ibcpsession:: Bcpcolfmt OLE DB 中的參數。  
   
-|檔案儲存類型|主檔案資料類型|在使用 ibcpsession:: Bcpcolfmt sqlncli.h 中，輸入|ReplTest1|  
+|檔案儲存類型|主檔案資料類型|在搭配 ibcpsession:: Bcpcolfmt sqlncli.h 中，輸入|值|  
 |-----------------------|-------------------------|-----------------------------------------------------------|-----------|  
 |DATETIME|SQLDATETIME|BCP_TYPE_SQLDATETIME|0x3d|  
 |Smalldatetime|SQLDATETIM4|BCP_TYPE_SQLDATETIME4|0x3a|  
@@ -107,14 +105,14 @@ ms.locfileid: "36036798"
 ## <a name="bcp-data-type-conversions"></a>BCP 資料類型轉換  
  下表提供轉換資訊。  
   
- **OLE DB 注意**IBCPSession 所執行的下列轉換。 IRowsetFastLoad 中所定義，請使用 OLE DB 轉換[轉換從用戶端到伺服器執行](../native-client-ole-db-date-time/conversions-performed-from-client-to-server.md)。 請注意，datetime 值會捨入為一秒的 1/300，而 smalldatetime 值在執行以下所描述的用戶端轉換之後，會將其秒數設定為零。 Datetime 捨入會透過小時和分鐘 (但非日期) 傳播。  
+ **OLE DB 注意**IBCPSession 所執行的下列轉換。 IRowsetFastLoad 中所定義，請使用 OLE DB 轉換[進行轉換，從用戶端伺服器](../native-client-ole-db-date-time/conversions-performed-from-client-to-server.md)。 請注意，datetime 值會捨入為一秒的 1/300，而 smalldatetime 值在執行以下所描述的用戶端轉換之後，會將其秒數設定為零。 Datetime 捨入會透過小時和分鐘 (但非日期) 傳播。  
   
 |目標 --><br /><br /> 來源|日期|time|smalldatetime|DATETIME|datetime2|datetimeoffset|char|wchar|  
 |------------------------|----------|----------|-------------------|--------------|---------------|--------------------|----------|-----------|  
-|date|@shouldalert|-|1,6|1,6|1,6|1,5,6|1,3|1,3|  
+|date|1|-|1,6|1,6|1,6|1,5,6|1,3|1,3|  
 |Time|不適用|1,10|1,7,10|1,7,10|1,7,10|1,5,7,10|1,3|1,3|  
-|Smalldatetime|1,2|1,4,10|@shouldalert|@shouldalert|1,10|1,5,10|1,11|1,11|  
-|DATETIME|1,2|1,4,10|1,12|@shouldalert|1,10|1,5,10|1,11|1,11|  
+|Smalldatetime|1,2|1,4,10|1|1|1,10|1,5,10|1,11|1,11|  
+|DATETIME|1,2|1,4,10|1,12|1|1,10|1,5,10|1,11|1,11|  
 |Datetime2|1,2|1,4,10|1,10 (ODBC)1,12 (OLE DB)|1,10|1,10|1,5,10|1,3|1,3|  
 |Datetimeoffset|1,2,8|1,4,8,10|1,8,10|1,8,10|1,8,10|1,10|1,3|1,3|  
 |Char/wchar (date)|9|-|9,6 (ODBC)9,6,12 (OLE DB)|9,6 (ODBC)9,6,12 (OLE DB)|9,6|9,5,6|不適用|不適用|  
@@ -127,9 +125,9 @@ ms.locfileid: "36036798"
 |符號|意義|  
 |------------|-------------|  
 |-|不支援轉換。<br /><br /> 系統會產生含有 SQLSTATE 07006 和訊息「限制的資料類型屬性違規」的 ODBC 診斷記錄。|  
-|@shouldalert|如果提供的資料無效，就會產生含有 SQLSTATE 22007 和訊息「無效的 datetime 格式」的 ODBC 診斷記錄。 對於 datetimeoffset 值，即使沒有要求轉換為 UTC，此時間部分在轉換到 UTC 之後仍然必須在範圍內。 這是因為 TDS 和伺服器永遠會以 UTC 的 datetimeoffset 值，正規化時間。 因此，用戶端必須確認時間元件在轉換為 UTC 之後，仍然位於支援的範圍內。|  
+|1|如果提供的資料無效，就會產生含有 SQLSTATE 22007 和訊息「無效的 datetime 格式」的 ODBC 診斷記錄。 對於 datetimeoffset 值，即使沒有要求轉換為 UTC，此時間部分在轉換到 UTC 之後仍然必須在範圍內。 這是因為 TDS 和伺服器永遠會以 UTC 的 datetimeoffset 值，正規化時間。 因此，用戶端必須確認時間元件在轉換為 UTC 之後，仍然位於支援的範圍內。|  
 |2|忽略時間元件。|  
-|3|對於 ODBC，如果截斷時發生資料遺失，就會產生包含 SQLSTATE 22001 和訊息「字串資料，右邊已截斷」的診斷記錄。系統會根據下表，從目的地資料行的大小決定小數秒位數 (小數位數)。 對於大於資料表中範圍的資料行大小，就會隱含小數位數 7。 此轉換應該最多允許九個小數秒位數，也就是 ODBC 所允許的最大值。<br /><br /> **類型：** DBTIME2<br /><br /> **隱含的小數位數 0** 8<br /><br /> **隱含的小數位數 1..7** 10,16<br /><br /> <br /><br /> **類型：** DBTIMESTAMP<br /><br /> **隱含的小數位數 0:** 19<br /><br /> **隱含的小數位數 1..7:** 21..27<br /><br /> <br /><br /> **類型：** DBTIMESTAMPOFFSET<br /><br /> **隱含的小數位數 0:** 26<br /><br /> **隱含的小數位數 1..7:** 28..34<br /><br /> 對於 OLE DB，如果截斷時發生資料損失，則會發佈錯誤。 對於 datetime2，小數秒的位數 (小數位數) 會根據下表，從目的地資料行的大小決定。 對於大於資料表中範圍的資料行大小，就會隱含小數位數 9。 此轉換應該最多允許九個小數秒位數，也就是 OLE DB 所允許的最大值。<br /><br /> **類型：** DBTIME2<br /><br /> **隱含的小數位數 0** 8<br /><br /> **隱含的小數位數 1..9** 1..9<br /><br /> <br /><br /> **類型：** DBTIMESTAMP<br /><br /> **隱含的小數位數 0:** 19<br /><br /> **隱含的小數位數 1..9:** 21..29<br /><br /> <br /><br /> **類型：** DBTIMESTAMPOFFSET<br /><br /> **隱含的小數位數 0:** 26<br /><br /> **隱含的小數位數 1..9:** 28..36|  
+|3|對於 ODBC，如果截斷時發生資料遺失，就會產生包含 SQLSTATE 22001 和訊息「字串資料，右邊已截斷」的診斷記錄。系統會根據下表，從目的地資料行的大小決定小數秒位數 (小數位數)。 對於大於資料表中範圍的資料行大小，就會隱含小數位數 7。 此轉換應該最多允許九個小數秒位數，也就是 ODBC 所允許的最大值。<br /><br /> **類型：** DBTIME2<br /><br /> **隱含小數位數 0** 8<br /><br /> **隱含小數位數 1..7** 10，16<br /><br /> <br /><br /> **類型：** DBTIMESTAMP<br /><br /> **隱含小數位數 0:** 19<br /><br /> **隱含小數位數 1..7:** 21..27<br /><br /> <br /><br /> **類型：** DBTIMESTAMPOFFSET<br /><br /> **隱含小數位數 0:** 26<br /><br /> **隱含小數位數 1..7:** 28..34<br /><br /> 對於 OLE DB，如果截斷時發生資料損失，則會發佈錯誤。 對於 datetime2，小數秒的位數 (小數位數) 會根據下表，從目的地資料行的大小決定。 對於大於資料表中範圍的資料行大小，就會隱含小數位數 9。 此轉換應該最多允許九個小數秒位數，也就是 OLE DB 所允許的最大值。<br /><br /> **類型：** DBTIME2<br /><br /> **隱含小數位數 0** 8<br /><br /> **隱含小數位數 1..9** 1..9<br /><br /> <br /><br /> **類型：** DBTIMESTAMP<br /><br /> **隱含小數位數 0:** 19<br /><br /> **隱含小數位數 1..9:** 21..29<br /><br /> <br /><br /> **類型：** DBTIMESTAMPOFFSET<br /><br /> **隱含小數位數 0:** 26<br /><br /> **隱含小數位數 1..9:** 28..36|  
 |4|忽略日期元件。|  
 |5|時區會設定為 UTC (例如，00:00)。|  
 |6|時間會設定為零。|  
@@ -142,7 +140,7 @@ ms.locfileid: "36036798"
 |不適用|系統會維持現有 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 和舊有的行為。|  
   
 ## <a name="see-also"></a>另請參閱  
- [日期和時間增強功能&#40;ODBC&#41;](date-and-time-improvements-odbc.md)   
- [日期和時間增強功能&#40;OLE DB&#41;](../native-client-ole-db-date-time/date-and-time-improvements-ole-db.md)  
+ [日期和時間改善&#40;ODBC&#41;](date-and-time-improvements-odbc.md)   
+ [日期和時間改善&#40;OLE DB&#41;](../native-client-ole-db-date-time/date-and-time-improvements-ole-db.md)  
   
   

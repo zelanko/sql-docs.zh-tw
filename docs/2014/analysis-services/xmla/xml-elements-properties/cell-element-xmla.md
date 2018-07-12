@@ -1,5 +1,5 @@
 ---
-title: 資料格元素 (XMLA) |Microsoft 文件
+title: 資料格元素 (XMLA) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -24,15 +24,15 @@ helpviewer_keywords:
 - Cell element
 ms.assetid: 88daba54-89e9-423f-8d12-8de80cf52d6b
 caps.latest.revision: 14
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: be00f4ae61817143cc986e69d543eaf4201bbe87
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 18110400e76f10e9e8ac90fc2793a7a90f25d4de
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36132724"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37241224"
 ---
 # <a name="cell-element-xmla"></a>Cell 元素 (XMLA)
   包含要由 [UpdateCells](../xml-elements-commands/updatecells-element-xmla.md) 命令更新之資料格的資訊。  
@@ -69,7 +69,7 @@ ms.locfileid: "36132724"
   
 |attribute|描述|  
 |---------------|-----------------|  
-|CellOrdinal|需要`Long`屬性。 包含要更新之資料格的以零為基底序數位置。|  
+|CellOrdinal|所需`Long`屬性。 包含要更新之資料格的以零為基底序數位置。|  
   
 ## <a name="remarks"></a>備註  
  如需更新資料格的詳細資訊，請參閱[更新資料格 &#40;XMLA&#41;](../../multidimensional-models-scripting-language-assl-xmla/updating-cells-xmla.md)。  

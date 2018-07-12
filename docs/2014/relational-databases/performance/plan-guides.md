@@ -5,10 +5,9 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-plan-guides
+ms.technology: performance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - TEMPLATE plan guide
 - SQL plan guides
@@ -21,15 +20,15 @@ helpviewer_keywords:
 - USE PLAN query hint
 ms.assetid: bfc97632-c14c-4768-9dc5-a9c512f6b2bd
 caps.latest.revision: 52
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: cced80dda0c62b4c339fb058a05ef927c602e5d1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 1741595891ebc04a70d70c006a3871c7f39ec07e
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36037212"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37430397"
 ---
 # <a name="plan-guides"></a>計畫指南
   當您無法或不想要在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]中直接變更實際查詢的文字時，您可以使用計畫指南來最佳化查詢的效能。 計畫指南是將查詢提示或固定的查詢計畫附加至查詢，藉以影響查詢的最佳化。 當協力廠商所提供的資料庫應用程式中有少量查詢子集的執行情況不如預期時，使用計畫指南會非常有用。 在計畫指南中，指定您要最佳化的 Transact-SQL 陳述式以及包含您想要使用之查詢提示的 OPTION 子句，或者是您想要用來將查詢進行最佳化的特定查詢計畫。 執行查詢時， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會比對 Transact-SQL 陳述式與計畫指南，然後在執行階段中，將 OPTION 子句附加至查詢或使用指定的查詢計畫。  
@@ -37,7 +36,7 @@ ms.locfileid: "36037212"
  您可以建立的計畫指南總數僅限於可用的系統資源。 因此，您應該限制計畫指南，只用於可改善或穩定效能的關鍵任務查詢。 計畫指南不應用來影響已部署之應用程式的大部分查詢負載。  
   
 > [!NOTE]  
->  並非每個 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]版本都可使用計劃指南。 如需所支援的版本功能的清單[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，請參閱[支援的 SQL Server 2014 的版本功能](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)。 在任何版本中都可以看到計畫指南。 您也可以將包含計畫指南的資料庫附加到任何版本中。 當您將資料庫還原或附加至 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的升級版本時，計畫指南仍維持不變。  
+>  並非每個 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]版本都可使用計劃指南。 如需的版本所支援的功能清單[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，請參閱 <<c2> [ 支援的 SQL Server 2014 的版本功能](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)。 在任何版本中都可以看到計畫指南。 您也可以將包含計畫指南的資料庫附加到任何版本中。 當您將資料庫還原或附加至 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的升級版本時，計畫指南仍維持不變。  
   
 ## <a name="types-of-plan-guides"></a>計畫指南的類型  
  您可以建立下列類型的計畫指南。  

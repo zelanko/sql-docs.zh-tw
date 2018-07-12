@@ -1,5 +1,5 @@
 ---
-title: 硬體和軟體需求的 Reporting Services SharePoint 模式 |Microsoft 文件
+title: 硬體和軟體需求的 Reporting Services SharePoint 模式 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: ed91877d-4f74-4266-a932-b824b4810c99
 caps.latest.revision: 14
 author: markingmyname
 ms.author: maghan
-manager: jhubbard
-ms.openlocfilehash: 6b02fd6592ce8b57900bf3c8e5558a6b3cfacc86
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 27e25103ae362a664a4432ee62befd0efbc9681a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36132803"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37166139"
 ---
 # <a name="hardware-and-software-requirements-for-reporting-services-in-sharepoint-mode"></a>SharePoint 模式的 Reporting Services 之硬體和軟體需求
   本主題描述以 SharePoint 模式執行 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 的必要條件、硬體需求和安裝考量。 由於 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint 模式需要 SharePoint 伺服器，因此大部分需求都是以 SharePoint 環境為基礎。 若是原生模式報表伺服器，您的硬體應符合執行 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]的最低硬體和軟體需求。 如需詳細資訊，請參閱＜ [Hardware and Software Requirements for Installing SQL Server 2014](hardware-and-software-requirements-for-installing-sql-server.md)＞。  
@@ -68,7 +68,7 @@ ms.locfileid: "36132803"
  請檢閱 Office.Microsoft.com 上最新的 [Power View 文件集](http://office.microsoft.com/excel-help/power-view-explore-visualize-and-present-your-data-HA102835634.aspx) 。 [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] 是 Microsoft Excel 2013 的一項功能，而且屬於適用於 Microsoft SharePoint Server 2010 和 2013 Enterprise 版之 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Reporting Services 增益集的一部分。  
   
 ##  <a name="bkmk_more_information"></a> 其他資訊  
- 有關 SharePoint 變更的資訊，請參閱[變更從 SharePoint 2010 到 SharePoint 2013](http://technet.microsoft.com/library/ff607742\(office.15\).aspx) (http://technet.microsoft.com/en-us/library/ff607742(office.15).aspx)。  
+ 如需 SharePoint 變更的詳細資訊，請參閱[SharePoint 2013 會從 SharePoint 2010 變成](http://technet.microsoft.com/library/ff607742\(office.15\).aspx)(http://technet.microsoft.com/en-us/library/ff607742(office.15).aspx)。  
   
  [SQL Server 2014 版本資訊](http://go.microsoft.com/fwlink/?LinkID=296445)。  
   

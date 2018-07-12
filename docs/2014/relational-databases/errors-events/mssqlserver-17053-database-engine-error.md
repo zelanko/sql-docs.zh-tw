@@ -5,23 +5,22 @@ ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - 17053 (Database Engine error)
 ms.assetid: e0a01f3d-d0aa-4c38-8bcc-82e59de50512
 caps.latest.revision: 14
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: c212a47ca60b8eaf456c58c51e56b98a7ec03bb8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 5ad2d2cd4d9cbe7536109cefe593933cfffd9166
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36032773"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37414957"
 ---
 # <a name="mssqlserver17053"></a>MSSQLSERVER_17053
     

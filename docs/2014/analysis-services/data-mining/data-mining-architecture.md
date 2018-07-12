@@ -1,5 +1,5 @@
 ---
-title: 資料採礦架構 |Microsoft 文件
+title: 資料採礦架構 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 105f52e1-ad3b-4cd0-b67b-06dbb451c304
 caps.latest.revision: 10
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 9fd364f897299bdee36f931f999bdd623a1878c3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: bb84b8ffc9f3dfbb5b1e89a50b0d57b2dafa9111
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36132326"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37239948"
 ---
 # <a name="data-mining-architecture"></a>資料採礦架構
   本節描述在 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]的執行個體內裝載的資料採礦方案架構。 本節的主題描述可支援資料採礦之 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 執行個體的邏輯和實體架構，也提供有關用戶端、提供者和通訊協定的資訊，該通訊協定可用來與資料採礦伺服器通訊以及在本機或遠端搭配資料採礦物件使用。  

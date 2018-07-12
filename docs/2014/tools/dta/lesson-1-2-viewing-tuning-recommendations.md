@@ -1,5 +1,5 @@
 ---
-title: 檢視微調建議 |Microsoft 文件
+title: 檢視微調建議 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Database Engine [SQL Server], tutorials
 ms.assetid: e4e690c9-434f-4b01-b4de-0b905323ddd6
 caps.latest.revision: 25
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: c3152ba823577308d846bfe5862af16681008f64
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: f21cb4a4e5142cd0410153daf37b05ef181be9d6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36134521"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37157709"
 ---
 # <a name="viewing-tuning-recommendations"></a>檢視微調建議
   這項工作使用您先前在[微調工作負載](lesson-1-1-tuning-a-workload.md)中所建立的微調工作階段。 利用 MyScript.sql [!INCLUDE[tsql](../../includes/tsql-md.md)] 指令碼微調好 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 資料庫之後，[!INCLUDE[ssDE](../../includes/ssde-md.md)] Tuning Advisor 會在 [建議] 索引標籤中顯示其結果。下列工作將介紹 [!INCLUDE[ssDE](../../includes/ssde-md.md)] Tuning Advisor 圖形化使用者介面 (GUI) 的 [建議] 索引標籤，並引導您探索它針對微調工作階段結果所提供的相關資訊。  
@@ -38,7 +38,7 @@ ms.locfileid: "36134521"
   
 4.  在 [索引建議] 窗格中，以滑鼠右鍵按一下方格。 這個右鍵功能表可讓您選取和取消選取各項建議。 您也可以利用它來變更方格文字的字型。  
   
-5.  在 [動作] 功能表上，按一下 [儲存建議]，將所有建議儲存在單一 [!INCLUDE[tsql](../../includes/tsql-md.md)] 指令碼中。 指令碼`MySessionRecommendations.sql`。  
+5.  在 [動作] 功能表上，按一下 [儲存建議]，將所有建議儲存在單一 [!INCLUDE[tsql](../../includes/tsql-md.md)] 指令碼中。 指令碼命名`MySessionRecommendations.sql`。  
   
      在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 的查詢編輯器中，開啟 MySessionRecommendations.sql 指令碼來檢視它。 您可能會在查詢編輯器中執行這份指令碼，將建議套用在 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 範例資料庫上，但請勿執行這個動作。 請在查詢編輯器中關閉這份指令碼，不要執行它。  
   

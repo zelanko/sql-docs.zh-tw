@@ -5,21 +5,19 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-udf
+ms.technology: ''
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: db1d668a-23b7-4757-a9c5-1bd848ba7f6d
-caps.latest.revision: 7
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 91e7f445c9dc673a4e0cd8323cb257dfc672afe7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: rothja
+ms.author: jroth
+manager: craigg
+ms.openlocfilehash: 9fa7957927c04f883e7aedf5f19571c41fd21e30
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36036323"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37417917"
 ---
 # <a name="delete-user-defined-functions"></a>刪除使用者定義函數
   您可以透過使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或下列項目，刪除 (卸除) [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中的使用者定義函數： [!INCLUDE[tsql](../../includes/tsql-md.md)]  

@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Virtual Memory Manager
 - max server memory option
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - memory [SQL Server], servers
 ms.assetid: 29ce373e-18f8-46ff-aea6-15bbb10fb9c2
 caps.latest.revision: 76
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 5ddbf4ccd432a7ba7ff9f4d946572dfcc6500dbc
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 4ae726d4a8706b5fbb04c8d10c8a14c3aeeb0790
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36132940"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37160959"
 ---
 # <a name="server-memory-server-configuration-options"></a>伺服器記憶體伺服器組態選項
   您可以使用 [最小伺服器記憶體] 和 [最大伺服器記憶體] 這兩個伺服器記憶體選項，針對 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體所使用的 SQL Server 處理序重新設定 SQL Server Memory Manager 所管理的記憶體數量 (以 MB 為單位)。  
@@ -87,14 +87,14 @@ ms.locfileid: "36132940"
 3.  如果已選取 [網路應用程式的資料輸送量最大化]，請選擇其他任何選項，按一下 [確定]，然後關閉其餘的對話方塊。  
   
 ## <a name="lock-pages-in-memory"></a>鎖定記憶體分頁  
- 此 Windows 原則決定哪些帳戶可以使用處理序將資料保留在實體記憶體中，以防止系統將資料傳送到磁碟上的虛擬記憶體。 將記憶體分頁到磁碟時，鎖定記憶體分頁可能會讓伺服器保持回應狀態。 SQL Server**鎖定記憶體分頁**選項設為 ON 的 32 位元和 64 位元執行個體中[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]標準版和更高版本時，具有執行 sqlservr.exe 權限的帳戶授與 Windows 中的 「 鎖定頁面記憶體 (LPIM) 使用者權限。 在舊版 SQL Server 中，設定 32 位元 SQL Server 執行個體的 [鎖定分頁] 選項時，需要具有 sqlservr.exe 執行權限的帳戶具有 LPIM 使用者權限，而且 'awe_enabled' 組態選項設定為 ON。  
+ 此 Windows 原則決定哪些帳戶可以使用處理序將資料保留在實體記憶體中，以防止系統將資料傳送到磁碟上的虛擬記憶體。 將記憶體分頁到磁碟時，鎖定記憶體分頁可能會讓伺服器保持回應狀態。 SQL Server**鎖定記憶體分頁**選項，會在 32 位元和 64 位元執行個體設定為 ON[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]標準版和更高版本的帳戶具有執行 sqlservr.exe 權限授與 Windows 中的 「 已鎖定頁面記憶體 (LPIM) 使用者權限。 在舊版 SQL Server 中，設定 32 位元 SQL Server 執行個體的 [鎖定分頁] 選項時，需要具有 sqlservr.exe 執行權限的帳戶具有 LPIM 使用者權限，而且 'awe_enabled' 組態選項設定為 ON。  
   
  若要停用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的 [鎖定記憶體中的分頁] 選項，請移除 SQL Server 啟動帳戶的 [Locked Pages in Memory (已鎖定記憶體中的分頁)] 使用者權限。  
   
 ### <a name="to-disable-lock-pages-in-memory"></a>停用鎖定記憶體中的分頁  
  **若要停用鎖定記憶體分頁選項：**  
   
-1.  在 **[開始]** 功能表上，按一下 **[執行]**。 在**開啟**方塊中，輸入`gpedit.msc`。  
+1.  在 **[開始]** 功能表上，按一下 **[執行]**。 在 **開放**方塊中，輸入`gpedit.msc`。  
   
      [群組原則] 對話方塊隨即開啟。  
   
@@ -136,11 +136,11 @@ ms.locfileid: "36132940"
   
 ||32 位元|64 位元|  
 |-|-------------|-------------|  
-|傳統記憶體|在所有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本中，處理虛擬位址空間的最大限制：<br /><br /> 2 GB<br /><br /> 使用 3 GB **3 gb**開機參數 *<br /><br /> 在 WOW64 上的 4 GB\*\*|在所有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本中，處理虛擬位址空間的最大限制：<br /><br /> 在 x64 架構上為 8 TB|  
+|傳統記憶體|在所有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本中，處理虛擬位址空間的最大限制：<br /><br /> 2 GB<br /><br /> 3GB 含**3gb**開機參數 *<br /><br /> 在 WOW64 上的 4 GB\*\*|在所有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本中，處理虛擬位址空間的最大限制：<br /><br /> 在 x64 架構上為 8 TB|  
   
  ***/3gb** 是作業系統開機參數。 如需詳細資訊，請瀏覽 [MSDN Library](http://go.microsoft.com/fwlink/?LinkID=10257&clcid=0x409)。  
   
- * * WOW64 (Windows on Windows 64) 是一種模式在 32 位元的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]64 位元作業系統上執行。 如需詳細資訊，請瀏覽 [MSDN Library](http://go.microsoft.com/fwlink/?LinkID=10257&clcid=0x409)。  
+ * * WOW64 (Windows on Windows 64) 是 32 位元模式[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]64 位元作業系統上執行。 如需詳細資訊，請瀏覽 [MSDN Library](http://go.microsoft.com/fwlink/?LinkID=10257&clcid=0x409)。  
   
 ## <a name="examples"></a>範例  
   

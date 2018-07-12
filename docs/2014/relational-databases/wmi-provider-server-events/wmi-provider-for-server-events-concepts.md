@@ -1,5 +1,5 @@
 ---
-title: WMI 事件提供者伺服器概念 |Microsoft 文件
+title: WMI 事件提供者伺服器概念 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -18,15 +18,15 @@ helpviewer_keywords:
 - events [WMI]
 ms.assetid: 80767fe0-32ac-406a-81a0-8212cd6ce7e4
 caps.latest.revision: 17
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 5ac66540e137a0b199280dfe86aeb204ff68b31c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+ms.openlocfilehash: 68ec2984b3b80b1ef0aa4065d6aa067aa8cea784
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36133159"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37211168"
 ---
 # <a name="wmi-provider-for-server-events-concepts"></a>伺服器事件的 WMI 提供者概念
   伺服器事件的 WMI 提供者可讓您使用 Windows Management Instrumentation (WMI)，在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的執行個體中監視事件。  
@@ -41,7 +41,7 @@ ms.locfileid: "36133159"
  [搭配伺服器事件的 WMI 提供者使用 WQL](using-wql-with-the-wmi-provider-for-server-events.md)  
  說明 WMI 查詢語言 (WQL) 語法以及如何在針對提供者進行程式設計時使用它。  
   
- [範例： 使用伺服器事件的 WMI 提供者建立 SQL Server 代理程式警示](sample-creating-a-sql-server-agent-alert-with-the-wmi-provider.md)  
+ [範例：使用伺服器事件的 WMI 提供者建立 SQL Server Agent 警示](sample-creating-a-sql-server-agent-alert-with-the-wmi-provider.md)  
  提供使用 WMI 提供者傳回在其上建立 SQL Server Agent 警示之追蹤事件資訊的範例。  
   
  [範例： 使用.NET Framework 使用 WMI 事件提供者](sample-using-the-wmi-event-provider-with-the-net-framework.md)  

@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - SQL12.SWB.SQLSERVEROBJECTEXPLORER.DHELP
 helpviewer_keywords:
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - OE Help
 ms.assetid: e60367a7-3fdd-40b8-82bb-9e819d78de5a
 caps.latest.revision: 5
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: b3384ccf29fcf49d8d2a06263e3dcbc7f02a7111
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 87c8cb0351fba08f588f37bc7ae882a0da28eb95
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36132555"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37165739"
 ---
 # <a name="manage-objects-by-using-object-explorer"></a>使用物件總管管理物件
   您可以使用物件總管管理像是資料庫、資料表和預存程序等物件。  
@@ -59,7 +59,7 @@ ms.locfileid: "36132555"
   
 ## <a name="see-also"></a>另請參閱  
  [物件總管](object-explorer.md)   
- [開啟並設定 [物件總管]](open-and-configure-object-explorer.md)   
+ [開啟和設定物件總管](open-and-configure-object-explorer.md)   
  [從 [物件總管] 連接到執行個體](connect-to-an-instance-from-object-explorer.md)   
  [物件總管詳細資料窗格](object-explorer-details-pane.md)   
  [Management Studio 中的自訂報表](custom-reports-in-management-studio.md)  

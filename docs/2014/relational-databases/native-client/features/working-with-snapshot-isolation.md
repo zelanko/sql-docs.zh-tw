@@ -1,13 +1,11 @@
 ---
-title: 使用快照隔離 |Microsoft 文件
+title: 使用快照隔離 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client  - "database-engine" - "docset-sql-devref"
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -25,15 +23,15 @@ helpviewer_keywords:
 - SQLSetConnectAttr function
 ms.assetid: 39e87eb1-677e-45dd-bc61-83a4025a7756
 caps.latest.revision: 27
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: d5c2c3e77e352db45d728e1936fcb1973d5fe332
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 5ae5580b817a6719973eb297819440ee87facd60
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36037014"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37423527"
 ---
 # <a name="working-with-snapshot-isolation"></a>使用快照隔離
   [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 引進了新的「快照」隔離等級，目的是增強線上交易處理 (OLTP) 應用程式的並行存取。 在舊版的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 中，並行存取完全以鎖定為基礎，因此導致某些應用程式發生封鎖及死結問題。 快照集隔離相依於對資料列版本設定的增強功能，目的是藉由避免發生讀取器-寫入器封鎖的案例來改善效能。  
@@ -41,7 +39,7 @@ ms.locfileid: "36037014"
  在快照隔離下啟動的交易會根據交易啟動的時間而讀取資料庫快照。 其結果之一，就是索引鍵集、動態和靜態伺服器資料指標在快照交易內容內開啟時，其行為與在可序列化交易內開啟的靜態資料指標非常類似。 不過，當資料指標開啟時，快照隔離等級並不會鎖定，因而可能減少伺服器上發生封鎖的機會。  
   
 ## <a name="sql-server-native-client-ole-db-provider"></a>SQL Server Native Client OLE DB 提供者  
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者具有充分利用中所引進的快照集隔離的增強功能[!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]。 這些增強功能包括對 DBPROPSET_DATASOURCEINFO 和 DBPROPSET_SESSION 屬性集所做的變更。  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者具備增強功能，利用中所引進的快照集隔離[!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]。 這些增強功能包括對 DBPROPSET_DATASOURCEINFO 和 DBPROPSET_SESSION 屬性集所做的變更。  
   
 ### <a name="dbpropsetdatasourceinfo"></a>DBPROPSET_DATASOURCEINFO  
  DBPROPSET_DATASOURCEINFO 屬性集已變更，現藉由加入用於 DBPROP_SUPPORTEDTXNISOLEVELS 屬性中的 DBPROPVAL_TI_SNAPSHOT 值來支援快照隔離等級。 這個新值代表不論資料庫上是否啟用版本控制，快照隔離等級都受到支援。 下列是 DBPROP_SUPPORTEDTXNISOLEVELS 值的清單：  
@@ -63,10 +61,10 @@ ms.locfileid: "36037014"
  如需如何在交易中支援快照隔離的資訊，請參閱[支援本機交易](../../native-client-ole-db-transactions/transactions.md)。  
   
 ## <a name="sql-server-native-client-odbc-driver"></a>SQL Server Native Client ODBC 驅動程式  
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC 驅動程式提供支援快照集隔離雖然增強[SQLSetConnectAttr](../../native-client-odbc-api/sqlsetconnectattr.md)和[SQLGetInfo](../../native-client-odbc-api/sqlgetinfo.md)函式。  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC 驅動程式提供支援對快照集隔離的增強功能來[SQLSetConnectAttr](../../native-client-odbc-api/sqlsetconnectattr.md)並[SQLGetInfo](../../native-client-odbc-api/sqlgetinfo.md)函式。  
   
 ### <a name="sqlsetconnectattr"></a>SQLSetConnectAttr  
- **SQLSetConnectAttr**函數現支援 SQL_COPT_SS_TXN_ISOLATION 屬性的使用。 將 SQL_COPT_SS_TXN_ISOLATION 設定為 SQL_TXN_SS_SNAPSHOT 代表交易會在快照隔離等級之下發生。  
+ **SQLSetConnectAttr**函數現支援 SQL_COPT_SS_TXN_ISOLATION 屬性。 將 SQL_COPT_SS_TXN_ISOLATION 設定為 SQL_TXN_SS_SNAPSHOT 代表交易會在快照隔離等級之下發生。  
   
 ### <a name="sqlgetinfo"></a>SQLGetInfo  
  [SQLGetInfo](../../native-client-odbc-api/sqlgetinfo.md)函數現支援 SQL_TXN_SS_SNAPSHOT 值已加入至 SQL_TXN_ISOLATION_OPTION 資訊類型。  

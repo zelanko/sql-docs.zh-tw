@@ -1,26 +1,24 @@
 ---
-title: LOCALDB_ERROR_UNKNOWN_ERROR_CODE |Microsoft 文件
+title: LOCALDB_ERROR_UNKNOWN_ERROR_CODE |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: supportability
 ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 8f8472b6-e6fc-44f3-82c7-25f127461fa8
 caps.latest.revision: 7
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: ae09075cc07ee1ec818f65b1c03a2d385324c110
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 44ec33b7538c606a9f3e7378d9ac5717123a341f
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36032132"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37429397"
 ---
 # <a name="localdberrorunknownerrorcode"></a>LOCALDB_ERROR_UNKNOWN_ERROR_CODE
     

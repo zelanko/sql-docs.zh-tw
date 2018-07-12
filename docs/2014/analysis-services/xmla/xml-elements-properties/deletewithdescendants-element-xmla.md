@@ -1,5 +1,5 @@
 ---
-title: DeleteWithDescendants 元素 (XMLA) |Microsoft 文件
+title: DeleteWithDescendants 元素 (XMLA) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -24,18 +24,18 @@ helpviewer_keywords:
 - DeleteWithDescendants element
 ms.assetid: adfc9437-aaa7-4364-bcdb-128fcc9a410d
 caps.latest.revision: 12
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: 0a51772adb2a571f99a5927fe8150d04ab5ef648
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 9aa39e4091c0d2fcde431a9f859c7a9b7a0e6e34
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36134697"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37155249"
 ---
 # <a name="deletewithdescendants-element-xmla"></a>DeleteWithDescendants 元素 (XMLA)
-  指出是否屬性成員的下階也會一併刪除父代[卸除](../xml-elements-commands/drop-element-xmla.md)命令。  
+  指出是否屬性成員的下階也會刪除父代[卸除](../xml-elements-commands/drop-element-xmla.md)命令。  
   
 ## <a name="syntax"></a>語法  
   
@@ -64,7 +64,7 @@ ms.locfileid: "36134697"
 |子元素|無|  
   
 ## <a name="remarks"></a>備註  
- `DeleteWithDescendants`元素會決定是否`Drop`命令應該刪除所識別的屬性成員[其中](where-element-xmla.md)項目，但是，這些屬性成員的子系會一併卸除。  
+ `DeleteWithDescendants`元素會決定是否`Drop`命令應刪除所識別的屬性成員[其中](where-element-xmla.md)項目，但是，這些屬性成員的子系會一併卸除。  
   
 > [!NOTE]  
 >  這個元素只會套用至父子式階層中的屬性成員。  

@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vdt.dlgbox.fulltextcolumn
 ms.assetid: a6f41c5c-d950-4d64-9e42-d062925917b6
 caps.latest.revision: 15
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: bd641b9fff24a398943891025a28eb512ac731f6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: b4a01c8f5ca0230207c6b4ebbc4fc76244ea16f8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36132556"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37165679"
 ---
 # <a name="full-text-index-columns-dialog-box-visual-database-tools"></a>全文檢索索引資料行對話方塊 (Visual Database Tools)
   這個對話方塊會列出 [資料表設計工具] 開啟的資料表中，參與全文檢索索引的資料行。 若要存取這個對話方塊，請在資料表設計工具中的資料表上按一下滑鼠右鍵、選擇 [全文檢索索引]，然後在 [全文檢索索引] 對話方塊中，依序按一下想要檢視或編輯之資料行索引、右邊方格的 [資料行] 欄位，再按一下省略符號 (**…**)。  

@@ -1,39 +1,37 @@
 ---
-title: 傳送資料，做為資料表值參數，使用在執行資料 (ODBC) |Microsoft 文件
+title: 將資料當做資料表值參數，使用在執行資料 (ODBC) 傳送 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - table-valued parameters (ODBC), sending data to a stored procedure one row at a time
 ms.assetid: 361e6442-34de-4cac-bdbd-e05f04a21ce4
 caps.latest.revision: 25
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: e829a25e61976d21dd015c683b7639b7e94e4240
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 08c0a7a6193404d7ea05322bd4bc4d6e24cb5f1b
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36131478"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37411127"
 ---
 # <a name="sending-data-as-a-table-valued-parameter-using-data-at-execution-odbc"></a>使用資料執行中 (ODBC) 以資料表值參數的方式傳送資料
-  這是類似於[記憶體中的所有](sending-data-as-a-table-valued-parameter-with-all-values-in-memory-odbc.md)程序，但使用資料表值參數資料在執行。  
+  這是類似[全都放在記憶體](sending-data-as-a-table-valued-parameter-with-all-values-in-memory-odbc.md)程序，但使用資料表值參數資料在執行。  
   
- 如需示範資料表值參數的另一個範例，請參閱[使用資料表值參數&#40;ODBC&#41;](table-valued-parameters-odbc.md)。  
+ 如需示範資料表值參數的另一個範例，請參閱 <<c0> [ 使用資料表值參數&#40;ODBC&#41;](table-valued-parameters-odbc.md)。</c0>  
   
- 在此範例中，呼叫 SQLExecute 或 SQLExecDirect 時，驅動程式會傳回 SQL_NEED_DATA。 應用程式接著會呼叫 SQLParamData 重複直到驅動程式會傳回 SQL_NEED_DATA 以外的值。 驅動程式會傳回*ParameterValuePtr*通知哪一個參數，它會要求資料的應用程式。 應用程式呼叫 SQLPutData SQLParamData 下次呼叫之前提供參數資料。 SQLPutData 呼叫資料表值參數，表示它準備好的驅動程式 （在此範例中，永遠為 1） 的資料列數目。 當資料表值的所有資料列傳遞至驅動程式時，SQLPutData 稱為指出有 0 個資料列可供使用。  
+ 在此範例中，呼叫 SQLExecute 或 SQLExecDirect 時，驅動程式會傳回 SQL_NEED_DATA。 接著，應用程式會呼叫 SQLParamData 重複直到驅動程式會傳回 SQL_NEED_DATA 以外的值。 驅動程式會傳回*ParameterValuePtr*通知哪一個參數，它會要求資料的應用程式。 應用程式會呼叫 SQLPutData 提供 SQLParamData 的下一個呼叫之前的參數資料。 SQLPutData 呼叫資料表值參數，表示它已準備好驅動程式 （在此範例中，永遠為 1） 的資料列數目。 當資料表值的所有資料列已傳遞至驅動程式時，SQLPutData 稱為指出有 0 個資料列可供使用。  
   
- 您可以在資料表值的資料列內使用資料執行中的值。 SQLParamData 所傳回的值就會通知應用程式的驅動程式有要求的值。 如同一般的參數值 SQLPutData 可以呼叫一次或多次的字元或二進位資料表值資料行值。 這樣可以讓應用程式以片段傳遞很大的值。  
+ 您可以在資料表值的資料列內使用資料執行中的值。 SQLParamData 所傳回的值會通知哪一個值，驅動程式需要應用程式。 如同一般的參數值 SQLPutData 可以呼叫一次或多次的字元或二進位資料表值的資料行值。 這樣可以讓應用程式以片段傳遞很大的值。  
   
- 針對資料表值呼叫 SQLPutData 時*DataPtr*用於 （在此範例中，永遠為 1） 可用的資料列數目。 *StrLen_or_IndPtr*必須一律為 0。 已傳遞資料表值的所有資料列，當呼叫 SQLPutData *DataPtr*值為 0。  
+ SQLPutData 呼叫資料表值時， *DataPtr*用於可用 （在此範例中，永遠為 1） 的資料列數目。 *StrLen_or_IndPtr*必須一律為 0。 當已傳遞資料表值的所有資料列時，呼叫 SQLPutData *DataPtr*值為 0。  
   
 ## <a name="prerequisite"></a>必要條件  
  此程序假設已在伺服器上執行下列 [!INCLUDE[tsql](../../includes/tsql-md.md)]：  
@@ -134,7 +132,7 @@ from @Items
     r = SQLExecDirect(hstmt, (SQLCHAR *) "{call TVPOrderEntry(?, ?, ?, ?)}",SQL_NTS);  
     ```  
   
-6.  提供資料執行中參數資料。 當傳回 SQLParamData *ParameterValuePtr*資料表值參數，應用程式必須準備資料行的下一個資料列或資料表值的資料列。 應用程式會呼叫具有 SQLPutData *DataPtr*設定 （在此範例中，1） 可用的資料列數目和*StrLen_or_IndPtr*設為 0。  
+6.  提供資料執行中參數資料。 當傳回 SQLParamData *ParameterValuePtr*資料表值參數，應用程式必須準備資料行的下一個資料列或資料表值的資料列。 然後應用程式會呼叫與 SQLPutData *DataPtr*設為可用 （在此範例中，1） 的資料列數和*StrLen_or_IndPtr*設為 0。  
   
     ```  
     // Check if parameter data is required, and get the first parameter ID token  
@@ -189,7 +187,7 @@ from @Items
 ## <a name="example"></a>範例  
   
 ### <a name="description"></a>描述  
- 這個範例示範您可以使用資料列資料流，SQLPutData，搭配 ODBC TVP，類似於您如何使用 BCP.exe 將資料載入資料庫呼叫每一個資料列。  
+ 此範例示範您可以使用資料列資料流，每次呼叫 SQLPutData，搭配 ODBC TVP，類似於您如何使用 BCP.exe 將資料載入至資料庫的一個資料列。  
   
  在建立範例之前，請在連接字串中變更伺服器名稱。  
   
@@ -377,7 +375,7 @@ EXIT:
 ## <a name="example"></a>範例  
   
 ### <a name="description"></a>描述  
- 這個範例示範您可以使用資料列資料流，每個呼叫，以 SQLPutData，搭配 ODBC TVP，類似於您如何使用 BCP.exe 將資料載入資料庫的多個資料列。  
+ 此範例示範您可以使用資料列資料流，每次呼叫 SQLPutData，搭配 ODBC TVP，類似於您如何使用 BCP.exe 將資料載入至資料庫的多個資料列。  
   
  在建立範例之前，請在連接字串中變更伺服器名稱。  
   

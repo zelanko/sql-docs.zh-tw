@@ -8,26 +8,26 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Best Practices [Database Engine]
 ms.assetid: 46788407-187e-4b0b-bfe4-529af8d77c60
 caps.latest.revision: 25
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 540b7ec825fa8cacb5fe3852e4ad3e8ea8e096f3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 0bc95e67c4fc29beb61dc518d2f33b203dcae3fc
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36132860"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37240568"
 ---
 # <a name="monitor-and-enforce-best-practices-by-using-policy-based-management"></a>使用原則式管理來監視和強制最佳做法
-  原則式管理可讓您監視的最佳作法[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會提供一組原則檔讓您當做最佳作法原則來匯入，然後針對包含執行個體、執行個體物件、資料庫或資料庫物件的目標集來評估原則。 您可以手動評估原則、設定原則來根據排程評估目標集，或是設定原則來根據事件評估目標集。 如需原則式管理的詳細資訊，請參閱 [使用原則式管理來管理伺服器](administer-servers-by-using-policy-based-management.md)。  
+  以原則為基礎的管理可讓您監視的最佳作法[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會提供一組原則檔讓您當做最佳作法原則來匯入，然後針對包含執行個體、執行個體物件、資料庫或資料庫物件的目標集來評估原則。 您可以手動評估原則、設定原則來根據排程評估目標集，或是設定原則來根據事件評估目標集。 如需原則式管理的詳細資訊，請參閱 [使用原則式管理來管理伺服器](administer-servers-by-using-policy-based-management.md)。  
   
 ## <a name="policy-and-rules-for-database-engine"></a>Database Engine 的原則和規則  
- 下表列出隨附安裝的原則[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]並包含每個原則評估之最佳作法規則的資訊。 這些原則會儲存為 XML 檔案，而且必須匯入 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 如需如何匯入原則的詳細資訊，請參閱 [匯入原則式管理原則](import-a-policy-based-management-policy.md)。  
+ 下表列出隨附安裝的原則[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]和包含每個原則評估之最佳作法規則的相關資訊。 這些原則會儲存為 XML 檔案，而且必須匯入 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 如需如何匯入原則的詳細資訊，請參閱 [匯入原則式管理原則](import-a-policy-based-management-policy.md)。  
   
 |原則名稱|最佳作法規則|  
 |-----------------|------------------------|  
@@ -42,8 +42,8 @@ ms.locfileid: "36132860"
 |Guest 權限|[使用者資料庫的 Guest 權限](guest-permissions-on-user-databases.md)|  
 |上次成功備份日期|[過期的備份](outdated-backup.md)|  
 |未對外授予伺服器權限|[伺服器 public 權限](server-public-permissions.md)|  
-|SQL Server 32 位元 Affinity Mask 重疊|[正確的 Affinity Mask 和 Affinity 輸入的輸出 Mask 重疊](correct-affinity-mask-and-affinity-input-and-output-mask-overlap.md)|  
-|SQL Server 64 位元 Affinity Mask 重疊|[正確的 Affinity Mask 和 Affinity 輸入的輸出 Mask 重疊](correct-affinity-mask-and-affinity-input-and-output-mask-overlap.md)|  
+|SQL Server 32 位元 Affinity Mask 重疊|[正確的 Affinity Mask 和 Affinity 輸入的輸出遮罩重疊](correct-affinity-mask-and-affinity-input-and-output-mask-overlap.md)|  
+|SQL Server 64 位元 Affinity Mask 重疊|[正確的 Affinity Mask 和 Affinity 輸入的輸出遮罩重疊](correct-affinity-mask-and-affinity-input-and-output-mask-overlap.md)|  
 |SQL Server Affinity Mask|[保留 Affinity Mask 預設值](keep-the-affinity-mask-default-value.md)|  
 |SQL Server 已封鎖的處理序臨界值|[增加或停用 Blocked Process Threshold](increase-or-disable-blocked-process-threshold.md)|  
 |SQL Server 預設追蹤|[預設追蹤記錄檔已停用](default-trace-log-files-disabled.md)|  
@@ -67,7 +67,7 @@ ms.locfileid: "36132860"
 |Windows 事件記錄檔失敗的 I/O 要求錯誤|[偵測失敗的輸入的輸出要求](detect-failed-input-and-output-requests.md)|  
 |Windows 事件記錄檔 I/O 延遲警告|[檢查磁碟輸入輸出子系統的 IO 延遲問題](check-disk-input-and-output-subsystem-for-io-delay-problems.md)|  
 |Windows 事件記錄檔硬分頁錯誤期間的 I/O 錯誤|[硬性分頁錯誤期間的輸入和輸出錯誤](input-and-output-error-during-hard-page-fault.md)|  
-|Windows 事件記錄檔讀取重試錯誤|[檢查磁碟輸入的輸出子系統的讀取重試問題](check-disk-input-output-subsystem-for-read-retry-problems.md)|  
+|Windows 事件記錄檔讀取重試錯誤|[檢查磁碟輸入輸出子系統的讀取重試問題](check-disk-input-output-subsystem-for-read-retry-problems.md)|  
 |Windows 事件記錄檔儲存系統 I/O 逾時錯誤|[儲存體系統輸入輸出逾時](storage-system-input-output-time-out.md)|  
 |Windows 事件記錄檔系統失敗錯誤|[非預期的系統失敗](unexpected-system-failures.md)|  
   

@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - dbe-xml
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - revoking permissions [SQL Server]
 ms.assetid: 4e542b70-2d56-4a65-8a39-96a1ed477ca6
 caps.latest.revision: 24
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: ecd918f53e814d81ab2e8a803d258811f9fe6d21
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 4fc6c82815b66c1534ab378f7412f53eac5c16bb
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36133168"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37230698"
 ---
 # <a name="revoke-permissions-on-an-xml-schema-collection"></a>撤銷 XML 結構描述集合上的權限
   建立 XML 結構描述集合的權限可以使用下列其中一種方式來撤銷：  

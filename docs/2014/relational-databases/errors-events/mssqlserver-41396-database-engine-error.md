@@ -5,23 +5,22 @@ ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - 41396 (Database Engine error)
 ms.assetid: 4ff04042-8367-46f3-8a16-c94682d6eedb
 caps.latest.revision: 8
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: ea091a41e23c553c273dd9005c19dab8d4e0fb50
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 21de5c18d090afad5461c344d7a6704ecd8dabe4
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36036559"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37421427"
 ---
 # <a name="mssqlserver41396"></a>MSSQLSERVER_41396
     

@@ -5,10 +5,9 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-backup-restore
+ms.technology: backup-restore
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - tables [SQL Server], backing up data
 - backups [SQL Server]
@@ -23,15 +22,15 @@ helpviewer_keywords:
 - backups [SQL Server], table-level backups unsupported
 ms.assetid: 09a6e0c2-d8fd-453f-9aac-4ff24a97dc1f
 caps.latest.revision: 81
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: e7df7b8c35327d097e7bbc92bfb1e5cf99c4f4ba
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: b48f8c9bbcb39f68aa0e86957c8713b6044216e5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36132895"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37163029"
 ---
 # <a name="backup-overview-sql-server"></a>Backup Overview (SQL Server)
   本主題介紹 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 備份元件。 備份 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫對於保護資料非常重要。 此討論涵蓋備份類型和備份限制。 本主題同時介紹 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 備份裝置和備份媒體。  
@@ -42,7 +41,7 @@ ms.locfileid: "36132895"
   
 -   [備份壓縮](#BackupCompression)  
   
--   [SQL Server 在備份作業的限制](#Restrictions)  
+-   [SQL Server 中的備份作業的限制](#Restrictions)  
   
 -   [相關工作](#RelatedTasks)  
   
@@ -61,7 +60,7 @@ ms.locfileid: "36132895"
   
  **備份類型**  
   
- [僅限複製備份](copy-only-backups-sql-server.md)  
+ [只複製備份](copy-only-backups-sql-server.md)  
  不受 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 一般備份順序影響的特殊用途備份。  
   
  資料備份  
@@ -110,7 +109,7 @@ ms.locfileid: "36132895"
 ##  <a name="BackupCompression"></a> 備份壓縮  
  [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)] 和更新版本支援壓縮備份，而 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 和更新版本可以還原壓縮的備份。 如需詳細資訊，請參閱[備份壓縮 &#40;SQL Server&#41;](backup-compression-sql-server.md)。  
   
-##  <a name="Restrictions"></a> SQL Server 在備份作業的限制  
+##  <a name="Restrictions"></a> SQL Server 中的備份作業的限制  
  可在資料庫仍在線上運作以及正在使用中的時候進行備份。 不過，會有下列限制：  
   
 ### <a name="offline-data-cannot-be-backed-up"></a>無法備份離線資料  

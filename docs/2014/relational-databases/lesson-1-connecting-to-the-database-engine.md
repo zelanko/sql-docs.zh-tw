@@ -8,30 +8,30 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: e8db82f0-50ed-4531-9209-940006ed34cb
 caps.latest.revision: 22
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 02942c1f5e223cdf996cb691a4e7d42cc95c1b81
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: rothja
+ms.author: jroth
+manager: craigg
+ms.openlocfilehash: 0dd6a74e002a6eb8dcb266d2ede766becc89813b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36132681"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37184244"
 ---
 # <a name="lesson-1-connecting-to-the-database-engine"></a>第 1 課：連接到 Database Engine
   當您安裝 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]時，所安裝的工具視版本和安裝選項而定。 這一課檢閱主要工具，顯示您如何連接及執行基本功能 (授權更多使用者)。  
   
   
   
-##  <a name="tools"></a> 入門的工具  
+##  <a name="tools"></a> 使用者入門的工具  
  [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 出貨時已附帶各種工具。 這個主題描述您需要的優先工具，並幫助您選取作業的正確工具。 所有工具都可以從 [開始] 功能表存取。 根據預設，有些工具 (像是 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]) 並不會安裝。 您必須在安裝期間選取工具作為用戶端元件的一部分。 如需下面所述工具的完整描述，請在《 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 線上叢書》中搜尋相關內容。 [!INCLUDE[ssExpress](../includes/ssexpress-md.md)] 只包含工具的子集。  
   
 ### <a name="basic-tools"></a>基本工具  
   
--   [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 是管理 [!INCLUDE[ssDE](../includes/ssde-md.md)] 及撰寫 [!INCLUDE[tsql](../includes/tsql-md.md)] 程式碼的主要工具。 它裝載於 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] Shell 中， 它不會包含在[!INCLUDE[ssExpress](../includes/ssexpress-md.md)]但仍可當做從獨立下載[Microsoft Download Center](http://go.microsoft.com/fwlink/?LinkId=144346)。  
+-   [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 是管理 [!INCLUDE[ssDE](../includes/ssde-md.md)] 及撰寫 [!INCLUDE[tsql](../includes/tsql-md.md)] 程式碼的主要工具。 它裝載於 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] Shell 中， 它不會納入[!INCLUDE[ssExpress](../includes/ssexpress-md.md)]，但可從個別下載，其中包括[Microsoft Download Center](http://go.microsoft.com/fwlink/?LinkId=144346)。  
   
 -   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 組態管理員會隨著 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 和用戶端工具一起安裝。 它可讓您啟用伺服器通訊協定、設定通訊協定選項 (例如 TCP 通訊埠)、設定伺服器服務自動啟動，以及設定用戶端電腦以您偏好的方式連接。 這個工具會設定更進階的連接元素，但是不會啟用功能。  
   
@@ -40,13 +40,13 @@ ms.locfileid: "36132681"
   
 ##### <a name="to-start-sql-server-management-studio"></a>啟動 SQL Server Management Studio  
   
--   在**啟動**功能表上，指向**所有程式**，指向  [!INCLUDE[ssCurrentUI](../includes/sscurrentui-md.md)]，然後按一下  **SQL Server Management Studio**。  
+-   在上**開始**功能表上，指向**所有程式**，指向[!INCLUDE[ssCurrentUI](../includes/sscurrentui-md.md)]，然後按一下**SQL Server Management Studio**。  
   
 ##### <a name="to-start-sql-server-configuration-manager"></a>啟動 SQL Server 組態管理員  
   
 -   指向 **[開始]** 功能表上的 **[所有程式]**，然後依序指向 [ [!INCLUDE[ssCurrentUI](../includes/sscurrentui-md.md)]] 和 **[組態工具]**，再按一下 **[SQL Server 組態管理員]**。  
   
-##  <a name="connect"></a> 使用 Management Studio 連接  
+##  <a name="connect"></a> 連接 Management Studio  
  如果您知道執行個體的名稱，而且是以電腦上管理員群組的成員身分來連接，則要從相同電腦上所執行的工具連接到 [!INCLUDE[ssDE](../includes/ssde-md.md)] 很容易。 下列程序必須執行在主控 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]的相同電腦上。  
   
 ##### <a name="to-determine-the-name-of-the-instance-of-the-database-engine"></a>判斷 Database Engine 執行個體的名稱  
@@ -54,7 +54,7 @@ ms.locfileid: "36132681"
 1.  以系統管理員群組的成員身分登入 Windows，然後開啟 [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]。  
   
     > [!IMPORTANT]  
-    >  如果您要連接到[!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)]上[!INCLUDE[wiprlhlong](../includes/wiprlhlong-md.md)]或[!INCLUDE[nextref_longhorn](../includes/nextref-longhorn-md.md)]（或更新版本），您可能需要以滑鼠右鍵按一下[!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]，然後按一下 **系統管理員身分執行**才能使用您的系統管理員進行連接認證。 從 [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] 開始，安裝程式會將選取的登入加入至 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]，因此不需要您的系統管理員認證。  
+    >  如果您要連接到[!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)]上[!INCLUDE[wiprlhlong](../includes/wiprlhlong-md.md)]或[!INCLUDE[nextref_longhorn](../includes/nextref-longhorn-md.md)]（或較新），您可能需要以滑鼠右鍵按一下[!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]，然後按一下 **系統管理員身分執行**才能使用您的系統管理員進行連接認證。 從 [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] 開始，安裝程式會將選取的登入加入至 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]，因此不需要您的系統管理員認證。  
   
 2.  在 [連接到伺服器] 對話方塊中，按一下 [取消]。  
   
@@ -80,7 +80,7 @@ ms.locfileid: "36132681"
   
 4.  按一下 **[連接]**。  
   
-##  <a name="additional"></a> 授權其他連接  
+##  <a name="additional"></a> 授權其他連線  
  既然您以管理員身分連接到 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ，您的首要工作之一就是授權其他使用者連接。 您可以建立登入，並授權該登入以使用者身分存取資料庫，來達成此目的。 登入可以是使用 Windows 認證的 Windows 驗證登入，或是 SQL Server 驗證登入，這種登入會將驗證資訊儲存在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 中，而且與 Windows 認證無關。 可能的話，請盡量使用 Windows 驗證。  
   
 ##### <a name="create-a-windows-authentication-login"></a>建立 Windows 驗證登入  
@@ -89,7 +89,7 @@ ms.locfileid: "36132681"
   
      [登入 - 新增] 對話方塊隨即出現。  
   
-2.  在**一般**頁面上，於**登入名稱**方塊中，輸入 Windows 登入格式*\<網域 >\\< 登入\>*。  
+2.  在 **一般**頁面上，於**登入名稱**方塊中，輸入下列格式的 Windows 登入*\<網域 >\\< 登入\>*。  
   
 3.  在 [預設資料庫] 方塊中，選取 [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] (如果有的話)。 否則，請選取 [master]。  
   

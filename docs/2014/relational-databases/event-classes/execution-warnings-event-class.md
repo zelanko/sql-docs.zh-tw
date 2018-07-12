@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 topic_type:
 - apiref
 helpviewer_keywords:
 - Execution Warnings event class
 ms.assetid: 2c69e321-dc9a-4483-886d-81350adae2be
 caps.latest.revision: 35
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 0a4db504829c3d59a8b6919923bc44096a16ce8e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 3197040119e6409d9ad471bceff7719d156e0c26
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36131724"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37258704"
 ---
 # <a name="execution-warnings-event-class"></a>Execution Warnings 事件類別
   Execution Warnings 事件類別指出在執行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 陳述式或預存程序期間發生的記憶體授與警告。 可監視此事件類別以判定繼續進行之前，查詢是否需等待可供使用的記憶體，或者取得記憶體的初始嘗試是否失敗。 有關查詢等候期間的資訊可協助發現系統中會影響效能的競爭問題。  

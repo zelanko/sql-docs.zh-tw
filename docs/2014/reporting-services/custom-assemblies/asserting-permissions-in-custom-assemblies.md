@@ -20,15 +20,15 @@ helpviewer_keywords:
 - security configuration files [Reporting Services]
 ms.assetid: 3afb9631-f15e-405e-990b-ee102828f298
 caps.latest.revision: 32
-author: douglaslM
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: a0e09b28471b61c010dec3686a729200fb1f384c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: 5dd1ba313ad1cdf7d3ceb73f1849db2755e0cf0f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36132821"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37228858"
 ---
 # <a name="asserting-permissions-in-custom-assemblies"></a>自訂組件中的判斷提示權限
   根據預設，自訂組譯碼會使用有限的 **Execution** 權限集合執行。 在某些情況下，您可能希望實作自訂組件，以安全地呼叫在安全性系統中受保護的資源 (例如檔案或是登錄)。 若要完成這個動作，您必須執行下列項目：  

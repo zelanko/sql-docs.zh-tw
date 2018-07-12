@@ -1,5 +1,5 @@
 ---
-title: 疑難排解處理資料 (SSAS 表格式) |Microsoft 文件
+title: 疑難排解處理資料 (SSAS 表格式) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 678f523c-e181-4456-9a54-7b7bf044b8d2
 caps.latest.revision: 11
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 8ddebb4bb6a2e1c3e3d4bc53052ff207d7bb1d40
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d066eaa1702d096e7e1d0919c988e6ea6e6bdbc0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36132274"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37239498"
 ---
 # <a name="troubleshoot-process-data-ssas-tabular"></a>疑難排解處理資料 (SSAS 表格式)
   本主題提供有關使用 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]製作模型時，處理 (重新整理) 模型資料的詳細資訊。 本主題不會提供有關處理模型中已部署至 Analysis Services 伺服器執行個體之資料的詳細資訊。 如需在部署的模型中處理資料的詳細資訊，請參閱 [在 Analysis Services 中編寫管理工作的指令碼](script-administrative-tasks-in-analysis-services.md)。  
@@ -50,7 +50,7 @@ ms.locfileid: "36132274"
   
  因此，在您變更資料來源或處理取自資料來源的資料之前，永遠都該注意潛在的影響，並考慮這些潛在的結果：  
   
--   模型資料的某些部分可能會因為資料來源中的變更而中斷。 如果並非所有的資料行都可從資料來源擷取 (例如它們已經遭到刪除或是變更)，處理便會失敗，而您就必須更新在來源資料與模型資料之間的對應。 如需詳細資訊，請參閱[編輯現有的資料來源連接&#40;SSAS 表格式&#41;](edit-an-existing-data-source-connection-ssas-tabular.md)。  
+-   模型資料的某些部分可能會因為資料來源中的變更而中斷。 如果並非所有的資料行都可從資料來源擷取 (例如它們已經遭到刪除或是變更)，處理便會失敗，而您就必須更新在來源資料與模型資料之間的對應。 如需詳細資訊，請參閱 <<c0> [ 編輯現有的資料來源連接&#40;SSAS 表格式&#41;](edit-an-existing-data-source-connection-ssas-tabular.md)。</c0>  
   
 -   處理後，某些資料行可能會標示為包含錯誤。 這種錯誤發生的原因，可能是資料行中的 DAX 公式使用當處理時就無法使用的資料、資料行的資料類型變更，或是將無效的值加入外部資料。 若要解決這個問題，您可以編輯公式，或者，如果該公式是以無法再使用的資料為基礎，您可以刪除資料行。  
   

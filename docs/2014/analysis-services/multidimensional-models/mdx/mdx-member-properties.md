@@ -1,5 +1,5 @@
 ---
-title: 使用成員屬性 (MDX) |Microsoft 文件
+title: 使用成員屬性 (MDX) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - DIMENSION PROPERTIES keyword
 - Properties function
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - members [MDX], properties
 ms.assetid: 26b5ad08-3799-4a5e-89f3-dca25e637d45
 caps.latest.revision: 29
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 6a7328de0b6711acdc89ca708aab5c7af5f1cf54
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c2918188146fd84761bd23340ec5b76b48685eab
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36132973"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37259534"
 ---
 # <a name="using-member-properties-mdx"></a>使用成員屬性 (MDX)
   成員屬性包含每個 Tuple 中每個成員的基本資訊。 此基本資訊包括成員名稱、父層級、子系數目等等。 指定層級上的所有成員都能使用成員屬性。 就組織而言，會將成員屬性視為儲存在單一維度上，且以維度方式組織的資料。  
@@ -47,7 +47,7 @@ ms.locfileid: "36132973"
  這兩個內建和使用者自訂成員屬性可以透過使用的擷取`PROPERTIES`關鍵字或[屬性](/sql/mdx/properties-mdx)函式。  
   
 ## <a name="using-the-properties-keyword"></a>使用 PROPERTIES 關鍵字  
- `PROPERTIES`關鍵字會指定要用來為指定的座標軸維度的成員屬性。 `PROPERTIES`關鍵字內嵌內`<axis specification>`子句的 MDX[選取](/sql/mdx/mdx-data-manipulation-select)陳述式：  
+ `PROPERTIES`關鍵字會指定要用於指定的座標軸維度的成員屬性。 `PROPERTIES`關鍵字內嵌在`<axis specification>`子句的 MDX[選取](/sql/mdx/mdx-data-manipulation-select)陳述式：  
   
 ```  
 SELECT [<axis_specification>  
@@ -65,7 +65,7 @@ SELECT [<axis_specification>
 > [!NOTE]  
 >  如需 `<set>` 和 `<axis_name>` 值的詳細資訊，請參閱[指定查詢座標軸的內容 &#40;MDX&#41;](mdx-query-and-slicer-axes-specify-the-contents-of-a-query-axis.md)。  
   
- `<dim_props>`子句可讓您查詢維度、 層級，以及使用成員屬性`PROPERTIES`關鍵字。 以下語法顯示 `<dim_props>` 子句的格式：  
+ `<dim_props>`子句可讓您查詢維度、 層級與成員屬性使用`PROPERTIES`關鍵字。 以下語法顯示 `<dim_props>` 子句的格式：  
   
 ```  
 <dim_props> ::= [DIMENSION] PROPERTIES <property> [,<property>...]  

@@ -8,24 +8,24 @@ ms.suite: ''
 ms.technology:
 - dbe-spatial
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 9fe06b03-d98c-4337-9f89-54da98f49f9f
 caps.latest.revision: 26
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 8f8d6b042c1284dc0a0b716524f381017320306e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 1baa6e59d017df6a0491d4359a8e445fea83d722
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36134131"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37155819"
 ---
 # <a name="circularstring"></a>CircularString
   A`CircularString`是零或多個連續圓弧線段的集合。 圓弧線段是指由二維平面中三個點所定義的弧形線段。第一個點不得與第三個點相同。 如果圓弧線段的三個點都是共線，此圓弧線段就會被視為直線線段。  
   
 > [!IMPORTANT]  
->  詳細的描述和範例中所引進的新空間功能[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]，包括`CircularString`子類型，請下載技術白皮書： [SQL Server 2012 中新空間功能](http://go.microsoft.com/fwlink/?LinkId=226407)。  
+>  詳細的說明和中導入的新空間功能的範例[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]，包括`CircularString`子類型，請下載技術白皮書： [SQL Server 2012 中的新空間功能](http://go.microsoft.com/fwlink/?LinkId=226407)。  
   
 ## <a name="circularstring-instances"></a>CircularString 執行個體  
  下圖顯示有效`CircularString`執行個體：  
@@ -33,7 +33,7 @@ ms.locfileid: "36134131"
  ![](../../database-engine/media/5ff17e34-b578-4873-9d33-79500940d0bc.png "5ff17e34-b578-4873-9d33-79500940d0bc")  
   
 ### <a name="accepted-instances"></a>已接受的執行個體  
- A`CircularString`還是可接受它是否是空的或包含奇數點 n，其中 n > 1。 下列`CircularString`接受的執行個體。  
+ A`CircularString`還是可接受，如果它是空的或包含奇數點 n，其中 n > 1。 下列`CircularString`接受執行個體。  
   
 ```  
 DECLARE @g1 geometry = 'CIRCULARSTRING EMPTY';  

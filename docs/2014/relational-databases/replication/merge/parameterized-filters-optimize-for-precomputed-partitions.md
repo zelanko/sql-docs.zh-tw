@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - precomputed partitions [SQL Server replication]
 - merge replication precomputed partitions [SQL Server replication]
 - merge replication precomputed partitions [SQL Server replication], about precomputed partitions
 ms.assetid: 85654bf4-e25f-4f04-8e34-bbbd738d60fa
 caps.latest.revision: 44
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: a6cd94215f90eb9a483258ba0c85f622d0938d54
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 70edd7a57807f342a3909d16ed0ef4526d68be49
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36132680"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37160289"
 ---
 # <a name="optimize-parameterized-filter-performance-with-precomputed-partitions"></a>使用預先計算的資料分割最佳化參數化篩選效能
   預先計算的資料分割是可用於篩選合併式發行集的效能最佳化。 預先計算的資料分割也是在篩選發行集上使用邏輯記錄的需求。 如需邏輯記錄的詳細資訊，請參閱[使用邏輯記錄分組相關資料列的變更](group-changes-to-related-rows-with-logical-records.md)。  

@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 topic_type:
 - apiref
 helpviewer_keywords:
 - OLEDB DataRead event class
 ms.assetid: fb6869ba-3199-4e32-a650-60a5dda2571e
 caps.latest.revision: 37
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 2b91d05cdcd868499ee55e2c665b4c82f4dc5c83
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 3be25d50037d3f9ec7c5fef2abd4dfba62fd2d01
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36133500"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37160589"
 ---
 # <a name="oledb-dataread-event-class"></a>OLEDB DataRead 事件類別
   當 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 呼叫 OLE DB 提供者以執行分散式查詢和遠端預存程序時，會發生 OLEDB DataRead 事件類別。 請在監看 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 何時對 OLE DB 提供者發出資料要求呼叫的追蹤中，包含此事件類別。  
@@ -58,7 +58,7 @@ ms.locfileid: "36133500"
 |SessionLoginName|`nvarchar`|引發工作階段之使用者的登入名稱。 例如，如果您使用 Login1 連接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，並以 Login2 身分執行陳述式，則 SessionLoginName 將顯示 Login1 而 LoginName 則顯示 Login2。 此資料行將同時顯示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 Windows 登入。|64|是|  
 |SPID|`Int`|事件發生所在之工作階段的識別碼。|12|是|  
 |StartTime|`datetime`|事件啟動的時間 (如果有的話)。|14|是|  
-|TextData|`nvarchar`|在 OLE DB 呼叫中傳送與接收的參數。|@shouldalert|否|  
+|TextData|`nvarchar`|在 OLE DB 呼叫中傳送與接收的參數。|1|否|  
 |TransactionID|`bigint`|由系統指派給交易的識別碼。|4|是|  
   
 ## <a name="see-also"></a>另請參閱  

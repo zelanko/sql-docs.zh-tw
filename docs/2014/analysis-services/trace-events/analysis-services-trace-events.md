@@ -1,5 +1,5 @@
 ---
-title: Analysis Services 追蹤事件 |Microsoft 文件
+title: Analysis Services 追蹤事件 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Profiler, Analysis Services
 - monitoring Analysis Services [SQL Server]
@@ -19,20 +19,20 @@ helpviewer_keywords:
 - event classes [Analysis Services]
 ms.assetid: 6fb219cc-f37e-437a-a544-01cec0953571
 caps.latest.revision: 37
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: c400772f757dcd852ddfd2cf696a966261c60c30
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: a4c4631e20227cb1d3aeba34337d7b36c8a84c62
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36133539"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37163439"
 ---
 # <a name="analysis-services-trace-events"></a>Analysis Services 追蹤事件
   您可以透過擷取然後分析執行個體所產生的追蹤事件，來追蹤 Microsoft SQL Server Analysis Services (SSAS) 執行個體的活動。  追蹤事件已分組，因此您可以更輕鬆地找到相關追蹤事件。  每個追蹤事件都包含與該事件相關的一組資料；並不是所有資料片段都與所有事件相關。  
   
- 追蹤事件可以啟動，並使用擷取**[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]**，請參閱[使用 SQL Server Profiler 監視 Analysis services](../instances/use-sql-server-profiler-to-monitor-analysis-services.md)，或可以從 XMLA 命令做為啟動**SQL Server擴充事件**和稍後分析，請參閱[使用 SQL Server 擴充事件&#40;XEvents&#41; to Monitor Analysis Services](../instances/monitor-analysis-services-with-sql-server-extended-events.md)。  
+ 追蹤事件可以啟動，並使用擷取**[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]**，請參閱[使用 SQL Server Profiler 監視 Analysis services](../instances/use-sql-server-profiler-to-monitor-analysis-services.md)，也可以從 XMLA 命令啟動**SQL Server擴充事件**和更新版本進行分析，請參閱[使用 SQL Server 擴充事件&#40;XEvents&#41;監視 Analysis services](../instances/monitor-analysis-services-with-sql-server-extended-events.md)。  
     
  下表描述每個事件類別目錄以及類別目錄中的事件。  
   
@@ -47,7 +47,7 @@ ms.locfileid: "36133539"
  事件描述  
  事件的簡短描述  
   
- **[命令事件 事件類別](command-events-event-category.md)**  
+ **[命令事件的事件類別目錄](command-events-event-category.md)**  
   
  命令之事件的集合。  
   
@@ -56,7 +56,7 @@ ms.locfileid: "36133539"
 |15|命令開始|命令開始。|  
 |16|命令結束|命令結束。|  
   
- **[探索事件類別目錄](discover-events-event-category.md)**  
+ **[探索事件的事件類別目錄](discover-events-event-category.md)**  
   
  探索要求之事件的集合。  
   
@@ -174,13 +174,13 @@ ms.locfileid: "36133539"
   
 |**事件識別碼**|**事件名稱**|**事件描述**|  
 |------------------|--------------------|---------------------------|  
-|@shouldalert|稽核登入|收集自啟動追蹤後的所有新連接事件，例如當用戶端要求連接到執行 SQL Server 執行個體的伺服器時。|  
+|1|稽核登入|收集自啟動追蹤後的所有新連接事件，例如當用戶端要求連接到執行 SQL Server 執行個體的伺服器時。|  
 |2|稽核登出|收集自啟動追蹤後的所有新中斷連接事件，例如當用戶端發出中斷連接命令時。|  
 |4|稽核伺服器的啟動和停止|記錄服務關閉、啟動與暫停活動。|  
 |18|稽核物件權限事件|記錄物件權限之變更。|  
 |19|稽核管理作業事件|記錄伺服器備份/還原/同步處理/附加/卸離/影像載入/影像儲存。|  
   
- **[工作階段事件類別目錄](session-events-event-category.md)**  
+ **[工作階段事件的事件類別目錄](session-events-event-category.md)**  
   
  工作階段事件的集合。  
   
@@ -191,4 +191,4 @@ ms.locfileid: "36133539"
 |43|工作階段初始化|工作階段初始化。|  
   
 ## <a name="see-also"></a>另請參閱  
-[使用 SQL Server Profiler 監視 Analysis Service](../instances/use-sql-server-profiler-to-monitor-analysis-services.md)
+[使用 SQL Server Profiler 監視 Analysis Services](../instances/use-sql-server-profiler-to-monitor-analysis-services.md)

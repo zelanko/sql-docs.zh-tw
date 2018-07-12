@@ -1,28 +1,26 @@
 ---
-title: 記錄長時間執行的查詢 (ODBC) |Microsoft 文件
+title: 記錄長時間執行的查詢 (ODBC) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - queries [ODBC]
 ms.assetid: b9c1ddce-1dd9-409d-a414-8b544d616273
 caps.latest.revision: 16
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: d4a4867a657773f93c746ccf89a03089cb27ee69
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 89e4e854233e0d5b34ea1e4547ae4ade24394619
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36036343"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37431137"
 ---
 # <a name="log-long-running-queries-odbc"></a>記錄長時間執行的查詢 (ODBC)
   此範例會顯示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ODBC 驅動程式專用選項，用以記錄長時間執行的查詢。 執行時，此範例會建立 Odbcqry.log，其中包含執行超過應用程式設定之間隔的查詢清單。 IA64 不支援此範例。 此範例是針對 ODBC 3.0 版或更新版本所開發。  
@@ -32,19 +30,19 @@ ms.locfileid: "36036343"
   
 ### <a name="to-log-long-running-queries-using-odbc-administrator"></a>使用 ODBC 管理員記錄長時間執行的查詢  
   
-1.  在**控制台**，連按兩下**系統管理工具**，然後按兩下 **資料來源 (ODBC)**。 (或者，您也可以從命令提示字元執行 odbcad32.exe)。  
+1.  在 **控制台**，按兩下**系統管理工具**，然後按兩下**資料來源 (ODBC)**。 (或者，您也可以從命令提示字元執行 odbcad32.exe)。  
   
-2.  按一下**使用者 DSN**，**系統 DSN**，或**檔案 DSN**  索引標籤。  
+2.  按一下 [**使用者 DSN**，**系統 DSN**，或**檔案 DSN** ] 索引標籤。  
   
 3.  按一下記錄長時間執行之查詢的資料來源。  
   
-4.  按一下**設定**。  
+4.  按一下 **設定**。  
   
-5.  在 Microsoft SQL Server 設定 DSN 精靈，瀏覽至包含頁面**將長時間執行的查詢儲存到記錄檔**。  
+5.  在 Microsoft SQL Server 設定 DSN 精靈，瀏覽至頁面**記錄檔儲存長時間執行的查詢**。  
   
-6.  選取**將長時間執行的查詢儲存到記錄檔**。 在方塊中，放置應該記錄其長時間執行查詢之檔案的名稱。 （選擇性） 按一下**瀏覽**瀏覽檔案系統的查詢記錄。  
+6.  選取 **記錄檔儲存長時間執行的查詢**。 在方塊中，放置應該記錄其長時間執行查詢之檔案的名稱。 （選擇性） 按一下**瀏覽**來瀏覽檔案系統中的查詢記錄檔。  
   
-7.  設定查詢逾時間隔，以毫秒為單位，在**長時間查詢的時間 （毫秒）** 方塊。  
+7.  設定查詢逾時間隔，以毫秒為單位，在**長時間查詢的時間 （毫秒）**  方塊中。  
   
 ### <a name="to-log-long-running-queries-data-programmatically"></a>以程式設計方式記錄長時間執行的查詢資料  
   
@@ -54,7 +52,7 @@ ms.locfileid: "36036343"
     C:\\Odbcqry.log  
     ```  
   
-2.  呼叫[SQLSetConnectAttr](../native-client-odbc-api/sqlsetconnectattr.md)與 sql_copt_ss_perf_query_interval 會設定為逾時間隔，以毫秒為單位。  
+2.  呼叫[SQLSetConnectAttr](../native-client-odbc-api/sqlsetconnectattr.md) sql_copt_ss_perf_query_interval 會與設為逾時間隔，以毫秒為單位。  
   
 3.  呼叫[SQLSetConnectAttr](../native-client-odbc-api/sqlsetconnectattr.md)利用 SQL_COPT_SS_PERF_QUERY 和 SQL_PERF_START 開始記錄長時間執行的查詢。  
   

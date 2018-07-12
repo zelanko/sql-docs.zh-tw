@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Integration Services, installing
 - SSIS, installing
@@ -21,25 +21,25 @@ ms.assetid: bd20fd3a-414b-4581-959d-ebba4ddf5a55
 caps.latest.revision: 100
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 7e495ce5090ad33f6584250db739898ab3ca6dda
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: cd10fc638ed7a1d9c42b926190eebc0df5dd37b8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36134040"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37156524"
 ---
 # <a name="install-integration-services"></a>安裝 Integration Services
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 提供了單一安裝程式，以安裝它的任何或所有元件，包含 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]在內。 您可以使用安裝程式來安裝 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] ，不論單一電腦上是否有其他 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 元件。  
   
  本主題將強調幾個重要考量事項，在您安裝 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]之前應該先了解這些事項。 本主題的資訊將可幫助您評估安裝選項，好讓您可以做出讓安裝成功的選擇。  
   
- 本主題不包含啟動安裝程式、使用安裝精靈或是從命令列執行安裝程式的相關指示。 如需如何啟動安裝程式，並選取元件安裝的逐步指示，請參閱[快速入門安裝 SQL Server 2014 的](../../getting-started/quick-start-installation-of-sql-server-2014.md)。 如需有關安裝的命令列選項資訊[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]，請參閱[從命令提示字元安裝 SQL Server 2014](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md)。  
+ 本主題不包含啟動安裝程式、使用安裝精靈或是從命令列執行安裝程式的相關指示。 如需有關如何啟動安裝程式，並選取元件安裝的逐步指示，請參閱[快速入門安裝的 SQL Server 2014](../../getting-started/quick-start-installation-of-sql-server-2014.md)。 如需安裝的命令列選項的詳細資訊[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]，請參閱 <<c2> [ 從命令提示字元安裝 SQL Server 2014](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md)。  
   
 ## <a name="preparing-to-install-integration-services"></a>準備安裝 Integration Services  
  在安裝 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]之前，請檢閱下列需求：  
   
--   [硬體 and Software Requirements for Installing SQL Server 2014](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)  
+-   [安裝 SQL Server 2014 的硬體與軟體需求](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)  
   
 -   [檢查 System Configuration Checker 的參數](../../database-engine/install-windows/check-parameters-for-the-system-configuration-checker.md)  
   
@@ -60,13 +60,13 @@ ms.locfileid: "36134040"
  在檢閱 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的安裝需求並確認電腦符合這些需求之後，您就可以開始安裝 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]。  
   
 > [!NOTE]  
->  在舊版 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中，當您安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 時，Users 群組中的所有使用者預設都能存取 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服務。 安裝 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]時，使用者則無法存取 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服務。 因此，服務預設是安全的。 之後[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]已安裝，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]系統管理員必須執行 DCOM 組態工具 (Dcomcnfg.exe)，授與特定使用者存取**SQL Server Integration Services 12.0**。  
+>  在舊版 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中，當您安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 時，Users 群組中的所有使用者預設都能存取 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服務。 安裝 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]時，使用者則無法存取 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服務。 因此，服務預設是安全的。 在後[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]安裝，則[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]系統管理員必須執行 DCOM 組態工具 (Dcomcnfg.exe)，授與特定使用者存取**SQL Server Integration Services 12.0**。  
 >   
 >  如需如何授與權限的指示，請參閱 [授與 Integration Services 服務的權限](../grant-permissions-to-integration-services-service.md)。  
   
- 如果您要使用安裝精靈安裝 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]，您將會使用一連串的頁面來指定元件和選項。 以下是您選取的選項將影響您安裝的安裝程式精靈中的頁面[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]的選取項目建議：  
+ 如果您要使用安裝精靈安裝 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]，您將會使用一連串的頁面來指定元件和選項。 以下是在安裝精靈在您選取的選項會影響您的安裝頁面[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]選取項目建議：  
   
--   **特徵選取**  
+-   **功能選取**  
   
      選取 [Integration Services]，即可安裝 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服務並在設計環境外面執行封裝。  
   
@@ -85,9 +85,9 @@ ms.locfileid: "36134040"
   
      **在 64 位元電腦上安裝**：在 64 位元電腦上，選取 [Integration Services] 只會安裝 64 位元的執行階段和工具。 如果您必須以 32 位元模式執行封裝，您也必須選取其他選項來安裝 32 位元的執行階段和工具：  
   
-    -   如果 64 位元電腦正在執行 x86 作業系統，選取**SQL Server Data Tools**或**管理工具-完整**。  
+    -   如果 64 位元電腦正在執行 x86 作業系統，選取**SQL Server Data Tools**或是**管理工具-完整**。  
   
-    -   如果 64 位元電腦正在執行[!INCLUDE[vcpritanium](../../includes/vcpritanium-md.md)]作業系統，請選取**管理工具-完整**。  
+    -   如果 64 位元電腦正在執行[!INCLUDE[vcpritanium](../../includes/vcpritanium-md.md)]作業系統中，選取**管理工具-完整**。  
   
      **在 ETL 的專用伺服器上安裝** ：若要使用擷取、轉換和下載 (ETL) 處理序的專用伺服器，我們建議您在安裝 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 時安裝 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]的本機執行個體。 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 通常會將封裝儲存在 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的執行個體中，而且它會仰賴 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 來排程這些封裝。 如果此 ETL 伺服器沒有 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的執行個體，您就必須從具有 [!INCLUDE[ssDE](../../includes/ssde-md.md)]執行個體的伺服器排程或執行封裝。 這表示，雖然封裝無法在 ETL 伺服器上執行，但是它們會改在啟動封裝的伺服器上執行。 因此，系統將無法如預期方式使用專用 ETL 伺服器的資源。 此外，其他伺服器的資源可能會受到執行中 ETL 處理序的限制。  
   
@@ -103,7 +103,7 @@ ms.locfileid: "36134040"
   
      在 [伺服器組態] 頁面的 [服務帳戶] 索引標籤上，檢閱 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服務的設定。  
   
-     如果已安裝 Windows 7 或 Windows Server 2008 R2，[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]服務註冊在 NT Services\MsDtsServer120 虛擬帳戶之下執行，**啟動類型**是**自動**。  您不需要為此虛擬帳戶輸入密碼。 如果已安裝 Microsoft Vista 或 Windows Server 2008，系統會將 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服務註冊為在內建網路服務帳戶之下執行，而且 [啟動類型] 為 [自動]。 您不需要針對內建的網路服務帳戶輸入密碼。  
+     如果已安裝 Windows 7 或 Windows Server 2008 R2，[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]服務註冊在 NT Services\MsDtsServer120 虛擬帳戶下執行，**啟動的型別**是**自動**。  您不需要為此虛擬帳戶輸入密碼。 如果已安裝 Microsoft Vista 或 Windows Server 2008，系統會將 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服務註冊為在內建網路服務帳戶之下執行，而且 [啟動類型] 為 [自動]。 您不需要針對內建的網路服務帳戶輸入密碼。  
   
  根據預設，在新的安裝中， [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 會設定為不要將與封裝執行相關的事件記錄至應用程式事件記錄檔。 當您使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]的資料收集器功能時，這個設定可避免產生過多的事件記錄項目。 不會記錄的事件包括 EventID 12288「封裝已啟動」和 EventID 12289「封裝已成功完成」。 若要將這些事件記錄到應用程式事件記錄檔，請開啟登錄進行編輯。 在登錄中找出 HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\120\SSIS 節點，然後將 LogPackageExecutionToEventLog 設定的 DWORD 值從 0 變更為 1。  
   

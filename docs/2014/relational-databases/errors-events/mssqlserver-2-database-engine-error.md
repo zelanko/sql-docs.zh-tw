@@ -5,25 +5,24 @@ ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - "2"
 helpviewer_keywords:
 - 2 (Database Engine error)
 ms.assetid: 567fb571-7cda-4ce8-a702-cdff2df5d419
 caps.latest.revision: 10
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 52cbf7a614037425447630b68d0b50b39d18b468
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 22bf287b58790bbac8d44971a924e5e671d75a90
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36035716"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37424407"
 ---
 # <a name="mssqlserver2"></a>MSSQLSERVER_2
     

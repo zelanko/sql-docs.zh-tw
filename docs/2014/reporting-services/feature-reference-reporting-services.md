@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Report Builder 2.0, F1 help
 - Reporting Services, getting assistance
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - F1 Help [Reporting Services]
 ms.assetid: 01daf21c-19c6-448d-ac30-accb54ad83da
 caps.latest.revision: 27
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: c23e964eaee08730416daa0d52350eb72138d5f5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: c1a0b1b5105c5dc5be5edcd9c43028d4bca8ae2f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36132814"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37258244"
 ---
 # <a name="feature-reference-reporting-services"></a>功能參考 (Reporting Services)
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 包含可用於建立、管理及檢視報表的數個工具和應用程式。 此章節提供描述這些工具和應用程式之對話方塊、網頁以及精靈的特定主題。  
@@ -50,7 +50,7 @@ ms.locfileid: "36132814"
 ## <a name="see-also"></a>另請參閱  
  [Reporting Services 概念 &#40;SSRS&#41;](reporting-services-concepts-ssrs.md)   
  [Reporting Services 報表 &#40;SSRS&#41;](reports/reporting-services-reports-ssrs.md)   
- [將資料加入至報表&#40;報表產生器和 SSRS&#41;](report-data/report-datasets-ssrs.md)   
+ [將資料加入至報表&#40;報表產生器及 SSRS&#41;](report-data/report-datasets-ssrs.md)   
  [開始使用報表產生器](http://www.microsoft.com/download/en/details.aspx?id=29072)   
  [使用報表產生器 1.0 來設計和實作報表](http://go.microsoft.com/fwlink/?LinkId=142601)  
   

@@ -1,5 +1,5 @@
 ---
-title: CubeBinding 資料類型 (out out-of-line) (ASSL) |Microsoft 文件
+title: CubeBinding 資料類型 (非正規-out-of-line) (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - CubeBinding data type
 ms.assetid: 5e1ee8ef-855c-4f3d-ae21-a33360d00d66
 caps.latest.revision: 37
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: b919e8f28d5cb102268ed3338aa0309e45a738c2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 9c13cd736887569cfa5fd12bde73e1129e1fd046
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36133549"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37161249"
 ---
 # <a name="cubebinding-data-type-out-of-line-assl"></a>CubeBinding 資料類型 (out-of-line) (ASSL)
-  定義表示之間的關聯性的基本資料型別[Cube](../objects/cube-element-assl.md)項目和[DataSource](../objects/datasource-element-assl.md)項目。  
+  定義表示之間的關聯性的基本資料型別[Cube](../objects/cube-element-assl.md)項目並[DataSource](../objects/datasource-element-assl.md)項目。  
   
 ## <a name="syntax"></a>語法  
   
@@ -60,10 +60,10 @@ ms.locfileid: "36133549"
 |------------------|-------------|  
 |父元素|無|  
 |子元素|[資料來源](../objects/datasource-element-assl.md)， [DataSourceID](../properties/id-element-assl.md)，[識別碼](../properties/id-element-assl.md)， [MeasureGroup](../objects/group-element-assl.md)|  
-|衍生的元素|[繫結](../../xmla/xml-elements-properties/binding-element-xmla.md)([繫結](../../xmla/xml-elements-properties/bindings-element-xmla.md)集合[程序](../../xmla/xml-elements-commands/process-element-xmla.md)或[批次](../../xmla/xml-elements-commands/batch-element-xmla.md)命令)|  
+|衍生的元素|[繫結](../../xmla/xml-elements-properties/binding-element-xmla.md)([繫結](../../xmla/xml-elements-properties/bindings-element-xmla.md)的集合[程序](../../xmla/xml-elements-commands/process-element-xmla.md)或是[批次](../../xmla/xml-elements-commands/batch-element-xmla.md)命令)|  
   
 ## <a name="remarks"></a>備註  
- 單行繫結的詳細資訊，請參閱[資料來源和繫結&#40;SSAS 多維度&#41;](../../multidimensional-models/data-sources-and-bindings-ssas-multidimensional.md)。  
+ 如需程式碼外部繫結的詳細資訊，請參閱[資料來源和繫結&#40;SSAS 多維度&#41;](../../multidimensional-models/data-sources-and-bindings-ssas-multidimensional.md)。  
   
 ## <a name="see-also"></a>另請參閱  
  [繫結資料型別&#40;ASSL&#41;](binding-data-type-assl.md)   

@@ -1,5 +1,5 @@
 ---
-title: 加入或刪除使用者定義的階層 |Microsoft 文件
+title: 加入或刪除的使用者定義階層 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - hierarchies [Analysis Services], adding
 - removing hierarchies
@@ -17,20 +17,20 @@ helpviewer_keywords:
 - hierarchies [Analysis Services], removing
 ms.assetid: 953818b4-9543-4c01-bb20-1d45ec6dfb91
 caps.latest.revision: 50
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 57e1f74d612add88c6a2c47497f0d6a55c64c665
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e3cb9b55bcff41dddd2a4c648854e92222d1e8e2
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36134829"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37157119"
 ---
 # <a name="add-or-delete-a-user-defined-hierarchy"></a>加入或刪除使用者定義階層
   您會在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 中，維度設計師的 [維度結構] 索引標籤上，從維度中加入或移除使用者自訂階層。  
   
- 當您加入使用者自訂階層時，要等到在 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 執行個體中具現化使用者自訂階層，而且處理維度之後，才可以提供此階層給使用者使用。 如需詳細資訊，請參閱[多維度模型資料庫&#40;SSAS&#41; ](multidimensional-model-databases-ssas.md)和[多維度模型物件處理](processing-a-multidimensional-model-analysis-services.md)。  
+ 當您加入使用者自訂階層時，要等到在 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 執行個體中具現化使用者自訂階層，而且處理維度之後，才可以提供此階層給使用者使用。 如需詳細資訊，請參閱 <<c0> [ 多維度模型資料庫&#40;SSAS&#41; ](multidimensional-model-databases-ssas.md)並[多維度模型物件處理](processing-a-multidimensional-model-analysis-services.md)。</c0>  
   
 ### <a name="to-add-a-user-defined-hierarchy-to-a-dimension"></a>將使用者自訂階層加入維度  
   
@@ -48,7 +48,7 @@ ms.locfileid: "36134829"
   
 5.  也可以選擇，修改使用者自訂階層或其層級的屬性。  
   
-     例如，您可能會想要指定使用者自訂階層的名稱，也可能重新命名一個或多個層級，然後定義「全部」層級的自訂名稱。 如需詳細資訊，請參閱[使用者階層屬性](../multidimensional-models-olap-logical-dimension-objects/user-hierarchies-properties.md)，和[層級屬性&#91;Paved Over&#93;](../multidimensional-models-olap-logical-dimension-objects/user-hierarchies-level-properties.md)。  
+     例如，您可能會想要指定使用者自訂階層的名稱，也可能重新命名一個或多個層級，然後定義「全部」層級的自訂名稱。 如需詳細資訊，請參閱 <<c0> [ 使用者階層屬性](../multidimensional-models-olap-logical-dimension-objects/user-hierarchies-properties.md)，並[層級屬性&#91;Paved Over&#93;](../multidimensional-models-olap-logical-dimension-objects/user-hierarchies-level-properties.md)。</c0>  
   
     > [!NOTE]  
     >  依預設，使用者自訂階層就是可以讓使用者向下鑽研資訊的路徑。 但是，如果層級之間有關聯性存在，則可以設定層級之間的屬性關聯性來提升查詢效能。 如需詳細資訊，請參閱 [屬性關聯性](../multidimensional-models-olap-logical-dimension-objects/attribute-relationships.md) 和 [定義屬性關聯性](attribute-relationships-define.md)。  

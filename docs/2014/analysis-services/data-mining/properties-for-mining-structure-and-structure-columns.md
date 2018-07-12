@@ -1,5 +1,5 @@
 ---
-title: 採礦結構和結構資料行的屬性 |Microsoft 文件
+title: 採礦結構和結構資料行的屬性 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - mining structures [Analysis Services], column properties
 - data mining [Analysis Services], properties
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - properties [data mining]
 ms.assetid: ce90f684-bb8c-4eca-b9e6-000794dbee16
 caps.latest.revision: 24
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 167e04eb8623e6d2f7f11c3bfd43e3d6427c5886
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 71ce92444042b820f877290478bae067b3474b41
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36134284"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37149509"
 ---
 # <a name="properties-for-mining-structure-and-structure-columns"></a>採礦結構和結構資料行的屬性
   您可以使用 [資料採礦設計師] 的 [採礦結構] 索引標籤，來設定或變更採礦結構及其相關聯資料行和巢狀資料表的屬性。 在此索引標籤中設定的屬性會傳播至與結構相關聯的每一個採礦模型。  
@@ -43,7 +43,7 @@ ms.locfileid: "36134284"
   
 |屬性|描述|  
 |--------------|-----------------|  
-|**CacheMode**|指定在培訓完成之後，應該快取或捨棄培訓中所使用的案例。<br /><br /> 注意： 這個屬性必須設定為`KeepTrainingCases`才能啟用鑽研和鑑效組。|  
+|**CacheMode**|指定在培訓完成之後，應該快取或捨棄培訓中所使用的案例。<br /><br /> 注意： 此屬性必須設為`KeepTrainingCases`才能啟用鑽研和鑑效組。|  
 |**定序**|指定資料行的預設定序。 如果沒有指定定序，就會使用伺服器的定序。|  
 |**說明**|描述採礦結構。 可能的話，描述最好指出結構中資料的用途和構成要素。|  
 |**ErrorConfiguration (預設值)**|針對錯誤的特殊處理方式指定選項 (如果有的話)。|  
@@ -62,8 +62,8 @@ ms.locfileid: "36134284"
 |**ClassifiedColumns**|識別分類資料行描述的資料行。|  
 |**內容**|資料行的內容類型。|  
 |**說明**|描述資料行。 可能的話，資料行的描述最好提供有關資料行中的資料如何針對資料採礦衍生或更改的資訊。|  
-|**DiscretizationBucketCount**|顯示離散化資料行中的值區數目。<br /><br /> 只有當啟用內容類型設定為`Discretized`。<br /><br /> 此屬性是唯讀的。|  
-|**DiscretizationMethod**|顯示用來離散化資料行的方法。<br /><br /> 只有當啟用內容類型設定為`Discretized`。<br /><br /> 此屬性是唯讀的。|  
+|**DiscretizationBucketCount**|顯示離散化資料行中的值區數目。<br /><br /> 只有當內容類型設定為啟用`Discretized`。<br /><br /> 此屬性是唯讀的。|  
+|**DiscretizationMethod**|顯示用來離散化資料行的方法。<br /><br /> 只有當內容類型設定為啟用`Discretized`。<br /><br /> 此屬性是唯讀的。|  
 |**Distribution**|指定資料行中之內容的散發。|  
 |**ID**|顯示資料行的識別碼。<br /><br /> 如果您變更了資料行的 Name 屬性值，並不會影響 ID 屬性的值。|  
 |**IsKey**|指出資料行是否為索引鍵資料行。|  

@@ -19,13 +19,13 @@ ms.assetid: d198c866-78f4-4a50-ae15-333160645815
 caps.latest.revision: 41
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: eea490a49525493bd35767c7b93dc9de13080b7a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: dd7f28c40a98d06de9d4caaf0a09beea6ee0bcee
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36133504"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37164925"
 ---
 # <a name="creating-an-odbc-destination-with-the-script-component"></a>使用指令碼元件建立 ODBC 目的地
   在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 中，通常會使用 [!INCLUDE[vstecado](../../includes/vstecado-md.md)] 目的地與 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] Data Provider for ODBC，將資料儲存到 ODBC 目的地。 不過，您也可以建立在單一封裝中要使用的特定 ODBC 目的地。 若要建立這個特定的 ODBC 目的地，可以使用如下列範例所示的指令碼元件。  
@@ -65,7 +65,7 @@ ms.locfileid: "36133504"
   
 7.  在 [連線管理員] 頁面上，使用 **MyODBCConnectionManager** 之類的描述性名稱，新增或建立 ODBC 連線管理員。  
   
-8.  在**指令碼**頁面上，按一下**編輯指令碼**，然後輸入指令碼中，如下所示`ScriptMain`類別。  
+8.  在 **指令碼**頁面上，按一下**編輯指令碼**，然後輸入以下所示的指令碼`ScriptMain`類別。  
   
 9. 依序關閉指令碼開發環境和**指令碼轉換編輯器**，然後執行此範例。  
   
@@ -170,7 +170,7 @@ ms.locfileid: "36133504"
     }  
     ```  
   
-![Integration Services 圖示 （小）](../media/dts-16.gif "Integration Services 圖示 （小）")**保持最多 with Integration Services 的日期** <br /> 若要取得 Microsoft 的最新下載、文件、範例和影片以及社群中的精選解決方案，請瀏覽 MSDN 上的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 頁面：<br /><br /> [瀏覽 MSDN 上的 Integration Services 頁面](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 若要得到這些更新的自動通知，請訂閱該頁面上所提供的 RSS 摘要。  
+![Integration Services 圖示 （小）](../media/dts-16.gif "Integration Services 圖示 （小）")**保持最多包含 Integration Services 的日期** <br /> 若要取得 Microsoft 的最新下載、文件、範例和影片以及社群中的精選解決方案，請瀏覽 MSDN 上的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 頁面：<br /><br /> [瀏覽 MSDN 上的 Integration Services 頁面](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 若要得到這些更新的自動通知，請訂閱該頁面上所提供的 RSS 摘要。  
   
 ## <a name="see-also"></a>另請參閱  
  [使用指令碼元件建立目的地](../extending-packages-scripting-data-flow-script-component-types/creating-a-destination-with-the-script-component.md)  

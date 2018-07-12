@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - MSSQL_ENG018456 error
 ms.assetid: 3daa8144-d81f-445a-b6c3-4bb3e9fd1526
 caps.latest.revision: 14
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 343abeb430a09eb1dcd6375266bb314e5f61c509
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: b09ff007bdd80839eac5f992bce17b16c5adaf8c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36132853"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37278844"
 ---
 # <a name="mssqleng018456"></a>MSSQL_ENG018456
     

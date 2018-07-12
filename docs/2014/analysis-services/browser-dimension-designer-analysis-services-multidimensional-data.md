@@ -1,5 +1,5 @@
 ---
-title: 瀏覽器 （維度設計師） (Analysis Services-多維度資料) |Microsoft 文件
+title: 瀏覽器 （維度設計師） (Analysis Services-多維度資料) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.dimensiondesigner.browsedim.view.f1
 helpviewer_keywords:
 - Dimension Designer
 ms.assetid: c7772d73-31c9-4b22-a899-bac424d603bb
 caps.latest.revision: 19
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 1c02eb2fed367137313f70e880e94127419310c4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ae554d475d3ee4afc87d194562b4715ba70b94eb
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36133351"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37157269"
 ---
 # <a name="browser-dimension-designer-analysis-services---multidimensional-data"></a>瀏覽器 (維度設計師) (Analysis Services - 多維度資料)
   使用維度設計師的 **[瀏覽器]** 索引標籤，即可瀏覽維度資料與維度的中繼資料。 如果目前選取的維度有啟用維度回寫，請使用此檢視來變更維度的成員資料。  
@@ -41,7 +41,7 @@ ms.locfileid: "36133351"
  [維度設計師&#40;Analysis Services-多維度資料&#41;](dimension-designer-analysis-services-multidimensional-data.md)   
  [維度&#40;Analysis Services-多維度資料&#41;](multidimensional-models-olap-logical-dimension-objects/dimensions-analysis-services-multidimensional-data.md)   
  [多維度模型中的維度](multidimensional-models/dimensions-in-multidimensional-models.md)   
- [維度結構&#40;維度設計師&#41; &#40;Analysis Services-多維度資料&#41;](dimension-structure-dimension-designer-analysis-services-multidimensional-data.md)   
- [翻譯&#40;維度設計師&#41; &#40;Analysis Services-多維度資料&#41;](translations-dimension-designer-analysis-services-multidimensional-data.md)  
+ [維度結構&#40;維度設計工具&#41; &#40;Analysis Services-多維度資料&#41;](dimension-structure-dimension-designer-analysis-services-multidimensional-data.md)   
+ [翻譯&#40;維度設計工具&#41; &#40;Analysis Services-多維度資料&#41;](translations-dimension-designer-analysis-services-multidimensional-data.md)  
   
   

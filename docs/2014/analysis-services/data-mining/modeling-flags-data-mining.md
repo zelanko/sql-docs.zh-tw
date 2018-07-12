@@ -1,5 +1,5 @@
 ---
-title: 模型旗標 （資料採礦） |Microsoft 文件
+title: 模型旗標 （資料採礦） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - attributes [data mining]
 - data types [data mining]
@@ -23,20 +23,20 @@ helpviewer_keywords:
 - coding [Data Mining]
 ms.assetid: 8826d5ce-9ba8-4490-981b-39690ace40a4
 caps.latest.revision: 48
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: b7d8ee5cc87c6d5a197240f59641095f8bc1c693
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 85abe1acb2fa12208ebf83541bd030646c67ddbc
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36135055"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37155409"
 ---
 # <a name="modeling-flags-data-mining"></a>模型旗標 (資料採礦)
   您可以使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 中的模型旗標，為資料採礦演算法提供案例資料表中所定義資料的其他資訊。 演算法可以使用此一資訊建立更精確的資料採礦模型。  
   
- 有些模型旗標會定義於採礦結構層級，有些則會定義於採礦模型資料行的層級。 例如，`NOT NULL`模型旗標會搭配採礦結構資料行。 您可以根據您用來建立模型的演算法，在採礦模型資料行上定義其他模型旗標。  
+ 有些模型旗標會定義於採礦結構層級，有些則會定義於採礦模型資料行的層級。 比方說，`NOT NULL`模型旗標用於採礦結構資料行。 您可以根據您用來建立模型的演算法，在採礦模型資料行上定義其他模型旗標。  
   
 > [!NOTE]  
 >  除了 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]預先定義的模型旗標外，協力廠商外掛程式也可能擁有其他的模型旗標。  
@@ -50,9 +50,9 @@ ms.locfileid: "36135055"
  **MODEL_EXISTENCE_ONLY**  
  表示將資料行視為有兩個狀態：`Missing` 和 `Existing`。 如果值為`NULL`，它會被視為遺漏。 MODEL_EXISTENCE_ONLY 旗標會套用到可預測的屬性，而且受到大多數的演算法所支援。  
   
- 作用中，將 MODEL_EXISTENCE_ONLY 旗標設定為`True`變更值的表示，有兩個狀態：`Missing`和`Existing`。 所有非遺漏狀態都會結合到單一`Existing`值。  
+ 作用中，將 MODEL_EXISTENCE_ONLY 旗標設定為`True`變更值的表示，因此有兩個狀態：`Missing`和`Existing`。 所有非遺漏狀態都會結合到單一`Existing`值。  
   
- 此模型旗標的一般用法是 `NULL` 狀態具有隱含意義的屬性，而 `NOT NULL` 狀態的明確值則可能不如資料行擁有任何值來得重要。 例如，[DateContractSigned] 資料行可能是`NULL`如果永遠不會簽署合約和`NOT NULL`如果合約已簽署。 因此，如果模型的用途是預測是否會簽署合約，您可以使用 MODEL_EXISTENCE_ONLY 旗標來忽略中的精確日期值`NOT NULL`案例，並僅區分的情況下，合約`Missing`或`Existing`.  
+ 此模型旗標的一般用法是 `NULL` 狀態具有隱含意義的屬性，而 `NOT NULL` 狀態的明確值則可能不如資料行擁有任何值來得重要。 例如，[DateContractSigned] 資料行可能`NULL`如果永遠不會簽署合約和`NOT NULL`如果已簽署的合約。 因此，如果模型的用途是預測是否會簽署合約，您可以使用 MODEL_EXISTENCE_ONLY 旗標來忽略中的精確日期值`NOT NULL`情況下，並僅區分合約所在的情況下`Missing`或`Existing`.  
   
 > [!NOTE]  
 >  「遺漏」是演算法所使用的特殊狀態，與資料行中的文字值「遺漏」不同。 如需詳細資訊，請參閱[遺漏值 &#40;Analysis Services - 資料採礦&#41;](missing-values-analysis-services-data-mining.md)。  

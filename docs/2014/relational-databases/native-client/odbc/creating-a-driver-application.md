@@ -1,13 +1,11 @@
 ---
-title: 建立 SQL Server Native Client ODBC 驅動程式應用程式 |Microsoft 文件
+title: 建立 SQL Server Native Client ODBC 驅動程式應用程式 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client  - "database-engine" - "docset-sql-devref"
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -25,15 +23,15 @@ helpviewer_keywords:
 - function calls [ODBC]
 ms.assetid: c83c36e2-734e-4960-bc7e-92235910bc6f
 caps.latest.revision: 40
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 4e337b4bb5ab55c60cbf157ddd0a8ebab60e4264
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: f1912079b4bb85426a89517179ac7d79eadaf108
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36036340"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37412897"
 ---
 # <a name="creating-a-sql-server-native-client-odbc-driver-application"></a>建立 SQL Server Native Client ODBC 驅動程式應用程式
   ODBC 架構包含四個執行下列函數的元件。  
@@ -45,7 +43,7 @@ ms.locfileid: "36036340"
 |驅動程式|處理來自應用程式的所有 ODBC 函數呼叫、連接到資料來源、將 SQL 陳述式從應用程式傳遞到資料來源，以及將結果傳回到應用程式。 如果必要，取動程式會將 ODBC SQL 從應用程式轉譯成資料來源所使用的原生 SQL。|  
 |資料來源|包含驅動程式在 DBMS 中存取特定資料執行個體所需的所有資訊。|  
   
- 使用的應用程式[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client ODBC 驅動程式的執行個體與通訊[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]會執行下列工作：  
+ 使用的應用程式[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client ODBC 驅動程式的執行個體進行通訊[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]會執行下列工作：  
   
 -   與資料來源連接  
   
@@ -57,7 +55,7 @@ ms.locfileid: "36036340"
   
 -   結束資料來源的連接  
   
- 針對所撰寫的更複雜應用程式[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client ODBC 驅動程式可能也會執行下列工作：  
+ 更複雜的應用程式，針對撰寫[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client ODBC 驅動程式可能也會執行下列工作：  
   
 -   使用資料指標控制結果集中的位置  
   
@@ -71,7 +69,7 @@ ms.locfileid: "36036340"
   
 -   執行大量複製作業  
   
--   管理大型資料 (**varchar （max)**， **nvarchar （max)**，和**varbinary （max)** 資料行) 作業  
+-   管理大型資料 (**varchar （max)**， **nvarchar （max)**，並**varbinary （max)** 資料行) 作業  
   
 -   設定資料庫鏡像時，使用重新連接邏輯來簡化容錯移轉  
   
@@ -112,7 +110,7 @@ LIB=c:\Program Files\Microsoft Data Access SDK 2.8\Libs\x86\lib;C:\Program Files
 INCLUDE=c:\Program Files\Microsoft Data Access SDK 2.8\inc;C:\Program Files\Microsoft SQL Server\100\Tools\SDK\Include;  
 ```  
   
- 先前在建立應用程式的過程中所做的其中一個設計決策為：應用程式是否需要同時讓多個 ODBC 呼叫未完成。 有兩種方法可以支援同時呼叫多個 ODBC，本節其他主題將會有完整說明。 如需詳細資訊，請參閱[ODBC 程式設計人員參考](http://go.microsoft.com/fwlink/?LinkId=45250)。  
+ 先前在建立應用程式的過程中所做的其中一個設計決策為：應用程式是否需要同時讓多個 ODBC 呼叫未完成。 有兩種方法可以支援同時呼叫多個 ODBC，本節其他主題將會有完整說明。 如需詳細資訊，請參閱 < [ODBC 程式設計人員參考](http://go.microsoft.com/fwlink/?LinkId=45250)。  
   
 ## <a name="in-this-section"></a>本節內容  
   

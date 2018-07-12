@@ -1,13 +1,11 @@
 ---
-title: 建立大量複製格式檔案 (ODBC) |Microsoft 文件
+title: 建立大量複製格式檔案 (ODBC) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -15,15 +13,15 @@ helpviewer_keywords:
 - bulk copy [ODBC], data files
 ms.assetid: 0572fef3-daf5-409e-b557-c2a632f9a06d
 caps.latest.revision: 14
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 03ab22f08f4364bf3cd4852f960d861c9dcdad7d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 9ccdf90bedcafb36676c8e727f2ee98b818e2f1a
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36036116"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37414177"
 ---
 # <a name="create-a-bulk-copy-format-file-odbc"></a>建立大量複製格式檔案 (ODBC)
   此範例將示範如何使用大量複製函數來建立資料檔案和格式檔案。 此範例是針對 ODBC 3.0 版或更新版本所開發。  
@@ -53,7 +51,7 @@ ms.locfileid: "36036116"
   
 6.  呼叫[bcp_colfmt](../../native-client-odbc-extensions-bulk-copy-functions/bcp-colfmt.md)每個資料行的資料檔案中定義其特性。  
   
-7.  呼叫[bcp_writefmt](../../native-client-odbc-extensions-bulk-copy-functions/bcp-writefmt.md)建立格式檔案，描述要大量複製作業所建立之資料檔案。  
+7.  呼叫[bcp_writefmt](../../native-client-odbc-extensions-bulk-copy-functions/bcp-writefmt.md)建立描述大量複製作業所建立之資料檔案的格式檔案。  
   
 8.  呼叫[bcp_exec](../../native-client-odbc-extensions-bulk-copy-functions/bcp-exec.md)以便執行大量複製作業。  
   
@@ -217,7 +215,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [大量複製與 SQL Server ODBC 驅動程式如何主題&#40;ODBC&#41;](bulk-copying-with-the-sql-server-odbc-driver-how-to-topics-odbc.md)   
+ [利用 SQL Server ODBC 驅動程式如何主題大量複製的&#40;ODBC&#41;](bulk-copying-with-the-sql-server-odbc-driver-how-to-topics-odbc.md)   
  [使用資料檔案與格式檔案](../../native-client-odbc-bulk-copy-operations/using-data-files-and-format-files.md)  
   
   

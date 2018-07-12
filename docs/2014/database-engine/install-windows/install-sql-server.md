@@ -1,5 +1,5 @@
 ---
-title: 安裝 SQL Server 2014 |Microsoft 文件
+title: 安裝 SQL Server 2014 |Microsoft Docs
 ms.custom: ''
 ms.date: 09/09/2016
 ms.prod: sql-server-2014
@@ -8,28 +8,28 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - installing SQL Server, preparing to install
 - installation [SQL Server]
 ms.assetid: 0300e777-d56b-4d10-9c33-c9ebd2489ee5
 caps.latest.revision: 40
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: bf415bef00710562247bcfd9fa310e2c0728497f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 7f03f01be41395cea94acdc40acd582a6fb78772
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36134050"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37157009"
 ---
 # <a name="install-sql-server-2014"></a>安裝 SQL Server 2014
 ## <a name="-download-sql-server-2014-express-httpwwwhanselmancomblogdownloadsqlserverexpressaspx"></a>[ 下載 SQL Server 2014 Express ](http://www.hanselman.com/blog/DownloadSQLServerExpress.aspx)
-  **感謝您到[Scott Hanselman](http://www.hanselman.com/)收集的所有安裝程式封裝連結，在一個地方 ！**
+  **感謝[Scott Hanselman](http://www.hanselman.com/)收集的所有安裝程式套件連結在同一個地方 ！**
   
- 本主題提供可以用於安裝 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 之不同安裝選項的概觀。 如需有關各種[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]可安裝的元件和安裝程序，請參閱[安裝 SQL Server 2014](installation-for-sql-server.md)。  
-> **注意：** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]提供 32 位元和 64 位元版本。 64 位元和 32 位元版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 是透過安裝精靈或命令提示字元來安裝。 如需有關[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]元件，請參閱[版本和 SQL Server 2014 元件](../../sql-server/editions-and-components-of-sql-server-2016.md)和[支援的 SQL Server 2014 的版本功能](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)。  
+ 本主題提供可以用於安裝 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 之不同安裝選項的概觀。 如需有關各種[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]可供安裝的元件以及安裝過程中，請參閱[SQL Server 2014 安裝](installation-for-sql-server.md)。  
+> **注意︰** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]提供 32 位元和 64 位元版本。 64 位元和 32 位元版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 是透過安裝精靈或命令提示字元來安裝。 如需詳細資訊[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]元件，請參閱[Edition 和 SQL Server 2014 元件](../../sql-server/editions-and-components-of-sql-server-2016.md)並[支援的 SQL Server 2014 的版本功能](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)。  
   
  根據預設， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝程序中不會安裝範例資料庫和範例程式碼。 若要針對非 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express Edition 安裝範例資料庫和範例程式碼，請參閱 [CodePlex 網站](http://go.microsoft.com/fwlink/?LinkId=87843)。 如需查閱 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 之 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]範例資料庫及範例程式碼的支援資訊，請參閱＜ [資料庫及範例概觀](http://go.microsoft.com/fwlink/?LinkId=110391)＞。  
   
@@ -72,7 +72,7 @@ ms.locfileid: "36134050"
   
 ## <a name="see-also"></a>另請參閱  
  [規劃 SQL Server 安裝](../../sql-server/install/planning-a-sql-server-installation.md)   
- [升級為 SQL Server 2014](upgrade-sql-server.md)   
+ [升級到 SQL Server 2014](upgrade-sql-server.md)   
  [解除安裝 SQL Server 2014](../../sql-server/install/uninstall-sql-server.md)   
  [高可用性解決方案 &#40;SQL Server&#41;](../../sql-server/failover-clusters/high-availability-solutions-sql-server.md)  
   

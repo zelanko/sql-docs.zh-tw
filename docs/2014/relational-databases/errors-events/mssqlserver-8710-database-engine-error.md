@@ -5,23 +5,22 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - 8710 (Database Engine error)
 ms.assetid: 78b9f9da-5489-4be0-94df-f065d86ed18c
 caps.latest.revision: 8
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: c46591374fc32ba20f4eb20c48bec171c76d9ac7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: b5e484ad03915e46aeac1cf0eb067cb49bc16f8c
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36036352"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37411287"
 ---
 # <a name="mssqlserver8710"></a>MSSQLSERVER_8710
     

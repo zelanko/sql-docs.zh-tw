@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - hiding system objects
 - system objects [SQL Server]
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - Object Explorer, hiding objects
 ms.assetid: c01d8804-838c-4f75-b78c-80e41e4fffdc
 caps.latest.revision: 14
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: a1b6908c1bdafb6fa64300d39a23524725b52516
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: fe585c68ad41999a669401e48b47b2b393620ac1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36134848"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37151759"
 ---
 # <a name="hide-system-objects-in-object-explorer"></a>在物件總管中隱藏系統物件
   此主題描述如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]，在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 的 [物件總管] 中隱藏系統物件。 物件總管的 [資料庫] 節點包含諸如系統資料庫的系統物件。 使用 [工具]/[選項] 頁面，隱藏系統物件。 某些系統物件 (如系統函數和系統資料類型) 不受這個設定所影響。  

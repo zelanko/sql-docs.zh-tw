@@ -5,23 +5,22 @@ ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - 9992 (Database Engine error)
 ms.assetid: 188e5bde-6865-4740-a2b2-582be8f55c77
 caps.latest.revision: 16
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 5035b8c20cdb2492004346b87d8a3af9a56ab65c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: dcb697263dee7f5fca3904dcda8434a46a91c056
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36035456"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37425947"
 ---
 # <a name="mssqlserver30089"></a>MSSQLSERVER_30089
     
@@ -47,7 +46,7 @@ ms.locfileid: "36035456"
 2.  查看搜耙記錄檔，以便識別無法進行全文檢索索引的任何新文件，然後移除該文件。  
   
 ## <a name="see-also"></a>另請參閱  
- [sp_help_fulltext_system_components &#40;Transact SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-help-fulltext-system-components-transact-sql)   
+ [sp_help_fulltext_system_components &#40;-SQL&AMP;#41;&#41;](/sql/relational-databases/system-stored-procedures/sp-help-fulltext-system-components-transact-sql)   
  [設定及管理搜尋的斷詞工具與字幹分析器](../search/configure-and-manage-word-breakers-and-stemmers-for-search.md)   
  [設定及管理搜尋的篩選](../search/configure-and-manage-filters-for-search.md)  
   
