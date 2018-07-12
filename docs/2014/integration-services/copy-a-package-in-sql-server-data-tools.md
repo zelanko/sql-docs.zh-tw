@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - packages [Integration Services], copying
 - copying packages
@@ -18,13 +18,13 @@ ms.assetid: 03edc659-e76d-48c0-a749-5f1899b6b507
 caps.latest.revision: 17
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: a49f678866fca7cbf5836ba240025e6022d5ba12
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e315d008ec7e17672c831172add10e5c32a6152b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36034827"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37229378"
 ---
 # <a name="copy-a-package-in-sql-server-data-tools"></a>在 SQL Server Data Tools 中複製封裝
   此主題描述如何透過複製現有的封裝來建立新的 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 封裝，以及如何更新這個新封裝的 `Name` 和 `GUID` 屬性。  
@@ -48,7 +48,7 @@ ms.locfileid: "36034827"
   
 7.  按一下 **[儲存]**。  
   
-8.  出現系統提示時，選擇是否更新封裝物件的名稱，以符合檔案名稱。 如果您按一下**是**、`Name`更新封裝屬性。 新的封裝便會加入 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 專案，並在「 [!INCLUDE[ssIS](../includes/ssis-md.md)] 設計師」中開啟。  
+8.  出現系統提示時，選擇是否更新封裝物件的名稱，以符合檔案名稱。 如果您按一下 **[是]**，則`Name`更新封裝的屬性。 新的封裝便會加入 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 專案，並在「 [!INCLUDE[ssIS](../includes/ssis-md.md)] 設計師」中開啟。  
   
 9. (選擇性) 按一下 **[控制流程]** 索引標籤的背景，然後按一下 **[屬性]**。  
   
@@ -57,7 +57,7 @@ ms.locfileid: "36034827"
 11. 在 **[檔案]** 功能表上按一下 **[儲存選取項目]** 以儲存新封裝。  
   
 ## <a name="see-also"></a>另請參閱  
- [儲存封裝的副本](../../2014/integration-services/save-a-copy-of-a-package.md)   
+ [儲存封裝的複本](../../2014/integration-services/save-a-copy-of-a-package.md)   
  [在 SQL Server Data Tools 中建立封裝](create-packages-in-sql-server-data-tools.md)   
  [Integration Services &#40;SSIS&#41; 封裝](../../2014/integration-services/integration-services-ssis-packages.md)  
   

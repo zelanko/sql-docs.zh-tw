@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - search criteria [SQL Server], excluding rows
 - search criteria [SQL Server], WHERE clause
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - excluding rows
 ms.assetid: ba4e1202-31a2-444d-8365-c68a530ef223
 caps.latest.revision: 11
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: fa82306f17c84c9751169339c8500272e2789997
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: e58848432a2bd1973eee5f2a941a3fbe3ec9980f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36033805"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37278306"
 ---
 # <a name="include-or-exclude-rows-visual-database-tools"></a>包含或排除資料列 (Visual Database Tools)
   若要限制 SELECT 查詢傳回的資料列數目，您可以建立搜尋條件或篩選條件。 在 SQL 中，搜尋條件出現在陳述式中的 WHERE 子句，或如果您要建立彙總查詢，查詢條件則位於 HAVING 子句中。  

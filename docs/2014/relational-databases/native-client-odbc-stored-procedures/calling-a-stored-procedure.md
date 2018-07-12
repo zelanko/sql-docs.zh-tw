@@ -1,13 +1,11 @@
 ---
-title: 呼叫預存程序 |Microsoft 文件
+title: 呼叫預存程序 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -20,29 +18,29 @@ helpviewer_keywords:
 - CALL statement
 ms.assetid: d13737f4-f641-45bf-b56c-523e2ffc080f
 caps.latest.revision: 40
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 352d447329a76318f362e958094ee835d36b9d87
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 11c8c691cf605942ef226927c9f0c2e940b28d63
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36030290"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37411537"
 ---
 # <a name="calling-a-stored-procedure"></a>呼叫預存程序
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驅動程式同時支援 ODBC CALL 逸出序列和[!INCLUDE[tsql](../../includes/tsql-md.md)] [EXECUTE](/sql/t-sql/language-elements/execute-transact-sql)陳述式來執行預存程序; ODBC CALL 逸出序列是慣用的方法。 使用 ODBC 語法可讓應用程式擷取預存程序的傳回碼，而且會最佳化 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驅動程式，使用最初開發的通訊協定，在執行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的電腦之間傳送遠端程序 (RPC) 呼叫。 此 RPC 通訊協定會排除在伺服器上完成的許多參數處理與陳述式剖析，藉以增加效能。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驅動程式同時支援 ODBC CALL 逸出序列和[!INCLUDE[tsql](../../includes/tsql-md.md)] [EXECUTE](/sql/t-sql/language-elements/execute-transact-sql)陳述式執行預存程序; ODBC CALL 逸出序列是慣用的方法。 使用 ODBC 語法可讓應用程式擷取預存程序的傳回碼，而且會最佳化 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驅動程式，使用最初開發的通訊協定，在執行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的電腦之間傳送遠端程序 (RPC) 呼叫。 此 RPC 通訊協定會排除在伺服器上完成的許多參數處理與陳述式剖析，藉以增加效能。  
   
 > [!NOTE]  
->  呼叫時[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]預存程序搭配 ODBC 使用具名的參數 (如需詳細資訊，請參閱[依名稱 （具名參數） 的繫結參數](http://go.microsoft.com/fwlink/?LinkID=209721))，參數名稱必須以開頭 ' @' 字元。 這是一個 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 特定的限制。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驅動程式會比 Microsoft Data Access Components (MDAC) 更嚴格地強制執行此限制。  
+>  呼叫時[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]預存程序搭配 ODBC 使用具名的參數 (如需詳細資訊，請參閱 <<c2> [ 依名稱 （具名參數） 的繫結參數](http://go.microsoft.com/fwlink/?LinkID=209721))，參數名稱必須以開頭 ' @' 字元。 這是一個 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 特定的限制。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驅動程式會比 Microsoft Data Access Components (MDAC) 更嚴格地強制執行此限制。  
   
  用來呼叫程序的 ODBC CALL 逸出序列為：  
   
  {[**?=**]**call***procedure_name*[([*parameter*][**,**[* parameter*]]...)]}  
   
- 其中*procedure_name*指定程序的名稱和*參數*指定程序參數。 只有使用 ODBC CALL 逸出序列的陳述式才會支援具名參數。  
+ 何處*procedure_name*指定程序的名稱並*參數*指定程序參數。 只有使用 ODBC CALL 逸出序列的陳述式才會支援具名參數。  
   
- 程序可以有零或多個參數。 它也可以傳回值 (如語法開頭的選用參數標記 ?= 所指示)。 如果參數是輸入參數或輸入/輸出參數，則可以是常值或參數標記。 如果參數是輸出參數，它必須是參數標記，因為輸出不明。 必須與參數標記繫結[SQLBindParameter](../../relational-databases/native-client-odbc-api/sqlbindparameter.md)陳述式執行之前的程序呼叫。  
+ 程序可以有零或多個參數。 它也可以傳回值 (如語法開頭的選用參數標記 ?= 所指示)。 如果參數是輸入參數或輸入/輸出參數，則可以是常值或參數標記。 如果參數是輸出參數，它必須是參數標記，因為輸出不明。 必須與繫結參數標記[SQLBindParameter](../../relational-databases/native-client-odbc-api/sqlbindparameter.md)陳述式執行之前的程序呼叫。  
   
  輸入和輸入/輸出參數可以從程序呼叫省略。 如果呼叫包含括號但沒有任何參數的程序，驅動程式會引導資料來源使用第一個參數的預設值。 例如：  
   
@@ -75,7 +73,7 @@ ms.locfileid: "36030290"
 { CALL "master"."dbo"."sp_who" }  
 ```  
   
- 不過，利用預設值執行時，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驅動程式不支援使用引號識別碼的形式與包含 ISO 標準未指定為合法識別碼之字元的識別碼。 例如，此驅動程式無法存取名為預存程序 **"My.Proc"** 使用 CALL 陳述式與引號識別項：  
+ 不過，利用預設值執行時，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驅動程式不支援使用引號識別碼的形式與包含 ISO 標準未指定為合法識別碼之字元的識別碼。 例如，此驅動程式無法存取名為預存程序 **"My.Proc"** 使用呼叫陳述式加上引號識別項：  
   
 ```  
 { CALL "MyDB"."MyOwner"."My.Proc" }  
@@ -87,7 +85,7 @@ ms.locfileid: "36030290"
 { CALL MyDB.MyOwner.My.Proc }  
 ```  
   
- 伺服器會引發錯誤，名為連結的伺服器**MyDB**不存在。  
+ 伺服器會引發錯誤的連結的伺服器的具名**MyDB**不存在。  
   
  此問題在使用有括號的識別碼時不存在，因為此陳述式會正確解譯：  
   

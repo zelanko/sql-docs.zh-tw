@@ -1,5 +1,5 @@
 ---
-title: 分類資料行 （資料採礦） |Microsoft 文件
+title: 已分類資料行 （資料採礦） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - content types [data mining]
 - STDEV column
@@ -21,15 +21,15 @@ helpviewer_keywords:
 - SUPPORT column
 ms.assetid: 68bf3b78-dc12-497c-898f-b43a45646123
 caps.latest.revision: 26
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: c00a3e1e85beebba351340a9cacad5100e96dff6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 403ab773012d9e9370959bd7094db51f9785e8d0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36035100"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37210338"
 ---
 # <a name="classified-columns-data-mining"></a>分類資料行 (資料採礦)
   當您定義分類資料行時，您可以建立目前資料行與採礦結構中另一個資料行之間的關聯性。 您指定為分類資料行之採礦結構資料行中的資料包含類別目錄的資訊，該資訊描述採礦結構中另一個資料行的值。  

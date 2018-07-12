@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Agent, about SQL Server Agent
 - automatic administration steps
 ms.assetid: 8d1dc600-aabb-416f-b3af-fbc9fccfd0ec
 caps.latest.revision: 28
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: e90a916b586215b23f15e6d3237690352f9aedd1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 4f3a29acfe387b4b4e80d9e9a0ee232476d6074d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36034510"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37230468"
 ---
 # <a name="sql-server-agent"></a>SQL Server Agent
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 是 Microsoft Windows 服務，它會執行排程的管理工作 (在 *中稱為* 「作業」 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)](Job))。  
@@ -118,10 +118,10 @@ ms.locfileid: "36034510"
  您可以將操作員定義成一群人員的別名。 用這種方法，可以同時告知具有該別名的所有成員。 如需詳細資訊，請參閱 [運算子](operators.md)。  
   
 ##  <a name="Security"></a> SQL Server 代理程式管理的安全性  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理程式會使用**SQLAgentUserRole**， **SQLAgentReaderRole**，和**SQLAgentOperatorRole**固定資料庫角色的**msdb**若要控制的存取權的資料庫[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]代理程式的使用者不是成員的`sysadmin`固定的伺服器角色。 除了這些固定資料庫角色之外，子系統與 Proxy 可協助資料庫管理員確保每一個作業步驟都以執行工作所需的最小權限來執行。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理程式會使用**SQLAgentUserRole**， **SQLAgentReaderRole**，並**SQLAgentOperatorRole**固定資料庫角色的**msdb**若要控制的存取權的資料庫[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]不是成員的使用者代理程式的`sysadmin`固定的伺服器角色。 除了這些固定資料庫角色之外，子系統與 Proxy 可協助資料庫管理員確保每一個作業步驟都以執行工作所需的最小權限來執行。  
   
 ### <a name="roles"></a>角色  
- 成員**SQLAgentUserRole**， **SQLAgentReaderRole**，和**SQLAgentOperatorRole**固定資料庫角色的**msdb**，和成員`sysadmin`固定的伺服器角色可以存取[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]代理程式。 不屬於以上任一角色的成員，都無法使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent。 如需 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 所使用角色的詳細資訊，請參閱 [實作 SQL Server Agent 安全性](implement-sql-server-agent-security.md)。  
+ 成員**SQLAgentUserRole**， **SQLAgentReaderRole**，並**SQLAgentOperatorRole**固定資料庫角色的**msdb**，及成員`sysadmin`固定的伺服器角色可以存取[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]代理程式。 不屬於以上任一角色的成員，都無法使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent。 如需 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 所使用角色的詳細資訊，請參閱 [實作 SQL Server Agent 安全性](implement-sql-server-agent-security.md)。  
   
 ### <a name="subsystems"></a>子系統  
  子系統是預先定義的物件，代表作業步驟可用的功能。 每個 Proxy 都具有一或多個子系統的存取權。 子系統可提供安全性，因為它們會將 Proxy 可用的功能存取加以分隔。 每種作業步驟都可在 Proxy 的內容中執行，除了 [!INCLUDE[tsql](../../includes/tsql-md.md)] 作業步驟以外； [!INCLUDE[tsql](../../includes/tsql-md.md)] 作業步驟使用 EXECUTE AS 命令來設定安全性內容。  
@@ -130,7 +130,7 @@ ms.locfileid: "36034510"
   
 |子系統名稱|描述|  
 |--------------------|-----------------|  
-|Microsoft ActiveX Script|執行 ActiveX Scripting 作業步驟。<br /><br /> **\*\* 重要\* \***  ActiveX Scripting 子系統將從移除[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的未來版本中的代理程式[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 請避免在新的開發工作中使用這項功能，並規劃修改目前使用這項功能的應用程式。|  
+|Microsoft ActiveX Script|執行 ActiveX Scripting 作業步驟。<br /><br /> **\*\* 重要\* \*** 會移除 ActiveX Scripting 子系統[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的未來版本中的代理程式[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 請避免在新的開發工作中使用這項功能，並規劃修改目前使用這項功能的應用程式。|  
 |作業系統 (**CmdExec**)|執行可執行的程式。|  
 |PowerShell|執行 PowerShell 指令碼作業步驟。|  
 |複寫散發者|執行可啟動複寫「散發代理程式」的作業步驟。|  

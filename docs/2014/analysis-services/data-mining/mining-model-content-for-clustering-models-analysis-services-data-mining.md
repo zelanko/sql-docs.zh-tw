@@ -1,5 +1,5 @@
 ---
-title: 群集模型的採礦模型內容 (Analysis Services-資料採礦) |Microsoft 文件
+title: 叢集模型的採礦模型內容 (Analysis Services-資料採礦) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - nearest neighbor [Data Mining]
 - clustering [Data Mining]
@@ -16,23 +16,23 @@ helpviewer_keywords:
 - clustering algorithms [Analysis Services]
 ms.assetid: aed1b7d3-8f20-4eeb-b156-0229f942cefd
 caps.latest.revision: 15
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 19b4b4192fd38fe4e3bab142c6a327e4c2510d5d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: dc2d9ce1c0581d067b8a0a9be0ad52643ee6287a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36036010"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37153309"
 ---
 # <a name="mining-model-content-for-clustering-models-analysis-services---data-mining"></a>叢集模型的採礦模型內容 (Analysis Services - 資料採礦)
-  本主題說明使用 Microsoft 叢集演算法的模型專用的採礦模型內容。 採礦模型內容的所有模型類型的一般說明，請參閱[採礦模型內容&#40;Analysis Services-資料採礦&#41;](mining-model-content-analysis-services-data-mining.md)。  
+  本主題說明使用 Microsoft 叢集演算法的模型專用的採礦模型內容。 所有模型類型採礦模型內容的一般說明，請參閱 <<c0> [ 採礦模型內容&#40;Analysis Services-Data Mining&#41;](mining-model-content-analysis-services-data-mining.md)。</c0>  
   
 ## <a name="understanding-the-structure-of-a-clustering-model"></a>了解叢集模型的結構  
  叢集模型有簡單的結構。 每個模型都擁有代表模型及其中繼資料的單一父節點，而每個父節點則擁有群集的一般清單 (NODE_TYPE = 5)。 下列影像顯示這個組織。  
   
- ![叢集模型內容結構](../media/modelcontentstructure-clust.gif "的群集模型內容結構")  
+ ![叢集模型內容結構](../media/modelcontentstructure-clust.gif "的叢集模型內容結構")  
   
  每個子節點都代表單一群集，且包含有關該群集之案例屬性的詳細統計資料。 這包含群集中的案例計數，以及區分此群集與其他群集的值散發。  
   
@@ -44,7 +44,7 @@ ms.locfileid: "36036010"
 |ATTRIBUTE_NAME|ATRIBUTE_VALUE|SUPPORT|PROBABILITY|variance|VALUE_TYPE|  
 |---------------------|---------------------|-------------|-----------------|--------------|-----------------|  
 |Age|Missing|0|0|0|1 (遺漏)|  
-|Age|44.9016152716593|12939|@shouldalert|125.663453102554|3 (連續)|  
+|Age|44.9016152716593|12939|1|125.663453102554|3 (連續)|  
 |Gender|Missing|0|0|0|1 (遺漏)|  
 |Gender|F|6350|0.490764355823479|0|4 (離散)|  
 |Gender|M|6589|0.509235644176521|0|4 (離散)|  
@@ -54,7 +54,7 @@ ms.locfileid: "36036010"
 > [!NOTE]  
 >  變異數代表叢集的總變異數。 當變異數的值很小時，代表資料行中大多數的值都相當接近平均值。 若要取得標準差，請計算變異數的平方根。  
   
- 請注意，對於每個屬性有`Missing`值會告訴您多少案例有任何資料，該屬性的類型。 遺漏的資料可能很多，而且視資料類型而會對計算造成不同的影響。 如需詳細資訊，請參閱[遺漏值 &#40;Analysis Services - 資料採礦&#41;](missing-values-analysis-services-data-mining.md)。  
+ 請注意，每個屬性`Missing`值類型，告訴您有多少案例沒有該屬性的資料。 遺漏的資料可能很多，而且視資料類型而會對計算造成不同的影響。 如需詳細資訊，請參閱[遺漏值 &#40;Analysis Services - 資料採礦&#41;](missing-values-analysis-services-data-mining.md)。  
   
 ## <a name="model-content-for-a-clustering-model"></a>叢集模型的模型內容  
  本章節僅針對採礦模型內容中與叢集模型相關的資料行，提供詳細資料和範例。  

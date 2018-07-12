@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 7b2018ce-c5f9-4f8b-bd44-4201379a584b
 caps.latest.revision: 7
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: b57fb0ad1dead47020094fc637344c8cbaf708be
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 8b6b8f9c722b69213a0e7e4d9816c3b779ce41de
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36036055"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37183865"
 ---
 # <a name="var-function-report-builder-and-ssrs"></a>Var 函數 (報表產生器及 SSRS)
   傳回運算式指定的所有非 Null 數值的變異數 (在給定範圍中評估)。  
@@ -36,7 +36,7 @@ Var(expression, scope, recursive)
   
 #### <a name="parameters"></a>參數  
  *expression*  
- (`Integer`或`Float`) 在其上執行彙總運算式。  
+ (`Integer`或`Float`) 要執行彙總運算式。  
   
  *範圍 (scope)*  
  (`String`) 選擇性。 包含要套用彙總函式之報表項目的資料集、群組或資料區域名稱的常數。 如果未指定 *scope* ，則使用目前的範圍。  
@@ -48,7 +48,7 @@ Var(expression, scope, recursive)
  傳回`Decimal`十進位運算式和`Double`所有其他運算式。  
   
 ## <a name="remarks"></a>備註  
- 運算式中指定的資料集必須具有相同的資料類型。 若要轉換成相同的資料類型的多個數值資料類型的資料，使用轉換函式，例如`CInt`，`CDbl`或`CDec`。 如需詳細資訊，請參閱 [類型轉換函數](http://go.microsoft.com/fwlink/?LinkId=96142)。  
+ 運算式中指定的資料集必須具有相同的資料類型。 若要將轉換成相同的資料類型的多個數值資料類型的資料，請使用 等轉換函數`CInt`，`CDbl`或`CDec`。 如需詳細資訊，請參閱 [類型轉換函數](http://go.microsoft.com/fwlink/?LinkId=96142)。  
   
  *scope* 的值必須是字串常數，而且不得為運算式。 如果是未指定其他彙總的外部彙總， *scope* 必須參考目前的範圍或是包含的範圍。 如果是彙總的彙總，巢狀彙總可以指定子範圍。  
   
@@ -58,7 +58,7 @@ Var(expression, scope, recursive)
   
 -   巢狀彙總的*Scope* 不得為資料集的名稱。  
   
--   *運算式*不能包含`First`， `Last`， `Previous`，或`RunningValue`函式。  
+-   *運算式*不得包含`First`， `Last`， `Previous`，或`RunningValue`函式。  
   
 -   *Expression* 不得包含指定 *recursive*的巢狀彙總。  
   
@@ -74,9 +74,9 @@ Var(expression, scope, recursive)
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [運算式會在報表中使用&#40;報表產生器和 SSRS&#41;](expression-uses-in-reports-report-builder-and-ssrs.md)   
+ [在報表中的運算式會使用&#40;報表產生器及 SSRS&#41;](expression-uses-in-reports-report-builder-and-ssrs.md)   
  [運算式範例 &#40;報表產生器及 SSRS&#41;](expression-examples-report-builder-and-ssrs.md)   
  [運算式中的資料類型 &#40;報表產生器及 SSRS&#41;](expressions-report-builder-and-ssrs.md)   
- [Expression Scope for Totals，Aggregates，and Built-in Collections&#40;報表產生器和 SSRS&#41;](expression-scope-for-totals-aggregates-and-built-in-collections.md)  
+ [Expression Scope for Totals，Aggregates，and Built-in Collections&#40;報表產生器及 SSRS&#41;](expression-scope-for-totals-aggregates-and-built-in-collections.md)  
   
   

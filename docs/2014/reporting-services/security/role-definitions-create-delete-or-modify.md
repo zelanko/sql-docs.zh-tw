@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - roles [Reporting Services], creating
 - deleting roles
@@ -21,13 +21,13 @@ ms.assetid: 3d1d56e6-a283-44a7-8417-36cb4d2c74d1
 caps.latest.revision: 41
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 4443cdc530e2aeb3e600db9ba09bf7d54a6d9d9e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 4f2c77960d87f06aed87ffddefa534b8ee8a1640
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36036953"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37148229"
 ---
 # <a name="create-delete-or-modify-a-role-management-studio"></a>建立、刪除或修改角色 (Management Studio)
   Reporting Services 會提供定義報表伺服器之存取層級的預先定義角色。 需要存取報表伺服器的每個使用者或群組會透過描述可執行之工作的角色來達成此目的。 這些角色完全是針對報表伺服器所定義。 您無法針對報表伺服器的特定部分變更角色定義，或指定要根據情況以不同的方式使用某個角色。  

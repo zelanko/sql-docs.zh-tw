@@ -8,23 +8,23 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: f151c3e8-3811-457d-a3d3-6158ca65a646
 caps.latest.revision: 6
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: c7fb15f3dda170c866bb95840a7a3cde4c19ffa1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 6bda3a31cf3d498d59d4ec86c6c7b32bd2134385
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36036165"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37158629"
 ---
 # <a name="datareader-destination-custom-properties"></a>DataReader 目的地自訂屬性
   DataReader 目的地同時具有自訂屬性以及所有資料流程元件通用的屬性。  
   
- 下表描述的是 DataReader 目的地的自訂屬性。 所有的屬性，除了`DataReader`是讀取/寫入。  
+ 下表描述的是 DataReader 目的地的自訂屬性。 所有屬性，但`DataReader`是可讀寫。  
   
 |屬性名稱|資料類型|描述|  
 |-------------------|---------------|-----------------|  

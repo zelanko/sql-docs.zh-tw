@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - MICROSOFT.REPORTDESIGNER.MAPPOINT.POINTTEMPLATE
 ms.assetid: 7d36faae-5bcc-446a-9eba-f42349cafacb
 caps.latest.revision: 8
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 50a1037a5465e1e22d5c70def2b005fdbac0ec4d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: d9f8e82911ad74bbc7afa800a58c7657e21e0a35
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36034092"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37278494"
 ---
 # <a name="add-custom-locations-to-a-map-report-builder-and-ssrs"></a>將自訂位置加入至地圖 (報表產生器及 SSRS)
   將地圖加入至報表後，您可以加入自己的點位置。  

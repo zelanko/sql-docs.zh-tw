@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - DAY function
 - dates [Integration Services], DAY
@@ -16,13 +16,13 @@ ms.assetid: d8447187-49df-45b7-a98e-142ad44fd3e2
 caps.latest.revision: 38
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: b569d3114e89d623b896ed33a87aa95dc1cff32a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e79780ad62800eac8dfabbd6c8b80eacc3abe5dc
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36036380"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37148749"
 ---
 # <a name="day-ssis-expression"></a>DAY (SSIS 運算式)
   傳回代表日期之日部分的整數。  

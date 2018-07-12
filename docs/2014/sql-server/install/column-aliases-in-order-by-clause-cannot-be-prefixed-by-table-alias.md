@@ -1,5 +1,5 @@
 ---
-title: ORDER BY 子句中的資料行別名無法前置詞可以是資料表別名 |Microsoft 文件
+title: ORDER BY 子句中的資料行別名前置詞不可以是資料表別名 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - aliases [SQL Server], columns
 ms.assetid: fee7328f-6e8d-4005-930b-56fb6f17e0b2
 caps.latest.revision: 20
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 18c65604efb2d1b0ff93d09b8d03f7ee6cb213cd
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: bb0c12c4112383599b3f6ec67c7a097563a5944c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36033601"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37210708"
 ---
 # <a name="column-aliases-in-order-by-clause-cannot-be-prefixed-by-table-alias"></a>ORDER BY 子句中資料行別名的前置詞不可以是資料表別名
   在 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 或更新版本中，ORDER BY 子句中資料行別名的前置詞不可以是資料表別名。  
@@ -76,6 +76,6 @@ ORDER BY p.LastName
   
 ## <a name="see-also"></a>另請參閱  
  [Database Engine 升級問題](../../../2014/sql-server/install/database-engine-upgrade-issues.md)   
- [SQL Server 2014 Upgrade Advisor&#91;新&#93;](/sql/2014/sql-server/install/sql-server-2014-upgrade-advisor)  
+ [SQL Server 2014 Upgrade Advisor&#91;新增&#93;](/sql/2014/sql-server/install/sql-server-2014-upgrade-advisor)  
   
   

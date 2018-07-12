@@ -1,5 +1,5 @@
 ---
-title: Excel 來源編輯器 （連接管理員頁面） |Microsoft 文件
+title: Excel 來源編輯器 （連線管理員頁面） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,28 +8,28 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.excelsourceadapter.connection.f1
 helpviewer_keywords:
 - Excel Source Editor
 ms.assetid: 428e04e0-ad98-45d0-8345-12ec1b67b2eb
 caps.latest.revision: 39
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: eeb3af2f65be818c41dd88dc89028cb0f27cb36e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: bb74698304e70e1125003e5b15cef991f8511ed4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36035937"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37161029"
 ---
 # <a name="excel-source-editor-connection-manager-page"></a>Excel 來源編輯器 (連接管理員頁面)
   使用 **[Excel 來源編輯器]** 對話方塊的 **[連接管理員]** 節點，以選取來源要使用的 [!INCLUDE[ofprexcel](../includes/ofprexcel-md.md)] 活頁簿。 Excel 來源會從工作表或現有活頁簿的具名範圍中讀取資料。  
   
 > [!NOTE]  
->  `CommandTimeout` Excel 來源的屬性，不適用於**Excel 來源編輯器**，但是可以透過設定**進階編輯器**。 如需有關這個屬性的詳細資訊，請參閱＜ [Excel Custom Properties](data-flow/excel-custom-properties.md)＞的＜Excel 來源＞一節。  
+>  `CommandTimeout` Excel 來源的屬性不適用於**Excel 來源編輯器**，但可以透過設定**進階編輯器**。 如需有關這個屬性的詳細資訊，請參閱＜ [Excel Custom Properties](data-flow/excel-custom-properties.md)＞的＜Excel 來源＞一節。  
   
  若要深入了解 Excel 來源，請參閱＜ [Excel Source](data-flow/excel-source.md)＞。  
   
@@ -43,7 +43,7 @@ ms.locfileid: "36035937"
  **資料存取模式**  
  從來源中指定選取資料的方法。  
   
-|ReplTest1|描述|  
+|值|描述|  
 |-----------|-----------------|  
 |資料表或檢視|從工作表或 Excel 檔案的具名範圍中擷取資料。|  
 |資料表名稱或檢視名稱變數|在變數中指定工作表或範圍名稱。<br /><br /> **相關資訊︰**[在封裝中使用變數](../../2014/integration-services/use-variables-in-packages.md)|  

@@ -5,23 +5,22 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-search
+ms.technology: search
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - full-text search [SQL Server]
 ms.assetid: a0ce315d-f96d-4e5d-b4eb-ff76811cab75
 caps.latest.revision: 47
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: d419f7a018817656ba9bb5910a71e2c2f810ae87
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 5b923b9b27fd7b67d61b25956f3d44102f1a5f79
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36036990"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37158019"
 ---
 # <a name="full-text-search"></a>全文檢索搜尋
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 中的全文檢索搜尋可讓使用者和應用程式針對 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料表中以字元為主的資料，執行全文檢索查詢。 資料庫管理員必須先在資料表上建立全文檢索索引，才能在此資料表上執行全文檢索查詢。 全文檢索索引包括資料表中一或多個以字元為基礎的資料行。 這些資料行可以具有任何下列資料類型： `char`， `varchar`， `nchar`， `nvarchar`， `text`， `ntext`， `image`， `xml`，或`varbinary(max)`和 FILESTREAM。 每個全文檢索索引都會為資料表中的一個或多個資料行建立索引，而且每個資料行都可以使用特定的語言。  
@@ -29,9 +28,9 @@ ms.locfileid: "36036990"
  全文檢索查詢會根據特定語言的規則 (例如英文或日文) 在單字與片語上運作，藉以針對全文檢索索引中的文字資料執行語言搜尋。 全文檢索查詢可以包含簡單的單字和片語，或者單字或片語的多種形式。 全文檢索查詢會傳回至少包含一個符合項目 (也稱為 *「叫用」*(Hit)) 的任何文件。 如果目標文件包含全文檢索查詢中指定的所有詞彙，而且符合其他搜尋條件 (例如相符詞彙之間的距離)，就會出現符合項目。  
   
 > [!NOTE]  
->  全文檢索搜尋是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Database Engine 的選擇性元件。 如需詳細資訊，請參閱[安裝 SQL Server 2014](../../database-engine/install-windows/install-sql-server.md)。  
+>  全文檢索搜尋是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Database Engine 的選擇性元件。 如需詳細資訊，請參閱 <<c0> [ 安裝 SQL Server 2014](../../database-engine/install-windows/install-sql-server.md)。  
   
-##  <a name="benefits"></a> 我可以用全文檢索搜尋來做什麼？  
+##  <a name="benefits"></a> 我可以使用全文檢索搜尋來做什麼？  
  全文檢索搜尋適用於各種商務案例，例如電子商務 (搜尋網站上的項目)、律師事務所 (在法律資料儲存機制中搜尋個案記錄)，或人力資源部門 (比對工作描述與預存的履歷表)。 不論商務案例為何，全文檢索搜尋的基本管理和開發工作都是相同的。 不過，在給定的商務案例中，可能會調整全文檢索索引和查詢來符合商務目標。 例如，對於電子商務而言，發揮最佳效能可能會比排序結果等級、重新叫用精確度 (全文檢索查詢實際傳回的現有相符項目數) 或支援多國語言更重要。 對於律師事務所而言，傳回每個可能的叫用 (資訊的 *「重新叫用總數」* (Total Recall)) 可能是最重要的考量。  
   
  [本主題內容](#top)  
@@ -83,7 +82,7 @@ ms.locfileid: "36036990"
   
  [本主題內容](#top)  
   
-##  <a name="architecture"></a> 全文檢索搜尋的元件和架構  
+##  <a name="architecture"></a> 全文檢索搜尋元件和架構  
  全文檢索搜尋架構是由下列處理序所組成：  
   
 -   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 處理序 (sqlservr.exe)。  
@@ -138,7 +137,7 @@ ms.locfileid: "36036990"
 ###  <a name="indexing"></a> 全文檢索索引處理序  
  全文檢索擴展 (也就是搜耙) 起始時，全文檢索引擎會將大批的資料發送至記憶體中，並通知篩選背景程式主機。 此主機會針對資料進行篩選並斷詞，並且將轉換的資料轉換成反向字詞清單。 然後，全文檢索搜尋會從這些字詞清單中提取轉換的資料、處理資料以便移除停用字詞，並且將批次的字詞清單保存在一或多個反向索引中。  
   
- 索引中儲存的資料時`varbinary(max)`或`image`資料行中，篩選器，它會實作**IFilter**介面，根據指定的檔案格式，該資料的擷取文字 (例如， [!INCLUDE[msCoName](../../includes/msconame-md.md)] Word)。 在某些情況下，篩選元件必須`varbinary(max)`，或`image`資料寫出至 filterdata 資料夾，而不發送至記憶體。  
+ 索引中儲存的資料時`varbinary(max)`或`image`資料行中，篩選器，它會實作**IFilter**介面，根據指定的檔案格式，該資料的擷取文字 (例如[!INCLUDE[msCoName](../../includes/msconame-md.md)]Word)。 在某些情況下，篩選元件必須`varbinary(max)`，或`image`寫出至 filterdata 資料夾，而不發送至記憶體的資料。  
   
  做為處理程序的一部分，收集的文字資料在經由文字分隔的處理之後，會分隔成 Token 或關鍵字。 用於 Token 化的語言是在資料行層級指定，也可由篩選元件在 `varbinary(max)`、`image` 或 `xml` 資料中識別。  
   
@@ -148,7 +147,7 @@ ms.locfileid: "36036990"
   
  [本主題內容](#top)  
   
-###  <a name="querying"></a> 全文檢索查詢的處理程序  
+###  <a name="querying"></a> 全文檢索查詢處理序  
  查詢處理器會將查詢的全文檢索部分傳遞至全文檢索引擎，以便進行處理。 全文檢索引擎會執行斷詞並選擇性地執行同義字展開、詞幹分析和停用字詞 (非搜尋字) 處理。 然後，查詢的全文檢索部分會以 SQL 運算子的形式表示，主要表示成資料流資料表值函式 (STVF)。 在查詢執行期間，這些 STVF 會存取反向索引來擷取正確的結果。 接著，這些結果會在此時傳回用戶端，或在傳回用戶端之前進一步處理。  
   
  [本主題內容](#top)  

@@ -1,5 +1,5 @@
 ---
-title: 測試和驗證 （資料採礦） |Microsoft 文件
+title: 測試和驗證 （資料採礦） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - testing data mining models
 - comparing mining models
@@ -29,15 +29,15 @@ helpviewer_keywords:
 - accuracy testing [data mining]
 ms.assetid: 197144f5-21ed-4009-b448-fe412fb3916c
 caps.latest.revision: 60
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 0e83f8e0ad6227444f4dbc0962a83e1aedd8a5f5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d3fb68f21136da8236c653aaae71c9a9e461b432
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36034679"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37230150"
 ---
 # <a name="testing-and-validation-data-mining"></a>測試和驗證 (資料採礦)
   驗證是評估採礦模型對實際資料的執行效能有多好的處理程序。 在部署採礦模型至生產環境之前，先了解其品質和特性以驗證採礦模型是很重要的。  

@@ -1,5 +1,5 @@
 ---
-title: 執行 SQL 工作編輯器 （參數對應頁面） |Microsoft 文件
+title: 執行 SQL 工作編輯器 （參數對應頁面） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.executesqltask.parametermapping.f1
 helpviewer_keywords:
 - Execute SQL Task Editor
 ms.assetid: 8ebe020a-7921-46b2-8823-398748f379b2
 caps.latest.revision: 42
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 863ae3b186cc60c4d2d2e04308dd81023f653f12
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 4baffae0ada8cddc911561f63ca32f9b4b578283
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36036608"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37152779"
 ---
 # <a name="execute-sql-task-editor-parameter-mapping-page"></a>執行 SQL 工作編輯器 (參數對應頁面)
   使用 [執行 SQL 工作編輯器] 對話方塊的 [參數對應] 頁面，即可將變數對應到 SQL 陳述式中的參數。  
@@ -62,7 +62,7 @@ ms.locfileid: "36036608"
   
 ## <a name="see-also"></a>另請參閱  
  [Integration Services 錯誤和訊息參考](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [執行 SQL 工作編輯器&#40;[一般] 頁面&#41;](general-page-of-integration-services-designers-options.md)   
+ [執行 SQL 工作編輯器&#40;一般頁面&#41;](general-page-of-integration-services-designers-options.md)   
  [執行 SQL 工作編輯器&#40;結果集頁面&#41;](../../2014/integration-services/execute-sql-task-editor-result-set-page.md)   
  [Transact-SQL 參考 &#40;Database Engine&#41;](/sql/t-sql/language-reference)  
   

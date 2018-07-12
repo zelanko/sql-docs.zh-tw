@@ -1,5 +1,5 @@
 ---
-title: 連線至資料來源 （適用於 Excel 的資料採礦用戶端） |Microsoft 文件
+title: 連線至資料來源 （適用於 Excel 的資料採礦用戶端） |Microsoft Docs
 ms.custom: ''
 ms.date: 12/29/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - connections
 ms.assetid: 548672ce-e403-4aca-b67a-c2c797f053dd
 caps.latest.revision: 21
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: dacc0416cc7f86dbfb90adc8b74268ca8cb18857
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 5e750ec50aff2d4d69b90a974b28ddb77c54b068
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36035554"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37163599"
 ---
 # <a name="connect-to-source-data-data-mining-client-for-excel"></a>連接到來源資料 (適用於 Excel 的資料採礦用戶端)
   本主題將說明如何建立和使用用於儲存資料採礦模型的連接，以及用於存取 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 中儲存之外部資料的連接。  
@@ -38,7 +38,7 @@ ms.locfileid: "36035554"
  若要連接到 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 資料庫，您必須擁有存取資料庫伺服器的權限。 而且，資料採礦工作階段必須已啟用，您也必須有伺服器上儲存之資料庫物件的讀取或讀取/寫入權限。  
   
 ##  <a name="bkmk_connect"></a> 建立資料採礦伺服器連接  
- **連線**Excel 提供工具來管理的執行個體連接的 Excel 與資料表分析工具的群組的資料採礦用戶端[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]。  
+ **連線**for Excel 會提供工具來管理執行個體的連接，資料採礦用戶端群組 Excel 的資料表分析工具[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]。  
   
 -   您可以在安裝增益集時建立連接，或稍後新增連接。  
   
@@ -49,18 +49,18 @@ ms.locfileid: "36035554"
 -   一次只能有一個作用中的連接。  
   
 ### <a name="connections-in-the-excel-add-ins"></a>Excel 增益集的連接  
- **連線**for Excel 是您用來管理的執行個體的連接，資料採礦用戶端群組用於 Excel 及資料表分析工具[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]。  
+ **連線**for Excel 是您用來管理的執行個體的連線，資料採礦用戶端群組 Excel 的資料表分析工具[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]。  
   
 ##### <a name="create-a-new-server-connection-in-the-excel-add-ins"></a>在 Excel 增益集中建立新的伺服器連接  
   
-1.  按一下**連接**按鈕**分析**或**資料採礦**功能區。  
+1.  按一下 **連接**按鈕**分析**或是**Data Mining**功能區。  
   
     > [!NOTE]  
-    >  按鈕的文字表示連接是否存在。 當工作表中已沒有連線時，按鈕就會包含文字"\<沒有連接 >。 」 如果先前已在活頁簿中建立連接，該連接名稱會出現在按鈕上。  
+    >  按鈕的文字表示連接是否存在。 當工作表中不建立任何連線時，按鈕會包含文字"\<沒有連接 >。 」 如果先前已在活頁簿中建立連接，該連接名稱會出現在按鈕上。  
   
-2.  在**Analysis Services 連接**對話方塊中，按一下 **新增**。  
+2.  在 [ **Analysis Services 連接**] 對話方塊中，按一下**新增**。  
   
-3.  在**新增 Analysis Services 連接**對話方塊方塊中，輸入伺服器的名稱。  
+3.  在 **新的 Analysis Services 連接**對話方塊方塊中，輸入伺服器的名稱。  
   
 4.  指定驗證方法。  
   
@@ -68,7 +68,7 @@ ms.locfileid: "36035554"
   
 6.  輸入連接的易記名稱。  
   
-7.  按一下**測試連接**來確認伺服器和資料庫可供使用。  
+7.  按一下 **測試連接**來確認伺服器和資料庫可供使用。  
   
 8.  按一下 **[確定]**，然後按一下 **[關閉]**。  
   
@@ -79,7 +79,7 @@ ms.locfileid: "36035554"
   
 ##### <a name="create-an-http-connection-to-analysis-services"></a>建立 Analysis Services 的 HTTP 連接  
   
-1.  開啟**新增 Analysis Services 連接** 對話方塊。  
+1.  開啟**新的 Analysis Services 連接** 對話方塊。  
   
 2.  對於伺服器名稱，請輸入 http://，後面接著指派給 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 伺服器的 URL。  
   
@@ -96,22 +96,22 @@ ms.locfileid: "36035554"
   
 2.  將圖形拖放至空白頁面上。  
   
-3.  在**選取資料來源** 對話方塊中，選取資料來源從清單中，或按一下**新增**。  
+3.  在  **Zdroj dat**對話方塊中，選取資料來源從清單中，或按一下**新增**。  
   
 4.  如果您選取**新增**，請依照下列程序稍早所述來指定伺服器和目錄名稱，或透過 Web 服務連線。  
   
 ##  <a name="bkmk_change"></a> 變更連接  
- 您可以在相同工作表中建立多個連接，但每次只能有一個作用中的連接。 目前連接的名稱會顯示在**連接** 按鈕。  
+ 您可以在相同工作表中建立多個連接，但每次只能有一個作用中的連接。 目前連接的名稱會顯示在**連線** 按鈕。  
   
- 適用於 Excel 的資料採礦用戶端，您也可以驗證的連接字串和目前的連接狀態，即可**追蹤**，然後按一下 **目前連接**。  
+ 適用於 Excel 的資料採礦用戶端，您也可以驗證的連接字串和目前連接的狀態，即可**追蹤**，然後按一下**目前連接**。  
   
 #### <a name="use-a-different-server-connection"></a>使用不同的伺服器連接  
   
-1.  按一下**連接**。  
+1.  按一下 **連線**。  
   
-2.  在**Analysis Services 連接** 窗格中，選取連線從**其他連線**清單，然後按**設為現用**。  
+2.  在 [ **Analysis Services 連接**] 窗格中選取連接從**其他連接**清單，然後按**設為現用**。  
   
-3.  按一下**測試連接**來驗證連接是否可用。  
+3.  按一下 **測試連接**來驗證連線是否可用。  
   
  在採礦模型完成處理之後，會在本機儲存結果，如果您關閉與某個伺服器的連接，然後連接到另一個伺服器，這對資料沒有影響。 不過，您應避免在處理資料採礦模型時變更連接或中斷連接，因為這可能會損毀資料。  
   
@@ -124,19 +124,19 @@ ms.locfileid: "36035554"
      \<磁碟機： > \Users\\< myusername\>\AppData\Local\Microsoft\Data 採礦增益集  
   
 ##  <a name="bkmk_extconnections"></a> 連接到外部資料來源  
- 而在工具**分析**功能區專門處理 Excel 中的工具中的資料**資料採礦**功能區可讓您直接連接到適用於您的模型，或是當做輸入的外部資料來源取樣。  
+ 而在工具**分析**功能區專門處理 Excel 中的工具中的資料**Data Mining**功能區可讓您直接連接到外部資料來源當做輸入，針對您的模型，或取樣。  
   
  這些增益集中的下列工具支援使用外部資料進行資料採礦：  
   
 -   [範例資料&#40;SQL Server 資料採礦增益集&#41;](sample-data-sql-server-data-mining-add-ins.md)  
   
--   [分類精靈&#40;資料採礦 excel 增益集&#41;](classify-wizard-data-mining-add-ins-for-excel.md)  
+-   [分類精靈&#40;資料採礦適用於 Excel 的增益集&#41;](classify-wizard-data-mining-add-ins-for-excel.md)  
   
--   [估計精靈&#40;資料採礦 excel 增益集&#41;](estimate-wizard-data-mining-add-ins-for-excel.md)  
+-   [估計精靈&#40;資料採礦適用於 Excel 的增益集&#41;](estimate-wizard-data-mining-add-ins-for-excel.md)  
   
--   [叢集精靈&#40;資料採礦 excel 增益集&#41;](cluster-wizard-data-mining-add-ins-for-excel.md)  
+-   [叢集精靈&#40;資料採礦適用於 Excel 的增益集&#41;](cluster-wizard-data-mining-add-ins-for-excel.md)  
   
--   [預測精靈&#40;資料採礦 excel 增益集&#41;](forecast-wizard-data-mining-add-ins-for-excel.md)  
+-   [預測精靈&#40;資料採礦適用於 Excel 的增益集&#41;](forecast-wizard-data-mining-add-ins-for-excel.md)  
   
 -   [建立採礦結構&#40;SQL Server 資料採礦增益集&#41;](create-mining-structure-sql-server-data-mining-add-ins.md)  
   

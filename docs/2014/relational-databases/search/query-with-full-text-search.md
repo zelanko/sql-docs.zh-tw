@@ -5,10 +5,9 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-search
+ms.technology: search
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - queries [full-text search], about full-text queries
 - queries [full-text search], predicates
@@ -18,15 +17,15 @@ helpviewer_keywords:
 - queries [full-text search], functions
 ms.assetid: 7624ba76-594b-4be5-ac10-c3ac4a3529bd
 caps.latest.revision: 79
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 2edf2a5fbafb99287503d4b7ebe5475bd5604985
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 78351b4f710d84d6d8cb7f29d1de89d05ee763b8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36032059"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37229008"
 ---
 # <a name="query-with-full-text-search"></a>Query with Full-Text Search
   為了定義全文檢索搜尋，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 全文檢索查詢會使用全文檢索述詞 (CONTAINS 和 FREETEXT) 與函數 (CONTAINSTABLE 和 FREETEXTTABLE)。 這些項目支援豐富的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 語法，而這種語法支援各種形式的查詢詞彙。 若要撰寫全文檢索查詢，您必須了解使用這些述詞與函數的時機和方式。  
@@ -35,7 +34,7 @@ ms.locfileid: "36032059"
  CONTAINS 和 FREETEXT 述詞會傳回 TRUE 或 FALSE 值。 它們只能用來指定選取準則，以便判斷給定的資料列是否符合全文檢索查詢。 符合的資料列就會傳回結果集中。 CONTAINS 和 FREETEXT 都是在 SELECT 陳述式的 WHERE 或 HAVING 子句中指定的。 它們可與任何其他 [!INCLUDE[tsql](../../includes/tsql-md.md)] 述詞結合，例如 LIKE 和 BETWEEN。  
   
 > [!NOTE]  
->  如需語法和引數，這些述詞的資訊，請參閱[CONTAINS &#40;TRANSACT-SQL&#41; ](/sql/t-sql/queries/contains-transact-sql)和[FREETEXT &#40;TRANSACT-SQL&#41;](/sql/t-sql/queries/freetext-transact-sql)。  
+>  如需語法和引數，這些述詞的詳細資訊，請參閱[CONTAINS &#40;TRANSACT-SQL&#41; ](/sql/t-sql/queries/contains-transact-sql)和[FREETEXT &#40;-&#41;](/sql/t-sql/queries/freetext-transact-sql)。  
   
  使用 CONTAINS 或 FREETEXT 時，您可以指定要搜尋資料表中的單一資料行、資料行清單或所有資料行。 此外，您可以針對斷詞和詞幹分析、同義字查閱以及非搜尋字移除，指定給定全文檢索查詢將使用之資源的語言。  
   
@@ -89,7 +88,7 @@ GO
  CONTAINSTABLE 和 FREETEXTTABLE 函數的參考方式就如同 SELECT 陳述式之 FROM 子句中的一般資料表名稱。 它們會傳回符合全文檢索查詢之零、一或多個資料列的資料表。 傳回的資料表僅包含基底資料表的資料列，而這些資料列符合函數之全文檢索搜尋條件中指定的選取準則。  
   
 > [!NOTE]  
->  如需語法和引數，這些函式的資訊，請參閱[CONTAINSTABLE &#40;TRANSACT-SQL&#41; ](/sql/relational-databases/system-functions/containstable-transact-sql)和[FREETEXTTABLE &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-functions/freetexttable-transact-sql)。  
+>  如需語法和引數，這些函式的資訊，請參閱[CONTAINSTABLE &#40;TRANSACT-SQL&#41; ](/sql/relational-databases/system-functions/containstable-transact-sql)和[FREETEXTTABLE &#40;-&#41;](/sql/relational-databases/system-functions/freetexttable-transact-sql)。  
   
  使用其中一個函數的查詢會針對每個資料列傳回一個相關次序值 (RANK) 和全文檢索索引鍵 (KEY)，如下所示：  
   
@@ -218,7 +217,7 @@ GO
  如果已建立 `varbinary(max)`、`varbinary` 或 `xml` 資料行的全文檢索索引，您就可以使用全文檢索述詞 (CONTAINS 和 FREETEXT) 與函數 (CONTAINSTABLE 和 FREETEXTTABLE) 來查詢它，就像查詢任何其他全文檢索索引資料行一樣。  
   
 > [!IMPORTANT]  
->  全文檢索搜尋也會處理 image 資料行。 不過，`image`的未來版本將移除的資料型別[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 請避免在新的開發作業中使用此資料類型，並且計畫修改目前使用此資料類型的應用程式。 使用`varbinary(max)`資料改為輸入。  
+>  全文檢索搜尋也會處理 image 資料行。 不過，`image`的未來版本將移除的資料型別[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 請避免在新的開發作業中使用此資料類型，並且計畫修改目前使用此資料類型的應用程式。 使用`varbinary(max)`請改為輸入資料。  
   
 ### <a name="varbinarymax-or-varbinary-data"></a>varbinary(max) 或 varbinary 資料  
  單一`varbinary(max)`或`varbinary`資料行可以儲存許多類型的文件。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支援已在作業系統中安裝並提供篩選的任何文件類型。 每份文件的文件類型都是由文件的副檔名所識別。 例如，全文檢索搜尋會針對 .doc 副檔名使用支援 Microsoft Word 文件的篩選。 如需可用文件類型的清單，請查詢 [sys.fulltext_document_types](/sql/relational-databases/system-catalog-views/sys-fulltext-document-types-transact-sql) 目錄檢視。  
@@ -234,9 +233,9 @@ EXEC sp_fulltext_service @action='load_os_resources', @value=1
  
   
 ### <a name="xml-data"></a>xml 資料  
- `xml`資料類型資料行只會儲存 XML 文件和片段，而且只有 XML 篩選會用於文件。 因此，類型資料行是不必要的。 在`xml`資料行，全文檢索索引內容 XML 項目，但忽略 XML 標記。 屬性值是全文檢索索引的值 (除非它們是數值)。 元素標記會當做 Token 界限來使用。 系統支援包含多種語言且格式正確的 XML 或 HTML 文件和片段。  
+ `xml`資料類型資料行只會儲存 XML 文件和片段，而且只有 XML 篩選用於文件。 因此，類型資料行是不必要的。 在 `xml`資料行，全文檢索索引的 XML 項目內容但忽略 XML 標記。 屬性值是全文檢索索引的值 (除非它們是數值)。 元素標記會當做 Token 界限來使用。 系統支援包含多種語言且格式正確的 XML 或 HTML 文件和片段。  
   
- 如需有關查詢`xml`資料行，請參閱[使用 XML 資料行全文檢索搜尋](../xml/use-full-text-search-with-xml-columns.md)。  
+ 如需查詢的詳細資訊`xml`資料行，請參閱 <<c2> [ 使用 XML 資料行全文檢索搜尋](../xml/use-full-text-search-with-xml-columns.md)。  
   
  
   
@@ -257,8 +256,8 @@ EXEC sp_fulltext_service @action='load_os_resources', @value=1
   
 
   
-###  <a name="Simple_Term"></a> 搜尋特定字詞或片語 （簡單詞彙）  
- 您可以使用 [CONTAINS](/sql/t-sql/queries/contains-transact-sql)、 [CONTAINSTABLE](/sql/relational-databases/system-functions/containstable-transact-sql)、 [FREETEXT](/sql/t-sql/queries/freetext-transact-sql)或 [FREETEXTTABLE](/sql/relational-databases/system-functions/freetexttable-transact-sql) 來搜尋資料表中的特定片語。 例如，如果您想要搜尋`ProductReview`資料表中[!INCLUDE[ssSampleDBobject](../../../includes/sssampledbobject-md.md)]資料庫以尋找所有註解具有"learning curve"片語之產品的您可以使用 CONTAINS 述詞，如下所示：  
+###  <a name="Simple_Term"></a> 搜尋特定單字或片語 （簡單詞彙）  
+ 您可以使用 [CONTAINS](/sql/t-sql/queries/contains-transact-sql)、 [CONTAINSTABLE](/sql/relational-databases/system-functions/containstable-transact-sql)、 [FREETEXT](/sql/t-sql/queries/freetext-transact-sql)或 [FREETEXTTABLE](/sql/relational-databases/system-functions/freetexttable-transact-sql) 來搜尋資料表中的特定片語。 例如，如果您想要搜尋`ProductReview`資料表中[!INCLUDE[ssSampleDBobject](../../../includes/sssampledbobject-md.md)]資料庫以尋找所有產品的註解具有"learning curve"片語，您可以使用 CONTAINS 述詞，如下所示：  
   
 ```  
 USE AdventureWorks2012  

@@ -1,5 +1,5 @@
 ---
-title: XML for Analysis 結構描述資料列 |Microsoft 文件
+title: XML for Analysis 結構描述資料列 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - schema rowsets [XML for Analysis]
 ms.assetid: 36e3ecfd-fcc3-415a-9c43-f59921d2468a
 caps.latest.revision: 32
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 391f3ab14aef3680b9590e73c5bc94cc2e13b3a4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 6c8125b3543e6f3c088ad8b7ae7dd5952d52df26
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36035321"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37159269"
 ---
 # <a name="xml-for-analysis-schema-rowsets"></a>XML for Analysis 結構描述資料列集
   [!INCLUDE[msCoName](../../../includes/msconame-md.md)] XML for Analysis (XMLA) 提供者所含的結構描述資料列集會傳回有關伺服器狀態、活動和物件的中繼資料。 如果您要開發連接到有可變結構和特性之 Analysis Services 模型的用戶端應用程式，需要擷取中繼資料。  
@@ -75,11 +75,11 @@ ms.locfileid: "36035321"
 |[DISCOVER_TRANSACTIONS 資料列集](discover-transactions-rowset.md)|傳回系統上目前的暫止交易集。|  
 |[DISCOVER_XML_METADATA 資料列集](discover-xml-metadata-rowset.md)|傳回描述所要求物件的 XML 文件。|  
   
- <sup>1</sup>此處所列的所有結構描述資料列的 MSOLAP 資料來源提供者支援[!INCLUDE[msCoName](../../../includes/msconame-md.md)]XMLA 提供者。  
+ <sup>1</sup>的 MSOLAP 資料來源提供者支援此處所列的所有結構描述資料列[!INCLUDE[msCoName](../../../includes/msconame-md.md)]XMLA 提供者。  
   
 ## <a name="see-also"></a>另請參閱  
  [使用 Analysis Services 中的 XMLA 進行開發](../../multidimensional-models-scripting-language-assl-xmla/developing-with-xmla-in-analysis-services.md)   
- [使用動態管理檢視&#40;Dmv&#41;監視 Analysis Services](../../instances/use-dynamic-management-views-dmvs-to-monitor-analysis-services.md)   
+ [使用動態管理檢視&#40;Dmv&#41;若要監視 Analysis Services](../../instances/use-dynamic-management-views-dmvs-to-monitor-analysis-services.md)   
  [從分析資料來源擷取中繼資料](../../multidimensional-models-adomd-net-client/retrieving-metadata-from-an-analytical-data-source.md)  
   
   

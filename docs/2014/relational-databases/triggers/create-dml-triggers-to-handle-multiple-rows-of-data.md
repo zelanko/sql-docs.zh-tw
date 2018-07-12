@@ -5,10 +5,9 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-dml
+ms.technology: ''
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - multiple row DML triggers
 - UPDATE statement [SQL Server], DML triggers
@@ -17,16 +16,15 @@ helpviewer_keywords:
 - INSERT statement [SQL Server], DML triggers
 - DML triggers, multirow
 ms.assetid: d476c124-596b-4b27-a883-812b6b50a735
-caps.latest.revision: 25
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 2e3de68398974d400efa15c2d9101c668b32fcbf
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: rothja
+ms.author: jroth
+manager: craigg
+ms.openlocfilehash: 0413a39428b11c3bdc14741ac518e48fbfd1c294
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36030731"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37417097"
 ---
 # <a name="create-dml-triggers-to-handle-multiple-rows-of-data"></a>建立 DML 觸發程序以處理多重資料列
   撰寫 DML 觸發程序的程式碼時，請將造成觸發程序引發的陳述式，視為可影響多個資料列而非只影響單一資料列的單一陳述式。 此行為對 UPDATE 與 DELETE 觸發程序是常見的，因為這些陳述式經常會影響多個資料列。 然而該行為對 INSERT 觸發程序較不常見，因為基本 INSERT 陳述式僅會加入單一資料列。 不過，由於 INSERT 觸發程序可以由 INSERT INTO (*table_name*) SELECT 陳述式引發，所以插入多個資料列也許會造成單一觸發程序引動過程。  

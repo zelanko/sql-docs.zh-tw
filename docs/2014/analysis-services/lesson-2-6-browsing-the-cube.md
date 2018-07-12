@@ -1,5 +1,5 @@
 ---
-title: 瀏覽 Cube |Microsoft 文件
+title: 瀏覽 Cube |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 3819946e-d3fa-4c1d-afe3-599c938b1b2e
 caps.latest.revision: 18
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: jhubbard
-ms.openlocfilehash: ca4f0a6ee14d46ce9229eb068e3554fe29e0db62
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 763fea9f0ff216fab263edb1d30b56e8ca6a630f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36034268"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37239858"
 ---
 # <a name="browsing-the-cube"></a>瀏覽 Cube
   部署 Cube 之後，您就可以在 [Cube 設計師] 的 [瀏覽器] 索引標籤上檢視 Cube 資料，以及在 [維度設計師] 的 [瀏覽器] 索引標籤上檢視維度資料。 瀏覽 Cube 和維度資料是累加地檢查工作的一種方式。 您可以在物件經處理之後，驗證對屬性、關聯性和其他物件所做的細微變更是否達到期望的效果。 由於 [瀏覽器] 索引標籤用於檢視 Cube 和維度資料，因此該索引標籤會根據您要瀏覽的物件，提供不同的功能。  
@@ -34,7 +34,7 @@ ms.locfileid: "36034268"
   
 1.  針對 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 中的 [產品] 維度，切換至 [維度設計師]。 若要這樣做，請在方案總管的 [維度] 節點中，按兩下 [產品] 維度。  
   
-2.  按一下**瀏覽器**索引標籤，顯示**所有**隸屬`Product Key`屬性階層。 在第 3 課，您將定義 [產品] 維度的使用者階層，以便瀏覽此維度。  
+2.  按一下 **瀏覽器**索引標籤，顯示**所有**隸屬`Product Key`屬性階層。 在第 3 課，您將定義 [產品] 維度的使用者階層，以便瀏覽此維度。  
   
 3.  在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 中，切換至 [Cube 設計師]。 若要這樣做，請在方案總管的 [Cube] 節點中，按兩下 [Analysis Services 教學課程] Cube。  
   
@@ -43,7 +43,7 @@ ms.locfileid: "36034268"
      設計師的左窗格會顯示 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 教學課程 Cube 中的物件。 [瀏覽器] 索引標籤的右側具有兩個窗格：上面的窗格是 [篩選] 窗格，而下面的窗格是 [資料] 窗格。 在後續課程中，您將使用 Cube 瀏覽器來進行分析。  
   
 ## <a name="next-lesson"></a>下一課  
- [第 3 課： 修改量值、 屬性和階層](lesson-3-modifying-measures-attributes-and-hierarchies.md)  
+ [第 3 課：修改量值、屬性和階層](lesson-3-modifying-measures-attributes-and-hierarchies.md)  
   
 ## <a name="see-also"></a>另請參閱  
  [MDX 查詢編輯器 &#40;Analysis Services - 多維度資料&#41;](mdx-query-editor-analysis-services-multidimensional-data.md)  

@@ -1,5 +1,5 @@
 ---
-title: 第 2 課： 將採礦模型加入購物籃採礦結構 |Microsoft 文件
+title: 第 2 課： 將採礦模型加入至購物籃採礦結構 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,30 +8,30 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: d96a7a7d-35d7-4b34-abb5-f0822c256253
 caps.latest.revision: 34
 author: minewiskan
 ms.author: owend
-manager: kfile
-ms.openlocfilehash: 6f50095f8bd5c46be96c7132b961477792e1fdd7
-ms.sourcegitcommit: 8c040e5b4e8c7d37ca295679410770a1af4d2e1f
+manager: craigg
+ms.openlocfilehash: 8d758ef319c61d7868c2114372f353a374c38230
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/21/2018
-ms.locfileid: "36313098"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37159709"
 ---
 # <a name="lesson-2-adding-mining-models-to-the-market-basket-mining-structure"></a>第 2 課：將採礦模型加入購物籃採礦結構中
-  在這一課，您將會加入兩個採礦模型中建立的購物籃採礦結構[第 1 課： 建立購物籃採礦結構](../../2014/tutorials/lesson-1-creating-the-market-basket-mining-structure.md)。 這些採礦模型可讓您建立預測。  
+  在這一課，您將兩個採礦模型加入購物籃採礦結構中建立[第 1 課： 建立購物籃採礦結構](../../2014/tutorials/lesson-1-creating-the-market-basket-mining-structure.md)。 這些採礦模型可讓您建立預測。  
   
- 為了預測客戶可能同時購買的產品類型，您將建立兩個採礦模型使用[Microsoft 關聯分析演算法](../../2014/analysis-services/data-mining/microsoft-association-algorithm.md)和兩個不同值*MINIMUM_PROBABILTY*參數。  
+ 為了預測客戶可能同時購買的產品類型，您將建立兩個採礦模型，使用[Microsoft 關聯分析演算法](../../2014/analysis-services/data-mining/microsoft-association-algorithm.md)和兩個不同的值，如*MINIMUM_PROBABILTY*參數。  
   
  *MINIMUM_PROBABILTY*是[!INCLUDE[msCoName](../includes/msconame-md.md)]關聯分析演算法參數，有助於判斷採礦模型會包含藉由指定規則必須具有的最小機率的規則數目。 例如，將此值設定為 0.4 是指定只有當規則所描述的產品組合至少具有百分之四十的發生機率時，才可以產生此規則。  
   
- 您將檢視變更的效果*MINIMUM_PROBABILTY*後面的課程中的參數。  
+ 您將檢視變更的影響*MINIMUM_PROBABILTY*稍後的課程中的參數。  
   
 ## <a name="alter-mining-structure-statement"></a>ALTER MINING STRUCTURE 陳述式  
- 若要將採礦模型包含巢狀的資料表至採礦結構中，您使用 [ALTER MINING STRUCTURE &#40;DMX&#41;] （(~/dmx/alter-mining-structure-dmx.md) 陳述式。 陳述式中的程式碼可分成下列各部份：  
+ 若要將包含巢狀的資料表至採礦結構的採礦模型，您使用 [ALTER MINING STRUCTURE &#40;DMX&#41;] （(~/dmx/alter-mining-structure-dmx.md) 陳述式。 陳述式中的程式碼可分成下列各部份：  
   
 -   識別採礦結構  
   
@@ -71,7 +71,7 @@ ALTER MINING STRUCTURE [<mining structure name>]
 ADD MINING MODEL [<mining model name>]  
 ```  
   
- 資料採礦延伸模組 (DMX) 中的物件命名的詳細資訊，請參閱[識別碼&#40;DMX&#41;](/sql/dmx/identifiers-dmx)。  
+ 如需命名物件中的資料採礦延伸模組 (DMX) 的資訊，請參閱[識別碼&#40;DMX&#41;](/sql/dmx/identifiers-dmx)。  
   
  接下來幾行的程式碼會定義採礦結構中將由採礦模型使用的資料行：  
   
@@ -82,7 +82,7 @@ ADD MINING MODEL [<mining model name>]
   
  您只能使用已經存在採礦結構中的資料行。  
   
- 採礦模型資料行清單中的第一個資料行必須是採礦結構中的索引鍵資料行。 不過，您沒有輸入`KEY`之後索引鍵的資料行指定使用方式。 這是因為當您建立了採礦結構時，已經將資料行定義為索引鍵。  
+ 採礦模型資料行清單中的第一個資料行必須是採礦結構中的索引鍵資料行。 不過，您就不必輸入`KEY`之後索引鍵的資料行指定使用方式。 這是因為當您建立了採礦結構時，已經將資料行定義為索引鍵。  
   
  其餘幾行會指定新採礦模型中資料行的使用方式。 您可以使用下列語法來指定要用於預測之採礦模型中的資料行：  
   
@@ -106,11 +106,11 @@ ADD MINING MODEL [<mining model name>]
 -   使用修改的機率，將關聯採礦模型加入至結構  
   
 ## <a name="adding-an-association-mining-model-to-the-structure-using-the-default-minimumprobability"></a>使用預設 MINIMUM_PROBABILITY 將關聯採礦模型加入到結構中  
- 第一個工作是加入新的採礦模型加入購物籃採礦結構中根據[!INCLUDE[msCoName](../includes/msconame-md.md)]關聯分析演算法使用的預設值為*MINIMUM_PROBABILITY*。  
+ 第一個工作是新增新的採礦模型加入購物籃採礦結構將會根據[!INCLUDE[msCoName](../includes/msconame-md.md)]使用的預設值的關聯分析演算法*MINIMUM_PROBABILITY*。  
   
 #### <a name="to-add-an-association-mining-model"></a>加入關聯採礦模型  
   
-1.  在**物件總管] 中**，以滑鼠右鍵按一下執行個體[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]，指向 [**新查詢**，然後按一下**DMX**。  
+1.  中**物件總管**，以滑鼠右鍵按一下執行個體[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]，指向**新查詢**，然後按一下**DMX**。  
   
      此時會開啟 [查詢編輯器] 且包含新的空白查詢。  
   
@@ -193,18 +193,18 @@ ADD MINING MODEL [<mining model name>]
     Using Microsoft_Association_Rules  
     ```  
   
-7.  在**檔案**功能表上，按一下 **另存 DMXQuery1.dmx 為**。  
+7.  在 **檔案**功能表上，按一下**另存 DMXQuery1.dmx 為**。  
   
-8.  在**存**對話方塊中，瀏覽至適當的資料夾，並將檔案`Default_Association_Model.dmx`。  
+8.  在 [**另存新檔**] 對話方塊中，瀏覽至適當的資料夾，並將檔案命名`Default_Association_Model.dmx`。  
   
-9. 在工具列上，按一下 [ **Execute** ] 按鈕。  
+9. 在工具列上，按一下**Execute**  按鈕。  
   
 ## <a name="adding-an-association-mining-model-to-the-structure-changing-the-default-minimumprobability"></a>變更預設 MINIMUM_PROBABILITY 以便將關聯採礦模型加入到結構中  
  下一項工作是根據 [!INCLUDE[msCoName](../includes/msconame-md.md)] 關聯分析演算法，將新的採礦模型加入至購物籃採礦結構中，並將 MINIMUM_PROBABILITY 的預設值變更為 0.01。 變更參數將導致 [!INCLUDE[msCoName](../includes/msconame-md.md)] 關聯分析演算法建立更多規則。  
   
 #### <a name="to-add-an-association-mining-model"></a>加入關聯採礦模型  
   
-1.  在**物件總管] 中**，以滑鼠右鍵按一下執行個體[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]，指向 [**新查詢**，然後按一下**DMX**。  
+1.  中**物件總管**，以滑鼠右鍵按一下執行個體[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]，指向**新查詢**，然後按一下**DMX**。  
   
      此時會開啟 [查詢編輯器] 且包含新的空白查詢。  
   
@@ -280,15 +280,15 @@ ADD MINING MODEL [<mining model name>]
     USING Microsoft_Association_Rules (Minimum_Probability = 0.1)  
     ```  
   
-7.  在**檔案**功能表上，按一下 **另存 DMXQuery1.dmx 為**。  
+7.  在 **檔案**功能表上，按一下**另存 DMXQuery1.dmx 為**。  
   
-8.  在**存**對話方塊中，瀏覽至適當的資料夾，並將檔案`Modified Association_Model.dmx`。  
+8.  在 [**另存新檔**] 對話方塊中，瀏覽至適當的資料夾，並將檔案命名`Modified Association_Model.dmx`。  
   
-9. 在工具列上，按一下 [ **Execute** ] 按鈕。  
+9. 在工具列上，按一下**Execute**  按鈕。  
   
  在下一課，您將處理購物籃採礦結構及其相關聯的採礦模型。  
   
 ## <a name="next-lesson"></a>下一課  
- [第 3 課： 處理購物籃採礦結構](../../2014/tutorials/lesson-3-processing-the-market-basket-mining-structure.md)  
+ [第 3 課：處理購物籃採礦結構](../../2014/tutorials/lesson-3-processing-the-market-basket-mining-structure.md)  
   
   

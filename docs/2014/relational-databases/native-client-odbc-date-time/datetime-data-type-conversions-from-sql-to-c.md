@@ -1,28 +1,26 @@
 ---
-title: 從 SQL 轉換成 C |Microsoft 文件
+title: 從 SQL 轉換成 C |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - conversions [ODBC], SQL to C
 ms.assetid: 059431e2-a65c-4587-ba4a-9929a1611e96
 caps.latest.revision: 25
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: b3d6fb49285580b3afd5a6ad785bc23886ecf4a7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 094a968fb48c9eabf554bfdccb89efc69e12391a
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36029810"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37427967"
 ---
 # <a name="conversions-from-sql-to-c"></a>從 SQL 轉換成 C
   下表將列出當您從 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 日期/時間類型轉換成 C 類型時應該考量的問題。  
@@ -32,8 +30,8 @@ ms.locfileid: "36029810"
 ||||||||||  
 |-|-|-|-|-|-|-|-|-|  
 ||SQL_C_DATE|SQL_C_TIME|SQL_C_TIMESTAMP|SQL_C_SS_TIME2|SQL_C_SS_TIMESTAMPOFFSET|SQL_C_BINARY|SQL_C_CHAR|SQL_C_WCHAR|  
-|SQL_CHAR|2,3,4,5|2,3,6,7,8|2,3,9,10,11|2,3,6,7|2,3,9,10,11|@shouldalert|@shouldalert|@shouldalert|  
-|SQL_WCHAR|2,3,4,5|2,3,6,7,8|2,3,9,10,11|2,3,6,7|2,3,9,10,11|@shouldalert|@shouldalert|@shouldalert|  
+|SQL_CHAR|2,3,4,5|2,3,6,7,8|2,3,9,10,11|2,3,6,7|2,3,9,10,11|1|1|1|  
+|SQL_WCHAR|2,3,4,5|2,3,6,7,8|2,3,9,10,11|2,3,6,7|2,3,9,10,11|1|1|1|  
 |SQL_TYPE_DATE|[確定]|12|13|12|13,23|14|16|16|  
 |SQL_SS_TIME2|12|8|15|[確定]|10,23|17|16|16|  
 |SQL_TYPE_TIMESTAMP|18|7,8|[確定]|7|23|19|16|16|  
@@ -44,7 +42,7 @@ ms.locfileid: "36029810"
 |符號|意義|  
 |------------|-------------|  
 |[確定]|沒有轉換問題。|  
-|@shouldalert|適用 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 之前的規則。|  
+|1|適用 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 之前的規則。|  
 |2|忽略開頭和尾端空白。|  
 |3|字串會剖析成日期、時間、時區或時區時差，而且小數秒數最多允許 9 位數。 如果剖析了時區時差，時間就會轉換成用戶端時區。 如果此轉換期間發生錯誤，將診斷記錄會產生含有 SQLSTATE 22018 和訊息 「 日期時間欄位溢位 」。|  
 |4|如果此值不是有效的日期、時間戳記或時間戳記時差值，就會產生含有 SQLSTATE 22018 和訊息「轉換規格的字元值無效」的診斷記錄。|  
@@ -67,9 +65,9 @@ ms.locfileid: "36029810"
 |21|如果緩衝區夠大，足以容納 SQL_SS_TIMESTAMPOFFSET_STRUCT，此值就會傳回成 SQL_SS_TIMESTAMPOFFSET_STRUCT。 否則，系統會產生含有 SQLSTATE 22003 和訊息「數值超出範圍」的診斷記錄。|  
 |22|在擷取日期之前，此值會轉換成用戶端時區。 這樣做會在其他含有時間戳記時差類型的轉換中提供一致性。 如果進行這項轉換期間發生錯誤，就會產生含有 SQLSTATE 22008 和訊息「日期時間欄位溢位」的診斷記錄。 這可能會產生與簡單截斷所取得之值不同的日期。|  
   
- 本主題中的表格描述傳回用戶端之類型與繫結中之類型之間的轉換。 輸出參數，如果在指定的伺服器類型 SQLBindParameter 不符合伺服器上的實際型別、 伺服器將會執行隱含的轉換和型別傳回至用戶端會比對透過 SQLBindParameter 中指定的型別。 當伺服器的轉換規則與上述表格中所列的規則不同時，這可能會導致非預期的轉換結果。 例如，必須提供預設日期時，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會使用 1900-1-1 而非目前的日期。  
+ 本主題中的表格描述傳回用戶端之類型與繫結中之類型之間的轉換。 當做輸出參數，如果在指定的伺服器類型 SQLBindParameter 不符合伺服器上的實際類型、 伺服器將會執行隱含的轉換和類型傳回給用戶端會比對透過 SQLBindParameter 中指定的型別。 當伺服器的轉換規則與上述表格中所列的規則不同時，這可能會導致非預期的轉換結果。 例如，必須提供預設日期時，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會使用 1900-1-1 而非目前的日期。  
   
 ## <a name="see-also"></a>另請參閱  
- [日期和時間增強功能&#40;ODBC&#41;](date-and-time-improvements-odbc.md)  
+ [日期和時間改善&#40;ODBC&#41;](date-and-time-improvements-odbc.md)  
   
   

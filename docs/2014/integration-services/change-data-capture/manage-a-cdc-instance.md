@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - manIns
 ms.assetid: cfed22c8-c666-40ca-9e73-24d93e85ba92
 caps.latest.revision: 9
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 16994bcc5c3b4f2be0617f4e4d4521062bd850a3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ebf2117570a343c740eaaaa964d956d2c8faede2
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36035951"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37158781"
 ---
 # <a name="manage-a-cdc-instance"></a>管理 CDC 執行個體
   您可以使用 CDC 設計工具主控台來檢視有關您所建立之執行個體的資訊，並管理執行個體的操作。  

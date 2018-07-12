@@ -1,5 +1,5 @@
 ---
-title: CubeInfo 元素 (XMLA) |Microsoft 文件
+title: CubeInfo 元素 (XMLA) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -24,18 +24,18 @@ helpviewer_keywords:
 - CubeInfo element
 ms.assetid: a504bac5-4bf2-4f78-a288-e74a34eaa97e
 caps.latest.revision: 16
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: fdf957ea7531cde52f8f3ac8dea60a99f83a75d2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: bcac19d70af83ec8e83ebf8bac06507ba9e28b82
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36033331"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37229588"
 ---
 # <a name="cubeinfo-element-xmla"></a>CubeInfo 元素 (XMLA)
-  包含父代包含的 cube 中繼資料[OlapInfo](olapinfo-element-xmla.md)項目。  
+  包含父元素所包含的 cube 中繼資料[OlapInfo](olapinfo-element-xmla.md)項目。  
   
 ## <a name="syntax"></a>語法  
   

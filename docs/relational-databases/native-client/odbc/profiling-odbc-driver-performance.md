@@ -1,5 +1,5 @@
 ---
-title: 分析 ODBC 驅動程式效能 |Microsoft 文件
+title: 分析 ODBC 驅動程式效能 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
@@ -7,7 +7,7 @@ ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.component: native-client|ODBC
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -25,12 +25,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 337209ac91faecab319f66bcb9b61252e3444f5a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 526e25bcfebad13868d41a23bcee50caea23bda6
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32953643"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37422807"
 ---
 # <a name="profiling-odbc-driver-performance"></a>分析 ODBC 驅動程式效能
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -50,7 +50,7 @@ ms.locfileid: "32953643"
   
 -   連接至指定記錄的資料來源。  
   
--   呼叫[SQLSetConnectAttr](../../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md)設定控制分析驅動程式專屬屬性。  
+-   呼叫[SQLSetConnectAttr](../../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md)設定控制分析的驅動程式特定屬性。  
   
  每個應用程式處理序都可以取得自己的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC 驅動程式複本，而且分析通用於驅動程式複本和應用程式處理序的組合。 當應用程式中的任何項目開啟分析時，分析會記錄來自該應用程式的驅動程式中，所有作用中連接的資訊。 甚至是沒有特別針對分析呼叫的連接也包含在內。  
   
@@ -58,7 +58,7 @@ ms.locfileid: "32953643"
   
  如果應用程式開始記錄檔的分析，而且有另一個應用程式嘗試開始相同記錄檔的分析，則第二個應用程式無法記錄任何分析資料。 如果第二個應用程式在第一個應用程式卸載其驅動程式後開始分析，第二個應用程式會覆寫來自第一個應用程式的記錄檔。  
   
- 如果應用程式連接到已啟用分析的資料來源，此驅動程式會傳回 SQL_ERROR 應用程式呼叫**SQLSetConnectOption**來開始記錄。 呼叫**SQLGetDiagRec**則會傳回下列：  
+ 驅動程式應用程式連接到已啟用分析的資料來源，如果要在應用程式會呼叫傳回 SQL_ERROR **SQLSetConnectOption**來開始記錄。 呼叫**SQLGetDiagRec**則會傳回下列：  
   
 ```  
 SQLState: 01000, pfNative = 0  
@@ -75,7 +75,7 @@ ErrorMsg: [Microsoft][SQL Server Native Client]
   
 -   連接  
   
--   網路  
+-   Network  
   
 -   Time  
   
@@ -83,7 +83,7 @@ ErrorMsg: [Microsoft][SQL Server Native Client]
   
 ### <a name="application-profile-statistics"></a>應用程式設定檔統計資料  
   
-|SQLPERF 欄位|Description|  
+|SQLPERF 欄位|描述|  
 |-------------------|-----------------|  
 |TimerResolution|伺服器時間的最小解析 (以毫秒為單位)。 這通常會報告為 0 (零)，而且只有在報告的數字很大時，才考慮使用。 如果伺服器時間的最小解析大於某些以計時器為基礎之統計資料的可能間隔，這些統計資料可能會擴大。|  
 |SQLidu|SQL_PERF_START 之後的 INSERT、DELETE 或 UPDATE 陳述式數目。|  
@@ -92,8 +92,8 @@ ErrorMsg: [Microsoft][SQL Server Native Client]
 |SQLSelectRows|在 SQL_PERF_START 之後選取的資料列數目。|  
 |交易|SQL_PERF_START 之後的使用者交易數目，包括回復。 當 ODBC 應用程式使用 SQL_AUTOCOMMIT_ON 執行時，會將每個命令視為交易。|  
 |SQLPrepares|數目[SQLPrepare 函數](http://go.microsoft.com/fwlink/?LinkId=59360)SQL_PERF_START 之後呼叫。|  
-|ExecDirects|數目**SQLExecDirect** SQL_PERF_START 之後呼叫。|  
-|SQLExecutes|數目**SQLExecute** SQL_PERF_START 之後呼叫。|  
+|ExecDirects|數目**SQLExecDirect**在 SQL_PERF_START 之後呼叫。|  
+|SQLExecutes|數目**SQLExecute**在 SQL_PERF_START 之後呼叫。|  
 |CursorOpens|驅動程式在 SQL_PERF_START 之後已經開啟伺服器資料指標的次數。|  
 |CursorSize|在 SQL_PERF_START 之後，資料指標開啟之結果集中的資料列數目。|  
 |CursorUsed|在 SQL_PERF_START 之後，透過驅動程式從資料指標實際擷取的資料列數目。|  
@@ -121,13 +121,13 @@ ErrorMsg: [Microsoft][SQL Server Native Client]
   
 ### <a name="time-statistics"></a>時間統計資料  
   
-|SQLPERF 欄位|Description|  
+|SQLPERF 欄位|描述|  
 |-------------------|-----------------|  
 |msExecutionTime|驅動程式在 SQL_PERF_START 之後，花在處理上的累計時間，包括花在等待伺服器回覆的時間。|  
 |msNetworkServerTime|驅動程式花在等待伺服器回覆的累計時間。|  
   
 ## <a name="see-also"></a>另請參閱  
  [SQL Server Native Client &#40;ODBC&#41;](../../../relational-databases/native-client/odbc/sql-server-native-client-odbc.md)   
- [分析 ODBC 驅動程式效能的如何主題 & #40; ODBC & #41;](../../../relational-databases/native-client-odbc-how-to/profiling-odbc-driver-performance-odbc.md)  
+ [分析 ODBC 驅動程式效能的如何主題&#40;ODBC&#41;](../../../relational-databases/native-client-odbc-how-to/profiling-odbc-driver-performance-odbc.md)  
   
   

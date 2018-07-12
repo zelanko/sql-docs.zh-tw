@@ -1,5 +1,5 @@
 ---
-title: 發行資料 （MDS 增益集的 Excel） |Microsoft 文件
+title: 發行資料 （MDS 增益集適用於 Excel） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: ea84a9aa-aeec-411b-ab8d-bc1b14f864a3
 caps.latest.revision: 8
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 39acbad0925e8dfc250fcd4cc3913dbaf0ff0771
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: f9fbee4ad70222c81f8f2fc40c460974f6f5ac05
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36036595"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37155059"
 ---
 # <a name="publishing-data-mds-add-in-for-excel"></a>發行資料 (適用於 Excel 的 MDS 增益集)
   在 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]中，如果您想要與其他使用者共用資料，請將資料發行至 MDS 存放庫。 一旦發行資料之後，這項資料就可供此增益集的其他使用者下載。  
@@ -39,7 +39,7 @@ ms.locfileid: "36036595"
   
 -   雖然刪除項目會儲存成可由管理員反轉的交易，不過您無法註解刪除項目。  
   
--   如果您變更**程式碼**值成員，則不會記錄為交易，且成員的所有先前交易無法使用。  
+-   如果您變更**程式碼**值成員，它不會記錄為交易，及成員的所有先前交易將無法使用。  
   
 -   您可以檢視其他使用者對成員所做的交易。 您也可以檢視自己對成員所做的所有交易，即使您不再擁有特定屬性的權限也一樣。  
   
@@ -55,13 +55,13 @@ ms.locfileid: "36036595"
   
 |工作描述|主題|  
 |----------------------|-----------|  
-|將資料從使用中工作表發行回 MDS 儲存機制。|[將資料從 Excel 到 MDS 發行&#40;MDS 增益集的 Excel&#41;](import-data-from-excel-to-master-data-services-mds-add-in-for-excel.md)|  
+|將資料從使用中工作表發行回 MDS 儲存機制。|[從 Excel 發行資料給 MDS &#40;MDS 增益集的 Excel&#41;](import-data-from-excel-to-master-data-services-mds-add-in-for-excel.md)|  
 |同時從 MDS 儲存機制和工作表中刪除資料列。|[刪除資料列&#40;MDS 增益集的 Excel&#41;](delete-a-row-mds-add-in-for-excel.md)|  
   
 ## <a name="related-content"></a>相關內容  
   
 -   [重新整理資料 &#40;適用於 Excel 的 MDS 增益集&#41;](refreshing-data-mds-add-in-for-excel.md)  
   
--   [Master Data Services 增益集的 Microsoft Excel](master-data-services-add-in-for-microsoft-excel.md)  
+-   [Master Data Services 增益集適用於 Microsoft Excel](master-data-services-add-in-for-microsoft-excel.md)  
   
   

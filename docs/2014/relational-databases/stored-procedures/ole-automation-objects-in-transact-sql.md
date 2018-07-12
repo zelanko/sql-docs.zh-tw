@@ -5,26 +5,24 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-ole
+ms.technology: stored-procedures
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - triggers [SQL Server], OLE Automation
 - batches [SQL Server], OLE Automation
 - OLE Automation [SQL Server]
 - OLE Automation [SQL Server], about OLE Automation
 ms.assetid: a887d956-4cd0-400a-aa96-00d7abd7c44b
-caps.latest.revision: 23
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 24a4382a246ad9fe662ddb0f1a31b571fa5fce65
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: ee2995e6dafe18704a94b1ef787a865720ed17f2
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36029795"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37418517"
 ---
 # <a name="ole-automation-objects-in-transact-sql"></a>Transact-SQL 中的 OLE Automation 物件
   [!INCLUDE[tsql](../../includes/tsql-md.md)] 包含多個系統預存程序，可讓您在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 批次、預存程序與觸發程序中參考 OLE Automation 物件。 這些系統預存程序以擴充預存程序來執行，而透過預存程序執行的 OLE Automation 物件在 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 執行個體的位址空間內的執行方式與擴充預存程序的執行方式相同。  

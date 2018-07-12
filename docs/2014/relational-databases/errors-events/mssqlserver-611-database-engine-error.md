@@ -5,23 +5,22 @@ ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - 611 (Database Engine error)
 ms.assetid: ac6a213f-5c38-44ad-bc85-a62863786614
 caps.latest.revision: 19
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: fc1a8b3bc8f492e73b543ce7551dfba52a1dbd55
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 0c61febeb9eba4be69978e1966cbf754f8f1a3ff
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36023325"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37424837"
 ---
 # <a name="mssqlserver611"></a>MSSQLSERVER_611
     

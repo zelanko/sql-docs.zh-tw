@@ -1,5 +1,5 @@
 ---
-title: 一般檔案連接管理員編輯器 （資料行頁面） |Microsoft 文件
+title: 一般檔案連接管理員編輯器 （資料行頁面） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.ffileconnection.columns.f1
 helpviewer_keywords:
 - Flat File Connection Manager Editor
 ms.assetid: 40ce7537-abd0-4973-97fd-6ccb90fddfa0
 caps.latest.revision: 20
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 5592f71b5373c6bfab1f59e797b19363a344e929
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 166393522090c1d5c0455104c0d046319741f2b4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36034172"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37240949"
 ---
 # <a name="flat-file-connection-manager-editor-columns-page"></a>一般檔案連接管理員編輯器 (資料行頁面)
   使用 **[一般檔案連接管理員編輯器]** 對話方塊的 **[資料行]** 頁面來指定資料列和資料行資訊，以及預覽檔案。  
@@ -43,7 +43,7 @@ ms.locfileid: "36034172"
  **資料列分隔符號**  
  從可用的資料列分隔符號清單中選取，或輸入分隔符號文字。  
   
-|ReplTest1|描述|  
+|值|描述|  
 |-----------|-----------------|  
 |**{CR}{LF}**|資料列是以歸位字元和換行字元的組合分隔。|  
 |**{CR}**|資料列是以歸位字元分隔。|  
@@ -57,7 +57,7 @@ ms.locfileid: "36034172"
  **資料行分隔符號**  
  從可用的資料行分隔符號清單中選取，或輸入分隔符號文字。  
   
-|ReplTest1|描述|  
+|值|描述|  
 |-----------|-----------------|  
 |**{CR}{LF}**|資料行是以歸位字元和換行字元的組合分隔。|  
 |**{CR}**|資料行是以歸位字元分隔。|  
@@ -104,7 +104,7 @@ ms.locfileid: "36034172"
  **資料列分隔符號**  
  從可用的資料列分隔符號清單中選取，或輸入分隔符號文字。  
   
-|ReplTest1|描述|  
+|值|描述|  
 |-----------|-----------------|  
 |**{CR}{LF}**|資料列是以歸位字元和換行字元的組合分隔。|  
 |**{CR}**|資料列是以歸位字元分隔。|  
@@ -120,7 +120,7 @@ ms.locfileid: "36034172"
   
 ## <a name="see-also"></a>另請參閱  
  [Integration Services 錯誤和訊息參考](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [一般檔案連接管理員編輯器&#40;[一般] 頁面&#41;](general-page-of-integration-services-designers-options.md)   
+ [一般檔案連接管理員編輯器&#40;一般頁面&#41;](general-page-of-integration-services-designers-options.md)   
  [一般檔案連接管理員編輯器&#40;進階頁面&#41;](../../2014/integration-services/flat-file-connection-manager-editor-advanced-page.md)   
  [一般檔案連接管理員編輯器 &#40;[預覽] 頁面&#41;](../../2014/integration-services/flat-file-connection-manager-editor-preview-page.md)  
   

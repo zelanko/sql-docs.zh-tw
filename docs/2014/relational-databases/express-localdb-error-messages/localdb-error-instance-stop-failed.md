@@ -1,26 +1,24 @@
 ---
-title: LOCALDB_ERROR_INSTANCE_STOP_FAILED |Microsoft 文件
+title: LOCALDB_ERROR_INSTANCE_STOP_FAILED |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: supportability
 ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 4d088e21-ceeb-445f-bd0d-ed1799673da7
 caps.latest.revision: 7
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 82eeb6ce5e5021c0f971e31e5cb6d6d5efbb46c7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: d46efedf7223b366bb8a2e7d10056b2479cacee8
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36030050"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37425387"
 ---
 # <a name="localdberrorinstancestopfailed"></a>LOCALDB_ERROR_INSTANCE_STOP_FAILED
     

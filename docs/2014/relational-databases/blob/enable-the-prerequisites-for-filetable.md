@@ -5,23 +5,22 @@ ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-blob
+ms.technology: filestream
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - FileTables [SQL Server], prerequisites
 ms.assetid: 6286468c-9dc9-4eda-9961-071d2a36ebd6
 caps.latest.revision: 25
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 55279e8fd0f69fa93131f47ccf7ceb106ae2c689
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 0b7dd333cdbe730380c91e032bd92859d2afc78d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36035465"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37164759"
 ---
 # <a name="enable-the-prerequisites-for-filetable"></a>啟用 FileTable 的必要條件
   描述如何啟用建立和使用 FileTable 的必要元件。  
@@ -47,7 +46,7 @@ ms.locfileid: "36035465"
 ###  <a name="HowToFilestream"></a> 如何：在執行個體層級啟用 FILESTREAM  
  如需如何啟用 FILESTREAM 的相關資訊，請參閱 [啟用及設定 FILESTREAM](enable-and-configure-filestream.md)。  
   
- 當您呼叫`sp_configure`啟用 FILESTREAM 執行個體層級，您必須將 filestream_access_level 選項設定為 2。 如需詳細資訊，請參閱 [Filestream 存取層級伺服器組態選項](../../database-engine/configure-windows/filestream-access-level-server-configuration-option.md)。  
+ 當您呼叫`sp_configure`若要啟用 FILESTREAM 的執行個體層級時，您必須將 filestream_access_level 選項設定為 2。 如需詳細資訊，請參閱 [Filestream 存取層級伺服器組態選項](../../database-engine/configure-windows/filestream-access-level-server-configuration-option.md)。  
   
 ###  <a name="firewall"></a> 如何：允許 FILESTREAM 通過防火牆  
  如需有關如何允許 FILESTREAM 通過防火牆的詳細資訊，請參閱＜ [Configure a Firewall for FILESTREAM Access](configure-a-firewall-for-filestream-access.md)＞。  

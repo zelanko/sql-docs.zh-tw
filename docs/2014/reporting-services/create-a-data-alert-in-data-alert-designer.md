@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 8464ab9d-afe1-4490-955f-9f3319bcbf8d
 caps.latest.revision: 11
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: d2829c12a38b75b5b50eb21c44b18252658b6a1a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 5671d2223c2518972f8947e9e715b6ffc4b7b55d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36034726"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37278794"
 ---
 # <a name="create-a-data-alert-in-data-alert-designer"></a>在資料警示設計工具中建立資料警示
   您可在 [資料警示設計工具] 中建立資料警示定義。 儲存警示定義之後，可以在 [資料警示設計工具] 中再次開啟、編輯，然後再次儲存警示定義。 如需編輯警示定義的相關資訊，請參閱 [在資料警示管理員中管理我的資料警示](manage-my-data-alerts-in-data-alert-manager.md) 和 [在警示設計工具中編輯資料警示](edit-a-data-alert-in-alert-designer.md)。  
@@ -101,7 +101,7 @@ ms.locfileid: "36034726"
      根據預設，警示訊息沒有停止日期。  
   
     > [!NOTE]  
-    >  停止警示訊息並不會刪除警示定義。 停止警示訊息之後，可以藉由更新開始和停止日期將它重新啟動。 刪除警示定義的相關資訊，請參閱[管理我的資料警示的資料警示管理員 中](manage-my-data-alerts-in-data-alert-manager.md)。  
+    >  停止警示訊息並不會刪除警示定義。 停止警示訊息之後，可以藉由更新開始和停止日期將它重新啟動。 如需有關刪除警示定義資訊，請參閱[管理我的資料警示的資料警示管理員 中](manage-my-data-alerts-in-data-alert-manager.md)。  
   
 18. (選擇性) 清除 [僅在結果變更時傳送訊息] 核取方塊。  
   

@@ -5,23 +5,22 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-security
+ms.technology: security
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - database master key [SQL Server], creating
 ms.assetid: 8cb24263-e97d-4e4d-9429-6cf494a4d5eb
 caps.latest.revision: 15
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 5d51012d037c04ea706feb0b7092f5eca6f09564
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: aliceku
+ms.author: aliceku
+manager: craigg
+ms.openlocfilehash: bc50e4a967a3236d612ae78332e4bf98f07420b9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36034106"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37278894"
 ---
 # <a name="create-a-database-master-key"></a>建立資料庫主要金鑰
   此主題描述如何使用 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] ，建立 [!INCLUDE[tsql](../../../includes/tsql-md.md)]中的資料庫主要金鑰。  

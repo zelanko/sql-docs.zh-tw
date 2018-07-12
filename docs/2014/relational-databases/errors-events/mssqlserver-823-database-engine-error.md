@@ -1,27 +1,26 @@
 ---
-title: MSSQLSERVER_823 |Microsoft 文件
+title: MSSQLSERVER_823 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - 823 (Database Engine error)
 ms.assetid: 0d9fce3c-3772-46ce-a7a3-4f4988dc6cae
 caps.latest.revision: 24
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: a3889444fb2c605bccd36d30dbe324f220bbe942
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 9945eb9eb980a1d103bda8f43c44f77fe6d7446e
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36030300"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37411907"
 ---
 # <a name="mssqlserver823"></a>MSSQLSERVER_823
     

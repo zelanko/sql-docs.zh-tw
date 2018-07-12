@@ -1,5 +1,5 @@
 ---
-title: 屬性 （維度結構索引標籤，維度設計師） (Analysis Services-多維度資料) |Microsoft 文件
+title: 屬性 （維度結構索引標籤，維度設計師） (Analysis Services-多維度資料) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,23 +8,23 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql.asvs.dimensiondesigner.dbv.attributespane.f1
 ms.assetid: 627eaa08-7638-4edd-bdfa-0d8175a7cde5
 caps.latest.revision: 31
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 289127d0d4bb155045c530cc49b336048a80034c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 693eb878c4e16e2b25dc959ce54a1e908c0d50d7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36035552"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37161619"
 ---
 # <a name="attributes-dimension-structure-tab-dimension-designer-analysis-services---multidimensional-data"></a>屬性 (維度結構索引標籤，維度設計師) (Analysis Services - 多維度資料)
-  使用此窗格即可管理與選取之維度相關聯的屬性。 您可以將屬性從這個窗格拖曳到 **[階層]** 窗格，以便建立階層和層級。 如需詳細資訊，請參閱[階層&#40;維度結構索引標籤，維度設計師&#41; &#40;Analysis Services-多維度資料&#41;](hierarchies-dimension-designer-analysis-services-multidimensional-data.md)。  
+  使用此窗格即可管理與選取之維度相關聯的屬性。 您可以將屬性從這個窗格拖曳到 **[階層]** 窗格，以便建立階層和層級。 如需詳細資訊，請參閱 <<c0> [ 階層&#40;維度結構索引標籤，維度設計師&#41; &#40;Analysis Services-多維度資料&#41;](hierarchies-dimension-designer-analysis-services-multidimensional-data.md)。</c0>  
   
  若要建立屬性，在清單模式、樹狀模式或檢視模式時，請將資料行從 **[資料來源檢視]** 窗格拖曳到 **[屬性]** 窗格。 若要移除屬性，請選取快速鍵功能表中的 **[刪除]** 。  
   
@@ -59,7 +59,7 @@ ms.locfileid: "36035552"
  **Usage**  
  設定選取之屬性的使用方式。 按一下向下箭號，即可從下列選擇中選取：  
   
-|ReplTest1|描述|  
+|值|描述|  
 |-----------|-----------------|  
 |一般|識別一般屬性。|  
 |索引鍵|識別維度的索引鍵屬性。 這會對應至維度的分葉成員。 每維度只能有一個索引鍵屬性。 若要修改，請在 [屬性] 窗格中按一下 [KeyColumns] 屬性旁的省略符號按鈕 (**...**)。|  
@@ -76,7 +76,7 @@ ms.locfileid: "36035552"
  顯示基礎資料行的位置。 建立新屬性時，按一下向下箭號，即可在 **[與索引鍵相同]** 和 **[分隔資料行]** 之間選取。 如果選擇 **[分隔資料行]** ，則 **[屬性]** 窗格中的 **[NameColumn]** 屬性 (Property) 會設定儲存用於屬性 (Attribute) 之名稱的資料行。  
   
 ## <a name="see-also"></a>另請參閱  
- [維度結構&#40;維度設計師&#41; &#40;Analysis Services-多維度資料&#41;](dimension-structure-dimension-designer-analysis-services-multidimensional-data.md)   
+ [維度結構&#40;維度設計工具&#41; &#40;Analysis Services-多維度資料&#41;](dimension-structure-dimension-designer-analysis-services-multidimensional-data.md)   
  [階層&#40;維度結構索引標籤，維度設計師&#41; &#40;Analysis Services-多維度資料&#41;](hierarchies-dimension-designer-analysis-services-multidimensional-data.md)   
  [工具列&#40;維度結構索引標籤，維度設計師&#41; &#40;Analysis Services-多維度資料&#41;](toolbar-dimension-structure-designer-analysis-services-multidimensional-data.md)  
   

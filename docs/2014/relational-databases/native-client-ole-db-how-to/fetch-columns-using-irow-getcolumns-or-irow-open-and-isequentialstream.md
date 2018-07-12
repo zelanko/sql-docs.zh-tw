@@ -1,13 +1,11 @@
 ---
-title: '提取資料行使用 irow:: Getcolumns （或 irow:: Open） 和 ISequentialStream |Microsoft 文件'
+title: '擷取資料行使用 irow:: Getcolumns （或 irow:: Open） 和 ISequentialStream |Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -16,15 +14,15 @@ helpviewer_keywords:
 - GetColumns method
 ms.assetid: 0761f469-9b6c-4fa6-bbd7-f0cb936e4f1c
 caps.latest.revision: 20
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 67c7206bb030f1e0e2390013657f97eeb8278aaa
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: c4fef8e98871fe65e8f885e878d124468321ba9a
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36030765"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37420747"
 ---
 # <a name="fetch-columns-using-irowgetcolumns-or-irowopen-and-isequentialstream"></a>使用 IRow::GetColumns (或 IRow::Open) 和 ISequentialStream 來提取資料行
   您可以使用 `ISequentialStream` 介面來繫結或擷取大型資料。 若為繫結資料行，狀態旗標 DBSTATUS_S_TRUNCATED 會指出資料是否遭到截斷。  
@@ -42,18 +40,18 @@ ms.locfileid: "36030765"
   
     -   `IRow::Open()` 可用來開啟資料列的 `ISequentialStream`。 指定 DBGUID_STREAM，表示資料行包含二進位資料的資料流 (然後 `IStream` 或 `ISequentialStream` 就可用來讀取資料行中的資料)。  
   
-    -   如果`IRow::GetColumns()`使用時， **pData** DBCOLUMNACCESS 結構中的元素設定為指向資料流物件。  
+    -   如果`IRow::GetColumns()`使用時， **pData** DBCOLUMNACCESS 結構中的項目設定為指向資料流物件。  
   
 4.  使用**ISequentialStream::Read()** 重複到指定的位元組數目讀入取用者緩衝區。  
   
 ## <a name="example"></a>範例  
  此範例會示範如何使用 IRow 提取單一資料列。 在此範例中，系統會從資料列一次擷取一個資料行。 此範例會說明 IRow::Open() 以及 IRow::GetColumns() 的使用方式。 為了讀取資料行的資料，此範例會使用 ISequentialStream::Read。  
   
- 這個範例需要 AdventureWorks 範例資料庫，您可以從下載[Microsoft SQL Server Samples and Community Projects](http://go.microsoft.com/fwlink/?LinkID=85384)首頁。  
+ 此範例需要 AdventureWorks 範例資料庫中，您可以從下載[Microsoft SQL Server Samples and Community Projects](http://go.microsoft.com/fwlink/?LinkID=85384)首頁。  
   
  第一個 ([!INCLUDE[tsql](../../includes/tsql-md.md)]) 程式碼清單會建立此範例所使用的資料表。  
   
- 使用 ole32.lib oleaut32.lib 編譯並執行第二個 （c + +） 程式碼清單。 這個應用程式會連接到電腦的預設 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體。 在某些 Windows 作業系統上，您必須將 (localhost) 或 (local) 變更為 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的名稱。 若要連接到具名執行個體，變更連接字串從 」 至 L"(local)\\\name"，其中 name 是具名執行個體。 根據預設，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express 會安裝至具名執行個體。 請確認您的 INCLUDE 環境變數包含的目錄內含 sqlncli.h。  
+ 使用 ole32.lib oleaut32.lib 編譯並執行第二個 （c + +） 程式碼清單。 這個應用程式會連接到電腦的預設 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體。 在某些 Windows 作業系統上，您必須將 (localhost) 或 (local) 變更為 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的名稱。 若要連接到具名執行個體，變更連接字串從 「 以 L"(local)\\\name"，其中 name 是具名執行個體。 根據預設，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express 會安裝至具名執行個體。 請確認您的 INCLUDE 環境變數包含的目錄內含 sqlncli.h。  
   
  第三個 ([!INCLUDE[tsql](../../includes/tsql-md.md)]) 程式碼清單會刪除此範例所使用的資料表。  
   

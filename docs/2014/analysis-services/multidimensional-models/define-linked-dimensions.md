@@ -1,5 +1,5 @@
 ---
-title: 定義連結的維度 |Microsoft 文件
+title: 定義連結的維度 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - dimensions [Analysis Services], linked
 - linked dimensions [Analysis Services]
 ms.assetid: d5ad5eae-5dde-46a6-91c3-c8766d016dec
 caps.latest.revision: 35
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 4b4ddd7a9c833346956e3c5ccdde93873028f663
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 263d51971081fec9570c1e6787169c1b9ec50b42
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36036226"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37155359"
 ---
 # <a name="define-linked-dimensions"></a>定義連結維度
   連結維度是根據在相同版本與相容性層級的另一個 Analysis Services 資料庫中所建立和儲存的維度。 藉由使用連結維度，您可以在一個資料庫上建立、儲存和維護維度，同時將該維度提供給多個資料庫的使用者使用。 對於使用者來說，連結維度和其他任何維度看起來都一樣。  
@@ -34,8 +34,8 @@ ms.locfileid: "36036226"
 > [!NOTE]  
 >  因為無法使用重新整理，所以大多數的 Analysis Services 開發人員都會複製維度而不是連結維度。 您可以在相同方案內複製不同專案中的維度。 如需詳細資訊，請參閱 [Refresh of a linked dimension in SSAS](http://sqlblog.com/blogs/marco_russo/archive/2006/09/12/refresh-of-a-linked-dimension-in-ssas.aspx)(在 SSAS 中重新整理連結維度)。  
   
-## <a name="prerequisites"></a>必要條件  
- 提供維度的來源資料庫和使用該維度的目前資料庫都必須具有相同的版本和相容性層級。 如需詳細資訊，請參閱[設定多維度資料庫的相容性層級&#40;Analysis Services&#41;](compatibility-level-of-a-multidimensional-database-analysis-services.md)。  
+## <a name="prerequisites"></a>先決條件  
+ 提供維度的來源資料庫和使用該維度的目前資料庫都必須具有相同的版本和相容性層級。 如需詳細資訊，請參閱 <<c0> [ 設定多維度資料庫的相容性層級&#40;Analysis Services&#41;](compatibility-level-of-a-multidimensional-database-analysis-services.md)。</c0>  
   
  來源資料庫必須已部署並處於線上。 您必須將發行或取用連結物件的伺服器設定為允許該作業 (如下所示)。  
   
@@ -66,7 +66,7 @@ ms.locfileid: "36036226"
   
 2.  在 [連線管理員] 中，確認提供者是否設定為 **Native OLE DB\Microsoft OLE DB Provider for Analysis Services 11.0**。  
   
-3.  輸入伺服器的名稱 (使用*servername*\\*instancename*的具名執行個體)<sup>1</sup>或型別**localhost**至連接到 Analysis Services 伺服器在同一部電腦上執行。  
+3.  輸入伺服器的名稱 (使用*servername*\\*instancename*的具名執行個體)<sup>1</sup>或類型**localhost**至連接到 Analysis Services 伺服器在同一部電腦上執行。  
   
 4.  使用連接的 Windows 驗證。  
   
@@ -80,7 +80,7 @@ ms.locfileid: "36036226"
  您不能變更連結維度的結構，所以無法使用維度設計師的 [維度結構] 索引標籤來檢視它。 處理連結維度之後，您可以使用 [瀏覽器] 索引標籤來檢視。您也可以變更其名稱，並為名稱建立翻譯。  
   
 ## <a name="see-also"></a>另請參閱  
- [設定的相容性層級的多維度資料庫&#40;Analysis Services&#41;](compatibility-level-of-a-multidimensional-database-analysis-services.md)   
+ [設定的相容性層級的多維度資料庫的&#40;Analysis Services&#41;](compatibility-level-of-a-multidimensional-database-analysis-services.md)   
  [連結量值群組](linked-measure-groups.md)   
  [維度關聯性](../multidimensional-models-olap-logical-cube-objects/dimension-relationships.md)  
   

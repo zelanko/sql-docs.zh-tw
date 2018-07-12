@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.fileconnection.f1
 helpviewer_keywords:
@@ -17,13 +17,13 @@ ms.assetid: 9370bfb5-5993-4ad8-a9cd-2de53f320f34
 caps.latest.revision: 32
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 8a98d077aab6bd31be30fefc09b974df2beaf9b3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 4bb50e21d596340c4d4c5ad9697836df589974ac
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36033686"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37182705"
 ---
 # <a name="add-file-connection-manager-dialog-box-ui-reference"></a>加入檔案連接管理員對話方塊 UI 參考
   使用 **[加入檔案連接管理員]** 對話方塊來定義一組檔案或資料夾的連接。  
@@ -37,7 +37,7 @@ ms.locfileid: "36033686"
  **使用類型**  
  指定用於多個檔案連接管理員的檔案類型。  
   
-|ReplTest1|描述|  
+|值|描述|  
 |-----------|-----------------|  
 |**建立檔案**|連接管理員將建立檔案。|  
 |**現有的檔案**|連接管理員將使用現有的檔案。|  

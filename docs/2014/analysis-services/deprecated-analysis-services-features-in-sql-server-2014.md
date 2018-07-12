@@ -1,5 +1,5 @@
 ---
-title: SQL Server 2014 中已被取代的 Analysis Services 功能 |Microsoft 文件
+title: SQL Server 2014 中已被取代的 Analysis Services 功能 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Analysis Services, backward compatibility
 - SSAS, backward compatibility
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - deprecated features [Analysis Services]
 ms.assetid: 2c96ecfe-a170-41d0-bee3-74503f880197
 caps.latest.revision: 48
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 49a65a9ca1684a7bcec7b5f7f1d19d38b01f13d0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 2e49169f4fd0264302feb35a7315fc527999c568
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36032429"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37259584"
 ---
 # <a name="deprecated-analysis-services-features-in-sql-server-2014"></a>SQL Server 2014 中已被取代的 Analysis Services 功能
   本主題描述 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 中仍然可用但已被取代的 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]功能。 這些功能將在未來的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]版本中移除。 已被取代的功能不應在新應用程式中使用。  
@@ -37,7 +37,7 @@ ms.locfileid: "36032429"
 |MDX 函數|CalculationPassValue 函數|無。 OLAP 引擎會管理計算行程。 不再需要這個函數。|  
 |MDX 函數|CalculationCurrentPass 函數|無。 OLAP 引擎會管理計算行程。 不再需要這個函數。|  
 |多維度運算式 (MDX)|NON_EMPTY_BEHAVIOR 查詢最佳化工具提示預設為啟動。|NON_EMPTY_BEHAVIOR 查詢最佳化工具提示在未來版本中會預設為關閉。 這是 MDX 最佳化提示，如果沒有正確地使用，可能會產生不正確的結果。|  
-|其他|CELL_EVALUATION_LIST 內建資料格屬性|原本提供套用至資料格之評估公式的清單。 這個清單在此版 Analysis Services 中是空白的。  求解順序現在是以 MDX 指令碼指定。 如需詳細資訊，請參閱[了解傳遞順序和求解順序&#40;MDX&#41;](multidimensional-models/mdx/mdx-data-manipulation-understanding-pass-order-and-solve-order.md)|  
+|其他|CELL_EVALUATION_LIST 內建資料格屬性|原本提供套用至資料格之評估公式的清單。 這個清單在此版 Analysis Services 中是空白的。  求解順序現在是以 MDX 指令碼指定。 如需詳細資訊，請參閱 <<c0> [ 了解行程順序和求解順序&#40;MDX&#41;</c0>](multidimensional-models/mdx/mdx-data-manipulation-understanding-pass-order-and-solve-order.md)|  
 |物件|COM 組件|COM 組件可能會造成安全性風險。 未來的版本將移除 COM 組件的支援。|  
   
 ## <a name="features-not-supported-in-a-future-version-of-sql-server"></a>SQL Server 的未來版本不支援的功能  
@@ -45,7 +45,7 @@ ms.locfileid: "36032429"
   
 |類別目錄|已被取代的功能|取代|  
 |--------------|------------------------|-----------------|  
-|多維度模型|遠端分割區|無。 請改用本機分割區。 請參閱[建立及管理本機資料分割&#40;Analysis Services&#41; ](multidimensional-models/create-and-manage-a-local-partition-analysis-services.md)如需詳細資訊。|  
+|多維度模型|遠端分割區|無。 請改用本機分割區。 請參閱[建立及管理本機分割區&#40;Analysis Services&#41; ](multidimensional-models/create-and-manage-a-local-partition-analysis-services.md)如需詳細資訊。|  
 |多維度模型|遠端連結量值群組|遠端連結量值群組是使用遠端伺服器上資料來源的連結量值群組。 現已排定要取代連結量值群組可使用遠端資料來源這項功能。<br /><br /> 此功能尚無替代項目。 建議您改用本機連結量值群組。 請參閱[Linked Measure Groups](multidimensional-models/linked-measure-groups.md)如需詳細資訊。|  
 |多維度模型|維度回寫|無。 如果您需要回寫功能，請使用分割區回寫。 請參閱[Set Partition Writeback](multidimensional-models/set-partition-writeback.md)如需詳細資訊。|  
 |多維度模型|連結維度|無。 請考慮將維度複製到其他模型，而不要連結到位於另一個模型的維度。|  

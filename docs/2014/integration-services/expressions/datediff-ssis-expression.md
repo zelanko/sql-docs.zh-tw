@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - DATEDIFF statement
 - dates [Integration Services], DATEDIFF
@@ -16,13 +16,13 @@ ms.assetid: 449b327f-47c7-4709-8bc6-4ee9a35cc330
 caps.latest.revision: 40
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 14ef1c8dce4ce1ed22f8067a5409ec8394bcb66d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 03334b761d9c5e9fa479fd939f06089e7aae8c6f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36035263"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37162765"
 ---
 # <a name="datediff-ssis-expression"></a>DATEDIFF (SSIS 運算式)
   傳回跨越兩個指定日期的日期和時間界線數目。 *datepart* 參數會識別要比較的日期和時間界線。  
@@ -85,7 +85,7 @@ DATEDIFF("dd", (DT_DBTIMESTAMP)"8/1/2003", (DT_DBTIMESTAMP)"8/8/2003")
 DATEDIFF("mm", (DT_DBTIMESTAMP)"8/1/2003",GETDATE())  
 ```  
   
- 此範例會傳回 **ModifiedDate** 資料行中的日期與 **YearEndDate** 變數之間的星期數。 如果**YearEndDate**具有`date`資料類型沒有明確的轉型為必要項。  
+ 此範例會傳回 **ModifiedDate** 資料行中的日期與 **YearEndDate** 變數之間的星期數。 如果**YearEndDate**具有`date`資料類型沒有明確的轉型是必要項。  
   
 ```  
 DATEDIFF("Week", ModifiedDate,@YearEndDate)  

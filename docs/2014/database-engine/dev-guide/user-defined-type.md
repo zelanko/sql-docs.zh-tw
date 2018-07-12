@@ -1,5 +1,5 @@
 ---
-title: 使用者定義型別 |Microsoft 文件
+title: 使用者定義型別 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -12,20 +12,20 @@ ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: a9b75f36-d7f5-47f7-94d6-b4448c6a2191
 caps.latest.revision: 12
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 55627b179f472c5501fb2a64bec9cc57f097d007
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: f3a0bcae3a44553fdc6d2d337e9e54993bd7e769
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36035514"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37209948"
 ---
 # <a name="user-defined-type"></a>使用者定義型別
   這個「使用者定義資料類型」範例會示範如何從 Transact-SQL 以及使用 `System.Data.SqlClient` 的用戶端應用程式建立和使用簡單的使用者定義資料類型。  
   
-## <a name="prerequisites"></a>必要條件  
+## <a name="prerequisites"></a>先決條件  
  若要建立並執行這個專案，您必須安裝下列軟體：  
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express。 您可以從 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express 文件集和範例[網站](http://go.microsoft.com/fwlink/?LinkId=31046)免費取得 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express  
@@ -83,7 +83,7 @@ ms.locfileid: "36035514"
   
     -   `sqlcmd -E -I -i install.sql`  
   
-9. 複製[!INCLUDE[tsql](../../includes/tsql-md.md)]測試命令指令碼至檔案，並將它儲存成`test.sql`範例目錄中。  
+9. 複製[!INCLUDE[tsql](../../includes/tsql-md.md)]測試命令指令碼至檔案，並將它儲存為`test.sql`範例目錄中。  
   
 10. 使用下列命令來執行測試指令碼  
   

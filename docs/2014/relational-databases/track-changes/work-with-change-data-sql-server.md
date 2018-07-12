@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - change data [SQL Server]
 - change data capture [SQL Server], query function scenarios
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - change data capture [SQL Server], query functions
 ms.assetid: 5346b852-1af8-4080-b278-12efb9b735eb
 caps.latest.revision: 19
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: ff879a145b56f9bc46a95f7669ee4e81812dec6e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: rothja
+ms.author: jroth
+manager: craigg
+ms.openlocfilehash: df86d149bcdf6d9e1619499edf2bc41137433392
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36036330"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37153989"
 ---
 # <a name="work-with-change-data-sql-server"></a>使用變更資料 (SQL Server)
   異動資料擷取取用者會透過資料表值函式 (TVF) 取得變更資料。 這些函數的所有查詢都需要使用兩個參數來定義開發傳回的結果集時適合用於考量的記錄序號 (LSN) 範圍。 限制間隔的上下 LSN 值會被視為包含在間隔內部。  
@@ -40,7 +40,7 @@ ms.locfileid: "36036330"
   
  `An insufficient number of arguments were supplied for the procedure or function cdc.fn_cdc_get_all_changes_ ...`  
   
- 傳回的對應錯誤`net changes`查詢如下所示：  
+ 傳回的對應錯誤`net changes`查詢如下：  
   
  `Msg 313, Level 16, State 3, Line 1`  
   

@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - non-SQL Server Subscribers, IBM DB2
 - data types [SQL Server replication], non-SQL Server Subscribers
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - heterogeneous Subscribers, IBM DB2
 ms.assetid: a1a27b1e-45dd-4d7d-b6c0-2b608ed175f6
 caps.latest.revision: 72
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 1705586884d09aa847a6ba308ffb821faa1d6cac
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 6edc4c9ce7f19a6b9771966e9547d0bf1fd5bffc
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36032072"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37230808"
 ---
 # <a name="ibm-db2-subscribers"></a>IBM DB2 訂閱者
   透過[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Host Integration Server 所含的 OLE DB 提供者， [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 支援向 IBM DB2/AS 400、DB2/MVS 和 DB2/Universal Database 的提取訂閱。  
@@ -35,11 +35,11 @@ ms.locfileid: "36032072"
   
 1.  在散發者上安裝 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] OLE DB Provider for DB2 的最新版本：  
   
-    -   如果您使用[!INCLUDE[ssEnterpriseEd11](../../../includes/ssenterpriseed11-md.md)]上[SQL Server 2008 下載](http://go.microsoft.com/fwlink/?LinkId=149256)Web 中的頁面上，**相關下載**區段中，按一下 Microsoft SQL Server 2008 Feature Pack 的最新版本的連結。 在 **[Microsoft SQL Server 2008 Feature Pack]** 網頁上，搜尋 **[Microsoft OLE DB Provider for DB2]**。  
+    -   如果您使用[!INCLUDE[ssEnterpriseEd11](../../../includes/ssenterpriseed11-md.md)]，請在[SQL Server 2008 下載](http://go.microsoft.com/fwlink/?LinkId=149256)網頁上**相關下載**區段中，按一下 Microsoft SQL Server 2008 Feature Pack 的最新版本的連結。 在 **[Microsoft SQL Server 2008 Feature Pack]** 網頁上，搜尋 **[Microsoft OLE DB Provider for DB2]**。  
   
     -   如果您使用的是 [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] Standard，請安裝 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Host [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] (HIS) 伺服器的最新版本，其中就包含此提供者。  
   
-     除了安裝提供者，我們建議您安裝的下一個步驟中使用資料存取工具 (它會由預設的下載一起安裝[!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]Enterprise)。 如需有關安裝和使用「資料存取工具」的詳細資料，請參閱提供者文件集或 HIS 文件集。  
+     除了安裝提供者，我們建議您安裝資料存取工具，會在下一個步驟 (以預設的下載一起安裝[!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]Enterprise)。 如需有關安裝和使用「資料存取工具」的詳細資料，請參閱提供者文件集或 HIS 文件集。  
   
 2.  為「訂閱者」建立連接字串。 在任何文字編輯器中都可建立連接字串，但建議您使用「資料存取工具」。 若要在「資料存取工具」中建立字串：  
   
@@ -121,42 +121,42 @@ ms.locfileid: "36032072"
 |`geography`|IMAGE|  
 |`geometry`|IMAGE|  
 |`hierarchyid`|IMAGE|  
-|`image`|VARCHAR （0) FOR BIT DATA<sup>1</sup>|  
+|`image`|FOR BIT DATA VARCHAR(0)<sup>1</sup>|  
 |`into`|INT|  
 |`money`|DECIMAL(19,4)|  
 |`nchar(1-4000)`|VARCHAR(1-4000)|  
-|`ntext`|VARCHAR （0)<sup>1</sup>|  
+|`ntext`|VARCHAR(0)<sup>1</sup>|  
 |`numeric(1-31, 0-31)`|DECIMAL(1-31,0-31)|  
 |`numeric(32-38, 0-38)`|VARCHAR(41)|  
 |`nvarchar(1-4000)`|VARCHAR(1-4000)|  
-|`nvarchar(max)`|VARCHAR （0)<sup>1</sup>|  
+|`nvarchar(max)`|VARCHAR(0)<sup>1</sup>|  
 |`real`|real|  
 |`smalldatetime`|timestamp|  
 |`smallint`|SMALLINT|  
 |`smallmoney`|DECIMAL(10,4)|  
 |`sql_variant`|不適用|  
 |`sysname`|VARCHAR(128)|  
-|`text`|VARCHAR （0)<sup>1</sup>|  
+|`text`|VARCHAR(0)<sup>1</sup>|  
 |`time(0-7)`|VARCHAR(16)|  
 |`timestamp`|CHAR(8) FOR BIT DATA|  
 |`tinyint`|SMALLINT|  
 |`uniqueidentifier`|CHAR(38)|  
 |`varbinary(1-8000)`|VARCHAR(1-8000) FOR BIT DATA|  
 |`varchar(1-8000)`|VARCHAR(1-8000)|  
-|`varbinary(max)`|VARCHAR （0) FOR BIT DATA<sup>1</sup>|  
-|`varchar(max)`|VARCHAR （0)<sup>1</sup>|  
-|`xml`|VARCHAR （0)<sup>1</sup>|  
+|`varbinary(max)`|FOR BIT DATA VARCHAR(0)<sup>1</sup>|  
+|`varchar(max)`|VARCHAR(0)<sup>1</sup>|  
+|`xml`|VARCHAR(0)<sup>1</sup>|  
   
- <sup>1</sup> ，請參閱下一節，如需詳細資訊，了解對應至 varchar （0）。  
+ <sup>1</sup>如需詳細資訊，了解對應至 VARCHAR(0) 參閱下一步。  
   
 ### <a name="data-type-mapping-considerations"></a>資料類型對應考量  
  複寫至「DB2 訂閱者」時，請考慮下列資料類型對應問題：  
   
--   當對應[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] `char`， `varchar`，`binary`和`varbinary`至 DB2 CHAR、 VARCHAR、 CHAR FOR BIT DATA 及 VARCHAR FOR BIT DATA，分別複寫設定的長度是相同的DB2資料類型[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]型別。  
+-   當對應[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] `char`， `varchar`，`binary`和`varbinary`至 DB2 CHAR、 VARCHAR、 CHAR FOR BIT DATA 及 VARCHAR FOR BIT DATA，分別複寫設定的長度相同的DB2資料類型[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]型別。  
   
      這可使產生的資料表在「訂閱者」端成功建立，只要 DB2 頁面大小條件約束足以容納資料列的大小上限。 確定用於存取 DB2 資料庫的登入，有權限存取擁有足夠大小以容納正複寫至 DB2 之資料表的資料表空間。  
   
--   DB2 可以支援最大 32 千位元組 (KB) 的 VARCHAR 資料行，因此可以將某些 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 大型物件資料行正確對應至 DB2 VARCHAR 資料行。 但是，複寫用於 DB2 的 OLE DB 提供者不支援將 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 大型物件對應至 DB2 大型物件。 基於這個理由， [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] `text`， `varchar(max)`， `ntext`，和`nvarchar(max)`產生的建立指令碼中的資料行對應至 varchar （0）。 長度值 0 必須在將指令碼套用至「訂閱者」之前變更為適當值。 如果資料類型長度未變更，則嘗試在「DB2 訂閱者」端建立資料表時，DB2 將產生錯誤 604 (表示資料類型的有效位數或長度屬性無效)。  
+-   DB2 可以支援最大 32 千位元組 (KB) 的 VARCHAR 資料行，因此可以將某些 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 大型物件資料行正確對應至 DB2 VARCHAR 資料行。 但是，複寫用於 DB2 的 OLE DB 提供者不支援將 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 大型物件對應至 DB2 大型物件。 基於這個理由， [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] `text`， `varchar(max)`， `ntext`，和`nvarchar(max)`VARCHAR(0) 中對應資料行中產生的建立指令碼。 長度值 0 必須在將指令碼套用至「訂閱者」之前變更為適當值。 如果資料類型長度未變更，則嘗試在「DB2 訂閱者」端建立資料表時，DB2 將產生錯誤 604 (表示資料類型的有效位數或長度屬性無效)。  
   
      根據您對要複寫之來源資料表的了解，判斷是否適合將 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 大型物件對應至可變長度的 DB2 項目，並在自訂建立指令碼中指定適當的最大長度。 如需有關指定自訂建立指令碼的資訊，請參閱本主題中＜設定 IBM DB2 訂閱者＞一節中的步驟 5。  
   
@@ -165,9 +165,9 @@ ms.locfileid: "36032072"
   
      如果大型物件資料行沒有適當的對應，請考慮在發行項上使用資料行篩選，以便不複寫資料行。 如需詳細資訊，請參閱[篩選發行的資料](../publish/filter-published-data.md)。  
   
--   當複寫[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]`nchar`和`nvarchar`複寫至 DB2 CHAR 和 VARCHAR 時，對 DB2 類型與使用相同的長度規範[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]型別。 但是，資料類型長度對於產生的 DB2 資料表可能太小。  
+-   複寫時[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]`nchar`並`nvarchar`複寫至 DB2 CHAR 和 VARCHAR 時，DB2 類型與使用相同的長度規範[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]型別。 但是，資料類型長度對於產生的 DB2 資料表可能太小。  
   
-     在某些 DB2 環境中， [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] `char`資料項目未限制為單一位元組字元; CHAR 或 VARCHAR 項目的長度必須將此考慮在內。 如果需要 *shift in* 和 *shift out* 字元，您還必須考慮到它們。 如果您要複寫含有資料表`nchar`和`nvarchar`資料行，您可能需要在 自訂建立指令碼中指定較大的資料類型最大長度。 如需有關指定自訂建立指令碼的資訊，請參閱本主題中＜設定 IBM DB2 訂閱者＞一節中的步驟 5。  
+     在某些 DB2 環境中， [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] `char`資料項目未限制為單一位元組字元; CHAR 或 VARCHAR 項目的長度必須將此列入考量。 如果需要 *shift in* 和 *shift out* 字元，您還必須考慮到它們。 如果您要複寫具有資料表`nchar`和`nvarchar`資料行，您可能需要在 自訂建立指令碼中指定較大的資料類型最大長度。 如需有關指定自訂建立指令碼的資訊，請參閱本主題中＜設定 IBM DB2 訂閱者＞一節中的步驟 5。  
   
 ## <a name="see-also"></a>另請參閱  
  [Non-SQL Server Subscribers](non-sql-server-subscribers.md)   

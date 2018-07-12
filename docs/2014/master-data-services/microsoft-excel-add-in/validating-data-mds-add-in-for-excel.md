@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 71eda98f-01a4-4fff-8246-be3133782523
 caps.latest.revision: 6
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 17a963b4ef2342e7c97069ce2ed7f5bd9eec6cd6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: f2da7f9179f86b148d1f195121372ff9def985db
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36034795"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37158849"
 ---
 # <a name="validating-data-mds-add-in-for-excel"></a>驗證資料 (適用於 Excel 的 MDS 增益集)
   在 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]中，當您發行資料時，會進行下列兩種驗證類型：  
@@ -31,7 +31,7 @@ ms.locfileid: "36034795"
  在每種情況下，有效資料都會發行到 MDS 儲存機制。 無效資料已反白顯示，而且在狀態資料行中顯示錯誤的詳細資料。  
   
 ## <a name="when-validation-occurs"></a>當發生驗證時  
- 在[!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] [!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]，當您發行新的或變更資料，或當您手動套用商務規則，就會進行驗證。  
+ 在  [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] [!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]，當您發行新的或已變更的資料，或當您手動套用商務規則時，就會發生驗證。  
   
  當商務規則失敗時，資料仍然會發行到 MDS 儲存機制。 當輸入驗證失敗時，資料就不會發行到儲存機制。  
   

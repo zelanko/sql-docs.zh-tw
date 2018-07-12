@@ -1,5 +1,5 @@
 ---
-title: ODBC 目的地編輯器 （連接管理員頁面） |Microsoft 文件
+title: ODBC 目的地編輯器 （連線管理員頁面） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.ssis.designer.odbcdest.connection.f1
 ms.assetid: f6d9c6c2-e4c4-468b-9e0d-af7b9609614d
 caps.latest.revision: 7
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: ce1766615afb37976cc92c66c99de173ed3e9364
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 5994e35479f73fb4bee3c062eb76858778a72d6d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36034398"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37158979"
 ---
 # <a name="odbc-destination-editor-connection-manager-page"></a>ODBC 目的地編輯器 (連接管理員頁面)
   使用 **[ODBC 目的地編輯器]** 對話方塊的 **[連接管理員]** 頁面，即可選取目的地的 ODBC 連接管理員。 這個頁面也可以讓您從資料庫中選取資料表或檢視表。  

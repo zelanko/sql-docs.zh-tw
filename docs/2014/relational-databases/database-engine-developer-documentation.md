@@ -1,5 +1,5 @@
 ---
-title: 開發人員&#39;人員指南 (Database Engine) |Microsoft 文件
+title: 開發人員&#39;指南 (Database Engine) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
@@ -15,17 +15,17 @@ helpviewer_keywords:
 - Database Engine [SQL Server], development
 ms.assetid: 7638f46c-9e66-48e6-9a9b-425e0b788311
 caps.latest.revision: 16
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: e414fe4737caa5c1e9e862555ecd9be3286b592a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 6a611237e283ad10a6dfd8433d08ef2b3708dd6b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36033274"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37258904"
 ---
-# <a name="developer39s-guide-database-engine"></a>開發人員&#39;人員指南 (Database Engine)
+# <a name="developer39s-guide-database-engine"></a>開發人員&#39;指南 (Database Engine)
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 提供一組豐富的工具來開發、管理與控制資料庫應用程式。  
   
 ## <a name="in-this-section"></a>本節內容  
@@ -58,9 +58,9 @@ ms.locfileid: "36033274"
   
 ## <a name="see-also"></a>另請參閱  
  [資料採礦程式設計](../analysis-services/dev-guide/data-mining-programming.md)   
- [開發人員手冊 》 &#40;Analysis Services&#41;](../analysis-services/analysis-services-developer-documentation.md)   
- [開發人員手冊 》 &#40;Integration Services&#41;](../integration-services/integration-services-developer-documentation.md)   
- [開發人員手冊 》&#40;複寫&#41;](replication/concepts/replication-developer-documentation.md)   
- [開發人員手冊 》 &#40;Reporting Services&#41;](../reporting-services/reporting-services-developer-documentation.md)  
+ [開發人員指南&#40;Analysis Services&#41;](../analysis-services/analysis-services-developer-documentation.md)   
+ [開發人員指南&#40;Integration Services&#41;](../integration-services/integration-services-developer-documentation.md)   
+ [開發人員指南&#40;複寫&#41;](replication/concepts/replication-developer-documentation.md)   
+ [開發人員指南&#40;Reporting Services&#41;](../reporting-services/reporting-services-developer-documentation.md)  
   
   

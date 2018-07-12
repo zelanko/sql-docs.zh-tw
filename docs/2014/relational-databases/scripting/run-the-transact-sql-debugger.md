@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Transact-SQL debugger, sysadmin requirement
 - Transact-SQL debugger, supported versions
@@ -21,15 +21,15 @@ helpviewer_keywords:
 - Transact-SQL debugger, starting
 ms.assetid: 386f6d09-dbec-4dc7-9e8a-cd9a4a50168c
 caps.latest.revision: 7
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 33509006a58d65cb87c106572b6e68ba3621cca5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 1c8ab80ff9c697ac3f7a9a7eaa466e11d003adfa
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36035410"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37162209"
 ---
 # <a name="run-the-transact-sql-debugger"></a>執行 Transact-SQL 偵錯工具
   在您開啟 [!INCLUDE[tsql](../../includes/tsql-md.md)] 查詢編輯器視窗之後，就可以啟動 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 偵錯工具。 然後，您可以在偵錯模式中執行 [!INCLUDE[tsql](../../includes/tsql-md.md)] 程式碼，直到停止偵錯工具為止。 您可以設定選項來自訂偵錯工具的執行方式。  
@@ -37,7 +37,7 @@ ms.locfileid: "36035410"
 ## <a name="starting-and-stopping-the-debugger"></a>啟動和停止偵錯工具  
  啟動 [!INCLUDE[tsql](../../includes/tsql-md.md)] 偵錯工具的需求如下：  
   
--   如果您的 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 查詢編輯器連接至另一部電腦上的 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 執行個體，就必須設定偵錯工具進行遠端偵錯。 如需詳細資訊，請參閱[設定 TRANSACT-SQL 偵錯工具](configure-firewall-rules-before-running-the-tsql-debugger.md)。  
+-   如果您的 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 查詢編輯器連接至另一部電腦上的 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 執行個體，就必須設定偵錯工具進行遠端偵錯。 如需詳細資訊，請參閱 < [TRANSACT-SQL 偵錯工具設定](configure-firewall-rules-before-running-the-tsql-debugger.md)。  
   
 -   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 必須在屬於系統管理員 (sysadmin) 固定伺服器角色成員的 Windows 帳戶底下執行。  
   

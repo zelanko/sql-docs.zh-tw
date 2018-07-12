@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 98df1aea-0406-40bf-a917-4bd80464125c
 caps.latest.revision: 17
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 7baf85b4a4419296921ff290e8442bd54ca631e5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: aa3819c8e41a3a3a91b474ce2cfbd03d6afc4ee7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36036979"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37158399"
 ---
 # <a name="publisher-properties"></a>發行者屬性
   此章節包含散發者端和發行者端可用之發行者屬性的資訊：  

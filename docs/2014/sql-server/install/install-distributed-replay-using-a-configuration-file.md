@@ -1,5 +1,5 @@
 ---
-title: 使用組態檔安裝 Distributed 的 Replay |Microsoft 文件
+title: 使用組態檔安裝 Distributed 的 Replay |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 3259232c-6963-4c9c-9d10-ae42aa262eef
 caps.latest.revision: 14
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 357e4a9fd289d4c90f19456c7828e6941d00d6f1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 4167456a5d1b59dd44451dda26f3ccb56e417a56
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36035812"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37155689"
 ---
 # <a name="install-distributed-replay-using-a-configuration-file"></a>使用組態檔安裝 Distributed Replay
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝程式可讓您根據使用者輸入和系統預設值產生組態檔。 如指定要安裝管理工具，即可使用組態檔部署管理工具、Distributed Replay Controller 及 Distributed Replay Client 三項 Distributed Replay 元件。 這個組態檔支援安裝、修復和解除安裝 Distributed Replay 元件。  

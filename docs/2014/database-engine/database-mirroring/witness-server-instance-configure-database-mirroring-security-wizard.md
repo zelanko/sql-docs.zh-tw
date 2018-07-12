@@ -5,29 +5,28 @@ ms.date: 05/24/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.configdbmsecurwiz.witnsrvr.f1
 ms.assetid: b5763663-984a-473b-93a3-6cd3322ad41c
 caps.latest.revision: 40
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 7e067aae5e0fd22cd2c7ffc55cab4f9e50791927
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 5e6def053b7480c3c35c8cdc81710ff4cfc1d196
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36035752"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37151011"
 ---
 # <a name="witness-server-instance-configure-database-mirroring-security-wizard"></a>見證伺服器執行個體 (設定資料庫鏡像安全性精靈)
   使用此頁面來指定有關做為工作階段見證之伺服器執行個體的資訊。  
   
 > [!NOTE]  
->  並非所有 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]版本都可使用見證伺服器執行個體。 如需所支援的版本功能的清單[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，請參閱[支援的 SQL Server 2014 的版本功能](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)。  
+>  並非所有 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]版本都可使用見證伺服器執行個體。 如需的版本所支援的功能清單[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，請參閱 <<c2> [ 支援的 SQL Server 2014 的版本功能](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)。  
   
  **若要使用 SQL Server Management Studio 設定資料庫鏡像**  
   

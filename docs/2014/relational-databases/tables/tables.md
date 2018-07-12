@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - tables [SQL Server]
 - table components [SQL Server]
 ms.assetid: 82d7819c-b801-4309-a849-baa63083e83f
 caps.latest.revision: 30
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: b28a195a396d59db32a8c443d008395e462b4a1a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 7374db46a57d3f214d3f40edd885c59902437ace
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36034103"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37184145"
 ---
 # <a name="tables"></a>資料表
   資料表是資料庫物件，其中包含資料庫內所有的資料。 在資料表中，會以邏輯的方式將資料整理成資料列與資料行格式，這與試算表相似。 每個資料列都代表唯一的記錄，而每個資料行則代表記錄中的一個欄位。 例如，包含公司員工資料的資料表可能會包含每個員工的資料列，並以資料行來顯示員工資訊 (例如，員工編號、姓名、地址、工作職稱和住家電話號碼)。  

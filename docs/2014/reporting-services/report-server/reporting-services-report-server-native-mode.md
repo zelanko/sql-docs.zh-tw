@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - administering Reporting Services
 - administering [Reporting Services]
@@ -17,13 +17,13 @@ ms.assetid: fa0d84e2-4c21-432c-aa7c-23517da75253
 caps.latest.revision: 23
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 9673fbd613b927a16b4d5a66ee49ac74c158ca87
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 3e2710dae03006cf5f2b762c09aab55bf6663261
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36034519"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37157779"
 ---
 # <a name="reporting-services-report-server-native-mode"></a>Reporting Services Report Server (Native Mode)
   針對原生模式設定的報表伺服器會當做應用程式伺服器執行，並透過 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]元件專門提供所有處理和管理能力。  
@@ -63,7 +63,7 @@ ms.locfileid: "36034519"
  在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]中，內容管理是指報表、模型、資料夾、資源和共用資料來源的管理。 所有的這些項目都可以透過屬性和安全性設定單獨進行管理， 而任何一個項目都可以移至報表伺服器資料夾命名空間內的不同位置。 若要有效管理項目，您必須了解內容管理員所執行的工作。  
   
 > [!NOTE]  
->  內容管理與報表伺服器管理不同。 如需如何管理報表伺服器的執行的環境的詳細資訊，請參閱[(Reporting Services)](reporting-services-report-server-native-mode.md)。  
+>  內容管理與報表伺服器管理不同。 如需如何管理報表伺服器執行的環境的詳細資訊，請參閱[Administration (Reporting Services)](reporting-services-report-server-native-mode.md)。  
   
  內容管理包括下列工作：  
   

@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - synchronization [SQL Server replication], about synchronization
 - merge replication synchronization [SQL Server replication]
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - scripts [SQL Server replication]
 ms.assetid: 724802f7-7d69-46d3-a330-bd8aa7f53114
 caps.latest.revision: 35
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: fd5fbf6bdf97c314d3fd9391ca3b2909781c4f25
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 25f339972a55b9b7ef3f2a8679acf610f70cfb54
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36035649"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37164269"
 ---
 # <a name="synchronize-data"></a>同步處理資料
   同步資料是指在「訂閱者」端套用初始快照集後，在「發行者」與「訂閱者」之間傳播資料和結構描述變更的處理。 同步處理將會：  

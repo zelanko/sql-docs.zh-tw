@@ -1,13 +1,11 @@
 ---
-title: SQL Server Native Client ODBC 資料來源 |Microsoft 文件
+title: SQL Server Native Client ODBC 資料來源 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -20,22 +18,22 @@ helpviewer_keywords:
 - ODBC data sources
 ms.assetid: a6a50fd0-d439-43fd-b76f-16ec02f478c5
 caps.latest.revision: 27
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 3b74f989db617c2fcd86e0d823b9bb563c7dcda1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: ee13a0180896316e10b20148b2a22a5b0cf4c149
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36032071"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37408467"
 ---
 # <a name="sql-server-native-client-odbc-data-sources"></a>SQL Server Native Client ODBC 資料來源
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料來源名稱 (DSN) 會識別 ODBC 資料來源，其中包含 ODBC 應用程式需要連接到特定伺服器之 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫的所有資訊。 有兩個方式可以定義 ODBC 資料來源名稱：  
   
 -   用戶端電腦上，開啟 控制台 中 系統管理工具，然後按兩下**資料來源 (ODBC)**。 這樣會開啟「ODBC 資料來源管理員」來建立 DSN。  
   
--   ODBC 應用程式中，呼叫[SQLConfigDataSource](../native-client-odbc-api/sqlconfigdatasource.md)。  
+-   在 ODBC 應用程式中，呼叫[SQLConfigDataSource](../native-client-odbc-api/sqlconfigdatasource.md)。  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料來源包含：  
   

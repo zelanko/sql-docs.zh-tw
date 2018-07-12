@@ -1,5 +1,5 @@
 ---
-title: 選項 （文字編輯器-純文字-一般頁面） |Microsoft 文件
+title: 選項 （文字編輯器-純文字-一般頁面） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - VS.ToolsOptionsPages.Text_Editor.Plain_Text.General
 ms.assetid: 53bfa594-ba36-4c9c-8dd5-4c2dcce7d2dc
 caps.latest.revision: 22
 author: craigg-msft
 ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: e46857d3ea3078847e2c540999f37cef79d05091
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: b66c8286d3ae062307175e689f222f33ea3be6a0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36034426"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37150989"
 ---
 # <a name="options-text-editor---plain-text---general-page"></a>選項 (文字編輯器 - 純文字 - 一般頁面)
   使用這個對話方塊可變更文字編輯器的一般編輯行為，這個文字編輯器是用來編輯與特定開發語言沒有關聯的文件。 若要顯示這些設定，請按一下 **[工具]** 功能表上的 **[選項]** ，展開 **[文字編輯器]**，展開 **[純文字]** ，然後按一下 **[一般]**。  
@@ -33,7 +33,7 @@ ms.locfileid: "36034426"
  **自動列出成員**  
  純文字編輯器不支援這項功能。  
   
- **隱藏進階的成員**  
+ **隱藏進階成員**  
  純文字編輯器不支援這項功能。  
   
  **參數資訊**  
@@ -71,7 +71,7 @@ ms.locfileid: "36034426"
  **啟用按一下方式的 URL 導覽**  
  當游標在編輯器中的 URL 上方時會變成手指符號。 按一下 URL 即可在 Web 瀏覽器中顯示該頁面。  
   
- **瀏覽列**  
+ **導覽列**  
  無法使用此核取方塊。  
   
   

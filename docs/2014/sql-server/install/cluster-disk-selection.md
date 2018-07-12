@@ -1,5 +1,5 @@
 ---
-title: 叢集磁碟選取 |Microsoft 文件
+title: 叢集磁碟選取項目 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,25 +8,25 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - cluster disk selection
 ms.assetid: 0d6b863d-5972-4a20-9990-64ee8016fea6
 caps.latest.revision: 9
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: ce08658fe769a356e4cd24e29ed094692892e48f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 9635c793b32715e6da68f433e368c8ae1fc28b56
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36034506"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37157529"
 ---
 # <a name="cluster-disk-selection"></a>叢集磁碟選取
   您可以使用 **安裝精靈的** [叢集磁碟選取] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 頁面來選取 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 容錯移轉叢集的共用叢集磁碟資源。 叢集磁碟就是即將放置 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料的位置。  
   
- 共用的叢集磁碟，就不需要針對[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssDE](../../includes/ssde-md.md)]叢集安裝。 SMB 檔案伺服器是支援的存放裝置，如[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssDE](../../includes/ssde-md.md)]容錯移轉叢集安裝，而且可以指定使用**Database Engine-資料目錄**完成安裝之前的頁面。  
+ 共用的叢集磁碟不需要[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssDE](../../includes/ssde-md.md)]叢集安裝。 SMB 檔案伺服器是針對支援的儲存體[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssDE](../../includes/ssde-md.md)]容錯移轉叢集安裝，而且可以指定使用**Database Engine-資料目錄**完成安裝之前的頁面。  
   
 > [!WARNING]  
 >  如果您已經選取了要安裝 Analysis Services，就必須指定共用叢集磁碟。  

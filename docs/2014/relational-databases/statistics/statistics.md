@@ -5,10 +5,9 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-statistics
+ms.technology: performance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - statistical information [SQL Server], query optimization
 - query performance [SQL Server], statistics
@@ -23,16 +22,15 @@ helpviewer_keywords:
 - query optimizer [SQL Server], statistics
 - statistics [SQL Server]
 ms.assetid: b86a88ba-4f7c-4e19-9fbd-2f8bcd3be14a
-caps.latest.revision: 67
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: da931b48b7571cd7d109980ef6deb0a7e4bb5246
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 257abd70ea2b0f6345d40c7b6f009d50da5045c5
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36023527"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37428337"
 ---
 # <a name="statistics"></a>Statistics
   查詢最佳化工具會使用統計資料來建立可改善查詢效能的查詢計劃。 對於大部分查詢而言，查詢最佳化工具已經產生高品質查詢計劃的必要統計資料。不過，在少數情況下，您必須建立其他統計資料或修改查詢設計，以便獲得最佳結果。 本主題將討論有效使用查詢最佳化統計資料的概念和指導方針。  
@@ -191,7 +189,7 @@ GO
   
 -   使用 CREATE STATISTICS 陳述式來建立遺失的統計資料。  
   
- 唯讀資料庫或唯讀快照集上的統計資料遺漏或過時，何時[!INCLUDE[ssDE](../../../includes/ssde-md.md)]建立及維護暫時性統計資料中的`tempdb`。 當 [!INCLUDE[ssDE](../../../includes/ssde-md.md)] 建立暫時統計資料時，統計資料名稱會附加後置詞 _readonly_database_statistic，以便區分暫時統計資料與永久統計資料。 後置詞 _readonly_database_statistic 會保留給 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]產生的統計資料使用。 暫時統計資料的指令碼可以在讀寫資料庫上建立和複製。 當編寫指令碼時， [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 會將統計資料名稱的後置詞從 _readonly_database_statistic 變更為 _readonly_database_statistic_scripted。  
+ 唯讀資料庫或唯讀快照集上的統計資料遺漏或過時，當[!INCLUDE[ssDE](../../../includes/ssde-md.md)]建立及維護暫時性統計資料中的`tempdb`。 當 [!INCLUDE[ssDE](../../../includes/ssde-md.md)] 建立暫時統計資料時，統計資料名稱會附加後置詞 _readonly_database_statistic，以便區分暫時統計資料與永久統計資料。 後置詞 _readonly_database_statistic 會保留給 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]產生的統計資料使用。 暫時統計資料的指令碼可以在讀寫資料庫上建立和複製。 當編寫指令碼時， [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 會將統計資料名稱的後置詞從 _readonly_database_statistic 變更為 _readonly_database_statistic_scripted。  
   
  只有 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 可以建立和更新暫時統計資料。 但是，您可以使用永久統計資料所使用的相同工具來刪除暫時統計資料及監控統計資料屬性：  
   

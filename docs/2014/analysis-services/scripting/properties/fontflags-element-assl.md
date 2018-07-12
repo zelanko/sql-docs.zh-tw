@@ -1,5 +1,5 @@
 ---
-title: FontFlags 元素 (ASSL) |Microsoft 文件
+title: FontFlags 元素 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - FontFlags element
 ms.assetid: ea608da9-ab05-42ab-8872-c52cd9f3f546
 caps.latest.revision: 36
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 93dfd53940270fb444dd797bfd4d085ab459d200
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c1896d01c47f7c2e2fa4289f09c10ef859eff1d4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36036681"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37156839"
 ---
 # <a name="fontflags-element-assl"></a>FontFlags 元素 (ASSL)
-  描述字型相關顯示特性[CalculationProperty](../objects/calculationproperty-element-assl.md)或[量值](../objects/measure-element-assl.md)父項目。  
+  描述的字型相關顯示特性[CalculationProperty](../objects/calculationproperty-element-assl.md)或是[量值](../objects/measure-element-assl.md)父項目。  
   
 ## <a name="syntax"></a>語法  
   
@@ -62,9 +62,9 @@ ms.locfileid: "36036681"
 |子元素|無|  
   
 ## <a name="remarks"></a>備註  
- `FontFlags`屬性包含多維度運算式 (MDX) 運算式，並套用至`CalculationProperty`項目具有[CalculationType](calculationtype-element-assl.md)的*成員*或*資料格*.  
+ `FontFlags`屬性包含多維度運算式 (MDX) 運算式，並套用至`CalculationProperty`擁有的項目[CalculationType](calculationtype-element-assl.md)的*成員*或*資料格*.  
   
- 對應至父系的項目`FontFlags`在 「 分析管理物件 (AMO) 物件模型是<xref:Microsoft.AnalysisServices.CalculationProperty>和<xref:Microsoft.AnalysisServices.Measure>。  
+ 對應至父系的元素`FontFlags`在 「 分析管理物件 (AMO) 物件模型所<xref:Microsoft.AnalysisServices.CalculationProperty>和<xref:Microsoft.AnalysisServices.Measure>。  
   
 ## <a name="see-also"></a>另請參閱  
  [CalculationProperties 元素&#40;ASSL&#41;](../collections/calculationproperties-element-assl.md)   

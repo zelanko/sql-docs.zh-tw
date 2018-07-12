@@ -5,26 +5,24 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
+ms.technology: ''
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - logon triggers
 - login triggers
 helpviewer_keywords:
 - triggers [SQL Server], logon
 ms.assetid: 2f0ebb2f-de10-482d-9806-1a5de5b312b8
-caps.latest.revision: 12
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 4467b8146a3842daaef11c5c9a67040b881c9f79
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: rothja
+ms.author: jroth
+manager: craigg
+ms.openlocfilehash: b42fdfa556a2e7a26a04dd85fd7740ca23d36967
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36030249"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37427197"
 ---
 # <a name="logon-triggers"></a>登入觸發程序
   登入觸發程序會引發預存程序來回應 LOGON 事件。 當 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體建立使用者工作階段時，就會引發這個事件。 登入觸發程序會在登入驗證階段結束之後，但在使用者工作階段實際建立之前引發。 因此，從觸發程序內產生且一般會顯示給使用者的所有訊息，例如錯誤訊息和來自 PRINT 陳述式的訊息，都會轉至 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 錯誤記錄檔。 如果驗證失敗，登入觸發程序就不會引發。  

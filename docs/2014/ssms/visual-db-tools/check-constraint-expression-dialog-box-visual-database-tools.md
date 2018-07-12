@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vdt.dlgbox.checkconstraintexpression
 ms.assetid: beb6ce43-3913-4d66-8826-8e885335b790
 caps.latest.revision: 13
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: f71477726c02f1fc37586242d969d7709bfb8e07
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 843fe6a662c0d77962881683fb8d5842a4f44612
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36033806"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37278260"
 ---
 # <a name="check-constraint-expression-dialog-box-visual-database-tools"></a>檢查條件約束運算式對話方塊 (Visual Database Tools)
   當附加檢查條件約束至資料表或資料行時，必須包含 SQL 運算式。 在提供的方塊中輸入檢查條件約束運算式。  

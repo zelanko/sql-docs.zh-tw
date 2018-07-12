@@ -1,5 +1,5 @@
 ---
-title: 鎖定元素 (XMLA) |Microsoft 文件
+title: 鎖定元素 (XMLA) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -24,15 +24,15 @@ helpviewer_keywords:
 - Lock command
 ms.assetid: a819e805-4793-43bb-8af3-16a19f8bdab3
 caps.latest.revision: 14
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: d454cdcc6a87335670f483ccc06a7547e89dc7c9
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 44225f211ac013edd82de08c9ca82f22cb349f96
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36036192"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37209868"
 ---
 # <a name="lock-element-xmla"></a>Lock 元素 (XMLA)
   鎖定指定的物件上[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]執行個體。  
@@ -63,10 +63,10 @@ ms.locfileid: "36036192"
 |關聯性|元素|  
 |------------------|-------------|  
 |父元素|[Command](../xml-elements-properties/command-element-xmla.md)|  
-|子元素|[識別碼](../xml-elements-properties/id-element-xmla.md)，[模式](../xml-elements-properties/mode-element-xmla.md)，[物件](../xml-elements-properties/object-element-xmla.md)|  
+|子元素|[ID](../xml-elements-properties/id-element-xmla.md)，[模式](../xml-elements-properties/mode-element-xmla.md)，[物件](../xml-elements-properties/object-element-xmla.md)|  
   
 ## <a name="remarks"></a>備註  
- `Lock` 命令會在目前使用中交易的內容中鎖定某個物件，以便共用或獨佔使用。 只有資料庫管理員或伺服器管理員可以明確發出 `Lock` 命令。 鎖定物件會防止認可交易，直到移除鎖定為止。 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 支援兩種鎖定類型：共用鎖定和獨佔鎖定。 如需有關所支援的鎖定類型[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]，請參閱[Mode 元素&#40;XMLA&#41;](../xml-elements-properties/mode-element-xmla.md)。  
+ `Lock` 命令會在目前使用中交易的內容中鎖定某個物件，以便共用或獨佔使用。 只有資料庫管理員或伺服器管理員可以明確發出 `Lock` 命令。 鎖定物件會防止認可交易，直到移除鎖定為止。 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 支援兩種鎖定類型：共用鎖定和獨佔鎖定。 如需所支援的鎖定類型[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]，請參閱 <<c2> [ 模式項目&#40;XMLA&#41;](../xml-elements-properties/mode-element-xmla.md)。</c2>  
   
  [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 僅允許鎖定資料庫。 `Object` 元素必須包含 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 資料庫的物件參考。 如果您沒有指定 `Object` 元素或者 `Object` 元素參考資料庫以外的物件，就會發生錯誤。  
   

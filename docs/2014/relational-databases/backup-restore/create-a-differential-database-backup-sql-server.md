@@ -5,10 +5,9 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-backup-restore
+ms.technology: backup-restore
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - full differential backups [SQL Server]
 - database backups [SQL Server], full differential backups
@@ -16,15 +15,15 @@ helpviewer_keywords:
 - backups [SQL Server], creating
 ms.assetid: 70f49794-b217-4519-9f2a-76ed61fa9f99
 caps.latest.revision: 32
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 59dc50f9d3e72e7591d512ab98c5731e2cc6d5c3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 595470b98b16cf955d2456891dac2284a94508c9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36035230"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37160929"
 ---
 # <a name="create-a-differential-database-backup-sql-server"></a>建立差異資料庫備份 (SQL Server)
   此主題描述如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]，在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 中建立差異資料庫備份。  
@@ -85,7 +84,7 @@ ms.locfileid: "36035230"
 5.  在 **[備份類型]** 清單方塊中，選取 **[差異]**。  
   
     > [!IMPORTANT]  
-    >  當**差異**已選取，確認**只複製備份**核取方塊。  
+    >  當**差異**已選取，請確認**只複製備份**核取方塊。  
   
 6.  針對 **[備份元件]**，按一下 **[資料庫]**。  
   

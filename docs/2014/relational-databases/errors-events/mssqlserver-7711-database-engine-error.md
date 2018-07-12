@@ -5,23 +5,22 @@ ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - 7711 (Database Engine error)
 ms.assetid: a5c7cd6e-18d6-47ef-902b-db9dd64bba34
 caps.latest.revision: 8
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: dab7eb337e5bfc6dacbcdf5fad4ad7b9d640b41e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 6f9dd9ab3600f51cc44b8678b050e8d61ffb2a63
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36031229"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37414337"
 ---
 # <a name="mssqlserver7711"></a>MSSQLSERVER_7711
     

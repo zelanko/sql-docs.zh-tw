@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - security [Reporting Services], reports
 - security [Reporting Services], resources
@@ -19,13 +19,13 @@ ms.assetid: 63cd55c7-fd2a-49e3-a3f8-59eb1a1c6e83
 caps.latest.revision: 46
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: dfb47953b60ef2a37b5a2bc3ffd9c8fc16300526
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 95d8ca8474c23d2ef8ffac6baa4ed822700fca81
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36034089"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37240368"
 ---
 # <a name="secure-reports-and-resources"></a>保護報表和資源的安全
   您可以設定個別報表以及資源的安全性，來控制使用者必須對這些項目擁有的存取權程度。 依預設，只有屬於 **管理員** 內建群組成員的使用者才可以執行報表、檢視資源、修改屬性及刪除項目。 其他所有使用者都必須具有針對他們所建立的角色指派，好讓他們存取報表或資源。  
@@ -65,7 +65,7 @@ ms.locfileid: "36034089"
  若要消除不小心執行惡意指令碼的風險，包括報表中的連結，只能將超連結繫結至信任來源中的資料。 確認查詢結果中的資料以及將資料繫結至超連結的運算式不會建立可能遭到利用的連結。 例如，請勿讓超連結根據可串連多個資料集欄位資料的運算式。 必要時瀏覽至報表，並使用 [檢視原始檔] 來檢查可疑的指令碼和 URL。  
   
 ## <a name="mitigating-sql-injection-attacks-in-a-parameterized-report"></a>減少參數化報表中的 SQL 資料隱碼攻擊  
- 任何包含的型別參數的報表中`String`，務必使用可用的值清單 （也稱為有效值清單），並確定執行報表的任何使用者具有檢視報表中的資料所需的權限。 當您定義的型別參數`String`，使用者會看見的可接受任何值的文字方塊。 可用的值清單會限制可輸入的值。 如果報表參數繫結至查詢參數，而且您不要使用可用的值清單，則報表使用者可以在文字方塊中輸入 SQL 語法，如此可能會使您的報表及伺服器暴露在 SQL 資料隱碼攻擊的危險之下。 如果使用者的權限足以執行新的 SQL 陳述式，伺服器可能會出現不良的結果。  
+ 在任何報表中包含的型別參數`String`，務必使用可用的值清單 （也稱為有效值清單），並且確認任何執行報表的使用者具有檢視報表中的資料所需的權限。 當您定義的型別參數`String`，使用者會看到一個可接受任何值的文字方塊。 可用的值清單會限制可輸入的值。 如果報表參數繫結至查詢參數，而且您不要使用可用的值清單，則報表使用者可以在文字方塊中輸入 SQL 語法，如此可能會使您的報表及伺服器暴露在 SQL 資料隱碼攻擊的危險之下。 如果使用者的權限足以執行新的 SQL 陳述式，伺服器可能會出現不良的結果。  
   
  如果報表參數未繫結至查詢參數，且參數值有包含在報表中，則報表使用者就可以在參數值中輸入運算式語法或 URL，並將報表轉譯為 Excel 或 HTML。 如果另一個使用者接著檢視報表並按一下轉譯的參數內容，該使用者可能會不小心執行惡意指令碼或連結。  
   
@@ -75,11 +75,11 @@ ms.locfileid: "36034089"
 >  在舊版的文件集中，有包含將動態查詢建立為運算式的範例； 這種查詢類型會產生 SQL 資料隱碼攻擊的弱點，所以不建議使用。  
   
 ## <a name="securing-confidential-reports"></a>保護機密報表的安全  
- 包含機密資訊的報表應該在資料存取層級受到保護，方法是要求使用者提供存取敏感性資料的認證。 如需詳細資訊，請參閱[指定認證和報表資料來源的連接資訊](../report-data/specify-credential-and-connection-information-for-report-data-sources.md)。 您也可以保護資料夾的安全，讓未經授權的使用者無法使用它。 如需詳細資訊，請參閱 [保護資料夾的安全](secure-folders.md)。  
+ 包含機密資訊的報表應該在資料存取層級受到保護，方法是要求使用者提供存取敏感性資料的認證。 如需詳細資訊，請參閱 <<c0> [ 指定的認證和報表資料來源的連接資訊](../report-data/specify-credential-and-connection-information-for-report-data-sources.md)。 您也可以保護資料夾的安全，讓未經授權的使用者無法使用它。 如需詳細資訊，請參閱 [保護資料夾的安全](secure-folders.md)。  
   
 ## <a name="see-also"></a>另請參閱  
  (建立-和-管理-角色-assignments.md)   
- [設定報表產生器存取](../report-server/configure-report-builder-access.md)   
+ [設定報表產生器的存取](../report-server/configure-report-builder-access.md)   
  [在原生模式報表伺服器上授與權限](granting-permissions-on-a-native-mode-report-server.md)   
  [保護共用資料來源項目的安全](secure-shared-data-source-items.md)   
  [在 Reporting Services 資料來源中儲存認證](../report-data/store-credentials-in-a-reporting-services-data-source.md)  

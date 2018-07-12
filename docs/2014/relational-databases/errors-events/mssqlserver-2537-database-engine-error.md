@@ -5,23 +5,22 @@ ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - 2537 (Database Engine error)
 ms.assetid: 0af6ff69-d75a-4c39-8da2-9bd0695277c6
 caps.latest.revision: 14
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 6a765897d532f3f2009331efbb8fff1dc9f9becc
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: c8fc0f50a5f589ae7aeb188c91e0f3981699356d
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36023329"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37425587"
 ---
 # <a name="mssqlserver2537"></a>MSSQLSERVER_2537
     

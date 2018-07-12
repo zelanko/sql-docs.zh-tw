@@ -1,31 +1,29 @@
 ---
-title: 整合式 Kerberos 驗證 (OLE DB) |Microsoft 文件
+title: 整合式 Kerberos 驗證 (OLE DB) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 953ee253-a4be-4f47-bbad-d2f6600207b2
 caps.latest.revision: 6
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: bd1ccb608aec68f96671ea52cdb17c5ff66c7182
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: f2ad40a930192dcaf91afeb14f2d54a7c08db0b7
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36030288"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37410297"
 ---
 # <a name="integrated-kerberos-authentication-ole-db"></a>整合式 Kerberos 驗證 (OLE DB)
   此範例顯示如何使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 中的 OLE DB 取得 Kerberos 相互驗證。 此範例適用於 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 或更新版本。  
   
- 如需有關 Spn 和 Kerberos 驗證的詳細資訊，請參閱[服務主體名稱&#40;SPN&#41;支援用戶端連接中的](../native-client/features/service-principal-name-spn-support-in-client-connections.md)。  
+ 如需有關 Spn 和 Kerberos 驗證的詳細資訊，請參閱 <<c0> [ 服務主體名稱&#40;SPN&#41;用戶端連接中的支援](../native-client/features/service-principal-name-spn-support-in-client-connections.md)。</c0>  
   
 ## <a name="example"></a>範例  
  您必須指定一個伺服器。 在 .cpp 檔案中，將 "MyServer" 變更為擁有 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] (或更新版本) 執行個體的電腦名稱。  

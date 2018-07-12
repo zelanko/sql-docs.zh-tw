@@ -1,5 +1,5 @@
 ---
-title: 存取查詢內容中的預存程序 |Microsoft 文件
+title: 存取查詢內容中的預存程序 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - query context [Analysis Services]
 ms.assetid: bdc7dad8-2f22-4265-aba4-a3a451527840
 caps.latest.revision: 22
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: ef60683eb410f0db5ba9e8d38ac227ca22dd9159
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 28aafacda2e9880a79201fd07ca41fb15959e87b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36033372"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37239838"
 ---
 # <a name="accessing-query-context-in-stored-procedures"></a>在預存程序中存取查詢內容
   預存程序的執行內容可以在該預存程序的程式碼中使用，如同 ADOMD.NET 伺服器物件模型的 `Context` 物件。 這是唯讀的內容，而且不能由預存程序加以修改。 下列屬性可以在此物件上使用。  

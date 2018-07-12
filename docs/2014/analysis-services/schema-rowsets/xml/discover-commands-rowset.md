@@ -1,5 +1,5 @@
 ---
-title: DISCOVER_COMMANDS 資料列集 |Microsoft 文件
+title: DISCOVER_COMMANDS 資料列集 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -14,15 +14,15 @@ helpviewer_keywords:
 - DISCOVER_COMMANDS rowset
 ms.assetid: d228f265-05d9-4d2c-a622-44c73eab7a71
 caps.latest.revision: 14
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 14c4eb9ac8fe63422ee29f5880a8a5f1eb6329bf
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 860645ba09ee294b6421472f235a38d66f54abe8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36034664"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37157319"
 ---
 # <a name="discovercommands-rowset"></a>DISCOVER_COMMANDS 資料列集
   提供在伺服器上已開啟的連接中，目前執行或是上次執行的命令之資源使用量與活動資訊。  
@@ -53,7 +53,7 @@ ms.locfileid: "36034664"
   
  下表將提供可識別此資料列集的 GUID 和字串值。  
   
-|引數|ReplTest1|  
+|引數|值|  
 |--------------|-----------|  
 |GUID|a07ccd34-8148-11d0-87bb-00c04fc33942|  
 |ADOMDNAME|命令|  

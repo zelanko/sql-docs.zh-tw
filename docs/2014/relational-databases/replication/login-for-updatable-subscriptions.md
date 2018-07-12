@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.rep.newsubwizard.updatablesubscriptionslogin.f1
 ms.assetid: 301ea227-0455-40ba-9009-d38f8676b325
 caps.latest.revision: 17
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 2379b7b58cdfd6ee55abf848bbac314f2180931e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: e06d1b519043cd2eb21d0e9337bd7f3a457381e0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36035652"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37184175"
 ---
 # <a name="login-for-updatable-subscriptions"></a>可更新訂閱的登入
   如果您在此精靈的 **[可更新的訂閱]** 頁面上選取 **[複寫]** ，就必須在訂閱者端指定帳戶，並使用此帳戶建立發行者的連接，以進行立即更新訂閱。 在訂閱者端引發的觸發程序，會使用這些連接將變更傳播至發行者。 即使您在 **[可更新的訂閱]** 頁面上選取 **[佇列變更且儘可能認可]** ，也需要此帳戶，因為 [新增訂閱精靈] 預設會將佇列更新設定為在必要時切換到立即更新。  

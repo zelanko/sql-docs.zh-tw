@@ -1,5 +1,5 @@
 ---
-title: ProtocolDisplayName 屬性 （ClientNetLibInfo 類別） |Microsoft 文件
+title: ProtocolDisplayName 屬性 （ClientNetLibInfo 類別） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - ProtocolDisplayName property
 ms.assetid: b90755fd-7cac-4bdb-8e45-e95119a7665c
 caps.latest.revision: 31
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: b08849a3fe5dcf20289e9b327c723e0a9f89a07e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+ms.openlocfilehash: 997dac443c123483903a580461966d596638f0c5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36033893"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37240478"
 ---
 # <a name="protocoldisplayname-property-clientnetlibinfo-class"></a>ProtocolDisplayName 屬性 (ClientNetLibInfo 類別)
   取得或設定用來顯示通訊協定的名稱。  
