@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.ag.jobsreferencingaschedule.f1
 - sql12.ag.job.jobsreferencingaschedule.f1
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - Jobs Referencing a Schedule dialog box
 ms.assetid: b6ecb6eb-9514-4ac1-b67c-31e3d39db4d9
 caps.latest.revision: 19
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: c1736ea5410172f16788221e1206541ee46641a8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: e3c2b49ae66fa4cd9f7dab8c49c8e55b5896f8c8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36037376"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37228728"
 ---
 # <a name="jobs-that-reference-a-schedule"></a>參考排程的作業
   此對話方塊允許您檢視有關參考特定排程之作業的資訊。  

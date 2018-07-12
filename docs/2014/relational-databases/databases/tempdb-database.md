@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - temporary tables [SQL Server], tempdb database
 - tempdb database [SQL Server], about tempdb
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - tempdb database [SQL Server]
 ms.assetid: ce4053fb-e37a-4851-b711-8e504059a780
 caps.latest.revision: 52
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 048386695f2b3d3736ce2b399caa9fa286e0d80c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 251ca5f656425a3a77952b4bfdb6e0b79ee8367d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36133195"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37154329"
 ---
 # <a name="tempdb-database"></a>tempdb 資料庫
   **tempdb** 系統資料庫是全域資源，適用於所有連接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的使用者，且可用來保留下列項目：  
@@ -47,7 +47,7 @@ ms.locfileid: "36133195"
 |主要資料|tempdev|tempdb.mdf|以百分之 10 的比例自動成長，直到磁碟全滿|  
 |Log|templog|templog.ldf|以 10% 的比例自動成長，最大至 2 TB|  
   
- 大小**tempdb**可能會影響系統效能。 例如，如果**tempdb**大小太小，可能是系統處理太佔用自動成長的資料庫，以支援您每次您啟動的工作負載需求[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 您可以增加的大小，以避免這項負擔**tempdb**。  
+ 大小**tempdb**可能會影響系統效能。 例如，如果**tempdb**大小太小，可能是系統處理太成長佔用資料庫，以支援您每次您啟動的工作負載需求[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 您可以增加的大小，以避免額外的負荷**tempdb**。  
   
 ## <a name="performance-improvements-in-tempdb"></a>tempdb 中的效能改進  
  在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中，會以下列方式改進 **tempdb** 效能：  

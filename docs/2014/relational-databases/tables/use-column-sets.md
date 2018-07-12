@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - sparse columns, column sets
 - column sets
 ms.assetid: a4f9de95-dc8f-4ad8-b957-137e32bfa500
 caps.latest.revision: 27
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: ec3a9c752a3ba03f61b21e6280afe47361435784
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 6c6807bbb743b39177e282f965916e5d5d78e4bc
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36036762"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37258214"
 ---
 # <a name="use-column-sets"></a>使用資料行集
   使用疏鬆資料行的資料表可以指定資料行集，以傳回資料表中的所有疏鬆資料行。 資料行集是不具類型的 XML 表示，可將資料表的所有疏鬆資料行結合到結構化輸出中。 資料行集類似於計算資料行，因為資料行集並未實際儲存在資料表中。 資料行集與計算資料行不同的地方在於資料行集可直接更新。  
@@ -97,7 +97,7 @@ ms.locfileid: "36036762"
 ## <a name="inserting-or-modifying-data-in-a-column-set"></a>在資料行集內插入或修改資料  
  若要執行疏鬆資料行的資料操作，可以使用個別資料行的名稱，或是參考資料行集的名稱，以及使用資料行集的 XML 格式來指定資料行集的值。 疏鬆資料行可依任何順序出現在 XML 資料行中。  
   
- 當插入或使用 XML 資料行集更新疏鬆資料行值時，插入基礎疏鬆資料行的值會隱含地轉換從`xml`資料型別。 如果是數值資料行，數值資料行之 XML 內的空白值會轉換成空白字串。 這樣會將零插入數值資料行中，如下列範例所示。  
+ 當插入或使用 XML 資料行集更新疏鬆資料行值時，插入基礎疏鬆資料行的值會以隱含方式轉換從`xml`資料型別。 如果是數值資料行，數值資料行之 XML 內的空白值會轉換成空白字串。 這樣會將零插入數值資料行中，如下列範例所示。  
   
 ```  
 CREATE TABLE t (i int SPARSE, cs xml column_set FOR ALL_SPARSE_COLUMNS);  

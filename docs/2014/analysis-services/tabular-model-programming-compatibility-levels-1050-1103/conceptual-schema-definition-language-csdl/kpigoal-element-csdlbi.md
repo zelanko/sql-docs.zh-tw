@@ -1,5 +1,5 @@
 ---
-title: KpiGoal 元素 (CSDLBI) |Microsoft 文件
+title: KpiGoal 元素 (CSDLBI) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -12,15 +12,15 @@ ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: fd8afbe7-b57d-4b47-862d-eb7b2489c327
 caps.latest.revision: 11
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: d75a2178d91b93879e4d08d11ba0fa536f7f2ddd
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: b64e3124ba7a848921e1b0844b20d03e9aa82af4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36132282"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37165239"
 ---
 # <a name="kpigoal-element-csdlbi"></a>KpiGoal 元素 (CSDLBI)
   KpiGoal 元素會提供資料行的參考，該資料行用來定義關鍵效能指標 (KPI) 的目標。  
@@ -30,7 +30,7 @@ ms.locfileid: "36132282"
 ## <a name="elements-and-attributes"></a>元素和屬性  
  下表列出定義 KpiGoal 元素的屬性。  
   
-|[屬性]|是否必要|描述|  
+|名稱|是否必要|描述|  
 |----------|-----------------|-----------------|  
 |PropertyRef|是|包含 KPI 目標值之資料行的參考。<br /><br /> Kpigoal 元素必須只包含單獨一個 PropertyRef 元素。<br /><br /> 請參閱 [PropertyRef 元素 &#40;CSDLBI&#41;](propertyref-element-csdlbi.md)。|  
   

@@ -1,5 +1,5 @@
 ---
-title: PowerPivot 可用性和災害復原 (SQL Server 2014) |Microsoft 文件
+title: PowerPivot 高可用性及災害復原 (SQL Server 2014) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 4aaf008c-3bcb-4dbf-862c-65747d1a668c
 caps.latest.revision: 13
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 7c05bb8ca3e917d12fe1452dd598c30c698d3c4a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 15efd2e1265635fa2870013d580ea4ef929b4600
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36036688"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37159289"
 ---
 # <a name="powerpivot-availability-and-disaster-recovery-sql-server-2014"></a>PowerPivot 高可用性及災害復原 (SQL Server 2014)
   [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 的可用性和災害復原計畫主要取決於您的 SharePoint 伺服器陣列的設計、不同元件可接受的停機時間以及針對 SharePoint 可用性所實作的工具和最佳作法。 本主題將摘要說明相關技術，並包含為 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 部署規劃可用性和災害復原時所要考量的範例拓撲圖表。  
@@ -43,15 +43,15 @@ ms.locfileid: "36036688"
   
  下圖描述 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 2013 部署範例。 這個範例支援 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 服務的正常可用性，並假設資料庫會定期備份。  
   
- ![2013 中的 powerpivot 可用性](../media/ssas-powerpivot-services-2013.png "2013年中的 powerpivot 可用性")  
+ ![在 2013年中的 powerpivot 可用性](../media/ssas-powerpivot-services-2013.png "2013年中的 powerpivot 可用性")  
   
--   **(1)** Web 前端伺服器。 使用 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 2013 增益集，將資料提供者安裝在每部伺服器上。 如需詳細資訊，請參閱[安裝或解除安裝 PowerPivot for SharePoint 增益集&#40;SharePoint 2013&#41;](../instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2013.md)。  
+-   **(1)** Web 前端伺服器。 使用 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 2013 增益集，將資料提供者安裝在每部伺服器上。 如需詳細資訊，請參閱 <<c0> [ 安裝或解除安裝 PowerPivot for SharePoint 增益集&#40;SharePoint 2013&#41;](../instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2013.md)。</c0>  
   
 -   **(2)** [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 共用服務會在 **每部** 應用程式伺服器上執行，並允許服務應用程式 **跨** 應用程式伺服器來執行。 因此，如果單一應用程式伺服器離線， [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 應用程式依然可以使用。  
   
 -   **(3)** Excel Calculation Services 會在每部應用程式伺服器上執行，並允許服務應用程式跨應用程式伺服器來執行。 因此，如果單一應用程式伺服器離線，Excel Calculation Services 依然可以使用。  
   
--   **(4)** 和 **(6)** 的執行個體[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]集在 SharePoint 伺服器陣列外部的伺服器上執行 SharePoint 模式，其中包括 Windows 服務**SQL Server Analysis Services (POWERPIVOT)**。 這些執行個體都會向 Excel Services 註冊 **(3)**。 Excel Services 會管理傳送給 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 伺服器之要求的負載平衡。 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 2013 架構可讓您擁有 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 適用的多部伺服器，好讓您可以視需要輕鬆地加入更多執行個體。 如需詳細資訊，請參閱 [Manage Excel Services data model settings (SharePoint Server 2013)](http://technet.microsoft.com/library/jj219780\(v=office.15\).aspx)(管理 Excel Services 資料模型設定 (SharePoint Server 2013))。  
+-   **(4)** 並 **(6)** 的執行個體[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]集在 SharePoint 伺服器陣列外部的伺服器上的 SharePoint 模式執行，其中包括 Windows 服務**SQL Server Analysis Services (POWERPIVOT)**。 這些執行個體都會向 Excel Services 註冊 **(3)**。 Excel Services 會管理傳送給 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 伺服器之要求的負載平衡。 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 2013 架構可讓您擁有 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 適用的多部伺服器，好讓您可以視需要輕鬆地加入更多執行個體。 如需詳細資訊，請參閱 [Manage Excel Services data model settings (SharePoint Server 2013)](http://technet.microsoft.com/library/jj219780\(v=office.15\).aspx)(管理 Excel Services 資料模型設定 (SharePoint Server 2013))。  
   
 -   **(5)** 用於內容、組態和應用程式資料庫的 SQL Server 資料庫。 其中包括 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 服務應用程式資料庫。 您的 DR 計畫應該包括資料庫層。 在此設計中，資料庫會在其中一個 **執行個體上與** (4) [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 相同的伺服器上執行。 **(4)** 和 **(5)** 也可能會在不同的伺服器上。  
   
@@ -62,11 +62,11 @@ ms.locfileid: "36036688"
   
  下圖描述 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 2010 部署範例。 這個範例支援 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 服務的正常可用性，並假設資料庫會定期備份。  
   
- ![sharepoint 2010 中的 powerpivot 可用性](../media/ssas-powerpivot-services-2010.png "sharepoint 2010 中的 powerpivot 可用性")  
+ ![在 sharepoint 2010 的 powerpivot 可用性](../media/ssas-powerpivot-services-2010.png "sharepoint 2010 中的 powerpivot 可用性")  
   
 -   **(1)** Web 前端伺服器。 在每部伺服器上安裝資料提供者。 如需詳細資訊，請參閱 [Install the Analysis Services OLE DB Provider on SharePoint Servers](../../sql-server/install/install-the-analysis-services-ole-db-provider-on-sharepoint-servers.md)。  
   
--   **(2)** 兩個[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]共用服務和 **(4)** Windows 服務**SQL Server Analysis Services (POWERPIVOT)** 安裝在 SharePoint 應用程式伺服器上。  
+-   **(2)** 兩個[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]共用服務並 **(4)** Windows 服務**SQL Server Analysis Services (POWERPIVOT)** 安裝在 SharePoint 應用程式伺服器上。  
   
      [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 系統服務會在 **每部** 應用程式伺服器上執行，並允許服務應用程式 **跨** 應用程式伺服器來執行。 如果單一應用程式伺服器離線， [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 服務應用程式依然可以使用。  
   

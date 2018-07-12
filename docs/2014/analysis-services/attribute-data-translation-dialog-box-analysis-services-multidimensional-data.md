@@ -1,5 +1,5 @@
 ---
-title: 屬性資料翻譯對話方塊 (Analysis Services-多維度資料) |Microsoft 文件
+title: 屬性資料翻譯對話方塊 (Analysis Services-多維度資料) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.dimensiondesigner.dimensionstoragesettings.f1
 helpviewer_keywords:
 - Attribute Data Translation dialog box
 ms.assetid: bed286de-1e9b-49de-b09e-3cd076aba152
 caps.latest.revision: 22
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 1b8d7f28696e04045ca5ac3f11bf38d4c67f60c2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 9b17c7aba04bc832fd3554d82dd885e8add05214
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36132319"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37210358"
 ---
 # <a name="attribute-data-translation-dialog-box-analysis-services---multidimensional-data"></a>屬性資料翻譯對話方塊 (Analysis Services - 多維度資料)
   使用 [屬性資料翻譯] 對話方塊，即可設定包含翻譯標題資料的資料行，以及要用於翻譯資料的定序和排序次序。 您可依下列方式顯示 [屬性資料翻譯] 對話方塊：  
@@ -39,7 +39,7 @@ ms.locfileid: "36132319"
  **語言**  
  顯示選取的語言。  
   
- **翻譯的標題**  
+ **已翻譯的標題**  
  設定所選屬性的目前已翻譯標題。  
   
  **翻譯資料行**  
@@ -59,7 +59,7 @@ ms.locfileid: "36132319"
  **區分大小寫**  
  選取此選項，即可根據為關聯之語言或字母提供的字典規則來排序和比較資料，以及區別大寫和小寫字母。  
   
- 如果未選取，[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 會將大小寫字母視為相同。 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 不會不會定義小寫字母排序較低或高比大寫子母時**區分大小寫**未選取。  
+ 如果未選取，[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 會將大小寫字母視為相同。 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 未定義小寫字母排序較低或更高的版本比大寫子母**區分大小寫**未選取。  
   
  **區分腔調字**  
  選取此選項，即可根據為關聯之語言或字母提供的字典規則來排序和比較資料，以及區別有腔調和無腔調字元。 例如，'a' 不等於 'á'。  

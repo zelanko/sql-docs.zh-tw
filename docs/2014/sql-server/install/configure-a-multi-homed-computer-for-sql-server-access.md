@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - ports [SQL Server], multi-homed computer
 - multi-homed computer [SQL Server] configuring ports
 - firewall systems [Database Engine], multi-homed computer
 ms.assetid: ba369e5b-7d1f-4544-b7f1-9b098a1e75bc
 caps.latest.revision: 22
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 72ea93688420a150d0193c9f91feb26dad91cffe
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: aa768aea67d95a107380600fee663f2f0ffa5ee8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36131635"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37183895"
 ---
 # <a name="configure-a-multi-homed-computer-for-sql-server-access"></a>設定多重主目錄電腦進行 SQL Server 存取
   當伺服器必須提供兩個或多個網路或子網路的連接時，一般會使用多重主目錄電腦。 這部電腦通常位於周邊網路 (也稱為 DMZ、非軍事區域，或篩選的子網路) 中。 此主題描述如何設定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和具有進階安全性的 Windows 防火牆，以便在多重主目錄環境中提供給 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的網路連接。  
@@ -59,9 +59,9 @@ ms.locfileid: "36131635"
   
 #### <a name="to-determine-the-ip-addresses-available-on-the-computer"></a>若要判斷電腦可用的 IP 位址  
   
-1.  電腦上[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]是安裝，請按一下**啟動**，按一下**執行**，型別`cmd`然後[!INCLUDE[clickOK](../../includes/clickok-md.md)]。  
+1.  電腦上[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]是安裝，請按一下 **開始**，按一下 **執行**，型別`cmd`，然後[!INCLUDE[clickOK](../../includes/clickok-md.md)]。  
   
-2.  在命令提示字元 視窗中，輸入`ipconfig,`然後按 ENTER，即可列出這部電腦上可用的 IP 位址。  
+2.  在 [命令提示字元] 視窗中，輸入`ipconfig,`然後按 ENTER，即可列出這部電腦上可用的 IP 位址。  
   
     > [!NOTE]  
     >  **ipconfig** 命令有時會列出許多可能的連結，包含已中斷連線的連結。 **ipconfig** 命令可以同時列出 IPv4 及 IPv6 的位址。  
@@ -89,7 +89,7 @@ ms.locfileid: "36131635"
   
 1.  在安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的電腦上，以管理員身分登入。  
   
-2.  按一下**啟動**，按一下**執行**，型別`wf.msc`，然後按一下**確定**。  
+2.  按一下 **開始**，按一下**執行**，型別`wf.msc`，然後按一下**確定**。  
   
 3.  在 [使用者帳戶控制] 對話方塊中，按一下 [繼續]，即可使用管理員認證來開啟 [具有進階安全性的 Windows 防火牆] 嵌入式管理單元。  
   
@@ -103,7 +103,7 @@ ms.locfileid: "36131635"
   
 8.  在 [通訊協定及連接埠] 頁面上，選取 [TCP]。  
   
-9. 選取 [特定本機連接埠]。 輸入以逗號隔開的通訊埠編號，然後按 [下一步]。 在此範例中，您將設定的預設連接埠。因此，請輸入`1433`。  
+9. 選取 [特定本機連接埠]。 輸入以逗號隔開的通訊埠編號，然後按 [下一步]。 在此範例中，您將設定預設的連接埠;因此，請輸入`1433`。  
   
 10. 在 [動作] 頁面上，檢閱這些選項。 在這則範例中，您不會使用防火牆來強制執行安全連接。 因此，請按一下 [允許該連線]，然後按 [下一步]。  
   

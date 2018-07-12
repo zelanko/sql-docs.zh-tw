@@ -1,31 +1,29 @@
 ---
-title: 記憶體 (ODBC) 中的所有值的資料表值參數的形式傳送資料 |Microsoft 文件
+title: 將資料當做資料表值參數 (ODBC) 的記憶體中的所有值傳送 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - table-valued parameters (ODBC), sending data to a stored procedure with all values in memory
 ms.assetid: 8b96282f-00d5-4e28-8111-0a87ae6d7781
 caps.latest.revision: 16
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 1d60ed42fd1c568c9efe9fc693ce408929525608
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: f2e154cbbba13ac1eb017a90fbb6abd7b0532b50
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36033634"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37422237"
 ---
 # <a name="sending-data-as-a-table-valued-parameter-with-all-values-in-memory-odbc"></a>使用記憶體中的所有值，將資料當做資料表值參數傳送 (ODBC)
-  本主題描述所有的值都在記憶體中時，如何將資料當做資料表值參數傳送至預存程序。 如需示範資料表值參數的另一個範例，請參閱[使用資料表值參數&#40;ODBC&#41;](table-valued-parameters-odbc.md)。  
+  本主題描述所有的值都在記憶體中時，如何將資料當做資料表值參數傳送至預存程序。 如需示範資料表值參數的另一個範例，請參閱 <<c0> [ 使用資料表值參數&#40;ODBC&#41;](table-valued-parameters-odbc.md)。</c0>  
   
 ## <a name="prerequisite"></a>必要條件  
  此程序假設已在伺服器上執行下列 [!INCLUDE[tsql](../../includes/tsql-md.md)]：  
@@ -91,7 +89,7 @@ from @Items
        sizeof(OrdDate), &cbOrdDate);  
     ```  
   
-3.  參數繫結的第二個階段是建立資料表值參數的資料行。 參數焦點會先設定為資料表值參數的序數。 然後會 SQLBindParameter 使用相同的方式，因為它們可以是參數的預存程序，但資料行序數 Sqlbindparameter 繫結資料表值的資料行。 如果有其他資料表值參數，則會輪流將焦點設定為每個資料表值參數，並繫結其資料行。 最後，參數焦點就會重設為 0。  
+3.  參數繫結的第二個階段是建立資料表值參數的資料行。 參數焦點會先設定為資料表值參數的序數。 然後，資料表值的資料行繫結參數的預存程序中，但使用 Sqlbindparameter 的資料行序數，其方式是，使用 SQLBindParameter 的方式。 如果有其他資料表值參數，則會輪流將焦點設定為每個資料表值參數，並繫結其資料行。 最後，參數焦點就會重設為 0。  
   
     ```  
     // Bind columns for the table-valued parameter (param 2).  

@@ -1,5 +1,5 @@
 ---
-title: 設定 PowerPivot 服務帳戶 |Microsoft 文件
+title: 設定 PowerPivot 服務帳戶 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 76a85cd0-af93-40c9-9adf-9eb0f80b30c1
 caps.latest.revision: 13
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: c8e4bd2d01fb5745e3e9c67c94561789cfbc8759
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 719a001aa4c15a36f33dbb44ff51e442d179e51b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36133330"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37149949"
 ---
 # <a name="configure-powerpivot-service-accounts"></a>設定 PowerPivot 服務帳戶
   [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 安裝包含兩個支援伺服器作業的服務。 **SQL Server Analysis Services (PowerPivot)** 服務是一種 Windows 服務，它會在應用程式伺服器上提供 PowerPivot 資料處理和查詢支援。 當您在 SharePoint 整合模式下安裝 Analysis Services 時，一定會在進行 SQL Server 安裝程式期間指定這個服務的登入帳戶。  
@@ -34,7 +34,7 @@ ms.locfileid: "36133330"
   
  [更新 SQL Server Analysis Services (PowerPivot) 執行個體的過期的密碼](#bkmk_passwordssas)  
   
- [更新 PowerPivot 服務應用程式的過期的密碼](configure-power-pivot-service-accounts.md#bkmk_passwordapp)  
+ [PowerPivot 服務應用程式的更新已過期的密碼](configure-power-pivot-service-accounts.md#bkmk_passwordapp)  
   
  [變更每個服務執行所用的帳戶](#bkmk_newacct)  
   
@@ -58,7 +58,7 @@ ms.locfileid: "36133330"
   
 5.  選取 **[將帳戶密碼設定為新的值]**。 在 Managed 帳戶下執行的所有服務都會使用更新的認證。  
   
-##  <a name="bkmk_passwordapp"></a> 更新 PowerPivot 服務應用程式的過期的密碼  
+##  <a name="bkmk_passwordapp"></a> PowerPivot 服務應用程式的更新已過期的密碼  
   
 1.  在 [管理中心] 的 [安全性] 區段中，按一下 **[設定 Managed 帳戶]**。  
   
@@ -107,7 +107,7 @@ ms.locfileid: "36133330"
 |-----------------|-----------------|  
 |提供需求|此帳戶必須指定 SQL Server 安裝期間使用**Analysis Services-組態頁面**安裝精靈中 (或`ASSVCACCOUNT`中的命令列安裝的安裝參數)。<br /><br /> 您可以使用管理中心、PowerShell 或 PowerPivot 組態工具來修改使用者名稱或密碼。 不支援使用其他工具來變更帳戶和密碼。|  
 |網域使用者帳戶需求|此帳戶必須是 Windows 網域使用者帳戶。 禁止使用內建電腦帳戶 (如，網路服務或本機服務)。 只要指定電腦帳戶，SQL Server 安裝程式就會封鎖安裝，以強制滿足網域使用者帳戶需求。|  
-|權限需求|此帳戶必須是成員的 SQLServerMSASUser\<伺服器 > $PowerPivot 安全性群組和 WSS_WPG 安全性群組本機電腦上的。 這些權限應該會自動授與。 如需有關如何檢查或授與權限的詳細資訊，請參閱[授與 PowerPivot Service Account Administrative Permissions Manually](#updatemanually)本主題和[初始設定&#40;PowerPivot for SharePoint&#41;](../../sql-server/install/initial-configuration-powerpivot-for-sharepoint.md).|  
+|權限需求|此帳戶必須是成員的 SQLServerMSASUser\<伺服器 > $PowerPivot 安全性群組和 WSS_WPG 安全性群組，在本機電腦上的。 這些權限應該會自動授與。 如需有關如何檢查或授與權限的詳細資訊，請參閱 <<c0> [ 授與 PowerPivot Service Account Administrative Permissions Manually](#updatemanually)本主題中並[初始設定&#40;PowerPivot for SharePoint&#41;](../../sql-server/install/initial-configuration-powerpivot-for-sharepoint.md).</c0>|  
 |向外延展需求|如果您在伺服陣列中安裝多個 PowerPivot for SharePoint 伺服器執行個體，則所有 Analysis Services 伺服器執行個體都必須在相同的網域使用者帳戶下執行。 例如，如果您設定第一個 [!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)] 執行個體，以 Contoso\ssas-srv01 的身分執行，則之後部署於相同伺服器陣列中的所有其他 [!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)] 執行個體，都必須以 Contoso\ssas-srv01 (或任何目前帳戶) 的身分執行。<br /><br /> 設定所有服務執行個體要在相同帳戶下執行，可讓 PowerPivot 系統服務配置查詢處理或資料重新整理作業給伺服陣列中的任何 Analysis Services 服務執行個體。 此外，也可以將管理中心的管理帳戶功能用於 Analysis Services 伺服器執行個體。 當所有 [!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)] 執行個體都使用相同的帳戶時，您可以變更帳戶或密碼一次，而所有使用這些認證的服務執行個體都會自動更新。<br /><br /> SQL Server 安裝程式會強制滿足相同帳戶需求。 在已安裝 PowerPivot for SharePoint 執行個體之 SharePoint 伺服陣列的向外延展部署中，如果指定的 [!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)] 帳戶與伺服陣列中已使用的帳戶不同，則安裝程式將會封鎖新的安裝。|  
   
 #### <a name="powerpivot-service-application-pool"></a>PowerPivot 服務應用程式集區  
@@ -128,7 +128,7 @@ ms.locfileid: "36133330"
   
 3.  按一下 **[立即執行]**。  
   
- 作為最後的方法，您可以確認正確權限，Analysis Services 系統管理權限授與 PowerPivot 服務應用程式，並特別將服務應用程式識別加入 SQLServerMSASUser\<伺服器名稱 > $PowerPivot Windows 安全性群組。 您必須針對與 SharePoint 伺服陣列整合的每個 Analysis Services 執行個體重複這些步驟。  
+ 最後的手段，您可以確認 PowerPivot 服務應用程式中，Analysis Services 系統管理權限授與的正確權限，並特別將服務應用程式識別加入 SQLServerMSASUser\<伺服器名稱 > $PowerPivot Windows 安全性群組。 您必須針對與 SharePoint 伺服陣列整合的每個 Analysis Services 執行個體重複這些步驟。  
   
  您必須是本機系統管理員才能更新 Windows 安全性群組。  
   

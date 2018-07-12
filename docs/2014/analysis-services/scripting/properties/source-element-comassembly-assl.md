@@ -1,5 +1,5 @@
 ---
-title: Source 元素 (ComAssembly) (ASSL) |Microsoft 文件
+title: Source 元素 (ComAssembly) (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - Source element
 ms.assetid: 5c9209e8-ace6-4688-a64d-4987a7648ab9
 caps.latest.revision: 38
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: ae014f12e15dd27957ab77eb03720457f3c99b28
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 81076927595714ae4e0c98847d99f2d246660cf9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36133320"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37152969"
 ---
 # <a name="source-element-comassembly-assl"></a>Source 元素 (ComAssembly) (ASSL)
   包含元件物件模型 (COM) 元件的檔案名稱或程式設計識別碼 (ProgID)。  
@@ -62,14 +62,14 @@ ms.locfileid: "36133320"
 |子元素|無|  
   
 ## <a name="remarks"></a>備註  
- 對應目的父代的項目`Source`在 「 分析管理物件 (AMO) 物件模型而言， <xref:Microsoft.AnalysisServices.ComAssembly>。  
+ 對應至父系的元素`Source`在 「 分析管理物件 (AMO) 物件模型是<xref:Microsoft.AnalysisServices.ComAssembly>。  
   
 ## <a name="see-also"></a>另請參閱  
  [Assembly 項目&#40;ASSL&#41;](../objects/assembly-element-assl.md)   
  [ClrAssembly 資料類型&#40;ASSL&#41;](../data-type/clrassembly-data-type-assl.md)   
  [Assemblies 元素&#40;ASSL&#41;](../collections/assemblies-element-assl.md)   
- [Database 元素&#40;ASSL&#41;](../objects/database-element-assl.md)   
- [Server 元素&#40;ASSL&#41;](../objects/server-element-assl.md)   
+ [資料庫項目&#40;ASSL&#41;](../objects/database-element-assl.md)   
+ [伺服器項目&#40;ASSL&#41;](../objects/server-element-assl.md)   
  [屬性&#40;ASSL&#41;](properties-assl.md)  
   
   

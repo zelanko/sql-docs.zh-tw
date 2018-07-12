@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Slowly Changing Dimension Wizard
 ms.assetid: e4d62b73-77c5-4b26-9b6d-d5f245768fc8
 caps.latest.revision: 18
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 9f00ebc72e1091ebeed72e55d1d771c1c9bfb610
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e6c05f7bbdfa47ab1d7e60fee879a90754a19a39
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36133303"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37158783"
 ---
 # <a name="slowly-changing-dimension-wizard-f1-help"></a>緩時變維度精靈 F1 說明
   使用 **[緩時變維度精靈]** ，以設定將資料載入至各種類型的緩時變維度。 此章節提供 **[緩時變維度精靈]** 之頁面的 F1 說明。 下表描述此章節的主題。  
@@ -40,7 +40,7 @@ ms.locfileid: "36133303"
  [固定與變更屬性選項&#40;緩時變維度精靈](fixed-and-changing-attribute-options-slowly-changing-dimension-wizard.md)  
  指定固定與變更屬性維度資料行的選項。  
   
- [記錄屬性選項&#40;緩時變維度精靈&#41;](historical-attribute-options-slowly-changing-dimension-wizard.md)  
+ [歷程記錄屬性選項&#40;緩時變維度精靈&#41;](historical-attribute-options-slowly-changing-dimension-wizard.md)  
  指定記錄屬性維度資料行的選項。  
   
  [推斷的維度成員&#40;緩時變維度精靈&#41;](inferred-dimension-members-slowly-changing-dimension-wizard.md)  
@@ -50,7 +50,7 @@ ms.locfileid: "36133303"
  顯示使用者所選取的組態選項。  
   
 ## <a name="see-also"></a>另請參閱  
- [緩時變維度轉換](slowly-changing-dimension-transformation.md)   
+ [緩時變維度 」 轉換](slowly-changing-dimension-transformation.md)   
  [使用緩時變維度精靈來設定輸出](configure-outputs-using-the-slowly-changing-dimension-wizard.md)  
   
   

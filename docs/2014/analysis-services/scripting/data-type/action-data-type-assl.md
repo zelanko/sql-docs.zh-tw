@@ -1,5 +1,5 @@
 ---
-title: Action 資料類型 (ASSL) |Microsoft 文件
+title: Action 資料類型 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -20,18 +20,18 @@ helpviewer_keywords:
 - Action data type
 ms.assetid: 8c4d2ff7-17e1-4e74-bec7-637e0b191acf
 caps.latest.revision: 13
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 18047bc8a33c92e6bcd434e1a472917c269272e5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 77b4ef3f8507d67090b78c00807278d0d7dc6348
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36132740"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37154969"
 ---
 # <a name="action-data-type-assl"></a>Action 資料類型 (ASSL)
-  定義表示中的動作的抽象基本資料類型[Cube](../objects/cube-element-assl.md)項目或[觀點來看](../objects/perspective-element-assl.md)項目。  
+  定義表示中的動作的抽象基本資料類型[Cube](../objects/cube-element-assl.md)項目或有[觀點來看](../objects/perspective-element-assl.md)項目。  
   
 ## <a name="syntax"></a>語法  
   
@@ -66,13 +66,13 @@ ms.locfileid: "36132740"
 |關聯性|元素|  
 |------------------|-------------|  
 |父元素|[動作](../collections/actions-element-assl.md)|  
-|子元素|[Annotations](../collections/annotations-element-assl.md), [Application](../properties/application-element-assl.md), [Caption](../properties/caption-element-assl.md), [CaptionIsMdx](../properties/captionismdx-element-assl.md), [Condition](../properties/condition-element-assl.md), [Description](../properties/description-element-assl.md), [ID](../properties/id-element-assl.md), [Invocation](../properties/invocation-element-assl.md), [Name](../properties/name-element-assl.md), [Target](../properties/target-element-assl.md), [TargetType](../properties/targettype-element-assl.md), [Translations](../collections/translations-element-assl.md), [Type](../properties/type-element-action-assl.md)|  
+|子元素|[註釋](../collections/annotations-element-assl.md)，[應用程式](../properties/application-element-assl.md)，[標題](../properties/caption-element-assl.md)， [CaptionIsMdx](../properties/captionismdx-element-assl.md)，[條件](../properties/condition-element-assl.md)，[描述](../properties/description-element-assl.md)，[識別碼](../properties/id-element-assl.md)，[引動過程](../properties/invocation-element-assl.md)，[名稱](../properties/name-element-assl.md)，[目標](../properties/target-element-assl.md)， [TargetType](../properties/targettype-element-assl.md)，[翻譯](../collections/translations-element-assl.md)，[類型](../properties/type-element-action-assl.md)|  
 |衍生的元素|[DrillThroughAction](action-data-type-assl.md)， [ReportAction](reportaction-data-type-assl.md)， [StandardAction](standardaction-data-type-assl.md)|  
   
 ## <a name="remarks"></a>備註  
  如需動作的詳細資訊，請參閱[動作 &#40;Analysis Services - 多維度資料&#41;](../../multidimensional-models/actions-analysis-services-multidimensional-data.md)。  
   
- 分析管理物件 (AMO) 物件模型中的對應元素是<xref:Microsoft.AnalysisServices.Action>。  
+ 在 「 分析管理物件 (AMO) 物件模型的對應元素是<xref:Microsoft.AnalysisServices.Action>。  
   
 ## <a name="see-also"></a>另請參閱  
  [Cube 元素&#40;ASSL&#41;](../objects/cube-element-assl.md)   

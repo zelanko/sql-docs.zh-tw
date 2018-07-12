@@ -5,23 +5,22 @@ ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - 8993 (Database Engine error)
 ms.assetid: 06aac110-a41c-4853-bc8e-a83e8535b8be
 caps.latest.revision: 17
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: c2ba413cb36b3d1a96669fb857a5db58000c6ef5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: e4a4410b21f6e428e92b3f70b7b0808c105c1e45
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36034575"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37413157"
 ---
 # <a name="mssqlserver8993"></a>MSSQLSERVER_8993
     

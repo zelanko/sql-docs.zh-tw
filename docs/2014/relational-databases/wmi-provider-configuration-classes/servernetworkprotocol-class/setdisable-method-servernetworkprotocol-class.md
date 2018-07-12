@@ -1,5 +1,5 @@
 ---
-title: SetDisable 方法 （ServerNetworkProtocol 類別） |Microsoft 文件
+title: SetDisable 方法 （ServerNetworkProtocol 類別） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - SetDisable method
 ms.assetid: 0ebbe0c5-07ad-4a76-a918-e379930adf71
 caps.latest.revision: 30
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 486157219bfea29653ff3ba1af0a8c69287ef27c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+ms.openlocfilehash: 805051bb26ddba0191144856192a7073175e4175
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36037634"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37240508"
 ---
 # <a name="setdisable-method-servernetworkprotocol-class"></a>SetDisable 方法 (ServerNetworkProtocol 類別)
   停用伺服器網路通訊協定。  
@@ -44,7 +44,7 @@ object
   
 ## <a name="parts"></a>組件  
  *object*  
- [ServerNetworkProtocol 類別] servernetworkprotocol-class.md) 物件的執行個體所使用之網路通訊協定[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]。  
+ [ServerNetworkProtocol 類別] servernetworkprotocol-class.md) 物件，表示執行個體所使用的網路通訊協定[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]。  
   
 ## <a name="property-valuereturn-value"></a>屬性值/傳回值  
  uint32 值，如果已成功修改此服務為 0，如果不支援要求則為 1，以及其他指示錯誤的任何數字。  

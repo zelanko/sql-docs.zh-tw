@@ -1,5 +1,5 @@
 ---
-title: 鑽研、 向下鑽研、 子報表和巢狀的資料區域 （報表產生器及 SSRS） |Microsoft 文件
+title: 鑽研、 向下鑽研、 子報表和巢狀的資料區域 （報表產生器及 SSRS） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 4791a157-b028-4698-905d-f1dd0887aa0d
 caps.latest.revision: 7
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 67d8ad863c6af2737aef283424a5c8f1cc469f50
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 4a951ab61a50ddf9983678a50989e5560d40f85e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36131653"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37228828"
 ---
 # <a name="drillthrough-drilldown-subreports-and-nested-data-regions-report-builder-and-ssrs"></a>鑽研、向下鑽研、子報表和巢狀資料區 (報表產生器及 SSRS)
   您可以利用各種不同的方式來組織資料，以顯示總結資料與詳細資料之間的關聯性。  您可以將所有資料放入報表但設為隱藏，直到使用者按一下來顯示詳細資料；這是 *「向下鑽研」* (Drilldown) 動作。 您可以在資料區域 (例如資料表或圖表) 中顯示資料，再將這個資料區域放到另一個資料區域 (例如資料表或矩陣) 內，成為 *「巢狀」* (Nested) 結構。 您可以在 *「子報表」* (Subreport) 中顯示資料，此報表完全包含在主報表內。 或者，您可以將詳細資料放到 *「鑽研」* (Drillthrough) 報表，這是當使用者按一下連結時另外顯示的報表。  
@@ -86,19 +86,19 @@ ms.locfileid: "36131653"
 
   
 ##  <a name="InThisSection"></a> 本節內容  
- [鑽研報表&#40;報表產生器和 SSRS&#41;](drillthrough-reports-report-builder-and-ssrs.md)  
+ [鑽研報表&#40;報表產生器及 SSRS&#41;](drillthrough-reports-report-builder-and-ssrs.md)  
  說明使用者按一下主報表中的連結時開啟的報表。  
   
- [子報表&#40;報表產生器和 SSRS&#41;](subreports-report-builder-and-ssrs.md)  
+ [子報表&#40;報表產生器及 SSRS&#41;](subreports-report-builder-and-ssrs.md)  
  說明顯示在主報表主體內的報表。  
   
- [巢狀資料區域&#40;報表產生器和 SSRS&#41;](nested-data-regions-report-builder-and-ssrs.md)  
+ [巢狀資料區域&#40;報表產生器及 SSRS&#41;](nested-data-regions-report-builder-and-ssrs.md)  
  說明將某個資料區套疊在另一個資料區內，例如，套疊在矩陣內的圖表。  
   
- [向下鑽研動作&#40;報表產生器和 SSRS&#41;](drilldown-action-report-builder-and-ssrs.md)  
+ [向下鑽研動作&#40;報表產生器及 SSRS&#41;](drilldown-action-report-builder-and-ssrs.md)  
  說明如何使用向下鑽研動作隱藏和顯示報表項目。  
   
- [指定外部項目的路徑&#40;報表產生器和 SSRS&#41;](specifying-paths-to-external-items-report-builder-and-ssrs.md)  
+ [指定外部項目的路徑&#40;報表產生器及 SSRS&#41;](specifying-paths-to-external-items-report-builder-and-ssrs.md)  
  說明如何參考報表定義檔案外部的項目。  
   
 ## <a name="see-also"></a>另請參閱  

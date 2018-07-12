@@ -1,5 +1,5 @@
 ---
-title: PowerPivot 驗證及授權 |Microsoft 文件
+title: PowerPivot 驗證及授權 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 48230cc0-4037-4f99-8360-dadf4bc169bd
 caps.latest.revision: 29
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: e24a764afb7aae49194847354800e580da88a9a1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: cea8b8e9d6f883d6933ed72591da20de73d55326
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36132529"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37210218"
 ---
 # <a name="powerpivot-authentication-and-authorization"></a>PowerPivot 驗證及授權
   在 SharePoint 2010 伺服陣列中執行的 PowerPivot for SharePoint 部署會使用 SharePoint 伺服器所提供的驗證子系統和授權模型。 由於所有 PowerPivot 相關的內容都儲存在 SharePoint 內容資料庫中，而且 PowerPivot 相關的所有作業都在伺服器陣列中的 PowerPivot 共用服務上執行，SharePoint 安全性基礎結構會延伸到 PowerPivot 內容和作業。 使用者若要求包含 PowerPivot 資料的活頁簿，就會使用以其 Windows 使用者識別為基礎的 SharePoint 使用者識別進行驗證。 活頁簿上的檢視權限會決定授與或拒絕要求。  
@@ -28,13 +28,13 @@ ms.locfileid: "36132529"
   
  按下列連結可閱讀本主題中的特定小節：  
   
- [Windows 驗證使用傳統模式登入的需求](power-pivot-authentication-and-authorization.md#bkmk_auth)  
+ [使用傳統模式登入需求的 Windows 驗證](power-pivot-authentication-and-authorization.md#bkmk_auth)  
   
  [PowerPivot 作業需要使用者授權](#UserConnections)  
   
  [PowerPivot 資料存取的 SharePoint 權限](#Permissions)  
   
- [PowerPivot 活頁簿的 Excel Services 安全性考量](#excel)  
+ [PowerPivot 活頁簿的的 Excel Services 安全性考量](#excel)  
   
 ##  <a name="bkmk_auth"></a> 使用傳統模式登入的 Windows 驗證需求  
  PowerPivot for SharePoint 支援 SharePoint 所提供之一組經過簡化的驗證選項。 在所有可用的驗證選項中，PowerPivot for SharePoint 部署僅支援 Windows 驗證。 此外，發生登入的 Web 應用程式必須設定為使用傳統模式。  
@@ -75,7 +75,7 @@ ms.locfileid: "36132529"
   
 -   如果沒有可用的資料，從快取或文件庫載入 PowerPivot 資料。 如果對尚未載入系統中的 PowerPivot 資料要求資料連接，[!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)]執行個體會使用 SharePoint 使用者識別，從內容庫擷取資料來源，並載入記憶體中。  
   
--   將資料來源的更新複本儲存至內容庫中活頁簿的資料重新整理作業。 在此情況下，實際登入作業是使用從 Secure Store Service 之目標應用程式擷取的使用者名稱和密碼執行。 認證可以是 PowerPivot 無人看管的資料重新整理帳戶，或以資料建立時，其重新整理排程儲存的認證。 如需詳細資訊，請參閱[設定預存認證 PowerPivot 資料重新整理&#40;PowerPivot for SharePoint&#41; ](../configure-stored-credentials-data-refresh-powerpivot-sharepoint.md)和[設定 PowerPivot 無人看管資料重新整理帳戶&#40;PowerPivot for SharePoint&#41;](../configure-unattended-data-refresh-account-powerpivot-sharepoint.md)。  
+-   將資料來源的更新複本儲存至內容庫中活頁簿的資料重新整理作業。 在此情況下，實際登入作業是使用從 Secure Store Service 之目標應用程式擷取的使用者名稱和密碼執行。 認證可以是 PowerPivot 無人看管的資料重新整理帳戶，或以資料建立時，其重新整理排程儲存的認證。 如需詳細資訊，請參閱 < [PowerPivot 資料重新整理設定的預存認證&#40;PowerPivot for SharePoint&#41; ](../configure-stored-credentials-data-refresh-powerpivot-sharepoint.md)並[設定 PowerPivot 無人看管資料重新整理帳戶&#40;PowerPivot for SharePoint&#41;](../configure-unattended-data-refresh-account-powerpivot-sharepoint.md)。  
   
 ##  <a name="Permissions"></a> PowerPivot 資料存取的 SharePoint 權限  
  發行、管理及保護 PowerPivot 活頁簿安全等作業只透過 SharePoint 整合進行支援。 SharePoint 伺服器提供確保合法存取資料的驗證和授權子系統。 在 SharePoint 伺服器陣列之外安全部署 PowerPivot 活頁簿，並沒有支援案例。  
@@ -94,7 +94,7 @@ ms.locfileid: "36132529"
 |讀取|將 PowerPivot 活頁簿做為外部資料來源來存取，其中活頁簿 URL 是在連接對話方塊 (例如，在 Excel 的資料連接精靈) 中明確輸入的。|  
 |僅檢視|檢視 PowerPivot 活頁簿。<br /><br /> 檢視資料重新整理記錄。<br /><br /> 將本機活頁簿連接至 SharePoint 網站上的 PowerPivot 活頁簿，以其他方式重新訂定其資料用途。<br /><br /> 下載活頁簿的快照集。 此快照集是資料的靜態複本，不包含交叉分析篩選器、篩選、公式或資料連接。 此快照集的內容類似於從瀏覽器視窗中複製資料格值。|  
   
-##  <a name="excel"></a> PowerPivot 活頁簿的 Excel Services 安全性考量  
+##  <a name="excel"></a> PowerPivot 活頁簿的的 Excel Services 安全性考量  
  PowerPivot 伺服器端查詢處理與 Excel Services 緊密結合。 產品整合開始於文件層級，在此層級中，PowerPivot 活頁簿是包含或參考 PowerPivot 資料的 Excel 活頁簿 (.xlsx) 檔案。 PowerPivot 活頁簿沒有個別的副檔名。  
   
  在 SharePoint 網站上開啟 PowerPivot 活頁簿時，Excel Services 會讀取內嵌的 PowerPivot 資料連接字串，並將要求轉送至本機 SQL Server Analysis Services OLE DB 提供者。 接著，此提供者會將連接資訊傳遞到伺服器陣列中的 PowerPivot 伺服器。 若要讓要求在兩部伺服器間順暢地流動，必須將 Excel Services 設定為使用 PowerPivot for SharePoint 所需的設定。  

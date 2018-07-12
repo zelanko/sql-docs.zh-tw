@@ -1,29 +1,28 @@
 ---
-title: 選取初始資料同步處理頁面 （AlwaysOn 可用性群組精靈） |Microsoft 文件
+title: 選取初始資料同步處理頁面 （AlwaysOn 可用性群組精靈） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.addreplicawizard.selectinitialdatasync.f1
 - sql12.swb.adddatabasewizard.selectinitialdatasync.f1
 - sql12.swb.newagwizard.selectinitialdatasync.f1
 ms.assetid: 457b1140-4819-4def-8f7c-54a406e6db12
 caps.latest.revision: 36
-author: MikeRayMSFT
-ms.author: mikeray
-manager: jhubbard
-ms.openlocfilehash: 2c949bd5ec421ac41d602b28af2d087153b0358c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: f9a3f04a5d6ea060cd905d2bf81d628c27d99eb8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36037310"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37211768"
 ---
 # <a name="select-initial-data-synchronization-page-alwayson-availability-group-wizards"></a>選取初始資料同步處理頁面 (AlwaysOn 可用性群組精靈)
   使用 AlwaysOn **[選取初始資料同步處理]** 頁面，指定新次要資料庫之初始資料同步處理的喜好設定。 此頁面由三個精靈所共用： [!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)]、 [!INCLUDE[ssAoAddRepWiz](../../../includes/ssaoaddrepwiz-md.md)]和 [!INCLUDE[ssAoAddDbWiz](../../../includes/ssaoadddbwiz-md.md)]。  
@@ -95,7 +94,7 @@ ms.locfileid: "36037310"
   
      [針對可用性群組手動準備次要資料庫 &#40;SQL Server&#41;](manually-prepare-a-secondary-database-for-an-availability-group-sql-server.md)  
   
--   若要將一個或多個記錄傳送主要資料庫加入可用性群組，或可從記錄傳送將一個或多個對應的次要資料庫移轉至 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]。 如需詳細資訊，請參閱[移轉的必要條件從記錄傳送至 AlwaysOn 可用性群組&#40;SQL Server&#41;](prereqs-migrating-log-shipping-to-always-on-availability-groups.md)。  
+-   若要將一個或多個記錄傳送主要資料庫加入可用性群組，或可從記錄傳送將一個或多個對應的次要資料庫移轉至 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]。 如需詳細資訊，請參閱 <<c0> [ 必要條件的移轉記錄傳送至 AlwaysOn 可用性群組&#40;SQL Server&#41;](prereqs-migrating-log-shipping-to-always-on-availability-groups.md)。</c0>  
   
     > [!NOTE]  
     >  為可用性群組建立所有次要資料庫之後，如果您想要在次要複本上執行備份，則需要重新設定可用性群組的自動備份喜好設定。  

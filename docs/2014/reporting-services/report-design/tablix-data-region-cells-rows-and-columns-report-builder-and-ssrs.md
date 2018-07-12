@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - "10058"
 - "10057"
@@ -16,18 +16,18 @@ f1_keywords:
 - sql12.rtp.rptdesigner.deletecolumns.f1
 ms.assetid: 70eef636-6d8c-495e-83fc-dc0fe9771658
 caps.latest.revision: 6
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: a15db177426dc39d10363abbfb2b160ef82d7ab5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 8e064d68544b72844d364047b51ba90cda39c63b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36131436"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37163810"
 ---
 # <a name="tablix-data-region-cells-rows-and-columns-report-builder-and-ssrs"></a>Tablix 資料區資料格、資料列及資料行 (報表產生器及 SSRS)
-  若要控制 Tablix 資料區域的資料列和資料行如何在報表中顯示資料，您必須了解如何指定詳細資料、群組資料以及標籤和總計的資料列與資料行。 在許多情況下，您可以使用資料表、矩陣或清單的預設結構來顯示您的資料。 如需詳細資訊，請參閱[資料表&#40;報表產生器及 SSRS&#41;](tables-report-builder-and-ssrs.md)，[矩陣&#40;報表產生器及 SSRS&#41;](create-a-matrix-report-builder-and-ssrs.md)，或[列出&#40;報表產生器和SSRS&#41;](create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)。  
+  若要控制 Tablix 資料區域的資料列和資料行如何在報表中顯示資料，您必須了解如何指定詳細資料、群組資料以及標籤和總計的資料列與資料行。 在許多情況下，您可以使用資料表、矩陣或清單的預設結構來顯示您的資料。 如需詳細資訊，請參閱 <<c0> [ 資料表&#40;報表產生器及 SSRS&#41;](tables-report-builder-and-ssrs.md)，[矩陣&#40;報表產生器及 SSRS&#41;](create-a-matrix-report-builder-and-ssrs.md)，或[列出&#40;報表產生器和SSRS&#41;](create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)。</c0>  
   
  Tablix 資料區域會顯示詳細資料列和詳細資料行的詳細資料，以及群組資料列和群組資料行的群組資料。 當您將資料列群組和資料行群組加入到 Tablix 資料區域時，便會自動加入顯示資料的資料列和資料行。 您可以手動加入及移除資料列和資料行來自訂 Tablix 資料區域，並控制您的資料顯示在報表中的方式。  
   
@@ -124,6 +124,6 @@ ms.locfileid: "36131436"
  您可以分割先前合併的資料格。 您可以用水平方式跨資料行分割資料格，或以垂直方式向資料列下方合併資料格。 若要將某個資料格分割為一組資料格，請先以水平方式分割資料格，然後以垂直方式按照所需的次數分割。  
   
 ## <a name="see-also"></a>另請參閱  
- [Tablix 資料區&#40;報表產生器和 SSRS&#41;](../tablix-data-region-report-builder-and-ssrs.md)  
+ [Tablix 資料區域&#40;報表產生器及 SSRS&#41;](../tablix-data-region-report-builder-and-ssrs.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: ADO NET 來源編輯器 （錯誤輸出頁面） |Microsoft 文件
+title: ADO NET 來源編輯器 （錯誤輸出頁面） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.adonetsource.erroroutput.f1
 ms.assetid: 4dd9d129-a95c-4d3a-bbbf-e84a39089950
 caps.latest.revision: 13
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: b47f60480938467fb8e618a0fa52b91449fafa54
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d593b46462f8ca4e4c02431d234ae2aa4f29c197
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36037738"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37259064"
 ---
 # <a name="ado-net-source-editor-error-output-page"></a>ADO NET 來源編輯器 (錯誤輸出頁面)
   使用 [ADO NET 來源編輯器] 對話方塊的 [錯誤輸出] 頁面，即可選取錯誤處理選項，並設定錯誤輸出資料行的屬性。  
@@ -61,7 +61,7 @@ ms.locfileid: "36037738"
  將錯誤處理選項套用至選取的資料格。  
   
 ## <a name="see-also"></a>另請參閱  
- [ADO NET 來源編輯器&#40;連接管理員頁面&#41;](../../2014/integration-services/ado-net-source-editor-connection-manager-page.md)   
+ [ADO NET 來源編輯器&#40;連線管理員頁面&#41;](../../2014/integration-services/ado-net-source-editor-connection-manager-page.md)   
  [ADO NET 來源編輯器&#40;資料行頁面&#41;](../../2014/integration-services/ado-net-source-editor-columns-page.md)   
  [ADO.NET 連線管理員](connection-manager/ado-net-connection-manager.md)  
   

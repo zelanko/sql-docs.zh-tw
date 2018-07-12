@@ -1,5 +1,5 @@
 ---
-title: NonEmptyBehavior 元素 (ASSL) |Microsoft 文件
+title: NonEmptyBehavior 元素 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - NonEmptyBehavior element
 ms.assetid: b4c78af4-b049-4189-a35b-206e3938d1db
 caps.latest.revision: 34
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: d328b41ee8c40497019fe918d40925b3ce2a1436
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: eda18e3ed67884e964439e80e0ae0103f522e116
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36131575"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37183295"
 ---
 # <a name="nonemptybehavior-element-assl"></a>NonEmptyBehavior 元素 (ASSL)
   決定父代相關聯的非空白行為[CalculationProperty](../objects/calculationproperty-element-assl.md)項目。  
@@ -62,9 +62,9 @@ ms.locfileid: "36131575"
 |子元素|無|  
   
 ## <a name="remarks"></a>備註  
- `NonEmptyBehavior`屬性會套用至`CalculationProperty`的項目[CalculationType](calculationtype-element-assl.md)設*成員*。  
+ `NonEmptyBehavior`屬性會套用至`CalculationProperty`項目[CalculationType](calculationtype-element-assl.md)設定為*成員*。  
   
- 對應目的父代的項目`NonEmptyBehavior`在 「 分析管理物件 (AMO) 物件模型而言， <xref:Microsoft.AnalysisServices.CalculationProperty>。  
+ 對應至父系的元素`NonEmptyBehavior`在 「 分析管理物件 (AMO) 物件模型是<xref:Microsoft.AnalysisServices.CalculationProperty>。  
   
 ## <a name="see-also"></a>另請參閱  
  [CalculationProperties 元素&#40;ASSL&#41;](../collections/calculationproperties-element-assl.md)   

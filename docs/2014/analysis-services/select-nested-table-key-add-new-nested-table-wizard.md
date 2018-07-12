@@ -1,5 +1,5 @@
 ---
-title: 選取巢狀的資料表索引鍵 （加入新的巢狀的資料表精靈） |Microsoft 文件
+title: 選取巢狀的資料表索引鍵 （加入新的巢狀的資料表精靈） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dm.dmwizard.addnestedtable.selectnestedtablekey.f1
 ms.assetid: c715ac28-3c5d-4e4b-8104-f97b79150654
 caps.latest.revision: 20
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 9fd1b9a0f16c3440b9764d8ed8cdd74533e6ed02
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 1c1ac4955f638c8653bfbf48452908e607b3bea9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36037754"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37155279"
 ---
 # <a name="select-nested-table-key-add-new-nested-table-wizard"></a>選取巢狀資料表索引鍵 (加入新的巢狀資料表精靈)
   使用 [選取巢狀資料表索引鍵] 頁面，即可選取會成為巢狀資料表之索引鍵的屬性。  

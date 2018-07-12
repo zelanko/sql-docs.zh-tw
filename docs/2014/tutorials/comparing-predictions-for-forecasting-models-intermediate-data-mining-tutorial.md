@@ -1,5 +1,5 @@
 ---
-title: 比較預測的預測模型 （中繼資料採礦教學課程） |Microsoft 文件
+title: 比較預測的預測模型 （中繼資料採礦教學課程） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: ead8a1fe-60d8-4017-8fb8-6fe32168e46d
 caps.latest.revision: 28
 author: minewiskan
 ms.author: owend
-manager: kfile
-ms.openlocfilehash: de7605f1dbb65987e147069e32e19e36b99956a6
-ms.sourcegitcommit: 8c040e5b4e8c7d37ca295679410770a1af4d2e1f
+manager: craigg
+ms.openlocfilehash: a8ff27b38e2268ead42a1238250902b6ebf9cf18
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/21/2018
-ms.locfileid: "36313086"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37165770"
 ---
 # <a name="comparing-predictions-for-forecasting-models-intermediate-data-mining-tutorial"></a>比較用來預測模型的預測 (中繼資料採礦教學課程)
   在本教學課程的先前步驟中，您建立了多個時間序列模型：  
@@ -38,7 +38,7 @@ ms.locfileid: "36313086"
   
  [REPLACE_MODEL_CASES](#bkmk_REPLACE)  
   
-##  <a name="bkmk_EXTEND"></a> 加入資料後比較原始結果與結果  
+##  <a name="bkmk_EXTEND"></a> 加入資料之後比較原始結果與結果  
  讓我們來看看只與太平洋地區 M200 產品線相關的資料，了解以新資料更新模型會如何影響結果。 請記得原始資料數列在 2004 年 6 月結束，而我們取得 7 月、8 月和 9 月的新資料。  
   
 -   第一個資料行顯示加入的新資料。  

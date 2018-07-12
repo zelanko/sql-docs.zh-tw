@@ -1,5 +1,5 @@
 ---
-title: SetDefaults 方法 （CInstance 類別） |Microsoft 文件
+title: SetDefaults 方法 （CInstance 類別） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -20,18 +20,18 @@ helpviewer_keywords:
 - SetDefaults method
 ms.assetid: ed9e99c2-3e28-4ee8-bc20-61ca05984973
 caps.latest.revision: 32
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: ba36da4d47b8c9c9a2aa973e143bb44f00b9da43
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+ms.openlocfilehash: c17a12c4fa35594482599491071f8342c2118ccf
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36132375"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37157989"
 ---
 # <a name="setdefaults-method-cinstance-class"></a>SetDefaults 方法 (CInstance 類別)
-  設定執行個體的所有預設值[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]選項來覆寫現有資料的用戶端。  
+  設定執行個體的所有預設值[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]覆寫現有資料的選項與用戶端。  
   
 ## <a name="syntax"></a>語法  
   

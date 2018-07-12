@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - security [Reporting Services], defaults
 - default security
@@ -17,13 +17,13 @@ ms.assetid: 6b46db51-7c30-467d-a251-50f50647fe21
 caps.latest.revision: 41
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: f241a4df7cdf90fa1fb05f99ba932877bdce7d05
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 9ec8661b0a5c5362c83a767975e8c01a61779df1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36132812"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37149939"
 ---
 # <a name="predefined-roles"></a>Predefined Roles
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 會安裝一些預先定義的角色，可讓您用來授與報表伺服器作業的存取權。 每個預先定義的角色都會描述相關工作的集合。 您可以將群組和使用者帳戶指派至預先定義的角色，以便提供報表伺服器作業的立即存取權。  
@@ -73,7 +73,7 @@ ms.locfileid: "36132812"
 |管理報表記錄|建立、檢視和刪除報表記錄、檢視報表記錄屬性，以及檢視和修改決定快照集記錄限制與如何快取工作的設定。|  
 |管理報表|加入和刪除報表、修改報表參數、檢視和修改報表屬性、檢視和修改可提供內容至報表的資料來源、檢視和修改報表定義，以及在報表層級設定安全性原則。|  
 |管理資源|建立、檢視與刪除資源，以及檢視和修改資源屬性。|  
-|設定項目的安全性原則|定義報表、連結報表、資料夾、資源以及資料來源的安全性原則。 如需詳細資訊，請參閱[安全性實體項目](securable-items.md)。|  
+|設定項目的安全性原則|定義報表、連結報表、資料夾、資源以及資料來源的安全性原則。 如需詳細資訊，請參閱 <<c0> [ 安全性實體項目](securable-items.md)。|  
 |檢視資料來源|檢視資料夾階層中的共用資料來源項目。|  
 |檢視報表|執行報表和檢視報表屬性。|  
 |檢視模型|檢視資料夾階層中的模型、使用模型做為報表的資料來源，以及針對模型執行查詢，以擷取資料。|  
@@ -192,7 +192,7 @@ ms.locfileid: "36132812"
 |工作|描述|  
 |----------|-----------------|  
 |執行報表定義|開始執行報表定義，但是不將定義發行到報表伺服器。|  
-|管理作業|檢視和取消執行中的作業。 如需詳細資訊，請參閱[管理執行的處理序](../subscriptions/manage-a-running-process.md)。|  
+|管理作業|檢視和取消執行中的作業。 如需詳細資訊，請參閱 <<c0> [ 管理執行的處理序](../subscriptions/manage-a-running-process.md)。|  
 |管理報表伺服器屬性|檢視和修改套用至報表伺服器以及報表伺服器管理之項目的屬性。<br /><br /> 此工作支援重新命名報表管理員、啟用 [我的報表]，以及設定報表記錄預設值。|  
 |管理角色|建立、檢視和修改以及刪除角色定義。<br /><br /> **系統管理員** 角色的成員，可以使用 [站台設定] 頁面來管理角色。|  
 |管理共用排程|建立、檢視、修改以及刪除用來執行或重新整理報表的共用排程。|  

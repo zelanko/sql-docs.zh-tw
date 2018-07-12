@@ -8,28 +8,28 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - deleting attribute groups [Master Data Services]
 - attribute groups [Master Data Services], deleting
 ms.assetid: f915e89b-629d-4725-aea6-a7f051978244
 caps.latest.revision: 4
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: ebf2b900457a7c358c86e3df2c0abe06c69b98c2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: dcd85163a292cd6c8125619124d346ba876e6acc
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36131519"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37152469"
 ---
 # <a name="delete-an-attribute-group-master-data-services"></a>刪除屬性群組 (Master Data Services)
   在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 中，如果 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 的 [總管] 功能區域已不再需要顯示某個索引標籤時，您即可刪除該屬性群組。  
   
 -   **注意**：當屬性群組存在時，[總管] 只會顯示屬於該屬性群組的屬性。 當屬性群組不存在時，則會顯示所有屬性。  
   
-## <a name="prerequisites"></a>必要條件  
+## <a name="prerequisites"></a>先決條件  
  若要執行此程序：  
   
 -   您必須擁有存取 **[系統管理]** 功能區域的權限。  
@@ -40,7 +40,7 @@ ms.locfileid: "36131519"
   
 1.  在 [ [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]] 中，按一下 **[系統管理]**。  
   
-2.  在**模型檢視** 頁面上，從功能表列指向**管理**按一下**屬性群組**。  
+2.  在 **模型檢視**頁面上，從功能表列指向**管理**，按一下 **屬性群組**。  
   
 3.  從 **[模型]** 清單中選取模型。  
   
@@ -50,7 +50,7 @@ ms.locfileid: "36131519"
   
 6.  按一下您要刪除的屬性群組。  
   
-7.  按一下**刪除選取的群組**。  
+7.  按一下 **刪除選取的群組**。  
   
 8.  在確認對話方塊中按一下 **[確定]**。  
   

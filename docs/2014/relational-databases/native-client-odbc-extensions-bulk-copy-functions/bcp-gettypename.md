@@ -1,13 +1,11 @@
 ---
-title: bcp_gettypename |Microsoft 文件
+title: bcp_gettypename |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
@@ -20,15 +18,15 @@ helpviewer_keywords:
 - bcp_gettypename function
 ms.assetid: 65f036d1-f60e-4b8a-97b3-76fccf0dfed4
 caps.latest.revision: 31
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: afea684549765bac4c24679cc65d74bb4dfa47df
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 489980d88e5f49d2c350fa3a3784d3603deab5e0
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36035211"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37411727"
 ---
 # <a name="bcpgettypename"></a>bcp_gettypename
   傳回指定之 BCP 類型 Token 的 SQL 類型名稱。  
@@ -94,12 +92,12 @@ fIsMaxType
 |`SQLAOPMIN`|之前或之後|**Min**|  
 |`SQLAOPMAX`|之前或之後|**Max**|  
 |`SQLDATETIM4`|之前或之後|**smalldatetime**|  
-|`SQLMONEY4`|之前或之後|**smallmoney**|  
-|`SQLFLT4`|之前或之後|**實數**|  
+|`SQLMONEY4`|之前或之後|**Smallmoney**|  
+|`SQLFLT4`|之前或之後|**Real**|  
 |`SQLUNIQUEID`|之前或之後|**uniqueidentifier**|  
 |`SQLNCHAR`|否|**Nchar**|  
 |`SQLNVARCHAR`|否|**Nvarchar**|  
-|`SQLNTEXT`|之前或之後|**ntext**|  
+|`SQLNTEXT`|之前或之後|**Ntext**|  
 |`SQLVARIANT`|之前或之後|**sql_variant**|  
 |`SQLINT8`|之前或之後|**Bigint**|  
 |`SQLCHARACTER`|是|**varchar(max)**|  
@@ -113,12 +111,12 @@ fIsMaxType
 |`SQLNCHAR`|是|**nvarchar(max)**|  
 |`SQLNVARCHAR`|是|**nvarchar(max)**|  
 |`SQLXML`|是|**XML**|  
-|`SQLUDT`|之前或之後|**udt**|  
+|`SQLUDT`|之前或之後|**Udt**|  
   
 ## <a name="bcpgettypename-support-for-enhanced-date-and-time-features"></a>bcp_gettypename 支援增強的日期和時間功能  
- 日期/時間類型的語彙基元的參數值所述的資料表中的 「 在 sqlncli.h 中的型別 」 資料行[增強型日期和時間類型的大量複製變更&#40;OLE DB 和 ODBC&#41;](../native-client-odbc-date-time/bulk-copy-changes-for-enhanced-date-and-time-types-ole-db-and-odbc.md)。 傳回值位於 "File storage type" 資料行的對應資料列中。  
+ 日期/時間類型的語彙基元的參數值"Type in sqlncli.h"資料行中的資料表中所述[增強型日期和時間類型的大量複製變更&#40;OLE DB 和 ODBC&#41;](../native-client-odbc-date-time/bulk-copy-changes-for-enhanced-date-and-time-types-ole-db-and-odbc.md)。 傳回值位於 "File storage type" 資料行的對應資料列中。  
   
- 如需詳細資訊，請參閱[日期和時間增強功能&#40;ODBC&#41;](../native-client-odbc-date-time/date-and-time-improvements-odbc.md)。  
+ 如需詳細資訊，請參閱 <<c0> [ 日期和時間改善&#40;ODBC&#41;](../native-client-odbc-date-time/date-and-time-improvements-odbc.md)。</c0>  
   
 ## <a name="see-also"></a>另請參閱  
  [大量複製函數](sql-server-driver-extensions-bulk-copy-functions.md)  

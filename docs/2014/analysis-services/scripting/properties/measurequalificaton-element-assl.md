@@ -1,5 +1,5 @@
 ---
-title: MeasureQualificaton 元素 (ASSL) |Microsoft 文件
+title: MeasureQualificaton 元素 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -20,18 +20,18 @@ helpviewer_keywords:
 - MeasureQualification element
 ms.assetid: 754a037c-f20b-4717-a6e8-12f495e8e3b4
 caps.latest.revision: 12
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 795e2b7b10f9d7e9988747025c322b25ffa0af47
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: cb84c39d7d7a3b69ea3c13e43dfda0b331c548e4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36132737"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37149499"
 ---
 # <a name="measurequalificaton-element-assl"></a>MeasureQualificaton 元素 (ASSL)
-  決定前置詞是否會套用至中量值[MeasureGroup](../objects/group-element-assl.md)。  
+  決定前置詞是否會套用至中的量值[MeasureGroup](../objects/group-element-assl.md)。  
   
 ## <a name="syntax"></a>語法  
   
@@ -56,23 +56,23 @@ ms.locfileid: "36132737"
   
 |關聯性|元素|  
 |------------------|-------------|  
-|父元素|[量值群組](../objects/group-element-assl.md)|  
+|父元素|[MeasureGroup](../objects/group-element-assl.md)|  
 |子元素|無|  
   
 ## <a name="remarks"></a>備註  
  這個元素的值限制為下表所列的其中一個字串。  
   
-|ReplTest1|描述|  
+|值|描述|  
 |-----------|-----------------|  
 |*無*|沒有任何前置詞會套用至這個量值群組中的量值。|  
 |*PrefixMeasureGroup*|這個量值群組中每個量值的唯一名稱和標題前面會加上量值群組的名稱和單一空格。|  
   
 ## <a name="remarks"></a>備註  
- 對應目的父代的項目`MeasureQualification`在 「 分析管理物件 (AMO) 物件模型而言， <xref:Microsoft.AnalysisServices.MeasureGroup>。  
+ 對應至父系的元素`MeasureQualification`在 「 分析管理物件 (AMO) 物件模型是<xref:Microsoft.AnalysisServices.MeasureGroup>。  
   
 ## <a name="see-also"></a>另請參閱  
  [Cube 元素&#40;ASSL&#41;](../objects/cube-element-assl.md)   
- [維度元素&#40;ASSL&#41;](../objects/dimension-element-assl.md)   
+ [維度項目&#40;ASSL&#41;](../objects/dimension-element-assl.md)   
  [MeasureGroup 元素&#40;ASSL&#41;](../objects/group-element-assl.md)   
  [屬性&#40;ASSL&#41;](properties-assl.md)  
   

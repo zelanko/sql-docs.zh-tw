@@ -1,5 +1,5 @@
 ---
-title: 將運算式加入優先順序條件約束至 |Microsoft 文件
+title: 將運算式加入優先順序條件約束 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - precedence executables [Integration Services]
 - precedence constraints [Integration Services], adding expressions
@@ -18,15 +18,15 @@ helpviewer_keywords:
 - expressions [Integration Services], constraints
 ms.assetid: 5574d89a-a68e-4b84-80ea-da93305e5ca1
 caps.latest.revision: 43
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 4066b5b5c6ebd18d6dbbf02f6a150770d5e3b51f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: bc4a614af4bd20a4209d323902c17db1c0a61ece
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36131778"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37161039"
 ---
 # <a name="add-expressions-to-precedence-constraints"></a>將運算式加入優先順序條件約束
   優先順序條件約束可以使用運算式來定義兩個可執行檔之間的條件約束：優先順序可執行檔和受條件約束的可執行檔。 可執行檔可以是工作或容器。 運算式可以單獨使用，或與優先順序可執行檔的執行結果組合使用。 可執行檔的執行結果為成功或失敗。 設定優先順序條件約束的執行結果時，可以將執行結果設為 `Success`、`Failure` 或 `Completion`。 `Success` 表示優先順序可執行檔必須執行成功；`Failure` 表示優先順序可執行檔必須執行失敗；`Completion` 則指示不論優先順序工作成功與否，受條件約束的可執行檔都應該執行。 如需詳細資訊，請參閱 [Precedence Constraints](control-flow/precedence-constraints.md)。  
@@ -37,7 +37,7 @@ ms.locfileid: "36131778"
   
  ![兩個工作之間的優先順序條件約束](media/mw-dts-03.gif "兩個工作之間的優先順序條件約束")  
   
- 可執行檔也可以使用包含不同運算式的多個優先順序條件約束來連結。 例如在下圖中，工作 B 和 C 由使用執行結果及運算式的優先順序條件約束連結至工作 A。 兩個條件約束值會設為`Success.`一個優先順序條件約束包含運算式`@X >== @Z`，和其他優先順序條件約束包含運算式`@X < @Z`。 視變數 `X` 與 `Z` 的值而定，工作 C 或工作 B 會執行。  
+ 可執行檔也可以使用包含不同運算式的多個優先順序條件約束來連結。 例如在下圖中，工作 B 和 C 由使用執行結果及運算式的優先順序條件約束連結至工作 A。 條件約束值都設為`Success.`一個優先順序條件約束包含運算式`@X >== @Z`，和其他優先順序條件約束包含運算式`@X < @Z`。 視變數 `X` 與 `Z` 的值而定，工作 C 或工作 B 會執行。  
   
  ![優先順序條件約束上的運算式](media/mw-dts-04.gif "優先順序條件約束上的運算式")  
   
@@ -65,7 +65,7 @@ ms.locfileid: "36131778"
   
 ### <a name="to-add-an-expression-to-a-precedence-constraint"></a>將運算式加入優先順序條件約束  
   
--   [優先順序條件約束中使用運算式](../../2014/integration-services/use-an-expression-in-a-precedence-constraint.md)  
+-   [在優先順序條件約束中使用運算式](../../2014/integration-services/use-an-expression-in-a-precedence-constraint.md)  
   
 -   [設定優先順序條件約束的屬性](../../2014/integration-services/set-the-properties-of-a-precedence-constraint.md)  
   

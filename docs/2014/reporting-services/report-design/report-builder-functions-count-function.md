@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 7b50b101-daf8-4fb0-ae04-57384755779f
 caps.latest.revision: 7
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: e623374290e9620d048d651683a58bfcd3ddf573
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 3fc2b74413f2ecb7f0a1f72684494f85ecf82ca9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36132147"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37152169"
 ---
 # <a name="count-function-report-builder-and-ssrs"></a>Count 函數 (報表產生器及 SSRS)
   傳回運算式指定的非 Null 值的計數 (在給定範圍的內容中評估)。  
@@ -36,7 +36,7 @@ Count(expression, scope, recursive)
   
 #### <a name="parameters"></a>參數  
  *expression*  
- (`Variant`或`Binary`) 在其上執行彙總，例如，運算式`=Fields!FieldName.Value`。  
+ (`Variant`或是`Binary`) 要執行彙總，例如，運算式`=Fields!FieldName.Value`。  
   
  *範圍 (scope)*  
  (`String`) 要套用彙總函式項目包含報表資料集、 群組或資料區域的名稱。 如果未指定 *scope* ，則使用目前的範圍。  
@@ -56,7 +56,7 @@ Count(expression, scope, recursive)
   
 -   巢狀彙總的*Scope* 不得為資料集的名稱。  
   
--   *運算式*不能包含`First`， `Last`， `Previous`，或`RunningValue`函式。  
+-   *運算式*不得包含`First`， `Last`， `Previous`，或`RunningValue`函式。  
   
 -   *Expression* 不得包含指定 *recursive*的巢狀彙總。  
   
@@ -80,9 +80,9 @@ Count(expression, scope, recursive)
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [運算式會在報表中使用&#40;報表產生器和 SSRS&#41;](expression-uses-in-reports-report-builder-and-ssrs.md)   
+ [在報表中的運算式會使用&#40;報表產生器及 SSRS&#41;](expression-uses-in-reports-report-builder-and-ssrs.md)   
  [運算式範例 &#40;報表產生器及 SSRS&#41;](expression-examples-report-builder-and-ssrs.md)   
  [運算式中的資料類型 &#40;報表產生器及 SSRS&#41;](expressions-report-builder-and-ssrs.md)   
- [Expression Scope for Totals，Aggregates，and Built-in Collections&#40;報表產生器和 SSRS&#41;](expression-scope-for-totals-aggregates-and-built-in-collections.md)  
+ [Expression Scope for Totals，Aggregates，and Built-in Collections&#40;報表產生器及 SSRS&#41;](expression-scope-for-totals-aggregates-and-built-in-collections.md)  
   
   

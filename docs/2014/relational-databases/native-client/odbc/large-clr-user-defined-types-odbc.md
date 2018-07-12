@@ -1,13 +1,11 @@
 ---
-title: 大型 CLR 使用者定義型別 (ODBC) |Microsoft 文件
+title: 大型 CLR 使用者定義型別 (ODBC) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client  - "database-engine" - "docset-sql-devref"
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -15,22 +13,22 @@ helpviewer_keywords:
 - large user-defined types [ODBC]
 ms.assetid: ddce337e-bb6e-4a30-b7cc-4969bb1520a9
 caps.latest.revision: 15
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 98cb3dadf5b0009d4c1ce8cddb3a6cb21d1c4c2d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: e7e17bf897c91021a06ebb5605b072f27aa624d3
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36033252"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37422357"
 ---
 # <a name="large-clr-user-defined-types-odbc"></a>大型 CLR 使用者定義型別 (ODBC)
   本主題討論 SQL Server Native Client 中 ODBC 的變更，以支援大型 Common Language Runtime (CLR) 使用者定義型別 (UDT)。  
   
- 如需示範 ODBC 對於大型 CLR Udt 支援的範例，請參閱[支援大型 Udt 的](../../native-client-odbc-how-to/support-for-large-udts.md)。  
+ 如需示範 ODBC 對於大型 CLR Udt 支援範例，請參閱[支援大型 Udt](../../native-client-odbc-how-to/support-for-large-udts.md)。  
   
- 如需 SQL Server Native Client 中大型 CLR Udt 支援的詳細資訊，請參閱[Large CLR User-Defined 類型](../../clr-integration-database-objects-user-defined-types/clr-user-defined-types.md)。  
+ 如需有關 SQL Server Native Client 中大型 CLR Udt 支援的詳細資訊，請參閱[Large CLR User-Defined 類型](../../clr-integration-database-objects-user-defined-types/clr-user-defined-types.md)。  
   
 ## <a name="data-format"></a>資料格式  
  SQL Server Native Client 會使用 SQL_SS_LENGTH_UNLIMITED 來表示大型物件 (LOB) 類型的資料行大小大於 8,000 個位元組。 從 SQL Server 2008 開始，當 CLR UDT 的值大於 8,000 個位元組時，將會針對 CLR UDT 使用相同的值。  
@@ -39,7 +37,7 @@ ms.locfileid: "36033252"
   
  下表顯示參數和結果集內的資料類型對應：  
   
-|SQL Server 資料類型|SQL 資料類型|ReplTest1|  
+|SQL Server 資料類型|SQL 資料類型|值|  
 |--------------------------|-------------------|-----------|  
 |CLR UDT|SQL_SS_UDT|-151 (sqlncli.h)|  
   
@@ -47,7 +45,7 @@ ms.locfileid: "36033252"
   
 |SQL 資料類型|記憶體配置|C 資料類型|值 (sqlext.h)|  
 |-------------------|-------------------|-----------------|------------------------|  
-|SQL_SS_UDT|SQLCHAR * (char 不帶正負號\*)|SQL_C_BINARY|SQL_BINARY (-2)|  
+|SQL_SS_UDT|SQLCHAR * (unsigned char \*)|SQL_C_BINARY|SQL_BINARY (-2)|  
   
 ## <a name="descriptor-fields-for-parameters"></a>參數的描述項欄位  
  IPD 欄位中傳回的資訊如下所示：  
@@ -125,7 +123,7 @@ ms.locfileid: "36033252"
 |SS_UDT_SCHEMA_NAME|包含 UDT 的結構描述名稱。|包含 UDT 的結構描述名稱。|  
 |SS_UDT_ASSEMBLY_TYPE_NAME|UDT 的完整名稱。|UDT 的完整名稱。|  
   
- 最後三個資料行是驅動程式特有的資料行。 使用者會新增任何 ODBC 定義的資料行之後，但任何現有驅動程式特有的資料行的 SQLColumns 或 SQLProcedureColumns 的結果集之前。  
+ 最後三個資料行是驅動程式特有的資料行。 它們會加入任何 ODBC 定義的資料行之後, 但在任何現有的驅動程式專用資料行的 SQLColumns 或 SQLProcedureColumns 的結果集之前。  
   
  針對個別 Udt 或泛型類型"udt"SQLGetTypeInfo，會不傳回任何資料列。  
   

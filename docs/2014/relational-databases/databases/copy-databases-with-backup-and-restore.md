@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - full-text search [SQL Server], back up and restore
 - restoring databases [SQL Server], previous SQL Server versions
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - database backups [SQL Server], copying databases
 ms.assetid: b93e9701-72a0-408e-958c-dc196872c040
 caps.latest.revision: 59
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 5901a8fcdd3a2d24b84fe43d5af1fb2b46d56b39
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 551677d78685c5e491d5f1c2dd347bc77f37a437
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36037480"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37164889"
 ---
 # <a name="copy-databases-with-backup-and-restore"></a>使用備份與還原複製資料庫
   在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中，您可以藉由還原使用 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 或更新版本所建立的使用者資料庫備份，建立新的資料庫。 但是， **無法還原使用舊版**所建立的 **master** 、 **model** 和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] msdb [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]備份。 此外，任何舊版 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 都無法還原 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]備份。  
@@ -42,7 +42,7 @@ ms.locfileid: "36037480"
   
 1.  備份來源資料庫，它可能在 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 或更新版本的執行個體上。 執行這個 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的電腦稱為 *來源電腦*。  
   
-2.  在您要複製資料庫的電腦上 (*目的地電腦*)，連接到的執行個體[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]上您打算還原資料庫。 如有需要，請在目的地伺服器執行個體上建立與來源資料庫備份所用的相同備份裝置。  
+2.  在您要複製資料庫的電腦上 (*目的地電腦*)，連接到的執行個體[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]於您打算還原資料庫。 如有需要，請在目的地伺服器執行個體上建立與來源資料庫備份所用的相同備份裝置。  
   
 3.  在目的地電腦上還原來源資料庫的備份。 還原資料庫會自動建立所有的資料庫檔案。  
   
@@ -63,7 +63,7 @@ ms.locfileid: "36037480"
   
     -   如果無法覆寫現有的檔案，就會發生還原錯誤。  
   
- 若要避免錯誤和意外的結果，還原作業之前，您可以使用[backupfile](/sql/relational-databases/system-tables/backupfile-transact-sql)歷程記錄資料表，找出您計畫還原的備份中的資料庫和記錄檔。  
+ 若要避免錯誤和意外的結果，還原作業之前，您可以使用[backupfile](/sql/relational-databases/system-tables/backupfile-transact-sql)找出您計畫還原的備份中的資料庫和記錄檔的歷程記錄資料表。  
   
 ## <a name="moving-the-database-files"></a>移動資料庫檔案  
  如果資料庫備份內的檔案因為前述理由而無法還原至目的地電腦，則在還原檔案時必須將檔案移到新位置。 例如：  
@@ -102,13 +102,13 @@ ms.locfileid: "36037480"
   
 -   [RESTORE FILELISTONLY &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-filelistonly-transact-sql)  
   
- **若要還原到新位置的檔案和檔案群組**  
+ **若要將檔案和檔案群組還原至新位置**  
   
 -   [將檔案還原到新位置 &#40;SQL Server&#41;](../backup-restore/restore-files-to-a-new-location-sql-server.md)  
   
 -   [還原資料庫備份&#40;SQL Server Management Studio&#41;](../backup-restore/restore-a-database-backup-using-ssms.md)  
   
- **若要以覆蓋現有檔案中還原檔案與檔案群組**  
+ **若要還原檔案與檔案群組，以覆蓋現有檔案**  
   
 -   [以覆蓋現有檔案的方式還原檔案與檔案群組 &#40;SQL Server&#41;](../backup-restore/restore-files-and-filegroups-over-existing-files-sql-server.md)  
   
@@ -120,7 +120,7 @@ ms.locfileid: "36037480"
   
 -   [重新啟動中斷的還原作業 &#40;Transact-SQL&#41;](../backup-restore/restart-an-interrupted-restore-operation-transact-sql.md)  
   
- **若要變更資料庫擁有者**  
+ **若要變更資料庫的擁有者**  
   
 -   [sp_changedbowner &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-changedbowner-transact-sql)  
   

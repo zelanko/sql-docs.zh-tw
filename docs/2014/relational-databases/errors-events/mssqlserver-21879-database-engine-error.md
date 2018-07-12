@@ -5,23 +5,22 @@ ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - 21879 (Database Engine error)
 ms.assetid: fcfab735-05ca-423a-89f1-fdee7e2ed8c0
 caps.latest.revision: 8
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 067373cb329185e42b6fee2b506570fccfcd4f90
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 9cf6402984022284ca75505a924a3a0f270fc5e6
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36033292"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37413817"
 ---
 # <a name="mssqlserver21879"></a>MSSQLSERVER_21879
     
@@ -58,8 +57,8 @@ ms.locfileid: "36033292"
   
 -   將 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 設定為 Kerberos 驗證。 請參閱 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 線上叢書中的 **Kerberos 驗證和 SQL Server**。  
   
--   使用`sp_changedistpublisher`變更 MSdistpublishers，在原始發行者相關聯的安全性模式，以及為指定的登入和密碼，用於連接。  
+-   使用`sp_changedistpublisher`來變更與 MSdistpublishers 中之原始發行者相關聯的安全性模式，以及指定的登入和密碼，才能使用連接。  
   
--   指定命令列參數*BypassPublisherValidation*合併代理程式命令列來略過驗證時`sp_get_redirected_publisher`散發者端呼叫。  
+-   指定命令列參數*BypassPublisherValidation*略過驗證合併式代理程式命令列上時`sp_get_redirected_publisher`在散發者端呼叫。  
   
   

@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - "10404"
 - sql12.rtp.rptdesigner.categorygroupproperties.variables.f1
@@ -20,15 +20,15 @@ f1_keywords:
 - "10412"
 ms.assetid: 4be5b463-3ce2-483d-a3c6-dae752cb543e
 caps.latest.revision: 9
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: a4a03cad2b19cc853c48a1614daea34cb2fb43ce
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 5385940ba528d0bdd9acf7f784d78832f1fdaa6a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36132599"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37148489"
 ---
 # <a name="report-and-group-variables-collections-references-report-builder-and-ssrs"></a>報表和群組變數集合參考 (報表產生器及 SSRS)
   當您要進行的複雜計算是在報表的運算式中使用一次以上時，建議您建立一個變數。 您可以建立報表變數或群組變數。 變數名稱在報表中必須是唯一的。  
@@ -51,12 +51,12 @@ ms.locfileid: "36132599"
   
 -   **讀寫使用** ：設定一次某個值，然後在報表工作階段中序列化該值。 變數的讀寫選項會比在報表定義的程式碼區塊中使用靜態變數提供更好的替代方案。  
   
-     當您清除**唯讀**變數會設為變數時，可寫入的屬性選項`true`。 若要更新運算式的值，請使用 SetValue 方法，例如， `=Variables!MyVariable.SetValue("123")`。  
+     當您清除**唯讀**選項可寫入的屬性變數將變數設為`true`。 若要更新運算式的值，請使用 SetValue 方法，例如， `=Variables!MyVariable.SetValue("123")`。  
   
     > [!NOTE]  
     >  您無法控制報表處理器初始化變數，或評估更新變數之運算式的時間。 系統未定義變數初始化的執行順序。  
   
- 如需工作階段的詳細資訊，請參閱[預覽 Reports in Report Builder](../report-builder/previewing-reports-in-report-builder.md)。  
+ 如需有關工作階段的詳細資訊，請參閱[在報表產生器中預覽報表](../report-builder/previewing-reports-in-report-builder.md)。  
   
 ## <a name="group-variables"></a>群組變數  
  群組變數可用來計算一次群組範圍內的複雜運算式。 群組變數只有在群組及其子群組的範圍內有效。  
@@ -77,7 +77,7 @@ ms.locfileid: "36132599"
   
 ## <a name="see-also"></a>另請參閱  
  [篩選、分組和排序資料 &#40;報表產生器及 SSRS&#41;](filter-group-and-sort-data-report-builder-and-ssrs.md)   
- [Built-in Collections in Expressions&#40;報表產生器和 SSRS&#41;](built-in-collections-in-expressions-report-builder.md)   
+ [Built-in Collections in Expressions&#40;報表產生器及 SSRS&#41;](built-in-collections-in-expressions-report-builder.md)   
  [運算式範例 &#40;報表產生器及 SSRS&#41;](expression-examples-report-builder-and-ssrs.md)  
   
   

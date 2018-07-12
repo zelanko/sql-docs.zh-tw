@@ -1,5 +1,5 @@
 ---
-title: WMI 資料讀取器工作編輯器 （一般頁面） |Microsoft 文件
+title: WMI 資料讀取器工作編輯器 （一般頁面） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.wmidatareadertask.general.f1
 helpviewer_keywords:
 - WMI Data Reader Task Editor
 ms.assetid: 1ee4fd97-defc-4a63-adfe-5f2df548e62a
 caps.latest.revision: 17
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 393a0c0d919856734799b41c6e08b5e8c66ffb51
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 70d3e2aa852acd34d28c2f2501d17117c6cf8640
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36132210"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37154569"
 ---
 # <a name="wmi-data-reader-task-editor-general-page"></a>WMI 資料讀取器工作編輯器 (一般頁面)
   使用 **[WMI 資料讀取器工作編輯器]** 對話方塊的 **[一般]** 頁面，即可命名和描述 WMI 資料讀取器工作。  
@@ -42,7 +42,7 @@ ms.locfileid: "36132210"
   
 ## <a name="see-also"></a>另請參閱  
  [Integration Services 錯誤和訊息參考](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [WMI 資料讀取器工作編輯器&#40;WMI 選項頁面&#41;](../../2014/integration-services/wmi-data-reader-task-editor-wmi-options-page.md)   
+ [WMI 資料讀取器工作編輯器 &#40;WMI 選項頁面&#41;](../../2014/integration-services/wmi-data-reader-task-editor-wmi-options-page.md)   
  [運算式頁面](expressions/expressions-page.md)   
  [WMI 事件監看員工作](control-flow/wmi-event-watcher-task.md)  
   

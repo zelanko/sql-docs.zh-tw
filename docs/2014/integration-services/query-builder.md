@@ -1,5 +1,5 @@
 ---
-title: 查詢產生器 |Microsoft 文件
+title: 查詢產生器 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.querybuilder.f1
 helpviewer_keywords:
 - Query Builder dialog box
 ms.assetid: 780752c9-6e3c-4f44-aaff-4f4d5e5a45c5
 caps.latest.revision: 37
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: d8ae61c3f17ba0ad85e6f32aa9ae1f5389114e3d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: fc765cfceb8e52d3fbb578e3c3b6f212f28a3291
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36132484"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37156319"
 ---
 # <a name="query-builder"></a>查詢產生器
   使用 **[查詢產生器]** 對話方塊，即可建立要在執行 SQL 工作中使用的查詢、OLE DB 來源和 OLE DB 目的地，以及查閱轉換。  
@@ -50,7 +50,7 @@ ms.locfileid: "36132484"
  **工具列**  
  使用工具列來管理資料集、選取要顯示的窗格，以及控制查詢功能。  
   
-|ReplTest1|描述|  
+|值|描述|  
 |-----------|-----------------|  
 |**顯示/隱藏圖表窗格**|顯示或隱藏 **[圖表]** 窗格。|  
 |**顯示/隱藏方格窗格**|顯示或隱藏 **[方格]** 窗格。|  

@@ -1,5 +1,5 @@
 ---
-title: DatabasePermission 元素 (ASSL) |Microsoft 文件
+title: DatabasePermission 元素 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - DatabasePermission element
 ms.assetid: 6dcb9136-a40d-42e3-ad3b-b8ce8c7ca78c
 caps.latest.revision: 39
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: e47203616cc76fa09c0fd0658e7dad8a89c90a9b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 0fbfd9544e5305169e0d25b1b0157197d39cc002
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36037762"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37259524"
 ---
 # <a name="databasepermission-element-assl"></a>DatabasePermission 元素 (ASSL)
   定義中的預設權限[資料庫](database-element-assl.md)特定的項目[角色](role-element-assl.md)項目。  
@@ -69,7 +69,7 @@ ms.locfileid: "36037762"
   
 -   *管理*屬性預設值設為`False`，除非使用者具有系統管理權限。 使用者若是具有系統管理權限，屬性值會設為 `True`。  
   
- 分析管理物件 (AMO) 物件模型中的對應元素是<xref:Microsoft.AnalysisServices.DatabasePermission>。  
+ 在 「 分析管理物件 (AMO) 物件模型的對應元素是<xref:Microsoft.AnalysisServices.DatabasePermission>。  
   
 ## <a name="see-also"></a>另請參閱  
  [Role 元素&#40;ASSL&#41;](role-element-assl.md)   

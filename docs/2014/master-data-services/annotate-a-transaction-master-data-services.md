@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - annotations [Master Data Services], for transactions
 ms.assetid: f5a6b2ca-56de-4e42-9da8-fba0ac3e8d92
 caps.latest.revision: 5
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 0314970657815734a45d5ffbec254396062e076f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: 0f5de1290998e6129e94bc849278554121ed8a9e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36037056"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37229318"
 ---
 # <a name="annotate-a-transaction-master-data-services"></a>為交易加上註解 (Master Data Services)
   在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中，當您想要提供有關某個交易的支援詳細資料做為歷程記錄時，請為該交易加上註解。  
@@ -29,7 +29,7 @@ ms.locfileid: "36037056"
 > [!NOTE]  
 >  您無法刪除註解。  
   
-## <a name="prerequisites"></a>必要條件  
+## <a name="prerequisites"></a>先決條件  
   
 -   若要為所建立的交易加上註解，您必須擁有存取 [總管] 功能區域的權限，而且至少必須擁有您要加上註解之模型物件的**更新**權限。  
   
@@ -68,7 +68,7 @@ ms.locfileid: "36037056"
 5.  按一下 [確定] 。  
   
 ## <a name="see-also"></a>另請參閱  
- [註解&#40;Master Data Services&#41;](../../2014/master-data-services/annotations-master-data-services.md)   
+ [附註&#40;Master Data Services&#41;](../../2014/master-data-services/annotations-master-data-services.md)   
  [交易 &#40;Master Data Services&#41;](../../2014/master-data-services/transactions-master-data-services.md)  
   
   

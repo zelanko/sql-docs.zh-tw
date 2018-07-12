@@ -5,23 +5,22 @@ ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - 8680 (Database Engine error)
 ms.assetid: 79f7270e-e4df-4f4e-bc78-2dcad6a9f140
 caps.latest.revision: 13
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: f2cbb011ace5c2af59e9e27fa415a1bd42ac5cdf
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 7bf1c68bd8c2c00115d879c543f5182a93c7cae9
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36033644"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37424377"
 ---
 # <a name="mssqlserver8680"></a>MSSQLSERVER_8680
     

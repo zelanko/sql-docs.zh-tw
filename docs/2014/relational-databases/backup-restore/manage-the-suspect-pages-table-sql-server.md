@@ -5,10 +5,9 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-backup-restore
+ms.technology: backup-restore
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - 824 (Database Engine error)
 - restoring pages [SQL Server]
@@ -19,15 +18,15 @@ helpviewer_keywords:
 - restoring [SQL Server], pages
 ms.assetid: f394d4bc-1518-4e61-97fc-bf184d972e2b
 caps.latest.revision: 54
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: a404c6e4a7ace75d1d17f8ca6dfda0eaf603ea92
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 27dc4236fa3455ce9993451bf105cc1a2bcbb80c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36132461"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37164769"
 ---
 # <a name="manage-the-suspectpages-table-sql-server"></a>管理 suspect_pages 資料表 (SQL Server)
   本主題描述如何使用 **或** 管理 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中的 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] suspect_pages [!INCLUDE[tsql](../../includes/tsql-md.md)]資料表。 **suspect_pages** 資料表用於維護可疑頁面的相關資訊，有助於決定是否有必要進行還原。 [suspect_pages](/sql/relational-databases/system-tables/suspect-pages-transact-sql) 資料表位於 [msdb 資料庫](../databases/msdb-database.md)中。  
@@ -72,7 +71,7 @@ ms.locfileid: "36132461"
   
     |錯誤描述|**event_type** 值|  
     |-----------------------|---------------------------|  
-    |作業系統 CRC 錯誤所導致的 823 錯誤，或是總和檢查碼錯誤或頁面損毀以外之原因 (例如，頁面識別碼不正確) 所導致的 824 錯誤|@shouldalert|  
+    |作業系統 CRC 錯誤所導致的 823 錯誤，或是總和檢查碼錯誤或頁面損毀以外之原因 (例如，頁面識別碼不正確) 所導致的 824 錯誤|1|  
     |錯誤的總和檢查碼|2|  
     |損毀頁面|3|  
     |已還原 (在將頁面標示為錯誤頁面之後，還原該頁面)|4|  
@@ -170,7 +169,7 @@ GO
  [BACKUP &#40;Transact-SQL&#41;](/sql/t-sql/statements/backup-transact-sql)   
  [DBCC &#40;Transact-SQL&#41;](/sql/t-sql/database-console-commands/dbcc-transact-sql)   
  [還原頁面 &#40;SQL Server&#41;](restore-pages-sql-server.md)   
- [suspect_pages &#40;Transact SQL&#41;](/sql/relational-databases/system-tables/suspect-pages-transact-sql)   
+ [suspect_pages &#40;-SQL&AMP;#41;&#41;](/sql/relational-databases/system-tables/suspect-pages-transact-sql)   
  [MSSQLSERVER_823](../errors-events/mssqlserver-823-database-engine-error.md)   
  [MSSQLSERVER_824](../errors-events/mssqlserver-824-database-engine-error.md)  
   

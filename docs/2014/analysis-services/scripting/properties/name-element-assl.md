@@ -1,5 +1,5 @@
 ---
-title: Name 元素 (ASSL) |Microsoft 文件
+title: Name 元素 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - Name element
 ms.assetid: caf2af86-5f9c-4e14-8168-f3a79248b4fe
 caps.latest.revision: 39
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: cb2185d9d2a87a2abc3ebb96ad8186fe288e6190
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 7dde1de33d7ff2219bf2f73696c8a83236b46eb6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36037323"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37211588"
 ---
 # <a name="name-element-assl"></a>Name 元素 (ASSL)
   包含父元素的名稱。  
@@ -58,11 +58,11 @@ ms.locfileid: "36037323"
   
 |關聯性|元素|  
 |------------------|-------------|  
-|父元素|[Action](../objects/action-element-assl.md), [Aggregation](../objects/aggregation-element-assl.md), [AggregationDesign](../objects/aggregationdesign-element-assl.md), [AlgorithmParameter](../objects/algorithmparameter-element-assl.md), [Annotation](../objects/annotation-element-assl.md), [Assembly](../objects/assembly-element-assl.md), [ClrAssemblyFile](../data-type/clrassemblyfile-data-type-assl.md), [Cube](../objects/cube-element-assl.md), [CubeDimension](../data-type/dimension-data-type-assl.md), [CubeHierarchy](../data-type/hierarchy-data-type-assl.md), [Database](../objects/database-element-assl.md), [DataSource](../objects/datasource-element-assl.md), [DataSourceView](../objects/datasourceview-element-assl.md), [Dimension](../objects/dimension-element-assl.md), [DimensionAttribute](../data-type/dimensionattribute-data-type-assl.md), [Group](../objects/group-element-assl.md), [Hierarchy](../objects/hierarchy-element-assl.md), [Kpi](../objects/kpi-element-assl.md), [Level](../objects/level-element-assl.md), [MdxScript](../objects/mdxscript-element-assl.md), [Measure](../objects/measure-element-assl.md), [MeasureGroup](../objects/measuregroup-element-assl.md), [MemberProperty](../objects/attributerelationship-element-assl.md), [MiningModel](../objects/miningmodel-element-assl.md), [MiningModelColumn](../data-type/miningmodelcolumn-data-type-assl.md), [MiningStructure](../objects/miningstructure-element-assl.md), [MiningStructureColumn](../data-type/miningstructurecolumn-data-type-assl.md), [Partition](../objects/partition-element-assl.md), [Permission](../data-type/permission-data-type-assl.md), [Perspective](../objects/perspective-element-assl.md), [PerspectiveCalculation](../data-type/perspectivecalculation-data-type-assl.md), [ReportFormatParameter](../objects/reportformatparameter-element-asl.md), [ReportParameter](../objects/reportparameter-element-assl.md), [Role](../objects/role-element-assl.md), [Server](../objects/server-element-assl.md), [ServerProperty](../objects/serverproperty-element-assl.md), [Trace](../objects/trace-element-assl.md)|  
+|父元素|[動作](../objects/action-element-assl.md)，[彙總](../objects/aggregation-element-assl.md)， [AggregationDesign](../objects/aggregationdesign-element-assl.md)， [AlgorithmParameter](../objects/algorithmparameter-element-assl.md)，[註釋](../objects/annotation-element-assl.md)， [組件](../objects/assembly-element-assl.md)， [ClrAssemblyFile](../data-type/clrassemblyfile-data-type-assl.md)， [Cube](../objects/cube-element-assl.md)， [CubeDimension](../data-type/dimension-data-type-assl.md)， [CubeHierarchy](../data-type/hierarchy-data-type-assl.md)， [資料庫](../objects/database-element-assl.md)， [DataSource](../objects/datasource-element-assl.md)， [DataSourceView](../objects/datasourceview-element-assl.md)，[維度](../objects/dimension-element-assl.md)， [DimensionAttribute](../data-type/dimensionattribute-data-type-assl.md)，[群組](../objects/group-element-assl.md)，[階層](../objects/hierarchy-element-assl.md)， [Kpi](../objects/kpi-element-assl.md)，[層級](../objects/level-element-assl.md)， [MdxScript](../objects/mdxscript-element-assl.md)， [量值](../objects/measure-element-assl.md)， [MeasureGroup](../objects/measuregroup-element-assl.md)， [MemberProperty](../objects/attributerelationship-element-assl.md)， [MiningModel](../objects/miningmodel-element-assl.md)， [MiningModelColumn](../data-type/miningmodelcolumn-data-type-assl.md)， [MiningStructure](../objects/miningstructure-element-assl.md)， [MiningStructureColumn](../data-type/miningstructurecolumn-data-type-assl.md)，[分割](../objects/partition-element-assl.md)，[權限](../data-type/permission-data-type-assl.md)， [檢視方塊](../objects/perspective-element-assl.md)， [PerspectiveCalculation](../data-type/perspectivecalculation-data-type-assl.md)， [ReportFormatParameter](../objects/reportformatparameter-element-asl.md)， [ReportParameter](../objects/reportparameter-element-assl.md)， [角色](../objects/role-element-assl.md)，[伺服器](../objects/server-element-assl.md)， [ServerProperty](../objects/serverproperty-element-assl.md)，[追蹤](../objects/trace-element-assl.md)|  
 |子元素|無|  
   
 ## <a name="remarks"></a>備註  
- 用來定義物件的每個項目 (執行個體[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]、 階層、 屬性及等等) 已`Name`元素當做屬性。 `Name` 元素的值具有下列限制：  
+ 每個項目，用來定義物件 (執行個體[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]，階層、 屬性和等等) 已`Name`元素當做屬性。 `Name` 元素的值具有下列限制：  
   
 -   此值不得包含開頭或尾端空格。 如果 `Name` 元素的值包含開頭或尾端空格，[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 就會隱含地移除這些空格。  
   
@@ -100,7 +100,7 @@ ms.locfileid: "36037323"
 |所有其他的父元素。|.,;'`:/\\*&#124;?"& %$！ + = （) []{}<>|  
   
 ## <a name="see-also"></a>另請參閱  
- [ID 元素&#40;ASSL&#41;](id-element-assl.md)   
+ [ID 項目&#40;ASSL&#41;](id-element-assl.md)   
  [屬性&#40;ASSL&#41;](properties-assl.md)  
   
   

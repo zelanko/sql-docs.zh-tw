@@ -1,13 +1,11 @@
 ---
-title: SQLGetConnectAttr |Microsoft 文件
+title: SQLGetConnectAttr |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 topic_type:
@@ -16,18 +14,18 @@ helpviewer_keywords:
 - SQLGetConnectAttr function
 ms.assetid: 26e4e69a-44fd-45e3-b47a-ae39184f041b
 caps.latest.revision: 60
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 7db4e37d5fa06373bdb60ea9c2288ff7808ec70d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: b31b14603777a98a623dbd80144d400a069a2136
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36033259"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37415667"
 ---
 # <a name="sqlgetconnectattr"></a>SQLGetConnectAttr
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驅動程式會定義驅動程式特有的連接屬性。 有些屬性可用於`SQLGetConnectAttr`，而函式用以報告其目前的設定。 針對這些屬性並非都之前在建立連接，或具有使用已設定屬性之後，報告的值[SQLSetConnectAttr](sqlsetconnectattr.md)。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驅動程式會定義驅動程式特有的連接屬性。 有些屬性可用於`SQLGetConnectAttr`，而函數用來報告其目前的設定。 針對這些屬性並不保證直到已連線或已設定屬性使用之後，報告的值[SQLSetConnectAttr](sqlsetconnectattr.md)。  
   
  本主題將列出唯讀屬性。 如需其他資訊[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client ODBC 驅動程式特有的連接屬性，請參閱[SQLSetConnectAttr](sqlsetconnectattr.md)。  
   
@@ -37,7 +35,7 @@ ms.locfileid: "36033259"
 > [!NOTE]  
 >  標準 ODBC 連接屬性 SQL_ATTR_CONNECTION_DEAD 會傳回最新的連接狀態。 這可能不是目前的連接狀態。  
   
-|ReplTest1|描述|  
+|值|描述|  
 |-----------|-----------------|  
 |SQL_CD_TRUE|已經遺失與伺服器的連接。|  
 |SQL_CD_FALSE|連接已開啟，而且可用來處理陳述式。|  
@@ -51,9 +49,9 @@ ms.locfileid: "36033259"
   
 -   啟用之資料存取追蹤記錄檔中的診斷資訊。  
   
- 如需詳細資訊，請參閱[存取擴充事件記錄檔中的診斷資訊](../native-client/features/accessing-diagnostic-information-in-the-extended-events-log.md)。  
+ 如需詳細資訊，請參閱 <<c0> [ 擴充事件記錄檔中存取診斷資訊](../native-client/features/accessing-diagnostic-information-in-the-extended-events-log.md)。  
   
-|ReplTest1|描述|  
+|值|描述|  
 |-----------|-----------------|  
 |SQL_ERROR|連接失敗。|  
 |SQL_SUCCESS|此連接已成功。 輸出緩衝區中將可以找到用戶端連接識別碼。|  
@@ -61,7 +59,7 @@ ms.locfileid: "36033259"
 ## <a name="sqlcoptssperfdata"></a>SQL_COPT_SS_PERF_DATA  
  SQL_COPT_SS_PERF_DATA 屬性會傳回 SQLPERF 結構的指標，其中包含目前的驅動程式效能統計資料。 `SQLGetConnectAttr` 如果未啟用效能記錄，則會傳回 NULL。 此驅動程式不會動態更新 SQLPERF 結構中的統計資料。 呼叫`SQLGetConnectAttr`每當效能統計資料需要重新整理。  
   
-|ReplTest1|描述|  
+|值|描述|  
 |-----------|-----------------|  
 |NULL|未啟用效能記錄。|  
 |任何其他值|SQLPERF 結構的指標。|  
@@ -72,19 +70,19 @@ ms.locfileid: "36033259"
 ## <a name="sqlcoptssuserdata"></a>SQL_COPT_SS_USER_DATA  
  SQL_COPT_SS_USER_DATA 屬性會擷取使用者-資料指標。 使用者資料會儲存在用戶端擁有的記憶體中，而且針對每個連接記錄下來。 如果尚未設定使用者-資料指標，便會傳回 SQL_UD_NOTSET (一種 NULL 指標)。  
   
-|ReplTest1|描述|  
+|值|描述|  
 |-----------|-----------------|  
 |SQL_UD_NOTSET|不會設定任何使用者-資料指標。|  
 |任何其他值|使用者資料的指標。|  
   
 ## <a name="sqlgetconnectattr-support-for-service-principal-names-spns"></a>服務主要名稱 (SPN) 的 SQLGetConnectAttr 支援  
- SQLGetConnectAttr 可以用來查詢新連接屬性 SQL_COPT_SS_SERVER_SPN、 SQL_COPT_SS_FAILOVER_PARTNER_SPN、 SQL_COPT_SS_MUTUALLY_AUTHENTICATED 和 SQL_COPT_SS_INTEGRATED_AUTHENTICATION_METHOD 的值。 （SQLGetConnectOption 也可用來查詢這些值。）  
+ SQLGetConnectAttr 可用來查詢新的連接屬性 SQL_COPT_SS_SERVER_SPN、 SQL_COPT_SS_FAILOVER_PARTNER_SPN、 SQL_COPT_SS_MUTUALLY_AUTHENTICATED 和 SQL_COPT_SS_INTEGRATED_AUTHENTICATION_METHOD 的值。 （SQLGetConnectOption 也可用來查詢這些值。）  
   
  SQL_COPT_SS_INTEGRATED_AUTHENTICATION_METHOD 只供使用 Windows 驗證的已開啟連接使用。  
   
  如果尚未設定 SQL_COPT_SS_SERVER_SPN 或 SQL_COPT_SS_FAILOVER_PARTNER，就會傳回預設值 (空字串)。  
   
- 如需有關 Spn 的詳細資訊，請參閱[服務主要名稱&#40;Spn&#41;用戶端連接中&#40;ODBC&#41;](../native-client/odbc/service-principal-names-spns-in-client-connections-odbc.md)。  
+ 如需有關 Spn 的詳細資訊，請參閱 <<c0> [ 服務主體名稱&#40;Spn&#41;用戶端連接中&#40;ODBC&#41;](../native-client/odbc/service-principal-names-spns-in-client-connections-odbc.md)。</c0>  
   
 ## <a name="see-also"></a>另請參閱  
  [SQLGetConnectAttr 函數](http://go.microsoft.com/fwlink/?LinkId=59347)   

@@ -1,31 +1,29 @@
 ---
-title: 設定資料指標選項 (ODBC) |Microsoft 文件
+title: 設定資料指標選項 (ODBC) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - cursors [ODBC], options
 ms.assetid: 0e72b48a-fc5a-4656-8cf5-39f57d8c1565
 caps.latest.revision: 8
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: d4694337517f51c08273a988e105ae49fa9bb15a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: a37b09f88f9156f6363ed99a9fea56b2f9a5932b
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36034127"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37419767"
 ---
 # <a name="set-cursor-options-odbc"></a>設定資料指標選項 (ODBC)
-  若要設定資料指標選項，請呼叫[SQLSetStmtAttr](../../native-client-odbc-api/sqlsetstmtattr.md)設定或[SQLGetStmtAttr](../../native-client-odbc-api/sqlgetstmtattr.md)來取得控制資料指標行為的陳述式選項。  
+  若要設定資料指標選項，請呼叫[SQLSetStmtAttr](../../native-client-odbc-api/sqlsetstmtattr.md)若要設定或[SQLGetStmtAttr](../../native-client-odbc-api/sqlgetstmtattr.md)來取得控制資料指標行為的陳述式選項。  
   
 |*Attribute*|指定|  
 |-----------------|---------------|  
@@ -62,6 +60,6 @@ retcode = SQLExecDirect(hstmt1, select au_lname from authors", SQL_NTS);
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [執行查詢的使用說明主題&#40;ODBC&#41;](executing-queries-how-to-topics-odbc.md)  
+ [執行查詢使用說明主題&#40;ODBC&#41;](executing-queries-how-to-topics-odbc.md)  
   
   

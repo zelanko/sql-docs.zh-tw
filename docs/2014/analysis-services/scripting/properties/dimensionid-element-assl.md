@@ -1,5 +1,5 @@
 ---
-title: DimensionID 元素 (ASSL) |Microsoft 文件
+title: DimensionID 元素 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - DimensionID element
 ms.assetid: 00262781-4216-4a19-8bdc-d46647f42165
 caps.latest.revision: 34
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 24b65d34bfd1e16e464c1469a6c90058f4c100ef
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 5c211ed3b218a89bf02e29793573fe0915191641
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36036887"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37259484"
 ---
 # <a name="dimensionid-element-assl"></a>DimensionID 元素 (ASSL)
   包含維度的識別碼 (ID)。  
@@ -62,7 +62,7 @@ ms.locfileid: "36036887"
 |子元素|無|  
   
 ## <a name="remarks"></a>備註  
- 對應至父系的項目`DimensionID`在 「 分析管理物件 (AMO) 物件模型是<xref:Microsoft.AnalysisServices.CubeDimension>和<xref:Microsoft.AnalysisServices.DimensionBinding>。  
+ 對應至父系的元素`DimensionID`在 「 分析管理物件 (AMO) 物件模型所<xref:Microsoft.AnalysisServices.CubeDimension>和<xref:Microsoft.AnalysisServices.DimensionBinding>。  
   
 ## <a name="see-also"></a>另請參閱  
  [屬性&#40;ASSL&#41;](properties-assl.md)  

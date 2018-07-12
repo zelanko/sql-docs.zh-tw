@@ -1,13 +1,11 @@
 ---
-title: 處理傳回碼和輸出參數 (ODBC) |Microsoft 文件
+title: 處理傳回碼和輸出參數 (ODBC) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -15,18 +13,18 @@ helpviewer_keywords:
 - output parameters [ODBC]
 ms.assetid: 102ae1d0-973d-4e12-992c-d844bf05160d
 caps.latest.revision: 19
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 1303c15f94dc32e69378c38e5353f8e82bf1214a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: d8f5eab232d9651375ea9cd2857a8b8bb9129e88
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36033914"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37422527"
 ---
 # <a name="process-return-codes-and-output-parameters-odbc"></a>處理傳回碼和輸出參數 (ODBC)
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 預存程序可以有整數傳回碼和輸出參數。 傳回碼和輸出參數會從伺服器傳送的最後一個封包中並不能使用應用程式，直到[SQLMoreResults](../native-client-odbc-api/sqlmoreresults.md)傳回 sql_no_data 為止。 如果從預存程序傳回錯誤，則呼叫 SQLMoreResults 前進至下一個結果，直到傳回 SQL_NO_DATA 為止。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 預存程序可以有整數傳回碼和輸出參數。 傳回碼和輸出參數從伺服器傳送最後一個封包，並不適用於應用程式，直到[SQLMoreResults](../native-client-odbc-api/sqlmoreresults.md)傳回 sql_no_data 為止。 如果從預存程序會傳回錯誤，請呼叫 SQLMoreResults 前進到下一個結果，直到傳回 SQL_NO_DATA 為止。  
   
 > [!IMPORTANT]  
 >  盡可能使用 Windows 驗證。 如果無法使用 Windows 驗證，請提示使用者在執行階段輸入認證。 請避免將認證儲存在檔案中。 如果您必須保存認證，則應該用 [Win32 crypto API](http://go.microsoft.com/fwlink/?LinkId=64532) 加密這些認證。  
@@ -35,7 +33,7 @@ ms.locfileid: "36033914"
   
 1.  建構使用 ODBC CALL 逸出序列的 SQL 陳述式。 此陳述式應該會針對每個輸入、輸入/輸出和輸出參數，以及程序傳回值 (若有) 使用參數標記。  
   
-2.  呼叫[SQLBindParameter](../native-client-odbc-api/sqlbindparameter.md)針對每個輸入、 輸入/輸出和輸出參數，和程序傳回值 （如果有的話）。  
+2.  呼叫[SQLBindParameter](../native-client-odbc-api/sqlbindparameter.md)每個輸入、 輸入/輸出和輸出參數，以及程序傳回值 （如果有的話）。  
   
 3.  使用 `SQLExecDirect` 來執行此陳述式。  
   

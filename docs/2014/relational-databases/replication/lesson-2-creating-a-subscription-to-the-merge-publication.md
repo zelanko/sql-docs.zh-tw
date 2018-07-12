@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - replication [SQL Server], tutorials
 ms.assetid: 06722baa-9065-443e-b1d5-99036cf89074
 caps.latest.revision: 16
 author: craigg-msft
 ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: ad258c2be4e7df3ff353a9fd1a1f9e7c083991d0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 94f58681e368ce3eff15a5b6ec78afbc7be2018f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36036091"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37258424"
 ---
 # <a name="lesson-2-creating-a-subscription-to-the-merge-publication"></a>第 2 課：建立合併式發行集的訂閱
   在這一課，您將使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]建立訂閱。 接著，您將在訂閱資料庫上設定權限，並手動為新訂閱產生已篩選資料快照集。 您必須先完成上一課 [第 1 課：使用合併式複寫發行資料](lesson-1-publishing-data-using-merge-replication.md)，才能進行這一課。  
@@ -40,7 +40,7 @@ ms.locfileid: "36036091"
   
 5.  在 [合併代理程式位置] 頁面上，按一下 [在訂閱者端執行每一個代理程式]，然後按一下 [下一步]。  
   
-6.  在訂閱者 頁面上，選取 訂閱者伺服器，並在 執行個體名稱**訂閱資料庫**，選取**\<新資料庫 >** 從清單中。  
+6.  在訂閱者 頁面上，選取 訂閱者伺服器，並在 執行個體名稱**訂閱資料庫**，選取**\<新的資料庫 >** 從清單中。  
   
 7.  在 [新增資料庫] 對話方塊的 [資料庫名稱] 方塊中，輸入 **SalesOrdersReplica**，然後按一下 [確定]，再按一下 [下一步]。  
   
@@ -70,7 +70,7 @@ ms.locfileid: "36036091"
   
 3.  選取 [資料分割] 頁面，然後按一下 [加入]。  
   
-4.  在**加入資料分割** 對話方塊中，輸入`adventure-works\pamela0`中**HOST_NAME 值**方塊，然後再按一下**確定**。  
+4.  在 [**加入資料分割**] 對話方塊中，輸入`adventure-works\pamela0`中**HOST_NAME 值**方塊，然後再按一下**確定**。  
   
 5.  選取新加入的資料分割，按一下 [立即產生選取的快照集]，然後按一下 [確定]。  
   

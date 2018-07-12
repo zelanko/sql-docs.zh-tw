@@ -5,23 +5,22 @@ ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - 1461 (Database Engine error)
 ms.assetid: fce10907-4753-441b-b624-f28e00ed7520
 caps.latest.revision: 15
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 663aeec8ff61ce1717392c32d4f97e71403d1b5c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: c0c2340069f34394cd5d3f29b20ed0dbe9ff12a2
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36033647"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37422317"
 ---
 # <a name="mssqlserver1461"></a>MSSQLSERVER_1461
     

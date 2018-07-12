@@ -1,5 +1,5 @@
 ---
-title: XMLA 查詢編輯器 (Analysis Services-多維度資料) |Microsoft 文件
+title: XMLA 查詢編輯器 (Analysis Services-多維度資料) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.editor.xmla.f1
 helpviewer_keywords:
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - Query Editor [XMLA]
 ms.assetid: 14623019-7839-4038-9d12-2f8953d2ec04
 caps.latest.revision: 24
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: b11ee4322f25377f3307c0767e839b6e69e09bef
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 221ea55990b98a9723928f52cd5432f13760cc91
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36037544"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37211428"
 ---
 # <a name="xmla-query-editor-analysis-services---multidimensional-data"></a>XMLA 查詢編輯器 (Analysis Services - 多維度資料)
   使用 XMLA 查詢編輯器，即可設計和執行以多維度運算式 (XMLA) 語言撰寫的陳述式和指令碼。  
@@ -60,13 +60,13 @@ ms.locfileid: "36037544"
   
 |詞彙|定義|  
 |----------|----------------|  
-|**查詢編輯器視窗**|鍵入要由 XMLA 查詢編輯器執行的 XMLA 陳述式和指令碼。<br /><br /> 查詢編輯器的內容功能表提供下列選項：<br /><br /> **剪下**： 將目前的選取範圍複製到剪貼簿，並從 [查詢編輯器] 視窗中移除選取範圍。<br />**複製**：將目前選取範圍複製到剪貼簿。<br />**貼上**： 貼上目前的選取範圍至剪貼簿的內容。<br />**連接**：開啟 [連接到伺服器] 對話方塊，以建立與 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 執行個體的連接。<br />**中斷連線**： 中斷目前查詢編輯器與[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]執行個體。<br />**中斷連接所有查詢**： 中斷連接所有開啟的查詢編輯器。<br />**變更連接**： 開啟**連接到伺服器**對話方塊，以連接到不同[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]執行個體。<br />**在物件總管 中開啟伺服器**： 開啟[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]目前查詢編輯器中連接執行個體**物件總管 中**。<br />**執行**： 執行選取的程式碼，或如果不選取任何程式碼時，會以目前查詢編輯器執行的所有程式碼。<br />**屬性視窗**： 顯示**屬性**視窗[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]目前查詢視窗。<br />**查詢選項**： 顯示**查詢選項** 對話方塊。|  
+|**查詢編輯器視窗**|鍵入要由 XMLA 查詢編輯器執行的 XMLA 陳述式和指令碼。<br /><br /> 查詢編輯器的內容功能表提供下列選項：<br /><br /> **剪下**： 將目前的選取範圍複製到剪貼簿，並從 [查詢編輯器] 視窗中移除選取範圍。<br />**複製**：將目前選取範圍複製到剪貼簿。<br />**貼上**： 將目前的選取範圍至剪貼簿的內容貼上。<br />**連接**：開啟 [連接到伺服器] 對話方塊，以建立與 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 執行個體的連接。<br />**中斷**： 中斷目前查詢編輯器與[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]執行個體。<br />**中斷連接所有查詢**： 中斷連接所有開啟的查詢編輯器。<br />**變更連接**： 會開啟**連接到伺服器**對話方塊，以連接到不同[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]執行個體。<br />**在 [物件總管] 中開啟伺服器**： 會開啟[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]目前查詢編輯器中連接執行個體**物件總管 中**。<br />**執行**： 執行選取的程式碼，或如果未選取，則在目前的查詢編輯器中執行所有的程式碼。<br />**屬性視窗**： 顯示**屬性** 視窗中的[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]目前查詢視窗。<br />**查詢選項**： 顯示**查詢選項** 對話方塊。|  
 |**結果視窗**|以文字顯示 XMLA 陳述式或指令碼的結果。|  
 |**[訊息] 視窗**|顯示 XMLA 陳述式或指令碼如何執行的相關資訊。 例如，這個視窗會顯示執行期間發生的錯誤，或執行之後擷取的資料格數目。|  
   
 ## <a name="see-also"></a>另請參閱  
- [MDX 查詢編輯器&#40;Analysis Services-多維度資料&#41;](mdx-query-editor-analysis-services-multidimensional-data.md)   
- [DMX 查詢編輯器&#40;Analysis Services-資料採礦&#41;](dmx-query-editor-analysis-services-data-mining.md)   
+ [MDX 查詢編輯器 &#40;Analysis Services-多維度資料&#41;](mdx-query-editor-analysis-services-multidimensional-data.md)   
+ [DMX 查詢編輯器 &#40;Analysis Services-資料採礦&#41;](dmx-query-editor-analysis-services-data-mining.md)   
  [查詢與文字編輯器&#40;SQL Server Management Studio&#41;](../relational-databases/scripting/query-and-text-editors-sql-server-management-studio.md)   
  [SQL Server Management Studio 鍵盤快速鍵](../ssms/sql-server-management-studio-keyboard-shortcuts.md)  
   

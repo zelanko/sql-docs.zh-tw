@@ -1,5 +1,5 @@
 ---
-title: 設定磁碟空間使用量 (PowerPivot for SharePoint) |Microsoft 文件
+title: 設定磁碟空間使用量 (PowerPivot for SharePoint) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 201a3fda-f162-45d7-bf39-74dcb92fd0e6
 caps.latest.revision: 16
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 76f4688acd348f8ee2bcbe87d8832f5f770ba4b5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 538efc15ea53c9c7666589c71c039ce21fa21b2e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36133562"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37151489"
 ---
 # <a name="configure-disk-space-usage-powerpivot-for-sharepoint"></a>設定磁碟空間使用量 (PowerPivot for SharePoint)
   PowerPivot for SharePoint 部署會使用主機電腦的磁碟空間來快取 PowerPivot 資料庫，讓重新載入更快速。 在記憶體中載入的每個 PowerPivot 資料庫都會先快取至磁碟中，因此稍後可以快速重新載入該資料庫來服務新的要求。 根據預設，PowerPivot for SharePoint 會使用所有可用磁碟空間來快取其資料庫，但是您可以藉由設定限制磁碟空間使用量的屬性來修改這個行為。  
@@ -46,7 +46,7 @@ ms.locfileid: "36133562"
   
  Backup 資料夾會針對載入本機電腦上之記憶體中的任何 PowerPivot 資料庫提供一般快取儲存。 如果您在伺服器陣列中定義多個 PowerPivot 服務應用程式，任何一個都可以使用本機伺服器來載入 PowerPivot 資料，並於隨後快取 PowerPivot 資料。 資料載入和快取都是 Analysis Services 伺服器作業。 因此，總磁碟空間使用量會在 Analysis Services 執行個體層級的 Backup 資料夾上進行管理。 因此，限制磁碟空間使用量的組態設定會在 SharePoint 應用程式伺服器上執行的單一 SQL Server Analysis Services 執行個體上設定。  
   
- 快取只包含 PowerPivot 資料庫。 PowerPivot 資料庫存放在單一父資料夾 (Backup 資料夾) 下的多個檔案中。 由於 PowerPivot 資料庫打算當做 Excel 活頁簿的內部資料使用，因此，資料庫名稱是以 GUID 為基礎，而非描述性的。 下的 GUID 資料夾**\<服務應用程式名稱 >** 是 PowerPivot 資料庫的上層資料夾。 當 PowerPivot 資料庫在伺服器上載入時，系統會針對每個資料庫建立其他資料夾。  
+ 快取只包含 PowerPivot 資料庫。 PowerPivot 資料庫存放在單一父資料夾 (Backup 資料夾) 下的多個檔案中。 由於 PowerPivot 資料庫打算當做 Excel 活頁簿的內部資料使用，因此，資料庫名稱是以 GUID 為基礎，而非描述性的。 下的 GUID 資料夾**\<服務應用程式名稱 >** 是父資料夾是 PowerPivot 資料庫。 當 PowerPivot 資料庫在伺服器上載入時，系統會針對每個資料庫建立其他資料夾。  
   
  由於 PowerPivot 資料可能會在伺服器陣列中的任何 Analysis Services 執行個體上載入，因此在伺服器陣列中的多部電腦上也可能會快取相同的資料。 這個作法是效能優先於磁碟空間使用量，但如果磁碟上已經有可用的資料，權衡取捨便是使用者可以更快速地存取資料。  
   
@@ -54,11 +54,11 @@ ms.locfileid: "36133562"
   
  您可以在系統層級建立磁碟空間不足時通知您的電子郵件警示。 Microsoft System Center 包含電子郵件警示功能。 您也可以使用「檔案伺服器資源管理員」、「工作排程器」或 PowerShell 指令檔來設定警示。 下列連結提供實用的資訊來設定有關磁碟空間不足的通知：  
   
--   [在檔案伺服器資源管理員的新](http://technet.microsoft.com/library/hh831746.aspx)(http://technet.microsoft.com/library/hh831746.aspx)。  
+-   [檔案伺服器資源管理員 」 中最新消息](http://technet.microsoft.com/library/hh831746.aspx)(http://technet.microsoft.com/library/hh831746.aspx)。  
   
--   [Windows Server 2008 R2 的檔案伺服器資源管理員逐步指南](http://go.microsoft.com/fwlink/?LinkID=204875)(http://go.microsoft.com/fwlink/?LinkID=204875)。  
+-   [適用於 Windows Server 2008 R2 的檔案伺服器資源管理員逐步指南](http://go.microsoft.com/fwlink/?LinkID=204875)(http://go.microsoft.com/fwlink/?LinkID=204875)。  
   
--   [Windows Server 2008 上設定低磁碟空間警示](http://go.microsoft.com/fwlink/?LinkID=204870)( http://go.microsoft.com/fwlink/?LinkID=204870)。  
+-   [Windows Server 2008 上設定低的磁碟空間警示](http://go.microsoft.com/fwlink/?LinkID=204870)( http://go.microsoft.com/fwlink/?LinkID=204870)。  
   
 ## <a name="how-to-limit-the-amount-of-disk-space-used-for-storing-cached-files"></a>如何限制儲存快取檔案所使用的磁碟空間量  
   
@@ -78,7 +78,7 @@ ms.locfileid: "36133562"
   
 1.  在 [管理中心] 的 [應用程式管理] 中，按一下 [管理服務應用程式]。  
   
-2.  按一下**預設 PowerPivot 服務應用程式**開啟管理儀表板。  
+2.  按一下 **預設的 PowerPivot 服務應用程式**開啟管理儀表板。  
   
 3.  在 [動作]中，按一下 [設定服務應用程式設定]。  
   
@@ -95,9 +95,9 @@ ms.locfileid: "36133562"
 5.  按一下 **[確定]** 儲存您的變更。  
   
 ## <a name="next-steps"></a>後續步驟  
- PowerPivot for SharePoint 安裝提供健全狀況規則，讓您可以在伺服器健全狀況、組態或可用性中偵測到問題時，採取更正動作。 這些規則中，有部分規則使用組態設定來決定觸發健全狀況規則的條件。 如果您積極地調整伺服器效能，可能也會想要檢閱這些設定，以確保預設值是對您系統最好的選擇。 如需詳細資訊，請參閱[PowerPivot 健全狀況規則-設定](configure-power-pivot-health-rules.md)。  
+ PowerPivot for SharePoint 安裝提供健全狀況規則，讓您可以在伺服器健全狀況、組態或可用性中偵測到問題時，採取更正動作。 這些規則中，有部分規則使用組態設定來決定觸發健全狀況規則的條件。 如果您積極地調整伺服器效能，可能也會想要檢閱這些設定，以確保預設值是對您系統最好的選擇。 如需詳細資訊，請參閱 < [PowerPivot 健全狀況規則-設定](configure-power-pivot-health-rules.md)。  
   
 ## <a name="see-also"></a>另請參閱  
- [管理中心的 PowerPivot 伺服器管理和組態](power-pivot-server-administration-and-configuration-in-central-administration.md)  
+ [管理中心的 PowerPivot 伺服器管理和設定](power-pivot-server-administration-and-configuration-in-central-administration.md)  
   
   

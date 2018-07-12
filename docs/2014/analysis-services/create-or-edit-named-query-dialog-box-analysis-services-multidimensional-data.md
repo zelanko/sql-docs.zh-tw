@@ -1,5 +1,5 @@
 ---
-title: 建立或編輯具名的查詢對話方塊 (Analysis Services-多維度資料) |Microsoft 文件
+title: 建立或編輯具名的查詢對話方塊 (Analysis Services-多維度資料) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.dsvdesigner.createnamedquery.f1
 helpviewer_keywords:
 - Create Named Query dialog box
 ms.assetid: 8e192ad6-a0b1-4e21-bb3f-087c93e62941
 caps.latest.revision: 23
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: f97b06c3fb67080e7ebc3adc3c1e4d84d3fdea61
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: fe4ebd6e0ecaff7d6aed1aecef906bb1a8519e98
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36133136"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37149619"
 ---
 # <a name="create-or-edit-named-query-dialog-box-analysis-services---multidimensional-data"></a>建立或編輯具名查詢對話方塊 (Analysis Services - 多維度資料)
   使用 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 中的 [建立/編輯具名查詢] 對話方塊，即可建立或編輯 [資料來源檢視設計師] 中的具名查詢。 具名查詢可以當成資料表處理，並以此作為其他 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 物件的基礎。 您可以執行下列動作來顯示 [建立/編輯具名查詢] 對話方塊：  
@@ -60,7 +60,7 @@ ms.locfileid: "36133136"
  **工具列**  
  使用工具列即可管理資料集、選取要顯示的窗格和控制各種查詢功能。  
   
-|ReplTest1|描述|  
+|值|描述|  
 |-----------|-----------------|  
 |**切換到一般查詢產生器**|選取即可只顯示一般查詢產生器檢視可用的選項。 僅會顯示下列選項：<br />**SQL 窗格**<br />**結果窗格**<br />**工具列**，只包含 **[切換到 VDT 查詢產生器]** 和 **[執行]**<br /><br /> <br /><br /> 注意：唯有選取 [切換到 VDT 查詢產生器]  才會顯示此選項。|  
 |**切換到 VDT 查詢產生器**|選取即可顯示 Visual Database Tools (VDT) 查詢產生器檢視可用的所有選項。<br /><br /> 注意：唯有選取 [切換到一般查詢產生器]  才會顯示此選項。|  
@@ -89,7 +89,7 @@ ms.locfileid: "36133136"
 > [!IMPORTANT]  
 >  此對話方塊不支援變更查詢類型。  
   
- **在方格窗格**  
+ **方格窗格**  
  以方格的方式顯示查詢所參考的物件。 您可以使用此方格，在查詢中加入和移除資料行，以及變更每一個資料行的設定。  
   
 > [!NOTE]  
@@ -106,6 +106,6 @@ ms.locfileid: "36133136"
   
 ## <a name="see-also"></a>另請參閱  
  [Analysis Services Designers and Dialog Boxes&#40;多維度資料&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
- [在資料來源檢視中定義具名的查詢&#40;Analysis Services&#41;](multidimensional-models/define-named-queries-in-a-data-source-view-analysis-services.md)  
+ [在 資料來源檢視中定義具名的查詢&#40;Analysis Services&#41;](multidimensional-models/define-named-queries-in-a-data-source-view-analysis-services.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: DMSCHEMA_MINING_MODEL_CONTENT 資料列集 |Microsoft 文件
+title: DMSCHEMA_MINING_MODEL_CONTENT 資料列集 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -18,15 +18,15 @@ helpviewer_keywords:
 - DMSCHEMA_MINING_MODEL_CONTENT rowset
 ms.assetid: 1e85d9e7-3b74-42ac-b94e-f52f76d8a25d
 caps.latest.revision: 31
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: b6eb96e8a4a277ee5b7e198fca3d96062bd6d486
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 76724967936008e52cb43f7af02bbb7a833475d0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36132304"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37165449"
 ---
 # <a name="dmschemaminingmodelcontent-rowset"></a>DMSCHEMA_MINING_MODEL_CONTENT 資料列集
   允許用戶端應用程式瀏覽資料採礦模型中的內容。 用戶端應用程式可使用本主題結尾處所述的特殊樹狀作業限制，以導覽採礦模型的內容。  
@@ -36,13 +36,13 @@ ms.locfileid: "36132304"
   
 |資料行名稱|類型指標|長度|描述|  
 |-----------------|--------------------|------------|-----------------|  
-|`MODEL_CATALOG`|`DBTYPE_WSTR`||目錄的名稱。 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 會填入此資料行的模型是成員的資料庫名稱。|  
+|`MODEL_CATALOG`|`DBTYPE_WSTR`||目錄的名稱。 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 會填入此資料行所屬的資料庫模型成員的名稱。|  
 |`MODEL_SCHEMA`|`DBTYPE_WSTR`||不合格的結構描述名稱。 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 並不支援此資料行，它一律包含 `VT_NULL`。|  
 |`MODEL_NAME`|`DBTYPE_WSTR`||與此資料列所述的內容相關聯的模型名稱。|  
 |`ATTRIBUTE_NAME`|`DBTYPE_WSTR`||對應至這個節點之屬性的名稱。|  
 |`NODE_NAME`|`DBTYPE_WSTR`||節點的名稱。 目前，此資料行與 `NODE_UNIQUE_NAME` 包含相同的值，不過未來的版本可能會變更。|  
 |`NODE_UNIQUE_NAME`|`DBTYPE_WSTR`||節點的唯一名稱。|  
-|`NODE_TYPE`|`DBTYPE_I4`||節點類型。 將產生下列其中一個值 (協力廠商資料採礦演算法可以擴充此清單)：<br /><br /> -   `DM_NODE_TYPE_CLASSIFICATION_TREE_ROOT` (`2`)<br />-   `DM_NODE_TYPE_TREE_INTERIOR` (`3`)<br />-   `DM_NODE_TYPE_TREE_DISTRIBUTION` (`4`)<br />-   `DM_NODE_TYPE_CLUSTER` (`5`)<br />-   `DM_NODE_TYPE_UNKNOWN` (`6`)<br />-   `DM_NODE_TYPE_ITEMSET` (`7`)<br />-   `DM_NODE_TYPE_ASSOCIATION_RULE` (`8`)<br />-   `DM_NODE_TYPE_NB_PREDICTABLE_ATTRIBUTE` (`9`)<br />-   `DM_NODE_TYPE_NB_INPUT_ATTRIBUTE` (`10`)<br />-   `DM_NODE_TYPE_NB_INPUT_ATTRIBUTE_STATE` (`11`)<br />-   `DM_NODE_TYPE_SEQUENCE` (`13`)<br />-   `DM_NODE_TYPE_TRANSITION` (`14`)<br />-   `DM_NODE_TYPE_TIME_SERIES` (`15`)<br />-   `DM_NODE_TYPE_TS_TREE` (`16`)<br />-   `DM_NODE_TYPE_NN_SUBNETWORK` (`17`) 類神經網路，子網路<br />-   `DM_NODE_TYPE_NN_INPUT_LAYER` (`18`) 類神經網路，輸入層 （輸入節點的父系）<br />-   **DM_NODE_TYPE_NN_HIDDEN_LAYER** (`19`) 類神經網路，隱藏層 （隱藏節點的父系）<br />-   `DM_NODE_TYPE_NN_OUTPUT_LAYER` (`20`) 類神經網路，輸出層 （輸入節點的父系）<br />-   `DM_NODE_TYPE_NN_INPUT_NODE` (`21`) 類神經網路，輸入的節點<br />-   `DM_NODE_TYPE_NN_HIDDEN_NODE` (`22`) 類神經網路，隱藏的節點<br />-   `DM_NODE_TYPE_NN_OUTPUT_NODE` (`23`) 類神經網路，輸出節點<br />-   `DM_NODE_TYPE_NN_MARGINAL_STAT_NODE` (`24`) 類神經網路，臨界統計資料節點<br />-   **DM_NODE_TYPE_REGRESSION_TREE_ROOT** (`25`)<br />-   `DM_NODE_TYPE_NB_MARGINAL_STAT_NODE` (`26`) 類神經網路，臨界統計資料節點|  
+|`NODE_TYPE`|`DBTYPE_I4`||節點類型。 將產生下列其中一個值 (協力廠商資料採礦演算法可以擴充此清單)：<br /><br /> -   `DM_NODE_TYPE_CLASSIFICATION_TREE_ROOT` (`2`)<br />-   `DM_NODE_TYPE_TREE_INTERIOR` (`3`)<br />-   `DM_NODE_TYPE_TREE_DISTRIBUTION` (`4`)<br />-   `DM_NODE_TYPE_CLUSTER` (`5`)<br />-   `DM_NODE_TYPE_UNKNOWN` (`6`)<br />-   `DM_NODE_TYPE_ITEMSET` (`7`)<br />-   `DM_NODE_TYPE_ASSOCIATION_RULE` (`8`)<br />-   `DM_NODE_TYPE_NB_PREDICTABLE_ATTRIBUTE` (`9`)<br />-   `DM_NODE_TYPE_NB_INPUT_ATTRIBUTE` (`10`)<br />-   `DM_NODE_TYPE_NB_INPUT_ATTRIBUTE_STATE` (`11`)<br />-   `DM_NODE_TYPE_SEQUENCE` (`13`)<br />-   `DM_NODE_TYPE_TRANSITION` (`14`)<br />-   `DM_NODE_TYPE_TIME_SERIES` (`15`)<br />-   `DM_NODE_TYPE_TS_TREE` (`16`)<br />-   `DM_NODE_TYPE_NN_SUBNETWORK` (`17`) 類神經網路、 子網路<br />-   `DM_NODE_TYPE_NN_INPUT_LAYER` (`18`) 類神經網路，輸入層 （輸入節點的父系）<br />-   **DM_NODE_TYPE_NN_HIDDEN_LAYER** (`19`) 類神經網路，隱藏層 （隱藏節點的父系）<br />-   `DM_NODE_TYPE_NN_OUTPUT_LAYER` (`20`) 類神經網路，輸出層 （輸入節點的父系）<br />-   `DM_NODE_TYPE_NN_INPUT_NODE` (`21`) 類神經網路，輸入的節點<br />-   `DM_NODE_TYPE_NN_HIDDEN_NODE` (`22`) 類神經網路，隱藏的節點<br />-   `DM_NODE_TYPE_NN_OUTPUT_NODE` (`23`) 類神經網路，輸出節點<br />-   `DM_NODE_TYPE_NN_MARGINAL_STAT_NODE` (`24`) 類神經網路，臨界統計資料節點<br />-   **DM_NODE_TYPE_REGRESSION_TREE_ROOT** (`25`)<br />-   `DM_NODE_TYPE_NB_MARGINAL_STAT_NODE` (`26`) 類神經網路，臨界統計資料節點|  
 |`NODE_GUID`|`DBTYPE_GUID`||節點 GUID。 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 並不支援此資料行，它一律包含 `NULL`。|  
 |`NODE_CAPTION`|`DBTYPE_WSTR`||與節點關聯的標籤或標題。 這個屬性主要是供顯示之用。|  
 |`CHILDREN_CARDINALITY`|`DBTYPE_UI4`||節點所擁有子系數目的估計。|  
@@ -76,7 +76,7 @@ ms.locfileid: "36132304"
   
  `TREE_OPERATION` 限制並未位於 `DMSCHEMA_MINING_MODEL_CONTENT` 資料列集的任何特定資料行上；更確切地說，它會指定樹狀運算子。 取用者可以指定 `NODE_UNIQUE_NAME` 限制以及樹狀運算子 (`ANCESTORS`、`CHILDREN`、`SIBLINGS`、`PARENT`、`DESCENDANTS`、`SELF`) 以取得要求的成員集合。 `SELF` 運算子在傳回的資料列清單中包括節點本身的資料列。 下表描述構成 `TREE_OPERATION` 限制之點陣圖定義的常數。 它們可以使用邏輯 `OR` 運算子加以結合。  
   
-|常數|ReplTest1|  
+|常數|值|  
 |--------------|-----------|  
 |**DMTREEOP_ANCESTORS**|`0x00000020`|  
 |**DMTREEOP_CHILDREN**|`0x00000001`|  
