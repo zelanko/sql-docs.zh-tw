@@ -1,5 +1,5 @@
 ---
-title: 安全性屬性頁面，項目 （報表管理員） |Microsoft 文件
+title: 安全性屬性頁面，項目 （報表管理員） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 351b8503-354f-4b1b-a7ac-f1245d978da0
 caps.latest.revision: 27
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: c072df6e055cbf0bc0fc0dc503b6dfd55a4c8a29
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 59b44a164b321c0d5d82fce7016427ad7d639f1f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36030714"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37230218"
 ---
 # <a name="security-properties-page-items-report-manager"></a>安全性屬性頁面，項目 (報表管理員)
   使用安全性屬性頁面來檢視或修改安全性設定，以決定資料夾、報表、模型、資源和共用資料來源的存取權。 此頁面適用於您有權保護的項目。  
@@ -54,7 +54,7 @@ ms.locfileid: "36030714"
  選取您要刪除的群組或使用者名稱旁的核取方塊，然後按一下 **[刪除]**。 如果它是留下的唯一角色指派，或是定義報表伺服器之安全性基準的內建角色指派 (例如，「Built-in\Administrators」)，則無法將其刪除。 刪除角色指派不會刪除群組或使用者帳戶或角色定義。  
   
  **新增角色指派**  
- 按一下即可開啟 [新增角色指派] 頁面，可用來建立目前項目的其他角色指派。 如需詳細資訊，請參閱[新增角色指派： 編輯角色指派頁面&#40;報表管理員&#41;](../../2014/reporting-services/new-role-assignment-edit-role-assignment-page-report-manager.md)。  
+ 按一下即可開啟 [新增角色指派] 頁面，可用來建立目前項目的其他角色指派。 如需詳細資訊，請參閱 <<c0> [ 新的角色指派： 編輯角色指派頁面&#40;報表管理員&#41;](../../2014/reporting-services/new-role-assignment-edit-role-assignment-page-report-manager.md)。</c0>  
   
  **還原為父安全性**  
  按一下即可將安全性設定重設為直屬父資料夾的安全性設定。 如果報表伺服器資料夾階層中都未打破繼承，則使用最上層資料夾 [首頁] 的安全性設定。  

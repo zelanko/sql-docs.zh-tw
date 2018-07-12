@@ -1,5 +1,5 @@
 ---
-title: 記憶體最佳化資料表中的交易 |Microsoft 文件
+title: 記憶體最佳化資料表中的交易 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine-imoltp
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 2cd07d26-a1f1-4034-8d6f-f196eed1b763
 caps.latest.revision: 28
 author: stevestein
 ms.author: sstein
-manager: jhubbard
-ms.openlocfilehash: 7a1674d843f9701cf9eb2b2c41dad3dd4cbf7a0a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d4f3f8fcac44dc238440006eddaf44681f8cbaee
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36032383"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37158869"
 ---
 # <a name="transactions-in-memory-optimized-tables"></a>記憶體最佳化的資料表中的交易
   以磁碟為基礎之資料表的資料列版本設定 (使用 SNAPSHOT 隔離或 READ_COMMITTED_SNAPSHOT) 會提供某種形式的開放式並行存取控制。 讀取器和寫入器不會封鎖彼此。 在記憶體最佳化的資料表中，寫入器不會封鎖寫入器。 如果在磁碟資料表上使用資料列版本設定，一筆交易會鎖定資料列，而嘗試更新此資料列的並行交易會遭封鎖。 在記憶體最佳化資料表中，不會有任何鎖定。 而是當有兩筆交易嘗試更新相同資料列時，將會發生寫入/寫入衝突 (錯誤 41302)。  
@@ -54,7 +54,7 @@ ms.locfileid: "36032383"
  此外，如果某筆交易 (TxA) 讀取的資料列已由另一筆交易 (TxB) 插入或修改，而且正在認可中，它會樂觀地假設該另一筆交易會認可，而不是等候認可發生。 在此情況下，交易 TxA 會相依於交易 TxB 的認可。  
   
 ## <a name="conflict-detection-validation-and-commit-dependency-checks"></a>衝突偵測、驗證和認可相依性檢查  
- [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 會偵測並行交易之間的衝突以及隔離等級違規，而且將會終止其中一個衝突的交易。 此交易將必須重試。 (如需詳細資訊，請參閱[記憶體最佳化資料表上的交易的重試邏輯方針](../relational-databases/in-memory-oltp/memory-optimized-tables.md)。)  
+ [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 會偵測並行交易之間的衝突以及隔離等級違規，而且將會終止其中一個衝突的交易。 此交易將必須重試。 (如需詳細資訊，請參閱 < [Guidelines for Retry Logic for Transactions on Memory-Optimized Tables](../relational-databases/in-memory-oltp/memory-optimized-tables.md)。)  
   
  系統會樂觀地假設交易隔離沒有任何衝突和違規。 如果發生的任何衝突可能導致資料庫的不一致或可能違反交易隔離，系統會偵測到這些衝突，並且終止交易。  
   
@@ -100,10 +100,10 @@ ms.locfileid: "36032383"
 #### <a name="validation-phase"></a>驗證階段  
  在驗證階段，系統會驗證要求的交易隔離等級所需的假設在交易的邏輯開始和邏輯結束之間是否成立。  
   
- 在驗證階段開始，系統會指派邏輯結束時間給交易。 其他交易會在邏輯結束時間看到資料庫中寫入的資料列版本。 如需詳細資訊，請參閱[認可相依性](#cd)。  
+ 在驗證階段開始，系統會指派邏輯結束時間給交易。 其他交易會在邏輯結束時間看到資料庫中寫入的資料列版本。 如需詳細資訊，請參閱 <<c0> [ 認可相依性](#cd)。  
   
 ##### <a name="repeatable-read-validation"></a>可重複的讀取驗證  
- 如果交易的隔離等級是 REPEATABLE READ 或 SERIALIZABLE，或者在 REPEATABLE READ 或 SERIALIZABLE 隔離之下存取資料表 (如需詳細資訊，請參閱 < > 一節的個別作業隔離中[交易隔離等級](../../2014/database-engine/transaction-isolation-levels.md))，系統會驗證讀取是否可重複。 這表示，它會驗證交易所讀取的資料列版本在交易的邏輯結束時間依然是有效的資料列版本。  
+ 如果交易的隔離等級是 REPEATABLE READ 或 SERIALIZABLE，或者 REPEATABLE READ 或 SERIALIZABLE 隔離之下存取資料表 (如需詳細資訊，請參閱一節的個別作業隔離在[交易隔離等級](../../2014/database-engine/transaction-isolation-levels.md))，系統會驗證讀取是否可重複。 這表示，它會驗證交易所讀取的資料列版本在交易的邏輯結束時間依然是有效的資料列版本。  
   
  如果有任何資料列已更新或變更，交易就無法認可而且會出現錯誤 41305 (「目前交易無法認可，因為可重複的讀取驗證失敗。」)。  
   
@@ -136,6 +136,6 @@ ms.locfileid: "36032383"
 -   記憶體最佳化資料表不支援鎖定。 記憶體最佳化的資料表不支援透過鎖定提示的明確鎖定 (例如 TABLOCK、XLOCK 和 ROWLOCK)。  
   
 ## <a name="see-also"></a>另請參閱  
- [了解記憶體最佳化資料表上的交易](../../2014/database-engine/understanding-transactions-on-memory-optimized-tables.md)  
+ [了解經記憶體最佳化的資料表上的交易](../../2014/database-engine/understanding-transactions-on-memory-optimized-tables.md)  
   
   

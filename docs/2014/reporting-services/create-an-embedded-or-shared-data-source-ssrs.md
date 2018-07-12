@@ -1,5 +1,5 @@
 ---
-title: 建立內嵌或共用資料來源 (SSRS) |Microsoft 文件
+title: 建立內嵌或共用資料來源 (SSRS) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
@@ -8,32 +8,32 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - data sources [Reporting Services], creating
 ms.assetid: b111a8d0-a60d-4c8b-b00a-51644b19c34b
 caps.latest.revision: 40
-author: douglaslM
+author: maggiesmsft
 ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 28609edfbfc504d3949abb6a19f7f04098fde07b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 9cd820de9b6710e4524b39323bcc9837fad820b6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36031816"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37230728"
 ---
 # <a name="create-an-embedded-or-shared-data-source-ssrs"></a>建立內嵌或共用資料來源 (SSRS)
-  報表資料來源會指定名稱及連接資訊。 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 可支援兩種類型的資料來源：內嵌和共用。 內嵌資料來源是定義在報表定義中，而且只能供該報表使用。 共用資料來源會定義成個別的項目，而且可以供多個報表使用。 如需詳細資訊，請參閱[內嵌和共用資料連接或資料來源&#40;報表產生器及 SSRS&#41;](../../2014/reporting-services/embedded-and-shared-data-connections-or-data-sources-report-builder-and-ssrs.md)。  
+  報表資料來源會指定名稱及連接資訊。 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 可支援兩種類型的資料來源：內嵌和共用。 內嵌資料來源是定義在報表定義中，而且只能供該報表使用。 共用資料來源會定義成個別的項目，而且可以供多個報表使用。 如需詳細資訊，請參閱 <<c0> [ 內嵌和共用資料連接或資料來源&#40;報表產生器及 SSRS&#41;](../../2014/reporting-services/embedded-and-shared-data-connections-or-data-sources-report-builder-and-ssrs.md)。</c0>  
   
  在報表產生器中，您可以瀏覽至報表伺服器或 SharePoint 網站，然後選取資料來源或建立內嵌資料來源。 您無法在報表產生器中建立共用資料來源。  
   
- 在報表設計師中，您可以建立共用或內嵌資料來源。 從 報表資料 窗格中，開始建立資料來源參考，，然後選取 **新增**選項。 建立資料來源參考之後，新的共用資料來源就會自動加入至 [方案總管] 的 [共用資料來源] 資料夾底下。  
+ 在報表設計師中，您可以建立共用或內嵌資料來源。 從 [報表資料] 窗格中，開始建立資料來源參考，然後按**新增**選項。 建立資料來源參考之後，新的共用資料來源就會自動加入至 [方案總管] 的 [共用資料來源] 資料夾底下。  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../includes/ssrbrddup-md.md)]  
   
- 您也可以直接在報表伺服器或 SharePoint 網站上建立共用資料來源。 如需詳細資訊，請參閱[建立、 刪除或修改共用資料來源&#40;報表管理員&#41;](../../2014/reporting-services/create-delete-or-modify-a-shared-data-source-report-manager.md)或[建立和管理共用資料來源&#40;&#41;](../../2014/reporting-services/create-manage-shared-data-sources-reporting-services-sharepoint-integrated-mode.md).  
+ 您也可以直接在報表伺服器或 SharePoint 網站上建立共用資料來源。 如需詳細資訊，請參閱 <<c0> [ 建立、 刪除或修改共用資料來源&#40;報表管理員&#41;](../../2014/reporting-services/create-delete-or-modify-a-shared-data-source-report-manager.md)或是[建立和管理共用資料來源&#40;&#41;](../../2014/reporting-services/create-manage-shared-data-sources-reporting-services-sharepoint-integrated-mode.md).</c0>  
   
 ### <a name="to-create-an-embedded-or-shared-data-source"></a>建立內嵌或共用資料來源  
   
@@ -50,7 +50,7 @@ ms.locfileid: "36031816"
   
     2.  使用以下其中一個替代方式指定連接字串：  
   
-    -   在 **[連接字串]** 文字方塊中直接輸入連接字串。 如需範例連接字串的清單，請參閱[資料連接、 資料來源和報表產生器中的連接字串](../../2014/reporting-services/data-connections-data-sources-and-connection-strings-in-report-builder.md)或[資料連接、 資料來源及連接字串中 Reporting Services](../../2014/reporting-services/data-connections-data-sources-and-connection-strings-in-reporting-services.md).  
+    -   在 **[連接字串]** 文字方塊中直接輸入連接字串。 如需連接字串範例，請參閱[資料連接、 資料來源和報表產生器中的連接字串](../../2014/reporting-services/data-connections-data-sources-and-connection-strings-in-report-builder.md)或[資料 Connections，Data Sources，and Connection Strings in Reporting Services](../../2014/reporting-services/data-connections-data-sources-and-connection-strings-in-reporting-services.md).  
   
     -   按一下運算式 (**fx)** 按鈕，即可建立一個評估為連接字串的運算式。 在 **[運算式]** 對話方塊的 [運算式] 窗格內，輸入運算式。 [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
@@ -80,18 +80,18 @@ ms.locfileid: "36031816"
   
 ### <a name="to-convert-an-embedded-data-source-to-a-shared-data-source-in-report-designer"></a>若要在報表設計師中，將內嵌資料來源轉換成共用資料來源  
   
--   在 報表資料 窗格中，以滑鼠右鍵按一下資料來源，然後按一下 **轉換為共用資料來源**。  
+-   在 報表資料 窗格中，以滑鼠右鍵按一下 資料來源，然後按一下**轉換為共用資料來源**。  
   
 ### <a name="to-convert-a-shared-data-source-to-an-embedded-data-source-in-report-builder"></a>若要在報表產生器中，將共用資料來源轉換成內嵌資料來源  
   
--   在 [報表資料] 窗格中，以滑鼠右鍵按一下資料來源，然後開啟**資料來源屬性**。  
+-   在 報表資料 窗格中，以滑鼠右鍵按一下 資料來源，然後開啟**資料來源屬性**。  
   
--   按一下**內嵌的連接**，然後完成先前的程序中所述，建立內嵌的資料來源。  
+-   按一下 **內嵌的連接**並完成先前的程序中所述，建立內嵌的資料來源。  
   
 ## <a name="see-also"></a>另請參閱  
  [在 Reporting Services 資料來源中儲存認證](report-data/store-credentials-in-a-reporting-services-data-source.md)   
- [內嵌和共用資料連接或資料來源&#40;報表產生器和 SSRS&#41;](../../2014/reporting-services/embedded-and-shared-data-connections-or-data-sources-report-builder-and-ssrs.md)   
- [從資料來源將內嵌的轉換成共用&#40;報表產生器和 SSRS&#41;](report-data/convert-data-sources-report-builder-and-ssrs.md)   
+ [內嵌和共用資料連接或資料來源&#40;報表產生器及 SSRS&#41;](../../2014/reporting-services/embedded-and-shared-data-connections-or-data-sources-report-builder-and-ssrs.md)   
+ [共用資料來源，從將內嵌的轉換成&#40;報表產生器及 SSRS&#41;](report-data/convert-data-sources-report-builder-and-ssrs.md)   
  [將報表或模型繫結至共用的資料來源&#40;SSRS&#41;](report-data/bind-a-report-or-model-to-a-shared-data-source-ssrs.md)   
  [設定報表的資料來源屬性 &#40;報表管理員&#41;](report-data/configure-data-source-properties-for-a-report-report-manager.md)   
  [Reporting Services 所支援的資料來源&#40;SSRS&#41;](create-deploy-and-manage-mobile-and-paginated-reports.md)  

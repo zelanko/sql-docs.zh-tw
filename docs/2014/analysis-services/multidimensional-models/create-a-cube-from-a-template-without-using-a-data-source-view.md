@@ -1,5 +1,5 @@
 ---
-title: 從範本建立 Cube，而不使用資料來源檢視 |Microsoft 文件
+title: 從範本建立 Cube，而不使用資料來源檢視 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 5c8c09b1-140c-48db-9b9f-d18a051d7dbd
 caps.latest.revision: 7
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: c834ce714cd4ad0de92f3638288146674d4bc1e6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: a03699873933bb98cf1657cc5fa0ae057eabf52e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36034476"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37161379"
 ---
 # <a name="create-a-cube-from-a-template-without-using-a-data-source-view"></a>從範本建立 Cube，而不使用資料來源檢視
   在 [Cube 精靈] 的第一頁上，選取 [Build the cube without using a data source (不使用資料來源而建立 Cube)] 建立 Cube，而不使用資料來源檢視。 稍後，您可以使用 [結構描述產生精靈]，根據 Cube 及其他可能的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 物件結構，來產生資料來源檢視的關聯式結構描述。 如需產生結構描述的詳細資訊，請參閱[結構描述產生精靈 &#40;Analysis Services&#41;](schema-generation-wizard-analysis-services.md)。  
@@ -47,27 +47,27 @@ ms.locfileid: "36034476"
 |------------|-----------------|  
 |**[量值名稱]**|此資料行中的值可定義 Cube 中的量值名稱。 按一下此資料行中的值，即可輸入名稱。 按一下此資料行中的 [加入新的量值]，即可建立新的量值。 此資料行會設定`Name`量值物件的屬性。|  
 |**量值群組**|包含量值的量值群組名稱。 按一下此值，即可選擇名稱或輸入名稱。 如果刪除屬於特定量值群組的所有量值，也會移除量值群組。 此資料行會設定`Name`量值群組物件的屬性。|  
-|**資料類型**|量值的資料類型。 按一下此值，即可變更資料類型。 建立量值時，預設值是`Single`。 此資料行會設定`DataType`量值物件的屬性。|  
-|**彙總**|量值的標準彙總。 按一下此資料格，即可為量值指定其中一個標準彙總 (或 [無])。 建立量值時，預設值是`Sum`。 此資料行會設定`AggregationFunction`量值物件的屬性。|  
+|**資料類型**|量值的資料類型。 按一下此值，即可變更資料類型。 當您建立量值時，預設值是`Single`。 此資料行會設定`DataType`量值物件的屬性。|  
+|**彙總**|量值的標準彙總。 按一下此資料格，即可為量值指定其中一個標準彙總 (或 [無])。 當您建立量值時，預設值是`Sum`。 此資料行會設定`AggregationFunction`量值物件的屬性。|  
   
 ## <a name="defining-new-dimensions"></a>定義新的維度  
  使用精靈的 [定義新的維度] 頁面，指定新 Cube 中的維度。  
   
  如果使用範本建立 Cube，[從範本選取維度] 下的方格會顯示範本中的維度。 您可以清除任何維度旁的核取方塊，從 Cube 中移除維度。 清除方格標題列上的核取方塊，即可移除所有列出的維度。 如果您不使用範本，此方格僅會列出「時間」維度。  
   
- 您可以在 [加入新的維度] 下，將維度加入方格中的 Cube。 若要加入維度，按一下 儲存格`Name`包含文字資料行**加入新的維度**，然後輸入維度的名稱。 若要從清單中移除資料列，請按一下刪除圖示 (**X**)。  
+ 您可以在 [加入新的維度] 下，將維度加入方格中的 Cube。 若要加入維度，按一下 儲存格`Name`資料行包含文字**加入新的維度**，然後輸入維度的名稱。 若要從清單中移除資料列，請按一下刪除圖示 (**X**)。  
   
  [從範本選取維度] 方格和 [加入新的維度] 方格會在下表所述的資料行下顯示值。 您可以按一下任一清單中的值予以變更。  
   
 |「資料行」|描述|  
 |------------|-----------------|  
 |**型別**|顯示範本維度的維度類型。 按一下此資料格，即可變更維度的維度類型。 此資料行會設定維度物件的 **Type** 屬性。|  
-|`Name`|顯示維度名稱。 按一下此資料格，即可輸入其他名稱。 這個值會設定`Name`維度物件的屬性。|  
+|`Name`|顯示維度名稱。 按一下此資料格，即可輸入其他名稱。 此值會設定`Name`維度物件的屬性。|  
 |**SCD**|指定這是緩時變維度 (SCD)。 選取此核取方塊，即可將 SCD Start Date、End Date Original ID 及 Status 屬性加入維度。 如果您使用範本建立 Cube，且精靈在範本維度中偵測到這四種屬性類型，預設會選取 [SCD]。|  
 |**屬性**|顯示要為維度建立的屬性。 維度名稱前面是清單中的每個屬性名稱。 這個清單是唯讀的。 完成精靈之後，您可以使用維度設計師來編輯屬性。|  
   
 ## <a name="defining-time-periods"></a>定義時間週期  
- 使用精靈的 [定義時間週期] 頁面，指定您要包含在維度中的日期範圍。 例如，您可以選擇資料當中，從最早年度 1 月 1 日開始，並將年度延長到超過最新的交易。 範圍之外的交易不是出現，或根據在維度中，未知的成員出現`UnknownMemberVisible`維度的屬性設定。 `UnknownMemberName`屬性指定未知成員的標題。 您也可以變更資料所使用的每週第一天 (預設為星期日)。  
+ 使用精靈的 [定義時間週期] 頁面，指定您要包含在維度中的日期範圍。 例如，您可以選擇資料當中，從最早年度 1 月 1 日開始，並將年度延長到超過最新的交易。 超出範圍的交易不是出現，或根據在維度中，未知的成員出現`UnknownMemberVisible`維度的屬性設定。 `UnknownMemberName`屬性指定未知成員的標題。 您也可以變更資料所使用的每週第一天 (預設為星期日)。  
   
 > [!NOTE]  
 >  只有當您在精靈的 [定義新的維度] 頁面上，將時間維度加入 Cube 時，才會顯示 [定義時間週期] 頁面。  

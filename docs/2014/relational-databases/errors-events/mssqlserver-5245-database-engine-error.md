@@ -5,23 +5,22 @@ ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - 5245 (Database Engine error)
 ms.assetid: 6005c9ec-ccdd-4def-9eb4-37cdb599ddb3
 caps.latest.revision: 17
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 64a63825586a603e2938cd57d98d38d555420dd6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: f2df27a5e730b67ea9c95c9b3f1eca52204659f0
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36022873"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37427977"
 ---
 # <a name="mssqlserver5245"></a>MSSQLSERVER_5245
     

@@ -1,5 +1,5 @@
 ---
-title: AggregationType 元素 (ASSL) |Microsoft 文件
+title: AggregationType 元素 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -20,18 +20,18 @@ helpviewer_keywords:
 - AggregationType element
 ms.assetid: c1393bc6-d715-4397-8bc5-82abdb275330
 caps.latest.revision: 13
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: b2241c85d9cc83e4cf48affacef10021eec7bc94
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: f7c95f9566f483ec7a047ceedd074237f9ff5f7e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36035084"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37183215"
 ---
 # <a name="aggregationtype-element-assl"></a>AggregationType 元素 (ASSL)
-  定義所儲存的彙總類型[分割](../objects/partition-element-assl.md)項目。  
+  定義所儲存的彙總的型別[分割區](../objects/partition-element-assl.md)項目。  
   
 ## <a name="syntax"></a>語法  
   
@@ -62,7 +62,7 @@ ms.locfileid: "36035084"
 ## <a name="remarks"></a>備註  
  這個元素的值限制為下表所列的其中一個字串。  
   
-|ReplTest1|描述|  
+|值|描述|  
 |-----------|-----------------|  
 |*IndexedView*|此彙總會儲存在索引檢視表中。|  
 |*[資料表]*|此彙總會儲存在資料表中。|  

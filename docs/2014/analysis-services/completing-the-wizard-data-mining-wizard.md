@@ -1,5 +1,5 @@
 ---
-title: 正在完成精靈 （資料採礦精靈） |Microsoft 文件
+title: 正在完成精靈 （資料採礦精靈） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dm.dmwizard.finish.f1
 ms.assetid: 6aef1548-35eb-42fd-ae87-63650a79eda1
 caps.latest.revision: 27
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 1d013993f9a8e99898b78cfa520c474c788ac294
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 729d594d2ab714770ec168a347e044aa968d9865
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36031150"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37278424"
 ---
 # <a name="completing-the-wizard-data-mining-wizard"></a>正在完成精靈 (資料採礦精靈)
   使用 [正在完成精靈] 頁面，即可檢閱完成精靈時會建立的採礦結構。 您也可以設定採礦結構的名稱。  
@@ -65,7 +65,7 @@ ms.locfileid: "36031150"
   
 ## <a name="see-also"></a>另請參閱  
  [資料採礦精靈 F1 說明&#40;Analysis Services-資料採礦&#41;](data-mining-wizard-f1-help-analysis-services-data-mining.md)   
- [選取資料來源檢視&#40;資料採礦精靈&#41;](select-data-source-view-data-mining-wizard.md)   
+ [選取 [資料來源檢視]&#40;資料採礦精靈&#41;](select-data-source-view-data-mining-wizard.md)   
  [指定定型資料&#40;資料採礦精靈&#41;](specify-the-training-data-data-mining-wizard.md)  
   
   

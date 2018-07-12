@@ -1,5 +1,5 @@
 ---
-title: 封鎖元素 (ASSL) |Microsoft 文件
+title: 封鎖元素 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - Blocks element
 ms.assetid: d6fd4e6b-b5bd-43cd-9c28-48af57cf977c
 caps.latest.revision: 32
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: bf944cc053e7a8c32efec50d10f6cc176942cce1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c2776ea261c26bd8c53d3f78ba29231823bb659d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36033353"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37161319"
 ---
 # <a name="blocks-element-assl"></a>Blocks 元素 (ASSL)
-  包含代表的二進位內容的二進位資料區塊集合[ClrAssemblyFile](../data-type/clrassemblyfile-data-type-assl.md)項目。  
+  包含的二進位表示的二進位內容的資料區塊集合[ClrAssemblyFile](../data-type/clrassemblyfile-data-type-assl.md)項目。  
   
 ## <a name="syntax"></a>語法  
   
@@ -64,7 +64,7 @@ ms.locfileid: "36033353"
 |子元素|[區塊](../objects/block-element-assl.md)|  
   
 ## <a name="remarks"></a>備註  
- 對應目的父代的項目`Blocks`在 「 分析管理物件 (AMO) 物件模型而言， <xref:Microsoft.AnalysisServices.ClrAssemblyFile>。  
+ 對應至父系的元素`Blocks`在 「 分析管理物件 (AMO) 物件模型是<xref:Microsoft.AnalysisServices.ClrAssemblyFile>。  
   
 ## <a name="see-also"></a>另請參閱  
  [Assembly 項目&#40;ASSL&#41;](../objects/assembly-element-assl.md)   

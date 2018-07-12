@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - containers [Integration Services], transactions
 - transactions [Integration Services], about transactions in packages
@@ -18,13 +18,13 @@ ms.assetid: 3c78bb26-ddce-4831-a5f8-09d4f4fd53cc
 caps.latest.revision: 50
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 880fd7d655b572f264f5120849cb5a927cdaaa59
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 4002487af9dba5e4466b75e3fce19ce0c9b8d531
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36031666"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37165009"
 ---
 # <a name="integration-services-transactions"></a>Integration Services 交易
   封裝使用交易將工作執行的資料庫動作繫結至原子單位，這樣可以保持資料的完整性。 所有 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 容器類型 (封裝、For 迴圈、Foreach 迴圈和時序容器，以及封裝每個工作的工作主機) 皆可設定成使用交易。 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 提供三個設定交易的選項，分別是 **NotSupported**、 **Supported**及 **Required**。  
@@ -38,11 +38,11 @@ ms.locfileid: "36031666"
  您可以設定容器上的 TransactionOption 屬性來設定交易。 使用 **中的** [屬性] [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]視窗，可以設定此屬性，也可以程式設計方式設定屬性。  
   
 > [!NOTE]  
->  `TransactionOption` 屬性會影響是否會套用容器所要求的 `IsolationLevel` 屬性值。 如需詳細資訊，請參閱描述`IsolationLevel`主題中的屬性[設定封裝屬性](set-package-properties.md)。  
+>  `TransactionOption` 屬性會影響是否會套用容器所要求的 `IsolationLevel` 屬性值。 如需詳細資訊，請參閱說明`IsolationLevel`主題中的屬性[設定封裝屬性](set-package-properties.md)。  
   
 ### <a name="to-configure-a-package-to-use-transactions"></a>若要設定封裝使用交易  
   
--   [封裝設定成使用交易](../relational-databases/native-client-ole-db-transactions/transactions.md)  
+-   [設定套件來使用交易](../relational-databases/native-client-ole-db-transactions/transactions.md)  
   
 ## <a name="external-resources"></a>外部資源  
   

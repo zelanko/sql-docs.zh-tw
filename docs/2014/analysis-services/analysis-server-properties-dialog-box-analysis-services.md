@@ -1,5 +1,5 @@
 ---
-title: Analysis Server 屬性對話方塊 (Analysis Services) |Microsoft 文件
+title: Analysis Server 屬性對話方塊 (Analysis Services) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - SQL12.ASVS.SSMSIMBI.SERVERPROPERTIES.F1
 - SQL12.ASVS.SQLSERVERSTUDIO.SERVERPROPERTIES.F1
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - Analysis Server Properties dialog box
 ms.assetid: b01ec658-c191-49c9-a6cb-549b21a368ab
 caps.latest.revision: 21
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 60183e1c37a7e94b4b3b88239b837530ef81826c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 8e3dfe081a2400c795b8c0bd08a5667eaa996268
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36032440"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37260011"
 ---
 # <a name="analysis-server-properties-dialog-box-analysis-services"></a>Analysis Server 屬性對話方塊 (Analysis Services)
   使用 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 中的 [Analysis Server 屬性] 對話方塊，即可設定 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 執行個體的一般、語言/定序和安全性設定。 以滑鼠右鍵按一下**物件總管**中的 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 執行個體，然後從操作功能表選取 [屬性]，即可顯示 [Analysis Server 屬性] 對話方塊。 **[Analysis Server 屬性]** 對話方塊包含以下屬性。  
@@ -81,7 +81,7 @@ ms.locfileid: "36032440"
   
 -   [區分大小寫] 是用來根據針對關聯之語言或字母提供的字典規則來排序和比較資料，以及區別大寫和小寫字母。  
   
-     如果未選取此選項， [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 會將大小寫字母視為相同。 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 不會不會定義小寫字母排序較低或高比大寫子母時**區分大小寫**未選取。  
+     如果未選取此選項， [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 會將大小寫字母視為相同。 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 未定義小寫字母排序較低或更高的版本比大寫子母**區分大小寫**未選取。  
   
 -   [區分腔調字] 是用來根據為關聯之語言或字母提供的字典規則來排序和比較資料，以及區別有腔調和無腔調字元。 例如，'a' 不等於 'á'。  
   
@@ -101,7 +101,7 @@ ms.locfileid: "36032440"
 ## <a name="see-also"></a>另請參閱  
  [判斷 Analysis Services 執行個體的伺服器模式](instances/determine-the-server-mode-of-an-analysis-services-instance.md)   
  [Analysis Services 中設定伺服器屬性](server-properties/server-properties-in-analysis-services.md)   
- [Analysis Services 支援的驗證方法](instances/authentication-methodologies-supported-by-analysis-services.md)   
+ [支援的 Analysis Services 的驗證方法](instances/authentication-methodologies-supported-by-analysis-services.md)   
  [角色和權限&#40;Analysis Services&#41;](multidimensional-models/roles-and-permissions-analysis-services.md)   
  [語言和定序&#40;Analysis Services&#41;](languages-and-collations-analysis-services.md)  
   

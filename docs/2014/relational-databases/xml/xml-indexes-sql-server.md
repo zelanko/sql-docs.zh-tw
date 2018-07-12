@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-xml
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - removing indexes
 - deleting indexes
@@ -34,18 +34,18 @@ helpviewer_keywords:
 - XML indexes [SQL Server], creating
 ms.assetid: f5c9209d-b3f3-4543-b30b-01365a5e7333
 caps.latest.revision: 58
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: aeb1c0f282e0cb46bcb1e35af933a67b84eb4e0d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 6842ef037bd8543a569449282886b9f943b8114f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36033195"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37152079"
 ---
 # <a name="xml-indexes-sql-server"></a>XML 索引 (SQL Server)
-  上可以建立 XML 索引`xml`資料類型資料行。 它們會在資料行中為整個 XML 執行個體的所有標記、值和路徑編制索引，進而提高查詢效能。 在下列情況下，您的應用程式可從 XML 索引獲益：  
+  可以在建立 XML 索引`xml`資料類型資料行。 它們會在資料行中為整個 XML 執行個體的所有標記、值和路徑編制索引，進而提高查詢效能。 在下列情況下，您的應用程式可從 XML 索引獲益：  
   
 -   在您的工作負載中，經常會查詢 XML 資料行。 必須將資料修改期間的 XML 索引維護成本納入考量。  
   
@@ -76,7 +76,7 @@ WHERE CatalogDescription.exist ('/PD:ProductDescription/@ProductModelID[.="19"]'
   
  為了選取符合 `WHERE` 子句中條件的 XML 執行個體，在執行階段會切割 `Production.ProductModel` 資料表之每個資料列中的 XML 二進位大型物件 (BLOB)。 然後，便評估 `(/PD:ProductDescription/@ProductModelID[.="19"]`方法中的運算式 `exist()` )。 此執行階段的切割可能會非常費時，端視資料行中所儲存的執行個體之大小與數目而定。  
   
- 如果查詢 XML 二進位大型物件 (Blob) 常在應用程式環境中，它可協助索引`xml`類型資料行。 但是，在修改資料期間會有維護索引的相關成本。  
+ 如果查詢 XML 二進位大型物件 (Blob) 常在您的應用程式環境中，它可協助索引`xml`類型資料行。 但是，在修改資料期間會有維護索引的相關成本。  
   
 ## <a name="primary-xml-index"></a>主要 XML 索引  
  主要 XML 索引會在 XML 資料行中檢索 XML 執行個體內的所有標記、值與路徑。 若要建立主要 XML 索引，出現 XML 資料行之資料表必須在資料表的主索引鍵上，具有叢集索引。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用此主索引鍵，以將主要 XML 索引中的資料列與內含 XML 資料行之資料表中的資料列相互關聯。  
@@ -172,7 +172,7 @@ WHERE CatalogDescription.exist ('/PD:ProductDescription/@ProductModelID[.="19"]'
   
 -   在 `/book[@* = "someValue"]` 中，查詢會尋找某些屬性中包含值 `"someValue"` 的 <`book`> 元素。  
   
- 下列查詢會從 `ContactID` 資料表傳回 `Contact` 。 `WHERE`子句可指定篩選，中尋找值`AdditionalContactInfo``xml`類型資料行。 如果對應的其他連絡資訊 XML 二進位大型物件包含特定的電話號碼，就會傳回連絡識別碼。 因為 <`telephoneNumber`> 元素有可能出現在 XML 的任何位置，所以路徑運算式會指定 descendent-or-self 軸。  
+ 下列查詢會從 `ContactID` 資料表傳回 `Contact` 。 `WHERE`子句可指定篩選值中尋找`AdditionalContactInfo``xml`類型資料行。 如果對應的其他連絡資訊 XML 二進位大型物件包含特定的電話號碼，就會傳回連絡識別碼。 因為 <`telephoneNumber`> 元素有可能出現在 XML 的任何位置，所以路徑運算式會指定 descendent-or-self 軸。  
   
 ```  
 WITH XMLNAMESPACES (  
@@ -187,7 +187,7 @@ WHERE  AdditionalContactInfo.exist('//ACT:telephoneNumber/ACT:number[.="111-111-
  在此情況下，雖然已得知 <`number`> 的搜尋值，但它有可能以 <`telephoneNumber`> 元素的子系出現在 XML 執行個體中的任何位置。 此類的查詢可從以特定值為基礎的索引查閱獲益。  
   
 ### <a name="property-secondary-index"></a>PROPERTY 次要索引  
- 從個別 XML 執行個體擷取一或多個值的查詢可從 PROPERTY 索引獲益。 當您擷取物件屬性使用時，就會發生這種情況下**value （)** 方法`xml`類型和當物件的主索引鍵值為已知的。  
+ 從個別 XML 執行個體擷取一或多個值的查詢可從 PROPERTY 索引獲益。 當您擷取物件屬性使用時，就會發生此情況**value （)** 方法`xml`型別，且當已知物件的主索引鍵值。  
   
  PROPERTY 索引是建立在主要 XML 索引的資料行 (PK、Path 以及節點值) 上，在主要 XML 索引中 PK 是基底資料表的主索引鍵。  
   
@@ -202,7 +202,7 @@ FROM Production.ProductModel
 WHERE ProductModelID = 19  
 ```  
   
- 本主題稍後所述的差異，除了建立 XML 索引上`xml`類型資料行是類似於建立非索引`xml`類型資料行。 下列 [!INCLUDE[tsql](../../includes/tsql-md.md)] DDL 陳述式可用以建立及管理 XML 索引：  
+ 本主題稍後所述的差異，除了建立 XML 索引上`xml`類型資料行是類似於建立索引，非`xml`類型資料行。 下列 [!INCLUDE[tsql](../../includes/tsql-md.md)] DDL 陳述式可用以建立及管理 XML 索引：  
   
 -   [CREATE INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-index-transact-sql)  
   

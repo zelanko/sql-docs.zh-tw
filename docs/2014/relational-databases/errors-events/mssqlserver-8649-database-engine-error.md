@@ -5,23 +5,22 @@ ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - 8649 (Database Engine error)
 ms.assetid: 992dbc74-7c3a-498b-9f1b-b28387640677
 caps.latest.revision: 15
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 3da65279260e142385a7b872c7234cb0f0b6bc8a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 6a6d23ff0b9139fab5b85fbdd922d5e3cf18ca3e
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36023983"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37410647"
 ---
 # <a name="mssqlserver8649"></a>MSSQLSERVER_8649
     

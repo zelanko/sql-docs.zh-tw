@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-data-tier-apps
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - designing DACs
 - How to [DAC]
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - wizard [DAC]
 ms.assetid: a04a2aba-d07a-4423-ab8a-0a31658f6317
 caps.latest.revision: 26
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: c3fb074e97422942dfe9cac25a84c47ff65bac9e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 74e9a61fb053a1d861a6be732ae9a0ac0eb3060a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36035010"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37152499"
 ---
 # <a name="data-tier-applications"></a>資料層應用程式
   資料層應用程式 (DAC) 是邏輯資料庫管理實體，會定義與使用者資料庫相關聯的所有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 物件，如資料表、檢視表，以及包括登入的執行個體物件。 DAC 是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫部署的自主單位，可讓資料層開發人員和資料庫管理員將 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 物件包裝為可攜式成品，稱為 DAC 封裝，又稱為 DACPAC。  
@@ -115,7 +115,7 @@ ms.locfileid: "36035010"
  這些功能都受到資料庫管理工具支援：Server Management Studio、SQL Azure 管理入口網站和 DACFx API。  
   
 ## <a name="permissions"></a>Permissions  
- 您必須是成員`dbmanager`角色或指派`CREATE DATABASE`建立資料庫，包括透過部署 DAC 封裝建立資料庫的權限。 您必須是成員`dbmanager`角色，或被指派`DROP DATABASE`卸除資料庫的權限。  
+ 您必須是隸屬`dbmanager`角色指派或`CREATE DATABASE`建立資料庫，包括部署 DAC 封裝中建立資料庫的權限。 您必須是隸屬`dbmanager`角色，或被指派`DROP DATABASE`卸除資料庫的權限。  
   
 ## <a name="data-tier-application-tasks"></a>資料層應用程式工作  
   

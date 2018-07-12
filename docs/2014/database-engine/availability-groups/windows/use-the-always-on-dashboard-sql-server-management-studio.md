@@ -1,14 +1,13 @@
 ---
-title: 使用 AlwaysOn 儀表板 (SQL Server Management Studio) |Microsoft 文件
+title: 使用 AlwaysOn 儀表板 (SQL Server Management Studio) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.agdashboard.f1
 helpviewer_keywords:
@@ -16,15 +15,15 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], dashboard
 ms.assetid: c9ba2589-139e-42bc-99e1-94546717c64d
 caps.latest.revision: 28
-author: MikeRayMSFT
-ms.author: mikeray
-manager: jhubbard
-ms.openlocfilehash: 60d75f53c84d652b0d719ba73980cfbff6d08424
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 207f67602fd55e5186a64ba9b30df7230a35d1b3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36033412"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37163519"
 ---
 # <a name="use-the-alwayson-dashboard-sql-server-management-studio"></a>Use the AlwaysOn Dashboard (SQL Server Management Studio)
   資料庫管理員可以使用 AlwaysOn 儀表板，在 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]中取得 AlwaysOn 可用性群組及其可用性複本和資料庫的健全狀況摘要檢視。 AlwaysOn 儀表板的部分一般用法包括：  
@@ -97,7 +96,7 @@ ms.locfileid: "36033412"
 -   **手動**： 表示沒有任何複本處於自動容錯移轉模式。  
   
  **問題**  
- 按一下 [問題] 連結可開啟給定問題的疑難排解文件集。 如需所有 AlwaysOn 原則問題的清單，請參閱[與 AlwaysOn 可用性群組 (SQL Server) 的操作問題適用的 AlwaysOn 原則](always-on-policies-for-operational-issues-always-on-availability.md)。  
+ 按一下 [問題] 連結可開啟給定問題的疑難排解文件集。 如需所有 AlwaysOn 原則問題的清單，請參閱 < [AlwaysOn 可用性群組 (SQL Server) 操作問題適用的 AlwaysOn 原則](always-on-policies-for-operational-issues-always-on-availability.md)。  
   
 > [!TIP]  
 >  按一下資料行標題可依照可用性群組、主要執行個體、容錯移轉模式或問題的名稱排序可用性群組資訊。  
@@ -138,7 +137,7 @@ ms.locfileid: "36033412"
 -   **手動**： 表示沒有任何複本處於自動容錯移轉模式。  
   
  **同步處理狀態**  
- 指出次要複本目前是否與主要複本進行同步處理。 預設顯示此資料行。 可能的值為：  
+ 指出次要複本目前是否與主要複本進行同步處理。 預設顯示此資料行。 可能值為：  
   
 -   **未同步處理**： 複本中的一個或多個資料庫尚未同步處理，或者尚未聯結至可用性群組。  
   
@@ -152,10 +151,10 @@ ms.locfileid: "36033412"
 -   **NULL**： 未知的狀態。 當本機伺服器執行個體無法與 WSFC 容錯移轉叢集通訊 (亦即，本機節點不屬於 WSFC 仲裁的一部分) 時，就會出現這個值。  
   
  **問題**  
- 列出問題名稱。 預設顯示此值。 如需所有 AlwaysOn 原則問題的清單，請參閱[與 AlwaysOn 可用性群組 (SQL Server) 的操作問題適用的 AlwaysOn 原則](always-on-policies-for-operational-issues-always-on-availability.md)。  
+ 列出問題名稱。 預設顯示此值。 如需所有 AlwaysOn 原則問題的清單，請參閱 < [AlwaysOn 可用性群組 (SQL Server) 操作問題適用的 AlwaysOn 原則](always-on-policies-for-operational-issues-always-on-availability.md)。  
   
  **可用性模式**  
- 指出您個別針對每個可用性複本所設定的複本屬性。 預設隱藏此值。 可能的值為：  
+ 指出您個別針對每個可用性複本所設定的複本屬性。 預設隱藏此值。 可能值為：  
   
 -   **非同步**： 次要複本永遠不會變成與主要複本進行同步處理。  
   
@@ -168,7 +167,7 @@ ms.locfileid: "36033412"
  指出用來連接到次要複本的模式。  預設隱藏此值。  
   
  **連接狀態**  
- 指出次要複本目前是否已連接到主要複本。 預設隱藏此資料行。 可能的值為：  
+ 指出次要複本目前是否已連接到主要複本。 預設隱藏此資料行。 可能值為：  
   
 -   **已中斷連接**： 若為遠端可用性複本，表示它與本機可用性複本已中斷連接。 本機複本對 [已中斷連接] 狀態的回應取決於其角色，如下所示：  
   
@@ -179,7 +178,7 @@ ms.locfileid: "36033412"
 -   **Connected**。 目前連接到本機複本的遠端可用性複本。  
   
  **操作狀態**  
- 指出次要複本的目前操作狀態。 預設隱藏此值。 可能的值為：  
+ 指出次要複本的目前操作狀態。 預設隱藏此值。 可能值為：  
   
  **0**.暫止容錯移轉  
   
@@ -268,20 +267,20 @@ ms.locfileid: "36033412"
     >  當資料庫處於 INITIALIZING 狀態時，強制容錯移轉至次要複本一定會將資料庫保留在無法啟動的狀態。  
   
  **Failover Readiness**  
- 指出哪個可用性複本可能會在遺失資料或不遺失資料的情況下容錯移轉。 預設顯示此資料行。 可能的值為：  
+ 指出哪個可用性複本可能會在遺失資料或不遺失資料的情況下容錯移轉。 預設顯示此資料行。 可能值為：  
   
 -   **資料遺失**  
   
 -   **不遺失資料**  
   
  **問題**  
- 列出問題名稱。 預設顯示此資料行。 可能的值為：  
+ 列出問題名稱。 預設顯示此資料行。 可能值為：  
   
 -   **警告**： 按一下可顯示臨界值和警告問題。  
   
 -   **關鍵**： 按一下可顯示關鍵問題。  
   
- 如需所有 AlwaysOn 原則問題的清單，請參閱[與 AlwaysOn 可用性群組 (SQL Server) 的操作問題適用的 AlwaysOn 原則](always-on-policies-for-operational-issues-always-on-availability.md)。  
+ 如需所有 AlwaysOn 原則問題的清單，請參閱 < [AlwaysOn 可用性群組 (SQL Server) 操作問題適用的 AlwaysOn 原則](always-on-policies-for-operational-issues-always-on-availability.md)。  
   
  **已暫停**  
  指出資料庫 **[已暫停]** 或 **[已繼續]**。 預設隱藏此值。  

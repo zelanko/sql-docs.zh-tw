@@ -5,25 +5,24 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - "10061"
 helpviewer_keywords:
 - 10061 (Database Engine error)
 ms.assetid: 729602f3-08df-474c-8740-8dea13c1eee3
 caps.latest.revision: 11
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: b8aa0fa832c39339c1653ab78a166bd7dfb821dc
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 77bc96002914c13ad3e64ceed96114bcc7e277cc
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36022877"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37414987"
 ---
 # <a name="mssqlserver10061"></a>MSSQLSERVER_10061
     

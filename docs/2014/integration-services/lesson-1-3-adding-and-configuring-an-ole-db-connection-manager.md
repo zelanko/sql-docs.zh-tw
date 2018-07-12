@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: e7b74cba-a0e5-4478-af12-3f81b9484e9e
 caps.latest.revision: 19
-author: douglaslM
+author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 4246a4ae586ad6fc526ef618e0a249706d0baa3d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 0ee2567823ff401df3d1b0b9c64af88d8d5435da
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36031254"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37240918"
 ---
 # <a name="step-3-adding-and-configuring-an-ole-db-connection-manager"></a>步驟 3：加入和設定 OLE DB 連接管理員
   在加入一般檔案連接管理員來連接到資料來源之後，下一項工作是加入 OLE DB 連接管理員來連接到目的地。 OLE DB 連接管理員可讓封裝從任何 OLE DB 相容資料來源擷取資料或載入資料至該處。 使用 OLE DB 連接管理員，您可以指定連接的伺服器、驗證方法和預設資料庫。  
@@ -38,7 +38,7 @@ ms.locfileid: "36031254"
   
 4.  在 **[登入伺服器]** 群組中，確認已選取 **[使用 Windows 驗證]** 。  
   
-5.  在**連接到資料庫**群組中**選取或輸入資料庫名稱**方塊中，輸入或選取`AdventureWorksDW2012`。  
+5.  在 **連接到資料庫**群組中**選取或輸入資料庫名稱**方塊中，輸入或選取`AdventureWorksDW2012`。  
   
 6.  按一下 **[測試連接]** 以確認您指定的連接設定有效。  
   
@@ -51,7 +51,7 @@ ms.locfileid: "36031254"
 10. 按一下 [確定] 。  
   
 ## <a name="next-task-in-lesson"></a>本課程的下一項工作  
- [步驟 4： 將資料流程工作加入封裝](lesson-1-4-adding-a-data-flow-task-to-the-package.md)  
+ [步驟 4：將資料流程工作新增至套件中](lesson-1-4-adding-a-data-flow-task-to-the-package.md)  
   
 ## <a name="see-also"></a>另請參閱  
  [OLE DB 連線管理員](connection-manager/ole-db-connection-manager.md)  

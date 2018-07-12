@@ -1,5 +1,5 @@
 ---
-title: 屬性辨識索引標籤 （採礦模型檢視器） |Microsoft 文件
+title: 屬性辨識索引標籤 （採礦模型檢視器） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dm.miningmodeleditor.naivebayse.discrimination.f1
 ms.assetid: 68323f23-121e-44fc-be85-6f9915d6d3c7
 caps.latest.revision: 22
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 43ce0c215ac82eff64b688d6004dfd9c7af66266
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 2e661e6a993639d3eac86bd5fb45f607ba8d346f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36034278"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37161519"
 ---
 # <a name="attribute-discrimination-tab-mining-model-viewer"></a>屬性辨識索引標籤 (採礦模型檢視器)
   使用 [屬性辨識] 索引標籤，即可比較輸入屬性的狀態以及查看它們與結果屬性如何相關。 先列出造成兩個選取的可預測屬性狀態之間最大差異的屬性值。  
@@ -47,14 +47,14 @@ ms.locfileid: "36034278"
  **值 2**  
  選取一種可預測屬性狀態，和 **[值 1]** 裡包含的狀態進行比較。 還可以選取 [所有其他的狀態]，以比較 [值 1] 中的值與其補數 (即值 1 以外的所有其他值)。  
   
- **辨識分數\<值 1 > 和\<值 2 >**  
+ **辨識率\<值 1 > 和\<值 2 >**  
  圖形包含下列資料行，描述目標屬性與輸入屬性的特定狀態如何相關。  
   
-|ReplTest1|描述|  
+|值|描述|  
 |-----------|-----------------|  
 |**屬性**|採礦模型中的輸入屬性。|  
 |**值**|列在 [屬性] 中之屬性的狀態。|  
-|**喜好\<1 值 >**|長條表示目前屬性和值是否喜好 [值 1] 中所選的目標結果。|  
+|**喜好\<值 1 >**|長條表示目前屬性和值是否喜好 [值 1] 中所選的目標結果。|  
 |**喜好\<值 2 >**|長條表示目前屬性和值是否喜好 [值 2] 中所選的目標結果。|  
   
 ## <a name="see-also"></a>另請參閱  

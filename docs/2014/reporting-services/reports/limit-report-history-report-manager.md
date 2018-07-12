@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - viewing report history
 - report history [Reporting Services], viewing history
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - displaying report history
 ms.assetid: 8e255792-d9ef-496f-a26c-9e969c1209a0
 caps.latest.revision: 35
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 91bb20ac70caf7d7d3e863c975415205badbc063
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: e3e0f1978079b63499c39120fb47173cb603e657
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36032945"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37153749"
 ---
 # <a name="limit-report-history-report-manager"></a>限制報表記錄 (報表管理員)
   報表記錄是您在經過一段時間後建立之報表快照集的集合。 您可以視需要建立報表記錄，或是排程在報表記錄中建立和加入快照集的頻率。  
@@ -51,7 +51,7 @@ ms.locfileid: "36032945"
 4.  選取報表的選項，然後按一下 [套用]。 如需每個選項的詳細資訊，請參閱[快照集選項屬性頁 &#40;報表管理員&#41;](../snapshot-options-properties-page-report-manager.md)。  
   
 ## <a name="see-also"></a>另請參閱  
- [將加入報表記錄快照集&#40;報表管理員&#41;](../report-server/add-a-snapshot-to-report-history-report-manager.md)   
+ [將快照集加入報表記錄&#40;報表管理員&#41;](../report-server/add-a-snapshot-to-report-history-report-manager.md)   
  [報表管理員 &#40;SSRS 原生模式&#41;](../report-manager-ssrs-native-mode.md)  
   
   

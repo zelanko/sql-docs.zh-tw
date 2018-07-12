@@ -1,5 +1,5 @@
 ---
-title: 決策樹模型的採礦模型內容 (Analysis Services-資料採礦) |Microsoft 文件
+title: 決策樹模型的採礦模型內容 (Analysis Services-資料採礦) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,25 +8,25 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - mining model content, decision tree models
 - decision tree algorithms [Analysis Services]
 - decision trees [Analysis Services]
 ms.assetid: ac358399-10f8-4238-be32-a914a2e49048
 caps.latest.revision: 25
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 7ced4dd7c81ab5c3851b180394d75d80d35c502f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ae76bbfc4e85e0f01e384849bf6b67e52f4c574f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36033149"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37161659"
 ---
 # <a name="mining-model-content-for-decision-tree-models-analysis-services---data-mining"></a>Mining Model Content for Decision Tree Models (Analysis Services - Data Mining)
-  本主題描述使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 決策樹演算法的模型專用的採礦模型內容。 採礦模型內容的所有模型類型的一般說明，請參閱[採礦模型內容&#40;Analysis Services-資料採礦&#41;](mining-model-content-analysis-services-data-mining.md)。 請務必記住，Microsoft 決策樹演算法是一種混合式演算法，可以建立功能非常不同的模型：決策樹可以代表關聯、規則，甚至線性迴歸。 樹狀結構基本上相同，但是您解譯資訊的方式將取決於建立模型的目的。  
+  本主題描述使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 決策樹演算法的模型專用的採礦模型內容。 所有模型類型採礦模型內容的一般說明，請參閱 <<c0> [ 採礦模型內容&#40;Analysis Services-Data Mining&#41;](mining-model-content-analysis-services-data-mining.md)。</c0> 請務必記住，Microsoft 決策樹演算法是一種混合式演算法，可以建立功能非常不同的模型：決策樹可以代表關聯、規則，甚至線性迴歸。 樹狀結構基本上相同，但是您解譯資訊的方式將取決於建立模型的目的。  
   
 ##  <a name="bkmk_Top"></a> 了解決策樹模型的結構  
  決策樹模型擁有代表模型及其中繼資料的單一父節點。 父節點下為獨立的樹狀結構，代表您選取的可預測屬性。 例如，如果您設定決策樹模型來預測客戶是否會購買某樣東西，而且提供性別和收入的輸入，此模型就會建立購買屬性的單一樹狀結構，其中包含針對性別和收入相關條件分類的許多分支。  
@@ -36,7 +36,7 @@ ms.locfileid: "36033149"
 > [!NOTE]  
 >  如果您的模型包含多個樹狀結構，可以在 **[Microsoft 樹狀檢視器]** 中，一次僅檢視一個樹狀結構。 不過，在 **[一般內容樹狀檢視器]** 中，相同模型中的所有樹狀結構會同時顯示出來。  
   
- ![決策樹模型內容結構](../media/modelcontentstructure-dt.gif "的決策樹模型內容結構")  
+ ![結構的決策樹模型內容](../media/modelcontentstructure-dt.gif "的決策樹模型內容結構")  
   
  每個可預測屬性的樹狀結構所包含的資訊會描述您選擇的輸入資料行如何影響該特定可預測屬性和結果。 每個樹狀結構開頭都是一個包含可預測屬性的節點 (NODE_TYPE = 9)，後面接著代表輸入屬性的一連串節點 (NODE_TYPE = 10)。 屬性會對應到案例層級的資料行或巢狀資料表資料行的值，這通常是巢狀資料表之 `Key` 資料行中的值。  
   
@@ -52,7 +52,7 @@ ms.locfileid: "36033149"
 >  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 會自動選擇儲存連續屬性的方法，不過，您可以控制如何將輸入中的連續值離散化，方法是，將採礦結構資料行的內容類型設定為 `Discretized`，然後設定 <xref:Microsoft.AnalysisServices.ScalarMiningStructureColumn.DiscretizationBucketCount%2A> 或 <xref:Microsoft.AnalysisServices.ScalarMiningStructureColumn.DiscretizationMethod%2A> 屬性。  
   
 ##  <a name="bkmk_ModelContent"></a> 決策樹模型的模型內容  
- 本節僅針對採礦模型內容中與決策樹模型具有特定相關的資料行，提供詳細資料和範例。 如需一般用途資料行中的結構描述資料列集和採礦模型術語的說明資訊，請參閱[採礦模型內容&#40;Analysis Services-資料採礦&#41;](mining-model-content-analysis-services-data-mining.md)。  
+ 本節僅針對採礦模型內容中與決策樹模型具有特定相關的資料行，提供詳細資料和範例。 如需一般用途的資料行中的結構描述資料列集和採礦模型術語的說明資訊，請參閱[採礦模型內容&#40;Analysis Services-Data Mining&#41;](mining-model-content-analysis-services-data-mining.md)。  
   
  MODEL_CATALOG  
  模型儲存位置所在資料庫的名稱。  
@@ -193,7 +193,7 @@ ms.locfileid: "36033149"
   
 |||  
 |-|-|  
-|**NODE_CAPTION**|顯示區別相對於父節點之該特定節點的屬性。 節點標題會定義以母體為基礎之分岔條件的子區段。 例如，如果分岔位於 [Age]，和它三向分岔，三個子節點可能的節點標題"[Age] < 40"、"40 < = [Age] \< 50"、"[Age] > = 50"。|  
+|**NODE_CAPTION**|顯示區別相對於父節點之該特定節點的屬性。 節點標題會定義以母體為基礎之分岔條件的子區段。 例如，如果分岔位於 [Age]，而且它是三向分岔，三個節點可能的子系的節點標題"[Age] < 40"、"40 < = [Age] \< 50"，"[Age] > = 50"。|  
 |**NODE_DESCRIPTION**|包含區別各節點之屬性的完整清單，從模型父節點開始。 例如，Product name = Apple 而且 Color = Red。|  
   
 ###  <a name="NodeRule"></a> 節點規則與臨界規則  
@@ -229,7 +229,7 @@ ms.locfileid: "36033149"
 |Age < 30|40|Age < 30 而且 Gender = Male|30|30/40 = .75|30/100 = .30|  
 |||Age < 30 而且 Gender = Female|10|10/40 = .25|10/100 = .10|  
   
- 在所有模型中進行小調整就可以計算可能的遺漏值。 若是連續屬性，每個值範圍以狀態表示 (例如，Age \<30、 Age = 30，和 Age > 30) 和機率計算方式如下： 狀態存在 (值 = 1)，其他特定狀態存在 (值 = 0)，狀態是`Missing`. 如需如何調整機率來表示遺漏值的詳細資訊，請參閱[遺漏值 &#40;Analysis Services - 資料採礦&#41;](missing-values-analysis-services-data-mining.md)。  
+ 在所有模型中進行小調整就可以計算可能的遺漏值。 若是連續屬性，每個值範圍以狀態表示 (例如，Age \<Lt;30、age = 30，和 Age > 30) 和機率計算方式如下： 狀態存在 (值 = 1)，其他特定狀態存在 (值 = 0)，狀態會是`Missing`. 如需如何調整機率來表示遺漏值的詳細資訊，請參閱[遺漏值 &#40;Analysis Services - 資料採礦&#41;](missing-values-analysis-services-data-mining.md)。  
   
  每個節點的機率幾乎都直接從分佈計算，如下所示：  
   

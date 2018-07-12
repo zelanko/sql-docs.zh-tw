@@ -1,5 +1,5 @@
 ---
-title: SQL Server 服務安裝概觀 |Microsoft 文件
+title: SQL Server 服務安裝概觀 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,29 +8,29 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 6a9fd19b-2367-4908-b638-363b1e929e1e
 caps.latest.revision: 29
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: a3484136b913cf691a836a3065913f18de4f96ef
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 7906a576bab6ad6dd35da0f863a20ad02e56d342
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36031571"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37230154"
 ---
 # <a name="overview-of-sql-server-servicing-installation"></a>SQL Server 服務安裝概觀
   您可以使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 服務更新，將更新套用至任何已安裝的 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 元件。 如果現有 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 元件的版本層級比更新版本層級還新，則安裝程式會將其排除在更新作業外。 如需有關套用服務更新，請參閱[安裝 SQL Server 2014 服務更新](../../database-engine/install-windows/install-sql-server-servicing-updates.md)。  
   
  當您安裝 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 更新時，應該進行下列考量：  
   
--   您必須同時更新屬於 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的所有功能。 例如，更新 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 時，如果 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 和 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 元件與同一個 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體一起安裝，則您也必須更新這些元件。 共用功能，例如管理工具、 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]，和[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]，一律必須更新為最新的更新。 如果未選取功能樹狀目錄中的元件或執行個體，便不會更新元件或執行個體。  
+-   您必須同時更新屬於 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的所有功能。 例如，更新 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 時，如果 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 和 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 元件與同一個 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體一起安裝，則您也必須更新這些元件。 共用功能，例如管理工具[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]，並[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]，一律必須更新為最新的更新。 如果未選取功能樹狀目錄中的元件或執行個體，便不會更新元件或執行個體。  
   
--   根據預設，[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]更新記錄檔會儲存到 %Program Files %\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\120\Setup Bootstrap\LOG\\。  
+-   根據預設，[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]更新記錄檔會儲存到 %Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\120\Setup Bootstrap\LOG\\。  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝程式現在可以整合更新與原始媒體，以便同時執行原始媒體及更新。 如需詳細資訊，請參閱[What's New in SQL Server 安裝](../../../2014/sql-server/install/what-s-new-in-sql-server-installation.md)。  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝程式現在可以整合更新與原始媒體，以便同時執行原始媒體及更新。 如需詳細資訊，請參閱 < [What's New in SQL Server 安裝](../../../2014/sql-server/install/what-s-new-in-sql-server-installation.md)。  
   
 -   套用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 服務更新之前，建議您考慮將資料備份。  
   
@@ -53,7 +53,7 @@ ms.locfileid: "36031571"
 ### <a name="prepare-for-a-includesscurrentincludessscurrent-mdmd-update-installation"></a>準備安裝 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 更新  
  我們強烈建議您最好先執行以下作業再安裝 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 更新：  
   
--   **備份您[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]系統資料庫**— 在您安裝之前[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]更新、 備份`master`， `msdb`，和`model`資料庫。 安裝 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 更新會變更這些資料庫，而使它們無法與舊版 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 相容。 如果您決定要重新安裝 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] (不含這些更新)，則這些資料庫的備份就是必要項目。  
+-   **備份您[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]系統資料庫**— 在安裝之前[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]更新備份`master`， `msdb`，和`model`資料庫。 安裝 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 更新會變更這些資料庫，而使它們無法與舊版 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 相容。 如果您決定要重新安裝 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] (不含這些更新)，則這些資料庫的備份就是必要項目。  
   
      您也必須備份使用者資料庫。  
   
@@ -62,16 +62,16 @@ ms.locfileid: "36031571"
   
 -   **備份 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 資料庫、組態檔和儲存機制**：更新 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 的執行個體之前，應該先備份下列項目：  
   
-    -   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 資料庫。 根據預設，這些安裝在 C:\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\msas12.<instanceid>\olap\data\。\<執行個體識別碼 > \OLAP\Data\\。 WOW 安裝，預設路徑為 C:\ProgramFiles (x86) \ [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\msas12.<instanceid>\olap\data\。\<執行個體識別碼 > \OLAP\Data\\。  
+    -   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 資料庫。 根據預設，這些都會安裝在 C:\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSAS12。\<執行個體識別碼 > \OLAP\Data\\。 WOW 安裝，預設路徑為 C:\ProgramFiles (x86) \ [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSAS12。\<執行個體識別碼 > \OLAP\Data\\。  
   
-    -   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 在 msmdsrv.ini 組態檔中的組態設定。 根據預設，這位於 C:\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\msas12.<instanceid>\olap\data\。\<執行個體識別碼 > \OLAP\Config\ 目錄。  
+    -   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 在 msmdsrv.ini 組態檔中的組態設定。 根據預設，這位於 C:\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSAS12。\<執行個體識別碼 > \OLAP\Config\ 目錄。  
   
     -   (選擇性) 包含 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 儲存機制的資料庫。 只有在 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 已設定成使用決策支援物件 (DSO) 程式庫時，才需要執行此步驟。  
   
     > [!NOTE]  
     >  如果備份 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 資料庫、組態檔和儲存機制時發生失敗，則無法將已更新的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 執行個體還原為舊版。  
   
--   **確認系統資料庫擁有足夠的可用空間**— 如果自動成長選項未選取`master`和`msdb`系統資料庫，每個資料庫都必須擁有至少 500 KB 的可用空間。 若要確認資料庫是否有足夠的空間，請在 `sp_spaceused` 和 `master` 資料庫上，執行 `msdb` 系統預存程序。 如果其中一個資料庫的未配置空間少於 500 KB，請增加該資料庫的大小。  
+-   **確認系統資料庫擁有足夠的可用空間**— 如果自動成長選項未選取要`master`和`msdb`系統資料庫，每個資料庫都必須擁有至少 500 KB 的可用空間。 若要確認資料庫是否有足夠的空間，請在 `sp_spaceused` 和 `master` 資料庫上，執行 `msdb` 系統預存程序。 如果其中一個資料庫的未配置空間少於 500 KB，請增加該資料庫的大小。  
   
 -   **停止服務和應用程式**：若要避免系統可能重新啟動，請停止所有連接到正在升級之 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的應用程式和服務，然後再安裝 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 更新。 這些包括 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]、[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]。 如需詳細資訊，請參閱 [啟動、停止、暫停、繼續、重新啟動 Database Engine、SQL Server Agent 或 SQL Server Browser 服務](../../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md)。  
   
@@ -86,14 +86,14 @@ ms.locfileid: "36031571"
  本節將說明安裝程序。  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 將會安裝在電腦上具有系統管理權限的帳戶，必須安裝更新。 如果是本機安裝，您必須以管理員身分執行安裝程式。 如果您是從遠端共用位置安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，則必須使用對遠端共用位置具有讀取和執行權限的網域帳戶。  
+>  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 必須安裝更新，將會安裝在電腦上具有系統管理權限的帳戶。 如果是本機安裝，您必須以管理員身分執行安裝程式。 如果您是從遠端共用位置安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，則必須使用對遠端共用位置具有讀取和執行權限的網域帳戶。  
   
 #### <a name="starting-a-includesscurrentincludessscurrent-mdmd-update"></a>啟動 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 更新  
  若要安裝 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 更新，請執行自動解壓縮封裝檔案。  
   
- 累計更新封裝 (CU): \<SQLServer2014 >-x*PPP*.exe  
+ 累計更新封裝 (CU): \<SQLServer2014 >-KBxxxxxx-*PPP*.exe  
   
- Service pack 封裝 (PCU): \<SQLServer2014 >\<SPx > x LLL.exe  
+ Service pack 封裝 (PCU): \<SQLServer2014 >\<SPx >-KBxxxxxx-PPP-LLL.exe  
   
 -   x 表示 Service Pack 號碼  
   
@@ -101,15 +101,15 @@ ms.locfileid: "36031571"
   
 -   LLL 表示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 語言的字元縮寫，例如：英文的 LLL 為 ENU。  
   
- 若要將更新套用至屬於容錯移轉叢集一部分的 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 元件，請參閱容錯移轉叢集安裝的章節。 如需如何在自動模式中執行更新安裝的詳細資訊，請參閱[從命令提示字元安裝 SQL Server 2014](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md)。  
+ 若要將更新套用至屬於容錯移轉叢集一部分的 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 元件，請參閱容錯移轉叢集安裝的章節。 如需如何以自動模式中執行更新安裝的詳細資訊，請參閱[從命令提示字元安裝 SQL Server 2014](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md)。  
   
-####  <a name="Slipstream"></a> 產品更新[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]安裝  
+####  <a name="Slipstream"></a> 中的產品更新[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]安裝  
  產品更新是 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 安裝程式中的功能。 它可以整合最新產品更新與主要產品安裝，因此主要產品及其適用的更新可以同時安裝。 產品更新可以搜尋 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Update、Windows Server Update Services (WSUS)、本機資料夾，或可用更新的網路共用。  安裝程式找到最新版本的可用更新後，會使用目前的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝程序進行下載與整合。 產品更新可以引入累計更新、Service Pack，或 Service Pack 加上累計更新。 產品更新功能是 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] PCU1 中可用之匯集功能的延伸模組。  
   
-## <a name="updating-a-prepared-image-of-includessnoversionincludesssnoversion-mdmd"></a>更新備妥的映的像 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
+## <a name="updating-a-prepared-image-of-includessnoversionincludesssnoversion-mdmd"></a>更新備妥的映像 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
  您可以將更新套用到已備妥但是未設定的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體，而不需完成已備妥之執行個體的組態。 將更新套用至已備妥之 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的其他方式將於底下說明：  
   
--   更新的先前已備妥執行個體 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
+-   更新先前已備妥的執行個體 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
   
      已備妥之執行個體的更新可以在組態設定之前套用。 更新封裝會偵測到此執行個體位於備妥狀態，並將修補程式套用到備妥的執行個體，而不會完成組態設定。  
   

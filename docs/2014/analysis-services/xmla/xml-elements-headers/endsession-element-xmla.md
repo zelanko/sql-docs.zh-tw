@@ -1,5 +1,5 @@
 ---
-title: EndSession 元素 (XMLA) |Microsoft 文件
+title: EndSession 元素 (XMLA) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -24,20 +24,20 @@ helpviewer_keywords:
 - EndSession element
 ms.assetid: e64f1da4-5c83-40a2-b15e-837f5451bafa
 caps.latest.revision: 13
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: 1f54f1ec23fbb07744ffea1009f4df1aef11b6f4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 32c76318f05dbb628dd23de825203429ee0a22f3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36034846"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37148119"
 ---
 # <a name="endsession-element-xmla"></a>EndSession 元素 (XMLA)
-  在 SOAP 要求訊息中會使用 SOAP 標頭，結束執行個體上現有的工作階段[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]。  
+  在 SOAP 要求訊息中使用 SOAP 標頭，若要結束的執行個體上現有的工作階段[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]。  
   
- **命名空間**描述 urn:-microsoft-schemas-microsoft-com:-分析  
+ **命名空間**urn: schemas-microsoft-microsoft-schemas-microsoft-com:-分析  
   
 ## <a name="syntax"></a>語法  
   
@@ -84,7 +84,7 @@ ms.locfileid: "36034846"
 ## <a name="see-also"></a>另請參閱  
  [BeginSession 元素&#40;XMLA&#41;](session-element-xmla.md)   
  [工作階段項目&#40;XMLA&#41;](session-element-xmla.md)   
- [管理連接與工作階段&#40;XMLA&#41;](../../multidimensional-models-scripting-language-assl-xmla/managing-connections-and-sessions-xmla.md)   
+ [管理連接和工作階段&#40;XMLA&#41;](../../multidimensional-models-scripting-language-assl-xmla/managing-connections-and-sessions-xmla.md)   
  [標頭&#40;XMLA&#41;](xml-elements-headers.md)  
   
   

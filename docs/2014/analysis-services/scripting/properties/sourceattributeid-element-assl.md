@@ -1,5 +1,5 @@
 ---
-title: SourceAttributeID 元素 (ASSL) |Microsoft 文件
+title: SourceAttributeID 元素 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - SourceAttributeID element
 ms.assetid: 8973eb62-6142-4ce2-ad42-c8be2b43c04f
 caps.latest.revision: 33
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 06da8df2a164ee903b59dc2a154bca926c1b82f6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d30b6a54f90437baad822ba285bf0fc56a6a891d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36034859"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37157079"
 ---
 # <a name="sourceattributeid-element-assl"></a>SourceAttributeID 元素 (ASSL)
-  包含來源屬性的識別項 (ID)[層級](../objects/level-element-assl.md)項目為基礎。  
+  包含來源屬性的識別碼 (ID)[層級](../objects/level-element-assl.md)項目為基礎。  
   
 ## <a name="syntax"></a>語法  
   
@@ -62,7 +62,7 @@ ms.locfileid: "36034859"
 |子元素|無|  
   
 ## <a name="remarks"></a>備註  
- 對應至父系的項目`SourceAttributeID`在 「 分析管理物件 (AMO) 物件模型而言， <xref:Microsoft.AnalysisServices.Level>。  
+ 對應的父代的項目`SourceAttributeID`在 「 分析管理物件 (AMO) 物件模型是<xref:Microsoft.AnalysisServices.Level>。  
   
 ## <a name="see-also"></a>另請參閱  
  [屬性&#40;ASSL&#41;](properties-assl.md)  

@@ -1,5 +1,5 @@
 ---
-title: 第 3 課： 從報表伺服器載入報表定義 |Microsoft 文件
+title: 第 3 課： 從報表伺服器載入報表定義 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,25 +8,25 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 5ad8b31c-43b0-4481-a31b-090cbed4a438
 caps.latest.revision: 16
-author: douglaslM
+author: craigg-msft
 ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 912a149542133a4c2bbdf4dfecde2ac0313defd5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 2963895811f8567f5142ed9b49137123390ec8d6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36032906"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37149429"
 ---
 # <a name="lesson-3-load-a-report-definition-from-the-report-server"></a>第 3 課：從報表伺服器載入報表定義
   在您建立專案並從 RDL 結構描述產生類別之後，就可以開始從報表伺服器載入報表定義。  
   
 ### <a name="to-load-a-report-definition"></a>載入報表定義  
   
-1.  加入私用欄位頂端的`ReportUpdater`類別 (如果您使用的模組[!INCLUDE[vbprvb](../includes/vbprvb-md.md)]) 的`Report`類別。 此欄位將用來在應用程式使用期間，維護從報表伺服器載入的報表參考。  
+1.  在頂端新增私用欄位`ReportUpdater`類別 (如果您使用的模組[!INCLUDE[vbprvb](../includes/vbprvb-md.md)]) 的`Report`類別。 此欄位將用來在應用程式使用期間，維護從報表伺服器載入的報表參考。  
   
     ```csharp  
     private Report _report;  

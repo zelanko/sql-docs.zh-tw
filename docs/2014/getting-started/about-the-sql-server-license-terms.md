@@ -1,5 +1,5 @@
 ---
-title: 關於 SQL Server 授權條款 |Microsoft 文件
+title: 關於 SQL Server 授權條款 |Microsoft Docs
 ms.custom: ''
 ms.date: 05/24/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - licenses [SQL Server]
 - end user license agreement [SQL Server]
 ms.assetid: 51d130a1-2b48-439e-9447-783e1fc3f4fb
 caps.latest.revision: 55
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 8188409924e88fe800e95266b94a7f62f883cd72
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mightypen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: edfd3cdc1d6565fd6538dfcf5d79e9c1e7d4c9d1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36032823"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37165339"
 ---
 # <a name="about-the-sql-server-license-terms"></a>關於 SQL Server 授權條款
   在安裝 [!INCLUDE[msCoName](../includes/msconame-md.md)] 時，[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 軟體授權條款會複製到本機電腦。 如果在同一部電腦上安裝了相同 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 版本和語言的多個執行個體，一份授權條款便可適用於該版本和語言的所有執行個體。 這些檔案會寫入至: %programfiles%\\[!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]\120\License Terms\ 或 %programfiles(x86)%\[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]\120\License 條款\\。  
@@ -68,11 +68,11 @@ ms.locfileid: "36032823"
 |俄文|RUS|1049|  
   
 ## <a name="includessnoversionincludesssnoversion-mdmd-licensing-options"></a>[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 授權選項  
- 如需有關[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]計價和授權選項，請參閱[Microsoft SQL Server](http://www.microsoft.com/sqlserver/sql-server-2014.aspx) (http://www.microsoft.com/sqlserver/sql-server-2014.aspx)網站。  
+ 如需詳細資訊[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]計價和授權選項，請參閱[Microsoft SQL Server](http://www.microsoft.com/sqlserver/sql-server-2014.aspx) (http://www.microsoft.com/sqlserver/sql-server-2014.aspx)網站。  
   
 ## <a name="see-also"></a>另請參閱  
  [SQL Server 的授權考量](../../2014/sql-server/install/licensing-considerations-for-sql-server.md)   
  [Microsoft SQL Server 隱私權聲明](../../2014/getting-started/microsoft-sql-server-privacy-statement.md)   
- [文件集的法律注意事項](../../2014/getting-started/legal-notice-for-documentation.md)  
+ [文件的法律注意事項](../../2014/getting-started/legal-notice-for-documentation.md)  
   
   

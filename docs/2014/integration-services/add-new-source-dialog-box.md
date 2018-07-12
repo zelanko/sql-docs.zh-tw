@@ -1,5 +1,5 @@
 ---
-title: 加入新來源對話方塊 |Microsoft 文件
+title: 加入新來源對話方塊 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.addNewSource.f1
 ms.assetid: 619e437b-e00f-49a9-a94c-8feafc4af713
 caps.latest.revision: 4
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: f84e1344f6d15f4b0e86549fe9f28d98ef45df39
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 173610b33aac8c7ae4005394fe23fd98a53fac1c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36034831"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37164949"
 ---
 # <a name="add-new-source-dialog-box"></a>加入新來源對話方塊
   下表列出可以在 [加入新來源] 對話方塊中使用的選項。  

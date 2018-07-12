@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.reportserver.serverproperties.security.f1
 ms.assetid: f49aedc6-f145-4df1-8f69-d5d910f492c6
 caps.latest.revision: 10
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 722a2b825b0ec56b7932de29a74faf74627834f0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: cefcaaf281cf8b3981fec2383fd004ad8bd8f967
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36033178"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37153679"
 ---
 # <a name="server-properties-security-page---reporting-services"></a>伺服器屬性 (安全性頁面) - Reporting Services
   您可以使用這個頁面來關閉可能會危害報表伺服器的功能。 雖然關閉這些功能會限制某些功能，但是也可能會透過減少特定威脅，改善報表伺服器的整體安全性。  
@@ -37,13 +37,13 @@ ms.locfileid: "36033178"
  **啟用隨選報表**  
  指定使用者是否可以從報表產生器報表執行隨選查詢，而且當使用者按一下感興趣的資料時，系統就會自動產生新的報表。  
   
- 設定這個選項會決定報表伺服器上的 `EnableLoadReportDefinition` 屬性設定為 `True` 或 `False`。 如果您清除此選項，將屬性設定為`False`和報表伺服器將不會產生資料瀏覽期間建立的點選連結報表。 `LoadReportDefinition` 方法的所有呼叫都會被封鎖。  
+ 設定這個選項會決定報表伺服器上的 `EnableLoadReportDefinition` 屬性設定為 `True` 或 `False`。 如果您清除此選項時，將屬性設定為`False`和報表伺服器將不會產生資料探勘期間建立的點選連結報表。 `LoadReportDefinition` 方法的所有呼叫都會被封鎖。  
   
- 關閉此選項可減少惡意使用者，透過多載與報表伺服器啟動阻斷服務攻擊的威脅`LoadReportDefinition`要求。  
+ 關閉此選項可減少惡意使用者所使用的報表伺服器啟動阻斷服務攻擊的威脅`LoadReportDefinition`要求。  
   
 ## <a name="see-also"></a>另請參閱  
  [設定報表伺服器屬性 &#40;Management Studio&#41;](set-report-server-properties-management-studio.md)   
  [連接至 Management Studio 中的報表伺服器](connect-to-a-report-server-in-management-studio.md)   
- [指定認證和報表資料來源的連接資訊](../report-data/specify-credential-and-connection-information-for-report-data-sources.md[報表伺服器在 Management Studio F1 說明](report-server-in-management-studio-f1-help.md)  
+ [指定認證和報表資料來源的連接資訊](../report-data/specify-credential-and-connection-information-for-report-data-sources.md [Management Studio F1 說明中的報表伺服器](report-server-in-management-studio-f1-help.md)  
   
   

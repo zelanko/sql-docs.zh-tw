@@ -1,5 +1,5 @@
 ---
-title: 選取建立方法 （Cube 精靈） |Microsoft 文件
+title: 選取建立方法 （Cube 精靈） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.cubewizard.cubedefinition.f1
 ms.assetid: 985d3b5b-7891-465b-862d-f7e75431b342
 caps.latest.revision: 28
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: b99ea0d73d9d24992af5fcac09d8df3f4d71fafd
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e3a623381738e4d2f96222aaa193cf09ec619889
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36031713"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37259424"
 ---
 # <a name="select-creation-method-cube-wizard"></a>選取建立方法 (Cube 精靈)
   使用 **[選取建立方法]** 頁面，即可指定建立 Cube 的方式。  
@@ -36,7 +36,7 @@ ms.locfileid: "36031713"
 > [!NOTE]  
 >  只有當您使用 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 專案時，才能使用這個選項，但是當您直接連接至 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 資料庫時，則無法使用這個選項。  
   
- **資料來源中產生資料表。**  
+ **資料來源中建立資料表**  
  選取此選項，即可先建立 Cube，然後根據 Cube 定義，在資料來源中產生新的資料表。  
   
 > [!NOTE]  

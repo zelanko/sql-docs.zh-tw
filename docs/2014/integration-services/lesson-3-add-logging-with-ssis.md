@@ -1,5 +1,5 @@
 ---
-title: 第 3 課： 加入記錄 |Microsoft 文件
+title: 第 3 課： 加入記錄 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 64cd24cc-ba8e-4bd7-b10b-6b80d8b04af6
 caps.latest.revision: 24
-author: douglaslM
+author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: be6cb6bb8edfa30ee33ed0431dbf33f11470cd0b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c4ad03f67a8a386b3c42697d1060910c277580c3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36035249"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37164875"
 ---
 # <a name="lesson-3-adding-logging"></a>第 3 課：加入記錄
   [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 提供工作和容器事件的追蹤，包含可讓您進行疑難排解及監視套件執行的記錄功能。 記錄功能很有彈性，可在封裝層級或在封裝內的個別工作和容器上啟用。 您可以選取要記錄的事件，以及針對單一封裝建立多個記錄。  
@@ -44,13 +44,13 @@ ms.locfileid: "36035249"
 ## <a name="lesson-tasks"></a>課程工作  
  這一課包含下列工作：  
   
--   [步驟 1： 複製第 2 課封裝](lesson-3-1-copying-the-lesson-2-package.md)  
+-   [步驟 1：複製第 2 課的套件](lesson-3-1-copying-the-lesson-2-package.md)  
   
--   [步驟 2： 加入和設定記錄](lesson-3-2-adding-and-configuring-logging.md)  
+-   [步驟 2：新增和設定記錄](lesson-3-2-adding-and-configuring-logging.md)  
   
 -   [步驟 3：測試第 3 課的教學課程封裝](../integration-services/lesson-3-3-testing-the-lesson-3-tutorial-package.md)  
   
 ## <a name="start-the-lesson"></a>開始課程  
- [步驟 1： 複製第 2 課封裝](lesson-3-1-copying-the-lesson-2-package.md)  
+ [步驟 1：複製第 2 課的套件](lesson-3-1-copying-the-lesson-2-package.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: 疑難排解報表組件 （報表產生器及 SSRS） |Microsoft 文件
+title: 疑難排解報表組件 （報表產生器及 SSRS） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: d9fe1932-46e7-421b-a8a9-4c54d9576e94
 caps.latest.revision: 6
-author: douglaslM
+author: maggiesmsft
 ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: d3f8e675ff62ec000b3b9dd3c7c692c63f7fc8b1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ce472be61a85aa1adfad529c38cd74c8dcd9d17a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36032487"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37148569"
 ---
 # <a name="troubleshoot-report-parts-report-builder-and-ssrs"></a>疑難排解報表組件 (報表產生器及 SSRS)
   這些提示可在您處理報表組件時協助您。  
@@ -30,7 +30,7 @@ ms.locfileid: "36032487"
  若要查看您和您的同事所具有的權限為何，請詢問報表伺服器管理員。  
   
 ## <a name="when-i-search-for-report-parts-that-i-uploaded-to-a-sharepoint-server-i-do-not-see-them-why-not"></a>當我搜尋上傳至 SharePoint 伺服器的報表組件時，看不到這些報表組件。 為什麼看不到呢？  
- 您已經手動上傳至 SharePoint 文件庫的報表組件 (而非使用報表產生器發行的報表組件) 可能不會顯示在報表組件庫中。 用於組件庫搜尋的報表伺服器可能需要與 SharePoint 文件庫的內容同步處理。 如需詳細資訊，請參閱[啟動報表伺服器檔案同步處理功能，在 SharePoint 管理中心內](../../2014/reporting-services/activate-report-server-file-sync-feature-sharepoint-central-administration.md)中[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][線上叢書 》](http://go.microsoft.com/fwlink/?LinkId=154888) msdn.microsoft.com 上。  
+ 您已經手動上傳至 SharePoint 文件庫的報表組件 (而非使用報表產生器發行的報表組件) 可能不會顯示在報表組件庫中。 用於組件庫搜尋的報表伺服器可能需要與 SharePoint 文件庫的內容同步處理。 如需詳細資訊，請參閱 <<c0> [ 啟動報表伺服器檔案同步處理功能，在 SharePoint 管理中心內](../../2014/reporting-services/activate-report-server-file-sync-feature-sharepoint-central-administration.md)中[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][線上叢書 》](http://go.microsoft.com/fwlink/?LinkId=154888) msdn.microsoft.com 上。  
   
 ## <a name="why-cant-others-see-the-image-in-their-reports"></a>為什麼其他人的報表中看不到影像？  
  如果您發行的報表組件是影像檔案的連結，該報表組件實際上就只是一個連結。 如果其他人將影像報表組件加入到報表時看不到影像，則表示他們可能不具備您所連結之影像的權限。  
@@ -47,6 +47,6 @@ ms.locfileid: "36032487"
  如果報表項目有循環參考，您將無法將它們發行為報表組件。 例如，報表項目會指向資料集，再依序指向參數。 參數也會依序指向資料集。 您必須先刪除其中一個參考，然後才可以發行報表組件。  
   
 ## <a name="see-also"></a>另請參閱  
- [報表組件&#40;報表產生器和 SSRS&#41;](report-parts-report-builder-and-ssrs.md)  
+ [報表組件&#40;報表產生器及 SSRS&#41;](report-parts-report-builder-and-ssrs.md)  
   
   

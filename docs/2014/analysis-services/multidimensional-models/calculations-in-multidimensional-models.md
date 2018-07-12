@@ -1,5 +1,5 @@
 ---
-title: 多維度模型中的計算 |Microsoft 文件
+title: 多維度模型中的計算 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - calculations [Analysis Services], creating
 - deleting calculations
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - solve orders [Analysis Services]
 ms.assetid: c21b3459-9bef-45a2-aba5-c992eba5b66e
 caps.latest.revision: 25
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 071a6a7e0e50a5a81d02594eee49cc9e70a3c662
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 5fb0e877f6eb37811f141579f2ef25a716d95a68
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36031124"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37278024"
 ---
 # <a name="calculations-in-multidimensional-models"></a>多維度模型中的計算
   使用 [Cube 設計師] 的 [計算] 索引標籤來建立導出成員、命名集，和其他多維度運算式 (MDX) 計算。  

@@ -1,5 +1,5 @@
 ---
-title: DataSourceView 元素 (XMLA) |Microsoft 文件
+title: DataSourceView 元素 (XMLA) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -24,18 +24,18 @@ helpviewer_keywords:
 - DataSourceView element
 ms.assetid: c4a4360f-7342-484b-bac1-0a247e8f279d
 caps.latest.revision: 12
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: 2492232f892dd9f02b84bb50f5ddb7a4415c60e6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 7f230cf653a6435c7f9bb541c6e3cb39615efe42
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36034644"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37211808"
 ---
 # <a name="datasourceview-element-xmla"></a>DataSourceView 元素 (XMLA)
-  包含父繫結超出 (out-of-line） 資料來源檢視[批次](../xml-elements-commands/batch-element-xmla.md)或[程序](../xml-elements-commands/process-element-xmla.md)項目。  
+  包含父繫結的程式碼的外部資料來源檢視[批次](../xml-elements-commands/batch-element-xmla.md)或是[程序](../xml-elements-commands/process-element-xmla.md)項目。  
   
 ## <a name="syntax"></a>語法  
   
@@ -67,9 +67,9 @@ ms.locfileid: "36034644"
 |子元素|[DatabaseID](id-element-xmla.md)， [DataSourceViewID](../../scripting/properties/id-element-assl.md)|  
   
 ## <a name="remarks"></a>備註  
- `DataSourceView`項目表示-單行的繫結到資料來源檢視，供`Batch`或`Process`命令來暫時覆寫資料來源檢視繫結[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]物件此命令所處理。  
+ `DataSourceView`項目代表所使用的資料來源檢視的程式碼外部繫結`Batch`或是`Process`命令來暫時覆寫資料來源檢視繫結[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]物件此命令所處理。  
   
- 單行繫結的詳細資訊，請參閱[資料來源和繫結&#40;SSAS 多維度&#41;](../../multidimensional-models/data-sources-and-bindings-ssas-multidimensional.md)。  
+ 如需程式碼外部繫結的詳細資訊，請參閱[資料來源和繫結&#40;SSAS 多維度&#41;](../../multidimensional-models/data-sources-and-bindings-ssas-multidimensional.md)。  
   
 ## <a name="see-also"></a>另請參閱  
  [屬性&#40;XMLA&#41;](xml-elements-properties.md)  

@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - connections [Integration Services], Excel
 - Excel [Integration Services]
@@ -17,13 +17,13 @@ ms.assetid: a5393c1a-cc37-491a-a260-7aad84dbff68
 caps.latest.revision: 34
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 9e0c80441798259750c9c24bc8062d7f8637cc37
-ms.sourcegitcommit: d463f543e8db4a768f8e9736ff28fedb3fb17b9f
+manager: craigg
+ms.openlocfilehash: df6de3a81b8ebd1f9ca23ffa1b004c4180c26e81
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/22/2018
-ms.locfileid: "36324652"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37158989"
 ---
 # <a name="loop-through-excel-files-and-tables-by-using-a-foreach-loop-container"></a>使用 Foreach 迴圈容器來循環使用 Excel 檔案和資料表
   此主題的程序描述如何使用「Foreach 迴圈」容器搭配適當列舉值，循環使用資料夾中的 Excel 活頁簿，或循環使用 Excel 活頁簿中的資料表。  
@@ -49,11 +49,11 @@ ms.locfileid: "36324652"
     > [!IMPORTANT]  
     >  為了避免在設定使用此 Excel 連線管理員的工作和資料流程元件時發生驗證錯誤，請在 [Excel 連線管理員編輯器] 中選取現有的 Excel 活頁簿。 在設定了 `ConnectionString` 屬性的運算式之後 (如下列步驟所述)，連接管理員就不會在執行階段使用這個活頁簿。 在您建立和設定封裝之後，就可以在 [屬性] 視窗中清除 `ConnectionString` 屬性的值。 不過，如果您要清除這個值，除非執行「ForEach 迴圈」，否則 Excel 連接管理員的連接字串屬性將不再有效。 因此，您必須將使用連接管理員的工作或封裝的 `DelayValidation` 屬性設為 `True`，以避免驗證錯誤。  
     >   
-    >  您也必須使用的預設值`False`如`RetainSameConnection`Excel 連接管理員的屬性。 如果您將此值變更為 `True`，迴圈的每個反覆運算都會繼續開啟第一個 Excel 活頁簿。  
+    >  您也必須使用的預設值`False`針對`RetainSameConnection`Excel 連接管理員屬性。 如果您將此值變更為 `True`，迴圈的每個反覆運算都會繼續開啟第一個 Excel 活頁簿。  
   
 8.  選取新的 Excel 連線管理員，在 [屬性] 視窗中按一下 **Expressions** 屬性，然後按一下省略符號。  
   
-9. 在**屬性運算式編輯器**，選取`ConnectionString`屬性，然後按一下省略符號。  
+9. 在 **屬性運算式編輯器**，選取`ConnectionString`屬性，然後按一下省略符號。  
   
 10. 在「運算式產生器」中，輸入下列運算式：  
   

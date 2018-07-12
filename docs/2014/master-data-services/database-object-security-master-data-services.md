@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - database [Master Data Services], object security
 - security [Master Data Services], database objects
 ms.assetid: dd5ba503-7607-45d9-ad0d-909faaade179
 caps.latest.revision: 8
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 162d60e3a526c70a1624bfdd754076fb08566285
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: 5195df44c591f4c605cfd33aa6bb9934c7d54908
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36032355"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37163499"
 ---
 # <a name="database-object-security-master-data-services"></a>資料庫物件安全性 (Master Data Services)
   在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 資料庫中，資料儲存在多個資料庫資料表並且顯示在檢視表中。 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] Web 應用程式中受到保護的資訊，對具有 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 資料庫存取權的使用者是可見的。  
@@ -46,7 +46,7 @@ ms.locfileid: "36032355"
 -   [設定系統設定](#SysSettings)  
   
 ##  <a name="Staging"></a> 暫存資料  
- 在下表中，每個安全物件都會有 "name" 做為名稱的一部分。 這表示建立實體時所指定的暫存資料表名稱。 如需詳細資訊，請參閱[資料匯入&#40;Master Data Services&#41;](overview-importing-data-from-tables-master-data-services.md)  
+ 在下表中，每個安全物件都會有 "name" 做為名稱的一部分。 這表示建立實體時所指定的暫存資料表名稱。 如需詳細資訊，請參閱 <<c0> [ 匯入資料&#40;Master Data Services&#41;</c0>](overview-importing-data-from-tables-master-data-services.md)  
   
 |動作|[安全性實體]|Permissions|  
 |------------|----------------|-----------------|  
@@ -92,7 +92,7 @@ ms.locfileid: "36032355"
 |決定新管理員的 SID|mdm.tblUser|SELECT|  
 |變更系統管理員帳戶|mdm.udpSecuritySetAdministrator|執行 CREATE 陳述式之前，請先執行|  
   
- 如需詳細資訊，請參閱[變更系統管理員帳戶&#40;Master Data Services&#41;](../../2014/master-data-services/change-the-system-administrator-account-master-data-services.md)。  
+ 如需詳細資訊，請參閱 <<c0> [ 變更系統管理員帳戶&#40;Master Data Services&#41;](../../2014/master-data-services/change-the-system-administrator-account-master-data-services.md)。</c0>  
   
 ##  <a name="SysSettings"></a> 設定系統設定  
  有些系統設定可設定控制 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]的行為。 您可以在 [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)] 中調整這些設定；如果您有 UPDATE 存取權，也可以直接在 mdm.tblSystemSetting 資料庫資料表中調整這些設定。 如需詳細資訊，請參閱 [系統設定 &#40;Master Data Services&#41;](../../2014/master-data-services/system-settings-master-data-services.md)。  

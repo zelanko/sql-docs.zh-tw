@@ -1,5 +1,5 @@
 ---
-title: Administer 元素 (ASSL) |Microsoft 文件
+title: Administer 元素 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - Administer element
 ms.assetid: 52924cd6-6176-47c8-ab17-4ee0e0ce42b1
 caps.latest.revision: 36
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 099e5b9283acf8da6268e8b5abaaad73049ca076
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 29b09b2f28512600496a4d461f34994dc1bf177e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36031717"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37229688"
 ---
 # <a name="administer-element-assl"></a>Administer 元素 (ASSL)
-  指出相關聯的權限是否包含管理權[資料庫](../objects/database-element-assl.md)項目。  
+  指出相關聯的權限是否包含管理的權限[資料庫](../objects/database-element-assl.md)項目。  
   
 ## <a name="syntax"></a>語法  
   
@@ -64,7 +64,7 @@ ms.locfileid: "36031717"
 ## <a name="remarks"></a>備註  
  `Administer` 元素會指出使用者是否只能在指定的資料庫上執行管理功能。 伺服器管理員角色可以在此執行個體包含的所有資料庫上執行管理功能。  
   
- 對應目的父代的項目`Administer`在 「 分析管理物件 (AMO) 物件模型而言， <xref:Microsoft.AnalysisServices.DatabasePermission>。  
+ 對應至父系的元素`Administer`在 「 分析管理物件 (AMO) 物件模型是<xref:Microsoft.AnalysisServices.DatabasePermission>。  
   
 ## <a name="see-also"></a>另請參閱  
  [Permission 資料類型&#40;ASSL&#41;](../data-type/permission-data-type-assl.md)   

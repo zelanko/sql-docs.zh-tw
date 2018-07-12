@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - MSSQL_ENG02574 error
 ms.assetid: 4e98f8de-287c-4090-81ee-dc8f80dfa6a1
 caps.latest.revision: 10
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: f0586dd4aacb13d736348235b8da7fde047f2141
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 155e309744ce2eb6a832464efbdaf23bf382ede8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36033241"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37152159"
 ---
 # <a name="mssqleng020574"></a>MSSQL_ENG020574
     

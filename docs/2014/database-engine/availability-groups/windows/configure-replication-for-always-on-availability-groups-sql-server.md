@@ -5,24 +5,23 @@ ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Availability Groups [SQL Server], interoperability
 - replication [SQL Server], AlwaysOn Availability Groups
 ms.assetid: 4e001426-5ae0-4876-85ef-088d6e3fb61c
 caps.latest.revision: 14
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 80edfc2a5a5d480b6d7acbc88d030881fb0e2e82
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: a57ba4393c23920b98a407176de51034715a54c6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36030354"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37229598"
 ---
 # <a name="configure-replication-for-always-on-availability-groups-sql-server"></a>設定 AlwaysOn 可用性群組的複寫 (SQL Server)
   設定 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 複寫和 AlwaysOn 可用性群組包含七個步驟。 下列各節將詳細說明每個步驟。  
@@ -74,7 +73,7 @@ ms.locfileid: "36030354"
   
  **在原始發行者端設定發行者**  
   
-1.  設定遠端散發。 如果預存程序正用於設定發行者，請執行`sp_adddistributor`。 指定的相同值*@password*時所使用`sp_adddistrbutor`執行 「 散發者 」，以設定散發。  
+1.  設定遠端散發。 如果預存程序正用於設定發行者，執行`sp_adddistributor`。 指定的相同值*@password*時所使用`sp_adddistrbutor`已執行的散發者端設定散發。  
   
     ```  
     exec sys.sp_adddistributor  
@@ -82,7 +81,7 @@ ms.locfileid: "36030354"
         @password = 'MyDistPass'  
     ```  
   
-2.  啟用資料庫進行複寫。 如果預存程序正用於設定發行者，請執行`sp_replicationdboption`。 如果要針對資料庫設定異動和合併式複寫，就必須啟用每個複寫。  
+2.  啟用資料庫進行複寫。 如果預存程序正用於設定發行者，執行`sp_replicationdboption`。 如果要針對資料庫設定異動和合併式複寫，就必須啟用每個複寫。  
   
     ```  
     USE master;  
@@ -145,7 +144,7 @@ EXEC sp_adddistributor
     @password = '**Strong password for distributor**';  
 ```  
   
- 在每個次要複本主機上，確定資料庫發行集的發送訂閱者顯示成連結的伺服器。 如果預存程序正用於設定遠端發行者，請使用`sp_addlinkedserver`來加入訂閱者 （如果尚不存在） 做為連結的伺服器至發行者。  
+ 在每個次要複本主機上，確定資料庫發行集的發送訂閱者顯示成連結的伺服器。 如果預存程序正用於設定遠端發行者，使用`sp_addlinkedserver`，新增訂閱者 （如果不存在） 當做連結至發行者的伺服器。  
   
 ```  
 EXEC sys.sp_addlinkedserver   
@@ -177,14 +176,14 @@ EXEC sys.sp_validate_replica_hosts_as_publishers
     @redirected_publisher = @redirected_publisher output;  
 ```  
   
- 在每個可用性群組複本主機上，`sp_validate_replica_hosts_as_publishers` 預存程序應該從具有足夠授權的登入執行，以便查詢可用性群組的相關資訊。 不同於`sp_validate_redirected_publisher`，它會使用呼叫端的認證，並不會保留在 msdb.dbo.MSdistpublishers 中的登入使用來連接到可用性群組複本。  
+ 在每個可用性群組複本主機上，`sp_validate_replica_hosts_as_publishers` 預存程序應該從具有足夠授權的登入執行，以便查詢可用性群組的相關資訊。 不同於`sp_validate_redirected_publisher`，它會使用呼叫端的認證，並不使用保留在 msdb.dbo.MSdistpublishers 中的登入來連接到可用性群組複本。  
   
 > [!NOTE]  
 >  `sp_validate_replica_hosts_as_publishers` 讀取意圖指定的驗證不允許讀取存取權，或需要的次要複本主機時，將會失敗，發生下列錯誤。  
 >   
 >  訊息 21899，層級 11，狀態 1，程序 `sp_hadr_verify_subscribers_at_publisher`，行 109  
 >   
->  在重新導向的發行者 'MyReplicaHostName' 上用以判斷原始發行者 'MyOriginalPublisher' 的訂閱者是否有 sysserver 項目之查詢失敗，發生錯誤 '976'，錯誤訊息為「錯誤 976，層級 14，狀態 1，訊息: 目標資料庫 'MyPublishedDB' 正參與可用性群組，目前無法供查詢存取。 資料移動已暫停，或者可用性複本無法進行讀取存取。 若要允許唯讀存取可用性群組中的這個資料庫和其他資料庫，請啟用群組中一個或多個次要可用性複本的讀取存取。  如需詳細資訊，請參閱`ALTER AVAILABILITY GROUP`陳述式中的[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]線上叢書 》。 '。  
+>  在重新導向的發行者 'MyReplicaHostName' 上用以判斷原始發行者 'MyOriginalPublisher' 的訂閱者是否有 sysserver 項目之查詢失敗，發生錯誤 '976'，錯誤訊息為「錯誤 976，層級 14，狀態 1，訊息: 目標資料庫 'MyPublishedDB' 正參與可用性群組，目前無法供查詢存取。 資料移動已暫停，或者可用性複本無法進行讀取存取。 若要允許唯讀存取可用性群組中的這個資料庫和其他資料庫，請啟用群組中一個或多個次要可用性複本的讀取存取。  如需詳細資訊，請參閱 <<c0> `ALTER AVAILABILITY GROUP` 中的陳述式[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]線上叢書 》。 '。  
 >   
 >  複本主機 'MyReplicaHostName' 發生了一個或多個發行者驗證錯誤。  
   
@@ -214,7 +213,7 @@ EXEC sys.sp_validate_replica_hosts_as_publishers
   
 -   [在新增或修改可用性複本時指定端點 URL &#40;SQL Server&#41;](specify-endpoint-url-adding-or-modifying-availability-replica.md)  
   
--   [建立資料庫鏡像端點的 AlwaysOn 可用性群組&#40;SQL Server PowerShell&#41;](database-mirroring-always-on-availability-groups-powershell.md)  
+-   [建立資料庫鏡像 AlwaysOn 可用性群組的&#40;SQL Server PowerShell&#41;](database-mirroring-always-on-availability-groups-powershell.md)  
   
 -   [將次要複本聯結至可用性群組 &#40;SQL Server&#41;](join-a-secondary-replica-to-an-availability-group-sql-server.md)  
   
@@ -225,7 +224,7 @@ EXEC sys.sp_validate_replica_hosts_as_publishers
 -   [建立或設定可用性群組接聽程式 &#40;SQL Server&#41;](create-or-configure-an-availability-group-listener-sql-server.md)  
   
 ## <a name="see-also"></a>另請參閱  
- [必要條件、 限制和建議的 AlwaysOn 可用性群組&#40;SQL Server&#41;](prereqs-restrictions-recommendations-always-on-availability.md)   
+ [必要條件、 限制和建議，AlwaysOn 可用性群組的&#40;SQL Server&#41;](prereqs-restrictions-recommendations-always-on-availability.md)   
  [AlwaysOn 可用性群組概觀&#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
  [AlwaysOn 可用性群組： 互通性 (SQL Server)](always-on-availability-groups-interoperability-sql-server.md)   
  [SQL Server 複寫](../../../relational-databases/replication/sql-server-replication.md)  

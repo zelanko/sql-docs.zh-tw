@@ -1,5 +1,5 @@
 ---
-title: 排程資料重新整理與不支援 Windows 驗證 (PowerPivot for SharePoint) 的資料來源 |Microsoft 文件
+title: 排程資料重新整理與不支援 Windows 驗證 (PowerPivot for SharePoint) 的資料來源 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: d8d875bc-7823-46b7-a939-867cefd4de12
 caps.latest.revision: 8
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 28ab8ddcc8ef6a866992cdf7a2fabe75a5a30878
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 474308339c112899787a4b6344bbe53622f4fff7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36031315"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37230095"
 ---
 # <a name="schedule-data-refresh-and-data-sources-that-do-not-support-windows-authentication-powerpivot-for-sharepoint"></a>排程資料重新整理與不支援 Windows 驗證的資料來源 (PowerPivot for SharePoint)
   本主題描述 PowerPivot for SharePoint 排程資料重新整理的工作流程，而且這項作業可以使用**不**支援 Windows 驗證的資料來源。 例如，Oracle 或 IDM DB2 資料來源。 雖然本主題的圖例和步驟參考的是 Oracle 資料來源，但是相同的工作流程也適用於其他資料來源。  
@@ -40,7 +40,7 @@ ms.locfileid: "36031315"
   
 -   **(4)** PowerePivot 活頁簿會使用 Oracle 資料。 活頁簿重新整理設定會指定要將目標應用程式 **(2)** 用於認證的資料來源連接。  
   
-## <a name="prerequisites"></a>必要條件  
+## <a name="prerequisites"></a>先決條件  
   
 -   PowerPivot 服務應用程式存在。  
   
@@ -88,7 +88,7 @@ ms.locfileid: "36031315"
   
 2.  按一下 Secure Store Service 應用程式的名稱。  
   
-3.  在**管理**頁面上，按一下**新增**![as_powerpivot_refresh_sss_new_target_application](../media/as-powerpivot-refresh-sss-new-target-application.gif "as_powerpivot_refresh_sss_new_target_application").  
+3.  在 **管理**頁面上，按一下**新增**![as_powerpivot_refresh_sss_new_target_application](../media/as-powerpivot-refresh-sss-new-target-application.gif "as_powerpivot_refresh_sss_new_target_application").  
   
 4.  在 [建立新的 Secure Store 目標應用程式]  頁面上，設定下列值：  
   
@@ -104,9 +104,9 @@ ms.locfileid: "36031315"
   
 5.  按 [下一步] 。  
   
-6.  在**認證**頁面上，將第一個欄位名稱變更為`Oracle User ID`並變更**欄位類型**至`User Name`。  
+6.  上**認證**頁面上，將第一個欄位名稱變更為`Oracle User ID`並將變更**的欄位型別**至`User Name`。  
   
-     將第二個欄位名稱變更為`Oracle Password`和**欄位類型**至`Password`。  
+     將第二個欄位名稱變更為`Oracle Password`而**的欄位型別**至`Password`。  
   
 7.  按 [下一步] 。  
   
@@ -118,7 +118,7 @@ ms.locfileid: "36031315"
   
 11. 輸入 Oracle 使用者識別碼和 Oracle 密碼，然後按一下 [確定] 。  
   
- 如需詳細資訊，請參閱 < 建立目標應用程式的 SQL Server 驗證 」 一節中[使用 Secure Store 搭配 SQL Server 驗證 (SharePoint Server 2013)](http://technet.microsoft.com/library/gg298949.aspx) (http://technet.microsoft.com/library/gg298949.aspx)。  
+ 如需詳細資訊，請參閱 「 為 SQL Server 驗證建立目標應用程式 」 一節中[使用 Secure Store 搭配 SQL Server 驗證 (SharePoint Server 2013)](http://technet.microsoft.com/library/gg298949.aspx) (http://technet.microsoft.com/library/gg298949.aspx)。  
   
 ## <a name="to-configure-the-powerpivot-service-application"></a>若要設定 PowerPivot 服務應用程式  
   
@@ -128,13 +128,13 @@ ms.locfileid: "36031315"
   
 3.  在 [動作] 區段中，按一下 [設定服務應用程式設定]  。  
   
-4.  在**資料重新整理**區段中，將**PowerPivot 無人看管資料重新整理帳戶**至`PowerPivotDataRefresh`，然後按一下 **確定**。  
+4.  在 **資料重新整理**區段中，將**PowerPivot 無人看管資料重新整理帳戶**來`PowerPivotDataRefresh`，然後按一下**確定**。  
   
      ![as_powerpivot_refresh_new_refresh_acount](../media/as-powerpivot-refresh-new-refresh-acount.gif "as_powerpivot_refresh_new_refresh_acount")  
   
 ## <a name="to-configure-the-workbook"></a>若要設定活頁簿  
   
-1.  瀏覽至您在 PowerPivot 圖庫的活頁簿，然後按一下 **管理資料重新整理**![as_powerpivot_refresh_manage_reresh](../media/as-powerpivot-refresh-manage-reresh.gif "as_powerpivot_refresh_manage_reresh")。  
+1.  瀏覽至 PowerPivot 圖庫的活頁簿，然後按一下**管理資料重新整理**![as_powerpivot_refresh_manage_reresh](../media/as-powerpivot-refresh-manage-reresh.gif "as_powerpivot_refresh_manage_reresh")。  
   
 2.  如果您看見 [資料重新整理記錄]  頁面，請按一下 [設定排程] 。  
   
@@ -152,7 +152,7 @@ ms.locfileid: "36031315"
   
 9. 選取 **使用儲存在 Secure Store Service (SSS) 中的認證進行連接，以登入資料來源。在 SSS ID 方塊中輸入用來查閱認證的 ID**。  
   
-10. 在**ID:** 方塊中，輸入`OracleAuthentication`。  
+10. 在 **識別碼：** 方塊中，輸入`OracleAuthentication`。  
   
 11. 按一下 [確定] 。  
   

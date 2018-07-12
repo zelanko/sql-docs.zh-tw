@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - configuration options [Reporting Services]
 - DeviceInfo settings
@@ -20,13 +20,13 @@ ms.assetid: 3bf7ab2b-70bb-41c8-acda-227994d15aed
 caps.latest.revision: 31
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 201a3af8cfd9acad20539327f4dc9afbfcb2a435
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 1734710832b6c064aa2d2a76eec0a1dda7a9b6b4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36032505"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37150239"
 ---
 # <a name="customize-rendering-extension-parameters-in-rsreportserverconfig"></a>在 RSReportServer.Config 中自訂轉譯延伸模組參數
   您可以在 RSReportServer 組態檔中指定轉譯延伸模組參數，以便覆寫在 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 報表伺服器上執行之報表的預設報表轉譯行為。 您可以修改轉譯延伸模組參數來達成下列目標：  
@@ -44,16 +44,16 @@ ms.locfileid: "36032505"
 ## <a name="finding-and-modifying-rsreportserverconfig"></a>尋找及修改 RSReportServer.config  
  報表輸出格式的組態設定會在 RSReportServer.config 檔中指定為轉譯延伸模組參數。 若要指定組態檔中的轉譯延伸模組參數，您必須了解如何定義設定轉譯參數的 XML 結構。 可進行修改的 XML 結構有兩種：  
   
--   `OverrideNames`項目會定義顯示名稱和語言的轉譯延伸模組。  
+-   `OverrideNames`項目會定義轉譯延伸模組的語言與顯示名稱。  
   
 -   `DeviceInfo` XML 結構會定義轉譯延伸模組所使用的裝置資訊設定。 大部分的轉譯延伸模組參數會指定為裝置資訊設定。  
   
  您可以使用文字編輯器來修改 RSReportServer.config 檔案， 此檔案可以在 \Reporting Services\Report Server\Bin 資料夾中找到。 如需修改設定檔的詳細資訊，請參閱[修改 Reporting Services 設定檔 &#40;RSreportserver.config&#41;](report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md)。  
   
 ## <a name="changing-the-display-name"></a>變更顯示名稱  
- 轉譯延伸模組的顯示名稱會出現在報表工具列的 [匯出] 清單中。 預設顯示名稱的範例包括網頁封存、TIFF 檔案和 Acrobat (PDF) 檔案。 您也可以指定自訂值取代預設的顯示名稱`OverrideNames`的組態檔中的項目。 此外，如果您正在定義單一轉譯延伸模組的兩個執行個體，也可以使用 `OverrideNames` 元素在 [匯出] 清單中區分每一個執行個體。  
+ 轉譯延伸模組的顯示名稱會出現在報表工具列的 [匯出] 清單中。 預設顯示名稱的範例包括網頁封存、TIFF 檔案和 Acrobat (PDF) 檔案。 您可以使用自訂值取代預設的顯示名稱，藉由指定`OverrideNames`組態檔中的項目。 此外，如果您正在定義單一轉譯延伸模組的兩個執行個體，也可以使用 `OverrideNames` 元素在 [匯出] 清單中區分每一個執行個體。  
   
- 由於顯示名稱已經當地語系化，您必須設定`Language`屬性，如果您要使用自訂值取代預設的顯示名稱。 否則，任何指定的名稱都會被忽略。 您所設定的語言值，對於報表伺服器電腦必須是有效值。 例如，如果報表伺服器是在法文作業系統上執行，您應該指定「fr-FR」做為屬性值。  
+ 由於顯示名稱已經當地語系化，您必須設定`Language`屬性，如果您要以自訂值取代預設的顯示名稱。 否則，任何指定的名稱都會被忽略。 您所設定的語言值，對於報表伺服器電腦必須是有效值。 例如，如果報表伺服器是在法文作業系統上執行，您應該指定「fr-FR」做為屬性值。  
   
  下列範例會說明在英文報表伺服器上提供自訂名稱的方法：  
   

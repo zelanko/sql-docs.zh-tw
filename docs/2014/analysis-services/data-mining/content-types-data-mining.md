@@ -1,5 +1,5 @@
 ---
-title: 內容類型 （資料採礦） |Microsoft 文件
+title: 內容類型 （資料採礦） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - columns [data mining], content types
 - KEY SEQUENCE column
@@ -27,15 +27,15 @@ helpviewer_keywords:
 - coding [Data Mining]
 ms.assetid: 2dacd968-70e8-4993-88b6-a6d36024a4e4
 caps.latest.revision: 42
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 2f283ff19a1947cfda208979b80482432ec6c597
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 817de3b9232a755d94fe2790a0ab2e08a835c9dc
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36032004"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37163509"
 ---
 # <a name="content-types-data-mining"></a>內容類型 (資料採礦)
   在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]中，您可以同時定義採礦結構中資料行的實體資料類型，以及用於模型內之資料行的邏輯內容類型。  
@@ -72,9 +72,9 @@ ms.locfileid: "36032004"
  `Discretized` 內容類型受到下列資料類型的支援：`Date`、`Double`、`Long` 和 `Text`。  
   
 ## <a name="key"></a>索引鍵  
- *key* 內容類型表示資料行會唯一識別資料列。 在案例資料表中，索引鍵資料行通常是數值的或文字的識別碼。 您將內容類型設定為`key`，指出資料行不能使用的分析，只能用於追蹤記錄。  
+ *key* 內容類型表示資料行會唯一識別資料列。 在案例資料表中，索引鍵資料行通常是數值的或文字的識別碼。 您將內容類型設定為`key`表示資料行不應該使用的分析，只能用於追蹤記錄。  
   
- 巢狀資料表也具有索引鍵，但巢狀資料表索引鍵的用法稍有不同。 您將內容類型設定為`key`巢狀資料表，如果資料行是您想要分析的屬性。 每個案例的巢狀資料表索引鍵值都必須是唯一的，但在整個案例集合中可能會有重複的值。  
+ 巢狀資料表也具有索引鍵，但巢狀資料表索引鍵的用法稍有不同。 您將內容類型設定為`key`中巢狀資料表資料行是否為您想要分析的屬性。 每個案例的巢狀資料表索引鍵值都必須是唯一的，但在整個案例集合中可能會有重複的值。  
   
  例如，如果要分析客戶購買的產品，則可以將內容類型設定為案例資料表中 **CustomerID** 資料行的索引鍵，然後再次將內容類型設定為巢狀資料表中 **PurchasedProducts** 資料行的索引鍵。  
   

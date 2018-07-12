@@ -1,5 +1,5 @@
 ---
-title: 資料來源和繫結 (SSAS 多維度) |Microsoft 文件
+title: 資料來源和繫結 (SSAS 多維度) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - data source views [Analysis Services], bindings
 - DSO, bindings
@@ -34,15 +34,15 @@ helpviewer_keywords:
 - partitions [Analysis Services], bindings
 ms.assetid: bc028030-dda2-4660-b818-c3160d79fd6d
 caps.latest.revision: 40
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 0d5386a2a09928f8a7dbc04248df74e8112749f4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d6009cfc820cb3eec8a0aa8499850546f31dba57
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36031997"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37230198"
 ---
 # <a name="data-sources-and-bindings-ssas-multidimensional"></a>資料來源和繫結 (SSAS 多維度)
   Cube、維度和其他 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 物件都可繫結至資料來源。 資料來源可為下列其中一個物件：  
@@ -86,7 +86,7 @@ ms.locfileid: "36031997"
   
 -   量值群組會繫結至 DSV 中的資料表 (例如 `MeasureGroup.Source`)。  
   
--   每個量值繫結至該資料表中的資料行 (例如， `Measure.ValueColumn.Source`)。  
+-   每個量值繫結至該資料表中的資料行 (例如`Measure.ValueColumn.Source`)。  
   
 -   每一個量值群組維度都有一組「資料粒度屬性」可定義此量值群組的資料粒度。 每一個屬性都必須繫結至包含此屬性索引鍵之事實資料表中的一或多個資料行  (如需有關資料粒度屬性的詳細資訊，請參閱本主題稍後的「量值群組資料粒度屬性」)。  
   
@@ -111,7 +111,7 @@ ms.locfileid: "36031997"
   
  如果您針對 Sales 維度角色上的 Ordered Product，依排序產品進行分析，則 Product 資料粒度屬性會繫結至 Sales.OrderedProductID。  
   
- 但是，`GranularityAttributes` 有可能不會以資料行的形式存在於事實資料表上。 例如，`GranularityAttributes`做為資料行，在下列情況下可能不存在：  
+ 但是，`GranularityAttributes` 有可能不會以資料行的形式存在於事實資料表上。 比方說，`GranularityAttributes`做為資料行，在下列情況下可能不存在：  
   
 -   OLAP 資料粒度比來源的資料粒度較粗。  
   
@@ -159,16 +159,16 @@ ms.locfileid: "36031997"
   
  在 OLAP 採礦模型中，資料繫結會遵循以下規則：  
   
--   每個非巢狀資料表資料行量值繫結上 cube 中，該 cube 之維度屬性 (指定`CubeDimension`以釐清，如果是維度角色)，或維度上的屬性。  
+-   每個非巢狀資料表資料行量值繫結上的 cube，該 cube 之維度上的屬性 (指定`CubeDimension`釐清，如果是維度角色)，或是維度上的屬性。  
   
 -   每個巢狀資料表資料行都會繫結至 `CubeDimension`。 也就是說，它會定義如何從維度導覽至相關 Cube 或是 (在比較不常見的巢狀資料表案例中) 從 Cube 導覽至它的其中一個維度。  
   
 ## <a name="out-of-line-bindings"></a>非正規 (Out-of-Line) 繫結  
  非正規繫結可讓您在命令的持續期間暫時變更現有的資料繫結。 非正規繫結指的是命令中已包含但是未保存的繫結。 只有在執行該特定命令時，才會套用非正規繫結。 相較之下，正規繫結會包含在 ASSL 物件定義中，並且與物件定義一起保存在伺服器中繼資料中。  
   
- ASSL 允許-單行繫結上指定`Process`命令時，如果不是在批次，或在`Batch`命令。 如果在 `Batch` 命令上指定非正規繫結，所有在 `Batch` 命令中指定的繫結都會在批次執行的所有 `Process` 命令中建立新的繫結環境。 這個新的繫結環境包含由於 `Process` 命令所間接處理的物件。  
+ ASSL 允許在指定的程式碼外部繫結`Process`命令時，如果它不是在批次，或在`Batch`命令。 如果在 `Batch` 命令上指定非正規繫結，所有在 `Batch` 命令中指定的繫結都會在批次執行的所有 `Process` 命令中建立新的繫結環境。 這個新的繫結環境包含由於 `Process` 命令所間接處理的物件。  
   
- 在命令上指定非正規繫結時，它們會覆寫針對指定物件保存之 DDL 中的正規繫結。 這些處理過的物件可能包含中直接命名的物件`Process`命令，或者可能包含其他物件，其處理不會自動起始處理的一部分。  
+ 在命令上指定非正規繫結時，它們會覆寫針對指定物件保存之 DDL 中的正規繫結。 這些處理過的物件可能包含中直接命名的物件`Process`命令，或者可能包含其他的處理過程中自動起始處理的物件。  
   
  非正規繫結的指定方式，是使用處理命令來包含選擇性 `Bindings` 集合物件。 選擇性`Bindings`集合包含下列項目。  
   
@@ -181,14 +181,14 @@ ms.locfileid: "36031997"
  與非正規繫結相關的所有元素都是選擇性的。 如果是未指定的任何元素，ASSL 會使用保存之物件 DDL 中所包含的指定內容。 `DataSource` 中 `DataSourceView` 或 `Process` 的指定是選擇性的。 如果指定了 `DataSource` 或 `DataSourceView`，則在 `Process` 命令完成之後，不會將它們具現化及保存下來。  
   
 ### <a name="definition-of-the-out-of-line-binding-type"></a>非正規繫結類型的定義  
- 在非正規 `Bindings` 集合內，ASSL 允許多個物件的繫結集合，每一個都是 `Binding`。 每一個 `Binding` 都有擴充物件參考 (類似於物件參考)，但是也可意指次要物件 (例如維度屬性和量值群組屬性)。 這個物件會使用典型的一般格式`Object`中的項目`Process`命令，不同處\<*物件*>\<*/物件*>標記並不存在。  
+ 在非正規 `Bindings` 集合內，ASSL 允許多個物件的繫結集合，每一個都是 `Binding`。 每一個 `Binding` 都有擴充物件參考 (類似於物件參考)，但是也可意指次要物件 (例如維度屬性和量值群組屬性)。 這個物件會典型的一般格式`Object`中的項目`Process`命令，除了\<*物件*>\<*/物件*>標記並不存在。  
   
- 每個物件，其指定的繫結由 XML 項目表單的\<*物件*> ID (例如， `DimensionID`)。 識別物件之後盡量明確地使用此表單\<*物件*> 識別碼，您會識別已指定的繫結，這通常是元素`Source`。 要注意的常見情況是哪一個`Source`屬性位於`DataItem`，這是在屬性中的資料行繫結案例。 在此情況下，您不會指定 `DataItem` 標記，而只會指定 `Source` 屬性，就像它直接位於要繫結的資料行上一樣。  
+ 指定繫結的每個物件都會由 XML 項目表單的\<*物件*> 識別碼 (例如`DimensionID`)。 識別物件之後盡量明確地與表單\<*物件*> 識別碼，您會識別為其已指定繫結，這通常是元素`Source`。 值得注意的常見情況是哪一個`Source`是一個屬性上`DataItem`，這是在屬性中的資料行繫結的情況。 在此情況下，您不會指定 `DataItem` 標記，而只會指定 `Source` 屬性，就像它直接位於要繫結的資料行上一樣。  
   
  `KeyColumns` 是由其在 `KeyColumns` 集合內的順序加以識別 例如，在這裡無法僅指定屬性的第一和第三個索引鍵資料行，因為沒有方法可以指示要略過第二個索引鍵資料行。 所有的索引鍵資料行都必須位於維度屬性的非正規繫結中。  
   
  `Translations` (雖然沒有識別碼) 會根據其語言來進行語意識別。 因此，`Translations` 內的 `Binding` 必須包含其語言識別碼。  
   
- 一個額外的項目內允許`Binding`沒有直接在 DDL 中是`ParentColumnID`，用於資料採礦的巢狀資料表。 在此情況下，在巢狀資料表中識別有提供繫結的父資料行是必要的。  
+ 中的一個其他元素允許`Binding`沒有 DDL 中直接是`ParentColumnID`，它用於資料採礦的巢狀資料表。 在此情況下，在巢狀資料表中識別有提供繫結的父資料行是必要的。  
   
   

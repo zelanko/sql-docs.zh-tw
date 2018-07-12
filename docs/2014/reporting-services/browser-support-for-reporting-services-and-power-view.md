@@ -1,5 +1,5 @@
 ---
-title: 規劃 Reporting Services 和 Power View 瀏覽器支援 (Reporting Services 2014) |Microsoft 文件
+title: 規劃 Reporting Services 和 Power View 瀏覽器支援 (Reporting Services 2014) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - displaying reports
 - scripts [Reporting Services], requirements
@@ -22,16 +22,16 @@ ms.assetid: 48a75bbb-0029-4c43-891d-dc8f4fc0ebe1
 caps.latest.revision: 99
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 1777dac1c625c9f6eb49bb06ec1bc51f688086fb
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ba6f4bd415f5e418d80b691e2461d08c8b1a8d19
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36034630"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37164319"
 ---
 # <a name="planning-for-reporting-services-and-power-view-browser-support-reporting-services-2014"></a>規劃 Reporting Services 和 Power View 瀏覽器支援 (Reporting Services 2014)
-  在[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]，您可以使用網頁瀏覽器來檢視報表和報表管理員中執行。 並非所有瀏覽器都支援所有報表功能。 本主題說明報表管理員管理功能「檢視報表」(Visual Studio 中的報表檢視器控制項) 的支援和需求。 本主題也概述受支援的瀏覽器、驗證需求和指令碼需求的功能可用性。  
+  在  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]，您可以使用網頁瀏覽器來檢視報表和報表管理員中執行。 並非所有瀏覽器都支援所有報表功能。 本主題說明報表管理員管理功能「檢視報表」(Visual Studio 中的報表檢視器控制項) 的支援和需求。 本主題也概述受支援的瀏覽器、驗證需求和指令碼需求的功能可用性。  
   
  **[!INCLUDE[applies](../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] SharePoint 模式 | [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 原生模式  
   
@@ -45,24 +45,24 @@ ms.locfileid: "36034630"
   
 -   [驗證需求](#bkmk_authentication)  
   
--   [Visual Studio 中 ReportViewer Web 伺服器控制項的瀏覽器支援](#bkmk_controls)  
+-   [在 Visual Studio 中 ReportViewer Web 伺服器控制項的瀏覽器支援](#bkmk_controls)  
   
 ##  <a name="bkmk_powerview"></a> Power View 瀏覽器案例  
  支援的瀏覽器和瀏覽器版本清單，[!INCLUDE[ssCrescent](../includes/sscrescent-md.md)]支援，取決於開啟的文件類型。 Excel 2013 活頁簿和 “**.rdlx**” 檔案使用不同的元件。  
   
 |文件類型|環境|瀏覽器支援|  
 |-------------------|-----------------|---------------------|  
-|Power View 報表 (.RDLX)|**SharePoint Server:** [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)]上[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]SharePoint 整合模式和 Power View web 應用程式。|請參閱[SharePoint Server 和 Reporting Services SharePoint 整合的模式上的 Power View](#bkmk_powerview_on_SSRS)。|  
-|具有 Power View 工作表的 Excel 2013 活頁簿|**SharePoint Server:** [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] Excel Services 中。<br /><br /> **SharePoint Online (Office 365):** [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] Excel Web 應用程式上。|請參閱[電源線上檢視 Excel services 或 SharePoint 上的之 Excel Web App](#bkmk_powerview_on_ExcelServices)。|  
+|Power View 報表 (.RDLX)|**SharePoint Server:** [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)]上[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]SharePoint 整合模式和 Power View web 應用程式。|請參閱[Power View SharePoint 伺服器和 Reporting Services SharePoint 整合的模式上](#bkmk_powerview_on_SSRS)。|  
+|具有 Power View 工作表的 Excel 2013 活頁簿|**SharePoint Server:** [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] Excel Services 中。<br /><br /> **SharePoint Online (Office 365):** [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] Excel Web 應用程式上。|請參閱[線上檢視 Excel Services 或 SharePoint 上的 Excel Web 應用程式電源](#bkmk_powerview_on_ExcelServices)。|  
   
-###  <a name="bkmk_powerview_on_SSRS"></a> SharePoint Server 和 Reporting Services SharePoint 整合的模式上的 power View  
+###  <a name="bkmk_powerview_on_SSRS"></a> SharePoint 伺服器和 Reporting Services SharePoint 整合的模式上的 power View  
  下表摘要說明當使用者在具有 [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] 服務應用程式並已安裝及設定 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] for SharePoint 增益集的 SharePoint 伺服器陣列中開啟 Power View 報表 (.RDLX) 時，[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 支援的瀏覽器版本。  
   
 -   此表格適用於 SharePoint 2010 和 SharePoint 2013。  
   
--   如需有關 SharePoint 2013 瀏覽器支援的詳細資訊，請參閱[規劃 SharePoint 2013 中的瀏覽器支援](http://technet.microsoft.com//library/cc263526\(office.15\).aspx)(http://technet.microsoft.com/library/cc263526(office.15).aspx)。  
+-   如需有關 SharePoint 2013 瀏覽器支援的詳細資訊，請參閱 <<c0> [ 規劃 SharePoint 2013 中的瀏覽器支援](http://technet.microsoft.com//library/cc263526\(office.15\).aspx)(http://technet.microsoft.com/library/cc263526(office.15).aspx)。  
   
--   如需有關 SharePoint 2010 瀏覽器支援的詳細資訊，請參閱[規劃瀏覽器支援 (SharePoint Server 2010)](http://technet.microsoft.com/library/cc263526\(office.14\).aspx) (http://technet.microsoft.com/library/cc263526(office.14).aspx)。  
+-   如需有關 SharePoint 2010 瀏覽器支援的詳細資訊，請參閱 <<c0> [ 規劃瀏覽器支援 (SharePoint Server 2010)](http://technet.microsoft.com/library/cc263526\(office.14\).aspx) (http://technet.microsoft.com/library/cc263526(office.14).aspx)。  
   
 |**瀏覽器**|**Windows 8 和 8.1**|**Windows 7**|**Windows Server 2012 和 2012 R2**|**Windows Server 2008 R2**|**Windows Server 2008**|**Mac OS X 10.6 – 10.9**|  
 |-----------------|---------------------------|-------------------|-----------------------------------------|--------------------------------|-----------------------------|------------------------------|  
@@ -79,10 +79,10 @@ ms.locfileid: "36034630"
 #### <a name="inprivate-browsing-feature-in-internet-explorer"></a>Internet Explorer 中的 InPrivate 瀏覽功能  
  [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] 不支援 [!INCLUDE[msCoName](../includes/msconame-md.md)] Internet Explorer 8 和 Internet Explorer 9 中的 InPrivate 瀏覽功能。 如需有關 InPrivate 瀏覽的詳細資訊，請參閱[什麼是 InPrivate 瀏覽？](http://windows.microsoft.com/Windows7/What-is-InPrivate-Browsing) (http://windows.microsoft.com/Windows7/What-is-InPrivate-Browsing).  
   
-###  <a name="bkmk_powerview_on_ExcelServices"></a> Excel Services 上或在 SharePoint Online 之 Excel Web App 的 power View  
- 下表摘要說明所支援的瀏覽器版本[!INCLUDE[ssCrescent](../includes/sscrescent-md.md)]當使用者開啟具有 Power View 工作表，在執行 Excel Services 的 SharePoint 伺服器上的 Excel 2013 活頁簿：  
+###  <a name="bkmk_powerview_on_ExcelServices"></a> 在 Excel Services 或 SharePoint Online 上的之 Excel Web App 的 power View  
+ 下表摘要說明支援的瀏覽器版本[!INCLUDE[ssCrescent](../includes/sscrescent-md.md)]當使用者在開啟的 Excel 2013 活頁簿具有 Power View 工作表，在執行 Excel Services 的 SharePoint 伺服器上：  
   
--   如需有關 SharePoint 2013 瀏覽器支援的詳細資訊，請參閱[規劃 SharePoint 2013 中的瀏覽器支援](http://technet.microsoft.com/library/cc263526\(office.15\).aspx)(http://technet.microsoft.com/library/cc263526(office.15).aspx)。  
+-   如需有關 SharePoint 2013 瀏覽器支援的詳細資訊，請參閱 <<c0> [ 規劃 SharePoint 2013 中的瀏覽器支援](http://technet.microsoft.com/library/cc263526\(office.15\).aspx)(http://technet.microsoft.com/library/cc263526(office.15).aspx)。  
   
 |**瀏覽器**|**Windows 8 和 8.1**|**Windows 7**|**Windows Server 2012 和 2012 R2**|**Windows Server 2008 R2**|**Windows Server 2008**|**Mac OS X 10.6 – 10.9**|  
 |-----------------|---------------------------|-------------------|-----------------------------------------|--------------------------------|-----------------------------|------------------------------|  
@@ -97,7 +97,7 @@ ms.locfileid: "36034630"
  **(\*)** Chrome 會停止支援 Netscape 外掛程式 API (NPAPI)，供 Silverlight。 Power View 會視 Silverlight 而定。  如需詳細資訊，請參閱＜ [NPAPI 的最後倒數計時](http://blog.chromium.org/2014/11/the-final-countdown-for-npapi.html)＞。  
   
 ##  <a name="bkmk_reportmanager"></a> 報表管理員瀏覽器需求 （原生模式）  
- 下列是可用來執行支援的瀏覽器的目前清單[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]原生模式報表管理員來管理報表和報表伺服器。  
+ 以下是可用來執行支援的瀏覽器的目前清單[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]原生模式報表管理員來管理報表和報表伺服器。  
   
 |瀏覽器|  
 |-------------|  
@@ -126,9 +126,9 @@ ms.locfileid: "36034630"
   
 -   在 iOS 裝置的 Apple Safari 中，以互動方式檢視報表。 功能支援包括展開/摺疊、參數窗格以及互動式排序。  
   
--   如需詳細資訊，請參閱[Microsoft Surface 裝置和 Apple iOS 裝置上檢視 Reporting Services 報表](../../2014/reporting-services/view-reporting-services-reports-surface-ios-devices.md)。  
+-   如需詳細資訊，請參閱 <<c0> [ 在 Microsoft Surface 裝置和 Apple iOS 裝置上檢視 Reporting Services 報表](../../2014/reporting-services/view-reporting-services-reports-surface-ios-devices.md)。  
   
- **注意** ：如果您要從 Macintosh 電腦存取報表伺服器，建議您使用 Safari。 如果您使用 SharePoint 產品與整合[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]，請參閱[規劃瀏覽器支援 (Windows SharePoint Services)](http://go.microsoft.com/fwlink/?LinkId=183583)。  
+ **注意** ：如果您要從 Macintosh 電腦存取報表伺服器，建議您使用 Safari。 如果您使用 SharePoint 產品與整合[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]，請參閱 <<c2> [ 規劃瀏覽器支援 (Windows SharePoint Services)](http://go.microsoft.com/fwlink/?LinkId=183583)。  
   
 ### <a name="url-access-for-viewing-reports"></a>檢視報表的 URL 存取  
  若要直接檢視報表，而不是透過報表管理員檢視報表，您可以使用 URL 存取來連結報表和報表檢視器。 URL 存取支援各種不同的瀏覽器。  
@@ -159,7 +159,7 @@ ms.locfileid: "36034630"
 > [!NOTE]  
 >  報表工具列屬於 HTML 檢視器元件的一部分。 根據預設，此工具列會出現在瀏覽器視窗中轉譯的每個報表上方。 報表檢視器會提供一些功能，包括搜尋報表中的資訊、捲動至特定頁面以及調整頁面大小以供檢視等功能。 如需有關報表工具列或 HTML 檢視器的詳細資訊，請參閱＜ [HTML Viewer and the Report Toolbar](html-viewer-and-the-report-toolbar.md)＞。  
   
-##  <a name="bkmk_controls"></a> Visual Studio 中 ReportViewer Web 伺服器控制項的瀏覽器支援  
+##  <a name="bkmk_controls"></a> 在 Visual Studio 中 ReportViewer Web 伺服器控制項的瀏覽器支援  
  ReportViewer Web 伺服器控制項是用來將報表功能內嵌在 ASP.NET Web 應用程式內。 這些控制項隨附在 Visual Studio 中，而且支援與本主題所述之其他元件不同的瀏覽器和瀏覽器版本。 用來檢視應用程式的瀏覽器類型會決定您可以在應用程式中提供的 ReportViewer 功能種類。 請使用本主題提供的資料表來判斷哪些支援的瀏覽器受限於報表功能限制，以及支援的平台。  
   
  由於支援的瀏覽器具有轉譯引擎的差異，所以某些進階報表功能可能會以不同的方式顯示在不同的瀏覽器中。  例如，文字旋轉。  
@@ -173,30 +173,30 @@ ms.locfileid: "36034630"
 |||||||||  
 |-|-|-|-|-|-|-|-|  
 |**瀏覽器**|**Windows 8** 和 **Windows 8.1**|**Windows 7**|**Windows Server 2012** 和 **2012 R2**|**Windows Server 2008** 和 **2008 R2**|**Windows Server 2003**|**Mac OS X 10.6 – 10.9**|**注意**|  
-|**（適用於桌上型電腦的 Internet Explorer 11**|是|是|是|不支援|不支援|不支援|Internet Explorer 支援完整的 ReportViewer 功能集合。|  
+|**（適用於桌面的 Internet Explorer 11**|是|是|是|不支援|不支援|不支援|Internet Explorer 支援完整的 ReportViewer 功能集合。|  
 |**Internet Explorer 10 （適用於桌上型電腦）**|是|是|是|不支援|不支援|不支援|Internet Explorer 支援完整的 ReportViewer 功能集合。|  
 |**Internet Explorer 9**|不支援|是|不支援|是|是|是|Internet Explorer 支援完整的 ReportViewer 功能集合。|  
-|**Internet Explorer 8.0**|不支援|是|不支援|是|[是]<sup>1</sup>|不支援|Internet Explorer 支援完整的 ReportViewer 功能集合。 <sup>1</sup>|  
-|**Internet Explorer 7.0**|不支援|是|不支援|是|[是]<sup>1</sup>|不支援|Internet Explorer 支援完整的 ReportViewer 功能集合。 <sup>1</sup>|  
+|**Internet Explorer 8.0**|不支援|是|不支援|是|是<sup>1</sup>|不支援|Internet Explorer 支援完整的 ReportViewer 功能集合。 <sup>1</sup>|  
+|**Internet Explorer 7.0**|不支援|是|不支援|是|是<sup>1</sup>|不支援|Internet Explorer 支援完整的 ReportViewer 功能集合。 <sup>1</sup>|  
 |**Firefox (最新公開發行的版本)**|是|是|是|是|是|不支援|不支援列印和縮放。|  
 |**Safari (最新公開發行的版本)**|不支援|不支援|不支援|不支援|不支援|是|不支援列印和縮放。<br /><br /> 此瀏覽器已停用在參數化報表上選取日期所用的日曆控制項。 使用者必須手動輸入他們想要在參數提示區域中使用的日期。|  
 |**Chrome (最新公開發行的版本)**|是|是|是|是|是|不支援|不支援列印和縮放。|  
   
- <sup>1</sup>在標準模式中，Internet Explorer 7.0 和 8.0 不會顯示在報表中的斜線。 如果您在報表中使用斜線，請將 ASP.NET 頁面設定為可在 Internet Explorer 中的 quirks 模式下執行。 若要這樣做，請找出\<！DOCTYPE > ASP.NET 網頁中的標記。 或者，如果您使用主版頁面，您可以在 .master 檔案中尋找此標記。 此標記的外觀如下：  
+ <sup>1</sup>在標準模式中，Internet Explorer 7.0 和 8.0 不會顯示在報表中的斜線。 如果您在報表中使用斜線，請將 ASP.NET 頁面設定為可在 Internet Explorer 中的 quirks 模式下執行。 若要這樣做，請找出\<！DOCTYPE > 在您的 ASP.NET 網頁的標記。 或者，如果您使用主版頁面，您可以在 .master 檔案中尋找此標記。 此標記的外觀如下：  
   
 ```  
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">  
 ```  
   
- 取代\<！DOCTYPE > 標記具有下列標記：  
+ 取代\<！DOCTYPE > 標記，並且具有下列標記：  
   
 ```  
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">  
 ```  
   
- 如需在 Internet Explorer 中的相容性模式的詳細資訊，請參閱[定義文件相容性](http://go.microsoft.com/fwlink/?LinkId=180380)(http://go.microsoft.com/fwlink/?LinkId=180380)。  
+ 如需有關在 Internet Explorer 中的相容性模式的詳細資訊，請參閱[定義的文件相容性](http://go.microsoft.com/fwlink/?LinkId=180380)(http://go.microsoft.com/fwlink/?LinkId=180380)。  
   
- 如需有關使用 ReportViewer 控制項的詳細資訊，請參閱[部署報表和 ReportViewer 控制項](http://msdn.microsoft.com/library/ms251723.aspx)(http://msdn.microsoft.com/library/ms251723.aspx)。  
+ 如需有關使用 ReportViewer 控制項的詳細資訊，請參閱 <<c0> [ 部署報表和 ReportViewer 控制項](http://msdn.microsoft.com/library/ms251723.aspx)(http://msdn.microsoft.com/library/ms251723.aspx)。  
   
 ## <a name="see-also"></a>另請參閱  
  [Reporting Services 工具](tools/reporting-services-tools.md)   

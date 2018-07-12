@@ -8,35 +8,35 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 74f726fc-2167-47af-9093-1644e03ef01f
 caps.latest.revision: 24
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 6ae7c26bce8b52e58124b04c435af6be7d6dc84f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 9c72123024fff48604919df0804694e0cd6ec480
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36033898"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37152099"
 ---
 # <a name="exporting-to-microsoft-excel-report-builder-and-ssrs"></a>Exporting to Microsoft Excel (Report Builder and SSRS)
   [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] Excel 轉譯延伸模組會將報表轉譯成 [!INCLUDE[ofprexcel](../../../includes/ofprexcel-md.md)] 2007-2010 的原生格式。 使用 Excel 轉譯延伸模組，Excel 中的資料行寬度就可以更精確地反映報表中的資料行寬度。  
   
  此格式為 Office Open XML。 此轉譯器所產生之檔案的內容類型為 **application/vnd.openxmlformats-officedocument.spreadsheetml.sheet** 而檔案的副檔名為 .xlsx。  
   
- 您可以透過變更裝置資訊設定，變更此轉譯器的某些預設設定。 如需詳細資訊，請參閱[Excel 裝置資訊設定](../excel-device-information-settings.md)。  
+ 您可以透過變更裝置資訊設定，變更此轉譯器的某些預設設定。 如需詳細資訊，請參閱 < [Excel 裝置資訊設定](../excel-device-information-settings.md)。  
   
 > [!IMPORTANT]  
 >  若要在匯出大於 10MB 的報表到 Excel 時避免出現錯誤訊息，請安裝 [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] 最新的 Service Pack。 此問題已在 SP2 中修正。  
 >   
 >  如需此問題的詳細資訊，請參閱 [修正：SSRS 2012 無法將大於 10 MB 的報表匯出為 Excel 格式](http://go.microsoft.com/fwlink/p/?LinkId=402513)  
 >   
->  若要取得最新 service pack [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]，請參閱[如何取得最新 service pack 的 SQL Server 2012](http://go.microsoft.com/fwlink/p/?LinkId=402512)  
+>  若要取得最新版 service pack [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]，請參閱[濆爧髍孮 SQL Server 2012 的最新 service pack](http://go.microsoft.com/fwlink/p/?LinkId=402512)  
   
 > [!IMPORTANT]  
->  當您定義的型別參數`String`，使用者會看見的可接受任何值的文字方塊。 如果報表參數未繫結至查詢參數且參數值未包含在報表中，報表使用者就可以輸入運算式語法、指令碼或 URL 到參數值中，將報表轉譯為 Excel。 如果另一個使用者接著檢視報表並按一下轉譯的參數內容，該使用者可能會不小心執行惡意指令碼或連結。  
+>  當您定義的型別參數`String`，使用者會看到一個可接受任何值的文字方塊。 如果報表參數未繫結至查詢參數且參數值未包含在報表中，報表使用者就可以輸入運算式語法、指令碼或 URL 到參數值中，將報表轉譯為 Excel。 如果另一個使用者接著檢視報表並按一下轉譯的參數內容，該使用者可能會不小心執行惡意指令碼或連結。  
 >   
 >  若要減輕不小心執行惡意指令碼的風險，請只從信任的來源開啟轉譯的報表。 如需保護報表的詳細資訊，請參閱 [保護報表和資源的安全](../security/secure-reports-and-resources.md)。  
   
@@ -132,14 +132,14 @@ ms.locfileid: "36033898"
 ## <a name="excel-renderer"></a>Excel 轉譯器  
   
 ### <a name="excel-2007-2010-renderer"></a>Excel 2007-2010 轉譯器  
- 在[!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]，預設 Excel 轉譯器是與相容的版本[!INCLUDE[ofprexcel](../../../includes/ofprexcel-md.md)]2007年-2010年。 在報表管理員和 SharePoint 清單的 **[匯出]** 功能表中，這就是 **[Excel]** 選項。  
+ 在  [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]，預設 Excel 轉譯器是與相容的版本[!INCLUDE[ofprexcel](../../../includes/ofprexcel-md.md)]2007-2010年。 在報表管理員和 SharePoint 清單的 **[匯出]** 功能表中，這就是 **[Excel]** 選項。  
   
  當您使用預設的 Excel 轉譯器而不是舊版的 Excel 2003 轉譯器時，您可以安裝適用於 Word、Excel 以及 PowerPoint 的 Microsoft Office 相容性套件，以允許舊版 Excel 開啟匯出的檔案。  
   
 ### <a name="excel-2003-renderer"></a>Excel 2003 轉譯器  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ofprexcel](../../../includes/ofprexcel-md.md)] 2003年轉譯延伸模組已被取代。 如需詳細資訊，請參閱[Deprecated Features in SQL Server Reporting Services SQL Server 2014 中](../deprecated-features-in-sql-server-reporting-services-ssrs.md)。  
+>  [!INCLUDE[ofprexcel](../../../includes/ofprexcel-md.md)] 2003年轉譯延伸模組已被取代。 如需詳細資訊，請參閱 < [SQL Server Reporting Services 中 SQL Server 2014 中已被取代的功能](../deprecated-features-in-sql-server-reporting-services-ssrs.md)。  
   
  與 Excel 2003 相容的舊版 Excel 轉譯器現在已命名為 Excel 2003，而且使用該名稱列於功能表上。 此轉譯器所產生檔案的內容類型為 **application/vnd.ms-excel** ，而檔案的副檔名為 .xls。  
   
@@ -149,9 +149,9 @@ ms.locfileid: "36033898"
   
 -   報表產生器處於中斷連接模式，而且您在報表產生器中預覽報表。 因為 RSReportServer 組態檔位於報表伺服器上，所以您從中匯出報表的工具或產品必須連接至報表伺服器，以便讀取組態檔。  
   
-     這個問題發生在同時[!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)]和單機版本報表產生器。  
+     發生這種情況同時[!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)]和單機版本報表產生器。  
   
--   報表檢視器 Web 組件處於本機模式和 SharePoint 伺服陣列並未與整合[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]報表伺服器。 如需詳細資訊，請參閱[本機模式與連線模式報表 &#40;SharePoint 模式的 Reporting Services&#41;](../local-vs-connected-mode-report-viewer-reporting-services-sharepoint-mode.md)  
+-   在本機模式和 SharePoint 伺服器陣列中的報表檢視器 Web 組件不會與整合[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]報表伺服器。 如需詳細資訊，請參閱[本機模式與連線模式報表 &#40;SharePoint 模式的 Reporting Services&#41;](../local-vs-connected-mode-report-viewer-reporting-services-sharepoint-mode.md)  
   
  如果 **[Excel 2003]** 功能表選項轉譯器設定為顯示，在下列案例中，您就可以同時使用 Excel 和 Excel 2003 選項：  
   
@@ -161,7 +161,7 @@ ms.locfileid: "36033898"
   
 -   [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] 和預覽報表。  
   
--   報表產生器已連接至報表伺服器。 這可以是[!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)]或單機版報表產生器。  
+-   報表產生器已連接至報表伺服器。 這可以是[!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)]或單機版本報表產生器。  
   
 -   報表檢視器 Web 組件處於遠端模式。  
   
@@ -171,7 +171,7 @@ ms.locfileid: "36033898"
   
  `<Extension Name="EXCEL" Type="Microsoft.ReportingServices.Rendering.ExcelRenderer.ExcelRenderer,Microsoft.ReportingServices.ExcelRendering" Visible="false"/>`  
   
- EXCELOPENXML 延伸模組會定義 Excel 2007-2010 的 Excel 轉譯器。 EXCEL 延伸模組會定義 EXCEL 2003 版本。 `Visible = “false”` 表示隱藏 Excel 2003 轉譯器。 如需詳細資訊，請參閱[RSReportServer 組態檔](../report-server/rsreportserver-config-configuration-file.md)和[RSReportDesigner Configuration File](../report-server/rsreportdesigner-configuration-file.md)。  
+ EXCELOPENXML 延伸模組會定義 Excel 2007-2010 的 Excel 轉譯器。 EXCEL 延伸模組會定義 EXCEL 2003 版本。 `Visible = “false”` 表示隱藏 Excel 2003 轉譯器。 如需詳細資訊，請參閱 < [RSReportServer Configuration File](../report-server/rsreportserver-config-configuration-file.md)並[RSReportDesigner Configuration File](../report-server/rsreportdesigner-configuration-file.md)。  
   
 ### <a name="differences-between-the-excel-2007-2010-and-excel-2003-renderers"></a>Excel 2007-2010 與 Excel 2003 轉譯器之間的差異  
  使用 Excel 或 Excel 2003 轉譯器所轉譯的報表通常完全相同。只有在極少數的情況下，您才會發現兩種格式之間的差異。 下表將比較 Excel 與 Excel 2003 轉譯器。  
@@ -283,7 +283,7 @@ ms.locfileid: "36033898"
 ## <a name="see-also"></a>另請參閱  
  [Reporting Services 中的分頁 &#40;報表產生器及 SSRS&#41;](../report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)   
  [轉譯行為 &#40;報表產生器及 SSRS&#41;](../report-design/rendering-behaviors-report-builder-and-ssrs.md)   
- [不同報表轉譯延伸模組的互動式功能&#40;報表產生器和 SSRS&#41;](interactive-functionality-different-report-rendering-extensions.md)   
+ [不同報表轉譯延伸模組的互動式功能&#40;報表產生器及 SSRS&#41;](interactive-functionality-different-report-rendering-extensions.md)   
  [轉譯報表項目 &#40;報表產生器及 SSRS&#41;](../report-design/rendering-report-items-report-builder-and-ssrs.md)   
  [資料表、矩陣和清單 &#40;報表產生器及 SSRS&#41;](../report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)  
   

@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 5ae69ddf-27c3-467c-9af1-c89ec383f661
 caps.latest.revision: 18
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 7d1719e8f1f8e9c8ff5c61fe1c561299b09213e8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c825f11187fceb63373cb053ffd2f650b25834f5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36034198"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37152939"
 ---
 # <a name="cdc-flow-components"></a>CDC 流程元件
   Change Data Capture Components by Attunity for Microsoft [!INCLUDE[ssISCurrent](../../../includes/ssiscurrent-md.md)] 可協助 SSIS 開發人員使用 CDC 並且降低 CDC 封裝的複雜性。  
@@ -61,7 +61,7 @@ ms.locfileid: "36034198"
 -   Windows Server 2008 R2 64 位元 (x64)  
   
 ### <a name="running-the-installation-program"></a>執行安裝程式  
- 在執行安裝精靈之前，務必[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)][!INCLUDE[ssBIDevStudio](../../../includes/ssbidevstudio-md.md)]已關閉。 然後，遵循安裝精靈中的指示進行。  
+ 執行安裝精靈之前，務必[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)][!INCLUDE[ssBIDevStudio](../../../includes/ssbidevstudio-md.md)]已關閉。 然後，遵循安裝精靈中的指示進行。  
   
 ### <a name="restart-ssis"></a>重新啟動 SSIS  
  安裝 CDC 元件之後，您必須重新啟動 SSIS 服務，才能確保在 SQL [!INCLUDE[ssBIDevStudio](../../../includes/ssbidevstudio-md.md)]中開發封裝時，這些元件可正確運作。  
@@ -74,7 +74,7 @@ ms.locfileid: "36034198"
  如果您使用[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)][!INCLUDE[ssBIDevStudio](../../../includes/ssbidevstudio-md.md)]進行封裝開發，請確定[!INCLUDE[ssBIDevStudio](../../../includes/ssbidevstudio-md.md)]關閉然後再執行解除安裝精靈。  
   
 ## <a name="benefits"></a>優點  
- CDC 元件[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)][!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)]元件可讓 SSIS 開發人員輕鬆地建置處理變更資料的 SSIS 封裝。 這些元件可強化 SSIS 開發人員處理 CDC 的能力，並且降低 CDC 封裝的複雜性。  
+ CDC 元件[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)][!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)]元件 」 可讓 SSIS 開發人員輕鬆地建置處理變更資料的 SSIS 封裝。 這些元件可強化 SSIS 開發人員處理 CDC 的能力，並且降低 CDC 封裝的複雜性。  
   
  SSIS CDC 元件是用來以方便進一步處理的方式提供變更資料，以便複寫、載入資料倉儲、更新 OLAP 的緩時變維度、稽核變更或進行其他可能的用途。 所使用的進一步處理類型是由 SSIS 開發人員決定。  
   
@@ -105,7 +105,7 @@ ms.locfileid: "36034198"
   
  [CDC 來源](cdc-source.md)  
   
- [CDC 來源編輯器&#40;連接管理員頁面&#41;](../cdc-source-editor-connection-manager-page.md)  
+ [CDC 來源編輯器&#40;連線管理員頁面&#41;](../cdc-source-editor-connection-manager-page.md)  
   
  [CDC 來源編輯器&#40;資料行頁面&#41;](../cdc-source-editor-columns-page.md)  
   

@@ -1,5 +1,5 @@
 ---
-title: CrossProduct 元素 (XMLA) |Microsoft 文件
+title: CrossProduct 元素 (XMLA) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -24,18 +24,18 @@ helpviewer_keywords:
 - CrossProduct element
 ms.assetid: a9a1584e-d2dd-45db-a918-d694c20d8189
 caps.latest.revision: 12
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: 1324a3c9449383301242ab6d0e76f94c636d9b5e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: a0d76cc463d39a3b33de41f1c342f5d9f8f800bb
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36030161"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37278217"
 ---
 # <a name="crossproduct-element-xmla"></a>CrossProduct 元素 (XMLA)
-  包含每個階層的成員已排序集合之間的交叉乘積[軸](axis-element-xmla.md)項目，會使用[MDDataSet](../xml-data-types/mddataset-data-type-xmla.md)所傳回的資料類型[Execute](../xml-elements-methods-execute.md)方法。  
+  包含從每個階層的成員已排序集合之間的交叉乘積[軸](axis-element-xmla.md)使用的項目[MDDataSet](../xml-data-types/mddataset-data-type-xmla.md)所傳回的資料類型[Execute](../xml-elements-methods-execute.md)方法。  
   
 ## <a name="syntax"></a>語法  
   
@@ -69,13 +69,13 @@ ms.locfileid: "36030161"
   
 |attribute|描述|  
 |---------------|-----------------|  
-|大小|需要`Integer`屬性。 指出 `CrossProduct` 元素所代表之交叉乘積內包含的 Tuple 數目。|  
+|大小|所需`Integer`屬性。 指出 `CrossProduct` 元素所代表之交叉乘積內包含的 Tuple 數目。|  
   
 ## <a name="remarks"></a>備註  
- 當用戶端應用程式設定`AxisFormat`屬性*ClusterFormat*，每個座標軸上的成員會分成的叢集，其中每個叢集代表每個階層的成員已排序集合之間的交叉乘積。 每個叢集都由一個 `CrossProduct` 元素表示。 每個 `CrossProduct` 元素都會針對該軸上的每個階層包含 `Members` 元素。 `CrossProduct` 元素可以包含來自單一階層的成員。  
+ 當用戶端應用程式設定`AxisFormat`屬性，以*ClusterFormat*，每個座標軸上的為成員會分成的叢集，其中每個叢集代表每個階層的成員已排序集合之間的交叉乘積。 每個叢集都由一個 `CrossProduct` 元素表示。 每個 `CrossProduct` 元素都會針對該軸上的每個階層包含 `Members` 元素。 `CrossProduct` 元素可以包含來自單一階層的成員。  
   
 ## <a name="example"></a>範例  
- 下列範例說明結構`CrossProduct`時用戶端指定項目*ClusterFormat*如`AxisFormat`XMLA 屬性，假設軸具有下列成員：  
+ 下列範例說明的結構`CrossProduct`時用戶端指定的項目*ClusterFormat*如`AxisFormat`XMLA 屬性，假設軸具有下列成員：  
   
 ||||||  
 |-|-|-|-|-|  

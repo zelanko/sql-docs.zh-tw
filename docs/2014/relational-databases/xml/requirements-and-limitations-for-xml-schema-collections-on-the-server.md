@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-xml
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - identifiers [XML schema collections]
 - XML schema collections [SQL Server], limitations
@@ -25,18 +25,18 @@ helpviewer_keywords:
 - lexical representation
 ms.assetid: c2314fd5-4c6d-40cb-a128-07e532b40946
 caps.latest.revision: 83
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 2dbe95deb602de17ccc43b55bcda438a61db8973
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 9840028891ce520dbaa873d517228eb4147d5ad2
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36031827"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37278874"
 ---
 # <a name="requirements-and-limitations-for-xml-schema-collections-on-the-server"></a>伺服器上 XML 結構描述集合的需求與限制
-  XML 結構描述定義語言 (XSD) 驗證具有某些相關 SQL 資料行的使用限制`xml`資料型別。 下表提供這些限制的詳細資料以及修改 XSD 結構描述以便讓它可以搭配 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]使用的指導方針。 本章節的主題提供有關特定限制的其他資訊，以及處理這些限制的指導方針。  
+  XML 結構描述定義語言 (XSD) 驗證具有某些相關 SQL 使用的資料行限制`xml`資料型別。 下表提供這些限制的詳細資料以及修改 XSD 結構描述以便讓它可以搭配 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]使用的指導方針。 本章節的主題提供有關特定限制的其他資訊，以及處理這些限制的指導方針。  
   
 |項目|限制|  
 |----------|----------------|  
@@ -51,7 +51,7 @@ ms.locfileid: "36031827"
 |將成員加入現有替代群組|您無法在 XML 結構描述集合中將成員加入現有的替代群組。 在 XML 結構描述中的替代群組是限制成標頭元素，而且所有其成員元素都必須定義在相同的 {CREATE &#124; ALTER} XML SCHEMA COLLECTION 陳述式中。|  
 |標準格式與模式限制|值的標準表示法不能違反其類型的模式限制。 如需詳細資訊，請參閱 [標準格式與模式限制](canonical-forms-and-pattern-restrictions.md)。|  
 |列舉 Facet|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不支援類型含有模式 Facet 或列舉違反這些 Facet 的 XML 結構描述。|  
-|Facet 長度|**長度**， **minLength**，和**maxLength** facet 將會儲存為`long`型別。 此類型是 32 位元的類型。 因此，這些值可接受值範圍為 2<sup>^</sup>31。|  
+|Facet 長度|**長度**， **minLength**，並**maxLength** facet 將會儲存為`long`型別。 此類型是 32 位元的類型。 因此，可接受的值，這些值的範圍為 2<sup>^</sup>31。|  
 |ID 屬性|每個 XML 結構描述元件都可擁有識別碼屬性。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會針對 **ID** 類型的 **\<xsd:attribute>** 宣告強制唯一性，但不會儲存這些值。 唯一性的強制範圍是 {CREATE &#124; ALTER} XML SCHEMA COLLECTION 陳述式。|  
 |ID 類型|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不支援 **xs:ID**、 **xs:IDREF**或 **xs:IDREFS**類型的元素。 結構描述不能宣告此類型的元素，或者宣告由限制此類型或從此類型衍生的元素。|  
 |區域命名空間|您必須為 **\<xsd:any>** 項目明確指定本機命名空間。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會拒絕使用空字串 ("") 作為命名空間屬性值的結構描述。 不過， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會要求明確使用 "##local"，將不完整的元素或屬性指示成萬用字元的執行個體。|  
@@ -60,7 +60,7 @@ ms.locfileid: "36031827"
 |記憶體不足的情況|在處理大型的 XML 結構描述集合時，有可能發生記憶體不足的情況。 如需這個問題的解決方案，請參閱 [大型的 XML 結構描述集合與記憶體不足的情況](large-xml-schema-collections-and-out-of-memory-conditions.md)。|  
 |重複值|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會拒絕 block 或 final 屬性有重複值的結構描述，例如 "restriction restriction" 與 "extension extension"。|  
 |結構描述元件識別碼|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會將結構描述元件識別碼的最大長度限制為 1000 個 Unicode 字元。 另外，不支援在識別碼中的 Surrogate 字元組。|  
-|時區資訊|在[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]和更新版本中，針對完全支援時區資訊`xs:date`， `xs:time`，和`xs:dateTime`XML 結構描述驗證的值。 在 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 回溯相容性模式下，時區資訊一定會正規化為國際標準時間 (格林威治標準時間)。 若為 `dateTime` 類型的元素，伺服器就會使用位移值 ("-05:00") 和傳回對應的 GMT 時間，藉以將提供的時間轉換為 GMT。|  
+|時區資訊|在 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]和更新版本中，為完全支援時區資訊`xs:date`， `xs:time`，和`xs:dateTime`XML 結構描述驗證的值。 在 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 回溯相容性模式下，時區資訊一定會正規化為國際標準時間 (格林威治標準時間)。 若為 `dateTime` 類型的元素，伺服器就會使用位移值 ("-05:00") 和傳回對應的 GMT 時間，藉以將提供的時間轉換為 GMT。|  
 |聯集類型|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不支援聯集類型的限制。|  
 |可變的有效位數小數|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不支援可變的有效位數小數。 **xs:decimal** 類型表示任意有效位數的小數位數。 符合 XML 處理器的最低限度必須支援最少為 `totalDigits=18`的十進位數字。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支援 `totalDigits=38,` ，但是會將小數點後數字限制為 10。 伺服器對於所有的 **xs:decimal** 執行個體值在內部都是使用 SQL 類型數值 (38, 10) 來表示。|  
   

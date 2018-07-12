@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - "10226"
 - "10264"
@@ -159,15 +159,15 @@ f1_keywords:
 - "10232"
 ms.assetid: 1f086882-4834-48e9-ab30-c214beee2040
 caps.latest.revision: 10
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 8bf2cca5f2d87f6404555f170272cc18e244d2ea
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: ae0eda9c82e610289c6fad858578aaac440bbb7d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36032955"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37150279"
 ---
 # <a name="gauges-report-builder-and-ssrs"></a>量測計 (報表產生器及 SSRS)
   量測計資料區是一維的資料區，可顯示資料集中的單一值。 個別量測計一定會放在量測計面板內，您可在其中加入子量測計或相鄰的量測計。 您可以使用量測計面板在單一量測計面板內建立多個量測計，這些量測計會共用篩選、群組或排序等通用功能。  
@@ -244,10 +244,10 @@ ms.locfileid: "36032955"
     > [!NOTE]  
     >  在量測計上沒有指標，或報表包含一個以上的資料集，而且量測計面板與資料集沒有關聯時，這個方法並不適用。  
   
--   以滑鼠右鍵按一下量測計指標，然後選取 **[指標屬性]**。 如`Value`、 從下拉式清單中選取欄位，或按一下定義欄位運算式**運算式**(*fx*) 按鈕。  
+-   以滑鼠右鍵按一下量測計指標，然後選取 **[指標屬性]**。 針對`Value`、 從下拉式清單中選取欄位，或按一下定義欄位運算式**運算式**(*fx*) 按鈕。  
   
 ### <a name="aggregating-fields-into-a-single-value"></a>將欄位彙總為單一值  
- 當欄位加入到量測計，[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]預設會計算欄位的彙總。 數值資料類型會使用 SUM 函數彙總。 非數值資料類型則會以 COUNT 函數彙總，此函數會針對資料集或群組中的特定值或欄位，計算執行個體的數目。 如果值欄位的資料類型為 [字串]，即使欄位中有數字，量測計也無法顯示數值。 但是量測計會使用 COUNT 函數彙總字串欄位。 若要避免發生這個問題，請確定您使用的欄位具有數值資料類型，而不是包含格式化數字的字串。 您可以使用 Visual Basic 運算式，利用 CDbl 或 CInt 常數將 [字串] 值轉換為數值資料類型。 例如，下列運算式會將 MyField 字串欄位轉換為數值。  
+ 當欄位加入到量測計，[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]預設計算欄位的彙總。 數值資料類型會使用 SUM 函數彙總。 非數值資料類型則會以 COUNT 函數彙總，此函數會針對資料集或群組中的特定值或欄位，計算執行個體的數目。 如果值欄位的資料類型為 [字串]，即使欄位中有數字，量測計也無法顯示數值。 但是量測計會使用 COUNT 函數彙總字串欄位。 若要避免發生這個問題，請確定您使用的欄位具有數值資料類型，而不是包含格式化數字的字串。 您可以使用 Visual Basic 運算式，利用 CDbl 或 CInt 常數將 [字串] 值轉換為數值資料類型。 例如，下列運算式會將 MyField 字串欄位轉換為數值。  
   
  `=Sum(CDbl(Fields!MyField.Value))`  
   
@@ -290,13 +290,13 @@ ms.locfileid: "36032955"
 ##  <a name="HowTo"></a> 如何主題  
  本節列出向您逐步示範如何使用報表中的量測計；如果取得資料以便在量測計中有效顯示；以及如何加入與設定量測計及其元素的程序。  
   
--   [將量測計加入至報表&#40;報表產生器和 SSRS&#41;](add-a-gauge-to-a-report-report-builder-and-ssrs.md)  
+-   [將量測計加入至報表&#40;報表產生器及 SSRS&#41;](add-a-gauge-to-a-report-report-builder-and-ssrs.md)  
   
--   [設定量測計的最小值或最大值&#40;報表產生器和 SSRS&#41;](set-a-minimum-or-maximum-on-a-gauge-report-builder-and-ssrs.md)  
+-   [設定量測計的最小值或最大值&#40;報表產生器及 SSRS&#41;](set-a-minimum-or-maximum-on-a-gauge-report-builder-and-ssrs.md)  
   
--   [設定量測計的貼齊間隔&#40;報表產生器和 SSRS&#41;](../set-a-snapping-interval-on-a-gauge-report-builder-and-ssrs.md)  
+-   [設定量測軌的貼齊間隔&#40;報表產生器及 SSRS&#41;](../set-a-snapping-interval-on-a-gauge-report-builder-and-ssrs.md)  
   
--   [將影像指定為量測計的指標&#40;報表產生器和 SSRS&#41;](../specify-an-image-as-a-pointer-on-a-gauge-report-builder-and-ssrs.md)  
+-   [將影像指定為量測計的指標&#40;報表產生器及 SSRS&#41;](../specify-an-image-as-a-pointer-on-a-gauge-report-builder-and-ssrs.md)  
   
   
 ##  <a name="InThisSection"></a> 本節內容  
@@ -305,9 +305,9 @@ ms.locfileid: "36032955"
 |||  
 |-|-|  
 |詞彙|定義|  
-|[格式化量測計的標尺&#40;報表產生器和 SSRS&#41;](formatting-scales-on-a-gauge-report-builder-and-ssrs.md)|提供有關格式化量測計上之標尺的一般資訊，以及有關格式化星形與線性量測計上標尺之選項的詳細資訊。|  
-|[格式化量測計的指標&#40;報表產生器和 SSRS&#41;](formatting-pointers-on-a-gauge-report-builder-and-ssrs.md)|提供有關格式化量測計上之指標的一般資訊，以及有關格式化星形與線性量測計上可用指標樣式之選項的詳細資訊。|  
-|[格式化量測計上的範圍&#40;報表產生器和 SSRS&#41;](formatting-ranges-on-a-gauge-report-builder-and-ssrs.md)|提供有關格式化量測計之範圍以表示量測計上值的重要子區段，或以視覺化的方式表示指標值靠近特定值範圍之時間的資訊。|  
+|[格式化量測計的標尺&#40;報表產生器及 SSRS&#41;](formatting-scales-on-a-gauge-report-builder-and-ssrs.md)|提供有關格式化量測計上之標尺的一般資訊，以及有關格式化星形與線性量測計上標尺之選項的詳細資訊。|  
+|[格式化量測計的指標&#40;報表產生器及 SSRS&#41;](formatting-pointers-on-a-gauge-report-builder-and-ssrs.md)|提供有關格式化量測計上之指標的一般資訊，以及有關格式化星形與線性量測計上可用指標樣式之選項的詳細資訊。|  
+|[格式化量測計上的範圍&#40;報表產生器及 SSRS&#41;](formatting-ranges-on-a-gauge-report-builder-and-ssrs.md)|提供有關格式化量測計之範圍以表示量測計上值的重要子區段，或以視覺化的方式表示指標值靠近特定值範圍之時間的資訊。|  
   
   
 ## <a name="see-also"></a>另請參閱  

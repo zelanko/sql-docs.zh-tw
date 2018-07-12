@@ -1,5 +1,5 @@
 ---
-title: ClrAssemblyFile 資料類型 (ASSL) |Microsoft 文件
+title: ClrAssemblyFile 資料類型 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - ClrAssemblyFile data type
 ms.assetid: 91074677-c149-483b-a56d-0e35d959d9eb
 caps.latest.revision: 41
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: b542c4193d80fa80cc9aed6663f41e102266000b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ebfcf0080184294cbbda05e671776972be18f9a1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36030893"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37277864"
 ---
 # <a name="clrassemblyfile-data-type-assl"></a>ClrAssemblyFile 資料類型 (ASSL)
-  定義代表其中一個檔案組成的基本資料類型[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] `Assembly` ([ClrAssembly](assembly-data-type-assl.md)項目)。  
+  定義代表其中一個 compose 檔案的基本資料類型[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] `Assembly` ([ClrAssembly](assembly-data-type-assl.md)項目)。  
   
 ## <a name="syntax"></a>語法  
   
@@ -59,14 +59,14 @@ ms.locfileid: "36030893"
 |------------------|-------------|  
 |父元素|無|  
 |子元素|[資料](../objects/data-element-assl.md)，[名稱](../properties/name-element-assl.md)，[類型](../properties/type-element-clrassemblyfile-assl.md)|  
-|衍生的元素|[檔案](../objects/file-element-assl.md)([檔案](../collections/files-element-assl.md)集合[ClrAssembly](assembly-data-type-assl.md))|  
+|衍生的元素|[檔案](../objects/file-element-assl.md)([檔案](../collections/files-element-assl.md)的集合[ClrAssembly](assembly-data-type-assl.md))|  
   
 ## <a name="remarks"></a>備註  
- 分析管理物件 (AMO) 物件模型中的對應元素是<xref:Microsoft.AnalysisServices.ClrAssemblyFile>。  
+ 在 「 分析管理物件 (AMO) 物件模型的對應元素是<xref:Microsoft.AnalysisServices.ClrAssemblyFile>。  
   
 ## <a name="see-also"></a>另請參閱  
- [Server 元素&#40;ASSL&#41;](../objects/server-element-assl.md)   
- [Database 元素&#40;ASSL&#41;](../objects/database-element-assl.md)   
+ [伺服器項目&#40;ASSL&#41;](../objects/server-element-assl.md)   
+ [資料庫項目&#40;ASSL&#41;](../objects/database-element-assl.md)   
  [Assemblies 元素&#40;ASSL&#41;](../collections/assemblies-element-assl.md)   
  [Assembly 項目&#40;ASSL&#41;](../objects/assembly-element-assl.md)   
  [DataBlock 資料類型&#40;ASSL&#41;](datablock-data-type-assl.md)   

@@ -1,5 +1,5 @@
 ---
-title: 結果元素 (XMLA) |Microsoft 文件
+title: 結果元素 (XMLA) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -24,18 +24,18 @@ helpviewer_keywords:
 - results element
 ms.assetid: 3249a17a-7bfa-4753-b605-8f611ba7ae2b
 caps.latest.revision: 11
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: 203ad5a79938c80e2bfccc798ff5f9551ac66d8d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 1e42f6aa620b57630df690ee92bdbbd849ab100b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36034443"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37165229"
 ---
 # <a name="results-element-xmla"></a>results 元素 (XMLA)
-  包含集合[根](root-element-xmla.md)所傳回的項目[Execute](../xml-elements-methods-execute.md)方法使用[批次](../xml-elements-commands/batch-element-xmla.md)命令。  
+  包含的集合[根](root-element-xmla.md)所傳回的項目[Execute](../xml-elements-methods-execute.md)方法使用[批次](../xml-elements-commands/batch-element-xmla.md)命令。  
   
  **命名空間** http://schemas.microsoft.com/analysisservices/2003/xmla-multipleresults  
   
@@ -63,7 +63,7 @@ ms.locfileid: "36034443"
 |關聯性|元素|  
 |------------------|-------------|  
 |父元素|[傳回](return-element-xmla.md)|  
-|子元素|[根](root-element-xmla.md)|  
+|子元素|[根目錄](root-element-xmla.md)|  
   
 ## <a name="remarks"></a>備註  
  如果 `Batch` 方法執行了 `Execute` 命令，`return` 元素就會包含單一 `results` 元素，而非單一 `root` 元素。 `results` 元素的內容取決於用來執行 `Batch` 命令的設定。  

@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - replication [SQL Server], agents and profiles
 - replication agent profiles [SQL Server]
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - profiles [SQL Server], replication agents
 ms.assetid: 9c290a88-4e9f-4a7e-aab5-4442137a9918
 caps.latest.revision: 48
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: deb2e3e2ea03429e2d37288e85592d54e1512af3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: ccbb2f6a8912a68573b9e3d67d677e7a92c7e1f8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36035457"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37152459"
 ---
 # <a name="work-with-replication-agent-profiles"></a>處理複寫代理程式設定檔
   本主題描述如何使用 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 、 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]或 Replication Management Objects (RMO)，在 [!INCLUDE[tsql](../../../includes/tsql-md.md)]中處理複寫代理程式設定檔。 每個複寫代理程式的行為由一組可在代理程式設定檔中設定的參數來控制。 各代理程式都有預設的設定檔，某些代理程式還擁有其他預先定義的設定檔；在某一給定時刻，代理程式只使用一個設定檔。  
@@ -219,9 +219,9 @@ ms.locfileid: "36035457"
   
     -   **9** - [Replication Queue Reader Agent](replication-queue-reader-agent.md)  
   
-     這會傳回指定的代理程式類型的所有設定檔。 請注意的`profile_name`結果集中使用的設定檔。  
+     這會傳回指定的代理程式類型的所有設定檔。 請記下的值`profile_name`結果集中要使用之設定檔。  
   
-2.  如果從代理程式作業啟動代理程式時，編輯 啟動代理程式，以指定的值的作業步驟`profile_name`之後的步驟 1 中取得 **-ProfileName**命令列參數。 如需詳細資訊，請參閱[檢視並修改複寫代理程式命令提示字元參數 &#40;SQL Server Management Studio&#41;](view-and-modify-replication-agent-command-prompt-parameters.md)。  
+2.  如果代理程式從代理程式作業啟動，編輯 啟動代理程式指定的值的作業步驟`profile_name`之後的步驟 1 中取得 **-ProfileName**命令列參數。 如需詳細資訊，請參閱[檢視並修改複寫代理程式命令提示字元參數 &#40;SQL Server Management Studio&#41;](view-and-modify-replication-agent-command-prompt-parameters.md)。  
   
 3.  從命令提示字元啟動代理程式，當指定的值`profile_name`之後的步驟 1 中取得 **-ProfileName**命令列參數。  
   
@@ -282,7 +282,7 @@ ms.locfileid: "36035457"
   
 2.  建立 <xref:Microsoft.SqlServer.Replication.AgentProfile> 類別的執行個體。 針對 <xref:Microsoft.SqlServer.Replication.AgentProfile.Name%2A> ，設定步驟 1 的 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 和 <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A>的設定檔名稱。  
   
-3.  呼叫 <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> 方法。 如果此方法傳回`false`，或是指定的名稱不正確的設定檔不存在伺服器上。  
+3.  呼叫 <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> 方法。 如果此方法傳回`false`，則指定的名稱不正確，或在伺服器上沒有設定檔。  
   
 4.  確認 <xref:Microsoft.SqlServer.Replication.AgentProfile.Type%2A> 屬性是設定為 <xref:Microsoft.SqlServer.Replication.AgentProfileTypeOption.User>，這代表客戶的設定檔。 您不該移除 <xref:Microsoft.SqlServer.Replication.AgentProfileTypeOption.System> 的值為 <xref:Microsoft.SqlServer.Replication.AgentProfile.Type%2A>的設定檔。  
   

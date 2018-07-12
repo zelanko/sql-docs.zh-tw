@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - databases [Reporting Services]
 - report servers [Reporting Services], databases
@@ -20,13 +20,13 @@ ms.assetid: 0fc5c033-3fe1-4cea-86c7-66ea5e424d65
 caps.latest.revision: 47
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: d7dd8dd25195465aaff15bcf58ca5c4898f58274
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 13781ef7b1854026acf1a237deb56f4fbaf6fa98
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36035590"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37157649"
 ---
 # <a name="report-server-database-ssrs-native-mode"></a>報表伺服器資料庫 (SSRS 原生模式)
   報表伺服器是使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] 儲存中繼資料和物件定義的無狀態伺服器。 原生模式 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 安裝會使用兩個資料庫來分隔永續性資料儲存與暫時儲存需求。 兩個資料庫會一起建立，並依名稱繫結。 根據預設，資料庫名稱分別為 **ReportServer** 和 **ReportServerTempdb**。  
@@ -35,7 +35,7 @@ ms.locfileid: "36035590"
   
  資料庫可以在本機或遠端 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 執行個體上執行。 如果您有足夠的系統資源或想要保留軟體授權，可以選擇本機執行個體，但在遠端電腦上執行資料庫則可提升效能。  
   
- 您可以從先前的安裝或具有其他報表伺服器執行個體的不同執行個體，報告或重複使用現有的報表伺服器資料庫。 報表伺服器資料庫的結構描述必須與報表伺服器執行個體相容。 如果資料庫的格式是舊的，系統將會提示您將其升級到目前的格式。 但是無法讓新版降級為舊版。 如果您有新版的報表伺服器資料庫，您無法將其用於舊版的報表伺服器執行個體。 如需有關如何將報表伺服器資料庫升級到新格式的詳細資訊，請參閱[升級報表伺服器資料庫](../install-windows/upgrade-a-report-server-database.md)。  
+ 您可以從先前的安裝或具有其他報表伺服器執行個體的不同執行個體，報告或重複使用現有的報表伺服器資料庫。 報表伺服器資料庫的結構描述必須與報表伺服器執行個體相容。 如果資料庫的格式是舊的，系統將會提示您將其升級到目前的格式。 但是無法讓新版降級為舊版。 如果您有新版的報表伺服器資料庫，您無法將其用於舊版的報表伺服器執行個體。 如需有關如何將報表伺服器資料庫升級到新格式的詳細資訊，請參閱 <<c0> [ 升級報表伺服器資料庫](../install-windows/upgrade-a-report-server-database.md)。  
   
 > [!IMPORTANT]  
 >  資料庫的資料表結構會針對伺服器作業最佳化，而且不應該修改或微調。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 前後版次的資料表結構可能會變更。 如果您修改或擴充資料庫，可能會限制或妨礙執行未來升級或套用 Service Pack 的功能。 您也可能會導入影響報表伺服器作業的變更。 例如，如果您在 ReportServer 資料庫上開啟 READ_COMMITTED_SNAPSHOT，您會中斷互動式排序功能。  
@@ -47,7 +47,7 @@ ms.locfileid: "36035590"
 ## <a name="report-server-database"></a>報表伺服器資料庫  
  報表伺服器資料庫是儲存下列內容的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫：  
   
--   管理報表伺服器項目 (../ 報表和連結的報表、 共用的資料來源、 報表模型、 資料夾、 資源) 和所有屬性及這些項目相關聯的安全性設定。  
+-   報表伺服器所管理的項目 (.../ 報表與連結的報表、 共用的資料來源、 報表模型、 資料夾、 資源) 及其所有屬性和項目相關聯的安全性設定。  
   
 -   訂閱與排程定義。  
   
@@ -69,7 +69,7 @@ ms.locfileid: "36035590"
  如果您備份暫存資料庫並在後續加以復原，應該要刪除其內容。 一般而言，在任何時候刪除暫存資料庫內容都是安全的。 但是，您必須在刪除內容後重新啟動報表伺服器 Windows 服務。  
   
 ## <a name="see-also"></a>另請參閱  
- [主控報表伺服器資料庫中 SQL Server 容錯移轉叢集](../install-windows/host-a-report-server-database-in-a-sql-server-failover-cluster.md)   
+ [裝載 SQL Server 容錯移轉叢集中的報表伺服器資料庫](../install-windows/host-a-report-server-database-in-a-sql-server-failover-cluster.md)   
  [儲存加密的報表伺服器資料 &#40;SSRS 組態管理員&#41;](../install-windows/ssrs-encryption-keys-store-encrypted-report-server-data.md)   
  [Reporting Services Report Server](../reporting-services-report-server.md)   
  [管理報表伺服器資料庫 &#40;SSRS 原生模式&#41;](report-server-database-ssrs-native-mode.md)   

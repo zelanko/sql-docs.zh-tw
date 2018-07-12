@@ -5,23 +5,22 @@ ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - 33028 (Database Engine error)
 ms.assetid: c5cec0e4-0bcd-4907-826f-e7d835cfcb37
 caps.latest.revision: 10
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: ccf8eeb5d9c91e1f8ec8cec3c46edf66409bbc5a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: b2820abe304ce16234029caa16164285f6f66f9b
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36023991"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37415318"
 ---
 # <a name="mssqlserver33028"></a>MSSQLSERVER_33028
     
@@ -42,7 +41,7 @@ ms.locfileid: "36023991"
 |錯誤碼|描述|  
 |----------------|-----------------|  
 |0|成功。 沒有錯誤。|  
-|@shouldalert|失敗。 發生未指定或意外的錯誤。 沒有其他資訊可用。|  
+|1|失敗。 發生未指定或意外的錯誤。 沒有其他資訊可用。|  
 |2|緩衝區不足。 無法針對密碼編譯提供者配置空間。|  
 |3|不支援。 這個版本不支援此密碼編譯提供者。 請選取另一個密碼編譯提供者。|  
 |4|找不到。 指定的密碼編譯提供者不存在，或者您沒有存取這些檔案的授權。|  

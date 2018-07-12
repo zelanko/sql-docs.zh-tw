@@ -1,5 +1,5 @@
 ---
-title: Source 元素 (XMLA) |Microsoft 文件
+title: Source 元素 (XMLA) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -24,18 +24,18 @@ helpviewer_keywords:
 - Source element
 ms.assetid: 4d4665ae-e20f-4baf-ab0f-848660caf500
 caps.latest.revision: 17
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: 481b5c755b24c6bb8ae03e58b43759b4dce4e39a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 55123ac3a84cc42780550876f407e8eed11e4f18
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36031976"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37182955"
 ---
 # <a name="source-element-xmla"></a>Source 元素 (XMLA)
-  表示要合併期間的來源資料分割[MergePartitions](../xml-elements-commands/mergepartitions-element-xmla.md)命令。  
+  表示期間合併的來源資料分割[MergePartitions](../xml-elements-commands/mergepartitions-element-xmla.md)命令。  
   
 ## <a name="syntax"></a>語法  
   
@@ -87,7 +87,7 @@ ms.locfileid: "36031976"
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [目標項目&#40;XMLA&#41;](../xml-elements-properties/target-element-xmla.md)   
+ [Target 項目&#40;XMLA&#41;](../xml-elements-properties/target-element-xmla.md)   
  [屬性&#40;XMLA&#41;](xml-elements-properties.md)  
   
   

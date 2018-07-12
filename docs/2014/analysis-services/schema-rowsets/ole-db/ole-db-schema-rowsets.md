@@ -1,5 +1,5 @@
 ---
-title: OLE DB 結構描述資料列集 |Microsoft 文件
+title: OLE DB 結構描述資料列 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -20,18 +20,18 @@ helpviewer_keywords:
 - rowsets [Analysis Services], OLE DB
 ms.assetid: ca2ee87a-ba04-4501-9125-33934c58ab31
 caps.latest.revision: 37
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 313efc520f63240d3e9fa19584fc7f3e620fdeee
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 3a1d03d6fd8d527d48a9a4051f201368ff870882
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36031990"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37161189"
 ---
 # <a name="ole-db-schema-rowsets"></a>OLE DB 結構描述資料列集
-  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] XML for Analysis (XMLA) 提供者支援下列 OLE DB 結構描述資料列集。 使用`DISCOVER_ENUMERATORS`含有資料列集[探索](../../xmla/xml-elements-methods-discover.md)方法來檢查特定資料來源提供者是否支援資料列集。  
+  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] XML for Analysis (XMLA) 提供者支援下列 OLE DB 結構描述資料列集。 使用`DISCOVER_ENUMERATORS`資料列集搭配[Discover](../../xmla/xml-elements-methods-discover.md)方法來檢查特定的資料來源提供者是否支援資料列集。  
   
  您也可以在 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 網站上於 MSDN® Library 的「OLE DB 程式設計人員參考」部分中，藉由搜尋「結構描述資料列集」主題，來尋找有關這些資料列集的詳細資訊。  
   
@@ -74,7 +74,7 @@ ms.locfileid: "36031990"
 |`DBSCHEMA_VIEW_TABLE_USAGE`|識別檢視之資料表 (定義在資料庫目錄中，並且由指定使用者所擁有) 相依的資料表。|  
 |`DBSCHEMA_VIEWS`|識別定義在目錄中且可由指定使用者存取的檢視表。|  
   
- <sup>1</sup>指出支援的 MSOLAP 資料來源提供者的結構描述資料列集[!INCLUDE[msCoName](../../../includes/msconame-md.md)]XMLA 提供者。  
+ <sup>1</sup>表示的 MSOLAP 資料來源提供者支援的結構描述資料列集[!INCLUDE[msCoName](../../../includes/msconame-md.md)]XMLA 提供者。  
   
 ## <a name="see-also"></a>另請參閱  
  [DISCOVER_ENUMERATORS 資料列集](../xml/discover-enumerators-rowset.md)   

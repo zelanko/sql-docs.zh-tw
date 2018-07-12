@@ -1,12 +1,12 @@
 ---
-title: bcp_gettypename |Microsoft 文件
+title: bcp_gettypename |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: connectivity
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
@@ -22,12 +22,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 0faf40639991005ad7161af9f144af49fb384ba3
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: 281cbb68960ad96e1f9712e7ad38030c0a6a7934
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35703489"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37426220"
 ---
 # <a name="bcpgettypename"></a>bcp_gettypename
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -91,12 +91,12 @@ RETCODE bcp_gettypename (
 |**SQLAOPMIN**|之前或之後|**Min**|  
 |**SQLAOPMAX**|之前或之後|**Max**|  
 |**SQLDATETIM4**|之前或之後|**smalldatetime**|  
-|**SQLMONEY4**|之前或之後|**smallmoney**|  
-|**SQLFLT4**|之前或之後|**實數**|  
+|**SQLMONEY4**|之前或之後|**Smallmoney**|  
+|**SQLFLT4**|之前或之後|**Real**|  
 |**SQLUNIQUEID**|之前或之後|**uniqueidentifier**|  
 |**SQLNCHAR**|否|**Nchar**|  
 |**SQLNVARCHAR**|否|**Nvarchar**|  
-|**SQLNTEXT**|之前或之後|**ntext**|  
+|**SQLNTEXT**|之前或之後|**Ntext**|  
 |**SQLVARIANT**|之前或之後|**sql_variant**|  
 |**SQLINT8**|之前或之後|**Bigint**|  
 |**SQLCHARACTER**|是|**varchar(max)**|  
@@ -110,12 +110,12 @@ RETCODE bcp_gettypename (
 |**SQLNCHAR**|是|**nvarchar(max)**|  
 |**SQLNVARCHAR**|是|**nvarchar(max)**|  
 |**SQLXML**|是|**XML**|  
-|**SQLUDT**|之前或之後|**udt**|  
+|**SQLUDT**|之前或之後|**Udt**|  
   
 ## <a name="bcpgettypename-support-for-enhanced-date-and-time-features"></a>bcp_gettypename 支援增強的日期和時間功能  
- 日期/時間類型的語彙基元的參數值所述的資料表中的 「 在 sqlncli.h 中的型別 」 資料行[增強型日期和時間類型的大量複製變更&#40;OLE DB 和 ODBC&#41;](../../relational-databases/native-client-odbc-date-time/bulk-copy-changes-for-enhanced-date-and-time-types-ole-db-and-odbc.md)。 傳回值位於 "File storage type" 資料行的對應資料列中。  
+ 日期/時間類型的語彙基元的參數值"Type in sqlncli.h"資料行中的資料表中所述[增強型日期和時間類型的大量複製變更&#40;OLE DB 和 ODBC&#41;](../../relational-databases/native-client-odbc-date-time/bulk-copy-changes-for-enhanced-date-and-time-types-ole-db-and-odbc.md)。 傳回值位於 "File storage type" 資料行的對應資料列中。  
   
- 如需詳細資訊，請參閱[日期和時間增強功能&#40;ODBC&#41;](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)。  
+ 如需詳細資訊，請參閱 <<c0> [ 日期和時間改善&#40;ODBC&#41;](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)。</c0>  
   
 ## <a name="see-also"></a>另請參閱  
  [大量複製函數](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/sql-server-driver-extensions-bulk-copy-functions.md)  

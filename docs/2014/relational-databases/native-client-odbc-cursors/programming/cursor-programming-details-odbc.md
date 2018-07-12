@@ -1,13 +1,11 @@
 ---
-title: 資料指標程式設計詳細資料 (ODBC) |Microsoft 文件
+title: 資料指標程式設計詳細資料 (ODBC) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -17,15 +15,15 @@ helpviewer_keywords:
 - cursors [ODBC], programming
 ms.assetid: 6bae29c4-7f49-419c-8712-90db734f992e
 caps.latest.revision: 32
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 94875ea264d138741f9c17d896ffe471ec449235
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: aebd98e1fce75fd2e1b0d55f00205c176ee380a8
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36023543"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37418947"
 ---
 # <a name="cursor-programming-details-odbc"></a>資料指標程式設計詳細內容 (ODBC)
   選擇正確的資料指標類型可以改善應用程式效能。 在某些情況下，當您執行所要求之資料指標類型不支援的 SQL 陳述式時，[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 可能會隱含轉換資料指標類型。  

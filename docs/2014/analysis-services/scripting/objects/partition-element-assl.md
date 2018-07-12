@@ -1,5 +1,5 @@
 ---
-title: 資料分割元素 (ASSL) |Microsoft 文件
+title: 資料分割元素 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - Partition element
 ms.assetid: 40020840-1bb7-478f-9017-1a30342ac4c6
 caps.latest.revision: 39
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 371c6fbb2d77993a0d6113101c0f074b88009ede
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c298ec80f1bb1f17d97e36f2ce93b6efbf924508
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36034657"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37209968"
 ---
 # <a name="partition-element-assl"></a>Partition 元素 (ASSL)
-  定義的資料分割[MeasureGroup](group-element-assl.md)項目或資料分割繫結中的行外[MeasureGroupBinding](../data-type/measuregroupbinding-data-type-out-of-line-assl.md)項目。  
+  定義的資料分割[MeasureGroup](group-element-assl.md)項目或資料分割中的繫結的行外[MeasureGroupBinding](../data-type/measuregroupbinding-data-type-out-of-line-assl.md)項目。  
   
 ## <a name="syntax"></a>語法  
   
@@ -82,7 +82,7 @@ ms.locfileid: "36034657"
   
 |上階或父系|資料類型|  
 |------------------------|---------------|  
-|[量值群組](group-element-assl.md)|無|  
+|[MeasureGroup](group-element-assl.md)|無|  
 |[MeasureGroupBinding](../data-type/binding-data-type-assl.md)|  
   
 ## <a name="element-relationships"></a>元素關聯性  
@@ -93,7 +93,7 @@ ms.locfileid: "36034657"
   
 |上階或父系|子元素|  
 |------------------------|--------------------|  
-|[MeasureGroup](../properties/id-element-assl.md), [AggregationInstances](../collections/aggregationinstances-element-assl.md), [AggregationInstanceSource](../properties/aggregationinstancesource-element-assl.md), [AggregationPrefix](../properties/aggregationprefix-element-assl.md), [Annotations](../collections/annotations-element-assl.md), [CreatedTimestamp](../properties/createdtimestamp-element-assl.md), [CurrentStorageMode](../properties/storagemode-element-assl.md), [Description](../properties/description-element-assl.md), [ErrorConfiguration](errorconfiguration-element-assl.md), [EstimatedRows](../properties/estimatedrows-element-assl.md), [EstimatedSize](../properties/estimatedsize-element-assl.md), [ID](../properties/id-element-assl.md), [LastProcessed](../properties/lastprocessed-element-assl.md), [LastSchemaUpdate](../properties/lastschemaupdate-element-assl.md), [Name](../properties/name-element-assl.md), [ProactiveCaching](proactivecaching-element-assl.md), [ProcessingMode](../properties/processingmode-element-assl.md), [ProcessingPriority](../properties/processingpriority-element-assl.md), [RemoteDatasourceID](../properties/datasourceid-element-assl.md), [Slice](../properties/slice-element-assl.md), [Source](../properties/source-element-binding-assl.md), [State](../properties/state-element-assl.md), [StorageLocation](../properties/storagelocation-element-assl.md), [StorageMode](../properties/storagemode-element-assl.md), [Type](../properties/type-element-partition-assl.md)|  
+|[MeasureGroup](../properties/id-element-assl.md)， [AggregationInstances](../collections/aggregationinstances-element-assl.md)， [AggregationInstanceSource](../properties/aggregationinstancesource-element-assl.md)， [AggregationPrefix](../properties/aggregationprefix-element-assl.md)，[註解](../collections/annotations-element-assl.md)， [CreatedTimestamp](../properties/createdtimestamp-element-assl.md)， [CurrentStorageMode](../properties/storagemode-element-assl.md)，[描述](../properties/description-element-assl.md)， [ErrorConfiguration](errorconfiguration-element-assl.md)， [EstimatedRows](../properties/estimatedrows-element-assl.md)， [EstimatedSize](../properties/estimatedsize-element-assl.md)， [ID](../properties/id-element-assl.md)， [LastProcessed](../properties/lastprocessed-element-assl.md)， [LastSchemaUpdate](../properties/lastschemaupdate-element-assl.md)，[名稱](../properties/name-element-assl.md)， [ProactiveCaching](proactivecaching-element-assl.md)， [ProcessingMode](../properties/processingmode-element-assl.md)， [ProcessingPriority](../properties/processingpriority-element-assl.md)， [RemoteDatasourceID](../properties/datasourceid-element-assl.md)，[配量](../properties/slice-element-assl.md)，[來源](../properties/source-element-binding-assl.md)，[狀態](../properties/state-element-assl.md)， [StorageLocation](../properties/storagelocation-element-assl.md)， [StorageMode](../properties/storagemode-element-assl.md)，[類型](../properties/type-element-partition-assl.md)|  
 |[MeasureGroupBinding](../data-type/measuregroupbinding-data-type-out-of-line-assl.md)|無|  
   
 ## <a name="remarks"></a>備註  
@@ -133,7 +133,7 @@ ms.locfileid: "36034657"
   
 -   [來源](../properties/source-element-binding-assl.md)元素只接受**查詢**繫結。  
   
- 分析管理物件 (AMO) 物件模型中的對應元素是<xref:Microsoft.AnalysisServices.Partition>。  
+ 在 「 分析管理物件 (AMO) 物件模型的對應元素是<xref:Microsoft.AnalysisServices.Partition>。  
   
 ## <a name="see-also"></a>另請參閱  
  [物件&#40;ASSL&#41;](objects-assl.md)  
