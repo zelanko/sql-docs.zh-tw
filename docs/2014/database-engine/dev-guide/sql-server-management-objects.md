@@ -1,5 +1,5 @@
 ---
-title: SQL Server 管理物件 |Microsoft 文件
+title: SQL Server 管理物件 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -12,15 +12,15 @@ ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: ea830e74-5271-48be-9099-7a7dc8425d9e
 caps.latest.revision: 3
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 1207a07d9751731d0374f822b75cd84d1b4ec78b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: eebc0b41b9c614710b2cee569a4a3517540b3254
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36030116"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37239478"
 ---
 # <a name="sql-server-management-objects"></a>SQL Server 管理物件
 

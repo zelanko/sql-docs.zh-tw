@@ -1,12 +1,12 @@
 ---
-title: 定位更新 (ODBC) |Microsoft 文件
+title: 定位更新 (ODBC) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -23,12 +23,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 7d09736a888a124442f69f672ebdf0c5dfd44ad2
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: 763f63a7b5da1e962cf5edf36abd905ca69c33a9
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35695509"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37412646"
 ---
 # <a name="positioned-updates-odbc"></a>定位更新 (ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "35695509"
   
 -   WHERE CURRENT OF 子句  
   
- 更常用的方法是使用**SQLSetPos**。 它的選項如下。  
+ 更常見的方法是使用**SQLSetPos**。 它的選項如下。  
   
  SQL_POSITION  
  將資料指標置於目前資料列集的特定資料列中。  
@@ -54,23 +54,23 @@ ms.locfileid: "35695509"
  SQL_DELETE  
  刪除資料指標中的目前資料行。  
   
- **SQLSetPos**可以搭配任何陳述式時結果集的陳述式控制代碼資料指標屬性設定為使用伺服器資料指標。 結果集資料行必須繫結至程式變數。 應用程式提取資料列時，立即呼叫**SQLSetPos**(SQL_POSTION) 將游標放在資料列。 然後應用程式可以呼叫 SQLSetPos(SQL_DELETE) 來刪除目前的資料列，或者可以將新的資料值移到繫結的程式變數中，並呼叫 SQLSetPos(SQL_UPDATE) 來更新目前的資料列。  
+ **SQLSetPos**可以搭配任何陳述式的結果集的陳述式控制代碼資料指標屬性設定為使用伺服器資料指標時。 結果集資料行必須繫結至程式變數。 應用程式提取資料列，它會呼叫**SQLSetPos**(SQL_POSTION) 將游標放在資料列。 然後應用程式可以呼叫 SQLSetPos(SQL_DELETE) 來刪除目前的資料列，或者可以將新的資料值移到繫結的程式變數中，並呼叫 SQLSetPos(SQL_UPDATE) 來更新目前的資料列。  
   
- 應用程式可以更新或刪除任何資料列與資料列集中**SQLSetPos**。 呼叫**SQLSetPos**是一個方便的替代方式建構及執行 SQL 陳述式。 **SQLSetPos**目前資料列集上運作，而且可用只有在呼叫之後[SQLFetchScroll](../../relational-databases/native-client-odbc-api/sqlfetchscroll.md)。  
+ 應用程式可更新或刪除任何資料列與資料列集中**SQLSetPos**。 呼叫**SQLSetPos**是方便的替代建構及執行 SQL 陳述式。 **SQLSetPos**目前的資料列集上運作，且可以呼叫之後，才能使用[SQLFetchScroll](../../relational-databases/native-client-odbc-api/sqlfetchscroll.md)。  
   
- 資料列集大小由呼叫所設定[SQLSetStmtAttr](../../relational-databases/native-client-odbc-api/sqlsetstmtattr.md)使用 SQL_ATTR_ROW_ARRAY_SIZE 屬性引數。 **SQLSetPos**使用新的資料列集大小，但只有在呼叫之後**SQLFetch**或**SQLFetchScroll**。 例如，如果變更資料列集大小， **SQLSetPos**稱為然後**SQLFetch**或**SQLFetchScroll**呼叫。 若要呼叫**SQLSetPos**使用舊的資料列集大小，但**SQLFetch**或**SQLFetchScroll**會使用新的資料列集大小。  
+ 資料列集大小設定藉由呼叫[SQLSetStmtAttr](../../relational-databases/native-client-odbc-api/sqlsetstmtattr.md) SQL_ATTR_ROW_ARRAY_SIZE 屬性引數。 **SQLSetPos**使用新的資料列集大小，但只能在呼叫之後**SQLFetch**或是**SQLFetchScroll**。 比方說，如果資料列集大小變更時， **SQLSetPos**呼叫，然後**SQLFetch**或是**SQLFetchScroll**呼叫。 呼叫**SQLSetPos**會使用舊的資料列集大小，但**SQLFetch**或是**SQLFetchScroll**會使用新的資料列集大小。  
   
- 資料列集中的第一個資料列是資料列號碼 1。 中的 RowNumber 引數**SQLSetPos**必須識別資料列中資料列集; 也就是說，其值必須是介於 1 與最近提取的資料列數目。 這可能會小於資料列集大小。 如果 RowNumber 是 0，此作業會套用到資料列集內的每一個資料列。  
+ 資料列集中的第一個資料列是資料列號碼 1。 中的 RowNumber 引數**SQLSetPos**必須識別資料列中資料列集; 也就是說，其值必須介於 1 與最近提取的資料列數目。 這可能會小於資料列集大小。 如果 RowNumber 是 0，此作業會套用到資料列集內的每一個資料列。  
   
- 刪除作業的**SQLSetPos** ，使得資料來源刪除一或多個選取的資料列的資料表。 若要刪除的資料列**SQLSetPos**，應用程式會呼叫**SQLSetPos**與 Operation 設定為 SQL_DELETE 並將 RowNumber 設定為的資料列數，若要刪除。 如果 RowNumber 是 0，將會刪除資料列集內的所有資料列。  
+ 刪除作業**SQLSetPos**刪除一或多個選取的資料列的資料表的資料來源。 若要刪除的資料列**SQLSetPos**，應用程式會呼叫**SQLSetPos**與 Operation 設定為 SQL_DELETE 並將 RowNumber 設定要刪除的資料列數目。 如果 RowNumber 是 0，將會刪除資料列集內的所有資料列。  
   
- 之後**SQLSetPos**傳回時，將已刪除的資料列是目前的資料列，而且其狀態為 SQL_ROW_DELETED。 資料列不能在任何其他定位作業，例如呼叫[SQLGetData](../../relational-databases/native-client-odbc-api/sqlgetdata.md)或**SQLSetPos**。  
+ 在後**SQLSetPos**傳回刪除的資料列是目前的資料列，而且其狀態為 SQL_ROW_DELETED。 資料列不能在任何其他定位作業，例如呼叫[SQLGetData](../../relational-databases/native-client-odbc-api/sqlgetdata.md)或是**SQLSetPos**。  
   
- 當您刪除資料列集 （RowNumber 等於 0） 的所有資料列時，應用程式可以避免驅動程式刪除某些資料列的 update 作業就像是使用資料列作業陣列**SQLSetPos**。  
+ 當您刪除資料列集 （RowNumber 等於 0） 的所有資料列時，應用程式可以防止驅動程式刪除某些資料列的更新作業，如同使用資料列作業陣列**SQLSetPos**。  
   
  刪除的每一個資料列都應該是存在於結果集內的資料列。 如果應用程式緩衝區已藉由提取來填滿，而且已經維護資料列狀態陣列，則它在每一個資料列位置的值都不應該是 SQL_ROW_DELETED、SQL_ROW_ERROR 或 SQL_ROW_NOROW。  
   
- 定位更新也可以使用 UPDATE、DELETE 和 INSERT 陳述式上的 WHERE CURRENT OF 子句來執行。 WHERE CURRENT OF 需要資料指標名稱，ODBC 將會產生時[SQLGetCursorName](../../relational-databases/native-client-odbc-api/sqlgetcursorname.md)函式，或者您可以藉由呼叫指定**SQLSetCursorName**。 下列是用來在 ODBC 應用程式內執行 WHERE CURRENT OF 更新的一般步驟：  
+ 定位更新也可以使用 UPDATE、DELETE 和 INSERT 陳述式上的 WHERE CURRENT OF 子句來執行。 WHERE CURRENT OF 需要 資料指標名稱，ODBC 將會產生何時[SQLGetCursorName](../../relational-databases/native-client-odbc-api/sqlgetcursorname.md)函式呼叫時，或您可以藉由呼叫指定**SQLSetCursorName**。 下列是用來在 ODBC 應用程式內執行 WHERE CURRENT OF 更新的一般步驟：  
   
 -   呼叫**SQLSetCursorName**建立陳述式控制代碼的資料指標名稱。  
   
@@ -80,9 +80,9 @@ ms.locfileid: "35695509"
   
 -   呼叫**SQLSetPos** (SQL_POSITION) 將游標放在資料列。  
   
--   建置並執行 UPDATE 陳述式搭配 WHERE CURRENT OF 子句使用設定的資料指標名稱**SQLSetCursorName**。  
+-   建置及執行 UPDATE 陳述式搭配使用資料指標名稱設定使用 WHERE CURRENT OF 子句**SQLSetCursorName**。  
   
- 或者，您可以呼叫**SQLGetCursorName**執行 SELECT 陳述式，而不是呼叫之後**SQLSetCursorName**之前執行 SELECT 陳述式。 **SQLGetCursorName**傳回 ODBC 所指派，如果您未設定資料指標的名稱使用的預設資料指標名稱**SQLSetCursorName**。  
+ 或者，您可以呼叫**SQLGetCursorName**在您執行 SELECT 陳述式，而不是呼叫之後**SQLSetCursorName**之前執行 SELECT 陳述式。 **SQLGetCursorName**會傳回 ODBC 所指派，如果您未設定資料指標的名稱使用的預設資料指標名稱**SQLSetCursorName**。  
   
  **SQLSetPos**更為優先 WHERE CURRENT OF 當您使用伺服器資料指標。 如果您搭配 ODBC 資料指標程式庫使用可更新的靜態資料指標，此資料指標程式庫會實作 WHERE CURRENT OF 更新，其方式是針對基礎資料表加入具有索引鍵值的 WHERE 子句。 如果資料表內的索引鍵不是唯一的，這樣會造成非預期的更新。  
   

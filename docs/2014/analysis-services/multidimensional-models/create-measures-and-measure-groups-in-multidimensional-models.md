@@ -1,5 +1,5 @@
 ---
-title: 多維度模型中建立量值和量值群組 |Microsoft 文件
+title: 多維度模型中建立量值和量值群組 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - measure groups [Analysis Services], defining
 ms.assetid: 1018bb2e-b89b-489e-aead-450dec5dca3b
 caps.latest.revision: 17
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 767f85b5fb777dbb7c64301b79041cda3654f000
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: a60cfaaf58e3ea3815955caefd33475803abf637
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36032188"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37153489"
 ---
 # <a name="create-measures-and-measure-groups-in-multidimensional-models"></a>在多維度模型中建立量值和量值群組
   *「量值」* (measure) 是數值資料值的彙總，包括總和、計數、最小值、最大值、平均值或您建立的自訂 MDX 運算式。 *「量值群組」* (measure group) 是包含一個或多個量值的容器。 所有量值都存在量值群組中，即使只有一個量值。 Cube 必須具有至少一個量值與量值群組。  
@@ -64,7 +64,7 @@ ms.locfileid: "36032188"
   
  下圖代表 **FactSalesQuota** 事實資料表和相關的兩個維度資料表 ( **DimTime** 和 **DimEmployee**)。 在 Adventure Works 範例 Cube 中，這些資料表會作為「銷售配額」量值群組與「時間」及「員工」維度的根據。  
   
- ![與兩個維度資料表的 FactSalesQuota 資料表](../media/factsalesquota.gif "具有兩個維度資料表的 FactSalesQuota 資料表")  
+ ![具有兩個維度資料表的 FactSalesQuota 資料表](../media/factsalesquota.gif "具有兩個維度資料表的 FactSalesQuota 資料表")  
   
  事實資料表包含兩個基本類型的資料行：屬性資料行和量值資料行。  
   

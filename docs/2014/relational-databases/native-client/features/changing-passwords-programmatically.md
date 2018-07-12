@@ -1,13 +1,11 @@
 ---
-title: 以程式設計方式變更密碼 |Microsoft 文件
+title: 以程式設計方式變更密碼 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client  - "database-engine" - "docset-sql-devref"
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -23,18 +21,18 @@ helpviewer_keywords:
 - modifying passwords
 ms.assetid: 624ad949-5fed-4ce5-b319-878549f9487b
 caps.latest.revision: 36
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 7124d10bdb9d90adfd882d860e9571d4c2370ef7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 6a89101132ebbad9edfcf8bd2c6190e8f86caf32
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36030028"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37408447"
 ---
 # <a name="changing-passwords-programmatically"></a>以程式設計方式變更密碼
-  在 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 之前，當使用者密碼到期時，只有系統管理員可以重設密碼。 開頭為[!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]，[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]處理密碼逾期，以程式設計方式同時透過原生用戶端支援[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client OLE DB 提供者和[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client ODBC 驅動程式，以及透過變更**SQL Server 登入**對話方塊。  
+  在 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 之前，當使用者密碼到期時，只有系統管理員可以重設密碼。 開頭[!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]， [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 支援處理密碼逾期，以程式設計方式透過兩[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client OLE DB 提供者和[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client ODBC 驅動程式，以及透過變更**SQL Server 登入**對話方塊。  
   
 > [!NOTE]  
 >  如果可能的話，請在執行階段提示使用者輸入其認證，並避免以保存的格式儲存其認證。 如果您必須保存其認證，您應該先加密它們使用[Win32 crypto API](http://go.microsoft.com/fwlink/?LinkId=64532)。 如需有關使用的密碼，請參閱[強式密碼](../../security/strong-passwords.md)。  
@@ -55,17 +53,17 @@ ms.locfileid: "36030028"
 |18488|使用者 '%.*ls' 的登入失敗。 原因: 必須變更帳戶的密碼。|  
   
 ## <a name="sql-server-native-client-ole-db-provider"></a>SQL Server Native Client OLE DB 提供者  
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者支援密碼逾期，透過使用者介面，以程式設計的方式。  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者支援密碼逾期，透過使用者介面和以程式設計的方式。  
   
 ### <a name="ole-db-user-interface-password-expiration"></a>OLE DB 使用者介面密碼逾期  
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者支援透過所做的變更密碼逾期**SQL Server 登入**對話方塊。 如果 DBPROP_INIT_PROMPT 的值設定為 DBPROMPT_NOPROMPT，則密碼到期時，初始連接嘗試將會失敗。  
   
- 如果 DBPROP_INIT_PROMPT 已設定為任何其他值，則使用者會看見**SQL Server 登入**對話方塊中，不論是否已過期的密碼。 使用者可以按一下**選項**按鈕，然後檢查**變更密碼**變更密碼。  
+ 如果 DBPROP_INIT_PROMPT 已設定為任何其他值，使用者會看到**SQL Server 登入**對話方塊中的，不管密碼是否已過期。 使用者可以按一下**選項**按鈕，然後檢查**變更密碼**變更密碼。  
   
- 如果使用者按一下 [確定]，而且密碼已過期，[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]會提示使用者輸入並確認新密碼使用**變更 SQL Server 密碼**對話方塊。  
+ 如果使用者按一下 [確定]，而且密碼已過期，[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]會提示使用者輸入並確認新密碼 using**變更 SQL Server 密碼**對話方塊。  
   
 #### <a name="ole-db-prompt-behavior-and-locked-accounts"></a>OLE DB 提示行為與鎖定帳戶  
- 連接嘗試可能會因為帳戶遭到鎖定而失敗。 如果發生這個情況後的顯示**SQL Server 登入** 對話方塊中，伺服器會顯示錯誤訊息給使用者，並中止連接嘗試。 它也可能會發生下列顯示**變更 SQL Server 密碼**對話方塊如果使用者輸入舊密碼不正確的值。 在此情況下，會顯示相同的錯誤訊息，並中止連接嘗試。  
+ 連接嘗試可能會因為帳戶遭到鎖定而失敗。 如果發生下列的顯示這種情況**SQL Server 登入** 對話方塊中，伺服器會顯示錯誤訊息給使用者，並中止連接嘗試。 它也可能會發生下列的顯示**變更 SQL Server 密碼**對話方塊中，如果使用者輸入舊密碼不正確的值。 在此情況下，會顯示相同的錯誤訊息，並中止連接嘗試。  
   
 #### <a name="ole-db-connection-pooling-password-expiration-and-locked-accounts"></a>OLE DB 連接共用、密碼逾期與鎖定帳戶  
  當連接在連接共用中仍處於作用中狀態時，帳戶可能會遭到鎖定，或者其密碼可能會過期。 伺服器會在兩種時機下檢查過期的密碼與鎖定的帳戶。 第一個時機是首次建立連接時。 第二個時機則是在連接取自集區而重設連接時。  
@@ -87,26 +85,26 @@ ms.locfileid: "36030028"
   
  請注意，每當設定 "Old Password" 屬性時，除非同時指定優先順序永遠最高的 Windows 驗證，否則提供者會假設有嘗試變更密碼。  
   
- 如果使用 Windows 驗證時，指定舊密碼會導致 DB_E_ERRORSOCCURRED 或 DB_S_ERRORSOCCURRED 取決於是否舊密碼指定為 REQUIRED 或 OPTIONAL 分別和 DBPROPSTATUS_ 的狀態值中會傳回 CONFLICTINGBADVALUE *dwStatus*。 偵測到這個時**idbinitialize:: Initialize**呼叫。  
+ 如果使用 Windows 驗證時，指定舊密碼會導致 DB_E_ERRORSOCCURRED 或 DB_S_ERRORSOCCURRED 取決於是否舊的密碼已指定為 REQUIRED 或 OPTIONAL，而 DBPROPSTATUS_ 的狀態值中會傳回 CONFLICTINGBADVALUE *dwStatus*。 偵測到此時**idbinitialize:: Initialize**呼叫。  
   
  如果嘗試變更密碼時意外失敗，伺服器會傳回錯誤碼 18468。 標準 OLEDB 錯誤會從連線嘗試傳回。  
   
- 如需有關 DBPROPSET_SQLSERVERDBINIT 屬性集的詳細資訊，請參閱[初始化和授權屬性](../../native-client-ole-db-data-source-objects/initialization-and-authorization-properties.md)。  
+ 如需有關 DBPROPSET_SQLSERVERDBINIT 屬性集的詳細資訊，請參閱 <<c0> [ 初始化和授權屬性](../../native-client-ole-db-data-source-objects/initialization-and-authorization-properties.md)。  
   
 ## <a name="sql-server-native-client-odbc-driver"></a>SQL Server Native Client ODBC 驅動程式  
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者支援密碼逾期，透過使用者介面，以程式設計的方式。  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者支援密碼逾期，透過使用者介面和以程式設計的方式。  
   
 ### <a name="odbc-user-interface-password-expiration"></a>ODBC 使用者介面密碼逾期  
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC 驅動程式支援透過所做的變更密碼逾期**SQL Server 登入**對話方塊。  
   
- 如果[SQLDriverConnect](../../native-client-odbc-api/sqldriverconnect.md)呼叫和值**DriverCompletion**如果密碼已過期，則設定為 SQL_DRIVER_NOPROMPT，則初始連接嘗試會失敗。 後續呼叫傳回 SQLSTATE 值 28000 與原生錯誤碼值 18487 **SQLError**或**SQLGetDiagRec**。  
+ 如果[SQLDriverConnect](../../native-client-odbc-api/sqldriverconnect.md)呼叫，而**DriverCompletion**如果密碼已過期，則設定為 sql_driver_noprompt 時，初始連接嘗試就會失敗。 後續呼叫所傳回的 SQLSTATE 值 28000 與原生錯誤碼值 18487 **SQLError**或是**SQLGetDiagRec**。  
   
- 如果**DriverCompletion**已設定為任何其他值，則使用者會看見**SQL Server 登入**對話方塊中，不論是否已過期的密碼。 使用者可以按一下**選項**按鈕，然後檢查**變更密碼**變更密碼。  
+ 如果**DriverCompletion**已設定為任何其他值，則使用者會看見**SQL Server 登入**對話方塊中的，不管密碼是否已過期。 使用者可以按一下**選項**按鈕，然後檢查**變更密碼**變更密碼。  
   
- 如果使用者按一下 [確定]，而且密碼已過期，[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]會提示輸入並確認新密碼使用**變更 SQL Server 密碼**對話方塊。  
+ 如果使用者按一下 [確定]，而且密碼已過期，[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]提示輸入並確認新的密碼使用**變更 SQL Server 密碼**對話方塊。  
   
 #### <a name="odbc-prompt-behavior-and-locked-accounts"></a>ODBC 提示行為與鎖定帳戶  
- 連接嘗試可能會因為帳戶遭到鎖定而失敗。 如果發生這個情況後的顯示**SQL Server 登入** 對話方塊中，伺服器會顯示錯誤訊息給使用者，並中止連接嘗試。 它也可能會發生下列顯示**變更 SQL Server 密碼**對話方塊如果使用者輸入舊密碼不正確的值。 在此情況下，會顯示相同的錯誤訊息，並中止連接嘗試。  
+ 連接嘗試可能會因為帳戶遭到鎖定而失敗。 如果發生下列的顯示這種情況**SQL Server 登入** 對話方塊中，伺服器會顯示錯誤訊息給使用者，並中止連接嘗試。 它也可能會發生下列的顯示**變更 SQL Server 密碼**對話方塊中，如果使用者輸入舊密碼不正確的值。 在此情況下，會顯示相同的錯誤訊息，並中止連接嘗試。  
   
 #### <a name="odbc-connection-pooling-password-expiry-and-locked-accounts"></a>ODBC 連接共用、密碼逾期與鎖定帳戶  
  當連接在連接共用中仍處於作用中狀態時，帳戶可能會遭到鎖定，或者其密碼可能會過期。 伺服器會在兩種時機下檢查過期的密碼與鎖定的帳戶。 第一個時機是首次建立連接時。 第二個時機則是在連接取自集區而重設連接時。  
@@ -114,7 +112,7 @@ ms.locfileid: "36030028"
  當重設嘗試失敗後，連接便會從集區移除並傳回錯誤。  
   
 ### <a name="odbc-programmatic-password-expiration"></a>ODBC 程式設計密碼逾期  
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC 驅動程式支援密碼逾期，透過連線到伺服器使用之前設定的 SQL_COPT_SS_OLDPWD 屬性加入[SQLSetConnectAttr](../../native-client-odbc-api/sqlsetconnectattr.md)函式。  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC 驅動程式支援透過加入的 SQL_COPT_SS_OLDPWD 屬性，設定才能連線到伺服器中使用的密碼逾期[SQLSetConnectAttr](../../native-client-odbc-api/sqlsetconnectattr.md)函式。  
   
  連接控制代碼的 SQL_COPT_SS_OLDPWD 屬性指的是過期的密碼。 此屬性沒有任何連接字串屬性，因為這會干擾連接共用。 如果登入成功，驅動程式會清除這個屬性。  
   

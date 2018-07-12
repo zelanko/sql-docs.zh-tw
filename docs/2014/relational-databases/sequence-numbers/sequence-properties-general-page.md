@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.sequence.general.f1
 ms.assetid: 0187f413-cdf0-48a2-b2e6-9b3578cd5811
 caps.latest.revision: 10
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: c71b31282ac1ed242c6b8f35adeff24cbc9ddf9f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 9fc9a711c16c0c7e9b5ed3a66f93013b5f2031bb
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36032274"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37157979"
 ---
 # <a name="sequence-properties-general-page"></a>順序屬性 (一般頁面)
   建立順序物件，並指定其屬性。 序列是使用者定義之結構描述繫結的物件，該物件會根據建立序列所使用的規格產生一連串的數值。 數值序列會在定義的間隔依照遞增或遞減順序來產生，而且在用完時可設定為重新啟動 (循環)。 順序不會與特定資料表產生關聯，與識別欄位不同。 應用程式會參考順序物件，以擷取它的下一個值。 順序與資料表之間的關聯性是由應用程式所控制。 使用者的應用程式可以參考序列物件，並協調跨越多個資料列和資料表的值。  
@@ -63,7 +63,7 @@ ms.locfileid: "36032274"
  每次呼叫 **NEXT VALUE FOR** 函數時，用來遞增順序物件值的值 (如果是負數則遞減)。 如果增量是負值，則會遞減順序物件，否則會遞增。 增量不能為 0。  
   
  **最小值**  
- 指定順序物件的界限。 新序列物件的預設最小值是序列物件之資料類型的最小值。 這是零`tinyint`資料類型和所有其他資料類型為負數。  
+ 指定順序物件的界限。 新序列物件的預設最小值是序列物件之資料類型的最小值。 這是零`tinyint`資料型別和所有其他資料類型為負數。  
   
  **最大值**  
  指定順序物件的界限。 新序列物件的預設最大值是序列物件之資料類型的最大值。  

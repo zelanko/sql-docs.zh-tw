@@ -1,5 +1,5 @@
 ---
-title: 高可用性 (Reporting Services) |Microsoft 文件
+title: 高可用性 (Reporting Services) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - high availability [SQL Server], Reporting Services
 - high availability [Reporting Services]
@@ -17,18 +17,18 @@ ms.assetid: 50e0813f-f591-4688-9cd1-e6389a3808e5
 caps.latest.revision: 15
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: e1d11b2b53499b12a6a8a7dca262bc26ae777825
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 0884a284e6d9169ce978d3c47330a683e2bb6b52
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36032239"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37150219"
 ---
 # <a name="high-availability-reporting-services"></a>高可用性 (Reporting Services)
   [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 報表伺服器是無狀態伺服器，它會將應用程式資料、內容、屬性和工作階段資訊儲存在兩個 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 關聯式資料庫中。 因此，若要確保的可用性，最好[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]功能會執行下列動作：  
   
--   使用的高可用性功能[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssDE](../includes/ssde-md.md)]盡可能的報表伺服器資料庫。 如果您設定[!INCLUDE[ssDE](../includes/ssde-md.md)]執行容錯移轉叢集執行個體，當您建立報表伺服器資料庫時，您可以選取該執行個體。  
+-   使用的高可用性功能[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssDE](../includes/ssde-md.md)]盡可能增加報表伺服器資料庫的執行時間。 如果您設定[!INCLUDE[ssDE](../includes/ssde-md.md)]執行容錯移轉叢集執行個體，當您建立報表伺服器資料庫時，您可以選取該執行個體。  
   
 -   請盡可能使用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssHADR](../includes/sshadr-md.md)] 搭配 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 資料庫和資料來源。 如需詳細資訊，請參閱 [Reporting Services 與 AlwaysOn 可用性群組 &#40;SQL Server&#41;](../database-engine/availability-groups/windows/reporting-services-with-always-on-availability-groups-sql-server.md)。  
   

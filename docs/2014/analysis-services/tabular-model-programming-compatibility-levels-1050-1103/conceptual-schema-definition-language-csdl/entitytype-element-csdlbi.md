@@ -1,5 +1,5 @@
 ---
-title: EntityType 元素 (CSDLBI) |Microsoft 文件
+title: EntityType 元素 (CSDLBI) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -12,15 +12,15 @@ ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 372e2c13-ec38-4bb1-981c-50758d59a1da
 caps.latest.revision: 16
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: 530608169372a06a50bdf613668f5650a5caecc8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: f4f2697b3616e2a47e32b87913c49f76e009153a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36030138"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37277594"
 ---
 # <a name="entitytype-element-csdlbi"></a>EntityType 元素 (CSDLBI)
   `EntityType` 元素是複雜類型，代表資料模型中高層級實體的結構，例如客戶或訂單。 `bi:EntityType`項目延伸的定義[EntityType](http://msdn.microsoft.com/library/bb399206.aspx)用於[實體資料架構](http://msdn.microsoft.com/library/bb399567.aspx)。  
@@ -30,7 +30,7 @@ ms.locfileid: "36030138"
 ## <a name="elements-and-attributes"></a>元素和屬性  
  下表列出元素和定義 `EntityType` 元素的屬性。 另請參閱適用於屬性[EntityType](http://msdn.microsoft.com/library/bb399206.aspx)項目。  
   
-|[屬性]|是否必要|描述|  
+|名稱|是否必要|描述|  
 |----------|-----------------|-----------------|  
 |目錄|否|字串，其中包含資料行中可能的資料類型。 此值衍生自資料模型中 DimensionAttributeTypeEnumType 的值。<br /><br /> 如果 DimensionAttributeTypeEnumType 的值為 "ExtendedType"，則 Contents 的值會衍生自 DimensionAttribute 的 ExtendedType 元素。 用戶端不需要回應這些值。|  
 |DefaultDetails|否|屬性參考的清單，代表資料表中的資料行集。<br /><br /> 請參閱[DefaultDetails 元素&#40;CSDLBI&#41;](defaultdetails-element-csdlbi.md)。|  
@@ -46,7 +46,7 @@ ms.locfileid: "36030138"
   
  實體 (資料行) 的內容可以是下列任何值：  
   
-|ReplTest1|描述|  
+|值|描述|  
 |-----------|-----------------|  
 |一般|未另行定義。|  
 |Time|代表時間週期的屬性，例如年數、半年數、季數、月數或日數。|  

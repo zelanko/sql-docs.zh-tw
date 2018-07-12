@@ -1,12 +1,12 @@
 ---
-title: 設定大型資料 (OLE DB) |Microsoft 文件
+title: 設定大型資料 (OLE DB) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: connectivity
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -17,12 +17,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 613524d89e94bb13a44270fa9ad4ae76b3cc5f52
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: 46303dfd0dab7c9e7830ebcf841435fe19449706
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35694919"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37426367"
 ---
 # <a name="set-large-data-ole-db"></a>設定大型資料 (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -30,9 +30,9 @@ ms.locfileid: "35694919"
 
   此範例會示範如何設定 BLOB 資料、建立資料表、加入範例記錄、在資料列集中提取該記錄，然後設定 BLOB 欄位的值。 IA64 不支援此範例。  
   
- 若要傳遞自己的儲存物件指標，取用者會建立存取子繫結 BLOB 資料行，然後呼叫值**irowsetchange:: Setdata**或**irowsetchange:: Insertrow**方法。  
+ 若要傳遞自己的儲存體物件的指標，取用者會建立存取子繫結 BLOB 資料行，然後呼叫的值**irowsetchange:: Setdata**或是**irowsetchange:: Insertrow**方法。  
   
- 這個範例需要 AdventureWorks 範例資料庫，您可以從下載[Microsoft SQL Server Samples and Community Projects](http://go.microsoft.com/fwlink/?LinkID=85384)首頁。  
+ 此範例需要 AdventureWorks 範例資料庫中，您可以從下載[Microsoft SQL Server Samples and Community Projects](http://go.microsoft.com/fwlink/?LinkID=85384)首頁。  
   
 > [!IMPORTANT]  
 >  盡可能使用 Windows 驗證。 如果無法使用 Windows 驗證，請提示使用者在執行階段輸入認證。 請避免將認證儲存在檔案中。 如果您必須保存認證，則應該用 [Win32 crypto API](http://go.microsoft.com/fwlink/?LinkId=64532) 加密這些認證。  
@@ -45,18 +45,18 @@ ms.locfileid: "35694919"
   
 2.  在 DBPROPSET_ROWSET 屬性群組中設定屬性，讓資料列集可以更新。  
   
-3.  使用 DBBINDING 結構的陣列來建立一組繫結 (每個資料行一個)。 設定**wType**為 DBTYPE_IUNKNOWN，DBBINDING 結構中的項目和**pObject**以指向您所建立的 DBOBJECT 結構的項目。  
+3.  使用 DBBINDING 結構的陣列來建立一組繫結 (每個資料行一個)。 設定**wType**為 DBTYPE_IUNKNOWN，DBBINDING 結構中的項目並**pObject**以指向您所建立的 DBOBJECT 結構的項目。  
   
 4.  使用繫結資訊，在結構的 DBBINDINGS 陣列中建立存取子。  
   
-5.  呼叫**GetNextRows**到下一個資料列提取到資料列集。 呼叫**GetData**來讀取的資料列集中的資料。  
+5.  呼叫**GetNextRows**到下一個資料列提取到資料列集。 呼叫**GetData**讀取資料列集中的資料。  
   
-6.  若要設定資料，建立儲存物件，包含資料 （以及長度指標），並接著呼叫**irowsetchange:: Setdata** (或**irowsetchange:: Insertrow**) 使用的繫結的存取子BLOB 資料行。  
+6.  若要設定資料，建立儲存體物件，包含資料 （以及長度指標），並接著呼叫**irowsetchange:: Setdata** (或**irowsetchange:: Insertrow**) 使用的繫結的存取子BLOB 資料行。  
   
 ## <a name="example"></a>範例  
   
 ### <a name="description"></a>描述  
- 使用 ole32.lib oleaut32.lib 編譯並執行下列 C++ 程式碼清單。 這個應用程式會連接到電腦的預設 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體。 在某些 Windows 作業系統上，您必須將 (localhost) 或 (local) 變更為 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的名稱。 若要連接到具名執行個體，變更連接字串從 」 至 L"(local)\\\name"，其中 name 是具名執行個體。 根據預設，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express 會安裝至具名執行個體。 請確認您的 INCLUDE 環境變數包含的目錄內含 sqlncli.h。  
+ 使用 ole32.lib oleaut32.lib 編譯並執行下列 C++ 程式碼清單。 這個應用程式會連接到電腦的預設 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體。 在某些 Windows 作業系統上，您必須將 (localhost) 或 (local) 變更為 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的名稱。 若要連接到具名執行個體，變更連接字串從 「 以 L"(local)\\\name"，其中 name 是具名執行個體。 根據預設，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express 會安裝至具名執行個體。 請確認您的 INCLUDE 環境變數包含的目錄內含 sqlncli.h。  
   
 ### <a name="code"></a>程式碼  
   

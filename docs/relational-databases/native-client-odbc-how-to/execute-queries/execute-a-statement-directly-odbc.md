@@ -1,12 +1,12 @@
 ---
-title: 執行陳述式直接 (ODBC) |Microsoft 文件
+title: 執行陳述式直接 (連接 ODBC) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: connectivity
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -16,12 +16,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: c5185d6bc1ce251da365107b198f0baf080683c2
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: 89e6bf98dfe51f8287c37161b54eae4a0b6ba699
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35697719"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37429867"
 ---
 # <a name="execute-a-statement-directly-odbc"></a>直接執行陳述式 (ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -34,11 +34,11 @@ ms.locfileid: "35697719"
   
 2.  呼叫[SQLExecDirect](http://go.microsoft.com/fwlink/?LinkId=58399)執行陳述式。  
   
-3.  如果資料在執行中輸入的參數使用， [SQLExecDirect](http://go.microsoft.com/fwlink/?LinkId=58399)傳回 SQL_NEED_DATA。 按照區塊傳送資料，使用[SQLParamData](http://go.microsoft.com/fwlink/?LinkId=58405)和[SQLPutData](../../../relational-databases/native-client-odbc-api/sqlputdata.md)。  
+3.  如果資料在執行中輸入的參數， [SQLExecDirect](http://go.microsoft.com/fwlink/?LinkId=58399)會傳回 SQL_NEED_DATA。 使用區塊傳送資料[SQLParamData](http://go.microsoft.com/fwlink/?LinkId=58405)並[SQLPutData](../../../relational-databases/native-client-odbc-api/sqlputdata.md)。  
   
 ### <a name="to-execute-a-statement-multiple-times-by-using-column-wise-parameter-binding"></a>使用資料行取向的參數繫結多次執行陳述式  
   
-1.  呼叫[SQLSetStmtAttr](../../../relational-databases/native-client-odbc-api/sqlsetstmtattr.md)來設定下列屬性：  
+1.  呼叫[SQLSetStmtAttr](../../../relational-databases/native-client-odbc-api/sqlsetstmtattr.md)設定下列屬性：  
   
      將 SQL_ATTR_PARAMSET_SIZE 設定為參數集 (S) 的數目。  
   
@@ -54,7 +54,7 @@ ms.locfileid: "35697719"
   
      配置 S 個參數緩衝區的陣列來儲存資料長度。  
   
-     呼叫[SQLBindParameter](../../../relational-databases/native-client-odbc-api/sqlbindparameter.md)若要將參數資料值和資料長度陣列繫結至陳述式參數。  
+     呼叫[SQLBindParameter](../../../relational-databases/native-client-odbc-api/sqlbindparameter.md)來將參數資料值和資料長度陣列繫結至陳述式參數。  
   
      設定任何資料執行中的 text 或 image 參數。  
   
@@ -62,7 +62,7 @@ ms.locfileid: "35697719"
   
 3.  呼叫[SQLExecDirect](http://go.microsoft.com/fwlink/?LinkId=58399)執行陳述式。 驅動程式會有效率地執行陳述式 S 次，針對每個參數集執行一次。  
   
-4.  如果資料在執行中輸入的參數使用， [SQLExecDirect](http://go.microsoft.com/fwlink/?LinkId=58399)傳回 SQL_NEED_DATA。 按照區塊傳送資料，使用[SQLParamData](http://go.microsoft.com/fwlink/?LinkId=58405)和[SQLPutData](../../../relational-databases/native-client-odbc-api/sqlputdata.md)。  
+4.  如果資料在執行中輸入的參數， [SQLExecDirect](http://go.microsoft.com/fwlink/?LinkId=58399)會傳回 SQL_NEED_DATA。 使用區塊傳送資料[SQLParamData](http://go.microsoft.com/fwlink/?LinkId=58405)並[SQLPutData](../../../relational-databases/native-client-odbc-api/sqlputdata.md)。  
   
 ### <a name="to-execute-a-statement-multiple-times-by-using-row-wise-parameter-binding"></a>使用資料列取向的參數繫結多次執行陳述式  
   
@@ -72,7 +72,7 @@ ms.locfileid: "35697719"
   
      第二個部分是 SQLINTEGER 變數，可保存狀態指標。  
   
-2.  呼叫[SQLSetStmtAttr](../../../relational-databases/native-client-odbc-api/sqlsetstmtattr.md)來設定下列屬性：  
+2.  呼叫[SQLSetStmtAttr](../../../relational-databases/native-client-odbc-api/sqlsetstmtattr.md)設定下列屬性：  
   
      將 SQL_ATTR_PARAMSET_SIZE 設定為參數集 (S) 的數目。  
   
@@ -82,17 +82,17 @@ ms.locfileid: "35697719"
   
      將 SQL_ATTR_PARAMS_STATUS_PTR 設定為指向 SQLUSSMALLINT 變數的陣列[S]，以保存參數狀態指標。  
   
-3.  針對每個參數標記呼叫[SQLBindParameter](../../../relational-databases/native-client-odbc-api/sqlbindparameter.md)為參數的資料值和資料長度指標指向它們在步驟 1 中所配置之結構陣列的第一個項目中的變數。 如果參數是資料執行中參數，請設定此參數。  
+3.  針對每個參數標記呼叫[SQLBindParameter](../../../relational-databases/native-client-odbc-api/sqlbindparameter.md)以參數的資料值和資料長度指標指向它們在步驟 1 中所配置之結構陣列的第一個項目中的變數。 如果參數是資料執行中參數，請設定此參數。  
   
 4.  將資料值填入繫結參數緩衝區陣列。  
   
 5.  呼叫[SQLExecDirect](http://go.microsoft.com/fwlink/?LinkId=58399)執行陳述式。 驅動程式會有效率地執行陳述式 S 次，針對每個參數集執行一次。  
   
-6.  如果資料在執行中輸入的參數使用， [SQLExecDirect](http://go.microsoft.com/fwlink/?LinkId=58399)傳回 SQL_NEED_DATA。 按照區塊傳送資料，使用[SQLParamData](http://go.microsoft.com/fwlink/?LinkId=58405)和[SQLPutData](../../../relational-databases/native-client-odbc-api/sqlputdata.md)。  
+6.  如果資料在執行中輸入的參數， [SQLExecDirect](http://go.microsoft.com/fwlink/?LinkId=58399)會傳回 SQL_NEED_DATA。 使用區塊傳送資料[SQLParamData](http://go.microsoft.com/fwlink/?LinkId=58405)並[SQLPutData](../../../relational-databases/native-client-odbc-api/sqlputdata.md)。  
   
- **請注意**資料行取向和資料列取向繫結會更常使用搭配[SQLPrepare 函數](http://go.microsoft.com/fwlink/?LinkId=59360)和[SQLExecute](http://go.microsoft.com/fwlink/?LinkId=58400)比使用[SQLExecDirect](http://go.microsoft.com/fwlink/?LinkId=58399).  
+ **附註**資料行取向和資料列取向的繫結通常比較常搭配[SQLPrepare 函數](http://go.microsoft.com/fwlink/?LinkId=59360)並[SQLExecute](http://go.microsoft.com/fwlink/?LinkId=58400)比使用[SQLExecDirect](http://go.microsoft.com/fwlink/?LinkId=58399).  
   
 ## <a name="see-also"></a>另請參閱  
- [執行查詢的使用說明主題&#40;ODBC&#41;](../../../relational-databases/native-client-odbc-how-to/execute-queries/executing-queries-how-to-topics-odbc.md)  
+ [執行查詢使用說明主題&#40;ODBC&#41;](../../../relational-databases/native-client-odbc-how-to/execute-queries/executing-queries-how-to-topics-odbc.md)  
   
   
