@@ -1,5 +1,5 @@
 ---
-title: CLR 觸發程序 |Microsoft 文件
+title: CLR 觸發程序 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -27,18 +27,18 @@ helpviewer_keywords:
 - transactions [CLR integration]
 ms.assetid: 302a4e4a-3172-42b6-9cc0-4a971ab49c1c
 caps.latest.revision: 67
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 0f2f0d4d3c7dbe6ed46e169645de057492d55c42
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: c6702a9a3851e7ce41862f8f314d9aebdb7a5745
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36036220"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37160989"
 ---
 # <a name="clr-triggers"></a>CLR 觸發程序
-  因為 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 已與 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] Common Language Runtime (CLR) 整合，所以您可以使用任何 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 語言建立 CLR 觸發程序。 本節涵蓋使用 CLR 整合實作之觸發程序的特定資訊。 如需觸發程序的完整討論，請參閱[DDL 觸發程序](../../relational-databases/triggers/ddl-triggers.md)。  
+  因為 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 已與 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] Common Language Runtime (CLR) 整合，所以您可以使用任何 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 語言建立 CLR 觸發程序。 本節涵蓋使用 CLR 整合實作之觸發程序的特定資訊。 如需觸發程序的完整討論，請參閱 < [DDL 觸發程序](../../relational-databases/triggers/ddl-triggers.md)。  
   
 ## <a name="what-are-triggers"></a>什麼是觸發程序？  
  觸發程序是一種特殊的預存程序，會在語言事件執行時自動執行。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 包含兩種一般的觸發程序：資料操作語言 (DML) 和資料定義語言 (DDL) 觸發程序。 當`INSERT`、`UPDATE` 或 `DELETE` 陳述式在指定的資料表或檢視中修改資料時，可以使用 DML 觸發程序。 DDL 觸發程序會引發預存程序來回應多種 DDL 陳述式，這些主要是以 `CREATE`、`ALTER` 和 `DROP` 開頭的陳述式。 DDL 觸發程序可用於稽核和控管資料庫作業等管理工作。  
@@ -54,14 +54,14 @@ ms.locfileid: "36036220"
   
 -   存取受 DDL 陳述式的執行所影響之資料庫物件的相關資訊。  
   
- 這些功能可以在查詢語言中自動提供，或由 `SqlTriggerContext` 類別提供。 針對 CLR 整合和 managed 程式碼之間選擇的優勢的相關資訊和[!INCLUDE[tsql](../../includes/tsql-md.md)]，請參閱[CLR 整合的概觀](../../relational-databases/clr-integration/clr-integration-overview.md)。  
+ 這些功能可以在查詢語言中自動提供，或由 `SqlTriggerContext` 類別提供。 CLR 整合，以及 managed 程式碼之間進行選擇的優勢的相關資訊並[!INCLUDE[tsql](../../includes/tsql-md.md)]，請參閱 < [CLR 整合的概觀](../../relational-databases/clr-integration/clr-integration-overview.md)。  
   
 ## <a name="using-the-sqltriggercontext-class"></a>使用 SqlTriggerContext 類別  
  `SqlTriggerContext` 類別無法公開建構，而是僅可藉由存取 CLR 觸發程序主體內的 `SqlContext.TriggerContext` 屬性來取得。 藉由呼叫 `SqlTriggerContext` 屬性，可從作用中的 `SqlContext` 取得 `SqlContext.TriggerContext` 類別：  
   
  `SqlTriggerContext myTriggerContext = SqlContext.TriggerContext;`  
   
- `SqlTriggerContext` 類別會提供觸發程序的內容資訊。 此內容相關資訊包括會造成引發觸發程序的動作類型 (已使用 UPDATE 作業修改其資料行)，而且，若其為 DDL 觸發程序，則包括說明觸發作業的 XML `EventData` 結構。 如需詳細資訊，請參閱[EVENTDATA &#40;TRANSACT-SQL&#41;](/sql/t-sql/functions/eventdata-transact-sql)。  
+ `SqlTriggerContext` 類別會提供觸發程序的內容資訊。 此內容相關資訊包括會造成引發觸發程序的動作類型 (已使用 UPDATE 作業修改其資料行)，而且，若其為 DDL 觸發程序，則包括說明觸發作業的 XML `EventData` 結構。 如需詳細資訊，請參閱 < [EVENTDATA &#40;TRANSACT-SQL&#41;](/sql/t-sql/functions/eventdata-transact-sql)。  
   
 ### <a name="determining-the-trigger-action"></a>決定觸發動作  
  一旦取得 `SqlTriggerContext`，您就可以用它來決定引發觸發程序的動作類型。 此資訊可以透過 `TriggerAction` 類別的 `SqlTriggerContext` 屬性來取得。  
@@ -77,9 +77,9 @@ ms.locfileid: "36036220"
 -   若為 DDL 觸發程序，可能的 TriggerAction 值清單會相當長。 如需詳細資訊，請參閱 .NET Framework SDK 中的＜TriggerAction 列舉＞。  
   
 ### <a name="using-the-inserted-and-deleted-tables"></a>使用插入和刪除的資料表  
- DML 觸發程序陳述式使用兩個特殊的資料表：**插入**資料表和**刪除**資料表。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會自動建立及管理這些資料表。 您可以使用這些暫存資料表測試某些資料修改的影響，並設定會執行 DML 觸發程序動作的條件，但是您無法直接改變資料表中的資料。  
+ DML 觸發程序陳述式使用兩個特殊的資料表：**插入**資料表並**刪除**資料表。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會自動建立及管理這些資料表。 您可以使用這些暫存資料表測試某些資料修改的影響，並設定會執行 DML 觸發程序動作的條件，但是您無法直接改變資料表中的資料。  
   
- CLR 觸發程序可以存取**插入**和**刪除**透過 CLR 同處理序提供者的資料表。 這是透過從 SqlContext 物件取得 `SqlCommand` 物件而完成。 例如：  
+ CLR 觸發程序可以存取**插入**並**刪除**透過 CLR 同處理序提供者的資料表。 這是透過從 SqlContext 物件取得 `SqlCommand` 物件而完成。 例如：  
   
  C#  
   
@@ -485,7 +485,7 @@ GO CREATE TABLE UserNameAudit
 )  
 ```  
   
- [!INCLUDE[tsql](../../includes/tsql-md.md)]建立觸發程序中的陳述式[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]如下所示，並且假設組件**SQLCLRTest**已登錄在目前[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]資料庫。  
+ [!INCLUDE[tsql](../../includes/tsql-md.md)]會建立觸發程序中的陳述式[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]如下所示，並且假設組件**SQLCLRTest**已登錄目前在[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]資料庫。  
   
 ```  
 CREATE TRIGGER EmailAudit  

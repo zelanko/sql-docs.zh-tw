@@ -5,24 +5,21 @@ ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: supportability
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - 50000 [SQL Server Native Client setup error]
 ms.assetid: 5426d87a-d5d9-4984-b211-b07d69e834a2
-caps.latest.revision: 15
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 594918b167dd00ec21ee755cb302ca5c255092e2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 863f2caf2afa97b7550759dd5ae84ff47572a1bd
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36031636"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37431317"
 ---
 # <a name="mssqlserver50000"></a>MSSQLSERVER_50000
     

@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - MSSQL_ENG003165 error
 ms.assetid: 707d33dd-644e-4cc9-ac51-dddd49031530
 caps.latest.revision: 14
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: df00481ae910597a738d9e0e3f6a56f302874739
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 17a48673988d6bea871ce89770fd5776311b9b70
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36035191"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37230708"
 ---
 # <a name="mssqleng003165"></a>MSSQL_ENG003165
     

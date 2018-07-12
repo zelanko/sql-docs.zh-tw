@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - result sets [SQL Server], queries
 - results [SQL Server], query
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - printing query results
 ms.assetid: 025497d1-54a0-402c-81d8-b8b597a0de11
 caps.latest.revision: 9
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 3d6c85f437ddd8eb3ab2ca6324f02402f84b903a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 29f0db1cbe23965195811603fcaa1b196c86b4f1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36037153"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37157309"
 ---
 # <a name="print-query-results-visual-database-tools"></a>列印查詢結果 (Visual Database Tools)
   若要列印查詢結果，可將 [結果窗格](visual-database-tools.md) 的內容複製到其他的 Windows 程式，例如 Word Processing 程式，然後格式化並列印。  

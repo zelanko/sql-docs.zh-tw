@@ -1,5 +1,5 @@
 ---
-title: Parameters 元素 (XMLA) |Microsoft 文件
+title: Parameters 元素 (XMLA) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -24,18 +24,18 @@ helpviewer_keywords:
 - Parameters element
 ms.assetid: d46454a1-a1d1-4aa8-95ea-54be22a53e83
 caps.latest.revision: 11
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: 63d50c1b57691a9b4cdb76adb9edaa202388d15e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 87836c6ca9f33c100b3ba10ba91379370e787773
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36037753"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37158859"
 ---
 # <a name="parameters-element-xmla"></a>Parameters 元素 (XMLA)
-  包含集合[參數](parameter-element-xmla.md)元素所使用[Execute](../xml-elements-methods-execute.md)方法。  
+  包含的集合[參數](parameter-element-xmla.md)所使用的項目[Execute](../xml-elements-methods-execute.md)方法。  
   
  **命名空間：** `urn:schemas-microsoft-com:xml-analysis`  
   

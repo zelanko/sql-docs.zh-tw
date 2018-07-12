@@ -1,5 +1,5 @@
 ---
-title: Master Data Services |Microsoft 文件
+title: Master Data Services |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: f6cd850f-b01b-491f-972c-f966b9fe4190
 caps.latest.revision: 12
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: ab4e08f960fa7ef72daad9ff5c751cdc17bbec2c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ce167bf5e95e67282aa37b002c32ccaa816c3be1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36131751"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37156479"
 ---
 # <a name="master-data-services"></a>Master Data Services
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] (MDS) 是用於主要資料管理的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 方案。 主要資料管理 (MDM) 描述組織探索與定義非交易之資料清單所付出的心力，其目標在於編譯可維護的主要清單。 MDM 專案一般包含內部商業程序的評估與重組，以及 MDM 技術的實作。 成功的 MDM 方案結果是可以分析的可靠集中式資料，以進行更好的商業性決策。  
@@ -32,7 +32,7 @@ ms.locfileid: "36131751"
   
 -   [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)]用來建立和設定工具[!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]資料庫和 web 應用程式。  
   
--   [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]您可用來執行管理工作 （例如建立模型或商務規則），而且使用者可以存取更新資料的 web 應用程式。  
+-   [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]用以執行管理工作 （例如建立模型或商務規則），而且使用者可以存取更新資料的 web 應用程式。  
   
 -   MDSModelDeploy.exe，您用來建立模型物件與資料的封裝，讓您可以將其部署至其他環境的一個工具。  
   
@@ -40,7 +40,7 @@ ms.locfileid: "36131751"
   
 -   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] [!INCLUDE[ssMDSXLS](../includes/ssmdsxls-md.md)]，可讓您用來管理資料及建立新的實體和屬性。  
   
- 如需 MDS 資源的摘要，請參閱[SQL Server Master Data Services 入口網站](http://go.microsoft.com/fwlink/?LinkID=214272)。  
+ 如需 MDS 資源的摘要，請參閱 < [SQL Server Master Data Services 入口網站](http://go.microsoft.com/fwlink/?LinkID=214272)。  
   
 |||  
 |-|-|  

@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - NULL function
 - null values [Integration Services]
@@ -16,13 +16,13 @@ ms.assetid: df144237-3fbb-41ac-8624-efd92b6522b9
 caps.latest.revision: 30
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: fef4010bd0a6c453fcf3ce69a843924a67754573
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 3cb260a0dd304a87aef74d750a13e0e260a55596
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36035469"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37239178"
 ---
 # <a name="null-ssis-expression"></a>NULL (SSIS 運算式)
   傳回所要求資料類型的 Null 值。  

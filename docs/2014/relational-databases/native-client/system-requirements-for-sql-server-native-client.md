@@ -1,13 +1,11 @@
 ---
-title: SQL Server Native Client 的系統需求 |Microsoft 文件
+title: SQL Server Native Client 的系統需求 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -17,15 +15,15 @@ helpviewer_keywords:
 - SQLNCLI, system requirements
 ms.assetid: 1c8e2f8a-a440-44da-8e3a-af632d34c52c
 caps.latest.revision: 60
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 87ec4582047abd6742756e1764d95c9f7d751061
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: cbabe38f62a9bd581bd9e41ab508336332bc3983
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36032545"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37417947"
 ---
 # <a name="system-requirements-for-sql-server-native-client"></a>SQL Server Native Client 的系統需求
   若要使用 MARS 這類 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料存取功能，您必須已經安裝下列軟體：  
@@ -34,13 +32,13 @@ ms.locfileid: "36032545"
   
 -   在伺服器上安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 需要 Windows Installer 3.0。 Windows Installer 3.0 已安裝在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 作業系統上。 如需任何其他平台，則您需要明確地加以安裝。 如需詳細資訊，請參閱[Windows Installer 3.0 可轉散發套件](http://go.microsoft.com/fwlink/?LinkId=46459)。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 需要 Windows Installer 3.0。 Windows Installer 3.0 已安裝在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 作業系統上。 如需任何其他平台，則您需要明確地加以安裝。 如需詳細資訊，請參閱 < [Windows Installer 3.0 可轉散發套件](http://go.microsoft.com/fwlink/?LinkId=46459)。  
   
 > [!NOTE]  
 >  在安裝此軟體之前，請確定已使用管理員權限登入。  
   
 ## <a name="operating-system-requirements"></a>作業系統需求  
- 如需支援的作業系統的清單[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]原生用戶端，請參閱[的 SQL Server Native Client 的支援原則](applications/support-policies-for-sql-server-native-client.md)。  
+ 如需支援的作業系統[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]原生用戶端，請參閱[的 SQL Server Native Client 的支援原則](applications/support-policies-for-sql-server-native-client.md)。  
   
 ## <a name="sql-server-requirements"></a>SQL Server 需求  
  若要使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 存取 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫中的資料，您必須已經安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的執行個體。  
@@ -67,7 +65,7 @@ ms.locfileid: "36032545"
   
  沒有 ODBC 的 `DataTypeCompatibility` 控制項。  
   
- IDBInfo::GetKeywords 一律會傳回的關鍵字清單，對應到連接上的伺服器版本，而且不會受到`DataTypeCompatibility`。  
+ IDBInfo::GetKeywords 一律會傳回的關鍵字清單，對應到連接的伺服器版本，而且不會受到`DataTypeCompatibility`。  
   
 |資料類型|SQL Server Native Client<br /><br /> SQL Server 2005|SQL Server Native Client 11.0<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|Windows Data Access Components、MDAC 和<br /><br /> DataTypeCompatibility=80 的 SQL Server Native Client OLE DB 應用程式|  
 |---------------|--------------------------------------------------|-------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------|  

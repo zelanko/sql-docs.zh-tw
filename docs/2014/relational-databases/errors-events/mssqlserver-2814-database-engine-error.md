@@ -5,23 +5,22 @@ ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - 2814 (Database Engine error)
 ms.assetid: 22800748-9be9-4511-9428-6b8b40e5bef9
 caps.latest.revision: 15
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: c962b1a2429e441c238a8a0b1cd365cfb74ac112
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 2b2bc755b92b919d4f21add3f3dbd7ab95b20436
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36031438"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37429477"
 ---
 # <a name="mssqlserver2814"></a>MSSQLSERVER_2814
     
@@ -43,7 +42,7 @@ ms.locfileid: "36031438"
   
 |原因代碼|描述|  
 |-----------------|-----------------|  
-|@shouldalert|結構描述已變更|  
+|1|結構描述已變更|  
 |2|統計資料已變更|  
 |3|延遲編譯|  
 |4|Set 選項已變更|  

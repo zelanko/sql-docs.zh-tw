@@ -1,5 +1,5 @@
 ---
-title: 報表設計的 CSDLBI 屬性 |Microsoft 文件
+title: 報表設計的 CSDLBI 屬性 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -12,21 +12,21 @@ ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 61ba3a27-790e-43bc-b421-e01bf2fdbda6
 caps.latest.revision: 8
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: e9d68293f4f71280c09d43a6b60dfa087830dc4d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 26454c7ed2c1daa5d4ce512066f0a0fcf0ec7479
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36034865"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37259384"
 ---
 # <a name="csdlbi-attributes-for-report-design"></a>報表設計的 CSDLBI 屬性
   本節描述表格式模型化的 CSDL 延伸模組中影響 [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] 查詢設計的屬性。  
   
 ## <a name="model-attributes"></a>模型屬性  
- 這些屬性在 csdl 的子元素上定義[EntityContainer](http://msdn.microsoft.com/library/bb399169.aspx)項目。  
+ 這些屬性定義在 csdl 的子元素上[EntityContainer](http://msdn.microsoft.com/library/bb399169.aspx)項目。  
   
 |屬性名稱|資料類型|描述|  
 |--------------------|---------------|-----------------|  
@@ -51,7 +51,7 @@ ms.locfileid: "36034865"
 |`DefaultLocation`|MemberRef|欄位的參考，欄位值表示與實體執行個體相關聯的預設位置。 如果省略，則使用實體中的第一個位置欄位 (如果有)。|  
   
 ## <a name="field-attributes"></a>欄位屬性  
- 這些屬性在 CSDL property 的子元素上定義或[NavigationProperty](http://msdn.microsoft.com/library/bb387104.aspx)項目。  
+ 這些屬性定義在 CSDL 屬性的子元素或[NavigationProperty](http://msdn.microsoft.com/library/bb387104.aspx)項目。  
   
 |屬性名稱|資料類型|描述|  
 |--------------------|---------------|-----------------|  

@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - processors [SQL Server], supported
 - number of processors supported
 - maximum number of processors supported
 ms.assetid: cd308bc9-9468-40cc-ad6e-1a8a69aca6c8
 caps.latest.revision: 56
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: a0d9d1e3076c19df548eb2a1714a2093046fd352
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 2893a0fdb04e834e2eeab0343b23888c244fd036
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36131869"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37157539"
 ---
 # <a name="compute-capacity-limits-by-edition-of-sql-server"></a>SQL Server 版本的計算容量限制
   本主題討論不同 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 版本的計算容量限制以及它們在具有超執行緒處理器的實體和虛擬化環境中有何差異。  
@@ -32,10 +32,10 @@ ms.locfileid: "36131869"
   
  下表描述上圖所使用的註解：  
   
-|ReplTest1|描述|  
+|值|描述|  
 |-----------|-----------------|  
 |0..1|零個或一個|  
-|@shouldalert|只有一個|  
+|1|只有一個|  
 |1..*|一個或多個|  
 |0..*|零個或多個|  
 |1..2|一個或兩個|  
@@ -96,7 +96,7 @@ ms.locfileid: "36131869"
 |Express with Tools|限制為 1 個插槽或 4 個核心的較小者|限制為 1 個插槽或 4 個核心的較小者|  
 |Express with Advanced Services|限制為 1 個插槽或 4 個核心的較小者|限制為 1 個插槽或 4 個核心的較小者|  
   
- <sup>1</sup>含伺服器 + 用戶端存取授權 (CAL) 授權 （不適用於新的協議） Enterprise Edition 僅限於 20 個核心每秒最多[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]執行個體。 核心伺服器授權模式之下沒有任何限制。  
+ <sup>1</sup> Enterprise Edition，含伺服器 + 用戶端存取授權 (CAL) 授權 （不適用於新的協議） 僅限於最多 20 個核心每[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]執行個體。 核心伺服器授權模式之下沒有任何限制。  
   
  在虛擬化環境中，計算容量限制是以邏輯處理器 (而非核心) 的數目為基礎，因為客體應用程式看不見處理器架構。  例如，如果一部伺服器的四個插槽都插入四核心處理器，而且能夠針對每個核心啟用兩個超執行緒，則在啟用超執行緒的情況下，總共包含 32 個邏輯處理器，但是在停用超執行緒的情況下，只包含 16 個邏輯處理器。 這些邏輯處理器可對應至伺服器上的虛擬機器，而該邏輯處理器的虛擬機器計算負載則對應至主機伺服器中實體處理器上執行的執行緒。  
   
@@ -106,6 +106,6 @@ ms.locfileid: "36131869"
  [SQL Server 2014 的版本和元件](../sql-server/editions-and-components-of-sql-server-2016.md)   
  [SQL Server 2014 各版本所支援的功能](../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md)   
  [SQL Server 的最大容量規格](../sql-server/maximum-capacity-specifications-for-sql-server.md)   
- [快速入門的 SQL Server 2014 安裝](../../2014/getting-started/quick-start-installation-of-sql-server-2014.md)  
+ [SQL Server 2014 快速入門安裝](../../2014/getting-started/quick-start-installation-of-sql-server-2014.md)  
   
   

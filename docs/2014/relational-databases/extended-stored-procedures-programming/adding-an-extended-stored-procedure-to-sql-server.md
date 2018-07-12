@@ -1,5 +1,5 @@
 ---
-title: 加入擴充預存程序 SQL Server |Microsoft 文件
+title: 加入擴充預存程序到 SQL Server |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - collations [SQL Server], extended stored procedures
 ms.assetid: 10f1bb74-3b43-4efd-b7ab-7a85a8600a50
 caps.latest.revision: 37
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: b69f6ba2dd0fc6c5b3b2ce4f93e70239d8868007
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: rothja
+ms.author: jroth
+manager: craigg
+ms.openlocfilehash: c88e0640c41e7307144912cc05f9cdd21022fee6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36036790"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37211268"
 ---
 # <a name="adding-an-extended-stored-procedure-to-sql-server"></a>將擴充預存程序加入至 SQL Server
     
@@ -49,7 +49,7 @@ ms.locfileid: "36036790"
 sp_addextendedproc 'xp_hello', 'c:\Program Files\Microsoft SQL Server\MSSQL12.0.MSSQLSERVER\MSSQL\Binn\xp_hello.dll';  
 ```  
   
- 如果在 `sp_addextendedproc` 中指定的函數名稱並未與 DLL 中的函數名稱完全相符，系統將會在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中註冊新名稱，但是此名稱將無法使用。 例如，雖然`xp_Hello`註冊為[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]擴充預存程序位於`xp_hello.dll`，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]不能在 DLL 中尋找的函式，如果您使用`xp_Hello`稍後呼叫函式。  
+ 如果在 `sp_addextendedproc` 中指定的函數名稱並未與 DLL 中的函數名稱完全相符，系統將會在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中註冊新名稱，但是此名稱將無法使用。 比方說，雖然`xp_Hello`註冊為[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]擴充預存程序位於`xp_hello.dll`，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]不能在 DLL 中尋找函式，如果您使用`xp_Hello`稍後呼叫函式。  
   
 ```  
 --Register the function (xp_hello) with an initial upper case  
@@ -98,7 +98,7 @@ Server: Msg 2812, Level 16, State 62, Line 1
  您不需要停止並重新啟動 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
   
 ## <a name="see-also"></a>另請參閱  
- [sp_addextendedproc &#40;Transact SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addextendedproc-transact-sql)   
+ [sp_addextendedproc &#40;-SQL&AMP;#41;&#41;](/sql/relational-databases/system-stored-procedures/sp-addextendedproc-transact-sql)   
  [sp_dropextendedproc &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-dropextendedproc-transact-sql)  
   
   

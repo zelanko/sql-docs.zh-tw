@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - traces [SQL Server], restarting
 - traces [SQL Server], stopping
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - stopping traces
 ms.assetid: 022dd1b7-08be-4a42-9b3a-c3bd09703e27
 caps.latest.revision: 21
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 9ab132307b8a9931cdd0d23a0ee977d1d2500737
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 0dbee658b610a0aebc9b43fd7cd93b976910225c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36131845"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37149889"
 ---
 # <a name="run-a-trace-after-it-has-been-paused-or-stopped-sql-server-profiler"></a>在追蹤暫停或停止之後執行追蹤 (SQL Server Profiler)
   此主題描述如何在追蹤暫停或停止之後，使用 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]再啟動追蹤。  

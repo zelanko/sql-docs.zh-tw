@@ -1,34 +1,32 @@
 ---
-title: 傳送和接收資料，以累加方式與 FILESTREAM (ODBC) |Microsoft 文件
+title: 傳送和接收資料，以累加方式與 FILESTREAM (ODBC) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: b82ecf4c-f151-4a99-8717-a73ee5ec994f
 caps.latest.revision: 5
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 8dd8da5f08825d9914e0018ffaa72b8f61eae95f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 2dbe4128fb05732af795ff689c56c78a5066e862
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36031213"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37412257"
 ---
 # <a name="send-and-receive-data-incrementally-with-filestream-odbc"></a>利用 FILESTREAM 累加地傳送和接收資料 (ODBC)
   此範例會示範如何使用 FILESTREAM 功能，以 SQLPutData 和 SQLGetData 累加地傳送和接收資料。  
   
- 如需有關 FILESTREAM 功能的詳細資訊，請參閱[FILESTREAM 支援&#40;ODBC&#41;](../native-client/odbc/filestream-support-odbc.md)。  
+ 如需 FILESTREAM 功能的詳細資訊，請參閱[FILESTREAM 支援&#40;ODBC&#41;](../native-client/odbc/filestream-support-odbc.md)。  
   
 ## <a name="example"></a>範例  
- 在編譯和執行此範例之前，啟用 FILESTREAM 支援 ([Enable and Configure FILESTREAM](../blob/enable-and-configure-filestream.md))。  
+ 在編譯和執行此範例之前，啟用 FILESTREAM 支援 ([啟用及設定 FILESTREAM](../blob/enable-and-configure-filestream.md))。  
   
  第一個 ([!INCLUDE[tsql](../../includes/tsql-md.md)]) 程式碼清單會建立此範例所使用的資料庫。 您的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體必須擁有執行這個指令碼的寫入存取權 (例如，以本機系統帳戶的身分登入)。  
   

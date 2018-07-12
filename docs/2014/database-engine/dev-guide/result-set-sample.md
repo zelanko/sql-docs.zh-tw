@@ -1,5 +1,5 @@
 ---
-title: 結果集範例 |Microsoft 文件
+title: 結果集範例 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -12,15 +12,15 @@ ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: a0590ba6-3856-4731-bb29-87b0a1c1b795
 caps.latest.revision: 10
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 2b3c240777d0f49af2fb9113a29a08b70085d327
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: eb38a6a9dfb411152ba17fdcf29e5a096a1c7ec2
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36131559"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37159029"
 ---
 # <a name="result-set-sample"></a>結果集範例
   有時，在閱讀查詢結果時，它對能夠在不開啟新連接也不將所有結果讀取到記憶體中的情況下執行命令會很有用。 ADO.NET 2.0 中的 Multiple Active Result Set (MARS) 功能是一種可以協助您實現此目的之技術。 目前，不會對用於伺服器端程式設計的同處理序提供者實作 MARS。 若要解決此限制，您可以使用伺服器端指標。 此範例示範如何使用伺服器端指標解決伺服器端程式設計不支援 MARS 的問題。  
@@ -30,7 +30,7 @@ ms.locfileid: "36131559"
   
  此類別的 API 類似於資料讀取器，不同之處在於您可以在結果集中向前或向後移動，並可在結果集開啟時，對該連接發出其他命令。已高度簡化此實作，方便您理解範例。 更為有效的實作會提取多個資料列，從而減少每次提取資料列時的資料庫週轉 使用此類別耗用的記憶體使用量將遠小於用查詢的所有結果填滿資料集所耗用的記憶體使用量，這對伺服器端程式設計來說非常重要。 此範例還會示範使用 "Allow partially trusted callers" 屬性，指示結果集組件為程式庫，並且可以從其他組件安全地呼叫。 這個方法稍微複雜，但是比使用 unsafe 權限註冊呼叫組件更安全。 之所以較為安全，是因為將呼叫組件註冊為 safe，呼叫組件會限制存取出影響伺服器的資源，並且避免損壞伺服器的完整性。  
   
-## <a name="prerequisites"></a>必要條件  
+## <a name="prerequisites"></a>先決條件  
  若要建立並執行這個專案，您必須安裝下列軟體：  
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express。 您可以從 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express 文件集和範例[網站](http://go.microsoft.com/fwlink/?LinkId=31046)免費取得 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express  

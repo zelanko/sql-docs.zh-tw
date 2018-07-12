@@ -1,13 +1,11 @@
 ---
-title: SQLProcedureColumns |Microsoft 文件
+title: SQLProcedureColumns |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 topic_type:
@@ -16,24 +14,24 @@ helpviewer_keywords:
 - SQLProcedureColumns function
 ms.assetid: 6671e180-0072-4de5-90f5-314306d2ba9c
 caps.latest.revision: 50
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: de18cc3a646e9aefa8ffaf5d07a8379be0588c3f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 5b693d06e42f0fc5d2815b188826b21f5d89cae7
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36031431"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37428387"
 ---
 # <a name="sqlprocedurecolumns"></a>SQLProcedureColumns
   `SQLProcedureColumns` 傳回一個資料列，報告所有的傳回值屬性[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]預存程序。  
   
- `SQLProcedureColumns` 傳回 SQL_SUCCESS，或是否有值存在*CatalogName*， *SchemaName*， *ProcName*，或*ColumnName*參數。 **SQLFetch**這些參數中使用無效值時，傳回 sql_no_data 為止。  
+ `SQLProcedureColumns` 或是否有值存在都會傳回 SQL_SUCCESS *CatalogName*， *SchemaName*， *ProcName*，或*ColumnName*參數。 **SQLFetch**無效的值用於這些參數時，會傳回 sql_no_data 為止。  
   
  `SQLProcedureColumns` 可以在靜態伺服器資料指標上執行。 嘗試在可更新的 (動態或索引鍵集) 資料指標上執行 `SQLProcedureColumns` 時，將會傳回 SQL_SUCCESS_WITH_INFO，表示資料指標類型已變更。  
   
- 下表列出結果集，以及如何擴充這些處理傳回的資料行**udt**和**xml**資料型別透過[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client ODBC 驅動程式：  
+ 下表列出結果集，以及如何擴充這些來處理傳回的資料行**udt**並**xml**資料類型，透過[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client ODBC 驅動程式：  
   
 |資料行名稱|描述|  
 |-----------------|-----------------|  
@@ -45,7 +43,7 @@ ms.locfileid: "36031431"
 |SS_XML_SCHEMACOLLECTION_NAME|傳回 XML 結構描述集合的名稱。 如果找不到名稱，則此變數包含空字串。|  
   
 ## <a name="sqlprocedurecolumns-and-table-valued-parameters"></a>SQLProcedureColumns 和資料表值參數  
- SQLProcedureColumns 處理資料表值參數的方式，類似於 CLR 使用者定義型別。 在針對資料表值參數傳回的資料列中，資料行包含下列值：  
+ SQLProcedureColumns 處理方式類似 CLR 使用者定義型別中的資料表值參數。 在針對資料表值參數傳回的資料列中，資料行包含下列值：  
   
 |資料行名稱|描述/值|  
 |-----------------|------------------------|  
@@ -69,15 +67,15 @@ ms.locfileid: "36031431"
   
  依照 ODBC 規格規定，SS_TYPE_CATALOG_NAME 和 SS_TYPE_SCHEMA_NAME 會出現在舊版 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中所加入的所有驅動程式專用資料行之前，以及 ODBC 本身所託管的所有資料行之後。  
   
- 如需有關資料表值參數的詳細資訊，請參閱[資料表值參數&#40;ODBC&#41;](../native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md)。  
+ 如需有關資料表值參數的詳細資訊，請參閱 < [Parameters &#40;ODBC&#41;](../native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md)。  
   
 ## <a name="sqlprocedurecolumns-support-for-enhanced-date-and-time-features"></a>SQLProcedureColumns 對增強日期和時間功能的支援  
- 針對日期/時間類型傳回的值，請參閱[目錄中繼資料](../native-client-odbc-date-time/metadata-catalog.md)。  
+ 針對日期/時間類型傳回值，請參閱[Catalog Metadata](../native-client-odbc-date-time/metadata-catalog.md)。  
   
- 如需詳細資訊，請參閱[日期和時間增強功能&#40;ODBC&#41;](../native-client-odbc-date-time/date-and-time-improvements-odbc.md)。  
+ 如需詳細資訊，請參閱 <<c0> [ 日期和時間改善&#40;ODBC&#41;](../native-client-odbc-date-time/date-and-time-improvements-odbc.md)。</c0>  
   
 ## <a name="sqlprocedurecolumns-support-for-large-clr-udts"></a>SQLProcedureColumns 對大型 CLR UDT 的支援  
- `SQLProcedureColumns` 支援大型 CLR 使用者定義型別 (UDT)。 如需詳細資訊，請參閱[Large CLR User-Defined 類型&#40;ODBC&#41;](../native-client/odbc/large-clr-user-defined-types-odbc.md)。  
+ `SQLProcedureColumns` 支援大型 CLR 使用者定義型別 (UDT)。 如需詳細資訊，請參閱 < [Large CLR User-Defined 類型&#40;ODBC&#41;](../native-client/odbc/large-clr-user-defined-types-odbc.md)。  
   
 ## <a name="see-also"></a>另請參閱  
  [SQLProcedureColumns 函數](http://go.microsoft.com/fwlink/?LinkId=59363)   

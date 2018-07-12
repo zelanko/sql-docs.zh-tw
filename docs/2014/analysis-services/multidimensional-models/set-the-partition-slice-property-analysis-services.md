@@ -1,5 +1,5 @@
 ---
-title: 設定 Partition Slice 屬性 (Analysis Services) |Microsoft 文件
+title: 設定 Partition Slice 屬性 (Analysis Services) |Microsoft Docs
 ms.custom: ''
 ms.date: 08/05/2015
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 applies_to:
 - SQL Server 2014
 helpviewer_keywords:
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - data slices [Analysis Services]
 ms.assetid: 507b91e5-7f85-4c22-be97-4d7a676e6667
 caps.latest.revision: 32
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: b122622e4bd90f9b78e994a5d5aba55f33bc120d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 539cef78d7c9f9333688f4db1e5fbf35461479ee
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36035537"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37230078"
 ---
 # <a name="set-the-partition-slice-property-analysis-services"></a>設定 Partition Slice 屬性 (Analysis Services)
   資料配量是協助將查詢導向到適當之分割區資料的重要最佳化功能。 明確設定 Slice 屬性可提升查詢效能，方法是覆寫 MOLAP and HOLAP 分割區所產生的預設配量。 此外，Slice 屬性可在處理分割區時，提供額外的驗證檢查。  
@@ -47,9 +47,9 @@ ms.locfileid: "36035537"
 > [!NOTE]  
 >  請注意，資料分割的 Slice 屬性不支援動態多維度運算式 (MDX) 函數 (例如 [Generate &#40;MDX&#41;](/sql/mdx/generate-mdx) 或 [Except &#40;MDX&#41;](/sql/mdx/except-mdx-function))。 您必須使用明確的 Tuple 或成員參考來定義配量。  
 >   
->  例如，而不是使用[:&#40;範圍&#41; &#40;MDX&#41; ](/sql/mdx/range-mdx)函式來定義範圍中，您必須以特定的年份來列舉每個成員。  
+>  比方說，而不是使用[:&#40;範圍&#41; &#40;MDX&#41; ](/sql/mdx/range-mdx)函式來定義範圍，您需要以特定的年份來列舉每個成員。  
 >   
->  如果您需要定義複雜的配量，我們建議您使用 XMLA Alter 指令碼在配量中定義 Tuple。 然後，您可以使用 ascmd 命令列工具或 SSIS [Analysis Services 執行 DDL 工作](../../integration-services/control-flow/analysis-services-execute-ddl-task.md)工作執行的指令碼，並在處理分割區之前，立即建立指定的集合的成員。  
+>  如果您需要定義複雜的配量，我們建議您使用 XMLA Alter 指令碼在配量中定義 Tuple。 然後，您可以使用 ascmd 命令列工具或 SSIS [Analysis Services Execute DDL Task](../../integration-services/control-flow/analysis-services-execute-ddl-task.md)工作執行指令碼，並立即處理資料分割之前，建立指定的集合的成員。  
   
 ## <a name="see-also"></a>另請參閱  
  [建立及管理本機資料分割&#40;Analysis Services&#41;](create-and-manage-a-local-partition-analysis-services.md)  

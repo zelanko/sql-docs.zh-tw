@@ -1,5 +1,5 @@
 ---
-title: AttributePermission 元素 (ASSL) |Microsoft 文件
+title: AttributePermission 元素 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - AttributePermission element
 ms.assetid: efc8aa63-3959-4b2e-98f8-2a9c424298c2
 caps.latest.revision: 35
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 5ee5d846cdf849959bc1a916dd82fd95de60e6e8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 0c39047b1f63f0abbab109e2d1e8f82ca2a4c863
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36035319"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37277874"
 ---
 # <a name="attributepermission-element-assl"></a>AttributePermission 元素 (ASSL)
-  定義的權限的成員[角色](role-element-assl.md)元素中個別維度屬性上有[Cube](cube-element-assl.md)項目。  
+  定義的權限的成員[角色](role-element-assl.md)元素中個別維度屬性所擁有[Cube](cube-element-assl.md)項目。  
   
 ## <a name="syntax"></a>語法  
   
@@ -68,7 +68,7 @@ ms.locfileid: "36035319"
 |子元素|[AllowedSet](../properties/allowedset-element-assl.md)，[註解](../collections/annotations-element-assl.md)， [AttributeID](../properties/id-element-assl.md)， [DefaultMember](member-element-assl.md)， [DeniedSet](../properties/deniedset-element-assl.md)，[描述](../properties/description-element-assl.md)， [VisualTotals](../properties/visualtotals-element-assl.md)|  
   
 ## <a name="remarks"></a>備註  
- 分析管理物件 (AMO) 物件模型中的對應元素是<xref:Microsoft.AnalysisServices.AttributePermission>。  
+ 在 「 分析管理物件 (AMO) 物件模型的對應元素是<xref:Microsoft.AnalysisServices.AttributePermission>。  
   
 ## <a name="see-also"></a>另請參閱  
  [CubeDimensionPermission 資料類型&#40;ASSL&#41;](../data-type/permission-data-type-assl.md)   

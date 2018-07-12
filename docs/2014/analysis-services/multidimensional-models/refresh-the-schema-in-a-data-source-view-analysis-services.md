@@ -1,5 +1,5 @@
 ---
-title: 重新整理資料來源檢視 (Analysis Services) 中的結構描述 |Microsoft 文件
+title: 重新整理資料來源檢視 (Analysis Services) 中的結構描述 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - data source views [Analysis Services], schema updates
 - refreshing data source views
 - data source views [Analysis Services], refreshing
 ms.assetid: 634b0504-1437-43e7-8ac7-3248ac7989a3
 caps.latest.revision: 33
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 517c3e9c0c608a0e38d79fd6aff8147a68403671
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 06859536c3f63e35bca7ab43593eac44b3bba22a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36036225"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37239768"
 ---
 # <a name="refresh-the-schema-in-a-data-source-view-analysis-services"></a>在資料來源檢視中重新整理結構描述 (Analysis Services)
   當您在 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 專案或資料庫中定義資料來源檢視 (DSV) 之後，基礎資料來源中的結構描述可能會變更。 但在開發專案中不會自動偵測或更新這些變更。 此外，如果您將專案部署至伺服器，當 Analysis Services 無法再連接至外部資料來源時，您現在會發生處理錯誤。  

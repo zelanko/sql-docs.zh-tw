@@ -1,5 +1,5 @@
 ---
-title: 使用 ADOMD.NET 來開發 |Microsoft 文件
+title: 使用 ADOMD.NET 來開發 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,18 +14,18 @@ helpviewer_keywords:
 - ADOMD.NET
 ms.assetid: abaf33aa-db55-43bf-8f30-15547559be1d
 caps.latest.revision: 39
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 1dfdd10ae488633812b61e2a0220f7c22e65e575
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 6ff460d496b1ef148b5da7e0dbada2835fb1328c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36037339"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37151849"
 ---
 # <a name="developing-with-adomdnet"></a>使用 ADOMD.NET 來開發
-  ADOMD.NET 是[!INCLUDE[msCoName](../../../includes/msconame-md.md)]設計來與通訊的.NET Framework 資料提供者[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]。 ADOMD.NET 使用 XML for Analysis 通訊協定，透過 TCP/IP 或 HTTP 連接傳輸和接收符合 XML for Analysis 規格的 SOAP 要求與回應，來和分析資料來源通訊。 命令可以用多維度運算式 (MDX)、資料採礦延伸模組 (MDX)、Analysis Services 指令碼語言 (ASSL)，或甚至是有限的 SQL 語法來傳送，而且可能不會傳回結果。 您可以透過使用 ADOMD.NET 物件模型來查詢和操作分析資料、關鍵效能指標 (KPI) 以及採礦模型。 透過使用 ADOMD.NET，您也可以擷取 OLE DB 符合的結構描述資料列集，或是使用 ADOMD.NET 物件模型，來檢視和使用中繼資料。  
+  ADOMD.NET 是[!INCLUDE[msCoName](../../../includes/msconame-md.md)].NET Framework 資料提供者是設計用來與通訊[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]。 ADOMD.NET 使用 XML for Analysis 通訊協定，透過 TCP/IP 或 HTTP 連接傳輸和接收符合 XML for Analysis 規格的 SOAP 要求與回應，來和分析資料來源通訊。 命令可以用多維度運算式 (MDX)、資料採礦延伸模組 (MDX)、Analysis Services 指令碼語言 (ASSL)，或甚至是有限的 SQL 語法來傳送，而且可能不會傳回結果。 您可以透過使用 ADOMD.NET 物件模型來查詢和操作分析資料、關鍵效能指標 (KPI) 以及採礦模型。 透過使用 ADOMD.NET，您也可以擷取 OLE DB 符合的結構描述資料列集，或是使用 ADOMD.NET 物件模型，來檢視和使用中繼資料。  
   
  ADOMD.NET 資料提供者由`Microsoft.AnalysisServices.AdomdClient`命名空間。  
   

@@ -1,5 +1,5 @@
 ---
-title: DefaultMember 元素 (ASSL) |Microsoft 文件
+title: DefaultMember 元素 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - DefaultMember element
 ms.assetid: db4eea9f-f7cf-40de-abd0-b62014e7ec2d
 caps.latest.revision: 38
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 71b8b2ecd1d5cd46ea50cceebe2a0105d9b7311f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: fd074ab38264bf45ad70a96c37a22bc3c3185d4a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36035309"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37229678"
 ---
 # <a name="defaultmember-element-assl"></a>DefaultMember 元素 (ASSL)
   包含識別父元素之預設成員的多維度運算式 (MDX) 運算式。  
@@ -62,9 +62,9 @@ ms.locfileid: "36035309"
 |子元素|無|  
   
 ## <a name="remarks"></a>備註  
- `DefaultMember` 元素會定義父元素的預設成員。 如果`DefaultMember`未指定或設為空字串， [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]就會選擇要做為預設成員。  
+ `DefaultMember` 元素會定義父元素的預設成員。 如果`DefaultMember`未指定或設為空字串， [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]會選擇要做為預設成員。  
   
- 若為 `ManyToManyMeasureGroupDimension` 元素，`DefaultMember` 元素就會包含 MDX 運算式，以便在 `CubeDimensionID` 的 `ManyToManyMeasureGroupDimension` 元素中識別的維度內指定成員。 MDX 運算式是類似於[StrToMember](/sql/mdx/strtomember-mdx) MDX 函數與含有 CONSTRAINED 關鍵字，因為它無法包含 MDX 或使用者定義函數。  
+ 若為 `ManyToManyMeasureGroupDimension` 元素，`DefaultMember` 元素就會包含 MDX 運算式，以便在 `CubeDimensionID` 的 `ManyToManyMeasureGroupDimension` 元素中識別的維度內指定成員。 MDX 運算式是類似[StrToMember](/sql/mdx/strtomember-mdx) MDX 函數與 CONSTRAINED 關鍵字，因為它無法包含 MDX 或使用者定義函數。  
   
  如需預設成員的詳細資訊，請參閱 [定義預設成員](../../multidimensional-models/attribute-properties-define-a-default-member.md)。  
   

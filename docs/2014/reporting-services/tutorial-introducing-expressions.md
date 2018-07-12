@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 2d05ef4c-5f91-48b2-8795-f0a201a0b3cc
 caps.latest.revision: 8
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 03157682c4b5a5dcaa89c46a64b094f8e321ec8e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 44bb65b09d081ba43aef2de6991bb09b9f6ecf4f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36034605"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37228888"
 ---
 # <a name="tutorial-introducing-expressions"></a>教學課程：運算式簡介
-  運算式可協助您建立強大而靈活的報表。 本教學課程將教您建立和實作使用一般函數和運算子的運算式。 您將使用**運算式**對話方塊撰寫串連名稱值、 查看個別的資料集中的值的運算式來顯示不同的圖片，根據欄位值等等。  
+  運算式可協助您建立強大而靈活的報表。 本教學課程將教您建立和實作使用一般函數和運算子的運算式。 您將使用**運算式**對話方塊，即可撰寫運算式以串連名稱值、 查閱值在不同的資料集中，顯示不同的圖片，根據欄位的值，並依此類推。  
   
  報表是橫條報表，其中採用白色和某種色彩交替的資料列色彩。 報表包含選取非白色資料列色彩的參數。  
   
@@ -30,20 +30,20 @@ ms.locfileid: "36034605"
   
  ![rs_ExpressionsTutorial](../../2014/tutorials/media/rs-expressionstutorial.gif "rs_ExpressionsTutorial")  
   
-##  <a name="BackToTop"></a> 您將學習  
+##  <a name="BackToTop"></a> 您將了解  
  在本教學課程中，您將學習如何執行下列作業：  
   
 1.  [從資料表或矩陣精靈建立資料表報表和資料集](#Setup)  
   
 2.  [更新預設名稱的資料來源和資料集](#UpdateNames)  
   
-3.  [顯示名字、 縮寫和姓氏](#Concatenate)  
+3.  [顯示名字、 縮寫和姓氏的名稱](#Concatenate)  
   
 4.  [使用影像顯示性別](#Gender)  
   
 5.  [查閱 CountryRegion 名稱](#Lookup)  
   
-6.  [自上次購買後的計數日數](#Count)  
+6.  [計算自上次購買後的日數](#Count)  
   
 7.  [使用指標顯示銷售比較](#Indicator)  
   
@@ -73,7 +73,7 @@ ms.locfileid: "36034605"
   
 #### <a name="to-create-a-new-table-report"></a>若要建立新資料表報表  
   
-1.  按一下**啟動**，指向 **程式**，按一下  [!INCLUDE[ssCurrentUI](../includes/sscurrentui-md.md)]**報表產生器**，然後按一下 **報表產生器**。  
+1.  按一下 **開始**，指向**程式**，按一下  [!INCLUDE[ssCurrentUI](../includes/sscurrentui-md.md)]**報表產生器**，然後按一下**報表產生器**。  
   
      此時會出現 **[使用者入門]** 對話方塊。  
   
@@ -81,7 +81,7 @@ ms.locfileid: "36034605"
     >  如果 **[使用者入門]** 對話方塊沒有出現，請在 **[報表產生器]** 按鈕中按一下 **[新增]**。  
   
     > [!NOTE]  
-    >  如果您習慣使用報表產生器的 ClickOnce 版本，開啟報表管理員，然後按一下 **報表產生器**，或移至 SharePoint 網站的 Reporting Services 內容類型，例如報表已啟用，並且按一下  **報表產生器報表**上**新文件**功能表**文件**共用文件庫 索引標籤。  
+    >  如果您偏好使用報表產生器的 ClickOnce 版本，開啟報表管理員，然後按一下**報表產生器**，或移至 SharePoint 網站的 Reporting Services 內容類型，例如報告已啟用，並且按一下**報表產生器報表**上**新的文件**功能表上的**文件**共用文件庫 索引標籤。  
   
 2.  在左窗格中，確認已選取 **[新增報表]** 。  
   
@@ -146,7 +146,7 @@ ms.locfileid: "36034605"
     > [!NOTE]  
     >  但是不包括 [FirstName] 和 [LastName] 欄位。 您將在後續步驟中加入這兩個欄位。  
   
-13. 在**值**清單中，以滑鼠右鍵按一下`CountryRegionID`按一下**總和**選項。  
+13. 在 **值**清單中，以滑鼠右鍵按一下`CountryRegionID`然後按一下**總和**選項。  
   
      [加總] 不再套用至 CountryRegionID。  
   
@@ -158,7 +158,7 @@ ms.locfileid: "36034605"
   
 16. 在 [選擇配置] 頁面上，按 一下 [下一步]。  
   
-17. 在**選擇樣式**頁面上，按一下**Slate**，然後按一下 **完成**。  
+17. 在上**選擇樣式**頁面上，按一下**Slate**，然後按一下**完成**。  
   
 ##  <a name="UpdateNames"></a> 2.更新資料來源和資料集的預設名稱  
   
@@ -360,7 +360,7 @@ ms.locfileid: "36034605"
   
 6.  在 [類別目錄] 清單中，按一下 [欄位 (運算式)]。  
   
-7.  在**值**清單中，按兩下`CountryRegionID`。  
+7.  在 **值**清單中，按兩下`CountryRegionID`。  
   
 8.  如果游標不在 `CountryRegionID.Value` 的正後方，請將它放至該處。  
   
@@ -517,7 +517,7 @@ ms.locfileid: "36034605"
   
 34. 按一下 [結束] 值的文字方塊右邊的 **fx** 按鈕。  
   
-35. 在**運算式**對話方塊方塊中，建立運算式： `=Round(Fields!YTDPurchase.Value - Avg(Fields!YTDPurchase.Value, "Expressions")) >0`  
+35. 在 **運算式**對話方塊方塊中，建立運算式： `=Round(Fields!YTDPurchase.Value - Avg(Fields!YTDPurchase.Value, "Expressions")) >0`  
   
 36. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
@@ -701,7 +701,7 @@ ms.locfileid: "36034605"
   
 1.  在 **[報表產生器]** 按鈕中，按一下 **[另存新檔]**。  
   
-2.  按一下**桌面`, `我的文件**，或**我的電腦**，然後瀏覽至您要儲存報表的資料夾。  
+2.  按一下 **桌面`, `我的文件**，或**我的電腦**，然後瀏覽至您要儲存報表的資料夾。  
   
 3.  在 [名稱] 中，將預設名稱取代為**銷售比較摘要**。  
   
@@ -710,9 +710,9 @@ ms.locfileid: "36034605"
 ## <a name="see-also"></a>另請參閱  
  [運算式 &#40;報表產生器及 SSRS&#41;](report-design/expressions-report-builder-and-ssrs.md)   
  [運算式範例 &#40;報表產生器及 SSRS&#41;](report-design/expression-examples-report-builder-and-ssrs.md)   
- [指標&#40;報表產生器和 SSRS&#41;](report-design/indicators-report-builder-and-ssrs.md)   
- [影像、 文字方塊、 矩形和線條&#40;報表產生器和 SSRS&#41;](report-design/rectangles-and-lines-report-builder-and-ssrs.md)   
+ [指標&#40;報表產生器及 SSRS&#41;](report-design/indicators-report-builder-and-ssrs.md)   
+ [影像、 文字方塊、 矩形和線條&#40;報表產生器及 SSRS&#41;](report-design/rectangles-and-lines-report-builder-and-ssrs.md)   
  [資料表 &#40;報表產生器及 SSRS&#41;](report-design/tables-report-builder-and-ssrs.md)   
- [將資料加入至報表&#40;報表產生器和 SSRS&#41;](report-data/report-datasets-ssrs.md)  
+ [將資料加入至報表&#40;報表產生器及 SSRS&#41;](report-data/report-datasets-ssrs.md)  
   
   

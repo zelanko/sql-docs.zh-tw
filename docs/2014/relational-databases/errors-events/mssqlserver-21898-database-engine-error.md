@@ -5,23 +5,22 @@ ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - 21898 (Database Engine error)
 ms.assetid: 02405b21-3d4e-4c2d-b4b3-d7b1ec05edb4
 caps.latest.revision: 7
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 2a33000c20c7c8c1399f8f6db653d60841bb7de2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 551b199b6c4c97b58eca822e1372d3b51af31585
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36030540"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37423457"
 ---
 # <a name="mssqlserver21898"></a>MSSQLSERVER_21898
     
@@ -37,7 +36,7 @@ ms.locfileid: "36030540"
 |訊息文字|發行者 '%s' 使用散發資料庫 '%s' 而不是 '%s'，但若要主控發行資料庫 '%s' 必須使用後者。 請在散發者 '%s' 上執行 `sp_changedistpublisher` 以便將發行者所使用的散發資料庫變更為 '%s'。|  
   
 ## <a name="explanation"></a>說明  
- `sp_validate_redirected_publisher` 在本機散發者上，確認新發行者所使用的散發資料庫與原始發行者所使用的散發資料庫與相同查詢 msdb.dbo.MSdistpublishers。 當這些資料庫不同時，就會傳回此錯誤，讓發行者不適合當做發行者資料庫的主機。  
+ `sp_validate_redirected_publisher` 確認新發行者所使用的散發資料庫是原始發行者所使用的散發資料庫相同的本機散發者端的查詢 msdb.dbo.MSdistpublishers。 當這些資料庫不同時，就會傳回此錯誤，讓發行者不適合當做發行者資料庫的主機。  
   
 ## <a name="user-action"></a>使用者動作  
  請執行 `sp_changedistpublisher` 預存程序，將新發行者的散發資料庫變更為原始發行者所使用的散發資料庫。  

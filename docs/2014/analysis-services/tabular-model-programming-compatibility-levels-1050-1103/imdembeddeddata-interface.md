@@ -1,5 +1,5 @@
 ---
-title: IMDEmbedded 介面 |Microsoft 文件
+title: IMDEmbedded 介面 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -12,15 +12,15 @@ ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 9dba8c68-4bef-4c2b-815c-c286f1a1939b
 caps.latest.revision: 7
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 3973640b4a4efca789ec107c1c1f086801cac234
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: cc1f1032a644277cab9645a11f8b3bedbb65c13d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36131800"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37157139"
 ---
 # <a name="imdembedded-interface"></a>IMDEmbedded 介面
   IMDEmbedded 介面是用來管理內嵌 PowerPivot 資料庫或表格式模型資料庫的公用介面。 此介面繼承自 `IPersistStream` 介面， 允許下列作業：  
@@ -44,7 +44,7 @@ ms.locfileid: "36131800"
 -   將本機或同處理序資料庫儲存至容器文件中的內嵌資料流。 繼承自 `IPersistStream`。  
   
 ## <a name="reference"></a>參考  
- 下列參考文件`IMDEmbedded`介面中，呈現**msmd.h**標頭檔。  
+ 下列參考記載`IMDEmbedded`介面中所示**msmd.h**標頭檔。  
   
 ### <a name="source-file-pxoembeddeddataidl"></a>來源檔案：PXOEmbeddedData.idl  
   
@@ -108,7 +108,7 @@ HRESULT GetStreamIdentifier (
   
  DBPROP_MSMD_EMBEDDED_DATA 的可能值如下：  
   
-|[屬性]|ReplTest1|定義|  
+|名稱|值|定義|  
 |----------|-----------|----------------|  
 |DBPROPVAL_EMBED_NONE|0x00|沒有可用的內嵌資料庫|  
 |DBPROPVAL_EMBED_EMBEDDED|0x01|目前應用程式包含內嵌資料庫|  

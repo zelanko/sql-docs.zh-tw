@@ -8,27 +8,27 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 topic_type:
 - apiref
 helpviewer_keywords:
 - Exchange Spill event class
 ms.assetid: fb876cec-f88d-4975-b3fd-0fb85dc0a7ff
 caps.latest.revision: 29
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 0a7ffd71c2d54d22156bb5af1d4bfbe14640349f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 839d6ca721129dc94c51b998ecbf2fec02ee6fcf
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36031646"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37277724"
 ---
 # <a name="exchange-spill-event-class"></a>Exchange Spill 事件類別
   **Exchange Spill** 事件類別指出平行查詢計劃中的通訊緩衝區，已暫時寫入 **tempdb** 資料庫。 這種情況並不常見，只有在查詢計畫有多重範圍掃描時才會發生。  
   
- 通常，產生這類範圍掃描的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 查詢，會有多個 BETWEEN 運算子，而每個運算子都會選取資料表中某個範圍的資料列，或選取某個索引。 或者，您可以取得多個範圍，例如使用運算式 (T.a > 10 AND T.a \< 20) 或者 (T.a > 100 AND T.a \< 120)。 此外，查詢計畫一定需要依序掃描這些範圍，這是因為 T.a 上有 ORDER BY 子句，或是計畫中有 Iterator，因此必須以排序順序取用 Tuple 所致。  
+ 通常，產生這類範圍掃描的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 查詢，會有多個 BETWEEN 運算子，而每個運算子都會選取資料表中某個範圍的資料列，或選取某個索引。 或者，您可以取得多個範圍，例如使用 「 運算式 」 (T.a > 10 AND T.a \< 20) 或者 (T.a > 100 AND T.a \< 120)。 此外，查詢計畫一定需要依序掃描這些範圍，這是因為 T.a 上有 ORDER BY 子句，或是計畫中有 Iterator，因此必須以排序順序取用 Tuple 所致。  
   
  當這類查詢的查詢計劃有多個 **Parallelism** 運算子時，由 **Parallelism** 運算子所使用的記憶體通訊緩衝區將會變滿，因而發生查詢執行進度停止的情況。 這時候，其中一個 **Parallelism** 運算子會將它的輸出緩衝區寫入 **tempdb** (此作業稱為 *Exchange Spill*)，以便從它的部分輸入緩衝區取用資料列。 最後，等到取用者有餘力取用時，轉散出去的資料列就會傳回給取用者。  
   

@@ -1,5 +1,5 @@
 ---
-title: 維度 （Cube 結構索引標籤，Cube 設計工具） (Analysis Services-多維度資料) |Microsoft 文件
+title: 維度 （Cube 結構索引標籤，Cube 設計師） (Analysis Services-多維度資料) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.cubeeditor.cubebuilder.dimensionspane.f1
 ms.assetid: 37eb7525-b423-4df5-9e62-9f4680d47b9b
 caps.latest.revision: 20
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: baa3754ed3fe72c19324ae830edf5c2e46a218a5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ed541a6abd2a6a966df88440d280aa67a1688dca
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36037127"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37149159"
 ---
 # <a name="dimensions-cube-structure-tab-cube-designer-analysis-services---multidimensional-data"></a>維度 (Cube 結構索引標籤，Cube 設計工具) (Analysis Services - 多維度資料)
   在 Cube 設計師中的 **[Cube 結構]** 索引標籤上，使用 **[維度]** 窗格來檢視和編輯 Cube 維度，包括階層和屬性。  
@@ -30,12 +30,12 @@ ms.locfileid: "36037127"
  **階層**  
  按一下即可顯示可用的 Cube 維度及其相關聯的 Cube 階層。  
   
- 展開一個 cube 維度，然後選取**編輯\<維度 >** 來顯示維度設計師，並編輯 cube 維度所依據的資料庫維度。 如需維度設計師的詳細資訊，請參閱[維度設計師 &#40;Analysis Services - 多維度資料&#41;](dimension-designer-analysis-services-multidimensional-data.md)。  
+ 展開一個 cube 維度，然後選取**編輯\<維度 >** 顯示維度設計師來編輯 cube 維度所依據的資料庫維度。 如需維度設計師的詳細資訊，請參閱[維度設計師 &#40;Analysis Services - 多維度資料&#41;](dimension-designer-analysis-services-multidimensional-data.md)。  
   
  **屬性**  
  按一下即可顯示可用的 Cube 維度及其相關聯的 Cube 屬性。  
   
- 展開一個 cube 維度，然後選取**編輯\<維度 >** 來顯示維度設計師，並編輯 cube 維度所依據的資料庫維度。 如需維度設計師的詳細資訊，請參閱[維度設計師 &#40;Analysis Services - 多維度資料&#41;](dimension-designer-analysis-services-multidimensional-data.md)。  
+ 展開一個 cube 維度，然後選取**編輯\<維度 >** 顯示維度設計師來編輯 cube 維度所依據的資料庫維度。 如需維度設計師的詳細資訊，請參閱[維度設計師 &#40;Analysis Services - 多維度資料&#41;](dimension-designer-analysis-services-multidimensional-data.md)。  
   
 ## <a name="context-menu"></a>操作功能表  
  以滑鼠右鍵按一下 [維度] 窗格，即可顯示提供下列選項的操作功能表：  
@@ -92,6 +92,6 @@ ms.locfileid: "36037127"
  [工具列&#40;Cube 結構索引標籤，Cube 設計工具&#41; &#40;Analysis Services-多維度資料&#41;](toolbar-cube-structure-cube-designer-analysis-services-multidimensional-data.md)   
  [量值&#40;Cube 結構索引標籤，Cube 設計工具&#41; &#40;Analysis Services-多維度資料&#41;](measures-cube-structure-cube-designer-analysis-services-multidimensional-data.md)   
  [資料來源檢視&#40;Cube 結構索引標籤，Cube 設計工具&#41; &#40;Analysis Services-多維度資料&#41;](data-source-view-cube-designer-analysis-services-multidimensional-data.md)   
- [Cube 結構&#40;Cube 設計師&#41; &#40;Analysis Services-多維度資料&#41;](cube-structure-cube-designer-analysis-services-multidimensional-data.md)  
+ [Cube 結構&#40;Cube 設計工具&#41; &#40;Analysis Services-多維度資料&#41;](cube-structure-cube-designer-analysis-services-multidimensional-data.md)  
   
   

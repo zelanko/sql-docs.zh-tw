@@ -5,23 +5,22 @@ ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - 7931 (Database Engine error)
 ms.assetid: 18e7a3dc-7d8a-41b9-8724-d2a8587b6903
 caps.latest.revision: 15
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 8f255855f68304f50a6704a4dce84bdc1adbe16d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: a71a420fcf87d2b2ca98269f17a64361dbe9030a
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36030769"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37428557"
 ---
 # <a name="mssqlserver7931"></a>MSSQLSERVER_7931
     

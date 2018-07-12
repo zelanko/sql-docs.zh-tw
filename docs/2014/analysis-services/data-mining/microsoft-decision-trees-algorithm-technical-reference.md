@@ -1,5 +1,5 @@
 ---
-title: Microsoft 決策樹演算法技術參考 |Microsoft 文件
+title: Microsoft 決策樹演算法技術參考 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - MAXIMUM_INPUT_ATTRIBUTES parameter
 - SPLIT_METHOD parameter
@@ -21,15 +21,15 @@ helpviewer_keywords:
 - SCORE_METHOD parameter
 ms.assetid: 1e9f7969-0aa6-465a-b3ea-57b8d1c7a1fd
 caps.latest.revision: 29
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: edb2b9790ac2294f53c26b65e9897064f4050083
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 3a73db73c49f50c49fdfd36d754f8d70ce651547
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36036287"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37183405"
 ---
 # <a name="microsoft-decision-trees-algorithm-technical-reference"></a>Microsoft 決策樹演算法技術參考
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] 決策樹演算法是一種混合式演算法，其中併入建立樹狀結構的不同方法，並支援多種分析工作，包括迴歸、分類以及關聯。 Microsoft 決策樹演算法支援製作離散和連續屬性的模型。  
@@ -153,9 +153,9 @@ ms.locfileid: "36036287"
  *SCORE_METHOD*  
  決定用來計算分岔準則的方法。 下列是可以使用的選項：  
   
-|ID|[屬性]|  
+|ID|名稱|  
 |--------|----------|  
-|@shouldalert|熵|  
+|1|熵|  
 |3|使用 K2 優先的貝氏|  
 |4|使用統一優先的貝氏狄氏等價 (Bayesian Dirichlet Equivalent，BDE)<br /><br /> (預設值)|  
   
@@ -166,9 +166,9 @@ ms.locfileid: "36036287"
  *SPLIT_METHOD*  
  決定用來分岔節點的方法。 下列是可以使用的選項：  
   
-|ID|[屬性]|  
+|ID|名稱|  
 |--------|----------|  
-|@shouldalert|**Binary:** 表示不管屬性的實際數目為何，樹狀結構都會分岔為兩個分支。|  
+|1|**Binary:** 表示不管屬性的實際數目為何，樹狀結構都會分岔為兩個分支。|  
 |2|**Complete:** 表示樹狀結構可以建立與屬性值一樣多的分岔。|  
 |3|**Both:** 指定 Analysis Services 可以決定應該使用二進位還是完整分岔來產生最佳的結果。|  
   
@@ -187,7 +187,7 @@ ms.locfileid: "36036287"
   
  您不需要指定連續數值資料的資料行代表迴歸輸入變數。 即使未在資料行上設定 REGRESSOR 旗標， [!INCLUDE[msCoName](../../includes/msconame-md.md)] 決策樹演算法也會自動使用資料行當做潛在迴歸輸入變數，並將資料集分割成具備有意義之模式的區域。  
   
- 不過，您可以使用 FORCE_REGRESSOR 參數來確保演算法會使用特定的迴歸輸入變數。 這個參數僅能搭配 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 決策樹演算法及 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 線性迴歸演算法使用。 當您設定模型旗標時，此演算法會嘗試尋找形式的迴歸方程式 * C1 + b\*C2 + 以樹狀結構的節點中符合的模式。 之後會計算剩餘數的總和，如果差異過大，就會在樹狀結構中強制進行分割。  
+ 不過，您可以使用 FORCE_REGRESSOR 參數來確保演算法會使用特定的迴歸輸入變數。 這個參數僅能搭配 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 決策樹演算法及 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 線性迴歸演算法使用。 當您設定模型旗標時，此演算法會嘗試尋找形式的迴歸方程式 * C1 + b\*C2 +...以樹狀結構的節點中符合模式。 之後會計算剩餘數的總和，如果差異過大，就會在樹狀結構中強制進行分割。  
   
  例如，如果您要使用 **Income** 做為屬性來預測客戶購買行為，且在資料行上設定 REGRESSOR 模型旗標，則演算法首先會使用標準迴歸公式來比對 **Income** 值。 如果差異過大，就會放棄迴歸公式，且根據其他的屬性分割樹狀結構。 在分割之後，決策樹演算法就會接著嘗試在每個分支中比對迴歸輸入變數與收入。  
   

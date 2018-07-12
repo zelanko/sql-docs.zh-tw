@@ -1,5 +1,5 @@
 ---
-title: WindowsServiceIdentityActual 屬性 (WMI MSReportServer_ConfigurationSetting) |Microsoft 文件
+title: WindowsServiceIdentityActual 屬性 (WMI MSReportServer_ConfigurationSetting) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 api_name:
 - WindowsServiceIdentityActual
 api_location:
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - WindowsServiceIdentityActual property
 ms.assetid: 08289240-098d-4ad1-b165-227699747ba4
 caps.latest.revision: 16
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 4a9986ef1ab5f33be99233203e8b62cc12c96c7e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: e9caf0f1fac0108298b7c0f14fae9c266a19de9a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36036507"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37166149"
 ---
 # <a name="windowsserviceidentityactual-property-wmi-msreportserverconfigurationsetting"></a>WindowsServiceIdentityActual 屬性 (WMI MSReportServer_ConfigurationSetting)
   執行報表伺服器 Windows 服務所使用的識別。 唯讀。  

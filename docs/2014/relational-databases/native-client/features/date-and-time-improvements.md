@@ -1,33 +1,31 @@
 ---
-title: 日期和時間增強功能 |Microsoft 文件
+title: 日期和時間改善 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client  - "database-engine" - "docset-sql-devref"
 ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 9b1d0d9d-1f6e-4399-8f61-e23f9a486a7a
 caps.latest.revision: 14
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: a30f330bf4d7e5976d3873bec5e6042f498c9c95
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 0a6b3b37f1265601ab63f1db370a3aa95a3420d2
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36031846"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37428847"
 ---
-# <a name="date-and-time-improvements"></a>日期和時間增強功能
+# <a name="date-and-time-improvements"></a>日期和時間改善
   本主題描述 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 對 [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] 中所加入日期和時間資料類型的支援。  
   
- 如需有關日期/時間改善功能的詳細資訊，請參閱[日期和時間增強功能&#40;OLE DB&#41; ](../../native-client-ole-db-date-time/date-and-time-improvements-ole-db.md)和[日期和時間增強功能&#40;ODBC&#41;](../../native-client-odbc-date-time/date-and-time-improvements-odbc.md)。  
+ 如需有關日期/時間改善功能的詳細資訊，請參閱 <<c0> [ 日期和時間改善&#40;OLE DB&#41; ](../../native-client-ole-db-date-time/date-and-time-improvements-ole-db.md)並[日期和時間改善&#40;ODBC&#41;](../../native-client-odbc-date-time/date-and-time-improvements-odbc.md)。</c0>  
   
- 如需示範這項功能的範例應用程式資訊，請參閱[SQL Server 資料程式設計範例](http://msftdpprodsamples.codeplex.com/)。  
+ 如需示範這項功能的範例應用程式的資訊，請參閱[SQL Server 資料程式設計範例](http://msftdpprodsamples.codeplex.com/)。  
   
 ## <a name="usage"></a>使用方式  
  下列章節描述使用新日期和時間類型的各種方式。  

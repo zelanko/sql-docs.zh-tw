@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.shrinkdatabase.f1
 helpviewer_keywords:
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - reducing database size
 ms.assetid: 83afbf74-fd50-4c39-831c-b1f473a50620
 caps.latest.revision: 42
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: f0d52d9b8c62bdba31dc07375d4c931c9dc8536f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: b77c674ed92b315452a0f7343fccdf09a49bf7b6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36035458"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37258894"
 ---
 # <a name="shrink-a-database"></a>壓縮資料庫
   此主題描述如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ， [!INCLUDE[tsql](../../includes/tsql-md.md)]中壓縮資料庫。  

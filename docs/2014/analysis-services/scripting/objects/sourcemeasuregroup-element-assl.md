@@ -1,5 +1,5 @@
 ---
-title: SourceMeasureGroup 元素 (ASSL) |Microsoft 文件
+title: SourceMeasureGroup 元素 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - SourceMeasureGroup element
 ms.assetid: aaa7cc0b-162a-4c31-ab03-a90f81eeca00
 caps.latest.revision: 35
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 9eab12a6f29d73d242c8987f7719092e9974e164
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: b6d6d1dfef880153223d4be13ccb89d4ce3b1cf1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36037327"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37156829"
 ---
 # <a name="sourcemeasuregroup-element-assl"></a>SourceMeasureGroup 元素 (ASSL)
   識別當做採礦結構資料行之資料來源的量值群組。  
@@ -62,11 +62,11 @@ ms.locfileid: "36037327"
 |子元素|無|  
   
 ## <a name="remarks"></a>備註  
- 如需有關`Binding`型別，包括之 Analysis Services 指令碼語言 (ASSL) 物件的資料表`Binding`型別和繼承階層架構的`Binding`類型，請參閱[繫結資料型別&#40;ASSL&#41;](../data-type/binding-data-type-assl.md).  
+ 如需詳細資訊`Binding`型別，包括之 Analysis Services 指令碼語言 (ASSL) 物件的資料表`Binding`型別和繼承階層`Binding`類型，請參閱[繫結資料類型 &#40;ASSL&#41;](../data-type/binding-data-type-assl.md).  
   
- 如需 ASSL 中資料繫結的概觀，請參閱[資料來源和繫結&#40;SSAS 多維度&#41;](../../multidimensional-models/data-sources-and-bindings-ssas-multidimensional.md)。  
+ 如需 ASSL 中資料繫結的概觀，請參閱 <<c0> [ 資料來源和繫結&#40;SSAS 多維度&#41;](../../multidimensional-models/data-sources-and-bindings-ssas-multidimensional.md)。</c0>  
   
- 對應至父系的項目`SourceMeasureGroup`在 「 分析管理物件 (AMO) 物件模型是<xref:Microsoft.AnalysisServices.MiningStructureColumn>和<xref:Microsoft.AnalysisServices.TableMiningStructureColumn>。  
+ 對應至父系的元素`SourceMeasureGroup`在 「 分析管理物件 (AMO) 物件模型所<xref:Microsoft.AnalysisServices.MiningStructureColumn>和<xref:Microsoft.AnalysisServices.TableMiningStructureColumn>。  
   
 ## <a name="see-also"></a>另請參閱  
  [物件&#40;ASSL&#41;](objects-assl.md)  

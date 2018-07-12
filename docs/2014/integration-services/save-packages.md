@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Integration Services packages, saving
 - packages [Integration Services], saving
@@ -19,13 +19,13 @@ ms.assetid: 17c1de2c-637f-45c2-a148-79294bae0af4
 caps.latest.revision: 47
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: f938400661c97c842149f958f9660fef20085a8b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 567efb17fb672be6a82fd0f47b52d8919ea81095
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36031959"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37259404"
 ---
 # <a name="save-packages"></a>儲存封裝
   在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 中，您可以使用 [!INCLUDE[ssIS](../includes/ssis-md.md)] 設計師來建立封裝，並將封裝儲存為檔案系統中的 XML 檔案 (.dtsx 檔案)。 您也可以將封裝 XML 檔案的複本儲存至 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 中的 msdb 資料庫，或儲存至封裝存放區。 封裝存放區代表 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 服務所管理之檔案系統位置中的資料夾。  
@@ -36,8 +36,8 @@ ms.locfileid: "36031959"
   
 ### <a name="to-save-a-package"></a>若要儲存封裝  
   
--   [將封裝儲存至檔案系統](../../2014/integration-services/save-a-package-to-the-file-system.md)  
+-   [將套件儲存至檔案系統](../../2014/integration-services/save-a-package-to-the-file-system.md)  
   
--   [儲存封裝的副本](../../2014/integration-services/save-a-copy-of-a-package.md)  
+-   [儲存套件的複本](../../2014/integration-services/save-a-copy-of-a-package.md)  
   
   

@@ -5,24 +5,23 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 3bbeb979-e6fc-4184-ad6e-cca62108de74
 caps.latest.revision: 30
-author: rothja
-ms.author: jroth
-manager: jhubbard
-ms.openlocfilehash: 6cd514ae1b9581a52e7dfdb382bc8fded757fb47
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: d975ed562e5343ceeb921358160309c20ff0bb4d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36035366"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37260074"
 ---
 # <a name="configure-healthchecktimeout-property-settings"></a>設定 HealthCheckTimeout 屬性設定
-  HealthCheckTimeout 設定用來指定時間長度，以毫秒為單位，SQL Server 資源 DLL 應該等候所傳回的資訊[sp_server_diagnostics](/sql/relational-databases/system-stored-procedures/sp-server-diagnostics-transact-sql)報告之前，預存程序AlwaysOn 容錯移轉叢集執行個體 (FCI) 為沒有回應。 針對逾時設定值所做的變更會立即生效，且不需要重新啟動 SQL Server 資源。  
+  HealthCheckTimeout 設定用來指定的時間長度，以毫秒為單位，SQL Server 資源 DLL 應該等候傳回的資訊[sp_server_diagnostics](/sql/relational-databases/system-stored-procedures/sp-server-diagnostics-transact-sql)報告之前，預存程序AlwaysOn 容錯移轉叢集執行個體 (FCI) 為沒有回應。 針對逾時設定值所做的變更會立即生效，且不需要重新啟動 SQL Server 資源。  
   
 -   **開始之前：**[限制事項](#Limits)、[安全性](#Security)  
   
@@ -46,7 +45,7 @@ ms.locfileid: "36035366"
   
 2.  匯入 `FailoverClusters` 模組來啟用叢集指令程式。  
   
-3.  使用`Get-ClusterResource`cmdlet 來尋找[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]資源，然後使用`Set-ClusterParameter`cmdlet 設定**HealthCheckTimeout**容錯移轉叢集執行個體的屬性。  
+3.  使用  `Get-ClusterResource` cmdlet 尋找[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]資源，然後使用`Set-ClusterParameter`cmdlet 來設定**HealthCheckTimeout**容錯移轉叢集執行個體的屬性。  
   
 > [!TIP]  
 >  每次開啟新的 PowerShell 視窗時，您需要匯入`FailoverClusters`模組。  

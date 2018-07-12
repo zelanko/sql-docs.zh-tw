@@ -5,21 +5,20 @@ ms.date: 03/07/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 8ad23889-e243-4bd7-bc3e-150403399d89
 caps.latest.revision: 11
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: bfa58870346f179e705c8167dc9921b7fd0be07b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 9104dc7cb2a569061760acacdbbc385e10b1f817
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36031235"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37412519"
 ---
 # <a name="mssqlserver30053"></a>MSSQLSERVER_30053
     
@@ -63,7 +62,7 @@ ms.locfileid: "36031235"
 ## <a name="see-also"></a>另請參閱  
  [設定全文檢索篩選背景程式啟動器的服務帳戶](../search/set-the-service-account-for-the-full-text-filter-daemon-launcher.md)   
  [全文檢索搜尋](../search/full-text-search.md)   
- [sp_help_fulltext_system_components &#40;Transact SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-help-fulltext-system-components-transact-sql)   
+ [sp_help_fulltext_system_components &#40;-SQL&AMP;#41;&#41;](/sql/relational-databases/system-stored-procedures/sp-help-fulltext-system-components-transact-sql)   
  [設定及管理搜尋的斷詞工具與字幹分析器](../search/configure-and-manage-word-breakers-and-stemmers-for-search.md)   
  [設定及管理搜尋的篩選](../search/configure-and-manage-filters-for-search.md)  
   

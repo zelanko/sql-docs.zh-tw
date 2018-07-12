@@ -1,34 +1,32 @@
 ---
-title: 將資料傳送到 FILESTREAM 資料行使用 IRowsetFastUpload (OLE DB) |Microsoft 文件
+title: 將資料傳送到 FILESTREAM 資料行使用 IRowsetFastUpload (OLE DB) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: fdb47319-83bc-4ff2-b46d-8d8ccfeb5bab
 caps.latest.revision: 5
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 3500c914df66f661049ba1c4a8453686b5a139ad
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: e4ce42fac1366dccc4f46285d783666c4b469036
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36034983"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37408929"
 ---
 # <a name="send-data-to-a-filestream-column-using-irowsetfastupload-ole-db"></a>使用 IRowsetFastUpload 將資料傳送到 FILESTREAM 資料行 (OLE DB)
   此範例會使用 IRowsetFastUpload 介面，將 4MB 到 4GB 之間的資料傳送到 Filestream 資料行。  
   
- 如需有關 filestream 功能的詳細資訊，請參閱[FILESTREAM 支援&#40;OLE DB&#41;](../../native-client/ole-db/filestream-support-ole-db.md)。  
+ 如需有關 filestream 功能的詳細資訊，請參閱 < [FILESTREAM 支援&#40;OLE DB&#41;](../../native-client/ole-db/filestream-support-ole-db.md)。  
   
 ## <a name="example"></a>範例  
- 在編譯和執行此範例之前，啟用 FILESTREAM 支援 ([Enable and Configure FILESTREAM](../../blob/enable-and-configure-filestream.md))。  
+ 在編譯和執行此範例之前，啟用 FILESTREAM 支援 ([啟用及設定 FILESTREAM](../../blob/enable-and-configure-filestream.md))。  
   
  請確認您的 INCLUDE 環境變數包含的目錄內含 sqlncli.h。  
   

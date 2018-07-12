@@ -5,23 +5,22 @@ ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - 2574 (Database Engine error)
 ms.assetid: efba507a-b5ad-4f1d-b0c8-f73b663a0562
 caps.latest.revision: 17
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 6a77a0b3efc9c643a05faa5283a5054f42f7bdef
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 6ed39906b9e47f3d8e908258cd8f4de2ef6075ae
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36031232"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37426807"
 ---
 # <a name="mssqlserver2574"></a>MSSQLSERVER_2574
     

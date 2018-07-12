@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vs.externaltools
 helpviewer_keywords:
 - External Tools dialog box
 ms.assetid: d7dae88f-0781-4162-96cd-d3a3a4d82035
 caps.latest.revision: 25
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: ecaf04f54600f26489aa1b34ee1cbf69645752d0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 42e289a8ec12b64841f190297be60cfee31e007f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36131429"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37157489"
 ---
 # <a name="external-tools"></a>外部工具
   使用此對話方塊可將外部工具 (例如 SQL Server 組態管理員或記事本) 新增到 [工具] 功能表。 加入外部工具可以讓您在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中工作時，輕易地啟動其他應用程式。 啟動工具時，您可以指定引數和工作目錄。 除此之外，某些工具的輸出也可以顯示在 [輸出] 視窗中。 [外部工具] 對話方塊列在 [工具] 功能表中。  
@@ -76,9 +76,9 @@ ms.locfileid: "36131429"
   
 2.  在 [標題] 方塊中，輸入 SQL Server 組態管理員。  
   
-3.  在**命令**方塊中，輸入的路徑[!INCLUDE[msCoName](../../includes/msconame-md.md)]Management Console 可執行檔，例如 `C:\WINNT\system32\mmc.exe`  
+3.  在 **命令**方塊中，輸入的路徑[!INCLUDE[msCoName](../../includes/msconame-md.md)]Management Console 可執行檔，例如 `C:\WINNT\system32\mmc.exe`  
   
-4.  在**引數**方塊中，鍵入.msc 檔案路徑，例如 `"C:\WINNT\system32\SQLServerManager.msc"`  
+4.  在 **引數**方塊中，輸入.msc 檔案的路徑，例如 `"C:\WINNT\system32\SQLServerManager.msc"`  
   
 > [!NOTE]  
 >  檢視 [開始][!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]**功能表上之**  捷徑的屬性，以確認這些檔案在您電腦上的位置。  

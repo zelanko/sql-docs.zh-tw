@@ -5,23 +5,22 @@ ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - 17887 (Database Engine error)
 ms.assetid: ad0806e6-3296-4c32-b103-fccf0f8a8d3d
 caps.latest.revision: 17
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 6278d6c4e46f644bfdf0f062f7a94f2bf878f316
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 30fe23973966927471bc21cb484b81ae9636e842
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36032335"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37425987"
 ---
 # <a name="mssqlserver17887"></a>MSSQLSERVER_17887
     

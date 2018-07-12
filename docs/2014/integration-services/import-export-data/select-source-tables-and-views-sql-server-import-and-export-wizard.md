@@ -8,28 +8,28 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.impexpwizard.selectsourcetablesandviews.f1
 ms.assetid: f60e1a19-2ea6-403c-89ab-3e60ac533ea0
 caps.latest.revision: 47
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: f785bac221acd45892a2a75a28682b2173e29e37
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 863ec1ff07440dcab80cd46b5179e3f042d9dadd
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36037262"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37149899"
 ---
 # <a name="select-source-tables-and-views-sql-server-import-and-export-wizard"></a>選取來源資料表和檢視 (SQL Server 匯入和匯出精靈)
-  使用**選取來源資料表和檢視**頁面以指定的資料表和檢視資料來源複製到目的地。  
+  使用**選取來源資料表和檢視**頁面以指定的資料表和檢視，以從資料來源複製到目的地。  
   
 > [!NOTE]  
->  當您選取 [資料表複製] 選項時，並不必複製資料表中的所有資料行。 選取目的地資料表之後, 按一下 [編輯對應可以顯示**資料行對應**] 對話方塊。 選取**\<忽略 >** 中**目的地**資料行**資料行對應**要略過的資料行 對話方塊。  
+>  當您選取 [資料表複製] 選項時，並不必複製資料表中的所有資料行。 選取目的地資料表之後, 按一下 編輯對應，顯示**資料行對應** 對話方塊。 選取  **\<忽略 >** 中**目的地**資料行**資料行對應**對話方塊中，針對您想要跳過的資料行。  
   
- 若要深入了解這個精靈，請參閱[SQL Server 匯入和匯出精靈](import-and-export-data-with-the-sql-server-import-and-export-wizard.md)。 若要了解啟動精靈，選項和權限，才能成功執行精靈，請參閱[執行 SQL Server 匯入和匯出精靈](start-the-sql-server-import-and-export-wizard.md)。  
+ 若要深入了解此精靈，請參閱[SQL Server 匯入和匯出精靈](import-and-export-data-with-the-sql-server-import-and-export-wizard.md)。 若要深入了解啟動精靈，選項和相關的權限，才能成功執行精靈，請參閱[執行 SQL Server 匯入和匯出精靈](start-the-sql-server-import-and-export-wizard.md)。  
   
  「SQL Server 匯入和匯出精靈」的用途在於將資料從來源複製到目的地。 這個精靈也可以為您建立目的地資料庫和目的地資料表。 不過，如果您必須複製多個資料庫或資料表，或複製其他種類的資料庫物件，則應該改用「複製資料庫精靈」。 如需詳細資訊，請參閱 [Use the Copy Database Wizard](../../relational-databases/databases/use-the-copy-database-wizard.md)。  
   
@@ -43,11 +43,11 @@ ms.locfileid: "36037262"
  從每個來源資料表的清單中選取目的地資料表。  
   
 > [!NOTE]  
->  如果您在此精靈以建立目的地資料表的點暫停[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]使用[!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]或其他工具，新的資料表不在可用的目的地資料表清單中立即看到。 若要重新整理目的地資料表的清單，步驟回兩頁到**選擇目的地**頁面上，重新選取目的地資料庫，然後逐步往前一次為**選取來源資料表和檢視**。  
+>  如果您暫停在此精靈來建立目的地資料表的這一點[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]使用[!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]或另一個工具，新的資料表沒有立即顯示在清單中可用的目的地資料表。 若要重新整理目的地資料表清單，請退後兩頁要**選擇目的地**頁面上，重新選取目的地資料庫，然後再次前進到**選取來源資料表和檢視**。  
   
 ### <a name="other-options"></a>其他選項  
  **編輯對應**  
- 使用**資料行對應**對話方塊來指定要接收來源資料的目的地資料行。 您可以藉由選取複製的資料行子集\<忽略 > 中**目的地**資料行**資料行對應**要略過的資料行 對話方塊。  
+ 使用**資料行對應**對話方塊來指定要接收來源資料的目的地資料行。 您可以透過選取複製的資料行子集\<忽略 > 中**目的地**資料行**資料行對應**對話方塊中，針對您想要跳過的資料行。  
   
  **預覽**  
  預覽中的來源資料**預覽資料**對話方塊中，確認之前執行匯入或匯出。 **預覽資料**對話方塊會顯示最多 200 個資料列。  

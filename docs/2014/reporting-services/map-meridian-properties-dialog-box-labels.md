@@ -1,5 +1,5 @@
 ---
-title: 地圖經線屬性對話方塊、 標籤 |Microsoft 文件
+title: 地圖經線屬性對話方塊、 標籤 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.rtp.rptdesigner.mapmeridianproperties.labels.f1
 - "10518"
 ms.assetid: 47650a82-3b0c-4e32-8565-e9332bdcf4d6
 caps.latest.revision: 6
-author: douglaslM
+author: maggiesmsft
 ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: aba651eed623304f977a548a18537c6fdd5c14cc
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 05fe2f7cecbcc2f43e5013d5785f76e09feecf8c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36036319"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37163879"
 ---
 # <a name="map-meridian-properties-dialog-box-labels"></a>地圖經線屬性對話方塊、標籤
   使用**MapMeridian 屬性**對話方塊來變更地圖檢視區中垂直格線的標籤選項。 根據指定之檢視區的座標系統，經線表示下列值：  

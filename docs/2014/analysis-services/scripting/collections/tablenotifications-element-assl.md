@@ -1,5 +1,5 @@
 ---
-title: TableNotifications 元素 (ASSL) |Microsoft 文件
+title: TableNotifications 元素 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -20,18 +20,18 @@ helpviewer_keywords:
 - TableNotifications element
 ms.assetid: 4cecdfea-0d4d-4bd6-bbb3-4d0d2284c665
 caps.latest.revision: 13
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 87a1328bf4e7e302b16fa4d0a45fc105ce820d54
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 8c146f223d0819c8570b051d77d5764ae384d1b1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36036201"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37163393"
 ---
 # <a name="tablenotifications-element-assl"></a>TableNotifications 元素 (ASSL)
-  包含集合[TableNotification](../objects/tablenotification-element-assl.md)提供之資訊的項目[ProactiveCaching](../objects/proactivecaching-element-assl.md)資料表或檢視資料來源中的修改過的項目。  
+  包含的集合[TableNotification](../objects/tablenotification-element-assl.md)提供資訊的項目[ProactiveCaching](../objects/proactivecaching-element-assl.md)之資料表或檢視資料來源中的修改過的項目。  
   
 ## <a name="syntax"></a>語法  
   
@@ -60,7 +60,7 @@ ms.locfileid: "36036201"
 |子元素|[TableNotification](../objects/tablenotification-element-assl.md)|  
   
 ## <a name="remarks"></a>備註  
- 分析管理物件 (AMO) 物件模型中的對應元素是<xref:Microsoft.AnalysisServices.TableNotificationCollection>。  
+ 在 「 分析管理物件 (AMO) 物件模型的對應元素是<xref:Microsoft.AnalysisServices.TableNotificationCollection>。  
   
 ## <a name="see-also"></a>另請參閱  
  [ProactiveCachingBinding 資料類型&#40;ASSL&#41;](../data-type/proactivecachingbinding-data-type-assl.md)   

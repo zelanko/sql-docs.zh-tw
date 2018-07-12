@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: ab5bea3a-109e-4c25-92d9-494df7c52dd8
 caps.latest.revision: 9
 author: maggiesMSFT
 ms.author: maggies
-manager: mblythe
-ms.openlocfilehash: bfd4886ccb4b6357f0fe854c52ebebf17060a6c5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 828bde484f401d2e46cebd6f00acc09c3425effb
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36037160"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37150759"
 ---
 # <a name="subreports-report-builder-and-ssrs"></a>子報表 (報表產生器及 SSRS)
   子報表是一個報表項目，會在主要報表的主體內顯示另一個報表。 報表中子報表的概念類似於網頁中的框架。 它用於在報表中內嵌報表。 任何報表都可以做為子報表。 顯示為子報表的報表儲存在報表伺服器上，通常會與父報表儲存在同一個資料夾中。 您可以設計父報表來傳遞參數給子報表。 子報表可以在資料區域中重複，使用參數在每一個子報表執行個體中篩選資料。  
@@ -59,6 +59,6 @@ ms.locfileid: "36037160"
  在報表產生器中，若要預覽主報表中的子報表，則兩個報表都必須位在相同的報表伺服器上，或者您必須指定子報表的完整路徑。  
   
 ## <a name="see-also"></a>另請參閱  
- [鑽研、 向下鑽研、 子報表和巢狀的資料區&#40;報表產生器和 SSRS&#41;](drillthrough-drilldown-subreports-and-nested-data-regions.md)  
+ [鑽研、 向下鑽研、 子報表和巢狀的資料區域&#40;報表產生器及 SSRS&#41;](drillthrough-drilldown-subreports-and-nested-data-regions.md)  
   
   

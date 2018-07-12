@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 49c3c1da-b106-41f6-9173-16ff225bade8
 caps.latest.revision: 6
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 1f94d8b56a17c5a9fbf9ea61468a75ed9419b94a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: a91ef7af12ec523c9c97ffb09690134069a4d6d2
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36035162"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37240358"
 ---
 # <a name="using-my-reports-report-builder-and-ssrs"></a>使用我的報表 (報表產生器及 SSRS)
   在設定為原生模式的報表伺服器上，[我的報表] 資料夾是個人的工作空間，可以用來儲存和使用您所擁有的報表。 其他報表伺服器資料夾都是公開的，通常使用者必須具備進階權限才可以加入或修改資料夾內容。 相對地，[我的報表] 資料夾是使用者自行管理的工作空間。 您可以加入或移除報表和資料夾，以及使用個人化的設定來儲存連結報表。  
@@ -28,7 +28,7 @@ ms.locfileid: "36035162"
   
  [我的報表] 功能是選擇性的，可以由報表伺服器管理員停用。 如果有啟用「我的報表」，您就會在 [主資料夾] 資料夾中看到 [我的報表] 資料夾，您可以使用報表管理員或 Web 瀏覽器來存取其內容。 如需詳細資訊，請參閱[在報表管理員中尋找及檢視報表 &#40;報表產生器及 SSRS&#41;](finding-and-viewing-reports-in-the-web-portal-report-builder-and-ssrs.md)。  
   
- 在設定為 SharePoint 整合模式的報表伺服器上，[我的報表] 資料夾沒有任何對等項目。 如需詳細資訊，請參閱[，Viewing，and Managing Reports&#40;報表產生器及 SSRS &#41; ](finding-viewing-and-managing-reports-report-builder-and-ssrs.md)。  
+ 在設定為 SharePoint 整合模式的報表伺服器上，[我的報表] 資料夾沒有任何對等項目。 如需詳細資訊，請參閱 < [Fa98e01c78a9">finding，Viewing，and Managing Reports&#40;報表產生器及 SSRS &#41; ](finding-viewing-and-managing-reports-report-builder-and-ssrs.md)。  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  

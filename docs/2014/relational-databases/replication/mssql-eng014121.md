@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - MSSQL_ENG014121 error
 ms.assetid: c8595854-cce1-4566-ad64-d565555caded
 caps.latest.revision: 12
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: b58906523ab947d86f325620b5221b8d737fa5d8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: bfbdb88b67f2f0764b39a9968cc71e72a1d3ac3d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36037648"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37155969"
 ---
 # <a name="mssqleng014121"></a>MSSQL_ENG014121
     

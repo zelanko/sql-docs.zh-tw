@@ -28,13 +28,13 @@ ms.assetid: e0898aa1-e90c-4c4e-99d4-708a76efddfd
 caps.latest.revision: 52
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: a657c8d88f93355e50e69dbcffa1edda33fcfddf
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 8424a0c38144dd26fadf0c0437064d541a3b5b3c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36131542"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37155099"
 ---
 # <a name="raising-and-defining-events-in-a-custom-task"></a>引發並在自訂工作中定義事件
   [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 執行階段引擎提供事件的集合，可以顯示驗證與執行工作時的工作進度狀態。 <xref:Microsoft.SqlServer.Dts.Runtime.IDTSComponentEvents> 介面會定義這些事件，而且是以 <xref:Microsoft.SqlServer.Dts.Runtime.Executable.Validate%2A> 和 <xref:Microsoft.SqlServer.Dts.Runtime.Executable.Execute%2A> 方法的參數提供給工作。  
@@ -48,7 +48,7 @@ ms.locfileid: "36131542"
   
  下列程式碼範例會示範自訂工作的 `InitializeTask` 方法，其中建立了兩個自訂事件並設定其屬性。 然後會將新事件加入 <xref:Microsoft.SqlServer.Dts.Runtime.EventInfos> 集合。  
   
- 第一個自訂事件的 *eventName* 為 "**OnBeforeIncrement**"，而 *description* 為「**更新初始值之後觸發**」。 下一個參數 `true` 值表示此事件應允許建立事件處理常式容器以處理事件。 事件處理常式是提供封裝中結構與工作服務的容器，就像封裝、時序、ForLoop 和 ForEachLoop 等其他容器一樣。 當*allowEventHandlers*參數是`true`，<xref:Microsoft.SqlServer.Dts.Runtime.DtsEventHandler>會建立物件事件。 為事件定義的任何參數現在可供 <xref:Microsoft.SqlServer.Dts.Runtime.DtsEventHandler> 的變數集合中之 <xref:Microsoft.SqlServer.Dts.Runtime.DtsEventHandler> 使用。  
+ 第一個自訂事件的 *eventName* 為 "**OnBeforeIncrement**"，而 *description* 為「**更新初始值之後觸發**」。 下一個參數 `true` 值表示此事件應允許建立事件處理常式容器以處理事件。 事件處理常式是提供封裝中結構與工作服務的容器，就像封裝、時序、ForLoop 和 ForEachLoop 等其他容器一樣。 當*allowEventHandlers*參數是`true`，<xref:Microsoft.SqlServer.Dts.Runtime.DtsEventHandler>建立物件事件。 為事件定義的任何參數現在可供 <xref:Microsoft.SqlServer.Dts.Runtime.DtsEventHandler> 的變數集合中之 <xref:Microsoft.SqlServer.Dts.Runtime.DtsEventHandler> 使用。  
   
 ```csharp  
 public override void InitializeTask(Connections connections,  
@@ -194,7 +194,7 @@ Nothing,  bFireOnBeforeIncrement)
     End Class  
 ```  
   
-![Integration Services 圖示 （小）](../../media/dts-16.gif "Integration Services 圖示 （小）")**保持最多 with Integration Services 的日期** <br /> 若要取得 Microsoft 的最新下載、文件、範例和影片以及社群中的精選解決方案，請瀏覽 MSDN 上的 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 頁面：<br /><br /> [瀏覽 MSDN 上的 Integration Services 頁面](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 若要得到這些更新的自動通知，請訂閱該頁面上所提供的 RSS 摘要。  
+![Integration Services 圖示 （小）](../../media/dts-16.gif "Integration Services 圖示 （小）")**保持最多包含 Integration Services 的日期** <br /> 若要取得 Microsoft 的最新下載、文件、範例和影片以及社群中的精選解決方案，請瀏覽 MSDN 上的 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 頁面：<br /><br /> [瀏覽 MSDN 上的 Integration Services 頁面](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 若要得到這些更新的自動通知，請訂閱該頁面上所提供的 RSS 摘要。  
   
 ## <a name="see-also"></a>另請參閱  
  [Integration Services &#40;SSIS&#41; 事件處理常式](../../integration-services-ssis-event-handlers.md)   

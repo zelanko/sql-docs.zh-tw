@@ -1,28 +1,26 @@
 ---
-title: OLE DB 的使用說明主題 |Microsoft 文件
+title: OLE DB 的使用說明主題 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - OLE DB, how-to topics
 ms.assetid: fbfab1b0-433d-497e-ae07-9b21a5c6903c
 caps.latest.revision: 17
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: e783c7774d2f38ef3751a6bf164951136e8f5dd9
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 2fe08c6f0a0d95a3f4ed1568614d090b5ed3e05d
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36032346"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37411737"
 ---
 # <a name="ole-db-how-to-topics"></a>OLE DB 的使用說明主題
   若要使用[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client OLE DB 提供者，您必須了解如何連接到伺服器、 執行命令，以及處理結果。  
@@ -35,7 +33,7 @@ ms.locfileid: "36032346"
   
 -   [列舉 OLE DB 資料來源&#40;OLE DB&#41;](enumerate-ole-db-data-sources-ole-db.md)  
   
--   [大量複製資料使用 IRowsetFastLoad &#40;OLE DB&#41;](../native-client-ole-db-interfaces/irowsetfastload-ole-db.md)  
+-   [大量複製資料，使用 IRowsetFastLoad &#40;OLE DB&#41;](../native-client-ole-db-interfaces/irowsetfastload-ole-db.md)  
   
 -   [取得 FAST_FORWARD 資料指標](obtain-a-fast-forward-cursor.md)  
   
@@ -59,7 +57,7 @@ ms.locfileid: "36032346"
   
 -   [整合式 Kerberos 驗證&#40;OLE DB&#41;](integrated-kerberos-authentication-ole-db.md)  
   
--   [您可以使用資料表值參數&#40;OLE DB&#41;](../native-client-ole-db-table-valued-parameters/table-valued-parameters-ole-db.md)  
+-   [使用資料表值參數&#40;OLE DB&#41;](../native-client-ole-db-table-valued-parameters/table-valued-parameters-ole-db.md)  
   
 ## <a name="see-also"></a>另請參閱  
  [SQL Server Native Client 程式設計](../native-client/sql-server-native-client-programming.md)  

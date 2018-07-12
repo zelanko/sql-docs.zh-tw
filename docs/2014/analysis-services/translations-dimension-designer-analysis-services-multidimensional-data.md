@@ -1,5 +1,5 @@
 ---
-title: 翻譯 （維度設計師） (Analysis Services-多維度資料) |Microsoft 文件
+title: 翻譯 （維度設計師） (Analysis Services-多維度資料) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.dimensiondesigner.translations.translationspane.f1
 ms.assetid: 7104cc5f-f3c9-468c-8567-d78c7d84e60b
 caps.latest.revision: 20
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 861ce121cb89f9366ba7f074db476c0d037eaa5a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 3a11a6498320db3a3b9b4733771e2b07b503f000
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36036466"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37161089"
 ---
 # <a name="translations-dimension-designer-analysis-services---multidimensional-data"></a>翻譯 (維度設計師) (Analysis Services - 多維度資料)
   使用維度設計師中的 **[翻譯]** 索引標籤，即可定義和管理維度的翻譯，以及維度的階層和屬性。  
@@ -39,7 +39,7 @@ ms.locfileid: "36036466"
  [維度設計師&#40;Analysis Services-多維度資料&#41;](dimension-designer-analysis-services-multidimensional-data.md)   
  [維度&#40;Analysis Services-多維度資料&#41;](multidimensional-models-olap-logical-dimension-objects/dimensions-analysis-services-multidimensional-data.md)   
  [多維度模型中的維度](multidimensional-models/dimensions-in-multidimensional-models.md)   
- [維度結構&#40;維度設計師&#41; &#40;Analysis Services-多維度資料&#41;](dimension-structure-dimension-designer-analysis-services-multidimensional-data.md)   
- [瀏覽器&#40;維度設計師&#41; &#40;Analysis Services-多維度資料&#41;](browser-dimension-designer-analysis-services-multidimensional-data.md)  
+ [維度結構&#40;維度設計工具&#41; &#40;Analysis Services-多維度資料&#41;](dimension-structure-dimension-designer-analysis-services-multidimensional-data.md)   
+ [瀏覽器&#40;維度設計工具&#41; &#40;Analysis Services-多維度資料&#41;](browser-dimension-designer-analysis-services-multidimensional-data.md)  
   
   
