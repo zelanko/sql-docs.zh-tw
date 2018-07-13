@@ -5,10 +5,9 @@ ms.date: 03/07/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-backup-restore
+ms.technology: backup-restore
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - system databases [SQL Server], backing up and restoring
 - restoring system databases [SQL Server]
@@ -17,15 +16,15 @@ helpviewer_keywords:
 - servers [SQL Server], backup
 ms.assetid: aef0c4fa-ba67-413d-9359-1a67682fdaab
 caps.latest.revision: 57
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 39266ab9ca20c174ee61a1ed2e52c33fb0d4b5ac
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 81645730d3a854eff8b318ef04ee234f6206b4d0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36022892"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37197548"
 ---
 # <a name="back-up-and-restore-of-system-databases-sql-server"></a>系統資料庫的備份與還原 (SQL Server)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會維護一組系統層級資料庫，即「系統資料庫」，這對伺服器執行個體的運作而言是不可或缺的。 在每次重大更新之後，有幾個系統資料庫必須加以備份。 您一定要備份的系統資料庫包括 **msdb**、 **master**和 **model**。 如果有任何資料庫在伺服器執行個體上使用複寫，您還必須備份 **distribution** 系統資料庫。 這些系統資料庫的備份可讓您在發生系統失敗 (如硬碟故障) 時還原和復原 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 系統。  
@@ -41,7 +40,7 @@ ms.locfileid: "36022892"
 |[tempdb](../databases/tempdb-database.md)|用以保存暫存或中繼結果集的工作空間。 每當 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體啟動時，就會重新建立此資料庫。 當伺服器執行個體關閉時， **tempdb** 中的任何資料都會被永久刪除。|否|Simple|您不能備份 **tempdb** 系統資料庫。|  
 |[設定散發](../replication/configure-distribution.md)|唯有將伺服器設定為複寫散發者時才會存在的資料庫。 這個資料庫會儲存各種複寫的中繼資料和記錄資料，以及異動複寫的交易。|是|Simple|如需有關何時備份 **distribution** 資料庫的詳細資訊，請參閱[備份及還原複寫的資料庫](../replication/administration/back-up-and-restore-replicated-databases.md)。|  
   
- <sup>1</sup>若要深入了解模型的目前復原模式，請參閱[檢視或變更資料庫的復原模式&#40;SQL Server&#41; ](view-or-change-the-recovery-model-of-a-database-sql-server.md)或[sys.databases &#40;TRANSACT-SQL&#41; ](/sql/relational-databases/system-catalog-views/sys-databases-transact-sql).  
+ <sup>1</sup>若要了解模型的目前復原模式，請參閱[檢視或變更資料庫的復原模式&#40;SQL Server&#41; ](view-or-change-the-recovery-model-of-a-database-sql-server.md)或是[sys.databases &#40;-&#41; ](/sql/relational-databases/system-catalog-views/sys-databases-transact-sql).  
   
 ## <a name="limitations-on-restoring-system-databases"></a>還原系統資料庫的限制  
   

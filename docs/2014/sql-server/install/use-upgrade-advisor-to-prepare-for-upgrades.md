@@ -1,5 +1,5 @@
 ---
-title: 使用 Upgrade Advisor 來準備升級 |Microsoft 文件
+title: 使用 Upgrade Advisor 來準備升級 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Upgrade Advisor [SQL Server]
 - upgrading SQL Server, Upgrade Advisor
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - analyzing installations for upgrading [SQL Server]
 ms.assetid: d85b0833-ddeb-42e3-9397-97ea60d521b7
 caps.latest.revision: 51
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 2e2e852fe295ac2e72c4a06f653033f734ac6150
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 4e669b214e73d462f141022aa84d41224e88ac0c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36021749"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37234418"
 ---
 # <a name="use-upgrade-advisor-to-prepare-for-upgrades"></a>使用 Upgrade Advisor 來準備升級
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Upgrade Advisor 可以協助您完成升級到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 的相關準備工作。 Upgrade Advisor 會分析已安裝的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 舊版元件，然後產生報告，以指出在您升級之前或之後要修正的問題。  
@@ -70,15 +70,15 @@ ms.locfileid: "36021749"
   
 -   Windows Installer 從版本 4.5 開始。 您可以安裝 Windows Installer 從[Windows Installer 網站](http://go.microsoft.com/fwlink/?LinkId=49112)。  
   
--   Microsoft .NET Framework 4。 .NET framework 4 是用於[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]產品媒體以及從[.NET Framework 4 下載頁面](http://go.microsoft.com/fwlink/?LinkId=209895)。  
+-   Microsoft .NET Framework 4。 .NET framework 4 是位於[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]產品媒體，以及從[.NET Framework 4 下載頁面](http://go.microsoft.com/fwlink/?LinkId=209895)。  
   
     -   若要從 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 媒體安裝 .NET Framework 4，請找出光碟機的根目錄。 然後，在 \redist 資料夾上按兩下滑鼠按鈕後於 DotNetFrameworks 資料夾上再按兩下滑鼠按鈕，然後執行 dotNetFx40_Full_x86_x64.exe (32 位元作業系統或 64 位元作業系統)。  
   
  若要從網路安裝 Upgrade Advisor，請在下載網頁上按一下 [下載] 按鈕。 接著您可立即執行安裝，或是儲存 SQLUA.msi 檔，並於稍後再執行。 如果要從產品光碟安裝，請直接從產品光碟執行 SQLUA.msi。  
   
- 安裝 Upgrade Advisor 之後，您可以開啟它從**啟動**功能表：  
+ 安裝 Upgrade Advisor 之後，您可以開啟從**啟動**功能表：  
   
--   按一下**啟動**，指向 **所有程式**，指向  [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]，然後按一下   **[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Upgrade Advisor**。  
+-   按一下 **開始**，指向**所有程式**，指向[!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]，然後按一下 **[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Upgrade Advisor**。  
   
  如需詳細資訊，請參閱 Upgrade Advisor 下載以及 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 版本資訊中的 Upgrade Advisor 文件。  
   

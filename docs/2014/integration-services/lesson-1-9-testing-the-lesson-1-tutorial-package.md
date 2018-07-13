@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 9aee7acf-797b-46f2-830d-80ab64a9f0b6
 caps.latest.revision: 26
-author: douglaslM
+author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 8d423a6001888f0ec894ed2e73b715fb3c30db12
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: f5dc22149aab9dfd9d458ed8cd4ec958794d973b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36023157"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37193389"
 ---
 # <a name="step-9-testing-the-lesson-1-tutorial-package"></a>步驟 9：測試第 1 課的教學課程封裝
   在這一課，您完成了下列工作：  
@@ -52,7 +52,7 @@ ms.locfileid: "36023157"
 2.  在封裝完成執行之後，在 **[偵錯]** 功能表上，按一下 **[停止偵錯]**。  
   
 ## <a name="next-lesson"></a>下一課  
- [第 2 課： 加入迴圈](../integration-services/lesson-2-adding-looping-with-ssis.md)  
+ [第 2 課：新增迴圈](../integration-services/lesson-2-adding-looping-with-ssis.md)  
   
 ## <a name="see-also"></a>另請參閱  
  [執行專案和套件](packages/run-integration-services-ssis-packages.md)  

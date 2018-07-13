@@ -1,5 +1,5 @@
 ---
-title: sys.dm_pdw_nodes_database_encryption_keys (TRANSACT-SQL) |Microsoft 文件
+title: sys.dm_pdw_nodes_database_encryption_keys (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: ''
@@ -7,32 +7,32 @@ ms.prod_service: sql-data-warehouse, pdw
 ms.service: sql-data-warehouse
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: system-objects
+ms.component: system-objects
 ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - TSQL
 ms.assetid: e7fd02b2-5d7e-4816-a0af-b58ae2ac3f7a
-caps.latest.revision: 9
-author: stevestein
-ms.author: sstein
+author: ronortloff
+ms.author: rortloff
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: b3abe99e707a4123e2f05fc1eb47b40d2b74fced
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
-ms.translationtype: MT
+ms.openlocfilehash: 3af945ced5fcbef03565a4e839a5cc56295810a7
+ms.sourcegitcommit: abd71294ebc39695d403e341c4f77829cb4166a8
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2018
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36772033"
 ---
 # <a name="sysdmpdwnodesdatabaseencryptionkeys-transact-sql"></a>sys.dm_pdw_nodes_database_encryption_keys (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
-  傳回關於資料庫加密狀態及其相關聯之資料庫加密金鑰的資訊。 **sys.dm_pdw_nodes_database_encryption_keys**提供這項資訊的每個節點。 如需有關資料庫加密的詳細資訊，請參閱[透明資料加密 (SQL Server PDW)](http://msdn.microsoft.com/en-us/b82ad21d-09dd-43dd-8fab-bcf2c8c3ac6d)。  
+  傳回關於資料庫加密狀態及其相關聯之資料庫加密金鑰的資訊。 **sys.dm_pdw_nodes_database_encryption_keys**提供這項資訊的每個節點。 如需有關資料庫加密的詳細資訊，請參閱 <<c0> [ 透明資料加密 (SQL Server PDW)](http://msdn.microsoft.com/en-us/b82ad21d-09dd-43dd-8fab-bcf2c8c3ac6d)。  
   
-|資料行名稱|資料類型|Description|  
+|資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
-|database_id|**int**|每個節點上的實體資料庫的識別碼。|  
-|encryption_state|**int**|表示此節點上的資料庫是否經過加密或未加密。<br /><br /> 0 = 沒有資料庫加密金鑰存在，未加密<br /><br /> 1 = 未加密<br /><br /> 2 = 加密進行中<br /><br /> 3 = 已加密<br /><br /> 4 = 金鑰變更進行中<br /><br /> 5 = 解密進行中<br /><br /> 6 = 保護變更進行 （加密資料庫加密金鑰的憑證已經變更。）|  
+|database_id|**int**|每個節點上的實體資料庫識別碼。|  
+|encryption_state|**int**|指出這個節點上的資料庫已加密或未加密。<br /><br /> 0 = 沒有資料庫加密金鑰存在，未加密<br /><br /> 1 = 未加密<br /><br /> 2 = 加密進行中<br /><br /> 3 = 已加密<br /><br /> 4 = 金鑰變更進行中<br /><br /> 5 = 解密進行中<br /><br /> 6 = 保護變更進行 （已加密資料庫加密金鑰的憑證要變更。）|  
 |create_date|**datetime**|顯示建立加密金鑰的日期。|  
 |regenerate_date|**datetime**|顯示重新產生加密金鑰的日期。|  
 |modify_date|**datetime**|顯示修改加密金鑰的日期。|  
@@ -48,7 +48,7 @@ ms.lasthandoff: 05/23/2018
  需要伺服器的 VIEW SERVER STATE 權限。  
   
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>範例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
- 下列範例聯結`sys.dm_pdw_nodes_database_encryption_keys`其他系統資料表，以指出每個節點的 TDE 保護的資料庫加密狀態。  
+ 下列範例聯結`sys.dm_pdw_nodes_database_encryption_keys`至其他系統資料表，以指出的加密狀態，針對每個節點的 TDE 保護的資料庫。  
   
 ```  
 SELECT D.database_id AS DBIDinMaster, D.name AS UserDatabaseName,   

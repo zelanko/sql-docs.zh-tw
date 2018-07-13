@@ -1,5 +1,5 @@
 ---
-title: 執行封裝公用程式 (DtExecUI) UI 參考 |Microsoft 文件
+title: 執行封裝公用程式 (DtExecUI) UI 參考 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.dtexecui.general.f1
 - sql12.dts.dtexecui.executionoptions.f1
@@ -26,16 +26,16 @@ ms.assetid: 3d71df39-126b-4c8e-bd77-128bbd5b0887
 caps.latest.revision: 39
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 6213873f823c8b4cb89a7db03c612971845b75a4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 215634d6a42c25870c4cac476905f19386df69ff
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36023615"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37256844"
 ---
 # <a name="execute-package-utility-dtexecui-ui-reference"></a>執行封裝公用程式 (DtExecUI) UI 參考
-  您可使用 **[執行封裝公用程式]** 來執行 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 封裝。 此公用程式會執行儲存在下列三個位置之一的封裝： [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫、 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 封裝存放區及檔案系統。 這個使用者介面，您可以從開啟[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]或輸入`dtexecui`在命令提示字元，是使用執行封裝的替代方案**DTExec**命令提示字元工具。  
+  您可使用 **[執行封裝公用程式]** 來執行 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 封裝。 此公用程式會執行儲存在下列三個位置之一的封裝： [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫、 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 封裝存放區及檔案系統。 此使用者介面，可以從開啟[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]，或輸入`dtexecui`的命令提示字元中，會使用執行封裝的替代方案**DTExec**命令提示字元工具。  
   
  封裝會在與 **dtexecui.exe** 公用程式相同的處理序中執行。 由於此公用程式是 32 位元工具，因此封裝會在 Windows on Win32 (WOW) 所執行的 64 位元環境中透過 **dtexecui.exe** 加以執行。 在 64 位元電腦上使用 dtexecui.exe 公用程式開發及測試命令時，應先使用 64 位元版本的 **dtexec.exe** 以 64 位元模式測試命令，然後才在實際伺服器上部署或為命令排程。  
   
@@ -55,7 +55,7 @@ ms.locfileid: "36023615"
   
 ### <a name="to-open-the-execute-package-utility-at-the-command-prompt"></a>在命令提示字元下開啟執行封裝公用程式  
   
--   在命令提示字元視窗中，執行`dtexecui`。  
+-   在命令提示字元 視窗中，執行`dtexecui`。  
   
  下列各節將說明 **[執行封裝公用程式]** 對話方塊的各個頁面。  
   
@@ -70,7 +70,7 @@ ms.locfileid: "36023615"
   
 |||  
 |-|-|  
-|ReplTest1|描述|  
+|值|描述|  
 |**[SQL Server]**|當封裝位於 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]時，請選取此選項。 指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的執行個體，並提供 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證的使用者名稱和密碼。 每個使用者名稱和密碼都會將 **/USER** *username* 和 **/PASSWORD** *password* options to the comm和 prompt.|  
 |**檔案系統**|當封裝位於檔案系統時，請選取此選項。|  
 |**SSIS 封裝存放區**|當封裝位於 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 封裝存放區時，請選取此選項。|  

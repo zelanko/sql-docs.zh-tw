@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 75522821-6daf-44ac-88bd-aa5b35258007
 caps.latest.revision: 4
 author: craigg-msft
 ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: de886603ed436918fb1fa93dd63224451f2b8ca4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 96f7b541ddbc8c0100fe0ed54e705677c185c15a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36022679"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37219798"
 ---
 # <a name="database-engine-cross-instance-features"></a>Database Engine 跨執行個體功能
   本節包含與管理及監視伺服器和資料庫執行個體有關的工具和工作。  

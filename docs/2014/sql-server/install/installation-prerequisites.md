@@ -1,5 +1,5 @@
 ---
-title: 安裝必要條件 |Microsoft 文件
+title: 安裝的必要條件 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - installation prerequisites, Setup
 helpviewer_keywords:
@@ -16,20 +16,20 @@ helpviewer_keywords:
 - SQL Server Installation Wizard, SQL Server Component Update page
 ms.assetid: cd1454dc-2585-4b14-83b3-ee9aec6f7e75
 caps.latest.revision: 45
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 7fc284d80176616f1bfe1d744236a76e0caddd41
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 9994c005278126a834f0286e1e7507adbcfca03d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36021735"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37194748"
 ---
 # <a name="installation-prerequisites"></a>安裝的必要條件
   為了讓 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 能夠安裝成功，安裝電腦上必須有下列軟體元件。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝程式會安裝它們：  
   
--   [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 4.0 版，適用於所有版本的 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
+-   [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 4.0 版的所有版本 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝程式支援檔案  
   

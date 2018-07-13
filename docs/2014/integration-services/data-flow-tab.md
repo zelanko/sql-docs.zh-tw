@@ -1,5 +1,5 @@
 ---
-title: 資料流程索引標籤 |Microsoft 文件
+title: 資料流程索引標籤 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.dataflowwindow.f1
 ms.assetid: ffd7ab42-d7ae-4e7c-86a1-a4364a37c91e
 caps.latest.revision: 24
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: a8bae39a6e96d09be1fb88ddfd1dca53537779b2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: dd6b4a0f859c301db3c314bdb163821390141fd5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36030826"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37192008"
 ---
 # <a name="data-flow-tab"></a>資料流程索引標籤
   使用 **設計師的** [資料流程] [!INCLUDE[ssIS](../includes/ssis-md.md)] 索引標籤，即可建立 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 封裝中的資料流程。  

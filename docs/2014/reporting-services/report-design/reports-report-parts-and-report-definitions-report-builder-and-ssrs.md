@@ -8,24 +8,24 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - report definitions
 - reports
 ms.assetid: 2d746550-f8cc-4e97-8a06-d0f03cffc18d
 caps.latest.revision: 23
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 55004b30ac7f462b677875f6f8b872ccebf25be8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: e06d0e989b357d939da4a024a6c904c6e1cf175c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36022588"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37212348"
 ---
 # <a name="reports-report-parts-and-report-definitions-report-builder-and-ssrs"></a>報表、報表組件和報表定義 (報表產生器及 SSRS)
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 您可以使用各種詞彙來描述不同狀態，包括初始定義、 已發行的報表，以及檢視的報表，顯示給使用者的報表。  
+  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 您可以使用各種詞彙來描述不同狀態，包括初始定義、 已發行的報表和檢視的報表，會出現在使用者的報表。  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -64,13 +64,13 @@ ms.locfileid: "36022588"
   
 -   訂閱報表，訂閱的報表會以您指定的輸出格式傳遞到電子郵件收件匣或檔案共用。  
   
- 訂閱報表，訂閱的報表會以您指定的輸出格式傳遞到電子郵件收件匣或檔案共用。報表的預設轉譯格式為 HTML 4.0。 除了 HTML 以外，報表還可以使用許多輸出格式轉譯，包括 Excel、Word、XML、PDF、TIFF 與 CSV。 如同已發行的報表一樣，已轉譯的報表也無法編輯或回存到報表伺服器。 如需詳細資訊，請參閱[匯出報表&#40;報表產生器及 SSRS&#41;](../report-builder/export-reports-report-builder-and-ssrs.md)。  
+ 訂閱報表，訂閱的報表會以您指定的輸出格式傳遞到電子郵件收件匣或檔案共用。報表的預設轉譯格式為 HTML 4.0。 除了 HTML 以外，報表還可以使用許多輸出格式轉譯，包括 Excel、Word、XML、PDF、TIFF 與 CSV。 如同已發行的報表一樣，已轉譯的報表也無法編輯或回存到報表伺服器。 如需詳細資訊，請參閱 <<c0> [ 匯出的報表&#40;報表產生器及 SSRS&#41;](../report-builder/export-reports-report-builder-and-ssrs.md)。</c0>  
   
 ## <a name="see-also"></a>另請參閱  
- [報表撰寫概念&#40;報表產生器和 SSRS&#41;](report-authoring-concepts-report-builder-and-ssrs.md)   
+ [報表撰寫概念&#40;報表產生器及 SSRS&#41;](report-authoring-concepts-report-builder-and-ssrs.md)   
  [SQL Server 2014 中的報表產生器](../report-builder/report-builder-in-sql-server-2016.md)   
- [安裝、 解除安裝，以及報表產生器支援](../install-uninstall-and-report-builder-support.md)   
+ [安裝、 解除安裝與報表產生器支援](../install-uninstall-and-report-builder-support.md)   
  [尋找、檢視和管理報表 &#40;報表產生器及 SSRS &#41;](../report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)   
- [將報表匯出&#40;報表產生器和 SSRS&#41;](../report-builder/export-reports-report-builder-and-ssrs.md)  
+ [匯出報表&#40;報表產生器及 SSRS&#41;](../report-builder/export-reports-report-builder-and-ssrs.md)  
   
   

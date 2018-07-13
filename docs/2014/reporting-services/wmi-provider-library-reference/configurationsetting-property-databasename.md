@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 api_name:
 - DatabaseName Property
 api_location:
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - DatabaseName property
 ms.assetid: 0ec6ef80-3b48-40c1-9618-2326a1d167a5
 caps.latest.revision: 36
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 35e6acb2e08a8fa547da5bddd3e0ed705621f705
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: 23d445a23d1ad706c76c9e1f628aa9f1ce4d0fdd
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36023484"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37185785"
 ---
 # <a name="databasename-property-wmi-msreportserverconfigurationsetting"></a>DatabaseName 屬性 (WMI MSReportServer_ConfigurationSetting)
   指定主控報表伺服器資料庫之 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的名稱。 唯讀。  

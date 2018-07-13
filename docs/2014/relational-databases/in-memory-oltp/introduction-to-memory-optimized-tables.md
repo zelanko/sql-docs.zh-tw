@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine-imoltp
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: ef1cc7de-63be-4fa3-a622-6d93b440e3ac
 caps.latest.revision: 14
-author: stevestein
-ms.author: sstein
-manager: jhubbard
-ms.openlocfilehash: bee3e33f3695b89ff4ca84b0ab6e6b657fc3e810
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: ebec1a7f57606b2b07fe8b2c2d80529c3f04d583
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36022390"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37209078"
 ---
 # <a name="introduction-to-memory-optimized-tables"></a>記憶體最佳化的資料表簡介
   記憶體最佳化資料表是使用 [CREATE TABLE &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-table-transact-sql) 所建立的資料表。  
@@ -28,7 +28,7 @@ ms.locfileid: "36022390"
   
  記憶體中 OLTP 的目標是與 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 整合，以便在開發、部署、管理能力及支援能力等各方面提供完美無瑕的體驗。 資料庫可以包含位於記憶體中以及以磁碟為基礎的物件。  
   
- 記憶體最佳化資料表中的資料列會建立版本。 這表示，資料表的每個資料列可能有多個版本。 所有資料列版本都是在相同資料表資料結構中維護。 只要使用資料列版本設定功能，就能在同一個資料列並行讀取和寫入。 如需並行讀取和寫入同一個資料列的詳細資訊，請參閱[記憶體最佳化資料表中的交易](memory-optimized-tables.md)。  
+ 記憶體最佳化資料表中的資料列會建立版本。 這表示，資料表的每個資料列可能有多個版本。 所有資料列版本都是在相同資料表資料結構中維護。 只要使用資料列版本設定功能，就能在同一個資料列並行讀取和寫入。 如需並行讀取和寫入相同的資料列上的詳細資訊，請參閱[Transactions in Memory-Optimized Tables](memory-optimized-tables.md)。  
   
  下圖說明多重版本設定。 此圖顯示一個資料表包含三個資料列，每個資料列各有不同的版本。  
   
@@ -62,7 +62,7 @@ ms.locfileid: "36022390"
 |[記憶體最佳化資料表變數](../../database-engine/memory-optimized-table-variables.md)|是|是|否|  
 |[原生編譯的預存程序](http://msdn.microsoft.com/library/dn133184.aspx)|您無法使用 EXECUTE 陳述式從原生編譯的預存程序執行任何預存程序。|是|否 <sup>1</sup>|  
   
- <sup>1</sup>您無法從內容連接存取記憶體最佳化資料表或原生編譯的預存程序 (從連接[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]執行 CLR 模組時)。 不過，您可以建立及開啟另一個連接，並從中存取記憶體最佳化資料表和原生編譯預存程序。 如需詳細資訊，請參閱[規則 vs。內容連接](../clr-integration/data-access/context-connections-vs-regular-connections.md)。  
+ <sup>1</sup>您無法從內容連接存取記憶體最佳化的資料表或原生編譯的預存程序 (從連接[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]執行 CLR 模組時)。 不過，您可以建立及開啟另一個連接，並從中存取記憶體最佳化資料表和原生編譯預存程序。 如需詳細資訊，請參閱[一般 vs。內容連接](../clr-integration/data-access/context-connections-vs-regular-connections.md)。  
   
 ## <a name="performance-and-scalability"></a>效能和延展性  
  下列因素會影響記憶體中 OLTP 可達到的效能提升：  

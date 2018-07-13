@@ -1,5 +1,5 @@
 ---
-title: 執行 Upgrade Advisor （使用者介面） |Microsoft 文件
+title: 執行 Upgrade Advisor （使用者介面） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Upgrade Advisor Report Viewer
 - Upgrade Advisor [SQL Server], running
@@ -18,15 +18,15 @@ helpviewer_keywords:
 - SQL Server Upgrade Advisor, running
 ms.assetid: 7f47c9b3-88d3-43d6-837e-f157b49a55ac
 caps.latest.revision: 40
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 36a31e74e95b966137df96f5e3f2ab05fa7a991f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 2bc1151b2df35b7912d03519cdf7f659ba96af16
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36022321"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37216588"
 ---
 # <a name="running-upgrade-advisor-user-interface"></a>執行 Upgrade Advisor (使用者介面)
   在升級規劃期間，您可以執行 Upgrade Advisor 來分析本機或遠端元件。 Upgrade Advisor 會針對分析的每個元件和執行個體產生一份報表。  
@@ -51,9 +51,9 @@ ms.locfileid: "36022321"
   
 6.  產生升級問題的報表。  
   
- 如需有關 Upgrade Advisor 分析精靈的詳細資訊，請參閱[如何： 執行 Upgrade Advisor 分析精靈](../../../2014/sql-server/install/how-to-run-the-upgrade-advisor-analysis-wizard.md)。  
+ 如需有關 Upgrade Advisor 分析精靈的詳細資訊，請參閱 <<c0> [ 如何： 執行 Upgrade Advisor 分析精靈](../../../2014/sql-server/install/how-to-run-the-upgrade-advisor-analysis-wizard.md)。  
   
- 每個步驟需要的特定資訊，請參閱[Upgrade Advisor 使用者介面參考](../../../2014/sql-server/install/upgrade-advisor-user-interface-reference.md)。  
+ 所需的每個步驟的特定資訊，請參閱[Upgrade Advisor 使用者介面參考](../../../2014/sql-server/install/upgrade-advisor-user-interface-reference.md)。  
   
 ## <a name="running-the-upgrade-advisor-report-viewer"></a>執行 Upgrade Advisor 報表檢視器  
  您可以使用 Upgrade Advisor 報表檢視器來檢視 Upgrade Advisor 分析精靈所產生的報表。 載入報表時，您可以依據下列因數來篩選報表的元件：  
@@ -72,16 +72,16 @@ ms.locfileid: "36022321"
   
  如需使用報表檢視器的逐步指示，請參閱下列主題：  
   
--   [如何： 檢視 Upgrade Advisor 報表](../../../2014/sql-server/install/how-to-view-an-upgrade-advisor-report.md)  
+-   [如何：檢視升級建議程式報表](../../../2014/sql-server/install/how-to-view-an-upgrade-advisor-report.md)  
   
--   [如何： 篩選報表](../../../2014/sql-server/install/how-to-filter-reports.md)  
+-   [如何：篩選報表](../../../2014/sql-server/install/how-to-filter-reports.md)  
   
--   [如何： 將報表匯出](../../../2014/sql-server/install/how-to-export-reports.md)  
+-   [如何：匯出報表](../../../2014/sql-server/install/how-to-export-reports.md)  
   
 ## <a name="see-also"></a>另請參閱  
  [如何： 執行 Upgrade Advisor 分析精靈](../../../2014/sql-server/install/how-to-run-the-upgrade-advisor-analysis-wizard.md)   
  [Upgrade Advisor 使用者介面參考](../../../2014/sql-server/install/upgrade-advisor-user-interface-reference.md)   
  [解決升級問題](../../../2014/sql-server/install/resolving-upgrade-issues.md)   
- [使用 Upgrade Advisor](../../../2014/sql-server/install/working-with-upgrade-advisor.md)  
+ [使用升級建議程式](../../../2014/sql-server/install/working-with-upgrade-advisor.md)  
   
   

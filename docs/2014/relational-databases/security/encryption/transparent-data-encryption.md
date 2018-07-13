@@ -5,10 +5,9 @@ ms.date: 11/23/2015
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-security
+ms.technology: security
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Transparent Data Encryption
 - database encryption key, about
@@ -19,15 +18,15 @@ helpviewer_keywords:
 - encryption [SQL Server], transparent data encryption
 ms.assetid: c75d0d4b-4008-4e71-9a9d-cee2a566bd3b
 caps.latest.revision: 70
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 7e1f31b2cfced2f94ecf0417a4cf8b62f53fbb15
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: aliceku
+ms.author: aliceku
+manager: craigg
+ms.openlocfilehash: 25893299dfc708e952cbc2cb4673e34e5612cf23
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36021937"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37236598"
 ---
 # <a name="transparent-data-encryption-tde"></a>透明資料加密 (TDE)
   *透明資料加密* (TDE) 會加密 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 和 [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)] 資料檔案，一般稱之為靜止的加密資料。 您可以採取幾個預防措施來維護資料庫安全，例如設計安全的系統、加密機密的資產，以及在資料庫伺服器周圍建立防火牆。 但是，當發生實體媒體 (如磁碟機或備份磁帶) 遭竊的狀況時，惡意人士可以還原或附加資料庫，並瀏覽資料。 一個解決方案是加密資料庫中的敏感性資料，並使用憑證來保護用來加密資料的金鑰。 如此可防止沒有金鑰的任何人使用資料，但是這種防護類型必須事先規劃。  
@@ -236,7 +235,7 @@ GO
 ## <a name="see-also"></a>另請參閱  
  [移動 TDE 保護的另一個 SQL Server 的資料庫](move-a-tde-protected-database-to-another-sql-server.md)   
  [使用 EKM 啟用 TDE](enable-tde-on-sql-server-using-ekm.md)   
- [Azure SQL Database 的透明資料加密](../../../database-engine/transparent-data-encryption-with-azure-sql-database.md)   
+ [使用 Azure SQL Database 的透明資料加密](../../../database-engine/transparent-data-encryption-with-azure-sql-database.md)   
  [SQL Server 加密](sql-server-encryption.md)   
  [SQL Server 和資料庫加密金鑰 &#40;Database Engine&#41;](sql-server-and-database-encryption-keys-database-engine.md)   
  [SQL Server Database Engine 和 Azure SQL Database 的資訊安全中心](../security-center-for-sql-server-database-engine-and-azure-sql-database.md)   

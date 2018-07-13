@@ -1,5 +1,5 @@
 ---
-title: 量值元素 (CSDLBI) |Microsoft 文件
+title: 量值元素 (CSDLBI) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -12,15 +12,15 @@ ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: bfbc9274-053a-421a-bb81-2095bba710be
 caps.latest.revision: 10
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: 36dda5645c53a88fa497682e6946331c85ca67db
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 0c3a2f2ef1c1dcc80e0b8ac9cb68ce5d5694d104
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36029902"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37224013"
 ---
 # <a name="measure-element-csdlbi"></a>Measure 元素 (CSDLBI)
   Measure 元素是以 CSDL Property 元素為基礎的複雜類型。 CSDLBI 註解會加入支援複雜公式定義的屬性，以便在商業智慧資料模型中使用。  
@@ -28,7 +28,7 @@ ms.locfileid: "36029902"
 ## <a name="elements-and-attributes"></a>元素和屬性  
  下表列出定義 Measure 元素的元素和屬性，以及適用於 Property 元素的所有屬性。  
   
-|[屬性]|是否必要|描述|  
+|名稱|是否必要|描述|  
 |----------|-----------------|-----------------|  
 |Kpi|否|僅為做為 KPI 使用的量值所需。 並非所有量值都是 KPI，但是所有 KPI 都必須以量值的定義為基礎。<br /><br /> [KPI 元素&#40;CSDLBI&#41;](kpi-element-csdlbi.md)|  
 |IsSimpleMeasure|否|True/false 值，指出用於量值的公式是否為其中一個簡單彙總 (SUM、COUNT、MIN、MAX、AVG、DistinctCount)。<br /><br /> 預設為 true。|  

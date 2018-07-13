@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - subscriptions [Reporting Services], tutorials
 - walkthroughs [Reporting Services]
@@ -17,13 +17,13 @@ ms.assetid: 79ab0572-43e9-4dc4-9b5a-cd8b627b8274
 caps.latest.revision: 46
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 9096317e6ab364ae440ad921045d5bed38083af2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 616ca1e1984c36c2a20814367b3bd030825f3c0c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36022826"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37181525"
 ---
 # <a name="create-a-data-driven-subscription-ssrs-tutorial"></a>建立資料驅動訂閱 (SSRS 教學課程)
   [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 提供了資料驅動訂閱，讓您可以依據動態訂閱者資料來自訂報表的散發。 資料驅動訂閱適用於下列狀況：  
@@ -49,17 +49,17 @@ ms.locfileid: "36022826"
 ## <a name="requirements"></a>需求  
  資料驅動訂閱通常是由報表伺服器管理員來建立和維護。 您必須是建立查詢的專家、擁有包含訂閱者資料之資料來源的知識，且具備較高的報表伺服器權限，才能夠建立資料驅動訂閱。  
   
- 本教學課程會使用本教學課程中建立的報表[建立基本資料表報表&#40;SSRS 教學課程&#41;](create-a-basic-table-report-ssrs-tutorial.md)和資料從 [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)]  
+ 本教學課程會使用在本教學課程中建立報表[建立基本資料表報表&#40;SSRS 教學課程&#41;](create-a-basic-table-report-ssrs-tutorial.md)以及來自資料 [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)]  
   
  您的系統必須已經安裝下列項目，才能使用這個教學課程：  
   
--   支援資料驅動訂閱的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 版本。 如需詳細資訊，請參閱[版本和 SQL Server 2014 元件](../sql-server/editions-and-components-of-sql-server-2016.md)。  
+-   支援資料驅動訂閱的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 版本。 如需詳細資訊，請參閱 <<c0> [ 版本和 SQL Server 2014 元件](../sql-server/editions-and-components-of-sql-server-2016.md)。  
   
 -   報表伺服器必須以原生模式執行。 此教學課程中描述的使用者介面是以原生模式報表伺服器為基礎。 雖然 SharePoint 模式報表伺服器也支援訂閱，不過其使用者介面與此教學課程所描述的使用者介面有所不同。  
   
 -   SQL Server Agent 服務必須在執行中。  
   
--   包括參數的報表。 本教學課程會假設範例報表`Sales Orders`您使用本教學課程建立[建立基本資料表報表&#40;SSRS 教學課程&#41;](create-a-basic-table-report-ssrs-tutorial.md)。  
+-   包括參數的報表。 本教學課程會假設範例報表`Sales Orders`您可以建立使用本教學課程[建立基本資料表報表&#40;SSRS 教學課程&#41;](create-a-basic-table-report-ssrs-tutorial.md)。  
   
 -   [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] 範例資料庫，它會將資料提供給範例報表。  
   

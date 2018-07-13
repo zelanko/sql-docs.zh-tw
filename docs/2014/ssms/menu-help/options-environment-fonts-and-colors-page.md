@@ -1,5 +1,5 @@
 ---
-title: 選項 (環境： 字型和色彩頁面) |Microsoft 文件
+title: 選項 (環境： 字型和色彩頁面) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - VS.ToolsOptionsPages.Environment.Fonts_And_Colors
 ms.assetid: ea3aa222-538d-485f-99dc-01eb02cdcfea
 caps.latest.revision: 27
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: fb667cb31bdb718044b2c4298dcc8c174f3c0c19
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 9a88ae6c8205ea8267ca044f6dc978a725931f59
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36023471"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37200778"
 ---
 # <a name="options-environment-fonts-and-colors-page"></a>選項 (環境： 字型和色彩頁面)
   [選項] 對話方塊讓您能夠針對 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中的各種使用者介面元素，來建立自訂的字型和色彩配置。 在 [工具] 功能表上按一下 [選項]、展開 [環境] 資料夾，然後選取 [字型和色彩]。  
@@ -35,7 +35,7 @@ ms.locfileid: "36023471"
 |詞彙|定義|  
 |----------|----------------|  
 |文字編輯器|變更文字編輯器的字型樣式、大小，以及色彩顯示設定，會影響預設文字編輯器裡文字的外觀。 這些設定並不會影響文字編輯器在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 的外部所開啟的文件。|  
-|印表機|變更印表機的字型樣式、大小，以及色彩顯示設定，會影響列印文件裡文字的外觀。<br /><br /> 提示： 如有需要您可以選取列印非使用文字編輯器中顯示不同的預設字型。 當列印同時包含單一位元組和雙位元組字元的程式碼時，這就非常有用。|  
+|印表機|變更印表機的字型樣式、大小，以及色彩顯示設定，會影響列印文件裡文字的外觀。<br /><br /> 提示： 如有需要您可以選取比所顯示在 [文字編輯器] 中的列印不同的預設字型。 當列印同時包含單一位元組和雙位元組字元的程式碼時，這就非常有用。|  
 |[所有文字工具視窗]|變更此項目的字型樣式、大小，以及色彩顯示設定，會影響 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中有輸出窗格之工具視窗裡文字的外觀。 例如，[輸出] 視窗、[文字結果] 視窗等等。<br /><br /> 注意：對 [所有文字工具視窗] 項目的文字所做的變更，在您進行變更的工作階段中並不會生效。 您可以開啟 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]的其他執行個體，來評估這些變更。|  
 |尋找結果視窗|變更此項目的字型樣式、大小，以及色彩顯示設定，會影響 [尋找結果] 視窗裡文字的外觀。|  
 |輸出視窗|變更此項目的字型樣式、大小，以及色彩顯示設定，會影響 [輸出] 視窗裡文字的外觀。|  

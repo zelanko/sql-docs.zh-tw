@@ -1,5 +1,5 @@
 ---
-title: 將報表伺服器內容類型加入至文件庫 (SharePoint 整合模式的 Reporting Services) |Microsoft 文件
+title: 將報表伺服器內容類型新增至程式庫 (SharePoint 整合模式的 Reporting Services) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,32 +8,32 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: ac9136c8-9ef4-484c-8e9d-05008a186db5
 caps.latest.revision: 8
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 3a1b9a692b8aa26b2d3d5679866617dd4fcfe51f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: da7ee6e652442bdd2773a8c669b0d134f1fadc37
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36021922"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37177545"
 ---
 # <a name="add-report-server-content-types-to-a-library-reporting-services-in-sharepoint-integrated-mode"></a>將報表伺服器內容類型加入至文件庫 (SharePoint 整合模式中的 Reporting Services)
-  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 提供預先定義的 SharePoint 內容類型，可用來管理共用的資料來源 (.rsds) 檔、 報表模型 (.smdl) 和報表產生器報表定義 (.rdl) 檔案。 將 **[報表產生器報表]**、 **[報表模型]** 和 **[報表資料來源]** 內容類型加入至文件庫會啟用 **[新增]** 命令，讓您能夠建立該類型的新文件。  
+  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 提供預先定義的 SharePoint 內容類型，可用來管理共用的資料來源 (.rsds) 檔、 報表模型 (.smdl)，以及報表產生器報表定義 (.rdl) 檔案。 將 **[報表產生器報表]**、 **[報表模型]** 和 **[報表資料來源]** 內容類型加入至文件庫會啟用 **[新增]** 命令，讓您能夠建立該類型的新文件。  
   
  **[!INCLUDE[applies](../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] SharePoint 模式  
   
  若要將內容類型加入至文件庫，您必須是網站管理員或具有「完整控制」等級的權限。  
   
- [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]內容類型和內容類型管理將會自動啟用從下建立的現有網站集合的所有文件庫**商業智慧中心**網站範本。  
+ [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]內容類型和內容類型管理將會自動啟用下列建立的現有網站集合的所有文件庫**商業智慧中心**網站範本。  
   
  在 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 整合之後建立的網站將不會啟用 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 內容類型。  
   
 > [!TIP]  
->  如果您有**不**先前設定的內容類型程式庫中，第一次啟用類型的管理內容，然後再啟用[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]內容類型。 請參閱在單一文件庫中啟用內容類型管理的程序。  
+>  如果您有**未**先前設定的內容類型程式庫，第一次啟用管理內容類型，然後再啟用[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]內容類型。 請參閱在單一文件庫中啟用內容類型管理的程序。  
   
  **短片：** [(SSRS) 啟用 SharePoint2010.wmv 中的內容類型](http://www.youtube.com/watch?v=yqhm3DrtT1w) (http://www.youtube.com/watch?v=yqhm3DrtT1w)。  
   
@@ -112,11 +112,11 @@ ms.locfileid: "36021922"
 9. > [!NOTE]  
     >  如果在 [新增內容類型] 頁面上看不到 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 內容類型群組 [SQL Server Reporting Services 內容類型]，表示下列有一條件成立：  
   
-    -   尚未安裝適用於 SharePoint 產品的 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 增益集。 如需詳細資訊，請參閱[安裝或解除安裝 Reporting Services 增益集的 SharePoint &#40;SharePoint 2010 和 SharePoint 2013&#41;](install-windows/install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md)。 本主題包含安裝增益集的資訊，並逐步帶領您進行增益集中僅檔案部分的安裝，以解決問題。  
+    -   尚未安裝適用於 SharePoint 產品的 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 增益集。 如需詳細資訊，請參閱 <<c0> [ 安裝或解除安裝 Reporting Services 增益集 for SharePoint &#40;SharePoint 2010 和 SharePoint 2013&#41;](install-windows/install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md)。</c0> 本主題包含安裝增益集的資訊，並逐步帶領您進行增益集中僅檔案部分的安裝，以解決問題。  
   
     -   安裝了增益集，但網站集合功能的 [報表伺服器整合功能] 未啟用。 請確認 [網站設定] 中的網站集合功能。  
   
-    -   所有的[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]內容類型已經加入至程式庫。 如果所有內容類型是文件庫的一部分，則該群組已從 **[新增內容類型]** 頁面中移除。 如果您刪除一個或多個 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 內容類型，就會在 **[新增內容類型]** 頁面上看到群組 **[SQL Server Reporting Services 內容類型]** 。  
+    -   所有[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]內容類型已經加入至程式庫。 如果所有內容類型是文件庫的一部分，則該群組已從 **[新增內容類型]** 頁面中移除。 如果您刪除一個或多個 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 內容類型，就會在 **[新增內容類型]** 頁面上看到群組 **[SQL Server Reporting Services 內容類型]** 。  
   
 ##  <a name="bkmk_enable_content_management_2010"></a> 啟用單一文件庫的內容類型管理 (SharePoint 2010)  
   

@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: f643c7c3-f238-4835-b81e-2c2b3b53b23f
 caps.latest.revision: 19
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 559af1eda323561513a3fa3af66be72a2432b87d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 23e0cbadc5f24a82154816dc85567d4446940706
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36022144"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37205328"
 ---
 # <a name="distributor-properties"></a>散發者屬性
   此章節提供散發者和散發資料庫之屬性的資訊：  

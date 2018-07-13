@@ -1,59 +1,57 @@
 ---
-title: sys.pdw_nodes_column_store_row_groups (TRANSACT-SQL) |Microsoft 文件
+title: sys.pdw_nodes_column_store_row_groups (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: ''
 ms.prod_service: sql-data-warehouse, pdw
 ms.service: sql-data-warehouse
-ms.component: system-catalog-views
+ms.component: system-objects
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: system-objects
 ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - TSQL
 ms.assetid: 17a4c925-d4b5-46ee-9cd6-044f714e6f0e
-caps.latest.revision: 10
 author: ronortloff
 ms.author: rortloff
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 99577a71d2819ca0d2ce86d901eecf5ce87ae7ab
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
-ms.translationtype: MT
+ms.openlocfilehash: 458fd50e6387a2929e660deb81400fc79271ff20
+ms.sourcegitcommit: abd71294ebc39695d403e341c4f77829cb4166a8
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33181534"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36874996"
 ---
 # <a name="syspdwnodescolumnstorerowgroups-transact-sql"></a>sys.pdw_nodes_column_store_row_groups (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
-  提供可協助系統管理員做出系統管理中以每個區段為基礎的叢集資料行存放區索引資訊[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]。 **sys.pdw_nodes_column_store_row_groups**具有資料列的實際儲存 （包括標示為已刪除） 總數的資料行和資料行標示為已刪除的資料列數目。 使用**sys.pdw_nodes_column_store_row_groups**來判斷哪一個資料列群組已刪除的資料列的百分比很高，應該重建。  
+  提供來協助進行系統管理決策，在系統管理員以每個區段為基礎的叢集資料行存放區索引資訊[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]。 **sys.pdw_nodes_column_store_row_groups**總數的資料列的實際儲存 （包括標示為已刪除） 的資料行和資料行標示為已刪除的資料列數目。 使用**sys.pdw_nodes_column_store_row_groups**來判斷哪一個資料列群組有高百分比的已刪除的資料列，應進行重建。  
   
-|資料行名稱|資料類型|Description|  
+|資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
-|**object_id**|**int**|基礎資料表的識別碼。 這是實體的資料表的計算節點上，為控制節點的邏輯資料表的 object_id。 例如，object_id 與不符 sys.tables 中的 object_id。<br /><br /> 若要與 sys.tables 聯結，使用 sys.pdw_index_mappings。|  
+|**object_id**|**int**|基礎資料表的識別碼。 這是實體的資料表的計算節點上，控制節點上的邏輯資料表的 object_id。 例如，object_id 不符合在 sys.tables object_id。<br /><br /> 若要以 sys.tables 加入，使用 sys.pdw_index_mappings。|  
 |**index_id**|**int**|叢集資料行存放區索引的識別碼*object_id*資料表。|  
-|**partition_number**|**int**|保存資料列群組的資料表資料分割識別碼*row_group_id*。 您可以使用將此 DMV 聯結至 sys.partitions。|  
+|**partition_number**|**int**|保存資料列群組的資料表資料分割識別碼*row_group_id*。 您可以使用*partition_number*將此 DMV 聯結至 sys.partitions。|  
 |**row_group_id**|**int**|此資料列群組的識別碼。 此號碼在分割區中是唯一的。|  
-|**dellta_store_hobt_id**|**bigint**|差異資料列群組的 hobt_id，如果資料列群組類型不是差異，則為 NULL。 差異資料列群組是讀取/寫入資料列群組，可接受新記錄。 差異資料列群組擁有**開啟**狀態。 差異資料列群組仍採用資料列存放區格式，且尚未壓縮為資料行存放區格式。|  
-|**狀態**|**tinyint**|與 state_description 相關聯的識別碼。<br /><br /> 1 = OPEN<br /><br /> 2 = CLOSED<br /><br /> 3 = COMPRESSED|  
+|**dellta_store_hobt_id**|**bigint**|差異資料列群組的 hobt_id，如果資料列群組類型不是差異，則為 NULL。 差異資料列群組是讀取/寫入資料列群組，可接受新記錄。 差異資料列群組已**開啟**狀態。 差異資料列群組仍採用資料列存放區格式，且尚未壓縮為資料行存放區格式。|  
+|**state**|**tinyint**|與 state_description 相關聯的識別碼。<br /><br /> 1 = OPEN<br /><br /> 2 = CLOSED<br /><br /> 3 = COMPRESSED|  
 |**state_desccription**|**nvarchar(60)**|資料列群組的持續狀態描述：<br /><br /> OPEN – 讀取/寫入資料列群組，可接受新記錄。 開啟的資料列群組仍採用資料列存放區格式，且尚未壓縮為資料行存放區格式。<br /><br /> CLOSED – 已填滿但尚未壓縮 Tuple Mover 程序壓縮的資料列群組。<br /><br /> COMPRESSED – 已填滿且壓縮的資料列群組。|  
 |**total_rows**|**bigint**|實際儲存在資料列群組中的總列數。 有些可能已刪除，但是仍然保存。 資料列群組中資料列數目的上限為 1,048,576 (十六進位 FFFFF)。|  
 |**deleted_rows**|**bigint**|實際儲存在資料列群組資料列標示為刪除的數目。<br /><br /> 一律 0 為差異資料列群組。|  
-|**size_in_bytes**|**int**|合併的大小，以位元組為單位，此資料列群組中的所有頁面。 這個大小不包括儲存中繼資料或共用的字典所需的大小。|  
+|**size_in_bytes**|**int**|合併的大小，以位元組為單位，此資料列群組中的所有頁面。 這個大小不包括所需儲存中繼資料或共用的字典的大小。|  
 |**pdw_node_id**|**int**|唯一識別碼[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]節點。|  
 |**distribution_id**|**int**|發佈唯一識別碼。|
   
 ## <a name="remarks"></a>備註  
  針對擁有叢集或非叢集資料行存放區索引的每一個資料表的每一個資料行存放區資料列群組傳回一個資料列。  
   
- 使用**sys.pdw_nodes_column_store_row_groups**來判斷資料列群組和大小的資料列群組中包含的資料列數目。  
+ 使用**sys.pdw_nodes_column_store_row_groups**來判斷資料列群組和資料列群組的大小中所包含的資料列數目。  
   
  當資料列群組中已刪除的資料列數增加到佔總列數的相當大比例時，資料表的效率就會降低。 重建資料行存放區索引可縮小資料表，減少讀取資料表所需的磁碟 I/O。 若要重建資料行存放區索引使用**重建**選項**ALTER INDEX**陳述式。  
   
- 可更新的資料行存放區會先將新資料插入**開啟**資料列群組，這是資料列存放區格式，而且有時也稱為差異資料表。  一旦開啟的資料列群組已滿，其狀態會變更為**CLOSED**。 Closed 資料列群組由 tuple mover 壓縮成資料行存放區格式，並在狀態變更為**壓縮**。  Tuple Mover 是背景處理序，會定期喚醒並檢查是否有任何準備好壓縮為資料行存放區資料列群組的關閉資料列群組。  Tuple Mover 也會取消配置其中所有資料列都已刪除的任何資料列群組。 已取消配置資料列群組會標示為**淘汰**。 若要立即執行 tuple mover，使用**REORGANIZE**選項**ALTER INDEX**陳述式。  
+ 可更新的資料行存放區會先將新資料插入**開啟**資料列群組，這是資料列存放區格式，有時也稱為差異資料表。  一旦開放資料列群組已滿時，其狀態會變更為**已關閉**。 Closed 資料列群組，會由 tuple mover 壓縮成資料行存放區格式，並在狀態變更為**壓縮**。  Tuple Mover 是背景處理序，會定期喚醒並檢查是否有任何準備好壓縮為資料行存放區資料列群組的關閉資料列群組。  Tuple Mover 也會取消配置其中所有資料列都已刪除的任何資料列群組。 已取消配置資料列群組會標示**淘汰**。 若要立即執行 tuple mover，請使用**REORGANIZE**選項**ALTER INDEX**陳述式。  
   
  當資料行存放區資料列群組已滿時，就會進行壓縮，並停止接受新的資料列。 資料列從壓縮的群組中刪除時仍會持續存在，但會標示為已刪除。 對壓縮的群組進行更新的實作方式，是從壓縮的群組中刪除，然後插入開啟的群組。  
   
@@ -61,7 +59,7 @@ ms.locfileid: "33181534"
  需要 **VIEW SERVER STATE** 權限。  
   
 ## <a name="examples-includesssdwincludessssdw-mdmd-and-includesspdwincludessspdw-mdmd"></a>範例：[!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
- 下列範例聯結**sys.pdw_nodes_column_store_row_groups**其他系統資料表，以傳回特定資料表的相關資訊的資料表。 導出的 `PercentFull` 資料行是資料列群組的效率預估。 若要尋找有關單一資料表移除 WHERE 子句的前面的註解連字號，並提供資料表名稱。  
+ 下列範例聯結**sys.pdw_nodes_column_store_row_groups**至其他系統資料表，以傳回特定資料表的相關資訊的資料表。 導出的 `PercentFull` 資料行是資料列群組的效率預估。 若要尋找有關單一資料表移除 WHERE 子句前面的註解連字號，並提供資料表名稱。  
   
 ```  
 SELECT IndexMap.object_id,   
@@ -87,7 +85,7 @@ AND CSRowGroups.index_id = NI.index_id
 ORDER BY object_name(i.object_id), i.name, IndexMap.physical_name, pdw_node_id;  
 ```  
 
-下列[!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)]範例會計算每個資料分割的資料列的叢集資料行也會儲存在開啟、 關閉或壓縮的資料列群組中有多個資料列：  
+下列[!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)]的叢集資料行也會儲存多個資料列有開啟、 關閉或壓縮的資料列群組中，範例會計算每個資料分割的資料列：  
 
 ```
 SELECT
@@ -114,7 +112,7 @@ ORDER BY 1, 2
 ## <a name="see-also"></a>另請參閱  
  [SQL 資料倉儲和平行處理資料倉儲目錄檢視](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)   
  [建立資料行存放區索引&#40;Transact SQL&#41;](../../t-sql/statements/create-columnstore-index-transact-sql.md)   
- [sys.pdw_nodes_column_store_segments &#40;Transact SQL&#41;](../../relational-databases/system-catalog-views/sys-pdw-nodes-column-store-segments-transact-sql.md)   
- [sys.pdw_nodes_column_store_dictionaries &#40;Transact SQL&#41;](../../relational-databases/system-catalog-views/sys-pdw-nodes-column-store-dictionaries-transact-sql.md)  
+ [sys.pdw_nodes_column_store_segments &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-catalog-views/sys-pdw-nodes-column-store-segments-transact-sql.md)   
+ [sys.pdw_nodes_column_store_dictionaries &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-catalog-views/sys-pdw-nodes-column-store-dictionaries-transact-sql.md)  
   
   

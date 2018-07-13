@@ -1,5 +1,5 @@
 ---
-title: sys.pdw_nodes_column_store_segments (TRANSACT-SQL) |Microsoft 文件
+title: sys.pdw_nodes_column_store_segments (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/28/2018
 ms.prod: ''
@@ -13,46 +13,45 @@ ms.topic: language-reference
 dev_langs:
 - TSQL
 ms.assetid: e2fdf8e9-1b74-4682-b2d4-c62aca053d7f
-caps.latest.revision: 9
 author: hirokib
 ms.author: elbutter
 manager: jrj
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 92eee101d27c4483207ba1be9933b750aabdea3d
-ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
-ms.translationtype: MT
+ms.openlocfilehash: ddc64da5a0c1d5dc3f383213f711cb0f1f849eb7
+ms.sourcegitcommit: abd71294ebc39695d403e341c4f77829cb4166a8
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32632249"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36875226"
 ---
-# <a name="syspdwnodescolumnstoresegments-transact-sql"></a>sys.pdw_nodes_column_store_segments (TRANSACT-SQL)
+# <a name="syspdwnodescolumnstoresegments-transact-sql"></a>sys.pdw_nodes_column_store_segments & Amp;#40;transact-SQL&AMP;#41;
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
 包含資料行存放區索引中每個資料行的資料列。  
 
-| 資料行名稱                 | 資料類型  | Description                                                  |
+| 資料行名稱                 | 資料類型  | 描述                                                  |
 | --------------------------- | ---------- | ------------------------------------------------------------ |
 | **partition_id**            | **bigint** | 指出資料分割識別碼。 在資料庫中，這是唯一的。     |
 | **hobt_id**                 | **bigint** | 具有此資料行存放區索引之資料表的堆積或 B 型樹狀目錄索引 (hobt) 的識別碼。 |
 | **column_id**               | **int**    | 資料行存放區資料行的識別碼。                                |
-| **segment_id**              | **int**    | 資料行區段的識別碼。 回溯相容性，資料行名稱會繼續可呼叫 segment_id，即使這是資料列群組識別碼。 可唯一識別區段，使用 < hobt_id，sys.partitions、 column_id >，< segment_id >。 |
+| **segment_id**              | **int**    | 資料行區段的識別碼。 回溯相容性，資料行名稱會繼續可呼叫 segment_id，即使這是資料列群組識別碼。 可唯一識別區段，使用 < hobt_id，sys.partitions、 column_id >、 < segment_id >。 |
 | **version**                 | **int**    | 資料行區段格式的版本。                        |
-| **encoding_type**           | **int**    | 該區段使用的編碼類型：<br /><br /> 1 = VALUE_BASED-非字串/二進位與 （類似於 4 有一些內部的變化） 沒有字典<br /><br /> 2 = VALUE_HASH_BASED-字典中的一般值與非二進位字串/資料行<br /><br /> 3 = STRING_HASH_BASED-字典中的一般值字串/二進位資料行<br /><br /> 4 = STORE_BY_VALUE_BASED-非字串/二進位與沒有字典<br /><br /> 5 = STRING_STORE_BY_VALUE_BASED-字串/二進位檔沒有字典<br /><br /> 所有編碼方式的位元封裝執行長度編碼盡可能利用。 |
+| **encoding_type**           | **int**    | 該區段所使用的編碼類型：<br /><br /> 1 = VALUE_BASED-非字串/二進位與沒有字典 （類似於一些內部的變化與 4）<br /><br /> 2 = VALUE_HASH_BASED-字典中的常見值的非字串/二進位資料行<br /><br /> 3 = STRING_HASH_BASED-字典中的常見值的二進位字串/資料行<br /><br /> 4 = STORE_BY_VALUE_BASED-非字串/二進位與沒有字典<br /><br /> 5 = STRING_STORE_BY_VALUE_BASED-字串/二進位檔使用沒有字典<br /><br /> 所有編碼方式的位元封裝執行長度編碼盡可能利用。 |
 | **row_count**               | **int**    | 資料列群組中的列數。                             |
 | **has_nulls**               | **int**    | 如果資料行區段具有 Null 值，則為 1。                     |
-| **base_id**                 | **bigint** | 如果正在使用編碼類型 1 的基底值識別碼。  如果沒有使用編碼類型 1，base_id 是設為 1。 |
-| **大小**               | **float**  | 如果正在使用編碼類型 1 的範圍。  如果沒有使用編碼類型 1，magnitude 是設為 1。 |
-| **primary__dictionary_id**  | **int**    | 主要字典的識別碼。 為非零的值會指向本機字典中目前的區段 （也就是資料列群組） 此資料行。 -1 表示沒有任何本機的字典，此區段。 |
-| **secondary_dictionary_id** | **int**    | 次要字典的識別碼。 為非零的值會指向本機字典中目前的區段 （也就是資料列群組） 此資料行。 -1 表示沒有任何本機的字典，此區段。 |
-| **min_data_id**             | **bigint** | 資料行區段中的最小資料識別碼。                       |
+| **base_id**                 | **bigint** | 如果正在使用編碼類型 1 的基底值識別碼。  如果未使用編碼類型 1，base_id 設為 1。 |
+| **大小**               | **float**  | 如果正在使用編碼類型 1 的範圍。  如果未使用編碼類型 1，範圍是設定為 1。 |
+| **primary__dictionary_id**  | **int**    | 主要字典的識別碼。 為非零的值會指向本機字典中目前的區段 （也就是資料列群組） 此資料行。 -1 值表示沒有本機的字典，此區段。 |
+| **secondary_dictionary_id** | **int**    | 次要字典的識別碼。 為非零的值會指向本機字典中目前的區段 （也就是資料列群組） 此資料行。 -1 值表示沒有本機的字典，此區段。 |
+| **min_data_id**             | **bigint** | 在 資料行區段的最小資料識別碼。                       |
 | **max_data_id**             | **bigint** | 資料行區段中的最大資料識別碼。                       |
 | **null_value**              | **bigint** | 用來表示 Null 的值。                               |
 | **on_disk_size**            | **bigint** | 區段大小 (以位元組為單位)。                                    |
-| **pdw_node_id**             | **int**    | 唯一識別項[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]節點。 |
+| **pdw_node_id**             | **int**    | 唯一識別碼[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]節點。 |
 
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>範例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
 
-聯結 sys.pdw_nodes_column_store_segments 與其他系統資料表，來判斷每個邏輯資料表的資料行存放區區段的數目。 
+加入 sys.pdw_nodes_column_store_segments 與其他系統資料表，以判斷每個邏輯資料表的資料行存放區區段數目。 
 
 ```sql
 SELECT  sm.name           as schema_nm
@@ -90,7 +89,7 @@ ORDER BY    table_nm
  [SQL 資料倉儲和平行處理資料倉儲目錄檢視](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)   
  [建立資料行存放區索引&#40;Transact SQL&#41;](../../t-sql/statements/create-columnstore-index-transact-sql.md)   
  [sys.pdw_nodes_column_store_row_groups &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-pdw-nodes-column-store-row-groups-transact-sql.md)   
- [sys.pdw_nodes_column_store_dictionaries &#40;Transact SQL&#41;](../../relational-databases/system-catalog-views/sys-pdw-nodes-column-store-dictionaries-transact-sql.md)  
+ [sys.pdw_nodes_column_store_dictionaries &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-catalog-views/sys-pdw-nodes-column-store-dictionaries-transact-sql.md)  
 
   
 

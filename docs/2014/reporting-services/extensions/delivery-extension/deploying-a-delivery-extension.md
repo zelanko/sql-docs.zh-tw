@@ -16,15 +16,15 @@ helpviewer_keywords:
 - deploying [Reporting Services], extensions
 ms.assetid: 4436ce48-397d-42c7-9b5d-2a267e2a1b2c
 caps.latest.revision: 43
-author: douglaslM
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 94b299f3bc3de16469034683df95976cfcf5510e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: 653369ef20b2febbf90c34e059c9105cdfeaafbf
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36030246"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37194878"
 ---
 # <a name="deploying-a-delivery-extension"></a>部署傳遞延伸模組
   傳遞延伸模組以 XML 組態檔的形式提供其組態資訊。 XML 檔案符合為傳遞延伸模組定義的 XML 結構描述。 傳遞延伸模組提供設定和修改組態檔的基礎結構。  
@@ -40,9 +40,9 @@ ms.locfileid: "36030246"
   
 |attribute|描述|  
 |---------------|-----------------|  
-|`Name`|延伸模組的唯一名稱 (例如，供電子郵件傳遞延伸模組使用的 "Report Server E-Mail"，或是供檔案共用傳遞延伸模組使用的 "Report Server FileShare")。 `Name` 屬性的最大長度為 255 個字元。 名稱必須是唯一的所有項目中`Extension`組態檔元素。 如果重複的名稱存在，報表伺服器會傳回錯誤。|  
+|`Name`|延伸模組的唯一名稱 (例如，供電子郵件傳遞延伸模組使用的 "Report Server E-Mail"，或是供檔案共用傳遞延伸模組使用的 "Report Server FileShare")。 `Name` 屬性的最大長度為 255 個字元。 名稱必須是唯一的所有項目中`Extension`組態檔的項目。 如果重複的名稱存在，報表伺服器會傳回錯誤。|  
 |`Type`|以逗號分隔的清單，包括完整的命名空間以及組件的名稱。|  
-|`Visible`|`false` 值指出在使用者介面中應該看不到傳遞延伸模組。 如果不包含屬性，則預設值是`true`。|  
+|`Visible`|`false` 值指出在使用者介面中應該看不到傳遞延伸模組。 不包含屬性時，預設值是`true`。|  
   
  如需 RSReportServer.config 或 RSReportDesigner.config 檔的詳細資訊，請參閱 [Reporting Services 設定檔](../../report-server/reporting-services-configuration-files.md)。  
   
@@ -76,7 +76,7 @@ ms.locfileid: "36030246"
   
      `Name` 的值是傳遞延伸模組的唯一名稱。 `Type` 的值是以逗號分隔的清單，包括實作 <xref:Microsoft.ReportingServices.Interfaces.IDeliveryExtension> 介面之類別的完整命名空間項目，後面接著組件的名稱 (不包含 .dll 副檔名)。 依預設，傳遞延伸模組是可見的。 若要在使用者介面中隱藏延伸模組 (例如報表管理員)，請將 `Visible` 屬性加入至 `Extension` 元素，並將其設定為 `false`。  
   
-5.  最後，針對為傳遞延伸模組授與 `FullTrust` 權限的自訂組件，加入程式碼群組。 您將程式碼群組加入至 rssrvpolicy.config 檔案位於 %ProgramFiles%\Microsoft SQL server\msrs10_50.<instancename>\reporting 預設。\<執行個體名稱 > services\reportserver。 您的程式碼群組可能如下所示：  
+5.  最後，針對為傳遞延伸模組授與 `FullTrust` 權限的自訂組件，加入程式碼群組。 您可以將程式碼群組加入至 rssrvpolicy.config 檔案預設位於 %ProgramFiles%\Microsoft SQL server\msrs10_50.<instancename>\reporting 位於。\<執行個體名稱 > services\reportserver。 您的程式碼群組可能如下所示：  
   
     ```  
     <CodeGroup class="UnionCodeGroup"  
@@ -100,7 +100,7 @@ ms.locfileid: "36030246"
   
 1.  將組件從您的執行位置複製到報表管理員的 bin 目錄。 報表管理員 bin 目錄的預設位置是 %ProgramFiles%\Microsoft SQL server\msrs10_50.<instancename>\reporting。\<執行個體名稱 > \Reporting Services\ReportManager\bin。  
   
-2.  在複製組件檔之後，開啟 RSReportServer.config 檔。 RSReportServer.config 檔案位於 %ProgramFiles%\Microsoft SQL server\msrs10_50.<instancename>\reporting。\<執行個體名稱 > services\reportserver 目錄。 您需要在傳遞延伸模組組件檔的組態檔中建立項目。 您可以使用 Visual Studio.NET 或簡單的文字編輯器，例如 [記事本] 開啟組態檔。  
+2.  在複製組件檔之後，開啟 RSReportServer.config 檔。 RSReportServer.config 檔案位於 %ProgramFiles%\Microsoft SQL server\msrs10_50.<instancename>\reporting。\<執行個體名稱 > services\reportserver 目錄。 您需要在傳遞延伸模組組件檔的組態檔中建立項目。 您可以使用 Visual Studio.NET 或簡單的文字編輯器，例如 [記事本] 來開啟組態檔。  
   
 3.  找出`DeliveryUI`RSReportServer.config 檔案中的項目。 應該針對您新建立的傳遞延伸模組，在下列位置建立項目：  
   
@@ -123,7 +123,7 @@ ms.locfileid: "36030246"
     > [!IMPORTANT]  
     >  報表伺服器與報表管理員組態檔項目的 `Name` 屬性值必須相同。 如果它們不同，您的伺服器組態將無效。  
   
-     最後，針對為傳遞延伸模組授與 `FullTrust` 權限的自訂組件，加入程式碼群組。 您將程式碼群組加入至 RSmgrpolicy.config 檔案位於預設會在 C:\Program Files\Microsoft SQL server\msrs10_50.<。\<執行個體名稱 > services\reportmanager。 您的程式碼群組可能如下所示：  
+     最後，針對為傳遞延伸模組授與 `FullTrust` 權限的自訂組件，加入程式碼群組。 您可以將程式碼群組加入至 RSmgrpolicy.config 檔案位於 C:\Program Files\Microsoft SQL server\msrs10_50.<instancename>\reporting 預設。\<執行個體名稱 > services\reportmanager。 您的程式碼群組可能如下所示：  
   
     ```  
     <CodeGroup class="UnionCodeGroup"  
@@ -141,7 +141,7 @@ ms.locfileid: "36030246"
      URL 成員資格僅是您可以針對傳遞延伸模組所選擇的許多成員資格條件的其中一個。 如需 [!INCLUDE[ssRS](../../../includes/ssrs-md.md)] 程式碼存取安全性的詳細資訊，請參閱[安全開發 &#40;Reporting Services&#41;](../secure-development/secure-development-reporting-services.md)  
   
 ## <a name="verifying-the-deployment"></a>確認部署  
- 您可以使用 Web 服務 <xref:ReportService2010.ReportingService2010.ListExtensions%2A> 方法來確認傳遞延伸模組是否已成功部署到報表伺服器。 您也可以開啟報表管理員，然後確認延伸模組是否包含在訂閱的可用傳遞延伸模組清單。 如需有關報表管理員和訂用帳戶的詳細資訊，請參閱[訂閱與傳遞&#40;Reporting Services&#41;](../../subscriptions/subscriptions-and-delivery-reporting-services.md)。  
+ 您可以使用 Web 服務 <xref:ReportService2010.ReportingService2010.ListExtensions%2A> 方法來確認傳遞延伸模組是否已成功部署到報表伺服器。 您也可以開啟報表管理員，然後確認延伸模組是否包含在訂閱的可用傳遞延伸模組清單。 如需有關報表管理員和訂用帳戶的詳細資訊，請參閱 <<c0> [ 訂閱與傳遞&#40;Reporting Services&#41;](../../subscriptions/subscriptions-and-delivery-reporting-services.md)。</c0>  
   
 ## <a name="see-also"></a>另請參閱  
  [實作傳遞延伸模組](implementing-a-delivery-extension.md)   

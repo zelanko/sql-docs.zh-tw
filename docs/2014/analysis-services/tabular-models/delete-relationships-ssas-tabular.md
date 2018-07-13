@@ -1,5 +1,5 @@
 ---
-title: 刪除關聯性 (SSAS 表格式) |Microsoft 文件
+title: 刪除關聯性 (SSAS 表格式) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: d40e3f05-54e8-4c4b-807a-0b06f446079b
 caps.latest.revision: 12
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: e39f2f74824550940fbe206ee2185212abf7dd9b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 530e00790a649ad7ccaebfddfc3582d23ee1b1e2
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36022722"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37249168"
 ---
 # <a name="delete-relationships-ssas-tabular"></a>刪除關聯性 (SSAS 表格式)
-  您可以刪除現有的關聯性，方法是使用 [圖表檢視] 中的模型設計師或使用 [管理關聯性] 對話方塊。 如需如何在表格式模型中使用關聯性資訊，請參閱[關聯性&#40;SSAS 表格式&#41;](relationships-ssas-tabular.md)。  
+  您可以刪除現有的關聯性，方法是使用 [圖表檢視] 中的模型設計師或使用 [管理關聯性] 對話方塊。 如需如何在表格式模型中使用關聯性的資訊，請參閱[關聯性&#40;SSAS 表格式&#41;](relationships-ssas-tabular.md)。  
   
 ## <a name="considerations-for-deleting-relationships"></a>刪除關聯性的考量  
  當您決定是否要刪除關聯性時，請牢記以下問題：  

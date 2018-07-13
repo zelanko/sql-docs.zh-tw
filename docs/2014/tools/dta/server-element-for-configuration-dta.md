@@ -1,5 +1,5 @@
 ---
-title: 伺服器組態的元素 (DTA) |Microsoft 文件
+title: 伺服器組態的元素 (DTA) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,25 +8,25 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - XML
 helpviewer_keywords:
 - Server element
 ms.assetid: da9ff870-9cfd-42fe-994b-7b9292681f7d
 caps.latest.revision: 13
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 131885c5e9547767dece2240bcbd64c06b5e4a61
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 21efaa212459a89622d920c0dc4adcf2f828f1bf
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36022331"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37214268"
 ---
 # <a name="server-element-for-configuration-dta"></a>組態的 Server 元素 (DTA)
-  包含您想要 Database Engine Tuning Advisor 評估假設性組態伺服器的識別資訊 (所指定`Configuration`項目)。  
+  包含 Database Engine Tuning Advisor 評估假設性組態伺服器的識別資訊 (所指定`Configuration`項目)。  
   
 ## <a name="syntax"></a>語法  
   
@@ -54,7 +54,7 @@ ms.locfileid: "36022331"
 |**子元素**|[伺服器名稱項目&#40;DTA&#41;](name-element-for-server-dta.md)<br /><br /> [組態的 database 元素&#40;DTA&#41;](database-element-for-configuration-dta.md)|  
   
 ## <a name="remarks"></a>備註  
- 您只能指定一個`Server`元素`Configuration`項目。 在 **Database Engine Tuning Advisor XML 結構描述** 中，這個元素的名稱為 [ServerTypecomplexType](http://go.microsoft.com/fwlink/?linkid=43100)。 請勿混淆這個`Server`元素和子系的`DTAInput`項目。 如需詳細資訊，請參閱 [Server 元素 &#40;DTA&#41;](server-element-dta.md)。  
+ 您可以指定只有一個`Server`項目`Configuration`項目。 在 **Database Engine Tuning Advisor XML 結構描述** 中，這個元素的名稱為 [ServerTypecomplexType](http://go.microsoft.com/fwlink/?linkid=43100)。 請勿混淆這個`Server`元素和子系的`DTAInput`項目。 如需詳細資訊，請參閱 [Server 元素 &#40;DTA&#41;](server-element-dta.md)。  
   
 ## <a name="example"></a>範例  
  如需使用範例，請參閱[含使用者指定組態的 XML 輸入檔範例 &#40;DTA&#41;](xml-input-file-sample-with-user-specified-configuration-dta.md)。  

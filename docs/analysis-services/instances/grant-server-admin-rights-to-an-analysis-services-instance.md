@@ -1,5 +1,5 @@
 ---
-title: 授與 Analysis Services 執行個體伺服器系統管理員權限 |Microsoft 文件
+title: 授與 Analysis Services 執行個體的伺服器管理員權限 |Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: dac4df875c8a620f735822e73215f86f17a88c3d
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 1ad46e78f5accb54a3870f0c12a8442dc76201b9
+ms.sourcegitcommit: abd71294ebc39695d403e341c4f77829cb4166a8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34018855"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36760093"
 ---
 # <a name="grant-server-admin-rights-to-an--analysis-services-instance"></a>將伺服器系統管理員權限授與 Analysis Services 執行個體
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "34018855"
   
 2.  按一下 **[選取頁面]** 窗格中的 **[安全性]** ，然後按一下頁面底部的 **[加入]** ，以將一個或多個 Windows 使用者或群組加入至伺服器角色。  
   
-     ![新增使用者對話方塊，在 management studio](../../analysis-services/instances/media/ssas-serveradminadd.png "新增在 management studio [使用者] 對話方塊")  
+     ![新增在 management studio 中的 [使用者] 對話方塊](../../analysis-services/instances/media/ssas-serveradminadd.png "新增在 management studio 中的 [使用者] 對話方塊")  
   
 ### <a name="add-computer-accounts"></a>新增電腦帳戶  
  您也可以使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 將電腦帳戶設為 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Administrators 群組的成員。  
@@ -48,15 +48,15 @@ ms.locfileid: "34018855"
   
 4.  選取 [電腦]  ，然後按一下 [確定] 。  
   
-     ![將電腦帳戶新增為 ssas 管理員](../../analysis-services/instances/media/ssas-in-ssms-computerobjects.png "ssas 系統管理員的身分新增電腦帳戶")  
+     ![將電腦帳戶新增為 ssas administrators](../../analysis-services/instances/media/ssas-in-ssms-computerobjects.png "ssas 系統管理員的身分新增電腦帳戶")  
   
 5.  在 [輸入要選取的物件名稱]  文字方塊中，輸入電腦的名稱，然後按一下 [檢查名稱]  確認電腦帳戶位於目前的位置。 如果找不到電腦帳戶，請確認電腦名稱以及電腦所屬的網域正確。  
   
 ## <a name="nt-servicessastelemetry-account"></a>NT Service\SSASTelemetry 帳戶  
- **NT Service/SSASTelemetry** 是在安裝期間建立的低權限電腦帳戶，且專用來執行客戶經驗改進計畫 (CEIP) 服務的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 實作。 此服務需要有 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 執行個體的系統管理員權限，才能執行數個探索命令。 如需詳細資訊，請參閱＜ [Customer Experience Improvement Program for SQL Server Data Tools](../../sql-server/customer-experience-improvement-program-for-sql-server-data-tools.md) ＞和＜ [Microsoft SQL Server Privacy Statement](http://msdn.microsoft.com/library/57769f4a-5689-49a1-8298-e3c0db5106f8) ＞。  
+ **NT Service/SSASTelemetry** 是在安裝期間建立的低權限電腦帳戶，且專用來執行客戶經驗改進計畫 (CEIP) 服務的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 實作。 此服務需要有 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 執行個體的系統管理員權限，才能執行數個探索命令。 如需詳細資訊，請參閱＜ [Customer Experience Improvement Program for SQL Server Data Tools](../../sql-server/customer-experience-improvement-program-for-sql-server-data-tools.md) ＞和＜ [Microsoft SQL Server Privacy Statement](http://go.microsoft.com/fwlink/?LinkID=868444) ＞。  
   
 ## <a name="see-also"></a>另請參閱  
  [物件和作業的存取權授權 &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/authorizing-access-to-objects-and-operations-analysis-services.md)   
- [安全性角色 &#40;Analysis Services - 多維度資料&#41;](../../analysis-services/multidimensional-models/olap-logical/security-roles-analysis-services-multidimensional-data.md)  
+ [安全性角色 &#40;Analysis Services-多維度資料 &#41;](../../analysis-services/multidimensional-models/olap-logical/security-roles-analysis-services-multidimensional-data.md)  
   
   

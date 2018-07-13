@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.dataprofilingtask.general.f1
 helpviewer_keywords:
@@ -17,13 +17,13 @@ ms.assetid: eec15906-d757-4079-b2f6-aca4e52b3b4c
 caps.latest.revision: 17
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 00d151f80439062ca67a1320d4453155079a332e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 2635ba00fdbeaf0a55567539911b974a7d9265d0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36023580"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37215529"
 ---
 # <a name="data-profiling-task-editor-general-page"></a>資料分析工作編輯器 (一般頁面)
   您可以使用 [資料分析工作編輯器] 的 [一般] 頁面來設定下列選項：  
@@ -54,7 +54,7 @@ ms.locfileid: "36023580"
  **DestinationType**  
  指定要將資料設定檔輸出儲存至檔案或變數：  
   
-|ReplTest1|描述|  
+|值|描述|  
 |-----------|-----------------|  
 |**FileConnection**|將設定檔輸出儲存至檔案連線管理員中指定之位置的檔案。<br /><br /> 注意：您可以在 [目的地] 選項中指定要使用的檔案連線管理員。|  
 |**變數**|將設定檔輸出儲存至封裝變數。<br /><br /> 注意：您可以在 [目的地] 選項中指定要使用的封裝變數。|  

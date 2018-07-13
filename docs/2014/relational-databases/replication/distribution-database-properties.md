@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.rep.configdistwizard.distdbproperties.f1
 helpviewer_keywords:
 - Distribution Database Properties dialog box
 ms.assetid: 0f404ab9-1237-4936-8df5-888baab6a245
 caps.latest.revision: 21
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 00103d953ea8b7c68050ca18afc41b4d59b149a9
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: ee22646a0054db4ce7ee41a1e8faa25cfcf9c6e2
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36021933"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37287064"
 ---
 # <a name="distribution-database-properties"></a>散發資料庫屬性
   **[散發資料庫屬性]** 對話方塊可讓您檢視許多屬性，並設定資料庫的交易保留期限和記錄保留期限。  
@@ -52,7 +52,7 @@ ms.locfileid: "36021933"
   
 -   代理程式會使用新增訂閱精靈中為散發代理程式指定的認證，來連接訂閱者。  
   
- 如需詳細資訊，請參閱\\ [Replication Agent Security Model](security/replication-agent-security-model.md)。  
+ 如需詳細資訊，請參閱 < \\ [Replication Agent Security Model](security/replication-agent-security-model.md)。  
   
 ## <a name="see-also"></a>另請參閱  
  [[設定散發]](configure-distribution.md)   

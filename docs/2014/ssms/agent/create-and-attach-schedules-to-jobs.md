@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - jobs [SQL Server]
 - scheduling jobs [SQL Server]
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - idle time [SQL Server]
 ms.assetid: 079c2984-0052-4a37-a2b8-4ece56e6b6b5
 caps.latest.revision: 34
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 77f1f09ddb3d978d1308d4c7ec70bf5d8d177812
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: f85e651f67b6553f597fab920bde7cc05ca37167
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36023711"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37192868"
 ---
 # <a name="create-and-attach-schedules-to-jobs"></a>建立及附加排程至作業
   排程 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 作業是表示定義在沒有使用者互動的情況下讓作業開始執行的條件。 您可以透過建立作業的新排程，或將現有的排程附加至作業，將作業排程為自動執行。  
@@ -95,7 +95,7 @@ ms.locfileid: "36023711"
 |說明如何定義伺服器的 CPU 閒置條件。|[設定 CPU 閒置與持續時間 &#40;SQL Server Management Studio&#41;](set-cpu-idle-time-and-duration-sql-server-management-studio.md)|  
   
 ## <a name="see-also"></a>另請參閱  
- [sp_help_jobschedule &#40;Transact SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-help-jobschedule-transact-sql)   
- [dbo.sysschedules &#40;Transact SQL&#41;](/sql/relational-databases/system-tables/dbo-sysjobschedules-transact-sql)  
+ [sp_help_jobschedule &#40;-SQL&AMP;#41;&#41;](/sql/relational-databases/system-stored-procedures/sp-help-jobschedule-transact-sql)   
+ [msdb &#40;Transact SQL&#41;](/sql/relational-databases/system-tables/dbo-sysjobschedules-transact-sql)  
   
   

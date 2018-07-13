@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - report servers [Reporting Services], databases
 - renaming databases
@@ -20,13 +20,13 @@ ms.assetid: 97b2e1b5-3869-4766-97b9-9bf206b52262
 caps.latest.revision: 63
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: ee0c8711727a4661a9f9ac7a75d9739d98afc1b4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ef8be1c1777e51b14a0db38a15a5ff806a83443d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36023261"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37198758"
 ---
 # <a name="administer-a-report-server-database-ssrs-native-mode"></a>管理報表伺服器資料庫 (SSRS 原生模式)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 部署會使用兩個 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 關聯式資料庫供內部儲存之用。 根據預設，資料庫是命名為 ReportServer 和 ReportServerTempdb。 ReportServerTempdb 是由主要報表伺服器資料庫所建立，用於儲存暫存資料、工作階段資訊和快取報表。  
@@ -39,7 +39,7 @@ ms.locfileid: "36023261"
   
 -   若要將現有的資料庫內容複製到其他報表伺服器資料庫，您可以附加報表伺服器資料庫的複本，並將這個複本與不同的報表伺服器執行個體一起使用。 或者，您也可以建立並執行使用 SOAP 呼叫的指令碼，在新的資料庫中重新建立報表伺服器內容。 您可以使用 **rs** 公用程式執行指令碼。  
   
--   若要管理報表伺服器和報表伺服器資料庫之間的連接，以及找出特定報表伺服器執行個體所使用的資料庫，您可以使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]組態工具中的 [資料庫安裝] 頁面。 若要了解有關報表伺服器連接到報表伺服器資料庫的詳細資訊，請參閱[設定報表伺服器資料庫連接&#40;SSRS 組態管理員&#41;](../../sql-server/install/configure-a-report-server-database-connection-ssrs-configuration-manager.md)。  
+-   若要管理報表伺服器和報表伺服器資料庫之間的連接，以及找出特定報表伺服器執行個體所使用的資料庫，您可以使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]組態工具中的 [資料庫安裝] 頁面。 若要深入了解報表伺服器連接到報表伺服器資料庫，請參閱[設定報表伺服器資料庫連接&#40;SSRS 組態管理員&#41;](../../sql-server/install/configure-a-report-server-database-connection-ssrs-configuration-manager.md)。  
   
 ## <a name="sql-server-login-and-database-permissions"></a>SQL Server 登入和資料庫的權限  
  報表伺服器資料庫可供報表伺服器在內部使用。 任何一個資料庫的連接都是由報表伺服器服務所建立的。 您可以使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 組態工具來設定報表伺服器資料庫的報表伺服器連接。  
@@ -48,7 +48,7 @@ ms.locfileid: "36023261"
   
  系統會針對您指定的帳戶自動建立報表伺服器資料庫的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入。  
   
- 此外，系統也會自動設定資料庫的權限。 Reporting Services 組態工具將帳戶或資料庫將使用者指派至`Public`和`RSExecRole`報表伺服器資料庫的角色。 `RSExecRole`提供權限來存取資料庫資料表及執行預存程序。 `RSExecRole`當您建立報表伺服器資料庫，master 和 msdb 中建立。 `RSExecRole`隸屬`db_owner`報表伺服器資料庫，讓報表伺服器來更新自己的結構描述，以支援自動升級程序的角色。  
+ 此外，系統也會自動設定資料庫的權限。 Reporting Services 組態工具將會指派帳戶或資料庫使用者`Public`和`RSExecRole`報表伺服器資料庫的角色。 `RSExecRole`提供權限，來存取資料庫資料表及執行預存程序。 `RSExecRole`當您建立報表伺服器資料庫時，會建立 master 和 msdb 中。 `RSExecRole`隸屬`db_owner`報表伺服器資料庫，可讓報表伺服器在更新自己的結構描述，以支援自動升級程序的角色。  
   
 ## <a name="naming-conventions-for-the-report-server-databases"></a>報表伺服器資料庫的命名慣例  
  建立主要資料庫時，資料庫的名稱必須遵循為 [資料庫識別碼](../../relational-databases/databases/database-identifiers.md)指定的規則。 暫存資料庫名稱必須與主要報表伺服器資料庫的名稱相同，但要加上 Tempdb 後置詞。 您不能將暫存資料庫命名為不同的名稱。  
@@ -80,7 +80,7 @@ SET READ_COMMITTED_SNAPSHOT OFF
 ```  
   
 ## <a name="about-database-versions"></a>關於資料庫版本  
- 在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]中，沒有提供有關資料庫版本的明確資訊。 不過，因為資料庫版本一律與產品版本同步，所以您可以使用產品版本資訊，得知資料庫版本變更的時間。 產品版本資訊[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]係透過檔案版本資訊，會出現在所有的 SOAP 呼叫的標頭中的記錄檔，以及當您連接到報表伺服器 URL (例如，當您開啟瀏覽器並前往http://localhost/reportserver)。  
+ 在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]中，沒有提供有關資料庫版本的明確資訊。 不過，因為資料庫版本一律與產品版本同步，所以您可以使用產品版本資訊，得知資料庫版本變更的時間。 產品版本資訊[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]表示透過檔案版本資訊出現在記錄檔中，所有的 SOAP 呼叫的標頭中，而且當您連接到報表伺服器 URL (例如，當您開啟瀏覽器並前往http://localhost/reportserver)。  
   
 ## <a name="see-also"></a>另請參閱  
  [Reporting Services 組態管理員&#40;原生模式&#41;](../../sql-server/install/reporting-services-configuration-manager-native-mode.md)   

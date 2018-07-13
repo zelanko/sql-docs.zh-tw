@@ -1,5 +1,5 @@
 ---
-title: Bike Buyer DMX 教學課程 |Microsoft 文件
+title: Bike Buyer DMX 教學課程 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - DMX [Analysis Services], tutorials
 - data mining [Analysis Services], tutorials
@@ -19,13 +19,13 @@ ms.assetid: 4b634cc1-86dc-42ec-9804-a19292fe8448
 caps.latest.revision: 33
 author: minewiskan
 ms.author: owend
-manager: kfile
-ms.openlocfilehash: fc1676f55d2d920c90d56f552973cf7e2a1d3942
-ms.sourcegitcommit: 8c040e5b4e8c7d37ca295679410770a1af4d2e1f
+manager: craigg
+ms.openlocfilehash: 788cdb0ccd3f8093972c45db1463412c5f41a765
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/21/2018
-ms.locfileid: "36312956"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37187665"
 ---
 # <a name="bike-buyer-dmx-tutorial"></a>Bike Buyer DMX 教學課程
   您將在此教學課程中學會如何使用資料採礦延伸模組 (DMX) 查詢語言，來建立、培訓和探索採礦模型。 您將使用這些採礦模型來建立預測，以判斷客戶是否要購買自行車。  
@@ -47,7 +47,7 @@ ms.locfileid: "36312956"
   
 -   DMX 查詢語言  
   
--   [Microsoft 決策樹演算法](../../2014/analysis-services/data-mining/microsoft-decision-trees-algorithm.md)和[Microsoft 群集演算法](../../2014/analysis-services/data-mining/microsoft-clustering-algorithm.md)  
+-   [Microsoft 決策樹演算法](../../2014/analysis-services/data-mining/microsoft-decision-trees-algorithm.md)而[Microsoft 群集演算法](../../2014/analysis-services/data-mining/microsoft-clustering-algorithm.md)  
   
 -   [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 中的查詢編輯器  
   
@@ -83,19 +83,19 @@ ms.locfileid: "36312956"
 ## <a name="what-you-will-learn"></a>學習內容  
  這個教學課程分成下列課程：  
   
- [第 1 課： 建立自行車買主採礦結構](../../2014/tutorials/lesson-1-creating-the-bike-buyer-mining-structure.md)  
+ [第 1 課：建立自行車買主採礦結構](../../2014/tutorials/lesson-1-creating-the-bike-buyer-mining-structure.md)  
  在這一課，您將學會如何使用 `CREATE` 陳述式來建立採礦結構。  
   
- [第 2 課： 將採礦模型加入 Bike Buyer 採礦結構](../../2014/tutorials/lesson-2-adding-mining-models-to-the-bike-buyer-mining-structure.md)  
+ [第 2 課：將採礦模型新增至自行車買主採礦結構中](../../2014/tutorials/lesson-2-adding-mining-models-to-the-bike-buyer-mining-structure.md)  
  在這一課，您將學會如何使用 `ALTER` 陳述式將採礦模型加入至採礦結構。  
   
- [第 3 課： 處理自行車買主採礦結構](../../2014/tutorials/lesson-3-processing-the-bike-buyer-mining-structure.md)  
+ [第 3 課：處理自行車買主採礦結構](../../2014/tutorials/lesson-3-processing-the-bike-buyer-mining-structure.md)  
  在這一課，您將學會如何使用 `INSERT INTO` 陳述式來處理採礦結構及其相關聯的採礦模型。  
   
- [第 4 課： 瀏覽 Bike Buyer 採礦模型](../../2014/tutorials/lesson-4-browsing-the-bike-buyer-mining-models.md)  
+ [第 4 課：瀏覽自行車買主採礦模型](../../2014/tutorials/lesson-4-browsing-the-bike-buyer-mining-models.md)  
  在這一課，您將學會如何使用 `SELECT` 陳述式來探索採礦模型的內容。  
   
- [第 5 課： 執行預測查詢](../../2014/tutorials/lesson-5-executing-prediction-queries.md)  
+ [第 5 課：執行預測查詢](../../2014/tutorials/lesson-5-executing-prediction-queries.md)  
  在這一課，您將學會如何使用 `PREDICTION JOIN` 陳述式來建立採礦模型的預測。  
   
 ## <a name="requirements"></a>需求  
@@ -105,10 +105,10 @@ ms.locfileid: "36312956"
   
 -   [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssASversion2005](../includes/ssasversion2005-md.md)][!INCLUDE[ssASversion10](../includes/ssasversion10-md.md)]， [!INCLUDE[ssASCurrent](../includes/ssascurrent-md.md)]，或 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]  
   
--   [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)] 資料庫。 為了加強安全性，系統預設不會安裝範例資料庫。 若要安裝的正式範例資料庫[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]，請瀏覽[Microsoft SQL Sample Databases](http://go.microsoft.com/fwlink/?LinkId=88417)頁面上，然後選取您想要安裝的資料庫...  
+-   [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)] 資料庫。 為了加強安全性，系統預設不會安裝範例資料庫。 若要安裝的正式範例資料庫[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]，請瀏覽[Microsoft SQL Sample Databases](http://go.microsoft.com/fwlink/?LinkId=88417)頁面，然後選取您想要安裝的資料庫...  
   
 > [!NOTE]  
->  當檢閱教學課程時，我們建議您將加入**下一個主題**和**上一個主題**文件檢視器工具列的按鈕。  
+>  當檢閱教學課程時，我們建議您將新增**下一個主題**並**上一個主題**文件檢視器工具列的按鈕。  
   
 ## <a name="see-also"></a>另請參閱  
  [購物籃 DMX 教學課程](../../2014/tutorials/market-basket-dmx-tutorial.md)   

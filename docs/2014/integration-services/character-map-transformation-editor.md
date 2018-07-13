@@ -1,5 +1,5 @@
 ---
-title: 字元對應表轉換編輯器 |Microsoft 文件
+title: 字元對應表轉換編輯器 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.charactermaptransformation.f1
 helpviewer_keywords:
 - Character Map Transformation Editor
 ms.assetid: 3f1dbcf9-9cca-4606-bdcc-7ea6ad48cdf3
 caps.latest.revision: 25
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: b6f71d403db458a5907a8c94279cf02a686c581d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 94857d436adf11eb8cc9732a20918478457d95fe
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36021977"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37223722"
 ---
 # <a name="character-map-transformation-editor"></a>字元對應表轉換編輯器
   使用 [字元對應表轉換編輯器] 對話方塊，來選取要套用至資料行資料的字串函數，以及指定對應是就地變更或加入為新資料行。  
@@ -40,7 +40,7 @@ ms.locfileid: "36021977"
  **目的地**  
  指定字串作業之結果的儲存方式為就地儲存、使用現有的資料行儲存，或將修改的資料儲存為新的資料行。  
   
-|ReplTest1|描述|  
+|值|描述|  
 |-----------|-----------------|  
 |新增資料行|將資料儲存在新的資料行中。 在 **[輸出別名]** 之下指派資料行名稱。|  
 |就地變更|將修改的資料儲存在現有的資料行中。|  
@@ -48,7 +48,7 @@ ms.locfileid: "36021977"
  **運算**  
  從字串函數要套用至資料行資料的清單中選取。  
   
-|ReplTest1|描述|  
+|值|描述|  
 |-----------|-----------------|  
 |小寫|轉換為小寫。|  
 |大寫|轉換為大寫。|  

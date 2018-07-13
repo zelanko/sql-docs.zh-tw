@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Data Profiling Task Editor
 ms.assetid: 9ccb8fc5-f65e-41a2-9511-7fa55586eb8b
 caps.latest.revision: 24
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 690fcb3380d5ceb3a996ca3f77c926bf16dee9a6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 96287b68f0d6610beab336bdb3ad3477e5d6ef66
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36021986"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37178325"
 ---
 # <a name="column-pattern-profile-request-options-data-profiling-task"></a>資料行模式設定檔要求選項 (資料分析工作)
   您可以使用 [設定檔要求] 頁面的 [要求屬性] 窗格，針對要求窗格中選取的 [資料行模式設定檔要求] 設定選項。 資料行模式設定檔會報告一組規則運算式，其中涵蓋了字串資料行中值的指定百分比。 這個設定檔可協助您識別資料中的問題，例如無效的字串，而且可以建議未來可用於驗證新值的規則運算式。 舉例來說，「美國郵遞區號」資料行的模式設定檔可能會產生規則運算式 \d{5}-\d{4}、\d{5} 和 \d{9}。 如果您看見其他規則運算式，表示您的資料可能包含無效或格式錯誤的值。  
@@ -36,14 +36,14 @@ ms.locfileid: "36021986"
   
 -   **分隔符號**：根據預設，分隔符號清單包含下列字元：空格、水平定位字元 (\t)、新行字元 (\n) 和歸位字元 (\r)。 雖然您可以指定其他分隔符號，但是無法移除預設的分隔符號。  
   
--   **符號**根據預設，清單**符號**包含下列字元： `,.;:-"'`~ = （& s) / @ ！？（) <> []{}| #* ^ %`. For example, if the symbols are "`（)-'"，"(425) 123-4567"的值會 token 化成為 ["（"，"425"，"）"，"123"，"-"，"4567"，")"]。  
+-   **符號**根據預設，清單**符號**包含下列字元： `,.;:-"'`~ = & / @ ！？（) <> []{}| #* ^ %`. For example, if the symbols are "`（)-'"，"(425) 123-4567"的值會 token 化成為 ["（"，"425"，"）"，"123"，"-"，"4567"，")"]。  
   
  一個字元無法同時屬於分隔符號和符號。  
   
  所有分隔符號都會在 Token 化程序中正規化成為單一空格，而符號則會保留。  
   
 ## <a name="understanding-the-use-of-the-tag-table"></a>了解標記資料表的使用方式  
- 您可以將標記和相關的詞彙儲存在您於 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫中建立的特殊資料表中，藉以選擇性地以單一標記將相關 Token 組成群組。 標記資料表必須具有兩個字串資料行：一個名為「標記」，而另一個名為「詞彙」。 這些資料行可以是類型`char`， `nchar`， `varchar`，或`nvarchar`，但不是`text`或`ntext`。 您可以在單一資料表中結合多個標記和對應的詞彙。 一個資料行模式設定檔要求只能使用一份標記資料表。 您可以使用個別的 [!INCLUDE[vstecado](../../includes/vstecado-md.md)] 連線管理員來連接至標記資料表。 因此，標記資料表可以位於不同的資料庫中或與來源資料位於不同的伺服器上。  
+ 您可以將標記和相關的詞彙儲存在您於 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫中建立的特殊資料表中，藉以選擇性地以單一標記將相關 Token 組成群組。 標記資料表必須具有兩個字串資料行：一個名為「標記」，而另一個名為「詞彙」。 這些資料行可以是類型`char`， `nchar`， `varchar`，或`nvarchar`，而非`text`或`ntext`。 您可以在單一資料表中結合多個標記和對應的詞彙。 一個資料行模式設定檔要求只能使用一份標記資料表。 您可以使用個別的 [!INCLUDE[vstecado](../../includes/vstecado-md.md)] 連線管理員來連接至標記資料表。 因此，標記資料表可以位於不同的資料庫中或與來源資料位於不同的伺服器上。  
   
  例如，您可以使用單一標記「方向」，將可能顯示在街道地址中的「東」、「西」、「北」和「南」值組成群組。 下表是這類標記資料表的範例。  
   
@@ -132,7 +132,7 @@ ms.locfileid: "36021986"
  如需詳細資訊，請參閱本主題前面的「了解分隔符號和符號的使用方式」。  
   
  **Symbols**  
- 列出應該保留成為模式一部分的符號。 範例可能包括 "/" (代表日期)、":" (代表時間) 和 " @ " (代表電子郵件地址)。 根據預設，清單**符號**包含下列字元： `,.;:-"'`~ = （& s) / @ ！？（) <> []{}| #* ^ %'。  
+ 列出應該保留成為模式一部分的符號。 範例可能包括 "/" (代表日期)、":" (代表時間) 和 " @ " (代表電子郵件地址)。 根據預設，清單**符號**包含下列字元： `,.;:-"'`~ = & / @ ！？（) <> []{}| #* ^ %'。  
   
  如需詳細資訊，請參閱本主題前面的「了解分隔符號和符號的使用方式」。  
   
@@ -147,7 +147,7 @@ ms.locfileid: "36021986"
  如需詳細資訊，請參閱本主題前面的「了解標記資料表的使用方式」。  
   
 ## <a name="see-also"></a>另請參閱  
- [資料分析工作編輯器&#40;[一般] 頁面&#41;](../general-page-of-integration-services-designers-options.md)   
+ [資料分析工作編輯器&#40;一般頁面&#41;](../general-page-of-integration-services-designers-options.md)   
  [單一資料表快速分析表單 &#40;資料分析工作&#41;](single-table-quick-profile-form-data-profiling-task.md)  
   
   

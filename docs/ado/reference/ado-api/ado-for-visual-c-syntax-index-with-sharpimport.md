@@ -1,5 +1,5 @@
 ---
-title: 'ADO 的 Visual c + + 語法索引 #import |Microsoft 文件'
+title: 'ADO for Visual c + + 語法索引與 #import |Microsoft Docs'
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -21,21 +21,21 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 9af0435791391ffcf3224a0246fc7a7f12598dcf
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 88843691166fab6300f2a2f4a092b25ce9552ac3
+ms.sourcegitcommit: dc9d656a1cdc73fa6333359480e638a7435102de
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35275527"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36957701"
 ---
-# <a name="ado-for-visual-c-syntax-index-with-import"></a>Visual c + + 語法索引 #import ADO
-此索引是根據 Microsoft Visual c + + ADO 語言參考的交互參照和 **#import**指示詞。  
+# <a name="ado-for-visual-c-syntax-index-with-import"></a>ADO #import Visual c + + 語法索引
+這個索引是根據 Microsoft Visual c + + ADO 語言參考的交互參照和 **#import**指示詞。  
   
- 這個特定的索引已編譯的程式衍生 **#import**指示詞針對此 ADO.dll 檔，然後重新格式化 *.tlh 檔案所產生。 只有方法、 屬性和事件的相關資訊時保留。 替代語法宣告每個屬性會列出由相對應為"`__declspec(property...)`"指示詞。  
+ 這個特定的索引已編譯的程式來衍生 **#import**指示詞，針對 ADO.dll 中，然後重新格式化\*.tlh 檔案所產生。 只有方法、 屬性和事件的相關資訊時保留。 替代語法宣告每一個屬性是由相對應列出 「`__declspec(property...)`"指示詞。  
   
- 強烈建議您使用讀取[Visual c + + ADO Programming](../../../ado/guide/appendixes/visual-c-ado-programming.md)如需詳細資訊。  
+ 您會極力建議您閱讀[Visual c + + ADO 程式設計](../../../ado/guide/appendixes/visual-c-ado-programming.md)如需詳細資訊。  
   
- 使用 Visual c + + 中的方法和屬性語法 **#import**指示詞會針對下列項目列出：  
+ 使用 Visual c + + 中的方法和屬性語法 **#import**針對下列項目所列的指示詞：  
   
 -   [ADO 集合](../../../ado/reference/ado-api/collections-visual-c-syntax-index-with-sharpimport.md)  
   
@@ -55,7 +55,7 @@ ms.locfileid: "35275527"
   
 -   [資料錄集物件](../../../ado/reference/ado-api/recordset-visual-c-syntax-index-with-sharpimport.md)  
   
--   [資料流物件](../../../ado/reference/ado-api/stream-visual-c-syntax-index-with-sharpimport.md)  
+-   [Stream 物件](../../../ado/reference/ado-api/stream-visual-c-syntax-index-with-sharpimport.md)  
   
 -   [連線事件](../../../ado/reference/ado-api/connectionevents-visual-c-syntax-index-with-sharpimport.md)  
   

@@ -1,5 +1,5 @@
 ---
-title: 追蹤元素 (ASSL) |Microsoft 文件
+title: 追蹤元素 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - Traces element
 ms.assetid: 7ca2c7d1-fda3-4c76-9e32-fd9b5dda56e9
 caps.latest.revision: 32
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: fc4088ac641b754e70e02508bbef2f629f49ba95
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e761f8ac9bb193ed0c04b0a475f0841513505e5d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36022497"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37215948"
 ---
 # <a name="traces-element-assl"></a>Traces 元素 (ASSL)
   包含與 [Server](../objects/server-element-assl.md) 元素相關聯之 [Trace](../objects/trace-element-assl.md) 元素的集合。  
@@ -64,7 +64,7 @@ ms.locfileid: "36022497"
 |子元素|[追蹤](../objects/trace-element-assl.md)|  
   
 ## <a name="remarks"></a>備註  
- 分析管理物件 (AMO) 物件模型中的對應元素是<xref:Microsoft.AnalysisServices.TraceCollection>。  
+ 在 「 分析管理物件 (AMO) 物件模型的對應元素是<xref:Microsoft.AnalysisServices.TraceCollection>。  
   
 ## <a name="see-also"></a>另請參閱  
  [集合&#40;ASSL&#41;](collections-assl.md)  

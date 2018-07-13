@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 topic_type:
 - apiref
 helpviewer_keywords:
 - Auto Stats event class
 ms.assetid: cd613fce-01e1-4d8f-86cc-7ffbf0759f9e
 caps.latest.revision: 34
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 2c90a2afb20e7757e8797aaf5849c5fe4449b1d5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 796f417d3dae943334b6cdadc62c633dcbe18baf
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36022185"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37213018"
 ---
 # <a name="auto-stats-event-class"></a>Auto Stats 事件類別
   **Auto Stats** 事件類別表示索引和資料行統計資料已發生自動更新。  
@@ -59,7 +59,7 @@ ms.locfileid: "36022185"
 |**SPID**|**int**|事件發生所在之工作階段的識別碼。|12|是|  
 |**StartTime**|**datetime**|事件啟動的時間 (如果有的話)。|14|是|  
 |**成功**|**int**|0 = 錯誤。<br /><br /> 1 = 成功。<br /><br /> 2 = 因伺服器調整流速而略過 (MSDE)。|23|是|  
-|**TextData**|**ntext**|此資料行的內容需視統計資料是採同步更新 (**EventSubClass** 1) 或非同步更新 (**EventSubClass** 2、3 或 4) 而定：<br /><br /> 1：列出已更新/建立的統計資料<br /><br /> 2、3 或 4：NULL； **IndexID** 資料行中會填入已更新之統計資料的索引/統計資料識別碼。|@shouldalert|是|  
+|**TextData**|**ntext**|此資料行的內容需視統計資料是採同步更新 (**EventSubClass** 1) 或非同步更新 (**EventSubClass** 2、3 或 4) 而定：<br /><br /> 1：列出已更新/建立的統計資料<br /><br /> 2、3 或 4：NULL； **IndexID** 資料行中會填入已更新之統計資料的索引/統計資料識別碼。|1|是|  
 |**TransactionID**|**bigint**|由系統指派給交易的識別碼。|4|是|  
 |**型別**|**int**|作業類型。|57|是|  
   

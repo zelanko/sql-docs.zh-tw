@@ -1,5 +1,5 @@
 ---
-title: FiscalFirstMonth 元素 (ASSL) |Microsoft 文件
+title: FiscalFirstMonth 元素 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - FiscalFirstMonth element
 ms.assetid: 30766baa-ebec-4425-93de-7defe4d6e571
 caps.latest.revision: 28
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 1c7a1b39a6950791a0e38fa1e43b69ce11214c8e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 494182ff509e5d4b98cc51fe78561e9cfd63c56b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36022248"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37195958"
 ---
 # <a name="fiscalfirstmonth-element-assl"></a>FiscalFirstMonth 元素 (ASSL)
   定義之會計週期的第一個月[TimeBinding](../data-type/binding-data-type-assl.md)項目。  
@@ -62,7 +62,7 @@ ms.locfileid: "36022248"
 |子元素|無|  
   
 ## <a name="remarks"></a>備註  
- 對應目的父代的項目`FiscalFirstMonth`在 「 分析管理物件 (AMO) 物件模型而言， <xref:Microsoft.AnalysisServices.TimeBinding>。  
+ 對應至父系的元素`FiscalFirstMonth`在 「 分析管理物件 (AMO) 物件模型是<xref:Microsoft.AnalysisServices.TimeBinding>。  
   
 ## <a name="see-also"></a>另請參閱  
  [屬性&#40;ASSL&#41;](properties-assl.md)  

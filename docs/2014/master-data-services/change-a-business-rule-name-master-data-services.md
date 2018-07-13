@@ -8,25 +8,25 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - business rules [Master Data Services], changing name
 ms.assetid: cffcae43-a208-443f-9f43-a0ec9e05f79c
 caps.latest.revision: 5
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: b70b2ee10b092be94df67c13be09944824546b77
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: d10fa33ef28b7b8cf6b46bb15d35b5975f979cb9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36021966"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37239138"
 ---
 # <a name="change-a-business-rule-name-master-data-services"></a>變更商務規則名稱 (Master Data Services)
   在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中，當指派的商務規則名稱不符合業務需求時，變更此名稱。  
   
-## <a name="prerequisites"></a>必要條件  
+## <a name="prerequisites"></a>先決條件  
  若要執行此程序：  
   
 -   您必須擁有存取 **[系統管理]** 功能區域的權限。  
@@ -45,11 +45,11 @@ ms.locfileid: "36021966"
   
 4.  從 [實體] 清單中選取實體。  
   
-5.  從**成員型別**清單中，選取 成員類型。  
+5.  從**的成員型別**清單中，選取 成員類型。  
   
 6.  從 [屬性] 清單中，選取屬性或保留預設值 [全部]。  
   
-7.  在方格中，商務規則，資料列中按兩下**名稱**欄位。  
+7.  在方格中，在 商務規則資料列，按兩下**名稱**欄位。  
   
 8.  輸入商務規則的名稱。  
   

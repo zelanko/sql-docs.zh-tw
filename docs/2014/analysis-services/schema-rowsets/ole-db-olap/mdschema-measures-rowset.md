@@ -1,5 +1,5 @@
 ---
-title: MDSCHEMA_MEASURES 資料列集 |Microsoft 文件
+title: MDSCHEMA_MEASURES 資料列集 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -18,15 +18,15 @@ helpviewer_keywords:
 - MDSCHEMA_MEASURES rowset
 ms.assetid: 6ff5bd1a-aad0-49b8-9f8d-7df2637caacf
 caps.latest.revision: 30
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 6608c64caa882499282ad7a7e30090ab4118b522
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 84ea2ceeaef0c6431f3860f3b23da07f43ee6c5a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36022005"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37237468"
 ---
 # <a name="mdschemameasures-rowset"></a>MDSCHEMA_MEASURES 資料列集
   描述 Cube 內的每個量值。  
@@ -43,7 +43,7 @@ ms.locfileid: "36022005"
 |`MEASURE_UNIQUE_NAME`|`DBTYPE_WSTR`||量值的唯一名稱。 對於會依識別資格產生唯一名稱的提供者，此名稱的每個元件會使用分隔符號。|  
 |`MEASURE_CAPTION`|`DBTYPE_WSTR`||與量值關聯的標籤或標題。 主要用於顯示用途。 如果標題不存在，就會傳回 `MEASURE_NAME`。|  
 |`MEASURE_GUID`|`DBTYPE_GUID`||不支援。|  
-|`MEASURE_AGGREGATOR`|`DBTYPE_I4`||識別如何衍生量值的列舉。 可以是下列其中一個值：<br /><br /> -   `MDMEASURE_AGGR_SUM` (`1`) 識別量值彙總從`SUM`。<br />-   `MDMEASURE_AGGR_COUNT` (`2`) 識別量值彙總從`COUNT`。<br />-   **MDMEASURE_AGGR_MIN** (`3`) 識別量值彙總從`MIN`。<br />-   **MDMEASURE_AGGR_MAX** (`4`) 識別量值彙總從`MAX`。<br />-   `MDMEASURE_AGGR_AVG` (`5`) 識別量值彙總從`AVG`。<br />-   `MDMEASURE_AGGR_VAR` (`6`) 識別量值彙總從`VAR`。<br />-   `MDMEASURE_AGGR_STD` (`7`) 識別量值彙總從`STDEV`。<br />-   `MDMEASURE_AGGR_DST` (`8`) 識別量值彙總從`DISTINCT COUNT`。<br />-   `MDMEASURE_AGGR_NONE` (`9`) 識別量值彙總從`NONE`。<br />-   `MDMEASURE_AGGR_AVGCHILDREN` (`10`) 識別量值彙總從`AVERAGEOFCHILDREN`。<br />-   `MDMEASURE_AGGR_FIRSTCHILD` (`11`) 識別量值彙總從`FIRSTCHILD`。<br />-   `MDMEASURE_AGGR_LASTCHILD` (`12`) 識別量值彙總從`LASTCHILD`。<br />-   `MDMEASURE_AGGR_FIRSTNONEMPTY` (`13`) 識別量值彙總從`FIRSTNONEMPTY`，<br />-   `MDMEASURE_AGGR_LASTNONEMPTY` (`14`) 識別量值彙總從`LASTNONEMPTY`。<br />-   `MDMEASURE_AGGR_BYACCOUNT` (`15`) 識別量值彙總從`BYACCOUNT`。<br />-   `MDMEASURE_AGGR_CALCULATED` (`127`) 識別量值衍生自不是上述任何單一函數的公式。<br />-   `MDMEASURE_AGGR_UNKNOWN` (`0`) 識別量值衍生自未知的彙總函式或公式。|  
+|`MEASURE_AGGREGATOR`|`DBTYPE_I4`||識別如何衍生量值的列舉。 可為下列其中一個值：<br /><br /> -   `MDMEASURE_AGGR_SUM` (`1`) 識別量值彙總從`SUM`。<br />-   `MDMEASURE_AGGR_COUNT` (`2`) 識別量值彙總從`COUNT`。<br />-   **MDMEASURE_AGGR_MIN** (`3`) 識別量值彙總從`MIN`。<br />-   **MDMEASURE_AGGR_MAX** (`4`) 識別量值彙總從`MAX`。<br />-   `MDMEASURE_AGGR_AVG` (`5`) 識別量值彙總從`AVG`。<br />-   `MDMEASURE_AGGR_VAR` (`6`) 識別量值彙總從`VAR`。<br />-   `MDMEASURE_AGGR_STD` (`7`) 識別量值彙總從`STDEV`。<br />-   `MDMEASURE_AGGR_DST` (`8`) 識別量值彙總從`DISTINCT COUNT`。<br />-   `MDMEASURE_AGGR_NONE` (`9`) 識別量值彙總從`NONE`。<br />-   `MDMEASURE_AGGR_AVGCHILDREN` (`10`) 識別量值彙總從`AVERAGEOFCHILDREN`。<br />-   `MDMEASURE_AGGR_FIRSTCHILD` (`11`) 識別量值彙總從`FIRSTCHILD`。<br />-   `MDMEASURE_AGGR_LASTCHILD` (`12`) 識別量值彙總從`LASTCHILD`。<br />-   `MDMEASURE_AGGR_FIRSTNONEMPTY` (`13`) 識別量值彙總從`FIRSTNONEMPTY`，<br />-   `MDMEASURE_AGGR_LASTNONEMPTY` (`14`) 識別量值彙總從`LASTNONEMPTY`。<br />-   `MDMEASURE_AGGR_BYACCOUNT` (`15`) 識別量值彙總從`BYACCOUNT`。<br />-   `MDMEASURE_AGGR_CALCULATED` (`127`) 識別量值衍生自並非上述任何單一函數的公式。<br />-   `MDMEASURE_AGGR_UNKNOWN` (`0`) 識別量值衍生自未知的彙總函式或公式。|  
 |`DATA_TYPE`|`DBTYPE_UI2`||量值的資料類型。|  
 |`NUMERIC_PRECISION`|`DBTYPE_UI2`||如果量值物件的資料類型為精確數值，則為屬性的最大有效位數。 如果是所有其他屬性類型，則為 `NULL`。|  
 |`NUMERIC_SCALE`|`DBTYPE_I2`||如果量值物件的類型指標為 `DBTYPE_NUMERIC` 或 `DBTYPE_DECIMAL`，則此為小數點右邊的位數。 否則，這個值為 `NULL`。|  

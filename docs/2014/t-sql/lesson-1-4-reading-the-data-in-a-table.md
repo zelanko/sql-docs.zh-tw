@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - reading data in a table
 ms.assetid: 532232c9-3d41-45cd-9150-de67a1cbfcf5
 caps.latest.revision: 13
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 7eb28bcefab604d070b2d3599accb4045faae8aa
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: edmacauley
+ms.author: edmaca
+manager: craigg
+ms.openlocfilehash: 3c1d00391f9d43564cf53cf244ff4144b37bb1f6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36023240"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37273994"
 ---
 # <a name="reading-the-data-in-a-table-tutorial"></a>讀取資料表的資料 (教學課程)
   使用 SELECT 陳述式來讀取資料表的資料。 [!INCLUDE[tsql](../includes/tsql-md.md)] 陳述式中最重要的其中一個陳述式就是 SELECT 陳述式，而其中有很多的語法變化。 在本教學課程中，您將使用五種簡單的變化樣式。  
@@ -88,7 +88,7 @@ ms.locfileid: "36023240"
 |[數學函數 &#40;Transact-SQL&#41;](/sql/t-sql/functions/mathematical-functions-transact-sql)|[文字和影像函數&#40;Transact SQL&#41;](/sql/t-sql/functions/text-and-image-functions-textptr-transact-sql)|  
   
 ## <a name="next-task-in-lesson"></a>本課程的下一項工作  
- [摘要： 建立資料庫物件](lesson-1-5-summary-creating-database-objects.md)  
+ [摘要：建立資料庫物件](lesson-1-5-summary-creating-database-objects.md)  
   
 ## <a name="see-also"></a>另請參閱  
  [SELECT &#40;Transact-SQL&#41;](/sql/t-sql/queries/select-transact-sql)  

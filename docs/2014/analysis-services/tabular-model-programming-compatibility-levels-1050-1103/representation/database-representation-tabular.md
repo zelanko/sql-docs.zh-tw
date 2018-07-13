@@ -1,5 +1,5 @@
 ---
-title: 資料庫 Representation(Tabular) |Microsoft 文件
+title: 資料庫 Representation(Tabular) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -12,15 +12,15 @@ ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 16a233fb-f83b-4ca1-acb5-6186eca0a62c
 caps.latest.revision: 9
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 653395b2733fc6af8df7b19a746bb04edc3d7f53
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e288ccfb3cee35ef1506fe46d2128dd6ab43480a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36021997"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37197768"
 ---
 # <a name="database-representationtabular"></a>資料庫表示法 (表格式)
   在表格式模式下，資料庫是表格式模型中所有物件的容器。  
@@ -91,6 +91,6 @@ catch (Exception createDBxc)
   
 ```  
   
- 實際了解如何使用 AMO 建立及操作資料庫表示法，請參閱 「 表格式 AMO 2012 範例; 在原始碼特別要檢查以下的原始程式檔： Database.cs。 提供此範例程式碼的用意只是為了支援這裡所說明的邏輯概念，您不應將其用於生產環境。  
+ 實際了解如何使用 AMO 建立及操作資料庫表示法，請參閱表格式 AMO 2012 範例; 中的原始程式碼特別要檢查以下的原始程式檔： Database.cs。 提供此範例程式碼的用意只是為了支援這裡所說明的邏輯概念，您不應將其用於生產環境。  
   
   

@@ -1,5 +1,5 @@
 ---
-title: 修改屬性的 KeyColumn 屬性 |Microsoft 文件
+title: 修改屬性的 KeyColumn 屬性 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - binding attributes [Analysis Services]
 - attributes [Analysis Services], binding
 - key columns [Analysis Services]
 ms.assetid: a2643be4-8123-4cc3-baf9-e5ec54a1669d
 caps.latest.revision: 35
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 68a1759aa5a527037c87efc6763ac81e40958d2d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 10b3735131b85bd071b8f8333bc663f1ed4e109a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36030167"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37185346"
 ---
 # <a name="modify-the-keycolumn-property-of-an-attribute"></a>修改屬性 (attribute) 的 KeyColumn 屬性 (property)
   您可以修改屬性 (Attribute) 的 **KeyColumns** 屬性 (Property)。 例如，您可能要為屬性指定複合索引鍵，而不是單一索引鍵。  
@@ -38,7 +38,7 @@ ms.locfileid: "36030167"
   
          – 或 –  
   
-    -   在 Cube 設計師中，在**Cube 結構**索引標籤上，展開中的 cube 維度**維度**按一下**編輯\<維度 >**。  
+    -   在 Cube 設計師中，在**Cube 結構**索引標籤上，依序展開中的 cube 維度**維度**窗格，然後按一下 **編輯\<維度 >**。  
   
 3.  在 [維度結構] 索引標籤的 [屬性] 窗格中，按一下要修改其 **KeyColumns** 屬性 (Property) 的屬性 (Attribute)。  
   

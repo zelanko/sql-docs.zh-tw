@@ -1,5 +1,5 @@
 ---
-title: 第 8 課： 建立關鍵效能指標 |Microsoft 文件
+title: 第 8 課： 建立關鍵效能指標 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,25 +8,25 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: a6c8ac2b-64ba-456f-b418-7bf0afe145d1
 caps.latest.revision: 14
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: jhubbard
-ms.openlocfilehash: fd135a37a4fe2721ca6aaa70d25e869b9a83733e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 0895fe1e699dc7ae53cb278087d43643cbdbf84c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36030643"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37187245"
 ---
 # <a name="lesson-8-create-key-performance-indicators"></a>第 8 課：建立關鍵效能指標
   在這一課，您將建立關鍵效能指標 (KPI)。 KPI 會對照量值或絕對值所定義的「目標」值，量測由「基底」量值所定義之值的效能。 在報表用戶端應用程式中，KPI 可為商務專業人士提供快速而簡便的方法來了解商務成就的摘要，或是找出趨勢。 如需詳細資訊，請參閱 [KPI &#40;SSAS 表格式&#41;](tabular-models/kpis-ssas-tabular.md)。  
   
  完成本課程的估計時間： **15 分鐘**  
   
-## <a name="prerequisites"></a>必要條件  
+## <a name="prerequisites"></a>先決條件  
  本主題是表格式模型教學課程的一部分，必須依序完成。 在執行本課中的工作之前，您應已完成上一課：[第 7 課：建立量值](lesson-6-create-measures.md)。  
   
 ## <a name="create-key-performance-indicators"></a>建立關鍵效能指標  
@@ -51,9 +51,9 @@ ms.locfileid: "36030643"
   
 5.  在 [關鍵效能指標] 對話方塊的 [定義目標值] 中，選取 [絕對值] 選項。  
   
-6.  在**絕對值**欄位中，輸入`1.1`，然後按 ENTER 鍵。  
+6.  在 **絕對值**欄位中，輸入`1.1`，然後按 ENTER 鍵。  
   
-7.  在**定義狀態臨界值**，在左側 （下） 滑動軸欄位中，輸入`1`，然後在右側 （上） 滑動軸欄位中，輸入`1.07`。  
+7.  在 **定義狀態臨界值**，在左側 （下） 滑動軸欄位中，輸入`1`，然後在右側 （高） 滑桿欄位中輸入`1.07`。  
   
 8.  在 [選取圖示樣式] 中，選取菱形 (紅色)、三角形 (黃色)、圓形 (綠色) 圖示類型。  
   
@@ -78,7 +78,7 @@ ms.locfileid: "36030643"
   
 4.  在 [關鍵效能指標] 對話方塊的 [定義目標值] 中，選取 [絕對值] 選項。  
   
-5.  在**絕對值**欄位中，輸入`1.25`。  
+5.  在 **絕對值**欄位中，輸入`1.25`。  
   
 6.  在 [定義狀態臨界值] 中，滑動左側 (下) 滑動軸欄位，直到欄位顯示 **0.8**，然後滑動右側 (上) 滑動軸欄位，直到欄位顯示 **1.03**。  
   

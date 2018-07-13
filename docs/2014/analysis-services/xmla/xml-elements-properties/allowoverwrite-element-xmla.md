@@ -1,5 +1,5 @@
 ---
-title: AllowOverwrite 元素 (XMLA) |Microsoft 文件
+title: AllowOverwrite 元素 (XMLA) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -23,18 +23,18 @@ helpviewer_keywords:
 - AllowOverwrite element
 ms.assetid: e7e92481-5f29-47f2-9efd-4e5e60c002bb
 caps.latest.revision: 11
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: b34b0becd78adca99e4052e142fc696c155f6e20
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 0ad153d33b57f7fea763666d19e8e0b44fa155c3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36023001"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37190898"
 ---
 # <a name="allowoverwrite-element-xmla"></a>AllowOverwrite 元素 (XMLA)
-  決定是否父[備份](../xml-elements-commands/backup-element-xmla.md)或[還原](../xml-elements-commands/restore-element-xmla.md)命令會嘗試覆寫目標檔案或資料庫。  
+  決定是否父系[備份](../xml-elements-commands/backup-element-xmla.md)或是[還原](../xml-elements-commands/restore-element-xmla.md)命令嘗試覆寫目標檔案或資料庫。  
   
 ## <a name="syntax"></a>語法  
   
@@ -65,7 +65,7 @@ ms.locfileid: "36023001"
 ## <a name="remarks"></a>備註  
  若為 `Backup` 命令，`AllowOverwrite` 元素會決定此命令是否可覆寫 `File` 元素中指定的備份檔案。  
   
- 如`Restore`項目，`AllowOverwrite`元素會決定是否可以覆寫命令[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]中所指定資料庫`DatabaseName`項目。  
+ 針對`Restore`項目，`AllowOverwrite`元素會決定此命令是否可以覆寫[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]中所指定資料庫`DatabaseName`項目。  
   
 ## <a name="see-also"></a>另請參閱  
  [DatabaseName 元素&#40;XMLA&#41;](name-element-xmla.md)   

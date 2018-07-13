@@ -1,5 +1,5 @@
 ---
-title: 維度元素 (ASSL) |Microsoft 文件
+title: 維度元素 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - Dimension element
 ms.assetid: 71886014-f463-4b70-a2a2-d9e5053ba4f0
 caps.latest.revision: 38
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 2995ceae19dc17fc6abd71cbdd102375058237be
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d6d8b909b6bf7018f70f381ec8d07b20f6b7d851
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36023007"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37185237"
 ---
 # <a name="dimension-element-assl"></a>Dimension 元素 (ASSL)
   定義維度。  
@@ -70,7 +70,7 @@ ms.locfileid: "36023007"
 |[AggregationDesign](../data-type/aggregationdesigndimension-data-type-assl.md)|  
 |[AggregationInstance](../data-type/cubedimension-data-type-assl.md)|  
 |[Cube](cube-element-assl.md)|[CubeDimension](../data-type/cubedimension-data-type-assl.md)|  
-|[量值群組](../data-type/measuregroupdimension-data-type-assl.md)|  
+|[MeasureGroup](../data-type/measuregroupdimension-data-type-assl.md)|  
 |[檢視方塊](../data-type/perspectivedimension-data-type-assl.md)|  
   
 ## <a name="element-relationships"></a>元素關聯性  
@@ -81,7 +81,7 @@ ms.locfileid: "36023007"
 |子元素|無|  
   
 ## <a name="remarks"></a>備註  
- 分析管理物件 (AMO) 物件模型中對應的元素是<xref:Microsoft.AnalysisServices.Dimension>， <xref:Microsoft.AnalysisServices.AggregationDimension>， <xref:Microsoft.AnalysisServices.AggregationDesignDimension>， <xref:Microsoft.AnalysisServices.CubeDimension>， <xref:Microsoft.AnalysisServices.MeasureGroupDimension>，和<xref:Microsoft.AnalysisServices.PerspectiveDimension>。  
+ 在 「 分析管理物件 (AMO) 物件模型的對應項目<xref:Microsoft.AnalysisServices.Dimension>， <xref:Microsoft.AnalysisServices.AggregationDimension>， <xref:Microsoft.AnalysisServices.AggregationDesignDimension>， <xref:Microsoft.AnalysisServices.CubeDimension>， <xref:Microsoft.AnalysisServices.MeasureGroupDimension>，和<xref:Microsoft.AnalysisServices.PerspectiveDimension>。  
   
 ## <a name="see-also"></a>另請參閱  
  [物件&#40;ASSL&#41;](objects-assl.md)  

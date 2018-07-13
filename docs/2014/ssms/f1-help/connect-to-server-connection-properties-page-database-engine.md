@@ -8,27 +8,27 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.connecttosqlserver.connectionproperties.f1
 ms.assetid: edc1143c-6a47-4b02-92ab-441bdea8ea8a
 caps.latest.revision: 27
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: f79ba89862334e19c3e50b347588de4e4183afaa
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 738bae73382d71a3cd0458a35002068c56817d70
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36023708"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37198598"
 ---
 # <a name="connect-to-server-connection-properties-page-database-engine"></a>連接到伺服器 (連接屬性頁面) Database Engine
   連接到 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 執行個體或在 [已註冊的伺服器] 中註冊 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 時，請使用這個索引標籤來檢視或指定選項。 連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 執行個體時，[連接] 和 [選項] 才會出現在這個對話方塊中。 註冊 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 時，[測試] 和 [儲存] 才會出現在這個對話方塊中。  
   
 ## <a name="options"></a>選項。  
  **連接到資料庫**  
- 從清單中選取要連接的資料庫。 如果您選取**\<預設 >**，您將會連接到伺服器的預設資料庫。 如果您選取**\<瀏覽伺服器 >**，您可以瀏覽至用來連接資料庫的伺服器。  
+ 從清單中選取要連接的資料庫。 如果您選取**\<預設值 >**，您將會連接到伺服器的預設資料庫。 如果您選取**\<瀏覽伺服器 >**，您可以瀏覽至用來連接資料庫的伺服器。  
   
  當您透過 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 連接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Database Engine 執行個體時，您必須使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證，並在 [連接到伺服器] 對話方塊的 [連接屬性] 索引標籤上指定資料庫。請務必選取 [加密連接] 核取方塊。  
   

@@ -1,30 +1,28 @@
 ---
-title: sp_datatype_info_90 （SQL 資料倉儲） |Microsoft 文件
+title: sp_datatype_info_90 （SQL 資料倉儲） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/13/2017
 ms.prod: ''
 ms.prod_service: sql-data-warehouse, pdw
 ms.service: sql-data-warehouse
-ms.component: system-stored-procedures
+ms.component: system-objects
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: system-objects
 ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - TSQL
 ms.assetid: 1d043964-dc6e-4c3e-ab61-bc444d5e25ae
-caps.latest.revision: 9
 author: ronortloff
 ms.author: rortloff
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 975c542ff972361db8bfb2863c894a3363d5636a
-ms.sourcegitcommit: d2573a8dec2d4102ce8882ee232cdba080d39628
-ms.translationtype: MT
+ms.openlocfilehash: 349297399955dd9b3f43f4507f38918507f64cff
+ms.sourcegitcommit: abd71294ebc39695d403e341c4f77829cb4166a8
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33701771"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36926719"
 ---
 # <a name="spdatatypeinfo90-sql-data-warehouse"></a>sp_datatype_info_90 （SQL 資料倉儲）
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -44,37 +42,37 @@ sp_datatype_info_90 [ [ @data_type = ] data_type ]
   
 ## <a name="arguments"></a>引數  
  [ **@data_type=** ] *data_type*  
- 這是指定之資料類型的代號。 若要取得所有資料類型的清單，請省略這個參數。 *data_type*是**int**，預設值是 0。  
+ 這是指定之資料類型的代號。 若要取得所有資料類型的清單，請省略這個參數。 *data_type*已**int**，預設值是 0。  
   
  [ **@ODBCVer=** ] *odbc_version*  
- 這是所使用的 ODBC 版本。 *odbc_version*是**tinyint**，預設值是 2。  
+ 這是所使用的 ODBC 版本。 *odbc_version&lt*已**tinyint**，預設值是 2。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  無  
   
 ## <a name="result-sets"></a>結果集  
   
-|資料行名稱|資料類型|Description|  
+|資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |TYPE_NAME|**sysname**|DBMS 相依資料類型。|  
 |DATA_TYPE|**smallint**|這個類型的所有資料行所對應之 ODBC 類型的代碼。|  
 |PRECISION|**int**|資料來源的資料類型最大有效位數。 有效位數不適用的資料類型會傳回 NULL。 PRECISION 資料行的傳回值為十進位數。|  
 |LITERAL_PREFIX|**varchar(** 32 **)**|常數前面所用的一或多個字元。 例如，單引號 (**'**) 用於字元類型，0x 用於二進位。|  
 |LITERAL_SUFFIX|**varchar(** 32 **)**|用來結束常數的一或多個字元。 例如，單引號 (**'**) 用於字元類型，而二進位不用引號。|  
-|CREATE_PARAMS|**varchar(** 32 **)**|這個資料類型之建立參數的描述。 例如，**十進位**是"precision，scale，" **float**是 NULL，和**varchar**是"max_length"。|  
+|CREATE_PARAMS|**varchar(** 32 **)**|這個資料類型之建立參數的描述。 例如，**十進位**是"precision，scale"， **float**是 NULL，並**varchar**是"max_length"。|  
 |NULLABLE|**smallint**|指定 Null 屬性。<br /><br /> 1 = 允許 Null 值。<br /><br /> 0 = 不允許 Null 值。|  
 |CASE_SENSITIVE|**smallint**|指定是否區分大小寫。<br /><br /> 1 = 這類型的所有資料行都會區分大小寫 (用於定序)。<br /><br /> 0 = 這個類型的所有資料行都不區分大小寫。|  
 |SEARCHABLE|**smallint**|指定資料行類型的搜尋功能：<br /><br /> 1 = 無法搜尋。<br /><br /> 2 = 可使用 LIKE 搜尋。<br /><br /> 3 = 可使用 WHERE 搜尋。<br /><br /> 4 = 可使用 WHERE 或 LIKE 搜尋。|  
 |UNSIGNED_ATTRIBUTE|**smallint**|指定資料類型的正負號。<br /><br /> 1 = 資料類型不帶正負號。<br /><br /> 0 = 資料類型帶正負號。|  
-|MONEY|**smallint**|指定**money**資料型別。<br /><br /> 1 = **money**資料型別。<br /><br /> 0 = 未**money**資料型別。|  
-|AUTO_INCREMENT|**smallint**|指定自動累加。<br /><br /> 1 = 自動累加。<br /><br /> 0 = 不自動累加。<br /><br /> NULL = 屬性不適用。<br /><br /> 應用程式可以將值插入包含這個屬性的資料行中，但應用程式不能更新這個資料行中的值。 除了**元**資料類型，AUTO_INCREMENT 是只對屬於精確數值 」 和近似數值資料類型類別目錄的資料類型有效。|  
+|MONEY|**smallint**|指定**金錢**資料型別。<br /><br /> 1 =**金錢**資料型別。<br /><br /> 0 = 未**金錢**資料型別。|  
+|AUTO_INCREMENT|**smallint**|指定自動累加。<br /><br /> 1 = 自動累加。<br /><br /> 0 = 不自動累加。<br /><br /> NULL = 屬性不適用。<br /><br /> 應用程式可以將值插入包含這個屬性的資料行中，但應用程式不能更新這個資料行中的值。 除了**元**資料類型只適用於屬於精確數值 」 和近似數值資料類型類別目錄的資料類型是 AUTO_INCREMENT&AMP;LT。|  
 |LOCAL_TYPE_NAME|**sysname**|資料類型之資料來源相依名稱的當地語系化版本。 例如，法文的 DECIMAL 是 DECIMALE。 如果資料來源不支援當地語系化名稱，便傳回 NULL。|  
 |MINIMUM_SCALE|**smallint**|資料來源的資料類型最小小數位數。 如果資料類型有固定的小數位數，MINIMUM_SCALE 和 MAXIMUM_SCALE 資料行都包含這個值。 當小數位數不適用時，會傳回 NULL。|  
 |MAXIMUM_SCALE|**smallint**|資料來源的資料類型最大小數位數。 如果未在資料來源上個別定義最大小數位數，而是定義成與最大有效位數相同，這個資料行會包含與 PRECISION 資料行相同的值。|  
 |SQL_DATA_TYPE|**smallint**|SQL 資料類型出現在描述子之 TYPE 欄位時的值。 此資料行等同於 DATA_TYPE 資料行，除了**datetime**和 ANSI**間隔**資料型別。 這個欄位一律會傳回值。|  
-|SQL_DATETIME_SUB|**smallint**|**datetime**或 ANSI**間隔**如果 SQL_DATA_TYPE 的值是 SQL_DATETIME 或 SQL_INTERVAL 子代碼。 資料類型以外**datetime**和 ANSI**間隔**，這個欄位是 NULL。|  
+|SQL_DATETIME_SUB|**smallint**|**日期時間**或 ANSI**間隔**如果 SQL_DATA_TYPE 的值是 SQL_DATETIME 或 SQL_INTERVAL 子代碼。 資料類型以外**datetime**和 ANSI**間隔**，這個欄位是 NULL。|  
 |NUM_PREC_RADIX|**int**|用來計算資料行所能保留的最大數字之位元或位數數目。 如果資料類型是近似數值資料類型，這個資料行會包含 2 這個值來表示多個位元。 如果是精確數值類型，這個資料行會包含 10 這個值來表示多個十進位數。 否則，這個資料行就是 NULL。 藉由組合有效位數和基數，應用程式可以計算資料行所能保留的最大數目。|  
-|INTERVAL_PRECISION|**smallint**|間隔開頭有效位數，如果值*data_type*是**間隔**，否則為 NULL。|  
+|INTERVAL_PRECISION|**smallint**|值的間隔開頭有效位數，如果*data_type*是**間隔**，否則為 NULL。|  
 |USERTYPE|**smallint**|**usertype** systypes 資料表的值。|  
   
 ## <a name="remarks"></a>備註  
@@ -84,7 +82,7 @@ sp_datatype_info_90 [ [ @data_type = ] data_type ]
  需要 public 角色中的成員資格。  
   
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>範例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
- 下列範例會擷取資訊**sysname**和**nvarchar**藉由指定的資料型別*data_type*值`-9`。  
+ 下列範例會擷取資訊**sysname**並**nvarchar**藉由指定的資料型別*data_type*的值`-9`。  
   
 ```  
 USE master;  

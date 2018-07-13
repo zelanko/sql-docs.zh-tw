@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine-imoltp
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 6e005de0-3a77-4b91-b497-14cc0f9f6605
 caps.latest.revision: 5
-author: stevestein
-ms.author: sstein
-manager: jhubbard
-ms.openlocfilehash: 4d13b8b46066eb6c2c8c855859fdab0114269700
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+ms.openlocfilehash: 5c8b5a9f50c30cccb7a0e24799ca59105294aba0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36022159"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37236768"
 ---
 # <a name="configuring-storage-for-memory-optimized-tables"></a>設定記憶體最佳化資料表的儲存體
   您必須設定儲存容量和每秒的輸入/輸出作業 (IOPS)。  
@@ -34,11 +34,11 @@ ms.locfileid: "36022159"
   
 -   記憶體最佳化資料表會分散在一個或多個容器的檔案中來保存。 通常每個容器都應該對應至其本身的主軸，並用於增加儲存容量及改良效能。 您必須確定儲存媒體的連續 IOPS 可以支援交易記錄輸送量的 3 倍增加量。  
   
-     例如，如果記憶體最佳化資料表的交易記錄中產生 500 MB/秒的活動，記憶體最佳化資料表的儲存體必須支援 1.5 GB/秒。需要支援的 3 倍增加交易記錄輸送量來自觀察的資料和差異檔案組會先與初始資料寫入，則需要讀取/重新寫入做為合併作業的一部分。  
+     例如，如果記憶體最佳化資料表的交易記錄中產生 500 MB/秒的活動，記憶體最佳化資料表的儲存體必須支援 1.5 GB/秒。需要支援的 3 倍增加交易記錄輸送量來自以下的觀察： 資料和差異檔案組的初始資料時，會先寫入則需要 讀取/重新寫入為合併作業的一部分。  
   
      評估儲存體輸送量的另一個因素是記憶體最佳化資料表的復原時間。 持久性資料表中的資料必須先讀入記憶體中，然後資料庫才可以提供給應用程式使用。 一般來說，將資料載入記憶體最佳化資料表的作業可以根據 IOPS 的速度來進行。 因此，如果持久性記憶體最佳化資料表的總儲存空間為 60 GB，而您希望能夠在 1 分鐘內載入這些資料，則儲存空間的 IOPS 必須設定為每秒鐘 1 GB。  
   
--   如果您有偶數的主軸，您應該建立兩倍的容器數目，每組都對應到相同的主軸。 如果要分散 IOPS 和儲存空間，就必須這樣做。 如需詳細資訊，請參閱[記憶體最佳化檔案群組](the-memory-optimized-filegroup.md)。  
+-   如果您有偶數的主軸，您應該建立兩倍的容器數目，每組都對應到相同的主軸。 如果要分散 IOPS 和儲存空間，就必須這樣做。 如需詳細資訊，請參閱 <<c0> [ 記憶體最佳化檔案群組](the-memory-optimized-filegroup.md)。  
   
 ## <a name="see-also"></a>另請參閱  
  [建立及管理記憶體最佳化物件的儲存體](creating-and-managing-storage-for-memory-optimized-objects.md)  

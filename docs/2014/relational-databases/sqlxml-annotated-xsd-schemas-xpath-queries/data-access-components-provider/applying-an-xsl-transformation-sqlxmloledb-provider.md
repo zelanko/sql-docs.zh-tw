@@ -1,5 +1,5 @@
 ---
-title: 套用 XSL 轉換 （SQLXMLOLEDB 提供者） |Microsoft 文件
+title: 套用 XSL 轉換 （SQLXMLOLEDB 提供者） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -18,18 +18,18 @@ helpviewer_keywords:
 - XSL Transformations [SQLXML]
 ms.assetid: cb5e41ab-dd20-4873-af20-f417bd1bbf6d
 caps.latest.revision: 29
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 170bed8eece89add964d3f8f0b3ab3fe46552b26
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 0631033305d05252eb9253fb24614485a5ebccbf
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36022138"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37268484"
 ---
 # <a name="applying-an-xsl-transformation-sqlxmloledb-provider"></a>套用 XSL 轉換 (SQLXMLOLEDB 提供者)
-  在此範例 ADO 應用程式中，會執行 SQL 查詢，而且會將 XSL 轉換套用到結果中。 ClientSideXML 屬性設定為 True，就會強制執行用戶端上的資料列集處理。 命令用語設定為 {5d531cb2-e6ed-11d2-b252-00c04f681b71}，因為 SQL 查詢是在範本中指定，而且此用語必須在執行範本時指定。 Xsl 屬性會指定用來將轉換套用 XSL 檔案。 基底路徑屬性的值用於搜尋 XSL 檔。 如果您指定的路徑中 xsl 屬性的值，則路徑會是相對於基底路徑屬性中指定的路徑。  
+  在此範例 ADO 應用程式中，會執行 SQL 查詢，而且會將 XSL 轉換套用到結果中。 ClientSideXML 屬性設為 True，就會強制執行用戶端上的資料列集的處理。 命令用語設定為 {5d531cb2-e6ed-11d2-b252-00c04f681b71}，因為 SQL 查詢是在範本中指定，而且此用語必須在執行範本時指定。 Xsl 屬性會指定用來將轉換套用 XSL 檔案。 基底路徑屬性的值用於搜尋 XSL 檔。 如果您指定的 xsl 屬性值中的路徑，路徑會相對於基底路徑屬性中指定的路徑。  
   
  此範例顯示如何使用下列 SQLXMLOLEDB 提供者專屬的屬性：  
   
@@ -39,14 +39,14 @@ ms.locfileid: "36022138"
   
  在此用戶端 ADO 範例應用程式中，由 SQL 查詢所組成的 XML 範本會在伺服器上執行。  
   
- ClientSideXML 屬性設定為 True，因為未使用 FOR XML 子句的 SELECT 陳述式會傳送到伺服器。 伺服器會執行查詢，並將資料列集傳回給用戶端。 用戶端接著會將 FOR XML 轉換套用至資料列集，並產生 XML 文件。  
+ ClientSideXML 屬性設定為 True，因為沒有 FOR XML 子句的 SELECT 陳述式會傳送到伺服器。 伺服器會執行查詢，並將資料列集傳回給用戶端。 用戶端接著會將 FOR XML 轉換套用至資料列集，並產生 XML 文件。  
   
- 此應用程式; 中指定的 xsl 屬性因此，XSL 轉換套用至用戶端產生的 XML 文件，而且結果是兩個資料行的資料表。  
+ Xsl 指定的屬性是在應用程式中;因此，XSL 轉換套用至用戶端產生的 XML 文件，而且結果為兩個資料行的資料表。  
   
  若要執行範本命令，必須指定 XML 範本用語 {5d531cb2-e6ed-11d2-b252-00c04f681b71}。  
   
 > [!NOTE]  
->  在程式碼中，您必須於連接字串內提供 Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體的名稱。 此外，這個範例會指定 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 用於資料提供者 (這需要安裝其他網路用戶端軟體)。 如需詳細資訊，請參閱[SQL Server Native Client 的系統需求](../../native-client/system-requirements-for-sql-server-native-client.md)。  
+>  在程式碼中，您必須於連接字串內提供 Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體的名稱。 此外，這個範例會指定 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 用於資料提供者 (這需要安裝其他網路用戶端軟體)。 如需詳細資訊，請參閱 < [SQL Server Native Client 的系統需求](../../native-client/system-requirements-for-sql-server-native-client.md)。  
   
 ```  
 Option Explicit  

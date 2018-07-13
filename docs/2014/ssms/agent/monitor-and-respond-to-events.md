@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - notifications [SQL Server], alert
 - events [SQL Server], alerts
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - responding to events automatically
 ms.assetid: f7fbe155-5b68-4777-bc71-a47637471f32
 caps.latest.revision: 25
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 9c07dc3709a11b2ff416b9ee31d5d4dbb3bc1315
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 18dce0f5566da3cae4de2f0943ac32fc93a1fc94
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36021750"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37189715"
 ---
 # <a name="monitor-and-respond-to-events"></a>監視及回應事件
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Agent 會監視及自動回應「事件」(Event)，例如：來自 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的訊息、特定效能狀況與 Windows Management Instrumentation (WMI) 事件。  
@@ -72,6 +72,6 @@ ms.locfileid: "36021750"
  不管事件的來源為何， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 服務都會透過執行在事件警示中指定的工作來回應事件。  
   
 ## <a name="see-also"></a>另請參閱  
- [sp_altermessage &#40;Transact SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-altermessage-transact-sql)  
+ [sp_altermessage &#40;-SQL&AMP;#41;&#41;](/sql/relational-databases/system-stored-procedures/sp-altermessage-transact-sql)  
   
   

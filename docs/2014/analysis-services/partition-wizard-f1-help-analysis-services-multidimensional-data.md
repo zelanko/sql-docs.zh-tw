@@ -1,5 +1,5 @@
 ---
-title: 資料分割精靈 F1 說明 (Analysis Services-多維度資料) |Microsoft 文件
+title: 資料分割精靈 F1 說明 (Analysis Services-多維度資料) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Partition Wizard
 ms.assetid: 3b6d7053-aeef-4d9e-af70-f5b40256e859
 caps.latest.revision: 21
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 000e6d0cd8dcaab6aab55de6394527c118396ea9
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e9c8346f5319bbc8f7552546e52537157c699152
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36023425"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37245691"
 ---
 # <a name="partition-wizard-f1-help-analysis-services---multidimensional-data"></a>資料分割精靈 F1 說明 (Analysis Services - 多維度資料)
   您可以使用資料分割精靈來定義 Cube 中之量值群組的資料分割。 依預設，會為 Cube 中的每一個量值群組定義單一資料分割。 但是，大型的資料分割會使存取和處理效能降低。 藉由建立多個分割區，每一個分割區包含量值群組的一部份資料，這樣可以增進該量值群組的存取和處理效能。  
@@ -47,9 +47,9 @@ ms.locfileid: "36023425"
   
 -   [處理與儲存位置&#40;資料分割精靈&#41;](processing-and-storage-locations-partition-wizard.md)  
   
--   [正在完成精靈&#40;資料分割精靈&#41;](completing-the-wizard-partition-wizard.md)  
+-   [完成精靈&#40;資料分割精靈&#41;](completing-the-wizard-partition-wizard.md)  
   
--   [瀏覽遠端資料夾對話方塊&#40;Analysis Services-多維度資料&#41;](browse-for-remote-folder-dialog-box-analysis-services-multidimensional-data.md)  
+-   [瀏覽遠端資料夾 對話方塊中的&#40;Analysis Services-多維度資料&#41;](browse-for-remote-folder-dialog-box-analysis-services-multidimensional-data.md)  
   
 ## <a name="see-also"></a>另請參閱  
  [資料分割&#40;Analysis Services-多維度資料&#41;](multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md)  

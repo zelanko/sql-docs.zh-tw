@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - opening reports
 - closing reports
 - reports [Reporting Services], opening
 ms.assetid: a9db1caf-1e7d-41ee-9aed-e09fd0712f9b
 caps.latest.revision: 50
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 429963c3a8b9e727913ecd1e2564c89fa8bbe38b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: c88878e5bd680ec6ca6fcbb310b25e5ec216977e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36022330"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37212288"
 ---
 # <a name="open-and-close-a-report-report-manager"></a>開啟及關閉報表 (報表管理員)
   您可以使用報表管理員來檢視已經發行至報表伺服器的報表。 根據預設，所有報表都會以 HTML 開啟。 開啟報表之後，您可以將它匯出，以便以其他應用程式格式檢視此報表。 如果此報表包含互動式功能，或者它是包含互動式資料的報表產生器報表，您就可以按一下連結，以便檢視其他報表或資料。  
@@ -45,7 +45,7 @@ ms.locfileid: "36022330"
      關閉報表並不會將其從瀏覽器快取中移除。 您必須關閉瀏覽器以中斷報表的連接。  
   
 ## <a name="see-also"></a>另請參閱  
- [搜尋報表和其他項目&#40;報表產生器和 SSRS&#41;](../report-builder/searching-for-reports-and-other-items-report-builder-and-ssrs.md)   
+ [搜尋報表和其他項目&#40;報表產生器及 SSRS&#41;](../report-builder/searching-for-reports-and-other-items-report-builder-and-ssrs.md)   
  [內容頁&#40;報表管理員&#41;](../contents-page-report-manager.md)   
  [尋找、檢視和管理報表 &#40;報表產生器及 SSRS &#41;](../report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)   
  [報表伺服器內容管理 &#40;SSRS 原生模式&#41;](../report-server/report-server-content-management-ssrs-native-mode.md)  

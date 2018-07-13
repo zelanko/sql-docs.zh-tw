@@ -1,5 +1,5 @@
 ---
-title: Unicode 資料和伺服器字碼頁 |Microsoft 文件
+title: Unicode 資料和伺服器字碼頁 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - extended stored procedures [SQL Server], metadata
 ms.assetid: 52310260-a892-4b27-ad2e-bf164b98ee80
 caps.latest.revision: 30
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: bd532c5b3d564051c8d32171e861791017e8ab3f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: rothja
+ms.author: jroth
+manager: craigg
+ms.openlocfilehash: fff43500155bdd6fc4fece74a018dc6dd4f7f0fc
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36022384"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37199248"
 ---
 # <a name="unicode-data-and-server-code-pages"></a>Unicode 資料和伺服器字碼頁
     
@@ -33,20 +33,20 @@ ms.locfileid: "36022384"
   
  擴充預存程序 API 會針對 Unicode 資料而啟用，但不會針對 Unicode 中繼資料啟用。 #define Unicode 指示詞在擴充預存程序 API 上沒有任何效果。  
   
- 所有由擴充預存程序 API 所傳回的或藉由擴充預存程序應用程式而提供給擴充預存程序 API 的中繼資料，都假設位在伺服器多位元組字碼頁中。 擴充預存程序 API 伺服器應用程式的預設字碼頁是在電腦執行應用程式，可以藉由呼叫取得的 ANSI 字碼頁**srv_pfield**欄位參數設定為 SRV_SPROC_CODEPAGE。  
+ 所有由擴充預存程序 API 所傳回的或藉由擴充預存程序應用程式而提供給擴充預存程序 API 的中繼資料，都假設位在伺服器多位元組字碼頁中。 擴充預存程序 API 伺服器應用程式的預設字碼頁為的電腦上執行應用程式，可以藉由呼叫取得的 ANSI 字碼頁**srv_pfield**欄位參數設定為 SRV_SPROC_CODEPAGE。  
   
  如果擴充預存程序 API 應用程式已啟用 Unicode，則您必須先將 Unicode 中繼資料的資料行名稱、錯誤訊息等等轉換為多位元組資料，才能將此資料傳遞給擴充預存程序 API。  
   
 ## <a name="example"></a>範例  
  下列擴充預存程序提供所討論的 Unicode 轉換的範例。 請注意：  
   
--   資料行資料被當做 Unicode 資料**srv_describe**因為資料行描述為 srvnvarchar。  
+-   資料行的資料會以 Unicode 資料，以傳遞**srv_describe**因為資料行描述為 srvnvarchar。  
   
 -   資料行名稱中繼資料會傳遞至**srv_describe**以多位元組資料。  
   
-     擴充預存程序呼叫**srv_pfield**欄位參數設定為 SRV_SPROC_CODEPAGE，若要取得的多位元組字碼頁與[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
+     擴充預存程序呼叫**srv_pfield**欄位參數設定為 SRV_SPROC_CODEPAGE 取得的多位元組字碼頁[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
   
--   錯誤訊息會傳遞至**srv_sendmsg**以多位元組資料。  
+-   錯誤訊息會傳遞給**srv_sendmsg**以多位元組資料。  
   
     ```  
     __declspec(dllexport) RETCODE proc1 (SRV_PROC *srvproc)  

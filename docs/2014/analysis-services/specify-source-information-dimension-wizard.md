@@ -1,5 +1,5 @@
 ---
-title: 指定來源資訊 （維度精靈） |Microsoft 文件
+title: 指定來源資訊 （維度精靈） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,25 +8,25 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.dimensionwizard.dimensionmaintable.f1
 ms.assetid: 0538b490-5185-49e1-a783-4ce3539a0de5
 caps.latest.revision: 26
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 1543e73d06d6adaf70f78a5c6c13fdcd748f467a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: fe54261f04a7e4064bca482c31149a558e1ea779
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36023428"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37181025"
 ---
 # <a name="specify-source-information-dimension-wizard"></a>指定來源資訊 (維度精靈)
   使用 **[選取主維度資料表]** 頁面，即可針對要建立的維度，選取資料來源檢視、主維度資料表、索引鍵資料行和成員名稱資料行。  
   
- **若要開啟 「 維度精靈 」**  
+ **若要開啟 維度精靈**  
   
 -   在方案總管的 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 中，以滑鼠右鍵按一下 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 專案的 [維度] 資料夾，然後按一下 [新增維度]。  
   

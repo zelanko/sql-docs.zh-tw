@@ -1,5 +1,5 @@
 ---
-title: AggregationStorage 元素 (ASSL) |Microsoft 文件
+title: AggregationStorage 元素 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - AggregationStorage element
 ms.assetid: dd082388-534d-4847-9232-8f80fc9fe96e
 caps.latest.revision: 35
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: bb4bfcab9de31851c054a5f24382a01af1d2d9b1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 1f66a2161d7c5d5983366fd67cd695e7d90c4917
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36022726"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37200078"
 ---
 # <a name="aggregationstorage-element-assl"></a>AggregationStorage 元素 (ASSL)
   識別彙總的儲存方法。  
@@ -64,12 +64,12 @@ ms.locfileid: "36022726"
 ## <a name="remarks"></a>備註  
  這個元素的值限制為下列其中一個字串：  
   
-|ReplTest1|描述|  
+|值|描述|  
 |-----------|-----------------|  
 |*規則*|以預設方式儲存彙總資料。|  
 |*MolapOnly*|單獨使用多維度 OLAP (MOLAP) 儲存來儲存彙總資料。|  
   
- *MolapOnly*選項僅適用於僅[分割](../objects/partition-element-assl.md)項目。  
+ *MolapOnly*選項，僅適用於[分割區](../objects/partition-element-assl.md)項目。  
   
  在「分析管理物件」(AMO) 物件模型中對應至 `AggregationStorage` 允許值的列舉是 <xref:Microsoft.AnalysisServices.ProactiveCachingAggregationStorage>。  
   

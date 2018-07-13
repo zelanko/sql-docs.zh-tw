@@ -1,5 +1,5 @@
 ---
-title: 變更屬性名稱 (Master Data Services) |Microsoft 文件
+title: 變更屬性名稱 (Master Data Services) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,25 +8,25 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - attributes [Master Data Services], changing name
 ms.assetid: d348f238-f59d-41c7-ad20-3ccd55bfd9e5
 caps.latest.revision: 4
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: edc6410e28410581716e8b800affc9ba39423c3a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: 62318949f70b65a63bb4c823903d46c740c51e48
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36022664"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37191978"
 ---
 # <a name="change-an-attribute-name-master-data-services"></a>變更屬性名稱 (Master Data Services)
   在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中，您可以變更屬性的名稱。  
   
-## <a name="prerequisites"></a>必要條件  
+## <a name="prerequisites"></a>先決條件  
  若要執行此程序：  
   
 -   您必須擁有存取 **[系統管理]** 功能區域的權限。  
@@ -45,9 +45,9 @@ ms.locfileid: "36022664"
   
 5.  按一下 **[編輯選取的實體]**。  
   
-6.  在**編輯實體**頁面上，按一下具有您想要變更名稱的屬性。  
+6.  在 **編輯實體**頁面上，按一下具有您想要變更名稱的屬性。  
   
-7.  按一下**編輯選取的屬性**。  
+7.  按一下 **編輯選取的屬性**。  
   
 8.  在 [名稱] 方塊中，輸入屬性的更新名稱。 如需不應該當做屬性名稱使用的字詞清單，請參閱[保留字 &#40;Master Data Services&#41;](reserved-words-master-data-services.md)。  
   

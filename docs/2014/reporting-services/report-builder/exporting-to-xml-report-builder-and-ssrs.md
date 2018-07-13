@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 11d72068-2d97-495e-948f-12d1e8c1957d
 caps.latest.revision: 7
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: bfa8b10cd2d67154946395334f8bde2b9bbd680a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 11bb46bc593a95811c56a5489fd5489ca72ca917
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36022836"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37223268"
 ---
 # <a name="exporting-to-xml-report-builder-and-ssrs"></a>匯出至 XML (報表產生器及 SSRS)
   XML 轉譯延伸模組會傳回 XML 格式的報表。 報表 XML 的結構描述為報表特有的，且僅包含資料。 XML 轉譯延伸模組不會轉譯配置資訊，也不會維持分頁。 此延伸模組所產生的 XML 可以匯入資料庫中 (當做 XML 資料訊息使用)，或傳送到自訂應用程式。  
@@ -65,9 +65,9 @@ ms.locfileid: "36022836"
 |如果所有文字方塊值為|指派的資料類型為|  
 |--------------------------------|---------------------------|  
 |`Int16`, `Int32`, `Int64`, `UInt16`, `UInt32`, `UInt64`, `Byte`, `SByte`|**xsd:integer**|  
-|`Decimal` (或`Decimal`和任何整數或位元組的資料類型)|**xsd:decimal**|  
-|`Float` (或`Decimal`和任何整數或位元組的資料類型)|**xsd:float**|  
-|`Double` (或`Decimal`和任何整數或位元組的資料類型)|**xsd:double**|  
+|`Decimal` (或`Decimal`和任何整數或位元組資料類型)|**xsd:decimal**|  
+|`Float` (或`Decimal`和任何整數或位元組資料類型)|**xsd:float**|  
+|`Double` (或`Decimal`和任何整數或位元組資料類型)|**xsd:double**|  
 |`DateTime or DateTime Offset`|**xsd:dateTime**|  
 |`Time`|**xsd:string**|  
 |`Boolean`|**xsd:boolean**|  
@@ -84,11 +84,11 @@ ms.locfileid: "36022836"
   
  XML 命名空間定義與結構描述參考屬性也包含在報表元素中 變數會以粗體類型顯示：  
   
- \<**報表**xmlns ="**SchemaName**"xmlns:xsi ="http://www.w3.org/2001/XMLSchema-instance"xsi:**schemaLocation**="**SchemaNameReportURL**&amp;rc %3aschema =true"Name ="ReportName">  
+ \<**報表**xmlns ="**SchemaName**"xmlns:xsi="http://www.w3.org/2001/xmlschema-instance ="http://www.w3.org/2001/XMLSchema-instance"xsi:**schemaLocation**="**SchemaNameReportURL**&amp;rc %3aschema =true 「 名稱 ="ReportName">  
   
  變數的值如下：  
   
-|[屬性]|ReplTest1|  
+|名稱|值|  
 |----------|-----------|  
 |報表|Report.DataElementName|  
 |ReportURL|伺服器上，報表的 URLEncoded 絕對 URL。|  
@@ -203,7 +203,7 @@ ms.locfileid: "36022836"
 ## <a name="see-also"></a>另請參閱  
  [Reporting Services 中的分頁 &#40;報表產生器及 SSRS&#41;](../report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)   
  [轉譯行為 &#40;報表產生器及 SSRS&#41;](../report-design/rendering-behaviors-report-builder-and-ssrs.md)   
- [不同報表轉譯延伸模組的互動式功能&#40;報表產生器和 SSRS&#41;](interactive-functionality-different-report-rendering-extensions.md)   
+ [不同報表轉譯延伸模組的互動式功能&#40;報表產生器及 SSRS&#41;](interactive-functionality-different-report-rendering-extensions.md)   
  [轉譯報表項目 &#40;報表產生器及 SSRS&#41;](../report-design/rendering-report-items-report-builder-and-ssrs.md)   
  [資料表、矩陣和清單 &#40;報表產生器及 SSRS&#41;](../report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)  
   

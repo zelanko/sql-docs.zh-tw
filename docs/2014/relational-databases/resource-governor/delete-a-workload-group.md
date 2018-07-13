@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - workload groups [SQL Server], delete
 - Resource Governor, workload group delete
 ms.assetid: d5902c46-5c28-4ac1-8b56-cb4ca2b072d0
 caps.latest.revision: 19
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 793052419843c2e2421458da07b2815932683645
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: f48df99f595bb313d8ca2406850f75cae82c7020
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36023548"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37274204"
 ---
 # <a name="delete-a-workload-group"></a>刪除工作負載群組
   您可以使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 或 Transact-SQL 刪除工作負載群組或資源集區。  
@@ -71,9 +71,9 @@ ms.locfileid: "36023548"
 ##  <a name="DelWGTSQL"></a> 使用 Transact-SQL 刪除工作負載群組  
  **若要使用 Transact-SQL 刪除工作負載群組**  
   
-1.  執行`DROP WORKLOAD GROUP`陳述式，指定要刪除之工作負載群組的名稱。  
+1.  執行`DROP WORKLOAD GROUP`陳述式，指定要刪除的工作負載群組的名稱。  
   
-2.  在您發出 `ALTER RESOURCE GOVERNOR RECONFIGURE` 陳述式之前，請先確認要刪除的工作負載群組中沒有任何使用中要求。 如果沒有使用中要求，`ALTER RESOURCE GOVERNOR`將會失敗。 若要避免這個問題，您可以採取下列其中一個動作：  
+2.  在您發出 `ALTER RESOURCE GOVERNOR RECONFIGURE` 陳述式之前，請先確認要刪除的工作負載群組中沒有任何使用中要求。 如果有使用中要求，`ALTER RESOURCE GOVERNOR`將會失敗。 若要避免這個問題，您可以採取下列其中一個動作：  
   
     -   等候直到工作負載群組的所有工作階段都中斷連接為止。  
   

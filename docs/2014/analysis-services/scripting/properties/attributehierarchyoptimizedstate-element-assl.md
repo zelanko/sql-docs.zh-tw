@@ -1,5 +1,5 @@
 ---
-title: AttributeHierarchyOptimizedState 元素 (ASSL) |Microsoft 文件
+title: AttributeHierarchyOptimizedState 元素 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - AttributeHierarchyOptimizedState element
 ms.assetid: d87148c8-2011-45ae-94c3-851f48babc5f
 caps.latest.revision: 37
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 027bd8713038fd1b090697d8891f93eaabc11f9f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 59b2036773b516d3ea79cda06c51502a9d096cec
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36022002"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37247238"
 ---
 # <a name="attributehierarchyoptimizedstate-element-assl"></a>AttributeHierarchyOptimizedState 元素 (ASSL)
   決定套用至屬性階層的最佳化層級。  
@@ -65,7 +65,7 @@ ms.locfileid: "36022002"
 ## <a name="remarks"></a>備註  
  這個元素的值限制為下表所列的其中一個字串。  
   
-|ReplTest1|描述|  
+|值|描述|  
 |-----------|-----------------|  
 |*FullyOptimized*|執行個體會建立屬性階層的索引，以增進查詢效能。|  
 |*NotOptimized*|執行個體不會建立任何其他索引。|  

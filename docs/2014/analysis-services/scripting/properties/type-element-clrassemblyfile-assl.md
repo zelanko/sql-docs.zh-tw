@@ -1,5 +1,5 @@
 ---
-title: 輸入元素 (ClrAssemblyFile) (ASSL) |Microsoft 文件
+title: 輸入元素 (ClrAssemblyFile) (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - Type element
 ms.assetid: ab9e1e2c-ab06-4cd1-b007-16d738dc5604
 caps.latest.revision: 38
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: c253b2975c5e4f4cbf27c5b2d655a09617d644de
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 02a32dffab7d0274b98a5dcae3099703446b184b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36022482"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37218018"
 ---
 # <a name="type-element-clrassemblyfile-assl"></a>Type 元素 (ClrAssemblyFile) (ASSL)
   指定的其中一個屬於檔案的檔案類型[!INCLUDE[msCoName](../../../includes/msconame-md.md)].NET Framework 組件。  
@@ -64,7 +64,7 @@ ms.locfileid: "36022482"
 ## <a name="remarks"></a>備註  
  這個元素的值限制為下列其中一個字串：  
   
-|ReplTest1|描述|  
+|值|描述|  
 |-----------|-----------------|  
 |*Main*|指定的檔案是組件中的主要檔案。|  
 |*相依*|指定的檔案是組件中的相依檔案。|  
@@ -72,7 +72,7 @@ ms.locfileid: "36022482"
   
  在「分析管理物件」(AMO) 物件模型中對應至 `Type` 允許值的列舉是 <xref:Microsoft.AnalysisServices.ClrAssemblyFileType>。  
   
- 對應目的父代的項目`Type`在 「 分析管理物件 (AMO) 物件模型而言， <xref:Microsoft.AnalysisServices.ClrAssemblyFile>。  
+ 對應至父系的元素`Type`在 「 分析管理物件 (AMO) 物件模型是<xref:Microsoft.AnalysisServices.ClrAssemblyFile>。  
   
 ## <a name="see-also"></a>另請參閱  
  [檔案項目&#40;ASSL&#41;](../objects/file-element-assl.md)   

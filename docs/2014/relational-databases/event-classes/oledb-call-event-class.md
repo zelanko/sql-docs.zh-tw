@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 topic_type:
 - apiref
 helpviewer_keywords:
 - OLEDB Call event class
 ms.assetid: e1be1e90-98cc-47a3-addd-59d4aeca6547
 caps.latest.revision: 37
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 98ee5b7ecc2f2705278211df9432db1020b224bd
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: a068ccc8c24d8dc75fd0ec35b7b99adb4d6d875a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36023129"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37203528"
 ---
 # <a name="oledb-call-event-class"></a>OLEDB Call 事件類別
   **OLEDB Call** 事件類別會在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 針對分散式查詢和遠端預存程序呼叫 OLE DB 提供者時發生。  
@@ -55,10 +55,10 @@ ms.locfileid: "36023129"
 |NTUserName|`nvarchar`|Windows 使用者名稱。|6|是|  
 |ProviderName|`nvarchar`|OLE DB 提供者的名稱。|46|是|  
 |RequestID|`Int`|包含陳述式之要求的識別碼。|49|是|  
-|SessionLoginName|`nvarchar`|引發工作階段之使用者的登入名稱。 例如，如果您連接到[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]使用 Login1 和執行陳述式為 Login2，`SessionLoginName`顯示 Login1 和`LoginName`則顯示 Login2。 此資料行將同時顯示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 Windows 登入。|64|是|  
+|SessionLoginName|`nvarchar`|引發工作階段之使用者的登入名稱。 例如，如果您連接到[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]使用 Login1 和執行 login2 的情況下，陳述式`SessionLoginName`會顯示 Login1 和`LoginName`顯示 Login2。 此資料行將同時顯示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 Windows 登入。|64|是|  
 |SPID|`Int`|事件發生所在之工作階段的識別碼。|12|是|  
 |StartTime|`datetime`|事件啟動的時間 (如果有的話)。|14|是|  
-|TextData|`nvarchar`|在 OLE DB 呼叫中傳送與接收的參數。|@shouldalert|否|  
+|TextData|`nvarchar`|在 OLE DB 呼叫中傳送與接收的參數。|1|否|  
 |TransactionID|`bigint`|由系統指派給交易的識別碼。|4|是|  
   
 ## <a name="see-also"></a>另請參閱  

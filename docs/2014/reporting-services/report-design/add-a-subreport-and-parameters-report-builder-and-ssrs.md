@@ -8,28 +8,28 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - "10093"
 - sql12.rtp.rptdesigner.subreportproperties.general.f1
 ms.assetid: 94f960f8-a629-4f1e-8277-c3b8f0680d98
 caps.latest.revision: 8
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: f99f7baef82824a4af4c9520825043523bb8255d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 05784b220a590166b00605ff921508979e633f64
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36021745"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37179535"
 ---
 # <a name="add-a-subreport-and-parameters-report-builder-and-ssrs"></a>加入子報表和參數 (報表產生器及 SSRS)
   當您想要建立主報表，而該主報表為多個相關報表的容器時，請在報表中加入子報表。 子報表是另一個報表的參考。 若要透過資料值讓報表產生關聯 (例如，讓多個報表都顯示同一位客戶的資料)，您必須設計參數化報表 (例如，顯示特定客戶之詳細資料的報表) 當做子報表。 當您將子報表加入到主報表時，可以指定要傳遞給子報表的參數。  
   
  您也可以將子報表加入到資料表或矩陣中的動態資料列或資料行。 當處理主報表時，將會針對每一個資料列處理子報表。 在此情況下，請考慮是否可以使用資料區或巢狀資料區來達到所要的效果。  
   
- 若要將子報表加入至報表，您必須先建立做為子報表的報表。 如需有關如何建立子報表的詳細資訊，請參閱[子報表&#40;報表產生器及 SSRS&#41;](subreports-report-builder-and-ssrs.md)。  
+ 若要將子報表加入至報表，您必須先建立做為子報表的報表。 如需有關建立子報表的詳細資訊，請參閱 <<c0> [ 子報表&#40;報表產生器及 SSRS&#41;](subreports-report-builder-and-ssrs.md)。</c0>  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -76,7 +76,7 @@ ms.locfileid: "36021745"
      變更子報表參數的順序並不會影響子報表的處理。  
   
 ## <a name="see-also"></a>另請參閱  
- [子報表&#40;報表產生器和 SSRS&#41;](subreports-report-builder-and-ssrs.md)   
+ [子報表&#40;報表產生器及 SSRS&#41;](subreports-report-builder-and-ssrs.md)   
  [轉譯行為 &#40;報表產生器及 SSRS&#41;](rendering-behaviors-report-builder-and-ssrs.md)  
   
   

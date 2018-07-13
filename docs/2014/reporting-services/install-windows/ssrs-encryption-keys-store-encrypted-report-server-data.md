@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - report servers [Reporting Services], encryption
 - credentials [Reporting Services]
@@ -20,13 +20,13 @@ ms.assetid: ac0f4d4d-fc4b-4c62-a693-b86e712e75f2
 caps.latest.revision: 7
 author: markingmyname
 ms.author: maghan
-manager: jhubbard
-ms.openlocfilehash: 8b3bcd87abe4efd22f8330c8b7dca7d111fb93f1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 58b9dbd53149ca710753e8a355d379b21e1c7b5d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36022592"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37186075"
 ---
 # <a name="store-encrypted-report-server-data-ssrs-configuration-manager"></a>儲存加密的報表伺服器資料 (SSRS 組態管理員)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 會在報表伺服器資料庫和組態檔中儲存加密值。 大部份加密值是用於存取將資料提供給報表之外部資料來源的認證。 本主題將描述哪些值會進行加密、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]中所使用的加密功能，以及您應該知道的其他預存機密資料類型。  
@@ -40,7 +40,7 @@ ms.locfileid: "36022592"
   
 -   預存認證 - 可供報表伺服器連接到將資料提供給報表的外部資料來源。  
   
-     這些值是在您設定報表資料來源資訊時所定義的，然後以加密值的形式儲存在報表伺服器資料庫中。 報表伺服器會使用對稱金鑰，將此資料加密與解密。 如需有關預存認證的詳細資訊，請參閱[指定認證和報表資料來源的連接資訊](../../integration-services/connection-manager/data-sources.md)中[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]線上叢書 》。  
+     這些值是在您設定報表資料來源資訊時所定義的，然後以加密值的形式儲存在報表伺服器資料庫中。 報表伺服器會使用對稱金鑰，將此資料加密與解密。 如需有關預存認證的詳細資訊，請參閱 <<c0> [ 指定的認證和報表資料來源的連接資訊](../../integration-services/connection-manager/data-sources.md)在[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]線上叢書 》。  
   
 -   自動使用者帳戶 - 可供報表伺服器連接到其他電腦，以擷取報表中使用的外部影像檔或外部資料。  
   

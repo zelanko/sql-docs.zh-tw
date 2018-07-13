@@ -1,5 +1,5 @@
 ---
-title: TableNotification 元素 (XMLA) |Microsoft 文件
+title: TableNotification 元素 (XMLA) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -24,15 +24,15 @@ helpviewer_keywords:
 - TableNotification element
 ms.assetid: 097b0d53-cb0b-4454-963f-60964fd429e0
 caps.latest.revision: 10
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: fb0524d835c2ada3df0d92119d0510bb55181459
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: ff45810e2c21ad73126e061e9353645417199692
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36030137"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37220028"
 ---
 # <a name="tablenotification-element-xmla"></a>TableNotification 元素 (XMLA)
   表示資料表通知[NotifyTableChange](../xml-elements-commands/notifytablechange-element-xmla.md)命令。  

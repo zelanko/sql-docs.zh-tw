@@ -1,5 +1,5 @@
 ---
-title: CDC 來源編輯器 （錯誤輸出頁面） |Microsoft 文件
+title: CDC 來源編輯器 （錯誤輸出頁面） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.ssis.designer.cdcsource.errorhandling.f1
 ms.assetid: 8a4c2cb8-fd2f-4c45-824f-b93473a8981e
 caps.latest.revision: 7
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: cc9a22330adc00566f18250feba330046c468c0f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 5131f6f2b7735bd083b68e25d2237119d689faf7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36022443"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37203878"
 ---
 # <a name="cdc-source-editor-error-output-page"></a>CDC 來源編輯器 (錯誤輸出頁面)
   使用 [CDC 來源編輯器] 對話方塊的 [錯誤輸出] 頁面，即可選取錯誤處理選項。  
@@ -72,7 +72,7 @@ ms.locfileid: "36022443"
  系統會將錯誤或截斷資料列導向至 CDC 來源的錯誤輸出。 在此情況中，就會使用 CDC 來源錯誤處理。 如需詳細資訊，請參閱 [CDC 來源](data-flow/cdc-source.md)。  
   
 ## <a name="see-also"></a>另請參閱  
- [CDC 來源編輯器&#40;連接管理員頁面&#41;](../../2014/integration-services/cdc-source-editor-connection-manager-page.md)   
+ [CDC 來源編輯器&#40;連線管理員頁面&#41;](../../2014/integration-services/cdc-source-editor-connection-manager-page.md)   
  [CDC 來源編輯器&#40;資料行頁面&#41;](../../2014/integration-services/cdc-source-editor-columns-page.md)  
   
   

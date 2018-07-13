@@ -1,5 +1,5 @@
 ---
-title: 資料行散發 （資料採礦） |Microsoft 文件
+title: 資料行散發 （資料採礦） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - normal distribution type [data mining]
 - uniform distribution type [data mining]
@@ -18,15 +18,15 @@ helpviewer_keywords:
 - distributions [data mining]
 ms.assetid: 87e700de-32be-4bc8-b01d-ba4ee1ab48de
 caps.latest.revision: 32
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 5170f490f6e6940b2d5bf4d8f7de7880f88d2e7e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 6ee97f2b92aa1d98317ac9f420d6065340a60dba
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36023012"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37189425"
 ---
 # <a name="column-distributions-data-mining"></a>資料行散發 (資料採礦)
   在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]中，您可以在採礦結構中定義資料行散發，以影響您建立採礦模型時演算法如何處理這些資料行中的資料。 針對某些演算法，若已知資料行包含值的通用散發，則在處理模型前先定義任何連續資料行的散發很有用。 如果您未定義散發，則產生之採礦模型所做出的預測，可能不如定義了散發的預測那般精確，因為演算法能用來解譯資料的資訊比較少。  
@@ -54,7 +54,7 @@ ms.locfileid: "36023012"
  [內容類型&#40;資料採礦&#41;](content-types-data-mining.md)   
  [採礦結構&#40;Analysis Services-資料採礦&#41;](mining-structures-analysis-services-data-mining.md)   
  [離散化方法&#40;資料採礦&#41;](discretization-methods-data-mining.md)   
- [分佈&#40;DMX&#41;](/sql/dmx/distributions-dmx)   
+ [散發套件&#40;DMX&#41;](/sql/dmx/distributions-dmx)   
  [採礦結構資料行](mining-structure-columns.md)  
   
   

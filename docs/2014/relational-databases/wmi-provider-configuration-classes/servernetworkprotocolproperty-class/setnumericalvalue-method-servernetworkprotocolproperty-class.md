@@ -1,5 +1,5 @@
 ---
-title: SetNumericalValue 方法 （ServerNetworkProtocolProperty 類別） |Microsoft 文件
+title: SetNumericalValue 方法 （ServerNetworkProtocolProperty 類別） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - SetNumericalValue method
 ms.assetid: b3b4bce8-9d9e-4ccb-a223-0454281353b0
 caps.latest.revision: 31
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: a0967a05d728dd93c331eb8133a2bf8239b2716a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+ms.openlocfilehash: f3ec7edfffdaf18610942e73fead3138b4a61366
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36022130"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37198908"
 ---
 # <a name="setnumericalvalue-method-servernetworkprotocolproperty-class"></a>SetNumericalValue 方法 (ServerNetworkProtocolProperty 類別)
   設定參考之屬性的數值。  
@@ -46,7 +46,7 @@ NumValue
   
 ## <a name="parts"></a>組件  
  *object*  
- [ServerNetworkProtocolProperty 類別] servernetworkprotocolproperty-class.md) 表示的執行個體上網路通訊協定的屬性物件[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]。  
+ [ServerNetworkProtocolProperty 類別] servernetworkprotocolproperty-class.md) 物件，表示執行個體上網路通訊協定的屬性[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]。  
   
 #### <a name="parameters"></a>參數  
   

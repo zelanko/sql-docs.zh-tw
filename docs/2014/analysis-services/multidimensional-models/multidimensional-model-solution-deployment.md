@@ -1,5 +1,5 @@
 ---
-title: 多維度模型方案部署 |Microsoft 文件
+title: 多維度模型方案部署 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Analysis Services deployments, planning
 - deploying [Analysis Services]
 - deploying [Analysis Services], planning
 ms.assetid: 7259c201-ff54-43e8-bda5-a6d51474e0e6
 caps.latest.revision: 38
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: cc0a5ef8d41ebc37beee73b83fa27eaa5a7d6358
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 781bbeed98772266d4ea9c228c42426df424fe1c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36022273"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37222218"
 ---
 # <a name="multidimensional-model-solution-deployment"></a>多維度模型方案部署
   您完成 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 專案的開發之後，即可將資料庫部署至 Analysis Services 伺服器。 Analysis Services 提供六種可能的部署方法，可用來將資料庫移至測試伺服器或實際伺服器。 此處以優點的順序列出這些方法：AMO 自動化、XMLA、部署精靈、部署公用程式、同步處理精靈、備份與還原。  
@@ -58,7 +58,7 @@ ms.locfileid: "36022273"
 |您是否要授與使用者透過網際網路存取 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 資料的權限？|[設定 Internet Information Services 上的 HTTP 存取 Analysis Services &#40;IIS&#41; 8.0](../instances/configure-http-access-to-analysis-services-on-iis-8-0.md)|  
 |您是否要提供對 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 資料的連續查詢存取權限？|[Analysis Services 部署的需求和考量](requirements-and-considerations-for-analysis-services-deployment.md)|  
 |您是否要使用連結物件或遠端分割區在分散式環境中部署物件？|[建立及管理本機資料分割 &#40;Analysis Services&#41;](create-and-manage-a-local-partition-analysis-services.md)、[建立及管理遠端資料分割 &#40;Analysis Services&#41;](create-and-manage-a-remote-partition-analysis-services.md) 和[連結量值群組](linked-measure-groups.md)。|  
-|您如何保護 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 資料的安全？|[物件和作業存取權授權&#40;Analysis Services&#41;](authorizing-access-to-objects-and-operations-analysis-services.md)|  
+|您如何保護 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 資料的安全？|[授與物件和作業存取權&#40;Analysis Services&#41;](authorizing-access-to-objects-and-operations-analysis-services.md)|  
   
 ##  <a name="bkmk_rel"></a> 相關工作  
  [Analysis Services 部署的需求和考量](requirements-and-considerations-for-analysis-services-deployment.md)  
