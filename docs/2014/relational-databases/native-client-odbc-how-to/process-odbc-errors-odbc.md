@@ -1,31 +1,29 @@
 ---
-title: 處理 ODBC 錯誤 (ODBC) |Microsoft 文件
+title: 處理 ODBC 錯誤 (ODBC) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - errors [ODBC]
 ms.assetid: 66ab0762-79fe-4a31-b655-27dd215a0af7
 caps.latest.revision: 18
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: b925bc53c1427e1964b8d2487727994d39f24354
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 8057ac412d673fff49105c8fd7d051d13f3ac63e
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36132868"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37423027"
 ---
 # <a name="process-odbc-errors-odbc"></a>處理 ODBC 錯誤 (ODBC)
-  兩個 ODBC 函數呼叫可以用來擷取 ODBC 訊息： [SQLGetDiagRec](http://go.microsoft.com/fwlink/?LinkId=58402)和[SQLGetDiagField](../native-client-odbc-api/sqlgetdiagfield.md)。 若要在 **SQLState**、**pfNative** 和 **ErrorMessage** 診斷欄位中取得與主要 ODBC 相關的資訊，請呼叫 [SQLGetDiagRec](http://go.microsoft.com/fwlink/?LinkId=58402)，直到它傳回 SQL_NO_DATA 為止。 對於每個診斷記錄，可以呼叫 [SQLGetDiagField](../native-client-odbc-api/sqlgetdiagfield.md) 來擷取個別的欄位。 所有驅動程式專用的欄位都必須使用 `SQLGetDiagField` 擷取。  
+  兩個 ODBC 函數呼叫可以用來擷取 ODBC 訊息： [SQLGetDiagRec](http://go.microsoft.com/fwlink/?LinkId=58402)並[SQLGetDiagField](../native-client-odbc-api/sqlgetdiagfield.md)。 若要在 **SQLState**、**pfNative** 和 **ErrorMessage** 診斷欄位中取得與主要 ODBC 相關的資訊，請呼叫 [SQLGetDiagRec](http://go.microsoft.com/fwlink/?LinkId=58402)，直到它傳回 SQL_NO_DATA 為止。 對於每個診斷記錄，可以呼叫 [SQLGetDiagField](../native-client-odbc-api/sqlgetdiagfield.md) 來擷取個別的欄位。 所有驅動程式專用的欄位都必須使用 `SQLGetDiagField` 擷取。  
   
  [SQLGetDiagRec](http://go.microsoft.com/fwlink/?LinkId=58402) 和 [SQLGetDiagField](../native-client-odbc-api/sqlgetdiagfield.md) 是透過 ODBC 驅動程式管理員，而非個別的驅動程式處理。 在成功建立連接之前，ODBC 驅動程式管理員不會快取驅動程式專用的診斷欄位。 在成功連接之前，無法針對驅動程式專用的診斷欄位呼叫 [SQLGetDiagField](../native-client-odbc-api/sqlgetdiagfield.md)。 這包含 ODBC 連接命令，即使它們傳回 SQL_SUCCESS_WITH_INFO 也一樣。 在下次呼叫 ODBC 函數之前，將無法使用驅動程式專用的診斷欄位。  
   

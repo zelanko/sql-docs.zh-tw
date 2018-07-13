@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.serverproperties.processor.f1
 ms.assetid: cc1581a2-492b-41f0-bda5-17909b65c4f7
 caps.latest.revision: 24
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 0c857a8095f304bb1c97a31c1e0b5cfbc8c265fd
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: e92cd06e9abec7966824da0cc48d5bdb63419911
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36136930"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37259474"
 ---
 # <a name="server-properties-processors-page"></a>伺服器屬性 (處理器頁面)
   使用此頁面來檢視或修改處理器選項。 只有在安裝了一個以上的處理器時，處理器相似性設定才會啟用。  

@@ -1,5 +1,5 @@
 ---
-title: AggregationID 元素 (ASSL) |Microsoft 文件
+title: AggregationID 元素 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - AggregationID element
 ms.assetid: 6056da1d-b6b4-4074-84db-45be719df49a
 caps.latest.revision: 12
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 5cc757076c638075466cd0d49ad4340c983a8294
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: fadf9884d769402e962c64ec00d86338a71328a0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36136499"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37277814"
 ---
 # <a name="aggregationid-element-assl"></a>AggregationID 元素 (ASSL)
   識別彙總定義[AggregationDesign](../objects/aggregationdesign-element-assl.md)用來建立彙總執行個體的項目。  
@@ -62,7 +62,7 @@ ms.locfileid: "36136499"
 ## <a name="remarks"></a>備註  
  如果這個元素遺漏或設定為空白字串，`AggregationInstance` 就代表使用者定義彙總。  
   
- 對應目的父代的項目`AggregationID`在 「 分析管理物件 (AMO) 物件模型而言， <xref:Microsoft.AnalysisServices.AggregationInstance>。  
+ 對應至父系的元素`AggregationID`在 「 分析管理物件 (AMO) 物件模型是<xref:Microsoft.AnalysisServices.AggregationInstance>。  
   
 ## <a name="see-also"></a>另請參閱  
  [屬性&#40;ASSL&#41;](properties-assl.md)  

@@ -5,23 +5,22 @@ ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - 2501 (Database Engine error)
 ms.assetid: 895aafe3-a4e7-4ed8-acc5-93be76ef3664
 caps.latest.revision: 19
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 1d6e9f16e00684f0a55682b69e4c2d89d0dd552e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 9816a31a5c5611c999b2e191784accbd5ff22e66
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36132884"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37421017"
 ---
 # <a name="mssqlserver2501"></a>MSSQLSERVER_2501
     

@@ -1,29 +1,27 @@
 ---
-title: 使用日期和時間類型 |Microsoft 文件
+title: 使用日期和時間類型 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: a2aa5644-1e39-4d78-b149-0599d3502cda
 caps.latest.revision: 5
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 99ca6432eb5d29e9ce7a0c01e80ed2bae4ddf3da
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: edbf18a7ab523e88a2a7d2a8a0b2c723a1cae327
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36135611"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37427587"
 ---
 # <a name="use-date-and-time-types"></a>使用日期和時間類型
-  此範例顯示如何初始化在 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 中加入的日期/時間資料結構。 接著，它會準備輸入值、繫結參數，然後執行查詢。 如需有關使用這些類型的詳細資訊，請參閱[日期和時間增強功能&#40;ODBC&#41;](../native-client-odbc-date-time/date-and-time-improvements-odbc.md)。  
+  此範例顯示如何初始化在 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 中加入的日期/時間資料結構。 接著，它會準備輸入值、繫結參數，然後執行查詢。 如需使用這些類型的詳細資訊，請參閱[日期和時間改善&#40;ODBC&#41;](../native-client-odbc-date-time/date-and-time-improvements-odbc.md)。  
   
 ## <a name="example"></a>範例  
  您將需要稱為 DateTime 的 ODBC 資料來源。 DateTime 的預設資料庫應該是 tempdb。 對於 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client，此資料來源必須以 ODBC 驅動程式為基礎。  

@@ -1,5 +1,5 @@
 ---
-title: 在 SQL Server Management Studio 中使用 Analysis Services 範本 |Microsoft 文件
+title: SQL Server Management Studio 中使用 Analysis Services 範本 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 54ad1954-22e2-4628-b334-8fad8e9433b8
 caps.latest.revision: 11
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: ff28fee126f12906e562f2fb26463a7cffad9aab
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 387d1752c2e2e2a8f6bdc6e48b2d9b9e7952419f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36145064"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37153369"
 ---
 # <a name="use-analysis-services-templates-in-sql-server-management-studio"></a>在 SQL Server Management Studio 中使用 Analysis Services 範本
   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 提供一組範本，協助您快速建立 XMLA 指令碼、DMX 或 MDX 查詢、在 Cube 或表格式模型中建立 KPI、編寫備份與還原作業的指令碼，以及執行許多其他工作。 範本位於 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 中的範本總管。  
@@ -45,7 +45,7 @@ ms.locfileid: "36145064"
   
  若要開啟範本總管，請選取 [檢視] 功能表上的 [範本總管]。 接著按一下 Cube 圖示，查看 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]的可用範本清單。  
   
- ![範本總管 中，篩選出的 Analysis Services](../media/ssas-templateexplorer.gif "範本總管 中，篩選出的 Analysis Services")  
+ ![範本總管 中，篩選出的 Analysis Services](../media/ssas-templateexplorer.gif "範本總管 中，針對 Analysis Services 進行篩選")  
   
  若要開啟範本，以滑鼠右鍵按一下範本名稱，然後選取 [開啟]，或將範本拖曳至已開啟的查詢視窗。 在查詢視窗開啟之後，您可以使用工具列或 [查詢] 功能表上的命令，建立陳述式：  
   
@@ -63,7 +63,7 @@ ms.locfileid: "36145064"
  這個範例示範如何將表格式模型資料庫做為資料來源，在 SQL Server Management Studio 中建立 MDX 查詢。 若要在電腦上重複此範例，您可以 [下載 Adventureworks 表格式模型範例專案](http://go.microsoft.com/fwlink/?LinkId=231183)。  
   
 > [!WARNING]  
->  您不能對 DirectQuery 模式下部署的表格式模型使用 MDX 查詢。 但是，可透過將 DAX 資料表查詢搭配 EVALUATE 命令使用，傳送對等查詢。 如需詳細資訊，請參閱[DAX 查詢的參數](https://msdn.microsoft.com/library/gg492200(v=sql.120).aspx)。  
+>  您不能對 DirectQuery 模式下部署的表格式模型使用 MDX 查詢。 但是，可透過將 DAX 資料表查詢搭配 EVALUATE 命令使用，傳送對等查詢。 如需詳細資訊，請參閱 < [DAX 查詢的參數](https://msdn.microsoft.com/library/gg492200(v=sql.120).aspx)。  
   
 #### <a name="create-an-mdx-query-from-a-template"></a>從範本建立 MDX 查詢  
   
@@ -75,11 +75,11 @@ ms.locfileid: "36145064"
   
     1.  取代\<o w s，mdx_set> > 與 **[Product Category]。 [Product Category Name]**。  
   
-    2.  取代\<column_axis，mdx_set> > 與 **[日期]。 [Calendar Year]。[Calendar Year]**.  
+    2.  取代\<column_axis，mdx_set> > 與 **[Date]。 [Calendar Year]。[Calendar Year]**.  
   
     3.  取代\<from_clause，mdx_name> > 與 **[網際網路銷售]**。  
   
-    4.  取代\<where_clause，mdx_set> > 與 **[Measures]。 [Internet Total Sales]**。  
+    4.  取代\<w，mdx_set> > 與 **[Measures]。 [Internet Total Sales]**。  
   
 4.  您可以直接執行原有的查詢，但可能要進行某些變更，例如加入函數以傳回特定成員。 例如，輸入`.members`之後 **[Product Category]。 [Product Category Name]**。 如需詳細資訊，請參閱 [使用成員運算式](/sql/mdx/using-member-expressions)。  
   
@@ -103,7 +103,7 @@ ms.locfileid: "36145064"
     > [!WARNING]  
     >  您不能透過變更限制清單或在連接對話方塊中指定資料庫，設定 XMLA 查詢的內容。 您必須從要查詢的資料庫開啟 XMLA 查詢視窗。  
   
-2.  拖曳`Backup`範本到空白查詢視窗。  
+2.  拖曳`Backup`到空白查詢視窗中的範本。  
   
 3.  按兩下內的文字\<DatabaseID > 項目。  
   
@@ -147,7 +147,7 @@ SELECT * FROM $system.DISCOVER_SCHEMA_ROWSETS
   
 2.  開啟範本總管，並將 [探索結構描述資料列集] 範本拖曳至空白查詢視窗中。  
   
-3.  在範本中，取代[RequestType 元素&#40;XMLA&#41; ](../xmla/xml-elements-properties/type-element-xmla.md)項目與下列文字： `<RequestType>MDSCHEMA_INPUT_DATASOURCES</RequestType>`  
+3.  在範本中，取代[RequestType 元素&#40;XMLA&#41; ](../xmla/xml-elements-properties/type-element-xmla.md)項目包含下列文字： `<RequestType>MDSCHEMA_INPUT_DATASOURCES</RequestType>`  
   
 4.  按一下 **[執行]**。  
   
@@ -172,11 +172,11 @@ SELECT * FROM $system.DISCOVER_SCHEMA_ROWSETS
 |類別目錄|項目範本|描述|  
 |--------------|-------------------|-----------------|  
 |DMX\模型內容|內容查詢|示範如何使用 DMX SELECT FROM *\<模型 >*。內容的陳述式來擷取指定之採礦模型的採礦模型結構描述資料列集的內容。|  
-||連續資料行值|示範如何使用 DMX SELECT DISTINCT FROM *\<模型 >* 陳述式及 DMX`RangeMin`和`RangeMax`從連續資料行中擷取一組指定的範圍內值的函式指定的採礦模型。|  
+||連續資料行值|示範如何使用 DMX SELECT DISTINCT FROM *\<模型 >* 陳述式及 DMX`RangeMin`和`RangeMax`從連續資料行中擷取一組指定的範圍內值的函式指定之採礦模型。|  
 ||離散資料行值|示範如何使用 DMX SELECT DISTINCT FROM *\<模型 >* 陳述式中指定之採礦模型的離散資料行中擷取一組完整的值。|  
 ||鑽研查詢|示範如何搭配 DMX IsInNode 函數使用 DMX SELECT * FROM Model.CASES 陳述式來執行鑽研查詢。|  
 ||模型屬性|示範如何使用 DMX System.GetModelAttributes 函數來傳回模型所用的屬性清單。|  
-||PMML 內容|示範如何使用 DMX SELECT \* FROM *\<模型 >*。PMML 陳述式來擷取採礦模型，支援這項功能的演算法的預測模型標記語言 (PMML) 表示。|  
+||PMML 內容|示範如何使用 DMX SELECT \* FROM *\<模型 >*。PMML 陳述式，來擷取採礦模型，支援這項功能的演算法的預測模型標記語言 (PMML) 表示法。|  
 |DMX\模型管理|加入模型|示範如何使用 DMX ALTER MINING MODEL STRUCTURE 陳述式來加入採礦模型。|  
 ||清除模型|示範如何使用 DMX DELETE * FROM MINING MODEL 陳述式來刪除指定之採礦模型的內容。|  
 ||清除結構案例|示範如何使用 DMX DELETE FROM MINING STRUCTURE 陳述式來清除採礦模型結構案例。|  
@@ -194,15 +194,15 @@ SELECT * FROM $system.DISCOVER_SCHEMA_ROWSETS
 ||培訓模型|示範如何使用 DMX INSERT INTO MINING MODEL 陳述式來培訓之前已培訓之結構內的採礦模型。|  
 ||培訓巢狀結構|示範如何結合 DMX INSERT INTO MINING STRUCTURE 陳述式和 SHAPE 來源資料查詢，以便培訓含有巢狀資料行的採礦模型，這些資料行中的資料包含利用查詢從現有資料來源擷取的巢狀資料表。|  
 ||培訓結構|示範如何結合 DMX INSERT INTO MINING STRUCTURE 陳述式和 OPENQUERY 來源資料查詢來培訓採礦結構。|  
-|DMX\預測查詢|基本預測|示範如何結合 DMX SELECT FROM *\<模型 >* PREDICTION JOIN 的陳述式和 OPENQUERY 來源資料查詢，若要執行使用查詢，從擷取的資料採礦模型預測查詢現有的資料來源。|  
-||巢狀預測|示範如何結合 DMX SELECT FROM *\<模型 >* PREDICTION JOIN 的陳述式及 SHAPE 和 OPENQUERY 來源資料查詢來執行資料採礦模型包含巢狀預測查詢擷取的資料表，使用查詢從現有的資料來源。|  
-||巢狀單一預測|示範如何使用 DMX SELECT FROM *\<模型 >* NATURAL PREDICTION JOIN 子句，以執行預測查詢，針對採礦模型在預測查詢中，資料行中明確指定的單一值名稱會符合採礦模型中的資料行，其中包含一組巢狀資料表，建立名稱也會符合採礦模型中的巢狀資料行以 UNION 陳述式中的值。|  
-||單一預測|示範如何使用 DMX SELECT FROM\<模型 > NATURAL PREDICTION JOIN 陳述式來執行預測查詢，針對採礦模型在預測查詢中，資料行名稱符合中的資料行中明確指定的單一值採礦模型。|  
+|DMX\預測查詢|基本預測|示範如何結合 DMX SELECT FROM *\<模型 >* PREDICTION JOIN 的陳述式和 OPENQUERY 來源資料查詢，來執行使用查詢，從擷取的資料採礦模型預測查詢現有的資料來源。|  
+||巢狀預測|示範如何結合 DMX SELECT FROM *\<模型 >* PREDICTION JOIN 的陳述式及 SHAPE 和 OPENQUERY 來源資料查詢來執行資料採礦模型包含巢狀預測查詢資料表，使用查詢，從現有的資料來源擷取。|  
+||巢狀單一預測|示範如何使用 DMX SELECT FROM *\<模型 >* NATURAL PREDICTION JOIN 子句來執行明確地指定在預測查詢中，資料行中的單一值在採礦模型預測查詢名稱會符合採礦模型中的資料行，其中包含一組巢狀資料表，建立名稱也會符合採礦模型中的巢狀資料行以 UNION 陳述式中的值。|  
+||單一預測|示範如何使用 DMX SELECT FROM\<模型 > NATURAL PREDICTION JOIN 陳述式來執行預測查詢，針對採礦模型使用預測查詢，其名稱符合中的資料行的資料行中明確指定的單一值採礦模型。|  
 ||預存程序呼叫|示範如何使用 DMX CALL 陳述式來呼叫預存程序。|  
-|MDX\運算式|移動平均-固定|示範如何使用 MDX`ParallelPeriod`和`CurrentMember`具有自然已排序的集合，來建立固定數目的時間維度階層所包含之時間週期提供量值的移動平均的導出量值的函式。|  
-||移動平均-變動|示範如何使用 MDX`CASE`陳述式內`Avg`函式來建立導出量值，以提供量值的移動平均數目可變的時間維度階層所包含之時間週期。|  
+|MDX\運算式|移動平均-固定|示範如何使用 MDX`ParallelPeriod`和`CurrentMember`函數搭配自然已排序的集合，建立導出量值，以提供 固定數目的時間維度階層所包含的時間週期上的 量值的移動平均。|  
+||移動平均-變動|示範如何使用 MDX`CASE`內的陳述式`Avg`函式來建立導出量值，以針對變動數目的時間維度階層所包含的時間週期中提供量值的移動平均。|  
 ||至今的期間數|展示如何在導出成員中使用 MDX `PeriodsToDate` 函數。|  
-||對父系的比率|示範如何使用 MDX`Parent`函式來建立導出量值，表示指定的階層中父成員的每個子系的量值比率百分比。|  
+||對父系的比率|示範如何使用 MDX`Parent`函式來建立導出量值，代表指定階層中父成員的每個子系的量值比率百分比。|  
 ||對總計的比率|展示如何使用所有成員來建立導出量值，該值代表指定階層中每一個成員的量值比率百分比。|  
 |MDX\查詢|基本查詢|展示可以用來建構 MDX 查詢的基本 MDX SELECT 陳述式。|  
 ||KPI 查詢|示範如何使用 MDX`KPIValue`和`KPIGoal`函式來擷取 MDX 查詢中的關鍵效能指標 (KPI) 資訊。|  
@@ -210,17 +210,17 @@ SELECT * FROM $system.DISCOVER_SCHEMA_ROWSETS
 ||使用導出成員|展示如何在 SELECT 陳述式中使用 MDX WITH 子句，來定義 MDX 查詢的導出成員。|  
 ||使用命名集|展示如何在 SELECT 陳述式中使用 MDX WITH 子句，來定義 MDX 查詢的命名集。|  
 |XMLA\管理|Backup|示範如何使用 XMLA`Backup`命令以備份[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]資料庫備份至檔案。|  
-||取消|示範如何使用 XMLA`Cancel`命令以取消所有執行的作業在目前工作階段 （適用於管理員或伺服器管理員以外的使用者）、 資料庫 （適用於系統管理員），或執行個體 （適用於伺服器系統管理員。）|  
+||取消|示範如何使用 XMLA`Cancel`命令以取消所有執行的作業目前的工作階段上 （適用於系統管理員或伺服器管理員以外的使用者）、 資料庫 （適用於系統管理員），或執行個體 （適用於伺服器系統管理員。）|  
 ||建立遠端資料分割資料庫|展示如何使用 XMLA `Create` 命令和 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 指令碼語言 (ASSL) 資料庫元素，來建立 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 資料庫和資料來源以儲存遠端資料分割。|  
 ||DELETE|示範如何使用 XMLA`Delete`命令來刪除現有[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]資料庫。|  
 ||處理維度|展示如何使用 XMLA `Batch` 命令並結合 `Parallel` 元素和 `Process` 命令，使用平行批次作業來更新維度的屬性。|  
-||處理資料分割|示範如何使用 XMLA`Batch`命令並結合`Parallel`項目和`Process`命令，完全處理的資料分割使用平行批次作業。|  
-||Restore|示範如何使用 XMLA`Restore`命令還原[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]資料庫從現有的備份檔案。|  
-||同步處理|示範如何使用 XMLA`Synchronize`命令同步處理另一個[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]與目前的資料庫[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]資料庫使用 SynchronizeSecurity 標記的 SkipMembership 選項。|  
+||處理資料分割|示範如何使用 XMLA`Batch`命令並結合`Parallel`項目和`Process`命令，完全處理的資料分割，使用平行批次作業。|  
+||Restore|示範如何使用 XMLA`Restore`命令，以還原[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]從現有的備份檔案的資料庫。|  
+||同步處理|示範如何使用 XMLA`Synchronize`命令，以同步處理另一個[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]資料庫與目前[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]資料庫使用，利用 SynchronizeSecurity 標記的 SkipMembership 選項。|  
 |XMLA\結構描述資料列集|探索結構描述資料列集|展示如何使用 XMLA `Discover` 方法，來擷取 DISCOVER_SCHEMA_ROWSETS 結構描述資料列集的內容。|  
 |XMLA\伺服器狀態|連接|示範如何使用 XMLA`Discover`方法來擷取 DISCOVER_CONNECTIONS 結構描述資料列集的內容。|  
 ||中稱為|示範如何使用 XMLA`Discover`方法來擷取 DISCOVER_JOBS 結構描述資料列集的內容。|  
-||位置|示範如何使用 XMLA`Discover`方法來擷取 DISCOVER_LOCATIONS 結構描述資料列集，指定備份檔案位置的路徑內容。|  
+||位置|示範如何使用 XMLA`Discover`方法來擷取 DISCOVER_LOCATIONS 結構描述資料列集，指定位置備份檔案的路徑內容。|  
 ||鎖定|展示如何使用 XMLA `Discover` 方法，來擷取 DISCOVER_LOCKS 結構描述資料列集的內容。|  
 ||記憶體授權|展示如何使用 XMLA `Discover` 方法，來擷取 DISCOVER_MEMORYGRANT 結構描述資料列集的內容。|  
 ||效能計數器|示範如何使用 XMLA`Discover`方法來擷取 DISCOVER_PERFORMANCE_COUNTERS 結構描述資料列集的內容。|  

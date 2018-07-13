@@ -1,13 +1,11 @@
 ---
-title: 使用 SQL Server Native Client 的時機 |Microsoft 文件
+title: 使用 SQL Server Native Client 的時機 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -16,15 +14,15 @@ helpviewer_keywords:
 - data access [SQL Server Native Client], about SQL Server Native Client
 ms.assetid: 08f18b36-209d-4cf7-9623-ebc61859a91d
 caps.latest.revision: 36
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 5e27d76ee3e8cf4c19ba9f0f36a2b0c710134c1d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: bfeee539be2afb80596f5638bc0420616cfc95ae
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36135158"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37411677"
 ---
 # <a name="when-to-use-sql-server-native-client"></a>使用 SQL Server Native Client 的時機
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 是用來存取 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫資料的一種技術。  如需不同的資料存取技術的討論，請參閱[資料存取技術藍圖](http://go.microsoft.com/fwlink/?LinkID=179186)  
@@ -43,7 +41,7 @@ ms.locfileid: "36135158"
   
 ## <a name="see-also"></a>另請參閱  
  [SQL Server Native Client 程式設計](../../relational-databases/native-client/sql-server-native-client-programming.md)   
- [ODBC 使用說明主題](../native-client-odbc-how-to/odbc-how-to-topics.md)   
+ [ODBC 的使用說明主題](../native-client-odbc-how-to/odbc-how-to-topics.md)   
  [OLE DB 的使用說明主題](../native-client-ole-db-how-to/ole-db-how-to-topics.md)  
   
   

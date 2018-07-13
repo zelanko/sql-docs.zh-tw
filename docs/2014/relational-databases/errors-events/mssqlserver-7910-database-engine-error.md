@@ -5,23 +5,22 @@ ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - 7910 (Database Engine error)
 ms.assetid: 017a0113-2b17-40b3-a419-30bbc43d46b8
 caps.latest.revision: 16
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 056802e0965e60963af5ec36bfc416c59cd0ff4f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: d3121c45b9abdf5d9985bfcbcca7f360430a7c63
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36134409"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37415857"
 ---
 # <a name="mssqlserver7910"></a>MSSQLSERVER_7910
     

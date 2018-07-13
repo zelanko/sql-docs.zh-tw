@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: cf559b0a-499a-4d74-b520-b382b87e0b17
 caps.latest.revision: 6
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 1457c44ed95f09891bb8e8617968d2f9b9cbfbc9
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 2776ccbb78346ad6243e5b6a4ed1e7c5827d31bf
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36136365"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37157829"
 ---
 # <a name="rendering-to-html-report-builder-and-ssrs"></a>轉譯為 HTML (報表產生器及 SSRS)
   HTML 轉譯延伸模組會轉譯 HTML 格式的報表。 轉譯延伸模組也可產生完整的 HTML 頁面，或內嵌在其他 HTML 頁面中的 HTML 片段。 所有 HTML 均以 UTF-8 編碼產生。  
@@ -30,7 +30,7 @@ ms.locfileid: "36136365"
   
  在某些情況下，當報表轉譯為 HTML 時，報表參數可能會被用來發動指令碼資料隱碼攻擊。 如需保護報表的詳細資訊，請參閱 [保護報表和資源的安全](../security/secure-reports-and-resources.md)。  
   
- 如需有關瀏覽器的詳細資訊，請參閱[規劃 Reporting Services 和 Power View 瀏覽器支援&#40;Reporting Services 2014&#41;](../browser-support-for-reporting-services-and-power-view.md)。  
+ 如需有關瀏覽器的詳細資訊，請參閱 <<c0> [ 規劃 Reporting Services 和 Power View 瀏覽器支援&#40;Reporting Services 2014&#41;](../browser-support-for-reporting-services-and-power-view.md)。</c0>  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -105,7 +105,7 @@ ms.locfileid: "36136365"
 ## <a name="see-also"></a>另請參閱  
  [Reporting Services 中的分頁 &#40;報表產生器及 SSRS&#41;](../report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)   
  [轉譯行為 &#40;報表產生器及 SSRS&#41;](../report-design/rendering-behaviors-report-builder-and-ssrs.md)   
- [不同報表轉譯延伸模組的互動式功能&#40;報表產生器和 SSRS&#41;](interactive-functionality-different-report-rendering-extensions.md)   
+ [不同報表轉譯延伸模組的互動式功能&#40;報表產生器及 SSRS&#41;](interactive-functionality-different-report-rendering-extensions.md)   
  [轉譯報表項目 &#40;報表產生器及 SSRS&#41;](../report-design/rendering-report-items-report-builder-and-ssrs.md)   
  [資料表、矩陣和清單 &#40;報表產生器及 SSRS&#41;](../report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)  
   

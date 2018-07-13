@@ -1,33 +1,31 @@
 ---
-title: 大型 Udt 支援的 |Microsoft 文件
+title: 支援大型 Udt |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 621b6d13-10f1-47d0-b63c-7adb6ab904e0
 caps.latest.revision: 5
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 672da57ed995d872bf952bc7126b56282ad12312
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 2626ba94c971f3d31b592e692da3d9fef7227f05
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36133702"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37409987"
 ---
 # <a name="support-for-large-udts"></a>支援大型 UDT
   此範例方案包含兩個專案， 其中一個專案從 C# 原始程式碼建立組件 (DLL)。 這個組件包含 CLR 類型。 將會在資料庫中加入一個資料表。 資料表中的資料行屬於組件中所定義的類型，根據預設，此範例將會使用 master 資料庫。 第二個專案是原生的 C 應用程式，可從資料表讀取資料。  
   
  此範例不適用於 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 之前的任何 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 版本。  
   
- 如需有關大型 Udt 支援的詳細資訊，請參閱[Large CLR User-Defined 類型&#40;ODBC&#41;](../native-client/odbc/large-clr-user-defined-types-odbc.md)。  
+ 如需有關大型 Udt 的支援的詳細資訊，請參閱[Large CLR User-Defined 類型&#40;ODBC&#41;](../native-client/odbc/large-clr-user-defined-types-odbc.md)。  
   
 ## <a name="example"></a>範例  
  第一個程式碼清單是 C# 原始程式碼。 請將它貼入名為 LargeStringUDT.cs 的檔案，然後將它編譯成 DLL。 接著，將 LargeStringUDT.dll 複製到 C 磁碟機的根目錄。  

@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - roles [Reporting Services], creating
 - authorization [Reporting Services]
@@ -25,13 +25,13 @@ ms.assetid: 260dc2e9-546c-4f04-9fa1-977e23c9d68c
 caps.latest.revision: 59
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: d889c606718bca0f917322cbf031f9c89c0ede3b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c9628b3e6393c6fe33bcff6b5bf14933b46c2dd2
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36136118"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37260124"
 ---
 # <a name="granting-permissions-on-a-native-mode-report-server"></a>在原生模式報表伺服器上授與權限
   SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 會使用以角色為基礎的授權和驗證子系統來決定能夠在報表伺服器上執行作業及存取項目的人員。 以角色為基礎的授權，將使用者或群組可以執行的動作集分類成角色。 驗證是以內建的 Windows 驗證或您提供的自訂驗證模組為基礎。 您可以使用預先定義或自訂的角色搭配任何一種驗證類型。  
@@ -43,7 +43,7 @@ ms.locfileid: "36136118"
   
  若要授與報表伺服器項目和作業的存取權，請遵循下列指導方針：  
   
-1.  檢閱預先定義的角色來判斷您是否能夠依原狀使用它們。 如果您需要調整工作或定義其他角色，就應該先進行這些作業，然後再指派使用者至特定角色。 如需有關每個角色的詳細資訊，請參閱[預先定義的角色](role-definitions-predefined-roles.md)。  
+1.  檢閱預先定義的角色來判斷您是否能夠依原狀使用它們。 如果您需要調整工作或定義其他角色，就應該先進行這些作業，然後再指派使用者至特定角色。 如需有關每個角色的詳細資訊，請參閱 <<c0> [ 預先定義的角色](role-definitions-predefined-roles.md)。  
   
 2.  確認哪些使用者和群組需要存取報表伺服器，以及所存取的層級。 多數使用者都應指派至 **[瀏覽者]** 角色或 **[報表產生器]** 角色。 **[發行者]** 角色則應指派給較少數的使用者。 只有非常少數的使用者才應指派至 **[內容管理員]**。  
   
@@ -76,7 +76,7 @@ ms.locfileid: "36136118"
   
 ## <a name="see-also"></a>另請參閱  
  [預先定義的角色](role-definitions-predefined-roles.md)   
- [授與權限在 SharePoint 網站上的報表伺服器項目](granting-permissions-on-report-server-items-on-a-sharepoint-site.md)   
+ [授與 SharePoint 網站上的報表伺服器項目的權限](granting-permissions-on-report-server-items-on-a-sharepoint-site.md)   
  [使用報表伺服器驗證](authentication-with-the-report-server.md)   
  (建立-和-管理-角色-assignments.md)   
  [Reporting Services 安全性與保護](reporting-services-security-and-protection.md)   

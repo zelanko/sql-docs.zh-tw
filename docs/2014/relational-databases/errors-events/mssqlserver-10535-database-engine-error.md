@@ -5,23 +5,22 @@ ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - 10535 (Database Engine error)
 ms.assetid: 478fd978-11d9-4155-8329-f599fdbec14b
 caps.latest.revision: 9
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: ff4797fdd9d206ca459bc84facccfc588aafba00
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 0770665e1b3648a75a9295ce8bbf6c14775e3d2e
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36134952"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37426777"
 ---
 # <a name="mssqlserver10535"></a>MSSQLSERVER_10535
     

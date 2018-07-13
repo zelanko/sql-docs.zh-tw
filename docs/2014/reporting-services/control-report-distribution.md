@@ -1,5 +1,5 @@
 ---
-title: 控制報表散發 |Microsoft 文件
+title: 控制報表散發 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - subscriptions [Reporting Services], report distribution
 - subscriptions [Reporting Services], e-mail
@@ -21,19 +21,19 @@ ms.assetid: 8f15e2c6-a647-4b05-a519-1743b5d8654c
 caps.latest.revision: 32
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 0b184eadeefa4b9f1177597172476b743094de8d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d73a5e483219df7a8b7c06a3c4719850aaf7a3f7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36144680"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37160179"
 ---
 # <a name="control-report-distribution"></a>控制報表散發
   您可以設定報表伺服器，以減少與電子郵件和檔案共用散發相關聯的安全性風險。  
   
 ## <a name="securing-reports"></a>保護報表的安全  
- 控制報表散發的第一個步驟是保護報表的安全，以避免未授權的存取。 若要在訂閱中使用，報表對個別傳遞都必須使用相同的預存認證組。 可以存取報表伺服器上之報表的任何使用者，都可以執行報表，並可能散發報表。 若要避免發生此情況，您必須限制只有需要報表的使用者才可以存取報表。 如需詳細資訊，請參閱[保護報表和資源](security/secure-reports-and-resources.md)和[安全資料夾](security/secure-folders.md)。  
+ 控制報表散發的第一個步驟是保護報表的安全，以避免未授權的存取。 若要在訂閱中使用，報表對個別傳遞都必須使用相同的預存認證組。 可以存取報表伺服器上之報表的任何使用者，都可以執行報表，並可能散發報表。 若要避免發生此情況，您必須限制只有需要報表的使用者才可以存取報表。 如需詳細資訊，請參閱 <<c0> [ 保護報表和資源](security/secure-reports-and-resources.md)並[保護資料夾的](security/secure-folders.md)。  
   
  使用資料庫安全性以授權存取的高度機密報表，無法透過訂閱方式散發。  
   

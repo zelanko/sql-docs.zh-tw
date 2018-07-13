@@ -5,23 +5,22 @@ ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - 10507 (Database Engine error)
 ms.assetid: cd83fa81-ac37-4eda-a3c3-17610b051de2
 caps.latest.revision: 10
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: dc1510ff82b619ef4462be95b592ca89133eecdb
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 7614a550b0a7e60ac1d8d355fa68299aa8812e90
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36133949"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37410127"
 ---
 # <a name="mssqlserver10507"></a>MSSQLSERVER_10507
     
@@ -34,7 +33,7 @@ ms.locfileid: "36133949"
 |事件來源|MSSQLSERVER|  
 |元件|SQLEngine|  
 |符號名稱|PG_STMT_DOES_NOT_MATCH|  
-|訊息文字|無法建立計畫指南 ' %。\*ls' 所指定的陳述式因為`@stmt`和`@module_or_batch`，或由`@plan_handle`和`@statement_start_offset`、 不符合所指定模組中的任何陳述式或批次。 請將值修改為與模組或批次中的陳述式相符。|  
+|訊息文字|無法建立計畫指南 ' %。\*ls' 因為指定的陳述式`@stmt`並`@module_or_batch`，或由`@plan_handle`和`@statement_start_offset`、 不符合所指定模組中的任何陳述式或批次。 請將值修改為與模組或批次中的陳述式相符。|  
   
 ## <a name="explanation"></a>說明  
  指定之模組或批次中的陳述式無法與指定的陳述式或陳述式位移值相符。  

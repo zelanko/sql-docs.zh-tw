@@ -1,5 +1,5 @@
 ---
-title: DISCOVER_MEMORYGRANT 資料列集 |Microsoft 文件
+title: DISCOVER_MEMORYGRANT 資料列集 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -12,15 +12,15 @@ ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: d254e42d-9918-47ce-b6df-47f1f0b432dd
 caps.latest.revision: 6
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 3066a924b572324fcf70dbec7aa726b9ba05f846
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 3cae85df7e3c76afd9243771032f21f8f91861f7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36135264"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37229988"
 ---
 # <a name="discovermemorygrant-rowset"></a>DISCOVER_MEMORYGRANT 資料列集
   傳回伺服器上目前執行作業所使用之內部記憶體配額授權的清單。 若要了解作業是否正在伺服器上執行，請使用 `Select * from $System.Discover_Jobs`。  
@@ -47,7 +47,7 @@ ms.locfileid: "36135264"
   
  下表將提供可識別此資料列集的 GUID 和字串值。  
   
-|引數|ReplTest1|  
+|引數|值|  
 |--------------|-----------|  
 |GUID|a07ccd23-8148-11d0-87bb-00c04fc33942|  
 |ADOMDNAME|MemoryGrant|  

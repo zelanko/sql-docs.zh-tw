@@ -1,26 +1,24 @@
 ---
-title: LOCALDB_ERROR_XEVENT_FAILED |Microsoft 文件
+title: LOCALDB_ERROR_XEVENT_FAILED |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: supportability
 ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: e33f3809-0175-4d83-b1b7-b29d23238846
 caps.latest.revision: 6
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 18b25ba729d25168e48bdb627f42d2dbddcd3fef
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: c9c12109c7f37b3a7a3e9f1a54e246de6201cc5f
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36133956"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37417707"
 ---
 # <a name="localdberrorxeventfailed"></a>LOCALDB_ERROR_XEVENT_FAILED
     

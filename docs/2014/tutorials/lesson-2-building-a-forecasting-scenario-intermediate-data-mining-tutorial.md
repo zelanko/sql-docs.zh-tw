@@ -1,5 +1,5 @@
 ---
-title: 第 2 課： 建立預測案例 （中繼資料採礦教學課程） |Microsoft 文件
+title: 第 2 課： 建立預測案例 （中繼資料採礦教學課程） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - time series [Analysis Services]
 - data mining [Analysis Services], tutorials
@@ -17,13 +17,13 @@ ms.assetid: 9a988156-c900-4c22-97fa-f6b0c1aea9e2
 caps.latest.revision: 31
 author: minewiskan
 ms.author: owend
-manager: kfile
-ms.openlocfilehash: 94f73737c1d67a69c4b740371c578b2f41d97a13
-ms.sourcegitcommit: 8c040e5b4e8c7d37ca295679410770a1af4d2e1f
+manager: craigg
+ms.openlocfilehash: 5db75cbdabd62b569c782bd48755ce817819a475
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/21/2018
-ms.locfileid: "36312346"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37155499"
 ---
 # <a name="lesson-2-building-a-forecasting-scenario-intermediate-data-mining-tutorial"></a>第 2 課：建立預測案例 (中繼資料採礦教學課程)
   您是 [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] 的銷售分析師，奉命預測下一年度產品的銷售狀況。 您特別奉命比較不同區域和產品線的預測狀況。 另外，您也受要求判斷不同產品的銷售情況是否會隨著年度時段而有所不同。  
@@ -44,14 +44,14 @@ ms.locfileid: "36312346"
   
 -   第二部分將逐步引導您依據所有區域建立一般的時間序列模型。 您可以使用這個一般模型以供*交叉預測*。  
   
- 若要完成以下列出這一課，您將使用[!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)]資料來源建立的[第 1 課： 建立中繼資料採礦方案&#40;中繼資料採礦教學課程&#41;](../../2014/tutorials/lesson-1-create-solution-intermediate-data-mining-tutorial.md).  
+ 若要完成以下列出這一課，您會使用[!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)]資料來源，您在建立[第 1 課： 建立中繼資料採礦方案&#40;中繼資料採礦教學課程&#41;](../../2014/tutorials/lesson-1-create-solution-intermediate-data-mining-tutorial.md).  
   
 > [!WARNING]  
 >  中的日期[!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)]此版本已更新範例資料庫。 如果您使用舊版 [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)]，可以在這些步驟後建立模型，但您可能會看到不同的結果。  
   
  **建立簡單的預測模型**  
   
--   [加入資料來源檢視預測&#40;中繼資料採礦教學課程&#41;](../../2014/tutorials/adding-a-data-source-view-for-forecasting-intermediate-data-mining-tutorial.md)  
+-   [新增資料來源檢視預測&#40;中繼資料採礦教學課程&#41;](../../2014/tutorials/adding-a-data-source-view-for-forecasting-intermediate-data-mining-tutorial.md)  
   
 -   [建立預測結構和模型&#40;中繼資料採礦教學課程&#41;](../../2014/tutorials/creating-a-forecasting-structure-and-model-intermediate-data-mining-tutorial.md)  
   
@@ -71,12 +71,12 @@ ms.locfileid: "36312346"
   
 -   [時間序列預測使用取代資料&#40;中繼資料採礦教學課程&#41;](../../2014/tutorials/time-series-predictions-replacement-data-intermediate-data-mining.md)  
   
--   [比較預測的預測模型&#40;中繼資料採礦教學課程&#41;](../../2014/tutorials/comparing-predictions-for-forecasting-models-intermediate-data-mining-tutorial.md)  
+-   [適用於預測模型比較預測&#40;中繼資料採礦教學課程&#41;](../../2014/tutorials/comparing-predictions-for-forecasting-models-intermediate-data-mining-tutorial.md)  
   
 ## <a name="next-task-in-lesson"></a>本課程的下一項工作  
- [加入資料來源檢視預測&#40;中繼資料採礦教學課程&#41;](../../2014/tutorials/adding-a-data-source-view-for-forecasting-intermediate-data-mining-tutorial.md)  
+ [新增資料來源檢視預測&#40;中繼資料採礦教學課程&#41;](../../2014/tutorials/adding-a-data-source-view-for-forecasting-intermediate-data-mining-tutorial.md)  
   
- [了解時間序列的需求模型&#40;中繼資料採礦教學課程&#41;](../../2014/tutorials/time-series-model-requirements-intermediate-data-mining-tutorial.md)  
+ [了解需求時間序列模型&#40;中繼資料採礦教學課程&#41;](../../2014/tutorials/time-series-model-requirements-intermediate-data-mining-tutorial.md)  
   
 ## <a name="all-lessons"></a>所有課程  
  [第 1 課： 建立中繼資料採礦方案&#40;中繼資料採礦教學課程&#41;](../../2014/tutorials/lesson-1-create-solution-intermediate-data-mining-tutorial.md)  
@@ -85,7 +85,7 @@ ms.locfileid: "36312346"
   
  [第 3 課： 建立購物籃狀況&#40;中繼資料採礦教學課程&#41;](../../2014/tutorials/lesson-3-building-a-market-basket-scenario-intermediate-data-mining-tutorial.md)  
   
- [第 4 課： 建立時序群集狀況&#40;中繼資料採礦教學課程&#41;](../../2014/tutorials/lesson-4-build-sequence-clustering-scenario-intermediate-data-mining.md)  
+ [第 4 課： 建立時序群集案例&#40;中繼資料採礦教學課程&#41;](../../2014/tutorials/lesson-4-build-sequence-clustering-scenario-intermediate-data-mining.md)  
   
  [第 5 課： 建立類神經網路和羅吉斯迴歸模型&#40;中繼資料採礦教學課程&#41;](../../2014/tutorials/lesson-5-build-models-intermediate-data-mining-tutorial.md)  
   

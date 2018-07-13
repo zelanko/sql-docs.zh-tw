@@ -5,10 +5,9 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-bulk-import-export
+ms.technology: data-movement
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - bulk importing [SQL Server], null values
 - bulk importing [SQL Server], default values
@@ -21,15 +20,15 @@ helpviewer_keywords:
 - data formats [SQL Server], default values
 ms.assetid: 6b91d762-337b-4345-a159-88abb3e64a81
 caps.latest.revision: 36
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 7840877066f5f941050d96c3274ab7bf6698326c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: f99b040dc2a2caa0b7df7847760e978fef010fc4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36137074"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37258774"
 ---
 # <a name="keep-nulls-or-use-default-values-during-bulk-import-sql-server"></a>大量匯入期間保留 Null 或使用預設值 (SQL Server)
   依預設，當資料匯入資料表時，**bcp** 命令和 BULK INSERT 陳述式會查看資料表中的資料行是否已定義預設值。 例如，若資料檔中有一個 Null 值欄位，將會以載入該資料行的預設值來取代。 **bcp** 命令和 BULK INSERT 陳述式都可以指定保留 Null 值。  
@@ -86,7 +85,7 @@ bcp AdventureWorks..MyTestDefaultCol2 format nul -c -f C:\MyTestDefaultCol2-f-c.
 |**bcp**|`-k`|參數|  
 |BULK INSERT|KEEPNULLS<sup>1</sup>|引數|  
   
- <sup>1</sup>對於 BULK INSERT，若沒有預設值，資料表資料行必須定義為允許 null 值。  
+ <sup>1</sup>對於 BULK INSERT，若沒有預設值可使用，資料表資料行必須定義為允許 null 值。  
   
 > [!NOTE]  
 >  這些限定詞會使這些大量匯入命令不再檢查資料表上有無 DEFAULT 定義， 但對任何並行 INSERT 陳述式而言，DEFAULT 定義是可預期的。  
@@ -103,7 +102,7 @@ bcp AdventureWorks..MyTestDefaultCol2 format nul -c -f C:\MyTestDefaultCol2-f-c.
 |`1`|`Default value of Col2`|`DataField3`|  
 |`2`|`Default value of Col2`|`DataField3`|  
   
- 若要插入"`NULL`「 instead of 」`Default value of Col2`」，您需要使用`-k`參數或 KEEPNULL 選項，如下列所示**bcp**和 BULK INSERT 範例。  
+ 若要插入"`NULL`「 instead of 」`Default value of Col2`」，您必須使用`-k`參數或 KEEPNULL 選項，如下列所示**bcp**和 BULK INSERT 範例。  
   
 #### <a name="using-bcp-and-keeping-null-values"></a>使用 bcp 並保留 Null 值  
  下列範例示範如何使用 **bcp** 命令保留 Null 值。 **bcp** 命令包含下列參數：  

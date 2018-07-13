@@ -1,5 +1,5 @@
 ---
-title: 資料分割表示法 （表格式） |Microsoft 文件
+title: 資料分割表示法 （表格式） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -12,15 +12,15 @@ ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: b606cd63-755c-4ac0-b19b-95b5363afbdf
 caps.latest.revision: 5
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 6b05a9e169ec2227242be254d7eeb728693ea513
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 1cc8d3d1691b06e79da21f0ad173a570b58eff54
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36136487"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37209878"
 ---
 # <a name="partition-representation-tabular"></a>資料分割表示法 (表格式)
   您可以基於作業目的，將資料表分割成不同的資料列子集 (結合在一起時就會構成資料表)。其中每個子集都是資料表的資料分割。  

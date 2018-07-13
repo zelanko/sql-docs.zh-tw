@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.pivottrans.f1
 helpviewer_keywords:
@@ -21,13 +21,13 @@ ms.assetid: 55f5db6e-6777-435f-8a06-b68c129f8437
 caps.latest.revision: 55
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: ed9e181d9e346e39aa537b50fa8c0b166ba03da1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 1845f31deda21a34b0ef3e843ef33016981c074b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36144770"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37182748"
 ---
 # <a name="pivot-transformation"></a>樞紐轉換
   「樞紐」轉換可藉由樞紐資料行值上的輸入資料，將正規化的資料集轉換為較不正規但更精簡的版本。 例如，列出客戶名稱、產品及購買數量的正規化 **Orders** 資料集，對於購買多個產品的客戶一般都具有多個資料列，且該客戶的每個資料列都顯示不同產品的訂單詳細資料。 藉由樞紐產品資料行上的資料集，「樞紐」轉換可以為每位客戶輸出含單一資料列的資料集。 該單一資料列會列出客戶購買的所有產品，產品名稱顯示為資料行名稱，而數量則顯示為產品資料行中的值。 因為不是每位客戶都會購買所有產品，所以許多資料行可能包含 Null 值。  

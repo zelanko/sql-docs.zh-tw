@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 5933c4f0-c713-4ecb-b521-ff46c9c63fff
 caps.latest.revision: 7
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: a20097a87111ad7cbedc9b7de7599741e2a4e360
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 69b6d59bce9eb4de36ad8cc33192cdee7b583f1e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36137010"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37155739"
 ---
 # <a name="create-a-stepped-report-report-builder-and-ssrs"></a>建立階梯狀報表 (報表產生器及 SSRS)
   階梯狀報表會在相同的資料行中，顯示父群組底下縮排的詳細資料列或子群組，如以下範例所示：  
@@ -68,7 +68,7 @@ ms.locfileid: "36137010"
   
     2.  在 [屬性] 窗格的 [對齊] 底下，展開 [填補] 的屬性。  
   
-    3.  如**左**，輸入新的填補值，例如`.5in`。 填補會將資料格中的文字縮排您所指定的值。 預設填補為 2 點。 [填補] 屬性的有效值為零或正數，後面接著一個大小指示項。  
+    3.  針對**左**，輸入新的填補值，例如`.5in`。 填補會將資料格中的文字縮排您所指定的值。 預設填補為 2 點。 [填補] 屬性的有效值為零或正數，後面接著一個大小指示項。  
   
          大小指示項包括：  
   
@@ -108,7 +108,7 @@ ms.locfileid: "36137010"
 3.  變更顯示群組資料之資料格的填補。  
   
 ## <a name="see-also"></a>另請參閱  
- [頁首和頁尾&#40;報表產生器和 SSRS&#41;](page-headers-and-footers-report-builder-and-ssrs.md)   
+ [頁首和頁尾&#40;報表產生器及 SSRS&#41;](page-headers-and-footers-report-builder-and-ssrs.md)   
  [設定報表項目的格式 &#40;報表產生器及 SSRS&#41;](formatting-report-items-report-builder-and-ssrs.md)   
  [Tablix 資料區 &#40;報表產生器及 SSRS&#41;](../tablix-data-region-report-builder-and-ssrs.md)   
  [資料表 &#40;報表產生器及 SSRS&#41;](tables-report-builder-and-ssrs.md)   

@@ -5,24 +5,22 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-statistics
+ms.technology: performance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - updating statistics
 - statistics [SQL Server], updating
 ms.assetid: 4b97c0b4-03ff-4cfb-9c3f-3b33290b7a2c
-caps.latest.revision: 9
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 7de18c4a939daf93aa37764b41e7b5df24a26f18
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 3245e20a2e1401c5c8b147cf14c78256a929068e
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36135117"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37424247"
 ---
 # <a name="update-statistics"></a>更新統計資料
   您可以使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ，在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中針對資料表或索引檢視表更新查詢最佳化統計資料。 根據預設，查詢最佳化工具已經視需要更新統計資料，以便改善查詢計畫。不過，在某些情況下，您可以使用 UPDATE STATISTICS 或 `sp_updatestats` 預存程序，讓統計資料的更新頻率高於預設更新頻率，藉以改善查詢效能。  

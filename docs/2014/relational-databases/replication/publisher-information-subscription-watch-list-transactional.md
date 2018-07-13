@@ -1,5 +1,5 @@
 ---
-title: 發行者資訊，訂閱監看清單 （交易式發行集，SQL Server 2005 和更新版本） |Microsoft 文件
+title: 發行者資訊，訂閱監看清單 （交易式發行集，SQL Server 2005 和更新版本） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.rep.monitor.publisherinfo.subscriptionssummary.tran.f1
 ms.assetid: 6bc64ddb-5c86-4681-a391-77fc1d3c4e6e
 caps.latest.revision: 33
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: c0a029b08569c70d13cdc7e1d0812b4ddc864f74
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: bff3f7cfc01997f4f4194966902d6e74efe8357a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36136613"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37160299"
 ---
 # <a name="publisher-information-subscription-watch-list-transactional-publication-sql-server-2005-and-later"></a>發行者資訊，訂閱監看清單 (交易式發行集，SQL Server 2005 和更新的版本)
   執行 SQL Server 2005 和更新版本的散發者可以使用 **[訂閱監看清單]** 索引標籤；它是要用來在選取之發行者端的所有可用發行集上，顯示訂閱的資訊。 您可以篩選訂閱清單以查看錯誤、警告以及任何執行不良的訂閱。 此索引標籤為管理員提供監視發行者端所有複寫活動的單一位置：複寫監視器會根據選取的複寫類型和 **[顯示]** 下拉式清單方塊中選擇的選項，顯示需要注意的所有訂閱。 由於此索引標籤上顯示的項目會依據目前的狀態與效能，因此唯有在目前符合 **[顯示]** 清單方塊中之選項的訂閱，才會在這個頁面上顯示。  

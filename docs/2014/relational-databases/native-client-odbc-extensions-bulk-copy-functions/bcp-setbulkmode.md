@@ -1,31 +1,29 @@
 ---
-title: bcp_setbulkmode |Microsoft 文件
+title: bcp_setbulkmode |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - bcp_setbulkmode function
 ms.assetid: de56f206-1f7e-4c03-bf22-da9c7f9f4433
 caps.latest.revision: 11
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 9d4fd20ddc1820c02c24ed79a8d38d416e284908
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 3388269c7dd2a48f63148f22bd332a0c4c291794
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36132410"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37423057"
 ---
 # <a name="bcpsetbulkmode"></a>bcp_setbulkmode
-  bcp_setbulkmode 可讓您在大量複製作業，在單一函數呼叫中設定的所有資料行屬性中指定的資料行格式。  
+  bcp_setbulkmode 可讓您指定在大量複製作業中，設定單一函式呼叫中的所有資料行屬性的資料行格式。  
   
 ## <a name="syntax"></a>語法  
   
@@ -76,24 +74,24 @@ cbRow
  SUCCEED 或 FAIL  
   
 ## <a name="remarks"></a>備註  
- bcp_setbulkmode 可用來大量複製查詢或資料表。 Bcp_setbulkmode 大量複製查詢陳述式使用時，它必須之前呼叫 bcp_control 再使用 bcp_hint 來呼叫。  
+ bcp_setbulkmode 可用來大量複製查詢或資料表。 Bcp_setbulkmode 來大量複製查詢陳述式，它必須在之前呼叫 bcp_control 再使用 bcp_hint 來呼叫。  
   
- bcp_setbulkmode 是替代[bcp_setcolfmt](bcp-setcolfmt.md)和[bcp_columns](bcp-columns.md)，它只能讓您指定的每個函式呼叫的一個資料行格式。  
+ bcp_setbulkmode 是使用替代[bcp_setcolfmt](bcp-setcolfmt.md)並[bcp_columns](bcp-columns.md)，它只能讓您指定每個函式呼叫的一個資料行的格式。  
   
  下表列出的常數*屬性*參數。  
   
 |屬性|描述|  
 |--------------|-----------------|  
-|BCP_OUT_CHARACTER_MODE|指定字元輸出模式。<br /><br /> 對應到 BCP 中的 – c 選項。EXE，並與 bcp_setcolfmt`BCP_FMT_TYPE`屬性設定為`SQLCHARACTER`。|  
-|BCP_OUT_WIDE_CHARACTER_MODE|指定 Unicode 輸出模式。<br /><br /> 對應到 BCP 中的 – w 選項。EXE 和與 bcp_setcolfmt`BCP_FMT_TYPE`屬性設定為`SQLNCHAR`。|  
+|BCP_OUT_CHARACTER_MODE|指定字元輸出模式。<br /><br /> 對應至在 BCP 中的 – c 選項。EXE，並使用 bcp_setcolfmt`BCP_FMT_TYPE`屬性設定為`SQLCHARACTER`。|  
+|BCP_OUT_WIDE_CHARACTER_MODE|指定 Unicode 輸出模式。<br /><br /> 對應至在 BCP 中的 – w 選項。EXE 和與 bcp_setcolfmt`BCP_FMT_TYPE`屬性設定為`SQLNCHAR`。|  
 |BCP_OUT_NATIVE_TEXT_MODE|指定非字元類型的原生類型和字元類型的 Unicode。<br /><br /> 對應到 BCP 中的 – N 選項。EXE 和與 bcp_setcolfmt`BCP_FMT_TYPE`屬性設定為`SQLNCHAR`如果資料行類型是字串 （預設值如果不是字串）。|  
-|BCP_OUT_NATIVE_MODE|指定原生資料庫類型。<br /><br /> 對應到 BCP 中的 – n 選項。EXE 和與 bcp_setcolfmt`BCP_FMT_TYPE`屬性設定為預設值。|  
+|BCP_OUT_NATIVE_MODE|指定原生資料庫類型。<br /><br /> 對應到 BCP 中的 – n 選項。EXE 和與 bcp_setcolfmt`BCP_FMT_TYPE`屬性設為預設值。|  
   
- 您不應該使用函式呼叫的序列，包括 bcp_setcolfmt、 bcp_control 和 bcp_readfmt bcp_setbulkmode。 例如，您不應該呼叫 bcp_control(BCPTEXTFILE) 和 bcp_setbulkmode。  
+ 您不應該使用 bcp_setbulkmode 具有包含 bcp_setcolfmt、 bcp_control 和 bcp_readfmt 函式呼叫的順序。 例如，您不應該呼叫 bcp_control(BCPTEXTFILE) 和 bcp_setbulkmode。  
   
- 您可以呼叫 bcp_control 和 bcp_setbulkmode bcp_control bcp_setbulkmode 不衝突的選項。 例如，您可以呼叫 bcp_control(BCPFIRST) 和 bcp_setbulkmode。  
+ 您可以呼叫 bcp_control 和 bcp_setbulkmode bcp_setbulkmode 不衝突的 bcp_control 選項。 例如，您可以呼叫 bcp_control(BCPFIRST) 和 bcp_setbulkmode。  
   
- 如果您想要呼叫的函式呼叫的序列，包括 bcp_setcolfmt、 bcp_control 和 bcp_readfmt bcp_setbulkmode，其中一個函式呼叫會傳回順序錯誤失敗。 如果您選擇要更正失敗，請呼叫 bcp_init 來重設所有設定並重新開始。  
+ 如果您嘗試呼叫 bcp_setbulkmode 與包含 bcp_setcolfmt、 bcp_control 和 bcp_readfmt 函數呼叫的序列，其中一個函式呼叫會傳回順序錯誤失敗。 如果您選擇要更正失敗，請呼叫 bcp_init 來重設所有設定，並重新開始。  
   
  下表將呈現產生函數順序錯誤之函數呼叫的部分範例。  
   

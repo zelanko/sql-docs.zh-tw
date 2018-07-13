@@ -1,5 +1,5 @@
 ---
-title: 執行封裝對話方塊 |Microsoft 文件
+title: 執行封裝對話方塊 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.ssis.ssms.ispackageexecute.f1
 - sql12.ssis.ssms.executepackage.f1
 ms.assetid: 4f7a806d-4867-4d1f-bc65-b00c1caee7b6
 caps.latest.revision: 21
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: c2d9b2edb2c61982c954a4f84494ba8e10bbf2fa
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 78002ac1a5ada63523c414b9ea328bc50c731ce2
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36136463"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37164971"
 ---
 # <a name="execute-package-dialog-box"></a>Execute Package Dialog Box
   使用 **[執行封裝]** 對話方塊，即可執行儲存在 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 伺服器上的封裝。  

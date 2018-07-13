@@ -1,5 +1,5 @@
 ---
-title: 收益圖 (Analysis Services-資料採礦) |Microsoft 文件
+title: 收益圖 (Analysis Services-資料採礦) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - accuracy, charting
 - revenue, estimating
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - profit charts [Analysis Services]
 ms.assetid: 760ee051-6fd8-48e3-8d2e-82db3ab45e45
 caps.latest.revision: 22
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 68a78acb38762075dba4bd3a6350c68f729f4716
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 898f0d6fe8dacfb2ec2a8148297d7bd5c0eeb949
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36135294"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37239928"
 ---
 # <a name="profit-chart-analysis-services---data-mining"></a>收益圖 (Analysis Services - 資料採礦)
   收益圖會顯示與使用採礦模型有關聯的預估獲利率。 例如，假設您的模型是預測公司應該在某個商務案例中連絡哪些客戶。 在此情況下，您的收益圖就要加入與執行目標郵寄促銷活動的成本有關的資訊。 然後，您便能在完成的圖表中看到正確鎖定目標客戶相較於隨機連絡客戶的預估收益。  
@@ -63,7 +63,7 @@ ms.locfileid: "36135294"
   
      此對話方塊可協助您指定與目標郵寄促銷活動相關的成本與效益。 針對這些範例中所示的圖表，我們使用下列值：  
   
-    |設定|ReplTest1|註解|  
+    |設定|值|註解|  
     |-------------|-----------|--------------|  
     |**母體**|20,000|設定總目標母體的值<br /><br /> 您的資料庫可能包含許多客戶，但是為了省下郵寄支出，您可以選擇只鎖定最有可能回應的 20,000 名目標客戶。 藉由執行預測查詢，並依預測模型所輸出的機率排序，即可取得這份清單。|  
     |**固定成本**|500|輸入為 20,000 人設定目標郵寄促銷活動的單次成本。 這可能包括印刷品，或是設定電子郵件促銷活動的成本。|  

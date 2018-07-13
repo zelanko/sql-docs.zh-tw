@@ -5,10 +5,9 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-backup-restore
+ms.technology: backup-restore
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - database backups [SQL Server], recovery models
 - recovery [SQL Server], recovery model
@@ -19,15 +18,15 @@ helpviewer_keywords:
 - modifying database recovery models
 ms.assetid: 94918d1d-7c10-4be7-bf9f-27e00b003a0f
 caps.latest.revision: 36
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 142fa3d4dcdfabac8f8c2f3c0a7576e2046f814b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: aeddab237776e94c2d954d3019beac5b52726723
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36144959"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37156259"
 ---
 # <a name="view-or-change-the-recovery-model-of-a-database-sql-server"></a>檢視或變更資料庫的復原模式 (SQL Server)
   此主題描述如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ，在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中檢視或變更資料庫的復原模式。 「復原模式」是一項資料庫屬性，可控制交易的記錄方式、是否需要 (及允許) 備份交易記錄，以及可用的還原作業類型。 復原模式共有三種：簡單、完整和大量記錄。 一般而言，資料庫會使用完整復原模式或簡單復原模式。 資料庫可以隨時切換到另一個復原模式。 **model** 資料庫會設定新資料庫的預設復原模式。  

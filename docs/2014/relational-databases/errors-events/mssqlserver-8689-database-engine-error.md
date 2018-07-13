@@ -5,23 +5,22 @@ ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - 8689 (Database Engine error)
 ms.assetid: 99467a32-6576-4272-a076-b16c06933f2a
 caps.latest.revision: 13
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: c6716439038f61003abd807cefbf123ec3682b17
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 85e33cc4231fb4ebf6a3058a20a0257e81a07b6a
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36134642"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37421437"
 ---
 # <a name="mssqlserver8689"></a>MSSQLSERVER_8689
     

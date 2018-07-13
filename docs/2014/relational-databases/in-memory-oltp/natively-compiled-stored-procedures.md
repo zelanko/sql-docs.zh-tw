@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - database-engine-imoltp
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - natively compiled stored procedures
 ms.assetid: d5ed432c-10c5-4e4f-883c-ef4d1fa32366
 caps.latest.revision: 54
-author: stevestein
-ms.author: sstein
-manager: jhubbard
-ms.openlocfilehash: b566be21bdd5756a4f37be09a436c65fe1565bb1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+ms.openlocfilehash: 377aa0cd89ad794bb9efb3744cbf62723512d12c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36136848"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37148709"
 ---
 # <a name="natively-compiled-stored-procedures"></a>原生編譯的預存程序
   原生編譯預存程序是編譯成可存取記憶體最佳化資料表之機器碼的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 預存程序。 原生編譯預存程序提供以有效率的方式執行預存程序中的查詢與商務邏輯。 如需有關原生編譯程序的詳細資料，請參閱＜ [Native Compilation of Tables and Stored Procedures](native-compilation-of-tables-and-stored-procedures.md)＞。 如需有關將以磁碟為基礎之預存程序移轉至原生編譯預存程序的詳細資訊，請參閱＜ [Migration Issues for Natively Compiled Stored Procedures](migration-issues-for-natively-compiled-stored-procedures.md)＞。  
@@ -37,9 +37,9 @@ ms.locfileid: "36136848"
   
 -   [原生編譯的預存程序中支援的建構](supported-features-for-natively-compiled-t-sql-modules.md)  
   
--   [使用 Try...在原生編譯的預存程序的 catch](../../database-engine/using-try-catch-in-natively-compiled-stored-procedures.md)  
+-   [在原生編譯預存程序中使用 Try..Catch](../../database-engine/using-try-catch-in-natively-compiled-stored-procedures.md)  
   
--   [原生編譯的預存程序中支援的建構](supported-ddl-for-natively-compiled-t-sql-modules.md)  
+-   [原生編譯的預存程序上支援的建構](supported-ddl-for-natively-compiled-t-sql-modules.md)  
   
 -   [原生編譯的預存程序和執行 Set 選項](natively-compiled-stored-procedures-and-execution-set-options.md)  
   

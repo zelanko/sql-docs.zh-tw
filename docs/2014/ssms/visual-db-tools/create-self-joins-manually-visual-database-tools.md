@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - self-joins
 - manual joins [SQL Server]
 - joins [SQL Server], self
 ms.assetid: 910ed516-cb84-481b-95d0-cba3e89afdba
 caps.latest.revision: 10
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: b74122903e1372c219d925d9ff871bdba91d49d1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: a0d414857a05107bed224e732d488e5043b11ecf
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36136106"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37159769"
 ---
 # <a name="create-self-joins-manually-visual-database-tools"></a>手動建立自我聯結 (Visual Database Tools)
   即使資料表沒有資料庫中的自反關聯性，也可以將資料表聯結至它本身。 例如，可以使用自我聯結 (Self-Join) 來找出住在同一城市的作者。  
@@ -129,7 +129,7 @@ Cheryl Carson       Abraham Bennet
 7.  指定查詢的其他選項，例如輸出資料行、搜尋條件和排序順序。  
   
 ## <a name="see-also"></a>另請參閱  
- [建立自我聯結自動&#40;Visual Database Tools&#41;](create-self-joins-automatically-visual-database-tools.md)   
+ [建立自我聯結會自動&#40;Visual Database Tools&#41;](create-self-joins-automatically-visual-database-tools.md)   
  [使用聯結查詢 &#40;Visual Database Tools&#41;](query-with-joins-visual-database-tools.md)  
   
   

@@ -5,23 +5,22 @@ ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - 8974 (Database Engine error)
 ms.assetid: 52098678-0858-4a14-ad07-37ebbafca5fc
 caps.latest.revision: 18
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: a346bf7a7461ec1513f0d79245d9c6c7753c53bb
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 1288dde396a94e38145cfd58e1100766536f84d7
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36135394"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37415217"
 ---
 # <a name="mssqlserver8974"></a>MSSQLSERVER_8974
     

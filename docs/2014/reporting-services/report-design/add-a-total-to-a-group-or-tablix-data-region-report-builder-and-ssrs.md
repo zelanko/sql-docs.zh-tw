@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: cf1b96c3-7f0f-4c94-ad08-5239c77ccfe4
 caps.latest.revision: 7
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: d44ac2a0029f1494314645a9aa613b605b666c44
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 800c8ce788f4152f1f429b54032efa193972c10f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36136795"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37159969"
 ---
 # <a name="add-a-total-to-a-group-or-tablix-data-region-report-builder-and-ssrs"></a>將總計加入到群組或 Tablix 資料區 (報表產生器及 SSRS)
-  您可以在 Tablix 資料區中，加入群組的總計或整個資料區域的總計。 根據預設，總計是套用篩選之後，群組或資料區域中的數值、非 Null 資料的總和。 若要加入群組的總計，在 [群組] 窗格中，按一下群組之快速鍵功能表上的 **[加入總計]** 。 若要加入 Tablix 主體區域中個別資料格的總計，按一下資料格之快速鍵功能表上的 **[加入總計]** 。 [新增總計] 命令與內容相關，而且僅能針對數值欄位啟用。 根據所選取的 Tablix 資料格，您可以在 Tablix 主體區域中選取資料格來加入單一資料格的總計，或者在 Tablix 資料列群組區域或 Tablix 資料行群組區域中選取資料格來加入整個群組的總計。 如需有關 tablix 區域的詳細資訊，請參閱[Tablix 資料區&#40;報表產生器及 SSRS&#41;](../tablix-data-region-report-builder-and-ssrs.md)。  
+  您可以在 Tablix 資料區中，加入群組的總計或整個資料區域的總計。 根據預設，總計是套用篩選之後，群組或資料區域中的數值、非 Null 資料的總和。 若要加入群組的總計，在 [群組] 窗格中，按一下群組之快速鍵功能表上的 **[加入總計]** 。 若要加入 Tablix 主體區域中個別資料格的總計，按一下資料格之快速鍵功能表上的 **[加入總計]** 。 [新增總計] 命令與內容相關，而且僅能針對數值欄位啟用。 根據所選取的 Tablix 資料格，您可以在 Tablix 主體區域中選取資料格來加入單一資料格的總計，或者在 Tablix 資料列群組區域或 Tablix 資料行群組區域中選取資料格來加入整個群組的總計。 如需有關 tablix 區域的詳細資訊，請參閱 < [Tablix 資料區&#40;報表產生器及 SSRS&#41;](../tablix-data-region-report-builder-and-ssrs.md)。  
   
  加入總計之後，您可以從內建報表函數的清單，將預設函數 Sum 變更為不同的彙總函數。 如需詳細資訊，請參閱[彙總函式參考 &#40;報表產生器和 SSRS&#41;](report-builder-functions-aggregate-functions-reference.md)。[!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
@@ -47,7 +47,7 @@ ms.locfileid: "36136795"
      目前群組外的新資料行會加入到資料區域中，然後會在資料行中加入每個數值欄位的預設總計。  
   
 ## <a name="see-also"></a>另請參閱  
- [Expression Scope for Totals，Aggregates，and Built-in Collections&#40;報表產生器和 SSRS&#41;](expression-scope-for-totals-aggregates-and-built-in-collections.md)   
+ [Expression Scope for Totals，Aggregates，and Built-in Collections&#40;報表產生器及 SSRS&#41;](expression-scope-for-totals-aggregates-and-built-in-collections.md)   
  [Tablix 資料區 &#40;報表產生器及 SSRS&#41;](../tablix-data-region-report-builder-and-ssrs.md)   
  [資料表 &#40;報表產生器及 SSRS&#41;](tables-report-builder-and-ssrs.md)   
  [矩陣 &#40;報表產生器及 SSRS&#41;](create-a-matrix-report-builder-and-ssrs.md)   

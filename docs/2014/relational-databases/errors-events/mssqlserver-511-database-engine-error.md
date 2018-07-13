@@ -5,23 +5,22 @@ ms.date: 01/19/2016
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - 511 (Database Engine error)
 ms.assetid: 0c85686a-53c1-4180-ba8c-2000e68a0d63
 caps.latest.revision: 12
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: a7127c975bfd85a4dc41ba930c5f5b8237fa5f1e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 0b9a03c95e58a86d9e4d8c962c3906a21e95bb52
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36134957"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37408877"
 ---
 # <a name="mssqlserver511"></a>MSSQLSERVER_511
     

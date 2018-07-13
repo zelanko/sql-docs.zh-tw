@@ -1,5 +1,5 @@
 ---
-title: 共用資料摘要使用資料摘要的庫 (PowerPivot for SharePoint) |Microsoft 文件
+title: 使用資料摘要的庫 (PowerPivot for SharePoint) 共用資料摘要 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,23 +8,23 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - data feeds [Analysis Services with SharePoint]
 ms.assetid: 4ec98dec-0cd2-4727-bb79-5bf6f8a865d6
 caps.latest.revision: 24
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 8e082281ad3aa9ca592ab19d8087fde8e2239880
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 1ac02a4f06eb66528d68ba42b3036d0837f308d4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36145050"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37161389"
 ---
 # <a name="share-data-feeds-using-a-data-feed-library-powerpivot-for-sharepoint"></a>使用資料摘要庫共用資料摘要 (PowerPivot for SharePoint)
-  資料摘要是從以 Atom 電傳格式公開資料之服務或應用程式產生的 XML 資料流， 現在越來越常用在應用程式之間傳輸資料，以及傳輸資料至用戶端檢視器。 在 PowerPivot for SharePoint 部署中，資料摘要用來填入[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]資料以 Atom 感知應用程式或服務的資料來源。  
+  資料摘要是從以 Atom 電傳格式公開資料之服務或應用程式產生的 XML 資料流， 現在越來越常用在應用程式之間傳輸資料，以及傳輸資料至用戶端檢視器。 在 PowerPivot for SharePoint 部署中，資料摘要用來填入[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]具有以 Atom 感知應用程式或服務的資料來源。  
   
  如果您已經使用 Atom 感知應用程式的組合，您可能永遠都不需要知道摘要是如何產生和取用的，因為應用程式之間會進行完美的資料傳輸。 但是，使用自訂方案來發行 Atom 摘要的組織通常都需要想辦法提供摘要給資訊工作者使用。 其中一種辦法就是：建立並共用資料服務文件 (.atomsvc) 檔，以提供連接到產生摘要的線上來源。 資料摘要庫是有特殊用途的程式庫，支援在 SharePoint Web 應用程式中建立並共用資料服務文件。  
   
@@ -44,9 +44,9 @@ ms.locfileid: "36145050"
 >  雖然資料摘要是用來將 Web 資料加入您在 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 中建立的 [!INCLUDE[ssGeminiClient](../../includes/ssgeminiclient-md.md)]資料來源，但是任何可讀取 Atom 摘要的用戶端應用程式都可以處理資料服務文件。  
   
 ##  <a name="prereq"></a> 必要條件  
- 您必須已部署的[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]PowerPivot for SharePoint 加入[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]查詢處理 SharePoint 伺服器陣列。 資料摘要支援是透過 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 方案套件進行部署。  
+ 您必須已部署[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]PowerPivot for SharePoint，以便將[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]查詢處理，SharePoint 伺服器陣列。 資料摘要支援是透過 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 方案套件進行部署。  
   
- 您必須有支援資料服務文件內容類型的 SharePoint 文件庫。 因此，建議您使用預設的資料摘要庫，但是您也可以手動方式加入該內容類型至任何文件庫。 如需詳細資訊，請參閱[建立或自訂資料摘要庫&#40;PowerPivot for SharePoint&#41;](create-or-customize-a-data-feed-library-power-pivot-for-sharepoint.md)。  
+ 您必須有支援資料服務文件內容類型的 SharePoint 文件庫。 因此，建議您使用預設的資料摘要庫，但是您也可以手動方式加入該內容類型至任何文件庫。 如需詳細資訊，請參閱 <<c0> [ 建立或自訂資料摘要庫&#40;PowerPivot for SharePoint&#41;](create-or-customize-a-data-feed-library-power-pivot-for-sharepoint.md)。</c0>  
   
  您必須有資料服務或線上資料來源，提供 Atom 1.0 格式的 XML 表格式資料。  
   
@@ -85,7 +85,7 @@ ms.locfileid: "36145050"
   
 6.  儲存文件。 資料服務文件是以實體檔案 (.atomsvc) 儲存於內容庫中，內容庫必須已設定為此內容類型。  
   
- 若要使用資料服務文件，您可以在 [!INCLUDE[ssGeminiClient](../../includes/ssgeminiclient-md.md)] 中開啟 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 活頁簿，然後在 [匯入資料精靈] 中選擇 [從資料摘要] 選項。 接到提示時，使用者要指定資料服務文件的 SharePoint URL，以啟動資料匯入作業。 如需詳細資訊，請參閱[使用資料摘要&#40;PowerPivot for SharePoint&#41;](use-data-feeds-power-pivot-for-sharepoint.md)。  
+ 若要使用資料服務文件，您可以在 [!INCLUDE[ssGeminiClient](../../includes/ssgeminiclient-md.md)] 中開啟 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 活頁簿，然後在 [匯入資料精靈] 中選擇 [從資料摘要] 選項。 接到提示時，使用者要指定資料服務文件的 SharePoint URL，以啟動資料匯入作業。 如需詳細資訊，請參閱 <<c0> [ 使用資料摘要&#40;PowerPivot for SharePoint&#41;](use-data-feeds-power-pivot-for-sharepoint.md)。</c0>  
   
 ##  <a name="securedsdoc"></a> 保護資料服務文件的安全  
  資料服務文件會繼承包含該文件之文件庫的權限。 您在項目上設定的權限會決定使用者是否可以開啟、修改或刪除資料服務文件。  
@@ -114,7 +114,7 @@ ms.locfileid: "36145050"
 >  雖然資料服務文件只讀取一次，但提供實際資料的資料服務可以定期進行存取，以取得更新的摘要。 如需如何重新整理資料的詳細資訊，請參閱[PowerPivot 資料重新整理](power-pivot-data-refresh.md)。  
   
 ##  <a name="usedsdoc"></a> 下一步：使用資料服務文件  
- 若要使用您在 SharePoint 文件庫中建立資料服務文件，您使用**從資料摘要**匯入 PowerPivot 資料來源中的選項。 如需指示，請參閱[使用資料摘要&#40;PowerPivot for SharePoint&#41;](use-data-feeds-power-pivot-for-sharepoint.md)。  
+ 若要使用您在 SharePoint 文件庫中建立資料服務文件，您使用**從資料摘要**匯入 PowerPivot 資料來源中的選項。 如需相關指示，請參閱 <<c0> [ 使用資料摘要&#40;PowerPivot for SharePoint&#41;](use-data-feeds-power-pivot-for-sharepoint.md)。</c0>  
   
 ## <a name="see-also"></a>另請參閱  
  [PowerPivot 資料摘要](power-pivot-data-feeds.md)  

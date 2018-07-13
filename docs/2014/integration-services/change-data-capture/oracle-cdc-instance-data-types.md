@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: eec13d8d-c15a-4542-bfc4-da66b1a6bfe0
 caps.latest.revision: 8
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: c2a277f030fc948ef63a82a7ff18c5dbe9fc5a1f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: dd95fa824edc5833b1bfed368cdb00c3684a862b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36144974"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37149379"
 ---
 # <a name="oracle-cdc-instance-data-types"></a>Oracle CDC 執行個體資料類型
   Oracle CDC 執行個體支援大多數的 Oracle 資料類型。 以下章節描述支援的資料類型和不支援的資料類型。  

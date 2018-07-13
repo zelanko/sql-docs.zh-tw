@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.rep.monitor.beta2.f1
 helpviewer_keywords:
 - Replication Monitor, help
 ms.assetid: 39b92198-c3f6-4f25-8560-095848ad652d
 caps.latest.revision: 25
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: f2d7942930c4653d390129991b06e47a60ccc7d1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 821011e46c396eeca618a0ba4ae01b47489b63bc
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36136378"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37175885"
 ---
 # <a name="replication-monitor"></a>複寫監視器
   文件集的這個章節包含複寫監視器的資訊。 監視器中所顯示的頁面和對話方塊，會視複寫的類型和監視的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本不同而有所不同。  

@@ -1,13 +1,11 @@
 ---
-title: 分析 ODBC 驅動程式效能 |Microsoft 文件
+title: 分析 ODBC 驅動程式效能 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client  - "database-engine" - "docset-sql-devref"
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -21,15 +19,15 @@ helpviewer_keywords:
 - statistical information [ODBC]
 ms.assetid: 8f44e194-d556-4119-a759-4c9dec7ecead
 caps.latest.revision: 35
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 71db4f4331a71927b54131d1ddd8d984e507091d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: dc80bf8e33d07abb487700989ce124442d17446d
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36135382"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37409977"
 ---
 # <a name="profiling-odbc-driver-performance"></a>分析 ODBC 驅動程式效能
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC 驅動程式可以分析兩種類型的效能資料：  
@@ -46,7 +44,7 @@ ms.locfileid: "36135382"
   
 -   連接至指定記錄的資料來源。  
   
--   呼叫[SQLSetConnectAttr](../../native-client-odbc-api/sqlsetconnectattr.md)設定控制分析驅動程式專屬屬性。  
+-   呼叫[SQLSetConnectAttr](../../native-client-odbc-api/sqlsetconnectattr.md)設定控制分析的驅動程式特定屬性。  
   
  每個應用程式處理序都可以取得自己的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC 驅動程式複本，而且分析通用於驅動程式複本和應用程式處理序的組合。 當應用程式中的任何項目開啟分析時，分析會記錄來自該應用程式的驅動程式中，所有作用中連接的資訊。 甚至是沒有特別針對分析呼叫的連接也包含在內。  
   
@@ -54,7 +52,7 @@ ms.locfileid: "36135382"
   
  如果應用程式開始記錄檔的分析，而且有另一個應用程式嘗試開始相同記錄檔的分析，則第二個應用程式無法記錄任何分析資料。 如果第二個應用程式在第一個應用程式卸載其驅動程式後開始分析，第二個應用程式會覆寫來自第一個應用程式的記錄檔。  
   
- 如果應用程式連接到已啟用分析的資料來源，此驅動程式會傳回 SQL_ERROR 應用程式呼叫**SQLSetConnectOption**來開始記錄。 呼叫**SQLGetDiagRec**則會傳回下列：  
+ 驅動程式應用程式連接到已啟用分析的資料來源，如果要在應用程式會呼叫傳回 SQL_ERROR **SQLSetConnectOption**來開始記錄。 呼叫**SQLGetDiagRec**則會傳回下列：  
   
 ```  
 SQLState: 01000, pfNative = 0  
@@ -88,8 +86,8 @@ ErrorMsg: [Microsoft][SQL Server Native Client]
 |SQLSelectRows|在 SQL_PERF_START 之後選取的資料列數目。|  
 |交易|SQL_PERF_START 之後的使用者交易數目，包括回復。 當 ODBC 應用程式使用 SQL_AUTOCOMMIT_ON 執行時，會將每個命令視為交易。|  
 |SQLPrepares|數目[SQLPrepare 函數](http://go.microsoft.com/fwlink/?LinkId=59360)SQL_PERF_START 之後呼叫。|  
-|ExecDirects|數目**SQLExecDirect** SQL_PERF_START 之後呼叫。|  
-|SQLExecutes|數目**SQLExecute** SQL_PERF_START 之後呼叫。|  
+|ExecDirects|數目**SQLExecDirect**在 SQL_PERF_START 之後呼叫。|  
+|SQLExecutes|數目**SQLExecute**在 SQL_PERF_START 之後呼叫。|  
 |CursorOpens|驅動程式在 SQL_PERF_START 之後已經開啟伺服器資料指標的次數。|  
 |CursorSize|在 SQL_PERF_START 之後，資料指標開啟之結果集中的資料列數目。|  
 |CursorUsed|在 SQL_PERF_START 之後，透過驅動程式從資料指標實際擷取的資料列數目。|  

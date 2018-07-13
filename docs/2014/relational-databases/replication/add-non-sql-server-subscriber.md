@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.rep.newsubwizard.addnonsqlsubscriber.f1
 ms.assetid: 21beeaa0-4b9e-48da-be63-1b9ff14e03d2
 caps.latest.revision: 10
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: be1939b2c9f0f56a0c8d4ef82978f772ef9d229c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 53575d47aa541ec59a3c9e3003795c5321f6f0d3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36136830"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37157949"
 ---
 # <a name="add-non-sql-server-subscriber"></a>加入非 SQL Server 訂閱者
   複寫可以支援為 Oracle 和 IBM DB2 訂閱者建立快照式和交易式發行集的發送訂閱。  

@@ -1,5 +1,5 @@
 ---
-title: KPI 元素 (CSDLBI) |Microsoft 文件
+title: KPI 元素 (CSDLBI) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -12,15 +12,15 @@ ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 203ee6e8-eef2-4476-b09f-bd95e492ddaa
 caps.latest.revision: 11
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: 2f6c4ee26beb74acd6817615d34847883c3b3565
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 0a649ffffe6f2d9f5902ede9e6d7a6126fd09e25
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36145024"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37155079"
 ---
 # <a name="kpi-element-csdlbi"></a>KPI 元素 (CSDLBI)
   Kpi 元素會定義可當做關鍵效能指標 (KPI) 使用的計算。 在商業智慧資料模型中，KPI 是以量值為基礎，因此 KPI 的定義會包含與量值關聯的所有中繼資料以及呈現 KPI 值所需的資訊，包括預設圖形。  
@@ -30,7 +30,7 @@ ms.locfileid: "36145024"
 ## <a name="elements-and-attributes"></a>元素和屬性  
  下表列出定義 Kpi 元素的元素和屬性。  
   
-|[屬性]|是否必要|描述|  
+|名稱|是否必要|描述|  
 |----------|-----------------|-----------------|  
 |文件集|否|KPI 的描述。|  
 |KpiGoal|是|資料行的參考，其中包含可用來做為目標的值。<br /><br /> 請參閱 [PropertyRef 元素 &#40;CSDLBI&#41;](propertyref-element-csdlbi.md)。|  

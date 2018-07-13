@@ -1,5 +1,5 @@
 ---
-title: CLR 交易範例 |Microsoft 文件
+title: CLR 交易範例 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -12,20 +12,20 @@ ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: b09161af-6ac1-406c-9d62-e40be3b4cf8d
 caps.latest.revision: 12
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: e1bf79778ca7c4376545570a538e41c5fa8db17f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 581510c786e31ab83399bb1ca0d21dd8391ff547
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36144783"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37154979"
 ---
 # <a name="clr-transactions-sample"></a>CLR 交易範例
   此範例會示範如何使用位於 `System.Transactions` 命名空間內的 Managed API 來控制交易。 特別的是，`System.Transactions.TransactionScope` 類別是用來建立交易界限，以確保除非有足夠庫存可應付要求，否則不調整庫存數字，而且如果有足夠庫存，則庫存是以不可部分完成的方式從某個位置轉移到另一個位置。 示範在分散式交易中自動註冊，其方式是將庫存的變更記錄到儲存在另一個 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體上的稽核資料庫。  
   
-## <a name="prerequisites"></a>必要條件  
+## <a name="prerequisites"></a>先決條件  
  若要建立並執行這個專案，您必須安裝下列軟體：  
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express。 您可以從 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express 文件集和範例[網站](http://go.microsoft.com/fwlink/?LinkId=31046)免費取得 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express  
@@ -57,7 +57,7 @@ ms.locfileid: "36144783"
   
 -   AdventureWorks 資料庫必須安裝在您所使用的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體上。  
   
--   如果您不是系統管理員的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]您所使用的執行個體，您必須擁有系統管理員授與您**CreateAssembly**權限，才能完成安裝。  
+-   如果您不是系統管理員[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]您所使用的執行個體，您必須擁有授與您的系統管理員**CreateAssembly**完成安裝程序的權限。  
   
 ## <a name="building-the-sample"></a>建立範例  
   
@@ -83,7 +83,7 @@ ms.locfileid: "36144783"
   
     -   `sqlcmd -E -I -i install.sql -v root = "C:\MySample\"`  
   
-7.  複製[!INCLUDE[tsql](../../includes/tsql-md.md)]資料庫安裝程式碼到檔案，並將它儲存成`installDB.sql`範例目錄中。  
+7.  複製[!INCLUDE[tsql](../../includes/tsql-md.md)]資料庫安裝程式碼到檔案，並將它儲存為`installDB.sql`範例目錄中。  
   
 8.  安裝稽核資料庫，方法是執行  
   
@@ -91,7 +91,7 @@ ms.locfileid: "36144783"
   
      並搭配適當的執行個體和伺服器值。  
   
-9. 複製[!INCLUDE[tsql](../../includes/tsql-md.md)]測試命令指令碼至檔案，並將它儲存成`test.sql`範例目錄中。  
+9. 複製[!INCLUDE[tsql](../../includes/tsql-md.md)]測試命令指令碼至檔案，並將它儲存為`test.sql`範例目錄中。  
   
 10. 使用下列命令來執行測試指令碼  
   

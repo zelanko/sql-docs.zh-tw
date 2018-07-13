@@ -5,10 +5,9 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-dml
+ms.technology: ''
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - first triggers [SQL Server]
 - last triggers
@@ -16,16 +15,15 @@ helpviewer_keywords:
 - INSTEAD OF triggers
 - AFTER triggers
 ms.assetid: 9e6c7684-3dd3-46bb-b7be-523b33fae4d5
-caps.latest.revision: 23
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 8badfd8ab7fc149ddce797f6aeb33ac896dc1e51
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: rothja
+ms.author: jroth
+manager: craigg
+ms.openlocfilehash: 6f3679768500152e3ba96c55eedaec2be8544b04
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36133908"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37419727"
 ---
 # <a name="specify-first-and-last-triggers"></a>指定第一個與最後一個觸發程序
   您可以指定與資料表關聯的其中一個 AFTER 觸發程序，做為針對每一個 INSERT、DELETE 和 UPDATE 觸發動作而引發的第一個或最後一個 AFTER 觸發程序。 在第一個及最後一個觸發程序之間啟動的 AFTER 觸發程序，會以未定義的順序執行。  

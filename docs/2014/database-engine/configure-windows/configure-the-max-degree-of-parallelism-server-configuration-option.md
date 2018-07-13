@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - parallel queries [SQL Server]
 - processors [SQL Server], parallel queries
@@ -16,18 +16,18 @@ helpviewer_keywords:
 - max degree of parallelism option
 ms.assetid: 86b65bf1-a6a1-4670-afc0-cdfad1558032
 caps.latest.revision: 30
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: aca180298fef5edde0d2923e6676a535915bb5ce
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: c05af3dbd8a05ebe91822eb6bc68481a4c60ca38
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36136278"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37241208"
 ---
 # <a name="configure-the-max-degree-of-parallelism-server-configuration-option"></a>設定 max degree of parallelism 伺服器組態選項
-  本主題描述如何設定`max degree of parallelism`伺服器組態選項中的[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]使用[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]或[!INCLUDE[tsql](../../includes/tsql-md.md)]。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體在具有多個微處理器或 CPU 的電腦上執行時，會偵測平行處理原則的最佳程度，也就是說，針對每一個平行計畫的執行，執行單一陳述式所要採用的處理器個數。 您可以使用 `max degree of parallelism` 選項來限制執行平行計畫所用的處理器數目。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 考慮針對查詢、 索引資料定義語言 (DDL) 作業，以及靜態和索引鍵集驅動資料指標擴展平行執行計畫。  
+  本主題描述如何設定`max degree of parallelism`中的伺服器組態選項[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]利用[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]或[!INCLUDE[tsql](../../includes/tsql-md.md)]。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體在具有多個微處理器或 CPU 的電腦上執行時，會偵測平行處理原則的最佳程度，也就是說，針對每一個平行計畫的執行，執行單一陳述式所要採用的處理器個數。 您可以使用 `max degree of parallelism` 選項來限制執行平行計畫所用的處理器數目。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會考慮進行平行執行計畫，針對查詢、 索引資料定義語言 (DDL) 作業，以及靜態和索引鍵集驅動資料指標擴展。  
   
  **本主題內容**  
   

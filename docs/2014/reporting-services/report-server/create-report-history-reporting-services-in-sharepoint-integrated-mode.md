@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - report history [Reporting Services], SharePoint
 ms.assetid: e57ec746-05ae-4ff6-8e39-6cde87310daa
 caps.latest.revision: 11
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: e5f06beea8a9aeb9d5ec3d0761d2360b45c3d7ec
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 5e4b98816503b11307f5786b73468e4a0515b3c1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36137012"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37210658"
 ---
 # <a name="create-report-history-reporting-services-in-sharepoint-integrated-mode"></a>建立報表記錄 (SharePoint 整合模式的 Reporting Services)
   報表記錄是您在經過一段時間後建立之報表快照集的集合。 每個快照集都是報表的副本，因為它在報表建立時就存在了。 它包含了快照集建立時報表最新的配置和資料。 轉譯資訊不會與快照集一起儲存。 當您在報表記錄中開啟快照集時，它就會以 HTML 在報表檢視器 Web 組件中開啟。 轉譯完成之後，您可以將它匯出成其他的應用程式格式。  

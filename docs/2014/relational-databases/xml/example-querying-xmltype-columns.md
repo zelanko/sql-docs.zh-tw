@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - dbe-xml
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - RAW mode, querying XML example
 ms.assetid: d9f3710d-7a2e-4abe-9c02-3e3c0df4d620
 caps.latest.revision: 10
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 0ccfde903ae66af77f7d37e9c6cb70b891e60268
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: ea0416d01b12e7b43a2a64bdab302b2db6e639f6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36144678"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37151012"
 ---
 # <a name="example-querying-xmltype-columns"></a>範例：查詢 XMLType 資料行
   下列查詢包含的資料行`xml`型別。 此查詢會從 `xml` 類型之 `Instructions` 資料行的第一個位置，擷取產品型號識別碼、名稱和製造步驟。  

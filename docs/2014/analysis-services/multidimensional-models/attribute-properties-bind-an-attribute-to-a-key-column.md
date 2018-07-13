@@ -1,5 +1,5 @@
 ---
-title: 將屬性繫結至索引鍵資料行 |Microsoft 文件
+title: 將屬性繫結至索引鍵資料行 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - names [Analysis Services], attributes
 - renaming attributes
 - attributes [Analysis Services], renaming
 ms.assetid: c0b0abaa-5c9b-4182-9d5f-fc16cd941d54
 caps.latest.revision: 27
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: e1ed7c1a1dc463cebcbd34bda479b8416a1df15d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 4a5e168322fd08c7d33bc500a3791194270be4e8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36136300"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37239883"
 ---
 # <a name="bind-an-attribute-to-a-key-column"></a>將屬性繫結至索引鍵資料行
   此程序描述如何在維度中，變更屬性 (attribute) 的 `Name` 屬性 (property) 設定。  
@@ -39,6 +39,6 @@ ms.locfileid: "36136300"
 4.  輸入新的名稱。  
   
     > [!NOTE]  
-    >  您也可以設定`Name`屬性中所選屬性的**屬性**視窗[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]。  
+    >  您也可以設定`Name`屬性中所選取的屬性**屬性**窗口[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]。  
   
   

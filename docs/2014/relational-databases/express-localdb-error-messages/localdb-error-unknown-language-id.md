@@ -1,26 +1,24 @@
 ---
-title: LOCALDB_ERROR_UNKNOWN_LANGUAGE_ID |Microsoft 文件
+title: LOCALDB_ERROR_UNKNOWN_LANGUAGE_ID |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: supportability
 ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: fa082dca-bf88-46e7-b61e-7ac8835a3493
 caps.latest.revision: 8
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: ad7e5dd5f24a966c6130a88a7f0fa4034070a2f5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: db046fb33a33a7255a7bedacacbb2d699368e364
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36133701"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37427927"
 ---
 # <a name="localdberrorunknownlanguageid"></a>LOCALDB_ERROR_UNKNOWN_LANGUAGE_ID
     

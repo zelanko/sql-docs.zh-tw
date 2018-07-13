@@ -1,13 +1,11 @@
 ---
-title: 準備及執行陳述式 (ODBC) |Microsoft 文件
+title: 準備和執行陳述式 (ODBC) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -15,15 +13,15 @@ helpviewer_keywords:
 - statement preparation
 ms.assetid: 0adecc63-4da5-486c-bc48-09a004a2fae6
 caps.latest.revision: 21
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 58a3ecf2419f0b3e3b74ba6e3b1a6293d928d550
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 3d7520d040f55962821b3c0e863400c68f5fd35d
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36133958"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37420357"
 ---
 # <a name="prepare-and-execute-a-statement-odbc"></a>準備和執行陳述式 (ODBC)
     
@@ -31,7 +29,7 @@ ms.locfileid: "36133958"
   
 1.  呼叫[SQLPrepare 函數](http://go.microsoft.com/fwlink/?LinkId=59360)準備陳述式。  
   
-2.  （選擇性） 呼叫[SQLNumParams](http://go.microsoft.com/fwlink/?LinkId=58404)來判斷已備妥的陳述式中的參數數目。  
+2.  （選擇性） 呼叫[SQLNumParams](http://go.microsoft.com/fwlink/?LinkId=58404)來決定已備妥的陳述式中的參數數目。  
   
 3.  (選擇性) 針對準備陳述式中的每個參數：  
   
@@ -45,11 +43,11 @@ ms.locfileid: "36133958"
   
     -   呼叫[SQLExecute](http://go.microsoft.com/fwlink/?LinkId=58400)執行備妥的陳述式。  
   
-    -   如果資料在執行中輸入的參數使用， [SQLExecute](http://go.microsoft.com/fwlink/?LinkId=58400)傳回 SQL_NEED_DATA。 按照區塊傳送資料，使用[SQLParamData](http://go.microsoft.com/fwlink/?LinkId=58405)和[SQLPutData](../../native-client-odbc-api/sqlputdata.md)。  
+    -   如果資料在執行中輸入的參數， [SQLExecute](http://go.microsoft.com/fwlink/?LinkId=58400)會傳回 SQL_NEED_DATA。 使用區塊傳送資料[SQLParamData](http://go.microsoft.com/fwlink/?LinkId=58405)並[SQLPutData](../../native-client-odbc-api/sqlputdata.md)。  
   
 ### <a name="to-prepare-a-statement-with-column-wise-parameter-binding"></a>準備含有資料行取向參數繫結的陳述式  
   
-1.  呼叫[SQLSetStmtAttr](../../native-client-odbc-api/sqlsetstmtattr.md)來設定下列屬性：  
+1.  呼叫[SQLSetStmtAttr](../../native-client-odbc-api/sqlsetstmtattr.md)設定下列屬性：  
   
     -   將 SQL_ATTR_PARAMSET_SIZE 設定為參數集 (S) 的數目。  
   
@@ -61,9 +59,9 @@ ms.locfileid: "36133958"
   
 2.  呼叫 SQLPrepare 準備陳述式。  
   
-3.  （選擇性） 呼叫[SQLNumParams](http://go.microsoft.com/fwlink/?LinkId=58404)來判斷已備妥的陳述式中的參數數目。  
+3.  （選擇性） 呼叫[SQLNumParams](http://go.microsoft.com/fwlink/?LinkId=58404)來決定已備妥的陳述式中的參數數目。  
   
-4.  （選擇性） 如果已備妥的陳述式中每一個參數，呼叫 SQLDescribeParam 以便取得參數資訊。  
+4.  （選擇性） 針對已備妥的陳述式中每個參數，呼叫 SQLDescribeParam 以便取得參數資訊。  
   
 5.  針對每個參數標記：  
   
@@ -71,7 +69,7 @@ ms.locfileid: "36133958"
   
     -   配置 S 個參數緩衝區的陣列來儲存資料長度。  
   
-    -   呼叫以將參數資料值和資料長度陣列繫結至陳述式參數的 SQLBindParameter。  
+    -   呼叫 SQLBindParameter，若要將參數資料值和資料長度陣列繫結至陳述式參數。  
   
     -   如果參數是資料執行中的 text 或 image 參數，請設定此參數。  
   
@@ -83,7 +81,7 @@ ms.locfileid: "36133958"
   
     -   呼叫 SQLExecute 執行備妥的陳述式。  
   
-    -   如果資料在執行中輸入的參數使用，SQLExecute 會傳回 SQL_NEED_DATA。 使用 SQLParamData 和 SQLPutData 區塊傳送資料。  
+    -   如果資料在執行中輸入的參數，SQLExecute 就會傳回 SQL_NEED_DATA。 使用 SQLParamData 和 SQLPutData 區塊傳送資料。  
   
 ### <a name="to-prepare-a-statement-with-row-wise-bound-parameters"></a>準備含有資料列取向繫結參數的陳述式  
   
@@ -93,7 +91,7 @@ ms.locfileid: "36133958"
   
     -   第二個部分是 SQLINTEGER 變數，可保存狀態指標。  
   
-2.  呼叫[SQLSetStmtAttr](../../native-client-odbc-api/sqlsetstmtattr.md)來設定下列屬性：  
+2.  呼叫[SQLSetStmtAttr](../../native-client-odbc-api/sqlsetstmtattr.md)設定下列屬性：  
   
     -   將 SQL_ATTR_PARAMSET_SIZE 設定為參數集 (S) 的數目。  
   
@@ -113,9 +111,9 @@ ms.locfileid: "36133958"
   
     -   呼叫 SQLExecute 執行備妥的陳述式。 驅動程式會有效率地執行 SQL 陳述式 S 次，針對每個參數集執行一次。  
   
-    -   如果資料在執行中輸入的參數使用，SQLExecute 會傳回 SQL_NEED_DATA。 使用 SQLParamData 和 SQLPutData 區塊傳送資料。  
+    -   如果資料在執行中輸入的參數，SQLExecute 就會傳回 SQL_NEED_DATA。 使用 SQLParamData 和 SQLPutData 區塊傳送資料。  
   
 ## <a name="see-also"></a>另請參閱  
- [執行查詢的使用說明主題&#40;ODBC&#41;](executing-queries-how-to-topics-odbc.md)  
+ [執行查詢使用說明主題&#40;ODBC&#41;](executing-queries-how-to-topics-odbc.md)  
   
   

@@ -3,25 +3,23 @@ title: 設定容錯移轉叢集上的 FILESTREAM | Microsoft 文件
 ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
+ms.technology: filestream
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-blob
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - FILESTREAM [SQL Server], setting up on a failover cluster
 ms.assetid: 6721f780-20b7-4109-8ddb-ac327310699e
-caps.latest.revision: 19
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 5ae1bcddfedb88d25e7f0cd94c53906e57436b57
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: da6cea56d0fe80797a525c546f80ac9705d360ba
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36135824"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37412656"
 ---
 # <a name="set-up-filestream-on-a-failover-cluster"></a>設定容錯移轉叢集上的 FILESTREAM
   此主題描述如何在容錯移轉叢集上設定 FILESTREAM。 在您嘗試進行這個程序之前，應該先了解 [容錯移轉叢集](../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md) 並啟用 FILESTREAM。 如需如何啟用 FILESTREAM 的相關資訊，請參閱 [啟用及設定 FILESTREAM](enable-and-configure-filestream.md)。  

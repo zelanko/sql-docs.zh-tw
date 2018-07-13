@@ -5,21 +5,20 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 513dd179-9a46-46da-9fdd-7632cf6d0816
 caps.latest.revision: 29
-author: rothja
-ms.author: jroth
-manager: jhubbard
-ms.openlocfilehash: d4f3796c0e6145e2dc24110e805971fb88058484
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 8a0a6c8fb4b87ca1bbb51947b722fc4238a1c187
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36136345"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37161859"
 ---
 # <a name="configure-failureconditionlevel-property-settings"></a>設定 FailureConditionLeve 屬性設定
   使用 FailureConditionLevel 屬性，即可將 AlwaysOn 容錯移轉叢集執行個體 (FCI) 的條件設定為容錯移轉或重新啟動。 對這個屬性的變更會立即套用，而不需要重新啟動 Windows Server 容錯移轉叢集 (WSFC) 服務或 FCI 資源。  
@@ -46,7 +45,7 @@ ms.locfileid: "36136345"
   
 2.  匯入 `FailoverClusters` 模組來啟用叢集指令程式。  
   
-3.  使用`Get-ClusterResource`cmdlet 來尋找[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]資源，然後使用`Set-ClusterParameter`cmdlet 設定**FailureConditionLevel**容錯移轉叢集執行個體的屬性。  
+3.  使用  `Get-ClusterResource` cmdlet 尋找[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]資源，然後使用`Set-ClusterParameter`cmdlet 來設定**FailureConditionLevel**容錯移轉叢集執行個體的屬性。  
   
 > [!TIP]  
 >  每次開啟新的 PowerShell 視窗時，您需要匯入`FailoverClusters`模組。  

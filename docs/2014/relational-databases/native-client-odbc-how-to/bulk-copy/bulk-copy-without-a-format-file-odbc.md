@@ -1,13 +1,11 @@
 ---
-title: 大量複製不使用格式檔案 (ODBC) |Microsoft 文件
+title: 大量複製不使用格式檔案 (ODBC) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -17,15 +15,15 @@ helpviewer_keywords:
 - bulk copy [ODBC], about bulk copy
 ms.assetid: 4ee969a7-44ba-40d0-b9ab-8306f1a2b19d
 caps.latest.revision: 15
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 85bb42550829c875324c10de358312cdf3d05295
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 6896cc412a01aaa6ce73c80250b15709f78771ae
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36135380"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37425677"
 ---
 # <a name="bulk-copy-without-a-format-file-odbc"></a>不使用格式檔案進行大量複製 (ODBC)
   此範例會示範如何在沒有格式檔案的情況下，使用大量複製函數來建立原生模式資料檔案。 此範例是針對 ODBC 3.0 版或更新版本所開發。  
@@ -160,6 +158,6 @@ int main() {
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [大量複製與 SQL Server ODBC 驅動程式如何主題&#40;ODBC&#41;](bulk-copying-with-the-sql-server-odbc-driver-how-to-topics-odbc.md)  
+ [利用 SQL Server ODBC 驅動程式如何主題大量複製的&#40;ODBC&#41;](bulk-copying-with-the-sql-server-odbc-driver-how-to-topics-odbc.md)  
   
   

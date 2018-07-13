@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - database attaching [SQL Server]
 - moving databases [SQL Server]
@@ -18,15 +18,15 @@ helpviewer_keywords:
 - attaching databases [SQL Server]
 ms.assetid: 6732a431-cdef-4f1e-9262-4ac3b77c275e
 caps.latest.revision: 45
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: efd99fbc8c1b9b477ac778c3d71fbab19a413fbf
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: a0f6c25060fa70c1b269f884a3c33ba86b3b115f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36136874"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37160519"
 ---
 # <a name="move-a-database-using-detach-and-attach-transact-sql"></a>使用卸離與附加移動資料庫 (Transact-SQL)
   此主題描述如何將卸離的資料庫移動到另一個位置，再重新附加到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]中相同或不同的伺服器執行個體。 不過，建議您使用 ALTER DATABASE 計畫的重新放置程序來移動資料庫，而不要使用卸離和附加。 如需詳細資訊，請參閱 [移動使用者資料庫](move-user-databases.md)。  
@@ -53,7 +53,7 @@ ms.locfileid: "36136874"
 3.  附加複製的檔案。 如需相關資訊，請參閱 [Attach a Database](attach-a-database.md)。  
   
 ## <a name="example"></a>範例  
- 下列範例會建立一份[!INCLUDE[ssSampleDBnormal](../../includes/tsql-md.md)]陳述式會執行的查詢編輯器視窗中，連接到附加的伺服器執行個體。  
+ 下列範例會建立一份[!INCLUDE[ssSampleDBnormal](../../includes/tsql-md.md)]連線到伺服器執行個體的連接查詢編輯器視窗中執行陳述式。  
   
 1.  卸離[!INCLUDE[ssSampleDBnormal](../../includes/tsql-md.md)]陳述式：  
   

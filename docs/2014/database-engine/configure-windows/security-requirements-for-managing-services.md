@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Agent service, security
 - services [SQL Server], security
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - services [SQL Server], WMI
 ms.assetid: 1874a317-ddb2-425d-98d9-b53e1be6fc6a
 caps.latest.revision: 27
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 1d6e5ad2e6afb25be29ba5ab7fd22ea6cfb25145
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 0fb5a41efec39b85c0633a3612097a7b643a69e7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36144777"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37160889"
 ---
 # <a name="security-requirements-for-managing-services"></a>管理服務的安全性需求
   若要管理 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 與 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 服務，請使用「SQL Server 組態管理員」或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]。 請使用「叢集管理員」來管理叢集伺服器的服務。  

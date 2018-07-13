@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.shrinkfile.f1
 helpviewer_keywords:
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - file size [SQL Server]
 ms.assetid: ce5c8798-c039-4ab2-81e7-90a8d688b893
 caps.latest.revision: 25
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 71a194fc20faed997f680188680a99e8135b2325
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 365dad6a909cf0256acd8c24c338c7f964937ec6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36135818"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37229288"
 ---
 # <a name="shrink-a-file"></a>壓縮檔案
   此主題描述如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ，在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中壓縮資料或記錄檔。  

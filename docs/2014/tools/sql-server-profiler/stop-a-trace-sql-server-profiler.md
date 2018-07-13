@@ -1,5 +1,5 @@
 ---
-title: 停止追蹤 (SQL Server Profiler) |Microsoft 文件
+title: 停止追蹤 (SQL Server Profiler) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - traces [SQL Server], stopping
 - stopping traces
 ms.assetid: 47c4f33d-63e0-4444-bec8-4c1c91f8e25c
 caps.latest.revision: 21
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: fd1b3b36f58d3f8deb31fd4ddff477f6590321f2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 9df984950c730b94527811f9f2ea3cca3ff220d9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36136306"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37230028"
 ---
 # <a name="stop-a-trace-sql-server-profiler"></a>停止追蹤 (SQL Server Profiler)
   此主題說明如何使用 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]來停止執行中的追蹤。  

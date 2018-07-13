@@ -1,5 +1,5 @@
 ---
-title: 指定命名慣例 （結構描述產生精靈） (Analysis Services-多維度資料) |Microsoft 文件
+title: 指定命名慣例 （結構描述產生精靈） (Analysis Services-多維度資料) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.schemagenwizard.namingconventions.f1
 ms.assetid: 02d830ea-5b1f-4485-9f94-d64b8bea592b
 caps.latest.revision: 21
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 93be42d99f0f255807caa23cdf91582e24a8a132
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: a984b84c485c24302288eb16747cb3a964794156
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36144605"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37151529"
 ---
 # <a name="specify-naming-conventions-schema-generation-wizard-analysis-services---multidimensional-data"></a>指定命名慣例 (結構描述產生精靈) (Analysis Services - 多維度資料)
   使用 **[指定命名慣例]** 頁面，即可定義結構描述產生精靈建立結構描述物件時使用的命名慣例。  
@@ -38,7 +38,7 @@ ms.locfileid: "36144605"
 |**屬性名稱後置詞**|指定字串，用於附加至每一個屬性資料行的名稱後面。 預設值是 **Name**。|  
 |**自訂積存後置詞**|指定字串，用於附加至每一個積存資料行的名稱後面。 預設值是 **CustomRollup**。|  
 |**自訂積存屬性後置詞**|指定字串，用於附加至每一個積存屬性資料行的名稱後面。 預設值是 **CustomRollupProperties**。|  
-|**一元運算子後置詞**|指定字串，用於附加至每一個一元運算子資料行的名稱後面。 預設值是 **UnaryOperator**。|  
+|**一元運算子尾碼**|指定字串，用於附加至每一個一元運算子資料行的名稱後面。 預設值是 **UnaryOperator**。|  
   
  **ReplTest1**  
  針對 [選項] 中所指定的選項指定一個值，亦即您要在產生結構描述時使用的值。  

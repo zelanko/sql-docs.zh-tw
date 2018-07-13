@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - viewing replication properties
 - Distributors [SQL Server replication], modifying
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - Distributors [SQL Server replication], properties
 ms.assetid: 5dae1d59-c377-4c6e-adc9-b68c5b328f79
 caps.latest.revision: 42
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 993bee2f091fd3156cc2aa287d9fa90342ecda42
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 5c05df52ed3a2c505417574db89d0050aa1239df
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36136837"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37211138"
 ---
 # <a name="view-and-modify-distributor-and-publisher-properties"></a>檢視及修改散發者和發行者屬性
   本主題描述如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]或 Replication Management Objects (RMO)，在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中檢視及修改「散發者」和「發行者」屬性。  
@@ -80,7 +80,7 @@ ms.locfileid: "36136837"
   
 2.  以滑鼠右鍵按一下 **[複寫]** 資料夾，然後按一下 **[發行者屬性]**。  
   
-3.  檢視及修改屬性**發行者屬性-\<發行者 >**  對話方塊。  
+3.  檢視及修改中的屬性**發行者屬性-\<發行者 >**  對話方塊。  
   
     -   **sysadmin** 固定伺服器角色中的使用者能啟用 **[發行集資料庫]** 頁面上複寫的資料庫。 啟用資料庫不會發行此資料庫；不過，它允許該資料庫之 **db_owner** 固定資料庫角色中的任何使用者在資料庫中建立一個或多個發行集。  
   

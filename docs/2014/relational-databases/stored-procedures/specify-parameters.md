@@ -3,28 +3,26 @@ title: 指定參數 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
+ms.technology: stored-procedures
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-stored-procs
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - parameters [SQL Server], stored procedures
 - stored procedures [SQL Server], parameters
 - output parameters [SQL Server]
 - input parameters [SQL Server]
 ms.assetid: 902314fe-5f9c-4d0d-a0b7-27e67c9c70ec
-caps.latest.revision: 26
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: afe9231bc5e6f6470c46fdd625eb24e74e51b0cb
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: ea9f0725d595db5e62b064eb6e950a280e82913b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36136382"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37228928"
 ---
 # <a name="specify-parameters"></a>指定參數
   藉由指定程序參數，呼叫端程式就能夠將值傳入程序的主體。 這些值在程序執行期間可用於各種用途。 如果程序參數標示為 OUTPUT 參數，程序參數也可以將值傳回給呼叫端程式。  

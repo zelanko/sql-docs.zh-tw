@@ -8,27 +8,27 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - deployment packages [Master Data Services], creating
 - models [Master Data Services], creating a deployment package
 - creating packages [Master Data Services]
 ms.assetid: b24ec4c2-1378-4c72-ac69-4ec2647030f0
 caps.latest.revision: 7
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 4033c57d3fe08e71eeee1931d7bb1e1951ef31d2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: 35b93f11010afac463a40c9870a185be76031525
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36135839"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37182657"
 ---
 # <a name="create-a-model-deployment-package-by-using-the-wizard"></a>使用精靈建立模型部署封裝
   使用 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 模型部署精靈僅建立模型物件的封裝。 如果您需要在套件中包含資料，請參閱 [使用 MDSModelDeploy 建立模型部署封裝](../../2014/master-data-services/create-a-model-deployment-package-by-using-mdsmodeldeploy.md)。  
   
-## <a name="prerequisites"></a>必要條件  
+## <a name="prerequisites"></a>先決條件  
  若要執行此程序：  
   
 -   在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] Web 應用程式中，您必須擁有存取 [系統管理] 功能區域的權限。  

@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 094f39bf-3634-4852-9fc3-3adec4b266e5
 caps.latest.revision: 8
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 35b7228fbc975cd1ab658f541e1a5c17ee0790c5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 34d4ab217564f931dc441d5c90b077960bd11486
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36137225"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37149169"
 ---
 # <a name="plot-data-on-a-secondary-axis-report-builder-and-ssrs"></a>繪製次要座標軸上的資料 (報表產生器及 SSRS)
   圖表有兩種軸類型：主要及次要。 在比較共用相同類別目錄，但具有不同資料範圍的值組時，次要軸很有用。  
@@ -41,6 +41,6 @@ ms.locfileid: "36137225"
   
 ## <a name="see-also"></a>另請參閱  
  [格式化圖表上的軸標籤 &#40;報表產生器及 SSRS&#41;](formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md)   
- [指定軸間隔&#40;報表產生器和 SSRS&#41;](specify-an-axis-interval-report-builder-and-ssrs.md)  
+ [指定軸間隔&#40;報表產生器及 SSRS&#41;](specify-an-axis-interval-report-builder-and-ssrs.md)  
   
   

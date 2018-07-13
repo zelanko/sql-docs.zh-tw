@@ -1,5 +1,5 @@
 ---
-title: 選取資料來源 |Microsoft 文件
+title: 選取資料來源 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.rtp.rptwizard.selectdatasource.f1
 ms.assetid: cdd84ad8-7c6a-41ac-bf51-1b0973434829
 caps.latest.revision: 31
-author: douglaslM
+author: maggiesmsft
 ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 8cb8cb384b83c4d5ca8ba16e017cbf79d53f3742
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 888e3415163fafee1d5300b2a62c5063f61c8621
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36145085"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37155789"
 ---
 # <a name="select-the-data-source"></a>選取資料來源
   使用報表精靈的這個頁面，即可定義報表的資料來源。  
@@ -40,7 +40,7 @@ ms.locfileid: "36145085"
  選取您要使用的資料來源類型 (例如，如果您要使用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 資料庫，請選擇 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)])。  
   
  **連接字串**  
- 輸入資料來源的連接字串。 如需連接字串的詳細資訊，請參閱[資料連接、 資料來源和 Reporting Services 中的連接字串](../../2014/reporting-services/data-connections-data-sources-and-connection-strings-in-reporting-services.md)。  
+ 輸入資料來源的連接字串。 如需有關連接字串的詳細資訊，請參閱 <<c0> [ 資料連接、 資料來源和 Reporting Services 中的連接字串](../../2014/reporting-services/data-connections-data-sources-and-connection-strings-in-reporting-services.md)。  
   
  按一下 **[編輯]** ，即可在 **[連接屬性]** 對話方塊中指定資料來源伺服器。 您可以指定本機或遠端資料來源。  
   
@@ -50,7 +50,7 @@ ms.locfileid: "36145085"
  選取此選項，即可將資料來源儲存在專案中當做共用資料來源，而不是儲存在報表中。 如此一來，您就可以將它當做專案中其他報表的資料來源使用。  
   
 ## <a name="see-also"></a>另請參閱  
- [內嵌和共用資料連接或資料來源&#40;報表產生器和 SSRS&#41;](../../2014/reporting-services/embedded-and-shared-data-connections-or-data-sources-report-builder-and-ssrs.md)   
+ [內嵌和共用資料連接或資料來源&#40;報表產生器及 SSRS&#41;](../../2014/reporting-services/embedded-and-shared-data-connections-or-data-sources-report-builder-and-ssrs.md)   
  [指定報表資料來源的認證及連接資訊](report-data/specify-credential-and-connection-information-for-report-data-sources.md)   
  [Reporting Services Report Server](../../2014/reporting-services/reporting-services-report-server.md)   
  [RSReportDesigner 組態檔](report-server/rsreportdesigner-configuration-file.md)   

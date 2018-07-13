@@ -1,5 +1,5 @@
 ---
-title: 進度索引標籤 |Microsoft 文件
+title: 進度索引標籤 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.progress.f1
 ms.assetid: a59cc952-fb73-4bd3-b5d2-f8397701e5d2
 caps.latest.revision: 22
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 74da1aa2f1b8e47067792524e7e98dfbb7d54ee3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 21a826143acea695346f3a6a876662f499572078
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36144957"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37154799"
 ---
 # <a name="progress-tab"></a>進度索引標籤
   當您在 **中執行封裝時，使用** 設計師的 [!INCLUDE[ssIS](../includes/ssis-md.md)] [進度] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 索引標籤，即可檢視執行 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]封裝的進度。 **[進度]** 索引標籤會列出開始時間、完成時間，以及驗證和執行封裝及其可執行檔的經過時間；封裝的任何資訊或警告；進度通知；封裝是成功還是失敗；以及在封裝執行期間所產生的任何錯誤訊息。  

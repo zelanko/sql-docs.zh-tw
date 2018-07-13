@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - backup retention duration [SQL Server]
 - backup sets [SQL Server], retention duration
 - media retention option
 ms.assetid: 12e9fe6a-20a5-4c6e-9cc9-d500c003b70a
 caps.latest.revision: 25
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 14c8d78c5fd7232e13ac5d28b6cac26922c78ba8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 55cc2d946aaff8aec1079b9f97e462aa9f4e4ccf
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36136697"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37148929"
 ---
 # <a name="configure-the-media-retention-server-configuration-option"></a>設定 media retention 伺服器組態選項
   此主題描述如何使用 **或** ，在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中設定 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] media retention [!INCLUDE[tsql](../../includes/tsql-md.md)]伺服器組態選項。 **media retention** 選項指定每個備份組的保留時間。 此選項協助保護備份，在指定的天數經過之前不被覆寫。 在設定 **media retention** 選項之後，每次執行備份時不需指定保留系統備份的時間長度。 預設值是 0 天，最大值是 365 天。  

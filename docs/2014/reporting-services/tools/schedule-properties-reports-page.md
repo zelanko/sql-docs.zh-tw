@@ -8,27 +8,27 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.reportserver.scheduleproperties.reports.f1
 ms.assetid: 7db728bd-4b08-43ef-a49a-e8dcdd37cf89
 caps.latest.revision: 20
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: c8789d3781042c8240e3beb3a8f808941449eddd
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 85c7682512adb310a487a79742543c9383611f5d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36136343"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37153769"
 ---
 # <a name="schedule-properties-reports-page"></a>排程屬性 (報表頁面)
   使用此頁面，即可檢視使用此共用排程之所有報表的清單。 排程可用來重新整理報表快照集、產生報表記錄、觸發訂閱或使報表的快取副本過期。 若要了解如何使用排程，請檢視報表的屬性和訂閱資訊。  
   
  雖然這個頁面會顯示使用此共用排程的每份報表，但是它不會指出在該單一報表內使用此共用排程的次數。 例如，假設 Company Sales 報表的 20 位不同訂閱者都使用相同的共用排程來觸發訂閱處理。 在此情況下，Company Sales 報表只會在此清單中顯示一次，即使報表具有共用排程的 20 個參考也一樣。  
   
- 若要開啟此頁面，請啟動[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]，連接到報表伺服器、 開啟**共用排程**資料夾中，以滑鼠右鍵按一下共用的排程，請選取**屬性**，然後按一下 **報表**.  
+ 若要開啟此頁面，請啟動[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]，連接至報表伺服器，開啟**共用排程**資料夾，以滑鼠右鍵按一下共用的排程，請選取**屬性**，然後按一下 **報表**.  
   
 > [!NOTE]  
 >  並非所有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]版本都提供此功能。 如需 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本支援的功能清單，請參閱 [SQL Server 2012 版本支援的功能](http://go.microsoft.com/fwlink/?linkid=232473) (http://go.microsoft.com/fwlink/?linkid=232473)。  

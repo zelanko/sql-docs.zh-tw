@@ -1,5 +1,5 @@
 ---
-title: 時序群集群集特性索引標籤 （採礦模型檢視器） |Microsoft 文件
+title: 時序群集群集特性索引標籤 （採礦模型檢視器） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dm.miningmodeleditor.sequenceclustering.characteristics.f1
 ms.assetid: 3a9e8a0c-7d03-47cc-8625-e68d73a8c947
 caps.latest.revision: 23
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 75601cb33f04eaacfdb3970f858dd8a359abd4bd
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 4272975a16da0cf0d9db534df34d00e329dc5430
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36145030"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37153179"
 ---
 # <a name="sequence-clustering-cluster-characteristics-tab-mining-model-viewer"></a>時序叢集的叢集特性索引標籤 (採礦模型檢視器)
   **[Microsoft 時序叢集檢視器]** 中的 **[叢集特性]** 索引標籤提供定義時序叢集之特性的詳細清單。 這些特性可包括簡單屬性/值組以及狀態之間的轉換。  
@@ -48,10 +48,10 @@ ms.locfileid: "36145030"
   
  例如，以購物籃分析為基礎的時序叢集模型中，一個叢集的最上層特性可能是客戶選擇促銷項目，然後在不再購買其他項目的情況下結束交易。 在試圖分析伺服器失敗的時序叢集模型中，叢集的主要特性可能是一系列高頻率錯誤事件。  
   
-|ReplTest1|描述|  
+|值|描述|  
 |-----------|-----------------|  
-|**變數**|此資料行表示特性是值還是轉換。<br /><br /> 如果特性是值，**變數**資料行會包含屬性名稱。<br /><br /> 如果特性表示狀態轉換，**變數**資料行包含 「 轉換 」 文字。|  
-|**值**|此資料行的值取決於特性是簡單屬性/值組，還是一個表示項目或事件通用時序的狀態轉換。<br /><br /> 如果特性是值，**值**資料行包含的狀態。<br /><br /> 如果特性表示狀態轉換，**值**資料行包含狀態轉換的描述。|  
+|**變數**|此資料行表示特性是值還是轉換。<br /><br /> 如果特性是值，**變數**資料行會包含屬性名稱。<br /><br /> 如果特性表示狀態轉換，**變數**資料行包含文字 「 轉換 」。|  
+|**值**|此資料行的值取決於特性是簡單屬性/值組，還是一個表示項目或事件通用時序的狀態轉換。<br /><br /> 如果特性是值，**值**資料行包含狀態。<br /><br /> 如果特性表示狀態轉換，**值**資料行包含狀態轉換的描述。|  
 |**機率**|此資料行會顯示長條，用於表示此特性 (簡單屬性/值組或狀態的某種組合) 是目前叢集之成員的相對機率。<br /><br /> 可以將滑鼠停留在長條上方，來顯示特性的頻率值。|  
   
 ## <a name="see-also"></a>另請參閱  

@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - selOraTabDia
 ms.assetid: 2e295dc8-999d-4c4d-96cc-1519674b47a4
 caps.latest.revision: 6
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: eb73c91e7f11a0a925b808589dfac77fc4bb7374
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 8bff65efbe755045a46721436d3b058725b9ed31
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36137400"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37150959"
 ---
 # <a name="select-oracle-tables-for-capturing-changes"></a>選取 Oracle 資料表來擷取變更
   使用此對話方塊來選取 CDC 執行個體中所包含的資料表。 選取的資料表會加入至新增執行個體精靈中 **[選取資料表和資料行]** 頁面的清單中。 您可以在此對話方塊中執行下列動作。  

@@ -1,5 +1,5 @@
 ---
-title: Usage 元素 (DimensionAttribute) (ASSL) |Microsoft 文件
+title: Usage 元素 (DimensionAttribute) (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - Usage element
 ms.assetid: c5e38d2e-5a8e-4157-84e9-285e78c84e74
 caps.latest.revision: 34
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 2e7787edb562580eaaddc3cdaf1094958eec9742
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ce7dea2cb3c0e928b5a1b0c80aa0ca526f5f8329
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36144606"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37183237"
 ---
 # <a name="usage-element-dimensionattribute-assl"></a>Usage 元素 (DimensionAttribute) (ASSL)
   描述如何使用屬性。  
@@ -64,7 +64,7 @@ ms.locfileid: "36144606"
 ## <a name="remarks"></a>備註  
  這個元素的值限制為下表所列的其中一個字串。  
   
-|ReplTest1|描述|  
+|值|描述|  
 |-----------|-----------------|  
 |*規則*|此屬性是一般屬性。|  
 |*索引鍵*|此屬性是索引鍵屬性。|  

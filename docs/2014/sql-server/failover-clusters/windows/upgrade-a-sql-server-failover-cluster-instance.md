@@ -1,5 +1,5 @@
 ---
-title: 升級 SQL Server 容錯移轉叢集 |Microsoft 文件
+title: 升級 SQL Server 容錯移轉叢集 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - upgrading failover clusters
 - clusters [SQL Server], upgrading
 - failover clustering [SQL Server], upgrading
 ms.assetid: daac41fe-7d0b-4f14-84c2-62952ad8cbfa
 caps.latest.revision: 39
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 80f961a228d96561c79fa065b557e229517f73ee
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 4633f179e65c34cc3affdfc01fde1e2554a16b78
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36136556"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37260056"
 ---
 # <a name="upgrade-a-sql-server-failover-cluster"></a>升級 SQL Server 容錯移轉叢集
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 支援在所有容錯移轉叢集節點上，個別從 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]、[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]、[!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 與 [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] 容錯移轉叢集，升級 [!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)] 及 [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]。  
@@ -44,7 +44,7 @@ ms.locfileid: "36136556"
   
     -   您無法將容錯移轉叢集節點降級為獨立執行個體。  
   
--   如需詳細資訊，請參閱[AlwaysOn 容錯移轉叢集執行個體 (SQL Server)](always-on-failover-cluster-instances-sql-server.md)。  
+-   如需詳細資訊，請參閱 < [ AlwaysOn 容錯移轉叢集執行個體 (SQL Server)](always-on-failover-cluster-instances-sql-server.md)。  
   
 ## <a name="upgrading-a-includessnoversionincludesssnoversion-mdmd-multi-subnet-failover-cluster"></a>升級 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 多重子網路容錯移轉叢集  
  您無法從非多重子網路 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 容錯移轉叢集，直接升級至 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 多重子網路容錯移轉叢集。 如需詳細資訊，請參閱[升級 SQL Server 容錯移轉叢集執行個體 &#40;安裝程式&#41;](upgrade-a-sql-server-failover-cluster-instance-setup.md)。  

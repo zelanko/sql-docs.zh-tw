@@ -1,13 +1,11 @@
 ---
-title: 工作階段 |Microsoft 文件
+title: 工作階段 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -15,18 +13,18 @@ helpviewer_keywords:
 - SQL Server Native Client OLE DB provider, sessions
 ms.assetid: 3a980816-675c-4fba-acc9-429297d85bbd
 caps.latest.revision: 30
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 7dc22d6d2f9fe06f4b056a4c75326dd1989d9a14
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 060a951bd7fa594e2d16c05f8698d8245174fd2c
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36136145"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37415687"
 ---
 # <a name="sessions"></a>工作階段
-  A [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者工作階段代表單一執行個體的連接[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
+  A [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者工作階段代表的執行個體的單一連接[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者需要工作階段分隔資料來源的交易空間。 所有從特定工作階段物件建立而來的命令物件，都會參與工作階段物件的本機或分散式交易。  
   
@@ -183,12 +181,12 @@ EXIT:
 }  
 ```  
   
- 連接[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client OLE DB 提供者工作階段物件的執行個體[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]可以產生持續建立和釋放工作階段物件的應用程式的重大額外負荷。 額外可以藉由管理降至最低[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client OLE DB 提供者工作階段有效物件。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者應用程式可以保持[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]連線的工作階段物件，由維持至少一個物件的介面上的參考。  
+ 連接[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client OLE DB 提供者工作階段物件的執行個體[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]可以產生相當大的負擔，持續建立和釋放工作階段物件的應用程式。 額外負荷可以藉由管理最小化[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client OLE DB 提供者工作階段有效物件。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者應用程式可以保留[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]由維持至少一個介面的物件上的參考將工作階段物件的連接。  
   
- 例如，維持命令建立物件參考的集區，可以將集區中這些工作階段物件的連接保持為使用中。 需要工作階段物件時，集區維護程式碼會傳遞有效**IDBCreateCommand**需要該工作階段的應用程式方法的介面指標。 當應用程式方法不再需要工作階段時，該方法會將介面指標傳回給集區維護程式碼，而不是釋放應用程式對命令建立物件的參考。  
+ 例如，維持命令建立物件參考的集區，可以將集區中這些工作階段物件的連接保持為使用中。 需要工作階段物件時，集區維護程式碼將有效**IDBCreateCommand**需要該工作階段的應用程式方法的介面指標。 當應用程式方法不再需要工作階段時，該方法會將介面指標傳回給集區維護程式碼，而不是釋放應用程式對命令建立物件的參考。  
   
 > [!NOTE]  
->  在上述範例中， **IDBCreateCommand**介面用因為**ICommand**介面會實作**GetDBSession**方法，在命令中的唯一方法或資料列集的範圍，讓物件來判斷其建立所在的工作階段。 因此，只有命令物件才可以讓應用程式擷取資料來源物件指標，而其他的工作階段可從該指標建立。  
+>  在上述範例中， **IDBCreateCommand**介面，因為**ICommand**介面會實作**GetDBSession**方法中，命令中的唯一方法或資料列集的範圍，可讓物件判斷其建立所在的工作階段。 因此，只有命令物件才可以讓應用程式擷取資料來源物件指標，而其他的工作階段可從該指標建立。  
   
 ## <a name="see-also"></a>另請參閱  
  [資料來源物件&#40;OLE DB&#41;](data-source-objects-ole-db.md)  

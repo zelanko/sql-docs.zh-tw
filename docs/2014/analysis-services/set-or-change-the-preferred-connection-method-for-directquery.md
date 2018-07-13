@@ -1,5 +1,5 @@
 ---
-title: 設定或變更慣用的連接方法 directquery |Microsoft 文件
+title: 設定或變更 DirectQuery 的慣用的連接方法 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: f10d5678-d678-4251-8cce-4e30cfe15751
 caps.latest.revision: 5
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: bf6abf3e4576fb28155529ee1bdfd24520176010
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c5c9ad99aad3ae46b3e97c3d3b6dfbec03dcff27
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36136946"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37149519"
 ---
 # <a name="set-or-change-the-preferred-connection-method-for-directquery"></a>設定或變更 DirectQuery 的慣用連接方法
   當您建立要用於 DirectQuery 模式的模型時，必須先將設計環境設定為支援使用 DirectQuery。 若要這樣做，請參閱[啟用 DirectQuery 設計模式&#40;SSAS 表格式&#41;](tabular-models/enable-directquery-mode-in-ssdt.md)。  
@@ -36,7 +36,7 @@ ms.locfileid: "36136946"
   
 ### <a name="to-set-the-preferred-connection-method-for-a-directquery-model"></a>若要為 DirectQuery 模型設定慣用連接方法  
   
-1.  在[!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]，開啟 DirectQuery 模型的方案檔。  
+1.  在  [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]，開啟 DirectQuery 模型的方案檔。  
   
 2.  在 Visual Studio 中，選取 **[專案]** 功能表中的 **[屬性]**。  
   
@@ -60,9 +60,9 @@ ms.locfileid: "36136946"
   
     -   **僅限 DirectQuery**  
   
-    -   **Inmemorywithdirectquery**  
+    -   **InMemory 和 DirectQuery**  
   
-    -   **Directquerywithinmemory**  
+    -   **搭配使用 DirectQuery 和 InMemory**  
   
  請注意，這些屬性與您在部署前於 Visual Studio 對專案設定的屬性相同。 只要您已將模型設定為支援使用 DirectQuery，隨時可以變更 DirectQuery 模式的慣用連接模式。  
   

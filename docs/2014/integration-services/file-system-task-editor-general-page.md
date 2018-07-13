@@ -1,5 +1,5 @@
 ---
-title: 檔案系統工作編輯器 （一般頁面） |Microsoft 文件
+title: 檔案系統工作編輯器 （一般頁面） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.filesystemtask.general.f1
 helpviewer_keywords:
 - File System Task Editor
 ms.assetid: 51fe6614-3418-4eff-a28d-02ea31cc9aa9
 caps.latest.revision: 43
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: a7bc28798bbdfe79d05923252e1add422217d763
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 120e86946f920a616b9df7c443441fb4ce6d5efc
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36136900"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37156649"
 ---
 # <a name="file-system-task-editor-general-page"></a>檔案系統工作編輯器 (一般頁面)
   使用 [檔案系統工作編輯器] 對話方塊的 [一般] 頁面，即可設定工作執行的檔案系統作業。  
@@ -33,7 +33,7 @@ ms.locfileid: "36136900"
  您必須透過設定 SourceConnection 和 DestinationConnection 屬性，以指定來源和目的地連線管理員。 您可以提供指向工作做為來源或目的地使用之檔案的檔案連接管理員名稱，而如果檔案路徑是儲存在變數中，則可以提供變數的名稱。 若要使用變數來儲存檔案路徑，您必須先將來源連接的 [IsSourcePathVariable] 選項和目的地連接的 [IsDestinationPatheVariable] 選項設定為 [True]。 接著您就可以選擇要使用的現有系統或使用者自訂變數，或是建立新的變數。 您可以在 [加入變數] 對話方塊中，設定和指定變數的範圍。 此範圍必須是「檔案系統」工作或父容器。 如需詳細資訊，請參閱 [Integration Services &#40;SSIS&#41; 變數](integration-services-ssis-variables.md)和[在封裝中使用變數](../../2014/integration-services/use-variables-in-packages.md)。  
   
 > [!NOTE]  
->  若要覆寫為選取的變數`SourceConnection`和`DestinationConnection`屬性，輸入的運算式**來源**和**目的地**屬性。 您可在 [檔案系統工作編輯器] 的 [運算式] 頁面上輸入運算式。 例如，為了設定做為工作目的地使用的檔案路徑，在某些情況下您可能想要使用變數 A，而在其他情況下使用變數 B。  
+>  若要覆寫為選取的變數`SourceConnection`和`DestinationConnection`內容中，輸入的運算式**來源**並**目的地**屬性。 您可在 [檔案系統工作編輯器] 的 [運算式] 頁面上輸入運算式。 例如，為了設定做為工作目的地使用的檔案路徑，在某些情況下您可能想要使用變數 A，而在其他情況下使用變數 B。  
   
 > [!NOTE]  
 >  「檔案系統」工作會在單一檔案或目錄上運作。 因此，這項工作不支援使用萬用字元在多個檔案或目錄上執行相同的作業。 為了要讓「檔案系統」工作在多個檔案或目錄上重複作業，請將此「檔案系統」工作放入 Foreach 迴圈容器內。 如需詳細資訊，請參閱 [檔案系統工作](control-flow/file-system-task.md)。  
@@ -44,10 +44,10 @@ ms.locfileid: "36136900"
  **IsDestinationPathVariable**  
  指出目的地路徑是否儲存在變數中。 這個屬性具有下表中所列的選項。  
   
-|ReplTest1|描述|  
+|值|描述|  
 |-----------|-----------------|  
 |**True**|目的地路徑儲存在變數中。 選取這個值會顯示動態選項 [DestinationVariable]。|  
-|**False**|目的地路徑是在檔案連接管理員中指定。 選取這個值會顯示動態選項`DestinationConnection`。|  
+|**False**|目的地路徑是在檔案連接管理員中指定。 選取此值會顯示動態選項`DestinationConnection`。|  
   
  **OverwriteDestination**  
  指定作業是否可覆寫目的地目錄中的檔案。  
@@ -64,7 +64,7 @@ ms.locfileid: "36136900"
  **運算**  
  選取要執行的檔案系統作業。 這個屬性具有下表中所列的選項。  
   
-|ReplTest1|描述|  
+|值|描述|  
 |-----------|-----------------|  
 |**複製目錄**|複製目錄。 選取此值會顯示來源與目的地的動態選項。|  
 |**複製檔案**|複製檔案。 選取此值會顯示來源與目的地的動態選項。|  
@@ -73,14 +73,14 @@ ms.locfileid: "36136900"
 |**刪除目錄內容**|刪除目錄的內容。 選取此值會顯示來源的動態選項。|  
 |**刪除檔案**|刪除檔案。 選取此值會顯示來源的動態選項。|  
 |**移動目錄**|移動目錄。 選取此值會顯示來源與目的地的動態選項。|  
-|**移動檔案**|移動檔案。 選取此值會顯示來源與目的地的動態選項。<br /><br /> 注意： 當移動檔案，請勿包含檔案名稱在您提供當做目的地的目錄路徑。|  
-|**重新命名檔案**|重新命名檔案。 選取此值會顯示來源與目的地的動態選項。<br /><br /> 注意： 在重新命名檔案，包含新的檔案名稱在您提供當做目的地的目錄路徑。|  
+|**移動檔案**|移動檔案。 選取此值會顯示來源與目的地的動態選項。<br /><br /> 注意： 當移動檔案時，不包含檔案名稱在您提供當做目的地的目錄路徑。|  
+|**重新命名檔案**|重新命名檔案。 選取此值會顯示來源與目的地的動態選項。<br /><br /> 注意： 當重新命名檔案，包含新的檔案名稱提供目的地目錄路徑中。|  
 |**設定屬性**|設定檔案或目錄的屬性。 選取此值會顯示來源與作業的動態選項。|  
   
  `IsSourcePathVariable`  
  指出目的地路徑是否儲存在變數中。 這個屬性具有下表中所列的選項。  
   
-|ReplTest1||  
+|值||  
 |-----------|-|  
 |**True**|目的地路徑儲存在變數中。 選取此值會顯示動態選項 [SourceVariable]。|  
 |**False**|目的地路徑是在檔案連接管理員中指定。 選取這個值會顯示動態選項 [DestinationVariable]。|  

@@ -5,23 +5,22 @@ ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - 7907 (Database Engine error)
 ms.assetid: a1c94e4a-7e91-46e0-9fac-07bbbf6dd018
 caps.latest.revision: 16
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 007ce33742cb2d625b331992ae2b9edf39927ad0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 9c3f09b3922419b012ddf472eb31bf373aeb2352
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36133497"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37425917"
 ---
 # <a name="mssqlserver7907"></a>MSSQLSERVER_7907
     

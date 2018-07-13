@@ -1,5 +1,5 @@
 ---
-title: MeasureGroupID 元素 (ASSL) |Microsoft 文件
+title: MeasureGroupID 元素 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - MeasureGroupID element
 ms.assetid: 3b075f86-dbbc-4285-8d2d-61fa722181c7
 caps.latest.revision: 38
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 7a6ab3a46de67deb375f74b30a0e802680a9d7ab
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 45ec91eee187e7ea0264eded7c92954822b49810
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36144607"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37239638"
 ---
 # <a name="measuregroupid-element-assl"></a>MeasureGroupID 元素 (ASSL)
-  將[MeasureGroup](../objects/group-element-assl.md)與父元素、 繫結或超出的非正規繫結。  
+  將產生關聯[MeasureGroup](../objects/group-element-assl.md)與父元素、 繫結或程式碼外部繫結。  
   
 ## <a name="syntax"></a>語法  
   
@@ -60,7 +60,7 @@ ms.locfileid: "36144607"
 |------------------|-------------|  
 |父元素|[ManyToManyMeasureGroupDimension](../data-type/dimension-data-type-assl.md)， [MeasureGroupAttributeBinding](../data-type/measuregroupattributebinding-data-type-out-of-line-assl.md)， [MeasureGroupBinding](../data-type/binding-data-type-assl.md)， [PerspectiveMeasureGroup](../data-type/perspectivemeasuregroup-data-type-assl.md)|  
   
-|子元素的上階或父系|基數|  
+|子系項目上階或父系|基數|  
 |------------------------------------------|-----------------|  
 |[ManyToManyMeasureGroupDimension](../data-type/dimension-data-type-assl.md)|0-1：只能出現一次的選擇性元素。|  
 |[MeasureGroupAttributeBinding](../data-type/measuregroupattributebinding-data-type-out-of-line-assl.md)， [MeasureGroupBinding](../data-type/binding-data-type-assl.md)和[PerspectiveMeasureGroup](../data-type/perspectivemeasuregroup-data-type-assl.md)|1-1：只出現一次的必要元素。|  

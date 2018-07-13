@@ -1,5 +1,5 @@
 ---
-title: Distribution 元素 (ASSL) |Microsoft 文件
+title: Distribution 元素 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - Distribution element
 ms.assetid: a1309b90-8ad8-431b-a918-67f0cdd4fd20
 caps.latest.revision: 34
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: a556b4dc3745ecf45eab71339f2db3a0f9174f06
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ea3422fead59b45957ebdb15735736fba89ddff2
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36136077"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37163539"
 ---
 # <a name="distribution-element-assl"></a>Distribution 元素 (ASSL)
   包含描述純量值如何提供者特定值的資料行內部散發[MiningStructure](../objects/miningstructure-element-assl.md)項目。  
@@ -62,9 +62,9 @@ ms.locfileid: "36136077"
 |子元素|無|  
   
 ## <a name="remarks"></a>備註  
- 可用的值`Distribution`項目，例如*一般*或*統一，* 專屬於每個採礦演算法提供者。 如需有關有效 `Distribution` 值的詳細資訊，請參閱採礦演算法提供者文件集。  
+ 可用的值`Distribution`項目，例如*正常*或是*統一，* 專屬於每個採礦演算法提供者。 如需有關有效 `Distribution` 值的詳細資訊，請參閱採礦演算法提供者文件集。  
   
- 對應至父系的項目`Distribution`在 「 分析管理物件 (AMO) 物件模型而言， <xref:Microsoft.AnalysisServices.ScalarMiningStructureColumn>。  
+ 對應的父代的項目`Distribution`在 「 分析管理物件 (AMO) 物件模型是<xref:Microsoft.AnalysisServices.ScalarMiningStructureColumn>。  
   
 ## <a name="see-also"></a>另請參閱  
  [屬性&#40;ASSL&#41;](properties-assl.md)  

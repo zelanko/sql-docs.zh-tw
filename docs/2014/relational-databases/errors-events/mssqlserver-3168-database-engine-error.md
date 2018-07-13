@@ -5,23 +5,22 @@ ms.date: 03/07/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - 3168 (Database Engine error)
 ms.assetid: 991111d9-1eb3-43e9-9333-a75a775c3200
 caps.latest.revision: 11
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 5839ee9cc35dfd178c58140899ffd3fffbe0cd0c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: e18f29856af775a13e254699ac1eaaae51676b2d
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36134410"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37422347"
 ---
 # <a name="mssqlserver3168"></a>MSSQLSERVER_3168
     

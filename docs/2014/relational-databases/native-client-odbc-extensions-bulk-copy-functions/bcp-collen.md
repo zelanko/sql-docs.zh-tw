@@ -1,13 +1,11 @@
 ---
-title: bcp_collen |Microsoft 文件
+title: bcp_collen |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
@@ -20,15 +18,15 @@ helpviewer_keywords:
 - bcp_collen function
 ms.assetid: faaf1f7a-81f2-4852-a178-56602c33673a
 caps.latest.revision: 29
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 2be7828aca9201cdc80704b83eb417543846a627
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: c1d12a0dd303405fd32eec5091d1d7d50e2d7d1f
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36134935"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37431107"
 ---
 # <a name="bcpcollen"></a>bcp_collen
   設定目前大量複製到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 之程式變數中的資料長度。  
@@ -64,11 +62,11 @@ idxServerCol
  SUCCEED 或 FAIL。  
   
 ## <a name="remarks"></a>備註  
- **Bcp_collen**函式可讓您複製到資料時，變更特定資料行之程式變數中的資料長度[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]與[bcp_sendrow](bcp-sendrow.md)。  
+ **Bcp_collen**函式可讓您複製資料時，變更特定資料行之程式變數中的資料長度[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]具有[bcp_sendrow](bcp-sendrow.md)。  
   
- 資料長度決定一開始，當[bcp_bind](bcp-bind.md)呼叫。 如果呼叫之間變更的資料長度**bcp_sendrow**和正在使用任何長度前置詞或結束字元，您可以呼叫**bcp_collen**重設長度。 下次呼叫**bcp_sendrow**使用的呼叫所設定的長度**bcp_collen**。  
+ 決定資料長度的一開始，當[bcp_bind](bcp-bind.md)呼叫。 如果呼叫之間變更的資料長度**bcp_sendrow**正在使用任何長度前置詞或結束字元，您可以呼叫**bcp_collen**重設長度。 下次呼叫**bcp_sendrow**使用的呼叫所設定的長度**bcp_collen**。  
   
- 您必須呼叫**bcp_collen**一次是針對您想要修改的資料長度資料表中每個資料行。  
+ 您必須呼叫**bcp_collen**一次在您想要修改的資料長度的資料表中的每個資料行。  
   
 ## <a name="see-also"></a>另請參閱  
  [大量複製函數](sql-server-driver-extensions-bulk-copy-functions.md)  
