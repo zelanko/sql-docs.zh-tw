@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 topic_type:
 - apiref
 helpviewer_keywords:
 - PreConnect:Completed Event Class
 ms.assetid: 7ed2f620-6511-4985-9961-d2927c2b1759
 caps.latest.revision: 18
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: a20bd204a726391a7fab44caccdef3b1c3437944
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 5a91728174a11ecf1cdd008b5aa1c9829da890ff
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36145388"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37150689"
 ---
 # <a name="preconnectcompleted-event-class"></a>PreConnect:Completed 事件類別
   PreConnect:Completedevent 類別會指出 LOGON 觸發程序或資源管理員分類函數執行完成。  

@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - technical reference [SQL Server replication]
 ms.assetid: b8f7d6d4-4fcc-45ac-abe5-740c147ac177
 caps.latest.revision: 13
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 5636ed32817d01a3de17136d3722b11b0fea32a2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: c4f62bd5ac5a6e8ac98b04edf305bd3533ad57d6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36146260"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37158389"
 ---
 # <a name="technical-reference-replication"></a>技術參考 (複寫)
   本節包含 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 複寫之技術參考文件的連結。  

@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.exceldest.f1
 helpviewer_keywords:
@@ -18,13 +18,13 @@ ms.assetid: 37c07446-1264-4814-b4f5-9c66d333bb24
 caps.latest.revision: 49
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: d88fa949954272942c8eca4c9f62ac470dd717cc
-ms.sourcegitcommit: d463f543e8db4a768f8e9736ff28fedb3fb17b9f
+manager: craigg
+ms.openlocfilehash: d093981287236aafa91b6ec4aa4ffeb2e75a05c0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/22/2018
-ms.locfileid: "36324632"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37156769"
 ---
 # <a name="excel-destination"></a>Excel 目的地
   Excel 目的地會將資料載入至 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel 活頁簿中的工作表或範圍。  
@@ -85,9 +85,9 @@ ms.locfileid: "36324632"
   
  如需有關 **[Excel 目的地編輯器]** 對話方塊中可設定之屬性的詳細資訊，請按下列其中一個主題：  
   
--   [Excel 目的地編輯器&#40;連接管理員頁面&#41;](../excel-destination-editor-connection-manager-page.md)  
+-   [Excel 目的地編輯器&#40;連線管理員頁面&#41;](../excel-destination-editor-connection-manager-page.md)  
   
--   [Excel 目的地編輯器&#40;[對應] 頁面&#41;](../excel-destination-editor-mappings-page.md)  
+-   [Excel 目的地編輯器&#40;對應頁面&#41;](../excel-destination-editor-mappings-page.md)  
   
 -   [Excel 目的地編輯器&#40;錯誤輸出頁面&#41;](../excel-destination-editor-error-output-page.md)  
   

@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 744e9357-94a9-4202-abe8-1d3d202697e9
 caps.latest.revision: 6
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: a65f05613ac561d667e8f73c55c689031e6bc8ec
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 89887d6487f46bcc1ce074e39a15efb69f6ff956
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36145677"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37259034"
 ---
 # <a name="cdc-source-custom-properties"></a>CDC 來源自訂屬性
   下表將描述 CDC 來源的自訂屬性。 所有屬性都是可讀寫的。  

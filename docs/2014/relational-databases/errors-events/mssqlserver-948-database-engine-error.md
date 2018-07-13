@@ -5,25 +5,24 @@ ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - "948"
 helpviewer_keywords:
 - 948 (Database Engine error)
 ms.assetid: 95c4ad45-a518-4165-a5c4-6e6b932b0570
 caps.latest.revision: 11
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: cb36765216f906b92cdd6b87e7890b94f3b15d37
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 45c987dea690125de2784068b42369a454fafd8d
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36145863"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37426377"
 ---
 # <a name="mssqlserver948"></a>MSSQLSERVER_948
     
@@ -44,6 +43,6 @@ ms.locfileid: "36145863"
  例如，造成這項錯誤的原因可能是在較新的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本中使用 Vardecimal 儲存格式，然後嘗試在 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 2 之前的版本中附加資料庫檔案。  
   
 ## <a name="user-action"></a>使用者動作  
- 判斷原始伺服器上執行的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本。 在[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]，請以滑鼠右鍵按一下伺服器，然後按一下**屬性**或型別`SELECT @@VERSION`在查詢視窗中。 使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的原始版本開啟資料庫。 檢查 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體中原始資料庫上啟用的功能。 修改這些設定，以搭配用來附加資料庫的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本。  
+ 判斷原始伺服器上執行的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本。 在  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]，請以滑鼠右鍵按一下伺服器，然後再按**屬性**或型別`SELECT @@VERSION`在查詢視窗中。 使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的原始版本開啟資料庫。 檢查 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體中原始資料庫上啟用的功能。 修改這些設定，以搭配用來附加資料庫的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本。  
   
   

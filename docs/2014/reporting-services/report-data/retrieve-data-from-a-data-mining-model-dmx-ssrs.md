@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - retrieving report data
 - datasets [Reporting Services], with DMX queries
@@ -16,22 +16,22 @@ helpviewer_keywords:
 - queries [Reporting Services], data mining prediction
 ms.assetid: d9cd3624-1594-4707-8887-55437dd7e07c
 caps.latest.revision: 17
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 1e9d492d5c01f4445a7f8ed79a9b386eaa5b5ad5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: 7755e5026dc99e13f27de9619bb619e5f9e22db7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36146888"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37152239"
 ---
 # <a name="retrieve-data-from-a-data-mining-model-dmx-ssrs"></a>從資料採礦模型擷取資料 (DMX) (SSRS)
   若要在報表中使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 資料採礦模型內的資料，您必須定義 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 資料來源，並建立一或多個報表資料集。 當您建立資料來源定義時，您必須指定連接字串和認證，好讓您可以從用戶端電腦存取資料來源。  
   
  您可以建立內嵌資料來源定義供單一報表使用，或是建立共用資料來源定義供多個報表使用。 本主題的程序描述如何建立內嵌資料來源。 如需共用資料來源的詳細資訊，請參閱[內嵌和共用資料連線或資料來源 &#40;報表產生器及 SSRS&#41;](../embedded-and-shared-data-connections-or-data-sources-report-builder-and-ssrs.md) 和[建立、修改及刪除共用資料來源 &#40;SSRS&#41;](create-modify-and-delete-shared-data-sources-ssrs.md)。  
   
- 在建立之後[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)][!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]資料來源，您可以建立一或多個資料集。 您可針對每一個資料集使用資料採礦預測運算式 (DMX) 查詢設計工具，以建立一個指定欄位集合的 DMX 查詢。 如需詳細資訊，請參閱 [Analysis Services DMX 查詢設計工具使用者介面](analysis-services-dmx-query-designer-user-interface.md)。  
+ 在建立後[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)][!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]資料來源，您可以建立一或多個資料集。 您可針對每一個資料集使用資料採礦預測運算式 (DMX) 查詢設計工具，以建立一個指定欄位集合的 DMX 查詢。 如需詳細資訊，請參閱 [Analysis Services DMX 查詢設計工具使用者介面](analysis-services-dmx-query-designer-user-interface.md)。  
   
  在您建立資料集之後，該資料集的名稱會出現在 [報表資料] 窗格中，當做其資料來源底下的一個節點。  
   
@@ -57,7 +57,7 @@ ms.locfileid: "36146888"
   
 6.  按一下 **[認證]**。  
   
-     設定用來連接資料來源的認證。 如需詳細資訊，請參閱[指定認證和報表資料來源的連接資訊](../../integration-services/connection-manager/data-sources.md)。  
+     設定用來連接資料來源的認證。 如需詳細資訊，請參閱 <<c0> [ 指定的認證和報表資料來源的連接資訊](../../integration-services/connection-manager/data-sources.md)。  
   
     > [!NOTE]  
     >  若要測試資料來源連線，請按一下 [編輯]。 在 [連接屬性] 對話方塊中，按一下 [測試連線]。 如果測試成功，您將會看到「連接測試成功」的通知訊息。 如果測試失敗，您將會看到一個警告訊息，其中包含測試未能成功之原因的相關資訊。  
@@ -85,7 +85,7 @@ ms.locfileid: "36146888"
      資料集和它的欄位集合會出現在 [報表資料] 窗格的資料來源節點底下。  
   
 ## <a name="see-also"></a>另請參閱  
- [Analysis Services 連接類型的 DMX &#40;SSRS&#41;](analysis-services-connection-type-for-dmx-ssrs.md)   
+ [DMX 的 analysis Services 連線類型&#40;SSRS&#41;](analysis-services-connection-type-for-dmx-ssrs.md)   
  [資料連接、 資料來源和 Reporting Services 中的連接字串](../data-connections-data-sources-and-connection-strings-in-reporting-services.md)   
  [資料集欄位集合 &#40;報表產生器及 SSRS&#41;](dataset-fields-collection-report-builder-and-ssrs.md)   
  [報表內嵌資料集和共用資料集 &#40;報表產生器及 SSRS&#41;](report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)  

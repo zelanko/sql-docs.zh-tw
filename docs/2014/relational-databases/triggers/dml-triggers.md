@@ -5,25 +5,23 @@ ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-dml
+ms.technology: ''
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - triggers [SQL Server], about triggers
 - DML triggers, about DML triggers
 - triggers [SQL Server]
 ms.assetid: 298eafca-e01f-4707-8c29-c75546fcd6b0
-caps.latest.revision: 26
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: b13c888a8f3a388d6e1b8d1b2763714c9558004a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: rothja
+ms.author: jroth
+manager: craigg
+ms.openlocfilehash: 20b01c270ee9ac74ff1b76cf32df21ace98d51d8
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36147114"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37415047"
 ---
 # <a name="dml-triggers"></a>DML 觸發程序
   DML 觸發程序是一種特殊類型的預存程序，會在影響觸發程序中所定義之資料表或檢視表的資料操作語言 (DML) 事件執行時自動執行。 DML 事件包括 INSERT、UPDATE 或 DELETE 陳述式。 DML 觸發程序可用以強制執行商務規則和資料完整性、查詢其他資料表，以及包括複雜的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式。 觸發程序和引發它的陳述式會被視為單一交易處理，而這樣的交易可以從觸發程序內部回復。 如果偵測到伺服器錯誤 (例如，磁碟空間不足)，整個交易就會自動回復。  
@@ -65,8 +63,8 @@ ms.locfileid: "36147114"
 |串聯參考|沒有限制|INSTEAD OF UPDATE 及 DELETE 觸發程序不允許用於串聯參考完整性條件約束的目標資料表。|  
 |執行|之後：<br /><br /> 條件約束處理<br />宣告性參考動作<br />**inserted** 與 **deleted** 資料表建立<br />觸發動作|之前：條件約束處理<br /><br /> 取代：觸發動作<br /><br /> 之後：  **inserted** 與 **deleted** 資料表建立|  
 |執行順序|可指定第一和最後一個執行|不適用|  
-|`varchar(max)``nvarchar(max)`，和`varbinary(max)`中的資料行參考**插入**和**刪除**資料表|Allowed|Allowed|  
-|`text``ntext`，和`image`中的資料行參考**插入**和**刪除**資料表|不允許|Allowed|  
+|`varchar(max)``nvarchar(max)`，並`varbinary(max)`中的資料行參考**插入**並**刪除**資料表|Allowed|Allowed|  
+|`text``ntext`，並`image`中的資料行參考**插入**並**刪除**資料表|不允許|Allowed|  
   
  CLR 觸發程序  
  CLR 觸發程序可以是 AFTER 或 INSTEAD OF 觸發程序。 CLR 觸發程序也可以是 DDL 觸發程序。 CLR 觸發程序不執行 [!INCLUDE[tsql](../../includes/tsql-md.md)] 預存程序，而是執行以 Managed 程式碼撰寫的一個或多個方法，這些方法是在 .NET Framework 中建立並在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中上傳的組件成員。  

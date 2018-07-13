@@ -1,13 +1,11 @@
 ---
-title: 資料類型支援的 OLE DB 日期和時間增強功能 |Microsoft 文件
+title: 資料類型支援的 OLE DB 日期和時間改善 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -15,23 +13,23 @@ helpviewer_keywords:
 - OLE DB, date/time improvements
 ms.assetid: d40e3fd6-9057-4371-8236-95cef300603e
 caps.latest.revision: 24
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 3c543de3b8062dba9090b405156d492f7b4ab3e5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 915a86b1170809bf1508f0214060fea9e0cf8a79
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36135667"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37427041"
 ---
-# <a name="data-type-support-for-ole-db-date-and-time-improvements"></a>資料類型支援的 OLE DB 日期和時間增強功能
+# <a name="data-type-support-for-ole-db-date-and-time-improvements"></a>OLE DB 日期和時間改善的資料型別支援
   本主題提供有關支援 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 日期/時間資料類型之 OLE DB ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client) 類型的資訊。  
   
 ## <a name="data-type-mapping-in-rowsets-and-parameters"></a>資料列集和參數中的資料類型對應  
  OLE DB 提供兩種新的資料類型來支援新的伺服器類型：DBTYPE_DBTIME2 和 DBTYPE_DBTIMESTAMPOFFSET。 下表顯示完整伺服器類型的對應：  
   
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料類型|OLE DB 資料類型|ReplTest1|  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料類型|OLE DB 資料類型|值|  
 |-----------------------------------------|----------------------|-----------|  
 |DATETIME|DBTYPE_DBTIMESTAMP|135 (oledb.h)|  
 |smalldatetime|DBTYPE_DBTIMESTAMP|135 (oledb.h)|  
@@ -173,18 +171,18 @@ enum SQLVARENUM {
 ```  
   
 ## <a name="data-type-mapping-in-itabledefinitioncreatetable"></a>ITableDefinition::CreateTable 中的資料類型對應  
- 下列類型的對應會搭配 itabledefinition:: Createtable 所使用的 DBCOLUMNDESC 結構：  
+ Itabledefinition:: Createtable 所使用的 DBCOLUMNDESC 結構用於下列類型對應：  
   
 |OLE DB 資料類型 (*wType*)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料類型|注意|  
 |----------------------------------|-----------------------------------------|-----------|  
 |DBTYPE_DBDATE|日期||  
-|DBTYPE_DBTIMESTAMP|`datetime2`(p)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者會檢查 DBCOLUMDESC *bScale*成員以決定小數秒有效位數。|  
-|DBTYPE_DBTIME2|`time`(p)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者會檢查 DBCOLUMDESC *bScale*成員以決定小數秒有效位數。|  
-|DBTYPE_DBTIMESTAMPOFFSET|`datetimeoffset`(p)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者會檢查 DBCOLUMDESC *bScale*成員以決定小數秒有效位數。|  
+|DBTYPE_DBTIMESTAMP|`datetime2`(p)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者會檢查 DBCOLUMDESC *bScale*成員來判斷小數秒數有效位數。|  
+|DBTYPE_DBTIME2|`time`(p)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者會檢查 DBCOLUMDESC *bScale*成員來判斷小數秒數有效位數。|  
+|DBTYPE_DBTIMESTAMPOFFSET|`datetimeoffset`(p)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者會檢查 DBCOLUMDESC *bScale*成員來判斷小數秒數有效位數。|  
   
- 當應用程式中指定 DBTYPE_DBTIMESTAMP *wType*，它可以覆寫對應至`datetime2`藉由提供中的型別名稱*pwszTypeName*。 如果`datetime`指定，則*bScale*必須是 3。 如果`smalldatetime`指定，則*bScale*必須是 0。 如果*bScale*與不一致*wType*和*pwszTypeName*，則會傳回 DB_E_BADSCALE。  
+ 當應用程式中指定 DBTYPE_DBTIMESTAMP *wType*，則可以覆寫的對應`datetime2`藉由提供中的類型名稱*pwszTypeName*。 如果`datetime`指定，則*bScale*必須是 3。 如果`smalldatetime`指定，則*bScale*必須是 0。 如果*bScale*與不一致*wType*並*pwszTypeName*，則會傳回 DB_E_BADSCALE。  
   
 ## <a name="see-also"></a>另請參閱  
- [日期和時間增強功能&#40;OLE DB&#41;](date-and-time-improvements-ole-db.md)  
+ [日期和時間改善&#40;OLE DB&#41;](date-and-time-improvements-ole-db.md)  
   
   

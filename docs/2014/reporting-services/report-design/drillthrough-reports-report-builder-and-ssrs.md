@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 938a6450-67c1-4eef-80b4-8fdaefeed584
 caps.latest.revision: 10
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: ececfced738b8ea71b8cbedef4c7495607522309
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 6cea127909617ef7230dfd59e995f878274291a8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36145302"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37230618"
 ---
 # <a name="drillthrough-reports-report-builder-and-ssrs"></a>鑽研報表 (報表產生器及 SSRS)
   鑽研報表是使用者從另一個報表按一下連結所開啟的報表。 鑽研報表通常包含有關原始摘要報表之項目的詳細資料。 例如，在此圖中，銷售摘要報表會列出銷售訂單和總計。 當使用者按一下摘要清單中的訂單號碼時，會開啟另一份含有訂單詳細資料的報表。  
@@ -55,6 +55,6 @@ ms.locfileid: "36145302"
  若要在發行具有鑽研連結的摘要報表之後加以檢視，您必須確定鑽研報表位於與摘要報表相同的報表伺服器上。 在所有情況下，使用者都必須擁有鑽研報表的權限，才能進行檢視。  
   
 ## <a name="see-also"></a>另請參閱  
- [鑽研、 向下鑽研、 子報表和巢狀的資料區&#40;報表產生器和 SSRS&#41;](drillthrough-drilldown-subreports-and-nested-data-regions.md)  
+ [鑽研、 向下鑽研、 子報表和巢狀的資料區域&#40;報表產生器及 SSRS&#41;](drillthrough-drilldown-subreports-and-nested-data-regions.md)  
   
   

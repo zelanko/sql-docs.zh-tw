@@ -1,5 +1,5 @@
 ---
-title: AssociationSet 元素 (CSDLBI) |Microsoft 文件
+title: AssociationSet 元素 (CSDLBI) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -12,15 +12,15 @@ ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 93e5ac4d-d7e8-490e-b775-28263a48cfcc
 caps.latest.revision: 8
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: d28f903b4e501f648329a65824292256bca7520b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 7d418e75aa451c14db6010f6cb3673cd8c3a74bc
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36147017"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37229558"
 ---
 # <a name="associationset-element-csdlbi"></a>AssociationSet 元素 (CSDLBI)
   `AssociationSet` 元素是定義關聯的複雜類型。 在 CSDLBI 資料模型中，關聯是指兩個資料表之間的關聯性。  
@@ -30,7 +30,7 @@ ms.locfileid: "36147017"
 ## <a name="applicable-attributes"></a>適用的屬性  
  下表列出元素和定義 `AssociationSet` 元素的屬性。  
   
-|[屬性]|是否必要|描述|  
+|名稱|是否必要|描述|  
 |----------|-----------------|-----------------|  
 |State|是|指出關聯是否為使用中的字串。 值是由 State 元素所定義。|  
 |Hidden|否|布林值，指出關聯性是否可見。 根據預設，Hidden 的值為 `false`，表示模型中的所有關聯性都可見。|  
@@ -42,7 +42,7 @@ ms.locfileid: "36147017"
   
  下表列出 `State` 元素的值。  
   
-|ReplTest1|描述|  
+|值|描述|  
 |-----------|-----------------|  
 |作用中|關聯為使用中。|  
 |非使用中|關聯為使用中。|  

@@ -1,5 +1,5 @@
 ---
-title: 使用 Diffgram 來修改 SQLXML 4.0 中的資料 |Microsoft 文件
+title: 使用 Diffgram 來修改 SQLXML 4.0 中的資料 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -27,15 +27,15 @@ helpviewer_keywords:
 - record deletions [SQLXML]
 ms.assetid: 48b8a8f9-f3af-404f-8c84-f4c3703364d9
 caps.latest.revision: 21
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: f9a96faa2192b7fb37ebf61cc6dc509944e496d5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 4fbe2fcac8299f268922bcad815caf8a4b5cb3e8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36146458"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37155829"
 ---
 # <a name="using-diffgrams-to-modify-data-in-sqlxml-40"></a>使用 DiffGram 來修改 SQLXML 4.0 中的資料
   DiffGram 格式在引進**資料集**元件[!INCLUDE[msCoName](../../../includes/msconame-md.md)].NET Framework。 您可以在 .NET Framework 內建立 DiffGram，並用其修改 Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 資料庫中資料表的資料。  

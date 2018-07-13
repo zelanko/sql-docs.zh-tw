@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - dbe-xml
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - promoting properties [XML in SQL Server]
 - property promotion [XML in SQL Server]
 ms.assetid: f5111896-c2fd-4209-b500-f2baa45489ad
 caps.latest.revision: 11
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 6b9737311798edfe7f65ea74d03d7a941a145ef4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: d7a43e9ff408c185abf91a4ef71e7ccc734a3cb2
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36146706"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37278814"
 ---
 # <a name="promote-frequently-used-xml-values-with-computed-columns"></a>使用計算資料行升級常用的 XML 值
   如果查詢主要只是針對少數的元素和屬性值來執行，您可能會想要將那些量升級至關聯式資料行。 若已擷取整個 XML 執行個體，但您只是要針對小部分的 XML 資料來發出查詢要求時，這是很有幫助的。 您不需要在 XML 資料行上建立 XML 索引， 即可為升級的資料行建立索引。 您必須撰寫查詢來使用升級的資料行。 意即，查詢最佳化工具不再將 XML 資料行查詢的目標放在升級的資料行。  
@@ -30,7 +30,7 @@ ms.locfileid: "36146706"
  升級的資料行可以是同一資料表中的已計算資料行，也可以是資料表中由使用者維護的另一個資料行。 當單一值從每個 XML 執行個體升級起來時，這就足夠了。 然而，若為多重值的屬性，您就必須為屬性建立個別的資料表，請見下節說明。  
   
 ## <a name="computed-column-based-on-the-xml-data-type"></a>以 xml 資料類型為基礎的計算的資料行  
- 使用叫用的使用者定義函數也可以建立計算資料行`xml`資料類型方法。 計算資料行的類型可以是任何 SQL 類型，包括 XML。 下列範例會加以說明。  
+ 使用使用者定義的函式會叫用，也可以建立計算資料行`xml`資料類型方法。 計算資料行的類型可以是任何 SQL 類型，包括 XML。 下列範例會加以說明。  
   
 ### <a name="example-computed-column-based-on-the-xml-data-type-method"></a>範例：以 xml 資料類型方法為基礎的計算的資料行  
  針對書籍的 ISBN 號碼來建立使用者自訂函數：  
@@ -71,7 +71,7 @@ FROM   T
 WHERE  ISBN = '0-7356-1588-2'  
 ```  
   
- 您可以建立一個使用者定義函數來傳回`xml`資料類型和計算資料行使用使用者定義函數。 然而，您不能在計算的 XML 資料行上建立 XML 索引。  
+ 您可以建立使用者定義函式來傳回`xml`資料類型和計算資料行使用使用者定義函式。 然而，您不能在計算的 XML 資料行上建立 XML 索引。  
   
 ## <a name="creating-property-tables"></a>建立屬性資料表  
  您可能會想要將某些多重值的屬性從 XML 資料升級至一或多個資料表中、在那些資料表上建立索引，然後再讓您的查詢目標使用那些資料表。 一般案例中都是由少數的屬性來涵蓋大部份的查詢工作負載。 您可以執行下列工作：  
@@ -82,7 +82,7 @@ WHERE  ISBN = '0-7356-1588-2'
   
 -   在 XML 資料行上建立觸發程序，以維護屬性資料表。 在觸發程序中執行下列其中之一：  
   
-    -   使用`xml`資料類型方法，例如**nodes （)** 和**value （)**，進而插入及刪除屬性資料表的資料列。  
+    -   使用`xml`資料類型方法，例如**nodes （)** 並**value （)**，進而插入及刪除屬性資料表的資料列。  
   
     -   在 Common Language Runtime (CLR) 中建立資料流資料表值函式，以插入及刪除屬性資料表的資料列。  
   

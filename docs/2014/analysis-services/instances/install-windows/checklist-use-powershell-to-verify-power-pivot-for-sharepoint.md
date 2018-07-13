@@ -1,5 +1,5 @@
 ---
-title: 檢查清單： 使用 PowerShell 驗證 PowerPivot for SharePoint |Microsoft 文件
+title: 檢查清單： 使用 PowerShell 驗證 PowerPivot for SharePoint |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 73a13f05-3450-411f-95f9-4b6167cc7607
 caps.latest.revision: 21
-author: markingmyname
-ms.author: maghan
-manager: jhubbard
-ms.openlocfilehash: a7d62eaa7acda26384b3bf8eb7dbb49af3ab5096
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 1c7a70d4cfa7b47d4155abd46982a88c11ebdbca
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36145970"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37149779"
 ---
 # <a name="checklist-use-powershell-to-verify-powerpivot-for-sharepoint"></a>檢查清單：使用 PowerShell 驗證 PowerPivot for SharePoint
   一定要通過穩固的驗證測試來確認您的服務和資料可運作， [!INCLUDE[ssGeminiShort](../../../includes/ssgeminishort-md.md)] 安裝或復原作業才會是完整的。 在本文中，我們會示範如何使用 Windows PowerShell 執行這些步驟。 我們將每個步驟放在各自的章節中，好讓您可以直接前往特定工作。 例如，請執行本主題＜ [資料庫](#bkmk_databases) ＞一節中的指令碼來驗證服務應用程式和內容資料庫的名稱，以便排程這些應用程式或資料庫進行維護或備份。  
@@ -63,7 +63,7 @@ Add-PSSnapin Microsoft.Sharepoint.Powershell –EA 0
   
 |||  
 |-|-|  
-|![powerpivot for sharepoint 一般應用程式集](../../../sql-server/install/media/ssas-powerpivot-logo.png "sharepoint 一般應用程式集合中的 powerpivot")|您可以選擇使用 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 管理儀表板來驗證管理中心的大多數元件。 若要在管理中心開啟儀表板，請按一下 **[一般應用程式設定]**，然後按一下 **[PowerPivot]** 中的 **[管理儀表板]**。 如需有關儀表板的詳細資訊，請參閱[PowerPivot Management Dashboard and Usage Data](../../power-pivot-sharepoint/power-pivot-management-dashboard-and-usage-data.md)。|  
+|![sharepoint 一般應用程式集合中的 powerpivot](../../../sql-server/install/media/ssas-powerpivot-logo.png "sharepoint 一般應用程式集合中的 powerpivot")|您可以選擇使用 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 管理儀表板來驗證管理中心的大多數元件。 若要在管理中心開啟儀表板，請按一下 **[一般應用程式設定]**，然後按一下 **[PowerPivot]** 中的 **[管理儀表板]**。 如需有關儀表板的詳細資訊，請參閱[PowerPivot Management Dashboard and Usage Data](../../power-pivot-sharepoint/power-pivot-management-dashboard-and-usage-data.md)。|  
   
 ##  <a name="bkmk_symptoms"></a> 徵兆和建議的動作  
  下表是徵兆或問題清單以及這個主題的建議章節，您可參考這些章節來幫助您解決問題。  
@@ -183,9 +183,9 @@ Name                           Status ProcessAccountName Id
 SharePoint Web Services System Online DOMAIN\account     89b50ec3-49e3-4de7-881a-2cec4b8b73ea  
 ```  
   
- ![請注意](../../../reporting-services/media/rs-fyinote.png "注意")應用程式集區也可以在 [管理中心] 頁面上驗證**管理服務應用程式**。 按一下服務應用程式的名稱，然後按一下功能區中的 **[屬性]** 。  
+ ![附註](../../../reporting-services/media/rs-fyinote.png "注意")也可以在 [管理中心] 頁面上驗證應用程式集區**管理服務應用程式**。 按一下服務應用程式的名稱，然後按一下功能區中的 **[屬性]** 。  
   
- **PowerPivot 和 Excel 服務應用程式 proxy**  
+ **PowerPivot 與 Excel 服務應用程式 proxy**  
   
  確認狀態為 **線上**。  
   
@@ -264,7 +264,7 @@ Online PowerPivot Setup Extension Timer Job                                     
 ```  
   
 ##  <a name="bkmk_health_rules"></a> 健全狀況規則  
- SharePoint 2013 部署中的規則較少。 如需規則的每個 SharePoint 環境的完整清單以及如何使用規則的說明，請參閱[PowerPivot 健全狀況規則-設定](../../power-pivot-sharepoint/configure-power-pivot-health-rules.md)。  
+ SharePoint 2013 部署中的規則較少。 每個 SharePoint 環境的規則的完整清單及如何使用規則的說明，請參閱[PowerPivot 健全狀況規則-設定](../../power-pivot-sharepoint/configure-power-pivot-health-rules.md)。  
   
 ```  
 Get-SPHealthAnalysisRule | select name, enabled, summary | where {$_.summary -like “*power*”}  | format-table -property * -autosize | out-default  
@@ -287,7 +287,7 @@ MidTierAcctReadPermissionRule    True PowerPivot: MidTier process account should
 ##  <a name="bkmk_logs"></a> Windows 和 ULS 記錄  
  **Windows 事件記錄檔**  
   
- 下列命令將會搜尋 Windows 事件記錄檔，以便找出 SharePoint 模式下與 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 執行個體有關的事件。 如需停用事件或變更事件層級資訊，請參閱[設定及檢視 SharePoint 記錄檔和診斷記錄&#40;PowerPivot for SharePoint&#41;](../../power-pivot-sharepoint/configure-and-view-sharepoint-and-diagnostic-logging.md)。  
+ 下列命令將會搜尋 Windows 事件記錄檔，以便找出 SharePoint 模式下與 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 執行個體有關的事件。 如需停用事件或變更事件層級的詳細資訊，請參閱[設定及檢視 SharePoint 記錄檔和診斷記錄&#40;PowerPivot for SharePoint&#41;](../../power-pivot-sharepoint/configure-and-view-sharepoint-and-diagnostic-logging.md)。  
   
  **服務名稱** ：MSOLAP$POWERPIVOT  
   
@@ -403,7 +403,7 @@ PowerPivot Query Usage       Online    True AnalysisServicesRequests            
 PowerPivot Unload Data Usage Online    True AnalysisServicesUnloads                         14  
 ```  
   
- 如需詳細資訊，請參閱[PowerPivot 使用量資料收集](../../power-pivot-sharepoint/power-pivot-usage-data-collection.md)。  
+ 如需詳細資訊，請參閱 < [PowerPivot 使用量資料收集](../../power-pivot-sharepoint/power-pivot-usage-data-collection.md)。  
   
 ##  <a name="bkmk_solutions"></a> 方案  
  如果其他元件在線上，您可以略過方案的驗證。 不過，如果遺漏了健全狀況規則，請確認這兩個方案都存在，並確認兩個 PowerPivot 方案為 **線上** 和 **已部署**狀態。  

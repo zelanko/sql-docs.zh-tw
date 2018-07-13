@@ -1,5 +1,5 @@
 ---
-title: 授與權限預存程序 (Analysis Services) |Microsoft 文件
+title: 授與權限，預存程序 (Analysis Services) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 01793166-a3e5-4856-8302-21b82d494e69
 caps.latest.revision: 6
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: c82a2df266f9e6dce2767ecceb3e2af9bd12fc1d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 7b90318de4420df1776c01e5e881740d9d44ea20
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36146213"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37278754"
 ---
 # <a name="grant-permissions-on-stored-procedures-analysis-services"></a>授與預存程序 (Analysis Services) 的權限
-  預存程序或組件，[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]所撰寫的外部常式[!INCLUDE[msCoName](../includes/msconame-md.md)].NET 程式設計語言的擴充功能的[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]。 組件可讓開發人員利用跨語言整合、例外狀況處理、版本控制支援、部署支援和偵錯支援等優點。  
+  儲存程序或組件，在[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]所撰寫的外部常式[!INCLUDE[msCoName](../includes/msconame-md.md)]的擴充功能的.NET 程式設計語言， [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]。 組件可讓開發人員利用跨語言整合、例外狀況處理、版本控制支援、部署支援和偵錯支援等優點。  
   
  您必須是伺服器管理員，才能註冊組件。 請參閱[授與伺服器系統管理員權限&#40;Analysis Services&#41;](instances/grant-server-admin-rights-to-an-analysis-services-instance.md)。  
   
@@ -35,7 +35,7 @@ ms.locfileid: "36146213"
   
 -   **安全**使用安全的權限集合，預存程序無法存取受保護的資源中[!INCLUDE[msCoName](../includes/msconame-md.md)].NET Framework。 此權限集合只允許計算。 這是最安全的權限集合；資訊不會洩露到 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 之外，權限無法提高，使資料遭到竄改的風險降至最低。  
   
--   **外部存取**使用外部存取權限集合，預存程序可以存取外部資源使用 managed 程式碼。 將預存程序設定為此權限集合不會造成可能導致伺服器不穩定的程式設計錯誤。 不過，此權限集合可能會導致資訊洩露到伺服器之外，而且權限有可能提高及資料遭到竄改的風險。  
+-   **外部存取**使用外部存取權限集合，預存程序可以存取外部資源所使用的 managed 程式碼。 將預存程序設定為此權限集合不會造成可能導致伺服器不穩定的程式設計錯誤。 不過，此權限集合可能會導致資訊洩露到伺服器之外，而且權限有可能提高及資料遭到竄改的風險。  
   
 -   **不受限制**與不受限制的權限集合，預存程序可以存取外部資源所使用的任何程式碼。 使用此權限集合，就無法保證預存程序的安全性或可靠性。  
   

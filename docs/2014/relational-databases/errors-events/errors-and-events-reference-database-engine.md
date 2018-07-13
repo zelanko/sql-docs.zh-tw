@@ -5,28 +5,27 @@ ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - errors [SQL Server Database Engine]
 - Database Engine [SQL Server], errors
 - events [SQL Server Database Engine]
 ms.assetid: ea928535-6fd1-4738-a8ed-ffb602f3825e
 caps.latest.revision: 14
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 13de14dc26eff84d7a25a827ca4928056644836f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: dfdd9b62c4ccdf782de88b24082306d8850e188a
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36145174"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37410657"
 ---
 # <a name="errors-and-events-reference-database-engine"></a>錯誤和事件參考 (Database Engine)
-  [事件和錯誤訊息中心](http://go.microsoft.com/fwlink/?LinkId=47660)TechNet 上是有關的錯誤訊息的主要來源[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 讓客戶執行全文檢索搜尋，搜尋有關 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 錯誤訊息以及其他 Microsoft 產品的資訊，並根據根據產品、版本、來源和數值或符號識別碼時，可以增進客戶的使用經驗。 此外，新介面還提供多種語言的支援。 該中心將會持續進行更新，以加入常見錯誤的最新疑難排解資訊。  
+  [事件和錯誤訊息中心](http://go.microsoft.com/fwlink/?LinkId=47660)在 TechNet 上是有關的錯誤訊息的主要來源[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 讓客戶執行全文檢索搜尋，搜尋有關 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 錯誤訊息以及其他 Microsoft 產品的資訊，並根據根據產品、版本、來源和數值或符號識別碼時，可以增進客戶的使用經驗。 此外，新介面還提供多種語言的支援。 該中心將會持續進行更新，以加入常見錯誤的最新疑難排解資訊。  
   
  在「事件和錯誤訊息中心」未來的增強功能中，將包括提供可下載格式的疑難排解內容，讓您可從沒有連線到網際網路的電腦存取該內容。  
   

@@ -5,32 +5,30 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-ole
+ms.technology: stored-procedures
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - return codes [SQL Server]
 - OLE Automation [SQL Server], return codes
 - OLE Automation [SQL Server], errors
 ms.assetid: 9696fb05-e9e8-4836-b359-d4de0be0eeb2
-caps.latest.revision: 22
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 782655aa435ba69a38f4de1d854c1ff9837a6778
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 57614db23c50236c6af783d7f913c897fda3e8df
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36145806"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37414017"
 ---
 # <a name="ole-automation-return-codes-and-error-information"></a>OLE Automation 傳回碼與錯誤資訊
-  OLE Automation 系統預存程序傳回`int`傳回碼，這是基礎 OLE Automation 操作所傳回的 HRESULT。 若 HRESULT 為 0 代表成功。 非零的 HRESULT 為十六進位形式 0x800 OLE 錯誤碼*nnnnn*，但是當以傳回`int`中預存程序傳回碼的 HRESULT 值具有表單 214*nnnnnnn*。  
+  OLE Automation 系統預存程序傳回`int`傳回碼，這是基礎 OLE Automation 作業所傳回的 HRESULT。 若 HRESULT 為 0 代表成功。 非零的 HRESULT 為十六進位形式 0x800 OLE 錯誤碼*nnnnn*，但若以傳回`int`預存程序傳回碼的 HRESULT 值的形式為 214*nnnnnnn*。  
   
- 例如，傳遞無效的物件名稱 (SQLDMO。Xyzzy) 給 sp_OACreate 會導致該程序傳回`int`2147221005 的 HRESULT 為 0x800401f3。  
+ 例如，若將無效的物件名稱 (SQLDMO。Xyzzy) 給 sp_OACreate 會導致該程序傳回`int`2147221005 的 HRESULT 為 0x800401f3。  
   
- 您可以使用 `CONVERT(binary(4), @hresult)` 將 `int` HRESULT 轉換為 `binary` 值。 但是，使用 `CONVERT(char(10), CONVERT(binary(4), @hresult))` 會產生無法讀取的字串，因為 HRESULT 的每個位元組將轉換成一個 ASCII 字元。 您可以使用下列的範例 HexToChar 預存程序轉換`int`HRESULT`char`包含可讀取的十六進位字串值。  
+ 您可以使用 `CONVERT(binary(4), @hresult)` 將 `int` HRESULT 轉換為 `binary` 值。 但是，使用 `CONVERT(char(10), CONVERT(binary(4), @hresult))` 會產生無法讀取的字串，因為 HRESULT 的每個位元組將轉換成一個 ASCII 字元。 您可以使用下列的範例 HexToChar 預存程序，在轉換`int`HRESULT`char`包含可讀取的十六進位字串值。  
   
 ```  
 USE AdventureWorks2012;  

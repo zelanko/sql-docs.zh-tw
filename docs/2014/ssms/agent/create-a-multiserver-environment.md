@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Agent, multiserver environments
 - master servers [SQL Server], about master servers
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - multiserver environments [SQL Server]
 ms.assetid: edc2b60d-15da-40a1-8ba3-f1d473366ee6
 caps.latest.revision: 41
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: accad064c75c799af6e871e517975352949f9526
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 8cecfa64f8aa6656cf055a9e488cfe30d68d5160
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36145089"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37183595"
 ---
 # <a name="create-a-multiserver-environment"></a>建立多伺服器環境
   多伺服器管理會要求您設定一部主要伺服器 (MSX) 以及一或多部目標伺服器 (TSX)。 將在所有目標伺服器上處理的作業會先在主要伺服器上定義，然後再下載至目標伺服器。  
@@ -69,7 +69,7 @@ ms.locfileid: "36145089"
 |描述如何將目標伺服器編列到主要伺服器中。|[將目標伺服器編列至主要伺服器](enlist-a-target-server-to-a-master-server.md)|  
 |描述如何使目標伺服器脫離主要伺服器，|[使目標伺服器脫離主要伺服器](defect-a-target-server-from-a-master-server.md)|  
 |描述如何從主要伺服器脫離多部目標伺服器。|[從主要伺服器脫離多個目標伺服器](defect-multiple-target-servers-from-a-master-server.md)|  
-|描述如何檢查目標伺服器的狀態。|[sp_help_targetserver &#40;Transact SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-help-targetserver-transact-sql)<br /><br /> [sp_help_targetservergroup &#40;Transact SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-help-targetservergroup-transact-sql)|  
+|描述如何檢查目標伺服器的狀態。|[sp_help_targetserver &#40;-SQL&AMP;#41;&#41;](/sql/relational-databases/system-stored-procedures/sp-help-targetserver-transact-sql)<br /><br /> [sp_help_targetservergroup &#40;-SQL&AMP;#41;&#41;](/sql/relational-databases/system-stored-procedures/sp-help-targetservergroup-transact-sql)|  
   
 ## <a name="see-also"></a>另請參閱  
  [為使用 Proxy 的多伺服器作業疑難排解](troubleshoot-multiserver-jobs-that-use-proxies.md)  

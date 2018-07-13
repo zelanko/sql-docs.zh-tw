@@ -5,23 +5,22 @@ ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - 17883 (Database Engine error)
 ms.assetid: adaf1c04-e397-4a69-90b8-9353a37277ea
 caps.latest.revision: 15
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: ee743a1346dfa555a848b525d6ba48f04e4f9c48
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 83b09894887f861fd29abf7722ba4166d28d81bf
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36137079"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37411377"
 ---
 # <a name="mssqlserver17883"></a>MSSQLSERVER_17883
     

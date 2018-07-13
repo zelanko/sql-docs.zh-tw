@@ -5,10 +5,9 @@ ms.date: 04/27/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-search
+ms.technology: search
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - index populations [full-text search]
 - incremental populations [full-text search]
@@ -25,26 +24,26 @@ helpviewer_keywords:
 - full-text indexes [SQL Server], populations
 ms.assetid: 76767b20-ef55-49ce-8dc4-e77cb8ff618a
 caps.latest.revision: 74
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: ce7d4774b40f43cc6a88c414cc18f7005a137e0a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: cbe50e41fb353e092edddf2eacc2f189d635aa5d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36145119"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37162259"
 ---
 # <a name="populate-full-text-indexes"></a>擴展全文檢索索引
   建立和維護全文檢索索引包括使用稱為「母體擴展」(Population) (也稱為「搜耙」(Crawl)) 的處理序來擴展索引。  
   
-##  <a name="types"></a> 母體擴展的類型  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支援下列母體擴展類型： 完整母體擴展、 以變更追蹤為基礎自動或手動母體擴展，以及以時間戳記為基礎的累加母體擴展。  
+##  <a name="types"></a> 母體擴展類型  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支援下列母體擴展類型： 完整母體擴展、 變更追蹤為基礎自動或手動母體擴展，以及時間戳記為基礎的累加母體擴展。  
   
 ### <a name="full-population"></a>完整母體擴展  
  在完整母體擴展期間，系統會針對資料表或索引檢視表的所有資料列建立索引項目。 全文檢索索引的完整母體擴展會針對基底資料表或索引檢視表的所有資料列建立索引項目。  
   
- 根據預設，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會在建立新的全文檢索索引時，立即進行完整母體擴展。 不過，完整母體擴展可能會耗用大量資源。 因此，在尖峰期間建立全文檢索索引時，最佳作法通常是延遲完整母體擴展直到離峰時間為止，尤其是全文檢索索引的基底資料表很龐大時。 不過，此索引所屬的全文檢索目錄要等到所有全文檢索索引都擴展之後才能使用。 若要建立全文檢索索引，但不立即擴展，請在 CREATE FULLTEXT INDEX 陳述式中指定 CHANGE_TRACKING OFF、NO POPULATION 子句。 如果您指定 CHANGE_TRACKING MANUAL，全文檢索引擎就會使用此陳述式。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 在您執行使用 START FULL POPULATION 或 START INCREMENTAL POPULATION 子句的 ALTER FULLTEXT INDEX 陳述式之前，會填入新的全文檢索索引。 如需詳細資訊，請參閱本主題稍後的範例「A. 建立全文檢索索引但不執行完整母體擴展」以及「B. 針對資料表執行完整母體擴展」。  
+ 根據預設，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會在建立新的全文檢索索引時，立即進行完整母體擴展。 不過，完整母體擴展可能會耗用大量資源。 因此，在尖峰期間建立全文檢索索引時，最佳作法通常是延遲完整母體擴展直到離峰時間為止，尤其是全文檢索索引的基底資料表很龐大時。 不過，此索引所屬的全文檢索目錄要等到所有全文檢索索引都擴展之後才能使用。 若要建立全文檢索索引，但不立即擴展，請在 CREATE FULLTEXT INDEX 陳述式中指定 CHANGE_TRACKING OFF、NO POPULATION 子句。 如果您指定 CHANGE_TRACKING MANUAL，全文檢索引擎就會使用此陳述式。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不會擴展新的全文檢索索引在您執行使用 START FULL POPULATION 或 START INCREMENTAL POPULATION 子句的 ALTER FULLTEXT INDEX 陳述式之前。 如需詳細資訊，請參閱本主題稍後的範例「A. 建立全文檢索索引但不執行完整母體擴展」以及「B. 針對資料表執行完整母體擴展」。  
   
 
   
@@ -52,7 +51,7 @@ ms.locfileid: "36145119"
  在初始完整母體擴展之後，您可以選擇性地使用變更追蹤來維護全文檢索索引。 因為 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會維護追蹤上一次母體擴展以來對基底資料表所做之變更的資料表，所以存在與變更追蹤相關聯的少量負擔。 使用變更追蹤時，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會在基底資料表或索引檢視表中維護已經由更新、刪除或插入所修改之資料列的記錄。 透過 WRITETEXT 和 UPDATETEXT 的資料變更並不會反映在全文檢索索引中，變更追蹤並不會收取這些變更。  
   
 > [!NOTE]  
->  資料表包含`timestamp`資料行中，您可以使用累加母體擴展。  
+>  資料表包含`timestamp` 欄中，您可以使用累加母體擴展。  
   
  在建立索引期間啟用變更追蹤時，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 就會在建立新的全文檢索索引之後，立即完整擴展新的全文檢索索引。 之後，系統會追蹤並傳播變更至全文檢索索引。 變更追蹤有兩種類型：自動 (CHANGE_TRACKING AUTO 選項) 和手動 (CHANGE_TRACKING MANUAL 選項)。 自動變更追蹤是預設的行為。  
   
@@ -62,7 +61,7 @@ ms.locfileid: "36145119"
   
      根據預設，或者如果您指定了 CHANGE_TRACKING AUTO，全文檢索引擎就會針對全文檢索索引使用自動母體擴展。 初始完整母體擴展完成之後，系統就會追蹤變更，因為基底資料表中的資料已修改，而且追蹤的變更會自動傳播。 不過，全文檢索索引會在背景更新，所以傳播的變更可能不會立即反映在索引中。  
   
-     **若要設定變更追蹤搭配自動母體擴展**  
+     **若要設定追蹤變更，使用自動母體擴展**  
   
     -   [CREATE FULLTEXT INDEX](/sql/t-sql/statements/create-fulltext-index-transact-sql) … WITH CHANGE_TRACKING AUTO  
   
@@ -93,11 +92,11 @@ ms.locfileid: "36145119"
 ### <a name="incremental-timestamp-based-population"></a>以時間戳記為基礎的累加母體擴展  
  累加母體擴展是手動擴展全文檢索索引的替代機制。 您可以針對將 CHANGE_TRACKING 設定為 MANUAL 或 OFF 的全文檢索索引執行累加母體擴展。 如果全文檢索索引的第一個母體擴展是累加母體擴展，它就會建立所有資料列的索引，讓它相當於完整母體擴展。  
   
- 累加母體擴展的需求是索引的資料表必須包含的資料行`timestamp`資料型別。 少了 `timestamp` 資料行，就無法執行累加母體擴展。 不含資料表的累加母體擴展的要求`timestamp`資料行導致完整母體擴展作業。 此外，如果上一次母體擴展以來，影響資料表全文檢索索引的任何中繼資料已變更，便會以完整母體擴展的方式實作累加母體擴展。 這包括由於更改任何資料行、索引或全文檢索索引定義所導致的中繼資料變更。  
+ 累加母體擴展的執行要件是索引的資料表必須包含的資料行`timestamp`資料型別。 少了 `timestamp` 資料行，就無法執行累加母體擴展。 累加母體擴展，而不需要在資料表上的要求`timestamp`資料行導致完整母體擴展作業。 此外，如果上一次母體擴展以來，影響資料表全文檢索索引的任何中繼資料已變更，便會以完整母體擴展的方式實作累加母體擴展。 這包括由於更改任何資料行、索引或全文檢索索引定義所導致的中繼資料變更。  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會使用 `timestamp` 資料行來識別上一次母體擴展以來已經變更的資料列。 然後，累加母體擴展會針對在上一次母體擴展之後或進行時加入、刪除或修改的資料列，更新全文檢索索引。 如果資料表遇到大量插入作業，使用累加母體擴展可能會比使用手動母體擴展更有效率。  
   
- 母體擴展結束時，全文檢索引擎會記錄新的 `timestamp` 值。 這個值是最大`timestamp`SQL 所遇過的值。 此值會在後續的累加母體擴展啟動時使用。  
+ 母體擴展結束時，全文檢索引擎會記錄新的 `timestamp` 值。 這個值是最大`timestamp`發現 SQL 收集程式 」 的值。 此值會在後續的累加母體擴展啟動時使用。  
   
  若要執行累加母體擴展，請使用 START INCREMENTAL POPULATION 子句來執行 ALTER FULLTEXT INDEX 陳述式。  
   
@@ -212,16 +211,16 @@ GO
   
 
   
-##  <a name="crawl"></a> 疑難排解全文檢索母體擴展 （搜耙） 中的錯誤  
- 搜耙發生錯誤時，「全文檢索搜尋」搜耙記錄功能會建立並維護搜耙記錄檔，此記錄檔是一個純文字檔。 每個搜耙記錄檔都對應至特定的全文檢索目錄。 根據預設指定執行個體的搜耙記錄檔，在此情況下，第一個執行個體，位於 %ProgramFiles%\Microsoft SQL Server\MSSQL12。MSSQLSERVER\MSSQL\LOG 資料夾。 搜耙記錄檔會遵循下列命名結構：  
+##  <a name="crawl"></a> 針對全文檢索母體擴展 （搜耙） 中的錯誤進行疑難排解  
+ 搜耙發生錯誤時，「全文檢索搜尋」搜耙記錄功能會建立並維護搜耙記錄檔，此記錄檔是一個純文字檔。 每個搜耙記錄檔都對應至特定的全文檢索目錄。 根據預設指定執行個體的搜耙記錄檔，在此情況下，第一個執行個體，位於 %ProgramFiles%\Microsoft SQL Server\MSSQL12。MSSQLSERVER\MSSQL\LOG 資料夾中。 搜耙記錄檔會遵循下列命名結構：  
   
  SQLFT\<DatabaseID >\<FullTextCatalogID >。記錄 [\<n >]  
   
  <`DatabaseID`>  
- 資料庫的識別碼。 <`dbid`> 是開頭為零的數字的五位數數。  
+ 資料庫的識別碼。 <`dbid`> 是的五位數數字加上前置零。  
   
  <`FullTextCatalogID`>  
- 全文檢索目錄識別碼。 <`catid`> 是開頭為零的數字的五位數數。  
+ 全文檢索目錄識別碼。 <`catid`> 是的五位數數字加上前置零。  
   
  <`n`>  
  是一個整數，指示相同全文檢索目錄的搜耙記錄檔數目。  

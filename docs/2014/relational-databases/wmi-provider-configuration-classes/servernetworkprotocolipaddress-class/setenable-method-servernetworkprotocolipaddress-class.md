@@ -1,5 +1,5 @@
 ---
-title: SetEnable 方法 （ServerNetworkProtocolIPAddress 類別） |Microsoft 文件
+title: SetEnable 方法 （ServerNetworkProtocolIPAddress 類別） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - SetEnable method
 ms.assetid: baa86deb-95dd-416f-b2c7-cec1dfb91ab4
 caps.latest.revision: 30
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: b51d13de41aa5fc038ddcd86fdc05a975aea7bc5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+ms.openlocfilehash: 63b30932f06dbe4d65474e099fbc213cd6bf2d87
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36146254"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37154009"
 ---
 # <a name="setenable-method-servernetworkprotocolipaddress-class"></a>SetEnable 方法 (ServerNetworkProtocolIPAddress 類別)
   啟用 IP 位址。  
@@ -44,7 +44,7 @@ object
   
 ## <a name="parts"></a>組件  
  *object*  
- A [ServerNetworkProtocolIPAdress 類別](servernetworkprotocolipaddress-class.md)物件，代表執行個體上網路通訊協定之 IP 位址[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]。  
+ A [ServerNetworkProtocolIPAdress 類別](servernetworkprotocolipaddress-class.md)物件，表示執行個體上的網路通訊協定的 IP 位址[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]。  
   
 ## <a name="property-valuereturn-value"></a>屬性值/傳回值  
  `uint32` 值，如果已成功修改此服務為 0，如果不支援要求則為 1，以及其他指示錯誤的任何數字。  

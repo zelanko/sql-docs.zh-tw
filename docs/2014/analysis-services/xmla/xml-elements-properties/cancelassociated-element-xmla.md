@@ -1,5 +1,5 @@
 ---
-title: CancelAssociated 元素 (XMLA) |Microsoft 文件
+title: CancelAssociated 元素 (XMLA) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -24,15 +24,15 @@ helpviewer_keywords:
 - CancelAssociated element
 ms.assetid: fd890440-d1a7-4c05-9e81-c81e6b8c274c
 caps.latest.revision: 12
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: 1e747815b30daf86edff4ad976d6fb5370bf9c3b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 66a866a9f00a745e24fe2c83a4fce31ac67b2f34
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36146363"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37159229"
 ---
 # <a name="cancelassociated-element-xmla"></a>CancelAssociated 元素 (XMLA)
   指出 [Cancel](../xml-elements-commands/cancel-element-xmla.md) 父元素是否應該取消所有相關聯的命令。  
@@ -64,7 +64,7 @@ ms.locfileid: "36146363"
 |子元素|無|  
   
 ## <a name="remarks"></a>備註  
- 如果指定這個元素並將其設為`True`，每個對應連接、 session 和識別的父系中的命令`Cancel`取消命令為止。  
+ 如果指定這個元素並將其設為`True`，每個對應連接、 工作階段和識別的父系中的命令`Cancel`取消命令為止。  
   
 ## <a name="see-also"></a>另請參閱  
  [ConnectionID 元素&#40;XMLA&#41;](id-element-xmla.md)   

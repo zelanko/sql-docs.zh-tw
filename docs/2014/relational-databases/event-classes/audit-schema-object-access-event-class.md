@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 topic_type:
 - apiref
 helpviewer_keywords:
 - Audit Schema Object Access event class
 ms.assetid: 1c099fa2-c857-4128-aca0-ed8cc3078a43
 caps.latest.revision: 29
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 26842d56c0f42fcb25a81f49df93f71da10796be
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 982c9736da979ee303c0ca4d564bdfb8ce0e22a2
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36146958"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37240768"
 ---
 # <a name="audit-schema-object-access-event-class"></a>Audit Schema Object Access 事件類別
   **Audit Schema Object Access** 事件類別會在使用到物件權限 (例如 SELECT) 時發生。  
@@ -57,7 +57,7 @@ ms.locfileid: "36146958"
 |**SPID**|**int**|事件發生所在之工作階段的識別碼。|12|是|  
 |**StartTime**|**datetime**|事件啟動的時間 (如果有的話)。|14|是|  
 |**成功**|**int**|1 = 成功。 0 = 失敗。 例如，值為 1 表示權限檢查成功，值為 0 表示該檢查失敗。|23|是|  
-|**TextData**|**ntext**|陳述式的 SQL 文字。|@shouldalert|是|  
+|**TextData**|**ntext**|陳述式的 SQL 文字。|1|是|  
 |**TransactionID**|**bigint**|由系統指派給交易的識別碼。|4|是|  
 |**XactSequence**|**bigint**|用來描述目前交易的 Token。|50|是|  
   

@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - users [Master Data Services]
 - groups [Master Data Services]
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - groups [Master Data Services], about groups
 ms.assetid: ed08dd2d-248e-4b68-91d4-e9961cb50eed
 caps.latest.revision: 6
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 6b3955b202675883d2cc0d6ee4440135a38f260a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: 73db25d4dca461782e6e648642158c25b6163ddf
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36145179"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37164709"
 ---
 # <a name="users-and-groups-master-data-services"></a>使用者和群組 (Master Data Services)
   若要存取 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] Web 應用程式，使用者必須擁有 Windows 網域帳戶或安裝 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 之伺服器電腦上的帳戶。 若要授與 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 存取權，您可以執行下列其中一項作業：  
@@ -46,7 +46,7 @@ ms.locfileid: "36145179"
  請勿指派其他權限給個別使用者，也不要在具有 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]存取權的多個群組中加入使用者。 此外，除非您希望群組擁有特定成員的受限存取權，否則請勿使用階層成員權限。  
   
 ## <a name="see-also"></a>另請參閱  
- [將使用者新增&#40;Master Data Services&#41;](../../2014/master-data-services/add-a-user-master-data-services.md)   
+ [新增使用者&#40;Master Data Services&#41;](../../2014/master-data-services/add-a-user-master-data-services.md)   
  [新增群組 &#40;Master Data Services&#41;](../../2014/master-data-services/add-a-group-master-data-services.md)   
  [刪除使用者或群組 &#40;Master Data Services&#41;](../../2014/master-data-services/delete-users-or-groups-master-data-services.md)   
  [測試使用者的權限 &#40;Master Data Services&#41;](../../2014/master-data-services/test-a-user-s-permissions-master-data-services.md)  

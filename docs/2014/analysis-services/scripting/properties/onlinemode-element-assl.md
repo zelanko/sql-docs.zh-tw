@@ -1,5 +1,5 @@
 ---
-title: OnlineMode 元素 (ASSL) |Microsoft 文件
+title: OnlineMode 元素 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - OnlineMode element
 ms.assetid: 0bbac4e2-002f-4be4-8dd6-ccd7034f5f93
 caps.latest.revision: 30
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 3efda242b0563f4b6b853d3bf87b831da1ea8e00
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: a00e12eaa54724921195727fe16f6bd98f3f44a5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36145482"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37154849"
 ---
 # <a name="onlinemode-element-assl"></a>OnlineMode 元素 (ASSL)
   指定資料庫會在起始快取的重建作業時立即返回線上狀態，還是只有在快取的重建作業完成時才返回線上狀態。  
@@ -64,7 +64,7 @@ ms.locfileid: "36145482"
 ## <a name="remarks"></a>備註  
  這個元素的值限制為下表所列的其中一個字串。  
   
-|ReplTest1|描述|  
+|值|描述|  
 |-----------|-----------------|  
 |*即時運算*|資料庫會在起始快取的重建作業時立即返回線上狀態。|  
 |*OnCacheComplete*|只有在快取的重建作業完成時，資料庫才會返回線上狀態。|  
@@ -72,6 +72,6 @@ ms.locfileid: "36145482"
  在「分析管理物件」(AMO) 物件模型中對應至 `OnlineMode` 允許值的列舉是 <xref:Microsoft.AnalysisServices.ProactiveCaching>。  
   
 ## <a name="see-also"></a>另請參閱  
- [ProactiveCaching 元素&#40;ASSL&#41;](../objects/proactivecaching-element-assl.md)  
+ [ProactiveCaching 項目&#40;ASSL&#41;](../objects/proactivecaching-element-assl.md)  
   
   

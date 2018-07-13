@@ -5,23 +5,22 @@ ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - 5235 (Database Engine error)
 ms.assetid: 1aa7e6a5-7ccb-43c8-a1fd-d50e92e0a798
 caps.latest.revision: 16
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 6233f74ee7fcaea9e74b237cfdb104b2acb89650
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 9b5c96bbf76ca1678237ee476166daa0c4471fce
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36145630"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37420397"
 ---
 # <a name="mssqlserver5235"></a>MSSQLSERVER_5235
     

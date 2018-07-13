@@ -1,13 +1,11 @@
 ---
-title: SQL Server Native Client 使用建置應用程式 |Microsoft 文件
+title: 使用 SQL Server Native Client 建置應用程式 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client  - "database-engine" - "docset-sql-devref"
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -17,15 +15,15 @@ helpviewer_keywords:
 - SQL Server Native Client, building applications
 ms.assetid: 254a2b48-f0e3-43b5-a48d-3d666c2a779f
 caps.latest.revision: 20
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 7ba69b06bddfe2afbb36a879bb31f8e7469023b8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 411e4e40caf4b6827296cbe1e8295be7e68b7529
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36145615"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37415637"
 ---
 # <a name="building-applications-with-sql-server-native-client"></a>使用 SQL Server Native Client 建立應用程式
   當您開發使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 程式庫的應用程式時，會遇到一些問題。 本章節的主題將討論其中的許多問題，包括從 MDAC 升級到 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client (使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 標頭檔和程式庫檔案)，以及可搭配 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 使用的各種連接字串概觀。  
@@ -55,12 +53,12 @@ ms.locfileid: "36145615"
  [SQL Server Native Client 的支援原則](support-policies-for-sql-server-native-client.md)  
  討論要如何搭配不同版本的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 使用各種資料存取元件。  
   
- [連接到 Azure SQL 資料庫使用 SQL Server Native Client](connecting-to-a-windows-azure-sql-database-using-sql-server-native-client.md)  
+ [使用 SQL Server Native Client 連線到 Azure SQL Database](connecting-to-a-windows-azure-sql-database-using-sql-server-native-client.md)  
  討論如何使用 [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] Native Client 連接至 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]。  
   
 ## <a name="see-also"></a>另請參閱  
  [SQL Server Native Client 程式設計](../sql-server-native-client-programming.md)   
- [ODBC 使用說明主題](../../native-client-odbc-how-to/odbc-how-to-topics.md)   
+ [ODBC 的使用說明主題](../../native-client-odbc-how-to/odbc-how-to-topics.md)   
  [OLE DB 的使用說明主題](../../native-client-ole-db-how-to/ole-db-how-to-topics.md)  
   
   

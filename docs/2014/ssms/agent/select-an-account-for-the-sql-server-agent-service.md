@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - roles [SQL Server], SQL Server Agent
 - SQL Server Agent, accounts
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - security [SQL Server], SQL Server Agent
 ms.assetid: fe658e32-9e6b-4147-a189-7adc3bd28fe7
 caps.latest.revision: 44
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: ab05d53c3c9f989252ab248305f000033ff54ccf
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: d82cf9589289c9646950174081a19f3449accb46
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36146654"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37210478"
 ---
 # <a name="select-an-account-for-the-sql-server-agent-service"></a>選取 SQL Server Agent 服務的帳戶
   服務啟動帳戶會定義 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Agent 用來執行的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Windows 帳戶及其網路權限。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 會以指定的使用者帳戶執行。 您可以使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 組態管理員選擇下列選項，藉此選取 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 服務的帳戶：  
@@ -87,9 +87,9 @@ ms.locfileid: "36146654"
 |本機系統帳戶 (NT AUTHORITY\System)|支援<sup>2</sup>|不支援|支援<sup>2</sup>|  
 |本機服務帳戶 (NT AUTHORITY\LocalService)|不支援|不支援|不支援|  
   
- <sup>1</sup>請參閱下列 1 的限制。  
+ <sup>1</sup>請參閱下列限制 1。  
   
- <sup>2</sup>請參閱底下的 2 的限制。  
+ <sup>2</sup>請參閱下列限制 2。  
   
  <sup>3</sup>請參閱下面 3 的限制。  
   

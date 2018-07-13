@@ -1,5 +1,5 @@
 ---
-title: 建立、 改變和移除索引 |Microsoft 文件
+title: 建立、 改變和移除索引 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,15 +14,15 @@ helpviewer_keywords:
 - indexes [SMO]
 ms.assetid: ad1befa5-46e0-4895-b9d3-42852e07607b
 caps.latest.revision: 49
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 7fbad26a835495958771ddd2d690668e3dcf64c7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: fb90f4759e829526b53f38c4aa5714748b7ad62e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36145800"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37258464"
 ---
 # <a name="creating-altering-and-removing-indexes"></a>建立、改變和移除索引
   在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 管理物件 (SMO) 階層中，索引是由 <xref:Microsoft.SqlServer.Management.Smo.Index> 物件表示。 索引資料行是由 <xref:Microsoft.SqlServer.Management.Smo.IndexedColumn> 屬性表示的 <xref:Microsoft.SqlServer.Management.Smo.Index.IndexedColumns%2A> 物件集合來表示。  
@@ -30,7 +30,7 @@ ms.locfileid: "36145800"
  您可以指定 <xref:Microsoft.SqlServer.Management.Smo.Index.IsXmlIndex%2A> 物件的 <xref:Microsoft.SqlServer.Management.Smo.Index> 屬性，以在 XML 資料行上建立索引。  
   
 ## <a name="examples"></a>範例  
- 如果要使用所提供的任何程式碼範例，您必須選擇建立應用程式用的程式設計環境、程式設計範本，及程式設計語言。 如需詳細資訊，請參閱[Visual Studio.NET 中建立 Visual Basic SMO 專案](../../../database-engine/dev-guide/create-a-visual-basic-smo-project-in-visual-studio-net.md)或[建立 Visual C&#35; SMO Project in Visual Studio](../how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)。  
+ 如果要使用所提供的任何程式碼範例，您必須選擇建立應用程式用的程式設計環境、程式設計範本，及程式設計語言。 如需詳細資訊，請參閱[Visual Studio.NET 中建立 Visual Basic SMO Project](../../../database-engine/dev-guide/create-a-visual-basic-smo-project-in-visual-studio-net.md)或是[建立 Visual C&#35; Visual Studio.NET 中的 SMO 專案](../how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)。  
   
 ## <a name="creating-a-non-clustered-composite-index-in-visual-basic"></a>在 Visual Basic 中建立非叢集的複合索引  
  此程式碼範例示範如何建立非叢集的複合索引。 如果是複合索引，請在索引中加入一個以上的資料行。 如果是非叢集索引，請將 <xref:Microsoft.SqlServer.Management.Smo.Index.IsClustered%2A> 屬性設為 `False`。  
@@ -189,7 +189,7 @@ $idx.Drop();
 ```  
   
 ## <a name="creating-an-xml-index-in-visual-basic"></a>在 Visual Basic 中建立 XML 索引  
- 此程式碼範例示範如何在 XML 資料類型上建立 XML 索引。 XML 資料類型是稱為 MySampleCollection，這是在 XML schema collection[使用 XML 結構描述](using-xml-schemas.md)。 XML 索引具有某些限制，其中一項是必須在已具備叢集化主要金鑰的資料表上建立。  
+ 此程式碼範例示範如何在 XML 資料類型上建立 XML 索引。 XML 資料類型是稱為 MySampleCollection，這是在 XML schema collection[使用的 XML 結構描述](using-xml-schemas.md)。 XML 索引具有某些限制，其中一項是必須在已具備叢集化主要金鑰的資料表上建立。  
   
 ```  
 ' /r:Microsoft.SqlServer.Smo.dll  
@@ -252,7 +252,7 @@ End Class
 ```  
   
 ## <a name="creating-an-xml-index-in-visual-c"></a>在 Visual C# 中建立 XML 索引  
- 此程式碼範例示範如何在 XML 資料類型上建立 XML 索引。 XML 資料類型是稱為 MySampleCollection，這是在 XML schema collection[使用 XML 結構描述](using-xml-schemas.md)。 XML 索引具有某些限制，其中一項是必須在已具備叢集化主要金鑰的資料表上建立。  
+ 此程式碼範例示範如何在 XML 資料類型上建立 XML 索引。 XML 資料類型是稱為 MySampleCollection，這是在 XML schema collection[使用的 XML 結構描述](using-xml-schemas.md)。 XML 索引具有某些限制，其中一項是必須在已具備叢集化主要金鑰的資料表上建立。  
   
 ```  
 // /r:Microsoft.SqlServer.Smo.dll  
@@ -315,7 +315,7 @@ public class A {
 ```  
   
 ## <a name="creating-an-xml-index-in-powershell"></a>在 PowerShell 中建立 XML 索引  
- 此程式碼範例示範如何在 XML 資料類型上建立 XML 索引。 XML 資料類型是稱為 MySampleCollection，這是在 XML schema collection[使用 XML 結構描述](using-xml-schemas.md)。 XML 索引具有某些限制，其中一項是必須在已具備叢集化主要金鑰的資料表上建立。  
+ 此程式碼範例示範如何在 XML 資料類型上建立 XML 索引。 XML 資料類型是稱為 MySampleCollection，這是在 XML schema collection[使用的 XML 結構描述](using-xml-schemas.md)。 XML 索引具有某些限制，其中一項是必須在已具備叢集化主要金鑰的資料表上建立。  
   
 ```  
 # Set the path context to the local, default instance of SQL Server and get a reference to adventureworks2012  

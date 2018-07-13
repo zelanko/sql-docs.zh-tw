@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - snapshot replication [SQL Server], options
 - snapshots [SQL Server replication], options
 ms.assetid: 759fab42-66c7-4541-a7a3-bb6fb868493c
 caps.latest.revision: 27
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 62f5f6550cc6696cab12ca838dcd34669ee18a0a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: f6780cd434f8aa1bf35f08905fb41ec7cb652407
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36145351"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37152569"
 ---
 # <a name="snapshot-options"></a>快照集選項
   使用快照集初始化訂閱時，可以使用下列選項：  

@@ -5,25 +5,24 @@ ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - "12001"
 helpviewer_keywords:
 - 11001 (Database Engine error)
 ms.assetid: 53d4d63a-61e3-441f-bfe9-9d44f7a05fd4
 caps.latest.revision: 10
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 28b1886bdea4063aff6b78dba8e707f75e77abf6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 79246f6e7350b54a6cf0c82bb63657f591f2d7b8
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36146742"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37420067"
 ---
 # <a name="mssqlserver11001"></a>MSSQLSERVER_11001
     

@@ -5,23 +5,22 @@ ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - 1904 (Database Engine error)
 ms.assetid: 2a35d57d-74e2-45a2-8f67-3f2e51d69712
 caps.latest.revision: 8
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 990bd0041b3507c0195b2129965a6e0f2df6d087
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: cbf9281bf87ed9b59c19fcc199e5bdc158857c17
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36145856"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37419527"
 ---
 # <a name="mssqlserver1904"></a>MSSQLSERVER_1904
     

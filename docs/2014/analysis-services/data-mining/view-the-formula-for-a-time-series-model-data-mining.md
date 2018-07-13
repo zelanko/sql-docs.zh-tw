@@ -1,5 +1,5 @@
 ---
-title: 檢視時間序列公式模型 （資料採礦） |Microsoft 文件
+title: 檢視時間序列公式模型 （資料採礦） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - data mining [Analysis Services], how-to topics
 - ARTXP
@@ -18,24 +18,24 @@ helpviewer_keywords:
 - Time Series Viewer [Analysis Services]
 ms.assetid: 825ef719-2f44-4979-be01-5a81f54e1a53
 caps.latest.revision: 12
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 11427eb72ea27bd93e8cb360afcf1221ab19b05a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: dbdd4788ed35f38790c0e038acb15d0342c0bcc4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36145965"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37163449"
 ---
 # <a name="view-the-formula-for-a-time-series-model-data-mining"></a>檢視時間序列模型的公式 (資料採礦)
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)]時間序列檢視器 inData 採礦設計工具提供最簡單的方式來檢視時間序列模型中使用之迴歸方程式的詳細資料。  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)]時間序列檢視器 inData 採礦設計師提供最簡單的方式，來檢視時間序列模型中使用之迴歸方程式的詳細資料。  
   
  您可以查詢模型內容來擷取時間序列模型的迴歸公式。 不過，若要檢視完整的 ARTXP 或 ARIMA 公式，我們建議您使用**採礦圖例**的[Microsoft 時間序列檢視器](browse-a-model-using-the-microsoft-time-series-viewer.md)，可讀取的格式呈現所有常數。  
   
  如果您建立混合模型，則會在不同的樹狀目錄中建立 ARIMA 和 ARTXP 分析，並且在表示模型的根節點處聯結。 ARIMA 和 ARTXP 樹狀目錄的結構差異很大。 例如，ARTXP 樹狀目錄實際上是一種樹狀結構，類似決策樹，而 ARIMA 樹狀目錄則表示一系列移動平均。 因此，雖然這兩種表示法是為求方便而以單一模型呈現，不過您應該將它們視為兩個獨立的模型。 兩個方程式也完全不同，而且無法結合或比較。  
   
- 您也可以檢視時間序列模型使用[Microsoft 一般內容樹狀檢視器](../microsoft-generic-content-tree-viewer-data-mining.md)。 時間序列模型之內容的相關資訊，請參閱[時間序列模型的採礦模型內容&#40;Analysis Services-Data Mining&#41;](mining-model-content-for-time-series-models-analysis-services-data-mining.md)。  
+ 您也可以使用檢視時間序列模型[Microsoft 一般內容樹狀檢視器](../microsoft-generic-content-tree-viewer-data-mining.md)。 時間序列模型的內容相關資訊，請參閱[時間序列模型的採礦模型內容&#40;Analysis Services-Data Mining&#41;](mining-model-content-for-time-series-models-analysis-services-data-mining.md)。  
   
 ### <a name="to-view-the-artxp-regression-formula-for-a-time-series-model"></a>檢視時間序列模式的 ARTXP 迴歸公式  
   

@@ -1,13 +1,11 @@
 ---
-title: 繫結和轉換 (OLE DB) |Microsoft 文件
+title: 繫結和轉換 (OLE DB) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -16,15 +14,15 @@ helpviewer_keywords:
 - OLE DB, bindings and conversions
 ms.assetid: c187df58-a8c8-4c74-a76f-663abbc5f0c1
 caps.latest.revision: 20
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 086ea20b3ebf2f83d7ef139ec261298e895d591b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 709fb4abec2e8de8aa845aaddb1418f5c9d957e3
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36144920"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37407988"
 ---
 # <a name="bindings-and-conversions-ole-db"></a>繫結和轉換 (OLE DB)
   本節討論如何在 `datetime` 和 `datetimeoffset` 值之間轉換。 本節中所描述的轉換已由 OLE DB 提供，或是一致的 OLE DB 延伸模組。  
@@ -33,7 +31,7 @@ ms.locfileid: "36144920"
   
 -   `datetime` 和 `datetimeoffset` 字串的格式為：  
   
-     *yyyy*-*公釐*-*dd*[ *hh*:*公釐*:*ss*[。*9999999*] [± *hh*:*公釐*]]  
+     *yyyy*-*mm*-*dd*[ *hh*:*mm*:*ss*[。*9999999*] [常见*hh*:*mm*]]  
   
 -   `time` 字串的格式為：  
   
@@ -46,7 +44,7 @@ ms.locfileid: "36144920"
 > [!NOTE]  
 >  如果標準轉換失敗，舊版 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 和 SQLOLEDB 會實作 OLE 轉換。 因此，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 10.0 和更新版本所執行的某些轉換與 OLE DB 規格不同。  
   
- 字串的轉換在空白和欄位寬度上允許彈性。 如需詳細資訊，請參閱中的 「 資料格式： 字串和常值 」 一節[OLE DB 日期和時間增強功能的資料類型支援](data-type-support-for-ole-db-date-and-time-improvements.md)。  
+ 字串的轉換在空白和欄位寬度上允許彈性。 如需詳細資訊，請參閱中的 「 資料格式： 字串和常值 」 一節[OLE DB 日期和時間改善的資料型別支援](data-type-support-for-ole-db-date-and-time-improvements.md)。  
   
  下面是一般轉換規則：  
   
@@ -74,6 +72,6 @@ ms.locfileid: "36144920"
  描述在 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] (或更新版本) 和使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 撰寫之用戶端應用程式之間執行的日期/時間轉換。  
   
 ## <a name="see-also"></a>另請參閱  
- [日期和時間增強功能&#40;OLE DB&#41;](date-and-time-improvements-ole-db.md)  
+ [日期和時間改善&#40;OLE DB&#41;](date-and-time-improvements-ole-db.md)  
   
   

@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.rep.monitor.publicationinfo.allsubscriptions.snapshot.f1
 ms.assetid: 7ce656c2-6e60-4625-8955-1daff641070c
 caps.latest.revision: 28
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 51b75ae12413af50c92811f20cf7ad508fd25773
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: b8c9222429848dc89aa37e924c1206296782ab76
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36147134"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37158129"
 ---
 # <a name="publication-information-all-subscriptions-snapshot-publication"></a>發行集資訊，所有訂閱 (快照式發行集)
   **[所有訂閱]** 索引標籤，會顯示所選取快照式發行集之所有訂閱的資訊。  

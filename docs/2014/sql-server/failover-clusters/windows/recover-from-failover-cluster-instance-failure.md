@@ -5,10 +5,9 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - clusters [SQL Server], recovery from failure
 - failover clustering [SQL Server], recovery from failure
@@ -16,15 +15,15 @@ helpviewer_keywords:
 - recovering failover cluster failures [SQL Server]
 ms.assetid: 3d151d0c-e841-4325-8606-c094de37d7d1
 caps.latest.revision: 30
-author: rothja
-ms.author: jroth
-manager: jhubbard
-ms.openlocfilehash: 41c6bb87ad53000ebd7e24e38beb641b4dc54c3d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: bee306c82a7e5baf734263cfd2b1ecd8ea216742
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36145090"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37260018"
 ---
 # <a name="recover-from-failover-cluster-instance-failure"></a>從容錯移轉叢集執行個體失敗的狀況復原
   此主題描述在 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]發生容錯移轉之後，如何使用容錯移轉叢集管理員嵌入式管理單元，從叢集失敗中復原。 容錯移轉叢集管理員嵌入式管理單元是 Windows Server 容錯移轉叢集 (WSFC) 服務的叢集管理應用程式。  

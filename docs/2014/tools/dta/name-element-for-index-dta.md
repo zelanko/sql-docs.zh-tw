@@ -1,5 +1,5 @@
 ---
-title: 項目名稱的索引 (DTA) |Microsoft 文件
+title: 項目名稱的索引 (DTA) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - XML
 helpviewer_keywords:
 - Name element
 ms.assetid: 2300e9cf-f0a8-49e6-b1f5-45ffe03ccb5f
 caps.latest.revision: 13
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 86c843e5c69f1fc433d5d035e516c2d1deaa9d0a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 26e35777540e98b63c6b676778d8a04f26a62e97
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36145750"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37278164"
 ---
 # <a name="name-element-for-index-dta"></a>索引的 Name 元素 (DTA)
   在使用者指定的組態中，指定索引的名稱。  
@@ -43,13 +43,13 @@ ms.locfileid: "36145750"
 |--------------------|-----------------|  
 |**資料類型和長度**|`string`沒有長度限制。|  
 |**預設值**|無。|  
-|**出現次數**|一次所需的每個`Index`項目。|  
+|**出現次數**|必須出現一次，每個`Index`項目。|  
   
 ## <a name="element-relationships"></a>元素關聯性  
   
 |關聯性|元素|  
 |------------------|--------------|  
-|**父元素**|[索引項目&#40;DTA&#41;](index-element-dta.md)|  
+|**父元素**|[編製索引的項目&#40;DTA&#41;](index-element-dta.md)|  
 |**子元素**|無。|  
   
 ## <a name="example"></a>範例  

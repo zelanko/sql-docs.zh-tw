@@ -1,5 +1,5 @@
 ---
-title: 指令碼移轉到 VSTA |Microsoft 文件
+title: 將指令碼移轉到 VSTA |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SSIS Script task, converting scripts
 - Script component [Integration Services], converting scripts
@@ -16,20 +16,20 @@ helpviewer_keywords:
 - SSIS Script component, converting scripts
 ms.assetid: d685098b-86a1-46bf-939a-63d56951e009
 caps.latest.revision: 44
-author: douglaslM
+author: mashamsft
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 99acbad66d2a614431bc1f08ad88bd12f2a3e6b4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 87c4c76ef7a09b8c03d0c95f83b647b73ccb3325
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36145774"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37157519"
 ---
 # <a name="migrate-scripts-to-vsta"></a>將指令碼移轉到 VSTA
-  當您升級[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]封裝， [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]，[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]移轉任何指令碼工作或指令碼元件中的指令碼[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] Tools for Applications (VSTA)。 VSTA 是 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 所使用的指令碼環境。 在[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]，指令碼環境[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]是[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] for Applications (VSA)。  
+  當您升級[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]套件[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]，[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]移轉任何指令碼工作或指令碼元件中的指令碼[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] Tools for Applications (VSTA)。 VSTA 是 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 所使用的指令碼環境。 在  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]，指令碼環境[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]是[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] for Applications (VSA)。  
   
- 如果指令碼工作或指令碼元件中的指令碼會參考介面，您可能必須在升級封裝以前修改這些參考。 否則，此封裝將無法升級或指令碼將無法驗證 (視您所使用的升級方法而定)。 若要修改這些參考，以取代參考 IDTS*xxx*90 介面的參考對應的 IDTS*xxx*100 介面。  
+ 如果指令碼工作或指令碼元件中的指令碼會參考介面，您可能必須在升級封裝以前修改這些參考。 否則，此封裝將無法升級或指令碼將無法驗證 (視您所使用的升級方法而定)。 若要修改這些參考，取代 參考的 IDTS*xxx*90 介面的參考對應的 IDTS*xxx*100 介面。  
   
  如需如何移轉指令碼和升級封裝的詳細資訊，請參閱[升級 Integration Services 封裝](../../integration-services/install-windows/upgrade-integration-services-packages.md)。  
   
@@ -46,7 +46,7 @@ ms.locfileid: "36145774"
   
 -   `ScriptMain` 類別已修改為除了 `ScriptObjectModelSSIS` 類別之外，也會繼承其他類別。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 不支援多重繼承。  
   
- 您無法將轉換的 VSA 指令碼使用[!INCLUDE[vbprvblong](../../includes/vbprvblong-md.md)]使用的 VSTA 指令碼[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[csharp_orcas_long](../../includes/csharp-orcas-long-md.md)]。 不過，您可以在其中建立新的 VSTA 指令碼會使用[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[csharp_orcas_long](../../includes/csharp-orcas-long-md.md)]。 如需詳細資訊，請參閱[指令碼工作的程式碼撰寫和偵錯](../../integration-services/control-flow/script-task.md)和[指令碼元件的程式碼撰寫和偵錯](../../integration-services/data-flow/transformations/script-component.md)。  
+ 您無法轉換使用的 VSA 指令碼[!INCLUDE[vbprvblong](../../includes/vbprvblong-md.md)]使用的 VSTA 指令碼[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[csharp_orcas_long](../../includes/csharp-orcas-long-md.md)]。 不過，您可以在其中建立新的 VSTA 指令碼會使用[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[csharp_orcas_long](../../includes/csharp-orcas-long-md.md)]。 如需詳細資訊，請參閱[指令碼工作的程式碼撰寫和偵錯](../../integration-services/control-flow/script-task.md)和[指令碼元件的程式碼撰寫和偵錯](../../integration-services/data-flow/transformations/script-component.md)。  
   
 ## <a name="see-also"></a>另請參閱  
  [使用指令碼擴充套件](../../relational-databases/server-management-objects-smo/tasks/scripting.md)  

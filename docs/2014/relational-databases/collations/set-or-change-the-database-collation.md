@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - collations [SQL Server], database
 - database collations [SQL Server]
 ms.assetid: 1379605c-1242-4ac8-ab1b-e2a2b5b1f895
 caps.latest.revision: 34
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 769adcde56f3e77cee0a2458b1d32b9e763792f7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 1284c5ea161942ab96d974549147f24cd72ae8ec
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36145633"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37158549"
 ---
 # <a name="set-or-change-the-database-collation"></a>設定或變更資料庫定序
   此主題描述如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ，在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中設定及變更資料庫定序。 如果沒有指定定序，會使用伺服器定序。  
@@ -61,7 +61,7 @@ ms.locfileid: "36145633"
   
     -   預存程序與使用者定義函數的任何現有 `char`、`varchar`、`text`、`nchar`、`nvarchar`，或 `ntext` 參數和純量傳回值，都會變更為新定序。  
   
-    -   `char`， `varchar`， `text`， `nchar`， `nvarchar`，或`ntext`系統資料類型，以及這些系統資料類型，所根據的所有使用者定義資料類型都會變更為新的預設定序。  
+    -   `char`， `varchar`， `text`， `nchar`， `nvarchar`，或`ntext`系統資料類型，以及根據這些系統資料類型的所有使用者定義資料類型都會變更為新的預設定序。  
   
 -   您可以使用 [ALTER DATABASE](/sql/t-sql/statements/alter-database-transact-sql) 陳述式的 COLLATE 子句，變更在使用者資料庫中建立的任何新物件的定序。 此陳述式不會變更現有使用者自訂資料表中的資料行定序。 您可以使用 [ALTER TABLE](/sql/t-sql/statements/alter-table-transact-sql)的 COLLATE 子句進行變更。  
   

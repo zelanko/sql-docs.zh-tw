@@ -1,14 +1,13 @@
 ---
-title: 資料行存放區索引說明 |Microsoft 文件
+title: 資料行存放區索引說明 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-indexes
+ms.technology: table-view-index
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - indexes creation, columnstore
 - indexes [SQL Server], columnstore
@@ -17,18 +16,18 @@ helpviewer_keywords:
 - xVelocity, columnstore indexes
 ms.assetid: f98af4a5-4523-43b1-be8d-1b03c3217839
 caps.latest.revision: 50
-author: barbkess
-ms.author: barbkess
-manager: jhubbard
-ms.openlocfilehash: 9dd9d25eaaa21361a050e8a80c32be8907cb4b9c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mikeraymsft
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 9cd8b98b2e62dbc11d62e07b9b0d7e2ac3e05c6b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36147156"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37211318"
 ---
 # <a name="columnstore-indexes-described"></a>Columnstore Indexes Described
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]*記憶體中資料行存放區索引*儲存及管理使用根據資料行的資料存放區和資料行為基礎的查詢處理的資料。 資料行存放區索引可在主要執行大量載入和唯讀查詢的資料倉儲工作負載中順利運作。 與傳統的資料列導向儲存相較之下，使用資料行存放區索引最高可達到 **10 倍查詢效能** 改善，與未壓縮資料大小相較之下，最高可達到 **7 倍資料壓縮** 。  
+  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]*記憶體中資料行存放區索引*儲存及管理使用資料行的資料儲存和資料行的查詢處理的資料。 資料行存放區索引可在主要執行大量載入和唯讀查詢的資料倉儲工作負載中順利運作。 與傳統的資料列導向儲存相較之下，使用資料行存放區索引最高可達到 **10 倍查詢效能** 改善，與未壓縮資料大小相較之下，最高可達到 **7 倍資料壓縮** 。  
   
 > [!NOTE]  
 >  我們將叢集資料行存放區索引視為儲存大型資料倉儲事實資料表的標準，並期望它能廣泛用於資料倉儲案例中。 由於叢集資料行存放區索引可更新，工作負載可以執行大量的插入、更新和刪除作業。  
@@ -68,7 +67,7 @@ ms.locfileid: "36147156"
 |-|  
 |**適用於**： [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 至 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]。|  
   
- 在[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]，非叢集資料行存放區索引：  
+ 在  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]，非叢集資料行存放區索引：  
   
 -   由 Enterprise、Developer 及 Evaluation Edition 提供。  
   
@@ -88,7 +87,7 @@ ms.locfileid: "36147156"
 |-|  
 |**適用於**： [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 至 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]。|  
   
- 在[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]，非叢集資料行存放區索引：  
+ 在  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]，非叢集資料行存放區索引：  
   
 -   可對叢集索引或堆積中的資料行子集建立索引。 例如，可以對常用的資料行建立索引。  
   
@@ -118,7 +117,7 @@ ms.locfileid: "36147156"
  為達到高效能和高壓縮率，資料行存放區索引會將資料表配量為資料列的群組，稱為資料列群組，然後以資料行取向的方式壓縮每個資料列群組。 資料列群組中的資料列數目必須多到足以改善壓縮率，並且少到足以獲益於記憶體中作業。  
   
  資料列群組  
- A *rowgroup*是同時壓縮成資料行存放區格式的資料列的群組。  
+ A*資料列群組*是同時壓縮成資料行存放區格式的資料列群組。  
   
  資料行區段  
  「資料行區段」是指資料列群組內部的資料行。  
@@ -132,21 +131,21 @@ ms.locfileid: "36147156"
  ![Column segment](../../database-engine/media/sql-server-pdw-columnstore-columnsegment.gif "Column segment")  
   
  非叢集資料行存放區索引  
- A*非叢集資料行存放區索引*是建立在現有的叢集索引或堆積資料表上的唯讀索引。 其包含了資料行子集的副本，截至包括資料表中的所有資料行。 資料表包含非叢集資料行存放區索引，所以是唯讀的。  
+ A*非叢集資料行存放區索引*是唯讀的索引，在現有的叢集索引或堆積資料表上建立。 其包含了資料行子集的副本，截至包括資料表中的所有資料行。 資料表包含非叢集資料行存放區索引，所以是唯讀的。  
   
  非叢集資料行存放區索引讓您單憑資料行存放區索引既可執行分析查詢，同時又能對原始資料表執行唯讀作業。  
   
  ![非叢集資料行存放區索引](../../database-engine/media/sql-server-pdw-columnstore-physicalstorage-nonclustered.gif "非叢集資料行存放區索引")  
   
  叢集資料行存放區索引  
- A*叢集資料行存放區索引*整份資料表的實體儲存體，而資料表的唯一索引。 叢集索引可更新。 您可以對索引執行插入、刪除和更新作業，還可將資料大量載入索引。  
+ A*叢集資料行存放區索引*是整份資料表的實體儲存體，而且資料表的唯一索引。 叢集索引可更新。 您可以對索引執行插入、刪除和更新作業，還可將資料大量載入索引。  
   
  ![Clustered Columnstore Index](../../database-engine/media/sql-server-pdw-columnstore-physicalstorage.gif "Clustered Columnstore Index")  
   
  為了減少資料行區段的片段化情況並改善效能，資料行存放區索引可能會暫時將一些資料儲存到資料列存放區資料表 (稱為差異存放區)，加上 B 型樹狀目錄含有已刪除之資料列的識別碼。 差異存放區作業將由幕後處理。 為了能傳回正確的查詢結果，叢集資料行存放區索引會結合資料行存放區和差異存放區兩方面的查詢結果。  
   
  差異存放區  
- 搭配叢集資料行存放區索引，使用*差異存放區*是儲存資料列，直到資料列數目夠大，無法移入資料行存放區的資料列存放區資料表。 差異存放區搭配叢集資料行存放區索引使用，可改善載入作業及其他 DML 作業的效能。  
+ 搭配叢集資料行存放區索引，使用*差異存放區*是儲存資料列，直到資料列數目夠大，無法移到資料行存放區的資料列存放區資料表。 差異存放區搭配叢集資料行存放區索引使用，可改善載入作業及其他 DML 作業的效能。  
   
  在大規模的大量載入過程中，大多數資料列會直接進入資料行存放區，而不經過差異存放區。 大量載入結束時，某些資料列可能因為數量太少，而不符合資料列群組 102,400 個資料列的大小下限。 發生這種情況時，最後這些資料列就會進入差異存放區，而不是資料行存放區。 若是少於 102,400 個資料列的小規模大量載入，則所有資料列都將直接進入差異存放區。  
   
@@ -155,9 +154,9 @@ ms.locfileid: "36147156"
 ##  <a name="dataload"></a> 載入資料  
   
 ###  <a name="dataload_nci"></a> 將資料載入非叢集資料行存放區索引  
- 若要將資料載入非叢集資料行存放區索引，先將資料載入至傳統的資料列存放區資料表儲存為堆積或叢集索引，然後再建立非叢集資料行存放區索引與[CREATE COLUMNSTORE INDEX &#40;TRANSACT-SQL&#41;](/sql/t-sql/statements/create-columnstore-index-transact-sql).  
+ 若要將資料載入非叢集資料行存放區索引，先將資料載入至傳統的資料列存放區資料表儲存為堆積或叢集編製索引、，然後建立非叢集資料行存放區索引[建立資料行存放區索引&#40;TRANSACT-SQL&#41;](/sql/t-sql/statements/create-columnstore-index-transact-sql).  
   
- ![將資料行存放區索引資料載入](../../database-engine/media/sql-server-pdw-columnstore-loadprocess-nonclustered.gif "資料載入資料行存放區索引")  
+ ![將資料載入至資料行存放區索引](../../database-engine/media/sql-server-pdw-columnstore-loadprocess-nonclustered.gif "資料載入資料行存放區索引")  
   
  凡是具有非叢集資料行存放區索引的資料表，直到卸除或停用索引之前都是唯讀的。 若要更新此資料表和非叢集資料行存放區索引，您可以將資料分割切換移入和移出。您也可以停用索引、更新資料表，然後再重建索引。  
   
@@ -186,7 +185,7 @@ ms.locfileid: "36147156"
   
     2.  如果資料列數低於每個資料列群組的資料列數下限，則會將資料列加入至差異存放區。  
   
- 如需有關差異存放區的工作和程序的詳細資訊，請參閱[使用叢集資料行存放區索引](../../database-engine/using-clustered-columnstore-indexes.md)  
+ 如需有關差異存放區工作和程序的詳細資訊，請參閱[使用叢集資料行存放區索引](../../database-engine/using-clustered-columnstore-indexes.md)  
   
 ##  <a name="performance"></a> 效能秘訣  
   

@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.ftptask.f1
 helpviewer_keywords:
@@ -17,13 +17,13 @@ ms.assetid: 41c3f2c4-ee04-460a-9822-bb9ae4036c2e
 caps.latest.revision: 52
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: ed0f6532cf3bdfcffaa5775be28851681f33b678
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 605fe5f676b94d05a6f3da141ac59ced8b265282
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36147220"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37164801"
 ---
 # <a name="ftp-task"></a>FTP 工作
   FTP 工作會下載和上傳資料檔以及管理伺服器上的目錄。 例如，封裝可從遠端伺服器或網際網路位置下載資料檔，此工作可視為 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 封裝工作流程的一部分。 您可將 FTP 工作用於下列用途：  
@@ -79,7 +79,7 @@ ms.locfileid: "36147220"
  如需以程式設計方式設定這些屬性的詳細資訊，請參閱 <xref:Microsoft.SqlServer.Dts.Tasks.FtpTask.FtpTask>。  
   
 ## <a name="see-also"></a>另請參閱  
- [FTP 工作編輯器&#40;[一般] 頁面&#41;](../general-page-of-integration-services-designers-options.md)   
+ [FTP 工作編輯器&#40;一般頁面&#41;](../general-page-of-integration-services-designers-options.md)   
  [FTP 工作編輯器&#40;檔案傳輸頁面&#41;](../ftp-task-editor-file-transfer-page.md)   
  [Integration Services 工作](integration-services-tasks.md)   
  [控制流程](control-flow.md)  

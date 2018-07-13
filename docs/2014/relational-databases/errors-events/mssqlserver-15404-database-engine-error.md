@@ -5,23 +5,22 @@ ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - 15404 (Database Engine error)
 ms.assetid: 69677f02-bc81-4e4a-99b8-5c1bd1de36df
 caps.latest.revision: 6
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 03342dbc069203a6ae8e06040dcf399a5f8911be
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: f3aa429a44d38977295cb3e4a51cc1ede283ab0f
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36145404"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37411010"
 ---
 # <a name="mssqlserver15404"></a>MSSQLSERVER_15404
     

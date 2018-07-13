@@ -1,13 +1,11 @@
 ---
-title: 大量複製資料，從程式變數 (ODBC) |Microsoft 文件
+title: 大量複製資料，從程式變數 (ODBC) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -15,22 +13,22 @@ helpviewer_keywords:
 - bulk copy [ODBC]
 ms.assetid: 0c3f2d7c-4ff2-4887-adfd-1f488a27c21c
 caps.latest.revision: 13
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 9ef4b98997305cf1bd3232f51fd9d7ae0fb8a3b1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 0e76a57da680d224989b013db5a5121fa3e7c224
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36146351"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37420587"
 ---
 # <a name="bulk-copy-data-from-program-variables-odbc"></a>從程式變數中大量複製資料 (ODBC)
   此範例會示範如何使用大量複製函數，透過 `bcp_bind` 和 `bcp_sendrow` 從程式變數大量複製資料到 SQL Server  (為了簡化這個範例會移除錯誤檢查程式碼)。  
   
  此範例是針對 ODBC 3.0 版或更新版本所開發。  
   
- **安全性注意事項**盡可能使用 Windows 驗證。 如果無法使用 Windows 驗證，請提示使用者在執行階段輸入認證。 請避免將認證儲存在檔案中。 如果您必須保存認證，您應該先加密它們與[Win32 cryptoAPI](http://go.microsoft.com/fwlink/?LinkId=9504)。  
+ **安全性注意事項**可能的話，請使用 Windows 驗證。 如果無法使用 Windows 驗證，請提示使用者在執行階段輸入認證。 請避免將認證儲存在檔案中。 如果您必須保存認證，您應該先加密它們[Win32 cryptoAPI](http://go.microsoft.com/fwlink/?LinkId=9504)。  
   
 ### <a name="to-use-bulk-copy-functions-directly-on-program-variables"></a>若要直接針對程式變數使用大量複製函數  
   
@@ -50,15 +48,15 @@ ms.locfileid: "36146351"
   
     -   複製的方向：DB_IN (從應用程式到檢視表或資料表) 或 DB_OUT (從資料表或檢視表到應用程式)。  
   
-5.  呼叫[bcp_bind](../../native-client-odbc-extensions-bulk-copy-functions/bcp-bind.md)每個資料行中的資料行繫結至程式變數大量複製。  
+5.  呼叫[bcp_bind](../../native-client-odbc-extensions-bulk-copy-functions/bcp-bind.md)行繫結至程式變數大量複製中的每一個資料行。  
   
-6.  填入程式變數與資料，以及呼叫[bcp_sendrow](../../native-client-odbc-extensions-bulk-copy-functions/bcp-sendrow.md)傳送的資料列。  
+6.  填入程式變數與資料，並呼叫[bcp_sendrow](../../native-client-odbc-extensions-bulk-copy-functions/bcp-sendrow.md)傳送的資料列。  
   
-7.  已傳送幾個資料列之後，請呼叫[bcp_batch](../../native-client-odbc-extensions-bulk-copy-functions/bcp-batch.md)已經傳送的資料列的檢查點。 若要呼叫的最佳作法是[bcp_batch](../../native-client-odbc-extensions-bulk-copy-functions/bcp-batch.md)每 1000 個資料列至少一次。  
+7.  已傳送數個資料列之後，請呼叫[bcp_batch](../../native-client-odbc-extensions-bulk-copy-functions/bcp-batch.md)至已傳送的資料列的檢查點。 它是個不錯的做法，呼叫[bcp_batch](../../native-client-odbc-extensions-bulk-copy-functions/bcp-batch.md)至少一次每 1000 個資料列。  
   
 8.  已傳送所有資料列之後，請呼叫[bcp_done](../../native-client-odbc-extensions-bulk-copy-functions/bcp-done.md)完成作業。  
   
- 您可以改變的位置和長度的程式變數大量複製作業期間呼叫[bcp_colptr](../../native-client-odbc-extensions-bulk-copy-functions/bcp-colptr.md)和[bcp_collen](../../native-client-odbc-extensions-bulk-copy-functions/bcp-collen.md)。 使用[bcp_control](../../native-client-odbc-extensions-bulk-copy-functions/bcp-control.md)來設定各種大量複製選項。 使用[bcp_moretext](../../native-client-odbc-extensions-bulk-copy-functions/bcp-moretext.md)傳送`text`， `ntext`，和`image`到伺服器的區段中的資料。  
+ 您可以在大量複製作業期間變更的位置和長度的程式變數，藉由呼叫[bcp_colptr](../../native-client-odbc-extensions-bulk-copy-functions/bcp-colptr.md)並[bcp_collen](../../native-client-odbc-extensions-bulk-copy-functions/bcp-collen.md)。 使用[bcp_control](../../native-client-odbc-extensions-bulk-copy-functions/bcp-control.md)來設定各種大量複製選項。 使用[bcp_moretext](../../native-client-odbc-extensions-bulk-copy-functions/bcp-moretext.md)傳送`text`， `ntext`，和`image`線段，才能在伺服器中的資料。  
   
 ## <a name="example"></a>範例  
  IA64 不支援此範例。  
@@ -306,7 +304,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [大量複製與 SQL Server ODBC 驅動程式如何主題&#40;ODBC&#41;](bulk-copying-with-the-sql-server-odbc-driver-how-to-topics-odbc.md)   
+ [利用 SQL Server ODBC 驅動程式如何主題大量複製的&#40;ODBC&#41;](bulk-copying-with-the-sql-server-odbc-driver-how-to-topics-odbc.md)   
  [從程式變數中大量複製](../../native-client-odbc-bulk-copy-operations/bulk-copying-from-program-variables.md)  
   
   

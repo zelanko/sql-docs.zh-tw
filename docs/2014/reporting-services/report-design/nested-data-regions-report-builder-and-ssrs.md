@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 15c2bc9b-428a-47ac-9630-8dde925d0595
 caps.latest.revision: 7
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: aafe273ff95b263209deb0b9aef2873fd0e3561f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 58d065632faae49515217fdb9811430188b0f784
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36144889"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37210798"
 ---
 # <a name="nested-data-regions-report-builder-and-ssrs"></a>巢狀資料區 (報表產生器及 SSRS)
   您可以在一個資料區域 (例如矩陣) 內巢狀另一個資料區域 (例如圖表)，這樣通常可以透過精確的方式顯示資料摘要，或提供視覺化顯示以及資料表或矩陣顯示。  
@@ -90,10 +90,10 @@ ms.locfileid: "36144889"
  [篩選、分組和排序資料 &#40;報表產生器及 SSRS&#41;](filter-group-and-sort-data-report-builder-and-ssrs.md)   
  [清單 &#40;報表產生器及 SSRS&#41;](tables-matrices-and-lists-report-builder-and-ssrs.md)   
  [圖表 &#40;報表產生器及 SSRS&#41;](charts-report-builder-and-ssrs.md)   
- [量測計&#40;報表產生器和 SSRS&#41;](gauges-report-builder-and-ssrs.md)   
+ [量測計&#40;報表產生器及 SSRS&#41;](gauges-report-builder-and-ssrs.md)   
  [運算式 &#40;報表產生器及 SSRS&#41;](expressions-report-builder-and-ssrs.md)   
  [設定報表項目的格式 &#40;報表產生器及 SSRS&#41;](formatting-report-items-report-builder-and-ssrs.md)   
  [教學課程：將 KPI 新增至報表 &#40;報表產生器&#41;](../tutorial-adding-a-kpi-to-your-report-report-builder.md)   
- [格式化量測計的標尺&#40;報表產生器和 SSRS&#41;](formatting-scales-on-a-gauge-report-builder-and-ssrs.md)  
+ [格式化量測計的標尺&#40;報表產生器及 SSRS&#41;](formatting-scales-on-a-gauge-report-builder-and-ssrs.md)  
   
   

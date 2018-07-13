@@ -1,5 +1,5 @@
 ---
-title: 鎖定和解除鎖定資料庫 (XMLA) |Microsoft 文件
+title: 鎖定和解除鎖定資料庫 (XMLA) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -17,28 +17,28 @@ helpviewer_keywords:
 - unlocking objects
 ms.assetid: 451afa58-ce03-4ecc-8dd3-9e7e8559b5f1
 caps.latest.revision: 13
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: dbcf03fee7b0b286a88c4c3089f42741e60dbff0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: fa6eab7a4d0ebe15e87ee83b60020b7a1f809ae8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36145503"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37278354"
 ---
 # <a name="locking-and-unlocking-databases-xmla"></a>鎖定和解除鎖定資料庫 (XMLA)
-  您可以鎖定與解除鎖定資料庫分別使用、[鎖定](../xmla/xml-elements-commands/lock-element-xmla.md)和[解除鎖定](../xmla/xml-elements-commands/unlock-element-xmla.md)XML for Analysis (XMLA) 中的命令。 一般而言，其他 XMLA 命令會視需要自動鎖定和解除鎖定物件，以便在執行期間完成命令。 您可以明確地鎖定或解除鎖定資料庫，執行單一交易內的多個命令，例如[批次](../xmla/xml-elements-commands/batch-element-xmla.md)命令，以防止其他應用程式資料庫將寫入交易認可。  
+  您可以鎖定及解除鎖定資料庫分別使用，則[鎖定](../xmla/xml-elements-commands/lock-element-xmla.md)並[解除鎖定](../xmla/xml-elements-commands/unlock-element-xmla.md)XML for Analysis (XMLA) 中的命令。 一般而言，其他 XMLA 命令會視需要自動鎖定和解除鎖定物件，以便在執行期間完成命令。 您可以明確地鎖定或解除鎖定資料庫來執行單一交易內的多個命令，例如[批次](../xmla/xml-elements-commands/batch-element-xmla.md)命令，以防止其他應用程式資料庫將寫入交易認可。  
   
 ## <a name="locking-databases"></a>鎖定資料庫  
- `Lock` 命令會在目前使用中交易的內容中鎖定某個物件，以便共用或獨佔使用。 鎖定物件會防止認可交易，直到移除鎖定為止。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 支援兩種類型的鎖定，共用的鎖定和獨佔鎖定。 如需有關所支援的鎖定類型[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]，請參閱[Mode 元素&#40;XMLA&#41;](../xmla/xml-elements-properties/mode-element-xmla.md)。  
+ `Lock` 命令會在目前使用中交易的內容中鎖定某個物件，以便共用或獨佔使用。 鎖定物件會防止認可交易，直到移除鎖定為止。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 支援兩種類型的鎖定，共用的鎖定和獨佔鎖定。 如需所支援的鎖定類型[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]，請參閱 <<c2> [ 模式項目&#40;XMLA&#41;](../xmla/xml-elements-properties/mode-element-xmla.md)。</c2>  
   
- [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 僅允許鎖定資料庫。 [物件](../xmla/xml-elements-properties/object-element-xmla.md)元素必須包含的物件參考[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]資料庫。 如果您沒有指定 `Object` 元素或者 `Object` 元素參考資料庫以外的物件，就會發生錯誤。  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 僅允許鎖定資料庫。 [物件](../xmla/xml-elements-properties/object-element-xmla.md)項目必須包含的物件參考[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]資料庫。 如果您沒有指定 `Object` 元素或者 `Object` 元素參考資料庫以外的物件，就會發生錯誤。  
   
 > [!IMPORTANT]  
 >  只有資料庫管理員或伺服器管理員可以明確發出 `Lock` 命令。  
   
- 其他命令會隱含地針對 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 資料庫發出 `Lock` 命令。 讀取資料庫，例如任何資料或中繼資料的任何作業[探索](../xmla/xml-elements-methods-discover.md)方法或[Execute](../xmla/xml-elements-methods-execute.md)方法執行[陳述式](../xmla/xml-elements-commands/statement-element-xmla.md)命令都會隱含地發出共用在資料庫上的鎖定。 在將資料或中繼資料的變更認可至物件的任何交易[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]資料庫，例如`Execute`方法執行[Alter](../xmla/xml-elements-commands/alter-element-xmla.md)命令都會隱含地發出資料庫的獨佔鎖定。  
+ 其他命令會隱含地針對 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 資料庫發出 `Lock` 命令。 從資料庫，例如任何讀取資料或中繼資料的任何作業[Discover](../xmla/xml-elements-methods-discover.md)方法或[Execute](../xmla/xml-elements-methods-execute.md)方法執行[陳述式](../xmla/xml-elements-commands/statement-element-xmla.md)命令都會隱含地發出共用在資料庫上的鎖定。 任何認可的交易，變更資料或中繼資料物件上[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]資料庫，例如`Execute`方法執行[Alter](../xmla/xml-elements-commands/alter-element-xmla.md)命令都會隱含地發出資料庫的獨佔鎖定。  
   
 ## <a name="unlocking-objects"></a>解除鎖定物件  
  `Unlock` 命令會移除在目前使用中交易內容內部建立的鎖定。  

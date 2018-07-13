@@ -1,5 +1,5 @@
 ---
-title: Analysis Services 精靈 （多維度資料） |Microsoft 文件
+title: Analysis Services 精靈 （多維度資料） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
@@ -8,23 +8,23 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Analysis Services wizards
 ms.assetid: 4814b8f6-1717-4b03-835b-15fcaa79a287
 caps.latest.revision: 25
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: aa03a40457db856c3c53a3db1412d0c9b95e7864
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 2316c7ab9f0d06930ba5346f51e28d7670dca8f5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36146402"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37161529"
 ---
 # <a name="analysis-services-wizards-multidimensional-data"></a>Analysis Services 精靈 (多維度資料)
-  [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 提供精靈，以用於[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]和[!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]。 下表描述可用的精靈。  
+  [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 提供精靈以用於[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]和[!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]。 下表描述可用的精靈。  
   
 ## <a name="in-this-section"></a>本節內容  
   
@@ -38,7 +38,7 @@ ms.locfileid: "36146402"
 |[資料來源檢視精靈 F1 說明&#40;Analysis Services&#41;](data-source-view-wizard-f1-help-analysis-services.md)|使用資料來源檢視精靈來定義新的資料來源檢視。|  
 |[維度精靈 F1 說明](dimension-wizard-f1-help.md)|使用維度精靈來定義新的維度。|  
 |[匯入 Analysis Services 資料庫精靈 F1 說明](import-analysis-services-database-wizard-f1-help.md)|使用匯入 Analysis Services 9.0 資料庫精靈來匯入現有的 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 資料庫。|  
-|[連結的物件精靈 F1 說明](linked-object-wizard-f1-help.md)|使用連結物件精靈來定義連結維度或量值群組，以及選擇性地匯入相關的物件。|  
+|[連結物件精靈 F1 說明](linked-object-wizard-f1-help.md)|使用連結物件精靈來定義連結維度或量值群組，以及選擇性地匯入相關的物件。|  
 |[資料分割精靈 F1 說明&#40;Analysis Services-多維度資料&#41;](partition-wizard-f1-help-analysis-services-multidimensional-data.md)|使用資料分割精靈來定義資料分割或遠端資料分割。|  
 |[結構描述產生精靈 F1 說明&#40;Analysis Services-多維度資料&#41;](schema-generation-wizard-f1-help-analysis-services-multidimensional-data.md)|使用結構描述產生精靈來定義資料來源檢視，並將資料來源檢視的關聯式結構描述，選擇性地從現有的 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 物件編寫指令碼至資料來源。|  
 |[基於使用方式的最佳化精靈 F1 說明](usage-based-optimization-wizard-f1-help.md)|使用基於使用方式的最佳化精靈，依據儲存在 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 資料庫查詢記錄中的查詢來定義彙總設計的彙總。|  

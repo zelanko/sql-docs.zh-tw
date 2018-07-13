@@ -1,26 +1,24 @@
 ---
-title: 高可用性、 災害復原的 SQL Server Native Client 支援 |Microsoft 文件
+title: SQL Server Native Client 支援的高可用性、 災害復原 |Microsoft Docs
 ms.custom: ''
 ms.date: 2016-08-31
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client  - "database-engine" - "docset-sql-devref"
 ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 2b06186b-4090-4728-b96b-90d6ebd9f66f
 caps.latest.revision: 36
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 0fc26bfb2fc61cebd781c04b200f5e285b25666f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 72fb6497563e4f1d15e9470eb6d60743d67f83a5
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36136638"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37427487"
 ---
 # <a name="sql-server-native-client-support-for-high-availability-disaster-recovery"></a>高可用性/災害復原的 SQL Server Native Client 支援
   本主題將討論適用於 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的 [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] Native Client 支援 (在 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 中所新增)。 如需 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 的詳細資訊 , ，請參閱[可用性群組接聽程式、用戶端連接性及應用程式容錯移轉 &#40;SQL Server&#41;](../../../database-engine/listeners-client-connectivity-application-failover.md)、[建立及設定可用性群組 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/creation-and-configuration-of-availability-groups-sql-server.md)、[容錯移轉叢集和 AlwaysOn 可用性群組 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/failover-clustering-and-always-on-availability-groups-sql-server.md) 和[使用中次要：可讀取的次要複本 (AlwaysOn 可用性群組)](../../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)。  
@@ -66,7 +64,7 @@ ms.locfileid: "36136638"
 ## <a name="upgrading-to-use-multi-subnet-clusters-from-database-mirroring"></a>從資料庫鏡像升級到使用多子重網路叢集  
  如果連接字串中有 `MultiSubnetFailover` 和 `Failover_Partner` 連接關鍵字，則會發生連接錯誤。 如果使用 `MultiSubnetFailover` 而且 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 傳回容錯移轉夥伴回應，指出它是資料庫鏡像配對的一部分，也會發生錯誤。  
   
- 如果您將目前使用資料庫鏡像的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 應用程式升級為多重子網路案例，應該移除 `Failover_Partner` 連接屬性，以設為 `MultiSubnetFailover` 的 `Yes` 取代它，並以可用性群組接聽程式取代連接字串中的伺服器名稱。 如果連接字串使用`Failover_Partner`和`MultiSubnetFailover=Yes`，驅動程式會產生錯誤。 不過，如果連接字串使用`Failover_Partner`和`MultiSubnetFailover=No`(或`ApplicationIntent=ReadWrite`)，應用程式會使用資料庫鏡像。  
+ 如果您將目前使用資料庫鏡像的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 應用程式升級為多重子網路案例，應該移除 `Failover_Partner` 連接屬性，以設為 `MultiSubnetFailover` 的 `Yes` 取代它，並以可用性群組接聽程式取代連接字串中的伺服器名稱。 如果連接字串使用`Failover_Partner`和`MultiSubnetFailover=Yes`，驅動程式會產生錯誤。 不過，如果使用的連接字串`Failover_Partner`並`MultiSubnetFailover=No`(或`ApplicationIntent=ReadWrite`)，應用程式會使用資料庫鏡像。  
   
  如果可用性群組中的主要資料庫使用資料庫鏡像，而且如果在連接到主要資料庫 (而不是可用性群組接聽程式) 的連接字串中使用 `MultiSubnetFailover=Yes`，驅動程式會傳回錯誤。  
   
@@ -75,9 +73,9 @@ ms.locfileid: "36136638"
   
  `ApplicationIntent`關鍵字不適用於舊版唯讀資料庫。  
   
- 資料庫可以允許或不允許 AlwaysOn 目標資料庫上的讀取工作負載 (這是與`ALLOW_CONNECTIONS`子句`PRIMARY_ROLE`和`SECONDARY_ROLE`[!INCLUDE[tsql](../../../includes/tsql-md.md)]陳述式。)  
+ 資料庫可以允許或不允許 AlwaysOn 目標資料庫上的讀取工作負載 (這藉`ALLOW_CONNECTIONS`子句`PRIMARY_ROLE`並`SECONDARY_ROLE`[!INCLUDE[tsql](../../../includes/tsql-md.md)]陳述式。)  
   
- `ApplicationIntent`關鍵字用於啟用唯讀路由。  
+ `ApplicationIntent`關鍵字用來啟用唯讀路由。  
   
 ## <a name="read-only-routing"></a>唯讀路由  
  唯讀路由是可確保資料庫的唯讀複本之可用性的功能。 若要啟用唯讀路由：  

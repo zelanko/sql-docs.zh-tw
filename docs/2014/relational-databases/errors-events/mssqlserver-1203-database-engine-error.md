@@ -5,23 +5,22 @@ ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - 1203 (Database Engine error)
 ms.assetid: 33a35f00-98c8-46c6-b432-544b326b6117
 caps.latest.revision: 14
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: b456a58a6ac45feeb3cb59ade9a504128e3b40c8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 3685f5ab9eb498c00c1837f19e55cf6f721f5a3f
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36147162"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37410687"
 ---
 # <a name="mssqlserver1203"></a>MSSQLSERVER_1203
     

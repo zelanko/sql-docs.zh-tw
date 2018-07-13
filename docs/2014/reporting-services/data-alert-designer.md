@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - editing, data alerts
 - updating, data alerts
@@ -20,13 +20,13 @@ ms.assetid: b2018116-cf1a-4e54-b29c-39e0ca2bda77
 caps.latest.revision: 21
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: d9da14f27b15da351263653d33616621cb4f7b84
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e0b0e8d5d18b45d15feb0f1af8f7ef2671053ab1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36146331"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37155699"
 ---
 # <a name="data-alert-designer"></a>資料警示設計工具
   您可在 [資料警示設計工具] 中建立和編輯資料警示定義。 警示定義是中繼資料的集合，包括您感興趣的報表資料、報表資料必須符合才能建立資料警示執行個體和傳送資料警示訊息的規則、警示訊息的收件者等。  
@@ -48,7 +48,7 @@ ms.locfileid: "36146331"
 > [!NOTE]  
 >  由於 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 資料警示功能只有在您安裝 SharePoint 模式的 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 時才可使用，因此要建立其警示的報表必須儲存、部署或上傳到 SharePoint 文件庫。  
 >   
->  資料警示不能在使用 Windows 整合式驗證或提示輸入認證的報表上建立。 報表必須使用預存認證。 如需詳細資訊，請參閱[指定認證和報表資料來源的連接資訊](report-data/specify-credential-and-connection-information-for-report-data-sources.md)。  
+>  資料警示不能在使用 Windows 整合式驗證或提示輸入認證的報表上建立。 報表必須使用預存認證。 如需詳細資訊，請參閱 <<c0> [ 指定的認證和報表資料來源的連接資訊](report-data/specify-credential-and-connection-information-for-report-data-sources.md)。  
   
  若要開啟 [資料警示設計工具]，請在報表工具列上按一下 [動作] 功能表上的 [新資料警示] 選項。 如果您看不見 [新資料警示] 選項，表示報表未設定為使用預存認證。 您可以藉由從 SharePoint 文件庫更新報表資料來源的方式更新認證類型。  
   
@@ -74,7 +74,7 @@ ms.locfileid: "36146331"
 ### <a name="alert-name"></a>警示名稱  
  根據預設，警示定義與報表的名稱相同。 您可以將警示名稱變更為更有意義的名稱。 這樣更方便您管理警示，判斷哪些警示需要更新、刪除等。  
   
- 您可以在報表上建立多個警示。 雖然您可以擁有多個相同名稱的警示定義，不過建議您使用唯一的警示名稱。 這樣更方便您區分及管理警示定義。 您可以在 [資料警示管理員] 中檢視您建立之所有警示的清單。 如需詳細資訊，請參閱[警示系統管理員的資料警示管理員](../../2014/reporting-services/data-alert-manager-for-alerting-administrators.md)和[資料警示管理員 中管理我的資料警示](manage-my-data-alerts-in-data-alert-manager.md)。  
+ 您可以在報表上建立多個警示。 雖然您可以擁有多個相同名稱的警示定義，不過建議您使用唯一的警示名稱。 這樣更方便您區分及管理警示定義。 您可以在 [資料警示管理員] 中檢視您建立之所有警示的清單。 如需詳細資訊，請參閱 <<c0> [ 資料警示管理員的警示管理員](../../2014/reporting-services/data-alert-manager-for-alerting-administrators.md)並[在資料警示管理員中管理我的資料警示](manage-my-data-alerts-in-data-alert-manager.md)。  
   
 ### <a name="rules-and-clauses"></a>規則和子句  
  資料變更的範圍和警示規則會定義觸發警示的資料變更。 資料變更的範圍如下：  

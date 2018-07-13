@@ -1,5 +1,5 @@
 ---
-title: 執行處理工作編輯器 （一般頁面） |Microsoft 文件
+title: 執行處理工作編輯器 （一般頁面） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.executeprocesstask.general.f1
 helpviewer_keywords:
 - Execute Process Task Editor
 ms.assetid: 39651a0a-3a83-40f4-b8eb-b8b869607a94
 caps.latest.revision: 22
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 9828b51c33b30601075860b10e254c75dbe6f9eb
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: cdafe1f838bdfb8fa94efba93432ea25ca50ee26
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36144970"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37259114"
 ---
 # <a name="execute-process-task-editor-general-page"></a>執行處理工作編輯器 (一般頁面)
   使用 [執行處理工作編輯器] 對話方塊的 [一般] 頁面，來命名和描述執行處理工作。  

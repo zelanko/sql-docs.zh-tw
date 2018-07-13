@@ -1,13 +1,11 @@
 ---
-title: bcp_writefmt |Microsoft 文件
+title: bcp_writefmt |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
@@ -20,15 +18,15 @@ helpviewer_keywords:
 - bcp_writefmt function
 ms.assetid: cb4c1d37-667d-4bcd-b13c-eb638bcc9b69
 caps.latest.revision: 31
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 1fe386d49ea68e8b6f33048f246c3a3afd037b4f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 4f82c05a8d605b056619e22f7f711762b1555ac7
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36145376"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37427877"
 ---
 # <a name="bcpwritefmt"></a>bcp_writefmt
   建立包含目前大量複製資料檔格式之描述的格式檔。  
@@ -58,14 +56,14 @@ szFormatFile
  SUCCEED 或 FAIL。  
   
 ## <a name="remarks"></a>備註  
- 格式檔案會指定大量複製所建立之資料檔的資料格式。 呼叫[bcp_columns](bcp-columns.md)和[bcp_colfmt](bcp-colfmt.md)定義的資料檔案格式。 **bcp_writefmt**將此定義儲存在所參照的檔案*szFormatFile*。 如需詳細資訊，請參閱[bcp_init](bcp-init.md)。  
+ 格式檔案會指定大量複製所建立之資料檔的資料格式。 若要呼叫[bcp_columns](bcp-columns.md)並[bcp_colfmt](bcp-colfmt.md)定義的資料檔案格式。 **bcp_writefmt**將此定義儲存在所參照的檔案*szFormatFile*。 如需詳細資訊，請參閱 < [bcp_init](bcp-init.md)。  
   
- 如需有關結構**bcp**資料格式檔案，請參閱[匯入和匯出大量資料使用 bcp 公用程式&#40;SQL Server&#41;](../import-export/import-and-export-bulk-data-by-using-the-bcp-utility-sql-server.md)。  
+ 如需結構的詳細資訊**bcp**資料格式檔案，請參閱[匯入和匯出大量資料使用 bcp 公用程式&#40;SQL Server&#41;](../import-export/import-and-export-bulk-data-by-using-the-bcp-utility-sql-server.md)。  
   
  若要載入已儲存的格式檔案，請使用[bcp_readfmt](bcp-readfmt.md)。  
   
 > [!NOTE]  
->  產生格式檔案**bcp_writefmt**程式版本才支援**bcp**公用程式一起散發[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]7.0 和更新版本。  
+>  所產生的格式檔案**bcp_writefmt**程式版本才支援**bcp**公用程式隨附[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]7.0 和更新版本。  
   
 ## <a name="example"></a>範例  
   

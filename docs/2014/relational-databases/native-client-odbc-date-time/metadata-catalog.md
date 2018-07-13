@@ -1,13 +1,11 @@
 ---
-title: 目錄中繼資料 |Microsoft 文件
+title: 目錄中繼資料 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -15,15 +13,15 @@ helpviewer_keywords:
 - catalog metadata [ODBC]
 ms.assetid: b82665be-8cb1-4ad3-ac15-2e590bdc1815
 caps.latest.revision: 11
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: cd8099242814e73fe5d4f0a3d1a38725b49bf34b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 57a57a1df129f3d8afa07fe2359c8f794e4786a1
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36136856"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37425507"
 ---
 # <a name="catalog-metadata"></a>目錄中繼資料
   本主題描述 `SQLColumns` 和 `SQLProcedureColumns` 所傳回的資料行中繼資料，以及 `SQLGetTypeInfo` 所傳回的資料類型中繼資料。  

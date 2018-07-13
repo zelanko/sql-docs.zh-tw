@@ -5,23 +5,22 @@ ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - 3271 (Database Engine error)
 ms.assetid: 21b8de4b-6624-4163-9561-1a6cc8fe3d51
 caps.latest.revision: 19
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: d9f13a95fdcc7ab5f8233a1c6e60c5ecb72f55b9
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 2a0f6a1583d4437a351b68739ce85bbb5f2154f2
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36146950"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37427937"
 ---
 # <a name="mssqlserver3271"></a>MSSQLSERVER_3271
     

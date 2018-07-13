@@ -1,13 +1,11 @@
 ---
-title: 使用 SQL Server Native Client 標頭和程式庫檔案 |Microsoft 文件
+title: 使用 SQL Server Native Client 標頭和程式庫檔案 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client  - "database-engine" - "docset-sql-devref"
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -24,15 +22,15 @@ helpviewer_keywords:
 - SQLNCLI, library files
 ms.assetid: 69889a98-7740-4667-aecd-adfc0b37f6f0
 caps.latest.revision: 63
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: f10805d7a28fbeb291244913ae602055f16a1462
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: cf209f7897aed59e32d648e0305f9c7ba0e119a9
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36146509"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37415069"
 ---
 # <a name="using-the-sql-server-native-client-header-and-library-files"></a>使用 SQL Server Native Client 標頭檔與程式庫檔案
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 標頭檔與程式庫檔案會與 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 一起安裝。 開發應用程式時，將開發所需的所有檔案複製並安裝到您的開發環境相當重要。 如需有關安裝及轉散發[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]原生用戶端，請參閱[安裝 SQL Server Native Client](installing-sql-server-native-client.md)。  

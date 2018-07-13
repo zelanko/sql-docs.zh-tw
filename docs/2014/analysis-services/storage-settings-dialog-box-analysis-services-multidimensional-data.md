@@ -1,5 +1,5 @@
 ---
-title: 儲存設定對話方塊 (Analysis Services-多維度資料) |Microsoft 文件
+title: 儲存設定對話方塊 (Analysis Services-多維度資料) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,26 +8,26 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.cubeeditor.partitiondesigner.partitionstoragesettings.f1
 - sql12.asvs.cubeeditor.cubebuilder.measuregroupstoragesettings.f1
 ms.assetid: 80c41c71-226c-45fe-b9cf-af824b592fe1
 caps.latest.revision: 20
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: a15f7470df4ba313e02828b4a7ef2be2c9c4e0c7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 3d39d87c0896ba77d3e323dc762d2618098dfd39
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36144806"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37161309"
 ---
 # <a name="storage-settings-dialog-box-analysis-services---multidimensional-data"></a>儲存設定對話方塊 (Analysis Services - 多維度資料)
   使用 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 中的 [儲存設定] 對話方塊，即可設定維度、Cube、量值群組或資料分割的主動式快取、儲存和通知設定。 您可藉由下列方式在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 中顯示 [儲存設定] 對話方塊：  
   
--   按一下省略符號按鈕 (**...**) 的`ProactiveCaching`屬性值的維度、 cube、 量值群組或資料分割中的**屬性**視窗[!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]。  
+-   按一下省略符號按鈕 (**...**) 的`ProactiveCaching`的維度、 cube、 量值群組或資料分割中的屬性值**屬性**視窗[!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]。  
   
 -   在 Cube 設計師的 [資料分割] 索引標籤中展開量值群組，然後按一下 [儲存設定]。  
   
@@ -53,6 +53,6 @@ ms.locfileid: "36144806"
 ## <a name="see-also"></a>另請參閱  
  [Analysis Services Designers and Dialog Boxes&#40;多維度資料&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
  [主動式快取&#40;資料分割&#41;](multidimensional-models-olap-logical-cube-objects/partitions-proactive-caching.md)   
- [Cube 儲存體&#40;Analysis Services-多維度資料&#41;](multidimensional-models-olap-logical-cube-objects/cube-storage-analysis-services-multidimensional-data.md)  
+ [Cube 儲存區&#40;Analysis Services-多維度資料&#41;](multidimensional-models-olap-logical-cube-objects/cube-storage-analysis-services-multidimensional-data.md)  
   
   

@@ -5,10 +5,9 @@ ms.date: 12/29/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - 17828 (Database Engine error)
 - maxtokensize
@@ -16,15 +15,15 @@ helpviewer_keywords:
 - login packet (bad)
 ms.assetid: bd56ffe4-0855-4ada-8aca-251fbc6ff2ce
 caps.latest.revision: 17
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 9ee8f5013f4776a189d73b034ae64d105b75bfbd
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 300ad8adc9c710ecc8b8632711a81d624b900852
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36146301"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37412443"
 ---
 # <a name="mssqlserver17832"></a>MSSQLSERVER_17832
     
@@ -59,7 +58,7 @@ ms.locfileid: "36146301"
   
 1.  在 **[開始]** 功能表上，按一下 **[執行]**。  
   
-2.  型別`regedit`，然後按一下 **確定**。 (如果出現 [使用者帳戶控制] 對話方塊，請按一下 [繼續])。  
+2.  型別`regedit`，然後按一下 **[確定]**。 (如果出現 [使用者帳戶控制] 對話方塊，請按一下 [繼續])。  
   
 3.  巡覽至 **HKEY_LOCAL_MACHINE\System\CurrentControlSet\Control\Lsa\Kerberos\Parameters**。  
   

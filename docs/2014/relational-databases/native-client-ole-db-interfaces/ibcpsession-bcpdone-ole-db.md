@@ -1,13 +1,11 @@
 ---
-title: IBCPSession::BCPDone (OLE DB) |Microsoft 文件
+title: IBCPSession::BCPDone (OLE DB) |Microsoft Docs
 ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
@@ -18,15 +16,15 @@ helpviewer_keywords:
 - BCPDone method
 ms.assetid: 19cd6e55-432a-450e-a15c-54d50eb53dee
 caps.latest.revision: 26
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 099618fccdf11dba2acb56303e2fec2d7a496ab0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 50f7fe4d747692ff11ffa130bf48b88d3252c994
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36136626"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37420707"
 ---
 # <a name="ibcpsessionbcpdone-ole-db"></a>IBCPSession::BCPDone (OLE DB)
   認可要傳送至 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的其餘資料列。  
@@ -39,7 +37,7 @@ HRESULT BCPDone(void);
 ```  
   
 ## <a name="remarks"></a>備註  
- 沒有其他作業可上呼叫[IBCPSession](ibcpsession-ole-db.md)之後呼叫的介面**BCPDone**方法。 唯一的辦法就是呼叫[ibcpsession:: Bcpinit](ibcpsession-bcpinit-ole-db.md)方法以啟始新的大量複製作業。 這是類似於呼叫[irowsetfastload:: Commit](irowsetfastload-commit-ole-db.md)方法。  
+ 可呼叫任何其他作業[IBCPSession](ibcpsession-ole-db.md)之後呼叫的介面**BCPDone**方法。 唯一的辦法就是呼叫[ibcpsession:: Bcpinit](ibcpsession-bcpinit-ole-db.md) ; 方法來啟始新的大量複製作業。 這是類似於呼叫[irowsetfastload:: Commit](irowsetfastload-commit-ole-db.md)方法。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  S_OK  
@@ -49,7 +47,7 @@ HRESULT BCPDone(void);
  此方法的呼叫是非預期的。 例如， **BCPInit**方法不會呼叫這個方法之前呼叫。  
   
 ## <a name="example"></a>範例  
- 這個範例示範如何使用**IBCPSession**介面。  
+ 此範例示範如何使用**IBCPSession**介面。  
   
  在執行這個範例之前，必須先執行以下 [!INCLUDE[tsql](../../includes/tsql-md.md)]：  
   
@@ -67,7 +65,7 @@ insert into fltest values (4, 4, 0xFAD)
   
  您應該使用 BCP，透過下列命令將這份資料新增回資料表中：  
   
- **bcp master 資料庫...在 outfile.dat-n-T-S fltest** *伺服器*  
+ **bcp 主要...在 outfile.dat-n-T-S fltest** *伺服器*  
   
  編譯此範例時，將會需要指定 sqlncli11.lib。  
   

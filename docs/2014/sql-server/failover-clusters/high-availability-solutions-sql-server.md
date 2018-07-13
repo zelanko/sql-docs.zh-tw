@@ -5,10 +5,9 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - high availability [SQL Server], solutions
 - Database Engine [SQL Server], availability
@@ -17,15 +16,15 @@ helpviewer_keywords:
 - server availability [SQL Server]
 ms.assetid: b2eda634-0f8e-4703-801b-7ba895544ff5
 caps.latest.revision: 80
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 061606f86a28216e78409e6521c78cc301d4c738
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 9a6e16e57cf7d196f4210ea7a1624e5501f84523
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36146886"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37260002"
 ---
 # <a name="high-availability-solutions-sql-server"></a>高可用性解決方案 (SQL Server)
   本主題會介紹幾個可增進伺服器或資料庫可用性的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 高可用性解決方案。 高可用性解決方案可遮蔽硬體或軟體失敗所造成的影響，並維護應用程式的可用性，進而讓使用者的停機時間減至最少。  
@@ -38,12 +37,12 @@ ms.locfileid: "36146886"
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 提供幾個選項用於建立伺服器或資料庫的高可用性。 高可用性選項包括下列各項：  
   
  AlwaysOn 容錯移轉叢集執行個體  
- AlwaysOn 容錯移轉叢集執行個體是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] AlwaysOn 產品的一部分，會運用 Windows Server 容錯移轉叢集 (WSFC) 功能，透過伺服器執行個體層級 ( *「容錯移轉叢集執行個體」* (Failover Cluster Instance，FCI)) 的備援性提供本機高可用性。 FCI 是跨 Windows Server 容錯移轉叢集 (WSFC) 節點且可能跨多個子網路安裝的單一 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體。 在網路上，FCI 看似單一電腦上的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體，但是 FCI 提供容錯移轉，可以在目前的 WSFC 節點無法使用時，從該節點容錯移轉到另一個節點。  
+ AlwaysOn 容錯移轉叢集執行個體是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] AlwaysOn 供應項目的一部分，會運用 Windows Server 容錯移轉叢集 (WSFC) 功能，透過伺服器執行個體層級 ( *「容錯移轉叢集執行個體」* (Failover Cluster Instance，FCI)) 的備援性提供本機高可用性。 FCI 是跨 Windows Server 容錯移轉叢集 (WSFC) 節點且可能跨多個子網路安裝的單一 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體。 在網路上，FCI 看似單一電腦上的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體，但是 FCI 提供容錯移轉，可以在目前的 WSFC 節點無法使用時，從該節點容錯移轉到另一個節點。  
   
- 如需詳細資訊，請參閱[AlwaysOn 容錯移轉叢集執行個體 (SQL Server)](windows/always-on-failover-cluster-instances-sql-server.md)。  
+ 如需詳細資訊，請參閱 < [ AlwaysOn 容錯移轉叢集執行個體 (SQL Server)](windows/always-on-failover-cluster-instances-sql-server.md)。  
   
  [!INCLUDE[ssHADR](../../includes/sshadr-md.md)]  
- [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] 是 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 所導入的企業級高可用性災害復原方案，讓您可將一或多個使用者資料庫的可用性最大化。 [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] 要求 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體必須位於 Windows Server 容錯移轉叢集 (WSFC) 節點上。 如需詳細資訊，請參閱[AlwaysOn 可用性群組 (SQL Server)](../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md)。  
+ [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] 是 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 所導入的企業級高可用性災害復原方案，讓您可將一或多個使用者資料庫的可用性最大化。 [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] 要求 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體必須位於 Windows Server 容錯移轉叢集 (WSFC) 節點上。 如需詳細資訊，請參閱 < [ AlwaysOn 可用性群組 (SQL Server)](../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md)。  
   
 > [!NOTE]  
 >  FCI 可以利用 [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] 提供資料庫層級的遠端災害復原。 如需詳細資訊，請參閱[容錯移轉叢集和 AlwaysOn 可用性群組 &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/failover-clustering-and-always-on-availability-groups-sql-server.md)。  
@@ -70,6 +69,6 @@ ms.locfileid: "36146886"
 ## <a name="see-also"></a>另請參閱  
  [SQL Server 的 Windows Server 容錯移轉叢集 &#40;WSFC&#41;](windows/windows-server-failover-clustering-wsfc-with-sql-server.md)   
  [資料庫鏡像：互通性與共存性 &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-interoperability-and-coexistence-sql-server.md)   
- [SQL Server 2014 中已被取代的 Database Engine 功能](../../database-engine/deprecated-database-engine-features-in-sql-server-2016.md)  
+ [SQL Server 2014 中已淘汰的資料庫引擎功能](../../database-engine/deprecated-database-engine-features-in-sql-server-2016.md)  
   
   

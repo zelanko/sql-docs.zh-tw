@@ -1,13 +1,11 @@
 ---
-title: 資料表值參數 (ODBC) |Microsoft 文件
+title: 資料表值參數 (ODBC) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -15,24 +13,24 @@ helpviewer_keywords:
 - ODBC, table-valued parameters
 ms.assetid: ef06cd13-18e2-4c65-8ede-c3955d820e54
 caps.latest.revision: 28
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 955ae0daa3a2c15a5b1e6146c269c8d4095fb146
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: ce0cd9e87d4bd594fb2c2be4a01e9f2cf8ef4a27
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36135793"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37421787"
 ---
 # <a name="table-valued-parameters-odbc"></a>資料表值參數 (ODBC)
   ODBC 對資料表值參數的支援可讓用戶端應用程式有效率地將參數化資料傳送給伺服器，其方式是使用一個呼叫來傳送多個資料列給伺服器。  
   
- 在伺服器上資料表值參數的相關資訊，請參閱[使用資料表值參數&#40;Database Engine&#41;](../tables/use-table-valued-parameters-database-engine.md)。  
+ 如需資料表值參數在伺服器上的資訊，請參閱[使用資料表值參數&#40;資料庫引擎&#41;](../tables/use-table-valued-parameters-database-engine.md)。  
   
  在 ODBC 中，這是您可以將資料表值參數傳送給伺服器的兩種方式：  
   
--   所有資料表值參數資料可以在呼叫時 SQLExecDirect 或 SQLExecute 都是在記憶體中。 如果資料表值中有多個資料列，這些資料會儲存在陣列中。  
+-   SQLExecDirect 或 SQLExecute 呼叫時，所有資料表值參數資料可以都是在記憶體中。 如果資料表值中有多個資料列，這些資料會儲存在陣列中。  
   
 -   SQLExecDirect 或 SQLExecute 呼叫時，應用程式可以指定資料執行的是資料表值參數。 在此情況下，可以在批次中提供資料表值的資料列，或是一次一個來減少記憶體需求。  
   
@@ -68,7 +66,7 @@ ms.locfileid: "36135793"
  描述應用程式要如何針對預備好的程序呼叫取得中繼資料。  
   
  [其他資料表值參數中繼資料](additional-table-valued-parameter-metadata.md)  
- 描述如何使用 SQLProcedureColumns、 SQLTables 和 SQLColumns 來擷取資料表值參數的中繼資料。  
+ 描述如何使用 SQLProcedureColumns、 SQLTables 和 SQLColumns 擷取的資料表值參數的中繼資料。  
   
  [資料表值參數資料轉換及其他錯誤和警告](table-valued-parameter-data-conversion-and-other-errors-and-warnings.md)  
  描述如何處理有關資料表值參數資料行值的錯誤。  

@@ -1,13 +1,11 @@
 ---
-title: 大量複製 SELECT 結果集 (ODBC) |Microsoft 文件
+title: 大量複製 SELECT 結果集 (ODBC) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -16,15 +14,15 @@ helpviewer_keywords:
 - bulk copy [ODBC], about bulk copy
 ms.assetid: 63d5a87b-4d5f-449b-8c77-9f9cc6b190d4
 caps.latest.revision: 14
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: d2163634fa84fc299a10c2bd608ec0da8e7aa87b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: d537846035a35497404ec9a26557507b34d08a18
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36145602"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37428597"
 ---
 # <a name="bulk-copy-a-select-result-set-odbc"></a>大量複製 SELECT 結果集 (ODBC)
   此範例會示範如何使用大量複製函數來大量複製 SELECT 陳述式的結果集。 此範例是針對 ODBC 3.0 版或更新版本所開發。  
@@ -54,7 +52,7 @@ ms.locfileid: "36145602"
   
 6.  呼叫[bcp_exec](../../native-client-odbc-extensions-bulk-copy-functions/bcp-exec.md)以便執行大量複製作業。  
   
- 使用這些步驟時，檔案會以原生格式建立。 您也可以使用其他資料型別轉換的資料值[bcp_colfmt](../../native-client-odbc-extensions-bulk-copy-functions/bcp-colfmt.md)。 如需詳細資訊，請參閱[建立大量複製格式檔案&#40;ODBC&#41;](create-a-bulk-copy-format-file-odbc.md)。  
+ 使用這些步驟時，檔案會以原生格式建立。 您也可以使用其他資料型別轉換的資料值[bcp_colfmt](../../native-client-odbc-extensions-bulk-copy-functions/bcp-colfmt.md)。 如需詳細資訊，請參閱 <<c0> [ 建立大量複製格式檔案&#40;ODBC&#41;](create-a-bulk-copy-format-file-odbc.md)。</c0>  
   
 ## <a name="example"></a>範例  
  您需要名為 AdventureWorks 的 ODBC 資料來源，其預設資料庫為 AdventureWorks 範例資料庫  (您可以從 [Microsoft SQL Server Samples and Community Projects](http://go.microsoft.com/fwlink/?LinkID=85384) (Microsoft SQL Server 範例和社群專案) 首頁下載 AdventureWorks 範例資料庫)。此資料來源必須以作業系統提供的 ODBC 驅動程式為基礎 (驅動程式名稱為 "SQL Server")。 如果您要建立並執行此範例，當做 64 位元作業系統上的 32 位元應用程式，您必須利用 %windir%\SysWOW64\odbcad32.exe，以 ODBC 管理員身分建立 ODBC 資料來源。  
@@ -168,6 +166,6 @@ int main() {
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [大量複製與 SQL Server ODBC 驅動程式如何主題&#40;ODBC&#41;](bulk-copying-with-the-sql-server-odbc-driver-how-to-topics-odbc.md)  
+ [利用 SQL Server ODBC 驅動程式如何主題大量複製的&#40;ODBC&#41;](bulk-copying-with-the-sql-server-odbc-driver-how-to-topics-odbc.md)  
   
   

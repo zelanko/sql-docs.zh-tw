@@ -14,15 +14,15 @@ helpviewer_keywords:
 - custom report items, creating
 ms.assetid: 323fd58a-a462-4c48-b188-77ebc0b4212e
 caps.latest.revision: 37
-author: douglaslM
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 14ff967c6b21fbf4438db3c44d28eb86e9738281
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: 996e70b70e2cf253212baae972dd6caa6acdf7c1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36146898"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37149269"
 ---
 # <a name="creating-a-custom-report-item-design-time-component"></a>建立自訂報表項目設計階段元件
   自訂報表項目設計階段元件是可用於 Visual Studio 報表設計工具環境的控制項。 自訂報表項目設計階段元件提供啟動的設計介面，這個介面與 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 屬性瀏覽器相整合，可接受拖放作業，並能夠提供自訂屬性編輯器。  
@@ -189,7 +189,7 @@ private void OnProportionalScaling(object sender, EventArgs e)
 ```  
   
 ### <a name="using-adornments"></a>使用裝飾  
- 自訂報表項目類型也可以實作 `Microsoft.ReportDesigner.Design.Adornment` 類別。 透過裝飾，自訂報表項目控制項可以在設計介面的主要矩形之外提供區域。 這些區域可以處理使用者介面事件，例如按一下滑鼠和拖放作業等。 `Adornment`中定義的類別[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]`Microsoft.ReportDesigner`命名空間是傳遞實作<xref:System.Windows.Forms.Design.Behavior.Adorner>Windows Form 中找到的類別。 如需完整文件`Adorner`類別，請參閱[行為服務概觀](http://go.microsoft.com/fwlink/?LinkId=116673)MSDN library 中。 實作的範例程式碼`Microsoft.ReportDesigner.Design.Adornment`類別，請參閱[SQL Server Reporting Services 產品範例](http://go.microsoft.com/fwlink/?LinkId=177889)。  
+ 自訂報表項目類型也可以實作 `Microsoft.ReportDesigner.Design.Adornment` 類別。 透過裝飾，自訂報表項目控制項可以在設計介面的主要矩形之外提供區域。 這些區域可以處理使用者介面事件，例如按一下滑鼠和拖放作業等。 `Adornment`中所定義的類別[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]`Microsoft.ReportDesigner`命名空間是傳遞實作<xref:System.Windows.Forms.Design.Behavior.Adorner>Windows Form 中找到的類別。 如需完整的文件`Adorner`類別，請參閱[行為服務概觀](http://go.microsoft.com/fwlink/?LinkId=116673)MSDN library 中。 範例程式碼可實作`Microsoft.ReportDesigner.Design.Adornment`類別，請參閱[SQL Server Reporting Services 產品範例](http://go.microsoft.com/fwlink/?LinkId=177889)。  
   
  如需有關在 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 中進行程式開發和使用 Windows Form 的詳細資訊，請參閱 MSDN Library 中的下列主題：  
   

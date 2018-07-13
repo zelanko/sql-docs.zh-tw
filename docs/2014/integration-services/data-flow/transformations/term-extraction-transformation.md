@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.termextractiontrans.f1
 helpviewer_keywords:
@@ -28,13 +28,13 @@ ms.assetid: d0821526-1603-4ea6-8322-2d901568fbeb
 caps.latest.revision: 61
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 783e0909ceaab1d3a9636a60bd0ce27d7682dc05
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 97f88d8b585eca518edf3aebe25e38a79e38bf3b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36146111"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37229388"
 ---
 # <a name="term-extraction-transformation"></a>詞彙擷取轉換
   「詞彙擷取」轉換會從轉換輸入資料行的文字中擷取詞彙，然後將這些詞彙寫入轉換輸出資料行。 轉換只適用於英文字，它使用自己的英文字典和有關英文的語言資訊。  
@@ -48,7 +48,7 @@ ms.locfileid: "36146111"
   
  「詞彙擷取」轉換會為其擷取的每個詞彙產生一個分數。 此分數可以是 TFIDF 值或原始頻率，表示正規化詞彙在輸入中出現的次數。 在任何一種情況下，分數都會由大於 0 的實數來表示。 例如，TFIDF 分數可能是值 0.5，而頻率則可能是類似 1.0 或 2.0 的值。  
   
- 「詞彙擷取」轉換的輸出僅包含兩個資料行。 一個資料行包含擷取的詞彙，另一資料行則包含分數。 資料行的預設名稱為**詞彙**和`Score`。 因為輸入中的文字資料行可能包含多個詞彙，所以「詞彙擷取」轉換的輸出一般比輸入擁有更多的資料列。  
+ 「詞彙擷取」轉換的輸出僅包含兩個資料行。 一個資料行包含擷取的詞彙，另一資料行則包含分數。 資料行的預設名稱是**詞彙**和`Score`。 因為輸入中的文字資料行可能包含多個詞彙，所以「詞彙擷取」轉換的輸出一般比輸入擁有更多的資料列。  
   
  如果將擷取的詞彙寫入資料表，則它們可以被其他查閱轉換 (例如「詞彙查閱」、「模糊查閱」和「查閱」轉換) 使用。  
   

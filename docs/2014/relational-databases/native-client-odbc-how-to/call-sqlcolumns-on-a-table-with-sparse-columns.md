@@ -1,33 +1,31 @@
 ---
-title: 具有疏鬆資料行的資料表上呼叫 SQLColumns |Microsoft 文件
+title: 疏鬆資料行的資料表上呼叫 SQLColumns |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: afd35e13-2370-43c2-9cbc-f8da6248c39c
 caps.latest.revision: 5
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 22722cb697861bbf5b7b23e3e0d26fa65f5d7dc9
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 2fb641967c2bceae2e46429b99532b6ee69891b9
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36135790"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37428617"
 ---
 # <a name="call-sqlcolumns-on-a-table-with-sparse-columns"></a>在具有疏鬆資料行的資料表上呼叫 SQLColumns
   此範例會示範如何在已使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 中之 ODBC 定義疏鬆資料行的資料表上呼叫 SQLColumns。  
   
  此範例不適用於 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 之前的任何 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 版本。  
   
- 如需有關疏鬆資料行功能的詳細資訊，請參閱[SQL Server Native Client 中的疏鬆資料行支援](../native-client/features/sparse-columns-support-in-sql-server-native-client.md)。  
+ 如需疏鬆資料行功能的詳細資訊，請參閱[SQL Server Native Client 中的疏鬆資料行支援](../native-client/features/sparse-columns-support-in-sql-server-native-client.md)。  
   
 ## <a name="example"></a>範例  
  第一個清單是 C++ 原始程式碼。 請將 "MyServer" 變更為有效的伺服器名稱。 請確認您的 INCLUDE 環境變數包含的目錄內含 sqlncli.h。 如果您要建立並執行此範例，當做 64 位元作業系統上的 32 位元應用程式，您必須利用 %windir%\SysWOW64\odbcad32.exe，以 ODBC 管理員身分建立 ODBC 資料來源。  

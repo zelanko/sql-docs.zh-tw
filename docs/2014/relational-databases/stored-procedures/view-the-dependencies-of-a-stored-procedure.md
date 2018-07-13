@@ -3,31 +3,29 @@ title: 檢視預存程序的相依性 | Microsoft 文件
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
+ms.technology: stored-procedures
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-stored-procs
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - stored procedures [SQL Server], dependencies
 - displaying stored procedure dependencies
 - viewing stored procedure dependencies
 ms.assetid: 6ae0a369-1bc7-4ae4-be89-2b483697cd1f
-caps.latest.revision: 26
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 35064d11d699c1f7a89d879995f3c69f6cea44bd
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 7693ac696484bfb67df337232dd50822598f9c61
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36146464"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37149479"
 ---
 # <a name="view-the-dependencies-of-a-stored-procedure"></a>檢視預存程序的相依性
     
-##  <a name="Top"></a> 本主題描述如何檢視預存程序中的相依性[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]使用[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]或[!INCLUDE[tsql](../../includes/tsql-md.md)]。  
+##  <a name="Top"></a> 本主題描述如何檢視預存程序中的相依性[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]利用[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]或[!INCLUDE[tsql](../../includes/tsql-md.md)]。  
   
 -   **開始之前**  [安全性](#Security)  
   

@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - code [Reporting Services]
 - custom assemblies [Reporting Services], referencing
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - assemblies [Reporting Services], references
 ms.assetid: 0a03939e-48ce-4c30-b227-98533f2e0ccb
 caps.latest.revision: 42
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 0632dd0f7423e2569c5a95b1626f7c2abe635c4d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 93f77d928916628ecb3ed5d11d4da49a3c8e61d6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36145308"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37159949"
 ---
 # <a name="add-an-assembly-reference-to-a-report-ssrs"></a>將組件參考加入至報表 (SSRS)
   當您內嵌的自訂程式碼包含了不在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 或 <xref:System.Math> 中之 <xref:System.Convert>類別的參考時，您必須提供此報表的組件參考，好讓報表處理器可以解析名稱。 如需詳細資訊，請參閱[將程式碼加入至報表 &#40;SSRS&#41;](add-code-to-a-report-ssrs.md)。  
@@ -46,7 +46,7 @@ ms.locfileid: "36145308"
 5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
 ## <a name="see-also"></a>另請參閱  
- [報表中使用自訂組件](../custom-assemblies/using-custom-assemblies-with-reports.md)   
+ [與報表搭配使用自訂組件](../custom-assemblies/using-custom-assemblies-with-reports.md)   
  [報表屬性對話方塊、參考](../report-properties-dialog-box-references.md)  
   
   

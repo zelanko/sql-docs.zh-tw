@@ -1,5 +1,5 @@
 ---
-title: （MDS 增益集的 Excel） 在載入之前篩選資料 |Microsoft 文件
+title: （MDS 增益集適用於 Excel） 載入之前篩選資料 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,23 +8,23 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 9e30eae0-776b-4a09-aac3-0c0249d92ca5
 caps.latest.revision: 7
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 98cb43795b68a35aeb4b57dc3a70ab001ffbaf8a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: 56cec33d57fc78122bdae7fd6d64a774919b18f5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36147181"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37182902"
 ---
 # <a name="filter-data-before-loading-mds-add-in-for-excel"></a>在載入之前篩選資料 (適用於 Excel 的 MDS 增益集)
-  在[!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] [!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]，篩選資料，當您想要限制載入 Excel 的資料範圍的大小。  
+  在  [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] [!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]，篩選資料，當您想要限制載入 Excel 的資料範圍的大小。  
   
-## <a name="prerequisites"></a>必要條件  
+## <a name="prerequisites"></a>先決條件  
  若要執行此程序：  
   
 -   您必須擁有存取 **[總管]** 功能區域的權限。  
@@ -49,10 +49,10 @@ ms.locfileid: "36147181"
   
     > [!NOTE]  
     >  -   只有前 1 百萬個成員會載入 Excel 中。  
-    > -   在屬於受條件約束的清單 （網域屬性） 的資料行，會載入前 1000 個的值。  
+    > -   在條件約束之清單 （網域屬性） 的資料行，會載入前 1000 個的值。  
   
 ## <a name="next-steps"></a>後續步驟  
- [將資料從 Excel 到 MDS 發行&#40;MDS 增益集的 Excel&#41;](import-data-from-excel-to-master-data-services-mds-add-in-for-excel.md)  
+ [從 Excel 發行資料給 MDS &#40;MDS 增益集的 Excel&#41;](import-data-from-excel-to-master-data-services-mds-add-in-for-excel.md)  
   
 ## <a name="see-also"></a>另請參閱  
  [載入資料&#40;MDS 增益集的 Excel&#41;](overview-exporting-data-to-excel-mds-add-in-for-excel.md)   

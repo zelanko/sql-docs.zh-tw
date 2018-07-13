@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 topic_type:
 - apiref
 helpviewer_keywords:
 - Audit Database Object GDR event class
 ms.assetid: 2289aab5-e048-4288-bcae-aaf768ca014a
 caps.latest.revision: 35
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 6f3cb9e6b21ffe127b646e994ddd919b4d96b57c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 66375b0f9c4d42628ee1c41be121f7c99949e71f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36145637"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37158489"
 ---
 # <a name="audit-database-object-gdr-event-class"></a>Audit Database Object GDR 事件類別
   **Audit Server Object GDR** 事件類別會在對組件和結構描述等資料庫物件發出 GRANT、REVOKE 或 DENY 時發生。  
@@ -59,7 +59,7 @@ ms.locfileid: "36145637"
 |**TargetLoginName**|**nvarchar**|對於目標為登入的動作 (例如，加入新登入)，這是目標登入的名稱。|42|是|  
 |**TargetLoginSid**|**image**|對於目標為登入的動作 (例如，加入新登入)，這是目標登入的安全性識別碼 (SID)。|43|是|  
 |**TargetUserName**|**nvarchar**|對於目標為資料庫使用者的動作 (例如，授與使用者權限)，這是該使用者的名稱。|39|是|  
-|**TextData**|**ntext**|與追蹤中所擷取的事件類別有關的文字值。|@shouldalert|是|  
+|**TextData**|**ntext**|與追蹤中所擷取的事件類別有關的文字值。|1|是|  
 |**TransactionID**|**bigint**|由系統指派給交易的識別碼。|4|是|  
 |**XactSequence**|**bigint**|用來描述目前交易的 Token。|50|是|  
   

@@ -1,5 +1,5 @@
 ---
-title: 建立中央管理伺服器和伺服器群組 (SQL Server Management Studio) |Microsoft 文件
+title: 建立中央管理伺服器和伺服器群組 (SQL Server Management Studio) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - configuration server
 ms.assetid: da265482-3953-440a-ac23-0ab7e42a55eb
 caps.latest.revision: 35
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 3745e0e6c7f6c82978c388e604e63edf6b9b4943
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: f04472c8c512f9898ceb5b79dd2a6e056f0f00e4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36146870"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37153649"
 ---
 # <a name="create-a-central-management-server-and-server-group-sql-server-management-studio"></a>建立中央管理伺服器與伺服器群組 (SQL Server Management Studio)
   本主題描述如何使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 將 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 執行個體指定為 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中的中央管理伺服器。 中央管理伺服器會儲存組織成一個或多個中央管理伺服器群組的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體清單。 使用中央管理伺服器群組所採取的動作將會在伺服器群組中的所有伺服器上運作。 這包括使用 [物件總管] 來連接至伺服器，以及同時在多部伺服器上執行 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式和以原則為基礎的管理原則。  

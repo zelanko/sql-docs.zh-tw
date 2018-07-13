@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 99ebb4dc-41cc-42ac-82dd-a2b0e31155a0
 caps.latest.revision: 7
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 66738f617a6b882e1b72c526fb66aad5f438f969
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: c4b2c799771c6ff5e87100e4906411b4a8a613bb
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36146244"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37240398"
 ---
 # <a name="rendering-report-items-report-builder-and-ssrs"></a>Rendering Report Items (Report Builder and SSRS)
   報表項目的數目、大小和位置會影響轉譯器為報表主體分頁的方式。 下列是如何轉譯各種報表項目的描述。  
@@ -81,11 +81,11 @@ ms.locfileid: "36146244"
   
 -   重複的資料行標頭和資料列標頭。  
   
-     頁首優先於頁尾。 內部重複的群組優先於外部群組。 項目`RepeatWith`近與目標資料區域的設定屬性的優先順序高於資料區域較遠的項目。  
+     頁首優先於頁尾。 內部重複的群組優先於外部群組。 項目`RepeatWith`屬性設定較接近目標資料區域的優先順序會高於與資料區域較遠的項目。  
   
--   小型報表項目，例如文字方塊或矩形，具有明確的 KeepTogether 屬性設定為`true`。  
+-   小型報表項目，例如文字方塊或矩形，明確的 KeepTogether 屬性設定為`true`。  
   
--   大型報表項目，例如子報表或非最內部的 tablix 成員，具有明確的 KeepTogether 屬性設定為`true`。  
+-   大型報表項目，例如子報表或非最內部的 tablix 成員，使用明確的 KeepTogether 屬性設定為`true`。  
   
 -   Tablix 資料區，其明確的 KeepTogether 屬性設定為`true`。  
   
@@ -111,7 +111,7 @@ ms.locfileid: "36146244"
 ## <a name="see-also"></a>另請參閱  
  [Reporting Services 中的分頁 &#40;報表產生器及 SSRS&#41;](pagination-in-reporting-services-report-builder-and-ssrs.md)   
  [轉譯行為 &#40;報表產生器及 SSRS&#41;](rendering-behaviors-report-builder-and-ssrs.md)   
- [不同報表轉譯延伸模組的互動式功能&#40;報表產生器和 SSRS&#41;](../report-builder/interactive-functionality-different-report-rendering-extensions.md)   
+ [不同報表轉譯延伸模組的互動式功能&#40;報表產生器及 SSRS&#41;](../report-builder/interactive-functionality-different-report-rendering-extensions.md)   
  [清單 &#40;報表產生器及 SSRS&#41;](tables-matrices-and-lists-report-builder-and-ssrs.md)  
   
   

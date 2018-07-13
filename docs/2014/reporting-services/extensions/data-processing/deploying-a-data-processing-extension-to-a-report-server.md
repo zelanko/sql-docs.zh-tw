@@ -15,15 +15,15 @@ helpviewer_keywords:
 - assemblies [Reporting Services], data processing extension deployments
 ms.assetid: e00dface-70f8-434b-9763-8ebee18737d2
 caps.latest.revision: 44
-author: douglaslM
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 87409bbf8d057e30b458f79b4746e7048e51f363
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: 47092d05e9908e68722dbebea88e110f58170000
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36145795"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37160069"
 ---
 # <a name="how-to-deploy-a-data-processing-extension-to-a-report-server"></a>如何：將資料處理延伸模組部署到報表伺服器
   報表伺服器使用資料處理延伸模組來擷取和處理轉譯報表中的資料。 您應該將資料處理延伸模組組件部署到報表伺服器做為私人組件， 也需要在報表伺服器組態檔 RSReportServer.config 中建立項目。  

@@ -5,23 +5,22 @@ ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - 41030 (Database Engine error)
 ms.assetid: c85341ae-0fbf-42ae-9275-4cfe678238f0
 caps.latest.revision: 6
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 7a823405ff23184459a7057aae61267754d6a3aa
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 7f3514eea0d71d55332b4bfbdd4d3ee5fa08c702
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36145411"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37408858"
 ---
 # <a name="mssqlserver41030"></a>MSSQLSERVER_41030
     

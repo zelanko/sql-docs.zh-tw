@@ -1,28 +1,27 @@
 ---
-title: 允許資料庫鏡像端點使用 Windows 驗證 (SQL Server) 的網路存取 |Microsoft 文件
+title: 允許網路存取權的資料庫鏡像端點使用 Windows 驗證 (SQL Server) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Windows authentication [SQL Server]
 - database mirroring [SQL Server], security
 ms.assetid: 28c8fec5-5feb-4c84-8d72-f2bd1ae3b40d
 caps.latest.revision: 31
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 6c90fa8939477edcbc91aab6b9a1d7cca4d73941
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 29b1cdaeae798a73455df2d99046f3564abd0db6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36146364"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37157099"
 ---
 # <a name="allow-network-access-to-a-database-mirroring-endpoint-using-windows-authentication-sql-server"></a>使用 Windows 驗證允許資料庫鏡像的網路存取 (SQL Server)
   若要將 Windows 驗證用於連接兩個 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 執行個體的資料庫鏡像端點，在下列狀況下，需要手動設定登入帳戶：  

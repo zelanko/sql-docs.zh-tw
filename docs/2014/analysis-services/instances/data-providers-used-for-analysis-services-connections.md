@@ -1,5 +1,5 @@
 ---
-title: 用於 Analysis Services 連接的資料提供者 |Microsoft 文件
+title: 用於 Analysis Services 連接的資料提供者 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,23 +8,23 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 128f6dde-409d-4c12-9820-3305bab57b75
 caps.latest.revision: 12
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 7eb84d1a796268414c7f28e3c46e8a3de6cd295e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 357849f815fcdd8310d7056caa2f199d70675e64
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36147054"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37157199"
 ---
 # <a name="data-providers-used-for-analysis-services-connections"></a>用於 Analysis Services 連接的資料提供者
   Analysis Services 會為伺服器和資料存取提供三個資料提供者。 所有連接到 Analysis Services 的應用程式都會使用其中一個提供者來進行存取。 其中兩個提供者 ADOMD.NET 和 Analysis Services 管理物件 (AMO) 為 Managed 資料提供者。 Analysis Services OLE DB 提供者 (MSOLAP DLL) 是原生資料提供者。  
   
- 如果組織執行多個 Analysis Services 版本，您可能需要在連接至 Analysis Services 資料的使用者工作站上安裝較新版本的資料提供者。 若要連接至較新版本的 Analysis Services，您必須使用同一個主要版本的資料提供者。 例如，若要連接到[!INCLUDE[ssASCurrent](../../includes/ssascurrent-md.md)]，每一個工作站都必須有 2014年版的資料提供者。 儘管 Excel 會安裝其進行連接所需的資料提供者，但是該提供者可能比您所使用的 Analysis Services 執行個體還要舊。  
+ 如果組織執行多個 Analysis Services 版本，您可能需要在連接至 Analysis Services 資料的使用者工作站上安裝較新版本的資料提供者。 若要連接至較新版本的 Analysis Services，您必須使用同一個主要版本的資料提供者。 例如，若要連接到[!INCLUDE[ssASCurrent](../../includes/ssascurrent-md.md)]，每一個工作站都必須有 2014年版本的資料提供者。 儘管 Excel 會安裝其進行連接所需的資料提供者，但是該提供者可能比您所使用的 Analysis Services 執行個體還要舊。  
   
  本主題包含下列各節：  
   
@@ -45,7 +45,7 @@ ms.locfileid: "36147054"
   
 -   在 SQL Server Management Studio 中，連接到 Analysis Services 執行個體。 以滑鼠右鍵按一下您想要檢查，指向 執行的個體**報表**，然後按一下**一般**。 版次和版本組建資訊隨即出現在報表中。  
   
- 主要組建編號的初始版本[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]為 12.0.2000.9。  
+ 主要組建編號的最初發行版本[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]為 12.0.2000.9。  
   
  如需有關版本與組建資訊取得方式的詳細資訊，請參閱＜ [如何判斷 SQL Server 的版本及其元件](http://support.microsoft.com/kb/321185)＞。  
   
@@ -58,7 +58,7 @@ ms.locfileid: "36147054"
   
 1.  移至 \Program Files\Microsoft Analysis Services\AS OLEDB\120。  
   
-2.  以滑鼠右鍵按一下 msolap120.dll，按一下 **屬性**。  
+2.  以滑鼠右鍵按一下 msolap120.dll，然後按一下 **屬性**。  
   
  如果您在此位置找不到該檔案，或是資料夾路徑包含 AS OLEDB\110 或 AS OLEDB\90，表示您目前使用的是舊版程式庫，必須安裝較新版本 (AS OLEDB\11) 才能連接至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。  
   
@@ -90,7 +90,7 @@ ms.locfileid: "36147054"
   
  MSOLAP130.dll 是 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]隨附的 Analysis Services OLE DB 提供者版本。 其他最近的舊版本包括 MSOLAP10.dll (適用於 SQL Server 2008 和 2008 R2) 以及 MSOLAP90.dll (適用於 SQL Server 2005)。  
   
- 連接字串中經常要指定 OLE DB 提供者。 Analysis Services 連接字串使用不同的命名法來參考的 OLE DB 提供者： MSOLAP。\<版本 >.dll  
+ 連接字串中經常要指定 OLE DB 提供者。 Analysis Services 連接字串使用不同的命名法來指稱 OLE DB 提供者： MSOLAP。\<版本 >.dll  
   
  MSOLAP.5.dll 是目前和 Excel 2013 搭配安裝的 Analysis Services OLE DB 提供者。 較舊的版本如 MSOLAP.4.dll 或 MSOLAP.3.dll 則通常會在執行舊版 Excel 的工作站上找到。 部分 Analysis Services 功能 (例如 PowerPivot 增益集) 需要特定版本的 OLE DB 提供者。 如需詳細資訊，請參閱[連接字串屬性 &#40;Analysis Services&#41;](connection-string-properties-analysis-services.md)。  
   
@@ -110,7 +110,7 @@ ms.locfileid: "36147054"
   
  AMO 是由 SQL Server 安裝程式所安裝，SQL Server 用戶端應用程式會用它來連接 Analysis Services。 您也可以在透過自訂程式碼使用 AMO 時手動下載及安裝此程式庫 (請參閱本主題中的 [如何判斷 Analysis Services 資料提供者版本](#bkmk_LibUpdate) )。 您可以在全域組件快取 (如 `Microsoft.AnalysisServices`) 中找到 AMO。  
   
- 使用 AMO 的連接很小，包含 「 資料來源 =\<伺服器名稱 >"。 建立連接之後，您將使用 API 處理資料庫集合與主要物件。 SSDT 和 SSMS 都是使用 AMO 連接到 Analysis Services 執行個體。  
+ 使用 AMO 的連接是通常最簡短，其中包含 「 資料來源 =\<伺服器名稱 >"。 建立連接之後，您將使用 API 處理資料庫集合與主要物件。 SSDT 和 SSMS 都是使用 AMO 連接到 Analysis Services 執行個體。  
   
  如需有關以程式設計方式連接的詳細資訊，請參閱＜ [Programming AMO Fundamental Objects](../multidimensional-models/analysis-management-objects/programming-amo-fundamental-objects.md)＞。  
   

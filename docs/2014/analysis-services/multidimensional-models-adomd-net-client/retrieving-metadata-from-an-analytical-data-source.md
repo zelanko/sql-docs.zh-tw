@@ -1,5 +1,5 @@
 ---
-title: 從分析資料來源擷取中繼資料 |Microsoft 文件
+title: 從分析資料來源擷取中繼資料 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,15 +15,15 @@ helpviewer_keywords:
 - retrieving metadata
 ms.assetid: 00043ebd-7164-4ceb-b945-6e44378ea00a
 caps.latest.revision: 37
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 3a49a4ddc8687cd2e0cfdd47e4025e9bc51eefe6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 2beb806c4a76aa3ac6062f8e6ae0e44c007520ae
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36146634"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37151669"
 ---
 # <a name="retrieving-metadata-from-an-analytical-data-source"></a>從分析資料來源擷取中繼資料
   中繼資料對於擷取和使用分析資料的應用程式很重要。 當從關聯式資料來源擷取資料時，這種資料的維度性是可預測的，甚至是具有巢狀資料集的。 關聯式資料庫的結果集在結構上通常是二維或是純量。 不過，從分析資料來源擷取的資料有可能是可變的維度性、有組織且可能有很深的階層。  

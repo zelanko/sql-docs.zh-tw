@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.rtp.rptdesigner.shared.visibility.f1
 - "10503"
 ms.assetid: 9d78f8de-959b-456f-8947-687fa6e2ba91
 caps.latest.revision: 7
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 00a8cfca7eff3a46e9276a36a9dbd803fa6f0cc7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 94291419e279c497b7d54c0d566caaaab45758c6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36145468"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37163817"
 ---
 # <a name="hide-an-item-report-builder-and-ssrs"></a>隱藏項目 (報表產生器及 SSRS)
   當您想要有條件地根據報表參數或是您所指定的某些其他運算式來隱藏項目時，請設定報表項目的可見性。  
@@ -74,7 +74,7 @@ ms.locfileid: "36145468"
 3.  在 **[資料行可見性]** 對話方塊中，遵循第一個程序中的步驟 3 和 4。  
   
 ## <a name="see-also"></a>另請參閱  
- [向下鑽研動作&#40;報表產生器和 SSRS&#41;](../report-design/drilldown-action-report-builder-and-ssrs.md)   
+ [向下鑽研動作&#40;報表產生器及 SSRS&#41;](../report-design/drilldown-action-report-builder-and-ssrs.md)   
  [將展開或摺疊動作新增至項目中 &#40;報表產生器及 SSRS&#41;](../report-design/add-an-expand-or-collapse-action-to-an-item-report-builder-and-ssrs.md)   
  [運算式範例 &#40;報表產生器及 SSRS&#41;](../report-design/expression-examples-report-builder-and-ssrs.md)  
   

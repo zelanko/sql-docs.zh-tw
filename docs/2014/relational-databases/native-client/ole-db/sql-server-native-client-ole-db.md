@@ -1,13 +1,11 @@
 ---
-title: SQL Server Native Client (OLE DB) |Microsoft 文件
+title: SQL Server Native Client (OLE DB) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -20,15 +18,15 @@ helpviewer_keywords:
 - SQL Server Native Client, OLE DB
 ms.assetid: da846da4-ec19-4a4f-81fb-7d5a2b2bf80a
 caps.latest.revision: 42
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: ca0af6320fe3af480320be459aac18bdb231aa45
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 93db24cf78e2b9f545c90129c088419543045b3b
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36137278"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37413309"
 ---
 # <a name="sql-server-native-client-ole-db"></a>SQL Server Native Client (OLE DB)
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者是用於存取資料的低階 COM API。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 建議將 Native Client OLE DB 提供者用於開發工具、公用程式或需要高效能的低階元件。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者是原生、高效能的提供者，會直接存取 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 表格式資料流 (TDS) 通訊協定。  
@@ -59,7 +57,7 @@ ms.locfileid: "36137278"
   
 -   [資料表值參數&#40;OLE DB&#41;](../../native-client-ole-db-table-valued-parameters/table-valued-parameters-ole-db.md)  
   
--   [日期和時間增強功能&#40;OLE DB&#41;](../../native-client-ole-db-date-time/date-and-time-improvements-ole-db.md)  
+-   [日期和時間改善&#40;OLE DB&#41;](../../native-client-ole-db-date-time/date-and-time-improvements-ole-db.md)  
   
 -   [大型 CLR 使用者定義型別&#40;OLE DB&#41;](large-clr-user-defined-types-ole-db.md)  
   
@@ -69,7 +67,7 @@ ms.locfileid: "36137278"
   
 -   [錯誤](../../native-client-ole-db-errors/errors.md)  
   
--   [服務主要名稱&#40;Spn&#41;用戶端連接中&#40;OLE DB&#41;](service-principal-names-spns-in-client-connections-ole-db.md)  
+-   [服務主體名稱&#40;Spn&#41;用戶端連接中&#40;OLE DB&#41;](service-principal-names-spns-in-client-connections-ole-db.md)  
   
 -   [疏鬆資料行支援&#40;OLE DB&#41;](sparse-columns-support-ole-db.md)  
   

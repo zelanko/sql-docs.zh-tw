@@ -1,5 +1,5 @@
 ---
-title: SysPrep 安裝 SQL Server 2014 使用 |Microsoft 文件
+title: SQL Server 2014 使用 SysPrep 安裝 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 11f4ed8a-aaa9-417b-bdd5-204f551c6bb6
 caps.latest.revision: 28
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 2534337a9b1d4d244ade4f76c9bb08b6af1c573a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 7be73952adef9269f9cf3811c8c4aa6fe3696403
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36146382"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37239748"
 ---
 # <a name="install-sql-server-2014-using-sysprep"></a>使用 SysPrep 安裝 SQL Server 2014
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SysPrep 相關的安裝動作可以透過安裝中心來存取。 **[安裝中心]** 的 **[進階]** 頁面包含兩個選項 - 準備 **獨立執行個體的映像[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** 及 完成備妥的 **獨立執行個體的映像[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**。 [準備](#prepare) 和 [完成](#complete) 章節會詳細說明安裝程序。 如需詳細資訊，請參閱＜ [Considerations for Installing SQL Server Using SysPrep](considerations-for-installing-sql-server-using-sysprep.md)＞。  
@@ -28,12 +28,12 @@ ms.locfileid: "36146382"
   
 -   [從命令提示字元安裝 SQL Server 2014](install-sql-server-from-the-command-prompt.md)  
   
--   [安裝 SQL Server 2014 使用組態檔](install-sql-server-using-a-configuration-file.md)  
+-   [使用設定檔安裝 SQL Server 2014](install-sql-server-using-a-configuration-file.md)  
   
-## <a name="prerequisites"></a>必要條件  
+## <a name="prerequisites"></a>先決條件  
  在安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]之前，請檢閱 [規劃 SQL Server 安裝](../../sql-server/install/planning-a-sql-server-installation.md)中的主題。  
   
- 如需有關[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]版本及硬體和軟體需求，請參閱[硬體和軟體需求，安裝 SQL Server 2014](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)。  
+ 如需詳細資訊[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]版本及硬體和軟體需求，請參閱[硬體和軟體需求，安裝 SQL Server 2014](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)。  
   
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SysPrep 不支援下列項目：  
@@ -127,7 +127,7 @@ ms.locfileid: "36146382"
     |-|-|  
     |[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] SysPrep|[!INCLUDE[ssDE](../../includes/ssde-md.md)]<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 複寫<br /><br /> 全文檢索功能<br /><br /> Data Quality Services<br /><br /> [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 原生模式<br /><br /> [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]<br /><br /> 可轉散發功能<br /><br /> 共用功能|  
   
-     當您反白顯示功能名稱之後，每一個元件群組的描述就會出現在右窗格中。 您可以選取核取方塊的任何組合。 如需詳細資訊，請參閱[版本和 SQL Server 2014 元件](../../sql-server/editions-and-components-of-sql-server-2016.md)和[支援的 SQL Server 2014 的版本功能](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)。  
+     當您反白顯示功能名稱之後，每一個元件群組的描述就會出現在右窗格中。 您可以選取核取方塊的任何組合。 如需詳細資訊，請參閱 <<c0> [ 版本和 SQL Server 2014 元件](../../sql-server/editions-and-components-of-sql-server-2016.md)並[支援的 SQL Server 2014 的版本功能](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)。  
   
      右窗格會顯示選取功能的必要條件。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝程式將會在這個程序稍後說明的安裝步驟期間安裝尚未安裝的必要條件。  
   
@@ -169,7 +169,7 @@ ms.locfileid: "36146382"
   
 4.  系統組態檢查將會先確認電腦的系統狀態，然後安裝程式才會繼續進行。 檢查完成之後，請按 **[下一步]** 繼續進行。 您可以按一下 **[顯示詳細資料]** 在畫面上檢視詳細資料，或是按一下 **[檢視詳細資料報表]** 來以 HTML 報表形式檢視詳細資料。  
   
-5.  在 **[產品金鑰]** 頁面上，選取選項按鈕，指出您要安裝免費的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]版本，或具有 PID 金鑰之產品的實際執行版本。 如需詳細資訊，請參閱[版本和 SQL Server 2014 元件](../../sql-server/editions-and-components-of-sql-server-2016.md)。 如果您要安裝 Evaluation Edition，180 天的試用期會在您完成這個步驟之後開始。  
+5.  在 **[產品金鑰]** 頁面上，選取選項按鈕，指出您要安裝免費的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]版本，或具有 PID 金鑰之產品的實際執行版本。 如需詳細資訊，請參閱 <<c0> [ 版本和 SQL Server 2014 元件](../../sql-server/editions-and-components-of-sql-server-2016.md)。 如果您要安裝 Evaluation Edition，180 天的試用期會在您完成這個步驟之後開始。  
   
 6.  在 **[授權條款]** 頁面上，閱讀授權條款，然後選取要接受授權條款和條件的核取方塊。 若要協助提升 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，您也可以啟用功能使用方式選項，並傳送報告給 [!INCLUDE[msCoName](../../includes/msconame-md.md)]。  
   
@@ -180,7 +180,7 @@ ms.locfileid: "36146382"
 8.  在 **[功能檢閱]** 頁面上，您將會在準備步驟期間看到安裝所包含的選定功能和元件。 如果您想要將更多功能加入至已備妥之執行個體中並未包含的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體，您必須先完成這個步驟，才能完成 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體，然後從 **[安裝中心]** 上的 **[加入功能]** 來加入功能。  
   
     > [!NOTE]  
-    >  您可以加入您所安裝之產品版本的可用功能。 如需詳細資訊，請參閱[支援的 SQL Server 2014 版本的功能](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)  
+    >  您可以加入您所安裝之產品版本的可用功能。 如需詳細資訊，請參閱[支援的 SQL Server 2014 的版本功能](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)  
   
 9. 在 [執行個體組態] 頁面上，指定已備妥之執行個體的執行個體名稱。 這就是當您完成 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]組態之後的執行個體名稱。 按 **[下一步]** ，繼續進行。  
   
@@ -210,9 +210,9 @@ ms.locfileid: "36146382"
   
     -   安全性模式 - 為 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體選取 Windows 驗證或混合模式驗證。 如果您選取混合模式驗證，就必須為內建 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 系統管理員帳戶提供增強式密碼。  
   
-         當裝置與 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]建立成功的連接之後，Windows 驗證和混合模式的安全性機制是相同的。 如需詳細資訊，請參閱[Database Engine 組態-帳戶提供](../../sql-server/install/database-engine-configuration-account-provisioning.md)。  
+         當裝置與 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]建立成功的連接之後，Windows 驗證和混合模式的安全性機制是相同的。 如需詳細資訊，請參閱 < [Database Engine 組態-帳戶佈建](../../sql-server/install/database-engine-configuration-account-provisioning.md)。  
   
-    -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 管理員 - 您在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體上至少必須指定一個系統管理員。 若要加入 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝程式執行所用的帳戶，請按一下 **[加入目前使用者]**。 若要從系統管理員清單中加入或移除帳戶，請按一下 **[加入]** 或 **[移除]**，然後編輯在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體中將會有管理員權限的使用者、群組或電腦清單。 如需詳細資訊，請參閱[Database Engine 組態-帳戶提供](../../sql-server/install/database-engine-configuration-account-provisioning.md)。  
+    -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 管理員 - 您在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體上至少必須指定一個系統管理員。 若要加入 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝程式執行所用的帳戶，請按一下 **[加入目前使用者]**。 若要從系統管理員清單中加入或移除帳戶，請按一下 **[加入]** 或 **[移除]**，然後編輯在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體中將會有管理員權限的使用者、群組或電腦清單。 如需詳細資訊，請參閱 < [Database Engine 組態-帳戶佈建](../../sql-server/install/database-engine-configuration-account-provisioning.md)。  
   
      當您完成清單的編輯之後，請按一下 **[確定]**。 然後，在組態對話方塊中確認管理員的清單。 當此清單完成時，請按 **[下一步]**。  
   
@@ -322,7 +322,7 @@ ms.locfileid: "36146382"
 ##  <a name="bk_Modifying_Uninstalling"></a> 修改或解除安裝已完成的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體。  
  加入或移除功能或解除安裝已完成之 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的程序，類似於已安裝之 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體的程序。 如需詳細資訊，請參閱下列主題：  
   
--   [將功能加入至 SQL Server 2014 執行個體&#40;安裝程式&#41;](add-features-to-an-instance-of-sql-server-setup.md)  
+-   [將功能加入至 SQL Server 2014 執行個體的&#40;安裝程式&#41;](add-features-to-an-instance-of-sql-server-setup.md)  
   
 -   [解除安裝現有的 SQL Server 執行個體 &#40;安裝程式&#41;](../../sql-server/install/uninstall-an-existing-instance-of-sql-server-setup.md)  
   

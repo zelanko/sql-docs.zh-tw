@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - viewing server properties
 - server properties [SQL Server]
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - servers [SQL Server], viewing
 ms.assetid: 55f3ac04-5626-4ad2-96bd-a1f1b079659d
 caps.latest.revision: 32
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 61db0b7975ba948e139eb8e78ef14baab11bd9a7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 15463850f20ac660c6ef23f5df6c5c6ed14c267a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36145915"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37182915"
 ---
 # <a name="view-or-change-server-properties-sql-server"></a>檢視或變更伺服器屬性 (SQL Server)
   本主題描述如何使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]或 SQL Server 組態管理員檢視或變更 [!INCLUDE[tsql](../../includes/tsql-md.md)]執行個體的屬性。  
@@ -63,7 +63,7 @@ ms.locfileid: "36145915"
 ####  <a name="Permissions"></a> 權限  
  如需詳細資訊，請參閱 [伺服器層級角色](../../relational-databases/security/authentication-access/server-level-roles.md)。  
   
- 執行權限`sp_configure`不含任何參數，或只含第一個參數預設會授與所有使用者。 若要執行`sp_configure`這兩個參數來變更組態選項或執行 RECONFIGURE 陳述式中，使用者必須授與 ALTER SETTINGS 伺服器層級權限。 **系統管理員 (sysadmin)** 及 **serveradmin** 固定伺服器角色會隱含 ALTER SETTINGS 權限。  
+ 執行權限`sp_configure`不含參數或只含第一個參數預設會授與給所有使用者。 若要執行`sp_configure`兩個參數來變更組態選項或執行 RECONFIGURE 陳述式，使用者必須取得 ALTER SETTINGS 伺服器層級權限。 **系統管理員 (sysadmin)** 及 **serveradmin** 固定伺服器角色會隱含 ALTER SETTINGS 權限。  
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
   

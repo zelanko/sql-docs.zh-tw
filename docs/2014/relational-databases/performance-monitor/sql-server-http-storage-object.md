@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: ae849f79-c581-42a5-a5cc-0a9ebea171b9
 caps.latest.revision: 4
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 84ba27202f0a1d95810d80d474b9db91dfa4201a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: da3d1374fb0a1cf3e283129a24a8638867499e32
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36145837"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37158269"
 ---
 # <a name="sql-server-httpstorageobject"></a>SQL Server：HTTP_STORAGE_OBJECT
-  **SQLServer:HTTP_STORAGE_OBJECT** 效能物件包含監視 Windows Azure 儲存體帳戶的效能計數器。 使用[Windows Azure 中的 SQL Server 資料檔案](../databases/sql-server-data-files-in-microsoft-azure.md)功能，您可以將資料庫檔案儲存在 Windows Azure 儲存體 Blob。 這個效能物件會將每個 Windows Azure 儲存體帳戶視為不同的磁碟機。  
+  **SQLServer:HTTP_STORAGE_OBJECT** 效能物件包含監視 Windows Azure 儲存體帳戶的效能計數器。 使用[在 Windows Azure 中的 SQL Server 資料檔案](../databases/sql-server-data-files-in-microsoft-azure.md)功能，您可以將資料庫檔案儲存在 Windows Azure 儲存體 Blob 中。 這個效能物件會將每個 Windows Azure 儲存體帳戶視為不同的磁碟機。  
   
 |計數器名稱|描述|  
 |------------------|-----------------|  

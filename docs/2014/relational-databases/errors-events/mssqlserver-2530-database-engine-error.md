@@ -5,21 +5,20 @@ ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 5d4be07a-38a5-4b25-819c-4dcb4636cc15
 caps.latest.revision: 11
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: ccf0b157984cce59ceff84fcff0c25a2f708e26f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 2bd6d32cc73171415294b169e26912bf641eb88c
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36145631"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37428357"
 ---
 # <a name="mssqlserver2530"></a>MSSQLSERVER_2530
     
@@ -50,7 +49,7 @@ ms.locfileid: "36145631"
 2.  請重新執行 DBCC 陳述式。  
   
 ## <a name="see-also"></a>另請參閱  
- [啟用索引與條件約束](../indexes/enable-indexes-and-constraints.md)   
+ [啟用索引和條件約束](../indexes/enable-indexes-and-constraints.md)   
  [ALTER INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-index-transact-sql)   
  [CREATE INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-index-transact-sql)   
  [DBCC DBREINDEX &#40;Transact-SQL&#41;](/sql/t-sql/database-console-commands/dbcc-dbreindex-transact-sql)  

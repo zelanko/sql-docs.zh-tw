@@ -1,13 +1,11 @@
 ---
-title: 執行預存程序 |Microsoft 文件
+title: 執行預存程序 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -17,15 +15,15 @@ helpviewer_keywords:
 - stored procedures [ODBC], executing
 ms.assetid: 866b6dd3-2acd-4dfb-aeca-a0352b2d4c6a
 caps.latest.revision: 35
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 02fa416b3c472179dbf5801a0b06406309db6b61
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 5275dca79f7519a64b2ace936e5f91a6961819fd
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36136629"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37426357"
 ---
 # <a name="running-stored-procedures"></a>執行預存程序
   預存程序是一種儲存在資料庫中的可執行物件。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支援：  
@@ -60,7 +58,7 @@ ms.locfileid: "36136629"
   
      擴充預存程序可以使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式中未提供的 C 和 C++ 功能。  
   
-     如需如何呼叫預存程序的範例，請參閱[處理傳回碼和輸出參數&#40;ODBC&#41;](../native-client-odbc-how-to/running-stored-procedures-process-return-codes-and-output-parameters.md)。  
+     如需如何呼叫預存程序的範例，請參閱 <<c0> [ 程序傳回碼和輸出參數&#40;ODBC&#41;](../native-client-odbc-how-to/running-stored-procedures-process-return-codes-and-output-parameters.md)。</c0>  
   
 ## <a name="in-this-section"></a>本節內容  
   

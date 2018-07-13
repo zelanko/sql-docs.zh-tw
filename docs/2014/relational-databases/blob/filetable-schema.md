@@ -3,25 +3,23 @@ title: FileTable 結構描述 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
+ms.technology: filestream
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-blob
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - FileTables [SQL Server], table schema
 ms.assetid: e1cb3880-cfda-40ac-91fc-d08998287f44
-caps.latest.revision: 7
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 8515d78ddab2dd39e223087a44b0e021a5aca439
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 67578dadba93af562732a6e0152e13a3c180195d
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36146973"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37425027"
 ---
 # <a name="filetable-schema"></a>FileTable 結構描述
   描述 FileTable 預先定義且固定的結構描述。  

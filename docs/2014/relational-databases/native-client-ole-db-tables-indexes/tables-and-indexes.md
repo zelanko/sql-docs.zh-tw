@@ -1,13 +1,11 @@
 ---
-title: 資料表和索引 |Microsoft 文件
+title: 資料表和索引 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -21,18 +19,18 @@ helpviewer_keywords:
 - indexes [OLE DB]
 ms.assetid: 4217c6d8-8cd2-43dc-b36f-3cfd8a58fabc
 caps.latest.revision: 29
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 14e7c96e5157853ae3ae93f3ac276d566ed18ae2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 29940e4ed8e9bb3a0ca7e3e3db419b27e491b1e2
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36146737"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37430978"
 ---
 # <a name="tables-and-indexes"></a>資料表和索引
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者會公開**IIndexDefinition**和**ITableDefinition**介面，讓取用者建立、 改變和卸除[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]資料表和索引。 有效的資料表和索引定義是取決於 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的版本。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者會公開**IIndexDefinition**並**ITableDefinition**介面，讓取用者建立、 改變和卸除[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]資料表和索引。 有效的資料表和索引定義是取決於 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的版本。  
   
  建立或卸除資料表和索引的能力，取決於取用者應用程式使用者的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 存取權限。 卸除資料表可藉由宣告式參考完整性條件約束或其他因數的存在，而受進一步的條件約束。  
   
@@ -42,7 +40,7 @@ ms.locfileid: "36146737"
   
 |屬性識別碼|描述|  
 |-----------------|-----------------|  
-|SSPROP_COL_COLLATIONNAME|類型：VT_BSTR<br /><br /> R/W：寫入<br /><br /> 預設值：Null<br /><br /> 描述： 此屬性只能用於**ITableDefinition**。 建立時會使用這個屬性中指定的字串[CREATE TABLE](/sql/t-sql/statements/create-table-transact-sql)<br /><br /> 陳述式。|  
+|SSPROP_COL_COLLATIONNAME|類型：VT_BSTR<br /><br /> R/W：寫入<br /><br /> 預設值：Null<br /><br /> 描述： 這個屬性只能用於**ITableDefinition**。 建立時，會使用這個屬性中指定的字串[CREATE TABLE](/sql/t-sql/statements/create-table-transact-sql)<br /><br /> 陳述式。|  
   
 ## <a name="in-this-section"></a>本節內容  
   

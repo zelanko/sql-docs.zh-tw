@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - user-defined types [SQL Server replication]
 - articles [SQL Server replication], dropping
@@ -42,15 +42,15 @@ helpviewer_keywords:
 - user-defined functions [SQL Server replication]
 ms.assetid: d986032c-3387-4de1-a435-3ec5e82185a2
 caps.latest.revision: 83
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: dfce55b3732c2e6715ad84e079c7c0707a243929
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 0a7513569ed762aaad446b726ce1a6ac58ac5a59
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36146927"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37154079"
 ---
 # <a name="publish-data-and-database-objects"></a>發行資料和資料庫物件
   在建立發行集時，您可以選擇想要發行的資料表和其他資料庫物件。 您可以使用複寫發行下列資料庫物件。  
@@ -188,7 +188,7 @@ ms.locfileid: "36146927"
   
 -   不會複寫使用 [sp_bindefault &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-bindefault-transact-sql) 建立的繫結預設值 (繫結預設值已經棄用，以支援使用 ALTER TABLE 或 CREATE TABLE 的 DEFAULT 關鍵字建立的預設值)。  
   
--   因為散發代理程式傳遞順序的關係，索引檢視表上含有 `NOEXPAND` 提示的函數，不能發行在與參考資料表和索引檢視表相同的發行集中。 若要解決此問題，請將資料表和索引檢視表的建立放在第一個發行集中，然後再將索引檢視表上含有 `NOEXPAND` 提示的函數加入在第一個發行集完成後發行的第二個發行集。 或者，建立這些函式的指令碼，並傳遞所使用的指令碼*@post_snapshot_script*參數`sp_addpublication`。  
+-   因為散發代理程式傳遞順序的關係，索引檢視表上含有 `NOEXPAND` 提示的函數，不能發行在與參考資料表和索引檢視表相同的發行集中。 若要解決此問題，請將資料表和索引檢視表的建立放在第一個發行集中，然後再將索引檢視表上含有 `NOEXPAND` 提示的函數加入在第一個發行集完成後發行的第二個發行集。 或者，建立這些函式的指令碼，並傳遞指令碼使用*@post_snapshot_script*參數`sp_addpublication`。  
   
 ### <a name="schemas-and-object-ownership"></a>結構描述和物件擁有權  
  針對結構描述和物件擁有權，複寫在新增複寫精靈中具有下列預設行為：  

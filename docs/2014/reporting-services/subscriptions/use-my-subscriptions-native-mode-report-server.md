@@ -1,5 +1,5 @@
 ---
-title: 使用我的訂閱 |Microsoft 文件
+title: 使用我的訂閱 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - subscriptions [Reporting Services], My Subscriptions page
 - My Subscriptions page [Reporting Services]
@@ -16,16 +16,16 @@ ms.assetid: e96623ba-677e-4748-8787-f32bed3b5c12
 caps.latest.revision: 36
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: c1125792543e3a926ddb98e3d33e0f600328d232
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 4d06913da04eebdaa249e424fa7b4d66c8e8aaa1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36146869"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37153789"
 ---
 # <a name="use-my-subscriptions"></a>使用我的訂閱
-  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 報表管理員包括**我的訂閱**頁面，將組織的所有訂閱到一個地方。 您可以使用 [我的訂閱] 來檢視、修改和刪除現有的訂閱。 然而，無法用它來建立訂閱。  
+  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 報表管理員包括**我的訂用帳戶**頁面，將組織所有您的訂用帳戶，在一個地方。 您可以使用 [我的訂閱] 來檢視、修改和刪除現有的訂閱。 然而，無法用它來建立訂閱。  
   
 ||  
 |-|  
@@ -35,10 +35,10 @@ ms.locfileid: "36146869"
   
  [我的訂閱] 僅顯示您所建立的訂閱。 即使您已經加入成為其他使用者擁有之訂閱的訂閱者，它一樣不會列出其他使用者擁有的訂閱，也不會顯示資料驅動訂閱。  
   
- 您無法依名稱搜尋訂閱，也無法根據觸發程序資訊、狀態資訊等等來搜尋訂閱。 如需詳細資訊，請參閱[Create，Modify，and 刪除標準訂閱&#40;原生模式的 Reporting Services&#41;](create-and-manage-subscriptions-for-native-mode-report-servers.md)。  
+ 您無法依名稱搜尋訂閱，也無法根據觸發程序資訊、狀態資訊等等來搜尋訂閱。 如需詳細資訊，請參閱 <<c0> [ 建立、 修改和刪除標準訂用帳戶&#40;原生模式的 Reporting Services&#41;](create-and-manage-subscriptions-for-native-mode-report-servers.md)。</c0>  
   
 ## <a name="how-to-use-my-subscriptions"></a>如何使用我的訂閱  
- 我的訂閱可以透過報表管理員使用。 若要存取 我的訂閱，請按一下**我的訂閱**報表管理員通用工具列上。  
+ 我的訂閱可以透過報表管理員使用。 若要存取我的訂用帳戶，請按一下**我的訂用帳戶**報表管理員通用工具列上。  
   
 ## <a name="use-windows-powershell-to-list-mysubscriptions"></a>使用 Windows PowerShell 來列出 MySubscriptions  
  ![PowerShell 相關內容](../media/rs-powershellicon.jpg "PowerShell 相關內容")  

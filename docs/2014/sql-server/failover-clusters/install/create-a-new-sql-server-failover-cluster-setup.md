@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - adding nodes
 - failover clustering [SQL Server], creating clusters
@@ -18,15 +18,15 @@ helpviewer_keywords:
 - removing nodes
 ms.assetid: 30e06a7d-75e9-44e2-bca3-b3b0c4a33f61
 caps.latest.revision: 75
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: f82e637d60de64d90492bc289268c090ee473bcd
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 672699fe7c941098b0b689a49a30e12c6cc71ee8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36145808"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37155799"
 ---
 # <a name="create-a-new-sql-server-failover-cluster-setup"></a>建立新的 SQL Server 容錯移轉叢集 (安裝程式)
   若要安裝或升級 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 容錯移轉叢集，您必須在容錯移轉叢集的每個節點上執行安裝程式。 若要將節點加入至現有的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 容錯移轉叢集，您必須在要加入至 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 容錯移轉叢集執行個體的節點上執行 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 安裝程式。 請勿在使用中節點上執行安裝程式來管理其他節點。  
@@ -53,7 +53,7 @@ ms.locfileid: "36145808"
   
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 進階/企業型容錯移轉叢集安裝包含以下步驟：  
   
--   在新 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 容錯移轉叢集可能的擁有者之每一個節點上，遵循＜ [準備](#prepare)＞一節所列的「準備容錯移轉叢集」安裝步驟。 當您在某個節點上執行「準備容錯移轉叢集」之後，安裝程式就會建立 Configuration.ini 檔案，這個檔會列出您所指定的所有設定。 在要準備的其他節點上，您可以提供第一個節點中自動產生的 Configuration.ini 檔案當做安裝程式命令列的輸入，而不必遵循這些步驟。 如需詳細資訊，請參閱[安裝 SQL Server 2014 使用組態檔](../../../database-engine/install-windows/install-sql-server-using-a-configuration-file.md)。 雖然這個步驟會準備即將建立叢集的節點，不過在這個步驟結束時，不會提供任何可運作的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體。  
+-   在新 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 容錯移轉叢集可能的擁有者之每一個節點上，遵循＜ [準備](#prepare)＞一節所列的「準備容錯移轉叢集」安裝步驟。 當您在某個節點上執行「準備容錯移轉叢集」之後，安裝程式就會建立 Configuration.ini 檔案，這個檔會列出您所指定的所有設定。 在要準備的其他節點上，您可以提供第一個節點中自動產生的 Configuration.ini 檔案當做安裝程式命令列的輸入，而不必遵循這些步驟。 如需詳細資訊，請參閱 <<c0> [ 安裝 SQL Server 2014 使用組態檔](../../../database-engine/install-windows/install-sql-server-using-a-configuration-file.md)。 雖然這個步驟會準備即將建立叢集的節點，不過在這個步驟結束時，不會提供任何可運作的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體。  
   
 -   節點已備妥且可供叢集後，請在備妥的其中一個節點上執行安裝程式。 這個步驟會設定並完成容錯移轉叢集執行個體。 當這個步驟結束時，您將會擁有可操作的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 容錯移轉叢集執行個體，而且之前為該執行個體備妥的所有節點都可能是新建之 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 容錯移轉叢集的擁有者。  
   
@@ -72,7 +72,7 @@ ms.locfileid: "36145808"
   
  如需有關在 Windows 容錯移轉叢集中安裝 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 的詳細資訊，請參閱＜ [如何將 SQL Server Analysis Services 叢集化](http://go.microsoft.com/fwlink/p/?LinkId=396548)＞。  
   
-## <a name="prerequisites"></a>必要條件  
+## <a name="prerequisites"></a>先決條件  
  開始之前，請先檢視下列《 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 線上叢書》主題：  
   
 -   [規劃 SQL Server 安裝](../../install/planning-a-sql-server-installation.md)  
@@ -100,7 +100,7 @@ ms.locfileid: "36145808"
   
 6.  系統組態檢查將會先確認電腦的系統狀態，然後安裝程式才會繼續進行。 檢查完成之後，請按 **[下一步]** 繼續進行。 您可以按一下 **[顯示詳細資料]** 在畫面上檢視詳細資料，或是按一下 **[檢視詳細資料報表]** 來以 HTML 報表形式檢視詳細資料。  
   
-7.  在 [產品金鑰] 頁面上，指出您要安裝免費的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]版本，還是您擁有產品之實際執行版本的 PID 金鑰。 如需詳細資訊，請參閱[版本和 SQL Server 2014 元件](../../editions-and-components-of-sql-server-2016.md)。  
+7.  在 [產品金鑰] 頁面上，指出您要安裝免費的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]版本，還是您擁有產品之實際執行版本的 PID 金鑰。 如需詳細資訊，請參閱 <<c0> [ 版本和 SQL Server 2014 元件](../../editions-and-components-of-sql-server-2016.md)。  
   
 8.  在 [授權條款] 頁面上，閱讀授權合約，然後選取要接受授權條款和條件的核取方塊。 若要協助提升 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]，您也可以啟用功能使用方式選項，並傳送報告給 [!INCLUDE[msCoName](../../../includes/msconame-md.md)]。 按 **[下一步]** ，繼續進行。 若要結束安裝程式，請按一下 **[取消]**。  
   
@@ -186,9 +186,9 @@ ms.locfileid: "36145808"
   
     -   安全性模式 - 為 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]執行個體選取 Windows 驗證或混合模式驗證。 如果您選取混合模式驗證，就必須為內建 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 系統管理員帳戶提供增強式密碼。  
   
-         當裝置與 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]建立成功的連接之後，Windows 驗證和混合模式的安全性機制是相同的。 如需詳細資訊，請參閱[Database Engine 組態-帳戶提供](../../install/database-engine-configuration-account-provisioning.md)。  
+         當裝置與 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]建立成功的連接之後，Windows 驗證和混合模式的安全性機制是相同的。 如需詳細資訊，請參閱 < [Database Engine 組態-帳戶佈建](../../install/database-engine-configuration-account-provisioning.md)。  
   
-    -   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 管理員 - 您在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]執行個體上至少必須指定一個系統管理員。 若要加入 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 安裝程式執行所用的帳戶，請按一下 **[加入目前使用者]**。 若要從系統管理員清單中加入或移除帳戶，請按一下 **[加入]** 或 **[移除]**，然後編輯在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]執行個體中將會有管理員權限的使用者、群組或電腦清單。 如需詳細資訊，請參閱[Database Engine 組態-帳戶提供](../../install/database-engine-configuration-account-provisioning.md)。  
+    -   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 管理員 - 您在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]執行個體上至少必須指定一個系統管理員。 若要加入 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 安裝程式執行所用的帳戶，請按一下 **[加入目前使用者]**。 若要從系統管理員清單中加入或移除帳戶，請按一下 **[加入]** 或 **[移除]**，然後編輯在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]執行個體中將會有管理員權限的使用者、群組或電腦清單。 如需詳細資訊，請參閱 < [Database Engine 組態-帳戶佈建](../../install/database-engine-configuration-account-provisioning.md)。  
   
      當您完成清單的編輯之後，請 [!INCLUDE[clickOK](../../../includes/clickok-md.md)]。 然後，在組態對話方塊中確認管理員的清單。 當此清單完成時，請按 **[下一步]**。  
   
@@ -232,7 +232,7 @@ ms.locfileid: "36145808"
 30. 若要將節點加入到您剛才建立的單一節點容錯移轉叢集中，請在每一個額外的節點上執行安裝程式，並遵循 AddNode 作業的步驟。 如需詳細資訊，請參閱[在 SQL Server 容錯移轉叢集中新增或移除節點 &#40;安裝程式&#41;](add-or-remove-nodes-in-a-sql-server-failover-cluster-setup.md)。  
   
     > [!NOTE]  
-    >  如果您要加入一個以上的節點，可以使用組態檔來部署安裝。 如需詳細資訊，請參閱[安裝 SQL Server 2014 使用組態檔](../../../database-engine/install-windows/install-sql-server-using-a-configuration-file.md)。  
+    >  如果您要加入一個以上的節點，可以使用組態檔來部署安裝。 如需詳細資訊，請參閱 <<c0> [ 安裝 SQL Server 2014 使用組態檔](../../../database-engine/install-windows/install-sql-server-using-a-configuration-file.md)。  
     >   
     >  在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 容錯移轉叢集的所有節點中，您都必須安裝相符的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 版本。 當您將新的節點加入到現有的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 容錯移轉叢集時，請確定您有指定此版本與現有容錯移轉叢集的版本相符。  
   
@@ -256,7 +256,7 @@ ms.locfileid: "36145808"
   
      若要繼續進行，請按 **[下一步]**。  
   
-8.  在 [產品金鑰] 頁面上，按一下來指出您要安裝免費的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]版本，還是您擁有產品之實際執行版本的 PID 金鑰。 如需詳細資訊，請參閱[版本和 SQL Server 2014 元件](../../editions-and-components-of-sql-server-2016.md)。  
+8.  在 [產品金鑰] 頁面上，按一下來指出您要安裝免費的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]版本，還是您擁有產品之實際執行版本的 PID 金鑰。 如需詳細資訊，請參閱 <<c0> [ 版本和 SQL Server 2014 元件](../../editions-and-components-of-sql-server-2016.md)。  
   
     > [!NOTE]  
     >  您必須在您為相同容錯移轉叢集準備的所有節點上指定相同的產品金鑰。  
@@ -328,7 +328,7 @@ ms.locfileid: "36145808"
   
 23. 如果指示您重新啟動電腦，請立刻執行。 當您完成安裝時，請務必閱讀安裝精靈所提供的訊息。 如需安裝程式記錄檔的詳細資訊，請參閱 [檢視與讀取 SQL Server 安裝程式記錄檔](../../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)。  
   
-24. 重複上述步驟，為容錯移轉叢集準備其他節點。 您也可以使用自動產生的組態檔，在其他節點上執行準備工作。 如需詳細資訊，請參閱[安裝 SQL Server 2014 使用組態檔](../../../database-engine/install-windows/install-sql-server-using-a-configuration-file.md)。  
+24. 重複上述步驟，為容錯移轉叢集準備其他節點。 您也可以使用自動產生的組態檔，在其他節點上執行準備工作。 如需詳細資訊，請參閱 <<c0> [ 安裝 SQL Server 2014 使用組態檔](../../../database-engine/install-windows/install-sql-server-using-a-configuration-file.md)。  
   
 ## <a name="complete"></a>[完成]  
   
@@ -376,9 +376,9 @@ ms.locfileid: "36145808"
   
     -   安全性模式 - 為 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]執行個體選取 Windows 驗證或混合模式驗證。 如果您選取混合模式驗證，就必須為內建 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 系統管理員帳戶提供增強式密碼。  
   
-         當裝置與 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]建立成功的連接之後，Windows 驗證和混合模式的安全性機制是相同的。 如需詳細資訊，請參閱[Database Engine 組態-帳戶提供](../../install/database-engine-configuration-account-provisioning.md)。  
+         當裝置與 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]建立成功的連接之後，Windows 驗證和混合模式的安全性機制是相同的。 如需詳細資訊，請參閱 < [Database Engine 組態-帳戶佈建](../../install/database-engine-configuration-account-provisioning.md)。  
   
-    -   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 管理員 - 您在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]執行個體上至少必須指定一個系統管理員。 若要加入 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 安裝程式執行所用的帳戶，請按一下 **[加入目前使用者]**。 若要從系統管理員清單中加入或移除帳戶，請按一下 **[加入]** 或 **[移除]**，然後編輯在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]執行個體中將會有管理員權限的使用者、群組或電腦清單。 如需詳細資訊，請參閱[Database Engine 組態-帳戶提供](../../install/database-engine-configuration-account-provisioning.md)。  
+    -   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 管理員 - 您在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]執行個體上至少必須指定一個系統管理員。 若要加入 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 安裝程式執行所用的帳戶，請按一下 **[加入目前使用者]**。 若要從系統管理員清單中加入或移除帳戶，請按一下 **[加入]** 或 **[移除]**，然後編輯在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]執行個體中將會有管理員權限的使用者、群組或電腦清單。 如需詳細資訊，請參閱 < [Database Engine 組態-帳戶佈建](../../install/database-engine-configuration-account-provisioning.md)。  
   
      當您完成清單的編輯之後，請 [!INCLUDE[clickOK](../../../includes/clickok-md.md)]。 然後，在組態對話方塊中確認管理員的清單。 當此清單完成時，請按 **[下一步]**。  
   

@@ -1,5 +1,5 @@
 ---
-title: 接受授權合約 |Microsoft 文件
+title: 接受授權條款 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - license terms
 helpviewer_keywords:
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - SQL Server Installation Wizard, Registration Information page
 ms.assetid: 08dd739d-5817-4418-bcff-74ab7f8bbd33
 caps.latest.revision: 38
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 55d500b13cc3ab3c859474bb3050e29a7487f4a3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: b060499f9b3a008e0106455afde5f1a7691d90f4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36146430"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37260090"
 ---
 # <a name="accept-license-terms"></a>接受授權條款
   請使用 **安裝精靈的** [接受授權條款] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 頁面來接受此版 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的授權條款。  
@@ -56,7 +56,7 @@ ms.locfileid: "36146430"
   
  對於其他所有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 元件，則會每天針對所有啟用的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體，收集一次資訊。 根據預設，收集的時間為午夜，好讓伺服器的負載減至最小。 如果您想要變更收集的時間，可手動編輯控制收集時間的登錄機碼。 每個 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體都擁有自己的登錄機碼：  
   
- HKLM\Software\\[!INCLUDE[msCoName](../../includes/msconame-md.md)]\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\mssql12.<instancename>\mssql\。\<執行個體識別碼 > \CPE\TimeofReporting  
+ HKLM\Software\\[!INCLUDE[msCoName](../../includes/msconame-md.md)]\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\mssql12.<instancename>\。\<執行個體識別碼 > \CPE\TimeofReporting  
   
  這個登錄機碼的值包含從 00:00 (午夜) 開始執行之收集時間的分鐘數。 例如，60 這個值會在 1:00 a.m. 執行收集，1200 這個值會在 8:00 p.m. 執行收集，以此類推。  
   
@@ -97,7 +97,7 @@ ms.locfileid: "36146430"
   
 -   導致錯誤之處理序的記憶體或檔案中的資訊。  
   
- [!INCLUDE[msCoName](../../includes/msconame-md.md)] 不刻意收集檔案、 名稱、 地址、 電子郵件地址或其他形式的個人資訊。 不過，錯誤報表可包含導致錯誤之處理序的記憶體或檔案中的個人資訊。 雖然這項資訊可能用於判斷您的識別，但 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 不會將這項資訊用於此用途。  
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)] 不刻意收集檔案、 名稱、 地址、 電子郵件地址或任何其他形式的個人資訊。 不過，錯誤報表可包含導致錯誤之處理序的記憶體或檔案中的個人資訊。 雖然這項資訊可能用於判斷您的識別，但 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 不會將這項資訊用於此用途。  
   
  如需 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 隱私權和資料收集原則的詳細資訊，請參閱 [Microsoft SQL Server 隱私權聲明](../../../2014/getting-started/microsoft-sql-server-privacy-statement.md)。  
   
