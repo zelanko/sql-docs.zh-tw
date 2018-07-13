@@ -5,9 +5,7 @@ ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 topic_type:
@@ -16,24 +14,24 @@ helpviewer_keywords:
 - SQLPutData function
 ms.assetid: d39aaa5b-7fbc-4315-a7f2-5a7787e04f25
 caps.latest.revision: 49
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: abce5378b6df9bcce36bf6e1a2c9ed884f977824
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 37ac1dd3c6c5c3cce2084fa604ad1876c885e422
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36132175"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37419477"
 ---
 # <a name="sqlputdata"></a>SQLPutData
-  使用 SQLPutData 傳送 65,535 個位元組以上的資料時，適用下列限制 (如[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]4.21 a 版) 或 400 KB 的資料 （適用於 SQL Server 6.0 版和更新版本) 針對 SQL_LONGVARCHAR (`text`)、 SQL_WLONGVARCHAR (`ntext`) 或SQL_LONGVARBINARY (`image`) 資料行：  
+  使用 SQLPutData 傳送 65,535 個位元組以上的資料時，適用下列限制 (如[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]4.21a 版) 或 400 KB 的資料 （適用於 SQL Server 6.0 版和更新版本)，針對 SQL_LONGVARCHAR (`text`)、 SQL_WLONGVARCHAR (`ntext`) 或SQL_LONGVARBINARY (`image`) 資料行：  
   
 -   參考的參數可以是*insert_value* INSERT 陳述式中。  
   
 -   參考的參數可以是*運算式*UPDATE 陳述式的 SET 子句中。  
   
- 取消一系列的可執行的伺服器的區塊中的資料 SQLPutData 呼叫[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]使用 6.5 或更早版本時，會導致部分更新的資料行的值。 `text`， `ntext`，或`image`SQLCancel 呼叫時所參考的資料行設定為中繼預留位置的值。  
+ 取消一系列的可執行的伺服器的區塊中的資料 SQLPutData 呼叫[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]使用 6.5 或更早版本時，會導致部分更新的資料行的值。 `text`， `ntext`，或`image`SQLCancel 呼叫時所參考的資料行設為中繼預留位置的值。  
   
 > [!NOTE]  
 >  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驅動程式不支援連接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 6.5 版和更早版本。  
@@ -43,10 +41,10 @@ ms.locfileid: "36132175"
   
 |SQLSTATE|錯誤|描述|  
 |--------------|-----------|-----------------|  
-|22026|字串資料，長度不符|如果要傳送的位元組資料的長度已指定應用程式，例如，使用 SQL_LEN_DATA_AT_EXEC (*n*) 其中*n*大於 0，透過應用程式所指定的位元組總數SQLPutData 必須符合指定的長度。|  
+|22026|字串資料，長度不符|如果要傳送的位元組資料長度已指定應用程式，比方說，使用 SQL_LEN_DATA_AT_EXEC (*n*)， *n*大於 0，應用程式透過所指定的位元組總數SQLPutData 必須符合指定的長度。|  
   
 ## <a name="sqlputdata-and-table-valued-parameters"></a>SQLPutData 和資料表值參數  
- 使用資料表值參數使用變動資料列繫結時，應用程式會使用 SQLPutData。 *StrLen_Or_Ind*參數表示驅動程式來收集資料的下一個資料列或資料表值參數資料列的準備就緒或沒有其他資料列可用：  
+ 使用資料表值參數使用變數的資料列繫結時，應用程式會使用 SQLPutData。 *Strlen_or_ind&lt*參數表示收集下一個資料列或資料表值參數資料列的資料驅動程式準備就緒或沒有其他資料列有可供使用：  
   
 -   大於 0 的值表示有下一組資料列值。  
   
@@ -56,17 +54,17 @@ ms.locfileid: "36132175"
   
  *DataPtr*參數會被忽略，但必須設定為非 NULL 值。 如需詳細資訊，請參閱節變數 TVP 資料列中的繫結[繫結和 Data Transfer of Table-Valued 參數和資料行值](../native-client-odbc-table-valued-parameters/binding-and-data-transfer-of-table-valued-parameters-and-column-values.md)。  
   
- 如果*StrLen_Or_Ind* SQL_DEFAULT_PARAM 或介於 0 和 SQL_PARAMSET_SIZE 之間的數字以外的任何值 (也就是*ColumnSize* SQLBindParameter 參數)，就會發生錯誤。 此錯誤會使 SQLPutData 傳回 SQL_ERROR：SQLSTATE=HY090，表示「無效的字串或緩衝區長度」。  
+ 如果*Strlen_or_ind&lt* SQL_DEFAULT_PARAM 或介於 0 和 SQL_PARAMSET_SIZE 以外的任何值 (亦即*ColumnSize* SQLBindParameter 參數)，就會發生錯誤。 此錯誤會使 SQLPutData 傳回 SQL_ERROR：SQLSTATE=HY090，表示「無效的字串或緩衝區長度」。  
   
- 如需有關資料表值參數的詳細資訊，請參閱[資料表值參數&#40;ODBC&#41;](../native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md)。  
+ 如需有關資料表值參數的詳細資訊，請參閱 < [Parameters &#40;ODBC&#41;](../native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md)。  
   
 ## <a name="sqlputdata-support-for-enhanced-date-and-time-features"></a>增強型日期和時間功能的 SQLPutData 支援  
- 日期/時間類型的參數值會轉換中所述[從 C 轉換成 SQL](../native-client-odbc-date-time/datetime-data-type-conversions-from-c-to-sql.md)。  
+ 參數值的日期/時間類型轉換中所述[從 C 轉換成 SQL](../native-client-odbc-date-time/datetime-data-type-conversions-from-c-to-sql.md)。  
   
- 如需詳細資訊，請參閱[日期和時間增強功能&#40;ODBC&#41;](../native-client-odbc-date-time/date-and-time-improvements-odbc.md)。  
+ 如需詳細資訊，請參閱 <<c0> [ 日期和時間改善&#40;ODBC&#41;](../native-client-odbc-date-time/date-and-time-improvements-odbc.md)。</c0>  
   
 ## <a name="sqlputdata-support-for-large-clr-udts"></a>大型 CLR UDT 的 SQLPutData 支援  
- `SQLPutData` 支援大型 CLR 使用者定義型別 (UDT)。 如需詳細資訊，請參閱[Large CLR User-Defined 類型&#40;ODBC&#41;](../native-client/odbc/large-clr-user-defined-types-odbc.md)。  
+ `SQLPutData` 支援大型 CLR 使用者定義型別 (UDT)。 如需詳細資訊，請參閱 < [Large CLR User-Defined 類型&#40;ODBC&#41;](../native-client/odbc/large-clr-user-defined-types-odbc.md)。  
   
 ## <a name="see-also"></a>另請參閱  
  [SQLPutData 函數](http://go.microsoft.com/fwlink/?LinkId=59365)   

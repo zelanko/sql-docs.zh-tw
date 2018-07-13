@@ -5,23 +5,22 @@ ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - 2576 (Database Engine error)
 ms.assetid: b727cc2f-c76c-46f8-bbbe-5e7a05a6eabf
 caps.latest.revision: 19
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: cfffec5031f73f5ce30d17f1b46e8bfee95ebaf8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 131d9a8d338adec593aaf166437bd87718f20d6c
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36131734"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37420967"
 ---
 # <a name="mssqlserver2576"></a>MSSQLSERVER_2576
     

@@ -23,15 +23,15 @@ helpviewer_keywords:
 - extensions [Reporting Services], device information settings
 ms.assetid: fe718939-7efe-4c7f-87cb-5f5b09caeff4
 caps.latest.revision: 46
-author: douglaslM
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 71eb9ad4d6066b6dbf3b0c942ee9d7e6f521a590
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: 9fc300712ecac2eeb4e13257515e1300e704d21c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36133656"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37240218"
 ---
 # <a name="passing-device-information-settings-to-rendering-extensions"></a>將裝置資訊設定傳遞至轉譯延伸模組
   在 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]中，裝置資訊設定會用於將轉譯參數傳遞給轉譯延伸模組。 Report Server Web 服務中的設定會當做 **DeviceInfo** XML 元素傳遞，並由報表伺服器進行處理。 因為裝置資訊設定具有預設值，所以這些值被視為轉譯程序中的選擇性引數。 不過，您可以使用裝置資訊設定來自訂轉譯，並覆寫伺服器所套用的預設值。  
@@ -39,7 +39,7 @@ ms.locfileid: "36133656"
  您可以用多種方法來指定裝置資訊設定。 您可以用程式設計的方式來使用 Render 方法。 如果要透過報表的 URL 存取報表，可以將裝置資訊指定為 URL 參數。 也可以在 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 組態檔中編輯裝置資訊設定，以指定全域的轉譯參數。 如需全域指定轉譯參數的詳細資訊，請參閱[在 RSReportServer.Config 中自訂轉譯延伸模組參數](../../customize-rendering-extension-parameters-in-rsreportserver-config.md)。  
   
 ## <a name="passing-device-information-using-the-render-method"></a>使用轉譯方法傳遞裝置資訊  
- 若要將裝置資訊設定傳遞至轉譯延伸模組，使用<xref:ReportExecution2005.ReportExecutionService.Render%2A>方法。 例如，下列的 XML 字串可以傳遞至 <xref:ReportExecution2005.ReportExecutionService.Render%2A> 方法，以在轉譯為 HTML 時建立 HTML 片段。  
+ 若要將裝置資訊設定傳遞至轉譯延伸模組中，使用<xref:ReportExecution2005.ReportExecutionService.Render%2A>方法。 例如，下列的 XML 字串可以傳遞至 <xref:ReportExecution2005.ReportExecutionService.Render%2A> 方法，以在轉譯為 HTML 時建立 HTML 片段。  
   
 ```  
 <DeviceInfo>  

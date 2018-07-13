@@ -1,5 +1,5 @@
 ---
-title: PerspectiveMeasureGroup 資料類型 (ASSL) |Microsoft 文件
+title: PerspectiveMeasureGroup 資料類型 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - PerspectiveMeasureGroup data type
 ms.assetid: 5927120d-f30e-4f87-8523-6d17012817d7
 caps.latest.revision: 34
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: bc1978c2ae733b07071c7c95d3fd232c207d2853
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: da4817ba23f7e4be50eb11aa97a3163e48536425
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36136079"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37154949"
 ---
 # <a name="perspectivemeasuregroup-data-type-assl"></a>PerspectiveMeasureGroup 資料類型 (ASSL)
   定義代表量值群組中的相關資訊的基本資料類型[觀點來看](../objects/perspective-element-assl.md)項目。  
@@ -58,13 +58,13 @@ ms.locfileid: "36136079"
 |關聯性|元素|  
 |------------------|-------------|  
 |父元素|無|  
-|子元素|[註解](../collections/annotations-element-assl.md)， [MeasureGroupID](../properties/id-element-assl.md)，[量值](../collections/measures-element-assl.md)|  
-|衍生的元素|[MeasureGroup](../objects/group-element-assl.md) ([MeasureGroups](../collections/groups-element-assl.md)集合[觀點來看](../objects/perspective-element-assl.md))|  
+|子元素|[註釋](../collections/annotations-element-assl.md)， [MeasureGroupID](../properties/id-element-assl.md)，[量值](../collections/measures-element-assl.md)|  
+|衍生的元素|[MeasureGroup](../objects/group-element-assl.md) ([MeasureGroups](../collections/groups-element-assl.md)的集合[觀點來看](../objects/perspective-element-assl.md))|  
   
 ## <a name="remarks"></a>備註  
  檢視方塊中的量值群組與基礎 Cube 中的量值群組具有相同的結構。  
   
- 分析管理物件 (AMO) 物件模型中的對應元素是<xref:Microsoft.AnalysisServices.PerspectiveMeasureGroup>。  
+ 在 「 分析管理物件 (AMO) 物件模型的對應元素是<xref:Microsoft.AnalysisServices.PerspectiveMeasureGroup>。  
   
 ## <a name="see-also"></a>另請參閱  
  [Analysis Services 指令碼語言 XML 資料類型&#40;ASSL&#41;](analysis-services-scripting-language-xml-data-types-assl.md)  

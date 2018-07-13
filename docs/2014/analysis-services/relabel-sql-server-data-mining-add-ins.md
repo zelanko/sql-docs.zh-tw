@@ -1,5 +1,5 @@
 ---
-title: 重定標籤 （SQL Server 資料採礦增益集） |Microsoft 文件
+title: 重定標籤 （SQL Server 資料採礦增益集） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - data preparation
 - relabel
 - data cleaning
 ms.assetid: af041b39-fdd1-4cb5-a5ef-2f3ddab84614
 caps.latest.revision: 14
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 50dd1a2c4cd425243c55ef9181387a08c5d935ba
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 46a05e8f54a6c307dba5b82572ad8158b305f4bb
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36135266"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37157169"
 ---
 # <a name="relabel-sql-server-data-mining-add-ins"></a>重定標籤 (SQL Server 資料採礦增益集)
   ![重定標籤工具的 office 13 圖示](media/dm13-relabel.gif "重定標籤工具的 Office 13 圖示")  
@@ -40,25 +40,25 @@ ms.locfileid: "36135266"
   
 ## <a name="using-the-relabel-wizard"></a>使用重定標籤精靈  
   
-1.  在**資料採礦**功能區中，按一下 **清除**，然後選取 **重定標籤**。  
+1.  在 **資料採礦**功能區中，按一下**清除**，然後選取**重定標籤**。  
   
 2.  選取含有您要修正之資料的資料表或資料範圍。  
   
-3.  在**重定標籤**頁面在精靈中，選取單一資料行，從下拉式清單中，選擇資料行，或按一下的資料行**資料範例**窗格。  
+3.  在 **重定標籤**頁面的精靈中，選取單一資料行，從下拉式清單中，選擇資料行，或按一下中的資料行**資料範例**窗格。  
   
      **資料範例**窗格只會顯示大約 50 個資料列，但它們已經過取樣可確保您看到分散良好的值。  
   
      按一下資料行標頭**計數**來排序每個值的計數。  
   
-     您也可以排序**原始標籤**，這會很方便，如果您想要重新標示所有最高或最低值第一次。  
+     您也可以依排序**原始標籤**，這會很方便，如果您想要重新第一次標示所有最高或最低值。  
   
-4.  在**重定標籤**資料頁面上，在精靈的檢閱中的值**原始標籤**資料行，並決定要如何分組或編輯它們。  
+4.  在 **重定標籤**資料頁面上，在精靈的檢閱中的值**原始標籤**資料行，並決定您要群組或編輯它們的方式。  
   
-5.  底下的資料列中輸入新值**新標籤**。 您可以從現有值的清單中選取某個值。 輸入新的值時，它們會立即成為可供重複使用。  
+5.  底下的資料列中輸入新的值**新的標籤**。 您可以從現有值的清單中選取某個值。 輸入新的值時，它們會立即成為可供重複使用。  
   
-6.  當您輸入足夠的資料列時，按一下 **下一步**，然後在**選取目的地**頁面上，選擇您要在其中儲存重定的資料。  
+6.  當您輸入足夠的資料列時，按一下**下一步**，然後在**選取目的地**頁面上，選擇您要在其中儲存重定標籤之的資料。  
   
-    -   **將做為新的資料行加入至目前的工作表**  
+    -   **以新的資料行加入目前的工作表**  
   
          按一下即可將新資料行加入包含新值的資料表。  
   

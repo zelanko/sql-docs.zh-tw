@@ -1,5 +1,5 @@
 ---
-title: DatabaseID 元素 (XMLA) |Microsoft 文件
+title: DatabaseID 元素 (XMLA) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -24,15 +24,15 @@ helpviewer_keywords:
 - DatabaseID element
 ms.assetid: 2df720dd-9b42-449a-9df6-0d12930603f0
 caps.latest.revision: 12
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: fec0d96ac6bb69868e5bab389033ffd975219182
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: ce90874f5b6e0328434bf5f10f755fe0cfa65ddf
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36133780"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37259309"
 ---
 # <a name="databaseid-element-xmla"></a>DatabaseID 元素 (XMLA)
   識別父元素中包含物件參考的資料庫。  

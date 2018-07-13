@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 89197b9b-7502-4fe2-bea3-ed7943eebf3b
 caps.latest.revision: 42
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 136335f0e56433a9478ddee37d0b8f585564776e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: dc37afd9e91b23ebef0e7f53fc5690f845f49d28
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36136128"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37152129"
 ---
 # <a name="lesson-3-defining-a-data-driven-subscription"></a>Lesson 3: Defining a Data-Driven Subscription
   在這個課程中，您將利用資料驅動訂閱頁面來連接訂閱資料來源、建立擷取訂閱資料的查詢，以及將結果集對應至報表和傳遞選項。  
@@ -51,7 +51,7 @@ ms.locfileid: "36136128"
   
 2.  在報表的內容功能表中，按一下 **[管理]**，然後按一下 **[訂閱]** 索引標籤。  
   
-3.  按一下**新增資料驅動訂閱**。 如果您沒有看見這個按鈕，表示您沒有「內容管理員」權限。  
+3.  按一下 **新的資料驅動訂閱**。 如果您沒有看見這個按鈕，表示您沒有「內容管理員」權限。  
   
 ##  <a name="bkmk_definesubscription"></a> 步驟 1-定義描述  
   
@@ -99,7 +99,7 @@ ms.locfileid: "36136128"
   
 1.  針對 **[檔案名稱]**，選取 **[從資料庫取值]**。 選取 **[Order]** 欄位。  
   
-2.  針對 **[路徑]**，選取 **[指定靜態值]**。 在 設定值，輸入您擁有寫入權限之公用檔案共用的名稱 (例如， `\\mycomputer\public\myreports`)。  
+2.  針對 **[路徑]**，選取 **[指定靜態值]**。 在 設定值，輸入您擁有寫入權限之公用檔案共用的名稱 (例如`\\mycomputer\public\myreports`)。  
   
 3.  針對 **[轉譯格式]**，選取 **[從資料庫取值]**。 選取 **[格式]**。  
   

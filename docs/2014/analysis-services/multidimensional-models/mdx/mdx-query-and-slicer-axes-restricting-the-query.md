@@ -1,5 +1,5 @@
 ---
-title: The query with Query and Slicer Axes (MDX) |Microsoft 文件
+title: 限制利用查詢與交叉分析篩選器軸 (MDX) 查詢 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Multidimensional Expressions [Analysis Services], axes
 - queries [MDX], axes
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - MDX [Analysis Services], axes
 ms.assetid: a64b8172-cd73-42f9-8847-52e967b9697a
 caps.latest.revision: 29
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: e727b432afec1f42a6a111442c2263d6c48784de
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 0b5b06d8449c778e9f50751120c42133189d6f57
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36136083"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37157589"
 ---
 # <a name="restricting-the-query-with-query-and-slicer-axes-mdx"></a>利用查詢與 Slicer 軸限制查詢 (MDX)
   在以公式表示多維度運算式 (MDX) SELECT 陳述式時，應用程式一般會檢查 Cube，並將階層集合分割成兩個子集：  

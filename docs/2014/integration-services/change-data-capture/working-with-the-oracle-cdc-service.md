@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 04be5896-2301-45f5-a8ce-5f4ef2b69aa5
 caps.latest.revision: 12
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 4db31968d249659890924917be5c40533c0e19af
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 5ea0a37304bbde2ac84e5092e67744226a03b0db
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36134670"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37239398"
 ---
 # <a name="working-with-the-oracle-cdc-service"></a>使用 Oracle CDC 服務
   本章節描述 Oracle CDC 服務的一些重要概念。 本章節包含的概念如下：  
@@ -112,7 +112,7 @@ ms.locfileid: "36134670"
 |ref_count|這個項目會計算安裝相同 Oracle CDC 服務的電腦數目。 每次加入相同名稱的 Oracle CDC 服務時，這個數目就會遞增，每當移除這類服務時，這個數目就會遞減。 當計數器到達零時，這個資料列會遭到刪除。|  
 |active_service_node|目前處理 CDC 服務的 Windows 節點名稱。 當此服務正確停止時，這個資料行會設定為 null，表示不再有使用中的服務。|  
 |active_service_heartbeat|這個項目會追蹤目前的 CDC 服務來判斷它是否依然使用中。<br /><br /> 對於固定間隔的使用中 CDC 服務而言，將會使用目前資料庫 UTC 時間戳記來更新這個項目。 預設間隔為 30 秒，但是可以設定間隔。<br /><br /> 當暫止的 CDC 服務偵測到經過設定的間隔時間後並未更新活動訊號時，暫止的服務會嘗試接管使用中的 CDC 服務角色。|  
-|選項|這個項目會指定次要選項，例如追蹤或微調。 它會以 **name[=value][; ]** 格式寫入。 選項字串會使用與 ODBC 連接字串相同的語意。 如果選項為布林值 (值為是/否)，此值只能包含名稱。<br /><br /> 追蹤具有以下可能的值：<br /><br /> true<br /><br /> on<br /><br /> false<br /><br /> 關閉<br /><br /> \<類別名稱 > [，類別名稱 >]<br /><br /> 預設值為 **false**。<br /><br /> <br /><br /> **service_heartbeat_interval** 是此服務更新 active_service_heartbeat 資料行的時間間隔 (以秒數為單位)。 預設值是 **30**。 最大值為 **3600**。<br /><br /> **service_config_polling_interval** 是 CDC 服務檢查組態變更的輪詢間隔 (以秒數為單位)。 預設值是 **30**。 最大值為 **3600**。<br /><br /> **sql_command_timeout** 是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]所使用的命令逾時。 預設值是 **1**秒。 最大值為 **3600**。|  
+|選項|這個項目會指定次要選項，例如追蹤或微調。 它會以 **name[=value][; ]** 格式寫入。 選項字串會使用與 ODBC 連接字串相同的語意。 如果選項為布林值 (值為是/否)，此值只能包含名稱。<br /><br /> 追蹤有下列可能的值：<br /><br /> true<br /><br /> on<br /><br /> false<br /><br /> 關閉<br /><br /> \<類別名稱 > [，類別名稱 >]<br /><br /> 預設值為 **false**。<br /><br /> <br /><br /> **service_heartbeat_interval** 是此服務更新 active_service_heartbeat 資料行的時間間隔 (以秒數為單位)。 預設值是 **30**。 最大值為 **3600**。<br /><br /> **service_config_polling_interval** 是 CDC 服務檢查組態變更的輪詢間隔 (以秒數為單位)。 預設值是 **30**。 最大值為 **3600**。<br /><br /> **sql_command_timeout** 是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]所使用的命令逾時。 預設值是 **1**秒。 最大值為 **3600**。|  
 ||  
   
 ### <a name="the-msxdbcdc-database-stored-procedures"></a>MSXDBCDC 資料庫預存程序  
@@ -190,7 +190,7 @@ ms.locfileid: "36134670"
 ### <a name="service-program-commands"></a>服務程式命令  
  本章節描述用來設定 CDC 服務的以下命令。  
   
--   [組態](#BKMK_config)  
+-   [設定](#BKMK_config)  
   
 -   [建立](#BKMK_create)  
   

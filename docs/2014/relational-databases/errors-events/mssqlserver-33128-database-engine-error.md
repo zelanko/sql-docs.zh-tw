@@ -5,23 +5,22 @@ ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - 33128 (Database Engine error)
 ms.assetid: 12c1096f-d120-439b-85f3-f794859503c9
 caps.latest.revision: 7
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 108c49e59102814e56056ce96b3643c2cd754c76
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 918ffa93e65fc4b553d979103e40cd7b34d98c2c
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36131957"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37430327"
 ---
 # <a name="mssqlserver33128"></a>MSSQLSERVER_33128
     
@@ -48,7 +47,7 @@ ms.locfileid: "36131957"
   
 |State|描述|  
 |-----------|-----------------|  
-|@shouldalert|內建的 encryptbykey() 函式中使用 RC4 金鑰。 內建函數傳回 NULL。 此訊息僅會顯示於信號緩衝區中。|  
+|1|內建的 encryptbykey() 函式中使用 RC4 金鑰。 內建函數傳回 NULL。 此訊息僅會顯示於信號緩衝區中。|  
 |2|內建的 decryptbykey() 函式中使用 RC4 金鑰。 此訊息僅會顯示於信號緩衝區中。|  
 |3|已被取代的 RC4 金鑰正由對稱金鑰加密中。 使用者可看見，也會顯示於信號緩衝區中。 已被取代的 RC4 對稱金鑰不能改變相容性層級為 110。 嘗試使用非 RC4 金鑰進行加密作業。 請視需要將回溯相容性層級設定為 90 或 100。|  
 |4|非 RC4 金鑰正由已被取代的 RC4 對稱金鑰加密中。 使用者可看見，也會顯示於信號緩衝區中。 將應用程式修改為使用非 RC4 對稱金鑰，或將回溯相容性層級設定為 90 或 100。|  

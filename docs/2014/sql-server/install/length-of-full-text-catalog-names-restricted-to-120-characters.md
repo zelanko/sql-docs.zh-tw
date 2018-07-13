@@ -1,5 +1,5 @@
 ---
-title: 全文檢索目錄名稱的長度限制是 120 個字元 |Microsoft 文件
+title: 全文檢索目錄名稱的長度限制是 120 個字元 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - full-text catalogs names
 ms.assetid: 50633373-83f6-4ed9-99b9-71f92479a14f
 caps.latest.revision: 22
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: f11c8b5a0698c83846f1570946a551f82a09ab48
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 7f4312fe66072e9d06e664fee422b994dd9afb5b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36135724"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37153739"
 ---
 # <a name="length-of-full-text-catalog-names-restricted-to-120-characters"></a>全文檢索目錄名稱長度的限制是 120 個字元
   全文檢索目錄名稱的長度限制已經從舊版 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的 128 個字元，調降為 120 個字元。  
@@ -33,6 +33,6 @@ ms.locfileid: "36135724"
  請修改建立全文檢索目錄的所有指令碼，確定它們將目錄名稱限制為 120 個字元。  
   
 ## <a name="see-also"></a>另請參閱  
- [使用 Upgrade Advisor](../../../2014/sql-server/install/working-with-upgrade-advisor.md)  
+ [使用升級建議程式](../../../2014/sql-server/install/working-with-upgrade-advisor.md)  
   
   

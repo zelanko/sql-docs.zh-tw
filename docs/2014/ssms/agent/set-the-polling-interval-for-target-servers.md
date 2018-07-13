@@ -8,29 +8,29 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - interval for polling [SQL Server]
 - target servers [SQL Server], polling interval
 - polling interval [SQL Server]
 ms.assetid: 4ffbbefa-77fb-442e-a77c-cb8c6cab9f3c
 caps.latest.revision: 24
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: db2913badf1b5ecf8bda10a810f7d2f604354cf9
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: c6ec96e9b728d5b00b15b5258895e1f17b119e18
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36134854"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37165777"
 ---
 # <a name="set-the-polling-interval-for-target-servers"></a>設定目標伺服器的輪詢間隔
   本主題描述如何設定 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 從主要伺服器到目標伺服器重新整理資訊的頻率。 作業是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 執行的一系列指定動作。 多重伺服器作業是一個主要伺服器執行於一或多個目標伺服器上的作業。  
   
 -   **開始之前**  [安全性](#Security)  
   
--   **若要使用的目標伺服器設定的輪詢間隔：**[SQL Server Management Studio](#SSMS)， [Transact SQL  ](#TSQL)  
+-   **若要設定目標伺服器，使用的輪詢間隔：**[SQL Server Management Studio](#SSMS)， [TRANSACT-SQL  ](#TSQL)  
   
 ##  <a name="BeforeYouBegin"></a> 開始之前  
  每一個目標伺服器可以同時執行相同作業的一個執行個體。 每個目標伺服器會定期輪詢主要伺服器、下載任何指派到目標伺服器的新作業之副本，然後中斷連接。 目標伺服器會先在本機執行作業，然後再重新連接到主要伺服器，以便上傳作業結果的狀態。  
@@ -67,7 +67,7 @@ ms.locfileid: "36134854"
   
 2.  在工具列上，按一下 **[新增查詢]**。  
   
-3.  在查詢視窗中，使用[sp_post_msx_operation &#40;TRANSACT-SQL&#41; ](/sql/relational-databases/system-stored-procedures/sp-post-msx-operation-transact-sql)系統預存程序來設定目標伺服器的輪詢間隔。  
+3.  在 [查詢] 視窗中，使用[sp_update_job &#40;TRANSACT-SQL&#41; ](/sql/relational-databases/system-stored-procedures/sp-post-msx-operation-transact-sql)系統預存程序來設定目標伺服器的輪詢間隔。  
   
 ## <a name="see-also"></a>另請參閱  
  [dbo.sysdownloadlist &#40;Transact SQL&#41;](/sql/relational-databases/system-tables/dbo-sysdownloadlist-transact-sql)  

@@ -1,5 +1,5 @@
 ---
-title: 自動分組屬性成員 |Microsoft 文件
+title: 自動分組屬性成員 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 9fb2cda3-a122-4a4c-82e0-3454865eef04
 caps.latest.revision: 14
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: jhubbard
-ms.openlocfilehash: eef5ca79172be96af5ded2c01a8c3f01e633caa7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 10a6ae9dee61d211c178a42e38087ad104344343
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36135289"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37183425"
 ---
 # <a name="automatically-grouping-attribute-members"></a>自動分組屬性成員
   當您瀏覽 Cube 時，通常會按另一個屬性階層的成員建立一個屬性階層成員的維度。 例如，您可以按縣 (市)、按購買的產品或按性別將客戶銷售加以分組。 不過，對於特定類型的屬性，讓 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 依據屬性階層內成員的散發情形自動建立屬性成員的群組，很有幫助。 例如，您可以讓 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 為客戶建立年收入值的群組。 如此一來，瀏覽這個屬性階層的使用者會看到群組的名稱和值而不是成員本身。 這樣可限制使用者看到的層級數，對於分析更有幫助。  
@@ -48,11 +48,11 @@ ms.locfileid: "36135289"
   
 4.  在 [屬性] 窗格中，選取 [年收入]。  
   
-5.  在 [屬性] 視窗中的值變更**DiscretizationMethod**屬性**自動**和變更的值**DiscretizationBucketCount**屬性若要`5`。  
+5.  在 [屬性] 視窗中，將變更的值**DiscretizationMethod**屬性設**自動**的值變更**DiscretizationBucketCount**屬性若要`5`。  
   
      下圖顯示 [年收入] 的已修改屬性。  
   
-     ![修改屬性 Yearly Income](../../2014/tutorials/media/l4-discretizationmethod-1.gif "修改 Yearly Income 屬性")  
+     ![修改屬性的 Yearly Income](../../2014/tutorials/media/l4-discretizationmethod-1.gif "修改 Yearly Income 屬性")  
   
 ## <a name="grouping-attribute-hierarchy-members-in-the-employee-dimension"></a>將 [員工] 維度中的屬性階層成員分組  
   
@@ -66,11 +66,11 @@ ms.locfileid: "36135289"
   
 4.  在 [屬性] 窗格中，選取 [病假時數]。  
   
-5.  在 [屬性] 視窗中的值變更**DiscretizationMethod**屬性**叢集**和變更的值**DiscretizationBucketCount**屬性`5`.  
+5.  在 [屬性] 視窗中，將變更的值**DiscretizationMethod**屬性設**叢集**並將變更的值**DiscretizationBucketCount**屬性`5`.  
   
 6.  在 [屬性] 窗格中，選取 [假期時數]。  
   
-7.  在 [屬性] 視窗中的值變更**DiscretizationMethod**屬性**Equal Areas**和變更的值**DiscretizationBucketCount**屬性若要`5`。  
+7.  在 [屬性] 視窗中，將變更的值**DiscretizationMethod**屬性設**Equal Areas**的值變更**DiscretizationBucketCount**屬性若要`5`。  
   
 ## <a name="browsing-the-modified-attribute-hierarchies"></a>瀏覽已修改的屬性階層  
   
@@ -98,7 +98,7 @@ ms.locfileid: "36135289"
   
      下圖顯示按員工病假時數建立維度的銷售。  
   
-     ![依員工病假時建立維度的銷售額保留小時](../../2014/tutorials/media/l4-discretizationmethod-2.gif "依員工病假時建立維度的銷售額保留小時")  
+     ![依員工病假時數建立維度的銷售保留小時](../../2014/tutorials/media/l4-discretizationmethod-2.gif "依員工病假時數建立維度的銷售保留時數")  
   
 10. 從 [資料] 窗格的資料行區域中移除 [病假時數] 屬性階層。  
   

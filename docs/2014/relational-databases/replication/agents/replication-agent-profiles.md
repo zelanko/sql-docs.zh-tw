@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Distribution Agent, profiles
 - replication [SQL Server], agents and profiles
@@ -21,15 +21,15 @@ helpviewer_keywords:
 - Log Reader Agent, profiles
 ms.assetid: 0e980725-e42f-4283-94cb-d8a6dba5df62
 caps.latest.revision: 43
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: f17c7ae974704ba42ad4653f1f560497f7bd9061
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 0faf4d2636c8a9f9ccd6487dbb6c9ca601889076
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36134154"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37211078"
 ---
 # <a name="replication-agent-profiles"></a>複寫代理程式設定檔
   設定複寫時，會在散發者上安裝一組代理程式設定檔。 代理程式設定檔包含一組參數，代理程式每次執行時都會使用這組參數：每個代理程式在啟動過程中都會登入散發者，並查詢其設定檔內的參數。 針對使用 Web 同步處理的合併訂閱，會下載設定檔並儲存於「訂閱者」。 如果設定檔變更，則「訂閱者」中的設定檔會在下一次「合併代理程式」執行時更新。 如需有關 Web 同步處理的詳細資訊，請參閱＜ [Web Synchronization for Merge Replication](../web-synchronization-for-merge-replication.md)＞。  
@@ -60,7 +60,7 @@ ms.locfileid: "36134154"
   
 ||預設|詳細資訊記錄|  
 |-|-------------|---------------------|  
-|**-HistoryVerboseLevel**|@shouldalert|2|  
+|**-HistoryVerboseLevel**|1|2|  
 |**-LoginTimeout**|15|15|  
 |**-LogScanThreshold**|500000|500000|  
 |**-PollingInterval**|5|5|  
@@ -75,10 +75,10 @@ ms.locfileid: "36134154"
 |**-BcpBatchSize**|100000|100000|1000|100000|2147473647|  
 |**-CommitBatchSize**|100|100|100|100|100|  
 |**-CommitBatchThreshold**|1000|1000|1000|1000|1000|  
-|**-HistoryVerboseLevel**|@shouldalert|2|@shouldalert|@shouldalert|@shouldalert|  
+|**-HistoryVerboseLevel**|1|2|1|1|1|  
 |**-KeepAliveMessageInterval**|300|300|300|300|300|  
 |**-LoginTimeout**|15|15|15|15|15|  
-|**-MaxBcpThreads**|@shouldalert|@shouldalert|@shouldalert|@shouldalert|@shouldalert|  
+|**-MaxBcpThreads**|1|1|1|1|1|  
 |**-MaxDeliveredTransactions**|0|0|0|0|0|  
 |**-OledbStreamThreshold**|NULL|NULL|NULL|NULL|32768|  
 |**-PacketSize**|NULL|NULL|NULL|NULL|32768|  
@@ -95,28 +95,28 @@ ms.locfileid: "36134154"
 |-|-------------|---------------------|-------------------------------------|-------------------------|--------------------------------------|---------------|------------------------------------|  
 |**-BcpBatchSize**|100000|100000|1000|100000|100000|100000|100000|  
 |**-ChangesPerHistory**|100|50|50|100|100|100|1000|  
-|**-DestThreads**|2|@shouldalert|@shouldalert|@shouldalert|@shouldalert|@shouldalert|4|  
-|**-DownloadGenerationsPerBatch**|50|50|50|50|50|@shouldalert|500|  
+|**-DestThreads**|2|1|1|1|1|1|4|  
+|**-DownloadGenerationsPerBatch**|50|50|50|50|50|1|500|  
 |**-DownloadReadChangesPerBatch**|100|100|100|100|100|100|100|  
 |**-DownloadWriteChangesPerBatch**|100|100|100|100|100|100|100|  
-|**-FastRowCount**|@shouldalert|@shouldalert|@shouldalert|@shouldalert|@shouldalert|@shouldalert|@shouldalert|  
-|**-HistoryVerboseLevel**|2|3|@shouldalert|@shouldalert|2|@shouldalert|2|  
+|**-FastRowCount**|1|1|1|1|1|1|1|  
+|**-HistoryVerboseLevel**|2|3|1|1|2|1|2|  
 |**-KeepAliveMessageInterval**|300|300|300|300|300|300|300|  
 |**-LoginTimeout**|15|15|15|15|15|15|15|  
 |**-MaxDownloadChanges**|0|0|0|0|0|0|0|  
 |**-MaxUploadChanges**|0|0|0|0|0|0|0|  
-|**-MetadataRetentionCleanup**|@shouldalert|@shouldalert|@shouldalert|@shouldalert|@shouldalert|@shouldalert|@shouldalert|  
+|**-MetadataRetentionCleanup**|1|1|1|1|1|1|1|  
 |**-NumDeadlockRetries**|5|5|5|5|5|5|5|  
-|**-ParallelUploadDownload**|NULL|NULL|NULL|NULL|NULL|NULL|@shouldalert|  
+|**-ParallelUploadDownload**|NULL|NULL|NULL|NULL|NULL|NULL|1|  
 |**-PollingInterval**|60|60|60|60|60|60|60|  
 |**-QueryTimeout**|300|300|300|300|300|300|600|  
 |**-QueueSizeMultiplier**|NULL|NULL|NULL|NULL|NULL|NULL|5|  
-|**-SrcThreads**|2|2|2|2|2|@shouldalert|3|  
+|**-SrcThreads**|2|2|2|2|2|1|3|  
 |**-StartQueueTimeout**|0|0|0|0|0|0|0|  
-|**-UploadGenerationsPerBatch**|50|50|50|50|50|@shouldalert|500|  
+|**-UploadGenerationsPerBatch**|50|50|50|50|50|1|500|  
 |**-UploadReadChangesPerBatch**|100|100|100|100|100|100|100|  
 |**-UploadWriteChangesPerBatch**|100|100|100|100|100|100|100|  
-|**-Validate**|0|0|0|@shouldalert|3|0|0|  
+|**-Validate**|0|0|0|1|3|0|0|  
 |**-ValidateInterval**|60|60|60|60|60|60|60|  
   
 ## <a name="queue-reader-agent-profiles"></a>佇列讀取器代理程式設定檔  
@@ -124,7 +124,7 @@ ms.locfileid: "36134154"
   
 ||預設|  
 |-|-------------|  
-|**-HistoryVerboseLevel**|@shouldalert|  
+|**-HistoryVerboseLevel**|1|  
 |**-LoginTimeout**|15|  
 |**-PollingInterval**|5|  
 |**-QueryTimeout**|1800|  

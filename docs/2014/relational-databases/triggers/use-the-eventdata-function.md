@@ -5,24 +5,22 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-ddl
+ms.technology: ''
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - EVENTDATA function
 - DDL triggers, EVENTDATA function
 ms.assetid: 675b8320-9c73-4526-bd2f-91ba42c1b604
-caps.latest.revision: 37
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 610822ec0eb896180ebfffa40d53198749df0428
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: rothja
+ms.author: jroth
+manager: craigg
+ms.openlocfilehash: e45ee2308f7f399c08053f8ff4cd6b862b3978df
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36131452"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37427597"
 ---
 # <a name="use-the-eventdata-function"></a>使用 EVENTDATA 函數
   使用 EVENTDATA 函數擷取引發 DDL 觸發程序之事件的相關資訊。 此函數會傳回 `xml` 值。 XML 結構描述包括有關下列項目的資訊：  
@@ -53,7 +51,7 @@ AS
   
  `CREATE TABLE NewTable (Column1 int);`  
   
- DDL 觸發程序中的 `EVENTDATA()` 陳述式，會擷取到不容許的 `CREATE TABLE` 陳述式文字。 這藉由使用 XQuery 陳述式針對`xml`EVENTDATA 並擷取產生資料\<CommandText > 項目。 如需詳細資訊，請參閱 [XQuery 語言參考 &#40;SQL Server&#41;](/sql/xquery/xquery-language-reference-sql-server)。  
+ DDL 觸發程序中的 `EVENTDATA()` 陳述式，會擷取到不容許的 `CREATE TABLE` 陳述式文字。 做法是使用 XQuery 陳述`xml`產生的 EVENTDATA 和擷取資料\<CommandText > 項目。 如需詳細資訊，請參閱 [XQuery 語言參考 &#40;SQL Server&#41;](/sql/xquery/xquery-language-reference-sql-server)。  
   
 > [!CAUTION]  
 >  EVENTDATA 會擷取 CREATE_SCHEMA 事件的資料，以及對應之 CREATE SCHEMA 定義的 <schema_element> (如果有的話)。 此外，EVENTDATA 還會將 <schema_element> 定義識別為個別事件。 因此，在 CREATE_SCHEMA 事件和 CREATE SCHEMA 定義之 <schema_element> 代表的事件上建立的 DDL 觸發程序，可能會傳回相同的事件資料兩次，例如 `TSQLCommand` 資料。 例如，假設在 CREATE_SCHEMA 和 CREATE_TABLE 兩個事件上建立 DDL 觸發程序，並執行下列批次：  
@@ -99,7 +97,7 @@ ALTER TABLE Person.Address ALTER COLUMN ModifiedDate date;
   
 -   組成事件的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式。  
   
- 同樣地，使用針對 XQuery，即可擷取最後兩個項目`xml`EVENTDATA 產生的資料。  
+ 同樣地，最後兩個項目會擷取使用 XQuery，以針對`xml`EVENTDATA 產生的資料。  
   
 ```  
 USE AdventureWorks2012;  

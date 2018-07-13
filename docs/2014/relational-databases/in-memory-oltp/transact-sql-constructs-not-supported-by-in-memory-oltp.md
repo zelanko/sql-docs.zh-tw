@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine-imoltp
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: e3f8009c-319d-4d7b-8993-828e55ccde11
 caps.latest.revision: 34
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: b0d852a4a0d104c815a76076661a3e3c56355d90
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: fe4388cff478cf3d8f8fd773c8b0926793b0cc0b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36133718"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37258854"
 ---
 # <a name="transact-sql-constructs-not-supported-by-in-memory-oltp"></a>記憶體中的 OLTP 不支援 Transact-SQL 建構
   記憶體最佳化資料表和原生編譯預存程序並未支援磁碟資料表和解譯的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 預存程序所支援的全部 [!INCLUDE[tsql](../../includes/tsql-md.md)] 介面區。 嘗試使用其中一項不支援的功能時，伺服器會傳回錯誤。  
@@ -39,7 +39,7 @@ ms.locfileid: "36133718"
 ## <a name="databases-that-use-in-memory-oltp"></a>使用記憶體中 OLTP 的資料庫  
  下表列出錯誤訊息文字中，可能會出現和記憶體中 OLTP 資料庫有關的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 功能與關鍵字。  
   
-|類型|[屬性]|解決方案|  
+|類型|名稱|解決方案|  
 |----------|----------|----------------|  
 |選項|AUTO_CLOSE|具有 MEMORY_OPTIMIZED_DATA 檔案群組的資料庫不支援資料庫選項 AUTO_CLOSE=ON。|  
 |選項|ATTACH_REBUILD_LOG|具有 MEMORY_OPTIMIZED_DATA 檔案群組的資料庫不支援 CREATE 資料庫選項 ATTACH_REBUILD_LOG。|  
@@ -50,18 +50,18 @@ ms.locfileid: "36133718"
 ## <a name="memory-optimized-tables"></a>記憶體最佳化的資料表  
  下表列出可能出現於涉及記憶體最佳化資料表之錯誤訊息文字中的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 功能和關鍵字，以及解決錯誤的更正動作。  
   
-|類型|[屬性]|解決方案|  
+|類型|名稱|解決方案|  
 |----------|----------|----------------|  
 |功能|ON|記憶體最佳化資料表不可放置在檔案群組或分割區配置上。 請從 `CREATE TABLE` 陳述式中移除 ON 子句。|  
-|資料類型|*資料類型名稱*|不支援所指的資料類型。 請用其中一種支援的資料類型取代該類型。 如需詳細資訊，請參閱[Supported Data Types](supported-data-types-for-in-memory-oltp.md)。|  
-|功能|計算資料行|記憶體最佳化資料表中不支援計算資料行。 移除計算資料行從`CREATE TABLE`陳述式。|  
+|資料類型|*資料類型名稱*|不支援所指的資料類型。 請用其中一種支援的資料類型取代該類型。 如需詳細資訊，請參閱 < [Supported Data Types](supported-data-types-for-in-memory-oltp.md)。|  
+|功能|計算資料行|記憶體最佳化資料表中不支援計算資料行。 移除計算資料行，從`CREATE TABLE`陳述式。|  
 |功能|複寫|記憶體最佳化資料表不支援複寫。|  
 |功能|FILESTREAM|FILESTREAM 儲存體不是記憶體最佳化資料表支援的資料行。 移除`FILESTREAM`從資料行定義的關鍵字。|  
 |功能|SPARSE|記憶體最佳化資料表的資料行不可定義為 SPARSE。 移除`SPARSE`從資料行定義的關鍵字。|  
 |功能|ROWGUIDCOL|ROWGUIDCOL 選項不是記憶體最佳化資料表支援的資料行。 移除`ROWGUIDCOL`從資料行定義的關鍵字。|  
-|功能|FOREIGN KEY|記憶體最佳化資料表中不支援 FOREIGN KEY 條件約束。 請從資料表定義中移除條件約束。<br /><br /> 如需如何降低缺少條件約束支援的詳細資訊，請參閱[移轉檢查 and Foreign Key Constraints](../../database-engine/migrating-check-and-foreign-key-constraints.md)。|  
-|功能|CHECK|記憶體最佳化資料表中不支援 CHECK 條件約束。 請從資料表定義中移除條件約束。<br /><br /> 如需如何降低缺少條件約束支援的詳細資訊，請參閱[移轉檢查 and Foreign Key Constraints](../../database-engine/migrating-check-and-foreign-key-constraints.md)。|  
-|功能|UNIQUE|記憶體最佳化資料表不支援 UNIQUE 條件約束。 請從資料表定義中移除條件約束。<br /><br /> 如需如何降低缺少條件約束支援的詳細資訊，請參閱[移轉檢查 and Foreign Key Constraints](../../database-engine/migrating-check-and-foreign-key-constraints.md)。|  
+|功能|FOREIGN KEY|記憶體最佳化資料表中不支援 FOREIGN KEY 條件約束。 請從資料表定義中移除條件約束。<br /><br /> 如需如何降低條件約束支援的缺乏詳細資訊，請參閱[移轉檢查和 Foreign Key 條件約束](../../database-engine/migrating-check-and-foreign-key-constraints.md)。|  
+|功能|CHECK|記憶體最佳化資料表中不支援 CHECK 條件約束。 請從資料表定義中移除條件約束。<br /><br /> 如需如何降低條件約束支援的缺乏詳細資訊，請參閱[移轉檢查和 Foreign Key 條件約束](../../database-engine/migrating-check-and-foreign-key-constraints.md)。|  
+|功能|UNIQUE|記憶體最佳化資料表不支援 UNIQUE 條件約束。 請從資料表定義中移除條件約束。<br /><br /> 如需如何降低條件約束支援的缺乏詳細資訊，請參閱[移轉檢查和 Foreign Key 條件約束](../../database-engine/migrating-check-and-foreign-key-constraints.md)。|  
 |功能|COLUMNSTORE|記憶體最佳化資料表中不支援 COLUMNSTORE 索引。 請改為指定 NONCLUSTERED 或 NONCLUSTERED HASH 索引。|  
 |功能|叢集索引|指定非叢集索引。 對於主索引鍵索引，請務必指定 `PRIMARY KEY NONCLUSTERED [HASH]`。|  
 |功能|非 1252 字碼頁|記憶體最佳化資料表中資料類型為 `char` 和 `varchar` 的資料行必須使用字碼頁 1252。 請使用 n(var)char 而不要 (var)char，或是使用字碼頁為 1252 的定序 (例如，Latin1_General_BIN2)。 如需詳細資訊，請參閱 [Collations and Code Pages](../../database-engine/collations-and-code-pages.md)。|  
@@ -75,7 +75,7 @@ ms.locfileid: "36133718"
 |作業|CREATE FULLTEXT INDEX|記憶體最佳化資料表中不支援全文檢索索引。|  
 |作業|結構描述變更|記憶體最佳化資料表和原生編譯預存程序不支援結構描述變更，例如 `sp_rename`。<br /><br /> 嘗試變更結構描述 (例如重新命名資料) 將會產生錯誤 12320。記憶體最佳化資料表不支援需要變更結構描述版本 (例如重新命名) 的作業。<br /><br /> 若要變更結構描述，請卸除資料表或程序，然後使用更新的定義重新建立資料表或程序。|  
 |作業|CREATE TRIGGER|記憶體最佳化資料表上不支援觸發程序。|  
-|作業|TRUNCATE TABLE|記憶體最佳化資料表不支援 TRUNCATE 作業。 若要從資料表移除所有資料列，刪除所有資料列使用`DELETE FROM`*資料表*或卸除並重新建立資料表。|  
+|作業|TRUNCATE TABLE|記憶體最佳化資料表不支援 TRUNCATE 作業。 若要從資料表移除所有資料列，刪除 使用的所有資料列`DELETE FROM`*表格*或卸除再重新建立資料表。|  
 |作業|ALTER AUTHORIZATION|不支援變更現有記憶體最佳化資料表或原生編譯預存程序的擁有者。 請卸除後再重新建立資料表或程序，以變更擁有權。|  
 |作業|ALTER SCHEMA|不支援變更現有記憶體最佳化資料表或原生編譯之預存程序的結構描述。 必須先卸除再重新建立資料表或程序，才能變更結構描述。|  
 |作業|DBCC CHECKTABLE|記憶體最佳化資料表中不支援 DBCC CHECKTABLE。|  
@@ -88,7 +88,7 @@ ms.locfileid: "36133718"
 ## <a name="indexes-on-memory-optimized-tables"></a>記憶體最佳化資料表上的索引  
  下表列出可能出現於涉及記憶體最佳化資料表上某個索引錯誤之訊息文字中的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 功能和關鍵字，以及解決錯誤的更正動作。  
   
-|類型|[屬性]|解決方案|  
+|類型|名稱|解決方案|  
 |----------|----------|----------------|  
 |功能|已篩選的索引|記憶體最佳化資料表中不支援篩選的索引。 省略`WHERE`從索引指定的子句。|  
 |功能|UNIQUE|記憶體最佳化資料表中不支援唯一索引。 請從索引指定中移除引數 `UNIQUE`。|  
@@ -102,7 +102,7 @@ ms.locfileid: "36133718"
 ## <a name="nonclustered-hash-indexes"></a>非叢集雜湊索引  
  下表列出可能出現於涉及非叢集雜湊索引之錯誤訊息文字中的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 功能和關鍵字，以及解決錯誤的更正動作。  
   
-|類型|[屬性]|解決方案|  
+|類型|名稱|解決方案|  
 |----------|----------|----------------|  
 |選項|ASC/DESC|非叢集雜湊索引不會排序。 請從索引鍵指定中移除關鍵字 `ASC` 和 `DESC`。|  
   
@@ -112,23 +112,23 @@ ms.locfileid: "36133718"
 |類型|功能|解決方案|  
 |----------|-------------|----------------|  
 |功能|內嵌資料表變數|資料表類型無法以內嵌於變數宣告中的方式宣告。 資料表類型必須使用明確宣告`CREATE TYPE`陳述式。|  
-|功能|資料指標|原生編譯預存程序上或內部不支援資料指標。<br /><br /> -當執行程序，從用戶端，請使用 RPC，而不是資料指標 API。 使用 ODBC 時，避免 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式 `EXECUTE`，請改為直接指定程序的名稱。<br /><br /> -當執行程序從[!INCLUDE[tsql](../../includes/tsql-md.md)]批次或另一個預存程序，請避免使用資料指標與原生編譯的預存程序。<br /><br /> -當建立原生編譯的預存程序，而不是使用資料指標，請使用集合為基礎的邏輯或`WHILE`迴圈。|  
+|功能|資料指標|原生編譯預存程序上或內部不支援資料指標。<br /><br /> -當從用戶端執行程序，請使用 RPC，而不是資料指標 API。 使用 ODBC 時，避免 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式 `EXECUTE`，請改為直接指定程序的名稱。<br /><br /> -當執行程序從[!INCLUDE[tsql](../../includes/tsql-md.md)]批次或另一個預存程序，請避免使用資料指標與原生編譯的預存程序。<br /><br /> -當建立原生編譯的預存程序，而不是使用資料指標，使用以集合為基礎的邏輯或`WHILE`迴圈。|  
 |功能|非常數參數的預設值|在原生編譯預存程序上使用具有參數的預設值時，值必須為常數。 請從參數宣告中移除任何萬用字元。|  
 |功能|EXTERNAL|無法對 CLR 預存程序執行原生編譯。 從 CREATE PROCEDURE 陳述式中移除 AS EXTERNAL 子句或 NATIVE_COMPILATION 選項。|  
-|功能|編號的預存程序|原生編譯預存程序不可編號。 移除`;`*數目*從`CREATE PROCEDURE`陳述式。|  
+|功能|編號的預存程序|原生編譯預存程序不可編號。 移除`;`*數字*從`CREATE PROCEDURE`陳述式。|  
 |功能|多列 INSERT ... VALUES 陳述式|無法使用相同的 `INSERT` 陳述式在原生編譯預存程序中插入多個資料列。 建立`INSERT`陳述式中的每個資料列。|  
 |功能|通用資料表運算式 (CTE)|原生編譯預存程序中不支援通用資料表運算式 (CTE)。 重寫查詢。|  
 |功能|子查詢|不支援子查詢 (另一個查詢中的巢狀查詢)。 重寫查詢。|  
 |功能|COMPUTE|不支援 `COMPUTE` 子句。 請從查詢中將它移除。|  
-|功能|SELECT INTO|不支援 `INTO` 子句與 `SELECT` 陳述式一起使用。 請重寫查詢`INSERT INTO`*資料表*`SELECT`。|  
+|功能|SELECT INTO|不支援 `INTO` 子句與 `SELECT` 陳述式一起使用。 重寫查詢當做`INSERT INTO`*表格*`SELECT`。|  
 |功能|OUTPUT|不支援 `OUTPUT` 子句。 請從查詢中將它移除。|  
 |功能|不完整的插入資料行清單|在 `INSERT` 陳述式中，必須為資料表中的所有資料行指定值。|  
-|函數|*函數*|原生編譯預存程序中不支援內建函數。 請從預存程序中移除函數。 如需支援的內建函數的詳細資訊，請參閱[Natively Compiled Stored Procedures](../in-memory-oltp/natively-compiled-stored-procedures.md)。|  
-|功能|CASE|原生編譯預存程序內部的查詢中不支援 `CASE` 陳述式。 請為每個案例建立查詢。 如需詳細資訊，請參閱[實作 CASE 陳述式](implementing-a-case-expression-in-a-natively-compiled-stored-procedure.md)。|  
+|函數|*函數*|原生編譯預存程序中不支援內建函數。 請從預存程序中移除函數。 如需有關支援的內建函式的詳細資訊，請參閱 < [Natively Compiled Stored Procedures](../in-memory-oltp/natively-compiled-stored-procedures.md)。|  
+|功能|CASE|原生編譯預存程序內部的查詢中不支援 `CASE` 陳述式。 請為每個案例建立查詢。 如需詳細資訊，請參閱 <<c0> [ 實作 CASE 陳述式](implementing-a-case-expression-in-a-natively-compiled-stored-procedure.md)。|  
 |功能|使用者定義函數|使用者定義函數不可在原生編譯預存程序中使用。 請從程序定義中移除函數的參考。|  
 |功能|使用者定義彙總|使用者定義彙總函式不可在原生編譯預存程序中使用。 請從程序中移除函式的參考。|  
 |功能|瀏覽模式中繼資料|原生編譯預存程序不支援瀏覽模式中繼資料。 請確定工作階段選項 `NO_BROWSETABLE` 設為 OFF。|  
-|功能|FROM 子句中的 DELETE|原生編譯預存程序中具有資料表來源的 `FROM` 陳述式不支援 `DELETE` 子句。<br /><br /> `DELETE` 與`FROM`時它用來指定要刪除的資料表支援子句。|  
+|功能|FROM 子句中的 DELETE|原生編譯預存程序中具有資料表來源的 `FROM` 陳述式不支援 `DELETE` 子句。<br /><br /> `DELETE` 使用`FROM`子句支援時它用來指定要刪除的資料表。|  
 |功能|FROM 子句中的 UPDATE|原生編譯預存程序中的 `FROM` 陳述式不支援 `UPDATE` 子句。|  
 |功能|暫存程序|不可對暫存預存程序進行原生編譯。 請建立永久的原生編譯預存程序，或暫存的解譯 [!INCLUDE[tsql](../../includes/tsql-md.md)] 預存程序。|  
 |隔離等級|READ UNCOMMITTED|原生編譯預存程序中不支援隔離等級 READ UNCOMMITTED。 請使用支援的隔離等級，例如 SNAPSHOT。|  
@@ -158,7 +158,7 @@ ms.locfileid: "36133718"
 |運算子|UNION|不支援此運算子。 移除`UNION`從原生編譯預存程序。 您可以使用資料表變數將數個結果集結合到程單一結果集內。|  
 |運算子|INTERSECT|不支援此運算子。 移除`INTERSECT`從原生編譯預存程序。 在某些情況下，可以使用 INNER JOIN 獲得相同結果。|  
 |運算子|EXCEPT|不支援此運算子。 移除`EXCEPT`從原生編譯預存程序。|  
-|運算子|OUTER JOIN|不支援此運算子。 移除`OUTER JOIN`從原生編譯預存程序。 如需詳細資訊，請參閱[實作的外部聯結](implementing-an-outer-join.md)。|  
+|運算子|OUTER JOIN|不支援此運算子。 移除`OUTER JOIN`從原生編譯預存程序。 如需詳細資訊，請參閱 <<c0> [ 實作的外部聯結](implementing-an-outer-join.md)。|  
 |運算子|APPLY|不支援此運算子。 移除`APPLY`從原生編譯預存程序。|  
 |運算子|PIVOT|不支援此運算子。 移除`PIVOT`從原生編譯預存程序。|  
 |運算子|UNPIVOT|不支援此運算子。 移除`UNPIVOT`從原生編譯預存程序。|  
@@ -179,8 +179,8 @@ ms.locfileid: "36133718"
 |聯結提示|HASH、MERGE|原生編譯預存程序僅支援巢狀迴圈聯結。 不支援雜湊和合併聯結。 請移除聯結提示。|  
 |查詢提示|*查詢提示*|此查詢提示不在原生編譯預存程序內。 如需支援的查詢提示，請參閱[查詢提示 &#40;Transact-SQL&#41;](/sql/t-sql/queries/hints-transact-sql-query)。|  
 |選項|DISTINCT|不支援這個選項。 請從原生編譯預存程序的查詢中移除 `DISTINCT`。|  
-|選項|PERCENT|這個選項不支援`TOP`子句。 請從原生編譯預存程序的查詢中移除 `PERCENT`。|  
-|選項|WITH TIES|這個選項不支援`TOP`子句。 請從原生編譯預存程序的查詢中移除 `WITH TIES`。|  
+|選項|PERCENT|此選項不支援`TOP`子句。 請從原生編譯預存程序的查詢中移除 `PERCENT`。|  
+|選項|WITH TIES|此選項不支援`TOP`子句。 請從原生編譯預存程序的查詢中移除 `WITH TIES`。|  
 |彙總函式|*彙總函式*|不支援此子句。 如需原生編譯預存程序中彙總函式的詳細資訊，請參閱＜ [Natively Compiled Stored Procedures](../in-memory-oltp/natively-compiled-stored-procedures.md)＞。|  
 |排名函數|*次序函數*|原生編譯預存程序中不支援排名函數。 請從程序定義中將它們移除。|  
 |函數|*函數*|不支援此函數。 請從原生編譯預存程序中將它移除。|  
@@ -203,7 +203,7 @@ ms.locfileid: "36133718"
 ## <a name="transactions-that-access-memory-optimized-tables"></a>存取記憶體最佳化資料表的交易  
  下表列出可能出現於涉及存取記憶體最佳化資料表之交易錯誤的訊息文字中的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 功能和關鍵字，以及解決錯誤的更正動作。  
   
-|類型|[屬性]|解決方案|  
+|類型|名稱|解決方案|  
 |----------|----------|----------------|  
 |功能|儲存點|不支援在存取記憶體最佳化資料表的交易中建立明確儲存點。|  
 |功能|繫結式交易|繫結工作階段無法參與存取記憶體最佳化資料表的交易。 在執行程序之前，請不要繫結工作階段。|  

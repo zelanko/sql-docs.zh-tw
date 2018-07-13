@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - development [SQL Server replication]
 - replication [SQL Server], development
 - replication [SQL Server], interoperability
 ms.assetid: 47c613e4-7fe9-462a-89b4-659b14825b70
 caps.latest.revision: 20
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: ffc90e3f231dfc98344e6df0155a40557bf19e4b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: ee7536c8ab3b2069d2cdd2bcc8fec34c267cf589
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36134366"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37162329"
 ---
 # <a name="replication-features-and-tasks"></a>複寫功能及工作
   尋找任何人 (設計人員、開發人員、分析師或管理員) 設計及實作複寫解決方案所需的資訊。  

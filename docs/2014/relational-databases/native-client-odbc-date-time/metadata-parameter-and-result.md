@@ -1,28 +1,26 @@
 ---
-title: And Result Metadata< |Microsoft 文件
+title: 參數和結果中繼資料 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - metadata [ODBC]
 ms.assetid: 1518e6e5-a6a8-4489-b779-064c5624df53
 caps.latest.revision: 27
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 6a898b9aa7a816b93afea875c8d304b520864f40
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: f07127b8ae80ff212f671d94f55a311584552c58
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36133205"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37420181"
 ---
 # <a name="parameter-and-result-metadata"></a>參數和結果中繼資料
   本主題將描述在日期和時間資料類型之實作參數描述項 (IPD) 與實作資料列描述項 (IRD) 欄位中傳回的資訊。  
@@ -67,11 +65,11 @@ ms.locfileid: "36133205"
   
 -   在準備或執行階段 (呼叫 SQLExecute、SQLExecDirect、SQLSetPos 或 SQLBulkOperations 時) 中。  
   
--   藉由呼叫 SQLPrepare 與非延遲準備應用程式強制延遲時準備停用，或藉由呼叫 SQLNumResultCols，SQLDescribeCol 或 SQLDescribeParam 但不備妥的陳述式執行。  
+-   藉由呼叫 SQLPrepare 與非延遲準備應用程式強制延遲時準備停用，或藉由呼叫 SQLNumResultCols，SQLDescribeCol 或 SQLDescribeParam 但未備妥的陳述式執行。  
   
  當 SQL_CA_SS_SERVER_TYPE 設定 SQLSetDescField 呼叫時，其值必須是 SQL_SS_TYPE_DEFAULT、 SQL_SS_TYPE_SMALLDATETIME 或 SQL_SS_TYPE_DATETIME。 否則，系統就會傳回 SQL_ERROR 並且使用 SQLState HY092 和訊息「屬性/選項識別碼無效」來記錄診斷記錄。  
   
- 相依於 `datetime` 和 `smalldatetime` 所支援但 `datetime2` 不支援之功能的應用程式可以使用 SQL_CA_SS_SERVER_TYPE 屬性。 例如，`datetime2`需要使用`dateadd`和**datediif**函數，而`datetime`和`smalldatetime`也允許使用算術運算子。 大部分應用程式都不需要使用這個屬性，而且應該避免使用這個屬性。  
+ 相依於 `datetime` 和 `smalldatetime` 所支援但 `datetime2` 不支援之功能的應用程式可以使用 SQL_CA_SS_SERVER_TYPE 屬性。 例如，`datetime2`需要使用`dateadd`並**datediif**函數，而`datetime`和`smalldatetime`也允許使用算術運算子。 大部分應用程式都不需要使用這個屬性，而且應該避免使用這個屬性。  
   
 ## <a name="information-returned-in-ird-fields"></a>在 IRD 欄位中傳回的資訊  
  下列資訊會在 IRD 欄位中傳回：  

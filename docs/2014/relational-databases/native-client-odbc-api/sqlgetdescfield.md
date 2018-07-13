@@ -1,13 +1,11 @@
 ---
-title: SQLGetDescField |Microsoft 文件
+title: SQLGetDescField |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 topic_type:
@@ -16,40 +14,40 @@ helpviewer_keywords:
 - SQLGetDescField function
 ms.assetid: 3e59a37a-28ee-4c91-8968-7fe3b966739d
 caps.latest.revision: 51
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 23de7c344effa1093f75705f6dd0f2b27f852208
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 0527b8260f954764ed894b1b5db60278ff483d31
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36131946"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37427527"
 ---
 # <a name="sqlgetdescfield"></a>SQLGetDescField
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驅動程式會公開實作資料列描述項 (IRD) 只的驅動程式專屬描述項欄位。 在 IRD 內[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]描述項欄位會透過驅動程式特有的資料行屬性來參考。 可用的驅動程式專屬描述項欄位的完整清單的相關資訊，請參閱[SQLColAttribute](sqlcolattribute.md)。  
   
  包含資料行識別項字串的描述項欄位常是零長度的字串。 所有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 特定的描述項欄位值都是唯讀的。  
   
- 類似的 SQLColAttribute、 擷取報表資料列層級屬性 （例侞 SQL_CA_SS_COMPUTE_ID) 會報告結果集中的所有資料行的描述項欄位的屬性。  
+ 例如 SQLColAttribute、 擷取報表資料列層級屬性 （例侞 SQL_CA_SS_COMPUTE_ID) 會報告結果集中的所有資料行的描述項欄位的屬性。  
   
 ## <a name="sqlgetdescfield-and-table-valued-parameters"></a>SQLGetDescField 和資料表值參數  
- SQLGetDescField 可以用來取得資料表值參數和資料表值參數資料行的擴充屬性的值。 如需有關資料表值參數的詳細資訊，請參閱[資料表值參數&#40;ODBC&#41;](../native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md)。  
+ SQLGetDescField 可用來取得資料表值參數和資料表值參數資料行的擴充屬性的值。 如需有關資料表值參數的詳細資訊，請參閱 < [Parameters &#40;ODBC&#41;](../native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md)。  
   
 ## <a name="sqlgetdescfield-support-for-enhanced-date-and-time-features"></a>增強型日期和時間功能的 SQLGetDescField 支援  
- 將新的日期/時間類型與可用的描述項欄位的相關資訊，請參閱[and Result Metadata<](../native-client-odbc-date-time/metadata-parameter-and-result.md)。  
+ 新的日期/時間類型提供的描述項欄位的相關資訊，請參閱[參數和結果中繼資料](../native-client-odbc-date-time/metadata-parameter-and-result.md)。  
   
- 如需詳細資訊，請參閱[日期和時間增強功能&#40;ODBC&#41;](../native-client-odbc-date-time/date-and-time-improvements-odbc.md)。  
+ 如需詳細資訊，請參閱 <<c0> [ 日期和時間改善&#40;ODBC&#41;](../native-client-odbc-date-time/date-and-time-improvements-odbc.md)。</c0>  
   
  從開始[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]，SQLGetDescField 可以傳回`SQL_C_SS_TIME2`(如`time`類型) 或`SQL_C_SS_TIMESTAMPOFFSET`(如`datetimeoffset`) 而不是`SQL_C_BINARY`，如果您的應用程式使用 ODBC 3.8 的話。  
   
 ## <a name="sqlgetdescfield-support-for-large-clr-udts"></a>大型 CLR UDT 的 SQLGetDescField 支援  
- `SQLGetDescField` 支援大型 CLR 使用者定義型別 (UDT)。 如需詳細資訊，請參閱[Large CLR User-Defined 類型&#40;ODBC&#41;](../native-client/odbc/large-clr-user-defined-types-odbc.md)。  
+ `SQLGetDescField` 支援大型 CLR 使用者定義型別 (UDT)。 如需詳細資訊，請參閱 < [Large CLR User-Defined 類型&#40;ODBC&#41;](../native-client/odbc/large-clr-user-defined-types-odbc.md)。  
   
 ## <a name="sqlgetdescfield-support-for-sparse-columns"></a>疏鬆資料行的 SQLGetDescField 支援  
- SQLGetDescField 可以用來查詢新增的 IRD field SQL_CA_SS_IS_COLUMN_SET，以判斷資料行是否為`column_set`資料行。  
+ SQLGetDescField 可用來查詢新增的 IRD field SQL_CA_SS_IS_COLUMN_SET，以判斷資料行是否`column_set`資料行。  
   
- 如需詳細資訊，請參閱[疏鬆資料行支援&#40;ODBC&#41;](../native-client/odbc/sparse-columns-support-odbc.md)。  
+ 如需詳細資訊，請參閱 <<c0> [ 疏鬆資料行支援&#40;ODBC&#41;](../native-client/odbc/sparse-columns-support-odbc.md)。</c0>  
   
 ## <a name="example"></a>範例  
   

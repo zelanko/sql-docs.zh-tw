@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.ag.msxwiz.complete.f1
 - sql12.ag.msxwiz.target.f1
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - Master Server Wizard
 ms.assetid: 05739a73-1fdf-4d9d-92a6-70f328380322
 caps.latest.revision: 33
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: e157f2554d8add51cba02b7428a08a7e47c94d1a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 7f609af3e4cef804d74772283fc1bb519d3dd89f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36135072"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37163789"
 ---
 # <a name="make-a-master-server"></a>設為主要伺服器
   此主題描述如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 設為主要伺服器 [!INCLUDE[tsql](../../includes/tsql-md.md)]。  
@@ -138,7 +138,7 @@ EXEC dbo.sp_msx_enlist N'AdventureWorks1',
 GO;  
 ```  
   
- 如需詳細資訊，請參閱[sp_msx_enlist &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-msx-enlist-transact-sql)。  
+ 如需詳細資訊，請參閱 < [sp_msx_enlist &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-msx-enlist-transact-sql)。  
   
 ## <a name="see-also"></a>另請參閱  
  [建立多伺服器環境](create-a-multiserver-environment.md)   

@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - jobs [SQL Server Agent], owners
 - owners [SQL Server], jobs
 - SQL Server Agent jobs, owners
 ms.assetid: 2ded5e9c-4251-4fb1-a047-99f13d150b61
 caps.latest.revision: 28
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 7e2190d04d8a03a2f6c46ca8fbd193555cee221f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 3115950e8218809f23fb123bc92e6ad56d7ad2a8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36135534"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37157599"
 ---
 # <a name="give-others-ownership-of-a-job"></a>Give Others Ownership of a Job
   此主題描述如何將 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 作業的擁有權重新指派給其他使用者。  
@@ -74,7 +74,7 @@ ms.locfileid: "36135534"
   
 2.  在工具列上，按一下 **[新增查詢]**。  
   
-3.  在查詢視窗中，輸入下列陳述式使用[sp_manage_jobs_by_login &#40;TRANSACT-SQL&#41; ](/sql/relational-databases/system-stored-procedures/sp-manage-jobs-by-login-transact-sql)系統預存程序。 下列範例會將 `danw` 的所有作業重新指派給 `françoisa`。  
+3.  在 [查詢] 視窗中，輸入使用下列陳述式[sp_manage_jobs_by_login &#40;TRANSACT-SQL&#41; ](/sql/relational-databases/system-stored-procedures/sp-manage-jobs-by-login-transact-sql)系統預存程序。 下列範例會將 `danw` 的所有作業重新指派給 `françoisa`。  
   
     ```  
     USE msdb ;  
@@ -90,7 +90,7 @@ ms.locfileid: "36135534"
 ##  <a name="SMOProc2"></a> 使用 SQL Server 管理物件  
  **若要賦予作業擁有權給其他人**  
   
-1.  呼叫`Job`使用您選擇，例如 Visual Basic、 Visual C# 或 PowerShell 的程式語言的類別。 如需範例程式碼，請參閱 [使用 SQL Server Agent 排程自動管理工作](sql-server-agent.md)。  
+1.  呼叫`Job`藉由使用您選擇，例如 Visual Basic、 Visual C# 或 PowerShell 的程式語言的類別。 如需範例程式碼，請參閱 [使用 SQL Server Agent 排程自動管理工作](sql-server-agent.md)。  
   
 ## <a name="see-also"></a>另請參閱  
  [實作作業](implement-jobs.md)   

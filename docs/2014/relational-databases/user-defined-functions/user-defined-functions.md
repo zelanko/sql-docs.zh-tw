@@ -5,24 +5,22 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-udf
+ms.technology: ''
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - user-defined functions [SQL Server], components
 - user-defined functions [SQL Server], about user-defined functions
 ms.assetid: d7ddafab-f5a6-44b0-81d5-ba96425aada4
-caps.latest.revision: 21
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 27830819baa6b5381b8e9b9c41a62067e66f65e4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: rothja
+ms.author: jroth
+manager: craigg
+ms.openlocfilehash: 1d8b8569a35a67d2700c0ce48c9c1cd4b29da7e1
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36132143"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37427467"
 ---
 # <a name="user-defined-functions"></a>使用者定義的函式
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用者定義函數與程式語言函數類似，是可接受參數、執行動作 (如複雜計算) 以及傳回該動作所得值的常式。 傳回值可以是單一純量值或結果集。  
@@ -35,7 +33,7 @@ ms.locfileid: "36132143"
   
  [指導方針](#Guidelines)  
   
- [有效的陳述式的函式中](#ValidStatements)  
+ [函式中的有效陳述式](#ValidStatements)  
   
  [結構描述繫結函式](#SchemaBound)  
   
@@ -83,7 +81,7 @@ ms.locfileid: "36132143"
   
  查詢中指定的函數真正執行的次數，會因最佳化工具建立的執行計畫而有不同。 WHERE 子句中的子查詢所叫用的函數就是一個例子。 子查詢及其函數的執行次數，會因最佳化工具選擇的存取路徑而有不同。  
   
-##  <a name="ValidStatements"></a> 有效的陳述式的函式中  
+##  <a name="ValidStatements"></a> 函式中的有效陳述式  
  函數中有效的陳述式類型包括：  
   
 -   DECLARE 陳述式，可用來定義對函數而言為本機的資料變數與資料指標。  

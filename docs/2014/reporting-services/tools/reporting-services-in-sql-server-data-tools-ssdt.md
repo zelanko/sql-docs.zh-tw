@@ -8,23 +8,23 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Business Intelligence Development Studio, Reporting Services in
 ms.assetid: 0903c7b2-ac59-45f1-b7d0-922ecd9d76f8
 caps.latest.revision: 71
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 6d46d44f2071d473fbe62a6f15cce3a250751576
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 9b2ab20a31fb36c7ca648a2363861e75e25c9179
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36135345"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37153807"
 ---
 # <a name="reporting-services-in-sql-server-data-tools-ssdt"></a>SQL Server 資料工具中的 Reporting Services (SSDT)
-  [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] 是[!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)]環境與商業智慧方案專用增強功能。 [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] 隨附於 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。  
+  [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] 已[!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)]與商業智慧方案專用增強功能的環境。 [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] 隨附於 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。  
   
  您可以使用 [!INCLUDE[ssBIDevStudio](../../../includes/ssbidevstudio-md.md)] 建立及管理 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 報表與報表相關項目適用的方案及專案。 [!INCLUDE[ssBIDevStudio](../../../includes/ssbidevstudio-md.md)] 提供報表設計師撰寫環境。 在 [報表設計師] 中，您可以開啟、修改、預覽、儲存及部署報表定義、共用資料來源、共用資料集和報表組件。  
   
@@ -43,7 +43,7 @@ ms.locfileid: "36135345"
 ##  <a name="bkmk_ReportServerProjects"></a> 報表伺服器專案  
  當您安裝 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]時， [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)]提供了下列專案範本：  
   
--   **報表伺服器專案。** 當您選取報表伺服器專案時，就會開啟報表設計師。 報表伺服器專案是根據所安裝的商業智慧專案範本[!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)]，而且可從**新專案** 對話方塊。 如需詳細資訊，請參閱[將新的或現有的報表新增至報表專案 &#40;SSRS&#41;](add-a-new-or-existing-report-to-a-report-project-ssrs.md)。報表伺服器專案屬性會套用至 [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] 專案中的所有報表和所有共用資料來源。 這些屬性包括報表伺服器的 URL 以及報表和共用資料來源的資料夾名稱。 使用 **[專案屬性頁面]** 對話方塊可檢視目前的屬性值。 若要開啟此對話方塊，請在**專案**功能表上，按一下  *\<專案名稱 >* **屬性**。  
+-   **報表伺服器專案。** 當您選取報表伺服器專案時，就會開啟報表設計師。 報表伺服器專案是由所安裝的商業智慧專案範本[!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)]，而且可從**新的專案** 對話方塊。 如需詳細資訊，請參閱[將新的或現有的報表新增至報表專案 &#40;SSRS&#41;](add-a-new-or-existing-report-to-a-report-project-ssrs.md)。報表伺服器專案屬性會套用至 [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] 專案中的所有報表和所有共用資料來源。 這些屬性包括報表伺服器的 URL 以及報表和共用資料來源的資料夾名稱。 使用 **[專案屬性頁面]** 對話方塊可檢視目前的屬性值。 若要開啟此對話方塊中，在**專案**功能表上，按一下*\<專案名稱 >* **屬性**。  
   
 -   **報表伺服器專案精靈。** 當您選取報表伺服器精靈專案時，就會自動建立報表伺服器專案，而且報表精靈會開啟。 在此精靈中，您可以遵循每一頁的指示來建立報表，以便建立與資料來源的連接字串、設定資料來源認證、設計查詢、加入資料表或矩陣資料區、指定報表資料和群組、挑選字型和色彩樣式、將報表發行到報表伺服器，以及在本機預覽報表。 當您使用精靈建立報表之後，您可以在報表伺服器專案中使用報表設計師來變更報表資料和報表設計師。  
   
@@ -71,7 +71,7 @@ ms.locfileid: "36135345"
   
 -   **影像** ：可用於併入為報表中「影像」報表項目的影像清單。  
   
- [報表資料] 窗格中的資料來源和資料集代表報表定義中的元素。 [報表資料] 窗格是多個報表撰寫環境所支援的功能。 在 [報表產生器] 中，這是唯一可用於管理資料來源和資料集的窗格。 在 [報表設計師] 中，[報表資料] 窗格是與 [方案總管] 搭配使用，而後者會將共用資料來源和共用資料集列出為檔案。 [報表資料] 窗格中的共用資料來源和共用資料集，必須指向它們在 [方案總管] 中的對應「共用資料來源」和「共用資料集」。 之後，[報表資料] 窗格元素就會包含 [方案總管] 中資料檔案的參考。 專案屬性可決定是否將共用資料來源和共用資料集部署至報表伺服器或 SharePoint 網站。 如需詳細資訊，請參閱[將資料來源從內嵌轉換成共用&#40;報表產生器及 SSRS&#41;](../report-data/convert-data-sources-report-builder-and-ssrs.md)。  
+ [報表資料] 窗格中的資料來源和資料集代表報表定義中的元素。 [報表資料] 窗格是多個報表撰寫環境所支援的功能。 在 [報表產生器] 中，這是唯一可用於管理資料來源和資料集的窗格。 在 [報表設計師] 中，[報表資料] 窗格是與 [方案總管] 搭配使用，而後者會將共用資料來源和共用資料集列出為檔案。 [報表資料] 窗格中的共用資料來源和共用資料集，必須指向它們在 [方案總管] 中的對應「共用資料來源」和「共用資料集」。 之後，[報表資料] 窗格元素就會包含 [方案總管] 中資料檔案的參考。 專案屬性可決定是否將共用資料來源和共用資料集部署至報表伺服器或 SharePoint 網站。 如需詳細資訊，請參閱 <<c0> [ 將資料來源從內嵌轉換為共用&#40;報表產生器及 SSRS&#41;](../report-data/convert-data-sources-report-builder-and-ssrs.md)。</c0>  
   
 > [!NOTE]  
 >  如果您看不到 [報表資料] 窗格，請按一下 **[檢視]** 功能表上的 **[報表資料]**。 如果 [報表資料] 窗格是浮動窗格，您可以錨定它。 如需詳細資訊，請參閱[停駐報表設計師中的報表資料窗格 &#40;SSRS&#41;](dock-the-report-data-pane-in-report-designer-ssrs.md)。  
@@ -258,7 +258,7 @@ ms.locfileid: "36135345"
  [!INCLUDE[ssBIDevStudio](../../../includes/ssbidevstudio-md.md)] 可以與來源外掛程式整合。您可以使用 **[選項]** 對話方塊中的 [專案和方案] 頁面，以指定外掛程式，並設定屬性。  
   
 ##  <a name="bkmk_CustomReportTemplates"></a> 自訂報表範本  
- 若要使用自訂報表做為新報表的範本，您只需將自訂報表複製到裝有 [!INCLUDE[ssBIDevStudio](../../../includes/ssbidevstudio-md.md)] 之電腦上的 ReportProject 資料夾即可。 根據預設，這個資料夾位於\<磁碟機 >: \Program Files\Microsoft Visual Studio 10.0\Common7\IDE\Private \ common7\ide\private Assemblies\ProjectItems\ReportProject。 將新項目加入報表專案時，您的自訂報表會顯示在 [範本] 窗格中。  
+ 若要使用自訂報表做為新報表的範本，您只需將自訂報表複製到裝有 [!INCLUDE[ssBIDevStudio](../../../includes/ssbidevstudio-md.md)] 之電腦上的 ReportProject 資料夾即可。 根據預設，此資料夾位於\<磁碟機 >: \Program Files\Microsoft Visual Studio 10.0\Common7\IDE\Private Assemblies\ProjectItems\ReportProject。 將新項目加入報表專案時，您的自訂報表會顯示在 [範本] 窗格中。  
   
  您也可以將自訂樣式加入報表精靈。  
   
@@ -271,7 +271,7 @@ ms.locfileid: "36135345"
   
 -   至少一組組態屬性，例如「偵錯」或「發行」。  
   
- 如需詳細資訊，請參閱[發行的資料來源和報表](../reports/publishing-data-sources-and-reports.md)。  
+ 如需詳細資訊，請參閱 <<c0> [ 發行的資料來源和報表](../reports/publishing-data-sources-and-reports.md)。  
   
  針對報表伺服器專案，您可以從命令列指定下列選項：  
   

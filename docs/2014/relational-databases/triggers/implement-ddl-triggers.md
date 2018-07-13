@@ -5,23 +5,21 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-ddl
+ms.technology: ''
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - DDL triggers, implementing
 ms.assetid: f44e5340-1d18-40e9-828e-0ffcca091ae3
-caps.latest.revision: 31
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: b1264082262e616722b88d9a3a80b509aec4fc5c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: rothja
+ms.author: jroth
+manager: craigg
+ms.openlocfilehash: 38e7127323d76c42eaf7920ae359bca062e199a4
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36037640"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37426817"
 ---
 # <a name="implement-ddl-triggers"></a>實作 DDL 觸發程序
   本主題提供資訊以協助您建立 DDL 觸發程式、修改 DDL 觸發程式並停用或卸除 DDL 觸發程式。  

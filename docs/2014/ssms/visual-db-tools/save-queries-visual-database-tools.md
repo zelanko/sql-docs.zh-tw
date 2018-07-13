@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - queries [SQL Server], saving
 - saving queries
 ms.assetid: 1909b7be-cc87-44f1-9eb0-a3c355628ce6
 caps.latest.revision: 11
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 6c6194c1b4ac931428c3573bcca1811d1faf32d1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: a786d6abb774a461739268d2a0484007f8453bda
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36133849"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37210398"
 ---
 # <a name="save-queries-visual-database-tools"></a>儲存查詢 (Visual Database Tools)
   儲存您的查詢以便在稍後使用。 請注意，執行查詢並不會儲存您的變更。  
@@ -41,9 +41,9 @@ ms.locfileid: "36133849"
 ## <a name="see-also"></a>另請參閱  
  [建立查詢&#40;Visual Database Tools&#41;](visual-database-tools.md)   
  [執行查詢&#40;Visual Database Tools&#41;](run-queries-visual-database-tools.md)   
- [捨棄對查詢變更&#40;Visual Database Tools&#41;](discard-changes-made-to-queries-visual-database-tools.md)   
+ [捨棄對查詢所做的變更&#40;Visual Database Tools&#41;](discard-changes-made-to-queries-visual-database-tools.md)   
  [設計查詢和檢視表的使用說明主題&#40;Visual Database Tools&#41;](design-queries-and-views-how-to-topics-visual-database-tools.md)   
- [類型的查詢&#40;Visual Database Tools&#41;](types-of-queries-visual-database-tools.md)   
+ [查詢類型的&#40;Visual Database Tools&#41;](types-of-queries-visual-database-tools.md)   
  [使用查詢執行基本作業 &#40;Visual Database Tools&#41;](perform-basic-operations-with-queries-visual-database-tools.md)  
   
   

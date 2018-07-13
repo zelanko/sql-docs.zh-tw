@@ -1,5 +1,5 @@
 ---
-title: 服務帳戶 （SSRS 原生模式） |Microsoft 文件
+title: 服務帳戶 （SSRS 原生模式） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,29 +8,29 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - SQL12.rsconfigtool.serviceaccount.F1
 ms.assetid: face8120-4d32-4c6c-a1e8-99f27d1ff15d
 caps.latest.revision: 8
 author: markingmyname
 ms.author: maghan
-manager: jhubbard
-ms.openlocfilehash: 91b4f45089cf6de1883cf4bc27b482bd05814146
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 36b1b0621cd660855638e4fa0a936e9700efb4d5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36136554"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37153549"
 ---
 # <a name="service-account-ssrs-native-mode"></a>服務帳戶 (SSRS 原生模式)
   使用 [服務帳戶] 頁面，即可指定報表伺服器服務執行所用的帳戶。 此帳戶是在安裝期間進行初始設定。 如果想要變更帳戶或密碼，就可以修改它。 報表伺服器 Web 服務、報表管理員和背景處理應用程式都會使用您在此頁面上指定的服務識別來執行。  
   
  [!INCLUDE[applies](../../includes/applies-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 原生模式。  
   
- 您為報表伺服器服務所指定的帳戶需要可存取登錄、報表伺服器程式檔和報表伺服器資料庫的權限。 當您使用時，會有所有的權限帳戶自動設定[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]組態管理員來設定此帳戶。 如果您使用的服務帳戶來連接到報表伺服器資料庫時，Configuration Manager 會建立資料庫登入帳戶，並藉由指派給 RSExecRole 的帳戶上設定資料庫權限[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]裝載執行個體報表伺服器資料庫。 報表伺服器資料庫是報表伺服器寫入的唯一資料存放區， 此服務帳戶不需要任何其他資料存放區的權限。  
+ 您為報表伺服器服務所指定的帳戶需要可存取登錄、報表伺服器程式檔和報表伺服器資料庫的權限。 當您使用時，會有所有的權限的帳戶自動設定[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]Configuration Manager 來設定此帳戶。 如果您使用的服務帳戶來連接到報表伺服器資料庫時，Configuration Manager 會建立資料庫登入帳戶，並設定資料庫權限上時，將帳戶指派給 RSExecRole[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]裝載執行個體報表伺服器資料庫。 報表伺服器資料庫是報表伺服器寫入的唯一資料存放區， 此服務帳戶不需要任何其他資料存放區的權限。  
   
- 若要開啟此頁面，請啟動[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]組態管理員，並選取導覽窗格中的連結。 如需詳細資訊，請參閱 [Reporting Services 組態管理員 &#40;原生模式&#41;](../../../2014/sql-server/install/reporting-services-configuration-manager-native-mode.md)。  
+ 若要開啟此頁面，請啟動[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]Configuration Manager，然後選取 [瀏覽] 窗格中的連結。 如需詳細資訊，請參閱 [Reporting Services 組態管理員 &#40;原生模式&#41;](../../../2014/sql-server/install/reporting-services-configuration-manager-native-mode.md)。  
   
 > [!IMPORTANT]  
 >  每當您需要更新帳戶或密碼，強烈建議您改用[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]Configuration Manager。 使用組態管理員更新帳戶可確保取決於此服務識別的其他內部設定會同時自動更新。  
@@ -49,9 +49,9 @@ ms.locfileid: "36136554"
  如果您切換帳戶類型 (例如，以其他 Windows 帳戶來取代某個 Windows 帳戶，或是以 Windows 網域帳戶來取代內建帳戶)，系統就會提示您建立加密金鑰的備份副本。 當您選取了新帳戶，就會自動還原備份複本。  
   
 > [!NOTE]  
->  每當您修改服務帳戶時，[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 組態管理員都會提示您備份及還原加密金鑰。 為了確保已加密的資料仍能供報表伺服器使用，這些步驟是必要的。 如需有關這些動作的詳細資訊，請參閱[加密金鑰&#40;SSRS 原生模式&#41;](../../../2014/sql-server/install/encryption-keys-ssrs-native-mode.md)。  
+>  每當您修改服務帳戶時，[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 組態管理員都會提示您備份及還原加密金鑰。 為了確保已加密的資料仍能供報表伺服器使用，這些步驟是必要的。 如需有關這些動作的詳細資訊，請參閱 <<c0> [ 加密金鑰&#40;SSRS 原生模式&#41;](../../../2014/sql-server/install/encryption-keys-ssrs-native-mode.md)。</c0>  
   
- 此外，如果您是報表伺服器設定為執行以 SharePoint 整合模式，而且您變更服務帳戶使用[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]組態管理員中，您必須開啟 SharePoint 管理中心內，並使用[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]**授與資料庫存取權**頁面，即可重新套用報表伺服器和執行個體設定。 此步驟中將新服務帳戶存取權授與 SharePoint 資料庫中，所需的整合[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]與 SharePoint 產品或技術。 如需如何授與在 SharePoint 管理中心內的資料庫存取權的詳細資訊，請參閱[設定和管理報表伺服器&#40;Reporting Services SharePoint 模式&#41;](../../../2014/reporting-services/configure-administer-report-server-reporting-services-sharepoint-mode.md)和[Reporting Services SharePoint 模式安裝&#40;SharePoint 2010 和 SharePoint 2013&#41;](../../reporting-services/install-windows/install-reporting-services-sharepoint-mode.md)。  
+ 此外，如果您是報表伺服器設定為執行以 SharePoint 整合模式，而且您變更服務帳戶使用[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]組態管理員 中，您必須開啟 SharePoint 管理中心內，並使用[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]**授與資料庫存取權**頁面來重新套用報表伺服器和執行個體設定。 此步驟中將新服務帳戶存取權授與 SharePoint 資料庫中，所需的整合[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]與 SharePoint 產品或技術。 如需如何授與在 SharePoint 管理中心內的資料庫存取權的詳細資訊，請參閱[設定和管理報表伺服器的&#40;Reporting Services SharePoint 模式&#41;](../../../2014/reporting-services/configure-administer-report-server-reporting-services-sharepoint-mode.md)並[Reporting Services SharePoint 模式安裝&#40;SharePoint 2010 和 SharePoint 2013&#41;](../../reporting-services/install-windows/install-reporting-services-sharepoint-mode.md)。  
   
 ## <a name="choosing-an-account"></a>選擇帳戶  
  為了取得最佳結果，請指定具有網路連接權限的帳戶，以存取網域控制站和企業的 SMTP 伺服器或閘道。 下表摘要列出這些帳戶並提供使用這些帳戶的建議。  

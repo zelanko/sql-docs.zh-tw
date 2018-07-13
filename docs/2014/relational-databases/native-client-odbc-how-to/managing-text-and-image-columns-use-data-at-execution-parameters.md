@@ -1,28 +1,26 @@
 ---
-title: 使用資料在執行中參數 (ODBC) |Microsoft 文件
+title: 使用資料在執行中參數 (ODBC) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - data-at-execution
 ms.assetid: 2a738aef-c991-4f62-bdab-a5221c335f31
 caps.latest.revision: 15
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 55216e04305194bf16be23b33122b5433a84c43f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 338d43146b1f782695025bb14470af58539b4bea
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36134388"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37409577"
 ---
 # <a name="use-data-at-execution-parameters-odbc"></a>使用資料執行中參數 (ODBC)
     
@@ -30,7 +28,7 @@ ms.locfileid: "36134388"
   
 1.  當呼叫 [SQLBindParameter](../native-client-odbc-api/sqlbindparameter.md) 將程式緩衝區繫結至陳述式參數時：  
   
-    -   最後一個參數，使用 SQL_LEN_DATA_AT_EXEC (*長度*) 其中*長度*的總長度`text`， `ntext`，或`image`參數資料，以位元組為單位。  
+    -   最後一個參數中，使用 SQL_LEN_DATA_AT_EXEC (*長度*)，*長度*是總長度`text`， `ntext`，或`image`參數資料，以位元組為單位。  
   
     -   使用程式定義之參數識別碼的 `rgbValue` (第八個參數)。  
   

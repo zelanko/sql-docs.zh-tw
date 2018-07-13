@@ -1,5 +1,5 @@
 ---
-title: SQL 目的地編輯器 （對應頁面） |Microsoft 文件
+title: SQL 目的地編輯器 （對應頁面） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.sqlserverdestadapter.mappings.f1
 helpviewer_keywords:
 - SQL Server Destination Editor
 ms.assetid: 3ca00cf8-3460-43e9-9705-af4c530f7fbd
 caps.latest.revision: 22
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: b30081730a9ced88b3cdd6c43a748dadeb284d49
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 4be34fd0ed34ba5e60fedce309e187f856ab8edb
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36135637"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37154609"
 ---
 # <a name="sql-destination-editor-mappings-page"></a>SQL 目的地編輯器 (對應頁面)
   使用 **[SQL 目的地編輯器]** 對話方塊的 **[對應]** 頁面，即可將輸入資料行對應至目的地資料行。  
@@ -45,7 +45,7 @@ ms.locfileid: "36135637"
   
 ## <a name="see-also"></a>另請參閱  
  [Integration Services 錯誤和訊息參考](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [SQL 目的地編輯器&#40;連接管理員頁面&#41;](../../2014/integration-services/sql-destination-editor-connection-manager-page.md)   
+ [SQL 目的地編輯器&#40;連線管理員頁面&#41;](../../2014/integration-services/sql-destination-editor-connection-manager-page.md)   
  [SQL 目的地編輯器&#40;進階頁面&#41;](../../2014/integration-services/sql-destination-editor-advanced-page.md)   
  [使用 SQL Server 目的地來大量載入資料](data-flow/bulk-load-data-by-using-the-sql-server-destination.md)  
   

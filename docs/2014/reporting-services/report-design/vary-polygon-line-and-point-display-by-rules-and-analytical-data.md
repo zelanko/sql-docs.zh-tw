@@ -1,5 +1,5 @@
 ---
-title: 更改多邊形、 線條與點顯示的規則與分析資料 （報表產生器及 SSRS） |Microsoft 文件
+title: 變更多邊形、 線條與點顯示規則與分析資料 （報表產生器及 SSRS） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.rtp.rptdesigner.mapembeddedpolygonlayerproperties.general.f1
 - sql12.rtp.rptdesigner.maplinelayerproperties.widthrules.f1
@@ -21,15 +21,15 @@ f1_keywords:
 - "10536"
 ms.assetid: 7f1f5584-37b4-4fa2-ae44-8988c5f0c744
 caps.latest.revision: 13
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: ffe78fc097b8c51f490642d5dc857f0257c806b7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 5ee62f82416bcac56211bd29548070926abff1bf
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36135747"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37149769"
 ---
 # <a name="vary-polygon-line-and-point-display-by-rules-and-analytical-data-report-builder-and-ssrs"></a>使用規則與分析資料更改多邊形、線條與點顯示 (報表產生器及 SSRS)
   地圖圖層上多邊形、線條與點的顯示選項是透過設定圖層的選項、設定圖層上地圖元素的規則，或是覆寫圖層上特定內嵌地圖元素的選項來控制。  
@@ -133,7 +133,7 @@ ms.locfileid: "36135747"
 |`#FROMVALUE{N0} - #TOVALUE{N0}`|顯示範圍開頭與範圍結尾的實際數值。|10 - 790|  
   
 ## <a name="see-also"></a>另請參閱  
- [變更地圖圖例、 色階與相關的規則&#40;報表產生器和 SSRS&#41;](change-map-legends-color-scale-and-associated-rules-report-builder-and-ssrs.md)   
+ [變更地圖圖例、 色階與相關的規則&#40;報表產生器及 SSRS&#41;](change-map-legends-color-scale-and-associated-rules-report-builder-and-ssrs.md)   
  [地圖 &#40;報表產生器及 SSRS&#41;](maps-report-builder-and-ssrs.md)   
  [地圖精靈與地圖圖層精靈 &#40;報表產生器及 SSRS&#41;](map-wizard-and-map-layer-wizard-report-builder-and-ssrs.md)  
   

@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - "10128"
 ms.assetid: b54ec058-b910-450b-a634-6092a4f6d840
 caps.latest.revision: 12
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: d70ba9e8761e313d6c1e94b1e55541a3e5c5daf4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: a74f187c32c5d5392c2d8f8b54adc837fb0c3c44
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36134531"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37278544"
 ---
 # <a name="enter-data-source-credentials-dialog-box-report-builder"></a>輸入資料來源認證對話方塊 (報表產生器)
   使用 [輸入資料來源認證] 對話方塊，即可提供認證，讓您可以從資料來源擷取資料。  

@@ -1,5 +1,5 @@
 ---
-title: 用戶端通訊協定-TCP 和 IP 內容 （通訊協定索引標籤） |Microsoft 文件
+title: 用戶端通訊協定-TCP 和 IP 屬性 （通訊協定索引標籤） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - configmgr-client
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - TCP/IP [SQL Server], client protocols
 - client protocols [SQL Server]
@@ -16,15 +16,15 @@ ms.assetid: d04f1bce-069c-4a02-b561-c87c3282be36
 caps.latest.revision: 24
 author: craigg-msft
 ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 2495b6c504083189313acf15e2bf8ecd0567aca2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: f0728a93fbf44cc476d59e0576324b5aa07976bd
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36134297"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37240058"
 ---
-# <a name="client-protocols---tcp-and-ip-properties-protocol-tab"></a>用戶端通訊協定-TCP 和 IP 內容 （通訊協定索引標籤）
+# <a name="client-protocols---tcp-and-ip-properties-protocol-tab"></a>用戶端通訊協定-TCP 和 IP 屬性 （通訊協定索引標籤）
   在「 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 組態管理員」中，您可以使用 **[TCP/IP 內容]** 對話方塊中的 **[通訊協定]** 索引標籤來檢視或指定下列選項。 若要連接到其他通訊埠，請在 **[預設通訊埠]** 方塊內輸入通訊埠編號。 如需連接字串的詳細資訊，請參閱 [使用 TCP/IP 建立有效的連接字串](../../../2014/tools/configuration-manager/creating-a-valid-connection-string-using-tcp-ip.md)。  
   
 ## <a name="options"></a>選項。  

@@ -1,26 +1,24 @@
 ---
-title: LOCALDB_ERROR_CALLER_IS_NOT_OWNER |Microsoft 文件
+title: LOCALDB_ERROR_CALLER_IS_NOT_OWNER |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: supportability
 ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: f3303072-2b44-4443-936c-f024b0b2a8c5
 caps.latest.revision: 6
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 2a63fc291b9928e7f276c975b339150d35fbc579
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 115ad574ad0a54b57a0db8362e2d31c58f5e3cf8
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36132411"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37413637"
 ---
 # <a name="localdberrorcallerisnotowner"></a>LOCALDB_ERROR_CALLER_IS_NOT_OWNER
     

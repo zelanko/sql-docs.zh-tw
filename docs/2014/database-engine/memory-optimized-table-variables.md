@@ -1,5 +1,5 @@
 ---
-title: 記憶體最佳化資料表變數 |Microsoft 文件
+title: 記憶體最佳化資料表變數 |Microsoft Docs
 ms.custom: ''
 ms.date: 07/14/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - database-engine-imoltp
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: bd102e95-53e2-4da6-9b8b-0e4f02d286d3
 caps.latest.revision: 24
 author: stevestein
 ms.author: sstein
-manager: jhubbard
-ms.openlocfilehash: f8b24a1ea77e579fcde558e4f58e3448efc4aed1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: b1ec91cf243fbaa131ca85e7585e448ddb93f36f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36135866"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37157069"
 ---
 # <a name="memory-optimized-table-variables"></a>記憶體最佳化資料表變數
-  此外，記憶體最佳化資料表 （提供高效率的資料存取） 和原生方式編譯的預存程序 （提供高效率的查詢處理和商務邏輯執行）[!INCLUDE[hek_2](../includes/hek-2-md.md)]導入了第三種物件： 記憶體最佳化資料表類型。 使用記憶體最佳化資料表類型建立的資料表變數，就是記憶體最佳化資料表變數。  
+  此外，（提供有效率的資料存取） 的記憶體最佳化資料表和原生編譯預存程序 （提供高效率的查詢處理和商務邏輯執行）[!INCLUDE[hek_2](../includes/hek-2-md.md)]導入了第三種物件： 記憶體最佳化資料表類型。 使用記憶體最佳化資料表類型建立的資料表變數，就是記憶體最佳化資料表變數。  
   
  與磁碟資料表變數相較之下，記憶體最佳化資料表變數提供了下列幾項優點：  
   
@@ -40,7 +40,7 @@ ms.locfileid: "36135866"
   
 -   資料表變數可用來模擬以原生方式編譯之預存程序中的資料指標，這樣可協助您在以原生方式編譯的預存程序中避開介面區限制。  
   
- 就像記憶體最佳化的資料表，一樣[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]產生每個記憶體最佳化資料表類型的 DLL。 (編譯作業會在記憶體最佳化資料表類型建立時叫用，而不會在用來建立記憶體最佳化資料表變數時叫用)。此 DLL 包括存取索引以及從資料表變數擷取資料的函數。 根據資料表類型宣告記憶體最佳化資料表變數時，會在使用者工作階段中建立對應至資料表類型之資料表和索引結構的執行個體。 接著就可以透過與磁碟資料表變數相同的方式使用資料表變數。 您可以在資料表變數中插入、更新及刪除資料列，也可以在 [!INCLUDE[tsql](../includes/tsql-md.md)] 查詢中使用變數。 您也可以將變數當做資料表值參數 (TVP) 傳遞至以原生方式編譯和解譯的預存程序中。  
+ 就像記憶體最佳化的資料表，一樣[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]會產生每個記憶體最佳化資料表類型的 DLL。 (編譯作業會在記憶體最佳化資料表類型建立時叫用，而不會在用來建立記憶體最佳化資料表變數時叫用)。此 DLL 包括存取索引以及從資料表變數擷取資料的函數。 根據資料表類型宣告記憶體最佳化資料表變數時，會在使用者工作階段中建立對應至資料表類型之資料表和索引結構的執行個體。 接著就可以透過與磁碟資料表變數相同的方式使用資料表變數。 您可以在資料表變數中插入、更新及刪除資料列，也可以在 [!INCLUDE[tsql](../includes/tsql-md.md)] 查詢中使用變數。 您也可以將變數當做資料表值參數 (TVP) 傳遞至以原生方式編譯和解譯的預存程序中。  
   
  下列範例將示範 AdventureWorks 為基礎的記憶體內部 OLTP 範例記憶體最佳化資料表類型 ([SQL Server 2014 記憶體中 OLTP 範例](https://msftdbprodsamples.codeplex.com/releases/view/114491))。  
   
@@ -68,7 +68,7 @@ WITH ( MEMORY_OPTIMIZED = ON );
   
 -   類型必須至少有一個索引。 就像在記憶體最佳化資料表中，您可以使用雜湊和非叢集索引。  
   
-     若是雜湊索引，值區計數應該約為預期的唯一索引鍵數目的一倍到兩倍。 如需詳細資訊，請參閱[判斷雜湊索引的正確值區計數](../relational-databases/indexes/indexes.md)。  
+     若是雜湊索引，值區計數應該約為預期的唯一索引鍵數目的一倍到兩倍。 如需詳細資訊，請參閱 <<c0> [ 判斷雜湊索引的正確貯體計數](../relational-databases/indexes/indexes.md)。  
   
 -   對於記憶體最佳化資料表的資料類型和條件約束限制也適用於記憶體最佳化資料表類型。 例如，[!INCLUDE[ssSQL14](../includes/sssql14-md.md)] 支援預設條件約束，但是不支援檢查條件約束。  
   

@@ -1,5 +1,5 @@
 ---
-title: QueryNotification 元素 (ASSL) |Microsoft 文件
+title: QueryNotification 元素 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - QueryNotification element
 ms.assetid: 0ee06730-81ff-4913-96e6-f39b6f181650
 caps.latest.revision: 13
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 3c9bc13772d549d6ade640af4c3f57ac52efbbec
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d7d31cef8ee52964bf9aeb0c7c489f2831f5cb80
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36135017"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37153299"
 ---
 # <a name="querynotification-element-assl"></a>QueryNotification 元素 (ASSL)
   包含有關判斷資料來源是否已經修改所執行之查詢的 [ProactiveCaching](proactivecaching-element-assl.md) 元素的資訊。  
@@ -60,7 +60,7 @@ ms.locfileid: "36135017"
 |子元素|[查詢](../properties/query-element-assl.md)|  
   
 ## <a name="remarks"></a>備註  
- 分析管理物件 (AMO) 物件模型中的對應元素是<xref:Microsoft.AnalysisServices.QueryNotification>。  
+ 在 「 分析管理物件 (AMO) 物件模型的對應元素是<xref:Microsoft.AnalysisServices.QueryNotification>。  
   
 ## <a name="see-also"></a>另請參閱  
  [ProactiveCachingQueryBinding 資料類型&#40;ASSL&#41;](../data-type/binding-data-type-assl.md)   

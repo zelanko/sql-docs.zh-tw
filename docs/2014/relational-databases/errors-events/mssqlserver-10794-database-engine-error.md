@@ -5,23 +5,22 @@ ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - 10794 (Database Engine error)
 ms.assetid: 9a6864bc-d4ea-4582-a875-eed9424774b1
 caps.latest.revision: 10
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 95cc2d7b5607df489bcaf205eb41ce9a8ae5dde5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 45d071a3bb39969e8bccf8966503516f19e27cf0
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36037699"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37411367"
 ---
 # <a name="mssqlserver10794"></a>MSSQLSERVER_10794
     

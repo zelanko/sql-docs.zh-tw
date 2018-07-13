@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-data-tier-apps
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.extractdacwizard.buildandsave.f1
 - sql12.swb.extractdacwizard.setdacproperties.f1
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - wizard [DAC], extract
 ms.assetid: ae52a723-91c4-43fd-bcc7-f8de1d1f90e5
 caps.latest.revision: 19
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 0da72e16f77d6f3c850a41f85caa453123afc802
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 9eb33630708143700d7f5ce6749cf720c71a65fd
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36135671"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37211498"
 ---
 # <a name="extract-a-dac-from-a-database"></a>從資料庫中擷取 DAC
   您可以使用 [擷取資料層應用程式精靈] 或 Windows PowerShell 指令碼，從現有的 SQL Server 資料庫中擷取資料層應用程式 (DAC) 封裝。 此擷取程序會建立 DAC 封裝檔案，其中包含資料庫物件及其相關執行個體層級元素的定義。 例如，DAC 封裝檔案會包含資料庫資料表、預存程序、檢視表、使用者以及對應至資料庫使用者的登入。  
@@ -40,7 +40,7 @@ ms.locfileid: "36135671"
 -   **若要擷取 DAC，使用：**[擷取資料層應用程式精靈](#UsingDACExtractWizard)， [PowerShell  ](#ExtractDACPowerShell)  
   
 ## <a name="before-you-begin"></a>開始之前  
- 您可以從位於 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]或 [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] Service Pack 4 或更新版本之執行個體的資料庫中擷取 DAC。 如果您針對從 DAC 部署的資料庫來執行擷取程序，則只會擷取資料庫中物件的定義。 處理程序不會參考中註冊的 DAC `msdb` (**主要**中[!INCLUDE[ssSDS](../../includes/sssds-md.md)])。 擷取程序不會在目前的 Database Engine 執行個體中註冊 DAC 定義。 如需有關註冊 DAC 的詳細資訊，請參閱＜ [Register a Database As a DAC](register-a-database-as-a-dac.md)＞。  
+ 您可以從位於 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]或 [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] Service Pack 4 或更新版本之執行個體的資料庫中擷取 DAC。 如果您針對從 DAC 部署的資料庫來執行擷取程序，則只會擷取資料庫中物件的定義。 此程序不會參考中註冊的 DAC `msdb` (**主要**在[!INCLUDE[ssSDS](../../includes/sssds-md.md)])。 擷取程序不會在目前的 Database Engine 執行個體中註冊 DAC 定義。 如需有關註冊 DAC 的詳細資訊，請參閱＜ [Register a Database As a DAC](register-a-database-as-a-dac.md)＞。  
   
 ###  <a name="LimitationsRestrictions"></a> 限制事項  
  DAC 只能從 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]或 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 4 (SP4) 或更新版本的資料庫中進行擷取。 如果 DAC 或包含的使用者中不支援資料庫中的物件，則無法擷取 DAC。 如需有關 DAC 中支援之物件類型的詳細資訊，請參閱＜ [DAC Support For SQL Server Objects and Versions](dac-support-for-sql-server-objects-and-versions.md)＞。  
@@ -90,9 +90,9 @@ ms.locfileid: "36135671"
   
  **名稱** ：此名稱會識別 DAC。 它可能與 DAC 封裝檔案的名稱不同，而且應該會描述您的應用程式。 例如，如果此資料庫用於財務應用程式，您可能會想要命名為 DAC Finance。  
   
- **版本 (使用 xx.xx.xx.xx，其中 x 是數字)** ：識別 DAC 版本的數值。 DAC 版本會用於 Visual Studio 中，以便識別開發人員正在處理的 DAC 版本。 在部署 DAC 時，版本會儲存在`msdb`資料庫和更新版本底下檢視**資料層應用程式**節點[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]。  
+ **版本 (使用 xx.xx.xx.xx，其中 x 是數字)** ：識別 DAC 版本的數值。 DAC 版本會用於 Visual Studio 中，以便識別開發人員正在處理的 DAC 版本。 在部署 DAC 時，版本會儲存在`msdb`資料庫和更新版本底下檢視**資料層應用程式**中的節點[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]。  
   
- **描述** ：選擇性。 描述此 DAC。 描述在部署 DAC 時，會儲存在`msdb`資料庫和更新版本底下檢視**資料層應用程式**節點[!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]。  
+ **描述** ：選擇性。 描述此 DAC。 描述在部署 DAC 時，會儲存在`msdb`資料庫和更新版本底下檢視**資料層應用程式**中的節點[!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]。  
   
  **儲存至 DAC 封裝檔案 (檔案名稱包含 .dacpac 副檔名)** ：將 DAC 儲存至副檔名為 .dacpac 的 DAC 封裝檔案。 按一下 **[瀏覽]** 按鈕，即可指定檔案的名稱和位置。  
   

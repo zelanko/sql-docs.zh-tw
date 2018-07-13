@@ -8,26 +8,26 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - reports [Reporting Services], creating
 ms.assetid: 8bc0bb53-ad8a-464d-bb6a-7fea5fa62c5c
 caps.latest.revision: 15
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: af7fe1fceeacc7b49daff9514f5ba1e10fc20518
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: 8d1d96273c21f2b22b3482a74b5b55370b09589e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36133361"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37230178"
 ---
 # <a name="add-a-new-or-existing-report-to-a-report-project-ssrs"></a>將新的或現有的報表加入報表專案 (SSRS)
-  在[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]，您可以使用報表精靈 」，或將新的空白報表加入至您的專案，加入新的報表。 您也可以加入現有的報表。 新增報表之後，您就可以看到報表名稱列在專案的 [報表] 資料夾下。  
+  在 [ [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]，您可以使用報表精靈]，或將新的空白報表加入至您的專案，加入新的報表。 您也可以加入現有的報表。 新增報表之後，您就可以看到報表名稱列在專案的 [報表] 資料夾下。  
   
 > [!NOTE]  
->  若要預覽具有現有資料來源的報表，您必須擁有報表撰寫用戶端之資料來源的權限。 如需詳細資訊，請參閱[建立內嵌或共用資料來源&#40;SSRS&#41;](../create-an-embedded-or-shared-data-source-ssrs.md)。  
+>  若要預覽具有現有資料來源的報表，您必須擁有報表撰寫用戶端之資料來源的權限。 如需詳細資訊，請參閱 <<c0> [ 建立內嵌或共用資料來源 &#40;SSRS&#41;](../create-an-embedded-or-shared-data-source-ssrs.md)。</c0>  
   
  在您加入報表之後，就可以定義資料來源和資料集，以及設計報表配置。 若要開始使用，請參閱[建立基本資料表報表 &#40;SSRS 教學課程&#41;](../create-a-basic-table-report-ssrs-tutorial.md) 或[資料表 &#40;報表產生器及 SSRS&#41;](../report-design/tables-report-builder-and-ssrs.md)。  
   
@@ -46,7 +46,7 @@ ms.locfileid: "36133361"
     -   **選擇樣式。** 下一個步驟是使用樣式範本，將樣式套用至報表。 請選取範本，以便將字型、色彩和框線等樣式套用至報表。 報表設計師提供六種樣式範本：Slate、Forest、Corporate、Bold、Ocean 和 Generic。 您也可以加入其他樣式範本。  
   
         > [!NOTE]  
-        >  您可以改變現有的範本，或加入新的編輯 \Program Files\Microsoft Visual Studio 10.0\Common7\IDE\PrivateAssemblies\Business 智慧 Wizards\Reports\Styles 內的 StyleTemplates.xml 檔案\\< l a n g\>資料夾，其中\<l a n g > 是您所使用的語言 (例如，如果您使用的英文版[!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]，資料夾名稱是"EN")。 此資料夾位於安裝報表設計師的電腦上。 StyleTemplates.xml 檔案有兩個副本。 若要修改透過 [報表精靈] 套用的樣式，請編輯針對您使用的語言所建立之資料夾內的檔案。  
+        >  您可以改變現有的範本，或新增新的項目，藉由編輯 \Program Files\Microsoft Visual Studio 10.0\Common7\IDE\PrivateAssemblies\Business Intelligence Wizards\Reports\Styles 內的 StyleTemplates.xml 檔案\\< l a n g\>資料夾，其中\<l a n g > 是您所使用的語言 (例如，如果您使用的英文語言版本時，才[!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]，資料夾名稱是"EN")。 此資料夾位於安裝報表設計師的電腦上。 StyleTemplates.xml 檔案有兩個副本。 若要修改透過 [報表精靈] 套用的樣式，請編輯針對您使用的語言所建立之資料夾內的檔案。  
   
     -   **為報表命名。**  ：最後一個步驟是為報表命名，並確認報表中將要包含的欄位。 所有步驟都完成之後，報表設計師會建立報表，並將其加入報表伺服器專案。  
   
@@ -62,7 +62,7 @@ ms.locfileid: "36133361"
   
 ### <a name="to-add-an-existing-report"></a>加入現有的報表  
   
-1.  從**專案**功能表上，按一下 **新增**，然後**現有項目**。  
+1.  從**專案**功能表上，按一下**新增**，然後**現有項目**。  
   
 2.  巡覽至 .rdl 檔的位置、選取該檔案，然後按一下 [新增]。  
   

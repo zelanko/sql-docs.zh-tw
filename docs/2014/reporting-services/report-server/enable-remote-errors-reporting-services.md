@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - remote data source [Reporting Services]
 - EnableRemoteError server property
@@ -16,16 +16,16 @@ ms.assetid: 5f05022b-d557-43e0-b50a-f5e2a1846b83
 caps.latest.revision: 12
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 14586062cadbdf08646ff7a6080b2849d2900d7d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 78a1d77440242eb96ca3ced08518829b2913a3a1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36133619"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37159869"
 ---
 # <a name="enable-remote-errors-reporting-services"></a>啟用遠端錯誤 (Reporting Services)
-  您可以在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 報表伺服器上設定伺服器屬性，以便傳回有關遠端伺服器上發生之錯誤狀況的其他資訊。 如果錯誤訊息包含「如需有關此錯誤的詳細資料，請導覽至本機伺服器電腦上的報表伺服器，或啟用遠端錯誤」這段文字，您可以設定 `EnableRemoteErrors` 屬性來存取可幫助您排解疑難問題的其他資訊。 如需詳細資訊，請參閱[報表伺服器系統屬性](../report-server-web-service/net-framework/reporting-services-properties-report-server-system-properties.md)中[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]線上叢書 》。  
+  您可以在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 報表伺服器上設定伺服器屬性，以便傳回有關遠端伺服器上發生之錯誤狀況的其他資訊。 如果錯誤訊息包含「如需有關此錯誤的詳細資料，請導覽至本機伺服器電腦上的報表伺服器，或啟用遠端錯誤」這段文字，您可以設定 `EnableRemoteErrors` 屬性來存取可幫助您排解疑難問題的其他資訊。 如需詳細資訊，請參閱 <<c0> [ 報表伺服器系統屬性](../report-server-web-service/net-framework/reporting-services-properties-report-server-system-properties.md)在[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]線上叢書 》。  
   
  **本主題內容：**  
   
@@ -68,13 +68,13 @@ ms.locfileid: "36133619"
   
 ##  <a name="bkmk_mgtStudio"></a> 透過 SQL Server Management Studio 啟用遠端錯誤 (原生模式)  
   
-1.  啟動 Management Studio，然後連接到報表伺服器執行個體。 如需詳細資訊，請參閱[連接到 Management Studio 中的報表伺服器](../tools/connect-to-a-report-server-in-management-studio.md)中[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]線上叢書 》。  
+1.  啟動 Management Studio，然後連接到報表伺服器執行個體。 如需詳細資訊，請參閱 <<c0> [ 連接到 Management Studio 中的報表伺服器](../tools/connect-to-a-report-server-in-management-studio.md)在[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]線上叢書 》。  
   
 2.  以滑鼠右鍵按一下報表伺服器節點，然後選取 [屬性]。  
   
 3.  按一下 **[進階]** ，即可開啟屬性頁面。 如需詳細資訊，請參閱《[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 線上叢書》中的[伺服器屬性 &#40;進階頁面&#41; - Reporting Services](../tools/server-properties-advanced-page-reporting-services.md)。  
   
-4.  在`EnableRemoteErrors`，選取`True`。  
+4.  在  `EnableRemoteErrors`，選取`True`。  
   
 5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
@@ -115,6 +115,6 @@ ms.locfileid: "36133619"
 ##  <a name="bkmk_ConfigurationInfo"></a> 修改 ConfigurationInfo 資料表 (原生模式)  
   
 1.  > [!NOTE]  
-    >  您可以編輯**ConfigurationInfo**設定報表伺服器資料庫中的資料表`EnableRemoteErrors`至`True`，但是如果目前正在使用報表伺服器，您應該使用 SQL Server Management Studio 或指令碼修改的設定。 如果您修改資料庫中的設定，則須先重新啟動 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 服務，變更才會生效。  
+    >  您可以編輯**ConfigurationInfo**若要設定報表伺服器資料庫中的資料表`EnableRemoteErrors`到`True`，但是如果目前正在使用報表伺服器，您應該使用 SQL Server Management Studio 或指令碼来修改的設定。 如果您修改資料庫中的設定，則須先重新啟動 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 服務，變更才會生效。  
   
   

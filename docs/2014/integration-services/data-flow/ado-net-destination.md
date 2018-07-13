@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.adonetdest.f1
 helpviewer_keywords:
@@ -18,13 +18,13 @@ ms.assetid: cb883990-d875-4d8b-b868-45f9f15ebeae
 caps.latest.revision: 27
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: d8f795c264fb46076ec203e4a21ca8d5fa6ccd82
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 0233bc6dad87580764f67eea68f20171bcb5e82e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36134758"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37164839"
 ---
 # <a name="ado-net-destination"></a>ADO NET 目的地
   ADO NET 目的地會將資料載入使用資料庫資料表或檢視的各種 [!INCLUDE[vstecado](../../includes/vstecado-md.md)]相容資料庫中。 您可以選擇將這些資料載入現有的資料表或檢視中，也可以建立新的資料表並將資料載入新的資料表內。  
@@ -51,9 +51,9 @@ ms.locfileid: "36134758"
   
  如需可以在 [ADO NET 目的地編輯器] 對話方塊中設定之屬性的詳細資訊，請按下列其中一個主題：  
   
--   [ADO NET 目的地編輯器&#40;連接管理員頁面&#41;](../ado-net-destination-editor-connection-manager-page.md)  
+-   [ADO NET 目的地編輯器&#40;連線管理員頁面&#41;](../ado-net-destination-editor-connection-manager-page.md)  
   
--   [ADO NET 目的地編輯器&#40;[對應] 頁面&#41;](../ado-net-destination-editor-mappings-page.md)  
+-   [ADO NET 目的地編輯器&#40;對應頁面&#41;](../ado-net-destination-editor-mappings-page.md)  
   
 -   [ADO NET 目的地編輯器&#40;錯誤輸出頁面&#41;](../ado-net-destination-editor-error-output-page.md)  
   

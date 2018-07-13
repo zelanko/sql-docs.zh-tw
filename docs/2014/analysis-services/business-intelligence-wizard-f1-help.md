@@ -1,5 +1,5 @@
 ---
-title: 商業智慧精靈 F1 說明 |Microsoft 文件
+title: 商業智慧精靈 F1 說明 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Business Intelligence Wizard
 ms.assetid: 155ac80c-63ae-47aa-9e86-9396e3d920eb
 caps.latest.revision: 23
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: d1fbdaa3573d77306993a024513895426e91d1ef
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 9fa73095aa52b5c5c5f1ec53dcce18884731b4b2
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36134500"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37163589"
 ---
 # <a name="business-intelligence-wizard-f1-help"></a>商業智慧精靈 F1 說明
   使用商業智慧精靈即可定義商業智慧功能以及 Cube 和維度的進階選項。 此精靈會設定現有物件的屬性、建立新物件及產生多維度運算式 (MDX) 指令碼，以提供維度智慧和貨幣轉換等功能。  
@@ -86,7 +86,7 @@ ms.locfileid: "36134500"
   
 -   [設定貨幣轉換選項&#40;商業智慧精靈&#41;](set-currency-conversion-options-business-intelligence-wizard.md)  
   
--   [選取成員&#40;商業智慧精靈&#41;](select-members-business-intelligence-wizard.md)  
+-   [選取 [成員]&#40;商業智慧精靈&#41;](select-members-business-intelligence-wizard.md)  
   
 -   [選取轉換類型&#40;商業智慧精靈&#41;](select-conversion-type-business-intelligence-wizard.md)  
   
@@ -96,9 +96,9 @@ ms.locfileid: "36134500"
   
 -   [定義貨幣轉換&#40;商業智慧精靈&#41;](define-currency-conversion-business-intelligence-wizard.md)  
   
--   [選取資料行對話方塊&#40;商業智慧精靈&#41;](select-a-column-dialog-box-business-intelligence-wizard.md)  
+-   [選取資料行 對話方塊&#40;商業智慧精靈&#41;](select-a-column-dialog-box-business-intelligence-wizard.md)  
   
--   [正在完成精靈&#40;商業智慧精靈&#41;](completing-the-wizard-business-intelligence-wizard.md)  
+-   [完成精靈&#40;商業智慧精靈&#41;](completing-the-wizard-business-intelligence-wizard.md)  
   
 ## <a name="see-also"></a>另請參閱  
  [Cube 設計師&#40;Analysis Services-多維度資料&#41;](cube-designer-analysis-services-multidimensional-data.md)   

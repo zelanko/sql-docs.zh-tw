@@ -1,5 +1,5 @@
 ---
-title: 一般檔案連接管理員編輯器 （預覽頁面） |Microsoft 文件
+title: 一般檔案連接管理員編輯器 （預覽頁面） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.ffileconnection.preview.f1
 helpviewer_keywords:
 - Flat File Connection Manager Editor
 ms.assetid: de47ea98-135e-4730-900e-dac629848798
 caps.latest.revision: 17
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 1e5853aa5d63967597ce54d56e43864f4e57c312
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: a4e257676ff8a20cbc29e80cde49998c67a07aee
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36134218"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37182780"
 ---
 # <a name="flat-file-connection-manager-editor-preview-page"></a>一般檔案連接管理員編輯器 (預覽頁面)
   使用 [一般檔案連線管理員編輯器] 對話方塊的 [預覽] 節點，即可以表格式格式來檢視來源檔案的內容。  
@@ -48,7 +48,7 @@ ms.locfileid: "36134218"
   
 ## <a name="see-also"></a>另請參閱  
  [Integration Services 錯誤和訊息參考](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [一般檔案連接管理員編輯器&#40;[一般] 頁面&#41;](general-page-of-integration-services-designers-options.md)   
+ [一般檔案連接管理員編輯器&#40;一般頁面&#41;](general-page-of-integration-services-designers-options.md)   
  [一般檔案連接管理員編輯器&#40;資料行頁面&#41;](../../2014/integration-services/flat-file-connection-manager-editor-columns-page.md)   
  [一般檔案連線管理員編輯器 &#40;[進階] 頁面&#41;](../../2014/integration-services/flat-file-connection-manager-editor-advanced-page.md)  
   

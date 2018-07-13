@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 320d417e-a370-48fc-a05b-444d85fd24c0
 caps.latest.revision: 6
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: a48d3a18632f54367d1cac4983939735a5c73dad
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: 76002bcb850104bfaaafa86f4264fed91231a711
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36135198"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37156349"
 ---
 # <a name="user-and-group-permissions-functional-area-master-data-manager"></a>使用者及群組的權限功能區域 (主資料管理員)
   在 [使用者及群組的權限] 功能區域中，管理員可以將權限授與功能區域、屬性 (在 [模型] 索引標籤上) 及成員 (在 [階層成員] 索引標籤上)， 並可以解決重疊的權限，以決定使用者對每個個別屬性值的權限。  
@@ -30,7 +30,7 @@ ms.locfileid: "36135198"
   
  [使用者和群組&#40;Master Data Services&#41;](../../2014/master-data-services/users-and-groups-master-data-services.md)  
   
- [將使用者新增&#40;Master Data Services&#41;](../../2014/master-data-services/add-a-user-master-data-services.md)  
+ [新增使用者&#40;Master Data Services&#41;](../../2014/master-data-services/add-a-user-master-data-services.md)  
   
  [功能區域權限&#40;Master Data Services&#41;](../../2014/master-data-services/functional-area-permissions-master-data-services.md)  
   

@@ -1,5 +1,5 @@
 ---
-title: 升級至不同版本的 SQL Server 2014 （安裝程式） |Microsoft 文件
+title: 升級至不同版本的 SQL Server 2014 （安裝程式） |Microsoft Docs
 ms.custom: ''
 ms.date: 05/24/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 31d16820-d126-4c57-82cc-27701e4091bc
 caps.latest.revision: 26
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 8f2b3739bf23e2e7405d95e856df7e776e498709
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 1d88903151c3557ec48b9457a50d4a257075eb04
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36134782"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37182855"
 ---
 # <a name="upgrade-to-a-different-edition-of-sql-server-2014-setup"></a>升級為不同的 SQL Server 2014 版本 (安裝程式)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝程式支援各種不同 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 版本之間的版本升級。 如需支援版本升級方式的詳細資訊，請參閱 [支援的版本與版本升級](supported-version-and-edition-upgrades.md)。 在您起始 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]執行個體的版本升級之前，請檢閱以下主題：  
@@ -30,12 +30,12 @@ ms.locfileid: "36134782"
   
 -   [SQL Server 版本的計算容量限制](../../sql-server/compute-capacity-limits-by-edition-of-sql-server.md)  
   
--   [硬體 and Software Requirements for Installing SQL Server 2014](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)  
+-   [安裝 SQL Server 2014 的硬體與軟體需求](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)  
   
 > [!NOTE]  
 >  **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ：** 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 叢集的其中一個節點上執行版本升級便已足夠。 這個節點可以是主動或被動節點，而且引擎不會在版本升級期間讓資源離線。 版本升級之後，您必須重新啟動 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體或容錯移轉至不同的節點。  
   
-## <a name="prerequisites"></a>必要條件  
+## <a name="prerequisites"></a>先決條件  
  如果是本機安裝，您必須以管理員身分執行安裝程式。 如果您是從遠端共用位置安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，則必須使用對遠端共用位置具有讀取權限的網域帳戶。  
   
 > [!IMPORTANT]  
@@ -53,7 +53,7 @@ ms.locfileid: "36134782"
   
 4.  系統組態檢查會在電腦上執行探索作業。 若要繼續進行，請按一下 **[確定]**。  
   
-5.  在 [產品金鑰] 頁面上，選取選項按鈕，指出您要升級至免費的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]版本，還是您擁有產品之實際執行版本的 PID 金鑰。 如需詳細資訊，請參閱[版本和 SQL Server 2014 元件](../../sql-server/editions-and-components-of-sql-server-2016.md)和[Supported Version and Edition Upgrades](supported-version-and-edition-upgrades.md)。  
+5.  在 [產品金鑰] 頁面上，選取選項按鈕，指出您要升級至免費的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]版本，還是您擁有產品之實際執行版本的 PID 金鑰。 如需詳細資訊，請參閱 <<c0> [ 版本和 SQL Server 2014 元件](../../sql-server/editions-and-components-of-sql-server-2016.md)並[Supported Version and Edition Upgrades](supported-version-and-edition-upgrades.md)。  
   
 6.  在 [授權條款] 頁面上，閱讀授權合約，然後選取要接受授權條款和條件的核取方塊。 若要繼續進行，請按 **[下一步]**。 若要結束安裝程式，請按一下 **[取消]**。  
   
@@ -84,7 +84,7 @@ ms.locfileid: "36134782"
 -   範本資料庫在升級之後會保留在電腦上。  
   
 ## <a name="see-also"></a>另請參閱  
- [升級為 SQL Server 2014](upgrade-sql-server.md)   
+ [升級到 SQL Server 2014](upgrade-sql-server.md)   
  [回溯相容性](../../getting-started/backward-compatibility.md)  
   
   

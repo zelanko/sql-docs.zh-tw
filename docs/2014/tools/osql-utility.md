@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - statements [SQL Server], command prompt
 - QUIT command
@@ -24,15 +24,15 @@ helpviewer_keywords:
 - CTRL+C command
 ms.assetid: cf530d9e-0609-4528-8975-ab8e08e40b9a
 caps.latest.revision: 48
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 2ebfb7cbe8a000a751243d1117d904056295d294
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: bd66af98effae023f2a1436b6eb88e76c78a2e44
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36134100"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37239998"
 ---
 # <a name="osql-utility"></a>osql 公用程式
   **osql** 公用程式可讓您輸入 [!INCLUDE[tsql](../includes/tsql-md.md)] 陳述式、系統程序和指令碼檔案。 這個公用程式利用 ODBC 來與伺服器通訊。  
@@ -116,7 +116,7 @@ C:\>osql
  指定資料行標頭之間所要列印的資料列數。 預設值是每一組查詢結果各列印一次標頭。 請利用 -1 來指定不列印任何標頭。 若使用 –1，則參數和設定之間不能有空格 (**-h-1**而非 **-h -1**)。  
   
  **-s** *col_separator*  
- 指定資料行分隔字元，依預設，它是一個空格。 若要使用的字元有特殊意義的作業系統 (例如 |; （& s) \< >)，雙引號 （"） 括住的字元。  
+ 指定資料行分隔字元，依預設，它是一個空格。 若要使用對作業系統有特殊意義的字元 (例如 |; （& s) \< >)、 雙引號 （"） 括住的字元。  
   
  **-w** *column_width*  
  可讓使用者設定輸出的螢幕寬度。 預設值是 80 個字元。 當輸出行到達最大螢幕寬度時，它會折成多行。  
@@ -198,7 +198,7 @@ osql -E -q "select name, object_id from %table%"
 ## <a name="remarks"></a>備註  
  **osql** 公用程式會在已設定此處所列之區分大小寫選項的情況下，直接從作業系統中啟動。 啟動 **osql**後，其會接受 SQL 陳述式並以互動方式傳送至 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 。 結果會格式化，顯示在畫面中 (**stdout**)。 使用 QUIT 或 EXIT 來結束 **osql**。  
   
- 在啟動時，如果您未指定使用者名稱**osql**，[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]檢查環境變數及使用，例如**osqluser = (*`user`*)** 或**osqlserver = (*`server`*)**。 如果未設定任何環境變數，就會使用工作站使用者名稱。 如果您沒有指定伺服器，就會使用工作站的名稱。  
+ 當您啟動時如果您未指定使用者名稱**osql**，[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]檢查環境變數及使用，例如**osqluser = (*`user`*)** 或是**osqlserver = (*`server`*)**。 如果未設定任何環境變數，就會使用工作站使用者名稱。 如果您沒有指定伺服器，就會使用工作站的名稱。  
   
  若 **-U** 或 **-P** 選項皆未使用，則 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 會嘗試使用 [!INCLUDE[msCoName](../includes/msconame-md.md)] Windows 驗證模式執行連接。 這項驗證是以執行 [!INCLUDE[msCoName](../includes/msconame-md.md)] osql **使用者的**Windows 帳戶為基礎。  
   
@@ -329,7 +329,7 @@ RAISERROR(50001, 10, 127)
      在選取傳回值時，發生轉換錯誤。  
   
 ## <a name="displaying-money-and-smallmoney-data-types"></a>顯示 money 和 smallmoney 資料類型  
- **osql**顯示`money`和`smallmoney`資料類型有兩個小數位數，不過[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]儲存在內部利用四位數的值。 請設想下列範例：  
+ **osql**會顯示`money`並`smallmoney`資料類型具有兩個小數位數，不過[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]儲存在內部利用四個小數位數的值。 請設想下列範例：  
   
 ```  
 SELECT CAST(CAST(10.3496 AS money) AS decimal(6, 4))  

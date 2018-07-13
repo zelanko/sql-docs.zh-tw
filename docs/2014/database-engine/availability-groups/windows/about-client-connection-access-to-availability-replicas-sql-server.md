@@ -5,10 +5,9 @@ ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Availability Groups [SQL Server], availability replicas
 - Availability Groups [SQL Server], readable secondary replicas
@@ -18,15 +17,15 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], active secondary replicas
 ms.assetid: 29027e46-43e4-4b45-b650-c4cdeacdf552
 caps.latest.revision: 14
-author: rothja
-ms.author: jroth
-manager: jhubbard
-ms.openlocfilehash: ec36639f591beaa3094855d8f42d2bcca3d3073e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: f0582293082f6c1ec5b2333575431d2887929afe
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36135027"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37228508"
 ---
 # <a name="about-client-connection-access-to-availability-replicas-sql-server"></a>關於可用性複本的用戶端連接存取 (SQL Server)
   在 AlwaysOn 可用性群組中，您可以設定一個或多個可用性複本，讓它在次要角色之下執行時 (也就是以次要複本的方式執行時)，允許唯讀連接。 以主要角色執行時 (也就是當做主要複本執行時)，您也可以設定每個可用性複本，以允許或排除唯讀連接。  
@@ -57,7 +56,7 @@ ms.locfileid: "36135027"
  不允許任何使用者連接。 次要資料庫不適用於讀取。 這是次要角色的預設行為。  
   
  僅讀取意圖連接  
- 次要資料庫僅適用於其可用`Application Intent`連接屬性設定為`ReadOnly`(*讀取意圖連接*)。  
+ 次要資料庫是僅適用於其`Application Intent`連接屬性設定為`ReadOnly`(*讀取意圖的連接*)。  
   
  如需有關此連接屬性的詳細資訊，請參閱＜ [高可用性/災害復原的 SQL Server Native Client 支援](../../../relational-databases/native-client/features/sql-server-native-client-support-for-high-availability-disaster-recovery.md)＞。  
   
@@ -73,7 +72,7 @@ ms.locfileid: "36135027"
  同時允許與主要資料庫的讀寫和唯讀連接。 這是主要角色的預設行為。  
   
  僅允許讀寫連接  
- 當`Application Intent`連接屬性設定為**ReadWrite**或未設定，便會允許連接。 連線的`Application Intent`連接字串關鍵字設為`ReadOnly`不允許。 僅允許讀寫連接有助於防止客戶錯誤地將讀取意圖的工作負載連接至主要複本。  
+ 當`Application Intent`連接屬性設定為**ReadWrite**或未設定，允許的連接。 為其連接`Application Intent`連接字串關鍵字設為`ReadOnly`不允許。 僅允許讀寫連接有助於防止客戶錯誤地將讀取意圖的工作負載連接至主要複本。  
   
  如需有關此連接屬性的詳細資訊，請參閱＜ [Using Connection String Keywords with SQL Server Native Client](../../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md)＞。  
   
@@ -122,7 +121,7 @@ ms.locfileid: "36135027"
   
 ##  <a name="RelatedContent"></a> 相關內容  
   
--   [Microsoft SQL Server AlwaysOn 高可用性和災害復原的解決方案指南](http://go.microsoft.com/fwlink/?LinkId=227600)  
+-   [Microsoft SQL Server AlwaysOn 解決方案指南高可用性和災害復原](http://go.microsoft.com/fwlink/?LinkId=227600)  
   
 -   [SQL Server AlwaysOn 團隊部落格： 官方 SQL Server AlwaysOn 團隊部落格](http://blogs.msdn.com/b/sqlalwayson/)  
   
