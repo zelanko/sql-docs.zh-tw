@@ -1,6 +1,6 @@
 ---
 title: 已更新-SQL Operations Studio 文件 |Microsoft 文件
-description: 顯示更新的內容，如需 SQL Operations Studio 中最近變更過的文件的程式碼片段。
+description: 針對 SQL Operations Studio，顯示文件中最近變更的更新內容程式碼片段。
 manager: craigg
 author: MightyPen
 ms.author: genemi
@@ -43,7 +43,7 @@ ms.lasthandoff: 05/03/2018
 下列連結會跳至最近新增的新文章。
 
 
-- [擴充功能的 SQL Operations Studio （預覽）](extensions.md)
+- [擴充 SQL Operations Studio (預覽) 的功能](extensions.md)
 
 <!-- GeneMi:  I MANUALLY replace the ugly !INCLUDE with the name from inside the includes file. -->
 
@@ -148,7 +148,7 @@ ms.lasthandoff: 05/03/2018
 *4 月公開預覽版*包含 bug 修正和增強功能。
 
 - SQL 代理程式預覽擴充功能的增強功能。
-- 改善大型和受保護的檔案來儲存受保護的系統管理員的支援和 > 在 SQL Operations Studio 256 M 檔案。
+- 針對在 SQL Operations Studio 內儲存受系統管理保護與大於 256M 的檔案，改善大型和受保護檔案的支援。
 - 若要同時使用多個開啟的終端機分割整合式的終端機。
 - 降低的安裝磁碟上檔案計數呎列印更快的安裝和啟動時間。
 - 繼續以修正 GitHub 問題：
@@ -212,7 +212,7 @@ ms.lasthandoff: 05/03/2018
 
 ## <a name="similar-articles-about-new-or-updated-articles"></a>新文章或更新文章的類似文章
 
-本節會在我們的公開 GitHub 儲存庫中，列出與其他主題區中最近更新的文章十分相似的文章：[MicrosoftDocs/sql-docs](https://github.com/MicrosoftDocs/sql-docs/)。
+本節會在我們的公開 GitHub 存放庫中，列出與其他主題區中最近更新的文章十分相似的文章：[MicrosoftDocs/sql-docs](https://github.com/MicrosoftDocs/sql-docs/)。
 
 
 
@@ -241,9 +241,9 @@ ms.lasthandoff: 05/03/2018
 - [新增 + 更新 (0 + 0): **SQL 的 Data Quality Services**文件](../data-quality-services/new-updated-data-quality-services.md)
 - [新增 + 更新 (0 + 0):**資料採礦延伸模組 (DMX)，sql**文件](../dmx/new-updated-dmx.md)
 - [新文章 + 更新文章 (0+0)：**SQL Master Data Services (MDS)** 文件](../master-data-services/new-updated-master-data-services.md)
-- [新增 + 更新 (0 + 0):**多維度運算式 (MDX) 的 SQL**文件](../mdx/new-updated-mdx.md)
-- [新增 + 更新 (0 + 0): **ODBC （開放式資料庫連接） 的 SQL**文件](../odbc/new-updated-odbc.md)
-- [新增 + 更新 (0 + 0):**適用於 SQL PowerShell**文件](../powershell/new-updated-powershell.md)
+- [新增 + 更新 (0 + 0)：**適用於 SQL 的多維度運算式 (MDX)** 文件](../mdx/new-updated-mdx.md)
+- [新增 + 更新 (0 + 0)：**ODBC (開放式資料庫連接) for SQL** 文件](../odbc/new-updated-odbc.md)
+- [新增 + 更新 (0 + 0)：**適用於 SQL 的 PowerShell** 文件](../powershell/new-updated-powershell.md)
 - [新增 + 更新 (0 + 0):**範例 sql**文件](../samples/new-updated-samples.md)
 - [新增 + 更新 (0 + 0): **SQL Server 移轉小幫手 (SSMA)** 文件](../ssma/new-updated-ssma.md)
 - [新增 + 更新 (0 + 0): **sql XQuery**文件](../xquery/new-updated-xquery.md)
