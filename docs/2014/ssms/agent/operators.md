@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - operators (users) [Database Engine]
 - fail-safe operator [SQL Server]
@@ -24,15 +24,15 @@ helpviewer_keywords:
 - alerts [SQL Server], operators
 ms.assetid: 38e8488f-2669-4cea-b9c3-5f394a663678
 caps.latest.revision: 31
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: d234e4748e2e0188b9b1d7f0248261089a454778
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: c0d64bf91d18b5bbd1538a3f65d8ca50f74b8019
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36034296"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37282344"
 ---
 # <a name="operators"></a>操作員
   操作員是人員或群組的別名，當作業完成或產生警示時，可收到電子通知。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 服務可支援透過操作員，發送通知給系統管理員。 操作員會啟用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 的通知和監視功能。  
@@ -123,7 +123,7 @@ ms.locfileid: "36034296"
 |-|-|  
 |**工作**|**主題**|  
 |與建立操作員相關的工作|[建立操作員](create-an-operator.md)<br /><br /> [Designate a Fail-Safe Operator](designate-a-fail-safe-operator.md)|  
-|與指派警示相關的工作|[指派警示給操作員](assign-alerts-to-an-operator.md)<br /><br /> [定義對警示的回應 &#40;SQL Server Management Studio&#41;](define-the-response-to-an-alert-sql-server-management-studio.md)<br /><br /> [sp_add_notification &#40;Transact SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-add-notification-transact-sql)<br /><br /> [指派警示給操作員](assign-alerts-to-an-operator.md)|  
+|與指派警示相關的工作|[指派警示給操作員](assign-alerts-to-an-operator.md)<br /><br /> [定義對警示的回應 &#40;SQL Server Management Studio&#41;](define-the-response-to-an-alert-sql-server-management-studio.md)<br /><br /> [sp_add_notification &#40;-SQL&AMP;#41;&#41;](/sql/relational-databases/system-stored-procedures/sp-add-notification-transact-sql)<br /><br /> [指派警示給操作員](assign-alerts-to-an-operator.md)|  
   
 ## <a name="see-also"></a>另請參閱  
  [Database Mail](../../relational-databases/database-mail/database-mail.md)  

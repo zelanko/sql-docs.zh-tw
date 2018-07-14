@@ -1,5 +1,5 @@
 ---
-title: 尋找資料庫檔案對話方塊 (Analysis Services-多維度資料) |Microsoft 文件
+title: 尋找資料庫檔案對話方塊 (Analysis Services-多維度資料) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.localdbfilesdialog.f1
 ms.assetid: b38aa670-b8a4-4abb-8b32-c29dc52362f5
 caps.latest.revision: 11
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 1709d430a92116e3ba5dc1e9be3d33c96eb6bf59
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 92c2f181638b9c995b01d9a5434e7b004241d6fd
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36036236"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37192838"
 ---
 # <a name="locate-database-files-dialog-box-analysis-services---multidimensional-data"></a>尋找資料庫檔案對話方塊 (Analysis Services - 多維度資料)
   **[尋找資料庫檔案]** 對話方塊，會顯示針對 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 執行個體定義之記錄與資料的資料夾內之可用檔案清單。 您可以選取一個列出的檔案，或者必要時可以指定其他的資料夾與檔案。 請執行下列動作來顯示 **[尋找資料庫檔案]** 對話方塊：  

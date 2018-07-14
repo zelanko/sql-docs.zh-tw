@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - MSSQL_ENG020572 error
 ms.assetid: 636566db-ffcf-4109-8c11-15b8c7cb9cd9
 caps.latest.revision: 10
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 6bbb02650086562959ba1eaef862887803abb9eb
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 653aaa002ee37f7c7cdd3aeea7983486f35d1fcd
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36036980"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37188315"
 ---
 # <a name="mssqleng020572"></a>MSSQL_ENG020572
     

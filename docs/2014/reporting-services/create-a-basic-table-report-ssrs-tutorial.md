@@ -8,35 +8,35 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - walkthroughs [Reporting Services]
 - tutorials [Reporting Services]
 - reports [Reporting Services], creating
 ms.assetid: 3b539b4b-26f2-4c0b-b506-80f175679a46
 caps.latest.revision: 61
-author: markingmyname
-ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 4f8b3f60d82a94fa7289054d0028ab539abade64
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: a5c3560a7aafd3fcf53f9b10d606e1f999bbf063
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36037412"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37196808"
 ---
 # <a name="create-a-basic-table-report-ssrs-tutorial"></a>建立基本資料表報表 (SSRS 教學課程)
-  本教學課程設計來協助您建立基本資料表報表根據[!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)]資料庫使用報表設計師。 您也可以使用報表產生器或報表精靈來建立報表。 在這個教學課程中，您將建立報表專案、設定連接資訊、定義查詢、加入資料表資料區域、群組與加總某些欄位，以及預覽報表。  
+  本教學課程旨在協助您建立基本資料表報表根據[!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)]資料庫使用報表設計師。 您也可以使用報表產生器或報表精靈來建立報表。 在這個教學課程中，您將建立報表專案、設定連接資訊、定義查詢、加入資料表資料區域、群組與加總某些欄位，以及預覽報表。  
   
 > [!NOTE]  
->  為了完成這個教學課程，[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 必須以原生模式執行。 如果 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 是在 SharePoint 整合模式中執行，則所有用到報表伺服器 URL 的步驟都將無法運作。 如需有關[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]模式，請參閱[Reporting Services 報表伺服器](reporting-services-report-server.md)。  
+>  為了完成這個教學課程，[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 必須以原生模式執行。 如果 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 是在 SharePoint 整合模式中執行，則所有用到報表伺服器 URL 的步驟都將無法運作。 如需詳細資訊[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]模式，請參閱[Reporting Services 報表伺服器](reporting-services-report-server.md)。  
   
 ## <a name="requirements"></a>需求  
  您的系統必須已經安裝下列項目，才能使用這個教學課程：  
   
 -   [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 資料庫引擎。  
   
--   [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] 資料庫。  如需詳細資訊，請參閱[Adventure Works for SQL Server 2012 (Adventure Works for SQL Server 2012)](http://go.microsoft.com/fwlink/?LinkId=245471) (http://go.microsoft.com/fwlink/?LinkId=245471).。 如需有關支援[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]範例資料庫和範例程式碼[!INCLUDE[ssExpress](../includes/ssexpress-md.md)]，請參閱[資料庫及範例概觀](http://go.microsoft.com/fwlink/?LinkId=110391)CodePlex 網站上。  
+-   [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] 資料庫。  如需詳細資訊，請參閱 < [Adventure Works for SQL Server 2012 (Adventure Works for SQL Server 2012)](http://go.microsoft.com/fwlink/?LinkId=245471) (http://go.microsoft.com/fwlink/?LinkId=245471).。 如需支援的詳細資訊[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]範例資料庫和範例程式碼[!INCLUDE[ssExpress](../includes/ssexpress-md.md)]，請參閱[資料庫及範例概觀](http://go.microsoft.com/fwlink/?LinkId=110391)CodePlex 網站上。  
   
 -   [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)]。  
   
@@ -61,7 +61,7 @@ ms.locfileid: "36037412"
  [第 6 課： 加入群組和總計&#40;Reporting Services&#41;](lesson-6-adding-grouping-and-totals-reporting-services.md)  
   
 > [!NOTE]  
->  當檢閱教學課程，我們建議您將加入**下一步**和**上一步**文件檢視器工具列的按鈕。 如需詳細資訊，請參閱。  
+>  當檢閱教學課程，我們建議您新增**下一步**並**Previous**文件檢視器工具列的按鈕。 如需詳細資訊，請參閱。  
   
 ## <a name="see-also"></a>另請參閱  
  [Reporting Services 教學課程 &#40;SSRS&#41;](reporting-services-tutorials-ssrs.md)  

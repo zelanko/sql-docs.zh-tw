@@ -5,21 +5,20 @@ ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-backup-restore
+ms.technology: backup-restore
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 13a8f879-274f-4934-a722-b4677fc9a782
 caps.latest.revision: 13
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: f3c46becd5ae766627e96ad935900f063c4389bb
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 491cde35ec200cdacc9c12794d5692d657ad22f5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36034583"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37256684"
 ---
 # <a name="deleting-backup-blob-files-with-active-leases"></a>刪除擁有使用中租用的備份 Blob 檔案
   備份至 Windows Azure 儲存體或從中還原時，SQL Server 會取得無限期租用，以便鎖定 Blob 的獨佔存取權。 當備份或還原程序順利完成時，就會釋放租用。 如果備份或還原失敗，備份程序會嘗試清除任何無效的 Blob。 不過，如果由於過長或持續性網路連線失敗而無法備份，備份程序可能無法存取 Blob，而該 Blob 可能仍然是被遺棄狀態。 這表示，在釋放租用之前，無法寫入或刪除 Blob。 此主題描述如何釋放租用及刪除 Blob。  
@@ -43,7 +42,7 @@ ms.locfileid: "36034583"
 3.  **刪除 Blob：** 若要刪除擁有使用中租用的 Blob，您必須先中斷租用。  
   
 ###  <a name="Code_Example"></a> PowerShell 指令碼範例  
- **\*\* 重要\* \*** 如果您正在執行 PowerShell 2.0，您可能必須載入 Microsoft WindowsAzure.Storage.dll 組件的問題。 我們建議您升級為 Powershell 3.0 以解決此問題。 您也可以針對 PowerShell 2.0 使用下列因應措施：  
+ **\*\* 重要\* \*** 如果您執行 PowerShell 2.0 中，您可能無法載入 Microsoft WindowsAzure.Storage.dll 組件。 我們建議您升級為 Powershell 3.0 以解決此問題。 您也可以針對 PowerShell 2.0 使用下列因應措施：  
   
 -   使用下列內容來建立或修改 powershell.exe.config 檔案，以便在執行階段載入 .NET 2.0 和 .NET 4.0 組件：  
   

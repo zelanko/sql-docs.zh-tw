@@ -1,5 +1,5 @@
 ---
-title: 其他註解 (SQLXML 4.0) |Microsoft 文件
+title: 其他註解 (SQLXML 4.0) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -23,15 +23,15 @@ helpviewer_keywords:
 - is-mapping-schema annotation
 ms.assetid: f7b4d37b-d6d3-4ac3-b2fd-a0b534a924e4
 caps.latest.revision: 20
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 9f379a046b73dbd073c7e0f01b5c41be7589964d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 01e0af9b72790b8a2ddf396434c84f25ee270313
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36036322"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37223128"
 ---
 # <a name="other-annotations-sqlxml-40"></a>其他註解 (SQLXML 4.0)
   除了本章節先前的主題所討論的註解以外，XML 大量載入還會解譯這些其他註解，如下所示：  
@@ -55,6 +55,6 @@ ms.locfileid: "36036322"
  XML 大量載入一定會忽略此註解。  
   
 ## <a name="see-also"></a>另請參閱  
- [註解的解譯&#40;SQLXML 4.0&#41;](annotation-interpretation-sqlxml-4-0.md)  
+ [註解解譯&#40;SQLXML 4.0&#41;](annotation-interpretation-sqlxml-4-0.md)  
   
   

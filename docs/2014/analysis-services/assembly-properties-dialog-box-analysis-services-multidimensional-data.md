@@ -1,5 +1,5 @@
 ---
-title: 組件屬性對話方塊 (Analysis Services-多維度資料) |Microsoft 文件
+title: 組件屬性對話方塊 (Analysis Services-多維度資料) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.sqlserverstudio.assemblyproperties.f1
 ms.assetid: da1174d6-d82b-4337-ac19-7368dbd95a84
 caps.latest.revision: 19
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: fa00c8753e30926113d90881401a8b38e573e6b8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 20a5837b112106952e649bc25fcda5a3d93ab3fa
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36037136"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37192578"
 ---
 # <a name="assembly-properties-dialog-box-analysis-services---multidimensional-data"></a>組件屬性對話方塊 (Analysis Services - 多維度資料)
   使用 **中的** [組件屬性] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 對話方塊，即可設定 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 資料庫中之組件參考的屬性。 以滑鼠右鍵按一下物件總管中的組件，然後選取 [屬性]，即可顯示 [組件屬性] 對話方塊。  
@@ -35,9 +35,9 @@ ms.locfileid: "36037136"
 |**說明**|鍵入即可變更組件參考的描述。|  
 |**建立時間戳記**|顯示建立組件參考的日期和時間。|  
 |**上次結構描述更新**|顯示上次更新組件參考之中繼資料的日期和時間。|  
-|**型別**|顯示組件參考的類型。 會顯示下列各值：<br /><br /> **.NET 組件**： 組件參考是指[!INCLUDE[msCoName](../includes/msconame-md.md)].NET Framework 組件。<br /><br /> **COM DLL**： 組件參考所參考的 COM 程式庫。|  
+|**型別**|顯示組件參考的類型。 會顯示下列各值：<br /><br /> **.NET 組件**： 組件參考是指[!INCLUDE[msCoName](../includes/msconame-md.md)].NET Framework 組件。<br /><br /> **COM DLL**: 組件參考所參考的 COM 程式庫。|  
 |**Source**|顯示組件參考的來源。 這個屬性通常包含組件參考所參考之組件的完整路徑和檔案名稱。|  
-|**權限集合**|選取用來決定是否可以存取組件參考的權限集合。 如需可用的值，這個屬性的詳細資訊，請參閱<xref:Microsoft.AnalysisServices.ClrAssembly.PermissionSet%2A>。|  
+|**權限集合**|選取用來決定是否可以存取組件參考的權限集合。 如需有關可用的值，這個屬性的詳細資訊，請參閱<xref:Microsoft.AnalysisServices.ClrAssembly.PermissionSet%2A>。|  
 |**模擬資訊**|選取在存取組件參考時要使用的模擬資訊。 如需此屬性之可用值的詳細資訊，請參閱 [ImpersonationInfo 元素 &#40;ASSL&#41;](scripting/properties/impersonationinfo-element-assl.md)|  
   
 ## <a name="see-also"></a>另請參閱  

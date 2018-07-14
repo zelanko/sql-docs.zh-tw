@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 9adbd5e1-f28c-4fb5-afa7-082de2831f3e
 caps.latest.revision: 5
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 7159085aacfe569af079c9f7c457a460df960189
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: fb55b8db046e3d4fd76143f37f883b458e8bab64
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36034160"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37244998"
 ---
 # <a name="automatic-code-creation-master-data-services"></a>自動建立代碼 (Master Data Services)
   在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中，您可以針對 Code 屬性，或針對其他任何數值屬性，自動產生數值。 自動產生代碼時，系統不會防止您針對代碼輸入其他值，但是會自動設定初始值。  
@@ -37,16 +37,16 @@ ms.locfileid: "36034160"
 ## <a name="deleting-automatically-generated-values"></a>刪除自動產生的值  
  在管理員為 Code 屬性啟用自動產生的值時，使用者可能會不小心刪除擁有他們要重複使用之 Code 值的成員。 此時，系統會顯示錯誤訊息：「有已刪除的成員使用這個成員代碼」。 有兩種可能的解決方法：  
   
--   在**版本管理**功能區域中，系統管理員可以反轉刪除成員時所發生的交易。 不過，這表示會還原階層和集合中所有先前成員的屬性以及成員資格。 如需詳細資訊，請參閱[反轉交易&#40;Master Data Services&#41;](reverse-a-transaction-master-data-services.md)。  
+-   在 **版本管理**功能區域中，系統管理員可以反轉刪除成員時所發生的交易。 不過，這表示會還原階層和集合中所有先前成員的屬性以及成員資格。 如需詳細資訊，請參閱 <<c0> [ 反轉交易&#40;Master Data Services&#41;](reverse-a-transaction-master-data-services.md)。</c0>  
   
--   管理員可以使用暫存處理序永久刪除成員。 如需詳細資訊，請參閱[停用或刪除的成員，使用暫存處理序&#40;Master Data Services&#41;](add-update-and-delete-data-master-data-services.md)。  
+-   管理員可以使用暫存處理序永久刪除成員。 如需詳細資訊，請參閱 <<c0> [ 停用或刪除的成員，使用暫存處理序&#40;Master Data Services&#41;](add-update-and-delete-data-master-data-services.md)。</c0>  
   
 ## <a name="related-tasks"></a>相關工作  
   
 |工作描述|主題|  
 |----------------------|-----------|  
 |自動為 Code 屬性產生值。|[自動產生 Code 屬性值&#40;Master Data Services&#41;](../../2014/master-data-services/automatically-generate-code-attribute-values-master-data-services.md)|  
-|自動為其他屬性產生值。|[自動產生 Code 以外的其他屬性值&#40;Master Data Services&#41;](../../2014/master-data-services/automatically-generate-attribute-values-other-than-code-master-data-services.md)|  
+|自動為其他屬性產生值。|[自動產生 Code 以外的屬性值&#40;Master Data Services&#41;](../../2014/master-data-services/automatically-generate-attribute-values-other-than-code-master-data-services.md)|  
   
 ## <a name="related-content"></a>相關內容  
   

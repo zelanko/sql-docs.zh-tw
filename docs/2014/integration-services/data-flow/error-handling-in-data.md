@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - truncating data
 - data conversion errors [Integration Services]
@@ -23,13 +23,13 @@ ms.assetid: c61667b4-25cb-4d45-a52f-a733e32863f4
 caps.latest.revision: 57
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 125bcb31a9edb23e4ffe3ba05cdc46227da33cac
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ecae86e05bc67275d21d0811d3b1abd642a7e62c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36034608"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37201618"
 ---
 # <a name="error-handling-in-data"></a>處理資料中的錯誤
   當資料流程元件將轉換套用至資料行資料、從來源擷取資料或將資料載入目的地時，可能會發生錯誤。 錯誤通常是因為非預期的資料值所產生的。 例如，資料轉換失敗的原因是資料行包含字串而非數字；向資料庫資料行插入失敗的原因是資料為日期，而資料行是數值資料類型；運算式評估失敗的原因是資料行值為零，導致數學運算無效。  
@@ -72,7 +72,7 @@ ms.locfileid: "36034608"
 ## <a name="adding-the-error-description"></a>新增錯誤描述  
  依預設，錯誤輸出會提供數值錯誤碼，且通常包含發生錯誤之資料行的識別碼。 您可以使用「指令碼」元件，利用單行指令碼來呼叫 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.GetErrorDescription%2A> 介面的 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100> 方法，以便將錯誤描述包含在其他的資料行中。  
   
- 「指令碼」元件可以加入資料流程之錯誤區段的任何位置，但必須在您想擷取錯誤之資料流程元件的下游；不過這個元件通常是在將錯誤資料列寫入目的地之前才放入。 如此一來指令碼就只會查閱寫入之錯誤資料列的描述。 例如，資料流程的錯誤區段可能會更新某些錯誤，而且不會將這些資料列寫入錯誤目的地。 如需詳細資訊，請參閱[增強錯誤輸出的指令碼元件](../extending-packages-scripting-data-flow-script-component-examples/enhancing-an-error-output-with-the-script-component.md)。  
+ 「指令碼」元件可以加入資料流程之錯誤區段的任何位置，但必須在您想擷取錯誤之資料流程元件的下游；不過這個元件通常是在將錯誤資料列寫入目的地之前才放入。 如此一來指令碼就只會查閱寫入之錯誤資料列的描述。 例如，資料流程的錯誤區段可能會更新某些錯誤，而且不會將這些資料列寫入錯誤目的地。 如需詳細資訊，請參閱 <<c0> [ 增強錯誤輸出指令碼元件使用](../extending-packages-scripting-data-flow-script-component-examples/enhancing-an-error-output-with-the-script-component.md)。  
   
 ### <a name="to-configure-an-error-output"></a>設定錯誤輸出  
   

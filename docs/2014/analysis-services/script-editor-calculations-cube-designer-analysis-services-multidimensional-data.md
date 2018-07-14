@@ -1,5 +1,5 @@
 ---
-title: 指令碼編輯器 （計算索引標籤，Cube 設計工具） (Analysis Services-多維度資料) |Microsoft 文件
+title: 指令碼編輯器 （計算索引標籤，Cube 設計師） (Analysis Services-多維度資料) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.cubeeditor.calculationexpression.freeform.f1
 ms.assetid: e8a7fa59-bd94-4dab-8c7f-dca6669e97b3
 caps.latest.revision: 19
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 23c6c0deaca334533c42f5bc64d721c228634aa2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: fcb5e21c87abffa0d757b0a4eb667c34ae28a57b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36034871"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37247338"
 ---
 # <a name="script-editor-calculations-tab-cube-designer-analysis-services---multidimensional-data"></a>指令碼編輯器 (計算索引標籤，Cube 設計師) (Analysis Services - 多維度資料)
   在 Cube 設計師中，使用 [計算] 索引標籤上的 [指令碼編輯器] 窗格，即可修改指令碼命令的運算式 (於表單檢視中)，或修改整個 Cube 指令碼 (於指令碼檢視中)。  
@@ -40,6 +40,6 @@ ms.locfileid: "36034871"
  [計算工具&#40;計算索引標籤，Cube 設計工具&#41; &#40;Analysis Services-多維度資料&#41;](calculation-tools-cube-designer-analysis-services-multidimensional-data.md)   
  [導出成員表單編輯器&#40;計算索引標籤，Cube 設計工具&#41; &#40;Analysis Services-多維度資料&#41;](calculated-member-form-editor-cube-designer-analysis-services-multidimensional-data.md)   
  [命名集表單編輯器&#40;計算索引標籤，Cube 設計工具&#41; &#40;Analysis Services-多維度資料&#41;](named-set-form-editor-cube-designer-analysis-services-multidimensional-data.md)   
- [計算&#40;Cube 設計師&#41; &#40;Analysis Services-多維度資料&#41;](calculations-cube-designer-analysis-services-multidimensional-data.md)  
+ [計算&#40;Cube 設計工具&#41; &#40;Analysis Services-多維度資料&#41;](calculations-cube-designer-analysis-services-multidimensional-data.md)  
   
   

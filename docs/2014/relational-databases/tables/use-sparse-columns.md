@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - sparse columns, described
 - null columns
 - sparse columns
 ms.assetid: ea7ddb87-f50b-46b6-9f5a-acab222a2ede
 caps.latest.revision: 46
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 5f89bf86f17cf274d579ed22d3439f8ec0d7a662
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 37706a23164e3948eb139deff9fd1eb14c654e22
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36034747"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37204968"
 ---
 # <a name="use-sparse-columns"></a>使用疏鬆資料行
   疏鬆資料行為已最佳化儲存位置來保存 Null 值的一般資料行。 疏鬆資料行會減少 Null 值的空間需求，但要付出擷取非 Null 值的更多成本負擔。 當空間至少節省了百分之 20 到 40 時，請考慮使用疏鬆資料行。 疏鬆資料行和資料行集是使用 [CREATE TABLE](/sql/t-sql/statements/create-table-transact-sql) 或 [ALTER TABLE](/sql/t-sql/statements/alter-table-transact-sql) 陳述式所定義。  
@@ -76,7 +76,7 @@ ms.locfileid: "36034747"
 |資料類型|非疏鬆位元組|疏鬆位元組|NULL 百分比|  
 |---------------|---------------------|------------------|---------------------|  
 |`bit`|0.125|5|98%|  
-|`tinyint`|@shouldalert|5|86%|  
+|`tinyint`|1|5|86%|  
 |`smallint`|2|6|76%|  
 |`int`|4|8|64%|  
 |`bigint`|8|12|52%|  
@@ -124,7 +124,7 @@ ms.locfileid: "36034747"
 ## <a name="restrictions-for-using-sparse-columns"></a>使用疏鬆資料行的限制  
  疏鬆資料行可具有任何 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料類型，而且其行為就像其他任何資料行一樣，但是有下列限制：  
   
--   疏鬆資料行必須可為 Null，而且不能有 ROWGUIDCOL 或 IDENTITY 屬性。 疏鬆資料行不能是以下資料類型： `text`， `ntext`， `image`， `timestamp`，使用者定義資料類型， `geometry`，或`geography`; 或具有 FILESTREAM 屬性。  
+-   疏鬆資料行必須可為 Null，而且不能有 ROWGUIDCOL 或 IDENTITY 屬性。 疏鬆資料行不可為下列資料類型： `text`， `ntext`， `image`， `timestamp`，使用者定義資料類型`geometry`，或`geography`; 或具有 FILESTREAM 屬性。  
   
 -   疏鬆資料行不能有預設值。  
   

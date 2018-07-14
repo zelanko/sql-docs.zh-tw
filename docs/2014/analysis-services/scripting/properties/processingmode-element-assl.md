@@ -1,5 +1,5 @@
 ---
-title: ProcessingMode 元素 (ASSL) |Microsoft 文件
+title: ProcessingMode 元素 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - ProcessingMode element
 ms.assetid: dff6eeba-f09c-4d8c-ad81-caef76254af0
 caps.latest.revision: 33
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: a4f302608db355a639d9fb82e024a7a72cf560b3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 9a966a1d800107b18316e875bd8c9552df613cfe
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36033343"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37273784"
 ---
 # <a name="processingmode-element-assl"></a>ProcessingMode 元素 (ASSL)
   指出此執行個體應該在處理期間或處理之後進行索引和彙總。  
@@ -58,7 +58,7 @@ ms.locfileid: "36033343"
   
 |關聯性|元素|  
 |------------------|-------------|  
-|父元素|[Cube](../objects/cube-element-assl.md)，[維度](../objects/dimension-element-assl.md)， [MeasureGroup](../objects/group-element-assl.md)，[磁碟分割](../objects/partition-element-assl.md)|  
+|父元素|[Cube](../objects/cube-element-assl.md)，[維度](../objects/dimension-element-assl.md)， [MeasureGroup](../objects/group-element-assl.md)，[資料分割](../objects/partition-element-assl.md)|  
 |子元素|無|  
   
 ## <a name="remarks"></a>備註  
@@ -66,7 +66,7 @@ ms.locfileid: "36033343"
   
  這個元素的值限制為下表所列的其中一個字串。  
   
-|ReplTest1|描述|  
+|值|描述|  
 |-----------|-----------------|  
 |*規則*|此執行個體會在處理期間建立索引並執行彙總。|  
 |*LazyOptimizations*|此執行個體會在處理之後建立索引並執行彙總。|  

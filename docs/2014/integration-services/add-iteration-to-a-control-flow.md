@@ -1,5 +1,5 @@
 ---
-title: 將反覆運算加入控制流程 |Microsoft 文件
+title: 將反覆運算加入控制流程 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - repeating workflows
 - adding iterations
@@ -18,15 +18,15 @@ helpviewer_keywords:
 - For Loop containers
 ms.assetid: eb3a7494-88ae-4165-9d0f-58715eb1734a
 caps.latest.revision: 42
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 7727dafeee728347511e91723ae9674fe9fd089e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 5fb691bb954b463e584cf56527b8b87b0662c6f1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36033323"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37273414"
 ---
 # <a name="add-iteration-to-a-control-flow"></a>將反覆運算加入控制流程
   [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 包括 For 迴圈容器，該容器為控制流程項目，可簡化在套件中包括有條件地重複控制流程的迴圈。 如需詳細資訊，請參閱 [For 迴圈容器](control-flow/for-loop-container.md)。  
@@ -42,7 +42,7 @@ ms.locfileid: "36033323"
   
  運算式可以包含變數。 使用變數的優點是，可以在執行階段對它們進行更新，使封裝更為靈活也易於管理。 運算式的最大長度為 4000 個字元。  
   
- 在運算式中指定變數時，必須在變數名稱之前加上 at 符號 (@)。 例如，針對名為的變數`Counter`，輸入@CounterFor 迴圈 」 容器使用的運算式中。 如果您在變數中包括命名空間屬性，則您必須使用括號將變數與命名空間括起來。 例如，對於`Counter`變數中`MyNamespace`命名空間、 類型 [@MyNamespace::Counter]。  
+ 在運算式中指定變數時，必須在變數名稱之前加上 at 符號 (@)。 例如，對於名為的變數`Counter`，輸入@Counter「 For 迴圈 」 容器使用的運算式中。 如果您在變數中包括命名空間屬性，則您必須使用括號將變數與命名空間括起來。 例如，對於`Counter`變數中`MyNamespace`命名空間、 類型 [@MyNamespace::Counter]。  
   
  「For 迴圈」容器使用的變數必須定義在「For 迴圈」容器的範圍內，或封裝容器階層中任何更高容器的範圍內。 例如，「For 迴圈」容器可以使用其範圍內定義的變數，也可以使用封裝範圍內定義的變數。 如需詳細資訊，請參閱 [Integration Services &#40;SSIS&#41; 變數](integration-services-ssis-variables.md)和[在封裝中使用變數](../../2014/integration-services/use-variables-in-packages.md)。  
   
@@ -61,7 +61,7 @@ ms.locfileid: "36033323"
 4.  設定「For 迴圈」容器。 如需詳細資訊，請參閱[設定 For 迴圈容器](../../2014/integration-services/configure-a-for-loop-container.md)。  
   
 ## <a name="see-also"></a>另請參閱  
- [加入或刪除工作或容器中的控制流程](control-flow/add-or-delete-a-task-or-a-container-in-a-control-flow.md)   
+ [新增或刪除工作或容器，以控制流程中](control-flow/add-or-delete-a-task-or-a-container-in-a-control-flow.md)   
  [群組或取消群組的元件](group-or-ungroup-components.md)   
  [使用預設的優先順序條件約束來連線工作和容器](../../2014/integration-services/connect-tasks-and-containers-by-using-a-default-precedence-constraint.md)   
  [將列舉加入控制流程](../../2014/integration-services/add-enumeration-to-a-control-flow.md)   

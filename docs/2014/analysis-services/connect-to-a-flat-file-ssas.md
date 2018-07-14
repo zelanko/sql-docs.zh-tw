@@ -1,5 +1,5 @@
 ---
-title: 連接到一般檔案 (SSAS) |Microsoft 文件
+title: 連接到一般檔案 (SSAS) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.bidtoolset.connflatfile.f1
 ms.assetid: a365991e-eded-4cd8-89c0-0daf6d658d15
 caps.latest.revision: 12
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 288130652e609b65a4bbdaae8dea1f2647771aad
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 19f315644a829f543a88bdb135dcf25d4d8b5b15
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36034684"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37201978"
 ---
 # <a name="connect-to-a-flat-file-ssas"></a>連接到一般檔案 (SSAS)
   [資料表匯入精靈] 的這個頁面可讓您連接到一般檔案 (.txt)、Tab 分隔的檔案 (.tab) 或逗號分隔的檔案 (.csv)。 若要從 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]存取精靈，請按一下 **[模型]** 功能表上的 **[從資料來源匯入]**。  
@@ -44,7 +44,7 @@ ms.locfileid: "36034684"
  **資料行分隔符號**  
  從可用資料行分隔符號的清單中選取。 請選擇不太可能會在文字中出現的分隔符號。  
   
-|ReplTest1|描述|  
+|值|描述|  
 |-----------|-----------------|  
 |定位字元 (t)|資料行是以定位字元 (t) 分隔。|  
 |逗號 (,)|資料行是以逗號 (,) 分隔。|  
@@ -56,7 +56,7 @@ ms.locfileid: "36034684"
  **進階**  
  指定一般檔案的編碼方式和地區設定選項。  
   
- **使用第一個資料列作為資料行標頭**  
+ **第一個資料列做為資料行的標頭**  
  指定是否要使用第一個資料列做為目的地資料表的資料行標頭。  
   
  **資料預覽**  
@@ -67,7 +67,7 @@ ms.locfileid: "36034684"
   
 |選項|描述|  
 |------------|-----------------|  
-|**在資料行標頭中的核取方塊**|選取核取方塊可將資料行納入資料匯入作業。 清除核取方塊可從資料匯入作業排除資料行。|  
+|**資料行標頭中的核取方塊**|選取核取方塊可將資料行納入資料匯入作業。 清除核取方塊可從資料匯入作業排除資料行。|  
 |**資料行標頭中的向下箭頭按鈕**|排序及篩選資料行中的資料。|  
   
  **清除資料列篩選**  

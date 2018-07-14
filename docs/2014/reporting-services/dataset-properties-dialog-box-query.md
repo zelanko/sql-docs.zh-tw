@@ -1,5 +1,5 @@
 ---
-title: 資料集屬性對話方塊、 查詢 |Microsoft 文件
+title: 資料集屬性對話方塊、 查詢 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,30 +8,30 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - "10160"
 - sql12.rtp.rptdesigner.datasetproperties.query.f1
 ms.assetid: 1fa34a4b-7de0-4e92-99fa-bc28a206773f
 caps.latest.revision: 37
-author: douglaslM
+author: maggiesmsft
 ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 56030cb08b8197958436e46438e1561165776101
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: db00bf6e36f20da59e548acef394c786a70d40fd
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36034727"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37208558"
 ---
 # <a name="dataset-properties-dialog-box-query"></a>資料集屬性對話方塊、查詢
-  選取**查詢**上**資料集屬性**對話方塊來選擇資料來源並建立查詢。  
+  選取 **查詢**上**資料集屬性**對話方塊來選擇資料來源，並建立查詢。  
   
  **[資料集屬性]** 對話方塊包含下列項目：  
   
 -   [資料集屬性對話方塊，參數](report-data/dataset-properties-dialog-box-parameters.md)  
   
--   [資料集屬性對話方塊、 欄位](../../2014/reporting-services/dataset-properties-dialog-box-fields.md)  
+-   [資料集屬性對話方塊，欄位](../../2014/reporting-services/dataset-properties-dialog-box-fields.md)  
   
 -   [資料集屬性對話方塊，選項](../../2014/reporting-services/dataset-properties-dialog-box-options.md)  
   
@@ -67,7 +67,7 @@ ms.locfileid: "36034727"
   
 ## <a name="see-also"></a>另請參閱  
  [資料連接、 資料來源和 Reporting Services 中的連接字串](../../2014/reporting-services/data-connections-data-sources-and-connection-strings-in-reporting-services.md)   
- [將資料加入至報表&#40;報表產生器和 SSRS&#41;](report-data/report-datasets-ssrs.md)   
+ [將資料加入至報表&#40;報表產生器及 SSRS&#41;](report-data/report-datasets-ssrs.md)   
  [查詢設計工具 &#40;報表產生器&#41;](../../2014/reporting-services/query-designers-report-builder.md)   
  [Reporting Services 查詢設計工具](../../2014/reporting-services/reporting-services-query-designers.md)  
   

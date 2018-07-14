@@ -1,5 +1,5 @@
 ---
-title: 使用記憶體最佳化資料表上的索引指導方針 |Microsoft 文件
+title: 使用記憶體最佳化資料表上的索引指導方針 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - database-engine-imoltp
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - hash indexes
 ms.assetid: 16ef63a4-367a-46ac-917d-9eebc81ab29b
 caps.latest.revision: 49
 author: stevestein
 ms.author: sstein
-manager: jhubbard
-ms.openlocfilehash: e047c19deb12d67b23a4627410b998e8c2465107
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 7ca4c8ea603df8b57cfb0bb603500ee1ffd74758
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36034202"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37263384"
 ---
 # <a name="guidelines-for-using-indexes-on-memory-optimized-tables"></a>使用記憶體最佳化資料表索引的方針
   索引是用來有效率地存取 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 資料表中的資料。 指定正確的索引可以大幅提高查詢效能。 假設有以下的查詢範例：  
@@ -34,7 +34,7 @@ SELECT c1, c2 FROM t WHERE c1 = 1;
   
  當搜尋具有特定值或值範圍的記錄來找出資料表中的一個或多個資料行時，[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 可以使用這些資料行上的索引來快速尋找對應的記錄。 以磁碟為基礎的資料表及記憶體最佳化的資料表都受益於索引。 但是，當使用記憶體最佳化資料表時，必須考量索引架構之間的一些差異。 (記憶體最佳化資料表的索引，稱為記憶體最佳化索引。)某些主要差異在於：  
   
--   您必須以建立記憶體最佳化索引[CREATE TABLE &#40;TRANSACT-SQL&#41;](/sql/t-sql/statements/create-table-transact-sql)。 以磁碟為基礎的索引可以使用 `CREATE TABLE` 和 `CREATE INDEX` 建立。  
+-   必須使用建立記憶體最佳化的索引[CREATE TABLE &#40;TRANSACT-SQL&#41;](/sql/t-sql/statements/create-table-transact-sql)。 以磁碟為基礎的索引可以使用 `CREATE TABLE` 和 `CREATE INDEX` 建立。  
   
 -   記憶體最佳化的索引只存在於記憶體中。 索引結構不會保存到磁碟，且索引作業不會記錄在交易記錄中。 在記憶體中建立記憶體最佳化的資料表時 (在 CREATE TABLE 期間及資料庫啟動期間)，便會建立索引結構。  
   
@@ -44,7 +44,7 @@ SELECT c1, c2 FROM t WHERE c1 = 1;
   
  記憶體最佳化索引有兩種類型︰  
   
--   非叢集雜湊索引，適用於點查閱。 如需有關雜湊索引的詳細資訊，請參閱[雜湊索引](hash-indexes.md)。  
+-   非叢集雜湊索引，適用於點查閱。 如需有關雜湊索引的詳細資訊，請參閱 <<c0> [ 雜湊索引](hash-indexes.md)。  
   
 -   非叢集索引，適用於範圍掃描和依序掃描。  
   
@@ -54,7 +54,7 @@ SELECT c1, c2 FROM t WHERE c1 = 1;
   
  每個索引都會耗用記憶體。 雜湊索引會耗用固定數量的記憶體，也就是值區計數的函數。 對於非叢集索引，記憶體耗用量是資料列計數和索引鍵資料行大小的函式，並視工作負載之不同，還有一些額外的負擔。 進行記憶體最佳化索引的記憶體，是除了用以儲存記憶體最佳化資料表中資料列的記憶體之外，額外的個別記憶體。  
   
- 重複的鍵值一律會共用相同的雜湊值區。 如果雜湊索引包含許多重複的鍵值，所產生的長雜湊鏈結將危害到效能。 在這個案例中，發生在任何雜湊索引中的雜湊衝突將進一步降低效能。 因此，如果唯一索引鍵的數目小於至少 100 次的資料列計數，您可以降低風險雜湊衝突的讓值區計數更大 (至少為八個乘以唯一索引鍵數目，請參閱 <<c0> [ 判斷雜湊索引的正確值區計數](../../2014/database-engine/determining-the-correct-bucket-count-for-hash-indexes.md)如需詳細資訊) 或您可以使用非叢集索引來完全消除雜湊衝突。  
+ 重複的鍵值一律會共用相同的雜湊值區。 如果雜湊索引包含許多重複的鍵值，所產生的長雜湊鏈結將危害到效能。 在這個案例中，發生在任何雜湊索引中的雜湊衝突將進一步降低效能。 基於這個理由，如果唯一索引鍵的數目小於至少 100 倍的資料列計數，您可以減少雜湊衝突的風險讓值區計數較大 (至少八次唯一的索引鍵的數目，請參閱[判斷雜湊索引的正確貯體計數](../../2014/database-engine/determining-the-correct-bucket-count-for-hash-indexes.md)如需詳細資訊) 或您可以使用非叢集索引來完全消除雜湊衝突。  
   
 ## <a name="determining-which-indexes-to-use-for-a-memory-optimized-table"></a>判斷哪些索引要用於記憶體最佳化的資料表  
  每個記憶體最佳化資料表至少必須有一個索引。 請注意，每個 PRIMARY KEY 條件約束都會隱含地建立索引。 因此，如果資料表有主索引鍵，就表示它有索引。 持久的記憶體最佳化的資料表需要主索引鍵。  
@@ -75,7 +75,7 @@ SELECT c1, c2 FROM t WHERE c1 = 1;
 |---------------|-------------------------------------------------|------------------------------------------|-----------------------|  
 |索引掃描，擷取所有資料表資料列。|是|是|是|  
 |等號比較述詞 (=) 的索引搜尋。|是<br /><br /> (需要完整金鑰。)|是 <sup>1</sup>|是|  
-|索引搜尋上不相等述詞 (>，<， \<=、 > =、 BETWEEN)。|否 (產生索引掃描)|是 <sup>1</sup>|是|  
+|索引搜尋不相等述詞 (>，<， \<=、 > =、 BETWEEN)。|否 (產生索引掃描)|是 <sup>1</sup>|是|  
 |依照排序次序擷取符合索引定義的資料列。|否|是|是|  
 |依照排序次序擷取符合相反索引定義的資料列。|否|否|是|  
   
@@ -177,8 +177,8 @@ go
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [記憶體最佳化資料表的索引](../relational-databases/in-memory-oltp/memory-optimized-tables.md)   
- [判斷雜湊索引的正確值區計數](../../2014/database-engine/determining-the-correct-bucket-count-for-hash-indexes.md)   
+ [記憶體最佳化資料表上的索引](../relational-databases/in-memory-oltp/memory-optimized-tables.md)   
+ [判斷雜湊索引的正確貯體計數](../../2014/database-engine/determining-the-correct-bucket-count-for-hash-indexes.md)   
  [雜湊索引](hash-indexes.md)  
   
   

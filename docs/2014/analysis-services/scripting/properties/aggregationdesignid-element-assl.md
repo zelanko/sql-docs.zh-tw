@@ -1,5 +1,5 @@
 ---
-title: AggregationDesignID 元素 (ASSL) |Microsoft 文件
+title: AggregationDesignID 元素 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - AggregationDesignID element
 ms.assetid: e7f1f7ae-3169-4c0c-aadb-f7465155d652
 caps.latest.revision: 36
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 0548685e81b7c98b80e49ea67bdb754cb0dfe887
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 373f77f8195f0e8d9c3000f9e55e0f1395c91b67
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36036677"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37194278"
 ---
 # <a name="aggregationdesignid-element-assl"></a>AggregationDesignID 元素 (ASSL)
-  識別[AggregationDesign](../objects/aggregationdesign-element-assl.md)元素相關聯[分割](../objects/partition-element-assl.md)項目。  
+  識別[AggregationDesign](../objects/aggregationdesign-element-assl.md)相關聯的項目[分割區](../objects/partition-element-assl.md)項目。  
   
 ## <a name="syntax"></a>語法  
   
@@ -62,7 +62,7 @@ ms.locfileid: "36036677"
 |子元素|無|  
   
 ## <a name="remarks"></a>備註  
- 對應目的父代的項目`AggregationDesignID`在 「 分析管理物件 (AMO) 物件模型而言， <xref:Microsoft.AnalysisServices.Partition>。 另請參閱<xref:Microsoft.AnalysisServices.AggregationDesign>。  
+ 對應至父系的元素`AggregationDesignID`在 「 分析管理物件 (AMO) 物件模型是<xref:Microsoft.AnalysisServices.Partition>。 另請參閱<xref:Microsoft.AnalysisServices.AggregationDesign>。  
   
 ## <a name="see-also"></a>另請參閱  
  [AggregationDesign 元素&#40;ASSL&#41;](../objects/aggregationdesign-element-assl.md)   

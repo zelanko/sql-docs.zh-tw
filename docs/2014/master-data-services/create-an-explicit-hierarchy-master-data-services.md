@@ -8,35 +8,35 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - creating explicit hierarchies [Master Data Services]
 - explicit hierarchies, creating
 ms.assetid: ba768393-6990-4eda-8cb0-d58cb3cfc2e2
 caps.latest.revision: 7
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: de4402b3baf2991d8334eec9e679d6fac2390310
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: 29d75b956b6d9be23bd17e3df705724d3876d583
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36035727"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37219488"
 ---
 # <a name="create-an-explicit-hierarchy-master-data-services"></a>建立明確階層 (Master Data Services)
   當您需要成員可存在於任何層級的不完全階層時，可以在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中建立明確階層。 明確階層包含來自單一實體的成員。  
   
  建立明確階層之後，您可以在總管 功能區域的這個階層中加入成員。  
   
-## <a name="prerequisites"></a>必要條件  
+## <a name="prerequisites"></a>先決條件  
  若要執行此程序：  
   
 -   您必須擁有存取 **[系統管理]** 功能區域的權限。  
   
 -   您必須是模型管理員。 如需詳細資訊，請參閱 [Administrators &#40;Master Data Services&#41;](administrators-master-data-services.md) (管理員 (Master Data Services))。  
   
--   您必須啟用明確階層和集合的實體。 如需詳細資訊，請參閱[啟用實體的明確階層和集合&#40;Master Data Services&#41;](../../2014/master-data-services/enable-an-entity-for-explicit-hierarchies-and-collections-master-data-services.md)。  
+-   您必須啟用明確階層和集合的實體。 如需詳細資訊，請參閱 <<c0> [ 啟用明確階層和集合的實體&#40;Master Data Services&#41;](../../2014/master-data-services/enable-an-entity-for-explicit-hierarchies-and-collections-master-data-services.md)。</c0>  
   
 ### <a name="to-create-an-explicit-hierarchy"></a>若要建立明確階層  
   
@@ -50,15 +50,15 @@ ms.locfileid: "36035727"
   
 5.  按一下 **[編輯選取的實體]**。  
   
-6.  在**編輯實體**頁面上，於**明確階層**] 窗格中，按一下 [**加入明確階層**。  
+6.  在 **編輯實體**頁面上，於**明確階層**窗格中，按一下 **加入明確階層**。  
   
-7.  在**加入明確階層**頁面上，於**明確階層名稱**方塊中，輸入階層的名稱。  
+7.  在 **加入明確階層**頁面上，於**明確階層名稱**方塊中，輸入階層的名稱。  
   
 8.  (選擇性) 清除 [強制階層] 核取方塊，將階層建立為非強制階層。 如需階層類型的詳細資訊，請參閱[明確階層 &#40;Master Data Services&#41;](../../2014/master-data-services/explicit-hierarchies-master-data-services.md)。  
   
-9. 按一下**儲存階層**。  
+9. 按一下 **儲存階層**。  
   
-10. 在**編輯實體**頁面上，按一下**儲存實體**。  
+10. 在 **編輯實體**頁面上，按一下**儲存實體**。  
   
 ## <a name="next-steps"></a>後續步驟  
   

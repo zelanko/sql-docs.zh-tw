@@ -1,5 +1,5 @@
 ---
-title: 管理連接與工作階段 (XMLA) |Microsoft 文件
+title: 管理連接和工作階段 (XMLA) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -19,20 +19,20 @@ helpviewer_keywords:
 - sessions [XML for Analysis]
 ms.assetid: b83bb3ff-09be-4fda-9d1d-6248e04ffb21
 caps.latest.revision: 29
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 39051880aa27e6f81cce4ca3a41e1af203c1b257
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 16efaf9be9db55935cc7b6a3df0349f81d170b2e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36036488"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37192506"
 ---
 # <a name="managing-connections-and-sessions-xmla"></a>管理連接與工作階段 (XMLA)
-  *Statefulness*是在伺服器保留之身分識別與內容的用戶端方法呼叫之間的條件。 *Statelessness*是在伺服器不會記住之身分識別與內容的用戶端方法呼叫完成之後的條件。  
+  *Statefulness*是期間伺服器保留之識別與用戶端方法呼叫之間的內容。 *Statelessness*是期間伺服器不會記住之識別與內容的用戶端方法呼叫完成後的條件。  
   
- 若要提供 statefulness，XML for Analysis (XMLA) 支援*工作階段*，允許一系列陳述式一起執行。 這樣一系列的陳述式範例，將會建立用於後續查詢的導出成員。  
+ 若要提供 statefulness，XML for Analysis (XMLA) 支援*工作階段*，允許一系列的陳述式一起執行。 這樣一系列的陳述式範例，將會建立用於後續查詢的導出成員。  
   
  一般而言，在 XMLA 中的工作階段會遵循 OLE DB 2.6 規格所述的下列行為：  
   
@@ -40,7 +40,7 @@ ms.locfileid: "36036488"
   
 -   在單一工作階段的內容中可以執行多個命令。  
   
--   支援 XMLA 內容中的交易是透過提供者特有的命令，以傳送[Execute](../xmla/xml-elements-methods-execute.md)方法。  
+-   XMLA 內容中交易的支援是透過提供者特有的命令，以傳送[Execute](../xmla/xml-elements-methods-execute.md)方法。  
   
  XMLA 定義了一個方法，可支援在 Web 環境中的工作階段，其所使用的模式類似於分散式撰寫及版本處理 (DAV) 通訊協定所使用的方法，可在鬆散偶合的環境中實作鎖定。 這個實作與 DAV 相似，因為其允許提供者基於各種理由 (例如，逾時或是連接錯誤) 使工作階段過期。 當再度支援工作階段時，Web 服務必須知道並準備處理必須重新啟動之中斷的命令集。  
   
@@ -77,7 +77,7 @@ ms.locfileid: "36036488"
     </SOAP-ENV:Envelope>  
     ```  
   
-2.  從提供者的 SOAP 回應訊息包含的工作階段識別碼傳回標頭區域中，使用 XMLA 標頭標記\<SessionId >。  
+2.  從提供者的 SOAP 回應訊息包含的工作階段識別碼傳回的標頭區域中，使用 XMLA 標頭標記\<SessionId >。  
   
     ```  
     <SOAP-ENV:Header>  
@@ -98,7 +98,7 @@ ms.locfileid: "36036488"
     </SOAP-ENV:Header>  
     ```  
   
-4.  工作階段完成時， \<EndSession > 標記會使用包含相關的工作階段識別碼值。  
+4.  當工作階段已完成， \<EndSession > 標記會使用包含相關的工作階段識別碼值。  
   
     ```  
     <SOAP-ENV:Header>  

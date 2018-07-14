@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - variables [Integration Services], passing between packages
 - user-defined variables [Integration Services]
@@ -21,13 +21,13 @@ ms.assetid: c1e81ad6-628b-46d4-9b09-d2866517b6ca
 caps.latest.revision: 59
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: b6a5737635ffd69a7d09a93ac1104a1ee65b8277
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d7352ff51810a16f2c3e81b5362bad764955f67a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36034176"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37283614"
 ---
 # <a name="integration-services-ssis-variables"></a>Integration Services (SSIS) 變數
   變數會儲存 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 封裝及其容器、工作和事件處理常式在執行階段可使用的值。 「指令碼」工作和「指令碼」元件中的指令碼也可以使用變數。 將工作和容器排序成工作流程的優先順序條件約束，可在其條件約束定義含有運算式時使用變數。  
@@ -90,12 +90,12 @@ ms.locfileid: "36034176"
  指定變數的描述。  
   
  EvaluateAsExpression  
- 當屬性設定為`True`，提供的運算式用來設定變數的值。  
+ 當屬性設定為`True`，提供的運算式用來設定變數值。  
   
  運算式  
  指定指派給變數的運算式。  
   
- [屬性]  
+ 名稱  
  指定變數名稱。  
   
  命名空間  
@@ -118,19 +118,19 @@ ms.locfileid: "36034176"
  IncludeInDebugDump  
  指出偵錯傾印檔案中是否要包含變數值。  
   
- 預設值的使用者定義變數和系統變數， **InclueInDebugDump**選項`true`。  
+ 如需使用者定義的變數和系統變數的預設值**InclueInDebugDump**選項是`true`。  
   
  不過，針對使用者自訂變數，系統會重設**IncludeInDebugDump**選項設定為`false`當符合下列條件：  
   
 -   如果**EvaluateAsExpression**變數的屬性設定為`true`，系統會重設**IncludeInDebugDump**選項設定為`false`。  
   
-     若要偵錯傾印檔案中包含變數值運算式的文字，設定**IncludeInDebugDump**選項設定為`true`。  
+     若要偵錯傾印檔案中包含的變數值運算式的文字，設定**IncludeInDebugDump**選項設定為`true`。  
   
 -   如果變數資料類型變更為字串時，系統會重設**IncludeInDebugDump**選項設定為`false`。  
   
  系統會重設**IncludeInDebugDump**選項設定為`false`，這可能會覆寫使用者所選取的值。  
   
- ReplTest1  
+ 值  
  使用者自訂變數值可以是常值或是運算式。 變數包含設定變數值和該值之資料類型的選項。 兩個屬性必須相容：例如，同時使用字串值和整數資料類型是無效的。  
   
  如果變數設定為做為運算式評估，則必須提供運算式。 在執行階段會評估運算式，且會將變數值設定為評估結果。 例如，如果變數使用運算式 `DATEPART("month", GETDATE())` ，則變數的值將為目前日期所在之月份數。 運算式必須是使用 [!INCLUDE[ssIS](../includes/ssis-md.md)] 運算式文法語法的有效運算式。 當運算式搭配變數使用時，運算式可以使用運算式文法提供的常值、運算子和函數，但是運算式無法參考封裝中資料流程的資料行。 運算式的最大長度為 4000 個字元。 如需詳細資訊，請參閱 [Integration Services &#40;SSIS&#41; 運算式](expressions/integration-services-ssis-expressions.md)。  
@@ -146,14 +146,14 @@ ms.locfileid: "36034176"
   
  如需可以在 [[!INCLUDE[ssIS](../includes/ssis-md.md)] 設計師] 中設定之屬性的詳細資訊，請參閱[變數視窗](../../2014/integration-services/variables-window.md)。  
   
- 若要進一步了解有關變數屬性，以及有關以程式設計方式設定這些屬性的詳細資訊，請參閱<xref:Microsoft.SqlServer.Dts.Runtime.Variable>。  
+ 若要深入了解變數屬性，以及有關以程式設計方式設定這些屬性的詳細資訊，請參閱<xref:Microsoft.SqlServer.Dts.Runtime.Variable>。  
   
 ## <a name="related-tasks"></a>相關工作  
- [加入、 刪除、 變更封裝中的使用者定義變數的範圍](../../2014/integration-services/add-delete-change-scope-of-user-defined-variable-in-a-package.md)  
+ [新增、刪除、變更套件中使用者定義變數的範圍](../../2014/integration-services/add-delete-change-scope-of-user-defined-variable-in-a-package.md)  
   
  [設定使用者定義變數的屬性](../../2014/integration-services/set-the-properties-of-a-user-defined-variable.md)  
   
- [子封裝中使用變數和參數的值](../../2014/integration-services/use-the-values-of-variables-and-parameters-in-a-child-package.md)  
+ [在子套件中使用變數和參數的值](../../2014/integration-services/use-the-values-of-variables-and-parameters-in-a-child-package.md)  
   
  [在資料流程元件中將查詢參數對應至變數](data-flow/map-query-parameters-to-variables-in-a-data-flow-component.md)  
   

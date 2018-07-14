@@ -1,5 +1,5 @@
 ---
-title: 排程頁面 （報表管理員） |Microsoft 文件
+title: 排程頁面 （報表管理員） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: ef19d96e-9f00-4434-950e-152dda9c1ced
 caps.latest.revision: 29
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 8d460ad3e85f1884a101ad1ad52adc1cd04fe43a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: bf66402ba021949bce1eb2810d634177ddf1916d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36036518"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37198508"
 ---
 # <a name="schedules-page-report-manager"></a>排程頁面 (報表管理員)
   您可以使用 [排程] 頁面來建立、修改、刪除、暫停或繼續執行共用排程。 共用排程是具名的排程，可以和報表、訂閱及消耗排程資訊的其他處理序分開建立和管理。 使用者可以選取您提供的共用排程。  
@@ -27,7 +27,7 @@ ms.locfileid: "36036518"
  若要刪除、暫停或繼續執行共用排程，請選取想要修改的共用排程旁邊的核取方塊。  
   
 > [!NOTE]  
->  並非所有 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]版本都提供此功能。 如需所支援的版本功能的清單[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]，請參閱[支援的 SQL Server 2014 的版本功能](../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md)。  
+>  並非所有 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]版本都提供此功能。 如需的版本所支援的功能清單[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]，請參閱 <<c2> [ 支援的 SQL Server 2014 的版本功能](../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md)。  
   
 ## <a name="navigation"></a>導覽  
  您可以使用下列程序，在使用者介面 (UI) 中導覽至這個位置。  
@@ -59,7 +59,7 @@ ms.locfileid: "36036518"
  **建立者**  
  顯示建立共用排程的使用者名稱。  
   
- **最後執行 / 下一個執行**  
+ **上次執行 / 下一個執行**  
  顯示最後執行共用排程和下一個執行共用排程的時間。  
   
  **狀態**  

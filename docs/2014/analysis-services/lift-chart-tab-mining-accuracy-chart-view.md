@@ -1,5 +1,5 @@
 ---
-title: 增益圖索引標籤 （採礦精確度圖表檢視） |Microsoft 文件
+title: 增益圖索引標籤 （採礦精確度圖表檢視） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dm.miningmodeleditor.accuracychart.liftchart.f1
 ms.assetid: f1674e2e-d38e-40c7-b8d1-5585ce9a0168
 caps.latest.revision: 24
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 480f224d3948b88117b5b708900639539cfdffab
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 09b0acd6bb7a4d079476b866a56f47029192db47
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36036918"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37224648"
 ---
 # <a name="lift-chart-tab-mining-accuracy-chart-view"></a>增益圖索引標籤 (採礦精確度圖表檢視)
   使用 [增益圖] 窗格可檢視比較選取的採礦結構中所有選取的採礦模型的圖表。  

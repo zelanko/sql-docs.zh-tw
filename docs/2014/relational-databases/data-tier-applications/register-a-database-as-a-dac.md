@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-data-tier-apps
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.registerdacwizard.registerdac.f1
 - sql12.swb.registerdacwizard.summary.f1
@@ -21,18 +21,18 @@ helpviewer_keywords:
 - data-tier application [SQL Server], register
 ms.assetid: 08e52aa6-12f3-41dd-a793-14b99a083fd5
 caps.latest.revision: 21
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: f7b197a130a1caa9ec467d529b36373b8aa648b8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 76cea4cf690481d4253b582f681b29b577d71877
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36036817"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37197198"
 ---
 # <a name="register-a-database-as-a-dac"></a>將資料庫註冊為 DAC
-  使用**註冊資料層應用程式精靈**或 Windows PowerShell 指令碼來建立資料層應用程式 (DAC) 定義，以便描述現有的資料庫中的物件，並在中註冊DAC定義`msdb`系統資料庫 (**主要**中[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)])。  
+  使用任何一種**註冊資料層應用程式精靈**或 Windows PowerShell 指令碼來建立資料層應用程式 (DAC) 定義，以便描述現有的資料庫中的物件，並註冊 DAC 定義中的`msdb`系統資料庫 (**主要**在[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)])。  
   
 -   **Before you begin:**  [Limitations and Restrictions](#LimitationsRestrictions), [Permissions](#Permissions)  
   
@@ -82,11 +82,11 @@ ms.locfileid: "36036817"
   
  **應用程式名稱** - 指定用來識別 DAC 定義之名稱的字串，此欄位已經填入資料庫名稱。  
   
- **版本** - 可識別 DAC 版本的數值。 DAC 版本會用於 Visual Studio 中，以便識別開發人員正在處理的 DAC 版本。 在部署 DAC 時，版本會儲存在`msdb`資料庫和更新版本底下檢視**資料層應用程式**節點[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]。  
+ **版本** - 可識別 DAC 版本的數值。 DAC 版本會用於 Visual Studio 中，以便識別開發人員正在處理的 DAC 版本。 在部署 DAC 時，版本會儲存在`msdb`資料庫和更新版本底下檢視**資料層應用程式**中的節點[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]。  
   
- **描述** - 選擇性。 說明 DAC 用途的文字。 描述在部署 DAC 時，會儲存在`msdb`資料庫和更新版本底下檢視**資料層應用程式**節點[!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]。  
+ **描述** - 選擇性。 說明 DAC 用途的文字。 描述在部署 DAC 時，會儲存在`msdb`資料庫和更新版本底下檢視**資料層應用程式**中的節點[!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]。  
   
- **\< 先前**-會讓您返回**簡介**頁面。  
+ **\< 先前**-會讓您回到**簡介**頁面。  
   
  **下一步 >** - 確認 DAC 可以從資料庫的物件建立而來，並在 [驗證與摘要] 頁面中顯示結果。  
   
@@ -98,7 +98,7 @@ ms.locfileid: "36036817"
 ### <a name="retrieving-objects"></a>擷取物件  
  **擷取資料庫與伺服器物件。** - 當精靈從資料庫及 Database Engine 執行個體擷取所有必要的物件時，將會顯示進度列。  
   
- **\< 先前**-會讓您返回**設定屬性**頁面，以變更您的項目。  
+ **\< 先前**-會讓您回到**器集合工具內容**頁面，以變更您的項目。  
   
  **下一步 >** - 註冊 DAC，並在 [註冊 DAC] 頁面中顯示結果。  
   
@@ -107,7 +107,7 @@ ms.locfileid: "36036817"
 ### <a name="validating-objects"></a>驗證物件  
  **正在檢查**  *SchemaName* **＞。** *ObjectName* **＞。** - 當精靈驗證擷取之物件的相依性，並驗證這些對於 DAC 都是有效的物件時，將會顯示進度列。 *SchemaName ***.*** ObjectName* 識別目前正在驗證哪一個物件。  
   
- **\< 先前**-會讓您返回**設定屬性**頁面，以變更您的項目。  
+ **\< 先前**-會讓您回到**器集合工具內容**頁面，以變更您的項目。  
   
  **下一步 >** - 註冊 DAC，並在 [註冊 DAC] 頁面中顯示結果。  
   
@@ -118,7 +118,7 @@ ms.locfileid: "36036817"
   
  **儲存報表** - 選取此按鈕可以將驗證報告複本儲存到 HTML 檔案。 預設資料夾為 Windows 帳戶之 [文件] 資料夾中的 **SQL Server Management Studio\DAC Packages** 資料夾。  
   
- **\< 先前**-會讓您返回**設定屬性**頁面，以變更您的項目。  
+ **\< 先前**-會讓您回到**器集合工具內容**頁面，以變更您的項目。  
   
  **下一步 >** - 註冊 DAC，並在 [註冊 DAC] 頁面中顯示結果。  
   

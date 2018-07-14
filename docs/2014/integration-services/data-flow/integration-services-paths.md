@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - paths [Integration Services], about paths
 - data flow [Integration Services], paths
@@ -19,13 +19,13 @@ ms.assetid: 6c4629a9-2ede-4011-9101-3b342249640e
 caps.latest.revision: 38
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 33ce96096c0675b16d58532a351c20d897afb46a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 2775a35efd26f8132ef2b103ad546a92872d915a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36034413"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37248588"
 ---
 # <a name="integration-services-paths"></a>Integration Services 路徑
   將一個資料流程元件的輸出與另一元件的輸入連接，路徑可連接資料流程中的兩個元件。 路徑具有一個來源和一個目的地。 例如，如果路徑連接 OLE DB 來源和「排序」轉換，則 OLE DB 來源是路徑的來源，而「排序」轉換是路徑的目的地。 來源是路徑開始處的元件，而目的地是路徑結束處的元件。  
@@ -45,7 +45,7 @@ ms.locfileid: "36034413"
   
  如需可在 [資料流程路徑編輯器] 對話方塊中設定之屬性的詳細資訊，請按一下下列其中一個主題：  
   
--   [資料流程路徑編輯器&#40;[一般] 頁面&#41;](../general-page-of-integration-services-designers-options.md)  
+-   [資料流程路徑編輯器&#40;一般頁面&#41;](../general-page-of-integration-services-designers-options.md)  
   
 -   [資料流程路徑編輯器&#40;中繼資料 頁面&#41;](../data-flow-path-editor-metadata-page.md)  
   
@@ -55,7 +55,7 @@ ms.locfileid: "36034413"
   
 ## <a name="related-tasks"></a>相關工作  
   
--   [檢視路徑中繼資料在資料流程路徑編輯器](../view-path-metadata-in-the-data-flow-path-editor.md)  
+-   [在資料流程路徑編輯器中檢視路徑中繼資料](../view-path-metadata-in-the-data-flow-path-editor.md)  
   
 -   [連接資料流程中的元件](connect-components-in-a-data-flow.md)  
   

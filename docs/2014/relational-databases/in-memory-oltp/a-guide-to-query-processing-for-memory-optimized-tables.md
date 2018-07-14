@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine-imoltp
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 065296fe-6711-4837-965e-252ef6c13a0f
 caps.latest.revision: 24
-author: stevestein
-ms.author: sstein
-manager: jhubbard
-ms.openlocfilehash: 86aeaad34575eec0a411cb84c17950b479a3169b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: a076691f045a5e9270a51b3500ea84f6b8756836
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36035726"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37177825"
 ---
 # <a name="a-guide-to-query-processing-for-memory-optimized-tables"></a>記憶體最佳化資料表的查詢處理指南
   記憶體中 OLTP 推出記憶體最佳化資料表以及 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]中的原生編譯預存程序。 本文針對記憶體最佳化資料表和原生編譯的預存程序提供查詢處理的概觀。  
@@ -83,7 +83,7 @@ SELECT o.OrderID, c.* FROM dbo.[Customer] c INNER JOIN dbo.[Order] o ON c.Custom
   
 -   來自 Order 資料表的資料是使用 CustomerID 資料行上的非叢集索引擷取。 這個索引同時包含用於聯結的 CustomerID 資料行，以及傳回給使用者的主索引鍵資料行 OrderID。 從 Orders 資料表傳回其他資料行會需要查閱 Order 資料表的叢集索引。  
   
--   邏輯運算子 `Inner Join` 是由實體運算子 `Merge Join` 所實作。 其他實體聯結類型包括 `Nested Loops` 和 `Hash Join`。 `Merge Join`運算子會利用兩個索引會在聯結資料行 CustomerID 上排序的情況。  
+-   邏輯運算子 `Inner Join` 是由實體運算子 `Merge Join` 所實作。 其他實體聯結類型包括 `Nested Loops` 和 `Hash Join`。 `Merge Join`運算子會利用這兩個索引會在聯結資料行 CustomerID 上排序的事實。  
   
  請考慮與這個查詢稍微不同的做法，傳回 Order 資料表的所有資料列，而不只是 OrderID：  
   
@@ -96,7 +96,7 @@ SELECT o.*, c.* FROM dbo.[Customer] c INNER JOIN dbo.[Order] o ON c.CustomerID =
  ![雜湊聯結以磁碟為基礎的資料表的查詢計劃。](../../database-engine/media/hekaton-query-plan-2.gif "雜湊聯結以磁碟為基礎的資料表的查詢計劃。")  
 磁碟為基礎資料表的雜湊聯結查詢計劃。  
   
- 在這個查詢中，Orders 資料表的資料列是使用叢集索引擷取。 `Hash Match`實體運算子現在用於`Inner Join`。 Order 上的叢集的索引未 CustomerID 上排序，因此`Merge Join`會需要排序運算子，就會影響效能。 請記下與上一個範例中 `Hash Match` 運算子成本 (46%) 相較的 `Merge Join` 運算子相對成本 (75%)。 最佳化工具會考慮`Hash Match`運算子也在前一個範例中，但卻`Merge Join`運算子提供更佳效能。  
+ 在這個查詢中，Orders 資料表的資料列是使用叢集索引擷取。 `Hash Match`實體運算子現在用於`Inner Join`。 Order 上的叢集的索引不 CustomerID 上排序，因此`Merge Join`會需要排序運算子，就會影響效能。 請記下與上一個範例中 `Hash Match` 運算子成本 (46%) 相較的 `Merge Join` 運算子相對成本 (75%)。 最佳化工具會考慮`Hash Match`運算子也在前一個範例中，但結果為`Merge Join`運算子提供更佳的效能。  
   
 ## <a name="includessnoversionincludesssnoversion-mdmd-query-processing-for-disk-based-tables"></a>[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 磁碟資料表的查詢處理  
  下圖概述 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 中隨選查詢的查詢處理流程：  
@@ -230,7 +230,7 @@ END
   
 2.  剖析器會擷取名稱和預存程序參數。  
   
-     如果陳述式已備妥，例如使用`sp_prep_exec`，剖析器不需要在執行時間擷取程序名稱和參數。  
+     如果陳述式已備妥，例如使用`sp_prep_exec`，剖析器不需要擷取程序名稱，並在執行階段參數。  
   
 3.  記憶體中 OLTP 執行階段會尋找預存程序的 DLL 進入點。  
   

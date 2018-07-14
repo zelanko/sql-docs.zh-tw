@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - incremental load [Integration Services],creating function
 ms.assetid: 55dd0946-bd67-4490-9971-12dfb5b9de94
 caps.latest.revision: 28
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: c9367e4715022afcff7c988cbe877a1565f41cab
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 5c8eec2498cace997c8f67493772c9ac23d374bc
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36035742"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37217828"
 ---
 # <a name="create-the-function-to-retrieve-the-change-data"></a>建立函數以擷取變更資料
   完成執行累加式變更資料載入之 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 封裝的控制流程後，下一個工作是建立可擷取變更資料的資料表值函式。 第一次累加式載入前，您僅需要建立一次這個函數。  
@@ -145,7 +145,7 @@ deallocate #hfunctions
 ## <a name="writing-your-own-table-value-function"></a>撰寫您自己的資料表值函式  
  您也可以改用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 撰寫呼叫異動資料擷取查詢函數的資料表值包裝函式，並將資料表值包裝函式儲存在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中。 如需如何建立 Transact-SQL 函數的詳細資訊，請參閱 [CREATE FUNCTION &#40;Transact-SQL&#41](/sql/t-sql/statements/create-function-transact-sql)。  
   
- 下列範例定義的資料表值函式可從 Customer 資料表中擷取指定之變更間隔的變更。 此函式會使用異動資料擷取函數對應`datetime`二進位記錄檔的值順序的變更資料表會在內部使用的編號 (LSN) 值。 此函數也會處理數個特殊狀況：  
+ 下列範例定義的資料表值函式可從 Customer 資料表中擷取指定之變更間隔的變更。 此函式會使用異動資料擷取函數對應`datetime`值的二進位記錄序號 (LSN) 值變更資料表在內部使用。 此函數也會處理數個特殊狀況：  
   
 -   針對開始時間傳遞 null 值時，此函數會使用最早可用的值。  
   

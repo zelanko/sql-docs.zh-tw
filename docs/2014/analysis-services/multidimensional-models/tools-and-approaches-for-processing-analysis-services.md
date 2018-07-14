@@ -1,5 +1,5 @@
 ---
-title: 工具和方法來處理 (Analysis Services) |Microsoft 文件
+title: 工具和方法來處理 (Analysis Services) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - process [Analysis Services]
 - processing [Analysis Services]
 ms.assetid: 82347a16-4145-4655-8adf-2a300f1fdf99
 caps.latest.revision: 33
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 8c191732dd66214c19c949d28e3dcd0efe01f7fa
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: f00c1a31869bdfb9375d1e97822c98a0e4f9f914
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36034470"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37261400"
 ---
 # <a name="tools-and-approaches-for-processing-analysis-services"></a>處理的工具和方式 (Analysis Services)
   處理是 Analysis Services 查詢關聯式資料來源，然後使用該資料來擴展 Analysis Services 物件的作業。  
@@ -50,7 +50,7 @@ ms.locfileid: "36034470"
  處理是可高度設定的作業，由決定在物件層級上發生完整處理或累加式處理的一組處理選項所控制。 如需處理選項和物件的詳細資訊，請參閱[處理選項和設定 &#40;Analysis Services&#41;](processing-options-and-settings-analysis-services.md) 和[處理 Analysis Services 物件](processing-analysis-services-objects.md)。  
   
 > [!NOTE]  
->  此主題描述用於處理多維度模型的工具和方法。 如需有關處理表格式模型的詳細資訊，請參閱[處理資料庫、 資料表或資料分割](../tabular-models/process-database-table-or-partition-analysis-services.md)和[處理資料&#40;SSAS 表格式&#41;](../process-data-ssas-tabular.md)。  
+>  此主題描述用於處理多維度模型的工具和方法。 如需有關處理表格式模型的詳細資訊，請參閱 <<c0> [ 處理資料庫、 資料表或資料分割](../tabular-models/process-database-table-or-partition-analysis-services.md)並[處理序資料&#40;SSAS 表格式&#41;](../process-data-ssas-tabular.md)。</c0>  
   
 ### <a name="processing-objects-in-sql-server-management-studio"></a>在 SQL Server Management Studio 中處理物件  
   

@@ -1,5 +1,5 @@
 ---
-title: 關於 SQL Server Database Engine |Microsoft 文件
+title: 關於 SQL Server Database Engine |Microsoft Docs
 ms.custom: ''
 ms.date: 05/24/2017
 ms.prod: sql-server-2014
@@ -8,25 +8,25 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Database Engine [SQL Server], installing
 ms.assetid: d0876e7f-aa52-4dd7-bd5c-029e2ffded5f
 caps.latest.revision: 44
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 4316e91e465922ca1f7c428a9f25e781837ec6e4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 04a76cd2216b8f19816950c0a86dce9840caca39
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36035953"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37184765"
 ---
 # <a name="about-the-sql-server-database-engine"></a>關於 SQL Server Database Engine
   [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 元件是用來儲存、處理及維護資料安全的核心服務。 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 提供控制存取和快速交易處理，以符合企業中最需要的資料耗用應用程式的需求。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 在單一電腦上最多支援 50 個 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 執行個體。 若要建立一般[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]安裝，請參閱[從安裝精靈安裝 SQL Server 2014&#40;安裝&#41;](install-sql-server-from-the-installation-wizard-setup.md)。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 在單一電腦上最多支援 50 個 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 執行個體。 若要建立一般[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]安裝，請參閱 <<c2> [ 從安裝精靈安裝 SQL Server 2014&#40;安裝&#41;](install-sql-server-from-the-installation-wizard-setup.md)。</c2>  
   
  **重要事項**若為本機安裝，您必須以系統管理員的身分執行安裝程式。 如果您是從遠端共用位置安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，則必須使用對遠端共用位置具有讀取和執行權限的網域帳戶。  
   

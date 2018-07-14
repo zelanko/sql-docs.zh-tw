@@ -1,5 +1,5 @@
 ---
-title: 從範本建立單一預測查詢 |Microsoft 文件
+title: 從範本建立單一預測查詢 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - singleton query predictions [DMX]
 ms.assetid: e0a68ab0-bece-4d25-b464-47f1719302e6
 caps.latest.revision: 12
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 91180f533afbbb18472d933891ab607a5ba7f6d4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 09d7a8b9de92e18646c00b045cb1d55b0eb311d4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36035785"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37224588"
 ---
 # <a name="create-a-singleton-prediction-query-from-a-template"></a>根據範本建立單一預測查詢
   如果您具有一個要用於預測的模型，但不希望將該模型對應至外部輸入資料集或產生大量預測，則單一查詢很有用。 使用單一查詢，您可以向模型提供一個或多個值，並且立即會看到預測值。  
@@ -77,16 +77,16 @@ AS [t]
   
 6.  在 [值] 資料列中，針對您想要進行預測的項目輸入新資料值。  
   
-     本主題開頭所顯示的範例程式碼**值**資料列已設為`2`來預測自行車購買行為根據家中孩童的數目。  
+     本主題開頭所顯示的範例程式碼**值**資料列設定`2`來預測自行車購買行為，根據家中子女數目。  
   
 7.  在 [資料行] 資料列中，輸入新資料應該對應至採礦模型中的目標資料行名稱。  
   
-     本主題開頭所顯示的範例程式碼**資料行**資料列已設為`Number Children at Home`。  
+     本主題開頭所顯示的範例程式碼**資料行**資料列設定`Number Children at Home`。  
   
     > [!NOTE]  
     >  當您使用 [指定範本參數的值] 對話方塊時，不需要在資料行名稱前後加上方括號。 系統會自動為您加入括號。  
   
-8.  保留**輸入的別名**為`t`。  
+8.  離開**輸入的別名**做為`t`。  
   
 9. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   

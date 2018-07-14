@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 486e4216-a946-4c6e-828c-61bc905f7ec1
 caps.latest.revision: 46
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: aaeb492e40a17d274fa706431ee49243c88976da
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 1c9e05afd85b4a16d97885d52cf35d96b54462f1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36035988"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37180887"
 ---
 # <a name="install-data-quality-services"></a>安裝 Data Quality Services
   [!INCLUDE[ssDQSnoversionLong](../../includes/ssdqsnoversionlong-md.md)] (DQS) 包含以下兩個元件： **[!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)]** 和 **[!INCLUDE[ssDQSClient](../../includes/ssdqsclient-md.md)]**。  
@@ -44,14 +44,14 @@ ms.locfileid: "36035988"
 -   [安裝後工作](#PostInstallationTasks)：完成 SQL Server 安裝程式之後，執行這些工作來完成安裝 DQS。  
   
 > [!NOTE]  
->  本主題不包含從命令列執行安裝程式的指示。 如需有關安裝的命令列選項資訊[!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)]和用戶端，請參閱[功能參數](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md#Feature)中[從命令提示字元安裝 SQL Server 2014](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md)。  
+>  本主題不包含從命令列執行安裝程式的指示。 如需安裝的命令列選項的詳細資訊[!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)]和 用戶端，請參閱[功能參數](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md#Feature)中[從命令提示字元安裝 SQL Server 2014](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md)。  
   
 ##  <a name="PreInstallationTasks"></a> 安裝前工作  
  安裝 DQS 之前，請先確認您的電腦符合最低系統需求。 下表提供 DQS 元件之最低系統需求的相關資訊：  
   
 |DQS 元件|最低系統需求|  
 |-------------------|---------------------------------|  
-|[!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)]|記憶體 (RAM)：<br />最小值： 2 GB<br />建議： 4 GB 以上<br /><br /> [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Database Engine。 如需詳細資訊，請參閱[有關 SQL Server Database Engine](../../database-engine/sql-server-database-engine-overview.md)。|  
+|[!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)]|記憶體 (RAM)：<br />最小值： 2 GB<br />建議： 4 GB 以上<br /><br /> [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Database Engine。 如需詳細資訊，請參閱 <<c0> [ 關於 SQL Server Database Engine](../../database-engine/sql-server-database-engine-overview.md)。|  
 |[!INCLUDE[ssDQSClient](../../includes/ssdqsclient-md.md)]|.NET Framework 4.0 (若未安裝，將會在安裝 [!INCLUDE[ssDQSClient](../../includes/ssdqsclient-md.md)] 期間加以安裝)<br /><br /> Internet Explorer 6.0 SP1 或更新的版本|  
   
 > [!IMPORTANT]  
@@ -59,7 +59,7 @@ ms.locfileid: "36035988"
 > -   您可以使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 的最新版或舊版以及 DQS 清理轉換來連接到 [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] 的 [!INCLUDE[ssDQSClient](../../includes/ssdqsclient-md.md)] 版本。 如需將 DQS 現有版本升級至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]的相關資訊，請參閱 [升級 Data Quality Services](../../database-engine/install-windows/upgrade-data-quality-services.md)。  
 > -   儘管 Microsoft Excel 不是安裝 Data Quality Client 的必要條件，仍須將 Microsoft Excel 2003 安裝在 Data Quality Client 電腦上以執行各種用戶端應用程式中的作業，例如從 Excel 檔案匯入定義域值，或是針對知識探索、清理或比對活動對應 Excel 檔案中的來源資料。  
   
- 如需安裝的最低系統需求的詳細資訊[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]，請參閱[硬體和軟體需求，安裝 SQL Server 2014](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)。  
+ 如需安裝的最低系統需求[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]，請參閱 <<c2> [ 硬體和軟體需求，安裝 SQL Server 2014](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)。  
   
 ##  <a name="DQSInstallation"></a> Data Quality Services 安裝工作  
  您必須使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 安裝程式安裝 DQS 元件。 當您執行 SQL Server 安裝程式時，必須執行一連串的安裝精靈頁面，依據您的需求選取適當的選項。 下表只列出安裝精靈中的部分頁面，您在這些頁面中選取的選項將會影響 DQS 的安裝：  
@@ -74,7 +74,7 @@ ms.locfileid: "36035988"
   
 |動作|描述|相關主題|  
 |------------|-----------------|--------------------|  
-|完成 [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] 安裝|執行 DQSInstaller.exe 檔。 執行 DQSInstaller.exe 檔案時：<br /><br /> 會建立 DQS_MAIN、DQS_PROJECTS 及 DQS_STAGING_DATA 資料庫。<br /><br /> 會建立 ##MS_dqs_db_owner_login## 及 ##MS_dqs_service_login## 登入。<br /><br /> 會在 DQS_MAIN 資料庫中建立 dqs_administrator、dqs_kb_editor 及 dqs_kb_operator 角色。<br /><br /> master 資料庫中會建立 DQInitDQS_MAIN 預存程序。<br /><br /> 通常是 C:\Program Files\Microsoft SQL Server\MSSQL12 中建立 DQS_install.log 檔案。*< Instance_name >* \MSSQL\Log 資料夾。 此檔案包含執行 DQSInstaller.exe 檔案時所執行之動作相關的資訊。<br /><br /> 如果 Master Data Services 當做 [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)]，存在於相同的 SQL Server 執行個體中，則會建立對應到 Master Data Services 登入的使用者，並且授與該使用者 DQS_MAIN 資料庫的 dqs_administrator 角色。<br /><br /> <br /><br /> 這樣就完成 [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] 安裝。|[執行 DQSInstaller.exe uality 以完成 Data Quality 伺服器安裝](run-dqsinstaller-exe-to-complete-data-quality-server-installation.md)|  
+|完成 [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] 安裝|執行 DQSInstaller.exe 檔。 執行 DQSInstaller.exe 檔案時：<br /><br /> 會建立 DQS_MAIN、DQS_PROJECTS 及 DQS_STAGING_DATA 資料庫。<br /><br /> 會建立 ##MS_dqs_db_owner_login## 及 ##MS_dqs_service_login## 登入。<br /><br /> 會在 DQS_MAIN 資料庫中建立 dqs_administrator、dqs_kb_editor 及 dqs_kb_operator 角色。<br /><br /> master 資料庫中會建立 DQInitDQS_MAIN 預存程序。<br /><br /> 通常在 C:\Program Files\Microsoft SQL Server\MSSQL12 中建立 DQS_install.log 檔案。*< 執行個體名稱 >* \MSSQL\Log 資料夾。 此檔案包含執行 DQSInstaller.exe 檔案時所執行之動作相關的資訊。<br /><br /> 如果 Master Data Services 當做 [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)]，存在於相同的 SQL Server 執行個體中，則會建立對應到 Master Data Services 登入的使用者，並且授與該使用者 DQS_MAIN 資料庫的 dqs_administrator 角色。<br /><br /> <br /><br /> 這樣就完成 [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] 安裝。|[執行 DQSInstaller.exe uality 以完成 Data Quality 伺服器安裝](run-dqsinstaller-exe-to-complete-data-quality-server-installation.md)|  
 |對使用者授與 DQS 角色|若要登入[!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)]使用[!INCLUDE[ssDQSClient](../../includes/ssdqsclient-md.md)]，使用者必須具備下列三個角色在 DQS_MAIN 資料庫上： **dqs_administrator**， **dqs_kb_editor**，或**dqs_kb_運算子**。 根據預設，如果您的使用者帳戶是系統管理員 (sysadmin) 固定伺服器角色的成員，即使沒有將任何 DQS 角色授與您的使用者帳戶，還是可以使用 [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] 登入 [!INCLUDE[ssDQSClient](../../includes/ssdqsclient-md.md)] 。 如需有關三個 DQS 角色的詳細資訊，請參閱＜ [DQS 安全](../dqs-security.md)＞。<br /><br /> 注意： 三個 DQS 角色不適用於 DQS_PROJECTS 和 DQS_STAGING_DATA 資料庫。|[授與使用者 DQS 角色](grant-dqs-roles-to-users.md)|  
 |讓您的資料可用於 DQS 作業|確認您可以存取 DQS 作業的來源資料，並且能夠將已處理的資料匯出到資料庫中的某個資料表。|[存取用於 DQS 作業的資料](access-data-for-the-dqs-operations.md)|  
   

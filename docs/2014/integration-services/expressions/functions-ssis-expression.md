@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - functions [Integration Services]
 - expressions [Integration Services], functions
@@ -19,13 +19,13 @@ ms.assetid: e9a41a31-94f4-46a4-b737-c707dd59ce48
 caps.latest.revision: 35
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 65c272c738877eef0d8f931c7ed3a9262eeeae72
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 5b67a495d92d0bfc59288533d5f7c21e0f86d645
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36035733"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37171029"
 ---
 # <a name="functions-ssis-expression"></a>函數 (SSIS 運算式)
   運算式語言包含一組可在運算式中使用的函數。 運算式可使用單一函數，但通常運算式會結合函數與運算子，並使用多個函數。  
@@ -50,9 +50,9 @@ ms.locfileid: "36035733"
 |[FLOOR &#40;SSIS 運算式&#41;](floor-ssis-expression.md)|傳回小於或等於數值運算式的最大整數。|  
 |[LN &#40;SSIS 運算式&#41;](ln-ssis-expression.md)|傳回數值運算式的自然對數。|  
 |[記錄&#40;SSIS 運算式&#41;](log-ssis-expression.md)|傳回數值運算式以 10 為底的對數。|  
-|[電源&#40;SSIS 運算式&#41;](power-ssis-expression.md)|傳回數值運算式的乘冪結果。|  
+|[POWER &#40;SSIS 運算式&#41;](power-ssis-expression.md)|傳回數值運算式的乘冪結果。|  
 |[ROUND &#40;SSIS 運算式&#41;](round-ssis-expression.md)|傳回已經進位到指定長度或有效位數的數值運算式。 執行個體時提供 SQL Server 登入。|  
-|[符號&#40;SSIS 運算式&#41;](sign-ssis-expression.md)|傳回數值運算式的正 (+)、負 (-) 或零 (0) 符號。|  
+|[標誌&#40;SSIS 運算式&#41;](sign-ssis-expression.md)|傳回數值運算式的正 (+)、負 (-) 或零 (0) 符號。|  
 |[正方形&#40;SSIS 運算式&#41;](square-ssis-expression.md)|傳回數值運算式的平方。|  
 |[SQRT &#40;SSIS 運算式&#41;](sqrt-ssis-expression.md)|傳回數值運算式的平方根。|  
   
@@ -64,13 +64,13 @@ ms.locfileid: "36035733"
 |[FINDSTRING &#40;SSIS 運算式&#41;](findstring-ssis-expression.md)|傳回運算式中，所指定字元字串出現位置的以 1 為基底的索引。|  
 |[HEX &#40;SSIS 運算式&#41;](hex-ssis-expression.md)|傳回代表整數的十六進位值的字串。|  
 |[LEN &#40;SSIS 運算式&#41;](len-ssis-expression.md)|傳回字元運算式中的字元數。|  
-|[左&#40;SSIS 運算式&#41;](left-ssis-expression.md)|傳回來自給定字元運算式最左邊部分的指定字元數。|  
+|[LEFT &#40;SSIS 運算式&#41;](left-ssis-expression.md)|傳回來自給定字元運算式最左邊部分的指定字元數。|  
 |[較低&#40;SSIS 運算式&#41;](lower-ssis-expression.md)|傳回將大寫字元轉換為小寫字元之後的字元運算式。|  
 |[LTRIM &#40;SSIS 運算式&#41;](trim-ssis-expression.md)|傳回移除開頭空白之後的字元運算式。|  
 |[取代&#40;SSIS 運算式&#41;](replace-ssis-expression.md)|以不同的字串或空白字串取代運算式中的字串後，傳回字元運算式。|  
 |[複寫&#40;SSIS 運算式&#41;](replicate-ssis-expression.md)|傳回重複了指定次數的字元運算式。|  
 |[反轉&#40;SSIS 運算式&#41;](reverse-ssis-expression.md)|傳回反向順序的字元運算式。|  
-|[右&#40;SSIS 運算式&#41;](right-ssis-expression.md)|傳回來自給定字元運算式最右邊部分的指定字元數。|  
+|[權限&#40;SSIS 運算式&#41;](right-ssis-expression.md)|傳回來自給定字元運算式最右邊部分的指定字元數。|  
 |[RTRIM &#40;SSIS 運算式&#41;](rtrim-ssis-expression.md)|傳回移除尾端空白之後的字元運算式。|  
 |[子字串&#40;SSIS 運算式&#41;](substring-ssis-expression.md)|傳回部份字元運算式。|  
 |[修剪&#40;SSIS 運算式&#41;](trim-ssis-expression.md)|傳回移除開頭和尾端空白之後的字元運算式。|  
@@ -86,8 +86,8 @@ ms.locfileid: "36035733"
 |[天&#40;SSIS 運算式&#41;](day-ssis-expression.md)|傳回代表指定日期中日部份的整數。|  
 |[GETDATE &#40;SSIS 運算式&#41;](getdate-ssis-expression.md)|傳回系統目前的日期。|  
 |[GETUTCDATE &#40;SSIS 運算式&#41;](getutcdate-ssis-expression.md)|傳回以 UTC 時間 (Universal Time Coordinate 或 Greenwich Mean Time) 表示的系統目前日期。|  
-|[月份&#40;SSIS 運算式&#41;](month-ssis-expression.md)|傳回代表指定日期中月份的整數。|  
-|[年份&#40;SSIS 運算式&#41;](year-ssis-expression.md)|傳回代表指定日期中年份的整數。|  
+|[每月&#40;SSIS 運算式&#41;](month-ssis-expression.md)|傳回代表指定日期中月份的整數。|  
+|[YEAR &#40;SSIS 運算式&#41;](year-ssis-expression.md)|傳回代表指定日期中年份的整數。|  
   
  運算式評估工具提供下列 Null 函數。  
   

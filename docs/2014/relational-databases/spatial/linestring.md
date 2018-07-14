@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - dbe-spatial
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - LineString geometry subtype [SQL Server]
 - geometry subtypes [SQL Server]
 ms.assetid: e50d0b86-8b31-4285-be71-ad05c7712cbd
 caps.latest.revision: 24
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 93794bc4f692f84b7c44b9e8b6ccca36fb43afe7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 2bbe45e006930798396c13136f999c8152c4f48b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36034740"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37286896"
 ---
 # <a name="linestring"></a>LineString
   `LineString` 是代表一連串的點及連接這些點之線段的一維度物件。  
@@ -53,20 +53,20 @@ DECLARE @g3 geometry = 'LINESTRING(1 1, 1 1)';
   
  `@g3` 顯示 `LineString` 執行個體可被系統接受但卻無效。  
   
- 下列`LineString`不接受的執行個體。 它將擲回 `System.FormatException`。  
+ 下列`LineString`不被接受，執行個體。 它將擲回 `System.FormatException`。  
   
 ```  
 DECLARE @g geometry = 'LINESTRING(1 1)';  
 ```  
   
 ### <a name="valid-instances"></a>有效的執行個體  
- 如`LineString`有效，它必須符合下列準則的執行個體。  
+ 針對`LineString`有效，它必須符合下列準則的執行個體。  
   
-1.  `LineString`必須接受執行個體。  
+1.  `LineString`必須接受的執行個體。  
   
 2.  如果 `LineString` 執行個體不是空的，則它至少必須包含兩個相異點。  
   
-3.  `LineString`執行個體本身不得重疊兩個以上連續點的間隔上。  
+3.  `LineString`執行個體不能重疊本身兩個或多個連續點的間隔上。  
   
  下面是有效的 `LineString` 執行個體。  
   
