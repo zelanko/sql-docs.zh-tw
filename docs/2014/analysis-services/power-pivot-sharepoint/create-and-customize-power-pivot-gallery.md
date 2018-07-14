@@ -1,5 +1,5 @@
 ---
-title: 建立及自訂 PowerPivot 圖庫 |Microsoft 文件
+title: 建立及自訂 PowerPivot 圖庫 |Microsoft Docs
 ms.custom: ''
 ms.date: 09/01/2015
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: b5cd35e0-3d8f-4784-9172-93d60c730321
 caps.latest.revision: 14
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 039c5b834287d17480c9031f17ab2fed25c641fb
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 4d2e5434ae7f306b3f4a8de1d1c7356beb989b82
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36030639"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37180998"
 ---
 # <a name="create-and-customize-powerpivot-gallery"></a>建立及自訂 PowerPivot 圖庫
   PowerPivot 圖庫是一種特殊類型的 SharePoint 文件庫，針對包含 PowerPivot 資料的已發行 Excel 活頁簿和 Reporting Services 報表，提供豐富的預覽與文件管理功能。  
@@ -54,12 +54,12 @@ ms.locfileid: "36030639"
   
 -   [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 圖庫不可在受限制的網站中。 包含 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 圖庫的父網站，必須加入信任的網站或近端內部網路區域。  
   
--   必須已為您的應用程式部署 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] Web 應用程式方案，且必須已為網站集合啟用 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 功能。 如需詳細資訊，請參閱[部署至 SharePoint 的 PowerPivot 方案](deploy-power-pivot-solutions-to-sharepoint.md)和[在管理中心為網站集合啟用 PowerPivot 功能整合](activate-power-pivot-integration-for-site-collections-in-ca.md)。  
+-   必須已為您的應用程式部署 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] Web 應用程式方案，且必須已為網站集合啟用 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 功能。 如需詳細資訊，請參閱 <<c0> [ 部署 PowerPivot 方案部署到 SharePoint](deploy-power-pivot-solutions-to-sharepoint.md)並[在管理中心為網站集合啟用 PowerPivot 功能整合](activate-power-pivot-integration-for-site-collections-in-ca.md)。  
   
 -   若要檢視或建立以 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 活頁簿為基礎的 Reporting Services 報表，活頁簿和報表必須在相同的 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 圖庫中。 報表必須使用包含內嵌資料的 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 活頁簿，不然活頁簿最多只能包含一個是 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 活頁簿的外部資料來源。  
   
 ##  <a name="overview"></a> 概觀  
- [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 圖庫是一個文件庫範本，當您在 SharePoint 伺服器上安裝 [!INCLUDE[ssGeminiLong](../../includes/ssgeminilong-md.md)] 時，可以使用該圖庫。 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 圖庫結合準確的檔案內容預覽與文件來源相關事實。 您可以立即看到文件建立者以及上次修改文件的日期。 若要建立預覽影像，[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]圖庫會使用可以讀取的快照服務[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]活頁簿和 Reporting Services 報表，針對包含 PowerPivot 資料。 如果您發行快照服務無法讀取的檔案，該檔案就沒有預覽影像。  
+ [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 圖庫是一個文件庫範本，當您在 SharePoint 伺服器上安裝 [!INCLUDE[ssGeminiLong](../../includes/ssgeminilong-md.md)] 時，可以使用該圖庫。 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 圖庫結合準確的檔案內容預覽與文件來源相關事實。 您可以立即看到文件建立者以及上次修改文件的日期。 若要建立預覽圖像[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]圖庫會使用可以讀取的快照服務[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]活頁簿和 Reporting Services 報表，針對包含 PowerPivot 資料。 如果您發行快照服務無法讀取的檔案，該檔案就沒有預覽影像。  
   
  預覽圖像是以 Excel Services 轉譯活頁簿的方式為基礎。 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 圖庫中的展示方式應該與您在瀏覽器中檢視 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 活頁簿時所看到的外觀相同。 不過，預覽的介面區有限。 活頁簿或報表的部分可以修整，以便符合可用空間。 您可能需要開啟活頁簿或報表來檢視完整的文件。  
   
@@ -84,7 +84,7 @@ ms.locfileid: "36030639"
   
 3.  按一下 **[建立]**。  
   
-4.  要求伺服陣列或服務管理員將 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 圖庫新增為 Excel Service 的信任位置。 如果使用者為 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 資料重新整理設定活頁簿，就需要這個步驟以避免錯誤。 如需有關這項工作的詳細資訊，請參閱[在管理中心建立 PowerPivot 網站的信任的位置](create-a-trusted-location-for-power-pivot-sites-in-central-administration.md)。  
+4.  要求伺服陣列或服務管理員將 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 圖庫新增為 Excel Service 的信任位置。 如果使用者為 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 資料重新整理設定活頁簿，就需要這個步驟以避免錯誤。 如需有關這項工作的詳細資訊，請參閱 <<c0> [ 在管理中心建立 PowerPivot 網站的信任的位置](create-a-trusted-location-for-power-pivot-sites-in-central-administration.md)。  
   
  [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 圖庫文件庫的連結會出現在目前網站的導覽 [快速啟動] 窗格中。  
   

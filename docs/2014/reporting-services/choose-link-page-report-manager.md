@@ -1,5 +1,5 @@
 ---
-title: 選擇連結頁面 （報表管理員） |Microsoft 文件
+title: 選擇連結頁面 （報表管理員） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: a89a555d-efa3-45d6-951e-db78ec6a2c8e
 caps.latest.revision: 22
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: ec09219d146affcceda8194c8e7a60d8e128ef12
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: a6ae425405db24ca56f00dff7952ee0e7b4d1623
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36023058"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37242278"
 ---
 # <a name="choose-link-page-report-manager"></a>選擇連結頁面 (報表管理員)
   使用 [選擇連結] 頁面來選擇不同的報表，作為目前已選取連結報表的基礎。 連結報表以已經發行至報表伺服器的其他報表為基礎。 連結報表會使用基底報表的配置和資料，但是具有個別的屬性頁面，可讓您自訂參數屬性、安全性設定、名稱、描述和位置。  

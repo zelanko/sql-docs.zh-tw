@@ -1,5 +1,5 @@
 ---
-title: 第 2 課： 清理供應商資料使用供應商知識庫 |Microsoft 文件
+title: 第 2 課： 使用來清理供應商資料供應商知識庫 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -10,29 +10,29 @@ ms.technology:
 - integration-services
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 215c14de-fc3f-46de-a022-bf69b9ea2a96
 caps.latest.revision: 7
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 1b4c227ff846649e29b7efc0ad50e4b13416c48c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 5708dfe72d3eaa745d1ffefd88147b3e72b7c46c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36029965"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37191218"
 ---
 # <a name="lesson-2-cleansing-supplier-data-using-the-suppliers-knowledge-base"></a>第 2 課：使用供應商知識庫清理供應商資料
-  在這一課，您要清理 Excel 檔案中的供應商資料使用**供應商**您已經在第 1 課建立的知識庫。 在 DQS 中清理資料包括**電腦輔助的程序**，以分析資料符合知識庫中的知識，以及**互動式處理序**，可讓您檢閱並修改電腦輔助的程序的結果。 資料清理功能會識別資料來源中不正確的資料，然後針對不正確的資料進行更正或建議更正。 它也會使用定義域值、同義字的前置值、定義域規則、以詞彙為主的關聯及參考資料來標準化及豐富客戶資料。 您可以用互動方式核准或拒絕電腦輔助程序所提議的變更。 請參閱[資料清理](http://msdn.microsoft.com/library/gg524800.aspx)如需詳細資訊。  
+  您可以在這一課中，清理 Excel 檔案中的供應商資料來使用**供應商**您在第 1 課中建立的知識庫。 DQS 中的資料清理包含**電腦輔助的程序**，以分析資料符合知識庫中的知識，以及**互動式處理序**，可讓您檢閱並修改電腦輔助的程序的結果。 資料清理功能會識別資料來源中不正確的資料，然後針對不正確的資料進行更正或建議更正。 它也會使用定義域值、同義字的前置值、定義域規則、以詞彙為主的關聯及參考資料來標準化及豐富客戶資料。 您可以用互動方式核准或拒絕電腦輔助程序所提議的變更。 請參閱[資料清理](http://msdn.microsoft.com/library/gg524800.aspx)如需詳細資訊。  
   
  電腦輔助程序會使用以下的臨界值，您可以在 DQS 用戶端主頁面上使用 [組態] 選項設定此值。  
   
 -   **建議的最低分數：** 的最低分數或信賴等級，可由 DQS 為了建議替換某個值。  
   
--   **自動更正的最低分數：** 的最低分數或信賴等級 DQS 用來自動更正某個值。  
+-   **自動更正的最低分數：** 的最低分數或信賴等級，可由 DQS 來自動更正某個值。  
   
- 請參閱[Configure Threshold Values for Cleansing and Matching](http://msdn.microsoft.com/library/hh510415.aspx)如需如何設定這些設定的詳細資訊。  
+ 請參閱[設定清理和比對的臨界值](http://msdn.microsoft.com/library/hh510415.aspx)如需有關如何設定這些設定。  
   
  在這一課，您會使用供應商知識庫來執行下列工作，以清理輸入資料。  
   
@@ -49,6 +49,6 @@ ms.locfileid: "36029965"
 6.  將清理專案的值匯入到定義域，以新的規則、值、更正等內容來增強知識庫中的知識。  
   
 ## <a name="next-step"></a>下一個步驟  
- [工作 1： 建立資料品質專案](../../2014/tutorials/task-1-creating-a-data-quality-project.md)  
+ [工作 1：建立資料品質專案](../../2014/tutorials/task-1-creating-a-data-quality-project.md)  
   
   

@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - denying My Reports folder access
 - private folders [Reporting Services]
@@ -19,13 +19,13 @@ ms.assetid: 3b23a382-13b8-4196-9a93-7fe62d03a63c
 caps.latest.revision: 32
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 2db8163ff6f2ff380c475b89095724a1d38e6c2c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 959706458a4b529252d8a45c80aae99f377b9531
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36023254"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37238308"
 ---
 # <a name="secure-my-reports"></a>保護我的報表
   [我的報表] 功能會提供用於報表之使用者管理的工作空間。 為達成其目的，[我的報表] 資料夾的權限，應較一般用途的其他資料夾為寬鬆。 使用者如果只有檢視及執行其他資料夾中之報表的權限，則需要一組擴充的權限來管理其 [我的報表] 資料夾和擁有的內容。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 提供此用途的特殊角色指派及角色定義。  
@@ -52,7 +52,7 @@ ms.locfileid: "36023254"
 ## <a name="denying-access-to-my-reports"></a>拒絕存取 [我的報表]  
  您可以禁止使用者存取 [我的報表]，方法是：  
   
--   在 [站台設定] 頁面上停用 [我的報表]。 如需詳細資訊，請參閱[啟用和停用 我的報表](../report-server/enable-and-disable-my-reports.md)。  
+-   在 [站台設定] 頁面上停用 [我的報表]。 如需詳細資訊，請參閱 <<c0> [ 啟用和停用我的報表](../report-server/enable-and-disable-my-reports.md)。  
   
 -   移除 **我的報表** 角色中的所有工作。  
   

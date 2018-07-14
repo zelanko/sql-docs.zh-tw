@@ -1,5 +1,5 @@
 ---
-title: DISCOVER_SCHEMA_ROWSETS 資料列集 |Microsoft 文件
+title: DISCOVER_SCHEMA_ROWSETS 資料列集 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -18,27 +18,27 @@ helpviewer_keywords:
 - DISCOVER_SCHEMA_ROWSETS rowset
 ms.assetid: e5012aa0-6ef8-497f-96c1-2772e2394f62
 caps.latest.revision: 33
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: e8071da248e9c7d69a76a22f7c339fad0a217295
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: fa16f7ff677efd8e39367b9e618bdc95d778b405
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36024069"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37220238"
 ---
 # <a name="discoverschemarowsets-rowset"></a>DISCOVER_SCHEMA_ROWSETS 資料列集
   傳回 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] XML for Analysis (XMLA) 提供者所支援之所有列舉值 (Enumeration Value) 以及任何其他的提供者特定列舉值的名稱、限制、描述和其他資訊。  
   
- 如果您呼叫[探索](../../xmla/xml-elements-methods-discover.md)方法`DISCOVER_SCHEMA_ROWSETS`中的列舉值[RequestType](../../xmla/xml-elements-properties/type-element-xmla.md)項目，`Discover`方法會傳回`DISCOVER_SCHEMA_ROWSETS`資料列集。  
+ 如果您呼叫[Discover](../../xmla/xml-elements-methods-discover.md)方法`DISCOVER_SCHEMA_ROWSETS`中的列舉值[RequestType](../../xmla/xml-elements-properties/type-element-xmla.md)項目`Discover`方法會傳回`DISCOVER_SCHEMA_ROWSETS`資料列集。  
   
 ## <a name="rowset-columns"></a>資料列集資料行  
  DISCOVER_SCHEMA_ROWSETS 資料列集包含下列資料行。  
   
 |資料行名稱|類型指標|長度|描述|  
 |-----------------|--------------------|------------|-----------------|  
-|`SchemaName`|`DBTYPE_WSTR`||結構描述或要求的名稱。 此要求會傳回中的值*RequestTypes*列舉型別。|  
+|`SchemaName`|`DBTYPE_WSTR`||結構描述或要求的名稱。 此要求會傳回值*RequestTypes*列舉型別。|  
 |`SchemaGuid`|`DBTYPE_GUID`||結構描述的 GUID。|  
 |`Restrictions`|`DBTYPE_HCHAPTER`||提供者所支援的限制陣列。|  
 |`Description`|`DBTYPE_WSTR`||結構描述的可當地語系化描述。|  

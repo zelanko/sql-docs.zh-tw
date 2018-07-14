@@ -5,10 +5,9 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-search
+ms.technology: search
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - languages [full-text search]
 - full-text indexes [SQL Server], languages
@@ -20,15 +19,15 @@ helpviewer_keywords:
 - word breakers [full-text search]
 ms.assetid: 670a5181-ab80-436a-be96-d9498fbe2c09
 caps.latest.revision: 48
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 7d6f87d5916bcda7db3ff52fcca222d2c3f21816
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 3ce5d56ec84c1dcf33e3a915a8fa8bf94b1cdced
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36023352"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37268674"
 ---
 # <a name="choose-a-language-when-creating-a-full-text-index"></a>選擇建立全文檢索索引時的語言
   建立全文檢索索引時，您必須針對索引資料行指定資料行層級語言。 此資料行的全文檢索查詢將會使用指定之語言的 [斷詞工具與詞幹分析器](configure-and-manage-word-breakers-and-stemmers-for-search.md) 。 在建立全文檢索索引並選擇資料行語言時，必須考慮一些事項。 這些考量與文字如何 Token 化，然後如何由全文檢索引擎編製索引有關。  
@@ -53,7 +52,7 @@ ms.locfileid: "36023352"
   
 -   Security  
   
-     依預設會啟用新的斷詞工具[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]這點受惠於語言元件的安全性改善。 我們強烈建議您應該簽署外部元件 (例如，斷詞工具和篩選)，以便改善 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的整體安全性和健全性。 您可以設定全文檢索來確認這些元件是否已簽署，方法如下所示：  
+     在預設會啟用新的斷詞工具[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]這點受惠於語言元件的安全性改善。 我們強烈建議您應該簽署外部元件 (例如，斷詞工具和篩選)，以便改善 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的整體安全性和健全性。 您可以設定全文檢索來確認這些元件是否已簽署，方法如下所示：  
   
     ```  
     EXEC sp_fulltext_service 'verify_signature';  
@@ -63,9 +62,9 @@ ms.locfileid: "36023352"
   
      斷詞工具已經重新設計過，而且經測試顯示，新的斷詞工具會比先前的斷詞工具提供較佳的語意品質。 這會增加重新叫用精確度。  
   
--   如需 vast 的語言清單的涵蓋範圍，斷詞工具隨附的[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]方塊的資料，並預設會啟用。  
+-   如需 vast 的語言清單的涵蓋範圍，斷詞工具包含在[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]的方塊，而且預設已啟用。  
   
- 如需語言的清單[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]包括斷詞工具和字幹分析器，請參閱[sys.fulltext_languages &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-fulltext-languages-transact-sql)。  
+ 如需語言的清單[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]包括斷詞工具和字幹分析器，請參閱 < [sys.fulltext_languages &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-fulltext-languages-transact-sql)。  
   
 
   
@@ -73,7 +72,7 @@ ms.locfileid: "36023352"
  建立全文檢索索引時，您必須針對每個資料行指定有效的語言名稱。 如果某個語言名稱有效，但是 [sys.fulltext_languages &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-fulltext-languages-transact-sql) 目錄檢視並未傳回該語言名稱，全文檢索搜尋就會尋求相同語系中最接近的可用語言名稱 (如果有的話)。 否則，全文檢索搜尋會尋求中性斷詞工具。 這種尋求的行為可能會影響重新叫用精確度。 因此，在建立全文檢索索引時，我們強烈建議您針對每個資料行指定有效且可用的語言名稱。  
   
 > [!NOTE]  
->  系統會針對適用於全文檢索索引的所有資料類型 (例如 `char` 或 `nchar`) 使用 LCID。 如果您有的排序次序`char`， `varchar`，或`text`類型資料行集從 LCID、 LCID 所識別之語言不同的語言設定，系統仍然會使用在全文檢索索引和查詢這些資料行。  
+>  系統會針對適用於全文檢索索引的所有資料類型 (例如 `char` 或 `nchar`) 使用 LCID。 如果您有的排序次序`char`， `varchar`，或`text`類型資料行設定為與 LCID、 LCID 所識別之語言不同的語言設定仍然會使用在全文檢索索引和查詢這些資料行。  
   
 
   
@@ -100,7 +99,7 @@ ms.locfileid: "36023352"
   
 -   純文字內容  
   
-     當您的內容是純文字時，您可以將它轉換成`xml`資料類型，並加入語言標記，以便表示對應至每份特定文件或文件區段的語言。 不過，若要讓此解決方法有用，您必須在建立全文檢索索引之前，了解所使用的語言。  
+     當您的內容是純文字時，您可以將它轉換成`xml`資料類型，並加入語言標記，以便表示對應至每個特定的文件或文件區段的語言。 不過，若要讓此解決方法有用，您必須在建立全文檢索索引之前，了解所使用的語言。  
   
 
   
@@ -110,7 +109,7 @@ ms.locfileid: "36023352"
 
   
 ##  <a name="type"></a> 資料行類型對全文檢索搜尋的影響  
- 選擇語言時的另一個考量與呈現資料的方式有關。 資料，不會儲存在`varbinary(max)`資料行，沒有特殊的篩選會執行。 相反地，文字可以其原始格式傳送，而不會受限於文字分隔元件。  
+ 選擇語言時的另一個考量與呈現資料的方式有關。 資料，不會儲存在`varbinary(max)`資料行中，沒有特殊的篩選會執行。 相反地，文字可以其原始格式傳送，而不會受限於文字分隔元件。  
   
  此外，斷詞工具主要設計成處理一般撰寫內容。 所以，如果您的文字上有任何類型的標記 (如 HTML)，則在編製索引和搜尋語言時可能會不夠精確。 對於這種情況您有兩種選擇，一般偏好的方法是將文字資料儲存在 `varbinary(max)` 資料行中，然後指示其文件類型以進行篩選。 如果不使用這個選項，您可以考慮使用中性斷詞工具，而且若可行的話，請將標記資料 (例如 HTML 中的 'br') 加入至非搜尋字清單。  
   

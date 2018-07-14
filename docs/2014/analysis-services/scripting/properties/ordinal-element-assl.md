@@ -1,5 +1,5 @@
 ---
-title: Ordinal 元素 (ASSL) |Microsoft 文件
+title: Ordinal 元素 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - Ordinal element
 ms.assetid: 64e68ad5-439c-4c1d-9df4-ee90c56761b4
 caps.latest.revision: 31
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 9c9328a33db828af8bb7b0b129574d8ba855433e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 91119d5eb5107dd691141c03a24cef7140999094
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36029891"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37195938"
 ---
 # <a name="ordinal-element-assl"></a>Ordinal 元素 (ASSL)
   指出索引鍵和翻譯等集合中要繫結的目標序號。  
@@ -62,9 +62,9 @@ ms.locfileid: "36029891"
 |子元素|無|  
   
 ## <a name="remarks"></a>備註  
- `AttributeBinding` 和`CubeAttributeBinding`所在的項目[類型](type-element-binding-assl.md)屬性會設為*金鑰*或*轉譯*可以繫結會接著繫結至集合的屬性資料行在資料來源檢視。 `Ordinal` 元素的值會決定 `AttributeBinding` 或 `CubeAttributeBinding` 在該集合中所參考的資料行。  
+ `AttributeBinding` 並`CubeAttributeBinding`所在的項目[型別](type-element-binding-assl.md)屬性會設為*金鑰*或*轉譯*可以繫結至屬性接著會繫結至的集合資料行中的資料來源檢視。 `Ordinal` 元素的值會決定 `AttributeBinding` 或 `CubeAttributeBinding` 在該集合中所參考的資料行。  
   
- 對應至父系的項目`Ordinal`在 「 分析管理物件 (AMO) 物件模型是<xref:Microsoft.AnalysisServices.AttributeBinding>和<xref:Microsoft.AnalysisServices.CubeAttributeBinding>。  
+ 對應至父系的元素`Ordinal`在 「 分析管理物件 (AMO) 物件模型所<xref:Microsoft.AnalysisServices.AttributeBinding>和<xref:Microsoft.AnalysisServices.CubeAttributeBinding>。  
   
 ## <a name="see-also"></a>另請參閱  
  [屬性&#40;ASSL&#41;](properties-assl.md)  

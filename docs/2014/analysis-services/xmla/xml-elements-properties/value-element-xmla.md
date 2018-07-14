@@ -1,5 +1,5 @@
 ---
-title: 值元素 (XMLA) |Microsoft 文件
+title: 值元素 (XMLA) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -24,18 +24,18 @@ helpviewer_keywords:
 - Value element
 ms.assetid: f87ca7f8-d9fe-4730-a706-5d50fcfe21df
 caps.latest.revision: 14
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: 7a422298e8d1b77f3d036b4cea5761dc6dc6dde4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 8defb7fe2115bd1ea9ccb7b3f23b0717db8b9aef
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36023402"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37263246"
 ---
 # <a name="value-element-xmla"></a>Value 元素 (XMLA)
-  包含所需的值的[屬性](attribute-element-xmla.md)要新增的項目[插入](../xml-elements-commands/insert-element-xmla.md)命令，或[儲存格](cell-element-xmla.md)更新的項目[UpdateCells](../xml-elements-commands/updatecells-element-xmla.md)命令。  
+  包含的所需的值[屬性](attribute-element-xmla.md)要加入的項目[插入](../xml-elements-commands/insert-element-xmla.md)命令，或有[儲存格](cell-element-xmla.md)更新的項目[UpdateCells](../xml-elements-commands/updatecells-element-xmla.md)命令。  
   
 ## <a name="syntax"></a>語法  
   
@@ -64,7 +64,7 @@ ms.locfileid: "36023402"
 |子元素|無|  
   
 ## <a name="remarks"></a>備註  
- 若為 `Attribute` 元素，`Value` 元素會包含認可 `Insert` 命令之後此成員應該包含的所需值。 如需有關插入成員的詳細資訊，請參閱[插入、 更新和卸除成員&#40;XMLA&#41;](../../multidimensional-models-scripting-language-assl-xmla/inserting-updating-and-dropping-members-xmla.md)。  
+ 若為 `Attribute` 元素，`Value` 元素會包含認可 `Insert` 命令之後此成員應該包含的所需值。 如需有關插入成員的詳細資訊，請參閱 <<c0> [ 插入、 更新和卸除成員&#40;XMLA&#41;](../../multidimensional-models-scripting-language-assl-xmla/inserting-updating-and-dropping-members-xmla.md)。</c0>  
   
  若為 `Cell` 元素，`Value` 元素會包含認可 `UpdateCells` 命令之後此資料格應該包含的所需值。 針對該資料格儲存於回寫資料表中的實際值就是資料格之原始值與資料格之所需值之間的差異。  
   

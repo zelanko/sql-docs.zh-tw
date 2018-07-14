@@ -1,5 +1,5 @@
 ---
-title: 以文字為基礎的查詢設計工具使用者介面 |Microsoft 文件
+title: 以文字為基礎的查詢設計工具使用者介面 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - "10010"
 - sql12.rtp.rptdesigner.dataview.genericquerydesigner.f1
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - query designers [Reporting Services], text-based
 ms.assetid: 44b7c664-03aa-494e-a484-052b318e810c
 caps.latest.revision: 25
-author: douglaslM
+author: maggiesmsft
 ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 9e7fa6d6f2d3ae55d6a01ffdfcaa541e1d29e34c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 4e24396a7b851bf3e210bd31318f52b757f15a46
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36030717"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37177085"
 ---
 # <a name="text-based-query-designer-user-interface"></a>以文字為基礎的查詢設計工具使用者介面
   使用以文字為基礎的查詢設計工具，可透過資料來源支援的查詢語言來指定查詢、執行查詢，並在設計階段檢視結果。 您可以指定多個 [!INCLUDE[tsql](../includes/tsql-md.md)] 陳述式、自訂資料處理延伸模組的查詢或命令語法，以及指定為運算式的查詢。 以文字為基礎的查詢設計工具不會前置處理查詢，而且可以容納各種查詢語法，所以這是許多資料來源類型的預設查詢設計工具。  
@@ -44,7 +44,7 @@ ms.locfileid: "36030717"
 |**當成文字編輯**|在以文字為基礎的查詢設計工具和圖形化查詢設計工具之間切換。 並非所有的資料來源類型都支援圖形化查詢設計工具。|  
 |**匯入**|從檔案或報表匯入現有的查詢。 只支援 sql 和 rdl 檔案類型。 如需詳細資訊，請參閱 [報表內嵌資料集和共用資料集 &#40;報表產生器及 SSRS&#41;](report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)。|  
 |![執行查詢](../analysis-services/media/rsqdicon-run.gif "執行查詢")|執行查詢，並將結果集顯示在 [結果] 窗格中。|  
-|**命令類型**|選取 [Text]、[StoredProcedure] 或 [TableDirect]。 如果預存程序含有參數，當您按一下工具列上的 [執行] 時，便會顯示 [定義查詢參數] 對話方塊，您可以依照需要填入值。 請注意，是否預存程序傳回一個以上的結果集，只會將第一個結果集會用來填入資料集。<br /><br /> 對於命令類型的支援會依資料來源類型而有所不同。 例如，只有 OLE DB 和 ODBC 支援 [TableDirect]。|  
+|**命令類型**|選取 [Text]、[StoredProcedure] 或 [TableDirect]。 如果預存程序含有參數，當您按一下工具列上的 [執行] 時，便會顯示 [定義查詢參數] 對話方塊，您可以依照需要填入值。 請注意是否預存程序傳回一個以上的結果集，第一個結果集用來填入資料集。<br /><br /> 對於命令類型的支援會依資料來源類型而有所不同。 例如，只有 OLE DB 和 ODBC 支援 [TableDirect]。|  
   
 ### <a name="command-type-text"></a>Text 命令類型  
  當您建立 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 資料集時，報表設計師預設會顯示圖形化查詢設計工具。 若要切換到文字型查詢設計工具，請按一下工具列上的 [當成文字編輯] 切換按鈕。 以文字為基礎的查詢設計工具會顯示兩個窗格：[查詢] 窗格和 [結果] 窗格。 下圖會標示出各個窗格。  
@@ -91,14 +91,14 @@ uspGetEmployeeManagers;
   
  `Sales.Customer`  
   
- 當您輸入資料表名稱 Sales.Customer 時，它就相當於建立[!INCLUDE[tsql](../includes/tsql-md.md)]陳述式`SELECT * FROM Sales.Customer;`。  
+ 當您輸入資料表名稱 Sales.Customer 時，就等於建立[!INCLUDE[tsql](../includes/tsql-md.md)]陳述式`SELECT * FROM Sales.Customer;`。  
   
 ## <a name="see-also"></a>另請參閱  
- [查詢設計工具的報表設計工具的 SQL Server Data Tools &#40;SSRS&#41;](report-data/query-design-tools-ssrs.md)   
+ [查詢設計工具，在報表設計工具的 SQL Server Data Tools &#40;SSRS&#41;](report-data/query-design-tools-ssrs.md)   
  [報表內嵌資料集和共用資料集 &#40;報表產生器及 SSRS&#41;](report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)   
  [SQL Server 連接類型 &#40;SSRS&#41;](report-data/sql-server-connection-type-ssrs.md)   
  [OLE DB 連線類型 &#40;SSRS&#41;](report-data/ole-db-connection-type-ssrs.md)   
- [ODBC 連接類型&#40;SSRS&#41;](report-data/odbc-connection-type-ssrs.md)   
+ [ODBC 連線類型&#40;SSRS&#41;](report-data/odbc-connection-type-ssrs.md)   
  [報表內嵌資料集和共用資料集 &#40;報表產生器及 SSRS&#41;](report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)   
  [RSReportDesigner 設定檔](report-server/rsreportdesigner-configuration-file.md)  
   

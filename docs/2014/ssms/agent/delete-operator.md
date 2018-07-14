@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.ag.operator.delete.f1
 ms.assetid: 68402a69-24c4-4304-a1db-7409c42c51dc
 caps.latest.revision: 17
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 20c4d6a07c18468cb333f0a4ffa44b2044d7b577
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: c3b13c861fa5f2e50bec14dda10ead394cb05dc0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36024119"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37222568"
 ---
 # <a name="delete-operator"></a>刪除操作員
   使用此頁面來刪除操作員。  

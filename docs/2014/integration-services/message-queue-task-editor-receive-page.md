@@ -1,5 +1,5 @@
 ---
-title: 訊息佇列工作編輯器 （接收頁面） |Microsoft 文件
+title: 訊息佇列工作編輯器 （接收頁面） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.msgqueuetask.receive.f1
 helpviewer_keywords:
 - Message Queue Task Editor
 ms.assetid: 7028756d-1dcc-480c-bbcd-e9654f0772a0
 caps.latest.revision: 29
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 458b1ddb5453a65dbfd96a9231f18b0ea81f507c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 384d15668d835db7d75f9e612595d00d83f41da4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36023377"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37256824"
 ---
 # <a name="message-queue-task-editor-receive-page"></a>訊息佇列工作編輯器 (接收頁面)
   使用 [訊息佇列工作編輯器] 對話方塊的 [接收] 頁面，即可設定訊息佇列工作，以接收 [!INCLUDE[msCoName](../includes/msconame-md.md)] Message Queuing (MSMQ) 訊息。  
@@ -43,7 +43,7 @@ ms.locfileid: "36023377"
  **MessageType**  
  選取訊息類型。 這個屬性具有下表中所列的選項。  
   
-|ReplTest1|描述|  
+|值|描述|  
 |-----------|-----------------|  
 |**資料檔訊息**|訊息儲存在檔案中。 選取此值會顯示動態選項 **[DataFileMessage]**。|  
 |**變數訊息**|訊息儲存在變數中。 選取此值會顯示動態選項 **[VariableMessage]**。|  
@@ -62,7 +62,7 @@ ms.locfileid: "36023377"
  **篩選**  
  指定是否要將篩選套用至訊息。 這個屬性具有下表中所列的選項。  
   
-|ReplTest1|描述|  
+|值|描述|  
 |-----------|-----------------|  
 |**沒有篩選**|工作不會篩選訊息。 選取此值會顯示動態選項 **IdentifierReadOnly**。|  
 |**來自封裝**|訊息只接收來自指定之封裝的訊息。 選取此值會顯示動態選項 **識別碼**＞。|  
@@ -83,7 +83,7 @@ ms.locfileid: "36023377"
  **篩選**  
  指定是否要將篩選套用至訊息。 這個屬性具有下表中所列的選項。  
   
-|ReplTest1|描述|  
+|值|描述|  
 |-----------|-----------------|  
 |**沒有篩選**|工作不會篩選訊息。 選取此值會顯示動態選項 **IdentifierReadOnly**。|  
 |**來自封裝**|訊息只接收來自指定之封裝的訊息。 選取此值會顯示動態選項 **識別碼**＞。|  
@@ -109,7 +109,7 @@ ms.locfileid: "36023377"
  **比較**  
  指定是否要將篩選套用至訊息。 這個屬性具有下表中所列的選項。  
   
-|ReplTest1|描述|  
+|值|描述|  
 |-----------|-----------------|  
 |**無**|不會比較訊息。|  
 |**完全相符**|訊息必須與 **CompareString** 選項中的字串完全相符。|  
@@ -123,7 +123,7 @@ ms.locfileid: "36023377"
  **比較**  
  指定是否要將篩選套用至訊息。 這個屬性具有下表中所列的選項。  
   
-|ReplTest1|描述|  
+|值|描述|  
 |-----------|-----------------|  
 |**無**|不會比較訊息。|  
 |**完全相符**|訊息必須與 **CompareString** 選項中的字串完全相符。|  
@@ -140,7 +140,7 @@ ms.locfileid: "36023377"
   
 ## <a name="see-also"></a>另請參閱  
  [Integration Services 錯誤和訊息參考](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [訊息佇列工作編輯器&#40;[一般] 頁面&#41;](general-page-of-integration-services-designers-options.md)   
+ [訊息佇列工作編輯器&#40;一般頁面&#41;](general-page-of-integration-services-designers-options.md)   
  [訊息佇列工作編輯器&#40;傳送頁面&#41;](../../2014/integration-services/message-queue-task-editor-send-page.md)   
  [運算式頁面](expressions/expressions-page.md)   
  [訊息佇列工作](control-flow/message-queue-task.md)  

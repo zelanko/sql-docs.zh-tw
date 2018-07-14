@@ -1,14 +1,13 @@
 ---
-title: 全文檢索停用字詞表屬性 |Microsoft 文件
+title: 全文檢索停用字詞表屬性 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-search
+ms.technology: search
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.fulltextsearch.ftstoplistproperties.general.f1
 - sql12.swb.fulltextsearch.ftstoplistproperties.schedule.f1
@@ -16,13 +15,13 @@ ms.assetid: 2e907f5b-0cf9-484a-afcf-a4e7f1e2f87f
 caps.latest.revision: 19
 author: craigg-msft
 ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 1b052e1987c120bb621da34c6f56d915333baf83
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 3802396c3b2ff6d64aa439af07e7dba2f9b30c60
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36023186"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37241288"
 ---
 # <a name="full-text-stoplist-properties"></a>全文檢索停用字詞表屬性
   使用此對話方塊可加入或刪除個別停用字詞、刪除特定語言的所有停用字詞，或是清除目前的停用字詞表。 停用字詞是停用字詞表內所包含的常用字。 使用某停用字詞表之資料表的全文檢索索引中會省略該停用字詞表內的停用字詞。 如需詳細資訊，請參閱 [設定及管理全文檢索搜尋的停用字詞與停用字詞表](../relational-databases/search/full-text-search.md)。  

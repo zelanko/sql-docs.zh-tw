@@ -1,5 +1,5 @@
 ---
-title: 計算工具 （Kpi 索引標籤，Cube 設計工具） (Analysis Services-多維度資料) |Microsoft 文件
+title: 計算工具 （Kpi 索引標籤，Cube 設計師） (Analysis Services-多維度資料) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.cubeeditor.kpisview.calculationtoolspane.f1
 ms.assetid: c030c725-7763-4c23-9988-4b274a88fc31
 caps.latest.revision: 24
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: c03f8506de2a1f0744fcc9fcebd025443ffafaa4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 7b0602c765368e96cc97f47591e372c4bdec8427
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36023448"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37228328"
 ---
 # <a name="calculation-tools-kpis-tab-cube-designer-analysis-services---multidimensional-data"></a>計算工具 (KPI 索引標籤，Cube 設計師) (Analysis Services - 多維度資料)
   使用 [Cube 設計師] 中之 [KPI] 索引標籤上的 [計算工具] 窗格，即可瀏覽在關鍵效能指標 (KPI) 中可以使用的中繼資料、函數以及範本。  
@@ -77,7 +77,7 @@ ms.locfileid: "36023448"
   
 ## <a name="see-also"></a>另請參閱  
  [Cube 設計師&#40;Analysis Services-多維度資料&#41;](cube-designer-analysis-services-multidimensional-data.md)   
- [Kpi &#40;Cube 設計師&#41; &#40;Analysis Services-多維度資料&#41;](kpis-cube-designer-analysis-services-multidimensional-data.md)   
+ [Kpi &#40;Cube 設計工具&#41; &#40;Analysis Services-多維度資料&#41;](kpis-cube-designer-analysis-services-multidimensional-data.md)   
  [工具列&#40;Kpi 索引標籤，Cube 設計工具&#41; &#40;Analysis Services-多維度資料&#41;](toolbar-kpis-tab-cube-designer-analysis-services-multidimensional-data.md)   
  [KPI 組合管理 &#40;Kpi 索引標籤，Cube 設計工具&#41; &#40;Analysis Services-多維度資料&#41;](kpi-organizer-kpis-tab-cube-designer-analysis-services-multidimensional-data.md)   
  [KPI 表單編輯器&#40;Kpi 索引標籤，Cube 設計工具&#41; &#40;Analysis Services-多維度資料&#41;](kpi-form-editor-kpis-tab-cube-designer-analysis-services-multidimensional-data.md)   
