@@ -1,5 +1,5 @@
 ---
-title: ObjectDefinition 元素 (XMLA) |Microsoft 文件
+title: ObjectDefinition 元素 (XMLA) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -24,15 +24,15 @@ helpviewer_keywords:
 - ObjectDefinition element
 ms.assetid: 1911868c-a018-4308-8cf9-972a57f610a1
 caps.latest.revision: 13
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: be9a1f234382fff074fe3ee37ebbabf4d6f226f2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 3c4fe23e2f77dd28823094cf6a77067d9365e6ac
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36031706"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37190788"
 ---
 # <a name="objectdefinition-element-xmla"></a>ObjectDefinition 元素 (XMLA)
   包含一或多個 Analysis Services 指令碼語言 (ASSL) 元素，用來建立或更改物件的執行個體上[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]。  
@@ -63,7 +63,7 @@ ms.locfileid: "36031706"
 |關聯性|元素|  
 |------------------|-------------|  
 |父元素|[Alter](../xml-elements-commands/alter-element-xmla.md)，[建立](../xml-elements-commands/create-element-xmla.md)|  
-|子元素|必要的 ASSL 元素。 一個或多個可用來定義 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 物件的 ASSL 元素。 如需有關 ASSL 的詳細資訊，請參閱[屬性&#40;XMLA&#41;](xml-elements-properties.md)。|  
+|子元素|必要的 ASSL 元素。 一個或多個可用來定義 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 物件的 ASSL 元素。 如需有關 ASSL 的詳細資訊，請參閱 <<c0> [ 屬性&#40;XMLA&#41;](xml-elements-properties.md)。</c0>|  
   
 ## <a name="remarks"></a>備註  
   

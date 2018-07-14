@@ -1,5 +1,5 @@
 ---
-title: 選擇精確度圖表類型及設定圖表選項 |Microsoft 文件
+title: 選擇精確度圖表類型及設定圖表選項 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Mining Accuracy Chart [Analysis Services]
 - mining models [Analysis Services], validating
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - accuracy testing [data mining]
 ms.assetid: bd24dd4a-624f-478a-9c94-b1361e857680
 caps.latest.revision: 23
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: c2dd0f224768be03d88e8943e06b18255a499da2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 8fba2dd5892bacafa690d2ac571ddfb84a5359db
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36023899"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37282374"
 ---
 # <a name="choose-an-accuracy-chart-type-and-set-chart-options"></a>選擇精確度圖表類型及設定圖表選項
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 提供多種方法來判斷採礦模型的有效性。 您可以為每一個模型或結構建立之精確度圖表的類型取決於以下因素：  

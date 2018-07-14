@@ -1,5 +1,5 @@
 ---
-title: 檢查使用中的檔案 |Microsoft 文件
+title: 檢查使用中的檔案 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: ccd65867-d4c0-43b2-8361-7fd41c6f79ac
 caps.latest.revision: 10
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 26b0f9598aa04afc9afebc90a571c999ce653821
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 32e2152d93cc49309b6824462f5d413d59d30daf
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36023928"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37242308"
 ---
 # <a name="check-files-in-use"></a>檢查使用中的檔案
   若要避免在安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 更新之後重新啟動 Windows，請使用 [檢查使用中檔案] 頁面來識別正在鎖定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 更新安裝程式所需之檔案的處理序。  
@@ -48,7 +48,7 @@ ms.locfileid: "36023928"
   
 ## <a name="uielement-list"></a>UIElement 清單  
   
-|[屬性]|描述|  
+|名稱|描述|  
 |----------|-----------------|  
 |處理|顯示正在使用要更新之檔案的處理序完整名稱。|  
 |類型|顯示處理序的類型。|  

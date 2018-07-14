@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - collections [Master Data Services]
 - collections [Master Data Services], about collections
 ms.assetid: 5aa1d1e0-b4e5-4897-8e74-01dcf418df73
 caps.latest.revision: 9
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 89f5f5b51bbba9ae7629d5c6dd889ad8ac8bf81b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: 09f40b94ef25384fb36223964d77afacf98ea9ed
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36031043"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37184686"
 ---
 # <a name="collections-master-data-services"></a>集合 (Master Data Services)
   集合是一組來自單一實體的分葉成員和合併成員。 當您不需要完整的階層，而且想要檢視成員的不同群組進行報告或分析時，或當您不需要建立分類時，請使用集合。  
@@ -37,10 +37,10 @@ ms.locfileid: "36031043"
  當您建立集合時，您會自動列為擁有者。 如果您是管理員，可以視需要建立集合的其他屬性。  
   
 > [!NOTE]  
->  在您可以建立集合之前，實體必須啟用明確階層。 如需詳細資訊，請參閱[啟用實體的明確階層和集合&#40;Master Data Services&#41;](enable-an-entity-for-explicit-hierarchies-and-collections-master-data-services.md)。  
+>  在您可以建立集合之前，實體必須啟用明確階層。 如需詳細資訊，請參閱 <<c0> [ 啟用明確階層和集合的實體&#40;Master Data Services&#41;](enable-an-entity-for-explicit-hierarchies-and-collections-master-data-services.md)。</c0>  
   
 ## <a name="subscription-views-for-collections"></a>集合的訂閱檢視  
- 顯示集合的訂閱檢視有兩種。 [集合屬性] 格式會顯示集合的清單，以及與集合相關的任何屬性 (如描述或擁有者)。 [集合] 格式會顯示所有集合中的所有成員，以及每個成員加權和排序次序。 如需詳細資訊，請參閱[匯出資料&#40;Master Data Services&#41;](overview-exporting-data-master-data-services.md)。  
+ 顯示集合的訂閱檢視有兩種。 [集合屬性] 格式會顯示集合的清單，以及與集合相關的任何屬性 (如描述或擁有者)。 [集合] 格式會顯示所有集合中的所有成員，以及每個成員加權和排序次序。 如需詳細資訊，請參閱 <<c0> [ 匯出的資料&#40;Master Data Services&#41;](overview-exporting-data-master-data-services.md)。</c0>  
   
  如果您為某個集合中的特定成員設定加權值，這些值則可以在相關的訂閱檢視中使用。  
   
@@ -56,6 +56,6 @@ ms.locfileid: "36031043"
   
 -   [明確階層&#40;Master Data Services&#41;](../../2014/master-data-services/explicit-hierarchies-master-data-services.md)  
   
--   [匯出資料&#40;Master Data Services&#41;](overview-exporting-data-master-data-services.md)  
+-   [將資料匯出&#40;Master Data Services&#41;](overview-exporting-data-master-data-services.md)  
   
   

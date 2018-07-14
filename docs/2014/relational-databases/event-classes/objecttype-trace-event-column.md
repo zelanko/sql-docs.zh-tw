@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 topic_type:
 - apiref
 helpviewer_keywords:
@@ -18,22 +18,22 @@ helpviewer_keywords:
 - Object Type column values [SQL Server]
 ms.assetid: 42f85c50-34c9-49ca-955f-af9595e2707f
 caps.latest.revision: 16
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 358847f3627328b62c320e3ec1ef5cf1818ffe04
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: d47b745dd25b45afa4e4c0fe922e85840ec88677
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36031015"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37190498"
 ---
 # <a name="objecttype-trace-event-column"></a>ObjectType 追蹤事件資料行
   Object Type 追蹤事件資料行會用於各種追蹤事件。 此主題描述此資料行和其相關聯定義的可能值。  
   
 ## <a name="object-type-column-values"></a>Object Type 資料行值  
   
-|ReplTest1|定義|  
+|值|定義|  
 |-----------|----------------|  
 |8259|檢查條件約束|  
 |8260|預設 (條件約束或獨立)|  

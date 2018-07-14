@@ -1,5 +1,5 @@
 ---
-title: AggregationDesign 元素 (ASSL) |Microsoft 文件
+title: AggregationDesign 元素 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - AggregationDesign element
 ms.assetid: 80ad98d8-73a8-4353-b5ad-d2a9ac3bc531
 caps.latest.revision: 36
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: c8b02460500a79d1ff98dfac84a07782c388ef10
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: cfebce28ae08d0d76fa851b9d9df3ded8f6c28fc
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36031718"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37200088"
 ---
 # <a name="aggregationdesign-element-assl"></a>AggregationDesign 元素 (ASSL)
   定義可在資料庫中多個分割區之間共用之彙總定義的集合。  
@@ -69,7 +69,7 @@ ms.locfileid: "36031718"
 |子元素|[彙總](../collections/aggregations-element-assl.md)，[註解](../collections/annotations-element-assl.md)，[描述](../properties/description-element-assl.md)，[維度](../collections/dimensions-element-assl.md)， [EstimatedPerformanceGain](../properties/estimatedperformancegain-element-assl.md)， [EstimatedRows](../properties/estimatedrows-element-assl.md)，[識別碼](../properties/id-element-assl.md)，[名稱](../properties/name-element-assl.md)|  
   
 ## <a name="remarks"></a>備註  
- 分析管理物件 (AMO) 物件模型中的對應元素是<xref:Microsoft.AnalysisServices.AggregationDesign>。  
+ 在 「 分析管理物件 (AMO) 物件模型的對應元素是<xref:Microsoft.AnalysisServices.AggregationDesign>。  
   
 ## <a name="see-also"></a>另請參閱  
  [分割項目&#40;ASSL&#41;](partition-element-assl.md)   

@@ -1,5 +1,5 @@
 ---
-title: 將版本指定為最新版本 |Microsoft 文件
+title: 將版本指定為最新版本 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - version control services [SQL Server], latest version
 - latest file version specified
 - file versions [SQL Server]
 ms.assetid: 407dffb1-3ecf-461e-835d-124781f26ee7
 caps.latest.revision: 24
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 598fc6f2d90220f85cef590600d8fcf397384f28
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 2f90851ebb0c5425e7f3948f7f0e040d2cab0618
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36024034"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37225918"
 ---
 # <a name="specify-a-version-as-the-latest-version"></a>將版本指定為最新版
   當您將檔案簽入原始檔控制中，簽入的版本會成為最新的版本；簽出或擷取最新版本的使用者會收到最近簽入之項目的本機副本。  
@@ -42,9 +42,9 @@ ms.locfileid: "36024034"
   
 2.  在 [方案總管] 中，選取您要指定為最新版本的檔案。  
   
-3.  在**檔案**功能表上，指向**原始檔控制**按一下**ViewHistory**。  
+3.  在 **檔案**功能表上，指向**原始檔控制**然後按一下**ViewHistory**。  
   
-4.  在**的歷程記錄**\<檔案 >] 對話方塊方塊中，選取您想要指定為最新，然後按一下 [版本**Pin**。  
+4.  在 **歷程記錄**\<檔案 > 對話方塊方塊中，選取您想要指定為最新版本，然後按一下 版本**釘選**。  
   
      此時所選版本旁會出現圖釘符號，表示它是目前的檔案版本。 如果 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 載入了不同的版本，系統會提示您重新載入檔案。  
   
@@ -54,18 +54,18 @@ ms.locfileid: "36024034"
   
 2.  在 [方案總管] 中，選取您要指定為最新版本的項目。  
   
-3.  在**檔案**功能表上，指向**原始檔控制**按一下**記錄**。  
+3.  在 **檔案**功能表上，指向**原始檔控制**，按一下 **歷程記錄**。  
   
-4.  在**記錄選項**對話方塊中，按一下**確定**顯示**檔案的記錄**對話方塊。  
+4.  在**歷程記錄選項** 對話方塊中，按一下**確定**以顯示**檔案的記錄** 對話方塊。  
   
-5.  在**檔案記錄**方塊中，選取您想要指定為最新的版本，然後按一下 的版本**復原**。  
+5.  在 **檔案的記錄**方塊中，選取您想要指定為最新的版本，然後按一下 的版本**Rollback**。  
   
      此時會出現一則訊息，通知您將刪除所選版本之後的所有版本。  
   
-6.  按一下**是**回復到選取的版本。  
+6.  按一下 **是**回復到選取的版本。  
   
 ## <a name="see-also"></a>另請參閱  
  [管理簽入](../../2014/database-engine/manage-checkins.md)   
- [將檔案簽入](../../2014/database-engine/check-in-files.md)  
+ [簽入檔案](../../2014/database-engine/check-in-files.md)  
   
   

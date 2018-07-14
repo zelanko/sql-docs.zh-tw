@@ -1,5 +1,5 @@
 ---
-title: Analysis Services |Microsoft 文件
+title: Analysis Services |Microsoft Docs
 ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Analysis Services, about Analysis Services - Multidimensional Data
 - SSAS
@@ -19,20 +19,20 @@ helpviewer_keywords:
 - SSAS, about Analysis Services - Multidimensional Data
 ms.assetid: 49d186f4-4b4d-4a5a-bb1a-e2699c64a731
 caps.latest.revision: 49
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: b2cfc01ba3942ff431ca9bef78ea7bb16a5d56d5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e4c20d17212de682466947bf86ddd415420b0576
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36031130"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37185445"
 ---
 # <a name="analysis-services"></a>Analysis Services
   [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 是用於決策支援和商業智慧 (BI) 方案的線上分析資料引擎，可提供報表和用戶端應用程式 (例如 Excel、Reporting Services 報表和其他協力廠商 BI 工具) 的分析資料。 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 的一般工作流程包括建立 OLAP 或表格式資料模型，將模型以資料庫方式部署到 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 執行個體，處理資料庫以載入該資料庫及資料，然後指派權限以允許資料存取。 準備好開始執行時，任何支援 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 作為資料來源的用戶端應用程式，即可存取這個多用途資料模型。  
   
- 若要建立模型時，使用 SQL Server Data Tools (請參閱[工具和 Analysis Services 中使用的應用程式](tools-and-applications-used-in-analysis-services.md))，選擇其中一個表格式或多維度和資料採礦專案範本。 專案範本包含模型所需所有物件的資料夾。 您可以使用精靈來建立所有基本項目，例如資料來源、資料來源檢視、維度、Cube 和角色。  
+ 若要建立模型時，使用 SQL Server Data Tools (請參閱[工具和 Analysis Services 中使用的應用程式](tools-and-applications-used-in-analysis-services.md))，選擇表格式或多維度和資料採礦專案範本。 專案範本包含模型所需所有物件的資料夾。 您可以使用精靈來建立所有基本項目，例如資料來源、資料來源檢視、維度、Cube 和角色。  
   
  模型會填入外部資料系統中的資料，通常是在 SQL Server 或 Oracle 關聯式資料庫引擎上裝載的資料倉儲 (表格式模型支援其他資料來源類型)。 模型不僅會指定查詢物件 (例如 Cube)，也會指定維度 (可用於多個 Cube、計算和 KPI 以封裝商務邏輯) 以及互動 (例如瀏覽和鑽研行為)。  
   
@@ -69,7 +69,7 @@ ms.locfileid: "36031130"
 ## <a name="see-also"></a>另請參閱  
  [Analysis Services 教學課程&#40;SSAS&#41;](analysis-services-tutorials-ssas.md)   
  [SQL Server 2014 安裝](../database-engine/install-windows/installation-for-sql-server.md)   
- [開發人員手冊 》 &#40;Analysis Services&#41;](analysis-services-developer-documentation.md)   
+ [開發人員指南&#40;Analysis Services&#41;](analysis-services-developer-documentation.md)   
  [SQL Server 資源中心](http://go.microsoft.com/fwlink/?linkID=219676)   
  [SQLCat.com](http://go.microsoft.com/fwlink/?linkID=220963)  
   

@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - components [SQL Server], adding to existing installations
 - versions [SQL Server], upgrading
@@ -16,18 +16,18 @@ helpviewer_keywords:
 - cross-language support
 ms.assetid: 702359c4-6ca9-42a8-860c-a95a802898a1
 caps.latest.revision: 132
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: dc7140188a24ba8b8ca51b792d4dd2beb8384ce6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 6ce657b9b4b832e1c880edd3d2c6d966cd5a78dc
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36030365"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37252640"
 ---
 # <a name="supported-version-and-edition-upgrades"></a>支援的版本與版本升級
-  您可以從升級[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]，和[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]，和[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]。 本主題列出這些 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本的支援升級路徑，以及可以升級至 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 的支援版本。  
+  您可以從升級[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]，並[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]，和[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]。 本主題列出這些 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本的支援升級路徑，以及可以升級至 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 的支援版本。  
   
 ## <a name="pre-upgrade-checklist"></a>升級前檢查清單  
   
@@ -47,7 +47,7 @@ ms.locfileid: "36030365"
   
 -   不支援跨平台升級。 您無法使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝程式，將 32 位元的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體升級到原生 64 位元。 不過，您還是可以備份或卸離 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]之 32 位元執行個體的資料庫，而且如果複寫時未發行這些資料庫，也可以將它們還原或附加至 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (64 位元) 的新執行個體。 您必須在 master、msdb 和 model 系統資料庫中重新建立任何登入及其他使用者物件。  
   
--   您無法在升級現有的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體期間加入新功能。 將 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的執行個體升級至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 之後，可使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 安裝程式加入功能。 如需詳細資訊，請參閱[將功能加入至執行個體 SQL Server 2014 的&#40;安裝&#41;](add-features-to-an-instance-of-sql-server-setup.md)。  
+-   您無法在升級現有的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體期間加入新功能。 將 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的執行個體升級至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 之後，可使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 安裝程式加入功能。 如需詳細資訊，請參閱 <<c0> [ 將功能加入至執行個體 SQL Server 2014 的&#40;安裝&#41;](add-features-to-an-instance-of-sql-server-setup.md)。</c0>  
   
 -   在 WOW 模式下不支援容錯移轉叢集。  
   
@@ -60,12 +60,12 @@ ms.locfileid: "36030365"
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 32 位元版本可以升級至[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]64 位元伺服器的 32 位元子系統 (WOW64) 上。  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 64 位元版本可以升級為[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]僅限 64 位元伺服器。  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 64 位元版本可以升級至[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]僅限 64 位元伺服器。  
   
 > [!NOTE]  
 >  當您從舊版 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Enterprise Edition 升級至 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 時，請選擇 [Enterprise Edition：核心授權] 或 [Enterprise Edition]。 這些 Enterprise edition 只有在授權模式及支援的核心數目上限方面有差異。 如需詳細資訊，請參閱 [Compute Capacity Limits by Edition of SQL Server](../../sql-server/compute-capacity-limits-by-edition-of-sql-server.md)。  
   
- [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 從下列版本的升級支援[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:  
+ [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 支援從下列版本的升級[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:  
   
 -   [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] SP4 或更新版本  
   
@@ -104,12 +104,12 @@ ms.locfileid: "36030365"
 |[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 Standard|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Enterprise<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Business Intelligence<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Standard|  
 |[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 Web|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Enterprise<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Business Intelligence<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Standard<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Web|  
 |[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 Express<br /><br /> [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 Express with Tools，以及<br /><br /> [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 Express Management Studio，以及<br /><br /> [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 Express with Advanced Services|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Enterprise<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Business Intelligence<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Standard<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Web<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Express|  
-|[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 Business Intelligence|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Enterprise<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Business Intelligence|  
+|[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 商業智慧|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Enterprise<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Business Intelligence|  
   
 ### <a name="includesssql14includessssql14-mdmd-support-for-includessversion2005includesssversion2005-mdmd"></a>[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 支援 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]  
  本節將討論 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 對 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 的支援。 在 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 中，您將能夠進行下列作業：  
   
--   升級[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]database engine 的執行個體[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]執行[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]使用安裝精靈或是從命令提示字元安裝。  
+-   升級[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]database engine 的執行個體[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]藉由執行[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]使用安裝精靈或是從命令提示字元安裝。  
   
 -   將 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 資料庫 (mdf/ldf 檔案) 附加到 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 的 Database Engine 執行個體。  
   
@@ -117,7 +117,7 @@ ms.locfileid: "36030365"
   
 -   將 [!INCLUDE[ssISversion2005](../../includes/ssisversion2005-md.md)] 封裝升級到 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]。 執行封裝並包含自動就地升級。  
   
--   升級[!INCLUDE[ssASversion2005](../../includes/ssasversion2005-md.md)]至[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]執行[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]安裝程式。  
+-   升級[!INCLUDE[ssASversion2005](../../includes/ssasversion2005-md.md)]要[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]藉由執行[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]安裝程式。  
   
 -   備份 [!INCLUDE[ssASversion2005](../../includes/ssasversion2005-md.md)] Cube 並在 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]上還原。  
   
@@ -185,8 +185,8 @@ ms.locfileid: "36030365"
   
 ## <a name="see-also"></a>另請參閱  
  [SQL Server 2014 各版本所支援的功能](../../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md)   
- [硬體 and Software Requirements for Installing SQL Server 2014](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)   
- [升級為 SQL Server 2014](upgrade-sql-server.md)   
+ [硬體和 Software Requirements for Installing SQL Server 2014](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)   
+ [升級到 SQL Server 2014](upgrade-sql-server.md)   
  [使用 Upgrade Advisor 來準備升級](../../../2014/sql-server/install/use-upgrade-advisor-to-prepare-for-upgrades.md)  
   
   

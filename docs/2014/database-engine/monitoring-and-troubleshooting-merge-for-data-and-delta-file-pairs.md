@@ -1,5 +1,5 @@
 ---
-title: 監視和疑難排解合併資料和差異檔案組 |Microsoft 文件
+title: 監視和疑難排解合併資料和差異檔案組 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine-imoltp
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: a8b0bacc-4d2c-42e4-84bf-1a97e0bd385b
 caps.latest.revision: 12
 author: stevestein
 ms.author: sstein
-manager: jhubbard
-ms.openlocfilehash: 31c717aca9153ee851a35992ebdced9cea2d86c0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 3b92439b6ce1edd974d184ac910a65716dec812b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36031084"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37180376"
 ---
 # <a name="monitoring-and-troubleshooting-merge-for-data-and-delta-file-pairs"></a>對資料檔案和差異檔案組的合併進行監視和疑難排解
   記憶體中 OLTP 會使用合併原則自動合併相鄰資料及差異檔案組。 您無法停用合併活動。  
@@ -28,10 +28,10 @@ ms.locfileid: "36031084"
   
 -   比較記憶體中儲存體與整體儲存體的大小。 如果儲存體不成比例地大，可能是未觸發合併。 如需資訊  
   
--   查看使用的資料和差異檔案中使用的空間[sys.dm_db_xtp_checkpoint_files &#40;TRANSACT-SQL&#41; ](/sql/relational-databases/system-dynamic-management-views/sys-dm-db-xtp-checkpoint-files-transact-sql)查看如果合併式未觸發應有。  
+-   看看使用的資料和差異檔案中使用的空間[sys.dm_db_xtp_checkpoint_files &#40;TRANSACT-SQL&#41; ](/sql/relational-databases/system-dynamic-management-views/sys-dm-db-xtp-checkpoint-files-transact-sql)若要查看是否合併未觸發時應該。  
   
 ## <a name="performing-a-manual-merge"></a>執行手動合併  
- 您可以使用[sys.sp_xtp_merge_checkpoint_files &#40;TRANSACT-SQL&#41; ](/sql/relational-databases/system-stored-procedures/sys-sp-xtp-merge-checkpoint-files-transact-sql)執行手動合併。  
+ 您可以使用[sys.sp_xtp_merge_checkpoint_files &#40;TRANSACT-SQL&#41; ](/sql/relational-databases/system-stored-procedures/sys-sp-xtp-merge-checkpoint-files-transact-sql)若要執行手動合併。  
   
  使用以下查詢擷取有關資料及差異檔案的資訊。  
   

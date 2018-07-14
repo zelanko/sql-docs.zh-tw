@@ -1,5 +1,5 @@
 ---
-title: 使用 Try...原生編譯的預存程序的 catch |Microsoft 文件
+title: 使用 Try...原生編譯的預存程序的 catch |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine-imoltp
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: f730e70c-4f92-411d-9984-289e241e43ee
 caps.latest.revision: 6
 author: stevestein
 ms.author: sstein
-manager: jhubbard
-ms.openlocfilehash: 2339c5124875602012b44502f78d50b2c71a2b3c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 388423c9b87ee567b3fd96f9f9e977d6c7cc07ff
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36031487"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37187155"
 ---
 # <a name="using-trycatch-in-natively-compiled-stored-procedures"></a>在原生編譯預存程序中使用 Try..Catch
   您可以在原生編譯預存程序內使用 try..catch 區塊。 以下為支援的結構：  

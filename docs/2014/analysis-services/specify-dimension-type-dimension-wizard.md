@@ -1,5 +1,5 @@
 ---
-title: 指定維度類型 （維度精靈） |Microsoft 文件
+title: 指定維度類型 （維度精靈） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.dimensionwizard.bidimensionproperties.f1
 ms.assetid: 3215282a-532d-4ff2-b721-286f088967fc
 caps.latest.revision: 23
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 7a5b5d77a8f54b24488b7152bba95ac705d5196d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: bdbc0375dd2f6c77d81ab4028bb5118de93a021f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36031310"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37185315"
 ---
 # <a name="specify-dimension-type-dimension-wizard"></a>指定維度類型 (維度精靈)
   使用 **[指定維度類型]** 頁面來定義維度類型，並將與所選取之維度類型相關聯的特殊屬性類型加入至維度。  
@@ -33,7 +33,7 @@ ms.locfileid: "36031310"
  **維度類型**  
  選取維度的維度類型。 下表列出可用的維度類型。  
   
-|ReplTest1|描述|  
+|值|描述|  
 |-----------|-----------------|  
 |**帳戶**|帳戶維度包含資料和代表帳戶清單的中繼資料。<br /><br /> 如需帳戶維度的詳細資訊，請參閱 [建立父子式類型維度的財務帳戶](multidimensional-models/database-dimensions-finance-account-of-parent-child-type.md)。|  
 |**BillOfMaterials**|用料表 (或 BOM) 維度是一般維度，其中的資料和中繼資料代表存貨或製造資訊，例如產品的零件清單。<br /><br /> 如需一般維度的詳細資訊，請參閱 [維度類型](multidimensional-models-olap-logical-dimension-objects/database-dimension-properties-types.md)。|  
@@ -45,7 +45,7 @@ ms.locfileid: "36031310"
 |**產品**|產品維度是一般維度，其中的資料和中繼資料代表產品資訊。<br /><br /> 如需一般維度的詳細資訊，請參閱 [維度類型](multidimensional-models-olap-logical-dimension-objects/database-dimension-properties-types.md)。|  
 |**促銷**|促銷維度是一般維度，其中的資料和中繼資料代表行銷促銷資訊。<br /><br /> 如需一般維度的詳細資訊，請參閱 [維度類型](multidimensional-models-olap-logical-dimension-objects/database-dimension-properties-types.md)。|  
 |**數量**|數量的維度是一般維度，其中的資料和中繼資料代表數量的資訊。<br /><br /> 如需一般維度的詳細資訊，請參閱 [維度類型](multidimensional-models-olap-logical-dimension-objects/database-dimension-properties-types.md)。|  
-|**速率**|匯率維度包含代表匯率和貨幣轉換資訊的資料和中繼資料。|  
+|**費率**|匯率維度包含代表匯率和貨幣轉換資訊的資料和中繼資料。|  
 |**一般**|一般維度是 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]中最常用的維度類型。<br /><br /> 如需一般維度的詳細資訊，請參閱 [維度類型](multidimensional-models-olap-logical-dimension-objects/database-dimension-properties-types.md)。|  
 |**狀況**|狀況維度是一般維度，其中的資料和中繼資料代表計畫或策略分析資訊。<br /><br /> 如需一般維度的詳細資訊，請參閱 [維度類型](multidimensional-models-olap-logical-dimension-objects/database-dimension-properties-types.md)。|  
 |**Time**|時間維度包含時間導向的資料和中繼資料。<br /><br /> 如需時間維度的詳細資訊，請參閱 [建立日期類型維度](multidimensional-models/database-dimensions-create-a-date-type-dimension.md)。|  

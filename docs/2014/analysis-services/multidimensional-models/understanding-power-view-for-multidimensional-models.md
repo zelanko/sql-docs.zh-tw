@@ -1,5 +1,5 @@
 ---
-title: 了解多維度模型的 Power View |Microsoft 文件
+title: 了解多維度模型的 Power View |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: d0558cae-8209-4242-80c5-2c95981b88b9
 caps.latest.revision: 14
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: a252c89adfe34f849e6fe2bd538ddf22b044c7da
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: df50d1ac785e58bf3136f6d8777a01c98a81d568
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36023236"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37288054"
 ---
 # <a name="understanding-power-view-for-multidimensional-models"></a>了解適用於多維度模型的 Power View
   本文描述 Microsoft SQL Server 2014 中的「多維度模型的 Power View」功能，並為想要在組織中實作 Power View 的 BI 專業人員和系統管理員提供重要資訊。  
@@ -32,7 +32,7 @@ ms.locfileid: "36023236"
   
  ![Power View 的多維度模型架構](../media/daxmd-architecture.gif "Power View 的多維度模型架構")  
   
-## <a name="prerequisites"></a>必要條件  
+## <a name="prerequisites"></a>先決條件  
  **伺服器需求**  
   
 -   SQL Server 2014 Enterprise 或 Business Intelligence 版本與以多維度模式執行的 Analysis Services。  
@@ -41,7 +41,7 @@ ms.locfileid: "36023236"
   
  **用戶端需求**  
   
--   Power View 用戶端功能需要 Microsoft Silverlight 5。 如需詳細資訊，請參閱[規劃 Reporting Services 和 Power View 瀏覽器支援&#40;Reporting Services 2014&#41;](../../reporting-services/browser-support-for-reporting-services-and-power-view.md)。  
+-   Power View 用戶端功能需要 Microsoft Silverlight 5。 如需詳細資訊，請參閱 <<c0> [ 規劃 Reporting Services 和 Power View 瀏覽器支援&#40;Reporting Services 2014&#41;](../../reporting-services/browser-support-for-reporting-services-and-power-view.md)。</c0>  
   
 ## <a name="features"></a>功能  
  **Power View 的原生支援**  
@@ -80,7 +80,7 @@ ms.locfileid: "36023236"
   
  **Power View 欄位清單中的量值群組**  
   
- ![欄位清單中的 Power View](../media/daxmd-powerviewfieldlist.gif "欄位清單中的 Power View")  
+ ![欄位清單中 Power View](../media/daxmd-powerviewfieldlist.gif "欄位 Power View 中的清單")  
   
  量值群組內的量值顯示為量值。 如果有未與任何量值群組相關聯的導出量值，它們會分組在稱為「量值」的特殊資料表中。  
   
@@ -95,7 +95,7 @@ ms.locfileid: "36023236"
   
  **量值做為變化**  
   
- ![在 Power View 中的非彙總階層](../media/daxmd-nonaggrattrib.gif "Power View 中的非彙總階層")  
+ ![Power View 中的非彙總階層](../media/daxmd-nonaggrattrib.gif "Power View 中的非彙總階層")  
   
 ### <a name="implicit-measures"></a>隱含量值  
  表格式模型讓使用者能夠建立「隱含」量值，例如欄位的計數、加總或平均。 對於多維度模型，因為維度屬性資料的儲存方式不同，查詢隱含量值可能很耗時。 因此，Power View 中無法使用隱含量值。  
@@ -129,7 +129,7 @@ ms.locfileid: "36023236"
   
  **含導出成員的 Power View 報表**  
   
- ![導出成員在 Power View 中](../media/daxmd-calcmembersinpowerview.gif "導出成員在 Power View 中")  
+ ![Power View 中導出成員](../media/daxmd-calcmembersinpowerview.gif "Power View 中導出成員")  
   
 ### <a name="default-members"></a>預設成員  
  多維度模型支援維度屬性的預設成員。 Analysis Services 彙總查詢資料時會使用預設成員。 維度屬性的預設成員在表格式中繼資料中公開為對應資料行的預設值或篩選。  
@@ -144,14 +144,14 @@ ms.locfileid: "36023236"
   
  **Power View 中的非彙總階層**  
   
- ![在 Power View 中的非彙總階層](../media/daxmd-nonaggrattrib.gif "Power View 中的非彙總階層")  
+ ![Power View 中的非彙總階層](../media/daxmd-nonaggrattrib.gif "Power View 中的非彙總階層")  
   
 ## <a name="images"></a>影像  
  Power View 提供呈現影像的能力。 在多維度模型中，提供影像給 Power View 的方法之一是公開包含影像 URL (統一資源定位器) 的資料行。 在此版本中，Analysis Services 支援維度屬性切換為 ImageURL 類型。 然後在表格式中繼資料中，提供此資料類型給 Power View。 Power View 然後會下載 URL 中指定的影像，並在視覺效果中顯示影像。  
   
  **SSDT 中的 ImageURL 維度屬性類型**  
   
- ![維度屬性](../media/daxmd-dimattribute-properties.gif "維度屬性的屬性")  
+ ![維度屬性內容](../media/daxmd-dimattribute-properties.gif "維度屬性的屬性")  
   
 ## <a name="parent-child-hierarchies"></a>父子式階層  
  多維度模型支援父子式階層，父子式階層在表格式中繼資料中公開為階層。 父子式階層的每個層級會公開為隱藏的資料行。 父子式維度的索引鍵屬性不會在表格式中繼資料中公開。  
@@ -178,7 +178,7 @@ ms.locfileid: "36023236"
   
  **固定的篩選**  
   
- ![釘選篩選](../media/daxmd-pinnedfilterinpowerview.gif "釘選的篩選器")  
+ ![釘選篩選](../media/daxmd-pinnedfilterinpowerview.gif "釘選篩選")  
   
 ## <a name="unsupported-features"></a>不支援的功能  
  **Excel 2013 中的 Power View** 不支援連接到多維度模型以及建立多維度模型報表。 多維度模型的 Power View 只支援以瀏覽器為基礎的 Power View 用戶端。  
@@ -221,7 +221,7 @@ ms.locfileid: "36023236"
   
  DISCOVER_CSDL_METADATA 要求具有下列限制：  
   
-|[屬性]|必要項|描述|  
+|名稱|必要項|描述|  
 |----------|--------------|-----------------|  
 |CATALOG_NAME|是|目錄\資料庫名稱。|  
 |PERSPECTIVE_NAME|是，如果 Cube 包含一個以上的檢視方塊。 如果只有一個 Cube 或有預設檢視方塊，則為選擇性。|多維度資料庫中的 Cube 名稱或檢視方塊名稱。|  

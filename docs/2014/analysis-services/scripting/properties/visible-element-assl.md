@@ -1,5 +1,5 @@
 ---
-title: Visible 元素 (ASSL) |Microsoft 文件
+title: Visible 元素 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - Visible element
 ms.assetid: 3e9baf1b-351f-4ebf-b57d-13d561f72d6f
 caps.latest.revision: 35
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 90a6ddadf0bc6654fb0c30c02f22b78a88655daa
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c025ca22c56d0f7c61f1626b2c861961da432ae9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36029894"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37213848"
 ---
 # <a name="visible-element-assl"></a>Visible 元素 (ASSL)
   決定父元素的可見性。  

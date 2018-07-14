@@ -1,5 +1,5 @@
 ---
-title: 建立連接管理員 |Microsoft 文件
+title: 建立連線管理員 |Microsoft Docs
 ms.custom: ''
 ms.date: 08/22/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.connectionmanager.f1
 helpviewer_keywords:
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - SQL Server Integration Services packages, connections
 ms.assetid: 6ca317b8-0061-4d9d-b830-ee8c21268345
 caps.latest.revision: 54
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 2ae1ccaa1e38d280c3d46fb4504f99df92254a9e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: f09d663dd371c037c3f2b44b42b202c18377b7cb
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36030327"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37252540"
 ---
 # <a name="create-connection-managers"></a>建立連接管理員
   [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 包含各種連接管理員，以符合連接到不同類型伺服器和資料來源之工作的需要。 連接管理員可由在不同類型資料儲存區中擷取和載入之資料的資料流程元件使用，也可由將記錄寫入伺服器、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 資料表或檔案的記錄提供者使用。 例如，具有傳送郵件工作的封裝使用 SMTP 連接管理員類型，來連接到 Simple Mail Transfer Protocol (SMTP) 伺服器。 具有執行 SQL 工作的封裝，可以使用 OLE DB 連線管理員來連接到 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 資料庫。 如需詳細資訊，請參閱 [Integration Services &#40;SSIS&#41; 連接](connection-manager/integration-services-ssis-connections.md)。  
@@ -47,16 +47,16 @@ ms.locfileid: "36030327"
   
 #### <a name="to-add-configure-or-delete-a-connection-manager-in-ssis-designer"></a>在 SSIS 設計師中加入、設定或刪除連線管理員  
   
--   [加入、 刪除或共用封裝中的連接管理員](../../2014/integration-services/add-delete-or-share-a-connection-manager-in-a-package.md)  
+-   [新增、刪除或共用套件中的連線管理員](../../2014/integration-services/add-delete-or-share-a-connection-manager-in-a-package.md)  
   
--   [設定連接管理員的屬性](../../2014/integration-services/set-the-properties-of-a-connection-manager.md)  
+-   [設定連線管理員的屬性](../../2014/integration-services/set-the-properties-of-a-connection-manager.md)  
   
 ## <a name="32-bit-and-64-bit-providers-for-connection-managers"></a>連接管理員的 32 位元和 64 位元提供者  
  連接管理員使用的許多提供者都有 32 位元和 64 位元兩種版本。 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 設計環境是 32 位元的環境；設計封裝時，您只會看到 32 位元的提供者。 因此，如果要將連接管理員設定成使用特定的 64 位元提供者，您必須同時安裝 32 位元版本的同一個提供者。  
   
  執行階段中會使用正確的版本，而且就算您在設計階段中指定了 32 位元版本的提供者也沒有關係。 即使封裝是在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 中執行，還是可以執行 64 位元版本的提供者。  
   
- 兩個版本的提供者具有相同的識別碼。 若要指定 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 執行階段是否使用可用的 64 位元版本提供者，請設定 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 專案的 Run64BitRuntime 屬性。 如果 Run64BitRuntime 屬性設定為`true`，執行階段尋找並使用 64 位元提供者; 如果 Run64BitRuntime `false`，執行階段尋找及使用 32 位元提供者。 如需可在 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 專案上設定之屬性的詳細資訊，請參閱 [Integration Services &#40;SSIS&#41; 和 Studio 環境](integration-services-ssis-development-and-management-tools.md)。  
+ 兩個版本的提供者具有相同的識別碼。 若要指定 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 執行階段是否使用可用的 64 位元版本提供者，請設定 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 專案的 Run64BitRuntime 屬性。 如果 Run64BitRuntime 屬性設定為`true`，執行階段會尋找並使用 64 位元提供者中; 如果 Run64BitRuntime 是`false`，執行階段會尋找並使用 32 位元提供者。 如需可在 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 專案上設定之屬性的詳細資訊，請參閱 [Integration Services &#40;SSIS&#41; 和 Studio 環境](integration-services-ssis-development-and-management-tools.md)。  
   
 ## <a name="see-also"></a>另請參閱  
  [控制流程](control-flow/control-flow.md)   

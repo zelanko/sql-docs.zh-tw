@@ -1,5 +1,5 @@
 ---
-title: SetProtocolsOrder 方法 （ClientNetworkProtocol 類別） |Microsoft 文件
+title: SetProtocolsOrder 方法 （ClientNetworkProtocol 類別） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - SetProtocolsOrder method
 ms.assetid: b86d98b9-aae4-4e74-b4da-1ec984d5c8b4
 caps.latest.revision: 33
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: bd3281ff6bcd92d53b76a25c1f7b5a127dc9cd7c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+ms.openlocfilehash: 0befa20fdc25df354bbfe60cfb9e3313a65ddf48
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36029789"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37262264"
 ---
 # <a name="setprotocolsorder-method-clientnetworkprotocol-class"></a>SetProtocolsOrder 方法 (ClientNetworkProtocol 類別)
   變更通訊協定清單的順序。  
@@ -46,7 +46,7 @@ ProtocolOrderList
   
 ## <a name="parts"></a>組件  
  *object*  
- A [ClientNetworkProtocol 類別](clientnetworkprotocol-class.md)物件，代表所使用的網路通訊協定[!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]用戶端。  
+ A [ClientNetworkProtocol 類別](clientnetworkprotocol-class.md)物件，表示所使用的網路通訊協定[!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]用戶端。  
   
 #### <a name="parameters"></a>參數  
   

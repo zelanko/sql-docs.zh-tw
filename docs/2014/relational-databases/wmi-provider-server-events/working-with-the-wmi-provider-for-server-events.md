@@ -1,5 +1,5 @@
 ---
-title: 使用伺服器事件的 WMI 提供者 |Microsoft 文件
+title: 使用伺服器事件的 WMI 提供者 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - WMI Provider for Server Events, security
 ms.assetid: cd974b3b-2309-4a20-b9be-7cfc93fc4389
 caps.latest.revision: 33
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 3ec2d4c6fa276c3938de0dc15062d026fe91dc80
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+ms.openlocfilehash: f6a9b7733ba7413ded8580648d0d13911fd2ef5a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36030966"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37189945"
 ---
 # <a name="working-with-the-wmi-provider-for-server-events"></a>使用伺服器事件的 WMI 提供者
   本主題會提供您使用伺服器事件的 WMI 提供者進行程式設計前應該考慮的指導方針。  
@@ -51,7 +51,7 @@ SELECT name, is_broker_enabled, service_broker_guid FROM sys.databases;
  若要啟用[!INCLUDE[ssSB](../../includes/sssb-md.md)]在資料庫中，使用的 ENABLE_BROKER SET 選項[ALTER DATABASE](/sql/t-sql/statements/alter-database-transact-sql)陳述式。  
   
 ## <a name="specifying-a-connection-string"></a>指定連接字串  
- 應用程式會藉由連接到伺服器事件的 WMI 提供者所定義的 WMI 命名空間，將該提供者導向至 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的執行個體。 Windows WMI 服務會將此命名空間對應至提供者 DLL (Sqlwep.dll,) 並將其載入至記憶體。 每個執行個體[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]有它自己的 WMI 命名空間，其預設位置為： \\ \\。\\*根*\Microsoft\SqlServer\ServerEvents\\*instance_name*。 *instance_name*中的預設安裝的預設值為 MSSQLSERVER [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
+ 應用程式會藉由連接到伺服器事件的 WMI 提供者所定義的 WMI 命名空間，將該提供者導向至 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的執行個體。 Windows WMI 服務會將此命名空間對應至提供者 DLL (Sqlwep.dll,) 並將其載入至記憶體。 每個執行個體[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]有它自己的 WMI 命名空間，預設為： \\ \\。\\*根*\Microsoft\SqlServer\ServerEvents\\*instance_name*。 *instance_name*中的預設安裝的預設值為 MSSQLSERVER [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
   
 ## <a name="permissions-and-server-authentication"></a>權限和伺服器驗證  
  若要存取伺服器事件的 WMI 提供者，WMI 管理應用程式起始的用戶端在應用程式之應用程式連接字串指定的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體中，必須對應到 Windows 驗證的登入或群組。  
@@ -81,7 +81,7 @@ WHERE DatabaseName = "AdventureWorks2012"
   
  WMI 提供者會將此查詢轉譯為 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 資料庫中建立的事件通知。 也就是說，呼叫端必須具備所需的權限，才能建立此種事件通知，特別是 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 資料庫的 CREATE DATABASE DDL EVENT NOTIFICATION 權限。  
   
- 如果 WQL 查詢指定伺服器層級範圍的事件通知 (例如，透過發出查詢 SELECT * FROM ALTER_TABLE)，呼叫應用程式必須具備伺服器層級的 CREATE DDL EVENT NOTIFICATION 權限。 請注意，伺服器範圍的事件通知會儲存在 master 資料庫中。 您可以使用[sys.server_event_notifications](/sql/relational-databases/system-catalog-views/sys-server-event-notifications-transact-sql)目錄檢視，以查看其中繼資料。  
+ 如果 WQL 查詢指定伺服器層級範圍的事件通知 (例如，透過發出查詢 SELECT * FROM ALTER_TABLE)，呼叫應用程式必須具備伺服器層級的 CREATE DDL EVENT NOTIFICATION 權限。 請注意，伺服器範圍的事件通知會儲存在 master 資料庫中。 您可以使用[sys.server_event_notifications](/sql/relational-databases/system-catalog-views/sys-server-event-notifications-transact-sql)目錄檢視來查看其中繼資料。  
   
 > [!NOTE]  
 >  WMI 提供者所建立的事件通知範圍 (伺服器、資料庫或物件) 最終取決於 WMI 提供者所使用之權限驗證處理的結果。 這會受到呼叫提供者之使用者的權限集，以及要查詢之資料庫的驗證之影響。  
@@ -114,7 +114,7 @@ WHERE DatabaseName = "AdventureWorks2012"
     -   DENY 或 REVOKE (僅適用於 ALTER DATABASE、ALTER ANY DATABASE EVENT NOTIFICATION、CREATE DATABASE DDL EVENT NOTIFICATION、CONTROL SERVER、ALTER ANY EVENT NOTIFICATION、CREATE DDL EVENT NOTIFICATION 或 CREATE TRACE EVENT NOTIFICATION 權限)。  
   
 ## <a name="working-with-event-data-on-the-client-side"></a>使用用戶端上的事件資料  
- WMI 提供者伺服器事件會在目標資料庫中，建立所需的事件通知的事件通知事件將資料傳送到名為的 msdb 中的目標服務**ProcessWMIEventProviderNotification/SQL/通知/v1.0**。 目標服務會將事件放入佇列中`msdb`，名稱為**WMIEventProviderNotificationQueue**。 (當此服務首次連接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 時，提供者會同時動態地建立服務和佇列)。接著，提供者會從此佇列讀取 XML 事件資料，並將其轉換為 Managed 物件格式 (MOF)，然後再將其傳回到用戶端應用程式。 MOF 資料是由 WQL 查詢所要求的事件屬性所組成，做為通用訊息模型 (CIM) 類別定義。 每個屬性都有一個對應的 CIM 類型。 例如，`SPID` 屬性會當做 CIM 類型 `Sint32` 傳回。 每一個屬性的 CIM 類型都會在每個事件類別在[Server 事件類別和屬性的 WMI 提供者](../../relational-databases/wmi-provider-server-events/wmi-provider-for-server-events-classes-and-properties.md)。  
+ WMI 提供者伺服器事件會在目標資料庫中，建立所需的事件通知事件通知事件會將資料傳送至目標服務名稱為的 msdb 中**SQL/通知/ProcessWMIEventProviderNotification/v1.0**。 目標服務會將事件放在佇列`msdb`名為**WMIEventProviderNotificationQueue**。 (當此服務首次連接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 時，提供者會同時動態地建立服務和佇列)。接著，提供者會從此佇列讀取 XML 事件資料，並將其轉換為 Managed 物件格式 (MOF)，然後再將其傳回到用戶端應用程式。 MOF 資料是由 WQL 查詢所要求的事件屬性所組成，做為通用訊息模型 (CIM) 類別定義。 每個屬性都有一個對應的 CIM 類型。 例如，`SPID` 屬性會當做 CIM 類型 `Sint32` 傳回。 每一個屬性的 CIM 類型都會在 在每個事件類別[伺服器事件類別和屬性的 WMI 提供者](../../relational-databases/wmi-provider-server-events/wmi-provider-for-server-events-classes-and-properties.md)。  
   
 ## <a name="see-also"></a>另請參閱  
  [伺服器事件的 WMI 提供者概念](http://technet.microsoft.com/library/ms180560.aspx)  

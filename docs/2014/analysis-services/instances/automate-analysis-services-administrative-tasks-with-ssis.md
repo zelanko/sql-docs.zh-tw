@@ -1,5 +1,5 @@
 ---
-title: 使用 SSIS Analysis Services 管理工作自動化 |Microsoft 文件
+title: 使用 SSIS Analysis Services 管理工作自動化 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Execute DDL Task [Analysis Services]
 - Analysis Services Processing task
 ms.assetid: e960a9a2-80b4-45da-9369-bc560ecdccac
 caps.latest.revision: 29
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: a06a04c50dbb1548ac28902dcfb2f7f7a2883232
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 35ba767c2c6d0b230a3515a8e5df48d6f126284a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36023681"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37251140"
 ---
 # <a name="automate-analysis-services-administrative-tasks-with-ssis"></a>使用 SSIS 自動化 Analysis Services 管理工作
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 可讓您自動執行 DDL 指令碼、Cube 和採礦模型處理工作，以及資料採礦查詢工作。 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 可視為控制流程和維護工作的集合，可以連結它們來形成循序和平行的資料處理作業。  
@@ -46,6 +46,6 @@ ms.locfileid: "36023681"
  [維度處理目的地](../../integration-services/data-flow/dimension-processing-destination.md)   
  [資料採礦查詢轉換](../../integration-services/data-flow/transformations/data-mining-query-transformation.md)   
  [多維度模型物件處理](../multidimensional-models/processing-a-multidimensional-model-analysis-services.md)   
- [Analysis Services 中的指令碼管理工作](../script-administrative-tasks-in-analysis-services.md)  
+ [Analysis Services 中編寫管理工作](../script-administrative-tasks-in-analysis-services.md)  
   
   

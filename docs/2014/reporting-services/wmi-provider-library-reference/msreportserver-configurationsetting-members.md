@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 api_name:
 - MSReportServer_ConfigurationSetting Members
 api_location:
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - MSReportServer_ConfigurationSetting class
 ms.assetid: 5e21a53a-a2f8-4b35-a8d9-5483519e3857
 caps.latest.revision: 46
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 32a253a22466d154c5e7e0fc3bb355c20c0f0847
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: 22f1875be04c4491ad5c727999d1fca789414cfd
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36030715"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37222883"
 ---
 # <a name="msreportserverconfigurationsetting-members"></a>MSReportServer_ConfigurationSetting 成員
   MSReportServer_ConfigurationSetting 類別包含下列屬性和方法。  

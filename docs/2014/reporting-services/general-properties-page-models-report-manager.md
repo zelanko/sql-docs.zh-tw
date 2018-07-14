@@ -1,5 +1,5 @@
 ---
-title: 一般屬性頁面，模型 （報表管理員） |Microsoft 文件
+title: 一般屬性頁面，模型 （報表管理員） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.reportserver.modelproperties.general.f1
 ms.assetid: 7ad59850-8135-4c4d-95e9-6d705b6d77a8
 caps.latest.revision: 17
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 12eda8ffbf8183f5992c2e149c4b2e9bd44b1912
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 0101ea532307b4e3dd06d1dc22879f59a682f867
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36023265"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37280664"
 ---
 # <a name="general-properties-page-models-report-manager"></a>一般屬性頁面，模型 (報表管理員)
   您可以使用報表模型的 [一般屬性] 頁面來重新命名、刪除、移動或取代模型定義 (.smdl) 檔案。 有關模型建立者與修改者及變更日期的詳細資料都會顯示在頁面頂端。  
@@ -47,7 +47,7 @@ ms.locfileid: "36023265"
  輸入模型的描述。 這項描述會顯示在有權存取此模型之使用者的 [內容] 頁面上。  
   
  **在清單檢視中隱藏**  
- 選取此核取方塊即可在清單檢視中設定資料夾時，隱藏項目。 清單檢視是檢視資料夾內容的一種模式，報表管理員中支援這種檢視模式。 您可以設定這個選項[!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]來定義此項目在報表管理員中的特殊檢視。 如需有關在報表管理員中的檢視模式的詳細資訊，請參閱[內容 頁面&#40;報表管理員&#41;](../../2014/reporting-services/contents-page-report-manager.md)。  
+ 選取此核取方塊即可在清單檢視中設定資料夾時，隱藏項目。 清單檢視是檢視資料夾內容的一種模式，報表管理員中支援這種檢視模式。 您可以設定這個選項[!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]來定義此項目在報表管理員中的特殊檢視。 如需有關在報表管理員中的檢視模式的詳細資訊，請參閱 <<c0> [ 內容 頁面&#40;報表管理員&#41;](../../2014/reporting-services/contents-page-report-manager.md)。</c0>  
   
  **套用**  
  按一下即可儲存您的變更。  
@@ -56,7 +56,7 @@ ms.locfileid: "36023265"
  按一下即可從報表伺服器資料庫中移除模型。 刪除模型並不會刪除提供連接資訊的相依共用資料來源，也不會刪除使用此模型當做資料來源的報表。 不過，刪除模型之後，使用該模型的報表將無法再執行。  
   
  **[移動]**  
- 按一下即可在報表伺服器資料夾階層內重新定位模型。 按一下此按鈕會開啟 [移動項目] 頁面，您可在此瀏覽資料夾以選取新位置。 如需詳細資訊，請參閱[移動項目頁面&#40;報表管理員&#41;](../../2014/reporting-services/move-items-page-report-manager.md)。  
+ 按一下即可在報表伺服器資料夾階層內重新定位模型。 按一下此按鈕會開啟 [移動項目] 頁面，您可在此瀏覽資料夾以選取新位置。 如需詳細資訊，請參閱 <<c0> [ 移動項目頁面&#40;報表管理員&#41;](../../2014/reporting-services/move-items-page-report-manager.md)。</c0>  
   
  **儲存**  
  按一下即可儲存模型定義的唯讀副本。 視電腦上定義的檔案關聯而定，系統會在 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 或其他應用程式中開啟檔案。 在大多數情況下，系統會將模型開啟為 XML 檔案。  

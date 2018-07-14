@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 56105f3f-e500-4669-8c8e-acf434527727
 caps.latest.revision: 22
-author: douglaslM
+author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 4d0bd778d04b00c2d90da3cd6a77ca1bf8f9c830
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 7c8aeee9c6d0d11ba5dbb482e02595802c5d76fd
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36023810"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37281364"
 ---
 # <a name="step-2-adding-and-configuring-logging"></a>步驟 2：加入和設定記錄
   在這項工作中，您將針對 Lesson 3.dtsx 封裝的資料流程啟用記錄。 然後，您會設定文字檔案記錄提供者來記錄 PipelineExecutionPlan 和 PipelineExecuteTrees 事件。 文字檔案記錄提供者會建立容易檢視及容易傳輸的記錄。 這些記錄檔的簡單性，使它們在封裝的基本測試階段特別有用。 您也可以在 [!INCLUDE[ssIS](../includes/ssis-md.md)] 設計師的 [記錄事件] 視窗中檢視記錄項目。  
@@ -34,11 +34,11 @@ ms.locfileid: "36023810"
   
      Integration Services 以預設名稱 **「文字檔的 SSIS 記錄提供者」**，將新的文字檔記錄提供者加入封裝中。 現在您可以設定新的記錄提供者。  
   
-4.  在**名稱**欄中，輸入`Lesson 3 Log File`。  
+4.  在 **名稱**資料行中輸入`Lesson 3 Log File`。  
   
 5.  可選擇性地修改 **[描述]**。  
   
-6.  在**組態**資料行中，按一下**\<新增連接 >** 指定要寫入的記錄資訊的目的地。  
+6.  在**組態**資料行中，按一下**\<新增連接 >** 指定記錄資訊會寫入至其中的目的地。  
   
      在 **[檔案連接管理員編輯器]** 對話方塊中，對於 **[使用類型]** 選取 **[建立檔案]**，然後按一下 **[瀏覽]**。 依預設， **[選取檔案]** 對話方塊會開啟專案資料夾，但您可以將記錄資訊儲存至任何位置。  
   
@@ -57,11 +57,11 @@ ms.locfileid: "36023810"
   
 12. 按一下 **[基本]** 來隱藏資訊類別目錄。  
   
-13. 在**提供者與記錄**索引標籤的**名稱**欄中，選取`Lesson 3 Log File`。 建立封裝的記錄提供者之後，您就可以選擇性地取消選取它，來暫時關閉記錄，而不必刪除再重新建立記錄提供者。  
+13. 在 **提供者與記錄**索引標籤中，於**名稱**欄中，選取`Lesson 3 Log File`。 建立封裝的記錄提供者之後，您就可以選擇性地取消選取它，來暫時關閉記錄，而不必刪除再重新建立記錄提供者。  
   
 14. 按一下 [確定] 。  
   
 ## <a name="next-steps"></a>後續步驟  
- [步驟 3：測試第 3 課的教學課程封裝](../integration-services/lesson-3-3-testing-the-lesson-3-tutorial-package.md)  
+ [步驟 3：測試第 3 課的教學課程套件](../integration-services/lesson-3-3-testing-the-lesson-3-tutorial-package.md)  
   
   

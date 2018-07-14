@@ -1,5 +1,5 @@
 ---
-title: 圖表 (Visual Database Tools) 上的資料表之間建立關聯性 |Microsoft 文件
+title: 圖表 (Visual Database Tools) 上的資料表之間建立關聯性 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - diagrams [SQL Server], designing
 ms.assetid: 28e9630c-dff4-46cc-bb0e-fe77998b6ac2
 caps.latest.revision: 12
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 80aff8b6f574b21bf5287e8388201e959f65765d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 14d6a6334c4d618cf48b73e1bfa84f7dac517983
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36023707"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37168037"
 ---
 # <a name="create-relationships-between-tables-on-a-diagram-visual-database-tools"></a>在圖表上建立資料表之間的關聯性 (Visual Database Tools)
   在圖表設計工具中，您可以在資料表之間拖曳資料行，以建立不同資料表資料行之間的關聯性。  
@@ -51,7 +51,7 @@ ms.locfileid: "36023707"
      資料庫設計工具會顯示您選擇的資料行之間的關聯性。  
   
 ## <a name="see-also"></a>另請參閱  
- [資料表和資料行對話方塊&#40;Visual Database Tools&#41;](visual-database-tools.md)   
+ [資料表和資料行 對話方塊&#40;Visual Database Tools&#41;](visual-database-tools.md)   
  [Unique 條件約束和 Check 條件約束](../../relational-databases/tables/unique-constraints-and-check-constraints.md)   
  [使用資料庫圖表中的資料表 &#40;Visual Database Tools&#41;](work-with-tables-in-database-diagram-visual-database-tools.md)  
   

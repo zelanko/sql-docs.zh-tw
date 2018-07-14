@@ -15,15 +15,15 @@ helpviewer_keywords:
 - assemblies [Reporting Services], data processing extension deployments
 ms.assetid: 3614e601-004e-4a16-8388-836ffd67e9dd
 caps.latest.revision: 40
-author: douglaslM
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: f95040735e7ec8987bfdfd194ef1d7f0933df3ed
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: 25b6bfa824f6004fbd35b3a31e7268ff388fab6e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36030448"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37216728"
 ---
 # <a name="how-to-deploy-a-data-processing-extension-to-report-designer"></a>如何：將資料處理延伸模組部署到報表設計師
   報表設計工具在您設計報表時，使用資料處理延伸模組來擷取和處理資料。 您應該將資料處理延伸模組組件部署到報表設計師做為私用組件， 您也需要在報表設計師組態檔 RSReportDesigner.config 中建立項目。  
@@ -44,13 +44,13 @@ ms.locfileid: "36030448"
     </Extensions>  
     ```  
   
-4.  您的資料處理延伸模組包含的項目加入**延伸**項目的值為`Name`， `Type`，和`Visible`屬性。 您的輸入可能如下所示：  
+4.  新增項目，其中包含您資料處理延伸模組**延伸模組**值的項目`Name`， `Type`，和`Visible`屬性。 您的輸入可能如下所示：  
   
     ```  
     <Extension Name="ExtensionName" Type="CompanyName.ExtensionName.MyConnectionClass, AssemblyName" />  
     ```  
   
-     `Name` 的值是資料處理延伸模組的唯一名稱。 `Type` 的值是以逗號分隔的清單，包括實作 <xref:Microsoft.ReportingServices.Interfaces.IExtension> 和 <xref:Microsoft.ReportingServices.DataProcessing.IDbConnection> 介面之類別的完整命名空間項目，後面接著組件的名稱 (不包含 .dll 副檔名)。 依預設值，資料處理延伸模組是可見的。 若要隱藏使用者介面，報表設計師中，例如從延伸模組加入`Visible`屬性**延伸**項目，並將它設定為`false`。  
+     `Name` 的值是資料處理延伸模組的唯一名稱。 `Type` 的值是以逗號分隔的清單，包括實作 <xref:Microsoft.ReportingServices.Interfaces.IExtension> 和 <xref:Microsoft.ReportingServices.DataProcessing.IDbConnection> 介面之類別的完整命名空間項目，後面接著組件的名稱 (不包含 .dll 副檔名)。 依預設值，資料處理延伸模組是可見的。 若要隱藏延伸模組從使用者介面，例如報表設計師中，新增`Visible`屬性設定為**延伸模組**項目，並將它設定為`false`。  
   
 5.  最後，針對為延伸模組授與 **FullTrust** 權限的自訂組件，新增程式碼群組。 完成此動作的方法是，將程式碼群組加入預設位於 C:\Program Files\Microsoft Visual Studio 9.0\Common7\IDE\PrivateAssemblies 中的 rspreviewpolicy.config 檔案。 您的程式碼群組可能如下所示：  
   
@@ -74,7 +74,7 @@ ms.locfileid: "36030448"
   
 #### <a name="to-enable-the-generic-query-designer-for-a-custom-extension"></a>啟用自訂延伸模組的一般查詢設計工具。  
   
--   將下列項目加入至 RSReportDesigner.config 檔名**設計師**項目，取代`Name`具有您在先前的項目中提供的名稱屬性。  
+-   將下列項目加入至 RSReportDesigner.config 檔名**設計工具**項目，取代`Name`具有您在先前的項目中提供的名稱屬性。  
   
     ```  
     <Extension Name="ExtensionName" Type="Microsoft.ReportingServices.QueryDesigners.GenericQueryDesigner,Microsoft.ReportingServices.QueryDesigners"/>  

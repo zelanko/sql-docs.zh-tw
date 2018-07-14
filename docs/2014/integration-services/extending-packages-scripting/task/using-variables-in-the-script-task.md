@@ -24,13 +24,13 @@ ms.assetid: 593b5961-4bfa-4ce1-9531-a251c34e89d3
 caps.latest.revision: 62
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 7a8179cd44f9cb9bb2c97971ca2c347eb76b3f82
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 6a9e2fac6ad07c177dc3f3247207dc3d6224d9d3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36031070"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37193518"
 ---
 # <a name="using-variables-in-the-script-task"></a>在指令碼工作中使用變數
   變數讓指令碼工作可以和封裝中的其他物件交換資料。 如需詳細資訊，請參閱 [Integration Services &#40;SSIS&#41; 變數](../../integration-services-ssis-variables.md)。  
@@ -51,10 +51,10 @@ ms.locfileid: "36031070"
   
  變數使得在 Foreach 迴圈容器與指令碼工作之間的此通訊變得可能。 在 [Foreach 迴圈編輯器] 的 [變數對應] 頁面上，將變數指派給單一列舉項目所傳回的每個資料項目。 例如，Foreach 檔案列舉值只會傳回在索引 0 的檔案名稱，因此只需要一個變數對應，然而傳回每個資料列中數個資料行的列舉值，需要您將不同的變數對應到在指令碼工作中要使用的每個資料行。  
   
- 列舉項目對應到變數之後，您必須新增對應的變數加入`ReadOnlyVariables`屬性**指令碼**頁面**指令碼工作編輯器**將它們提供給您指令碼。 如需處理資料夾中影像檔之 Foreach 迴圈容器中指令碼工作的範例，請參閱[以指令碼工作處理影像](../../extending-packages-scripting-task-examples/working-with-images-with-the-script-task.md)。  
+ 列舉的項目對應到變數之後，您必須新增至對應的變數`ReadOnlyVariables`上的屬性**指令碼**頁面**指令碼工作編輯器**將它們提供給您指令碼。 如需處理資料夾中影像檔之 Foreach 迴圈容器中指令碼工作的範例，請參閱[以指令碼工作處理影像](../../extending-packages-scripting-task-examples/working-with-images-with-the-script-task.md)。  
   
 ## <a name="variables-example"></a>變數範例  
- 下列範例示範如何存取和使用指令碼工作中的變數，以決定封裝工作流程的路徑。 此範例假設您已建立名為整數變數`CustomerCount`和`MaxRecordCount`並將它們加入`ReadOnlyVariables`集合**指令碼工作編輯器**。 `CustomerCount` 變數包含要匯入的客戶記錄數目。 如果其值大於 `MaxRecordCount` 的值，指令碼工作會報告失敗。 當因為已超過 `MaxRecordCount` 臨界值而發生失敗時，工作流程的錯誤路徑可以實作任何所需的清除。  
+ 下列範例示範如何存取和使用指令碼工作中的變數，以決定封裝工作流程的路徑。 此範例假設您已建立名為整數變數`CustomerCount`並`MaxRecordCount`並將它們新增至`ReadOnlyVariables`中的集合**指令碼工作編輯器**。 `CustomerCount` 變數包含要匯入的客戶記錄數目。 如果其值大於 `MaxRecordCount` 的值，指令碼工作會報告失敗。 當因為已超過 `MaxRecordCount` 臨界值而發生失敗時，工作流程的錯誤路徑可以實作任何所需的清除。  
   
  若要成功地編譯範例，您需要加入 Microsoft.SqlServer.ScriptTask 組件的參考。  
   
@@ -119,10 +119,10 @@ public class ScriptMain
   
 ```  
   
-![Integration Services 圖示 （小）](../../media/dts-16.gif "Integration Services 圖示 （小）")**保持最多 with Integration Services 的日期** <br /> 若要取得 Microsoft 的最新下載、文件、範例和影片以及社群中的精選解決方案，請瀏覽 MSDN 上的 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 頁面：<br /><br /> [瀏覽 MSDN 上的 Integration Services 頁面](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 若要得到這些更新的自動通知，請訂閱該頁面上所提供的 RSS 摘要。  
+![Integration Services 圖示 （小）](../../media/dts-16.gif "Integration Services 圖示 （小）")**保持最多包含 Integration Services 的日期** <br /> 若要取得 Microsoft 的最新下載、文件、範例和影片以及社群中的精選解決方案，請瀏覽 MSDN 上的 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 頁面：<br /><br /> [瀏覽 MSDN 上的 Integration Services 頁面](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 若要得到這些更新的自動通知，請訂閱該頁面上所提供的 RSS 摘要。  
   
 ## <a name="see-also"></a>另請參閱  
  [Integration Services &#40;SSIS&#41;變數](../../integration-services-ssis-variables.md)   
- [在封裝中使用變數](../../use-variables-in-packages.md)  
+ [在套件中使用變數](../../use-variables-in-packages.md)  
   
   

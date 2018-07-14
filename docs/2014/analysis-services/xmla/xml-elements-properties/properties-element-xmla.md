@@ -1,5 +1,5 @@
 ---
-title: Properties 元素 (XMLA) |Microsoft 文件
+title: Properties 元素 (XMLA) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -25,18 +25,18 @@ helpviewer_keywords:
 - Properties element
 ms.assetid: 0b5468e5-bf23-4d22-862f-72e27a9fff2f
 caps.latest.revision: 30
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: 66accb9aab2c970c1fd09b1e14408b5585269d7f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 99cb1b43ad7629fd87759d5ea724e068319152b8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36023863"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37237228"
 ---
 # <a name="properties-element-xmla"></a>Properties 元素 (XMLA)
-  包含 XML for Analysis (XMAL) 屬性所使用[探索](../xml-elements-methods-discover.md)和[Execute](../xml-elements-methods-execute.md)方法。  
+  包含 XML for Analysis (XMAL) 屬性，供[Discover](../xml-elements-methods-discover.md)並[Execute](../xml-elements-methods-execute.md)方法。  
   
 ## <a name="syntax"></a>語法  
   

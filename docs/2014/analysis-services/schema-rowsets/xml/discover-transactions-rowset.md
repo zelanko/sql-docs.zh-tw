@@ -1,5 +1,5 @@
 ---
-title: DISCOVER_TRANSACTIONS 資料列集 |Microsoft 文件
+title: DISCOVER_TRANSACTIONS 資料列集 |Microsoft Docs
 ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
@@ -12,15 +12,15 @@ ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 85789177-c5df-4336-a90c-c20d69277ab4
 caps.latest.revision: 6
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 3869d4f8cd3adf96bd006a8669d7d82778b02450
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 979067978855e8aa1012deb8df39bea61862fdeb
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36029942"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37204548"
 ---
 # <a name="discovertransactions-rowset"></a>DISCOVER_TRANSACTIONS 資料列集
   傳回系統上目前的暫止交易集。  
@@ -53,7 +53,7 @@ ms.locfileid: "36029942"
   
  下表將提供可識別此資料列集的 GUID 和字串值。  
   
-|引數|ReplTest1|  
+|引數|值|  
 |--------------|-----------|  
 |GUID|a07ccd28-8148-11d0-87bb-00c04fc33942|  
 |String|DISCOVER_TRANSACTIONS|  

@@ -8,23 +8,23 @@ ms.suite: ''
 ms.technology:
 - dbe-xml
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - FOR XML clause, generating XML from rowsets
 ms.assetid: d061c0f1-3de9-4ad1-bbca-ce45d064b6c8
 caps.latest.revision: 10
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 163b33618f6d303d3ab08e078ee2b06096dc2ad8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 75446ba8c61f03c46c4000793d7ca75f1dc8cb85
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36029999"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37201108"
 ---
 # <a name="generate-xml-from-rowsets-with-for-xml"></a>使用 FOR XML 從資料列集產生 XML
-  您可以產生`xml`從資料列集使用 FOR XML 搭配新的資料類型執行個體**類型**指示詞。  
+  您可以產生`xml`從資料列集使用 FOR XML 搭配新的資料類型執行個體**型別**指示詞。  
   
  結果可以指派給`xml`資料類型資料行、 變數或參數。 此外，還可以將 FOR XML 巢狀化，以產生任何階層式結構。 與 FOR XML EXPLICIT 相較，這樣撰寫巢狀 FOR XML 更為方便，但是對於較深的階層，其效能可能沒那麼好。 FOR XML 也導入了一種新的 PATH 模式。 這種新模式可以在資料行值出現的 XML 樹狀結構中指定路徑。  
   
@@ -40,7 +40,7 @@ FROM   T
 FOR XML AUTO, TYPE  
 ```  
   
- V 檢視包含 XML 類型的單一 columnxmlval 單一資料列`.`如同一般可供查詢`xml`資料類型執行個體。 例如，下列查詢會傳回名字叫 "David" 的作者：  
+ V 檢視包含 XML 類型的單一 columnxmlval 單列`.`像一般可供查詢`xml`資料類型執行個體。 例如，下列查詢會傳回名字叫 "David" 的作者：  
   
 ```  
 SELECT xmlVal.query('//author[first-name = "David"]')  

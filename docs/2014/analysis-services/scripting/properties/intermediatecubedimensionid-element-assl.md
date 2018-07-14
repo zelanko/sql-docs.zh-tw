@@ -1,5 +1,5 @@
 ---
-title: IntermediateCubeDimensionID 元素 (ASSL) |Microsoft 文件
+title: IntermediateCubeDimensionID 元素 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - IntermediateCubeDimensionID element
 ms.assetid: 305c0a91-7bc2-4268-ba94-8f19d8c22ca3
 caps.latest.revision: 33
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 46b57b224d4c9e69b285491b2df316f84e0f38d5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 8945791ccb2b09faf3d42821a847b2a822bceda6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36030155"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37204018"
 ---
 # <a name="intermediatecubedimensionid-element-assl"></a>IntermediateCubeDimensionID 元素 (ASSL)
   包含將參考維度關聯至量值群組之維度的識別碼 (ID)。  
@@ -62,7 +62,7 @@ ms.locfileid: "36030155"
 |子元素|無|  
   
 ## <a name="remarks"></a>備註  
- 對應目的父代的項目`IntermediateCubeDimensionID`在 「 分析管理物件 (AMO) 物件模型而言， <xref:Microsoft.AnalysisServices.ReferenceMeasureGroupDimension>。  
+ 對應至父系的元素`IntermediateCubeDimensionID`在 「 分析管理物件 (AMO) 物件模型是<xref:Microsoft.AnalysisServices.ReferenceMeasureGroupDimension>。  
   
 ## <a name="see-also"></a>另請參閱  
  [屬性&#40;ASSL&#41;](properties-assl.md)  

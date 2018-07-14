@@ -1,5 +1,5 @@
 ---
-title: AxisInfo 元素 (XMLA) |Microsoft 文件
+title: AxisInfo 元素 (XMLA) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -24,18 +24,18 @@ helpviewer_keywords:
 - AxisInfo element
 ms.assetid: 060741db-b2ec-4174-9277-58d996440a88
 caps.latest.revision: 12
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: 1ac7ce9fdfeca2e2c48fe990c32c809827729959
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 36eb4542923f9be42c0a114fb198c1efb1285a26
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36023617"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37243458"
 ---
 # <a name="axisinfo-element-xmla"></a>AxisInfo 元素 (XMLA)
-  表示父系所包含之單一軸的中繼資料[AxesInfo](axesinfo-element-xmla.md)項目。  
+  表示父元素所包含之單一軸的中繼資料[AxesInfo](axesinfo-element-xmla.md)項目。  
   
 ## <a name="syntax"></a>語法  
   
@@ -69,7 +69,7 @@ ms.locfileid: "36023617"
   
 |attribute|描述|  
 |---------------|-----------------|  
-|[屬性]|需要`String`屬性。 軸的名稱。|  
+|名稱|所需`String`屬性。 軸的名稱。|  
   
 ## <a name="remarks"></a>備註  
  在使用 `root` 物件的 `MDDataSet` 元素中，`AxisInfo` 元素包含 `HierarchyInfo` 元素的集合 (與 `name` 屬性的值結合)，代表在多維度資料集中傳回之單一軸的定義。  

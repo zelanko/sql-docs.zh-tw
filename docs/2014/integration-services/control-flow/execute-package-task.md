@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.executepackagetask.f1
 helpviewer_keywords:
@@ -19,13 +19,13 @@ ms.assetid: 042d4ec0-0668-401c-bb3a-a25fe2602eac
 caps.latest.revision: 61
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 0c71123c2b91cd07ca8fb93faf458f7ff42cb04d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 256a7cbabc6c07bb0e1f42aeb6a3a3d77a5d93a2
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36023822"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37171139"
 ---
 # <a name="execute-package-task"></a>執行封裝工作
   「執行封裝」工作可讓封裝將其他封裝當做工作流程的一部分執行，以延伸 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 的企業功能。  
@@ -60,7 +60,7 @@ ms.locfileid: "36023822"
   
  或者，有時您可能希望父封裝和子封裝當作一個單位一起失敗，或是不要產生其他處理序的額外負擔。 例如，如果子處理序失敗，而父封裝處理序中的後續處理取決於子處理序的成功，則子封裝應該在父封裝的處理序中執行。  
   
- 根據預設，「 執行封裝 」 工作的 ExecuteOutOfProcess 屬性設定為`False`，並在父封裝相同的程序中執行子封裝。 如果您將此屬性設定為 `True`，子封裝就會在不同的處理序中執行。 這可能會降低子封裝的啟動速度。 此外，如果您將屬性設定為`True`，您無法偵錯僅限工具安裝中的封裝。 您必須安裝 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]。 如需詳細資訊，請參閱 [安裝 Integration Services](../install-windows/install-integration-services.md)。  
+ 根據預設，「 執行封裝 」 工作的 ExecuteOutOfProcess 屬性設為`False`，並執行相同的處理序與父封裝中的子封裝。 如果您將此屬性設定為 `True`，子封裝就會在不同的處理序中執行。 這可能會降低子封裝的啟動速度。 此外，如果您將屬性設定為`True`，您無法偵錯僅限工具安裝中的封裝。 您必須安裝 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]。 如需詳細資訊，請參閱 [安裝 Integration Services](../install-windows/install-integration-services.md)。  
   
 ## <a name="extending-transactions"></a>延伸交易  
  父封裝使用的交易可延伸至子封裝；因此，這兩種封裝執行的工作都能認可或回復。 例如，根據子封裝執行的資料庫插入，可以認可或回復父封裝所執行的資料庫插入，反之亦然。 如需詳細資訊，請參閱＜ [Inherited Transactions](../inherited-transactions.md)＞。  
@@ -101,7 +101,7 @@ ms.locfileid: "36023822"
  如需詳細資訊，請參閱 [Use the Values of Variables and Parameters in a Child Package](../use-the-values-of-variables-and-parameters-in-a-child-package.md)(在子封裝中使用變數和參數的值)。  
   
 ### <a name="accessing-parent-package-variables"></a>存取父封裝變數  
- 子封裝可藉由使用指令碼工作存取父封裝變數。 當你在 **[指令碼工作編輯器]** 的 **[指令碼]** 頁面上輸入父封裝變數的名稱時，變數名稱中請勿加上 **User:** 。 否則，在您執行父封裝時子封裝會找不到該變數。 如需使用指令碼工作存取父封裝變數的詳細資訊，請參閱此部落格文章： [SSIS： 存取父封裝中的變數](http://go.microsoft.com/fwlink/?LinkId=257729)，consultingblogs.emc.com 上。  
+ 子封裝可藉由使用指令碼工作存取父封裝變數。 當你在 **[指令碼工作編輯器]** 的 **[指令碼]** 頁面上輸入父封裝變數的名稱時，變數名稱中請勿加上 **User:** 。 否則，在您執行父封裝時子封裝會找不到該變數。 如需使用指令碼工作存取父封裝變數的詳細資訊，請參閱此部落格文章[SSIS： 存取父封裝中的變數](http://go.microsoft.com/fwlink/?LinkId=257729)，consultingblogs.emc.com 上。  
   
 ## <a name="configuring-the-execute-package-task"></a>設定執行封裝工作  
  您可以透過 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師或以程式設計方式設定屬性。  
@@ -120,8 +120,8 @@ ms.locfileid: "36023822"
   
 ## <a name="related-content"></a>相關內容  
   
--   部落格文章： [SSIS： 應執行子封裝中處理程序或跨處理序嗎？](http://go.microsoft.com/fwlink/?LinkId=220819)，consultingblogs.emc.com 上。  
+-   部落格文章[SSIS： 應執行同處理序或跨處理序的子封裝？](http://go.microsoft.com/fwlink/?LinkId=220819)，consultingblogs.emc.com 上。  
   
--   部落格文章： [SSIS： 存取父封裝中的變數](http://go.microsoft.com/fwlink/?LinkId=257729)，consultingblogs.emc.com 上。  
+-   部落格文章[SSIS： 存取父封裝中的變數](http://go.microsoft.com/fwlink/?LinkId=257729)，consultingblogs.emc.com 上。  
   
   

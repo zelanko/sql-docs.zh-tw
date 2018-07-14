@@ -1,5 +1,5 @@
 ---
-title: 無法重新整理活頁簿中資料連接的資料。 請再試一次或連絡系統管理員。 下列連接無法重新整理： PowerPivot 資料 |Microsoft 文件
+title: 無法重新整理活頁簿中資料連接的資料。 請再試一次或連絡系統管理員。 下列連接無法重新整理： PowerPivot 資料 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 0f6fd52d-ac72-43e3-aa08-05a2d2bb873d
 caps.latest.revision: 15
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 705aa014770346e7554a41d01a75235b3e2a0451
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 396b4b32d2af95b8c7d49beab0fde988d2bee903
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36030397"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37220268"
 ---
 # <a name="unable-to-refresh-data-for-a-data-connection-in-the-workbook-try-again-or-contact-your-system-administrator-the-following-connections-failed-to-refresh-powerpivot-data"></a>無法重新整理活頁簿中資料連接的資料。 請再試一次或連絡系統管理員。 下列連接無法重新整理：PowerPivot 資料
   如果是包含 PowerPivot 資料的 Excel 活頁簿，Excel Services 會在提交連接要求至 PowerPivot 伺服器而且該要求失敗時，傳回這個錯誤。  
@@ -38,13 +38,13 @@ ms.locfileid: "36030397"
   
  **案例 1：未啟動服務**  
   
- 未啟動 SQL Server Analysis Services (PowerPivot) 執行個體。 過期的密碼使伺服器停止執行。 如需有關變更密碼的詳細資訊，請參閱[設定 PowerPivot 服務帳戶](configure-power-pivot-service-accounts.md)和[啟動或停止 PowerPivot for SharePoint 伺服器](start-or-stop-a-power-pivot-for-sharepoint-server.md)。  
+ 未啟動 SQL Server Analysis Services (PowerPivot) 執行個體。 過期的密碼使伺服器停止執行。 如需變更密碼的詳細資訊，請參閱[設定 PowerPivot 服務帳戶](configure-power-pivot-service-accounts.md)並[啟動或停止 PowerPivot for SharePoint Server](start-or-stop-a-power-pivot-for-sharepoint-server.md)。  
   
  **案例 2a：在伺服器上開啟舊版活頁簿**  
   
  您嘗試開啟的活頁簿可能是在 SQL Server 2008 R2 版的 PowerPivot for Excel 中建立。 最有可能是因為資料連接字串中指定的 Analysis Services 資料提供者不存在於處理要求的電腦上。  
   
- 如果這種情況，您會發現此訊息在 ULS 記錄檔中: 「 重新整理活頁簿中失敗的 'PowerPivot 資料' '\<活頁簿 URL >'"，後面接著 「 無法取得連接 」。  
+ 如果發生這種情況，您會在 ULS 記錄檔中找到此訊息: 「 重新整理活頁簿中失敗的 'PowerPivot 資料' '\<活頁簿 URL >' 」，後面接著 「 無法取得連接 」。  
   
  若要判斷活頁簿的版本，您可以在 Excel 開啟它並檢查連接字串中指定的資料提供者。 SQL Server 2008 R2 活頁簿使用 MSOLAP.4 做為其資料提供者。  
   
@@ -66,7 +66,7 @@ ms.locfileid: "36030397"
   
  若要解決此問題，請將電腦加入至與 PowerPivot 伺服器相同的網域，或在本機電腦上安裝網域控制站。 第二個解決方案「安裝網域控制站」將需要您為所有服務和使用者建立本機網域帳戶。 您將需要為您定義的帳戶設定服務帳戶和 SharePoint 權限。  
   
- 如果您的目標是在離線狀態下使用 PowerPivot for SharePoint，在電腦上安裝網域控制站相當實用。 如需如何離線使用 PowerPivot 的詳細的指示，請參閱部落格文章，以的 < 讓 PowerPivot 伺服器關閉網路 」 [ http://www.powerpivotgeek.com ](http://go.microsoft.com/fwlink/?LinkId=184241)。  
+ 如果您的目標是在離線狀態下使用 PowerPivot for SharePoint，在電腦上安裝網域控制站相當實用。 如需如何離線使用 PowerPivot 的詳細的指示，請參閱部落格文章，以 「 採取您在網路的 PowerPivot 伺服器 」 [ http://www.powerpivotgeek.com ](http://go.microsoft.com/fwlink/?LinkId=184241)。  
   
  **案例 4：伺服器不穩定**  
   

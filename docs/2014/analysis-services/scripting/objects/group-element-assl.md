@@ -1,5 +1,5 @@
 ---
-title: 群組元素 (ASSL) |Microsoft 文件
+title: 群組元素 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - Group element
 ms.assetid: 7df4ba90-b39f-4d8a-8db1-b73639a522a6
 caps.latest.revision: 33
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 6b10e557c91a27305ca0b9bff1d989e327b3b6f7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 8bb2883a3cb988a2e6f53c4eca0c0e16da4ff74d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36030877"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37215848"
 ---
 # <a name="group-element-assl"></a>Group 元素 (ASSL)
   定義繫結至屬性的成員群組。  
@@ -63,7 +63,7 @@ ms.locfileid: "36030877"
 |子元素|[Members](../collections/members-element-assl.md)、[Name](../properties/name-element-assl.md)|  
   
 ## <a name="remarks"></a>備註  
- 分析管理物件 (AMO) 物件模型中的對應元素是<xref:Microsoft.AnalysisServices.Group>。  
+ 在 「 分析管理物件 (AMO) 物件模型的對應元素是<xref:Microsoft.AnalysisServices.Group>。  
   
 ## <a name="see-also"></a>另請參閱  
  [UserDefinedGroupBinding 資料類型&#40;ASSL&#41;](../data-type/binding-data-type-assl.md)   
