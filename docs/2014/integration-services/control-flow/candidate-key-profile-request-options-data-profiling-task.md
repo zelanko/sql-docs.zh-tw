@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Data Profiling Task Editor
 ms.assetid: 8632dbc4-4394-4dc7-b19c-f9adeb21ba52
 caps.latest.revision: 25
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: ee10aa434e25dd2243133ceaea09921ddf32b000
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 1d3685d6827f8ed57394f6440b018935662fb9e8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36023383"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37266964"
 ---
 # <a name="candidate-key-profile-request-options-data-profiling-task"></a>候選索引鍵設定檔要求選項 (資料分析工作)
   您可以使用 [設定檔要求] 頁面的 [要求屬性] 窗格，針對要求窗格中選取的 [候選索引鍵設定檔要求] 設定選項。 候選索引鍵設定檔會報告資料行或資料行集合是否為選取之資料表的索引鍵或近似索引鍵。 這個設定檔也可協助您識別資料中的問題，例如潛在索引鍵資料行中重複的值。  
@@ -96,7 +96,7 @@ ms.locfileid: "36023383"
 > [!NOTE]  
 >  當您針對 [ColumnName] 使用 **(\*)** 萬用字元時，[CompareOptions] 就是唯讀的，而且它會設定為 [預設值] 設定。  
   
-|ReplTest1|描述|  
+|值|描述|  
 |-----------|-----------------|  
 |**預設值**|根據來源資料表中的資料行定序來排序和比較資料。|  
 |**BinarySort**|根據針對每個字元所定義的位元模式來排序和比較資料。 二進位排序順序為區分大小寫和區分腔調字。 二進位也是最快的排序順序。|  
@@ -104,7 +104,7 @@ ms.locfileid: "36023383"
   
  如果您選取 [DictionarySort]，也可以選取下表中所列的任何選項組合。 根據預設，系統不會選取這些額外的選項。  
   
-|ReplTest1|描述|  
+|值|描述|  
 |-----------|-----------------|  
 |**IgnoreCase**|指定比較是否區分大寫與小寫字母。 如果設定此選項，則字串比較會忽略大小寫。 例如，「ABC」與「abc」視為一樣。|  
 |**IgnoreNonSpace**|指定比較是否區分空格字元與變音。 如果設定此選項，則比較會忽略變音符號。 例如，"å" 等於 "a"。|  
@@ -119,7 +119,7 @@ ms.locfileid: "36023383"
  **ThresholdSetting**  
  這個屬性具有下表中所列的選項。 這個屬性的預設值為 [已指定]。  
   
-|ReplTest1|描述|  
+|值|描述|  
 |-----------|-----------------|  
 |**無**|沒有指定臨界值。 不論索引鍵強度為何，系統都會報告此值。|  
 |**已指定**|臨界值是在 [KeyStrengthThreshold] 中指定的。 只有當索引鍵強度大於臨界值時，系統才會報告此值。|  
@@ -132,7 +132,7 @@ ms.locfileid: "36023383"
  指定可在輸出中報告的候選索引鍵違規數目上限。 這個屬性的預設值為 100。 當 [精確] 選取成為 [KeyStrengthThresholdSetting] 時，這個選項會停用。  
   
 ## <a name="see-also"></a>另請參閱  
- [資料分析工作編輯器&#40;[一般] 頁面&#41;](../general-page-of-integration-services-designers-options.md)   
+ [資料分析工作編輯器&#40;一般頁面&#41;](../general-page-of-integration-services-designers-options.md)   
  [單一資料表快速分析表單 &#40;資料分析工作&#41;](single-table-quick-profile-form-data-profiling-task.md)  
   
   

@@ -1,28 +1,27 @@
 ---
-title: AlwaysOn 可用性群組 (SQL Server) 的 TRANSACT-SQL 陳述式的概觀 |Microsoft 文件
+title: AlwaysOn 可用性群組 (SQL Server) 的 TRANSACT-SQL 陳述式概觀 |Microsoft Docs
 ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Availability Groups [SQL Server], about
 - Availability Groups [SQL Server], Transact-SQL statements
 ms.assetid: 184d0a81-2259-4db9-9d0d-01aac0b502c8
 caps.latest.revision: 20
-author: MikeRayMSFT
-ms.author: mikeray
-manager: jhubbard
-ms.openlocfilehash: 3df6192a476847b1e40ebfb6ac1d3321979a3c27
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 651f340e323dd793a831ccb54d29ec875d40dc83
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36030361"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37225938"
 ---
 # <a name="overview-of-transact-sql-statements-for-alwayson-availability-groups-sql-server"></a>AlwaysOn 可用性群組的 Transact-SQL 陳述式概觀 (SQL Server)
   本主題介紹支援部署 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 以及建立及管理給定可用性群組、可用性複本及可用性資料庫的 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 陳述式。  
@@ -36,7 +35,7 @@ ms.locfileid: "36030361"
 ##  <a name="CreateAG"></a> CREATE AVAILABILITY GROUP  
  [CREATE AVAILABILITY GROUP](/sql/t-sql/statements/create-availability-group-transact-sql) 會建立新的可用性群組並選擇性地建立可用性群組接聽程式。 您至少必須指定本機伺服器執行個體，這會成為初始主要複本。 您最多也可以選擇指定四個次要複本。  
   
- 在您要裝載新可用性群組之初始主要複本的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體上執行 CREATE AVAILABILITY GROUP。 此伺服器執行個體必須位於 Windows Server 容錯移轉叢集 (WSFC) 節點 (如需詳細資訊，請參閱[必要條件、 限制和建議的 AlwaysOn 可用性群組&#40;SQL Server&#41;](prereqs-restrictions-recommendations-always-on-availability.md)。  
+ 在您要裝載新可用性群組之初始主要複本的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體上執行 CREATE AVAILABILITY GROUP。 此伺服器執行個體必須位於的 Windows Server 容錯移轉叢集 (WSFC) 節點 (如需詳細資訊，請參閱 <<c0> [ 必要條件、 限制和建議的 AlwaysOn 可用性群組&#40;SQL Server&#41;](prereqs-restrictions-recommendations-always-on-availability.md)。</c0>  
   
 ##  <a name="AlterAG"></a> ALTER AVAILABILITY GROUP  
  [ALTER AVAILABILITY GROUP](/sql/t-sql/statements/alter-availability-group-transact-sql) 支援變更現有的可用性群組或可用性群組接聽程式，並支援可用性群組容錯移轉。  

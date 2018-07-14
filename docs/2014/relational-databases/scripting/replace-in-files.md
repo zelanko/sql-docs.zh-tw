@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vs.findreplace.replaceinfiles
 - vs.replaceinfiles
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - Replace in Files dialog box
 ms.assetid: 51191c0a-e022-41d6-8473-5cb3c6596862
 caps.latest.revision: 20
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: b0a9c5ccb6d6e83f6ae0b0270158269fe85bfda1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: df2f8ca6111aea1195d42539edbe859324594b42
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36031844"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37188005"
 ---
 # <a name="replace-in-files"></a>檔案中取代
   [尋找和取代] 視窗的 [檔案中取代] 索引標籤，可以讓您在指定檔案集的程式碼中搜尋字串或運算式，並變更部分或所有找到的相符結果。 找到的相符結果與採取的動作會列在 [結果選項] 所選取的 [尋找結果] 視窗中。  

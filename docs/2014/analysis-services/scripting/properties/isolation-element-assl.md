@@ -1,5 +1,5 @@
 ---
-title: Isolation 元素 (ASSL) |Microsoft 文件
+title: Isolation 元素 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -20,18 +20,18 @@ helpviewer_keywords:
 - Isolation element
 ms.assetid: 28c98c6f-668e-4547-8d25-127cc3995a7d
 caps.latest.revision: 13
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: cdcbf79ccd1281c9f3dbaa109b3c77214ced22bf
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: a21593d360342dc703e1da45d50b4ddff74241a7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36030881"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37257224"
 ---
 # <a name="isolation-element-assl"></a>Isolation 元素 (ASSL)
-  表示衍生自元素的隔離層級[DataSource](../data-type/datasource-data-type-assl.md)資料型別。  
+  指出衍生自元素的隔離等級[DataSource](../data-type/datasource-data-type-assl.md)資料型別。  
   
 ## <a name="syntax"></a>語法  
   
@@ -62,7 +62,7 @@ ms.locfileid: "36030881"
 ## <a name="remarks"></a>備註  
  這個元素的值限制為下表所列的其中一個字串。  
   
-|ReplTest1|描述|  
+|值|描述|  
 |-----------|-----------------|  
 |*ReadCommitted*|指定陳述式不能讀取其他交易已修改而尚未認可的資料。 這個選項可避免中途讀取。 其他交易可以變更目前交易內部個別陳述式之間的資料。 這會導致不可重複讀取或虛設項目資料。 此值為 `Isolation` 元素的預設值。|  
 |*快照式*|指定交易中任何陳述式所讀取的資料，都是交易啟動時就存在之資料的交易一致性版本。 交易只能查看交易啟動之前所認可的資料修改。 其他交易在目前交易開始之後所做的資料修改將不會顯示給在目前交易中執行的陳述式。 結果是交易中的陳述式會取得已認可之資料的快照集，如同資料在交易啟動時的狀態。|  

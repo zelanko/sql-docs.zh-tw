@@ -1,5 +1,5 @@
 ---
-title: PropertyIndex 屬性 （SqlServiceAdvancedProperty 類別） |Microsoft 文件
+title: PropertyIndex 屬性 （SqlServiceAdvancedProperty 類別） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - PropertyIndex property
 ms.assetid: b18b45a2-e187-44f5-a8c9-26fd9828b6c6
 caps.latest.revision: 33
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 81dca1e193545f060b3030c4c85e0f9765ee9b67
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+ms.openlocfilehash: 1fb6d43c9abf50b225e60bc1aca4fef99b44bef8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36031185"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37213038"
 ---
 # <a name="propertyindex-property-sqlserviceadvancedproperty-class"></a>PropertyIndex 屬性 (SqlServiceAdvancedProperty 類別)
   取得或設定指定進階屬性位置的屬性索引，該進階屬性位於屬於參考之服務的進階屬性陣列中。  

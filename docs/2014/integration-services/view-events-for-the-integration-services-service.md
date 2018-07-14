@@ -1,5 +1,5 @@
 ---
-title: 檢視 Integration Services 服務的事件 |Microsoft 文件
+title: 檢視 Integration Services 服務的事件 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - events [Integration Services]
 - service [Integration Services], events
 - Integration Services service, events
 ms.assetid: 37e23946-10d1-4116-8568-8fd24067102e
 caps.latest.revision: 20
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 24898f1b581b4a417c1ecb4f44ac5db08f11ce02
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 98743289cdbb1066f7ce62acda9a4f3296115b88
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36030816"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37201448"
 ---
 # <a name="view-events-for-the-integration-services-service"></a>檢視 Integration Services 服務的事件
   目前有兩個工具可讓您用來檢視 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 服務的事件：  
@@ -68,6 +68,6 @@ ms.locfileid: "36030816"
   
 ## <a name="see-also"></a>另請參閱  
  [管理 Integration Services 服務](../../2014/integration-services/manage-the-integration-services-service.md)   
- [加入資料流程效能計數器的記錄檔](performance/performance-counters.md)  
+ [新增資料流程效能計數器的記錄](performance/performance-counters.md)  
   
   

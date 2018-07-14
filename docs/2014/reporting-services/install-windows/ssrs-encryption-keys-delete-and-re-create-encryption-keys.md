@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - re-creating encryption keys
 - encryption keys [Reporting Services]
@@ -20,13 +20,13 @@ ms.assetid: 201afe5f-acc9-4a37-b5ec-121dc7df2a61
 caps.latest.revision: 8
 author: markingmyname
 ms.author: maghan
-manager: jhubbard
-ms.openlocfilehash: 4d13e42913481fa0470078a26615ab9139447b9b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 710ccc6a332e040989142eb9e9252b660982b044
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36030241"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37192998"
 ---
 # <a name="delete-and-re-create-encryption-keys--ssrs-configuration-manager"></a>刪除和重新建立加密金鑰 (SSRS 組態管理員)
   刪除和重新建立加密金鑰是例行加密金鑰維護範圍之外的活動。 執行這些工作是為了因應報表伺服器所受的特定威脅，或者當您無法存取報表伺服器資料庫時的最後手段。  
@@ -52,7 +52,7 @@ ms.locfileid: "36030241"
   
     2.  開啟 rsreportserver.config 檔案。  
   
-    3.  如`IsWebServiceEnabled`屬性，指定`False`，然後儲存您的變更。  
+    3.  針對`IsWebServiceEnabled`屬性，指定`False`，然後儲存您的變更。  
   
 2.  啟動 Reporting Services 組態工具，然後連接到您要設定的報表伺服器執行個體。  
   
@@ -113,7 +113,7 @@ ms.locfileid: "36030241"
   
 1.  針對每個共用資料來源，您必須重新輸入連接字串。  
   
-2.  針對使用預存認證的每個報表與共用資料來源，您必須重新輸入使用者名稱與密碼，然後儲存。 如需詳細資訊，請參閱[指定認證和報表資料來源的連接資訊](../../integration-services/connection-manager/data-sources.md)中[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]線上叢書 》。  
+2.  針對使用預存認證的每個報表與共用資料來源，您必須重新輸入使用者名稱與密碼，然後儲存。 如需詳細資訊，請參閱 <<c0> [ 指定的認證和報表資料來源的連接資訊](../../integration-services/connection-manager/data-sources.md)在[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]線上叢書 》。  
   
 3.  針對每個資料驅動訂閱，開啟每個訂閱，並重新輸入訂閱資料庫的認證。  
   

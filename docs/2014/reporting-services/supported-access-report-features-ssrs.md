@@ -1,5 +1,5 @@
 ---
-title: 支援的 Access 報表功能 (SSRS) |Microsoft 文件
+title: 支援的 Access 報表功能 (SSRS) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Report Designer [Reporting Services], Access reports
 - functions [Reporting Services]
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - modules [Reporting Services]
 ms.assetid: 7ffec331-6365-4c13-8e58-b77a48cffb44
 caps.latest.revision: 43
-author: douglaslM
+author: maggiesmsft
 ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: a3bb7caa0d570b83bb8b487a42fa2364731602d1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: b2beb25cee62fda3e3f71290d0f91a0a8954feed
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36030235"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37268474"
 ---
 # <a name="supported-access-report-features-ssrs"></a>支援的 Access 報表功能 (SSRS)
   當您將報表匯入報表設計師時，匯入程序會將 [!INCLUDE[msCoName](../includes/msconame-md.md)] Access 報表轉換成 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 報表定義語言 (RDL) 檔案。 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 支援多種 Access 的功能；但因為 Access 及 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 之間的差異，會稍微修改或不支援某些項目。 此主題描述 Access 報表功能如何轉換成 RDL。  
@@ -53,7 +53,7 @@ ms.locfileid: "36030235"
  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 支援 OLE DB 資料來源，例如 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]。 如果從 Access 專案 (.adp) 檔案匯入報表，資料來源的連接字串會從 .adp 檔案的連接字串取得。 如果從 Access 資料庫 (.mdb 或 .accdb) 檔案匯入報表，連接字串可能會指向 Access 資料庫，因此您可能必須在報表匯入後更正它。 如果 Access 報表的資料來源是查詢，查詢資訊會不經修改地直接儲存到 RDL。 如果 Access 報表的資料來源是資料表，轉換程序會根據該資料表名稱和資料表中的欄位建立查詢。  
   
 ## <a name="reports-with-custom-modules"></a>包含自訂模組的報表  
- 如果沒有自訂[!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[vbprvb](../includes/vbprvb-md.md)]模組內包含的程式碼不會被轉換。 如果報表設計師在匯入程序期間所遇到程式碼，會產生警告，並顯示在**工作清單**視窗。  
+ 如果沒有自訂[!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[vbprvb](../includes/vbprvb-md.md)]模組內包含的程式碼則不會轉換。 如果報表設計師匯入程序中遇到程式碼，會產生警告，並顯示在**工作清單**視窗。  
   
 ## <a name="report-controls"></a>報表控制項  
  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 支援下列 Access 控制項，且會將它們包含於轉換的報表定義中。  
@@ -71,7 +71,7 @@ ms.locfileid: "36030235"
 |CustomControl|ListBox|ObjectFrame|OptionButton|  
 |TabControl|ToggleButton|||  
   
- 如果報表設計師會遇到這些控制項的任何匯入程序期間，會產生警告，並顯示在**工作清單**視窗。  
+ 報表設計師中遇到這些控制項在匯入程序期間，如果會產生警告，並顯示在**工作清單**視窗。  
   
  其他控制項 (例如 ActiveX 和 Office Web 元件) 不會匯入。 例如，如果 Access 報表包含 OWC 圖表控制項，匯入報表時，將不會轉換此控制項。  
   
@@ -298,7 +298,7 @@ ms.locfileid: "36030235"
  在 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 報表定義中，矩形可以包含其他報表項目。 任何大於報表項目或重疊區域超過百分之 90 的矩形，都會變成報表項目的容器。  
   
 ## <a name="bitmaps"></a>點陣圖  
- 匯入報表時，不論點陣圖的初始格式為何，所有內嵌於報表的點陣圖都會轉換成 .bmp 格式。 例如，如果您的報表包含 .jpg 和 .gif 檔案，隨報表匯入的結果資源都會成為 .bmp 檔案。 點陣圖會以內嵌影像儲存在報表中。 如需有關內嵌影像的資訊，請參閱[映像&#40;報表產生器及 SSRS&#41;](report-design/images-report-builder-and-ssrs.md)。  
+ 匯入報表時，不論點陣圖的初始格式為何，所有內嵌於報表的點陣圖都會轉換成 .bmp 格式。 例如，如果您的報表包含 .jpg 和 .gif 檔案，隨報表匯入的結果資源都會成為 .bmp 檔案。 點陣圖會以內嵌影像儲存在報表中。 如需有關內嵌影像的資訊，請參閱[影像&#40;報表產生器及 SSRS&#41;](report-design/images-report-builder-and-ssrs.md)。  
   
 ## <a name="other-considerations"></a>其他考量  
  除了以上項目之外，下列資訊也適用於從 Access 匯入的報表：  

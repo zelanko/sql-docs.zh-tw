@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.webservicetask.f1
 helpviewer_keywords:
@@ -17,13 +17,13 @@ ms.assetid: 5c7206f1-7d6a-4923-8dff-3c4912da4157
 caps.latest.revision: 56
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 7cc0dcb93f5183b82104111b4fb6f045841bf08b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e39fac7364bd1df6c88bd59b32de5e0fb76b0c92
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36031055"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37209478"
 ---
 # <a name="web-service-task"></a>Web 服務工作
   「Web 服務」工作執行一個 Web 服務方法。 您可將「Web 服務」工作用於下列用途：  

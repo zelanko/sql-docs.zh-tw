@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - connections [Reporting Services], configuring
 - connections [Reporting Services], accounts
@@ -19,16 +19,18 @@ ms.assetid: 753c2542-0e97-4d8f-a5dd-4b07a5cd10ab
 caps.latest.revision: 32
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 6ee89d1d6b01fe39f3798eef9f39c1ca460cc799
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 71382e58d8709c2a0015e40819b74638413441e9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36029984"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37266084"
 ---
 # <a name="authentication-with-the-report-server"></a>使用報表伺服器驗證
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] (SSRS) 會提供多種可設定選項，便於針對報表伺服器進行使用者及用戶端應用程式的驗證。 依預設，報表伺服器預設會使用 Windows 整合式驗證，以及假設用戶端及網路資源全都位於相同網域或信任網域的信任關係。 視網路拓撲及組織需求而定，您可以自訂用於 Windows 整合式驗證的驗證通訊協定，以及使用基本驗證，或是使用所提供的表單型驗證延伸模組。 每一個驗證類型都可以個別開啟或關閉。 如果您希望報表伺服器接受多種類型的要求，可以啟用一種以上的驗證。  
+  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
+  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] (SSRS) 會提供多種可設定選項，便於針對報表伺服器進行使用者及用戶端應用程式的驗證。 依預設，報表伺服器預設會使用 Windows 整合式驗證，以及假設用戶端及網路資源全都位於相同網域或信任網域的信任關係。 視網路拓撲及組織需求而定，您可以自訂用於 Windows 整合式驗證的驗證通訊協定，以及使用基本驗證，或是使用所提供的表單型驗證延伸模組。 每一個驗證類型都可以個別開啟或關閉。 如果您希望報表伺服器接受多種類型的要求，可以啟用一種以上的驗證。  
   
 > [!NOTE]  
 >  在舊版的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 中，IIS 支援所有的驗證類型。 從 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 版本開始，不再使用 IIS。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 在內部處理所有驗證要求。  
@@ -57,7 +59,7 @@ ms.locfileid: "36029984"
 |Digest|[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]不支援此項目。|  
   
 ## <a name="configuration-of-authentication-settings"></a>設定驗證設定  
- 當保留報表伺服器 URL 時，會將驗證設定設定為使用預設安全性。 如果您錯誤地修改這些設定，報表伺服器將會針對無法驗證的 HTTP 要求傳回「HTTP 401 拒絕存取」錯誤。 選擇驗證類型時，您必須已經知道您的網路支援 Windows 驗證的方式。 至少必須指定一個驗證類型。 可以針對 RSWindows 指定多個驗證類型。 RSWindows 驗證類型 (也就是`RSWindowsBasic`， `RSWindowsNTLM`， `RSWindowsKerberos`，和**RSWindowsNegotiate**) 與自訂互斥。  
+ 當保留報表伺服器 URL 時，會將驗證設定設定為使用預設安全性。 如果您錯誤地修改這些設定，報表伺服器將會針對無法驗證的 HTTP 要求傳回「HTTP 401 拒絕存取」錯誤。 選擇驗證類型時，您必須已經知道您的網路支援 Windows 驗證的方式。 至少必須指定一個驗證類型。 可以針對 RSWindows 指定多個驗證類型。 RSWindows 驗證類型 (亦即`RSWindowsBasic`， `RSWindowsNTLM`， `RSWindowsKerberos`，以及**RSWindowsNegotiate**) 與 Custom 互斥。  
   
 > [!IMPORTANT]  
 >  Reporting Services 不會驗證您所指定的設定來判斷它們對於您的運算環境是否正確。 預設安全性無法在您的安裝中運作，或是您指定的組態設定對於安全性基礎結構無效，都是有可能發生的事情。 因此，您一定要先在受到控制的測試環境中仔細測試您的報表伺服器部署，然後才可以將它提供給較大的組織使用。  
@@ -89,8 +91,8 @@ ms.locfileid: "36029984"
  (建立-和-管理-角色-assignments.md)   
  [指定報表資料來源的認證及連線資訊](../report-data/specify-credential-and-connection-information-for-report-data-sources.md)  
  [實作安全性延伸模組](../extensions/security-extension/implementing-a-security-extension.md)   
- [原生模式報表伺服器上設定 SSL 連接](configure-ssl-connections-on-a-native-mode-report-server.md)   
- [設定報表產生器存取](../report-server/configure-report-builder-access.md)   
+ [在原生模式報表伺服器上設定 SSL 連線](configure-ssl-connections-on-a-native-mode-report-server.md)   
+ [設定報表產生器的存取](../report-server/configure-report-builder-access.md)   
  [安全性延伸模組概觀](../extensions/security-extension/security-extensions-overview.md)   
  [Reporting Services 中的驗證](../extensions/security-extension/authentication-in-reporting-services.md)   
  [Reporting Services 中的授權](../extensions/security-extension/authorization-in-reporting-services.md)  

@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: be78d051-0d56-46d3-bb89-327e218dadd6
 caps.latest.revision: 8
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 08040fafaa66570d3c0f2023bc1a66d0f82c1d4d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: 2ae32c1e29ec8252326e353e6b62f8b6b6f12b2b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36030332"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37227818"
 ---
 # <a name="data-quality-matching-in-the-mds-add-in-for-excel"></a>適用於 Excel 的 MDS 增益集中的資料品質比對
   經過一段時間後，您需要將更多的資料加入至 MDS 儲存機制。 在加入資料之前，比較新資料與已在 MDS 中管理的資料，有助於確保不會加入重複或不精準的資料。  
@@ -52,7 +52,7 @@ ms.locfileid: "36030332"
   
 |工作描述|主題|  
 |----------------------|-----------|  
-|結合外部資料與 MDS 管理的資料，準備進行比較。|[合併資料&#40;MDS 增益集的 Excel&#41;](combine-data-mds-add-in-for-excel.md)|  
+|結合外部資料與 MDS 管理的資料，準備進行比較。|[結合資料&#40;MDS 增益集的 Excel&#41;](combine-data-mds-add-in-for-excel.md)|  
 |使用 DQS 知識來尋找資料中的相似度。|[比對相似資料 &#40;適用於 Excel 的 MDS 增益集&#41;](match-similar-data-mds-add-in-for-excel.md)|  
   
 ## <a name="related-content"></a>相關內容  

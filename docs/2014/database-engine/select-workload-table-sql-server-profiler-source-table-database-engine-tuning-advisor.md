@@ -1,5 +1,5 @@
 ---
-title: SQL Server Profiler-來源資料表 Database Engine Tuning Advisor-選取工作負載資料表 |Microsoft 文件
+title: SQL Server Profiler-來源資料表-Database Engine Tuning Advisor-選取工作負載資料表 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.pro.replay.tools.sourcetable.f1
 helpviewer_keywords:
@@ -16,17 +16,17 @@ helpviewer_keywords:
 - Source Table dialog box
 ms.assetid: 51185be7-7092-480a-a52c-cf7786c4a0a0
 caps.latest.revision: 19
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 8b5ccfddb032fb3833e517632290cfdf7d82e643
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 8c371644630c24946b4acc50d77916fb8d0fd4a4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36029869"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37285684"
 ---
-# <a name="sql-server-profiler---source-table-database-engine-tuning-advisor---select-workload-table"></a>SQL Server Profiler-來源資料表 Database Engine Tuning Advisor-選取工作負載資料表
+# <a name="sql-server-profiler---source-table-database-engine-tuning-advisor---select-workload-table"></a>SQL Server Profiler-來源資料表-Database Engine Tuning Advisor-選取工作負載資料表
   Microsoft [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] 和 [!INCLUDE[ssDE](../includes/ssde-md.md)] Tuning Advisor 使用此對話方塊來選取資料表。  
   
  在 [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] 中，使用 [來源資料表] 對話方塊以指定追蹤資料表的來源資料表。 此資料表是追蹤載入的來源，並且可以檢視或使用其內容來重新執行追蹤。  

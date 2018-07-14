@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - viewing alerts
 - Queue Reader Agent, alerts
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - Snapshot Agent, alerts
 ms.assetid: 8c42e523-7020-471d-8977-a0bd044b9471
 caps.latest.revision: 38
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 5d388688f07e27f71d2654e8745a8a7d1befa405
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 798cad5ea58d94d8194b823c8b3940d3f79ccaae
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36030754"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37251850"
 ---
 # <a name="use-alerts-for-replication-agent-events"></a>使用複寫代理程式事件的警示
   [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 和 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent 提供了使用警示來監視事件 (如複寫代理程式事件) 的方法。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent 會監視 Windows 應用程式記錄檔中與警示相關的事件。 如果發生這類事件， [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent 會藉由執行已經定義的工作，及 (或) 向指定操作員傳送電子郵件或呼叫器訊息，進行自動回應。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 包含一組預先定義的複寫代理程式警示，您可以設定這類警示來執行工作和 (或) 通知操作員。 如需定義要執行之工作的詳細資訊，請參閱本主題的「自動化回應警示」一節。  
@@ -49,7 +49,7 @@ ms.locfileid: "36030754"
 |20578|**複寫: 代理程式自訂關閉**|||  
 |22815|**點對點衝突偵測警示**|散發代理程式在嘗試將變更套用到對等節點上時偵測到衝突。|是|  
   
- 除了這些警示外，複寫監視器還提供與狀態和效能相關的警告與警示集合。 如需詳細資訊，請參閱[Set Thresholds and Warnings，複寫監視器中的](../monitor/set-thresholds-and-warnings-in-replication-monitor.md)警示基礎結構。 如需詳細資訊，請參閱[建立使用者定義的事件](../../../ssms/agent/create-a-user-defined-event.md)。  
+ 除了這些警示外，複寫監視器還提供與狀態和效能相關的警告與警示集合。 如需詳細資訊，請參閱 < [Set Thresholds and Warnings in Replication Monitor](../monitor/set-thresholds-and-warnings-in-replication-monitor.md)警示基礎結構。 如需詳細資訊，請參閱[建立使用者定義的事件](../../../ssms/agent/create-a-user-defined-event.md)。  
   
  **若要設定預先定義的複寫警示**  
   

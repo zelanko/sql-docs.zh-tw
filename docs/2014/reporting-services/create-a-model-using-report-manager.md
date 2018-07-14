@@ -1,5 +1,5 @@
 ---
-title: 使用報表管理員建立模型 |Microsoft 文件
+title: 使用報表管理員建立模型 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - report models [Reporting Services], creating
 - Report Manager [Reporting Services], model creation
@@ -16,13 +16,13 @@ ms.assetid: 8e5d2bd3-48ec-45f3-afee-6d86797c8f28
 caps.latest.revision: 28
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 9f4de8368cadbc56819cd22c65892cbf143ae02c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e3a4f951a901361e47e1582146d306955da0e9bb
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36029790"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37175087"
 ---
 # <a name="create-a-model-using-report-manager"></a>使用報表管理員建立模型
   您可以使用報表管理員，從 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Cube、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 資料庫或 Oracle 資料庫產生模型。 報表模型是從在報表伺服器上發行的共用資料來源產生的。 如果您還沒有共用資料來源，則必須建立一個。  
@@ -30,7 +30,7 @@ ms.locfileid: "36029790"
  您產生的報表模型是完全以共用資料來源的結構描述為基礎。 您無法選擇模型中要包含資料來源的哪些部分，也無法編輯產生之模型的規則或中繼資料。 但是，您可以在產生模型後設定模型的屬性，以及定義限制對模型全部或部分之存取的角色指派。  
   
 > [!NOTE]  
->  使用報表管理員所產生的 Oracle 模型或[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[offSPServ](../includes/offspserv-md.md)] 2007年[!INCLUDE[SPS2010](../includes/sps2010-md.md)]會包含屬於使用者帳戶用來連接到 Oracle 資料來源的結構描述的資料庫物件。 使用者帳戶名稱會在資料來源屬性認證中指定。  
+>  Oracle 為基礎的模型產生使用報表管理員或[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[offSPServ](../includes/offspserv-md.md)] 2007年[!INCLUDE[SPS2010](../includes/sps2010-md.md)]會包含屬於用來連接到 Oracle 資料來源的使用者帳戶的結構描述的資料庫物件。 使用者帳戶名稱會在資料來源屬性認證中指定。  
   
 ### <a name="to-create-a-new-data-source-for-a-report-model-using-report-manager"></a>使用報表管理員建立報表模型的新資料來源  
   
@@ -52,7 +52,7 @@ ms.locfileid: "36029790"
   
     -   Windows 驗證：如果您要作業系統驗證 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 使用者，請選取此選項。 此選項允許 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 使用 Windows 安全性功能 (例如密碼加密)，來驗證使用者。 強烈建議您選取此選項。  
   
-    -   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 驗證： 如果您想要使用的使用者，請選取此選項[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]您建立的登入帳戶。 使用者必須提供有效的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 登入名稱和密碼。  
+    -   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 驗證： 如果您想要使用的使用者，請選取此選項[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]您所建立的登入帳戶。 使用者必須提供有效的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 登入名稱和密碼。  
   
         > [!CAUTION]  
         >  可能的話，請使用 Windows 驗證。  

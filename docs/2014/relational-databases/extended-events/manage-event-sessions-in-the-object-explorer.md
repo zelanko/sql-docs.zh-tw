@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 16849e38-d3fb-414d-8dcb-797b5ffce6ee
 caps.latest.revision: 10
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: a72a02bf0568a393aa9510b2982c13b02086ead2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: d13b3e167d4b8d5d8c099536d85669591658dffe
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36029827"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37279704"
 ---
 # <a name="manage-event-sessions-in-the-object-explorer"></a>在物件總管中管理事件工作階段
   本主題將討論您可以在 **[物件總管]** 中採取以影響「擴充事件」的動作：  
@@ -132,7 +132,7 @@ STATE = STOP
  當您刪除事件工作階段時，便會移除所有組態資訊，而且工作階段定義不會再出現在 sys.server_event_sessions 目錄檢視中。  
   
 > [!NOTE]  
->  system_health 和 AlwaysOn_health 隨附於[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]; 請勿刪除它們。 system_health 預設為啟用 (如需詳細資訊，請參閱 [使用 system_health 工作階段](use-the-ssms-xe-profiler.md))。 AlwaysOn_health 預設為關閉。 這些工作階段會收集可用於診斷效能問題的資料。  
+>  system_health 和 AlwaysOn_health 隨附[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]; 請勿刪除它們。 system_health 預設為啟用 (如需詳細資訊，請參閱 [使用 system_health 工作階段](use-the-ssms-xe-profiler.md))。 AlwaysOn_health 預設為關閉。 這些工作階段會收集可用於診斷效能問題的資料。  
   
  若要刪除「擴充事件」工作階段，您必須擁有 ALTER ANY EVENT SESSION 權限。  
   

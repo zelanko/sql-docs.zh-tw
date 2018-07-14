@@ -1,5 +1,5 @@
 ---
-title: 使用 Analysis Services 開發指令碼語言 (ASSL) |Microsoft 文件
+title: 使用 Analysis Services 開發指令碼語言 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -15,22 +15,22 @@ helpviewer_keywords:
 - ASSL
 ms.assetid: ce9aca4d-b7ad-451e-bb7f-20c2b0c03f29
 caps.latest.revision: 11
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: e7cc4d26ca41b36bc1472417d64702345911ceec
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 7b68282f6327ac52cdf47bb761c764609292d7c3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36031529"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37185174"
 ---
 # <a name="developing-with-analysis-services-scripting-language-assl"></a>使用 Analysis Services 指令碼語言 (ASSL) 開發
   Analysis Services 指令碼語言 (ASSL) 是 XMLA 的延伸模組，它會加入物件定義語言和命令語言，以便直接在伺服器上建立及管理 Analysis Services 結構。 您可以在自訂應用程式中使用 ASSL，以便透過 XMLA 通訊協定與 Analysis Services 通訊。 ASSL 是由兩個部分所組成：  
   
 -   資料定義語言 (DDL) 或是物件定義語言會定義及描述 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 的執行個體，以及執行個體包含的資料庫與資料庫物件。  
   
--   將動作命令 (例如 `Create`、`Alter` 或 `Process`) 傳送到 Analysis Services 執行個體的命令語言。 這個命令語言述[XML for Analysis &#40;XMLA&#41;參考](../../xmla/xml-for-analysis-xmla-reference.md)。  
+-   將動作命令 (例如 `Create`、`Alter` 或 `Process`) 傳送到 Analysis Services 執行個體的命令語言。 這個命令語言會討論[XML for Analysis &#40;XMLA&#41;參考](../../xmla/xml-for-analysis-xmla-reference.md)。  
   
  若要檢視在 [!INCLUDE[ssBIDevStudio](../../../includes/ssbidevstudio-md.md)] 中描述多維度方案的 ASSL，您可以在專案層級使用 [檢視程式碼] 命令。 您也可以在 [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)] 中使用 XMLA 查詢編輯器來建立或編輯 ASSL 指令碼。 您建立的指令碼可在伺服器上用來管理物件或執行命令。  
   

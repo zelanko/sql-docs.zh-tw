@@ -5,21 +5,20 @@ ms.date: 01/25/2016
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-backup-restore
+ms.technology: backup-restore
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 11be89e9-ff2a-4a94-ab5d-27d8edf9167d
 caps.latest.revision: 14
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 92af4cfa0c3ea71693932b7301feed71d1fc1327
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: ee9bf066e246dec2432b4a0874a3f3d99c7d2779
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36030559"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37264874"
 ---
 # <a name="sql-server-backup-to-url"></a>SQL Server 備份至 URL
   本主題介紹使用 Windows Azure BLOB 儲存體服務做為備份目的地所需的概念、需求及元件。 使用磁碟或磁帶時，備份和還原功能相同或類似，只有些許的差異。 這些差異在於許多顯而易見的例外狀況，本主題中將內含某些程式碼範例。  
@@ -56,9 +55,9 @@ ms.locfileid: "36030559"
 -   用來發出 BACKUP 或 RESTORE 命令的使用者帳戶應該位於擁有 **改變任何認證** 權限的 **db_backup 運算子** 資料庫角色中。  
   
 ###  <a name="intorkeyconcepts"></a> 重要元件和概念簡介  
- 下列兩節將介紹 Windows Azure Blob 儲存體服務中，而[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]備份至或自 Windows Azure Blob 儲存體服務還原時使用的元件。 為了備份至 Windows Azure Blob 儲存體服務或從中還原，請務必了解這些元件以及它們之間的互動方式。  
+ 下列兩節將介紹 Windows Azure Blob 儲存體服務，而[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]備份至或從 Windows Azure Blob 儲存體服務進行還原時使用的元件。 為了備份至 Windows Azure Blob 儲存體服務或從中還原，請務必了解這些元件以及它們之間的互動方式。  
   
- 建立 Windows Azure 帳戶是進行此程序的第一步。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用**Windows Azure 儲存體帳戶名稱**及其**便捷鍵**值來進行驗證和讀寫 blob 至儲存體服務。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認證會儲存這項驗證資訊，並且在備份或還原作業期間使用。 如需建立儲存體帳戶和執行簡單還原的完整逐步解說，請參閱＜ [教學課程：使用 Windows Azure 儲存體服務進行 SQL Server 備份與還原](http://go.microsoft.com/fwlink/?LinkId=271615)＞。  
+ 建立 Windows Azure 帳戶是進行此程序的第一步。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會使用**Windows Azure 儲存體帳戶名稱**及其**便捷鍵**值來進行驗證和讀寫 blob 至儲存體服務。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認證會儲存這項驗證資訊，並且在備份或還原作業期間使用。 如需建立儲存體帳戶和執行簡單還原的完整逐步解說，請參閱＜ [教學課程：使用 Windows Azure 儲存體服務進行 SQL Server 備份與還原](http://go.microsoft.com/fwlink/?LinkId=271615)＞。  
   
  ![對應至 sql 認證的儲存體帳戶](../../tutorials/media/backuptocloud-storage-credential-mapping.gif "對應至 sql 認證的儲存體帳戶")  
   
@@ -67,7 +66,7 @@ ms.locfileid: "36030559"
   
  **容器** ：容器會提供一組 Blob 的群組，而且可以儲存不限數目的 Blob。 若要將 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 備份寫入 Windows Azure Blob 服務，您至少必須建立根容器。  
   
- **Blob** ：任何類型和大小的檔案。 Windows Azure Blob 儲存體服務可以儲存的 Blob 類型有兩種：區塊和分頁 Blob。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] backup 使用分頁 Blob 做為 Blob 類型。 使用下列 URL 格式來定址 blob: https://\<儲存體帳戶 >.blob.core.windows.net/\<容器 > /\<blob >  
+ **Blob** ：任何類型和大小的檔案。 Windows Azure Blob 儲存體服務可以儲存的 Blob 類型有兩種：區塊和分頁 Blob。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 備份會使用分頁 Blob 做為 Blob 類型。 使用下列 URL 格式來定址 blob: https://\<儲存體帳戶 >.blob.core.windows.net/\<容器 > /\<blob >  
   
  ![Azure Blob 儲存體](../../database-engine/media/backuptocloud-blobarchitecture.gif "Azure Blob 儲存體")  
   
@@ -81,11 +80,11 @@ ms.locfileid: "36030559"
 > [!WARNING]  
 >  如果您選擇複製並上傳備份檔案至 Windows Azure Blob 儲存體服務，請使用分頁 Blob 做為儲存體選項。 不支援從區塊 Blob 還原。 從區塊 Blob 類型進行 RESTORE 會失敗，並出現錯誤。  
   
- 以下是 URL 值範例： http[s]://ACCOUNTNAME.Blob.core.windows.net/\<容器 > /\<FILENAME.bak >。 HTTPS 不是必要項目，但是建議使用。  
+ 以下是 URL 值範例： http[s]://ACCOUNTNAME.Blob.core.windows.net/\<容器 > /\<.bak> >。 HTTPS 不是必要項目，但是建議使用。  
   
- **認證** ： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認證是用來儲存連接到 SQL Server 外部資源所需之驗證資訊的物件。  在這裡，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]備份和還原程序會使用認證，向 Windows Azure Blob 儲存體服務。 認證會儲存儲存體帳戶的名稱以及儲存體帳戶的 **存取金鑰** 值。 一旦建立認證之後，您必須在發出 BACKUP/RESTORE 陳述式時，在 WITH CREDENTIAL 選項中指定認證。 如需有關如何檢視、 複製或重新產生儲存體帳戶**存取金鑰**，請參閱[儲存體帳戶存取金鑰](http://msdn.microsoft.com/library/windowsazure/hh531566.aspx)。  
+ **認證** ： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認證是用來儲存連接到 SQL Server 外部資源所需之驗證資訊的物件。  在這裡，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]備份和還原程序會使用認證來驗證 Windows Azure Blob 儲存體服務。 認證會儲存儲存體帳戶的名稱以及儲存體帳戶的 **存取金鑰** 值。 一旦建立認證之後，您必須在發出 BACKUP/RESTORE 陳述式時，在 WITH CREDENTIAL 選項中指定認證。 如需有關如何檢視、 複製或重新產生儲存體帳戶**存取金鑰**，請參閱[儲存體帳戶存取金鑰](http://msdn.microsoft.com/library/windowsazure/hh531566.aspx)。  
   
- 如需有關如何建立的逐步指示[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]認證，請參閱[建立認證](#credential)本主題稍後的範例。  
+ 如需有關如何建立的逐步指示[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]認證，請參閱 <<c2> [ 建立認證](#credential)本主題稍後的範例。  
   
  如需有關認證的一般資訊，請參閱＜ [認證](http://msdn.microsoft.com/en-us/library/ms161950.aspx)＞。  
   
@@ -213,12 +212,12 @@ ms.locfileid: "36030559"
   
  如需 Restore 引數的詳細資訊，請參閱 [RESTORE 引數 &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-arguments-transact-sql)。  
   
-##  <a name="BackupTaskSSMS"></a> 在 SQL Server Management Studio 中使用備份工作  
+##  <a name="BackupTaskSSMS"></a> 使用 SQL Server Management Studio 中的備份工作  
  SQL Server Management Studio 中的備份工作，已增強為可內含 URL 做為其中一個目的地選項，以及做為備份至 Windows Azure 儲存體 (像是 SQL 認證) 所需的其他支援物件。  
   
  下列步驟說明對備份資料庫工作進行變更以允許備份至 Windows Azure 儲存體：  
   
-1.  啟動 SQL Server Management Studio 並連接至 SQL Server 執行個體。  選取您想要備份，以滑鼠右鍵按一下的資料庫**工作**，然後選取**備份...**.如此會開啟 [備份資料庫] 對話方塊。  
+1.  啟動 SQL Server Management Studio 並連接至 SQL Server 執行個體。  選取您想要備份，並以滑鼠右鍵按一下的資料庫**任務**，然後選取**備份...**.如此會開啟 [備份資料庫] 對話方塊。  
   
 2.  在一般頁面上， **[URL]** 選項可用以建立備份至 Windows Azure 儲存體。 當您選取此選項時，會在此頁面上看到其他啟用的選項：  
   
@@ -229,7 +228,7 @@ ms.locfileid: "36030559"
         > [!IMPORTANT]  
         >  在您按一下 **[建立]** 時開啟的對話方塊需要管理憑證或訂閱的發行設定檔。 SQL Server 目前支援發行設定檔 2.0 版。 若要下載發行設定檔的支援版本，請參閱＜ [下載發行設定檔 2.0](http://go.microsoft.com/fwlink/?LinkId=396421)＞。  
         >   
-        >  如果您無法存取管理憑證或發行設定檔，可以使用 Transact-SQL 或 SQL Server Management Studio 來指定儲存體帳戶名稱和存取金鑰資訊，藉以建立 SQL 認證。 請參閱中的範例程式碼[建立認證](#credential)區段，以使用 TRANSACT-SQL 建立認證。 或者，使用 SQL Server Management Studio，在資料庫引擎執行個體中，以滑鼠右鍵按一下 **[安全性]**、選取 **[新增]**，然後選取 **[認證]**。 針對 **[識別]** 指定儲存體帳戶名稱，並且在 **[密碼]** 欄位中指定存取金鑰。  
+        >  如果您無法存取管理憑證或發行設定檔，可以使用 Transact-SQL 或 SQL Server Management Studio 來指定儲存體帳戶名稱和存取金鑰資訊，藉以建立 SQL 認證。 請參閱中的範例程式碼[建立認證](#credential)一節，以使用 TRANSACT-SQL 建立認證。 或者，使用 SQL Server Management Studio，在資料庫引擎執行個體中，以滑鼠右鍵按一下 **[安全性]**、選取 **[新增]**，然後選取 **[認證]**。 針對 **[識別]** 指定儲存體帳戶名稱，並且在 **[密碼]** 欄位中指定存取金鑰。  
   
     3.  **Azure 儲存體容器：** 儲存備份檔案的 Windows Azure 儲存體容器名稱。  
   
@@ -246,7 +245,7 @@ ms.locfileid: "36030559"
  [建立認證 - 向 Azure 儲存體驗證](create-credential-authenticate-to-azure-storage.md)  
   
 ##  <a name="MaintenanceWiz"></a> 使用 [維護計畫精靈] 將 SQL Server 備份至 URL  
- 與先前所述的備份工作類似，SQL Server Management Studio 中的 [維護計畫精靈] 已增強為可內含 **URL** 做為其中一個目的地選項，以及做為備份至 Windows Azure 儲存體 (像是 SQL 認證) 所需的其他支援物件。 如需詳細資訊，請參閱**Define Backup Tasks**一節中[Using Maintenance Plan Wizard](../maintenance-plans/use-the-maintenance-plan-wizard.md#SSMSProcedure)。  
+ 與先前所述的備份工作類似，SQL Server Management Studio 中的 [維護計畫精靈] 已增強為可內含 **URL** 做為其中一個目的地選項，以及做為備份至 Windows Azure 儲存體 (像是 SQL 認證) 所需的其他支援物件。 如需詳細資訊，請參閱 < **Define Backup Tasks**一節[Using Maintenance Plan Wizard](../maintenance-plans/use-the-maintenance-plan-wizard.md#SSMSProcedure)。  
   
 ##  <a name="RestoreSSMS"></a> 從 Windows Azure 儲存體使用 SQL Server Management Studio 還原  
  如果您要還原資料庫，會內含 **[URL]** 做為還原裝置的來源。 下列步驟說明在還原工作中進行變更，以允許從 Windows Azure 儲存體進行還原：  
@@ -633,7 +632,7 @@ ms.locfileid: "36030559"
   
     ```  
   
-###  <a name="restoredbwithmove"></a> 還原資料庫和移動檔案  
+###  <a name="restoredbwithmove"></a> 將資料庫還原和移動檔案  
  若要還原完整資料庫備份並將還原的資料庫移至 C:\Program Files\Microsoft SQL Server\MSSQL12.MSSQLSERVER\MSSQL\Data 目錄，請使用下列步驟。  
   
 1.  **Tsql**  

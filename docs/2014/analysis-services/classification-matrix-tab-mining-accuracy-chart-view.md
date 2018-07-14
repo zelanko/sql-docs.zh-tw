@@ -1,5 +1,5 @@
 ---
-title: 分類矩陣索引標籤 （採礦精確度圖表檢視） |Microsoft 文件
+title: 分類矩陣索引標籤 （採礦精確度圖表檢視） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dm.miningmodeleditor.accuracychart.confusionmatrix.f1
 ms.assetid: 85d5a047-d656-41e0-8a31-400271c2a620
 caps.latest.revision: 22
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 4b4e2f9a8d361cdb400867c08e83be9347d076f8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 58df3c6d14edb8bfddbd53db0c110475d2a983bd
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36030182"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37251510"
 ---
 # <a name="classification-matrix-tab-mining-accuracy-chart-view"></a>分類矩陣索引標籤 (採礦精確度圖表檢視)
   [分類矩陣] 索引標籤會顯示在 [資料行對應] 索引標籤上的模型方格中選取之每個模型的分類矩陣。只有在 [資料行對應] 索引標籤中選取的可預測資料行不是連續的資料行時，才能使用分類矩陣。 如需更詳細的說明**分類矩陣**索引標籤上，請參閱[測試和驗證&#40;資料採礦&#41;](data-mining/testing-and-validation-data-mining.md)。  
@@ -33,7 +33,7 @@ ms.locfileid: "36030182"
  **計數\<模型 > 上\<可預測資料行 >**  
  顯示採礦結構中之每個採礦模型的分類矩陣。 矩陣包含下列資料行：  
   
-|ReplTest1|描述|  
+|值|描述|  
 |-----------|-----------------|  
 |**預測**|包含可預測資料行之每個狀態的資料列。|  
 |**\<狀態 > （實際）**|可預測資料行中之每個狀態的資料行。 如果資料列與資料行的狀態對應，則資料格代表狀態存在於資料庫中的實際次數。 如果它們不對應，則資料格代表預測的錯誤。|  

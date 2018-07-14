@@ -5,10 +5,9 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.availabilitygroup.suspenddatamove.f1
 helpviewer_keywords:
@@ -18,15 +17,15 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], databases
 ms.assetid: 86858982-6af1-4e80-9a93-87451f0d7ee9
 caps.latest.revision: 48
-author: rothja
-ms.author: jroth
-manager: jhubbard
-ms.openlocfilehash: 56cb86d8d749848b3e10a2bbfbca2765be77cd78
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 5f84be22ffdfe9375edd632c34e832d18488fea1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36022698"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37173369"
 ---
 # <a name="suspend-an-availability-database-sql-server"></a>暫止可用性資料庫 (SQL Server)
   您可以使用 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 、 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]或 [!INCLUDE[tsql](../../../includes/tsql-md.md)]的 PowerShell，暫停 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]中的可用性資料庫。 請注意，暫停命令必須在裝載要暫停或回復之資料庫的伺服器執行個體上發出。  
@@ -111,7 +110,7 @@ ms.locfileid: "36022698"
 ##  <a name="PowerShellProcedure"></a> 使用 PowerShell  
  **若要暫停資料庫**  
   
-1.  變更目錄 (`cd`) 來裝載您想要暫停其資料庫之複本的伺服器執行個體。 如需詳細資訊，請參閱本主題前面的＜ [必要條件](#Prerequisites)＞。  
+1.  將目錄變更 (`cd`) 來裝載您想要暫停其資料庫之複本的伺服器執行個體。 如需詳細資訊，請參閱本主題前面的＜ [必要條件](#Prerequisites)＞。  
   
 2.  使用`Suspend-SqlAvailabilityDatabase`cmdlet 暫停可用性群組。  
   

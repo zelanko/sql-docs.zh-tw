@@ -1,5 +1,5 @@
 ---
-title: XML 工作編輯器 （一般頁面） |Microsoft 文件
+title: XML 工作編輯器 （一般頁面） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.xmltask.general.f1
 helpviewer_keywords:
 - XML Task Editor
 ms.assetid: b9622c48-3243-4408-a1de-9ba20e32ff70
 caps.latest.revision: 42
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 67d02b183ab38ec046bf3fc0004c8d8f9de7e1d8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ae95fb2d0db4d052c241fb4b1968102b1bbe268c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36030105"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37237158"
 ---
 # <a name="xml-task-editor-general-page"></a>XML Task Editor (General Page)
   使用 **[XML 工作編輯器]** 對話方塊的 **[一般節點]** ，即可指定作業類型和設定作業。  
@@ -34,7 +34,7 @@ ms.locfileid: "36030105"
  **OperationType**  
  從清單中選取作業類型。 這個屬性具有下表中所列的選項。  
   
-|ReplTest1|描述|  
+|值|描述|  
 |-----------|-----------------|  
 |**Validate**|針對「文件類型定義」(DTD) 或「XML 結構描述定義」(XSD) 結構描述來驗證 XML 文件。 選取此選項會在 **[驗證]** 區段中顯示動態選項。|  
 |**XSLT**|在 XML 文件上執行 XSL 轉換。 選取此選項會在 **[XSLT]** 區段中顯示動態選項。|  
@@ -46,7 +46,7 @@ ms.locfileid: "36030105"
  **SourceType**  
  選取 XML 文件的來源類型。 這個屬性具有下表中所列的選項。  
   
-|ReplTest1|描述|  
+|值|描述|  
 |-----------|-----------------|  
 |**直接輸入**|設定 XML 文件的來源。|  
 |**檔案連接**|選取包含 XML 文件的檔案。|  
@@ -82,7 +82,7 @@ ms.locfileid: "36030105"
  **DestinationType**  
  選取 XML 文件的目的地類型。 這個屬性具有下表中所列的選項。  
   
-|ReplTest1|描述|  
+|值|描述|  
 |-----------|-----------------|  
 |**檔案連接**|選取包含 XML 文件的檔案。|  
 |**變數**|設定包含 XML 文件的變數來源。|  
@@ -90,7 +90,7 @@ ms.locfileid: "36030105"
  **ValidationType**  
  選取驗證類型。 這個屬性具有下表中所列的選項。  
   
-|ReplTest1|描述|  
+|值|描述|  
 |-----------|-----------------|  
 |**DTD**|使用文件類型定義 (DTD)。|  
 |**XSD**|使用 XML 結構描述定義 (XSD) 結構描述。 選取此選項會在 **[ValidationType]** 區段中顯示動態選項。|  
@@ -107,7 +107,7 @@ ms.locfileid: "36030105"
  **SecondOperandType**  
  選取第二個 XML 文件的來源類型。 這個屬性具有下表中所列的選項。  
   
-|ReplTest1|描述|  
+|值|描述|  
 |-----------|-----------------|  
 |**直接輸入**|設定 XML 文件的來源。|  
 |**檔案連接**|選取包含 XML 文件的檔案。|  
@@ -145,7 +145,7 @@ ms.locfileid: "36030105"
  **DestinationType**  
  選取 XML 文件的目的地類型。 這個屬性具有下表中所列的選項。  
   
-|ReplTest1|描述|  
+|值|描述|  
 |-----------|-----------------|  
 |**檔案連接**|選取包含 XML 文件的檔案。|  
 |**變數**|設定包含 XML 文件的變數來源。|  
@@ -153,7 +153,7 @@ ms.locfileid: "36030105"
  **SecondOperandType**  
  選取第二個 XML 文件的來源類型。 這個屬性具有下表中所列的選項。  
   
-|ReplTest1|描述|  
+|值|描述|  
 |-----------|-----------------|  
 |**直接輸入**|設定 XML 文件的來源。|  
 |**檔案連接**|選取包含 XML 文件的檔案。|  
@@ -191,7 +191,7 @@ ms.locfileid: "36030105"
  **DestinationType**  
  選取 XML 文件的目的地類型。 這個屬性具有下表中所列的選項。  
   
-|ReplTest1|描述|  
+|值|描述|  
 |-----------|-----------------|  
 |**檔案連接**|選取包含 XML 文件的檔案。|  
 |**變數**|設定包含 XML 文件的變數來源。|  
@@ -199,7 +199,7 @@ ms.locfileid: "36030105"
  **SecondOperandType**  
  選取第二個 XML 文件的來源類型。 這個屬性具有下表中所列的選項。  
   
-|ReplTest1|描述|  
+|值|描述|  
 |-----------|-----------------|  
 |**直接輸入**|設定 XML 文件的來源。|  
 |**檔案連接**|選取包含 XML 文件的檔案。|  
@@ -222,7 +222,7 @@ ms.locfileid: "36030105"
  **XPathOperation**  
  選取 XPath 結果類型。 這個屬性具有下表中所列的選項。  
   
-|ReplTest1|描述|  
+|值|描述|  
 |-----------|-----------------|  
 |**Evaluation**|傳回 XPath 函數的結果。|  
 |**節點清單**|將選取的節點當做 XML 片段傳回。|  
@@ -234,7 +234,7 @@ ms.locfileid: "36030105"
  **XPathStringSourceType**  
  選取 XML 文件的來源類型。 這個屬性具有下表中所列的選項。  
   
-|ReplTest1|描述|  
+|值|描述|  
 |-----------|-----------------|  
 |**直接輸入**|設定 XML 文件的來源。|  
 |**檔案連接**|選取包含 XML 文件的檔案。|  
@@ -271,7 +271,7 @@ ms.locfileid: "36030105"
  **DestinationType**  
  選取 XML 文件的目的地類型。 這個屬性具有下表中所列的選項。  
   
-|ReplTest1|描述|  
+|值|描述|  
 |-----------|-----------------|  
 |**檔案連接**|選取包含 XML 文件的檔案。|  
 |**變數**|設定包含 XML 文件的變數來源。|  
@@ -279,7 +279,7 @@ ms.locfileid: "36030105"
  **SecondOperandType**  
  選取第二份 XML 文件的目的地類型。 這個屬性具有下表中所列的選項。  
   
-|ReplTest1|描述|  
+|值|描述|  
 |-----------|-----------------|  
 |**直接輸入**|設定 XML 文件的來源。|  
 |**檔案連接**|選取包含 XML 文件的檔案。|  
@@ -302,7 +302,7 @@ ms.locfileid: "36030105"
  **DiffAlgorithm**  
  選取比較文件時要使用的 Diff 演算法。 這個屬性具有下表中所列的選項。  
   
-|ReplTest1|描述|  
+|值|描述|  
 |-----------|-----------------|  
 |**Auto**|讓 XML 工作決定使用快速或精確演算法。|  
 |**快速**|使用快速但比較不精確的 Diff 演算法。|  
@@ -311,16 +311,16 @@ ms.locfileid: "36030105"
  **Diff 選項**  
  設定要套用至 Diff 作業的 Diff 選項。 選項會在下表中列出。  
   
-|ReplTest1|描述|  
+|值|描述|  
 |-----------|-----------------|  
 |**IgnoreXMLDeclaration**|指定是否比較 XML 宣告。|  
 |**IgnoreDTD**|指定是否忽略文件類型定義 (DTD)。|  
 |**IgnoreWhite Spaces**|指定在比較文件時是否忽略空白數量的差異。|  
 |**IgnoreNamespaces**|指定是否比較元素的命名空間統一資源識別碼 (URI) 及其屬性名稱。<br /><br /> 注意： 如果此選項設定為`True`，兩個項目擁有相同本機名稱但不同的命名空間會視為相同。|  
 |**IgnoreProcessingInstructions**|指定是否比較處理指示。|  
-|**IgnoreOrderOf ChildElements**|指定是否比較子元素的順序。<br /><br /> 注意： 如果此選項設定為`True`，只能在同層級清單中位置不同的子元素會視為相同。|  
+|**IgnoreOrderOf ChildElements**|指定是否比較子元素的順序。<br /><br /> 注意： 如果此選項設定為`True`，差別只在於同層級清單中位置的子元素視為相同。|  
 |**IgnoreComments**|指定是否比較註解節點。|  
-|**IgnorePrefixes**|指定是否比較元素與屬性名稱的前置詞。<br /><br /> 注意： 如果您將此選項設定為`True`，兩個具有相同本機名稱但不同的命名空間 Uri 與前置詞的項目會視為相同。|  
+|**IgnorePrefixes**|指定是否比較元素與屬性名稱的前置詞。<br /><br /> 注意： 如果您將此選項設定為`True`，擁有相同本機名稱但不同的命名空間 Uri 與前置詞，兩個元素視為相同。|  
   
  **FailOnDifference**  
  指定 Diff 作業失敗時工作是否失敗。  
@@ -346,7 +346,7 @@ ms.locfileid: "36030105"
  **DestinationType**  
  選取 XML 文件的目的地類型。 這個屬性具有下表中所列的選項。  
   
-|ReplTest1|描述|  
+|值|描述|  
 |-----------|-----------------|  
 |**檔案連接**|選取包含 XML 文件的檔案。|  
 |**變數**|設定包含 XML 文件的變數來源。|  
@@ -354,7 +354,7 @@ ms.locfileid: "36030105"
  **SecondOperandType**  
  選取 XML 文件的目的地類型。 這個屬性具有下表中所列的選項。  
   
-|ReplTest1|描述|  
+|值|描述|  
 |-----------|-----------------|  
 |**直接輸入**|設定 XML 文件的來源。|  
 |**檔案連接**|選取包含 XML 文件的檔案。|  
@@ -392,7 +392,7 @@ ms.locfileid: "36030105"
  **DestinationType**  
  選取 XML 文件的目的地類型。 這個屬性具有下表中所列的選項。  
   
-|ReplTest1|描述|  
+|值|描述|  
 |-----------|-----------------|  
 |**檔案連接**|選取包含 XML 文件的檔案。|  
 |**變數**|設定包含 XML 文件的變數來源。|  
@@ -400,7 +400,7 @@ ms.locfileid: "36030105"
  **SecondOperandType**  
  選取 XML 文件的目的地類型。 這個屬性具有下表中所列的選項。  
   
-|ReplTest1|描述|  
+|值|描述|  
 |-----------|-----------------|  
 |**直接輸入**|設定 XML 文件的來源。|  
 |**檔案連接**|選取包含 XML 文件的檔案。|  

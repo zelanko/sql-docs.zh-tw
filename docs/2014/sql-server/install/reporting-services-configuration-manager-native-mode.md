@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Reporting Services Configuration tool
 - configuration options [Reporting Services]
@@ -18,13 +18,13 @@ ms.assetid: 379eab68-7f13-4997-8d64-38810240756e
 caps.latest.revision: 42
 author: markingmyname
 ms.author: maghan
-manager: jhubbard
-ms.openlocfilehash: 342cca1892640e1e5c32fda049427d70c478f910
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: bc97beba507789ef821b8f69faa6f5db85822a00
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36031157"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37220778"
 ---
 # <a name="reporting-services-configuration-manager-native-mode"></a>Reporting Services 組態管理員 (原生模式)
   您可以使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 組態管理員設定 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 原生模式安裝。 如果您是利用僅限檔案安裝選項來安裝報表伺服器，就必須利用組態管理員來設定伺服器，才能使用該伺服器。 如果您使用預設組態安裝選項來安裝報表伺服器，則可以使用組態管理員來驗證或修改在安裝過程中所指定的設定。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 組態管理員可用於設定本機或遠端報表伺服器執行個體。  
@@ -68,11 +68,11 @@ ms.locfileid: "36031157"
   
  **本主題內容：**  
   
--   [使用 Reporting Services 組態管理員的案例](#bkmk_scenarios)  
+-   [若要使用 Reporting Services 組態管理員的案例](#bkmk_scenarios)  
   
 -   [需求](#bkmk_requirements)  
   
--   [啟動 Reporting Services 組態管理員](#bkmk_start_configuration_manager)  
+-   [若要啟動 Reporting Services 組態管理員](#bkmk_start_configuration_manager)  
   
 ##  <a name="bkmk_scenarios"></a> 使用 Reporting Services 組態管理員的案例  
  您可以使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 組態管理員執行下列工作：  
@@ -94,7 +94,7 @@ ms.locfileid: "36031157"
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 組態管理員不會協助您管理報表伺服器內容、啟用其他功能，或授與伺服器的存取權。 完整部署需要您也使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 來啟用其他功能或修改預設值，並使用報表管理員來授與使用者對伺服器的存取權。  
   
 ##  <a name="bkmk_requirements"></a> 需求  
- [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration manager 為特定版本。 隨著這個 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 版本一起安裝的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 組態管理員無法用來設定舊版的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]。 如果您在相同電腦上並存執行舊版和新版的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ，就必須使用每一個版本所隨附的 Reporting Service 組態管理員來設定每一個執行個體。  
+ [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration manager 是特定版本。 隨著這個 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 版本一起安裝的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 組態管理員無法用來設定舊版的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]。 如果您在相同電腦上並存執行舊版和新版的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ，就必須使用每一個版本所隨附的 Reporting Service 組態管理員來設定每一個執行個體。  
   
  若要使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 組態管理員，您必須：  
   
@@ -116,9 +116,9 @@ ms.locfileid: "36031157"
   
     -   在 Windows 的 [開始] 畫面上，輸入 **Reporting** ，然後從搜尋結果中選取 **[Reporting Services 組態管理員]** 。  
   
-    -   按一下**啟動**，指向 **所有程式**，指向  [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]，然後指向**組態工具**。  
+    -   按一下 **開始**，指向**所有程式**，指向[!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]，然後指向**組態工具**。  
   
-         如果您想要從舊版 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]設定報表伺服器執行個體，請開啟該版本的程式資料夾。 例如，指向[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]而不是[!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]以開啟 組態工具，適用於[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]伺服器元件。  
+         如果您想要從舊版 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]設定報表伺服器執行個體，請開啟該版本的程式資料夾。 例如，指向[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]而非[!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]以開啟 組態工具，適用於[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]伺服器元件。  
   
          按一下 **[Reporting Services 組態管理員]**。  
   

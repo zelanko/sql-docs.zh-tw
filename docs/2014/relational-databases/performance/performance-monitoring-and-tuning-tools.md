@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - tools [SQL Server], monitoring performance
 - monitoring server performance [SQL Server], tools
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - server performance [SQL Server], tools
 ms.assetid: 31529dfe-68e7-49f7-b3c2-39fcecf33a95
 caps.latest.revision: 35
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 76cb6106fb7b4c21ec8fbb8101ad7cfecea82282
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 1848d19202b8bfe7a7c44b00b9b2e781366ca90e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36023345"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37262464"
 ---
 # <a name="performance-monitoring-and-tuning-tools"></a>效能監視及微調工具
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 提供了一組完整的工具，可用來監視 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的事件，以及用來微調實體資料庫設計。 要選擇的工具依據要做的監視或微調類型，以及要監視的特殊事件而定。  
@@ -43,7 +43,7 @@ ms.locfileid: "36023345"
 |[開啟活動監視器 &#40;SQL Server Management Studio&#41;](../performance-monitor/open-activity-monitor-sql-server-management-studio.md)|[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中的「活動監視器」對於目前活動的特定檢視非常有用，並會以圖形方式顯示以下相關資訊：<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體上執行的處理序。<br /><br /> 已封鎖的處理序。<br /><br /> 鎖定。<br /><br /> 使用者活動。|  
 |[SQL 追蹤](../sql-trace/sql-trace.md)|[!INCLUDE[tsql](../../../includes/tsql-md.md)] 建立、篩選和定義追蹤的預存程序：<br /><br /> [sp_trace_create &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-trace-create-transact-sql)<br /><br /> [sp_trace_generateevent &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-trace-generateevent-transact-sql)<br /><br /> [sp_trace_setevent &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql)<br /><br /> [sp_trace_setfilter &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-trace-setfilter-transact-sql)<br /><br /> [sp_trace_setstatus &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-trace-setstatus-transact-sql)|  
 |錯誤記錄檔|Windows 應用程式事件記錄檔針對發生於 Windows Server 和 Windows 作業系統上的事件，以及在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 與全文檢索搜尋中的事件，提供一個概括性的資訊。 記錄檔包含有關 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中事件的相關資訊，這些資訊無法從別處取得。 您可以使用錯誤記錄檔中的資訊來進行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]相關問題的疑難排解。|  
-|[系統預存程序 &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/system-stored-procedures-transact-sql)|下列 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 系統預存程序針對許多監視工作提供了強大的替代方式：<br /><br /> [sp_who &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-who-transact-sql)： <br />                    報告目前的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用者與處理序的相關快照資訊，此資訊包括目前正在執行的陳述式以及陳述式是否遭封鎖。<br /><br /> [sp_lock &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-lock-transact-sql)： 報表快照集，包括物件識別碼、 索引識別碼、 鎖定類型和類型或資源鎖定適用於鎖定的資訊。<br /><br /> [sp_spaceused &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-spaceused-transact-sql)： 顯示估計的目前資料表 （或是整個資料庫） 所使用的磁碟空間量。<br /><br /> [sp_monitor &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-monitor-transact-sql)： 顯示統計資料，包括 CPU 使用量、 I/O 使用和的閒置時間量**sp_monitor**自從上次執行。|  
+|[系統預存程序 &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/system-stored-procedures-transact-sql)|下列 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 系統預存程序針對許多監視工作提供了強大的替代方式：<br /><br /> [sp_who &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-who-transact-sql)： <br />                    報告目前的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用者與處理序的相關快照資訊，此資訊包括目前正在執行的陳述式以及陳述式是否遭封鎖。<br /><br /> [sp_lock &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-lock-transact-sql)： 報告，包括物件識別碼、 索引識別碼、 鎖定類型，以及型別或資源鎖定套用至鎖定的快照集資訊。<br /><br /> [sp_spaceused &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-spaceused-transact-sql)： 顯示目前的資料表 （或是整個資料庫） 使用的磁碟空間量的估計。<br /><br /> [sp_monitor &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-monitor-transact-sql)： 顯示統計資料，包括 CPU 使用量、 I/O 使用情形和閒置的時間量**sp_monitor**上次執行。|  
 |[DBCC &#40;Transact-SQL&#41;](/sql/t-sql/database-console-commands/dbcc-transact-sql)|DBCC (資料庫主控台命令) 陳述式讓您可以檢查效能統計資料和資料庫的邏輯與實體一致性。|  
 |[內建函數 &#40;Transact-SQL&#41;](/sql/t-sql/functions/functions)|內建的函數會顯示自伺服器啟動後，關於 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 活動的快照統計資料，這些統計資料會儲存在預先定義的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 計數器中。 例如，**@@CPU_BUSY** 包含 CPU 已執行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 程式碼的時間量；**@@CONNECTIONS** 包含 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 連線數或嘗試連線數；**@@PACKET_ERRORS** 包含 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 連線上發生的網路封包數目。|  
 |[追蹤旗標 &#40;Transact-SQL&#41;](/sql/t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql)|追蹤旗標顯示伺服器內部特定活動的相關資訊，並可用來診斷問題或效能問題 (例如死結鏈結)。|  
@@ -61,7 +61,7 @@ ms.locfileid: "36023345"
 |圖形介面|是||是|是||是|  
 |在自訂應用程式中使用|是 <sup>1</sup>||||是||  
   
- <sup>1</sup>使用[!INCLUDE[ssSqlProfiler](../../../includes/sssqlprofiler-md.md)]系統預存程序。  
+ <sup>1</sup> Using[!INCLUDE[ssSqlProfiler](../../../includes/sssqlprofiler-md.md)]系統預存程序。  
   
 ## <a name="windows-monitoring-tools"></a>Windows 監視工具  
  Windows 作業系統與 Windows Server 2003 也提供下列監控工具。  

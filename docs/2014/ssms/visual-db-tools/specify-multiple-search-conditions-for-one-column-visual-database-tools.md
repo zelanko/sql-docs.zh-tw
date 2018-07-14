@@ -1,5 +1,5 @@
 ---
-title: 指定的一個資料行 (Visual Database Tools) 的多個搜尋條件 |Microsoft 文件
+title: 指定多個搜尋條件的一個資料行 (Visual Database Tools) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - search criteria [SQL Server], multiple conditions
 - multiple search conditions
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - AND, Criteria pane
 ms.assetid: 2c006e36-56b1-4992-89b4-c6c0b19808f3
 caps.latest.revision: 11
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: b2b97488883e435bcecd754439f050c15cae0637
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 7cc98916153556bb0746211f4d1f54a81afaee2e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36032009"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37189535"
 ---
 # <a name="specify-multiple-search-conditions-for-one-column-visual-database-tools"></a>指定單一資料行的多重搜尋條件 (Visual Database Tools)
   在一些執行個體中，可能要套用許多搜尋條件至相同的資料行。 例如，您可能要：  
@@ -87,7 +87,7 @@ WHERE (title LIKE '%Cook%') AND
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [結合的慣例 [準則] 窗格中的搜尋條件&#40;Visual Database Tools&#41;](conventions-combine-search-conditions-in-criteria-pane-visual-db-tools.md)   
+ [慣例結合搜尋條件，在 [準則] 窗格中&#40;Visual Database Tools&#41;](conventions-combine-search-conditions-in-criteria-pane-visual-db-tools.md)   
  [指定搜尋準則 &#40;Visual Database Tools&#41;](specify-search-criteria-visual-database-tools.md)  
   
   

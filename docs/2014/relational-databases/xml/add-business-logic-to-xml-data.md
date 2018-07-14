@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - dbe-xml
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - business logic [XML]
 ms.assetid: 0877fb38-f1a2-43d8-86cf-4754be224dc1
 caps.latest.revision: 17
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: bf3e24dd3fe06a06b26adcbfcbf9da57d5b6916a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 73246b1aa2413315718680437ba1da8f46b705fd
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36030724"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37254090"
 ---
 # <a name="add-business-logic-to-xml-data"></a>將商務邏輯加入至 XML 資料
   將商務邏輯加入至 XML 資料的方法有好幾種：  
@@ -35,7 +35,7 @@ ms.locfileid: "36030724"
 -   您可以撰寫 Transact-SQL 預存程序及函數，以針對您的商業需求開始處理 XML 資料行。  
   
 ## <a name="example-applying-xsl-transformation"></a>範例：套用 XSL 轉換  
- CLR 函數，請考慮**transformxml （)** 接受`xml`資料類型執行個體和儲存在檔案中的 XSL 轉換該轉換套用至 XML 資料之後，，然後在結果中傳回已轉換的 XML。 以下是用 C# 來撰寫的基本架構函數：  
+ CLR 函數，請考慮**transformxml （)** 它會接受`xml`資料類型執行個體和儲存在檔案中的 XSL 轉換，將轉換套用至 XML 資料，和結果中傳回已轉換的 XML。 以下是用 C# 來撰寫的基本架構函數：  
   
 ```  
 public static SqlXml TransformXml (SqlXml XmlData, string xslPath) {  

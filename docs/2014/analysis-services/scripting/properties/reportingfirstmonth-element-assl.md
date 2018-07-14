@@ -1,5 +1,5 @@
 ---
-title: ReportingFirstMonth 元素 (ASSL) |Microsoft 文件
+title: ReportingFirstMonth 元素 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - ReportingFirstMonth element
 ms.assetid: cdce83ab-ac22-4f4a-b8f2-1739883be8dd
 caps.latest.revision: 30
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 227793bb2de61aa38166ee9cca0d0d01d0f5f6a6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 702d7e17e35e334e982ba3a230af5b1506f3d071
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36030156"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37275214"
 ---
 # <a name="reportingfirstmonth-element-assl"></a>ReportingFirstMonth 元素 (ASSL)
   定義的第一個報表月份[TimeBinding](../data-type/binding-data-type-assl.md)項目。  
@@ -62,7 +62,7 @@ ms.locfileid: "36030156"
 |子元素|無|  
   
 ## <a name="remarks"></a>備註  
- 對應目的父代的項目`ReportingFirstMonth`在 「 分析管理物件 (AMO) 物件模型而言， <xref:Microsoft.AnalysisServices.TimeBinding>。  
+ 對應至父系的元素`ReportingFirstMonth`在 「 分析管理物件 (AMO) 物件模型是<xref:Microsoft.AnalysisServices.TimeBinding>。  
   
 ## <a name="see-also"></a>另請參閱  
  [屬性&#40;ASSL&#41;](properties-assl.md)  

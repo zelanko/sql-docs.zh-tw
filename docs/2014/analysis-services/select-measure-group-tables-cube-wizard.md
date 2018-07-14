@@ -1,5 +1,5 @@
 ---
-title: 選取量值群組資料表 （Cube 精靈） |Microsoft 文件
+title: 選取量值群組資料表 （Cube 精靈） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.cubewizard.mgtableselection.f1
 ms.assetid: 67e8e1ef-c7c6-434e-bd36-4b35f3cb7759
 caps.latest.revision: 10
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 7226745d8b192366b0b811738fea599cd9fa3d72
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: cde02ccb771ba34fcd8614c5de9f9107c2fcc80f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36030140"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37250850"
 ---
 # <a name="select-measure-group-tables-cube-wizard"></a>選取量值群組資料表 (Cube 精靈)
   使用 **[選取量值群組資料表]** 頁面，即可識別資料來源檢視並選取 Cube 的量值群組資料表。  

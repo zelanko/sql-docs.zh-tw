@@ -1,5 +1,5 @@
 ---
-title: FontSize 元素 (ASSL) |Microsoft 文件
+title: FontSize 元素 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - FontSize element
 ms.assetid: 49f66a73-946a-4fbd-9749-a3ca1b717ff3
 caps.latest.revision: 37
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 1eaf29caf869de81e397b92f9953d9b673d17019
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 8f6b5ba39d52cb96061fe4d19208e6e343bab5f6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36030136"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37167529"
 ---
 # <a name="fontsize-element-assl"></a>FontSize 元素 (ASSL)
-  描述字型相關顯示特性[CalculationProperty](../objects/calculationproperty-element-assl.md)或[量值](../objects/measure-element-assl.md)父項目。  
+  描述的字型相關顯示特性[CalculationProperty](../objects/calculationproperty-element-assl.md)或是[量值](../objects/measure-element-assl.md)父項目。  
   
 ## <a name="syntax"></a>語法  
   
@@ -62,9 +62,9 @@ ms.locfileid: "36030136"
 |子元素|無|  
   
 ## <a name="remarks"></a>備註  
- `FontSize`屬性包含多維度運算式 (MDX) 運算式，並套用至`CalculationProperty`項目具有[CalculationType](calculationtype-element-assl.md)的*成員*或*資料格*.  
+ `FontSize`屬性包含多維度運算式 (MDX) 運算式，並套用至`CalculationProperty`擁有的項目[CalculationType](calculationtype-element-assl.md)的*成員*或*資料格*.  
   
- 對應至父系的項目`FontSize`在 「 分析管理物件 (AMO) 物件模型是<xref:Microsoft.AnalysisServices.CalculationProperty>和<xref:Microsoft.AnalysisServices.Measure>。  
+ 對應至父系的元素`FontSize`在 「 分析管理物件 (AMO) 物件模型所<xref:Microsoft.AnalysisServices.CalculationProperty>和<xref:Microsoft.AnalysisServices.Measure>。  
   
 ## <a name="see-also"></a>另請參閱  
  [CalculationProperties 元素&#40;ASSL&#41;](../collections/calculationproperties-element-assl.md)   

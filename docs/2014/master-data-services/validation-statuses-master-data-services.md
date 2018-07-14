@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: fc829d25-b3e8-4801-8a94-4df19a7a5971
 caps.latest.revision: 6
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 6ea3d85443f4f3dab98f1430b53be4eb25cd0bca
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: 91d77160109b2eb37f99195147a5396ad7eec741
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36030807"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37205698"
 ---
 # <a name="validation-statuses-master-data-services"></a>驗證狀態 (Master Data Services)
   在 **[版本管理]** 功能區域的 **[驗證版本]** 頁面上，可能會出現下列狀態。  

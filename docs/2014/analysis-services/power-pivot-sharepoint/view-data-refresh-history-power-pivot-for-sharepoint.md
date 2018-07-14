@@ -1,5 +1,5 @@
 ---
-title: 檢視資料重新整理記錄 (PowerPivot for SharePoint) |Microsoft 文件
+title: 檢視資料重新整理記錄 (PowerPivot for SharePoint) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - unattended data refresh [Analysis Services with SharePoint]
 - data refresh history [Analysis Services with SharePoint]
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - data refresh [Analysis Services with SharePoint]
 ms.assetid: 4c8d8aa8-794d-4f72-ace3-78d0e688e1a5
 caps.latest.revision: 13
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 6331cbfa7fc019991b004e81acea9c50159fd292
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 5ecca7d87492645502e122497cc66eb54f083097
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36030387"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37267584"
 ---
 # <a name="view-data-refresh-history-powerpivot-for-sharepoint"></a>檢視資料重新整理記錄 (PowerPivot for SharePoint)
   資料重新整理記錄是 Excel 活頁簿中 PowerPivot 資料之所有資料重新整理活動的記錄。 資料重新整理作業會依您提供的排程，在 SharePoint 伺服器陣列中 Analysis Services 伺服器執行個體上執行。 根據預設，資料重新整理記錄會保留一年。 但是，伺服器陣列管理員可以為使用量和事件記錄指定不同的保留原則，用來決定資料重新整理記錄的保存時間。  
@@ -59,14 +59,14 @@ ms.locfileid: "36030387"
  記錄頁面隨即出現，其中顯示目前 Excel 活頁簿中 PowerPivot 資料之所有重新整理活動的完整記錄。  
   
 ##  <a name="viewITOps"></a> 檢視所有活頁簿的資料重新整理記錄  
- 伺服器陣列管理員和服務應用程式管理員可以使用管理中心的 PowerPivot 管理儀表板，取得完整的資料重新整理記錄檢視，以及所有 PowerPivot 活頁簿的狀態。 如需詳細資訊，請參閱[PowerPivot Management Dashboard and Usage Data](power-pivot-management-dashboard-and-usage-data.md)。  
+ 伺服器陣列管理員和服務應用程式管理員可以使用管理中心的 PowerPivot 管理儀表板，取得完整的資料重新整理記錄檢視，以及所有 PowerPivot 活頁簿的狀態。 如需詳細資訊，請參閱 < [PowerPivot Management Dashboard and Usage Data](power-pivot-management-dashboard-and-usage-data.md)。  
   
 ##  <a name="pageelements"></a> 使用記錄資訊  
  [資料重新整理記錄] 頁面提供有關每項重新整理作業的詳細資訊。 您可以使用此頁面上的資訊，以確認是否已進行重新整理，或判斷作業失敗的原因。  
   
 |項目|描述|  
 |----------|-----------------|  
-|[屬性]|指定含 PowerPivot 資料之 Excel 活頁簿的檔案名稱。|  
+|名稱|指定含 PowerPivot 資料之 Excel 活頁簿的檔案名稱。|  
 |目前狀態|值包括：[已排程]、[正在重新整理]、[成功] 或 [失敗]。<br /><br /> **已排程**：當您初次建立排程時會顯示此值。 資料重新整理執行過第一次後，就不會再出現此狀態訊息。<br /><br /> **正在重新整理** ：表示該資料重新整理在進行中。 要求是在程序佇列中，或正在伺服器上執行。<br /><br /> **成功** ：表示上次資料重新整理作業已完成，而且已將更新的活頁簿存回 SharePoint 文件庫中。<br /><br /> **失敗** ：表示上次資料重新整理作業並未成功。 已重新整理資料並未儲存。 活頁簿中所包含的資料與資料重新整理開始之前相同。|  
 |上次成功重新整理|指定上次順利完成資料重新整理的日期。|  
 |下次排程更新|指定下次排程要進行資料重新整理的日期。<br /><br /> [正在設定排程] 連結會跳至 [排程定義] 頁面。 如果您在活頁簿上擁有「參與」權限，您可以按一下連結以檢視及修改排程資訊，控制活頁簿中 PowerPivot 資料的自動資料重新整理。|  

@@ -1,5 +1,5 @@
 ---
-title: Microsoft 線性迴歸演算法技術參考 |Microsoft 文件
+title: Microsoft 線性迴歸演算法技術參考 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - AUTO_DETECT_PERIODICITY parameter
 - linear regression algorithms [Analysis Services]
 - regression algorithms [Analysis Services]
 ms.assetid: 7807b5ff-8e0d-418d-a05b-b1a9644536d2
 caps.latest.revision: 24
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: f9655abda58057343b67ef16dd62fcb7a0faa048
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 201242a7347ea564444449071342aa9a3952d7f5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36032000"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37181065"
 ---
 # <a name="microsoft-linear-regression-algorithm-technical-reference"></a>Microsoft 線性迴歸演算法技術參考
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] 線性迴歸演算法是 Microsoft 決策樹演算法的特殊版本，適用於連續屬性的模型配對。 本主題說明演算法的實作、描述如何自訂演算法的行為，以及提供查詢模型其他資訊的連結。  
@@ -68,7 +68,7 @@ ms.locfileid: "36032000"
 ### <a name="regressors-in-linear-regression-models"></a>線性迴歸模型中的迴歸輸入變數  
  線性迴歸模型是以 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 決策樹演算法為基礎。 不過，即使您不使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 線性迴歸演算法，任何決策樹模型仍可能包含代表連續屬性迴歸的樹狀結構或節點。  
   
- 您不需要指定連續的資料行代表迴歸輸入變數。 即使未在資料行上設定 REGRESSOR 旗標， [!INCLUDE[msCoName](../../includes/msconame-md.md)] 決策樹演算法也會將資料集分割成具備有意義之模式的區域。 其差異在於，當您設定模型旗標時，此演算法會嘗試尋找形式的迴歸方程式 * C1 + b\*C2 + 以樹狀結構的節點中符合的模式。 之後會計算剩餘數的總和，如果差異過大，就會在樹狀結構中強制進行分割。  
+ 您不需要指定連續的資料行代表迴歸輸入變數。 即使未在資料行上設定 REGRESSOR 旗標， [!INCLUDE[msCoName](../../includes/msconame-md.md)] 決策樹演算法也會將資料集分割成具備有意義之模式的區域。 其差異在於，當您設定模型旗標時，此演算法會嘗試尋找形式的迴歸方程式 * C1 + b\*C2 +...以樹狀結構的節點中符合模式。 之後會計算剩餘數的總和，如果差異過大，就會在樹狀結構中強制進行分割。  
   
  例如，如果您使用 **Income** 做為屬性來預測客戶購買行為，且在資料行上設定 REGRESSOR 模型旗標，則演算法首先會使用標準迴歸公式來比對 **Income** 值。 如果差異過大，就會放棄迴歸公式，且根據其他的屬性分割樹狀結構。 在分割之後，決策樹演算法就會接著嘗試在每個分支中比對收入的迴歸輸入變數。  
   

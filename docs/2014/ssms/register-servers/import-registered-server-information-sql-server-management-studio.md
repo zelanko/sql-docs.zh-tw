@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.importregisteredservers.f1
 helpviewer_keywords:
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - importing registered server information
 ms.assetid: cc497a14-1360-4887-b70c-002f042823b6
 caps.latest.revision: 27
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: f71d4174e159f84b7596600d1e4f8b5b4b99eb2f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 14c42bbfb8bab13d074914ce8c1de37d4c35a133
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36030142"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37247958"
 ---
 # <a name="import-registered-server-information-sql-server-management-studio"></a>匯入已註冊的伺服器資訊 (SQL Server Management Studio)
   本主題描述如何在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]中匯入儲存的已註冊伺服器資訊。 先匯出然後再匯入已註冊的伺服器檔案，可以讓您輕鬆地在 [已註冊的伺服器] 中，使用相同的伺服器設定數部電腦。 從各地的電腦管理大量的伺服器時，或要為較沒有經驗的使用者設定基本連接設定時，這個作法非常有用。  

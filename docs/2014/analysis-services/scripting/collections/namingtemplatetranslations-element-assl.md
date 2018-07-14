@@ -1,5 +1,5 @@
 ---
-title: NamingTemplateTranslations 元素 (ASSL) |Microsoft 文件
+title: NamingTemplateTranslations 元素 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - NamingTemplateTranslations element
 ms.assetid: fde65778-1fa3-490a-9874-8bf2052ef25c
 caps.latest.revision: 35
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 0e22eaea2ab6d19bf1da5620321f0d2002ed382d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 2965971734625c4d0c553f652160e1044eb48546
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36030896"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37204398"
 ---
 # <a name="namingtemplatetranslations-element-assl"></a>NamingTemplateTranslations 元素 (ASSL)
-  提供當地語系化翻譯的集合[NamingTemplate](../properties/namingtemplate-element-assl.md)之父項目[DimensionAttribute](../data-type/dimensionattribute-data-type-assl.md)。  
+  提供當地語系化翻譯的集合[NamingTemplate](../properties/namingtemplate-element-assl.md)項目之父[DimensionAttribute](../data-type/dimensionattribute-data-type-assl.md)。  
   
 ## <a name="syntax"></a>語法  
   
@@ -64,9 +64,9 @@ ms.locfileid: "36030896"
 |子元素|[NamingTemplateTranslation](../objects/translation-element-assl.md)型別的[轉譯](translations-element-assl.md)|  
   
 ## <a name="remarks"></a>備註  
- 值`NamingTemplateTranslation`項目僅供父屬性 (換言之，值[使用量](../properties/usage-element-dimensionattribute-assl.md)父元素之`DimensionAttribute`設*父*。)  
+ 值`NamingTemplateTranslation`項目僅供父屬性 (亦即的值[使用量](../properties/usage-element-dimensionattribute-assl.md)項目之父代`DimensionAttribute`設定為*父*。)  
   
- 分析管理物件 (AMO) 物件模型中的對應元素是<xref:Microsoft.AnalysisServices.DimensionAttribute>。  
+ 在 「 分析管理物件 (AMO) 物件模型的對應元素是<xref:Microsoft.AnalysisServices.DimensionAttribute>。  
   
 ## <a name="see-also"></a>另請參閱  
  [集合&#40;ASSL&#41;](collections-assl.md)  

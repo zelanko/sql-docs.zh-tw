@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - MSSQL_ENG021075 error
 ms.assetid: c8c29543-d1f6-49d5-b6c8-e8c3aa373090
 caps.latest.revision: 13
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 5139dcc1c7d88fe5e8d1016f7827137e85d085ae
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: adab054bb93bdd00e52b4e2b2c69f4ae539e915f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36030994"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37214888"
 ---
 # <a name="mssqleng021075"></a>MSSQL_ENG021075
     

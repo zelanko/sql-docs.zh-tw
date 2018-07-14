@@ -5,25 +5,24 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-blob
+ms.technology: filestream
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - FileTables [SQL Server], migrating files
 - FileTables [SQL Server], bulk loading
 - FileTables [SQL Server], loading files
 ms.assetid: dc842a10-0586-4b0f-9775-5ca0ecc761d9
 caps.latest.revision: 22
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: f04207a9f61228b48318afbc321dcc5f10358ad7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 1fe047d365e3ce7b8df00307499eca50553a2c76
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36023139"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37169099"
 ---
 # <a name="load-files-into-filetables"></a>載入檔案至 FileTable
   描述如何載入或移轉檔案至 FileTable 中。  
@@ -48,15 +47,15 @@ ms.locfileid: "36023139"
 ###  <a name="HowToMigrateFiles"></a> 範例：從檔案系統移轉檔案至 FileTable  
  在此案例中，您的檔案儲存在檔案系統中，而且您在擁有內含指向該檔案之指標的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，具有中繼資料表。 您想要將檔案移入 FileTable，然後使用 FileTable UNC 路徑來取代中繼資料內每個檔案的原始 UNC 路徑。 [GetPathLocator &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/getpathlocator-transact-sql) 函式可協助您達成此目標。  
   
- 此範例中，假設有現有的資料庫資料表`PhotoMetadata`，其中包含相片的相關資料。 這個資料表有一個資料行`UNCPath`型別的`varchar`(512) 包含對應至.jpg 檔案的實際 UNC 路徑。  
+ 此範例中，假設是現有的資料庫資料表`PhotoMetadata`，其中包含相片的相關資料。 此資料表有一個資料行`UNCPath`型別的`varchar`(512) 包含對應至.jpg 檔案的實際 UNC 路徑。  
   
  若要將影像檔從檔案系統移轉至 FileTable，您必須進行下列動作：  
   
-1.  建立新的 FileTable 以保存該檔案。 這個範例會使用資料表名稱， `dbo.PhotoTable`，但並未顯示建立資料表的程式碼。  
+1.  建立新的 FileTable 以保存該檔案。 此範例會使用資料表名稱、 `dbo.PhotoTable`，但並未顯示建立資料表的程式碼。  
   
 2.  使用 xcopy 或類似的工具，將 .jpg 檔案及其目錄結構複製到 FileTable 的根目錄中。  
   
-3.  修正在中繼資料`PhotoMetadata`資料表中的，使用類似下列程式碼：  
+3.  修正在中繼資料`PhotoMetadata`資料表中，使用類似下列的程式碼：  
   
 ```tsql  
 --  Add a path locator column to the PhotoMetadata table.  

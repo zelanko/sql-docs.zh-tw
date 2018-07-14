@@ -1,5 +1,5 @@
 ---
-title: MDSCHEMA_DIMENSIONS 資料列集 |Microsoft 文件
+title: MDSCHEMA_DIMENSIONS 資料列集 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -18,15 +18,15 @@ helpviewer_keywords:
 - MDSCHEMA_DIMENSIONS rowset
 ms.assetid: a0fd94bb-359a-4df6-93a6-d60d50223944
 caps.latest.revision: 29
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: b00b617adf90e1dba8eac94a9872ce07c0773e7c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 69cb4e0c997d3d786a55a6673327e50d0aac27a2
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36030172"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37273394"
 ---
 # <a name="mdschemadimensions-rowset"></a>MDSCHEMA_DIMENSIONS 資料列集
   描述資料庫內的共用和私人維度。  
@@ -52,7 +52,7 @@ ms.locfileid: "36030172"
 |`IS_READWRITE`|`DBTYPE_BOOL`||布林值，指出維度是否為可寫入。<br /><br /> 如果維度為可寫入的，則為 `TRUE`。|  
 |`DIMENSION_UNIQUE_SETTINGS`|`DBTYPE_I4`||點陣圖，指定當維度只擁有具有唯一名稱的成員時，哪些資料行包含唯一值。 下列位元值常數會針對此點陣圖定義於 Msmd.h：<br /><br /> -   `MDDIMENSIONS_MEMBER_KEY_UNIQUE`|  
 |`DIMENSION_MASTER_UNIQUE_NAME`|`DBTYPE_WSTR`||永遠都是 `NULL`。|  
-|`DIMENSION_IS_VISIBLE`|`DBTYPE_BOOL`||永遠都是 `TRUE`。 **注意：** 維度除非維度中的一個或多個階層都會顯示為不可見。|  
+|`DIMENSION_IS_VISIBLE`|`DBTYPE_BOOL`||永遠都是 `TRUE`。 **注意：** 維度除非維度中的一或多個階層都會顯示為不可見。|  
   
  資料列集會按 `CATALOG_NAME`、`SCHEMA_NAME`、`CUBE_NAME` 和 `DIMENSION_NAME` 排序。  
   

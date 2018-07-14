@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 8f873ef9-27a3-40e5-b58b-6774f8027a58
 caps.latest.revision: 7
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: f99447693a466e016e84c29cb254bbddd4a75b05
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 710d30f8a59abedd98dc3e82cf4233f0ef2c7a66
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36030722"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37202508"
 ---
 # <a name="rendering-behaviors-report-builder--and-ssrs"></a>轉譯行為 (報表產生器及 SSRS)
   根據所選取的轉譯器，當轉譯報表時，系統會將某些規則套用到報表主體及其內容。 將報表項目全部容納在一頁的方式，取決於下列因素的組合：  
@@ -132,8 +132,8 @@ ms.locfileid: "36030722"
 -   系統不會保留在資料表或矩陣資料格之項目上定義的邏輯分頁符號。 這不適用於清單中的項目。  
   
 ## <a name="see-also"></a>另請參閱  
- [不同報表轉譯延伸模組的互動式功能&#40;報表產生器和 SSRS&#41;](../report-builder/interactive-functionality-different-report-rendering-extensions.md)   
+ [不同報表轉譯延伸模組的互動式功能&#40;報表產生器及 SSRS&#41;](../report-builder/interactive-functionality-different-report-rendering-extensions.md)   
  [轉譯為 HTML &#40;報表產生器及 SSRS&#41;](../report-builder/rendering-to-html-report-builder-and-ssrs.md)   
- [頁面配置和轉譯&#40;報表產生器和 SSRS&#41;](page-layout-and-rendering-report-builder-and-ssrs.md)  
+ [頁面配置和轉譯&#40;報表產生器及 SSRS&#41;](page-layout-and-rendering-report-builder-and-ssrs.md)  
   
   

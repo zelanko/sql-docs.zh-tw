@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - jobs [SQL Server Agent], creating
 - SQL Server Agent jobs, creating
 ms.assetid: 465fb7fc-7622-4252-a178-ea51691c935b
 caps.latest.revision: 34
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 40ec697eb5093ee690d944e0ec07cc01e2bf8ac6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: ed5eada15f8f63404c0d6053fad452d372b09cef
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36030197"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37270184"
 ---
 # <a name="create-jobs"></a>建立作業
   作業是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 循序執行的一系列指定作業。 一項作業可執行大範圍的活動，包括執行 [!INCLUDE[tsql](../../includes/tsql-md.md)] 指令碼、命令提示字元應用程式、Microsoft ActiveX 指令碼、Integration Services 封裝、Analysis Services 命令及查詢，或是「複寫」作業。 作業可執行重複性或可排程的工作，並可自動產生警示，通知使用者作業的狀態，進而大量地簡化 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的管理程序。  
@@ -45,8 +45,8 @@ ms.locfileid: "36030197"
 ## <a name="see-also"></a>另請參閱  
  [管理作業步驟](manage-job-steps.md)   
  [將整個企業的管理自動化](automated-administration-across-an-enterprise.md)   
- [建立並附加排程至作業](create-and-attach-schedules-to-jobs.md)   
- [執行作業](run-jobs.md)   
+ [建立及附加排程至作業](create-and-attach-schedules-to-jobs.md)   
+ [執行工作](run-jobs.md)   
  [檢視或修改作業](view-or-modify-jobs.md)  
   
   

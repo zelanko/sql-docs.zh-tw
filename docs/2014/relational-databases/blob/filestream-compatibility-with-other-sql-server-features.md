@@ -5,24 +5,23 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-blob
+ms.technology: filestream
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - FILESTREAM [SQL Server], other SQL Server features and
 - FILESTREAM [SQL Server], limitations
 ms.assetid: d2c145dc-d49a-4f5b-91e6-89a2b0adb4f3
 caps.latest.revision: 41
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: be0912f1da8e17d5fbd1723595e845393e94cf41
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 1fce4632ddcee1ed29ce8a06ee5efc631f8ce1f2
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36030346"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37175777"
 ---
 # <a name="filestream-compatibility-with-other-sql-server-features"></a>FILESTREAM 與其他 SQL Server 功能的相容性
   由於 FILESTREAM 資料位於檔案系統中，所以本主題提供了搭配下列 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]功能使用 FILESTREAM 的一些考量、指導方針和限制：  
@@ -82,7 +81,7 @@ ms.locfileid: "36030346"
   
 -   max text repl size 選項會指定可以插入要發行以供複寫之資料行中的資料數量上限。 此選項可用來控制所複寫之 FILESTREAM 資料的大小。  
   
--   如果您指定的結構描述選項來複寫 FILESTREAM 屬性，但是您篩選出`uniqueidentifier`FILESTREAM 所需的資料行，或是指定不要為複寫的資料行的唯一條件約束，則複寫作業不會複寫 FILESTREAM屬性。 此資料行只會複寫為 `varbinary(max)` 資料行。  
+-   如果您指定的結構描述選項來複寫 FILESTREAM 屬性，但是您篩選出`uniqueidentifier`FILESTREAM 所需的資料行，或是指定不要為複寫 UNIQUE 條件約束資料行，則複寫不會複寫 FILESTREAM屬性。 此資料行只會複寫為 `varbinary(max)` 資料行。  
   
 ### <a name="considerations-for-merge-replication"></a>合併式複寫考量  
  如果您在針對合併式複寫發行之資料表中使用 FILESTREAM 資料行，請注意以下考量：  
@@ -93,7 +92,7 @@ ms.locfileid: "36030346"
   
          如果您如所述的內容手動加入 UNIQUE 條件約束，而且您想要移除合併式複寫，您就必須先移除 UNIQUE 條件約束，否則複寫移除將會失敗。  
   
-    -   根據預設，合併式複寫會使用 NEWSEQUENTIALID()，因為它可以提供比 NEWID() 更好的效能。 如果您將加入`uniqueidentifier`發行資料表中，將合併式複寫，newsequentialid （） 指定為預設值的資料行。  
+    -   根據預設，合併式複寫會使用 NEWSEQUENTIALID()，因為它可以提供比 NEWID() 更好的效能。 如果您新增`uniqueidentifier`發行資料表中，將會針對合併式複寫中，newsequentialid （） 指定為預設值的資料行。  
   
 -   合併式複寫包括複寫大型物件類型的最佳化， 此最佳化作業是由 [sp_addmergearticle](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql) 的 @stream_blob_columns 參數所控制。 如果您設定此結構描述選項來複寫 FILESTREAM 屬性，則 @stream_blob_columns 參數值會設定為 `true`。 可以使用 [sp_changemergearticle](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql)來覆寫此最佳化。 這個預存程序可讓您將 @stream_blob_columns 設定為 `false`。 如果您將 FILESTREAM 資料行加入至已針對合併式複寫發行的資料表中，我們建議您使用 sp_changemergearticle 將此選項設定為 `true`。  
   
@@ -108,7 +107,7 @@ ms.locfileid: "36030346"
  資料庫鏡像不支援 FILESTREAM。 不能在主體伺服器上建立 FILESTREAM 檔案群組。 不能針對包含 FILESTREAM 檔案群組的資料庫設定資料庫鏡像。  
   
 ##  <a name="FullText"></a> 全文檢索索引  
- [全文檢索索引](../indexes/indexes.md)搭配 FILESTREAM 資料行相同的方式，與`varbinary(max)`資料行。 FILESTREAM 資料表必須有一個資料行包含每一個 FILESTREAM BLOB 的副檔名。 如需詳細資訊，請參閱[使用全文檢索搜尋進行查詢](../search/query-with-full-text-search.md)、[設定及管理搜尋的篩選](../search/configure-and-manage-filters-for-search.md)和 [sys.fulltext_document_types &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-fulltext-document-types-transact-sql)。  
+ [全文檢索索引](../indexes/indexes.md)搭配 FILESTREAM 資料行中相同的方式，與`varbinary(max)`資料行。 FILESTREAM 資料表必須有一個資料行包含每一個 FILESTREAM BLOB 的副檔名。 如需詳細資訊，請參閱[使用全文檢索搜尋進行查詢](../search/query-with-full-text-search.md)、[設定及管理搜尋的篩選](../search/configure-and-manage-filters-for-search.md)和 [sys.fulltext_document_types &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-fulltext-document-types-transact-sql)。  
   
  全文檢索引擎會針對 FILESTREAM BLOB 的內容建立索引。 為檔案 (如影像) 建立索引可能不會很實用。 當更新 FILESTREAM BLOB 時，會為它重新建立索引。  
   

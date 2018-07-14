@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.rep.monitor.sortcolumns.f1
 ms.assetid: 66b44b6c-10a5-4e3f-a97b-7568609c88ac
 caps.latest.revision: 6
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 47b33d5adc73e4e0096d6390140575ed30ec94ee
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: d0610b65013bce66f4ebcb6f446d63ecaf656463
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36030025"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37234828"
 ---
 # <a name="sort-columns"></a>排序資料行
   **[排序資料行]** 對話方塊可讓您根據一或多個資料行排序「複寫監視器」中的方格 (您也可以按一下「複寫監視器」方格中的資料行標頭，針對單一資料行排序)。 例如，若要根據狀態和連接類型排序 **[所有訂閱]** 索引標籤中的訂閱，請遵循下列步驟進行：  

@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.executesqlserveragentjobtask.f1
 helpviewer_keywords:
@@ -19,13 +19,13 @@ ms.assetid: 3aa3bc0e-1a1c-452e-81b8-b4e3422ea053
 caps.latest.revision: 43
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 49a116b7bbe292e17720b00008f01a69dafe24ea
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ead21855d754a9e5b48572e5576b311db5b32983
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36030324"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37173259"
 ---
 # <a name="execute-sql-server-agent-job-task"></a>執行 SQL Server Agent 作業工作
   「執行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理程式作業」工作會執行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理程式作業。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 是 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 服務，可執行 SQL Server 執行個體中所定義的作業。 您可以建立執行 Transact-SQL 陳述式和 ActiveX 指令碼的作業、執行 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 和「複寫維護」工作，或執行封裝。 您也可以設定作業來監視 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 以及引發警示。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 作業通常可用來自動化重複執行的工作。 如需詳細資訊，請參閱 [實作作業](../../ssms/agent/implement-jobs.md)。  

@@ -1,5 +1,5 @@
 ---
-title: 定義和瀏覽 Kpi |Microsoft 文件
+title: 定義和瀏覽的 Kpi |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 648b9a02-1278-4f11-b940-6f0de6a4042d
 caps.latest.revision: 18
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: jhubbard
-ms.openlocfilehash: 1a8612cf9e325aaa59f4b79ca74a5aa49f51aaab
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: f60530d85de673e3cb3bb7e6f19f2c8484cc68bf
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36023239"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37243728"
 ---
 # <a name="defining-and-browsing-kpis"></a>定義和瀏覽 KPI
   若要定義關鍵效能指標 (KPI)，您必須先定義 KPI 名稱以及與該 KPI 相關聯的量值群組。 KPI 可以和所有的量值群組或單一量值群組相關聯。 接著就定義 KPI 的下列元素：  
@@ -63,7 +63,7 @@ ms.locfileid: "36023239"
   
      下圖顯示 [Cube 設計師] 的 [KPI] 索引標籤。  
   
-     ![Kpi 索引標籤，Cube 設計工具的](../../2014/tutorials/media/l7-kpi-1.gif "Kpi 索引標籤，Cube 設計工具")  
+     ![Kpi 索引標籤，Cube 設計師](../../2014/tutorials/media/l7-kpi-1.gif "Kpi 索引標籤，Cube 設計師 的")  
   
 2.  在 [KPI] 索引標籤的工具列上，按一下 [新增 KPI] 按鈕。  
   
@@ -71,7 +71,7 @@ ms.locfileid: "36023239"
   
      ![在 [顯示] 窗格中的空白 KPI 範本](../../2014/tutorials/media/l7-kpi-2.gif "顯示 窗格中的空白 KPI 範本")  
   
-3.  在**名稱**方塊中，輸入`Reseller Revenue`，然後選取**轉售商銷售**中**相關聯的量值群組**清單。  
+3.  在 **名稱**方塊中，輸入`Reseller Revenue`，然後選取**轉售商銷售**中**相關聯的量值群組**清單。  
   
 4.  在 [計算工具] 窗格的 [中繼資料] 索引標籤上，依序展開 [量值] 和 [轉售商銷售]，然後將 [轉售商銷售 - 銷售量] 量值拖曳到 [值運算式] 方塊。  
   
@@ -156,7 +156,7 @@ ms.locfileid: "36023239"
   
 1.  按一下 [KPI] 索引標籤之工具列上的 [表單檢視] 按鈕，然後按一下 [新增 KPI] 按鈕。  
   
-2.  在**名稱**方塊中，輸入`Product Gross Profit Margin`，然後確認**\<所有 >** 會出現在**相關聯的量值群組**清單。  
+2.  在 **名稱**方塊中，輸入`Product Gross Profit Margin`，然後確認**\<所有 >** 會出現在**相關聯的量值群組**清單。  
   
 3.  在 [計算工具] 窗格的 [中繼資料] 索引標籤中，將 [總毛利率] 量值拖曳到 [值運算式] 方塊。  
   
@@ -265,7 +265,7 @@ ms.locfileid: "36023239"
   
 2.  當您順利完成部署時，請在 [KPI] 索引標籤的工具列上按一下 [重新連接]，然後按一下 [瀏覽器檢視]。  
   
-     `Product Gross Profit Margin` KPI 隨即出現並顯示的 KPI 值**Q3 CY 2007**和**North America**銷售領域。  
+     `Product Gross Profit Margin` KPI 隨即出現並顯示的 KPI 值**Q3 CY 2007**並**北美洲**銷售領域。  
   
 3.  在 [篩選] 窗格中，從 [維度] 清單中選取 [產品]、從 [階層] 清單中選取 [類別目錄]、從 [運算子] 清單中選取 [等於]，並從 [篩選運算式] 清單中選取 [自行車]，然後按一下 [確定]。  
   

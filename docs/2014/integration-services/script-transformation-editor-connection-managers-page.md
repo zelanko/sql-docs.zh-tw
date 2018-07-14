@@ -1,5 +1,5 @@
 ---
-title: 指令碼轉換編輯器 （連接管理員頁面） |Microsoft 文件
+title: 指令碼轉換編輯器 （連線管理員頁面） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.scriptcomponent.connections.f1
 helpviewer_keywords:
 - Script Transformation Editor
 ms.assetid: 709f048e-0b8b-46c3-9dde-3e912361157f
 caps.latest.revision: 19
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 29eecbed7fe8d51886167de4b8a05e96ed2884a5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 02729cf5e1b1fbc96e6cee87fdcc072380d7ea87
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36031048"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37221638"
 ---
 # <a name="script-transformation-editor-connection-managers-page"></a>指令碼轉換編輯器 (連接管理員頁面)
   使用 [指令碼轉換編輯器] 的 [連線管理員] 頁面，即可指定指令碼將要使用的任何連接。  
@@ -51,7 +51,7 @@ ms.locfileid: "36031048"
   
 ## <a name="see-also"></a>另請參閱  
  [Integration Services 錯誤和訊息參考](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [選取指令碼元件類型](../../2014/integration-services/select-script-component-type.md)   
+ [選取 指令碼元件類型](../../2014/integration-services/select-script-component-type.md)   
  [指令碼轉換編輯器&#40;輸入資料行頁面&#41;](../../2014/integration-services/script-transformation-editor-input-columns-page.md)   
  [指令碼轉換編輯器&#40;輸入及輸出頁面&#41;](../../2014/integration-services/script-transformation-editor-inputs-and-outputs-page.md)   
  [指令碼轉換編輯器&#40;指令碼 頁面&#41;](../../2014/integration-services/script-transformation-editor-script-page.md)   

@@ -1,5 +1,5 @@
 ---
-title: 建立貨幣類型維度 |Microsoft 文件
+title: 建立貨幣類型維度 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - dimensions [Analysis Services], currency
 - currency [Analysis Services]
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - currency dimensions [Analysis Services]
 ms.assetid: b1f037d1-ce47-4e47-a1c2-5ec9e781cff6
 caps.latest.revision: 16
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: f45683b404e9a33260edda6163aae9f783c8b7f4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 7b9eb36a77501a7195c18138eab0d767fc7aed63
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36030175"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37232018"
 ---
 # <a name="create-a-currency-type-dimension"></a>建立貨幣類型維度
   在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 中，貨幣類型維度是指其屬性代表財務報表所使用之貨幣清單的維度。  
@@ -37,14 +37,14 @@ ms.locfileid: "36030175"
   
  商業智慧精靈可利用此資訊設計一個貨幣轉換程序，來識別適當的目的地貨幣維度 (代表目的地貨幣的貨幣維度)。 視商業智慧方案需要的貨幣轉換數目而定，商業智慧精靈可定義多個目的地貨幣維度。 如需定義貨幣轉換的詳細資訊，請參閱[貨幣轉換 &#40;Analysis Services&#41;](../currency-conversions-analysis-services.md)。  
   
- 若要將維度識別為貨幣維度，設定`Type`屬性的維度`Currency`。  
+ 若要將維度識別為貨幣維度，將`Type`屬性的維度`Currency`。  
   
 ## <a name="dimension-structure"></a>維度結構  
  貨幣維度會包含至少一個索引鍵屬性，來識別貨幣維度之維度資料表中的個別貨幣。 在來源和目的地貨幣維度中，索引鍵屬性的值是不同的：  
   
 -   若要將屬性識別為來源貨幣維度的索引鍵屬性，請將該屬性的 `Type` 屬性設定為 `CurrencySource`。  
   
--   若要將屬性識別為目的地貨幣維度，設定`Type`將屬性的屬性`CurrencyDestination`。  
+-   若要將屬性識別為目的地貨幣維度，將`Type`屬性的屬性來`CurrencyDestination`。  
   
  基於報表用途，來源和目的地貨幣維度都可選擇性地包含下列屬性：  
   
@@ -58,7 +58,7 @@ ms.locfileid: "36030175"
   
 -   貨幣國際標準組織 (ISO) 代碼。  
   
-     若要將屬性識別為貨幣 ISO 代碼屬性，設定`Type`將屬性的屬性`CurrencyIsoCode`。  
+     若要將屬性識別為貨幣 ISO 代碼屬性，設定`Type`屬性的屬性來`CurrencyIsoCode`。  
   
  如需屬性類型的詳細資訊，請參閱 [設定屬性類型](attribute-properties-configure-attribute-types.md)。  
   

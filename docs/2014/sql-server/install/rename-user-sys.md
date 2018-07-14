@@ -1,5 +1,5 @@
 ---
-title: 重新命名使用者 sys |Microsoft 文件
+title: 重新命名使用者 sys |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - sys user names [SQL Server]
 ms.assetid: d622d646-83e4-4b6f-9a21-77b301af04b5
 caps.latest.revision: 25
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 959eb9877fa4b73ff9bd307019976a05514b8f8f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 8cfb55c4199935d7d859cdc9144f5a29dc34eff9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36030710"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37202558"
 ---
 # <a name="rename-user-sys"></a>重新命名使用者 sys
   Upgrade Advisor 偵測到的使用者名稱**sys**資料庫中。 這個名稱是保留的。 請在升級之前重新命名使用者。 如果使用者未重新命名，在升級程序之後，資料庫將處於可疑狀態，要等到資料庫連線後才可供使用。  
@@ -35,11 +35,11 @@ ms.locfileid: "36030710"
 ## <a name="corrective-action"></a>更正動作  
   
 ### <a name="before-upgrade-procedure"></a>升級前程序  
- 在升級每個包含使用者的資料庫中之前**sys**，執行下列動作：  
+ 在升級中包含使用者的每個資料庫之前**sys**，執行下列動作：  
   
 1.  建立新的使用者。  
   
-2.  使用下列陳述式來顯示所有使用者授與的權限**sys**和授與使用者**sys**。  
+2.  使用下列的陳述式來顯示所有使用者授與的權限**sys**以及授與使用者**sys**。  
   
     ```  
     -- Return permissions granted by user sys.  
@@ -48,16 +48,16 @@ ms.locfileid: "36030710"
     SELECT * FROM sysprotects WHERE uid = USER_ID('sys')  
     ```  
   
-3.  若要傳送擁有的所有物件的擁有權**sys**給新的使用者，使用**sp_changeobjectowner**。  
+3.  若要所擁有的所有物件的擁有權轉移**sys**新的使用者，以使用**sp_changeobjectowner**。  
   
 4.  卸除使用者**sys**。  
   
-5.  若要還原在步驟 2 中擷取原始的權限，請使用 AS *new_user* GRANT 陳述式的子句。  
+5.  若要還原在步驟 2 中擷取原始的權限，使用 AS *new_user* GRANT 陳述式的子句。  
   
 6.  修改指令碼以參考新使用者。 例如，包含 `SELECT * FROM sys.my`_`table` 等陳述式的指令碼必須變更為 `SELECT * FROM new_user.my_table`。  
   
 ### <a name="after-upgrade-procedure"></a>升級後程序  
- 如果使用者**sys**已在升級之前並未重新命名，執行下列動作：  
+ 如果使用者**sys**已升級之前無法重新命名，執行下列動作：  
   
 1.  執行陳述式 `ALTER DATABASE db_name SET ONLINE`。 資料庫將處於 SINGLE_USER 模式中。  
   
@@ -67,6 +67,6 @@ ms.locfileid: "36030710"
   
 ## <a name="see-also"></a>另請參閱  
  [Database Engine 升級問題](../../../2014/sql-server/install/database-engine-upgrade-issues.md)   
- [SQL Server 2014 Upgrade Advisor&#91;新&#93;](/sql/2014/sql-server/install/sql-server-2014-upgrade-advisor)  
+ [SQL Server 2014 Upgrade Advisor&#91;新增&#93;](/sql/2014/sql-server/install/sql-server-2014-upgrade-advisor)  
   
   

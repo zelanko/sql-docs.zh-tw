@@ -1,5 +1,5 @@
 ---
-title: 建立工作階段範圍導出資料格 |Microsoft 文件
+title: 建立工作階段範圍導出資料格 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - session-scoped calculated members [MDX]
 ms.assetid: f2d14a89-6286-4e74-9afb-091076f93f21
 caps.latest.revision: 14
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: a6cf66b12594d83e315e5cd1f633f0a4261e095e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 1df213e83122d3d93a57c2bbdd131741043ffe7c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36030168"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37232088"
 ---
 # <a name="creating-session-scoped-calculated-cells"></a>建立工作階段範圍導出資料格
     
@@ -83,8 +83,8 @@ FOR String_Expression AS 'MDX_Expression'
 |--------------|-----------------|  
 |空集合|解析成空集合的 MDX 命名集運算式。 在此情況下，導出資料格的範圍是整個 Cube。|  
 |單一成員集合|解析成單一成員集合的 MDX 命名集運算式。|  
-|單一層級成員|解析成單一層級成員的 MDX 命名集運算式。 舉例來說，這是*Level_Expression*。`Members` MDX 函數。 若要包含導出的成員，請使用*Level_Expression*。`AllMembers` MDX 函數。<br /><br /> 如需詳細資訊，請參閱 [AllMembers &#40;MDX&#41;](/sql/mdx/allmembers-mdx)。|  
-|下階集合|解析為指定成員之下階的 MDX 集合運算式。 舉例來說，這是`Descendants`(*Member_Expression*， *Level_Expression*， *Desc_Flag*) MDX 函數。<br /><br /> 如需詳細資訊，請參閱 [Descendants &#40;MDX&#41;](/sql/mdx/descendants-mdx)。|  
+|單一層級成員|解析成單一層級成員的 MDX 命名集運算式。 舉例來說，這*Level_Expression*。`Members` MDX 函數。 若要包含導出的成員，請使用*Level_Expression*。`AllMembers` MDX 函數。<br /><br /> 如需詳細資訊，請參閱 [AllMembers &#40;MDX&#41;](/sql/mdx/allmembers-mdx)。|  
+|下階集合|解析為指定成員之下階的 MDX 集合運算式。 舉例來說，這`Descendants`(*Member_Expression*， *Level_Expression*， *Desc_Flag*) MDX 函數。<br /><br /> 如需詳細資訊，請參閱 [Descendants &#40;MDX&#41;](/sql/mdx/descendants-mdx)。|  
   
 ## <a name="see-also"></a>另請參閱  
  [建置在 MDX 中的資料格計算&#40;MDX&#41;](../../multidimensional-models-olap-logical-cube-objects/calculations.md)  

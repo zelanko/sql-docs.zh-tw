@@ -15,15 +15,15 @@ helpviewer_keywords:
 - SoapException class
 ms.assetid: a4489103-a874-44c2-8f75-95cb238928ed
 caps.latest.revision: 30
-author: douglaslM
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: aec03e032cdd0af46666ca76f49bb2034c5312d8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: ff6f2e619f0e4b7c447ee53b31e1a52c3ed9e9b3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36030954"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37224808"
 ---
 # <a name="helplink-element"></a>HelpLink 元素
   **Detail** 屬性的 **HelpLink** 項目是報表伺服器所產生的 URL 字串。 URL 會以 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 說明及支援所管理的網頁為目標，並提供有關 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 中發生的特定錯誤之其他說明與知識庫文章。 URL 具有下列語法：  
@@ -32,14 +32,14 @@ ms.locfileid: "36030954"
   
  下表列出 **HelpLink** URL 的引數。  
   
-|引數|ReplTest1|  
+|引數|值|  
 |--------------|-----------|  
 |**EvtSrc**|"Microsoft.ReportingServices.Diagnostics.ErrorStrings.resources.Strings"|  
 |**EvtID**|例如，報表伺服器錯誤碼，rsReservedItem。|  
 |**ProdName**|"Microsoft SQL%20Server%20Reporting%20Services"。 產品名稱值是編碼的 URL。|  
 |**ProdVer**|[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 的版本號碼。 "8.00" 的值表示 [!INCLUDE[ssVersion2000](../../../includes/ssversion2000-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]。|  
   
- 下列範例說明**HelpLink** URL 傳回的錯誤碼`rsReservedItem`。 當使用者嘗試修改或刪除在 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 中的保留項目時，就會發生這個錯誤。  
+ 下列範例說明**HelpLink**會傳回錯誤的程式碼的 URL `rsReservedItem`。 當使用者嘗試修改或刪除在 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 中的保留項目時，就會發生這個錯誤。  
   
 ```  
 http://www.microsoft.com/products/ee/transform.aspx?  

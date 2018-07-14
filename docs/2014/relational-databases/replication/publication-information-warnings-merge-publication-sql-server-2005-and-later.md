@@ -1,5 +1,5 @@
 ---
-title: 發行集資訊，警告 （合併式發行集，SQL Server 2005 和更新版本） |Microsoft 文件
+title: 發行集資訊，警告 （合併式發行集，SQL Server 2005 和更新版本） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.rep.monitor.publicationinfo.warningsandagents.merge.f1
 ms.assetid: 9bef3565-5f13-42ac-8723-ebe55b0c11e6
 caps.latest.revision: 26
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: fb34268b6f3f5f1496fcd8c9009a4d6648f87200
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 789d7beda9396e013438c317f28f5bc80b6c07a8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36030982"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37206818"
 ---
 # <a name="publication-information-warnings-merge-publication-sql-server-2005-and-later"></a>發行集資訊，警告 (合併式發行集，SQL Server 2005 和更新的版本)
   執行 **和更新版本的散發者可以使用** [警告] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 索引標籤。 **[警告]** 索引標籤可以讓您針對選取的發行集執行下列工作：  

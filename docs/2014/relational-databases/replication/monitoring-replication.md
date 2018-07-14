@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - monitoring performance [SQL Server replication], about monitoring replication
 - transactional replication, monitoring
@@ -21,20 +21,20 @@ ms.assetid: f182f43a-6af8-45bc-a708-08d5f7a6984a
 caps.latest.revision: 38
 author: craigg-msft
 ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 7434a211de780ab5a363aeec97b8914bb587f5a4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c1276429c773656e04a3ce15f277d08c3b3e52f5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36029803"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37162299"
 ---
 # <a name="monitoring-replication"></a>監視 (複寫)
   監控複寫拓撲是部署複寫時很重要的層面。 由於已散發複寫活動，因此必須跨越所有複寫相關的電腦，追蹤活動和狀態 下列工具可用來監視複寫：  
   
 -   [!INCLUDE[msCoName](../../includes/msCoName-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssNoVersion-md.md)] Replication Monitor  
   
-     「複寫監視器」是最重要的複寫監視工具，可呈現所有複寫活動以發行者為焦點的檢視。 如需詳細資訊，請參閱[監視複寫](monitor/monitoring-replication-overview.md)。  
+     「複寫監視器」是最重要的複寫監視工具，可呈現所有複寫活動以發行者為焦點的檢視。 如需詳細資訊，請參閱 <<c0> [ 監視複寫](monitor/monitoring-replication-overview.md)。  
   
 -   [!INCLUDE[msCoName](../../includes/msCoName-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssManStudioFull-md.md)]  
   

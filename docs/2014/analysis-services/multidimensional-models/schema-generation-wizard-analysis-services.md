@@ -1,5 +1,5 @@
 ---
-title: 結構描述產生精靈 (Analysis Services) |Microsoft 文件
+title: 結構描述產生精靈 (Analysis Services) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - relational schema [Analysis Services]
 ms.assetid: 68bf7ba3-d0cb-437f-9a3e-9edc0999af19
 caps.latest.revision: 15
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 82df99618c39c8fb7212747eed2c9cc269701ca5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 1842a775468c03f47b9d6af19e2d1450ce2e8921
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36030169"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37232028"
 ---
 # <a name="schema-generation-wizard-analysis-services"></a>結構描述產生精靈 (Analysis Services)
   [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 支援在 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 專案或資料庫內定義 OLAP 物件時，使用關聯式結構描述的兩個方法。 一般來說，您會根據 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 專案或資料庫內資料來源檢視中所建構的邏輯資料模型來定義 OLAP 物件。 這個資料來源檢視是根據一個或多個關聯式資料來源中的結構描述元素所定義，如資料來源檢視中所自訂的方式一樣。  
@@ -43,7 +43,7 @@ ms.locfileid: "36030169"
   
 |主題|描述|  
 |-----------|-----------------|  
-|[使用結構描述產生精靈&#40;Analysis Services&#41;](schema-generation-wizard-analysis-services.md)|描述如何產生主題領域和暫存區域資料庫的結構描述。|  
+|[使用結構描述產生精靈 &#40;Analysis Services&#41;](schema-generation-wizard-analysis-services.md)|描述如何產生主題領域和暫存區域資料庫的結構描述。|  
 |[了解資料庫結構描述](understanding-the-database-schemas.md)|描述針對主題領域和臨時區域資料庫產生的結構描述。|  
 |[了解累加式產生](understanding-incremental-generation.md)|描述結構描述產生精靈的累加產生能力。|  
   

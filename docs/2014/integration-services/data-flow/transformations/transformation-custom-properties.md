@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - VB
 - CSharp
@@ -44,13 +44,13 @@ ms.assetid: 56f5df6a-56f6-43df-bca9-08476a3bd931
 caps.latest.revision: 72
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: d73b7d0b58742998a0c30f58399e8deaceb1f3ee
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 75a43dd1ba07915bdba0ce3b42aee2a517311769
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36029899"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37243188"
 ---
 # <a name="transformation-custom-properties"></a>轉換自訂屬性
   除了 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 物件模型中大部分資料流程物件通用的屬性以外，許多資料流程物件都具有物件特有的自訂屬性。 這些自訂屬性只能在執行階段使用，而且不會記錄在 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] Managed 程式設計參考文件集中。  
@@ -105,7 +105,7 @@ ms.locfileid: "36029899"
 |AggregationType|整數 (列舉)|一個值，指定要在資料行上執行的彙總作業。 此屬性可以有下列其中一個值：<br /><br /> **計數** (1)<br /><br /> **全部計數** (2)<br /><br /> **相異計數** (3)<br /><br /> **總和** (4)<br /><br /> **平均** (5)<br /><br /> **最大值** (7)<br /><br /> **最小值** (6)<br /><br /> **群組依據** (0)|  
 |CountDistinctKeys|Integer|當彙總類型為 [相異計數] 時，就是指定彙總可寫入之索引鍵確切數目的值。 如果您指定了 CountDistinctScale 值，就會優先使用 CountDistinctKeys 中的值。|  
 |CountDistinctScale|整數 (列舉)|當彙總類型為 [相異計數] 時，就是描述彙總可寫入之索引鍵值近似數目的值。 此屬性可以有下列其中一個值：<br /><br /> **低** (1) - 表示最多 500,000 個索引鍵值。<br /><br /> **中** (2) - 表示最多 5 百萬個索引鍵值。<br /><br /> **高** (3) - 表示多於 2 千 5 百萬個索引鍵值。<br /><br /> **未指定** (0) - 表示未使用 CountDistinctScale 值。|  
-|IsBig|布林|一個值，指出資料行包含大於 40 億的值，或有效位數超過雙精確度浮點數值的值。 此值可能是 0 或 1。 0 表示 IsBig`False`且資料行不包含大數值或精確值。 這個屬性的預設值為 1。|  
+|IsBig|布林|一個值，指出資料行包含大於 40 億的值，或有效位數超過雙精確度浮點數值的值。 此值可能是 0 或 1。 0 表示 IsBig 為`False`且資料行不包含大數值或精確值。 這個屬性的預設值為 1。|  
   
  彙總轉換的輸入和輸入資料行沒有任何自訂屬性。  
   
@@ -132,7 +132,7 @@ ms.locfileid: "36029899"
 |屬性|資料類型|描述|  
 |--------------|---------------|-----------------|  
 |Connectionmanager|String|指定連接管理員的名稱。|  
-|ValidateExternalMetadata|布林|指出快取轉換是否在設計階段使用外部資料來源進行驗證。 如果此屬性設定為 `False`，就會在執行階段根據外部資料來源進行驗證。<br /><br /> 預設值，它`True`。|  
+|ValidateExternalMetadata|布林|指出快取轉換是否在設計階段使用外部資料來源進行驗證。 如果此屬性設定為 `False`，就會在執行階段根據外部資料來源進行驗證。<br /><br /> 預設值`True`。|  
 |AvailableInputColumns|String|可用輸入資料行的清單。|  
 |InputColumns|String|選取之輸入資料行的清單。|  
 |CacheColumnName|String|指定對應至選取之輸入資料行的資料行名稱。<br /><br /> CacheColumnName 屬性中的資料行名稱必須與快取連接管理員編輯器之 [資料行] 頁面上所列的對應資料行名稱相符。<br /><br /> 如需詳細資訊，請參閱[快取連接管理員編輯器](../../cache-connection-manager-editor.md)|  
@@ -174,7 +174,7 @@ ms.locfileid: "36029899"
   
 |屬性名稱|資料類型|描述|  
 |-------------------|---------------|-----------------|  
-|copyColumnId|Integer|`LineageID`複製來源的輸出資料行的輸入資料行。|  
+|copyColumnId|Integer|`LineageID`從中複製輸出資料行的輸入資料行。|  
   
  複製資料行轉換的輸入、輸入資料行和輸出沒有任何自訂屬性。  
   
@@ -188,7 +188,7 @@ ms.locfileid: "36029899"
 |屬性|資料類型|描述|  
 |--------------|---------------|-----------------|  
 |FastParse|布林|一個值，指出資料行會使用 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 所提供之速度更快但不區分地區設定的快速剖析常式，還是區分地區設定的標準剖析常式。 這個屬性的預設值是`False`。 如需詳細資訊，請參閱 [快速剖析](../../fast-parse.md) 和 [標準剖析](../../standard-parse.md)。 執行個體時提供 SQL Server 登入。<br /><br /> 注意：雖然您無法在資料轉換編輯器中使用這個屬性，但是可以使用進階編輯器來設定這個屬性。|  
-|SourceInputColumnLineageId|Integer|`LineageID`來源的輸出資料行的輸入資料行。|  
+|SourceInputColumnLineageId|Integer|`LineageID`做為來源的輸出資料行之輸入資料行。|  
   
  資料轉換的輸入、輸入資料行和輸出沒有任何自訂屬性。  
   
@@ -236,7 +236,7 @@ ms.locfileid: "36029899"
 |--------------|---------------|-----------------|  
 |AllowAppend|布林|一個值，指定轉換是否將資料附加至現有的檔案。 這個屬性的預設值是`False`。|  
 |ForceTruncate|布林|一個值，指定轉換是否在寫入資料之前截斷現有的檔案。 這個屬性的預設值是`False`。|  
-|FileDataColumnID|Integer|一個值，可識別包含轉換插入檔案中之資料的資料行。 擷取的資料行，這個屬性的值為**0**; 上檔案路徑資料行，此屬性包含`LineageID`擷取資料行。|  
+|FileDataColumnID|Integer|一個值，可識別包含轉換插入檔案中之資料的資料行。 擷取的資料行，這個屬性的值為**0**; 在 [檔案路徑] 欄位中，此屬性包含`LineageID`擷取資料行。|  
 |WriteBOM|布林|一個值，指定是否要將位元組順序標記 (BOM) 寫入該檔案。|  
   
  匯出資料行轉換的輸入、輸出和輸出資料行沒有任何自訂屬性。  
@@ -251,7 +251,7 @@ ms.locfileid: "36029899"
 |屬性|資料類型|描述|  
 |--------------|---------------|-----------------|  
 |ExpectBOM|布林|一個值，指定匯入資料行轉換是否必須使用位元組順序標記 (BOM)。 BOM 只有在資料的資料類型為 DT_NTEXT 時才需要。|  
-|FileDataColumnID|Integer|一個值，可識別包含轉換插入資料流程中之資料的資料行。 要插入資料的資料行，此屬性有值為 0;其中包含來源檔案路徑的資料行，此屬性包含`LineageID`要插入資料的資料行。|  
+|FileDataColumnID|Integer|一個值，可識別包含轉換插入資料流程中之資料的資料行。 要插入資料的資料行，這個屬性具有值為 0;其中包含來源檔案路徑的資料行，此屬性包含`LineageID`要插入資料的資料行。|  
   
  匯入資料行轉換的輸入、輸出和輸出資料行沒有任何自訂屬性。  
   
@@ -293,7 +293,7 @@ ms.locfileid: "36029899"
 ##  <a name="flookup"></a> 模糊查閱轉換自訂屬性  
  模糊查閱轉換同時具有自訂屬性以及所有資料流程元件通用的屬性。  
   
- 下表描述的是模糊查閱轉換的自訂屬性。 所有的屬性，除了`ReferenceMetadataXML`是讀取/寫入。  
+ 下表描述的是模糊查閱轉換的自訂屬性。 所有屬性，但`ReferenceMetadataXML`是可讀寫。  
   
 |屬性|資料類型|描述|  
 |--------------|---------------|-----------------|  
@@ -323,7 +323,7 @@ ms.locfileid: "36029899"
  下表描述的是模糊查閱轉換之輸出資料行的自訂屬性。 所有屬性都是可讀寫的。  
   
 > [!NOTE]  
->  對於包含通過值的對應輸入資料行的輸出資料行，CopyFromReferenceColumn 是空的包含 SourceInputColumnLineageID`LineageID`對應輸入資料行。 若為包含查閱結果的輸出資料行，CopyFromReferenceColumn 會包含查閱資料行的名稱，而且 SourceInputColumnLineageID 是空的。  
+>  通過值的對應輸入資料行的輸出資料行，copyfromreferencecolumn 就是空的而且 SourceInputColumnLineageID 會包含`LineageID`對應的輸入資料行。 若為包含查閱結果的輸出資料行，CopyFromReferenceColumn 會包含查閱資料行的名稱，而且 SourceInputColumnLineageID 是空的。  
   
 |屬性|資料類型|描述|  
 |--------------|---------------|-----------------|  
@@ -338,7 +338,7 @@ ms.locfileid: "36029899"
 ##  <a name="lookup"></a> 查閱轉換自訂屬性  
  查閱轉換同時具有自訂屬性以及所有資料流程元件通用的屬性。  
   
- 下表描述的是查閱轉換的自訂屬性。 所有的屬性，除了`ReferenceMetadataXML`是讀取/寫入。  
+ 下表描述的是查閱轉換的自訂屬性。 所有屬性，但`ReferenceMetadataXML`是可讀寫。  
   
 |屬性|資料類型|描述|  
 |--------------|---------------|-----------------|  
@@ -426,7 +426,7 @@ ms.locfileid: "36029899"
   
 |屬性名稱|資料類型|描述|  
 |-------------------|---------------|-----------------|  
-|已選取|布林|指定取樣資料列要導向的目標輸出。 在選取的輸出中，選取設定為`True`，並在未選取的輸出中，選取設定為`False`。|  
+|已選取|布林|指定取樣資料列要導向的目標輸出。 在選取的輸出中，Selected 設定為`True`，並在未選取的輸出中，Selected 設定為`False`。|  
   
  百分比取樣轉換的輸入、輸入資料行和輸出資料行沒有任何自訂屬性。  
   
@@ -443,7 +443,7 @@ ms.locfileid: "36029899"
   
 |屬性|資料類型|描述|  
 |--------------|---------------|-----------------|  
-|PivotUsage|整數 (列舉)|其中一個資料集進行樞紐處理時，指定資料行的角色的下列值：<br /><br /> **0**： 資料行未經樞紐，且資料行值已傳送至轉換輸出。<br /><br /> **1**： 資料行是集索引鍵，可識別一個集中一個或多個資料列的一部分。 具有相同集索引鍵的所有輸入資料列會組合成一個輸出資料列。<br /><br /> **2**： 資料行是樞紐資料行。 至少應從每個資料行值建立一個資料行。<br /><br /> **3**： 此資料行的值會置於樞紐後建立的資料行中。|  
+|PivotUsage|整數 (列舉)|其中一個資料集進行樞紐處理時，指定資料行的角色的下列值：<br /><br /> **0**： 資料行未經樞紐處理，以及資料行的值會傳遞至轉換輸出。<br /><br /> **1**: 資料行是集索引鍵，可識別一個集中一或多個資料列的一部分。 具有相同集索引鍵的所有輸入資料列會組合成一個輸出資料列。<br /><br /> **2**： 資料行是樞紐資料行。 至少應從每個資料行值建立一個資料行。<br /><br /> **3**： 此資料行的值會置於樞紐後建立的資料行中。|  
   
  下表描述的是樞紐轉換之輸出資料行的自訂屬性。 所有屬性都是可讀寫的。  
   
@@ -481,7 +481,7 @@ ms.locfileid: "36029899"
   
 |屬性名稱|資料類型|描述|  
 |-------------------|---------------|-----------------|  
-|已選取|布林|指定取樣資料列要導向的目標輸出。 在選取的輸出中，選取設定為`True`，並在未選取的輸出中，選取設定為`False`。|  
+|已選取|布林|指定取樣資料列要導向的目標輸出。 在選取的輸出中，Selected 設定為`True`，並在未選取的輸出中，Selected 設定為`False`。|  
   
  下表描述的是資料列取樣轉換之輸出資料行的自訂屬性。 所有屬性都是可讀寫的。  
   
@@ -516,7 +516,7 @@ ms.locfileid: "36029899"
 |--------------|---------------|-----------------|  
 |CurrentRowWhere|String|SELECT 陳述式中的 WHERE 子句，它會從具有相同商務索引鍵的資料列中選取目前的資料列。|  
 |EnableInferredMember|布林|一個值，指定是否要偵測推斷的成員更新。 這個屬性的預設值是`True`。|  
-|FailOnFixedAttributeChange|布林|一個值，指定當含有固定屬性的資料列資料行變更或維度資料表中的查閱失敗時，轉換是否會失敗。 如果您預期傳入資料列會包含新的記錄，將此值設定為`True`讓轉換之後繼續該查閱失敗，因為轉換用來識別新記錄的失敗。 這個屬性的預設值是`False`。|  
+|FailOnFixedAttributeChange|布林|一個值，指定當含有固定屬性的資料列資料行變更或維度資料表中的查閱失敗時，轉換是否會失敗。 如果您預期傳入資料列會包含新的記錄，將此值設定為`True`讓轉換的查閱失敗之後繼續，因為轉換會使用失敗來識別新的記錄。 這個屬性的預設值是`False`。|  
 |FailOnLookupFailure|布林|一個值，指定當現有資料錄的查閱失敗時，轉換是否會失敗。 這個屬性的預設值是`False`。|  
 |IncomingRowChangeType|Integer|一個值，指定所有傳入資料列是否都是新的資料列，或轉換是否應該偵測變更的類型。|  
 |InferredMemberIndicator|String|推斷的成員的資料行名稱。|  
@@ -601,7 +601,7 @@ ms.locfileid: "36029899"
   
 |屬性名稱|資料類型|描述|  
 |-------------------|---------------|-----------------|  
-|CustomLineageID|Integer|`LineageID`對應輸入資料行如果`InputColumnType`該資料行是 0 或 2。|  
+|CustomLineageID|Integer|`LineageID`之對應的輸入資料行如果`InputColumnType`該資料行是 0 或 2。|  
   
  詞彙查閱轉換的輸入和輸出沒有任何自訂屬性。  
   
@@ -624,7 +624,7 @@ ms.locfileid: "36029899"
   
 |屬性名稱|資料類型|描述|  
 |-------------------|---------------|-----------------|  
-|PivotKey|布林|指出是否在值`PivotKeyValue`寫入這個輸出資料行的輸入資料行的屬性。<br /><br /> 在 [取消樞紐轉換](unpivot-transformation.md)所描述的取消樞紐狀況中，樞紐值資料行名稱為 **Product** ，並且指定 Ham、Coke、Milk、Beer 和 Chips 資料行已取消樞紐的新 **Product** 資料行。|  
+|PivotKey|布林|指出是否在值`PivotKeyValue`的輸入資料行的屬性會寫入這個輸出資料行。<br /><br /> 在 [取消樞紐轉換](unpivot-transformation.md)所描述的取消樞紐狀況中，樞紐值資料行名稱為 **Product** ，並且指定 Ham、Coke、Milk、Beer 和 Chips 資料行已取消樞紐的新 **Product** 資料行。|  
   
  取消樞紐轉換的輸入和輸出沒有任何自訂屬性。  
   

@@ -5,10 +5,9 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - partners [SQL Server]
 - standby servers [SQL Server]
@@ -24,15 +23,15 @@ helpviewer_keywords:
 - mirror server [SQL Server] See database mirroring
 ms.assetid: a7f95ddc-5154-4ed5-8117-c9fcf2221f13
 caps.latest.revision: 121
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: f70a95e9ef5bf0bc01687728fd5cac7641867759
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 9b760a12e436a9d6f6eebf96bcfeaea8459171a8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36030368"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37233888"
 ---
 # <a name="database-mirroring-sql-server"></a>資料庫鏡像 (SQL Server)
     
@@ -61,7 +60,7 @@ ms.locfileid: "36030368"
   
 -   提升實際執行的資料庫在升級期間的可用性。  
   
-     若要將鏡像資料庫的停機時間減至最少，您可以循序升級裝載容錯移轉夥伴的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體。 這只需要承擔單一容錯移轉的停機時間。 這種升級形式就稱為 *「輪流升級」*。 如需詳細資訊，請參閱[Service Pack 在系統上安裝 with Minimal Downtime for Mirrored](../install-a-service-pack-on-a-system-with-minimal-downtime-for-mirrored-databases.md)。  
+     若要將鏡像資料庫的停機時間減至最少，您可以循序升級裝載容錯移轉夥伴的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體。 這只需要承擔單一容錯移轉的停機時間。 這種升級形式就稱為 *「輪流升級」*。 如需詳細資訊，請參閱 <<c0> [ 上安裝 Service Pack 系統 with Minimal Downtime for Mirrored](../install-a-service-pack-on-a-system-with-minimal-downtime-for-mirrored-databases.md)。  
   
 ##  <a name="TermsAndDefinitions"></a> 資料庫鏡像詞彙和定義  
  自動容錯移轉  
@@ -298,7 +297,7 @@ ms.locfileid: "36030368"
   
  **使用 Transact-SQL 或 SQL Server Management Studio**  
   
--   [升級伺服器執行個體時，鏡像資料庫的盡可能縮短停機時間](upgrading-mirrored-instances.md)  
+-   [在升級伺服器執行個體時將鏡像資料庫的停機時間減至最少](upgrading-mirrored-instances.md)  
   
 -   [準備鏡像資料庫以進行鏡像 &#40;SQL Server&#41;](prepare-a-mirror-database-for-mirroring-sql-server.md)  
   

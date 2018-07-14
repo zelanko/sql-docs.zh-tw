@@ -1,5 +1,5 @@
 ---
-title: 擴充預存程序運作方式 |Microsoft 文件
+title: 擴充預存程序運作方式 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
@@ -14,15 +14,15 @@ helpviewer_keywords:
 - extended stored procedures [SQL Server], about extended stored procedures
 ms.assetid: 6e946d8c-3268-4b59-8a1c-1637909cd701
 caps.latest.revision: 32
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 8b51dc3d5e0401861e188814fd229753428ded9c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: rothja
+ms.author: jroth
+manager: craigg
+ms.openlocfilehash: 08f7c6f353264b11ac0b927ac1ec19bbb6cacd1b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36031857"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37184585"
 ---
 # <a name="how-extended-stored-procedures-work"></a>擴充預存程序運作方式
     
@@ -31,7 +31,7 @@ ms.locfileid: "36031857"
   
  擴充預存程序藉以運作的程序為：  
   
-1.  當用戶端執行擴充預存程序時，在表格式資料流 (TDS) 或簡易物件存取通訊協定 (SOAP) 格式，從用戶端應用程式傳輸要求[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
+1.  當用戶端執行擴充預存程序時，在表格式資料流 (TDS) 或簡易物件存取通訊協定 (SOAP) 格式，從用戶端應用程式傳送要求[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
   
 2.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會搜尋與擴充預存程序相關聯的 DLL，並載入 DLL (如果尚未載入)。  
   

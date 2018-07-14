@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Named Pipes [SQL Server], configuring
 - connections [SQL Server], server network configuration
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - server configuration [SQL Server]
 ms.assetid: 890c09a1-6dad-4931-aceb-901c02ae34c5
 caps.latest.revision: 47
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 619f8faae3d57cc7ec28a427d7f29bacab4b62ce
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 798ba8646da29796e11f6391a3132afc22c99732
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36030126"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37167229"
 ---
 # <a name="server-network-configuration"></a>伺服器網路組態
   伺服器網路組態工作包括啟用通訊協定、修改通訊協定使用的通訊埠或管道、設定加密選項、設定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser 服務、在網路上公開或隱藏 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 以及註冊伺服器主體名稱。 大部分的情況下，您不需要變更伺服器網路組態。 除非有特殊的網路需求時，才需要重新設定伺服器網路通訊協定。  

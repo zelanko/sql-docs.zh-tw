@@ -1,5 +1,5 @@
 ---
-title: 適用於 Visio 的資料採礦圖形 |Microsoft 文件
+title: 適用於 Visio 的資料採礦圖形 |Microsoft Docs
 ms.custom: ''
 ms.date: 12/29/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - data mining shapes
 - templates [Visio]
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - shapes, data mining
 ms.assetid: 11a821d9-1c0a-442e-b735-92208ce479dc
 caps.latest.revision: 16
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: cd037e0d4eefb7f894d956222219902a5082fffd
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 6dae172d599b6da648962e50cb3d24fa2f36351d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36030395"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37261804"
 ---
 # <a name="data-mining-shapes-for-visio"></a>適用於 Visio 的資料採礦圖形
   適用於 Visio 的資料採礦圖形提供了針對顯示資料採礦模型所自訂的範本。 使用這些範本就能連接到您已建立的模型，也可建立互動式簡報以說明資料採礦的結果。  
@@ -42,9 +42,9 @@ ms.locfileid: "36030395"
 -   **叢集圖表：** 使用這個精靈來建立分割模型的彩色圖形。 您可以在各種檢視 (例如屬性辨識、叢集設定檔與相依性) 之間切換，以及自訂叢集的外觀。  
   
 ## <a name="installation"></a>安裝  
- 當您安裝適用於 Visio 的資料採礦範本時，依預設會安裝下列檔案至\<磁碟機 > files\microsoft SQL Server 2012 DM Add-ins (或\<磁碟機 > \ Program Files (x86) \Microsoft SQL Server 2012 資料採礦或Add-Ins):  
+ 當您安裝適用於 Visio 的資料採礦範本時，根據預設會安裝下列檔案到\<磁碟機 > files\microsoft SQL Server 2012 DM Add-ins (或\<磁碟機 > \ 或 Program Files (x86) \Microsoft SQL Server 2012 DMAdd-Ins):  
   
--   **Microsoft Data Mining.vst**此範本包含預先設計的格式、 配置和精靈，可協助您使用資料採礦圖形。  
+-   **Microsoft Data Mining.vst**此範本包含預先設計的格式設定、 配置及精靈，可協助您使用資料採礦圖形。  
   
 -   **Microsoft Data Mining Shape Studio.vss**這個樣板檔案包含與範本相關聯的圖形。  
   
@@ -59,7 +59,7 @@ ms.locfileid: "36030395"
   
 4.  設定應該要如何顯示及格式化資料的選項。  
   
-5.  當您完成**資料採礦圖形精靈**，您有一張圖表，您可以修改並增強使用 Visio 的功能。  
+5.  完成後**資料採礦圖形精靈**，您有圖表，您可以修改並增強使用 Visio 的功能。  
   
  如需如何處理及增強 Visio 模型圖表的詳細資訊，請參閱[檢視資料採礦模型在 Visio 中&#40;資料採礦增益集&#41;](viewing-data-mining-models-in-visio-data-mining-add-ins.md)  
   
@@ -69,7 +69,7 @@ ms.locfileid: "36030395"
   
      精靈會提示您選取 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 伺服器及指定包含採礦模型的資料庫。  
   
-     如需如何建立的連接資訊，請參閱[連接至來源資料&#40;適用於 Excel 的資料採礦用戶端&#41;](connect-to-source-data-data-mining-client-for-excel.md)。  
+     如需有關如何建立連接的資訊，請參閱 <<c0> [ 連接至來源的資料&#40;適用於 Excel 的資料採礦用戶端&#41;](connect-to-source-data-data-mining-client-for-excel.md)。</c0>  
   
 -   如果您使用資料表分析工具，請務必將模型儲存至 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 伺服器，切勿使用暫時性模型。  
   

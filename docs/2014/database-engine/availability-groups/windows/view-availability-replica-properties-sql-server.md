@@ -5,23 +5,22 @@ ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - ', policies'
 ms.assetid: 14fed3c4-8ecc-4e1c-931d-a7ec1e9f9e90
 caps.latest.revision: 10
-author: rothja
-ms.author: jroth
-manager: jhubbard
-ms.openlocfilehash: 62c6b2f80730ecb1d82cd0e35f8904651ac041d9
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: c9c8ce45ca1ae4efdb65d8d1aae44261be80a0a5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36024046"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37282196"
 ---
 # <a name="view-availability-replica-properties-sql-server"></a>檢視可用性複本屬性 (SQL Server)
   此主題描述如何使用 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 中的 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 或 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]，檢視 AlwaysOn 可用性群組的可用性複本屬性。  
@@ -38,7 +37,7 @@ ms.locfileid: "36024046"
   
 4.  以滑鼠右鍵按一下要檢視其屬性的可用性複本，然後選取 [屬性] 命令。  
   
-5.  在 **[可用性複本屬性]** 對話方塊中，使用 **[一般]** 頁面檢視此複本的屬性。 如果您連接至主要複本，可以變更下列屬性：可用性模式、容錯移轉模式、主要角色的連接存取、次要角色的唯讀存取 (可讀取的次要)，以及工作階段逾時值。 如需詳細資訊，請參閱[可用性複本屬性&#40;[一般] 頁面&#41;](availability-replica-properties-general-page.md)。  
+5.  在 **[可用性複本屬性]** 對話方塊中，使用 **[一般]** 頁面檢視此複本的屬性。 如果您連接至主要複本，可以變更下列屬性：可用性模式、容錯移轉模式、主要角色的連接存取、次要角色的唯讀存取 (可讀取的次要)，以及工作階段逾時值。 如需詳細資訊，請參閱 <<c0> [ 可用性複本屬性&#40;一般頁面&#41;](availability-replica-properties-general-page.md)。</c0>  
   
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  

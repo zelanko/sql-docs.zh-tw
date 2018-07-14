@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 21c2b8cb-b9ca-4bc0-bf49-50ba432562f6
 caps.latest.revision: 8
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: af1a270524d91621cdeb15b56ace7c07ad4a4df7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 91b6e5492566c2ada0857c8708ddc786560ee387
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36031802"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37177185"
 ---
 # <a name="collect-small-slices-on-a-pie-chart-report-builder-and-ssrs"></a>收集圓形圖上的小配量 (報表產生器及 SSRS)
   當圓形圖顯示太多資料點時，看起來會很雜亂。 若要解決這個問題，您可以將落在特定值以下的所有資料顯示為圓形圖上的一個扇區。  
@@ -51,7 +51,7 @@ ms.locfileid: "36031802"
          將 CollectedThreshold 屬性設定為 **10**。  
   
         > [!NOTE]  
-        >  如果您將 [collectedstyle] 設定為**SingleSlice**，大於值 CollectedThreshold **100**，而且 CollectedThresholdUsePercent `True`，圖表會擲回例外狀況，因為它無法計算百分比。 若要解決此問題，請將 CollectedThreshold 設定為小於 **100** 的值。  
+        >  如果將 collectedstyle 設定為**SingleSlice**，collectedthreshold 設定為大於**100**，和 CollectedThresholdUsePercent 是`True`，圖表會擲回例外狀況，因為它無法計算百分比。 若要解決此問題，請將 CollectedThreshold 設定為小於 **100** 的值。  
   
     -   **依資料值。** 例如，將圓形圖上小於 5000 的任何扇區收集成單一扇區：  
   
@@ -69,7 +69,7 @@ ms.locfileid: "36031802"
   
 2.  將 CollectedStyle 屬性設定為 **CollectedPie**。  
   
-3.  將 CollectedThresholdproperty 設為一個代表臨界值的值，達到該值時小扇形區會收集為一個扇形區。 當 [collectedstyle] 屬性設定為**CollectedPie**，CollectedThresholdUsePercentproperty 一定會設定為`True`，而收集臨界值永遠會以百分比測量。  
+3.  將 CollectedThresholdproperty 設為一個代表臨界值的值，達到該值時小扇形區會收集為一個扇形區。 當 CollectedStyle 屬性設定為**CollectedPie**，collectedthresholdusepercentproperty 屬性一律設為`True`，而收集臨界值永遠以百分比測量。  
   
 4.  (選擇性) 設定 CollectedColor、CollectedLabel、CollectedLegendText 和 CollectedToolTip 屬性。 所有其他名為 "Collected" 的屬性都不適用於收集的圓形圖。  
   
@@ -80,9 +80,9 @@ ms.locfileid: "36031802"
 >  您無法格式化次要圓形圖。 因為這個緣故，所以我們強烈建議您在收集圓形圖扇區時使用第一種方法。  
   
 ## <a name="see-also"></a>另請參閱  
- [圓形圖&#40;報表產生器和 SSRS&#41;](charts-report-builder-and-ssrs.md)   
- [格式化圖表上的資料點&#40;報表產生器和 SSRS&#41;](formatting-data-points-on-a-chart-report-builder-and-ssrs.md)   
- [在圓形圖外部顯示資料點標籤&#40;報表產生器和 SSRS&#41;](display-data-point-labels-outside-a-pie-chart-report-builder-and-ssrs.md)   
+ [圓形圖&#40;報表產生器及 SSRS&#41;](charts-report-builder-and-ssrs.md)   
+ [格式化圖表上的資料點&#40;報表產生器及 SSRS&#41;](formatting-data-points-on-a-chart-report-builder-and-ssrs.md)   
+ [在圓形圖外部顯示資料點標籤&#40;報表產生器及 SSRS&#41;](display-data-point-labels-outside-a-pie-chart-report-builder-and-ssrs.md)   
  [在圓形圖上顯示百分比值 &#40;報表產生器和 SSRS&#41;](display-percentage-values-on-a-pie-chart-report-builder-and-ssrs.md)   
  [將 3D 效果新增至圖表 &#40;報表產生器及 SSRS&#41;](chart-effects-add-3d-effects-report-builder.md)  
   

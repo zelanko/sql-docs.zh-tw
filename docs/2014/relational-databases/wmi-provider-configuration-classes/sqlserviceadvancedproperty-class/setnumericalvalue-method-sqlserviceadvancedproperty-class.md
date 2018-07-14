@@ -1,5 +1,5 @@
 ---
-title: SetNumericalValue 方法 （SqlServiceAdvancedProperty 類別） |Microsoft 文件
+title: SetNumericalValue 方法 （SqlServiceAdvancedProperty 類別） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - SetNumericalValue method
 ms.assetid: 950ed1e8-0538-4db4-807c-a2c36f43cf6b
 caps.latest.revision: 15
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 5b2ab2a21eb58642931444db22b3cfc1afdb88a2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+ms.openlocfilehash: 0c89ab7bd0108fb6d73279eb23fa88511e75acac
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36030001"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37225358"
 ---
 # <a name="setnumericalvalue-method-sqlserviceadvancedproperty-class"></a>SetNumericalValue 方法 (SqlServiceAdvancedProperty 類別)
   設定屬性的數值。  

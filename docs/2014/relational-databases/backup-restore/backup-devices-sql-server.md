@@ -5,10 +5,9 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-backup-restore
+ms.technology: backup-restore
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - tape backup devices, about tape backup devices
 - backup devices [SQL Server]
@@ -26,15 +25,15 @@ helpviewer_keywords:
 - devices [SQL Server]
 ms.assetid: 35a8e100-3ff2-4844-a5da-dd088c43cba4
 caps.latest.revision: 89
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 8c3f5bfc7186470ed713cdb9d979af2e5b3b0367
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: d7a3603d8d2f8f947a2c708a11015bf031ede8ec
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36030065"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37237178"
 ---
 # <a name="backup-devices-sql-server"></a>備份裝置 (SQL Server)
   在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫上進行備份作業期間，備份的資料 (「備份」) 會寫入至實體備份裝置。 當媒體集的第一個備份寫入此實體備份裝置時，此裝置就會初始化。 單一媒體集是由一組一個或多個備份裝置上的備份所組成。  
@@ -70,7 +69,7 @@ ms.locfileid: "36030065"
 ##  <a name="DiskBackups"></a> 使用磁碟備份裝置  
  **本節內容：**  
   
--   [指定備份檔案使用實體名稱 (TRANSACT-SQL)](#BackupFileUsingPhysicalName)  
+-   [指定備份檔案使用實體名稱 & Amp;#40;transact-SQL&AMP;#41](#BackupFileUsingPhysicalName)  
   
 -   [指定磁碟備份檔案的路徑](#BackupFileDiskPath)  
   
@@ -85,7 +84,7 @@ ms.locfileid: "36030065"
 > [!IMPORTANT]  
 >  我們建議備份磁碟應該與資料庫資料和記錄磁碟使用不同的磁碟。 為了確保您可以在資料或記錄磁碟故障時存取備份，這樣做有其必要。  
   
-###  <a name="BackupFileUsingPhysicalName"></a> 指定備份檔案使用實體名稱 (TRANSACT-SQL)  
+###  <a name="BackupFileUsingPhysicalName"></a> 指定備份檔案使用實體名稱 & Amp;#40;transact-SQL&AMP;#41  
  使用實體裝置名稱來指定備份檔案的基本 [BACKUP](/sql/t-sql/statements/backup-transact-sql) 語法為：  
   
  BACKUP DATABASE *database_name*  
@@ -157,7 +156,7 @@ GO
   
  **本節內容：**  
   
--   [使用實體名稱 (TRANSACT-SQL) 來指定備份磁帶](#BackupTapeUsingPhysicalName)  
+-   [指定備份磁帶使用實體名稱 & Amp;#40;transact-SQL&AMP;#41](#BackupTapeUsingPhysicalName)  
   
 -   [磁帶專用的 BACKUP 和 RESTORE 選項 (TRANSACT-SQL)](#TapeOptions)  
   
@@ -173,7 +172,7 @@ GO
   
 -   如果在備份作業進行時磁帶備份裝置填滿，但還必須寫入更多資料的話， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會提示換新磁帶，並於載入新磁帶後繼續進行備份作業。  
   
-###  <a name="BackupTapeUsingPhysicalName"></a> 使用實體名稱 (TRANSACT-SQL) 來指定備份磁帶  
+###  <a name="BackupTapeUsingPhysicalName"></a> 指定備份磁帶使用實體名稱 & Amp;#40;transact-SQL&AMP;#41  
  使用磁帶機之實體裝置名稱來指定備份磁帶的基本 [BACKUP](/sql/t-sql/statements/backup-transact-sql) 語法為：  
   
  BACKUP { DATABASE | LOG } *database_name*  

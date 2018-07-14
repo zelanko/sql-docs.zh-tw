@@ -1,5 +1,5 @@
 ---
-title: 工具列 （Kpi 索引標籤，Cube 設計工具） (Analysis Services-多維度資料) |Microsoft 文件
+title: 工具列 （Kpi 索引標籤，Cube 設計師） (Analysis Services-多維度資料) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: f21e1e4a-24c9-422f-a4be-84615a68095e
 caps.latest.revision: 21
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: dc85d3498bb4cf79216f2b2b425765a5800d00a4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: f4e1b110a957696e516d159fde6d49cc53dfd527
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36030363"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37173349"
 ---
 # <a name="toolbar-kpis-tab-cube-designer-analysis-services---multidimensional-data"></a>工具列 (KPI 索引標籤，Cube 設計師) (Analysis Services - 多維度資料)
   使用 [工具列] 窗格，即可執行 [Cube 設計師] 中 [KPI] 索引標籤上的一般動作。  

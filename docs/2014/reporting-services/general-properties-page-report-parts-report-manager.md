@@ -1,5 +1,5 @@
 ---
-title: 一般屬性頁面、 報表組件 （報表管理員） |Microsoft 文件
+title: 一般屬性頁面、 報表組件 （報表管理員） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 93ddce72-31f1-42f7-abd5-8191acbb00c5
 caps.latest.revision: 4
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 0ce0b1ca08f1d0d97f268f3ec8c145c117d56a60
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 3823b01bfc318f26ba0135d054d913d3ffe1fd6d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36023952"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37238506"
 ---
 # <a name="general-properties-page-report-parts-report-manager"></a>一般屬性頁面、報表組件 (報表管理員)
   使用 [屬性] 頁面來檢視及管理報表組件的一般屬性。  
@@ -72,7 +72,7 @@ ms.locfileid: "36023952"
  從報表伺服器資料庫中移除報表組件。 從伺服器刪除報表組件不會防止已加入該報表組件的現有報表轉譯。  
   
  **[移動]**  
- 按一下以開啟 [移動項目] 頁面，可在報表伺服器資料夾階層之中移動報表組件。 如需詳細資訊，請參閱[移動項目頁面&#40;報表管理員&#41;](../../2014/reporting-services/move-items-page-report-manager.md)。  
+ 按一下以開啟 [移動項目] 頁面，可在報表伺服器資料夾階層之中移動報表組件。 如需詳細資訊，請參閱 <<c0> [ 移動項目頁面&#40;報表管理員&#41;](../../2014/reporting-services/move-items-page-report-manager.md)。</c0>  
   
  **下載**  
  擷取報表組件定義複本，以儲存成 .rsc 檔。 .rsc 檔可以上傳至報表伺服器資料夾，或用來取代在報表伺服器資料夾中的現有報表組件。  
@@ -84,7 +84,7 @@ ms.locfileid: "36023952"
  [管理報表組件](report-design/managing-report-parts.md)   
  [報表管理員&#40;SSRS 原生模式&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
  [內容頁&#40;報表管理員&#41;](../../2014/reporting-services/contents-page-report-manager.md)   
- [報表組件&#40;報表產生器和 SSRS&#41;](report-parts-report-builder-and-ssrs.md)   
+ [報表組件&#40;報表產生器及 SSRS&#41;](report-parts-report-builder-and-ssrs.md)   
  [報表管理員 F1 說明](../../2014/reporting-services/report-manager-f1-help.md)   
  [報表產生器中的報表組件和資料集](report-data/report-parts-and-datasets-in-report-builder.md)  
   

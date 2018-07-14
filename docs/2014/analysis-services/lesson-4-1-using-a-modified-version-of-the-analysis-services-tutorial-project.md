@@ -1,5 +1,5 @@
 ---
-title: 使用修改後的版本的 Analysis Services 教學課程專案 |Microsoft 文件
+title: 使用已修改的版本的 Analysis Services 教學課程專案 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 685aa217-de1b-4df2-bf22-095228c40775
 caps.latest.revision: 25
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: jhubbard
-ms.openlocfilehash: 7ede395d0053775cd2be7adefbd158b17e69357f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 3b198990c967b6ef40eaa4bfdc2bfeedfff13e13
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36030908"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37220330"
 ---
 # <a name="using-a-modified-version-of-the-analysis-services-tutorial-project"></a>使用 Analysis Services 教學課程專案的已修改版本
   本教學課程的其餘課程是依據您在前面三課所完成之 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 教學課程專案的增強型版本。 更多的資料表和具名計算已新增至 **Adventure Works DW 2012** 資料來源檢視、更多的維度已新增至專案，而且這些新維度已新增至 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 教學課程 Cube。 此外，已加入第二個量值群組，它包含第二個事實資料表的量值。 這個增強型專案可讓您繼續學習如何在商業智慧應用程式中加入功能，而不必重複已學過的技巧。  
@@ -60,7 +60,7 @@ ms.locfileid: "36030908"
 ### <a name="data-source-view"></a>[資料來源檢視]  
  增強型專案中的資料來源檢視多包含一個事實資料表及四個維度資料表，它們來自 [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)] 資料庫。  
   
- 請注意，十個資料表中資料來源檢視，\<所有資料表 > 圖表會變得很擁擠。 以致於不容易了解資料表之間的關聯性及尋找特定資料表。 為了解決這個問題，資料表分成兩個邏輯圖表：[網際網路銷售] 圖表和 [轉售商銷售] 圖表。 這些圖表各以單一事實資料表為中心。 建立邏輯圖表可讓您檢視及使用資料來源檢視中的資料表的特定子集，而不是檢視單一圖表中的所有資料表及其關聯性。  
+ 請注意，十個資料表中的資料來源檢視，\<所有資料表 > 圖表變得很擁擠。 以致於不容易了解資料表之間的關聯性及尋找特定資料表。 為了解決這個問題，資料表分成兩個邏輯圖表：[網際網路銷售] 圖表和 [轉售商銷售] 圖表。 這些圖表各以單一事實資料表為中心。 建立邏輯圖表可讓您檢視及使用資料來源檢視中的資料表的特定子集，而不是檢視單一圖表中的所有資料表及其關聯性。  
   
 #### <a name="internet-sales-diagram"></a>Internet Sales 圖表  
  [網際網路銷售] 圖表包含透過網際網路直接向客戶銷售 [!INCLUDE[ssSampleDBCoShort](../includes/sssampledbcoshort-md.md)] 產品之相關資料表。 圖表中的資料表為 4 個維度資料表和 1 個事實資料表，這些是您在第 1 課新增至 **Adventure Works DW 2012** 資料來源檢視中的資料表。 這些資料表如下：  
@@ -118,7 +118,7 @@ ms.locfileid: "36030908"
  **Analysis Services Tutorial** Cube 現在包含兩個量值群組：以 **InternetSales** 資料表為基礎的原始量值群組，和以 **Adventure Works DW 2012** 資料來源檢視中的 **ResellerSales** 資料表為基礎的另一個量值群組。  
   
 ## <a name="next-task-in-lesson"></a>本課程的下一項工作  
- [定義父子式階層中父屬性的屬性](lesson-4-2-defining-parent-attribute-properties-in-a-parent-child-hierarchy.md) 
+ [定義父子式階層中父屬性 (Attribute) 的屬性 (Property)](lesson-4-2-defining-parent-attribute-properties-in-a-parent-child-hierarchy.md) 
   
 ## <a name="see-also"></a>另請參閱  
  [部署 Analysis Services 專案](../analysis-services/lesson-2-5-deploying-an-analysis-services-project.md)  

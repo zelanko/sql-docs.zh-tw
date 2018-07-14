@@ -1,5 +1,5 @@
 ---
-title: 切換 ReadOnly 和 ReadWrite 模式之間的 Analysis Services 資料庫 |Microsoft 文件
+title: 切換 ReadOnly 和 ReadWrite 模式之間的 Analysis Services 資料庫 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,25 +8,25 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - ReadOnly property
 - ReadWriteMode command
 - operations [Analysis Services - multidimensional data]
 ms.assetid: 4eff8181-08dd-4fad-b091-d400fc21a020
 caps.latest.revision: 13
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 184a674d03e6c8fb6b30d10b91b2a58225894ba2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: bb0d9ae239d33cd55d50e0e876df1584ff2fe965
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36022502"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37286104"
 ---
 # <a name="switch-an-analysis-services-database-between-readonly-and-readwrite-modes"></a>在 ReadOnly 和 ReadWrite 模式之間切換 Analysis Services 資料庫
-  通常很多情況下時[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]資料庫管理員 (dba) 會想要變更表格式或多維度資料庫的讀取/寫入模式。 這些情況通常是由商務需求所驅使，例如在 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 伺服器集區之間共用資料庫，以便改善使用者經驗。  
+  通常很多情況下當[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]資料庫管理員 (dba) 想要變更表格式或多維度資料庫的讀取/寫入模式。 這些情況通常是由商務需求所驅使，例如在 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 伺服器集區之間共用資料庫，以便改善使用者經驗。  
   
  您可以使用許多方式來切換資料庫模式。 本文件將說明下列常見狀況：  
   
@@ -51,7 +51,7 @@ ms.locfileid: "36022502"
   
 4.  將密碼指派給要卸離的資料庫，然後按一下 [確定] 執行卸離命令。  
   
-5.  找出**資料庫**的向左或右窗格中的資料夾[!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]。  
+5.  找出**資料庫**的左或右窗格中的資料夾[!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]。  
   
 6.  以滑鼠右鍵按一下**資料庫**資料夾，然後選取**附加...**  
   
@@ -59,7 +59,7 @@ ms.locfileid: "36022502"
   
 8.  選取資料庫的讀取/寫入模式。  
   
-9. 輸入在步驟 3 中所使用的密碼，然後按一下**確定**執行 attach 命令。  
+9. 步驟 3 中輸入所用的密碼，然後按一下**確定**執行 attach 命令。  
   
 #### <a name="to-switch-the-readwrite-mode-to-a-database-programmatically-using-amo"></a>以程式設計方式使用 AMO 來切換資料庫的讀取/寫入模式  
   

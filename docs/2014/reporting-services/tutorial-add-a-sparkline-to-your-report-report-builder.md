@@ -8,34 +8,34 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 18c90a36-48bf-4805-a960-2d1e8f00c2dc
 caps.latest.revision: 13
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 7051dfeda3af9e4bc8de42eaee7f1b52c92589d8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: f4e61e4ce1c3db29354657f4eb6e3e6c746d7f3f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36031368"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37214498"
 ---
 # <a name="tutorial-add-a-sparkline-to-your-report-report-builder"></a>教學課程：將走勢圖加入至報表 (報表產生器)
   在本教學課程中，您要根據範例銷售資料建立基本資料表報表，然後將走勢圖加入至資料表中的儲存格。  
   
- 本教學課程所建立的報表另有一個增強型版本，可從範例 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 報表產生器報表取得。 如需有關下載這個範例報表及其他的詳細資訊，請參閱[報表產生器範例報表](http://go.microsoft.com/fwlink/?LinkId=184851)。 下圖顯示與您將要建立的報表相似的範例報表。  
+ 本教學課程所建立的報表另有一個增強型版本，可從範例 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 報表產生器報表取得。 如需有關下載這個範例報表和其他人的詳細資訊，請參閱[報表產生器範例報表](http://go.microsoft.com/fwlink/?LinkId=184851)。 下圖顯示與您將要建立的報表相似的範例報表。  
   
  ![rs_SparklineMatrixTutorial](../../2014/tutorials/media/rs-sparklinematrixtutorial.gif "rs_SparklineMatrixTutorial")  
   
- 視訊[How to： 建立走勢圖 （報表產生器影片） 資料表中](http://technet.microsoft.com/bi/ff871942.aspx)說明如何建立包含走勢圖的類似報表。  
+ 視訊[如何： 建立資料表 （報表產生器影片） 中的走勢圖](http://technet.microsoft.com/bi/ff871942.aspx)說明如何建立包含走勢圖的類似報表。  
   
-##  <a name="BackToTop"></a> 您將學習  
+##  <a name="BackToTop"></a> 您將了解  
  在本教學課程中，您將學習如何執行下列作業：  
   
- 1. [建立包含資料表的報表](#CreateTable)  
+ 1. [建立含資料表的報表](#CreateTable)  
   
- 2. [中的資料表或矩陣精靈建立的查詢](#Query)  
+ 2. [在資料表或矩陣精靈建立查詢](#Query)  
   
  3. [將走勢圖加入至資料表](#Sparkline)  
   
@@ -87,7 +87,7 @@ ms.locfileid: "36031368"
   
      **資料來源 =\<伺服器名稱 >**  
   
-     運算式\<伺服器名稱 > 的範例 Report001，指定 SQL Server Database Engine 的執行個體安裝所在的電腦。 由於報表資料不是擷取自 SQL Server 資料庫，您不必加上資料庫的名稱。 指定之伺服器上的預設資料庫將用來剖析查詢。  
+     運算式\<伺服器名稱 >，例如 Report001，指定 SQL Server Database Engine 的執行個體安裝所在的電腦。 由於報表資料不是擷取自 SQL Server 資料庫，您不必加上資料庫的名稱。 指定之伺服器上的預設資料庫將用來剖析查詢。  
   
 9. 按一下 **[認證]**。 輸入您存取外部資料來源所需的認證。  
   
@@ -200,17 +200,17 @@ ms.locfileid: "36031368"
   
 3.  按一下滑鼠右鍵，指向 [插入資料行]，然後按一下 [左方]。  
   
-4.  在新的資料行，以滑鼠右鍵按一下 [Product] 資料列中，指向**插入**功能區] 索引標籤，然後按一下 [**走勢圖**。  
+4.  在新的資料行，以滑鼠右鍵按一下 [Product] 資料列中，指向**插入**功能區索引標籤，然後按一下**走勢圖**。  
   
 5.  請確定在第一個走勢圖**資料行**資料列已選取，然後按一下**確定**。  
   
 6.  按一下走勢圖以顯示 [圖表資料] 窗格。  
   
-7.  按一下加號 （+） 登入 值 方塊，然後按一下 **銷售**。  
+7.  按一下加號 （+） 登入 [值] 方塊中，然後**銷售**。  
   
      **Sales** 欄位內的值現在即為走勢圖的值。  
   
-8.  按一下加號 （+） 登入 類別目錄群組 方塊，然後按一下  **SalesDate**。  
+8.  按一下加號 （+） 登入類別目錄群組 方塊中，然後**SalesDate**。  
   
 9. 按一下 [執行] 以預覽報表。  
   
@@ -254,11 +254,11 @@ ms.locfileid: "36031368"
   
 1.  按一下 **[設計]** ，切換到 [設計] 檢視。  
   
-2.  按一下 （底下的資料行標題資料列） 的第二個資料列中的資料格**SalesDate**資料行，拖曳以選取所有包含的資料格`[Sum(Sales)]`。  
+2.  按一下 （底下的資料行標題資料列） 的第二個資料列中的資料格**SalesDate**資料行並拖曳以選取包含的所有資料格`[Sum(Sales)]`。  
   
 3.  在 [主資料夾] 索引標籤的 [數字] 群組中，按一下 [貨幣] 按鈕。 這些資料格就會變更為顯示格式化貨幣。  
   
-     如果您的地區設定為 [英文 (美國)]，則預設範例文字會是 [**$12,345.00**]。 如果看不到範例貨幣值，請按一下**預留位置樣式**中**數字**群組，然後再按一下**範例值**。  
+     如果您的地區設定為 [英文 (美國)]，則預設範例文字會是 [**$12,345.00**]。 如果您看不到範例貨幣值，請按一下**預留位置樣式**中**數字**群組，並再按**範例值**。  
   
 4.  按一下 [執行] 以預覽報表。  
   
@@ -273,7 +273,7 @@ ms.locfileid: "36031368"
   
 2.  按一下包含 `[SalesDate]`的資料格。  
   
-3.  在功能區 上**首頁**索引標籤的**數目**群組中，從下拉式清單中選取**日期**。  
+3.  功能區上**首頁**索引標籤中，於**數目**群組中，從下拉式清單中選取**日期**。  
   
      資料格就會顯示範例日期 **[1/31/2000]**。 如果您看不到範例日期，請按一下 [數字] 群組中的 [預留位置樣式]，然後按一下 [範例值]。  
   
@@ -294,7 +294,7 @@ ms.locfileid: "36031368"
   
      沿著資料表頂端和側邊的灰色長條是資料行和資料列控點。  
   
-3.  指向資料行控點之間的線條，使游標變成雙箭頭。 將資料行拖曳到所需的大小。 例如，展開 資料行**產品**，讓產品名稱顯示於同一行上。  
+3.  指向資料行控點之間的線條，使游標變成雙箭頭。 將資料行拖曳到所需的大小。 例如，展開 資料行**產品**，讓產品名稱顯示在同一行。  
   
 4.  按一下 [執行] 以預覽報表。  
   
@@ -315,13 +315,13 @@ ms.locfileid: "36031368"
   
 5.  在 [大小] 清單中，選取 [18pt]。  
   
-6.  在**色彩**清單中，選取**暗紅色**。  
+6.  在 **色彩**清單中，選取**暗紅色**。  
   
 7.  選取 [粗體]。  
   
 8.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-##  <a name="Save"></a> 第 9。儲存報表  
+##  <a name="Save"></a> 9。儲存報表  
  將報表儲存至報表伺服器或您的電腦。 如果沒有將報表儲存到報表伺服器，就無法使用數個 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 功能，例如報表組件和子報表。  
   
 #### <a name="to-save-the-report-on-a-report-server"></a>若要將報表儲存在報表伺服器上  

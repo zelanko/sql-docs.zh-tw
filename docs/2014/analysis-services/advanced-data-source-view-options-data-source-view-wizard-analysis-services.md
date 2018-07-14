@@ -1,5 +1,5 @@
 ---
-title: 進階資料來源檢視選項對話方塊 （資料來源檢視精靈） (Analysis Services) |Microsoft 文件
+title: 進階資料來源檢視選項對話方塊 （資料來源檢視精靈） (Analysis Services) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.datasourceviewwizard.advancedoptions.f1
 ms.assetid: db736863-3fc2-4166-af05-4c7d0323d4d1
 caps.latest.revision: 11
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 355425b5df4008ddfee123b8f2f8ff4c35550eba
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 42e7677867ebf04a0b239f1785f318a58e0f7e76
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36029956"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37169839"
 ---
 # <a name="advanced-data-source-view-options-dialog-box-data-source-view-wizard-analysis-services"></a>進階資料來源檢視選項對話方塊 (資料來源檢視精靈) (Analysis Services)
   **[進階資料來源檢視選項]** 對話方塊會提供其他控制項，讓您控制資料來源檢視如何從資料來源提取結構描述和關聯性以建立檢視。  

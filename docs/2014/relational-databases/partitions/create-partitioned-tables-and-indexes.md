@@ -5,10 +5,9 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-tables
+ms.technology: table-view-index
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.createpartition.partitionscheme.f1
 - sql12.swb.createpartition.selectoutput.f1
@@ -28,16 +27,15 @@ helpviewer_keywords:
 - partition functions [SQL Server]
 - partition schemes [SQL Server]
 ms.assetid: 7641df10-1921-42a7-ba6e-4cb03b3ba9c8
-caps.latest.revision: 33
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 1dc34a6fdd21b8d4debd2f32df73ef97ba3b281c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: d6e7ccf536d221117ecc8359af753a4319f7f5d6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36023090"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37244788"
 ---
 # <a name="create-partitioned-tables-and-indexes"></a>建立分割區資料表及索引
   您可以使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ，在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中建立分割區資料表或索引。 分割區資料表及索引中的資料會被水平分割成單元，可散佈在資料庫中的多個檔案群組中。 分割作業可讓大型資料表和索引更容易管理及擴充。  

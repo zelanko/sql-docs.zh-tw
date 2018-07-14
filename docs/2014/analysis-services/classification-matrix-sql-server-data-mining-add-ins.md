@@ -1,5 +1,5 @@
 ---
-title: 分類矩陣 （SQL Server 資料採礦增益集） |Microsoft 文件
+title: 分類矩陣 （SQL Server 資料採礦增益集） |Microsoft Docs
 ms.custom: ''
 ms.date: 12/29/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - mining models, validating
 - classification matrix
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - mining models, testing
 ms.assetid: d6f620f4-39af-4714-9628-28ce3c361fca
 caps.latest.revision: 14
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 1944620e5c83485a01b9bc856cc67e9e6908c769
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 3d87c2d37ed69e2cc3f3e224ddf1a489b34425b8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36029958"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37249638"
 ---
 # <a name="classification-matrix-sql-server-data-mining-add-ins"></a>分類矩陣 (SQL Server 資料採礦增益集)
   ![分類矩陣按鈕、 資料採礦功能區](media/dmc-cmatrix.gif "分類矩陣按鈕、 資料採礦功能區")  
@@ -34,7 +34,7 @@ ms.locfileid: "36029958"
  在這些增益集，使用**分類矩陣**精靈選取模型，指定測試資料，然後產生結果矩陣。  
   
 ## <a name="how-to-read-a-classification-matrix"></a>如何解讀分類矩陣  
- 假設您的目標是設計客戶忠誠度方案，然後將客戶指派到適當的類別，以便您將適當等級的獎勵提供給客戶。 您實作了三種等級的獎勵計畫 (銅級、銀級和金級)，並在測試階段中分發給客戶。 您也設計了用於分析客戶及預測正確類別的模型。 現在，您將針對測試資料使用分類矩陣，以判斷模型在預測所有客戶之適當優惠的精確度。  
+ 假設您的目標是設計客戶忠誠度方案，然後將客戶指派到適當的類別，以便您將適當等級的獎勵提供給客戶。 您實作了三種等級的獎勵計畫 (銅級、銀級和金級)，並在測試階段中分發給客戶。 您也設計了用於分析客戶及預測正確類別的模型。 現在，您將針對測試資料使用分類矩陣，以判斷模型在預測所有客戶之適當供應項目的精確度。  
   
  分類矩陣中的資料表可顯示，根據模型的預測，分別指派到每種類別的客戶數目，並將此結果與每種獎勵等級加入的實際客戶數目進行比較。  
   
@@ -44,7 +44,7 @@ ms.locfileid: "36029958"
 |金卡|2.72%|**84.82%**|0.00%|  
 |銀卡|1.84%|0.00%|**93.80%**|  
 |*更正*|*95.45%*|*84.82%*|*98.30%*|  
-|*誤分類*|*4.55%*|*15.18%*|*1.70%*|  
+|*分類錯誤*|*4.55%*|*15.18%*|*1.70%*|  
   
 -   每個資料行顯示測試資料集中的實際值。  
   
@@ -66,7 +66,7 @@ ms.locfileid: "36029958"
   
      提示：如果可預測資料行包含許多要比較的資料行，解譯分類矩陣可能會很困難。  
   
-     在**選取要預測的資料行** 頁面上，您也可以指定是否要顯示不正確和不正確的值，或顯示百分比。  
+     在 [**選取要預測的資料行**] 頁面上，您也可以指定是否要顯示不正確和不正確值的計數，或顯示的百分比。  
   
 4.  在 [選取來源資料] 頁面上，指出您要使用外部測試資料，或使用隨模型儲存的測試資料。  
   
@@ -74,7 +74,7 @@ ms.locfileid: "36029958"
   
      如果使用內嵌的測試資料集，則會自動為您完成對應  
   
-6.  按一下**完成**對模型執行預測，並產生分類矩陣。  
+6.  按一下 **完成**對模型執行預測，並產生分類矩陣。  
   
      精靈會建立報表，其中包含分類矩陣和關於分析的其他詳細資料。 此報表會儲存為 Excel 資料表，報表上方的摘要指出正確預測的案例數目，以及錯誤的預測數目。  
   
@@ -89,10 +89,10 @@ ms.locfileid: "36029958"
 -   您用於測試的資料採礦模型和新的資料至少必須包含一個可以預測的資料行，而該資料行必須包含相同種類的資料。  
   
 ### <a name="known-issues"></a>已知問題  
- 在 SQL Server 2012 和 SQL Server 2014 中，將內部測試資料集對應至模型的功能無法使用**分類矩陣**工具。 不過，您可以指定外部資料集，然後選取定型集做為輸入，以判斷原始資料集是否有誤。  
+ 在 SQL Server 2012 和 SQL Server 2014 中，讓您將內部的測試資料集對應至模型無法使用**分類矩陣**工具。 不過，您可以指定外部資料集，然後選取定型集做為輸入，以判斷原始資料集是否有誤。  
   
 ## <a name="see-also"></a>另請參閱  
- [驗證模型及使用模型進行預測&#40;資料採礦 excel 增益集&#41;](validating-models-and-using-models-for-prediction-data-mining-add-ins-for-excel.md)   
+ [驗證模型及使用模型進行預測&#40;資料採礦適用於 Excel 的增益集&#41;](validating-models-and-using-models-for-prediction-data-mining-add-ins-for-excel.md)   
  [瀏覽資料&#40;SQL Server 資料採礦增益集&#41;](explore-data-sql-server-data-mining-add-ins.md)   
  [偵測類別目錄&#40;適用於 Excel 的資料表分析工具&#41;](detect-categories-table-analysis-tools-for-excel.md)  
   

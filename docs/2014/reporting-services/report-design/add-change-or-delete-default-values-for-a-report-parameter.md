@@ -1,5 +1,5 @@
 ---
-title: 加入、 變更或刪除預設值為報表參數 （報表產生器及 SSRS） |Microsoft 文件
+title: 加入、 變更或刪除預設值為報表參數 （報表產生器及 SSRS） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - "10460"
 - sql12.rtp.rptdesigner.reportparameters.defaultvalues.f1
 - "10072"
 ms.assetid: 6a87e069-b3a9-47b6-bcec-afcdd8aff65f
 caps.latest.revision: 10
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 2d5ccd789a763ed610df4c4782342253716119c9
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 448ae66acdfdbe4a0c90ff3f69e26be7cce56e12
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36031799"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37192878"
 ---
 # <a name="add-change-or-delete-default-values-for-a-report-parameter-report-builder-and-ssrs"></a>為報表參數加入、變更或刪除預設值 (報表產生器及 SSRS)
   當您建立報表參數以後，可以提供預設值的清單。 如果所有的參數都有有效的預設值，當您第一次檢視或預覽報表時，報表就會自動執行。  
@@ -33,7 +33,7 @@ ms.locfileid: "36031799"
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
- 在您發行報表之後，可以在報表伺服器上設定參數屬性值，藉以覆寫您在報表撰寫工具中定義於報表的預設值。 您也可以建立連結報表來提供多組預設參數值。 如需詳細資訊，請參閱[報表參數&#40;報表產生器和報表設計師&#41;](report-parameters-report-builder-and-report-designer.md)  
+ 在您發行報表之後，可以在報表伺服器上設定參數屬性值，藉以覆寫您在報表撰寫工具中定義於報表的預設值。 您也可以建立連結報表來提供多組預設參數值。 如需詳細資訊，請參閱 <<c0> [ 報表參數&#40;報表產生器和報表設計師&#41;</c0>](report-parameters-report-builder-and-report-designer.md)  
   
 ### <a name="to-add-or-change-the-default-values-for-a-report-parameter"></a>為報表參數加入或變更預設值  
   
@@ -68,12 +68,12 @@ ms.locfileid: "36031799"
   
 ## <a name="see-also"></a>另請參閱  
  [報表參數 &#40;報表產生器和報表設計師&#41;](report-parameters-report-builder-and-report-designer.md)   
- [將串聯參數加入至報表&#40;報表產生器和 SSRS&#41;](add-cascading-parameters-to-a-report-report-builder-and-ssrs.md)   
+ [將串聯參數加入至報表&#40;報表產生器及 SSRS&#41;](add-cascading-parameters-to-a-report-report-builder-and-ssrs.md)   
  [教學課程：將參數新增至報表 &#40;報表產生器&#41;](../tutorial-add-a-parameter-to-your-report-report-builder.md)   
  [新增資料集篩選、資料區篩選和群組篩選 &#40;報表產生器及 SSRS&#41;](add-dataset-filters-data-region-filters-and-group-filters.md)   
  [參數集合參考 &#40;報表產生器及 SSRS&#41;](built-in-collections-parameters-collection-references-report-builder.md)   
- [變更報表參數的順序&#40;報表產生器和 SSRS&#41;](change-the-order-of-a-report-parameter-report-builder-and-ssrs.md)   
- [加入、 變更或刪除報表參數&#40;報表產生器和 SSRS&#41;](add-change-or-delete-a-report-parameter-report-builder-and-ssrs.md)   
+ [變更報表參數的順序&#40;報表產生器及 SSRS&#41;](change-the-order-of-a-report-parameter-report-builder-and-ssrs.md)   
+ [加入、 變更或刪除報表參數&#40;報表產生器及 SSRS&#41;](add-change-or-delete-a-report-parameter-report-builder-and-ssrs.md)   
  [運算式 &#40;報表產生器及 SSRS&#41;](expressions-report-builder-and-ssrs.md)  
   
   

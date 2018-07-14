@@ -1,5 +1,5 @@
 ---
-title: 附加和卸離 Analysis Services 資料庫 |Microsoft 文件
+title: 附加和卸離 Analysis Services 資料庫 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.ssms.detachdatabase.f1
 - sql12.asvs.ssms.attachdatabase.f1
@@ -19,24 +19,24 @@ helpviewer_keywords:
 - databases [Analysis Services], detach
 ms.assetid: 41887413-2d47-49b8-8614-553cb799fb18
 caps.latest.revision: 23
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: f8c997e90d611f1ab574ae483d4c71ee5d8fa777
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 4e9853b445f795d5bafdfb8839496056a521900d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36030178"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37271744"
 ---
 # <a name="attach-and-detach-analysis-services-databases"></a>附加和卸離 Analysis Services 資料庫
-  通常在很多情況下， [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 資料庫管理員 (dba) 會想要讓資料庫保持離線一段時間，然後在相同或不同的伺服器執行個體上，讓該資料庫恢復連線狀態。 這些情況通常是由商務需求所驅使，例如將資料庫移至不同的磁碟以提升效能、取得讓資料庫成長的空間，或升級產品。 所有這些情況下等等，`Attach`和`Detach`命令可讓[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]dba 以讓資料庫離線，並且讓它恢復上線工程。  
+  通常在很多情況下， [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 資料庫管理員 (dba) 會想要讓資料庫保持離線一段時間，然後在相同或不同的伺服器執行個體上，讓該資料庫恢復連線狀態。 這些情況通常是由商務需求所驅使，例如將資料庫移至不同的磁碟以提升效能、取得讓資料庫成長的空間，或升級產品。 針對所有這些情況下，也更`Attach`並`Detach`命令可讓[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]來讓資料庫離線，並使它的 dba 輕鬆重新上線。  
   
 ## <a name="attach-and-detach-commands"></a>Attach 和 Detach 命令  
- `Attach`命令可讓您離線時的資料庫恢復連線。 您可以將資料庫附加至原始伺服器執行個體或其他執行個體。 當您附加資料庫時，使用者可以指定資料庫的 **[ReadWriteMode]** 設定。 `Detach` 命令可讓您中斷資料庫與伺服器的連線。  
+ `Attach`命令可讓您將離線的資料庫恢復連線。 您可以將資料庫附加至原始伺服器執行個體或其他執行個體。 當您附加資料庫時，使用者可以指定資料庫的 **[ReadWriteMode]** 設定。 `Detach` 命令可讓您中斷資料庫與伺服器的連線。  
   
 ## <a name="attach-and-detach-usage"></a>Attach 和 Detach 使用方式  
- `Attach`命令用來上線現有的資料庫結構。 如果資料庫是以`ReadWrite`模式，它可以是附加至伺服器執行個體僅一次。 不過，如果資料庫是以`ReadOnly`模式中，它就可以附加多次以不同的伺服器執行個體。 不過，相同的資料庫無法附加至相同的伺服器執行個體超過一次。 當您嘗試附加相同的資料庫超過一次時，即使資料已經複製到個別的資料夾，還是會引發錯誤。  
+ `Attach`命令可將現有的資料庫結構恢復連線。 如果資料庫是以`ReadWrite`模式中，它可以是附加至伺服器執行個體只有一次。 不過，如果資料庫是以`ReadOnly`模式中，它可以附加多次至不同的伺服器執行個體。 不過，相同的資料庫無法附加至相同的伺服器執行個體超過一次。 當您嘗試附加相同的資料庫超過一次時，即使資料已經複製到個別的資料夾，還是會引發錯誤。  
   
 > [!IMPORTANT]  
 >  如果需要使用密碼才能卸離資料庫，則附加資料庫時也會需要使用相同的密碼。  

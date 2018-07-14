@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - transactional replication, backward compatibility
 - backward compatibility [SQL Server replication]
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - compatibility [SQL Server replication]
 ms.assetid: 091c51dc-8b32-4b4f-847e-b317456c8394
 caps.latest.revision: 52
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 4d9ff68b927b410fd4cdc42d05e5507b59b73cbc
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: aa422646c6d5badb04e05aa11f073263819b3485
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36031610"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37186151"
 ---
 # <a name="replication-backward-compatibility"></a>複寫回溯相容性
   「回溯相容性」一節中的主題描述 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 複寫版本之間行為上的變更。 如果您要升級，或是複寫拓撲中有不只一個 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本，則一定要了解回溯相容性。  

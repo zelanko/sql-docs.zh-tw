@@ -5,10 +5,9 @@ ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-search
+ms.technology: search
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - full-text search [SQL Server], installing
 - migrating full-text indexes [SQL Server]
@@ -17,15 +16,15 @@ helpviewer_keywords:
 - full-text search [SQL Server], upgrading
 ms.assetid: 2fee4691-f2b5-472f-8ccc-fa625b654520
 caps.latest.revision: 103
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 2ab9109e79d845416d89fe44282fe2b2f70629ef
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 192893274803d5c753fa6bd7acd90c7789d7f8b7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36030747"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37264324"
 ---
 # <a name="upgrade-full-text-search"></a>升級全文檢索搜尋
   將全文檢索搜尋升級為 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 的作業會在安裝期間完成，而且當您使用 [複製資料庫精靈] 以附加、還原或複製舊版 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的資料庫檔案和全文檢索目錄時，也會完成此作業。  
@@ -42,7 +41,7 @@ ms.locfileid: "36030747"
   
 -   [SQL Server 2005 全文檢索目錄還原至 SQL Server 2014 的考量](#Considerations_for_Restore)  
   
--   [將 SQL Server 2005 資料庫附加到 SQL Server 2014](#Attaching_2005_ft_catalogs)  
+-   [將 SQL Server 2005 資料庫附加至 SQL Server 2014](#Attaching_2005_ft_catalogs)  
   
 ##  <a name="Upgrade_Server"></a> 升級伺服器執行個體  
  進行就地升級時， [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 的執行個體會與舊版 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]並存安裝，而資料會進行移轉。 如果舊版 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 已安裝全文檢索搜尋，系統就會自動安裝新版全文檢索搜尋。 並存安裝表示下列各個元件可存在於 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的執行個體層級。  
@@ -132,7 +131,7 @@ ms.locfileid: "36030747"
   
  對於已經從 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]匯入的全文檢索目錄而言，此全文檢索目錄仍然是位於其檔案群組中的資料庫檔案。 全文檢索目錄的 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 備份程序仍然適用，但是 MSFTESQL 服務不存在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]中。 如需 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 程序的相關資訊，請參閱《SQL Server 2005 線上叢書》中的 [備份與還原全文檢索目錄](http://go.microsoft.com/fwlink/?LinkId=209154) 。  
   
-##  <a name="Upgrade_Db"></a> 將資料庫升級為時移轉全文檢索索引 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
+##  <a name="Upgrade_Db"></a> 升級資料庫時移轉全文檢索索引 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
  您可以使用附加、還原或 [複製資料庫精靈]，將舊版 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的資料庫檔案和全文檢索目錄升級為現有的 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 伺服器執行個體。 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 系統會匯入、重設或重建全文檢索索引 (如果有的話)。 **upgrade_option** 伺服器屬性會控制此伺服器執行個體在這些資料庫升級期間所使用的全文檢索升級選項。  
   
  當您將任何 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 資料庫附加、還原或複製到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]時，該資料庫會立即可用，然後自動升級。 根據進行索引的資料數量而定，匯入可能需要數個小時，而重建可能需要十倍以上的時間。 此外，請注意，當升級選項設定為 [匯入] 時，如果全文檢索目錄無法使用，系統就會重建相關聯的全文檢索索引。  
@@ -186,7 +185,7 @@ RESTORE DATABASE [ftdb1] FROM  DISK = N'C:\temp\ftdb1.bak' WITH  FILE = 1,
     MOVE N'sysft_cat90' TO N'C:\temp';  
 ```  
   
-##  <a name="Attaching_2005_ft_catalogs"></a> 附加至 SQL Server 2005 資料庫 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
+##  <a name="Attaching_2005_ft_catalogs"></a> 附加 SQL Server 2005 資料庫 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
  在 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 和更新版本中，全文檢索目錄是參考一組全文檢索索引的邏輯概念。 全文檢索目錄是不屬於任何檔案群組的虛擬物件。 不過，當您將包含全文檢索目錄檔案的 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 資料庫附加至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 伺服器執行個體時，系統就會從先前的位置附加這些目錄檔案以及其他資料庫檔案，此行為與 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]的行為相同。  
   
  在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 上，每個所附加之全文檢索目錄的狀態都與從 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]中卸離資料庫時的狀態相同。 如果卸離作業暫停了任何全文檢索索引母體擴展，就會在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]上繼續進行母體擴展，而且全文檢索索引會變成可用於全文檢索搜尋。  

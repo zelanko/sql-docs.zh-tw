@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 44f3c991-9e8f-4126-a9a2-2d9da779fb11
 caps.latest.revision: 10
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 9d341b6c2320dfe5a7cc3645396434fa46b0779c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e227f0a3c19385f8b6eaedd747dbe63895b19298
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36030575"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37203998"
 ---
 # <a name="sap-bw-source-editor-advanced-page"></a>SAP BW 來源編輯器 (進階頁面)
   使用 [SAP BW 來源編輯器] 的 [進階] 頁面可以指定字串轉換規則和逾時期限，也可以重設特定要求識別碼的狀態。  
@@ -58,7 +58,7 @@ ms.locfileid: "36030575"
  指定來源應該等候的秒數上限。  
   
 > [!NOTE]  
->  只有當您已經在編輯器的 [連接管理員] 頁面上，選取 [W - 等候通知] 作為 [執行模式] 的值時，這個選項才有效。 如需詳細資訊，請參閱[SAP BW 來源編輯器&#40;連接管理員頁面&#41;](sap-bw-source-editor-connection-manager-page.md)。  
+>  只有當您已經在編輯器的 [連接管理員] 頁面上，選取 [W - 等候通知] 作為 [執行模式] 的值時，這個選項才有效。 如需詳細資訊，請參閱 < [SAP BW 來源編輯器&#40;連線管理員頁面&#41;](sap-bw-source-editor-connection-manager-page.md)。  
   
  **要求識別碼**  
  指定您想要在按一下 [重設] 時將其狀態重設成「G - 綠色」的要求識別碼。  
@@ -67,7 +67,7 @@ ms.locfileid: "36030575"
  在提示確認之後，讓您將指定之要求識別碼的狀態重設成「G - 綠色」。 在發生問題，而且 SAP Netweaver BW 系統已將要求標幟為黃色或紅色狀態時，這個選項可能很有用。  
   
 ## <a name="see-also"></a>另請參閱  
- [SAP BW 來源編輯器&#40;連接管理員頁面&#41;](sap-bw-source-editor-connection-manager-page.md)   
+ [SAP BW 來源編輯器&#40;連線管理員頁面&#41;](sap-bw-source-editor-connection-manager-page.md)   
  [SAP BW 來源編輯器&#40;資料行頁面&#41;](sap-bw-source-editor-columns-page.md)   
  [SAP BW 來源編輯器 &#40;錯誤輸出頁面&#41;](sap-bw-source-editor-error-output-page.md)   
  [Microsoft Connector 1.1 for SAP BW F1 說明](../microsoft-connector-for-sap-bw-f1-help.md)  

@@ -1,5 +1,5 @@
 ---
-title: Web 服務工作編輯器 （輸出頁面） |Microsoft 文件
+title: Web 服務工作編輯器 （輸出頁面） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.webservicestask.output.f1
 helpviewer_keywords:
 - Web Service Task Editor
 ms.assetid: 73c83969-7b0e-479d-a436-0a46b2068d01
 caps.latest.revision: 26
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: bcf7bd1ce50b19f62de5f249a1f89a4fdda0f5b0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 00d7676916ac06cb82f384202cd2c6f024ffdb65
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36030318"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37281544"
 ---
 # <a name="web-service-task-editor-output-page"></a>Web 服務工作編輯器 (輸出頁面)
   使用 [Web 服務工作編輯器] 對話方塊的 [輸出] 頁面，即可指定 Web 方法傳回的結果之儲存位置。  
@@ -34,7 +34,7 @@ ms.locfileid: "36030318"
  **OutputType**  
  選取儲存結果時使用的儲存類型。 這個屬性具有下表中所列的選項。  
   
-|ReplTest1|描述|  
+|值|描述|  
 |-----------|-----------------|  
 |**檔案連接**|在檔案中儲存結果。 選取此值會顯示動態選項 [檔案]。|  
 |**變數**|在變數中儲存結果。 選取此值會顯示動態選項 [變數]。|  
@@ -55,7 +55,7 @@ ms.locfileid: "36030318"
   
 ## <a name="see-also"></a>另請參閱  
  [Integration Services 錯誤和訊息參考](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Web 服務工作編輯器&#40;[一般] 頁面&#41;](general-page-of-integration-services-designers-options.md)   
+ [Web 服務工作編輯器&#40;一般頁面&#41;](general-page-of-integration-services-designers-options.md)   
  [Web 服務工作編輯器&#40;輸入頁面&#41;](../../2014/integration-services/web-service-task-editor-input-page.md)   
  [運算式頁面](expressions/expressions-page.md)  
   

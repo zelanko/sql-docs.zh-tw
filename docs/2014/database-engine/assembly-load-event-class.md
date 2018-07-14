@@ -1,5 +1,5 @@
 ---
-title: Assembly Load 事件類別 |Microsoft 文件
+title: Assembly Load 事件類別 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 topic_type:
 - apiref
 helpviewer_keywords:
 - Assembly Load event class
 ms.assetid: cfb0b69d-4ce0-4067-a3df-d82775e57886
 caps.latest.revision: 19
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: a84684a039ccd6276fa2be42e8fd59f5e845befa
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 1464f59c227577bc0c81f5f89ac84430c5b59497
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36024052"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37207618"
 ---
 # <a name="assembly-load-event-class"></a>Assembly Load 事件類別
   在執行載入組件的要求時，會發生 **Assembly Load** 事件類別。  
@@ -53,7 +53,7 @@ ms.locfileid: "36024052"
 |**SPID**|**int**|事件發生所在之工作階段的識別碼。|12|是|  
 |**StartTime**|**datetime**|事件啟動的時間 (如果有的話)。|14|是|  
 |**成功**|**int**|指出組件載入成功 (1) 或失敗 (0)。|23|是|  
-|**TextData**|**ntext**|如果載入成功則為「組件載入成功」；否則為「組件載入失敗」。|@shouldalert|是|  
+|**TextData**|**ntext**|如果載入成功則為「組件載入成功」；否則為「組件載入失敗」。|1|是|  
   
 ## <a name="see-also"></a>另請參閱  
  [擴充事件](../relational-databases/extended-events/extended-events.md)   

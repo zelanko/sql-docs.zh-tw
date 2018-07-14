@@ -1,5 +1,5 @@
 ---
-title: 未指定虛擬目錄 (Upgrade Advisor) |Microsoft 文件
+title: 未指定虛擬目錄 (Upgrade Advisor) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - virtual directories [Reporting Services]
 ms.assetid: 7d32b560-49d6-4558-b5d6-9127067f82d6
 caps.latest.revision: 12
 author: markingmyname
 ms.author: maghan
-manager: jhubbard
-ms.openlocfilehash: 56e42c309a59d103ffb4d8193e6563cf298b55bd
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: eba1359cc34a7b8e5fec19a71282d6b862b93102
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36030207"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37265773"
 ---
 # <a name="virtual-directories-are-unspecified-upgrade-advisor"></a>未指定虛擬目錄 (Upgrade Advisor)
   Upgrade Advisor 未偵測到報表伺服器 Web 服務或報表管理員的虛擬目錄設定。 升級完成之後，您必須使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 組態管理員來設定報表伺服器的 URL 保留項目。  
@@ -39,7 +39,7 @@ ms.locfileid: "36030207"
 ## <a name="corrective-action"></a>更正動作  
  升級完成之後，請使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 組態管理員來設定報表伺服器和報表管理員的 URL。 您可以使用 IIS 管理員來移除任何不再需要的虛擬目錄。  
   
- 如需詳細資訊，請參閱[設定 URL &#40;SSRS 組態管理員&#41;](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md)中[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]線上叢書 》。  
+ 如需詳細資訊，請參閱 <<c0> [ 設定 URL &#40;SSRS 組態管理員&#41;](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md)中[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]線上叢書 》。</c0>  
   
 ## <a name="see-also"></a>另請參閱  
  [Reporting Services 升級問題&#40;Upgrade Advisor&#41;](../../../2014/sql-server/install/reporting-services-upgrade-issues-upgrade-advisor.md)  

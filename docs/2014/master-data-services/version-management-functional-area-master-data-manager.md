@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: dc23d80e-9778-44a8-a54e-e81c2ab6e96a
 caps.latest.revision: 6
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 3b36b06422cf2e88cfd68fd640f562204a40dde6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: badabfd899f3e4bad719f5c3c731cbc768cfe645
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36023563"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37225638"
 ---
 # <a name="version-management-functional-area-master-data-manager"></a>版本管理功能區域 (主資料管理員)
   在 [版本管理] 功能區域中，管理員可以驗證資料、檢閱及反轉交易、建立已建立版本的資料複本，以及標示訂閱系統的資料版本。 如需管理員的詳細資訊，請參閱[管理員 &#40;Master Data Services&#41;](administrators-master-data-services.md)。  
@@ -29,7 +29,7 @@ ms.locfileid: "36023563"
   
  [認可版本&#40;Master Data Services&#41;](../../2014/master-data-services/commit-a-version-master-data-services.md)  
   
- [鎖定版本&#40;Master Data Services&#41;](../../2014/master-data-services/lock-a-version-master-data-services.md)  
+ [鎖定版本， &#40;Master Data Services&#41;](../../2014/master-data-services/lock-a-version-master-data-services.md)  
   
  [變更版本名稱&#40;Master Data Services&#41;](../../2014/master-data-services/change-a-version-name-master-data-services.md)  
   

@@ -1,5 +1,5 @@
 ---
-title: 加入和移除向外延展部署 （SSRS 組態管理員） 的加密金鑰 |Microsoft 文件
+title: 新增和移除向外延展部署 （SSRS 組態管理員） 的加密金鑰 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - encryption keys [Reporting Services]
 - deleting encryption keys
@@ -20,13 +20,13 @@ ms.assetid: 2da86fb3-4b4d-407f-9825-74dcc42486f5
 caps.latest.revision: 10
 author: markingmyname
 ms.author: maghan
-manager: jhubbard
-ms.openlocfilehash: 8a8b5ef42a5a235080e229c1072ad03d8dc1d677
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 6d253287d8eb5b774794114003682151ecd00c4d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36029992"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37170266"
 ---
 # <a name="add-and-remove-encryption-keys-for-scale-out-deployment-ssrs-configuration-manager"></a>加入和移除向外延展部署的加密金鑰 (SSRS 組態管理員)
   您可以設定多部報表伺服器來使用共用報表伺服器資料庫，以便在向外延展部署模型中執行 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]。 向外延展部署的成員資格，會依報表伺服器是否在報表伺服器資料庫中儲存加密金鑰而定。 您可以加入和移除特定報表伺服器執行個體的加密金鑰，來控制向外延展部署成員資格。 如果您要從部署中移除節點，您可以依照任何順序來移除它們。 如果您要將節點加入部署中，您必須從已屬於部署的報表伺服器聯結任何新的執行個體。  
@@ -67,6 +67,6 @@ ms.locfileid: "36029992"
   
 ## <a name="see-also"></a>另請參閱  
  [設定和管理加密金鑰&#40;SSRS 組態管理員&#41;](ssrs-encryption-keys-manage-encryption-keys.md)   
- [將報表伺服器初始化&#40;SSRS 組態管理員&#41;](ssrs-encryption-keys-initialize-a-report-server.md)  
+ [初始化報表伺服器&#40;SSRS 組態管理員&#41;](ssrs-encryption-keys-initialize-a-report-server.md)  
   
   

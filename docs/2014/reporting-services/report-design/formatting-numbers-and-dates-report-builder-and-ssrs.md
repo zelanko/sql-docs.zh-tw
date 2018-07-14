@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.rtp.rptdesigner.placeholderproperties.number.f1
 - sql12.rtp.rptdesigner.serieslabelproperties.number.f1
@@ -20,15 +20,15 @@ f1_keywords:
 - "10285"
 ms.assetid: 6de1a725-9f06-4708-be26-2d55e442e344
 caps.latest.revision: 6
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 6b274656ac656933053a6b246acdd21cff77e875
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: bf89915223f0ee141b77aacc8eec2a87191bfcca
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36023940"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37288334"
 ---
 # <a name="formatting-numbers-and-dates-report-builder-and-ssrs"></a>格式化數字和日期 (報表產生器及 SSRS)
   您可以從對應資料區之 **[屬性]** 對話方塊的 **[數字]** 頁面選取一種格式，藉以格式化資料區中的數字和日期。  
@@ -61,10 +61,10 @@ ms.locfileid: "36023940"
 -   如果您選取 **[類別目錄]** 底下的 **[貨幣]** ，並核取 **[值的顯示單位]**，您可以選取 **[千]**、 **[百萬]** 或 **[十億]** 來使用財務格式顯示數值。 例如，如果欄位值為 1,789,905,394，而且您選取 **[十億]** 並指定 2 位小數位數，顯示在報表中的值為 1.78。  
   
 ## <a name="see-also"></a>另請參閱  
- [格式化文字和預留位置&#40;報表產生器和 SSRS&#41;](formatting-text-and-placeholders-report-builder-and-ssrs.md)   
+ [格式化文字和預留位置&#40;報表產生器及 SSRS&#41;](formatting-text-and-placeholders-report-builder-and-ssrs.md)   
  [格式化線條、色彩和影像 &#40;報表產生器及 SSRS&#41;](images-report-builder-and-ssrs.md)   
  [格式化圖表 &#40;報表產生器和 SSRS&#41;](formatting-a-chart-report-builder-and-ssrs.md)   
  [將軸標籤格式化成日期或貨幣 &#40;報表產生器及 SSRS&#41;](format-axis-labels-as-dates-or-currencies-report-builder-and-ssrs.md)   
- [格式化量測計的標尺&#40;報表產生器和 SSRS&#41;](formatting-scales-on-a-gauge-report-builder-and-ssrs.md)  
+ [格式化量測計的標尺&#40;報表產生器及 SSRS&#41;](formatting-scales-on-a-gauge-report-builder-and-ssrs.md)  
   
   

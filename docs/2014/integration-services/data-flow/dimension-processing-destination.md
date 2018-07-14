@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.dimensionprocessingdest.f1
 helpviewer_keywords:
@@ -20,13 +20,13 @@ ms.assetid: 4c49bb95-7259-42f4-a785-bb6aaf5f8566
 caps.latest.revision: 39
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 41f97ad80771839d00ee73e75a3b30bdcaf5b09c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 139058c982315f12141d55c315a18554d4babd4a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36029862"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37217718"
 ---
 # <a name="dimension-processing-destination"></a>維度處理目的地
   「維度處理」目的地會載入及處理 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 維度。 如需維度的詳細資訊，請參閱[維度 &#40;Analysis Services - 多維度資料&#41;](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/dimensions-analysis-services-multidimensional-data.md)。  
@@ -50,9 +50,9 @@ ms.locfileid: "36029862"
   
  如需有關 **[維度處理目的地編輯器]** 對話方塊中可設定之屬性的詳細資訊，請按一下下列主題之一：  
   
--   [維度處理目的地編輯器&#40;連接管理員頁面&#41;](../dimension-processing-destination-editor-connection-manager-page.md)  
+-   [維度處理目的地編輯器&#40;連線管理員頁面&#41;](../dimension-processing-destination-editor-connection-manager-page.md)  
   
--   [維度處理目的地編輯器&#40;[對應] 頁面&#41;](../dimension-processing-destination-editor-mappings-page.md)  
+-   [維度處理目的地編輯器&#40;對應頁面&#41;](../dimension-processing-destination-editor-mappings-page.md)  
   
 -   [維度處理目的地編輯器&#40;進階頁面&#41;](../dimension-processing-destination-editor-advanced-page.md)  
   

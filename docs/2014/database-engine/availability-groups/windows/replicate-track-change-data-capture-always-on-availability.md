@@ -1,14 +1,13 @@
 ---
-title: 複寫、 變更追蹤、 異動資料擷取和 AlwaysOn 可用性群組 (SQL Server) |Microsoft 文件
+title: 複寫、 變更追蹤、 異動資料擷取和 AlwaysOn 可用性群組 (SQL Server) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - change tracking [SQL Server], AlwaysOn Availability Groups
 - change data capture [SQL Server], AlwaysOn Availability Groups
@@ -16,15 +15,15 @@ helpviewer_keywords:
 - replication [SQL Server], AlwaysOn Availability Groups
 ms.assetid: e17a9ca9-dd96-4f84-a85d-60f590da96ad
 caps.latest.revision: 31
-author: MikeRayMSFT
-ms.author: mikeray
-manager: jhubbard
-ms.openlocfilehash: 0afd1136c2426b749beaff5c713f6c5e77671940
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 1519ac814a1f8a55333af5050eab8f5fcbc1b022
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36030612"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37204028"
 ---
 # <a name="replication-change-tracking-change-data-capture-and-alwayson-availability-groups-sql-server"></a>複寫、變更追蹤、變更資料擷取和 AlwaysOn 可用性群組 (SQL Server)
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)][!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]支援複寫、異動資料擷取 (CDC) 和變更追蹤 (CT)。 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 有助於提供高可用性以及其他資料庫復原功能。  
@@ -115,7 +114,7 @@ ms.locfileid: "36030612"
     > [!NOTE]  
     >  您應該在容錯移轉前於所有可能的容錯移轉目標上建立這些作業，並且將它們標示為停用，直到主機上的可用性複本變成新的主要複本為止。 當本機資料庫變成次要資料庫時，在舊主要資料庫上執行的 CDC 作業也應該停用。 若要停用和啟用作業，請使用 [sp_update_job &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-update-job-transact-sql) 的 *@enabled* 選項。 如需有關建立 CDC 作業的詳細資訊，請參閱 [sys.sp_cdc_add_job &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sys-sp-cdc-add-job-transact-sql)支援複寫、異動資料擷取 (CDC) 和變更追蹤 (CT)。  
   
--   **將 CDC 角色加入至 AlwaysOn 主要資料庫複本**  
+-   **將 CDC 角色加入 AlwaysOn 主要資料庫複本**  
   
      當資料表啟用 CDC 時，有可能將資料庫角色與擷取執行個體建立關聯。 如果指定了角色，希望使用 CDC 資料表值函式來存取資料表變更的使用者必須不只有追蹤資料表資料行的選取存取權，也必須是具名角色的成員。 如果指定的角色尚未存在，則會建立角色。 當資料庫角色自動加入至 AlwaysOn 主要資料庫時，這些角色也會傳播至可用性群組的次要資料庫。  
   
@@ -189,7 +188,7 @@ ms.locfileid: "36030612"
 ##  <a name="Prereqs"></a> 使用複寫的必要條件、限制和考量  
  本節描述使用 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]來部署複寫的考量，包括必要條件、限制和建議。  
   
-### <a name="prerequisites"></a>必要條件  
+### <a name="prerequisites"></a>先決條件  
   
 -   當使用異動複寫，而且發行集資料庫是在可用性群組時，發行者和散發者都必須至少執行 [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]。 訂閱者可以使用較低層級的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]。  
   
@@ -209,7 +208,7 @@ ms.locfileid: "36030612"
 |||||  
 |-|-|-|-|  
 ||**發行者**|**散發者** <sup>3</sup>|**訂閱者**|  
-|**異動**|[是]<sup>1</sup>|否|是<sup>2</sup>|  
+|**異動**|是<sup>1</sup>|否|是<sup>2</sup>|  
 |**P2P**|否|否|否|  
 |**合併式**|是|否|是<sup>2</sup>|  
 |**快照式**|是|否|是<sup>2</sup>|  
@@ -222,7 +221,7 @@ ms.locfileid: "36030612"
   
 ### <a name="considerations"></a>考量  
   
--   散發資料庫不支援搭配 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 或資料庫鏡像使用。 複寫組態會結合至設定散發者所在的 SQL Server 執行個體。因此，無法鏡像或複寫散發資料庫。 若要針對散發者提供高可用性，請使用 SQL Server 容錯移轉叢集。 如需詳細資訊，請參閱[AlwaysOn 容錯移轉叢集執行個體 (SQL Server)](../../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md)。  
+-   散發資料庫不支援搭配 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 或資料庫鏡像使用。 複寫組態會結合至設定散發者所在的 SQL Server 執行個體。因此，無法鏡像或複寫散發資料庫。 若要針對散發者提供高可用性，請使用 SQL Server 容錯移轉叢集。 如需詳細資訊，請參閱 < [ AlwaysOn 容錯移轉叢集執行個體 (SQL Server)](../../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md)。  
   
 -   雖然支援訂閱者容錯移轉至次要資料庫，不過這是相當複雜的手動程序。 此程序基本上與用來容錯移轉鏡像訂閱者資料庫的方法完全相同。 訂閱者必須執行 [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] 或更新版本，才能參與可用性群組。  
   
@@ -255,7 +254,7 @@ ms.locfileid: "36030612"
   
 ## <a name="see-also"></a>另請參閱  
  [複寫訂閱者及 AlwaysOn 可用性群組&#40;SQL Server&#41;](replication-subscribers-and-always-on-availability-groups-sql-server.md)   
- [必要條件、 限制和建議的 AlwaysOn 可用性群組&#40;SQL Server&#41;](prereqs-restrictions-recommendations-always-on-availability.md)   
+ [必要條件、 限制和建議，AlwaysOn 可用性群組的&#40;SQL Server&#41;](prereqs-restrictions-recommendations-always-on-availability.md)   
  [AlwaysOn 可用性群組概觀&#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
  [AlwaysOn 可用性群組： 互通性 (SQL Server)](always-on-availability-groups-interoperability-sql-server.md) [ AlwaysOn 容錯移轉叢集執行個體 (SQL Server)](../../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md)   
  [關於異動資料擷取 &#40;SQL Server&#41;](../../../relational-databases/track-changes/about-change-data-capture-sql-server.md)   

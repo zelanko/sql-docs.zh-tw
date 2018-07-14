@@ -1,5 +1,5 @@
 ---
-title: KPI 表單編輯器 （Kpi 索引標籤，Cube 設計工具） (Analysis Services-多維度資料) |Microsoft 文件
+title: KPI 表單編輯器 （Kpi 索引標籤，Cube 設計師） (Analysis Services-多維度資料) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.cubeeditor.kpidefinitionpane.f1
 ms.assetid: 45c6453a-bbe2-4ca5-836e-c7ef11cfcb65
 caps.latest.revision: 23
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: af159d0cdc724af8f0b7e768146527588b4e16fc
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 284ccc63f98624e1a64b114d31b69215d8e6b1be
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36031547"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37224838"
 ---
 # <a name="kpi-form-editor-kpis-tab-cube-designer-analysis-services---multidimensional-data"></a>KPI 表單編輯器 (KPI 索引標籤，Cube 設計工具) (Analysis Services - 多維度資料)
   在 Cube 設計師的 [KPI] 索引標籤上，使用 [KPI 表單編輯器] 窗格來建立或修改選取的關鍵效能指標 (KPI)。  
@@ -119,6 +119,6 @@ ms.locfileid: "36031547"
  鍵入 KPI 的選擇性描述。  
   
 ## <a name="see-also"></a>另請參閱  
- [Kpi &#40;Cube 設計師&#41; &#40;Analysis Services-多維度資料&#41;](kpis-cube-designer-analysis-services-multidimensional-data.md)  
+ [Kpi &#40;Cube 設計工具&#41; &#40;Analysis Services-多維度資料&#41;](kpis-cube-designer-analysis-services-multidimensional-data.md)  
   
   

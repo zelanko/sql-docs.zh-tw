@@ -1,5 +1,5 @@
 ---
-title: 啟動 SQL Server Profiler |Microsoft 文件
+title: 啟動 SQL Server Profiler |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Profiler [SQL Server Profiler], starting
 - SQL Server Profiler, starting
 - starting SQL Server Profiler
 ms.assetid: 22e57ffa-63b0-4de3-b92e-df297dda1226
 caps.latest.revision: 24
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 9a61a8a5db0df279a344cdedfcf519c232cc911b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: f5b752dfc31fd83530a773370551b88589fc2f4b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36024107"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37246138"
 ---
 # <a name="start-sql-server-profiler"></a>啟動 SQL Server Profiler
   您可以利用多種不同的方式來啟動 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] ，以支援在各種狀況中收集追蹤輸出。 啟動 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 的方式包括：從 **[開始]** 功能表、從 **Tuning Advisor 中的** [工具] [!INCLUDE[ssDE](../../includes/ssde-md.md)] 功能表，以及從 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中的數個位置。  

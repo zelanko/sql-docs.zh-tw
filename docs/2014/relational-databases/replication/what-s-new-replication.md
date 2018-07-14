@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - replication [SQL Server], what's new
 - what's new [SQL Server replication]
 ms.assetid: 130a760a-4162-4d7d-b266-453eb5759d7a
 caps.latest.revision: 37
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: fb54c19bf277bc5e45964a2be470f56bd7e242d5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: ef3e19795da31489ec4bd387ac851d3ad6cfb588
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36029793"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37172389"
 ---
 # <a name="what39s-new-replication"></a>新功能 (複寫)
   [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 並未在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 複寫中引入重大的新功能。  

@@ -1,5 +1,5 @@
 ---
-title: 第 3 課： 重新命名資料行 |Microsoft 文件
+title: 第 3 課： 重新命名資料行 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 5fc8ba1a-2b30-4775-9b3b-c09dee711b3e
 caps.latest.revision: 19
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: ed2f495f4300abca78b3a1b7597bd0d09fd15292
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 6d4f9d156889bd3a761cff2a18a908df42e8aade
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36029950"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37246096"
 ---
 # <a name="lesson-3-rename-columns"></a>第 3 課：重新命名資料行
   在這一課，您將重新命名匯入的每個資料表中的多個資料行。 重新命名可讓資料行更容易識別，且更容易在模型設計師中以及藉由使用者在用戶端應用程式中選取欄位的方式進行導覽。 若要深入了解，請參閱[重新命名資料表或資料行 &#40;SSAS 表格式&#41;](tabular-models/rename-a-table-or-column-ssas-tabular.md)。  
@@ -29,7 +29,7 @@ ms.locfileid: "36029950"
   
  完成本課程的估計時間： **20 分鐘**  
   
-## <a name="prerequisites"></a>必要條件  
+## <a name="prerequisites"></a>先決條件  
  本主題是表格式模型教學課程的一部分，必須依序完成。 在執行本課中的工作之前，您應已完成上一課： [第 2 課：新增資料](lesson-2-add-data.md)。  
   
 ## <a name="rename-columns"></a>重新命名資料行  
@@ -40,7 +40,7 @@ ms.locfileid: "36029950"
   
      當您按一下某個索引標籤時，該資料表會在模型設計師視窗中變成使用中。  
   
-2.  按兩下  **customerkey**資料行名稱，然後輸入`Customer  Id`，然後按 ENTER 鍵。  
+2.  按兩下**CustomerKey**資料行名稱，然後輸入`Customer  Id`，然後按 ENTER 鍵。  
   
     > [!TIP]  
     >  您也可以在資料行之 [屬性] 視窗的 [資料行名稱] 屬性中，或是 [圖表檢視] 中，重新命名資料行。  
