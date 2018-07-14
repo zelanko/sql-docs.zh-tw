@@ -5,10 +5,9 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-indexes
+ms.technology: table-view-index
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - moving tables
 - switching filegroups for index
@@ -17,15 +16,15 @@ helpviewer_keywords:
 - filegroups [SQL Server], switching
 ms.assetid: 167ebe77-487d-4ca8-9452-4b2c7d5cb96e
 caps.latest.revision: 42
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 3ea31b77f210eca22d5ddea56984880a3056be1a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 597ed7b2207302ff897f255479c6183ef44b255d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36030793"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37285164"
 ---
 # <a name="move-an-existing-index-to-a-different-filegroup"></a>將現有的索引移至不同的檔案群組
   此主題描述如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ，在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中將目前檔案群組的現有索引移到不同的檔案群組。  
@@ -99,7 +98,7 @@ ms.locfileid: "36030793"
   
      如果您要移動叢集索引，可使用線上處理。 線上處理允許並行使用者在索引作業期間，存取基礎資料和非叢集索引。 如需詳細資訊，請參閱 [Perform Index Operations Online](perform-index-operations-online.md)。  
   
-     在使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]的多處理器電腦上，您可以指定平行處理原則的最大程度值，藉以設定用來執行索引陳述式的處理器數目。 並非每個 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]版本都可使用平行索引作業功能。 如需所支援的版本功能的清單[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]，請參閱[支援的 SQL Server 2014 的版本功能](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)。 如需平行索引作業的詳細資訊，請參閱 [設定平行索引作業](configure-parallel-index-operations.md)。  
+     在使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]的多處理器電腦上，您可以指定平行處理原則的最大程度值，藉以設定用來執行索引陳述式的處理器數目。 並非每個 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]版本都可使用平行索引作業功能。 如需的版本所支援的功能清單[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]，請參閱 <<c2> [ 支援的 SQL Server 2014 的版本功能](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)。 如需平行索引作業的詳細資訊，請參閱 [設定平行索引作業](configure-parallel-index-operations.md)。  
   
 8.  按一下 **[確定]**。  
   

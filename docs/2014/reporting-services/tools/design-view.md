@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.rtp.rptdesigner.layoutview.f1
 helpviewer_keywords:
@@ -17,13 +17,13 @@ ms.assetid: 6fa378aa-442f-4d2f-beab-02a0fb5cd3ce
 caps.latest.revision: 37
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: a7f9b00eec64ae93fdb60fa0f7f6e591087d039a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 394ca7eec9223b694aedb59ead6a35faee74f003
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36031182"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37251170"
 ---
 # <a name="design-view"></a>設計檢視
   使用 [設計] 檢視，即可排列報表中的報表項目。 [設計] 檢視有時稱為設計介面或配置檢視。  
@@ -55,7 +55,7 @@ ms.locfileid: "36031182"
  使用 [屬性] 窗格可檢視目前在設計介面上選取之報表項目的屬性，或是檢視目前在 [群組] 窗格中選取之群組的屬性。 或者，您也可以用滑鼠右鍵按一下選取的報表項目或群組，然後按一下 [屬性]，為此報表項目或群組開啟對應的 [屬性] 對話方塊。  
   
 ## <a name="see-also"></a>另請參閱  
- [頁首和頁尾&#40;報表產生器和 SSRS&#41;](../report-design/page-headers-and-footers-report-builder-and-ssrs.md)   
+ [頁首和頁尾&#40;報表產生器及 SSRS&#41;](../report-design/page-headers-and-footers-report-builder-and-ssrs.md)   
  [報表設計提示 &#40;報表產生器及 SSRS&#41;](../report-design/report-design-tips-report-builder-and-ssrs.md)  
   
   

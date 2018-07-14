@@ -1,5 +1,5 @@
 ---
-title: 建立工作階段範圍導出成員 (MDX) |Microsoft 文件
+title: 建立工作階段範圍導出成員 (MDX) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - CREATE MEMBER statement
 - session-scoped calculated members [MDX]
 ms.assetid: 2875ed89-2c26-4645-8ed9-8848479d110f
 caps.latest.revision: 29
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: d8e51a2fa5d8179134ac2654f55e9da7ff5ced67
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 79e6466c7f514b3453f8840a72dc0028a215259b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36030907"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37249858"
 ---
 # <a name="creating-session-scoped-calculated-members-mdx"></a>建立工作階段範圍導出成員 (MDX)
   若要建立可在整個多維度運算式 (MDX) 工作階段取得的導出成員，您可以使用 [CREATE MEMBER](/sql/mdx/mdx-data-definition-create-member) 陳述式。 使用 CREATE MEMBER 陳述式建立的導出成員，直到 MDX 工作階段結束後才會移除。  

@@ -22,15 +22,15 @@ helpviewer_keywords:
 - srv_paramdata
 ms.assetid: 3104514d-b404-47c9-b6d7-928106384874
 caps.latest.revision: 30
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: e5df3b6ca555ecefcf70e4a3f20bd66c6ee02b3f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: rothja
+ms.author: jroth
+manager: craigg
+ms.openlocfilehash: aa55de23181266f8358a5f38aead82383bf6d8e9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36031014"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37262764"
 ---
 # <a name="srvparamdata-extended-stored-procedure-api"></a>srv_paramdata (擴充預存程序 API)
     

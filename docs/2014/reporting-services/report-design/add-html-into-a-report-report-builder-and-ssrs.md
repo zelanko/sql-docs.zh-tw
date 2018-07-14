@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 30bd631a-f774-48e7-a13a-b6c2eb54d9bb
 caps.latest.revision: 7
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 1cf6a9db346818a6f2ea6e0e2edecb422d1e7467
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: e309710e72ec344a9e54255483893800b6a4018f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36031158"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37288244"
 ---
 # <a name="add-html-into-a-report-report-builder-and-ssrs"></a>將 HTML 加入至報表 (報表產生器及 SSRS)
   您可以使用預留位置，從資料集的欄位匯入 HTML，以便用於報表中。 根據預設，預留位置代表純文字，所以您必須將預留位置標記類型變更為 HTML。 如需詳細資訊，請參閱[將 HTML 匯入至報表 &#40;報表產生器及 SSRS&#41;](importing-html-into-a-report-report-builder-and-ssrs.md)。  
@@ -46,7 +46,7 @@ ms.locfileid: "36031158"
 7.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
 ## <a name="see-also"></a>另請參閱  
- [格式化數字和日期&#40;報表產生器和 SSRS&#41;](formatting-numbers-and-dates-report-builder-and-ssrs.md)   
+ [格式化數字和日期&#40;報表產生器及 SSRS&#41;](formatting-numbers-and-dates-report-builder-and-ssrs.md)   
  [格式化線條、色彩和影像 &#40;報表產生器及 SSRS&#41;](images-report-builder-and-ssrs.md)   
  [預留位置屬性對話方塊、一般 &#40;報表產生器及 SSRS&#41;](../placeholder-properties-dialog-box-general-report-builder-and-ssrs.md)  
   

@@ -1,5 +1,5 @@
 ---
-title: PartitionID 元素 (XMLA) |Microsoft 文件
+title: PartitionID 元素 (XMLA) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -24,15 +24,15 @@ helpviewer_keywords:
 - PartitionID element
 ms.assetid: 19f06454-9719-488e-aeb6-3fc879313351
 caps.latest.revision: 11
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: 54631af41d95d7ab149f853c6c94b7af1965f1ca
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 663d1723598354cf4ea762ee51d34921feb516c7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36031088"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37231828"
 ---
 # <a name="partitionid-element-xmla"></a>PartitionID 元素 (XMLA)
   識別父元素中包含物件參考的資料分割。  

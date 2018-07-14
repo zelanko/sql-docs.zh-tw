@@ -1,5 +1,5 @@
 ---
-title: 篩選對話方塊 （採礦精確度圖表） |Microsoft 文件
+title: 篩選對話方塊 （採礦精確度圖表） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 71e884a9-7ec4-4459-a4c4-87f6c796d478
 caps.latest.revision: 15
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 328ebd3f09037c3288450b75b4acd011481c40a6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 04630120106816c4018af0fc23cfdf30f26b15cf
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36030910"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37272604"
 ---
 # <a name="filter-dialog-box-mining-accuracy-chart"></a>篩選對話方塊 (採礦精確度圖表)
   [篩選] 對話方塊會幫助您建立可套用至資料集的條件。 此資料集可以是用於測試的外部資料集，或是用於定型採礦模型的案例資料。 此對話方塊可幫助您建立準則，您可以在 [資料集篩選器] 對話方塊或 [模型篩選器] 對話方塊中，將這些準則儲存為更複雜之篩選準則的一部分。  
@@ -42,7 +42,7 @@ ms.locfileid: "36030910"
  **條件**  
  包含資料行的方格，您會在這裡根據 [資料集篩選器] 對話方塊中選取的資料表指定資料行的條件。  
   
-|ReplTest1|描述|  
+|值|描述|  
 |-----------|-----------------|  
 |**及/或**|按一下此選項，指定是要將 AND 運算子還是 OR 運算子套用到這一行的條件。 只有當您從 [採礦結構資料行] 清單中選取資料行之後，才可以使用這些值。|  
 |**採礦結構資料行**|按一下此選項，從資料表中包含的資料行清單選取資料行，此資料表是您從 [資料集篩選器] 對話方塊中的資料來源選取而來。|  

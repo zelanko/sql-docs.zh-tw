@@ -1,5 +1,5 @@
 ---
-title: RoleID 元素 (ASSL) |Microsoft 文件
+title: RoleID 元素 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - RoleID element
 ms.assetid: 811e24c9-c732-41f9-bd5f-5c9e3503706a
 caps.latest.revision: 36
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: b61d5f14a5b45d3275e79ab729ccee8e0b736013
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: cff4cf8a86160f1f4cef93d4cd021ac917038a33
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36030618"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37285914"
 ---
 # <a name="roleid-element-assl"></a>RoleID 元素 (ASSL)
   識別要定義權限的角色。  

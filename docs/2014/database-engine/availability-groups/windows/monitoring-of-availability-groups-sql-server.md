@@ -5,24 +5,23 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Availability Groups [SQL Server], monitoring
 - Availability Groups [SQL Server], troubleshooting
 ms.assetid: 1d5e3291-0d0a-45a1-88e5-1fc242d17210
 caps.latest.revision: 23
-author: rothja
-ms.author: jroth
-manager: jhubbard
-ms.openlocfilehash: dbcb69181150f1dd6003ff868e4a1b6909ee8990
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 8080c3d0825104019f1e3156d39348b5676d8159
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36031287"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37257444"
 ---
 # <a name="monitoring-of-availability-groups-sql-server"></a>監視可用性群組 (SQL Server)
   若要監視 AlwaysOn 可用性群組的屬性和狀態，您可以使用以下工具。  
@@ -40,13 +39,13 @@ ms.locfileid: "36031287"
   
 -   **部落格：**  
   
-     [AlwaysOn 健全狀況模型第 1 部--健全狀況模型架構](http://blogs.msdn.com/b/sqlalwayson/archive/2012/02/09/overview-of-the-alwayson-manageability-health-model.aspx)  
+     [AlwaysOn 健全狀況模型第 1 部分-健全狀況模型架構](http://blogs.msdn.com/b/sqlalwayson/archive/2012/02/09/overview-of-the-alwayson-manageability-health-model.aspx)  
   
-     [AlwaysOn 健全狀況模型第 2 部--擴充健全狀況模型](http://blogs.msdn.com/b/sqlalwayson/archive/2012/02/13/extending-the-alwayson-health-model.aspx)  
+     [AlwaysOn 健全狀況模型第 2 部分-擴充健全狀況模型](http://blogs.msdn.com/b/sqlalwayson/archive/2012/02/13/extending-the-alwayson-health-model.aspx)  
   
-     [監視 AlwaysOn 健全狀況與 PowerShell-第 1 部： 基本指令程式概觀](http://blogs.msdn.com/b/sqlalwayson/archive/2012/02/13/monitoring-alwayson-health-with-powershell-part-1.aspx)  
+     [監視 AlwaysOn 健全狀況與 PowerShell-第 1 部分： 基本 Cmdlet 概觀](http://blogs.msdn.com/b/sqlalwayson/archive/2012/02/13/monitoring-alwayson-health-with-powershell-part-1.aspx)  
   
-     [監視 AlwaysOn 健全狀況與 PowerShell-第 2 部： 進階 Cmdlet 使用方式](http://blogs.msdn.com/b/sqlalwayson/archive/2012/02/13/monitoring-alwayson-health-with-powershell-part-2.aspx)  
+     [監視 AlwaysOn 健全狀況與 PowerShell-第 2 部： 進階 Cmdlet 使用](http://blogs.msdn.com/b/sqlalwayson/archive/2012/02/13/monitoring-alwayson-health-with-powershell-part-2.aspx)  
   
      [監視 AlwaysOn 健全狀況與 PowerShell-第 3 部： 簡單監控應用程式](http://blogs.msdn.com/b/sqlalwayson/archive/2012/02/15/monitoring-alwayson-health-with-powershell-part-3.aspx)  
   
@@ -64,7 +63,7 @@ ms.locfileid: "36031287"
   
 ## <a name="see-also"></a>另請參閱  
  [AlwaysOn 可用性群組目錄檢視&#40;Transact SQL&#41;](/sql/relational-databases/system-catalog-views/always-on-availability-groups-catalog-views-transact-sql)   
- [AlwaysOn 可用性群組動態管理檢視和函數&#40;Transact SQL&#41;](/sql/relational-databases/system-dynamic-management-views/always-on-availability-groups-dynamic-management-views-functions)   
+ [AlwaysOn 可用性群組動態管理檢視和函式&#40;Transact SQL&#41;](/sql/relational-databases/system-dynamic-management-views/always-on-availability-groups-dynamic-management-views-functions)   
  [可用性群組自動容錯移轉的彈性容錯移轉原則 &#40;SQL Server&#41;](flexible-automatic-failover-policy-availability-group.md)   
  [AlwaysOn 可用性群組概觀&#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
  [自動修復頁面&#40;可用性群組和資料庫鏡像&#41;](../../../sql-server/failover-clusters/automatic-page-repair-availability-groups-database-mirroring.md)   

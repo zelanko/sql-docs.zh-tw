@@ -1,5 +1,5 @@
 ---
-title: 設計預存程序 |Microsoft 文件
+title: 設計預存程序 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - assemblies [Analysis Services]
 ms.assetid: af4e7bd5-041b-4a40-9942-0ef6a3af46c6
 caps.latest.revision: 27
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 245d02d18fdaf9fdce5d1b63b965525642bebcc4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 8311f5a4762e016fc0fae7d5594a3453aac601fa
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36031316"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37271934"
 ---
 # <a name="designing-stored-procedures"></a>設計預存程序
   管理的物件模型分析管理物件 (AMO) 和用戶端導向的物件模型 [!INCLUDE[msCoName](../../includes/msconame-md.md)] ActiveX® Data Objects (多維度) (ADO MD)，二者都可在預存程序中使用。  

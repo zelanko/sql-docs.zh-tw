@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.oledbdest.f1
 helpviewer_keywords:
@@ -23,13 +23,13 @@ ms.assetid: 873a2fa0-2a02-41fc-a80a-ec9767f36a8a
 caps.latest.revision: 77
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: f6b3cbdff4e837facc8a6cd2c2b0498ae6bf92a7
-ms.sourcegitcommit: d463f543e8db4a768f8e9736ff28fedb3fb17b9f
+manager: craigg
+ms.openlocfilehash: eee342244a6a057a98d5ab6252c6ab970b515118
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/22/2018
-ms.locfileid: "36324702"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37243088"
 ---
 # <a name="ole-db-destination"></a>OLE DB 目的地
   OLE DB 目的地會使用資料庫的資料表、檢視或 SQL 命令將資料載入各種符合 OLE DB 標準的資料庫。 例如，OLE DB 來源可以將資料載入至 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office Access 和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫的資料表中。  
@@ -49,7 +49,7 @@ ms.locfileid: "36324702"
 > [!NOTE]  
 >  OLE DB 目的地不支援參數。 如果需要執行參數化 INSERT 陳述式，請考慮 OLE DB 命令轉換。 如需相關資訊，請參閱 [OLE DB Command Transformation](transformations/ole-db-command-transformation.md)。  
   
- 當 OLE DB 目的地載入使用雙位元組字元集 (DBCS) 的資料時，如果資料存取模式未使用快速載入選項，而 OLE DB 連接管理員使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] OLE DB Provider for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (SQLOLEDB)，則資料可能會損毀。 若要確定 DBCS 資料的完整性，您應該將 OLE DB 連線管理員設定為使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client，或使用下列其中一個快速載入存取模式：[資料表或檢視表 - 快速載入] 或 [資料表名稱或檢視名稱變數 - 快速載入]。 兩個選項都可從 [OLE DB 目的地編輯器] 對話方塊使用。 程式設計時[!INCLUDE[ssIS](../../includes/ssis-md.md)]物件模型中，您應該將 AccessMode 屬性設`OpenRowset Using FastLoad`，或`OpenRowset Using FastLoad From Variable`。  
+ 當 OLE DB 目的地載入使用雙位元組字元集 (DBCS) 的資料時，如果資料存取模式未使用快速載入選項，而 OLE DB 連接管理員使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] OLE DB Provider for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (SQLOLEDB)，則資料可能會損毀。 若要確定 DBCS 資料的完整性，您應該將 OLE DB 連線管理員設定為使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client，或使用下列其中一個快速載入存取模式：[資料表或檢視表 - 快速載入] 或 [資料表名稱或檢視名稱變數 - 快速載入]。 兩個選項都可從 [OLE DB 目的地編輯器] 對話方塊使用。 當程式設計[!INCLUDE[ssIS](../../includes/ssis-md.md)]物件模型中，您應該將 AccessMode 屬性設`OpenRowset Using FastLoad`，或`OpenRowset Using FastLoad From Variable`。  
   
 > [!NOTE]  
 >  如果使用「[!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師」中的 [OLE DB 目的地編輯器] 對話方塊來建立 OLE DB 目的地插入資料的目的地資料表，則您可能必須手動選取新建立的資料表。 當 OLE DB 提供者 (例如 DB2 的 OLE DB 提供者) 自動將結構描述識別碼加入資料表名稱時，需進行手動選取。  
@@ -80,7 +80,7 @@ ms.locfileid: "36324702"
   
 -   指定批次中的資料列數目以及認可大小。  
   
- 部分快速載入選項儲存在 OLE DB 目的地的特定屬性中。 例如，FastLoadKeepIdentity 指定是否要保留識別值、FastLoadKeepNulls 指定是否要保留 Null 值，而 FastLoadMaxInsertCommitSize 則指定要認可為批次的資料列數目。 其他快速載入選項儲存在 FastLoadOptions 屬性的逗號分隔清單中。 如果 OLE DB 目的地使用，都儲存在 FastLoadOptions 中所列的所有快速載入選項**OLE DB 目的地編輯器**對話方塊中，屬性的值設定為`TABLOCK, CHECK_CONSTRAINTS, ROWS_PER_BATCH=1000`。 1000 值代表目的地設定為使用 1000 列的批次。  
+ 部分快速載入選項儲存在 OLE DB 目的地的特定屬性中。 例如，FastLoadKeepIdentity 指定是否要保留識別值、FastLoadKeepNulls 指定是否要保留 Null 值，而 FastLoadMaxInsertCommitSize 則指定要認可為批次的資料列數目。 其他快速載入選項儲存在 FastLoadOptions 屬性的逗號分隔清單中。 如果 OLE DB 目的地使用的所有快速載入選項，會儲存在 FastLoadOptions 及列在**OLE DB 目的地編輯器** 對話方塊中，屬性的值設定為`TABLOCK, CHECK_CONSTRAINTS, ROWS_PER_BATCH=1000`。 1000 值代表目的地設定為使用 1000 列的批次。  
   
 > [!NOTE]  
 >  目的地的任何條件約束失敗都會使 FastLoadMaxInsertCommitSize 所定義的整個資料列批次失敗。  
@@ -89,7 +89,7 @@ ms.locfileid: "36324702"
   
 |快速載入選項|描述|  
 |----------------------|-----------------|  
-|KILOBYTES_PER_BATCH|指定要插入的大小 (以 KB 為單位)。 這個選項沒有表單`KILOBYTES_PER_BATCH`  = \<正整數值**>**。|  
+|KILOBYTES_PER_BATCH|指定要插入的大小 (以 KB 為單位)。 選項有表單`KILOBYTES_PER_BATCH`  = \<正整數值**>**。|  
 |FIRE_TRIGGERS|指定是否要針對插入資料表上引發觸發程序。 選項的格式為 **FIRE_TRIGGERS**。 選項的存在代表觸發程序會引發。|  
 |ORDER|指定如何儲存輸入資料。 選項的格式為 ORDER \<資料行名稱> ASC&#124;DESC。 可以列出任何數目的資料行，也可以選擇包含排序順序。 如果省略排序順序，大量插入作業會假設資料沒有排序。<br /><br /> 注意：如果您使用 ORDER 選項依照資料表的叢集索引排序輸入資料，將可改善效能。|  
   
@@ -105,9 +105,9 @@ ms.locfileid: "36324702"
   
  如需有關可以在 [OLE DB 目的地編輯器] 對話方塊中設定之屬性的詳細資訊，請按下列其中一個主題：  
   
--   [OLE DB 目的地編輯器&#40;連接管理員頁面&#41;](../ole-db-destination-editor-connection-manager-page.md)  
+-   [OLE DB 目的地編輯器&#40;連線管理員頁面&#41;](../ole-db-destination-editor-connection-manager-page.md)  
   
--   [OLE DB 目的地編輯器&#40;[對應] 頁面&#41;](../ole-db-destination-editor-mappings-page.md)  
+-   [OLE DB 目的地編輯器&#40;對應頁面&#41;](../ole-db-destination-editor-mappings-page.md)  
   
 -   [OLE DB 目的地編輯器&#40;錯誤輸出頁面&#41;](../ole-db-destination-editor-error-output-page.md)  
   

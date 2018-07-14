@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.conditionalsplittrans.f1
 helpviewer_keywords:
@@ -18,13 +18,13 @@ ms.assetid: 3f8b5825-226f-413c-ba8f-0bb931ca3770
 caps.latest.revision: 51
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 780227fc93e78bfda0d6e1612dc315b904ffe929
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 42886c47618dd1aae0ac90e54ae3e7ec9c8d6193
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36031062"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37287644"
 ---
 # <a name="conditional-split-transformation"></a>條件式分割轉換
   「條件式分割」轉換可根據資料的內容，將資料列傳送至不同的輸出。 「條件式分割」轉換的實作與程式設計語言中的 CASE 決策結構類似。 轉換會評估運算式，並根據結果將資料列導向指定的輸出。 此轉換亦提供預設輸出，如此一來，即使資料列未符合任何運算式，仍會導向預設輸出。  

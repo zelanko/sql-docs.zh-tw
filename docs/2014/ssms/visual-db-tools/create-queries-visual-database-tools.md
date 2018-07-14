@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - queries [SQL Server], creating
 ms.assetid: 696a080d-848f-44d3-a918-e29bafaab85a
 caps.latest.revision: 14
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 75bf7b8fc40f7eb4a926ec1d43a858b06f704a2e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 3b1ff0b00bbbee79b5d24144e733f367807a91d7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36031764"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37257694"
 ---
 # <a name="create-queries-visual-database-tools"></a>建立查詢 (Visual Database Tools)
   查詢可讓您從資料庫的資料表和檢視中擷取資料。 您可以在查詢和檢視表設計工具中建立並使用查詢，這包含四個窗格：[[圖表] 窗格](visual-database-tools.md)、[[SQL] 窗格](sql-pane-visual-database-tools.md)、[[準則] 窗格](criteria-pane-visual-database-tools.md)及 [[結果] 窗格](results-pane-visual-database-tools.md)。  
@@ -49,7 +49,7 @@ ms.locfileid: "36031764"
   
 ## <a name="see-also"></a>另請參閱  
  [儲存查詢&#40;Visual Database Tools&#41;](save-queries-visual-database-tools.md)   
- [類型的查詢&#40;Visual Database Tools&#41;](types-of-queries-visual-database-tools.md)   
+ [查詢類型的&#40;Visual Database Tools&#41;](types-of-queries-visual-database-tools.md)   
  [指定搜尋準則&#40;Visual Database Tools&#41;](specify-search-criteria-visual-database-tools.md)   
  [摘要查詢結果&#40;Visual Database Tools&#41;](summarize-query-results-visual-database-tools.md)   
  [使用查詢執行基本作業 &#40;Visual Database Tools&#41;](perform-basic-operations-with-queries-visual-database-tools.md)  

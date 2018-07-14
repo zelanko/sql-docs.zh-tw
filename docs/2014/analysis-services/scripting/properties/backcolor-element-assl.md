@@ -1,5 +1,5 @@
 ---
-title: BackColor 元素 (ASSL) |Microsoft 文件
+title: BackColor 元素 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - BackColor element
 ms.assetid: 9024d131-74cc-4815-833a-f8cae57b7453
 caps.latest.revision: 38
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: fe0ab54477b22f1e6ea1bdc55156ea8318dd87a6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ed491d6307e6e5776843c3f5e490d9369235143b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36030620"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37274114"
 ---
 # <a name="backcolor-element-assl"></a>BackColor 元素 (ASSL)
   描述父元素的色彩相關顯示特性。  
@@ -62,9 +62,9 @@ ms.locfileid: "36030620"
 |子元素|無|  
   
 ## <a name="remarks"></a>備註  
- `BackColor`屬性包含多維度運算式 (MDX) 語言運算式並套用至`CalculationProperty`的項目[CalculationType](calculationtype-element-assl.md)的*成員*或*資料格*。  
+ `BackColor`屬性包含多維度運算式 (MDX) 語言運算式並套用至`CalculationProperty`項目[CalculationType](calculationtype-element-assl.md)的*成員*或*資料格*。  
   
- 對應目的父代的項目`BackColor`在 「 分析管理物件 (AMO) 物件模型而言， <xref:Microsoft.AnalysisServices.CalculationProperty>。  
+ 對應至父系的元素`BackColor`在 「 分析管理物件 (AMO) 物件模型是<xref:Microsoft.AnalysisServices.CalculationProperty>。  
   
 ## <a name="see-also"></a>另請參閱  
  [CalculationProperties 元素&#40;ASSL&#41;](../collections/calculationproperties-element-assl.md)   

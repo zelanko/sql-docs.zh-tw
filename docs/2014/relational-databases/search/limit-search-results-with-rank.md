@@ -5,10 +5,9 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-search
+ms.technology: search
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - row ranking [full-text search]
 - relevance ranking values [full-text search]
@@ -19,15 +18,15 @@ helpviewer_keywords:
 - per-row rank values [full-text search]
 ms.assetid: 06a776e6-296c-4ec7-9fa5-0794709ccb17
 caps.latest.revision: 20
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: cef510acee74d2ce261a1e000761f214571c16ab
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 4452b79dda89affda2d964b1d1dc8fb844a3f82b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36031404"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37233088"
 ---
 # <a name="limit-search-results-with-rank"></a>限制 RANK 的搜索結果
   [CONTAINSTABLE](/sql/relational-databases/system-functions/containstable-transact-sql) 和 [FREETEXTTABLE](/sql/relational-databases/system-functions/freetexttable-transact-sql) 函數會傳回名為 RANK 的資料行，其中包含 0 到 1000 (順位值) 的序數值。 這些值的用途，在根據傳回資料列符合選取準則的程度予以分級。 等級值僅表示結果集中資料列相關性的相對順序，其值越低表示相關性越低。 實際的值並不重要，而且每次執行查詢後該值通常會不一樣。  
@@ -145,7 +144,7 @@ GO
 ### <a name="rank-computation-issues"></a>等級計算問題  
  計算等級的程序取決於幾項因素。  不同語言的文字在分隔 Token 化文字的方式上會有所差異。 例如，使用某種文字分隔時會將 "dog-house" 字串分解成 "dog" "house"，而使用另一種文字分隔時會分解成 "dog-house"。 這表示比對和等級會依據指定的語言而異，因為不僅單字不同，而且文件長度也不同。 文件長度的差異會影響所有查詢的等級。  
   
- 統計資料，例如`IndexRowCount`可以相當廣泛。 例如，如果某個目錄在主索引中有 20 億個資料列，則會將一個新文件的索引編製到記憶體的中繼索引。而該文件會根據記憶體索引中的文件數目所得的等級，與主索引的文件等級進行非對稱比較。 因此，建議您在執行任何會造成大量資料列編製索引或重新編製索引的母體擴展動作後，使用 ALTER FULLTEXT CATALOG ... REORGANIZE [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式來將這些索引與主要的索引合併。 全文檢索引擎也會根據參數 (例如中繼索引的數目與大小) 來自動合併索引。  
+ 統計資料，例如`IndexRowCount`可能大不相同。 例如，如果某個目錄在主索引中有 20 億個資料列，則會將一個新文件的索引編製到記憶體的中繼索引。而該文件會根據記憶體索引中的文件數目所得的等級，與主索引的文件等級進行非對稱比較。 因此，建議您在執行任何會造成大量資料列編製索引或重新編製索引的母體擴展動作後，使用 ALTER FULLTEXT CATALOG ... REORGANIZE [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式來將這些索引與主要的索引合併。 全文檢索引擎也會根據參數 (例如中繼索引的數目與大小) 來自動合併索引。  
   
  `MaxOccurrence` 值會正規化為 32 種範圍中的其中一種。 這表示，會將長度 50 個字的文件視為與長度 100 個字的文件一樣。 下表用於正規化作業。 因為這兩個文件的長度介於鄰近資料表值的 32 與 128，因此它們會被視為具有相同長度的文件，也就是 128 (32 < `docLength` <= 128)。  
   

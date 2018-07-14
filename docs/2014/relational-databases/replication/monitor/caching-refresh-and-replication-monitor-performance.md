@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - monitoring performance [SQL Server replication], Replication Monitor
 - cache [SQL Server], replication
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - Replication Monitor, refreshing
 ms.assetid: a2d8b666-ed41-4f86-b2b8-c8e118416ab7
 caps.latest.revision: 11
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: fdab5a8ddc71821fb445e9225e40322b656faf85
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: f0816ea29b873777c54d77e34d691c909c8e6208
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36031208"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37256130"
 ---
 # <a name="caching-refresh-and-replication-monitor-performance"></a>快取、重新整理和複寫監視器效能
   「[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 複寫監視器」設計成能有效地監視發行集系統中的大量電腦。 會定期快取和重新整理「複寫監視器」用作執行計算和收集資料的查詢。 快取可減少您在「複寫監視器」中檢視不同頁面時的查詢和計算次數，並可使監視範圍擴大到多個使用者。  

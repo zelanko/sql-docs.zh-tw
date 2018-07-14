@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: dd0410ea-8839-4e8c-9944-8cdfe5465591
 caps.latest.revision: 10
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: bf60290c4946ef6f45bccba32632ed81dfaf650b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: a90dfbac3006f7dfbf27b38a8ab584ebb9e5d710
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36030447"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37249628"
 ---
 # <a name="importing-html-into-a-report-report-builder-and-ssrs"></a>將 HTML 匯入至報表 (報表產生器及 SSRS)
   您可以使用文字方塊來將從資料集的欄位所擷取的 HTML 格式文字插入至報表。 文字可以來自任何評估為正確格式之 HTML 的簡單或複雜運算式。 格式化的文字可以轉譯為所有受支援的輸出格式，包括 PDF 在內。  
@@ -39,7 +39,7 @@ ms.locfileid: "36030447"
 ## <a name="supported-html-tags"></a>支援的 HTML 標籤  
  下列是在定義為預留位置文字時，會轉譯為 HTML 的標記完整清單：  
   
--   標頭、 樣式和區塊元素： \<H {n} >， \<d i v >，\<範圍 >，\<P >， \<l i >  
+-   標頭、 樣式和區塊元素： \<H {n} >， \<d i v >， \<s p a n >，\<P >， \<l i >  
   
  所以其他的 HTML 標記都會在處理報表時遭到忽略。 如果預留位置文字中的運算式所代表的 HTML 沒有採用正確格式，則預留位置會轉譯為純文字。 所有 HTML 標記都不區分大小寫。  
   
@@ -81,6 +81,6 @@ ms.locfileid: "36030447"
 -   對於屬性和 CSS 樣式來說，如果某屬性指定了一次以上，則只會套用該屬性的最後一個執行個體。 例如，如果文字是 **\<p align="left" align="right">**，則會靠右對齊文字。  
   
 ## <a name="see-also"></a>另請參閱  
- [轉譯為 HTML&#40;報表產生器和 SSRS&#41;](../report-builder/rendering-to-html-report-builder-and-ssrs.md)  
+ [轉譯為 HTML&#40;報表產生器及 SSRS&#41;](../report-builder/rendering-to-html-report-builder-and-ssrs.md)  
   
   

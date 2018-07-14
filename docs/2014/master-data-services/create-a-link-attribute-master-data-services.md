@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - attributes [Master Data Services], creating link attributes
 - creating link attributes [Master Data Services]
 ms.assetid: e6658e9c-5b08-4b8d-b556-17ec2dd041d2
 caps.latest.revision: 6
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: f316888630cba30186eb3fec7d13485eadf6a136
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: d328ca29b6181b5594b8b1caa2b7ae3b68d79d10
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36030818"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37268994"
 ---
 # <a name="create-a-link-attribute-master-data-services"></a>建立連結屬性 (Master Data Services)
   當您想要讓使用者輸入超連結作為屬性值 (例如 http://www.contoso.com) 時，可以在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 中建立連結屬性。  
@@ -30,7 +30,7 @@ ms.locfileid: "36030818"
 > [!NOTE]  
 >  當使用者輸入連結屬性的值時，字串開頭必須為 **http://** ，否則將會顯示一個錯誤。  
   
-## <a name="prerequisites"></a>必要條件  
+## <a name="prerequisites"></a>先決條件  
  若要執行此程序：  
   
 -   您必須擁有存取 **[系統管理]** 功能區域的權限。  

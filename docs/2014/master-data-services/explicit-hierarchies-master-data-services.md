@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - explicit hierarchies, about explicit hierarchies
 - hierarchies [Master Data Services], explicit hierarchies
 - explicit hierarchies
 ms.assetid: e6f44e37-e1f0-4c38-a816-1935a856d5a4
 caps.latest.revision: 7
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: be188904b52896376b36023bc254f05826acebea
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: eb2760274d8db96aefd578e124b9d69eca67e4a9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36031451"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37245058"
 ---
 # <a name="explicit-hierarchies-master-data-services"></a>明確階層 (Master Data Services)
   在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中，明確階層可以您指定的任何方式組織來自單一實體的成員。 衍生階層可以是不完全的，而且明確階層不像衍生階層，前者不是以網域屬性關聯性為基礎。  
@@ -34,7 +34,7 @@ ms.locfileid: "36031451"
  明確階層可以是不完全的，這表示階層可以同時在不同層級結束。 每個合併成員都可以有數量不受限制的合併成員及其底下的分葉成員，也可以沒有任何成員。 分葉成員可以在單一彙總成員底下，或是在合併成員的多個層級底下。  
   
 > [!NOTE]  
->  在您可以建立明確階層之前，實體必須啟用明確階層。 如需詳細資訊，請參閱[啟用實體的明確階層和集合&#40;Master Data Services&#41;](enable-an-entity-for-explicit-hierarchies-and-collections-master-data-services.md)。  
+>  在您可以建立明確階層之前，實體必須啟用明確階層。 如需詳細資訊，請參閱 <<c0> [ 啟用明確階層和集合的實體&#40;Master Data Services&#41;](enable-an-entity-for-explicit-hierarchies-and-collections-master-data-services.md)。</c0>  
   
 ## <a name="types-of-explicit-hierarchies"></a>明確階層的類型  
  有兩種類型的明確階層：強制和非強制。  

@@ -1,5 +1,5 @@
 ---
-title: 修改資料 (MDX) |Microsoft 文件
+title: 修改資料 (MDX) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - modifying data [MDX]
 - Multidimensional Expressions [Analysis Services], data modifications
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - data modifications [MDX]
 ms.assetid: 363b662c-b839-4971-bbd7-1842f73ce141
 caps.latest.revision: 29
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 3a1523655490e9dad4fc42f3a0f256f39a60c21b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 98d437607eef280696766853f890e3827e000812
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36031987"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37261391"
 ---
 # <a name="modifying-data-mdx"></a>修改資料 (MDX)
   除了使用多維度運算式 (MDX) 擷取及處理維度與 Cube 的資料之外，您還可以使用 MDX來更新或「回寫」維度與 Cube 資料。 這些更新可能是暫時性 (如同推測性或 "what if" 分析 ) 或永久性 (例如，必須根據資料分析來變更時)。  

@@ -1,5 +1,5 @@
 ---
-title: 設計 AMO OLAP 進階物件 |Microsoft 文件
+title: 程式設計 AMO OLAP 進階物件 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - AMO, OLAP
 ms.assetid: b75f35a7-32df-4f22-983d-324aa98e15a9
 caps.latest.revision: 22
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 6408cfd8dd3a7b8f7d6993ca84c3325bedddee24
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 8c511fe1a542804ebf05077d5f9a46c77dd69b2f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36031998"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37254920"
 ---
 # <a name="programming-amo-olap-advanced-objects"></a>設計 AMO OLAP 進階物件的程式
   本主題說明 OLAP 進階物件的分析管理物件 (AMO) 程式設計詳細資料。 本主題包含下列幾節：  

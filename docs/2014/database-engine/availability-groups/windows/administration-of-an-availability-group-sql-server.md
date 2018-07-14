@@ -5,23 +5,22 @@ ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Availability Groups [SQL Server], managing
 ms.assetid: 0b7542fa-235e-413d-81bf-3eff9ee07480
 caps.latest.revision: 18
-author: rothja
-ms.author: jroth
-manager: jhubbard
-ms.openlocfilehash: 57452567fcc01aef2bce0908a8ada4b4395c1425
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: b1865b395566258684d40305b333f8baecd0c9ee
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36030876"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37267200"
 ---
 # <a name="administration-of-an-availability-group-sql-server"></a>可用性群組的管理 (SQL Server)
   在 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 中管理現有的 AlwaysOn 可用性群組包括下列一個或多個工作：  
@@ -127,9 +126,9 @@ ms.locfileid: "36030876"
   
 -   **影片：**  
   
-     [Microsoft SQL Server Code-Named"Denali"AlwaysOn 系列，第 1 部分： 簡介 下一步高可用性解決方案](http://channel9.msdn.com/Events/TechEd/NorthAmerica/2011/DBI302)  
+     [Microsoft SQL Server Code-Named"Denali"AlwaysOn 系列，第 1 部分： 產生高可用性解決方案簡介](http://channel9.msdn.com/Events/TechEd/NorthAmerica/2011/DBI302)  
   
-     [Microsoft SQL Server Code-Named"Denali"AlwaysOn 系列第 2 部： 建立使用 AlwaysOn 關鍵任務的高可用性解決方案](http://channel9.msdn.com/Events/TechEd/NorthAmerica/2011/DBI404)  
+     [Microsoft SQL Server Code-Named"Denali"AlwaysOn 系列，第 2 部分： 建立使用 AlwaysOn 的任務關鍵性的高可用性解決方案](http://channel9.msdn.com/Events/TechEd/NorthAmerica/2011/DBI404)  
   
 -   **白皮書：**  
   
@@ -143,13 +142,13 @@ ms.locfileid: "36030876"
  [AlwaysOn 可用性群組概觀&#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
  [AlwaysOn 可用性群組設定的伺服器執行個體&#40;SQL Server&#41;](configuration-of-a-server-instance-for-always-on-availability-groups-sql-server.md)  
  [建立及設定可用性群組 &#40;SQL Server&#41;](creation-and-configuration-of-availability-groups-sql-server.md)   
- [使用中次要： 可讀取次要複本&#40;AlwaysOn 可用性群組&#41;](active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)   
+ [使用中次要： 可讀取的次要複本&#40;AlwaysOn 可用性群組&#41;](active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)   
  [使用中次要： 在次要複本上備份&#40;AlwaysOn 可用性群組&#41;](active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md)  
  [可用性群組接聽程式、用戶端連接性及應用程式容錯移轉 &#40;SQL Server&#41;](../../listeners-client-connectivity-application-failover.md)   
  [AlwaysOn 可用性群組操作問題適用的 AlwaysOn 原則&#40;SQL Server&#41;](always-on-policies-for-operational-issues-always-on-availability.md)   
  [監視可用性群組 &#40;SQL Server&#41;](monitoring-of-availability-groups-sql-server.md)   
  [AlwaysOn 可用性群組： 互通性&#40;SQL Server&#41;](always-on-availability-groups-interoperability-sql-server.md)   
  [AlwaysOn 可用性群組的 TRANSACT-SQL 陳述式概觀&#40;SQL Server&#41;](transact-sql-statements-for-always-on-availability-groups.md)   
- [AlwaysOn 可用性群組的 PowerShell cmdlet 概觀&#40;SQL Server&#41;](overview-of-powershell-cmdlets-for-always-on-availability-groups-sql-server.md)  
+ [AlwaysOn 可用性群組的 PowerShell Cmdlet 概觀&#40;SQL Server&#41;](overview-of-powershell-cmdlets-for-always-on-availability-groups-sql-server.md)  
   
   

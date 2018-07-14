@@ -1,5 +1,5 @@
 ---
-title: SQL Server Distributed Replay |Microsoft 文件
+title: SQL Server Distributed Replay |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Distributed Replay
 - SQL Server Distributed Replay
 ms.assetid: 58ef7016-b105-42c2-90a0-364f411849a4
 caps.latest.revision: 25
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 63974e86420e347d66b36e361e9b68fc0f54c318
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 20ea880286578872964ffe88123c41ee4201f573
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36031145"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37232628"
 ---
 # <a name="sql-server-distributed-replay"></a>SQL Server Distributed Replay
   [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Distributed Replay 功能可協助您評估未來 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 升級的影響。 您也可以使用它來協助評估硬體和作業系統升級以及 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 微調的影響。  
@@ -35,7 +35,7 @@ ms.locfileid: "36031145"
  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Distributed Replay 功能可以使用多部電腦重新執行追蹤資料，並模擬任務關鍵性工作負載。 您可以使用 Distributed Replay 進行應用程式相容性測試、效能測試或容量計畫。  
   
 ## <a name="when-to-use-distributed-replay"></a>使用 Distributed Replay 的時機  
- [!INCLUDE[ssSqlProfiler](../../../includes/sssqlprofiler-md.md)] 和 Distributed Replay 會提供部分重疊的功能。  
+ [!INCLUDE[ssSqlProfiler](../../../includes/sssqlprofiler-md.md)] 和 Distributed Replay 所提供部分重疊的功能。  
   
  您可以使用 [!INCLUDE[ssSqlProfiler](../../../includes/sssqlprofiler-md.md)] 針對已升級的測試環境重新執行擷取的追蹤。 您也可以分析重新執行結果，以便尋找可能的功能與效能不相容。 不過， [!INCLUDE[ssSqlProfiler](../../../includes/sssqlprofiler-md.md)] 只能從單一電腦重新執行工作負載。 重新執行具有許多使用中並行連線或高輸送量的密集型 OLTP 應用程式時， [!INCLUDE[ssSqlProfiler](../../../includes/sssqlprofiler-md.md)] 可能會變成資源瓶頸。  
   
@@ -73,7 +73,7 @@ ms.locfileid: "36031145"
 |描述如何準備輸入追蹤資料。|[準備輸入追蹤資料](prepare-the-input-trace-data.md)|  
 |描述如何重新執行追蹤資料。|[重新執行追蹤資料](replay-trace-data.md)|  
 |描述如何檢閱 Distributed Replay 追蹤資料結果。|[檢閱重新執行的結果](review-the-replay-results.md)|  
-|描述如何使用管理工具來起始、監視和取消控制器上的作業。|[系統管理工具命令列選項&#40;分散式重新執行公用程式&#41;](administration-tool-command-line-options-distributed-replay-utility.md)|  
+|描述如何使用管理工具來起始、監視和取消控制器上的作業。|[系統管理工具命令列選項&#40;Distributed Replay Utility&#41;](administration-tool-command-line-options-distributed-replay-utility.md)|  
   
 ## <a name="see-also"></a>另請參閱  
  [SQL Server Distributed Replay 論壇](http://social.technet.microsoft.com/Forums/sl/sqldru/)   

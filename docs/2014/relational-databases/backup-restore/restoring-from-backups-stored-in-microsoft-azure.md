@@ -1,25 +1,24 @@
 ---
-title: 從 Windows Azure 中儲存的備份還原 |Microsoft 文件
+title: 從儲存在 Windows Azure 的備份還原 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-backup-restore
+ms.technology: backup-restore
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 6ae358b2-6f6f-46e0-a7c8-f9ac6ce79a0e
 caps.latest.revision: 14
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 90fe4fd8aacb3d945aab6d2b0872f2aff958f01f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 5eb28e1bf53d889db8767d0c7fcdfcf94a2e5a45
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36030790"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37269074"
 ---
 # <a name="restoring-from-backups-stored-in-windows-azure"></a>從儲存在 Windows Azure 的備份還原
   本主題概要說明使用儲存在 Windows Azure Blob 儲存體服務中的備份還原資料庫時，所應注意的事項。 本文適用於使用 SQL Server 備份至 URL 備份或 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]所建立的備份。  
@@ -33,7 +32,7 @@ ms.locfileid: "36030790"
   
 -   因為 SQL Server 必須連接至外部來源以擷取備份檔案，所以會使用 SQL 認證來驗證儲存體帳戶。 因此，RESTORE 陳述式需要 WITH CREDENTIAL 選項。 如需詳細資訊，請參閱 [SQL Server Backup and Restore with Windows Azure Blob Storage Service](sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)。  
   
--   如果您是使用 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 管理雲端的備份，您可以使用 **smart_admin.fn_available_backups** 系統函數來檢閱儲存體中的所有可用備份。 此系統函數會以資料表傳回資料庫的所有可用備份。 由於結果是以資料表傳回，因此您可以篩選或排序結果。 如需詳細資訊，請參閱[smart_admin.fn_available_backups &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-functions/managed-backup-fn-available-backups-transact-sql)。  
+-   如果您是使用 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 管理雲端的備份，您可以使用 **smart_admin.fn_available_backups** 系統函數來檢閱儲存體中的所有可用備份。 此系統函數會以資料表傳回資料庫的所有可用備份。 由於結果是以資料表傳回，因此您可以篩選或排序結果。 如需詳細資訊，請參閱 < [smart_admin.fn_available_backups &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-functions/managed-backup-fn-available-backups-transact-sql)。  
   
 ### <a name="using-sql-server-management-studio"></a>使用 SQL Server Management Studio  
   

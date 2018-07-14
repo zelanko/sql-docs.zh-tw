@@ -1,5 +1,5 @@
 ---
-title: 第 11 課： 建立資料分割 |Microsoft 文件
+title: 第 11 課： 建立資料分割 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,25 +8,25 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 92eb21a8-5fc4-4999-ad37-1332ce26431d
 caps.latest.revision: 19
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: jhubbard
-ms.openlocfilehash: c480583da42aee4f73e6053d20e7bf8b6542547c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 8e2f9ab8d98ae4ffbb8be67c4b64f5022b0f7f8e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36031744"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37261358"
 ---
 # <a name="lesson-11-create-partitions"></a>第 11 課：建立資料分割
   在這一課，您將建立資料分割，以便將 [網際網路銷售] 資料表分成更小的邏輯部分，讓其他資料分割能夠單獨處理 (重新整理)。 根據預設，加入模型中的每個資料表都有一個資料分割，其中包括資料表的所有資料行和資料列。 我們要依年度分割 [網際網路銷售] 資料表的資料，一個資料分割代表每個資料表的五年。  接著，每個資料分割就可以單獨處理。 如需詳細資訊，請參閱[資料分割 &#40;SSAS 表格式&#41;](tabular-models/partitions-ssas-tabular.md)。  
   
  完成本課程的估計時間： **15 分鐘**  
   
-## <a name="prerequisites"></a>必要條件  
+## <a name="prerequisites"></a>先決條件  
  本主題是表格式模型教學課程的一部分，必須依序完成。 在執行本課中的工作之前，您應已完成上一課：[第 10 課：建立階層](lesson-9-create-hierarchies.md)。  
   
 ## <a name="create-partitions"></a>建立資料分割  
@@ -37,9 +37,9 @@ ms.locfileid: "36031744"
   
      [資料分割管理員] 對話方塊隨即開啟。  
   
-2.  在**資料分割管理員**對話方塊中，於**資料分割**，按一下**Internet Sales**磁碟分割。  
+2.  在**資料分割管理員**對話方塊中，於**分割區**，按一下 **網際網路銷售**資料分割。  
   
-3.  在**資料分割名稱**，將名稱變更為`Internet Sales 2005`。  
+3.  在 **分割區名稱**，將名稱變更為`Internet Sales 2005`。  
   
     > [!TIP]  
     >  在繼續進行下一步之前，您會發現 [資料表預覽] 視窗中的資料行名稱是以來源的資料行名稱顯示模型資料表中包含的資料行 (已核取)。 這是因為 [資料表預覽] 視窗是從來源資料表顯示資料行，而不是從模型資料表。  
@@ -83,43 +83,43 @@ ms.locfileid: "36031744"
   
 6.  按一下 **[驗證]**。  
   
-     請注意，此時會顯示一個警告，指出特定資料行不存在來源中。 這是因為在[第 3 課： 重新命名資料行](rename-columns.md)，與來源相同的資料行不同模型中的網際網路銷售 資料表中資料行已重新命名。  
+     請注意，此時會顯示一個警告，指出特定資料行不存在來源中。 這是因為在[第 3 課： 重新命名資料行](rename-columns.md)，重新命名成與來源相同的資料行不同模型中的網際網路銷售 資料表中資料行。  
   
 #### <a name="to-create-a-partition-for-the-2006-year-in-the-internet-sales-table"></a>2006 年網際網路銷售 資料表中建立的資料分割  
   
-1.  在**資料分割管理員**對話方塊中，於**資料分割**，按一下`Internet Sales 2005`您剛才建立的磁碟分割，然後**複製**。  
+1.  在**資料分割管理員**對話方塊中，於**分割區**，按一下 `Internet Sales 2005`您剛才建立的磁碟分割，然後**複製**。  
   
-2.  在**資料分割名稱**，型別`Internet Sales 2006`。  
+2.  在 **分割區名稱**，輸入`Internet Sales 2006`。  
   
-3.  SQL 陳述式，這是為了讓資料分割為 2006 年，包含這些資料列中以下列內容取代 WHERE 子句：  
+3.  在 SQL 陳述式，這是為了讓資料分割包含 2006 年，這些資料列將 WHERE 子句取代為下列：  
   
     ```  
     WHERE (([OrderDate] >= N'2006-01-01 00:00:00') AND ([OrderDate] < N'2007-01-01 00:00:00'))  
     ```  
   
-#### <a name="to-create-a-partition-for-the-2007-year-in-the-internet-sales-table"></a>2007 年網際網路銷售 資料表中建立的資料分割  
+#### <a name="to-create-a-partition-for-the-2007-year-in-the-internet-sales-table"></a>若要建立 Internet Sales 資料表中的 2007 年的資料分割  
   
 1.  在 [資料分割管理員] 對話方塊中，按一下 [複製]。  
   
-2.  在**資料分割名稱**，型別`Internet Sales 2007`。  
+2.  在 **分割區名稱**，輸入`Internet Sales 2007`。  
   
-3.  在**切換到**，選取**查詢編輯器**。  
+3.  在 **切換到**，選取**查詢編輯器**。  
   
-4.  SQL 陳述式，這是為了讓資料分割為 2007 年，包含這些資料列中以下列內容取代 WHERE 子句：  
+4.  在 SQL 陳述式，這是為了讓資料分割包含的資料列的 2007 年將 WHERE 子句取代為下列：  
   
     ```  
     WHERE (([OrderDate] >= N'2007-01-01 00:00:00') AND ([OrderDate] < N'2008-01-01 00:00:00'))  
     ```  
   
-#### <a name="to-create-a-partition-for-the-2008-year-in-the-internet-sales-table"></a>2008 年網際網路銷售 資料表中建立的資料分割  
+#### <a name="to-create-a-partition-for-the-2008-year-in-the-internet-sales-table"></a>若要建立 Internet Sales 資料表中的 2008 年的資料分割  
   
 1.  在 [資料分割管理員] 對話方塊中，按一下 [新增]。  
   
-2.  在**資料分割名稱**，型別`Internet Sales 2008`。  
+2.  在 **分割區名稱**，輸入`Internet Sales 2008`。  
   
-3.  在**切換到**，選取**查詢編輯器**。  
+3.  在 **切換到**，選取**查詢編輯器**。  
   
-4.  SQL 陳述式，這是為了讓資料分割的 2008 年，包含這些資料列中以下列內容取代 WHERE 子句：  
+4.  在 SQL 陳述式，這是為了讓資料分割包含 2008 年，這些資料列將 WHERE 子句取代為下列：  
   
     ```  
     WHERE (([OrderDate] >= N'2008-01-01 00:00:00') AND ([OrderDate] < N'2009-01-01 00:00:00'))  
@@ -129,9 +129,9 @@ ms.locfileid: "36031744"
   
 1.  在 [資料分割管理員] 對話方塊中，按一下 [新增]。  
   
-2.  在**資料分割名稱**，型別`Internet Sales 2009`。  
+2.  在 **分割區名稱**，輸入`Internet Sales 2009`。  
   
-3.  在**切換到**，選取**查詢編輯器**。  
+3.  在 **切換到**，選取**查詢編輯器**。  
   
 4.  在 SQL 陳述式中，將 WHERE 子句取代為下列子句，以便讓資料分割只包含 2009 年度的資料列：  
   
@@ -154,7 +154,7 @@ ms.locfileid: "36031744"
   
      如果系統提示您輸入模擬認證，請輸入您在第 2 課的步驟 6 中指定的 Windows 使用者名稱和密碼。  
   
-     **資料程序** 對話方塊隨即出現，並顯示每個資料分割的處理序詳細資料。 您會發現每個資料分割傳送了不同數目的資料列。 這是因為每個資料分割只包含 SQL 陳述式中的 WHERE 子句所指定年度的資料列。 2010 年則沒有資料。  
+     **資料處理程序** 對話方塊隨即出現，並顯示每個資料分割的處理序詳細資料。 您會發現每個資料分割傳送了不同數目的資料列。 這是因為每個資料分割只包含 SQL 陳述式中的 WHERE 子句所指定年度的資料列。 2010 年則沒有資料。  
   
 ## <a name="next-steps"></a>後續步驟  
  若要繼續進行本教學課程，請前往下一課：[第 12 課：建立角色](lesson-11-create-roles.md)。  

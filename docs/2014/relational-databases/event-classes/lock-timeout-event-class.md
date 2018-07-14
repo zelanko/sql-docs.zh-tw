@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 topic_type:
 - apiref
 helpviewer_keywords:
 - Timeout event class
 ms.assetid: 8492f4be-4ea9-4059-80e0-9e7b71597da9
 caps.latest.revision: 38
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 1ba90d859ce05c7b9c9af97584051cd2166186e3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: aeb25af5c5c1c9fb5a61d52468ad3762ca29dcf5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36030345"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37281864"
 ---
 # <a name="locktimeout-event-class"></a>Lock:Timeout 事件類別
   Lock:Timeout 事件類別指出資源 (例如分頁) 上的鎖定要求已逾時，因為其他交易在所需資源上已有封鎖的鎖定。 逾時由 @@LOCK_TIMEOUT 系統函式決定，且可使用 SET LOCK_TIMEOUT 陳述式來設定。  
@@ -62,7 +62,7 @@ ms.locfileid: "36030345"
 |SessionLoginName|`nvarchar`|引發工作階段之使用者的登入名稱。 例如，如果您使用 Login1 連接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，並以 Login2 的身分執行陳述式，SessionLoginName 會顯示 Login1，而 LoginName 會顯示 Login2。 此資料行將同時顯示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 Windows 登入。|64|是|  
 |SPID|`int`|事件發生所在之工作階段的識別碼。|12|是|  
 |StartTime|`datetime`|事件啟動的時間 (如果有的話)。|14|是|  
-|TextData|`ntext`|文字值，視逾時發生時所取得的鎖定類型而定。|@shouldalert|是|  
+|TextData|`ntext`|文字值，視逾時發生時所取得的鎖定類型而定。|1|是|  
 |TransactionID|`bigint`|由系統指派給交易的識別碼。|4|是|  
 |類型|`int`|1=NULL_RESOURCE<br /><br /> 2=DATABASE<br /><br /> 3=FILE<br /><br /> 5=OBJECT<br /><br /> 6=PAGE<br /><br /> 7=KEY<br /><br /> 8=EXTENT<br /><br /> 9=RID<br /><br /> 10=APPLICATION<br /><br /> 11=METADATA<br /><br /> 12=AUTONAMEDB<br /><br /> 13=HOBT<br /><br /> 14=ALLOCATION_UNIT|57|是|  
   

@@ -1,5 +1,5 @@
 ---
-title: 第 6 課： 建立導出資料行 |Microsoft 文件
+title: 第 6 課： 建立計算結果的欄 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: d126766a-5699-4e9f-8213-8c7eea0fc14e
 caps.latest.revision: 19
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: jhubbard
-ms.openlocfilehash: efec616591ab3e6d85b9199a5a4706ecd740c66e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 2f837fd314cd8a279e03cdfa2aa420920509510a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36031322"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37228408"
 ---
 # <a name="lesson-6-create-calculated-columns"></a>第 6 課：建立導出資料行
   在這一課，您將藉由加入導出資料行的方式在模型中建立新資料。 導出資料行是以已存在模型中的資料為基礎。 如需詳細資訊，請參閱[導出資料行 &#40;SSAS 表格式&#41;](tabular-models/ssas-calculated-columns.md)。  
@@ -28,7 +28,7 @@ ms.locfileid: "36031322"
   
  完成本課程的估計時間：**15 分鐘**  
   
-## <a name="prerequisites"></a>必要條件  
+## <a name="prerequisites"></a>先決條件  
  本主題是表格式模型教學課程的一部分，必須依序完成。 在執行本課中的工作之前，您應已完成上一課：[第 5 課：建立關聯性](lesson-4-create-relationships.md)。  
   
 ## <a name="create-calculated-columns"></a>建立導出資料行  
@@ -43,7 +43,7 @@ ms.locfileid: "36031322"
   
 3.  以滑鼠右鍵按一下**日曆季**資料行，然後再按一下**插入資料行**。  
   
-     新的資料行名為**CalculatedColumn1**插入左邊**日曆季**資料行。  
+     新的資料行，名為**CalculatedColumn1**插入至左邊**日曆季**資料行。  
   
 4.  在資料表上方的公式列中，輸入下列公式。 「自動完成」可協助您輸入資料行和資料表的完整名稱，以及列出可用的函數。  
   

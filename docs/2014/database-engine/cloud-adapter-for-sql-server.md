@@ -1,5 +1,5 @@
 ---
-title: 適用於 SQL Server 雲端配接器 |Microsoft 文件
+title: 適用於 SQL Server 雲端配接器 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Cloud adapter
 - Deploy to Windows Azure
 ms.assetid: 82ed0d0f-952d-4d49-aa36-3855a3ca9877
 caps.latest.revision: 12
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 74a991f9dc8c20e1cf4342312ecd66f95e1b240d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: fd0a6901770c3c30138e694c9e792146be85ba4a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36031708"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37243378"
 ---
 # <a name="cloud-adapter-for-sql-server"></a>適用 SQL Server 的雲端配接器
   雲端配接器服務會隨 Windows Azure VM 上佈建的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 一併建立。 雲端配接器服務會在其初次執行時產生自我簽署 SSL 憑證，然後以 **本機系統** 帳戶執行。 它會產生用來設定本身的組態檔。 雲端配接器還會建立 Windows 防火牆規則，允許其內送 TCP 連接使用預設通訊埠 11435。  
@@ -34,7 +34,7 @@ ms.locfileid: "36031708"
   
 -   雲端配接器可在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 2012 及更高版本上支援。 在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 2012 上，適用於 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的雲端配接器需要 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 2012 適用的 SQL 管理物件。  
   
--   雲端配接器 Web 服務會以 **本機系統** 帳戶執行，並且在執行任何工作之前驗證用戶端認證。 用戶端所提供的認證必須屬於使用帳戶的本機成員**管理員**群組在遠端電腦上。  
+-   雲端配接器 Web 服務會以 **本機系統** 帳戶執行，並且在執行任何工作之前驗證用戶端認證。 用戶端所提供的認證必須屬於使用帳戶的本機成員**系統管理員**群組在遠端電腦上。  
   
 -   雲端配接器只支援 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 驗證。  
   
@@ -47,19 +47,19 @@ ms.locfileid: "36031708"
 ## <a name="cloud-adapter-configuration-settings"></a>雲端配接器組態設定  
  請使用下列雲端配接器組態詳細資料修改雲端配接器的設定。  
   
--   **組態檔的預設路徑**– C:\Program Files\Microsoft SQL Server\120\Tools\CloudAdapter\  
+-   **組態檔的預設路徑**– C:\Program Files\Microsoft SQL server\120\tools\cloudadapter \  
   
--   **組態檔參數** -  
+-   **設定檔參數** -  
   
     -   \<設定 >  
   
         -   \<appSettings >  
   
-            -   \<加入機碼 ="WebServicePort"value =""/ >  
+            -   \<新增機碼 ="WebServicePort"value =""/ >  
   
-            -   \<加入機碼 ="WebServiceCertificate"value ="GUID"/ >  
+            -   \<新增機碼 ="WebServiceCertificate"value ="GUID"/ >  
   
-            -   \<加入機碼 ="ExposeExceptionDetails"value ="true"/ >  
+            -   \<新增機碼 ="ExposeExceptionDetails"value ="true"/ >  
   
         -   \</appSettings >  
   

@@ -1,5 +1,5 @@
 ---
-title: Status 元素 (ASSL) |Microsoft 文件
+title: Status 元素 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - Status element
 ms.assetid: 4938465e-7876-43e2-9d03-70dcc9b7b749
 caps.latest.revision: 35
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: fd27525f6a0a7457a3fd6a3f63f102b1f6ae7bf4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: f5f67c4f94e5817d36f54d5d54465425c7837119
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36031499"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37247288"
 ---
 # <a name="status-element-assl"></a>Status 元素 (ASSL)
   包含傳回之狀態指標的多維度運算式 (MDX) 運算式[Kpi](../objects/kpi-element-assl.md)項目。  
@@ -64,7 +64,7 @@ ms.locfileid: "36031499"
 ## <a name="remarks"></a>備註  
  `Status` 元素包含 MDX 運算式。  
   
- 對應目的父代的項目`Status`在 「 分析管理物件 (AMO) 物件模型而言， <xref:Microsoft.AnalysisServices.Kpi>。  
+ 對應至父系的元素`Status`在 「 分析管理物件 (AMO) 物件模型是<xref:Microsoft.AnalysisServices.Kpi>。  
   
 ## <a name="see-also"></a>另請參閱  
  [屬性&#40;ASSL&#41;](properties-assl.md)  

@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - maintaining publications [SQL Server replication]
 - publications [SQL Server replication], maintaining
 - administering replication, publications
 ms.assetid: d5bf7340-2b0b-4593-965c-de04ae628344
 caps.latest.revision: 13
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 794068b8fe5ce03496709abc9546b2329bc5702b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: b011780843f95bf2164f11bc052a902e4b1980a0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36030270"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37244548"
 ---
 # <a name="maintain-publications"></a>維護發行集
   建立發行集之後，可能需要加入或卸除發行項，或者變更發行集與發行項屬性。 建立發行集之後即允許多數變更。但在某些情況下，必須產生新的發行集快照集和 (或) 重新初始化訂閱到發行集。 如需詳細資訊，請參閱[變更發行集與發行項屬性](change-publication-and-article-properties.md)和[在現有發行集中新增和卸除發行項](add-articles-to-and-drop-articles-from-existing-publications.md)。  

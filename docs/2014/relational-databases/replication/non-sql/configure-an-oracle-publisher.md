@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Oracle publishing [SQL Server replication], configuring
 ms.assetid: 240c8416-c8e5-4346-8433-07e0f779099f
 caps.latest.revision: 58
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: eb056a0a156526d5adf3f280bc8aeba302cd5c58
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 66bd7f7e6bc67856a3c5f6e231a2c554a3eb4b29
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36031617"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37264424"
 ---
 # <a name="configure-an-oracle-publisher"></a>設定 Oracle 發行者
   「Oracle 發行者」之發行集的建立方式與典型的快照式及交易式發行集的建立方式相同，但是在從「Oracle 發行者」端建立發行集之前，您必須完成下列步驟 (步驟一、三和四在本主題中有詳細描述)：  

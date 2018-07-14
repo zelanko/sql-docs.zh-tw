@@ -1,5 +1,5 @@
 ---
-title: 資料來源檢視 （維度結構索引標籤，維度設計師） (Analysis Services-多維度資料) |Microsoft 文件
+title: 資料來源檢視 （維度結構索引標籤，維度設計師） (Analysis Services-多維度資料) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql.asvs.dimensiondesigner.dbv.datasourcepane.f1
 ms.assetid: c4bd3c5e-8986-448f-b9db-3551f50f0696
 caps.latest.revision: 25
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: c960a5c08f3d95ee6ef0813db67f8d9a33a6a683
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: aa82d94a6e034c514b173e623f8c6d0ab9932880
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36030671"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37246158"
 ---
 # <a name="data-source-view-dimension-structure-tab-dimension-designer-analysis-services---multidimensional-data"></a>資料來源檢視 (維度結構索引標籤，維度設計師) (Analysis Services - 多維度資料)
   使用 [資料來源檢視] 窗格，即可從與選取之維度相關聯的資料來源檢視中檢視資料表和資料行。 此窗格會用來建立屬性 (attribute)、成員屬性 (property)、階層以及層級，方式是藉由從 [資料來源檢視] 窗格拖曳資料行至 [屬性] 或 [階層和層級] 窗格。  
@@ -113,7 +113,7 @@ ms.locfileid: "36030671"
 ## <a name="column-context-menu"></a>資料行內容功能表  
  以滑鼠右鍵按一下 [資料來源檢視] 窗格中的資料表或檢視內的資料行，即可顯示提供下表所列出之選項的內容功能表。  
   
- **從資料行新增屬性**  
+ **從資料行的新屬性**  
  在窗格中顯示與資料來源檢視中所選取資料表相關的資料表。  
   
  **瀏覽資料**  
@@ -135,7 +135,7 @@ ms.locfileid: "36030671"
  在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 中，顯示所選取關聯性的 [屬性] 視窗。  
   
 ## <a name="see-also"></a>另請參閱  
- [維度結構&#40;維度設計師&#41; &#40;Analysis Services-多維度資料&#41;](dimension-structure-dimension-designer-analysis-services-multidimensional-data.md)   
+ [維度結構&#40;維度設計工具&#41; &#40;Analysis Services-多維度資料&#41;](dimension-structure-dimension-designer-analysis-services-multidimensional-data.md)   
  [工具列&#40;維度結構索引標籤，維度設計師&#41; &#40;Analysis Services-多維度資料&#41;](toolbar-dimension-structure-designer-analysis-services-multidimensional-data.md)   
  [屬性&#40;維度結構索引標籤，維度設計師&#41; &#40;Analysis Services-多維度資料&#41;](attributes-dimension-designer-analysis-services-multidimensional-data.md)   
  [階層&#40;維度結構索引標籤，維度設計師&#41; &#40;Analysis Services-多維度資料&#41;](hierarchies-dimension-designer-analysis-services-multidimensional-data.md)  

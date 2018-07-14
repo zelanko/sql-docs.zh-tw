@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - projects [SQL Server Management Studio], viewing properties
 - viewing project properties
 ms.assetid: 5537efab-19da-40a1-a201-20adc1d71e7e
 caps.latest.revision: 22
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: a57d68cd798b8b8eb18f8a2a2d97bc94db386a79
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: aee9ce363d04be61aa57722c433f22f661466683
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36031762"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37284394"
 ---
 # <a name="view-project-properties"></a>檢視專案屬性
   您可以在 [屬性] 視窗中，檢視專案的相關屬性。  

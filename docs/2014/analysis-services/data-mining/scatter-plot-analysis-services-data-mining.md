@@ -1,5 +1,5 @@
 ---
-title: 散佈圖 (Analysis Services-資料採礦) |Microsoft 文件
+title: 散佈圖 (Analysis Services-資料採礦) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - charts [Analysis Services]
 - mining models [Analysis Services], validating
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - regression algorithms [Analysis Services]
 ms.assetid: 166812ec-fd1c-47c8-88db-d5041142be91
 caps.latest.revision: 19
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 3d087d615a5e2852cdc8d7a72a9facc5df4f33b8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 6ae52af8c9449b5636d799d306e3ab317cea9d6a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36031129"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37251550"
 ---
 # <a name="scatter-plot-analysis-services---data-mining"></a>散佈圖 (Analysis Services - 資料採礦)
   *「散佈圖」* (Scatter Plot) 會針對此模型所預測的值來繪製資料中的實際值。 散佈圖會沿著 X 軸顯示實際值，並沿著 Y 軸顯示預測值。 散佈圖也會顯示一條線來說明完美預測，也就是預測值完全符合實際值的情況。 這條理想 45 度線上之點的距離會指示預測執行的成果好壞。  
@@ -35,7 +35,7 @@ ms.locfileid: "36031129"
 ## <a name="interpreting-the-results"></a>解譯結果  
  下圖顯示針對剛剛描述的案例所建立的散佈圖範例。  
   
- ![線性迴歸散佈圖範例](../media/scatterplot-callctr.gif "線性迴歸散佈圖範例")  
+ ![線性迴歸散佈圖的範例](../media/scatterplot-callctr.gif "的線性迴歸散佈圖範例")  
   
  您可以將滑鼠暫停在散佈於此線周圍的任何點上，以檢視工具提示內的預測值和實際值。 散佈圖沒有 **[採礦圖例]** ；但是，該圖本身會包含一個圖例來顯示與此模型有關的分數。 如需解譯分數的詳細資訊，請參閱[線性迴歸模型的採礦模型內容 &#40;Analysis Services - 資料採礦&#41;](mining-model-content-for-linear-regression-models-analysis-services-data-mining.md)。  
   

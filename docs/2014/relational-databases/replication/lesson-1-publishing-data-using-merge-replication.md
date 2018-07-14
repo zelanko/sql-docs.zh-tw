@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - replication [SQL Server], tutorials
 ms.assetid: c3c6e0b6-54cd-4b7d-8efb-2cefe14fcd7f
 caps.latest.revision: 18
 author: craigg-msft
 ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: d23bc563a36fe894271546bd642b94dd3ab402f2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: a1f2e84ca089699eb0ad980cdce93ca26e9df499
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36031409"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37251800"
 ---
 # <a name="lesson-1-publishing-data-using-merge-replication"></a>第 1 課：使用合併式複寫發行資料
   在這一課，您將使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ，建立合併式發行集，以發行 **範例資料庫中**Employee **、** SalesOrderHeader **和** SalesOrderDetail [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 資料表的子集。 這些資料表是以參數化資料列篩選器加以篩選，讓每一個訂閱包含唯一的資料分割。 此外，您也會將合併代理程式所使用的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入加入至發行集存取清單 (PAL)。 本教學課程要求您，先完成上一個教學課程 [準備伺服器進行複寫](tutorial-preparing-the-server-for-replication.md)。  

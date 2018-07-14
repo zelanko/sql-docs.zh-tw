@@ -1,5 +1,5 @@
 ---
-title: 設定分割區回寫 |Microsoft 文件
+title: 設定分割區回寫 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - write-enabled partitions [Analysis Services]
 - partitions [Analysis Services], writeback
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - writeback [Analysis Services], partitions
 ms.assetid: 38bb09cc-2652-4971-8373-0cf468cdc7a6
 caps.latest.revision: 33
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: de2e5bc7b9c4a09d2a5a3df82586cc9fb9f856b8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c58dea5dd30f32b9b137903103448ade4678c87b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36031728"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37250938"
 ---
 # <a name="set-partition-writeback"></a>設定分割區回寫
   如果您啟用量值群組的寫入功能，使用者可以在瀏覽 Cube 資料時進行變更，系統會將變更儲存到另一個資料表 (稱為回寫資料表)，而不是在 Cube 資料或來源資料中儲存變更。 瀏覽可寫入分割區的使用者，會看到所有變更在分割區的回寫資料表中產生的結果。  
@@ -65,7 +65,7 @@ ms.locfileid: "36031728"
   
 ## <a name="see-also"></a>另請參閱  
  [寫入的資料分割](../multidimensional-models-olap-logical-cube-objects/partitions-write-enabled-partitions.md)   
- [啟用回寫到 OLAP Cube 在 Excel 2010 中的資料格層級](http://go.microsoft.com/fwlink/p/?LinkId=394952)   
- [啟用及設定安全性與 Analysis Services 回寫資料輸入](http://go.microsoft.com/fwlink/p/?LinkId=394953)  
+ [啟用回寫功能-OLAP cube 在 Excel 2010 中的資料格層級](http://go.microsoft.com/fwlink/p/?LinkId=394952)   
+ [啟用和保護 Analysis Services 回寫的資料輸入](http://go.microsoft.com/fwlink/p/?LinkId=394953)  
   
   

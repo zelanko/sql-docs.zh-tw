@@ -1,5 +1,5 @@
 ---
-title: 將 PowerPivot 方案部署到 SharePoint |Microsoft 文件
+title: 將 PowerPivot 方案部署到 SharePoint |Microsoft Docs
 ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
@@ -8,23 +8,23 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: f202a2b7-34e0-43aa-90d5-c9a085a37c32
 caps.latest.revision: 11
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: fdbae4a2f54d6f3f2c12562a70eb5f1076046947
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ce0863ef023f96580eb809b6562cfc54b0de5b60
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36031510"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37243658"
 ---
 # <a name="deploy-powerpivot-solutions-to-sharepoint"></a>將 PowerPivot 方案部署到 SharePoint
-  利用下列指示手動部署兩個方案套件，將 PowerPivot 功能加入至 SharePoint Server 2010 環境。 部署方案是在 SharePoint 2010 伺服器上設定 PowerPivot for SharePoint 的必要步驟。 若要檢視的必要步驟的完整清單，請參閱[管理中心的 PowerPivot 伺服器管理和組態](power-pivot-server-administration-and-configuration-in-central-administration.md)。  
+  利用下列指示手動部署兩個方案套件，將 PowerPivot 功能加入至 SharePoint Server 2010 環境。 部署方案是在 SharePoint 2010 伺服器上設定 PowerPivot for SharePoint 的必要步驟。 若要檢視必要步驟的完整清單，請參閱[管理中心的 PowerPivot 伺服器管理和組態](power-pivot-server-administration-and-configuration-in-central-administration.md)。  
   
- 或者，您可以使用 PowerPivot 組態工具部署方案。 使用組態工具對於單一伺服器安裝來說，是較簡單且更有效率的方式，不過，如果您習慣使用熟悉的工具或是要同時設定多項功能，則建議您使用管理中心和 PowerShell。 如需有關如何使用組態工具的詳細資訊，請參閱[PowerPivot 組態工具](power-pivot-configuration-tools.md)。  
+ 或者，您可以使用 PowerPivot 組態工具部署方案。 使用組態工具對於單一伺服器安裝來說，是較簡單且更有效率的方式，不過，如果您習慣使用熟悉的工具或是要同時設定多項功能，則建議您使用管理中心和 PowerShell。 如需使用組態工具的詳細資訊，請參閱[PowerPivot 組態工具](power-pivot-configuration-tools.md)。  
   
  在部署方案之前，必須先使用 SQL Server 2012 安裝媒體安裝 PowerPivot for SharePoint。 SQL Server 安裝程式會安裝您將要部署的方案套件。  
   
@@ -43,16 +43,16 @@ ms.locfileid: "36031510"
  [關於 PowerPivot 方案](#intro)  
   
 ##  <a name="bkmk_classic"></a> 必要條件：驗證 Web 應用程式是否使用傳統模式驗證  
- 使用 Windows 傳統模式驗證的 Web 應用程式才支援 PowerPivot for SharePoint。 若要檢查應用程式是否使用傳統模式，請執行下列 PowerShell cmdlet 從**SharePoint 2010 管理命令介面**，並將`http://<top-level site name>`與 SharePoint 網站的名稱：  
+ 使用 Windows 傳統模式驗證的 Web 應用程式才支援 PowerPivot for SharePoint。 若要檢查應用程式是否使用傳統模式，執行下列 PowerShell cmdlet，從**SharePoint 2010 管理命令介面**，並將`http://<top-level site name>`的 SharePoint 網站名稱：  
   
 ```  
 Get-spwebapplication http://<top-level site name> | format-list UseClaimsAuthentication  
 ```  
   
- 傳回值應為 **false**。 如果是**true**，您無法存取此 web 應用程式與 PowerPivot 資料。  
+ 傳回值應為 **false**。 如果它是 **，則為 true**，您無法存取與此 web 應用程式的 PowerPivot 資料。  
   
 ##  <a name="bkmk_farm"></a> 步驟 1：部署伺服器陣列方案  
- 本節示範如何使用 PowerShell 部署方案，但是您也可以使用 PowerPivot 組態工具完成此工作。 如需詳細資訊，請參閱[設定或修復 PowerPivot for SharePoint 2010 &#40;PowerPivot 組態工具&#41;](../configure-repair-powerpivot-sharepoint-2010.md)。  
+ 本節示範如何使用 PowerShell 部署方案，但是您也可以使用 PowerPivot 組態工具完成此工作。 如需詳細資訊，請參閱 <<c0> [ 設定或修復 PowerPivot for SharePoint 2010 &#40;PowerPivot 組態工具&#41;](../configure-repair-powerpivot-sharepoint-2010.md)。</c0>  
   
  此工作只需要在安裝 PowerPivot for SharePoint 之後執行一次。  
   
@@ -108,7 +108,7 @@ Get-spwebapplication http://<top-level site name> | format-list UseClaimsAuthent
   
 3.  按一下 **[部署方案]**。  
   
-4.  在**部署嗎？**，選取您要加入 PowerPivot 功能支援的 SharePoint web 應用程式。  
+4.  在 **部署？**，選取您要加入 PowerPivot 功能支援的 SharePoint web 應用程式。  
   
 5.  按一下 [確定] 。  
   
@@ -123,7 +123,7 @@ Get-spwebapplication http://<top-level site name> | format-list UseClaimsAuthent
   
 3.  按一下 **[撤銷方案]**。  
   
- 如果您遇到伺服器部署的問題回溯到伺服器陣列方案，您可以重新部署它執行**修復**PowerPivot 組態工具中的選項。 透過此工具的修復作業是慣用的方式，因為您需要執行的步驟比較少。 如需詳細資訊，請參閱[設定或修復 PowerPivot for SharePoint 2010 &#40;PowerPivot 組態工具&#41;](../configure-repair-powerpivot-sharepoint-2010.md)。  
+ 如果您遇到伺服器部署問題，讓您追蹤回伺服陣列方案，您可以重新部署它藉由執行**修復**PowerPivot 組態工具中的選項。 透過此工具的修復作業是慣用的方式，因為您需要執行的步驟比較少。 如需詳細資訊，請參閱 <<c0> [ 設定或修復 PowerPivot for SharePoint 2010 &#40;PowerPivot 組態工具&#41;](../configure-repair-powerpivot-sharepoint-2010.md)。</c0>  
   
  如果您仍然要重新部署所有方案，請務必以下列順序進行：  
   
@@ -154,6 +154,6 @@ Get-spwebapplication http://<top-level site name> | format-list UseClaimsAuthent
 ## <a name="see-also"></a>另請參閱  
  [升級 PowerPivot for SharePoint](../../database-engine/install-windows/upgrade-power-pivot-for-sharepoint.md)   
  [管理中心的 PowerPivot 伺服器管理和組態](power-pivot-server-administration-and-configuration-in-central-administration.md)   
- [使用 Windows PowerShell 的 PowerPivot 組態](power-pivot-configuration-using-windows-powershell.md)  
+ [使用 Windows PowerShell 的 PowerPivot 設定](power-pivot-configuration-using-windows-powershell.md)  
   
   

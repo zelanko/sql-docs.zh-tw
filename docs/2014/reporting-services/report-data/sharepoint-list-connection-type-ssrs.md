@@ -8,23 +8,23 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 2c4adf2f-e9c4-4fae-bd3c-97fe64436caf
 caps.latest.revision: 11
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 2c4022d7cfca3a85e6e01618bbf5ee20694a9b88
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: 129fabab52b2e7b7e59cf832d21e25972cb9b07a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36031584"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37260394"
 ---
 # <a name="sharepoint-list-connection-type-ssrs"></a>SharePoint 清單連接類型 (SSRS)
   若要在報表中包含來自 Microsoft SharePoint 清單的資料，您必須加入或建立以 Microsoft SharePoint 清單類型之報表資料來源為基礎的資料集。 這是以 Microsoft SQL Server Reporting Services SharePoint 清單資料延伸模組為基礎的內建資料來源類型。 使用此資料來源類型可連接至 [!INCLUDE[SPF2010](../../includes/spf2010-md.md)]、 [!INCLUDE[SPS2010](../../includes/sps2010-md.md)]、 [!INCLUDE[winSPServ](../../includes/winspserv-md.md)] 3.0 和 [!INCLUDE[offSPServ](../../includes/offspserv-md.md)] 2007 網站，並從中擷取清單資料。  
   
- 您可以使用本主題中的資訊來建置資料來源。 如需逐步指示，請參閱[加入及驗證資料連接或資料來源&#40;報表產生器及 SSRS&#41;](add-and-verify-a-data-connection-report-builder-and-ssrs.md)。  
+ 您可以使用本主題中的資訊來建置資料來源。 如需逐步指示，請參閱 <<c0> [ 加入及驗證資料連接或資料來源&#40;報表產生器及 SSRS&#41;](add-and-verify-a-data-connection-report-builder-and-ssrs.md)。</c0>  
   
 ##  <a name="Connection"></a> 連接字串  
  SharePoint 清單的連接字串是 SharePoint 網站或子網站的 URL，例如 `http://MySharePointWeb/MySharePointSite` 或 `http://MySharePointWeb/MySharePointSite/Subsite`。  
@@ -58,11 +58,11 @@ ms.locfileid: "36031584"
 |遠端 SharePoint 清單|Windows 驗證 (整合式) 或 SharePoint 使用者 Token|是|否<sup>2</sup>|  
 ||預存、 提示、 無 (使用 Windows 認證<sup>1</sup>)|否|否<sup>2</sup>|  
   
- <sup>1</sup>不支援的預存和提示認證使用非 Windows 認證。  
+ <sup>1</sup>不支援預存和提示認證以非 Windows 認證。  
   
  <sup>2</sup>表單型驗證和宣告驗證不支援遠端 SharePoint 清單。  
   
- <sup>3</sup> Windows 驗證、 表單為主的驗證 (FBA)、 安全應用程式標記語言 (SAML) 權杖、 其他識別提供者或上述之一個以上的組合所述的驗證提供者。  
+ <sup>3</sup> Windows 驗證、 表單為主的驗證 (FBA)、 安全應用程式標記語言 (SAML) token、 其他識別提供者或上述之一個以上的組合所述的驗證提供者。  
   
  **Windows 驗證**  
  若 SharePoint 技術設為搭配「信任帳戶」模式的報表伺服器使用，則不支援此選項。 只適用於 SQL Server 2012 Reporting Services 之前的版本。  
@@ -76,7 +76,7 @@ ms.locfileid: "36031584"
   
  如需有關跨 Microsoft BI 堆疊之宣告驗證支援的詳細資訊，請參閱 [跨 Microsoft BI 堆疊使用宣告驗證](http://social.technet.microsoft.com/wiki/contents/articles/15274.using-claims-authentication-across-the-microsoft-bi-stack.aspx)。  
   
- 如需詳細資訊，請參閱[資料連接、 資料來源和 Reporting Services 中的連接字串](../data-connections-data-sources-and-connection-strings-in-reporting-services.md)，[指定的認證，在報表產生器](../specify-credentials-in-report-builder.md)，和[支援的資料來源Reporting Services &#40;SSRS&#41;](../create-deploy-and-manage-mobile-and-paginated-reports.md)。  
+ 如需詳細資訊，請參閱 <<c0> [ 資料連接、 資料來源和 Reporting Services 中的連接字串](../data-connections-data-sources-and-connection-strings-in-reporting-services.md)，[在 報表產生器中指定認證](../specify-credentials-in-report-builder.md)，和[所支援的資料來源Reporting Services &#40;SSRS&#41;](../create-deploy-and-manage-mobile-and-paginated-reports.md)。</c0>  
   
 ##  <a name="Query"></a> 查詢  
  若要設計查詢，根據資料來源建立新資料集，然後開啟相關聯的查詢設計工具。 如需詳細資訊，請參閱 [建立共用資料集或內嵌資料集 &#40;報表產生器及 SSRS&#41;](create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md)。  
@@ -163,7 +163,7 @@ ms.locfileid: "36031584"
 ##  <a name="HowTo"></a> 如何主題  
  本節包含使用資料連接、資料來源與資料集的逐步指示。  
   
- [加入及驗證資料連接或資料來源&#40;報表產生器和 SSRS&#41;](add-and-verify-a-data-connection-report-builder-and-ssrs.md)  
+ [加入及驗證資料連接或資料來源&#40;報表產生器及 SSRS&#41;](add-and-verify-a-data-connection-report-builder-and-ssrs.md)  
   
  [建立共用資料集或內嵌資料集 &#40;報表產生器及 SSRS&#41;](create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md)  
   
@@ -173,7 +173,7 @@ ms.locfileid: "36031584"
 ##  <a name="Related"></a> 相關章節  
  本文件集的這些章節會提供報表資料的深入概念性資訊，以及如何定義、自訂和使用與報表資料相關組件的程序資訊。  
   
- [將資料加入至報表&#40;報表產生器和 SSRS&#41;](report-datasets-ssrs.md)  
+ [將資料加入至報表&#40;報表產生器及 SSRS&#41;](report-datasets-ssrs.md)  
  提供存取報表資料的概觀。  
   
  [報表產生器中的資料連接、資料來源及連接字串](../data-connections-data-sources-and-connection-strings-in-report-builder.md)  

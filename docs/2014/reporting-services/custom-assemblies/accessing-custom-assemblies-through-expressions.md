@@ -18,15 +18,15 @@ helpviewer_keywords:
 - custom assemblies [Reporting Services], expressions
 ms.assetid: 917c4d47-1a95-4f54-98b1-e8cb2165d90f
 caps.latest.revision: 31
-author: douglaslM
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 50c6750a4212b554649b5e824a06390e5d1ad7c4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: 1ba043a1a8d817432976e726dd11f84243f389ad
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36030718"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37250038"
 ---
 # <a name="accessing-custom-assemblies-through-expressions"></a>透過運算式存取自訂組件
   一旦您建立自訂組件，請將它提供給報表設計師或是報表伺服器、加入適當的安全性原則，以及將參考加入報表定義中的自訂組件，這樣您就可以使用報表運算式來存取組件中的類別成員。 若要在運算式中參考自訂程式碼，您必須在組件中呼叫類別的成員。 該如何完成，取決於此方法為靜態或以執行個體為基礎。  

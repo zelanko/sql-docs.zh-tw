@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 topic_type:
 - apiref
 helpviewer_keywords:
 - SQLTransaction event class
 ms.assetid: 4e175aa3-4f3d-4b23-a423-4a7a1bd4e84e
 caps.latest.revision: 36
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 0eb8907567f83ed97f85d7ff931e91569518e6da
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: f817e1893c3a3d0621560bd41a2cd473c6c2a4d8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36030349"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37238848"
 ---
 # <a name="sqltransaction-event-class"></a>SQLTransaction 事件類別
   當交易開始和完成時 (尤其在測試應用程式、觸發程序或預存程序的時候)，可使用 SQLTransaction 事件類別來進行監視。  
@@ -55,7 +55,7 @@ ms.locfileid: "36030349"
 |SessionLoginName|`nvarchar`|引發工作階段之使用者的登入名稱。 例如，如果您使用 Login1 連接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，並以 Login2 身分執行陳述式，則 SessionLoginName 將顯示 Login1 而 LoginName 則顯示 Login2。 此資料行將同時顯示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 Windows 登入。|64|是|  
 |SPID|`int`|事件發生所在之工作階段的識別碼。|12|是|  
 |StartTime|`datetime`|事件啟動的時間 (如果有的話)。|14|是|  
-|TextData|`ntext`|與追蹤中所擷取的事件類別有關的文字值。|@shouldalert|是|  
+|TextData|`ntext`|與追蹤中所擷取的事件類別有關的文字值。|1|是|  
 |TransactionID|`bigint`|由系統指派給交易的識別碼。|4|是|  
 |XactSequence|`bigint`|用來描述目前交易的 Token。|50|是|  
   

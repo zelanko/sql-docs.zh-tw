@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - dbe-xml
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - tables [XML]
 ms.assetid: 0d951424-9862-41fe-bd46-127f1c059bcb
 caps.latest.revision: 10
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 69be783360a3b72cec7edb4c9ecb8f8d9d2cc50a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: be3fb744022df7e0dac893a48cc1904ffc0d20a4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36030810"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37272614"
 ---
 # <a name="change-existing-columns-to-xml-columns"></a>將現有資料行變更為 XML 資料行
   ALTER TABLE 陳述式支援`xml`資料型別。 例如，您可以修改任何字串類型的資料行`xml`資料型別。 請注意在這些情況下，資料行中所包含的文件必須格式正確。 另外，如果您要將資料行的類型從字串變更為具 xml 類型，將會根據指定的 XSD 結構描述來驗證資料行中的文件。  

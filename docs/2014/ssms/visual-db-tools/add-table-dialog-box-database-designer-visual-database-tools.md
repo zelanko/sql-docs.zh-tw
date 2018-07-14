@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vdtsql.chm:65555
 - vdt.dlgbox.schema.addtable
 ms.assetid: 3c0b1b30-795c-4240-91d6-890b8348014a
 caps.latest.revision: 11
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 5ab9625ef09025010a4c5fe7fa44e68e7d6ee43f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 37b3207009e12b506f0ae80d9cdb0f1039442438
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36032006"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37253370"
 ---
 # <a name="add-table-dialog-box-database-designer-visual-database-tools"></a>加入資料表對話方塊 (資料庫設計工具) (Visual Database Tools)
   讓您在 [資料庫設計工具] 中加入資料表。  

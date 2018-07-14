@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Agent jobs, manually running
 - multiserver job processing [SQL Server]
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - manual job processing [SQL Server]
 ms.assetid: cd445949-dc10-42fc-8785-4db74c9723ad
 caps.latest.revision: 31
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 06e2fb4be43c6a2473dd15e8314e1631a11bc6e8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 385c3c1a0a4c9bacae58b7b1dc74049d652f0b7f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36031766"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37261864"
 ---
 # <a name="run-jobs"></a>執行作業
   若要管理 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 作業，您可以使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]、[!INCLUDE[tsql](../../includes/tsql-md.md)] 預存程序或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 管理物件。  

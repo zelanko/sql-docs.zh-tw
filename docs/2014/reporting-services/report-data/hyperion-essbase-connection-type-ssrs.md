@@ -8,23 +8,23 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 108a00b6-799f-4066-b796-da59e95c09fd
 caps.latest.revision: 9
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 48296d180c5959ddbcd8377f65a87941aed1a00c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: 94a17b12d3d9c5ce30db7a57e76c3053008ff281
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36031176"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37232534"
 ---
 # <a name="hyperion-essbase-connection-type-ssrs"></a>Hyperion Essbase 連接類型 (SSRS)
   若要在報表中包含來自 [!INCLUDE[extEssbase](../../includes/extessbase-md.md)] 外部資料來源的資料，您必須具有以 [!INCLUDE[extEssbase](../../includes/extessbase-md.md)]類型之報表資料來源為基礎的資料集。 這種內建資料來源類型的建構基礎是 [!INCLUDE[extEssbase](../../includes/extessbase-md.md)]的資料延伸模組，而這個延伸模組可以讓您從 [!INCLUDE[extEssbase](../../includes/extessbase-md.md)] 外部資料來源擷取多維度資料。  
   
- 您可以使用本主題中的資訊來建置資料來源。 如需逐步指示，請參閱[加入及驗證資料連接或資料來源&#40;報表產生器及 SSRS&#41;](add-and-verify-a-data-connection-report-builder-and-ssrs.md)。  
+ 您可以使用本主題中的資訊來建置資料來源。 如需逐步指示，請參閱 <<c0> [ 加入及驗證資料連接或資料來源&#40;報表產生器及 SSRS&#41;](add-and-verify-a-data-connection-report-builder-and-ssrs.md)。</c0>  
   
 ##  <a name="Connection"></a> 連接字串  
  下列連接字串範例會指定伺服器上的 [!INCLUDE[extEssbase](../../includes/extessbase-md.md)] 資料來源使用通訊埠 13080，並指定網際網路上的 XML for [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] (XMLA) 使用 SOAP，以連接到範例目錄：  
@@ -41,7 +41,7 @@ Data Source=http://localhost:13080/aps/XMLA; Initial Catalog=Sample
   
  發行報表之後，您可能需要變更資料來源的認證，如此當報表在報表伺服器上執行時，擷取資料的權限就會是有效的。  
   
- 如需詳細資訊，請參閱[資料連接、 資料來源和 Reporting Services 中的連接字串](../data-connections-data-sources-and-connection-strings-in-reporting-services.md)或[指定的認證，在報表產生器](../specify-credentials-in-report-builder.md)。  
+ 如需詳細資訊，請參閱 <<c0> [ 資料連接、 資料來源和 Reporting Services 中的連接字串](../data-connections-data-sources-and-connection-strings-in-reporting-services.md)或是[在 報表產生器中指定認證](../specify-credentials-in-report-builder.md)。  
   
   
 ##  <a name="Query"></a> 查詢  
@@ -69,11 +69,11 @@ Data Source=http://localhost:13080/aps/XMLA; Initial Catalog=Sample
   
   
 ##  <a name="Extended"></a> 擴充欄位屬性  
- [!INCLUDE[extEssbase](../../includes/extessbase-md.md)] 資料處理延伸模組支援擴充欄位屬性。 擴充的欄位屬性是除了`Value`和`IsMissing`定義資料集欄位的資料處理延伸模組。 擴充屬性包括預先定義的屬性和自訂屬性。 預先定義的屬性是多個資料來源常用的屬性。 自訂屬性對於每個資料來源都是唯一的屬性。  
+ [!INCLUDE[extEssbase](../../includes/extessbase-md.md)] 資料處理延伸模組支援擴充欄位屬性。 擴充的欄位屬性是除了`Value`和`IsMissing`資料處理延伸模組所定義資料集欄位。 擴充屬性包括預先定義的屬性和自訂屬性。 預先定義的屬性是多個資料來源常用的屬性。 自訂屬性對於每個資料來源都是唯一的屬性。  
   
- 在 [報表資料] 窗格中，並不會顯示擴充欄位屬性，因為您無法將項目拖曳至報表配置上。 您將屬性的父欄位拖曳至報表，然後將變更預設屬性從`Value`至您想要使用的屬性。  
+ 在 [報表資料] 窗格中，並不會顯示擴充欄位屬性，因為您無法將項目拖曳至報表配置上。 相反地，您屬性的父欄位拖曳至報表，然後再變更 預設屬性從`Value`至您想要使用的屬性。  
   
- 當您在查詢設計工具中，將滑鼠指標停留在 [中繼資料] 窗格中的欄位時，工具提示中會出現擴充欄位屬性的名稱。 如需有關查詢設計工具可用來瀏覽基礎資料，請參閱[Hyperion Essbase Query Designer User Interface](hyperion-essbase-query-designer-user-interface.md)。  
+ 當您在查詢設計工具中，將滑鼠指標停留在 [中繼資料] 窗格中的欄位時，工具提示中會出現擴充欄位屬性的名稱。 如需詳細資訊的查詢設計工具可用來瀏覽基礎資料，請參閱[Hyperion Essbase Query Designer User Interface&lt](hyperion-essbase-query-designer-user-interface.md)。  
   
 > [!NOTE]  
 >  只有在 MDX 運算式中包含擴充欄位屬性值，而且資料來源會在您的報表執行並擷取其資料集之資料時提供這些值，擴充欄位屬性的值才會存在。 這樣，您就可以利用以下章節所述的語法，從任何運算式參考那些 `Field` 屬性值。 然而，由於這些欄位是此資料提供者的特定欄位，而且不屬於報表定義語言的一部分，因此您對這些值所進行的變更並不會和報表定義儲存在一起。  
@@ -119,7 +119,7 @@ Data Source=http://localhost:13080/aps/XMLA; Initial Catalog=Sample
 ##  <a name="HowTo"></a> 如何主題  
  本節包含使用資料連接、資料來源與資料集的逐步指示：  
   
- [加入及驗證資料連接或資料來源&#40;報表產生器和 SSRS&#41;](add-and-verify-a-data-connection-report-builder-and-ssrs.md)  
+ [加入及驗證資料連接或資料來源&#40;報表產生器及 SSRS&#41;](add-and-verify-a-data-connection-report-builder-and-ssrs.md)  
   
  [建立共用資料集或內嵌資料集 &#40;報表產生器及 SSRS&#41;](create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md)  
   
@@ -129,7 +129,7 @@ Data Source=http://localhost:13080/aps/XMLA; Initial Catalog=Sample
 ##  <a name="Related"></a> 相關章節  
  本文件集的這些章節會提供報表資料的深入概念性資訊，以及如何定義、自訂和使用與報表資料相關組件的程序資訊。  
   
- [將資料加入至報表&#40;報表產生器和 SSRS&#41;](report-datasets-ssrs.md)  
+ [將資料加入至報表&#40;報表產生器及 SSRS&#41;](report-datasets-ssrs.md)  
  提供存取報表資料的概觀。  
   
  [報表產生器中的資料連接、資料來源及連接字串](../data-connections-data-sources-and-connection-strings-in-report-builder.md)  

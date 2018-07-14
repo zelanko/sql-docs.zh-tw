@@ -1,5 +1,5 @@
 ---
-title: 指定的多個資料行 (Visual Database Tools) 的多個搜尋條件 |Microsoft 文件
+title: 指定多個搜尋條件的多個資料行 (Visual Database Tools) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - search criteria [SQL Server], multiple conditions
 - multiple search conditions
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - AND, Criteria pane
 ms.assetid: 06617729-0d0b-4da2-9890-b7e2f5cdbc7b
 caps.latest.revision: 12
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 7bf3bc4db56d03bae653e2c84e238682a27cc61b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: d916035a3ef7fc84103f2e2a94738effcc6cc6eb
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36031350"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37234358"
 ---
 # <a name="specify-multiple-search-conditions-for-multiple-columns-visual-database-tools"></a>指定多重資料行的多重搜尋條件 (Visual Database Tools)
   藉由包含幾個資料行做為搜尋條件的一部分，可以擴展或縮小查詢的範圍。 例如，您可能要：  
@@ -82,7 +82,7 @@ ms.locfileid: "36031350"
 ## <a name="see-also"></a>另請參閱  
  [AND 時結合條件的優先順序&#40;Visual Database Tools&#41;](combine-conditions-when-and-has-precedence-visual-database-tools.md)   
  [OR 時結合條件的優先順序&#40;Visual Database Tools&#41;](combine-conditions-when-or-has-precedence-visual-database-tools.md)   
- [結合的慣例 [準則] 窗格中的搜尋條件&#40;Visual Database Tools&#41;](conventions-combine-search-conditions-in-criteria-pane-visual-db-tools.md)   
+ [慣例結合搜尋條件，在 [準則] 窗格中&#40;Visual Database Tools&#41;](conventions-combine-search-conditions-in-criteria-pane-visual-db-tools.md)   
  [指定搜尋準則 &#40;Visual Database Tools&#41;](specify-search-criteria-visual-database-tools.md)  
   
   

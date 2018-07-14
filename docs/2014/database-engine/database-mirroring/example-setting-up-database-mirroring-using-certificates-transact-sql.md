@@ -5,10 +5,9 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - database mirroring [SQL Server], deployment
 - certificates [SQL Server], database mirroring
@@ -16,15 +15,15 @@ helpviewer_keywords:
 - database mirroring [SQL Server], security
 ms.assetid: df489ecd-deee-465c-a26a-6d1bef6d7b66
 caps.latest.revision: 48
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: c61db45a0b4a6b1326c74472158423bdabd05d02
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 046d73e4317696c579bbcc6e2ad512227b12f37e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36031699"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37248868"
 ---
 # <a name="example-setting-up-database-mirroring-using-certificates-transact-sql"></a>範例：使用憑證設定資料庫鏡像 (Transact-SQL)
   此範例會顯示使用以憑證為基礎的驗證建立資料庫鏡像工作階段所需的所有階段。 此主題中的範例使用 [!INCLUDE[tsql](../../includes/tsql-md.md)]。 除非您可保證網路的安全無虞，否則建議您對資料庫鏡像連接使用加密。  
@@ -261,7 +260,7 @@ ms.locfileid: "36031699"
     ```  
   
     > [!NOTE]  
-    >  如果您想要在具有自動容錯移轉的高安全性模式下執行，保持交易安全性設定為 FULL （預設值），並在執行第二個 SET PARTNER 後儘快加入見證 **'*`partner_server`*'** 陳述式。 請注意，必須先為傳入與傳出設定見證。  
+    >  如果您想要在具有自動容錯移轉的高安全性模式下執行，保持交易安全性設定為 FULL （預設值），並執行第二個 SET PARTNER 後儘快新增見證 **'*`partner_server`*'** 陳述式。 請注意，必須先為傳入與傳出設定見證。  
   
 ##  <a name="RelatedTasks"></a> 相關工作  
   

@@ -1,5 +1,5 @@
 ---
-title: MSRS 2014 Web 服務 SharePoint 模式和 MSRS 2014 Windows 服務 SharePoint 模式效能物件 （SharePoint 模式） 的效能計數器 |Microsoft 文件
+title: 效能計數器 MSRS 2014 Web 服務 SharePoint 模式和 MSRS 2014 Windows 服務 SharePoint 模式效能物件 （SharePoint 模式） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - performance counters [Reporting Services]
 - counters [Reporting Services]
@@ -20,13 +20,13 @@ ms.assetid: 70bf6980-7845-4ab5-8b2a-ebf526d811a6
 caps.latest.revision: 54
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 05e07f38382c6cdc8892c3ffd90ed63798b6f797
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 459d82ce5dfdbc445b05c3eb9f59325791ab4ff0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36031804"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37280784"
 ---
 # <a name="performance-counters-for-the-msrs-2014-web-service-sharepoint-mode-and-msrs-2014-windows-service-sharepoint-mode-performance-objects-sharepoint-mode"></a>MSRS 2014 Web 服務 SharePoint 模式和 MSRS 2014 Windows 服務 SharePoint 模式效能物件的效能計數器 (SharePoint 模式)
   本主題描述屬於 [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] SharePoint 模式部署一部分之 `MSRS 2014 Web Service SharePoint Mode` 和 `MSRS 2014 Windows Service SharePoint Mode` 效能物件的效能計數器。  
@@ -47,14 +47,14 @@ ms.locfileid: "36031804"
 -   [使用 PowerShell 指令程式傳回清單](#bkmk_powershell)  
   
 ##  <a name="bkmk_webservice"></a> MSRS 2014 Web 服務 SharePoint 模式效能計數器  
- `MSRS 2014 Web Service SharePoint Mode` 效能物件會監視報表伺服器效能。 此效能物件包含一組計數器集合，用來追蹤通常透過互動式報表檢視作業所起始的報表伺服器處理。 當您設定此計數器時，您可以將此計數器套用的所有執行個體[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]也可以選取特定的執行個體。 每當 [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] 停止報表伺服器 Web 服務時，便會重設這些計數器。  
+ `MSRS 2014 Web Service SharePoint Mode` 效能物件會監視報表伺服器效能。 此效能物件包含一組計數器集合，用來追蹤通常透過互動式報表檢視作業所起始的報表伺服器處理。 當您設定此計數器時，您可以將此計數器套用的所有執行個體[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]或者您可以選取特定的執行個體。 每當 [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] 停止報表伺服器 Web 服務時，便會重設這些計數器。  
   
- 下表列出所隨附的計數器`MSRS 2014 Web Service SharePoint Mode`效能物件。  
+ 下表列出隨附的計數器`MSRS 2014 Web Service SharePoint Mode`效能物件。  
   
 |計數器|描述|  
 |-------------|-----------------|  
 |`Active Sessions`|使用中的工作階段數目。 此計數器提供從報表執行產生之所有瀏覽器工作階段的累積計數，不管這些工作階段是否仍然使用中。<br /><br /> 隨著工作階段記錄移除，此計數器會遞減。 根據預設，工作階段會在沒有活動的十分鐘後移除。|  
-|`Cache Hits/Sec`|快取報表每秒的要求數目。 這些要求是針對重新轉譯的報表，而不是針對直接從快取處理的報表 (請參閱`Total Cache Hits`本主題稍後。)|  
+|`Cache Hits/Sec`|快取報表每秒的要求數目。 這些要求是針對重新轉譯的報表，而不是針對直接從快取處理的報表 (請參閱`Total Cache Hits`本主題稍後的。)|  
 |`Cache Hits/Sec (Semantic Models)`|快取模型每秒的要求數目。 這些要求是針對重新轉譯的報表，而不是針對直接從快取處理的報表|  
 |`Cache Misses/Sec`|每秒無法從快取傳回報表的要求數目。 使用此計數器以了解用於快取 (磁碟或記憶體) 的資源是否足夠。|  
 |`Cache Misses/Sec (Semantic Models)`|每秒無法從快取傳回模型的要求數目。 使用此計數器以了解用於快取 (磁碟或記憶體) 的資源是否足夠。|  
@@ -63,7 +63,7 @@ ms.locfileid: "36031804"
 |`Memory Cache Misses/Sec`|每秒無法從記憶體中快取擷取報表的次數。|  
 |`Next Session Requests/Sec`|在現有的工作階段中開啟之報表 (例如，從工作階段快照集轉譯的報表) 的每秒要求數目。|  
 |`Report Requests`|目前使用中和報表伺服器所處理的報表數目。|  
-|`Reports Executed/Sec`|每秒成功執行報表的數目。 此計數器提供有關報表數量的統計資料。 使用此計數器搭配`Request/Sec`來比較報表執行可以從快取傳回報表要求。|  
+|`Reports Executed/Sec`|每秒成功執行報表的數目。 此計數器提供有關報表數量的統計資料。 使用此計數器搭配`Request/Sec`來比較報表執行可以從快取傳回的報表要求。|  
 |`Requests/Sec`|每秒對報表伺服器產生的要求數目。 此計數器追蹤報表伺服器所處理之所有類型的要求。|  
 |`Total Cache Hits`|服務啟動之後，來自快取之報表要求的總數。 每當 [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] 停止報表伺服器 Web 服務時，此計數器就會重設。|  
 |`Total Cache Hits (Semantic Models)`|服務啟動之後，來自快取之模型要求的總數。 每當 ASP.NET 停止報表伺服器 Web 服務時，此計數器就會重設。|  
@@ -77,9 +77,9 @@ ms.locfileid: "36031804"
 |`Total Requests`|服務啟動之後，對報表伺服器進行之所有要求的總數。 每當 [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] 停止報表伺服器 Web 服務時，此計數器就會重設。|  
   
 ##  <a name="bkmk_windowsservice"></a> MSRS 2014 Windows 服務 SharePoint 模式效能計數器  
- `MSRS 2014 Windows Service SharePoint Mode` 效能物件可用來監視報表伺服器 Windows 服務。 此效能物件包含一組計數器集合，用來追蹤透過已排程的作業所起始的報表處理。 排程的作業可能包括訂閱與傳遞、報表執行快照集和報表記錄。 當您設定此計數器時，您可以將此計數器套用的所有執行個體[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]也可以選取特定的執行個體。  
+ `MSRS 2014 Windows Service SharePoint Mode` 效能物件可用來監視報表伺服器 Windows 服務。 此效能物件包含一組計數器集合，用來追蹤透過已排程的作業所起始的報表處理。 排程的作業可能包括訂閱與傳遞、報表執行快照集和報表記錄。 當您設定此計數器時，您可以將此計數器套用的所有執行個體[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]或者您可以選取特定的執行個體。  
   
- 下表列出包含在計數器`MSRS 2014 Windows Service SharePoint mode`效能物件。  
+ 下表列出中包含的計數器`MSRS 2014 Windows Service SharePoint mode`效能物件。  
   
 |計數器|描述|  
 |-------------|-----------------|  
@@ -93,12 +93,12 @@ ms.locfileid: "36031804"
 |`Alerting: events processed – GenerateAlert`||  
 |`Alerting: events processed – UpdateSchedule`||  
 |`Cache Flushes/Sec`|每秒快取排清的數目。|  
-|`Cache Hits/Sec`|快取報表每秒的要求數目。 這些要求是針對重新轉譯的報表，而不是針對直接從快取處理的報表 (請參閱`Total Cache Hits`本主題稍後。)|  
+|`Cache Hits/Sec`|快取報表每秒的要求數目。 這些要求是針對重新轉譯的報表，而不是針對直接從快取處理的報表 (請參閱`Total Cache Hits`本主題稍後的。)|  
 |`Cache Hits/Sec (Semantic Models)`|快取模型每秒的要求數目。|  
 |`Cache Misses/Sec`|每秒無法從快取傳回報表的要求數目。 使用此計數器以了解用於快取 (磁碟或記憶體) 的資源是否足夠。|  
 |`Cache Misses/Sec (Semantic Models)`|每秒無法從快取傳回模型的要求數目。 使用此計數器以了解用於快取 (磁碟或記憶體) 的資源是否足夠。|  
 |`Delivers/Sec`|每秒來自任何傳遞延伸模組的報表傳遞數目。|  
-|`Events/Sec`|每秒處理的事件數目。 監視的事件包括`SnapshotUpdated`和`TimedSubscription`。|  
+|`Events/Sec`|每秒處理的事件數目。 監視的事件包含`SnapshotUpdated`和`TimedSubscription`。|  
 |`First Session Requests/Sec`|每秒建立的新報表執行工作階段數目。|  
 |`Memory Cache Hits/Sec`|每秒從記憶體快取中擷取報表的次數。 *「記憶體內部快取」* (In-Memory Cache) 是快取的一部分，它將報表儲存在 CPU 記憶體中。 使用記憶體中快取時，報表伺服器不會查詢 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 以取得快取內容。|  
 |`Memory Cache Misses/Sec`|每秒無法從記憶體中快取擷取報表的次數。|  
@@ -141,6 +141,6 @@ CounterSetName     : MSRS 2014 Web Service SharePoint Mode
   
 ## <a name="see-also"></a>另請參閱  
  [監視報表伺服器效能](monitoring-report-server-performance.md)   
- [MSRS 2014 Web 服務和 MSRS 2014 Windows 服務效能物件效能計數器&#40;原生模式&#41;](../report-server/performance-counters-msrs-2011-web-service-performance-objects.md)  
+ [MSRS 2014 Web 服務和 MSRS 2014 Windows 服務效能物件的效能計數器&#40;原生模式&#41;](../report-server/performance-counters-msrs-2011-web-service-performance-objects.md)  
   
   

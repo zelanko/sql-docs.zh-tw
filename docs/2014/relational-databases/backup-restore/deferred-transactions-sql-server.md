@@ -5,10 +5,9 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-backup-restore
+ms.technology: backup-restore
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - I/O [SQL Server], database recovery
 - restoring pages [SQL Server]
@@ -16,15 +15,15 @@ helpviewer_keywords:
 - modifying transaction deferred state
 ms.assetid: 6fc0f9b6-d3ea-4971-9f27-d0195d1ff718
 caps.latest.revision: 44
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: cc0b006e5658969e15cbbe72614af70e361b54e5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: c02611c020dc7a45303d80a76482488cf6272ddd
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36031042"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37264834"
 ---
 # <a name="deferred-transactions-sql-server"></a>延遲交易 (SQL Server)
   在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise 中，如果在資料庫啟動期間，回復 (復原) 所需的資料已離線，就會延期損毀的交易。 「延遲交易」是在向前復原階段完成時尚未認可，而發生無法回復之錯誤的交易。 因為交易無法回復，所以會延期。  

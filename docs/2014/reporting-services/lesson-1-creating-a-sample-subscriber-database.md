@@ -8,23 +8,23 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 47a882b7-efe5-4ee6-bef4-06118eb56903
 caps.latest.revision: 41
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: c1b01246166c6d7e75f1083fc23b9bd15502c731
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 72d19e915fc937eb18ca1713e190d077f2e92d5d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36030960"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37286714"
 ---
 # <a name="lesson-1-creating-a-sample-subscriber-database"></a>第 1 課：建立範例訂閱者資料庫
   在定義資料驅動訂閱之前，您必須先有提供訂閱資料的資料來源。 在這個步驟中，您將建立一個小型資料庫來儲存這個教學課程所用的訂閱資料。 稍後，當處理訂閱時，報表伺服器會擷取這份資料，並利用它來自訂報表輸出、傳遞選項以及報表呈現格式。  
   
- 這一課會假設您使用[!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]建立[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]資料庫。  
+ 這一課會假設您使用[!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]來建立[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]資料庫。  
   
 ### <a name="to-create-a-sample-subscriber-database"></a>若要建立範例訂閱者資料庫  
   
@@ -32,7 +32,7 @@ ms.locfileid: "36030960"
   
 2.  以滑鼠右鍵按一下 [資料庫]，然後選取 [新增資料庫...]。  
   
-3.  在新的資料庫 對話方塊的 資料庫名稱 中輸入 *「 訂閱者 」*。 [!INCLUDE[clickOK](../includes/clickok-md.md)]  
+3.  在新的資料庫 對話方塊中的 資料庫名稱 中輸入*訂閱者*。 [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
 4.  按一下工具列上的 [新增查詢] 按鈕。  
   

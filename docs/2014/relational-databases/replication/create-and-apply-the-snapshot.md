@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - snapshots [SQL Server replication], applying
 - snapshots [SQL Server replication], creating
 ms.assetid: 631f48bf-50c9-4015-b9d8-8f1ad92d1ee2
 caps.latest.revision: 37
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: e2c4a2e3cb10ccd89c33622af0824ca7e5c5beb4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: f8f3ee9c034bbb57e2d8b392f02a3021e6ee0eff
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36031613"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37262344"
 ---
 # <a name="create-and-apply-the-snapshot"></a>建立並套用快照集
   快照集在發行集建立之後由「快照代理程式」產生。 它們可以：  

@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine-imoltp
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: f222b1d5-d2fa-4269-8294-4575a0e78636
 caps.latest.revision: 21
-author: stevestein
-ms.author: sstein
-manager: jhubbard
-ms.openlocfilehash: de002da10dedb033bc3c4f2c4287ca9a0436ebe1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+ms.openlocfilehash: fc33caf1e45d85abdffbeb295f7d874b6bf2aea5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36030766"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37269376"
 ---
 # <a name="bind-a-database-with-memory-optimized-tables-to-a-resource-pool"></a>將包含記憶體最佳化資料表的資料庫繫結至資源集區
   資源集區代表可受管制的實體資源子集。 根據預設， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫會繫結至預設資源集區並取用其資源。 為了防止一個或多個記憶體最佳化資料表取用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的所有資源，以及避免其他記憶體使用者耗用記憶體最佳化資料表所需的記憶體，您應該針對具有記憶體最佳化資料表的資料庫建立另一個資源集區來管理記憶體耗用量。  

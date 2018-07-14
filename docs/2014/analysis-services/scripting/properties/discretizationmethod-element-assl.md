@@ -1,5 +1,5 @@
 ---
-title: DiscretizationMethod 元素 (ASSL) |Microsoft 文件
+title: DiscretizationMethod 元素 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - DiscretizationMethod element
 ms.assetid: 4cfe015f-ad6c-47e1-8aff-c9c7677867b1
 caps.latest.revision: 31
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: c22387c74c49446c74b06125da02bda11acd0b7c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 6347db0e5d964b10112516b4c607a5185f247b65
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36031105"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37253000"
 ---
 # <a name="discretizationmethod-element-assl"></a>DiscretizationMethod 元素 (ASSL)
   定義用於進行離散化的方法。  
@@ -66,7 +66,7 @@ ms.locfileid: "36031105"
   
  這個元素的值限制為下表所列的其中一個字串。  
   
-|ReplTest1|描述|  
+|值|描述|  
 |-----------|-----------------|  
 |*自動*|相當於採礦結構資料行的 AUTOMATIC 離散化方法。|  
 |*EqualAreas*|相當於採礦結構資料行的 EQUAL_AREAS 離散化方法。|  

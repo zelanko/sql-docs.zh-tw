@@ -1,5 +1,5 @@
 ---
-title: OLE DB 來源編輯器 （資料行頁面） |Microsoft 文件
+title: OLE DB 來源編輯器 （資料行頁面） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.oledbsourceadapter.columns.f1
 helpviewer_keywords:
 - OLE DB Source Editor
 ms.assetid: bfbb0ae1-7759-4d45-8865-31df36ae5b34
 caps.latest.revision: 26
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 9d4795853fd0b7018eac474e23177a7a89047c84
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 27e6acc421b173cb80b388f7db306ebf18bdb07c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36030568"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37271274"
 ---
 # <a name="ole-db-source-editor-columns-page"></a>OLE DB 來源編輯器 (資料行頁面)
   使用 [OLE DB 來源編輯器] 對話方塊的 [資料行] 頁面，即可將輸出資料行對應至每個外部 (來源) 資料行。  
@@ -42,7 +42,7 @@ ms.locfileid: "36030568"
   
 ## <a name="see-also"></a>另請參閱  
  [Integration Services 錯誤和訊息參考](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [OLE DB 來源編輯器&#40;連接管理員頁面&#41;](../../2014/integration-services/ole-db-source-editor-connection-manager-page.md)   
+ [OLE DB 來源編輯器&#40;連線管理員頁面&#41;](../../2014/integration-services/ole-db-source-editor-connection-manager-page.md)   
  [OLE DB 來源編輯器&#40;錯誤輸出頁面&#41;](../../2014/integration-services/ole-db-source-editor-error-output-page.md)   
  [使用 OLE DB 來源擷取資料](data-flow/extract-data-by-using-the-ole-db-source.md)   
  [OLE DB 連線管理員](connection-manager/ole-db-connection-manager.md)  

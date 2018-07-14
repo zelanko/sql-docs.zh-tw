@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - dbe-xml
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - AUTO FOR XML mode, BINARY BASE64 option
 ms.assetid: 86a7bb85-7f83-412a-b775-d2c379702fe9
 caps.latest.revision: 9
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 5c934556e1b402de4ecd013bf821c17fdd36b4b3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: e1af418d7b8c21b640d738659cc3c4603b43ad29
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36030958"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37286794"
 ---
 # <a name="use-the-binary-base64-option"></a>使用 BINARY BASE64 選項
   若查詢中指定 BINARY BASE64 選項，就會以 Base64 編碼格式傳回二進位資料。 依預設，若沒有指定 BINARY BASE64 選項，則 AUTO 模式可支援 URL 編碼的二進位資料。 也就是說，不是傳回二進位資料，而是傳回一個參考，以指向查詢執行所在之資料庫虛擬根目錄的相對 URL。 此參考可用來存取後續作業中的實際二進位資料 (使用 SQLXML ISAPI dbobject 查詢)。 此查詢必須提供足夠的資訊 (例如：主索引鍵資料行)，以便識別影像。  

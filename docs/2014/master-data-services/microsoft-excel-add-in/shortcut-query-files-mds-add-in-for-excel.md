@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 1ba0219a-6c40-41fa-aff9-8c8f41ef3220
 caps.latest.revision: 9
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: ba19131fdb06d5e8e71071663a6fc0a81c3d51cf
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: 8bb8d6f7f3f9864d6b16488eefe409032c66ceee
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36030554"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37274754"
 ---
 # <a name="shortcut-query-files-mds-add-in-for-excel"></a>捷徑查詢檔案 (適用於 Excel 的 MDS 增益集)
   在 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]中，使用捷徑查詢檔案來快速連接及載入常用的資料。 當您想要將 MDS 資料與其他人分享時，也可以使用。 您應該儲存捷徑查詢檔案並以電子郵件送出，而不是儲存工作表並以電子郵件送出。 如此可確保您可連接到 MDS 儲存機制來取得最新的資料。  
@@ -56,7 +56,7 @@ ms.locfileid: "36030554"
   
 -   [連接 &#40;適用於 Excel 的 MDS 增益集&#41;](connections-mds-add-in-for-excel.md)  
   
--   [Master Data Services 增益集的 Microsoft Excel](master-data-services-add-in-for-microsoft-excel.md)  
+-   [Master Data Services 增益集適用於 Microsoft Excel](master-data-services-add-in-for-microsoft-excel.md)  
   
 -   [安全性 &#40;Master Data Services&#41;](../security-master-data-services.md)  
   

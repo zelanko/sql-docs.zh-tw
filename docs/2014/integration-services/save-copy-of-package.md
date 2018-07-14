@@ -1,5 +1,5 @@
 ---
-title: 儲存封裝的副本 |Microsoft 文件
+title: 儲存封裝的副本 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.savecopyas.f1
 helpviewer_keywords:
 - Save Copy of Package dialog box
 ms.assetid: 7b44c0d7-d8fa-4491-8836-0899f621d3a8
 caps.latest.revision: 17
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: b42f6861aadb98d97d1b95f688f9dcb891c01697
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: acbeb63fb7e816d432609a56bf6ba72463a5ea48
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36031454"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37260974"
 ---
 # <a name="save-copy-of-package"></a>儲存封裝的副本
   使用 **[儲存封裝的副本]** 對話方塊 (可以在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]中使用)，即可將 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 封裝的副本從 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 儲存到另一個位置，然後選擇性的修改封裝的保護等級。  
