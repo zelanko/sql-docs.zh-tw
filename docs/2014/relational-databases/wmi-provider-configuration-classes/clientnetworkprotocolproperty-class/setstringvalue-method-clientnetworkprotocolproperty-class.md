@@ -1,5 +1,5 @@
 ---
-title: SetStringValue 方法 （ClientNetworkProtocolProperty 類別） |Microsoft 文件
+title: SetStringValue 方法 （ClientNetworkProtocolProperty 類別） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - SetStringValue method
 ms.assetid: 88d67b22-0eea-48c9-ab73-e0b4907953df
 caps.latest.revision: 12
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 700c24ee55579fef980f57f1d4fd39e9f545872a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+ms.openlocfilehash: 071ff48b4b259eb35b913b63ff3547da7bf0fb28
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36032962"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37222948"
 ---
 # <a name="setstringvalue-method-clientnetworkprotocolproperty-class"></a>SetStringValue 方法 (ClientNetworkProtocolProperty 類別)
   設定所參考之目前屬性的字串值[PropertyIdx 屬性 （ClientNetworkProtocolProperty 類別）](clientnetworkprotocolproperty-class.md)值。  
@@ -46,7 +46,7 @@ StrValue
   
 ## <a name="parts"></a>組件  
  *object*  
- A [ClientNetworkProtocolProperty 類別](clientnetworkprotocolproperty-class.md)物件，代表所使用的網路通訊協定的屬性[!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]用戶端。  
+ A [ClientNetworkProtocolProperty 類別](clientnetworkprotocolproperty-class.md)物件，表示屬性所使用之網路通訊協定[!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]用戶端。  
   
 #### <a name="parameters"></a>參數  
   

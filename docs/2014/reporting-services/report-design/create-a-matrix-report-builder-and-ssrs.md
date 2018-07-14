@@ -1,5 +1,5 @@
 ---
-title: 矩陣 （報表產生器及 SSRS） |Microsoft 文件
+title: 矩陣 （報表產生器及 SSRS） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 493e63b9-ecd0-4054-97ec-92d84e9b8182
 caps.latest.revision: 10
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: b6eb4386030029c9f644b049a3c900e49ffc5894
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 0ea7d7f6512cf006ef246ad34698da3b71478b15
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36032034"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37214658"
 ---
 # <a name="matrices-report-builder-and-ssrs"></a>矩陣 (報表產生器及 SSRS)
   使用矩陣顯示群組資料與摘要資訊。 您可以依資料列和資料行群組中的多個欄位或運算式群組資料。 矩陣提供與交叉資料表和樞紐資料表類似的功能。 在執行階段，當報表資料和資料區域結合時，矩陣在頁面上會以水平和垂直方式成長。 矩陣資料格中的值會顯示資料格所屬資料列與資料行群組交集範圍內的彙總值。 您可以格式化資料列和資料行以反白顯示您要強調的資料。 您也可以加入一開始隱藏詳細資料的向下鑽研切換，使用者就可以在需要時，按一下切換來顯示更多或更少的詳細資料。  
@@ -96,7 +96,7 @@ ms.locfileid: "36032034"
  若要加入相鄰資料行群組的總計資料行，按一下資料行群組定義資料格，然後使用 **[加入總計]** 命令。 新的靜態資料行就會加入到資料行群組的旁邊，其中包含現有資料列中每個數值欄位的預設彙總總和。 若要變更運算式，請手動編輯預設彙總，例如， `Avg([Sales])`。 如需詳細資訊，請參閱[將總計加入到群組或 Tablix 資料區 &#40;報表產生器及 SSRS&#41;](add-a-total-to-a-group-or-tablix-data-region-report-builder-and-ssrs.md)。  
   
 ## <a name="see-also"></a>另請參閱  
- [彙總函式參考&#40;報表產生器和 SSRS&#41;](report-builder-functions-aggregate-functions-reference.md)   
+ [彙總函式參考&#40;報表產生器及 SSRS&#41;](report-builder-functions-aggregate-functions-reference.md)   
  [運算式範例 &#40;報表產生器及 SSRS&#41;](expression-examples-report-builder-and-ssrs.md)  
   
   

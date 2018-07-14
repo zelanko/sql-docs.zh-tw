@@ -25,13 +25,13 @@ ms.assetid: 1e940cd1-c5f8-4527-b678-e89ba5dc398a
 caps.latest.revision: 55
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 354420f069357b7a8d350049cbddb04d25caf627
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 1d86350195a980f87e5e67ea4634ebadd0116355
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36032359"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37217628"
 ---
 # <a name="developing-a-user-interface-for-a-custom-task"></a>開發自訂工作的使用者介面
   [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 物件模型會提供自訂工作開發人員能夠輕鬆地針對工作建立自訂使用者介面的能力 (該介面之後可以在 [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] 中整合及顯示)。 使用者介面可在 [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 設計師中提供有用的資訊給使用者，然後指引使用者正確地設定自訂工作的屬性和設定。  
@@ -202,7 +202,7 @@ Public Class HelloWorldTaskUI
 End Class  
 ```  
   
-![Integration Services 圖示 （小）](../../media/dts-16.gif "Integration Services 圖示 （小）")**保持最多 with Integration Services 的日期** <br /> 若要取得 Microsoft 的最新下載、文件、範例和影片以及社群中的精選解決方案，請瀏覽 MSDN 上的 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 頁面：<br /><br /> [瀏覽 MSDN 上的 Integration Services 頁面](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 若要得到這些更新的自動通知，請訂閱該頁面上所提供的 RSS 摘要。  
+![Integration Services 圖示 （小）](../../media/dts-16.gif "Integration Services 圖示 （小）")**保持最多包含 Integration Services 的日期** <br /> 若要取得 Microsoft 的最新下載、文件、範例和影片以及社群中的精選解決方案，請瀏覽 MSDN 上的 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 頁面：<br /><br /> [瀏覽 MSDN 上的 Integration Services 頁面](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 若要得到這些更新的自動通知，請訂閱該頁面上所提供的 RSS 摘要。  
   
 ## <a name="see-also"></a>另請參閱  
  [建立自訂工作](creating-a-custom-task.md)   

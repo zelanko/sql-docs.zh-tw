@@ -1,5 +1,5 @@
 ---
-title: 表格式模型方案部署 (SSAS 表格式) |Microsoft 文件
+title: 表格式模型方案部署 (SSAS 表格式) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: aff96558-e5e5-4b95-8ddf-ee0709c842fb
 caps.latest.revision: 21
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 89e240e5c3a877761f8b26e9a581f462af49f395
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 99b9e1594c4d4fbe07a6085544021b94820db640
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36032860"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37220038"
 ---
 # <a name="tabular-model-solution-deployment-ssas-tabular"></a>表格式模型方案部署 (SSAS 表格式)
   撰寫表格式模型專案之後，您必須部署專案，以便讓使用者可以使用報表用戶端應用程式來瀏覽模型。 此主題描述在您的環境中部署表格式模型方案時可使用的各種屬性和方法。  
@@ -65,7 +65,7 @@ ms.locfileid: "36032860"
 |--------------|---------------------|-----------------|  
 |**Server**<br /><br /> 在建立專案時設定。|**localhost**|在建立專案時設定的此屬性，會依部署模型的目標名稱來指定 Analysis Services 執行個體。 依預設，模型將會部署到本機電腦上的預設 Analysis Services 執行個體。 不過，您可以變更這項設定，以便在本機電腦上或是您有權建立 Analysis Services 物件之任何遠端電腦上的任何執行個體上指定具名執行個體。|  
 |**版本(Edition)**|與工作空間伺服器所在之執行個體的版本相同。|此屬性會指定將模型部署到哪一個版本的 Analysis Services 伺服器。 這些伺服器版本會定義可以納入專案中的多種功能。 根據預設，此版本將屬於本機 Analysis Services 伺服器。 如果您指定不同的 Analysis Services 伺服器 (例如，實際 Analysis Services 伺服器)，請務必指定該 Analysis Services 伺服器的版本。|  
-|**[資料庫備份]**|**\<projectname>**|此屬性會指定一旦部署之後，模型物件會立刻具現化所在的 Analysis Services 資料庫名稱。 此名稱也將在報表用戶端資料連接或 .bism 資料連接檔案中指定。<br /><br /> 您可以在製作模型時，隨時變更此名稱。 如果您在部署模型之後變更名稱，您在部署後所進行的變更將不會影響您先前部署的模型。 例如，如果您開啟名稱為`TestDB`和部署您的方案使用預設的模型資料庫名稱模型，然後修改方案並模型資料庫重新命名為`Sales`，部署方案的 Analysis Services 的執行個體若要將顯示會分隔資料庫，一個名稱為的 Model，另一個名稱為 Sales。|  
+|**[資料庫備份]**|**\<projectname>**|此屬性會指定一旦部署之後，模型物件會立刻具現化所在的 Analysis Services 資料庫名稱。 此名稱也將在報表用戶端資料連接或 .bism 資料連接檔案中指定。<br /><br /> 您可以在製作模型時，隨時變更此名稱。 如果您在部署模型之後變更名稱，您在部署後所進行的變更將不會影響您先前部署的模型。 例如，如果您開啟名稱為`TestDB`並部署您的解決方案，使用預設的模型資料庫名稱模型，然後修改該方案和模型資料庫重新命名為`Sales`，部署方案的 Analysis Services 執行個體若要將顯示會分隔資料庫、 一個名稱為的 Model，以及一個名為 Sales。|  
 |**Cube 名稱**|**型號**|此屬性會以用戶端工具 (例如 Excel) 和 AMO (分析管理物件) 中顯示的名稱來指定 Cube 名稱。|  
   
 ### <a name="directquery-options-properties"></a>DirectQuery 選項屬性  

@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: b987b141-5abf-4161-a073-4cfc3e7f5aae
 caps.latest.revision: 6
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 23a01425734f0d3182a90481cb2641bb55e6611d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: 1118f3a7ee1e9bbace60dc2ac36c813d5b147edb
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36032575"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37178065"
 ---
 # <a name="filter-dialog-box-mds-add-in-for-excel"></a>篩選對話方塊 (適用於 Excel 的 MDS 增益集)
   在 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)] 中，若要在將 MDS 管理的資料載入 Excel 之前縮小資料的範圍，請使用 [篩選] 對話方塊。  
@@ -35,7 +35,7 @@ ms.locfileid: "36032575"
 |明確階層|如果您選擇 [合併] 屬性類型，請選擇這些合併成員所屬的階層。 如需詳細資訊，請參閱[明確階層 &#40;Master Data Services&#41;](../explicit-hierarchies-master-data-services.md)。|  
 |屬性群組|屬性群組是將屬性子集分組的方式。 如果您想要顯示可用屬性的子集，請選擇屬性群組。 如需屬性群組的詳細資訊，請參閱[屬性群組 &#40;Master Data Services&#41;](../attribute-groups-master-data-services.md)。|  
 |全選|按一下即可選取清單中顯示的所有屬性。|  
-|全部清除|按一下即可清除清單中顯示的選取屬性。<br /><br /> 注意： 您無法清除**名稱**和**程式碼**。|  
+|全部清除|按一下即可清除清單中顯示的選取屬性。<br /><br /> 注意： 您無法清除**名稱**並**程式碼**。|  
 |向上箭號|按一下即可將選取的屬性在清單中向上移動。 由上至下順序會對應至資料行在工作表中顯示的由左至右順序。|  
 |向下箭號|按一下即可將選取的屬性在清單中向下移動。 由上至下順序會對應至資料行在工作表中顯示的由左至右順序。|  
   

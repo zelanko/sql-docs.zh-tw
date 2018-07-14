@@ -8,25 +8,25 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: d00cb13b-e1c2-4300-a195-3da1430a2df1
 caps.latest.revision: 8
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 851c9acd9b383f8f315b71b215fe739284c2f2d6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: bf944dfa9bd17946130b568d53be032c56fc0ef3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36032950"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37198748"
 ---
 # <a name="ole-db-connection-type-ssrs"></a>OLE DB 連接類型 (SSRS)
   若要加入來自 OLE DB 資料提供者的資料，您必須具有以 OLE DB 類型之報表資料來源為基礎的資料集。 這個內建的資料來源類型是以 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] OLE DB 資料處理延伸模組為基礎。  
   
  OLE DB 是一項資料存取技術，可讓用戶端連接至各種不同的資料提供者。 在您選取 OLE DB 資料來源類型之後，必須選取特定的資料提供者。 例如參數和認證這類功能的支援，是依據您選取的資料提供者而定。  
   
- 您可以使用本主題中的資訊來建置資料來源。 如需逐步指示，請參閱[加入及驗證資料連接或資料來源&#40;報表產生器及 SSRS&#41;](add-and-verify-a-data-connection-report-builder-and-ssrs.md)。  
+ 您可以使用本主題中的資訊來建置資料來源。 如需逐步指示，請參閱 <<c0> [ 加入及驗證資料連接或資料來源&#40;報表產生器及 SSRS&#41;](add-and-verify-a-data-connection-report-builder-and-ssrs.md)。</c0>  
   
 ##  <a name="Connection"></a> 連接字串  
  OLE DB 資料處理延伸模組的連接字串會視您所要的資料提供者而定。 一般連接字串包含資料提供者支援的名稱/值組。 例如，下列連接字串便指 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 和 AdventureWorks 資料庫的 OLE DB 提供者：  
@@ -46,7 +46,7 @@ Provider=SQLNCLI10.1;Data Source=server; Initial Catalog=AdventureWorks
   
  發行報表之後，您可能需要變更資料來源的認證，如此當報表在報表伺服器上執行時，擷取資料的權限就會是有效的。  
   
- 如需詳細資訊，請參閱[資料連接、 資料來源和 Reporting Services 中的連接字串](../data-connections-data-sources-and-connection-strings-in-reporting-services.md)或[指定的認證，在報表產生器](../specify-credentials-in-report-builder.md)。  
+ 如需詳細資訊，請參閱 <<c0> [ 資料連接、 資料來源和 Reporting Services 中的連接字串](../data-connections-data-sources-and-connection-strings-in-reporting-services.md)或是[在 報表產生器中指定認證](../specify-credentials-in-report-builder.md)。  
   
 ###### <a name="special-characters-in-a-password"></a>密碼中的特殊字元  
  如果您設定 OLE DB 資料來源來提示輸入密碼或是將密碼包含在連接字串中，則當使用者輸入含有特殊字元 (如標點符號) 的密碼時，某些基礎資料來源驅動程式將無法驗證這些特殊字元。 當您處理報表時，訊息「不是有效密碼」可能會指出此問題。  
@@ -79,7 +79,7 @@ Provider=SQLNCLI10.1;Data Source=server; Initial Catalog=AdventureWorks
 ##  <a name="HowTo"></a> 如何主題  
  本節包含使用資料連接、資料來源與資料集的逐步指示。  
   
- [加入及驗證資料連接或資料來源&#40;報表產生器和 SSRS&#41;](add-and-verify-a-data-connection-report-builder-and-ssrs.md)  
+ [加入及驗證資料連接或資料來源&#40;報表產生器及 SSRS&#41;](add-and-verify-a-data-connection-report-builder-and-ssrs.md)  
   
  [建立共用資料集或內嵌資料集 &#40;報表產生器及 SSRS&#41;](create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md)  
   
@@ -90,7 +90,7 @@ Provider=SQLNCLI10.1;Data Source=server; Initial Catalog=AdventureWorks
 ##  <a name="Related"></a> 相關章節  
  本文件集的這些章節會提供報表資料的深入概念性資訊，以及如何定義、自訂和使用與報表資料相關組件的程序資訊。  
   
- [將資料加入至報表&#40;報表產生器和 SSRS&#41;](report-datasets-ssrs.md)  
+ [將資料加入至報表&#40;報表產生器及 SSRS&#41;](report-datasets-ssrs.md)  
  提供存取報表資料的概觀。  
   
  [報表產生器中的資料連接、資料來源及連接字串](../data-connections-data-sources-and-connection-strings-in-report-builder.md)  

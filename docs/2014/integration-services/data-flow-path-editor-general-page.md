@@ -1,5 +1,5 @@
 ---
-title: 資料流程路徑編輯器 （一般頁面） |Microsoft 文件
+title: 資料流程路徑編輯器 （一般頁面） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.patheditor.general.f1
 helpviewer_keywords:
 - Data Flow Path Editor dialog box
 ms.assetid: 72a9ff1d-3748-41d1-a9b2-63f4a77bba24
 caps.latest.revision: 24
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 9ba5e08523500fa104f96a760cf57c9657e473d0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c6bc1f4409fc762e7f21531f9f989439534ee58d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36031293"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37213508"
 ---
 # <a name="data-flow-path-editor-general-page"></a>資料流程路徑編輯器 (一般頁面)
   使用 **[資料流程路徑編輯器]** 對話方塊，即可設定路徑屬性、檢視資料行中繼資料，以及管理附加至路徑的資料檢視器。  

@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: e60e5bab-b286-4897-9685-9ff12703517d
 caps.latest.revision: 7
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 8e2617d9704db585e4f8ac3558941a957876fc05
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 41a75e8559738294986bc5fb203b1b0469305f57
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36032238"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37222908"
 ---
 # <a name="lookup-function-report-builder-and-ssrs"></a>Lookup 函數 (報表產生器及 SSRS)
   從包含名稱/值組的資料集傳回第一個符合指定之名稱的值。  
@@ -42,7 +42,7 @@ Lookup(source_expression, destination_expression, result_expression, dataset)
  (`Variant`) - 針對資料集中的每個資料列評估並指定要比對之名稱或索引鍵的運算式。 例如， `=Fields!ProductID.Value`。  
   
  *result_expression*  
- (`Variant`) 會針對資料集中的資料列評估的運算式其中*source_expression* = *destination_expression*，並指定要擷取的值。 例如， `=Fields!ProductName.Value`。  
+ (`Variant`) 會針對資料集中的資料列評估的運算式所在*source_expression* = *destination_expression*，並指定要擷取的值。 例如， `=Fields!ProductName.Value`。  
   
  *資料集 (dataset)*  
  指定報表中資料集名稱的常數。 例如，"Products"。  
@@ -51,9 +51,9 @@ Lookup(source_expression, destination_expression, result_expression, dataset)
  傳回`Variant`，或`Nothing`如果沒有相符項目。  
   
 ## <a name="remarks"></a>備註  
- 使用`Lookup`擷取指定的資料集的名稱/值組的值是 1 對 1 關聯性。 例如，如果是資料表中的識別碼欄位，您可以使用 `Lookup` 從未繫結至資料區的資料集中，擷取對應的名稱欄位。  
+ 使用`Lookup`擷取名稱/值組的指定資料集中的值 1 對 1 關聯性。 例如，如果是資料表中的識別碼欄位，您可以使用 `Lookup` 從未繫結至資料區的資料集中，擷取對應的名稱欄位。  
   
- `Lookup` 會執行下列動作：  
+ `Lookup` 執行下列作業：  
   
 -   評估目前範圍中的來源運算式。  
   
@@ -75,7 +75,7 @@ Lookup(source_expression, destination_expression, result_expression, dataset)
   
 -   來源、目的地和結果運算式無法包含報表或群組變數的參考。  
   
--   `Lookup` 無法使用以運算式為下列報表項目：  
+-   `Lookup` 不能用於做為運算式的下列報表項目：  
   
     -   資料來源的動態連接字串。  
   
@@ -101,9 +101,9 @@ Lookup(source_expression, destination_expression, result_expression, dataset)
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [運算式會在報表中使用&#40;報表產生器和 SSRS&#41;](expression-uses-in-reports-report-builder-and-ssrs.md)   
+ [在報表中的運算式會使用&#40;報表產生器及 SSRS&#41;](expression-uses-in-reports-report-builder-and-ssrs.md)   
  [運算式範例 &#40;報表產生器及 SSRS&#41;](expression-examples-report-builder-and-ssrs.md)   
  [運算式中的資料類型 &#40;報表產生器及 SSRS&#41;](expressions-report-builder-and-ssrs.md)   
- [Expression Scope for Totals，Aggregates，and Built-in Collections&#40;報表產生器和 SSRS&#41;](expression-scope-for-totals-aggregates-and-built-in-collections.md)  
+ [Expression Scope for Totals，Aggregates，and Built-in Collections&#40;報表產生器及 SSRS&#41;](expression-scope-for-totals-aggregates-and-built-in-collections.md)  
   
   

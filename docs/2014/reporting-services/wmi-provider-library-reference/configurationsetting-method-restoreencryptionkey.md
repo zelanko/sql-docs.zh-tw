@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 api_name:
 - RestoreEncryptionKey (WMI MSReportServer_ConfigurationSetting Class)
 api_location:
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - RestoreEncryptionKey method
 ms.assetid: 37e949f5-15af-4858-848a-f482ee94fcd9
 caps.latest.revision: 18
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: d6ac5da7c9867b7ce84c9f29bfe82f905d5c626a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: d4ed1e00dde20d16aa65e88368c0ca6f86b0aa59
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36031564"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37222898"
 ---
 # <a name="restoreencryptionkey-method-wmi-msreportserverconfigurationsetting"></a>RestoreEncryptionKey 方法 (WMI MSReportServer_ConfigurationSetting)
   將指定的加密金鑰重新套用至報表伺服器資料庫。  
@@ -67,7 +67,7 @@ public void RestoreEncryptionKey(out Byte[] KeyFile, out Int32 Length,
 ## <a name="remarks"></a>備註  
  如果報表伺服器的項目已經存在報表伺服器資料庫中，就會刪除此項目。 然後，系統會使用指定的加密金鑰和報表伺服器的公開金鑰來建立新的項目。  
   
- 這個方法是最有效之後呼叫[DeleteEncryptionKey](configurationsetting-method-deleteencryptionkey.md)方法清除加密金鑰清單。  
+ 方法是最有效之後呼叫[DeleteEncryptionKey](configurationsetting-method-deleteencryptionkey.md)方法，以清除加密金鑰的清單。  
   
 ## <a name="requirements"></a>需求  
  **命名空間：** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  

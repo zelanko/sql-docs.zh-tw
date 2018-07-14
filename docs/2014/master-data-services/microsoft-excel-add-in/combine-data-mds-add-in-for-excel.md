@@ -8,25 +8,25 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: a867dc15-5a0d-457c-8304-ac323bcf9377
 caps.latest.revision: 5
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: f882bcd5aeead1dea06619598d868ded6c717167
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: f570016f39dab2b62276dc3b64ad2c135b05460d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36032343"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37197438"
 ---
 # <a name="combine-data-mds-add-in-for-excel"></a>結合資料 (適用於 Excel 的 MDS 增益集)
   在 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]中，當您要在發行前比較資料時，可以結合兩個工作表的資料。 在此程序中，將兩個工作表中的資料結合為一個工作表。 然後可以進一步進行比較，並判斷哪些資料 (如果有) 將發行到 MDS 儲存機制。  
   
-## <a name="prerequisites"></a>必要條件  
+## <a name="prerequisites"></a>先決條件  
   
--   您必須擁有包含 MDS 管理之資料的工作表。 如需詳細資訊，請參閱[從 excel 的 MDS 資料載入](export-data-to-excel-from-master-data-services.md)。  
+-   您必須擁有包含 MDS 管理之資料的工作表。 如需詳細資訊，請參閱 <<c0> [ 將資料從 MDS 載入 Excel 中的載入](export-data-to-excel-from-master-data-services.md)。  
   
 -   您必須擁有另一個工作表，其資料將要與 MDS 管理之資料結合。 此工作表必須具有標頭資料列。  
   

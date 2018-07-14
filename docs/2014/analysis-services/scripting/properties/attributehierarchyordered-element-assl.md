@@ -1,5 +1,5 @@
 ---
-title: AttributeHierarchyOrdered 元素 (ASSL) |Microsoft 文件
+title: AttributeHierarchyOrdered 元素 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - AttributeHierarchyOrdered element
 ms.assetid: 7e2fa8b3-04a7-4748-bdc1-8a0ab2f984e1
 caps.latest.revision: 36
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: c2114243cdecf646b78abd769b70908f4961e201
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 6731ab4d711e042bdefbed0cf713681d05f8812b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36032634"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37188995"
 ---
 # <a name="attributehierarchyordered-element-assl"></a>AttributeHierarchyOrdered 元素 (ASSL)
   決定是否排序相關聯的屬性階層。  
@@ -62,7 +62,7 @@ ms.locfileid: "36032634"
 |子元素|無|  
   
 ## <a name="remarks"></a>備註  
- 對應目的父代的項目`AttributeHierarchyOrdered`在 「 分析管理物件 (AMO) 物件模型而言， <xref:Microsoft.AnalysisServices.DimensionAttribute>。  
+ 對應至父系的元素`AttributeHierarchyOrdered`在 「 分析管理物件 (AMO) 物件模型是<xref:Microsoft.AnalysisServices.DimensionAttribute>。  
   
 ## <a name="see-also"></a>另請參閱  
  [屬性&#40;ASSL&#41;](properties-assl.md)  

@@ -1,5 +1,5 @@
 ---
-title: 選擇資料的資料採礦 |Microsoft 文件
+title: 選擇適用於資料採礦的資料 |Microsoft Docs
 ms.custom: ''
 ms.date: 12/29/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - content type [data mining]
 - nested tables
@@ -21,15 +21,15 @@ helpviewer_keywords:
 - discretized
 ms.assetid: 7c72d80e-913c-4bbe-b258-444294a78838
 caps.latest.revision: 25
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 014c39cea8baea721c51308e65f894e8216ae7e8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 4d9466397115e3562deebb91b5b3e7506bae09c7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36031800"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37170287"
 ---
 # <a name="choosing-data-for-data-mining"></a>選擇要進行資料採礦的資料
   當您開始進行資料採礦時，您可能會問「我需要多少資料？」 或是「我應該知道有關清除或格式化資料的任何特殊需求嗎？」  
@@ -67,7 +67,7 @@ ms.locfileid: "36031800"
   
 -   建立資料的多個版本，並建立多個模型。  
   
- 其他秘訣如何選取、 修改及檢視資料，請參閱[檢查清單的資料採礦準備](checklist-of-preparation-for-data-mining.md)。  
+ 其他秘訣如何選取、 修改和檢閱資料，請參閱[檢查清單的 Preparation for Data Mining](checklist-of-preparation-for-data-mining.md)。  
   
 ### <a name="how-much-data-do-i-need"></a>我需要多少資料？  
  基本原則如下：最簡單的模型類型和案例絕對不要擁有少於 50-100 個資料列的資料。 例如，如果您使用貝氏機率分類模型預測單一屬性，而且資料集的格式正確，您或許可以使用 50-100 個資料列的資料產生相當精確的預測。  
@@ -89,7 +89,7 @@ ms.locfileid: "36031800"
   
  **將數字轉換成類別變數**  
   
- 並不是說資料行包含數字就表示您應該將它們視為連續的數字。 *離散化*分析會提供許多優點。 其中一個優點是減少問題空間。 另一個優點如下：有時數字並不是呈現結果的適當方式。  
+ 並不是說資料行包含數字就表示您應該將它們視為連續的數字。 *離散化*進行分析可提供許多優點。 其中一個優點是減少問題空間。 另一個優點如下：有時數字並不是呈現結果的適當方式。  
   
  例如，每戶家庭的孩童數目可以被視為連續或離散值。 因為一個家庭不可能有 2.5 個小孩，而且有 3 個或更多小孩的家庭與有 2 個小孩的家庭可能會有非常不同的行為模式，所以將這個數字視為一個類別目錄可能會得到更好的結果。 不過，如果您要建立迴歸模型或是需要平均值 (例如每個家庭 1.357 個小孩)，您就會使用連續數字資料類型。  
   
@@ -101,7 +101,7 @@ ms.locfileid: "36031800"
   
  **分類收納數字**  
   
- 雖然所有數字原則都是無限，因此連續，將資訊模型化時您可能會發現它更有效率地*離散化*或*bin*可用的值。  
+ 雖然所有數字原則都是無限，因此連續的當您將資訊模型化時您可能會發現它更有效率*離散化*或是*bin*可用的值。  
   
  您有許多方式可以分類收納資料：  
   
@@ -109,7 +109,7 @@ ms.locfileid: "36031800"
   
 -   您可以建立幾個具有商業意義或比較容易使用的群組，自己先將它們分組。 使用這種方法時，通常會遺失值的真正散發意義，不過，其範圍對使用者而言比較容易閱讀。  
   
--   讓演算法決定貯體的最佳數量和值的散發。 這是大部分工具 中的預設值，但您可以覆寫這些預設值在**資料採礦**工具列精靈。  
+-   讓演算法決定貯體的最佳數量和值的散發。 這是預設值，在大部分的工具，但您可以覆寫這些預設值，在**資料採礦**工具列精靈。  
   
 -   將值逼近到中央平均值或代表值。  
   
@@ -120,9 +120,9 @@ ms.locfileid: "36031800"
   
  根據預設，當您將數值資料匯入至 [!INCLUDE[msCoName](../includes/msconame-md.md)] Office Excel 時，數字會以含兩個小數位數的十進位格式儲存。 如果這不是適當的數字格式，您應該將它變更成另一個數值格式，或變更小數位數。  
   
- 其中一個選項是使用[重定標籤](relabel-sql-server-data-mining-add-ins.md)工具，以變更數字的顯示或分組的方式。  
+ 其中一個選項是使用[重定標籤](relabel-sql-server-data-mining-add-ins.md)工具來變更數字的顯示或分組的方式。  
   
- 不過，如果資料太複雜，無法處理含有**重定標籤**工具，您可以在 Excel 中使用數值的函式，來將資料轉換成離散範圍，儲存到個別的資料行，該結果，然後使用 離散化資料行分類改為。  
+ 不過，如果您的資料太複雜而無法處理含有**重定標籤**工具，您可以在 Excel 中使用數值的函式，將資料轉換成離散範圍，儲存到個別的資料行，該結果，然後使用 離散化資料行分類改。  
   
  例如，如果您要分析賽跑結果，並想要以分鐘為單位，將跑者依其抵達終點的時間來加以分組，則可以藉由四捨五入法取最接近的分鐘值，並將該捨入值儲存到新資料行。 也可以使用 `MINUTE` 函數只擷取分鐘值，然後將該值儲存到新資料行供分析使用。  
   
@@ -138,14 +138,14 @@ ms.locfileid: "36031800"
   
 2.  以滑鼠右鍵按一下並選取**格式化儲存格**從捷徑功能表。  
   
-3.  在**類別**清單中，選取**數目**。  
+3.  在 **分類**清單中，選取**數目**。  
   
 4.  增加小數位數。 以科學記號標記法表示的機率通常非常小。  
   
      只有數字的顯示會變更，基礎值則不會變更。  
   
 ### <a name="working-with-dates-and-times"></a>處理日期和時間  
- 當您的 Excel 資料表中有日期並且使用此資料行做為輸入或預測時，根據日期或時間資訊的格式，可能會發生未預期的結果。 例如，當您使用**偵測類別目錄**或**分類**件和包含的資料行包含日期，日期會分類成帶有許多小數位數字。 這不是錯誤，而是基礎資料的正確表示方式。 資料採礦演算法會使用基礎儲存格式，而非顯示格式。  
+ 當您的 Excel 資料表中有日期並且使用此資料行做為輸入或預測時，根據日期或時間資訊的格式，可能會發生未預期的結果。 例如，當您使用**偵測類別目錄**或是**分類**，包含資料行包含日期的日期會分類成帶有許多小數位數字。 這不是錯誤，而是基礎資料的正確表示方式。 資料採礦演算法會使用基礎儲存格式，而非顯示格式。  
   
  如果您在使用日期有困難，而且要使用月或日之類的常識群組來分析日期，可以使用 Excel 的 DATE 函數，將年、月或日擷取至另一個資料行，然後改用此資料行進行分類。  
   
@@ -160,13 +160,13 @@ ms.locfileid: "36031800"
   
 -   這種模型也無法預測連續值。 因此，如果您想要預測類似收入的連續數字，您應該先將值分類收納成有意義的範圍。 如果您不確定適當的範圍為何，您可以使用群集演算法來識別資料中的數字團塊。  
   
--   當您使用精靈，此演算法為基礎 (例如[分析關鍵影響因數&#40;適用於 Excel 的資料表分析工具&#41;](analyze-key-influencers-table-analysis-tools-for-excel.md))，精靈將會分類收納連續的資料行您。  
+-   當您使用精靈，此演算法為基礎 (例如[分析關鍵影響因數&#40;適用於 Excel 的資料表分析工具&#41;](analyze-key-influencers-table-analysis-tools-for-excel.md))，都是連續的資料行都會透過精靈進行分類收納您。  
   
--   如果您建立使用貝氏機率分類模型[進階模型&#40;適用於 Excel 的資料採礦增益集&#41;](advanced-modeling-data-mining-add-ins-for-excel.md)選項，將會從模型移除數字資料行。 如果您想要避免此狀況，使用[重定標籤&#40;SQL Server 資料採礦增益集&#41;](relabel-sql-server-data-mining-add-ins.md)工具來建立新的資料行分類收納值。  
+-   如果您使用貝氏機率分類模型建置[進階模型化&#40;適用於 Excel 的資料採礦增益集&#41;](advanced-modeling-data-mining-add-ins-for-excel.md)選項，將會從模型移除數字資料行。 如果您想要避免這個問題，使用[重定標籤&#40;SQL Server 資料採礦增益集&#41;](relabel-sql-server-data-mining-add-ins.md)工具來建立新的資料行已分類收納值。  
   
  **群集模型**  
   
--   群集工具 ([叢集精靈&#40;適用於 Excel 的資料採礦增益集&#41;](cluster-wizard-data-mining-add-ins-for-excel.md)和[偵測類別目錄&#40;適用於 Excel 的資料表分析工具&#41;](detect-categories-table-analysis-tools-for-excel.md)) 也不能使用連續數字，但這兩種工具會自動分類收納數字資料行了。  
+-   叢集工具 ([叢集精靈&#40;適用於 Excel 的資料採礦增益集&#41;](cluster-wizard-data-mining-add-ins-for-excel.md)並[偵測類別目錄&#40;適用於 Excel 的資料表分析工具&#41;](detect-categories-table-analysis-tools-for-excel.md)) 也不能使用連續數字，但這兩種工具將自動分類收納數字資料行的您。  
   
 -   這兩種工具都提供選項讓您選擇結果中輸出類別的數目，但如果您要控制個別資料行中值的分組方式，就應該以您要的群組來建立新的資料行。  
   
@@ -183,7 +183,7 @@ ms.locfileid: "36031800"
   
  例如，如果資料行包含的數字以特定間隔重複 (表示星期幾)，您可能會指定該資料行的內容類型為 `Cyclical`。  
   
- 如果您使用此增益集中所提供的精靈與工具，就不需擔心內容類型。不過，如果您使用[將模型加入結構&#40;適用於 Excel 的資料採礦增益集&#41;](add-model-to-structure-data-mining-add-ins-for-excel.md)模型化選項，將新模型加入至現有的資料，您可能會收到有關內容類型錯誤。  
+ 如果您使用此增益集中所提供的精靈與工具，就不需擔心內容類型。不過，如果您使用[將模型加入結構&#40;適用於 Excel 的資料採礦增益集&#41;](add-model-to-structure-data-mining-add-ins-for-excel.md)模型化選項可將新模型加入至現有的資料，您可能會收到有關內容類型錯誤。  
   
  原因是某些模型類型需要特定種類的資料 (例如時間戳記)。 工具會依據特定需求來處理這些資料行，也會加入內容類型屬性。 因此，如果您以完全不同的演算法重複使用資料，您可能需要變更資料類型或內容類型。  
   
@@ -209,7 +209,7 @@ ms.locfileid: "36031800"
   
  索引鍵資料行通常是數值或文字識別碼，不應該用於分析，只能用於追蹤記錄。 時間序列索引鍵和時序索引鍵則是例外。  
   
- **巢狀資料表索引鍵**取得資料時從外部資料來源的已定義為才可以使用[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]資料來源檢視。 如需巢狀資料表的詳細資訊，請參閱[ http://msdn.microsoft.com/library/ms175659.aspx ](http://msdn.microsoft.com/library/ms175659.aspx):  
+ **巢狀資料表索引鍵**取得資料時從外部資料來源的已定義為才可以使用[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]資料來源檢視。 如需有關巢狀資料表的詳細資訊，請參閱[ http://msdn.microsoft.com/library/ms175659.aspx ](http://msdn.microsoft.com/library/ms175659.aspx):  
   
  此內容類型可以用於以下資料類型：`Date`、`Double`、`Long` 和 `Text`。  
   
@@ -228,7 +228,7 @@ ms.locfileid: "36031800"
   
  也就是說，每個資料列實際上是包含了巢狀資料表 (具有一個或多個資料行以及一個或多個資料列)。  
   
- 巢狀的資料表會非常實用，但您可以使用它們只能搭配[進階模型&#40;適用於 Excel 的資料採礦增益集&#41;](advanced-modeling-data-mining-add-ins-for-excel.md)模型化選項。 例如，範例資料為[關聯精靈&#40;適用於 Excel 的資料採礦用戶端&#41;](associate-wizard-data-mining-client-for-excel.md)精靈和[購物籃分析&#40;適用於 Excel 的資料表 AnalysisTools&#41; ](shopping-basket-analysis-table-analysistools-for-excel.md)工具包含已經從巢狀資料表扁平化的資料。  
+ 巢狀的資料表會非常實用，但您可以使用它們只用[進階模型化&#40;適用於 Excel 的資料採礦增益集&#41;](advanced-modeling-data-mining-add-ins-for-excel.md)模型化選項。 例如，範例資料[關聯精靈&#40;適用於 Excel 的資料採礦用戶端&#41;](associate-wizard-data-mining-client-for-excel.md)精靈並[購物籃分析&#40;適用於 Excel 的資料表 AnalysisTools&#41; ](shopping-basket-analysis-table-analysistools-for-excel.md)工具包含已經過扁平化，從巢狀資料表的資料。  
 
   
   

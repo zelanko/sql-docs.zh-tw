@@ -1,5 +1,5 @@
 ---
-title: 比較表格式和多維度解決方案 (SSAS) |Microsoft 文件
+title: 比較表格式和多維度解決方案 (SSAS) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,25 +8,25 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 76ee5e96-6a04-49af-a88e-cb5fe29f2e9a
 caps.latest.revision: 45
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: b5cfb7c473e16dde04a87a05e3d727d161c62583
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: fbd022ac0771fd862909761b1d4f1abd6e0acf90
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36033155"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37181055"
 ---
 # <a name="comparing-tabular-and-multidimensional-solutions-ssas"></a>比較表格式和多維度解決方案 (SSAS)
   [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 提供兩個不同方法的資料模型化： 表格式和多維度。 雖然這兩種方法有很多重疊之處，但在告知關於後續進展方式的決策這一點上卻有著重大差異。 本主題將會進行功能比較，並說明每一種方法如何應付常見的專案需求。 例如，如果主要的考量是要支援特定資料來源，在關於資料來源的章節可引導您決定要使用哪一個模型化方法。  
   
  本主題包含下列各節：  
   
--   [在 Analysis Services 模型的概觀](#bkmk_overview)  
+-   [Analysis Services 中的模型化的概觀](#bkmk_overview)  
   
 -   [依解決方案類型的資料來源支援](#bkmk_ds)  
   
@@ -38,7 +38,7 @@ ms.locfileid: "36033155"
   
 -   [查詢和指令碼語言支援](#bkmk_lang)  
   
--   [安全性功能支援](#bkmk_sec)  
+-   [安全性功能的支援](#bkmk_sec)  
   
 -   [設計工具](#bkmk_designer)  
   
@@ -48,19 +48,19 @@ ms.locfileid: "36033155"
   
 -   [多維度和表格式解決方案的伺服器部署模式](#bkmk_deploymentmode)  
   
--   [下一步： 建立解決方案](#bkmk_Next)  
+-   [下一步： 建置解決方案](#bkmk_Next)  
   
  在 MSDN 上，可以在此技術文章中找到其他資訊： [在 SQL Server 2012 Analysis Services 中選擇表格式或多維度模型化體驗](http://go.microsoft.com/fwlink/?LinkId=251588)(英文)。  
   
-##  <a name="bkmk_overview"></a> 在 Analysis Services 模型的概觀  
+##  <a name="bkmk_overview"></a> Analysis Services 中的模型化的概觀  
  Analysis Services 提供模型開發體驗，以及透過裝載於 Analysis Services 執行個體上的資料庫進行的模型部署。 模型類型包含表格式和多維度。 如您所料，資料庫裝載支援您所建立的表格式和多維度解決方案，但資料庫裝載也包含 PowerPivot for SharePoint。  
   
- PowerPivot for SharePoint 是 *SharePoint 模式的 Analysis Services*，在此模式中，Analysis Services 會做為 SharePoint 的附屬服務，協助裝載和管理先前在 Excel 中所建立然後儲存到 SharePoint 的 Excel 資料模型。 在此內容中的 Analysis Services 角色負責將資料模型載入到記憶體中、重新整理來自外部資料來源的資料，以及對模型執行查詢。 在此組態中，Analysis Services 會在幕後運作。 所有對 Analysis Services 所做的連接和要求都是由 SharePoint 進行，而且只有當 Excel 活頁簿包含資料模型 (資料模型在 Excel 活頁簿中為選用) 時才會這麼做。 如果建立資料模型在 Excel 中，並將裝載在 SharePoint 中符合您的專案需求，請參閱[Power Pivot： 強大資料分析與在 Excel 中的資料模型化](https://support.office.com/en-ie/article/Power-Pivot-Powerful-data-analysis-and-data-modeling-in-Excel-d7b119ed-1b3b-4f23-b634-445ab141b59b)和[PowerPivot for SharePoint &#40;SSAS&#41; ](power-pivot-sharepoint/power-pivot-for-sharepoint-ssas.md)如需詳細資訊。  
+ PowerPivot for SharePoint 是 *SharePoint 模式的 Analysis Services*，在此模式中，Analysis Services 會做為 SharePoint 的附屬服務，協助裝載和管理先前在 Excel 中所建立然後儲存到 SharePoint 的 Excel 資料模型。 在此內容中的 Analysis Services 角色負責將資料模型載入到記憶體中、重新整理來自外部資料來源的資料，以及對模型執行查詢。 在此組態中，Analysis Services 會在幕後運作。 所有對 Analysis Services 所做的連接和要求都是由 SharePoint 進行，而且只有當 Excel 活頁簿包含資料模型 (資料模型在 Excel 活頁簿中為選用) 時才會這麼做。 如果建立資料模型在 Excel 中，並將其裝載在 SharePoint 中，符合您的專案需求，請參閱[Power Pivot： 強大資料分析與在 Excel 中的資料模型化](https://support.office.com/en-ie/article/Power-Pivot-Powerful-data-analysis-and-data-modeling-in-Excel-d7b119ed-1b3b-4f23-b634-445ab141b59b)並[PowerPivot for SharePoint &#40;SSAS&#41; ](power-pivot-sharepoint/power-pivot-for-sharepoint-ssas.md)如需詳細資訊。  
   
 > [!NOTE]  
 >  Excel 資料模型和表格式模型的架構很類似。 如果您需要支援大量資料，或使用其他不適用於 Excel 的模型功能，您可以將 Excel 資料模型匯入到表格式模型。  
   
- 表格式和多維度解決方案可利用[!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]而且為了供獨立系統上執行的公司 BI 物件[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]執行個體。 這兩個解決方案都會產生高效能分析資料庫，這些資料庫可與 Excel、Reporting Services 報表以及 Microsoft 的其他 BI 應用程式和協力廠商應用程式輕鬆地整合在一起。 這兩種解決方案都會產生獨立資料庫，並可供支援 Analysis Services 的用戶端應用程式使用。  
+ 表格式和多維度解決方案使用來建置[!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]而且為了供獨立上執行的公司 BI 物件[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]執行個體。 這兩個解決方案都會產生高效能分析資料庫，這些資料庫可與 Excel、Reporting Services 報表以及 Microsoft 的其他 BI 應用程式和協力廠商應用程式輕鬆地整合在一起。 這兩種解決方案都會產生獨立資料庫，並可供支援 Analysis Services 的用戶端應用程式使用。  
   
  整體來說，表格式模型和多維度模型之間的差異具有以下特點：  
   
@@ -73,7 +73,7 @@ ms.locfileid: "36033155"
 ##  <a name="bkmk_ds"></a> 依解決方案類型的資料來源支援  
  多維度和表格式模型使用從外部來源匯入的資料。 大部分的開發人員使用設計來支援報告資料結構的資料倉儲，做為模型背後的主要資料來源。 資料倉儲通常是以星形或雪花式結構描述做為架構基礎，並使用 SSIS 來將資料從 OLTP 解決方案載入到資料倉儲。 將資料倉儲做為後端資料來源時，模型化作業會變得更加簡單。  
   
-|**連結**|**支援選項摘要**|  
+|**連結**|**支援的選項摘要**|  
 |--------------|--------------------------------------|  
 |[支援的資料來源&#40;SSAS 多維度&#41;](multidimensional-models/supported-data-sources-ssas-multidimensional.md)|多維度模型使用來自關聯式資料來源的資料。|  
 |[支援的資料來源 &#40;SSAS 表格式&#41;](tabular-models/data-sources-supported-ssas-tabular.md)|表格式模型支援廣泛的資料來源，包括一般檔案、資料摘要以及透過 ODBC 資料提供者加以存取的資料來源。|  
@@ -88,7 +88,7 @@ ms.locfileid: "36033155"
   
  表格式資料庫有時會有更大的壓縮量，大約是十分之一的大小，特別是當大多數資料是從事實資料表匯入時。 對於表格式資料庫而言，記憶體需求將會大於磁碟資料大小，因為將表格式資料庫載入記憶體時會產生額外的資料結構。 在負載之下，任一個解決方案類型的磁碟和記憶體需求應該都會隨著 Analysis Services 快取、儲存、掃描和查詢資料而增加。  
   
- 對於某些專案而言，資料需求可能會很大，而變成了選擇模型類型的一個考量因素。 如果您需要載入的資料大小多達許多 TB，則當可用記憶體無法容納資料時，表格式解決方案可能無法滿足您的需求。 有一個分頁選項可將記憶體中的資料交換到磁碟上，但是如果要容納非常大量的資料，則比較適合多維度解決方案。 目前生產的最大 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 資料庫就是多維度資料庫。 如需有關表格式解決方案的記憶體分頁選項的詳細資訊，請參閱[記憶體屬性](server-properties/memory-properties.md)。 如需有關擴充多維度解決方案的詳細資訊，請參閱 [向外擴充查詢包含唯讀資料庫的 Analysis Services](http://go.microsoft.com/fwlink/?LinkId=251711)。  
+ 對於某些專案而言，資料需求可能會很大，而變成了選擇模型類型的一個考量因素。 如果您需要載入的資料大小多達許多 TB，則當可用記憶體無法容納資料時，表格式解決方案可能無法滿足您的需求。 有一個分頁選項可將記憶體中的資料交換到磁碟上，但是如果要容納非常大量的資料，則比較適合多維度解決方案。 目前生產的最大 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 資料庫就是多維度資料庫。 如需記憶體分頁選項適用於表格式方案的詳細資訊，請參閱[記憶體屬性](server-properties/memory-properties.md)。 如需有關擴充多維度解決方案的詳細資訊，請參閱 [向外擴充查詢包含唯讀資料庫的 Analysis Services](http://go.microsoft.com/fwlink/?LinkId=251711)。  
   
 ##  <a name="bkmk_models"></a> 模型功能  
  下表摘要列出模型層級的功能可用性。 如果您已經安裝 Analysis Services，您可以使用此資訊來了解您所安裝之伺服器模式的功能。 如果您已經熟悉 Analysis Services 中的模型功能，而且您的商業需求包括這些功能當中的一項或多項，您可以檢閱此清單，以確保您想要使用的功能存在於您打算建立的模型類型中。  
@@ -125,7 +125,7 @@ ms.locfileid: "36033155"
 ##  <a name="bkmk_modelsize"></a> 模型大小  
  模型的大小 (就物件總數而言) 不會因解決方案類型而異。 但是，用來建立每個解決方案的設計工具，會因為其適應處理大量物件的方式而有所不同。 較大的模型比較容易在 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] 中建立，因為它會在 [物件總管] 和 [方案總管] 中提供更多的功能來依據類型繪製物件圖表及列出物件。  
   
- 由數以百計的資料表或維度組成的極大模型通常會以程式設計方式在 Visual Studio 中建立，而不是在設計工具中建立。 如需有關在模型中的物件數目上限的詳細資訊，請參閱[最大容量規格&#40;Analysis Services&#41;](multidimensional-models/olap-physical/maximum-capacity-specifications-analysis-services.md)。  
+ 由數以百計的資料表或維度組成的極大模型通常會以程式設計方式在 Visual Studio 中建立，而不是在設計工具中建立。 如需詳細的模型中的物件數目上限的詳細資訊，請參閱[最大容量規格&#40;Analysis Services&#41;](multidimensional-models/olap-physical/maximum-capacity-specifications-analysis-services.md)。  
   
 ##  <a name="bkmk_ext"></a> 可程式性和開發人員體驗  
  如果是表格式和多維度模型，這兩種型態會共用一個物件模型。 AMO 和 ADOMD.NET 支援這兩個模式。 兩者都不會針對表格式建構修改用戶端程式庫，所以您必須了解多維度和表格式建構與命名慣例彼此之間的關係。 在第一個步驟中，請檢閱 AMO 對表格式程式設計範例，以了解 AMO 針對表格式模型的程式設計方式。 如需詳細資訊，請從 [codeplex 網站](http://go.microsoft.com/fwlink/?LinkID=221036)下載範例。  
@@ -145,7 +145,7 @@ ms.locfileid: "36033155"
   
  所有資料庫都支援 XML/A。  
   
-##  <a name="bkmk_sec"></a> 安全性功能支援  
+##  <a name="bkmk_sec"></a> 安全性功能的支援  
  所有 Analysis Services 方案都可以在資料庫層級維護安全。 其他細微的安全性選項會因模式而異。 如果您的方案需要細微的安全性設定，請檢閱以下清單，以確保您想要建立的方案類型可支援您想要的安全性層級：  
   
 -   表格式模型資料庫可以透過 Analysis Services 中以角色為基礎的權限來使用資料列層級安全性。  
@@ -160,7 +160,7 @@ ms.locfileid: "36033155"
 |**模型化工具**|**使用方式**|  
 |-----------------------|------------------|  
 |[!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]|用來建立表格式、多維度和資料採礦方案。 此撰寫環境會使用 Visual Studio Shell 來提供工作空間、屬性窗格和物件導覽。 已經使用 Visual Studio 的技術使用者最有可能偏好使用這個工具來建立商業智慧應用程式。 請參閱[工具和 Analysis Services 中使用的應用程式](tools-and-applications-used-in-analysis-services.md)如需詳細資訊。|  
-|Excel 2013 和更新版本 (含 Powerpivot for Excel 增益集)|PowerPivot for Excel 是用來編輯和增強 Excel 資料模型的工具。 它有個別的應用程式工作區，會透過 Excel 開啟，但與 Excel 使用相同的視覺介面 (索引標籤式的頁面、方格配置和公式列)。 使用者是非常熟悉 Excel 通常會偏愛這個工具勝過[!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]。 請參閱 [Power Pivot：Excel 中的強大資料分析與資料模型](https://support.office.com/en-ie/article/Power-Pivot-Powerful-data-analysis-and-data-modeling-in-Excel-d7b119ed-1b3b-4f23-b634-445ab141b59b)。|  
+|Excel 2013 和更新版本 (含 Powerpivot for Excel 增益集)|PowerPivot for Excel 是用來編輯和增強 Excel 資料模型的工具。 它有個別的應用程式工作區，會透過 Excel 開啟，但與 Excel 使用相同的視覺介面 (索引標籤式的頁面、方格配置和公式列)。 通常是非常熟悉 Excel 的使用者會偏愛這個工具勝過[!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]。 請參閱 [Power Pivot：Excel 中的強大資料分析與資料模型](https://support.office.com/en-ie/article/Power-Pivot-Powerful-data-analysis-and-data-modeling-in-Excel-d7b119ed-1b3b-4f23-b634-445ab141b59b)。|  
   
 ##  <a name="bkmk_client"></a> 用戶端和報告應用程式  
  在舊版中，您所選擇的模型類型會影響您可以使用的用戶端應用程式，但隨著時間的推進，影響的程度已減弱。 對於連接到 Analysis Services 資料的用戶端應用程式，表格式和多維度模型所提供的支援大致相同。 下表列出可搭配 Analysis Services 資料模型使用的 Microsoft 用戶端應用程式。  
@@ -178,9 +178,9 @@ ms.locfileid: "36033155"
   
 |部署模式|描述|  
 |---------------------|-----------------|  
-|0 - 多維度和資料採礦|執行多維度和資料採礦解決方案，您會將這些解決方案部署到 Analysis Services 預設執行個體。 部署模式 0 是 Analysis Services 安裝的預設值。 如需詳細資訊，請參閱[以多維度和資料採礦模式安裝 Analysis Services](../../2014/sql-server/install/install-analysis-services-in-multidimensional-and-data-mining-mode.md)。|  
+|0 - 多維度和資料採礦|執行多維度和資料採礦解決方案，您會將這些解決方案部署到 Analysis Services 預設執行個體。 部署模式 0 是 Analysis Services 安裝的預設值。 如需詳細資訊，請參閱 <<c0> [ 以多維度和資料採礦模式安裝 Analysis Services](../../2014/sql-server/install/install-analysis-services-in-multidimensional-and-data-mining-mode.md)。|  
 |1 - PowerPivot for SharePoint|就 Excel 資料模型的存取而言，Analysis Services 是 SharePoint 的內部元件。 Analysis Services 會以部署模式 1 進行安裝，並且只接受來自 SharePoint 環境中 Excel Services 的要求。 如需詳細資訊，請參閱＜ [PowerPivot for SharePoint 2010 Installation](../../2014/sql-server/install/powerpivot-for-sharepoint-2010-installation.md)＞。|  
-|2 - 表格式|在設定部署模式 2 的獨立 Analysis Services 執行個體上執行表格式解決方案。 如需詳細資訊，請參閱[以表格式模式安裝 Analysis Services](instances/install-windows/install-analysis-services.md)。|  
+|2 - 表格式|在設定部署模式 2 的獨立 Analysis Services 執行個體上執行表格式解決方案。 如需詳細資訊，請參閱 <<c0> [ 以表格式模式安裝 Analysis Services](instances/install-windows/install-analysis-services.md)。|  
   
  請注意，伺服器模型不能互換。 進行安裝時，就會選擇伺服器的作業模式。 您應該安裝多個執行個體，讓每種伺服器模式各有一個執行個體，以支援所有工作負載。  
   
@@ -207,10 +207,10 @@ ms.locfileid: "36033155"
   
 ## <a name="see-also"></a>另請參閱  
  [Analysis Services 執行個體管理](instances/analysis-services-instance-management.md)   
- [新功能 Analysis Services 和 Business Intelligence](what-s-new-in-analysis-services.md)   
- [最新消息&#40;Reporting Services&#41;](../../2014/reporting-services/what-s-new-reporting-services.md)   
+ [新 Analysis Services 和 Business Intelligence 功能](what-s-new-in-analysis-services.md)   
+ [新功能&#40;Reporting Services&#41;](../../2014/reporting-services/what-s-new-reporting-services.md)   
  [在 PowerPivot 中最新消息](http://go.microsoft.com/fwlink/?LinkId=238141)   
- [適用於 SQL Server 2012 PowerPivot 說明](http://go.microsoft.com/fwlink/?LinkID=220946)   
+ [適用於 SQL Server 2012 的 PowerPivot 說明](http://go.microsoft.com/fwlink/?LinkID=220946)   
  [PowerPivot BI 語意模型連接&#40;.bism&#41;](power-pivot-sharepoint/power-pivot-bi-semantic-model-connection-bism.md)   
  [建立和管理共用資料來源 &#40;SharePoint 整合模式的 Reporting Services&#41;](../../2014/reporting-services/create-manage-shared-data-sources-reporting-services-sharepoint-integrated-mode.md)  
   

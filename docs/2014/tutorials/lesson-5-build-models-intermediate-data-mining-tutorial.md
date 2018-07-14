@@ -1,5 +1,5 @@
 ---
-title: 第 5 課： 建立類神經網路和羅吉斯迴歸模型 （中繼資料採礦教學課程） |Microsoft 文件
+title: 第 5 課： 建立類神經網路和羅吉斯迴歸模型 （中繼資料採礦教學課程） |Microsoft Docs
 ms.custom: ''
 ms.date: 12/29/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - logistic regression [Analysis Services]
 - data mining [Analysis Services], tutorials
@@ -19,18 +19,18 @@ ms.assetid: 42c3701a-1fd2-44ff-b7de-377345bbbd6b
 caps.latest.revision: 22
 author: minewiskan
 ms.author: owend
-manager: kfile
-ms.openlocfilehash: 2d94de9698ea0e4d8fa0dce110a6e661b941d1be
-ms.sourcegitcommit: 8c040e5b4e8c7d37ca295679410770a1af4d2e1f
+manager: craigg
+ms.openlocfilehash: 93946e13e9836aef4cd10bc39ec964e7f8c0d531
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/21/2018
-ms.locfileid: "36311826"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37222338"
 ---
 # <a name="lesson-5-building-neural-network-and-logistic-regression-models-intermediate-data-mining-tutorial"></a>第五課：建立類神經網路和羅吉斯迴歸模型 (中繼資料採礦教學課程)
   
   
- 營業部門[!INCLUDE[ssSampleDBCoShort](../includes/sssampledbcoshort-md.md)]參與專案用來改善其撥接中心的客戶滿意度。 他們雇用廠商來管理撥接中心、回報撥接中心績效的數據，並要求您分析廠商所提供的一些初步資料。 他們想要知道是否有任何有趣的發現。 他們尤其想知道這些資料是否反映出有關人員雇用的任何問題，或改善客戶滿意度的方式。  
+ 營業部門[!INCLUDE[ssSampleDBCoShort](../includes/sssampledbcoshort-md.md)]提升撥接中心的客戶滿意度參與專案。 他們雇用廠商來管理撥接中心、回報撥接中心績效的數據，並要求您分析廠商所提供的一些初步資料。 他們想要知道是否有任何有趣的發現。 他們尤其想知道這些資料是否反映出有關人員雇用的任何問題，或改善客戶滿意度的方式。  
   
  這個資料集很小，只包含期限為 30 天的撥接中心作業。 這些資料會追蹤每個排班的新進和資深操作員數目、來電數目、訂單數目、必須解決的問題數目，以及客戶等候電話回應的平均時間。 資料也包含以 *「放棄率」*(Abandon Rate) (這是客戶挫折度的指標) 為基礎的服務品質標準。  
   
@@ -47,18 +47,18 @@ ms.locfileid: "36311826"
   
  這個課程包含下列主題：  
   
--   [加入資料來源檢視撥接中心資料&#40;中繼資料採礦教學課程&#41;](../../2014/tutorials/add-data-source-view-call-center-data-intermediate-data-mining.md)  
+-   [新增資料來源的撥接中心資料的檢視&#40;中繼資料採礦教學課程&#41;](../../2014/tutorials/add-data-source-view-call-center-data-intermediate-data-mining.md)  
   
 -   [建立類神經網路結構和模型&#40;中繼資料採礦教學課程&#41;](../../2014/tutorials/creating-a-neural-network-structure-and-model-intermediate-data-mining-tutorial.md)  
   
--   [瀏覽撥接中心模型&#40;中繼資料採礦教學課程&#41;](../../2014/tutorials/exploring-the-call-center-model-intermediate-data-mining-tutorial.md)  
+-   [探索撥接中心模型&#40;中繼資料採礦教學課程&#41;](../../2014/tutorials/exploring-the-call-center-model-intermediate-data-mining-tutorial.md)  
   
 -   [將羅吉斯迴歸模型加入到撥接中心結構&#40;中繼資料採礦教學課程&#41;](../../2014/tutorials/add-logistic-regression-model-to-call-center-intermediate-data-mining.md)  
   
 -   [建立用於撥接中心模型的預測&#40;中繼資料採礦教學課程&#41;](../../2014/tutorials/create-predictions-call-center-models-intermediate-data-mining-tutorial.md)  
   
 ## <a name="next-task-in-lesson"></a>本課程的下一項工作  
- [加入資料來源檢視撥接中心資料&#40;中繼資料採礦教學課程&#41;](../../2014/tutorials/add-data-source-view-call-center-data-intermediate-data-mining.md)  
+ [新增資料來源的撥接中心資料的檢視&#40;中繼資料採礦教學課程&#41;](../../2014/tutorials/add-data-source-view-call-center-data-intermediate-data-mining.md)  
   
 ## <a name="all-lessons"></a>所有課程  
  [第 1 課： 建立中繼資料採礦方案&#40;中繼資料採礦教學課程&#41;](../../2014/tutorials/lesson-1-create-solution-intermediate-data-mining-tutorial.md)  
@@ -67,7 +67,7 @@ ms.locfileid: "36311826"
   
  [第 3 課： 建立購物籃狀況&#40;中繼資料採礦教學課程&#41;](../../2014/tutorials/lesson-3-building-a-market-basket-scenario-intermediate-data-mining-tutorial.md)  
   
- [第 4 課： 建立時序群集狀況&#40;中繼資料採礦教學課程&#41;](../../2014/tutorials/lesson-4-build-sequence-clustering-scenario-intermediate-data-mining.md)  
+ [第 4 課： 建立時序群集案例&#40;中繼資料採礦教學課程&#41;](../../2014/tutorials/lesson-4-build-sequence-clustering-scenario-intermediate-data-mining.md)  
   
  第五課：類神經網路和羅吉斯迴歸案例 (中繼資料採礦教學課程)  
   

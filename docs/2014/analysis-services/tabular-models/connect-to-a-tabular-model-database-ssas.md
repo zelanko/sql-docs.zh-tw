@@ -1,5 +1,5 @@
 ---
-title: 連接到表格式模型資料庫 (SSAS) |Microsoft 文件
+title: 連接到表格式模型資料庫 (SSAS) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 983d0c8a-77da-4c6e-8638-283bcb14f143
 caps.latest.revision: 16
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 71bfa13950656ea662ba91532abf765bd1b126c8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 8add1b36631df0706c6463112ed47fcf7f792bb8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36033439"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37190918"
 ---
 # <a name="connect-to-a-tabular-model-database-ssas"></a>連接到表格式模型資料庫 (SSAS)
   建置表格式模型，並將其部署到 Analysis Services 表格式模式伺服器之後，您需要設定權限，使其可供用戶端應用程式使用。 此主題說明如何設定權限和如何從用戶端應用程式連接到資料庫。  
@@ -85,7 +85,7 @@ ms.locfileid: "36033439"
   
 2.  選取 [從 Analysis Services]。  
   
-3.  在 [伺服器名稱] 中，指定裝載資料庫的 Analysis Services 執行個體。 伺服器名稱通常是執行伺服器軟體之電腦的名稱。 如果伺服器已安裝成具名執行個體，您必須以此格式指定名稱： \<servername >\\< instancename\>。  
+3.  在 [伺服器名稱] 中，指定裝載資料庫的 Analysis Services 執行個體。 伺服器名稱通常是執行伺服器軟體之電腦的名稱。 如果伺服器安裝成具名執行個體，您必須以此格式指定名稱：\<伺服器名稱 >\\< 執行個體名稱\>。  
   
      您必須針對獨立的表格式部署設定伺服器執行個體，而且伺服器執行個體必須有允許存取的輸入規則。 如需詳細資訊，請參閱[判斷 Analysis Services 執行個體的伺服器模式](../instances/determine-the-server-mode-of-an-analysis-services-instance.md)和[設定 Windows 防火牆以允許 Analysis Services 存取](../instances/configure-the-windows-firewall-to-allow-analysis-services-access.md)。  
   
@@ -96,7 +96,7 @@ ms.locfileid: "36033439"
  建立連接之後，您可以使用資料來建立樞紐分析表或樞紐分析圖。 如需詳細資訊，請參閱[在 Excel 中進行分析 &#40;SSAS 表格式&#41;](analyze-in-excel-ssas-tabular.md)。  
   
 ##  <a name="bkmk_sharepoint"></a> 從 SharePoint 連接  
- 如果您要使用 PowerPivot for SharePoint，可以在 SharePoint 中建立 BI 語意模型連接檔案，這個檔案會重新導向至 Analysis Services 表格式模式伺服器上執行的資料庫。 BI 語意模型連接會提供 HTTP 端點給資料庫。 它也會針對例行使用 SharePoint 網站之文件的知識工作者，簡化表格式模型存取。 知識工作者只需要知道 BI 語意模型連接檔案的位置或其 URL，就可以存取表格式模型資料庫。 關於伺服器位置或資料庫名稱的詳細資料，都會封裝在 BI 語意模型連接中。 如需有關建立及使用 BI 語意模型連接檔案的詳細資訊，請參閱[PowerPivot BI 語意模型連接&#40;.bism&#41; ](../power-pivot-sharepoint/power-pivot-bi-semantic-model-connection-bism.md)和[建立 BI 語意模型連接到表格式模型資料庫](../power-pivot-sharepoint/create-a-bi-semantic-model-connection-to-a-tabular-model-database.md)。  
+ 如果您要使用 PowerPivot for SharePoint，可以在 SharePoint 中建立 BI 語意模型連接檔案，這個檔案會重新導向至 Analysis Services 表格式模式伺服器上執行的資料庫。 BI 語意模型連接會提供 HTTP 端點給資料庫。 它也會針對例行使用 SharePoint 網站之文件的知識工作者，簡化表格式模型存取。 知識工作者只需要知道 BI 語意模型連接檔案的位置或其 URL，就可以存取表格式模型資料庫。 關於伺服器位置或資料庫名稱的詳細資料，都會封裝在 BI 語意模型連接中。 如需有關建立及使用 BI 語意模型連接檔案的詳細資訊，請參閱 < [PowerPivot BI 語意模型連接&#40;.bism&#41; ](../power-pivot-sharepoint/power-pivot-bi-semantic-model-connection-bism.md)並[建立 BI 語意模型連接到表格式模型資料庫](../power-pivot-sharepoint/create-a-bi-semantic-model-connection-to-a-tabular-model-database.md)。  
   
 ##  <a name="bkmk_Tshoot"></a> 連接問題的疑難排解  
  本節提供連接到表格式模型資料庫時發生之問題的原因和解決步驟。  

@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Log Reader Agent, executables
 - Log Reader Agent, parameter reference
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - command prompt [SQL Server replication]
 ms.assetid: 5487b645-d99b-454c-8bd2-aff470709a0e
 caps.latest.revision: 50
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 8bef914f1fd6a2cd4dff784808e5334d3871d81c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: ff0ad36402857082e069a322e4519d64b13f7e65
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36031414"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37215338"
 ---
 # <a name="replication-log-reader-agent"></a>複寫記錄讀取器代理程式
   「複寫記錄讀取器代理程式」是一個可執行檔，它會監視針對異動複寫所設定之每個資料庫的交易記錄，並將標示要複寫的交易從交易記錄複製到散發資料庫中。  
@@ -145,7 +145,7 @@ ms.locfileid: "36031414"
  **-OutputVerboseLevel** [ **0**| **1**| **2** | **3** | **4** ]  
  指定輸出是否應該詳細。  
   
-|ReplTest1|描述|  
+|值|描述|  
 |-----------|-----------------|  
 |**0**|僅列印錯誤訊息。|  
 |**1**|列印所有代理程式進度報表訊息。|  

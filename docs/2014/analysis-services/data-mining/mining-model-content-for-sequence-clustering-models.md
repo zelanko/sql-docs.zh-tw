@@ -1,5 +1,5 @@
 ---
-title: 時序群集模型的採礦模型內容 (Analysis Services-資料採礦) |Microsoft 文件
+title: 時序群集模型的採礦模型內容 (Analysis Services-資料採礦) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - mining model content, sequence clustering models
 - sequence clustering algorithms [Analysis Services]
 ms.assetid: 68e1934a-e147-4d53-b122-fa15e3fd5485
 caps.latest.revision: 23
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: bb03523f20468a24cb901f08dd0eff9a368aa8cc
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: f0b505e01e6b8334ed1a0baeaacbda7e29ba7407
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36031781"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37208148"
 ---
 # <a name="mining-model-content-for-sequence-clustering-models-analysis-services---data-mining"></a>時序群集模型的採礦模型內容 (Analysis Services - 資料採礦)
   本主題描述使用 Microsoft 時序群集演算法的模型專用的採礦模型內容。 如需與適用於所有模型類型採礦模型內容相關的一般及統計詞彙說明，請參閱[採礦模型內容 &#40;Analysis Services - 資料採礦&#41;](mining-model-content-analysis-services-data-mining.md)。  
@@ -158,7 +158,7 @@ ms.locfileid: "36031781"
 ###  <a name="bkmk_NODEDIST"></a> NODE_DISTRIBUTION 資料表  
  NODE_DISTRIBUTION 資料表會針對特定群集的轉換和時序，提供詳細的機率與支援資訊。  
   
- 系統一律會將資料列加入到轉換資料表中，代表可能的 `Missing` 值。 如需有關什麼資訊`Missing`值的方式，以及分割如何影響計算，請參閱[遺漏值&#40;Analysis Services-Data Mining&#41;](missing-values-analysis-services-data-mining.md)。  
+ 系統一律會將資料列加入到轉換資料表中，代表可能的 `Missing` 值。 如需有關哪些資訊`Missing`值含義及它如何影響計算，請參閱[遺漏值&#40;Analysis Services-Data Mining&#41;](missing-values-analysis-services-data-mining.md)。  
   
  支援與機率的計算會根據計算應用於定型案例或完成的模型而有所不同。 這是因為預設的群集方法 Expectation Maximization (EM) 假設任何案例都可以屬於一個以上的群集。 計算模型中案例的支援時，可以使用原始計數和原始機率。 不過，群集中任何特定時序的機率都必須透過所有可能之時序和群集組合的總和加權。  
   
@@ -182,7 +182,7 @@ ORDER BY Count(*) DESC
   
 |OrderNumber|LineNumber|[模型]|  
 |-----------------|----------------|-----------|  
-|SO58845|@shouldalert|Mountain-500|  
+|SO58845|1|Mountain-500|  
 |SO58845|2|LL Mountain Tire|  
 |SO58845|3|Mountain Tire Tube|  
 |SO58845|4|Fender Set - Mountain|  

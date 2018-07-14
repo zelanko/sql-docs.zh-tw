@@ -1,5 +1,5 @@
 ---
-title: 將功能加入至 SQL Server 2014 （安裝程式） 的執行個體 |Microsoft 文件
+title: 將功能加入至 SQL Server 2014 （安裝程式） 的執行個體 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,29 +8,29 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - feature adding [SQL Server]
 - SQL Server, features
 - adding features to SQL Server
 ms.assetid: 97931fdc-d943-48dd-81b9-ae8b8d2c6dad
 caps.latest.revision: 28
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: cf44b5cd848a3a315290e88e00b49a2e0156024a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: c3bdfd58db40fe34cc107b412c531bc8a3e75ebe
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36031498"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37225950"
 ---
 # <a name="add-features-to-an-instance-of-sql-server-2014-setup"></a>將功能加入至 SQL Server 2014 的執行個體 (安裝程式)
-  本主題提供將功能加入 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]執行個體的逐步程序。 某些 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 元件或服務是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體所特有， 也可感知執行個體。 這些元件或服務也會與裝載它們的執行個體共用相同的版本，並專門用於該執行個體。 如果還未安裝感知執行個體元件及其共用元件，可以將其加入執行個體 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 如需所支援的版本功能的清單[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，請參閱[支援的 SQL Server 2014 的版本功能](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)。  
+  本主題提供將功能加入 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]執行個體的逐步程序。 某些 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 元件或服務是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體所特有， 也可感知執行個體。 這些元件或服務也會與裝載它們的執行個體共用相同的版本，並專門用於該執行個體。 如果還未安裝感知執行個體元件及其共用元件，可以將其加入執行個體 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 如需的版本所支援的功能清單[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，請參閱 <<c2> [ 支援的 SQL Server 2014 的版本功能](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)。  
   
- 若要將功能加入執行個體[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]從命令提示字元中，請參閱[從命令提示字元安裝 SQL Server 2014](install-sql-server-from-the-command-prompt.md)。  
+ 若要將功能加入至執行個體[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]從命令提示字元中，請參閱[從命令提示字元安裝 SQL Server 2014](install-sql-server-from-the-command-prompt.md)。  
   
-## <a name="prerequisites"></a>必要條件  
+## <a name="prerequisites"></a>先決條件  
  在繼續進行之前，請檢閱 [規劃 SQL Server 安裝](../../sql-server/install/planning-a-sql-server-installation.md)中的主題。  
   
 > [!NOTE]  
@@ -57,7 +57,7 @@ ms.locfileid: "36031498"
   
 7.  在 [安裝類型] 頁面上，選取 [將功能加入到現有的 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 執行個體] 選項，然後選取要更新的執行個體。  
   
-8.  在 [特徵選取] 頁面上，選取要安裝的元件。 當您選取功能名稱之後，每一個元件群組的描述就會出現在右手邊窗格中。 您可以選取核取方塊的任何組合。 如需詳細資訊，請參閱[版本和 SQL Server 2014 元件](../../sql-server/editions-and-components-of-sql-server-2016.md)。 在給定的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體上，每個元件都只能安裝一次。 若要安裝多個元件，您必須安裝其他 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體。  
+8.  在 [特徵選取] 頁面上，選取要安裝的元件。 當您選取功能名稱之後，每一個元件群組的描述就會出現在右手邊窗格中。 您可以選取核取方塊的任何組合。 如需詳細資訊，請參閱 <<c0> [ 版本和 SQL Server 2014 元件](../../sql-server/editions-and-components-of-sql-server-2016.md)。 在給定的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體上，每個元件都只能安裝一次。 若要安裝多個元件，您必須安裝其他 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體。  
   
      右窗格會顯示選取功能的必要條件。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝程式將會在這個程序稍後說明的安裝步驟期間安裝尚未安裝的必要條件。  
   
@@ -83,9 +83,9 @@ ms.locfileid: "36031498"
   
     -   安全性模式 - 為 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體選取 Windows 驗證或混合模式驗證。 如果您選取混合模式驗證，就必須為內建 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 系統管理員帳戶提供增強式密碼。  
   
-         當裝置與 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]建立成功的連接之後，Windows 驗證和混合模式的安全性機制是相同的。 如需詳細資訊，請參閱[Database Engine 組態-帳戶提供](../../sql-server/install/database-engine-configuration-account-provisioning.md)。  
+         當裝置與 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]建立成功的連接之後，Windows 驗證和混合模式的安全性機制是相同的。 如需詳細資訊，請參閱 < [Database Engine 組態-帳戶佈建](../../sql-server/install/database-engine-configuration-account-provisioning.md)。  
   
-    -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 管理員 - 您在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體上至少必須指定一個系統管理員。 若要加入 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝程式執行所用的帳戶，請按一下 **[加入目前使用者]**。 若要從系統管理員清單中加入或移除帳戶，請按一下 **[加入]** 或 **[移除]**，然後編輯在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體中將會有管理員權限的使用者、群組或電腦清單。 如需詳細資訊，請參閱[Database Engine 組態-帳戶提供](../../sql-server/install/database-engine-configuration-account-provisioning.md)。  
+    -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 管理員 - 您在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體上至少必須指定一個系統管理員。 若要加入 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝程式執行所用的帳戶，請按一下 **[加入目前使用者]**。 若要從系統管理員清單中加入或移除帳戶，請按一下 **[加入]** 或 **[移除]**，然後編輯在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體中將會有管理員權限的使用者、群組或電腦清單。 如需詳細資訊，請參閱 < [Database Engine 組態-帳戶佈建](../../sql-server/install/database-engine-configuration-account-provisioning.md)。  
   
      當您完成清單的編輯之後，請按一下 **[確定]**。 然後，在組態對話方塊中確認管理員的清單。 當此清單完成時，請按 **[下一步]**。  
   

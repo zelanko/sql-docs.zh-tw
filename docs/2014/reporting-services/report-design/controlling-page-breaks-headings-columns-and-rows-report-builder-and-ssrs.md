@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 4b8fa41f-a727-4f23-8efb-fd9bb0d4cd1d
 caps.latest.revision: 4
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: c8dded85621d3e53fb7831725eed240b8501b072
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: b3a46a42c3891080b601350ded50ca77c4d94fdd
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36031376"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37222928"
 ---
 # <a name="controlling-page-breaks-headings-columns-and-rows-report-builder-and-ssrs"></a>控制分頁符號、標題、資料行和資料列 (報表產生器及 SSRS)
   分頁符號可以將報表分割成不同的頁面進行檢視和列印。 當您預覽報表或將它匯出成不同的檔案格式時，分頁符號會決定內容如何納入報表頁面，以便進行最佳檢視。  
@@ -37,6 +37,6 @@ ms.locfileid: "36031376"
  [清單 &#40;報表產生器及 SSRS&#41;](tables-matrices-and-lists-report-builder-and-ssrs.md)   
  [控制報表頁面上的 Tablix 資料區顯示 &#40;報表產生器及 SSRS&#41;](controlling-the-tablix-data-region-display-on-a-report-page.md)   
  [群組窗格 &#40;報表產生器&#41;](grouping-pane-report-builder.md)   
- [顯示頁首和頁尾與群組&#40;報表產生器和 SSRS&#41;](display-headers-and-footers-with-a-group-report-builder-and-ssrs.md)  
+ [顯示頁首和頁尾與群組&#40;報表產生器及 SSRS&#41;](display-headers-and-footers-with-a-group-report-builder-and-ssrs.md)  
   
   

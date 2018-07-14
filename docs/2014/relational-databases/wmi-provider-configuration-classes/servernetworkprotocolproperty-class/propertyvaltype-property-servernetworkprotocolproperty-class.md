@@ -1,5 +1,5 @@
 ---
-title: PropertyValType 屬性 （ServerNetworkProtocolProperty 類別） |Microsoft 文件
+title: PropertyValType 屬性 （ServerNetworkProtocolProperty 類別） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - PropertyValType property
 ms.assetid: fbd42e8e-0642-4a19-b3c8-6ce88345145f
 caps.latest.revision: 30
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: ca660a1c991e11a15a6968eb539c36cbb63c223b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+ms.openlocfilehash: 52331d787707fbd4882055023ba289a60b2dc250
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36031819"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37201118"
 ---
 # <a name="propertyvaltype-property-servernetworkprotocolproperty-class"></a>PropertyValType 屬性 (ServerNetworkProtocolProperty 類別)
   取得儲存於參考之屬性內之值的資料類型。  

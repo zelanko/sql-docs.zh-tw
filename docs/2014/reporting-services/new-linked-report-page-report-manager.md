@@ -1,5 +1,5 @@
 ---
-title: 新增連結的報表頁面 （報表管理員） |Microsoft 文件
+title: 新增連結的報表頁面 （報表管理員） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 applies_to:
 - SQL Server 2014
 ms.assetid: fefb46e8-6901-4d50-a3f8-7c49ad72e7b1
 caps.latest.revision: 22
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 635352076fac4e993ce7a46e3b66c2e1089f6b59
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: cb12f9012055b4de29712255b427a93dfafef2db
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36032240"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37201018"
 ---
 # <a name="new-linked-report-page-report-manager"></a>新增連結報表頁面 (報表管理員)
   使用 [新增連結報表] 頁面即可建立連結報表。 連結報表具有專屬的設定值和屬性，但連結至另一個報表的報表定義。 當您有想要針對特定群組或使用者改變的基底報表時，連結報表就很有用。例如，根據您指定為參數之區域碼傳回不同資料的區域報表。 通常是在變更參數化的報表時建立連結報表，然後以不同的參數值儲存每一個報表執行個體。 不過，可以從您有權存取的任何報表來建立連結報表。  

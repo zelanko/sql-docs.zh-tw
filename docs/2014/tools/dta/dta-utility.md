@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - physical design structures [SQL Server]
 - command prompt utilities [SQL Server], dta
@@ -21,15 +21,15 @@ helpviewer_keywords:
 - optimizing databases [SQL Server]
 ms.assetid: a0b210ce-9b58-4709-80cb-9363b68a1f5a
 caps.latest.revision: 52
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: c659a1637b56015bf4642e87677529b0ea4e518b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 5dcf0994c14496f32de3734d5456d462ad74fe74
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36031357"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37200818"
 ---
 # <a name="dta-utility"></a>dta 公用程式
   **dta** 公用程式是 Database Engine Tuning Advisor 的命令提示字元版本。 **dta** 公用程式的設計，是為了讓您在應用程式和指令碼中使用 Database Engine Tuning Advisor 功能。  
@@ -138,7 +138,7 @@ dta -d AdventureWorks2012 ...
   
  如果指定了多個資料庫名稱， **dta** 就會傳回錯誤。 **-d** 引數是選擇性的。  
   
- 如果您使用 XML 輸入的檔，您可以指定的第一個資料庫**dta**會使用連接`DatabaseToConnect`之下的項目`TuningOptions`項目。 如需詳細資訊，請參閱 [Database Engine Tuning Advisor](../../relational-databases/performance/database-engine-tuning-advisor.md)。  
+ 如果您使用 XML 輸入的檔，您可以指定它的第一個資料庫**dta**會使用連接`DatabaseToConnect`之下的項目`TuningOptions`項目。 如需詳細資訊，請參閱 [Database Engine Tuning Advisor](../../relational-databases/performance/database-engine-tuning-advisor.md)。  
   
  如果您只微調一個資料庫， **-d** 引數會提供類似 **sqlcmd** 公用程式中 **-d** 引數的功能，但它不會執行 USE *database_name* 陳述式。 如需詳細資訊，請參閱 [sqlcmd Utility](../sqlcmd-utility.md)。  
   
@@ -153,7 +153,7 @@ dta -d AdventureWorks2012 ...
 |參數|預設值|  
 |---------------|-------------------|  
 |*database_name*|使用*database_name* 選項指定的 **database_name** |  
-|*owner_name*|**dbo**<br /><br /> 注意： *owner_name*必須**dbo**。 如果指定了任何其他值， **dta** 的執行便會失敗並傳回錯誤。|  
+|*owner_name*|**dbo**<br /><br /> 注意︰ *owner_name*必須**dbo**。 如果指定了任何其他值， **dta** 的執行便會失敗並傳回錯誤。|  
 |*table_name*|無|  
   
  如果使用檔案，請指定 .xml 副檔名。 例如，TuningLog.xml。  
@@ -165,9 +165,9 @@ dta -d AdventureWorks2012 ...
  允許 **dta** 覆寫現有的輸出檔。 如果已存在相同名稱的輸出檔，且未指定 **-F** ， **dta**就會傳回錯誤。 您可以使用 **-F** 搭配 **-of**、 **-or**或 **-ox**。  
   
  **-fa** *physical_design_structures_to_add*  
- 指定 **dta** 應該在建議中包含的實體設計結構類型。 下表列出並說明這個引數所能指定的值。 如果未不指定任何值， **dta**會使用預設 **-fa**`IDX`。  
+ 指定 **dta** 應該在建議中包含的實體設計結構類型。 下表列出並說明這個引數所能指定的值。 指定任何值時， **dta**會使用預設 **-fa**`IDX`。  
   
-|ReplTest1|描述|  
+|值|描述|  
 |-----------|-----------------|  
 |IDX_IV|索引和索引檢視表。|  
 |IDX|只有索引。|  
@@ -180,7 +180,7 @@ dta -d AdventureWorks2012 ...
  **-fk** *keep_existing_option*  
  指定 **dta** 在產生建議時，必須保留的現有實體設計結構。 下表列出並說明這個引數所能指定的值：  
   
-|ReplTest1|描述|  
+|值|描述|  
 |-----------|-----------------|  
 |無|無現有結構。|  
 |ALL|所有現有結構。|  
@@ -191,7 +191,7 @@ dta -d AdventureWorks2012 ...
  **-fp** *partitioning_strategy*  
  指定是否應該分割 **dta** 所提出的新實體設計結構 (索引和索引檢視表) 及其分割方式。 下表列出並說明這個引數所能指定的值：  
   
-|ReplTest1|描述|  
+|值|描述|  
 |-----------|-----------------|  
 |無|沒有資料分割。|  
 |FULL|完整的資料分割 (選擇這個項目，可以增進效能)。|  
@@ -237,7 +237,7 @@ dta -d AdventureWorks2012 ...
  **-N** *online_option*  
  指定是否在線上建立實體設計結構。 下表列出和描述這個引數所能指定的值：  
   
-|ReplTest1|描述|  
+|值|描述|  
 |-----------|-----------------|  
 |OFF|不能在線上建立任何建議的實體設計結構。|  
 |ON|可以在線上建立所有建議的實體設計結構。|  
@@ -278,7 +278,7 @@ dta -n number_of_events -A 0
  **-rl** *analysis_report_list*  
  指定要產生的分析報表清單。 下表列出這個引數所能指定的值：  
   
-|ReplTest1|報表|  
+|值|報表|  
 |-----------|------------|  
 |ALL|所有分析報表|  
 |STMT_COST|陳述式成本報表|  

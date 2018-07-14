@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: c8f3fbae-02c4-464d-a35c-7108f48c58cb
 caps.latest.revision: 9
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 45be29be2275a5e0a5c953164a79d377c4f67f41
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 08b61386de48d83b9d845d57dd831fff68b9ee2a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36031972"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37219908"
 ---
 # <a name="upgrade-dqs-databases-schema-after-installing-sql-server-update"></a>在安裝 SQL Server 更新之後升級 DQS 資料庫結構描述
   在之前設定的 DQS 執行個體上安裝 SQL Server 更新 (修補、Hotfix 或累計更新) 之後，您可能必須使用 **upgrade** 命令列參數執行 DQSInstaller.exe 檔案來升級 DQS 資料庫結構描述。 否則，當您嘗試使用 Data Quality Client 連接至資料品質伺服器時，您可能會收到以下錯誤：  
@@ -33,7 +33,7 @@ An error occurred in the Microsoft .NET Framework while trying to load assembly 
 > [!NOTE]  
 >  大部分的 SQL Server 更新都需要升級至 DQS 資料庫結構描述。 如需將需要升級至 DQS 資料庫結構描述之 SQL Server 更新的詳細資訊，請參閱 [Upgrade DQS: Installing Cumulative Updates or Hotfix Patches on Data Quality Services](http://go.microsoft.com/fwlink/?LinkID=251565)(升級 DQS：在 Data Quality Services 上安裝累計更新或 Hotfix 修補) 中步驟 1.A 的圖表。  
   
-## <a name="prerequisites"></a>必要條件  
+## <a name="prerequisites"></a>先決條件  
   
 -   您必須以 [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] 電腦上 Administrator 群組成員的身分登入。  
   
@@ -57,7 +57,7 @@ An error occurred in the Microsoft .NET Framework while trying to load assembly 
     dqsinstaller.exe -upgrade  
     ```  
   
-5.  安裝程式會提示您先備份 DQS 資料庫後再繼續。 如果您已經備份 DQS 資料庫，請輸入`Y`或`Yes`按下 ENTER 以繼續進行升級。  
+5.  安裝程式會提示您先備份 DQS 資料庫後再繼續。 如果您已經備份 DQS 資料庫，鍵入`Y`或`Yes`並按 ENTER 鍵以繼續進行升級。  
   
 6.  在成功升級 DQS 資料庫結構描述之後，將會顯示完成訊息。  
   

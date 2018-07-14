@@ -1,5 +1,5 @@
 ---
-title: 設定預設的資料模型和部署屬性 (SSAS 表格式) |Microsoft 文件
+title: 設定預設的資料模型和部署屬性 (SSAS 表格式) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.bidtoolset.deployment.f1
 - VS.TOOLSOPTIONSPAGES.ANALYSIS_SERVICES.DATA_MODELING
@@ -16,15 +16,15 @@ f1_keywords:
 - VS.TOOLSOPTIONSPAGES.ANALYSIS_SERVICES.DEPLOYMENT
 ms.assetid: 140d0c4e-943c-4387-a8d2-6e066c7e4e75
 caps.latest.revision: 14
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 8a38556f1c6b9d93f844441327a5ea8fe5f9ae9f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 13c674a47f074adaad3e4dbeff41797018bb0dbd
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36030376"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37171469"
 ---
 # <a name="configure-default-data-modeling-and-deployment-properties-ssas-tabular"></a>設定預設的資料模型和部署屬性 (SSAS 表格式)
   本主題描述如何設定預設相容性層級、部署和工作空間資料庫屬性設定，這些設定可以針對您在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中建立的新表格式模型專案預先定義。 建立新專案之後，這些屬性仍可依據您的特殊需求進行變更。  
@@ -39,7 +39,7 @@ ms.locfileid: "36030376"
   
     |屬性|預設設定|描述|  
     |--------------|---------------------|-----------------|  
-    |**新專案的預設相容性層級**|SQL Server 2012 (1100)|此設定會指定建立新的表格式模型專案時的預設相容性層級。 如果您要部署到未套用 SP1 的 Analysis Services 執行個體，可以選擇 SQL Server 2012 RTM (1100)；如果您的部署執行個體已套用 SP1，可以選擇 SQL Server 2012 SP1；您也可以選擇 SQL Server 2014。 如需詳細資訊，請參閱[相容性層級&#40;SSAS 表格式 SP1&#41;](compatibility-level-for-tabular-models-in-analysis-services.md)。|  
+    |**新專案的預設相容性層級**|SQL Server 2012 (1100)|此設定會指定建立新的表格式模型專案時的預設相容性層級。 如果您要部署到未套用 SP1 的 Analysis Services 執行個體，可以選擇 SQL Server 2012 RTM (1100)；如果您的部署執行個體已套用 SP1，可以選擇 SQL Server 2012 SP1；您也可以選擇 SQL Server 2014。 如需詳細資訊，請參閱 <<c0> [ 相容性層級&#40;SSAS 表格式 SP1&#41;](compatibility-level-for-tabular-models-in-analysis-services.md)。</c0>|  
     |**相容性層級選項**|所有已核取|指定新表格式模型專案以及在部署至其他 Analysis Services 執行個體時的相容性層級選項。|  
   
 #### <a name="to-configure-the-default-deployment-server-property-setting-for-new-model-projects"></a>若要針對新的模型專案設定預設部署伺服器屬性設定  

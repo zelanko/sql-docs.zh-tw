@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - subscriptions [SQL Server replication], non-SQL Server Subscribers
 - Subscribers [SQL Server replication], non-SQL Server Subscribers
 - non-SQL Server Subscribers, subscriptions
 ms.assetid: 5020ee68-b988-4d57-8066-67d183e61237
 caps.latest.revision: 27
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 65bbe363e6b8148d9a9f3a7f4391eb6bbc5b97ca
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 40332e5894e444ad8818d04bd738a2a52670c557
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36033250"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37177835"
 ---
 # <a name="create-a-subscription-for-a-non-sql-server-subscriber"></a>為非 SQL Server 訂閱者建立訂閱
   本主題描述如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ，在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中針對非 SQL Server 訂閱者建立訂閱。 異動複寫與快照式複寫支援向非[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 訂閱者發行資料。 如需有關支援之訂閱者平台的資訊，請參閱＜ [Non-SQL Server Subscribers](non-sql/non-sql-server-subscribers.md)中針對非 SQL Server 訂閱者建立訂閱。  
@@ -159,10 +159,10 @@ ms.locfileid: "36033250"
   
     -   如果值`enabled_for_het_sub`為 1，非[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]支援訂閱者。  
   
-    -   如果值`enabled_for_het_sub`為 0，執行[sp_changepublication &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-changepublication-transact-sql)，並指定`enabled_for_het_sub`如**@property**和`true`的**@value**.  
+    -   如果的值`enabled_for_het_sub`為 0，執行[sp_changepublication &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-changepublication-transact-sql)，並指定`enabled_for_het_sub`如**@property**並`true`的**@value**.  
   
         > [!NOTE]  
-        >  在變更之前先`enabled_for_het_sub`至`true`，您必須卸除任何現有發行集的訂閱。 當此發行集同時支援更新訂閱時，您無法將 `enabled_for_het_sub` 設定為 `true`。 變更 `enabled_for_het_sub` 會影響其他發行集屬性。 如需詳細資訊，請參閱 [Non-SQL Server Subscribers](non-sql/non-sql-server-subscribers.md)。  
+        >  在變更之前先`enabled_for_het_sub`至`true`，您必須卸除發行集的任何現有訂用帳戶。 當此發行集同時支援更新訂閱時，您無法將 `enabled_for_het_sub` 設定為 `true`。 變更 `enabled_for_het_sub` 會影響其他發行集屬性。 如需詳細資訊，請參閱 [Non-SQL Server Subscribers](non-sql/non-sql-server-subscribers.md)。  
   
 3.  在發行集資料庫的發行者端，執行 [sp_addsubscription &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addsubscription-transact-sql)。 指定 **@publication**、 **@subscriber**、 **[訂閱資料庫]** @property **@destination_db**、 **@subscription_type** @property **@subscription_type**值，以及 **@subscriber_type** (指定 OLE DB 提供者) 的值 3。  
   

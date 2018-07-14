@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - removing role assignments
 - roles [Reporting Services], assignments
@@ -19,13 +19,13 @@ ms.assetid: 086d0987-b43c-4834-8372-e08fb4b432f8
 caps.latest.revision: 38
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 4d31a978b4b668045a14f2bf9dbbcaf0317b3c5d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 947216cb426750807e99b48ae2e691a5903ed3a5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36031796"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37216508"
 ---
 # <a name="create-and-manage-role-assignments"></a>建立和管理角色指派
   *「角色指派」* (Role assignment) 是一種安全性原則，可決定使用者或群組是否能夠存取特定的報表伺服器項目或執行作業。 角色指派是由單一使用者或群組帳戶名稱以及一或多個角色定義所組成。  
@@ -54,7 +54,7 @@ ms.locfileid: "36031796"
   
  系統層級角色指派包括各種不同的權限，但是不包括屬於項目層級角色指派之一部分的權限。 報表伺服器中的系統角色並不會傳遞包含完整之所有可能作業集合的中心權限，與電腦上的系統權限相反。 系統層級角色指派只是以報表伺服器站台為範圍的一組工作。 透過系統角色指派所傳遞的權限會決定使用者是否可以檢視應用程式屬性 (例如首頁的影像或標題)、檢視或管理共用排程或是使用報表產生器。  
   
- 如需詳細資訊，請參閱[使用者存取權授與報表伺服器&#40;報表管理員&#41;](grant-user-access-to-a-report-server.md)和[預先定義的角色](role-definitions-predefined-roles.md)。  
+ 如需詳細資訊，請參閱 <<c0> [ 使用者存取權授與報表伺服器&#40;報表管理員&#41;](grant-user-access-to-a-report-server.md)並[預先定義的角色](role-definitions-predefined-roles.md)。</c0>  
   
 ## <a name="modifying-a-role-assignment"></a>修改角色指派  
  您可以在任何時候修改角色指派。 所做的變更會在儲存角色指派時生效。 使用者工作階段不受角色指派變更的影響。 如果使用者已開啟報表，而您將角色指派修改成拒絕存取，只要工作階段為使用中，使用者就可以繼續使用報表。  

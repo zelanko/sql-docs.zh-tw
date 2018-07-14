@@ -5,24 +5,23 @@ ms.date: 03/07/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-backup-restore
+ms.technology: backup-restore
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.backupdatabase.options.f1
 - swb.backupdatabase.options.f1
 ms.assetid: df0ddcdb-c94e-472b-b786-469ae8117b93
 caps.latest.revision: 61
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: b46d4e1a8fbc654748a3d91949542350bf84b22b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: b37c533d269885ce60da9ffe66eaa766222442d5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36030781"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37175905"
 ---
 # <a name="back-up-database-backup-options-page"></a>備份資料庫 (備份選項頁面)
   使用 [備份資料庫] 對話方塊的 [備份選項] 頁面，即可檢視或修改資料庫備份選項。  

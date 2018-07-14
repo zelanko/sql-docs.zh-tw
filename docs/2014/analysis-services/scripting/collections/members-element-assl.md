@@ -1,5 +1,5 @@
 ---
-title: Members 元素 (ASSL) |Microsoft 文件
+title: Members 元素 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - Members element
 ms.assetid: 4bf585a3-b681-486d-852b-1244c5658a04
 caps.latest.revision: 34
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 45b1dea7d3d3bee599f73b0fc0110933eb0cc363
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 13718829cb38ff1cbe82071e0f5e3c436888c466
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36032423"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37218078"
 ---
 # <a name="members-element-assl"></a>Members 元素 (ASSL)
-  包含集合[成員](../objects/member-element-assl.md)父元素的元素。  
+  包含的集合[成員](../objects/member-element-assl.md)父項目的項目。  
   
 ## <a name="syntax"></a>語法  
   
@@ -64,7 +64,7 @@ ms.locfileid: "36032423"
 |子元素|[成員](../objects/member-element-assl.md)|  
   
 ## <a name="remarks"></a>備註  
- 對應至父系的項目`Members`在 「 分析管理物件 (AMO) 物件模型是<xref:Microsoft.AnalysisServices.Group>和<xref:Microsoft.AnalysisServices.Role>。  
+ 對應至父系的元素`Members`在 「 分析管理物件 (AMO) 物件模型所<xref:Microsoft.AnalysisServices.Group>和<xref:Microsoft.AnalysisServices.Role>。  
   
 ## <a name="see-also"></a>另請參閱  
  [集合&#40;ASSL&#41;](collections-assl.md)  

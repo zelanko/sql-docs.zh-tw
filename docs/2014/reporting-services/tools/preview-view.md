@@ -8,28 +8,28 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.rtp.rptdesigner.previewview.f1
 helpviewer_keywords:
 - Preview view [Reporting Services]
 ms.assetid: 108255d1-5be8-47c1-80f3-1f2a055e4d02
 caps.latest.revision: 34
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: e64635a1600a6949287e4528802faf8cdc93f15d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: 3114b56007619d54d0a9aea95e136d65fe0f725b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36032015"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37212218"
 ---
 # <a name="preview-view"></a>預覽檢視
   使用 **[預覽]** 檢視可顯示轉譯報表。 在預覽報表時，報表設計師會在本機執行報表，然後顯示在 [預覽] 檢視中。 在預覽模式中，會完整處理報表。 如果報表中有複雜的查詢或大量的資料，則在第一次進行檢視時，可能需要幾分鐘才能完成預覽。 若要查看只會影響報表格式的後續變更，則預覽會使用快取的資料。  
   
 > [!IMPORTANT]  
->  當[!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]執行 RemoteApp，作為報表無法顯示在**預覽**檢視中[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]。 RemoteApp 程式是透過遠端桌面服務進行遠端存取的程式。 如需詳細資訊，請參閱[TS RemoteApp 逐步指南](http://technet.microsoft.com/library/cc730673\(WS.10\).aspx)。  
+>  當[!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]執行為 RemoteApp，報表無法顯示在**預覽**檢視中[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]。 RemoteApp 程式是透過遠端桌面服務進行遠端存取的程式。 如需詳細資訊，請參閱 < [TS RemoteApp 逐步指南](http://technet.microsoft.com/library/cc730673\(WS.10\).aspx)。  
   
 ## <a name="options"></a>選項。  
  使用工具列即可管理預覽功能。  
@@ -46,7 +46,7 @@ ms.locfileid: "36032015"
  **前一頁**  
  選擇此選項即可移至報表的上一頁。  
   
- **目前頁面**  
+ **目前的頁面**  
  顯示報表目前的頁面。  
   
  **總頁數**  
@@ -70,7 +70,7 @@ ms.locfileid: "36032015"
  **列印**  
  選擇此選項即可列印報表。  
   
- **列印版面配置**  
+ **整頁模式**  
  選擇這個選項即可切換預覽報表與報表出現在列印頁面上的檢視。  
   
  **版面設定**  

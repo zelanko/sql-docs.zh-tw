@@ -8,29 +8,29 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: e22b7c24-edab-42d6-82f6-95068e1c6043
 caps.latest.revision: 14
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: e2e2d3940aed13a6225bceb6f8e28e53cbbfeee4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: 1f8b9d8587c41a45ee60203debee778a88714dd9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36031803"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37214788"
 ---
 # <a name="report-data-ssrs"></a>報表資料 (SSRS)
   報表資料可能是來自組織中的多個資料來源。 您設計報表的第一個步驟，就是建立資料來源，及代表基礎報表資料的資料集。 每個資料來源包含資料連接資訊。 每個資料集都包含將一組欄位定義使用為資料來源中資料的查詢命令。 若要視覺化每個資料集的資料，請加入資料區，例如資料表、矩陣、圖表或對應。 處理報表時，查詢會在資料來源上執行，且每個資料區會視需要展開，以顯示資料集的查詢結果。  
   
 ##  <a name="BkMk_ReportDataTerms"></a> 詞彙  
- If you are unfamiliar with [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] concepts, review the following terms in [Reporting Services Concepts &#40;SSRS&#41;](../reporting-services-concepts-ssrs.md): *data connection*, *embedded data sources*, *shared data sources*, *embedded datasets*, *shared datasets*, *dataset queries*, *report parts*, and *data alerts*.  
+ 如果您熟悉[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]概念，檢閱中的下列條款[Reporting Services 概念&#40;SSRS&#41;](../reporting-services-concepts-ssrs.md):*資料連接*，*內嵌資料來源*，*共用資料來源*，*內嵌資料集*，*共用資料集*，*資料集查詢**報表組件*，並*的資料警示*。  
   
 ##  <a name="BkMk_ReportDataTips"></a> 指定報表資料的秘訣  
  使用下列資訊可以設計您的報表資料策略。  
   
--   **資料來源** ：您可以發行資料來源並從報表伺服器或 SharePoint 網站上的報表分開進行管理。 針對每個資料來源，您或資料庫擁有人可以集中管理連接資訊。 資料來源認證會安全地儲存在報表伺服器上；不包含連接字串中的密碼。 您可以將測試伺服器的資料來源重新導向至實際伺服器。 您可以停用資料來源以暫停所有使用它的報表。 如需支援的資料來源的清單，請參閱[資料連接、 資料來源和 Reporting Services 中的連接字串](../data-connections-data-sources-and-connection-strings-in-reporting-services.md)。  
+-   **資料來源** ：您可以發行資料來源並從報表伺服器或 SharePoint 網站上的報表分開進行管理。 針對每個資料來源，您或資料庫擁有人可以集中管理連接資訊。 資料來源認證會安全地儲存在報表伺服器上；不包含連接字串中的密碼。 您可以將測試伺服器的資料來源重新導向至實際伺服器。 您可以停用資料來源以暫停所有使用它的報表。 如需支援的資料來源的清單，請參閱 <<c0> [ 資料連接、 資料來源和 Reporting Services 中的連接字串](../data-connections-data-sources-and-connection-strings-in-reporting-services.md)。  
   
 -   **資料集** ：您可以發行資料集並從所相依的報表或共用資料來源分開進行管理。 您或資料庫擁有者可以提供報表作者可用的最佳化查詢。 變更查詢時，所有使用共用資料集的報表都會使用更新的查詢。 您可以啟用資料集快取以改善效能。 您可以為特定時間排程查詢快取，或使用共用排程。  
   
@@ -38,7 +38,7 @@ ms.locfileid: "36031803"
   
 -   **篩選資料** ：在查詢或在報表中，可以篩選報表資料。 您可以使用資料集及查詢變數以建立串聯參數，並提供使用者從數千個選取中減少選擇項目的能力，以選取便於管理的數字。 您可以根據所指定的參數值或其他值，篩選資料表或圖表中的資料。  
   
--   **參數** ：包含查詢變數的資料集查詢命令會自動建立相符的報表參數。 您也可以手動建立參數。 檢視報表時，報表工具列會顯示參數。 使用者可以選取值，以控制報表資料或報告的外觀。 若要為特定對象自訂報表資料，您可以使用不同的預設值連結到相同的報表定義中，建立的報表參數組，或使用內建`UserID`欄位。 如需詳細資訊，請參閱[報表參數 &#40;報表產生器和報表設計師&#41;](../report-design/report-parameters-report-builder-and-report-designer.md) 和[運算式中的內建集合 &#40;報表產生器及 SSRS&#41;](../report-design/built-in-collections-in-expressions-report-builder.md)。  
+-   **參數** ：包含查詢變數的資料集查詢命令會自動建立相符的報表參數。 您也可以手動建立參數。 檢視報表時，報表工具列會顯示參數。 使用者可以選取值，以控制報表資料或報告的外觀。 若要為特定對象自訂報表資料，您可以建立報表參數一組具有連結到相同的報表定義中，不同的預設值，或使用內建`UserID`欄位。 如需詳細資訊，請參閱[報表參數 &#40;報表產生器和報表設計師&#41;](../report-design/report-parameters-report-builder-and-report-designer.md) 和[運算式中的內建集合 &#40;報表產生器及 SSRS&#41;](../report-design/built-in-collections-in-expressions-report-builder.md)。  
   
 -   **資料警示** ：發行報表後，您可以根據報表資料來建立警示，並在符合所指定規則時，接收電子郵件訊息。  
   
@@ -61,7 +61,7 @@ ms.locfileid: "36031803"
   
 -   了解 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 用戶端/伺服器架構及工具。 例如，在報表設計師中，您會在使用內建資料來源類型的用戶端機器上撰寫報表。 發行報表時，報表伺服器或 SharePoint 網站上必須支援資料來源類型。  如需詳細資訊，請參閱 [Reporting Services &#40;SSRS&#41; 支援的資料來源](../create-deploy-and-manage-mobile-and-paginated-reports.md)。  
   
--   報表中可撰寫資料來源及資料集，並且會從用戶端撰寫工具發行至報表伺服器或 SharePoint 網站。 報表伺服器上可直接建立資料來源。 發行後，您可以設定報表伺服器上的認證及其他屬性。 如需詳細資訊，請參閱[資料連接、 資料來源和 Reporting Services 中的連接字串](../data-connections-data-sources-and-connection-strings-in-reporting-services.md)和[Reporting Services 工具](../tools/reporting-services-tools.md)。  
+-   報表中可撰寫資料來源及資料集，並且會從用戶端撰寫工具發行至報表伺服器或 SharePoint 網站。 報表伺服器上可直接建立資料來源。 發行後，您可以設定報表伺服器上的認證及其他屬性。 如需詳細資訊，請參閱 <<c0> [ 資料連接、 資料來源和 Reporting Services 中的連接字串](../data-connections-data-sources-and-connection-strings-in-reporting-services.md)並[Reporting Services 工具](../tools/reporting-services-tools.md)。  
   
 -   您可以使用的資料來源取決於其 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 資料延伸模組的安裝。 資料來源支援可視用戶端撰寫工具、報表伺服器版本及報表伺服器平台而有所差異。 如需詳細資訊，請參閱 [Reporting Services &#40;SSRS&#41; 支援的資料來源](../create-deploy-and-manage-mobile-and-paginated-reports.md)。  
   

@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - bcp utility [SQL Server]
 - exporting data
@@ -28,18 +28,18 @@ helpviewer_keywords:
 - column exporting [SQL Server]
 ms.assetid: c0af54f5-ca4a-4995-a3a4-0ce39c30ec38
 caps.latest.revision: 198
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 16db4c61fb00746265744a1a91d9d1aaee3d90a9
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 6ed04d5f47515fd38657434c9e35056a79cff891
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36030706"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37170309"
 ---
 # <a name="bcp-utility"></a>bcp 公用程式
-  **Bcp**公用程式大量複製資料的執行個體之間[!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]和使用者指定格式資料檔。 您可以利用 **bcp** 公用程式，將大量的新資料列匯入 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 資料表，或將資料表的資料匯出至資料檔案。 除了搭配 **bcp** 選項使用之外，此公用程式不需要任何 [!INCLUDE[tsql](../includes/tsql-md.md)]方面的知識。 若要將資料匯入資料表中，您必須使用專為這份資料表而建立的格式檔，或了解資料表的結構及其資料行的有效資料類型。  
+  **Bcp**公用程式大量複製資料的執行個體之間[!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]和以使用者指定格式資料檔案。 您可以利用 **bcp** 公用程式，將大量的新資料列匯入 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 資料表，或將資料表的資料匯出至資料檔案。 除了搭配 **bcp** 選項使用之外，此公用程式不需要任何 [!INCLUDE[tsql](../includes/tsql-md.md)]方面的知識。 若要將資料匯入資料表中，您必須使用專為這份資料表而建立的格式檔，或了解資料表的結構及其資料行的有效資料類型。  
   
  ![主題連結圖示](../../2014/database-engine/media/topic-link.gif "主題連結圖示") 如需用於 **bcp** 語法的語法慣例，請參閱 [Transact-SQL 語法慣例 &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/transact-sql-syntax-conventions-transact-sql)。  
   
@@ -92,9 +92,9 @@ ms.locfileid: "36030706"
  *database_name*  
  這是指定之資料表或檢視表所在的資料庫名稱。 若未指定，這就是使用者的預設資料庫。  
   
- 您可以同時也可以明確指定的資料庫名稱與`d-`。  
+ 您也可以明確指定的資料庫名稱`d-`。  
   
- **在** *data_file* | **出 * * * data_file* | **queryout * * * data_file* | **格式化 nul**  
+ **在 ** *data_file* | **out * * * data_file* | **queryout * * * data_file* | **格式化 nul**  
  請依照下列方式指定大量複製的方向：  
   
 -   **in** 會從檔案複製到資料庫資料表或檢視表。  
@@ -103,7 +103,7 @@ ms.locfileid: "36030706"
   
 -   **queryout** 會從查詢中複製資料，而且只有在從查詢複製大量資料時才可指定。  
   
--   **格式**建立格式檔案根據指定的選項 (**-n**， `-c`， `-w`，或 **-N**) 以及資料表或檢視分隔符號所建立。 大量複製資料時， **bcp** 命令可以參考格式檔案，您不需要以互動方式重新輸入格式資訊。 **format** 選項需要 **-f** 選項；建立 XML 格式檔案也需要 **-x** 選項。 如需詳細資訊，請參閱[建立格式檔案 &#40;SQL Server&#41;](../relational-databases/import-export/create-a-format-file-sql-server.md)。 您必須將 **nul** 指定為值 (**format nul**)。  
+-   **格式**建立格式檔案根據指定的選項 (**-n**， `-c`， `-w`，或 **-N**) 以及資料表或檢視分隔符號。 大量複製資料時， **bcp** 命令可以參考格式檔案，您不需要以互動方式重新輸入格式資訊。 **format** 選項需要 **-f** 選項；建立 XML 格式檔案也需要 **-x** 選項。 如需詳細資訊，請參閱[建立格式檔案 &#40;SQL Server&#41;](../relational-databases/import-export/create-a-format-file-sql-server.md)。 您必須將 **nul** 指定為值 (**format nul**)。  
   
  *擁有者*  
  這是資料表或檢視表的擁有者名稱。 如果執行該作業的使用者擁有指定的資料表或檢視表，則可選擇是否要使用*owner* 。 如果未指定 *owner*，且執行作業的使用者並不擁有指定的資料表或檢視表，則 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 會傳回錯誤訊息，並取消作業。  
@@ -127,15 +127,15 @@ ms.locfileid: "36030706"
  **-b** *batch_size*  
  指定每一批次匯入資料的資料列數。 每一批次會以個別交易的方式 (在認可之前匯入整個批次) 匯入及記錄。 根據預設，資料檔案中的所有資料列是以一個批次匯入。 若要在多個批次之間分散資料列，請指定小於資料檔案之資料列數目的 *batch_size* 。 如果有任何批次的交易失敗，只回復目前批次的插入項。 之後的失敗不會影響已認可的交易所匯入的批次。  
   
- 請勿使用此選項配合 **-h"** ROWS_PER_BATCH  **= *`bb`*"** 選項。  
+ 請勿使用此選項搭配 **-h"** ROWS_PER_BATCH  **= *`bb`*"** 選項。  
   
  `-c`  
- 利用字元資料類型來執行作業。 這個選項不會提示針對每個欄位。它會使用`char`作為儲存類型，沒有前置詞**\t** （定位字元），做為欄位分隔符號和**\r\n** （換行字元） 做為資料列結束字元。 `-c` 與不相容`-w`。  
+ 利用字元資料類型來執行作業。 此選項不會提示每個欄位;它會使用`char`作為儲存類型，沒有前置詞**\t** （定位字元），做為欄位分隔符號並**\r\n** （新行字元） 做為資料列結束字元。 `-c` 與不相容`-w`。  
   
  如需詳細資訊，請參閱[使用 Unicode 字元格式匯入或匯出資料 &#40;SQL Server&#41;](../relational-databases/import-export/use-character-format-to-import-or-export-data-sql-server.md)。  
   
  **-C** { **ACP** | **OEM** | **RAW** | *code_page* }  
- 指定資料檔案中之資料的字碼頁。 *字碼頁*只適用於資料包含`char`， `varchar`，或`text`大於 127 或小於 32 的字元值的資料行。  
+ 指定資料檔案中之資料的字碼頁。 *字碼頁*包含資料時，才會相關`char`， `varchar`，或`text`大於 127 或小於 32 的字元值的資料行。  
   
 > [!NOTE]  
 >  我們建議您在格式檔案中，最好針對每一個資料行各指定一個定序名稱。  
@@ -170,12 +170,12 @@ ms.locfileid: "36030706"
 -   搭配 **in** 或 **out** 選項一起使用時，**-f** 需要現有的格式檔案。  
   
     > [!NOTE]  
-    >  使用格式檔，其中的 **in** 或 **out** 選項為選擇性。 如果沒有 **-f**選項時，如果 **-n**， `-c`， `-w`，或 **-N**未指定，則命令會提示輸入格式資訊，可讓您儲存在格式檔案中 （預設檔案名稱是 Bcp.fmt） 的回應。  
+    >  使用格式檔，其中的 **in** 或 **out** 選項為選擇性。 如果沒有 **-f**選項時，如果 **-n**， `-c`， `-w`，或 **-N**未指定，此命令會提示您輸入格式資訊，並可讓您儲存您在格式檔案中 （預設檔案名稱是 Bcp.fmt） 的回應。  
   
  如果 *format_file* 的開頭是連字號 (-) 或斜線 (/)，請勿在 **-f** 與 *format_file* 值之間加上空格。  
   
  **-F** *first_row*  
- 指定要從資料表匯出或從資料檔案匯入之第一個資料列的號碼。 此參數需要大於 (>) 0 但小於 (\<) 或等於 （=） 總資料列數目。 如果沒有這個參數，預設值是檔案中的第一個資料列。  
+ 指定要從資料表匯出或從資料檔案匯入之第一個資料列的號碼。 這個參數需要大於 (>) 0 但小於 (\<) 或等於 （=） 總的資料列數。 如果沒有這個參數，預設值是檔案中的第一個資料列。  
   
  *first_row* 可以是值高達 2^63-1 的正整數。 **-F * * * first_row*是以 1 為基礎。  
   
@@ -214,7 +214,7 @@ ms.locfileid: "36030706"
  利用 **in** 引數加以指定，任何定義於目的地資料表上的插入觸發程序，都會在大量複製作業期間執行。 如果未指定 FIRE_TRIGGERS，就不會執行任何插入觸發程序。 **out**、**queryout** 和 **format** 引數會略過 FIRE_TRIGGERS。  
   
  **-i** *input_file*  
- 指定包含命令提示字元問題，每個資料欄位的回應，使用互動模式執行大量複製時的回應檔案的名稱 (**-n**， `-c`， `-w`，或 **-N**未指定)。  
+ 指定回應檔，大量複製會使用互動模式執行時，包含每個資料欄位在命令提示字元問題回應的名稱 (**-n**， `-c`， `-w`，或 **-N**未指定)。  
   
  如果 *input_file* 的開頭是連字號 (-) 或斜線 (/)，請勿在 **-i** 與 *input_file* 值之間加上空格。  
   
@@ -222,10 +222,10 @@ ms.locfileid: "36030706"
  指定空白資料行在作業過程中應保持 Null 值，而非保有插入之資料行的任何預設值。 如需詳細資訊，請參閱[大量匯入期間保留 Null 或使用預設值 &#40;SQL Server&#41;](../relational-databases/import-export/keep-nulls-or-use-default-values-during-bulk-import-sql-server.md)。  
   
  **-K** *application_intent*  
- 宣告連接到伺服器時的應用程式工作負載類型。 唯一可能的值是 **ReadOnly**。 若未指定 **-K**，bcp 公用程式將不會支援在 AlwaysOn 可用性群組中連接次要複本。 如需詳細資訊，請參閱[使用中次要： 可讀取次要複本 （AlwaysOn 可用性群組）](../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)。  
+ 宣告連接到伺服器時的應用程式工作負載類型。 唯一可能的值是 **ReadOnly**。 若未指定 **-K**，bcp 公用程式將不會支援在 AlwaysOn 可用性群組中連接次要複本。 如需詳細資訊，請參閱 <<c0> [ 使用中次要： 可讀取次要複本 （AlwaysOn 可用性群組）](../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)。  
   
  **-L** *last_row*  
- 指定要從資料表匯出或從資料檔案匯入的最後一個資料列的號碼。 此參數需要大於 (>) 0 但小於 (\<) 或等於 （=） 最後一個資料列數目。 如果沒有這個參數，預設值是檔案中的最後一個資料列。  
+ 指定要從資料表匯出或從資料檔案匯入的最後一個資料列的號碼。 這個參數需要大於 (>) 0 但小於 (\<) 或等於 （=） 最後一個資料列數目。 如果沒有這個參數，預設值是檔案中的最後一個資料列。  
   
  *last_row* 可以是值高達 2^63-1 的正整數。  
   
@@ -247,7 +247,7 @@ ms.locfileid: "36030706"
   
  如需詳細資訊，請參閱 [使用 Unicode 原生格式匯入或匯出資料 &#40;SQL Server&#41;](../relational-databases/import-export/use-unicode-native-format-to-import-or-export-data-sql-server.md)。  
   
- 如果您匯出，然後將相同資料表的結構描述的資料匯入使用 bcp.exe 搭配 **-N**，如果有固定的長度非 Unicode 字元資料行，您可能會看到一個截斷警告 (例如， `char(10)`)。  
+ 如果您匯出，然後將相同的資料表結構描述的資料匯入使用 bcp.exe 搭配 **-N**，您可能會看到一個截斷警告，如果有固定的長度的非 Unicode 字元資料行 (例如`char(10)`)。  
   
  可以忽略此警告。 解決這個警告的其中一種方式是使用 **-n** 取代 **-N**。  
   
@@ -293,7 +293,7 @@ ms.locfileid: "36030706"
   
  如果您在 bcp.exe 命令中使用十六進位表示法來指定欄位結束字元，該值將會在 0x00 處截斷。 例如，如果您指定 0x410041，將會使用 0x41。  
   
- 如果*field_term*開頭是連字號 （-） 或斜線 （/），不包括之間的空格`-t`和*field_term*值。  
+ 如果*field_term*開始使用連字號 （-） 或斜線 （/），請勿包含之間有空白`-t`並*field_term*值。  
   
  **-T**  
  指定 **bcp** 公用程式使用整合式安全性的信任連接，連接至 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 。 網路使用者的安全性認證、 *login_id*及 *password* 不是必要的選項。 如果未指定 **–T** ，則必須指定 **–U** 與 **–P** ，才能順利登入。  
@@ -323,7 +323,7 @@ ms.locfileid: "36030706"
  如需詳細資訊，請參閱 [從舊版 SQL Server 匯入原生與字元格式資料](../relational-databases/import-export/import-native-and-character-format-data-from-earlier-versions-of-sql-server.md)。  
   
  `-w`  
- 利用 Unicode 字元執行大量複製作業。 這個選項不會提示針對每個欄位。它會使用`nchar`作為儲存類型，沒有前置詞， **\t** （定位字元），做為欄位分隔符號，以及**\n** （換行字元） 做為資料列結束字元。 `-w` 與不相容`-c`。  
+ 利用 Unicode 字元執行大量複製作業。 此選項不會提示每個欄位;它會使用`nchar`作為儲存類型，沒有前置詞， **\t** （定位字元），做為欄位分隔符號，以及**\n** （新行字元） 做為資料列結束字元。 `-w` 與不相容`-c`。  
   
  如需詳細資訊，請參閱 [使用 Unicode 字元格式匯入或匯出資料 &#40;SQL Server&#41;](../relational-databases/import-export/use-unicode-character-format-to-import-or-export-data-sql-server.md)。  
   
@@ -347,7 +347,7 @@ ms.locfileid: "36030706"
 ## <a name="computed-columns-and-timestamp-columns"></a>計算資料行和時間戳記資料行  
  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 會忽略針對計算資料行或 `timestamp` 資料行匯入之資料檔案中的值，並自動指派值。 如果資料檔案不包含資料表中計算資料行或 `timestamp` 資料行的值，請使用格式檔案指定在匯入資料時應略過資料表中的計算資料行或 `timestamp` 資料行；[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 會自動指派資料行的值。  
   
- 計算和`timestamp`資料行是大量複製從[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]如往常般到資料檔案。  
+ 計算並`timestamp`資料行是從複製的大量[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]如往常般到資料檔案。  
   
 ## <a name="specifying-identifiers-that-contain-spaces-or-quotation-marks"></a>指定包含空格或引號的識別碼  
  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 識別碼可以包括內嵌空格和引號之類的字元。 您必須依照下列方式來處理這些識別碼：  

@@ -1,5 +1,5 @@
 ---
-title: 在 DirectQuery 模式 (SSAS 2014) 中的 DAX 公式相容性 |Microsoft 文件
+title: 在 DirectQuery 模式 (SSAS 2014) 中的 DAX 公式相容性 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -9,35 +9,35 @@ ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 applies_to:
 - SQL Server 2014
 ms.assetid: de83cfa9-9ffe-4e24-9c74-96a3876cb4bd
 caps.latest.revision: 3
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 700fed6039c53bd7e3c485d06fe5df4eae32e7f8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 68a73fd64b9bba02a917c8538f79062ff85afbdb
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36032689"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37189475"
 ---
 # <a name="dax-formula-compatibility-in-directquery-mode-ssas-2014"></a>在 DirectQuery 模式 (SSAS 2014) 中的 DAX 公式相容性
-Data Analysis Expression (DAX) 語言可用來建立 Analysis Services 表格式模型中的量值和其他自訂公式[!INCLUDE[ssGemini](../includes/ssgemini-md.md)]Excel 活頁簿中的資料模型和 Power BI Desktop 資料模型。 在大部分的方面，您在這些環境中建立的模型相同，且您可以使用相同的量值、 關聯性和 Kpi 等等。不過，如果您撰寫的 Analysis Services 表格式模型，並將它部署在 DirectQuery 模式中，有一些限制，您可以使用的公式。 本主題提供這些差異的概觀、 列出在於 1100年或 1103年相容性層級的 SQL Server 2014 Analysis Services tabulars 模型和 DirectQuery 模式中，不支援的函式和列出支援的函式，但可能傳回不同的結果。  
+Data Analysis Expression 語言 (DAX) 可用來建立 Analysis Services 表格式模型中的量值和其他自訂公式[!INCLUDE[ssGemini](../includes/ssgemini-md.md)]Excel 活頁簿中的資料模型和 Power BI Desktop 資料模型。 在大部分的方面，您在這些環境中建立的模型相同，且您可以使用相同的量值、 關聯性和 Kpi 等等。不過，如果您撰寫的 Analysis Services 表格式模型，並將它部署在 DirectQuery 模式中，有一些限制，您可以使用的公式。 本主題概述這些差異，列出在相容性層級 1100年或 1103年的 SQL Server 2014 Analysis Services tabulars 模型和 DirectQuery 模式中，不支援的函式並列出支援的函式但可能傳回不同的結果。  
   
-在本主題中，我們會使用這個詞彙*記憶體中模型*參考表格式模型，這是完全裝載在表格式模式中執行之 Analysis Services 伺服器上的記憶體中快取的資料。 我們使用*DirectQuery 模型*來撰寫或 DirectQuery 模式中部署的表格式模型的參考。 DirectQuery 模式的相關資訊，請參閱[DirectQuery 模式 （SSAS 表格式）](http://msdn.microsoft.com/en-us/45ad2965-05ec-4fb1-a164-d8060b562ea5)。  
+在本主題中，我們會使用這個詞彙*記憶體中模型*以指向表格式模型，這完全是裝載在以表格式模式執行 Analysis Services 伺服器上的記憶體中快取的資料。 我們會使用*DirectQuery 模型*參考具有已撰寫和/或以 DirectQuery 模式部署的表格式模型。 DirectQuery 模式的相關資訊，請參閱[DirectQuery 模式 （SSAS 表格式）](http://msdn.microsoft.com/en-us/45ad2965-05ec-4fb1-a164-d8060b562ea5)。  
   
   
 ## <a name="bkmk_SemanticDifferences"></a>記憶體中和 DirectQuery 模式之間的差異  
-在 DirectQuery 模式中部署之模型的查詢，可能會傳回與在記憶體內部模式中部署之相同模型的不同結果。 這是因為藉由 DirectQuery，直接從關聯式資料存放區查詢資料，而且公式所需的彙總來執行使用相關的關聯式引擎，而非使用 xVelocity 記憶體中分析引擎 (VertiPaq) 儲存體和計算。  
+在 DirectQuery 模式中部署之模型的查詢，可能會傳回與在記憶體內部模式中部署之相同模型的不同結果。 這是因為使用 DirectQuery，直接從關聯式資料存放區查詢資料，並使用相關的關聯式引擎，而不是使用 xVelocity 記憶體中分析引擎 (VertiPaq) 儲存體執行公式所需的彙總和計算。  
   
 例如，某些關聯式資料存放區處理數值、日期、Null 等項目的方式就有差異。  
   
 相較之下，DAX 語言的目的是要盡可能模擬 Microsoft Excel 中函數的行為。 例如，在處理 Null、空字串和零值時，Excel 會嘗試提供最佳答案，而不考慮精確的資料類型，因此 xVelocity 引擎會執行相同的處理方式。 不過，當表格式模型以 DirectQuery 模式部署並且將公式傳遞給關聯式資料來源進行評估時，系統就必須根據關聯式資料來源的語意處理資料，而這通常需要以不同的方式處理空字串與 Null。 因此，根據快取的資料以及完全從關聯式存放區中傳回的資料進行評估時，相同的公式可能會傳回不同的結果。  
   
-此外，某些函式不能在 DirectQuery 模式中因為計算會要求在目前內容中的資料傳送至關聯式資料來源做為參數。 例如，測量中[!INCLUDE[ssGemini](../includes/ssgemini-md.md)]活頁簿通常會使用參考活頁簿中可用的日期範圍的時間智慧函數。 這類公式通常無法用於 DirectQuery 模式。  
+此外，某些函式不能完全在 DirectQuery 模式中因為計算會要求目前的內容中的資料傳送至關聯式資料來源做為參數。 比方說，測量在[!INCLUDE[ssGemini](../includes/ssgemini-md.md)]活頁簿通常會使用時間智慧函數參考活頁簿中可用的日期範圍。 這類公式通常無法用於 DirectQuery 模式。  
   
 ## <a name="semantic-differences"></a>語意差異  
 本節將列出您可以預期的語意差異類型，並且描述可能適用於函數使用方式或查詢結果的任何限制。  
@@ -76,7 +76,7 @@ Data Analysis Expression (DAX) 語言可用來建立 Analysis Services 表格式
   
 請注意，在 Transact-SQL 中，Null 永遠不等於 Null。 不過，在 DAX 中，某個空白會等於另一個空白。 這種行為對於所有記憶體中模型都相同。 請務必注意，DirectQuery 模式會使用 SQL Server 的大部分語意。不過，在此情況下，它會針對 NULL 比較提供新的行為，藉以區別。  
   
-### <a name="bkmk_Casts"></a>轉型  
+### <a name="bkmk_Casts"></a>轉換 （cast)  
   
 雖然 DAX 沒有這類轉換函數，不過在許多比較和算術運算中，它會執行隱含轉換。 這就是決定結果資料類型的比較或算術運算。 例如，  
   
@@ -92,7 +92,7 @@ Data Analysis Expression (DAX) 語言可用來建立 Analysis Services 表格式
 **從字串轉換成日期/時間**  
 在 DirectQuery 模式中，從日期和時間的字串表示轉換成實際的 **datetime** 值時，其行為方式與 SQL Server 相同。  
   
-如需有關管理從字串轉換成規則資訊**datetime**中的資料類型[!INCLUDE[ssGemini](../includes/ssgemini-md.md)]模型，請參閱[DAX Syntax Reference](https://msdn.microsoft.com/library/ee634217.aspx)。  
+如需有關管理從字串轉換成的規則資訊**datetime**中的資料類型[!INCLUDE[ssGemini](../includes/ssgemini-md.md)]模型，請參閱[DAX Syntax Reference](https://msdn.microsoft.com/library/ee634217.aspx)。  
   
 使用記憶體中資料存放區之模型所支援的日期文字格式範圍比 SQL Server 所支援的日期字串格式更有限。 不過，DAX 支援自訂日期和時間格式。  
   
@@ -161,8 +161,8 @@ SQL Server 處理 Null 和空白的方式與 xVelocity 引擎不同。 因此，
   
 運算式 `BLANK/BLANK` 是特殊案例，它會針對記憶體中模型和 DirectQuery 模式傳回 `BLANK` 。  
   
-### <a name="bkmk_Ranges"></a>支援的數值和日期時間範圍  
-中的公式[!INCLUDE[ssGemini](../includes/ssgemini-md.md)]和表格式模型在記憶體受限於最大值與 Excel 相同限制允許的實際數字和日期值。 不過，當最大值是從計算或查詢傳回，或者系統轉換、轉型、四捨五入或截斷值時，可能會發生差異。  
+### <a name="bkmk_Ranges"></a>支援數值和日期-時間範圍  
+中的公式[!INCLUDE[ssGemini](../includes/ssgemini-md.md)]和表格式模型中的記憶體最大值與 Excel 相同的限制可能允許的實際數字和日期值。 不過，當最大值是從計算或查詢傳回，或者系統轉換、轉型、四捨五入或截斷值時，可能會發生差異。  
   
 -   如果 **Currency** 和 **Real** 類型的值相乘，而且結果大於最大可能值，則在 DirectQuery 模式中，不會引發錯誤，而且會傳回 Null。  
   
@@ -222,7 +222,7 @@ DAX CEILING 函數的 Transact-SQL 對等項目僅支援大小為 10^19 以下�
 **不支援 SQL Time 資料類型**  
 記憶體內部模型不支援使用新的 SQL **Time** 資料類型。 在 DirectQuery 模式中，參考含有此資料類型之資料行的公式會傳回錯誤。 時間資料行無法匯入記憶體中模型。  
   
-不過，在[!INCLUDE[ssGemini](../includes/ssgemini-md.md)]在快取模型中，有時候引擎會轉換為時間值，是可接受的資料類型，以和此公式會傳回結果。  
+不過，在[!INCLUDE[ssGemini](../includes/ssgemini-md.md)]並在快取模型中，有時候引擎會轉換時間值，以可接受的資料類型，此公式會傳回結果。  
   
 這種行為會影響將日期資料行當做參數使用的所有函數。  
   
@@ -399,7 +399,7 @@ POWER
   
 在記憶體中模型中，重複 ORDER BY 子句不會影響結果。  
   
-## <a name="bkmk_NotSupportedFunc"></a>在 DirectQuery 模式中不支援函式  
+## <a name="bkmk_NotSupportedFunc"></a>DirectQuery 模式不支援的函式  
 在 DirectQuery 模式中部署的模型不支援某些 DAX 函數。 不支援特定函數的原因可能包括下列任何一個原因或這些原因的組合：  
   
 -   基礎關聯式引擎無法執行相當於 xVelocity 引擎所執行的計算。  
@@ -410,7 +410,7 @@ POWER
   
 下列 DAX 函數無法用於 DirectQuery 模型。  
   
-**路徑函數**  
+**路徑函式**  
   
 PATH  
   

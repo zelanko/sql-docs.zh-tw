@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - renaming queries
 - queries [SQL Server], names
 ms.assetid: a263483e-87ba-49c4-b154-3e7bdf33063b
 caps.latest.revision: 10
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 0c05adbacf540cdbf45862aa10ea131f4754ed8a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: e8447240b1abb74a63244f37535a7a3e7dc47987
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36032916"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37177075"
 ---
 # <a name="rename-queries-visual-database-tools"></a>重新命名查詢 (Visual Database Tools)
   您可以為目前沒有開啟以供編輯的任何查詢重新命名。 下列的程序假設您要重新命名的查詢已經關閉。  

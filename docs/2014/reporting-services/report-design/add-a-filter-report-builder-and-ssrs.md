@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 10ae54e7-0e8a-4dff-995d-05516c51d076
 caps.latest.revision: 7
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 5a4165c05755d34d8cdfd4141fbe1da43807d591
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 354c245a5261450d2817a9881fd228b66898f914
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36032234"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37186035"
 ---
 # <a name="add-a-filter-report-builder-and-ssrs"></a>加入篩選 (報表產生器及 SSRS)
   當您想要針對計算或顯示包含或排除特定值時，請將篩選加入至資料集、資料區或群組。 篩選會在執行階段先套用至資料集、套用至資料區，然後套用至群組 (按照群組階層的由上而下順序)。 在資料表、矩陣或清單中，系統會針對資料列群組、資料行群組和相鄰群組獨立套用篩選。 在圖表中，系統會針對類別目錄群組和數列群組獨立套用篩選。  
@@ -133,8 +133,8 @@ ms.locfileid: "36032234"
 ## <a name="see-also"></a>另請參閱  
  [新增資料集篩選、資料區篩選和群組篩選 &#40;報表產生器及 SSRS&#41;](add-dataset-filters-data-region-filters-and-group-filters.md)   
  [運算式範例 &#40;報表產生器及 SSRS&#41;](expression-examples-report-builder-and-ssrs.md)   
- [量測計&#40;報表產生器和 SSRS&#41;](gauges-report-builder-and-ssrs.md)   
+ [量測計&#40;報表產生器及 SSRS&#41;](gauges-report-builder-and-ssrs.md)   
  [清單 &#40;報表產生器及 SSRS&#41;](tables-matrices-and-lists-report-builder-and-ssrs.md)   
- [圖表&#40;報表產生器和 SSRS&#41;](charts-report-builder-and-ssrs.md)  
+ [圖表&#40;報表產生器及 SSRS&#41;](charts-report-builder-and-ssrs.md)  
   
   

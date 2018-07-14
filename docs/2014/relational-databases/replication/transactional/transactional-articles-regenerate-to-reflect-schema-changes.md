@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - custom procedures [SQL Server replication]
 - transactional replication, replicating schema changes
 - schemas [SQL Server replication], replicating changes
 ms.assetid: ccf68a13-e748-4455-8168-90e6d2868098
 caps.latest.revision: 28
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 9b026742dde452ab764ffb3ad857a9e546b7e920
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 6e85f2d067668802115f664cbf5ab863dbc46008
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36030487"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37162139"
 ---
 # <a name="regenerate-custom-transactional-procedures-to-reflect-schema-changes"></a>重新產生自訂交易程序以反映結構描述變更
   依預設，異動複寫可透過預存程序在「訂閱者」上進行所有資料變更，該預存程序由發行集中每個資料表發行項的內部程序所產生。 將插入、更新或刪除複寫至「訂閱者」時，會將三個程序 (插入、更新和刪除各一個) 複製給「訂閱者」並執行。 在對「 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 發行者」上的資料表進行結構描述變更時，複寫將透過呼叫相同的內部指令碼程序組以自動重新產生這些程序，以便新程序與新的結構描述相符 (「Oracle 發行者」不支援結構描述變更複寫)。  

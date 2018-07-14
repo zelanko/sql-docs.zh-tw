@@ -1,29 +1,28 @@
 ---
-title: 可用性群組屬性： 新增可用性群組 （備份喜好設定頁面） |Microsoft 文件
+title: 可用性群組屬性： 新增可用性群組 （備份喜好設定頁面） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.availabilitygroupproperties.backuppreferences.f1
 helpviewer_keywords:
 - read-only routing
 ms.assetid: 65fff22d-5963-4a8c-8b31-fe9ab247a03e
 caps.latest.revision: 6
-author: rothja
-ms.author: jroth
-manager: jhubbard
-ms.openlocfilehash: 9b6e5c1753a7d627e482029fc416928545efc05b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 1ef3e0183202428e8c3bb6d8785a357406fec338
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36033689"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37193918"
 ---
 # <a name="availability-group-properties-new-availability-group-backup-preferences-page"></a>可用性群組屬性：新增可用性群組 (備份喜好設定頁面)
   使用此對話方塊可以檢視和變更所選可用性群組的備份喜好設定。  
@@ -48,7 +47,7 @@ ms.locfileid: "36033689"
  指定當您選擇要執行備份的複本時，您希望備份作業忽略可用性複本的角色。 請注意，備份作業可能會評估其他因素，例如每個可用性複本的備份優先權，搭配其操作狀態和連接狀態。  
   
 > [!IMPORTANT]  
->  不會強制執行備份喜好設定。 這個喜好設定的解譯取決於您在給定可用性群組之資料庫的備份作業中所編寫的邏輯 (如果有的話)。 如需詳細資訊，請參閱[使用中次要： 在次要複本 （AlwaysOn 可用性群組） 上的備份](active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md)。  
+>  不會強制執行備份喜好設定。 這個喜好設定的解譯取決於您在給定可用性群組之資料庫的備份作業中所編寫的邏輯 (如果有的話)。 如需詳細資訊，請參閱 <<c0> [ 作用中次要複本： 備份在次要複本 （AlwaysOn 可用性群組） 上](active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md)。  
   
 ## <a name="replica-backup-priorities"></a>複本備份優先權  
  此方格顯示裝載可用性群組複本的每個伺服器執行個體的目前備份優先權。 您可以使用此方格變更一個或多個可用性複本的備份優先權。  

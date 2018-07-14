@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: db6542ee-02d0-4073-90e6-cba8f9510fbb
 caps.latest.revision: 8
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: de909a10f9a0a76b8cf9c505120fa75ca1ff0a07
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 35ddaed3e6735e11fe3fd0e3f39435516e8bb851
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36032958"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37177276"
 ---
 # <a name="aggregate-functions-reference-report-builder-and-ssrs"></a>彙總函式參考 (報表產生器及 SSRS)
   若要在報表中加入彙總值，您可以在運算式中使用內建彙總函式。 數值欄位的預設彙總函式是 SUM。 您可以編輯運算式，並使用不同的內建彙總函式或指定不同的範圍。 範圍會識別用於計算的資料集。  
@@ -125,7 +125,7 @@ ms.locfileid: "36032958"
   
 |**函數**|**說明**|  
 |------------------|---------------------|  
-|[RowNumber](report-builder-functions-rownumber-function.md)|傳回指定範圍中資料列數的執行計數。 `RowNumber`函式 1 開始重新計數，不是 0。|  
+|[RowNumber](report-builder-functions-rownumber-function.md)|傳回指定範圍中資料列數的執行計數。 `RowNumber`函數開始重新計數為 1，不是 0。|  
 |[RunningValue](report-builder-functions-runningvalue-function.md)|傳回運算式指定的所有非 Null 數值的執行彙總 (在給定範圍中評估)。|  
   
 ##  <a name="RetrievingRowCounts"></a> 擷取資料列計數  
@@ -141,11 +141,11 @@ ms.locfileid: "36032958"
 |**函數**|**說明**|  
 |------------------|---------------------|  
 |[Lookup 函數](report-builder-functions-lookup-function.md)|從指定之運算式的資料集傳回值。|  
-|[LookupSet 函數](report-builder-functions-lookupset-function.md)|從指定之運算式的資料集傳回一組值。|  
-|[Multilookup 函數](report-builder-functions-multilookup-function.md)|從包含名稱/值組的資料集傳回第一組符合某一組名稱的值。|  
+|[LookupSet 函式](report-builder-functions-lookupset-function.md)|從指定之運算式的資料集傳回一組值。|  
+|[Multilookup 函式](report-builder-functions-multilookup-function.md)|從包含名稱/值組的資料集傳回第一組符合某一組名稱的值。|  
   
 ##  <a name="RetrievingPostsortValues"></a> 擷取與排序相依的值  
- 下列的內建函數會傳回給定範圍內的第一個、最後一個或上一個值。 這些函數會視資料值的排序次序而定。 舉例而言，這些函數可用來尋找頁面上的第一個和最後一個值，以建立字典樣式的頁首。 使用`Previous`來比較特定範圍內的上一個資料列的值的一個資料列中的值，例如，資料表中尋找的年份值的百分比年。  
+ 下列的內建函數會傳回給定範圍內的第一個、最後一個或上一個值。 這些函數會視資料值的排序次序而定。 舉例而言，這些函數可用來尋找頁面上的第一個和最後一個值，以建立字典樣式的頁首。 使用`Previous`來比較特定範圍內的前一個資料列的值的一個資料列中的值，例如，若要尋找資料表中的年份值的百分比年。  
   
 |**函數**|**說明**|  
 |------------------|---------------------|  
@@ -175,8 +175,8 @@ ms.locfileid: "36032958"
 |[Level](report-builder-functions-level-function.md)|傳回遞迴階層中之目前所在的層級。|  
   
 ## <a name="see-also"></a>另請參閱  
- [運算式會在報表中使用&#40;報表產生器和 SSRS&#41;](expression-uses-in-reports-report-builder-and-ssrs.md)   
+ [在報表中的運算式會使用&#40;報表產生器及 SSRS&#41;](expression-uses-in-reports-report-builder-and-ssrs.md)   
  [運算式範例 &#40;報表產生器及 SSRS&#41;](expression-examples-report-builder-and-ssrs.md)   
- [Expression Scope for Totals，Aggregates，and Built-in Collections&#40;報表產生器和 SSRS&#41;](expression-scope-for-totals-aggregates-and-built-in-collections.md)  
+ [Expression Scope for Totals，Aggregates，and Built-in Collections&#40;報表產生器及 SSRS&#41;](expression-scope-for-totals-aggregates-and-built-in-collections.md)  
   
   

@@ -8,27 +8,27 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - deleting model object permissions [Master Data Services]
 - permissions [Master Data Services], deleting model object permissions
 - models [Master Data Services], deleting object permissions
 ms.assetid: 859c5952-f600-4940-8064-1afd13f7f6dc
 caps.latest.revision: 4
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: bd91a175738da87a77857bc74f8b09d357b0dd12
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: aff62adeb15d83cdf5e543d5ecea77b70911b76c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36031244"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37169131"
 ---
 # <a name="delete-model-object-permissions-master-data-services"></a>刪除模型物件權限 (Master Data Services)
   在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中，刪除模型物件權限，移除所做的任何指派。  
   
-## <a name="prerequisites"></a>必要條件  
+## <a name="prerequisites"></a>先決條件  
  若要執行此程序：  
   
 -   您必須擁有存取 **[使用者及群組的權限]** 功能區域的權限。  
@@ -47,9 +47,9 @@ ms.locfileid: "36031244"
   
 5.  (選擇性) 從 **[模型]** 清單中選取模型。  
   
-6.  在**模型權限摘要** 窗格中，選取您想要刪除的權限的資料列。  
+6.  在 [**模型權限摘要**] 窗格中，選取您想要刪除的權限的資料列。  
   
-7.  按一下**刪除選取的使用權限**。  
+7.  按一下 **刪除選取的使用權限**。  
   
     > [!NOTE]  
     >  如果權限繼承自群組，則無法從使用者移除權限。 您必須改為從群組移除權限。  

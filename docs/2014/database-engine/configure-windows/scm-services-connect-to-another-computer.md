@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - connections [SQL Server], other computers
 ms.assetid: c4c1e94f-4f5f-431e-8b5b-d5ff97baf723
 caps.latest.revision: 38
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 147e23e4b2c717d36bf2774f0e3e1d049a46f9fa
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: c0878b7cfa2ca6d77d5d43f6d0642d5ecaf42586
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36031701"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37167219"
 ---
 # <a name="connect-to-another-computer-sql-server-configuration-manager"></a>連接至另一部電腦 (SQL Server 組態管理員)
   此主題描述如何在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中連接到另一部電腦。 請遵循第一個程序，開啟 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Management Console (mmc) 中的 Windows [電腦管理]，並連接到該電腦，然後展開 [服務與應用程式] 樹狀目錄。 請遵循第二個程序，在遠端電腦上建立連結至 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 組態管理員的檔案。  
@@ -49,7 +49,7 @@ ms.locfileid: "36031701"
   
 1.  在 **[開始]** 功能表上，按一下 **[執行]**。  
   
-2.  在**開啟**方塊中，輸入`mmc -a`開啟[!INCLUDE[msCoName](../../includes/msconame-md.md)]在作者模式中的 [管理] 主控台。  
+2.  在 **開啟**方塊中，輸入`mmc -a`以開啟[!INCLUDE[msCoName](../../includes/msconame-md.md)]在作者模式中的 [管理] 主控台。  
   
 3.  在 [檔案] 功能表上，按一下 [新增/移除嵌入式管理單元]。  
   
@@ -69,7 +69,7 @@ ms.locfileid: "36031701"
   
 11. 在 [視窗] 功能表上，按一下 [主控台根目錄]，以切換回第一個視窗，並刪除該視窗。  
   
-12. 在**檔案**功能表上，按一下 **另存新檔**，並將檔案儲存在所要的資料夾的適當名稱`.msc`檔案副檔名。 請關閉 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Management Console。  
+12. 在上**檔案**功能表上，按一下**另存新檔**，並將檔案儲存在所要的資料夾的適當名稱`.msc`副檔名。 請關閉 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Management Console。  
   
 13. 若要在目標電腦上開啟 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 組態管理員，請按兩下該檔案。 如果想要，也請將檔案的連結儲存在桌面或 [開始] 功能表中。  
   

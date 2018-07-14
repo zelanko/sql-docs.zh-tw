@@ -1,5 +1,5 @@
 ---
-title: 管理使用者、 角色和登入 |Microsoft 文件
+title: 管理使用者、 角色和登入 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -16,35 +16,35 @@ helpviewer_keywords:
 - users [SMO]
 ms.assetid: 74e411fa-74ed-49ec-ab58-68c250f2280e
 caps.latest.revision: 42
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: a3619381cb83f4a808af97d1fd94467c2e9dd11b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: c14e955bd2f2e0442cde266bb9bf56f4b9caed3c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36033205"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37199168"
 ---
 # <a name="managing-users-roles-and-logins"></a>管理使用者、角色和登入
   在 SMO 中，登入是由 <xref:Microsoft.SqlServer.Management.Smo.Login> 物件表示。 當登入存在於 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 時，可以加入至伺服器角色。 伺服器角色由<xref:Microsoft.SqlServer.Management.Smo.ServerRole>物件。 資料庫角色是由 <xref:Microsoft.SqlServer.Management.Smo.DatabaseRole> 物件表示，應用程式角色則是由 <xref:Microsoft.SqlServer.Management.Smo.ApplicationRole> 物件表示。  
   
  伺服器層級相關聯的權限會列為屬性<xref:Microsoft.SqlServer.Management.Smo.ServerPermission>物件。 伺服器層級權限可授與個別的登入帳戶，也可從這些帳戶拒絕或撤銷。  
   
- 每個<xref:Microsoft.SqlServer.Management.Smo.Database>物件具有<xref:Microsoft.SqlServer.Management.Smo.UserCollection>指定所有使用者資料庫中的物件。 每個使用者都與一個登入相關聯。 單一的登入可以與一個以上資料庫中的使用者產生關聯。 <xref:Microsoft.SqlServer.Management.Smo.Login>物件的<xref:Microsoft.SqlServer.Management.Smo.Login.EnumDatabaseMappings%2A>方法可以用來列出與登入相關聯的每個資料庫中所有使用者。 或者，<xref:Microsoft.SqlServer.Management.Smo.User> 物件的 <xref:Microsoft.SqlServer.Management.Smo.Login> 屬性也可指定與該使用者相關的登入。  
+ 每隔<xref:Microsoft.SqlServer.Management.Smo.Database>物件具有<xref:Microsoft.SqlServer.Management.Smo.UserCollection>指定資料庫中的所有使用者的物件。 每個使用者都與一個登入相關聯。 單一的登入可以與一個以上資料庫中的使用者產生關聯。 <xref:Microsoft.SqlServer.Management.Smo.Login>物件的<xref:Microsoft.SqlServer.Management.Smo.Login.EnumDatabaseMappings%2A>方法可用來列出與登入相關聯的每個資料庫中的所有使用者。 或者，<xref:Microsoft.SqlServer.Management.Smo.User> 物件的 <xref:Microsoft.SqlServer.Management.Smo.Login> 屬性也可指定與該使用者相關的登入。  
   
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 資料庫也具有指定一組可讓使用者執行特定工作的資料庫層級權限的角色。 與伺服器角色不同的是，資料庫角色不是固定的。 這些角色可以建立、修改和移除。 若要進行大量管理，可以為資料庫角色指派權限和使用者。  
   
 ## <a name="example"></a>範例  
- 在下列的程式碼範例中，您必須選取用於建立應用程式的程式設計環境、程式設計範本和程式設計語言。 如需詳細資訊，請參閱[Visual Studio.NET 中建立 Visual Basic SMO 專案](../../../database-engine/dev-guide/create-a-visual-basic-smo-project-in-visual-studio-net.md)和[建立 Visual C&#35; SMO Project in Visual Studio](../how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)。  
+ 在下列的程式碼範例中，您必須選取用於建立應用程式的程式設計環境、程式設計範本和程式設計語言。 如需詳細資訊，請參閱 < [Visual Studio.NET 中建立 Visual Basic SMO Project](../../../database-engine/dev-guide/create-a-visual-basic-smo-project-in-visual-studio-net.md)並[建立 Visual C&#35; Visual Studio.NET 中的 SMO 專案](../how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)。  
   
 ## <a name="enumerating-logins-and-associated-users-in-visual-basic"></a>在 Visual Basic 中列舉登入和關聯的使用者  
- 資料庫中的每個使用者都與一個登入相關聯。 此登入可以與一個以上資料庫中的使用者產生關聯。 此程式碼範例示範如何呼叫 <xref:Microsoft.SqlServer.Management.Smo.Login.EnumDatabaseMappings%2A> 物件的 <xref:Microsoft.SqlServer.Management.Smo.Login> 方法來列出與登入相關聯的所有資料庫使用者。 此範例會建立登入和使用者[!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal-md.md)]以確保有可以列舉的對應資訊的資料庫。  
+ 資料庫中的每個使用者都與一個登入相關聯。 此登入可以與一個以上資料庫中的使用者產生關聯。 此程式碼範例示範如何呼叫 <xref:Microsoft.SqlServer.Management.Smo.Login.EnumDatabaseMappings%2A> 物件的 <xref:Microsoft.SqlServer.Management.Smo.Login> 方法來列出與登入相關聯的所有資料庫使用者。 此範例會建立登入和使用者在[!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal-md.md)]以確保有可以列舉的對應資訊的資料庫。  
   
 <!-- TODO: review snippet reference  [!CODE [SMO How to#SMO_VBLogins1](SMO How to#SMO_VBLogins1)]  -->  
   
 ## <a name="enumerating-logins-and-associated-users-in-visual-c"></a>在 Visual C# 中列舉登入和關聯的使用者  
- 資料庫中的每個使用者都與一個登入相關聯。 此登入可以與一個以上資料庫中的使用者產生關聯。 此程式碼範例示範如何呼叫 <xref:Microsoft.SqlServer.Management.Smo.Login.EnumDatabaseMappings%2A> 物件的 <xref:Microsoft.SqlServer.Management.Smo.Login> 方法來列出與登入相關聯的所有資料庫使用者。 此範例會建立登入和使用者[!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal-md.md)]以確保有可以列舉的對應資訊的資料庫。  
+ 資料庫中的每個使用者都與一個登入相關聯。 此登入可以與一個以上資料庫中的使用者產生關聯。 此程式碼範例示範如何呼叫 <xref:Microsoft.SqlServer.Management.Smo.Login.EnumDatabaseMappings%2A> 物件的 <xref:Microsoft.SqlServer.Management.Smo.Login> 方法來列出與登入相關聯的所有資料庫使用者。 此範例會建立登入和使用者在[!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal-md.md)]以確保有可以列舉的對應資訊的資料庫。  
   
 ```  
 {   
@@ -70,7 +70,7 @@ foreach ( Database db in srv.Databases) {
 ```  
   
 ## <a name="enumerating-logins-and-associated-users-in-powershell"></a>在 PowerShell 中列舉登入和相關聯的使用者  
- 資料庫中的每個使用者都與一個登入相關聯。 此登入可以與一個以上資料庫中的使用者產生關聯。 此程式碼範例示範如何呼叫 <xref:Microsoft.SqlServer.Management.Smo.Login.EnumDatabaseMappings%2A> 物件的 <xref:Microsoft.SqlServer.Management.Smo.Login> 方法來列出與登入相關聯的所有資料庫使用者。 此範例會建立登入和使用者[!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal-md.md)]以確保有可以列舉的對應資訊的資料庫。  
+ 資料庫中的每個使用者都與一個登入相關聯。 此登入可以與一個以上資料庫中的使用者產生關聯。 此程式碼範例示範如何呼叫 <xref:Microsoft.SqlServer.Management.Smo.Login.EnumDatabaseMappings%2A> 物件的 <xref:Microsoft.SqlServer.Management.Smo.Login> 方法來列出與登入相關聯的所有資料庫使用者。 此範例會建立登入和使用者在[!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal-md.md)]以確保有可以列舉的對應資訊的資料庫。  
   
 ```  
 # Set the path context to the local, default instance of SQL Server.  

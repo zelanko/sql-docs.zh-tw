@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 api_name:
 - GenerateDatabaseRightsScript (WMI MSReportServer_ConfigurationSetting Class)
 api_location:
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - GenerateDatabaseRightsScript method
 ms.assetid: f2e6dcc9-978f-4c2c-bafe-36c330247fd0
 caps.latest.revision: 25
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: f8982e0f600d48680283507dc7ef3d6fba274520
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: 58fe8e149a4152399738def5401a7a976cea827f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36031791"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37218708"
 ---
 # <a name="generatedatabaserightsscript-method-wmi-msreportserverconfigurationsetting"></a>GenerateDatabaseRightsScript 方法 (WMI MSReportServer_ConfigurationSetting)
   產生可用來將報表伺服器資料庫和其他資料庫 (執行報表伺服器所需) 之權限授與使用者的 SQL 指令碼。 呼叫者預期要連接至 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫伺服器並執行此指令碼。  
@@ -71,11 +71,11 @@ out Int32 HRESULT);
 ## <a name="remarks"></a>備註  
  如果 *DatabaseName* 是空的，即忽略 *IsRemote* ，而且報表伺服器組態檔值會用於資料庫名稱。  
   
- 如果*IsWindowsUser*設`true`， *UserName*格式應該是\<網域 >\\< 使用者名稱\>。  
+ 如果*IsWindowsUser*設為`true`，*使用者名稱*的格式應該是\<網域 >\\< 使用者名稱\>。  
   
- 當*IsWindowsUser*設為`true`，產生的指令碼授與登入 」 權限的使用者輸入[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，將報表伺服器資料庫設定為預設資料庫，並且授與**RSExec**報表伺服器資料庫、 報表伺服器暫存資料庫，master 資料庫和 MSDB 系統資料庫上的角色。  
+ 當*IsWindowsUser*設為`true`，產生的指令碼授與使用者的登入權限[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，將報表伺服器資料庫設定為預設資料庫，並且授與**RSExec**報表伺服器資料庫、 報表伺服器暫存資料庫、 master 資料庫和 MSDB 系統資料庫上的角色。  
   
- 當*IsWindowsUser*設`true`，該方法會接受標準 Windows Sid 當做輸入。 提供了標準 Windows SID 或服務帳戶名稱時，它就會轉譯成使用者名稱字串。 如果資料庫位於本機，此帳戶就會轉譯成帳戶的正確當地語系化表示。 如果資料庫位於遠端，此帳戶就會表示成電腦的帳戶。  
+ 當*IsWindowsUser*設定為`true`，該方法會接受標準 Windows Sid 當作輸入。 提供了標準 Windows SID 或服務帳戶名稱時，它就會轉譯成使用者名稱字串。 如果資料庫位於本機，此帳戶就會轉譯成帳戶的正確當地語系化表示。 如果資料庫位於遠端，此帳戶就會表示成電腦的帳戶。  
   
  下表將顯示已轉譯的帳戶及其遠端表示。  
   
@@ -106,11 +106,11 @@ out Int32 HRESULT);
 |\<機器 FQDN>|example.redmond.microsoft.com|  
 |\<IP 位址>|180.012.345,678|  
   
- 當*IsWindowsUser*設`true`，WMI 提供者呼叫 LookupAccountName 帳戶取得 SID，然後再呼叫以取得將放入名稱 LookupAccountSID[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]指令碼。 這樣可確保所使用的帳戶名稱會通過 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證。  
+ 當*IsWindowsUser*設為`true`，WMI 提供者呼叫 LookupAccountName 來取得帳戶的 SID，然後呼叫 LookupAccountSID 來取得將放在名稱[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]指令碼。 這樣可確保所使用的帳戶名稱會通過 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證。  
   
- 當*IsWindowsUser*設`false`，產生指令碼授與**RSExec**上報表伺服器資料庫、 報表伺服器暫存資料庫和 MSDB 資料庫角色。  
+ 當*IsWindowsUser*設為`false`，則產生的指令碼授與**RSExec**上報表伺服器資料庫、 報表伺服器暫存資料庫和 MSDB 資料庫角色。  
   
- 當*IsWindowsUser*設`false`，SQL Server 使用者必須已經存在於[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的指令碼順利執行。  
+ 當*IsWindowsUser*設為`false`，SQL Server 使用者必須已存在於[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]能成功地執行指令碼。  
   
  如果報表伺服器尚未指定報表伺服器資料庫，呼叫 GrantRightsToDatabaseUser 就會傳回錯誤。  
   

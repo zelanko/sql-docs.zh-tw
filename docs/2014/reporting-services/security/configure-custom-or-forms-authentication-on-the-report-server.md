@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Forms authentication, configuring
 - custom authentication [Reporting Services]
@@ -16,13 +16,13 @@ ms.assetid: e8601a8f-e66d-4649-8e4d-a46ca20ec7d0
 caps.latest.revision: 16
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: b9c600939f5f3fb0a6febd76371d95e3ab91b4fd
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 6308b2b3da495518fb2c377e7a0994a27f14dbcf
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36031180"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37206508"
 ---
 # <a name="configure-custom-or-forms-authentication-on-the-report-server"></a>設定報表伺服器上的自訂或表單驗證
   Reporting Services 提供可延伸的架構，可以讓您插入自訂或表單型驗證延伸模組。 如果部署需求不包含 Windows 整合式安全性或基本驗證，您可能會考慮實作自訂驗證延伸模組。 使用自訂驗證最常見的狀況是支援網際網路或外部網路對 Web 應用程式的存取。 以自訂的驗證延伸模組取代預設的 Windows 驗證延伸模組時，可讓您進一步控制如何授與外部使用者存取報表伺服器的權限。  
@@ -51,7 +51,7 @@ ms.locfileid: "36031180"
     </Authentication>  
     ```  
   
-4.  貼上的現有項目 <`Authentication`>。  
+4.  貼上現有的項目，如 <`Authentication`>。  
   
      請注意，您無法搭配其他驗證類型使用 `Custom`。  
   
@@ -85,7 +85,7 @@ ms.locfileid: "36031180"
     <identity impersonate = "false" />  
     ```  
   
-12. 新增`PassThroughCookies`至組態檔項目結構。 如需詳細資訊，請參閱 [設定報表管理員傳遞自訂驗證 Cookie](configure-the-web-portal-to-pass-custom-authentication-cookies.md)。  
+12. 新增`PassThroughCookies`至組態檔的項目結構。 如需詳細資訊，請參閱 [設定報表管理員傳遞自訂驗證 Cookie](configure-the-web-portal-to-pass-custom-authentication-cookies.md)。  
   
 13. 儲存檔案。  
   
@@ -97,7 +97,7 @@ ms.locfileid: "36031180"
  [實作安全性延伸模組](../extensions/security-extension/implementing-a-security-extension.md)   
  [使用報表伺服器驗證](authentication-with-the-report-server.md)   
  [RSReportServer 組態檔](../report-server/rsreportserver-config-configuration-file.md)   
- [在報表伺服器上設定基本驗證](configure-basic-authentication-on-the-report-server.md)   
+ [設定報表伺服器上的 基本驗證](configure-basic-authentication-on-the-report-server.md)   
  [設定報表伺服器上的 Windows 驗證](configure-windows-authentication-on-the-report-server.md)  
   
   

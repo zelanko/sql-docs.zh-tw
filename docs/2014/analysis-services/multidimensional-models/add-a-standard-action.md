@@ -1,5 +1,5 @@
 ---
-title: 加入標準動作 |Microsoft 文件
+title: 加入標準動作 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: ccb2928a-f75d-4acb-8ff8-fa80bb0935b2
 caps.latest.revision: 6
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 5d0540fc8cee3dff44cd7e2baf9115cf817e3ad5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 47b13520762bd1ffc23f9bc466b82090fa60d8ee
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36030404"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37165529"
 ---
 # <a name="add-a-standard-action"></a>加入標準動作
   您可以使用 Cube 設計師的 [動作] 檢視將動作加入資料庫。 該檢視可透過 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]存取。 在建立動作之後，您必須先重新處理相關的 Cube，使用者才能使用動作。 如需相關資訊，請參閱 [Processing Analysis Services Objects](processing-analysis-services-objects.md)。  
@@ -76,7 +76,7 @@ ms.locfileid: "36030404"
         > [!NOTE]  
         >  除非用戶端應用程式明確限制結構描述資料列集僅傳回與在 [應用程式]中指定的名稱相符的動作，否則不會將專屬動作傳回給伺服器。  
   
-    -   在**動作內容**，如果您使用 URL 類型，引號括住網際網路位址，例如，"http://www.adventure-works.com"。  
+    -   在 **動作內容**，如果您使用 URL 類型，引號括住網際網路位址，例如，"http://www.adventure-works.com」。  
   
     -   在 **[描述]** 中，輸入動作的描述。  
   

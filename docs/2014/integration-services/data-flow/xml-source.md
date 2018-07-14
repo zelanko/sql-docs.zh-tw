@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.xmlsource.f1
 helpviewer_keywords:
@@ -19,13 +19,13 @@ ms.assetid: 68c27ea5-e93d-4e26-bfb2-d967ca0a5282
 caps.latest.revision: 46
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 6dbda4a8b745e0745ff13d641a93c3350c8af20e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 6aafcdccb92c093b6ff0e8c2a4a163cc6878b21e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36031961"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37217728"
 ---
 # <a name="xml-source"></a>XML 來源
   XML 來源會讀取 XML 資料檔案，並將資料填入來源輸出中的資料行。  

@@ -1,5 +1,5 @@
 ---
-title: 量值 (SSAS 表格式) |Microsoft 文件
+title: 量值 (SSAS 表格式) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 27ec8f99-e9ef-44c9-a83f-f7c88e128ad3
 caps.latest.revision: 18
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 9d5690f488c5cb0119c62be819e1cfece41d2fda
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c9715d64ea8d2df1747a26fc15cf830bab3d5efd
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36031782"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37217998"
 ---
 # <a name="measures-ssas-tabular"></a>量值 (SSAS 表格式)
   在表格式模型中，量值是透過報表用戶端內使用的 DAX 公式所建立的計算。 量值會以使用者在報表用戶端應用程式中選取的欄位、篩選及交叉分析篩選器為依據來計算。  
@@ -96,7 +96,7 @@ Sum of TotalProfit: =SUM([TotalProfit])
 ##  <a name="bkmk_KPI"></a> 使用 KPI 中的量值  
  KPI (關鍵效能指標) 是由「基底」值定義，而基底值是由「目標」值 (由量值或絕對值定義) 對應的量值來定義。 KPI 也包括 *「狀態」*(Status)，其為計算基底值和目標值之間的臨界值，且會以圖形格式顯示。 商務專業人士常常利用 KPI 來識別重要商務標準中的趨勢。  
   
- 任何量值都可以做為 KPI 的基底量值。 若要建立 KPI，請在量值方格中，以滑鼠右鍵按一下量值，然後按一下 [建立 KPI]。 [關鍵效能指標] 對話方塊隨即出現，您即可在其中指定目標值 (由量值或絕對值來定義)，及定義狀態臨界值和圖形類型。 如需詳細資訊，請參閱[Kpi &#40;SSAS 表格式&#41;](kpis-ssas-tabular.md)。  
+ 任何量值都可以做為 KPI 的基底量值。 若要建立 KPI，請在量值方格中，以滑鼠右鍵按一下量值，然後按一下 [建立 KPI]。 [關鍵效能指標] 對話方塊隨即出現，您即可在其中指定目標值 (由量值或絕對值來定義)，及定義狀態臨界值和圖形類型。 如需詳細資訊，請參閱 < [Kpi &#40;SSAS 表格式&#41;](kpis-ssas-tabular.md)。  
   
 ##  <a name="bkmk_rel_tasks"></a> 相關工作  
   

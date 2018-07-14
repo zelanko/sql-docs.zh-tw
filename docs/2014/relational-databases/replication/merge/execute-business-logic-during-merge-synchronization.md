@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - custom error resolution [SQL Server replication]
 - custom change handling [SQL Server replication]
@@ -18,15 +18,15 @@ helpviewer_keywords:
 - business logic handlers [SQL Server replication]
 ms.assetid: 9d4da2ef-c17f-4a31-a1f6-5c3b7ca85f71
 caps.latest.revision: 30
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: afe28c02fce439581bca5f910a08724b8f3187a2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 55498ff8f1d9e5e82cd8eb93e6fd8fd8fc45a1fe
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36030505"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37170774"
 ---
 # <a name="execute-business-logic-during-merge-synchronization"></a>在合併同步處理期間執行商務邏輯
   商務邏輯處理常式架構允許您撰寫在合併同步處理過程中呼叫的 Managed 程式碼組件。 組件包括可對應至幾種同步處理條件的商務邏輯：資料變更、衝突和錯誤。 商務邏輯處理常式架構提供了簡單的程式設計模型，且合併處理為您組件提供的資料是 ADO.NET 資料集的形式，因此您可以利用 ADO.NET 知識而無需了解專屬介面。 如需程式設計商務邏輯處理常式的詳細資訊，請參閱：  

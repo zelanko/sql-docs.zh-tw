@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.maint.maintplanproperties.general.f1
 - sql12.swb.maint.subplanproperties.f1
 ms.assetid: 8bdd84ef-fd15-4162-93af-dc945ff2dbcc
 caps.latest.revision: 6
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 2d857f09260c40c79f9a9528575cf9cdee54db6f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 522562dcbac9f8171b0a0a5ec18c9e6360e1f8a2
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36031427"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37170389"
 ---
 # <a name="maintenance-plan-subplan-properties"></a>維護計畫 (子計畫屬性)
   使用 [維護計畫 (子計畫屬性)] 對話方塊可指定維護計畫子計畫的名稱、描述和排程。 按一下維護計畫 [設計] 索引標籤上的 [子計畫屬性]，或按兩下設計工具方格中的子計畫，來顯示這個對話方塊。  

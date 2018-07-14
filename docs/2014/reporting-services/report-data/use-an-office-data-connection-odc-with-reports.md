@@ -1,5 +1,5 @@
 ---
-title: 搭配報表 (SharePoint 整合模式的 Reporting Services) 中使用 Office 資料連線 (.odc) |Microsoft 文件
+title: 使用 Office 資料連線 (.odc) 報表 (SharePoint 整合模式的 Reporting Services) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Office Data Connection (.odc) files
 - SharePoint integration [Reporting Services], shared data sources
 - .odc files
 ms.assetid: e8d6896d-f886-4390-8b5d-96f0a50c250c
 caps.latest.revision: 13
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 2b6f4f52d1ada7d279a5de935359022947fcf087
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: 63f220c5201931169546305a0b4115677aedf0e1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36032952"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37177205"
 ---
 # <a name="use-an-office-data-connection-odc-with-reports-reporting-services-in-sharepoint-integrated-mode"></a>搭配報表使用 Office 資料連線 (.odc) (SharePoint 整合模式的 Reporting Services)
   在少數情況下，您可以使用現有的 Office 資料連線 (.odc) 檔案來提供連接資訊給 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 報表。 建立共用資料來源時，您可以使用 .odc 檔案來取代 .rsds 檔案。 報表伺服器使用 .odc 檔案的方式與使用 .rsds 檔案相同。報表伺服器會讀取檔案，找出資料來源類型、連接字串和認證資訊。  
@@ -38,7 +38,7 @@ ms.locfileid: "36032952"
   
 -   .odc 檔案必須指定連接字串。  
   
--   認證可以設定為`None`， `Stored`，或`Integrated`。 如果認證方法設為`Stored`，報表伺服器將會提示使用者提供認證，而不是使用預存的認證。 報表伺服器無法依照 .odc 檔案的定義使用預存認證。  
+-   認證可以設為`None`， `Stored`，或`Integrated`。 如果認證方法設定為`Stored`，報表伺服器將會提示使用者輸入認證，而不是使用預存的認證。 報表伺服器無法依照 .odc 檔案的定義使用預存認證。  
   
 -   資料來源擁有的結構描述必須與用來建立報表的結構描述相同。 如果資料結構不同，報表便無法執行。  
   

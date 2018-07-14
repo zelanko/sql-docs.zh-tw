@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 topic_type:
 - apiref
 helpviewer_keywords:
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - Server event category [SQL Server]
 ms.assetid: 335ea792-8f3a-45e6-bc63-eb2d7855878e
 caps.latest.revision: 22
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: aef98e7542c6519d75612cbd5fd87cd662d02bee
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: ed56c321ecda29510b091ae2f281b6c209933dcd
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36033645"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37199218"
 ---
 # <a name="server-event-category"></a>Server 事件類別目錄
   **Server** 事件類別目錄包含一般的伺服器事件。  

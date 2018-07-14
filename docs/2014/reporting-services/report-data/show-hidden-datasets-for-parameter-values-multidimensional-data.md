@@ -1,5 +1,5 @@
 ---
-title: 針對多維度資料 （報表產生器及 SSRS） 的參數值顯示隱藏的資料集 |Microsoft 文件
+title: 參數值顯示隱藏的資料集，針對多維度資料 （報表產生器及 SSRS） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: eb01c4ca-4fd6-4629-b595-f0d2565915df
 caps.latest.revision: 6
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 89df13eecdce33869199e0b5a8e82b0395679475
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: 50da5a57968a7304c206f2aceb2efc24239600b0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36031382"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37224678"
 ---
 # <a name="show-hidden-datasets-for-parameter-values-for-multidimensional-data-report-builder-and-ssrs"></a>針對多維度資料的參數值顯示隱藏的資料集 (報表產生器及 SSRS)
   您的報表可能包含自動產生的資料集 (也稱為隱藏的資料集)，而這些資料集預設不會顯示在 [報表資料] 窗格中。 這些資料集是以下列方式建立的：  
@@ -43,6 +43,6 @@ ms.locfileid: "36031382"
  [查詢設計工具 &#40;報表產生器&#41;](../query-designers-report-builder.md)   
  [Reporting Services 查詢設計工具](../reporting-services-query-designers.md)   
  [報表內嵌資料集和共用資料集 &#40;報表產生器及 SSRS&#41;](report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)   
- [將資料加入至報表&#40;報表產生器和 SSRS&#41;](report-datasets-ssrs.md)  
+ [將資料加入至報表&#40;報表產生器及 SSRS&#41;](report-datasets-ssrs.md)  
   
   

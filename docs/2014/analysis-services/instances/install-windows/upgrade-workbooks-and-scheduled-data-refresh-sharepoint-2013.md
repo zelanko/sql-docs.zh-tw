@@ -1,5 +1,5 @@
 ---
-title: 升級活頁簿和排程的資料重新整理 (SharePoint 2013) |Microsoft 文件
+title: 升級活頁簿和排程的資料重新整理 (SharePoint 2013) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: a49c4af4-e243-4926-be97-74da1f9d54eb
 caps.latest.revision: 18
-author: markingmyname
-ms.author: maghan
-manager: jhubbard
-ms.openlocfilehash: fd35257533c7cbf639ea1c1fecadcf3bcff4acd0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 5bb205ac875315770454a9075ab0c6acbabd97fa
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36032431"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37216178"
 ---
 # <a name="upgrade-workbooks-and-scheduled-data-refresh-sharepoint-2013"></a>升級活頁簿和排程的資料重新整理 (SharePoint 2013)
   本主題將說明在先前 PowerPivot 環境中建立之活頁簿的使用者體驗，以及如何升級 PowerPivot 活頁簿，以便讓您運用這個版本所導入的新功能。 若要了解有關新功能的詳細資訊，請參閱＜ [PowerPivot 的新功能](http://go.microsoft.com/fwlink/?LinkID=203917)＞。  
@@ -33,9 +33,9 @@ ms.locfileid: "36032431"
   
 -   [從 2008 R2 活頁簿升級為 SQL Server 2012 Service Pack 1 (SP1) 活頁簿](#bkmk_to_2012sp1_from_2008r2)  
   
--   [從使用 2012年所建立的版本升級為 Office 2013 活頁簿 PowerPivot Add-in for Excel](#bkmk_to_2012sp1_from_2012)  
+-   [從使用 2012年所建立的版本升級為 Office 2013 活頁簿 PowerPivot 增益集的 Excel](#bkmk_to_2012sp1_from_2012)  
   
--   [從使用 2008 R2 PowerPivot 增益集的 Excel 2010 所建立的版本升級為 SQL Server 2012 活頁簿](#bkmk_to_2012_from_2008R2)  
+-   [從使用 2008 R2 PowerPivot 增益集適用於 Excel 2010 所建立的版本升級為 SQL Server 2012 活頁簿](#bkmk_to_2012_from_2008R2)  
   
 -   [執行較新伺服器上的多個活頁簿版本](#bkmk_runold)  
   
@@ -87,11 +87,11 @@ ms.locfileid: "36032431"
   
      然後，儲存活頁簿並重新發行至 SharePoint 伺服器。  
   
- 如需有關變更 Analysis Services 功能，請參閱[SQL Server 2014 中 Analysis Services 功能的行為變更](../../behavior-changes-to-analysis-services-features-in-sql-server-2014.md)  
+ 如需有關變更 Analysis Services 功能，請參閱[中 SQL Server 2014 Analysis Services 功能的行為變更](../../behavior-changes-to-analysis-services-features-in-sql-server-2014.md)  
   
- 如需有關重新整理記錄的詳細資訊，請參閱[檢視資料重新整理記錄&#40;PowerPivot for SharePoint&#41;](../../power-pivot-sharepoint/view-data-refresh-history-power-pivot-for-sharepoint.md)。  
+ 如需有關重新整理記錄的詳細資訊，請參閱 <<c0> [ 檢視資料重新整理記錄&#40;PowerPivot for SharePoint&#41;](../../power-pivot-sharepoint/view-data-refresh-history-power-pivot-for-sharepoint.md)。</c0>  
   
-##  <a name="bkmk_to_2012sp1_from_2012"></a> 從使用 2012年所建立的版本升級為 Office 2013 活頁簿 PowerPivot Add-in for Excel  
+##  <a name="bkmk_to_2012sp1_from_2012"></a> 從使用 2012年所建立的版本升級為 Office 2013 活頁簿 PowerPivot 增益集的 Excel  
  本節將描述如何 **從** SQL Server 2012 PowerPivot for Excel 2010 活頁簿升級 **為** SQL Server 2012 SP1 PowerPivot for Excel 2013。  
   
  升級活頁簿可解決下列嘗試針對舊版活頁簿進行排程資料重新整理時所發生的錯誤：  
@@ -108,7 +108,7 @@ ms.locfileid: "36032431"
   
 4.  然後，儲存活頁簿並重新發行至 SharePoint 2013 伺服器。  
   
-##  <a name="bkmk_to_2012_from_2008R2"></a> 從使用 2008 R2 PowerPivot 增益集的 Excel 2010 所建立的版本升級為 SQL Server 2012 活頁簿  
+##  <a name="bkmk_to_2012_from_2008R2"></a> 從使用 2008 R2 PowerPivot 增益集適用於 Excel 2010 所建立的版本升級為 SQL Server 2012 活頁簿  
  本節將描述如何 **從** SQL Server 2008 R2 PowerPivot for Excel 2010 活頁簿升級 **為** SQL Server 2012 PowerPivot for Excel 2010。  
   
  升級活頁簿可解決下列嘗試針對舊版活頁簿進行排程資料重新整理時所發生的錯誤：  
@@ -119,9 +119,9 @@ ms.locfileid: "36032431"
   
  升級的方式有兩種：  
   
-1.  在 Excel 中開啟已在電腦上以手動升級每個活頁簿[!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]版的 PowerPivot for Excel，然後將它重新發行到伺服器。 當您在新版增益集中開啟活頁簿時，就會執行以下內部作業：活頁簿資料連接字串中的資料提供者會更新為 MSOLAP.5，中繼資料也會更新，而且還會重新建立關聯性，以符合新的實作。  
+1.  在 Excel 中開啟已在電腦上以手動升級每個活頁簿[!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]版的 PowerPivot for Excel，然後將它重新發行至伺服器。 當您在新版增益集中開啟活頁簿時，就會執行以下內部作業：活頁簿資料連接字串中的資料提供者會更新為 MSOLAP.5，中繼資料也會更新，而且還會重新建立關聯性，以符合新的實作。  
   
-2.  或者，SharePoint 管理員可以啟用自動升級功能，PowerPivot 系統服務的 SharePoint 伺服陣列中自動升級[!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)]PowerPivot 活頁簿排程資料重新整理執行 （只有活頁簿時排程的資料重新整理會升級針對設定）。  
+2.  或者，SharePoint 管理員可以啟用自動升級功能的 SharePoint 伺服器陣列中 PowerPivot 系統服務，自動升級[!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)]PowerPivot 活頁簿排程資料重新整理執行 （唯一的活頁簿會時排程的資料重新整理會升級針對設定）。  
   
     > [!NOTE]  
     >  自動升級是伺服器組態功能。您無法針對特定活頁簿、文件庫或網站集合啟用或停用此功能。  
@@ -164,7 +164,7 @@ PS C:\Windows\system32> Set-PowerPivotSystemService –WorkbookUpgradeOnDataRefr
   
      [] 則是指 [!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)]。  
   
-     **資料來源 = $Embedded$** 表示活頁簿是使用內嵌的資料庫的 PowerPivot 活頁簿。  
+     **資料來源 = $Embedded$** 表示活頁簿的 PowerPivot 活頁簿中，使用內嵌的資料庫。  
   
 ###  <a name="bkmk_msolappc"></a> 如何檢查本機電腦上目前的 MSOLAP 資料提供者版本  
  請利用下列指示，檢查哪一個 OLE DB 提供者是目前在伺服器或工作站上執行 PowerPivot 活頁簿的版本。 得知目前版本可協助您在升級之後針對資料連接錯誤進行疑難排解。  
@@ -176,7 +176,7 @@ PS C:\Windows\system32> Set-PowerPivotSystemService –WorkbookUpgradeOnDataRefr
 ## <a name="see-also"></a>另請參閱  
  [將 PowerPivot 移轉至 SharePoint 2013](migrate-power-pivot-to-sharepoint-2013.md)   
  [升級 PowerPivot for SharePoint](../../../database-engine/install-windows/upgrade-power-pivot-for-sharepoint.md)   
- [新功能 Analysis Services 和 Business Intelligence](../../what-s-new-in-analysis-services.md)   
+ [新 Analysis Services 和 Business Intelligence 功能](../../what-s-new-in-analysis-services.md)   
  [檢視資料重新整理記錄&#40;PowerPivot for SharePoint&#41;](../../power-pivot-sharepoint/view-data-refresh-history-power-pivot-for-sharepoint.md)  
   
   

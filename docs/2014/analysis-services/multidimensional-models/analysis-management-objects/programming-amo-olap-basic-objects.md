@@ -1,5 +1,5 @@
 ---
-title: 程式設計 AMO OLAP 基本物件 |Microsoft 文件
+title: 程式設計 AMO OLAP 基本物件 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - AMO, OLAP
 ms.assetid: ad1c970e-c0cb-4687-9563-56ab62c2db5f
 caps.latest.revision: 28
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: df3206f9bf6bd0548749abf981d6088e9ab85c0b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 1b36af3a013c10567e23852c338c79a834bc8376
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36030909"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37228248"
 ---
 # <a name="programming-amo-olap-basic-objects"></a>設計 AMO OLAP 基本物件的程式
   建立複雜的 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 物件既簡單又直接，但是需要注意細節。 本主題說明 OLAP 基本物件的程式設計詳細資料。 本主題包含下列幾節：  
@@ -36,7 +36,7 @@ ms.locfileid: "36030909"
   
 -   [MeasureGroup 物件](#MG)  
   
--   [分割區物件](#Part)  
+-   [Partition 物件](#Part)  
   
 -   [Aggregation 物件](#AD)  
   
@@ -165,7 +165,7 @@ static DataItem CreateDataItem(DataSourceView dsv, string tableName, string colu
 ### <a name="processing-a-dimension"></a>處理維度  
  處理維度就像使用 <xref:Microsoft.AnalysisServices.Dimension> 物件的 Process 方法一樣簡單。  
   
- 處理維度有可能會影響所有使用維度的 Cube。 如需有關處理選項的詳細資訊，請參閱[處理物件&#40;XMLA&#41; ](../../xmla/xml-elements-objects.md)和[多維度模型物件處理](../processing-a-multidimensional-model-analysis-services.md)。  
+ 處理維度有可能會影響所有使用維度的 Cube。 如需處理選項的詳細資訊，請參閱[處理的物件&#40;XMLA&#41; ](../../xmla/xml-elements-objects.md)並[多維度模型物件處理](../processing-a-multidimensional-model-analysis-services.md)。  
   
  下列程式碼在提供的資料庫之所有維度中執行累加式更新：  
   
@@ -252,7 +252,7 @@ static void CreateAdventureWorksCube(Database db, string datasourceName)
 ### <a name="processing-a-cube"></a>處理 Cube  
  處理 Cube 就像使用 <xref:Microsoft.AnalysisServices.Cube> 物件的 Process 方法一樣簡單。 處理 Cube 也會處理 Cube 中的所有量值群組，以及量值群組中的所有資料分割。 在 Cube 中，資料分割是可以處理的唯一物件，就處理的目的而言，量值群組只是資料分割的容器。 處理 Cube 的指定類型會傳播到資料分割。 在內部處理 Cube 和量值群組會解析成維度與資料分割的處理。  
   
- 如需有關處理選項的詳細資訊，請參閱[處理物件&#40;XMLA&#41;](../../xmla/xml-elements-objects.md)，和[多維度模型物件處理](../processing-a-multidimensional-model-analysis-services.md)。  
+ 如需處理選項的詳細資訊，請參閱[處理的物件&#40;XMLA&#41;](../../xmla/xml-elements-objects.md)，以及[多維度模型物件處理](../processing-a-multidimensional-model-analysis-services.md)。  
   
  下列程式碼將會在指定資料庫中的所有 Cube 上執行完整的處理：  
   
@@ -419,7 +419,7 @@ static void CreateInternetSalesMeasureGroup(Cube cube)
 ### <a name="processing-a-measure-group"></a>處理量值群組  
  處理量值群組就像使用 <xref:Microsoft.AnalysisServices.MeasureGroup> 物件的 Process 方法一樣簡單。 處理量值群組將處理所有屬於量值群組的資料分割。 在內部處理量值群組會解析成處理維度與資料分割。 請參閱[處理資料分割](#ProcPart)本文件中。  
   
- 如需有關處理選項的詳細資訊，請參閱[處理物件&#40;XMLA&#41;](../../xmla/xml-elements-objects.md)，和[多維度模型物件處理](../processing-a-multidimensional-model-analysis-services.md)。  
+ 如需處理選項的詳細資訊，請參閱[處理的物件&#40;XMLA&#41;](../../xmla/xml-elements-objects.md)，以及[多維度模型物件處理](../processing-a-multidimensional-model-analysis-services.md)。  
   
  下列程式碼將在提供之 Cube 的所有量值群組中執行完整的處理。  
   
@@ -485,7 +485,7 @@ static void CreateInternetSalesMeasureGroupPartitions(MeasureGroup mg)
 ###  <a name="ProcPart"></a> 處理資料分割  
  處理資料分割就像使用 <xref:Microsoft.AnalysisServices.Partition> 物件的 Process 方法一樣簡單。  
   
- 如需有關處理選項的詳細資訊，請參閱[處理物件&#40;XMLA&#41; ](../../xmla/xml-elements-objects.md)和[多維度模型物件處理](../processing-a-multidimensional-model-analysis-services.md)。  
+ 如需處理選項的詳細資訊，請參閱[處理的物件&#40;XMLA&#41; ](../../xmla/xml-elements-objects.md)並[多維度模型物件處理](../processing-a-multidimensional-model-analysis-services.md)。  
   
  下列程式碼範例在指定量值群組的所有資料分割中執行完整的處理。  
   
@@ -510,7 +510,7 @@ static void FullProcessAllPartitions(MeasureGroup mg)
   
 -   資料分割會在相同的伺服器上，如果在相同的伺服器上，即可合併遠端資料分割。  
   
- 不像在舊版中，在[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]則不需要所有來源資料分割都有相同的彙總設計。  
+ 不像在舊版中，在[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]就不需要所有來源資料分割都有相同的彙總設計。  
   
  目標資料分割之彙總結果集在執行合併命令之前的狀態，是相同組的彙總。  
   

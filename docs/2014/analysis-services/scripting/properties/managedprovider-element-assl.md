@@ -1,5 +1,5 @@
 ---
-title: ManagedProvider 元素 (ASSL) |Microsoft 文件
+title: ManagedProvider 元素 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -20,18 +20,18 @@ helpviewer_keywords:
 - ManagedProvider element
 ms.assetid: ed5a1077-20a4-40b9-b62d-0db0d53b9624
 caps.latest.revision: 12
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: fe2bb53abd8a528fa9ca5e1b685591bc57f162e1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: b5a4b2d94d0d3abb681be2b288ce3a5ca3b371e8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36032867"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37180845"
 ---
 # <a name="managedprovider-element-assl"></a>ManagedProvider 元素 (ASSL)
-  包含衍生自項目所使用的 managed 提供者名稱[DataSource](../data-type/datasource-data-type-assl.md)資料型別。  
+  包含衍生自項目所使用的 managed 提供者的名稱[DataSource](../data-type/datasource-data-type-assl.md)資料型別。  
   
 ## <a name="syntax"></a>語法  
   
@@ -63,7 +63,7 @@ ms.locfileid: "36032867"
  如果資料來源使用 Managed 提供者，`ManagedProvider` 元素就會包含 Managed 提供者的名稱。  
   
 ## <a name="see-also"></a>另請參閱  
- [名稱元素&#40;ASSL&#41;](name-element-assl.md)   
+ [名稱項目&#40;ASSL&#41;](name-element-assl.md)   
  [屬性&#40;ASSL&#41;](properties-assl.md)  
   
   

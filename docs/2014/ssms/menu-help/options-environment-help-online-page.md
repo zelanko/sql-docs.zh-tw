@@ -1,5 +1,5 @@
 ---
-title: 選項 （環境說明的線上頁面） |Microsoft 文件
+title: 選項 （環境-說明-線上頁面） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - VS.ToolsOptionsPages.Environment.Help.Online
 ms.assetid: 24933338-3a47-44c0-87fc-c3dca8faf4de
 caps.latest.revision: 18
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 0a6be02ad438f35c145c7cadc3738525c1ea60d0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 2e15edf6e83edf97d39da4a20e99891c7b08a3a6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36031763"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37204388"
 ---
-# <a name="options-environment-help-online-page"></a>選項 （環境說明的線上頁面）
+# <a name="options-environment-help-online-page"></a>選項 （環境-說明-線上頁面）
   [選項] 對話方塊可以讓您指定用於 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 搜尋的說明來源，包括 F1 說明。 在 [工具] 功能表上，按一下 [選項]、展開 [環境] 資料夾、選取 [說明]，然後按一下 [線上]。 如果 [線上] 頁面未出現在清單中，請在 [選項] 對話方塊中選取 [顯示所有設定] 核取方塊。  
   
  **載入說明內容時**  

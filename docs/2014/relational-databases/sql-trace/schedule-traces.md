@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - filters [SQL Server], events
 - traces [SQL Server]
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - stopping traces
 ms.assetid: 620b79db-924b-4502-8af3-39efcfca245d
 caps.latest.revision: 23
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 3017f239b024bcab3d19b589be1ec189187a5d09
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 7318201b585b51f41884c85b9a5d2c6b92bb8563
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36032729"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37179625"
 ---
 # <a name="schedule-traces"></a>排程追蹤
   Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]有兩個方法可以排程追蹤。 您可以：  

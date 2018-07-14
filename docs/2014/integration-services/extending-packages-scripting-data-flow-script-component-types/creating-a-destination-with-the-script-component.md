@@ -20,18 +20,18 @@ ms.assetid: 214e22e8-7e7d-4876-b690-c138e5721b81
 caps.latest.revision: 56
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 61a029231238a0ac47e9a1863f3d4bebeec66eee
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: f32e91ff81e333a15bd13a3db13aabf0e1340d21
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36032360"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37221708"
 ---
 # <a name="creating-a-destination-with-the-script-component"></a>以指令碼元件建立目的地
   您可以在 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 封裝的資料流程中使用目的地元件，以便將從上游來源和轉換收到的資料儲存至資料來源。 通常，目的地元件會透過現有的連接管理員連接到資料來源。  
   
- 如需指令碼元件的概觀，請參閱 [Extending the Data Flow with Script Component] (.../ extending-packages-scripting/data-flow-script-component/extending-the-data-flow-with-the-script-component.md。  
+ 如需指令碼元件的概觀，請參閱 [Extending the Data Flow 使用指令碼元件] (../ extending-packages-scripting/data-flow-script-component/extending-the-data-flow-with-the-script-component.md。  
   
  指令碼元件以及它為您產生的基礎結構程式碼，可大幅簡化開發自訂資料流程元件的程序。 不過，若要了解指令碼元件運作方式，建議您詳細閱讀[開發自訂資料流程元件](../extending-packages-custom-objects/data-flow/developing-a-custom-data-flow-component.md)一節中開發自訂資料流程元件的步驟，尤其是[開發自訂目的地元件](../extending-packages-custom-objects-data-flow-types/developing-a-custom-destination-component.md)。  
   
@@ -71,9 +71,9 @@ ms.locfileid: "36032360"
  如需 [指令碼轉換編輯器] 之 [輸入及輸出] 頁面的詳細資訊，請參閱[指令碼轉換編輯器 &#40;輸入及輸出頁面&#41;](../script-transformation-editor-inputs-and-outputs-page.md)。  
   
 ### <a name="adding-variables"></a>加入變數  
- 如果您想要在您的指令碼中使用現有的變數，您可以將其加入`ReadOnlyVariables`和`ReadWriteVariables`屬性欄位上**指令碼**頁面**指令碼轉換編輯器**。  
+ 如果您想要在您的指令碼中使用現有的變數，您可以將其加入`ReadOnlyVariables`並`ReadWriteVariables`屬性欄位上**指令碼**頁面**指令碼轉換編輯器**。  
   
- 當您在屬性欄位中加入多個變數時，請用逗號分隔變數名稱。 您也可以選取多個變數，依序按一下省略符號 (**...**) 旁邊`ReadOnlyVariables`和`ReadWriteVariables`屬性欄位，然後選取 [在變數**選取變數**] 對話方塊。  
+ 當您在屬性欄位中加入多個變數時，請用逗號分隔變數名稱。 您也可以選取多個變數，按一下省略符號 (**...**) 按鈕旁`ReadOnlyVariables`並`ReadWriteVariables`屬性欄位，然後選取 [在變數**選取變數**] 對話方塊。  
   
  如需如何利用指令碼元件使用變數的一般資訊，請參閱[在指令碼元件中使用變數](../extending-packages-scripting/data-flow-script-component/using-variables-in-the-script-component.md)。  
   
@@ -87,7 +87,7 @@ ms.locfileid: "36032360"
 ### <a name="understanding-the-auto-generated-code"></a>了解自動產生的程式碼  
  當您在建立和設定目的地元件之後開啟 VSTA IDE 時，可編輯的 `ScriptMain` 類別會出現在程式碼編輯器中，並具有 `ProcessInputRow` 方法的虛設常式。 `ScriptMain` 類別是您將撰寫自訂程式碼的地方，而 `ProcessInputRow` 則是目的地元件中最重要的方法。  
   
- 如果您開啟**Project Explorer**視窗在 VSTA 中的，您可以看到，指令碼元件也會產生唯讀`BufferWrapper`和`ComponentWrapper`專案項目。 `ScriptMain` 類別會繼承 `UserComponent` 專案項目中的 `ComponentWrapper` 類別。  
+ 如果您開啟**Project Explorer**  視窗中的在 VSTA 中，您所見，指令碼元件也會產生唯讀`BufferWrapper`和`ComponentWrapper`專案項目。 `ScriptMain` 類別會繼承 `UserComponent` 專案項目中的 `ComponentWrapper` 類別。  
   
  在執行階段，資料流程引擎會叫用 `ProcessInput` 類別中的 `UserComponent` 方法，它會覆寫 <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent.ProcessInput%2A> 父類別的 <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent> 方法。 `ProcessInput` 方法接著會在輸入緩衝區的資料列中執行迴圈，並為每個資料列呼叫一次 `ProcessInputRow` 方法。  
   
@@ -106,7 +106,7 @@ ms.locfileid: "36032360"
  下列範例將示範在 `ScriptMain` 類別中所需的程式碼，以建立目的地元件。  
   
 > [!NOTE]  
->  這些範例使用**Person.Address**資料表中`AdventureWorks`範例資料庫，並傳遞其第一個和第四個資料行， **int * AddressID*** 和**nvarchar (30) 縣 （市)**，經過資料流資料行。 在本章節中的來源、轉換和目的地範例使用相同的資料。 每個範例都會記載其他必要條件與假設。  
+>  這些範例會使用**Person.Address**資料表中`AdventureWorks`範例資料庫，並將傳遞其第一個和第四個資料行**int * AddressID*** 和**nvarchar (30) 縣 （市)** 資料行，並透過資料流程。 在本章節中的來源、轉換和目的地範例使用相同的資料。 每個範例都會記載其他必要條件與假設。  
   
 ### <a name="adonet-destination-example"></a>ADO.NET 目的地範例  
  這個範例會示範一個目的地元件，它使用現有的 [!INCLUDE[vstecado](../../includes/vstecado-md.md)] 連線管理員，將資料流程的資料儲存至 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料表。  
@@ -124,7 +124,7 @@ ms.locfileid: "36032360"
   
 3.  將新的指令碼元件加入至資料流程設計師介面，並將它設定為目的地。  
   
-4.  將上游來源或轉換的輸出連接到 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師中的目的地元件  (不需要任何轉換，就可以直接將來源連接到目的地)。這個輸出應該會提供來自資料**Person.Address**資料表`AdventureWorks`範例資料庫包含最少為**AddressID**和**縣 （市)** 資料行。  
+4.  將上游來源或轉換的輸出連接到 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師中的目的地元件  (不需要任何轉換，就可以直接將來源連接到目的地)。此輸出應會提供資料**Person.Address**的資料表`AdventureWorks`範例資料庫，其中包含至少**AddressID**並**縣 （市)** 資料行。  
   
 5.  開啟**指令碼轉換編輯器**。 在 [輸入資料行] 頁面上，選取 **AddressID** 和 **City** 輸入資料行。  
   
@@ -241,7 +241,7 @@ public class ScriptMain:
   
 2.  將新的指令碼元件加入至資料流程設計師介面，並將它設定為目的地。  
   
-3.  將上游來源或轉換的輸出連接到 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師中的目的地元件  (不需要任何轉換，就可以直接將來源連接到目的地)。這個輸出應該會提供來自資料**Person.Address**資料表`AdventureWorks`範例資料庫，而且應該包含至少**AddressID**和**縣 （市)** 資料行。  
+3.  將上游來源或轉換的輸出連接到 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師中的目的地元件  (不需要任何轉換，就可以直接將來源連接到目的地)。此輸出應會提供資料**Person.Address**的資料表`AdventureWorks`範例資料庫，而且應該包含至少**AddressID**並**縣 （市)** 資料行。  
   
 4.  開啟**指令碼轉換編輯器**。 在 [輸入資料行] 頁面上，選取 **AddressID** 和 **City** 資料行。  
   
@@ -354,7 +354,7 @@ public class ScriptMain:
 }  
 ```  
   
-![Integration Services 圖示 （小）](../media/dts-16.gif "Integration Services 圖示 （小）")**保持最多 with Integration Services 的日期** <br /> 若要取得 Microsoft 的最新下載、文件、範例和影片以及社群中的精選解決方案，請瀏覽 MSDN 上的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 頁面：<br /><br /> [瀏覽 MSDN 上的 Integration Services 頁面](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 若要得到這些更新的自動通知，請訂閱該頁面上所提供的 RSS 摘要。  
+![Integration Services 圖示 （小）](../media/dts-16.gif "Integration Services 圖示 （小）")**保持最多包含 Integration Services 的日期** <br /> 若要取得 Microsoft 的最新下載、文件、範例和影片以及社群中的精選解決方案，請瀏覽 MSDN 上的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 頁面：<br /><br /> [瀏覽 MSDN 上的 Integration Services 頁面](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 若要得到這些更新的自動通知，請訂閱該頁面上所提供的 RSS 摘要。  
   
 ## <a name="see-also"></a>另請參閱  
  [以指令碼元件建立來源](../extending-packages-scripting-data-flow-script-component-types/creating-a-source-with-the-script-component.md)   

@@ -1,5 +1,5 @@
 ---
-title: 設定專用的資料重新整理或僅查詢處理 (PowerPivot for SharePoint) |Microsoft 文件
+title: 設定專用的資料重新整理或僅查詢處理 (PowerPivot for SharePoint) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 5e027605-1086-4941-bb01-f315df8f829b
 caps.latest.revision: 7
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: d84528c4d4db768ba58f125e15175604aed7af0b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 3b56558bf2e7d49f336d756699f8b5dc59f2ac58
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36032903"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37222298"
 ---
 # <a name="configure-dedicated-data-refresh-or-query-only-processing-powerpivot-for-sharepoint"></a>設定專用的資料重新整理或僅查詢處理 (PowerPivot for SharePoint)
   在 SharePoint 整合模式中，Analysis Services 伺服器執行個體可以設定為支援特定的處理要求類型，例如資料重新整理或僅查詢處理。 在預設情況下，這兩種類型的載入要求都會啟用。 您可以關閉其中任何一種，以建立專用的查詢引擎或資料重新整理伺服器。  
@@ -47,7 +47,7 @@ ms.locfileid: "36032903"
   
 5.  在 [服務執行個體使用狀況] 中執行下列動作：  
   
-    1.  清除核取方塊**啟用載入唯讀資料庫**以關閉每當使用者開啟活頁簿包含 PowerPivot 資料時發生的視需要查詢處理。  
+    1.  清除核取方塊**啟用載入唯讀資料庫**關閉每當使用者開啟包含 PowerPivot 資料的活頁簿的視需要查詢處理。  
   
     2.  清除核取方塊**啟用載入資料庫重新整理**若要關閉排程的資料重新整理。  
   
@@ -65,7 +65,7 @@ ms.locfileid: "36032903"
   
 |設定|有效的值|描述|  
 |-------------|------------------|-----------------|  
-|預設值|根據 RAM 進行計算。|預設值的根據是可用記憶體數量除以 4 GB。 預設值是由公式進行計算，以便依系統的容量調整設定。<br /><br /> 注意： 4 gb 做為除數選取實際 PowerPivot 資料來源大規模取樣的 RAM 使用量為基礎。 而不是以 PowerPivot 實體或邏輯架構為根據。|  
+|預設值|根據 RAM 進行計算。|預設值的根據是可用記憶體數量除以 4 GB。 預設值是由公式進行計算，以便依系統的容量調整設定。<br /><br /> 注意： 4 gb 做為除數選取實際的 PowerPivot 資料來源大規模取樣的 RAM 使用量為基礎。 而不是以 PowerPivot 實體或邏輯架構為根據。|  
 |最大值|根據 CPU 數進行計算。|您可以指定的最大並行工作數是以電腦上的處理器數目為根據。 例如，在 4 插槽的四核心電腦上，您可以同時執行的作業數目上限是 16。|  
   
 #### <a name="increasing-the-default-value-to-a-higher-value"></a>將預設值增加到更高的值  
@@ -73,8 +73,8 @@ ms.locfileid: "36032903"
   
 |實際的 RAM (以 GB 為單位)|計算的預設值|實際的 CPU 數|計算的最大值|增加並行作業嗎？|  
 |---------------------------------|------------------------------|------------------------|------------------------------|-------------------------------|  
-|4|@shouldalert|@shouldalert|@shouldalert|資料分割 預設值與最大值相同。|  
-|4|@shouldalert|4|4|是的。 您可以將並行作業數提高為 2、3 或 4。|  
+|4|1|1|1|資料分割 預設值與最大值相同。|  
+|4|1|4|4|是的。 您可以將並行作業數提高為 2、3 或 4。|  
 |8|2|4|4|是的。 您可以將並行作業數提高為 3 或 4。|  
 |16|4|4|4|資料分割 預設值與最大值相同。|  
 |32|使用可計算預設值的公式得到預設值等於 8。 由於預設值高於允許的最大值，因此將不會使用計算所得的預設值。|4|4|資料分割 雖然大量 RAM 指出預設值為 8 個並行作業，但 4 個處理器的電腦將只支援最多 4 個並行作業。|  
@@ -87,6 +87,6 @@ ms.locfileid: "36032903"
  每個資料重新整理工作都會有不同的負載特性，取決於進行重新整理的資料來源數量和大小。 含資料列數量較少之單一資料來源的活頁簿，其處理負載就遠比含無數資料來源與龐大資料列集的活頁簿輕得多。  
   
 ## <a name="see-also"></a>另請參閱  
- [與 SharePoint 2010 的 PowerPivot 資料重新整理](powerpivot-data-refresh-with-sharepoint-2010.md)  
+ [SharePoint 2010 中的 PowerPivot 資料重新整理](powerpivot-data-refresh-with-sharepoint-2010.md)  
   
   

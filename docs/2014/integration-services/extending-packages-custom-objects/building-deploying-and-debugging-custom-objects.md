@@ -16,13 +16,13 @@ ms.assetid: b03685bc-5398-4c3f-901a-1219c1098fbe
 caps.latest.revision: 44
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: a0264b74acc5d4665dbbbe48678ad75538002d5e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 7f6377df95d5cb8ade98e7a83b04b7920fe87a62
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36031269"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37209368"
 ---
 # <a name="building-deploying-and-debugging-custom-objects"></a>建立、部署和偵錯自訂物件
   撰寫 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 之自訂物件的程式碼之後，必須建立並部署組件，以及將其整合到 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計工具，其才可供封裝使用，並進行測試及偵錯。  
@@ -75,7 +75,7 @@ copy $(TargetFileName) "C:\Program Files\Microsoft SQL Server\120\DTS\LogProvide
 ```  
   
 ##  <a name="deploying"></a> 部署組件  
- [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計工具會列舉在安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 時所建立之一系列資料夾中所找到的檔案，以尋找可在套件中使用的自訂物件。 當預設[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]安裝設定，這組資料夾位於之下**C:\Program Files\Microsoft SQL Server\120\DTS**。 不過如果您建立安裝程式的自訂物件時，您應該檢查的值**HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\120\SSIS\Setup\DtsPath**以確認這個位置的登錄機碼資料夾。  
+ [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計工具會列舉在安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 時所建立之一系列資料夾中所找到的檔案，以尋找可在套件中使用的自訂物件。 當預設值[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]安裝設定，這組資料夾位於之下**C:\Program Files\Microsoft SQL Server\120\DTS**。 不過如果您的自訂物件建立安裝程式，您應該查看的值**HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\120\SSIS\Setup\DtsPath**以確認這個位置的登錄機碼資料夾。  
   
  您可以透過下列兩種方式將組件放入資料夾中：  
   
@@ -83,7 +83,7 @@ copy $(TargetFileName) "C:\Program Files\Microsoft SQL Server\120\DTS\LogProvide
   
 -   直接在適當的資料夾中建置組件。  
   
- 下列部署資料夾下的**C:\Program Files\Microsoft SQL Server\120\DTS**用於各種類型的自訂物件：  
+ 下列部署資料夾底下**C:\Program Files\Microsoft SQL Server\120\DTS**用於各種類型的自訂物件：  
   
 |自訂物件|部署資料夾|  
 |-------------------|-----------------------|  
@@ -120,7 +120,7 @@ copy $(TargetFileName) "C:\Program Files\Microsoft SQL Server\120\DTS\LogProvide
 ##  <a name="testing"></a> 測試和偵錯您的程式碼  
  在建置自訂物件以及執行可使用該元件的套件之後，從 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 啟動 **dtexec.exe** 是偵錯自訂物件之執行階段方法的最簡單方法。  
   
- 如果您想要偵錯元件的設計階段方法，例如`Validate`方法中，開啟使用中的第二個執行個體元件的封裝[!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]，並附加至其**devenv.exe**程序。  
+ 如果您想要偵錯元件的設計階段方法，例如`Validate`方法中，開啟的第二個執行個體中使用元件的封裝[!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]，並將附加至其**devenv.exe**程序。  
   
  如果您也想要在套件於 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計工具中開啟與執行時偵錯元件的執行階段方法，則必須在執行套件時強制暫停，才可附加到 **DtsDebugHost.exe** 處理序。  
   
@@ -128,7 +128,7 @@ copy $(TargetFileName) "C:\Program Files\Microsoft SQL Server\120\DTS\LogProvide
   
 1.  在偵錯組態中簽署和建立專案，然後加以部署，並將它安裝在全域組件快取中，如本主題所述。  
   
-2.  在**偵錯** 索引標籤**專案屬性**，選取**啟動外部程式**為**起始動作**，並找出**dtexec.exe**，這預設安裝在 C:\Program Files\Microsoft SQL Server\120\DTS\Binn。  
+2.  在上**偵錯**索引標籤**專案屬性**，選取**啟動外部程式**作為**起始動作**，並找出**dtexec.exe**，這預設安裝在 C:\Program Files\Microsoft SQL Server\120\DTS\Binn。  
   
 3.  在 [命令列選項] 文字方塊的 [起始選項] 之下，輸入執行可使用您的元件之套件所需的命令列引數。 通常命令列引數是由 /F[ILE] 參數以及緊接在後面之 .dtsx 檔案的路徑與檔案名稱所組成。 如需詳細資訊，請參閱 [dtexec Utility](../packages/dtexec-utility.md)。  
   
@@ -156,7 +156,7 @@ copy $(TargetFileName) "C:\Program Files\Microsoft SQL Server\120\DTS\LogProvide
   
 3.  返回暫停的套件並繼續略過中斷點，或是按一下 [確定] 以解除指令碼工作所引發的訊息方塊，然後繼續套件執行和偵錯。  
   
-![Integration Services 圖示 （小）](../media/dts-16.gif "Integration Services 圖示 （小）")**保持最多 with Integration Services 的日期** <br /> 若要取得 Microsoft 的最新下載、文件、範例和影片以及社群中的精選解決方案，請瀏覽 MSDN 上的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 頁面：<br /><br /> [瀏覽 MSDN 上的 Integration Services 頁面](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 若要得到這些更新的自動通知，請訂閱該頁面上所提供的 RSS 摘要。  
+![Integration Services 圖示 （小）](../media/dts-16.gif "Integration Services 圖示 （小）")**保持最多包含 Integration Services 的日期** <br /> 若要取得 Microsoft 的最新下載、文件、範例和影片以及社群中的精選解決方案，請瀏覽 MSDN 上的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 頁面：<br /><br /> [瀏覽 MSDN 上的 Integration Services 頁面](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 若要得到這些更新的自動通知，請訂閱該頁面上所提供的 RSS 摘要。  
   
 ## <a name="see-also"></a>另請參閱  
  [開發 Integration Services 的自訂物件](developing-custom-objects-for-integration-services.md)   

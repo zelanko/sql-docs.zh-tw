@@ -1,5 +1,5 @@
 ---
-title: Business Intelligence for SQL Server Management Studio 簡介 |Microsoft 文件
+title: Business Intelligence for SQL Server Management Studio 簡介 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Management Studio for Integration Services
 - SQL Server Management Studio for Reporting Services
 - SQL Server Management Studio for Analysis Services
 ms.assetid: ffaa77b7-03d0-4d7a-aa42-c5091a4f2ceb
 caps.latest.revision: 28
-author: douglaslM
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 273fc16281fa4ad0f4f09076ddfad8924782fca0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 98dab4db89917fd4ece162420baa29dfe6930a2e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36031141"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37175180"
 ---
 # <a name="introduction-to-sql-server-management-studio-for-business-intelligence"></a>適用於商業智慧的 SQL Server Management Studio 簡介
   若要存取、設定及管理 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]、[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 和 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]，請使用 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]。 雖然這三種商業智慧技術全都依賴 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]，但是與每一項技術有關的管理工作則會有些微的差異。  
@@ -36,7 +36,7 @@ ms.locfileid: "36031141"
   
  [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] 會提供一個 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 指令碼專案，您可在其中開發及儲存使用多維度運算式 (MDX)、資料採礦延伸模組 (DMX) 和 XML for Analysis (XMLA) 所撰寫的指令碼。 您可以使用 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 指令碼專案來執行管理工作或是在 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 執行個體上重新建立物件，例如資料庫和 Cube。 例如，您可以在 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 指令碼專案中開發 XMLA 指令碼，該指令碼會直接在現有的 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 執行個體上建立新的物件。 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 指令碼專案可儲存成為方案的一部分，並與原始程式碼控制整合。  
   
- 如需有關如何使用[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]，請參閱[SQL Server Management Studio 中的 Analysis Services 指令碼專案](../analysis-services/instances/analysis-services-scripts-project-in-sql-server-management-studio.md)。  
+ 如需有關如何使用[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]，請參閱 < [SQL Server Management Studio 中的 Analysis Services 指令碼專案](../analysis-services/instances/analysis-services-scripts-project-in-sql-server-management-studio.md)。  
   
 ## <a name="managing-integration-services-solutions-using-sql-server-management-studio"></a>使用 SQL Server Management Studio 管理 Integration Services 解決方案  
  [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 可讓您使用 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 服務來管理套件及監視執行中的套件。 您也可以使用 [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] 將封裝組織成資料夾、執行封裝、匯入及匯出封裝、移轉 Data Transformation Services (DTS) 封裝及升級 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 封裝。  

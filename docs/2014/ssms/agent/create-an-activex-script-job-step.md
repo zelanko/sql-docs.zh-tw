@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - ActiveX scripting jobs [SQL Server]
 - job steps [Analysis Services]
 ms.assetid: e6c46c6b-2d61-4571-bc8e-a831cd6e6302
 caps.latest.revision: 30
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: d8e5ecaa2472dab26cc6be661bea7220748a6a39
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 6a1bc47870dea8093e91d033c8248e1eb216f5ab
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36031358"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37175212"
 ---
 # <a name="create-an-activex-script-job-step"></a>Create an ActiveX Script Job Step
   此主題描述如何使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]、[!INCLUDE[tsql](../../includes/tsql-md.md)] 或 SQL Server 管理物件，在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中建立與定義執行 ActiveX Script 的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 作業步驟。  
@@ -103,11 +103,11 @@ ms.locfileid: "36031358"
     GO  
     ```  
   
- 如需詳細資訊，請參閱[sp_add_jobstep &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-add-jobstep-transact-sql)。  
+ 如需詳細資訊，請參閱 < [sp_add_jobstep &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-add-jobstep-transact-sql)。  
   
 ##  <a name="SMO"></a> 使用 SQL Server 管理物件  
  **若要建立 ActiveX 指令碼作業步驟**  
   
- 使用`JobStep`使用您選擇，例如 Visual Basic、 Visual C# 或 PowerShell 的程式語言的類別。  
+ 使用`JobStep`藉由使用您選擇，例如 Visual Basic、 Visual C# 或 PowerShell 的程式語言的類別。  
   
   

@@ -1,5 +1,5 @@
 ---
-title: 多個交易 |Microsoft 文件
+title: 多個交易 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - transactions [Integration Services], multiple
 - multiple transactions
 ms.assetid: c3664a94-be89-40c0-a3a0-84b74a7fedbe
 caps.latest.revision: 31
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: c98fa7454a1a01ee6879a514f369e6fb6c1a0570
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: aa4e3015365166fc827170f021292a65d5d52dc7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36031954"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37219508"
 ---
 # <a name="multiple-transactions"></a>多個交易
   在 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 封裝中，封裝可以包含不相關的交易。 任何時候如果巢狀容器階層中間的容器不支援交易，而階層中其上面或下面的容器設定為支援交易，則這些容器就會啟動分別的交易。 交易會從巢狀容器階層中最內層的工作到封裝依序進行認可或回復。 不過，內部交易認可後，如果外部交易已中止，則不會回復該交易。  
@@ -43,6 +43,6 @@ ms.locfileid: "36031954"
  ![多個交易的實作](media/mw-dts-trans2.gif "多個交易的實作")  
   
 ## <a name="related-tasks"></a>相關工作  
- [封裝設定成使用交易](../relational-databases/native-client-ole-db-transactions/transactions.md)  
+ [設定套件來使用交易](../relational-databases/native-client-ole-db-transactions/transactions.md)  
   
   

@@ -1,14 +1,13 @@
 ---
-title: 可用性群組接聽程式、 用戶端連接性及應用程式容錯移轉 (SQL Server) |Microsoft 文件
+title: 可用性群組接聽程式、 用戶端連接性及應用程式容錯移轉 (SQL Server) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Availability Groups [SQL Server], listeners
 - read-only routing
@@ -20,13 +19,13 @@ ms.assetid: 76fb3eca-6b08-4610-8d79-64019dd56c44
 caps.latest.revision: 46
 author: rothja
 ms.author: jroth
-manager: jhubbard
-ms.openlocfilehash: 90dc94aeebdaa99fe2884dc0874f0c01ec8212cf
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: bd5187ffce3a34c038471681a5b730b5b92313ec
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36033415"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37197868"
 ---
 # <a name="availability-group-listeners-client-connectivity-and-application-failover-sql-server"></a>可用性群組接聽程式、用戶端連接及應用程式容錯移轉 (SQL Server)
   此主題包含有關 [!INCLUDE[ssHADR](../includes/sshadr-md.md)] 用戶端連接和應用程式容錯移轉功能的考量資訊。  
@@ -122,13 +121,13 @@ Server=tcp: AGListener,1433;Database=MyDB;IntegratedSecurity=SSPI
 Server=tcp:AGListener,1433;Database=AdventureWorks;IntegratedSecurity=SSPI;ApplicationIntent=ReadOnly  
 ```  
   
- 在這個連接字串範例中，用戶端嘗試連接到通訊埠 1433 (如果可用性群組接聽程式是在 1433 上接聽，也可以省略此通訊埠編號) 上名為 `AGListener` 的可用性群組接聽程式。  連接字串具有`ApplicationIntent`屬性設定為`ReadOnly`，使其*讀取意圖的連接字串*。  如果沒有此設定，伺服器就不會嘗試唯讀路由連接。  
+ 在這個連接字串範例中，用戶端嘗試連接到通訊埠 1433 (如果可用性群組接聽程式是在 1433 上接聽，也可以省略此通訊埠編號) 上名為 `AGListener` 的可用性群組接聽程式。  連接字串具有`ApplicationIntent`屬性設定為`ReadOnly`，讓此*讀取意圖的連接字串*。  如果沒有此設定，伺服器就不會嘗試唯讀路由連接。  
   
  可用性群組的主要資料庫會處理內送唯讀路由要求，並嘗試找出已聯結至主要複本並設定為唯讀路由的線上唯讀複本。  用戶端會從主要複本伺服器接收連接資訊，並連接到已識別的唯讀複本。  
   
  請注意，應用程式意圖可從用戶端驅動程式傳送至舊版 SQL Server 執行個體。  在此情況下，會忽略唯讀應用程式意圖，而且連接照常進行。  
   
- 您可以略過唯讀路由未設定 application intent 連接屬性為`ReadOnly`(若未指定，預設值是`ReadWrite`登入期間) 或直接連接到 SQL Server 的主要複本執行個體而不是使用可用性群組接聽程式名稱。  如果您直接連接到唯讀複本，也不會發生唯讀路由。  
+ 您可以略過唯讀路由： 不將 application intent 連接屬性設定為`ReadOnly`(若未指定，預設值是`ReadWrite`期間登入) 或直接連接到 SQL Server 的主要複本執行個體而不是使用可用性群組接聽程式名稱。  如果您直接連接到唯讀複本，也不會發生唯讀路由。  
   
 ####  <a name="RelatedTasksApps"></a> 相關工作  
   
@@ -169,7 +168,7 @@ Server=tcp:AGListener,1433;Database=AdventureWorks;IntegratedSecurity=SSPI;Appli
 Server=tcp:AGListener,1433;Database=AdventureWorks;IntegratedSecurity=SSPI; MultiSubnetFailover=True  
 ```  
   
- `MultiSubnetFailover`連接選項應該設定為`True`即使可用性群組只跨越單一子網路。  這可讓您將新用戶端預先設定為支援子網路的未來跨越，而不需要在未來變更用戶端連接字串，此外也會最佳化單一子網路容錯移轉的容錯移轉效能。  雖然`MultiSubnetFailover`連接選項不是必要，但是它提供更快的子網路容錯移轉的好處。  這是因為用戶端驅動程式會嘗試對與可用性群組平行相關的每個 IP 位址開啟 TCP 通訊端。  用戶端驅動程式會等候第一個成功回應的 IP，一旦回應，就會將它用於連接。  
+ `MultiSubnetFailover`連接選項應該設定為`True`即使可用性群組只跨越單一子網路。  這可讓您將新用戶端預先設定為支援子網路的未來跨越，而不需要在未來變更用戶端連接字串，此外也會最佳化單一子網路容錯移轉的容錯移轉效能。  雖然`MultiSubnetFailover`連接選項不是必要，但是它提供更快速的子網路容錯移轉的好處。  這是因為用戶端驅動程式會嘗試對與可用性群組平行相關的每個 IP 位址開啟 TCP 通訊端。  用戶端驅動程式會等候第一個成功回應的 IP，一旦回應，就會將它用於連接。  
   
 ##  <a name="SSLcertificates"></a> 可用性群組接聽程式和 SSL 憑證  
  連接到可用性群組接聽程式時，如果參與的 SQL Server 執行個體同時使用 SSL 憑證和工作階段加密，連接的用戶端驅動程式需要支援 SSL 憑證中的主體替代名稱，才能強制加密。  我們已計劃針對 ADO.NET (SqlClient)、Microsoft JDBC 和 SQL Native Client (SNAC)，提供 SQL Server 驅動程式對憑證主體替代名稱的支援。  
@@ -210,7 +209,7 @@ setspn -A MSSQLSvc/AG1listener.Adventure-Works.com:1433 corp/svclogin2
   
 ##  <a name="RelatedContent"></a> 相關內容  
   
--   [Microsoft SQL Server AlwaysOn 高可用性和災害復原的解決方案指南](http://go.microsoft.com/fwlink/?LinkId=227600)  
+-   [Microsoft SQL Server AlwaysOn 解決方案指南高可用性和災害復原](http://go.microsoft.com/fwlink/?LinkId=227600)  
   
 -   [Introduction to the Availability Group Listener](http://blogs.msdn.com/b/sqlalwayson/archive/2012/01/16/introduction-to-the-availability-group-listener.aspx) (可用性群組接聽程式簡介) (SQL Server AlwaysOn 團隊部落格)  
   
@@ -220,7 +219,7 @@ setspn -A MSSQLSvc/AG1listener.Adventure-Works.com:1433 corp/svclogin2
  [AlwaysOn 可用性群組概觀&#40;SQL Server&#41;](availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
  [AlwaysOn 用戶端連接性&#40;SQL Server&#41;](availability-groups/windows/always-on-client-connectivity-sql-server.md)  
  [關於可用性複本的用戶端連線存取 &#40;SQL Server&#41;](availability-groups/windows/about-client-connection-access-to-availability-replicas-sql-server.md)   
- [使用中次要： 可讀取次要複本&#40;AlwaysOn 可用性群組&#41;](availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)   
+ [使用中次要： 可讀取的次要複本&#40;AlwaysOn 可用性群組&#41;](availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)   
  [將用戶端連接至資料庫鏡像工作階段 &#40;SQL Server&#41;](database-mirroring/connect-clients-to-a-database-mirroring-session-sql-server.md)
   
   

@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - "10033"
 - sql12.rtp.rptdesigner.group.f1
@@ -16,21 +16,21 @@ helpviewer_keywords:
 - Grouping Pane dialog box
 ms.assetid: 8b4bd0b3-ec97-48f8-8bfb-82a53a2f35a1
 caps.latest.revision: 21
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 8e989f128bba1f122091da48a0c57f82db18f0bd
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 9a6895b0b0654f5309aaec9debb88b26c7a9a15a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36033168"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37189815"
 ---
 # <a name="grouping-pane"></a>群組窗格
   [群組] 窗格會顯示目前所選 Tablix 資料區域的資料列群組和資料行群組。 [群組] 窗格不適用於 [圖表] 或 [量測計] 資料區。 [群組] 窗格是由 [資料列群組] 窗格和 [資料行群組] 窗格所組成。 [群組] 窗格有兩種模式：預設和進階。 預設模式會針對資料列和資料行群組，顯示動態成員的階層式檢視。 進階模式則會針對資料列和資料行群組，同時顯示動態和靜態成員。 群組是來自顯示於資料區域上之報表資料集的命名集資料。 群組會組織成包含靜態和動態成員的階層。 如需詳細資訊，請參閱[了解群組 &#40;報表產生器及 SSRS&#41;](../report-design/understanding-groups-report-builder-and-ssrs.md)。  
   
 > [!NOTE]  
->  如果您看不 群組 窗格中，在**報表**功能表上，按一下 **分組**。  
+>  如果您看不見 [群組] 窗格中，在**報表**功能表上，按一下**分組**。  
   
  資料列和資料行群組區域中的資料格可以是群組的靜態或動態成員。 每個群組的靜態成員都會重複一次，而且通常包含標籤或總計。 每個群組執行個體的動態成員都會重複一次，而且通常包含群組運算式的唯一值。 當您在資料列群組區域或資料行群組區域中選取 Tablix 資料格時，就會在 [資料列群組] 或 [資料行群組] 窗格中選取對應的群組成員。 相反地，如果您在 [群組] 窗格中選取群組，就會在設計介面上選取與群組成員相關聯的對應資料格。 如需 Tablix 資料列和資料行群組區域的詳細資訊，請參閱 [Tablix 資料區的區域 &#40;報表產生器及 SSRS&#41;](../report-design/tablix-data-region-areas-report-builder-and-ssrs.md)。  
   
@@ -86,6 +86,6 @@ ms.locfileid: "36033168"
 ## <a name="see-also"></a>另請參閱  
  [資料表、矩陣和清單 &#40;報表產生器及 SSRS&#41;](../report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)   
  [運算式 &#40;報表產生器及 SSRS&#41;](../report-design/expressions-report-builder-and-ssrs.md)   
- [篩選、 分組和排序資料&#40;報表產生器和 SSRS&#41;](../report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)  
+ [篩選、 分組和排序資料&#40;報表產生器及 SSRS&#41;](../report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)  
   
   

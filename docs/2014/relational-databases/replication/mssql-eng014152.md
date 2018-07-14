@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - MSSQL_ENG014152 error
 ms.assetid: 4215e2b1-cd30-441f-9671-9afc742adf6e
 caps.latest.revision: 10
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: b115ac5bcaee609dd56f3437141171f3b422a638
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 4b499d24a6cfa7c09f75d0d0150eb8f2f942d4b7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36031406"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37205218"
 ---
 # <a name="mssqleng014152"></a>MSSQL_ENG014152
     

@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 1ff4dcff-89b3-4b99-a725-5f7963e98abf
 caps.latest.revision: 20
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: dd219231d2c3933ac480f2a5fb3a56207db61eed
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 523538e5c77ba71bce5a15966bc1b4dd93ee5513
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36031453"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37225588"
 ---
 # <a name="step-1-building-the-deployment-utility"></a>步驟 1：建立部署公用程式
   在這項工作中，您將設定並建立「部署教學課程」專案的部署公用程式。  
@@ -38,7 +38,7 @@ ms.locfileid: "36031453"
   
 4.  在 [Deployment Tutorial Property Pages (部署教學課程屬性頁)] 對話方塊中，展開 [組態屬性]，然後按一下 [部署公用程式]。  
   
-5.  在右窗格中**部署教學課程屬性頁**對話方塊方塊中，確認`AllowConfigurationChanges`設`true`，將`CreateDeploymentUtility`至`true`，並選擇性地更新的預設值`DeploymentOutputPath`。  
+5.  在右窗格中**部署教學課程屬性頁**對話方塊方塊中，確認`AllowConfigurationChanges`設定為`true`，將`CreateDeploymentUtility`來`true`，並選擇性更新的預設值`DeploymentOutputPath`。  
   
 6.  按一下 [確定] 。  
   
@@ -67,7 +67,7 @@ ms.locfileid: "36031453"
 ## <a name="next-task-in-lesson"></a>本課程的下一項工作  
  [步驟 2：確認部署配套](../integration-services/lesson-2-2-verifying-the-deployment-bundle.md)  
   
-![Integration Services 圖示 （小）](media/dts-16.gif "Integration Services 圖示 （小）")**保持最多 with Integration Services 的日期** <br /> 若要取得 Microsoft 的最新下載、文件、範例和影片以及社群中的精選解決方案，請瀏覽 MSDN 上的 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 頁面：<br /><br /> [瀏覽 MSDN 上的 Integration Services 頁面](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 若要得到這些更新的自動通知，請訂閱該頁面上所提供的 RSS 摘要。  
+![Integration Services 圖示 （小）](media/dts-16.gif "Integration Services 圖示 （小）")**保持最多包含 Integration Services 的日期** <br /> 若要取得 Microsoft 的最新下載、文件、範例和影片以及社群中的精選解決方案，請瀏覽 MSDN 上的 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 頁面：<br /><br /> [瀏覽 MSDN 上的 Integration Services 頁面](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 若要得到這些更新的自動通知，請訂閱該頁面上所提供的 RSS 摘要。  
   
 ## <a name="see-also"></a>另請參閱  
  [建立部署公用程式](../../2014/integration-services/create-a-deployment-utility.md)  

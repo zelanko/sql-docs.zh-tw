@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.common.addobject.f1
 ms.assetid: 17ac0e99-8490-46b0-8515-e5012bc9e0cf
 caps.latest.revision: 17
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 83b703bfe55bc72b262af2d423ce65c7e4ac713e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: febc358e5fd0ff796a7d0a00fe3d00d6700f55fc
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36032917"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37196728"
 ---
 # <a name="add-objects"></a>加入物件
   限制物件選項對話方塊為僅顯示您想看到的物件類型。  

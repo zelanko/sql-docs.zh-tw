@@ -1,5 +1,5 @@
 ---
-title: 在資料來源檢視設計師 (Analysis Services) 中使用圖表 |Microsoft 文件
+title: 使用圖表資料來源檢視設計師 (Analysis Services) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.dsvdesigner.diagramorganizerpane.f1
 - sql12.asvs.dsvdesigner.findtable.f1
@@ -18,15 +18,15 @@ helpviewer_keywords:
 - diagrams [Analysis Services]
 ms.assetid: 491fdd22-2326-4f27-a0dd-0a02faae3fd8
 caps.latest.revision: 34
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: b1a5a11bd381687612641d218c9a4dd04b26c8cd
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: f4bf8063097028c39dce47f2be36520b675679dd
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36032194"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37211858"
 ---
 # <a name="work-with-diagrams-in-data-source-view-designer-analysis-services"></a>在資料來源檢視設計工具中使用圖表 (Analysis Services)
   資料來源檢視 (DSV) 圖表是 DSV 中物件的視覺表示法。 您可以使用圖表以互動方式加入、隱藏、刪除或修改特定物件。 您也可以在相同的 DSV 中建立多個圖表，將注意集中在物件子集。  
@@ -50,11 +50,11 @@ ms.locfileid: "36032194"
   
  若要建立新圖表，請以滑鼠右鍵按一下 [圖表組合管理] 窗格中的任何位置，然後按一下 [新增圖表]。  
   
- 當您一開始會定義 Analysis Services 專案中的資料來源檢視 (DSV) 時，會將所有資料表和檢視都加入到資料來源檢視都加入至\<所有資料表 > 圖表。 這個圖表會出現在資料來源檢視設計師的 [圖表組合管理] 窗格內，而這個圖表中的資料表 (以及其資料行和關聯性) 會列在 [資料表] 窗格內，而且這個圖表中的資料表 (以及其資料行和關聯性) 會以圖形方式顯示在結構描述窗格內。 不過，當您將加入資料表、 檢視和具名的查詢，以\<所有資料表 > 圖表中，單單只有這個圖表中的物件數目很難視覺化的關聯性 — 尤其是多個事實資料表都會加入到圖表和維度多個事實資料表與資料表相關。  
+ 當您一開始會定義 Analysis Services 專案中的資料來源檢視 (DSV) 時，會將所有資料表和檢視都加入到資料來源檢視都加入至\<所有資料表 > 圖表。 這個圖表會出現在資料來源檢視設計師的 [圖表組合管理] 窗格內，而這個圖表中的資料表 (以及其資料行和關聯性) 會列在 [資料表] 窗格內，而且這個圖表中的資料表 (以及其資料行和關聯性) 會以圖形方式顯示在結構描述窗格內。 不過，當您將資料表、 檢視和具名的查詢，以\<所有資料表 > 圖表中，單單只有這個圖表中的物件數目很難將關聯性視覺化，特別是多個事實資料表都會加入到圖表，和維度多個事實資料表與資料表相關。  
   
  當您只想要在資料來源檢視中檢視資料表的子集時，如果要減少視覺上的混亂情形，您可以在此資料來源檢視中定義由資料表、檢視和具名查詢的選定子集所組成的子圖表 (就稱為圖表)。 您可以使用圖表，根據商務或方案需求，將資料來源檢視中的項目分組。  
   
- 基於商業用途，您可以將相關資料表和具名查詢分組在不同的圖表中，讓人更容易了解包含許多資料表、檢視和具名查詢的資料來源檢視。 相同的資料表或具名的查詢可以包含在多個圖表，除了\<所有資料表 > 圖表。 在\<所有資料表 > 圖表中，資料來源檢視中所包含的所有物件只都顯示一次。  
+ 基於商業用途，您可以將相關資料表和具名查詢分組在不同的圖表中，讓人更容易了解包含許多資料表、檢視和具名查詢的資料來源檢視。 相同的資料表或具名的查詢可以包含在多個圖表，除了\<所有資料表 > 圖表。 在 \<所有資料表 > 圖表中，資料來源檢視中所含的所有物件都顯示正好一次。  
   
 ##  <a name="bkmk_edit"></a> 編輯或刪除圖表  
  使用圖表時，請特別注意用於加入及移除物件的命令。 例如，從圖表中刪除物件會從 DSV 中刪除相同物件。 如果您只想將其從圖表中刪除，請改用 **[隱藏資料表]** 。  
@@ -94,6 +94,6 @@ ms.locfileid: "36032194"
   
 ## <a name="see-also"></a>另請參閱  
  [多維度模型中的資料來源檢視](data-source-views-in-multidimensional-models.md)   
- [資料來源檢視設計師&#40;Analysis Services-多維度資料&#41;](../data-source-view-designer-analysis-services-multidimensional-data.md)  
+ [資料來源檢視設計工具&#40;Analysis Services-多維度資料&#41;](../data-source-view-designer-analysis-services-multidimensional-data.md)  
   
   
