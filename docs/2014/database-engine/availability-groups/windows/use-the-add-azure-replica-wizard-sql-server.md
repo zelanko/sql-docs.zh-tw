@@ -5,23 +5,22 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.addreplicawizard.azurereplica.f1
 ms.assetid: b89cc41b-07b4-49f3-82cc-bc42b2e793ae
 caps.latest.revision: 8
-author: rothja
-ms.author: jroth
-manager: jhubbard
-ms.openlocfilehash: c2912564cb2866090f428cd96a2adc9d83faf9cf
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 7d6b390a88a652da41623e49437fb2c022b7e3b1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36033698"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37198178"
 ---
 # <a name="use-the-add-azure-replica-wizard-sql-server"></a>使用加入 Azure 複本精靈 (SQL Server)
   使用 [加入 Azure 複本精靈] 可以協助您在混合式 IT 中建立新的 Windows Azure VM，並且將它設定為全新或現有 AlwaysOn 可用性群組的次要複本。  
@@ -35,7 +34,7 @@ ms.locfileid: "36033698"
 -   **使用下列方法加入複本：**  [加入 Azure 複本精靈 (SQL Server Management Studio)](#SSMSProcedure)  
   
 ##  <a name="BeforeYouBegin"></a> 開始之前  
- 如果您永遠不會有任何可用性複本加入可用性群組中，請參閱的 < 伺服器執行個體 > 和 < 可用性群組和複本 > 章節中的[必要條件、 限制和建議的 AlwaysOn 可用性群組&#40;SQL Server&#41;](prereqs-restrictions-recommendations-always-on-availability.md)。  
+ 如果您從未有任何可用性複本加入可用性群組中，請參閱的 < 伺服器執行個體 > 和 < 可用性群組和複本 > 章節中的[必要條件、 限制和建議的 AlwaysOn 可用性群組&#40;SQL Server&#41;](prereqs-restrictions-recommendations-always-on-availability.md)。  
   
 ###  <a name="Prerequisites"></a> 必要條件  
   
@@ -115,7 +114,7 @@ ms.locfileid: "36033698"
   
 ## <a name="see-also"></a>另請參閱  
  [AlwaysOn 可用性群組概觀&#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
- [必要條件、 限制和建議的 AlwaysOn 可用性群組&#40;SQL Server&#41;](prereqs-restrictions-recommendations-always-on-availability.md)   
+ [必要條件、 限制和建議，AlwaysOn 可用性群組的&#40;SQL Server&#41;](prereqs-restrictions-recommendations-always-on-availability.md)   
  [將次要複本加入至可用性群組 &#40;SQL Server&#41;](add-a-secondary-replica-to-an-availability-group-sql-server.md)  
   
   

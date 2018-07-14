@@ -1,5 +1,5 @@
 ---
-title: DMSCHEMA_MINING_STRUCTURE_COLUMNS 資料列集 |Microsoft 文件
+title: DMSCHEMA_MINING_STRUCTURE_COLUMNS 資料列集 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -18,15 +18,15 @@ helpviewer_keywords:
 - DMSCHEMA_MINING_STRUCTURE_COLUMNS rowset
 ms.assetid: 81f25502-ac90-42f1-8ddf-7b0f9752ebfd
 caps.latest.revision: 34
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 98c8ec286e12cfe6198c36900067a26eefd5e1ad
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 3c98da6f1e843b08fac4b91baabec79ab0d9c341
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36032185"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37171579"
 ---
 # <a name="dmschemaminingstructurecolumns-rowset"></a>DMSCHEMA_MINING_STRUCTURE_COLUMNS 資料列集
   描述正在執行的伺服器上部署的所有採礦結構的個別資料行[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]。  
@@ -41,7 +41,7 @@ ms.locfileid: "36032185"
 |`STRUCTURE_NAME`|`DBTYPE_WSTR`||結構名稱。 這個資料行不能包含 `NULL`。|  
 |`COLUMN_NAME`|`DBTYPE_WSTR`||資料行的名稱。 只有在共用相同模式的資料行之間可保證唯一性。 例如，如果它們在相同結構中屬於兩個不同的巢狀資料表，則這兩個巢狀資料行可能會有相同的名稱。|  
 |`COLUMN_GUID`|`DBTYPE_GUID`||資料行 GUID。 不使用 GUID 來識別資料行的提供者，應該會在這個資料行中傳回 `NULL`。|  
-|`COLUMN_PROPID`|`DBTYPE_UI4`||資料行屬性的識別碼。 未將屬性識別碼與資料行相關聯的提供者，應該會在這個資料中傳回 `NULL`。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 傳回`NULL`此資料行。|  
+|`COLUMN_PROPID`|`DBTYPE_UI4`||資料行屬性的識別碼。 未將屬性識別碼與資料行相關聯的提供者，應該會在這個資料中傳回 `NULL`。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 傳回`NULL`這個資料行。|  
 |`ORDINAL_POSITION`|`DBTYPE_UI4`||資料行的序數。 資料行的編號會從 1 開始。 如果資料行沒有穩定的序數值，則為 `NULL`。|  
 |`COLUMN_HASDEFAULT`|`DBTYPE_BOOL`||布林值，指出資料行是否有預設值。<br /><br /> 如果資料行有預設值，則為 `TRUE`。<br /><br /> 如果資料行沒有預設值，或是如果不知道資料行是否有預設值，則為 `FALSE`。|  
 |`COLUMN_DEFAULT`|`DBTYPE_WSTR`||資料行的預設值。 提供者可能會在 `DBCOLUMN_DEFAULTVALUE` 傳回的資料列集中公開 `DBCOLUMN_HASDEFAULT`，而不會公開 `IColumnsRowset::GetColumnsRowset` (適用於 ISO 資料表)。<br /><br /> 如果預設值是 `NULL`，則 `COLUMN_HASDEFAULT` 是 `TRUE`，而 `COLUMN_DEFAULT` 資料行是 `NULL` 值。|  
@@ -49,7 +49,7 @@ ms.locfileid: "36032185"
 |`IS_NULLABLE`|`DBTYPE_BOOL`||布林值，指出資料行是否有預設值。<br /><br /> 如果資料行可以包含 `TRUE`，則為 `NULL`，否則為 `FALSE`。|  
 |`DATA_TYPE`|`DBTYPE_UI2`||資料行之資料類型的指標。 例如：<br /><br /> -   "`TABLE`" = `DBTYPE_HCHAPTER`<br />-   "`TEXT`" = `DBTYPE_WCHAR`<br />-   "`LONG`" = `DBTYPE_I8`<br />-   "`DOUBLE`" = `DBTYPE_R8`<br />-   "`DATE`" = `DBTYPE_DATE`|  
 |`TYPE_GUID`|`DBTYPE_GUID`||資料行資料類型的 GUID。 不使用 GUID 來識別資料類型的提供者，應該會在這個資料行中傳回 `NULL`。|  
-|`CHARACTER_MAXIMUM_LENGTH`|`DBTYPE_UI4`||資料欄中值的可能長度上限。 若是字元、二進位或是位元資料行，這是下列其中一個：<br /><br /> 集中的資料行的最大長度字元、 位元組或是位元，分別，如果長度定義。 例如，SQL 資料表中的 `CHAR(5)` 資料行其最大的長度為 5。<br />集資料的最大長度字元、 位元組或是位元為單位中分別輸入，如果資料行沒有定義的長度。<br />零 (0)，如果資料行或是資料類型已定義的最大長度。<br />-   `NULL` 對於所有其他類型的資料行。|  
+|`CHARACTER_MAXIMUM_LENGTH`|`DBTYPE_UI4`||資料欄中值的可能長度上限。 若是字元、二進位或是位元資料行，這是下列其中一個：<br /><br /> 集中的資料行的最大長度字元、 位元組或是位元為單位，如果長度定義。 例如，SQL 資料表中的 `CHAR(5)` 資料行其最大的長度為 5。<br />集資料的最大長度中的字元、 位元組或是位元，分別輸入，如果資料行沒有定義的長度。<br />零 (0) (如果資料行和資料類型都不具有已定義的最大長度。<br />-   `NULL` 對於所有其他類型的資料行。|  
 |`CHARACTER_OCTET_LENGTH`|`DBTYPE_UI4`||如果資料行類型是字元或是二進位，則為以八位元資料組 (位元組) 為單位之資料行的最大長度。 值為零 (0) 表示資料行沒有最大長度。 所有其他類型的資料行都為 `NULL`。|  
 |`NUMERIC_PRECISION`|`DBTYPE_UI2`||如果資料行的資料類型是 `VARNUMERIC` 以外的數值資料類型，則為資料行的最大有效位數；如果資料行的資料類型不是數值或者為 `NULL`，則為 `VARNUMERIC`。<br /><br /> 具有 `DBTYPE_DECIMAL` 或 `DBTYPE_NUM`ERIC 的資料類型之資料行的有效位數，取決於資料行的定義。|  
 |`NUMERIC_SCALE`|`DBTYPE_I2`||如果資料行的類型指標為 `DBTYPE_DECIMAL`、`DBTYPE_NUMERIC` 或 `DBTYPE_VARNUMERIC`，則為小數點右邊的位數。 否則，這個值為 `NULL`。|  

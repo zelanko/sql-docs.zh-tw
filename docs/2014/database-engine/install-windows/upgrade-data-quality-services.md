@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: f396666b-7754-4efc-9507-0fd114cc32d5
 caps.latest.revision: 8
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 9f1feb8292020b61d00705e662bda80d2b3af4eb
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: ecbf266c87e5aebe47f0f7af9c7a244c0e8dfb20
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36034194"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37171429"
 ---
 # <a name="upgrade-data-quality-services"></a>升級 Data Quality Services
   本主題提供有關如何將您現有的 Data Quality Services (DQS) 安裝升級至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] CTP2。 將 DQS 中的資料品質伺服器升級至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]的過程中，您也必須升級 DQS 資料庫結構描述。  
@@ -27,7 +27,7 @@ ms.locfileid: "36034194"
 > [!IMPORTANT]  
 >  -   在升級 DQS 之前，您必須先備份 DQS 資料庫，以免在結構描述升級期間有任何意外的遺失資料狀況。 如需有關備份 DQS 資料庫的詳細資訊，請參閱 [備份及還原 DQS 資料庫](../../data-quality-services/backing-up-and-restoring-dqs-databases.md)。  
 > -   您可以使用最新或舊版 Data Quality Client 連接至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 版的 Data Quality Server 或 Integration Services 中的 [DQS 清理轉換](../../integration-services/data-flow/transformations/dqs-cleansing-transformation.md) ，以執行您的資料品質工作。  
-> -   將 Data Quality Services 和 Master Data Services 升級為 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] CTP2 之後，您可以繼續使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] SP1 版適用於 Excel 的 Master Data Services 增益集。 不過，在升級為 SQL Server 2014 CTP2 之後，任何舊版適用於 Excel 的 Master Data Services 增益集將無法運作。 您可以下載[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]SP1 版的 Master Data Services-增益適用於 Excel[這裡](http://go.microsoft.com/fwlink/?LinkId=328664)。  
+> -   將 Data Quality Services 和 Master Data Services 升級為 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] CTP2 之後，您可以繼續使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] SP1 版適用於 Excel 的 Master Data Services 增益集。 不過，在升級為 SQL Server 2014 CTP2 之後，任何舊版適用於 Excel 的 Master Data Services 增益集將無法運作。 您可以下載[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]SP1 版的 Master Data Services 增益集適用於 Excel[這裡](http://go.microsoft.com/fwlink/?LinkId=328664)。  
   
 ##  <a name="Prerequisites"></a> 必要條件  
   
@@ -46,7 +46,7 @@ ms.locfileid: "36034194"
   
     2.  按一下左窗格中的 [安裝]。  
   
-    3.  在右窗格中，按一下 **從 SQL Server 2005、 SQL Server 2008、 SQL Server 2008 R2 或 SQL Server 2012 升級**。  
+    3.  在右窗格中，按一下**從 SQL Server 2005，SQL Server 2008，SQL Server 2008 R2 或 SQL Server 2012 升級**。  
   
     4.  完成安裝精靈。  
   
@@ -69,7 +69,7 @@ ms.locfileid: "36034194"
         dqsinstaller.exe -upgrade  
         ```  
   
-    4.  安裝程式會提示您先備份 DQS 資料庫後再繼續。 如果您已經備份 DQS 資料庫，請輸入`Y`或`Yes`，然後按 ENTER 繼續升級。  
+    4.  安裝程式會提示您先備份 DQS 資料庫後再繼續。 如果您已經備份 DQS 資料庫，鍵入`Y`或`Yes`，然後按 ENTER 繼續升級。  
   
     5.  在成功升級 DQS 資料庫結構描述之後，將會顯示完成訊息。  
   

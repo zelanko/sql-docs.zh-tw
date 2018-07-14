@@ -8,25 +8,25 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - CONTAINS predicate (Transact-SQL)
 - queries [full-text search], creating
 - full-text queries [SQL Server], creating
 ms.assetid: 537fa556-390e-4c88-9b8e-679848d94abc
 caps.latest.revision: 12
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 3963876ce326529fd2538adc2d303d218406a924
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 626c1c58cae7db7d07dae717b980c83292e11b7f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36035367"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37175127"
 ---
 # <a name="create-full-text-search-queries-visual-database-tools"></a>建立全文檢索搜尋查詢 (Visual Database Tools)
-  全文檢索搜尋會使用 CONTAINS 述詞 (Predicate)，找出在指定資料行中具有指定文字的資料列。 全文檢索搜尋只適用於具有現用全文檢索索引的資料行。 如果您嘗試在未具有目前現用全文檢索索引的資料行上使用 CONTAINS 子句，您會收到錯誤訊息。 如需有關全文檢索索引和 CONTAINS 子句的詳細資訊，請參閱[全文檢索搜尋](../../relational-databases/search/full-text-search.md)和[CONTAINS &#40;TRANSACT-SQL&#41;](/sql/t-sql/queries/contains-transact-sql)。  
+  全文檢索搜尋會使用 CONTAINS 述詞 (Predicate)，找出在指定資料行中具有指定文字的資料列。 全文檢索搜尋只適用於具有現用全文檢索索引的資料行。 如果您嘗試在未具有目前現用全文檢索索引的資料行上使用 CONTAINS 子句，您會收到錯誤訊息。 如需有關全文檢索索引和 CONTAINS 子句的詳細資訊，請參閱 <<c0> [ 全文檢索搜尋](../../relational-databases/search/full-text-search.md)並[CONTAINS &#40;-&#41;](/sql/t-sql/queries/contains-transact-sql)。</c0>  
   
 ### <a name="to-create-a-full-text-search-query"></a>建立全文檢索搜尋查詢  
   

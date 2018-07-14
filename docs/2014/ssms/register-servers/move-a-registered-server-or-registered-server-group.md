@@ -1,5 +1,5 @@
 ---
-title: 移動已註冊的伺服器或已註冊的伺服器群組 (SQL Server Management Studio) |Microsoft 文件
+title: 移動已註冊的伺服器或已註冊的伺服器群組 (SQL Server Management Studio) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - moving registered server or server group
 - Registered Servers [SQL Server], server groups
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - groups [SQL Server], server
 ms.assetid: 4438ca98-3abe-4dea-a760-48a9dad63c2e
 caps.latest.revision: 19
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: b4727f6d6bb0dac403510536f1231bef075c2987
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 2472a88caaf08616a12bb0b4fb54458c141115c9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36035362"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37189615"
 ---
 # <a name="move-a-registered-server-or-registered-server-group-sql-server-management-studio"></a>移動已註冊的伺服器或已註冊的伺服器群組 (SQL Server Management Studio)
   本主題描述如何透過在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]中移動已註冊伺服器或伺服器群組的方式，組織 [已註冊的伺服器] 中的伺服器。 伺服器群組可以包含已註冊的伺服器或其他伺服器群組。 伺服器和伺服器群組都可以從一個伺服器群組移到另一個伺服器群組中。  

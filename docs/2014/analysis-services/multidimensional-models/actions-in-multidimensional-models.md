@@ -1,5 +1,5 @@
 ---
-title: 多維度模型中的動作 |Microsoft 文件
+title: 多維度模型中的動作 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - actions [Analysis Services], creating
 - report actions [Analysis Services]
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - cubes [Analysis Services], actions
 ms.assetid: b9fee2b9-05a5-4077-848d-d8457326dc27
 caps.latest.revision: 19
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: adf4fe01f2bf85bf4cf13e828f62eced3696a4ef
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e6576d805e7352133bffb97ad4612cc5114764ab
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36034880"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37196538"
 ---
 # <a name="actions-in-multidimensional-models"></a>多維度模型中的動作
   動作是使用者在所選取的 Cube 或部分 Cube 上所起始的作業。 這個作業可以使用所選取項目做為參數來啟動應用程式，或擷取關於所選取項目的資訊。 如需動作的詳細資訊，請參閱[動作 &#40;Analysis Services - 多維度資料&#41;](actions-analysis-services-multidimensional-data.md)。  
@@ -56,7 +56,7 @@ ms.locfileid: "36034880"
  選取目標物件類型之後，在 [目標物件] 下，選取指定類型的 Cube 物件。  
   
  **條件 (選擇性)**  
- 指定解析成布林值的選擇性多維度運算式 (MDX) 運算式。 如果值為`True`，指定目標上執行的動作。 如果值為`False`，無法執行此動作。  
+ 指定解析成布林值的選擇性多維度運算式 (MDX) 運算式。 如果值為`True`，在指定的目標上執行此動作。 如果值為`False`，不會執行動作。  
   
  **動作內容**  
  選取動作的類型。 下表摘要可以使用的類型。  
@@ -79,7 +79,7 @@ ms.locfileid: "36034880"
 |**引動過程**|指定動作如何執行。 預設為互動式，會指定使用者存取物件時執行的動作。 可能的設定有：<br /><br /> 批次<br /><br /> 互動式<br /><br /> 開啟時|  
 |**應用程式**|描述動作的應用程式。|  
 |**說明**|描述動作。|  
-|**Caption**|提供為動作顯示的標題。 如果標題是 MDX，指定`True`如**標題是 MDX**。|  
+|**Caption**|提供為動作顯示的標題。 如果標題是 MDX，指定`True`for**標題是 MDX**。|  
 |**標題是 MDX**|指定`True`如果標題是 MDX 或`False`如果不是。|  
   
 > [!NOTE]  

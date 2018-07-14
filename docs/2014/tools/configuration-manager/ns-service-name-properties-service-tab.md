@@ -1,5 +1,5 @@
 ---
-title: NS$&lt;服務名稱&gt;屬性 （服務索引標籤） |Microsoft 文件
+title: NS$&lt;服務名稱&gt;屬性 （服務索引標籤） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - configmgr-client
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 57c6b791-1663-4a01-9de2-cf1bdd8adb2c
 caps.latest.revision: 13
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: c02ad64dfada49434900795f49802e75cf8d2945
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: ad78ef3b5a142ca7b9d3f1d9a805d7b46e36ce7e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36034487"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37189575"
 ---
 # <a name="nsltservice-namegt-properties-service-tab"></a>NS$&lt;屬性名稱&gt; 屬性 ([服務] 索引標籤)
   這個服務是 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNS](../../includes/ssns-md.md)] 服務。 淺灰色的屬性值不得以此應用程式加以變更。  

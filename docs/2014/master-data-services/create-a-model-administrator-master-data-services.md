@@ -8,28 +8,28 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - administrators [Master Data Services], creating
 ms.assetid: dae17afc-3b39-490e-b51f-2d8da26d429e
 caps.latest.revision: 4
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 06f5acf3bf8c9c4f8df7282934c99b38480a1bd3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: 400be71a74676d0d95ddcd56d1927aed3e7711f8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36034156"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37195018"
 ---
 # <a name="create-a-model-administrator-master-data-services"></a>建立模型管理員 (Master Data Services)
-  在[!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]，建立模型管理員，當您希望群組或使用者擁有**更新**一或多個模型中的所有物件的權限。  
+  在  [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]，建立模型管理員，當您希望群組或使用者擁有**更新**一或多個模型中的所有物件的權限。  
   
 > [!TIP]  
 >  若要簡化管理，請建立 Windows 或本機群組，然後將此群組設定為模型管理員。 然後不需存取 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]，您就可以在群組中加入及移除使用者。  
   
-## <a name="prerequisites"></a>必要條件  
+## <a name="prerequisites"></a>先決條件  
  若要執行此程序：  
   
 -   您必須擁有存取 [使用者及群組的權限] 功能區域的權限。  
@@ -61,7 +61,7 @@ ms.locfileid: "36034156"
 ## <a name="remarks"></a>備註  
  請不要指派模型物件或階層成員的任何其他權限。 如果您這樣做，使用者不再是系統管理員，並且無法檢視模型中的任何功能區域以外**總管**。  
   
- 以下情況除外： 如果使用者具有**更新**權限指派給階層**根**上**階層成員**索引標籤上，使用者仍然是模型系統管理員。  
+ 以下情況除外： 如果使用者擁有**更新**權限指派給階層**根**上**階層成員**索引標籤上，使用者仍然會視為一個模型系統管理員。  
   
 ## <a name="see-also"></a>另請參閱  
  [系統管理員&#40;Master Data Services&#41;](administrators-master-data-services.md)   

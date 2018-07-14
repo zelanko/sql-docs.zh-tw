@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine-imoltp
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 690b70b7-5be1-4014-af97-54e531997839
 caps.latest.revision: 12
-author: stevestein
-ms.author: sstein
-manager: jhubbard
-ms.openlocfilehash: f40638174ebd432a96ce61ea27805ea77fd5a151
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 65d72bac30b1a531d332e88c4b8e59afc73f7afb
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36037477"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37193332"
 ---
 # <a name="altering-memory-optimized-tables"></a>改變記憶體最佳化資料表
   不支援執行記憶體最佳化資料表上的 ALTER 作業。 這些作業包括變更 bucket_count、加入或移除索引，以及加入或移除資料行等等。 本主題提供如何更新記憶體最佳化之資料表的指導方針。  
@@ -73,7 +73,7 @@ ms.locfileid: "36037477"
     select * into dbo.T_copy from dbo.T  
     ```  
   
-     如果沒有可用的記憶體不足`T_copy`可能是記憶體最佳化資料表，使資料複製更快速。<sup>2</sup>  
+     如果沒有足夠的可用記憶體`T_copy`可能是記憶體最佳化資料表，使資料複製更快速。<sup>2</sup>  
   
 5.  卸除參考原始資料表的結構描述繫結物件。  
   
@@ -87,14 +87,14 @@ ms.locfileid: "36037477"
   
 10. 在 `T` 上啟動工作負載。  
   
- <sup>1</sup>注意`T_copy`會保存到磁碟，在此範例中。 如果有 `T` 的備份可用，`T_copy` 可以是暫存或非持久資料表。  
+ <sup>1</sup>請注意，`T_copy`會保存到磁碟，在此範例中。 如果有 `T` 的備份可用，`T_copy` 可以是暫存或非持久資料表。  
   
  <sup>2</sup>必須有足夠的記憶體供`T_copy`。 記憶體不會在 `DROP TABLE` 上立即釋放。 如果 `T_copy` 為記憶體最佳化，則必須有足夠的記憶體可供兩個額外的 `T` 副本使用。 如果 `T_copy` 是以磁碟為基礎的資料表，就只需要足夠的記憶體以進行額外一次 `T` 複製，因為卸除舊版 `T` 之後，需讓記憶體回收行程趕上進度。  
   
 ## <a name="changing-schema-powershell"></a>變更結構描述 (PowerShell)  
  下列 PowerShell 指令碼會藉由撰寫資料庫和相關權限的指令碼，以準備並產生結構描述變更。  
   
- 使用方式： prepare_schema_change.ps1 *server_name * * db_name`schema_name`table_name*  
+ 使用方式： prepare_schema_change.ps1 *v e _ * * db_name`schema_name`table_name*  
   
  此指令碼會採用資料表做為引數，並且撰寫在目前資料夾中物件與其權限以及參考結構描述繫結物件與其權限的指令碼。 總共會產生 7 個指令碼用於更新輸入資料表的結構描述：  
   
@@ -228,7 +228,7 @@ write-host ""
   
  下列 PowerShell 指令碼會執行前述範例中所撰寫的結構描述變更指令碼。 此指令碼會採用資料表做為引數，並執行為該資料表與相關預存程序產生的結構描述變更指令碼。  
   
- 使用方式： execute_schema_change.ps1 *server_name * * db_name`schema_name`table_name*  
+ 使用方式： execute_schema_change.ps1 *v e _ * * db_name`schema_name`table_name*  
   
 ```tsql  
 # stop execution once an error occurs  

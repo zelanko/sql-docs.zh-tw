@@ -1,5 +1,5 @@
 ---
-title: tablediff 公用程式 |Microsoft 文件
+title: tablediff 公用程式 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - comparing data
 - tablediff utility
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - non-convergence [SQL Server]
 ms.assetid: 3c3cb865-7a4d-4d66-98f2-5935e28929fc
 caps.latest.revision: 29
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 851ba198020abf234c793ad65acf3f5dbbcd8e2f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: a6d073e95d896429e1827009c249b940ade2e7b9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36034284"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37180965"
 ---
 # <a name="tablediff-utility"></a>tablediff 公用程式
   **tablediff** 公用程式用來比較兩份資料表之資料的非聚合狀況，當進行複寫拓撲中之非聚合狀況的疑難排解時，它尤其有用。 您可以在命令提示字元之下，或在批次檔中，利用這個公用程式來執行下列工作：  
@@ -129,7 +129,7 @@ ms.locfileid: "36034284"
  在比較期間，目的地資料表以 TABLOCK 和 HOLDLOCK 資料表提示鎖定。  
   
  **-b** *large_object_bytes*  
- 是其中包含要比較的大型物件資料類型資料行的位元組數： `text`， `ntext`， `image`， `varchar(max)`，`nvarchar(max)`和`varbinary(max)`。 *large_object_bytes* 預設為資料行的大小。 不比較任何超出 *large_object_bytes* 的資料。  
+ 是包含要比較的大型物件資料類型資料行的位元組數： `text`， `ntext`， `image`， `varchar(max)`，`nvarchar(max)`和`varbinary(max)`。 *large_object_bytes* 預設為資料行的大小。 不比較任何超出 *large_object_bytes* 的資料。  
   
  **-bf**  *number_of_statements*  
  這是使用 [!INCLUDE[tsql](../includes/tsql-md.md)] -f [!INCLUDE[tsql](../includes/tsql-md.md)] 選項時要寫入目前 **指令碼檔案中的** 陳述式數目。 當 [!INCLUDE[tsql](../includes/tsql-md.md)] 陳述式數目超出 *number_of_statements*時，會建立新的 [!INCLUDE[tsql](../includes/tsql-md.md)] 指令碼檔案。  
@@ -166,7 +166,7 @@ ms.locfileid: "36034284"
   
 ## <a name="return-value"></a>傳回值  
   
-|ReplTest1|描述|  
+|值|描述|  
 |-----------|-----------------|  
 |**0**|成功|  
 |**1**|嚴重錯誤|  

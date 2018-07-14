@@ -1,5 +1,5 @@
 ---
-title: Capability 元素 (XMLA) |Microsoft 文件
+title: Capability 元素 (XMLA) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -24,18 +24,18 @@ helpviewer_keywords:
 - Capability element
 ms.assetid: 544a733e-77fc-48a0-8f92-9cd1fdbcf824
 caps.latest.revision: 16
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: 7fd495ff0abf921b377526f6030d5207d962e1bd
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: a5b14b43b41f74c05d433c599b18486c5737b27c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36032618"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37201888"
 ---
 # <a name="capability-element-xmla"></a>Capability 元素 (XMLA)
-  表示父系中的通訊協定功能的支援[ProtocolCapabilities](../xml-elements-headers/protocolcapabilities-element-xmla.md)標頭項目。  
+  表示父項中的通訊協定功能的支援[ProtocolCapabilities](../xml-elements-headers/protocolcapabilities-element-xmla.md)標頭項目。  
   
 ## <a name="syntax"></a>語法  
   
@@ -74,7 +74,7 @@ ms.locfileid: "36032618"
 |xpress|壓縮支援|  
   
 ## <a name="see-also"></a>另請參閱  
- [管理連接與工作階段&#40;XMLA&#41;](../../multidimensional-models-scripting-language-assl-xmla/managing-connections-and-sessions-xmla.md)   
+ [管理連接和工作階段&#40;XMLA&#41;](../../multidimensional-models-scripting-language-assl-xmla/managing-connections-and-sessions-xmla.md)   
  [屬性&#40;XMLA&#41;](xml-elements-properties.md)  
   
   

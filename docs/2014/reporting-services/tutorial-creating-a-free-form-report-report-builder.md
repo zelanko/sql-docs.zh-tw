@@ -8,30 +8,30 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 87288b59-faf2-4b1d-a8e4-a7582baedf2f
 caps.latest.revision: 15
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 763df160d03f3f26824559b2068e3e241bb66d23
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: fe42fc3dd5e1398cc0e66ad2c37cd14a3fedd67a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36032731"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37202808"
 ---
 # <a name="tutorial-creating-a-free-form-report-report-builder"></a>教學課程：建立自由格式報表 (報表產生器)
   本教學課程將教導您如何建立類似套印信件的 SSRS 自由格式報表。 您可以排列報表項目，以建立具有文字方塊、影像和其他資料區域的表單。  
   
  您在本教學課程中建立的報表，是以教學課程中所包含的範例銷售資料為基礎。 此報表會依領域將資訊分組，並顯示各領域的銷售經理姓名以及詳細和摘要銷售資訊。 您將使用清單資料區做為自由格式報表的基礎，然後加入含有影像的裝飾面板、插入資料的靜態文字、顯示詳細資訊的資料表，以及 (選擇性) 顯示摘要資訊的圓形圖和直條圖。  
   
-##  <a name="BackToTop"></a> 您將學習  
+##  <a name="BackToTop"></a> 您將了解  
  在本教學課程中，您將學習如何執行下列作業：  
   
 -   [建立空白報表、 資料來源和資料集](#BlankReport)  
   
--   [加入及設定清單](#List)  
+-   [新增及設定清單](#List)  
   
 -   [加入圖形](#Graphics)  
   
@@ -39,13 +39,13 @@ ms.locfileid: "36032731"
   
 -   [加入資料表以顯示詳細資料](#Table)  
   
--   [格式化資料](#Format)  
+-   [將資料格式化](#Format)  
   
 -   [儲存報表](#Save)  
   
 ### <a name="other-optional-steps"></a>其他選擇性步驟  
   
--   [加入線條以區隔報表的各區域](#Line)  
+-   [加入線條以區隔報表的區域](#Line)  
   
 -   [加入摘要資料視覺效果](#Visualization)  
   
@@ -74,13 +74,13 @@ ms.locfileid: "36032731"
   
 1.  在 [報表資料] 窗格中，按一下 **[新增]**，然後按一下 **[資料來源]**。  
   
-2.  在`Name`方塊中，輸入： **ListDataSource**  
+2.  在 `Name`方塊中，輸入： **ListDataSource**  
   
 3.  按一下 **[使用內嵌於報表中的連接]**。  
   
 4.  確認連線類型為 Microsoft SQL Server，接著在 [連接字串] 方塊中鍵入 **Data Source = \<伺服器名稱>**  
   
-     \<伺服器名稱 > 的範例 Report001，指定 SQL Server Database Engine 的執行個體安裝所在的電腦。 由於報表資料不是擷取自 SQL Server 資料庫，您不必加上資料庫的名稱。 指定之伺服器上的預設資料庫將用來剖析查詢。  
+     \<伺服器名稱 >，例如 Report001，指定 SQL Server Database Engine 的執行個體安裝所在的電腦。 由於報表資料不是擷取自 SQL Server 資料庫，您不必加上資料庫的名稱。 指定之伺服器上的預設資料庫將用來剖析查詢。  
   
 5.  按一下 [認證] ，並輸入連接到 SQL Server Database Engine 執行個體所需的認證。  
   
@@ -90,7 +90,7 @@ ms.locfileid: "36032731"
   
 1.  在 [報表資料] 窗格中，按一下 **[新增]**，然後按一下 **[資料集]**。  
   
-2.  在`Name`方塊中，輸入： **[listdataset]。**  
+2.  在 `Name`方塊中，輸入： **listdataset。**  
   
 3.  按一下 [使用內嵌在我的報表中的資料集] ，並確認資料來源是 **ListDataSource**。  
   
@@ -144,7 +144,7 @@ ms.locfileid: "36032731"
 ##  <a name="List"></a> 2.加入及設定清單  
  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 提供三個資料區範本：資料表、矩陣和清單。 這些範本都是以 Tablix 資料區域為基礎。  
   
- 在本教學課程中，您將使用清單，在類似新聞稿的報表中顯示各銷售領域的銷售資訊。 此資訊是依領域分組。 您要加入新的資料列群組來依領域分組資料，然後刪除內建的 [詳細資料] 資料列群組。 這個清單範本相當適合用來建立自由格式報表。 如需詳細資訊，請參閱[列出&#40;報表產生器及 SSRS&#41;](report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)。  
+ 在本教學課程中，您將使用清單，在類似新聞稿的報表中顯示各銷售領域的銷售資訊。 此資訊是依領域分組。 您要加入新的資料列群組來依領域分組資料，然後刪除內建的 [詳細資料] 資料列群組。 這個清單範本相當適合用來建立自由格式報表。 如需詳細資訊，請參閱 <<c0> [ 列出&#40;報表產生器及 SSRS&#41;](report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)。</c0>  
   
 > [!NOTE]  
 >  此報表會使用 Letter (8.5 X11) 紙張大小和 1 英吋的邊界。 若報表頁面高度超過 9 英吋或寬度超過 6 1/2 英吋，則可能產生空白頁面。  
@@ -155,7 +155,7 @@ ms.locfileid: "36032731"
   
 2.  按一下清單內部，在清單頂端按一下滑鼠右鍵，然後按一下 [Tablix 屬性] 。  
   
-     ![加入清單](../../2014/tutorials/media/tutorial-addinglistwithnumbers.png "加入清單")  
+     ![新增清單](../../2014/tutorials/media/tutorial-addinglistwithnumbers.png "加入清單")  
   
 3.  從 **[資料集名稱]** 下拉式清單中，選取 **[ListDataset]**。  
   
@@ -187,7 +187,7 @@ ms.locfileid: "36032731"
   
 5.  按一下 [只刪除資料行] 。  
   
-     ![刪除資料行對話方塊](../../2014/tutorials/media/tutorial-deletecolumnsdialog.png "刪除資料行對話方塊")  
+     ![刪除資料行對話方塊](../../2014/tutorials/media/tutorial-deletecolumnsdialog.png "刪除的資料行對話方塊")  
   
 6.  在 [資料列群組] 窗格中，在 [詳細資料]  群組上按一下滑鼠右鍵，然後按一下 [刪除群組] 。  
   
@@ -202,7 +202,7 @@ ms.locfileid: "36032731"
   
 #### <a name="to-add-graphic-elements-to-the-report"></a>加入圖形元素至報表中  
   
-1.  在**插入** 索引標籤的 功能區中，按一下 **矩形**，然後將矩形拖曳到清單的左上角。 將矩形調整成高 7 英吋且寬為 1 英吋。  
+1.  在 [**插入**] 索引標籤的功能區中，按一下**矩形**，然後將矩形拖曳到清單的左上角。 將矩形調整成高 7 英吋且寬為 1 英吋。  
   
 2.  以滑鼠右鍵按一下矩形，然後按一下 **[矩形屬性]**。  
   
@@ -289,7 +289,7 @@ ms.locfileid: "36032731"
   
 21. 將 [Sales] 欄位拖曳到文字方塊中，置於您在步驟 20 輸入的文字後面，接著再輸入一個驚嘆號 (!)。  
   
-22. 反白顯示 [銷售量] 欄位，以滑鼠右鍵按一下欄位，然後按一下**運算式**。  
+22. 反白顯示 Sales 欄位，以滑鼠右鍵按一下  欄位中，然後按一下**運算式**。  
   
 23. 在運算式方塊中，將運算式改為包含 Sum 函數，如下所示：  
   
@@ -299,7 +299,7 @@ ms.locfileid: "36032731"
   
 24. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-     ![將運算式加入到銷售欄位](../../2014/tutorials/media/tutorial-addexpressiontosalesfield.png "新增運算式到銷售欄位")  
+     ![新增運算式到銷售欄位](../../2014/tutorials/media/tutorial-addexpressiontosalesfield.png "新增運算式到銷售欄位")  
   
 25. 選取您在步驟 20 至步驟 23 加入的文字，再按一下滑鼠右鍵，然後按一下 **[文字屬性]**。  
   
@@ -382,7 +382,7 @@ ms.locfileid: "36032731"
   
  報表如今已顯示格式化的資料，更容易閱讀。  
   
- ![格式化報表中的總銷售額](../../2014/tutorials/media/tutorial-reportsalestotals-formatted.png "格式化報表中的總銷售額")  
+ ![格式化報表中的銷售總額](../../2014/tutorials/media/tutorial-reportsalestotals-formatted.png "格式化報表中的總銷售額")  
   
 ##  <a name="Save"></a> 7.儲存報表  
  您可以將報表儲存至報表伺服器、SharePoint 文件庫或您的電腦上。 您也可以將報表匯出成各種格式 (例如 Word 和 PDF)，方法是執行報表，然後從 [匯出]  功能表選取格式。  
@@ -399,7 +399,7 @@ ms.locfileid: "36032731"
   
      「正在連接到報表伺服器」訊息隨即顯示。 連接完成時，您就會看見報表伺服器管理員指定為預設報表位置之報表資料夾的內容。  
   
-4.  在`Name`，將預設名稱取代**SalesInformationByTerritory**。  
+4.  在  `Name`，將預設名稱取代**SalesInformationByTerritory**。  
   
 5.  按一下 **[儲存]**。  
   
@@ -411,7 +411,7 @@ ms.locfileid: "36032731"
   
 2.  按一下 **[桌面]**、 **[我的文件]** 或 **[我的電腦]**，然後瀏覽到您要儲存報表的資料夾。  
   
-3.  在`Name`，將預設名稱取代**SalesInformationByTerritory**。  
+3.  在  `Name`，將預設名稱取代**SalesInformationByTerritory**。  
   
 4.  按一下 **[儲存]**。  
   
@@ -432,9 +432,9 @@ ms.locfileid: "36032731"
   
 6.  在 [框線]  區域內，寬度選取 [4 1/2]  點，色彩則選取 [紅色] 。  
   
-     ![新增報表行](../../2014/tutorials/media/tutorial-reportwithline.png "將行加入至報表")  
+     ![報表中加入一行](../../2014/tutorials/media/tutorial-reportwithline.png "新增報表行")  
   
-##  <a name="Visualization"></a> 第 9。(選擇性) 加入摘要資料視覺效果  
+##  <a name="Visualization"></a> 9。(選擇性) 加入摘要資料視覺效果  
  矩形可以協助您控制報表的轉譯方式。 將圓形圖和直條圖放到矩形內，以確保報表轉譯為您希望的外觀。  
   
 #### <a name="to-add-a-rectangle"></a>若要加入矩形  
@@ -455,7 +455,7 @@ ms.locfileid: "36032731"
   
 4.  在 [排列圖表欄位] 頁面上，將 [Product] 拖曳至 [類別目錄]。  
   
-5.  拖曳 Quantity to**值**，然後按一下 **下一步**。  
+5.  拖曳數量**值**，然後按一下**下一步**。  
   
 6.  在 **[選擇樣式]** 頁面的 **[樣式]** 窗格中，選取 **[石板]**。  
   
@@ -465,7 +465,7 @@ ms.locfileid: "36032731"
   
 9. 將圖表拖曳到矩形內。  
   
-     ![加入圓形圖](../../2014/tutorials/media/tutorial-addpiechart.png "加入圓形圖")  
+     ![新增圓形圖](../../2014/tutorials/media/tutorial-addpiechart.png "加入圓形圖")  
   
 10. 在圖表標題上按一下滑鼠右鍵，然後按一下 [標題屬性] 。  
   
@@ -483,7 +483,7 @@ ms.locfileid: "36032731"
   
 3.  按一下 **[直條圖]**，然後按 **[下一步]**。  
   
-4.  在 [排列圖表欄位] 頁面上，拖曳至 [產品] 欄位**類別**。  
+4.  在 [排列圖表欄位] 頁面中，產品將欄位拖曳至**分類**。  
   
 5.  將 [Sales] 拖曳至 [值]，然後按一下 [下一步]。  
   
@@ -499,7 +499,7 @@ ms.locfileid: "36032731"
   
 9. 將圖表拖曳到矩形內。  
   
-     ![加入直條圖](../../2014/tutorials/media/tutorial-addcolumnchart.png "加入直條圖")  
+     ![新增直條圖](../../2014/tutorials/media/tutorial-addcolumnchart.png "新增直條圖")  
   
 10. 在圖表標題上按一下滑鼠右鍵，然後按一下 [標題屬性] 。  
   
@@ -522,15 +522,15 @@ ms.locfileid: "36032731"
   
 1.  按一下您稍早在這一課中加入的矩形。  
   
-     在 [屬性] 窗格中，`Name`屬性會顯示該矩形的名稱。  
+     在 [屬性] 窗格中，`Name`屬性顯示矩形的名稱。  
   
      ![矩形的名稱](../../2014/tutorials/media/tutorial-rectanglename.png "矩形的名稱")  
   
 2.  按一下圓形圖。  
   
-3.  在**屬性** 窗格中，確認`Parent`屬性包含矩形的名稱。  
+3.  在 **屬性**窗格中，確認`Parent`屬性包含矩形的名稱。  
   
-     ![父屬性的圓形圖](../../2014/tutorials/media/tutorial-piechart-parentproperty.png "父屬性的圓形圖")  
+     ![父屬性圓形圖](../../2014/tutorials/media/tutorial-piechart-parentproperty.png "父屬性的圓形圖")  
   
 4.  按一下直條圖，然後重複步驟 2 和步驟 3。  
   
@@ -543,7 +543,7 @@ ms.locfileid: "36032731"
   
 2.  當兩個圖表都已選取後，按一下滑鼠右鍵，指向 **[配置]**，再按一下 **[設定成相同寬度]**。  
   
-     ![將圖表寬度調整相同](../../2014/tutorials/media/tutorial-makechartssamewidth.png "將圖表寬度調整相同")  
+     ![將圖表寬度相同](../../2014/tutorials/media/tutorial-makechartssamewidth.png "將圖表寬度相同")  
   
     > [!NOTE]  
     >  先按的項目會決定所有已選取項目的寬度。  
@@ -552,10 +552,10 @@ ms.locfileid: "36032731"
   
  報表如今會以圓形圖和直條圖顯示摘要銷售資料。  
   
- ![SSRS 教學課程，自由格式報表](../../2014/tutorials/media/tutorial-reportfinal.png "SSRS 教學課程，自由格式報表")  
+ ![SSRS 教學課程中，自由格式報表](../../2014/tutorials/media/tutorial-reportfinal.png "SSRS 教學課程中，自由格式報表")  
   
 ## <a name="more-information"></a>[詳細資訊]  
- 如需清單的詳細資訊，請參閱[資料表、 矩陣和清單&#40;報表產生器及 SSRS&#41;](report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)，[列出&#40;報表產生器及 SSRS&#41;](report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)， [Tablix 資料區域&#40;報表產生器及 SSRS&#41;](report-design/tablix-data-region-areas-report-builder-and-ssrs.md)，和[Tablix 資料區域資料格、 列和資料行&#40;報表產生器&#41;和 SSRS](report-design/tablix-data-region-cells-rows-and-columns-report-builder-and-ssrs.md)。  
+ 如需清單的詳細資訊，請參閱[資料表、 矩陣和清單&#40;報表產生器及 SSRS&#41;](report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)，[列出&#40;報表產生器及 SSRS&#41;](report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)， [Tablix 的資料區域&#40;報表產生器及 SSRS&#41;](report-design/tablix-data-region-areas-report-builder-and-ssrs.md)，並[Tablix 資料區資料格、 資料列和資料行&#40;報表產生器&#41;和 SSRS](report-design/tablix-data-region-cells-rows-and-columns-report-builder-and-ssrs.md)。  
   
  如需查詢設計工具的詳細資訊，請參閱[查詢設計工具 &#40;報表產生器&#41;](../../2014/reporting-services/query-designers-report-builder.md) 和[以文字為基礎的查詢設計工具使用者介面 &#40;報表產生器&#41;](report-data/text-based-query-designer-user-interface-report-builder.md)。  
   

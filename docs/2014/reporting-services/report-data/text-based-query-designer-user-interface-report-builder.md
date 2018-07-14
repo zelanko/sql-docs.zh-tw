@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - "10010"
 helpviewer_keywords:
 - query designers, text-based
 ms.assetid: 89fddca5-bd96-4128-9072-5348d1b6e02c
 caps.latest.revision: 14
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 2996f7cfb6f7c873e57619c60f49511a62f8d533
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: 1c596018bcef960d176cf41a49221972d5652f20
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36032035"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37162119"
 ---
 # <a name="text-based-query-designer-user-interface-report-builder"></a>以文字為基礎的查詢設計工具使用者介面 (報表產生器)
   使用以文字為基礎的查詢設計工具，可透過資料來源支援的查詢語言來指定查詢、執行查詢，並在設計階段檢視結果。 您可以指定多個 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 陳述式、自訂資料處理延伸模組的查詢或命令語法，以及指定為運算式的查詢。 以文字為基礎的查詢設計工具不會前置處理查詢，而且可以容納各種查詢語法，所以這是許多資料來源類型的預設查詢設計工具。  
@@ -60,7 +60,7 @@ ms.locfileid: "36032035"
 |結果|顯示查詢的結果。 若要執行查詢，請以滑鼠右鍵按一下任何窗格，然後按一下 [執行]，或是按一下工具列上的 [執行] 按鈕。|  
   
 #### <a name="example"></a>範例  
- 下列查詢會傳回的最後一個名稱，從清單[!INCLUDE[ssSampleDBobject](../../../includes/sssampledbobject-md.md)] **2008年**資料庫`ContactType`適用於資料表`Person`結構描述。  
+ 下列查詢會傳回從最後一個名稱的清單[!INCLUDE[ssSampleDBobject](../../../includes/sssampledbobject-md.md)] **2008年**資料庫`ContactType`適用於資料表`Person`結構描述。  
   
 ```  
 SELECT Name FROM Person.ContactType  
@@ -102,7 +102,7 @@ uspGetWhereUsedProductID
  當您選取 [命令類型] [TableDirect] 時，文字型查詢設計工具會顯示兩個窗格：[查詢] 窗格和 [結果] 窗格。 當您輸入資料表並按一下 [執行] 按鈕時，便會傳回該資料表的所有資料行。  
   
 #### <a name="example"></a>範例  
- 對於資料來源類型 OLE DB，下列資料集查詢傳回的結果集的所有連絡人類型[!INCLUDE[ssSampleDBobject](../../../includes/sssampledbobject-md.md)] **2008年**資料庫。  
+ 對於資料來源類型 OLE DB，下列資料集查詢傳回的結果集中的所有連絡人類型[!INCLUDE[ssSampleDBobject](../../../includes/sssampledbobject-md.md)] **2008年**資料庫。  
   
  `Person.ContactType`  
   

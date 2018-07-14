@@ -8,25 +8,25 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Management Studio [SQL Server]
 - Enterprise Manager (See SQL Server Management Studio [Analysis Services])
 - SQL Server Management Studio [SQL Server], about SQL Server Management Studio
 ms.assetid: f289e978-14ca-46ef-9e61-e1fe5fd593be
 caps.latest.revision: 50
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: df674c3d4cb72bb9a6e320719e97534a0aa5c931
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: c7ca5884a90b3e6e94eca1bc98988417e7b8a8bd
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36035040"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37169337"
 ---
 # <a name="use-sql-server-management-studio"></a>使用 SQL Server Management Studio
-  [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] (SSMS) 是一個整合式的環境，用於存取、 設定、 管理、 管理和開發的所有元件[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]。 SSMS 利用許多豐富的指令碼編輯器來組合一群非常廣泛的圖形工具，使所有開發人員和管理員 (不管他們的技術水準如何) 都能夠存取 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 。  
+  [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] (SSMS) 是用於存取、 設定、 管理、 管理和開發的所有元件的整合式的環境[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]。 SSMS 利用許多豐富的指令碼編輯器來組合一群非常廣泛的圖形工具，使所有開發人員和管理員 (不管他們的技術水準如何) 都能夠存取 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 。  
   
  SSMS 將上一版 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]中所含的 Enterprise Manager、Query Analyzer 與 Analysis Manager 功能，結合在單一環境中。 此外，SSMS 也能夠使用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的所有元件，例如 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 及 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]。 開發人員會感到非常熟悉，資料庫管理員則會得到其中組合了簡單易用的圖形工具及非常豐富的指令碼功能的單一綜合性公用程式。  
   

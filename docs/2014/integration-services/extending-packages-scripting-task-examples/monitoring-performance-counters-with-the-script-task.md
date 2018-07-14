@@ -23,13 +23,13 @@ ms.assetid: 86609bf1-cae6-435e-a58d-41bdfc521e94
 caps.latest.revision: 36
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 38df5cbca1c0bc2d269de9696645e9a275e57915
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 07f3cfee74c54cdc4dae24391dfbc7d7779c1e05
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36035730"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37207398"
 ---
 # <a name="monitoring-performance-counters-with-the-script-task"></a>以指令碼工作監視效能計數器
   系統管理員可能需要監視 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 封裝在大量資料執行複雜轉換時的效能。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 的 **System.Diagnostics** 命名空間，提供可讓您使用現有效能計數器或建立自訂效能計數器的類別。  
@@ -125,6 +125,6 @@ public void Main()
   
 ```  
   
-![Integration Services 圖示 （小）](../media/dts-16.gif "Integration Services 圖示 （小）")**保持最多 with Integration Services 的日期** <br /> 若要取得 Microsoft 的最新下載、文件、範例和影片以及社群中的精選解決方案，請瀏覽 MSDN 上的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 頁面：<br /><br /> [瀏覽 MSDN 上的 Integration Services 頁面](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 若要得到這些更新的自動通知，請訂閱該頁面上所提供的 RSS 摘要。  
+![Integration Services 圖示 （小）](../media/dts-16.gif "Integration Services 圖示 （小）")**保持最多包含 Integration Services 的日期** <br /> 若要取得 Microsoft 的最新下載、文件、範例和影片以及社群中的精選解決方案，請瀏覽 MSDN 上的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 頁面：<br /><br /> [瀏覽 MSDN 上的 Integration Services 頁面](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 若要得到這些更新的自動通知，請訂閱該頁面上所提供的 RSS 摘要。  
   
   

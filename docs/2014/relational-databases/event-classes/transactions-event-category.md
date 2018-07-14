@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 topic_type:
 - apiref
 helpviewer_keywords:
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - Transactions event category [SQL Server]
 ms.assetid: bfc75c5b-7115-49d8-9148-a0c84ee66a9a
 caps.latest.revision: 27
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 8c58f6393cc722eed061e83299bff1e825d47a93
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 0322fd84cf708b8310b7ec6e1483ae24d998617e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36036347"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37166959"
 ---
 # <a name="transactions-event-category"></a>Transaction 事件類別目錄
   **Transactions** 事件類別可以用來監視交易狀態。 以 **TM:** 作為前置詞的事件類別名稱是用來追蹤與交易相關的作業，這些作業是透過交易管理介面來傳送。  

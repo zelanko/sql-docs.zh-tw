@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SSIS packages, security
 - Integration Services, security
@@ -23,13 +23,13 @@ ms.assetid: 01aa0b88-d477-4581-9a3b-2efc3de2b133
 caps.latest.revision: 72
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: f48f1805052debe3d7120fb55cb2777cb3e5c735
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ef095dd196b4deacf7fcd6ade6d2d50d3756d6f6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36033050"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37167129"
 ---
 # <a name="security-overview-integration-services"></a>安全性概觀 (Integration Services)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 中的安全性包含幾層，提供了豐富且具彈性的安全性環境。 這些安全性階層包括使用數位簽章、封裝屬性、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫角色，以及作業系統權限。 這些安全性功能中，絕大部分都屬於識別與存取控制的類別。  
@@ -98,15 +98,15 @@ ms.locfileid: "36033050"
 ## <a name="related-tasks"></a>相關工作  
  下列清單所含的主題連結，將說明如何執行安全性相關特定工作。  
   
--   [建立使用者定義的角色](../create-a-user-defined-role.md)  
+-   [建立使用者定義角色](../create-a-user-defined-role.md)  
   
--   [指派讀取器和寫入器角色給封裝](../assign-a-reader-and-writer-role-to-a-package.md)  
+-   [指派讀取器和寫入器角色給套件](../assign-a-reader-and-writer-role-to-a-package.md)  
   
 -   [透過設定登錄值實作簽署原則](../implement-a-signing-policy-by-setting-a-registry-value.md)  
   
 -   [使用數位憑證來簽署封裝](../sign-a-package-by-using-a-digital-certificate.md)  
   
--   [設定或變更封裝的保護等級](../set-or-change-the-protection-level-of-packages.md)  
+-   [設定或變更套件的保護等級](../set-or-change-the-protection-level-of-packages.md)  
   
 ## <a name="see-also"></a>另請參閱  
  [SQL Server Integration Services](../sql-server-integration-services.md)  

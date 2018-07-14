@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.rep.monitor.publisherinfo.publications.f1
 ms.assetid: 0b2e3d4e-03b7-4c31-8f96-48648d750010
 caps.latest.revision: 26
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: ea246905aa410a8c6d69a9e757ef5ec297601c93
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 413478842bce1044749f055e893f73813dbb8df9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36036333"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37167039"
 ---
 # <a name="publisher-information-publications"></a>發行者資訊，發行集
   **[發行集]** 索引標籤可以提供在左窗格中所選取發行者之所有發行集的摘要資訊。  

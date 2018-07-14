@@ -8,25 +8,25 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - WMI event alerts [SQL Server Management Studio]
 ms.assetid: b8c46db6-408b-484e-98f0-a8af3e7ec763
 caps.latest.revision: 18
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 5fb396587fa3f3a29f499ccef35e1c555f5121f5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 3aff862ba24baa8820e310f7c087726591b22f95
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36036014"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37198468"
 ---
 # <a name="create-a-wmi-event-alert"></a>建立 WMI 事件警示
   此主題描述如何使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中建立在伺服器事件的 WMI 提供者所監視的特定 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 事件發生時，所引發的 [!INCLUDE[tsql](../../includes/tsql-md.md)]Agent 警示。  
   
- 如需使用 WMI 提供者，來監視[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]事件，請參閱[WMI 事件提供者伺服器概念](../../relational-databases/wmi-provider-server-events/wmi-provider-for-server-events-concepts.md)。 如需接收 WMI 事件警示通知所需權限的詳細資訊，請參閱 [選取 SQL Server Agent 服務的帳戶](select-an-account-for-the-sql-server-agent-service.md)。 如需 WQL 的詳細資訊，請參閱 [搭配伺服器事件的 WMI 提供者使用 WQL](../../relational-databases/wmi-provider-server-events/using-wql-with-the-wmi-provider-for-server-events.md)。  
+ 如需使用 WMI 提供者，來監視[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]事件，請參閱[WMI 提供者伺服器事件概念](../../relational-databases/wmi-provider-server-events/wmi-provider-for-server-events-concepts.md)。 如需接收 WMI 事件警示通知所需權限的詳細資訊，請參閱 [選取 SQL Server Agent 服務的帳戶](select-an-account-for-the-sql-server-agent-service.md)。 如需 WQL 的詳細資訊，請參閱 [搭配伺服器事件的 WMI 提供者使用 WQL](../../relational-databases/wmi-provider-server-events/using-wql-with-the-wmi-provider-for-server-events.md)。  
   
  **本主題內容**  
   
@@ -106,6 +106,6 @@ ms.locfileid: "36036014"
     GO  
     ```  
   
- 如需詳細資訊，請參閱[sp_add_alert &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-add-alert-transact-sql)。  
+ 如需詳細資訊，請參閱 < [sp_add_alert &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-add-alert-transact-sql)。  
   
   

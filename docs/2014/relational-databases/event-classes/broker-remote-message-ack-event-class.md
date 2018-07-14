@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 topic_type:
 - apiref
 helpviewer_keywords:
 - Broker:Remote Message Ack event class
 ms.assetid: 3d67efe1-74b4-4633-b029-c6e05b19f4dc
 caps.latest.revision: 28
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 7bd0cef1327e32dd5a773c3e422ec546014a0ef1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 49d5fba08da2929217252096ca8c2335a1f627d4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36035722"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37177805"
 ---
 # <a name="brokerremote-message-ack-event-class"></a>Broker:Remote Message Ack 事件類別
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 當 **傳送或接收訊息收條時，會產生** Broker:Remote Message Ack [!INCLUDE[ssSB](../../includes/sssb-md.md)] 事件。  
@@ -39,7 +39,7 @@ ms.locfileid: "36035722"
 |**DatabaseID**|**int**|USE *database* 陳述式指定之資料庫的識別碼。 如果未針對指定的執行個體發出 USE *database* 陳述式，則為預設資料庫的識別碼。 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 資料行，則 **ServerName** 會顯示資料庫的名稱。 請使用 DB_ID 函數判斷資料庫的值。|3|是|  
 |**EventClass**|**int**|擷取的事件類別類型。 對於 **Broker:Message Ack** 一律是 **149**。|27|否|  
 |**EventSequence**|**int**|此事件的序號。|51|否|  
-|**EventSubClass**|**nvarchar**|事件子類別的類型，可為每個事件類別提供詳細的資訊。 此資料行可包含下列值：<br /><br /> **Message With Acknowledgement Sent**<br /><br /> [!INCLUDE[ssSB](../../includes/sssb-md.md)] 會將收條當做標準循序訊息的一部分傳送。<br /><br /> **認可已傳送**<br /><br /> [!INCLUDE[ssSB](../../includes/sssb-md.md)] 會在標準循序訊息的外面傳送收條。<br /><br /> **Message With Acknowledgement Received**<br /><br /> [!INCLUDE[ssSB](../../includes/sssb-md.md)] 會將收條當做標準循序訊息的一部分接收。<br /><br /> **Acknowledgement Received**<br /><br /> [!INCLUDE[ssSB](../../includes/sssb-md.md)] 會在循序訊息的外面接收收條。|21|是|  
+|**EventSubClass**|**nvarchar**|事件子類別的類型，可為每個事件類別提供詳細的資訊。 此資料行可包含下列值：<br /><br /> **Message With Acknowledgement Sent**<br /><br /> [!INCLUDE[ssSB](../../includes/sssb-md.md)] 會將收條當做標準循序訊息的一部分傳送。<br /><br /> **Acknowledgement Sent**<br /><br /> [!INCLUDE[ssSB](../../includes/sssb-md.md)] 會在標準循序訊息的外面傳送收條。<br /><br /> **Message With Acknowledgement Received**<br /><br /> [!INCLUDE[ssSB](../../includes/sssb-md.md)] 會將收條當做標準循序訊息的一部分接收。<br /><br /> **Acknowledgement Received**<br /><br /> [!INCLUDE[ssSB](../../includes/sssb-md.md)] 會在循序訊息的外面接收收條。|21|是|  
 |**GUID**|**uniqueidentifier**|對話的交談識別碼。 此識別碼是以訊息的一部份傳送，並在交談的兩端之間共用。|54|否|  
 |**HonorBrokerPriority**|**Int**|資料庫 HONOR_BROKER_PRIORITY 選項目前的值為：0 = OFF，1 = ON。|32|是|  
 |**HostName**|**nvarchar**|執行用戶端的電腦名稱。 這個資料行會在用戶端提供主機名稱時填入。 若要判斷主機名稱，請使用 HOST_NAME 函數。|8|是|  

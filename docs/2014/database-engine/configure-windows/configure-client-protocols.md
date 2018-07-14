@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - default protocols
 - network protocols [SQL Server], client configuration
@@ -21,15 +21,15 @@ helpviewer_keywords:
 - protocols [SQL Server], client configuration
 ms.assetid: 3dfa2702-ba65-43b4-a777-6727846e133a
 caps.latest.revision: 34
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 5178b2f4559a506d15c868cdf13fef17869f2279
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 293a0cf9104b07f7ca0ef995cf32485a6564f9dd
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36036851"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37173319"
 ---
 # <a name="configure-client-protocols"></a>設定用戶端通訊協定
   此主題描述如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 組態管理員，在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中設定用戶端應用程式所使用的用戶端通訊協定。 Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支援使用 TCP/IP 網路通訊協定和具名管道通訊協定來進行用戶端通訊。 如果用戶端是連接到同一部電腦上的 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 執行個體，也可以使用共用記憶體通訊協定。 選取通訊協定有三種常見的方法。  

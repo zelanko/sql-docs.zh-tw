@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 2d8e7232-42f4-41b6-98eb-c856f6c85d8c
 caps.latest.revision: 7
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 95e65172d70b13591afbc84b0433c372ab64be7e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: fbc49b6978c9d60344795b3c05729e14e9fa3838
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36034084"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37181475"
 ---
 # <a name="setextendedprotectionsettings-method-wmi-msreportserverconfigurationsetting"></a>SetExtendedProtectionSettings 方法 (WMI MSReportServer_ConfigurationSetting)
   使用 SetExtendedProtectionSettings 方法可在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 組態檔 RSReportServer.config 中設定 RSWindowsExtendedProtectionLevel 和 RSWindowsExtendedProtectionScenario 屬性。  
@@ -60,7 +60,7 @@ public void SetExtendedProtectionSettings(
  `”Any” | “Proxy” | “Direct”`  
   
 ## <a name="remarks"></a>備註  
- 當 RSReportServer.config 檔案中的 AuthenticationTypes 包括 RSWindowNTLM、RSWindowsNegotiate 或 RSWindowsKerberos 時，便會套用 RSWindowsExtendedProtectionLevel 和 the RSWindowsExtendedProtectionScenario 屬性。 設定這些屬性會影響使用者和用戶端軟體向報表伺服器驗證的方式。 建議您先閱讀擴充保護，再將 ExtendedProtectionLevel 設為 文件`Allow`或`Require`。  
+ 當 RSReportServer.config 檔案中的 AuthenticationTypes 包括 RSWindowNTLM、RSWindowsNegotiate 或 RSWindowsKerberos 時，便會套用 RSWindowsExtendedProtectionLevel 和 the RSWindowsExtendedProtectionScenario 屬性。 設定這些屬性會影響使用者和用戶端軟體向報表伺服器驗證的方式。 建議您閱讀擴充保護，再將 ExtendedProtectionLevel 設定為其中一個的文件`Allow`或`Require`。  
   
  若要設定 ExtendedProtectionLevel，使用者必須是報表伺服器上 BUILTIN\Administrators 群組的成員。  
   
@@ -71,6 +71,6 @@ public void SetExtendedProtectionSettings(
  [RSWindowsExtendedProtectionScenario 屬性&#40;WMI MSReportServer_ConfigurationSetting&#41;](rswindowsextendedprotectionscenario-property.md)   
  [RSWindowsExtendedProtectionLevel 屬性&#40;WMI MSReportServer_ConfigurationSetting&#41;](rswindowsextendedprotectionlevel-property.md)   
  [Reporting Services 的驗證擴充保護](../security/extended-protection-for-authentication-with-reporting-services.md)   
- [RSReportServer 組態檔](../report-server/rsreportserver-config-configuration-file.md)  
+ [RSReportServer 設定檔](../report-server/rsreportserver-config-configuration-file.md)  
   
   

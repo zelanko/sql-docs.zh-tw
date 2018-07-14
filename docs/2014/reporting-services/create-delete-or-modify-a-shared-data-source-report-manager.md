@@ -1,5 +1,5 @@
 ---
-title: 建立、 刪除或修改共用的資料來源 （報表管理員） |Microsoft 文件
+title: 建立、 刪除或修改共用的資料來源 （報表管理員） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - shared data sources [Reporting Services]
 - removing shared data sources
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - modifying shared data sources
 ms.assetid: cd7bace3-f8ec-4ee3-8a9f-2f217cdca9f2
 caps.latest.revision: 47
-author: douglaslM
+author: maggiesmsft
 ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 0f5f9b5397d1f50e460f4f8f483daa7a9b3ef23f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e48edf78d8b0a73c01871b47ac24fa1f0bf8babb
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36032717"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37202688"
 ---
 # <a name="create-delete-or-modify-a-shared-data-source-report-manager"></a>建立、刪除或修改共用資料來源 (報表管理員)
   共用資料來源會指定資料來源的連接屬性。 如果您擁有大量報表、模型或資料驅動訂閱所使用的資料來源，請考慮建立共用資料來源，以便排除必須在多個位置維護相同連接資訊的負擔。  
@@ -67,7 +67,7 @@ ms.locfileid: "36032717"
   
     -   如果資料來源沒有使用認證 (例如，如果資料來源是從檔案系統存取的 XML 檔)，請按一下 [不需要認證]。 只有當這種認證類型適用於資料來源時，您才應該指定此認證類型。 如果您針對需要驗證的資料來源選取此選項，連接將會失敗。 如果您選取此選項，請務必設定自動執行帳戶，以便在使用者認證無法使用時，允許報表伺服器連接至其他電腦以擷取資料或檔案。  
   
-     如需有關如何設定認證的詳細資訊，請參閱[指定認證和報表資料來源的連接資訊](report-data/specify-credential-and-connection-information-for-report-data-sources.md)。 如需自動執行帳戶的詳細資訊，請參閱[設定自動執行帳戶 &#40;SSRS 設定管理員&#41;](install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md)。  
+     如需有關如何設定認證的詳細資訊，請參閱 <<c0> [ 指定的認證和報表資料來源的連接資訊](report-data/specify-credential-and-connection-information-for-report-data-sources.md)。 如需自動執行帳戶的詳細資訊，請參閱[設定自動執行帳戶 &#40;SSRS 設定管理員&#41;](install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md)。  
   
 9. 按一下 [測試連線] 按鈕，驗證資料來源設定。  
   

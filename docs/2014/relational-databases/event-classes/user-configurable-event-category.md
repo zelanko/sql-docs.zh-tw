@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 topic_type:
 - apiref
 helpviewer_keywords:
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - User-Configurable event category [SQL Server]
 ms.assetid: 1791785b-d67d-4cab-8acc-b3cf13af7a1f
 caps.latest.revision: 15
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: bc06e17cab1c3ba62271f511c5fd497d9aadff73
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 0aa492e61d647ec98be22c5a9568b29db216140d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36036123"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37195348"
 ---
 # <a name="user-configurable-event-category"></a>User-Configurable 事件類別目錄
   **User-Configurable** 事件類別目錄包含 **User-Configurable** 事件類別。  

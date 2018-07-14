@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - managing, alerts
 - managing, data alerts
@@ -16,13 +16,13 @@ ms.assetid: 32fd968f-1c0c-4ba8-851c-8a3b5e1fbbf2
 caps.latest.revision: 21
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 6016ec6964ba7045cbad65913fe441b9e2ac38b1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 657ab183836530888773b6709d2efbd75577ee37
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36035399"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37177295"
 ---
 # <a name="data-alert-manager-for-alerting-administrators"></a>警示系統管理員的資料警示管理員
   [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 提供 [資料警示管理員] 讓 SharePoint 警示系統管理員管理資料警示。 警示系統管理員可以檢視儲存到網站之所有警示的相關資訊，以及刪除警示。 下圖說明 [資料警示管理員] 中可供 SharePoint 警示管理員使用的功能。  

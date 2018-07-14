@@ -1,5 +1,5 @@
 ---
-title: 定義關聯性對話方塊 (Analysis Services-多維度資料) |Microsoft 文件
+title: 定義關聯性對話方塊 (Analysis Services-多維度資料) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.cubeeditor.dimensionusage.definerelationship.f1
 helpviewer_keywords:
 - Define Relationship dialog box
 ms.assetid: 0fcee7f1-f138-4c2e-ae8c-245395ee0fe8
 caps.latest.revision: 30
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 5cb46c19a45b85e90a0484a5f0ac33eff0077298
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 93c76ad9d504e9ec6fc1ba417407a16bd93e8adf
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36036002"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37165499"
 ---
 # <a name="define-relationship-dialog-box-analysis-services---multidimensional-data"></a>定義關聯性對話方塊 (Analysis Services - 多維度資料)
   使用 **[定義關聯性]** 對話方塊，即可在 Cube 設計師中定義 Cube 維度和量值群組之間的關聯性。 在 Cube 設計師之 **[維度使用方式]** 索引標籤的 **[方格]** 窗格中，於資料格上按一下 **[...]** ，即可顯示 **[定義關聯性]** 對話方塊。  
@@ -63,7 +63,7 @@ ms.locfileid: "36036002"
   
 ## <a name="see-also"></a>另請參閱  
  [維度關聯性](multidimensional-models-olap-logical-cube-objects/dimension-relationships.md)   
- [維度使用方式&#40;Cube 設計師&#41; &#40;Analysis Services-多維度資料&#41;](dimension-usage-cube-designer-analysis-services-multidimensional-data.md)   
+ [維度使用方式&#40;Cube 設計工具&#41; &#40;Analysis Services-多維度資料&#41;](dimension-usage-cube-designer-analysis-services-multidimensional-data.md)   
  [Analysis Services Designers and Dialog Boxes&#40;多維度資料&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)  
   
   

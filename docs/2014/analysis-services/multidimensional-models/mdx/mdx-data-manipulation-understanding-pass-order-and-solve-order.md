@@ -1,5 +1,5 @@
 ---
-title: 了解傳遞順序與解決順序 (MDX) |Microsoft 文件
+title: 了解行程順序和求解順序 (MDX) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - evaluation order [MDX]
 - calculation order [MDX]
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - expressions [MDX], solve orders
 ms.assetid: 7ed7d4ee-4644-4c5d-99a4-c4b429d0203c
 caps.latest.revision: 34
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 6275971580e7885d0ccdd92aa128811c07f297bb
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e62af2057276bf6533753d5c1543e686ddb5e92c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36035095"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37196528"
 ---
 # <a name="understanding-pass-order-and-solve-order-mdx"></a>了解行程順序與解決順序 (MDX)
   當 Cube 做為 MDX 指令碼的計算結果時，Cube 會根據所使用的各種計算相關功能來進行多個計算階段。 每個階段都稱為一個計算行程。  
@@ -127,9 +127,9 @@ FROM [Adventure Works]
  第一個查詢和第二個查詢之間的結果集差異，在於導出成員的位置差異。 在第一個查詢中，導出成員是 ROWS 座標軸的一部份，而不是第二個查詢中的 COLUMNS 座標軸。 此種位置的差異在下一個查詢 (結合單一 MDX 查詢的兩個導出成員) 中就變得很重要。  
   
 ### <a name="query-3combined-year-difference-and-net-income-calculations"></a>查詢 3—結合年度差異和淨收益的計算  
- 在結合上述兩個範例到單一 MDX 查詢的最終查詢中，求解順序就變得很重要，因為會同時計算資料行和資料列。 若要確保以正確的順序進行計算，定義使用計算發生的順序`SOLVE_ORDER`關鍵字。  
+ 在結合上述兩個範例到單一 MDX 查詢的最終查詢中，求解順序就變得很重要，因為會同時計算資料行和資料列。 若要確定正確的順序，進行計算，定義所使用之計算發生的順序`SOLVE_ORDER`關鍵字。  
   
- `SOLVE_ORDER` 關鍵字指定 MDX 查詢中導出成員或 `CREATE MEMBER` 命令的解決順序。 搭配使用的整數值`SOLVE_ORDER`關鍵字是相對值，不需要從零開始，並不需要連續。 此數值只是告知 MDX 根據有較高值的成員計算所得出的值來導出成員。 如果導出的成員定義沒有`SOLVE_ORDER`關鍵字，預設值的導出成員為零。  
+ `SOLVE_ORDER` 關鍵字指定 MDX 查詢中導出成員或 `CREATE MEMBER` 命令的解決順序。 搭配使用的整數值`SOLVE_ORDER`關鍵字是相對值，不需要從零開始，也不需要連續。 此數值只是告知 MDX 根據有較高值的成員計算所得出的值來導出成員。 如果導出的成員定義沒有`SOLVE_ORDER`關鍵字，預設值的導出成員為零。  
   
  例如，如果您結合前兩個範例查詢中使用的計算，兩個導出成員 `Year Difference` 和 `Profit Margin`會在 MDX 查詢範例之結果資料集中的單一資料格中產生交集。 決定 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 如何評估此資料格的唯一方式，就是解決順序。 用來建立此資料格的公式會根據兩個導出成員的解決順序，來產生不同的結果。  
   

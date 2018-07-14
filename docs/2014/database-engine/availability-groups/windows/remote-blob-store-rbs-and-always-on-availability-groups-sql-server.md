@@ -1,25 +1,24 @@
 ---
-title: 遠端 Blob 存放區 (RBS) 及 AlwaysOn 可用性群組 (SQL Server) |Microsoft 文件
+title: 遠端 Blob 存放區 (RBS) 及 AlwaysOn 可用性群組 (SQL Server) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 01a70258-d4fd-40bc-bc44-c490b5d6c420
 caps.latest.revision: 13
-author: MikeRayMSFT
-ms.author: mikeray
-manager: jhubbard
-ms.openlocfilehash: bbcbdcc96831a27b24fc47ba8ec9c20b16f6f1c1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 55f604d9c85cd93baa564a0bd5a99a483f310fdb
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36032389"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37169325"
 ---
 # <a name="remote-blob-store-rbs-and-alwayson-availability-groups-sql-server"></a>遠端 BLOB 存放區 (RBS) 及 AlwaysOn 可用性群組 (SQL Server)
   [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 可以為 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)][遠端 BLOB 存放區 (RBS)](../../../relational-databases/blob/remote-blob-store-rbs-sql-server.md) BLOB 物件 (Blob) 提供高可用性和災害復原方案。 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 會透過將儲存在可用性資料庫中的任何 RBS 中繼資料和結構描述複寫到次要複本，予以保護。 這是 SharePoint 內容資料庫。 一般而言， [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 分開儲存此 RBS 中繼資料與 BLOB。  

@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - searches [SQL Server Management Studio], incremental
 - mouse [SQL Server Management Studio]
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - Go To command
 ms.assetid: f63247ff-9751-4e99-8ee3-0772ad4009d0
 caps.latest.revision: 23
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: b654f64cb41fc4ca9fdb4f38955b1afba45c91c7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 5c35188b5f9e1b4931948917be6ce53d8b277f2c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36032294"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37208788"
 ---
 # <a name="navigate-code-and-text"></a>導覽程式碼與文字
   您可以利用下列方式在文字間移動：  

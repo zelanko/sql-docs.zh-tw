@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.rep.monitor.publicationinfo.downlevelagents.merge.f1
 ms.assetid: 73ff590a-20da-4f10-b592-c60b7226d22b
 caps.latest.revision: 22
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 266378f7a5a2dd376b036153622bd56ad47d0921
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 3459455dc24ebbdc6beb3b619f4cad8f2406423e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36035645"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37202988"
 ---
 # <a name="publication-information-agents-merge-publication"></a>發行集資訊，代理程式 (合併式發行集)
   **[代理程式]** 索引標籤會顯示選取之發行集的快照集代理程式的摘要資訊。  

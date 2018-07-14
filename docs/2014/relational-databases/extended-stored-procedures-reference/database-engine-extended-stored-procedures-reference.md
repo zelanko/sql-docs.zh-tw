@@ -17,17 +17,17 @@ helpviewer_keywords:
 - extended stored procedures [SQL Server], listed
 ms.assetid: 4e9d0374-0927-4f17-bab9-2215b1b8fea8
 caps.latest.revision: 38
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 8fa79d3dbfe487ab46b374d0e5a7aed85bcb2a60
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: rothja
+ms.author: jroth
+manager: craigg
+ms.openlocfilehash: 52fc30cedc3e45f970b9f1d9a28da4bede344a77
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36034135"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37179877"
 ---
-# <a name="extended-stored-procedures-programmer39s-reference"></a>擴充預存程序程式設計人員&#39;s 參考
+# <a name="extended-stored-procedures-programmer39s-reference"></a>擴充預存程序程式設計人員&#39;參考
     
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] 請改用 CLR 整合。  

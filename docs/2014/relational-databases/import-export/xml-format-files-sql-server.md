@@ -5,25 +5,24 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-bulk-import-export
+ms.technology: data-movement
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - format files [SQL Server], XML format files
 - bulk importing [SQL Server], format files
 - XML format files [SQL Server]
 ms.assetid: 69024aad-eeea-4187-8fea-b49bc2359849
 caps.latest.revision: 44
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 0e0607febc04aec78a7310bd069b3af4c19cc8ae
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 06ba4a93e79d9b2a602101b25944d251ea9c5b54
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36032567"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37203548"
 ---
 # <a name="xml-format-files-sql-server"></a>XML 格式檔案 (SQL Server)
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 提供 XML 結構描述，以定義撰寫 *「XML 格式檔案」* (XML format file) 用於將資料大量匯入 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料表的語法。 XML 格式檔案必須遵守以 XML 結構描述定義語言 (XSDL) 定義的這個結構描述。 只有在同時安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 工具和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 時，才能支援 XML 格式檔案。  
@@ -157,9 +156,9 @@ ms.locfileid: "36032567"
   
  <FIELD  
   
- 識別碼 **="*`fieldID`*"**  
+ ID **="*`fieldID`*"**  
   
- xsi **:** 類型 **="*`fieldType`*"**  
+ xsi **:** 型別 **="*`fieldType`*"**  
   
  [ LENGTH **="*`n`*"** ]  
   
@@ -177,7 +176,7 @@ ms.locfileid: "36032567"
   
 |FIELD 屬性|說明|選擇性 /<br /><br /> 必要項|  
 |---------------------|-----------------|------------------------------|  
-|識別碼 **="*`fieldID`*"**|指定資料檔中欄位的邏輯名稱。 欄位識別碼是用來參考該欄位的索引鍵。<br /><br /> < 欄位 ID **="*`fieldID`*"**/ > 對應至 < 資料行來源 **="*`fieldID`*"**/>|必要項|  
+|ID **="*`fieldID`*"**|指定資料檔中欄位的邏輯名稱。 欄位識別碼是用來參考該欄位的索引鍵。<br /><br /> < 欄位 ID **="*`fieldID`*」**/ > 對應至 < 資料行來源 **="*`fieldID`*"**/>|必要項|  
 |xsi: type **="*`fieldType`*"**|這是識別元素執行個體之類型的 XML 建構 (如同屬性般使用)。 *fieldType* 的值會決定在指定執行個體中需要哪些選用屬性 (如下)。|必要 (視資料類型而定)|  
 |LENGTH **="*`n`*"**|此屬性定義固定長度資料類型的執行個體之長度。<br /><br /> *n* 的值必須為正整數。|除非 xsi:type 值有要求，否則是選擇性的|  
 |PREFIX_LENGTH **="*`p`*"**|此屬性定義二進位資料代表的前置長度。 PREFIX_LENGTH 值 *p*必須是下列其中一個：1、2、4 或 8。|除非 xsi:type 值有要求，否則是選擇性的|  
@@ -230,12 +229,12 @@ ms.locfileid: "36032567"
   
 |COLUMN 屬性|描述|選擇性 /<br /><br /> 必要項|  
 |----------------------|-----------------|------------------------------|  
-|來源 **="*`fieldID`*"**|指定對應到資料行的欄位識別碼。<br /><br /> < 資料行來源 **="*`fieldID`*"**/ > 對應至 < 欄位 ID **="*`fieldID`*"**/>|必要項|  
+|來源 **="*`fieldID`*"**|指定對應到資料行的欄位識別碼。<br /><br /> < 資料行來源 **="*`fieldID`*」**/ > 對應至 < 欄位 ID **="*`fieldID`*"**/>|必要項|  
 |NAME = "*columnName*"|指定資料列集中由格式檔案代表的資料行名稱。 此資料行名稱會用來識別結果集中的資料行，而且它不需要對應到用於目標資料表中的資料行名稱。|必要項|  
-|xsi **:** 類型 **="*`ColumnType`*"**|這是識別元素執行個體之資料類型的 XML 建構 (如同屬性般使用)。 *ColumnType* 的值會決定在指定執行個體中需要哪些選用屬性 (如下)。<br /><br /> 注意： 可能的值*ColumnType*而且及其相關聯的屬性會列於下一個資料表。|選擇性|  
+|xsi **:** 型別 **="*`ColumnType`*"**|這是識別元素執行個體之資料類型的 XML 建構 (如同屬性般使用)。 *ColumnType* 的值會決定在指定執行個體中需要哪些選用屬性 (如下)。<br /><br /> 注意： 可能的值*ColumnType*和其相關聯的屬性詳列於下一個表格。|選擇性|  
 |LENGTH **="*`n`*"**|定義固定長度資料類型的長度。 只有當 xsi:type 是字串資料類型時，才會使用 LENGTH。<br /><br /> *n* 的值必須為正整數。|選用 (只在 xsi:type 是字串資料類型時才可使用)|  
 |PRECISION **="*`n`*"**|指定數字中的位數。 例如，數字 123.45 的精確度是 5。<br /><br /> 其值必須為正整數。|選擇性 (唯有 xsi:type 是變數數字 (variable-number) 資料類型時才能使用)|  
-|標尺 **="*`int`*"**|指定數字中小數點右方的位數。 例如，數字 123.45 的小數位數是 2。<br /><br /> 值必須是整數。|選擇性 (唯有 xsi:type 是變數數字 (variable-number) 資料類型時才能使用)|  
+|縮放比例 **="*`int`*"**|指定數字中小數點右方的位數。 例如，數字 123.45 的小數位數是 2。<br /><br /> 值必須是整數。|選擇性 (唯有 xsi:type 是變數數字 (variable-number) 資料類型時才能使用)|  
 |NULLABLE **=** { **"** YES **"**<br /><br /> **"** NO **"** }|指定資料行是否可指定 NULL 值。 此屬性完全與 FIELDS 無關。 然而，若資料行並非 NULLABLE 且欄位指定 NULL (未指定任何值)，則會導致執行階段錯誤。<br /><br /> 只有當您執行一般的 SELECT FROM OPENROWSET(BULK...) 陳述式時，才會使用 NULLABLE 屬性。|選用 (可用於任何資料類型)|  
   
 #####  <a name="XsiTypeValuesOfCOLUMN"></a> \<資料行> 項目的 xsi:type 值  
@@ -245,7 +244,7 @@ ms.locfileid: "36032567"
   
 |類型類別目錄|\<資料行> 資料類型|必要的 XML 屬性<br /><br /> 適用於資料類型|選擇性 XML 屬性<br /><br /> 適用於資料類型|  
 |-------------------|---------------------------|---------------------------------------------------|---------------------------------------------------|  
-|固定|`SQLBIT``SQLTINYINT`， `SQLSMALLINT`， `SQLINT`， `SQLBIGINT`， `SQLFLT4`， `SQLFLT8`， `SQLDATETIME`， `SQLDATETIM4`， `SQLDATETIM8`， `SQLMONEY`， `SQLMONEY4`， `SQLVARIANT`，和 `SQLUNIQUEID`|無。|NULLABLE|  
+|固定|`SQLBIT``SQLTINYINT`， `SQLSMALLINT`， `SQLINT`， `SQLBIGINT`， `SQLFLT4`， `SQLFLT8`， `SQLDATETIME`， `SQLDATETIM4`， `SQLDATETIM8`， `SQLMONEY`， `SQLMONEY4`， `SQLVARIANT`，及 `SQLUNIQUEID`|無。|NULLABLE|  
 |變數數字|`SQLDECIMAL` 和 `SQLNUMERIC`|無。|NULLABLE、PRECISION、SCALE|  
 |LOB|`SQLIMAGE`、`CharLOB`、`SQLTEXT` 和 `SQLUDT`|無。|NULLABLE|  
 |字元 LOB|`SQLNTEXT`|無。|NULLABLE|  

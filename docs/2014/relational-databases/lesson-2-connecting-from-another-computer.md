@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: fd4ddeb8-0cb6-441b-9704-03575c07020f
 caps.latest.revision: 21
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: d2698cc6ce0bd17b7d9cb079fdc4f4c7c1e70c20
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: rothja
+ms.author: jroth
+manager: craigg
+ms.openlocfilehash: 4d131860981e30c6a45d4b7fddbb6d7133d10d6e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36034364"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37209168"
 ---
 # <a name="lesson-2-connecting-from-another-computer"></a>第 2 課：從另一部電腦連接
   為了加強安全性，初始安裝時，您不能從另一部電腦存取 [!INCLUDE[ssDE](../includes/ssde-md.md)] Developer Edition、Express Edition 和 Evaluation Edition 的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 。 這一課教您如何啟用通訊協定、設定通訊埠以及設定 Windows 防火牆，以便從其他電腦連接。  
@@ -48,7 +48,7 @@ ms.locfileid: "36034364"
     > [!NOTE]  
     >  您必須同時能夠使用 32 位元和 64 位元選項。  
   
-2.  在**SQL Server 組態管理員**，依序展開**SQL Server 網路組態**，然後按一下 **通訊協定**  *\<InstanceName>*。  
+2.  在  **SQL Server 組態管理員**，展開**SQL Server 網路組態**，然後按一下**通訊協定** *\<執行個體名稱>*。  
   
      預設執行個體 (未命名的執行個體) 是以 **MSSQLSERVER**列出。 如果您安裝了具名執行個體，則會列出您所提供的名稱。 [!INCLUDE[ssExpressEd11](../includes/ssexpressed11-md.md)] 會安裝成 **SQLEXPRESS**，除非您在安裝期間變更其名稱。  
   
@@ -71,13 +71,13 @@ ms.locfileid: "36034364"
   
 3.  在 [TCP/IP 屬性] 對話方塊中，按一下 [IP 位址] 索引標籤。  
   
-4.  在 [IPAll] 區段的 [TCP 通訊埠] 方塊中，輸入可用的通訊埠號碼。 此教學課程中，我們將使用`49172`。  
+4.  在 [IPAll] 區段的 [TCP 通訊埠] 方塊中，輸入可用的通訊埠號碼。 本教學課程中，我們將使用`49172`。  
   
 5.  按一下 [確定] 關閉對話方塊，再於提示您必須重新啟動服務的警告中按一下 [確定]。  
   
 6.  在左窗格中，按一下 **[SQL Server 服務]**。  
   
-7.  在右窗格中，以滑鼠右鍵按一下 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的執行個體，然後按一下 [重新啟動]。 當[!INCLUDE[ssDE](../includes/ssde-md.md)]重新啟動時，它會在連接埠上接聽`49172`。  
+7.  在右窗格中，以滑鼠右鍵按一下 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的執行個體，然後按一下 [重新啟動]。 當[!INCLUDE[ssDE](../includes/ssde-md.md)]重新啟動時，它會接聽連接埠`49172`。  
   
 ##  <a name="firewall"></a> 在防火牆中開啟通訊埠  
  防火牆系統有助於預防未經授權存取電腦資源。 若要在防火牆開啟時從另一部電腦連接到 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ，您必須在防火牆中開啟通訊埠。  
@@ -95,7 +95,7 @@ ms.locfileid: "36034364"
   
 3.  在 **[規則類型]** 對話方塊中，選取 **[通訊埠]**，然後按 **[下一步]**。  
   
-4.  在 **[通訊協定及連接埠]** 對話方塊中，選取 **[TCP]**。 選取 [特定本機連接埠]，然後輸入 [!INCLUDE[ssDE](../includes/ssde-md.md)] 執行個體的通訊埠編號。 輸入 1433 表示預設執行個體。 型別`49172`如果您要設定具名執行個體，而且在前一項工作中設定固定通訊埠。 按 [下一步] 。  
+4.  在 **[通訊協定及連接埠]** 對話方塊中，選取 **[TCP]**。 選取 [特定本機連接埠]，然後輸入 [!INCLUDE[ssDE](../includes/ssde-md.md)] 執行個體的通訊埠編號。 輸入 1433 表示預設執行個體。 型別`49172`如果您要設定具名執行個體，而且在先前的工作已設定固定通訊埠。 按 [下一步] 。  
   
 5.  在 **[執行動作]** 對話方塊中，選取 **[允許連線]**，然後按 **[下一步]**。  
   
@@ -121,7 +121,7 @@ ms.locfileid: "36034364"
     > [!NOTE]  
     >  如果 [伺服器名稱] 方塊中省略了 **tcp:**，用戶端將依照用戶端設定中指定的順序，嘗試所有啟用的通訊協定。  
   
-4.  在**驗證**方塊中，確認**Window 驗證**，然後按一下 **連接**。  
+4.  在 **驗證**方塊中，確認**Window 驗證**，然後按一下**Connect**。  
   
 ##  <a name="browser"></a> 使用 SQL Server Browser 服務連接  
  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Browser 服務會接聽 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 資源的內容要求，並提供有關電腦上所安裝之 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 執行個體的資訊。 當 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Browser 服務執行時，使用者可以提供電腦名稱和執行個體名稱 (而非電腦名稱和通訊埠編號) 來連接到具名執行個體。 因為 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Browser 接收未驗證的 UDP 要求，所以在安裝期間不一定都開啟著。 如需服務的描述及其何時開啟的說明，請參閱 [SQL Server Browser 服務 &#40;Database Engine 和 SSAS&#41;](../database-engine/configure-windows/sql-server-browser-service-database-engine-and-ssas.md)。  

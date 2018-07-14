@@ -1,5 +1,5 @@
 ---
-title: 變更採礦模型中的資料行的離散化 |Microsoft 文件
+title: 變更採礦模型中的資料行的離散化 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - discretization [Analysis Services]
 - mining structures [Analysis Services], how-to topics
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - bucketing problems [Analysis Services]
 ms.assetid: 3c49862b-595d-4fa4-b890-e2e1bde1d74f
 caps.latest.revision: 14
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: cc0352074e37bf284bd4ea033bae759638e040a6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: af80e187acceb9565e939dbb3699c98b827cf648
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36034272"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37202168"
 ---
 # <a name="change-the-discretization-of-a-column-in-a-mining-model"></a>變更採礦模型中的資料行離散化
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 在某些情況下會自動離散化值，也就是說，它會在數值資料行中分類收納資料。 例如，如果您的資料包含連續數值資料，而且您要建立決策樹模型，則連續資料的每一個資料行都將會自動分類收納 (視資料的分佈而定)。 如果您想要控制資料離散化的方式，您必須在採礦結構資料行上，變更可控制資料在模型內之使用方式的屬性。  
@@ -43,18 +43,18 @@ ms.locfileid: "36034272"
   
 ### <a name="to-change-the-discretization-method"></a>變更離散化方法  
   
-1.  在**採礦屬性**視窗中，按一下文字方塊旁邊**內容**，然後選取`Discretized`從下拉式清單。  
+1.  在 [**採礦屬性**視窗中，按一下文字方塊中的下的一步]**內容**，然後選取`Discretized`從下拉式清單中。  
   
      <xref:Microsoft.AnalysisServices.ScalarMiningStructureColumn.DiscretizationBucketCount%2A> 和 <xref:Microsoft.AnalysisServices.ScalarMiningStructureColumn.DiscretizationMethod%2A> 屬性現在就會啟用。  
   
-2.  在**屬性**視窗中，按一下文字方塊旁邊<xref:Microsoft.AnalysisServices.ScalarMiningStructureColumn.DiscretizationMethod%2A>並選取下列值之一： `Automatic`， `EqualAreas`，或`Cluster`。  
+2.  在 **屬性**視窗中，按一下 下的一步 文字方塊<xref:Microsoft.AnalysisServices.ScalarMiningStructureColumn.DiscretizationMethod%2A>，然後選取下列值之一： `Automatic`， `EqualAreas`，或`Cluster`。  
   
     > [!NOTE]  
-    >  如果資料行使用方式設為`Ignore`、**屬性**視窗資料行是空白。  
+    >  如果資料行使用方式設為`Ignore`，則**屬性**資料行的視窗為空白。  
   
      您在設計師中選取其他元素時，新值就會生效。  
   
-3.  在**屬性**視窗中，按一下文字方塊旁邊<xref:Microsoft.AnalysisServices.ScalarMiningStructureColumn.DiscretizationBucketCount%2A>輸入數字的值。  
+3.  在 **屬性**視窗中，按一下 下的一步 文字方塊<xref:Microsoft.AnalysisServices.ScalarMiningStructureColumn.DiscretizationBucketCount%2A>輸入數字的值。  
   
     > [!NOTE]  
     >  如果您變更這些屬性，就必須重新處理此結構，連同您想要使用新設定的任何模型。  

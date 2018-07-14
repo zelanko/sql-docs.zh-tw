@@ -1,5 +1,5 @@
 ---
-title: ReportParameter 元素 (ASSL) |Microsoft 文件
+title: ReportParameter 元素 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - ReportParameter element
 ms.assetid: 653a5c64-f1af-4796-bb7b-b44a40e52901
 caps.latest.revision: 35
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 58aeafeaee114c1d08d0ad8b0119bee2dc5d5dea
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e1ceef5a3794aaaaec6ac24d9aca6e66384267ce
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36036199"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37197820"
 ---
 # <a name="reportparameter-element-assl"></a>ReportParameter 元素 (ASSL)
-  包含名稱和值的參數，傳遞至[!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]報表在執行階段。  
+  包含的名稱和值的參數傳遞給[!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]報表在執行階段。  
   
 ## <a name="syntax"></a>語法  
   
@@ -65,11 +65,11 @@ ms.locfileid: "36036199"
 ## <a name="remarks"></a>備註  
  `Value` 元素必須包含多維度運算式 (MDX) 運算式。  
   
- 分析管理物件 (AMO) 物件模型中的對應元素是<xref:Microsoft.AnalysisServices.ReportParameter>。  
+ 在 「 分析管理物件 (AMO) 物件模型的對應元素是<xref:Microsoft.AnalysisServices.ReportParameter>。  
   
 ## <a name="see-also"></a>另請參閱  
  [ReportAction 資料類型&#40;ASSL&#41;](../data-type/action-data-type-assl.md)   
- [Action 元素&#40;ASSL&#41;](action-element-assl.md)   
+ [動作項目&#40;ASSL&#41;](action-element-assl.md)   
  [物件&#40;ASSL&#41;](objects-assl.md)  
   
   

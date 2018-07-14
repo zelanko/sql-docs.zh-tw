@@ -1,5 +1,5 @@
 ---
-title: ProactiveCachingBinding 資料類型 (ASSL) |Microsoft 文件
+title: ProactiveCachingBinding 資料類型 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - ProactiveCachingBinding data type
 ms.assetid: 02e6ff2f-2f18-4607-9198-bb46f113f9ac
 caps.latest.revision: 16
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 881e593fda57d63a4041e469c48807d434324856
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 1d440911eefa33981ef435240c4e440378da34a4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36037325"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37189095"
 ---
 # <a name="proactivecachingbinding-data-type-assl"></a>ProactiveCachingBinding 資料類型 (ASSL)
   定義抽象的衍生的資料類型，表示資訊[ProactiveCaching](../objects/proactivecaching-element-assl.md)有關需要重建快取中的資料來源變更或重建處理序狀態的項目。  
@@ -58,11 +58,11 @@ ms.locfileid: "36037325"
 |衍生的元素|無|  
   
 ## <a name="remarks"></a>備註  
- 如需有關`Binding`型別，包括之 Analysis Services 指令碼語言 (ASSL) 物件的資料表`Binding`型別和繼承階層架構的`Binding`類型，請參閱[繫結資料型別&#40;ASSL&#41;](binding-data-type-assl.md).  
+ 如需詳細資訊`Binding`型別，包括之 Analysis Services 指令碼語言 (ASSL) 物件的資料表`Binding`型別和繼承階層`Binding`類型，請參閱[繫結資料類型 &#40;ASSL&#41;](binding-data-type-assl.md).  
   
- 如需 ASSL 中資料繫結的概觀，請參閱[資料來源和繫結&#40;SSAS 多維度&#41;](../../multidimensional-models/data-sources-and-bindings-ssas-multidimensional.md)。  
+ 如需 ASSL 中資料繫結的概觀，請參閱 <<c0> [ 資料來源和繫結&#40;SSAS 多維度&#41;](../../multidimensional-models/data-sources-and-bindings-ssas-multidimensional.md)。</c0>  
   
- 分析管理物件 (AMO) 物件模型中的對應元素是<xref:Microsoft.AnalysisServices.ProactiveCachingBinding>。  
+ 在 「 分析管理物件 (AMO) 物件模型的對應元素是<xref:Microsoft.AnalysisServices.ProactiveCachingBinding>。  
   
 ## <a name="inheritance-hierarchy-of-proactivecachingbinding-types"></a>ProactiveCachingBinding 類型的繼承階層  
  下列階層會顯示 `ProactiveCachingBinding` 類型的繼承。  

@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 10778ec9-5fe4-4b4e-89b0-ade1f06b781d
 caps.latest.revision: 14
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 10c79cc0750843f75d5c479562af470aa622a65c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 4a41599128d6b0f9bbceaa47a30d851e312f39e3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36036034"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37168129"
 ---
 # <a name="reporting-services-report-server-sharepoint-mode"></a>Reporting Services 報表伺服器 (SharePoint 模式)
   為 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] SharePoint 模式 **設定的** 報表伺服器可以在 SharePoint 產品部署內執行。 以 SharePoint 模式報表伺服器可以使用 SharePoint 的共同作業和管理功能，針對報表和其他[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]內容類型。 SharePoint 模式需要在 SharePoint Web 前端安裝適用於 SharePoint 產品的正確 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 增益集版本。  
@@ -30,9 +30,9 @@ ms.locfileid: "36036034"
   
 -   [Install Reporting Services SharePoint Mode for SharePoint 2010](../../2014/sql-server/install/install-reporting-services-sharepoint-mode-for-sharepoint-2010.md)。  
   
--   [將其他報表伺服器加入至伺服陣列&#40;SSRS 向外&#41;](install-windows/add-an-additional-report-server-to-a-farm-ssrs-scale-out.md)。  
+-   [將其他報表伺服器加入至伺服陣列&#40;SSRS 向外延展&#41;](install-windows/add-an-additional-report-server-to-a-farm-ssrs-scale-out.md)。  
   
- 如需此版本中新功能的資訊，請參閱 'SharePoint' 一節[What's New &#40;Reporting Services&#41;](../../2014/reporting-services/what-s-new-reporting-services.md)。  
+ 如需本版新功能的資訊，請參閱 'SharePoint' 一節[What's New &#40;Reporting Services&#41;](../../2014/reporting-services/what-s-new-reporting-services.md)。  
   
  **本主題內容：**  
   
@@ -80,12 +80,12 @@ ms.locfileid: "36036034"
 ##  <a name="bkmk_connectedandlocal"></a> 連接模式與本機模式  
  SQL Server 2008 R2 版本導入了全新的 *「本機模式」* (Local Mode)，可用於從已安裝適用於 SharePoint 2010 產品之 Microsoft SQL Server 2008 R2 或更新版的 Reporting Services 增益集的 SharePoint 2010 伺服器檢視報表。  
   
--   *本機模式*： 本機模式讓您從沒有與整合的 SharePoint 文件庫本機轉譯報表[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]報表伺服器。 需要 SharePoint 產品的 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 增益集，但不需要 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 報表伺服器。 增益集可以利用幾種不同的方式安裝，包括 SharePoint 2010 產品準備工具。 如需本機模式的詳細資訊，請參閱[本機模式與連接模式報表在報表檢視器&#40;Reporting Services SharePoint 模式&#41;](../../2014/reporting-services/local-vs-connected-mode-report-viewer-reporting-services-sharepoint-mode.md)和[如何尋找 Reporting Services 增益集適用於 SharePoint 產品](install-windows/where-to-find-the-reporting-services-add-in-for-sharepoint-products.md)。  
+-   *本機模式*： 本機模式可讓本機轉譯，從 SharePoint 文件庫中，而不需要與整合報表[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]報表伺服器。 需要 SharePoint 產品的 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 增益集，但不需要 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 報表伺服器。 增益集可以利用幾種不同的方式安裝，包括 SharePoint 2010 產品準備工具。 如需本機模式的詳細資訊，請參閱[本機模式與連線模式報表 [報表檢視器] &#40;Reporting Services SharePoint 模式&#41;](../../2014/reporting-services/local-vs-connected-mode-report-viewer-reporting-services-sharepoint-mode.md)並[哪裡可以找到的 Reporting Services 增益集適用於 SharePoint 產品](install-windows/where-to-find-the-reporting-services-add-in-for-sharepoint-products.md)。  
   
--   *連接模式*： 連接的模式的支援藉由整合[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]報表伺服器使用 SharePoint 管理中心在 SharePoint 伺服器陣列。 與報表伺服器整合會啟用完整的端對端報表，並提供 SharePoint 2010 的共同作業功能以及報表伺服器的伺服器架構功能，包括：訂閱、快照集和伺服器架構處理。  
+-   *連接模式*： 連接的模式的支援藉由整合[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]至 SharePoint 伺服器陣列中使用 SharePoint 管理中心內的報表伺服器。 與報表伺服器整合會啟用完整的端對端報表，並提供 SharePoint 2010 的共同作業功能以及報表伺服器的伺服器架構功能，包括：訂閱、快照集和伺服器架構處理。  
   
 ##  <a name="bkmk_unsupportedsharepoint"></a> 不支援的 SharePoint 功能  
- 並非所有 SharePoint 功能都可供整合作業使用。 以下是 SharePoint 功能的清單[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]不會直接整合：  
+ 並非所有 SharePoint 功能都可供整合作業使用。 以下是一份 SharePoint 功能[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]不會直接整合：  
   
 -   Secure Store Service。  
   
@@ -102,7 +102,7 @@ ms.locfileid: "36036034"
      文件庫版本歷程記錄會在 [文件庫設定] 的 [版本設定] 頁面上設定。  
   
 ##  <a name="bkmk_supportedcombinations"></a> 支援的 SharePoint 增益集與報表伺服器組合  
- 在報表伺服器、適用 SharePoint 之 Reporting Services 增益集，以及 SharePoint 產品的所有組合中，並不支援所有功能。 如需詳細資訊，請參閱[支援組合的 SharePoint 和 Reporting Services 伺服器與增益集&#40;SQL Server 2014&#41;](install-windows/supported-combinations-of-sharepoint-and-reporting-services-server.md)  
+ 在報表伺服器、適用 SharePoint 之 Reporting Services 增益集，以及 SharePoint 產品的所有組合中，並不支援所有功能。 如需詳細資訊，請參閱 <<c0> [ 組合支援的 SharePoint 和 Reporting Services 伺服器與增益集&#40;SQL Server 2014&#41;</c0>](install-windows/supported-combinations-of-sharepoint-and-reporting-services-server.md)  
   
 > [!NOTE]  
 >  正確版本的 Reporting Services 增益集必須搭配對應版本的 SharePoint 產品使用。  
@@ -110,14 +110,14 @@ ms.locfileid: "36036034"
 ##  <a name="bkmk_components"></a> 提供整合的元件  
  若要將伺服器結合在單一部署內，可以將 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 的安裝與 SharePoint 產品的執行個體相整合  
   
- 整合透過提供[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]和[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]適用於 SharePoint 產品增益集。 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 增益集是可免費轉散發的元件，您可以下載並安裝在執行正確版本之 SharePoint 的伺服器上。  
+ 整合透過提供[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]而[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]增益集適用於 SharePoint 產品。 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 增益集是可免費轉散發的元件，您可以下載並安裝在執行正確版本之 SharePoint 的伺服器上。  
   
 > [!TIP]  
->  在報表伺服器、適用 SharePoint 之 Reporting Services 增益集，以及 SharePoint 產品的所有組合中，並不支援所有功能。 如需詳細資訊，請參閱[支援組合的 SharePoint 和 Reporting Services 伺服器與增益集&#40;SQL Server 2014&#41;](install-windows/supported-combinations-of-sharepoint-and-reporting-services-server.md)。  
+>  在報表伺服器、適用 SharePoint 之 Reporting Services 增益集，以及 SharePoint 產品的所有組合中，並不支援所有功能。 如需詳細資訊，請參閱[組合支援的 SharePoint 和 Reporting Services 伺服器與增益集&#40;SQL Server 2014&#41;](install-windows/supported-combinations-of-sharepoint-and-reporting-services-server.md)。  
   
--   在 SharePoint 上，[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]增益集提供 ReportServer proxy 端點、 報表檢視器 Web 組件和應用程式頁面，讓您可以檢視時，儲存和管理報表伺服器內容，在 SharePoint 網站或伺服陣列。  
+-   在 SharePoint 上，[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]增益集提供 ReportServer proxy 端點、 報表檢視器 Web 組件和應用程式頁面，讓您可以檢視、 儲存和管理報表伺服器內容，在 SharePoint 網站或伺服陣列。  
   
--   在[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]提供更新的程式檔、 SOAP 端點及自訂的安全性和傳遞延伸模組。 報表伺服器必須設定為以 SharePoint 整合模式執行，且專門支援透過 SharePoint 網站來存取及傳遞報表。  
+-   在 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]提供更新的程式檔、 SOAP 端點及自訂的安全性和傳遞延伸模組。 報表伺服器必須設定為以 SharePoint 整合模式執行，且專門支援透過 SharePoint 網站來存取及傳遞報表。  
   
  在 SharePoint 上安裝 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 增益集並將這兩個伺服器設定整合之後，您就可以將報表伺服器內容類型上傳或發行至 SharePoint 文件庫，然後從 SharePoint 網站檢視和管理這些文件。 上傳或發行報表伺服器內容是第一個重要步驟；當您在 SharePoint 網站上選取報表定義 (.rdl)、報表模型 (.smdl) 和共用資料來源 (.rsds) 時，Web 組件和網頁就會變成可以使用。  
   
@@ -132,21 +132,21 @@ ms.locfileid: "36036034"
   
 -   SharePoint 網站、SharePoint 管理中心、線上說明和訊息會以 Office Server 產品所支援的語言提供。  
   
- 如果您的 SharePoint 產品或技術的語言與報表伺服器語言不同，[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]會嘗試使用最接近的相符項目會提供相同的語系的語言。 如果找不到接近的替代語言，報表伺服器就會使用英文。  
+ 如果您的 SharePoint 產品或技術的語言與報表伺服器語言不同，[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]會嘗試使用相同的語言系列提供最接近的相符項目中。 如果找不到接近的替代語言，報表伺服器就會使用英文。  
   
 ##  <a name="bkmk_relatedtasks"></a> 相關工作  
  下表摘要說明與 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] SharePoint 模式報表伺服器相關的工作：  
   
 |**工作**|**連結**|  
 |--------------|--------------|  
-|安裝和設定 SharePoint 模式之 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 的詳細步驟。|[Install Reporting Services SharePoint Mode for SharePoint 2010](../../2014/sql-server/install/install-reporting-services-sharepoint-mode-for-sharepoint-2010.md)和[將其他報表伺服器加入至伺服陣列&#40;SSRS 向外&#41;](install-windows/add-an-additional-report-server-to-a-farm-ssrs-scale-out.md)。|  
-|向外延展您[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]SharePoint 部署中的加入其他報表伺服器。|[將其他報表伺服器加入至伺服陣列&#40;SSRS 向外&#41;](install-windows/add-an-additional-report-server-to-a-farm-ssrs-scale-out.md)和[在 SharePoint 中的 SQL Server BI 功能的部署拓撲](../sql-server/install/deployment-topologies-for-sql-server-bi-features-in-sharepoint.md)。|  
+|安裝和設定 SharePoint 模式之 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 的詳細步驟。|[安裝 Reporting Services SharePoint Mode for SharePoint 2010](../../2014/sql-server/install/install-reporting-services-sharepoint-mode-for-sharepoint-2010.md)並[加入伺服器陣列中的其他報表伺服器&#40;SSRS 向外延展&#41;](install-windows/add-an-additional-report-server-to-a-farm-ssrs-scale-out.md)。|  
+|向外延展您[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]加上額外的報表伺服器的 SharePoint 部署。|[將其他報表伺服器加入至伺服陣列&#40;SSRS 向外延展&#41;](install-windows/add-an-additional-report-server-to-a-farm-ssrs-scale-out.md)並[在 SharePoint 中的 SQL Server BI 功能的部署拓撲](../sql-server/install/deployment-topologies-for-sql-server-bi-features-in-sharepoint.md)。|  
 |加入針對檢視和報表項目安裝之 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 元件的其他 SharePoint Web 前端。|[將其他 Reporting Services Web 前端加入至伺服器陣列](install-windows/add-an-additional-reporting-services-web-front-end-to-a-farm.md)|  
-|設定用於 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 資料警示和訂閱功能的電子郵件。|[Reporting Services 服務應用程式，設定電子郵件&#40;SharePoint 2010 和 SharePoint 2013&#41;](install-windows/configure-e-mail-for-a-reporting-services-service-application.md)|  
+|設定用於 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 資料警示和訂閱功能的電子郵件。|[設定 Reporting services 服務應用程式的電子郵件&#40;SharePoint 2010 和 SharePoint 2013&#41;](install-windows/configure-e-mail-for-a-reporting-services-service-application.md)|  
 |此版本的最新資訊位於 TechNet Wiki 上。|[SQL Server 2012 Reporting Services 提示、秘訣和疑難排解](http://go.microsoft.com/fwlink/?LinkId=221297)。|  
   
 ## <a name="see-also"></a>另請參閱  
- [安裝或解除安裝 Reporting Services 增益集，sharepoint &#40;SharePoint 2010 和 SharePoint 2013&#41;](install-windows/install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md)   
+ [安裝或解除安裝 Reporting Services 增益集，適用於 SharePoint &#40;SharePoint 2010 和 SharePoint 2013&#41;](install-windows/install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md)   
  [硬體和軟體需求的 Reporting Services SharePoint 模式](../../2014/sql-server/install/hardware-and-software-requirements-for-reporting-services-in-sharepoint-mode.md)   
  [在 SharePoint 網站上的報表檢視器 Web 組件](../../2014/reporting-services/report-viewer-web-part-on-a-sharepoint-site.md)   
  [測驗：為 SharePoint 整合設定 SSRS 2012](http://go.microsoft.com/fwlink/?LinkId=306443)  

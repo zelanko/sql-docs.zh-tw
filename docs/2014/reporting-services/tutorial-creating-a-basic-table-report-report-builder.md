@@ -8,28 +8,28 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: d9e30521-f8ae-4c45-89c3-d40727f622f7
 caps.latest.revision: 12
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 7c197e6f13497b82655f8c20872637d8bc8e7ed0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 5a3831372791023edb9f83064aa77878dcf41dfd
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36037396"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37186055"
 ---
 # <a name="tutorial-creating-a-basic-table-report-report-builder"></a>教學課程：建立基本資料表報表 (報表產生器)
   本教學課程將教導您根據範例銷售資料建立基本資料表報表。 下圖顯示您將建立的報表。  
   
  ![rs_CreateBasicReportTutorial](../../2014/tutorials/media/rs-createbasicreporttutorial.gif "rs_CreateBasicReportTutorial")  
   
-##  <a name="BackToTop"></a> 您將學習  
+##  <a name="BackToTop"></a> 您將了解  
  在本教學課程中，您將學習如何執行下列作業：  
   
-1.  [從使用者入門建立新的報表](#CreateTable)  
+1.  [從快速入門中建立新的報表](#CreateTable)  
   
     1.  [在資料表精靈中指定資料連接](#DataConnection)  
   
@@ -37,7 +37,7 @@ ms.locfileid: "36037396"
   
     3.  [將資料組織成資料表精靈中的群組](#Groups)  
   
-    4.  [在 資料表精靈中加入小計和總計資料列](#Subtotals)  
+    4.  [在資料表精靈中加入小計和總計資料列](#Subtotals)  
   
     5.  [在資料表精靈中選擇樣式](#Style)  
   
@@ -59,7 +59,7 @@ ms.locfileid: "36037396"
  如需需求的詳細資訊，請參閱[教學課程的必要條件 &#40;報表產生器&#41;](../reporting-services/report-builder-tutorials.md)。  
   
 ##  <a name="CreateTable"></a> 1.從使用者入門建立新報表  
- 建立資料表報表從**入門** 對話方塊。 模式有兩種：報表設計和共用資料集設計。 在報表設計模式中，您可以在 [報表資料] 窗格中指定資料，並且在設計介面上指定報表配置。 在共用資料集設計模式中，您可以建立資料集查詢，以便與其他人共用。 在本教學課程中，您將使用報表設計模式。  
+ 建立資料表報表從**開始使用** 對話方塊。 模式有兩種：報表設計和共用資料集設計。 在報表設計模式中，您可以在 [報表資料] 窗格中指定資料，並且在設計介面上指定報表配置。 在共用資料集設計模式中，您可以建立資料集查詢，以便與其他人共用。 在本教學課程中，您將使用報表設計模式。  
   
 #### <a name="to-create-a-new-report"></a>建立新的報表  
   
@@ -85,11 +85,11 @@ ms.locfileid: "36037396"
   
 2.  按一下 **[新增]**。 **[資料來源屬性]** 對話方塊隨即開啟。  
   
-3.  在**名稱**，型別**Product Sales**資料來源的名稱。  
+3.  在 **名稱**，型別**Product Sales**資料來源的名稱。  
   
 4.  在 [選取連線類型] 中，驗證已選取 [Microsoft SQL Server]。  
   
-5.  在**連接字串**，輸入下列文字，其中 *\<servername >* 是的執行個體名稱[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]:  
+5.  在 **連接字串**，輸入下列文字，其中 *\<servername >* 的執行個體的名稱[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]:  
   
     ```  
     Data Source=<servername>  
@@ -194,7 +194,7 @@ ms.locfileid: "36037396"
   
 6.  按 [下一步] 。  
   
-##  <a name="Subtotals"></a> 1 d。 在資料表精靈中加入小計和總計資料列  
+##  <a name="Subtotals"></a> 1d。 在資料表精靈中加入小計和總計資料列  
  建立群組之後，您可以加入並格式化要顯示欄位彙總值的資料列。 您可以選擇要顯示所有資料，或是讓使用者以互動方式展開和摺疊分組資料。  
   
 #### <a name="to-add-subtotals-and-totals"></a>加入小計和總計  
@@ -224,7 +224,7 @@ ms.locfileid: "36037396"
   
 #### <a name="to-specify-a-table-style"></a>指定資料表樣式  
   
-1.  在**選擇樣式** 頁面上，在 樣式 窗格中，選取 海洋。  
+1.  在 **選擇樣式** 頁面上，在 樣式 窗格中，選取 海洋。  
   
      [預覽] 窗格隨即顯示採用該樣式的資料表範例。  
   
@@ -245,7 +245,7 @@ ms.locfileid: "36037396"
   
 3.  在 [主資料夾] 索引標籤的 [數字] 群組中，按一下 [貨幣] 按鈕。 這些資料格就會變更為顯示格式化貨幣。  
   
-     如果您的地區設定為 [英文 (美國)]，則預設範例文字會是 [**$12,345.00**]。 如果看不到範例貨幣值，請按一下**預留位置樣式**中**數字**群組，然後再按一下**範例值**。  
+     如果您的地區設定為 [英文 (美國)]，則預設範例文字會是 [**$12,345.00**]。 如果您看不到範例貨幣值，請按一下**預留位置樣式**中**數字**群組，並再按**範例值**。  
   
 4.  按一下 [執行] 以預覽報表。  
   
@@ -260,7 +260,7 @@ ms.locfileid: "36037396"
   
 2.  按一下包含 `[SalesDate]`的資料格。  
   
-3.  在功能區 上**首頁**索引標籤的**數目**群組中，從下拉式清單中選取**日期**。  
+3.  功能區上**首頁**索引標籤中，於**數目**群組中，從下拉式清單中選取**日期**。  
   
      資料格就會顯示範例日期 **[1/31/2000]**。 如果您看不到範例日期，請按一下 [數字] 群組中的 [預留位置樣式]，然後按一下 [範例值]。  
   
@@ -274,7 +274,7 @@ ms.locfileid: "36037396"
   
 2.  按一下包含 `[SalesDate]`的資料格。  
   
-3.  在**首頁**索引標籤的**數目**群組中，按一下對話方塊啟動器。  
+3.  在 **首頁**索引標籤**數目**群組中，按一下對話方塊啟動器。  
   
      啟動器是群組右邊角落的小箭頭。 [文字方塊屬性] 對話方塊隨即開啟。  
   
@@ -360,7 +360,7 @@ ms.locfileid: "36037396"
 4.  按一下 **[儲存]**。  
   
 ##  <a name="Export"></a> 7.匯出報表  
- 報表可匯出為不同的格式，例如 Microsoft Excel 和逗號分隔值 (CSV)。 如需詳細資訊，請參閱[匯出報表&#40;報表產生器及 SSRS&#41;](report-builder/export-reports-report-builder-and-ssrs.md)。  
+ 報表可匯出為不同的格式，例如 Microsoft Excel 和逗號分隔值 (CSV)。 如需詳細資訊，請參閱 <<c0> [ 匯出的報表&#40;報表產生器及 SSRS&#41;](report-builder/export-reports-report-builder-and-ssrs.md)。</c0>  
   
  在本教學課程中，您會將報表匯出到 Excel，並且設定報表上的屬性，為活頁簿索引標籤提供自訂名稱。  
   
@@ -370,22 +370,22 @@ ms.locfileid: "36037396"
   
 2.  按一下報表外的任何位置。  
   
-3.  .在 [屬性] 窗格中，找出 InitialPageName 屬性和型別**產品銷售 Excel**。  
+3.  .在 [屬性] 窗格中，尋找 InitialPageName 屬性並輸入**產品銷售 Excel**。  
   
     > [!NOTE]  
-    >  如果看不到 [屬性] 窗格，按一下功能區中，[檢視] 索引標籤，然後按一下**屬性**。  
+    >  如果看不到 [屬性] 窗格，按一下功能區 [檢視] 索引標籤，然後按一下**屬性**。  
   
 #### <a name="to-export-a-report-to-excel"></a>將報表匯出到 Excel  
   
 1.  按一下 **[執行]** 預覽報表。  
   
-2.  .在功能區中，按一下 **匯出**，然後按一下  **Excel**。  
+2.  .在功能區中，按一下**匯出**，然後按一下**Excel**。  
   
      **[另存新檔]** 對話方塊隨即開啟。  
   
 3.  瀏覽至**文件**資料夾。  
   
-4.  在**檔案名稱**文字方塊中，輸入**產品銷售 Excel**。  
+4.  在 **檔名**文字方塊中，輸入**產品銷售 Excel**。  
   
 5.  確認檔案類型為**Excel 活頁簿**。  
   

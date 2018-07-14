@@ -1,5 +1,5 @@
 ---
-title: 共用的資料來源屬性對話方塊、 認證 |Microsoft 文件
+title: 共用的資料來源屬性對話方塊、 認證 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.rtp.rptdesigner.shareddatasource.credentials.f1
 ms.assetid: c08d1a5f-206b-4d53-ab1a-368b651ee5bb
 caps.latest.revision: 28
-author: douglaslM
+author: maggiesmsft
 ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 4956317c08b1f48e6504122e30392426e3dbcfcd
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 8e70c54de0c3d43d68753780b1b4cde5084ad64b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36036032"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37192588"
 ---
 # <a name="shared-data-source-properties-dialog-box-credentials"></a>共用資料來源屬性對話方塊、認證
   選取 **[共用資料來源屬性]** 對話方塊上的 **[認證]** ，來顯示和修改要連接到報表中共用資料來源的認證。 您所提供的認證會用來存取資料來源，並快取資料副本，以預覽報表。 如需如何快取預覽資料的詳細資訊，請參閱 [預覽報表](reports/previewing-reports.md)。 如需認證的詳細資訊，請參閱 [指定報表資料來源的認證及連接資訊](report-data/specify-credential-and-connection-information-for-report-data-sources.md)。  
@@ -39,7 +39,7 @@ ms.locfileid: "36036032"
  **密碼**  
  輸入密碼以登入資料來源。  
   
- **提示認證**  
+ **提示輸入認證**  
  選取此選項即可在執行報表時提示輸入認證。  
   
  **輸入提示字串**  
@@ -51,6 +51,6 @@ ms.locfileid: "36036032"
 ## <a name="see-also"></a>另請參閱  
  [資料連接、 資料來源和 Reporting Services 中的連接字串](../../2014/reporting-services/data-connections-data-sources-and-connection-strings-in-reporting-services.md)   
  [指定報表資料來源的認證及連接資訊](report-data/specify-credential-and-connection-information-for-report-data-sources.md)   
- [共用的資料來源屬性對話方塊、 一般](../../2014/reporting-services/shared-data-source-properties-dialog-box-general.md)  
+ [共用資料來源屬性對話方塊，一般](../../2014/reporting-services/shared-data-source-properties-dialog-box-general.md)  
   
   

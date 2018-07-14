@@ -1,5 +1,5 @@
 ---
-title: Alter 元素 (XMLA) |Microsoft 文件
+title: Alter 元素 (XMLA) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -24,18 +24,18 @@ helpviewer_keywords:
 - Alter command
 ms.assetid: 84e58385-c9ba-48fa-a867-94d35b777a56
 caps.latest.revision: 14
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: 5ea2c3ed3105c66b0c0848138acb5941978dd9bf
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: e13819d301af842eb2094d7b6ad3367cde424c72
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36035070"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37192406"
 ---
 # <a name="alter-element-xmla"></a>Alter 元素 (XMLA)
-  包含所使用的 Analysis Services 指令碼語言 (ASSL) 元素[Execute](../xml-elements-methods-execute.md)方法來修改物件的執行個體上[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]。  
+  包含由所使用的 Analysis Services 指令碼語言 (ASSL) 元素[Execute](../xml-elements-methods-execute.md)方法來改變執行個體上的物件[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]。  
   
 ## <a name="syntax"></a>語法  
   
@@ -69,8 +69,8 @@ ms.locfileid: "36035070"
 |attribute|描述|  
 |---------------|-----------------|  
 |AllowCreate|(選擇性 `Boolean` 屬性) 指出是否應該建立 `Alter` 命令中定義的物件 (如果它們原本不存在的話)。<br /><br /> 如果設定為 true，系統就會在 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 執行個體上建立 `ObjectDefinition` 元素中定義的物件 (如果它們原本不存在的話)。 換言之，如果這些物件原本不存在執行個體上，`Alter` 命令就會被視為 `Create` 命令。<br /><br /> 如果這個屬性被省略或設定為 `false`，當這些物件原本不存在時，就會發生錯誤。|  
-|ObjectExpansion|(選擇性 `Enum` 屬性) 定義要由 `Execute` 方法執行的更改範圍。<br /><br /> 如果設定為*ObjectProperties*、`ObjectDefinition`項目應該包含要改變的主要物件的完整定義包括從屬次要物件。 要更改之物件的從屬主要物件會維持不變。 **注意：** 時使用*ObjectProperties*設定[ClrAssembly](../../scripting/data-type/assembly-data-type-assl.md)資料型別，[資料](../../scripting/objects/data-element-assl.md)相關聯的項目[ClrAssemblyFile](../../scripting/data-type/clrassemblyfile-data-type-assl.md)不需要指定資料類型。 如果沒有指定，`ClrAssembly` 就會使用現有檔案。 <br /><br /> 如果設定為*ExpandFull*、`ObjectDefinition`項目應該包含不只是要變更、 物件的定義，但這是要改變的下階物件的所有主要物件的定義。 **注意：** *ExpandFull*設定無法搭配[伺服器](../../scripting/objects/server-element-assl.md)項目。|  
-|範圍。|(選擇性 `Enum` 屬性) 定義 `ObjectDefinition` 元素中定義之物件的持續時間。<br /><br /> 如果設定為*工作階段*中, 定義的物件`ObjectDefinition`元素只存在於 XMLA 工作階段的持續時間。 **注意：** 時使用*工作階段*設定，`ObjectDefinition`元素只能包含[維度](../../scripting/objects/dimension-element-assl.md)， [Cube](../../scripting/objects/cube-element-assl.md)，或[MiningModel](../../scripting/objects/miningmodel-element-assl.md) ASSL 元素。 <br /><br /> 如果這屬性被省略，`ObjectDefinition` 元素中定義的物件就會保存在 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 執行個體上。|  
+|ObjectExpansion|(選擇性 `Enum` 屬性) 定義要由 `Execute` 方法執行的更改範圍。<br /><br /> 如果設定為*ObjectProperties*，則`ObjectDefinition`項目應該包含主要是要變更、 物件的完整定義包括從屬次要物件。 要更改之物件的從屬主要物件會維持不變。 **注意：** 使用時*ObjectProperties*設定[ClrAssembly](../../scripting/data-type/assembly-data-type-assl.md)資料類型[資料](../../scripting/objects/data-element-assl.md)相關聯的項目[ClrAssemblyFile](../../scripting/data-type/clrassemblyfile-data-type-assl.md)不需要指定資料類型。 如果沒有指定，`ClrAssembly` 就會使用現有檔案。 <br /><br /> 如果設定為*ExpandFull*，則`ObjectDefinition`項目應該包含不只是要變更、 物件的定義，但它們是要變更之物件的子系的所有主要物件的定義。 **注意︰** *ExpandFull*設定無法搭配[Server](../../scripting/objects/server-element-assl.md)項目。|  
+|範圍。|(選擇性 `Enum` 屬性) 定義 `ObjectDefinition` 元素中定義之物件的持續時間。<br /><br /> 如果設定為*工作階段*中, 定義的物件`ObjectDefinition`項目只存在於 XMLA 工作階段的持續時間。 **注意︰** 使用時*工作階段*設定，請`ObjectDefinition`元素只能包含[維度](../../scripting/objects/dimension-element-assl.md)， [Cube](../../scripting/objects/cube-element-assl.md)，或[MiningModel](../../scripting/objects/miningmodel-element-assl.md) ASSL 元素。 <br /><br /> 如果這屬性被省略，`ObjectDefinition` 元素中定義的物件就會保存在 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 執行個體上。|  
   
 ## <a name="remarks"></a>備註  
  每個`Alter`命令會變更所指定的父物件底下某個主要物件的定義[ParentObject](../xml-elements-properties/parentobject-element-xmla.md)項目。  

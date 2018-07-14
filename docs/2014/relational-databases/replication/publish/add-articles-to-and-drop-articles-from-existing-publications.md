@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - articles [SQL Server replication], dropping
 - deleting articles
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - articles [SQL Server replication], adding
 ms.assetid: b148e907-e1f2-483b-bdb2-59ea596efceb
 caps.latest.revision: 44
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 56a4730e9775a88865da8c59c8f3ef5c60d14839
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 30d2946d580c539ca5acdbaca24cdc90dd90849a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36034111"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37201148"
 ---
 # <a name="add-articles-to-and-drop-articles-from-existing-publications"></a>在現有發行集中加入和卸除發行項
   建立發行集後，可以新增或卸除發行項。 發行項可以隨時新增，但卸除發行項所需的動作取決於複寫的類型以及卸除發行項的時機。  

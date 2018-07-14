@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.transfersqlserverobjectstask.f1
 helpviewer_keywords:
@@ -17,13 +17,13 @@ ms.assetid: fe86d6e5-e415-406c-88f3-dc3ef71bd5f0
 caps.latest.revision: 35
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 2fcff2e593b3b1eb5f235f56b398294b0bf2edf7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 7122dbdf0f99e7bf490487cd98abb3f4d4e7c81a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36033947"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37184735"
 ---
 # <a name="transfer-sql-server-objects-task"></a>傳送 SQL Server 物件工作
   「傳送 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 物件」工作會在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體之間，傳送 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]資料庫中的一個或多個類型物件。 例如，該工作可以複製資料表和預存程序。 因用作來源的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本不同，可複製不同類型的物件。 例如，只有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫包含結構描述和使用者定義彙總。  
@@ -83,7 +83,7 @@ ms.locfileid: "36033947"
  「傳送 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 物件」工作並不報告物件傳送的累加進度，它只報告 0% 和 100 % 完成。  
   
 ## <a name="execution-value"></a>執行值  
- 中儲存的執行值`ExecutionValue`工作中，屬性會傳回已傳送的物件數目。 透過將使用者自訂變數指派給「傳送 SQL Server 物件」工作的 `ExecValueVariable` 屬性，可將與物件傳送相關的資訊用於封裝中的其他物件。 如需詳細資訊，請參閱 [Integration Services &#40;SSIS&#41; 變數](../integration-services-ssis-variables.md)和[在封裝中使用變數](../use-variables-in-packages.md)。  
+ 中儲存的執行值`ExecutionValue`之工作的屬性會傳回已傳送的物件數目。 透過將使用者自訂變數指派給「傳送 SQL Server 物件」工作的 `ExecValueVariable` 屬性，可將與物件傳送相關的資訊用於封裝中的其他物件。 如需詳細資訊，請參閱 [Integration Services &#40;SSIS&#41; 變數](../integration-services-ssis-variables.md)和[在封裝中使用變數](../use-variables-in-packages.md)。  
   
 ## <a name="log-entries"></a>記錄項目  
  「傳送 SQL Server 物件」工作包含下列自訂記錄項目：  
@@ -92,7 +92,7 @@ ms.locfileid: "36033947"
   
 -   TransferSqlServerObjectsTaskFinishedTransferringObjects：此記錄項目報告傳送已完成。 記錄項目會包含結束時間。  
   
- 此外，`OnInformation` 事件的記錄項目會報告已為傳送選取之物件類型的物件數目、已傳送的物件數目，以及動作 (例如，隨資料表一同傳送資料時截斷資料表)。 記錄項目`OnWarning`事件會寫入每個物件會覆寫目的地上。  
+ 此外，`OnInformation` 事件的記錄項目會報告已為傳送選取之物件類型的物件數目、已傳送的物件數目，以及動作 (例如，隨資料表一同傳送資料時截斷資料表)。 記錄項目`OnWarning`事件會寫入會覆寫目的地上每個物件。  
   
 ## <a name="security-and-permissions"></a>安全性和權限  
  使用者必須具有在來源伺服器上瀏覽物件的權限，且必須具有在目的地伺服器上卸除和建立物件的權限，此外，使用者還必須能夠存取指定的資料庫和資料庫物件。  
@@ -110,7 +110,7 @@ ms.locfileid: "36033947"
   
  如需有關可以在「 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師」中設定之屬性的詳細資訊，請按下列其中一個主題：  
   
--   [傳送 SQL Server 物件工作編輯器&#40;[一般] 頁面&#41;](../general-page-of-integration-services-designers-options.md)  
+-   [傳送 SQL Server 物件工作編輯器&#40;一般頁面&#41;](../general-page-of-integration-services-designers-options.md)  
   
 -   [傳送 SQL Server 物件工作編輯器&#40;物件頁面&#41;](../transfer-sql-server-objects-task-editor-objects-page.md)  
   

@@ -25,13 +25,13 @@ ms.assetid: 687c262f-fcab-42e8-92ae-e956f3d92d69
 caps.latest.revision: 80
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 6552bc54d8da9475adaa35b86b697c1dbdf3f437
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: f651eee3c926db0f808a673d7555d02f3fe07d83
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36033673"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37184715"
 ---
 # <a name="coding-and-debugging-the-script-task"></a>指令碼工作的程式碼撰寫和偵錯
   在 [指令碼工作編輯器] 中設定指令碼工作之後，於指令碼工作開發環境中撰寫自訂程式碼。  
@@ -54,9 +54,9 @@ ms.locfileid: "36033673"
 ### <a name="project-items-and-classes-in-the-script-task-project"></a>指令碼工作專案中的專案項目和類別  
  依預設，顯示在 VSTA [專案總管] 視窗中的指令碼工作專案包含單一項目：`ScriptMain`。 `ScriptMain` 項目則包含單一類別，同樣名為 `ScriptMain`。 類別中的程式碼項目會根據您針對指令碼工作所選取的程式語言而變更。  
   
--   當指令碼工作時設定為[!INCLUDE[vb_orcas_long](../../../includes/vb-orcas-long-md.md)]程式設計語言，`ScriptMain`類別具有公用的副程式： `Main`。 `ScriptMain.Main` 副程式是當您執行指令碼工作時，執行階段呼叫的方法。  
+-   當指令碼工作已針對[!INCLUDE[vb_orcas_long](../../../includes/vb-orcas-long-md.md)]程式設計語言，`ScriptMain`類別具有公用的副程式： `Main`。 `ScriptMain.Main` 副程式是當您執行指令碼工作時，執行階段呼叫的方法。  
   
-     依預設，在新指令碼的 `Main` 副程式中的唯一程式碼是 `Dts.TaskResult = ScriptResults.Success` 這一行。 這行會通知執行階段，工作的作業已成功。 `Dts.TaskResult`屬性述[Returning Results from 指令碼工作](../../extending-packages-scripting/task/returning-results-from-the-script-task.md)。  
+     依預設，在新指令碼的 `Main` 副程式中的唯一程式碼是 `Dts.TaskResult = ScriptResults.Success` 這一行。 這行會通知執行階段，工作的作業已成功。 `Dts.TaskResult`屬性中所提及[Returning Results from 指令碼工作](../../extending-packages-scripting/task/returning-results-from-the-script-task.md)。  
   
 -   當為 Visual C# 程式語言設定指令碼工作時，`ScriptMain` 類別具有公用的方法 `Main`。 此方法是在指令碼工作執行時呼叫。  
   
@@ -250,7 +250,7 @@ To open Help, press F1.
   
 -   blogs.msdn.com 上的部落格文章：[VSTA setup and configuration troubles for SSIS 2008 and R2 installations](http://go.microsoft.com/fwlink/?LinkId=215661) (SSIS 2008 和 R2 安裝的 VSTA 安裝與設定問題)。  
   
-![Integration Services 圖示 （小）](../../media/dts-16.gif "Integration Services 圖示 （小）")**保持最多 with Integration Services 的日期** <br /> 最新下載、 文章、 範例和影片[!INCLUDE[msCoName](../../../includes/msconame-md.md)]，以及選取的解決方案由社群，請瀏覽[!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)]MSDN 上的頁面：<br /><br /> [瀏覽 MSDN 上的 Integration Services 頁面](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 若要得到這些更新的自動通知，請訂閱該頁面上所提供的 RSS 摘要。  
+![Integration Services 圖示 （小）](../../media/dts-16.gif "Integration Services 圖示 （小）")**保持最多包含 Integration Services 的日期** <br /> 最新下載、 文章、 範例和影片[!INCLUDE[msCoName](../../../includes/msconame-md.md)]，以及選取的解決方案，從社群，請瀏覽[!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)]MSDN 上的頁面：<br /><br /> [瀏覽 MSDN 上的 Integration Services 頁面](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 若要得到這些更新的自動通知，請訂閱該頁面上所提供的 RSS 摘要。  
   
 ## <a name="see-also"></a>另請參閱  
  [參考指令碼解決方案中的其他組件](../referencing-other-assemblies-in-scripting-solutions.md)   

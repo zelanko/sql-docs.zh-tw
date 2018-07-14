@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: f951a4aa-da55-4e43-8579-4a5d4480d11f
 caps.latest.revision: 7
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 3a2113a46869312d1954115c60723dcb51c1d262
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 099d9f8ccb24e2675f61c89f277d82984901cd4e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36034717"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37168149"
 ---
 # <a name="datasources-and-datasets-collection-references-report-builder-and-ssrs"></a>DataSources 和 DataSets 集合參考 (報表產生器及 SSRS)
   `DataSources` 集合代表報表中使用的所有資料來源。 同樣地，`DataSets`集合代表報表中的所有資料來源的所有資料集。 請使用 [報表資料] 窗格以階層的方式檢視報表資料集 (排列在所參考資料來源的下方)。 如果加入這些集合的參考，就不會在預覽報表時看到值。 只有發行報表至報表伺服器後，才可以使用這些集合。  

@@ -1,5 +1,5 @@
 ---
-title: 建立並將對應的伺服器環境 |Microsoft 文件
+title: 建立和對應伺服器環境 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.ssis.ssms.isenvprop.variables.f1
 - sql12.ssis.ssms.iscreateenv.f1
@@ -16,15 +16,15 @@ f1_keywords:
 - sql12.ssis.ssms.isenvprop.general.f1
 ms.assetid: b1cbb697-713f-48e4-b234-b23724d87451
 caps.latest.revision: 11
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 7b386dd13218d78bc8b70dacba6a0103bf9a8581
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e5650c579c1fab390b98b3bb7777e9c8f8f07595
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36035033"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37173099"
 ---
 # <a name="create-and-map-a-server-environment"></a>建立和對應伺服器環境
   您可以建立伺服器環境，針對已部署至 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 伺服器之專案中所包含的封裝，指定執行值。 接著您可以針對特定封裝、進入點封裝，或給定專案中的所有封裝，將環境變數對應至參數。 進入點封裝通常是執行子封裝的父封裝。  

@@ -1,5 +1,5 @@
 ---
-title: Reporting Services SharePoint 服務和服務應用程式 |Microsoft 文件
+title: Reporting Services SharePoint 服務和服務應用程式 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 501aa9ee-8c13-458c-bf6f-24e00c82681b
 caps.latest.revision: 9
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: c3d32e750728e1b427b7c33179d4dcf3de6eb395
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: f612ac92f6741f83a92f29987cea03f662815e9d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36033890"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37181495"
 ---
 # <a name="reporting-services-sharepoint-service-and-service-applications"></a>Reporting Services SharePoint 服務和服務應用程式
   [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] SharePoint 模式以 SharePoint 服務架構為基礎，並且利用 SharePoint 服務和一對多服務應用程式。 建立服務應用程式可讓服務變成可用，並產生服務應用程式資料庫。 您可以建立多個 Reporting Services 服務應用程式，但是一個服務應用程式就足以應付大部分的部署狀況。  
@@ -46,7 +46,7 @@ ms.locfileid: "36033890"
   
 2.  在 [服務應用程式關聯] 頁面上，將檢視切換至 **[服務應用程式]**。  
   
-3.  尋找並按一下您的新名稱[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]服務應用程式。 您也可以按一下應用程式 Proxy 群組名稱 **default** ，將 Proxy 加入至預設群組，而不要完成下列步驟。  
+3.  尋找並按一下您新的名稱[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]服務應用程式。 您也可以按一下應用程式 Proxy 群組名稱 **default** ，將 Proxy 加入至預設群組，而不要完成下列步驟。  
   
 4.  在 **[編輯下列連線群組]** 選取方塊中選取 **[自訂]**。  
   

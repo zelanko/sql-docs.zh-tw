@@ -1,5 +1,5 @@
 ---
-title: 公用程式儀表板 （SQL Server 公用程式） |Microsoft 文件
+title: 公用程式儀表板 （SQL Server 公用程式） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 999eb741-4a60-43f6-ab37-2df7dce845c1
 caps.latest.revision: 5
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: a19036826aff3afdb31904318d52929b628441eb
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: c37387c3a5a47a624cdcac57d73552c8eeda9b3e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36033695"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37192138"
 ---
 # <a name="utility-dashboard-sql-server-utility"></a>公用程式儀表板 (SQL Server 公用程式)
   若要查看 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 公用程式儀表板中的資料，請在公用程式總管樹狀目錄中，選取最上方的節點，也就是標示為 "Utility<UCP_Name>\\(ComputerName\UCP)" 的節點。 此儀表板包含 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 公用程式內所有 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Managed 執行個體及所有資料層應用程式中的摘要和詳細資料。 若要重新整理儀表板中的資料，請以滑鼠右鍵按一下公用程式總管樹狀目錄中的最上方節點，然後選取 [重新整理]。  
@@ -108,7 +108,7 @@ ms.locfileid: "36033695"
   
 ## <a name="see-also"></a>另請參閱  
  [使用公用程式總管來管理 SQL Server 公用程式](../relational-databases/manage/use-utility-explorer-to-manage-the-sql-server-utility.md)   
- [SQL Server 執行個體註冊&#40;SQL Server 公用程式&#41;](../relational-databases/manage/enroll-an-instance-of-sql-server-sql-server-utility.md)   
+ [註冊 SQL Server 執行個體的&#40;SQL Server 公用程式&#41;](../relational-databases/manage/enroll-an-instance-of-sql-server-sql-server-utility.md)   
  [修改資源健康情況原則定義 &#40;SQL Server 公用程式&#41;](../relational-databases/manage/modify-a-resource-health-policy-definition-sql-server-utility.md)  
   
   

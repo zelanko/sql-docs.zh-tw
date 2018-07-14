@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: a972c56e-b2af-4fe6-abbd-817406e2c93a
 caps.latest.revision: 9
-author: mgblythe
-ms.author: mblythe
-manager: jhubbard
-ms.openlocfilehash: 8c20daf51270931609fb876b9a7035da343d19f7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: c64ba9da7884b1ccb82dd31480d60638c8d952ee
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36036173"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37192469"
 ---
 # <a name="import-the-sqlps-module"></a>匯入 SQLPS 模組
   從 PowerShell 管理 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的建議方式是將 `sqlps` 模組匯入 Windows PowerShell 2.0 環境中。 此模組會載入及註冊 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 嵌入式管理單元和管理能力組件。  
@@ -50,7 +50,7 @@ ms.locfileid: "36036173"
 ##  <a name="LoadSqlps"></a> 載入 sqlps 模組  
  **在 Windows PowerShell 中載入 sqlps 模組**  
   
-1.  使用`Set-ExecutionPolicy`cmdlet，設定適當的指令碼執行原則。  
+1.  使用`Set-ExecutionPolicy`cmdlet 來設定適當的指令碼執行原則。  
   
 2.  使用`Import-Module`cmdlet 匯入 sqlps 模組。 指定`DisableNameChecking`參數，如果您想要隱藏警告的相關`Encode-Sqlname`和`Decode-Sqlname`。  
   

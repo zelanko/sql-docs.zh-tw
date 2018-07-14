@@ -1,5 +1,5 @@
 ---
-title: SqlErrorLogEvent 類別 |Microsoft 文件
+title: SqlErrorLogEvent 類別 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -15,15 +15,15 @@ helpviewer_keywords:
 - SqlErrorLogFile class
 ms.assetid: bde6c467-38d0-4766-a7af-d6c9d6302b07
 caps.latest.revision: 12
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 95588b82a36bb5d7d5d520a5f54ca968a9198112
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+ms.openlocfilehash: 65c2eb3758524788d0c65645d3b5736c930d58ac
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36033193"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37204890"
 ---
 # <a name="sqlerrorlogevent-class"></a>SqlErrorLogEvent 類別
   提供屬性，用來檢視指定之 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 記錄檔中的事件。  
@@ -62,7 +62,7 @@ class SQLErrorLogEvent
 |命名空間|\root\Microsoft\SqlServer\ComputerManagement10|  
   
 ## <a name="example"></a>範例  
- 下列範例會顯示如何擷取指定的記錄檔中所有已記錄事件的值。 若要執行範例時，取代\< *Instance_Name*> 的執行個體的名稱取代[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，例如 'Instance1'，並取代 'File_Name' 與錯誤記錄檔的名稱，例如，ERRORLOG.1' '。  
+ 下列範例會顯示如何擷取指定的記錄檔中所有已記錄事件的值。 若要執行範例時，取代\< *Instance_Name*> 的執行個體的名稱取代[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，例如，'Instance1'，並取代 'File_Name' 與錯誤記錄檔的名稱，例如 ERRORLOG.1' '。  
   
 ```  
 on error resume next  
@@ -83,22 +83,22 @@ Next
 ```  
   
 ## <a name="comments"></a>註解  
- 當*InstanceName*或*FileName*並未提供的 WQL 陳述式中，查詢會傳回預設執行個體和目前資訊[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]記錄檔。 例如，下列 WQL 陳述式會傳回從目前的記錄檔 (ERRORLOG) 的預設執行個體 (MSSQLSERVER) 的所有記錄事件。  
+ 當*InstanceName*或*FileName*中所未提供的 WQL 陳述式中，查詢會傳回預設執行個體和目前的資訊[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]記錄檔。 例如，下列 WQL 陳述式會傳回所有記錄事件，從目前的記錄檔 (ERRORLOG) 的預設執行個體 (MSSQLSERVER)。  
   
 ```  
 "SELECT * FROM SqlErrorLogEvent"  
 ```  
   
 ## <a name="security"></a>Security  
- 若要連接到[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]記錄檔透過 WMI 中，您必須擁有下列權限，本機和遠端電腦上：  
+ 若要連接到[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]記錄檔透過 WMI，您必須擁有下列權限，本機和遠端電腦上：  
   
 -   讀取權限**Root\Microsoft\SqlServer\ComputerManagement10** WMI 命名空間。 根據預設，每個人都可從啟用帳戶權限取得讀取權限。  
   
--   包含錯誤記錄檔之資料夾的讀取權限。 根據預設，錯誤記錄檔位於下列路徑 (其中\<*磁碟機 >* 表示安裝所在的磁碟機[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]和\< *InstanceName*> 是執行個體名稱[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]):  
+-   包含錯誤記錄檔之資料夾的讀取權限。 根據預設，錯誤記錄檔位於下列路徑 (其中\<*磁碟機 >* 代表您的安裝位置的磁碟機[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]並\< *InstanceName*> 是執行個體名稱[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]):  
   
      **\<磁碟機 >: \Program Files\Microsoft SQL Server\MSSQL12** **。\<執行個體名稱 > \MSSQL\Log**  
   
- 如果透過防火牆連接，請確定您已在遠端目標電腦上的 WMI 防火牆中設定例外狀況。 如需詳細資訊，請參閱[連接到 WMI 遠端從 Windows Vista 開始](http://go.microsoft.com/fwlink/?LinkId=178848)。  
+ 如果透過防火牆連接，請確定您已在遠端目標電腦上的 WMI 防火牆中設定例外狀況。 如需詳細資訊，請參閱 <<c0> [ 連接到 WMI 遠端從 Windows Vista 開始](http://go.microsoft.com/fwlink/?LinkId=178848)。  
   
 ## <a name="see-also"></a>另請參閱  
  [SqlErrorLogFile 類別](sqlerrorlogfile-class.md)   

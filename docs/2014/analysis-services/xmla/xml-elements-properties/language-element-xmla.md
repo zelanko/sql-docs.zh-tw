@@ -1,5 +1,5 @@
 ---
-title: Language 元素 (XMLA) |Microsoft 文件
+title: Language 元素 (XMLA) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
@@ -24,18 +24,18 @@ helpviewer_keywords:
 - Language element
 ms.assetid: cd998202-e43f-4c6c-8727-a15a76a520ea
 caps.latest.revision: 11
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: 5ea8c37369c45d35a8fe3c7366c2d5293e0c48a9
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: d247e81c19c3394ac46274ba775c1695741e00ff
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36034230"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37205848"
 ---
 # <a name="language-element-xmla"></a>Language 元素 (XMLA)
-  包含父代的地區設定識別碼 (LCID)[轉譯](translation-element-xmla.md)項目。  
+  包含地區設定識別碼 (LCID) 的父代[翻譯](translation-element-xmla.md)項目。  
   
 ## <a name="syntax"></a>語法  
   
@@ -68,7 +68,7 @@ ms.locfileid: "36034230"
   
 ## <a name="see-also"></a>另請參閱  
  [插入項目&#40;XMLA&#41;](../xml-elements-commands/insert-element-xmla.md)   
- [名稱元素&#40;XMLA&#41;](name-element-xmla.md)   
+ [名稱項目&#40;XMLA&#41;](name-element-xmla.md)   
  [更新項目&#40;XMLA&#41;](../xml-elements-commands/update-element-xmla.md)   
  [屬性&#40;XMLA&#41;](xml-elements-properties.md)  
   

@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine-imoltp
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 2113a916-3b1e-496c-8650-7f495e492510
 caps.latest.revision: 5
-author: stevestein
-ms.author: sstein
-manager: jhubbard
-ms.openlocfilehash: 699350a433233911bae7df4c8de430b670ef8362
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+ms.openlocfilehash: e7d2210dcd2ea1c43b28b189d4ce8880005797d8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36036768"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37199228"
 ---
 # <a name="high-availability-support-for-in-memory-oltp-databases"></a>記憶體內部 OLTP 資料庫的高可用性支援
   不論包含或不含原生編譯的預存程序，包含記憶體最佳化資料表的資料庫完全支援 AlwaysOn 可用性群組。  設定中並沒有任何差異，但與不含的情況相比，包含原生編譯的預存程序還支援包含 [!INCLUDE[hek_2](../../includes/hek-2-md.md)] 物件的資料庫。  
@@ -51,7 +51,7 @@ ms.locfileid: "36036768"
 ## <a name="see-also"></a>另請參閱  
  [AlwaysOn 可用性群組 (SQL Server)](../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md)   
  [AlwaysOn 可用性群組概觀&#40;SQL Server&#41;](../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
- [使用中次要： 可讀取次要複本&#40;AlwaysOn 可用性群組&#41;](../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)   
+ [使用中次要： 可讀取的次要複本&#40;AlwaysOn 可用性群組&#41;](../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)   
  [複寫至記憶體最佳化資料表訂閱者](../replication/replication-to-memory-optimized-table-subscribers.md)  
   
   

@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 525820a2-7eba-4982-8518-e6db041b1fc6
 caps.latest.revision: 6
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 20a5c8a50749e1b7133df76bedb7b3ba2d7c4879
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: c9841b18565b6c07f88ed075a298cbe87275b5d7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36034973"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37197058"
 ---
 # <a name="glossary-report-builder"></a>詞彙 (報表產生器)
   
@@ -374,6 +374,6 @@ ms.locfileid: "36034973"
 |Y 軸 (y-axis)|請參閱其他詞彙：值 (y) 軸|  
   
 ## <a name="see-also"></a>另請參閱  
- [報表撰寫概念&#40;報表產生器和 SSRS&#41;](../report-design/report-authoring-concepts-report-builder-and-ssrs.md)  
+ [報表撰寫概念&#40;報表產生器及 SSRS&#41;](../report-design/report-authoring-concepts-report-builder-and-ssrs.md)  
   
   

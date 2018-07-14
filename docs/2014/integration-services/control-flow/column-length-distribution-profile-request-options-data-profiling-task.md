@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Data Profiling Task Editor
 ms.assetid: 1a4de41f-f38d-40ea-ba1b-6c0ef67ea52a
 caps.latest.revision: 20
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 89968a32fbcd6afc24d666d969c6765f841adc6f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 6abc6de76628a022068a25b41c7b70e84ebc5581
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36036160"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37176525"
 ---
 # <a name="column-length-distribution-profile-request-options-data-profiling-task"></a>資料行長度散發設定檔要求選項 (資料分析工作)
   您可以使用 **[設定檔要求]** 頁面的 **[要求屬性]** 窗格，針對要求窗格中選取的 **[資料行長度散發設定檔要求]** 設定選項。 資料行長度散發設定檔會報告選取之資料行中字串值的所有相異長度，以及該資料表中每個長度所代表之資料列的百分比。 這個設定檔可協助您識別資料中的問題，例如無效的值。 舉例來說，您分析了美國州名二字元代碼的資料行並發現長度超過兩個字元的值。  
@@ -83,7 +83,7 @@ ms.locfileid: "36036160"
  指出當設定檔比較字串值時是否要忽略尾端空白。 此選項的預設值是 **[True]**。  
   
 ## <a name="see-also"></a>另請參閱  
- [資料分析工作編輯器&#40;[一般] 頁面&#41;](../general-page-of-integration-services-designers-options.md)   
+ [資料分析工作編輯器&#40;一般頁面&#41;](../general-page-of-integration-services-designers-options.md)   
  [單一資料表快速分析表單 &#40;資料分析工作&#41;](single-table-quick-profile-form-data-profiling-task.md)  
   
   

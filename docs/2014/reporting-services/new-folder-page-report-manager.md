@@ -1,5 +1,5 @@
 ---
-title: 新增資料夾頁面 （報表管理員） |Microsoft 文件
+title: 新增資料夾頁面 （報表管理員） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 9212fc68-f0a6-4f79-83c1-84baf4d1957e
 caps.latest.revision: 23
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 5ec855928ab92734695594a79ed23e917b3bb8d5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 3464ba51b74343fdb7349b7622f08a68b3f25611
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36034521"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37162289"
 ---
 # <a name="new-folder-page-report-manager"></a>新增資料夾頁面 (報表管理員)
   使用 [新增資料夾] 頁面，即可在報表伺服器資料夾階層中建立新的資料夾。 您建立的資料夾是儲存在報表伺服器資料庫中的虛擬資料夾。 這個資料夾並不是在電腦的檔案系統中建立的。  

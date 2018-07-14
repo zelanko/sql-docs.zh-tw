@@ -18,13 +18,13 @@ ms.assetid: 9f6ef376-3408-46bf-b5fa-fc7b18c689c9
 caps.latest.revision: 41
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: c9dfad0b1ed2daa45a967b074982ba80653e84bf
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: df53d355babd082cba4b67404c91b7d4c33bec28
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36033664"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37186685"
 ---
 # <a name="loading-and-running-a-remote-package-programmatically"></a>以程式設計方式載入和執行遠端封裝
   若要從沒有安裝 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 的本機電腦執行遠端封裝，請啟動封裝，讓它們在已安裝 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 的遠端電腦上執行。 完成這項工作的方法是讓本機電腦使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent、Web 服務或遠端元件來啟動遠端電腦上的封裝。 如果您嘗試直接從本機電腦啟動遠端封裝，該封裝將載入並嘗試從本機電腦執行。 如果本機電腦沒有安裝 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]，封裝將不會執行。  
@@ -169,7 +169,7 @@ namespace LaunchSSISPackageAgent_CS
   
 1.  使用您慣用的程式語言，開啟 Visual Studio 並建立 Web 服務專案。 範例程式碼使用 LaunchSSISPackageService 做為專案的名稱。  
   
-2.  將參考加入`Microsoft.SqlServer.ManagedDTS`並加入`Imports`或`using`陳述式的程式碼檔案來**Microsoft.SqlServer.Dts.Runtime**命名空間。  
+2.  將參考加入`Microsoft.SqlServer.ManagedDTS`並新增`Imports`或是`using`陳述式的程式碼檔案來**Microsoft.SqlServer.Dts.Runtime**命名空間。  
   
 3.  將 LaunchPackage Web 服務方法的範例程式碼貼到類別中  (範例顯示程式碼視窗的整個內容)。  
   
@@ -427,7 +427,7 @@ namespace LaunchSSISPackageSvcTestCS
   
 -   位於 technet.microsoft.com 的影片：[如何：使用 SQL Server Agent 讓 SSIS 套件執行自動化 (SQL Server 影片)](http://technet.microsoft.com/sqlserver/ff686764.aspx)  
   
-![Integration Services 圖示 （小）](../media/dts-16.gif "Integration Services 圖示 （小）")**保持最多 with Integration Services 的日期** <br /> 若要取得 Microsoft 的最新下載、文件、範例和影片以及社群中的精選解決方案，請瀏覽 MSDN 上的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 頁面：<br /><br /> [瀏覽 MSDN 上的 Integration Services 頁面](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 若要得到這些更新的自動通知，請訂閱該頁面上所提供的 RSS 摘要。  
+![Integration Services 圖示 （小）](../media/dts-16.gif "Integration Services 圖示 （小）")**保持最多包含 Integration Services 的日期** <br /> 若要取得 Microsoft 的最新下載、文件、範例和影片以及社群中的精選解決方案，請瀏覽 MSDN 上的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 頁面：<br /><br /> [瀏覽 MSDN 上的 Integration Services 頁面](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 若要得到這些更新的自動通知，請訂閱該頁面上所提供的 RSS 摘要。  
   
 ## <a name="see-also"></a>另請參閱  
  [了解本機與遠端執行之間的差異](../run-manage-packages-programmatically/understanding-the-differences-between-local-and-remote-execution.md)   

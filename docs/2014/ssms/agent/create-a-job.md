@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - jobs [SQL Server Agent], creating
 - SQL Server Agent jobs, creating
 ms.assetid: b35af2b6-6594-40d1-9861-4d5dd906048c
 caps.latest.revision: 33
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: cb9d6f15c9819a9c5653130664b340931a9a5d93
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: d161129b14da33645c1a9238307c0eefe9539097
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36036937"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37181535"
 ---
 # <a name="create-a-job"></a>建立作業
   此主題描述如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]、[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 或 SQL Server 管理物件 (SMO)，在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 中建立 SQL Server Agent 作業。  
@@ -75,17 +75,17 @@ ms.locfileid: "36036937"
   
 3.  以滑鼠右鍵按一下 [作業] 資料夾，然後選取 [新增作業]。  
   
-4.  在 **[新增作業]** 對話方塊的 **[一般]** 頁面中，修改作業的一般屬性。 如需有關此頁面上的可用選項的詳細資訊，請參閱[作業屬性和新的工作&#40;[一般] 頁面&#41;](../../integration-services/general-page-of-integration-services-designers-options.md)  
+4.  在 **[新增作業]** 對話方塊的 **[一般]** 頁面中，修改作業的一般屬性。 如需有關此頁面可用之選項的詳細資訊，請參閱[作業的屬性和新的工作&#40;[一般] 頁&#41;](../../integration-services/general-page-of-integration-services-designers-options.md)  
   
-5.  在 **[步驟]** 頁面上，組織作業步驟。 如需有關此頁面上的可用選項的詳細資訊，請參閱[作業屬性： 新工作&#40;步驟 頁面&#41;](job-properties-new-job-steps-page.md)  
+5.  在 **[步驟]** 頁面上，組織作業步驟。 如需有關此頁面可用之選項的詳細資訊，請參閱[作業屬性： 新的工作&#40;步驟 頁面&#41;](job-properties-new-job-steps-page.md)  
   
-6.  在 **[排程]** 頁面上，組織作業的排程。 如需有關此頁面上的可用選項的詳細資訊，請參閱[作業屬性： 新工作&#40;排程 頁面&#41;](job-properties-new-job-schedules-page.md)  
+6.  在 **[排程]** 頁面上，組織作業的排程。 如需有關此頁面可用之選項的詳細資訊，請參閱[作業屬性： 新的工作&#40;排程 頁面&#41;](job-properties-new-job-schedules-page.md)  
   
-7.  在 **[警示]** 頁面上，組織作業的警示。 如需有關此頁面上的可用選項的詳細資訊，請參閱[作業屬性： 新工作&#40;警示 頁面&#41;](job-properties-new-job-alerts-page.md)  
+7.  在 **[警示]** 頁面上，組織作業的警示。 如需有關此頁面可用之選項的詳細資訊，請參閱[作業屬性： 新的工作&#40;警示頁面&#41;](job-properties-new-job-alerts-page.md)  
   
-8.  在 **[通知]** 頁面上，設定當作業完成時， [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 要執行的動作。 如需有關此頁面上的可用選項的詳細資訊，請參閱[作業屬性： 新工作&#40;通知頁面&#41;](job-properties-new-job-notifications-page.md)。  
+8.  在 **[通知]** 頁面上，設定當作業完成時， [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 要執行的動作。 如需有關此頁面可用之選項的詳細資訊，請參閱[作業屬性： 新的工作&#40;通知頁面&#41;](job-properties-new-job-notifications-page.md)。  
   
-9. 在 **[目標]** 頁面上，管理作業的目標伺服器。 如需有關此頁面上的可用選項的詳細資訊，請參閱[作業屬性： 新工作&#40;目標 頁面中&#41;](job-properties-new-job-targets-page.md)。  
+9. 在 **[目標]** 頁面上，管理作業的目標伺服器。 如需有關此頁面可用之選項的詳細資訊，請參閱[作業屬性： 新的工作&#40;目標 頁面中&#41;](job-properties-new-job-targets-page.md)。  
   
 10. 完成後，請按一下 **[確定]**。  
   
@@ -138,7 +138,7 @@ ms.locfileid: "36036937"
   
 -   [sp_attach_schedule &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-attach-schedule-transact-sql)  
   
--   [sp_add_jobserver &#40;Transact SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-add-jobserver-transact-sql)  
+-   [sp_add_jobserver &#40;-SQL&AMP;#41;&#41;](/sql/relational-databases/system-stored-procedures/sp-add-jobserver-transact-sql)  
   
 ##  <a name="SMOProcedure"></a> 使用 SQL Server 管理物件  
  **若要建立 SQL Server Agent 作業**  

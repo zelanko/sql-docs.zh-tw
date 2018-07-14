@@ -20,13 +20,13 @@ ms.assetid: b8fa110a-2c9c-4f5a-8fe1-305555640e44
 caps.latest.revision: 32
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 62c35066634f291eb8fa3e5bc39425d11afe6a1b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ba52df081b4f40afc7ad32e80c716d96e7bf0c36
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36036826"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37192118"
 ---
 # <a name="working-with-excel-files-with-the-script-task"></a>以指令碼工作處理 Excel 檔案
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 提供 Excel 連接管理員、Excel 來源和 Excel 目的地，以處理 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel 檔案格式試算表中儲存的資料。 本主題所述的技術會使用指令碼工作取得有關可用 Excel 資料庫 (活頁簿檔案) 與資料表 (工作表與具名範圍) 的相關資訊。 您可以輕鬆地修改這些範例，使其可與 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Jet OLE DB Provider 所支援的其他以檔案為基礎之資料來源搭配使用。  
@@ -84,7 +84,7 @@ ms.locfileid: "36036826"
   
 #### <a name="to-configure-this-script-task-example"></a>設定此指令碼工作範例  
   
-1.  將新的指令碼工作加入封裝和其名稱變更為`ExcelFileExists`。  
+1.  將新的指令碼工作加入封裝，並變更其名稱`ExcelFileExists`。  
   
 2.  在 [指令碼工作編輯器] 的 [指令碼] 索引標籤上，按一下 **ReadOnlyVariables**，並使用下列其中一項方法輸入屬性值：  
   
@@ -92,7 +92,7 @@ ms.locfileid: "36036826"
   
          -或-  
   
-    -   按一下省略符號 (**...**) 屬性欄位中，然後在下一步按鈕**選取變數**對話方塊中，選取`ExcelFile`變數。  
+    -   按一下省略符號 (**...**) 屬性 欄位中，然後在下一步按鈕**選取變數** 對話方塊中，選取`ExcelFile`變數。  
   
 3.  按一下 **ReadWriteVariables**，並使用下列其中一項方法輸入屬性值：  
   
@@ -100,7 +100,7 @@ ms.locfileid: "36036826"
   
          -或-  
   
-    -   按一下省略符號 (**...**) 屬性欄位中，然後在下一步按鈕**選取變數**對話方塊中，選取`ExcelFileExists`變數。  
+    -   按一下省略符號 (**...**) 屬性 欄位中，然後在下一步按鈕**選取變數** 對話方塊中，選取`ExcelFileExists`變數。  
   
 4.  按一下 [編輯指令碼]，以開啟指令碼編輯器。  
   
@@ -154,7 +154,7 @@ public class ScriptMain
   
 #### <a name="to-configure-this-script-task-example"></a>設定此指令碼工作範例  
   
-1.  將新的指令碼工作加入封裝和其名稱變更為`ExcelTableExists`。  
+1.  將新的指令碼工作加入封裝，並變更其名稱`ExcelTableExists`。  
   
 2.  在 [指令碼工作編輯器] 的 [指令碼] 索引標籤上，按一下 **ReadOnlyVariables**，並使用下列其中一項方法輸入屬性值：  
   
@@ -162,7 +162,7 @@ public class ScriptMain
   
          -或-  
   
-    -   按一下省略符號 (**...**) 屬性欄位中，然後在下一步按鈕**選取變數**對話方塊中，選取`ExcelTable`和`ExcelFile`變數。  
+    -   按一下省略符號 (**...**) 屬性 欄位中，然後在下一步按鈕**選取變數** 對話方塊中，選取`ExcelTable`和`ExcelFile`變數。  
   
 3.  按一下 **ReadWriteVariables**，並使用下列其中一項方法輸入屬性值：  
   
@@ -170,7 +170,7 @@ public class ScriptMain
   
          -或-  
   
-    -   按一下省略符號 (**...**) 屬性欄位中，然後在下一步按鈕**選取變數**對話方塊中，選取`ExcelTableExists`變數。  
+    -   按一下省略符號 (**...**) 屬性 欄位中，然後在下一步按鈕**選取變數** 對話方塊中，選取`ExcelTableExists`變數。  
   
 4.  按一下 [編輯指令碼]，以開啟指令碼編輯器。  
   
@@ -546,7 +546,7 @@ public class ScriptMain
 }  
 ```  
   
-![Integration Services 圖示 （小）](../media/dts-16.gif "Integration Services 圖示 （小）")**保持最多 with Integration Services 的日期** <br /> 若要取得 Microsoft 的最新下載、文件、範例和影片以及社群中的精選解決方案，請瀏覽 MSDN 上的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 頁面：<br /><br /> [瀏覽 MSDN 上的 Integration Services 頁面](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 若要得到這些更新的自動通知，請訂閱該頁面上所提供的 RSS 摘要。  
+![Integration Services 圖示 （小）](../media/dts-16.gif "Integration Services 圖示 （小）")**保持最多包含 Integration Services 的日期** <br /> 若要取得 Microsoft 的最新下載、文件、範例和影片以及社群中的精選解決方案，請瀏覽 MSDN 上的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 頁面：<br /><br /> [瀏覽 MSDN 上的 Integration Services 頁面](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 若要得到這些更新的自動通知，請訂閱該頁面上所提供的 RSS 摘要。  
   
 ## <a name="see-also"></a>另請參閱  
  [Excel 連線管理員](../connection-manager/excel-connection-manager.md)   

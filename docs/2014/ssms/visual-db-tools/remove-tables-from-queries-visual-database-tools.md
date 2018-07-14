@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - deleting tables
 - removing tables
@@ -16,21 +16,21 @@ helpviewer_keywords:
 - queries [SQL Server], tables
 ms.assetid: 8fea0b4f-99b7-4050-8d6f-a97ffb839619
 caps.latest.revision: 10
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 131a7e5ad9837c795b8a7f3c7360b84f8858177a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 25d995d1049956652a326a3b759f272a5ecfc5e9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36035369"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37200608"
 ---
 # <a name="remove-tables-from-queries-visual-database-tools"></a>移除查詢的資料表 (Visual Database Tools)
   您可以從查詢移除資料表或任何資料表值物件。  
   
 > [!NOTE]  
->  移除資料表或資料表值物件並不會從資料庫刪除任何東西，只是從目前的查詢中移除。 如需有關移除資料庫中資料表的詳細資訊，請參閱[刪除資料表&#40;Database Engine&#41;](../../relational-databases/tables/delete-tables-database-engine.md)。  
+>  移除資料表或資料表值物件並不會從資料庫刪除任何東西，只是從目前的查詢中移除。 如需從資料庫移除資料表的詳細資訊，請參閱[刪除資料表&#40;資料庫引擎&#41;](../../relational-databases/tables/delete-tables-database-engine.md)。  
   
 ### <a name="to-remove-a-table-or-table-structured-object"></a>若要移除資料表或表格化物件  
   

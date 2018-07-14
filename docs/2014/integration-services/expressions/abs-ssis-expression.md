@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - ABS function
 - absolute positive value
@@ -16,13 +16,13 @@ ms.assetid: 156747f6-e016-44cf-9a9f-ae8e4a1b4f17
 caps.latest.revision: 28
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 9c11f496feebffc36b89c4cbacd144da33da8631
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: a13bb07db4dd258c63eb28b01219309c70224fa6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36033060"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37184705"
 ---
 # <a name="abs-ssis-expression"></a>ABS (SSIS 運算式)
   傳回數值運算式的絕對正數值。  

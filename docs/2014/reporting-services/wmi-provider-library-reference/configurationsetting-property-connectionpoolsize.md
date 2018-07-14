@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 api_name:
 - ConnectionPoolSize
 api_location:
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - ConnectionPoolSize property
 ms.assetid: b80c8e5d-b725-4fe4-aec6-02fb18ec4434
 caps.latest.revision: 17
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 0d534e8fd5435cd26b72a37649afed12411362d5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: 86d9f0b2e863e74126101c988f0883aad77b172c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36035146"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37166219"
 ---
 # <a name="connectionpoolsize-property-wmi-msreportserverconfigurationsetting"></a>ConnectionPoolSize 屬性 (WMI MSReportServer_ConfigurationSetting)
   報表伺服器用來與主控報表伺服器資料庫之 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體進行通訊的連接集區大小。 唯讀。  
@@ -43,7 +43,7 @@ public UInt32 ConnectionPoolSize;
 ```  
   
 ## <a name="property-values"></a>屬性值  
- 唯讀**整數**物件，傳回值的`768`。  
+ 唯讀**整數**會傳回值的物件`768`。  
   
 ## <a name="example-code"></a>範例程式碼  
  [MSReportServer_ConfigurationSetting 類別](msreportserver-configurationsetting-class.md)  

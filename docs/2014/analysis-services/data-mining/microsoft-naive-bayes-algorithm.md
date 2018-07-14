@@ -1,5 +1,5 @@
 ---
-title: Microsoft 貝氏機率分類演算法 |Microsoft 文件
+title: Microsoft 貝氏機率分類演算法 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Bayesian classifiers
 - algorithms [data mining]
@@ -17,18 +17,18 @@ helpviewer_keywords:
 - naive bayes algorithms [Analysis Services]
 ms.assetid: 3b53e011-3b1a-4cd1-bdc2-456768ba31b5
 caps.latest.revision: 55
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 43d3851c5a3acd6a33d051eb743797220d06cb7c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 9abc422430a70a8a4386b55ca0d8d4eb4fb3017b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36034478"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37196608"
 ---
 # <a name="microsoft-naive-bayes-algorithm"></a>Microsoft Naive Bayes Algorithm
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)]貝氏機率分類演算法是根據貝氏的定理和所提供的分類演算法[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]用於預測模型。 貝氏 (Naïve Bayes) 名稱中的 naïve 一字源自此演算法使用 Bayesian 技術但卻沒有考量可能存在的相依性。  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)]貝氏機率分類演算法是根據貝氏的定理和所提供的分類演算法[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]用於預測性模型。 貝氏 (Naïve Bayes) 名稱中的 naïve 一字源自此演算法使用 Bayesian 技術但卻沒有考量可能存在的相依性。  
   
  此演算法比其他 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 演算法更少計算，因此對於快速產生採礦模型來探索輸入資料行和可預測資料行之間的關聯性很有用。 您可以使用此演算法來執行資料的初始瀏覽，然後您可以套用其結果，以其他更多計算和更精確的演算法來建立其他採礦模型。  
   
@@ -61,7 +61,7 @@ ms.locfileid: "36034478"
   
 -   **單一索引鍵資料行** ：每個模型都必須包含一個能唯一識別每一筆記錄的數值或文字資料行。 不允許複合的索引鍵。  
   
--   **輸入資料行**在貝氏機率分類模型的所有資料行必須是離散或離散化資料行。 如需有關分隔資料行的資訊，請參閱[離散化方法&#40;資料採礦&#41;](discretization-methods-data-mining.md)。  
+-   **輸入資料行**在貝氏機率分類模型中，所有的資料行必須是離散或離散化資料行。 如需有關分隔資料行的資訊，請參閱[離散化方法&#40;資料採礦&#41;](discretization-methods-data-mining.md)。  
   
      對貝氏機率分類模型而言，確保輸入屬性彼此無關也很重要。 當您使用此模型進行預測時，這一點格外重要。  
   

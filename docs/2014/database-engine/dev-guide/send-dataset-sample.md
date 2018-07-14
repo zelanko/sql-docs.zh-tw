@@ -1,5 +1,5 @@
 ---
-title: 傳送資料集範例 |Microsoft 文件
+title: 傳送資料集範例 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -12,20 +12,20 @@ ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: d10dacbc-1b0f-4a4b-b53b-83eae2a6d809
 caps.latest.revision: 13
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: ffe7f23a8f20a325f84fe68df90778ec321e0885
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 03552b94c8a50bea83d1d5e69f589379baf81697
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36036852"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37171359"
 ---
 # <a name="send-dataset-sample"></a>傳送資料集範例
   這個「傳送 `DataSet`」範例會示範如何在伺服器端以 Common Language Runtime (CLR) 為基礎的預存程序內傳回以 ADO.NET 為基礎的 `DataSet`，做為用戶端的結果集。 例如，當這種預存程序使用查詢的結果填入 `DataSet`，然後操作該 `DataSet` 所包含的資料時，這個範例很有幫助。 另外，如果預存程序重新建立及擴展 `DataSet`，這也很有幫助。此範例包含兩個類別：`DataSetUtilities` 和 `TestSendDataSet`。 `SendDataSet` 類別上的 `DataSetUtilities` 方法會實作一種通用方式來傳輸 `DataSet` 執行個體的內容給用戶端。 定義在 `DoTest` 類別上的 `TestSendDataSet` 方法會建立 `SendDataSet` 並以 `DataSet` Transact-SQL 預存程序中的資料填入其中，藉以確認 `uspGetTwoBOMTestData` 方法正常運作。 `uspGetTwoBOMTestData` 會執行 Transact-SQL 預存程序 `uspGetBillOfMaterials` 兩次，以便遞迴地查詢已指定為 `usp_GetTwoBOMTestData` 預存程序參數之兩種產品的用料表。 通常，填入資料集之後，在叫用 `SendDataSet` 來傳遞資料集內的資料做為用戶端的結果集之前，會先修改資料。 為了簡單起見，此範例只傳回資料而不做修改。  
   
-## <a name="prerequisites"></a>必要條件  
+## <a name="prerequisites"></a>先決條件  
  若要建立並執行這個專案，您必須安裝下列軟體：  
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express。 您可以從 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express 文件集和範例[網站](http://go.microsoft.com/fwlink/?LinkId=31046)免費取得 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express  

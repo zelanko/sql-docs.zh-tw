@@ -1,5 +1,5 @@
 ---
-title: 通用屬性 |Microsoft 文件
+title: 通用屬性 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - VB
 - CSharp
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - component properties [Integration Services]
 ms.assetid: 51973502-5cc6-4125-9fce-e60fa1b7b796
 caps.latest.revision: 45
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 3cf48911196d3bb96fa54a6d912fbf5a5646516f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 5bc0d0f75f911c27ec8b117653aef978a615f3e6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36036868"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37169327"
 ---
 # <a name="common-properties"></a>通用屬性
   [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 物件模型中的資料流程物件具有元件層級、輸入和輸出層級，以及輸入資料行和輸出資料行層級上的通用屬性和自訂屬性。 許多屬性都有唯讀的值，這些值是在執行階段由資料流程引擎所指派。  
@@ -97,7 +97,7 @@ ms.locfileid: "36036868"
 |IdentificationString|String|識別此元件。|  
 |IsDefaultLocale|布林|指示元件是否使用其所屬之資料流程工作的地區設定。|  
 |LocaleID|Integer|當封裝執行時，資料流程元件所使用的地區設定。 所有的 Windows 地區設定都可用於資料流程元件。|  
-|[屬性]|String|資料流程元件的名稱。|  
+|名稱|String|資料流程元件的名稱。|  
 |PipelineVersion|Integer|專門用來執行元件的資料流程工作版本。|  
 |UsesDispositions|布林|指示元件是否有錯誤輸出。|  
 |ValidateExternalMetadata|布林|指示是否會驗證外部資料行的中繼資料。 這個屬性的預設值是`True`。|  
@@ -113,11 +113,11 @@ ms.locfileid: "36036868"
 |描述|String|輸入的描述。|  
 |ErrorOrTruncationOperation|String|指定處理資料列時發生之錯誤或截斷類型的選擇性字串。|  
 |ErrorRowDisposition|<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSRowDisposition>|指定錯誤處理的值。 值是`Fail component`， `Ignore failure`，和`Redirect row`。|  
-|HasSideEffects|布林|指出是否移除資料流程的執行計畫中的元件以及它並未附加至下游元件時`RunInOptimizedMode`是`true`。|  
+|HasSideEffects|布林|指出是否移除從資料流程的執行計畫的元件以及它將不會附加到下游元件時`RunInOptimizedMode`是`true`。|  
 |ID|Integer|可唯一識別輸入的值。|  
 |IdentificationString|String|識別輸入的字串。|  
 |IsSorted|布林|指示是否要排序輸入中的資料。|  
-|[屬性]|String|輸入的名稱。|  
+|名稱|String|輸入的名稱。|  
 |SourceLocale|Integer|輸入資料的地區設定識別碼 (LCID)。|  
 |TruncationRowDisposition|<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSRowDisposition>|決定元件如何處理當處理資料列時發生之截斷的值。 執行個體時提供 SQL Server 登入。 值是`Fail component`， `Ignore failure`，和`Redirect row`。|  
   
@@ -138,7 +138,7 @@ ms.locfileid: "36036868"
 |ID|Integer|可唯一識別輸入資料行的值。|  
 |IdentificationString|String|識別輸入資料行的字串。|  
 |LineageID|Integer|上游資料行的識別碼。|  
-|[屬性]|String|輸入資料行的名稱。|  
+|名稱|String|輸入資料行的名稱。|  
 |SortKeyPosition|Integer|指示是否排序資料行、其排序次序以及排序多個資料行之順序的值。 值為 **0** 時，指出資料行並未排序。  如需詳細資訊，請參閱 [排序合併和合併聯結轉換的資料](data-flow/transformations/sort-data-for-the-merge-and-merge-join-transformations.md)。|  
 |TruncationRowDisposition|<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSRowDisposition>|決定元件如何處理當處理資料列時發生之截斷的值。 值是`Fail component`， `Ignore failure`，和`Redirect row`。|  
 |UpstreamComponentName|String|上游元件的名稱。|  
@@ -162,8 +162,8 @@ ms.locfileid: "36036868"
 |ID|Integer|可唯一識別輸出的值。|  
 |IdentificationString|String|識別輸出的字串。|  
 |IsErrorOut|布林|指示輸出是否為錯誤輸出。|  
-|IsSorted|布林|指示是否要排序輸出。 預設值是 `False`。<br /><br /> **\*\* 重要\* \*** 設定的值`IsSorted`屬性`True`不會排序資料。 此屬性僅針對資料先前已經過排序的下游元件提供提示。 如需詳細資訊，請參閱 [排序合併和合併聯結轉換的資料](data-flow/transformations/sort-data-for-the-merge-and-merge-join-transformations.md)。|  
-|[屬性]|String|輸出的名稱。|  
+|IsSorted|布林|指示是否要排序輸出。 預設值是 `False`。<br /><br /> **\*\* 重要\* \*** 的值設定`IsSorted`屬性設`True`不會排序資料。 此屬性僅針對資料先前已經過排序的下游元件提供提示。 如需詳細資訊，請參閱 [排序合併和合併聯結轉換的資料](data-flow/transformations/sort-data-for-the-merge-and-merge-join-transformations.md)。|  
+|名稱|String|輸出的名稱。|  
 |SynchronousInputID|Integer|與輸出同步之輸入的識別碼。|  
 |TruncationRowDisposition|<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSRowDisposition>|決定元件如何處理當處理資料列時發生之截斷的值。 值是`Fail component`， `Ignore failure`，和`Redirect row`。|  
   
@@ -182,7 +182,7 @@ ms.locfileid: "36036868"
 |ID|Integer|可唯一識別輸出資料行的值。|  
 |IdentificationString|String|識別輸出資料行的字串。|  
 |LineageID|Integer|輸出資料行的識別碼。 下游元件會使用這個值來參考此資料行。|  
-|[屬性]|String|輸出資料行的名稱。|  
+|名稱|String|輸出資料行的名稱。|  
 |SortKeyPosition|Integer|指示是否排序資料行、其排序次序以及排序多個資料行之順序的值。 值為 **0** 時，指出資料行並未排序。 如需詳細資訊，請參閱 [排序合併和合併聯結轉換的資料](data-flow/transformations/sort-data-for-the-merge-and-merge-join-transformations.md)。|  
 |SpecialFlags|Integer|包含輸出資料行之特殊旗標的值。|  
 |TruncationRowDisposition|<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSRowDisposition>|決定元件如何處理當處理資料列時發生之截斷的值。 值是`Fail component`， `Ignore failure`，和`Redirect row`。 預設值是 `Fail component`。|  
@@ -199,7 +199,7 @@ ms.locfileid: "36036868"
 |描述|String|描述外部資料行。|  
 |ID|Integer|可唯一識別此資料行的值。|  
 |IdentificationString|String|識別此資料行的字串。|  
-|[屬性]|String|外部資料行的名稱。|  
+|名稱|String|外部資料行的名稱。|  
   
  外部中繼資料行也包含一組資料類型屬性。  
   

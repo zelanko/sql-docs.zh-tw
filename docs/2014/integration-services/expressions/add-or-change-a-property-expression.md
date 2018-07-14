@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - expressions [Integration Services], creating
 - expressions [Integration Services], property expressions
@@ -16,13 +16,13 @@ ms.assetid: cb5da499-065f-4fa6-9f6d-5bc5f385241e
 caps.latest.revision: 27
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 6cc84205d1c9190028ad89df64808d3bdea9396a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 147daa2f1e58d636b460921f5a50a987e92a156e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36034178"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37187056"
 ---
 # <a name="add-or-change-a-property-expression"></a>加入或變更屬性運算式
   您可以為封裝、工作、「Foreach 迴圈」容器、「For 迴圈」容器、「時序」容器、事件處理常式、封裝和專案層級的連接管理員和記錄提供者建立屬性運算式。  

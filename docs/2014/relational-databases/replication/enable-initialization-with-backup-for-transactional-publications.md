@@ -1,5 +1,5 @@
 ---
-title: 啟用使用備份初始化交易式發行集 (SQL Server Management Studio) |Microsoft 文件
+title: 啟用使用備份的初始化交易式發行集 (SQL Server Management Studio) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - manual subscription initialization [SQL Server replication]
 - subscriptions [SQL Server replication], initializing
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - backups [SQL Server replication], transactional replication
 ms.assetid: 9df00514-aa9d-4ac6-9766-d226c9958175
 caps.latest.revision: 28
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: ed84233679e563576e5affe6f889a501904ce897
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: e0307a6554f0caec64d2196dd5343b5751454b78
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36032533"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37203028"
 ---
 # <a name="enable-initialization-with-a-backup-for-transactional-publications-sql-server-management-studio"></a>為交易式發行集啟用使用備份的初始化 (SQL Server Management Studio)
   若要從備份初始化交易式發行集的訂閱，請啟用發行集以允許從備份進行初始化，然後在建立訂閱時指定備份資訊：  

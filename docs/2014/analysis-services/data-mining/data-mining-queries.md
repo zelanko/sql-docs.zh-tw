@@ -1,5 +1,5 @@
 ---
-title: 資料採礦查詢 |Microsoft 文件
+title: 資料採礦查詢 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - prediction queries [Analysis Services]
 - queries [DMX], creating
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - mining models [Analysis Services], querying
 ms.assetid: 802806a6-69bb-4c3c-b9aa-d1a1ddfc7fc2
 caps.latest.revision: 44
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: c7d67cd0b51a8bd2a7219558d1488afebf50651b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e735d73e8bad733c330d0d5134f13905c1ef8e15
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36036710"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37170199"
 ---
 # <a name="data-mining-queries"></a>資料採礦查詢
   資料採礦查詢有許多實用的用途。 您可以：  
@@ -86,7 +86,7 @@ ms.locfileid: "36036710"
   
  一旦您熟悉資料採礦模型以及如何建立查詢之後，您也可以使用資料採礦延伸模組 (DMX) 直接撰寫查詢。 DMX 是一種類似於 Transact-SQL 的查詢語言，您可以從許多不同的用戶端來使用它。 DMX 是用來建立自訂預測和複雜查詢的工具選擇。 如需 DMX 的簡介，請參閱[使用 DMX 建立並查詢資料採礦模型：教學課程 &#40;Analysis Services - 資料採礦&#41;](../../tutorials/create-query-data-mining-models-dmx-tutorials.md)。  
   
- [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 和 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中都有提供 DMX 編輯器。 您也可以使用預測查詢產生器開始查詢，然後將檢視變更為文字編輯器，並將 DMX 陳述式複製到另一個用戶端。 如需詳細資訊，請參閱[資料採礦查詢介面](data-mining-query-tools.md)。  
+ [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 和 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中都有提供 DMX 編輯器。 您也可以使用預測查詢產生器開始查詢，然後將檢視變更為文字編輯器，並將 DMX 陳述式複製到另一個用戶端。 如需詳細資訊，請參閱 <<c0> [ 資料採礦查詢介面](data-mining-query-tools.md)。  
   
  您可以程式設計方式撰寫 DMX 陳述式，然後使用 AMO 或 XMLA 從用戶端將其傳送到 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 伺服器。 但是，DMX 是您必須用來針對採礦模型建立查詢的語言。  
   
@@ -99,14 +99,14 @@ ms.locfileid: "36036710"
   
  下列清單提供您可以在查詢中使用之函數的摘要：  
   
--   **一般預測函數：** `Predict`函式是多型，這表示它適用於所有模型類型。 這個函數將會自動偵測您所使用之模型的類型，並提示您輸入其他參數。 如需詳細資訊，請參閱 [Predict &#40;DMX&#41](/sql/dmx/predict-dmx)。  
+-   **一般預測函數：** `Predict`函式是多型的這表示它適用於所有模型類型。 這個函數將會自動偵測您所使用之模型的類型，並提示您輸入其他參數。 如需詳細資訊，請參閱 [Predict &#40;DMX&#41](/sql/dmx/predict-dmx)。  
   
     > [!WARNING]  
     >  並非所有模型都會用來做預測。 例如，您可以建立沒有可預測屬性的叢集模型。 但是，即使模型沒有可預測屬性，您也可以建立預測查詢來傳回模型中其他類型的實用資訊。  
   
 -   **自訂預測函數：** 每一個模型類型都會提供一組預測函數，這些函數是設計來處理該演算法所建立的模式。  
   
-     例如，`Lag` 函數是針對時間序列模型所提供，可讓您檢視模型所使用的歷程記錄資料。 對於叢集模型，這類函數`ClusterDistance`來得有意義。  
+     例如，`Lag` 函數是針對時間序列模型所提供，可讓您檢視模型所使用的歷程記錄資料。 對於叢集模型，這類函式`ClusterDistance`更有意義。  
   
      如需有關每一種模型類型所支援之函數的詳細資訊，請參閱以下連結：  
   
@@ -122,13 +122,13 @@ ms.locfileid: "36036710"
   
 -   **一般統計資料：** 有許多函數幾乎可以搭配任何模型類型使用，以便傳回一組標準的描述性統計資料，例如標準差。  
   
-     例如，`PredictHistogram`函式會傳回資料表，其中列出指定之資料行的所有狀態。  
+     比方說，`PredictHistogram`函式會傳回資料表，列出指定的資料行的所有狀態。  
   
      如需詳細資訊，請參閱[一般預測函數 &#40;DMX&#41](/sql/dmx/general-prediction-functions-dmx)。  
   
 -   **自訂統計資料：** 為每種模型類型提供其他支援函數，以便產生與特定分析工作有關的統計資料。  
   
-     例如，當您正在使用群集模型，您可以使用函式， `PredictCaseLikelihood`，以傳回與特定案例和叢集相關聯的可能性分數。 但是，如果您建立了線性迴歸模型，您對於擷取係數和攔截會更感興趣 (您可以使用內容查詢來擷取)。  
+     例如，當您使用叢集模型時，您可以使用函式， `PredictCaseLikelihood`，以傳回與特定案例和叢集相關聯的可能性分數。 但是，如果您建立了線性迴歸模型，您對於擷取係數和攔截會更感興趣 (您可以使用內容查詢來擷取)。  
   
 -   **模型內容函數：** 所有模型的「內容」都以標準化格式表示，好讓您使用簡單查詢擷取資訊。 可以使用 DMX 來針對模型內容建立查詢。 您也可以使用資料採礦結構描述資料列集來取得某個類型的模型內容。  
   

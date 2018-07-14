@@ -8,24 +8,24 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Database Mail XPs option
 - Database Mail [SQL Server], enabling
 ms.assetid: e22c4e63-1792-473b-af11-14a7931ca9ed
 caps.latest.revision: 19
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 7aeecaabec0c476768e7e98579086e7f36649abc
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 80475cd15578f5d6113b5bb9763c57b6a5c06960
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36036413"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37193658"
 ---
 # <a name="database-mail-xps-server-configuration-option"></a>Database Mail XP 伺服器組態選項
-  使用 [DatabaseMail XP] 選項，可在此伺服器上啟用 Database Mail。 可能的值為：  
+  使用 [DatabaseMail XP] 選項，可在此伺服器上啟用 Database Mail。 可能值為：  
   
 -   **0** 表示無法使用 Database Mail (預設值)。  
   

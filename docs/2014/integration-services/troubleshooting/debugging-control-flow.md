@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - progress reporting [Integration Services]
 - breakpoints [Integration Services]
@@ -20,16 +20,16 @@ ms.assetid: 54a458cc-9f4f-4b48-8cf2-db2e0fa7756c
 caps.latest.revision: 54
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 8b8de78b135245c36d11f4dfb96a993fd0bbc4dd
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: fd6b99c23bd2a8ef82597025c402f0f881c13982
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36033044"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37170988"
 ---
 # <a name="debugging-control-flow"></a>偵錯控制流程
-  [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] 和[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)]功能與工具，可用來疑難排解中的控制流程包括[!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)]封裝。  
+  [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] 並[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)]包括功能與工具，可用來疑難排解中的控制流程[!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)]封裝。  
   
 -   [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 支援容器及工作上的中斷點。  
   
@@ -78,7 +78,7 @@ ms.locfileid: "36033044"
   
 #### <a name="to-set-breakpoints"></a>設定中斷點  
   
--   [在工作或容器上設定中斷點，偵錯封裝](../debug-a-package-by-setting-breakpoints-on-a-task-or-a-container.md)  
+-   [在工作或容器設定中斷點以對套件偵錯](../debug-a-package-by-setting-breakpoints-on-a-task-or-a-container.md)  
   
 ## <a name="progress-reporting"></a>進度報表  
  [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 設計工具包含兩種類型的進度報告：[控制流程] 索引標籤之設計介面上的色彩編碼，以及 [進度] 索引標籤上的進度訊息。  

@@ -1,5 +1,5 @@
 ---
-title: 選項 （文字編輯器所有語言-一般頁面） |Microsoft 文件
+title: 選項 （文字編輯器-所有語言-一般頁面） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - VS.ToolsOptionsPages.Text_Editor.All_Languages.General
 ms.assetid: bf18907c-94e2-4c09-9b2b-0925ac04c627
 caps.latest.revision: 28
 author: craigg-msft
 ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 4f04e097b7dec9d502848c9dc095c40ba8daa1ac
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 39394ea71a428d634bcee27adc2b76a3fca4af02
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36034837"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37189075"
 ---
 # <a name="options-text-editor---all-languages---general-page"></a>選項 (文字編輯器 - 所有語言 - 一般頁面)
   使用這個對話方塊可設定 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 中，全部五個編輯器的一般編輯選項。 若要顯示這些選項，請按一下 [工具] 功能表上的 [選項]。 選取 [文字編輯器] 資料夾，展開 [所有語言] 資料夾，然後按一下 [一般]。  
@@ -38,7 +38,7 @@ ms.locfileid: "36034837"
  **自動列出成員**  
  顯示您在編輯器中輸入的可用成員、屬性或值的快顯清單。 從快顯清單中選擇任何項目，以將項目插入程式碼。 選取此核取方塊會啟用 [隱藏進階成員] 選項。  
   
- **隱藏進階的成員**  
+ **隱藏進階成員**  
  透過只顯示那些最常使用的項目來縮短快顯陳述式完成清單。 從清單中篩選其他項目。 如果沒有成員標示為進階成員，就不能使用此選項。  
   
  **參數資訊**  
@@ -76,7 +76,7 @@ ms.locfileid: "36034837"
  **啟用按一下方式的 URL 導覽**  
  當游標在編輯器的 URL 上方時，會變成手指符號。 按一下 URL 即可在 Web 瀏覽器中顯示該頁面。  
   
- **瀏覽列**  
+ **導覽列**  
  在程式碼編輯器頂端顯示導覽列。 使用其 [物件] 與 [程序] 下拉式清單來選擇程式碼中的特定物件，從它的程序中選取，然後插入選取之程序的執行個體。 並非所有的程式碼類型都可以使用導覽列。  
   
   

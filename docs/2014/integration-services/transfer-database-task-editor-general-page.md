@@ -1,5 +1,5 @@
 ---
-title: 傳送資料庫工作編輯器 （一般頁面） |Microsoft 文件
+title: 傳送資料庫工作編輯器 （一般頁面） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.transferdatabasetask.general.f1
 helpviewer_keywords:
 - Transfer Database Task Editor
 ms.assetid: 0f65927a-5835-45ee-9c19-e33f00d0755c
 caps.latest.revision: 29
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: f4c41ae48818f7a112d738388fd857f3928959f9
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 8e16f5bab19ee91e108f2d375107106d8d6f7c83
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36035460"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37195638"
 ---
 # <a name="transfer-database-task-editor-general-page"></a>傳送資料庫工作編輯器 (一般頁面)
   使用 **[傳送資料庫工作編輯器]** 對話方塊的 **[一般]** 頁面，即可命名和描述傳送資料庫工作。 傳送資料庫工作會在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的兩個執行個體間，複製或移動 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]資料庫。 這項工作也可用來在同一部伺服器內複製資料庫。 如需這項工作的詳細資訊，請參閱 [傳送資料庫工作](control-flow/transfer-database-task.md)。  

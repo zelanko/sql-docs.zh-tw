@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - queries [Integration Services], parameter mapping
 - parameters [Integration Services]
@@ -18,13 +18,13 @@ ms.assetid: 5e26977c-758c-46d6-acf1-4fd9238f0950
 caps.latest.revision: 32
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: a018ddc6afb2d9a24794fa99c95fd336e4ac29ed
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 614681f05b5afb288ca93d543ebafc0e5b7a4322
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36032153"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37168989"
 ---
 # <a name="map-query-parameters-to-variables-in-a-data-flow-component"></a>在資料流程元件中將查詢參數對應至變數
   將 OLE DB 來源設定為使用參數化查詢時，可以將參數對應至變數。  

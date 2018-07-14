@@ -5,10 +5,9 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-security
+ms.technology: security
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.common.permissions.f1
 - sql12.swb.SecurableAndEffectPermissions.f1
@@ -17,15 +16,15 @@ f1_keywords:
 - sql12.swb.SecurableAndEffectivePermission.f1
 ms.assetid: b3bf077a-bec2-4161-ac0c-460586199906
 caps.latest.revision: 38
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 3de33a268022b777476a9b05145da144ed87fb26
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: edmacauley
+ms.author: edmaca
+manager: craigg
+ms.openlocfilehash: 8f925690ea8d8c008a2ebffa0dda2f39c7118563
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36035885"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37186205"
 ---
 # <a name="permissions-or-securables-page"></a>權限或安全性實體頁面
   使用 **[權限]** 頁面或 **[安全性實體]** 頁面可檢視或設定安全性實體的權限。 您可以從許多位置開啟此頁面。 此頁面的內容會隨著開啟頁面的方式以及頁面中包含的內容而稍有不同。 當頁面開啟時，頁面的上層方格可能會填入資料或是空白。 若要在上方格中加入項目，請按一下 **[搜尋]**。 在上方格中選取項目，然後在 **[明確]** 索引標籤上設定適當的權限。若要檢視彙總的權限，請使用 **[有效]** 索引標籤。  

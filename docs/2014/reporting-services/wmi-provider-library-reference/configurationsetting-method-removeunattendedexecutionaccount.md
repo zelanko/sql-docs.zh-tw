@@ -1,5 +1,5 @@
 ---
-title: RemoveUnattendedExecutionAccount 方法 (WMI MSReportServer_ConfigurationSetting) |Microsoft 文件
+title: RemoveUnattendedExecutionAccount 方法 (WMI MSReportServer_ConfigurationSetting) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 api_name:
 - RemoveUnattendedExecutionAccount (WMI MSReportServer_ConfigurationSetting Class)
 api_location:
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - RemoveUnattendedExecutionAccount method
 ms.assetid: 77e371c1-7c26-44f9-9119-7c8dc838db32
 caps.latest.revision: 18
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 613bba7b1714db22885bffab4e091d1575c4a64d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: 7becc047cb922503da64a18e35d7fcc64e372eae
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36034920"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37181515"
 ---
 # <a name="removeunattendedexecutionaccount-method-wmi-msreportserverconfigurationsetting"></a>RemoveUnattendedExecutionAccount 方法 (WMI MSReportServer_ConfigurationSetting)
   從報表伺服器組態檔中移除自動執行帳戶項目。  

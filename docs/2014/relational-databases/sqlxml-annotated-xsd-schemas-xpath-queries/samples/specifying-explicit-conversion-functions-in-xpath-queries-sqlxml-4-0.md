@@ -1,5 +1,5 @@
 ---
-title: XPath 查詢 (SQLXML 4.0) 中指定明確轉換函數 |Microsoft 文件
+title: 在 XPath 查詢 (SQLXML 4.0) 中指定明確的轉換函式 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -17,25 +17,25 @@ helpviewer_keywords:
 - XPath queries [SQLXML], explicit conversion functions
 ms.assetid: 1111cb5d-2bd9-4bdb-8de2-dc0e47452dd6
 caps.latest.revision: 24
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 59a2a54b1a3fe7a8136fa2ab0cb56f4cd215c245
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 841a28a156075c6342ea9c678eb938fc3414e643
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36034942"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37179635"
 ---
 # <a name="specifying-explicit-conversion-functions-in-xpath-queries-sqlxml-40"></a>在 XPath 查詢中指定明確轉換函數 (SQLXML 4.0)
-  下列範例將示範如何在 XPath 查詢中指定明確轉換函數。 這些範例中的 XPath 查詢會針對 SampleSchema1.xml 中包含的對應結構描述來指定。 如需此範例結構描述資訊，請參閱[範例註解式 XSD 結構描述的 XPath 範例&#40;SQLXML 4.0&#41;](sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md)。  
+  下列範例將示範如何在 XPath 查詢中指定明確轉換函數。 這些範例中的 XPath 查詢會針對 SampleSchema1.xml 中包含的對應結構描述來指定。 如需此範例結構描述資訊，請參閱[範例註解式 XSD 結構描述 XPath 範例的&#40;SQLXML 4.0&#41;](sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md)。  
   
 ## <a name="examples"></a>範例  
   
 ### <a name="a-use-the-number-explicit-conversion-function"></a>A. 使用 number() 明確轉換函數  
  `number()` 函數會將引數轉換成數字。  
   
- 假設的值**ContactID**是數值，下列查詢會將**ContactID**成數字並比較它與 4 這個值。 然後查詢會傳回所有**\<員工 >** 的內容節點的項目子系**ContactID**具有數值 4 屬性：  
+ 假設的值**ContactID**是非數值，下列查詢會轉換**ContactID**的數字並比較它與 4 這個值。 然後查詢會傳回所有**\<員工 >** 的內容節點的項目子系**ContactID**數值的值為 4 的屬性：  
   
 ```  
 /child::Contact[number(attribute::ContactID)= 4]  
@@ -51,7 +51,7 @@ ms.locfileid: "36034942"
   
 ##### <a name="to-test-the-xpath-query-against-the-mapping-schema"></a>針對對應的結構描述測試 XPath 查詢  
   
-1.  複製[範例結構描述程式碼](sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md)並將它貼到文字檔。 將檔案儲存為 SampleSchema1.xml。  
+1.  複製[結構描述程式碼範例](sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md)並將它貼到文字檔。 將檔案儲存為 SampleSchema1.xml。  
   
 2.  建立下列範本 (ExplicitConversionA.xml)，並將其儲存在儲存 SampleSchema1.xml 的目錄中。  
   
@@ -71,7 +71,7 @@ ms.locfileid: "36034942"
   
 3.  建立和使用 SQLXML 4.0 測試指令碼 (Sqlxml4test.vbs) 以執行範本。  
   
-     如需詳細資訊，請參閱[ADO to Execute SQLXML 4.0](../../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)。  
+     如需詳細資訊，請參閱 <<c0> [ 使用 ADO 執行 SQLXML 4.0 查詢](../../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)。  
   
  這個範本執行的結果集如下：  
   
@@ -84,7 +84,7 @@ ms.locfileid: "36034942"
 ### <a name="b-use-the-string-explicit-conversion-function"></a>B. 使用 string() 明確轉換函數  
  `string()` 函數會將引數轉換成字串。  
   
- 下列查詢會將**ContactID**成字串並比較它與字串值"4"。 此查詢會傳回所有**\<員工 >** 的內容節點的項目子系**ContactID** "4"的字串值：  
+ 下列查詢會轉換**ContactID**成字串並比較它與字串值"4"。 此查詢會傳回所有**\<員工 >** 的內容節點的項目子系**ContactID** "4"的字串值：  
   
 ```  
 /child::Contact[string(attribute::ContactID)="4"]  
@@ -100,7 +100,7 @@ ms.locfileid: "36034942"
   
 ##### <a name="to-test-the-xpath-query-against-the-mapping-schema"></a>針對對應的結構描述測試 XPath 查詢  
   
-1.  複製[範例結構描述程式碼](sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md)並將它貼到文字檔。 將檔案儲存為 SampleSchema1.xml。  
+1.  複製[結構描述程式碼範例](sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md)並將它貼到文字檔。 將檔案儲存為 SampleSchema1.xml。  
   
 2.  建立下列範本 (ExplicitConversionB.xml)，並將其儲存在儲存 SampleSchema1.xml 的目錄中。  
   
@@ -120,7 +120,7 @@ ms.locfileid: "36034942"
   
 3.  建立和使用 SQLXML 4.0 測試指令碼 (Sqlxml4test.vbs) 以執行範本。  
   
-     如需詳細資訊，請參閱[ADO to Execute SQLXML 4.0](../../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)。  
+     如需詳細資訊，請參閱 <<c0> [ 使用 ADO 執行 SQLXML 4.0 查詢](../../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)。  
   
  以下為範本執行的結果集：  
   

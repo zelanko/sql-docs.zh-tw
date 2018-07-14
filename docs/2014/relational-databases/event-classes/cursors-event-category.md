@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 topic_type:
 - apiref
 helpviewer_keywords:
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - SQL Server event classes, Cursors event category
 ms.assetid: 752e0695-b464-4720-93be-5b9b53b7ab21
 caps.latest.revision: 22
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 0cdc196cacdf0179b4f95b95ad14384d3b68c25f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: e77d489d55ceba953f1469837ba19a6a8302d204
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36032563"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37203418"
 ---
 # <a name="cursors-event-category"></a>Cursors 事件類別目錄
   **Cursors** 事件類別目錄包含用來監視資料指標行為的事件類別。  

@@ -1,5 +1,5 @@
 ---
-title: 使用 IRow 提取 BLOB 資料 |Microsoft 文件
+title: 使用 IRow 提取 BLOB 資料 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -18,18 +18,18 @@ helpviewer_keywords:
 - BLOBs, fetching
 ms.assetid: badbd6ac-20aa-4891-a14f-48d38e7f30de
 caps.latest.revision: 28
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 91cbe5e0611bd0d8fab1237b7e7dcd968d2876b1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: a2716ae0fdde3cf94a43f0b73f1a381a173ec466
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36037529"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37190878"
 ---
 # <a name="fetching-blob-data-using-irow"></a>使用 IRow 提取 BLOB 資料
-  資料列物件中的 BLOB 資料行可以擷取使用**irow:: Getcolumns**，或**irow:: Open**和**ISequentialStream**。  
+  可以使用擷取資料列物件中的 BLOB 資料行**irow:: Getcolumns**，或**irow:: Open**並**ISequentialStream**。  
   
 ## <a name="in-this-section"></a>本節內容  
   

@@ -1,5 +1,5 @@
 ---
-title: 傳送錯誤訊息工作編輯器 （訊息頁面） |Microsoft 文件
+title: 傳送錯誤訊息工作編輯器 （訊息頁面） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.transfererrormessagestask.errormessages.F1
 helpviewer_keywords:
 - Transfer Error Messages Task Editor
 ms.assetid: cb2226a0-3037-4fdf-966f-81eabc0da9cf
 caps.latest.revision: 20
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 833f092574c85ab83f6a384b77e7f8c99c91b2c3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 2ee60f4bfe93996ee753f06063bcf7b16aef4d02
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36035928"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37209418"
 ---
 # <a name="transfer-error-messages-task-editor-messages-page"></a>傳送錯誤訊息工作編輯器 (訊息頁面)
   使用 [傳送錯誤訊息工作編輯器] 對話方塊的 [訊息] 頁面，即可指定屬性用來將一或多個 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 使用者自訂錯誤訊息，從 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的一個執行個體複製到另一個。 如需這項工作的詳細資訊，請參閱[傳送錯誤訊息工作](control-flow/transfer-error-messages-task.md)。  
@@ -43,7 +43,7 @@ ms.locfileid: "36035928"
   
  此屬性具有下表所列的選項：  
   
-|ReplTest1|描述|  
+|值|描述|  
 |-----------|-----------------|  
 |**True**|複製所有的使用者自訂訊息。|  
 |**False**|只複製指定的使用者自訂訊息。|  
@@ -63,9 +63,9 @@ ms.locfileid: "36035928"
 ## <a name="see-also"></a>另請參閱  
  [Integration Services 錯誤和訊息參考](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Integration Services 工作](control-flow/integration-services-tasks.md)   
- [傳送錯誤訊息工作編輯器&#40;[一般] 頁面&#41;](general-page-of-integration-services-designers-options.md)   
+ [傳送錯誤訊息工作編輯器&#40;一般頁面&#41;](general-page-of-integration-services-designers-options.md)   
  [SMO 連接管理員](connection-manager/smo-connection-manager.md)   
- [傳送錯誤訊息工作編輯器&#40;[一般] 頁面&#41;](general-page-of-integration-services-designers-options.md)   
+ [傳送錯誤訊息工作編輯器&#40;一般頁面&#41;](general-page-of-integration-services-designers-options.md)   
  [SMO 連線管理員](connection-manager/smo-connection-manager.md)  
   
   

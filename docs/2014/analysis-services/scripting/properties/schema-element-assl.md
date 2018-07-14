@@ -1,5 +1,5 @@
 ---
-title: 結構描述元素 (ASSL) |Microsoft 文件
+title: 結構描述元素 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - Schema element
 ms.assetid: 4b6375fb-7ad8-4d5f-88b1-abd3da2654db
 caps.latest.revision: 34
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 130d1363a007fb51db3bc7b39efcae4d9140c368
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 3bcf275eafb8a982fa2ddf9d5ecb82d45e435fa5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36037566"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37200038"
 ---
 # <a name="schema-element-assl"></a>Schema 元素 (ASSL)
   包含資料來源檢視的結構描述。  
@@ -64,7 +64,7 @@ ms.locfileid: "36037566"
 ## <a name="remarks"></a>備註  
  `Schema` 是使用 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] .NET Framework 中 DataSet 的 XML 結構描述定義 (XSD) 語言格式表示，而且具有 DataSet 的某些延伸模組和在資料定義語言 (DDL) 內部使用的專用延伸模組。 雖然 DataSet 會定義 XSD 與關聯式結構描述之間的彈性對應，但是之後會以更標準的格式傳回 XSD。 只有這個標準格式在資料來源中有效。  
   
- 對應目的父代的項目`Schema`在 「 分析管理物件 (AMO) 物件模型而言， <xref:Microsoft.AnalysisServices.DataSourceView>。  
+ 對應至父系的元素`Schema`在 「 分析管理物件 (AMO) 物件模型是<xref:Microsoft.AnalysisServices.DataSourceView>。  
   
 ## <a name="see-also"></a>另請參閱  
  [屬性&#40;ASSL&#41;](properties-assl.md)  

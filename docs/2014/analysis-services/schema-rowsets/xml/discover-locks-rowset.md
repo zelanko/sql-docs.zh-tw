@@ -1,5 +1,5 @@
 ---
-title: DISCOVER_LOCKS 資料列集 |Microsoft 文件
+title: DISCOVER_LOCKS 資料列集 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -14,15 +14,15 @@ helpviewer_keywords:
 - DISCOVER_LOCKS rowset
 ms.assetid: dea48167-212c-40b7-a416-434042a1b697
 caps.latest.revision: 14
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 41af6b328b9083151bd3ef51bfc7df1d2986c1cf
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 4458d9dac98fd35d54ff35c0d1d524a92b576ba5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36032642"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37167595"
 ---
 # <a name="discoverlocks-rowset"></a>DISCOVER_LOCKS 資料列集
   提供有關伺服器上目前永久性鎖定的資訊。  
@@ -59,7 +59,7 @@ ms.locfileid: "36032642"
   
 ## <a name="lock-types"></a>鎖定類型  
   
-|鎖定名稱|ReplTest1|描述|  
+|鎖定名稱|值|描述|  
 |---------------|-----------|-----------------|  
 |LOCK_NONE|0x0000000|沒有鎖定。|  
 |LOCK_SESSION_LOCK|0x0000001|非使用中工作階段，不會干擾其他鎖定。|  

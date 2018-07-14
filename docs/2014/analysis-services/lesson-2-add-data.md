@@ -1,5 +1,5 @@
 ---
-title: 第 2 課： 將資料加入 |Microsoft 文件
+title: 第 2 課： 將資料加入 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 13c3a8cc-b1db-4aba-ad9b-038b7971be8d
 caps.latest.revision: 24
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 697c483d784f4d15682c9690c0c392268ad5b356
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: e16182c535fe22a1efe631a42b68c038db365ad3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36032895"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37165509"
 ---
 # <a name="lesson-2-add-data"></a>第 2 課：加入資料
   在這一課，您將會使用 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] 中的 [資料表匯入精靈] 連接 AdventureWorksDW SQL Database、選取資料、預覽及篩選資料，然後將資料匯入您的模型工作空間。  
@@ -30,7 +30,7 @@ ms.locfileid: "36032895"
   
  完成本課程的估計時間： **20 分鐘**  
   
-## <a name="prerequisites"></a>必要條件  
+## <a name="prerequisites"></a>先決條件  
  本主題是表格式模型教學課程的一部分，必須依序完成。 在執行本課程的工作之前，您應已完成上一課： [第 1 課：建立新的表格式模型專案](lesson-1-create-a-new-tabular-model-project.md)。  
   
 ## <a name="create-a-connection"></a>建立連接  
@@ -43,7 +43,7 @@ ms.locfileid: "36032895"
   
 2.  在 [資料表匯入精靈] 的 [關聯式資料庫] 底下，按一下 [Microsoft SQL Server]，然後按一下 [下一步]。  
   
-3.  在**連接到 Microsoft SQL Server 資料庫**頁面上，於**易記連接名稱**，型別`Adventure Works DB from SQL`。  
+3.  在 **連接到 Microsoft SQL Server 資料庫**頁面上，於**易記連接名稱**，型別`Adventure Works DB from SQL`。  
   
 4.  在 [伺服器名稱] 中，輸入您安裝 AdventureWorksDW 資料庫的伺服器名稱。  
   

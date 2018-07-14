@@ -5,23 +5,22 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-indexes
+ms.technology: table-view-index
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - index types [SQL Server]
 ms.assetid: 00863b10-e77c-44c5-8ac2-bb4ac454eec6
 caps.latest.revision: 40
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: b501af28b1c9fbfb8f8fbdca9099aa11d4f2e3db
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 007728b4f429cd0857a2131fb25c9de53b2258db
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36035717"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37177745"
 ---
 # <a name="indexes"></a>索引
   下表列出 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中可用的索引類型，並提供其他資訊的連結。  
@@ -38,7 +37,7 @@ ms.locfileid: "36035717"
 |導出資料行的索引|從其他一個或多個資料行的值，或特定決定性輸入衍生的資料行索引。|[計算資料行的索引](indexes-on-computed-columns.md)|  
 |已篩選|最佳化的非叢集索引，特別適合涵蓋從妥善定義的資料子集進行選取的查詢。 篩選索引會使用篩選述詞對資料表中的部分資料列進行索引。 與完整資料表索引相較，設計良好的篩選索引可以提升查詢效能、降低索引維護成本，並降低索引儲存成本。|[建立篩選的索引](create-filtered-indexes.md)|  
 |空間|空間索引可以更有效率地在 **geometry** 資料類型之資料行的空間物件 (「空間資料」) 上執行特定作業。 空間索引會減少需要套用相當耗成本之空間作業的物件數目。|[空間索引概觀](../spatial/spatial-indexes-overview.md)|  
-|XML|XML 二進位大型物件 (Blob) 中的種細分且持續性、 表示`xml`資料類型資料行。|[XML 索引 &#40;SQL Server&#41;](../xml/xml-indexes-sql-server.md)|  
+|XML|XML 二進位大型物件 (Blob) 中一種細分且持續性、 種`xml`資料類型資料行。|[XML 索引 &#40;SQL Server&#41;](../xml/xml-indexes-sql-server.md)|  
 |全文檢索|一種特殊類型的 Token 式功能索引，由 Microsoft Full-Text Engine for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]所建立與維護。 它可以有效地在字元字串資料中進行複雜字的搜尋。|[擴展全文檢索索引](../search/populate-full-text-indexes.md)|  
   
 ## <a name="related-tasks"></a>相關工作  

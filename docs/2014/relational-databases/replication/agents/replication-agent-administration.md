@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Snapshot Agent, administering
 - Log Reader Agent, administering
@@ -23,15 +23,15 @@ helpviewer_keywords:
 - independent agents [SQL Server replication]
 ms.assetid: f27186b8-b1b2-4da0-8b2b-91f632c2ab7e
 caps.latest.revision: 47
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: f480ecda36c5243665488a4328d80304dd402216
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: be31b82e3ce6d2ed319d0ef293332b65e9aa1e24
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36034624"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37190228"
 ---
 # <a name="replication-agent-administration"></a>複寫代理程式管理
   複寫代理程式可執行許多有關複寫的工作，包含建立結構描述和資料的副本、偵測「發行者」或「訂閱者」端的更新，以及在伺服器之間傳播變更。 依預設，複寫代理程式在 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent 作業步驟之下執行。 此代理程式只不過是可執行檔，所以也可以從命令列和批次指令碼直接呼叫。 每個複寫代理程式都支援一組用於控制其執行方式的執行時期參數；這些參數在代理程式設定檔或命令列中指定。  

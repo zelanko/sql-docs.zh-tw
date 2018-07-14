@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - View Designer, navigating
 - shortcuts [SQL Server]
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - keyboard shortcuts [Visual Database Tools]
 ms.assetid: 1c65acef-6dfa-463a-bf37-5a5335fe3865
 caps.latest.revision: 10
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: e75e9c4136ad8face9ebb0da0018e7dfc1e225e9
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 282b2830166b17bb2e5a860afdef8c3bf00fc99a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36034079"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37185675"
 ---
 # <a name="navigate-in-the-query-and-view-designer-visual-database-tools"></a>在查詢和檢視表設計工具中巡覽 (Visual Database Tools)
   在 [查詢和檢視設計師] 中，您可以使用鍵盤或滑鼠來工作。 各種特定的方法請參考以下各表。  

@@ -1,14 +1,13 @@
 ---
-title: 啟用和停用 AlwaysOn 可用性群組 (SQL Server) |Microsoft 文件
+title: 啟用和停用 AlwaysOn 可用性群組 (SQL Server) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Availability Groups [SQL Server], server instance
 - Availability Groups [SQL Server], deploying
@@ -16,15 +15,15 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], enabling
 ms.assetid: 7c326958-5ae9-4761-9c57-905972276a8f
 caps.latest.revision: 58
-author: MikeRayMSFT
-ms.author: mikeray
-manager: jhubbard
-ms.openlocfilehash: 1851a658ad1c955bf321b985b4d848767e8b0d69
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 8cfcbdb8e61941a651539bd545b5067a1df5b63a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36034227"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37185351"
 ---
 # <a name="enable-and-disable-alwayson-availability-groups-sql-server"></a>啟用和停用 AlwaysOn 可用性群組 (SQL Server)
   啟用 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 是伺服器執行個體使用可用性群組的必要條件。 您必須在將要裝載一個或多個可用性群組之可用性複本的每個 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 執行個體上啟用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 功能，才能建立及設定任何可用性群組。  
@@ -54,12 +53,12 @@ ms.locfileid: "36034227"
   
 -   伺服器執行個體必須執行支援 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]的 SQL Server 版本。 如需詳細資訊，請參閱＜ [Features Supported by the Editions of SQL Server 2014](../../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)＞。  
   
--   一次只在一個伺服器執行個體啟用 AlwaysOn 可用性群組。 啟用 AlwaysOn 可用性群組之後，等到[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]服務已經重新啟動，才能在繼續進行另一個伺服器執行個體。  
+-   一次只在一個伺服器執行個體啟用 AlwaysOn 可用性群組。 啟用 AlwaysOn 可用性群組之後，等到[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]再繼續進行到另一個伺服器執行個體重新啟動服務。  
   
- 用於建立及設定可用性群組的其他必要條件的詳細資訊，請參閱[必要條件、 限制和建議的 AlwaysOn 可用性群組&#40;SQL Server&#41;](prereqs-restrictions-recommendations-always-on-availability.md)。  
+ 如需建立及設定可用性群組的其他必要條件的資訊，請參閱 <<c0> [ 必要條件、 限制和建議的 AlwaysOn 可用性群組&#40;SQL Server&#41;](prereqs-restrictions-recommendations-always-on-availability.md)。</c0>  
   
 ###  <a name="Security"></a> 安全性  
- 執行個體上啟用 AlwaysOn 可用性群組時[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]，伺服器執行個體已經在 WSFC 叢集上的完整控制權。  
+ 執行個體上啟用 AlwaysOn 可用性群組時[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]，伺服器執行個體已在 WSFC 叢集上的完整控制權。  
   
 ####  <a name="Permissions"></a> 權限  
  需要本機電腦的 **Administrator** 群組成員資格和 WSFC 叢集的完整控制。 透過使用 PowerShell 啟用 AlwaysOn 時，請使用 **[以系統管理員身分執行]** 選項開啟命令提示字元視窗。  
@@ -101,7 +100,7 @@ ms.locfileid: "36034227"
     -   如果`IsHadrEnabled`= 0 時，會停用 AlwaysOn 可用性群組。  
   
     > [!NOTE]  
-    >  如需有關`IsHadrEnabled`伺服器屬性，請參閱[SERVERPROPERTY &#40;TRANSACT-SQL&#41;](/sql/t-sql/functions/serverproperty-transact-sql)。  
+    >  如需詳細資訊`IsHadrEnabled`伺服器屬性，請參閱 < [SERVERPROPERTY &#40;TRANSACT-SQL&#41;](/sql/t-sql/functions/serverproperty-transact-sql)。  
   
 ###  <a name="PowerShell1Procedure"></a> 使用 PowerShell  
  **若要判斷是否已啟用 AlwaysOn 可用性群組**  
@@ -131,11 +130,11 @@ ms.locfileid: "36034227"
 ###  <a name="SQLCM2Procedure"></a> 使用 SQL Server 組態管理員  
  **若要啟用 AlwaysOn 可用性群組**  
   
-1.  連接到 Windows Server 容錯移轉叢集 (WSFC) 節點主控[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]您要啟用 AlwaysOn 可用性群組執行個體。  
+1.  連接到 Windows Server 容錯移轉叢集 (WSFC) 節點裝載[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]您要啟用 AlwaysOn 可用性群組的執行個體。  
   
 2.  指向 [開始]  功能表上的 [所有程式] ，然後依序指向 [ [!INCLUDE[ssCurrentUI](../../../includes/sscurrentui-md.md)]] 和 [組態工具] ，再按一下 [SQL Server 組態管理員] 。  
   
-3.  在**SQL Server 組態管理員**，按一下  **SQL Server 服務**，以滑鼠右鍵按一下 SQL Server (**<*`instance name`*>)**，其中**< *`instance name`* >** 是您要啟用 AlwaysOn 可用性群組中，本機伺服器執行個體的名稱和按一下**屬性。**  
+3.  在  **SQL Server 組態管理員**，按一下**SQL Server 服務**，以滑鼠右鍵按一下 SQL Server (**<*`instance name`*>)**，其中**< *`instance name`* >** 是您要啟用 AlwaysOn 可用性群組中，本機伺服器執行個體的名稱和按一下 **屬性。**  
   
 4.  選取 **[AlwaysOn 高可用性]** 索引標籤。  
   
@@ -150,7 +149,7 @@ ms.locfileid: "36034227"
   
 1.  將目錄切換到 (`cd`) 要啟用 AlwaysOn 可用性群組的伺服器執行個體。  
   
-2.  使用`Enable-SqlAlwaysOn`cmdlet 來啟用 AlwaysOn 可用性群組。  
+2.  使用`Enable-SqlAlwaysOn`cmdlet 啟用 AlwaysOn 可用性群組。  
   
      若要檢視 cmdlet 的語法，請使用`Get-Help`指令程式在[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]PowerShell 環境。 如需詳細資訊，請參閱 [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md)。  
   
@@ -199,7 +198,7 @@ Enable-SqlAlwaysOn -Path SQLSERVER:\SQL\Computer\Instance
   
 2.  指向 **[開始]** 功能表上的 **[所有程式]**，然後依序指向 [ [!INCLUDE[ssCurrentUI](../../../includes/sscurrentui-md.md)]] 和 **[組態工具]**，再按一下 **[SQL Server 組態管理員]**。  
   
-3.  在**SQL Server 組態管理員**，按一下  **SQL Server 服務**，以滑鼠右鍵按一下 SQL Server (**<*`instance name`*>)**，其中**< *`instance name`* >** 是您要停用 AlwaysOn 可用性群組，本機伺服器執行個體的名稱和按一下**屬性**。  
+3.  在  **SQL Server 組態管理員**，按一下**SQL Server 服務**，以滑鼠右鍵按一下 SQL Server (**<*`instance name`*>)**，其中**< *`instance name`* >** 是您要停用 AlwaysOn 可用性群組，本機伺服器執行個體的名稱和按一下 **屬性**。  
   
 4.  在 [AlwaysOn 高可用性]索引標籤上，取消選取 [啟用 AlwaysOn 可用性群組]  核取方塊，然後按一下 [確定] 。  
   
@@ -212,9 +211,9 @@ Enable-SqlAlwaysOn -Path SQLSERVER:\SQL\Computer\Instance
   
 1.  將目錄切換到 (`cd`) 要停用 AlwaysOn 可用性群組、目前啟用的伺服器執行個體。  
   
-2.  使用`Disable-SqlAlwaysOn`cmdlet 來啟用 AlwaysOn 可用性群組。  
+2.  使用`Disable-SqlAlwaysOn`cmdlet 啟用 AlwaysOn 可用性群組。  
   
-     例如，下列命令會停用 AlwaysOn 可用性群組的 SQL Server 執行個體上 (*電腦*\\*執行個體*)。  此命令需要重新啟動執行個體，而且系統將提示您確認重新啟動。  
+     例如，下列命令會停用 AlwaysOn 可用性群組上的 SQL Server 執行個體 (*電腦*\\*執行個體*)。  此命令需要重新啟動執行個體，而且系統將提示您確認重新啟動。  
   
     ```  
     Disable-SqlAlwaysOn -Path SQLSERVER:\SQL\Computer\Instance  
@@ -229,14 +228,14 @@ Enable-SqlAlwaysOn -Path SQLSERVER:\SQL\Computer\Instance
   
 -   [SQL Server PowerShell 提供者](../../../powershell/sql-server-powershell-provider.md)  
   
-###  <a name="FollowUp"></a> 待處理： 停用 AlwaysOn 之後  
- 停用 AlwaysOn 可用性群組的執行個體之後[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]必須重新啟動。 SQL Server 組態管理員會自動重新啟動伺服器執行個體。 但是，如果您使用 `Disable-SqlAlwaysOn` 指令程式，則需要手動重新啟動伺服器執行個體。 如需詳細資訊，請參閱 [sqlservr Application](../../../tools/sqlservr-application.md)。  
+###  <a name="FollowUp"></a> 後續操作： 停用 AlwaysOn 之後  
+ 停用 AlwaysOn 可用性群組，執行個體之後[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]必須重新啟動。 SQL Server 組態管理員會自動重新啟動伺服器執行個體。 但是，如果您使用 `Disable-SqlAlwaysOn` 指令程式，則需要手動重新啟動伺服器執行個體。 如需詳細資訊，請參閱 [sqlservr Application](../../../tools/sqlservr-application.md)。  
   
  在重新啟動的伺服器執行個體：  
   
 -   在 SQL Server 啟動時，可用性資料庫不會啟動，因此無法存取。  
   
--   唯一支援的 AlwaysOn[!INCLUDE[tsql](../../../includes/tsql-md.md)]陳述式是[DROP AVAILABILITY GROUP](/sql/t-sql/statements/drop-availability-group-transact-sql)。 不支援 CREATE AVAILABILITY GROUP、ALTER AVAILABILITY GROUP，以及 ALTER DATABASE 的 SET HADR 選項。  
+-   唯一支援的 AlwaysOn[!INCLUDE[tsql](../../../includes/tsql-md.md)]陳述式[DROP AVAILABILITY GROUP](/sql/t-sql/statements/drop-availability-group-transact-sql)。 不支援 CREATE AVAILABILITY GROUP、ALTER AVAILABILITY GROUP，以及 ALTER DATABASE 的 SET HADR 選項。  
   
 -   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 中繼資料和 WSFC 中的 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 組態資料不受 AlwaysOn 可用性群組停用所影響。  
   

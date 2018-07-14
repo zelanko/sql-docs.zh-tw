@@ -1,5 +1,5 @@
 ---
-title: 另一個伺服器執行個體 (SQL Server) 上可用的資料庫時，管理中繼資料 |Microsoft 文件
+title: 在另一個伺服器執行個體 (SQL Server) 上提供資料庫時，管理中繼資料 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - cross-database queries [SQL Server]
 - logins [SQL Server], recreating on another server instance
@@ -35,15 +35,15 @@ helpviewer_keywords:
 - copying databases
 ms.assetid: 5d98cf2a-9fc2-4610-be72-b422b8682681
 caps.latest.revision: 82
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: ffc720988d80a77e2b540b89c258f2b943d9445e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: cbea790b9376f254be6c1de3179cc1057d5f8b7c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36035737"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37207208"
 ---
 # <a name="manage-metadata-when-making-a-database-available-on-another-server-instance-sql-server"></a>在另一個伺服器執行個體上提供可用的資料庫時，管理中繼資料 (SQL Server)
   此主題與下列情況有關：  

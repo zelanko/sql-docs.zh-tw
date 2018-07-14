@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - autohide [SQL Server Management Studio]
 - SQL Server Management Studio [SQL Server], tool windows
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - tool windows [SQL Server Management Studio]
 ms.assetid: bebf8383-dcaf-466e-84f5-63b81c9cfe52
 caps.latest.revision: 25
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 436f2aedb915c672973a09182a623943d01edd5d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 84f3ce735b8a0281d7a36b8c65f64b9d7a5201ca
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36032455"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37170189"
 ---
 # <a name="understand-sql-server-management-studio-windows-management"></a>了解 SQL Server Management Studio 視窗管理
   [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 中的工具視窗是機能性、靈活性和有效性都非常高的系統，可讓您執行下列動作：  

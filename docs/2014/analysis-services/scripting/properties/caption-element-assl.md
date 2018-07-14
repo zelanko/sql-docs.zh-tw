@@ -1,5 +1,5 @@
 ---
-title: 標題元素 (ASSL) |Microsoft 文件
+title: 標題元素 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - Caption element
 ms.assetid: ed2be851-0ddc-4fa5-8aee-b2acb2e6d25e
 caps.latest.revision: 36
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 28a773a4a601ecd4a6a7a98ccc7273fed0d4e1b3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 283e7f84373d5f36431ba1b706b4d27e23cb876f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36034246"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37167699"
 ---
 # <a name="caption-element-assl"></a>Caption 元素 (ASSL)
   包含相關聯父元素的標題。  
@@ -62,7 +62,7 @@ ms.locfileid: "36034246"
 |子元素|無|  
   
 ## <a name="remarks"></a>備註  
- 對應至父系的項目`Caption`在 「 分析管理物件 (AMO) 物件模型是<xref:Microsoft.AnalysisServices.Action>和<xref:Microsoft.AnalysisServices.Translation>。  
+ 對應至父系的元素`Caption`在 「 分析管理物件 (AMO) 物件模型所<xref:Microsoft.AnalysisServices.Action>和<xref:Microsoft.AnalysisServices.Translation>。  
   
 ## <a name="see-also"></a>另請參閱  
  [屬性&#40;ASSL&#41;](properties-assl.md)  

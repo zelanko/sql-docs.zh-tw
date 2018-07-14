@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 54405a3a-d7fa-4d95-8963-9aa224e5901e
 caps.latest.revision: 47
-author: markingmyname
-ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: ba7042030a88a616d5d4b23df4475111a63ee76b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: c9e828696135d13263a68219c1a248325a14676d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36036960"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37196788"
 ---
 # <a name="lesson-2-specifying-connection-information-reporting-services"></a>第 2 課：指定連接資訊 (Reporting Services)
   將報表加入教學課程專案之後，您需要定義「資料來源」，這是讓報表從關聯式資料庫、多維度資料庫或其他資源存取資料所用的連接資訊。  
@@ -33,7 +33,7 @@ ms.locfileid: "36036960"
     > [!NOTE]  
     >  如果看不到 [報表資料] 窗格，請按一下 [檢視] 功能表上的 [報表資料]。  
   
-2.  在**名稱**，型別[!INCLUDE[ssSampleDBUserInputNonLocal](../includes/sssampledbuserinputnonlocal-md.md)]。  
+2.  在 **名稱**，輸入[!INCLUDE[ssSampleDBUserInputNonLocal](../includes/sssampledbuserinputnonlocal-md.md)]。  
   
 3.  確認 [內嵌連接] 已選取。  
   
@@ -52,11 +52,11 @@ ms.locfileid: "36036960"
     >   
     >  `Data source=localhost\SQLEXPRESS; initial catalog=AdventureWorks2012`  
     >   
-    >  如需連接字串的詳細資訊，請參閱[資料連接、 資料來源和 Reporting Services 中的連接字串](data-connections-data-sources-and-connection-strings-in-reporting-services.md)和[資料來源屬性對話方塊、 一般](data-source-properties-dialog-box-general.md)。  
+    >  如需有關連接字串的詳細資訊，請參閱 <<c0> [ 資料連接、 資料來源和 Reporting Services 中的連接字串](data-connections-data-sources-and-connection-strings-in-reporting-services.md)並[資料來源屬性對話方塊、 一般](data-source-properties-dialog-box-general.md)。  
   
 6.  按一下左窗格中的 [認證]，然後按一下 [使用 Windows 驗證 (整合式安全性)]。  
   
-7.  [!INCLUDE[clickOK](../includes/clickok-md.md)] 資料來源[!INCLUDE[ssSampleDBnormal](../includes/sssampledbnormal-md.md)]加入至**報表資料**窗格。  
+7.  [!INCLUDE[clickOK](../includes/clickok-md.md)] 資料來源[!INCLUDE[ssSampleDBnormal](../includes/sssampledbnormal-md.md)]新增至**報表資料**窗格。  
   
 ## <a name="next-task"></a>下一項工作  
  您已順利定義 [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] 範例資料庫的連接。 下一步，您將建立報表。 請參閱[第 3 課：定義資料表報表的資料集 &#40;Reporting Services&#41;](lesson-3-defining-a-dataset-for-the-table-report-reporting-services.md)。  

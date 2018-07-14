@@ -22,13 +22,13 @@ ms.assetid: dc224f4f-b339-4eb6-a008-1b4fe0ea4fd2
 caps.latest.revision: 52
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 5c8c13dce43c9fb618ae5de4fa7cc3d5afbd9fe0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d731139c23e42dc23bdd744ae20ed2aa6508278f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36036217"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37176135"
 ---
 # <a name="coding-a-custom-task"></a>撰寫自訂工作的程式碼
   建立繼承自 <xref:Microsoft.SqlServer.Dts.Runtime.Task> 基底類別的類別，並將 <xref:Microsoft.SqlServer.Dts.Runtime.DtsTaskAttribute> 屬性 (attribute) 套用到類別之後，必須覆寫基底類別的屬性 (properties) 與方法的實作，才可提供自訂功能。  
@@ -162,7 +162,7 @@ End Class
  本節描述如何使用工作繼承和覆寫的 `Execute` 方法。 本節也會說明提供工作執行結果相關資訊的各種方法。  
   
 ### <a name="execute-method"></a>Execute 方法  
- 包含在封裝中的工作會在 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 執行階段呼叫其 `Execute` 方法時執行。 工作實作其核心商務邏輯和功能，這種方法，並藉由公佈訊息、 傳回值，以從提供的執行結果<xref:Microsoft.SqlServer.Dts.Runtime.DTSExecResult>列舉型別，並覆寫屬性`get`的`ExecutionValue`屬性。  
+ 包含在封裝中的工作會在 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 執行階段呼叫其 `Execute` 方法時執行。 工作實作其核心商務邏輯與功能，這種方法，並藉由公佈訊息、 傳回值，以從提供的執行結果<xref:Microsoft.SqlServer.Dts.Runtime.DTSExecResult>列舉型別，並覆寫屬性`get`的`ExecutionValue`屬性。  
   
  <xref:Microsoft.SqlServer.Dts.Runtime.Task> 基底類別提供 <xref:Microsoft.SqlServer.Dts.Runtime.Task.Execute%2A> 方法的預設實作。 自訂工作會覆寫此方法以定義其執行階段功能。 <xref:Microsoft.SqlServer.Dts.Runtime.TaskHost> 物件會包裝工作，將工作與執行階段引擎和封裝中的其他物件隔離。 因為此隔離，工作不會知道它在封裝中與執行順序有關的位置，而且只會在執行階段呼叫工作時才執行。 這個架構可預防工作在執行期間修改封裝時可能發生的問題。 只有透過將封裝中的其他物件當做 <xref:Microsoft.SqlServer.Dts.Runtime.Task.Execute%2A> 方法中的參數提供給工作，該工作才能夠存取這些物件。 這些參數可以讓工作引發事件、將項目寫入事件記錄檔、存取變數集合以及將連接編列到交易中的資料來源，同時仍保有可保障封裝的穩定性和可靠性所需的隔離。  
   
@@ -290,7 +290,7 @@ Public Class SampleTask
 End Class  
 ```  
   
-![Integration Services 圖示 （小）](../../media/dts-16.gif "Integration Services 圖示 （小）")**保持最多 with Integration Services 的日期** <br /> 若要取得 Microsoft 的最新下載、文件、範例和影片以及社群中的精選解決方案，請瀏覽 MSDN 上的 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 頁面：<br /><br /> [瀏覽 MSDN 上的 Integration Services 頁面](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 若要得到這些更新的自動通知，請訂閱該頁面上所提供的 RSS 摘要。  
+![Integration Services 圖示 （小）](../../media/dts-16.gif "Integration Services 圖示 （小）")**保持最多包含 Integration Services 的日期** <br /> 若要取得 Microsoft 的最新下載、文件、範例和影片以及社群中的精選解決方案，請瀏覽 MSDN 上的 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 頁面：<br /><br /> [瀏覽 MSDN 上的 Integration Services 頁面](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 若要得到這些更新的自動通知，請訂閱該頁面上所提供的 RSS 摘要。  
   
 ## <a name="see-also"></a>另請參閱  
  [建立自訂工作](creating-a-custom-task.md)   

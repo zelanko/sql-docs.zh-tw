@@ -1,5 +1,5 @@
 ---
-title: HideMemberIf 元素 (ASSL) |Microsoft 文件
+title: HideMemberIf 元素 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - HideMemberIf element
 ms.assetid: ff0e6b19-6216-43ac-ba76-1628da8c333b
 caps.latest.revision: 34
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 2b1540a3b7f5d1e1a93ea3b4628bfbde186e5bb2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 0829804ae0225c848da3583c429e39d9bc176821
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36035511"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37187025"
 ---
 # <a name="hidememberif-element-assl"></a>HideMemberIf 元素 (ASSL)
   指出是否應向用戶端應用程式隱藏層級中的成員，以及何時隱藏。  
@@ -64,7 +64,7 @@ ms.locfileid: "36035511"
 ## <a name="remarks"></a>備註  
  這個元素的值限制為下表所列的其中一個字串。  
   
-|ReplTest1|描述|  
+|值|描述|  
 |-----------|-----------------|  
 |*永遠不會*|永不隱藏成員。|  
 |*OnlyChildWithNoName*|當成員是其父系的唯一子系，而且其名稱為空白時，就會隱藏成員。|  

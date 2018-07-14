@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - report servers [Reporting Services], databases
 - report server database
@@ -17,13 +17,13 @@ ms.assetid: 8a3a6ffe-4001-46be-8548-94532550f6a5
 caps.latest.revision: 11
 author: markingmyname
 ms.author: maghan
-manager: jhubbard
-ms.openlocfilehash: 5cd23aaa93b60a2af7212ca8c98025a51f92d4c6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 913ec99d330f1eb62cbc1a27572296856c28f48b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36032481"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37172209"
 ---
 # <a name="create-a-report-server-database--ssrs-configuration-manager"></a>建立報表伺服器資料庫 (SSRS 組態管理員)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] **原生模式** 會使用兩個 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 關聯式資料庫來儲存報表伺服器中繼資料和物件。 一個資料庫做為主要儲存體，而另一個用來儲存暫存資料。 兩個資料庫會一起建立，並依名稱繫結。 使用預設的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體時，資料庫會命名為 `reportserver` 和 `reportservertempdb`。 這兩個資料庫統稱為「報表伺服器資料庫」或「報表伺服器目錄」。  
@@ -50,9 +50,9 @@ ms.locfileid: "36032481"
   
  **SharePoint 模式：**[報表伺服器安裝選項] 頁面只有一個用於 SharePoint 模式的選項 [只安裝]。 此選項會安裝所有 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 檔案和 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 共用服務。 下一步是透過下列其中一種方式建立至少一個 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 服務應用程式：  
   
--   使用 SharePoint 管理中心建立 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 服務應用程式。 如需詳細資訊，請參閱 < 服務應用程式 > 一節[步驟 3： 建立 Reporting Services 服務應用程式](../../../2014/sql-server/install/install-reporting-services-sharepoint-mode-for-sharepoint-2013.md#bkmk_create_serrviceapplication)。  
+-   使用 SharePoint 管理中心建立 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 服務應用程式。 如需詳細資訊，請參閱 < 服務應用程式 」 一節[步驟 3： 建立 Reporting Services 服務應用程式](../../../2014/sql-server/install/install-reporting-services-sharepoint-mode-for-sharepoint-2013.md#bkmk_create_serrviceapplication)。  
   
--   使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] PowerShell 指令程式建立服務應用程式和報表伺服器資料庫。 如需詳細資訊，請參閱主題中建立服務應用程式範例[Reporting Services SharePoint 模式的 PowerShell 指令程式](../../../2014/reporting-services/powershell-cmdlets-for-reporting-services-sharepoint-mode.md)。  
+-   使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] PowerShell 指令程式建立服務應用程式和報表伺服器資料庫。 如需詳細資訊，請參閱主題中建立服務應用程式範例[Reporting Services SharePoint 模式的 PowerShell cmdlet](../../../2014/reporting-services/powershell-cmdlets-for-reporting-services-sharepoint-mode.md)。  
   
 ## <a name="database-server-version-requirements"></a>資料庫伺服器版本需求  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 可用來主控報表伺服器資料庫。 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 執行個體可以是本機或遠端執行個體。 以下是支援的 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 版本，可用來裝載報表伺服器資料庫：  

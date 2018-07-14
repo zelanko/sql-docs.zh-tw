@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: c9402d8f-202a-4cdf-949e-50f5b1d2b885
 caps.latest.revision: 6
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 376188e66efbaba27deda5932bd0e65cce581af1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: d59ad6ad8059e7261054470c310d8fd82dbd88d3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36035602"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37208476"
 ---
 # <a name="polar-charts-report-builder-and-ssrs"></a>極座標圖 (報表產生器及 SSRS)
-  極座標圖是在 360 度的圓形上，依據類別目錄群組，將數列顯示為一組點。 這些值是以點的長度 (從圓心開始測量) 表示。 從圓心到點的距離越遠，其值越大。 類別目錄標籤會顯示在圖表的周長上。 如需有關如何將資料加入到極座標圖的詳細資訊，請參閱[圖表&#40;報表產生器及 SSRS&#41;](charts-report-builder-and-ssrs.md)。  
+  極座標圖是在 360 度的圓形上，依據類別目錄群組，將數列顯示為一組點。 這些值是以點的長度 (從圓心開始測量) 表示。 從圓心到點的距離越遠，其值越大。 類別目錄標籤會顯示在圖表的周長上。 如需有關如何將資料新增至極座標圖的詳細資訊，請參閱 <<c0> [ 圖表&#40;報表產生器及 SSRS&#41;](charts-report-builder-and-ssrs.md)。</c0>  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -42,7 +42,7 @@ ms.locfileid: "36035602"
 ## <a name="example"></a>範例  
  下列範例顯示如何使用雷達圖。 下表提供圖表的範例資料。  
   
-|[屬性]|Sales|  
+|名稱|Sales|  
 |----------|-----------|  
 |灌木|61|  
 |種子|78|  
@@ -61,6 +61,6 @@ ms.locfileid: "36035602"
  [格式化圖表 &#40;報表產生器和 SSRS&#41;](formatting-a-chart-report-builder-and-ssrs.md)   
  [圖表類型 &#40;報表產生器及 SSRS&#41;](chart-types-report-builder-and-ssrs.md)   
  [折線圖 &#40;報表產生器及 SSRS&#41;](line-charts-report-builder-and-ssrs.md)   
- [空白和 Null 資料點在圖表中的&#40;報表產生器和 SSRS&#41;](empty-and-null-data-points-in-charts-report-builder-and-ssrs.md)  
+ [空白和 Null 資料點在圖表中的&#40;報表產生器及 SSRS&#41;](empty-and-null-data-points-in-charts-report-builder-and-ssrs.md)  
   
   

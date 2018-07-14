@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.rep.validate.allsubscriptions.f1
 helpviewer_keywords:
 - Validate All Subscriptions dialog box
 ms.assetid: 32e31469-36e4-42d9-a57a-12388bfd229d
 caps.latest.revision: 23
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: ae84563b45f05fb7df91d2a00cb2ff0ca9cdd852
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: a6df15aecb19b61bc5cdb22e587177c0cca71da5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36035409"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37203000"
 ---
 # <a name="validate-all-subscriptions"></a>驗證所有訂閱
   使用 **[驗證所有訂閱]** 對話方塊來指定下次執行每個訂閱的合併代理程式時，應驗證合併發行集的所有訂閱。 驗證的結果會在複寫監視器中顯示。 如需詳細資訊，請參閱 [Validate Data at the Subscriber](validate-data-at-the-subscriber.md)。  

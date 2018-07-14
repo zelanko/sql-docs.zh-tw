@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SQLServer:Cursor Manager Total
 - Cursor Manager Total object
 ms.assetid: e2c60a6d-be6f-4bb1-aaee-e464a4dc892c
 caps.latest.revision: 13
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 123de91d52be86705db704e1f2e869ae361134c9
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 3db8b6c2965d2e207d00cde998e0a24ec43da5bc
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36037662"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37190268"
 ---
 # <a name="sql-server-cursor-manager-total-object"></a>SQL Server 的 Cursor Manager Total 物件
   **SQLServer:Cursor Manager Total** 物件提供用以監視資料指標的計數器。  

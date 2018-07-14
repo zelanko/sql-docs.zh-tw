@@ -5,23 +5,22 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.configdbmsecurwiz.choosesrvrs.f1
 ms.assetid: 59e23ff3-d7ee-4e32-9629-0b54d3a258f7
 caps.latest.revision: 24
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 5c648660b707ba8bd962d0cc504f6cec6766d209
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 12aaacb260b9b162b473457ecdeb523623ce4e5e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36033948"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37178345"
 ---
 # <a name="choose-servers-to-configure-configure-database-mirroring-security-wizard"></a>選取要設定的伺服器 (設定資料庫鏡像安全性精靈)
   使用此頁面來指定現在要設定的伺服器執行個體。 您必須至少選取一個伺服器執行個體才能繼續執行精靈。  

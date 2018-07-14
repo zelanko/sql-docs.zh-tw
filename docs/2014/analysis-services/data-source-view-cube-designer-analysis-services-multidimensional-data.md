@@ -1,5 +1,5 @@
 ---
-title: 資料來源檢視 （Cube 結構索引標籤，Cube 設計工具） (Analysis Services-多維度資料) |Microsoft 文件
+title: 資料來源檢視 （Cube 結構索引標籤，Cube 設計師） (Analysis Services-多維度資料) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.cubeeditor.cubebuilder.datasourcepane.f1
 ms.assetid: 1e39c910-5c10-4624-be27-ca02a461b46b
 caps.latest.revision: 20
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: eb5d1f33aab84cab344ba83478045d1b4bd4962c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 0025792747cf0cea5fffd7b0a1a35c5efc7ea759
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36035111"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37185305"
 ---
 # <a name="data-source-view-cube-structure-tab-cube-designer-analysis-services---multidimensional-data"></a>資料來源檢視 (Cube 結構索引標籤，Cube 設計師) (Analysis Services - 多維度資料)
   使用 **[資料來源檢視]** 窗格，即可檢視來自與所選取 Cube 相關聯之資料來源檢視的資料表和資料行。 此窗格會用來建立量值群組和量值，方法是從 **[資料來源檢視]** 窗格中，將資料行拖曳至 **[量值]** 窗格中。  
@@ -144,6 +144,6 @@ ms.locfileid: "36035111"
  [工具列&#40;Cube 結構索引標籤，Cube 設計工具&#41; &#40;Analysis Services-多維度資料&#41;](toolbar-cube-structure-cube-designer-analysis-services-multidimensional-data.md)   
  [量值&#40;Cube 結構索引標籤，Cube 設計工具&#41; &#40;Analysis Services-多維度資料&#41;](measures-cube-structure-cube-designer-analysis-services-multidimensional-data.md)   
  [維度&#40;Cube 結構索引標籤，Cube 設計工具&#41; &#40;Analysis Services-多維度資料&#41;](dimensions-cube-structure-cube-designer-analysis-services-multidimensional-data.md)   
- [Cube 結構&#40;Cube 設計師&#41; &#40;Analysis Services-多維度資料&#41;](cube-structure-cube-designer-analysis-services-multidimensional-data.md)  
+ [Cube 結構&#40;Cube 設計工具&#41; &#40;Analysis Services-多維度資料&#41;](cube-structure-cube-designer-analysis-services-multidimensional-data.md)  
   
   

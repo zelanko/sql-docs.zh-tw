@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - replication [SQL Server], tutorials
 ms.assetid: 49008384-2c55-4080-a890-9bceb40e4d6d
 caps.latest.revision: 13
 author: craigg-msft
 ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: af7e1e4c59cfc624e9e83a24fcbb6095a20d2dda
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 587d8514ede68f731ccacfef8861b95bbcfa1406
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36037441"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37199018"
 ---
 # <a name="lesson-3-synchronizing-the-subscription-to-the-merge-publication"></a>第 3 課：同步處理合併式發行集的訂閱
   在這一課，您將啟動合併代理程式，以使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]來初始化訂閱。 此外，您會使用此程序與發行者進行同步處理。 您必須先完成上一課 [第 2 課：建立合併式發行集的訂閱](lesson-2-creating-a-subscription-to-the-merge-publication.md)，才能進行這一課。  

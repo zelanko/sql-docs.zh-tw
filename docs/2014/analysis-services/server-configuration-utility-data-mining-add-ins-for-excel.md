@@ -1,5 +1,5 @@
 ---
-title: 伺服器組態公用程式 （資料採礦增益集的 Excel） |Microsoft 文件
+title: 伺服器組態公用程式 （資料採礦適用於 Excel 的增益集） |Microsoft Docs
 ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 28435f86-5cec-4a1e-9b7d-b2069c1ddddb
 caps.latest.revision: 6
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: c51ea6b4e492bc238fee5ea3fea763f0fd5cb439
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ae026e24210385a24b53f9ddf0cf1533a0e27e40
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36034857"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37178925"
 ---
 # <a name="server-configuration-utility-data-mining-add-ins-for-excel"></a>伺服器組態公用程式 (適用於 Excel 的資料採礦增益集)
   當您安裝適用於 Excel 的資料採礦增益集時，伺服器組態公用程式也會安裝，並且將在您初次開啟增益集時執行。本主題將描述如何使用此公用程式連接到 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 的執行個體，並設定搭配資料採礦模型使用的資料庫。  
@@ -46,7 +46,7 @@ ms.locfileid: "36034857"
   
  工作階段採礦模型的使用不會影響伺服器上的儲存空間，但與建立資料採礦模型相關的負擔可能會影響伺服器效能。  
   
- 精靈首先會偵測您所指定之伺服器上的設定。 如果伺服器已允許暫時性採礦模型，您可以按一下**下一步**才能繼續。 此精靈還提供如何在指定的 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 伺服器上啟用暫時性採礦模型的指示，或是如何對您的 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 系統管理員提出要求。  
+ 精靈首先會偵測您所指定之伺服器上的設定。 如果伺服器已允許暫時性採礦模型，您可以按一下**下一步**以繼續。 此精靈還提供如何在指定的 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 伺服器上啟用暫時性採礦模型的指示，或是如何對您的 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 系統管理員提出要求。  
   
 ##  <a name="bkmk_step3"></a> 步驟 3： 為增益集使用者建立資料庫  
  在安裝和組態精靈的這個頁面上，您可以建立資料採礦專用的新資料庫，或選取現有的 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 資料庫。  
@@ -79,7 +79,7 @@ ms.locfileid: "36034857"
  選取此選項，為列出的使用者提供資料庫的管理權限。  
   
 > [!NOTE]  
->  這些權限只適用於資料庫中所列**資料庫名稱**方塊。  
+>  這些權限只適用於資料庫中所列**資料庫名稱** 方塊中。  
   
  **資料庫名稱**  
  顯示選取之資料庫的名稱。  

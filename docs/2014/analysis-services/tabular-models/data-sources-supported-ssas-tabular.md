@@ -1,5 +1,5 @@
 ---
-title: 支援的資料來源 (SSAS 表格式) |Microsoft 文件
+title: 支援的資料來源 (SSAS 表格式) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: d6c2b1b3-91fc-4175-af25-509946dc7f24
 caps.latest.revision: 17
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 360a0d7d556589947d312deab1f2ff485afb85d9
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 1b8aac369dd82f75f251df1195ac29c8ccf3b983
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36037101"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37185295"
 ---
 # <a name="data-sources-supported-ssas-tabular"></a>Data Sources Supported (SSAS Tabular)
   此主題描述可以搭配表格式模型使用之資料來源的類型。  
@@ -39,7 +39,7 @@ ms.locfileid: "36037101"
 |-|-|-|-|  
 |來源|版本|檔案類型|提供者<sup>1</sup>|  
 |Access 資料庫|Microsoft Access 2003、 2007、 2010 年。|.accdb 或 .mdb|ACE 14 OLE DB 提供者|  
-|SQL Server 關聯式資料庫|Microsoft SQL Server2005、 2008、 2008 R2;SQL Server 2012、 Microsoft SQL Azure 資料庫<sup>2</sup>|(不適用)|OLE DB Provider for SQL Server<br /><br /> SQL Server Native Client OLE DB 提供者<br /><br /> SQL Server Native 10.0 Client OLE DB 提供者<br /><br /> .NET Framework Data Provider for SQL Client|  
+|SQL Server 關聯式資料庫|Microsoft SQL server 2005、 2008、 2008 R2SQL Server 2012，Microsoft SQL Azure 資料庫<sup>2</sup>|(不適用)|OLE DB Provider for SQL Server<br /><br /> SQL Server Native Client OLE DB 提供者<br /><br /> SQL Server Native 10.0 Client OLE DB 提供者<br /><br /> .NET Framework Data Provider for SQL Client|  
 |SQL Server Parallel Data Warehouse (PDW) <sup>3</sup>|2008 R2|(不適用)|OLE DB Provider for SQL Server PDW|  
 |Oracle 關聯式資料庫|Oracle 9i、10g、11g。|(不適用)|Oracle OLE DB Provider<br /><br /> .NET Framework Data Provider for Oracle Client<br /><br /> .NET Framework Data Provider for SQL Server<br /><br /> OraOLEDB<br /><br /> MSDASQL|  
 |Teradata 關聯式資料庫|Teradata V2R6、V12|(不適用)|TDOLEDB OLE DB 提供者<br /><br /> .Net Data Provider for Teradata|  

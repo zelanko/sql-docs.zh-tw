@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - resource bottlenecks [SQL Server]
 - database monitoring [SQL Server], bottlenecks
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - identifying bottlenecks [SQL Server]
 ms.assetid: db079e65-ee80-4105-aec9-f8230d0d6635
 caps.latest.revision: 17
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: d52b94ac8e1cab2a1681ba33d7cf86301d3f1865
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 68ff1cfa48bf6c9a39f83f13fa066a6928c676a3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36032537"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37172759"
 ---
 # <a name="identify-bottlenecks"></a>找出瓶頸
   同時存取共用資源會產生瓶頸。 通常，每個軟體系統中都會有瓶頸存在，而且這是無法避免的。 但是，過量要求共用資源會讓回應時間變差，這時就必須找出問題並進行微調。  

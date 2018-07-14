@@ -1,5 +1,5 @@
 ---
-title: 建置 MDX (MDX) 中的 Subcube |Microsoft 文件
+title: 建置 MDX (MDX) 中的 Subcube |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - queries [MDX], subcubes
 - subcubes [MDX]
@@ -18,15 +18,15 @@ helpviewer_keywords:
 - CREATE SUBCUBE statement
 ms.assetid: 5403a62b-99ac-4d83-b02a-89bf78bf0f46
 caps.latest.revision: 31
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 8369d07c18f6f79359a12423c4668642d66727db
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: f63c776a1b5d095a7ae17c9e568c827bd660db88
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36033790"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37178935"
 ---
 # <a name="building-subcubes-in-mdx-mdx"></a>在 MDX 中建立 Subcube (MDX)
   Subcube 是 Cube 的子集，呈現篩選後的基礎資料檢視。 將 Cube 限制在 Subcube，可以改善查詢效能。  
@@ -53,7 +53,7 @@ CREATE SUBCUBE Subcube_Identifier AS Subcube_Expression
   
 -   如果包含層級的每個成員，該階層的所有成員就會包括在內。 如果其他階層的成員不是和該層級的成員並存，則將會予以排除 (例如，未包含客戶的城市等類的不平衡階層)。  
   
--   Subcube 永遠包含每個`(All)`cube 中的成員。  
+-   Subcube 一律包含每個`(All)`cube 中的成員。  
   
  此外，Subcube 內的彙總值都是以視覺化的方式總計。 例如，Subcube 包含 `USA`、 `WA`及 `OR`。 因為 Subcube 定義的狀態只有 `USA` 及 `{WA,OR}` ，所以 `WA` 的彙總值將會是 `OR` 的總和。 其他狀態都會被忽略。  
   
@@ -71,7 +71,7 @@ CREATE SUBCUBE Subcube_Identifier AS Subcube_Expression
  `SELECT [Account].[Account].Members ON 0, Measures.Members ON 1 FROM Budget`  
   
 ## <a name="see-also"></a>另請參閱  
- [在查詢中建立的 Cube 內容&#40;MDX&#41;](establishing-cube-context-in-a-query-mdx.md)   
+ [建立查詢中的 Cube 內容&#40;MDX&#41;](establishing-cube-context-in-a-query-mdx.md)   
  [MDX 查詢基礎觀念&#40;Analysis Services&#41;](mdx-query-fundamentals-analysis-services.md)  
   
   

@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - dbe-xml
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - ELEMENT directive
 ms.assetid: 80dd5d1f-fa90-4f97-a186-8fa3f460a7f3
 caps.latest.revision: 9
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: f1f6edc1be2171f2165e7fde603d82f46affdc42
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: e9f4b3655243e726d11a5b73227ec73db8660ba1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36034316"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37191629"
 ---
 # <a name="example-specifying-the-element-directive"></a>範例：指定 ELEMENT 指示詞
   這會擷取員工資訊，並產生元素中心的 XML，如下所示：  

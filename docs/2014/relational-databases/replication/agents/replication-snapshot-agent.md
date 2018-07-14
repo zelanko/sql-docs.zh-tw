@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Snapshot Agent, executables
 - agents [SQL Server replication], Snapshot Agent
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - Snapshot Agent, parameter reference
 ms.assetid: 2028ba45-4436-47ed-bf79-7c957766ea04
 caps.latest.revision: 40
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 969cbb384d4cc41afe09f0e49c5d6cd9b7717a8d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 1fce4a187ffb9887cf56d2ef621cb753ededc833
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36037009"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37190168"
 ---
 # <a name="replication-snapshot-agent"></a>複寫快照集代理程式
   「複寫快照集代理程式」是一個可執行檔，它會準備包含已發行資料表與資料庫物件之結構描述及資料的快照集檔案、將這些檔案儲存在快照集資料夾內，然後記錄散發資料庫中的同步處理作業。  

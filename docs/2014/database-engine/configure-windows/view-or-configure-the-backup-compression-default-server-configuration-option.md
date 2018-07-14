@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Management Studio [SQL Server], backup compression default option
 - backup compression [SQL Server], backup compression default Option
 ms.assetid: 23029395-3e93-4c29-b7d6-e5a47a3526ff
 caps.latest.revision: 28
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 40c603beaa8a9080c68b4c24494b2aff50aaf4f8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 4260fef5d1839af6a07bb8080fd40e2aba0ae686
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36034639"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37197758"
 ---
 # <a name="view-or-configure-the-backup-compression-default-server-configuration-option"></a>檢視或設定 backup compression default 伺服器組態選項
   本主題描述如何使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 或 [!INCLUDE[tsql](../../includes/tsql-md.md)]，在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中檢視或設定 [備份壓縮預設] 伺服器組態選項。 **backup compression default** 選項決定伺服器執行個體根據預設是否會建立壓縮備份。 安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 時， **ssCurrent** 選項已關閉。  

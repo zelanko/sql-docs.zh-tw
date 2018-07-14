@@ -5,23 +5,22 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-security
+ms.technology: security
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - security [SQL Server], certificates and asymmetric keys
 ms.assetid: 8519aa2f-f09c-4c1c-96b5-abc24811e60c
 caps.latest.revision: 17
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: ecdceb40e9a5dd2b7d7f73cc8f2156f1c8785e5d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: edmacauley
+ms.author: edmaca
+manager: craigg
+ms.openlocfilehash: 0e638dfb02fb5b944a6d7607cdc3bb320a8aeb94
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36036751"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37191588"
 ---
 # <a name="sql-server-certificates-and-asymmetric-keys"></a>SQL Server 憑證與非對稱金鑰
   公開金鑰加密 (PKI) 是一種訊息加密形式，使用者可用此加密形式來建立「公開」(Public) 金鑰和「私密」(Private) 金鑰。 私密金鑰會保留在私密位置，而公開金鑰則可以散發給使用者。 雖然這些金鑰在數學上具有相關性，但是私密金鑰無法使用公開金鑰來輕鬆地衍生。 公開金鑰是用來加密資料，而私密金鑰則是用來解密資料。 使用公開金鑰加密的訊息只能使用正確的私密金鑰來加以解密。 由於有兩種不同的金鑰，所以這些金鑰為「非對稱」(Asymmetric)。  

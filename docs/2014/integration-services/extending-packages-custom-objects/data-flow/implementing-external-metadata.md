@@ -27,13 +27,13 @@ ms.assetid: 8f5bd3ed-3e79-43a4-b6c1-435e4c2cc8cc
 caps.latest.revision: 35
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 18a4e657b4b4e0b434656f6a03538ec4a8f89957
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: f8e43702349bae9dd5f3eb89bb6454fb62b05816
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36032152"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37169202"
 ---
 # <a name="implementing-external-metadata"></a>實作外部中繼資料
   當元件從資料來源中斷連接時，可以使用 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSExternalMetadataColumnCollection100> 介面，針對其外部資料來源的資料行，驗證輸入及輸出資料行集合中的資料行。 這個介面可讓您維護在外部資料來源的資料行快照，並將這些資料行對應到元件的輸入和輸出資料行集合中的資料行。  
@@ -82,7 +82,7 @@ End Sub
 ### <a name="connected-validation"></a>連接式驗證  
  當元件連接至外部資料來源時，會直接針對外部資料來源，驗證輸入或輸出集合中的資料行。 此外，也必須驗證外部中繼資料集合中的資料行。 這是必要的，因為透過使用 [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] 中的 [進階編輯器] 即可修改外部中繼資料集合，而且對集合的變更是無法偵測的。 因此，在連接時，元件必須確定外部中繼資料資料行集合中的資料行會持續反映外部資料來源的資料行。  
   
- 您可以選擇隱藏中的外部中繼資料集合**進階編輯器**藉由設定<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSExternalMetadataColumnCollection100.IsUsed%2A>屬性，該集合的`false`。 然而這也可能會隱藏編輯器的 [資料行對應] 索引標籤，它可讓使用者從輸入或輸出集合將資料行對應到外部中繼資料行集合中的資料行。 將此屬性設定為 `false` 並不會防止開發人員以程式設計方式修改集合，但是確實可以為專用於 [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] 的元件之外部中繼資料行集合提供一層保護。  
+ 您可以選擇隱藏中的外部中繼資料集合**進階編輯器**藉由設定<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSExternalMetadataColumnCollection100.IsUsed%2A>屬性的集合`false`。 然而這也可能會隱藏編輯器的 [資料行對應] 索引標籤，它可讓使用者從輸入或輸出集合將資料行對應到外部中繼資料行集合中的資料行。 將此屬性設定為 `false` 並不會防止開發人員以程式設計方式修改集合，但是確實可以為專用於 [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] 的元件之外部中繼資料行集合提供一層保護。  
   
 ### <a name="disconnected-validation"></a>中斷連接式驗證  
  當元件和外部資料來源中斷連接時，因為輸入或輸出集合中的資料行會直接針對外部中繼資料集合中的資料行 (而非針對外部來源) 進行驗證，驗證就較為簡單。 當元件連至其外部資料來源的連接尚未建立時，或是當 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.ValidateExternalMetadata%2A> 屬性為 `false` 時，元件應該執行中斷連接式驗證。  
@@ -113,7 +113,7 @@ Public  Overrides Function Validate() As DTSValidationStatus
 End Function  
 ```  
   
-![Integration Services 圖示 （小）](../../media/dts-16.gif "Integration Services 圖示 （小）")**保持最多 with Integration Services 的日期** <br /> 若要取得 Microsoft 的最新下載、文件、範例和影片以及社群中的精選解決方案，請瀏覽 MSDN 上的 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 頁面：<br /><br /> [瀏覽 MSDN 上的 Integration Services 頁面](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 若要得到這些更新的自動通知，請訂閱該頁面上所提供的 RSS 摘要。  
+![Integration Services 圖示 （小）](../../media/dts-16.gif "Integration Services 圖示 （小）")**保持最多包含 Integration Services 的日期** <br /> 若要取得 Microsoft 的最新下載、文件、範例和影片以及社群中的精選解決方案，請瀏覽 MSDN 上的 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 頁面：<br /><br /> [瀏覽 MSDN 上的 Integration Services 頁面](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 若要得到這些更新的自動通知，請訂閱該頁面上所提供的 RSS 摘要。  
   
 ## <a name="see-also"></a>另請參閱  
  [資料流程](../../data-flow/data-flow.md)  

@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - multiple query columns
 ms.assetid: 5057a6ee-3ca8-4734-9e96-592b24624c55
 caps.latest.revision: 10
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 56301af2489c5ba8cbd37e6cb85edfeecd2141fa
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 128bbfa8c2a97f6554f2757edeaf15fb2485dfa7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36036013"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37194818"
 ---
 # <a name="sort-multiple-columns-in-queries-visual-database-tools"></a>排序查詢中的多個資料行 (Visual Database Tools)
   您可以藉由使用 **準則窗格** 中的 [排序次序](visual-database-tools.md)，指定排序資料時要使用之資料行的次序。  

@@ -1,5 +1,5 @@
 ---
-title: 第 13 課： 在 Excel 中分析 |Microsoft 文件
+title: 第 13 課： 在 Excel 中進行分析 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: ce717071-193b-4c99-9654-c7a613e16327
 caps.latest.revision: 16
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: jhubbard
-ms.openlocfilehash: b1dea62cbd78ca375a52adb7f1e6fd2285ff35e4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 9b9e50bda2a6168d54be78fd178d3d1d9161eff2
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36035106"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37200358"
 ---
 # <a name="lesson-13-analyze-in-excel"></a>第 13 課：在 Excel 中進行分析
   在這一課，您將使用 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] 中的 [在 Excel 中進行分析] 功能來開啟 Microsoft Excel、自動建立模型工作空間的資料來源連接，以及自動將樞紐分析表加入至工作表。 [在 Excel 中進行分析] 功能的目的在於提供快速簡便的方法，讓您在部署模型之前測試模型設計的效率。 在本課中，您將不會執行任何資料分析。 本課程的目的在於讓您 (也就是模型作者) 熟悉可以用來測試模型設計的工具。 不像使用 [在 Excel 中進行分析] 功能，使用者將使用用戶端報表應用程式 (例如 Excel 或 [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)]) 連接與瀏覽已部署的模型資料。  
@@ -28,7 +28,7 @@ ms.locfileid: "36035106"
   
  完成本課程的估計時間：**20 分鐘**  
   
-## <a name="prerequisites"></a>必要條件  
+## <a name="prerequisites"></a>先決條件  
  本主題是表格式模型教學課程的一部分，必須依序完成。 在執行本課中的工作之前，您應已完成上一課：[第 11 課：建立資料分割](lesson-10-create-partitions.md)。  
   
 ## <a name="browse-using-the-default-and-internet-sales-perspectives"></a>使用預設和網際網路銷售檢視方塊瀏覽  
@@ -42,7 +42,7 @@ ms.locfileid: "36035106"
   
      Excel 將會開啟，並顯示一個新的活頁簿。 系統會使用目前的使用者帳戶建立資料來源連接，並將預設檢視方塊用於定義可檢視的欄位。 樞紐分析表會自動加入到工作表中。  
   
-3.  在 Excel 中，在**樞紐分析表欄位清單**，請注意**日期**和**Internet Sales**量值會出現，並將**客戶**， **日期**， **Geography**，**產品**，**產品類別目錄**，**產品子類別目錄**，和**Internet Sales**所有其個別資料行的資料表會出現。  
+3.  在 Excel 中，在**樞紐分析表欄位清單**，請注意**日期**並**Internet Sales**量值會出現，以及**客戶**， **日期**，**地理**，**產品**，**產品類別目錄**，**產品子類別目錄**，及**網際網路銷售**所有依個別資料行的資料表會出現。  
   
 4.  關閉 Excel 而不儲存活頁簿。  
   

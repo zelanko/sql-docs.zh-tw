@@ -1,5 +1,5 @@
 ---
-title: 屬性元素 (ASSL) |Microsoft 文件
+title: 屬性元素 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - Attribute element
 ms.assetid: 079ec9f8-a314-4e3c-821a-b42c65cc7363
 caps.latest.revision: 34
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 8a9dfd4e3db4b84df6a64e8c0fe6de80bca19ca3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 8e94fcb4fdffacfad0bbf735bfc2fe3c7b19b798
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36032640"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37171459"
 ---
 # <a name="attribute-element-assl"></a>Attribute 元素 (ASSL)
   包含屬性的描述。  
@@ -63,7 +63,7 @@ ms.locfileid: "36032640"
 ## <a name="element-characteristics"></a>元素特性  
  預設值：無  
   
- 基數： 0-1： 只能出現一次只能出現一次的選擇性項目。  
+ 基數： 0-1： 只能出現一次一次的選擇性元素。  
   
 |上階或父系|資料類型|  
 |------------------------|---------------|  
@@ -84,7 +84,7 @@ ms.locfileid: "36032640"
 |子元素|無|  
   
 ## <a name="remarks"></a>備註  
- 分析管理物件 (AMO) 物件模型中對應的元素是<xref:Microsoft.AnalysisServices.AggregationDesignAttribute>， <xref:Microsoft.AnalysisServices.AggregationAttribute>， <xref:Microsoft.AnalysisServices.CubeAttribute>， <xref:Microsoft.AnalysisServices.DimensionAttribute>， <xref:Microsoft.AnalysisServices.MeasureGroupAttribute>，和<xref:Microsoft.AnalysisServices.PerspectiveAttribute>。  
+ 在 「 分析管理物件 (AMO) 物件模型的對應項目<xref:Microsoft.AnalysisServices.AggregationDesignAttribute>， <xref:Microsoft.AnalysisServices.AggregationAttribute>， <xref:Microsoft.AnalysisServices.CubeAttribute>， <xref:Microsoft.AnalysisServices.DimensionAttribute>， <xref:Microsoft.AnalysisServices.MeasureGroupAttribute>，和<xref:Microsoft.AnalysisServices.PerspectiveAttribute>。  
   
 ## <a name="see-also"></a>另請參閱  
  [物件&#40;ASSL&#41;](objects-assl.md)  

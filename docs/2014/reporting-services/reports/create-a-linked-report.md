@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - linked reports [Reporting Services], creating
 ms.assetid: 12be8341-cb57-45e8-a421-2bf66b50234d
 caps.latest.revision: 43
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 87e95389a4571162e07efce30c4bcd933309bef7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: 971f07256e5f8b678d62f3a9b75e13299fad3ed3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36034714"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37191328"
 ---
 # <a name="create-a-linked-report"></a>建立連結報表
   連結報表是提供現有報表之存取點的報表伺服器項目。 它在概念上類似於您用來執行程式或開啟檔案的程式捷徑。  
@@ -38,7 +38,7 @@ ms.locfileid: "36034714"
   
 2.  輸入新連結報表的名稱。 選擇性地輸入描述。  
   
-3.  若要選取報表的其他資料夾，請按一下 **[變更位置]**。 按一下您要使用的資料夾，或者在 **[位置]** 方塊中輸入資料夾名稱。 [!INCLUDE[clickOK](../../../includes/clickok-md.md)] 如果您不選取不同的資料夾，連結的報表被建立在目前的資料夾 （其中儲存的報表為基礎）。  
+3.  若要選取報表的其他資料夾，請按一下 **[變更位置]**。 按一下您要使用的資料夾，或者在 **[位置]** 方塊中輸入資料夾名稱。 [!INCLUDE[clickOK](../../../includes/clickok-md.md)] 如果您未選取不同的資料夾，則建立連結的報表是在目前的資料夾 （其中儲存的報表為基礎）。  
   
 4.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)] 連結的報表隨即開啟。  
   
@@ -47,7 +47,7 @@ ms.locfileid: "36034714"
      ![連結報表圖示](../media/hlp-16linked.gif "連結報表圖示")  
   
 ## <a name="see-also"></a>另請參閱  
- [開啟和關閉報表&#40;報表管理員&#41;](../reports/open-and-close-a-report-report-manager.md)   
+ [開啟及關閉報表&#40;報表管理員&#41;](../reports/open-and-close-a-report-report-manager.md)   
  [新增連結報表頁面 &#40;報表管理員&#41;](../new-linked-report-page-report-manager.md)   
  [選擇項目位置頁面 &#40;報表管理員&#41;](../choose-item-location-page-report-manager.md)   
  [一般屬性頁面，報表 &#40;報表管理員&#41;](../general-properties-page-reports-report-manager.md)   

@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 topic_type:
 - apiref
 helpviewer_keywords:
 - Showplan Text event class
 ms.assetid: f36c73b2-a1d1-4513-9594-78818f3fcb0d
 caps.latest.revision: 37
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: a01c4ee7643029747841eadce155406c2110bba8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: b47eee7f34794c7d25377bfbd15705b626d7e589
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36034617"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37191958"
 ---
 # <a name="showplan-text-event-class"></a>Showplan Text 事件類別
   當 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行 SQL 陳述式時，會發生 Showplan Text 事件類別。 包含的資訊是 Showplan All、Showplan XML Statistics Profile 或 Showplan XML 事件類別中可用資訊的子集。  

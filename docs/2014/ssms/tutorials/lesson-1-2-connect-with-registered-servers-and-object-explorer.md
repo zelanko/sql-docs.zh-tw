@@ -5,21 +5,20 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- tools-ssms
+ms.technology: ssms
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: d6b3911f-68b4-4483-831b-df89d6400add
 caps.latest.revision: 49
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 7d022b889673ddc918859ebf474440438a9e564a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: d9318b97ca72c7eadc7b938d984fb0a824dc4bb9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36034696"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37198188"
 ---
 # <a name="connect-with-registered-servers-and-object-explorer"></a>連接已註冊的伺服器和物件總管
   本教學課程示範已註冊的伺服器和物件總管的用法。  
